@@ -203,6 +203,16 @@
 /obj/fiftyspawner/steel,
 /obj/fiftyspawner/glass,
 /obj/machinery/recharger,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/red,
+/area/awaymission/mol/security)
+"dJ" = (
+/obj/structure/table/rack/shelf,
+/obj/item/clothing/suit/armor/combat/imperial,
+/obj/item/clothing/gloves/arm_guard/combat/imperial,
+/obj/item/clothing/head/helmet/combat/imperial,
+/obj/item/clothing/shoes/leg_guard/combat/imperial,
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
 "dK" = (
@@ -362,6 +372,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
 "gy" = (
@@ -826,7 +837,7 @@
 	},
 /area/awaymission/mol/entrancetunnel)
 "mA" = (
-/obj/effect/fake_sun,
+/obj/effect/fake_sun/cool,
 /turf/simulated/wall/solidrock,
 /area/awaymission/mol/mines)
 "mB" = (
@@ -1041,6 +1052,7 @@
 /obj/structure/table/rack/shelf,
 /obj/item/weapon/melee/energy/sword/imperial,
 /obj/item/weapon/shield/energy/imperial,
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
 "ps" = (
@@ -1736,6 +1748,7 @@
 "yK" = (
 /obj/structure/table/rack/shelf,
 /obj/item/weapon/gun/energy/imperial,
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
 "yO" = (
@@ -1831,6 +1844,13 @@
 "zC" = (
 /turf/simulated/wall/r_wall,
 /area/awaymission/mol/kitchen/chamberC)
+"zE" = (
+/obj/machinery/door/blast/puzzle{
+	id = "FinaleGate2"
+	},
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/red,
+/area/awaymission/mol/security)
 "zF" = (
 /obj/structure/table/hardwoodtable,
 /obj/random/maintenance/foodstuff,
@@ -2048,6 +2068,7 @@
 	dir = 1
 	},
 /obj/machinery/autolathe/armory,
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
 "CO" = (
@@ -2105,6 +2126,7 @@
 "DP" = (
 /obj/structure/table/rack/shelf,
 /obj/item/weapon/storage/firstaid/bonemed,
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
 "DR" = (
@@ -2218,6 +2240,7 @@
 /obj/machinery/door/blast/puzzle{
 	id = "FinaleGate1"
 	},
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
 "Fe" = (
@@ -2498,6 +2521,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
 "Ik" = (
@@ -2763,6 +2787,7 @@
 "LY" = (
 /obj/structure/table/rack/shelf,
 /obj/item/weapon/storage/firstaid/clotting,
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
 "Mb" = (
@@ -3577,6 +3602,7 @@
 /obj/machinery/door/blast/puzzle{
 	id = "FinaleGate4"
 	},
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
 "Wh" = (
@@ -3717,6 +3743,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/mol/kitchen)
 "Yj" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
 "Yl" = (
@@ -32060,32 +32087,32 @@ Ae
 rt
 rt
 rt
+kL
+rt
+rt
+rt
+rt
+rt
+kL
+rt
+rt
+rt
+rt
+rt
+kL
 rt
 rt
 rt
 rt
 rt
 rt
+kL
 rt
 rt
 rt
 rt
 rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
+kL
 rt
 rt
 rt
@@ -32573,7 +32600,7 @@ Nh
 Nh
 Nh
 Ae
-rt
+oH
 rt
 rt
 rt
@@ -33865,7 +33892,7 @@ Nh
 Ae
 rt
 rt
-rt
+Qh
 Ae
 Nh
 Nh
@@ -33878,19 +33905,19 @@ Nh
 Nh
 Nh
 iA
-qP
+dJ
 Yj
 fZ
 Yj
-qP
+dJ
 iA
 iA
 iA
-qP
+dJ
 Yj
 fZ
 Yj
-qP
+dJ
 iA
 Nh
 Nh
@@ -34895,7 +34922,7 @@ Nh
 Nh
 Nh
 Ae
-rt
+oH
 rt
 rt
 Ae
@@ -34920,7 +34947,7 @@ iA
 iA
 iA
 iA
-CO
+zE
 iA
 iA
 iA
@@ -35178,7 +35205,7 @@ iA
 iA
 iA
 iA
-CO
+zE
 iA
 iA
 iA
@@ -35929,7 +35956,7 @@ FS
 FS
 rt
 rt
-rt
+Qh
 Ae
 Nh
 Nh
@@ -36726,7 +36753,7 @@ iA
 iA
 iA
 iA
-CO
+zE
 iA
 iA
 iA
@@ -36959,7 +36986,7 @@ Nh
 Nh
 Nh
 Ae
-rt
+oH
 rt
 rt
 Ae
@@ -36984,7 +37011,7 @@ iA
 iA
 iA
 iA
-CO
+zE
 iA
 iA
 iA
@@ -37993,7 +38020,7 @@ Nh
 Ae
 rt
 rt
-rt
+Qh
 Ae
 Nh
 Nh
@@ -38006,11 +38033,11 @@ Nh
 Nh
 Nh
 iA
-qP
+dJ
 Yj
 Ii
 Yj
-qP
+dJ
 iA
 iA
 iA
@@ -39281,7 +39308,7 @@ Nh
 Nh
 Nh
 Ae
-rt
+oH
 rt
 rt
 rt
@@ -39800,6 +39827,13 @@ Ae
 rt
 rt
 rt
+ZY
+rt
+rt
+rt
+rt
+rt
+ZY
 rt
 rt
 rt
@@ -39807,19 +39841,12 @@ rt
 rt
 rt
 rt
+ZY
 rt
 rt
 rt
 rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
+ZY
 rt
 rt
 rt

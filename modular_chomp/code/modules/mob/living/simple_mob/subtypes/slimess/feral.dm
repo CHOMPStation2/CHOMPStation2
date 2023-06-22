@@ -4,6 +4,7 @@
 	movement_cooldown = 0
 	melee_damage_lower = 15
 	melee_damage_upper = 15
+	unity = 1
 
 /mob/living/simple_mob/slime/feral/apply_melee_effects(mob/living/L)
 	if(istype(L) && a_intent == I_HURT)
