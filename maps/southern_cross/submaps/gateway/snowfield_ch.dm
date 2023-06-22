@@ -584,7 +584,7 @@
 /obj/item/weapon/paper/awaygate/snowfield/final_note
 	name = "Final note"
 	info = "Gosh. We have opened up the hell's gate...<BR>Everyone is screaming and yelling into mid-air like a mania, \
-	and this... Whispering voice!<BR><B>It's in my head!<B><BR><BR>Peoples who managed to escape after the initial lockdown \
+	and this... Whispering voice!<BR><B>It's in my head!</B><BR><BR>Peoples who managed to escape after the initial lockdown \
 	are now trying their damnnest to break back INSIDE the base!<BR><BR>I tried my best to ignore the voice and cornered \
 	in this security outpost, but I'm not sure how long I will maintain sane, unlike those peoples out there...\
 	The voice is now <B>yelling, SCREAMING<B> at me as the time passes by! <BR><BR> I can't take this anymore longer, \
