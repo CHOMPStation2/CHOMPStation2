@@ -411,9 +411,6 @@
 	name = "c-type rotary electric generator"
 	circuit = /obj/item/weapon/circuitboard/machine/reg_c
 	default_power_gen = 500000 //Half power
-<<<<<<< HEAD
-	nutrition_drain = 0.5	//for half cost - EQUIVALENT EXCHANGE >:O
-=======
 	nutrition_drain = 0.5	//for half cost - EQUIVALENT EXCHANGE >:O
 
 
@@ -501,4 +498,3 @@
 		add_overlay("alteviangen-fuel-66")
 	else if(sheets > 0)
 		add_overlay("alteviangen-fuel-33")
->>>>>>> b01d197e4e... Merge pull request #15070 from Heroman3003/altevian-props
