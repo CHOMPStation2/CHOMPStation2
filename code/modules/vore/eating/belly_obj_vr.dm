@@ -174,13 +174,14 @@
 	var/belly_fullscreen = ""
 	var/disable_hud = FALSE
 	var/colorization_enabled = TRUE //CHOMPedit
-	var/belly_fullscreen_color = "#823232" //ChompEDIT
+	var/belly_fullscreen_color = "#823232"
+	//var/belly_fullscreen_color_secondary = "#428242" //Chomp Disable, using our implementation
+	//var/belly_fullscreen_color_trinary = "#f0f0f0" //Chomp Disable, using our implementation
 	var/belly_fullscreen_color2 = "#FFFFFF" //ChompEDIT
 	var/belly_fullscreen_color3 = "#823232" //ChompEDIT
 	var/belly_fullscreen_color4 = "#FFFFFF" //ChompEDIT
 	var/belly_fullscreen_alpha = 255 //ChompEDIT
-	//var/belly_fullscreen_color_secondary = "#428242" //Chomp Disable, using our implementation
-	//var/belly_fullscreen_color_trinary = "#f0f0f0" //Chomp Disable, using our implementation
+
 
 //For serialization, keep this updated, required for bellies to save correctly.
 /obj/belly/vars_to_save()
@@ -443,9 +444,9 @@
 		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 		var/mob/living/L = thing
 		L.clear_fullscreen("belly")
-		L.clear_fullscreen("belly2")
-		L.clear_fullscreen("belly3")
-		L.clear_fullscreen("belly4")
+		//L.clear_fullscreen("belly2") // CHOMP Disable - using our implementation, not upstream's
+		//L.clear_fullscreen("belly3") // CHOMP Disable - using our implementation, not upstream's
+		//L.clear_fullscreen("belly4") // CHOMP Disable - using our implementation, not upstream's
 		if(L.hud_used)
 			if(!L.hud_used.hud_shown)
 				L.toggle_hud_vis()
@@ -1564,7 +1565,6 @@
 	dupe.wet_loop = wet_loop
 
 	dupe.reagent_mode_flags = reagent_mode_flags	//CHOMP start of variables from CHOMP
-	dupe.belly_fullscreen_color = belly_fullscreen_color
 	dupe.belly_fullscreen_color2 = belly_fullscreen_color2
 	dupe.belly_fullscreen_color3 = belly_fullscreen_color3
 	dupe.belly_fullscreen_color4 = belly_fullscreen_color4
