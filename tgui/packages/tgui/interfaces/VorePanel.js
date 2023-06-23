@@ -1062,10 +1062,8 @@ const VoreSelectedBellyVisuals = (props, context) => {
   const {
     belly_fullscreen,
     belly_fullscreen_color,
-    belly_fullscreen_color2,
-    belly_fullscreen_color3,
-    belly_fullscreen_color4,
-    belly_fullscreen_alpha,
+    belly_fullscreen_color_secondary,
+    belly_fullscreen_color_trinary,
     mapRef,
     colorization_enabled,
     possible_fullscreens,
@@ -1292,30 +1290,46 @@ const VoreSelectedBellyVisuals = (props, context) => {
             back_color={belly_fullscreen_color}
             name_of="1"
           />
-          <FeatureColorInput
-            action_name="b_fullscreen_color2"
-            value_of={null}
-            back_color={belly_fullscreen_color2}
-            name_of="2"
+          <Button
+            icon="eye-dropper"
+            onClick={() =>
+              act('set_attribute', {
+                attribute: 'b_fullscreen_color',
+                val: null,
+              })
+            }>
+            Select Primary Color
+          </Button>
+          <Box
+            backgroundColor={belly_fullscreen_color_secondary}
+            width="20px"
+            height="20px"
           />
-          <FeatureColorInput
-            action_name="b_fullscreen_color3"
-            value_of={null}
-            back_color={belly_fullscreen_color3}
-            name_of="3"
+          <Button
+            icon="eye-dropper"
+            onClick={() =>
+              act('set_attribute', {
+                attribute: 'b_fullscreen_color_secondary',
+                val: null,
+              })
+            }>
+            Select Secondary Color
+          </Button>
+          <Box
+            backgroundColor={belly_fullscreen_color_trinary}
+            width="20px"
+            height="20px"
           />
-          <FeatureColorInput
-            action_name="b_fullscreen_color4"
-            value_of={null}
-            back_color={belly_fullscreen_color4}
-            name_of="4"
-          />
-          <FeatureColorInput
-            action_name="b_fullscreen_alpha"
-            value_of={null}
-            back_color="#FFFFFF"
-            name_of="Alpha"
-          />
+          <Button
+            icon="eye-dropper"
+            onClick={() =>
+              act('set_attribute', {
+                attribute: 'b_fullscreen_color_trinary',
+                val: null,
+              })
+            }>
+            Select Trinary Color
+          </Button>
           <LabeledList.Item label="Enable Coloration">
             <Button
               onClick={() =>
