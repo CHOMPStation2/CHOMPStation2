@@ -291,10 +291,7 @@
 					/obj/item/weapon/reagent_containers/food/snacks/liquidvitamin = 8,
 					/obj/item/weapon/reagent_containers/food/snacks/liquidprotein = 8,
 					/obj/item/weapon/reagent_containers/pill/diet = 8,
-<<<<<<< HEAD
 					/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose = 5,	//VOREStation Removal, //CHOMPedit nah
-=======
->>>>>>> 151562ea9b... Merge pull request #15060 from Youtubeboy139/sweatmax
 					/obj/item/weapon/towel/random = 8,
 					/obj/item/toy/tennis = 4)
 
@@ -314,10 +311,7 @@
 					/obj/item/weapon/reagent_containers/food/snacks/liquidvitamin = 5,
 					/obj/item/weapon/reagent_containers/food/snacks/liquidprotein = 5,
 					/obj/item/weapon/reagent_containers/pill/diet = 25,
-<<<<<<< HEAD
 					/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose = 5, //CHOMPedit nah
-=======
->>>>>>> 151562ea9b... Merge pull request #15060 from Youtubeboy139/sweatmax
 					/obj/item/weapon/towel/random = 20,
 					/obj/item/toy/tennis = 15)
 
