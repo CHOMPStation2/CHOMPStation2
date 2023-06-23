@@ -1166,6 +1166,14 @@
 "RP" = (
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/BorgLab)
+"RZ" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/effect/floor_decal/rust,
+/obj/effect/map_helper/no_phaseshift,
+/turf/simulated/floor/plating,
+/area/submap/BorgLab)
 "Su" = (
 /obj/effect/floor_decal/techfloor/orange,
 /obj/item/stack/material/uranium{
@@ -1737,7 +1745,7 @@ KX
 jf
 Vc
 bI
-RL
+RZ
 Nj
 lZ
 YD
