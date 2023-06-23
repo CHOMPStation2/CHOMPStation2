@@ -1591,9 +1591,9 @@
 
 		if(!isbelly(loc)) //VOREStation Add - Belly fullscreens safety
 			clear_fullscreen("belly")
-			clear_fullscreen("belly2")
-			clear_fullscreen("belly3")
-			clear_fullscreen("belly4")
+			//clear_fullscreen("belly2") //Chomp disable, using our own implementation 
+			//clear_fullscreen("belly3") //Chomp disable, using our own implementation 
+			//clear_fullscreen("belly4") //Chomp disable, using our own implementation 
 
 		if(config.welder_vision)
 			var/found_welder
