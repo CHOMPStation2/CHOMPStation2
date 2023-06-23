@@ -283,7 +283,7 @@
 	vore_max_size = RESIZE_HUGE
 	vore_min_size = RESIZE_SMALL
 	vore_pounce_chance = 0 // Beat them into crit before eating.
-	vore_icons = void-magnus-belly
+	vore_icons = SA_ICON_LIVING
 
 	can_be_drop_prey = FALSE //CHOMP Add
 
