@@ -524,6 +524,14 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
+/datum/sprite_accessory/ears/cobra_hood
+	name = "Cobra hood (large)"
+	desc = ""
+	icon_state = "cobra_hood"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "cobra_hood-inner"
+
 // Special snowflake ears go below here.
 
 /datum/sprite_accessory/ears/molenar_kitsune
@@ -924,12 +932,13 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
-/datum/sprite_accessory/ears/kara //SatinIsle Fluff Item
+/*/datum/sprite_accessory/ears/kara //SatinIsle Fluff Item //Chomp REMOVE
 	name = "Pterokara horn"
 	desc = ""
 	icon = 'icons/mob/vore/ears_vr.dmi'
 	icon_state = "kara_horn"
 	ckeys_allowed = list("satinisle")
+*/ //Chomp REMOVE End
 
 /datum/sprite_accessory/ears/shark
 	name = "shark ears (Colorable)"
@@ -990,11 +999,26 @@
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "shark_fin"
 
-/datum/sprite_accessory/ears/sharklowhboth
+/datum/sprite_accessory/ears/sharkhighbothalt
+	name = "shark upper ears and fin alt style (Colorable)"
+	desc = ""
+	icon_state = "shark_ears_upper"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "shark_fin_alt"
+
+/datum/sprite_accessory/ears/sharklowboth
+	name = "shark lower ears and fin (Colorable)"
+	desc = ""
+	icon_state = "shark_ears_lower"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "shark_fin"
+
+/datum/sprite_accessory/ears/sharklowbothalt
 	name = "shark lower ears and fin alt style (Colorable)"
 	desc = ""
 	icon_state = "shark_ears_lower"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "shark_fin_alt"
-

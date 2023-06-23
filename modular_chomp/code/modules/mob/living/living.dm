@@ -11,6 +11,8 @@
 	var/species_sounds = "None" // By default, we have nothing.
 	var/death_sound_override = null
 	var/virtual_reality_mob = FALSE // gross boolean for keeping VR mobs in VR
+	var/datum/looping_sound/mob/on_fire/firesoundloop
+	// var/datum/looping_sound/mob/stunned/stunnedloop
 	/* // Not sure if needed, screams aren't a carbon thing rn.
 	var/scream_sound = null
 	var/female_scream_sound = null
@@ -22,11 +24,23 @@
 	. = ..()
 
 	deaf_loop = new(list(src), FALSE)
+	firesoundloop = new(list(src), FALSE)
+	// stunnedloop = new(list(src), FALSE)
+	if(firesoundloop) // Partly safety, partly so we can have different probs for randomization
+		if(prob(40)) // Randomize our end_sound. Can't really do this easily in looping_sound without some work
+			if(prob(30))
+				firesoundloop.end_sound = 'sound/effects/mob_effects/on_fire/fire_extinguish2.ogg'
+			else if(prob(20))
+				firesoundloop.end_sound = 'sound/effects/mob_effects/on_fire/fire_extinguish3.ogg'
+			else
+				firesoundloop.end_sound = 'sound/effects/mob_effects/on_fire/fire_extinguish4.ogg'
 
 /mob/living/Destroy()
 	. = ..()
 
 	QDEL_NULL(deaf_loop)
+	QDEL_NULL(firesoundloop)
+	// QDEL_NULL(stunnedloop)
 
 /mob/living/proc/vs_animate(var/belly_to_animate)
   return

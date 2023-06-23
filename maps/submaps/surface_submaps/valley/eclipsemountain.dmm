@@ -12,7 +12,11 @@
 "bY" = (
 /obj/structure/table/wooden_reinforced,
 /obj/random/contraband,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
 /area/submap/eclipsemountain)
 "cW" = (
 /obj/structure/grille,
@@ -37,7 +41,11 @@
 /obj/structure/railing/grey{
 	dir = 1
 	},
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
 /area/submap/eclipsemountain)
 "dJ" = (
 /turf/simulated/floor/bluegrid,
@@ -75,7 +83,11 @@
 /obj/random/tool/alien,
 /obj/random/contraband,
 /obj/machinery/light,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
 /area/submap/eclipsemountain)
 "ki" = (
 /turf/simulated/floor/tiled/red,
@@ -154,9 +166,6 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/submap/eclipsemountain)
-"qQ" = (
-/turf/simulated/floor/wood,
-/area/submap/eclipsemountain)
 "rI" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/radiation,
 /turf/simulated/floor/tiled/steel,
@@ -176,7 +185,11 @@
 	dir = 1
 	},
 /mob/living/simple_mob/humanoid/eclipse/solar/snipertesh,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
 /area/submap/eclipsemountain)
 "tQ" = (
 /mob/living/simple_mob/humanoid/eclipse/lunar/ravanger,
@@ -233,7 +246,11 @@
 /obj/structure/railing/grey{
 	dir = 8
 	},
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
 /area/submap/eclipsemountain)
 "xO" = (
 /obj/structure/bed/double/padded,
@@ -257,7 +274,11 @@
 	dir = 8
 	},
 /mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
 /area/submap/eclipsemountain)
 "zZ" = (
 /obj/machinery/power/terminal{
@@ -315,10 +336,6 @@
 	},
 /turf/simulated/floor/tiled/red,
 /area/submap/eclipsemountain)
-"EG" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
-/turf/simulated/floor/wood,
-/area/submap/eclipsemountain)
 "EZ" = (
 /obj/structure/cliff/automatic{
 	dir = 9
@@ -339,10 +356,6 @@
 	pixel_y = -24
 	},
 /obj/structure/cable,
-/turf/simulated/floor/tiled/steel,
-/area/submap/eclipsemountain)
-"GU" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/guardian,
 /turf/simulated/floor/tiled/steel,
 /area/submap/eclipsemountain)
 "HN" = (
@@ -377,8 +390,11 @@
 /turf/simulated/floor/tiled/red,
 /area/submap/eclipsemountain)
 "JO" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/teslanoodle,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
 /area/submap/eclipsemountain)
 "Ky" = (
 /obj/machinery/door/blast/puzzle{
@@ -488,7 +504,11 @@
 "QT" = (
 /obj/structure/table/wooden_reinforced,
 /obj/random/toolbox,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
 /area/submap/eclipsemountain)
 "Rg" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
@@ -505,14 +525,22 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
 /area/submap/eclipsemountain)
 "Tp" = (
 /obj/structure/table/wooden_reinforced,
 /obj/random/contraband,
 /obj/random/contraband,
 /obj/random/firstaid,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
 /area/submap/eclipsemountain)
 "TT" = (
 /obj/structure/table/rack,
@@ -838,7 +866,7 @@ Cz
 Cz
 la
 Cz
-la
+Cz
 la
 Cz
 Cz
@@ -1258,9 +1286,9 @@ yY
 MM
 QT
 JO
-qQ
-qQ
-qQ
+JO
+JO
+JO
 MM
 iU
 LV
@@ -1298,11 +1326,11 @@ Cz
 Cz
 yY
 dt
-EG
-qQ
-qQ
-qQ
-qQ
+JO
+JO
+JO
+JO
+JO
 Tb
 AR
 LV
@@ -1340,10 +1368,10 @@ Cz
 Pq
 UA
 tI
-qQ
-qQ
-qQ
-qQ
+JO
+JO
+JO
+JO
 jt
 MM
 iU
@@ -1382,10 +1410,10 @@ Cz
 yY
 Cz
 dt
-qQ
-qQ
-qQ
-qQ
+JO
+JO
+JO
+JO
 bY
 MM
 LV
@@ -1424,8 +1452,8 @@ Cz
 yY
 Cz
 MM
-qQ
-qQ
+JO
+JO
 Tc
 bY
 Tp
@@ -1551,7 +1579,7 @@ yY
 Cz
 MM
 xO
-tQ
+iU
 VM
 vC
 xO
@@ -1637,7 +1665,7 @@ MM
 xO
 IQ
 VM
-GU
+iU
 xO
 Yh
 MK

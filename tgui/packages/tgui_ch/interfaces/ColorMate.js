@@ -76,12 +76,33 @@ export const ColorMate = (props, context) => {
               <center>Coloring: {item.name}</center>
               <Table mt={1}>
                 <Table.Cell width="33%">
-                  <Button fluid content="Paint" icon="fill" onClick={() => act('paint')} />
-                  <Button fluid content="Clear" icon="eraser" onClick={() => act('clear')} />
-                  <Button fluid content="Eject" icon="eject" onClick={() => act('drop')} />
+                  <Button
+                    fluid
+                    content="Paint"
+                    icon="fill"
+                    onClick={() => act('paint')}
+                  />
+                  <Button
+                    fluid
+                    content="Clear"
+                    icon="eraser"
+                    onClick={() => act('clear')}
+                  />
+                  <Button
+                    fluid
+                    content="Eject"
+                    icon="eject"
+                    onClick={() => act('drop')}
+                  />
                 </Table.Cell>
                 <Table.Cell width="66%">
-                  {activemode === 1 ? <ColorMateTint /> : activemode === 2 ? <ColorMateHSV /> : <ColorMateMatrix />}
+                  {activemode === 1 ? (
+                    <ColorMateTint />
+                  ) : activemode === 2 ? (
+                    <ColorMateHSV />
+                  ) : (
+                    <ColorMateMatrix />
+                  )}
                 </Table.Cell>
               </Table>
             </>
@@ -96,7 +117,14 @@ export const ColorMate = (props, context) => {
 
 export const ColorMateTint = (props, context) => {
   const { act, data } = useBackend(context);
-  return <Button fluid content="Select new color" icon="paint-brush" onClick={() => act('choose_color')} />;
+  return (
+    <Button
+      fluid
+      content="Select new color"
+      icon="paint-brush"
+      onClick={() => act('choose_color')}
+    />
+  );
 };
 
 export const ColorMateMatrix = (props, context) => {
@@ -305,9 +333,11 @@ export const ColorMateMatrix = (props, context) => {
         </Table.Row>
       </Table.Cell>
       <Table.Cell width="40%">
-        <Icon name="question-circle" color="blue" /> RG means red will become this much green.
+        <Icon name="question-circle" color="blue" /> RG means red will become
+        this much green.
         <br />
-        <Icon name="question-circle" color="blue" /> CR means this much red will be added.
+        <Icon name="question-circle" color="blue" /> CR means this much red will
+        be added.
       </Table.Cell>
     </Table>
   );

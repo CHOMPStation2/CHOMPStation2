@@ -108,7 +108,7 @@
 	desc = "Production of experimental combat robots gone rogue."
 	mappath = 'maps/submaps/surface_submaps/wilderness/borglabAlt.dmm'
 	cost = 30
-	template_group = "Shuttle Down"
+	template_group = "Borg Lab"
 
 /datum/map_template/surface/wilderness/normal/butchershack
 	name = "Butcher Shack"

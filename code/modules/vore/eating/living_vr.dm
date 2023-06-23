@@ -282,8 +282,6 @@
 	P.can_be_drop_prey = src.can_be_drop_prey
 	P.can_be_drop_pred = src.can_be_drop_pred
 	P.allow_spontaneous_tf = src.allow_spontaneous_tf
-	P.appendage_color = src.appendage_color
-	P.appendage_alt_setting = src.appendage_alt_setting
 	P.step_mechanics_pref = src.step_mechanics_pref
 	P.pickup_pref = src.pickup_pref
 	P.drop_vore = src.drop_vore
@@ -341,8 +339,6 @@
 	can_be_drop_pred = P.can_be_drop_pred
 //	allow_inbelly_spawning = P.allow_inbelly_spawning //CHOMP Removal: we have vore spawning at home. Actually if this were to be enabled, it would break anyway. Just leaving this here as a reference to it.
 	allow_spontaneous_tf = P.allow_spontaneous_tf
-	appendage_color = P.appendage_color
-	appendage_alt_setting = P.appendage_alt_setting
 	step_mechanics_pref = P.step_mechanics_pref
 	pickup_pref = P.pickup_pref
 	drop_vore = P.drop_vore
@@ -574,6 +570,11 @@
 		G.can_revert = TRUE
 		qdel(G)
 		log_and_message_admins("[key_name(src)] used the OOC escape button to revert back from being petrified.")
+	//CHOMPEdit - In-shoe OOC escape. Checking voices as precaution if something akin to obj TF or possession happens
+	else if(!istype(src, /mob/living/voice) && istype(src.loc, /obj/item/clothing/shoes))
+		var/obj/item/clothing/shoes/S = src.loc
+		forceMove(get_turf(src))
+		log_and_message_admins("[key_name(src)] used the OOC escape button to escape from of a pair of shoes. [ADMIN_FLW(src)] - Shoes [ADMIN_VV(S)]")
 	//Don't appear to be in a vore situation
 	else
 		to_chat(src,"<span class='alert'>You aren't inside anyone, though, is the thing.</span>")
@@ -702,6 +703,8 @@
 		qdel(H)
 	else
 		belly.nom_mob(prey, user)
+
+	user.updateicon()
 
 	// Inform Admins
 	if(pred == user)
@@ -959,7 +962,7 @@
 		else
 			to_chat(src, "<span class='notice'>You can taste the flavor of garbage. Delicious.</span>")
 		return
-	to_chat(src, "<span class='notice'>This item is not appropriate for ethical consumption.</span>")
+	to_chat(src, "<span class='notice'>This snack is too powerful to go down that easily.</span>") //CHOMPEdit
 	return
 
 /mob/living/proc/eat_minerals() //Actual eating abstracted so the user isn't given a prompt due to an argument in this verb.
@@ -1170,6 +1173,11 @@
 	icon = 'icons/mob/screen_full_vore.dmi' //CHOMPedit: tweaking to preserve save data
 	icon_state = ""
 
+/* //Chomp DISABLE - use our solution, not upstream's.
+/obj/screen/fullscreen/belly/colorized/overlay
+	icon = 'icons/mob/screen_full_colorized_vore_overlays.dmi'
+*/ //Chomp DISABLE End
+
 /mob/living/proc/vorebelly_printout() //Spew the vorepanel belly messages into chat window for copypasting.
 	set name = "X-Print Vorebelly Settings"
 	set category = "Preferences"
@@ -1255,7 +1263,7 @@
 
 /datum/component/vore_panel/RegisterWithParent()
 	. = ..()
-	RegisterSignal(parent, COMSIG_MOB_CLIENT_LOGIN, .proc/create_mob_button)
+	RegisterSignal(parent, COMSIG_MOB_CLIENT_LOGIN, PROC_REF(create_mob_button))
 	var/mob/living/owner = parent
 	if(owner.client)
 		create_mob_button(parent)
@@ -1278,7 +1286,7 @@
 	var/datum/hud/HUD = user.hud_used
 	if(!screen_icon)
 		screen_icon = new()
-		RegisterSignal(screen_icon, COMSIG_CLICK, .proc/vore_panel_click)
+		RegisterSignal(screen_icon, COMSIG_CLICK, PROC_REF(vore_panel_click))
 	if(ispAI(user))
 		screen_icon.icon = 'icons/mob/pai_hud.dmi'
 		screen_icon.screen_loc = ui_acti
@@ -1292,8 +1300,7 @@
 /datum/component/vore_panel/proc/vore_panel_click(source, location, control, params, user)
 	var/mob/living/owner = user
 	if(istype(owner) && owner.vorePanel)
-		INVOKE_ASYNC(owner, /mob/living/proc/insidePanel, owner) //CHOMPEdit
-
+		INVOKE_ASYNC(owner, TYPE_PROC_REF(/mob/living, insidePanel), owner) //CHOMPEdit
 /**
  * Screen object for vore panel
  */

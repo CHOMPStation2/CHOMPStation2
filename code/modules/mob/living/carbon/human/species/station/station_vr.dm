@@ -347,6 +347,8 @@
 	wikilink="https://wiki.chompstation13.net/index.php?title=Tajaran"
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	agility = 90
+	can_climb = TRUE
+	climbing_delay = 1.00 //Cats are good climbers.
 
 /datum/species/skrell
 	spawn_flags = SPECIES_CAN_JOIN
