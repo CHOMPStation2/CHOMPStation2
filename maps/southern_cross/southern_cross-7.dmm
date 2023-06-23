@@ -3717,7 +3717,6 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
-/obj/machinery/power/sensor,
 /obj/machinery/door/firedoor/glass,
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/airlock/engineering{
@@ -3795,12 +3794,26 @@
 /obj/structure/window/plastitanium{
 	dir = 1
 	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/secarmory)
 "dfH" = (
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -23
+	},
+/obj/structure/cable/yellow{
+	dir = 8
+	},
+/obj/machinery/power/port_gen/pacman/super/potato{
+	sheets = 50;
+	power_gen = 200000;
+	active = 1
 	},
 /turf/simulated/floor/reinforced,
 /area/expoutpost/engstorage)
@@ -5323,7 +5336,9 @@
 /area/expoutpost/bar)
 "evv" = (
 /obj/machinery/shield_diffuser,
-/obj/machinery/pointdefense,
+/obj/machinery/pointdefense{
+	id_tag = "aeg_pd_control"
+	},
 /turf/simulated/floor/airless,
 /area/space)
 "evT" = (
@@ -5584,6 +5599,12 @@
 /obj/item/weapon/cell/device/weapon,
 /obj/item/weapon/cell/device/weapon,
 /obj/item/weapon/cell/device/weapon,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/secarmory)
 "eDB" = (
@@ -6349,10 +6370,6 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/power/sensor{
-	name = "Aegis Sensor - Auxiliary Reactor";
-	name_tag = "Auxiliary Reactor Output"
-	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/hatch{
 	req_one_access = list(10);
@@ -6410,7 +6427,8 @@
 	pixel_x = 24;
 	pixel_y = 8;
 	name = "Door Bolt";
-	id = "aeg_suiteone_bolt"
+	id = "aeg_suiteone_bolt";
+	specialfunctions = 4
 	},
 /turf/simulated/floor/carpet,
 /area/expoutpost/suite1)
@@ -8315,7 +8333,8 @@
 	pixel_x = -24;
 	pixel_y = -8;
 	name = "Door Bolt";
-	id = "aeg_seccomm_bolt"
+	id = "aeg_seccomm_bolt";
+	specialfunctions = 4
 	},
 /turf/simulated/floor/carpet,
 /area/expoutpost/commanderroom)
@@ -11477,8 +11496,12 @@
 "jpr" = (
 /obj/structure/cable/yellow,
 /obj/machinery/light,
-/obj/machinery/power/port_gen/pacman/super/potato,
-/obj/fiftyspawner/uranium,
+/obj/structure/cable/yellow{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	dir = 8
+	},
 /turf/simulated/floor/reinforced,
 /area/expoutpost/engstorage)
 "jpM" = (
@@ -13596,7 +13619,8 @@
 	dir = 1;
 	name = "Door Bolt";
 	pixel_y = -24;
-	id = "aeg_toilet2_bolt"
+	id = "aeg_toilet2_bolt";
+	specialfunctions = 4
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/expoutpost/restrooms)
@@ -15218,6 +15242,12 @@
 /obj/item/weapon/gun/energy/laser,
 /obj/item/weapon/gun/energy/laser,
 /obj/item/weapon/gun/energy/laser,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/secarmory)
 "mkR" = (
@@ -15633,6 +15663,12 @@
 /obj/item/clothing/shoes/leg_guard/combat,
 /obj/item/clothing/head/helmet/combat,
 /obj/item/clothing/under/syndicate/combat,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/secarmory)
 "mCa" = (
@@ -18368,6 +18404,12 @@
 /obj/item/clothing/shoes/leg_guard/combat,
 /obj/item/clothing/head/helmet/combat,
 /obj/item/clothing/under/syndicate/combat,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/secarmory)
 "oBU" = (
@@ -19059,6 +19101,7 @@
 /turf/simulated/shuttle/floor/purple,
 /area/shuttle/ursula)
 "phG" = (
+/obj/machinery/gateway/centerstation,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/expoutpost/gateway)
 "pia" = (
@@ -21615,7 +21658,8 @@
 	pixel_x = -24;
 	pixel_y = -14;
 	name = "Door Bolt";
-	id = "aeg_dormtwo_bolt"
+	id = "aeg_dormtwo_bolt";
+	specialfunctions = 4
 	},
 /turf/simulated/floor/carpet,
 /area/expoutpost/explodorm2)
@@ -21809,7 +21853,8 @@
 	dir = 1;
 	name = "Door Bolt";
 	pixel_y = -24;
-	id = "aeg_toilet1_bolt"
+	id = "aeg_toilet1_bolt";
+	specialfunctions = 4
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/expoutpost/restrooms)
@@ -23089,6 +23134,14 @@
 	dir = 4;
 	name = "Station Intercom (General)";
 	pixel_x = 21
+	},
+/obj/machinery/power/port_gen/pacman/super/potato{
+	sheets = 50;
+	power_gen = 200000;
+	active = 1
+	},
+/obj/structure/cable/yellow{
+	dir = 4
 	},
 /turf/simulated/floor/reinforced,
 /area/expoutpost/engstorage)
@@ -27209,7 +27262,8 @@
 	pixel_y = 24;
 	pixel_x = -16;
 	name = "Door Bolt";
-	id = "aeg_sauna_bolt"
+	id = "aeg_sauna_bolt";
+	specialfunctions = 4
 	},
 /turf/simulated/floor/wood,
 /area/expoutpost/washroom)
@@ -30119,7 +30173,8 @@
 	pixel_x = -24;
 	pixel_y = 8;
 	name = "Door Bolt";
-	id = "aeg_suitetwo_bolt"
+	id = "aeg_suitetwo_bolt";
+	specialfunctions = 4
 	},
 /turf/simulated/floor/carpet,
 /area/expoutpost/suite2)
@@ -30409,7 +30464,8 @@
 	pixel_x = -24;
 	pixel_y = -14;
 	name = "Door Bolt";
-	id = "aeg_dormone_bolt"
+	id = "aeg_dormone_bolt";
+	specialfunctions = 4
 	},
 /turf/simulated/floor/carpet,
 /area/expoutpost/explodorm1)
@@ -30573,7 +30629,8 @@
 	pixel_x = 24;
 	pixel_y = -8;
 	name = "Door Bolt";
-	id = "aeg_pathfinderroom_bolt"
+	id = "aeg_pathfinderroom_bolt";
+	specialfunctions = 4
 	},
 /turf/simulated/floor/carpet,
 /area/expoutpost/pathfinderroom)
@@ -31109,6 +31166,12 @@
 /obj/item/weapon/gun/projectile/automatic/p90,
 /obj/item/weapon/gun/projectile/automatic/p90,
 /obj/item/weapon/gun/projectile/automatic/p90,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/secarmory)
 "ygz" = (
@@ -31271,7 +31334,10 @@
 	RCon_tag = "Auxiliary Reactor - Aegis";
 	input_attempt = 1;
 	charge = 2e+006;
-	name = "Auxiliary Reactor SMES"
+	name = "Auxiliary Reactor SMES";
+	cur_coils = 2;
+	input_level = 500000;
+	output_level = 350000
 	},
 /obj/effect/engine_setup/smes,
 /obj/structure/cable/green{
@@ -31282,7 +31348,9 @@
 /turf/simulated/floor,
 /area/expoutpost/engoffice)
 "ykl" = (
-/obj/machinery/pointdefense_control,
+/obj/machinery/pointdefense_control{
+	id_tag = "aeg_pd_control"
+	},
 /obj/structure/window/reinforced{
 	dir = 8
 	},
