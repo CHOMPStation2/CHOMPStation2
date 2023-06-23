@@ -1529,6 +1529,17 @@
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vistortunnel)
+"sY" = (
+/obj/item/weapon/material/barbedwire{
+	anchored = 1;
+	icon_state = "barbedwire-out"
+	},
+/obj/item/weapon/material/barbedwire{
+	anchored = 1;
+	icon_state = "barbedwire-out"
+	},
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/entrancetunnel)
 "tg" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 6
@@ -2395,6 +2406,13 @@
 /obj/machinery/door/airlock,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/kitchen/chamberB)
+"CY" = (
+/obj/item/weapon/beartrap/hunting{
+	anchored = 1;
+	deployed = 1
+	},
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/entrancetunnel)
 "CZ" = (
 /obj/effect/floor_decal/corner/red/border,
 /turf/simulated/floor/wmarble,
@@ -2404,6 +2422,16 @@
 /obj/structure/grille/broken,
 /turf/unsimulated/ai_visible,
 /area/awaymission/mol/vr/shattered)
+"Dj" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/item/weapon/material/barbedwire{
+	anchored = 1;
+	icon_state = "barbedwire-out"
+	},
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/entrancetunnel)
 "Dp" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 6
@@ -2526,6 +2554,13 @@
 /obj/effect/floor_decal/corner/green/diagonal,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vistortunnel)
+"EP" = (
+/obj/item/weapon/material/barbedwire{
+	anchored = 1;
+	icon_state = "barbedwire-out"
+	},
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/entrancetunnel)
 "ET" = (
 /obj/random/obstruction,
 /obj/random/obstruction,
@@ -2662,6 +2697,14 @@
 /obj/structure/bed/chair/bar_stool,
 /turf/simulated/floor/tiled/kafel_full,
 /area/awaymission/mol/kitchen/ChamberD)
+"FQ" = (
+/obj/machinery/light,
+/obj/item/weapon/beartrap/hunting{
+	anchored = 1;
+	deployed = 1
+	},
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/entrancetunnel)
 "FS" = (
 /obj/machinery/door/blast/puzzle{
 	id = "FinaleGate1"
@@ -32679,6 +32722,18 @@ Nh
 Nh
 Nh
 Ae
+EP
+rt
+rt
+rt
+rt
+rt
+rt
+rt
+rt
+rt
+rt
+EP
 rt
 rt
 rt
@@ -32690,6 +32745,7 @@ rt
 rt
 rt
 rt
+EP
 rt
 rt
 rt
@@ -32698,20 +32754,7 @@ rt
 rt
 rt
 rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
+EP
 rt
 rt
 rt
@@ -32940,6 +32983,24 @@ Ae
 rt
 rt
 rt
+CY
+rt
+rt
+EP
+rt
+rt
+rt
+rt
+rt
+rt
+CY
+rt
+rt
+rt
+rt
+rt
+rt
+EP
 rt
 rt
 rt
@@ -32954,25 +33015,7 @@ rt
 rt
 rt
 rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-Qh
+FQ
 Ae
 Nh
 Nh
@@ -33204,12 +33247,12 @@ rt
 rt
 rt
 rt
+EP
 rt
 rt
 rt
 rt
-rt
-rt
+EP
 rt
 rt
 rt
@@ -33222,7 +33265,7 @@ rt
 rt
 rt
 rt
-rt
+EP
 rt
 rt
 rt
@@ -33454,7 +33497,7 @@ Nh
 Nh
 Ae
 oH
-rt
+CY
 Qh
 Ae
 Ae
@@ -33713,7 +33756,7 @@ Nh
 Ae
 rt
 rt
-rt
+EP
 Ae
 Nh
 Nh
@@ -33745,7 +33788,7 @@ Nh
 Nh
 Ae
 rt
-rt
+EP
 rt
 Ae
 Nh
@@ -33970,7 +34013,7 @@ Nh
 Nh
 Ae
 rt
-rt
+CY
 rt
 Ae
 Nh
@@ -34486,7 +34529,7 @@ Nh
 Nh
 Ae
 rt
-rt
+CY
 rt
 Ae
 Nh
@@ -34743,7 +34786,7 @@ Nh
 Nh
 Nh
 Ae
-rt
+EP
 rt
 rt
 Ae
@@ -34776,7 +34819,7 @@ Nh
 Nh
 Nh
 Ae
-rt
+CY
 rt
 rt
 Ae
@@ -35036,7 +35079,7 @@ Nh
 Ae
 rt
 rt
-rt
+EP
 Ae
 Nh
 Nh
@@ -35519,7 +35562,7 @@ Nh
 Ae
 rt
 rt
-rt
+CY
 Ae
 Nh
 Nh
@@ -36278,22 +36321,22 @@ kL
 rt
 rt
 rt
-rt
-rt
-rt
-rt
-kL
-rt
-rt
-rt
-rt
+EP
 rt
 rt
 rt
 kL
 rt
 rt
+CY
+EP
 rt
+rt
+rt
+kL
+rt
+rt
+EP
 rt
 rt
 rt
@@ -36324,7 +36367,7 @@ Nh
 Nh
 Nh
 Ae
-rt
+EP
 rt
 rt
 Ae
@@ -36539,9 +36582,9 @@ rt
 rt
 rt
 rt
+EP
 rt
-rt
-rt
+CY
 rt
 rt
 rt
@@ -36583,7 +36626,7 @@ Nh
 Nh
 Ae
 rt
-rt
+CY
 Qh
 Ae
 Ae
@@ -36796,8 +36839,16 @@ rt
 rt
 rt
 rt
+sY
+rt
+ZY
+rt
+EP
 rt
 rt
+rt
+rt
+CY
 ZY
 rt
 rt
@@ -36805,15 +36856,7 @@ rt
 rt
 rt
 rt
-rt
-ZY
-rt
-rt
-rt
-rt
-rt
-rt
-rt
+EP
 rt
 rt
 Xr
@@ -37325,7 +37368,7 @@ Nh
 Ae
 rt
 rt
-rt
+EP
 Ae
 Nh
 Nh
@@ -37358,7 +37401,7 @@ Nh
 Ae
 rt
 rt
-rt
+CY
 Ae
 Fn
 NQ
@@ -37615,7 +37658,7 @@ Nh
 Nh
 Ae
 rt
-rt
+EP
 Qh
 Ae
 Ae
@@ -37840,7 +37883,7 @@ Nh
 Nh
 Ae
 rt
-rt
+CY
 rt
 Ae
 Nh
@@ -38097,7 +38140,7 @@ Nh
 Nh
 Nh
 Ae
-rt
+EP
 rt
 rt
 Ae
@@ -38648,7 +38691,7 @@ Nh
 Ae
 rt
 rt
-rt
+sY
 Ae
 Nh
 Nh
@@ -38873,7 +38916,7 @@ Nh
 Ae
 rt
 rt
-rt
+EP
 Ae
 Nh
 Nh
@@ -38905,7 +38948,7 @@ Nh
 Nh
 Ae
 rt
-rt
+CY
 rt
 Ae
 Nh
@@ -39162,7 +39205,7 @@ Nh
 Nh
 Nh
 Ae
-rt
+EP
 rt
 rt
 Ae
@@ -39388,7 +39431,7 @@ Nh
 Nh
 Ae
 rt
-rt
+CY
 rt
 Ae
 Nh
@@ -39679,7 +39722,7 @@ Ae
 Ae
 Ae
 rt
-rt
+EP
 rt
 Ae
 Nh
@@ -39910,32 +39953,32 @@ kL
 rt
 rt
 rt
+CY
+rt
+rt
+EP
 rt
 rt
 rt
 rt
 rt
-rt
-rt
-rt
-rt
-rt
-rt
-kL
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
+EP
 rt
 kL
+CY
+rt
+rt
+rt
+rt
+rt
+rt
+CY
+rt
+EP
+rt
+rt
+rt
+Dj
 rt
 rt
 rt
@@ -40164,6 +40207,7 @@ Ae
 rt
 rt
 rt
+CY
 rt
 rt
 rt
@@ -40171,27 +40215,26 @@ rt
 rt
 rt
 rt
+CY
 rt
-rt
-rt
-rt
+CY
 rt
 rt
 rt
 rt
 qV
 rt
+CY
+rt
+EP
+rt
+CY
 rt
 rt
 rt
 rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
+CY
+CY
 rt
 rt
 rt
@@ -40420,41 +40463,41 @@ Nh
 Nh
 Ae
 rt
+EP
+rt
+rt
+rt
+rt
+EP
 rt
 rt
 rt
 rt
 rt
 rt
+EP
+rt
+rt
+CY
+rt
+EP
 rt
 rt
 rt
 rt
 rt
 rt
+sY
+rt
+CY
 rt
 rt
 rt
+EP
 rt
+CY
 rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
+EP
 Ae
 Nh
 Nh
