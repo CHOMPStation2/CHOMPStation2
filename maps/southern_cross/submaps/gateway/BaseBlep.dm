@@ -31,3 +31,6 @@
 /area/awaymission/baseblep/finale
 	name = "Gateway"
 	requires_power = 0
+
+//Because dumb Vr errors
+/area/vr

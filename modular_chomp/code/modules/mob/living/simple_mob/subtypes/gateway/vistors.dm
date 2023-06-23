@@ -213,6 +213,7 @@
 	melee_damage_upper = 40
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged/kiting
 	mob_size = MOB_MINISCULE
+	density = 0
 
 /mob/living/simple_mob/mechanical/mecha/vistor/vistororange
 	name = "vistor orange?"
@@ -271,3 +272,96 @@
 //obj/item/clothing/suit/armor/tesla/vistor
 //obj/item/clothing/suit/armor/reactive/vistor
 //obj/item/clothing/suit/armor/protectionbubble
+
+
+//Ehhhh screw it the scrap mobs can also go here.
+
+/mob/living/simple_mob/mechanical/scrapbug
+	color = "#5F5F5F"
+	damage_fatigue_mult = 0
+
+/mob/living/simple_mob/mechanical/scrapbug/spider //Back line attacker
+	name = "guardian drone"
+	icon = 'icons/mob/animal_vg.dmi'
+	icon_state = "guard"
+	icon_living = "guard"
+	icon_dead = "guard_dead"
+	maxHealth = 60
+	health = 60
+	projectiletype = /obj/item/projectile/arc/spider
+	ai_holder_type = /datum/ai_holder/simple_mob/ranged/kiting
+
+/obj/item/projectile/arc/spider
+	name = "ball of web"
+	icon_state = "bola"
+	damage = 30
+	embed_chance = 0 //Nada.
+	damage_type = BRUTE
+	muzzle_type = null
+	hud_state = "monkey"
+	combustion = FALSE
+
+
+/mob/living/simple_mob/mechanical/scrapbug/roach //THE SWARM
+	name = "scrap beetle"
+	icon = 'icons/mob/animal_vg.dmi'
+	icon_state = "bigroach"
+	icon_living = "bigroach"
+	icon_dead = "bigroach_dead"
+	maxHealth = 5
+	health = 5
+	movement_cooldown = -2
+	attack_armor_pen = 30 //Mostly for mechas and some armor soaky things.
+	melee_damage_lower = 12
+	melee_damage_upper = 12
+	mob_size = MOB_MINISCULE
+
+/mob/living/simple_mob/mechanical/mecha/forgotten
+	name = "Forgotten"
+	icon = 'icons/mecha/mecha.dmi'
+	icon_state = "mime"
+	icon_living = "mime"
+	maxHealth = 300
+	health = 300
+	movement_cooldown = 0
+	damage_fatigue_mult = 0
+
+	armor = list(
+				"melee"		= 30,
+				"bullet"	= 30,
+				"laser"		= 30,
+				"energy"	= 30,
+				"bomb"		= 30,
+				"bio"		= 100,
+				"rad"		= 100
+				)
+
+	wreckage = /obj/structure/loot_pile/mecha/phazon/forgotten
+	pilot_type = null
+
+	ai_holder_type = /datum/ai_holder/simple_mob/ranged/kiting
+
+	melee_attack_delay = 3 SECOND
+
+	melee_damage_lower = 35
+	melee_damage_upper = 35
+
+	projectiletype = /obj/item/projectile/arc/fragmentation/mortar/forgotten
+
+/obj/item/projectile/arc/fragmentation/mortar/forgotten
+	icon_state = "mortar"
+	fragment_amount = 4
+	spread_range = 5
+
+/mob/living/simple_mob/mechanical/mecha/vistor/death()
+	..()
+	new /obj/effect/decal/cleanable/blood/gibs/robot(src.loc)
+	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
+	s.set_up(3, 1, src)
+	s.start()
+	qdel(src)
+
+/obj/structure/loot_pile/mecha/phazon/forgotten
+	name = "forgotten wreckage"
+	desc = "The ruins of some unfortunate forgoten mecha type. Perhaps something is salvageable."
+	icon_state = "mime-broken"

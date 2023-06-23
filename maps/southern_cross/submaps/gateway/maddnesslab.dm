@@ -86,6 +86,22 @@
 /area/awaymission/mol/realitycore
 	name = "Realitycore"
 
+/area/awaymission/mol/audiotorium
+	name = "Audiotorium"
+
+/area/awaymission/mol/conveyorcontrol
+	name = "Conveyor Control Room"
+
+/area/awaymission/mol/dorm
+	name = "Dorm"
+
+/area/awaymission/mol/serverroom
+	name = "Server Room"
+
+/area/awaymission/mol/securitycheckpoint
+	name = "Security Checpoint"
+
+
 /obj/structure/prop/blackbox/maddnesslab
 	catalogue_data = list(/datum/category_item/catalogue/information/blackbox/maddnesslab)
 

@@ -3,8 +3,9 @@
 	icon = 'icons/mecha/mecha.dmi'
 	icon_state = "imperion"
 	icon_living = "imperion"
-	maxHealth = 400
-	health = 400
+	desc = "A strange precursor mecha"
+	maxHealth = 350
+	health = 350
 	movement_cooldown = -1
 	unsuitable_atoms_damage = 0
 	projectiletype = /obj/item/projectile/energy/gaussrifle
@@ -14,15 +15,17 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 
+	ranged_attack_delay = 1.5 SECONDS
+
 	wreckage = null
 	pilot_type = null
 
 	armor = list(
-				"melee"		= 45,
-				"bullet"	= 45,
-				"laser"		= 45,
-				"energy"	= 45,
-				"bomb"		= 45,
+				"melee"		= 35,
+				"bullet"	= 35,
+				"laser"		= 35,
+				"energy"	= 35,
+				"bomb"		= 35,
 				"bio"		= 100,
 				"rad"		= 100
 				)
@@ -79,9 +82,9 @@
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase1 //Simple phase that is mostly dodge rockects
 	movement_cooldown = -1
-	projectiletype = /obj/item/projectile/bullet/srmrocket
+	projectiletype = /obj/item/projectile/arc/explosive_rocket
 	melee_attack_delay = 4 SECOND
-	ranged_attack_delay = 1.5 SECONDS
+	ranged_attack_delay = 2.5 SECONDS
 
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 
@@ -232,6 +235,7 @@
 	icon_state = "imperion-phase"
 	icon_living = "imperion-phase"
 	icon_dead = "imperion-phase"
+	desc = "A precursor mecha on it's last legs, sparking, seeming vunerable up close"
 	movement_cooldown = 45
 	projectiletype = /obj/item/projectile/bullet/magnetic/fuelrod/tritium
 	melee_attack_delay = 4 SECOND
@@ -251,7 +255,7 @@
 	var/obj/item/shield_projector/shields = null
 
 	armor = list(
-				"melee"		= -200,
+				"melee"		= -300,
 				"bullet"	= 65,
 				"laser"		= 65,
 				"energy"	= 65,
@@ -260,50 +264,50 @@
 				"rad"		= 100
 				)
 
-	loot_list = list(/obj/item/clothing/suit/armor/alien = 30,
-			/obj/item/clothing/suit/armor/alien/tank = 30,
+	loot_list = list(/obj/item/clothing/suit/armor/alien = 60,
+			/obj/item/clothing/suit/armor/alien/tank = 60,
+			/obj/item/prop/alien/junk = 60,
+			/obj/item/prop/alien/junk = 60,
+			/obj/item/prop/alien/junk = 60,
+			/obj/item/prop/alien/junk = 60,
+			/obj/item/prop/alien/junk = 60,
+			/obj/item/weapon/gun/energy/alien = 60,
+			/obj/item/weapon/gun/energy/alien = 60,
+			/obj/random/tool/alien = 60,
+			/obj/random/tool/alien = 60,
+			/obj/item/weapon/cell/device/weapon/recharge/alien = 60,
+			/obj/item/weapon/cell/device/weapon/recharge/alien = 60,
+			/obj/item/clothing/suit/armor/alien = 60,
+			/obj/item/clothing/suit/armor/alien/tank = 60,
 			/obj/item/prop/alien/junk = 50,
 			/obj/item/prop/alien/junk = 50,
 			/obj/item/prop/alien/junk = 50,
 			/obj/item/prop/alien/junk = 50,
 			/obj/item/prop/alien/junk = 50,
-			/obj/item/weapon/gun/energy/alien = 30,
-			/obj/item/weapon/gun/energy/alien = 30,
-			/obj/random/tool/alien = 30,
-			/obj/random/tool/alien = 30,
-			/obj/item/weapon/cell/device/weapon/recharge/alien = 30,
-			/obj/item/weapon/cell/device/weapon/recharge/alien = 30,
-			/obj/item/clothing/suit/armor/alien = 30,
-			/obj/item/clothing/suit/armor/alien/tank = 30,
-			/obj/item/prop/alien/junk = 50,
-			/obj/item/prop/alien/junk = 50,
-			/obj/item/prop/alien/junk = 50,
-			/obj/item/prop/alien/junk = 50,
-			/obj/item/prop/alien/junk = 50,
-			/obj/item/weapon/gun/energy/alien = 30,
-			/obj/item/weapon/gun/energy/alien = 30,
-			/obj/random/tool/alien = 30,
-			/obj/random/tool/alien = 30,
-			/obj/item/weapon/cell/device/weapon/recharge/alien = 30,
-			/obj/item/weapon/cell/device/weapon/recharge/alien = 30,
+			/obj/item/weapon/gun/energy/alien = 60,
+			/obj/item/weapon/gun/energy/alien = 60,
+			/obj/random/tool/alien = 60,
+			/obj/random/tool/alien = 60,
+			/obj/item/weapon/cell/device/weapon/recharge/alien = 60,
+			/obj/item/weapon/cell/device/weapon/recharge/alien = 60,
 			/obj/item/clothing/suit/armor/reactive/vistor = 50,
 			/obj/item/clothing/suit/armor/reactive/vistor = 50,
 			/obj/item/clothing/suit/armor/protectionbubble = 50,
 			/obj/item/clothing/suit/armor/protectionbubble = 50,
-			/obj/item/clothing/suit/armor/tesla/vistor = 50,
-			/obj/item/clothing/suit/armor/tesla/vistor = 50,
+			/obj/item/clothing/suit/armor/tesla/vistor = 60,
+			/obj/item/clothing/suit/armor/tesla/vistor = 60,
 			/obj/item/shield_projector/rectangle/automatic/orange = 10,
 			/obj/item/shield_projector/rectangle/automatic/imperion = 1,
-			/obj/item/clothing/head/vrwizard = 10,
-			/obj/item/clothing/suit/vrwizard = 10,
-			/obj/item/weapon/gun/magic/firestaff/vrwizard/fire = 10,
-			/obj/item/weapon/gun/magic/firestaff/vrwizard/frost = 10,
-			/obj/item/weapon/gun/magic/firestaff/vrwizard/poison = 10,
-			/obj/item/weapon/gun/magic/firestaff/vrwizard/lighting = 10,
-			/obj/item/clothing/head/psy_crown/candycrown = 30,
-			/obj/item/clothing/gloves/stamina = 30,
-			/obj/item/clothing/suit/armor/buffvest = 30,
-			/obj/item/weapon/melee/cullingcane = 30
+			/obj/item/clothing/head/vrwizard = 60,
+			/obj/item/clothing/suit/vrwizard = 60,
+			/obj/item/weapon/gun/magic/firestaff/vrwizard/fire = 60,
+			/obj/item/weapon/gun/magic/firestaff/vrwizard/frost = 60,
+			/obj/item/weapon/gun/magic/firestaff/vrwizard/poison = 60,
+			/obj/item/weapon/gun/magic/firestaff/vrwizard/lighting = 60,
+			/obj/item/clothing/head/psy_crown/candycrown = 60,
+			/obj/item/clothing/gloves/stamina = 60,
+			/obj/item/clothing/suit/armor/buffvest = 60,
+			/obj/item/weapon/melee/cullingcane = 60
 			)
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase5/proc/electric_defense(atom/target)
