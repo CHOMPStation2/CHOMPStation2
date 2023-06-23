@@ -343,6 +343,8 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/machinery/meter,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor,
 /area/expoutpost/reactoraccess)
 "aoV" = (
@@ -863,6 +865,13 @@
 /obj/structure/loot_pile/maint/boxfort,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
+"aJV" = (
+/obj/machinery/atmospherics/pipe/simple/visible/green{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor,
+/area/expoutpost/reactorroom)
 "aKk" = (
 /obj/effect/floor_decal/borderfloorwhite/corner,
 /obj/effect/floor_decal/corner/paleblue/bordercorner,
@@ -2097,6 +2106,10 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor,
 /area/expoutpost/reactorroom)
 "bMo" = (
@@ -3097,6 +3110,9 @@
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 6
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
 /turf/simulated/floor,
 /area/expoutpost/reactorroom)
 "cyD" = (
@@ -3722,6 +3738,8 @@
 /obj/machinery/door/airlock/engineering{
 	name = "R-UST Access"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor,
 /area/expoutpost/reactoraccess)
 "dbd" = (
@@ -8604,6 +8622,9 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
 /turf/simulated/floor,
 /area/expoutpost/reactorroom)
 "haG" = (
@@ -10024,6 +10045,10 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor,
 /area/expoutpost/reactoraccess)
 "ige" = (
@@ -10143,6 +10168,20 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/staginghangar)
+"ikG" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/expoutpost/reactoraccess)
 "ikH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
@@ -11018,6 +11057,8 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor,
 /area/expoutpost/reactoraccess)
 "iVO" = (
@@ -12154,6 +12195,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/lowersternhallway)
 "jNq" = (
@@ -13006,6 +13049,12 @@
 	d2 = 8;
 	icon_state = "4-8";
 	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/expoutpost/reactorroom)
@@ -17552,6 +17601,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor,
 /area/expoutpost/reactorroom)
 "nNi" = (
@@ -19092,6 +19142,8 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor,
 /area/expoutpost/reactoraccess)
 "phx" = (
@@ -19717,6 +19769,9 @@
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 6
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
 /turf/simulated/floor,
 /area/expoutpost/reactorroom)
 "pLt" = (
@@ -19805,6 +19860,9 @@
 	d2 = 8;
 	icon_state = "4-8";
 	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/expoutpost/reactorroom)
@@ -21316,6 +21374,12 @@
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
 	},
 /turf/simulated/floor,
 /area/expoutpost/reactoraccess)
@@ -22849,6 +22913,21 @@
 	},
 /turf/simulated/floor/carpet,
 /area/expoutpost/suite1)
+"rRC" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor,
+/area/expoutpost/reactorroom)
 "rRR" = (
 /obj/machinery/power/apc{
 	dir = 8;
@@ -25848,6 +25927,12 @@
 /obj/machinery/door/airlock/engineering{
 	name = "R-UST Access"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor,
 /area/expoutpost/reactoraccess)
 "ulX" = (
@@ -26081,6 +26166,9 @@
 	},
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/expoutpost/reactoraccess)
@@ -27047,6 +27135,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 10
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor,
 /area/expoutpost/reactorroom)
 "vfc" = (
@@ -28272,6 +28361,10 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/expoutpost/reactoraccess)
@@ -29523,6 +29616,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
+"xaC" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor,
+/area/expoutpost/reactorroom)
 "xaM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -62560,7 +62657,7 @@ jtd
 xJG
 fBv
 oUm
-uuI
+ikG
 sYD
 uuI
 dRX
@@ -63853,8 +63950,8 @@ cpa
 tzB
 hKH
 cLB
-vEk
-wDi
+xaC
+rRC
 vEk
 oXb
 wDi
@@ -64885,7 +64982,7 @@ wIt
 tHf
 aaf
 cLB
-mfN
+aJV
 vfb
 qQa
 lPp
@@ -65143,7 +65240,7 @@ kKg
 xxo
 sAP
 cLB
-mfN
+aJV
 pKM
 vUT
 ktN
