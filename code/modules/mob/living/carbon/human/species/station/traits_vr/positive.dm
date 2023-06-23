@@ -7,7 +7,7 @@
 	cost = 4 //CHOMPEdit
 	var_changes = list("slowdown" = -0.5)
 	excludes = list(/datum/trait/positive/hardy,/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy_plus,/datum/trait/positive/speed_fast_minor)
-	
+
 
 /datum/trait/positive/hardy
 	name = "Hardy"
@@ -45,7 +45,7 @@
 	desc = "Decreases your susceptibility to electric shocks by 50%." //CHOMP Edit - GRAMMAR PLS.
 	cost = 3 //Let us not forget this effects tasers!
 	var_changes = list("siemens_coefficient" = 0.5) //CHOMP Edit
-	
+
 /*   //Chompedit, moving to Positive_ch.dm so it wont be messed with from upstream
 /datum/trait/positive/darksight
 	name = "Darksight"
@@ -58,7 +58,7 @@
 	desc = "Allows you to see in the dark for almost the whole screen and 20% more susceptible to flashes." //CHOMP Edit
 	cost = 2
 	var_changes = list("darksight" = 6)  //CHOMP Edit
-*/ 
+*/
 /datum/trait/positive/melee_attack
 	name = "Special Attack: Sharp Melee" // Trait Organization for easier browsing. TODO: Proper categorization of 'health/ability/resist/etc'
 	desc = "Provides sharp melee attacks that do slightly more damage."
@@ -102,7 +102,7 @@
 	cost = 2 //CHOMP Edit
 	var_changes = list("burn_mod" = 0.8) //CHOMP Edit
 	//excludes = list(/datum/trait/positive/minor_brute_resist,/datum/trait/positive/brute_resist) //CHOMP disable, this is already handled in positive_ch.dm
-	
+
 
 
 /datum/trait/positive/photoresistant
@@ -130,12 +130,13 @@
 	var_changes = list("soft_landing" = TRUE)
 	custom_only = FALSE
 
+/*
 /datum/trait/positive/hardfeet
 	name = "Hard Feet"
 	desc = "Makes your nice clawed, scaled, hooved, armored, or otherwise just awfully calloused feet immune to glass shards."
 	cost = 1 //CHOMP Edit
 	var_changes = list("flags" = NO_MINOR_CUT) //Checked the flag is only used by shard stepping.
-
+*/
 
 // CHOMPEdit: This has been removed for two years, since Jan 2020, pending "review". Uncommenting as per tankiness increase PR.
 /datum/trait/positive/antiseptic_saliva
