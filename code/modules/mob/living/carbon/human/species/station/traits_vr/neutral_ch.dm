@@ -80,6 +80,20 @@
 	autohiss_exempt = list("Vespinae"))
 	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_unathi)
 
+//CHOMP Note from purdev, we're MRP and having wings that you can't use is kinda stinky. :3
+/datum/trait/neutral/winged_flight
+	name = "Winged Flight"
+	desc = "Allows you to fly by using your wings. Don't forget to bring them!"
+	cost = 0
+	has_preferences = list("flight_vore" = list(TRAIT_PREF_TYPE_BOOLEAN, "Flight Vore enabled on spawn", TRAIT_VAREDIT_TARGET_MOB, FALSE))
+//	custom_only =
+
+/datum/trait/neutral/winged_flight/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	H.verbs |= /mob/living/proc/flying_toggle
+	H.verbs |= /mob/living/proc/flying_vore_toggle
+	H.verbs |= /mob/living/proc/start_wings_hovering
+
 /datum/trait/neutral/gargoyle
 	name = "Gargoyle (Adjustable)"
 	desc = "You turn into a statue (or similar) at will, but also whenever you run out of energy. Being a statue replenishes your energy slowly."
