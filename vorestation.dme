@@ -4621,6 +4621,7 @@
 #include "modular_chomp\code\modules\materials\materials\organic\animal_products.dm"
 #include "modular_chomp\code\modules\mining\shelter_atoms_ch.dm"
 #include "modular_chomp\code\modules\mining\shelters_ch.dm"
+#include "modular_chomp\code\modules\mob\airhack.dm"
 #include "modular_chomp\code\modules\mob\holder.dm"
 #include "modular_chomp\code\modules\mob\mob.dm"
 #include "modular_chomp\code\modules\mob\dead\observer\observer.dm"
