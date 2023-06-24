@@ -1,7 +1,7 @@
 /obj/item/projectile/beam/phaser //The "medium" phaser beam.
-	damage = 10
-	SA_bonus_damage = 40
-	SA_vulnerability = list(SA_ANIMAL, MOB_CLASS_SYNTHETIC, MOB_CLASS_ABERRATION, MOB_CLASS_HUMANOID)
+	damage = 20
+	SA_bonus_damage = 20
+	SA_vulnerability = list(SA_ANIMAL, MOB_CLASS_SYNTHETIC, MOB_CLASS_ABERRATION)
 	icon = 'icons/obj/projectiles_ch.dmi'
 	icon_state = "phaser"
 	light_color = "#F18F12"
@@ -12,8 +12,8 @@
 
 
 /obj/item/projectile/beam/phaser/light
-	damage = 5
-	SA_bonus_damage = 30
+	damage = 10
+	SA_bonus_damage = 10
 	icon_state = "phaser_light"
 	light_range = 1.5
 	light_power = 0.3
@@ -23,7 +23,8 @@
 
 
 /obj/item/projectile/beam/phaser/heavy
-	SA_bonus_damage = 55
+	damage = 30
+	SA_bonus_damage = 30
 	icon_state = "phaser_heavy"
 	light_range = 3
 	light_power = 1
@@ -33,8 +34,8 @@
 
 
 /obj/item/projectile/beam/phaser/heavy/cannon
-	damage = 15
-	SA_bonus_damage = 60
+	damage = 40
+	SA_bonus_damage = 40
 
 
 /obj/effect/projectile/tracer/phaser
