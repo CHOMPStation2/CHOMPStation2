@@ -67,6 +67,9 @@ avoid code duplication. This includes items that may sometimes act as a standard
 
 	if(attempt_vr(src,"vore_attackby",args)) return //VOREStation Add - The vore, of course.
 
+	if(src.Airattackby(I,user)) //CHOMP Add - The inflation, of course.
+		return FALSE
+
 	return I.attack(src, user, user.zone_sel.selecting, attack_modifier)
 
 // Used to get how fast a mob should attack, and influences click delay.
