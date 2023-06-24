@@ -416,6 +416,16 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/staginghangar)
+"ara" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 8
+	},
+/obj/item/device/geiger/wall/west,
+/turf/simulated/floor/tiled,
+/area/expoutpost/techstorage)
 "arw" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 1
@@ -5595,9 +5605,6 @@
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "eCG" = (
-/obj/structure/closet/secure_closet/guncabinet{
-	req_one_access = list(43,67)
-	},
 /obj/structure/window/plastitanium{
 	dir = 1
 	},
@@ -5621,6 +5628,9 @@
 	},
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1
+	},
+/obj/structure/closet/secure_closet/guncabinet{
+	req_one_access = list(1)
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/secarmory)
@@ -6953,7 +6963,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/portbowhallway)
 "fBv" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/r_lead,
 /area/expoutpost/reactoraccess)
 "fBR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -7034,7 +7044,7 @@
 /area/expoutpost/reactorroom)
 "fEc" = (
 /obj/structure/sign/signnew/radiation,
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/r_lead,
 /area/expoutpost/reactoraccess)
 "fEs" = (
 /obj/structure/cable/green{
@@ -12502,9 +12512,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/staginghangar)
 "kbK" = (
-/obj/structure/closet/secure_closet/guncabinet{
-	req_one_access = list(43,67)
-	},
 /obj/item/weapon/gun/energy/locked/phasegun/rifle,
 /obj/item/weapon/gun/energy/locked/phasegun/rifle,
 /obj/item/weapon/gun/energy/locked/phasegun/rifle,
@@ -12512,6 +12519,9 @@
 /obj/item/weapon/gun/energy/locked/phasegun/rifle,
 /obj/effect/floor_decal/corner/green/border{
 	dir = 8
+	},
+/obj/structure/closet/secure_closet/guncabinet{
+	req_one_access = list(43,67,5)
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/exploarmory)
@@ -13520,9 +13530,6 @@
 /turf/simulated/floor/tiled,
 /area/expoutpost/gateway)
 "kYg" = (
-/obj/structure/closet/secure_closet/guncabinet{
-	req_one_access = list(43,67)
-	},
 /obj/item/weapon/gun/energy/locked/phasegun,
 /obj/item/weapon/gun/energy/locked/phasegun,
 /obj/item/weapon/gun/energy/locked/phasegun,
@@ -13533,6 +13540,9 @@
 	},
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/structure/closet/secure_closet/guncabinet{
+	req_one_access = list(43,67,5)
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/exploarmory)
@@ -15294,7 +15304,7 @@
 /area/expoutpost/miningfoyer)
 "mkJ" = (
 /obj/structure/closet/secure_closet/guncabinet{
-	req_one_access = list(43,67)
+	req_one_access = list(1)
 	},
 /obj/structure/window/plastitanium{
 	dir = 8
@@ -15518,6 +15528,7 @@
 /obj/machinery/atmospherics/portables_connector{
 	dir = 8
 	},
+/obj/item/device/geiger/wall/east,
 /turf/simulated/floor,
 /area/expoutpost/atmospherics)
 "mse" = (
@@ -23212,7 +23223,7 @@
 /turf/simulated/floor,
 /area/expoutpost/portfuelstorage)
 "sey" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/r_lead,
 /area/expoutpost/reactorcr)
 "sfi" = (
 /obj/item/device/radio/intercom{
@@ -25623,7 +25634,7 @@
 /area/expoutpost/uppersternhallway)
 "tZL" = (
 /obj/structure/closet/secure_closet/guncabinet{
-	req_one_access = list(43,67)
+	req_one_access = list(43,67,5)
 	},
 /obj/item/weapon/gun/energy/locked/phasegun/pistol,
 /obj/item/weapon/gun/energy/locked/phasegun/pistol,
@@ -28942,9 +28953,6 @@
 /turf/simulated/floor/wood,
 /area/expoutpost/bar)
 "wte" = (
-/obj/structure/closet/secure_closet/guncabinet{
-	req_one_access = list(43,67)
-	},
 /obj/item/weapon/cell/device/weapon,
 /obj/item/weapon/cell/device/weapon,
 /obj/item/weapon/cell/device/weapon,
@@ -28965,6 +28973,9 @@
 	},
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/structure/closet/secure_closet/guncabinet{
+	req_one_access = list(43,67,5)
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/exploarmory)
@@ -30801,9 +30812,6 @@
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/kitchen)
 "xQB" = (
-/obj/structure/closet/secure_closet/guncabinet{
-	req_one_access = list(43,67)
-	},
 /obj/item/clothing/accessory/holster/waist,
 /obj/item/clothing/accessory/holster/waist,
 /obj/item/clothing/accessory/holster/waist,
@@ -30814,6 +30822,9 @@
 	},
 /obj/effect/floor_decal/corner/green/border{
 	dir = 9
+	},
+/obj/structure/closet/secure_closet/guncabinet{
+	req_one_access = list(43,67,5)
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/exploarmory)
@@ -31260,9 +31271,6 @@
 /turf/simulated/floor/grass2,
 /area/expoutpost/slingcarrierdock)
 "ygo" = (
-/obj/structure/closet/secure_closet/guncabinet{
-	req_one_access = list(43,67)
-	},
 /obj/structure/window/plastitanium{
 	dir = 1
 	},
@@ -31277,6 +31285,9 @@
 	},
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1
+	},
+/obj/structure/closet/secure_closet/guncabinet{
+	req_one_access = list(1)
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/secarmory)
@@ -62414,13 +62425,13 @@ fBv
 fBv
 fBv
 fBv
-ltw
-ltw
-ltw
-ltw
-ltw
-ltw
-ltw
+vxU
+vxU
+vxU
+vxU
+vxU
+vxU
+vxU
 qCD
 uDx
 mrc
@@ -62678,7 +62689,7 @@ vJp
 uap
 ybK
 eVg
-ltw
+vxU
 aPh
 aPh
 aPh
@@ -63443,7 +63454,7 @@ giE
 giE
 giE
 sey
-ltw
+vxU
 kCO
 wCU
 sQh
@@ -65760,7 +65771,7 @@ jia
 qKs
 jtd
 qkj
-ltw
+vxU
 fCs
 kXt
 hoy
@@ -66018,7 +66029,7 @@ jia
 qKs
 jtd
 qkj
-ltw
+vxU
 quZ
 opS
 ktN
@@ -66276,7 +66287,7 @@ jia
 hDj
 jtd
 xJr
-ltw
+vxU
 cay
 cay
 hpy
@@ -66290,7 +66301,7 @@ axh
 eHk
 krN
 fwT
-ltw
+vxU
 xsP
 xsP
 xsP
@@ -66534,24 +66545,24 @@ fSU
 nkx
 jtd
 xJG
-ltw
-ltw
-ltw
-ltw
-ltw
-ltw
-ltw
-ltw
-ltw
-ltw
-ltw
-ltw
-ltw
-ltw
-ltw
+vxU
+vxU
+vxU
+vxU
+vxU
+vxU
+vxU
+vxU
+vxU
+vxU
+vxU
+vxU
+vxU
+vxU
+vxU
 pOJ
 jKB
-rBb
+ara
 rBb
 jKB
 mTR
