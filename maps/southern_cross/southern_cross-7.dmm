@@ -23,7 +23,6 @@
 /turf/simulated/floor/tiled,
 /area/expoutpost/engoffice)
 "abn" = (
-/obj/effect/engine_setup/pump_max,
 /obj/machinery/atmospherics/binary/pump/high_power{
 	dir = 1
 	},
@@ -865,13 +864,6 @@
 /obj/structure/loot_pile/maint/boxfort,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
-"aJV" = (
-/obj/machinery/atmospherics/pipe/simple/visible/green{
-	dir = 4
-	},
-/obj/machinery/atmospherics/unary/vent_pump/on,
-/turf/simulated/floor,
-/area/expoutpost/reactorroom)
 "aKk" = (
 /obj/effect/floor_decal/borderfloorwhite/corner,
 /obj/effect/floor_decal/corner/paleblue/bordercorner,
@@ -4595,6 +4587,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/cic)
+"dMe" = (
+/obj/machinery/atmospherics/pipe/simple/visible/green{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor,
+/area/expoutpost/reactorroom)
 "dMm" = (
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/stargazer)
@@ -6303,6 +6302,21 @@
 "fbe" = (
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarfive)
+"fbZ" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor,
+/area/expoutpost/reactorroom)
 "fcs" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 1
@@ -8377,6 +8391,20 @@
 /obj/structure/bed/chair/bay/shuttle,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/baby_mammoth)
+"gNV" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/expoutpost/reactoraccess)
 "gPg" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
 	frequency = 1380;
@@ -10168,20 +10196,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/staginghangar)
-"ikG" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/light{
-	dir = 8
-	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 4
-	},
-/turf/simulated/floor,
-/area/expoutpost/reactoraccess)
 "ikH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
@@ -11535,13 +11549,16 @@
 /turf/simulated/floor/airless,
 /area/expoutpost/starsternairlock)
 "jpr" = (
-/obj/structure/cable/yellow,
 /obj/machinery/light,
 /obj/structure/cable/yellow{
-	dir = 4
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	dir = 8
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/reinforced,
 /area/expoutpost/engstorage)
@@ -18036,6 +18053,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/engstorage)
+"ofu" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor,
+/area/expoutpost/reactorroom)
 "ohy" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 6
@@ -22913,21 +22934,6 @@
 	},
 /turf/simulated/floor/carpet,
 /area/expoutpost/suite1)
-"rRC" = (
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
-	},
-/turf/simulated/floor,
-/area/expoutpost/reactorroom)
 "rRR" = (
 /obj/machinery/power/apc{
 	dir = 8;
@@ -26658,6 +26664,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /turf/simulated/floor,
 /area/expoutpost/lowersternhallway)
+"uOo" = (
+/obj/effect/floor_decal/techfloor/corner{
+	dir = 5
+	},
+/obj/item/device/geiger/wall/east,
+/turf/simulated/floor/tiled/dark,
+/area/expoutpost/lowersternhallway)
 "uOu" = (
 /obj/structure/closet/secure_closet/pilot,
 /obj/item/device/cataloguer/compact,
@@ -29616,10 +29629,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
-"xaC" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor,
-/area/expoutpost/reactorroom)
 "xaM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -62142,7 +62151,7 @@ xpM
 nAP
 lpf
 xpM
-nAP
+uOo
 pom
 jat
 kFq
@@ -62657,7 +62666,7 @@ jtd
 xJG
 fBv
 oUm
-ikG
+gNV
 sYD
 uuI
 dRX
@@ -63950,8 +63959,8 @@ cpa
 tzB
 hKH
 cLB
-xaC
-rRC
+ofu
+fbZ
 vEk
 oXb
 wDi
@@ -64982,7 +64991,7 @@ wIt
 tHf
 aaf
 cLB
-aJV
+dMe
 vfb
 qQa
 lPp
@@ -65240,7 +65249,7 @@ kKg
 xxo
 sAP
 cLB
-aJV
+dMe
 pKM
 vUT
 ktN
@@ -66786,7 +66795,7 @@ nkx
 lpf
 xJG
 cMM
-jAV
+dTM
 eqj
 fOo
 eSq
