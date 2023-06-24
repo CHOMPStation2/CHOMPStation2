@@ -16,17 +16,21 @@
 	projectile_type = /obj/item/projectile/energy/homing_bolt/wizard
 
 /obj/item/weapon/gun/magic/firestaff/vrwizard/fire
+	description_info = "It will burn the target along with reduce their bleeding."
 	projectile_type = /obj/item/projectile/energy/homing_bolt/wizard/fire
 	color = "#FF0000"
 
 /obj/item/weapon/gun/magic/firestaff/vrwizard/lighting
+	description_info = "It will lightly burn targets and open them up to energy based attacks."
 	projectile_type = /obj/item/projectile/energy/homing_bolt/wizard/lighting
 	color = "#C1F20B"
 
 /obj/item/weapon/gun/magic/firestaff/vrwizard/poison
+	description_info = "It will heavly poison targets."
 	projectile_type = /obj/item/projectile/energy/homing_bolt/wizard/poison
 	color = "#003300"
 
 /obj/item/weapon/gun/magic/firestaff/vrwizard/frost
+	description_info = "Will slow down and minorly poison targets."
 	projectile_type = /obj/item/projectile/energy/homing_bolt/wizard/frost
 	color = "#00CCFF"

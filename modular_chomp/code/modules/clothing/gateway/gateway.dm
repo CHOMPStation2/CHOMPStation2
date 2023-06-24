@@ -29,6 +29,7 @@
 /obj/item/clothing/head/psy_crown/candycrown
 	name = "candy crown"
 	desc = "A crown smelling oddly sweet"
+	description_info = "It will occassional give a momentary buff to offensive capablities."
 	icon_state = "wrathcrown"
 	cooldown_duration = 1 MINUTES // How long the cooldown should be.
 	brainloss_cost = 0
@@ -41,6 +42,7 @@
 /obj/item/clothing/gloves/stamina
 	name = "gloves of stamina"
 	desc = "A strange pair of gloves."
+	description_info = "It has a strange property of restoring hunger."
 	icon_state = "regen"
 	item_state = "graygloves"
 	siemens_coefficient = 0
@@ -74,7 +76,7 @@
 /obj/item/clothing/gloves/stamina/process()
 	if(!wearer || wearer.isSynthetic() || wearer.stat == DEAD)
 		return // Robots and dead people don't have a metabolism.
-	wearer.nutrition = max(wearer.nutrition + 20, 0)
+	wearer.nutrition = max(wearer.nutrition + 8, 0)
 
 /obj/item/clothing/suit/armor/buffvest
 	name = "camdy armor"
@@ -126,7 +128,8 @@
 //vistor section
 /obj/item/clothing/suit/armor/alien/vistor
 	name = "rocky suit"
-	desc = "A strange set of armor"
+	desc = "A strange set of armor made of rocky plates"
+	description_info = "It always reduces all damage by the same amount, with a 12% chance to block."
 	icon_state = "alien_tank"
 	slowdown = 0
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
@@ -136,21 +139,21 @@
 
 /obj/item/clothing/suit/armor/tesla/vistor
 	name = "zapping suit"
-	desc = "A strange set of armor"
+	desc = "A strange set of armor crackling with lighting"
 	slowdown = 0
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	armor = list(melee = 60, bullet = 60, laser = 60, energy = 60, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/suit/armor/reactive/vistor
 	name = "vibrating suit"
-	desc = "A strange set of armor"
+	desc = "A strange set of armor that crackles with energy"
 	icon_state = "reactiveoff"
 	slowdown = 0
 	armor = list(melee = 35, bullet = 35, laser = 35, energy = 35, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/suit/armor/protectionbubble
-	name = "strange suit"
-	desc = "A strange set of armor"
+	name = "protective bubble"
+	desc = "A strange set of armor that seems to coat your entire body in a thing protective bubble"
 	icon_state = "armor"
 	blood_overlay_type = "armor"
 	armor = list(melee = 25, bullet = 25, laser = 25, energy = 25, bomb = 50, bio = 100, rad = 75)
