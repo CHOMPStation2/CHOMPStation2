@@ -416,16 +416,6 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/staginghangar)
-"ara" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/orange/border{
-	dir = 8
-	},
-/obj/item/device/geiger/wall/west,
-/turf/simulated/floor/tiled,
-/area/expoutpost/techstorage)
 "arw" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 1
@@ -3316,7 +3306,13 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/secbowcheckpoint)
 "cHY" = (
-/turf/simulated/floor/reinforced,
+/obj/structure/catwalk,
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor,
 /area/expoutpost/engstorage)
 "cIJ" = (
 /obj/machinery/door/airlock/glass_external{
@@ -3827,15 +3823,15 @@
 	dir = 4;
 	pixel_x = -23
 	},
-/obj/structure/cable/yellow{
-	dir = 8
-	},
 /obj/machinery/power/port_gen/pacman/super/potato{
 	sheets = 50;
 	power_gen = 200000;
-	active = 1
+	active = 1;
+	power_output = 4
 	},
-/turf/simulated/floor/reinforced,
+/obj/structure/catwalk,
+/obj/structure/cable/yellow,
+/turf/simulated/floor,
 /area/expoutpost/engstorage)
 "dgK" = (
 /obj/structure/window/phoronreinforced/full,
@@ -5125,7 +5121,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/effect/catwalk_plated/dark,
+/obj/structure/catwalk,
 /turf/simulated/floor,
 /area/expoutpost/engoffice)
 "enm" = (
@@ -6417,7 +6413,8 @@
 	req_one_access = list(10);
 	name = "Secondary Nuclear Reactor"
 	},
-/turf/simulated/floor/reinforced,
+/obj/effect/catwalk_plated/dark,
+/turf/simulated/floor,
 /area/expoutpost/engstorage)
 "fgV" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
@@ -9215,7 +9212,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/command{
 	name = "Aegis Bridge";
-	req_one_access = list(19,62)
+	req_one_access = list(19,62,67)
 	},
 /turf/simulated/floor,
 /area/expoutpost/cic)
@@ -9464,6 +9461,16 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/expoutpost/rnd)
+"hEM" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 8
+	},
+/obj/item/device/geiger/wall/west,
+/turf/simulated/floor/tiled,
+/area/expoutpost/techstorage)
 "hFP" = (
 /obj/structure/table/steel_reinforced,
 /obj/effect/floor_decal/borderfloorblack{
@@ -9760,6 +9767,25 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/gateway)
+"hPN" = (
+/obj/machinery/door/blast/radproof{
+	dir = 4;
+	id = "Aeg_CoreShroud";
+	name = "Core Shroud"
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 4
+	},
+/obj/structure/window/phoronreinforced,
+/obj/structure/window/phoronreinforced{
+	dir = 8
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 1
+	},
+/obj/structure/grille,
+/turf/simulated/floor/reinforced,
+/area/expoutpost/reactorroom)
 "hPP" = (
 /obj/structure/cable/green{
 	d2 = 4;
@@ -11394,12 +11420,18 @@
 /turf/simulated/floor/reinforced,
 /area/expoutpost/portbowairlock)
 "jks" = (
+/obj/structure/catwalk,
 /obj/structure/cable/yellow{
 	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	d2 = 8;
+	icon_state = "1-8"
 	},
-/turf/simulated/floor/reinforced,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor,
 /area/expoutpost/engstorage)
 "jkM" = (
 /obj/random/trash,
@@ -11560,17 +11592,8 @@
 /area/expoutpost/starsternairlock)
 "jpr" = (
 /obj/machinery/light,
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/reinforced,
+/obj/structure/catwalk,
+/turf/simulated/floor,
 /area/expoutpost/engstorage)
 "jpM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -14362,6 +14385,7 @@
 	},
 /obj/machinery/power/terminal,
 /obj/structure/cable/yellow,
+/obj/structure/catwalk,
 /turf/simulated/floor,
 /area/expoutpost/engoffice)
 "lFs" = (
@@ -20766,7 +20790,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/command{
 	name = "Aegis Bridge";
-	req_one_access = list(19,62)
+	req_one_access = list(19,62,67)
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/cic)
@@ -21061,7 +21085,6 @@
 /turf/simulated/floor/tiled,
 /area/expoutpost/explobriefroom)
 "qEJ" = (
-/obj/effect/catwalk_plated/dark,
 /obj/machinery/door/window{
 	dir = 8
 	},
@@ -21071,6 +21094,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/light,
+/obj/structure/catwalk,
 /turf/simulated/floor,
 /area/expoutpost/engoffice)
 "qFg" = (
@@ -23234,12 +23258,12 @@
 /obj/machinery/power/port_gen/pacman/super/potato{
 	sheets = 50;
 	power_gen = 200000;
-	active = 1
+	active = 1;
+	power_output = 4
 	},
-/obj/structure/cable/yellow{
-	dir = 4
-	},
-/turf/simulated/floor/reinforced,
+/obj/structure/catwalk,
+/obj/structure/cable/yellow,
+/turf/simulated/floor,
 /area/expoutpost/engstorage)
 "sfB" = (
 /obj/machinery/light/small{
@@ -26008,6 +26032,15 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/expoutpost/engoffice)
+"uoI" = (
+/obj/structure/catwalk,
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor,
+/area/expoutpost/engstorage)
 "upj" = (
 /obj/machinery/vending/cigarette,
 /turf/simulated/floor/tiled/dark,
@@ -61158,7 +61191,7 @@ wZI
 wZI
 dEY
 jSQ
-cHY
+uoI
 sfi
 roD
 qaG
@@ -64749,7 +64782,7 @@ cyf
 rJq
 aDR
 thG
-lWC
+hPN
 tBo
 tcB
 ucP
@@ -66562,7 +66595,7 @@ vxU
 vxU
 pOJ
 jKB
-ara
+hEM
 rBb
 jKB
 mTR
