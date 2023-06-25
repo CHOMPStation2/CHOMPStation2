@@ -84,8 +84,8 @@
 /obj/item/weapon/gun/energy/tommylaser
 	name = "M-2421 'Tommy-Laser'"
 	desc = "A automatic laser weapon resembling a Tommy-Gun. Designed by Cybersun Industries to be a man portable supressive fire laser weapon."
-	icon_state = "tommylas"
-	item_state = "tommylas"
+	icon_state = "etommy"
+	item_state = "etommy"
 	w_class = ITEMSIZE_LARGE
 	slot_flags = SLOT_BACK
 	charge_cost = 60 // 40 shots, lay down the firepower
