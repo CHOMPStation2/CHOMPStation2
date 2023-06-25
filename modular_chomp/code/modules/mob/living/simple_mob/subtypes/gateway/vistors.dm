@@ -273,9 +273,6 @@
 //obj/item/clothing/suit/armor/reactive/vistor
 //obj/item/clothing/suit/armor/protectionbubble
 
-
-//Ehhhh screw it the scrap mobs can also go here.
-
 /mob/living/simple_mob/mechanical/mecha/forgotten
 	name = "Forgotten"
 	icon = 'icons/mecha/mecha.dmi'
@@ -299,7 +296,7 @@
 	wreckage = /obj/structure/loot_pile/mecha/phazon/forgotten
 	pilot_type = null
 
-	ai_holder_type = /datum/ai_holder/simple_mob/ranged/kiting
+	ai_holder_type = /datum/ai_holder/simple_mob/ranged/kiting/artillery
 
 	melee_attack_delay = 3 SECOND
 
@@ -307,6 +304,9 @@
 	melee_damage_upper = 35
 
 	projectiletype = /obj/item/projectile/arc/fragmentation/mortar/forgotten
+
+	projectile_dispersion = 30
+	projectile_accuracy = -100
 
 /obj/item/projectile/arc/fragmentation/mortar/forgotten
 	icon_state = "mortar"
@@ -325,3 +325,10 @@
 	name = "forgotten wreckage"
 	desc = "The ruins of some unfortunate forgoten mecha type. Perhaps something is salvageable."
 	icon_state = "mime-broken"
+
+/datum/ai_holder/simple_mob/ranged/kiting/artillery
+	mauling = TRUE
+	run_if_this_close = 2
+	min_distance_to_destination = 3
+	can_flee = TRUE
+	base_wander_delay = 4
