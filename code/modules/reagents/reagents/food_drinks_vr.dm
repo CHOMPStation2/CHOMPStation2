@@ -554,8 +554,6 @@
 	color = "#a6898d"
 
 ////////////////END BrainzSnax Reagents////////////////
-<<<<<<< HEAD
-=======
 
 /datum/reagent/nutriment/protein_powder
 	name = "Protein Powder"
@@ -626,4 +624,3 @@
 	description = "A mixture of water and protein commonly used as a meal supplement. This one has added strawberry flavoring."
 	taste_description = "strawberry"
 	color = "#e28585"
->>>>>>> 151562ea9b... Merge pull request #15060 from Youtubeboy139/sweatmax
