@@ -1746,7 +1746,9 @@
 /turf/simulated/floor/tiled/freezer,
 /area/expoutpost/washroom)
 "buE" = (
-/obj/structure/closet/crate,
+/obj/structure/closet/crate{
+	name = "SMES coil crate"
+	},
 /obj/item/weapon/circuitboard/smes,
 /obj/item/weapon/circuitboard/smes,
 /obj/item/weapon/smes_coil,
@@ -2620,7 +2622,7 @@
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
 	dir = 1;
-	req_one_access = list(43,67,5);
+	req_one_access = list(43,67);
 	name = "Exploration Ready Room"
 	},
 /turf/simulated/floor,
@@ -4682,18 +4684,18 @@
 /obj/structure/railing/grey{
 	dir = 8
 	},
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
+/obj/item/clothing/accessory/holster/waist,
+/obj/item/clothing/accessory/holster/waist,
+/obj/item/clothing/accessory/holster/waist,
+/obj/item/weapon/cell/device/weapon,
+/obj/item/weapon/cell/device/weapon,
+/obj/item/weapon/cell/device/weapon,
 /obj/structure/closet/secure_closet/guncabinet{
-	req_one_access = list(43,67)
+	req_one_access = null
 	},
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/clothing/accessory/holster/waist,
-/obj/item/clothing/accessory/holster/waist,
-/obj/item/clothing/accessory/holster/waist,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/staginghangar)
 "dRX" = (
@@ -7210,7 +7212,7 @@
 "fNO" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/closet/secure_closet/guncabinet/phase{
-	req_one_access = null
+	req_one_access = list(43,67)
 	},
 /obj/item/clothing/accessory/permit/gun/planetside,
 /obj/item/clothing/accessory/permit/gun/planetside,
@@ -8814,7 +8816,7 @@
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/maintenance/int{
-	req_one_access = list(43,67,5)
+	req_one_access = list(43,67)
 	},
 /turf/simulated/floor,
 /area/expoutpost/explobriefroom)
@@ -9705,6 +9707,7 @@
 "hMq" = (
 /obj/structure/table/wooden_reinforced,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/item/device/binoculars,
 /turf/simulated/floor/carpet,
 /area/expoutpost/pathfinderroom)
 "hMN" = (
@@ -10372,7 +10375,12 @@
 	dir = 1;
 	pixel_y = -35
 	},
-/obj/structure/table/wooden_reinforced,
+/obj/structure/dogbed,
+/mob/living/simple_mob/animal/sif/glitterfly{
+	desc = "A large, shiny butterfly! The explorer who caught it refused to change the name after learning it was not a moth.";
+	makes_dirt = 0;
+	name = "Lomp"
+	},
 /turf/simulated/floor/carpet,
 /area/expoutpost/pathfinderroom)
 "ipO" = (
@@ -12544,7 +12552,7 @@
 	dir = 8
 	},
 /obj/structure/closet/secure_closet/guncabinet{
-	req_one_access = list(43,67,5)
+	req_one_access = list(43,67)
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/exploarmory)
@@ -13565,7 +13573,7 @@
 	dir = 8
 	},
 /obj/structure/closet/secure_closet/guncabinet{
-	req_one_access = list(43,67,5)
+	req_one_access = list(43,67)
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/exploarmory)
@@ -15026,18 +15034,18 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
+/obj/item/clothing/accessory/holster/waist,
+/obj/item/clothing/accessory/holster/waist,
+/obj/item/clothing/accessory/holster/waist,
+/obj/item/weapon/cell/device/weapon,
+/obj/item/weapon/cell/device/weapon,
+/obj/item/weapon/cell/device/weapon,
 /obj/structure/closet/secure_closet/guncabinet{
-	req_one_access = list(43,67)
+	req_one_access = null
 	},
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/clothing/accessory/holster/waist,
-/obj/item/clothing/accessory/holster/waist,
-/obj/item/clothing/accessory/holster/waist,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/staginghangar)
 "lZt" = (
@@ -17305,7 +17313,7 @@
 	pixel_x = -24;
 	name = "Secure Storage";
 	id = "aeg_securestorage_blastdoor";
-	req_one_access = list(10)
+	req_one_access = list(10,30)
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/lowersternhallway)
@@ -23419,7 +23427,9 @@
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "smG" = (
-/obj/structure/closet/crate,
+/obj/structure/closet/crate{
+	name = "Phoron crate"
+	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/item/stack/material/phoron{
 	amount = 25
@@ -25657,9 +25667,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/uppersternhallway)
 "tZL" = (
-/obj/structure/closet/secure_closet/guncabinet{
-	req_one_access = list(43,67,5)
-	},
 /obj/item/weapon/gun/energy/locked/phasegun/pistol,
 /obj/item/weapon/gun/energy/locked/phasegun/pistol,
 /obj/item/weapon/gun/energy/locked/phasegun/pistol,
@@ -25673,6 +25680,9 @@
 	},
 /obj/effect/floor_decal/corner/green/border{
 	dir = 10
+	},
+/obj/structure/closet/secure_closet/guncabinet{
+	req_one_access = list(43,67)
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/exploarmory)
@@ -29008,7 +29018,7 @@
 	dir = 8
 	},
 /obj/structure/closet/secure_closet/guncabinet{
-	req_one_access = list(43,67,5)
+	req_one_access = list(43,67)
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/exploarmory)
@@ -30857,7 +30867,7 @@
 	dir = 9
 	},
 /obj/structure/closet/secure_closet/guncabinet{
-	req_one_access = list(43,67,5)
+	req_one_access = list(43,67)
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/exploarmory)
