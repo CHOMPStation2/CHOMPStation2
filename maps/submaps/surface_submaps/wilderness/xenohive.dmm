@@ -35,6 +35,7 @@
 /obj/effect/alien/weeds,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/map_helper/no_phaseshift,
 /turf/simulated/floor/outdoors/rocks{
 	outdoors = 0
 	},

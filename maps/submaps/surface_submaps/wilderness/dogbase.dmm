@@ -197,6 +197,10 @@
 /obj/effect/decal/remains/human,
 /turf/template_noop,
 /area/template_noop)
+"la" = (
+/obj/effect/map_helper/no_phaseshift,
+/turf/simulated/floor/tiled/dark,
+/area/submap/DogBase)
 "lb" = (
 /obj/random/mob/merc/all,
 /turf/simulated/floor/tiled/dark,
@@ -1420,7 +1424,7 @@ rH
 VG
 np
 wI
-Wq
+la
 Ni
 tN
 PB

@@ -2619,6 +2619,14 @@
 	},
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
+"Fv" = (
+/obj/effect/map_helper/no_phaseshift,
+/turf/simulated/shuttle/floor/alien{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
+/area/submap/DerelictEngine)
 "FC" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 4
@@ -5008,7 +5016,7 @@ je
 rb
 hZ
 wd
-LG
+Fv
 LG
 LG
 pr

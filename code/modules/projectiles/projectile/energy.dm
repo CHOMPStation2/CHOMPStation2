@@ -288,6 +288,7 @@
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/monochrome_laser
 	hud_state = "plasma_sphere"
 
+/* ChompEdit, moving over to energy_ch.dm
 /obj/item/projectile/energy/phase
 	name = "phase wave"
 	icon_state = "phase"
@@ -316,6 +317,7 @@
 	damage = 15
 	SA_bonus_damage = 60	// 75 total on animals
 	hud_state = "laser_heat"
+*/
 
 /obj/item/projectile/energy/electrode/strong
 	agony = 70

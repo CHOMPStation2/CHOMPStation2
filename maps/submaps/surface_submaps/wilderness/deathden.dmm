@@ -868,6 +868,7 @@
 "Up" = (
 /obj/structure/windoor_assembly,
 /obj/random/trash,
+/obj/effect/map_helper/no_phaseshift,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/DeathDen)
 "UR" = (

@@ -737,6 +737,12 @@
 	},
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
+"Yr" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/map_helper/no_phaseshift,
+/turf/simulated/floor/wood/sif,
+/area/submap/DeathDen)
 "YA" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -938,7 +944,7 @@ Is
 (10,1,1) = {"
 Is
 rn
-Do
+Yr
 Go
 Xy
 Ps

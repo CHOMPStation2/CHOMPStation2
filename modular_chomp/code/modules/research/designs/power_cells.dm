@@ -57,8 +57,8 @@
 /datum/design/item/powercell/giga
 	name = "giga-capacity"
 	id = "giga_cell"
-	req_tech = list(TECH_POWER = 6, TECH_MATERIAL = 5, TECH_PRECURSOR = 1, TECH_PHORON = 4)
-	materials = list(MAT_STEEL = 1000, MAT_GOLD = 300, MAT_SILVER = 300, MAT_GLASS = 100, MAT_PHORON = 1000, MAT_METALHYDROGEN = 250, MAT_DURASTEEL = 100, MAT_URANIUM = 100)
+	req_tech = list(TECH_POWER = 7, TECH_MATERIAL = 5, TECH_ARCANE = 1, TECH_PHORON = 4)
+	materials = list(MAT_STEEL = 1000, MAT_GOLD = 300, MAT_SILVER = 300, MAT_GLASS = 100, MAT_PHORON = 1000, MAT_DURASTEEL = 100, MAT_URANIUM = 100)
 	build_path = /obj/item/weapon/cell/giga
 	category = list("Misc")
 	sort_string = "BAAAE"
@@ -140,8 +140,8 @@
 /datum/design/item/powercell/giga_device
 	name = "device, giga"
 	id = "giga_device"
-	req_tech = list(TECH_POWER = 6, TECH_MATERIAL = 6, TECH_PRECURSOR = 1, TECH_PHORON = 4)
-	materials = list(MAT_STEEL = 2000, MAT_GOLD = 500, MAT_SILVER = 500, MAT_GLASS = 100, MAT_PHORON = 2000, MAT_METALHYDROGEN = 500, MAT_DURASTEEL = 200, MAT_URANIUM = 200)
+	req_tech = list(TECH_POWER = 7, TECH_MATERIAL = 6, TECH_ARCANE = 1, TECH_PHORON = 4)
+	materials = list(MAT_STEEL = 2000, MAT_GOLD = 500, MAT_SILVER = 500, MAT_GLASS = 100, MAT_PHORON = 2000, MAT_DURASTEEL = 200, MAT_URANIUM = 200)
 	build_path = /obj/item/weapon/cell/device/giga
 	category = list("Misc")
 	sort_string = "BAAAH"

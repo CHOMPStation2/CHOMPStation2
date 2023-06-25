@@ -11,6 +11,9 @@ VBO_intestines6
 VBO_intestines7
 VBO_intestines8
 
+VerySoft:
+VBO_belly8
+
 TheMirth:
 VBO_belly5
 VBO_maw1
