@@ -183,7 +183,7 @@
 //	origin_tech = list(TECH_DATA = 2, TECH_BLUESPACE = 4)
 //CHOMPedit Balance
 	req_components = list(
-							/obj/item/weapon/ore/bluespace_crystal = 2,
+							/obj/item/weapon/bluespace_crystal = 2,
 							/obj/item/weapon/stock_parts/capacitor = 2,
 							/obj/item/weapon/stock_parts/scanning_module = 2,
 							/obj/item/weapon/stock_parts/micro_laser =2,

@@ -5,7 +5,17 @@ import { Window } from '../layouts';
 export const PetrificationInterface = (props, context) => {
   const { act, data } = useBackend(context);
 
-  const { material, identifier, adjective, tint, t, able_to_unpetrify, discard_clothes, target, can_remote } = data;
+  const {
+    material,
+    identifier,
+    adjective,
+    tint,
+    t,
+    able_to_unpetrify,
+    discard_clothes,
+    target,
+    can_remote,
+  } = data;
 
   return (
     <Window width={425} height={313} resizable>
@@ -65,7 +75,9 @@ export const PetrificationInterface = (props, context) => {
                 selected={able_to_unpetrify}
                 tooltip="Whether or not the statue can be unpetrified. If yes, they will get a verb letting them turn back- if not, even if they're a gargoyle, it will be taken away. OOC Escape is always an option though."
                 tooltipPosition="top"
-                onClick={() => act('set_option', { 'option': 'able_to_unpetrify' })}
+                onClick={() =>
+                  act('set_option', { 'option': 'able_to_unpetrify' })
+                }
               />
             </LabeledList.Item>
             <LabeledList.Item label="Discard Clothes">
@@ -75,11 +87,17 @@ export const PetrificationInterface = (props, context) => {
                 selected={discard_clothes}
                 tooltip="Whether the target's clothing falls off before the petrification happens. (Clothes do not change color when petrified, and cannot be removed while being a statue)"
                 tooltipPosition="top"
-                onClick={() => act('set_option', { 'option': 'discard_clothes' })}
+                onClick={() =>
+                  act('set_option', { 'option': 'discard_clothes' })
+                }
               />
             </LabeledList.Item>
             <LabeledList.Item label="Target">
-              <Button fluid content={target} onClick={() => act('set_option', { 'option': 'target' })} />
+              <Button
+                fluid
+                content={target}
+                onClick={() => act('set_option', { 'option': 'target' })}
+              />
             </LabeledList.Item>
           </LabeledList>
           <br />
@@ -88,7 +106,9 @@ export const PetrificationInterface = (props, context) => {
             disabled={!can_remote}
             content="Petrify"
             tooltip={
-              'Turn the target to ' + material + ". This is meant for roleplay/scene purposes. Please don't abuse it."
+              'Turn the target to ' +
+              material +
+              ". This is meant for roleplay/scene purposes. Please don't abuse it."
             }
             tooltipPosition="top"
             onClick={() => act('petrify')}

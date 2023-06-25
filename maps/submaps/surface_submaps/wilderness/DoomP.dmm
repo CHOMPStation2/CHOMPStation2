@@ -942,6 +942,10 @@
 /obj/machinery/door/airlock/hatch,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/DoomP)
+"WU" = (
+/obj/effect/map_helper/no_phaseshift,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/DoomP)
 "Xj" = (
 /obj/structure/table/standard,
 /obj/item/stolenpackage,
@@ -2808,7 +2812,7 @@ og
 Ra
 lc
 VA
-bQ
+WU
 bQ
 Nl
 at

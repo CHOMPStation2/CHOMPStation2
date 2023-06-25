@@ -28,7 +28,13 @@ export const ChemSynthesizer = (props, context) => {
 
 const ChemSynthesizerQueueRecipes = (props, context) => {
   const { act, data } = useBackend(context);
-  const { busy, use_catalyst, queue = [], recipes = [], production_mode } = data;
+  const {
+    busy,
+    use_catalyst,
+    queue = [],
+    recipes = [],
+    production_mode,
+  } = data;
 
   return (
     <Flex height="100%" width="100%" direction="column">
@@ -55,7 +61,12 @@ const ChemSynthesizerQueueRecipes = (props, context) => {
                 onClick={() => act('clear_queue')}
               />
               {!busy && (
-                <Button disabled={!queue.length} icon="play" tooltip="Start Queue" onClick={() => act('start_queue')} />
+                <Button
+                  disabled={!queue.length}
+                  icon="play"
+                  tooltip="Start Queue"
+                  onClick={() => act('start_queue')}
+                />
               )}
             </Fragment>
           }>
@@ -203,10 +214,18 @@ const ChemSynthesizerChemicals = (props, context) => {
                 {catalystCurrentVolume} / {catalystMaxVolume} units
               </Box>
             )}
-            <Button icon="eject" content="Eject" disabled={!catalyst || !!busy} onClick={() => act('eject_catalyst')} />
+            <Button
+              icon="eject"
+              content="Eject"
+              disabled={!catalyst || !!busy}
+              onClick={() => act('eject_catalyst')}
+            />
           </Box>
         }>
-        <BeakerContents beakerLoaded={catalyst} beakerContents={catalyst_reagents} />
+        <BeakerContents
+          beakerLoaded={catalyst}
+          beakerContents={catalyst_reagents}
+        />
       </Section>
     </Flex>
   );
@@ -214,7 +233,16 @@ const ChemSynthesizerChemicals = (props, context) => {
 
 const ChemSynthesizerSettings = (props, context) => {
   const { act, data } = useBackend(context);
-  const { busy, production_mode, panel_open, rxn_vessel, drug_substance, bottle_icon, pill_icon, patch_icon } = data;
+  const {
+    busy,
+    production_mode,
+    panel_open,
+    rxn_vessel,
+    drug_substance,
+    bottle_icon,
+    pill_icon,
+    patch_icon,
+  } = data;
 
   return (
     <Flex height="100%" width="100%" direction="column">
@@ -225,7 +253,11 @@ const ChemSynthesizerSettings = (props, context) => {
               <Button
                 color={production_mode ? 'green' : 'bad'}
                 icon="wrench"
-                content={production_mode ? 'Recipe mode: Import' : 'Recipe mode: Tutorial'}
+                content={
+                  production_mode
+                    ? 'Recipe mode: Import'
+                    : 'Recipe mode: Tutorial'
+                }
                 onClick={() => act('mode_toggle')}
               />
             </Flex.Item>

@@ -60,9 +60,14 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "df" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
-/obj/item/weapon/stool/padded,
-/turf/simulated/floor/tiled/dark,
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/eclipselava)
 "dj" = (
 /obj/structure/cable/green{
@@ -386,15 +391,32 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
+"pT" = (
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
+/area/submap/eclipselava)
 "pX" = (
 /obj/structure/bed/double/padded,
 /obj/item/weapon/bedsheet/orangedouble,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "qb" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/teslanoodle,
-/obj/item/weapon/stool/padded,
-/turf/simulated/floor/tiled/dark,
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/railing,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/eclipselava)
 "qq" = (
 /obj/item/weapon/stool/padded,
@@ -482,11 +504,16 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "vO" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
-/turf/simulated/floor/tiled/dark{
-	temperature = 243.15;
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
 	oxygen = 20.7263;
-	nitrogen = 93.7835
+	temperature = 243.15
 	},
 /area/submap/eclipselava)
 "vR" = (
@@ -784,11 +811,16 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "EH" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/teslanoodle,
-/turf/simulated/floor/tiled/dark{
-	temperature = 243.15;
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
 	oxygen = 20.7263;
-	nitrogen = 93.7835
+	temperature = 243.15
 	},
 /area/submap/eclipselava)
 "EW" = (
@@ -862,9 +894,14 @@
 	},
 /area/submap/eclipselava)
 "Hp" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm,
-/obj/item/weapon/stool/padded,
-/turf/simulated/floor/tiled/dark,
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/eclipselava)
 "HZ" = (
 /obj/structure/railing/grey{
@@ -911,13 +948,14 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "Jr" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/radiation,
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
+/obj/structure/railing{
+	dir = 8
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/eclipselava)
 "Js" = (
 /obj/item/weapon/material/barbedwire{
@@ -940,8 +978,15 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "JJ" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/wheel,
-/turf/simulated/floor/tiled/dark,
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/eclipselava)
 "Ke" = (
 /turf/simulated/floor/lava,
@@ -1018,6 +1063,9 @@
 /area/submap/eclipselava)
 "Ov" = (
 /obj/structure/table/rack,
+/obj/item/weapon/cell/slime,
+/obj/item/weapon/cell/slime,
+/obj/item/weapon/cell/slime,
 /obj/item/weapon/cell/slime,
 /turf/simulated/floor/reinforced/carbon_dioxide{
 	carbon_dioxide = 100
@@ -1457,21 +1505,21 @@ Bm
 Bm
 Bm
 Bm
-ZS
-ZS
-ZS
-ZS
-ZS
-ZS
-ZS
-ZS
-ZS
-ZS
-ZS
-ZS
-ZS
-ZS
-ZS
+EH
+Jr
+Jr
+Jr
+Jr
+Jr
+Jr
+Jr
+Jr
+Jr
+Jr
+Jr
+Jr
+Jr
+JJ
 Qh
 Qh
 Qh
@@ -1508,6 +1556,7 @@ Bm
 Bm
 Bm
 Bm
+df
 ZS
 ZS
 ZS
@@ -1523,8 +1572,7 @@ ZS
 ZS
 ZS
 ZS
-ZS
-ZS
+pT
 Qh
 Qh
 jU
@@ -1559,6 +1607,7 @@ Bm
 Bm
 Bm
 Bm
+df
 ZS
 ZS
 ZS
@@ -1576,8 +1625,7 @@ ZS
 ZS
 ZS
 ZS
-ZS
-ZS
+pT
 Qh
 jU
 bp
@@ -1610,6 +1658,7 @@ Bm
 (6,1,1) = {"
 Bm
 Bm
+df
 ZS
 ZS
 ZS
@@ -1629,8 +1678,7 @@ ZS
 ZS
 ZS
 ZS
-ZS
-ZS
+Jr
 jU
 bp
 Rz
@@ -1662,7 +1710,7 @@ Bm
 (7,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -1714,7 +1762,7 @@ Bm
 (8,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -1766,7 +1814,7 @@ Bm
 (9,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -1818,7 +1866,7 @@ Bm
 (10,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -1854,7 +1902,7 @@ MO
 MO
 MO
 MO
-JJ
+MO
 MO
 bp
 Qh
@@ -1870,7 +1918,7 @@ Bm
 (11,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -1922,7 +1970,7 @@ Bm
 (12,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -1974,7 +2022,7 @@ Bm
 (13,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -2010,7 +2058,7 @@ Pm
 MO
 bp
 hm
-vO
+hm
 as
 hm
 hm
@@ -2026,7 +2074,7 @@ Bm
 (14,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -2054,7 +2102,7 @@ gt
 at
 LV
 Vg
-df
+qq
 MO
 bp
 MO
@@ -2078,7 +2126,7 @@ Bm
 (15,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -2130,7 +2178,7 @@ Bm
 (16,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -2154,7 +2202,7 @@ ZS
 Ad
 bp
 MO
-qb
+qq
 RA
 LV
 vN
@@ -2182,7 +2230,7 @@ Bm
 (17,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -2234,7 +2282,7 @@ Bm
 (18,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -2286,7 +2334,7 @@ Bm
 (19,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 Ke
@@ -2338,7 +2386,7 @@ Bm
 (20,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 Ke
@@ -2390,7 +2438,7 @@ Bm
 (21,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 Ke
@@ -2442,7 +2490,7 @@ Bm
 (22,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -2494,7 +2542,7 @@ Bm
 (23,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -2546,7 +2594,7 @@ Bm
 (24,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -2598,7 +2646,7 @@ Bm
 (25,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -2650,7 +2698,7 @@ Bm
 (26,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -2702,7 +2750,7 @@ Bm
 (27,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -2754,7 +2802,7 @@ Bm
 (28,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -2806,7 +2854,7 @@ Bm
 (29,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -2858,7 +2906,7 @@ Bm
 (30,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -2910,7 +2958,7 @@ Bm
 (31,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -2962,7 +3010,7 @@ Bm
 (32,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -3014,7 +3062,7 @@ Bm
 (33,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -3066,7 +3114,7 @@ Bm
 (34,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -3118,7 +3166,7 @@ Bm
 (35,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -3170,7 +3218,7 @@ Bm
 (36,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -3222,7 +3270,7 @@ Bm
 (37,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -3255,7 +3303,7 @@ XX
 RA
 qq
 RA
-Hp
+qq
 MO
 wA
 hm
@@ -3274,7 +3322,7 @@ Bm
 (38,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -3326,7 +3374,7 @@ Bm
 (39,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -3362,7 +3410,7 @@ MO
 MO
 MO
 bp
-EH
+hm
 hm
 zn
 hm
@@ -3378,7 +3426,7 @@ Bm
 (40,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -3430,7 +3478,7 @@ Bm
 (41,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -3482,7 +3530,7 @@ Bm
 (42,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -3511,7 +3559,7 @@ MO
 MO
 wA
 MO
-Jr
+wU
 QN
 QN
 QN
@@ -3534,7 +3582,7 @@ Bm
 (43,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -3586,7 +3634,7 @@ Bm
 (44,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -3638,7 +3686,7 @@ Bm
 (45,1,1) = {"
 Bm
 Bm
-ZS
+df
 ZS
 ZS
 ZS
@@ -3690,6 +3738,7 @@ Bm
 (46,1,1) = {"
 Bm
 Bm
+vO
 ZS
 ZS
 ZS
@@ -3709,8 +3758,7 @@ ZS
 ZS
 ZS
 ZS
-ZS
-ZS
+Hp
 jU
 bp
 MO
@@ -3743,6 +3791,7 @@ Bm
 Bm
 Bm
 Bm
+vO
 ZS
 ZS
 ZS
@@ -3760,8 +3809,7 @@ ZS
 ZS
 ZS
 ZS
-ZS
-ZS
+qb
 Qh
 jU
 bp
@@ -3796,6 +3844,7 @@ Bm
 Bm
 Bm
 Bm
+vO
 ZS
 ZS
 ZS
@@ -3811,8 +3860,7 @@ ZS
 ZS
 ZS
 ZS
-ZS
-ZS
+qb
 Qh
 Qh
 jU
@@ -3849,21 +3897,21 @@ Bm
 Bm
 Bm
 Bm
-ZS
-ZS
-ZS
-ZS
-ZS
-ZS
-ZS
-ZS
-ZS
-ZS
-ZS
-ZS
-ZS
-ZS
-ZS
+vO
+Hp
+Hp
+Hp
+Hp
+Hp
+Hp
+Hp
+Hp
+Hp
+Hp
+Hp
+Hp
+Hp
+qb
 Qh
 Qh
 Qh

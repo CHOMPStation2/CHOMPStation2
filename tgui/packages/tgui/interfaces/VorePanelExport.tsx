@@ -19,9 +19,11 @@ const ModeSpan = {
 
 const ItemModeSpan = {
   'Hold': '<span class="badge text-bg-secondary">Item: Hold</span>',
-  'Digest (Food Only)': '<span class="badge text-bg-danger">Item: Digest (Food Only)</span>',
+  'Digest (Food Only)':
+    '<span class="badge text-bg-danger">Item: Digest (Food Only)</span>',
   'Digest': '<span class="badge text-bg-danger">Item: Digest</span>',
-  'Digest (Dispersed Damage)': '<span class="badge text-bg-danger">Item: Digest (Dispersed Damage)</span>',
+  'Digest (Dispersed Damage)':
+    '<span class="badge text-bg-danger">Item: Digest (Dispersed Damage)</span>',
 };
 
 const AddonIcon = {
@@ -45,7 +47,13 @@ const GetAddons = (addons: string[]) => {
   let result: string[] = [];
 
   addons?.forEach((addon) => {
-    result.push('<span class="badge text-bg-secondary"><i class="' + AddonIcon[addon] + '"></i>' + addon + '</span>');
+    result.push(
+      '<span class="badge text-bg-secondary"><i class="' +
+        AddonIcon[addon] +
+        '"></i>' +
+        addon +
+        '</span>'
+    );
   });
 
   if (result.length === 0) {
@@ -60,7 +68,11 @@ const GetLiquidAddons = (addons: string[]) => {
 
   addons?.forEach((addon) => {
     result.push(
-      '<span class="badge text-bg-secondary"><i class="' + ReagentAddonIcon[addon] + '"></i>' + addon + '</span>'
+      '<span class="badge text-bg-secondary"><i class="' +
+        ReagentAddonIcon[addon] +
+        '"></i>' +
+        addon +
+        '</span>'
     );
   });
 
@@ -780,7 +792,19 @@ const getCurrentTimestamp = (): string => {
   }
   let year = String(now.getFullYear());
 
-  return ' ' + year + '-' + month + '-' + dayofmonth + ' (' + hours + ' ' + minutes + ')';
+  return (
+    ' ' +
+    year +
+    '-' +
+    month +
+    '-' +
+    dayofmonth +
+    ' (' +
+    hours +
+    ' ' +
+    minutes +
+    ')'
+  );
 };
 
 const downloadPrefs = (context, extension: string) => {
@@ -822,7 +846,9 @@ const downloadPrefs = (context, extension: string) => {
       }
     );
     bellies.forEach((belly, i) => {
-      blob = new Blob([blob, generateBellyString(belly, i)], { type: 'text/html;charset=utf8' });
+      blob = new Blob([blob, generateBellyString(belly, i)], {
+        type: 'text/html;charset=utf8',
+      });
     });
     blob = new Blob(
       [
@@ -860,10 +886,16 @@ const VorePanelExportContent = (props, context) => {
   return (
     <Section title="Vore Export Panel">
       <Section title="Export">
-        <Button fluid icon="file-alt" onClick={() => downloadPrefs(context, '.html')}>
+        <Button
+          fluid
+          icon="file-alt"
+          onClick={() => downloadPrefs(context, '.html')}>
           Export (HTML)
         </Button>
-        <Button fluid icon="file-alt" onClick={() => downloadPrefs(context, '.vrdb')}>
+        <Button
+          fluid
+          icon="file-alt"
+          onClick={() => downloadPrefs(context, '.vrdb')}>
           Export (VRDB)
         </Button>
       </Section>

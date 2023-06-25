@@ -33,6 +33,7 @@
 	projectile_dispersion = 8
 	projectile_accuracy = -20
 	armor = list(melee = 50, bullet = 50, laser = 50, energy = 50, bomb = 50, bio = 100, rad = 100)	// Simple mob immunuties plus base Eclipse foe stuff
+	ranged_cooldown = 4
 
 	can_be_drop_prey = FALSE //CHOMP Add
 	pass_flags = PASSTABLE //mostly for the melee mobs.
@@ -57,7 +58,7 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/eclipse/ranged
 
 	// Grenade special attack vars
-	var/grenade_type = /obj/item/weapon/grenade/shooter/energy/laser
+	var/grenade_type = /obj/item/weapon/grenade/shooter/rubber
 	var/grenade_timer = 50	//CHOMPEdit
 	special_attack_cooldown = 45 SECONDS
 	special_attack_min_range = 2
@@ -327,7 +328,7 @@
 	icon_state = "eclipse_shotwuff"
 	icon_living = "eclipse_shotwuff"
 
-	projectiletype = /obj/item/projectile/bullet/pellet/shotgun/eclipse
+	projectiletype = /obj/item/projectile/bullet/pellet/shotgun
 
 	ranged_attack_delay = 0.5 SECONDS
 
@@ -357,7 +358,9 @@
 	attack_armor_pen = 25
 
 	melee_damage_lower = 20
-	melee_damage_upper = 25
+	melee_damage_upper = 20
+
+	melee_attack_delay = 4
 
 	projectiletype = null
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/eclipse
@@ -365,42 +368,6 @@
 	var/poison_chance = 50
 	var/poison_per_bite = 20
 	var/poison_type = "hyperzine"
-
-
-
-/obj/item/projectile/energy/blob/moth
-	damage = 20
-	armor_penetration = 25
-	my_chems = list("fuel", "mold")
-	flammability = 0.25
-	modifier_type_to_apply = /datum/modifier/fire
-	modifier_duration = 6 SECONDS
-	color = "#38b9ff"
-
-/obj/item/projectile/bullet/pistol/medium/ap/eclipse
-	armor_penetration = 25
-	ricochets = 1
-	ricochets_max = 5
-	ricochet_chance = 100
-
-/obj/item/projectile/energy/electrode/eclipse
-	damage = 30
-	damage_type = BURN
-	color = "#38b9ff"
-
-/obj/item/projectile/bullet/pellet/shotgun/eclipse
-	pellets = 8
-	range_step = 1
-	spread_step = 1
-
-/obj/item/projectile/beam/sniper/eclipse
-	armor_penetration = 50
-	damage = 30
-
-/obj/item/projectile/energy/declone/burn
-	damage = 20
-	armor_penetration = 25
-	nodamage = 0
 
 
 //////////////////////////////////////////////
@@ -412,12 +379,11 @@
 	health = 150
 	maxHealth = 150
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
-	projectiletype = /obj/item/projectile/energy/flash
+	projectiletype = null //Flashing was to much for this mob.
 	movement_cooldown = -1
 	melee_damage_lower = 20
-	melee_damage_upper = 35
+	melee_damage_upper = 20
 	attack_armor_pen = 20
-	reload_max = 5
 	icon_state = "eclipse_hound"
 	icon_living = "eclipse_hound"
 	size_multiplier = 1.25
@@ -425,19 +391,20 @@
 	var/poison_per_bite = 4
 	var/poison_type = "stoxin"
 
+	melee_attack_delay = 4
+
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/wheel
 	name = "Lunar Eclipse Armadillo"
 	health = 150
 	maxHealth = 150
-	melee_damage_lower = 15
-	melee_damage_upper = 25
+	melee_damage_lower = 10
+	melee_damage_upper = 10
 	attack_armor_pen = 50
-	reload_max = 1
 	icon_state = "eclipse_wheel"
 	icon_living = "eclipse_wheel"
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
-	projectiletype = /obj/item/projectile/beam/energy_net
+	projectiletype = null //the net idea was fun but seemed to painful.
 	movement_cooldown = -0.5
 
 	var/cloaked_alpha = 60			// Lower = Harder to see.
@@ -544,10 +511,10 @@
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/pummler
 	name = "Lunar Eclipse Pummeler"
-	projectiletype = /obj/item/projectile/bullet/shotgun/ion/eclipse
+	projectiletype = /obj/item/projectile/bullet/shotgun/ion
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 	melee_damage_lower = 10
-	melee_damage_upper = 30
+	melee_damage_upper = 10
 	attack_armor_pen = 30
 	movement_cooldown = 0
 	icon_state = "eclipse_pummler"
@@ -584,8 +551,3 @@
 	if(prob(poison_chance))
 		to_chat(L, "<span class='warning'>You feel a small shock rushing through your veins.</span>")
 		L.reagents.add_reagent(poison_type, poison_per_bite)
-
-
-/obj/item/projectile/bullet/shotgun/ion/eclipse
-	damage = 25
-	armor_penetration = 30

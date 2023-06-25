@@ -23,6 +23,7 @@
 /obj/structure/table/rack,
 /obj/item/weapon/rig/combat/equipped,
 /obj/item/rig_module/vision/nvg,
+/obj/random/energy/highend,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "cC" = (
@@ -88,11 +89,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "jR" = (
-/obj/structure/table/steel,
-/obj/random/maintenance/research,
-/obj/random/maintenance/research,
-/obj/random/maintenance/security,
 /obj/machinery/light,
+/obj/structure/bed/double/padded,
+/obj/item/weapon/bedsheet/bluedouble,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "kd" = (
@@ -257,6 +256,7 @@
 /obj/structure/table/rack,
 /obj/random/rigsuit,
 /obj/item/rig_module/mounted/egun,
+/obj/random/energy/highend,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "Dw" = (
@@ -286,6 +286,7 @@
 /obj/structure/table/rack,
 /obj/random/rigsuit,
 /obj/item/rig_module/chem_dispenser/combat,
+/obj/random/energy/highend,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "EE" = (
@@ -332,7 +333,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "JQ" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm,
+/obj/structure/bed/double/padded,
+/obj/item/weapon/bedsheet/bluedouble,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "Kh" = (
@@ -445,6 +447,7 @@
 /obj/structure/table/rack,
 /obj/item/weapon/rig/breacher,
 /obj/item/rig_module/pat_module,
+/obj/random/energy/highend,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "UF" = (
@@ -506,6 +509,11 @@
 /obj/random/ammo,
 /obj/random/ammo,
 /obj/random/gun/random,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseaqua)
+"WG" = (
+/obj/structure/bed/double/padded,
+/obj/item/weapon/bedsheet/iandouble,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "WS" = (
@@ -1411,7 +1419,7 @@ Qu
 Ry
 Ry
 Ry
-rR
+Ry
 Qc
 Qu
 Ry
@@ -1419,7 +1427,7 @@ jw
 Ry
 ob
 Ry
-gH
+Ry
 Vg
 Vg
 Ry
@@ -1750,8 +1758,8 @@ Qu
 Qu
 Ry
 jw
-Ry
-yn
+JQ
+KH
 Qu
 Vn
 Xm
@@ -1794,11 +1802,11 @@ Ry
 sX
 Ry
 Qu
-yn
+WG
+Ry
+Ry
+Ry
 JQ
-Ry
-Ry
-KH
 Qu
 Ry
 Ry
@@ -1832,7 +1840,7 @@ Ry
 gA
 ob
 Ry
-JQ
+Ry
 Ry
 Ej
 US
@@ -1843,7 +1851,7 @@ Qu
 Qu
 IS
 Ry
-Ry
+gH
 Ry
 Ry
 ob
@@ -1879,7 +1887,7 @@ Ry
 US
 Qu
 Oi
-Ry
+rR
 iy
 Zm
 Cv
@@ -1891,7 +1899,7 @@ ob
 Ry
 Ry
 Ry
-Ho
+Ry
 jR
 Qu
 nf
@@ -1929,13 +1937,13 @@ pq
 Kh
 eb
 Ry
-Yt
+Ry
 Qu
 Pf
 gR
 Pf
 Qu
-yn
+JQ
 KH
 Ry
 yn

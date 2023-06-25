@@ -685,8 +685,9 @@
 					for(var/datum/controller/subsystem/SS in Master.subsystems)
 						SS.stat_entry()
 
-			if(statpanel("Tickets"))
-				GLOB.ahelp_tickets.stat_entry()
+			// CHOMPedit - Ticket System
+			//if(statpanel("Tickets"))
+				//GLOB.ahelp_tickets.stat_entry()
 
 
 			if(length(GLOB.sdql2_queries))
@@ -696,9 +697,9 @@
 						Q.generate_stat()
 
 
-		if(has_mentor_powers(client))
+		if(has_mentor_powers(client) || client.holder) // CHOMPedit - Ticket System
 			if(statpanel("Tickets"))
-				GLOB.mhelp_tickets.stat_entry()
+				GLOB.tickets.stat_entry() // CHOMPedit - Ticket System
 
 		if(listed_turf && client)
 			if(!TurfAdjacent(listed_turf))

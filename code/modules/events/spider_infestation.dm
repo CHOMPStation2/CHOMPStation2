@@ -33,6 +33,12 @@
 
 	while((spawncount >= 1) && vents.len)
 		var/obj/vent = pick(vents)
-		new /obj/effect/spider/spiderling(vent.loc) //VOREStation Edit - No nurses //Oh my JESUS CHRIST, this slipped past me. Literally no nurses. Well guess what, nurses are back.
+	//CHOMPEDIT START adding spider EGGS to the possible spawns instead of singular spiderling spawns.
+		var/spawn_spiderlings = pickweight(list(
+			/obj/effect/spider/spiderling = 90,
+			/obj/effect/spider/eggcluster = 10
+			))
+		new spawn_spiderlings(vent.loc) //VOREStation Edit - No nurses //Oh my JESUS CHRIST, this slipped past me. Literally no nurses. Well guess what, nurses are back.
+	//CHOMPEDIT END
 		vents -= vent
 		spawncount--

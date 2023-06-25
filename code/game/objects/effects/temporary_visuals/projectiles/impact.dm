@@ -103,3 +103,11 @@
 //VOREStation edit ends
 /obj/effect/projectile/impact/pointdefense
 	icon_state = "impact_pointdef"
+	//CHOMPStation add coilgun pointdefense
+/obj/effect/projectile/impact/coildefense
+	icon = 'icons/obj/projectiles_impact_ch.dmi'
+	icon_state = "impact_coildef"
+	light_range = 2
+	light_power = 3
+	light_color = "#FFFFFF"
+//CHOMPStation add end <3

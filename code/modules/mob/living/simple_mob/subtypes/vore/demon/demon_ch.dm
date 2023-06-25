@@ -58,6 +58,7 @@
 
 	var/enable_autolaugh = FALSE //Whether user controlled mob will laugh when interacting automatically.
 	var/laugh = 'sound/misc/demonlaugh.ogg' //Yknow maybe someone wants a custom laugh, you never know.
+	injury_enrages = TRUE
 
 /mob/living/simple_mob/vore/demon/init_vore()
 	if(!voremob_loaded)
