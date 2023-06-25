@@ -276,46 +276,6 @@
 
 //Ehhhh screw it the scrap mobs can also go here.
 
-/mob/living/simple_mob/mechanical/scrapbug
-	color = "#5F5F5F"
-	damage_fatigue_mult = 0
-
-/mob/living/simple_mob/mechanical/scrapbug/spider //Back line attacker
-	name = "guardian drone"
-	icon = 'icons/mob/animal_vg.dmi'
-	icon_state = "guard"
-	icon_living = "guard"
-	icon_dead = "guard_dead"
-	maxHealth = 60
-	health = 60
-	projectiletype = /obj/item/projectile/arc/spider
-	ai_holder_type = /datum/ai_holder/simple_mob/ranged/kiting
-
-/obj/item/projectile/arc/spider
-	name = "ball of web"
-	icon_state = "bola"
-	damage = 30
-	embed_chance = 0 //Nada.
-	damage_type = BRUTE
-	muzzle_type = null
-	hud_state = "monkey"
-	combustion = FALSE
-
-
-/mob/living/simple_mob/mechanical/scrapbug/roach //THE SWARM
-	name = "scrap beetle"
-	icon = 'icons/mob/animal_vg.dmi'
-	icon_state = "bigroach"
-	icon_living = "bigroach"
-	icon_dead = "bigroach_dead"
-	maxHealth = 5
-	health = 5
-	movement_cooldown = -2
-	attack_armor_pen = 30 //Mostly for mechas and some armor soaky things.
-	melee_damage_lower = 12
-	melee_damage_upper = 12
-	mob_size = MOB_MINISCULE
-
 /mob/living/simple_mob/mechanical/mecha/forgotten
 	name = "Forgotten"
 	icon = 'icons/mecha/mecha.dmi'
