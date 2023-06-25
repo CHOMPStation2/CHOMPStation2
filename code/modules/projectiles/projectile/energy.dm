@@ -292,7 +292,6 @@
 /obj/item/projectile/energy/phase
 	name = "phase wave"
 	icon_state = "phase"
-	fire_sound = 'modular_chomp/sound/weapons/phase_new/phasecarbine.ogg' //CHOMPedit - New sounds.
 	range = 13 //Chompedit This range was still awful
 	damage = 5
 	SA_bonus_damage = 45	// 50 total on animals
@@ -300,19 +299,16 @@
 	hud_state = "laser_heat"
 
 /obj/item/projectile/energy/phase/light
-	fire_sound = 'modular_chomp/sound/weapons/phase_new/phasepistol.ogg' //CHOMPedit - New sounds.
 	range = 11 //Chompedit This range was absolutely pathetic
 	SA_bonus_damage = 35	// 40 total on animals
 	hud_state = "laser_heat"
 
 /obj/item/projectile/energy/phase/heavy
-	fire_sound = 'modular_chomp/sound/weapons/phase_new/phaserifle.ogg' //CHOMPedit - New sounds.
 	range = 16 //Chompedit This range was not great
 	SA_bonus_damage = 55	// 60 total on animals
 	hud_state = "laser_heat"
 
 /obj/item/projectile/energy/phase/heavy/cannon
-	fire_sound = 'modular_chomp/sound/weapons/phase_new/phasecannon.ogg' //CHOMPedit - New sounds.
 	range = 20 //Chompedit This range was mediocre, but not worth a cannon.
 	damage = 15
 	SA_bonus_damage = 60	// 75 total on animals
