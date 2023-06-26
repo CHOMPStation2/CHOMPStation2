@@ -5,6 +5,9 @@
 #include "blackshuttledown.dmm"
 #include "blueshuttledown.dmm"
 #include "borglab.dmm"
+#include "borglabAlt.dmm"
+#include "bountyhunters.dmm"
+#include "bountyhunters2.dmm"
 #include "butchershack.dmm"
 #include "caveS.dmm"
 #include "caveSAlt.dmm"
@@ -32,6 +35,8 @@
 #include "frostoasis.dmm"
 #include "govpatrol.dmm"
 #include "greatwolfden.dmm"
+#include "hadzardzone.dmm"
+#include "hadzardzone2.dmm"
 #include "kururakden.dmm"
 #include "lab1.dmm"
 #include "leopardmanderden.dmm"
@@ -109,6 +114,20 @@
 	mappath = 'maps/submaps/surface_submaps/wilderness/borglabAlt.dmm'
 	cost = 30
 	template_group = "Borg Lab"
+
+/datum/map_template/surface/wilderness/deep/bountyhunter
+	name = "Bounty Hunter Den"
+	desc = "The temp home of some bounty hunters, waiting for pick up."
+	mappath = 'maps/submaps/surface_submaps/wilderness/bountyhunters.dmm'
+	cost = 20
+	template_group = "Bounty Team"
+
+/datum/map_template/surface/wilderness/deep/bountyhunterAlt
+	name = "Elite Bounty Hunter Den"
+	desc = "The temp home of three elite bounty hunters, waiting for pick up."
+	mappath = 'maps/submaps/surface_submaps/wilderness/bountyhunters2.dmm'
+	cost = 20
+	template_group = "Bounty Team"
 
 /datum/map_template/surface/wilderness/normal/butchershack
 	name = "Butcher Shack"
@@ -303,6 +322,18 @@
 	name = "Great Wolf Den"
 	desc = "Den hosted by the biggest alpha wolf of the wilderness"
 	mappath = 'maps/submaps/surface_submaps/wilderness/greatwolfden.dmm'
+	cost = 15
+
+/datum/map_template/surface/wilderness/deep/hadzardzone
+	name = "Hadzard Zone"
+	desc = "A strange and secure drop site."
+	mappath = 'maps/submaps/surface_submaps/wilderness/hadzardzone.dmm'
+	cost = 15
+
+/datum/map_template/surface/wilderness/deep/hadzardzone
+	name = "Burning Hadzard Zone"
+	desc = "A strange and secure drop site, now onfire"
+	mappath = 'maps/submaps/surface_submaps/wilderness/hadzardzone2.dmm'
 	cost = 15
 
 /datum/map_template/surface/wilderness/normal/kururakden
