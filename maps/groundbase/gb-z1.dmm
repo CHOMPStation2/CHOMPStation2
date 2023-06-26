@@ -1726,26 +1726,25 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/cargo/mining)
 "ee" = (
-/obj/structure/closet/walllocker_double{
-	pixel_y = 28
-	},
-/obj/item/weapon/storage/box/gloves,
-/obj/item/weapon/reagent_containers/syringe,
-/obj/item/device/mass_spectrometer/adv,
-/obj/item/weapon/reagent_containers/spray/luminol,
-/obj/item/device/reagent_scanner,
-/obj/item/device/uv_light,
-/obj/item/weapon/forensics/sample_kit/powder,
-/obj/item/weapon/forensics/sample_kit,
-/obj/item/weapon/storage/box/swabs{
-	layer = 5
-	},
-/obj/structure/table/steel_reinforced,
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/groundbase/security/detective)
+/obj/item/weapon/shovel,
+/obj/item/weapon/shovel,
+/obj/item/weapon/shovel,
+/obj/item/weapon/shovel,
+/obj/item/weapon/tool/wrench,
+/obj/item/weapon/tool/wrench,
+/obj/item/weapon/tool/wrench,
+/obj/item/weapon/tool/wrench,
+/obj/item/weapon/tool/crowbar,
+/obj/item/weapon/tool/crowbar,
+/obj/item/weapon/tool/crowbar,
+/obj/item/weapon/tool/crowbar,
+/obj/item/weapon/pickaxe,
+/obj/item/weapon/pickaxe,
+/obj/item/weapon/pickaxe,
+/obj/item/weapon/pickaxe,
+/obj/structure/closet/walllocker_double/cargo/east,
+/turf/simulated/floor/tiled,
+/area/groundbase/cargo/mining)
 "ef" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/industrial/danger{
@@ -2454,6 +2453,16 @@ lel
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/techstorage)
+"fV" = (
+/obj/item/weapon/storage/pill_bottle/dice,
+/obj/item/weapon/storage/pill_bottle/dice,
+/obj/item/weapon/storage/pill_bottle/dice_nerd,
+/obj/item/weapon/storage/pill_bottle/dice_nerd,
+/obj/structure/closet/walllocker_double/misc_civ{
+	pixel_y = 28
+	},
+/turf/simulated/floor/wood,
+/area/groundbase/civilian/gameroom)
 "fW" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
@@ -2998,12 +3007,25 @@ lel
 /turf/simulated/floor/outdoors/sidewalk,
 /area/groundbase/level1/centsquare)
 <<<<<<< HEAD
+<<<<<<< HEAD
 "hm" = (
 /turf/simulated/floor/outdoors/newdirt_nograss{
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/nwtunnel)
 =======
+=======
+"hm" = (
+/obj/item/weapon/deck/cah,
+/obj/item/weapon/deck/cah/black,
+/obj/item/weapon/deck/cards,
+/obj/item/weapon/deck/wizoff,
+/obj/structure/closet/walllocker_double/misc_civ{
+	pixel_y = 28
+	},
+/turf/simulated/floor/wood,
+/area/groundbase/civilian/gameroom)
+>>>>>>> c0d37c3718... Merge pull request #15082 from Heroman3003/more-colored-walllockers
 "hn" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
@@ -3646,12 +3668,24 @@ lel
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/halls)
 <<<<<<< HEAD
+<<<<<<< HEAD
 "iW" = (
 /turf/simulated/floor/outdoors/newdirt_nograss/virgo3c{
 	outdoors = 0
 	},
 /area/groundbase/unexplored/rock)
 =======
+=======
+"iW" = (
+/obj/random/instrument,
+/obj/random/instrument,
+/obj/item/instrument/guitar,
+/obj/structure/closet/walllocker_double/misc_civ{
+	pixel_y = 28
+	},
+/turf/simulated/floor/wood,
+/area/groundbase/civilian/gameroom)
+>>>>>>> c0d37c3718... Merge pull request #15082 from Heroman3003/more-colored-walllockers
 "iX" = (
 /obj/machinery/power/apc{
 	dir = 8
@@ -3710,11 +3744,6 @@ lel
 /obj/fiftyspawner/steel,
 /obj/fiftyspawner/steel,
 /obj/fiftyspawner/steel,
-/obj/structure/closet/walllocker_double/north{
-	dir = 4;
-	pixel_x = 32;
-	pixel_y = 0
-	},
 /obj/fiftyspawner/wood,
 /obj/item/stack/material/glass/phoronrglass{
 	amount = 20
@@ -3731,6 +3760,7 @@ lel
 /obj/fiftyspawner/glass,
 /obj/fiftyspawner/glass,
 /obj/fiftyspawner/glass,
+/obj/structure/closet/walllocker_double/engineering/east,
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/workshop)
 "jg" = (
@@ -3780,22 +3810,29 @@ lel
 /turf/simulated/floor/lino,
 /area/groundbase/civilian/bar)
 "jp" = (
-/obj/structure/closet/walllocker_double{
-	dir = 1;
-	pixel_y = -28
+/obj/item/weapon/storage/box/gloves,
+/obj/item/weapon/reagent_containers/syringe,
+/obj/item/device/mass_spectrometer/adv,
+/obj/item/weapon/reagent_containers/spray/luminol,
+/obj/item/device/reagent_scanner,
+/obj/item/device/uv_light,
+/obj/item/weapon/forensics/sample_kit/powder,
+/obj/item/weapon/forensics/sample_kit,
+/obj/item/weapon/storage/box/swabs{
+	layer = 5
 	},
-/obj/item/device/suit_cooling_unit,
-/obj/item/device/suit_cooling_unit,
-/obj/item/weapon/cell/high{
-	charge = 100;
-	maxcharge = 15000
+/obj/structure/table/steel_reinforced,
+/obj/machinery/light{
+	dir = 4
 	},
-/obj/item/weapon/cell/high{
-	charge = 100;
-	maxcharge = 15000
+<<<<<<< HEAD
+=======
+/obj/structure/closet/walllocker_double/command/hos{
+	pixel_y = 28
 	},
+>>>>>>> c0d37c3718... Merge pull request #15082 from Heroman3003/more-colored-walllockers
 /turf/simulated/floor/tiled/dark,
-/area/groundbase/security/equipment)
+/area/groundbase/security/detective)
 "jq" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/weapon/cell/device/weapon{
@@ -4667,39 +4704,43 @@ lel
 /turf/simulated/floor/bluegrid,
 /area/groundbase/command/ai/chamber)
 "lk" = (
-/obj/structure/table/steel,
-/obj/item/weapon/tool/crowbar,
-/obj/item/weapon/tool/crowbar,
-/obj/item/weapon/tool/crowbar,
-/obj/item/weapon/tool/crowbar,
-/obj/item/weapon/tool/crowbar,
-/obj/item/weapon/tool/crowbar,
-/obj/item/device/flashlight,
-/obj/item/device/flashlight,
-/obj/item/device/flashlight,
-/obj/item/device/flashlight,
-/obj/item/device/flashlight,
-/obj/item/device/flashlight,
-/obj/item/device/holowarrant,
-/obj/item/device/holowarrant,
-/obj/item/device/holowarrant,
-/obj/item/device/holowarrant,
-/obj/item/device/retail_scanner/security,
-/obj/structure/closet/walllocker_double{
-	dir = 8;
-	pixel_x = -28
+/obj/item/weapon/pipe_dispenser,
+/obj/item/device/pipe_painter,
+/obj/item/weapon/stock_parts/console_screen,
+/obj/item/weapon/stock_parts/scanning_module,
+/obj/item/weapon/stock_parts/scanning_module,
+/obj/item/weapon/stock_parts/capacitor,
+/obj/item/weapon/stock_parts/capacitor,
+/obj/item/weapon/stock_parts/micro_laser,
+/obj/item/weapon/stock_parts/matter_bin,
+/obj/item/weapon/stock_parts/manipulator,
+/obj/item/weapon/stock_parts/manipulator,
+/obj/item/weapon/storage/toolbox/electrical{
+	pixel_x = 1;
+	pixel_y = -1
 	},
-/obj/item/device/retail_scanner/security,
-/obj/item/clothing/accessory/badge/holo/cord,
-/obj/item/clothing/accessory/badge/holo/cord,
-/obj/item/clothing/accessory/badge/holo,
-/obj/item/clothing/accessory/badge/holo,
-/obj/item/clothing/accessory/badge/holo,
-/obj/item/clothing/accessory/badge/holo,
-/obj/item/clothing/accessory/badge/holo,
-/obj/item/clothing/accessory/badge/holo,
-/turf/simulated/floor/tiled/dark,
-/area/groundbase/security/equipment)
+/obj/item/clothing/gloves/yellow,
+/obj/item/device/multitool,
+/obj/item/weapon/computer_hardware/hard_drive/portable,
+/obj/item/weapon/computer_hardware/hard_drive/portable,
+/obj/item/weapon/computer_hardware/nano_printer,
+/obj/item/weapon/computer_hardware/tesla_link,
+/obj/item/weapon/computer_hardware/processor_unit/small,
+/obj/item/weapon/computer_hardware/processor_unit,
+/obj/item/weapon/computer_hardware/processor_unit,
+/obj/item/weapon/computer_hardware/processor_unit,
+/obj/item/weapon/computer_hardware/network_card/wired,
+/obj/item/weapon/computer_hardware/network_card,
+/obj/item/weapon/computer_hardware/network_card,
+/obj/item/weapon/computer_hardware/hard_drive/micro,
+/obj/item/weapon/computer_hardware/hard_drive,
+/obj/item/weapon/computer_hardware/hard_drive,
+/obj/item/weapon/computer_hardware/battery_module/nano,
+/obj/item/weapon/computer_hardware/battery_module,
+/obj/item/weapon/computer_hardware/battery_module,
+/obj/structure/closet/walllocker_double/engineering/west,
+/turf/simulated/floor/tiled,
+/area/groundbase/engineering/techstorage)
 "ll" = (
 /obj/structure/closet/secure_closet/personal{
 	anchored = 1
@@ -5511,12 +5552,47 @@ lel
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/atmos/monitoring)
 "np" = (
+<<<<<<< HEAD
 /obj/machinery/light,
 /obj/item/weapon/stool/baystool/padded{
 	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/groundbase/civilian/cafe)
+=======
+/obj/structure/table/steel,
+/obj/item/weapon/tool/crowbar,
+/obj/item/weapon/tool/crowbar,
+/obj/item/weapon/tool/crowbar,
+/obj/item/weapon/tool/crowbar,
+/obj/item/weapon/tool/crowbar,
+/obj/item/weapon/tool/crowbar,
+/obj/item/device/flashlight,
+/obj/item/device/flashlight,
+/obj/item/device/flashlight,
+/obj/item/device/flashlight,
+/obj/item/device/flashlight,
+/obj/item/device/flashlight,
+/obj/item/device/holowarrant,
+/obj/item/device/holowarrant,
+/obj/item/device/holowarrant,
+/obj/item/device/holowarrant,
+/obj/item/device/retail_scanner/security,
+/obj/item/device/retail_scanner/security,
+/obj/item/clothing/accessory/badge/holo/cord,
+/obj/item/clothing/accessory/badge/holo/cord,
+/obj/item/clothing/accessory/badge/holo,
+/obj/item/clothing/accessory/badge/holo,
+/obj/item/clothing/accessory/badge/holo,
+/obj/item/clothing/accessory/badge/holo,
+/obj/item/clothing/accessory/badge/holo,
+/obj/item/clothing/accessory/badge/holo,
+/obj/structure/closet/walllocker_double/security/west{
+	pixel_x = -28
+	},
+/turf/simulated/floor/tiled/dark,
+/area/groundbase/security/equipment)
+>>>>>>> c0d37c3718... Merge pull request #15082 from Heroman3003/more-colored-walllockers
 "nq" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -5638,6 +5714,25 @@ lel
 /obj/machinery/power/emitter,
 /turf/simulated/floor/plating,
 /area/groundbase/engineering/storage)
+"nE" = (
+/obj/item/device/suit_cooling_unit,
+/obj/item/device/suit_cooling_unit,
+/obj/item/weapon/cell/high{
+	charge = 100;
+	maxcharge = 15000
+	},
+/obj/item/weapon/cell/high{
+	charge = 100;
+	maxcharge = 15000
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/closet/walllocker_double/security/south{
+	pixel_y = -28
+	},
+/turf/simulated/floor/tiled/dark,
+/area/groundbase/security/equipment)
 "nF" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/rcd,
@@ -9498,9 +9593,12 @@ lel
 	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/equipment)
+<<<<<<< HEAD
 "wH" = (
 /turf/simulated/wall,
 /area/groundbase/civilian/arrivals)
+=======
+>>>>>>> c0d37c3718... Merge pull request #15082 from Heroman3003/more-colored-walllockers
 "wI" = (
 /obj/item/weapon/storage/backpack/parachute{
 	pixel_x = 4;
@@ -16553,29 +16651,6 @@ lel
 "MK" = (
 /turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/groundbase/level1/eastspur)
-"ML" = (
-/obj/structure/closet/walllocker_double/west{
-	dir = 4;
-	pixel_x = 32
-	},
-/obj/item/weapon/shovel,
-/obj/item/weapon/shovel,
-/obj/item/weapon/shovel,
-/obj/item/weapon/shovel,
-/obj/item/weapon/tool/wrench,
-/obj/item/weapon/tool/wrench,
-/obj/item/weapon/tool/wrench,
-/obj/item/weapon/tool/wrench,
-/obj/item/weapon/tool/crowbar,
-/obj/item/weapon/tool/crowbar,
-/obj/item/weapon/tool/crowbar,
-/obj/item/weapon/tool/crowbar,
-/obj/item/weapon/pickaxe,
-/obj/item/weapon/pickaxe,
-/obj/item/weapon/pickaxe,
-/obj/item/weapon/pickaxe,
-/turf/simulated/floor/tiled,
-/area/groundbase/cargo/mining)
 "MM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -17126,48 +17201,6 @@ lel
 /obj/effect/landmark/start/hos,
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/lobby)
-"Of" = (
-/obj/structure/closet/walllocker_double/north{
-	dir = 8;
-	pixel_x = -32;
-	pixel_y = 0
-	},
-/obj/item/weapon/pipe_dispenser,
-/obj/item/device/pipe_painter,
-/obj/item/weapon/stock_parts/console_screen,
-/obj/item/weapon/stock_parts/scanning_module,
-/obj/item/weapon/stock_parts/scanning_module,
-/obj/item/weapon/stock_parts/capacitor,
-/obj/item/weapon/stock_parts/capacitor,
-/obj/item/weapon/stock_parts/micro_laser,
-/obj/item/weapon/stock_parts/matter_bin,
-/obj/item/weapon/stock_parts/manipulator,
-/obj/item/weapon/stock_parts/manipulator,
-/obj/item/weapon/storage/toolbox/electrical{
-	pixel_x = 1;
-	pixel_y = -1
-	},
-/obj/item/clothing/gloves/yellow,
-/obj/item/device/multitool,
-/obj/item/weapon/computer_hardware/hard_drive/portable,
-/obj/item/weapon/computer_hardware/hard_drive/portable,
-/obj/item/weapon/computer_hardware/nano_printer,
-/obj/item/weapon/computer_hardware/tesla_link,
-/obj/item/weapon/computer_hardware/processor_unit/small,
-/obj/item/weapon/computer_hardware/processor_unit,
-/obj/item/weapon/computer_hardware/processor_unit,
-/obj/item/weapon/computer_hardware/processor_unit,
-/obj/item/weapon/computer_hardware/network_card/wired,
-/obj/item/weapon/computer_hardware/network_card,
-/obj/item/weapon/computer_hardware/network_card,
-/obj/item/weapon/computer_hardware/hard_drive/micro,
-/obj/item/weapon/computer_hardware/hard_drive,
-/obj/item/weapon/computer_hardware/hard_drive,
-/obj/item/weapon/computer_hardware/battery_module/nano,
-/obj/item/weapon/computer_hardware/battery_module,
-/obj/item/weapon/computer_hardware/battery_module,
-/turf/simulated/floor/tiled,
-/area/groundbase/engineering/techstorage)
 "Og" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -19138,6 +19171,7 @@ lel
 	},
 /turf/simulated/floor/bluegrid,
 /area/groundbase/command/ai/chamber)
+<<<<<<< HEAD
 "SU" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 9
@@ -19147,6 +19181,8 @@ lel
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/groundbase/civilian/arrivals)
+=======
+>>>>>>> c0d37c3718... Merge pull request #15082 from Heroman3003/more-colored-walllockers
 "SV" = (
 /obj/effect/map_effect/portal/line/side_a,
 /turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
@@ -25049,7 +25085,7 @@ hC
 yg
 TR
 ZN
-lk
+np
 qQ
 MR
 jX
@@ -25620,7 +25656,7 @@ CC
 aX
 CC
 CC
-jp
+nE
 hC
 hC
 hC
@@ -30720,7 +30756,7 @@ eR
 AZ
 AZ
 yb
-ee
+jp
 Uz
 No
 Ut
@@ -33635,7 +33671,7 @@ og
 DL
 DL
 DL
-ML
+ee
 pF
 qE
 qE
@@ -34660,9 +34696,15 @@ Dx
 QC
 iO
 DQ
+<<<<<<< HEAD
 oi
 ze
 uq
+=======
+fV
+PQ
+uN
+>>>>>>> c0d37c3718... Merge pull request #15082 from Heroman3003/more-colored-walllockers
 WM
 gP
 wH
@@ -34802,12 +34844,21 @@ QC
 cl
 sh
 DQ
+<<<<<<< HEAD
 wH
 wH
 wH
 wH
 wH
 wH
+=======
+hm
+PQ
+Ii
+sq
+TH
+xX
+>>>>>>> c0d37c3718... Merge pull request #15082 from Heroman3003/more-colored-walllockers
 kY
 Eb
 Eb
@@ -34944,9 +34995,15 @@ iy
 nG
 cu
 DQ
+<<<<<<< HEAD
 SU
 fW
 de
+=======
+iW
+PQ
+uN
+>>>>>>> c0d37c3718... Merge pull request #15082 from Heroman3003/more-colored-walllockers
 wQ
 xY
 wH
@@ -36119,7 +36176,7 @@ dD
 rj
 cg
 Uq
-Of
+lk
 hz
 aw
 jc

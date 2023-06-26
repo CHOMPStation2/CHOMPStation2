@@ -212,9 +212,27 @@ lol bye
 /turf/simulated/floor/tiled,
 /area/groundbase/science/robotics)
 "aw" = (
+<<<<<<< HEAD
 /obj/machinery/firework_launcher,
 /turf/simulated/floor/tiled,
 /area/groundbase/science/hall)
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/item/weapon/packageWrap,
+/obj/item/weapon/packageWrap,
+/obj/item/weapon/packageWrap,
+/obj/item/weapon/packageWrap,
+/obj/item/weapon/packageWrap,
+/obj/item/weapon/packageWrap,
+/obj/structure/closet/walllocker_double/cargo/west,
+/turf/simulated/floor/tiled,
+/area/groundbase/cargo/office)
+>>>>>>> c0d37c3718... Merge pull request #15082 from Heroman3003/more-colored-walllockers
 "ax" = (
 /obj/structure/closet/secure_closet/personal,
 /obj/item/weapon/towel/random,
@@ -276,6 +294,30 @@ lol bye
 	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/dorms)
+"aG" = (
+/obj/item/device/camera{
+	pixel_x = 3;
+	pixel_y = -4
+	},
+/obj/item/device/camera,
+/obj/item/device/camera_film{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/device/camera_film{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/device/taperecorder,
+/obj/structure/closet/walllocker_double/misc_civ{
+	dir = 8;
+	pixel_x = -28
+	},
+/turf/simulated/floor/tiled{
+	edge_blending_priority = -1;
+	outdoors = 0
+	},
+/area/groundbase/level2/nw)
 "aH" = (
 /obj/structure/table/glass,
 /obj/item/device/antibody_scanner,
@@ -294,6 +336,70 @@ lol bye
 "aJ" = (
 /obj/structure/sign/painting/public{
 	pixel_y = 30
+	},
+/turf/simulated/floor/tiled{
+	edge_blending_priority = -1;
+	outdoors = 0
+	},
+/area/groundbase/level2/nw)
+"aK" = (
+/obj/item/stack/cable_coil/random,
+/obj/item/stack/cable_coil/random,
+/obj/item/stack/cable_coil/random,
+/obj/item/stack/cable_coil/random,
+/obj/item/stack/cable_coil/random,
+/obj/item/stack/cable_coil/random,
+/obj/item/stack/cable_coil/random,
+/obj/item/stack/cable_coil/random,
+/obj/item/stack/cable_coil/random,
+/obj/item/stack/cable_coil/random,
+/obj/item/stack/cable_coil/random,
+/obj/item/stack/cable_coil/random,
+/obj/item/stack/cable_coil/random,
+/obj/item/stack/cable_coil/random,
+/obj/item/stack/cable_coil/random,
+/obj/item/stack/cable_coil/random,
+/obj/structure/closet/walllocker_double/misc_civ{
+	dir = 4;
+	pixel_x = 28
+	},
+/turf/simulated/floor/tiled{
+	edge_blending_priority = -1;
+	outdoors = 0
+	},
+/area/groundbase/level2/nw)
+"aL" = (
+/obj/item/weapon/packageWrap,
+/obj/item/weapon/packageWrap,
+/obj/item/weapon/tape_roll,
+/obj/item/weapon/tape_roll,
+/obj/item/weapon/storage/box{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/weapon/storage/box{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/weapon/storage/box{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/weapon/storage/box{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/weapon/storage/box{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/weapon/storage/box{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/structure/closet/walllocker_double/misc_civ{
+	dir = 4;
+	pixel_x = 28
 	},
 /turf/simulated/floor/tiled{
 	edge_blending_priority = -1;
@@ -480,6 +586,42 @@ lol bye
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/wood,
 /area/groundbase/dorms/room4)
+"bd" = (
+/obj/item/canvas,
+/obj/item/canvas,
+/obj/item/canvas,
+/obj/item/canvas,
+/obj/item/canvas,
+/obj/item/canvas/nineteen_nineteen,
+/obj/item/canvas/nineteen_nineteen,
+/obj/item/canvas/nineteen_nineteen,
+/obj/item/canvas/nineteen_nineteen,
+/obj/item/canvas/nineteen_nineteen,
+/obj/item/canvas/twentyfour_twentyfour,
+/obj/item/canvas/twentyfour_twentyfour,
+/obj/item/canvas/twentyfour_twentyfour,
+/obj/item/canvas/twentyfour_twentyfour,
+/obj/item/canvas/twentyfour_twentyfour,
+/obj/item/canvas/twentythree_nineteen,
+/obj/item/canvas/twentythree_nineteen,
+/obj/item/canvas/twentythree_nineteen,
+/obj/item/canvas/twentythree_nineteen,
+/obj/item/canvas/twentythree_nineteen,
+/obj/item/canvas/twentythree_twentythree,
+/obj/item/canvas/twentythree_twentythree,
+/obj/item/canvas/twentythree_twentythree,
+/obj/item/canvas/twentythree_twentythree,
+/obj/item/canvas/twentythree_twentythree,
+/obj/structure/easel,
+/obj/structure/closet/walllocker_double/misc_civ{
+	dir = 8;
+	pixel_x = -28
+	},
+/turf/simulated/floor/tiled{
+	edge_blending_priority = -1;
+	outdoors = 0
+	},
+/area/groundbase/level2/nw)
 "be" = (
 /obj/structure/table/fancyblack,
 /obj/item/weapon/paper_bin{
@@ -553,6 +695,22 @@ lol bye
 "bl" = (
 /turf/simulated/floor/carpet/geo,
 /area/groundbase/civilian/kitchen/backroom)
+"bm" = (
+/obj/item/weapon/storage/fancy/crayons,
+/obj/item/weapon/storage/fancy/crayons,
+/obj/item/weapon/storage/fancy/crayons,
+/obj/item/weapon/storage/fancy/crayons,
+/obj/item/weapon/storage/fancy/crayons,
+/obj/item/weapon/storage/fancy/crayons,
+/obj/structure/closet/walllocker_double/misc_civ{
+	dir = 4;
+	pixel_x = 28
+	},
+/turf/simulated/floor/tiled{
+	edge_blending_priority = -1;
+	outdoors = 0
+	},
+/area/groundbase/level2/nw)
 "bn" = (
 /obj/machinery/door/airlock{
 	id_tag = null;
@@ -580,6 +738,22 @@ lol bye
 	},
 /turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
 /area/groundbase/civilian/hydroponics/out)
+"bq" = (
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/item/stack/material/plasteel{
+	amount = 10
+	},
+/obj/structure/closet/walllocker_double/science/north,
+/turf/simulated/floor/tiled/steel,
+/area/groundbase/science/robotics)
 "br" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -595,6 +769,13 @@ lol bye
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
+"bt" = (
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/closet/walllocker_double/science/west,
+/turf/simulated/floor/tiled,
+/area/groundbase/science/circuits)
 "bu" = (
 /obj/machinery/door/airlock/freezer{
 	name = "Kitchen";
@@ -617,6 +798,18 @@ lol bye
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/groundbase/medical/psych)
+"bw" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/item/device/defib_kit/jumper_kit,
+/obj/item/weapon/storage/box/gloves,
+/obj/item/weapon/storage/box/bodybags{
+	pixel_x = -3;
+	pixel_y = -2
+	},
+/obj/item/weapon/book/manual/robotics_cyborgs,
+/obj/structure/closet/walllocker_double/science/east,
+/turf/simulated/floor/tiled,
+/area/groundbase/science/robotics)
 "bx" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 1
@@ -703,6 +896,24 @@ lol bye
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/Chemistry)
+"bH" = (
+/obj/item/weapon/circuitboard/aicore{
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/obj/item/weapon/circuitboard/teleporter,
+/obj/random/paicard{
+	pixel_x = 4
+	},
+/obj/item/device/taperecorder{
+	pixel_x = -3
+	},
+/obj/structure/closet/walllocker_double/command/rd{
+	dir = 4;
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled,
+/area/groundbase/science/rd)
 "bI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -1050,18 +1261,6 @@ lol bye
 	},
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/lobby)
-"cN" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/structure/closet/walllocker_double/east,
-/obj/item/device/defib_kit/jumper_kit,
-/obj/item/weapon/storage/box/gloves,
-/obj/item/weapon/storage/box/bodybags{
-	pixel_x = -3;
-	pixel_y = -2
-	},
-/obj/item/weapon/book/manual/robotics_cyborgs,
-/turf/simulated/floor/tiled,
-/area/groundbase/science/robotics)
 "cO" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -4671,26 +4870,6 @@ lol bye
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/science/robotics)
-"nl" = (
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/glass,
-/obj/item/stack/material/plasteel{
-	amount = 10
-	},
-/obj/structure/closet/walllocker_double/east{
-	dir = 2;
-	pixel_x = 0;
-	pixel_y = 32
-	},
-/turf/simulated/floor/tiled/steel,
-/area/groundbase/science/robotics)
 "nm" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/command{
@@ -7614,6 +7793,7 @@ lol bye
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/janitor)
+<<<<<<< HEAD
 "vT" = (
 /obj/structure/closet/walllocker_double{
 	dir = 4;
@@ -7640,6 +7820,19 @@ lol bye
 	outdoors = 0
 	},
 /area/groundbase/level2/nw)
+=======
+"vU" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/blast/regular{
+	dir = 4;
+	id = "chem_room";
+	name = "Chemistry Shutters"
+	},
+/turf/simulated/floor,
+/area/groundbase/medical/Chemistry)
+>>>>>>> c0d37c3718... Merge pull request #15082 from Heroman3003/more-colored-walllockers
 "vV" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/item/weapon/reagent_containers/glass/bucket,
@@ -7997,6 +8190,7 @@ lol bye
 	},
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/lobby)
+<<<<<<< HEAD
 "xc" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -8009,6 +8203,8 @@ lol bye
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/cargo/office)
+=======
+>>>>>>> c0d37c3718... Merge pull request #15082 from Heroman3003/more-colored-walllockers
 "xd" = (
 /obj/effect/floor_decal/steeldecal/steel_decals10,
 /obj/structure/cable/yellow{
@@ -9151,21 +9347,6 @@ lol bye
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology)
-"Ay" = (
-/obj/structure/closet/walllocker_double/east,
-/obj/item/weapon/circuitboard/aicore{
-	pixel_x = -2;
-	pixel_y = 4
-	},
-/obj/item/weapon/circuitboard/teleporter,
-/obj/random/paicard{
-	pixel_x = 4
-	},
-/obj/item/device/taperecorder{
-	pixel_x = -3
-	},
-/turf/simulated/floor/tiled,
-/area/groundbase/science/rd)
 "AA" = (
 /obj/effect/floor_decal/chapel,
 /turf/simulated/floor/tiled/dark,
@@ -11420,22 +11601,6 @@ lol bye
 	},
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/triage)
-"GO" = (
-/obj/structure/closet/walllocker_double{
-	dir = 4;
-	pixel_x = 27
-	},
-/obj/item/weapon/storage/fancy/crayons,
-/obj/item/weapon/storage/fancy/crayons,
-/obj/item/weapon/storage/fancy/crayons,
-/obj/item/weapon/storage/fancy/crayons,
-/obj/item/weapon/storage/fancy/crayons,
-/obj/item/weapon/storage/fancy/crayons,
-/turf/simulated/floor/tiled{
-	edge_blending_priority = -1;
-	outdoors = 0
-	},
-/area/groundbase/level2/nw)
 "GP" = (
 /obj/structure/bed/chair/sofa/pew/left{
 	dir = 1
@@ -12853,30 +13018,6 @@ lol bye
 /obj/structure/flora/pottedplant/minitree,
 /turf/simulated/floor/wood,
 /area/groundbase/cargo/qm)
-"KC" = (
-/obj/structure/closet/walllocker_double{
-	dir = 8;
-	pixel_x = -28
-	},
-/obj/item/device/camera{
-	pixel_x = 3;
-	pixel_y = -4
-	},
-/obj/item/device/camera,
-/obj/item/device/camera_film{
-	pixel_x = 2;
-	pixel_y = 2
-	},
-/obj/item/device/camera_film{
-	pixel_x = -2;
-	pixel_y = -2
-	},
-/obj/item/device/taperecorder,
-/turf/simulated/floor/tiled{
-	edge_blending_priority = -1;
-	outdoors = 0
-	},
-/area/groundbase/level2/nw)
 "KD" = (
 /obj/structure/bookcase,
 /obj/item/weapon/book/manual/security_space_law,
@@ -15060,42 +15201,6 @@ lol bye
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/civilian/chapel)
-"QK" = (
-/obj/structure/closet/walllocker_double{
-	dir = 8;
-	pixel_x = -28
-	},
-/obj/item/canvas,
-/obj/item/canvas,
-/obj/item/canvas,
-/obj/item/canvas,
-/obj/item/canvas,
-/obj/item/canvas/nineteen_nineteen,
-/obj/item/canvas/nineteen_nineteen,
-/obj/item/canvas/nineteen_nineteen,
-/obj/item/canvas/nineteen_nineteen,
-/obj/item/canvas/nineteen_nineteen,
-/obj/item/canvas/twentyfour_twentyfour,
-/obj/item/canvas/twentyfour_twentyfour,
-/obj/item/canvas/twentyfour_twentyfour,
-/obj/item/canvas/twentyfour_twentyfour,
-/obj/item/canvas/twentyfour_twentyfour,
-/obj/item/canvas/twentythree_nineteen,
-/obj/item/canvas/twentythree_nineteen,
-/obj/item/canvas/twentythree_nineteen,
-/obj/item/canvas/twentythree_nineteen,
-/obj/item/canvas/twentythree_nineteen,
-/obj/item/canvas/twentythree_twentythree,
-/obj/item/canvas/twentythree_twentythree,
-/obj/item/canvas/twentythree_twentythree,
-/obj/item/canvas/twentythree_twentythree,
-/obj/item/canvas/twentythree_twentythree,
-/obj/structure/easel,
-/turf/simulated/floor/tiled{
-	edge_blending_priority = -1;
-	outdoors = 0
-	},
-/area/groundbase/level2/nw)
 "QL" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -15820,44 +15925,6 @@ lol bye
 	},
 /turf/simulated/floor/carpet,
 /area/groundbase/civilian/library)
-"SJ" = (
-/obj/structure/closet/walllocker_double{
-	dir = 4;
-	pixel_x = 27
-	},
-/obj/item/weapon/packageWrap,
-/obj/item/weapon/packageWrap,
-/obj/item/weapon/tape_roll,
-/obj/item/weapon/tape_roll,
-/obj/item/weapon/storage/box{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/weapon/storage/box{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/weapon/storage/box{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/weapon/storage/box{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/weapon/storage/box{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/weapon/storage/box{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/turf/simulated/floor/tiled{
-	edge_blending_priority = -1;
-	outdoors = 0
-	},
-/area/groundbase/level2/nw)
 "SK" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -17385,17 +17452,6 @@ lol bye
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/science/hall)
-"Xv" = (
-/obj/structure/closet/walllocker_double/north{
-	dir = 8;
-	pixel_x = -32;
-	pixel_y = 0
-	},
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled,
-/area/groundbase/science/circuits)
 "Xw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -20160,9 +20216,9 @@ yW
 Ja
 tZ
 Pz
-KC
+aG
 ro
-QK
+bd
 bY
 bY
 bY
@@ -21296,9 +21352,9 @@ OZ
 Cw
 ay
 oB
-vT
-SJ
-GO
+aK
+aL
+bm
 bY
 eN
 eN
@@ -23043,7 +23099,7 @@ Gi
 Rh
 hh
 GJ
-Xv
+bt
 th
 my
 dm
@@ -24481,7 +24537,7 @@ XX
 xv
 Fx
 Fx
-Ay
+bH
 ja
 Xn
 XX
@@ -25455,7 +25511,7 @@ Fm
 bg
 EK
 Wn
-nl
+bq
 nF
 Tj
 qk
@@ -25599,7 +25655,7 @@ Dm
 Wn
 Lo
 wP
-cN
+bw
 Fz
 Dh
 rI
@@ -29071,7 +29127,7 @@ Ln
 Gf
 LG
 Lj
-xc
+aw
 iV
 Xg
 sP
