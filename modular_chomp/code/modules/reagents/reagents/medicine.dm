@@ -209,7 +209,7 @@
 /datum/reagent/livingagent
 	name = "Living Agent"
 	id = "livingagent"
-	description = "Living an agent, by utlizing the bristling energy of meteroids. It does make the body more senstive to stimulus."
+	description = "Fill the body with life, while making it more senstive to stimulus."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
 	color = "#8040FF"
@@ -273,7 +273,7 @@
 /datum/reagent/quadcord
 	name = "quadcord"
 	id = "quadcord"
-	description = "An expirmental drug that is meant to further enhance tricord"
+	description = "An Experimental drug that is meant to further enhance tricord"
 	taste_description = "bitterness"
 	reagent_state = LIQUID
 	color = "#FF3399"
@@ -293,7 +293,7 @@
 /datum/reagent/juggernog
 	name = "juggernog"
 	id = "juggernog"
-	description = "An expirmental that toughens the body to blows and knockdown"
+	description = "An experimental drug that toughens the body to blows and knockdown"
 	taste_description = "bitterness"
 	reagent_state = LIQUID
 	color = "#660066"
@@ -308,7 +308,7 @@
 /datum/reagent/curea
 	name = "curea"
 	id = "curea"
-	description = "An expirmental that removes many aligments, such as poison and stiffing of muscles via frost"
+	description = "An experimental that removes many aligments, such as poison and stiffing of muscles via frost"
 	taste_description = "bitterness"
 	reagent_state = LIQUID
 	color = "#660066"
@@ -330,7 +330,7 @@
 /datum/reagent/modapplying/liquidangel
 	name = "Liquid Healer"
 	id = "liquidangel"
-	description = "An expirmental that mimics rapid regeneration seen in squishy creatures."
+	description = "An experimental that mimics rapid regeneration seen in squishy creatures."
 	taste_description = "sweet"
 	reagent_state = LIQUID
 	color = "#00CCFF"
@@ -339,10 +339,10 @@
 	modifier_to_add = /datum/modifier/aura/slime_heal
 	modifier_duration = 2 SECONDS
 
-/datum/reagent/phoneixbreath
-	name = "Phoneix Breath"
+/datum/reagent/phoenixbreath
+	name = "Phoenix Breath"
 	id = "phoneixbreath"
-	description = "An improvement on the orginal soul dew chemical"
+	description = "An improvement on the original soul dew chemical"
 	taste_description = "ash"
 	reagent_state = LIQUID
 	color = "#FFFFFF"

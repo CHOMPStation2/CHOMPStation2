@@ -42,7 +42,7 @@
 	reagents.add_reagent("phoron", 3)
 
 /obj/item/weapon/reagent_containers/food/snacks/metroidmeat
-	name = "Metroid Hude"
+	name = "Metroid Slice"
 	desc = "A slice from a metroid"
 	icon_state = "meat"
 	center_of_mass = list("x"=17, "y"=16)
