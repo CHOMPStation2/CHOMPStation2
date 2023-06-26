@@ -4667,20 +4667,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/lower/first_west)
 "ahN" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 1
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals7,
-/obj/effect/floor_decal/steeldecal/steel_decals7{
-	dir = 4
-	},
-/obj/machinery/station_map{
-	pixel_y = 32
-	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/reinforced,
 /area/hallway/lower/first_west)
 "ahO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -8223,23 +8210,14 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner2{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
-/area/hallway/lower/first_west)
-"anA" = (
 /obj/machinery/alarm{
 	pixel_y = 22
 	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 1
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals7,
-/obj/effect/floor_decal/steeldecal/steel_decals7{
-	dir = 4
-	},
 /turf/simulated/floor/tiled,
+/area/hallway/lower/first_west)
+"anA" = (
+/obj/structure/redgate,
+/turf/simulated/floor/reinforced,
 /area/hallway/lower/first_west)
 "anB" = (
 /obj/effect/floor_decal/borderfloor{
@@ -37011,8 +36989,11 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 4
 	},
-/obj/effect/mouse_hole_spawner{
-	dir = 1
+/obj/machinery/station_map{
+	pixel_y = 32
+	},
+/obj/machinery/station_map{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/first_west)
@@ -38601,6 +38582,35 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
+<<<<<<< HEAD
+=======
+"uxT" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/atmos,
+/turf/simulated/floor/plating,
+/area/engineering/atmos/processing)
+"uyf" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/mouse_hole_spawner,
+/turf/simulated/floor/tiled,
+/area/hallway/lower/first_west)
+>>>>>>> 04e00e8fb2... Merge pull request #15076 from Very-Soft/takemtodaraaaannnch
 "uzs" = (
 /obj/machinery/light{
 	dir = 8
@@ -45224,6 +45234,7 @@ amA
 ajS
 aah
 aah
+<<<<<<< HEAD
 aah
 aah
 aah
@@ -45246,6 +45257,54 @@ auE
 aDr
 avG
 ahT
+=======
+akB
+akB
+akB
+akB
+akB
+akB
+akB
+akB
+akB
+akB
+akB
+hDd
+uiK
+gCa
+gCa
+gCa
+gCa
+lTn
+lTn
+lTn
+qYs
+lTn
+ahl
+ahl
+ahl
+ahl
+ahl
+ahN
+ahN
+ahN
+ahL
+anP
+adu
+ahl
+app
+apl
+apl
+apl
+aqy
+apl
+apl
+apl
+asF
+apj
+apj
+apj
+>>>>>>> 04e00e8fb2... Merge pull request #15076 from Very-Soft/takemtodaraaaannnch
 auK
 aAj
 abN
@@ -45333,10 +45392,10 @@ aah
 aah
 aah
 aah
-aah
-aah
-aah
 ahl
+ahN
+anA
+ahN
 ahL
 acV
 adF
@@ -45455,6 +45514,7 @@ aad
 aah
 aah
 aah
+<<<<<<< HEAD
 ajL
 akZ
 ajM
@@ -45477,6 +45537,40 @@ ajS
 aah
 aah
 ahl
+=======
+aah
+aah
+aah
+aah
+bqI
+sxc
+ilZ
+njE
+qOa
+bqI
+kfT
+fmY
+gCa
+aXx
+aXE
+gCa
+vTn
+fpU
+rVW
+bJz
+lTn
+aah
+aah
+aah
+aah
+ahl
+ahN
+ahN
+ahN
+ahL
+anP
+adu
+>>>>>>> 04e00e8fb2... Merge pull request #15076 from Very-Soft/takemtodaraaaannnch
 ahl
 ahl
 ahl
@@ -45597,6 +45691,7 @@ aah
 aah
 aah
 aah
+<<<<<<< HEAD
 ajL
 akZ
 abs
@@ -45618,6 +45713,33 @@ ajS
 ajS
 aah
 aah
+=======
+aah
+bqI
+sVX
+mTw
+rOh
+gud
+bqI
+nOB
+csd
+gCa
+aXB
+aXF
+gCa
+ezn
+qPR
+hco
+ubK
+lTn
+aah
+aah
+aah
+aah
+ahl
+ahl
+ahl
+>>>>>>> 04e00e8fb2... Merge pull request #15076 from Very-Soft/takemtodaraaaannnch
 ahl
 aBV
 ahG
@@ -45767,6 +45889,7 @@ aiE
 ajq
 anx
 anP
+<<<<<<< HEAD
 anx
 anx
 aqX
@@ -45781,6 +45904,9 @@ anx
 anx
 anx
 acJ
+=======
+uyf
+>>>>>>> 04e00e8fb2... Merge pull request #15076 from Very-Soft/takemtodaraaaannnch
 ahl
 rJv
 avh
