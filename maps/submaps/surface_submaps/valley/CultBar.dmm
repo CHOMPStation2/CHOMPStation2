@@ -849,7 +849,9 @@
 /area/submap/CultBar)
 "LD" = (
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/humanoid/cultist/elite,
+/mob/living/simple_mob/humanoid/cultist/elite{
+	faction = "demon"
+	},
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "LV" = (
@@ -1066,7 +1068,9 @@
 "Vk" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/humanoid/cultist/elite,
+/mob/living/simple_mob/humanoid/cultist/elite{
+	faction = "demon"
+	},
 /turf/simulated/floor/wood/sif/broken,
 /area/submap/CultBar)
 "Vr" = (
