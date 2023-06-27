@@ -88,7 +88,7 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 
-	wreckage = null
+	wreckage = /obj/effect/decal/cleanable/blood/gibs/robo
 	pilot_type = /mob/living/simple_mob/mechanical/mecha/imperion/phase2
 
 	special_attack_min_range = 1
@@ -131,10 +131,11 @@
 	movement_cooldown = -1
 	projectiletype = /obj/item/projectile/bola
 	melee_attack_delay = 4 SECOND
+	alpha = 215
 
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 
-	wreckage = null
+	wreckage = /obj/effect/decal/cleanable/blood/gibs/robo
 	pilot_type = /mob/living/simple_mob/mechanical/mecha/imperion/phase3
 
 	special_attack_min_range = 1
@@ -166,7 +167,7 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 
-	wreckage = null
+	wreckage = /obj/effect/decal/cleanable/blood/gibs/robo
 	pilot_type = /mob/living/simple_mob/mechanical/mecha/imperion/phase4
 
 	special_attack_min_range = 1
@@ -192,7 +193,7 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 
-	wreckage = null
+	wreckage = /obj/effect/decal/cleanable/blood/gibs/robo
 	pilot_type = /mob/living/simple_mob/mechanical/mecha/imperion/phase5
 
 	special_attack_min_range = 1
@@ -246,7 +247,7 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 
-	wreckage = null
+	wreckage = /obj/effect/decal/cleanable/blood/gibs/robo
 	pilot_type = null
 	var/grenade_type = /obj/item/weapon/grenade/shooter/energy/tesla
 	var/grenade_timer = 10
@@ -412,11 +413,3 @@
 		if(L.stat == DEAD)
 			continue
 		L.add_modifier(/datum/modifier/aura/despair, null, src)
-
-/mob/living/simple_mob/mechanical/mecha/imperion/death()
-	..()
-	new /obj/effect/decal/cleanable/blood/gibs/robot(src.loc)
-	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
-	s.set_up(3, 1, src)
-	s.start()
-	qdel(src)

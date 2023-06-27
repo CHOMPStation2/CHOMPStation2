@@ -98,9 +98,7 @@
 	special_attack_min_range = 2
 	special_attack_max_range = 7
 
-	loot_list = list(/obj/item/clothing/suit/armor/protectionbubble = 100,
-			/obj/item/clothing/suit/armor/protectionbubble = 50,
-			/obj/item/clothing/suit/armor/protectionbubble = 50
+	loot_list = list(/obj/item/clothing/suit/armor/protectionbubble = 100
 			)
 
 /mob/living/simple_mob/mechanical/mecha/vistor/vistorblue/should_special_attack(atom/A)
@@ -153,15 +151,13 @@
 
 	melee_damage_lower = 25
 	melee_damage_upper = 25
-	ai_holder_type = /datum/ai_holder/simple_mob/ranged/kiting
+	ai_holder_type = /datum/ai_holder/hostile/ranged/robust
 
 	special_attack_cooldown = 2 SECONDS
 	special_attack_min_range = 2
 	special_attack_max_range = 7
 
-	loot_list = list(/obj/item/clothing/suit/armor/reactive/vistor = 100,
-			/obj/item/clothing/suit/armor/reactive/vistor = 50,
-			/obj/item/clothing/suit/armor/reactive/vistor = 50
+	loot_list = list(/obj/item/clothing/suit/armor/reactive/vistor = 100
 			)
 
 /mob/living/simple_mob/mechanical/mecha/vistor/vistorgreen/do_special_attack(atom/A)
@@ -186,11 +182,9 @@
 
 	melee_damage_lower = 25
 	melee_damage_upper = 25
-	alpha = 50
+	alpha = 15
 
-	loot_list = list(/obj/item/clothing/suit/armor/tesla/vistor = 100,
-			/obj/item/clothing/suit/armor/tesla/vistor = 50,
-			/obj/item/clothing/suit/armor/tesla/vistor = 50
+	loot_list = list(/obj/item/clothing/suit/armor/tesla/vistor = 100
 			)
 
 /mob/living/simple_mob/mechanical/mecha/vistor/vistoryellow
@@ -247,10 +241,7 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged/kiting
 
 	ranged_attack_delay = 3 SECONDS
-
-	loot_list = list(/obj/item/clothing/suit/armor/alien/vistor = 100,
-			/obj/item/clothing/suit/armor/alien/vistor = 50,
-			/obj/item/clothing/suit/armor/alien/vistor = 50
+	loot_list = list(/obj/item/clothing/suit/armor/alien/vistor = 100
 			)
 
 /mob/living/simple_mob/mechanical/mecha/vistor/vistororange/Initialize(mapload)
@@ -282,6 +273,7 @@
 	health = 300
 	movement_cooldown = 0
 	damage_fatigue_mult = 0
+	alpha = 175
 
 	armor = list(
 				"melee"		= 30,
