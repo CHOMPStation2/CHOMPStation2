@@ -3,7 +3,7 @@ var/bomb_set
 /obj/machinery/nuclearbomb
 	name = "\improper Nuclear Fission Explosive"
 	desc = "Uh oh. RUN!!!!"
-	icon = 'icons/obj/stationobjs.dmi'
+	icon = 'modular_chomp/icons/obj/stationobjs.dmi' //chompedit, use the better one
 	icon_state = "nuclearbomb0"
 	density = TRUE
 	var/deployable = 0.0
@@ -47,6 +47,7 @@ var/bomb_set
 	if(timing)
 		bomb_set = 1 //So long as there is one nuke timing, it means one nuke is armed.
 		timeleft--
+		playsound(src, 'sound/items/timer.ogg',50) //chompedit... beep :)
 		if(timeleft <= 0)
 			explode()
 		for(var/mob/M in viewers(1, src))
@@ -275,6 +276,7 @@ var/bomb_set
 								icon_state = "nuclearbomb1"
 						timing = 0
 						bomb_set = 0
+						set_security_level("blue") //chompedit
 					if(light_wire == temp_wire)
 						lighthack = !lighthack
 
@@ -322,10 +324,13 @@ var/bomb_set
 							icon_state = "nuclearbomb2"
 						if(!safety)
 							bomb_set = 1//There can still be issues with this reseting when there are multiple bombs. Not a big deal tho for Nuke/N
+							set_security_level("delta")//chompedit
 						else
 							bomb_set = 0
+							set_security_level("blue")
 					else
 						bomb_set = 0
+						set_security_level("blue") //chompedit
 						if(!lighthack)
 							icon_state = "nuclearbomb1"
 				if(href_list["safety"])
@@ -333,6 +338,7 @@ var/bomb_set
 					if(safety)
 						timing = 0
 						bomb_set = 0
+						set_security_level("blue") //chompedit
 				if(href_list["anchor"])
 
 					if(removal_stage == 5)
@@ -370,7 +376,7 @@ var/bomb_set
 	safety = 1
 	if(!lighthack)
 		icon_state = "nuclearbomb3"
-	playsound(src,'sound/machines/Alarm.ogg',100,0,5)
+	world << sound('sound/machines/Alarm.ogg')//chompedit, nuke is big event, make it global
 	if(ticker && ticker.mode)
 		ticker.mode.explosion_in_progress = 1
 	sleep(100)
