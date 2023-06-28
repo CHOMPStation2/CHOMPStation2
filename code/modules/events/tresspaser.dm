@@ -71,7 +71,7 @@
 			max_number = 3
 			vermstring = "intruders"
 		if(VERM_MERC)
-			spawn_types = list(/obj/random/mob/merc/all)
+			spawn_types = list(/mob/living/simple_mob/humanoid/merc/melee/sword/space)
 			max_number = 2
 			vermstring = "highly armed intruder"
 		if(VERM_CULTIST)
