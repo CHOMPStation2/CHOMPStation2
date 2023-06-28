@@ -127,6 +127,9 @@
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Spider Infestation",		/datum/event/spider_infestation, 		-60,	list(ASSIGNMENT_SECURITY = 20, ASSIGNMENT_HOS = 10, ASSIGNMENT_WARDEN = 10, ASSIGNMENT_ANY = 3), 0),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Supply Demand",		/datum/event/supply_demand,		0,		list(ASSIGNMENT_ANY = 5, ASSIGNMENT_SCIENCE = 15, ASSIGNMENT_GARDENER = 10, ASSIGNMENT_ENGINEER = 10, ASSIGNMENT_MEDICAL = 15), 1, min_jobs = list(ASSIGNMENT_CARGO = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Viral Infection",	/datum/event/viral_infection,	-50,	list(ASSIGNMENT_MEDICAL = 25), 	1, min_jobs = list(ASSIGNMENT_MEDICAL = 2)),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Royal Spider Infestation",		/datum/event/spider_royalinfest, 		-60,	list(ASSIGNMENT_SECURITY = 20, ASSIGNMENT_HOS = 10, ASSIGNMENT_WARDEN = 10, ASSIGNMENT_ANY = 3), 0),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Tresspassers",		/datum/event/tresspasser, 		-60,	list(ASSIGNMENT_SECURITY = 20, ASSIGNMENT_HOS = 10, ASSIGNMENT_WARDEN = 10, ASSIGNMENT_ANY = 3), 0),
+
 	)
 	add_disabled_events(list(
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Containment Breach",	/datum/event/prison_break/station,0,	list(ASSIGNMENT_ANY = 5),		0),
