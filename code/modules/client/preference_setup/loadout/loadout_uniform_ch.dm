@@ -112,4 +112,4 @@
 
 /datum/gear/uniform/tacticool
 	display_name = "Tacticool turtleneck"
-	path = /obj/item/clothing/under/syndicate/tacticool
+	path = /obj/item/clothing/under/syndicate/tacticool/loadout

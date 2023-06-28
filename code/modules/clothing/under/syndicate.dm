@@ -24,4 +24,3 @@
 	item_state_slots = list(slot_r_hand_str = "black", slot_l_hand_str = "black")
 	siemens_coefficient = 1
 	rolled_sleeves = 0
-	has_sensor = 1 //Chomp EDIT. give the fake turtleneck sensors.
