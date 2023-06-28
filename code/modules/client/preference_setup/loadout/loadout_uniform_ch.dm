@@ -97,7 +97,7 @@
 	display_name = "vr suit" //The name of the suit as shown in the loadout menu
 	path = /obj/item/clothing/under/vrsuit //Pathname of the suit which is found in custom_clothes_ch.dm
 
-// Cargo shorts. The full-of-pockets kind, not the department 
+// Cargo shorts. The full-of-pockets kind, not the department
 /datum/gear/uniform/cshorts
 	display_name = "cargo shorts"
 	path = /obj/item/clothing/under/shorts/cshorts/khaki
@@ -109,3 +109,7 @@
 		"Khaki cargo shorts" = /obj/item/clothing/under/shorts/cshorts/khaki
 	)
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cargo_shorts))
+
+/datum/gear/uniform/tacticool
+	display_name = "Tacticool turtleneck"
+	path = /obj/item/clothing/under/syndicate/tacticool
