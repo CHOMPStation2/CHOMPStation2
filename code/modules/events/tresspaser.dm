@@ -94,7 +94,7 @@
 
 
 /datum/event/tresspasser/announce()
-	command_announcement.Announce("Bioscans indicate... What are those? It looks like [vermstring] has broken into [locstring]. Proceed with cation.", "Vermin infestation")
+	command_announcement.Announce("Bioscans indicate... What are those? It looks like [vermstring] has broken into [locstring]. Proceed with caution.", "Vermin infestation")
 
 #undef LOC_CONAREA1
 #undef LOC_CONAREA2
