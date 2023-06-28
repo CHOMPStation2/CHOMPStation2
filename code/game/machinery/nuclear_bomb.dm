@@ -276,7 +276,7 @@ var/bomb_set
 								icon_state = "nuclearbomb1"
 						timing = 0
 						bomb_set = 0
-						set_security_level("blue") //chompedit
+						set_security_level("red") //chompedit
 					if(light_wire == temp_wire)
 						lighthack = !lighthack
 
@@ -327,10 +327,10 @@ var/bomb_set
 							set_security_level("delta")//chompedit
 						else
 							bomb_set = 0
-							set_security_level("blue")
+							set_security_level("red")
 					else
 						bomb_set = 0
-						set_security_level("blue") //chompedit
+						set_security_level("red") //chompedit
 						if(!lighthack)
 							icon_state = "nuclearbomb1"
 				if(href_list["safety"])
@@ -338,7 +338,7 @@ var/bomb_set
 					if(safety)
 						timing = 0
 						bomb_set = 0
-						set_security_level("blue") //chompedit
+						set_security_level("red") //chompedit
 				if(href_list["anchor"])
 
 					if(removal_stage == 5)
