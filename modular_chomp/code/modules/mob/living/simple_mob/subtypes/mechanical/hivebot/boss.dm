@@ -22,8 +22,9 @@
 	size_multiplier = 1.75
 	shock_resist = 3
 	water_resist = 3
+	attack_armor_pen = -50
 
-	armor = list(melee = -50, bullet = 40, laser = 40, energy = 40, bomb = 40, bio = 100, rad = 100)
+	armor = list(melee = -150, bullet = 40, laser = 40, energy = 40, bomb = 40, bio = 100, rad = 100)
 
 	armor_soak = list(
 		"melee" = 0,
