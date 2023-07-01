@@ -653,6 +653,8 @@
 /obj/machinery/power/port_gen/pacman,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light,
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/corner/orange/border,
 /turf/simulated/floor/tiled,
 /area/expoutpost/engstorage)
 "aDE" = (
@@ -10250,6 +10252,12 @@
 "iiF" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/effect/floor_decal/industrial/outline/blue,
+/obj/effect/floor_decal/borderfloorblack/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/orange/bordercorner{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/engstorage)
 "ijz" = (
@@ -11855,6 +11863,17 @@
 /obj/item/weapon/storage/toolbox/syndicate,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
+"jvS" = (
+/obj/machinery/power/thermoregulator,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
+/area/expoutpost/engstorage)
 "jvX" = (
 /turf/simulated/floor/carpet,
 /area/expoutpost/commanderroom)
@@ -11969,6 +11988,9 @@
 	},
 /obj/machinery/pipedispenser,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 10
+	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/engoffice)
 "jCS" = (
@@ -14141,6 +14163,12 @@
 /obj/machinery/door/window{
 	dir = 2
 	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 1
+	},
 /turf/simulated/floor/reinforced,
 /area/expoutpost/engstorage)
 "lqc" = (
@@ -15599,6 +15627,9 @@
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/engoffice)
 "mop" = (
@@ -16671,6 +16702,9 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/engoffice)
 "neW" = (
@@ -16760,6 +16794,12 @@
 "niM" = (
 /obj/machinery/autolathe,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 9
+	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/engstorage)
 "niW" = (
@@ -17484,6 +17524,12 @@
 	},
 /obj/machinery/door/window{
 	dir = 2
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 1
 	},
 /turf/simulated/floor/reinforced,
 /area/expoutpost/engstorage)
@@ -21517,6 +21563,12 @@
 /obj/machinery/door/window{
 	dir = 2
 	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 1
+	},
 /turf/simulated/floor/reinforced,
 /area/expoutpost/engstorage)
 "qPA" = (
@@ -21602,6 +21654,9 @@
 /obj/effect/floor_decal/industrial/outline,
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/engoffice)
@@ -22082,6 +22137,17 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/lowersternhallway)
+"rkB" = (
+/obj/structure/closet/crate/radiation,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/expoutpost/engstorage)
 "rlq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -22710,6 +22776,9 @@
 /obj/effect/floor_decal/industrial/outline/red,
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/engoffice)
@@ -27516,6 +27585,12 @@
 "vmY" = (
 /obj/structure/closet/crate/radiation,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/engstorage)
 "vnd" = (
@@ -28680,6 +28755,9 @@
 /obj/machinery/door/window{
 	dir = 2
 	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 5
+	},
 /turf/simulated/floor/reinforced,
 /area/expoutpost/engstorage)
 "wcE" = (
@@ -28994,6 +29072,12 @@
 "wlg" = (
 /obj/machinery/power/thermoregulator,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/engstorage)
 "wlq" = (
@@ -30629,6 +30713,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarfive)
+"xBS" = (
+/obj/machinery/floodlight,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/corner/orange/border,
+/turf/simulated/floor/tiled,
+/area/expoutpost/engstorage)
 "xCv" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
@@ -61895,7 +61986,7 @@ mfd
 wKr
 kcv
 wlg
-wlg
+jvS
 roD
 spq
 spq
@@ -62153,7 +62244,7 @@ wZI
 wZI
 wZI
 coa
-coa
+xBS
 roD
 spq
 spq
@@ -62669,7 +62760,7 @@ eKA
 roD
 gEB
 vmY
-vmY
+rkB
 roD
 spq
 spq
