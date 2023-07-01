@@ -185,6 +185,7 @@
 	name = "Weasel Head"
 	id = "weasel_head"
 	build_path = /obj/item/mecha_parts/micro/part/weasel_head
+<<<<<<< HEAD
 	materials = list(MAT_STEEL = 7000, MAT_GLASS = 2500) */
 
 /datum/design/item/mecha/medigun //Who the fuck thought it was a good idea to put this here?
@@ -194,3 +195,6 @@
 	req_tech = list(TECH_MATERIAL = 5, TECH_COMBAT = 5, TECH_BIO = 6)
 	materials = list(MAT_STEEL = 8000, MAT_GOLD = 2000, MAT_SILVER = 1750, MAT_DIAMOND = 1500, MAT_PHORON = 4000)
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/energy/medigun
+=======
+	materials = list(MAT_STEEL = 7000, MAT_GLASS = 2500)
+>>>>>>> ba46363f1e... Merge pull request #15097 from MisterGrimm/miscfixesandchanges
