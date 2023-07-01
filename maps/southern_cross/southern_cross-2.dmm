@@ -7618,14 +7618,13 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/starboard)
 "avU" = (
-/obj/machinery/disposal,
-/obj/structure/disposalpipe/trunk,
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/red/border{
 	dir = 8
 	},
+/obj/structure/closet/crate/bin,
 /turf/simulated/floor/tiled,
 /area/security/prison)
 "avV" = (
@@ -9364,7 +9363,6 @@
 /area/security/prison)
 "aBU" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
@@ -11391,7 +11389,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
 	},
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/security/prison)
 "aJk" = (
@@ -12868,10 +12865,6 @@
 	pixel_y = -32
 	},
 /obj/machinery/light,
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/red/border,
 /turf/simulated/floor/tiled,
@@ -12881,31 +12874,11 @@
 	c_tag = "SEC - Common Brig 1";
 	dir = 1
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/security/prison)
-"aNS" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/security/prison)
-"aNU" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/security/prison)
@@ -12916,41 +12889,26 @@
 	pixel_y = -21;
 	wires = 7
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled,
 /area/security/prison)
 "aNW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/industrial/warning,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /turf/simulated/floor/tiled,
 /area/security/prison)
 "aNX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/floor_decal/industrial/warning,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /turf/simulated/floor/tiled,
 /area/security/prison)
 "aNY" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/security/prison)
 "aNZ" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
@@ -12959,10 +12917,6 @@
 "aOa" = (
 /obj/machinery/light{
 	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
 	},
 /obj/machinery/computer/cryopod{
 	layer = 3.3;
@@ -14106,7 +14060,6 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/security/prison)
 "aRu" = (
-/obj/structure/disposalpipe/segment,
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 22
@@ -15098,7 +15051,6 @@
 	req_access = list(63)
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	d1 = 2;
 	d2 = 8;
@@ -16410,7 +16362,6 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 4
 	},
@@ -18507,7 +18458,6 @@
 	name = "Communal Brig Blast Door";
 	opacity = 0
 	},
-/obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
@@ -19916,7 +19866,6 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 8
 	},
@@ -22123,7 +22072,6 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	d1 = 2;
 	d2 = 8;
@@ -23050,7 +22998,6 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 4
 	},
@@ -25068,7 +25015,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/security/security_hallway)
 "byG" = (
@@ -26752,14 +26698,15 @@
 /turf/simulated/floor/tiled,
 /area/security/security_hallway)
 "bDy" = (
-/obj/structure/disposalpipe/junction/yjunction{
-	dir = 4
-	},
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/security/security_hallway)
@@ -48197,9 +48144,9 @@
 	},
 /obj/structure/disposaloutlet{
 	dir = 8;
-	pixel_y = -2;
+	name = "Lost & found disposal outlet";
 	pixel_x = -7;
-	name = "Lost & found disposal outlet"
+	pixel_y = -2
 	},
 /turf/simulated/wall/r_wall,
 /area/medical/virology)
@@ -56084,8 +56031,8 @@
 	dir = 1
 	},
 /obj/machinery/light_switch{
-	pixel_x = -36;
 	dir = 4;
+	pixel_x = -36;
 	pixel_y = 6
 	},
 /obj/machinery/button/windowtint{
@@ -61889,9 +61836,9 @@
 	dir = 4
 	},
 /obj/structure/sign/department/cargo{
-	pixel_y = -32;
+	desc = "NT is not responsible for personal items left or lost on SouthernCross. Any lost and found inquiries can be made at the HoP front desk.";
 	name = "Resleeving lost & found bin";
-	desc = "NT is not responsible for personal items left or lost on SouthernCross. Any lost and found inquiries can be made at the HoP front desk."
+	pixel_y = -32
 	},
 /obj/random/maintenance/clean,
 /obj/random/maintenance/engineering,
@@ -64790,9 +64737,9 @@
 /area/rnd/workshop)
 "olj" = (
 /obj/structure/sign/redcross{
-	pixel_y = 32;
+	icon_state = "bluecross2";
 	name = "Autoresleeving";
-	icon_state = "bluecross2"
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/white,
 /area/hallway/secondary/seconddeck/research_medical)
@@ -69844,8 +69791,8 @@
 /area/hallway/secondary/entry/D3)
 "rev" = (
 /obj/machinery/door/window/westleft{
-	name = "Shower";
-	dir = 1
+	dir = 1;
+	name = "Shower"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cryo/autoresleeve)
@@ -75260,8 +75207,8 @@
 	dir = 4
 	},
 /obj/machinery/door/window/westright{
-	name = "Shower";
 	dir = 1;
+	name = "Shower";
 	pixel_y = 0
 	},
 /turf/simulated/floor/tiled/white,
@@ -80096,9 +80043,9 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/disposal/wall/cleaner{
 	dir = 8;
-	pixel_y = 0;
+	name = "Resleeving lost & found bin";
 	pixel_x = 35;
-	name = "Resleeving lost & found bin"
+	pixel_y = 0
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 4
@@ -111186,7 +111133,7 @@ aqL
 avV
 aBV
 aJl
-aNS
+ahm
 aRq
 aTm
 aYn
@@ -111444,7 +111391,7 @@ arH
 awe
 aBW
 aJm
-aNU
+ahl
 aRr
 aTp
 aYo
