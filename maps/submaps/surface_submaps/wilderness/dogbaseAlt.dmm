@@ -5,10 +5,20 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
+<<<<<<< HEAD:maps/submaps/surface_submaps/wilderness/dogbaseAlt.dmm
 "aB" = (
 /obj/structure/safe,
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
+=======
+"ae" = (
+/mob/living/simple_mob/vore/wolf/direwolf/dog/sec{
+	desc = "The biggest and baddest guard dog around.";
+	faction = "syndicate";
+	max_co2 = 0;
+	max_tox = 0;
+	name = "syndicate guard dog"
+>>>>>>> c60995d1f4... Merge pull request #15106 from Very-Soft/tidying_and_tweaks:maps/submaps/surface_submaps/plains/dogbase.dmm
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
@@ -86,8 +96,14 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
+<<<<<<< HEAD:maps/submaps/surface_submaps/wilderness/dogbaseAlt.dmm
 "ec" = (
 /mob/living/simple_mob/animal/giant_spider/nurse{
+=======
+"eZ" = (
+/mob/living/simple_mob/vore/wolf/direwolf/dog/sec{
+	desc = "The biggest and baddest guard dog around.";
+>>>>>>> c60995d1f4... Merge pull request #15106 from Very-Soft/tidying_and_tweaks:maps/submaps/surface_submaps/plains/dogbase.dmm
 	faction = "syndicate";
 	name = "trained giant spider"
 	},
@@ -244,8 +260,23 @@
 /obj/item/weapon/bedsheet,
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
+<<<<<<< HEAD:maps/submaps/surface_submaps/wilderness/dogbaseAlt.dmm
 "md" = (
 /obj/machinery/door/airlock,
+=======
+"qZ" = (
+/obj/effect/decal/remains/ribcage,
+/turf/template_noop,
+/area/template_noop)
+"re" = (
+/mob/living/simple_mob/vore/wolf/direwolf/dog/sec{
+	desc = "The biggest and baddest guard dog around.";
+	faction = "syndicate";
+	max_co2 = 0;
+	max_tox = 0;
+	name = "syndicate guard dog"
+	},
+>>>>>>> c60995d1f4... Merge pull request #15106 from Very-Soft/tidying_and_tweaks:maps/submaps/surface_submaps/plains/dogbase.dmm
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "mF" = (
@@ -307,9 +338,32 @@
 /obj/effect/landmark/loot_spawn,
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
+<<<<<<< HEAD:maps/submaps/surface_submaps/wilderness/dogbaseAlt.dmm
 "pT" = (
 /obj/machinery/light{
 	dir = 1
+=======
+"wS" = (
+/mob/living/simple_mob/vore/wolf/direwolf/dog/sec{
+	desc = "The biggest and baddest guard dog around.";
+	faction = "syndicate";
+	max_co2 = 0;
+	max_tox = 0;
+	name = "syndicate guard dog"
+	},
+/turf/template_noop,
+/area/template_noop)
+"xc" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+>>>>>>> c60995d1f4... Merge pull request #15106 from Very-Soft/tidying_and_tweaks:maps/submaps/surface_submaps/plains/dogbase.dmm
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -428,9 +482,19 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
+<<<<<<< HEAD:maps/submaps/surface_submaps/wilderness/dogbaseAlt.dmm
 "yr" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
+=======
+"Dv" = (
+/mob/living/simple_mob/vore/wolf/direwolf/dog/sec{
+	desc = "The biggest and baddest guard dog around.";
+	faction = "syndicate";
+	max_co2 = 0;
+	max_tox = 0;
+	name = "syndicate guard dog"
+>>>>>>> c60995d1f4... Merge pull request #15106 from Very-Soft/tidying_and_tweaks:maps/submaps/surface_submaps/plains/dogbase.dmm
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
@@ -575,9 +639,40 @@
 /obj/random/projectile/scrapped_pistol,
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
+<<<<<<< HEAD:maps/submaps/surface_submaps/wilderness/dogbaseAlt.dmm
 "Io" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/borderfloor,
+=======
+"Ol" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/weapon/bone/leg,
+/mob/living/simple_mob/vore/wolf/direwolf/dog/sec{
+	desc = "The biggest and baddest guard dog around.";
+	faction = "syndicate";
+	max_co2 = 0;
+	max_tox = 0;
+	name = "syndicate guard dog"
+	},
+/turf/simulated/floor/outdoors/dirt/virgo3b,
+/area/submap/DogBase)
+"OR" = (
+/mob/living/simple_mob/vore/wolf/direwolf/dog/sec{
+	desc = "The biggest and baddest guard dog around.";
+	faction = "syndicate";
+	max_co2 = 0;
+	max_tox = 0;
+	name = "syndicate guard dog"
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 1
+	},
+/turf/simulated/floor/plating/external/virgo3b,
+/area/submap/DogBase)
+"OS" = (
+/obj/effect/floor_decal/corner/red/border,
+>>>>>>> c60995d1f4... Merge pull request #15106 from Very-Soft/tidying_and_tweaks:maps/submaps/surface_submaps/plains/dogbase.dmm
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "Ju" = (
@@ -612,7 +707,23 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
+<<<<<<< HEAD:maps/submaps/surface_submaps/wilderness/dogbaseAlt.dmm
 "KH" = (
+=======
+"QB" = (
+/mob/living/simple_mob/vore/wolf/direwolf/dog/sec{
+	desc = "The biggest and baddest guard dog around.";
+	faction = "syndicate";
+	max_co2 = 0;
+	max_tox = 0;
+	name = "syndicate guard dog"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
+/area/template_noop)
+"Rz" = (
+>>>>>>> c60995d1f4... Merge pull request #15106 from Very-Soft/tidying_and_tweaks:maps/submaps/surface_submaps/plains/dogbase.dmm
 /obj/structure/table/woodentable,
 /obj/random/contraband/nofail,
 /turf/simulated/floor/tiled/dark,
@@ -709,6 +820,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
+<<<<<<< HEAD:maps/submaps/surface_submaps/wilderness/dogbaseAlt.dmm
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/submap/DogBase)
 "QF" = (
@@ -716,6 +828,17 @@
 	dir = 4;
 	icon_state = "tube1";
 	pixel_x = 0
+=======
+/turf/simulated/floor/outdoors/dirt/virgo3b,
+/area/template_noop)
+"Ya" = (
+/mob/living/simple_mob/vore/wolf/direwolf/dog/sec{
+	desc = "The biggest and baddest guard dog around.";
+	faction = "syndicate";
+	max_co2 = 0;
+	max_tox = 0;
+	name = "syndicate guard dog"
+>>>>>>> c60995d1f4... Merge pull request #15106 from Very-Soft/tidying_and_tweaks:maps/submaps/surface_submaps/plains/dogbase.dmm
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
