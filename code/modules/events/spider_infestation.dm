@@ -11,7 +11,7 @@
 		kill()
 		return
 	announceWhen = rand(announceWhen, announceWhen + 60)
-	spawncount = rand(6 * severity, 14 * severity)	//spiderlings only have a 50% chance to grow big and strong //CHOMP Edit: old: 2/4 new: 6/14
+	spawncount = rand(4 * severity, 10 * severity)	//spiderlings only have a 50% chance to grow big and strong //CHOMP Edit: old: 2/4 new: 6/14 new: 4/10
 	sent_spiders_to_station = 0
 
 /datum/event/spider_infestation/announce()
@@ -35,8 +35,9 @@
 		var/obj/vent = pick(vents)
 	//CHOMPEDIT START adding spider EGGS to the possible spawns instead of singular spiderling spawns.
 		var/spawn_spiderlings = pickweight(list(
-			/obj/effect/spider/spiderling = 90,
-			/obj/effect/spider/eggcluster = 10
+			/obj/effect/spider/spiderling = 85,
+			/obj/effect/spider/eggcluster = 10,
+			/obj/effect/spider/eggcluster/royal = 5
 			))
 		new spawn_spiderlings(vent.loc) //VOREStation Edit - No nurses //Oh my JESUS CHRIST, this slipped past me. Literally no nurses. Well guess what, nurses are back.
 	//CHOMPEDIT END
