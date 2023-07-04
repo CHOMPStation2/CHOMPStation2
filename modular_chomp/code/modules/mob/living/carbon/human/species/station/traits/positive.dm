@@ -1,4 +1,4 @@
-/datum/trait/positive/hardfeet
+/datum/trait/neutral/hardfeet
 	custom_only = FALSE
 
 /datum/trait/positive/linguist
