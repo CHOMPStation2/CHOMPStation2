@@ -22735,6 +22735,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/item/weapon/reagent_containers/glass/beaker/sulphuric,
 /turf/simulated/wall/r_wall,
 /area/maintenance/disposal)
 "brZ" = (
@@ -67552,7 +67553,7 @@
 /obj/random/maintenance/clean,
 /obj/random/maintenance/clean,
 /obj/random/cash,
-/obj/item/weapon/reagent_containers/glass/beaker/sulphuric,
+/obj/item/weapon/reagent_containers/glass/beaker/stopperedbottle,
 /turf/simulated/floor,
 /area/maintenance/cargo)
 "pMH" = (
