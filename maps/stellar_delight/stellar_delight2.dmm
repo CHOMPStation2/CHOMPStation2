@@ -16187,6 +16187,8 @@
 /obj/structure/sign/poster{
 	dir = 8
 	},
+/obj/item/device/healthanalyzer/guide,
+/obj/item/device/healthanalyzer/guide,
 /turf/simulated/floor/tiled/eris/white/bluecorner,
 /area/stellardelight/deck2/triage)
 "HN" = (
