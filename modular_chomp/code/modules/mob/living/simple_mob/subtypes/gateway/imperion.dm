@@ -88,7 +88,7 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 
-	wreckage = /obj/effect/decal/cleanable/blood/gibs/robo
+	wreckage = null
 	pilot_type = /mob/living/simple_mob/mechanical/mecha/imperion/phase2
 
 	special_attack_min_range = 1
@@ -135,7 +135,7 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 
-	wreckage = /obj/effect/decal/cleanable/blood/gibs/robo
+	wreckage = null
 	pilot_type = /mob/living/simple_mob/mechanical/mecha/imperion/phase3
 
 	special_attack_min_range = 1
@@ -167,7 +167,7 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 
-	wreckage = /obj/effect/decal/cleanable/blood/gibs/robo
+	wreckage = null
 	pilot_type = /mob/living/simple_mob/mechanical/mecha/imperion/phase4
 
 	special_attack_min_range = 1
@@ -193,7 +193,7 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 
-	wreckage = /obj/effect/decal/cleanable/blood/gibs/robo
+	wreckage = null
 	pilot_type = /mob/living/simple_mob/mechanical/mecha/imperion/phase5
 
 	special_attack_min_range = 1
@@ -247,7 +247,7 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 
-	wreckage = /obj/effect/decal/cleanable/blood/gibs/robo
+	wreckage = null
 	pilot_type = null
 	var/grenade_type = /obj/item/weapon/grenade/shooter/energy/tesla
 	var/grenade_timer = 10
