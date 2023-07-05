@@ -55,9 +55,9 @@ var/world_time_season
 				/mob/living/simple_mob/vore/alienanimals/dustjumper = 20,
 				/mob/living/simple_mob/vore/bee = 20,
 				/mob/living/simple_mob/vore/horse/big = 5,
-				/mob/living/simple_mob/animal/wolf = 5,
-				/mob/living/simple_mob/animal/wolf/direwolf = 1,
-				/mob/living/simple_mob/animal/wolf/direwolf/dog = 1,
+				/mob/living/simple_mob/vore/wolf = 5,
+				/mob/living/simple_mob/vore/wolf/direwolf = 1,
+				/mob/living/simple_mob/vore/wolf/direwolf/dog = 1,
 				/mob/living/simple_mob/vore/squirrel = 20
 			)
 			grass_types = list(
@@ -97,7 +97,7 @@ var/world_time_season
 				/mob/living/simple_mob/vore/horse/big = 5,
 				/mob/living/simple_mob/vore/pakkun = 2,
 				/mob/living/simple_mob/vore/fennix = 1,
-				/mob/living/simple_mob/animal/wolf/direwolf/dog = 1,
+				/mob/living/simple_mob/vore/wolf/direwolf/dog = 1,
 				/mob/living/simple_mob/animal/passive/bird/parrot = 1,
 				/mob/living/simple_mob/vore/squirrel = 20
 			)
@@ -123,9 +123,9 @@ var/world_time_season
 				/mob/living/simple_mob/vore/horse/big = 10,
 				/mob/living/simple_mob/vore/alienanimals/dustjumper = 20,
 				/mob/living/simple_mob/vore/horse/big = 1,
-				/mob/living/simple_mob/animal/wolf = 1,
-				/mob/living/simple_mob/animal/wolf/direwolf = 1,
-				/mob/living/simple_mob/animal/wolf/direwolf/dog = 1,
+				/mob/living/simple_mob/vore/wolf = 1,
+				/mob/living/simple_mob/vore/wolf/direwolf = 1,
+				/mob/living/simple_mob/vore/wolf/direwolf/dog = 1,
 				/mob/living/simple_mob/vore/squirrel = 20
 			)
 			grass_types = list(
@@ -148,13 +148,13 @@ var/world_time_season
 				/mob/living/simple_mob/vore/alienanimals/teppi = 10,
 				/mob/living/simple_mob/vore/alienanimals/teppi/mutant = 1,
 				/mob/living/simple_mob/vore/redpanda = 10,
-				/mob/living/simple_mob/animal/wolf = 10,
-				/mob/living/simple_mob/animal/wolf/direwolf = 1,
-				/mob/living/simple_mob/animal/wolf/direwolf/dog = 1,
-				/mob/living/simple_mob/otie/friendly = 2,
-				/mob/living/simple_mob/otie/friendly/chubby = 1,
-				/mob/living/simple_mob/otie/red/friendly = 1,
-				/mob/living/simple_mob/otie/red/chubby = 1,
+				/mob/living/simple_mob/vore/wolf = 10,
+				/mob/living/simple_mob/vore/wolf/direwolf = 1,
+				/mob/living/simple_mob/vore/wolf/direwolf/dog = 1,
+				/mob/living/simple_mob/vore/otie/friendly = 2,
+				/mob/living/simple_mob/vore/otie/friendly/chubby = 1,
+				/mob/living/simple_mob/vore/otie/red/friendly = 1,
+				/mob/living/simple_mob/vore/otie/red/chubby = 1,
 				/mob/living/simple_mob/vore/squirrel = 20
 			)
 			if(prob(snow_chance))

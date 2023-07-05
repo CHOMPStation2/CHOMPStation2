@@ -14,6 +14,7 @@
 	name = "tile"
 	singular_name = "tile"
 	desc = "A non-descript floor tile"
+	icon = 'icons/obj/stacks.dmi' //CHOMPedit - parent obj/item/stack got edited, this puts icon back for carpets.
 	randpixel = 7
 	w_class = ITEMSIZE_NORMAL
 	max_amount = 60

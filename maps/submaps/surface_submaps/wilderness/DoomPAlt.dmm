@@ -156,6 +156,13 @@
 /obj/structure/lattice,
 /turf/simulated/floor/water,
 /area/submap/DoomP)
+"ix" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/obj/effect/map_helper/no_phaseshift,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/DoomP)
 "iC" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -2879,7 +2886,7 @@ Yl
 vq
 UV
 fc
-SD
+ix
 Qh
 Qh
 et

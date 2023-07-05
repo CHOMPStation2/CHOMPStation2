@@ -29,10 +29,10 @@
 								  "Lizardman" = /mob/living/simple_mob/vore/aggressive/lizardman,//CHOMPedit: more mobs
 								  "Giant Frog" = /mob/living/simple_mob/vore/aggressive/frog,
 								  "Giant Rat" = /mob/living/simple_mob/vore/aggressive/rat,
-								  "Jelly Blob" = /mob/living/simple_mob/animal/space/jelly,
-								  "Wolf" = /mob/living/simple_mob/animal/wolf,
-								  "Dire Wolf" = /mob/living/simple_mob/animal/wolf/direwolf,//CHOMPedit: more mobs
-								  "Large Dog" = /mob/living/simple_mob/animal/wolf/direwolf/dog,//CHOMPedit: more mobs
+								  "Jelly Blob" = /mob/living/simple_mob/vore/jelly,
+								  "Wolf" = /mob/living/simple_mob/vore/wolf,
+								  "Dire Wolf" = /mob/living/simple_mob/vore/wolf/direwolf,//CHOMPedit: more mobs
+								  "Large Dog" = /mob/living/simple_mob/vore/wolf/direwolf/dog,//CHOMPedit: more mobs
 								  "Hyena" = /mob/living/simple_mob/animal/hyena,//CHOMPedit: more mobs
 								  "Juvenile Solargrub" = /mob/living/simple_mob/vore/solargrub,
 								  "Sect Queen" = /mob/living/simple_mob/vore/sect_queen,
@@ -41,13 +41,13 @@
 								  "Panther" = /mob/living/simple_mob/vore/aggressive/panther,
 								  "Giant Snake" = /mob/living/simple_mob/vore/aggressive/giant_snake,
 								  "Deathclaw" = /mob/living/simple_mob/vore/aggressive/deathclaw,
-								  "Otie" = /mob/living/simple_mob/otie,
-								  "Chubby Otie" = /mob/living/simple_mob/otie/friendly/chubby,//CHOMPedit: more mobs
-								  "Mutated Otie" = /mob/living/simple_mob/otie/feral,
-								  "Chubby Mutated Otie" = /mob/living/simple_mob/otie/feral/chubby,//CHOMPedit: more mobs
-								  "Red Otie" = /mob/living/simple_mob/otie/red,
-								  "Chubby Red Otie" = /mob/living/simple_mob/otie/red/chubby,//CHOMPedit: more mobs
-								  "Zorgoia" = /mob/living/simple_mob/otie/zorgoia,//CHOMPedit: more mobs
+								  "Otie" = /mob/living/simple_mob/vore/otie,
+								  "Chubby Otie" = /mob/living/simple_mob/vore/otie/friendly/chubby,//CHOMPedit: more mobs
+								  "Mutated Otie" =/mob/living/simple_mob/vore/otie/feral,
+								  "Chubby Mutated Otie" = /mob/living/simple_mob/vore/otie/feral/chubby,//CHOMPedit: more mobs
+								  "Red Otie" = /mob/living/simple_mob/vore/otie/red,
+								  "Chubby Red Otie" = /mob/living/simple_mob/vore/otie/red/chubby,//CHOMPedit: more mobs
+								  "Zorgoia" = /mob/living/simple_mob/vore/otie/zorgoia,//CHOMPedit: more mobs
 								  "Corrupt Hound" = /mob/living/simple_mob/vore/aggressive/corrupthound,
 								  "Corrupt Corrupt Hound" = /mob/living/simple_mob/vore/aggressive/corrupthound/prettyboi,
 								  "Hunter Giant Spider" = /mob/living/simple_mob/animal/giant_spider/hunter,
@@ -104,6 +104,7 @@
 	to_chat(M, "<span class='warning'>You may be a spooky space monster, but your role is to facilitate spooky space monster roleplay, not to fight the station and kill people. You can of course eat and/or digest people as you like if OOC prefs align, but this should be done as part of roleplay. If you intend to fight the station and kill people and such, you need permission from the staff team. GENERALLY, this role should avoid well populated areas. You’re a weird spooky space monster, so the bar is probably not where you’d want to go if you intend to survive. Of course, you’re welcome to try to make friends and roleplay how you will in this regard, but something to keep in mind.</span>")
 	newPred.ckey = M.ckey
 	newPred.visible_message("<span class='warning'>[newPred] emerges from somewhere!</span>")
+	log_and_message_admins("successfully entered \a [src] and became a [newPred].")
 	qdel(src)
 
 /obj/structure/ghost_pod/ghost_activated/maintpred/no_announce
@@ -124,7 +125,7 @@
 
 /obj/structure/ghost_pod/ghost_activated/morphspawn/create_occupant(var/mob/M)
 	..()
-	var/mob/living/simple_mob/vore/hostile/morph/newMorph = new /mob/living/simple_mob/vore/hostile/morph(get_turf(src))
+	var/mob/living/simple_mob/vore/morph/newMorph = new /mob/living/simple_mob/vore/morph(get_turf(src))
 	newMorph.voremob_loaded = TRUE //CHOMPedit: On-demand belly loading.
 	newMorph.init_vore() //CHOMPedit: On-demand belly loading.
 	if(M.mind)
@@ -140,6 +141,7 @@
 
 	newMorph.ckey = M.ckey
 	newMorph.visible_message("<span class='warning'>A morph appears to crawl out of somewhere.</span>")
+	log_and_message_admins("successfully entered \a [src] and became a Morph.")
 	qdel(src)
 
 /obj/structure/ghost_pod/ghost_activated/morphspawn/no_announce
