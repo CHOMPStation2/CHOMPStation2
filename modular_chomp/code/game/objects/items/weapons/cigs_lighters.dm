@@ -1,5 +1,5 @@
 /obj/item/weapon/flame/lighter/supermatter
-    name = "Hardlight Supermatter Zippo"
+    name = "Hardlight Supermatter Zippo"	// Base SM Lighter
     desc = "State of the Art Supermatter Lighter."
     description_fluff = "A zippo style lighter with a tiny supermatter sliver held by a hardlight shield. When lighting a cigar, make sure to hover the tip near the sliver, not against it!"
     icon = 'icons/obj/zippo_ch.dmi'
@@ -19,7 +19,7 @@
     deactivation_sound = 'sound/items/zippo_off.ogg'
 
 /obj/item/weapon/flame/lighter/supermatter/expsmzippo
-	name = "Experimental SM Lighter"
+	name = "Experimental SM Lighter"		// Dangerous WIP (admin/event only ATM)
 	desc = "State of the Art Supermatter Lighter"
 	description_fluff = "A unique take originating from the zippo design, a shard of supermatter placed within lead-lined walls. Cautious, VERY DANGEROUS do NOT touch!"
 	icon = 'icons/obj/zippo_ch.dmi'
@@ -42,7 +42,7 @@
 		else
 			if(prob(95))
 				user.visible_message("<span class='notice'>After a few attempts, [user] manages to excite the supermatter within the [src].</span>")
-			else
+			else			// Just like the cheap lighter, this time you can shock/burn yourself a little on the hardlight shield
 				to_chat(user, "<span class='warning'>You hurt yourself on the shielding!</span>")
 				if (user.get_left_hand() == src)
 					user.apply_damage(1,SEARING,"l_hand")
@@ -113,16 +113,16 @@
 		else
 			if(prob(95))
 				user.visible_message("<span class='notice'>After a few attempts, [user] manages to excite the supermatter within the [src].</span>")
-			else
+			else			// Just like with the cheap lighter, but this time you can hurt yourself on the heated phoron field
 				to_chat(user, "<span class='warning'>You singe yourself on the phoron shielding the excited supermatter!</span>")
 				if (user.get_left_hand() == src)
 					user.apply_damage(30,HALLOSS,"l_hand")
-					user.apply_damage(20,CLONE,"l_hand")
+					user.apply_effect(20,IRRADIATE)
 					user.apply_damage(5,BURN,"l_hand")
 					user.apply_damage(5,ELECTROCUTE,"l_hand")
 				else
 					user.apply_damage(30,HALLOSS,"r_hand")
-					user.apply_damage(20,CLONE,"r_hand")
+					user.apply_effect(20,IRRADIATE)
 					user.apply_damage(5,BURN,"r_hand")
 					user.apply_damage(5,ELECTROCUTE,"r_hand")
 				user.visible_message("<span class='notice'>After a few attempts, [user] manages to activate the [src], they however burn themselves with the heated phoron field!</span>")
@@ -186,7 +186,7 @@
 				user.visible_message("<span class='rose'>You safely revealed the supermatter shard within the [src]!</span>")
 				if (user.get_left_hand() == src)
 					user.apply_damage(1, IRRADIATE, "l_hand")
-				else
+				else			// Even using this safely will irradiate you a tiny tiny bit.
 					user.apply_damage(1, IRRADIATE, "r_hand")
 			if(23 to 33)
 				to_chat(user, "<span class='warning'>[user]'s hand slipped and they brush against the supermatter within [src]!</span>")
@@ -196,7 +196,7 @@
 					user.apply_damage(20, BURN, "l_hand")
 					user.apply_damage(20, ELECTROCUTE, "l_hand")
 					user.apply_damage(50, AGONY, "l_hand")
-				else
+				else			// One of the outcomes will burn and shock you, the pain is the worst part of this one though.
 					user.apply_damage(10, IRRADIATE, "r_hand")
 					user.apply_damage(20, BURN, "r_hand")
 					user.apply_damage(20, ELECTROCUTE, "r_hand")
@@ -208,7 +208,7 @@
 					user.apply_damage(30, IRRADIATE, "l_hand")
 					user.apply_damage(20, SEARING, "l_hand")
 					user.apply_damage(15, BURN, "l_hand")
-				else
+				else			// One of the outcomes is pure burn and radiation.
 					user.apply_damage(30, IRRADIATE, "r_hand")
 					user.apply_damage(20, SEARING, "r_hand")
 					user.apply_damage(15, BURN, "r_hand")
@@ -218,7 +218,7 @@
 				if (user.get_left_hand() == src)
 					user.apply_damage(1, ELECTROCUTE, "l_hand")
 					user.apply_damage(100, ELECTROMAG, "l_hand")
-				else
+				else			// This one is mostly dangerous to synthetics and it will EMP you. But otherwise it's safe.
 					user.apply_damage(1, ELECTROCUTE, "r_hand")
 					user.apply_damage(100, ELECTROMAG, "r_hand")
 			if(56 to 66)
@@ -229,7 +229,7 @@
 					user.apply_damage(1, BRUISE, "l_hand")
 					user.apply_damage(200, BURN, "l_hand")
 					user.drop_l_hand()
-				else
+				else			// This will INSTA-DUST your hand that you're holding the item in, and then make you drop the lighter.
 					user.apply_damage(1, IRRADIATE, "r_hand")
 					user.apply_damage(1, BRUISE, "r_hand")
 					user.apply_damage(200, BURN, "r_hand")
@@ -246,7 +246,7 @@
 					user.apply_effect(25, STUTTER)
 					user.apply_effect(15, SLUR)
 					user.apply_effect(5, STUN)
-				else
+				else			// This one is VERY punishing, you get a ton of damage, a lot of pain, and a minor stun. Once the stun goes away you'll be stuttering for awhile as if in crit.
 					user.apply_damage(50, HALLOSS, "r_hand")
 					user.apply_damage(40, IRRADIATE, "r_hand")
 					user.apply_damage(30, BURN, "r_hand")
@@ -261,7 +261,7 @@
 				if (user.get_left_hand() == src)
 					user.apply_damage(1, CLONE, "l_hand")
 					user.apply_damage(1, HALLOSS, "l_hand")
-				else
+				else			// Aside from the base, this one isn't punishing outside of giving you genetic damage.
 					user.apply_damage(1, CLONE, "r_hand")
 					user.apply_damage(1, HALLOSS, "r_hand")
 			if(89 to 99)
@@ -272,10 +272,10 @@
 					user.apply_effect(5, WEAKEN)
 					user.apply_damage(15, IRRADIATE, "l_hand")
 					user.apply_effect(100, EYE_BLUR)
-					user.apply_effect(505, AGONY)
+					user.apply_effect(50, AGONY)
 					user.apply_damage(5, OXY)
 					user.eye_blurry = 10
-				else
+				else			// This one just blinds and blurs your screen, but otherwise doesn't actually risk harming you. Even the oxy damage heals on its own.
 					user.apply_damage(15, HALLOSS, "r_hand")
 					user.apply_effect(5, WEAKEN)
 					user.apply_damage(15, IRRADIATE, "l_hand")
@@ -283,7 +283,7 @@
 					user.apply_effect(50, AGONY)
 					user.apply_damage(15, OXY)
 					user.eye_blurry = 10
-			if(100)
+			if(100)				// This is the part that makes it admin only for the moment, it spawns 500 rads from the carbon's position, and dusts the carbon instantly. It does also drop everything unlike the supermatter crystal though, so hopefully you won't lose any items if you fumble this badly!
 				to_chat(user, "<span class='warning'>OH NO! [user] almost dropped their live [src]! Thank goodness they caught it... by the glowing yellow crystal... oh.</span>")
 				user.visible_message("<span class='danger'>You almost dropped your [src], thank goodness you caught it! By the glowing crystal within. You find your ears filled with unearthly ringing and your last thought is \"Oh, fuck.\"</span>")
 				user.drop_r_hand() // To ensure the lighter is dropped <3
