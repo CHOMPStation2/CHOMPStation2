@@ -31,8 +31,8 @@
 								  "Giant Rat" = /mob/living/simple_mob/vore/aggressive/rat,
 								  "Jelly Blob" = /mob/living/simple_mob/vore/jelly,
 								  "Wolf" = /mob/living/simple_mob/vore/wolf,
-								  "Dire Wolf" = /mob/living/simple_mob/animal/wolf/direwolf,//CHOMPedit: more mobs
-								  "Large Dog" = /mob/living/simple_mob/animal/wolf/direwolf/dog,//CHOMPedit: more mobs
+								  "Dire Wolf" = /mob/living/simple_mob/vore/wolf/direwolf,//CHOMPedit: more mobs
+								  "Large Dog" = /mob/living/simple_mob/vore/wolf/direwolf/dog,//CHOMPedit: more mobs
 								  "Hyena" = /mob/living/simple_mob/animal/hyena,//CHOMPedit: more mobs
 								  "Juvenile Solargrub" = /mob/living/simple_mob/vore/solargrub,
 								  "Sect Queen" = /mob/living/simple_mob/vore/sect_queen,
