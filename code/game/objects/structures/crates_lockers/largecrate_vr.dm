@@ -56,11 +56,7 @@
 						/mob/living/simple_mob/otie/zorgoia, //CHOMPstation edit
 						/mob/living/simple_mob/vore/rabbit,
 						/mob/living/simple_mob/vore/weretiger;0.5,
-<<<<<<< HEAD
-						/mob/living/simple_mob/otie;0.5
-=======
 //						/mob/living/simple_mob/vore/otie;0.5
->>>>>>> c60995d1f4... Merge pull request #15106 from Very-Soft/tidying_and_tweaks
 						))
 	return ..()
 
@@ -76,11 +72,6 @@
 						/mob/living/simple_mob/animal/space/alien/drone,
 						/mob/living/simple_mob/animal/space/alien/sentinel,
 						/mob/living/simple_mob/animal/space/alien/queen,
-<<<<<<< HEAD
-						/mob/living/simple_mob/otie/feral,
-						/mob/living/simple_mob/otie/feral/chubby,
-						/mob/living/simple_mob/otie/red,
-=======
 //						/mob/living/simple_mob/vore/otie/feral,
 //						/mob/living/simple_mob/vore/otie/red,
 >>>>>>> c60995d1f4... Merge pull request #15106 from Very-Soft/tidying_and_tweaks
@@ -131,14 +122,8 @@
 	starts_with = list(/mob/living/simple_mob/vore/otie/cotie/phoron)
 
 /obj/structure/largecrate/animal/otie/phoron/Initialize()
-<<<<<<< HEAD
-	starts_with = list(pick(/mob/living/simple_mob/otie/cotie/phoron;2,
-						/mob/living/simple_mob/otie/red/friendly;0.5,
-						/mob/living/simple_mob/otie/red/chubby;0.5))
-=======
 	starts_with = list(pick(/mob/living/simple_mob/vore/otie/cotie/phoron;2,
 						/mob/living/simple_mob/vore/otie/red/friendly;0.5))
->>>>>>> c60995d1f4... Merge pull request #15106 from Very-Soft/tidying_and_tweaks
 	return ..()
 
 /obj/structure/largecrate/animal/otie/attack_hand(mob/living/carbon/human/M as mob)//I just couldn't decide between the icons lmao

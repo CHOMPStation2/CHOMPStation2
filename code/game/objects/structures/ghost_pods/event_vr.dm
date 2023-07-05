@@ -29,16 +29,11 @@
 								  "Lizardman" = /mob/living/simple_mob/vore/aggressive/lizardman,//CHOMPedit: more mobs
 								  "Giant Frog" = /mob/living/simple_mob/vore/aggressive/frog,
 								  "Giant Rat" = /mob/living/simple_mob/vore/aggressive/rat,
-<<<<<<< HEAD
-								  "Jelly Blob" = /mob/living/simple_mob/animal/space/jelly,
-								  "Wolf" = /mob/living/simple_mob/animal/wolf,
+								  "Jelly Blob" = /mob/living/simple_mob/vore/jelly,
+								  "Wolf" = /mob/living/simple_mob/vore/wolf,
 								  "Dire Wolf" = /mob/living/simple_mob/animal/wolf/direwolf,//CHOMPedit: more mobs
 								  "Large Dog" = /mob/living/simple_mob/animal/wolf/direwolf/dog,//CHOMPedit: more mobs
 								  "Hyena" = /mob/living/simple_mob/animal/hyena,//CHOMPedit: more mobs
-=======
-								  "Jelly Blob" = /mob/living/simple_mob/vore/jelly,
-								  "Wolf" = /mob/living/simple_mob/vore/wolf,
->>>>>>> c60995d1f4... Merge pull request #15106 from Very-Soft/tidying_and_tweaks
 								  "Juvenile Solargrub" = /mob/living/simple_mob/vore/solargrub,
 								  "Sect Queen" = /mob/living/simple_mob/vore/sect_queen,
 								  "Sect Drone" = /mob/living/simple_mob/vore/sect_drone,
@@ -46,19 +41,13 @@
 								  "Panther" = /mob/living/simple_mob/vore/aggressive/panther,
 								  "Giant Snake" = /mob/living/simple_mob/vore/aggressive/giant_snake,
 								  "Deathclaw" = /mob/living/simple_mob/vore/aggressive/deathclaw,
-<<<<<<< HEAD
-								  "Otie" = /mob/living/simple_mob/otie,
+								  "Otie" = /mob/living/simple_mob/vore/otie,
 								  "Chubby Otie" = /mob/living/simple_mob/otie/friendly/chubby,//CHOMPedit: more mobs
-								  "Mutated Otie" = /mob/living/simple_mob/otie/feral,
+								  "Mutated Otie" =/mob/living/simple_mob/vore/otie/feral,
 								  "Chubby Mutated Otie" = /mob/living/simple_mob/otie/feral/chubby,//CHOMPedit: more mobs
-								  "Red Otie" = /mob/living/simple_mob/otie/red,
+								  "Red Otie" = /mob/living/simple_mob/vore/otie/red,
 								  "Chubby Red Otie" = /mob/living/simple_mob/otie/red/chubby,//CHOMPedit: more mobs
 								  "Zorgoia" = /mob/living/simple_mob/otie/zorgoia,//CHOMPedit: more mobs
-=======
-								  "Otie" = /mob/living/simple_mob/vore/otie,
-								  "Mutated Otie" =/mob/living/simple_mob/vore/otie/feral,
-								  "Red Otie" = /mob/living/simple_mob/vore/otie/red,
->>>>>>> c60995d1f4... Merge pull request #15106 from Very-Soft/tidying_and_tweaks
 								  "Corrupt Hound" = /mob/living/simple_mob/vore/aggressive/corrupthound,
 								  "Corrupt Corrupt Hound" = /mob/living/simple_mob/vore/aggressive/corrupthound/prettyboi,
 								  "Hunter Giant Spider" = /mob/living/simple_mob/animal/giant_spider/hunter,
@@ -136,13 +125,9 @@
 
 /obj/structure/ghost_pod/ghost_activated/morphspawn/create_occupant(var/mob/M)
 	..()
-<<<<<<< HEAD
-	var/mob/living/simple_mob/vore/hostile/morph/newMorph = new /mob/living/simple_mob/vore/hostile/morph(get_turf(src))
+	var/mob/living/simple_mob/vore/morph/newMorph = new /mob/living/simple_mob/vore/morph(get_turf(src))
 	newMorph.voremob_loaded = TRUE //CHOMPedit: On-demand belly loading.
 	newMorph.init_vore() //CHOMPedit: On-demand belly loading.
-=======
-	var/mob/living/simple_mob/vore/morph/newMorph = new /mob/living/simple_mob/vore/morph(get_turf(src))
->>>>>>> c60995d1f4... Merge pull request #15106 from Very-Soft/tidying_and_tweaks
 	if(M.mind)
 		M.mind.transfer_to(newMorph)
 	to_chat(M, "<span class='notice'>You are a <b>Morph</b>, somehow having gotten aboard the station in your wandering. \
