@@ -42,12 +42,12 @@
 								  "Giant Snake" = /mob/living/simple_mob/vore/aggressive/giant_snake,
 								  "Deathclaw" = /mob/living/simple_mob/vore/aggressive/deathclaw,
 								  "Otie" = /mob/living/simple_mob/vore/otie,
-								  "Chubby Otie" = /mob/living/simple_mob/otie/friendly/chubby,//CHOMPedit: more mobs
+								  "Chubby Otie" = /mob/living/simple_mob/vore/otie/friendly/chubby,//CHOMPedit: more mobs
 								  "Mutated Otie" =/mob/living/simple_mob/vore/otie/feral,
-								  "Chubby Mutated Otie" = /mob/living/simple_mob/otie/feral/chubby,//CHOMPedit: more mobs
+								  "Chubby Mutated Otie" = /mob/living/simple_mob/vore/otie/feral/chubby,//CHOMPedit: more mobs
 								  "Red Otie" = /mob/living/simple_mob/vore/otie/red,
-								  "Chubby Red Otie" = /mob/living/simple_mob/otie/red/chubby,//CHOMPedit: more mobs
-								  "Zorgoia" = /mob/living/simple_mob/otie/zorgoia,//CHOMPedit: more mobs
+								  "Chubby Red Otie" = /mob/living/simple_mob/vore/otie/red/chubby,//CHOMPedit: more mobs
+								  "Zorgoia" = /mob/living/simple_mob/vore/otie/zorgoia,//CHOMPedit: more mobs
 								  "Corrupt Hound" = /mob/living/simple_mob/vore/aggressive/corrupthound,
 								  "Corrupt Corrupt Hound" = /mob/living/simple_mob/vore/aggressive/corrupthound/prettyboi,
 								  "Hunter Giant Spider" = /mob/living/simple_mob/animal/giant_spider/hunter,
