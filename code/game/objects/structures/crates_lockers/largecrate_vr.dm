@@ -53,7 +53,7 @@
 						/mob/living/simple_mob/vore/aggressive/mimic,
 						/mob/living/simple_mob/vore/aggressive/rat,
 						/mob/living/simple_mob/vore/aggressive/rat/tame,
-						/mob/living/simple_mob/otie/zorgoia, //CHOMPstation edit
+						/mob/living/simple_mob/vore/otie/zorgoia, //CHOMPstation edit
 						/mob/living/simple_mob/vore/rabbit,
 						/mob/living/simple_mob/vore/weretiger;0.5,
 //						/mob/living/simple_mob/vore/otie;0.5
@@ -86,8 +86,8 @@
 	starts_with = list(/mob/living/simple_mob/vore/otie/security)
 
 /obj/structure/largecrate/animal/otie/guardbeast/Initialize()
-	starts_with = list(pick(/mob/living/simple_mob/otie/security,
-						/mob/living/simple_mob/otie/security/chubby))
+	starts_with = list(pick(/mob/living/simple_mob/vore/otie/security,
+						/mob/living/simple_mob/vore/otie/security/chubby))
 	return ..()
 
 /obj/structure/largecrate/animal/guardmutant
@@ -98,9 +98,9 @@
 	starts_with = list(/mob/living/simple_mob/vore/otie/security/phoron)
 
 /obj/structure/largecrate/animal/otie/guardmutant/Initialize()
-	starts_with = list(pick(/mob/living/simple_mob/otie/security/phoron;2,
-						/mob/living/simple_mob/otie/security/phoron/red;0.5,
-						/mob/living/simple_mob/otie/security/phoron/red/chubby;0.5))
+	starts_with = list(pick(/mob/living/simple_mob/vore/otie/security/phoron;2,
+						/mob/living/simple_mob/vore/otie/security/phoron/red;0.5,
+						/mob/living/simple_mob/vore/otie/security/phoron/red/chubby;0.5))
 	return ..()
 
 /obj/structure/largecrate/animal/otie
@@ -112,8 +112,8 @@
 	var/taped = 1
 
 /obj/structure/largecrate/animal/otie/Initialize()
-	starts_with = list(pick(/mob/living/simple_mob/otie/cotie,
-						/mob/living/simple_mob/otie/cotie/chubby))
+	starts_with = list(pick(/mob/living/simple_mob/vore/otie/cotie,
+						/mob/living/simple_mob/vore/otie/cotie/chubby))
 	return ..()
 
 /obj/structure/largecrate/animal/otie/phoron
