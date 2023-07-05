@@ -123,7 +123,7 @@
 
 /obj/structure/largecrate/animal/otie/phoron/Initialize()
 	starts_with = list(pick(/mob/living/simple_mob/vore/otie/cotie/phoron;2,
-						/mob/living/simple_mob/vore/otie/red/friendly;0.5
+						/mob/living/simple_mob/vore/otie/red/friendly;0.5,
 						/mob/living/simple_mob/vore/otie/red/chubby;0.5)) //ChompEDIT add
 	return ..()
 
