@@ -100,7 +100,7 @@
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
 "mi" = (
-/mob/living/simple_mob/mobs_monsters/clowns/destroyer,
+/mob/living/simple_mob/clowns/destroyer,
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
