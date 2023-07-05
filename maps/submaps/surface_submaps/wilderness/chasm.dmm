@@ -110,7 +110,7 @@
 /area/submap/Chasm)
 "kR" = (
 /obj/effect/floor_decal/rust,
-/mob/living/simple_mob/animal/space/jelly{
+/mob/living/simple_mob/vore/jelly{
 	health = 150;
 	maxHealth = 150;
 	name = "Cavern jelly blob"
@@ -363,7 +363,7 @@
 /turf/simulated/floor/plating,
 /area/submap/Chasm)
 "DH" = (
-/mob/living/simple_mob/animal/space/jelly,
+/mob/living/simple_mob/vore/jelly,
 /turf/simulated/floor/outdoors/rocks{
 	outdoors = 0
 	},
@@ -606,7 +606,7 @@
 /obj/structure/cliff/automatic/corner{
 	dir = 10
 	},
-/mob/living/simple_mob/animal/space/jelly{
+/mob/living/simple_mob/vore/jelly{
 	health = 150;
 	maxHealth = 150;
 	name = "Cavern jelly blob"
@@ -661,7 +661,7 @@
 	},
 /area/submap/Chasm)
 "Zn" = (
-/mob/living/simple_mob/animal/space/jelly{
+/mob/living/simple_mob/vore/jelly{
 	health = 150;
 	maxHealth = 150;
 	name = "Cavern jelly blob"
@@ -672,7 +672,7 @@
 	},
 /area/submap/Chasm)
 "ZS" = (
-/mob/living/simple_mob/animal/space/jelly{
+/mob/living/simple_mob/vore/jelly{
 	health = 150;
 	maxHealth = 150;
 	name = "Cavern jelly blob"
