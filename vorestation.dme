@@ -4539,8 +4539,6 @@
 #include "maps\submaps\surface_submaps\plains\plains_areas.dm"
 #include "maps\submaps\surface_submaps\valley\valley.dm"
 #include "maps\submaps\surface_submaps\valley\valley_areas.dm"
-#include "maps\submaps\surface_submaps\wilderness\wilderness.dm"
-#include "maps\submaps\surface_submaps\wilderness\wilderness_areas.dm"
 #include "maps\~map_system\maps.dm"
 #include "modular_chomp\code\coalesce_ch.dm"
 #include "modular_chomp\code\global.dm"
@@ -4746,4 +4744,6 @@
 #include "modular_chomp\code\modules\vore\resizing\resize.dm"
 #include "modular_chomp\code\modules\xenobio\machinery\monkey_processor.dm"
 #include "modular_chomp\maps\overmap\space_pois\space_pois.dm"
+#include "modular_chomp\maps\submaps\wilderness\wilderness.dm"
+#include "modular_chomp\maps\submaps\wilderness\wilderness_areas.dm"
 // END_INCLUDE
