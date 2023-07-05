@@ -19,7 +19,7 @@
 	},
 /area/submap/WolfDen)
 "d" = (
-/mob/living/simple_mob/animal/wolf/direwolf{
+/mob/living/simple_mob/vore/wolf/direwolf{
 	faction = "wilderness"
 	},
 /turf/simulated/floor/outdoors/dirt{
@@ -59,7 +59,7 @@
 /turf/simulated/mineral/ignore_mapgen,
 /area/submap/WolfDen)
 "p" = (
-/mob/living/simple_mob/animal/wolf/direwolf/dog{
+/mob/living/simple_mob/vore/wolf/direwolf/dog{
 	faction = "wilderness";
 	maxHealth = 350;
 	melee_damage_lower = 15;
@@ -109,7 +109,7 @@
 	},
 /area/submap/WolfDen)
 "y" = (
-/mob/living/simple_mob/animal/wolf/direwolf{
+/mob/living/simple_mob/vore/wolf/direwolf{
 	faction = "wilderness"
 	},
 /obj/random/maintenance/security,
