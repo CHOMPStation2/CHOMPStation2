@@ -40,8 +40,7 @@
 /area/submap/OtieShelter)
 "eI" = (
 /obj/machinery/power/terminal{
-	dir = 1;
-	icon_state = "term"
+	dir = 1
 	},
 /obj/structure/cable{
 	d2 = 8;
@@ -94,7 +93,7 @@
 /area/submap/OtieShelter)
 "iC" = (
 /obj/effect/decal/cleanable/blood,
-/mob/living/simple_mob/otie/friendly{
+/mob/living/simple_mob/vore/otie/friendly{
 	health = 0
 	},
 /turf/template_noop,
@@ -180,7 +179,7 @@
 /obj/structure/window/phoronreinforced{
 	dir = 4
 	},
-/mob/living/simple_mob/otie/friendly/chubby,
+/mob/living/simple_mob/vore/otie/friendly/chubby,
 /obj/item/trash/bowl,
 /obj/item/weapon/reagent_containers/food/snacks/meat/human,
 /turf/simulated/floor/tiled,
@@ -267,7 +266,7 @@
 /obj/structure/window/phoronreinforced{
 	dir = 1
 	},
-/mob/living/simple_mob/otie/cotie,
+/mob/living/simple_mob/vore/otie/cotie,
 /turf/simulated/floor/tiled,
 /area/submap/OtieShelter)
 "tz" = (
@@ -335,7 +334,7 @@
 /obj/structure/window/phoronreinforced{
 	dir = 1
 	},
-/mob/living/simple_mob/otie/friendly,
+/mob/living/simple_mob/vore/otie/friendly,
 /obj/structure/dogbed,
 /turf/simulated/floor/tiled,
 /area/submap/OtieShelter)
@@ -348,7 +347,7 @@
 /obj/structure/window/phoronreinforced{
 	dir = 1
 	},
-/mob/living/simple_mob/otie/cotie/phoron,
+/mob/living/simple_mob/vore/otie/cotie/phoron,
 /turf/simulated/floor/tiled,
 /area/submap/OtieShelter)
 "At" = (
@@ -411,7 +410,10 @@
 /turf/simulated/floor/tiled,
 /area/submap/OtieShelter)
 "Ij" = (
-/mob/living/simple_mob/otie/cotie,
+/mob/living/simple_mob/vore/otie/cotie{
+	max_co2 = 0;
+	max_tox = 0
+	},
 /turf/simulated/floor/tiled,
 /area/submap/OtieShelter)
 "IF" = (
@@ -457,7 +459,7 @@
 /turf/simulated/floor/tiled,
 /area/submap/OtieShelter)
 "Mn" = (
-/mob/living/simple_mob/otie/red/chubby,
+/mob/living/simple_mob/vore/otie/red/chubby,
 /turf/simulated/floor/tiled,
 /area/submap/OtieShelter)
 "Mz" = (
@@ -542,7 +544,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "PAPC";
-	pixel_x = 0;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -593,7 +594,7 @@
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/OtieShelter)
 "VY" = (
-/mob/living/simple_mob/otie/cotie/chubby,
+/mob/living/simple_mob/vore/otie/cotie/chubby,
 /turf/simulated/floor/tiled,
 /area/submap/OtieShelter)
 "Wl" = (
@@ -623,7 +624,7 @@
 /obj/structure/window/phoronreinforced{
 	dir = 1
 	},
-/mob/living/simple_mob/otie/red/friendly,
+/mob/living/simple_mob/vore/otie/red/friendly,
 /turf/simulated/floor/tiled,
 /area/submap/OtieShelter)
 

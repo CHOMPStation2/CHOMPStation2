@@ -218,6 +218,7 @@
 	icon_override = 'icons/inventory/suit/mob_vr.dmi'
 	item_state = "russofurcoat"
 
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 	allowed = list (/obj/item/weapon/pen, /obj/item/weapon/paper, /obj/item/device/flashlight, /obj/item/weapon/tank/emergency/oxygen, /obj/item/weapon/storage/fancy/cigarettes, /obj/item/weapon/storage/box/matches, /obj/item/weapon/reagent_containers/food/drinks/flask)
 	flags_inv = HIDETIE|HIDEHOLSTER
 
@@ -2060,7 +2061,7 @@ Departamental Swimsuits, for general use
 	cold_protection = UPPER_TORSO|LOWER_TORSO|ARMS // It will keep you toasty tho, it's more than big enough to help with that! Just wrap the thing around you when on the surface, idk
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_override = 'icons/vore/custom_onmob_vr.dmi'
-	icon_state = "nikki"
+	icon_state = "nikkicape"
 
 /obj/item/clothing/head/fluff/nikki
 	// I have never tryharded so much just to accomplish something so stupid as "Vore By Hat" in my entire life, and I apologize to each and every one of you.

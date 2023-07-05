@@ -15,11 +15,19 @@
 	var/mode = 1;
 	var/advscan = 0
 	var/showadvscan = 1
+	var/guide = FALSE
 
 /obj/item/device/healthanalyzer/New()
 	if(advscan >= 1)
 		verbs += /obj/item/device/healthanalyzer/proc/toggle_adv
 	..()
+
+/obj/item/device/healthanalyzer/examine(mob/user)
+	. = ..()
+	if(guide)
+		. += "<span class='notice'>Guidance is currently enabled.</span>"
+	else
+		. += "<span class='notice'>Guidance is currently disabled.</span>"
 
 /obj/item/device/healthanalyzer/do_surgery(mob/living/M, mob/living/user)
 	if(user.a_intent != I_HELP) //in case it is ever used as a surgery tool
@@ -109,19 +117,14 @@
 				severity = "Lethal"
 			else if(M.radiation >= 600)
 				severity = "Critical"
-			else if(M.radiation >= 50)
 			else if(M.radiation >= 400)
 				severity = "Severe"
-			else if(M.radiation >= 25)
 			else if(M.radiation >= 300)
 				severity = "Moderate"
-			else if(M.radiation >= 1)
 			else if(M.radiation >= 100)
 				severity = "Low"
-			dat += "<span class='warning'>[severity] levels of radiation detected. [(severity == "Critical") ? " Immediate treatment advised." : ""]</span><br>"
 			dat += "<span class='warning'>[severity] levels of acute radiation sickness detected. [round(M.radiation/50)]Gy. [(severity == "Critical" || severity == "Lethal") ? " Immediate treatment advised." : ""]</span><br>"
 		else
-			dat += "<span class='warning'>Radiation detected.</span><br>"
 			dat += "<span class='warning'>Acute radiation sickness detected.</span><br>"
 	if(M.accumulated_rads)
 		if(advscan >= 2 && showadvscan == 1)
@@ -303,6 +306,8 @@
 				dat += "<span class='notice'>Subject is a Xenochimera. Treat accordingly.</span>"
 		// VOREStation Edit End
 	user.show_message(dat, 1)
+	if(guide)
+		guide(M, user)
 
 /obj/item/device/healthanalyzer/verb/toggle_mode()
 	set name = "Switch Verbosity"

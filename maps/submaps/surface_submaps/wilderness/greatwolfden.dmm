@@ -1,10 +1,13 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
 /obj/effect/decal/cleanable/blood/drip,
-/mob/living/simple_mob/animal/wolf/direwolf{
+/mob/living/simple_mob/vore/wolf/direwolf{
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate;
 	desc = "The biggest and baddest wolf around. Seems pretty chill, for a wolf.";
-	faction = "sif"
+	faction = "sif";
+	max_co2 = 0;
+	max_tox = 0;
+	min_oxy = 0
 	},
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/GreatWolfDen)
@@ -143,7 +146,9 @@
 /area/submap/GreatWolfDen)
 "nv" = (
 /mob/living/simple_mob/vore/greatwolf{
-	dir = 8
+	dir = 8;
+	max_co2 = 0;
+	min_oxy = 0
 	},
 /turf/simulated/floor/outdoors/grass/sif/forest{
 	outdoors = 0
@@ -182,10 +187,13 @@
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/GreatWolfDen)
 "uz" = (
-/mob/living/simple_mob/animal/wolf/direwolf{
+/mob/living/simple_mob/vore/wolf/direwolf{
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate;
 	desc = "The biggest and baddest wolf around. Seems pretty chill, for a wolf.";
-	faction = "sif"
+	faction = "sif";
+	max_co2 = 0;
+	max_tox = 0;
+	min_oxy = 0
 	},
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/GreatWolfDen)
@@ -266,10 +274,11 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/template_noop)
 "Cd" = (
-/mob/living/simple_mob/otie/feral/chubby{
+/mob/living/simple_mob/vore/otie/feral/chubby{
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate;
 	desc = "The classic bioengineered longdog. No pets. Only bite. What an absolute unit.";
-	faction = "sif"
+	faction = "sif";
+	minbodytemp = 0
 	},
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/GreatWolfDen)

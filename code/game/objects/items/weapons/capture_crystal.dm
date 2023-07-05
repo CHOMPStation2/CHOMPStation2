@@ -592,8 +592,8 @@
 		list(/mob/living/simple_mob/animal/passive/tindalos),
 		list(/mob/living/simple_mob/animal/passive/yithian),
 		list(
-			/mob/living/simple_mob/animal/wolf,
-			/mob/living/simple_mob/animal/wolf/direwolf
+			/mob/living/simple_mob/vore/wolf,
+			/mob/living/simple_mob/vore/wolf/direwolf
 			),
 		list(/mob/living/simple_mob/vore/rabbit),
 		list(/mob/living/simple_mob/vore/redpanda),
@@ -608,10 +608,10 @@
 			/mob/living/simple_mob/animal/space/bear/brown
 			),
 		list(
-			/mob/living/simple_mob/otie/feral,
-			/mob/living/simple_mob/otie/feral/chubby,
-			/mob/living/simple_mob/otie/red,
-			/mob/living/simple_mob/otie/red/chubby
+			/mob/living/simple_mob/vore/otie/feral,
+			/mob/living/simple_mob/vore/otie/feral/chubby,
+			/mob/living/simple_mob/vore/otie/red,
+			/mob/living/simple_mob/vore/otie/red/chubby
 			),
 		list(/mob/living/simple_mob/animal/sif/diyaab),
 		list(/mob/living/simple_mob/animal/sif/duck),
@@ -650,8 +650,8 @@
 			/mob/living/simple_mob/animal/giant_spider/webslinger = 5,
 			/mob/living/simple_mob/animal/giant_spider/broodmother = 1),
 		list(
-			/mob/living/simple_mob/animal/wolf = 10,
-			/mob/living/simple_mob/animal/wolf/direwolf = 5,
+			/mob/living/simple_mob/vore/wolf = 10,
+			/mob/living/simple_mob/vore/wolf/direwolf = 5,
 			/mob/living/simple_mob/vore/greatwolf = 1,
 			/mob/living/simple_mob/vore/greatwolf/black = 1,
 			/mob/living/simple_mob/vore/greatwolf/grey = 1
@@ -684,7 +684,7 @@
 			/mob/living/simple_mob/animal/space/carp/large/huge = 5
 			),
 		list(/mob/living/simple_mob/animal/space/goose),
-		list(/mob/living/simple_mob/animal/space/jelly),
+		list(/mob/living/simple_mob/vore/jelly),
 		list(/mob/living/simple_mob/animal/space/tree),
 		list(
 			/mob/living/simple_mob/vore/aggressive/corrupthound = 10,
@@ -785,13 +785,13 @@
 		list(/mob/living/simple_mob/mechanical/wahlem),
 		list(/mob/living/simple_mob/animal/passive/fox/syndicate),
 		list(/mob/living/simple_mob/animal/passive/fox),
-		list(/mob/living/simple_mob/animal/wolf/direwolf),
-		list(/mob/living/simple_mob/animal/space/jelly),
+		list(/mob/living/simple_mob/vore/wolf/direwolf),
+		list(/mob/living/simple_mob/vore/jelly),
 		list(
-			/mob/living/simple_mob/otie/feral,
-			/mob/living/simple_mob/otie/feral/chubby,
-			/mob/living/simple_mob/otie/red,
-			/mob/living/simple_mob/otie/red/chubby
+			/mob/living/simple_mob/vore/otie/feral,
+			/mob/living/simple_mob/vore/otie/feral/chubby,
+			/mob/living/simple_mob/vore/otie/red,
+			/mob/living/simple_mob/vore/otie/red/chubby
 			),
 		list(
 			/mob/living/simple_mob/shadekin/blue = 100,

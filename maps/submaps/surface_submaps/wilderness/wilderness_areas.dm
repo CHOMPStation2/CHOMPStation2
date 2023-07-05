@@ -29,6 +29,10 @@
 	name = "POI Wilderness - Borg Lab"
 	ambience = AMBIENCE_HIGHSEC
 
+/area/submap/BountyHunters
+	name = "POI Wilderness - Bounty Hunters"
+	ambience = AMBIENCE_HIGHSEC
+
 /area/submap/ButcherShack
 	name = "POI Wilderness - Butcher's Shack"
 	ambience = AMBIENCE_RUINS
@@ -128,6 +132,10 @@
 /area/submap/GreatWolfDen
 	name = "POI Wilderness - Great Wolf Den"
 	ambience = AMBIENCE_SIF
+
+/area/submap/Hadzardzone
+	name = "POI Wilderness - Hadzard Zone"
+	ambience = AMBIENCE_RUINS
 
 /area/submap/GovPatrol
 	name = "POI Wilderness - Lost Government Patrol"
