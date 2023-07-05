@@ -72,8 +72,9 @@
 						/mob/living/simple_mob/animal/space/alien/drone,
 						/mob/living/simple_mob/animal/space/alien/sentinel,
 						/mob/living/simple_mob/animal/space/alien/queen,
-//						/mob/living/simple_mob/vore/otie/feral,
-//						/mob/living/simple_mob/vore/otie/red,
+						/mob/living/simple_mob/vore/otie/feral, //ChompEDIT uncomment
+						/mob/living/simple_mob/vore/otie/feral/chubby, //ChompEDIT add
+						/mob/living/simple_mob/vore/otie/red, //ChompEDIT uncomment
 						/mob/living/simple_mob/vore/aggressive/corrupthound))
 	return ..()
 
@@ -122,7 +123,8 @@
 
 /obj/structure/largecrate/animal/otie/phoron/Initialize()
 	starts_with = list(pick(/mob/living/simple_mob/vore/otie/cotie/phoron;2,
-						/mob/living/simple_mob/vore/otie/red/friendly;0.5))
+						/mob/living/simple_mob/vore/otie/red/friendly;0.5
+						/mob/living/simple_mob/vore/otie/red/chubby;0.5)) //ChompEDIT add
 	return ..()
 
 /obj/structure/largecrate/animal/otie/attack_hand(mob/living/carbon/human/M as mob)//I just couldn't decide between the icons lmao
