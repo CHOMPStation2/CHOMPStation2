@@ -74,7 +74,6 @@
 						/mob/living/simple_mob/animal/space/alien/queen,
 //						/mob/living/simple_mob/vore/otie/feral,
 //						/mob/living/simple_mob/vore/otie/red,
->>>>>>> c60995d1f4... Merge pull request #15106 from Very-Soft/tidying_and_tweaks
 						/mob/living/simple_mob/vore/aggressive/corrupthound))
 	return ..()
 
