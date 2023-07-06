@@ -12,7 +12,7 @@ These are just guidelines, not rules, use your best judgment and feel free to pr
 
 [How Can I Contribute?](#how-can-i-contribute)
   * [Your First Code Contribution](#your-first-code-contribution)
-  * [Chomp Station Coding Standards](#Chomp Station-coding-standards)
+  * [Chomp Station Coding Standards](#chomp-station-coding-standards)
   * [Pull Requests](#pull-requests)
   * [Git Commit Messages](#git-commit-messages)
 
@@ -37,7 +37,7 @@ Unsure where to begin contributing to Chomp Station? You can start by looking th
 * Our base map files are in [map/southern_cross/].
 * Our stationary overmap location files are in [maps/southern_cross/overmap/].
 * Our random overmap POI files are in [modular_chomp/code/modules/overmap/].
-* Our wilderness POI map files are in [maps/submaps/wilderness/].
+* Our surface POI map files (Wilderness, plains, ...) are in [modular_chomp/maps/submaps/surface_submaps/].
 * Map changes must be in tgm format. See the [Mapmerge2 Readme] for details, or use [StrongDMM] which can automatically save maps as tgm.
 
 ### Chomp Station Coding Standards
