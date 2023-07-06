@@ -111,9 +111,6 @@
 	icon_state = "yellow-1"
 	catalogue_data = list(/datum/category_item/catalogue/information/objects/growthcanister)
 	anchored = FALSE
-<<<<<<< HEAD
-	density = TRUE
-=======
 	density = TRUE
 
 
@@ -242,4 +239,3 @@
 
 
 	..()
->>>>>>> e9aa61f9e2... Merge pull request #15113 from VOREStation/master
