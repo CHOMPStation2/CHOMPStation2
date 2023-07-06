@@ -1,4 +1,7 @@
 //Parent of this place is kara.dm
+#if MAP_TEST
+#include "aerostat.dmm"
+#endif
 // -- Datums -- //
 
 /datum/map_template/sc_lateload/away_aerostat

@@ -1,3 +1,6 @@
+#if MAP_TEST
+#include "northern_star_mine.dmm"
+#endif
 // -- Datums -- //
 
 /datum/map_template/sc_lateload/northern_star

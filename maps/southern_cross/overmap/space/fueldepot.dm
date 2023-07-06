@@ -1,4 +1,6 @@
-
+#if MAP_TEST
+#include "fueldepot.dmm"
+#endif
 // -- Datums -- //
 
 /datum/map_template/sc_lateload/away_fueldepot

@@ -1,3 +1,6 @@
+#if MAP_TEST
+#include "constructVR.dmm"
+#endif
 // -- Areas -- //
 
 /area/vr
