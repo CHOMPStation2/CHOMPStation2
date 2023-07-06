@@ -96,8 +96,6 @@
 	name = "POI - Overrun Science Ship"
 	requires_power = 0
 
-<<<<<<< HEAD
-=======
 /area/submap/debrisfield/phoron_tanker
 	name = "POI - Hijacked Phoron Tanker"
 	var/ic_name = ""
@@ -200,7 +198,6 @@
 	shuttle_tag = "Luxury Yacht"
 	req_one_access = list()
 
->>>>>>> b95be76e71... Merge pull request #15112 from Runa-Dacino/phorontanker
 /area/submap/debrisfield/old_sat
 	name = "POI - Old Satellite"
 
