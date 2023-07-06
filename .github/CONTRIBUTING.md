@@ -37,7 +37,7 @@ Unsure where to begin contributing to Chomp Station? You can start by looking th
 * Our base map files are in [map/southern_cross/].
 * Our stationary overmap location files are in [maps/southern_cross/overmap/].
 * Our random overmap POI files are in [modular_chomp/code/modules/overmap/].
-* Our wilderness POI map files are in [modular_chomp/maps/submaps/wilderness/].
+* Our wilderness POI map files are in [maps/submaps/wilderness/].
 * Map changes must be in tgm format. See the [Mapmerge2 Readme] for details, or use [StrongDMM] which can automatically save maps as tgm.
 
 ### Chomp Station Coding Standards
