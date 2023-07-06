@@ -2391,6 +2391,7 @@
 #include "code\modules\events\gravity.dm"
 #include "code\modules\events\grid_check.dm"
 #include "code\modules\events\grubinfestation_vr.dm"
+#include "code\modules\events\horde_infestation.dm"
 #include "code\modules\events\ian_storm_vr.dm"
 #include "code\modules\events\infestation.dm"
 #include "code\modules\events\ion_storm.dm"
@@ -4745,5 +4746,6 @@
 #include "modular_chomp\code\modules\vore\eating\exportpanel_ch.dm"
 #include "modular_chomp\code\modules\vore\resizing\resize.dm"
 #include "modular_chomp\code\modules\xenobio\machinery\monkey_processor.dm"
+#include "modular_chomp\game\objects\effects\spiders.dm"
 #include "modular_chomp\maps\overmap\space_pois\space_pois.dm"
 // END_INCLUDE

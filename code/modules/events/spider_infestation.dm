@@ -6,10 +6,11 @@
 
 
 /datum/event/spider_infestation/setup()
-	if(prob(25) && severity == 3) //CHOMP Add 25% chance for the event to fail if chosen and is major severity
-		log_debug("Major spider infestation failed successfully.")
+	if(prob(25)) //CHOMP Add 25% chance for the event to fail if chosen
+		log_debug("Spider infestation failed successfully.")
 		kill()
 		return
+
 	announceWhen = rand(announceWhen, announceWhen + 60)
 	spawncount = rand(4 * severity, 10 * severity)	//spiderlings only have a 50% chance to grow big and strong //CHOMP Edit: old: 2/4 new: 6/14 new: 4/10
 	sent_spiders_to_station = 0
@@ -33,13 +34,18 @@
 
 	while((spawncount >= 1) && vents.len)
 		var/obj/vent = pick(vents)
+	
 	//CHOMPEDIT START adding spider EGGS to the possible spawns instead of singular spiderling spawns.
-		var/spawn_spiderlings = pickweight(list(
-			/obj/effect/spider/spiderling = 85,
-			/obj/effect/spider/eggcluster = 10,
-			/obj/effect/spider/eggcluster/royal = 5
-			))
-		new spawn_spiderlings(vent.loc) //VOREStation Edit - No nurses //Oh my JESUS CHRIST, this slipped past me. Literally no nurses. Well guess what, nurses are back.
+		if(severity == 3)
+			var/spawn_spiderlings = pickweight(list(
+				/obj/effect/spider/spiderling/broodling = 95,
+				/obj/effect/spider/eggcluster/broodling = 4,
+				/obj/effect/spider/eggcluster/royal/broodling = 1
+				))
+			new spawn_spiderlings(vent.loc)
+		if(severity < 3) //If the severity is less than 3, only spawn regular spiderlings
+			new /obj/effect/spider/spiderling/broodling(vent.loc) //VOREStation Edit - No nurses //CHOMP Edit Oh my JESUS CHRIST, this slipped past me. Literally no nurses. Well guess what, nurses are back.
+
 	//CHOMPEDIT END
 		vents -= vent
 		spawncount--
