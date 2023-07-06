@@ -1,5 +1,6 @@
 /datum/event/horde_infestation
-	announceWhen	= 90
+	announceWhen	= 30
+	endWhen		= 200
 	var/spawncount = 1
 	var/list/vents = list()
 	var/spiders = FALSE
