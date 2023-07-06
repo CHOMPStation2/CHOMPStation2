@@ -102,17 +102,17 @@
 /obj/item/weapon/grenade/spawnergrenade/casino/otie
 	desc = "It is set to detonate in 5 seconds. It will release a otie that has been won from the golden goose casino!"
 	name = "Casino Creature Container (Otie)"
-	spawner_type = /mob/living/simple_mob/otie/friendly
+	spawner_type = /mob/living/simple_mob/vore/otie/friendly
 
 /obj/item/weapon/grenade/spawnergrenade/casino/otie/chubby
 	desc = "It is set to detonate in 5 seconds. It will release a chonker otie that has been won from the golden goose casino!"
 	name = "Casino Creature Container (Well feed Otie)"
-	spawner_type = /mob/living/simple_mob/otie/friendly/chubby
+	spawner_type = /mob/living/simple_mob/vore/otie/friendly/chubby
 
 /obj/item/weapon/grenade/spawnergrenade/casino/zorgoia
 	desc = "It is set to detonate in 5 seconds. It will release a zorgoia that has been won from the golden goose casino!"
 	name = "Casino Creature Container (Zorgoia)"
-	spawner_type = /mob/living/simple_mob/otie/zorgoia/friendly
+	spawner_type = /mob/living/simple_mob/vore/otie/zorgoia/friendly
 
 /obj/item/weapon/grenade/spawnergrenade/casino/gygax
 	desc = "You feel great power inside this small round sphere, with great powers comes great responsibilities!"

@@ -17990,11 +17990,12 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "bdR" = (
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -22
-	},
 /obj/structure/disposalpipe/segment,
+/obj/random/tech_supply,
+/obj/item/weapon/storage/bag/circuits/basic,
+/obj/random/technology_scanner,
+/obj/random/tech_supply,
+/obj/structure/table/steel,
 /turf/simulated/floor,
 /area/maintenance/cargo)
 "bdS" = (
@@ -22734,6 +22735,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/item/weapon/reagent_containers/glass/beaker/sulphuric,
 /turf/simulated/wall/r_wall,
 /area/maintenance/disposal)
 "brZ" = (
@@ -22747,6 +22749,16 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
+/obj/random/maintenance/medical,
+/obj/random/powercell,
+/obj/random/powercell,
+/obj/random/powercell,
+/obj/random/maintenance/medical,
+/obj/random/toolbox,
+/obj/random/powercell,
+/obj/random/powercell,
+/obj/random/powercell,
+/obj/structure/closet/crate,
 /turf/simulated/floor,
 /area/maintenance/cargo)
 "bsb" = (
@@ -23782,6 +23794,9 @@
 "bvn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
+	},
+/obj/machinery/alarm{
+	pixel_y = 22
 	},
 /turf/simulated/floor,
 /area/maintenance/cargo)
@@ -56054,6 +56069,10 @@
 	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cryo/autoresleeve)
 "jqw" = (
@@ -66452,6 +66471,11 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cryo/autoresleeve)
 "piE" = (
@@ -67529,6 +67553,7 @@
 /obj/random/maintenance/clean,
 /obj/random/maintenance/clean,
 /obj/random/cash,
+/obj/item/weapon/reagent_containers/glass/beaker/stopperedbottle,
 /turf/simulated/floor,
 /area/maintenance/cargo)
 "pMH" = (
@@ -77273,14 +77298,13 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/hallway/primary/seconddeck/starboard)
 "vAY" = (
-/obj/random/powercell,
-/obj/random/powercell,
-/obj/random/powercell,
-/obj/random/powercell,
-/obj/random/toolbox,
+/obj/random/contraband,
+/obj/random/contraband,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/clean,
+/obj/random/tool,
 /obj/structure/closet/crate,
-/obj/random/maintenance/medical,
-/obj/random/maintenance/medical,
 /turf/simulated/floor,
 /area/maintenance/research_medical)
 "vBP" = (
@@ -78723,14 +78747,6 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/seconddeck/starboard)
-"wrn" = (
-/obj/structure/table/steel,
-/obj/random/tech_supply,
-/obj/random/technology_scanner,
-/obj/item/weapon/storage/bag/circuits/basic,
-/obj/random/tech_supply,
-/turf/simulated/floor/plating,
-/area/maintenance/research_medical)
 "wry" = (
 /turf/simulated/wall/r_wall,
 /area/medical/medbay2)
@@ -129255,7 +129271,7 @@ rJB
 tfv
 uqg
 vAY
-wrn
+pAQ
 qHW
 yeN
 rEl
