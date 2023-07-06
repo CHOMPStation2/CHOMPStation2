@@ -12,7 +12,7 @@ These are just guidelines, not rules, use your best judgment and feel free to pr
 
 [How Can I Contribute?](#how-can-i-contribute)
   * [Your First Code Contribution](#your-first-code-contribution)
-  * [Chomp Station Coding Standards](#Chomp Station-coding-standards)
+  * [Chomp Station Coding Standards](#chomp-station-coding-standards)
   * [Pull Requests](#pull-requests)
   * [Git Commit Messages](#git-commit-messages)
 
