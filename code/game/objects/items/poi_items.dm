@@ -111,9 +111,6 @@
 	icon_state = "yellow-1"
 	catalogue_data = list(/datum/category_item/catalogue/information/objects/growthcanister)
 	anchored = FALSE
-<<<<<<< HEAD
-	density = TRUE
-=======
 	density = TRUE
 
 
@@ -242,4 +239,3 @@
 
 
 	..()
->>>>>>> b95be76e71... Merge pull request #15112 from Runa-Dacino/phorontanker
