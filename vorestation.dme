@@ -4570,7 +4570,6 @@
 #include "modular_chomp\code\game\objects\structures\loot_pile.dm"
 #include "modular_chomp\code\game\objects\structures\watercloset_ch.dm"
 #include "modular_chomp\code\game\objects\structures\crate_lockers\largecrate.dm"
-#include "modular_chomp\code\game\objects\structures\crate_lockers\closets\secure\security.dm"
 #include "modular_chomp\code\game\turfs\turf.dm"
 #include "modular_chomp\code\game\turfs\simulated\outdoors\desert_planet.dm"
 #include "modular_chomp\code\matrices\color_matrix.dm"
