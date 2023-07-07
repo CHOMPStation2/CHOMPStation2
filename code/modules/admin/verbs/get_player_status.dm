@@ -6,7 +6,7 @@
 /client/proc/getPlayerStatus()
 	set name = "Report Player Status"
 	set desc = "Get information on all active players in-game."
-	set category = "Fun"
+	set category = "EventKit"
 
 	if(!check_rights(R_FUN)) return
 
