@@ -42,6 +42,9 @@
 	/// Canned food switch to this state when opened, if set
 	var/canned_open_state
 
+	/// For packaged/canned food sounds
+	var/opening_sound = null
+
 /obj/item/weapon/reagent_containers/food/snacks/Initialize()
 	. = ..()
 	if(nutriment_amt)
@@ -296,7 +299,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/proc/unpackage(mob/user)
 	package = FALSE
 	to_chat(user, "<span class='notice'>You unwrap [src].</span>")
-	playsound(user,'sound/effects/packagedfoodopen.ogg', 15, 1)
+	playsound(user,opening_sound, 15, 1)
 	if(package_trash)
 		var/obj/item/T = new package_trash
 		user.put_in_hands(T)
@@ -308,7 +311,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/proc/uncan(mob/user)
 	canned = FALSE
 	to_chat(user, "<span class='notice'>You unseal \the [src] with a crack of metal.</span>")
-	playsound(loc,'sound/effects/tincanopen.ogg', rand(10,50), 1)
+	playsound(loc,opening_sound, rand(10,50), 1)
 	if(canned_open_state)
 		icon_state = canned_open_state
 
@@ -563,6 +566,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/donut/choc/Initialize()
 	. = ..()
 	reagents.add_reagent("nutriment", 3, nutriment_desc)
+	reagents.add_reagent("chocolate", 5)
 
 /obj/item/weapon/reagent_containers/food/snacks/donut/choc/jelly
 	name = "chocolate frosted jelly donut"
@@ -572,6 +576,7 @@
 	. = ..()
 	reagents.add_reagent("nutriment", 3, nutriment_desc)
 	reagents.add_reagent("berryjuice", 5)
+	reagents.add_reagent("chocolate", 5)
 
 /obj/item/weapon/reagent_containers/food/snacks/donut/blue
 	name = "blue frosted donut"
@@ -656,6 +661,7 @@
 	. = ..()
 	reagents.add_reagent("nutriment", 3, nutriment_desc)
 	reagents.add_reagent("sprinkles", 1)
+	reagents.add_reagent("chocolate", 1)
 
 /obj/item/weapon/reagent_containers/food/snacks/donut/choc_sprinkles/jelly
 	name = "chocolate sprinkles jelly donut"
@@ -666,6 +672,7 @@
 	reagents.add_reagent("nutriment", 3, nutriment_desc)
 	reagents.add_reagent("sprinkles", 1)
 	reagents.add_reagent("berryjuice", 5)
+	reagents.add_reagent("chocolate", 1)
 
 /obj/item/weapon/reagent_containers/food/snacks/donut/meat
 	name = "meat donut"
@@ -1097,7 +1104,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/donkpocket/teriyaki
 	name = "\improper Teriyaki-pocket"
-	desc = "An east-asian take on the classic stationside snack."
+	desc = "An east-Asian take on the classic stationside snack."
 	icon_state = "donkpocketteriyaki"
 	nutriment_amt = 2
 	nutriment_desc = list("meat" = 1, "dough" = 2, "soy sauce" = 2)
@@ -2081,7 +2088,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/meatballspagetti
 	name = "Spaghetti & Meatballs"
-	desc = "Now thats a nic'e meatball!"
+	desc = "Now that's a nic'e meatball!"
 	icon_state = "meatballspagetti"
 	trash = /obj/item/trash/plate
 	filling_color = "#DE4545"
@@ -2096,7 +2103,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/spesslaw
 	name = "Spesslaw"
-	desc = "A lawyers favourite"
+	desc = "A lawyer's favourite"
 	icon_state = "spesslaw"
 	filling_color = "#DE4545"
 	center_of_mass = list("x"=16, "y"=10)
@@ -3578,7 +3585,7 @@
 	slice_path = /obj/item/weapon/reagent_containers/food/snacks/slice/meatpizza
 	slices_num = 6
 	center_of_mass = list("x"=16, "y"=11)
-	nutriment_desc = list("pizza crust" = 10, "tomato" = 10, "cheese" = 15)
+	nutriment_desc = list("pizza crust" = 10, "tomato" = 10, "cheese" = 15, "meat" = 10)
 	nutriment_amt = 10
 	bitesize = 2
 
@@ -4777,8 +4784,8 @@
 	var/composition_reagent
 	var/composition_reagent_quantity
 
-/mob/living/simple_mob/adultslime
-	composition_reagent = "slimejelly"
+///mob/living/simple_mob/adultslime	//The literal only thing in the game that uses this is commented out, so I comment out this too
+//	composition_reagent = "slimejelly"
 
 /mob/living/carbon/alien/diona
 	composition_reagent = "nutriment"//Dionae are plants, so eating them doesn't give animal protein
@@ -6138,6 +6145,7 @@
 	filling_color = "#552200"
 	icon = 'icons/obj/food_snacks.dmi'
 	icon_state = "cb01"
+	trash = /obj/item/trash/candy/cb01
 	nutriment_amt = 4
 	nutriment_desc = list("stale chocolate" = 2, "nougat" = 1, "caramel" = 1)
 	w_class = 1
@@ -6154,6 +6162,7 @@
 	filling_color = "#552200"
 	icon = 'icons/obj/food_snacks.dmi'
 	icon_state = "cb02"
+	trash = /obj/item/trash/candy/cb02
 	nutriment_amt = 4
 	nutriment_desc = list("chocolate" = 2, "caramel" = 1, "puffed rice" = 1)
 	w_class = 1
@@ -6170,6 +6179,7 @@
 	filling_color = "#552200"
 	icon = 'icons/obj/food_snacks.dmi'
 	icon_state = "cb03"
+	trash = /obj/item/trash/candy/cb03
 	nutriment_amt = 4
 	nutriment_desc = list("chocolate" = 4)
 	w_class = 1
@@ -6186,6 +6196,7 @@
 	filling_color = "#552200"
 	icon = 'icons/obj/food_snacks.dmi'
 	icon_state = "cb04"
+	trash = /obj/item/trash/candy/cb04
 	nutriment_amt = 4
 	nutriment_desc = list("chocolate" = 2, "salt = 1", "licorice" = 1)
 	w_class = 1
@@ -6202,6 +6213,7 @@
 	filling_color = "#552200"
 	icon = 'icons/obj/food_snacks.dmi'
 	icon_state = "cb05"
+	trash = /obj/item/trash/candy/cb05
 	nutriment_amt = 3
 	nutriment_desc = list("milk chocolate" = 2)
 	w_class = 1
@@ -6218,6 +6230,7 @@
 	filling_color = "#552200"
 	icon = 'icons/obj/food_snacks.dmi'
 	icon_state = "cb06"
+	trash = /obj/item/trash/candy/cb06
 	nutriment_amt = 4
 	nutriment_desc = list("chocolate" = 2, "coffee" = 1, "vanilla wafer" = 1)
 	w_class = 1
@@ -6235,6 +6248,7 @@
 	filling_color = "#552200"
 	icon = 'icons/obj/food_snacks.dmi'
 	icon_state = "cb07"
+	trash = /obj/item/trash/candy/cb07
 	nutriment_amt = 4
 	nutriment_desc = list("chocolate" = 2, "taro" = 2)
 	w_class = 1
@@ -6251,6 +6265,7 @@
 	filling_color = "#552200"
 	icon = 'icons/obj/food_snacks.dmi'
 	icon_state = "cb08"
+	trash = /obj/item/trash/candy/cb08
 	nutriment_amt = 3
 	nutriment_desc = list("chocolate" = 2, "malt puffs" = 1)
 	w_class = 1
@@ -6267,6 +6282,7 @@
 	filling_color = "#552200"
 	icon = 'icons/obj/food_snacks.dmi'
 	icon_state = "cb09"
+	trash = /obj/item/trash/candy/cb09
 	nutriment_amt = 6
 	nutriment_desc = list("peanuts" = 3, "condensed milk" = 1, "cashews" = 2)
 	w_class = 1
@@ -6285,6 +6301,7 @@
 	filling_color = "#552200"
 	icon = 'icons/obj/food_snacks.dmi'
 	icon_state = "cb10"
+	trash = /obj/item/trash/candy/cb10
 	nutriment_amt = 5
 	nutriment_desc = list("chocolate" = 2, "caramel" = 1, "peanuts" = 1, "nougat" = 1)
 	w_class = 1
@@ -6828,6 +6845,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/canned
 	icon = 'icons/obj/food_canned.dmi'
+	opening_sound = 'sound/effects/tincanopen.ogg'
 	canned = TRUE
 
 //////////Just a short line of Canned Consumables, great for treasure in faraway abandoned outposts//////////
@@ -6980,7 +6998,7 @@
 	desc = "A can of grey matter marketed for xenochimeras."
 	description_fluff = "As the cartoon brain with limbs proudly proclaims, \"It's meat. Eat it!\" On the can is printed \"Rich in limbic system\" and \
 	under that in infinitely small letters, \"Warning, product must be eaten within two hours of opening. May contain prion disease. \
-	GrubCo LTD is not liable for any brain damage occuring after consumption of product.\""
+	GrubCo LTD is not liable for any brain damage occurring after consumption of product.\""
 	trash = /obj/item/trash/brainzsnax
 	canned_open_state = "brainzsnax-open"
 	filling_color = "#caa3c9"
@@ -6998,7 +7016,7 @@
 	desc = "A can of grey matter marketed for xenochimeras. This one has added tomato sauce."
 	description_fluff = "As the cartoonish brain with limbs proudly proclaims, \"It's meat. Eat it!\" On the can is printed \"Yummy red stuff!\" and \
 	under that in infinitely small letters, \"Warning, product must be eaten within two hours of opening. May contain prion disease. \
-	GrubCo LTD is not liable for any brain damage occuring after consumption of product.\""
+	GrubCo LTD is not liable for any brain damage occurring after consumption of product.\""
 	trash = /obj/item/trash/brainzsnaxred
 	canned_open_state = "brainzsnaxred-open"
 	filling_color = "#a6898d"
@@ -7010,6 +7028,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/packaged
 	icon = 'icons/obj/food_package.dmi'
+	opening_sound = 'sound/effects/packagedfoodopen.ogg'
 	package = TRUE
 
 //////////////Lunar Cakes - proof of concept//////////////

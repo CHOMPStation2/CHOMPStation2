@@ -1562,14 +1562,14 @@
 	dir = 1;
 	pixel_y = -24
 	},
-/obj/item/weapon/ore/bluespace_crystal/artificial{
+/obj/item/weapon/bluespace_crystal/artificial{
 	pixel_x = 7;
 	pixel_y = 7
 	},
-/obj/item/weapon/ore/bluespace_crystal/artificial{
+/obj/item/weapon/bluespace_crystal/artificial{
 	pixel_y = 7
 	},
-/obj/item/weapon/ore/bluespace_crystal/artificial{
+/obj/item/weapon/bluespace_crystal/artificial{
 	pixel_x = -7;
 	pixel_y = 7
 	},
@@ -2975,9 +2975,7 @@
 /obj/structure/bed/chair{
 	dir = 1
 	},
-/obj/machinery/vending/wallmed1{
-	layer = 3.3;
-	name = "Emergency NanoMed";
+/obj/structure/closet/walllocker/medical{
 	pixel_x = -28
 	},
 /obj/item/device/radio/intercom{
@@ -3012,6 +3010,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 8
+	},
+/obj/machinery/light{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/port)
@@ -3048,9 +3049,7 @@
 /obj/structure/bed/chair{
 	dir = 1
 	},
-/obj/machinery/vending/wallmed1{
-	layer = 3.3;
-	name = "Emergency NanoMed";
+/obj/structure/closet/walllocker/medical{
 	pixel_x = -28
 	},
 /obj/item/device/radio/intercom{
@@ -6484,6 +6483,7 @@
 /obj/structure/closet/crate/hydroponics,
 /obj/item/weapon/material/knife/machete/hatchet,
 /obj/item/weapon/material/minihoe,
+/obj/item/seeds/ambrosiagaiaseed,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftport)
 "aGf" = (
@@ -9417,8 +9417,7 @@
 /obj/structure/bed/chair{
 	dir = 8
 	},
-/obj/machinery/vending/wallmed1{
-	name = "NanoMed Wall";
+/obj/structure/closet/walllocker/medical{
 	pixel_y = -30
 	},
 /obj/effect/shuttle_landmark/southern_cross/escape_pod3/station,
@@ -9909,7 +9908,7 @@
 /obj/machinery/door/airlock/glass_research{
 	name = "Expedition Shuttle";
 	req_access = list();
-	req_one_access = list(5,43,67)
+	req_one_access = list(5,11,24,43,67)
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hangar/three)
@@ -18030,9 +18029,7 @@
 /obj/structure/bed/chair{
 	dir = 1
 	},
-/obj/machinery/vending/wallmed1{
-	layer = 3.3;
-	name = "Emergency NanoMed";
+/obj/structure/closet/walllocker/medical{
 	pixel_x = -28
 	},
 /turf/simulated/shuttle/floor/white,
@@ -18614,8 +18611,7 @@
 /obj/structure/bed/chair{
 	dir = 4
 	},
-/obj/machinery/vending/wallmed1{
-	name = "NanoMed Wall";
+/obj/structure/closet/walllocker/medical{
 	pixel_y = 30
 	},
 /obj/effect/shuttle_landmark/southern_cross/escape_pod5/station,
@@ -22207,7 +22203,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "nyV" = (
-/obj/structure/bed/chair/sofa/black{
+/obj/structure/bed/chair/sofa{
 	dir = 8
 	},
 /turf/simulated/floor/carpet/sblucarpet,
@@ -23570,9 +23566,7 @@
 /area/maintenance/firstdeck/forestarboard)
 "poW" = (
 /obj/structure/bed/chair,
-/obj/machinery/vending/wallmed1{
-	layer = 3.3;
-	name = "Emergency NanoMed";
+/obj/structure/closet/walllocker/medical{
 	pixel_x = 28
 	},
 /turf/simulated/shuttle/floor/white,
@@ -25423,6 +25417,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
+	},
+/obj/machinery/light{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/port)
@@ -27873,8 +27870,7 @@
 /obj/structure/bed/chair{
 	dir = 8
 	},
-/obj/machinery/vending/wallmed1{
-	name = "NanoMed Wall";
+/obj/structure/closet/walllocker/medical{
 	pixel_y = -30
 	},
 /obj/effect/shuttle_landmark/southern_cross/escape_pod4/station,
@@ -28347,8 +28343,7 @@
 /obj/structure/bed/chair{
 	dir = 4
 	},
-/obj/machinery/vending/wallmed1{
-	name = "NanoMed Wall";
+/obj/structure/closet/walllocker/medical{
 	pixel_y = 30
 	},
 /obj/effect/shuttle_landmark/southern_cross/escape_pod6/station,

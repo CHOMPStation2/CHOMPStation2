@@ -10,6 +10,7 @@
 	icon_state = "brain1"
 	no_vore = TRUE //VOREStation Edit - PLEASE. lol.
 	can_pain_emote = FALSE // CHOMPEdit: Sanity/safety
+	low_priority = TRUE //CHOMPEdit
 
 /mob/living/carbon/brain/Initialize()
 	. = ..()

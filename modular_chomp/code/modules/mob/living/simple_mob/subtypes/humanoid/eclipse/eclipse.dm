@@ -14,7 +14,7 @@
 	icon_gib = "syndicate_gib"
 
 	faction = "eclipse"
-	movement_cooldown = 3
+	movement_cooldown = 0
 
 	status_flags = 0
 
@@ -33,6 +33,7 @@
 	projectile_dispersion = 8
 	projectile_accuracy = -20
 	armor = list(melee = 50, bullet = 50, laser = 50, energy = 50, bomb = 50, bio = 100, rad = 100)	// Simple mob immunuties plus base Eclipse foe stuff
+	ranged_cooldown = 4
 
 	can_be_drop_prey = FALSE //CHOMP Add
 	pass_flags = PASSTABLE //mostly for the melee mobs.
@@ -57,7 +58,7 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/eclipse/ranged
 
 	// Grenade special attack vars
-	var/grenade_type = /obj/item/weapon/grenade/shooter/energy/laser
+	var/grenade_type = /obj/item/weapon/grenade/shooter/rubber
 	var/grenade_timer = 50	//CHOMPEdit
 	special_attack_cooldown = 45 SECONDS
 	special_attack_min_range = 2
@@ -104,17 +105,17 @@
 ////////////////////////////////
 /datum/ai_holder/simple_mob/merc/eclipse
 	threaten = FALSE
-	vision_range = 8
+	vision_range = 7
 
 /datum/ai_holder/simple_mob/merc/eclipse/hunter
-	vision_range = 10
+	vision_range = 7
 
 /datum/ai_holder/simple_mob/merc/eclipse/ranged
 	pointblank = TRUE		// They get close? Just shoot 'em!
 	firing_lanes = TRUE		// But not your buddies!
 
 /datum/ai_holder/simple_mob/merc/eclipse/ranged/sniper
-	vision_range = 15	// We're a person with a long-ranged gun.
+	vision_range = 12	// We're a person with a long-ranged gun.
 
 /datum/ai_holder/simple_mob/merc/eclipse/ranged/sniper/max_range(atom/movable/AM)
 	return holder.ICheckRangedAttack(AM) ? 16 : 1
@@ -123,25 +124,26 @@
 //The solar part of the faction, highly resistant to burns and stuff
 /mob/living/simple_mob/humanoid/eclipse/solar
 	name = "Solar Eclipse Initiate"
-	desc = "A silver cladded, dangerous looking indivual."
+	desc = "A dangerous indivual, a gleaming orange shield surronding them, seeming protected from energy and burns."
 
-	armor = list(melee = 50, bullet = 50, laser = 95, energy = 95, bomb = 50, bio = 100, rad = 100) //Solar members are nigh immune to burns.
-	armor_soak = list(melee = 0, bullet = 0, laser = 5, energy = 5, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = -10, bullet = -10, laser = 75, energy = 75, bomb = 50, bio = 100, rad = 100) //Solar members are nigh immune to burns.
+	armor_soak = list(melee = 0, bullet = 0, laser = 15, energy = 15, bomb = 0, bio = 0, rad = 0)
 
 /mob/living/simple_mob/humanoid/eclipse/solar/teslanoodle
 	name = "Solar Eclipse Tesla Serpent"
-	health = 125
-	maxHealth = 125
+	health = 100
+	maxHealth = 100
 	icon_state = "eclipse_tesla"
 	icon_living = "eclipse_tesla"
 	reload_max = 5
+	movement_cooldown = 1
 
 	projectiletype = /obj/item/projectile/energy/electrode/eclipse
 
 /mob/living/simple_mob/humanoid/eclipse/solar/firemoff
 	name = "Solar Eclipse Inferno Moth"
-	health = 90
-	maxHealth = 90
+	health = 75
+	maxHealth = 75
 	icon_state = "eclipse_moth"
 	icon_living = "eclipse_moth"
 	reload_max = 10
@@ -197,23 +199,23 @@
 
 /mob/living/simple_mob/humanoid/eclipse/solar/snipertesh
 	name = "Solar Eclipse Sniper"
-	health = 75
-	maxHealth = 75
-	movement_cooldown = 1
+	health = 50
+	maxHealth = 50
+	movement_cooldown = -1
 
 	icon_state = "eclipse_snipertesh"
 	icon_living = "eclipse_snipertesh"
 
 	projectiletype = /obj/item/projectile/beam/sniper/eclipse
 
-	projectile_accuracy = 75
+	projectile_accuracy = 100
 
-	reload_max = 5
-	reload_time = 2.0 SECONDS
+	reload_max = 1
+	reload_time = 1.5 SECONDS
 
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/eclipse/ranged/sniper
 
-	ranged_attack_delay = 0.5 SECONDS
+	ranged_attack_delay = 1.5 SECONDS
 
 /mob/living/simple_mob/humanoid/eclipse/solar/snipertesh/ranged_pre_animation(atom/A)
 	Beam(get_turf(A), icon_state = "sniper_beam", time = 1 SECONDS, maxdistance = 15)
@@ -277,16 +279,17 @@
 //The lunar mobs, highly resistant to brute based damage.
 /mob/living/simple_mob/humanoid/eclipse/lunar
 	name = "Lunar Eclipse Initiate"
-	desc = "A silver cladded, dangerous looking indivual."
+	desc = "A dangerous indivual, a gleaming red shield surronding them, seemingly protected from blunt force trauma and ballastics."
 
-	armor = list(melee = 95, bullet = 95, laser = 50, energy = 50, bomb = 50, bio = 100, rad = 100) //Lunar members are nigh immune to burns.
-	armor_soak = list(melee = 15, bullet = 5, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0) //15 because every melee weapon has dumb amount of AP
+	armor = list(melee = 75, bullet = 75, laser = -10, energy = -10, bomb = 50, bio = 100, rad = 100) //Lunar members are nigh immune to burns.
+	armor_soak = list(melee = 15, bullet = 15, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0) //15 because every melee weapon has dumb amount of AP
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle //Bouncing bullet extreme
 	name = "Lunar Eclipse Silver Serpent"
-	health = 125
-	maxHealth = 125
-	reload_max = 15
+	health = 100
+	maxHealth = 100
+	reload_max = 6
+	movement_cooldown = 1
 
 	icon_state = "eclipse_silver"
 	icon_living = "eclipse_silver"
@@ -318,23 +321,24 @@
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/shotgunner //wuff with shotgun
 	name = "Lunar Eclipse Shotgunner"
-	health = 90
-	maxHealth = 90
+	health = 75
+	maxHealth = 75
 	reload_max = 2
 
 	icon_state = "eclipse_shotwuff"
 	icon_living = "eclipse_shotwuff"
 
-	projectiletype = /obj/item/projectile/bullet/pellet/shotgun/eclipse
+	projectiletype = /obj/item/projectile/bullet/pellet/shotgun
 
 	ranged_attack_delay = 0.5 SECONDS
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm //tesh got a gun
 	name = "Lunar Eclipse Judge"
-	health = 75
-	maxHealth = 75
+	health = 50
+	maxHealth = 50
 	icon_state = "eclipse_shottesh"
 	icon_living = "eclipse_shottesh"
+	movement_cooldown = -1
 
 
 	projectiletype = /obj/item/projectile/bullet/shotgun
@@ -346,15 +350,17 @@
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/ravanger //Tanky boi. Very deadly melee
 	name = "Lunar Eclipse Ravanger"
-	health = 150
-	maxHealth = 150
+	health = 125
+	maxHealth = 125
 	icon_state = "eclipse_ravanger"
 	icon_living = "eclipse_ravanger"
 
 	attack_armor_pen = 25
 
 	melee_damage_lower = 20
-	melee_damage_upper = 25
+	melee_damage_upper = 20
+
+	melee_attack_delay = 4
 
 	projectiletype = null
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/eclipse
@@ -364,79 +370,44 @@
 	var/poison_type = "hyperzine"
 
 
-
-/obj/item/projectile/energy/blob/moth
-	splatter = TRUE
-	damage = 20
-	armor_penetration = 25
-	my_chems = list("fuel")
-	modifier_type_to_apply = /datum/modifier/fire
-	modifier_duration = 6 SECONDS
-	color = "#38b9ff"
-
-/obj/item/projectile/bullet/pistol/medium/ap/eclipse
-	armor_penetration = 25
-	ricochets = 1
-	ricochets_max = 5
-	ricochet_chance = 100
-
-/obj/item/projectile/energy/electrode/eclipse
-	damage = 30
-	damage_type = BURN
-	color = "#38b9ff"
-
-/obj/item/projectile/bullet/pellet/shotgun/eclipse
-	pellets = 8
-	range_step = 1
-	spread_step = 1
-
-/obj/item/projectile/beam/sniper/eclipse
-	armor_penetration = 50
-
-/obj/item/projectile/energy/declone/burn
-	damage = 20
-	armor_penetration = 25
-	nodamage = 0
-
-
 //////////////////////////////////////////////
 //Boss mob time. Or somewhat bosses anyway.
 /////////////////////////////////////////////
 
 /mob/living/simple_mob/humanoid/eclipse/solar/hellhound
 	name = "Solar Eclipse Hound"
-	health = 200
-	maxHealth = 200
+	health = 150
+	maxHealth = 150
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
-	projectiletype = /obj/item/projectile/energy/flash
-	movement_cooldown = 1
+	projectiletype = null //Flashing was to much for this mob.
+	movement_cooldown = -1
 	melee_damage_lower = 20
-	melee_damage_upper = 35
+	melee_damage_upper = 20
 	attack_armor_pen = 20
-	reload_max = 5
 	icon_state = "eclipse_hound"
 	icon_living = "eclipse_hound"
 	size_multiplier = 1.25
 	var/poison_chance = 100
-	var/poison_per_bite = 8
+	var/poison_per_bite = 4
 	var/poison_type = "stoxin"
+
+	melee_attack_delay = 4
 
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/wheel
-	name = "Lunar Eclipse Wheel"
-	health = 200
-	maxHealth = 200
-	melee_damage_lower = 15
-	melee_damage_upper = 25
+	name = "Lunar Eclipse Armadillo"
+	health = 150
+	maxHealth = 150
+	melee_damage_lower = 10
+	melee_damage_upper = 10
 	attack_armor_pen = 50
-	reload_max = 3
 	icon_state = "eclipse_wheel"
 	icon_living = "eclipse_wheel"
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
-	projectiletype = /obj/item/projectile/beam/energy_net
-	movement_cooldown = 2
+	projectiletype = null //the net idea was fun but seemed to painful.
+	movement_cooldown = -0.5
 
-	var/cloaked_alpha = 50			// Lower = Harder to see.
+	var/cloaked_alpha = 60			// Lower = Harder to see.
 	var/cloak_cooldown = 5 SECONDS	// Amount of time needed to re-cloak after losing it.
 	var/last_uncloak = 0			// world.time
 
@@ -539,21 +510,22 @@
 
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/pummler
-	name = "Lunar Eclipse Punnler"
-	projectiletype = /obj/item/projectile/bullet/shotgun/ion/eclipse
+	name = "Lunar Eclipse Pummeler"
+	projectiletype = /obj/item/projectile/bullet/shotgun/ion
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
-	melee_damage_lower = 20
-	melee_damage_upper = 30
+	melee_damage_lower = 10
+	melee_damage_upper = 10
 	attack_armor_pen = 30
-	movement_cooldown = 1
+	movement_cooldown = 0
 	icon_state = "eclipse_pummler"
 	icon_living = "eclipse_pummler"
-	reload_max = 25
+	reload_max = 5
 	size_multiplier = 1.5
 	var/poison_per_bite = 5
 	var/poison_type = "shredding_nanites"
-	var/poison_chance = 50
-	var/shock_chance = 30
+	var/poison_chance = 10
+	var/shock_chance = 60
+	base_attack_cooldown = 6
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/pummler/apply_melee_effects(var/atom/A)
 	if(isliving(A))
@@ -579,8 +551,3 @@
 	if(prob(poison_chance))
 		to_chat(L, "<span class='warning'>You feel a small shock rushing through your veins.</span>")
 		L.reagents.add_reagent(poison_type, poison_per_bite)
-
-
-/obj/item/projectile/bullet/shotgun/ion/eclipse
-	damage = 25
-	armor_penetration = 30

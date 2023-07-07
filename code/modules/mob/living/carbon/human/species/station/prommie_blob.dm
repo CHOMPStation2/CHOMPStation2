@@ -8,7 +8,7 @@
 	unity = TRUE
 	water_resist = 100 // Lets not kill the prommies
 	cores = 0
-	movement_cooldown = 2 //Chompedit to 2 from 3, Bring in line with Protean blob forms.
+	movement_cooldown = 0
 	//appearance_flags = RADIATION_GLOWS
 	shock_resist = 0 // Lets not be immune to zaps.
 	friendly = list("nuzzles", "glomps", "snuggles", "cuddles", "squishes") // lets be cute :3
@@ -81,8 +81,8 @@
 
 /mob/living/carbon/human/Destroy()
 	if(stored_blob)
-		stored_blob.l_hand.forceMove(loc)
-		stored_blob.r_hand.forceMove(loc)
+		stored_blob.l_hand?.forceMove(loc) // CHHOMPedit - Make sure that stored_blob actually has the hand before trying to forceMove.
+		stored_blob.r_hand?.forceMove(loc) // CHHOMPedit - ^
 		stored_blob = null
 		qdel(stored_blob)
 	return ..()

@@ -17,6 +17,13 @@
 	. = ..()
 	blacklisted_areas = typecacheof(list(/area/centcom, /area/shadekin, /area/vr))
 
+/mob/living/carbon/human/shadekin_ability_check()
+	. = ..()
+	if(. && istype(get_area(src), /area/vr))
+		to_chat(src, "<span class='danger'>The VR systems cannot comprehend this power! This is useless to you!</span>")
+		. = FALSE
+
+
 /obj/item/weapon/disposable_teleporter/attack_self(mob/user as mob)//Prevents people from using technomancer gear to escape to station from the VR pods.
 	if(istype(get_area(user), /area/vr))
 		to_chat(user, "<span class='danger'>\The [src] does not appear to work in VR! This is useless to you!</span>")

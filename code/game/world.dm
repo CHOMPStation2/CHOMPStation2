@@ -1,5 +1,20 @@
 #define RECOMMENDED_VERSION 513
+
+// CHOMPedit Start - Tracy
+/proc/prof_init()
+	var/lib
+
+	switch(world.system_type)
+		if(MS_WINDOWS) lib = "prof.dll"
+		if(UNIX) lib = "libprof.so"
+		else CRASH("unsupported platform")
+
+	var/init = call(lib, "init")()
+	if("0" != init) CRASH("[lib] init error: [init]")
+// CHOMPedit End
+
 /world/New()
+	//prof_init() // CHOMPedit - Uncomment to enable Tracy. Requires https://github.com/mafemergency/byond-tracy/
 	world_startup_time = world.timeofday
 	rollover_safety_date = world.realtime - world.timeofday // 00:00 today (ish, since floating point error with world.realtime) of today
 	to_world_log("Map Loading Complete")
@@ -520,6 +535,24 @@ var/world_topic_spam_protect_time = world.timeofday
 				var/ckey = copytext(line, 1, length(line)+1)
 				var/datum/mentor/M = new /datum/mentor(ckey)
 				M.associate(GLOB.directory[ckey])
+	else // CHOMPedit Start - Implementing loading mentors from database
+		establish_db_connection()
+		if(!SSdbcore.IsConnected())
+			error("Failed to connect to database in load_mentors().")
+			log_misc("Failed to connect to database in load_mentors().")
+			return
+
+		var/DBQuery/query = SSdbcore.NewQuery("SELECT ckey, mentor FROM erro_mentor") //CHOMPEdit TGSQL
+		query.Execute()
+		while(query.NextRow())
+			var/ckey = query.item[1]
+			var/mentor = query.item[2]
+
+			if(mentor)
+				var/datum/mentor/M = new /datum/mentor(ckey)
+				M.associate(GLOB.directory[ckey])
+		qdel(query)
+	// COMPedit End
 
 /world/proc/update_status()
 	var/s = ""

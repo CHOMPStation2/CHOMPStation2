@@ -567,7 +567,7 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 		all_traits[path] = instance
 
 	// Shakey shakey shake
-	sortTim(all_traits, /proc/cmp_trait_datums_name, associative = TRUE)
+	sortTim(all_traits, GLOBAL_PROC_REF(cmp_trait_datums_name), associative = TRUE)
 
 	// Split 'em up
 	for(var/traitpath in all_traits)
@@ -728,15 +728,15 @@ var/global/list/xenobio_gold_mobs_hostile = list(
 										/mob/living/simple_mob/vore/aggressive/dino,
 										/mob/living/simple_mob/vore/aggressive/dragon,
 										/mob/living/simple_mob/vore/aggressive/frog,
-										/mob/living/simple_mob/otie,
-										/mob/living/simple_mob/otie/red,
+										/mob/living/simple_mob/vore/otie,
+										/mob/living/simple_mob/vore/otie/red,
 										/mob/living/simple_mob/vore/aggressive/panther,
 										/mob/living/simple_mob/vore/aggressive/rat,
 										/mob/living/simple_mob/vore/aggressive/giant_snake,
 										/mob/living/simple_mob/vore/sect_drone,
 										/mob/living/simple_mob/vore/sect_queen,
 										/mob/living/simple_mob/vore/weretiger,
-										/mob/living/simple_mob/animal/wolf,
+										/mob/living/simple_mob/vore/wolf,
 										/mob/living/simple_mob/vore/xeno_defanged)
 
 var/global/list/xenobio_gold_mobs_bosses = list(
@@ -783,7 +783,7 @@ var/global/list/xenobio_gold_mobs_safe = list(
 										/mob/living/simple_mob/vore/fennix,
 										/mob/living/simple_mob/vore/hippo,
 										/mob/living/simple_mob/vore/horse,
-										/mob/living/simple_mob/animal/space/jelly,
+										/mob/living/simple_mob/vore/jelly,
 										/mob/living/simple_mob/vore/oregrub,
 										/mob/living/simple_mob/vore/oregrub/lava,
 										/mob/living/simple_mob/vore/rabbit,
@@ -935,14 +935,14 @@ var/global/list/event_wildlife_roaming = list(
 										list(
 												list(/mob/living/simple_mob/vore/aggressive/frog = 1),
 												list(/mob/living/simple_mob/tomato = 1),
-												list(/mob/living/simple_mob/animal/wolf = 1),
+												list(/mob/living/simple_mob/vore/wolf = 1),
 												list(/mob/living/simple_mob/vore/aggressive/dino = 1),
 												list(/mob/living/simple_mob/animal/space/bats = 1)
 											),
 										list(
 												list(/mob/living/simple_mob/animal/space/bear = 1),
 												list(/mob/living/simple_mob/vore/aggressive/deathclaw = 1),
-												list(/mob/living/simple_mob/otie = 1),
+												list(/mob/living/simple_mob/vore/otie = 1),
 												list(/mob/living/simple_mob/vore/aggressive/panther = 1),
 												list(/mob/living/simple_mob/vore/aggressive/rat = 1),
 												list(/mob/living/simple_mob/vore/aggressive/giant_snake = 1),
@@ -962,15 +962,32 @@ var/global/list/selectable_speech_bubbles = list(
 	"cyber",
 	"ghost",
 	"slime_green",
+	"slime_yellow",
+	"slime_red",
+	"slime_blue",
 	"dark",
 	"plant",
 	"clown",
 	"fox",
+	"latte_fox",
+	"blue_fox",
 	"maus",
+	"wolf",
+	"red_panda",
+	"blue_panda",
+	"tentacles",
 	"heart",
 	"textbox",
-	"posessed",
-	"square")
+	"possessed",		// CHOMPEDIT : purdev (spelling changed <3)
+	"square",
+	"medical",
+	"medical_square",
+	"cardiogram",
+	"security",
+	"notepad",
+	"science",
+	"engineering",
+	"cargo")
 
 
 

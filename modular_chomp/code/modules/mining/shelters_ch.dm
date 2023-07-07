@@ -320,3 +320,9 @@
 	mappath = "modular_chomp/maps/submaps/shelters/PizzaParlor-18x19.dmm"
 	name = "Pizza Parlor"
 	description = "A small locally owned pizza parlor, now with delivery services."
+
+/datum/map_template/shelter/superpose/GrandLibrary
+	shelter_id = "GrandLibrary"
+	mappath = "modular_chomp/maps/submaps/shelters/GrandLibrary-31x24.dmm"
+	name = "Pizza Parlor"
+	description = "A grand ornate library, more books than you can count."

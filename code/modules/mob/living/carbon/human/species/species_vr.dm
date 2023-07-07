@@ -20,6 +20,7 @@
 	var/selects_bodytype = SELECTS_BODYTYPE_FALSE // Allows the species to choose from body types like custom species can, affecting suit fitting and etcetera as you would expect.
 
 	var/bloodsucker = FALSE // Allows safely getting nutrition from blood.
+	var/bloodsucker_controlmode = "always loud" //Allows selecting between bloodsucker control modes. Always Loud corresponds to original implementation.
 
 	var/is_weaver = FALSE
 	var/silk_production = FALSE
@@ -38,6 +39,8 @@
 	var/macro_size_mod = 0		// How different is our size for interactions that involve us being big?
 	var/digestion_nutrition_modifier = 1
 	var/center_offset = 0.5 //CHOMPEdit
+	var/can_climb = FALSE
+	var/climbing_delay = 1.5	// We climb with a quarter delay
 
 
 /datum/species/proc/give_numbing_bite() //Holy SHIT this is hacky, but it works. Updating a mob's attacks mid game is insane.

@@ -14,6 +14,12 @@
 	light_power = 1
 	light_color = "#FF0D00"
 
+/obj/effect/projectile/impact/laser_em
+	icon_state = "impact_em_laser"
+	light_range = 3
+	light_power = 1
+	light_color = "#00C6FF"
+
 /obj/effect/projectile/impact/xray
 	icon_state = "impact_xray"
 	light_range = 2
@@ -97,3 +103,11 @@
 //VOREStation edit ends
 /obj/effect/projectile/impact/pointdefense
 	icon_state = "impact_pointdef"
+	//CHOMPStation add coilgun pointdefense
+/obj/effect/projectile/impact/coildefense
+	icon = 'icons/obj/projectiles_impact_ch.dmi'
+	icon_state = "impact_coildef"
+	light_range = 2
+	light_power = 3
+	light_color = "#FFFFFF"
+//CHOMPStation add end <3

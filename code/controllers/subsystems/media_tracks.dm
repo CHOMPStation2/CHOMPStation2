@@ -64,7 +64,7 @@ SUBSYSTEM_DEF(media_tracks)
 
 /datum/controller/subsystem/media_tracks/proc/sort_tracks()
 	report_progress("Sorting media tracks...")
-	sortTim(all_tracks, /proc/cmp_media_track_asc)
+	sortTim(all_tracks, GLOBAL_PROC_REF(cmp_media_track_asc))
 
 	jukebox_tracks.Cut()
 	lobby_tracks.Cut()
@@ -120,17 +120,17 @@ SUBSYSTEM_DEF(media_tracks)
 			if(!songdata["url"] || !songdata["title"] || !songdata["duration"])
 				to_chat(C, "<span class='warning'>URL, Title, or Duration was missing from a song. Skipping.</span>")
 				continue
-			var/datum/track/T = new(songdata["url"], songdata["title"], songdata["duration"], songdata["artist"], songdata["genre"], songdata["secret"], songdata["lobby"], songdata["casino"])
+			var/datum/track/T = new(songdata["url"], songdata["title"], songdata["duration"], songdata["artist"], songdata["genre"], songdata["secret"], songdata["lobby"], songdata["casino"]) //ChompEDIT, included 'casino'
 			all_tracks += T
 
 			report_progress("New media track added by [C]: [T.title]")
 		sort_tracks()
 		return
-	
+
 	var/title = tgui_input_text(C, "REQUIRED: Provide title for track", "Track Title")
 	if(!title)
 		return
-	
+
 	var/duration = tgui_input_number(C, "REQUIRED: Provide duration for track (in deciseconds, aka seconds*10)", "Track Duration")
 	if(!duration)
 		return
@@ -139,7 +139,7 @@ SUBSYSTEM_DEF(media_tracks)
 	var/artist = tgui_input_text(C, "Optional: Provide artist for track", "Track Artist")
 	if(isnull(artist)) // Cancel rather than empty string
 		return
-	
+
 	var/genre = tgui_input_text(C, "Optional: Provide genre for track (try to match an existing one)", "Track Genre")
 	if(isnull(genre)) // Cancel rather than empty string
 		return

@@ -1146,6 +1146,10 @@
 /obj/item/weapon/bone/ribs,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
+"yn" = (
+/obj/effect/map_helper/no_phaseshift,
+/turf/simulated/wall/wood,
+/area/submap/Manor1)
 "yI" = (
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_mob/animal/giant_spider/carrier,
@@ -2454,7 +2458,7 @@ ab
 ab
 ab
 ab
-ab
+yn
 ab
 ab
 ab

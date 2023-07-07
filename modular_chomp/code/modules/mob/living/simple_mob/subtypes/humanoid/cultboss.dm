@@ -29,7 +29,8 @@
 	vore_bump_chance = 20
 	size_multiplier = 1.10
 	faction = "demon"
-	damage_fatigue_mult = 0
+	damage_fatigue_mult = 0.5 // We don't want to give them a flat, huge boost to attack speed, but at the same time, make them fight harder the closer they are to dying.
+	injury_enrages = TRUE
 
 	armor_soak = list(
 		"melee" = 5,
@@ -282,7 +283,7 @@
 	vore_max_size = RESIZE_HUGE
 	vore_min_size = RESIZE_SMALL
 	vore_pounce_chance = 0 // Beat them into crit before eating.
-	vore_icons = null
+	vore_icons = SA_ICON_LIVING
 
 	can_be_drop_prey = FALSE //CHOMP Add
 

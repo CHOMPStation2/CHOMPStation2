@@ -150,13 +150,83 @@
 		"Your body would swish and slosh in the burbling caustic acid as it nips at your armor and flesh.",
 		"The serpent cultist would let out a lazy out, streching, then remebers your exsistance pressing a claw into the you shaped bulge and grumbling." ,)
 
-//Projectile//
-/obj/item/projectile/energy/inversion
-	name = "inversion blast"
-	icon = 'icons/obj/projectiles_impact.dmi'
-	icon_state = "impact_invert"
-	damage = 15
-	armor_penetration = 60
-	damage_type = BURN
-	check_armour = "laser"
-	color = "#ffffff"
+
+//Thank you Ears for the teshari bellies
+/mob/living/simple_mob/humanoid/cultist/tesh
+	vore_active = 1
+	vore_capacity = 6
+	vore_max_size = RESIZE_HUGE
+	vore_min_size = RESIZE_SMALL
+	vore_pounce_chance = 0 // Beat them into crit before eating.
+	vore_icons = null
+
+	can_be_drop_prey = FALSE //CHOMP Add
+
+/mob/living/simple_mob/humanoid/cultist/tesh/Login()
+	. = ..()
+	if(!riding_datum)
+		riding_datum = new /datum/riding/simple_mob(src)
+	verbs |= /mob/living/simple_mob/proc/animal_mount
+	verbs |= /mob/living/proc/toggle_rider_reins
+	movement_cooldown = 1
+
+/mob/living/simple_mob/humanoid/cultist/tesh/MouseDrop_T(mob/living/M, mob/living/user)
+	return
+
+/mob/living/simple_mob/humanoid/cultist/tesh/init_vore()
+	if(!voremob_loaded)
+		return
+	.=..()
+	var/obj/belly/B = vore_selected
+	B.name = "stomach"
+	B.desc = "Taking advantage of your weakened state, the %pred makes their pounce! The world going dark as the ravenous Teshari forces your battered frame down their throat. It all coming to a stop as you're packed neatly into their steaming guts. Low and content chuckling barely audible over the rising cacophony of the stomach's activity."
+
+	B.emote_lists[DM_HOLD] = list(
+		"Your body is bounced and jostled as the %pred purses their next prey.  Unimpeded by your weight and eager for more.",
+		"The already oprrssive hold of the %belly restrains you with a heavy clench and squeeze from the hands outside. The %pred securing their catch.",
+		"You're given a heavy squeeze as the stale air is forced out from the %pred giving a crass belch.  Suspending you in a claustrophobic hold until the organ relaxes with more stale air filling the space.",)
+
+	B.emote_lists[DM_DIGEST] = list(
+		"The bubbling of the carnivorous, little predator's belly cuts off the sounds outside, the greedy walls working in and giving you a fresh coat of enzymes.",
+		"The %pred traces their claws over your form and sings an incantation, and you feel your strength wane as the walls work in with renewed vigor.",
+		"The motion of the %pred's trotting sloshes and sways you from side to side, occasionally coating you in more hot fluids! Eating away your stamina with irragular flexes to allow them to keep eating you away." ,)
+
+
+/mob/living/simple_mob/humanoid/cultist/castertesh
+	vore_active = 1
+	vore_capacity = 6
+	vore_max_size = RESIZE_HUGE
+	vore_min_size = RESIZE_SMALL
+	vore_pounce_chance = 0 // Beat them into crit before eating.
+	vore_icons = null
+
+	can_be_drop_prey = FALSE //CHOMP Add
+
+/mob/living/simple_mob/humanoid/cultist/castertesh/Login()
+	. = ..()
+	if(!riding_datum)
+		riding_datum = new /datum/riding/simple_mob(src)
+	verbs |= /mob/living/simple_mob/proc/animal_mount
+	verbs |= /mob/living/proc/toggle_rider_reins
+	movement_cooldown = 1
+
+/mob/living/simple_mob/humanoid/cultist/castertesh/MouseDrop_T(mob/living/M, mob/living/user)
+	return
+
+/mob/living/simple_mob/humanoid/cultist/castertesh/init_vore()
+	if(!voremob_loaded)
+		return
+	.=..()
+	var/obj/belly/B = vore_selected
+	B.name = "stomach"
+	B.desc = "Not too long after you hit the ground the caster makes their way to your fallen self.  The ground below you glows a deep red and you sink through the surface, only to find yourself folded tightly in a cramped, slick, and caustic chamber! The mage's chanting barely audible over the sounds of the stomach walls making their claim."
+
+	B.emote_lists[DM_HOLD] = list(
+		"Your body is bounced and jostled as the %pred purses their next prey.  Unimpeded by your weight and eager for more.",
+		"The already oprrssive hold of the %belly restrains you with a heavy clench and squeeze from the hands outside. The %pred securing their catch.",
+		"You're given a heavy squeeze as the stale air is forced out from the %pred giving a crass belch.  Suspending you in a claustrophobic hold until the organ relaxes with more stale air filling the space.",)
+
+	B.emote_lists[DM_DIGEST] = list(
+		"The bubbling of the carnivorous, little predator's belly cuts off the sounds outside, the greedy walls working in and giving you a fresh coat of enzymes.",
+		"The %pred traces their claws over your form and sings an incantation, and you feel your strength wane as the walls work in with renewed vigor.",
+		"The motion of the %pred's trotting sloshes and sways you from side to side, occasionally coating you in more hot fluids! Eating away your stamina with irragular flexes to allow them to keep eating you away." ,)

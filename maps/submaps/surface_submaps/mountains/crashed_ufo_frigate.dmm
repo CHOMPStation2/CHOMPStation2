@@ -530,8 +530,20 @@
 "ch" = (
 /turf/simulated/shuttle/wall/alien/hard_corner,
 /area/submap/cave/crashed_ufo_frigate)
+"de" = (
+/obj/machinery/porta_turret/alien/destroyed,
+/turf/simulated/shuttle/floor/alienplating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/cave/crashed_ufo_frigate)
 "xX" = (
-/turf/simulated/shuttle/floor/alienplating/external,
+/turf/simulated/shuttle/floor/alienplating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
 /area/submap/cave/crashed_ufo_frigate)
 
 (1,1,1) = {"
@@ -1988,9 +2000,9 @@ ad
 ad
 ad
 ad
-aZ
+de
 xX
-aZ
+de
 ad
 ad
 ad

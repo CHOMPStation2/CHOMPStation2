@@ -6,7 +6,7 @@
 	log_access_out(src)
 	unset_machine()
 	if(admin_datums[src.ckey])
-		message_admins("Admin logout: [key_name(src)]") // CHOMPEdit: Admin logout notice displays no matter what
+		message_admins("Staff logout: [key_name(src)]") // CHOMPEdit: Admin logout notice displays no matter what//Edit2: STAFF
 		if(ticker && ticker.current_state == GAME_STATE_PLAYING) //Only report this stuff if we are currently playing.
 			var/admins_number = GLOB.admins.len
 

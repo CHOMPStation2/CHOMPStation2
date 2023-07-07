@@ -183,14 +183,6 @@
 /obj/effect/decal/cleanable/blood/drip,
 /turf/simulated/floor/cult,
 /area/awaymission/snowfield/command/bridge)
-"aiA" = (
-/obj/structure/catwalk,
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/vore/demonAI/avarn{
-	faction = "cult"
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/awaymission/snowfield/security/security_cell)
 "aiX" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -1708,12 +1700,6 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/glass_medical{
-	id_tag = "MedbayFoyer";
-	name = "Medbay";
-	req_access = null;
-	req_one_access = null
-	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/front_desk)
 "bAP" = (
@@ -2230,7 +2216,6 @@
 /obj/structure/sink/kitchen{
 	pixel_y = 17
 	},
-/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/engineering/restroom)
 "bYA" = (
@@ -2923,10 +2908,6 @@
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/service/cafeteria)
-"cCl" = (
-/mob/living/simple_mob/animal/giant_spider/electric,
-/turf/simulated/floor,
-/area/awaymission/snowfield/security/firingrange)
 "cCA" = (
 /obj/machinery/door/blast/gate/open,
 /turf/simulated/floor/outdoors/rocks,
@@ -3158,7 +3139,6 @@
 	},
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/animal/giant_spider/electric,
 /turf/simulated/floor,
 /area/awaymission/snowfield/security/security_cell)
 "cQM" = (
@@ -3175,11 +3155,9 @@
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/awaymission/snowfield/hallway/commandhallway)
 "cQZ" = (
-/obj/structure/catwalk,
-/obj/machinery/light/small,
 /obj/effect/spider/stickyweb,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/awaymission/snowfield/medical/storage_room)
+/turf/simulated/floor/carpet/turcarpet,
+/area/awaymission/snowfield/medical/staff_room)
 "cRf" = (
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/warden)
@@ -3876,7 +3854,7 @@
 	dir = 8
 	},
 /obj/machinery/door/window/brigdoor/eastright{
-	id = Cell2;
+	id = "cell2";
 	name = "Cell 2";
 	req_access = null;
 	req_one_access = list(2,4)
@@ -4453,7 +4431,7 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
-	id = "englockdown";
+	id = "snowfieldenglockdown";
 	name = "Engineering Lockdown";
 	opacity = 0
 	},
@@ -4671,7 +4649,6 @@
 /obj/item/weapon/tank/emergency/oxygen/double,
 /obj/item/clothing/mask/breath,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/medical/storage_room)
 "dXU" = (
@@ -5390,7 +5367,6 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/light,
-/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/surgery)
 "eAM" = (
@@ -6087,6 +6063,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
+/obj/structure/door_assembly/door_assembly_med,
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/hallway/northhallway)
 "fkQ" = (
@@ -6121,11 +6098,6 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/awaymission/snowfield/security/seconddesk)
-"fnn" = (
-/obj/structure/catwalk,
-/mob/living/simple_mob/animal/giant_spider/ion,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/awaymission/snowfield/security/security_cell)
 "fnD" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 10
@@ -6207,11 +6179,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/warden)
-"fpL" = (
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/animal/giant_spider/tunneler/frequent,
-/turf/simulated/floor,
-/area/awaymission/snowfield/security/firingrange)
 "fqn" = (
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -6522,9 +6489,10 @@
 /turf/simulated/wall/r_wall,
 /area/awaymission/snowfield/public/publicrestroom)
 "fGG" = (
-/mob/living/simple_mob/animal/giant_spider/lurker,
-/turf/simulated/floor/tiled/freezer,
-/area/awaymission/snowfield/medical/patient_restroom)
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/plating,
+/area/awaymission/snowfield/engineering/primary_storage)
 "fIy" = (
 /obj/item/weapon/stool,
 /obj/item/weapon/paper/awaygate/snowfield/evacuation_order,
@@ -8710,6 +8678,7 @@
 /area/awaymission/snowfield/engineering/engine_checkpoint)
 "hsn" = (
 /mob/living/simple_mob/vore/demonAI/zellic{
+	devourable = 0;
 	faction = "cult";
 	health = 450
 	},
@@ -9746,7 +9715,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/hallway/northhallway)
 "ilY" = (
-/obj/effect/spider/stickyweb,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -9982,6 +9950,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/item/weapon/paper/awaygate/snowfield/final_note,
 /turf/simulated/floor/tiled/monotile,
 /area/awaymission/snowfield/security/seconddesk)
 "iAB" = (
@@ -10108,7 +10077,7 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
-	id = "englockdown";
+	id = "snowfieldenglockdown";
 	name = "Engineering Lockdown";
 	opacity = 0
 	},
@@ -10645,6 +10614,7 @@
 /obj/structure/catwalk,
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_mob/vore/demonAI/ira{
+	devourable = 0;
 	faction = "cult"
 	},
 /turf/simulated/floor,
@@ -10873,6 +10843,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/door_assembly/door_assembly_med,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/front_desk)
 "jhx" = (
@@ -11122,12 +11093,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/security_lockerroom)
-"jtT" = (
-/obj/structure/lattice,
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/animal/giant_spider/tunneler/frequent,
-/turf/simulated/floor/outdoors/rocks/caves,
-/area/awaymission/snowfield/security/security_cell)
 "juu" = (
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/green/border,
@@ -12032,7 +11997,7 @@
 /area/awaymission/snowfield/dorms/dorm7)
 "kcv" = (
 /obj/machinery/door/window/brigdoor/eastright{
-	id = Cell1;
+	id = "cell1";
 	name = "Cell 1";
 	req_access = null;
 	req_one_access = list(2,4)
@@ -12110,7 +12075,7 @@
 	req_one_access = list(1,11)
 	},
 /obj/machinery/door/blast/regular{
-	id = "snowfieldenglockdown"
+	id = "snowfieldengroomlockdown"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/engineering/engine)
@@ -12689,17 +12654,10 @@
 /turf/simulated/floor/plating,
 /area/awaymission/snowfield/checkpointunpowered)
 "kIH" = (
-/obj/effect/floor_decal/steeldecal/steel_decals5{
-	dir = 1
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central2,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/animal/giant_spider/carrier,
-/turf/simulated/floor/tiled/steel,
-/area/awaymission/snowfield/medical/storage_room)
+/obj/structure/catwalk,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/plating,
+/area/awaymission/snowfield/engineering/primary_storage)
 "kIX" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -12737,7 +12695,7 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
-	id = "englockdown";
+	id = "snowfieldenglockdown";
 	name = "Engineering Lockdown";
 	opacity = 0
 	},
@@ -13736,20 +13694,12 @@
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
 /area/awaymission/snowfield/outside)
 "lxg" = (
-/obj/effect/floor_decal/steeldecal/steel_decals5,
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	dir = 1
-	},
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/industrial/warning,
+/obj/structure/catwalk,
+/obj/structure/catwalk,
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/animal/giant_spider/carrier,
-/turf/simulated/floor/tiled/steel,
-/area/awaymission/snowfield/medical/storage_room)
+/mob/living/simple_mob/animal/giant_spider/pepper,
+/turf/simulated/floor/plating,
+/area/awaymission/snowfield/engineering/primary_storage)
 "lxq" = (
 /obj/machinery/shower{
 	pixel_y = 18
@@ -13944,7 +13894,6 @@
 /obj/machinery/iv_drip,
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/green/border,
-/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/surgery)
 "lEI" = (
@@ -14171,7 +14120,6 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 10
 	},
-/mob/living/simple_mob/animal/giant_spider/tunneler/frequent,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/firingrange)
 "lPD" = (
@@ -14668,7 +14616,6 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/medical/surgery)
 "mpk" = (
@@ -14884,7 +14831,6 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/security,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/snowfield/security/lobby)
 "myD" = (
@@ -15063,7 +15009,6 @@
 /obj/structure/window/reinforced,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/item/weapon/storage/pill_bottle/assorted,
-/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/medical/storage_room)
 "mHr" = (
@@ -15141,10 +15086,11 @@
 /turf/simulated/floor,
 /area/awaymission/snowfield/outside)
 "mKv" = (
-/obj/structure/catwalk,
-/mob/living/simple_mob/animal/giant_spider/webslinger,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/awaymission/snowfield/medical/storage_room)
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/plating,
+/area/awaymission/snowfield/engineering/primary_storage)
 "mLz" = (
 /obj/structure/sink{
 	dir = 4;
@@ -15459,16 +15405,11 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/medical/storage_room)
 "mWF" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/firstaid/adv{
-	starts_with = list(/obj/item/stack/medical/advanced/bruise_pack,/obj/item/stack/medical/advanced/bruise_pack,/obj/item/stack/medical/advanced/bruise_pack,/obj/item/stack/medical/advanced/bruise_pack,/obj/item/stack/medical/advanced/ointment,/obj/item/stack/medical/advanced/ointment,/obj/item/stack/medical/advanced/ointment)
-	},
-/obj/item/weapon/storage/firstaid/adv{
-	starts_with = list(/obj/item/stack/medical/advanced/bruise_pack,/obj/item/stack/medical/advanced/bruise_pack,/obj/item/stack/medical/advanced/bruise_pack,/obj/item/stack/medical/advanced/bruise_pack,/obj/item/stack/medical/advanced/ointment,/obj/item/stack/medical/advanced/ointment,/obj/item/stack/medical/advanced/ointment)
-	},
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /obj/effect/spider/stickyweb,
-/turf/simulated/floor/tiled/freezer,
-/area/awaymission/snowfield/medical/surgery)
+/turf/simulated/floor/plating,
+/area/awaymission/snowfield/engineering/primary_storage)
 "mWM" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/paper_bin,
@@ -15713,16 +15654,11 @@
 /turf/simulated/floor/tiled/monotile,
 /area/awaymission/snowfield/service/janitor)
 "ngO" = (
-/obj/structure/table/woodentable,
-/obj/item/weapon/gun/projectile/shotgun/pump/shorty{
-	desc = "A clunky, lightly modified special carbine, this gun is often be seen in the old terran's prison, designed to suppress the prison riots.";
-	description_fluff = "Designed to suppress the prison riot, KS-23 has been developed in 1970s in Soviet Russia. Crude, but compact, it is easy to carry around while in patrol, and useful in close combat.";
-	name = "KS-23"
-	},
-/obj/item/ammo_magazine/ammo_box/b12g/pellet,
-/obj/item/ammo_magazine/ammo_box/b12g/pellet,
-/turf/simulated/floor/carpet/turcarpet,
-/area/awaymission/snowfield/medical/staff_room)
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/animal/giant_spider/pepper,
+/turf/simulated/floor/plating,
+/area/awaymission/snowfield/engineering/primary_storage)
 "nhd" = (
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -15762,7 +15698,6 @@
 /area/awaymission/snowfield/checkpointunpowered)
 "niv" = (
 /obj/effect/floor_decal/industrial/warning,
-/mob/living/simple_mob/animal/giant_spider/pepper,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/firingrange)
 "niM" = (
@@ -15993,9 +15928,12 @@
 "nsL" = (
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_mob/vore/demonAI/engorge{
+	devourable = 0;
 	faction = "cult";
-	health = 400;
-	size_multiplier = 1.25
+	health = 550;
+	size_multiplier = 1.5;
+	vore_pounce_chance = 30;
+	vore_pounce_maxhealth = 95
 	},
 /turf/simulated/floor/cult,
 /area/awaymission/snowfield/command/bridge)
@@ -16819,7 +16757,7 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
-	id = "englockdown";
+	id = "snowfieldenglockdown";
 	name = "Engineering Lockdown";
 	opacity = 0
 	},
@@ -17328,17 +17266,7 @@
 	},
 /obj/structure/table/steel_reinforced,
 /obj/item/weapon/storage/box/masks,
-/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/neutral,
-/area/awaymission/snowfield/medical/surgery)
-"owE" = (
-/obj/structure/catwalk,
-/mob/living/simple_mob/animal/giant_spider/pepper,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/awaymission/snowfield/security/security_cell)
-"oxs" = (
-/mob/living/simple_mob/animal/giant_spider/carrier,
-/turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/medical/surgery)
 "oxR" = (
 /obj/effect/decal/cleanable/dirt,
@@ -17607,9 +17535,16 @@
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/medical/morgue)
 "oOl" = (
-/obj/effect/spider/stickyweb,
-/turf/simulated/floor/tiled/freezer,
-/area/awaymission/snowfield/engineering/restroom)
+/obj/structure/catwalk,
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/door_assembly/door_assembly_eng,
+/turf/simulated/floor/plating,
+/area/awaymission/snowfield/engineering/primary_storage)
 "oOF" = (
 /obj/machinery/gateway,
 /obj/effect/decal/cleanable/dirt,
@@ -17710,13 +17645,12 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/medical/storage_room)
 "oWq" = (
-/obj/structure/catwalk,
-/obj/machinery/light/small{
+/obj/machinery/light{
 	dir = 1
 	},
 /obj/effect/spider/stickyweb,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/awaymission/snowfield/medical/storage_room)
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/snowfield/medical/patients)
 "oWy" = (
 /obj/structure/artilleryplaceholder{
 	icon_state = "8"
@@ -18005,6 +17939,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/carpet/turcarpet,
 /area/awaymission/snowfield/medical/staff_room)
 "plx" = (
@@ -18166,7 +18101,7 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
-	id = "englockdown";
+	id = "snowfieldenglockdown";
 	name = "Engineering Lockdown";
 	opacity = 0
 	},
@@ -18176,7 +18111,7 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
-	id = "englockdown";
+	id = "snowfieldenglockdown";
 	name = "Engineering Lockdown";
 	opacity = 0
 	},
@@ -18244,11 +18179,6 @@
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/snowfield/security/security_lockerroom)
-"puf" = (
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/animal/giant_spider/pepper,
-/turf/simulated/floor/outdoors/rocks/caves,
-/area/awaymission/snowfield/security/hallway2)
 "pun" = (
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
 /area/awaymission/snowfield/outside)
@@ -19283,12 +19213,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/engineering/engine_checkpoint)
 "qgX" = (
-/obj/machinery/door/airlock/glass_medical{
-	id_tag = "MedbayFoyer";
-	name = "Medbay";
-	req_access = null;
-	req_one_access = null
-	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/hallway)
 "qhs" = (
@@ -19374,18 +19298,9 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/command/bridge)
 "qjp" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/weapon/surgical/bonesetter,
-/obj/item/weapon/surgical/bone_clamp{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/weapon/surgical/bonegel,
-/obj/item/weapon/surgical/FixOVein,
-/obj/item/weapon/surgical/cautery,
 /obj/effect/spider/stickyweb,
-/turf/simulated/floor/tiled/freezer,
-/area/awaymission/snowfield/medical/surgery)
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/snowfield/medical/patients)
 "qjJ" = (
 /obj/machinery/button/remote/blast_door{
 	id = "snowfield emergency bunk";
@@ -19733,7 +19648,7 @@
 "qww" = (
 /obj/structure/table/reinforced,
 /obj/machinery/button/remote/blast_door{
-	id = "englockdown";
+	id = "snowfieldenglockdown";
 	name = "Engineering Lockdown";
 	pixel_x = -5;
 	req_access = null;
@@ -19743,7 +19658,7 @@
 	dir = 1
 	},
 /obj/machinery/button/remote/blast_door{
-	id = "snowfieldenglockdown";
+	id = "snowfieldengroomlockdown";
 	name = "Engine Room Lockdown";
 	pixel_x = 5;
 	req_one_access = list(1,10)
@@ -19969,7 +19884,6 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/obj/effect/spider/stickyweb,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/power/apc{
 	dir = 4;
@@ -20766,10 +20680,13 @@
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/dorms/dorm11)
 "rvf" = (
-/obj/structure/catwalk,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
 /obj/effect/spider/stickyweb,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/awaymission/snowfield/medical/storage_room)
+/turf/simulated/floor/tiled/techfloor,
+/area/awaymission/snowfield/engineering/hallway)
 "rvN" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -21020,7 +20937,6 @@
 /obj/item/weapon/storage/firstaid/fire,
 /obj/structure/window/reinforced,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/medical/storage_room)
 "rMo" = (
@@ -21079,6 +20995,7 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/door_assembly/door_assembly_sec,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/lobby)
 "rPn" = (
@@ -21236,7 +21153,7 @@
 /obj/machinery/door/airlock/glass_medical{
 	name = "Medbay Equipment";
 	req_access = null;
-	req_one_access = list1,5)
+	req_one_access = list(1,5)
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/storage_room)
@@ -21615,7 +21532,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/window/brigdoor/eastright{
-	id = Cell3;
+	id = "cell3";
 	name = "Cell 3";
 	req_access = null;
 	req_one_access = list(2,4)
@@ -22299,12 +22216,6 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/awaymission/snowfield/dorms/dorm2)
 "tfe" = (
-/obj/machinery/door/airlock/glass_medical{
-	id_tag = "MedbayFoyer";
-	name = "Medbay";
-	req_access = null;
-	req_one_access = null
-	},
 /obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 2;
@@ -22722,7 +22633,6 @@
 	pixel_x = 2;
 	pixel_y = 2
 	},
-/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/surgery)
 "tuW" = (
@@ -23290,14 +23200,16 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/hallway/northhallway)
 "tWH" = (
-/obj/effect/floor_decal/corner/green/diagonal,
-/obj/effect/floor_decal/corner/blue/diagonal{
-	dir = 4
+/obj/structure/catwalk,
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spider/stickyweb,
-/turf/simulated/floor/tiled/neutral,
-/area/awaymission/snowfield/medical/staff_room)
+/obj/structure/door_assembly/door_assembly_med,
+/turf/simulated/floor,
+/area/awaymission/snowfield/hallway/northhallway)
 "tXc" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 4
@@ -23347,11 +23259,8 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/engineering{
-	name = "Engineering Storage";
-	req_one_access = list(1,10)
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/engineering/primary_storage)
 "tYJ" = (
@@ -23681,7 +23590,6 @@
 /obj/machinery/vending/coffee{
 	dir = 1
 	},
-/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/staff_room)
 "ulH" = (
@@ -24314,14 +24222,10 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/hallway/northhallway)
 "uOQ" = (
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/door/airlock/security,
-/turf/simulated/floor/tiled/red,
-/area/awaymission/snowfield/security/hallway)
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/structure/door_assembly/door_assembly_sec,
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/snowfield/security/lobby)
 "uPe" = (
 /obj/structure/filingcabinet,
 /obj/effect/floor_decal/borderfloor{
@@ -24338,16 +24242,9 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/plating,
 /area/awaymission/snowfield/engineering/primary_storage)
-"uPI" = (
-/obj/effect/spider/stickyweb,
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/freezer,
-/area/awaymission/snowfield/engineering/restroom)
 "uQl" = (
 /obj/machinery/light_construct{
 	dir = 8
@@ -24366,12 +24263,6 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/steel_grid,
 /area/awaymission/snowfield/dorms/dorm1)
-"uRb" = (
-/obj/structure/catwalk,
-/mob/living/simple_mob/animal/giant_spider/webslinger,
-/obj/effect/spider/stickyweb,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/awaymission/snowfield/medical/storage_room)
 "uRd" = (
 /obj/machinery/vending/security{
 	description_fluff = "This security vending machine is kindly provided by the-... Sorry, how do you spell this company's name again?";
@@ -25059,7 +24950,6 @@
 /obj/structure/mirror{
 	pixel_y = 35
 	},
-/obj/effect/spider/stickyweb,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/engineering/restroom)
@@ -25134,7 +25024,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/blast/regular{
-	id = "snowfieldenglockdown"
+	id = "snowfieldengroomlockdown"
 	},
 /turf/simulated/floor,
 /area/awaymission/snowfield/engineering/engine)
@@ -25268,12 +25158,6 @@
 /obj/effect/floor_decal/industrial/outline,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/medical_locker)
-"vCU" = (
-/obj/structure/table/rack/shelf/steel,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/effect/spider/stickyweb,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/awaymission/snowfield/medical/storage_room)
 "vCY" = (
 /turf/simulated/floor/tiled/red,
 /area/awaymission/snowfield/security/hallway)
@@ -25839,7 +25723,6 @@
 /obj/item/weapon/tank/air,
 /obj/item/clothing/mask/breath,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/medical/storage_room)
 "wac" = (
@@ -25978,7 +25861,6 @@
 /obj/item/weapon/storage/box/bodybags,
 /obj/item/weapon/storage/box/bodybags,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/medical/storage_room)
 "wfG" = (
@@ -26030,12 +25912,8 @@
 	pixel_y = 8
 	},
 /obj/item/weapon/surgical/surgicaldrill,
-/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/medical/surgery)
-"whO" = (
-/turf/simulated/mineral/floor/cave,
-/area/awaymission/snowfield/security/security_cell)
 "whW" = (
 /obj/machinery/computer/secure_data{
 	dir = 1
@@ -26290,6 +26168,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 10
 	},
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/patients)
 "wwj" = (
@@ -26678,7 +26557,7 @@
 	req_one_access = list(1,10)
 	},
 /obj/machinery/door/blast/regular{
-	id = "snowfieldenglockdown"
+	id = "snowfieldengroomlockdown"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/engineering/monitor_room)
@@ -26838,7 +26717,6 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/mob/living/simple_mob/animal/giant_spider/tunneler/frequent,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/firingrange)
 "wSz" = (
@@ -27265,7 +27143,7 @@
 /area/awaymission/snowfield/command/gateway)
 "xbT" = (
 /obj/effect/floor_decal/industrial/outline/grey,
-/obj/machinery/autolathe/armory,
+/obj/structure/table/steel_reinforced,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/heavy_armory)
 "xcE" = (
@@ -27828,11 +27706,6 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/public/cafeteria_restroom)
-"xtE" = (
-/obj/effect/spider/stickyweb,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/freezer,
-/area/awaymission/snowfield/engineering/restroom)
 "xtM" = (
 /obj/structure/table/steel_reinforced,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -38276,7 +38149,7 @@ bvS
 pZF
 oWf
 oWf
-cQZ
+osG
 pMX
 pMX
 bXH
@@ -38533,7 +38406,7 @@ bvf
 aMQ
 rff
 aWv
-vCU
+sRX
 rMl
 pMX
 pMX
@@ -38551,7 +38424,7 @@ sEL
 nKn
 sEL
 sEL
-oOl
+sEL
 aBn
 xIQ
 txs
@@ -38785,14 +38658,14 @@ vDF
 vDF
 nyy
 nyy
-oWq
+wUo
 oWf
 oWf
-kIH
-lxg
+bvS
+pZF
 oWf
-rvf
-cQZ
+oWf
+osG
 xod
 xod
 xod
@@ -38809,7 +38682,7 @@ hWV
 aBn
 bYx
 eyC
-xtE
+eyC
 aBn
 xIQ
 txs
@@ -39049,7 +38922,7 @@ jXb
 ybq
 ybW
 wWF
-vCU
+sRX
 mHh
 xod
 vjO
@@ -39067,7 +38940,7 @@ pEg
 aBn
 iHK
 eyC
-xtE
+sEL
 aBn
 hoT
 mZF
@@ -39301,14 +39174,14 @@ vDF
 vDF
 nyy
 nyy
-oWq
-uRb
+wUo
+oWf
 oWf
 jDy
 pZF
 oWf
-mKv
-cQZ
+oWf
+osG
 xod
 afc
 qrK
@@ -39582,7 +39455,7 @@ aBn
 cip
 ilY
 eyC
-xtE
+eyC
 eyC
 aBn
 kYw
@@ -39841,7 +39714,7 @@ aIt
 sEL
 eyC
 eyC
-xtE
+eyC
 aBn
 lcA
 xIh
@@ -40097,8 +39970,8 @@ uUw
 aBn
 aIt
 sEL
-xtE
-xtE
+eyC
+eyC
 eyC
 aBn
 ozF
@@ -40354,8 +40227,8 @@ vMb
 oUE
 aBn
 vtt
-uPI
-oOl
+nKn
+sEL
 qJL
 ndW
 aBn
@@ -40609,7 +40482,7 @@ qfq
 sHz
 xod
 pHG
-uUw
+fNR
 aBn
 aBn
 aBn
@@ -41130,7 +41003,7 @@ mui
 oUE
 oUE
 oUE
-mui
+rvf
 oUE
 gRj
 pHG
@@ -41895,10 +41768,10 @@ emW
 tQD
 jdk
 emW
-rim
+fGG
 slI
 fuU
-hqb
+oOl
 uYG
 meN
 rXj
@@ -42152,7 +42025,7 @@ tNE
 uaB
 fuU
 fuU
-uaB
+lxg
 fuU
 fuU
 auz
@@ -42664,14 +42537,14 @@ vUR
 oCc
 cJn
 uYG
-rim
+fGG
 emW
 kWO
 haJ
 emW
 lap
 bZx
-fuU
+mWF
 xzW
 uYG
 tkr
@@ -42916,15 +42789,15 @@ iVZ
 xIO
 xXJ
 iDx
-tWH
+nBM
 aOC
 vUR
 vHw
 cIk
 uYG
-emW
+kIH
 uKp
-emW
+kIH
 emW
 uaB
 fuU
@@ -43187,7 +43060,7 @@ rim
 emW
 rim
 rim
-fuU
+ngO
 veE
 uYG
 qxt
@@ -43699,7 +43572,7 @@ uYG
 rim
 uKp
 fhb
-rim
+fGG
 fuU
 rim
 jdk
@@ -43945,7 +43818,7 @@ vDF
 vUR
 vUR
 plr
-ngO
+xYW
 xYW
 tqN
 nBM
@@ -43960,7 +43833,7 @@ fhb
 fhb
 cri
 rim
-jdk
+mKv
 uPg
 haJ
 uYG
@@ -44202,7 +44075,7 @@ vDF
 vDF
 vUR
 vUR
-tqN
+cQZ
 dgL
 dgL
 tqN
@@ -46830,7 +46703,7 @@ jSi
 eYO
 jSi
 jSi
-uOQ
+oAu
 ohs
 bZn
 bZn
@@ -47333,7 +47206,7 @@ gHQ
 iiz
 vNa
 veK
-mTL
+tWH
 tSF
 inM
 fwr
@@ -47870,7 +47743,7 @@ tvg
 aaw
 xDT
 aBy
-fpL
+xPZ
 nBr
 oGm
 pgb
@@ -48077,7 +47950,7 @@ vDF
 vDF
 pgd
 pgd
-qjp
+hzb
 jKy
 xYD
 jKy
@@ -48090,7 +47963,7 @@ hMq
 hMq
 hVe
 rZS
-fGG
+hVe
 qID
 qyT
 gbn
@@ -48131,7 +48004,7 @@ aBy
 aBy
 rSH
 gWC
-cCl
+rSH
 bZn
 bZn
 bZn
@@ -48335,10 +48208,10 @@ vDF
 vDF
 pgd
 pgd
-mWF
+iNT
 kCk
 ePu
-oxs
+jKy
 uxq
 bcr
 kFL
@@ -48370,7 +48243,7 @@ uOb
 qqQ
 fwr
 aip
-cnp
+uOQ
 vII
 hMO
 qmj
@@ -48642,7 +48515,7 @@ aKI
 iUn
 raJ
 mmT
-puf
+cwI
 mJi
 mJi
 mJi
@@ -49120,11 +48993,11 @@ owy
 hMq
 hMq
 uiq
-fGG
+hVe
 rZS
 cdN
 qID
-qyT
+oWq
 fLg
 fLg
 fLg
@@ -49419,7 +49292,7 @@ uDJ
 cTE
 eUs
 tlT
-jtT
+cTE
 uqf
 faB
 uDJ
@@ -49643,7 +49516,7 @@ qID
 ahK
 xav
 sOl
-fLg
+qjp
 sOl
 oIi
 qID
@@ -49678,7 +49551,7 @@ xBH
 shT
 cTE
 cRx
-whO
+tlT
 cRx
 gYN
 ocr
@@ -50459,7 +50332,7 @@ ocr
 cQM
 bNc
 jje
-aiA
+rIV
 fMy
 ocr
 ocr
@@ -50962,7 +50835,7 @@ byc
 aMr
 mFz
 mFz
-owE
+mFz
 rIV
 rIV
 mfc
@@ -51228,7 +51101,7 @@ mFz
 fcB
 dFg
 mFz
-fnn
+mFz
 ocr
 ocr
 ocr

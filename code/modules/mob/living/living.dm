@@ -1040,6 +1040,8 @@
 	var/desired_scale_y = size_multiplier * icon_scale_y //VOREStation edit
 
 	// Now for the regular stuff.
+	if(offset_override) //CHOMPEdit
+		center_offset = 0 //CHOMPEdit
 	var/matrix/M = matrix()
 	M.Scale(desired_scale_x, desired_scale_y)
 	M.Translate(center_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1)) //CHOMPEdit
@@ -1285,7 +1287,7 @@
 
 /datum/component/character_setup/RegisterWithParent()
 	. = ..()
-	RegisterSignal(parent, COMSIG_MOB_CLIENT_LOGIN, .proc/create_mob_button)
+	RegisterSignal(parent, COMSIG_MOB_CLIENT_LOGIN, PROC_REF(create_mob_button))
 	var/mob/owner = parent
 	if(owner.client)
 		create_mob_button(parent)
@@ -1303,7 +1305,7 @@
 	var/datum/hud/HUD = user.hud_used
 	if(!screen_icon)
 		screen_icon = new()
-		RegisterSignal(screen_icon, COMSIG_CLICK, .proc/character_setup_click)
+		RegisterSignal(screen_icon, COMSIG_CLICK, PROC_REF(character_setup_click))
 	if(ispAI(user))
 		screen_icon.icon = 'icons/mob/pai_hud.dmi'
 		screen_icon.screen_loc = ui_acti

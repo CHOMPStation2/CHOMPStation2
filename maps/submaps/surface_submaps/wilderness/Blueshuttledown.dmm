@@ -567,6 +567,7 @@
 /obj/structure/table/steel,
 /obj/random/toolbox,
 /obj/effect/alien/weeds,
+/obj/item/clothing/suit/armor/pcarrier/blue/sol,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/Blackshuttledown)
 "bw" = (
@@ -603,6 +604,7 @@
 /area/submap/Blackshuttledown)
 "bA" = (
 /obj/machinery/door/airlock/glass,
+/obj/structure/simple_door/resin,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "bB" = (
@@ -619,6 +621,7 @@
 /area/submap/Blackshuttledown)
 "bD" = (
 /obj/machinery/door/airlock,
+/obj/structure/simple_door/resin,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "bE" = (
@@ -936,6 +939,11 @@
 	},
 /turf/simulated/floor/tiled/red,
 /area/submap/Blackshuttledown)
+"oi" = (
+/obj/effect/alien/weeds,
+/obj/effect/map_helper/no_phaseshift,
+/turf/simulated/floor/tiled/steel,
+/area/submap/Blackshuttledown)
 "so" = (
 /obj/structure/table/steel,
 /obj/random/toolbox,
@@ -1010,9 +1018,23 @@
 /obj/structure/alien/wall,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
+"Qz" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/alien/weeds,
+/obj/structure/simple_door/resin,
+/turf/simulated/floor/tiled/steel,
+/area/submap/Blackshuttledown)
 "Ri" = (
 /mob/living/simple_mob/humanoid/pirate/armored,
 /turf/simulated/floor/tiled/yellow,
+/area/submap/Blackshuttledown)
+"RP" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/alien/weeds,
+/obj/structure/simple_door/resin,
+/turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "TF" = (
 /obj/effect/floor_decal/borderfloor{
@@ -1020,6 +1042,13 @@
 	},
 /obj/effect/alien/weeds,
 /obj/structure/alien/wall,
+/turf/simulated/floor/tiled/steel,
+/area/submap/Blackshuttledown)
+"Ue" = (
+/obj/structure/table/woodentable,
+/obj/random/projectile,
+/obj/random/maintenance/security,
+/obj/item/clothing/suit/armor/pcarrier/blue/sol,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "Vz" = (
@@ -1040,6 +1069,7 @@
 /obj/structure/table/steel,
 /obj/random/projectile,
 /obj/effect/alien/weeds,
+/obj/item/clothing/suit/armor/pcarrier/blue/sol,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 
@@ -1430,8 +1460,8 @@ aj
 ci
 ci
 ci
-aL
-aT
+Qz
+RP
 ci
 ci
 ci
@@ -1579,7 +1609,7 @@ aR
 bh
 bI
 ct
-ct
+oi
 bI
 bF
 aR
@@ -1845,7 +1875,7 @@ ci
 bl
 cl
 bl
-cl
+Ue
 aj
 ab
 ab

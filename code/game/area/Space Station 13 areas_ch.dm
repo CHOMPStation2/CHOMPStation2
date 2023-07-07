@@ -124,5 +124,9 @@
 	icon_state = "blue"
 	requires_power = 0
 	limit_dark_respite = TRUE
+	limit_mob_size = FALSE
 	ambience = AMBIENCE_OTHERWORLDLY
 	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | BLUE_SHIELDED
+
+/area/security/nuke_storage
+	flags = PHASE_SHIELDED

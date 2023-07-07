@@ -40,7 +40,14 @@
 /datum/gear_tweak/color/tweak_item(var/obj/item/I, var/metadata)
 	if(valid_colors && !(metadata in valid_colors))
 		return
-	I.color = metadata
+	//CHOMPEdit start
+	if(!metadata || (metadata == "#ffffff"))
+		return
+	if(istype(I))
+		I.add_atom_colour(metadata, FIXED_COLOUR_PRIORITY)
+	else
+		I.color = metadata		// fuck off underwear
+	//CHOMPEdit end
 
 /*
 * Path adjustment

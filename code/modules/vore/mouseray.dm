@@ -11,6 +11,7 @@
 	origin_tech = list(TECH_BLUESPACE = 4)
 	battery_lock = 1
 	firemodes = list()
+	force = 0 //CHOMPEdit
 	var/tf_type = /mob/living/simple_mob/animal/passive/mouse	//This type is what kind of mob it will try to turn people into!
 	var/cooldown = 0											//automatically set when used
 	var/cooldown_time = 15 SECONDS								//the amount of time between shots
@@ -248,6 +249,7 @@
 	new_mob.vore_smell = vore_smell
 	new_mob.nutrition_message_visible = nutrition_message_visible
 	new_mob.allow_spontaneous_tf = allow_spontaneous_tf
+	new_mob.eating_privacy_global = eating_privacy_global
 
 /////SUBTYPES/////
 
@@ -391,18 +393,18 @@
 		"space bear" = /mob/living/simple_mob/animal/space/bear,
 		"voracious lizard" = /mob/living/simple_mob/vore/aggressive/dino,
 		"giant frog" = /mob/living/simple_mob/vore/aggressive/frog,
-		"jelly blob" = /mob/living/simple_mob/animal/space/jelly,
-		"wolf" = /mob/living/simple_mob/animal/wolf,
-		"direwolf" = /mob/living/simple_mob/animal/wolf/direwolf,
+		"jelly blob" = /mob/living/simple_mob/vore/jelly,
+		"wolf" = /mob/living/simple_mob/vore/wolf,
+		"direwolf" = /mob/living/simple_mob/vore/wolf/direwolf,
 		"great wolf" = /mob/living/simple_mob/vore/greatwolf,
 		"sect queen" = /mob/living/simple_mob/vore/sect_queen,
 		"sect drone" = /mob/living/simple_mob/vore/sect_drone,
 		"panther" = /mob/living/simple_mob/vore/aggressive/panther,
 		"giant snake" = /mob/living/simple_mob/vore/aggressive/giant_snake,
 		"deathclaw" = /mob/living/simple_mob/vore/aggressive/deathclaw,
-		"otie" = /mob/living/simple_mob/otie,
-		"mutated otie" =/mob/living/simple_mob/otie/feral,
-		"red otie" = /mob/living/simple_mob/otie/red,
+		"otie" = /mob/living/simple_mob/vore/otie,
+		"mutated otie" =/mob/living/simple_mob/vore/otie/feral,
+		"red otie" = /mob/living/simple_mob/vore/otie/red,
 		"defanged xenomorph" = /mob/living/simple_mob/vore/xeno_defanged,
 		"catslug" = /mob/living/simple_mob/vore/alienanimals/catslug,
 		"teppi" = /mob/living/simple_mob/vore/alienanimals/teppi,
@@ -469,11 +471,11 @@
 
 /obj/item/weapon/gun/energy/mouseray/otie
 	name = "otie ray"
-	tf_type = /mob/living/simple_mob/otie
+	tf_type = /mob/living/simple_mob/vore/otie
 
 /obj/item/weapon/gun/energy/mouseray/direwolf
 	name = "dire wolf ray"
-	tf_type = /mob/living/simple_mob/animal/wolf/direwolf
+	tf_type = /mob/living/simple_mob/vore/wolf/direwolf
 
 /obj/item/weapon/gun/energy/mouseray/giantrat
 	name = "giant rat ray"

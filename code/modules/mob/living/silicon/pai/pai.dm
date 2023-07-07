@@ -26,7 +26,7 @@
 	var/obj/item/device/communicator/integrated/communicator	// Our integrated communicator.
 
 	var/chassis = "pai-repairbot"   // A record of your chosen chassis.
-	var/global/list/possible_chassis = list(
+	var/list/possible_chassis = list( //CHOMPEDIT: This doesnt need to be /Global/ and actually makes us unable to make unique children
 		"Drone" = "pai-repairbot",
 		"Cat" = "pai-cat",
 		"Mouse" = "pai-mouse",
@@ -36,6 +36,10 @@
 		"Parrot" = "pai-parrot",
 		"Rabbit" = "pai-rabbit",
 		//VOREStation Addition Start
+		"Dire wolf" = "pai-diredog",
+		"Horse (Lune)" = "pai-horse_lune",
+		"Horse (Soleil)" = "pai-horse_soleil",
+		"Dragon" = "pai-pdragon",
 		"Bear" = "pai-bear",
 		"Fennec" = "pai-fen",
 		"Type Zero" = "pai-typezero",
@@ -57,7 +61,7 @@
 		//VOREStation Addition End
 		)
 
-	var/global/list/possible_say_verbs = list(
+	var/list/possible_say_verbs = list( //CHOMPEDIT: This doesnt need to be /Global/ and actually makes us unable to make unique children
 		"Robotic" = list("states","declares","queries"),
 		"Natural" = list("says","yells","asks"),
 		"Beep" = list("beeps","beeps loudly","boops"),
@@ -500,7 +504,7 @@
 				if("Cancel")
 					return
 		else if (istype(W, /obj/item/weapon/card/id) && idaccessible == 0)
-			to_chat(user, "<span class='notice'>[src] is not accepting access modifcations at this time.</span>")
+			to_chat(user, "<span class='notice'>[src] is not accepting access modifications at this time.</span>")		// CHOMPEDIT : purdev (spelling fix)
 			return
 
 /mob/living/silicon/pai/verb/allowmodification()
