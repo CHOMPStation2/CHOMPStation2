@@ -347,7 +347,7 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 /datum/ticket/proc/LinkedReplyName(ref_src)
 	if(!ref_src)
 		ref_src = "\ref[src]"
-	return "<A HREF='?_src_=holder;ticket=[ref_src];ticket_action=reply'>[initiator_key_name]</A>"
+	return "<A HREF='?_src_=holder;ticket=[ref_src];[HrefToken(TRUE)];ticket_action=reply'>[initiator_key_name]</A>"
 
 //private
 /datum/ticket/proc/TicketHref(msg, ref_src, action = "ticket")
