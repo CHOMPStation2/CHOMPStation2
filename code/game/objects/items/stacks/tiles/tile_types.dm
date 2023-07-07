@@ -29,7 +29,7 @@
 	var/default_type = DEFAULT_WALL_MATERIAL
 
 	var/perunit = SHEET_MATERIAL_AMOUNT //ChompEDIT
-	ar/apply_colour //ChompEDIT
+	var/apply_colour //ChompEDIT
 
 
 /obj/item/stack/tile/Initialize()
