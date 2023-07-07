@@ -21,21 +21,16 @@
 	drop_sound = 'sound/items/drop/axe.ogg'
 	pickup_sound = 'sound/items/pickup/axe.ogg'
 
-<<<<<<< HEAD
-	var/datum/material/material						//CHOMPEDIT: Start, To make tiles have material variables
-	var/default_type = DEFAULT_WALL_MATERIAL
-	var/perunit = SHEET_MATERIAL_AMOUNT
-	var/apply_colour							//CHOMPEDIT: End
-=======
-//crafting / welding vars
+	//crafting / welding vars
 	var/datum/material/material //*sigh* i guess this is how we're doing this.
 	var/craftable = FALSE //set to TRUE for tiles you can craft stuff from directly, like grass
 	var/can_weld = FALSE //set to TRUE for tiles you can reforge into their components via welding, like metal
 	var/welds_into = /obj/item/stack/material/steel //what you get from the welding. defaults to steel.
 	var/default_type = DEFAULT_WALL_MATERIAL
 
+	var/perunit = SHEET_MATERIAL_AMOUNT //ChompEDIT
+	ar/apply_colour //ChompEDIT
 
->>>>>>> e047e89ba7... Merge pull request #14638 from VOREStation/upstream-merge-9002
 
 /obj/item/stack/tile/Initialize()
 	. = ..()
@@ -388,7 +383,4 @@
 	charge_costs = list(250)
 	stacktype = /obj/item/stack/tile/roofing
 	build_type = /obj/item/stack/tile/roofing
-<<<<<<< HEAD
-=======
 	can_weld = FALSE
->>>>>>> e047e89ba7... Merge pull request #14638 from VOREStation/upstream-merge-9002
