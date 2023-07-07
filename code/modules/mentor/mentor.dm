@@ -116,9 +116,6 @@ var/list/mentor_verbs_default = list(
 		to_chat(C, create_text_tag("mentor", "MENTOR:", C) + " <span class='mentor_channel'><span class='name'>[src]</span>: <span class='message'>[msg]</span></span>")
 
 /proc/mentor_commands(href, href_list, client/C)
-	if(C.holder) // CHOMPedit - Skip this because client is already admin
-		return
-
 	// CHOMPedit Start - Tickets System
 	if(href_list["ticket"])
 		var/ticket_ref = href_list["ticket"]
@@ -131,7 +128,6 @@ var/list/mentor_verbs_default = list(
 	if (href_list["tickets"])
 		GLOB.tickets.BrowseTickets(text2num(href_list["tickets"]))
 	// CHOMPedit End
-
 
 /datum/mentor/Topic(href, href_list)
 	..()
