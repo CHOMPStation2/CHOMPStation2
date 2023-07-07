@@ -192,7 +192,7 @@
 		return TOPIC_REFRESH
 
 	else if(href_list["bday_announce"])
-		pref.bday_announce = False //ChompEDIT - Disable this
+		pref.bday_announce = 0 //ChompEDIT - Disable this
 		return TOPIC_REFRESH
 
 	else if(href_list["spawnpoint"])
