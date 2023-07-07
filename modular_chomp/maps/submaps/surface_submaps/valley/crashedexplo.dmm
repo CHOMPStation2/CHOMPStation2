@@ -234,7 +234,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
 	frequency = 1380;
-	id_tag = "shuttle4_pump"
+	id_tag = "shuttle4_pump_crashpoi"
 	},
 /obj/machinery/light,
 /turf/simulated/shuttle/plating,
@@ -256,14 +256,14 @@
 "qn" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	frequency = 1380;
-	id_tag = "shuttle4_pump"
+	id_tag = "shuttle4_pump_crashpoi"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
 	},
 /obj/machinery/airlock_sensor{
 	frequency = 1380;
-	id_tag = "shuttle4_sensor";
+	id_tag = "shuttle4_sensor_crashpoi";
 	pixel_y = 28
 	},
 /turf/simulated/shuttle/plating,
@@ -367,7 +367,7 @@
 	},
 /obj/machinery/door/airlock/voidcraft/vertical{
 	frequency = 1380;
-	id_tag = "shuttle4_inner";
+	id_tag = "shuttle4_inner_crashpoi";
 	locked = 1;
 	name = "Internal Access"
 	},
@@ -442,7 +442,7 @@
 "zO" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
 	frequency = 1380;
-	id_tag = "shuttle4_outer";
+	id_tag = "shuttle4_outer_crashpoi";
 	locked = 1;
 	name = "External Access"
 	},
@@ -470,7 +470,7 @@
 "AE" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
 	icon_state = "door_locked";
-	id_tag = "expshuttle4_door_L";
+	id_tag = "expshuttle4_door_L_crashpoi";
 	locked = 1;
 	name = "shuttle side hatch"
 	},
@@ -480,7 +480,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/button/remote/airlock{
-	id = "expshuttle4_door_L";
+	id = "expshuttle4_door_L_crashpoi";
 	name = "Side Hatch Control";
 	pixel_y = -26;
 	specialfunctions = 4
@@ -497,7 +497,7 @@
 "AK" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	frequency = 1380;
-	id_tag = "shuttle4_pump"
+	id_tag = "shuttle4_pump_crashpoi"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
@@ -506,10 +506,10 @@
 	frequency = 1380;
 	id_tag = "shuttle4_shuttle_crashpoi";
 	pixel_y = 26;
-	tag_airpump = "shuttle4_pump";
-	tag_chamber_sensor = "shuttle4_sensor";
-	tag_exterior_door = "shuttle4_outer";
-	tag_interior_door = "shuttle4_inner"
+	tag_airpump = "shuttle4_pump_crashpoi";
+	tag_chamber_sensor = "shuttle4_sensor_crashpoi";
+	tag_exterior_door = "shuttle4_outer_crashpoi";
+	tag_interior_door = "shuttle4_inner_crashpoi"
 	},
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_x = -25;
@@ -674,7 +674,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
 	frequency = 1380;
-	id_tag = "shuttle4_pump"
+	id_tag = "shuttle4_pump_crashpoi"
 	},
 /obj/structure/closet/emcloset,
 /turf/simulated/shuttle/plating,
@@ -806,7 +806,7 @@
 /obj/machinery/button/remote/airlock{
 	desiredstate = 1;
 	dir = 4;
-	id = "expshuttle4_door_cargo";
+	id = "expshuttle4_door_cargo_crashpoi";
 	name = "Rear Hatch Control";
 	pixel_x = -26;
 	req_access = list(67);
@@ -819,7 +819,7 @@
 	},
 /obj/machinery/door/airlock/multi_tile/metal/mait{
 	icon_state = "door_locked";
-	id_tag = "expshuttle4_door_cargo";
+	id_tag = "expshuttle4_door_cargo_crashpoi";
 	locked = 1
 	},
 /obj/machinery/door/blast/regular,
@@ -833,7 +833,7 @@
 /obj/machinery/button/remote/airlock{
 	desiredstate = 1;
 	dir = 8;
-	id = "expshuttle4_door_cargo";
+	id = "expshuttle4_door_cargo_crashpoi";
 	name = "Rear Hatch Control";
 	pixel_x = 26;
 	req_access = list(67);
