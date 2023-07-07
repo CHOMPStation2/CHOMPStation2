@@ -256,8 +256,11 @@
 	explosion_resistance = 5
 	opacity = 0
 	glass = 1
+<<<<<<< HEAD
 	open_sound_powered = 'sound/machines/hall1o.ogg' //CHOMPEdit
 	close_sound_powered = 'sound/machines/hall1c.ogg' //CHOMPEdit
+=======
+>>>>>>> e047e89ba7... Merge pull request #14638 from VOREStation/upstream-merge-9002
 
 /obj/machinery/door/airlock/centcom
 	name = "Centcom Airlock"
@@ -381,7 +384,11 @@
 	close_sound_powered = 'sound/machines/door/hall1c.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	department_open_powered = 'sound/machines/door/sec1o.ogg'
 	department_close_powered = 'sound/machines/door/sec1c.ogg'
+<<<<<<< HEAD
 	security_level = 2	//VOREStation Additio
+=======
+	security_level = 2	//VOREStation Addition
+>>>>>>> e047e89ba7... Merge pull request #14638 from VOREStation/upstream-merge-9002
 
 /obj/machinery/door/airlock/glass_medical
 	name = "Medical Airlock"
@@ -1002,9 +1009,14 @@ About the new airlock wires panel:
 		..(user)
 	return
 
+<<<<<<< HEAD
 /* // CHOMPEDIT: disabling becaue alt-clicking to view a turf is pretty important.
 /obj/machinery/door/airlock/AltClick(mob/user as mob)
 		 
+=======
+/obj/machinery/door/airlock/AltClick(mob/user as mob)
+	. = ..()
+>>>>>>> e047e89ba7... Merge pull request #14638 from VOREStation/upstream-merge-9002
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if(!Adjacent(user))
 		return
@@ -1014,18 +1026,29 @@ About the new airlock wires panel:
 		if(icon_state == "door_closed" && arePowerSystemsOn())
 			flick("door_deny", src)
 		playsound(src, knock_hammer_sound, 50, 0, 3)
+<<<<<<< HEAD
 	else if(arePowerSystemsOn())
+=======
+	else if(arePowerSystemsOn() && user.a_intent == I_HELP)
+>>>>>>> e047e89ba7... Merge pull request #14638 from VOREStation/upstream-merge-9002
 		src.visible_message("[user] presses the door bell on \the [src].", "\The [src]'s bell rings.")
 		src.add_fingerprint(user)
 		if(icon_state == "door_closed")
 			flick("door_deny", src)
 		playsound(src, knock_sound, 50, 0, 3)
+<<<<<<< HEAD
 	else
+=======
+	else if(user.a_intent == I_HELP)
+>>>>>>> e047e89ba7... Merge pull request #14638 from VOREStation/upstream-merge-9002
 		src.visible_message("[user] knocks on \the [src].", "Someone knocks on \the [src].")
 		src.add_fingerprint(user)
 		playsound(src, knock_unpowered_sound, 50, 0, 3)
 	return
+<<<<<<< HEAD
 */	
+=======
+>>>>>>> e047e89ba7... Merge pull request #14638 from VOREStation/upstream-merge-9002
 
 /obj/machinery/door/airlock/tgui_act(action, params)
 	if(..())
@@ -1161,12 +1184,24 @@ About the new airlock wires panel:
 			if (stat & BROKEN)
 				to_chat(usr, "<span class='warning'>The panel is broken and cannot be closed.</span>")
 			else
+<<<<<<< HEAD
 				src.p_open = 0
 				playsound(src, C.usesound, 50, 1)
 		else
 			src.p_open = 1
 			playsound(src, C.usesound, 50, 1)
 		src.update_icon()
+=======
+				src.p_open = FALSE
+				playsound(src, C.usesound, 50, 1)
+				src.update_icon()
+				return
+		else
+			src.p_open = TRUE
+			playsound(src, C.usesound, 50, 1)
+			src.update_icon()
+			return src.attack_hand(user)
+>>>>>>> e047e89ba7... Merge pull request #14638 from VOREStation/upstream-merge-9002
 	else if(C.is_wirecutter())
 		return src.attack_hand(user)
 	else if(istype(C, /obj/item/device/multitool))
@@ -1249,7 +1284,11 @@ About the new airlock wires panel:
 	..()
 
 /obj/machinery/door/airlock/set_broken()
+<<<<<<< HEAD
 	src.p_open = 1
+=======
+	src.p_open = TRUE
+>>>>>>> e047e89ba7... Merge pull request #14638 from VOREStation/upstream-merge-9002
 	stat |= BROKEN
 	if (secured_wires)
 		lock()

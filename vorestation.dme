@@ -2800,7 +2800,11 @@
 #include "code\modules\materials\materials\metals\steel_vr.dm"
 #include "code\modules\materials\materials\organic\animal_products.dm"
 #include "code\modules\materials\materials\organic\cloth.dm"
+<<<<<<< HEAD
 #include "code\modules\materials\materials\organic\cloth_ch.dm"
+=======
+#include "code\modules\materials\materials\organic\grass.dm"
+>>>>>>> e047e89ba7... Merge pull request #14638 from VOREStation/upstream-merge-9002
 #include "code\modules\materials\materials\organic\leather.dm"
 #include "code\modules\materials\materials\organic\resin.dm"
 #include "code\modules\materials\materials\organic\wood.dm"
