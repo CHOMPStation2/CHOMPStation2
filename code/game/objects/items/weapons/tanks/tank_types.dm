@@ -153,15 +153,15 @@
 /obj/item/weapon/tank/emergency/oxygen/double
 	name = "double emergency oxygen tank"
 	icon_state = "emergency_double"
-	gauge_icon = "indicator_double"
-	volume = 12 		// CHOMP EDIT Double Expanded
+	gauge_icon = "indicator_double"			// CHOMP EDIT proper gauge icon
+	volume = 12 					// CHOMP EDIT Double Expanded
 
 /obj/item/weapon/tank/stasis/oxygen // Stasis bags need to have initial pressure within safe bounds for human atmospheric pressure (NOT breath pressure)
 	name = "stasis oxygen tank"
 	desc = "Oxygen tank included in most stasis bag designs."
-	icon = 'icons/obj/tank_ch.dmi'			// CHOMP EDIT Adds a unique icon to the oxygen tank in stasis bags.
-	icon_state = "stasis_oxygen"
-	gauge_icon = "indicator_stasis"
+	icon = 'icons/obj/tank_ch.dmi'			// CHOMP ADD Adds a unique icon to the oxygen tank in stasis bags.
+	icon_state = "stasis_oxygen"			// CHOMP ADD
+	gauge_icon = "indicator_stasis"			// CHOMP ADD
 	volume = 10
 
 /obj/item/weapon/tank/stasis/oxygen/Initialize()
@@ -222,9 +222,9 @@
 /obj/item/weapon/tank/stasis/nitro_cryo // Synthmorph bags need to have initial pressure within safe bounds for human atmospheric pressure, but low temperature to stop unwanted degredation.
 	name = "stasis cryogenic nitrogen tank"
 	desc = "Cryogenic Nitrogen tank included in most synthmorph bag designs."
-	icon = 'icons/obj/tank_ch.dmi'		// CHOMP EDIT Adds a stasis sprite unique to this icon.
-	icon_state = "stasis_nitrogen"
-	gauge_icon = "indicator_stasis"
+	icon = 'icons/obj/tank_ch.dmi'		// CHOMP ADD Adds a stasis sprite unique to this icon.
+	icon_state = "stasis_nitrogen"		// CHOMP ADD
+	gauge_icon = "indicator_stasis"		// CHOMP ADD
 	volume = 10
 
 /obj/item/weapon/tank/stasis/nitro_cryo/Initialize()
