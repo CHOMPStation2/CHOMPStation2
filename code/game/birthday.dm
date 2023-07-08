@@ -20,7 +20,7 @@
 		msg = "Today is your birthday! Do you want to increase your character's listed age?"
 		/* //Chomp DISABLE - Absolutely not.
 		if(client.prefs.bday_announce)
-			var/list/sounds = list('sound/voice/BIRTH1.ogg','sound/voice/BIRTH2.ogg')
+			var/list/sounds = list('sound/voice/BIRTH.ogg')
 			var/oursound = pickweight(sounds)
 			command_announcement.Announce("Confirmed presence of BIRTHDAY aboard the station! It is [src.real_name]'s birthday or similar sort of celebration, name day, hatchday, WHATEVER! We encourage you to go find [src.real_name] and show them how we celebrate around here! Have a secure day!", "BIRTHDAY!", oursound)
 		*/ //Chomp DISABLE END
