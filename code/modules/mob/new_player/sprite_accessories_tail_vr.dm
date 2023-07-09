@@ -7,7 +7,7 @@
 */
 /datum/sprite_accessory/tail
 	name = "You should not see this..."
-	icon = 'icons/mob/vore/tails_vr.dmi
+	icon = 'icons/mob/vore/tails_vr.dmi'
 	var/offset_x = 0
 	var/offset_y = 0
 	var/mob_offset_x = 0
