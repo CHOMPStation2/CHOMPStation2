@@ -160,7 +160,7 @@
 					var/mob/living/L = user
 					swallow_whole = L.stuffing_feeder
 				if(swallow_whole)
-					belly_target = M.vore_selected
+					belly_target = tgui_input_list(user, "Choose Belly", "Belly Choice", M.feedable_bellies()) //CHOMPEdit
 
 				if(unconcious)
 					to_chat(user, "<span class='warning'>You can't feed [H] through \the [blocked] while they are unconcious!</span>")
@@ -227,7 +227,7 @@
 		var/swallow_whole = user.stuffing_feeder
 		var/obj/belly/belly_target
 		if(swallow_whole)
-			belly_target = M.vore_selected
+			belly_target = tgui_input_list(user, "Choose Belly", "Belly Choice", M.feedable_bellies())
 			if(!(M.feeding))
 				to_chat(user, "<span class='warning'>You can't feed [M] a whole [src] as they refuse to be fed whole things!</span>")
 				return
