@@ -3701,7 +3701,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/slice/oldpizza
 	name = "moldy pizza slice"
 	desc = "This used to be pizza..."
-	icon_state = "old_pizza"
+	icon_state = "oldpizzaslice"								// CHOMP EDIT For some reason this was set to old_pizza, which isn't a thing in the dmi (I guess nobody ever tried slicing it so nobody ever knew?)
 	filling_color = "#BAA14C"
 	bitesize = 2
 	center_of_mass = list("x"=16, "y"=13)
