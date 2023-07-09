@@ -229,10 +229,10 @@
 		if(swallow_whole)
 			belly_target = M.vore_selected
 			if(!(M.feeding))
-				to_chat(user, "<span class='warning'>You can't feed [H] a whole [src] as they refuse to be fed whole things!</span>")
+				to_chat(user, "<span class='warning'>You can't feed [M] a whole [src] as they refuse to be fed whole things!</span>")
 				return
 			if(!belly_target)
-				to_chat(user, "<span class='warning'>You can't feed [H] a whole [src] as they don't appear to have a belly to fit it!</span>")
+				to_chat(user, "<span class='warning'>You can't feed [M] a whole [src] as they don't appear to have a belly to fit it!</span>")
 				return
 			user.visible_message("<span class='danger'>[user] attempts to make [M] consume [src] whole into their [belly_target].</span>")
 			var/feed_duration = 3 SECONDS
