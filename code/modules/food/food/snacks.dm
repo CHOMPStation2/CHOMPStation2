@@ -77,7 +77,7 @@
 	if(canned && !user.incapacitated())
 		uncan(user)
 
-/obj/item/weapon/reagent_containers/food/snacks/attack(mob/living/M as mob, mob/user as mob, def_zone)
+/obj/item/weapon/reagent_containers/food/snacks/attack(mob/living/M as mob, mob/living/user as mob, def_zone) //CHOMPEdit
 	if(reagents && !reagents.total_volume)
 		to_chat(user, "<span class='danger'>None of [src] left!</span>")
 		user.drop_from_inventory(src)
