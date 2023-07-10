@@ -144,7 +144,7 @@
 	item_state_slots = list(slot_r_hand_str = "slippers", slot_l_hand_str = "slippers")
 
 /obj/item/clothing/shoes/laceup
-	name = "black oxford  shoes"
+	name = "black oxford shoes"
 	icon_state = "oxford_black"
 
 /obj/item/clothing/shoes/laceup/grey
@@ -248,3 +248,43 @@
 	desc = "A stylish, expensive pair of red sneakers."
 	icon_state = "sneakersred"
 	item_state = "sneakersred"
+
+// CHOMPedit start - Mech boots with hijacked clown shoes code.
+
+/obj/item/clothing/shoes/mech_shoes
+	name = "mech shoes"
+	desc = "Thud thud."
+	icon_state = "nothing"
+	armor = list(melee = 30, bullet = 10, laser = 10, energy = 15, bomb = 20, bio = 0, rad = 0) // Same as loadout jackboots.
+	siemens_coefficient = 0.7 // Same as loadout jackboots.
+	force = 2
+	var/footstep = 1 // Used for thuds while walking.
+	species_restricted = null
+
+/obj/item/clothing/shoes/mech_shoes/handle_movement(var/turf/walking, var/running)
+	if(running)
+		if(footstep >= 2)
+			footstep = 0
+			playsound(src, "mechstep", 15, 1) // Hopefully this won't be too annoying.
+		else
+			footstep++
+
+/obj/item/clothing/shoes/mech_shoes/light
+	name = "light mech shoes"
+	desc = "Thud thud, but quieter."
+
+/obj/item/clothing/shoes/mech_shoes/light/handle_movement(var/turf/walking, var/running)
+	if(running)
+		if(footstep >= 2)
+			footstep = 0
+			playsound(src, "powerloaderstep", 15, 1) // Hopefully this won't be too annoying.
+		else
+			footstep++
+
+// CHOMPedit end.
+
+/obj/item/clothing/shoes/ballet
+	name = "pointe shoes"
+	desc = "These shoes feature long lace straps and flattened off toes. Great for the most elegant of dances!"
+	icon_state = "ballet"
+	item_state = "ballet"

@@ -8,7 +8,7 @@
 	unity = TRUE
 	water_resist = 100 // Lets not kill the prommies
 	cores = 0
-	movement_cooldown = 2 //Chompedit to 2 from 3, Bring in line with Protean blob forms.
+	movement_cooldown = 0
 	//appearance_flags = RADIATION_GLOWS
 	shock_resist = 0 // Lets not be immune to zaps.
 	friendly = list("nuzzles", "glomps", "snuggles", "cuddles", "squishes") // lets be cute :3
@@ -68,6 +68,12 @@
 
 /mob/living/simple_mob/slime/promethean/Destroy()
 	humanform = null
+	drop_l_hand()
+	drop_r_hand()
+	mob_radio.forceMove(loc)
+	mob_radio = null
+	myid.forceMove(loc)
+	myid = null
 	vore_organs = null
 	vore_selected = null
 	set_light(0)
@@ -75,6 +81,8 @@
 
 /mob/living/carbon/human/Destroy()
 	if(stored_blob)
+		stored_blob.l_hand?.forceMove(loc) // CHHOMPedit - Make sure that stored_blob actually has the hand before trying to forceMove.
+		stored_blob.r_hand?.forceMove(loc) // CHHOMPedit - ^
 		stored_blob = null
 		qdel(stored_blob)
 	return ..()
@@ -91,6 +99,7 @@
 	adjustFireLoss(-0.2)
 	adjustCloneLoss(-0.2)
 	adjustBruteLoss(-0.2)
+	adjustHalLoss(-6) // HalLoss ticks down FAST
 //ChompAdd Ends
 	if(rad_glow)
 		rad_glow = CLAMP(rad_glow,0,250)
@@ -403,6 +412,7 @@
 	blob.ooc_notes = ooc_notes
 	blob.transforming = FALSE
 	blob.name = name
+	blob.real_name = real_name //CHOMPEdit
 	blob.nutrition = nutrition
 	blob.color = rgb(r_skin, g_skin, b_skin)
 	playsound(src.loc, "sound/effects/slime_squish.ogg", 15)
@@ -513,9 +523,9 @@
 		B.owner = src
 
 	//vore_organs.Cut()
-	
+
 //ChompEdit begin.  And let's drop them again.
-//	if(blob.prev_left_hand) put_in_l_hand(blob.prev_left_hand) 
+//	if(blob.prev_left_hand) put_in_l_hand(blob.prev_left_hand)
 //	if(blob.prev_right_hand) put_in_r_hand(blob.prev_right_hand)
 
 	if(blob.l_hand) blob.drop_from_inventory(blob.l_hand)

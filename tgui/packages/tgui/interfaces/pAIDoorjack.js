@@ -51,7 +51,8 @@ export const pAIDoorjack = (props, context) => {
                         average: [33, 67],
                         bad: [-Infinity, 33],
                       }}>
-                      <AnimatedNumber value={progress_a} />.<AnimatedNumber value={progress_b} />%
+                      <AnimatedNumber value={progress_a} />.
+                      <AnimatedNumber value={progress_b} />%
                     </ProgressBar>
                     <Button
                       icon="ban"

@@ -14,7 +14,7 @@
 
 	var/mat_efficiency = 1
 	var/speed = 1
-
+	var/list/LockedDesigns = list() //CHOMPADDITION: FOR VR mainly.
 	//VOREStation Edit - Broke this into lines
 	materials = list(
 		MAT_STEEL = 0,
@@ -123,7 +123,7 @@
 	if(busy)
 		to_chat(user, "<span class='notice'>\The [src] is busy. Please wait for completion of previous operation.</span>")
 		return 1
-	if(default_deconstruction_screwdriver(user, O))
+	if(!LAZYLEN(LockedDesigns) && default_deconstruction_screwdriver(user, O))//CHOMPADDITION Locked lathes are hard coded 
 		if(linked_console)
 			linked_console.linked_lathe = null
 			linked_console = null
@@ -168,9 +168,9 @@
 				materials[S.material.name] += amnt
 				S.use(1)
 				count++
-			to_chat(user, "You insert [count] [sname] into the fabricator.")
+			to_chat(user, "<span class='filter_notice'>You insert [count] [sname] into the fabricator.</span>")
 	else
-		to_chat(user, "The fabricator cannot hold more [sname].")
+		to_chat(user, "<span class='filter_notice'>The fabricator cannot hold more [sname].</span>")
 	busy = 0
 
 	var/stacktype = S.type
@@ -191,6 +191,11 @@
 	return
 
 /obj/machinery/r_n_d/protolathe/proc/canBuild(var/datum/design/D)
+	//CHOMPADDITION: LOCKED designs
+	for(var/datum/design/X in LockedDesigns)
+		if(X == D)
+			return 0
+	//CHOMPADDITION: LOCKED designs
 	for(var/M in D.materials)
 		if(materials[M] < (D.materials[M] * mat_efficiency))
 			return 0

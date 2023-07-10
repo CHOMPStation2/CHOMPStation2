@@ -1,16 +1,43 @@
-/datum/sprite_accessory/ears/alien_slug
+/*/datum/sprite_accessory/ears/alien_slug //Is now a base vorestation feature
 	name = "Alien slug ears"
 	desc = "The ears of a slug from space"
 	icon = 'icons/mob/vore/ears_ch.dmi'
 	icon_state = "alien_slug"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
-
+*/
 /datum/sprite_accessory/ears/zorgoia
 	name = "Zorgoia"
 	desc = "Ears only the slinkiest of noodles can have!"
 	icon = 'icons/mob/vore/ears_ch.dmi'
 	icon_state = "zorgoia"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/protogen
+	name = "Protogen"
+	desc = ""
+	icon = 'icons/mob/vore/ears_ch.dmi'
+	icon_state = "protogen"
+	extra_overlay = "protogen_fluff"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/miqote
+	name = "Miqo'te"
+	desc = ""
+	icon = 'icons/mob/vore/ears_ch.dmi'
+	icon_state = "miqote"
+	extra_overlay = "miqote_inner"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/fourears
+	name = "Four Ears"
+	desc = ""
+	icon = 'icons/mob/vore/ears_ch.dmi'
+	icon_state = "fourears"
+	extra_overlay = "fourears_fluff"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
@@ -154,3 +181,12 @@
 	extra_overlay = "goatflops_horn"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/shadekin/dualcolor
+	name = "Shadekin Ears (dual colorable)"
+	desc = ""
+	icon = 'icons/mob/vore/ears_ch.dmi'
+	icon_state = "shadekin"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "shadekin-under"

@@ -24,7 +24,7 @@
 	icon = 'icons/obj/props/telecube.dmi'
 	icon_state = "cube"
 	w_class = ITEMSIZE_SMALL
-	origin_tech = list(TECH_MATERIAL = 7, TECH_POWER = 6, TECH_BLUESPACE = 7, TECH_ANOMALY = 2, TECH_PRECURSOR = 2)
+	origin_tech = list(TECH_MATERIAL = 7, TECH_POWER = 6, TECH_BLUESPACE = 7, TECH_ARCANE = 2, TECH_PRECURSOR = 2)
 
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/precursor_a/telecube)
 
@@ -193,10 +193,10 @@
 /obj/item/weapon/telecube/proc/cooldown(var/mate_too = FALSE)
 	if(!ready)
 		return
-	
+
 	ready = FALSE
 	update_icon()
-	addtimer(CALLBACK(src, .proc/ready), cooldown_time)
+	addtimer(CALLBACK(src, PROC_REF(ready)), cooldown_time)
 	if(mate_too && mate)
 		mate.cooldown(mate_too = FALSE) //No infinite recursion pls
 

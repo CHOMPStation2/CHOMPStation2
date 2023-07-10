@@ -65,7 +65,7 @@
 
 /atom/movable/proc/has_large_resize_bounds()
 	var/area/A = get_area(src) //Get the atom's area to check for size limit.
-	return !A.limit_mob_size
+	return A ? !A.limit_mob_size : FALSE //CHOMPEdit
 
 /proc/is_extreme_size(size)
 	return (size < RESIZE_MINIMUM || size > RESIZE_MAXIMUM)
@@ -74,9 +74,14 @@
 /**
  * Resizes the mob immediately to the desired mod, animating it growing/shrinking.
  * It can be used by anything that calls it.
+ *
+ * Arguments:
+ * * new_size - CHANGE_ME.
+ * * animate - CHANGE_ME. Default: TRUE
+ * * uncapped - CHANGE_ME. Default: FALSE
+ * * ignore_prefs - CHANGE_ME. Default: FALSE
+ * * aura_animation - CHANGE_ME. Default: TRUE
  */
-
-
 /mob/living/proc/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = TRUE)
 	if(!uncapped)
 		new_size = clamp(new_size, RESIZE_MINIMUM, RESIZE_MAXIMUM)
@@ -245,9 +250,9 @@
 				tmob_message = tail.msg_owner_stepunder
 
 		if(src_message)
-			to_chat(src, STEP_TEXT_OWNER(src_message))
+			to_chat(src, "<span class='filter_notice'>[STEP_TEXT_OWNER(src_message)]</span>")
 		if(tmob_message)
-			to_chat(tmob, STEP_TEXT_PREY(tmob_message))
+			to_chat(tmob, "<span class='filter_notice'>[STEP_TEXT_PREY(tmob_message)]</span>")
 		return TRUE
 	return FALSE
 
@@ -280,7 +285,20 @@
 		return FALSE
 
 	var/mob/living/carbon/human/prey = tmob
-	if(!istype(prey))
+	var/can_pass = TRUE
+	var/size_ratio_needed = (a_intent == I_DISARM || a_intent == I_HURT) ? 0.75 : (a_intent == I_GRAB ? 0.5 : 0)
+	if (isturf(prey.loc))
+		for (var/atom/movable/M in prey.loc)
+			if (prey == M || pred == M)
+				continue
+			if (istype(M, /mob/living))
+				var/mob/living/L = M
+				if (!M.CanPass(src, prey.loc) && !(get_effective_size(FALSE) - L.get_effective_size(TRUE) >= size_ratio_needed || L.lying))
+					can_pass = FALSE
+				continue
+			if (!M.CanPass(src, prey.loc))
+				can_pass = FALSE
+	if(!istype(prey) || !can_pass)
 		//If they're not human, steppy shouldn't happen
 		return FALSE
 
@@ -396,7 +414,7 @@
 	set category = "IC"
 
 	pickup_active = !pickup_active
-	to_chat(src, "You will [pickup_active ? "now" : "no longer"] attempt to pick up mobs when clicking them with help intent.")
+	to_chat(src, "<span class='filter_notice'>You will [pickup_active ? "now" : "no longer"] attempt to pick up mobs when clicking them with help intent.</span>")
 
 #undef STEP_TEXT_OWNER
 #undef STEP_TEXT_PREY

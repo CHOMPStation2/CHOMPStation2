@@ -22,8 +22,8 @@
 	tail = "chimptail"
 	fire_icon_state = "monkey"
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
+	// male_scream_sound = null //CHOMPedit
+	// female_scream_sound = null //CHOMPedit
 
 	unarmed_types = list(/datum/unarmed_attack/bite, /datum/unarmed_attack/claws)
 	inherent_verbs = list(/mob/living/proc/ventcrawl)
@@ -69,6 +69,13 @@
 
 /datum/species/monkey/get_random_name()
 	return "[lowertext(name)] ([rand(100,999)])"
+
+/datum/species/monkey/handle_post_spawn(var/mob/living/carbon/human/H)//CHOMPadd begin
+	if(!H.ckey)
+		H.can_be_drop_prey = TRUE
+		H.digest_leave_remains = 1
+		H.low_priority = TRUE
+	return ..()//CHOMPadd end
 
 /datum/species/monkey/tajaran
 	name = SPECIES_MONKEY_TAJ

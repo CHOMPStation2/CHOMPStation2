@@ -7,6 +7,7 @@
 	icon_dead = "leopardmander-dead"
 	icon_living = "leopardmander"
 	icon_state = "leopardmander"
+	icon_rest = "leopardmander-rest"
 	faction = "neutral"
 	meat_amount = 40 //I mean...
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
@@ -40,14 +41,19 @@
 	vore_escape_chance = 50
 	vore_pounce_chance = 100
 	vore_active = 1
-	vore_icons = 4
+	vore_icons = 5
 	vore_capacity = 4
 	swallowTime = 100
 	vore_default_mode = DM_HEAL
 	vore_pounce_maxhealth = 125
 	vore_bump_emote = "tries to snap up"
-	
+
 	can_be_drop_prey = FALSE //CHOMP Add
+	// CHOMPAdd: :c
+	species_sounds = "Canine" // Argue about whether it should have canine or feline later
+	pain_emote_1p = list("yelp", "whine", "bark", "growl")
+	pain_emote_3p = list("yelps", "whines", "barks", "growls")
+	// CHOMPAdd End
 
 /datum/category_item/catalogue/fauna/leopardmander
 	name = "Sivian Fauna - Va'aen Drake"
@@ -68,6 +74,10 @@
 	verbs |= /mob/living/simple_mob/proc/animal_mount
 	verbs |= /mob/living/proc/toggle_rider_reins
 	movement_cooldown = 2
+	plane_holder.set_vis(VIS_CH_HEALTH_VR, 1)
+	plane_holder.set_vis(VIS_CH_ID, 1)
+	plane_holder.set_vis(VIS_CH_STATUS_R, 1)
+	plane_holder.set_vis(VIS_CH_BACKUP, 1)	//Makes sense for player Leppy's to be able to see health.
 
 /mob/living/simple_mob/vore/leopardmander/Initialize()
 	..()
@@ -119,6 +129,7 @@
 	icon_dead = "leopardmander_blue-dead"
 	icon_living = "leopardmander_blue"
 	icon_state = "leopardmander_blue"
+	icon_rest = "leopardmander_blue-rest"
 
 /mob/living/simple_mob/vore/leopardmander/exotic
 	name = "glass-belly leopardmander"
@@ -127,6 +138,7 @@
 	icon_dead = "leopardmander_exotic-dead"
 	icon_living = "leopardmander_exotic"
 	icon_state = "leopardmander_exotic"
+	icon_rest = "leopardmander_exotic-rest"
 
 	glow_toggle = TRUE //Glow!
 	glow_range = 2

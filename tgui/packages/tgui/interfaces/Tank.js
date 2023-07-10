@@ -28,7 +28,9 @@ export const Tank = (props, context) => {
             onClick={() => act("toggle")} />
         )}>
           <LabeledList>
-            <LabeledList.Item label="Mask Connected">{maskConnected ? 'Yes' : 'No'}</LabeledList.Item>
+            <LabeledList.Item label="Mask Connected">
+              {maskConnected ? 'Yes' : 'No'}
+            </LabeledList.Item>
           </LabeledList>
         </Section>
         <Section>

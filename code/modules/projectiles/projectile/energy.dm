@@ -131,6 +131,10 @@
 	combustion = FALSE
 	hud_state = "plasma_blast"
 
+/obj/item/projectile/energy/excavate/weak
+	damage = 15
+	excavation_amount = 100
+
 /obj/item/projectile/energy/dart
 	name = "dart"
 	icon_state = "toxin"
@@ -252,11 +256,13 @@
 		M.Weaken(2)
 		M.ear_damage += rand(1, 10)
 		M.ear_deaf = max(M.ear_deaf,15)
+		M.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
 	if (M.ear_damage >= 15)
 		to_chat(M, "<span class='danger'>Your ears start to ring badly!</span>")
 		if (prob(M.ear_damage - 5))
 			to_chat(M, "<span class='danger'>You can't hear anything!</span>")
 			M.sdisabilities |= DEAF
+			M.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
 	else
 		if (M.ear_damage >= 5)
 			to_chat(M, "<span class='danger'>Your ears start to ring!</span>")
@@ -282,30 +288,32 @@
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/monochrome_laser
 	hud_state = "plasma_sphere"
 
+/* ChompEdit, moving over to energy_ch.dm
 /obj/item/projectile/energy/phase
 	name = "phase wave"
 	icon_state = "phase"
-	range = 6
+	range = 13 //Chompedit This range was still awful
 	damage = 5
 	SA_bonus_damage = 45	// 50 total on animals
 	SA_vulnerability = list(SA_ANIMAL, MOB_CLASS_SYNTHETIC, MOB_CLASS_ABERRATION, MOB_CLASS_HUMANOID) //CHOMP Edit expand this list
 	hud_state = "laser_heat"
 
 /obj/item/projectile/energy/phase/light
-	range = 4
+	range = 11 //Chompedit This range was absolutely pathetic
 	SA_bonus_damage = 35	// 40 total on animals
 	hud_state = "laser_heat"
 
 /obj/item/projectile/energy/phase/heavy
-	range = 8
+	range = 16 //Chompedit This range was not great
 	SA_bonus_damage = 55	// 60 total on animals
 	hud_state = "laser_heat"
 
 /obj/item/projectile/energy/phase/heavy/cannon
-	range = 10
+	range = 20 //Chompedit This range was mediocre, but not worth a cannon.
 	damage = 15
 	SA_bonus_damage = 60	// 75 total on animals
 	hud_state = "laser_heat"
+*/
 
 /obj/item/projectile/energy/electrode/strong
 	agony = 70

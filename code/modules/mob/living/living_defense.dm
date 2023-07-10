@@ -101,14 +101,6 @@
 
 /mob/living/bullet_act(var/obj/item/projectile/P, var/def_zone)
 
-	//Being hit while using a deadman switch
-	if(istype(get_active_hand(),/obj/item/device/assembly/signaler))
-		var/obj/item/device/assembly/signaler/signaler = get_active_hand()
-		if(signaler.deadman && prob(80))
-			log_and_message_admins("has triggered a signaler deadman's switch")
-			src.visible_message("<font color='red'>[src] triggers their deadman's switch!</font>")
-			signaler.signal()
-
 	if(ai_holder && P.firer)
 		ai_holder.react_to_attack(P.firer)
 
@@ -265,6 +257,13 @@
 /mob/living/hitby(atom/movable/AM as mob|obj,var/speed = THROWFORCE_SPEED_DIVISOR)//Standardization and logging -Sieve
 	if(istype(AM,/obj/))
 		var/obj/O = AM
+		if(stat != DEAD && istype(O,/obj/item) && trash_catching && vore_selected) //CHOMPADD Start
+			var/obj/item/I = O
+			if(adminbus_trash || is_type_in_list(I,edible_trash) && I.trash_eatable && !is_type_in_list(I,item_vore_blacklist))
+				visible_message("<span class='warning'>[I] is thrown directly into [src]'s [lowertext(vore_selected.name)]!</span>")
+				I.throwing = 0
+				I.forceMove(vore_selected)
+				return //CHOMPADD End
 		var/dtype = O.damtype
 		var/throw_damage = O.throwforce*(speed/THROWFORCE_SPEED_DIVISOR)
 
@@ -274,10 +273,10 @@
 			miss_chance = max(15*(distance-2), 0)
 
 		if (prob(miss_chance))
-			visible_message("<font color='blue'>\The [O] misses [src] narrowly!</font>")
+			visible_message("<span class='notice'>\The [O] misses [src] narrowly!</span>")
 			return*/
 		//CHOMPEDIT - removing baymiss
-		src.visible_message("<font color='red'>[src] has been hit by [O].</font>")
+		src.visible_message("<span class='filter_warning'><font color='red'>[src] has been hit by [O].</font></span>")
 		var/armor = run_armor_check(null, "melee")
 		var/soaked = get_armor_soak(null, "melee")
 
@@ -304,7 +303,7 @@
 		if(O.throw_source && momentum >= THROWNOBJ_KNOCKBACK_SPEED)
 			var/dir = get_dir(O.throw_source, src)
 
-			visible_message("<font color='red'>[src] staggers under the impact!</font>","<font color='red'>You stagger under the impact!</font>")
+			visible_message("<span class='filter_warning'><font color='red'>[src] staggers under the impact!</font></span>","<span class='filter_warning'><font color='red'>You stagger under the impact!</font></span>")
 			src.throw_at(get_edge_target_turf(src,dir),1,momentum)
 
 			if(!O || !src) return
@@ -404,6 +403,7 @@
 		new/obj/effect/dummy/lighting_obj/moblight/fire(src)
 		throw_alert("fire", /obj/screen/alert/fire)
 		update_fire()
+		firesoundloop.start()
 
 /mob/living/proc/ExtinguishMob()
 	if(on_fire)
@@ -413,6 +413,7 @@
 			qdel(F)
 		clear_alert("fire")
 		update_fire()
+		firesoundloop.stop()
 
 	if(has_modifier_of_type(/datum/modifier/fire))
 		remove_modifiers_of_type(/datum/modifier/fire)
@@ -509,11 +510,12 @@
 	to_chat(src, span("critical", "You've been struck by lightning!"))
 
 // Called when touching a lava tile.
-// Does roughly 100 damage to unprotected mobs, and 20 to fully protected mobs.
+// Does roughly 70 damage (30 instantly, up to ~40 over time) to unprotected mobs, and 10 to fully protected mobs.
 /mob/living/lava_act()
-	add_modifier(/datum/modifier/fire/intense, 8 SECONDS) // Around 40 total if left to burn and without fire protection per stack.
-	inflict_heat_damage(40) // Another 40, however this is instantly applied to unprotected mobs.
-	adjustFireLoss(20) // Lava cannot be 100% resisted with fire protection.
+	adjust_fire_stacks(1)
+	add_modifier(/datum/modifier/fire/stack_managed/intense, 8 SECONDS) // Around 40 total if left to burn and without fire protection per stack.
+	inflict_heat_damage(20) // Another 20, however this is instantly applied to unprotected mobs.
+	adjustFireLoss(10) // Lava cannot be 100% resisted with fire protection.
 
 /mob/living/proc/reagent_permeability()
 	return 1

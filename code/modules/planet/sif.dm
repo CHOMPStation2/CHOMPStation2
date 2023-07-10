@@ -118,6 +118,7 @@ var/datum/planet/sif/planet_sif = null
 		WEATHER_RAIN		= new /datum/weather/sif/rain(),
 		WEATHER_STORM		= new /datum/weather/sif/storm(),
 		WEATHER_HAIL		= new /datum/weather/sif/hail(),
+		WEATHER_FOG			= new /datum/weather/sif/fog(),
 		WEATHER_BLOOD_MOON	= new /datum/weather/sif/blood_moon(),
 		WEATHER_EMBERFALL	= new /datum/weather/sif/emberfall(),
 		WEATHER_ASH_STORM	= new /datum/weather/sif/ash_storm(),
@@ -127,6 +128,7 @@ var/datum/planet/sif/planet_sif = null
 		WEATHER_CLEAR		= 30,
 		WEATHER_OVERCAST	= 30,
 		WEATHER_LIGHT_SNOW	= 20,
+		WEATHER_FOG			= 20,
 		WEATHER_SNOW		= 5,
 		WEATHER_BLIZZARD	= 5,
 		WEATHER_RAIN		= 5,
@@ -142,8 +144,9 @@ var/datum/planet/sif/planet_sif = null
 /datum/weather/sif/clear
 	name = "clear"
 	transition_chances = list(
-		WEATHER_CLEAR = 60,
-		WEATHER_OVERCAST = 40
+		WEATHER_CLEAR = 55,
+		WEATHER_OVERCAST = 35,
+		WEATHER_FOG = 10
 		)
 	transition_messages = list(
 		"The sky clears up.",
@@ -163,6 +166,7 @@ var/datum/planet/sif/planet_sif = null
 		WEATHER_CLEAR = 25,
 		WEATHER_OVERCAST = 50,
 		WEATHER_LIGHT_SNOW = 10,
+		WEATHER_FOG = 30,
 		WEATHER_SNOW = 5,
 		WEATHER_RAIN = 5,
 		WEATHER_HAIL = 5
@@ -184,9 +188,10 @@ var/datum/planet/sif/planet_sif = null
 	temp_low = 	258.15	// -15c
 	light_modifier = 0.7
 	transition_chances = list(
-		WEATHER_OVERCAST = 20,
-		WEATHER_LIGHT_SNOW = 50,
-		WEATHER_SNOW = 25,
+		WEATHER_OVERCAST = 10,
+		WEATHER_LIGHT_SNOW = 40,
+		WEATHER_FOG = 30,
+		WEATHER_SNOW = 15,
 		WEATHER_HAIL = 5
 		)
 	observed_message = "It is snowing lightly."
@@ -278,9 +283,10 @@ var/datum/planet/sif/planet_sif = null
 	effect_message = "<span class='warning'>Rain falls on you.</span>"
 
 	transition_chances = list(
-		WEATHER_OVERCAST = 25,
-		WEATHER_LIGHT_SNOW = 10,
-		WEATHER_RAIN = 50,
+		WEATHER_OVERCAST = 20,
+		WEATHER_LIGHT_SNOW = 5,
+		WEATHER_FOG = 20,
+		WEATHER_RAIN = 40,
 		WEATHER_STORM = 10,
 		WEATHER_HAIL = 5
 		)
@@ -294,7 +300,7 @@ var/datum/planet/sif/planet_sif = null
 /datum/weather/sif/rain/process_effects()
 	..()
 	for(var/mob/living/L as anything in living_mob_list)
-		if(L.z in holder.our_planet.expected_z_levels)
+		if(L?.z in holder.our_planet.expected_z_levels) // CHOMPedit Add a check that L has to be valid and not null
 			var/turf/T = get_turf(L)
 			if(!T.is_outdoors())
 				continue // They're indoors, so no need to rain on them.
@@ -341,7 +347,8 @@ var/datum/planet/sif/planet_sif = null
 		WEATHER_RAIN = 45,
 		WEATHER_STORM = 40,
 		WEATHER_HAIL = 10,
-		WEATHER_OVERCAST = 5
+		WEATHER_FOG = 3,
+		WEATHER_OVERCAST = 2
 		)
 
 /datum/weather/sif/storm/process_effects()
@@ -405,7 +412,7 @@ var/datum/planet/sif/planet_sif = null
 /datum/weather/sif/hail/process_effects()
 	..()
 	for(var/mob/living/carbon/H as anything in human_mob_list)
-		if(H.z in holder.our_planet.expected_z_levels)
+		if(H?.z in holder.our_planet.expected_z_levels) // CHOMPedit Add a check that L has to be valid and not null
 			var/turf/T = get_turf(H)
 			if(!T.is_outdoors())
 				continue // They're indoors, so no need to pelt them with ice.
@@ -437,6 +444,30 @@ var/datum/planet/sif/planet_sif = null
 			if(show_message)
 				to_chat(H, effect_message)
 
+/datum/weather/sif/fog
+	name = "fog"
+	icon_state = "fog"
+	wind_high = 1
+	wind_low = 0
+	light_modifier = 0.7
+
+	temp_high = T0C		// 0c
+	temp_low = 263.15	// -10c
+
+	transition_chances = list(
+		WEATHER_FOG = 70,
+		WEATHER_OVERCAST = 15,
+		WEATHER_LIGHT_SNOW = 10,
+		WEATHER_RAIN = 5
+		)
+	observed_message = "A fogbank has rolled over the region."
+	transition_messages = list(
+		"Fog rolls in.",
+		"Visibility falls as the air becomes dense.",
+		"The clouds drift lower, as if to smother the forests."
+	)
+	outdoor_sounds_type = /datum/looping_sound/weather/wind
+	indoor_sounds_type = /datum/looping_sound/weather/wind/indoors
 
 // These never happen naturally, and are for adminbuse.
 

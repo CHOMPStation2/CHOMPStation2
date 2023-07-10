@@ -13,6 +13,22 @@
 		/obj/item/clothing/suit/storage/vest/hoscoat/jensen/alt,
 		/obj/item/clothing/suit/storage/vest/hoscoat/jensen,
 		/obj/item/clothing/suit/storage/vest/hoscoat,
+		/obj/item/clothing/under/rank/neo_hos_red,
+		/obj/item/clothing/under/rank/neo_hos_red_skirt,
+		/obj/item/clothing/under/rank/neo_hos_blackred,
+		/obj/item/clothing/under/rank/neo_hos_blackred_skirt,
+		/obj/item/clothing/under/rank/neo_hos_parade,
+		/obj/item/clothing/under/rank/neo_hos_parade_fem,
+		/obj/item/clothing/under/rank/neo_hos_blue,
+		/obj/item/clothing/under/rank/neo_hos_blackblue,
+		/obj/item/clothing/under/rank/neo_hos_blackblue_skirt,
+		/obj/item/clothing/under/rank/neo_hos_parade_blue,
+		/obj/item/clothing/under/rank/neo_hos_parade_blue_fem,
+		/obj/item/clothing/under/rank/neo_hos_gorka,
+		/obj/item/clothing/suit/storage/toggle/labcoat/neo_hos_parade,
+		/obj/item/clothing/suit/storage/toggle/labcoat/neo_hosformal_blue,
+		/obj/item/clothing/suit/storage/vest/wardencoat/neo_armsco_trench,
+		/obj/item/clothing/head/helmet/HoS/hat/blue,
 		/obj/item/clothing/head/helmet/dermal,
 		/obj/item/device/radio/headset/heads/hos,
 		/obj/item/device/radio/headset/heads/hos/alt,
@@ -20,8 +36,10 @@
 		/obj/item/weapon/storage/belt/security,
 		/obj/item/clothing/accessory/holster/waist,
 		/obj/item/clothing/head/beret/sec/corporate/hos,
-		/obj/item/clothing/suit/storage/hooded/wintercoat/security,
+//		/obj/item/clothing/suit/storage/hooded/wintercoat/security, //CHOMP Remove
 		/obj/item/clothing/suit/storage/hooded/wintercoat/security/hos,
+		/obj/item/clothing/shoes/boots/winter/security,
+//CHOMP Add ^
 		/obj/item/clothing/mask/gas/half)
 
 /obj/structure/closet/secure_closet/hos2
@@ -46,9 +64,10 @@
 		/obj/item/weapon/gun/energy/x01,
 		/obj/item/weapon/cell/device/weapon,
 		/obj/item/weapon/melee/telebaton,
-		/obj/item/clothing/head/beret/sec/corporate/hos,
-		/obj/item/clothing/suit/storage/hooded/wintercoat/security,
-		/obj/item/clothing/shoes/boots/winter/security,
+//		/obj/item/clothing/head/beret/sec/corporate/hos, //CHOMP Remove
+//		/obj/item/clothing/suit/storage/hooded/wintercoat/security, //CHOMP Remove
+//		/obj/item/clothing/shoes/boots/winter/security, //CHOMP Remove
+		/obj/item/device/ticket_printer, //CHOMP Add
 		/obj/item/device/flashlight/maglight)
 
 //Custom NT Security Lockers, Only found at central command

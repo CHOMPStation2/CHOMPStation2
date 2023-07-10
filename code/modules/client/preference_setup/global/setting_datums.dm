@@ -157,6 +157,18 @@ var/list/_client_preferences_by_type
 	enabled_description = "Audible"
 	disabled_description = "Silent"
 
+/datum/client_preference/looping_alarms // CHOMPStation Add: Looping Alarms
+	description ="Looping Alarm Sounds"
+	key = "SOUND_ALARMLOOP"
+	enabled_description = "Audible"
+	disabled_description = "Silent"
+
+/datum/client_preference/fridge_hum // CHOMPStation Add: Misc Sounds
+	description ="Fridge Humming"
+	key = "SOUND_FRIDGEHUM"
+	enabled_description = "Audible"
+	disabled_description = "Silent"
+
 /datum/client_preference/old_door_sounds
 	description ="Old Door Sounds"
 	key = "SOUND_OLDDOORS"
@@ -369,6 +381,28 @@ var/list/_client_preferences_by_type
 	key = "SOUND_MENTORHELP"
 	enabled_description = "Hear"
 	disabled_description = "Silent"
+
+/datum/client_preference/player_tips
+	description = "Receive Tips Periodically"
+	key = "RECEIVE_TIPS"
+	enabled_description = "Enabled"
+	disabled_description = "Disabled"
+
+/datum/client_preference/pain_frequency
+	description = "Pain Messages Cooldown"
+	key = "PAIN_FREQUENCY"
+	enabled_by_default = FALSE
+	enabled_description = "Extended"
+	disabled_description = "Default"
+
+// CHOMPAdd
+/datum/client_preference/sleep_music
+	description = "Sleeping Music"
+	key = "SLEEP_MUSIC"
+	enabled_description = "Audible"
+	disabled_description = "Silent"
+// CHOMPAdd End
+
 
 /********************
 * Staff Preferences *

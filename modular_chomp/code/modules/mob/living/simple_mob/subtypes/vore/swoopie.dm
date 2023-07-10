@@ -15,28 +15,39 @@
 	vore_icon_bellies = list("stomach", "neck1", "neck2", "neck3", "neck4")
 	vore_icons = 0
 	vore_pounce_chance = 100
-	vore_pounce_maxhealth = 125
+	vore_pounce_maxhealth = 200
 	has_hands = TRUE
 	adminbus_trash = TRUE //You know what, sure whatever. It's not like anyone's gonna be taking this bird on unga trips to be their gamer backpack, which kinda was the main reason for the trash eater restrictions in the first place anyway.
 	faction = "neutral"
+	say_list_type = /datum/say_list/swoopie
+	ai_holder_type = /datum/ai_holder/simple_mob/retaliate
+	var/static/list/crew_creatures = list(	/mob/living/simple_mob/protean_blob,
+											/mob/living/simple_mob/slime/promethean)
+
+/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/IIsAlly(mob/living/L)
+	. = ..()
+	if(!.) // Outside the faction and not in friends, are they crew
+		return L?.type in crew_creatures
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/init_vore()
 	if(!voremob_loaded)
 		return
 	verbs |= /mob/living/proc/eat_trash
+	verbs |= /mob/living/proc/toggle_trash_catching
+	verbs |= /mob/living/proc/restrict_trasheater
 	var/obj/belly/B = new /obj/belly/(src)
 	B.affects_vore_sprites = TRUE
 	B.belly_sprite_to_affect = "stomach"
 	B.name = "Churno-Vac"
 	B.desc = "With an abrupt loud WHUMP after a very sucky trip through the hungry bot's vacuum tube, you finally spill out into its waste container, where everything the bot slurps off the floors ends up for swift processing among the caustic sludge, efficiently melting everything down into a thin slurry to fuel its form. More loose dirt and debris occasionally raining in from above as the bot carries on with its duties to keep the station nice and clean."
-	B.digest_messages_prey = list("Under the heat and internal pressure of the greedy machine&#39;s gutworks, you can feel the tides of the hot caustic sludge claiming the last bits of space around your body, a few more squeezes of the synthetic muscles squelching and glurking as your body finally loses its form, completely blending down and merging into the tingly sludge to fuel the mean machine.")
+	B.digest_messages_prey = list("Under the heat and internal pressure of the greedy machine's gutworks, you can feel the tides of the hot caustic sludge claiming the last bits of space around your body, a few more squeezes of the synthetic muscles squelching and glurking as your body finally loses its form, completely blending down and merging into the tingly sludge to fuel the mean machine.")
 	B.digest_mode = DM_DIGEST
 	B.item_digest_mode = IM_DIGEST
 	B.digest_burn = 3
 	B.fancy_vore = 1
 	B.vore_sound = "Stomach Move"
-	B.belly_fullscreen = "anim_belly"
-	B.belly_fullscreen_color = "#3e2f27"
+	B.belly_fullscreen = "VBO_trash"
+	B.belly_fullscreen_color = "#555B34"
 	B.sound_volume = 25
 	B.count_items_for_sprite = TRUE
 
@@ -113,14 +124,26 @@
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/Life()
 	. =..()
-	for(var/obj/belly/L in vore_organs) //Speedrun that autotransfer at 2s ticks instead of 6s
-		if(L.speedy_mob_processing)
-			L.process()
 	var/turf/T = get_turf(src)
 	if(istype(T))
 		for(var/obj/O in T)
 			if(O.clean_blood())
 				adjust_nutrition(1)
+			if(has_AI())
+				if(is_type_in_list(O, edible_trash) && !O.anchored)
+					put_in_active_hand(O)
+					break
+		if(has_AI())
+			var/obj/item/I = get_active_hand()
+			if(istype(I))
+				if(!voremob_loaded)
+					voremob_loaded = TRUE
+					init_vore()
+				eat_trash()
+				drop_item()
+			for(var/mob/living/simple_mob/animal/passive/mouse/M in T)
+				perform_the_nom(src,M,src,src.vore_selected,1)
+				break
 		if(istype(T, /turf/simulated))
 			var/turf/simulated/S = T
 			if(T.clean_blood())
@@ -128,3 +151,10 @@
 			if(S.dirt > 50)
 				S.dirt = 0
 				adjust_nutrition(1)
+
+/datum/say_list/swoopie
+	speak = list("Scanning for debris...", "Scanning for dirt...", "Scanning for pests...", "Squawk!")
+	emote_hear = list("squawks!", "whirrs idly.", "revs up its vacuum.")
+	emote_see = list("twitches.", "sways.", "stretches its neck.", "stomps idly.")
+	say_maybe_target = list("Pest detected?")
+	say_got_target = list("PEST DETECTED!")

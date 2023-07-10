@@ -10,6 +10,16 @@
 	desc = "A formal hat for SolGov Customs Officers."
 	icon_state = "customshat"
 
+/obj/item/clothing/head/halo
+	name = "halo"
+	desc = "a small metal ring, floating above it's wearer."
+	icon_state = "halo"
+
+/obj/item/clothing/head/headband/maid/modern
+	name = "modern maid headband"
+	desc = "Just like from my Japanese cartoons!"
+	icon_state = "maid_headband"
+
 /obj/item/clothing/head/pin
 	icon_state = "pin"
 	addblends = "pin_a"
@@ -192,7 +202,7 @@
 
 /obj/item/clothing/head/rabbitears
 	name = "rabbit ears"
-	desc = "Wearing these makes you looks useless, and only good for your sex appeal."
+	desc = "A pair of rabbit ears!" //CHOMPEDIT:weird description bgone
 	icon_state = "bunny"
 	body_parts_covered = 0
 

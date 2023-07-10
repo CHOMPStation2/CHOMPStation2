@@ -12,7 +12,7 @@
 
 /obj/structure/morgue
 	name = "morgue"
-	desc = "Used to keep bodies in untill someone fetches them."
+	desc = "A refrigerated unit used to store bodies, or for surreptitious naps."
 	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "morgue1"
 	dir = EAST
@@ -242,8 +242,8 @@ GLOBAL_LIST_BOILERPLATE(all_crematoriums, /obj/structure/morgue/crematorium)
 				A.forceMove(src.connected.loc)
 			src.connected.icon_state = "cremat"
 		else
-			//src.connected = null
 			qdel(src.connected)
+			src.connected = null //CHOMPEdit - Fix morgues breaking for a while with something solid in front of door.
 	src.add_fingerprint(user)
 	update()
 

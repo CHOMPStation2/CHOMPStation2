@@ -58,7 +58,8 @@ export const TelesciConsoleContent = (props, context) => {
       <NoticeBox info>
         {cooldown && (
           <Box>
-            Telepad is recharging. Please wait <AnimatedNumber value={cooldown} /> seconds.
+            Telepad is recharging. Please wait{' '}
+            <AnimatedNumber value={cooldown} /> seconds.
           </Box>
         ) || (
           <Box>

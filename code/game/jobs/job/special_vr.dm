@@ -98,7 +98,7 @@
 
 /datum/job/emergency_responder/get_access()
 	return get_all_accesses().Copy()
-
+/* CHOMPEDIT: Removing Clown/Mime job from being initialized at all (These are alt titles of Entertainer on our codebase)
 /datum/job/clown
 	title = "Clown"
 	flag = CLOWN
@@ -157,3 +157,4 @@
 		return list(access_maint_tunnels, access_entertainment, access_tomfoolery, access_mime)
 	else
 		return list(access_entertainment, access_tomfoolery, access_mime)
+*/ //CHOMPEDIT: END remove Mime/clown defines (These are alt titles of Entertainer on our codebase)

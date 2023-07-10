@@ -64,8 +64,8 @@ var/list/holder_mob_icon_cache = list()
 			location = "[H.loc.loc]'s [H.loc]"
 		else
 			location = "[H.loc]"
-
-		stat("Location", location)
+		if (location != "" && statpanel("Status"))
+			stat("Location", location)
 //CHOMPEdit End
 
 /obj/item/weapon/holder/Entered(mob/held, atom/OldLoc)
@@ -86,6 +86,7 @@ var/list/holder_mob_icon_cache = list()
 /obj/item/weapon/holder/Exited(atom/movable/thing, atom/OldLoc)
 	if(thing == held_mob)
 		held_mob.transform = original_transform
+		held_mob.update_transform() //VOREStation edit
 		held_mob.vis_flags = original_vis_flags
 		held_mob = null
 	..()
@@ -106,11 +107,14 @@ var/list/holder_mob_icon_cache = list()
 /obj/item/weapon/holder/proc/dump_mob()
 	if(!held_mob)
 		return
-	held_mob.transform = original_transform
-	held_mob.vis_flags = original_vis_flags
-	held_mob.forceMove(get_turf(src))
-	held_mob.reset_view(null)
-	held_mob = null
+	if (held_mob.loc == src || isnull(held_mob.loc)) //VOREStation edit
+		held_mob.transform = original_transform
+		held_mob.update_transform() //VOREStation edit
+		held_mob.vis_flags = original_vis_flags
+		held_mob.forceMove(get_turf(src))
+		held_mob.reset_view(null)
+		held_mob = null
+	invisibility = INVISIBILITY_ABSTRACT //VOREStation edit
 
 /obj/item/weapon/holder/throw_at(atom/target, range, speed, thrower)
 	if(held_mob)
@@ -328,6 +332,16 @@ var/list/holder_mob_icon_cache = list()
 			L.Stun(2)
 
 /obj/item/weapon/holder/attackby(obj/item/weapon/W as obj, mob/user as mob)
+	//CHOMPADDITION: MicroHandCrush
+	if(W == src && user.a_intent == I_HURT)
+		for(var/mob/living/M in src.contents)
+			if(user.size_multiplier > M.size_multiplier)
+				var/dam = (user.size_multiplier - M.size_multiplier)*(rand(2,5))
+				to_chat(user, "<span class='danger'>You roughly squeeze [M]!</span>")
+				to_chat(M, "<span class='danger'>You are roughly squeezed by [user]!</span>")
+				log_and_message_admins("[key_name(M)] has been harmsqueezed by [key_name(user)]")
+				M.apply_damage(dam)
+	//CHOMPADDITION: MicroHandCrush END
 	for(var/mob/M in src.contents)
 		M.attackby(W,user)
 

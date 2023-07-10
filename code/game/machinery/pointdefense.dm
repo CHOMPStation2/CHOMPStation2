@@ -138,8 +138,9 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	var/last_shot = 0
 	var/kill_range = 18
 	var/rotation_speed = 4.5 SECONDS  //How quickly we turn to face threats
-	var/weakref/engaging = null // The meteor we're shooting at
+	var/datum/weakref/engaging = null // The meteor we're shooting at
 	var/id_tag = null
+	var/fire_sounds = list('sound/weapons/frigate_turret/frigate_turret_fire1.ogg', 'sound/weapons/frigate_turret/frigate_turret_fire2.ogg', 'sound/weapons/frigate_turret/frigate_turret_fire3.ogg', 'sound/weapons/frigate_turret/frigate_turret_fire4.ogg') // CHOMPEdit: Pew
 
 /obj/machinery/pointdefense/Initialize()
 	. = ..()
@@ -197,7 +198,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 			return FALSE
 	return TRUE
 
-/obj/machinery/pointdefense/proc/Shoot(var/weakref/target)
+/obj/machinery/pointdefense/proc/Shoot(var/datum/weakref/target)
 	var/obj/effect/meteor/M = target.resolve()
 	if(!istype(M))
 		engaging = null
@@ -206,12 +207,13 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	var/Angle = round(Get_Angle(src,M))
 	var/matrix/rot_matrix = matrix()
 	rot_matrix.Turn(Angle)
-	addtimer(CALLBACK(src, .proc/finish_shot, target), rotation_speed)
+	addtimer(CALLBACK(src, PROC_REF(finish_shot), target), rotation_speed)
 	animate(src, transform = rot_matrix, rotation_speed, easing = SINE_EASING)
 
 	set_dir(ATAN2(transform.b, transform.a) > 0 ? NORTH : SOUTH)
 
-/obj/machinery/pointdefense/proc/finish_shot(var/weakref/target)
+/obj/machinery/pointdefense/proc/finish_shot(var/datum/weakref/target)
+
 	var/obj/machinery/pointdefense_control/PC = get_controller()
 	engaging = null
 	PC.targets -= target
@@ -221,10 +223,12 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	if(!istype(M))
 		return
 	//We throw a laser but it doesnt have to hit for meteor to explode
-	var/obj/item/projectile/beam/pointdefense/beam = new(get_turf(src))
-	playsound(src, 'sound/weapons/mandalorian.ogg', 75, 1)
+	var/obj/item/projectile/beam/coildefense/coil = new(get_turf(src))
+	playsound(src, fire_sounds, 75, 1, 40, pressure_affected = FALSE, ignore_walls = TRUE) // CHOMPEdit: Pew
 	use_power_oneoff(idle_power_usage * 10)
-	beam.launch_projectile(target = M.loc, user = src)
+	coil.launch_projectile(target = M.loc, user = src) // CHOMPEdit: Changing "beam" var to "coil" for the new coilgun type point defense turrets (to match the coilgun sprite and sfx names)
+	spawn(10)
+		playsound(src, fire_sounds, 75, 1, 40, pressure_affected = FALSE, ignore_walls = TRUE) // CHOMPEdit: Pew
 
 /obj/machinery/pointdefense/process()
 	..()
@@ -253,7 +257,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 
 	// Compile list of known targets
 	var/list/existing_targets = list()
-	for(var/weakref/WR in PC.targets)
+	for(var/datum/weakref/WR in PC.targets)
 		var/obj/effect/meteor/M = WR.resolve()
 		existing_targets += M
 
@@ -261,7 +265,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	var/list/potential_targets = GLOB.meteor_list.Copy() - existing_targets
 	for(var/obj/effect/meteor/M in potential_targets)
 		if(targeting_check(M))
-			var/weakref/target = weakref(M)
+			var/datum/weakref/target = WEAKREF(M)
 			PC.targets += target
 			engaging = target
 			Shoot(target)
@@ -270,7 +274,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	// Then, focus fire on existing targets
 	for(var/obj/effect/meteor/M in existing_targets)
 		if(targeting_check(M))
-			var/weakref/target = weakref(M)
+			var/datum/weakref/target = WEAKREF(M)
 			engaging = target
 			Shoot(target)
 			return

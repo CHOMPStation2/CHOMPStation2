@@ -9,6 +9,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 
 // Premade AI shell, for roundstart shells.
 /mob/living/silicon/robot/ai_shell/Initialize()
+	src.verbs |= /mob/living/silicon/robot/proc/transfer_shell_act //CHOMPEDIT: add sideloader
 	mmi = new /obj/item/device/mmi/inert/ai_remote(src)
 	post_mmi_setup()
 	return ..()
@@ -23,6 +24,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 	return
 
 /mob/living/silicon/robot/proc/make_shell()
+	src.verbs |= /mob/living/silicon/robot/proc/transfer_shell_act //CHOMPEDIT: add sideloader
 	shell = TRUE
 	braintype = "AI Shell"
 	SetName("[modtype] AI Shell [num2text(ident)]")
@@ -34,9 +36,93 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 	notify_ai(ROBOT_NOTIFICATION_AI_SHELL)
 	updateicon()
 
+//CHOMPADDITION: Ai shell sideloading
+/mob/living/silicon/robot/proc/transfer_shell_act()
+	set category = "Robot Commands"
+	set name = "Transfer to Shell"
+	transfer_shell()
+
+
+/mob/living/silicon/robot/proc/transfer_shell(var/mob/living/silicon/robot/target)
+	var/mob/living/silicon/ai/AI = mainframe
+	//relay AI
+	if(!config.allow_ai_shells)
+		to_chat(src, span("warning", "AI Shells are not allowed on this server. You shouldn't have this verb because of it, so consider making a bug report."))
+		return
+
+	if(incapacitated())
+		to_chat(src, span("warning", "You are incapacitated!"))
+		return
+
+	if(AI.lacks_power())
+		to_chat(src, span("warning", "Your core lacks power, wireless is disabled."))
+		return
+
+	if(AI.control_disabled)
+		to_chat(src, span("warning", "Wireless networking module is offline."))
+		return
+
+	var/list/possible = list()
+	for(var/mob/living/silicon/robot/R as anything in GLOB.available_ai_shells)
+		if(R != src && R.shell && !R.deployed && (R.stat != DEAD) && (!R.connected_ai || (R.connected_ai == AI) ) )	//VOREStation Edit: shell restrictions
+			if(istype(R.loc, /obj/machinery/recharge_station))	//Check Rechargers
+				var/obj/machinery/recharge_station/RS = R.loc
+				if(!(using_map.ai_shell_restricted && !(RS.z in using_map.ai_shell_allowed_levels)))	//Allow station borgs to be redeployed from Chargers.
+					possible += R
+
+			if(isbelly(R.loc))	//check belly space
+				var/obj/belly/B = R.loc
+				if(!(using_map.ai_shell_restricted && !(B.owner.z in using_map.ai_shell_allowed_levels)))	//No smuggling in borgs
+					possible += R
+
+			if(!(using_map.ai_shell_restricted && !(R.z in using_map.ai_shell_allowed_levels)))
+				possible += R
+
+	if(!LAZYLEN(possible))
+		to_chat(src, span("warning", "No usable AI shell beacons detected."))
+
+	if(LAZYLEN(possible) < 2)
+		target = possible[1]
+
+	if(!target || !(target in possible)) //If the AI is looking for a new shell, or its pre-selected shell is no longer valid
+		target = tgui_input_list(src, "Which body to control?", "Shell Choice", possible)
+
+
+	if(!target || target.stat == DEAD || target.deployed || !(!target.connected_ai || (target.connected_ai == AI) ) )
+		if(target)
+			to_chat(src, span("warning", "It is no longer possible to deploy to \the [target]."))
+		else
+			to_chat(src, span("notice", "Deployment aborted."))
+		return
+
+	else if(mind)
+		to_chat(src, span("notice", "Transferring Shell"))
+		deployed = FALSE
+		updateicon()
+		mainframe.teleop = null
+		mainframe.deployed_shell = null
+		SetName("[modtype] AI Shell [num2text(ident)]")
+		if(radio) //Return radio to normal
+			radio.recalculateChannels()
+		if(!QDELETED(camera))
+			camera.c_tag = real_name	//update the camera name too
+		if(mainframe.laws)
+			mainframe.laws.show_laws(mainframe) //Always remind the AI when switching
+		mainframe = null
+		soul_link(/datum/soul_link/shared_body, src, target)
+		AI.deployed_shell = target
+		target.deploy_init(AI)
+		if(src.client) //CHOMPADDITION: Resize shell based on our preffered size
+			target.resize(src.client.prefs.size_multiplier) //CHOMPADDITION: Resize shell based on our preffered size
+		mind.transfer_to(target)
+		teleop = target // So the AI 'hears' messages near its core.
+		target.post_deploy()
+//CHOMPADDITION END
+
 /mob/living/silicon/robot/proc/revert_shell()
 	if(!shell)
 		return
+	src.verbs -= /mob/living/silicon/robot/proc/transfer_shell_act //CHOMPEDIT: remove sideloader
 	undeploy()
 	shell = FALSE
 	GLOB.available_ai_shells -= src

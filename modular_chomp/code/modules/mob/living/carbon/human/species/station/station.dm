@@ -1,6 +1,10 @@
 //Any species commented out here must be made restricted elsewhere. They are kept here for easy reference of what we disabled.
 //Note that at the time of this PR we are simply disabling everything new to discuss keeping versus scrapping later.
 
+/datum/species
+	var/pain_verb_1p = list("shout", "growl", "grunt", "gasp")
+	var/pain_verb_3p = list("shouts", "growls", "grunts", "gasps")
+
 ///datum/species/zaddat
 //	spawn_flags = SPECIES_IS_RESTRICTED //Species has been enabled elsewhere.
 
@@ -44,6 +48,9 @@
 /datum/species/custom
 	digi_allowed = TRUE
 
+/datum/species/shapeshifter/promethean
+	digi_allowed = TRUE
+
 /datum/species/unathi
 	digi_allowed = TRUE
 	vore_belly_default_variant = "L"
@@ -72,3 +79,5 @@
 /datum/species/xenochimera
 	digi_allowed = TRUE
 
+/datum/species/protean
+	digi_allowed = TRUE

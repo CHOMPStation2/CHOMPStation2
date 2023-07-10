@@ -1,3 +1,10 @@
+/*
+
+CHOMPedit - This file has been excluded from the compilation.
+Reason: Replaced with "Tickets System". Main logic has been moved to: modular_chomp/modules/tickets/tickets.dm
+
+*/
+
 /client/var/datum/admin_help/current_ticket	//the current ticket the (usually) not-admin client is dealing with
 
 //CHOMPEdit Begin
@@ -279,6 +286,8 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	//send this msg to all admins
 
 	for(var/client/X in GLOB.admins)
+//		if(!check_rights(R_ADMIN, 0, X)) //CHOMP Remove let everyone hear the ahelp
+//			continue //CHOMP Remove let everyone hear the ahelp
 		if(X.is_preference_enabled(/datum/client_preference/holder/play_adminhelp_ping))
 			X << 'sound/effects/adminhelp.ogg'
 		window_flash(X)

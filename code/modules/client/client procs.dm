@@ -70,7 +70,7 @@
 
 	if(href_list["irc_msg"])
 		if(!holder && received_irc_pm < world.time - 6000) //Worse they can do is spam IRC for 10 minutes
-			to_chat(usr, "<span class='warning'>You are no longer able to use this, it's been more then 10 minutes since an admin on IRC has responded to you</span>")
+			to_chat(usr, "<span class='warning'>You are no longer able to use this, it's been more than 10 minutes since an admin on IRC has responded to you</span>")
 			return
 		if(mute_irc)
 			to_chat(usr, "<span class='warning'You cannot use this as your client has been muted from sending messages to the admins on IRC</span>")
@@ -186,8 +186,7 @@
 	GLOB.clients += src
 	GLOB.directory[ckey] = src
 
-	GLOB.ahelp_tickets.ClientLogin(src)
-	GLOB.mhelp_tickets.ClientLogin(src)
+	GLOB.tickets.ClientLogin(src) // CHOMPedit - Tickets System
 
 	//Admin Authorisation
 	holder = admin_datums[ckey]
@@ -231,6 +230,7 @@
 	if(holder)
 		add_admin_verbs()
 		admin_memo_show()
+		message_admins("Staff login: [key_name(src)]") // CHOMPEdit: Admin Login Notice //Edit2: This logs more than just admins so why not change it
 
 	// Forcibly enable hardware-accelerated graphics, as we need them for the lighting overlays.
 	// (but turn them off first, since sometimes BYOND doesn't turn them on properly otherwise)
@@ -279,8 +279,7 @@
 	if (mentorholder)
 		mentorholder.owner = null
 		GLOB.mentors -= src
-	GLOB.ahelp_tickets.ClientLogout(src)
-	GLOB.mhelp_tickets.ClientLogout(src)
+	GLOB.tickets.ClientLogout(src) // CHOMPedit - Tickets System
 	GLOB.directory -= ckey
 	GLOB.clients -= src
 	return ..()
@@ -457,7 +456,7 @@
 		src << browse('code/modules/asset_cache/validate_assets.html', "window=asset_cache_browser")
 
 		//Precache the client with all other assets slowly, so as to not block other browse() calls
-		addtimer(CALLBACK(GLOBAL_PROC, /proc/getFilesSlow, src, SSassets.preload, FALSE), 5 SECONDS)
+		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(getFilesSlow), src, SSassets.preload, FALSE), 5 SECONDS)
 
 /mob/proc/MayRespawn()
 	return 0

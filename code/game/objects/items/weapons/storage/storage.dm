@@ -237,7 +237,14 @@
 
 /obj/item/weapon/storage/proc/open(mob/user as mob)
 	if (use_sound)
-		playsound(src, src.use_sound, 50, 0, -5)
+	// Chomp edit
+		if(isbelly(user.loc))
+			var/obj/belly/B = user.loc
+			if(B.mode_flags & DM_FLAG_MUFFLEITEMS)
+				// Do nothing
+			else
+				playsound(src, src.use_sound, 50, 0, -5)
+	// Chomp edit end
 
 	orient2hud(user)
 	if(user.s_active)
@@ -855,12 +862,12 @@
 	plane = PLANE_PLAYER_HUD_ITEMS
 	layer = 0.1
 	alpha = 200
-	var/weakref/held_item
+	var/datum/weakref/held_item
 
 /atom/movable/storage_slot/New(newloc, obj/item/held_item)
 	ASSERT(held_item)
 	name += held_item.name
-	src.held_item = weakref(held_item)
+	src.held_item = WEAKREF(held_item)
 
 /atom/movable/storage_slot/Destroy()
 	held_item = null

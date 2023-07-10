@@ -13,6 +13,10 @@ var/global/list/traits_costs = list()		// Just path = cost list, saves time in c
 var/global/list/all_traits = list()			// All of 'em at once (same instances)
 var/global/list/active_ghost_pods = list()
 
+//Global vars for making the overmap_renamer subsystem.
+//Collects all instances by reference of visitable overmap objects of /obj/effect/overmap/visitable like the debris field.
+var/global/list/visitable_overmap_object_instances = list()
+
 var/global/list/sensorpreflist = list("Off", "Binary", "Vitals", "Tracking", "No Preference")
 
 // Used by the ban panel to determine what departments are offmap departments. All these share an 'offmap roles' ban.
@@ -510,7 +514,8 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 				SPECIES_DIONA,
 				SPECIES_ALRAUNE,
 				SPECIES_PROTEAN,
-				SPECIES_MONKEY,					//Exclude all monkey subtypes, to prevent abuse of it. They aren't,
+				/*
+				SPECIES_MONKEY,					//Exclude all monkey subtypes, to prevent abuse of it. They aren't, //CHOMPEDIT How about let preds have skeletons, people can do so much worse than this
 				SPECIES_MONKEY_TAJ,				//set to have remains anyway, but making double sure,
 				SPECIES_MONKEY_SKRELL,
 				SPECIES_MONKEY_UNATHI,
@@ -518,6 +523,7 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 				SPECIES_MONKEY_NEVREAN,
 				SPECIES_MONKEY_SERGAL,
 				SPECIES_MONKEY_VULPKANIN,
+				*/
 				SPECIES_XENO,					//Same for xenos,
 				SPECIES_XENO_DRONE,
 				SPECIES_XENO_HUNTER,
@@ -534,7 +540,7 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 				"Research Intern",
 				"Security Cadet",
 				"Jr. Cargo Tech",
-				"Jr. Explorer",
+				"Jr. Explorer", //CHOMP explo keep
 				"Server",
 				"Electrician",
 				"Barista")
@@ -561,7 +567,7 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 		all_traits[path] = instance
 
 	// Shakey shakey shake
-	sortTim(all_traits, /proc/cmp_trait_datums_name, associative = TRUE)
+	sortTim(all_traits, GLOBAL_PROC_REF(cmp_trait_datums_name), associative = TRUE)
 
 	// Split 'em up
 	for(var/traitpath in all_traits)
@@ -722,15 +728,15 @@ var/global/list/xenobio_gold_mobs_hostile = list(
 										/mob/living/simple_mob/vore/aggressive/dino,
 										/mob/living/simple_mob/vore/aggressive/dragon,
 										/mob/living/simple_mob/vore/aggressive/frog,
-										/mob/living/simple_mob/otie,
-										/mob/living/simple_mob/otie/red,
+										/mob/living/simple_mob/vore/otie,
+										/mob/living/simple_mob/vore/otie/red,
 										/mob/living/simple_mob/vore/aggressive/panther,
 										/mob/living/simple_mob/vore/aggressive/rat,
 										/mob/living/simple_mob/vore/aggressive/giant_snake,
 										/mob/living/simple_mob/vore/sect_drone,
 										/mob/living/simple_mob/vore/sect_queen,
 										/mob/living/simple_mob/vore/weretiger,
-										/mob/living/simple_mob/animal/wolf,
+										/mob/living/simple_mob/vore/wolf,
 										/mob/living/simple_mob/vore/xeno_defanged)
 
 var/global/list/xenobio_gold_mobs_bosses = list(
@@ -777,12 +783,13 @@ var/global/list/xenobio_gold_mobs_safe = list(
 										/mob/living/simple_mob/vore/fennix,
 										/mob/living/simple_mob/vore/hippo,
 										/mob/living/simple_mob/vore/horse,
-										/mob/living/simple_mob/animal/space/jelly,
+										/mob/living/simple_mob/vore/jelly,
 										/mob/living/simple_mob/vore/oregrub,
 										/mob/living/simple_mob/vore/oregrub/lava,
 										/mob/living/simple_mob/vore/rabbit,
 										/mob/living/simple_mob/vore/redpanda,
 										/mob/living/simple_mob/vore/sheep,
+										/mob/living/simple_mob/vore/squirrel,
 										/mob/living/simple_mob/vore/solargrub)
 
 var/global/list/xenobio_gold_mobs_birds = list(/mob/living/simple_mob/animal/passive/bird/black_bird,
@@ -852,6 +859,138 @@ var/global/list/xenobio_rainbow_extracts = list(
 										/obj/item/slime_extract/rainbow = 1)
 
 
+//// Wildlife lists
+//Listed by-type. Under each type are lists of lists that contain 'groupings' of wildlife. Sorted from 1 to 5 by threat level.
+
+var/global/list/event_wildlife_aquatic = list(
+										list(
+												list(/mob/living/simple_mob/animal/passive/fish/koi = 1,
+													 /mob/living/simple_mob/animal/passive/fish/pike = 2,
+													 /mob/living/simple_mob/animal/passive/fish/perch = 2,
+													 /mob/living/simple_mob/animal/passive/fish/salmon = 2,
+													 /mob/living/simple_mob/animal/passive/fish/trout = 2,
+													 /mob/living/simple_mob/animal/passive/fish/bass = 3),
+												list(/mob/living/simple_mob/animal/passive/fish/salmon = 1),
+												list(/mob/living/simple_mob/animal/passive/fish/perch = 1),
+												list(/mob/living/simple_mob/animal/passive/fish/trout = 1),
+												list(/mob/living/simple_mob/animal/passive/fish/bass = 1),
+												list(/mob/living/simple_mob/animal/passive/fish/pike = 1),
+												list(/mob/living/simple_mob/animal/passive/crab = 1)
+											),
+										list(
+												list(/mob/living/simple_mob/animal/sif/duck = 1),
+												list(/mob/living/simple_mob/animal/passive/fish/measelshark = 1),
+												list(/mob/living/simple_mob/vore/pakkun = 5,
+													 /mob/living/simple_mob/vore/pakkun/snapdragon = 1)
+											),
+										list(
+												list(/mob/living/simple_mob/animal/space/goose = 10,
+													 /mob/living/simple_mob/animal/space/goose/white = 1),
+												list(/mob/living/simple_mob/vore/alienanimals/space_jellyfish = 1)
+											),
+										list(
+												list(/mob/living/simple_mob/animal/sif/hooligan_crab = 1)
+											)
+										)
+
+var/global/list/event_wildlife_roaming = list(
+										list(
+												list(/mob/living/simple_mob/animal/passive/mouse/jerboa = 1,
+													 /mob/living/simple_mob/animal/passive/mouse/black = 2,
+													 /mob/living/simple_mob/animal/passive/mouse/brown = 2,
+													 /mob/living/simple_mob/animal/passive/mouse/gray = 2,
+													 /mob/living/simple_mob/animal/passive/mouse/white = 2,
+													 /mob/living/simple_mob/animal/passive/mouse/rat = 3),
+												list(/mob/living/simple_mob/animal/passive/bird/black_bird = 1,
+													 /mob/living/simple_mob/animal/passive/bird/azure_tit = 1,
+													 /mob/living/simple_mob/animal/passive/bird/european_robin = 1,
+													 /mob/living/simple_mob/animal/passive/bird/goldcrest = 1,
+													 /mob/living/simple_mob/animal/passive/bird/ringneck_dove = 1),
+												list(/mob/living/simple_mob/animal/passive/dog/corgi = 4,
+													 /mob/living/simple_mob/animal/passive/dog/corgi/puppy = 1),
+												list(/mob/living/simple_mob/vore/rabbit = 1),
+												list(/mob/living/simple_mob/vore/redpanda = 14,
+													 /mob/living/simple_mob/vore/redpanda/fae = 7,
+													 /mob/living/simple_mob/vore/redpanda/blue = 1),
+												list(/mob/living/simple_mob/animal/passive/cow = 1),
+												list(/mob/living/simple_mob/animal/passive/chicken = 4,
+													 /mob/living/simple_mob/animal/passive/chick = 1),
+												list(/mob/living/simple_mob/animal/passive/snake = 2,
+													 /mob/living/simple_mob/animal/passive/snake/red = 1,
+													 /mob/living/simple_mob/animal/passive/snake/python = 1)
+											),
+										list(
+												list(/mob/living/simple_mob/vore/horse/big = 7,
+													 /mob/living/simple_mob/vore/horse = 2),
+												list(/mob/living/simple_mob/vore/fennix = 1,
+													 /mob/living/simple_mob/vore/fennec = 4),
+												list(/mob/living/simple_mob/vore/bee = 1),
+												list(/mob/living/simple_mob/animal/passive/fox = 1),
+												list(/mob/living/simple_mob/vore/sheep = 3,
+													 /mob/living/simple_mob/animal/goat = 1),
+												list(/mob/living/simple_mob/vore/hippo = 1),
+												list(/mob/living/simple_mob/vore/alienanimals/dustjumper = 1),
+												list(/mob/living/simple_mob/vore/alienanimals/teppi = 1)
+											),
+										list(
+												list(/mob/living/simple_mob/vore/aggressive/frog = 1),
+												list(/mob/living/simple_mob/tomato = 1),
+												list(/mob/living/simple_mob/vore/wolf = 1),
+												list(/mob/living/simple_mob/vore/aggressive/dino = 1),
+												list(/mob/living/simple_mob/animal/space/bats = 1)
+											),
+										list(
+												list(/mob/living/simple_mob/animal/space/bear = 1),
+												list(/mob/living/simple_mob/vore/aggressive/deathclaw = 1),
+												list(/mob/living/simple_mob/vore/otie = 1),
+												list(/mob/living/simple_mob/vore/aggressive/panther = 1),
+												list(/mob/living/simple_mob/vore/aggressive/rat = 1),
+												list(/mob/living/simple_mob/vore/aggressive/giant_snake = 1),
+												list(/mob/living/simple_mob/vore/aggressive/corrupthound = 1)
+											)
+										)
+
+
+var/global/list/selectable_speech_bubbles = list(
+	"default",
+	"normal",
+	"slime",
+	"comm",
+	"machine",
+	"synthetic",
+	"synthetic_evil",
+	"cyber",
+	"ghost",
+	"slime_green",
+	"slime_yellow",
+	"slime_red",
+	"slime_blue",
+	"dark",
+	"plant",
+	"clown",
+	"fox",
+	"latte_fox",
+	"blue_fox",
+	"maus",
+	"wolf",
+	"red_panda",
+	"blue_panda",
+	"tentacles",
+	"heart",
+	"textbox",
+	"possessed",		// CHOMPEDIT : purdev (spelling changed <3)
+	"square",
+	"medical",
+	"medical_square",
+	"cardiogram",
+	"security",
+	"notepad",
+	"science",
+	"engineering",
+	"cargo")
+
+
+
 // AREA GENERATION AND BLUEPRINT STUFF BELOW HERE
 // typecacheof(list) and list() are two completely separate things, don't break!
 
@@ -879,7 +1018,7 @@ var/global/list/BUILDABLE_AREA_TYPES = list(
 //	/area/maintenance/groundbase/level1,
 //	/area/submap/groundbase/wilderness,
 //	/area/groundbase/mining,
-//	/area/offmap/aerostat/surface, 
+//	/area/offmap/aerostat/surface,
 //	/area/tether_away/beach,
 //	/area/tether_away/cave,
 )

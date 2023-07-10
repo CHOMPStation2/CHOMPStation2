@@ -4,6 +4,7 @@
 	name = "Stargazer"
 	warmup_time = 1
 	current_location = "stargazer_dock"
+	docking_controller_tag = "stargazer"
 	shuttle_area = /area/shuttle/stargazer
 	fuel_consumption = 2
 	move_direction = NORTH
@@ -25,8 +26,9 @@
 	name = "Baby_mammoth"
 	warmup_time = 5
 	current_location = "baby_mammoth_dock"
+	docking_controller_tag = "baby_mammoth"
 	shuttle_area = /area/shuttle/baby_mammoth
-	fuel_consumption = 5
+	fuel_consumption = 2
 	move_direction = NORTH
 
 /obj/effect/overmap/visitable/ship/landable/baby_mammoth
@@ -46,8 +48,9 @@
 	name = "Ursula"
 	warmup_time = 2
 	current_location = "ursula_dock"
+	docking_controller_tag = "ursula"
 	shuttle_area = /area/shuttle/ursula
-	fuel_consumption = 3
+	fuel_consumption = 2
 	move_direction = NORTH
 
 /obj/effect/overmap/visitable/ship/landable/ursula
@@ -67,6 +70,7 @@
 	name = "Needle"
 	warmup_time = 0
 	current_location = "needle_dock"
+	docking_controller_tag = "needle"
 	shuttle_area = /area/shuttle/needle
 	fuel_consumption = 1
 	move_direction = NORTH
@@ -88,6 +92,7 @@
 	name = "Echidna"
 	warmup_time = 4
 	current_location = "echidna_dock"
+	docking_controller_tag = "echidna"
 	shuttle_area = /area/shuttle/echidna
 	fuel_consumption = 2
 	move_direction = NORTH

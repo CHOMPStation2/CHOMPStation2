@@ -55,15 +55,15 @@
 
 /obj/item/weapon/reagent_containers/glass/beaker/vial/androrovir
 	name = "vial (androrovir)"
-	prefill = list("androrovir" = 1)
+	prefill = list("change_drug_male" = 1) //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/glass/beaker/vial/gynorovir
 	name = "vial (gynorovir)"
-	prefill = list("gynorovir" = 1)
+	prefill = list("change_drug_female" = 1) //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/glass/beaker/vial/androgynorovir
 	name = "vial (androgynorovir)"
-	prefill = list("androgynorovir" = 1)
+	prefill = list("change_drug_intersex" = 1) //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/glass/beaker/vial/macrocillin
 	name = "vial (macrocillin)"

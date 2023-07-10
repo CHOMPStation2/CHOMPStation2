@@ -18,6 +18,7 @@
 #define Z_LEVEL_OFFMAP1						17
 #define Z_LEVEL_GATEWAY						18
 #define Z_LEVEL_OM_ADVENTURE				19
+#define Z_LEVEL_REDGATE						20
 
 //Camera networks
 #define NETWORK_HALLS "Halls"
@@ -40,8 +41,8 @@
 
 	use_overmap = TRUE
 	overmap_z = Z_LEVEL_MISC
-	overmap_size = 25
-	overmap_event_areas = 15
+	overmap_size = 62
+	overmap_event_areas = 100
 	usable_email_tlds = list("virgo.nt")
 
 	zlevel_datum_type = /datum/map_z_level/groundbase
@@ -228,6 +229,13 @@
 		list("Grass Cave")
 		)
 
+	lateload_redgate = list(
+		list("Teppi Ranch"),
+		list("Innland"),
+		list("Abandoned Island"),
+		list("Dark Adventure")
+		)
+
 	lateload_gb_north = list(
 		list("Northern Wilds 1"),
 		list("Northern Wilds 2")
@@ -340,7 +348,7 @@
 	skybox_pixel_x = 0
 	skybox_pixel_y = 0
 
-	initial_generic_waypoints = list("groundbase", "gb_excursion_pad")
+	initial_generic_waypoints = list("groundbase", "gb_excursion_pad","omship_axolotl")
 	initial_restricted_waypoints = list()
 
 	extra_z_levels = list(

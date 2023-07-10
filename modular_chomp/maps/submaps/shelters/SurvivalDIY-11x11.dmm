@@ -178,9 +178,7 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/SurvivalDIY_11x11)
 "t" = (
-/obj/vehicle/train/engine/quadbike/built{
-	dir = 4
-	},
+/obj/vehicle/train/engine/quadbike/built,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/SurvivalDIY_11x11)
 "u" = (
@@ -196,7 +194,7 @@
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
 /obj/item/weapon/reagent_containers/food/snacks/sosjerky,
 /obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
 /obj/item/weapon/material/knife/tacknife/survival,
 /obj/item/clothing/accessory/permit/gun,
 /obj/item/device/camera,
@@ -321,8 +319,8 @@
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
-/obj/item/weapon/gun/energy/locked/frontier/carbine,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
+/obj/item/weapon/gun/energy/locked/phasegun,
 /obj/item/weapon/cell/device/weapon{
 	pixel_x = -2;
 	pixel_y = -2

@@ -58,10 +58,10 @@
 		..()
 
 /datum/category_item/catalogue/anomalous/precursor_a/alien_wirecutters
-	name = "Precursor Alpha Object - Wire Seperator"
+	name = "Precursor Alpha Object - Wire Separator"
 	desc = "An object appearing to have a tool shape. It has two handles, and two \
 	sides which are attached to each other in the center. At the end on each side \
-	is a sharp cutting edge, made from a seperate material than the rest of the \
+	is a sharp cutting edge, made from a separate material than the rest of the \
 	tool.\
 	<br><br>\
 	This tool appears to serve the same purpose as conventional wirecutters, due \
@@ -126,6 +126,7 @@
 	playsound(src, 'sound/items/change_jaws.ogg', 50, 1)
 	user.drop_item(src)
 	counterpart.forceMove(get_turf(src))
+	counterpart.persist_storable = persist_storable
 	src.forceMove(counterpart)
 	user.put_in_active_hand(counterpart)
 	to_chat(user, "<span class='notice'>You attach the pry jaws to [src].</span>")

@@ -10,9 +10,14 @@
 	var/custom_say = null
 	var/custom_ask = null
 	var/custom_exclaim = null
-	var/custom_whisper = null
+	var/custom_whisper = null	
+//custom temperature discomfort vars
+	var/list/custom_heat = list()
+	var/list/custom_cold = list()
 
 //YW Add Start
 /mob
 	var/wingdings = 0
 //Yw Add End
+	var/can_climb = FALSE //Checked by turfs when using climb_wall(). Defined here for silicons and simple mobs
+	var/climbing_delay = 1.5 //By default, mobs climb at quarter speed. To be overriden by specific simple mobs or species speed

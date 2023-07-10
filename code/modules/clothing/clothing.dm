@@ -214,7 +214,8 @@
 	throwforce = 2
 	slot_flags = SLOT_EARS
 	sprite_sheets = list(
-		SPECIES_TESHARI = 'icons/inventory/ears/mob_teshari.dmi')
+		SPECIES_TESHARI = 'icons/inventory/ears/mob_teshari.dmi',
+		SPECIES_VOX = 'icons/inventory/hands/mob_vox.dmi')
 
 /obj/item/clothing/ears/attack_hand(mob/user as mob)
 	if (!user) return
@@ -473,7 +474,7 @@
 
 /obj/item/clothing/head/proc/update_flashlight(var/mob/user = null)
 	set_light_on(!light_on)
-	
+
 	if(light_system == STATIC_LIGHT)
 		update_light()
 
@@ -603,7 +604,6 @@
 
 	var/water_speed = 0		//Speed boost/decrease in water, lower/negative values mean more speed
 	var/snow_speed = 0		//Speed boost/decrease on snow, lower/negative values mean more speed
-	var/rock_climbing = FALSE // If true, allows climbing cliffs with clickdrag.
 
 	var/step_volume_mod = 1	//How quiet or loud footsteps in this shoe are
 
@@ -627,7 +627,7 @@
 
 	if(usr.stat || usr.restrained() || usr.incapacitated())
 		return
-
+	
 	//CHOMPEdit begin
 	if(istype(usr, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = usr
@@ -703,15 +703,19 @@
 	update_icon()
 	return ..()
 
-/obj/item/clothing/shoes/proc/handle_movement(var/turf/walking, var/running)
-	if(prob(1) && !recent_squish) //VOREStation edit begin
+// CHOMPEdit Begin - tweaking handle_movement for inshoes steppies
+/obj/item/clothing/shoes/proc/handle_movement(var/turf/walking, var/running, var/mob/living/carbon/human/pred)
+	if(!recent_squish && istype(pred))
 		recent_squish = 1
-		spawn(100)
+		spawn(40) // Cooldown reduced from 100 to 40. Faster, but not that spammy
 			recent_squish = 0
 		for(var/mob/living/M in contents)
-			var/emote = pick(inside_emotes)
-			to_chat(M,emote) //VOREStation edit end
-	return
+			if(pred.step_mechanics_pref && M.step_mechanics_pref)
+				src.handle_inshoe_stepping(pred, M)
+			else if (prob(1)) // Same old inshoe mechanics
+				var/emote = pick(inside_emotes)
+				to_chat(M,emote)
+	return //CHOMPEDIT End
 
 /obj/item/clothing/shoes/update_clothing_icon()
 	if (ismob(src.loc))
@@ -786,7 +790,7 @@
 	var/image/standing = ..()
 	if(taurized) //Special snowflake var on suits
 		standing.pixel_x = -16
-		standing.layer = BODY_LAYER + 17 // 17 is above tail layer, so will not be covered by taurbody. TAIL_UPPER_LAYER +1
+		standing.layer = BODY_LAYER + 18 // 18 is above tail layer, so will not be covered by taurbody. TAIL_UPPER_LAYER +1 //CHOMPEDIT - CHECK human/update_icons.dm BEFORE YOU CHANGE THIS.
 	return standing
 
 /obj/item/clothing/suit/apply_accessories(var/image/standing)
@@ -828,7 +832,7 @@
 	var/rolled_down = -1 //0 = unrolled, 1 = rolled, -1 = cannot be toggled
 	var/rolled_down_icon_override = TRUE
 	var/rolled_sleeves = -1 //0 = unrolled, 1 = rolled, -1 = cannot be toggled
-	var/rolled_sleeves_icon_override = TRUE									
+	var/rolled_sleeves_icon_override = TRUE
 	sprite_sheets = list(
 		SPECIES_TESHARI = 'icons/inventory/uniform/mob_teshari.dmi',
 		SPECIES_VOX = 'icons/inventory/uniform/mob_vox.dmi'
@@ -1058,10 +1062,10 @@
 /obj/item/clothing/under/rank/New()
 	sensor_mode = pick(0,1,2,3)
 	..()
-	
+
 //Vorestation edit - eject mobs from clothing before deletion
 /obj/item/clothing/Destroy()
 	for(var/mob/living/M in contents)
 		M.forceMove(get_turf(src))
 	return ..()
-//Vorestation edit end 
+//Vorestation edit end

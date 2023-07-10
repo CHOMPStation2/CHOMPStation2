@@ -39,6 +39,13 @@
 		O_INTESTINE =	/obj/item/organ/internal/intestine
 		)
 
+	// CHOMPEdit: Species Specific Sounds
+	species_sounds = "Human Male"
+	gender_specific_species_sounds = TRUE
+	species_sounds_male = "Human Male"
+	species_sounds_female = "Human Female"
+	// CHOMPEdit End
+
 	inherent_verbs = list(
 		/mob/living/carbon/human/proc/tie_hair)
 
@@ -72,14 +79,20 @@
 	species_language = LANGUAGE_UNATHI
 	health_hud_intensity = 2.5
 	chem_strength_alcohol = 0.75
+	throwforce_absorb_threshold = 10
 
 	min_age = 32
 	max_age = 260
 
 	economic_modifier = 10
-	
-	male_scream_sound = list ('sound/effects/mob_effects/una_scream1.ogg','sound/effects/mob_effects/una_scream2.ogg') //CHOMPedit added unathi scream
-	female_scream_sound = list ('sound/effects/mob_effects/una_scream1.ogg','sound/effects/mob_effects/una_scream2.ogg') //CHOMPedit
+
+	// CHOMPEdit: Reverted these back to Polaris, but commented them out. We're using species-specific sounds instead.
+	// male_scream_sound = list ('sound/effects/mob_effects/una_scream1.ogg','sound/effects/mob_effects/una_scream2.ogg')
+	// female_scream_sound = list ('sound/effects/mob_effects/una_scream1.ogg','sound/effects/mob_effects/una_scream2.ogg')
+	species_sounds = "Lizard" // Species sounds
+
+	pain_verb_1p = list("hiss", "growl") // CHOMPEdit: Unathi pain emotes
+	pain_verb_3p = list("hisses", "growls") // CHOMPEdit: Pain emotes
 
 	blurb = "A heavily reptillian species, Unathi hail from the \
 	Uuosa-Eso system, which roughly translates to 'burning mother'.<br/><br/>Coming from a harsh, inhospitable \
@@ -206,8 +219,14 @@
 
 	economic_modifier = 10
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
+	// CHOMPEdit Start: Species sounds
+	species_sounds = "Feline"
+	// male_scream_sound = list('modular_chomp/sound/voice/scream/feline/feline_scream.ogg') //CHOMPedit: Scream sounds, finally, 3 years later.
+	//female_scream_sound = list('modular_chomp/sound/voice/scream/feline/feline_scream.ogg') //CHOMPedit: Scream sounds, finally, 3 years later.
+
+	pain_verb_1p = list("hiss", "growl", "yowl") // CHOMPEdit: Unathi pain emotes
+	pain_verb_3p = list("hisses", "growls", "yowls") // CHOMPEdit: Pain emotes
+	// CHOMPEdit End
 
 	blurb = "The Tajaran are a mammalian species resembling roughly felines, hailing from Meralar in the Rarkajar system. \
 	While reaching to the stars independently from outside influences, the humans engaged them in peaceful trade contact \
@@ -315,8 +334,8 @@
 
 	economic_modifier = 10
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
+	// male_scream_sound = null //CHOMPedit
+	// female_scream_sound = null //CHOMPedit
 
 	darksight = 4
 	flash_mod = 1.2
@@ -382,6 +401,13 @@
 		O_INTESTINE =	/obj/item/organ/internal/intestine/skrell
 		)
 
+	default_emotes = list(
+		/decl/emote/audible/warble,
+		/decl/emote/audible/lwarble,
+		/decl/emote/audible/croon,
+		/decl/emote/audible/croak
+	)
+
 /datum/species/skrell/can_breathe_water()
 	return TRUE
 
@@ -405,6 +431,7 @@
 	name_language = LANGUAGE_ZADDAT
 	species_language = LANGUAGE_ZADDAT
 	health_hud_intensity = 2.5
+	throwforce_absorb_threshold = 5
 
 	minimum_breath_pressure = 20 //have fun with underpressures. any higher than this and they'll be even less suitible for life on the station
 
@@ -413,8 +440,8 @@
 	min_age = 16
 	max_age = 90
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
+	// male_scream_sound = null //CHOMPedit
+	// female_scream_sound = null //CHOMPedit
 
 	blurb = "The Zaddat are an Unathi client race only recently introduced to SolGov space. Having evolved on \
 	the high-pressure and post-apocalyptic world of Xohok, Zaddat require an environmental suit called a Shroud \
@@ -523,6 +550,7 @@
 	health_hud_intensity = 2.5
 	item_slowdown_mod = 0.1
 	chem_strength_alcohol = 0
+	throwforce_absorb_threshold = 5
 
 	num_alternate_languages = 3
 	name_language = LANGUAGE_ROOTLOCAL
@@ -534,8 +562,9 @@
 
 	economic_modifier = 10
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
+	// CHOMPEdit: For shits and giggles, I want someone to give the Diona plant sounds from like, WoW. lmao
+	// male_scream_sound = null //CHOMPedit
+	// female_scream_sound = null //CHOMPedit
 
 	blurb = "Commonly referred to (erroneously) as 'plant people', the Dionaea are a strange space-dwelling collective \
 	species hailing from Epsilon Ursae Minoris. Each 'diona' is a cluster of numerous cat-sized organisms called nymphs; \
@@ -572,7 +601,8 @@
 
 	inherent_verbs = list(
 		/mob/living/carbon/human/proc/diona_split_nymph,
-		/mob/living/carbon/human/proc/regenerate
+		/mob/living/carbon/human/proc/regenerate,
+		/mob/proc/adjust_hive_range	//VOREStation Add
 		)
 
 	warning_low_pressure = 50

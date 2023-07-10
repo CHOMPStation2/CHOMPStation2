@@ -142,6 +142,8 @@
 
 	user.drop_item()
 	if(I)
+		if(istype(I, /obj/item/weapon/holder/micro))
+			log_and_message_admins("placed [I.name]  inside \the [src]", user)
 		I.forceMove(src)
 
 	to_chat(user, "You place \the [I] into the [src].")
@@ -181,6 +183,7 @@
 											// must be awake, not stunned or whatever
 		msg = "[user.name] climbs into the [src]."
 		to_chat(user, "You climb into the [src].")
+		log_and_message_admins("climbed into disposals!", user)
 	else if(target != user && !user.restrained() && !user.stat && !user.weakened && !user.stunned && !user.paralysis)
 		msg = "[user.name] stuffs [target.name] into the [src]!"
 		to_chat(user, "You stuff [target.name] into the [src]!")
@@ -527,6 +530,8 @@
 	. = ..()
 	if(istype(AM, /obj/item) && !istype(AM, /obj/item/projectile))
 		if(prob(75))
+			if(istype(AM, /obj/item/weapon/holder/micro))
+				log_and_message_admins("[AM] was thrown into \the [src]")
 			AM.forceMove(src)
 			visible_message("\The [AM] lands in \the [src].")
 		else
@@ -541,6 +546,8 @@
 			return
 		if(prob(75))
 			I.forceMove(src)
+			if(istype(I, /obj/item/weapon/holder/micro))
+				log_and_message_admins("[I.name] was thrown into \the [src]")
 			for(var/mob/M in viewers(src))
 				M.show_message("\The [I] lands in \the [src].", 3)
 		else
@@ -652,12 +659,12 @@
 	while(active)
 		sleep(1)		// was 1
 		if(!loc) return // check if we got GC'd
-
+		/*CHOMPREMOVAL: why, this makes no sense to be a randomized 3% chance damage apply
 		if(hasmob && prob(3))
 			for(var/mob/living/H in src)
 				if(!istype(H,/mob/living/silicon/robot/drone)) //Drones use the mailing code to move through the disposal system,
 					H.take_overall_damage(20, 0, "Blunt Trauma")//horribly maim any living creature jumping down disposals.  c'est la vie
-
+		*/
 		var/obj/structure/disposalpipe/curr = loc
 		last = curr
 		curr = curr.transfer(src)
@@ -1528,6 +1535,7 @@
 	var/active = 0
 	var/turf/target	// this will be where the output objects are 'thrown' to.
 	var/mode = 0
+	var/launch_dist = 3 //CHOMPEdit
 
 /obj/structure/disposaloutlet/Initialize()
 	. = ..()
@@ -1559,7 +1567,7 @@
 			AM.pipe_eject(dir)
 			if(!istype(AM,/mob/living/silicon/robot/drone)) //Drones keep smashing windows from being fired out of chutes. Bad for the station. ~Z
 				spawn(5)
-					AM.throw_at(target, 3, 1)
+					AM.throw_at(target, launch_dist, 1) //CHOMPEdit
 		H.vent_gas(src.loc)
 		qdel(H)
 

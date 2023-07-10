@@ -485,6 +485,16 @@
 	power = 2
 	meltdose = 30
 
+/datum/reagent/acid/diet_digestive //CHOMPAdd
+	name = "Diluted digestive acid"
+	id = "diet_stomacid"
+	description = "Some form of digestive slurry."
+	taste_description = "vomit"
+	reagent_state = LIQUID
+	color = "#664330"
+	power = 0.4
+	meltdose = 150
+
 /datum/reagent/thermite/venom
 	name = "Pyrotoxin"
 	id = "thermite_v"
@@ -691,6 +701,7 @@
 			M.eye_blurry = max(M.eye_blurry, 30)
 			if(prob(20))
 				M.ear_deaf = max(M.ear_deaf, 4)
+				M.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
 				M.Confuse(2)
 			else
 				M.Weaken(2)
@@ -735,6 +746,7 @@
 		if(alien == IS_SLIME)
 			if(prob(30))
 				M.ear_deaf = max(M.ear_deaf, 4)
+				M.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
 			M.eye_blurry = max(M.eye_blurry, 60)
 			M.Weaken(30)
 			M.Confuse(40)

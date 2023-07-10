@@ -142,7 +142,7 @@
 	},
 /obj/structure/closet/secure_closet/engineering_welding{
 	req_access = null;
-	req_one_access = list (10,11)
+	req_one_access = list(10,11)
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -183,13 +183,6 @@
 /obj/effect/decal/cleanable/blood/drip,
 /turf/simulated/floor/cult,
 /area/awaymission/snowfield/command/bridge)
-"aiA" = (
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/creature/cult/strong{
-	devourable = 0
-	},
-/turf/simulated/floor/cult,
-/area/awaymission/snowfield/command/gateway)
 "aiX" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -348,6 +341,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/public/charger)
+"aqV" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cult/tome,
+/turf/simulated/floor/cult,
+/area/awaymission/snowfield/command/gateway)
 "arp" = (
 /obj/machinery/computer/security/engineering,
 /obj/effect/floor_decal/steeldecal/steel_decals5{
@@ -510,7 +508,7 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/secure_closet/engineering_welding{
 	req_access = null;
-	req_one_access = list (10,11)
+	req_one_access = list(10,11)
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/engineering/locker_room)
@@ -879,6 +877,7 @@
 /obj/machinery/vending/sovietsoda{
 	dir = 1
 	},
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/staff_room)
 "aON" = (
@@ -1374,11 +1373,11 @@
 	dir = 8
 	},
 /obj/item/clothing/suit/fire/heavy{
-	armor = list("melee" = 10, "bullet" = 0, "laser" = 0, "energy" = 5, "bomb" = 0, "bio" = 0, "rad" = 60);
+	armor = list("melee"=10,"bullet"=0,"laser"=0,"energy"=5,"bomb"=0,"bio"=0,"rad"=60);
 	desc = "Over a suit that protects against extreme fire and heat, this seems to be having a thin layer of coating underneath, providing additional protection against radiation."
 	},
 /obj/item/clothing/suit/fire/heavy{
-	armor = list("melee" = 10, "bullet" = 0, "laser" = 0, "energy" = 5, "bomb" = 0, "bio" = 0, "rad" = 60);
+	armor = list("melee"=10,"bullet"=0,"laser"=0,"energy"=5,"bomb"=0,"bio"=0,"rad"=60);
 	desc = "Over a suit that protects against extreme fire and heat, this seems to be having a thin layer of coating underneath, providing additional protection against radiation."
 	},
 /obj/item/device/geiger,
@@ -1700,12 +1699,6 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
-	},
-/obj/machinery/door/airlock/glass_medical{
-	id_tag = "MedbayFoyer";
-	name = "Medbay";
-	req_access = null;
-	req_one_access = null
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/front_desk)
@@ -2223,7 +2216,6 @@
 /obj/structure/sink/kitchen{
 	pixel_y = 17
 	},
-/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/engineering/restroom)
 "bYA" = (
@@ -2460,13 +2452,8 @@
 	dir = 8;
 	layer = 2.9
 	},
-/obj/item/weapon/circuitboard/rdconsole,
 /obj/item/weapon/circuitboard/destructive_analyzer,
 /obj/item/weapon/circuitboard/protolathe,
-/obj/item/weapon/circuitboard/rdserver{
-	pixel_x = 3;
-	pixel_y = -3
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/engineering/tech_storage)
@@ -2872,6 +2859,20 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/engineering/monitor_room)
+"czv" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor,
+/area/awaymission/snowfield/medical/hallway)
 "cBr" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -2926,7 +2927,7 @@
 /area/awaymission/snowfield/outside)
 "cDP" = (
 /obj/structure/closet/secure_closet/warden{
-	starts_with = list(/obj/item/clothing/gloves/combat, /obj/item/clothing/accessory/holster, /obj/item/weapon/storage/belt/security, /obj/item/weapon/shield/riot, /obj/item/ammo_magazine/akm = 2, /obj/item/weapon/gun/projectile/automatic/serdy/krinkov, /obj/item/clothing/head/beret/sec/corporate/warden, /obj/item/clothing/head/helmet/warden/hat, /obj/item/clothing/head/helmet/warden, /obj/item/clothing/suit/armor/swat/officer, /obj/item/device/radio/headset/heads/hos/alt, /obj/item/device/radio/headset/heads/hos, /obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel/sec, /obj/item/clothing/shoes/boots/marine, /obj/item/ammo_magazine/s357 = 2, /obj/item/weapon/gun/projectile/revolver/nagant/skinned, /obj/item/clothing/under/soviet, /obj/item/weapon/reagent_containers/spray/pepper, /obj/item/weapon/melee/classic_baton)
+	starts_with = list(/obj/item/clothing/gloves/combat,/obj/item/clothing/accessory/holster,/obj/item/weapon/storage/belt/security,/obj/item/weapon/shield/riot,/obj/item/ammo_magazine/akm=2,/obj/item/weapon/gun/projectile/automatic/serdy/krinkov,/obj/item/clothing/head/beret/sec/corporate/warden,/obj/item/clothing/head/helmet/warden/hat,/obj/item/clothing/head/helmet/warden,/obj/item/clothing/suit/armor/swat/officer,/obj/item/device/radio/headset/heads/hos/alt,/obj/item/device/radio/headset/heads/hos,/obj/item/weapon/storage/backpack/security,/obj/item/weapon/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/ammo_magazine/s357=2,/obj/item/weapon/gun/projectile/revolver/nagant/skinned,/obj/item/clothing/under/soviet,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/melee/classic_baton)
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel,
@@ -3026,6 +3027,7 @@
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/green/border,
 /obj/machinery/light,
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/hallway)
 "cJB" = (
@@ -3127,7 +3129,7 @@
 	dir = 1
 	},
 /obj/structure/closet/secure_closet/security{
-	starts_with = list(/obj/item/clothing/gloves/black, /obj/item/clothing/accessory/holster, /obj/item/weapon/storage/belt/security, /obj/item/clothing/head/beret/sec/corporate/officer, /obj/item/clothing/head/helmet, /obj/item/device/radio/headset/headset_sec/alt, /obj/item/device/radio/headset/headset_sec, /obj/item/device/radio/off, /obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel/sec, /obj/item/clothing/shoes/boots/marine, /obj/item/clothing/suit/armor/bulletproof, /obj/item/clothing/under/soviet, /obj/item/weapon/reagent_containers/spray/pepper, /obj/item/weapon/melee/classic_baton, /obj/item/ammo_magazine/makarov = 2, /obj/item/weapon/gun/projectile/serdy_pistols/makarov)
+	starts_with = list(/obj/item/clothing/gloves/black,/obj/item/clothing/accessory/holster,/obj/item/weapon/storage/belt/security,/obj/item/clothing/head/beret/sec/corporate/officer,/obj/item/clothing/head/helmet,/obj/item/device/radio/headset/headset_sec/alt,/obj/item/device/radio/headset/headset_sec,/obj/item/device/radio/off,/obj/item/weapon/storage/backpack/security,/obj/item/weapon/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/suit/armor/bulletproof,/obj/item/clothing/under/soviet,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/melee/classic_baton,/obj/item/ammo_magazine/makarov=2,/obj/item/weapon/gun/projectile/serdy_pistols/makarov)
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/security_lockerroom)
@@ -3152,6 +3154,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/awaymission/snowfield/hallway/commandhallway)
+"cQZ" = (
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/carpet/turcarpet,
+/area/awaymission/snowfield/medical/staff_room)
 "cRf" = (
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/warden)
@@ -3271,6 +3277,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/awaymission/snowfield/hallway/dormhallway)
+"cXK" = (
+/mob/living/simple_mob/animal/giant_spider/lurker,
+/turf/simulated/floor/tiled/freezer,
+/area/awaymission/snowfield/medical/medical_restroom)
 "cXL" = (
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /obj/structure/bed/chair/wood,
@@ -3771,6 +3781,9 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/construct/artificer/caster{
+	devourable = 0
+	},
 /turf/simulated/floor/cult,
 /area/awaymission/snowfield/command/gateway)
 "dtS" = (
@@ -3841,7 +3854,7 @@
 	dir = 8
 	},
 /obj/machinery/door/window/brigdoor/eastright{
-	id = Cell 2;
+	id = "cell2";
 	name = "Cell 2";
 	req_access = null;
 	req_one_access = list(2,4)
@@ -3919,11 +3932,11 @@
 "dzh" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/clothing/suit/fire/heavy{
-	armor = list("melee" = 10, "bullet" = 0, "laser" = 0, "energy" = 5, "bomb" = 0, "bio" = 0, "rad" = 60);
+	armor = list("melee"=10,"bullet"=0,"laser"=0,"energy"=5,"bomb"=0,"bio"=0,"rad"=60);
 	desc = "Over a suit that protects against extreme fire and heat, this seems to be having a thin layer of coating underneath, providing additional protection against radiation."
 	},
 /obj/item/clothing/suit/fire/heavy{
-	armor = list("melee" = 10, "bullet" = 0, "laser" = 0, "energy" = 5, "bomb" = 0, "bio" = 0, "rad" = 60);
+	armor = list("melee"=10,"bullet"=0,"laser"=0,"energy"=5,"bomb"=0,"bio"=0,"rad"=60);
 	desc = "Over a suit that protects against extreme fire and heat, this seems to be having a thin layer of coating underneath, providing additional protection against radiation."
 	},
 /obj/item/clothing/head/hardhat/firefighter/atmos,
@@ -3985,7 +3998,7 @@
 /obj/effect/floor_decal/industrial/outline,
 /obj/structure/closet/secure_closet/medical3{
 	req_access = list(33);
-	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/device/radio/headset/headset_med,/obj/item/device/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/weapon/storage/box/freezer = 3, /obj/item/weapon/storage/belt/medical)
+	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/device/radio/headset/headset_med,/obj/item/device/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/weapon/storage/box/freezer=3,/obj/item/weapon/storage/belt/medical)
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/medical_locker)
@@ -4051,6 +4064,11 @@
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/awaymission/snowfield/hallway/frontgate_substation)
+"dAC" = (
+/obj/machinery/light_construct,
+/obj/item/weapon/material/shard,
+/turf/simulated/floor/cult,
+/area/awaymission/snowfield/command/bsa)
 "dAW" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -4413,7 +4431,7 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
-	id = "englockdown";
+	id = "snowfieldenglockdown";
 	name = "Engineering Lockdown";
 	opacity = 0
 	},
@@ -4617,7 +4635,7 @@
 "dWX" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/secure_closet/security{
-	starts_with = list(/obj/item/clothing/gloves/black, /obj/item/clothing/accessory/holster, /obj/item/weapon/storage/belt/security, /obj/item/clothing/head/beret/sec/corporate/officer, /obj/item/clothing/head/helmet, /obj/item/device/radio/headset/headset_sec/alt, /obj/item/device/radio/headset/headset_sec, /obj/item/device/radio/off, /obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel/sec, /obj/item/clothing/shoes/boots/marine, /obj/item/clothing/suit/armor/bulletproof, /obj/item/clothing/under/soviet, /obj/item/weapon/reagent_containers/spray/pepper, /obj/item/weapon/melee/classic_baton, /obj/item/ammo_magazine/makarov = 2, /obj/item/weapon/gun/projectile/serdy_pistols/makarov)
+	starts_with = list(/obj/item/clothing/gloves/black,/obj/item/clothing/accessory/holster,/obj/item/weapon/storage/belt/security,/obj/item/clothing/head/beret/sec/corporate/officer,/obj/item/clothing/head/helmet,/obj/item/device/radio/headset/headset_sec/alt,/obj/item/device/radio/headset/headset_sec,/obj/item/device/radio/off,/obj/item/weapon/storage/backpack/security,/obj/item/weapon/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/suit/armor/bulletproof,/obj/item/clothing/under/soviet,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/melee/classic_baton,/obj/item/ammo_magazine/makarov=2,/obj/item/weapon/gun/projectile/serdy_pistols/makarov)
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/security_lockerroom)
@@ -5034,10 +5052,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/hallway/northhallway)
 "eoL" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/structure/cult/tome,
+/obj/item/weapon/material/shard,
 /turf/simulated/floor/cult,
 /area/awaymission/snowfield/command/gateway)
 "eoU" = (
@@ -5063,7 +5078,7 @@
 /obj/effect/floor_decal/industrial/outline,
 /obj/structure/closet/secure_closet/medical3{
 	req_access = list(33);
-	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/device/radio/headset/headset_med,/obj/item/device/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/weapon/storage/box/freezer = 3, /obj/item/weapon/storage/belt/medical)
+	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/device/radio/headset/headset_med,/obj/item/device/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/weapon/storage/box/freezer=3,/obj/item/weapon/storage/belt/medical)
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/medical_locker)
@@ -5275,13 +5290,11 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/obj/structure/railing{
-	dir = 1
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/weapon/material/shard,
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/command/gateway)
 "ewW" = (
@@ -5687,6 +5700,16 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/engineering/engine)
+"eUS" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/item/weapon/material/shard,
+/turf/simulated/floor/tiled/techfloor,
+/area/awaymission/snowfield/command/gateway)
 "eVa" = (
 /mob/living/simple_mob/vore/sheep,
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
@@ -6040,6 +6063,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
+/obj/structure/door_assembly/door_assembly_med,
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/hallway/northhallway)
 "fkQ" = (
@@ -6257,6 +6281,8 @@
 /obj/structure/bed/chair/wood{
 	dir = 4
 	},
+/mob/living/simple_mob/animal/giant_spider/webslinger,
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/staff_room)
 "fuQ" = (
@@ -6273,6 +6299,20 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/awaymission/snowfield/engineering/primary_storage)
+"fve" = (
+/obj/structure/window/reinforced{
+	dir = 1;
+	health = 1e+006
+	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "snowfield bsa maints";
+	opacity = 0
+	},
+/obj/item/weapon/material/shard,
+/turf/simulated/floor,
+/area/awaymission/snowfield/command/bsa)
 "fwr" = (
 /turf/simulated/wall/r_wall,
 /area/awaymission/snowfield/security/lobby)
@@ -6448,6 +6488,11 @@
 "fGh" = (
 /turf/simulated/wall/r_wall,
 /area/awaymission/snowfield/public/publicrestroom)
+"fGG" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/plating,
+/area/awaymission/snowfield/engineering/primary_storage)
 "fIy" = (
 /obj/item/weapon/stool,
 /obj/item/weapon/paper/awaygate/snowfield/evacuation_order,
@@ -6674,6 +6719,20 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/command/bridge)
+"fQJ" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/green,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 4
+	},
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/snowfield/medical/staff_room)
 "fRn" = (
 /obj/machinery/button/remote/blast_door{
 	id = "Armoury";
@@ -6801,7 +6860,7 @@
 /area/awaymission/snowfield/medical/chemistry)
 "fWi" = (
 /obj/structure/closet/crate/radiation{
-	starts_with = list(/obj/item/clothing/suit/radiation = 8, /obj/item/clothing/head/radiation = 8)
+	starts_with = list(/obj/item/clothing/suit/radiation=8,/obj/item/clothing/head/radiation=8)
 	},
 /obj/item/stack/material/lead{
 	amount = 50
@@ -7790,6 +7849,9 @@
 /obj/effect/floor_decal/industrial/danger{
 	dir = 8
 	},
+/mob/living/simple_mob/construct/artificer{
+	devourable = 0
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/command/bsa)
 "gLD" = (
@@ -7808,6 +7870,18 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/public/publicrestroom)
+"gMa" = (
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "snowfield bsa maints";
+	opacity = 0
+	},
+/obj/item/weapon/material/shard,
+/obj/item/weapon/material/shard,
+/obj/structure/grille/broken,
+/turf/simulated/floor,
+/area/awaymission/snowfield/command/bsa)
 "gMg" = (
 /obj/structure/grille/rustic,
 /obj/item/weapon/material/shard{
@@ -8373,6 +8447,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
+/mob/living/simple_mob/creature/cult/strong{
+	devourable = 0
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/command/gateway)
 "hjv" = (
@@ -8601,6 +8678,7 @@
 /area/awaymission/snowfield/engineering/engine_checkpoint)
 "hsn" = (
 /mob/living/simple_mob/vore/demonAI/zellic{
+	devourable = 0;
 	faction = "cult";
 	health = 450
 	},
@@ -8754,6 +8832,19 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/public/publicrestroom)
+"hAp" = (
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "snowfield bsa maints";
+	opacity = 0
+	},
+/obj/item/weapon/material/shard,
+/obj/item/weapon/material/shard,
+/obj/item/weapon/material/shard,
+/obj/structure/grille/broken,
+/turf/simulated/floor,
+/area/awaymission/snowfield/command/bsa)
 "hAH" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -9164,7 +9255,7 @@
 /obj/machinery/vending/tool{
 	dir = 8;
 	pixel_x = -5;
-	products = list(/obj/item/stack/cable_coil/random = 10, /obj/item/weapon/tool/crowbar = 5, /obj/item/weapon/weldingtool = 3, /obj/item/weapon/tool/wirecutters = 5, /obj/item/weapon/tool/wrench = 5, /obj/item/device/analyzer = 5, /obj/item/weapon/tool/screwdriver = 5, /obj/item/device/flashlight/glowstick = 3, /obj/item/device/flashlight/glowstick/red = 3, /obj/item/device/flashlight/glowstick/blue = 3, /obj/item/device/flashlight/glowstick/orange = 3, /obj/item/device/flashlight/glowstick/yellow = 3)
+	products = list(/obj/item/stack/cable_coil/random=10,/obj/item/weapon/tool/crowbar=5,/obj/item/weapon/weldingtool=3,/obj/item/weapon/tool/wirecutters=5,/obj/item/weapon/tool/wrench=5,/obj/item/device/analyzer=5,/obj/item/weapon/tool/screwdriver=5,/obj/item/device/flashlight/glowstick=3,/obj/item/device/flashlight/glowstick/red=3,/obj/item/device/flashlight/glowstick/blue=3,/obj/item/device/flashlight/glowstick/orange=3,/obj/item/device/flashlight/glowstick/yellow=3)
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 9
@@ -9380,20 +9471,20 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/table/rack/shelf/steel,
 /obj/item/clothing/gloves/combat{
-	armor = list("melee" = 30, "bullet" = 15, "laser" = 5, "energy" = 20, "bomb" = 40, "bio" = 5, "rad" = 20);
+	armor = list("melee"=30,"bullet"=15,"laser"=5,"energy"=20,"bomb"=40,"bio"=5,"rad"=20);
 	desc = "Clearly for combat, these tactical gloves are not only somewhat fire and impact resistant, but also has a thin layer of armor. Bulky, but better than having a papercut in combat while naked."
 	},
 /obj/item/clothing/gloves/combat{
-	armor = list("melee" = 30, "bullet" = 15, "laser" = 5, "energy" = 20, "bomb" = 40, "bio" = 5, "rad" = 20);
+	armor = list("melee"=30,"bullet"=15,"laser"=5,"energy"=20,"bomb"=40,"bio"=5,"rad"=20);
 	desc = "Clearly for combat, these tactical gloves are not only somewhat fire and impact resistant, but also has a thin layer of armor. Bulky, but better than having a papercut in combat while naked."
 	},
 /obj/item/clothing/gloves/combat{
-	armor = list("melee" = 30, "bullet" = 15, "laser" = 5, "energy" = 20, "bomb" = 40, "bio" = 5, "rad" = 20);
+	armor = list("melee"=30,"bullet"=15,"laser"=5,"energy"=20,"bomb"=40,"bio"=5,"rad"=20);
 	desc = "Clearly for combat, these tactical gloves are not only somewhat fire and impact resistant, but also has a thin layer of armor. Bulky, but better than having a papercut in combat while naked."
 	},
 /obj/item/clothing/gloves/combat{
-	armor = list("melee" = 30, "bullet" = 30, "laser" = 10, "energy" = 20, "bomb" = 45, "bio" = 5, "rad" = 20);
-	armorsoak = list("melee" = 5, "bullet" = 0, "laser" = 0, "energy" = 5, "bomb" = 5, "bio" = 0, "rad" = 0);
+	armor = list("melee"=30,"bullet"=30,"laser"=10,"energy"=20,"bomb"=45,"bio"=5,"rad"=20);
+	armorsoak = list("melee"=5,"bullet"=0,"laser"=0,"energy"=5,"bomb"=5,"bio"=0,"rad"=0);
 	desc = "Clearly for combat, these tactical gloves are not only somewhat fire and impact resistant, but also has a thin layer of armor. Bulky, but better than having a papercut in combat while naked."
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -9491,15 +9582,15 @@
 /obj/item/ammo_magazine/pkm,
 /obj/item/ammo_magazine/pkm/ap,
 /obj/item/clothing/suit/bomb_suit/security{
-	armor = list("melee" = 90, "bullet" = 85, "laser" = 70, "energy" = 80, "bomb" = 100, "bio" = 0, "rad" = 0);
-	armorsoak = list("melee" = 10, "bullet" = 10, "laser" = 0, "energy" = 0, "bomb" = 20, "bio" = 0, "rad" = 0);
+	armor = list("melee"=45,"bullet"=70,"laser"=35,"energy"=80,"bomb"=100,"bio"=0,"rad"=0);
+	armorsoak = list("melee"=0,"bullet"=2,"laser"=0,"energy"=0,"bomb"=20,"bio"=0,"rad"=0);
 	desc = "You're up against the wall AND I AM THE FUCKING WALL!";
 	name = "EOD-Bullet proof suit";
 	slowdown = 4
 	},
 /obj/item/clothing/head/bomb_hood/security{
-	armor = list("melee" = 90, "bullet" = 80, "laser" = 60, "energy" = 80, "bomb" = 100, "bio" = 0, "rad" = 0);
-	armorsoak = list("melee" = 10, "bullet" = 0, "laser" = 5, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0);
+	armor = list("melee"=40,"bullet"=80,"laser"=30,"energy"=80,"bomb"=100,"bio"=0,"rad"=0);
+	armorsoak = list("melee"=0,"bullet"=2,"laser"=0,"energy"=0,"bomb"=0,"bio"=0,"rad"=0);
 	desc = "I'll kill you, with or without my visor!";
 	name = "EOD-Bullet proof hood"
 	},
@@ -9624,7 +9715,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/hallway/northhallway)
 "ilY" = (
-/obj/effect/spider/stickyweb,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -9860,6 +9950,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/item/weapon/paper/awaygate/snowfield/final_note,
 /turf/simulated/floor/tiled/monotile,
 /area/awaymission/snowfield/security/seconddesk)
 "iAB" = (
@@ -9928,6 +10019,10 @@
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/public/toolstorage1)
+"iDn" = (
+/mob/living/simple_mob/construct/harvester/greater,
+/turf/simulated/floor/cult,
+/area/awaymission/snowfield/command/bsa)
 "iDu" = (
 /turf/simulated/wall/r_wall,
 /area/awaymission/snowfield/medical/morgue)
@@ -9972,9 +10067,9 @@
 "iEH" = (
 /obj/structure/catwalk,
 /obj/machinery/vending/food/prison{
-	contraband = list(/obj/item/weapon/reagent_containers/food/snacks/bearstew = 3);
+	contraband = list(/obj/item/weapon/reagent_containers/food/snacks/bearstew=3);
 	icon_state = "hotfood";
-	products = list(/obj/item/weapon/tray = 6, /obj/item/weapon/material/kitchen/utensil/spoon = 20, /obj/item/weapon/reagent_containers/food/snacks/tofu = 10, /obj/item/weapon/reagent_containers/food/snacks/mashedpotato = 10, /obj/item/weapon/reagent_containers/food/snacks/flatbread = 10)
+	products = list(/obj/item/weapon/tray=6,/obj/item/weapon/material/kitchen/utensil/spoon=20,/obj/item/weapon/reagent_containers/food/snacks/tofu=10,/obj/item/weapon/reagent_containers/food/snacks/mashedpotato=10,/obj/item/weapon/reagent_containers/food/snacks/flatbread=10)
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/security_cell)
@@ -9982,7 +10077,7 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
-	id = "englockdown";
+	id = "snowfieldenglockdown";
 	name = "Engineering Lockdown";
 	opacity = 0
 	},
@@ -10269,6 +10364,15 @@
 	temperature = 80
 	},
 /area/awaymission/snowfield/command/server)
+"iPB" = (
+/obj/effect/floor_decal/corner/green/diagonal,
+/obj/effect/floor_decal/corner/blue/diagonal{
+	dir = 4
+	},
+/mob/living/simple_mob/animal/giant_spider/tunneler,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/snowfield/medical/staff_room)
 "iPD" = (
 /obj/machinery/door/airlock/security{
 	desc = "You may don't want to go in there by force.";
@@ -10510,6 +10614,7 @@
 /obj/structure/catwalk,
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_mob/vore/demonAI/ira{
+	devourable = 0;
 	faction = "cult"
 	},
 /turf/simulated/floor,
@@ -10738,6 +10843,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/door_assembly/door_assembly_med,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/front_desk)
 "jhx" = (
@@ -10760,7 +10866,7 @@
 /obj/machinery/vending/engivend{
 	dir = 8;
 	pixel_x = -5;
-	products = list(/obj/item/device/geiger = 4, /obj/item/device/multitool = 4, /obj/item/weapon/cell/high = 10, /obj/item/weapon/airlock_electronics = 10, /obj/item/weapon/module/power_control = 10, /obj/item/weapon/circuitboard/airalarm = 10, /obj/item/weapon/circuitboard/firealarm = 10, /obj/item/weapon/circuitboard/status_display = 2, /obj/item/weapon/circuitboard/ai_status_display = 2, /obj/item/weapon/circuitboard/newscaster = 2, /obj/item/weapon/circuitboard/intercom = 4, /obj/item/weapon/circuitboard/security/telescreen/entertainment = 4, /obj/item/weapon/stock_parts/motor = 2, /obj/item/weapon/stock_parts/spring = 2, /obj/item/weapon/stock_parts/gear = 2, /obj/item/weapon/circuitboard/atm,/obj/item/weapon/circuitboard/guestpass,/obj/item/weapon/circuitboard/keycard_auth,/obj/item/weapon/circuitboard/geiger,/obj/item/weapon/circuitboard/photocopier,/obj/item/weapon/circuitboard/fax,/obj/item/weapon/circuitboard/request,/obj/item/weapon/circuitboard/microwave,/obj/item/weapon/circuitboard/washing)
+	products = list(/obj/item/device/geiger=4,/obj/item/device/multitool=4,/obj/item/weapon/cell/high=10,/obj/item/weapon/airlock_electronics=10,/obj/item/weapon/module/power_control=10,/obj/item/weapon/circuitboard/airalarm=10,/obj/item/weapon/circuitboard/firealarm=10,/obj/item/weapon/circuitboard/status_display=2,/obj/item/weapon/circuitboard/ai_status_display=2,/obj/item/weapon/circuitboard/newscaster=2,/obj/item/weapon/circuitboard/intercom=4,/obj/item/weapon/circuitboard/security/telescreen/entertainment=4,/obj/item/weapon/stock_parts/motor=2,/obj/item/weapon/stock_parts/spring=2,/obj/item/weapon/stock_parts/gear=2,/obj/item/weapon/circuitboard/atm,/obj/item/weapon/circuitboard/guestpass,/obj/item/weapon/circuitboard/keycard_auth,/obj/item/weapon/circuitboard/geiger,/obj/item/weapon/circuitboard/photocopier,/obj/item/weapon/circuitboard/fax,/obj/item/weapon/circuitboard/request,/obj/item/weapon/circuitboard/microwave,/obj/item/weapon/circuitboard/washing)
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/engineering/locker_room)
@@ -10874,18 +10980,6 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/dorms/dorm1)
-"jnn" = (
-/obj/structure/table/rack{
-	dir = 8;
-	layer = 2.9
-	},
-/obj/item/weapon/circuitboard/robotics{
-	pixel_x = -2;
-	pixel_y = 2
-	},
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/techfloor,
-/area/awaymission/snowfield/engineering/secure_tech_storage)
 "jnY" = (
 /obj/structure/bed/chair/comfy/black{
 	dir = 4
@@ -10969,6 +11063,16 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/public/cafeteria_restroom)
+"jtj" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/mob/living/simple_mob/animal/giant_spider,
+/turf/simulated/floor,
+/area/awaymission/snowfield/medical/hallway)
 "jtE" = (
 /obj/structure/sink{
 	dir = 8;
@@ -10982,18 +11086,13 @@
 /area/awaymission/snowfield/dorms/dorm7)
 "jtR" = (
 /obj/structure/closet/secure_closet/security{
-	starts_with = list(/obj/item/clothing/gloves/black, /obj/item/clothing/accessory/holster, /obj/item/weapon/storage/belt/security, /obj/item/clothing/head/beret/sec/corporate/officer, /obj/item/clothing/head/helmet, /obj/item/device/radio/headset/headset_sec/alt, /obj/item/device/radio/headset/headset_sec, /obj/item/device/radio/off, /obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel/sec, /obj/item/clothing/shoes/boots/marine, /obj/item/clothing/suit/armor/bulletproof, /obj/item/clothing/under/soviet, /obj/item/weapon/reagent_containers/spray/pepper, /obj/item/weapon/melee/classic_baton, /obj/item/ammo_magazine/makarov = 2, /obj/item/weapon/gun/projectile/serdy_pistols/makarov)
+	starts_with = list(/obj/item/clothing/gloves/black,/obj/item/clothing/accessory/holster,/obj/item/weapon/storage/belt/security,/obj/item/clothing/head/beret/sec/corporate/officer,/obj/item/clothing/head/helmet,/obj/item/device/radio/headset/headset_sec/alt,/obj/item/device/radio/headset/headset_sec,/obj/item/device/radio/off,/obj/item/weapon/storage/backpack/security,/obj/item/weapon/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/suit/armor/bulletproof,/obj/item/clothing/under/soviet,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/melee/classic_baton,/obj/item/ammo_magazine/makarov=2,/obj/item/weapon/gun/projectile/serdy_pistols/makarov)
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/window/reinforced,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/security_lockerroom)
-"jtT" = (
-/turf/simulated/wall/solidrock{
-	block_tele = 0
-	},
-/area/awaymission/snowfield/outside)
 "juu" = (
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/green/border,
@@ -11240,7 +11339,7 @@
 	dir = 1
 	},
 /obj/structure/closet/secure_closet/detective{
-	starts_with = list(/obj/item/clothing/gloves/forensic, /obj/item/clothing/accessory/holster, /obj/item/weapon/storage/belt/security, /obj/item/clothing/head/fedora, /obj/item/clothing/head/fedora/brown, /obj/item/clothing/suit/storage/det_trench,/obj/item/clothing/suit/storage/det_trench/grey, /obj/item/clothing/suit/armor/bulletproof, /obj/item/device/radio/headset/headset_sec/alt, /obj/item/device/radio/headset/headset_sec, /obj/item/device/radio/off, /obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel/sec, /obj/item/clothing/shoes/boots/marine, /obj/item/clothing/under/soviet, /obj/item/weapon/melee/classic_baton, /obj/item/weapon/reagent_containers/spray/pepper, /obj/item/device/flash, /obj/item/ammo_magazine/s357 = 2, /obj/item/weapon/gun/projectile/revolver/nagant)
+	starts_with = list(/obj/item/clothing/gloves/forensic,/obj/item/clothing/accessory/holster,/obj/item/weapon/storage/belt/security,/obj/item/clothing/head/fedora,/obj/item/clothing/head/fedora/brown,/obj/item/clothing/suit/storage/det_trench,/obj/item/clothing/suit/storage/det_trench/grey,/obj/item/clothing/suit/armor/bulletproof,/obj/item/device/radio/headset/headset_sec/alt,/obj/item/device/radio/headset/headset_sec,/obj/item/device/radio/off,/obj/item/weapon/storage/backpack/security,/obj/item/weapon/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/under/soviet,/obj/item/weapon/melee/classic_baton,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/device/flash,/obj/item/ammo_magazine/s357=2,/obj/item/weapon/gun/projectile/revolver/nagant)
 	},
 /turf/simulated/floor/lino,
 /area/awaymission/snowfield/security/detective)
@@ -11271,6 +11370,19 @@
 /obj/structure/bed/chair/oldsofa,
 /turf/simulated/floor/wood,
 /area/awaymission/snowfield/checkpointunpowered)
+"jEF" = (
+/obj/structure/window/reinforced{
+	health = 1e+006
+	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "snowfield bsa maints";
+	opacity = 0
+	},
+/obj/item/weapon/material/shard,
+/turf/simulated/floor,
+/area/awaymission/snowfield/command/bsa)
 "jEJ" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -11446,6 +11558,7 @@
 	},
 /obj/structure/table/woodentable,
 /obj/item/device/radio/phone,
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/staff_room)
 "jLM" = (
@@ -11884,7 +11997,7 @@
 /area/awaymission/snowfield/dorms/dorm7)
 "kcv" = (
 /obj/machinery/door/window/brigdoor/eastright{
-	id = Cell 1;
+	id = "cell1";
 	name = "Cell 1";
 	req_access = null;
 	req_one_access = list(2,4)
@@ -11962,7 +12075,7 @@
 	req_one_access = list(1,11)
 	},
 /obj/machinery/door/blast/regular{
-	id = "snowfieldenglockdown"
+	id = "snowfieldengroomlockdown"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/engineering/engine)
@@ -12026,6 +12139,16 @@
 "kig" = (
 /turf/simulated/wall/r_wall,
 /area/awaymission/snowfield/hallway/frontgate_substation)
+"kiD" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/catwalk,
+/mob/living/simple_mob/animal/giant_spider/frost,
+/turf/simulated/floor,
+/area/awaymission/snowfield/medical/hallway)
 "kiK" = (
 /turf/simulated/floor/flesh,
 /area/awaymission/snowfield/command/bridge)
@@ -12169,7 +12292,7 @@
 /obj/item/weapon/soap,
 /obj/structure/closet/secure_closet/medical3{
 	req_access = list(33);
-	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/device/radio/headset/headset_med,/obj/item/device/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/weapon/storage/box/freezer = 3, /obj/item/weapon/storage/belt/medical)
+	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/device/radio/headset/headset_med,/obj/item/device/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/weapon/storage/box/freezer=3,/obj/item/weapon/storage/belt/medical)
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/medical_locker)
@@ -12395,7 +12518,7 @@
 	icon_state = "1-2"
 	},
 /obj/item/clothing/suit/fire/heavy{
-	armor = list("melee" = 10, "bullet" = 0, "laser" = 0, "energy" = 5, "bomb" = 0, "bio" = 0, "rad" = 60);
+	armor = list("melee"=10,"bullet"=0,"laser"=0,"energy"=5,"bomb"=0,"bio"=0,"rad"=60);
 	desc = "Over a suit that protects against extreme fire and heat, this seems to be having a thin layer of coating underneath, providing additional protection against radiation."
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -12530,6 +12653,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/snowfield/checkpointunpowered)
+"kIH" = (
+/obj/structure/catwalk,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/plating,
+/area/awaymission/snowfield/engineering/primary_storage)
 "kIX" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -12567,7 +12695,7 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
-	id = "englockdown";
+	id = "snowfieldenglockdown";
 	name = "Engineering Lockdown";
 	opacity = 0
 	},
@@ -12654,6 +12782,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/engineering/tech_storage)
+"kNi" = (
+/obj/effect/floor_decal/techfloor/orange,
+/obj/structure/catwalk,
+/obj/item/weapon/material/shard,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/awaymission/snowfield/command/bsa)
 "kNn" = (
 /obj/machinery/door/airlock{
 	name = "Unisex Restrooms"
@@ -12877,6 +13011,7 @@
 /obj/structure/bed/chair/wood{
 	dir = 4
 	},
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/staff_room)
 "kYe" = (
@@ -13350,6 +13485,9 @@
 "loh" = (
 /obj/machinery/light_construct,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/creature/cult/strong{
+	devourable = 0
+	},
 /turf/simulated/floor/cult,
 /area/awaymission/snowfield/command/gateway)
 "lom" = (
@@ -13444,17 +13582,17 @@
 /obj/structure/table/steel_reinforced,
 /obj/item/weapon/reagent_containers/glass/beaker/vial{
 	name = "vial (Lexorin)";
-	prefill = list("lexorin" = 30)
+	prefill = list("lexorin"=30)
 	},
 /obj/item/weapon/reagent_containers/glass/beaker/vial{
 	name = "vial (Zombie Powder)";
 	pixel_x = -5;
-	prefill = list("zombiepowder" = 30)
+	prefill = list("zombiepowder"=30)
 	},
 /obj/item/weapon/reagent_containers/glass/beaker/vial{
 	name = "vial (Cryptobiolin)";
 	pixel_x = 5;
-	prefill = list("cryptobiolin" = 30)
+	prefill = list("cryptobiolin"=30)
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/security_cell)
@@ -13555,6 +13693,13 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
 /area/awaymission/snowfield/outside)
+"lxg" = (
+/obj/structure/catwalk,
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/animal/giant_spider/pepper,
+/turf/simulated/floor/plating,
+/area/awaymission/snowfield/engineering/primary_storage)
 "lxq" = (
 /obj/machinery/shower{
 	pixel_y = 18
@@ -13739,6 +13884,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/snowfield/command/observatory)
+"lDF" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cult/tome,
+/turf/simulated/floor/tiled/techfloor,
+/area/awaymission/snowfield/command/gateway)
 "lDX" = (
 /obj/machinery/iv_drip,
 /obj/effect/floor_decal/borderfloorwhite,
@@ -13918,7 +14069,7 @@
 /obj/effect/floor_decal/industrial/outline,
 /obj/structure/closet/secure_closet/medical3{
 	req_access = list(33);
-	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/device/radio/headset/headset_med,/obj/item/device/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/weapon/storage/box/freezer = 3, /obj/item/weapon/storage/belt/medical)
+	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/device/radio/headset/headset_med,/obj/item/device/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/weapon/storage/box/freezer=3,/obj/item/weapon/storage/belt/medical)
 	},
 /obj/item/weapon/soap,
 /turf/simulated/floor/tiled/neutral,
@@ -14284,6 +14435,7 @@
 /obj/item/stack/rods,
 /obj/item/stack/rods,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/weapon/material/shard,
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/command/gateway)
 "mgo" = (
@@ -14294,10 +14446,6 @@
 /obj/item/weapon/circuitboard/crew{
 	pixel_x = -1;
 	pixel_y = 1
-	},
-/obj/item/weapon/circuitboard/card{
-	pixel_x = 2;
-	pixel_y = -2
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor,
@@ -14683,7 +14831,6 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/security,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/snowfield/security/lobby)
 "myD" = (
@@ -14861,6 +15008,7 @@
 /obj/structure/table/rack/shelf/steel,
 /obj/structure/window/reinforced,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/weapon/storage/pill_bottle/assorted,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/medical/storage_room)
 "mHr" = (
@@ -14938,9 +15086,11 @@
 /turf/simulated/floor,
 /area/awaymission/snowfield/outside)
 "mKv" = (
-/obj/structure/cult/tome,
-/turf/simulated/floor/cult,
-/area/awaymission/snowfield/command/gateway)
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/plating,
+/area/awaymission/snowfield/engineering/primary_storage)
 "mLz" = (
 /obj/structure/sink{
 	dir = 4;
@@ -15254,6 +15404,12 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/medical/storage_room)
+"mWF" = (
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/plating,
+/area/awaymission/snowfield/engineering/primary_storage)
 "mWM" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/paper_bin,
@@ -15497,6 +15653,12 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/monotile,
 /area/awaymission/snowfield/service/janitor)
+"ngO" = (
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/animal/giant_spider/pepper,
+/turf/simulated/floor/plating,
+/area/awaymission/snowfield/engineering/primary_storage)
 "nhd" = (
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -15766,9 +15928,12 @@
 "nsL" = (
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_mob/vore/demonAI/engorge{
+	devourable = 0;
 	faction = "cult";
-	health = 400;
-	size_multiplier = 1.25
+	health = 550;
+	size_multiplier = 1.5;
+	vore_pounce_chance = 30;
+	vore_pounce_maxhealth = 95
 	},
 /turf/simulated/floor/cult,
 /area/awaymission/snowfield/command/bridge)
@@ -16161,6 +16326,10 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/public/cafeteria_restroom)
+"nIJ" = (
+/obj/structure/table,
+/turf/simulated/floor/cult,
+/area/awaymission/snowfield/command/gateway)
 "nIK" = (
 /obj/structure/closet/secure_closet/freezer/meat,
 /turf/simulated/floor/tiled/freezer,
@@ -16588,7 +16757,7 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
-	id = "englockdown";
+	id = "snowfieldenglockdown";
 	name = "Engineering Lockdown";
 	opacity = 0
 	},
@@ -16798,12 +16967,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/snowfield/security/security_lockerroom)
 "okr" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/structure/lattice,
-/turf/simulated/floor/outdoors/rocks/caves,
-/area/awaymission/snowfield/security/firingrange)
+/obj/effect/floor_decal/borderfloorwhite,
+/obj/effect/floor_decal/corner/green/border,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/snowfield/medical/hallway)
 "okx" = (
 /obj/structure/lattice,
 /turf/simulated/floor/outdoors/rocks/caves,
@@ -16812,7 +16981,7 @@
 /obj/machinery/vending/tool{
 	dir = 8;
 	pixel_x = -5;
-	products = list(/obj/item/stack/cable_coil/random = 10, /obj/item/weapon/tool/crowbar = 5, /obj/item/weapon/weldingtool = 3, /obj/item/weapon/tool/wirecutters = 5, /obj/item/weapon/tool/wrench = 5, /obj/item/device/analyzer = 5, /obj/item/weapon/tool/screwdriver = 5, /obj/item/device/flashlight/glowstick = 3, /obj/item/device/flashlight/glowstick/red = 3, /obj/item/device/flashlight/glowstick/blue = 3, /obj/item/device/flashlight/glowstick/orange = 3, /obj/item/device/flashlight/glowstick/yellow = 3)
+	products = list(/obj/item/stack/cable_coil/random=10,/obj/item/weapon/tool/crowbar=5,/obj/item/weapon/weldingtool=3,/obj/item/weapon/tool/wirecutters=5,/obj/item/weapon/tool/wrench=5,/obj/item/device/analyzer=5,/obj/item/weapon/tool/screwdriver=5,/obj/item/device/flashlight/glowstick=3,/obj/item/device/flashlight/glowstick/red=3,/obj/item/device/flashlight/glowstick/blue=3,/obj/item/device/flashlight/glowstick/orange=3,/obj/item/device/flashlight/glowstick/yellow=3)
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor,
@@ -17366,9 +17535,16 @@
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/medical/morgue)
 "oOl" = (
-/obj/effect/spider/stickyweb,
-/turf/simulated/floor/tiled/freezer,
-/area/awaymission/snowfield/engineering/restroom)
+/obj/structure/catwalk,
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/door_assembly/door_assembly_eng,
+/turf/simulated/floor/plating,
+/area/awaymission/snowfield/engineering/primary_storage)
 "oOF" = (
 /obj/machinery/gateway,
 /obj/effect/decal/cleanable/dirt,
@@ -17468,6 +17644,13 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/medical/storage_room)
+"oWq" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/snowfield/medical/patients)
 "oWy" = (
 /obj/structure/artilleryplaceholder{
 	icon_state = "8"
@@ -17756,6 +17939,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/carpet/turcarpet,
 /area/awaymission/snowfield/medical/staff_room)
 "plx" = (
@@ -17875,7 +18059,7 @@
 /area/awaymission/snowfield/medical/surgery)
 "prj" = (
 /obj/item/clothing/suit/fire/heavy{
-	armor = list("melee" = 10, "bullet" = 0, "laser" = 0, "energy" = 5, "bomb" = 0, "bio" = 0, "rad" = 60);
+	armor = list("melee"=10,"bullet"=0,"laser"=0,"energy"=5,"bomb"=0,"bio"=0,"rad"=60);
 	desc = "Over a suit that protects against extreme fire and heat, this seems to be having a thin layer of coating underneath, providing additional protection against radiation."
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -17917,7 +18101,7 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
-	id = "englockdown";
+	id = "snowfieldenglockdown";
 	name = "Engineering Lockdown";
 	opacity = 0
 	},
@@ -17927,7 +18111,7 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
-	id = "englockdown";
+	id = "snowfieldenglockdown";
 	name = "Engineering Lockdown";
 	opacity = 0
 	},
@@ -18672,6 +18856,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/hallway/northhallway)
+"pTk" = (
+/mob/living/simple_mob/construct/artificer{
+	devourable = 0
+	},
+/turf/simulated/floor/cult,
+/area/awaymission/snowfield/command/bsa)
 "pTp" = (
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /obj/effect/decal/cleanable/dirt,
@@ -19023,12 +19213,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/engineering/engine_checkpoint)
 "qgX" = (
-/obj/machinery/door/airlock/glass_medical{
-	id_tag = "MedbayFoyer";
-	name = "Medbay";
-	req_access = null;
-	req_one_access = null
-	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/hallway)
 "qhs" = (
@@ -19113,6 +19297,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/command/bridge)
+"qjp" = (
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/snowfield/medical/patients)
 "qjJ" = (
 /obj/machinery/button/remote/blast_door{
 	id = "snowfield emergency bunk";
@@ -19460,7 +19648,7 @@
 "qww" = (
 /obj/structure/table/reinforced,
 /obj/machinery/button/remote/blast_door{
-	id = "englockdown";
+	id = "snowfieldenglockdown";
 	name = "Engineering Lockdown";
 	pixel_x = -5;
 	req_access = null;
@@ -19470,7 +19658,7 @@
 	dir = 1
 	},
 /obj/machinery/button/remote/blast_door{
-	id = "snowfieldenglockdown";
+	id = "snowfieldengroomlockdown";
 	name = "Engine Room Lockdown";
 	pixel_x = 5;
 	req_one_access = list(1,10)
@@ -19663,7 +19851,7 @@
 /obj/item/weapon/storage/box{
 	desc = "A box full of soap. Soapy.";
 	name = "Soap box";
-	starts_with = list(/obj/item/weapon/soap = 7)
+	starts_with = list(/obj/item/weapon/soap=7)
 	},
 /obj/item/weapon/storage/box/lights/bulbs,
 /turf/simulated/floor/tiled/steel_grid,
@@ -19696,7 +19884,6 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/obj/effect/spider/stickyweb,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/power/apc{
 	dir = 4;
@@ -19784,7 +19971,7 @@
 /area/awaymission/snowfield/public/publicrestroom)
 "qPi" = (
 /obj/machinery/door/airlock/highsecurity{
-	req_one_access = list(1, 53)
+	req_one_access = list(1,53)
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -20005,6 +20192,16 @@
 /obj/structure/outcrop,
 /turf/simulated/floor/outdoors/rocks,
 /area/awaymission/snowfield/outside)
+"qZf" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 8
+	},
+/obj/structure/catwalk,
+/mob/living/simple_mob/construct/artificer{
+	devourable = 0
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/awaymission/snowfield/command/bsa)
 "qZp" = (
 /obj/structure/bed,
 /turf/simulated/floor/tiled/steel,
@@ -20130,6 +20327,7 @@
 	dir = 4
 	},
 /obj/structure/bed/chair/wood,
+/mob/living/simple_mob/animal/giant_spider/frost,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/staff_room)
 "reQ" = (
@@ -20481,6 +20679,14 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/dorms/dorm11)
+"rvf" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/tiled/techfloor,
+/area/awaymission/snowfield/engineering/hallway)
 "rvN" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -20491,6 +20697,12 @@
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor,
 /area/awaymission/snowfield/hallway/northhallway)
+"rwS" = (
+/mob/living/simple_mob/creature/cult/strong{
+	devourable = 0
+	},
+/turf/simulated/floor/gorefloor2,
+/area/awaymission/snowfield/command/gateway)
 "rxY" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/yellow/border,
@@ -20639,6 +20851,7 @@
 	dir = 1;
 	prices = null
 	},
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/staff_room)
 "rIV" = (
@@ -20782,6 +20995,7 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/door_assembly/door_assembly_sec,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/lobby)
 "rPn" = (
@@ -20939,7 +21153,7 @@
 /obj/machinery/door/airlock/glass_medical{
 	name = "Medbay Equipment";
 	req_access = null;
-	req_one_access = list1,5)
+	req_one_access = list(1,5)
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/storage_room)
@@ -21105,6 +21319,17 @@
 /obj/item/device/radio/phone,
 /turf/simulated/floor/wood,
 /area/awaymission/snowfield/checkpointunpowered)
+"sgz" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor,
+/area/awaymission/snowfield/medical/hallway)
 "shT" = (
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/awaymission/snowfield/security/security_cell)
@@ -21261,11 +21486,11 @@
 /turf/simulated/floor/cult,
 /area/awaymission/snowfield/command/commandarmory)
 "ssD" = (
-/mob/living/simple_mob/construct/juggernaut/behemoth{
-	devourable = 0
-	},
-/turf/simulated/floor/cult,
-/area/awaymission/snowfield/command/gateway)
+/obj/effect/floor_decal/borderfloorwhite,
+/obj/effect/floor_decal/corner/green/border,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/snowfield/medical/hallway)
 "stC" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -21307,7 +21532,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/window/brigdoor/eastright{
-	id = Cell 3;
+	id = "cell3";
 	name = "Cell 3";
 	req_access = null;
 	req_one_access = list(2,4)
@@ -21602,6 +21827,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/monotile,
 /area/awaymission/snowfield/security/lobby)
+"sKk" = (
+/obj/effect/floor_decal/industrial/danger{
+	dir = 1
+	},
+/mob/living/simple_mob/construct/harvester/greater,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/awaymission/snowfield/command/bsa)
 "sKP" = (
 /obj/machinery/light,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -21893,7 +22125,7 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/secure_closet/engineering_welding{
 	req_access = null;
-	req_one_access = list (10,11)
+	req_one_access = list(10,11)
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/engineering/locker_room)
@@ -21984,12 +22216,6 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/awaymission/snowfield/dorms/dorm2)
 "tfe" = (
-/obj/machinery/door/airlock/glass_medical{
-	id_tag = "MedbayFoyer";
-	name = "Medbay";
-	req_access = null;
-	req_one_access = null
-	},
 /obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 2;
@@ -22302,6 +22528,21 @@
 "tsJ" = (
 /turf/simulated/wall/cult,
 /area/awaymission/snowfield/command/bridge)
+"tsZ" = (
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006
+	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "snowfield bsa maints";
+	opacity = 0
+	},
+/obj/item/weapon/material/shard,
+/obj/structure/grille/broken,
+/turf/simulated/floor,
+/area/awaymission/snowfield/command/bsa)
 "ttf" = (
 /obj/structure/flora/tree/dead,
 /obj/structure/flora/grass/both,
@@ -22752,29 +22993,29 @@
 /obj/item/clothing/mask/gas/half,
 /obj/item/clothing/mask/gas/half,
 /obj/item/clothing/under/tactical{
-	armor = list("melee" = 40, "bullet" = 35, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 35);
-	armorsoak = list("melee" = 10, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 5, "bio" = 5, "rad" = 5);
+	armor = list("melee"=40,"bullet"=35,"laser"=10,"energy"=10,"bomb"=10,"bio"=10,"rad"=35);
+	armorsoak = list("melee"=2,"bullet"=1,"laser"=1,"energy"=1,"bomb"=1,"bio"=1,"rad"=1);
 	desc = "It's covered with  sturdier material than standard jumpsuits, to allow for robust protection. With additional protection, however, it has sacraficed the speed.";
 	name = "tactical armored jumpsuit";
 	slowdown = 0.5
 	},
 /obj/item/clothing/under/tactical{
-	armor = list("melee" = 40, "bullet" = 35, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 35);
-	armorsoak = list("melee" = 10, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 5, "bio" = 5, "rad" = 5);
+	armor = list("melee"=40,"bullet"=35,"laser"=10,"energy"=10,"bomb"=10,"bio"=10,"rad"=35);
+	armorsoak = list("melee"=2,"bullet"=1,"laser"=1,"energy"=1,"bomb"=1,"bio"=1,"rad"=1);
 	desc = "It's covered with  sturdier material than standard jumpsuits, to allow for robust protection. With additional protection, however, it has sacraficed the speed.";
 	name = "tactical armored jumpsuit";
 	slowdown = 0.5
 	},
 /obj/item/clothing/under/tactical{
-	armor = list("melee" = 40, "bullet" = 35, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 35);
-	armorsoak = list("melee" = 10, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 5, "bio" = 5, "rad" = 5);
+	armor = list("melee"=40,"bullet"=35,"laser"=10,"energy"=10,"bomb"=10,"bio"=10,"rad"=35);
+	armorsoak = list("melee"=2,"bullet"=1,"laser"=1,"energy"=1,"bomb"=1,"bio"=1,"rad"=1);
 	desc = "It's covered with  sturdier material than standard jumpsuits, to allow for robust protection. With additional protection, however, it has sacraficed the speed.";
 	name = "tactical armored jumpsuit";
 	slowdown = 0.5
 	},
 /obj/item/clothing/under/tactical{
-	armor = list("melee" = 40, "bullet" = 35, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 35);
-	armorsoak = list("melee" = 10, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 5, "bio" = 5, "rad" = 5);
+	armor = list("melee"=40,"bullet"=35,"laser"=10,"energy"=10,"bomb"=10,"bio"=10,"rad"=35);
+	armorsoak = list("melee"=2,"bullet"=1,"laser"=1,"energy"=1,"bomb"=1,"bio"=1,"rad"=1);
 	desc = "It's covered with  sturdier material than standard jumpsuits, to allow for robust protection. With additional protection, however, it has sacraficed the speed.";
 	name = "tactical armored jumpsuit";
 	slowdown = 0.5
@@ -22858,22 +23099,22 @@
 /obj/item/weapon/storage/box{
 	desc = "A box full of soap. Soapy.";
 	name = "Soap box";
-	starts_with = list(/obj/item/weapon/soap = 7)
+	starts_with = list(/obj/item/weapon/soap=7)
 	},
 /obj/item/weapon/storage/box{
 	desc = "A box full of soap. Soapy.";
 	name = "Soap box";
-	starts_with = list(/obj/item/weapon/soap = 7)
+	starts_with = list(/obj/item/weapon/soap=7)
 	},
 /obj/item/weapon/storage/box{
 	desc = "A box full of soap. Soapy.";
 	name = "Soap box";
-	starts_with = list(/obj/item/weapon/soap = 7)
+	starts_with = list(/obj/item/weapon/soap=7)
 	},
 /obj/item/weapon/storage/box{
 	desc = "A box full of soap. Soapy.";
 	name = "Soap box";
-	starts_with = list(/obj/item/weapon/soap = 7)
+	starts_with = list(/obj/item/weapon/soap=7)
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -22958,6 +23199,17 @@
 /obj/structure/door_assembly/door_assembly_eng,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/hallway/northhallway)
+"tWH" = (
+/obj/structure/catwalk,
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/door_assembly/door_assembly_med,
+/turf/simulated/floor,
+/area/awaymission/snowfield/hallway/northhallway)
 "tXc" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 4
@@ -22994,7 +23246,7 @@
 /obj/machinery/vending/tool{
 	dir = 8;
 	pixel_x = -5;
-	products = list(/obj/item/stack/cable_coil/random = 10, /obj/item/weapon/tool/crowbar = 5, /obj/item/weapon/weldingtool = 3, /obj/item/weapon/tool/wirecutters = 5, /obj/item/weapon/tool/wrench = 5, /obj/item/device/analyzer = 5, /obj/item/weapon/tool/screwdriver = 5, /obj/item/device/flashlight/glowstick = 3, /obj/item/device/flashlight/glowstick/red = 3, /obj/item/device/flashlight/glowstick/blue = 3, /obj/item/device/flashlight/glowstick/orange = 3, /obj/item/device/flashlight/glowstick/yellow = 3)
+	products = list(/obj/item/stack/cable_coil/random=10,/obj/item/weapon/tool/crowbar=5,/obj/item/weapon/weldingtool=3,/obj/item/weapon/tool/wirecutters=5,/obj/item/weapon/tool/wrench=5,/obj/item/device/analyzer=5,/obj/item/weapon/tool/screwdriver=5,/obj/item/device/flashlight/glowstick=3,/obj/item/device/flashlight/glowstick/red=3,/obj/item/device/flashlight/glowstick/blue=3,/obj/item/device/flashlight/glowstick/orange=3,/obj/item/device/flashlight/glowstick/yellow=3)
 	},
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 8
@@ -23007,11 +23259,8 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/engineering{
-	name = "Engineering Storage";
-	req_one_access = list(1,10)
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/engineering/primary_storage)
 "tYJ" = (
@@ -23926,6 +24175,8 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/weapon/storage/pill_bottle/bicaridine,
+/obj/item/weapon/storage/pill_bottle/bicaridine,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/medical/storage_room)
 "uLC" = (
@@ -23971,14 +24222,10 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/hallway/northhallway)
 "uOQ" = (
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/door/airlock/security,
-/turf/simulated/floor/tiled/red,
-/area/awaymission/snowfield/security/hallway)
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/structure/door_assembly/door_assembly_sec,
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/snowfield/security/lobby)
 "uPe" = (
 /obj/structure/filingcabinet,
 /obj/effect/floor_decal/borderfloor{
@@ -23995,16 +24242,9 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/plating,
 /area/awaymission/snowfield/engineering/primary_storage)
-"uPI" = (
-/obj/effect/spider/stickyweb,
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/freezer,
-/area/awaymission/snowfield/engineering/restroom)
 "uQl" = (
 /obj/machinery/light_construct{
 	dir = 8
@@ -24027,7 +24267,7 @@
 /obj/machinery/vending/security{
 	description_fluff = "This security vending machine is kindly provided by the-... Sorry, how do you spell this company's name again?";
 	product_ads = "Crack capitalist skulls!;Beat some heads in!;Don't forget - harm is good!;Your weapons are right here.;Handcuffs!;Freeze, scumbag!;Don't shoot me bro!;Shoot them, bro.;Why not have a slice of sandwich.";
-	products = list(/obj/item/weapon/handcuffs = 12, /obj/item/weapon/grenade/flashbang = 4, /obj/item/weapon/reagent_containers/food/snacks/sandwich = 12, /obj/item/weapon/storage/box/evidence = 6,/obj/item/ammo_magazine/makarov = 18,/obj/item/weapon/gun/projectile/serdy_pistols/makarov = 4,/obj/item/weapon/melee/classic_baton = 8)
+	products = list(/obj/item/weapon/handcuffs=12,/obj/item/weapon/grenade/flashbang=4,/obj/item/weapon/reagent_containers/food/snacks/sandwich=12,/obj/item/weapon/storage/box/evidence=6,/obj/item/ammo_magazine/makarov=18,/obj/item/weapon/gun/projectile/serdy_pistols/makarov=4,/obj/item/weapon/melee/classic_baton=8)
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -24066,6 +24306,15 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/service/cafeteria)
+"uSg" = (
+/obj/effect/floor_decal/corner/green/diagonal,
+/obj/effect/floor_decal/corner/blue/diagonal{
+	dir = 4
+	},
+/obj/structure/table/glass,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/snowfield/medical/staff_room)
 "uSM" = (
 /obj/structure/cult/forge,
 /turf/simulated/floor/cult,
@@ -24202,7 +24451,7 @@
 "vaq" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/secure_closet/security{
-	starts_with = list(/obj/item/clothing/gloves/black, /obj/item/clothing/accessory/holster, /obj/item/weapon/storage/belt/security, /obj/item/clothing/head/beret/sec/corporate/officer, /obj/item/clothing/head/helmet, /obj/item/device/radio/headset/headset_sec/alt, /obj/item/device/radio/headset/headset_sec, /obj/item/device/radio/off, /obj/item/weapon/storage/backpack/security, /obj/item/weapon/storage/backpack/satchel/sec, /obj/item/clothing/shoes/boots/marine, /obj/item/clothing/suit/armor/bulletproof, /obj/item/clothing/under/soviet, /obj/item/weapon/reagent_containers/spray/pepper, /obj/item/weapon/melee/classic_baton, /obj/item/ammo_magazine/makarov = 2, /obj/item/weapon/gun/projectile/serdy_pistols/makarov)
+	starts_with = list(/obj/item/clothing/gloves/black,/obj/item/clothing/accessory/holster,/obj/item/weapon/storage/belt/security,/obj/item/clothing/head/beret/sec/corporate/officer,/obj/item/clothing/head/helmet,/obj/item/device/radio/headset/headset_sec/alt,/obj/item/device/radio/headset/headset_sec,/obj/item/device/radio/off,/obj/item/weapon/storage/backpack/security,/obj/item/weapon/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/suit/armor/bulletproof,/obj/item/clothing/under/soviet,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/melee/classic_baton,/obj/item/ammo_magazine/makarov=2,/obj/item/weapon/gun/projectile/serdy_pistols/makarov)
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -24664,6 +24913,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/public/toolstroage2)
+"vrJ" = (
+/mob/living/simple_mob/construct/wraith{
+	devourable = 0
+	},
+/turf/simulated/floor/cult,
+/area/awaymission/snowfield/command/bsa)
 "vrX" = (
 /obj/structure/bed,
 /turf/simulated/floor/tiled/steel,
@@ -24695,7 +24950,6 @@
 /obj/structure/mirror{
 	pixel_y = 35
 	},
-/obj/effect/spider/stickyweb,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/engineering/restroom)
@@ -24770,7 +25024,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/blast/regular{
-	id = "snowfieldenglockdown"
+	id = "snowfieldengroomlockdown"
 	},
 /turf/simulated/floor,
 /area/awaymission/snowfield/engineering/engine)
@@ -24787,7 +25041,10 @@
 	req_one_access = list(1,11,20,47,56)
 	},
 /obj/machinery/door/blast/regular{
-	id = "snowfield bsa MR"
+	density = 0;
+	icon_state = "pdoor0";
+	id = "snowfield bsa MR";
+	opacity = 0
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/hallway/commandhallway)
@@ -24847,6 +25104,11 @@
 	},
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
 /area/awaymission/snowfield/outside)
+"vAm" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/construct/juggernaut/behemoth/unstoppable,
+/turf/simulated/floor/cult,
+/area/awaymission/snowfield/command/gateway)
 "vAq" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -25038,6 +25300,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/medical_locker)
+"vIj" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/animal/giant_spider/webslinger,
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/snowfield/medical/patients)
 "vIp" = (
 /obj/machinery/atmospherics/pipe/tank{
 	desc = "A large vessel containing huge amount of water.";
@@ -25647,9 +25914,6 @@
 /obj/item/weapon/surgical/surgicaldrill,
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/medical/surgery)
-"whO" = (
-/turf/simulated/mineral/floor/cave,
-/area/awaymission/snowfield/security/security_cell)
 "whW" = (
 /obj/machinery/computer/secure_data{
 	dir = 1
@@ -25862,7 +26126,7 @@
 /obj/effect/floor_decal/industrial/outline,
 /obj/structure/closet/secure_closet/medical3{
 	req_access = list(33);
-	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/device/radio/headset/headset_med,/obj/item/device/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/weapon/storage/box/freezer = 3, /obj/item/weapon/storage/belt/medical)
+	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/device/radio/headset/headset_med,/obj/item/device/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/weapon/storage/box/freezer=3,/obj/item/weapon/storage/belt/medical)
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/medical_locker)
@@ -25904,6 +26168,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 10
 	},
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/patients)
 "wwj" = (
@@ -26292,7 +26557,7 @@
 	req_one_access = list(1,10)
 	},
 /obj/machinery/door/blast/regular{
-	id = "snowfieldenglockdown"
+	id = "snowfieldengroomlockdown"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/engineering/monitor_room)
@@ -26606,6 +26871,15 @@
 /obj/machinery/door/airlock/security,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/snowfield/security/seconddesk)
+"wWF" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/weapon/storage/pill_bottle/myelamine,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/awaymission/snowfield/medical/storage_room)
 "wWN" = (
 /obj/structure/fireaxecabinet{
 	pixel_y = 32
@@ -26619,6 +26893,10 @@
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/medical_locker)
+"wXd" = (
+/obj/item/weapon/material/shard,
+/turf/simulated/floor/cult,
+/area/awaymission/snowfield/command/bsa)
 "wXh" = (
 /obj/item/weapon/reagent_containers/spray/cleaner,
 /obj/item/weapon/reagent_containers/spray/cleaner,
@@ -26864,8 +27142,8 @@
 /turf/simulated/floor/cult,
 /area/awaymission/snowfield/command/gateway)
 "xbT" = (
-/obj/structure/table/steel_reinforced,
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/table/steel_reinforced,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/heavy_armory)
 "xcE" = (
@@ -27264,6 +27542,7 @@
 	pixel_x = 23;
 	req_one_access = list(1,45)
 	},
+/mob/living/simple_mob/animal/giant_spider/webslinger,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/hallway)
 "xmu" = (
@@ -27427,11 +27706,6 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/public/cafeteria_restroom)
-"xtE" = (
-/obj/effect/spider/stickyweb,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/freezer,
-/area/awaymission/snowfield/engineering/restroom)
 "xtM" = (
 /obj/structure/table/steel_reinforced,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -27507,6 +27781,9 @@
 	},
 /obj/machinery/light/flicker{
 	dir = 4
+	},
+/mob/living/simple_mob/construct/artificer/caster{
+	devourable = 0
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/command/gateway)
@@ -27771,6 +28048,14 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/engineering/engine_checkpoint)
+"xIO" = (
+/obj/effect/floor_decal/corner/green/diagonal,
+/obj/effect/floor_decal/corner/blue/diagonal{
+	dir = 4
+	},
+/mob/living/simple_mob/animal/giant_spider/carrier,
+/turf/simulated/floor/tiled/neutral,
+/area/awaymission/snowfield/medical/staff_room)
 "xIQ" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5,
 /obj/structure/table/reinforced,
@@ -29515,20 +29800,20 @@ uoM
 uoM
 uoM
 uoM
-szB
-szB
-szB
-szB
-szB
-szB
-szB
-szB
-szB
-szB
-szB
-szB
-szB
-szB
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
 uoM
 uoM
 uoM
@@ -29773,20 +30058,20 @@ uoM
 uoM
 uoM
 uoM
-szB
-szB
-szB
-szB
-szB
-szB
-szB
-szB
-szB
-szB
-szB
-szB
-szB
-szB
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
 uoM
 uoM
 uoM
@@ -30032,18 +30317,18 @@ uoM
 uoM
 uoM
 uoM
-szB
-szB
-szB
-szB
-szB
-szB
-szB
-szB
-szB
-szB
-szB
-szB
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
 uoM
 uoM
 uoM
@@ -30291,17 +30576,17 @@ uoM
 uoM
 uoM
 uoM
-szB
-szB
-szB
-szB
-szB
-szB
-szB
-szB
-szB
-szB
-szB
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
 uoM
 uoM
 uoM
@@ -30549,17 +30834,17 @@ uoM
 uoM
 uoM
 uoM
-szB
-szB
-szB
-szB
-szB
-szB
-szB
-szB
-szB
-szB
-szB
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
 uoM
 uoM
 uoM
@@ -30808,16 +31093,16 @@ uoM
 uoM
 uoM
 uoM
-szB
-szB
-szB
-szB
-szB
-szB
-szB
-szB
-szB
-szB
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
+uoM
 uoM
 uoM
 uoM
@@ -31066,16 +31351,16 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -31326,14 +31611,14 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -31585,13 +31870,13 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -31843,13 +32128,13 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -32101,13 +32386,13 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -32359,13 +32644,13 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -32617,13 +32902,13 @@ vDF
 vDF
 vDF
 vDF
-hTO
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -32878,9 +33163,9 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -33136,9 +33421,9 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -33394,9 +33679,9 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -33652,9 +33937,9 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -33910,9 +34195,9 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -34168,9 +34453,9 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -34426,9 +34711,9 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -34684,9 +34969,9 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -34942,9 +35227,9 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -35201,7 +35486,7 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
 vDF
 vDF
 vDF
@@ -35459,7 +35744,7 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
 vDF
 vDF
 vDF
@@ -35717,7 +36002,7 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
 vDF
 vDF
 vDF
@@ -35975,7 +36260,7 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
 vDF
 vDF
 vDF
@@ -36233,7 +36518,7 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
 vDF
 vDF
 vDF
@@ -36491,7 +36776,7 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
 vDF
 vDF
 vDF
@@ -36749,7 +37034,7 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
 vDF
 vDF
 vDF
@@ -37007,7 +37292,7 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
 vDF
 vDF
 vDF
@@ -37265,7 +37550,7 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
 vDF
 vDF
 vDF
@@ -37523,7 +37808,7 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
 vDF
 vDF
 vDF
@@ -37781,7 +38066,7 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
 vDF
 vDF
 vDF
@@ -38039,7 +38324,7 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
 vDF
 vDF
 vDF
@@ -38139,7 +38424,7 @@ sEL
 nKn
 sEL
 sEL
-oOl
+sEL
 aBn
 xIQ
 txs
@@ -38297,7 +38582,7 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
 vDF
 vDF
 vDF
@@ -38397,7 +38682,7 @@ hWV
 aBn
 bYx
 eyC
-xtE
+eyC
 aBn
 xIQ
 txs
@@ -38555,7 +38840,7 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
 vDF
 vDF
 vDF
@@ -38636,7 +38921,7 @@ vZQ
 jXb
 ybq
 ybW
-kEt
+wWF
 sRX
 mHh
 xod
@@ -38655,7 +38940,7 @@ pEg
 aBn
 iHK
 eyC
-xtE
+sEL
 aBn
 hoT
 mZF
@@ -38813,7 +39098,7 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
 vDF
 vDF
 vDF
@@ -39071,7 +39356,7 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
 vDF
 vDF
 vDF
@@ -39170,7 +39455,7 @@ aBn
 cip
 ilY
 eyC
-xtE
+eyC
 eyC
 aBn
 kYw
@@ -39329,7 +39614,7 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
 vDF
 vDF
 vDF
@@ -39429,7 +39714,7 @@ aIt
 sEL
 eyC
 eyC
-xtE
+eyC
 aBn
 lcA
 xIh
@@ -39587,7 +39872,7 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
 vDF
 vDF
 vDF
@@ -39685,8 +39970,8 @@ uUw
 aBn
 aIt
 sEL
-xtE
-xtE
+eyC
+eyC
 eyC
 aBn
 ozF
@@ -39845,7 +40130,7 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
 vDF
 vDF
 vDF
@@ -39942,8 +40227,8 @@ vMb
 oUE
 aBn
 vtt
-uPI
-oOl
+nKn
+sEL
 qJL
 ndW
 aBn
@@ -40103,7 +40388,7 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
 vDF
 vDF
 vDF
@@ -40197,7 +40482,7 @@ qfq
 sHz
 xod
 pHG
-uUw
+fNR
 aBn
 aBn
 aBn
@@ -40361,7 +40646,7 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
 vDF
 vDF
 vDF
@@ -40618,9 +40903,9 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -40718,7 +41003,7 @@ mui
 oUE
 oUE
 oUE
-mui
+rvf
 oUE
 gRj
 pHG
@@ -40876,9 +41161,9 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -41134,9 +41419,9 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -41392,9 +41677,9 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -41476,17 +41761,17 @@ vir
 iJk
 oVH
 kjZ
-xeR
+okr
 uYG
 nZN
 emW
 tQD
 jdk
 emW
-rim
+fGG
 slI
 fuU
-hqb
+oOl
 uYG
 meN
 rXj
@@ -41650,9 +41935,9 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -41734,13 +42019,13 @@ vUR
 vUR
 vUR
 siu
-cIk
+ssD
 uYG
 tNE
 uaB
 fuU
 fuU
-uaB
+lxg
 fuU
 fuU
 auz
@@ -41908,9 +42193,9 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -41987,12 +42272,12 @@ vUR
 lyN
 vDZ
 fuC
-vDZ
+fQJ
 kXS
 jLm
 vUR
 siu
-cIk
+ssD
 uYG
 rim
 uKp
@@ -42166,9 +42451,9 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -42245,21 +42530,21 @@ vUR
 pZK
 wTm
 iDx
-iDx
-wTm
+uSg
+iPB
 ulu
 vUR
 oCc
 cJn
 uYG
-rim
+fGG
 emW
 kWO
 haJ
 emW
 lap
 bZx
-fuU
+mWF
 xzW
 uYG
 tkr
@@ -42424,9 +42709,9 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -42501,7 +42786,7 @@ vDF
 vUR
 vUR
 iVZ
-wTm
+xIO
 xXJ
 iDx
 nBM
@@ -42510,9 +42795,9 @@ vUR
 vHw
 cIk
 uYG
-emW
+kIH
 uKp
-emW
+kIH
 emW
 uaB
 fuU
@@ -42682,9 +42967,9 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -42775,7 +43060,7 @@ rim
 emW
 rim
 rim
-fuU
+ngO
 veE
 uYG
 qxt
@@ -42939,10 +43224,10 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -43041,7 +43326,7 @@ rrm
 uVh
 wQd
 sbj
-jnn
+jmE
 eWn
 tPy
 sok
@@ -43197,10 +43482,10 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -43287,7 +43572,7 @@ uYG
 rim
 uKp
 fhb
-rim
+fGG
 fuU
 rim
 jdk
@@ -43455,11 +43740,11 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -43548,7 +43833,7 @@ fhb
 fhb
 cri
 rim
-jdk
+mKv
 uPg
 haJ
 uYG
@@ -43713,11 +43998,11 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -43790,7 +44075,7 @@ vDF
 vDF
 vUR
 vUR
-tqN
+cQZ
 dgL
 dgL
 tqN
@@ -43971,11 +44256,11 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -44229,11 +44514,11 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -44487,11 +44772,11 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -44745,11 +45030,11 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -44830,7 +45115,7 @@ hBV
 hBV
 hBV
 siu
-xeR
+okr
 hBV
 vDF
 tBf
@@ -45003,11 +45288,11 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -45088,7 +45373,7 @@ hBV
 hBV
 hBV
 vHw
-cIk
+ssD
 hBV
 vDF
 tBf
@@ -45260,12 +45545,12 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -45345,7 +45630,7 @@ vDF
 vDF
 hBV
 hBV
-oCc
+czv
 cJn
 hBV
 vDF
@@ -45518,12 +45803,12 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -45603,8 +45888,8 @@ vDF
 vDF
 hBV
 hBV
-vHw
-cIk
+sgz
+ssD
 hBV
 vDF
 tBf
@@ -45776,12 +46061,12 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -45862,14 +46147,14 @@ vDF
 hBV
 hBV
 vHw
-xeR
+okr
 hBV
 vDF
 tBf
 alU
 gzQ
 kOt
-kOt
+giF
 kOt
 fpc
 kOt
@@ -46034,12 +46319,12 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -46119,7 +46404,7 @@ vDF
 vDF
 hBV
 hBV
-siu
+jtj
 cIk
 hBV
 vDF
@@ -46292,12 +46577,12 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -46418,7 +46703,7 @@ jSi
 eYO
 jSi
 jSi
-uOQ
+oAu
 ohs
 bZn
 bZn
@@ -46550,12 +46835,12 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -46643,7 +46928,7 @@ rLd
 uGz
 oVH
 iHU
-uGz
+kiD
 xiw
 oVH
 uGz
@@ -46808,13 +47093,13 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -46921,7 +47206,7 @@ gHQ
 iiz
 vNa
 veK
-mTL
+tWH
 tSF
 inM
 fwr
@@ -47066,13 +47351,13 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -47324,13 +47609,13 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -47581,15 +47866,15 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -47688,7 +47973,7 @@ pnb
 tmQ
 qID
 rjH
-nVo
+cXK
 nVo
 vsh
 vsh
@@ -47718,7 +48003,7 @@ gWC
 aBy
 aBy
 rSH
-okr
+gWC
 rSH
 bZn
 bZn
@@ -47839,16 +48124,16 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -47958,7 +48243,7 @@ uOb
 qqQ
 fwr
 aip
-cnp
+uOQ
 vII
 hMO
 qmj
@@ -48097,17 +48382,17 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
 vDF
 vDF
 vDF
 vDF
 vDF
 vDF
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -48198,7 +48483,7 @@ skE
 qID
 fLg
 fLg
-gsE
+vIj
 fLg
 our
 ttU
@@ -48355,9 +48640,6 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
 vDF
 vDF
 vDF
@@ -48365,7 +48647,10 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -48613,9 +48898,6 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
 vDF
 vDF
 vDF
@@ -48623,7 +48905,10 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -48712,7 +48997,7 @@ hVe
 rZS
 cdN
 qID
-qyT
+oWq
 fLg
 fLg
 fLg
@@ -48871,9 +49156,6 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-exB
 vDF
 vDF
 vDF
@@ -48881,8 +49163,11 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -49129,9 +49414,6 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-exB
 vDF
 vDF
 vDF
@@ -49140,8 +49422,11 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -49231,7 +49516,7 @@ qID
 ahK
 xav
 sOl
-fLg
+qjp
 sOl
 oIi
 qID
@@ -49266,7 +49551,7 @@ xBH
 shT
 cTE
 cRx
-whO
+tlT
 cRx
 gYN
 ocr
@@ -49387,9 +49672,6 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-exB
 vDF
 vDF
 vDF
@@ -49399,9 +49681,12 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -49645,9 +49930,6 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-exB
 vDF
 vDF
 vDF
@@ -49659,10 +49941,13 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 pun
@@ -49903,9 +50188,6 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-exB
 vDF
 vDF
 vDF
@@ -49920,8 +50202,11 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 pun
 imC
@@ -50161,9 +50446,6 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-exB
 vDF
 vDF
 vDF
@@ -50178,8 +50460,11 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
 pun
 pun
 pun
@@ -50419,9 +50704,6 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-exB
 vDF
 vDF
 vDF
@@ -50437,7 +50719,10 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
+vDF
+vDF
+vDF
 pun
 imC
 pun
@@ -50677,9 +50962,6 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-exB
 vDF
 vDF
 vDF
@@ -50695,7 +50977,10 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
+vDF
+vDF
+vDF
 pun
 pun
 pun
@@ -50933,11 +51218,6 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-exB
 vDF
 vDF
 vDF
@@ -50953,7 +51233,12 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 pun
 pun
 pun
@@ -51191,11 +51476,6 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-exB
 vDF
 vDF
 vDF
@@ -51211,7 +51491,12 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 pun
 pun
 pun
@@ -51448,12 +51733,6 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-exB
 vDF
 vDF
 vDF
@@ -51469,7 +51748,13 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 pun
 pun
 pun
@@ -51706,8 +51991,6 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
 vDF
 vDF
 vDF
@@ -51727,7 +52010,9 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
+vDF
+vDF
 pun
 pun
 pun
@@ -51964,8 +52249,6 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
 vDF
 vDF
 vDF
@@ -51984,8 +52267,10 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
 pun
 pun
 kNs
@@ -52219,11 +52504,6 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
 vDF
 vDF
 vDF
@@ -52242,7 +52522,12 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 nZF
 laC
 kNs
@@ -52477,11 +52762,6 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
 vDF
 vDF
 vDF
@@ -52497,10 +52777,15 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 nZF
 nZF
 nZF
@@ -52733,19 +53018,19 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -55825,35 +56110,35 @@ pun
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
 vDF
 vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 laC
 jUY
 laC
@@ -56087,19 +56372,6 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
 vDF
 vDF
 vDF
@@ -56110,8 +56382,21 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 nZF
 nZF
 laC
@@ -56346,18 +56631,6 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
 vDF
 vDF
 vDF
@@ -56369,7 +56642,19 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 nZF
 pun
 pun
@@ -56604,18 +56889,6 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
 vDF
 vDF
 vDF
@@ -56627,7 +56900,19 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 pun
 kNs
 pun
@@ -56769,7 +57054,7 @@ qDO
 jjw
 bBV
 wQH
-wQH
+qZf
 wQH
 wQH
 pGC
@@ -56864,15 +57149,6 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
 vDF
 vDF
 vDF
@@ -56885,7 +57161,16 @@ vDF
 vDF
 vDF
 vDF
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 pun
 pun
 pun
@@ -57024,7 +57309,7 @@ hrj
 hrj
 hrj
 dHG
-bBV
+pTk
 ygP
 ygP
 ygP
@@ -57122,15 +57407,6 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
 vDF
 vDF
 vDF
@@ -57141,9 +57417,18 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 pun
 pun
 pun
@@ -57380,15 +57665,6 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
 vDF
 vDF
 vDF
@@ -57396,12 +57672,21 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 hTO
 pun
 pun
@@ -57546,7 +57831,7 @@ rpz
 frj
 oDp
 qhx
-qhV
+kNi
 kzi
 dKR
 gmg
@@ -57638,14 +57923,6 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
 vDF
 vDF
 vDF
@@ -57653,13 +57930,21 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
 vDF
 vDF
 vDF
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 hTO
 pun
 pun
@@ -57805,7 +58090,7 @@ frj
 oDp
 qhx
 bBV
-hBm
+hAp
 eoL
 srQ
 srQ
@@ -57896,22 +58181,22 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
 vDF
 vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -58062,12 +58347,12 @@ fxn
 oLt
 oDp
 qhx
-rdy
+dAC
 bMc
 xxU
 dLU
 tHV
-srQ
+aqV
 iRf
 iRf
 bfk
@@ -58154,20 +58439,20 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
 vDF
 vDF
 vDF
 vDF
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -58320,9 +58605,9 @@ new
 jyr
 kmt
 bBV
-bBV
-kzi
-xbR
+iDn
+tsZ
+nIJ
 srQ
 tHV
 srQ
@@ -58412,19 +58697,19 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
-exB
 vDF
 vDF
 vDF
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -58578,8 +58863,8 @@ vRM
 ayQ
 dvn
 qhx
-bBV
-ibJ
+wXd
+gMa
 ewH
 pIi
 gWN
@@ -58672,16 +58957,16 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-exB
 vDF
 vDF
 vDF
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -58836,7 +59121,7 @@ xmu
 qij
 obI
 qhx
-qhV
+kNi
 ibJ
 ewH
 doC
@@ -58930,16 +59215,16 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-exB
 vDF
 vDF
 vDF
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -59088,7 +59373,7 @@ hrj
 hrj
 hrj
 dHG
-uut
+sKk
 oDp
 cNE
 jdW
@@ -59188,16 +59473,16 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-exB
 vDF
 vDF
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -59446,15 +59731,15 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
 vDF
 vDF
 vDF
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -59612,10 +59897,10 @@ nsC
 bBV
 rdy
 bMc
-mKv
+tHV
 gJu
 gJu
-igK
+lDF
 iRf
 iRf
 iRf
@@ -59705,14 +59990,14 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
 vDF
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -59868,7 +60153,7 @@ sUc
 htH
 gwq
 qhx
-bBV
+wXd
 kzi
 wdl
 vnj
@@ -59963,12 +60248,12 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -60126,8 +60411,8 @@ aNA
 vSW
 frZ
 qhx
-qhV
-ibJ
+kNi
+jEF
 mfp
 srQ
 ltZ
@@ -60223,9 +60508,9 @@ vDF
 vDF
 vDF
 vDF
-hTO
-hTO
-hTO
+vDF
+vDF
+vDF
 vDF
 vDF
 vDF
@@ -60384,9 +60669,9 @@ rdQ
 isM
 jfU
 qhx
-qhV
-ibJ
-hiZ
+kNi
+fve
+eUS
 srQ
 tHV
 gRe
@@ -60640,9 +60925,9 @@ dds
 ezz
 ezz
 bBV
-bBV
+vrJ
 bYW
-qhV
+kNi
 ibJ
 hiZ
 srQ
@@ -60905,7 +61190,7 @@ kbh
 dKR
 srQ
 gJu
-gJu
+rwS
 nNX
 iRf
 bfk
@@ -61672,7 +61957,7 @@ srQ
 tHV
 srQ
 srQ
-aiA
+srQ
 tHV
 srQ
 ehC
@@ -61935,7 +62220,7 @@ tgp
 iPW
 iRf
 cMA
-ssD
+tHV
 srQ
 igK
 iRf
@@ -62189,12 +62474,12 @@ srQ
 xge
 gPa
 oOF
-srQ
+vAm
 tHV
 iRf
 srQ
 srQ
-tHV
+gla
 cyK
 iRf
 iRf
@@ -62703,10 +62988,10 @@ iRf
 jpM
 rcg
 srQ
-aiA
 srQ
 srQ
-gla
+srQ
+tHV
 lcC
 srQ
 rTy
@@ -69288,7 +69573,7 @@ pfs
 pun
 qym
 pfs
-jtT
+qqw
 kNs
 gwC
 eAM

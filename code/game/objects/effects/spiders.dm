@@ -5,7 +5,7 @@
 	icon = 'icons/effects/effects.dmi'
 	anchored = TRUE
 	density = FALSE
-	var/health = 15
+	var/health = 10
 
 //similar to weeds, but only barfed out by nurses manually
 /obj/effect/spider/ex_act(severity)
@@ -132,15 +132,15 @@
 		qdel(src)
 
 /obj/effect/spider/eggcluster/small
-	spiders_min = 1
-	spiders_max = 3
+	spiders_min = 2 //CHOMP Edit
+	spiders_max = 6 //CHOMP Edit
 
 /obj/effect/spider/eggcluster/small/frost
 	spider_type = /obj/effect/spider/spiderling/frost
 
 /obj/effect/spider/eggcluster/royal
 	spiders_min = 2
-	spiders_max = 5
+	spiders_max = 6 //CHOMP Edit
 	spider_type = /obj/effect/spider/spiderling/varied
 
 /obj/effect/spider/spiderling
@@ -312,7 +312,7 @@
 	name = "cocoon"
 	desc = "Something wrapped in silky spider web"
 	icon_state = "cocoon1"
-	health = 60
+	health = 15
 
 /obj/effect/spider/cocoon/New()
 		icon_state = pick("cocoon1","cocoon2","cocoon3")

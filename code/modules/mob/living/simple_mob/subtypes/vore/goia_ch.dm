@@ -1,4 +1,4 @@
-/mob/living/simple_mob/otie/zorgoia //Yes im basing the goias on oties for now, sue me....please dont sue me - Jack
+/mob/living/simple_mob/vore/otie/zorgoia //Yes im basing the goias on oties for now, sue me....please dont sue me - Jack
 	name = "zorgoia"
 	desc = "It's a a reptilian mammal hybrid, known for its voracious nature and love for fruits. By more popular terms its refered to as the furry slinky!"
 	tt_desc = "Zorgoyuh slinkus"
@@ -28,7 +28,12 @@
 	vore_pounce_chance = 35	//More likely to nom
 	vore_icons = SA_ICON_LIVING | SA_ICON_REST
 
-/mob/living/simple_mob/otie/zorgoia/New()
+	// CHOMPAdd: Don't think its checked, but just in case
+	species_sounds = "Canine"
+	pain_emote_1p = list("yelp", "whine", "bark", "growl")
+	pain_emote_3p = list("yelps", "whines", "barks", "growls")
+
+/mob/living/simple_mob/vore/otie/zorgoia/New()
 	..()
 	switch(rand(9))
 		if(0)
@@ -52,7 +57,7 @@
 		if(9)
 			color = "#393939"
 
-/mob/living/simple_mob/otie/zorgoia/feral //gets the pet2tame feature. starts out hostile tho so get gamblin'
+/mob/living/simple_mob/vore/otie/zorgoia/feral //gets the pet2tame feature. starts out hostile tho so get gamblin'
 	name = "agressive zorgoia"
 	desc = "It's a a reptilian mammal hybrid, known for its voracious nature and love for fruits. By more popular terms its refered to as the furry slinky! This one seems quite hungry and in a bad mood!"
 	faction = "virgo3b"
@@ -66,7 +71,7 @@
 	min_n2 = 0
 	max_n2 = 0
 
-/mob/living/simple_mob/otie/zorgoia/friendly //gets the pet2tame feature and doesn't kill you right away
+/mob/living/simple_mob/vore/otie/zorgoia/friendly //gets the pet2tame feature and doesn't kill you right away
 	name = "friendly zorgoia"
 	desc = "It's a a reptilian mammal hybrid, known for its voracious nature and love for fruits. By more popular terms its refered to as the furry slinky! This one seems harmless and friendly!"
 	faction = "neutral"

@@ -1,6 +1,7 @@
 // Process the predator's effects upon the contents of its belly (i.e digestion/transformation etc)
 /obj/belly/process(wait) //Passed by controller
 	recent_sound = FALSE
+	cycle_sloshed = FALSE //CHOMPAdd
 
 	if(loc != owner)
 		if(istype(owner))
@@ -14,35 +15,23 @@
 	if(!contents.len)
 		return
 
-	//CHOMPEdit: Autotransfer count moved here.
-	if((!owner.client || autotransfer_enabled) && autotransferlocation && autotransferchance > 0)
-		var/list/autotransferables = contents - autotransfer_queue
-		if(LAZYLEN(autotransfer_queue) >= autotransfer_min_amount)
-			var/obj/belly/dest_belly
-			for(var/obj/belly/B in owner.vore_organs)
-				if(B.name == autotransferlocation)
-					dest_belly = B
-					break
-			if(dest_belly)
-				for(var/atom/movable/M in autotransfer_queue)
-					if(!M || !M.autotransferable)
-						continue
-					transfer_contents(M, dest_belly)
-				autotransfer_queue.Cut()
-		var/tally = 0
-		for(var/atom/movable/M in autotransferables)
-			if(!M || !M.autotransferable)
-				continue
+	//CHOMPEdit Start: Autotransfer count moved here.
+	if(!owner.client || autotransfer_enabled)
+		var/list/autotransferables = list()
+		for(var/atom/movable/M in contents)
+			if(!M || !M.autotransferable) continue
 			if(isliving(M))
 				var/mob/living/L = M
-				if(L.absorbed)
-					continue
+				if(L.absorbed) continue
 			M.belly_cycles++
-			if(M.belly_cycles >= autotransferwait / 60)
-				check_autotransfer(M, autotransferlocation)
-				tally++
-			if(autotransfer_max_amount > 0 && tally >= autotransfer_max_amount)
-				break
+			if(M.belly_cycles < autotransferwait / 60) continue
+			autotransferables += M
+		if(LAZYLEN(autotransferables) >= autotransfer_min_amount)
+			var/tally = 0
+			for(var/atom/movable/M in autotransferables)
+				if(check_autotransfer(M))
+					tally++
+				if(autotransfer_max_amount > 0 && tally >= autotransfer_max_amount) break //CHOMPEdit End
 
 	var/play_sound //Potential sound to play at the end to avoid code duplication.
 	var/to_update = FALSE //Did anything update worthy happen?
@@ -185,28 +174,10 @@
 	var/to_update = FALSE
 	var/digestion_noise_chance = 0
 	var/list/touchable_mobs = list()
-	var/touchable_amount = touchable_atoms.len  //CHOMPEdit start
 
 	for(var/A in touchable_atoms)
-		//Handle stray items
-		if(isitem(A))
-			if(item_digest_mode == IM_DIGEST_PARALLEL)
-				did_an_item = handle_digesting_item(A, touchable_amount)
-			else if(!did_an_item)
-				did_an_item = handle_digesting_item(A, 1)
-			if(did_an_item)
-				to_update = TRUE
-
-			//Less often than with normal digestion
-			if((item_digest_mode == IM_DIGEST_FOOD || item_digest_mode == IM_DIGEST || item_digest_mode == IM_DIGEST_PARALLEL) && prob(25))
-				// This is a little weird, but the point of it is that we don't want to repeat code
-				// but we also want the prob(25) chance to run for -every- item we look at, not just once
-				// More gurgles the better~
-				digestion_noise_chance = 25
-			continue  //CHOMPEdit end
-
 		//Handle eaten mobs
-		else if(isliving(A))
+		if(isliving(A)) //CHOMPEdit Start
 			var/mob/living/L = A
 			touchable_mobs += L
 
@@ -214,7 +185,7 @@
 				L.Weaken(5)
 
 			// Fullscreen overlays
-			vore_fx(L)
+			//vore_fx(L)	//CHOMPEdit - Don't update this every single process tick, damn.
 
 			//Handle 'human'
 			if(ishuman(L))
@@ -228,20 +199,25 @@
 				//Thickbelly flag
 				if((mode_flags & DM_FLAG_THICKBELLY) && !H.muffled)
 					H.muffled = TRUE
+				//CHOMPEdit Start - Fix muffled sometimes being sticky.
+				else if(!(mode_flags & DM_FLAG_THICKBELLY) && H.muffled)
+					H.muffled = FALSE
+				//CHOMPEdit End
 
 				//Force psay
 				if((mode_flags & DM_FLAG_FORCEPSAY) && !H.forced_psay && H.absorbed)
 					H.forced_psay = TRUE
+				//CHOMPEdit Start - Fix forcepsay sometimes being sticky.
+				else if(!(mode_flags & DM_FLAG_FORCEPSAY) && H.forced_psay)
+					H.forced_psay = FALSE
+				//CHOMPEdit End
 
 				//Worn items flag
 				if(mode_flags & DM_FLAG_AFFECTWORN)
 					for(var/slot in slots)
 						var/obj/item/I = H.get_equipped_item(slot = slot)
 						if(I && I.canremove)
-							if(handle_digesting_item(I))
-								digestion_noise_chance = 25
-								to_update = TRUE
-								break
+							touchable_atoms |= I
 
 				//Stripping flag
 				if(mode_flags & DM_FLAG_STRIPPING)
@@ -252,6 +228,25 @@
 							digestion_noise_chance = 25
 							to_update = TRUE
 							break // Digest off one by one, not all at once
+
+	for(var/A in touchable_atoms) //List updated for worn items.
+		//Handle stray items
+		if(isitem(A))
+			if(item_digest_mode == IM_DIGEST_PARALLEL)
+				var/touchable_amount = touchable_atoms.len
+				did_an_item = handle_digesting_item(A, touchable_amount)
+			else if(!did_an_item)
+				did_an_item = handle_digesting_item(A, 1)
+			if(did_an_item)
+				to_update = TRUE
+
+			//Less often than with normal digestion
+			if((item_digest_mode == IM_DIGEST_FOOD || item_digest_mode == IM_DIGEST || item_digest_mode == IM_DIGEST_PARALLEL) && prob(25))
+				// This is a little weird, but the point of it is that we don't want to repeat code
+				// but we also want the prob(25) chance to run for -every- item we look at, not just once
+				// More gurgles the better~
+				digestion_noise_chance = 25
+			continue  //CHOMPEdit end
 
 		//get rid of things like blood drops and gibs that end up in there
 		else if(istype(A, /obj/effect/decal/cleanable))
@@ -359,8 +354,8 @@
 	if((mode_flags & DM_FLAG_LEAVEREMAINS) && M.digest_leave_remains)
 		handle_remains_leaving(M)
 	digestion_death(M)
-	if(!ishuman(owner))
-		owner.update_icons()
+	//if(!ishuman(owner)) CHOMPremoval. Bad.
+	//	owner.update_icons()
 	if(isrobot(owner))
 		var/mob/living/silicon/robot/R = owner
 		if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMPedit: digestion producing reagents

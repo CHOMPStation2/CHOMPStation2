@@ -54,7 +54,7 @@ I think I covered everything.
 	catalogue_data = list(/datum/category_item/catalogue/fauna/bigdragon)
 	tt_desc = "S Draco Ignis"
 	icon = 'icons/mob/vore128x64.dmi'
-	icon_state = "dragon_maneNone"	//Invisible, necessary for examine stuff
+	icon_state = "dragon_bodyScaled"	//CHOMPEdit - So mappers can see it. Gets removed in Initialize()
 	icon_rest = "dragon_maneNone"
 	icon_living = "dragon_maneNone"
 	player_msg = "You can perform a charge attack by disarm intent clicking somewhere. Grab intent clicking will perform a tail sweep and fling any nearby mobs. You can fire breath with harm intent. Your attacks have cooldowns associated with them. You can heal slowly by resting. Check your abilities tab for other functions!"
@@ -254,6 +254,7 @@ I think I covered everything.
 	add_language(LANGUAGE_DRUDAKAR)
 	add_language(LANGUAGE_UNATHI)
 	mob_radio = new /obj/item/device/radio/headset/mob_headset(src)	//We always give radios to spawned mobs anyway
+	icon_state = "dragon_maneNone" //CHOMPEdit
 
 /mob/living/simple_mob/vore/bigdragon/MouseDrop_T(mob/living/M, mob/living/user)
 	return
@@ -741,7 +742,7 @@ I think I covered everything.
 		var/atom/movable/AM = am
 		if(AM == src || AM.anchored)
 			continue
-		addtimer(CALLBACK(src, .proc/yeet, am), 1)
+		addtimer(CALLBACK(src, PROC_REF(yeet), am), 1)
 	playsound(src, "sound/weapons/punchmiss.ogg", 50, 1)
 
 //Split repulse into two parts so I can recycle this later
@@ -774,7 +775,7 @@ I think I covered everything.
 
 	do_windup_animation(A, charge_warmup)
 	//callbacks are more reliable than byond's process scheduler
-	addtimer(CALLBACK(src, .proc/chargeend, A), charge_warmup)
+	addtimer(CALLBACK(src, PROC_REF(chargeend), A), charge_warmup)
 
 
 /mob/living/simple_mob/vore/bigdragon/proc/chargeend(var/atom/A, var/explicit = 0, var/gentle = 0)
@@ -812,7 +813,7 @@ I think I covered everything.
 		set_AI_busy(TRUE)
 	flames = 1
 	build_icons()
-	addtimer(CALLBACK(src, .proc/firebreathend, A), charge_warmup)
+	addtimer(CALLBACK(src, PROC_REF(firebreathend), A), charge_warmup)
 	playsound(src, "sound/magic/Fireball.ogg", 50, 1)
 
 /mob/living/simple_mob/vore/bigdragon/proc/firebreathend(var/atom/A)

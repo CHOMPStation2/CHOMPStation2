@@ -57,6 +57,7 @@
 			/obj/item/weapon/reagent_containers/spray/cleaner,
 			/obj/item/weapon/reagent_containers/glass/rag,
 			/obj/item/weapon/grenade/chem_grenade/cleaner = 3,
+			/obj/item/device/vac_attachment, //CHOMPAdd
 			/obj/structure/mopbucket
 			)
 	cost = 10
@@ -157,7 +158,7 @@
 	containername = "Cargo Train Trolley Crate"
 
 /datum/supply_pack/explorergear
-	name="Explorer gear"
+	name="Explorer gear" //CHOMP explo keep
 	contains = list (
 					/obj/item/device/cataloguer,
 					/obj/item/device/geiger,
@@ -178,8 +179,8 @@
 					)
 	cost=25
 	containertype = /obj/structure/closet/crate/secure/xion
-	containername = "Explorer equipment"
-	access = access_explorer
+	containername = "Explorer equipment" //CHOMP explo keep
+	access = access_explorer //CHOMP explo keep
 
 /datum/supply_pack/pilotgear
 	name= "Pilot gear"
@@ -192,16 +193,16 @@
 					/obj/item/stack/marker_beacon/thirty,
 					/obj/item/device/gps/explorer,
 					/obj/item/clothing/gloves/fingerless,
-					/obj/item/device/cataloguer/compact,
+					/obj/item/device/cataloguer/compact, //CHOMP explo keep
 					/obj/item/clothing/suit/storage/toggle/bomber/pilot,
 			 		/obj/item/clothing/shoes/boots/winter/explorer,
 					/obj/item/device/flashlight,
 					/obj/item/weapon/material/knife/tacknife/survival,
 					/obj/item/clothing/head/pilot_vr,
 					/obj/item/clothing/under/rank/pilot1,
+					/obj/item/clothing/suit/storage/toggle/bomber/pilot
 					)
 	cost=20
 	containertype = /obj/structure/closet/crate/secure/xion
 	containername = "Pilot equipment"
 	access = access_pilot
-

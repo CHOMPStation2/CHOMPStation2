@@ -26,7 +26,7 @@ var/global/datum/controller/occupations/job_master
 		if(!job)	continue
 		if(job.faction != faction)	continue
 		occupations += job
-	sortTim(occupations, /proc/cmp_job_datums)
+	sortTim(occupations, GLOBAL_PROC_REF(cmp_job_datums))
 
 
 	return 1
@@ -465,7 +465,7 @@ var/global/datum/controller/occupations/job_master
 				else
 					spawn_in_storage += thing
 	else
-		to_chat(H, "Your job is [rank] and the game just can't handle it! Please report this bug to an administrator.")
+		to_chat(H, "<span class='filter_notice'>Your job is [rank] and the game just can't handle it! Please report this bug to an administrator.</span>")
 
 	H.job = rank
 	log_game("JOINED [key_name(H)] as \"[rank]\"")
@@ -533,16 +533,16 @@ var/global/datum/controller/occupations/job_master
 				W.color = R.color
 				qdel(R)
 
-	to_chat(H, "<B>You are [job.total_positions == 1 ? "the" : "a"] [alt_title ? alt_title : rank].</B>")
+	to_chat(H, "<span class='filter_notice'><B>You are [job.total_positions == 1 ? "the" : "a"] [alt_title ? alt_title : rank].</B></span>")
 
 	if(job.supervisors)
-		to_chat(H, "<b>As the [alt_title ? alt_title : rank] you answer directly to [job.supervisors]. Special circumstances may change this.</b>")
+		to_chat(H, "<span class='filter_notice'><b>As the [alt_title ? alt_title : rank] you answer directly to [job.supervisors]. Special circumstances may change this.</b></span>")
 	if(job.has_headset)
 		H.equip_to_slot_or_del(new /obj/item/device/radio/headset(H), slot_l_ear)
-		to_chat(H, "<b>To speak on your department's radio channel use :h. For the use of other channels, examine your headset.</b>")
+		to_chat(H, "<span class='filter_notice'><b>To speak on your department's radio channel use :h. For the use of other channels, examine your headset.</b></span>")
 
 	if(job.req_admin_notify)
-		to_chat(H, "<b>You are playing a job that is important for Game Progression. If you have to disconnect, please notify the admins via adminhelp.</b>")
+		to_chat(H, "<span class='filter_notice'><b>You are playing a job that is important for Game Progression. If you have to disconnect, please notify the admins via adminhelp.</b></span>")
 
 	// EMAIL GENERATION
 	// Email addresses will be created under this domain name. Mostly for the looks.
@@ -559,13 +559,13 @@ var/global/datum/controller/occupations/job_master
 
 	// If even fallback login generation failed, just don't give them an email. The chance of this happening is astronomically low.
 	if(ntnet_global.does_email_exist(complete_login))
-		to_chat(H, "You were not assigned an email address.")
+		to_chat(H, "<span class='filter_notice'>You were not assigned an email address.</span>")
 		H.mind.store_memory("You were not assigned an email address.")
 	else
 		var/datum/computer_file/data/email_account/EA = new/datum/computer_file/data/email_account()
 		EA.password = GenerateKey()
 		EA.login = 	complete_login
-		to_chat(H, "Your email account address is <b>[EA.login]</b> and the password is <b>[EA.password]</b>. This information has also been placed into your notes.")
+		to_chat(H, "<span class='filter_notice'>Your email account address is <b>[EA.login]</b> and the password is <b>[EA.password]</b>. This information has also been placed into your notes.</span>")
 		H.mind.store_memory("Your email account address is [EA.login] and the password is [EA.password].")
 	// END EMAIL GENERATION
 
@@ -657,6 +657,9 @@ var/global/datum/controller/occupations/job_master
 	var/fail_deadly = FALSE
 	var/obj/belly/vore_spawn_gut
 	var/mob/living/prey_to_nomph
+	var/obj/item/item_to_be //CHOMPEdit - Item TF spawning
+	var/mob/living/item_carrier //CHOMPEdit - Capture crystal spawning
+	var/vorgans = FALSE //CHOMPEdit - capture crystal simplemob spawning
 
 	//CHOMPEdit -  Remove fail_deadly addition on offmap_spawn
 
@@ -781,6 +784,107 @@ var/global/datum/controller/occupations/job_master
 			else
 				to_chat(C, "<span class='warning'>No prey were available to accept you.</span>")
 				return
+		//CHOMPEdit - Item TF spawnpoints!
+		else if(C.prefs.spawnpoint == "Item TF spawn")
+			var/list/items = list()
+			var/list/item_names = list()
+			var/list/carriers = list()
+			for(var/obj/item/I in item_tf_spawnpoints)
+				if(LAZYLEN(I.ckeys_allowed_itemspawn))
+					if(!(C.ckey in I.ckeys_allowed_itemspawn))
+						continue
+				var/atom/item_loc = I.loc
+				var/mob/living/carrier
+				while(!isturf(item_loc))
+					if(isliving(item_loc))
+						carrier = item_loc
+						break
+					else
+						item_loc = item_loc.loc
+				if(istype(carrier))
+					if(!(carrier.z in using_map.vorespawn_levels))
+						continue
+					if(carrier.stat == UNCONSCIOUS || carrier.stat == DEAD || carrier.client.is_afk(10 MINUTES))
+						continue
+					carriers += carrier
+				else
+					if(!(item_loc.z in using_map.vorespawn_levels))
+						continue
+					carriers += null
+
+				if(istype(I, /obj/item/capture_crystal))
+					if(carrier)
+						items += I
+						var/obj/item/capture_crystal/cryst = I
+						if(cryst.spawn_mob_type)
+							item_names += "\a [cryst.spawn_mob_name] inside of [carrier]'s [I.name] ([I.loc.name])"
+						else
+							item_names += "Inside of [carrier]'s [I.name] ([I.loc.name])"
+				else if(I.name == initial(I.name))
+					items += I
+					if(carrier)
+						item_names += "[carrier]'s [I.name] ([I.loc.name])"
+					else
+						item_names += "[I.name] ([I.loc.name])"
+				else
+					items += I
+					if(carrier)
+						item_names += "[carrier]'s [I.name] (\a [initial(I.name)] at [I.loc.name])"
+					else
+						item_names += "[I.name] (\a [initial(I.name)] at [I.loc.name])"
+			if(LAZYLEN(items))
+				var/backup = alert(C, "Do you want a mind backup?", "Confirm", "Yes", "No")
+				if(backup == "Yes")
+					backup = 1
+				var/item_name = input(C, "Choose an Item to spawn as.", "Item TF Spawnpoint") as null|anything in item_names
+				if(!item_name)
+					return
+				var/index = item_names.Find(item_name)
+				var/obj/item/item = items[index]
+
+				var/mob/living/carrier = carriers[index]
+				if(istype(carrier))
+					to_chat(C, "<b><span class='warning'>[carrier] has received your spawn request. Please wait.</span></b>")
+					log_and_message_admins("[key_name(C)] has requested to item spawn into [key_name(carrier)]'s possession")
+
+					var/confirm = alert(carrier, "[C.prefs.real_name] is attempting to join as the [item_name] in your possession.", "Confirm", "No", "Yes")
+					if(confirm != "Yes")
+						to_chat(C, "<span class='warning'>[carrier] has declined your spawn request.</span>")
+						var/message = sanitizeSafe(input(carrier,"Do you want to leave them a message?")as text|null)
+						if(message)
+							to_chat(C, "<span class='notice'>[carrier] message : [message]</span>")
+						return
+					if(carrier.stat == UNCONSCIOUS || carrier.stat == DEAD)
+						to_chat(C, "<span class='warning'>[carrier] is not conscious.</span>")
+						to_chat(carrier, "<span class='warning'>You must be conscious to accept.</span>")
+						return
+					if(!(carrier.z in using_map.vorespawn_levels))
+						to_chat(C, "<span class='warning'>[carrier] is no longer in station grounds.</span>")
+						to_chat(carrier, "<span class='warning'>You must be within station grounds to accept.</span>")
+						return
+					log_and_message_admins("[key_name(C)] has item spawned onto [key_name(carrier)]")
+					item_to_be = item
+					item_carrier = carrier
+					if(backup)
+						addtimer(CALLBACK(src, .proc/m_backup_client, C), 5 SECONDS)
+				else
+					var/confirm = alert(C, "\The [item.name] is currently not in any character's possession! Do you still want to spawn as it?", "Confirm", "No", "Yes")
+					if(confirm != "Yes")
+						return
+					log_and_message_admins("[key_name(C)] has item spawned into \a [item.name] that was not held by anyone")
+					item_to_be = item
+					if(backup)
+						addtimer(CALLBACK(src, .proc/m_backup_client, C), 5 SECONDS)
+				if(istype(item, /obj/item/capture_crystal))
+					var/obj/item/capture_crystal/cryst = item
+					if(cryst.spawn_mob_type)
+						var/confirm = alert(C, "Do you want to spawn with your slot's vore organs and prefs?", "Confirm", "No", "Yes")
+						if(confirm == "Yes")
+							vorgans = TRUE
+			else
+				to_chat(C, "<span class='warning'>No items were available to accept you.</span>")
+				return
+		//CHOMPEdit End
 		else
 			if(!(C.prefs.spawnpoint in using_map.allowed_spawns))
 				if(fail_deadly)
@@ -793,11 +897,17 @@ var/global/datum/controller/occupations/job_master
 				spawnpos = spawntypes[C.prefs.spawnpoint]
 
 	//We will return a list key'd by "turf" and "msg"
-	. = list("turf","msg", "voreny", "prey")
+	. = list("turf","msg", "voreny", "prey", "itemtf", "vorgans", "carrier") //CHOMPEdit - Item TF spawnpoints, spawn as mob
 	if(vore_spawn_gut)
 		.["voreny"] = vore_spawn_gut
 	if(prey_to_nomph)
 		.["prey"] = prey_to_nomph	//We pass this on later to reverse the vorespawn in new_player.dm
+	//CHOMPEdit Start - Item TF spawnpoints
+	if(item_to_be)
+		.["carrier"] = item_carrier
+		.["vorgans"] = vorgans
+		.["itemtf"] = item_to_be
+	//CHOMPEdit End
 	if(spawnpos && istype(spawnpos) && spawnpos.turfs.len)
 		if(spawnpos.check_job_spawning(rank))
 			.["turf"] = spawnpos.get_spawn_position()
@@ -808,7 +918,7 @@ var/global/datum/controller/occupations/job_master
 			if(fail_deadly || J?.offmap_spawn)
 				to_chat(C, "<span class='warning'>Your chosen spawnpoint ([spawnpos.display_name]) is unavailable for your chosen job. Please correct your spawn point choice.</span>")
 				return
-			to_chat(C, "Your chosen spawnpoint ([spawnpos.display_name]) is unavailable for your chosen job. Spawning you at the Arrivals shuttle instead.")
+			to_chat(C, "<span class='filter_warning'>Your chosen spawnpoint ([spawnpos.display_name]) is unavailable for your chosen job. Spawning you at the Arrivals shuttle instead.</span>")
 			var/spawning = pick(latejoin)
 			.["turf"] = get_turf(spawning)
 			.["msg"] = "will arrive at the station shortly"

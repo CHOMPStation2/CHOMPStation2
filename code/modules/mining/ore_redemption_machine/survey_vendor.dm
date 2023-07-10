@@ -54,9 +54,10 @@
 		EQUIPMENT("Defense Equipment - Plasteel Machete",		/obj/item/weapon/material/knife/machete,							50),
 		EQUIPMENT("Defense Equipment - Razor Drone Deployer",	/obj/item/weapon/grenade/spawnergrenade/manhacks/station/locked,	100),
 		EQUIPMENT("Defense Equipment - Sentry Drone Deployer",	/obj/item/weapon/grenade/spawnergrenade/ward,						150),
-		EQUIPMENT("Defense Equipment - Frontier Carbine",		/obj/item/weapon/gun/energy/locked/frontier/carbine,				400), //CHOMPEDIT
-		EQUIPMENT("Defense Equipment - Frontier Phaser",		/obj/item/weapon/gun/energy/locked/frontier,						150), //CHOMPADD
-		EQUIPMENT("Defense Equipment - Holdout Phaser", 		/obj/item/weapon/gun/energy/locked/frontier/holdout,				100), //CHOMPADD
+		EQUIPMENT("Defense Equipment - Marksman Frontier Phaser", 	/obj/item/weapon/gun/energy/locked/frontier/rifle,				800), //CHOMPADD
+		EQUIPMENT("Defense Equipment - Frontier Carbine",		/obj/item/weapon/gun/energy/locked/frontier/carbine,				800), //CHOMPEDIT
+		EQUIPMENT("Defense Equipment - Frontier Phaser",		/obj/item/weapon/gun/energy/locked/frontier,					600), //CHOMPADD
+		EQUIPMENT("Defense Equipment - Holdout Frontier Phaser", 	/obj/item/weapon/gun/energy/locked/frontier/holdout,				300), //CHOMPADD
 		EQUIPMENT("Hybrid Equipment - Proto-Kinetic Dagger",	/obj/item/weapon/kinetic_crusher/machete/dagger,					75),
 		EQUIPMENT("Hybrid Equipment - Proto-Kinetic Machete",	/obj/item/weapon/kinetic_crusher/machete,							250),
 		EQUIPMENT("Fishing Net",								/obj/item/weapon/material/fishing_net,								50),
@@ -82,7 +83,7 @@
 		EQUIPMENT("Survival Equipment - Exploration Riot shield",	/obj/item/weapon/shield/riot/explorer,					75), //CHOMPADD
 		EQUIPMENT("Survival Equipment - Storage Pouch",		/obj/item/clothing/accessory/storage/pouches/green,				10), //CHOMPADD
 		EQUIPMENT("Survival Equipment - Large Storage Pouch",		/obj/item/clothing/accessory/storage/pouches/large/green,		25), //CHOMPADD
-		EQUIPMENT("Survival Equipment - Pathfinder Belt",		/obj/item/weapon/storage/belt/explorer/pathfinder,					200), //CHOMPADD	
+		EQUIPMENT("Survival Equipment - Pathfinder Belt",		/obj/item/weapon/storage/belt/explorer/pathfinder,					200), //CHOMPADD
 	)
 	prize_list["Consumables"] = list(
 		EQUIPMENT("1 Marker Beacon",		/obj/item/stack/marker_beacon,													1),
@@ -121,6 +122,11 @@
 		EQUIPMENT("Thalers - 100",				/obj/item/weapon/spacecash/c100,									100),
 		EQUIPMENT("Umbrella",					/obj/item/weapon/melee/umbrella/random,								20),
 		EQUIPMENT("UAV - Recon Skimmer",		/obj/item/device/uav,												40),
+	//CHOMPedit Start
+	    EQUIPMENT("Mining-Grade PSG",			/obj/item/device/personal_shield_generator/belt/mining/loaded,		100),
+	    EQUIPMENT("Security-Grade PSG",			/obj/item/device/personal_shield_generator/belt/security/loaded,	200),
+	    EQUIPMENT("PSG Variant-P",			    /obj/item/device/personal_shield_generator/belt/parry,	            250),
+	//CHOMPedit End
 	)
 	//VOREStation Edit End
 

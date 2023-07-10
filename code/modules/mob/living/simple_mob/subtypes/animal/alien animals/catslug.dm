@@ -26,7 +26,7 @@
 	faction = "catslug"
 	maxHealth = 50
 	health = 50
-	movement_cooldown = 2
+	movement_cooldown = -1
 	meat_amount = 2
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 	holder_type = /obj/item/weapon/holder/catslug
@@ -43,8 +43,10 @@
 	mob_size = MOB_SMALL
 	friendly = list("hugs")
 	see_in_dark = 8
+	can_climb = TRUE
+	climbing_delay = 2.0
 
-	mobcard_provided = TRUE
+	ID_provided = TRUE
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug)
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive/catslug
@@ -244,7 +246,7 @@
 	else if(prob(0.5))
 		holder.lay_down()
 		go_sleep()
-		addtimer(CALLBACK(src, .proc/consider_awakening), rand(1 MINUTE, 5 MINUTES), TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_STOPPABLE)
+		addtimer(CALLBACK(src, PROC_REF(consider_awakening)), rand(1 MINUTE, 5 MINUTES), TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_STOPPABLE)
 	else
 		return ..()
 
@@ -428,7 +430,7 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug/custom/engislug)
 	holder_type = /obj/item/weapon/holder/catslug/custom/engislug
 	say_list_type = /datum/say_list/catslug/custom/engislug
-	mobcard_access = list(access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_construction, access_atmospherics)
+	myid_access = list(access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_construction, access_atmospherics)
 	siemens_coefficient = 0 		//Noodly fella's gone and built up an immunity from many small shocks
 
 	minbodytemp = 200
@@ -545,7 +547,7 @@
 		"bio" = 0,
 		"rad" = 0
 		)		//Similarly, \some\ armour values for a smidge more survivability compared to other catslugs.
-	mobcard_access = list(access_security, access_sec_doors, access_forensics_lockers, access_maint_tunnels)
+	myid_access = list(access_security, access_sec_doors, access_forensics_lockers, access_maint_tunnels)
 
 /datum/say_list/catslug/custom/gatslug
 	speak = list("Have any flashbangs?", "Valids!", "Heard spiders?", "What is that?", "Freeze!", "What are you doing?", "How did you get here?", "Red alert means big bangsticks.", "No being naughty now.", "WAOW!", "Who ate all the donuts?")
@@ -582,7 +584,7 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug/custom/medislug)
 	holder_type = /obj/item/weapon/holder/catslug/custom/medislug
 	say_list_type = /datum/say_list/catslug/custom/medislug
-	mobcard_access = list(access_medical, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics)
+	myid_access = list(access_medical, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics)
 
 /datum/say_list/catslug/custom/medislug
 	speak = list("Have any osteodaxon?", "What is that?", "Suit sensors!", "What are you doing?", "How did you get here?", "Put a mask on!", "No smoking!", "WAOW!", "Stop getting blood everywhere!", "WHERE IN MAINT?")
@@ -618,7 +620,7 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug/custom/scienceslug)
 	holder_type = /obj/item/weapon/holder/catslug/custom/scienceslug
 	say_list_type = /datum/say_list/catslug/custom/scienceslug
-	mobcard_access = list(access_robotics, access_tox, access_tox_storage, access_research, access_xenobiology, access_xenoarch)
+	myid_access = list(access_robotics, access_tox, access_tox_storage, access_research, access_xenobiology, access_xenoarch)
 
 
 /datum/say_list/catslug/custom/scienceslug
@@ -656,7 +658,7 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug/custom/cargoslug)
 	holder_type = /obj/item/weapon/holder/catslug/custom/cargoslug
 	say_list_type = /datum/say_list/catslug/custom/cargoslug
-	mobcard_access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_mining, access_mining_station)
+	myid_access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_mining, access_mining_station)
 
 /datum/say_list/catslug/custom/cargoslug
 	speak = list("Disposals is not for slip and slide.", "What is that?", "Stamp those manifests!", "What are you doing?", "How did you get here?", "Can order pizza crate?", "WAOW!", "Where are all of our materials?", "Got glubbs?")
@@ -695,7 +697,7 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug/custom/capslug)
 	holder_type = /obj/item/weapon/holder/catslug/custom/capslug
 	say_list_type = /datum/say_list/catslug/custom/capslug
-	mobcard_access = list(access_maint_tunnels)		//The all_station_access part below adds onto this.
+	myid_access = list(access_maint_tunnels)		//The all_station_access part below adds onto this.
 
 /datum/say_list/catslug/custom/capslug
 	speak = list("How open big glass box with shiny inside?.", "What is that?", "Respect my authority!", "What are you doing?", "How did you get here?", "Fax for yellow-shirts!", "WAOW!", "Why is that console blinking and clicking?", "Do we need to call for ERT?", "Have been called comdom before, not sure why they thought I was a balloon.")
@@ -710,7 +712,7 @@
 	mob_radio.ks2type = /obj/item/device/encryptionkey/heads/captain 		//Might not be able to speak, but the catslug can listen.
 	mob_radio.keyslot2 = new /obj/item/device/encryptionkey/heads/captain(mob_radio)
 	mob_radio.recalculateChannels(1)
-	mobcard.access |= get_all_station_access()
+	myid.access |= get_all_station_access()
 
 //=============================================================================
 //Admin-spawn only catslugs below - Expect overpowered things & silliness below
@@ -727,7 +729,7 @@
 	icon_dead = "deathslug_dead"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug) 			//So they don't get the spaceslug's cataloguer entry
 	say_list_type = /datum/say_list/catslug 			//Similarly, so they don't get the spaceslug's speech lines.
-	mobcard_access = list(access_cent_general, access_cent_specops, access_cent_living, access_cent_storage)
+	myid_access = list(access_cent_general, access_cent_specops, access_cent_living, access_cent_storage)
 	maxHealth = 100		//Tough noodles
 	health = 100
 	taser_kill = 0
@@ -752,7 +754,7 @@
 	. = ..()
 	mob_radio = new /obj/item/device/radio/headset/mob_headset(src)
 	mob_radio.frequency = DTH_FREQ 			//Can't tell if bugged, deathsquad freq in general seems broken
-	mobcard.access |= get_all_station_access()
+	myid.access |= get_all_station_access()
 
 //Syndicate catslug
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug/syndislug
@@ -765,7 +767,7 @@
 	icon_dead = "syndislug_dead"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug)
 	say_list_type = /datum/say_list/catslug
-	mobcard_access = list(access_maint_tunnels, access_syndicate, access_external_airlocks)
+	myid_access = list(access_maint_tunnels, access_syndicate, access_external_airlocks)
 	faction = "syndicate"
 	maxHealth = 100		//Tough noodles
 	health = 100
@@ -797,7 +799,7 @@
 	mob_radio.ks2type = /obj/item/device/encryptionkey/syndicate
 	mob_radio.keyslot2 = new /obj/item/device/encryptionkey/syndicate(mob_radio)
 	mob_radio.recalculateChannels(1)
-	mobcard.access |= get_all_station_access()
+	myid.access |= get_all_station_access()
 
 //ERT catslug
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug/responseslug
@@ -810,7 +812,7 @@
 	icon_dead = "responseslug_dead"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug)
 	say_list_type = /datum/say_list/catslug
-	mobcard_access = list(access_cent_general, access_cent_specops, access_cent_living, access_cent_storage)
+	myid_access = list(access_cent_general, access_cent_specops, access_cent_living, access_cent_storage)
 	maxHealth = 100		//Tough noodles
 	health = 100
 	taser_kill = 0
@@ -841,7 +843,54 @@
 	mob_radio.ks2type = /obj/item/device/encryptionkey/ert
 	mob_radio.keyslot2 = new /obj/item/device/encryptionkey/ert(mob_radio)
 	mob_radio.recalculateChannels(1)
-	mobcard.access |= get_all_station_access()
+	myid.access |= get_all_station_access()
+
+//Pilot Catslug
+
+/mob/living/simple_mob/vore/alienanimals/catslug/custom/pilotslug
+	name = "Navigator Purrverick"
+	desc = "A black-furred noodley bodied creature with thin arms and legs, and gloomy dark eyes. This one exudes an aura of coolness, they're so cool that their pilot's liscense was suspended."
+	tt_desc = "Mollusca Felis Mischefterous"
+	color = "#2b2b2b"
+	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug/custom/pilotslug)
+	say_list_type = /datum/say_list/catslug/custom/pilotslug
+
+/mob/living/simple_mob/vore/alienanimals/catslug/custom/pilotslug/Initialize()
+	. = ..()
+	if(prob(25))
+		var/list/possible_targets = list()
+		for(var/obj/machinery/computer/ship/helm/h in world)
+			if(h.z in using_map.player_levels)
+				possible_targets |= h
+		var/final = pick(possible_targets)
+		forceMove(get_turf(final))
+		ghostjoin = TRUE
+
+/datum/category_item/catalogue/fauna/catslug/custom/pilotslug
+	name = "Alien Wildlife - Catslug - Navigator Purrverick"
+	desc = "A resident at NSB Rascal's Pass, Navigator Purrverick \
+	is a catslug who is known to dream big and seek the sky.\
+	Purrverick has proved to be quite capable of utilizing shuttle\
+	controls with excellent grace and skill. Purrverick can however\
+	be rather self assured, which has on more than one occasion\
+	lead to unfortunate mistakes and incidents.\
+	Purrverick's provisionary piloting liscense is marked as suspended.\
+	There are however still more records of the catslug's piloting escapades\
+	dated afer their suspension.\
+	\
+	The Catslug is an omnivorous terrestrial creature.\
+	Exhibiting properties of both a cat and a slug (hence its name)\
+	it moves somewhat awkwardly. However, the unique qualities of\
+	its body make it exceedingly flexible and smooth, allowing it to\
+	wiggle into and move effectively in even extremely tight spaces.\
+	Additionally, it has surprisingly capable hands, and moves quite\
+	well on two legs or four. Caution is advised when interacting\
+	with these creatures, they are quite intelligent, and proficient\
+	tool users."
+	value = CATALOGUER_REWARD_TRIVIAL
+
+/datum/say_list/catslug/custom/pilotslug
+	speak = list("In the pipe, five my five.","Kick the tires and light the fires!","Bogeys on my tail!","GOOSE!","I'm really good at the stick.","I'm not doing nothing.","Heh.","Can you keep up?","Can't keep the sky from me.")
 
 //=============================
 //Admin-spawn only catslugs end

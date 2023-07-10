@@ -49,6 +49,15 @@
 		/obj/item/clothing/under/lawyer/red,
 		/obj/item/clothing/under/lawyer/red/skirt,
 		/obj/item/clothing/under/lawyer/oldman,
+		/obj/item/clothing/under/rank/neo_hop,
+		/obj/item/clothing/under/rank/neo_hop_skirt,
+		/obj/item/clothing/under/rank/neo_hop_parade_masc,
+		/obj/item/clothing/under/rank/neo_hop_parade_fem,
+		/obj/item/clothing/under/rank/neo_hop_turtle,
+		/obj/item/clothing/under/rank/neo_hop_turtle_skirt,
+		/obj/item/clothing/under/rank/neo_cmd_gorka,
+		/obj/item/clothing/suit/storage/toggle/labcoat/neo_hopformal,
+		/obj/item/clothing/suit/storage/toggle/labcoat/neo_civ_dep,
 		/obj/item/clothing/shoes/brown,
 		/obj/item/clothing/shoes/black,
 		/obj/item/clothing/shoes/laceup,
@@ -133,6 +142,13 @@
 		/obj/item/clothing/head/helmet/dermal,
 		/obj/item/clothing/head/helmet/warden,
 		/obj/item/clothing/head/helmet/warden/hat,
+		/obj/item/clothing/under/rank/neo_warden_red,
+		/obj/item/clothing/under/rank/neo_warden_red_skirt,
+		/obj/item/clothing/under/rank/neo_warden_blue,
+		/obj/item/clothing/suit/storage/vest/wardencoat/neo_armsco_trench,
+		/obj/item/clothing/suit/storage/vest/wardencoat/neo_bluewarden,
+		/obj/item/clothing/suit/storage/vest/wardencoat/neo_warden_heavy,
+		/obj/item/clothing/under/rank/neo_sec_gorka,
 		/obj/item/weapon/cartridge/security,
 		/obj/item/device/radio/headset/headset_sec,
 		/obj/item/device/radio/headset/headset_sec/alt,
@@ -151,10 +167,11 @@
 		/obj/item/clothing/shoes/boots/winter/security,
 		/obj/item/device/flashlight/maglight,
 		/obj/item/device/megaphone,
-		/obj/item/clothing/mask/gas/half,
+		/obj/item/clothing/mask/gas/sechailer/swat/warden, //CHOMP Edit
 		/obj/item/weapon/gun/projectile/revolvershotgun,
 		/obj/item/ammo_magazine/m12gdrumjack/beanbag,
 		/obj/item/ammo_magazine/m12gdrumjack/beanbag,
+		/obj/item/device/ticket_printer,		//CHOMPStation addition
 		/obj/item/device/retail_scanner/security	//CHOMPStation addition
 		)
 
@@ -175,6 +192,7 @@
 	starts_with = list(
 		/obj/item/clothing/suit/storage/vest/officer,
 		/obj/item/clothing/head/helmet,
+		/obj/item/clothing/mask/gas/sechailer/swat/officer, //CHOMP ADD
 		/obj/item/weapon/cartridge/security,
 		/obj/item/device/radio/headset/headset_sec,
 		/obj/item/device/radio/headset/headset_sec/alt,
@@ -190,7 +208,7 @@
 		/obj/item/clothing/accessory/storage/black_vest,
 		/obj/item/clothing/head/soft/sec/corp,
 		/obj/item/clothing/under/rank/security/corp,
-		///obj/item/ammo_magazine/m45/rubber, //VOREStation Removal,
+		/obj/item/ammo_magazine/m45/rubber, //VOREStation Removal, //CHOMP Edit it has been restored
 		/obj/item/weapon/gun/energy/taser,
 		/obj/item/weapon/cell/device/weapon,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/security,
@@ -198,7 +216,8 @@
 		/obj/item/device/flashlight/maglight,
 		/obj/item/device/holowarrant,				//CHOMPStation addition
 		/obj/item/device/retail_scanner/security,	//CHOMPStation addition
-		/obj/item/clothing/glasses/hud/security		//CHOMPStation addition
+		/obj/item/clothing/glasses/hud/security,	//CHOMPStation addition
+		/obj/item/device/ticket_printer			//CHOMPStation addition
 		)
 
 /obj/structure/closet/secure_closet/security/Initialize()

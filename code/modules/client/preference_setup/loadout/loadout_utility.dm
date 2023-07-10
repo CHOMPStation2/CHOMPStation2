@@ -11,7 +11,7 @@
 /datum/gear/utility/tts_device
 	display_name = "text to speech device"
 	path = /obj/item/device/text_to_speech
-	cost = 3 //Not extremely expensive, but it's useful for mute chracters.
+	cost = 0 //Not extremely expensive, but it's useful for mute chracters. //CHOMPEDIT: 3 points is pretty high for a pure fluff piece, make it 0
 
 /datum/gear/utility/communicator
 	display_name = "communicator selection"
@@ -144,6 +144,11 @@
 		"motorized wheelchair" = /obj/item/wheelchair/motor
 	)
 	gear_tweaks += new/datum/gear_tweak/path(wheelchairs)
+
+/datum/gear/utility/lantern
+	display_name = "lantern"
+	path = /obj/item/device/flashlight/lantern
+	cost = 2
 
 /****************
 modular computers

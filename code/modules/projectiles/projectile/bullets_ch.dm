@@ -165,6 +165,7 @@ only use the hollow_point and armor_penetration values.*/
 	grains = 180
 	velocity = 400
 	hud_state = "pistol"
+	damage = 20
 
 /obj/item/projectile/bullet/a10mm/ap
 	grains = 200

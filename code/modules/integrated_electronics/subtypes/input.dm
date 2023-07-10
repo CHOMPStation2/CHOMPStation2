@@ -234,7 +234,7 @@
 	O.data = null
 	if(assembly)
 		if(istype(assembly.loc, /mob/living)) // Now check if someone's holding us.
-			O.data = weakref(assembly.loc)
+			O.data = WEAKREF(assembly.loc)
 
 	O.push_data()
 
@@ -271,7 +271,7 @@
 			continue
 		valid_things.Add(thing)
 	if(valid_things.len)
-		O.data = weakref(pick(valid_things))
+		O.data = WEAKREF(pick(valid_things))
 		activate_pin(2)
 	else
 		activate_pin(3)
@@ -320,7 +320,7 @@
 			if(findtext(addtext(thing.name," ",thing.desc), DT, 1, 0) )
 				valid_things.Add(thing)
 	if(valid_things.len)
-		O.data = weakref(pick(valid_things))
+		O.data = WEAKREF(pick(valid_things))
 		O.push_data()
 		activate_pin(2)
 	else
@@ -358,7 +358,7 @@
 	. = ..()
 	set_pin_data(IC_INPUT, 1, frequency)
 	set_pin_data(IC_INPUT, 2, code)
-	addtimer(CALLBACK(src, .proc/set_frequency, frequency), 40)
+	addtimer(CALLBACK(src, PROC_REF(set_frequency), frequency), 40)
 
 /obj/item/integrated_circuit/input/signaler/Destroy()
 	if(radio_controller)
@@ -525,6 +525,7 @@
 	complexity = 8
 	inputs = list()
 	outputs = list(
+	"speaker ref",//CHOMPADDITION: so we can target the speaker with an action
 	"speaker" = IC_PINTYPE_STRING,
 	"message" = IC_PINTYPE_STRING
 	)
@@ -550,8 +551,9 @@
 			// as a translation, when it is not.
 			if(S.speaking && !istype(S.speaking, /datum/language/common))
 				translated = TRUE
-		set_pin_data(IC_OUTPUT, 1, M.GetVoice())
-		set_pin_data(IC_OUTPUT, 2, msg)
+		set_pin_data(IC_OUTPUT , 1, WEAKREF(M))//CHOMPADDITION: so we can target the speaker with an action
+		set_pin_data(IC_OUTPUT, 2, M.GetVoice())
+		set_pin_data(IC_OUTPUT, 3, msg)
 
 	push_data()
 	activate_pin(1)
@@ -569,6 +571,7 @@
 	complexity = 12
 	inputs = list()
 	outputs = list(
+	"speaker ref",//CHOMPADDITION: so we can target the speaker with an action
 	"speaker" = IC_PINTYPE_STRING,
 	"message" = IC_PINTYPE_STRING
 	)
@@ -595,16 +598,15 @@
 /obj/item/integrated_circuit/input/microphone/sign/hear_talk(mob/M, list/message_pieces, verb)
 	var/msg = multilingual_to_message(message_pieces)
 
-	var/translated = FALSE
+	var/translated = TRUE //CHOMPEDIT: There is no common signlanguage so its all translated, pin 1 is basically useless
+	//CHOMPEDIT:making the signlanguage translator actually useful
 	if(M && msg)
 		for(var/datum/multilingual_say_piece/S in message_pieces)
-			if(S.speaking)
-				if(!((S.speaking.flags & NONVERBAL) || (S.speaking.flags & SIGNLANG)))
-					translated = TRUE
-					msg = stars(msg)
-					break
-		set_pin_data(IC_OUTPUT, 1, M.GetVoice())
-		set_pin_data(IC_OUTPUT, 2, msg)
+			if(!((S.speaking.flags & NONVERBAL) || (S.speaking.flags & SIGNLANG))||S.speaking.name == LANGUAGE_ECHOSONG) //Ignore verbal languages
+				return
+		set_pin_data(IC_OUTPUT , 1, WEAKREF(M))//CHOMPADDITION: so we can target the speaker with an action
+		set_pin_data(IC_OUTPUT, 2, M.GetVoice())
+		set_pin_data(IC_OUTPUT, 3, msg)
 
 	push_data()
 	if(!translated)
@@ -613,12 +615,11 @@
 		activate_pin(2)
 
 /obj/item/integrated_circuit/input/microphone/sign/hear_signlang(text, verb, datum/language/speaking, mob/M as mob)
-	var/translated = FALSE
+	var/translated = TRUE //CHOMPEDIT: There is no common signlanguage so its all translated, pin 1 is basically useless
 	if(M && text)
 		if(speaking)
-			if(!((speaking.flags & NONVERBAL) || (speaking.flags & SIGNLANG)))
-				translated = TRUE
-				text = speaking.scramble(text, my_langs)
+			if(!((speaking.flags & NONVERBAL) || (speaking.flags & SIGNLANG))||speaking.name == LANGUAGE_ECHOSONG) //CHOMPEDIT: ignore echo song too
+				return //CHOMPEDIT: dont spam the chat with scrambled text
 		set_pin_data(IC_OUTPUT, 1, M.GetVoice())
 		set_pin_data(IC_OUTPUT, 2, text)
 
@@ -646,7 +647,7 @@
 		if(istype(A, /obj/item/weapon/storage))
 			return FALSE
 
-	set_pin_data(IC_OUTPUT, 1, weakref(A))
+	set_pin_data(IC_OUTPUT, 1, WEAKREF(A))
 	push_data()
 	activate_pin(1)
 	return TRUE
@@ -674,7 +675,7 @@
 	set_pin_data(IC_OUTPUT, 1, null)
 	set_pin_data(IC_OUTPUT, 2, null)
 	set_pin_data(IC_OUTPUT, 3, null)
-	set_pin_data(IC_OUTPUT, 4, weakref(assembly))
+	set_pin_data(IC_OUTPUT, 4, WEAKREF(assembly))
 	if(assembly)
 		if(assembly.battery)
 

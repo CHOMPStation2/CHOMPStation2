@@ -1,64 +1,63 @@
+<<<<<<< HEAD
+=======
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/turf/unsimulated/wall/planetary/virgo3c,
-/area/groundbase/wilderness/north)
-"d" = (
-/obj/effect/map_effect/portal/line/side_b{
-	dir = 1
+/turf/unsimulated/wall/planetary/normal{
+	desc = "It's quite impassable";
+	icon_state = "rock-dark";
+	name = "impassable rock"
 	},
-/turf/simulated/floor/outdoors/grass/forest/virgo3c,
-/area/groundbase/wilderness/north)
-"g" = (
-/obj/effect/map_effect/portal/line/side_a,
-/turf/simulated/floor/outdoors/grass/forest/virgo3c,
-/area/groundbase/wilderness/north)
+/area/submap/groundbase/wilderness/north)
+"b" = (
+/obj/effect/landmark/wildlife/forest,
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+/area/submap/groundbase/wilderness/north/unexplored)
+"c" = (
+/obj/effect/landmark/wildlife/forest,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+/area/submap/groundbase/wilderness/north/unexplored)
 "k" = (
 /obj/effect/map_effect/portal/line/side_b{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/grass/virgo3c,
-/area/groundbase/wilderness/north)
-"l" = (
-/turf/simulated/floor/outdoors/grass/virgo3c,
-/area/groundbase/wilderness/north)
-"m" = (
-<<<<<<< HEAD
-/turf/simulated/mineral/ignore_cavegen,
-/area/groundbase/wilderness/north)
-=======
-/turf/simulated/mineral/ignore_cavegen/virgo3c,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
 /area/submap/groundbase/wilderness/north)
->>>>>>> 3e5775ea6e... Merge pull request #13634 from Heroman3003/3c-turfs
+"l" = (
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+/area/submap/groundbase/wilderness/north)
+"m" = (
+/turf/simulated/mineral/ignore_cavegen,
+/area/submap/groundbase/wilderness/north)
 "o" = (
-/turf/simulated/mineral/cave/virgo3c,
-/area/groundbase/wilderness/north/cave)
+/turf/simulated/mineral/cave,
+/area/submap/groundbase/wilderness/north/cave)
 "p" = (
 /obj/effect/map_effect/portal/master/side_a/gb_wilds/north_south,
-/turf/simulated/floor/outdoors/grass/forest/virgo3c,
-/area/groundbase/wilderness/north)
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+/area/submap/groundbase/wilderness/north)
 "C" = (
 /obj/item/clothing/under/rank/psych/turtleneck/sweater,
-/turf/simulated/floor/outdoors/grass/forest/virgo3c,
-/area/groundbase/wilderness/north/unexplored)
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+/area/submap/groundbase/wilderness/north/unexplored)
 "J" = (
-/turf/simulated/floor/outdoors/grass/forest/virgo3c,
-/area/groundbase/wilderness/north)
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+/area/submap/groundbase/wilderness/north)
 "K" = (
-/turf/simulated/floor/outdoors/grass/virgo3c,
-/area/groundbase/wilderness/north/unexplored)
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+/area/submap/groundbase/wilderness/north/unexplored)
 "N" = (
 /obj/effect/map_effect/portal/master/side_b/gb_wilds/north{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/grass/forest/virgo3c,
-/area/groundbase/wilderness/north)
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+/area/submap/groundbase/wilderness/north)
 "W" = (
 /obj/effect/map_effect/portal/line/side_a,
-/turf/simulated/floor/outdoors/grass/virgo3c,
-/area/groundbase/wilderness/north)
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+/area/submap/groundbase/wilderness/north)
 "X" = (
-/turf/simulated/floor/outdoors/grass/forest/virgo3c,
-/area/groundbase/wilderness/north/unexplored)
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+/area/submap/groundbase/wilderness/north/unexplored)
 
 (1,1,1) = {"
 a
@@ -1409,7 +1408,7 @@ K
 K
 K
 X
-X
+b
 X
 K
 K
@@ -1776,7 +1775,7 @@ K
 K
 X
 X
-X
+b
 X
 X
 K
@@ -2011,7 +2010,7 @@ K
 K
 K
 K
-K
+c
 K
 K
 K
@@ -3266,7 +3265,7 @@ X
 X
 K
 K
-X
+b
 X
 X
 X
@@ -3877,7 +3876,7 @@ X
 X
 X
 X
-X
+b
 X
 X
 X
@@ -3944,7 +3943,7 @@ o
 K
 X
 X
-X
+b
 X
 K
 K
@@ -6038,7 +6037,7 @@ o
 o
 K
 K
-X
+b
 K
 o
 o
@@ -6425,7 +6424,7 @@ X
 X
 X
 X
-X
+b
 X
 K
 K
@@ -6726,7 +6725,7 @@ o
 o
 K
 X
-K
+c
 o
 o
 m
@@ -6970,7 +6969,7 @@ X
 X
 K
 K
-X
+b
 X
 X
 X
@@ -7080,7 +7079,7 @@ o
 o
 K
 K
-K
+c
 K
 o
 o
@@ -7190,7 +7189,7 @@ o
 o
 K
 X
-X
+b
 K
 K
 o
@@ -9428,8 +9427,8 @@ o
 o
 X
 l
-J
-J
+l
+l
 N
 "}
 (67,1,1) = {"
@@ -9575,9 +9574,9 @@ l
 k
 "}
 (68,1,1) = {"
-g
-J
-J
+W
+l
+l
 l
 K
 K
@@ -9996,9 +9995,9 @@ o
 o
 o
 J
-J
-J
-d
+l
+l
+k
 "}
 (71,1,1) = {"
 W
@@ -10144,7 +10143,7 @@ a
 "}
 (72,1,1) = {"
 p
-J
+l
 l
 l
 K
@@ -10438,7 +10437,7 @@ K
 X
 X
 X
-X
+b
 X
 K
 K
@@ -10669,7 +10668,7 @@ o
 K
 K
 X
-X
+b
 X
 K
 K
@@ -10739,7 +10738,7 @@ o
 K
 K
 X
-X
+b
 K
 K
 o
@@ -11116,7 +11115,7 @@ o
 o
 K
 X
-X
+b
 K
 o
 o
@@ -11351,7 +11350,7 @@ X
 X
 X
 K
-K
+c
 K
 K
 K
@@ -11618,7 +11617,7 @@ o
 o
 X
 X
-X
+b
 K
 K
 o
@@ -12886,7 +12885,7 @@ X
 X
 X
 X
-X
+b
 X
 X
 X
@@ -14744,7 +14743,7 @@ K
 K
 X
 X
-X
+b
 X
 K
 K
@@ -15142,7 +15141,7 @@ K
 K
 X
 X
-X
+b
 X
 X
 X
@@ -15552,7 +15551,7 @@ X
 X
 K
 K
-K
+c
 X
 X
 X
@@ -17340,7 +17339,7 @@ K
 K
 X
 X
-X
+b
 X
 X
 K
@@ -17730,7 +17729,7 @@ X
 X
 X
 X
-X
+b
 X
 X
 K
@@ -19940,3 +19939,4 @@ a
 a
 a
 "}
+>>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits

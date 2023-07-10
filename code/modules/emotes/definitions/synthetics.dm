@@ -14,6 +14,11 @@
 	emote_sound = 'sound/machines/twobeep.ogg'
 	sound_vary = FALSE
 
+/decl/emote/audible/synth/bing
+	key = "bing"
+	emote_message_3p = "bings."
+	emote_sound = 'sound/machines/ping.ogg'
+
 /decl/emote/audible/synth/buzz
 	key = "buzz"
 	emote_message_3p = "buzzes."
@@ -41,7 +46,7 @@
 	emote_sound = 'sound/voice/biamthelaw.ogg'
 
 /decl/emote/audible/synth/security/mob_can_use(var/mob/living/silicon/robot/user)
-	return ..() && (istype(user) && (istype(user.module, /obj/item/weapon/robot_module/robot/security) || istype(user.module, /obj/item/weapon/robot_module/robot/knine))) //VOREStation Add - knine module
+	return ..() && (istype(user) && (istype(user.module, /obj/item/weapon/robot_module/robot/security)))
 
 /decl/emote/audible/synth/security/halt
 	key = "halt"

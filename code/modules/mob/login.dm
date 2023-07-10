@@ -9,6 +9,10 @@
 			if(M == src)	continue
 			if( M.key && (M.key != key) )
 				var/matches
+				//CHOMPEDIT - IP exemptions for those who are known to live together
+				if (config.ip_whitelist[key] && config.ip_whitelist[key] == config.ip_whitelist[M.key])
+					continue
+				//CHOMPEDIT end
 				if( (M.lastKnownIP == client.address) )
 					matches += "IP ([client.address])"
 				if( (client.connection != "web") && (M.computer_id == client.computer_id) )

@@ -6,6 +6,7 @@
 /obj/structure/prop/rock/flat{
 	density = 0
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/newdirt/virgo3c,
 /area/groundbase/poi/outdoor)
 "r" = (
@@ -14,6 +15,16 @@
 "U" = (
 /turf/simulated/floor/outdoors/grass/virgo3c,
 /area/groundbase/poi/outdoor)
+=======
+/turf/simulated/floor/outdoors/newdirt,
+/area/submap/groundbase/poi/outdoor)
+"r" = (
+/turf/simulated/floor/outdoors/newdirt,
+/area/submap/groundbase/poi/outdoor)
+"U" = (
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
+/area/submap/groundbase/poi/outdoor)
+>>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 
 (1,1,1) = {"
 a

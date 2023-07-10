@@ -61,6 +61,12 @@
 	display_name = "neck gaiter selection"
 	path = /obj/item/clothing/accessory/gaiter
 	cost = 1
+	
+//CHOMPAdd - Put this mask in loadout
+/datum/gear/mask/death
+	display_name = "white mask"
+	path = /obj/item/clothing/mask/gas/cyborg
+	cost = 1
 
 /datum/gear/mask/gaiter/New()
 	..()
@@ -68,4 +74,11 @@
 	for(var/gaiter in typesof(/obj/item/clothing/accessory/gaiter))
 		var/obj/item/clothing/accessory/gaiter_type = gaiter
 		gaiters[initial(gaiter_type.name)] = gaiter_type
-	gear_tweaks += new/datum/gear_tweak/path(sortTim(gaiters, /proc/cmp_text_asc))
+	gear_tweaks += new/datum/gear_tweak/path(sortTim(gaiters, GLOBAL_PROC_REF(cmp_text_asc)))
+
+/datum/gear/mask/lace
+	display_name = "lace veil"
+	path = /obj/item/clothing/mask/lacemask
+
+/datum/gear/mask/lace/New()
+	gear_tweaks += gear_tweak_free_color_choice

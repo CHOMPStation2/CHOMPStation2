@@ -86,9 +86,9 @@
 			. += emissive_appearance(overlay_icon, icon_state_screensaver)
 		set_light(0)
 		return add_overlay(.)
-	
+
 	set_light(light_strength)
-	
+
 	if(active_program)
 		var/program_state = active_program.program_icon_state ? active_program.program_icon_state : icon_state_menu
 		. += mutable_appearance(overlay_icon, program_state)
@@ -98,7 +98,7 @@
 	else
 		. += mutable_appearance(overlay_icon, icon_state_menu)
 		. += emissive_appearance(overlay_icon, icon_state_menu)
-	
+
 	return add_overlay(.)
 
 /obj/item/modular_computer/proc/turn_on(var/mob/user)
@@ -119,6 +119,7 @@
 		else
 			to_chat(user, "You press the power button and start up \the [src]")
 		enable_computer(user)
+		playsound(src, 'modular_chomp/sound/machines/console_power_on.ogg', 60, 1, volume_channel = VOLUME_CHANNEL_MACHINERY)
 
 	else // Unpowered
 		if(issynth)
@@ -292,3 +293,9 @@
 		autorun.stored_data = null
 	else
 		autorun.stored_data = program
+
+/obj/item/modular_computer/proc/find_file_by_uid(var/uid)
+	if(hard_drive)
+		. = hard_drive.find_file_by_uid(uid)
+	if(portable_drive && !.)
+		. = portable_drive.find_file_by_uid(uid)

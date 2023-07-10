@@ -128,17 +128,16 @@
 // It is in a seperate place to avoid an infinite loop situation with dragging mobs dragging each other.
 // Also its nice to have these things seperated.
 /mob/living/carbon/human/proc/calculate_item_encumbrance()
-	if(!buckled && shoes) // Shoes can make you go faster.
-		. += shoes.slowdown
-
-	//VOREStation Addition Start
-	if(buckled && istype(buckled, /obj/machinery/power/rtg/reg))
-		. += shoes.slowdown
-	//VOREStation Addition End
+	if(shoes)	// Shoes can make you go faster.
+		if(!buckled || (buckled && istype(buckled, /obj/machinery/power/rtg/reg)))
+			. += shoes.slowdown
 
 	// Loop through some slots, and add up their slowdowns.
 	// Includes slots which can provide armor, the back slot, and suit storage.
 	for(var/obj/item/I in list(wear_suit, w_uniform, back, gloves, head, s_store))
+		if(istype(I,/obj/item/weapon/rig)) //CHOMPAdd
+			for(var/obj/item/II in I.contents)
+				. += II.slowdown
 		. += I.slowdown
 
 	// Hands are also included, to make the 'take off your armor instantly and carry it with you to go faster' trick no longer viable.
@@ -156,17 +155,17 @@
 		if(istype(T, /turf/simulated/floor/water))
 			if(species.water_movement)
 				turf_move_cost = CLAMP(turf_move_cost + species.water_movement, HUMAN_LOWEST_SLOWDOWN, 15)
-			if(shoes)
+			if(istype(shoes, /obj/item/clothing/shoes))	//CHOMPEdit - Fixes runtime
 				var/obj/item/clothing/shoes/feet = shoes
-				if(feet.water_speed)
+				if(istype(feet) && feet.water_speed)
 					turf_move_cost = CLAMP(turf_move_cost + feet.water_speed, HUMAN_LOWEST_SLOWDOWN, 15)
 			. += turf_move_cost
 		else if(istype(T, /turf/simulated/floor/outdoors/snow))
 			if(species.snow_movement)
 				turf_move_cost = CLAMP(turf_move_cost + species.snow_movement, HUMAN_LOWEST_SLOWDOWN, 15)
-			if(shoes)
+			if(istype(shoes, /obj/item/clothing/shoes))	//CHOMPEdit - Fixes runtime
 				var/obj/item/clothing/shoes/feet = shoes
-				if(feet.water_speed)
+				if(istype(feet) && feet.snow_speed)
 					turf_move_cost = CLAMP(turf_move_cost + feet.snow_speed, HUMAN_LOWEST_SLOWDOWN, 15)
 			. += turf_move_cost
 		else
@@ -303,7 +302,7 @@
 
 	playsound(T, S, volume, FALSE)
 	return
-  
+
 /mob/living/carbon/human/set_dir(var/new_dir)
 	. = ..()
 	if(. && (species.tail || tail_style))
