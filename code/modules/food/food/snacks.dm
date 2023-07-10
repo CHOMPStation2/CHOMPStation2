@@ -77,7 +77,7 @@
 	if(canned && !user.incapacitated())
 		uncan(user)
 
-/obj/item/weapon/reagent_containers/food/snacks/attack(mob/living/M as mob, mob/user as mob, def_zone)
+/obj/item/weapon/reagent_containers/food/snacks/attack(mob/living/M as mob, mob/living/user as mob, def_zone) //CHOMPEdit
 	if(reagents && !reagents.total_volume)
 		to_chat(user, "<span class='danger'>None of [src] left!</span>")
 		user.drop_from_inventory(src)
@@ -160,7 +160,7 @@
 					var/mob/living/L = user
 					swallow_whole = L.stuffing_feeder
 				if(swallow_whole)
-					belly_target = M.vore_selected
+					belly_target = tgui_input_list(user, "Choose Belly", "Belly Choice", M.feedable_bellies()) //CHOMPEdit
 
 				if(unconcious)
 					to_chat(user, "<span class='warning'>You can't feed [H] through \the [blocked] while they are unconcious!</span>")
@@ -223,6 +223,29 @@
 				bitecount++
 				On_Consume(M)
 			return 1
+	else if(isliving(M) && user.stuffing_feeder) //CHOMPAdd Start
+		var/swallow_whole = user.stuffing_feeder
+		var/obj/belly/belly_target
+		if(swallow_whole)
+			belly_target = tgui_input_list(user, "Choose Belly", "Belly Choice", M.feedable_bellies())
+			if(!(M.feeding))
+				to_chat(user, "<span class='warning'>You can't feed [M] a whole [src] as they refuse to be fed whole things!</span>")
+				return
+			if(!belly_target)
+				to_chat(user, "<span class='warning'>You can't feed [M] a whole [src] as they don't appear to have a belly to fit it!</span>")
+				return
+			user.visible_message("<span class='danger'>[user] attempts to make [M] consume [src] whole into their [belly_target].</span>")
+			var/feed_duration = 3 SECONDS
+			user.setClickCooldown(user.get_attack_speed(src))
+			if(!do_mob(user, M, feed_duration))
+				return
+			if(!belly_target)
+				return
+			add_attack_logs(user,M,"Whole-fed with [src.name] containing [reagentlist(src)] into [belly_target]", admin_notify = FALSE)
+			user.visible_message("<span class='danger'>[user] successfully forces [src] into [M]'s [belly_target].</span>")
+			user.drop_item()
+			forceMove(belly_target)
+			return 1 //CHOMPAdd End
 
 	return 0
 
