@@ -213,7 +213,9 @@
 	. = ..()
 	if(Adjacent(user))
 		for(var/obj/item/integrated_circuit/IC in contents)
-			. += IC.external_examine(user)
+			var/external_examine = IC.external_examine(user)
+			if (external_examine != null)
+				. += external_examine
 		if(opened)
 			tgui_interact(user)
 

@@ -46,7 +46,7 @@
 
 	// CHOMPedit End
 
-	mentor_commands(href, href_list, src)
+	// mentor_commands(href, href_list, src) // CHOMPedit - Skip this because client is already admin & contents already handled of code above
 
 	if(href_list["dbsearchckey"] || href_list["dbsearchadmin"])
 
