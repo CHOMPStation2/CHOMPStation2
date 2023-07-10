@@ -2490,7 +2490,11 @@
 #include "code\modules\food\food\snacks.dm"
 #include "code\modules\food\food\snacks_ch.dm"
 #include "code\modules\food\food\snacks_vr.dm"
+<<<<<<< HEAD
 #include "code\modules\food\food\thecake_ch.dm"
+=======
+#include "code\modules\food\food\superfoods.dm"
+>>>>>>> 68fab181b9... Merge pull request #15136 from Heroman3003/theonepizza
 #include "code\modules\food\food\z_custom_food_vr.dm"
 #include "code\modules\food\food\drinks\bottle.dm"
 #include "code\modules\food\food\drinks\cup.dm"
