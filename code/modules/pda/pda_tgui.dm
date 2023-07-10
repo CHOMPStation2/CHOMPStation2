@@ -2,14 +2,11 @@
 /obj/item/device/pda/tgui_state(mob/user)
 	return GLOB.tgui_inventory_state
 
-<<<<<<< HEAD
-=======
 /obj/item/device/pda/tgui_status(mob/user, datum/tgui_state/state)
 	. = ..()
 	if(!can_use())
 		. = min(., STATUS_UPDATE)
 
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 /obj/item/device/pda/tgui_interact(mob/user, datum/tgui/ui, datum/tgui/parent_ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)

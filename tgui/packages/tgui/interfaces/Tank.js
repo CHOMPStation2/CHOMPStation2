@@ -19,21 +19,6 @@ export const Tank = (props, context) => {
   return (
     <Window width={400} height={320} resizable>
       <Window.Content>
-<<<<<<< HEAD
-        <Section
-          title="Status"
-          buttons={
-            !!showToggle && (
-              <Button
-                icon={connected ? 'air-freshener' : 'lock-open'}
-                selected={connected}
-                disabled={!maskConnected}
-                content="Mask Release Valve"
-                onClick={() => act('toggle')}
-              />
-            )
-          }>
-=======
         <Section title="Status" buttons={!!showToggle && (
           <Button
             icon={connected ? "air-freshener" : "lock-open"}
@@ -42,7 +27,6 @@ export const Tank = (props, context) => {
             content="Mask Release Valve"
             onClick={() => act("toggle")} />
         )}>
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
           <LabeledList>
             <LabeledList.Item label="Mask Connected">{maskConnected ? 'Yes' : 'No'}</LabeledList.Item>
           </LabeledList>

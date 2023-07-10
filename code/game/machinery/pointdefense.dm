@@ -14,7 +14,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	icon = 'icons/obj/pointdefense.dmi'
 	icon_state = "control"
 	power_channel = EQUIP // CHOMPStation Edit Starts
-	use_power = USE_POWER_ACTIVE 
+	use_power = USE_POWER_ACTIVE
 	active_power_usage = 5 KILOWATTS // CHOMPStation Edit Ends
 	density = TRUE
 	anchored = TRUE
@@ -98,12 +98,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 
 /obj/machinery/pointdefense_control/attackby(var/obj/item/W, var/mob/user)
 	if(W?.is_multitool())
-<<<<<<< HEAD
-		var/new_ident = tgui_input_text(user, "Enter a new ident tag.", "[src]", id_tag, MAX_NAME_LEN)
-		new_ident = sanitize(new_ident,MAX_NAME_LEN)
-=======
 		var/new_ident = input(user, "Enter a new ident tag.", "[src]", id_tag) as null|text
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 		if(new_ident && new_ident != id_tag && user.Adjacent(src) && CanInteract(user, GLOB.tgui_physical_state))
 			// Check for duplicate controllers with this ID
 			for(var/obj/machinery/pointdefense_control/PC as anything in GLOB.pointdefense_controllers)
@@ -182,12 +177,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 
 /obj/machinery/pointdefense/attackby(var/obj/item/W, var/mob/user)
 	if(W?.is_multitool())
-<<<<<<< HEAD
-		var/new_ident = tgui_input_text(user, "Enter a new ident tag.", "[src]", id_tag, MAX_NAME_LEN)
-		new_ident = sanitize(new_ident,MAX_NAME_LEN)
-=======
 		var/new_ident = input(user, "Enter a new ident tag.", "[src]", id_tag) as null|text
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 		if(new_ident && new_ident != id_tag && user.Adjacent(src) && CanInteract(user, GLOB.tgui_physical_state))
 			to_chat(user, "<span class='notice'>You register [src] with the [new_ident] network.</span>")
 			id_tag = new_ident
@@ -276,7 +266,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 			engaging = target
 			Shoot(target)
 			return
-			
+
 	// Then, focus fire on existing targets
 	for(var/obj/effect/meteor/M in existing_targets)
 		if(targeting_check(M))

@@ -179,7 +179,7 @@ const PhoneTab = (props, context) => {
   return (
     <Section title="Phone">
       <LabeledList>
-        <LabeledList.Item label="Target EPv2 Address" verticalAlign="middle"> 
+        <LabeledList.Item label="Target EPv2 Address" verticalAlign="middle">
           <Flex align="center">
             <Flex.Item grow={1}>
               <Input
@@ -281,7 +281,7 @@ const PhoneTab = (props, context) => {
           {!!invitesSent.length && (
             <LabeledList>
               {invitesSent.map(invite => (
-                <LabeledList.Item label={decodeHtmlEntities(invite.name)} key={invite.address}> 
+                <LabeledList.Item label={decodeHtmlEntities(invite.name)} key={invite.address}>
                   <Box>{decodeHtmlEntities(invite.address)}</Box>
                   <Box>
                     <Button
@@ -666,7 +666,7 @@ TabToTemplate[MESSSUBTAB] = <MessagingThreadTab />;
 /* News */
 const NewsTab = (props, context) => {
   const { act, data } = useBackend(context);
-  
+
   const {
     feeds,
     target_feed,
@@ -844,7 +844,7 @@ const WeatherTab = (props, context) => {
         {!!weather.length && (
           <LabeledList>
             {weather.map(wr => (
-              <LabeledList.Item label={wr.Planet} key={wr.Planet}> 
+              <LabeledList.Item label={wr.Planet} key={wr.Planet}>
                 <LabeledList>
                   <LabeledList.Item label="Time">
                     {wr.Time}

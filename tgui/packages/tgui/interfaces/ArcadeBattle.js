@@ -5,9 +5,6 @@ import { Window } from '../layouts';
 export const ArcadeBattle = (props, context) => {
   const { act, data } = useBackend(context);
 
-<<<<<<< HEAD
-  const { name, temp, enemyAction, enemyName, playerHP, playerMP, enemyHP, enemyMP, gameOver } = data;
-=======
   const {
     name,
     temp,
@@ -19,7 +16,6 @@ export const ArcadeBattle = (props, context) => {
     enemyMP,
     gameOver,
   } = data;
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 
   return (
     <Window width={400} height={240} resizable>
@@ -80,9 +76,6 @@ export const ArcadeBattle = (props, context) => {
               </LabeledList>
             </Flex.Item>
           </Flex>
-<<<<<<< HEAD
-          {(gameOver && <Button fluid mt={1} color="green" content="New Game" onClick={() => act('newgame')} />) || (
-=======
           {gameOver && (
             <Button
               fluid
@@ -91,7 +84,6 @@ export const ArcadeBattle = (props, context) => {
               content="New Game"
               onClick={() => act("newgame")} />
           ) || (
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
             <Flex mt={2} justify="space-between" spacing={1}>
               <Flex.Item grow={1}>
                 <Button
@@ -100,12 +92,7 @@ export const ArcadeBattle = (props, context) => {
                   tooltip="Go in for the kill!"
                   tooltipPosition="top"
                   onClick={() => act('attack')}
-<<<<<<< HEAD
-                  content="Attack!"
-                />
-=======
                   content="Attack!" />
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
               </Flex.Item>
               <Flex.Item grow={1}>
                 <Button
@@ -114,12 +101,7 @@ export const ArcadeBattle = (props, context) => {
                   tooltip="Heal yourself!"
                   tooltipPosition="top"
                   onClick={() => act('heal')}
-<<<<<<< HEAD
-                  content="Heal!"
-                />
-=======
                   content="Heal!" />
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
               </Flex.Item>
               <Flex.Item grow={1}>
                 <Button
@@ -128,12 +110,7 @@ export const ArcadeBattle = (props, context) => {
                   tooltip="Recharge your magic!"
                   tooltipPosition="top"
                   onClick={() => act('charge')}
-<<<<<<< HEAD
-                  content="Recharge!"
-                />
-=======
                   content="Recharge!" />
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
               </Flex.Item>
             </Flex>
           )}
@@ -141,8 +118,4 @@ export const ArcadeBattle = (props, context) => {
       </Window.Content>
     </Window>
   );
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale

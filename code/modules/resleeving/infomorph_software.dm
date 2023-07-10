@@ -59,7 +59,7 @@
 
 /datum/infomorph_software/med_records/tgui_data(mob/living/silicon/infomorph/user, datum/tgui/ui, datum/tgui_state/state)
 	var/list/data = ..()
-	
+
 	var/list/records = list()
 	for(var/datum/data/record/general in sortRecord(data_core.general))
 		var/list/record = list()
@@ -115,7 +115,7 @@
 
 /datum/infomorph_software/sec_records/tgui_data(mob/living/silicon/infomorph/user, datum/tgui/ui, datum/tgui_state/state)
 	var/list/data = ..()
-	
+
 	var/list/records = list()
 	for(var/datum/data/record/general in sortRecord(data_core.general))
 		var/list/record = list()
@@ -336,7 +336,7 @@
 
 /datum/infomorph_software/signaller/tgui_data(mob/living/silicon/infomorph/user, datum/tgui/ui, datum/tgui_state/state)
 	var/list/data = ..()
-	
+
 	var/obj/item/radio/integrated/signal/R = user.sradio
 
 	data["frequency"] = R.frequency

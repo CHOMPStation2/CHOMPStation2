@@ -136,18 +136,8 @@
 	var/dist = get_dist(src_object, src)
 	if(dist <= 1) // Open and interact if 1-0 tiles away.
 		return STATUS_INTERACTIVE
-<<<<<<< HEAD
-	else if(dist <= world.view)
-		return STATUS_UPDATE
-	return STATUS_CLOSE // Otherwise, we got nothing.
-
-// Topic Extensions for old UIs
-/datum/proc/CanUseTopic(var/mob/user, var/datum/tgui_state/state)
-	return tgui_status(user, state)
-=======
 	return ..()
 
 // Topic Extensions for old UIs
 /datum/proc/CanUseTopic(var/mob/user, var/datum/tgui_state/state)
 	return tgui_status(user, state)
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale

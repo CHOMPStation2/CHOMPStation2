@@ -66,11 +66,7 @@
 		var/datum/category_group/underwear/UWC = global_underwear.categories_by_name[href_list["change_underwear"]]
 		if(!UWC)
 			return
-<<<<<<< HEAD
-		var/datum/category_item/underwear/selected_underwear = tgui_input_list(H, "Choose underwear:", "Choose underwear", UWC.items, H.all_underwear[UWC.name])
-=======
 		var/datum/category_item/underwear/selected_underwear = input(H, "Choose underwear:", "Choose underwear", H.all_underwear[UWC.name]) as null|anything in UWC.items
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 		if(selected_underwear && CanUseTopic(H, GLOB.tgui_default_state))
 			H.all_underwear[UWC.name] = selected_underwear
 			H.hide_underwear[UWC.name] = FALSE

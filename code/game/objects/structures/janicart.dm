@@ -303,11 +303,7 @@ GLOBAL_LIST_BOILERPLATE(all_janitorial_carts, /obj/structure/janitorialcart)
 	if(myreplacer)
 		add_overlay("cart_replacer")
 	if(signs)
-<<<<<<< HEAD
-		add_overlay("cart_sign[signs]")
-=======
 		overlays += "cart_sign[signs]"
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 
 //This is called if the cart is caught in an explosion, or destroyed by weapon fire
 /obj/structure/janitorialcart/proc/spill(var/chance = 100)

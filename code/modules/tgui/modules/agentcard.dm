@@ -45,11 +45,7 @@
 			to_chat(usr, "<span class='notice'>Electronic warfare [S.electronic_warfare ? "enabled" : "disabled"].</span>")
 			. = TRUE
 		if("age")
-<<<<<<< HEAD
-			var/new_age = tgui_input_number(usr,"What age would you like to put on this card?","Agent Card Age", S.age)
-=======
 			var/new_age = input(usr,"What age would you like to put on this card?","Agent Card Age", S.age) as null|num
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 			if(!isnull(new_age) && tgui_status(usr, state) == STATUS_INTERACTIVE)
 				if(new_age < 0)
 					S.age = initial(S.age)
@@ -58,18 +54,6 @@
 				to_chat(usr, "<span class='notice'>Age has been set to '[S.age]'.</span>")
 				. = TRUE
 		if("appearance")
-<<<<<<< HEAD
-			var/datum/card_state/choice = tgui_input_list(usr, "Select the appearance for this card.", "Agent Card Appearance", id_card_states())
-			if(choice && tgui_status(usr, state) == STATUS_INTERACTIVE)
-				S.icon_state = choice.icon_state
-				S.item_state = choice.item_state
-				S.sprite_stack = choice.sprite_stack
-				S.update_icon()
-				to_chat(usr, "<span class='notice'>Appearance changed to [choice].</span>")
-				. = TRUE
-		if("assignment")
-			var/new_job = sanitize(tgui_input_text(usr,"What assignment would you like to put on this card?\nChanging assignment will not grant or remove any access levels.","Agent Card Assignment", S.assignment))
-=======
 			var/datum/card_state/choice = input(usr, "Select the appearance for this card.", "Agent Card Appearance") as null|anything in id_card_states()
 			if(choice && tgui_status(usr, state) == STATUS_INTERACTIVE)
 				S.icon_state = choice.icon_state
@@ -78,7 +62,6 @@
 				. = TRUE
 		if("assignment")
 			var/new_job = sanitize(input(usr,"What assignment would you like to put on this card?\nChanging assignment will not grant or remove any access levels.","Agent Card Assignment", S.assignment) as null|text)
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 			if(!isnull(new_job) && tgui_status(usr, state) == STATUS_INTERACTIVE)
 				S.assignment = new_job
 				to_chat(usr, "<span class='notice'>Occupation changed to '[new_job]'.</span>")
@@ -90,11 +73,7 @@
 				var/mob/living/carbon/human/H = usr
 				if(H.dna)
 					default = H.dna.b_type
-<<<<<<< HEAD
-			var/new_blood_type = sanitize(tgui_input_text(usr,"What blood type would you like to be written on this card?","Agent Card Blood Type",default))
-=======
 			var/new_blood_type = sanitize(input(usr,"What blood type would you like to be written on this card?","Agent Card Blood Type",default) as null|text)
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 			if(!isnull(new_blood_type) && tgui_status(usr, state) == STATUS_INTERACTIVE)
 				S.blood_type = new_blood_type
 				to_chat(usr, "<span class='notice'>Blood type changed to '[new_blood_type]'.</span>")
@@ -105,11 +84,7 @@
 				var/mob/living/carbon/human/H = usr
 				if(H.dna)
 					default = H.dna.unique_enzymes
-<<<<<<< HEAD
-			var/new_dna_hash = sanitize(tgui_input_text(usr,"What DNA hash would you like to be written on this card?","Agent Card DNA Hash",default))
-=======
 			var/new_dna_hash = sanitize(input(usr,"What DNA hash would you like to be written on this card?","Agent Card DNA Hash",default) as null|text)
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 			if(!isnull(new_dna_hash) && tgui_status(usr, state) == STATUS_INTERACTIVE)
 				S.dna_hash = new_dna_hash
 				to_chat(usr, "<span class='notice'>DNA hash changed to '[new_dna_hash]'.</span>")
@@ -120,21 +95,13 @@
 				var/mob/living/carbon/human/H = usr
 				if(H.dna)
 					default = md5(H.dna.uni_identity)
-<<<<<<< HEAD
-			var/new_fingerprint_hash = sanitize(tgui_input_text(usr,"What fingerprint hash would you like to be written on this card?","Agent Card Fingerprint Hash",default))
-=======
 			var/new_fingerprint_hash = sanitize(input(usr,"What fingerprint hash would you like to be written on this card?","Agent Card Fingerprint Hash",default) as null|text)
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 			if(!isnull(new_fingerprint_hash) && tgui_status(usr, state) == STATUS_INTERACTIVE)
 				S.fingerprint_hash = new_fingerprint_hash
 				to_chat(usr, "<span class='notice'>Fingerprint hash changed to '[new_fingerprint_hash]'.</span>")
 				. = TRUE
 		if("name")
-<<<<<<< HEAD
-			var/new_name = sanitizeName(tgui_input_text(usr,"What name would you like to put on this card?","Agent Card Name", S.registered_name))
-=======
 			var/new_name = sanitizeName(input(usr,"What name would you like to put on this card?","Agent Card Name", S.registered_name) as null|text)
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 			if(!isnull(new_name) && tgui_status(usr, state) == STATUS_INTERACTIVE)
 				S.registered_name = new_name
 				S.update_name()
@@ -145,21 +112,13 @@
 			to_chat(usr, "<span class='notice'>Photo changed.</span>")
 			. = TRUE
 		if("sex")
-<<<<<<< HEAD
-			var/new_sex = sanitize(tgui_input_text(usr,"What sex would you like to put on this card?","Agent Card Sex", S.sex))
-=======
 			var/new_sex = sanitize(input(usr,"What sex would you like to put on this card?","Agent Card Sex", S.sex) as null|text)
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 			if(!isnull(new_sex) && tgui_status(usr, state) == STATUS_INTERACTIVE)
 				S.sex = new_sex
 				to_chat(usr, "<span class='notice'>Sex changed to '[new_sex]'.</span>")
 				. = TRUE
 		if("factoryreset")
-<<<<<<< HEAD
-			if(tgui_alert(usr, "This will factory reset the card, including access and owner. Continue?", "Factory Reset", list("No", "Yes")) == "Yes" && tgui_status(usr, state) == STATUS_INTERACTIVE)
-=======
 			if(alert("This will factory reset the card, including access and owner. Continue?", "Factory Reset", "No", "Yes") == "Yes" && tgui_status(usr, state) == STATUS_INTERACTIVE)
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 				S.age = initial(S.age)
 				S.access = syndicate_access.Copy()
 				S.assignment = initial(S.assignment)
@@ -168,19 +127,9 @@
 				S.electronic_warfare = initial(S.electronic_warfare)
 				S.fingerprint_hash = initial(S.fingerprint_hash)
 				S.icon_state = initial(S.icon_state)
-<<<<<<< HEAD
-				S.item_state = initial(S.item_state)
-				S.sprite_stack = S.initial_sprite_stack
-				S.front = null
-=======
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 				S.name = initial(S.name)
 				S.registered_name = initial(S.registered_name)
 				S.unset_registered_user()
 				S.sex = initial(S.sex)
-<<<<<<< HEAD
-				S.update_icon()
-=======
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 				to_chat(usr, "<span class='notice'>All information has been deleted from \the [src].</span>")
 				. = TRUE

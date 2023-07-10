@@ -419,11 +419,7 @@
 		return
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-<<<<<<< HEAD
-		ui = new(user, src, "PortableTurret", name, ui_x = 500, ui_y = 400)
-=======
 		ui = new(user, src, "PortableTurret", name, 500, 400)
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 		ui.open()
 
 /obj/machinery/porta_turret/tgui_data(mob/user)

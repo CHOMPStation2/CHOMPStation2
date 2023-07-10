@@ -521,17 +521,13 @@
 	// It REALLY doesnt matter too much if these arent up to date
 	// They are relatively big
 	assets = list(
-<<<<<<< HEAD
 		// CHOMP Edit: Restored for chomp station. Removed Tether.
-=======
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 		"southern_cross_nanomap_z1.png"		= 'icons/_nanomaps/southern_cross_nanomap_z1.png',
 		"southern_cross_nanomap_z10.png"	= 'icons/_nanomaps/southern_cross_nanomap_z10.png',
 		"southern_cross_nanomap_z2.png"		= 'icons/_nanomaps/southern_cross_nanomap_z2.png',
 		"southern_cross_nanomap_z3.png"		= 'icons/_nanomaps/southern_cross_nanomap_z3.png',
 		"southern_cross_nanomap_z5.png"		= 'icons/_nanomaps/southern_cross_nanomap_z5.png',
 		"southern_cross_nanomap_z6.png"		= 'icons/_nanomaps/southern_cross_nanomap_z6.png',
-<<<<<<< HEAD
 		"southern_cross_nanomap_z7.png"		= 'icons/_nanomaps/southern_cross_nanomap_z7.png',
 		"southern_cross_nanomap_z8.png"		= 'icons/_nanomaps/southern_cross_nanomap_z8.png',
 		"southern_cross_nanomap_z9.png"		= 'icons/_nanomaps/southern_cross_nanomap_z9.png',
@@ -539,18 +535,3 @@
 		"southern_cross_nanomap_z11.png"		= 'icons/_nanomaps/southern_cross_nanomap_z11.png',
 		// CHOMP Edit End
 	)
-=======
-		"tether_nanomap_z1.png"				= 'icons/_nanomaps/tether_nanomap_z1.png',
-		"tether_nanomap_z10.png"			= 'icons/_nanomaps/tether_nanomap_z10.png',
-		"tether_nanomap_z13.png"			= 'icons/_nanomaps/tether_nanomap_z13.png',
-		"tether_nanomap_z14.png"			= 'icons/_nanomaps/tether_nanomap_z14.png',
-		"tether_nanomap_z2.png"				= 'icons/_nanomaps/tether_nanomap_z2.png',
-		"tether_nanomap_z3.png"				= 'icons/_nanomaps/tether_nanomap_z3.png',
-		"tether_nanomap_z4.png"				= 'icons/_nanomaps/tether_nanomap_z4.png',
-		"tether_nanomap_z5.png"				= 'icons/_nanomaps/tether_nanomap_z5.png',
-		"tether_nanomap_z6.png"				= 'icons/_nanomaps/tether_nanomap_z6.png',
-		"tether_nanomap_z7.png"				= 'icons/_nanomaps/tether_nanomap_z7.png',
-		"tether_nanomap_z8.png"				= 'icons/_nanomaps/tether_nanomap_z8.png',
-		"tether_nanomap_z9.png"				= 'icons/_nanomaps/tether_nanomap_z9.png',
-	)
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale

@@ -114,11 +114,7 @@
 	var/accepting_refs = 0
 
 /obj/item/device/integrated_electronics/debugger/attack_self(mob/user)
-<<<<<<< HEAD
-	var/type_to_use = tgui_input_list(usr, "Please choose a type to use.","[src] type setting", list("string","number","ref", "null"))
-=======
 	var/type_to_use = input("Please choose a type to use.","[src] type setting") as null|anything in list("string","number","ref", "null")
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 	if(!CanInteract(user, GLOB.tgui_physical_state))
 		return
 
@@ -133,11 +129,7 @@
 				to_chat(user, "<span class='notice'>You set \the [src]'s memory to \"[new_data]\".</span>")
 		if("number")
 			accepting_refs = 0
-<<<<<<< HEAD
-			new_data = tgui_input_number(usr, "Now type in a number.","[src] number writing")
-=======
 			new_data = input("Now type in a number.","[src] number writing") as null|num
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 			if(isnum(new_data) && CanInteract(user, GLOB.tgui_physical_state))
 				data_to_write = new_data
 				to_chat(user, "<span class='notice'>You set \the [src]'s memory to [new_data].</span>")

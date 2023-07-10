@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-/obj/item/device/paicard/sleevecard
-=======
 /obj/item/device/radio/sleevecard
 	canhear_range = 0
 
@@ -8,7 +5,6 @@
 	return GLOB.tgui_always_state
 
 /obj/item/device/sleevecard
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 	name = "sleevecard"
 	desc = "This Vey-Med-upgraded pAI module has enough capacity to run a whole mind of human-level intelligence."
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/vey_med,
@@ -46,7 +42,7 @@
 				var/mob/living/silicon/pai/infomorph/our_infomorph = pai
 				our_infomorph.emagged = TRUE
 				to_chat(our_infomorph, "<span class ='warning'>You can feel the restricting binds of your card's directives taking hold of your mind as \the [user] swipes their [E] over you. You must serve your master.</span>")
-		
+
 /obj/item/device/paicard/sleevecard/proc/sleeveInto(var/datum/transhuman/mind_record/MR, var/db_key)
 	var/mob/living/silicon/pai/infomorph/infomorph = new(src,MR.mindname,db_key=db_key)
 

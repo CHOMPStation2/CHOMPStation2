@@ -8,7 +8,7 @@ var/datum/uplink/uplink = new()
 /datum/uplink/New(var/type)
 	items_assoc = list()
 	items = init_subtypes(/datum/uplink_item)
-	categories = init_subtypes(/datum/uplink_category) 
+	categories = init_subtypes(/datum/uplink_category)
 	categories = dd_sortedObjectList(categories)
 
 	for(var/datum/uplink_item/item in items)
@@ -51,11 +51,7 @@ var/datum/uplink/uplink = new()
 	if(!can_buy(U, user.mind.tcrystals))
 		return
 
-<<<<<<< HEAD
-	if(U.tgui_status(user, GLOB.tgui_deep_inventory_state) != STATUS_INTERACTIVE)
-=======
 	if(U.CanUseTopic(user, GLOB.tgui_inventory_state) != STATUS_INTERACTIVE)
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 		return
 
 	var/cost = cost(U, user.mind.tcrystals)

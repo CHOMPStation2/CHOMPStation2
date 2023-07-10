@@ -34,7 +34,6 @@
 	user.set_machine(src)
 
 	tgui_interact(user)
-<<<<<<< HEAD
 
 /obj/machinery/photocopier/tgui_interact(mob/user, datum/tgui/ui, datum/tgui/parent_ui)
 	ui = SStgui.try_update_ui(user, src, ui)
@@ -42,15 +41,6 @@
 		ui = new(user, src, "Photocopier", name)
 		ui.open()
 
-=======
-
-/obj/machinery/photocopier/tgui_interact(mob/user, datum/tgui/ui, datum/tgui/parent_ui)
-	ui = SStgui.try_update_ui(user, src, ui)
-	if(!ui)
-		ui = new(user, src, "Photocopier", name)
-		ui.open()
-
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 /obj/machinery/photocopier/tgui_data(mob/user, datum/tgui/ui, datum/tgui_state/state)
 	var/list/data = ..()
 

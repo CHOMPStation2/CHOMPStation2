@@ -35,15 +35,7 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 /obj/machinery/photocopier/faxmachine/attack_hand(mob/user as mob) // CH edit begins here; this allows borgs to use fax machines, meant for the Unity and Clerical modules.
 	user.set_machine(src)
 
-<<<<<<< HEAD
-	if(issilicon(usr))
-		authenticated = 1
-		tgui_interact(user)
-	else
-		tgui_interact(user)
-=======
 	tgui_interact(user)
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 
 /obj/machinery/photocopier/faxmachine/tgui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
@@ -118,11 +110,7 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 
 	if(!authenticated)
 		return
-<<<<<<< HEAD
 
-=======
-	
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 	switch(action)
 		if("send")
 			if(copyitem)
@@ -137,11 +125,7 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 
 		if("dept")
 			var/lastdestination = destination
-<<<<<<< HEAD
-			destination = tgui_input_list(usr, "Which department?", "Choose a department", (alldepartments + admin_departments))
-=======
 			destination = input(usr, "Which department?", "Choose a department", "") as null|anything in (alldepartments + admin_departments)
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 			if(!destination)
 				destination = lastdestination
 

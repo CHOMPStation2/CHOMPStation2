@@ -127,20 +127,12 @@
 			creating_new_account = 1
 
 		if("add_funds")
-<<<<<<< HEAD
-			var/amount = tgui_input_number(usr, "Enter the amount you wish to add", "Silently add funds")
-=======
 			var/amount = input("Enter the amount you wish to add", "Silently add funds") as num
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 			if(detailed_account_view)
 				detailed_account_view.money = min(detailed_account_view.money + amount, fund_cap)
 
 		if("remove_funds")
-<<<<<<< HEAD
-			var/amount = tgui_input_number(usr, "Enter the amount you wish to remove", "Silently remove funds")
-=======
 			var/amount = input("Enter the amount you wish to remove", "Silently remove funds") as num
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 			if(detailed_account_view)
 				detailed_account_view.money = max(detailed_account_view.money - amount, -fund_cap)
 

@@ -4,15 +4,11 @@ import { useBackend } from '../backend';
 import { Box, Button, Flex, Input, LabeledList, Section, Table, Tabs } from '../components';
 import { Window } from '../layouts';
 import { decodeHtmlEntities } from 'common/string';
-<<<<<<< HEAD
-import { CrewManifestContent } from './CrewManifest';
-=======
 import { COLORS } from "../constants";
 import { CrewManifestContent } from './CrewManifest';
 
 export const IdentificationComputer = (props, context) => {
   const { act, data } = useBackend(context);
->>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 
 export const IdentificationComputer = () => {
   return (
