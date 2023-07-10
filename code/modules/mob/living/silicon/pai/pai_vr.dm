@@ -14,10 +14,6 @@
 		"rat",
 		"panther",
 		"teppi",
-<<<<<<< HEAD
-=======
-		"pai-diredog",
->>>>>>> f2643ce2f6... Merge pull request #15133 from scarletflared/master
 		"pai-horse_lune",
 		"pai-horse_soleil",
 		"pai-pdragon"
