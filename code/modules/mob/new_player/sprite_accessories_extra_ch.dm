@@ -609,3 +609,27 @@
 	icon_state = "hellscout_p"
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/spectre_panels
+	name = "RACS Spectre FBP Panels"
+	icon_state = "spectre"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_GROIN,BP_TORSO,BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/spectre_panels_body
+	name = "RACS Spectre FBP Panels (body)"
+	icon_state = "spectre"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_GROIN,BP_TORSO)
+
+/datum/sprite_accessory/marking/ch/spectre_panels_head
+	name = "RACS Spectre FBP Panels (head)"
+	icon_state = "spectre"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/spectre_eyes
+	name = "RACS Spectre FBP Eyes"
+	icon_state = "spectre_eyes"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_HEAD)

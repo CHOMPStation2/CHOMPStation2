@@ -4869,5 +4869,25 @@
 "secret": false,
 "lobby": false,
 "jukebox": true
+},
+{
+"url": "https://archive.org/download/i-care-because-you-do-flac/10.%20Aphex%20Twin%20-%20Alberto%20Balsalm.mp3",
+"title": "Alberto Balsalm",
+"duration": 3110,
+ "artist": "Aphex Twin",
+"genre": "Electronic",
+"secret": false,
+"lobby": false,
+"jukebox": true
+},
+{
+"url": "https://archive.org/download/selected-ambient-works-85-92-flac/01.%20Aphex%20Twin%20-%20Xtal.mp3",
+"title": "Xtal",
+"duration": 2930,
+"artist": "Aphex Twin",
+"genre": "Electronic",
+"secret": false,
+"lobby": false,
+"jukebox": true
 }
 ]
