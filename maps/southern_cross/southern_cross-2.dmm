@@ -442,7 +442,7 @@
 "aaL" = (
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Toxins Test Chamber Fore";
-	network = list("Research","Toxins                Test                Area")
+	network = list("Research","Toxins                                Test                                Area")
 	},
 /turf/simulated/floor/tiled/airless,
 /area/rnd/test_area)
@@ -3075,7 +3075,7 @@
 /obj/machinery/computer/general_air_control{
 	frequency = 1445;
 	name = "Engine Exhaust Monitoring";
-	sensors = list("engine_exhaust_sensor"="Engine                Exhaust                Sensor")
+	sensors = list("engine_exhaust_sensor"="Engine                                Exhaust                                Sensor")
 	},
 /turf/simulated/floor,
 /area/engineering/engine_waste)
@@ -5829,7 +5829,7 @@
 /obj/machinery/computer/general_air_control{
 	frequency = 1441;
 	name = "Tank Monitor";
-	sensors = list("n2_sensor"="Nitrogen","o2_sensor"="Oxygen","co2_sensor"="Carbon                Dioxide","tox_sensor"="Toxins","n2o_sensor"="Nitrous                Oxide","waste_sensor"="Gas                Mix                Tank")
+	sensors = list("n2_sensor"="Nitrogen","o2_sensor"="Oxygen","co2_sensor"="Carbon                                Dioxide","tox_sensor"="Toxins","n2o_sensor"="Nitrous                                Oxide","waste_sensor"="Gas                                Mix                                Tank")
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/monitoring)
@@ -5844,7 +5844,7 @@
 	frequency = 1443;
 	level = 3;
 	name = "Distribution and Waste Monitor";
-	sensors = list("mair_in_meter"="Mixed                Air                In","air_sensor"="Mixed                Air                Supply                Tank","mair_out_meter"="Mixed                Air                Out","dloop_atm_meter"="Distribution                Loop","wloop_atm_meter"="Engine                Waste")
+	sensors = list("mair_in_meter"="Mixed                                Air                                In","air_sensor"="Mixed                                Air                                Supply                                Tank","mair_out_meter"="Mixed                                Air                                Out","dloop_atm_meter"="Distribution                                Loop","wloop_atm_meter"="Engine                                Waste")
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/monitoring)
@@ -8838,7 +8838,7 @@
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Toxins Test Chamber Port";
 	dir = 4;
-	network = list("Research","Toxins                Test                Area")
+	network = list("Research","Toxins                                Test                                Area")
 	},
 /turf/simulated/floor/tiled/airless,
 /area/rnd/test_area)
@@ -9059,7 +9059,7 @@
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Toxins Test Chamber Starboard";
 	dir = 8;
-	network = list("Research","Toxins                Test                Area")
+	network = list("Research","Toxins                                Test                                Area")
 	},
 /turf/simulated/floor/tiled/airless,
 /area/rnd/test_area)
@@ -17151,7 +17151,7 @@
 	input_tag = "cooling_in";
 	name = "Engine Cooling Control";
 	output_tag = "cooling_out";
-	sensors = list("engine_sensor"="Engine                Core")
+	sensors = list("engine_sensor"="Engine                                Core")
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/engine_monitoring)
@@ -34123,6 +34123,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
+/obj/effect/floor_decal/borderfloorwhite/corner,
+/obj/effect/floor_decal/corner/paleblue/bordercorner,
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
 "cdk" = (
@@ -41106,7 +41108,7 @@
 	desc = "Used for watching the test chamber.";
 	layer = 4;
 	name = "Test Chamber Telescreen";
-	network = list("Toxins                Test                Area");
+	network = list("Toxins                                Test                                Area");
 	pixel_y = 32
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -41134,7 +41136,7 @@
 	desc = "Used for watching the test chamber.";
 	layer = 4;
 	name = "Test Chamber Telescreen";
-	network = list("Toxins                Test                Area");
+	network = list("Toxins                                Test                                Area");
 	pixel_y = 32
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -41164,7 +41166,7 @@
 	desc = "Used for watching the test chamber.";
 	layer = 4;
 	name = "Test Chamber Telescreen";
-	network = list("Toxins                Test                Area");
+	network = list("Toxins                                Test                                Area");
 	pixel_y = 32
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -43547,7 +43549,7 @@
 /obj/machinery/computer/security/telescreen{
 	desc = "Used for watching the RD's goons from the safety of his office.";
 	name = "Research Monitor";
-	network = list("Research","Toxins                Test                Area","Robots","Anomaly                Isolation","Research                Outpost");
+	network = list("Research","Toxins                                Test                                Area","Robots","Anomaly                                Isolation","Research                                Outpost");
 	pixel_x = 32;
 	pixel_y = -4
 	},
@@ -48014,16 +48016,16 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/effect/floor_decal/borderfloorwhite/corner{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/paleblue/bordercorner{
-	dir = 1
-	},
 /obj/structure/cable/green{
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
+	},
+/obj/effect/floor_decal/borderfloorwhite/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/paleblue/bordercorner{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
@@ -49391,6 +49393,12 @@
 "fSb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/effect/floor_decal/borderfloorwhite/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/paleblue/bordercorner{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
@@ -55921,7 +55929,7 @@
 	dir = 4;
 	frequency = 1430;
 	name = "Mixing Chamber Monitor";
-	sensors = list("toxins_mixing_exterior"="Mixing                Chamber                -                Exterior","toxins_mixing_interior"="Mixing                Chamber                -                Interior")
+	sensors = list("toxins_mixing_exterior"="Mixing                                Chamber                                -                                Exterior","toxins_mixing_interior"="Mixing                                Chamber                                -                                Interior")
 	},
 /obj/machinery/light{
 	dir = 8
@@ -57196,12 +57204,6 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
-	},
-/obj/effect/floor_decal/borderfloorwhite/corner{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/paleblue/bordercorner{
-	dir = 4
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -59227,7 +59229,7 @@
 /obj/machinery/computer/security/telescreen{
 	desc = "Used to monitor the proceedings inside the test chamber.";
 	name = "Test Chamber Monitor";
-	network = list("Miscellaneous                Reseach");
+	network = list("Miscellaneous                                Reseach");
 	pixel_x = -32;
 	pixel_y = -4
 	},
@@ -59315,7 +59317,7 @@
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Miscellaneous Test Chamber";
 	dir = 8;
-	network = list("Research","Miscellaneous                Reseach")
+	network = list("Research","Miscellaneous                                Reseach")
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/misc_lab)
@@ -64957,12 +64959,6 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 1
-	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -65780,6 +65776,12 @@
 	dir = 4
 	},
 /obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/borderfloorwhite/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue/bordercorner{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
@@ -74456,6 +74458,12 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
 "tMs" = (
@@ -79200,6 +79208,12 @@
 "wCl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
