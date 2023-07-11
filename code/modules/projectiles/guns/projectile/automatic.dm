@@ -410,7 +410,7 @@
 /obj/item/weapon/gun/projectile/automatic/mini_uzi/update_icon()
 	..()
 	if(ammo_magazine)
-		icon_state = "uzi"
+		icon_state = "mini-uzi"
 	else
 		icon_state = "mini-uzi-empty"
 
@@ -475,7 +475,7 @@
 	name = "\improper Tommy Gun"
 	desc = "This weapon was made famous by gangsters in the 20th century. Cybersun Industries is currently reproducing these for a target market of historic gun collectors and classy criminals. Uses .45 rounds."
 	description_fluff = "Cybersun Industries is a minor arms manufacturer specialising in replica firearms from eras past. Though they offer a wide selection of made-to-order models, their products are seen as little more than novelty items to most serious collectors."
-	icon_state = "tommy"
+	icon_state = "tommygun"
 	item_state = "stg44"
 	w_class = ITEMSIZE_NORMAL
 	caliber = ".45"
@@ -492,11 +492,11 @@
 
 /obj/item/weapon/gun/projectile/automatic/tommygun/update_icon()
 	if(istype(ammo_magazine,/obj/item/ammo_magazine/m45tommy))
-		icon_state = "tommy-mag"
+		icon_state = "tommygun-mag"
 	else if(istype(ammo_magazine,/obj/item/ammo_magazine/m45tommydrum))
-		icon_state = "tommy-drum"
+		icon_state = "tommygun-drum"
 	else
-		icon_state = "tommy-e"
+		icon_state = "tommygun-e"
 	update_held_icon()
 
 /*
