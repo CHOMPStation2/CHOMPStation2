@@ -94,21 +94,6 @@
 /*
  * Alien Pistol
  */
-/obj/item/weapon/gun/energy/alien
-	name = "alien pistol"
-	desc = "A weapon that works very similarly to a traditional energy weapon. How this came to be will likely be a mystery for the ages."
-	catalogue_data = list(/datum/category_item/catalogue/anomalous/precursor_a/alien_pistol)
-	icon_state = "alienpistol"
-	item_state = "alienpistol"
-	fire_delay = 9 //CHOMPedit changed cooldown from 10 to 9.
-	charge_cost = 380 // CHOMPedit changed from 480 to 380. Aka five shots to six shots.
-
-	projectile_type = /obj/item/projectile/beam/precursor //CHOMPedit changed beam type
-	cell_type = /obj/item/weapon/cell/device/weapon/recharge/alien // Self charges.
-	origin_tech = list(TECH_COMBAT = 8, TECH_MAGNET = 7)
-	modifystate = "alienpistol"
-	battery_lock = 1 //CHOMPedit adds battery lock.
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /datum/category_item/catalogue/anomalous/precursor_a/alien_pistol
 	name = "Precursor Alpha Weapon - Appendageheld Laser"
@@ -378,6 +363,9 @@
 	origin_tech = list(TECH_COMBAT = 3, TECH_MAGNET = 1, TECH_MATERIAL = 4)
 
 	projectile_type = /obj/item/projectile/scatter/laser
+	w_class = ITEMSIZE_HUGE //CHOMP Edit.
+	slot_flags = SLOT_BELT|SLOT_BACK //CHOMP Edit because you can still holster it despite it not fitting in a backpack.
+
 
 /*
  * Imperial Pistol
@@ -482,17 +470,3 @@
 	force = 12
 	accuracy = 0
 	scoped_accuracy = 20
-
-// Laser scattergun, proof of concept.
-
-/obj/item/weapon/gun/energy/lasershotgun
-	name = "laser scattergun"
-	icon = 'icons/obj/energygun.dmi'
-	item_state = "laser"
-	icon_state = "scatter"
-	desc = "A strange Almachi weapon, utilizing a refracting prism to turn a single laser blast into a diverging cluster."
-	origin_tech = list(TECH_COMBAT = 3, TECH_MAGNET = 1, TECH_MATERIAL = 4)
-
-	projectile_type = /obj/item/projectile/scatter/laser
-	w_class = ITEMSIZE_HUGE //CHOMP Edit.
-	slot_flags = SLOT_BELT|SLOT_BACK //CHOMP Edit because you can still holster it despite it not fitting in a backpack.

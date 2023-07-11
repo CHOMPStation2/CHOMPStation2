@@ -54,8 +54,8 @@
 	name = "submachine gun"
 	desc = "The C-20r is a lightweight and rapid firing SMG, for when you REALLY need someone dead. It has 'Scarborough Arms - Per falcis, per pravitas', inscribed on the stock. Uses 10mm rounds."
 	description_fluff = "The C-20r is produced by Scarborough Arms, a specialist high-end weapons manufacturer based out of Titan, Sol. Scarborough has resisted numerous efforts by Trans-Stellars to acquire the brand since its founding in 2511, and has gained a dedicated following among a certain flavor of private operative."
-	icon = 'icons/obj/64x32guns_ch.dmi'
-	icon_expected_width = 64
+	icon = 'icons/obj/64x32guns_ch.dmi' //Chomp Edit
+	icon_expected_width = 64 //Chomp EDIT
 	icon_state = "c20r"
 	item_state = "c20r"
 	w_class = ITEMSIZE_NORMAL
@@ -159,8 +159,8 @@
 /obj/item/weapon/gun/projectile/automatic/wt550
 	name = "machine pistol"
 	desc = "The WT550 Saber is a cheap self-defense weapon mass-produced by Ward-Takahashi for paramilitary and private use. Uses 9mm rounds."
-	icon = 'icons/obj/64x32guns_ch.dmi'
-	icon_expected_width = 64
+	icon = 'icons/obj/64x32guns_ch.dmi' //Chomp EDIT
+	icon_expected_width = 64 //Chomp EDIT
 	icon_state = "wt550"
 	item_state = "wt550"
 	w_class = ITEMSIZE_NORMAL
@@ -192,8 +192,8 @@
 	description_fluff = "Zendai Foundries was a well-respected mid-sized arms company that operated until 2508, when it was acquired by Hephaestus Industries. \
 	Plans to integrate the brand into wider corporate operations were brought to an abrupt halt by the SolGov-Hegemony war, and the company was left by the wayside. \
 	Hephaestus still produces replacement parts for many of Zendai's most popular weapons, including the Z8 Bulldog, and a great detail remain in service."
-	icon = 'icons/obj/64x32guns_ch.dmi'
-	icon_expected_width = 64
+	icon = 'icons/obj/64x32guns_ch.dmi' //Chomp EDIT
+	icon_expected_width = 64 //Chomp EDIT
 	icon_state = "carbine" // This isn't a carbine. :T
 	item_state = "z8carbine"
 	wielded_item_state = "z8bulldog-wielded"
@@ -271,8 +271,8 @@
 	name = "light machine gun"
 	desc = "A rather sturdily made L6 SAW with a reassuringly ergonomic pistol grip. 'Hephaestus Industries' is engraved on the receiver. Uses 5.45mm rounds. It's also compatible with magazines from STS-35 assault rifles."
 	description_fluff = "The leading arms producer in the SCG, Hephaestus typically only uses its 'top level' branding for its military-grade equipment used by professional armed forces across human space."
-	icon = 'icons/obj/64x32guns_ch.dmi'
-	icon_expected_width = 64
+	icon = 'icons/obj/64x32guns_ch.dmi' //Chomp EDIT
+	icon_expected_width = 64 //Chomp EDIT
 	icon_state = "l6closed100"
 	item_state = "l6closed"
 	wielded_item_state = "genericLMG-wielded"
@@ -389,9 +389,9 @@
 	description_fluff = "Budget-grade weapons for the budget-grade consumer! Hephaestus’ low-end brand of cheaply made, low-maintenance personal defense weapons for those who just need a handgun with absolutely no frills. \
 	Early ProTek weapons were notoriously unsafe and unreliable, though more recent designs have improved somewhat - they still aren’t very good. \
 	Though sold for a pittance, the profit margin is too irresistible for Hephaestus to discontinue the brand."
-	icon = 'icons/obj/64x32guns_ch.dmi'
-	icon_expected_width = 64
-	icon_state = "mini-uzi"
+	icon = 'icons/obj/64x32guns_ch.dmi' //Chomp EDIT
+	icon_expected_width = 64 //Chomp EDIT
+	icon_state = "mini-uzi" //Chomp EDIT - uzi --> mini-uzi
 	w_class = ITEMSIZE_NORMAL
 	load_method = MAGAZINE
 	caliber = ".45"

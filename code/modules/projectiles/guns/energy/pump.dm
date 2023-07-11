@@ -36,6 +36,7 @@
 	if(lockable)
 		locked = !locked
 		to_chat(user, "<span class='warning'>You [locked ? "enable" : "disable"] the safety lock on \the [src]!</span>")
+		return 1
 
 /obj/item/weapon/gun/energy/locked/special_check(mob/user)
 	if(locked)
@@ -158,32 +159,6 @@
 	locked = 0
 	lockable = 0
 
-////////////////Expeditionary Holdout Phaser Pistol////////////////
-
-/obj/item/weapon/gun/energy/locked/frontier/holdout
-	name = "holdout frontier phaser"
-	desc = "An minaturized weapon designed for the purpose of expeditionary support to defend themselves on the field. Includes a built-in crank charger for recharging away from civilization. This one has a safety interlock that prevents firing while in proximity to the facility."
-	icon = 'icons/obj/gun_vr.dmi'
-	icon_state = "holdoutkill"
-	item_state = null
-	phase_power = 100
-
-	w_class = ITEMSIZE_SMALL
-	charge_cost = 600
-	modifystate = "holdoutkill"
-	//CHOMP Edit: Changed beam type to new phaser beam type.
-	firemodes = list(
-		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/phaser, modifystate="holdoutkill", charge_cost = 600),
-		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/phaser/light, modifystate="holdoutstun", charge_cost = 120),
-		list(mode_name="stun", fire_delay=12, projectile_type=/obj/item/projectile/beam/stun/med, modifystate="holdoutshock", charge_cost = 300),
-	)
-
-/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked
-	desc = "An minaturized weapon designed for the purpose of expeditionary support to defend themselves on the field. Includes a built-in crank charger for recharging away from civilization."
-	req_access = newlist() //for toggling safety
-	locked = 0
-	lockable = 0
-
 /*
  * Expedition Frontier Rifle
  */
@@ -289,7 +264,7 @@
 	)
 
 /obj/item/weapon/gun/energy/locked/frontier/handbow/unlocked
-	desc = "An minaturized weapon that fires a bolt of engery. Includes a built-in crank charger for recharging away from civilization."
+	desc = "An minaturized weapon that fires a bolt of energy. Includes a built-in crank charger for recharging away from civilization."
 	req_access = newlist() //for toggling safety
 	locked = 0
 	lockable = 0
