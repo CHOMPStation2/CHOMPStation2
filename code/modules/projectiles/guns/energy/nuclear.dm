@@ -86,6 +86,7 @@
 	force = 8
 	w_class = ITEMSIZE_LARGE
 	fire_delay = 7
+	charge_meter = 0 //ChompEDIT - tommylaser doesn't have charge sprites.
 
 	projectile_type = /obj/item/projectile/beam/burstlaser
 	origin_tech = list(TECH_COMBAT = 5, TECH_MAGNET = 3, TECH_ILLEGAL = 4)
