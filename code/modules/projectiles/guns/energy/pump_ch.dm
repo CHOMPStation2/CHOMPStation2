@@ -1,36 +1,3 @@
-/* TUTORIAL
-	"icon" is the file with the HUD/ground icon for the item
-	"icon_state" is the iconstate in this file for the item
-	"icon_override" is the file with the on-mob icons, can be the same file
-	"item_state" is the iconstate for the on-mob icons:
-		item_state_s is used for worn uniforms on mobs
-		item_state_r and item_state_l are for being held in each hand
-
-	"item_state_slots" can replace "item_state", it is a list:
-		item_state_slots["slotname1"] = "item state for that slot"
-		item_state_slots["slotname2"] = "item state for that slot"
-
-	on guns, in particular:
-	item_state being null makes it look for exactly the icon_state in the on-mob file,
-		including any 0,75,etc appended from the energy bar setting
-	item_state being present prevents different mode sprites, sadly, but you may
-		be able to override this on the gun itself with a proc
-*/
-
-/* TEMPLATE
-//ckey:Character Name
-/obj/item/weapon/gun/type/fluff/charactername
-	name = ""
-	desc = ""
-
-	icon = 'icons/vore/custom_guns_vr.dmi'
-	icon_state = "myicon"
-
-	icon_override = 'icons/vore/custom_guns_vr.dmi'
-	item_state = "myicon"
-
-*/
-
 // For general use
 /obj/item/weapon/gun/energy/imperial
 	name = "imperial energy pistol"
