@@ -1559,6 +1559,9 @@
 	update_icon()
 	update_transform()
 
+/obj/item/weapon/gun/projectile/shotgun/doublebarrel/sawn //Default sawn shotgun needs it's old icon path back
+	icon = 'icons/obj/gun.dmi'
+
 /obj/item/weapon/gun/projectile/shotgun/doublebarrel/Initialize()
 	. = ..()
 	update_transform()

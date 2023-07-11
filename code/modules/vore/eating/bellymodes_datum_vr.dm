@@ -142,6 +142,8 @@ GLOBAL_LIST_INIT(digest_modes, list())
 /datum/digest_mode/drain/shrink/process_mob(obj/belly/B, mob/living/L)
 	if(L.size_multiplier > B.shrink_grow_size)
 		L.resize(L.size_multiplier - 0.01) // Shrink by 1% per tick
+		if(L.size_multiplier <= B.shrink_grow_size) //CHOMPEdit - Adds some feedback so the pred knows their prey has stopped shrinking.
+			to_chat(B.owner, "<span class='notice'>You feel [L] get as small as you would like within your [lowertext(B.name)].</span>")
 		B.owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 		. = ..()
 
@@ -152,6 +154,8 @@ GLOBAL_LIST_INIT(digest_modes, list())
 /datum/digest_mode/grow/process_mob(obj/belly/B, mob/living/L)
 	if(L.size_multiplier < B.shrink_grow_size)
 		L.resize(L.size_multiplier + 0.01) // Shrink by 1% per tick
+		if(L.size_multiplier >= B.shrink_grow_size) //CHOMPEdit - Adds some feedback so the pred knows their prey has stopped growing.
+			to_chat(B.owner, "<span class='notice'>You feel [L] get as big as you would like within your [lowertext(B.name)].</span>")
 		B.owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 
 /datum/digest_mode/drain/sizesteal
@@ -160,7 +164,11 @@ GLOBAL_LIST_INIT(digest_modes, list())
 /datum/digest_mode/drain/sizesteal/process_mob(obj/belly/B, mob/living/L)
 	if(L.size_multiplier > B.shrink_grow_size && B.owner.size_multiplier < 2) //Grow until either pred is large or prey is small.
 		B.owner.resize(B.owner.size_multiplier + 0.01) //Grow by 1% per tick.
+		if(B.owner.size_multiplier >= 2) //CHOMPEdit - Adds some feedback so the pred knows they can't grow anymore.
+			to_chat(B.owner, "<span class='notice'>You feel you have grown as much as you can.</span>")
 		L.resize(L.size_multiplier - 0.01) //Shrink by 1% per tick
+		if(L.size_multiplier <= B.shrink_grow_size) //CHOMPEdit - Adds some feedback so the pred knows their prey has stopped shrinking.
+			to_chat(B.owner, "<span class='notice'>You feel [L] get as small as you would like within your [lowertext(B.name)].</span>")
 		B.owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 		. = ..()
 

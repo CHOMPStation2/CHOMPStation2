@@ -501,8 +501,8 @@
 	//You're in a belly!
 	if(isbelly(loc))
 		//You've been taken over by a morph
-		if(istype(src, /mob/living/simple_mob/vore/hostile/morph/dominated_prey))
-			var/mob/living/simple_mob/vore/hostile/morph/dominated_prey/s = src
+		if(istype(src, /mob/living/simple_mob/vore/morph/dominated_prey))
+			var/mob/living/simple_mob/vore/morph/dominated_prey/s = src
 			s.undo_prey_takeover(TRUE)
 			return
 		var/obj/belly/B = loc
@@ -1172,6 +1172,11 @@
 /obj/screen/fullscreen/belly/fixed //CHOMPedit: tweaking to preserve save data
 	icon = 'icons/mob/screen_full_vore.dmi' //CHOMPedit: tweaking to preserve save data
 	icon_state = ""
+
+/* //Chomp DISABLE - use our solution, not upstream's.
+/obj/screen/fullscreen/belly/colorized/overlay
+	icon = 'icons/mob/screen_full_colorized_vore_overlays.dmi'
+*/ //Chomp DISABLE End
 
 /mob/living/proc/vorebelly_printout() //Spew the vorepanel belly messages into chat window for copypasting.
 	set name = "X-Print Vorebelly Settings"

@@ -101,10 +101,26 @@
 
 	switch(pred.a_intent)
 		if(I_HELP)
-			if(pred.m_intent == "run")
-				message_prey = "[pred] moves, pressing down on you within their [name] with each step."
-			else
-				message_prey = "As [pred] walks, their foot presses you tightly against the sole of their [name]!"
+			if(prob(40)) //Reducing spam exclusively on I_HELP. Still more frequent than old pitiful prob(1)
+				if(pred.m_intent == "run")
+					message_prey = pick(
+						"You feel weightless for a brief moment as \the [name] move upwards.",
+						"[pred]'s weight bears down on you with each of their steps.",
+						"\The [name] are a ride you've got no choice but to participate in as the wearer moves.",
+						"The wearer of \the [name] moves, and their feet press down on you with each step.",
+						"With each step, you're sandwiched again between [pred]'s feet and the insole of their boots.",
+						"As [pred] moves, their foot presses you tightly against the insole of their boots with each step.")
+				else
+					message_prey = pick(
+						"You feel weightless for a brief moment as \the [name] move upwards.",
+						"[pred]'s weight bears down on you with each of the calm steps of their walk.",
+						"\The [name] are a ride you've got no choice but to participate in as the wearer walks.",
+						"The wearer of \the [name] walks, and their feet press down on you heavily with each step.",
+						"With each step of their unhurried walk, you're tightly sandwiched between [pred]'s feet and the insole of their boots.",
+						"As [pred] walks, their foot presses you tightly against the insole of their boots with each step.")
+				to_chat(prey, span_emote_subtle("<I>[message_prey]</I>"))
+
+			return  //No message for pred if I_HELP
 
 		if(I_DISARM)
 			if(pred.m_intent == "run")
@@ -151,7 +167,7 @@
 				I.take_damage(damage, 0)
 
 	if(message_pred != null)
-		to_chat(pred, "<span class='warning'>[message_pred]</span>")
-	to_chat(prey, "<span class='warning'>[message_prey]</span>")
+		to_chat(pred, span_warning(message_pred))
+	to_chat(prey, span_warning(message_prey))
 
 	return

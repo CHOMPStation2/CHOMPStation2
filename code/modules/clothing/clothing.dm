@@ -604,7 +604,6 @@
 
 	var/water_speed = 0		//Speed boost/decrease in water, lower/negative values mean more speed
 	var/snow_speed = 0		//Speed boost/decrease on snow, lower/negative values mean more speed
-	var/rock_climbing = FALSE // If true, allows climbing cliffs with clickdrag.
 
 	var/step_volume_mod = 1	//How quiet or loud footsteps in this shoe are
 
@@ -628,7 +627,7 @@
 
 	if(usr.stat || usr.restrained() || usr.incapacitated())
 		return
-
+	
 	//CHOMPEdit begin
 	if(istype(usr, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = usr
@@ -791,7 +790,7 @@
 	var/image/standing = ..()
 	if(taurized) //Special snowflake var on suits
 		standing.pixel_x = -16
-		standing.layer = BODY_LAYER + 18 // 17 is above tail layer, so will not be covered by taurbody. TAIL_UPPER_LAYER +1
+		standing.layer = BODY_LAYER + 18 // 18 is above tail layer, so will not be covered by taurbody. TAIL_UPPER_LAYER +1 //CHOMPEDIT - CHECK human/update_icons.dm BEFORE YOU CHANGE THIS.
 	return standing
 
 /obj/item/clothing/suit/apply_accessories(var/image/standing)

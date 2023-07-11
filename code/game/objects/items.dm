@@ -109,7 +109,10 @@
 	var/tip_timer // reference to timer id for a tooltip we might open soon
 
 	var/no_random_knockdown = FALSE			//stops item from being able to randomly knock people down in combat
-
+	
+	var/rock_climbing = FALSE //If true, allows climbing cliffs using click drag for single Z, walls if multiZ
+	var/climbing_delay = 1 //If rock_climbing, lower better.
+	
 /obj/item/Initialize(mapload) //CHOMPedit I stg I'm going to overwrite these many uncommented edits.
 	. = ..()
 	if(islist(origin_tech))

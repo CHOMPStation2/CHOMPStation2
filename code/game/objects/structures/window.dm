@@ -185,9 +185,9 @@
 		user.do_attack_animation(src)
 		shatter()
 
-	else if(usr && usr.a_intent == I_HURT) //CHOMPEdit
+	else if (usr.a_intent == I_HURT)
 
-		if(istype(usr,/mob/living/carbon/human))
+		if (istype(usr,/mob/living/carbon/human))
 			var/mob/living/carbon/human/H = usr
 			if(H.species.can_shred(H))
 				attack_generic(H,25)
@@ -215,8 +215,7 @@
 			damage = damage / 2
 		take_damage(damage)
 	else
-		if (user.client) //CHOMPEdit addition - The space jellyfish bonks the window harmlessly.x1762 - they aren't doing any damage to it even, so there's no point in having this here other than showing they're attacking the window - constantly, every half a second. The attack animation can take care of that.
-			visible_message("<b>\The [user]</b> bonks \the [src] harmlessly.")
+		visible_message("<b>\The [user]</b> bonks \the [src] harmlessly.")
 	user.do_attack_animation(src)
 	return 1
 
@@ -610,13 +609,15 @@
 		if(istype(MT.connectable, /obj/machinery/button/windowtint))
 			var/obj/machinery/button/windowtint/buffered_button = MT.connectable
 			src.id = buffered_button.id
-			to_chat(user, "<span class='notice'>\The [src] is linked to \the [buffered_button].</span>")
+			to_chat(user, "<span class='notice'>\The [src] is linked to \the [buffered_button] with ID '[id]'.</span>")
 			return TRUE
-		// Otherwise fall back to asking them
-		var/t = sanitizeSafe(tgui_input_text(user, "Enter the ID for the window.", src.name, null, MAX_NAME_LEN), MAX_NAME_LEN)
-		if (!t && user.get_active_hand() != W && in_range(src, user))
+		// Otherwise fall back to asking them... and remind them what the current ID is.
+		if(id)
+			to_chat(user, "The window's current ID is [id].")
+		var/t = sanitizeSafe(input(user, "Enter the new ID for the window.", src.name, null), MAX_NAME_LEN)
+		if(t && in_range(src, user))
 			src.id = t
-			to_chat(user, "<span class='notice'>The new ID of \the [src] is [id]</span>")
+			to_chat(user, "<span class='notice'>The new ID of \the [src] is '[id]'.</span>")
 			return TRUE
 	. = ..()
 
@@ -636,6 +637,7 @@
 	icon_state = "light0"
 	desc = "A remote control switch for polarized windows."
 	var/range = 7
+	circuit = /obj/item/weapon/circuitboard/electrochromic
 
 /obj/machinery/button/windowtint/attack_hand(mob/user as mob)
 	if(..())
@@ -664,17 +666,21 @@
 	icon_state = "light[active]"
 
 /obj/machinery/button/windowtint/attackby(obj/item/W as obj, mob/user as mob)
-	if(istype(W, /obj/item/device/multitool))
+	if(default_deconstruction_screwdriver(user, W))
+		return
+	else if(alarm_deconstruction_wirecutters(user, W))
+		return
+	else if(istype(W, /obj/item/device/multitool))
 		var/obj/item/device/multitool/MT = W
 		if(!id)
 			// If no ID is set yet (newly built button?) let them select an ID for first-time use!
 			var/t = sanitizeSafe(tgui_input_text(user, "Enter an ID for \the [src].", src.name, null, MAX_NAME_LEN), MAX_NAME_LEN)
-			if (t && user.get_active_hand() != W && in_range(src, user))
+			if (t && in_range(src, user))
 				src.id = t
-				to_chat(user, "<span class='notice'>The new ID of \the [src] is [id]</span>")
+				to_chat(user, "<span class='notice'>The new ID of \the [src] is '[id]'. To reset this, rebuild the control.</span>")
 		if(id)
 			// It already has an ID (or they just set one), buffer it for copying to windows.
-			to_chat(user, "<span class='notice'>You store \the [src] in \the [MT]'s buffer!</span>")
+			to_chat(user, "<span class='notice'>You store \the [src] ID ('[id]') in \the [MT]'s buffer!</span>")
 			MT.connectable = src
 			MT.update_icon()
 		return TRUE

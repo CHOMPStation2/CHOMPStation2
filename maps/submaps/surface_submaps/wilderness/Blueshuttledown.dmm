@@ -939,6 +939,11 @@
 	},
 /turf/simulated/floor/tiled/red,
 /area/submap/Blackshuttledown)
+"oi" = (
+/obj/effect/alien/weeds,
+/obj/effect/map_helper/no_phaseshift,
+/turf/simulated/floor/tiled/steel,
+/area/submap/Blackshuttledown)
 "so" = (
 /obj/structure/table/steel,
 /obj/random/toolbox,
@@ -1604,7 +1609,7 @@ aR
 bh
 bI
 ct
-ct
+oi
 bI
 bF
 aR

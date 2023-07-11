@@ -29,21 +29,24 @@
 		check_antagonists()
 		return
 
-	if(href_list["ahelp"])
+	// CHOMPedit Start - Tickets System
+	if(href_list["ticket"])
 		if(!check_rights(R_ADMIN|R_MOD|R_DEBUG|R_EVENT))
 			return
 
-		var/ahelp_ref = href_list["ahelp"]
-		var/datum/admin_help/AH = locate(ahelp_ref)
-		if(AH)
-			AH.Action(href_list["ahelp_action"])
+		var/ticket_ref = href_list["ticket"]
+		var/datum/ticket/T = locate(ticket_ref)
+		if(T)
+			T.Action(href_list["ticket_action"])
 		else
-			to_chat(usr, "Ticket [ahelp_ref] has been deleted!")
+			to_chat(usr, "Ticket [ticket_ref] has been deleted!")
 
-	else if(href_list["ahelp_tickets"])
-		GLOB.ahelp_tickets.BrowseTickets(text2num(href_list["ahelp_tickets"]))
+	else if(href_list["tickets"])
+		GLOB.tickets.BrowseTickets(text2num(href_list["tickets"]))
 
-	mentor_commands(href, href_list, src)
+	// CHOMPedit End
+
+	// mentor_commands(href, href_list, src) // CHOMPedit - Skip this because client is already admin & contents already handled of code above
 
 	if(href_list["dbsearchckey"] || href_list["dbsearchadmin"])
 
@@ -166,7 +169,7 @@
 			if(admin_ranks.len)
 				new_rank = tgui_input_list(usr, "Please select a rank", "New rank", (admin_ranks|"*New Rank*"))
 			else
-				new_rank = tgui_input_list(usr, "Please select a rank", "New rank", list("Game Master","Head Admin","Game Admin", "Trial Admin", "Admin Observer","Moderator","Mentor","Badmin","Retired Admin","Event Manager","Developer","DevMod","*New Rank*")) //CHOMP Edit bandaid fix to assigning titles because we're having some funky database issues, I think. Other option is to manually edit database entry for someone's title. 
+				new_rank = tgui_input_list(usr, "Please select a rank", "New rank", list("Game Master","Head Admin","Game Admin", "Trial Admin", "Admin Observer","Moderator","Mentor","Badmin","Retired Admin","Event Manager","Developer","DevMod","*New Rank*")) //CHOMP Edit bandaid fix to assigning titles because we're having some funky database issues, I think. Other option is to manually edit database entry for someone's title.
 
 			var/rights = 0
 			if(D)
@@ -935,10 +938,12 @@
 					to_chat(M, "<span class='filter_system warning'>No ban appeals URL has been set.</span>")
 				log_admin("[usr.client.ckey] has banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes.")
 				message_admins("<font color='blue'>[usr.client.ckey] has banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes.</font>")
-				var/datum/admin_help/AH = M.client ? M.client.current_ticket : null
-				if(AH)
-					AH.Resolve()
+				// CHOMPedit Start - Tickets System
+				var/datum/ticket/T = M.client ? M.client.current_ticket : null
+				if(T)
+					T.Resolve()
 				qdel(M.client)
+				// CHOMPedit End
 				//qdel(M)	// See no reason why to delete mob. Important stuff can be lost. And ban can be lifted before round ends.
 			if("No")
 				if(!check_rights(R_BAN))   return
@@ -963,9 +968,11 @@
 				message_admins("<font color='blue'>[usr.client.ckey] has banned [M.ckey].\nReason: [reason]\nThis is a permanent ban.</font>")
 				feedback_inc("ban_perma",1)
 				DB_ban_record(BANTYPE_PERMA, M, -1, reason)
-				var/datum/admin_help/AH = M.client ? M.client.current_ticket : null
-				if(AH)
-					AH.Resolve()
+				// CHOMPedit Start - Tickets System
+				var/datum/ticket/T = M.client ? M.client.current_ticket : null
+				if(T)
+					T.Resolve()
+				// CHOMPedit End
 				qdel(M.client)
 				//qdel(M)
 			if("Cancel")
