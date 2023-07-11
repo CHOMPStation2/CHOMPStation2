@@ -896,6 +896,11 @@ z
 	name = "\improper First-Aid Station"
 	icon_state = "medbay2"
 
+//CHOMPedit begin 7/9/23, adds chem distillery
+/area/medical/distillery
+	name ="\improper Chemistry Distillery"
+	icon_state = "chem"
+//CHOMPedit end
 /area/medical/first_aid_station/firstdeck/
 	name = "\improper First Deck First-Aid Station"
 
