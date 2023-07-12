@@ -74,11 +74,11 @@ only use the hollow_point and armor_penetration values.*/
 	velocity = 360
 
 /obj/item/projectile/bullet/a57
-	fire_sound = 'sound/weapons/ballistics/a57.ogg'
+	fire_sound = 'modular_chomp/sound/weapons/ballistics/smg_heavy.ogg'
 	diam = 5.7
 	grains = 31
 	velocity = 716
-	damage = 15
+	damage = 10
 	armor_penetration = 15	//Unfortunately my penetration code doesn't recognize the glory of 5.7x28 FN, so we must show it the wae.
 	hud_state = "smg_light"
 
@@ -86,11 +86,13 @@ only use the hollow_point and armor_penetration values.*/
 	grains = 23
 	energy_add = 312.75
 	velocity = 850
+	damage = 15
 	armor_penetration = 25		//Also, no, this isn't as high as it looks because of the formulas I was using. This would have around a 35% chance of piercing combat armor(50 bullet armor)
 	hud_state = "smg_ap"
 
 /obj/item/projectile/bullet/a57/hp
 	hollow_point = TRUE
+	damage = 15
 	armor_penetration = -10
 	hud_state = "smg"
 
