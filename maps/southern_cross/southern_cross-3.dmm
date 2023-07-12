@@ -12506,7 +12506,7 @@
 	desc = "Used for watching the Particle Accelerator chamber.";
 	layer = 4;
 	name = "Particle Accelerator Chamber Telescreen";
-	network = list("PA Room");
+	network = list("PA  Room");
 	pixel_y = 36
 	},
 /turf/simulated/floor/tiled/dark,
@@ -13014,7 +13014,7 @@
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Particle Accelerator 3";
 	dir = 1;
-	network = list("Research","PA Room")
+	network = list("Research","PA  Room")
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/research/particleaccelerator)
@@ -13658,7 +13658,7 @@
 /obj/machinery/computer/general_air_control{
 	frequency = 1491;
 	name = "PA Chamber Monitor";
-	sensors = list("pa_room"="Particle Accelerator Chamber")
+	sensors = list("pa_room"="Particle  Accelerator  Chamber")
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
 	color = "#0000ff"
@@ -17493,6 +17493,11 @@
 /obj/effect/floor_decal/borderfloor,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftstarboardcentral)
+"pRR" = (
+/obj/structure/grille,
+/obj/structure/lattice,
+/turf/space,
+/area/space)
 "pTi" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -17730,7 +17735,7 @@
 	desc = "Used for watching the Particle Accelerator chamber.";
 	layer = 4;
 	name = "Particle Accelerator Chamber Telescreen";
-	network = list("PA Room");
+	network = list("PA  Room");
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/dark,
@@ -19023,7 +19028,7 @@
 	dir = 8;
 	frequency = 1491;
 	name = "PA Chamber Monitor";
-	sensors = list("pa_room"="Particle Accelerator Chamber")
+	sensors = list("pa_room"="Particle  Accelerator  Chamber")
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/particleaccelerator)
@@ -77320,10 +77325,10 @@ apc
 apc
 apc
 aqj
-apc
-apc
-apc
-apc
+jhg
+jhg
+jhg
+jhg
 aqj
 apc
 apc
@@ -77578,10 +77583,10 @@ apc
 apc
 apc
 aqj
-apc
-apc
-apc
-apc
+jhg
+jhg
+jhg
+jhg
 aqj
 apc
 apc
@@ -77838,10 +77843,10 @@ apc
 aqj
 apc
 apc
-epg
-epg
-epg
-epg
+apc
+apc
+aqj
+pRR
 aqj
 htn
 apc
@@ -78092,13 +78097,13 @@ jhg
 jhg
 apc
 apc
-htn
-htn
-tHb
-epg
-epg
+apc
+aqj
 apc
 apc
+apc
+apc
+aqj
 apc
 apc
 apc
@@ -78351,12 +78356,12 @@ aqj
 apc
 apc
 apc
+aqj
 apc
 apc
-apc
-apc
-apc
-apc
+epg
+epg
+epg
 apc
 apc
 apc
@@ -78608,11 +78613,11 @@ apc
 aqj
 apc
 apc
-apc
-apc
-apc
-apc
-apc
+aqj
+aqj
+tHb
+epg
+epg
 apc
 apc
 apc
@@ -78865,7 +78870,7 @@ apc
 apc
 aqj
 apc
-aqj
+apc
 apc
 apc
 apc

@@ -442,7 +442,7 @@
 "aaL" = (
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Toxins Test Chamber Fore";
-	network = list("Research","Toxins                                                                                                                                Test                                                                                                                                Area")
+	network = list("Research","Toxins                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Test                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Area")
 	},
 /turf/simulated/floor/tiled/airless,
 /area/rnd/test_area)
@@ -3075,7 +3075,7 @@
 /obj/machinery/computer/general_air_control{
 	frequency = 1445;
 	name = "Engine Exhaust Monitoring";
-	sensors = list("engine_exhaust_sensor"="Engine                                                                                                                                Exhaust                                                                                                                                Sensor")
+	sensors = list("engine_exhaust_sensor"="Engine                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Exhaust                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Sensor")
 	},
 /turf/simulated/floor,
 /area/engineering/engine_waste)
@@ -5829,7 +5829,7 @@
 /obj/machinery/computer/general_air_control{
 	frequency = 1441;
 	name = "Tank Monitor";
-	sensors = list("n2_sensor"="Nitrogen","o2_sensor"="Oxygen","co2_sensor"="Carbon                                                                                                                                Dioxide","tox_sensor"="Toxins","n2o_sensor"="Nitrous                                                                                                                                Oxide","waste_sensor"="Gas                                                                                                                                Mix                                                                                                                                Tank")
+	sensors = list("n2_sensor"="Nitrogen","o2_sensor"="Oxygen","co2_sensor"="Carbon                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Dioxide","tox_sensor"="Toxins","n2o_sensor"="Nitrous                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Oxide","waste_sensor"="Gas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Mix                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Tank")
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/monitoring)
@@ -5844,7 +5844,7 @@
 	frequency = 1443;
 	level = 3;
 	name = "Distribution and Waste Monitor";
-	sensors = list("mair_in_meter"="Mixed                                                                                                                                Air                                                                                                                                In","air_sensor"="Mixed                                                                                                                                Air                                                                                                                                Supply                                                                                                                                Tank","mair_out_meter"="Mixed                                                                                                                                Air                                                                                                                                Out","dloop_atm_meter"="Distribution                                                                                                                                Loop","wloop_atm_meter"="Engine                                                                                                                                Waste")
+	sensors = list("mair_in_meter"="Mixed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Air                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                In","air_sensor"="Mixed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Air                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Supply                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Tank","mair_out_meter"="Mixed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Air                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Out","dloop_atm_meter"="Distribution                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Loop","wloop_atm_meter"="Engine                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Waste")
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/monitoring)
@@ -8838,7 +8838,7 @@
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Toxins Test Chamber Port";
 	dir = 4;
-	network = list("Research","Toxins                                                                                                                                Test                                                                                                                                Area")
+	network = list("Research","Toxins                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Test                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Area")
 	},
 /turf/simulated/floor/tiled/airless,
 /area/rnd/test_area)
@@ -9059,7 +9059,7 @@
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Toxins Test Chamber Starboard";
 	dir = 8;
-	network = list("Research","Toxins                                                                                                                                Test                                                                                                                                Area")
+	network = list("Research","Toxins                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Test                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Area")
 	},
 /turf/simulated/floor/tiled/airless,
 /area/rnd/test_area)
@@ -17151,7 +17151,7 @@
 	input_tag = "cooling_in";
 	name = "Engine Cooling Control";
 	output_tag = "cooling_out";
-	sensors = list("engine_sensor"="Engine                                                                                                                                Core")
+	sensors = list("engine_sensor"="Engine                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Core")
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/engine_monitoring)
@@ -34123,12 +34123,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
-/obj/effect/floor_decal/borderfloorwhite/corner,
-/obj/effect/floor_decal/corner/paleblue/bordercorner,
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/effect/floor_decal/borderfloorwhite,
+/obj/effect/floor_decal/corner/paleblue/border,
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
 "cdk" = (
@@ -41112,7 +41112,7 @@
 	desc = "Used for watching the test chamber.";
 	layer = 4;
 	name = "Test Chamber Telescreen";
-	network = list("Toxins                                                                                                                                Test                                                                                                                                Area");
+	network = list("Toxins                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Test                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Area");
 	pixel_y = 32
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -41140,7 +41140,7 @@
 	desc = "Used for watching the test chamber.";
 	layer = 4;
 	name = "Test Chamber Telescreen";
-	network = list("Toxins                                                                                                                                Test                                                                                                                                Area");
+	network = list("Toxins                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Test                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Area");
 	pixel_y = 32
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -41170,7 +41170,7 @@
 	desc = "Used for watching the test chamber.";
 	layer = 4;
 	name = "Test Chamber Telescreen";
-	network = list("Toxins                                                                                                                                Test                                                                                                                                Area");
+	network = list("Toxins                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Test                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Area");
 	pixel_y = 32
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -43553,7 +43553,7 @@
 /obj/machinery/computer/security/telescreen{
 	desc = "Used for watching the RD's goons from the safety of his office.";
 	name = "Research Monitor";
-	network = list("Research","Toxins                                                                                                                                Test                                                                                                                                Area","Robots","Anomaly                                                                                                                                Isolation","Research                                                                                                                                Outpost");
+	network = list("Research","Toxins                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Test                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Area","Robots","Anomaly                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Isolation","Research                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Outpost");
 	pixel_x = 32;
 	pixel_y = -4
 	},
@@ -44197,25 +44197,15 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "cVI" = (
-/obj/effect/floor_decal/steeldecal/steel_decals4,
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 10
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/effect/floor_decal/borderfloorwhite/corner{
+	dir = 8
 	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 5
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
+/obj/effect/floor_decal/corner/paleblue/bordercorner{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/ward)
+/area/medical/patient_wing)
 "cWi" = (
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -44442,7 +44432,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/freezer,
+/turf/simulated/floor/tiled/dark,
 /area/medical/surgery_storage)
 "dfc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -44815,7 +44805,7 @@
 	},
 /obj/item/weapon/storage/box/rxglasses,
 /obj/item/weapon/cane,
-/turf/simulated/floor/tiled/freezer,
+/turf/simulated/floor/tiled/dark,
 /area/medical/surgery_storage)
 "dtI" = (
 /obj/structure/closet/emcloset,
@@ -45529,7 +45519,7 @@
 /area/maintenance/bar)
 "dPW" = (
 /obj/machinery/iv_drip,
-/turf/simulated/floor/tiled/freezer,
+/turf/simulated/floor/tiled/dark,
 /area/medical/surgery_storage)
 "dQc" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -47333,10 +47323,6 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals4,
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 10
-	},
 /obj/structure/cable/green{
 	d1 = 2;
 	d2 = 8;
@@ -47554,7 +47540,7 @@
 "eSw" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_medical{
-	name = "Chemistry Laboratory";
+	name = "Medbay Equipment";
 	req_access = list(33)
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -47973,6 +47959,9 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 1
 	},
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
 "ffB" = (
@@ -48017,19 +48006,19 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cargo)
 "fgL" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/structure/cable/green{
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
 /obj/effect/floor_decal/borderfloorwhite/corner{
-	dir = 4
+	dir = 1
 	},
 /obj/effect/floor_decal/corner/paleblue/bordercorner{
-	dir = 4
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
@@ -48466,15 +48455,15 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/D3)
 "fsC" = (
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 9
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 4
-	},
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Patient Hallway Starboard";
 	dir = 8
+	},
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
@@ -49398,12 +49387,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/effect/floor_decal/borderfloorwhite/corner{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/paleblue/bordercorner{
-	dir = 8
-	},
+/obj/effect/floor_decal/borderfloorwhite/corner,
+/obj/effect/floor_decal/corner/paleblue/bordercorner,
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
 "fSk" = (
@@ -51217,7 +51202,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/freezer,
+/turf/simulated/floor/tiled/dark,
 /area/medical/surgery_storage)
 "gPA" = (
 /obj/structure/disposalpipe/segment{
@@ -53541,7 +53526,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/freezer,
+/turf/simulated/floor/tiled/dark,
 /area/medical/surgery_storage)
 "hXo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -55937,7 +55922,7 @@
 	dir = 4;
 	frequency = 1430;
 	name = "Mixing Chamber Monitor";
-	sensors = list("toxins_mixing_exterior"="Mixing                                                                                                                                Chamber                                                                                                                                -                                                                                                                                Exterior","toxins_mixing_interior"="Mixing                                                                                                                                Chamber                                                                                                                                -                                                                                                                                Interior")
+	sensors = list("toxins_mixing_exterior"="Mixing                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Chamber                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Exterior","toxins_mixing_interior"="Mixing                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Chamber                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Interior")
 	},
 /obj/machinery/light{
 	dir = 8
@@ -56933,7 +56918,7 @@
 /obj/machinery/light,
 /obj/structure/table/steel,
 /obj/item/device/defib_kit/loaded,
-/turf/simulated/floor/tiled/freezer,
+/turf/simulated/floor/tiled/dark,
 /area/medical/surgery_storage)
 "jPg" = (
 /obj/structure/cable{
@@ -57210,13 +57195,19 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 1
-	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloorwhite/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/paleblue/bordercorner{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
@@ -57942,7 +57933,7 @@
 	dir = 8;
 	pixel_x = -24
 	},
-/turf/simulated/floor/tiled/freezer,
+/turf/simulated/floor/tiled/dark,
 /area/medical/surgery_storage)
 "kmj" = (
 /obj/structure/cable/green,
@@ -59243,7 +59234,7 @@
 /obj/machinery/computer/security/telescreen{
 	desc = "Used to monitor the proceedings inside the test chamber.";
 	name = "Test Chamber Monitor";
-	network = list("Miscellaneous                                                                                                                                Reseach");
+	network = list("Miscellaneous                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Reseach");
 	pixel_x = -32;
 	pixel_y = -4
 	},
@@ -59331,7 +59322,7 @@
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Miscellaneous Test Chamber";
 	dir = 8;
-	network = list("Research","Miscellaneous                                                                                                                                Reseach")
+	network = list("Research","Miscellaneous                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Reseach")
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/misc_lab)
@@ -60224,13 +60215,21 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/seconddeck/fscenter)
 "lIY" = (
-/obj/effect/floor_decal/borderfloorwhite/corner{
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 5
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/paleblue/bordercorner{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
 "lJh" = (
@@ -61077,14 +61076,14 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 1
-	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
@@ -63144,15 +63143,11 @@
 /turf/simulated/floor/grass,
 /area/hallway/primary/seconddeck/fpcenter)
 "nqY" = (
-/obj/effect/floor_decal/borderfloorwhite/corner{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/paleblue/bordercorner{
-	dir = 8
-	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/effect/floor_decal/borderfloorwhite,
+/obj/effect/floor_decal/corner/paleblue/border,
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
 "nrg" = (
@@ -64455,16 +64450,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/medbay)
 "oce" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 1
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 5
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 8
-	},
 /obj/machinery/power/apc{
 	name = "south bump";
 	pixel_y = -24
@@ -64474,6 +64459,11 @@
 	pixel_x = 11;
 	pixel_y = -24
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloorwhite,
+/obj/effect/floor_decal/corner/paleblue/border,
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
 "oct" = (
@@ -64752,7 +64742,7 @@
 /obj/structure/table/steel,
 /obj/structure/bedsheetbin,
 /obj/random/firstaid,
-/turf/simulated/floor/tiled/freezer,
+/turf/simulated/floor/tiled/dark,
 /area/medical/surgery_storage)
 "oku" = (
 /obj/structure/table/steel,
@@ -64977,6 +64967,12 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
@@ -65629,10 +65625,6 @@
 /area/medical/psych)
 "oMg" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass_medical{
-	name = "Chemistry Distillery";
-	req_access = list(5)
-	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
@@ -65640,7 +65632,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/airlock/glass_medical{
+	name = "Chemistry Distillery";
+	req_access = list(5)
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/medical/distillery)
 "oNr" = (
@@ -65694,7 +65689,7 @@
 	pixel_x = 2;
 	pixel_y = 2
 	},
-/turf/simulated/floor/tiled/freezer,
+/turf/simulated/floor/tiled/dark,
 /area/medical/surgery_storage)
 "oPJ" = (
 /obj/structure/cable{
@@ -65784,19 +65779,16 @@
 	dir = 10
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 9
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 4
 	},
 /obj/machinery/light{
 	dir = 1
 	},
 /obj/effect/floor_decal/borderfloorwhite/corner{
-	dir = 1
+	dir = 4
 	},
 /obj/effect/floor_decal/corner/paleblue/bordercorner{
-	dir = 1
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
@@ -68983,7 +68975,7 @@
 /area/hallway/secondary/entry/D3)
 "qws" = (
 /obj/structure/closet/secure_closet/medical2,
-/turf/simulated/floor/tiled/freezer,
+/turf/simulated/floor/tiled/dark,
 /area/medical/surgery_storage)
 "qwB" = (
 /obj/machinery/door/firedoor/border_only,
@@ -70763,7 +70755,7 @@
 /area/hallway/primary/seconddeck/dockhallway)
 "rEl" = (
 /obj/structure/closet/l3closet/medical,
-/turf/simulated/floor/tiled/freezer,
+/turf/simulated/floor/tiled/dark,
 /area/medical/surgery_storage)
 "rEq" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -71287,7 +71279,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/freezer,
+/turf/simulated/floor/tiled/dark,
 /area/medical/surgery_storage)
 "rTr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
@@ -71916,15 +71908,20 @@
 /turf/simulated/floor/plating,
 /area/chapel/main)
 "skp" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/effect/floor_decal/borderfloorwhite,
-/obj/effect/floor_decal/corner/paleblue/border,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 5
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
@@ -71972,10 +71969,13 @@
 /turf/simulated/floor/plating,
 /area/maintenance/locker)
 "snu" = (
-/obj/effect/floor_decal/borderfloorwhite,
-/obj/effect/floor_decal/corner/paleblue/border,
-/turf/simulated/floor/tiled/white,
-/area/medical/patient_wing)
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/glass_medical{
+	name = "Chemistry Laboratory";
+	req_access = list(33)
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/medical/distillery)
 "snD" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -74468,15 +74468,13 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/library)
 "tMo" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 1
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 9
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
@@ -74775,13 +74773,6 @@
 	id_tag = "mentaldoor";
 	name = "Mental Health";
 	req_access = list(64)
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/medical/psych)
@@ -76384,7 +76375,7 @@
 	dir = 4;
 	pixel_x = -22
 	},
-/turf/simulated/floor/tiled/freezer,
+/turf/simulated/floor/tiled/dark,
 /area/medical/surgery_storage)
 "uTA" = (
 /obj/structure/table/steel,
@@ -77479,19 +77470,14 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cargo)
 "vDT" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 5
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 8
-	},
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -30
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/effect/floor_decal/borderfloorwhite,
+/obj/effect/floor_decal/corner/paleblue/border,
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
 "vDV" = (
@@ -77687,7 +77673,7 @@
 	c_tag = "MED - Surgery Storage";
 	dir = 8
 	},
-/turf/simulated/floor/tiled/freezer,
+/turf/simulated/floor/tiled/dark,
 /area/medical/surgery_storage)
 "vIB" = (
 /obj/machinery/firealarm{
@@ -78287,6 +78273,13 @@
 /obj/random/maintenance/clean,
 /turf/simulated/floor/plating,
 /area/maintenance/bar)
+"vZW" = (
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 10
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4,
+/turf/simulated/floor/tiled/white,
+/area/medical/patient_wing)
 "wag" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -78488,7 +78481,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/freezer,
+/turf/simulated/floor/tiled/dark,
 /area/medical/surgery_storage)
 "whh" = (
 /obj/machinery/conveyor{
@@ -78658,7 +78651,7 @@
 /obj/item/weapon/tool/crowbar/red,
 /obj/item/weapon/tool/crowbar/red,
 /obj/item/weapon/storage/firstaid/surgery,
-/turf/simulated/floor/tiled/freezer,
+/turf/simulated/floor/tiled/dark,
 /area/medical/surgery_storage)
 "wls" = (
 /obj/machinery/iv_drip,
@@ -78978,9 +78971,6 @@
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Patient Hallway Port"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/effect/floor_decal/borderfloorwhite/corner{
 	dir = 1
 	},
@@ -78991,6 +78981,9 @@
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
@@ -79212,11 +79205,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 1
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 4
 	},
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 1
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 9
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
@@ -79815,25 +79808,20 @@
 /turf/simulated/floor/plating,
 /area/maintenance/medbay_fore)
 "wVM" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 10
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 1
-	},
-/obj/machinery/light{
-	dir = 1
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
@@ -81066,7 +81054,7 @@
 /turf/simulated/floor/plating,
 /area/hallway/secondary/entry/D1)
 "xDM" = (
-/turf/simulated/floor/tiled/freezer,
+/turf/simulated/floor/tiled/dark,
 /area/medical/surgery_storage)
 "xDR" = (
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -128097,7 +128085,7 @@ uHn
 rYl
 ubP
 ubP
-eSw
+snu
 rYl
 rYl
 rYl
@@ -128114,7 +128102,7 @@ bOb
 bOb
 bOb
 eMm
-cVI
+bRb
 nvr
 gPc
 uTu
@@ -128371,8 +128359,8 @@ kcc
 rOO
 jXw
 bOb
-soy
-rYP
+wVM
+vZW
 jyb
 hWO
 whb
@@ -128629,8 +128617,8 @@ dCI
 dCI
 eOl
 bOb
-ebw
-wbc
+soy
+rYP
 jyb
 okt
 rSH
@@ -128887,8 +128875,8 @@ jKM
 wer
 lnJ
 bOb
-wVM
-snu
+ebw
+wbc
 jyb
 deQ
 xDM
@@ -129662,7 +129650,7 @@ aDv
 eyb
 fZU
 gVm
-xBk
+cVI
 drJ
 wls
 lUA
@@ -129920,7 +129908,7 @@ cXd
 nYH
 tbL
 wup
-skp
+lIY
 evM
 lUC
 stG
@@ -130178,7 +130166,7 @@ aFA
 oKT
 uau
 vOR
-lIY
+xBk
 drJ
 wUp
 ojP
@@ -130694,7 +130682,7 @@ fJF
 mti
 fZU
 oqh
-xBk
+cVI
 rEb
 pOQ
 vxF
@@ -132501,9 +132489,9 @@ aaa
 aaf
 aaa
 aaa
-aag
-aag
-aag
+aaa
+aaa
+aaf
 aag
 aaf
 cuR
@@ -132755,13 +132743,13 @@ qNE
 qNE
 aaa
 aaa
-cuR
-cuR
-wWX
-aag
-aag
+aaa
+aaf
 aaa
 aaa
+aaa
+aaa
+aaf
 aaa
 aaa
 aaa
@@ -133014,12 +133002,12 @@ aaf
 aaa
 aaa
 aaa
+aaf
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
+aag
+aag
+aag
 aaa
 aaa
 aaa
@@ -133271,11 +133259,11 @@ aaa
 aaf
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+cuR
+cuR
+wWX
+aag
+aag
 aaa
 aaa
 aaa
