@@ -10,7 +10,7 @@
 		/obj/item/weapon/storage/pill_bottle/juggernog,
 		/obj/item/weapon/storage/pill_bottle/curea,
 		/obj/item/weapon/storage/pill_bottle/souldew,
-		/obj/item/weapon/storage/pill_bottle/puryfingagent)
+		/obj/item/weapon/storage/pill_bottle/puriyfingagent)
 
 /obj/item/weapon/storage/pill_bottle/neotane
 	name = "pill bottle (neo kelotane)"
@@ -115,12 +115,12 @@
 	reagents.add_reagent("souldew", 10)
 	color = reagents.get_color()
 
-/obj/item/weapon/reagent_containers/pill/puryfingagent
-	name = "Puryfing Agent (10u)"
+/obj/item/weapon/reagent_containers/pill/puriyfingagent
+	name = "Puriyfing Agent (10u)"
 	desc = "An expirmental pill."
 	icon_state = "pill2"
 
-/obj/item/weapon/reagent_containers/pill/puryfingagent/Initialize()
+/obj/item/weapon/reagent_containers/pill/puriyfingagent/Initialize()
 	. = ..()
-	reagents.add_reagent("puryfingagent", 10)
+	reagents.add_reagent("puriyfingagent", 10)
 	color = reagents.get_color()
