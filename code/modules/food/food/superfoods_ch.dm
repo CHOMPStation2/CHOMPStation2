@@ -517,3 +517,83 @@
 		else
 			user << "Hmm, doesnt seem like this layer is supposed to be added there?"
 
+
+
+// The One Pizza
+
+/obj/structure/theonepizza
+	name = "The One Pizza"
+	desc = "...it's real."
+
+	icon = 'icons/obj/food64x64.dmi'
+	icon_state = "theonepizza"
+	pixel_x = -16
+	pixel_y = -16
+
+	var/slicetime = 15 SECONDS
+
+	var/slicelist = list(/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/margherita/bigslice,
+						 /obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/pineapple/bigslice,
+						 /obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/meatpizza/bigslice,
+						 /obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/mushroompizza/bigslice,
+						 /obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/vegetablepizza/bigslice)
+
+/obj/structure/theonepizza/attackby(var/obj/item/weapon/W, var/mob/living/user)
+	if(istype(W,/obj/item/weapon/material/knife))
+		user.visible_message("<b>\The [user]</b> starts to slowly cut through The One Pizza.", "<span class='notice'>You start to slowly cut through The One Pizza.</span>")
+		if(do_after(user, slicetime, exclusive = TASK_USER_EXCLUSIVE))
+			if(!src)
+				return		// We got disappeared already
+			user.visible_message("<b>\The [user]</b> successfully cuts The One Pizza.", "<span class='notice'>You successfully cut The One Pizza.</span>")
+			for(var/slicetype in slicelist)
+				new slicetype(src.loc)
+			qdel(src)
+
+/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/margherita/bigslice
+	name = "Giant Margherita slice"
+	desc = "Big enough to be a sign at a pizzeria."
+	icon_state = "big_cheese_slice"
+
+/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/pineapple/bigslice
+	name = "Giant ham & pineapple pizza slice"
+	desc = "This thing probably constitutes an italian warcrime."
+	icon_state = "big_pineapple_slice"
+
+/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/meatpizza/bigslice
+	name = "Giant meatpizza slice"
+	desc = "A Meat Feast fit for a king."
+	icon_state = "big_meat_slice"
+
+/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/mushroompizza/bigslice
+	name = "Giant mushroompizza slice"
+	desc = "Practically a honey mushroom at this scale."
+	icon_state = "big_mushroom_slice"
+
+/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/vegetablepizza/bigslice
+	name = "Giant vegetable pizza slice"
+	desc = "So healthy it'll give you a heart attack."
+	icon_state = "big_veggie_slice"
+
+/datum/recipe/theonepizza
+	fruit = list("tomato" = 5, "mushroom" = 5, "eggplant" = 1, "carrot" = 1, "corn" = 1)
+	items = list(
+		/obj/item/weapon/reagent_containers/food/snacks/sliceable/flatdough,
+		/obj/item/weapon/reagent_containers/food/snacks/sliceable/flatdough,
+		/obj/item/weapon/reagent_containers/food/snacks/sliceable/flatdough,
+		/obj/item/weapon/reagent_containers/food/snacks/sliceable/flatdough,
+		/obj/item/weapon/reagent_containers/food/snacks/sliceable/flatdough,
+		/obj/item/weapon/reagent_containers/food/snacks/cheesewedge,
+		/obj/item/weapon/reagent_containers/food/snacks/cheesewedge,
+		/obj/item/weapon/reagent_containers/food/snacks/cheesewedge,
+		/obj/item/weapon/reagent_containers/food/snacks/cheesewedge,
+		/obj/item/weapon/reagent_containers/food/snacks/cheesewedge,
+		/obj/item/weapon/reagent_containers/food/snacks/cheesewedge,
+		/obj/item/weapon/reagent_containers/food/snacks/cheesewedge,
+		/obj/item/weapon/reagent_containers/food/snacks/cheesewedge,
+		/obj/item/weapon/reagent_containers/food/snacks/meat,
+		/obj/item/weapon/reagent_containers/food/snacks/meat,
+		/obj/item/weapon/reagent_containers/food/snacks/meat,
+		/obj/item/weapon/reagent_containers/food/snacks/pineapple_ring,
+		/obj/item/weapon/reagent_containers/food/snacks/pineapple_ring
+	)
+	result = /obj/structure/theonepizza
