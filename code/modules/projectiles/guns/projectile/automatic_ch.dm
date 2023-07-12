@@ -39,8 +39,8 @@
 	allowed_magazines = list(/obj/item/ammo_magazine/a57p90) // What kind of magazine(s) it can load.
 
 	firemodes = list(
-		list(mode_name="semi-automatic", burst=1, fire_delay=0),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0))
+		list(mode_name="semi-automatic", burst=1, fire_delay=0, move_delay=0),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, burst_delay=1, move_delay=0, burst_accuracy=list(0,-15,-20), dispersion=list(0.0, 1.0, 1.5))
 		)
 
 /obj/item/weapon/gun/projectile/automatic/p90/update_icon() // Code for visually updating the item depending on current magazine capacity.
