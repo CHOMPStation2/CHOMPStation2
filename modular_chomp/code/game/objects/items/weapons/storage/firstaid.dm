@@ -48,10 +48,10 @@
 	starts_with = list(/obj/item/weapon/reagent_containers/pill/souldew = 7)
 	wrapper_color = COLOR_GREEN
 
-/obj/item/weapon/storage/pill_bottle/puryfingagent
-	name = "pill bottle (puryfing agent)"
+/obj/item/weapon/storage/pill_bottle/puriyfingagent
+	name = "pill bottle (puriyfing agent)"
 	desc = "Contains experimental pills."
-	starts_with = list(/obj/item/weapon/reagent_containers/pill/puryfingagent = 7)
+	starts_with = list(/obj/item/weapon/reagent_containers/pill/puriyfingagent = 7)
 	wrapper_color = COLOR_GREEN
 
 //Pills
