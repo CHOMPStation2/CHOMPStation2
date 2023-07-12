@@ -4247,10 +4247,6 @@
 /area/shuttle/transport1/centcom)
 "dsR" = (
 /obj/structure/table/rack,
-/obj/item/ammo_magazine/m9mmp90,
-/obj/item/ammo_magazine/m9mmp90,
-/obj/item/ammo_magazine/m9mmp90,
-/obj/item/ammo_magazine/m9mmp90,
 /obj/item/weapon/gun/projectile/automatic/p90,
 /obj/item/weapon/gun/projectile/automatic/p90,
 /turf/unsimulated/floor{
