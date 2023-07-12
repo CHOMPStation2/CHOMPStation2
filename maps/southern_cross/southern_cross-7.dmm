@@ -5665,12 +5665,6 @@
 /obj/structure/window/plastitanium{
 	dir = 4
 	},
-/obj/item/ammo_magazine/m9mmp90,
-/obj/item/ammo_magazine/m9mmp90,
-/obj/item/ammo_magazine/m9mmp90,
-/obj/item/ammo_magazine/m9mmp90,
-/obj/item/ammo_magazine/m9mmp90,
-/obj/item/ammo_magazine/m9mmp90,
 /obj/item/weapon/cell/device/weapon,
 /obj/item/weapon/cell/device/weapon,
 /obj/item/weapon/cell/device/weapon,
@@ -31588,9 +31582,6 @@
 /obj/structure/window/plastitanium{
 	dir = 4
 	},
-/obj/item/weapon/gun/projectile/automatic/p90,
-/obj/item/weapon/gun/projectile/automatic/p90,
-/obj/item/weapon/gun/projectile/automatic/p90,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
