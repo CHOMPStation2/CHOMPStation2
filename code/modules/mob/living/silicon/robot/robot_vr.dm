@@ -190,9 +190,9 @@
 		else if(icontype == "Cat" || icontype == "Cat Mining" || icontype == "Cat Cargo") // CHOMPEdit
 			icon = 'modular_chomp/icons/mob/catborg/catborg.dmi'
 		else if(icontype == "Raptor V-4" || icontype == "Raptor V-4000") //Added for raptor sprites
-			icon = 'icons/mob/raptorborg/raptor.dmi'
+			icon = 'modular_chomp/icons/mob/raptorborg/raptor.dmi' //CHOMPEDIT: moving to modular so i can fix all the things
 		else if(icontype == "Raptor V-4.1") //CHOMPADDITION: letting us redurect to our raptor dmi
-			icon = 'modular_chomp/icons/mob/raptor_ch.dmi' //CHOMPADDITION: letting us redurect to our raptor dmi
+			icon = 'modular_chomp/icons/mob/raptorborg/raptor_ch.dmi' //CHOMPADDITION: letting us redurect to our raptor dmi
 		else
 			icon = wideborg_dept
 		return

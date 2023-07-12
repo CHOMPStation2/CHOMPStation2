@@ -1,3 +1,10 @@
+/*
+
+CHOMPedit - This file has been excluded from the compilation.
+Reason: Replaced with "Tickets System". Main logic has been moved to: modular_chomp/modules/tickets/tickets.dm
+
+*/
+
 /client/var/datum/admin_help/current_ticket	//the current ticket the (usually) not-admin client is dealing with
 
 //CHOMPEdit Begin

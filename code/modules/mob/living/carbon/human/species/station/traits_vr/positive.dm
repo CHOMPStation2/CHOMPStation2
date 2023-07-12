@@ -7,7 +7,7 @@
 	cost = 4 //CHOMPEdit
 	var_changes = list("slowdown" = -0.5)
 	excludes = list(/datum/trait/positive/hardy,/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy_plus,/datum/trait/positive/speed_fast_minor)
-	
+
 
 /datum/trait/positive/hardy
 	name = "Hardy"
@@ -45,7 +45,7 @@
 	desc = "Decreases your susceptibility to electric shocks by 50%." //CHOMP Edit - GRAMMAR PLS.
 	cost = 3 //Let us not forget this effects tasers!
 	var_changes = list("siemens_coefficient" = 0.5) //CHOMP Edit
-	
+
 /*   //Chompedit, moving to Positive_ch.dm so it wont be messed with from upstream
 /datum/trait/positive/darksight
 	name = "Darksight"
@@ -58,7 +58,7 @@
 	desc = "Allows you to see in the dark for almost the whole screen and 20% more susceptible to flashes." //CHOMP Edit
 	cost = 2
 	var_changes = list("darksight" = 6)  //CHOMP Edit
-*/ 
+*/
 /datum/trait/positive/melee_attack
 	name = "Special Attack: Sharp Melee" // Trait Organization for easier browsing. TODO: Proper categorization of 'health/ability/resist/etc'
 	desc = "Provides sharp melee attacks that do slightly more damage."
@@ -102,7 +102,7 @@
 	cost = 2 //CHOMP Edit
 	var_changes = list("burn_mod" = 0.8) //CHOMP Edit
 	//excludes = list(/datum/trait/positive/minor_brute_resist,/datum/trait/positive/brute_resist) //CHOMP disable, this is already handled in positive_ch.dm
-	
+
 
 
 /datum/trait/positive/photoresistant
@@ -130,12 +130,13 @@
 	var_changes = list("soft_landing" = TRUE)
 	custom_only = FALSE
 
+/*
 /datum/trait/positive/hardfeet
 	name = "Hard Feet"
 	desc = "Makes your nice clawed, scaled, hooved, armored, or otherwise just awfully calloused feet immune to glass shards."
 	cost = 1 //CHOMP Edit
 	var_changes = list("flags" = NO_MINOR_CUT) //Checked the flag is only used by shard stepping.
-
+*/
 
 // CHOMPEdit: This has been removed for two years, since Jan 2020, pending "review". Uncommenting as per tankiness increase PR.
 /datum/trait/positive/antiseptic_saliva
@@ -232,3 +233,55 @@
 	desc = "Your body is firm enough that small thrown items can't do anything to you."
 	cost = 1
 	var_changes = list("throwforce_absorb_threshold" = 10)
+
+
+
+
+/datum/trait/positive/wall_climber
+	name = "Climber, Amateur"
+	desc = "You can climb certain walls without tools! This is likely a personal skill you developed."
+	tutorial = "You must approach a wall and right click it and select the \
+	'climb wall' verb to climb it. You suffer from a movement delay of 1.5 with this trait.\n \
+	Your total climb time is expected to be 17.5 seconds. Tools may reduce this. \n\n \
+	This likewise allows descending walls, provided you're facing an empty space and standing on \
+	a climbable wall. To climbe like so, use the verb 'Climb Down Wall' in IC tab!"
+	cost = 1
+	custom_only = FALSE
+	banned_species = list(SPECIES_TAJ, SPECIES_VASILISSAN)	// They got unique climbing delay.
+	var_changes = list("can_climb" = TRUE)
+	excludes = list(/datum/trait/positive/wall_climber_pro, /datum/trait/positive/wall_climber_natural)
+
+/datum/trait/positive/wall_climber_natural
+	name = "Climber, Natural"
+	desc = "You can climb certain walls without tools! This is likely due to the unique anatomy of your species. CUSTOM AND XENOCHIM ONLY"
+	tutorial = "You must approach a wall and right click it and select the \
+	'climb wall' verb to climb it. You suffer from a movement delay of 1.5 with this trait.\n \
+	Your total climb time is expected to be 17.5 seconds. Tools may reduce this. \n\n \
+	This likewise allows descending walls, provided you're facing an empty space and standing on \
+	a climbable wall. To climbe like so, use the verb 'Climb Down Wall' in IC tab!"
+	cost = 0
+	custom_only = FALSE
+	var_changes = list("can_climb" = TRUE)
+	allowed_species = list(SPECIES_XENOCHIMERA, SPECIES_CUSTOM)	//So that we avoid needless bloat for xenochim
+	excludes = list(/datum/trait/positive/wall_climber_pro, /datum/trait/positive/wall_climber)
+
+/datum/trait/positive/wall_climber_pro
+	name = "Climber, Professional"
+	desc = "You can climb certain walls without tools! You are a professional rock climber at this, letting you climb almost twice as fast!"
+	tutorial = "You must approach a wall and right click it and select the \
+	'climb wall' verb to climb it. Your movement delay is just 1.25 with this trait.\n \
+	Your climb time is expected to be 9 seconds. Tools may reduce this. \n\n \
+	This likewise allows descending walls, provided you're facing an empty space and standing on \
+	a climbable wall. To climbe like so, use the verb 'Climb Down Wall' in IC tab!"
+	cost = 2
+	custom_only = FALSE
+	var_changes = list("climbing_delay" = 1.25)
+	varchange_type = TRAIT_VARCHANGE_LESS_BETTER
+	excludes = list(/datum/trait/positive/wall_climber,/datum/trait/positive/wall_climber_natural)
+
+// This feels jank, but it's the cleanest way I could do TRAIT_VARCHANGE_LESS_BETTER while having a boolean var change
+// Alternate would've been banned_species = list(SPECIES_TAJ, SPECIES_VASSILISIAN)
+// Opted for this as it's "future proof"
+/datum/trait/positive/wall_climber_pro/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	S.can_climb = TRUE

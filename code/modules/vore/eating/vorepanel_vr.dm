@@ -8,6 +8,14 @@
 #define BELLIES_DESC_MAX 4096
 #define FLAVOR_MAX 400
 
+/* //Chomp REMOVE - Use our solution, not upstream's
+//INSERT COLORIZE-ONLY STOMACHS HERE
+var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
+														"a_synth_flesh_mono_hole",
+														"a_anim_belly",
+														"multi_layer_test_tummy")
+*/ //Chomp REMOVE End
+
 /mob/living
 	var/datum/vore_look/vorePanel
 
@@ -219,6 +227,9 @@
 			"override_min_prey_num"	= selected.override_min_prey_num,
 			//CHOMP add: vore sprite options and additional stuff
 			"belly_fullscreen_color" = selected.belly_fullscreen_color,
+			//"belly_fullscreen_color_secondary" = selected.belly_fullscreen_color_secondary, // Chomp REMOVE - use our solution, not upstream's
+			//"belly_fullscreen_color_trinary" = selected.belly_fullscreen_color_trinary, // Chomp REMOVE - use our solution, not upstream's
+			//CHOMP add: vore sprite options and additional stuff
 			"belly_fullscreen_color2" = selected.belly_fullscreen_color2,
 			"belly_fullscreen_color3" = selected.belly_fullscreen_color3,
 			"belly_fullscreen_color4" = selected.belly_fullscreen_color4,
@@ -299,10 +310,12 @@
 		selected_list["disable_hud"] = selected.disable_hud
 		selected_list["colorization_enabled"] = selected.colorization_enabled
 		selected_list["belly_fullscreen_color"] = selected.belly_fullscreen_color
-		selected_list["belly_fullscreen_color2"] = selected.belly_fullscreen_color2
-		selected_list["belly_fullscreen_color3"] = selected.belly_fullscreen_color3
-		selected_list["belly_fullscreen_color4"] = selected.belly_fullscreen_color4
-		selected_list["belly_fullscreen_alpha"] = selected.belly_fullscreen_alpha
+		//selected_list["belly_fullscreen_color_secondary"] = selected.belly_fullscreen_color_secondary // Chomp REMOVE - use our solution, not upstream's
+		//selected_list["belly_fullscreen_color_trinary"] = selected.belly_fullscreen_color_trinary // Chomp REMOVE - use our solution, not upstream's
+		selected_list["belly_fullscreen_color2"] = selected.belly_fullscreen_color2 //CHOMPAdd
+		selected_list["belly_fullscreen_color3"] = selected.belly_fullscreen_color3 //CHOMPAdd
+		selected_list["belly_fullscreen_color4"] = selected.belly_fullscreen_color4 //CHOMPAdd
+		selected_list["belly_fullscreen_alpha"] = selected.belly_fullscreen_alpha //CHOMPAdd
 
 		if(selected.colorization_enabled)
 			selected_list["possible_fullscreens"] = icon_states('modular_chomp/icons/mob/screen_full_vore_ch.dmi') //Makes any icons inside of here selectable. //CHOMPedit
@@ -314,10 +327,7 @@
 			//Why? I have no flipping clue. As you can see above, vore_colorized is included in the assets but isn't working. It makes no sense.
 			//I can only imagine this is a BYOND/TGUI issue with the cache. If you can figure out how to fix this and make it so you only need to
 			//include things in full_colorized_vore, that would be great. For now, this is the only workaround that I could get to work.
-			selected_list["possible_fullscreens"] -= "a_synth_flesh_mono"
-			selected_list["possible_fullscreens"] -= "a_synth_flesh_mono_hole"
-			selected_list["possible_fullscreens"] -= "a_anim_belly"
-			//INSERT COLORIZE-ONLY STOMACHS HERE
+			//selected_list["possible_fullscreens"] -= belly_colorable_only_fullscreens // Chomp REMOVE - use our solution, not upstream's
 
 		var/list/selected_contents = list()
 		for(var/O in selected)
@@ -1495,6 +1505,9 @@
 				B.vore_fx(host, TRUE)
 			else
 				host.clear_fullscreen("belly")
+				//host.clear_fullscreen("belly2") //Chomp REMOVE - use our solution, not upstream's
+				//host.clear_fullscreen("belly3") //Chomp REMOVE - use our solution, not upstream's
+				//host.clear_fullscreen("belly4") //Chomp REMOVE - use our solution, not upstream's
 			if(!host.hud_used.hud_shown)
 				host.toggle_hud_vis()
 			unsaved_changes = TRUE
@@ -2657,6 +2670,18 @@
 				host.vore_selected.belly_fullscreen_alpha = newalpha
 				host.vore_selected.update_internal_overlay()
 			. = TRUE
+		/* //Chomp REMOVE - use our solution, not upstream's
+		if("b_fullscreen_color_secondary")
+			var/newcolor = input(usr, "Choose a color.", "", host.vore_selected.belly_fullscreen_color) as color|null
+			if(newcolor)
+				host.vore_selected.belly_fullscreen_color_secondary = newcolor
+			. = TRUE
+		if("b_fullscreen_color_trinary")
+			var/newcolor = input(usr, "Choose a color.", "", host.vore_selected.belly_fullscreen_color) as color|null
+			if(newcolor)
+				host.vore_selected.belly_fullscreen_color_trinary = newcolor
+			. = TRUE
+		*/ //Chomp REMOVE - use our solution, not upstream's
 		if("b_save_digest_mode")
 			host.vore_selected.save_digest_mode = !host.vore_selected.save_digest_mode
 			. = TRUE

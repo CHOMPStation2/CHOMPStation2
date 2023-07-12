@@ -24,3 +24,32 @@
 	hitsound = 'sound/weapons/sear.ogg'
 	hud_state = "laser_overcharge"
 
+/obj/item/projectile/energy/phase
+	name = "phase wave"
+	icon_state = "phase"
+	range = 13 
+	damage = 5
+	SA_bonus_damage = 45
+	armor_penetration = -35
+	SA_vulnerability = list(SA_ANIMAL, MOB_CLASS_SYNTHETIC, MOB_CLASS_ABERRATION, MOB_CLASS_HUMANOID) //CHOMP Edit expand this list
+	hud_state = "laser_heat"
+
+/obj/item/projectile/energy/phase/light
+	range = 11
+	SA_bonus_damage = 35
+	armor_penetration = -50
+	hud_state = "laser_heat"
+
+/obj/item/projectile/energy/phase/heavy
+	range = 16 //Chompedit This range was not great
+	damage = 10
+	SA_bonus_damage = 50
+	armor_penetration = -25
+	hud_state = "laser_heat"
+
+/obj/item/projectile/energy/phase/heavy/cannon
+	range = 20 //Chompedit This range was mediocre, but not worth a cannon.
+	damage = 15
+	SA_bonus_damage = 60
+	armor_penetration = -20
+	hud_state = "laser_heat"
