@@ -4535,11 +4535,10 @@
 /obj/machinery/door/window/brigdoor/westleft{
 	name = "Ammo"
 	},
-/obj/item/ammo_magazine/m9mmp90,
-/obj/item/ammo_magazine/m9mmp90,
-/obj/item/ammo_magazine/m9mmp90,
-/obj/item/ammo_magazine/m9mmp90,
-/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/a57p90,
+/obj/item/ammo_magazine/a57p90,
+/obj/item/ammo_magazine/a57p90,
+/obj/item/ammo_magazine/a57p90,
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
 "alH" = (

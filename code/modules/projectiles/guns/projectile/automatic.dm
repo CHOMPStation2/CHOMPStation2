@@ -443,9 +443,7 @@
 		transform = transform.Translate(-16,0)
 // CHOMPEdit end: Uzi tilting
 
-/*
- * P90 (H90K)
- */
+/* CHOMPEDIT Commented out, moved to automatic_ch.dm *
 /obj/item/weapon/gun/projectile/automatic/p90
 	name = "personal defense weapon"
 	desc = "The H90K is a compact, large capacity submachine gun produced by MarsTech. Despite its fierce reputation, it still manages to feel like a toy. Uses 9mm rounds."
@@ -467,6 +465,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/p90/update_icon()
 	icon_state = "p90smg-[ammo_magazine ? round(ammo_magazine.stored_ammo.len, 6) : "empty"]"
+* CHOMPEDIT Commented out, moved to automatic_ch.dm */
 
 /*
  * Tommy Gun

@@ -1219,11 +1219,9 @@
 	. = ..()
 	transform = transform.Translate(-16,0)
 
-/obj/item/weapon/gun/projectile/automatic/p90	//Finally a gun that exists irl. oh wait fuck they decided to chamber the p90 in 9mm //Fixed bb
+/obj/item/weapon/gun/projectile/automatic/p90
 	muzzle_velocity = 715	//Guestimation. Will hopefully be able to replace with actual 5.7mm at some point. //Done
-	desc = "The H90K is a compact, large capacity submachine gun produced by MarsTech. Despite its fierce reputation, it still manages to feel like a toy. Uses 5.7x28mm rounds."
-	caliber = "5.7x28mm"
-	allowed_magazines = list(/obj/item/ammo_magazine/m9mmp90)
+	allowed_magazines = list(/obj/item/ammo_magazine/a57p90)
 
 /obj/item/weapon/gun/projectile/automatic/tommygun	//Phew, an actual gun that fires the correct cartridge.
 	auto_loading_type = OPEN_BOLT
