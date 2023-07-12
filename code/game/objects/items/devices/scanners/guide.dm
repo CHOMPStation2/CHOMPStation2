@@ -14,6 +14,8 @@
 
 /obj/item/device/healthanalyzer/proc/guide(var/mob/living/carbon/human/M, mob/living/user)
 
+/* CHOMPedit remove: Anyone can get this info. *
+
 	var/obj/item/weapon/card/id/ourid = user?.GetIdCard()
 	if(!ourid)
 		return
@@ -27,6 +29,8 @@
 		return
 	if(!ishuman(M))
 		return
+
+* CHOMPedit end. */
 
 	var/dat = ""
 
@@ -71,41 +75,43 @@
 	if(blood_volume <= M.species.blood_volume*M.species.blood_level_safe)
 		bloodloss = TRUE
 
+ //CHOMPedit start: Wording
 	if(bleeding_external)
-		dat += "<b>Surface bleeding</b> - Bandage immediately or apply brute-damage fixing chemicals (i.e. Bicaridine) if no bandages available.<br>"
+		dat += "<b>Surface Bleeding</b> - Apply bandages or administer Bicaridine.<br>"
 	if(bleeding_internal)
-		dat += "<b>Internal bleeding</b> - Commence internal vein repair surgery or apply clotting chemicals (i.e. Myelamine).<br>"
+		dat += "<b>Internal Bleeding</b> - Commence an internal vein repair operation or administer coagulants, such as Myelamine.<br>"
 	if(M.getOxyLoss())
-		dat += "<b>Suffociation</b> - Give Dexalin or Dexalin Plus. Check for heart or lung damage.<br>"
+		dat += "<b>Suffocation</b> - Administer Dexalin or Dexalin Plus. Check for heart or lung damage.<br>"
 	if(infection)
-		dat += "<b>Infection</b> - Give Spaceacillin. If severe, use Corophizine or overdose on Spaceacillin and monitor until well.<br>"
+		dat += "<b>Infection</b> - Administer Spaceacillin. If severe, use Corophizine or overdose on Spaceacillin and monitor until well.<br>"
 	if(M.getBrainLoss() >= 1)
-		dat += "<b>Brain damage</b> - Commence brain repair surgery, apply Alkysine, or universal organ-repair chemicals. (i.e. Peridaxon).<br>"
+		dat += "<b>Traumatic Brain Injury</b> - Commence brain repair surgery Administer Alkysine or universal organ-repair chemicals such as Peridaxon.<br>"
 	if(M.radiation || M.accumulated_rads)
-		dat += "<b>Radiation</b> - Give Hyronalin or Arithrazine. Monitor for genetic damage.<br>"
+		dat += "<b>Radiation Exposure</b> - Administer Hyronalin or Arithrazine. Monitor for genetic damage.<br>"
 	if(organ)
-		dat += "<b>Organ damage</b> - Give Peridaxon. Perform full body scan for targeted organ repair surgery.<br>"
+		dat += "<b>Organ Damage</b> - Administer Peridaxon. Perform a full body scan for targeted organ repair surgery.<br>"
 	if(bloodloss)
-		dat += "<b>Low blood volume</b> - Commence blood transfusion via IV drip or provide blood-restorative chemicals (i.e. Iron)."
+		dat += "<b>Low Blood Volume</b> - Commence blood transfusion via intravenous drip or provide iron supplements. Ensure the patient is well-fed."
 	if(M.getToxLoss())
-		dat += "<b>Toxins</b> - Give Dylovene or Carthatoline. Vomitting is normal and helpful. Tends to be a symptom of larger issues, such as infection.<br>"
+		dat += "<b>Toxin Buildup</b> - Inject Dylovene or Carthatoline. Monitor for damage to the liver or kidneys.<br>"
 	if(M.getBruteLoss())
-		dat += "<b>Brute trauma</b> - Bandage wounded body part. Give Bicaridine or Vermicetol.<br>"
+		dat += "<b>Physical Trauma</b> - Bandage the wounded body part. Administer Bicaridine or Vermicetol depending on the severity.<br>"
 	if(M.getFireLoss())
-		dat += "<b>Surface burn</b> - Salve wounded body part in ointment. Give Kelotane or Dermaline. Check for infections.<br>"
+		dat += "<b>Burn Wounds</b> - Salve the wounded body part in ointment. Administer Kelotane or Dermaline. Check for infections.<br>"
 	if(M.getCloneLoss())
-		dat += "<b>Genetic damage</b> - Utilize cryogenic pod with appropriate chemicals (i.e. Cryoxadone) and below 70 K, or give Rezadone.<br>"
+		dat += "<b>Genetic Damage</b> - Utilize cryogenic pod with appropriate chemicals (i.e. Cryoxadone) and below 70 K, or give Rezadone.<br>"
 	if(bone)
-		dat += "<b>Bone fracture</b> - Splint damaged area. Treat with bone repair surgery or Osteodaxon after treating brute damage.<br>"
+		dat += "<b>Bone Fracture</b> - Splint the fractured limb. Commence a bone repair operation or administer Osteodaxon after treating the physical trauma.<br>"
 	if(M.virus2.len)
-		dat += "<b>Viral infection</b> - Proceed with virology pathogen curing procedures or apply antiviral chemicals (i.e. Corophizine).<br>"
+		dat += "<b>Viral Infection</b> - Inform a Virologist or the Chief Medical Officer and administer antiviral chemicals such as Corophizine and Spaceacilin. Limit exposure to other personnel.<br>"
 	if(robotparts)
-		dat += "<b>Robotic body parts</b> - Should not be repaired by medical personnel, refer to robotics if damaged."
+		dat += "<b>Robotic Body Parts</b> - Inform the Robotics department."
 
 	var/peeb
 	if(dat)
 		peeb +="<span class='notice'><b>GUIDANCE SYSTEM BEGIN</b></span><br>"
 		peeb += dat
-		peeb += "<span class='notice'>For more detailed information about patient condition, use the stationary scanner in medbay.</span>"
+		peeb += "<span class='notice'>For more detailed information on the patient's condition, utilize a body scanner at the closest medical bay.</span>"
 
 	user.show_message(peeb, 1)
+//CHOMPedit end.

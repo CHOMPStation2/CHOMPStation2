@@ -1,23 +1,44 @@
 //Overrides
-/obj/item/ammo_magazine/m9mmp90	//congratulations you are now being converted 5.7x28mm, a.k.a the round the p90 actually uses.
-	name = "large capacity top mounted magazine (5.7x28mm standard)" //Standard boolet. Cheaper to make.
-	ammo_type = /obj/item/ammo_casing/a57
-	matter = list(MAT_STEEL = 2700)
-	caliber = "5.7x28mm"
 
-/obj/item/ammo_magazine/m9mmp90/hp
-	name = "large capacity top mounted magazine (5.7x28mm armor-piercing)"
+/*
+ * P90 MAGAZINES
+*/
+
+/obj/item/ammo_magazine/a57p90	//congratulations you are now being converted 5.7x28mm, a.k.a the round the p90 actually uses.
+	name = "\improper P90K Top-Mounted Magazine (5.7x28mm Standard)"
+	desc = "A 50-round magazine for the P90K, loaded with caseless ammunition."
+	icon_state = "p90"
+	mag_type = MAGAZINE
+	ammo_type = /obj/item/ammo_casing/a57
+	matter = list(MAT_STEEL = 2500) // Reduced from 2700 to 2500 for rounding.
+	caliber = "5.7x28mm"
+	max_ammo = 50
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/a57p90/ap
+	name = "\improper P90K Top-Mounted Magazine (5.7x28mm Armor-Piercing)"
+	desc = "A 50-round magazine for the P90K, loaded with caseless armor-piercing ammunition."
 	ammo_type = /obj/item/ammo_casing/a57/ap
 	matter = list(MAT_STEEL = 3000)
 
-/obj/item/ammo_magazine/m9mmp90/rubber
-	name = "large capacity top mounted magazine (5.7x28mm rubber)"
+/obj/item/ammo_magazine/a57p90/rubber
+	name = "\improper P90K Top-Mounted Magazine (5.7x28mm Rubber)"
+	desc = "A 50-round magazine for the P90K, loaded with less-than-lethal caseless rubber ammunition."
 	ammo_type = /obj/item/ammo_casing/a57/rubber
+	matter = list(MAT_STEEL = 2000) // Slightly cheaper.
 
-/obj/item/ammo_magazine/m9mmp90/ap
-	name = "large capacity top mounted magazine (5.7x28mm hollow-point)"
+/obj/item/ammo_magazine/a57p90/hp
+	name = "\improper P90K Top-Mounted Magazine (5.7x28mm Hollow-Point)"
+	desc = "A 50-round magazine for the P90K, loaded with caseless hollow-point ammunition."
 	ammo_type = /obj/item/ammo_casing/a57/hp
 	matter = list(MAT_STEEL = 3000)
+
+/obj/item/ammo_magazine/a57p90/empty
+	initial_ammo = 0
+
+/*
+ * PLACEHOLDER
+*/
 
 /obj/item/ammo_magazine/m762svd	//You are now being converted to 7.62x54mmR :3
 	name = "\improper SVD magazine (7.62x54mmR)"
