@@ -32,10 +32,10 @@
 	required_reagents = list("tricordrazine" = 1, "liquidlife" = 1, "sugar" = 1)
 	result_amount = 2
 
-/decl/chemical_reaction/instant/preformancepeaker
-	name = "Preforamnce Peaker"
-	id = "preformancepeaker"
-	result = "preformancepeaker"
+/decl/chemical_reaction/instant/performancepeaker
+	name = "Performance Peaker"
+	id = "performancepeaker"
+	result = "performancepeaker"
 	required_reagents = list("hyperzine" = 1, "liquidlife" = 1, "inaprovaline" = 1)
 	result_amount = 2
 
@@ -67,9 +67,9 @@
 	required_reagents = list("neoliquidfire" = 1, "glucose" = 1, "hydrogen" = 1)
 	result_amount = 2
 
-/decl/chemical_reaction/instant/puryfingagent
-	name = "Puryfing Agent"
-	id = "puryfingagent"
+/decl/chemical_reaction/instant/puriyfingagent
+	name = "Puriyfing Agent"
+	id = "puriyfingagent"
 	result = "puryfingagent"
 	required_reagents = list("deathblood" = 1, "carthatoline" = 1, "hyronalin" = 1)
 	result_amount = 2

@@ -66,7 +66,7 @@
 //Chemist expansion
 //deathblood
 /datum/reagent/cleansingagent
-	name = "Puryfing Agent"
+	name = "Cleansing Agent"
 	id = "cleansingagent"
 	description = "An agent that purges one's body of toxins."
 	reagent_state = LIQUID
@@ -85,9 +85,9 @@
 		M.radiation = max(M.radiation - 15 * removed * M.species.chem_strength_heal, 0)
 		M.accumulated_rads = max(M.accumulated_rads - 15 * removed * M.species.chem_strength_heal, 0)
 
-/datum/reagent/puryfingagent
-	name = "Puryfing Agent"
-	id = "puryfingagent"
+/datum/reagent/purifyingagent
+	name = "Purifying Agent"
+	id = "puriyfingagent"
 	description = "An agent that purges one's body of rads and toxins."
 	reagent_state = LIQUID
 	color = "#225722"
@@ -95,7 +95,7 @@
 	overdose = REAGENTS_OVERDOSE
 	overdose_mod = 0
 
-/datum/reagent/puryfingagent/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/purifyingagent/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
 	if(alien == IS_SLIME)
 		chem_effective = 0.66
@@ -232,9 +232,9 @@
 		M.adjustToxLoss(-3 * removed * chem_effective)
 		M.add_chemical_effect(CE_PAINKILLER, -20 * M.species.chem_strength_pain)
 
-/datum/reagent/preformancepeaker
-	name = "Preformance Peaker"
-	id = "preformancepeaker"
+/datum/reagent/performancepeaker
+	name = "Performance Peaker"
+	id = "performancepeaker"
 	description = "A chemical created to bring a body to peak condition except it's highly toxic"
 	taste_description = "bitterness"
 	reagent_state = LIQUID
@@ -242,7 +242,7 @@
 	scannable = 1
 	overdose = REAGENTS_OVERDOSE * 0.5
 
-/datum/reagent/preformancepeaker/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/performancepeaker/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.add_chemical_effect(CE_SPEEDBOOST, 0.5)
 	M.AdjustParalysis(-1)
 	M.AdjustStunned(-1)
@@ -255,7 +255,7 @@
 /datum/reagent/souldew
 	name = "Soul Dew"
 	id = "souldew"
-	description = "An expirmental drug that soley works upon dead bodies"
+	description = "An expirmental drug that solely works upon dead bodies"
 	taste_description = "ash"
 	reagent_state = LIQUID
 	color = "#666699"
@@ -330,7 +330,7 @@
 /datum/reagent/modapplying/liquidangel
 	name = "Liquid Healer"
 	id = "liquidangel"
-	description = "An experimental that mimics rapid regeneration seen in squishy creatures."
+	description = "An experimental drug that mimics rapid regeneration seen in squishy creatures."
 	taste_description = "sweet"
 	reagent_state = LIQUID
 	color = "#00CCFF"
@@ -350,7 +350,7 @@
 	overdose = REAGENTS_OVERDOSE
 	affects_dead = TRUE
 
-/datum/reagent/phoneixbreath/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/phoenixbreath/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
 	if(M.stat == DEAD)
 		M.adjustOxyLoss(-3 * removed * chem_effective)
