@@ -16,7 +16,7 @@
 	projectile_type = /obj/item/projectile/energy/homing_bolt/wizard
 
 /obj/item/weapon/gun/magic/firestaff/vrwizard/fire
-	description_info = "It will burn the target along with reduce their bleeding."
+	description_info = "It will burn the target along with reducing their bleeding."
 	projectile_type = /obj/item/projectile/energy/homing_bolt/wizard/fire
 	color = "#FF0000"
 

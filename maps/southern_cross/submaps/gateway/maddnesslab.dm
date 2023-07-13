@@ -12,7 +12,7 @@
 /area/awaymission/mol/entrancetunnel
 
 /area/awaymission/mol/security
-	name = " Delta Vault"
+	name = "Delta Vault"
 
 /area/awaymission/mol/medical
 	name = "Delta Checkpoint"
@@ -27,10 +27,10 @@
 	name = "Delta Checkpoint"
 
 /area/awaymission/mol/vr/observationroom
-	name = "Vistor Procress"
+	name = "Vistor Processing"
 
 /area/awaymission/mol/vistortunnel
-	name = "Vistor Procressing"
+	name = "Vistor Processing"
 
 /area/awaymission/mol/vistortunnel/red
 	name = "Vistor Room Red"
@@ -51,7 +51,7 @@
 	name = "Vistor Purple"
 
 /area/awaymission/mol/scraptunnels
-	name = "Scapery Tunnels"
+	name = "Scrap Tunnels"
 
 /area/awaymission/mol/scraptunnels/room1
 	name = "Junk Sorting"
@@ -99,7 +99,7 @@
 	name = "Server Room"
 
 /area/awaymission/mol/securitycheckpoint
-	name = "Security Checpoint"
+	name = "Security Checkpoint"
 
 
 /obj/structure/prop/blackbox/maddnesslab
@@ -109,9 +109,9 @@
 	name = "Black Box Data - Farewell"
 	desc = {"Testing, testing.<BR>
 		Well, this is akward.<BR>
-		Lab is finnally closed.<BR>
+		Lab is finally closed.<BR>
 		Everyone but boss man is gone.<BR>
-		Which I mean dead, quite, fired, or some combination of them.<BR>
+		Which I mean dead, quit, fired, or some combination of them.<BR>
 		And well the labs are a mess, and boss man well...that strange place did things to him.<BR>
 		So, I took charge and did things. I locked boss up firmly in that sphere he so fondly likes.<BR>
 		Locked the armory and hid the switches within the chais we made.<BR>,
@@ -119,8 +119,8 @@
 		Nothing is getting out of there. Except Ashy, they're the one sane thing left. <BR>
 		Not really sure what else to do for my confession.<BR>
 		We did some really messed up stuff man, and planned on doing worse.<BR>
-		I think boss belivives themselves to be god.<BR>
-		And with that strange mecha, I don't blame them. Not sure the expirmental janus desgins I've seen<BR>
+		I think boss believes themselves to be god.<BR>
+		And with that strange mecha, I don't blame them. Not sure the experimental janus designs I've seen<BR>
 		surpass it.<BR>
 		Soo uhhh, yeah we messed up. Imma walk off aimlessly into the desert<BR>
 		Or maybe go home myself if I can bypass my own security measures<BR>

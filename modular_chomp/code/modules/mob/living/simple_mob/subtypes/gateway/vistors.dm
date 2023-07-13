@@ -26,8 +26,8 @@
 		var/armorcheck = run_armor_check(null, P.check_armour)
 		var/soakedcheck = get_armor_soak(null, P.check_armour)
 		if(!(istype(P, /obj/item/projectile/energy) || istype(P, /obj/item/projectile/beam)))
-			visible_message("<span class='danger'>The [P.name] bounces off of [src]'s sheild!</span>", \
-						"<span class='userdanger'>The [P.name] bounces off of [src]'s sheild!</span>")
+			visible_message("<span class='danger'>The [P.name] bounces off of [src]'s shield!</span>", \
+						"<span class='userdanger'>The [P.name] bounces off of [src]'s shield!</span>")
 			new /obj/item/weapon/material/shard/shrapnel(src.loc)
 			if(!(P.damage_type == BRUTE || P.damage_type == BURN))
 				projectile_dam_type = BRUTE
@@ -35,8 +35,8 @@
 			apply_damage(incoming_damage, projectile_dam_type, null, armorcheck, soakedcheck, is_sharp(P), has_edge(P), P)
 			return -1 //Doesn't reflect non-beams or non-energy projectiles. They just smack and drop with little to no effect.
 		else
-			visible_message("<span class='danger'>The [P.name] gets reflected by [src]'s sheild!</span>", \
-						"<span class='userdanger'>The [P.name] gets reflected by [src]'s sheild!</span>")
+			visible_message("<span class='danger'>The [P.name] gets reflected by [src]'s shield!</span>", \
+						"<span class='userdanger'>The [P.name] gets reflected by [src]'s shield!</span>")
 			damage_mod = rand(3,5)
 			incoming_damage = (round(P.damage / damage_mod) - (round((P.damage / damage_mod) * 0.3)))
 			if(!(P.damage_type == BRUTE || P.damage_type == BURN))

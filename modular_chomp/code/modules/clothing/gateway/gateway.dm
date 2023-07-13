@@ -1,7 +1,7 @@
 //vr section
 /obj/item/clothing/head/vrwizard
 	name = "wizard hat"
-	desc = "A pointy hat looking pixelate, 0s and 1s dancing off the fabric"
+	desc = "A pointy pixelated-looking hat, 0s and 1s dancing off the fabric"
 	icon_state = "redwizard"
 	armor = list(melee = 30, bullet = 30, laser = 65, energy = 65, bomb = 70, bio = 100, rad = 100)
 	siemens_coefficient = 0.1
@@ -14,7 +14,7 @@
 
 /obj/item/clothing/suit/vrwizard
 	name = "wizard robes"
-	desc = "A silky robe with 0s and 1s flying off the seems."
+	desc = "A silky robe with 0s and 1s flying off the seams."
 	icon_state = "redwizard"
 	armor = list(melee = 30, bullet = 30, laser = 65, energy = 65, bomb = 70, bio = 100, rad = 100)
 	siemens_coefficient = 0.1
@@ -29,7 +29,7 @@
 /obj/item/clothing/head/psy_crown/candycrown
 	name = "candy crown"
 	desc = "A crown smelling oddly sweet"
-	description_info = "It will occassional give a momentary buff to offensive capablities."
+	description_info = "It will occasionally give a momentary buff to offensive capablities."
 	icon_state = "wrathcrown"
 	cooldown_duration = 1 MINUTES // How long the cooldown should be.
 	brainloss_cost = 0
@@ -60,7 +60,7 @@
 	..()
 	if(wearer)
 		if(wearer.can_feel_pain())
-			to_chat(wearer, "<span class='danger'>You feel hungery!</span>")
+			to_chat(wearer, "<span class='danger'>You feel hungry!</span>")
 			wearer.custom_pain("Your hands feel strange",1)
 		wearer = null
 
@@ -79,8 +79,8 @@
 	wearer.nutrition = max(wearer.nutrition + 8, 0)
 
 /obj/item/clothing/suit/armor/buffvest
-	name = "camdy armor"
-	desc = "A really strange armor amde of similiar substance as the creatures near it."
+	name = "candy armor"
+	desc = "A really strange armor made of a similar substance as the creatures near it."
 	icon_state = "armor"
 	blood_overlay_type = "armor"
 	armor = list(melee = 70, bullet = 60, laser = 50, energy = 50, bomb = 0, bio = 0, rad = 0)
