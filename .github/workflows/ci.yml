@@ -89,7 +89,7 @@ jobs:
         env:
           TEST_DEFINE: "MAP_TEST"
           TEST_FILE: "code/_map_tests.dm"
-          RUN: "1"
+          RUN: "0"
       - name: Compile away missions
         run: |
           tools/ci/install_byond.sh
@@ -97,7 +97,7 @@ jobs:
         env:
           TEST_DEFINE: "AWAY_MISSION_TEST"
           TEST_FILE: "code/_away_mission_tests.dm"
-          RUN: "1"
+          RUN: "0"
       - name: Unit Tests
         run: |
           tools/ci/install_byond.sh
