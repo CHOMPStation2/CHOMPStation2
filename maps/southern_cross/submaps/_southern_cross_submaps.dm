@@ -9,18 +9,18 @@
 /// Away Missions
 /// If you're reading this and want to add a new away mission, reference /tether/submaps/_tether_submaps.dm or existing away missions for how to set it up.
 
-/*
+// This is for integration tests only.
+// Always add any new away missions/gateways/lateloaded maps that are not PoIs here.
 #if AWAY_MISSION_TEST
-#include "beach/beach.dmm"
-#include "beach/cave.dmm"
-#include "alienship/alienship.dmm"
-#include "aerostat/aerostat.dmm"
-#include "aerostat/surface.dmm"
-#include "space/debrisfield.dmm"
+#include "../overmap/planets/kara/aerostat/aerostat.dmm"
+#include "../overmap/planets/kara/northern_star/northern_star_mine.dmm"
+#include "../overmap/space/fueldepot.dmm"
+#include "gateway/BaseBlep.dmm"
+#include "gateway/maddnesslab.dmm"
+#include "gateway/snowfield.dmm"
+#include "virtual_reality/constructVR.dmm"
 #endif
-*/
 
-// Commented out until we either port or replace away missions, but this is the framework for loading each away mission.
 
 //////////////////////////////////////////////////////////////////////////////////////
 
@@ -77,6 +77,7 @@
 	z = Z_LEVEL_VR_REALM
 
 //Space submaps/sectors/POIs/whatever you wanna freaking call it, go here.
+/* Pretty sure we don't use this.
 #include "../../expedition_vr/space/_fueldepot.dm"
 /datum/map_template/sc_lateload/away_fueldepot
 	name = "Fuel Depot - Z1 Space"
@@ -87,7 +88,7 @@
 /datum/map_z_level/sc_lateload/away_fueldepot
 	name = "Away Mission - Fuel Depot"
 	z = Z_LEVEL_FUELDEPOT
-
+*/
 
 //////////////////////////////////////////////////////////////////////////////////////
 // Code Shenanigans for lateload maps
