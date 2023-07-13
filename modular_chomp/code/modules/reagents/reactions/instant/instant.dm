@@ -67,10 +67,10 @@
 	required_reagents = list("neoliquidfire" = 1, "glucose" = 1, "hydrogen" = 1)
 	result_amount = 2
 
-/decl/chemical_reaction/instant/puriyfingagent
-	name = "Puriyfing Agent"
-	id = "puriyfingagent"
-	result = "puryfingagent"
+/decl/chemical_reaction/instant/purifyingagent
+	name = "Purifying Agent"
+	id = "purifyingagent"
+	result = "purifyingagent"
 	required_reagents = list("deathblood" = 1, "carthatoline" = 1, "hyronalin" = 1)
 	result_amount = 2
 
@@ -119,9 +119,9 @@
 	required_reagents = list("bicard" = 1, "kelotane" = 1, "liquidlife" = 1, "carpotoxin" = 1, "quadcord" = 1, "cryptobiolin" = 1)
 	result_amount = 6
 
-/decl/chemical_reaction/instant/phoneixbreath
-	name = "phoneixbreath"
-	id = "phoneixbreath"
-	result = "phoneixbreath"
+/decl/chemical_reaction/instant/phoenixbreath
+	name = "phoenixbreath"
+	id = "phoenixbreath"
+	result = "phoenixbreath"
 	required_reagents = list("vermicetol" = 1, "liquidlife" = 1, "neoliquidfire" = 1, "souldew" = 1, "phoron" = 1, "dermaline" = 1)
 	result_amount = 6

@@ -87,7 +87,7 @@
 
 /datum/reagent/purifyingagent
 	name = "Purifying Agent"
-	id = "puriyfingagent"
+	id = "purifyingagent"
 	description = "An agent that purges one's body of rads and toxins."
 	reagent_state = LIQUID
 	color = "#225722"
@@ -175,7 +175,7 @@
 /datum/reagent/neotane
 	name = "Neo Kelotane"
 	id = "neotane"
-	description = "An advancment of kelotane that scars and breaks apart the users flesh to remove the burnt tissue."
+	description = "An advancement of kelotane that scars and breaks apart the user's flesh to remove the burnt tissue."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
 	color = "#FF6600"
@@ -308,7 +308,7 @@
 /datum/reagent/curea
 	name = "curea"
 	id = "curea"
-	description = "An experimental that removes many aligments, such as poison and stiffing of muscles via frost"
+	description = "An experimental that removes many ailments, such as poison and stiffening of muscles via frost"
 	taste_description = "bitterness"
 	reagent_state = LIQUID
 	color = "#660066"

@@ -10,7 +10,8 @@
 		/obj/item/weapon/storage/pill_bottle/juggernog,
 		/obj/item/weapon/storage/pill_bottle/curea,
 		/obj/item/weapon/storage/pill_bottle/souldew,
-		/obj/item/weapon/storage/pill_bottle/puriyfingagent)
+		/obj/item/weapon/storage/pill_bottle/purifyingagent)
+
 
 /obj/item/weapon/storage/pill_bottle/neotane
 	name = "pill bottle (neo kelotane)"
@@ -48,16 +49,20 @@
 	starts_with = list(/obj/item/weapon/reagent_containers/pill/souldew = 7)
 	wrapper_color = COLOR_GREEN
 
-/obj/item/weapon/storage/pill_bottle/puriyfingagent
-	name = "pill bottle (puriyfing agent)"
+/obj/item/weapon/storage/pill_bottle/purifyingagent
+
+	name = "pill bottle (purifying agent)"
+
 	desc = "Contains experimental pills."
-	starts_with = list(/obj/item/weapon/reagent_containers/pill/puriyfingagent = 7)
+	starts_with = list(/obj/item/weapon/reagent_containers/pill/purifyingagent = 7)
+
 	wrapper_color = COLOR_GREEN
 
 //Pills
 /obj/item/weapon/reagent_containers/pill/neotane
 	name = "Neo Kelotane (15u)"
-	desc = "An expirmental pill."
+	desc = "An experimental pill."
+
 	icon_state = "pill2"
 
 /obj/item/weapon/reagent_containers/pill/neotane/Initialize()
@@ -115,12 +120,15 @@
 	reagents.add_reagent("souldew", 10)
 	color = reagents.get_color()
 
-/obj/item/weapon/reagent_containers/pill/puriyfingagent
-	name = "Puriyfing Agent (10u)"
+/obj/item/weapon/reagent_containers/pill/purifyingagent
+	name = "Purifying Agent (10u)"
+
 	desc = "An expirmental pill."
 	icon_state = "pill2"
 
-/obj/item/weapon/reagent_containers/pill/puriyfingagent/Initialize()
+/obj/item/weapon/reagent_containers/pill/purifyingagent/Initialize()
+
 	. = ..()
-	reagents.add_reagent("puriyfingagent", 10)
+	reagents.add_reagent("purifyingagent", 10)
+
 	color = reagents.get_color()
