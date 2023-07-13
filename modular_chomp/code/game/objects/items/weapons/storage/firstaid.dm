@@ -72,7 +72,7 @@
 
 /obj/item/weapon/reagent_containers/pill/burncard
 	name = "Burning Bicard (10u)"
-	desc = "An expirmental pill."
+	desc = "An experimental pill."
 	icon_state = "pill2"
 
 /obj/item/weapon/reagent_containers/pill/burncard/Initialize()
@@ -82,7 +82,7 @@
 
 /obj/item/weapon/reagent_containers/pill/flamecure
 	name = "Flame Cure (5u)"
-	desc = "An expirmental pill."
+	desc = "An experimental pill."
 	icon_state = "pill2"
 
 /obj/item/weapon/reagent_containers/pill/flamecure/Initialize()
@@ -92,7 +92,7 @@
 
 /obj/item/weapon/reagent_containers/pill/juggernog
 	name = "Juggernog (5u)"
-	desc = "An expirmental pill."
+	desc = "An experimental pill."
 	icon_state = "pill2"
 
 /obj/item/weapon/reagent_containers/pill/juggernog/Initialize()
@@ -102,7 +102,7 @@
 
 /obj/item/weapon/reagent_containers/pill/curea
 	name = "Curea (10u)"
-	desc = "An expirmental pill."
+	desc = "An experimental pill."
 	icon_state = "pill2"
 
 /obj/item/weapon/reagent_containers/pill/curea/Initialize()
@@ -112,7 +112,7 @@
 
 /obj/item/weapon/reagent_containers/pill/souldew
 	name = "Souldew (10u)"
-	desc = "An expirmental pill."
+	desc = "An experimental pill."
 	icon_state = "pill2"
 
 /obj/item/weapon/reagent_containers/pill/souldew/Initialize()

@@ -255,7 +255,7 @@
 /datum/reagent/souldew
 	name = "Soul Dew"
 	id = "souldew"
-	description = "An expirmental drug that solely works upon dead bodies"
+	description = "An experimental drug that solely works upon dead bodies"
 	taste_description = "ash"
 	reagent_state = LIQUID
 	color = "#666699"
@@ -273,7 +273,7 @@
 /datum/reagent/quadcord
 	name = "quadcord"
 	id = "quadcord"
-	description = "An Experimental drug that is meant to further enhance tricord"
+	description = "An experimental drug that is meant to further enhance tricord"
 	taste_description = "bitterness"
 	reagent_state = LIQUID
 	color = "#FF3399"
