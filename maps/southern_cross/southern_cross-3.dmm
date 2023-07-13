@@ -20,7 +20,7 @@
 /area/maintenance/thirddeck/foreport)
 "aae" = (
 /obj/random/junk,
-/turf/space,
+/turf/space, 
 /area/space)
 "aaf" = (
 /obj/structure/lattice,
