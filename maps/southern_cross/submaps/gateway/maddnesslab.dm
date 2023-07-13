@@ -108,13 +108,13 @@
 /datum/category_item/catalogue/information/blackbox/maddnesslab
 	name = "Black Box Data - Farewell"
 	desc = {"Testing, testing.<BR>
-		Well, this is akward.<BR>
+		Well, this is awkward.<BR>
 		Lab is finally closed.<BR>
 		Everyone but boss man is gone.<BR>
 		Which I mean dead, quit, fired, or some combination of them.<BR>
 		And well the labs are a mess, and boss man well...that strange place did things to him.<BR>
 		So, I took charge and did things. I locked boss up firmly in that sphere he so fondly likes.<BR>
-		Locked the armory and hid the switches within the chais we made.<BR>,
+		Locked the armory and hid the switches within the chassis we made.<BR>,
 		If someone goes looky for boss, they'll need to clear up the carnage we made <BR>
 		Nothing is getting out of there. Except Ashy, they're the one sane thing left. <BR>
 		Not really sure what else to do for my confession.<BR>
