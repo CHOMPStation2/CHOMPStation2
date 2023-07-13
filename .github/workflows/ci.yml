@@ -82,22 +82,6 @@ jobs:
           sudo apt update || true
           sudo apt install zlib1g-dev:i386 libssl-dev:i386
           ldd librust_g.so
-      - name: Compile POIs
-        run: |
-          tools/ci/install_byond.sh
-          tools/ci/compile_and_run.sh
-        env:
-          TEST_DEFINE: "MAP_TEST"
-          TEST_FILE: "code/_map_tests.dm"
-          RUN: "0"
-      - name: Compile away missions
-        run: |
-          tools/ci/install_byond.sh
-          tools/ci/compile_and_run.sh
-        env:
-          TEST_DEFINE: "AWAY_MISSION_TEST"
-          TEST_FILE: "code/_away_mission_tests.dm"
-          RUN: "0"
       - name: Unit Tests
         run: |
           tools/ci/install_byond.sh
@@ -106,6 +90,22 @@ jobs:
           TEST_DEFINE: "UNIT_TEST"
           TEST_FILE: "code/_unit_tests.dm"
           RUN: "1"
+      - name: Compile away missions
+        run: |
+          tools/ci/install_byond.sh
+          tools/ci/compile_and_run.sh
+        env:
+          TEST_DEFINE: "AWAY_MISSION_TEST"
+          TEST_FILE: "code/_away_mission_tests.dm"
+          RUN: "0"
+      - name: Compile POIs
+        run: |
+          tools/ci/install_byond.sh
+          tools/ci/compile_and_run.sh
+        env:
+          TEST_DEFINE: "MAP_TEST"
+          TEST_FILE: "code/_map_tests.dm"
+          RUN: "0"
 
   tests_successful:
     name: Integration Tests
