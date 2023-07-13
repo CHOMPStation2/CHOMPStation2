@@ -519,8 +519,8 @@
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "dragon-horns"
 
-/datum/sprite_accessory/ears/zorgoia
-	name = "Zorgoia ears"
+/datum/sprite_accessory/ears/zorgoia_alt
+	name = "Zorgoia (New)"
 	desc = ""
 	icon = 'icons/mob/human_races/sprite_accessories/ears.dmi'
 	icon_state = "zorgoia"
