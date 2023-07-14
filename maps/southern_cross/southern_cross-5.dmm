@@ -2345,7 +2345,7 @@
 /obj/machinery/conveyor{
 	id = "mining_north"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/surface/outpost/mining_main/exterior)
 "eC" = (
 /obj/effect/floor_decal/borderfloor{
@@ -5409,7 +5409,7 @@
 /area/surface/outpost/security)
 "ki" = (
 /obj/effect/wingrille_spawn/reinforced,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/surface/outpost/mining_main/exterior)
 "kj" = (
 /obj/effect/floor_decal/corner/white{
@@ -13726,7 +13726,7 @@
 "zk" = (
 /obj/machinery/mineral/unloading_machine,
 /obj/structure/plasticflaps/mining,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/surface/outpost/mining_main/exterior)
 "zl" = (
 /obj/structure/bed/chair{
@@ -16364,7 +16364,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/surface/outpost/mining_main/exterior)
 "Ev" = (
 /obj/effect/floor_decal/borderfloor{
@@ -27710,7 +27710,7 @@
 	id = "mining_north"
 	},
 /obj/machinery/mineral/output,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/surface/outpost/mining_main/exterior)
 "ZP" = (
 /obj/random/technology_scanner,
