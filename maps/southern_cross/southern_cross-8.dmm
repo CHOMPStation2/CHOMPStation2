@@ -9684,7 +9684,7 @@
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_theatre)
 "iye" = (
-/turf/simulated/floor/holofloor/reinforced,
+/turf/simulated/floor/reinforced,
 /area/shadekin)
 "iyB" = (
 /obj/machinery/door/airlock{
@@ -22041,7 +22041,7 @@
 	nightshift_enabled = 1;
 	pixel_y = 10
 	},
-/turf/simulated/floor/holofloor/reinforced,
+/turf/simulated/floor/reinforced,
 /area/shadekin)
 "uvq" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -23728,7 +23728,7 @@
 /area/shadekin)
 "wbJ" = (
 /obj/structure/fans/hardlight/colorable/abductor,
-/turf/simulated/floor/holofloor/reinforced,
+/turf/simulated/floor/reinforced,
 /area/shadekin)
 "wbS" = (
 /obj/structure/table/reinforced,
