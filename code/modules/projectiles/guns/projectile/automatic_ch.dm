@@ -9,6 +9,8 @@
  * SUBMACHINE GUNS
 */
 
+// P90K
+
 /obj/item/weapon/gun/projectile/automatic/p90
 	name = "\improper P90K PDW"
 	desc = "The P90K Personal Defense Weapon is a MarsTech-assembled modernized variation of the ancient FN P90, a compact, high-capacity submachine gun of human origin. Its fierce reputation owes to its minimal recoil and ergonomic design. Chambered in 5.7x28mm caseless rounds."
@@ -40,11 +42,57 @@
 
 	firemodes = list(
 		list(mode_name="semi-automatic", burst=1, fire_delay=0, move_delay=0),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, burst_delay=1, move_delay=0, burst_accuracy=list(0,-15,-20), dispersion=list(0.0, 1.0, 1.5))
+		list(mode_name="three-round burst", burst=3, fire_delay=null, burst_delay=1, move_delay=0, burst_accuracy=list(0,-15,-20), dispersion=list(0.0, 1.0, 1.5))
 		)
 
 /obj/item/weapon/gun/projectile/automatic/p90/update_icon() // Code for visually updating the item depending on current magazine capacity.
 	icon_state = "p90smgnew-[ammo_magazine ? round(ammo_magazine.stored_ammo.len, 6) : "empty"]"
+
+// C-20R
+
+/obj/item/weapon/gun/projectile/automatic/c20r
+	name = "\improper C-20R"
+	desc = "The C-20R is a lightweight, heavy-hitting submachine gun with an infamous reputation for being the weapon of choice among mercenary outfits and insurgent cabals. It has 'Scarborough Arms - Per Falcis, Per Pravitas' inscribed on the stock. Chambered in 10mm caseless rounds."
+	description_fluff = "The C-20R is produced by Scarborough Arms, a specialist high-end weapons manufacturer based out of Titan, Sol. Scarborough has resisted numerous efforts by Trans-Stellars to acquire the brand since its founding in 2511, and has gained a dedicated following among a certain flavor of private operative."
+
+	icon = 'icons/obj/64x32guns_ch.dmi'
+	icon_expected_width = 64
+	item_icons = list(
+		slot_l_hand_str = 'modular_chomp/icons/mob/items/lefthand_guns_ch.dmi',
+		slot_r_hand_str = 'modular_chomp/icons/mob/items/righthand_guns_ch.dmi',
+		)
+	icon_state = "c20r"
+	item_state = "c20rnew"
+	wielded_item_state = "c20rnew-wielded"
+	slot_flags = SLOT_BELT|SLOT_BACK
+
+	w_class = ITEMSIZE_LARGE
+	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2, TECH_ILLEGAL = 8)
+
+	recoil = 0
+	one_handed_penalty = 30
+	auto_eject = 1
+	auto_eject_sound = 'sound/weapons/smg_empty_alarm.ogg'
+
+	caliber = "10mm"
+	ammo_type = /obj/item/ammo_casing/a10mm
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/m10mm
+	allowed_magazines = list(/obj/item/ammo_magazine/m10mm)
+
+	firemodes = list(
+		list(mode_name="semi-automatic", burst=1, fire_delay=0, move_delay=0),
+		list(mode_name="two-shot rapidfire", burst=2, fire_delay=null, burst_delay=1, move_delay=0, burst_accuracy=list(-5,-10), dispersion=list(0.5, 1.0)),
+		)
+
+/obj/item/weapon/gun/projectile/automatic/c20r/update_icon()
+	icon_state = "c20r-[ammo_magazine ? round(ammo_magazine.stored_ammo.len,4) : "empty"]"
+
+/obj/item/weapon/gun/projectile/automatic/c20r/rubber
+	magazine_type = /obj/item/ammo_magazine/m10mm/rubber
+
+/obj/item/weapon/gun/projectile/automatic/c20r/empty
+	magazine_type = null
 
 /*
  * RIFLES
