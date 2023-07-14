@@ -1,7 +1,4 @@
 //Overrides
-/obj/item/ammo_casing/a10mm
-	projectile_type = /obj/item/projectile/bullet/a10mm
-
 /obj/item/ammo_casing/a38
 	projectile_type = /obj/item/projectile/bullet/a38
 
@@ -42,9 +39,45 @@
 	projectile_type = /obj/item/projectile/bullet/pistol/rubber
 
 /*
- * PLACEHOLDER
+ * C-20R ROUNDS
 */
 
+/obj/item/ammo_casing/a10mm
+	name = "\improper 10mm cartridge"
+	desc = "A standard caseless 10mm round."
+	caliber = "10mm"
+	projectile_type = /obj/item/projectile/bullet/a10mm
+	matter = list(MAT_STEEL = 60)
+	caseless = 1
+
+/obj/item/ammo_casing/a10mm/ap
+	desc = "A caseless armor-piercing 10mm round."
+	projectile_type = /obj/item/projectile/bullet/a10mm/ap
+
+/obj/item/ammo_casing/a10mm/hp
+	desc = "A caseless hollow-point 10mm round."
+	projectile_type = /obj/item/projectile/bullet/a10mm/hp
+
+/obj/item/ammo_casing/a10mm/practice
+	desc = "A caseless practice 10mm round."
+	icon_state = "r-casing"
+	projectile_type = /obj/item/projectile/bullet/practice
+
+/obj/item/ammo_casing/a10mm/rubber
+	desc = "A caseless rubber 10mm round."
+	projectile_type = /obj/item/projectile/bullet/pistol/rubber
+	icon_state = "r-casing"
+
+/obj/item/ammo_casing/a10mm/emp
+	name = "\improper 10mm EMP cartridge"
+	desc = "A caseless, technologically advanced 10mm round with an electromagnetic payload."
+	projectile_type = /obj/item/projectile/ion/small
+	icon_state = "empcasing"
+	matter = list(MAT_STEEL = 60, MAT_URANIUM = 50)
+
+/*
+ * PLACEHOLDER
+*/
 /obj/item/ammo_casing/a762x25
 	desc = "A standard 7.62x25mm Tokarev round"
 	caliber = "7.62x25mm"
