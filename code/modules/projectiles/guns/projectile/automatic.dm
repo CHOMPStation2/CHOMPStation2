@@ -19,6 +19,7 @@
 /*
  * Advanced SMG
  */
+
 /obj/item/weapon/gun/projectile/automatic/advanced_smg
 	name = "advanced SMG"
 	desc = "An advanced submachine gun with a reflective laser optic that makes burst fire less inaccurate than other SMGs. Uses 9mm rounds."
@@ -50,6 +51,9 @@
 /*
  * C-20r
  */
+
+ /* CHOMPedit remove: Moved to automatic_ch.dm. *
+
 /obj/item/weapon/gun/projectile/automatic/c20r
 	name = "submachine gun"
 	desc = "The C-20r is a lightweight and rapid firing SMG, for when you REALLY need someone dead. It has 'Scarborough Arms - Per falcis, per pravitas', inscribed on the stock. Uses 10mm rounds."
@@ -83,6 +87,8 @@
 	else
 		icon_state = "c20r"
 	return
+
+ * CHOMPedit remove: Moved to automatic_ch.dm. */
 
 /*
  * Assault Carbine (STS-35)
