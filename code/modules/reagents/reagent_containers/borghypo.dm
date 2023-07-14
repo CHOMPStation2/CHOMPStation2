@@ -136,6 +136,7 @@
 	volume = 60
 	possible_transfer_amounts = list(5, 10, 20, 30)
 	reagent_ids = list("ale",
+		"applejuice", //CHOMPADD it has literally every other type of juice..
 		"beer",
 		"berryjuice",
 		"bitters",

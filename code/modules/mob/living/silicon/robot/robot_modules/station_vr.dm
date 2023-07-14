@@ -222,6 +222,7 @@
 	src.modules += new /obj/item/weapon/gun/energy/taser/mounted/cyborg(src) //They /are/ a security borg, after all.
 	src.modules += new /obj/item/weapon/dogborg/pounce(src) //Pounce
 	src.modules += new /obj/item/device/ticket_printer(src)
+	src.modules += new /obj/item/weapon/gripper/security(src) //CHOMPADD why doesnt the sec hound have the sec gripper?
 	src.emag 	 = new /obj/item/weapon/gun/energy/laser/mounted(src) //Emag. Not a big problem.
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500) //Starts full and has a max of 500
@@ -881,6 +882,7 @@
 	src.modules += new /obj/item/device/multitool(src) //to freeze trays
 	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
 	src.modules += new /obj/item/device/dogborg/boop_module(src)
+	src.modules += new /obj/item/device/dogborg/sleeper/compactor/brewer(src) //CHOMPAdd giving service hound at least SOMETHING for a belly
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src) //Pounce
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500) // buffy fix, was 0
@@ -1033,7 +1035,6 @@
 				) //CHOMP Edit Added Vodka Komrade
 
 /obj/item/weapon/robot_module/robot/clerical/butler/booze/New(var/mob/living/silicon/robot/R)
-	..()
 	src.modules += new /obj/item/weapon/gripper/service(src)
 	//src.modules += new /obj/item/weapon/reagent_containers/glass/bucket(src)
 	//src.modules += new /obj/item/weapon/material/minihoe(src)
@@ -1044,9 +1045,10 @@
 	src.modules += new /obj/item/weapon/material/kitchen/rollingpin(src)
 	src.modules += new /obj/item/device/multitool(src) //to freeze trays
 	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
-	src.modules += new /obj/item/weapon/tray/robotray
+	//src.modules += new /obj/item/weapon/tray/robotray //CHOMPEdit Removing duplicate
 	src.modules += new /obj/item/device/dogborg/boop_module(src)
 	src.modules += new /obj/item/device/dogborg/sleeper/compactor/brewer(src)
+	src.modules += new /obj/item/weapon/reagent_containers/glass/beaker(src)//For holding the ALCOHOL //CHOMPAdd - was removed for some reason?
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src)
 	R.verbs += /mob/living/silicon/robot/proc/reskin_booze
 
@@ -1056,12 +1058,36 @@
 
 	src.modules += new /obj/item/weapon/reagent_containers/dropper/industrial(src)
 
+
 	var/obj/item/weapon/flame/lighter/zippo/L = new /obj/item/weapon/flame/lighter/zippo(src)
 	L.lit = 1
 	src.modules += L
 
+	//CHOMPAdd - adds the tongue
+	var/datum/matter_synth/water = new /datum/matter_synth()
+	water.name = "Water reserves"
+	water.recharge_rate = 0.1 // Recharging water for plants - hehe drooly borg
+	water.max_energy = 1000
+	water.energy = 0
+	R.water_res = water
+	synths += water
+
+	var/obj/item/device/dogborg/tongue/T = new /obj/item/device/dogborg/tongue(src)
+	T.water = water
+	src.modules += T
+	//CHOMPAdd end
+
 	src.modules += new /obj/item/weapon/tray/robotray(src)
-	src.modules += new /obj/item/weapon/reagent_containers/borghypo/service(src)
+	//CHOMPEdit CHOMPAdd - gives boozehounds our specific dispenser again as well as readding their emag 'beer'
+	src.modules += new /obj/item/weapon/reagent_containers/borghypo/service/booze(src)
+	src.emag = new /obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer(src)
+
+	var/datum/reagents/N = new/datum/reagents(50)
+	src.emag.reagents = N
+	N.my_atom = src.emag
+	N.add_reagent("beer2", 50)
+	src.emag.name = "Mickey Finn's Special Brew"
+	//CHOMPAdd End
 
 	R.icon 		 = 'icons/mob/widerobot_colors_vr.dmi'
 	R.wideborg_dept = 'icons/mob/widerobot_colors_vr.dmi'
@@ -1076,7 +1102,13 @@
 	R.vore_capacity_ex = list("stomach" = 1)
 	//CHOMPEdit End
 	R.wideborg = TRUE
-	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
+	R.verbs -= /mob/living/silicon/robot/proc/ex_reserve_refill
+	//CHOMPEdit - add missing verbs
+	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
+	R.verbs |= /mob/living/proc/toggle_rider_reins
+	R.verbs |= /mob/living/proc/shred_limb
+	//R.verbs |= /mob/living/silicon/robot/proc/rest_style -- but not this one, they dont have the alt sprites
+	//CHOMPEdit End
 	..()
 
 /obj/item/weapon/robot_module/robot/clerical/butler/booze/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
