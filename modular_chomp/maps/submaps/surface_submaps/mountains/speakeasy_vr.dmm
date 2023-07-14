@@ -85,7 +85,7 @@
 /turf/simulated/floor/wood,
 /area/submap/cave/Speakeasy)
 "C" = (
-/turf/simulated/mineral/floor/cave,
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/submap/cave/Speakeasy)
 "D" = (
 /obj/structure/bed/chair/sofa/corner/black{

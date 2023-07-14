@@ -60,7 +60,11 @@
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/cave/spatial_anomaly)
 "j" = (
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/spatial_anomaly)
 "k" = (
 /obj/item/weapon/disposable_teleporter/slime,
@@ -126,7 +130,11 @@
 /area/submap/cave/spatial_anomaly)
 "s" = (
 /obj/machinery/crystal/lava,
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/spatial_anomaly)
 "t" = (
 /turf/simulated/floor/plating/external,

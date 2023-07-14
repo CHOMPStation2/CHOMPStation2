@@ -32,7 +32,11 @@
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/cave/geyser_3)
 "g" = (
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/geyser_3)
 "h" = (
 /turf/simulated/floor/outdoors/rocks/caves,
@@ -67,7 +71,11 @@
 /obj/effect/map_effect/interval/effect_emitter/smoke/fire{
 	interval_upper_bound = 1200
 	},
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/geyser_3)
 "m" = (
 /obj/structure/cliff/automatic{
