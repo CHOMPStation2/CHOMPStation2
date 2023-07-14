@@ -25,14 +25,14 @@
 	dir = 4;
 	icon_state = "heater"
 	},
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/cave/qShuttle)
 "ah" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 8;
 	icon_state = "propulsion_l"
 	},
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/cave/qShuttle)
 "ai" = (
 /obj/structure/grille,

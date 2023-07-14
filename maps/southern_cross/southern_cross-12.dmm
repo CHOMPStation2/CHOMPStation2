@@ -98,7 +98,11 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/surface/outpost/shelter/exterior)
 "dd" = (
 /obj/effect/zone_divider,
@@ -181,7 +185,11 @@
 	c_tag = "WILD - Shelter Second Floor Exterior 3";
 	dir = 8
 	},
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/surface/outpost/shelter/exterior)
 "fI" = (
 /obj/structure/flora/grass/green,
@@ -269,7 +277,11 @@
 /obj/structure/railing/grey{
 	dir = 1
 	},
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/surface/outpost/shelter/exterior)
 "hU" = (
 /obj/structure/flora/ausbushes/stalkybush,
@@ -767,7 +779,11 @@
 /obj/structure/railing/grey{
 	dir = 1
 	},
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/surface/outpost/shelter/exterior)
 "tj" = (
 /obj/effect/zone_divider,
@@ -781,7 +797,11 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/surface/outpost/shelter/exterior)
 "tp" = (
 /obj/structure/flora/rocks1,
@@ -811,7 +831,11 @@
 /obj/structure/railing/grey{
 	dir = 1
 	},
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/surface/outpost/shelter/exterior)
 "tJ" = (
 /obj/structure/flora/bboulder2,
@@ -886,7 +910,11 @@
 /obj/structure/railing/grey{
 	dir = 8
 	},
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/surface/outpost/shelter/exterior)
 "uX" = (
 /obj/structure/flora/log1,
@@ -988,7 +1016,11 @@
 	dir = 1
 	},
 /obj/effect/catwalk_plated,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/surface/outpost/shelter/exterior)
 "xG" = (
 /obj/structure/flora/ausbushes/reedbush,
@@ -1083,7 +1115,11 @@
 	dir = 1
 	},
 /obj/effect/zone_divider,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/surface/outpost/shelter/exterior)
 "Ae" = (
 /obj/structure/table/sifwooden_reinforced,
@@ -1155,7 +1191,11 @@
 /obj/machinery/light{
 	layer = 3
 	},
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/surface/outpost/shelter/exterior)
 "BC" = (
 /obj/structure/flora/lily3,
@@ -1177,7 +1217,11 @@
 "BU" = (
 /obj/effect/catwalk_plated,
 /obj/structure/ladder,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/surface/outpost/shelter/exterior)
 "BY" = (
 /obj/structure/toilet,
@@ -1210,7 +1254,11 @@
 	dir = 4
 	},
 /obj/effect/catwalk_plated,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/surface/outpost/shelter/exterior)
 "Cz" = (
 /turf/simulated/mineral/floor{
@@ -1289,7 +1337,11 @@
 /obj/structure/railing/grey{
 	dir = 8
 	},
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/surface/outpost/shelter/exterior)
 "DN" = (
 /obj/structure/flora/ausbushes/ppflowers,
@@ -1365,7 +1417,7 @@
 /obj/structure/closet/medical_wall{
 	name = "Wilderness Shelter first-aid closet";
 	pixel_y = 31;
-	starts_with = list(/obj/item/roller,/obj/item/bodybag/cryobag,/obj/item/weapon/storage/firstaid/regular=2,obj/item/weapon/storage/pill_bottle/spaceacillin)
+	starts_with = list(/obj/item/roller,/obj/item/bodybag/cryobag,/obj/item/weapon/storage/firstaid/regular=2,/obj/item/weapon/storage/pill_bottle/spaceacillin)
 	},
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
@@ -1606,7 +1658,11 @@
 /area/surface/outside/wilderness/skylands)
 "MY" = (
 /obj/effect/catwalk_plated,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/surface/outpost/shelter/exterior)
 "MZ" = (
 /obj/structure/flora/rocks2,
@@ -1698,7 +1754,11 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/surface/outpost/shelter/exterior)
 "OW" = (
 /obj/structure/flora/tree/jungle_small,
@@ -1794,7 +1854,11 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/surface/outpost/shelter/exterior)
 "RG" = (
 /obj/structure/flora/grass/brown,
@@ -1815,7 +1879,11 @@
 	dir = 1
 	},
 /obj/effect/catwalk_plated,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/surface/outpost/shelter/exterior)
 "RW" = (
 /obj/structure/flora/log2,
@@ -1883,7 +1951,11 @@
 /obj/machinery/camera/network/carrier{
 	dir = 4
 	},
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/surface/outpost/shelter/exterior)
 "Te" = (
 /obj/structure/flora/log1,
@@ -2141,7 +2213,11 @@
 	c_tag = "WILD - Shelter Second Floor Exterior 2";
 	dir = 1
 	},
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/surface/outpost/shelter/exterior)
 "XX" = (
 /turf/simulated/floor/wood/sif,

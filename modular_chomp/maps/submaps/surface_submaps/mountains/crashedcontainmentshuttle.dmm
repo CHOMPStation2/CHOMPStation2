@@ -3,29 +3,53 @@
 /turf/template_noop,
 /area/submap/cave/crashedcontainmentshuttle)
 "ab" = (
-/turf/simulated/shuttle/wall/dark/hard_corner,
+/turf/simulated/shuttle/wall/dark/hard_corner{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "ac" = (
-/turf/simulated/shuttle/wall/dark,
+/turf/simulated/shuttle/wall/dark{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "ad" = (
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/shuttle/floor/black{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "ae" = (
-/turf/simulated/shuttle/floor/yellow,
+/turf/simulated/shuttle/floor/yellow{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "af" = (
-/turf/simulated/shuttle/floor/red,
+/turf/simulated/shuttle/floor/red{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "ag" = (
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/shuttle/floor/white{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "ah" = (
 /obj/structure/grille,
 /obj/item/weapon/material/shard{
 	icon_state = "medium"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/cave/crashedcontainmentshuttle)
 "ai" = (
 /obj/structure/grille,
@@ -42,7 +66,7 @@
 /obj/structure/door_assembly/door_assembly_ext{
 	anchored = 1
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/cave/crashedcontainmentshuttle)
 "al" = (
 /obj/item/weapon/material/shard{
@@ -56,10 +80,10 @@
 /area/submap/cave/crashedcontainmentshuttle)
 "an" = (
 /obj/structure/girder,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/cave/crashedcontainmentshuttle)
 "ao" = (
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/cave/crashedcontainmentshuttle)
 "ap" = (
 /obj/structure/lattice,
@@ -72,11 +96,11 @@
 "ar" = (
 /obj/structure/grille,
 /obj/item/weapon/material/shard,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/cave/crashedcontainmentshuttle)
 "as" = (
 /obj/item/weapon/material/shard,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/cave/crashedcontainmentshuttle)
 "at" = (
 /obj/item/stack/rods,
@@ -84,41 +108,73 @@
 /area/submap/cave/crashedcontainmentshuttle)
 "au" = (
 /obj/item/stack/rods,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/shuttle/floor/black{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "av" = (
 /obj/structure/closet/walllocker/emerglocker/east,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/shuttle/floor/black{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "aw" = (
 /obj/structure/frame,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/shuttle/floor/black{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "ax" = (
 /obj/item/frame/mirror,
 /obj/item/weapon/material/shard{
 	icon_state = "medium"
 	},
-/turf/simulated/shuttle/wall/dark,
+/turf/simulated/shuttle/wall/dark{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "ay" = (
 /obj/effect/decal/mecha_wreckage/gygax{
 	anchored = 1
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/shuttle/floor/black{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "az" = (
 /obj/effect/gibspawner/generic,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/shuttle/floor/black{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "aA" = (
 /obj/structure/closet/medical_wall,
-/turf/simulated/shuttle/wall/dark,
+/turf/simulated/shuttle/wall/dark{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "aB" = (
 /obj/machinery/artifact/predefined/hungry_statue,
 /obj/structure/largecrate,
-/turf/simulated/shuttle/floor/red,
+/turf/simulated/shuttle/floor/red{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "aC" = (
 /turf/simulated/mineral/floor/ignore_mapgen,
@@ -129,11 +185,19 @@
 /area/submap/cave/crashedcontainmentshuttle)
 "aE" = (
 /obj/structure/extinguisher_cabinet,
-/turf/simulated/shuttle/wall/dark,
+/turf/simulated/shuttle/wall/dark{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "aF" = (
 /obj/machinery/computer,
-/turf/simulated/shuttle/floor/yellow,
+/turf/simulated/shuttle/floor/yellow{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "aG" = (
 /obj/structure/loot_pile/maint/technical,
@@ -141,7 +205,11 @@
 /area/submap/cave/crashedcontainmentshuttle)
 "aH" = (
 /obj/structure/frame/computer,
-/turf/simulated/shuttle/floor/yellow,
+/turf/simulated/shuttle/floor/yellow{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "aI" = (
 /obj/structure/grille{
@@ -149,11 +217,11 @@
 	icon_state = "brokengrille"
 	},
 /obj/item/stack/rods,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/cave/crashedcontainmentshuttle)
 "aJ" = (
 /obj/item/stack/rods,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/cave/crashedcontainmentshuttle)
 "aK" = (
 /obj/structure/grille{
@@ -164,26 +232,42 @@
 	icon_state = "medium"
 	},
 /obj/item/stack/rods,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/cave/crashedcontainmentshuttle)
 "aL" = (
 /obj/item/weapon/circuitboard/broken,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/shuttle/floor/black{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "aM" = (
 /obj/structure/frame,
 /obj/item/weapon/circuitboard/broken,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/shuttle/floor/black{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "aN" = (
 /obj/structure/table/steel_reinforced,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/shuttle/floor/black{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "aO" = (
 /obj/structure/closet/walllocker/emerglocker/north,
 /obj/structure/frame,
 /obj/item/weapon/circuitboard/broken,
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/shuttle/floor/white{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "aP" = (
 /turf/simulated/floor/outdoors/rocks,
@@ -210,15 +294,27 @@
 /obj/structure/door_assembly/door_assembly_highsecurity{
 	anchored = 1
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/shuttle/floor/black{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "aT" = (
 /obj/structure/loot_pile/maint/technical,
-/turf/simulated/shuttle/floor/yellow,
+/turf/simulated/shuttle/floor/yellow{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "aU" = (
 /obj/structure/loot_pile/maint/technical,
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/shuttle/floor/white{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "aV" = (
 /obj/structure/shuttle/engine/propulsion{
@@ -228,7 +324,11 @@
 /area/submap/cave/crashedcontainmentshuttle)
 "aW" = (
 /obj/structure/loot_pile/maint/technical,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/shuttle/floor/black{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "aX" = (
 /obj/item/weapon/circuitboard/broken,
@@ -249,11 +349,19 @@
 /area/submap/cave/crashedcontainmentshuttle)
 "bb" = (
 /obj/effect/decal/cleanable/blood/drip,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/shuttle/floor/black{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "bc" = (
 /obj/structure/door_assembly,
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/shuttle/floor/white{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "bd" = (
 /obj/item/clothing/head/helmet/space/cult,
@@ -276,25 +384,45 @@
 /area/submap/cave/crashedcontainmentshuttle)
 "bh" = (
 /obj/effect/decal/remains/human,
-/turf/simulated/shuttle/floor/yellow,
+/turf/simulated/shuttle/floor/yellow{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "bi" = (
 /obj/item/weapon/circuitboard/broken,
 /obj/effect/decal/remains/human,
 /obj/item/weapon/gun/energy/laser,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/shuttle/floor/black{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "bj" = (
 /obj/item/device/gps/internal/poi,
-/turf/simulated/shuttle/floor/red,
+/turf/simulated/shuttle/floor/red{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "bk" = (
 /obj/effect/decal/cleanable/vomit,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/shuttle/floor/black{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "bl" = (
 /obj/effect/decal/remains/robot,
-/turf/simulated/shuttle/floor/red,
+/turf/simulated/shuttle/floor/red{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "bm" = (
 /obj/effect/decal/cleanable/liquid_fuel,
@@ -302,7 +430,11 @@
 /area/submap/cave/crashedcontainmentshuttle)
 "bn" = (
 /obj/effect/decal/cleanable/vomit,
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/shuttle/floor/white{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "bo" = (
 /obj/effect/decal/cleanable/blood/drip,
@@ -312,24 +444,40 @@
 /obj/structure/bed/chair/office/dark{
 	dir = 4
 	},
-/turf/simulated/shuttle/floor/yellow,
+/turf/simulated/shuttle/floor/yellow{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "bq" = (
 /obj/item/weapon/circuitboard/broken,
 /obj/structure/bed/chair/office/dark{
 	dir = 4
 	},
-/turf/simulated/shuttle/floor/yellow,
+/turf/simulated/shuttle/floor/yellow{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "br" = (
 /obj/effect/decal/cleanable/blood/drip,
 /obj/effect/decal/cleanable/blood/drip,
 /obj/effect/decal/cleanable/blood/drip,
-/turf/simulated/shuttle/floor/yellow,
+/turf/simulated/shuttle/floor/yellow{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "bs" = (
 /obj/structure/table/steel_reinforced,
-/turf/simulated/shuttle/floor/yellow,
+/turf/simulated/shuttle/floor/yellow{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "bt" = (
 /obj/structure/shuttle/engine/heater{
@@ -349,31 +497,55 @@
 /area/submap/cave/crashedcontainmentshuttle)
 "bv" = (
 /obj/effect/decal/cleanable/blood/oil,
-/turf/simulated/shuttle/floor/red,
+/turf/simulated/shuttle/floor/red{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "bw" = (
 /obj/item/weapon/material/knife/ritual,
 /obj/effect/decal/cleanable/blood,
-/turf/simulated/shuttle/floor/red,
+/turf/simulated/shuttle/floor/red{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "bx" = (
-/turf/simulated/shuttle/wall/dark/no_join,
+/turf/simulated/shuttle/wall/dark/no_join{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "by" = (
 /obj/random/landmine,
 /obj/random/landmine,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/shuttle/floor/black{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "bz" = (
 /obj/effect/decal/remains/human,
 /obj/item/clothing/head/helmet/space/cult,
 /obj/effect/decal/cleanable/blood,
-/turf/simulated/shuttle/floor/red,
+/turf/simulated/shuttle/floor/red{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "bA" = (
 /obj/effect/decal/cleanable/blood/drip,
 /obj/effect/decal/cleanable/blood/drip,
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/shuttle/floor/white{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "bB" = (
 /obj/structure/sink{
@@ -384,11 +556,19 @@
 	},
 /obj/effect/decal/cleanable/blood/drip,
 /obj/effect/decal/cleanable/blood/drip,
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/shuttle/floor/white{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "bC" = (
 /obj/effect/decal/cleanable/liquid_fuel,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/shuttle/floor/black{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "bD" = (
 /obj/structure/shuttle/engine/propulsion{
@@ -399,11 +579,19 @@
 "bE" = (
 /obj/effect/decal/cleanable/blood/drip,
 /obj/effect/decal/cleanable/blood/drip,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/shuttle/floor/black{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "bF" = (
 /obj/effect/decal/cleanable/blood/drip,
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/shuttle/floor/white{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "bG" = (
 /obj/effect/decal/cleanable/liquid_fuel,
@@ -415,24 +603,40 @@
 	name = "landmines crate";
 	opened = 1
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/shuttle/floor/black{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "bI" = (
 /obj/random/landmine,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/shuttle/floor/black{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "bJ" = (
 /obj/random/landmine,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/cave/crashedcontainmentshuttle)
 "bK" = (
 /obj/random/landmine,
-/turf/simulated/shuttle/floor/yellow,
+/turf/simulated/shuttle/floor/yellow{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "bL" = (
 /obj/effect/decal/cleanable/blood,
 /obj/random/landmine,
-/turf/simulated/shuttle/floor/red,
+/turf/simulated/shuttle/floor/red{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "bM" = (
 /obj/structure/reagent_dispensers/fueltank,
@@ -454,7 +658,11 @@
 	registered_name = "Aaron Presley";
 	sex = "\\Male"
 	},
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/shuttle/floor/white{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 "bO" = (
 /obj/effect/decal/cleanable/liquid_fuel,
@@ -464,7 +672,11 @@
 /area/submap/cave/crashedcontainmentshuttle)
 "bP" = (
 /obj/structure/ghost_pod/manual/lost_drone/dogborg,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/shuttle/floor/black{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/crashedcontainmentshuttle)
 
 (1,1,1) = {"
