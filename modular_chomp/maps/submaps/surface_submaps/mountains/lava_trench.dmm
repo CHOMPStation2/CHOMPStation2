@@ -78,18 +78,30 @@
 	dir = 9;
 	icon_state = "cliffbuilder"
 	},
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "ao" = (
 /obj/structure/cliff/automatic,
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "ap" = (
 /obj/structure/cliff/automatic{
 	dir = 5;
 	icon_state = "cliffbuilder"
 	},
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "aq" = (
 /obj/structure/sign/warning/lava,
@@ -111,14 +123,26 @@
 	dir = 9;
 	icon_state = "cliffbuilder-corner"
 	},
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "au" = (
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "av" = (
 /obj/structure/cliff/automatic/corner,
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "aw" = (
 /obj/structure/railing{
@@ -150,7 +174,11 @@
 	dir = 8;
 	icon_state = "cliffbuilder"
 	},
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "aB" = (
 /turf/simulated/mineral/floor/ignore_mapgen,
@@ -164,7 +192,11 @@
 	dir = 4;
 	icon_state = "railing0"
 	},
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "aE" = (
 /obj/structure/cliff/automatic,
@@ -172,21 +204,33 @@
 	dir = 8;
 	icon_state = "railing0"
 	},
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "aF" = (
 /obj/structure/cliff/automatic{
 	dir = 10;
 	icon_state = "cliffbuilder"
 	},
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "aG" = (
 /obj/structure/cliff/automatic/corner{
 	dir = 10;
 	icon_state = "cliffbuilder-corner"
 	},
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "aH" = (
 /obj/structure/railing{
@@ -194,15 +238,25 @@
 	icon_state = "railing0"
 	},
 /obj/effect/step_trigger/teleporter/offset/east,
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "aI" = (
 /obj/structure/catwalk,
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "aJ" = (
 /obj/structure/ore_box,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "aK" = (
 /obj/structure/railing{
@@ -210,7 +264,11 @@
 	icon_state = "railing0"
 	},
 /obj/effect/step_trigger/teleporter/offset/west,
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "aL" = (
 /obj/structure/cliff/automatic{
@@ -267,7 +325,11 @@
 	dir = 2;
 	icon_state = "cliffbuilder"
 	},
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "aV" = (
 /obj/structure/cliff/automatic{
@@ -288,7 +350,11 @@
 	dir = 6;
 	icon_state = "cliffbuilder-corner"
 	},
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "aY" = (
 /obj/structure/cliff/automatic{
@@ -299,7 +365,11 @@
 	dir = 4;
 	icon_state = "railing0"
 	},
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "aZ" = (
 /obj/structure/cliff/automatic{
@@ -310,7 +380,11 @@
 	dir = 8;
 	icon_state = "railing0"
 	},
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "ba" = (
 /obj/machinery/crystal/lava,
@@ -321,14 +395,22 @@
 	dir = 4;
 	icon_state = "cliffbuilder"
 	},
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "bc" = (
 /obj/structure/cliff/automatic{
 	dir = 6;
 	icon_state = "cliffbuilder"
 	},
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "bd" = (
 /obj/structure/table/steel,
@@ -353,7 +435,11 @@
 	icon_state = "cliffbuilder"
 	},
 /obj/structure/railing,
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "bh" = (
 /obj/structure/cliff/automatic/corner{
@@ -361,12 +447,20 @@
 	icon_state = "cliffbuilder-corner"
 	},
 /obj/structure/railing,
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "bi" = (
 /obj/structure/railing,
 /obj/effect/step_trigger/teleporter/offset/south,
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "bj" = (
 /obj/structure/cliff/automatic{
@@ -374,7 +468,11 @@
 	icon_state = "cliffbuilder"
 	},
 /obj/structure/railing,
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "bk" = (
 /obj/structure/catwalk,
@@ -384,7 +482,11 @@
 "bl" = (
 /obj/structure/catwalk,
 /obj/structure/railing,
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "bm" = (
 /obj/structure/fence/door/opened{
@@ -462,11 +564,15 @@
 /turf/simulated/floor/tiled/old_tile,
 /area/submap/cave/lava_trench/outpost)
 "bw" = (
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "bx" = (
 /obj/machinery/crystal/ice,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "by" = (
 /obj/machinery/ai_status_display{
@@ -511,11 +617,17 @@
 /area/submap/cave/lava_trench/outpost)
 "bD" = (
 /obj/effect/step_trigger/teleporter/offset/north,
-/turf/simulated/floor/lava,
+/turf/simulated/floor/lava{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "bE" = (
 /obj/machinery/crystal/lava,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "bF" = (
 /obj/structure/table/rack,
@@ -628,7 +740,9 @@
 "bU" = (
 /obj/machinery/light/small/flicker,
 /obj/structure/ore_box,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "bW" = (
 /obj/structure/anomaly_container,
@@ -646,17 +760,23 @@
 /area/submap/cave/lava_trench/outpost)
 "bY" = (
 /obj/machinery/crystal,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "bZ" = (
 /obj/structure/table/steel,
 /obj/item/weapon/stock_parts/subspace/crystal,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "ca" = (
 /obj/structure/table/steel,
 /obj/item/stack/material/diamond,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "cb" = (
 /obj/structure/loot_pile/surface/bones,
@@ -681,21 +801,29 @@
 /area/submap/cave/lava_trench/outpost)
 "co" = (
 /obj/machinery/floodlight,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "cp" = (
 /obj/machinery/light/small/flicker,
 /obj/structure/closet/crate/secure/loot,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "cq" = (
 /obj/item/weapon/banner/nt,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "cr" = (
 /obj/structure/table/steel,
 /obj/item/weapon/material/shard/phoron,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
 /area/submap/cave/lava_trench)
 "cs" = (
 /obj/item/weapon/banner/nt,

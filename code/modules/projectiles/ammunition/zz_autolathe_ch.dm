@@ -57,6 +57,16 @@
 	path = /obj/item/ammo_magazine/a57p90/hp
 	hidden = 1
 
+/datum/category_item/autolathe/arms/c20r/ap
+	name = "C-20R Magazine (10mm Armor-Piercing)"
+	path = /obj/item/ammo_magazine/m10mm/ap
+	hidden = 1
+
+/datum/category_item/autolathe/arms/c20r/hp
+	name = "C-20R Magazine (10mm Hollow-Point)"
+	path = /obj/item/ammo_magazine/m10mm/hp
+	hidden = 1
+
 /datum/category_item/autolathe/arms/svd_762
 	name = "SVD magazine (7.62x54mmR)"
 	path = /obj/item/ammo_magazine/m762svd

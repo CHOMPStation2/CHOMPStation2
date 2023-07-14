@@ -37,6 +37,54 @@
 	initial_ammo = 0
 
 /*
+ * C-20R MAGAZINES
+*/
+
+/obj/item/ammo_magazine/m10mm
+	name = "\improper C-20R Magazine (10mm Standard)"
+	desc = "A 20-round magazine for the C-20R, loaded with caseless ammunition."
+	icon_state = "10mm"
+	mag_type = MAGAZINE
+	ammo_type = /obj/item/ammo_casing/a10mm
+	matter = list(MAT_STEEL = 3000)
+	caliber = "10mm"
+	max_ammo = 20
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/m10mm/ap
+	name = "\improper C-20R Magazine (10mm Armor-Piercing)"
+	desc = "A 20-round magazine for the C-20R, loaded with caseless armor-piercing ammunition."
+	matter = list(MAT_STEEL = 3500)
+	ammo_type = /obj/item/ammo_casing/a10mm/ap
+
+/obj/item/ammo_magazine/m10mm/hp
+	name = "\improper C-20R Magazine (10mm Hollow-Point)"
+	desc = "A 20-round magazine for the C-20R, loaded with caseless hollow-point ammunition."
+	matter = list(MAT_STEEL = 3500)
+	ammo_type = /obj/item/ammo_casing/a10mm/hp
+
+/obj/item/ammo_magazine/m10mm/practice
+	name = "\improper C-20R Magazine (10mm Practice)"
+	desc = "A 20-round magazine for the C-20R, loaded with caseless practice rounds."
+	matter = list(MAT_STEEL = 1500)
+	ammo_type = /obj/item/ammo_casing/a10mm/practice
+
+/obj/item/ammo_magazine/m10mm/rubber
+	name = "\improper C-20R Magazine (10mm Rubber)"
+	desc = "A 20-round magazine for the C-20R, loaded with caseless rubber ammunition."
+	matter = list(MAT_STEEL = 2500)
+	ammo_type = /obj/item/ammo_casing/a10mm/rubber
+
+/obj/item/ammo_magazine/m10mm/emp
+	name = "\improper C-20R Magazine (10mm Haywire EMP)"
+	desc = "A 20-round magazine for the C-20R, loaded with caseless electromagnetic ammunition."
+	matter = list(MAT_STEEL = 3000, MAT_URANIUM = 1000)
+	ammo_type = /obj/item/ammo_casing/a10mm/emp
+
+/obj/item/ammo_magazine/m10mm/empty
+	initial_ammo = 0
+
+/*
  * PLACEHOLDER
 */
 
