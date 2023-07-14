@@ -1417,7 +1417,7 @@
 /obj/structure/closet/medical_wall{
 	name = "Wilderness Shelter first-aid closet";
 	pixel_y = 31;
-	starts_with = list(/obj/item/roller,/obj/item/bodybag/cryobag,/obj/item/weapon/storage/firstaid/regular=2,obj/item/weapon/storage/pill_bottle/spaceacillin)
+	starts_with = list(/obj/item/roller,/obj/item/bodybag/cryobag,/obj/item/weapon/storage/firstaid/regular=2,/obj/item/weapon/storage/pill_bottle/spaceacillin)
 	},
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
