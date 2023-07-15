@@ -24,9 +24,6 @@
 	else
 		usr.emote_vr(message)
 
-<<<<<<< HEAD
-/mob/proc/custom_emote_vr(var/m_type=1,var/message = null, var/distanced=FALSE) //This would normally go in emote.dm //CHOMPEdit: subtle-distance
-=======
 /mob/verb/me_verb_subtle_custom(message as message) // Literally same as above but with mode_selection set to true
 	set name = "Subtle (Custom)"
 	set category = "IC"
@@ -49,8 +46,7 @@
 	else
 		usr.emote_vr(message)
 
-/mob/proc/custom_emote_vr(var/m_type=1,var/message = null,var/mode_selection = FALSE) //This would normally go in emote.dm
->>>>>>> 71677c47a8... Merge pull request #15139 from Heroman3003/custom-subtle
+/mob/proc/custom_emote_vr(var/m_type=1,var/message = null, var/distanced=FALSE) //This would normally go in emote.dm //CHOMPEdit: subtle-distance
 	if(stat || !use_me && usr == src)
 		to_chat(src, "You are unable to emote.")
 		return
