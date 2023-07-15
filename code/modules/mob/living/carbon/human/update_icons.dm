@@ -967,11 +967,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 
 	var/icon/c_mask = tail_style?.clip_mask
 	if(c_mask)
-<<<<<<< HEAD
-		if(istype(back, /obj/item/weapon/storage/backpack))// Chompedit - avoid clipmasks on all backpacks
-=======
 		if(istype(back, /obj/item/weapon/storage/backpack/saddlebag) || istype(back, /obj/item/weapon/storage/backpack/saddlebag_common))
->>>>>>> 459c9fd733... Merge pull request #15142 from Heroman3003/taurbagfix
 			c_mask = null
 
 	overlays_standing[BACK_LAYER] = back.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_back_str, default_icon = INV_BACK_DEF_ICON, default_layer = BACK_LAYER, clip_mask = c_mask)
