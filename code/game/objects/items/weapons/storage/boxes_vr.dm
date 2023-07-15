@@ -39,8 +39,6 @@
 
 /obj/item/weapon/storage/box/freezer
 	can_hold = list(/obj/item/organ, /obj/item/weapon/reagent_containers/blood, /obj/item/weapon/reagent_containers/glass, /obj/item/weapon/reagent_containers/food)
-<<<<<<< HEAD
-=======
 
 /obj/item/weapon/storage/box/altevian_ammo
 	name = "SAM .48 ammo box"
@@ -50,4 +48,3 @@
 	max_storage_space = ITEMSIZE_COST_NORMAL * 3
 	drop_sound = 'sound/items/drop/ammobox.ogg'
 	pickup_sound = 'sound/items/pickup/ammobox.ogg'
->>>>>>> 9925f378e5... Merge pull request #15138 from Heroman3003/ratmobs
