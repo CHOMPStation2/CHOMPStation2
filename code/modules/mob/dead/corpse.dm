@@ -118,13 +118,10 @@
 					O.robotize(corpsesynthbrand)
 	if(src.corpseuniform)
 		M.equip_to_slot_or_del(new src.corpseuniform(M), slot_w_uniform)
-<<<<<<< HEAD
-		if(M.w_uniform)
+		if(M.w_uniform) //CHOMPEdit
 			M.w_uniform?:sensor_mode = corpsesensormode	//CHOMPEdit
 	if(src.corpsesuit)
 		M.equip_to_slot_or_del(new src.corpsesuit(M), slot_wear_suit)
-=======
->>>>>>> 9925f378e5... Merge pull request #15138 from Heroman3003/ratmobs
 	if(src.corpseshoes)
 		M.equip_to_slot_or_del(new src.corpseshoes(M), slot_shoes)
 	if(src.corpsegloves)
