@@ -2644,9 +2644,6 @@ Departamental Swimsuits, for general use
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "grand_purple_cloak_hat"
 	item_state = "grand_purple_cloak_hat_onmob"
-<<<<<<< HEAD
-End CHOMP Removal*/
-=======
 
 //verysoft:Dessa Ton
 /obj/item/clothing/head/fluff/giantbow/dessa
@@ -2661,6 +2658,7 @@ End CHOMP Removal*/
 	else
 		item_state = "giantbow_mob"
 	..()
+End CHOMP Removal*/
 
 /obj/item/clothing/head/fluff/giantbow	//Public version
 	name = "Giant Bow"
@@ -2672,4 +2670,3 @@ End CHOMP Removal*/
 
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "giantbow_mob"
->>>>>>> 3de110e42a... Merge pull request #15145 from Very-Soft/bow
