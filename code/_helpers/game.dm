@@ -699,8 +699,6 @@
 			hear |= recursive_mob_check(A, hear, 3, 1, 0, 1)
 
 	return hear
-<<<<<<< HEAD
-=======
 
 /proc/get_belly(var/atom/A)				// return a belly we're in, one way or another; and if we aren't (or are too deep to comprehend being in belly), returns null
 	var/atom/loc_check = A.loc
@@ -728,4 +726,3 @@
 				result |= get_all_prey_recursive(P, client_check)
 
 	return result
->>>>>>> 71677c47a8... Merge pull request #15139 from Heroman3003/custom-subtle
