@@ -52412,9 +52412,10 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "hyq" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/wingrille_spawn/reinforced,
 /obj/structure/disposalpipe/segment,
-/obj/machinery/vending/medical,
-/turf/simulated/wall,
+/turf/simulated/floor/plating,
 /area/medical/medbay_primary_storage)
 "hzq" = (
 /obj/item/device/radio/intercom{
@@ -53347,10 +53348,8 @@
 /turf/simulated/floor/plating,
 /area/maintenance/locker)
 "hSQ" = (
-/obj/structure/disposalpipe/sortjunction{
-	dir = 8;
-	name = "Medbay";
-	sortType = "Medbay"
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -60492,7 +60491,6 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloorwhite/corner{
 	dir = 4
 	},
@@ -69051,9 +69049,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/seconddeck/starboard)
 "qxs" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/effect/wingrille_spawn/reinforced,
-/turf/simulated/floor/plating,
+/obj/machinery/vending/medical,
+/turf/simulated/wall,
 /area/medical/medbay_primary_storage)
 "qxU" = (
 /obj/machinery/door/blast/regular{
@@ -73508,8 +73505,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/obj/structure/disposalpipe/sortjunction{
+	dir = 8;
+	name = "Medbay";
+	sortType = "Medbay"
 	},
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
@@ -78698,6 +78697,7 @@
 /obj/effect/floor_decal/corner/paleblue/bordercorner{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
 "wni" = (

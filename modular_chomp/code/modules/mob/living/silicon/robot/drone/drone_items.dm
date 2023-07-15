@@ -609,5 +609,6 @@
 		/obj/item/weapon/disk/nifsoft/compliance,
 		/obj/item/weapon/handcuffs,
 		/obj/item/toy,
-		/obj/item/petrifier
+		/obj/item/petrifier,
+		/obj/item/weapon/dice
 	)
