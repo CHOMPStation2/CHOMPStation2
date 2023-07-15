@@ -46,7 +46,7 @@
 	else
 		usr.emote_vr(message)
 
-/mob/proc/custom_emote_vr(var/m_type=1,var/message = null, var/distanced=FALSE) //This would normally go in emote.dm //CHOMPEdit: subtle-distance
+/mob/proc/custom_emote_vr(var/m_type=1,var/message = null,var/mode_selection = FALSE, var/distanced=FALSE) //This would normally go in emote.dm //CHOMPEdit: subtle-distance
 	if(stat || !use_me && usr == src)
 		to_chat(src, "You are unable to emote.")
 		return
