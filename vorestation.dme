@@ -2418,6 +2418,7 @@
 #include "code\modules\events\shipping_error.dm"
 #include "code\modules\events\solar_storm.dm"
 #include "code\modules\events\space_ninja.dm"
+#include "code\modules\events\spacefish_migration.dm"
 #include "code\modules\events\spacevine.dm"
 #include "code\modules\events\spider_infestation.dm"
 #include "code\modules\events\spider_migration_yw.dm"
