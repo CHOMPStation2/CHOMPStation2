@@ -15,8 +15,16 @@
 										list(/mob/living/simple_mob/animal/space/ray,					1,	1),
 										list(/mob/living/simple_mob/animal/space/shark/event,			1,	1)
 										)
+	var/fired = FALSE //CHOMP Add
 
 /datum/event/spacefish_migration/setup()
+//CHOMP Add start
+	if(prob(15) || fired = TRUE)
+		log_debug("Random spacefish migration failed successfully.")
+		kill()
+		return
+	fired = TRUE
+//CHOMP Add end
 	announceWhen = rand(30, 60) // 1 to 2 minutes
 	endWhen += severity * 25
 	var/list/fish_config = pick(possible_fish_types)
