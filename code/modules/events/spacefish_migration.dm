@@ -19,7 +19,7 @@
 
 /datum/event/spacefish_migration/setup()
 //CHOMP Add start
-	if(prob(15) || fired = TRUE)
+	if(prob(15) || fired == TRUE)
 		log_debug("Random spacefish migration failed successfully.")
 		kill()
 		return
