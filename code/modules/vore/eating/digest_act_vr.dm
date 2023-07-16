@@ -148,7 +148,7 @@
 /obj/item/weapon/reagent_containers/food/digest_act(atom/movable/item_storage = null)
 	if(isbelly(item_storage))
 		var/obj/belly/B = item_storage
-		if(ishuman(B.owner))
+		if(ishuman(B.owner) && reagents) //CHOMPEdit
 			var/mob/living/carbon/human/H = B.owner
 			reagents.trans_to_holder(H.ingested, (reagents.total_volume * 0.5), 1, 0)
 		else if(isrobot(B.owner))

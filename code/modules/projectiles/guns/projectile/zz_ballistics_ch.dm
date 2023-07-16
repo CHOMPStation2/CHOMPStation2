@@ -130,6 +130,12 @@
 	name = "Krinkov"
 	desc = "A professionally cut down AKM made to be easily concealable. With a 12 inch barrel, this is a very loud short barrel rifle. Illegal pretty much everywhere, and easy to get a hold of, these classic russian firearms are a mainstay amidst the various criminal organizations across the galaxy."
 	caliber = "7.62x39mm"
+	item_icons = list(
+		slot_l_hand_str = 'icons/mob/items/lefthand_guns_ch.dmi',
+		slot_r_hand_str = 'icons/mob/items/righthand_guns_ch.dmi',
+		)
+	item_state = "krink"
+	wielded_item_state = "krink-wielded"
 	magazine_type = /obj/item/ammo_magazine/akm
 	allowed_magazines = list(/obj/item/ammo_magazine/akm)
 	icon_state = "krinkov"
@@ -148,6 +154,12 @@
 	name = "AKM"
 	desc = "The tried and true, old fashioned chatterbox. Ivan's favorite. Best used while at least somewhat inebriated. Chambered in 7.62x39mm."
 	caliber = "7.62x39mm"
+	item_icons = list(
+		slot_l_hand_str = 'icons/mob/items/lefthand_guns_ch.dmi',
+		slot_r_hand_str = 'icons/mob/items/righthand_guns_ch.dmi',
+		)
+	item_state = "akm"
+	wielded_item_state = "akm-wielded"
 	magazine_type = /obj/item/ammo_magazine/akm
 	allowed_magazines = list(/obj/item/ammo_magazine/akm)
 	icon_state = "akm"
@@ -167,6 +179,12 @@
 	name = "AKM"
 	desc = "The 'Stalingrad Special'. This rickety old AKM has seen better days. Better bring some vodka, because every shot this gun manages to squeeze off without blowing up in your face is worthy of celebration. Chambered in 7.62x39mm"
 	caliber = "7.62x39mm"
+	item_icons = list(
+		slot_l_hand_str = 'icons/mob/items/lefthand_guns_ch.dmi',
+		slot_r_hand_str = 'icons/mob/items/righthand_guns_ch.dmi',
+		)
+	item_state = "akm"
+	wielded_item_state = "akm-wielded"
 	magazine_type = /obj/item/ammo_magazine/akm
 	allowed_magazines = list(/obj/item/ammo_magazine/akm)
 	icon_state = "scrapak"
@@ -186,6 +204,12 @@
 	name = "AK-74"
 	desc = "The tried and true, old fashioned chatterbox. Ivan's favorite. Best used while at least somewhat inebriated. Chambered in 5.45x39mm."
 	caliber = "5.45mm"
+	item_icons = list(
+		slot_l_hand_str = 'icons/mob/items/lefthand_guns_ch.dmi',
+		slot_r_hand_str = 'icons/mob/items/righthand_guns_ch.dmi',
+		)
+	item_state = "akm"
+	wielded_item_state = "akm-wielded"
 	magazine_type = /obj/item/ammo_magazine/ak74
 	allowed_magazines = list(/obj/item/ammo_magazine/ak74)
 	icon_state = "ak74"
@@ -234,6 +258,12 @@
 	name = "SOK-94"
 	desc = "Otherwise known as a Vepr Super. An AK pattern rifle, based on the beefier RPK chassis, to handle larger caliber rounds. Like an SVD but cooler. Chambered in 7.62x54mmR."
 	caliber = "7.62x54mmR"
+	item_icons = list(
+		slot_l_hand_str = 'icons/mob/items/lefthand_guns_ch.dmi',
+		slot_r_hand_str = 'icons/mob/items/righthand_guns_ch.dmi',
+		)
+	item_state = "akm"
+	wielded_item_state = "akm-wielded"
 	magazine_type = /obj/item/ammo_magazine/m762svd
 	allowed_magazines = list(/obj/item/ammo_magazine/m762svd)
 	icon_state = "hunter"
@@ -264,7 +294,12 @@
 	name = "M16A2"
 	desc = "A favorite service rifle everywhere, even today. It might be a reproduction, but Eugene Stoner smiles upon every man or woman who wields this beautiful democracy dispensing machine, even if it's never seen the soil of Terra, and never will. Chambered in 5.56x45mm."
 	caliber = "5.56x45mm"
-
+	item_icons = list(
+		slot_l_hand_str = 'icons/mob/items/lefthand_guns_ch.dmi',
+		slot_r_hand_str = 'icons/mob/items/righthand_guns_ch.dmi',
+		)
+	item_state = "m16"
+	wielded_item_state = "m16-wielded"
 	magazine_type = /obj/item/ammo_magazine/m16
 	allowed_magazines = list(/obj/item/ammo_magazine/m16)
 	icon_state="m16"
@@ -282,6 +317,12 @@
 	name = "M4A1"
 	desc = "The M16's shorter, more lightweight little brother. An old terran flag is stamped into the receiver. These guns can be found just about everywhere. A favorite on the rimworlds due to its simplicity to produce, and reliability. Chambered in 5.56x45mm."
 	caliber = "5.56x45mm"
+	item_icons = list(
+		slot_l_hand_str = 'icons/mob/items/lefthand_guns_ch.dmi',
+		slot_r_hand_str = 'icons/mob/items/righthand_guns_ch.dmi',
+		)
+	item_state = "m4"
+	wielded_item_state = "m4-wielded"
 	magazine_type = /obj/item/ammo_magazine/m16
 	allowed_magazines = list(/obj/item/ammo_magazine/m16)
 	icon_state="m4"
@@ -300,6 +341,12 @@
 	name = "Patriot"
 	desc = "I raised you, and loved you, I've given you weapons, taught you techniques, endowed you with knowledge. There's nothing more for me to give you. All that's left for you to take is my life. 'Still in a dream' is stamped into the receiver, and it has no serial number. Chambered in 5.56x45mm."
 	caliber = "5.56x45mm"
+	item_icons = list(
+		slot_l_hand_str = 'icons/mob/items/lefthand_guns_ch.dmi',
+		slot_r_hand_str = 'icons/mob/items/righthand_guns_ch.dmi',
+		)
+	item_state = "m16"
+	wielded_item_state = "m16-wielded"
 	magazine_type = /obj/item/ammo_magazine/m16/patriot
 	allowed_magazines = list(/obj/item/ammo_magazine/m16)
 	icon_state="patriot"
@@ -335,6 +382,12 @@
 	name = "M41A/2"
 	desc = "The Armat M41A Pulse Rifle is a pulse-action assault rifle chambered for 10×24mm Caseless ammunition. This one is a rare, and fairly competent replica of the original by Scarborough Arms, with some minor design improvements over the original. The aluminium chassis is painted steel blue, and it has 'Scarborough Arms - Per falcis, per pravitas' inscribed on the stock."
 	caliber = "10x24mm"
+	item_icons = list(
+		slot_l_hand_str = 'icons/mob/items/lefthand_guns_ch.dmi',
+		slot_r_hand_str = 'icons/mob/items/righthand_guns_ch.dmi',
+		)
+	item_state = "m41ab"
+	wielded_item_state = "m41ab-wielded"
 	magazine_type = /obj/item/ammo_magazine/m41
 	allowed_magazines = list(/obj/item/ammo_magazine/m41)
 	icon_state="m41b"
@@ -353,6 +406,12 @@
 	name = "M41A"
 	desc = "A tried and true original. The Armat M41A Pulse Rifle is a pulse-action assault rifle chambered for 10×24mm Caseless ammunition. 'PEACE THROUGH SUPERIOR FIREPOWER' is stamped into the side of the aluminium chassis."
 	caliber = "10x24mm"
+	item_icons = list(
+		slot_l_hand_str = 'icons/mob/items/lefthand_guns_ch.dmi',
+		slot_r_hand_str = 'icons/mob/items/righthand_guns_ch.dmi',
+		)
+	item_state = "m41a"
+	wielded_item_state = "m41a-wielded"
 	magazine_type = /obj/item/ammo_magazine/m41
 	allowed_magazines = list(/obj/item/ammo_magazine/m41)
 	icon_state="m41a"
@@ -487,6 +546,12 @@
 	name = "Type 901 Assault rifle"
 	desc = "A heavy bullpup assault rifle of unknown make, with a very high muzzle velocity and fair accuracy. A favorite of scum and villainy everywhere due to its complete lack of identification markings. Popularized by the 2541 movie, 'Boarding Party'. Chambered in 7.62x51mm."
 	caliber = "7.62mm"
+	item_icons = list(
+		slot_l_hand_str = 'icons/mob/items/lefthand_guns_ch.dmi',
+		slot_r_hand_str = 'icons/mob/items/righthand_guns_ch.dmi',
+		)
+	item_state = "t901"
+	wielded_item_state = "t901-wielded"
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY | LOCK_SLAPPABLE
 	magazine_type = /obj/item/ammo_magazine/type901
 	allowed_magazines = list(/obj/item/ammo_magazine/type901)
@@ -514,6 +579,12 @@
 	name = "AWP"
 	desc = "A galaxy-wide favorite for hunting, target shooting, and rushing B. Legend has it, this rifle originated from three guys in a garage. This one is a reproduction. It has 'Scarborough Arms - Per falcis, per pravitas' inscribed on the stock. Chambered in .338 Lapua."
 	caliber = ".338"
+	item_icons = list(
+		slot_l_hand_str = 'icons/mob/items/lefthand_guns_ch.dmi',
+		slot_r_hand_str = 'icons/mob/items/righthand_guns_ch.dmi',
+		)
+	item_state = "awp"
+	wielded_item_state = "awp-wielded"
 	auto_loading_type = NO_AUTO_LOAD
 	magazine_type = /obj/item/ammo_magazine/awp
 	allowed_magazines = list(/obj/item/ammo_magazine/awp)
@@ -544,6 +615,12 @@
 	name = "Hectate II"
 	desc = "An old world anti material rifle. Ideal for dealing with mechs, armored personnel, and space dragons. Chambered in .50 BMG."
 	caliber = ".50 BMG"
+	item_icons = list(
+		slot_l_hand_str = 'icons/mob/items/lefthand_guns_ch.dmi',
+		slot_r_hand_str = 'icons/mob/items/righthand_guns_ch.dmi',
+		)
+	item_state = "hectate"
+	wielded_item_state = "hectate-wielded"
 	auto_loading_type = NO_AUTO_LOAD
 	magazine_type = /obj/item/ammo_magazine/hectate
 	allowed_magazines = list(/obj/item/ammo_magazine/hectate)
@@ -575,6 +652,12 @@
 	name = "Hardbass Special"
 	desc = "Три полоски, три по три полоски Три полоски, три по три полоски Три полоски, три по три полоски Три полоски, три по три полоски Три полоски, три по три полоски Три полоски, три по три полоски. Chambered in 7.62x39mm"
 	caliber = "7.62x39mm"
+	item_icons = list(
+		slot_l_hand_str = 'icons/mob/items/lefthand_guns_ch.dmi',
+		slot_r_hand_str = 'icons/mob/items/righthand_guns_ch.dmi',
+		)
+	item_state = "akm"
+	wielded_item_state = "akm-wielded"
 	magazine_type = /obj/item/ammo_magazine/akm
 	allowed_magazines = list(/obj/item/ammo_magazine/akm)
 	icon_state = "memegun"
@@ -690,6 +773,12 @@
 	name = "Spas-35"
 	desc = "A complex pump shotgun, modelled after the classic Spas-12. Upgraded with durable parts to fix the flaws of the classic. Also sometimes called the T-35, if you're with the SGC or the USDF. The absolute king of CQC encounters. 8 round capacity, chambered in 12 gauge."
 	caliber = "12g"
+	item_icons = list(
+		slot_l_hand_str = 'icons/mob/items/lefthand_guns_ch.dmi',
+		slot_r_hand_str = 'icons/mob/items/righthand_guns_ch.dmi',
+		)
+	item_state = "spas12"
+	wielded_item_state = "spas12-wielded"
 	icon_state = "spas12"
 	ammo_type = /obj/item/ammo_casing/a12g/pellet
 	projectile_type = /obj/item/projectile/bullet/shotgun
@@ -710,6 +799,12 @@
 	name = "PPSh-17b"
 	desc = "A cheap remake of the venerable russian PPSh-41. Empties a 71 round magazine in less than 10 seconds. Compensates for poor accuracy with volume of bullet. Every inscription on this thing is in pan-slavic. Chambered in 7.62x25mm Tokarev."
 	caliber = "7.62x25mm"
+	item_icons = list(
+		slot_l_hand_str = 'icons/mob/items/lefthand_guns_ch.dmi',
+		slot_r_hand_str = 'icons/mob/items/righthand_guns_ch.dmi',
+		)
+	item_state = "ppsh"
+	wielded_item_state = "ppsh-wielded"
 	magazine_type = /obj/item/ammo_magazine/ppsh
 	allowed_magazines = list(/obj/item/ammo_magazine/ppsh)
 	icon_state="ppsh"
@@ -726,6 +821,12 @@
 	name = "MP5"
 	desc = "A favorite of law enforcement and corporate security across the galaxy for centuries. This old H&K design has survived the test of time. And while in many places it has been replaced long ago, it still stands as a reliable weapon platform. No need to fix what isn't broken. Chambered in 9mm."
 	caliber = "9mm"
+	item_icons = list(
+		slot_l_hand_str = 'icons/mob/items/lefthand_guns_ch.dmi',
+		slot_r_hand_str = 'icons/mob/items/righthand_guns_ch.dmi',
+		)
+	item_state = "mp5"
+	wielded_item_state = "mp5-wielded"
 	magazine_type = /obj/item/ammo_magazine/mp5mag
 	allowed_magazines = list(/obj/item/ammo_magazine/mp5mag)
 	icon_state="mp5"
@@ -1219,11 +1320,9 @@
 	. = ..()
 	transform = transform.Translate(-16,0)
 
-/obj/item/weapon/gun/projectile/automatic/p90	//Finally a gun that exists irl. oh wait fuck they decided to chamber the p90 in 9mm //Fixed bb
+/obj/item/weapon/gun/projectile/automatic/p90
 	muzzle_velocity = 715	//Guestimation. Will hopefully be able to replace with actual 5.7mm at some point. //Done
-	desc = "The H90K is a compact, large capacity submachine gun produced by MarsTech. Despite its fierce reputation, it still manages to feel like a toy. Uses 5.7x28mm rounds."
-	caliber = "5.7x28mm"
-	allowed_magazines = list(/obj/item/ammo_magazine/m9mmp90)
+	allowed_magazines = list(/obj/item/ammo_magazine/a57p90)
 
 /obj/item/weapon/gun/projectile/automatic/tommygun	//Phew, an actual gun that fires the correct cartridge.
 	auto_loading_type = OPEN_BOLT

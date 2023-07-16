@@ -47,9 +47,6 @@
 "aq" = (
 /turf/simulated/floor/plating/sif/planetuse,
 /area/surface/outside/path/wilderness)
-"ar" = (
-/turf/simulated/floor/wood,
-/area/surface/outside/path/wilderness)
 "as" = (
 /turf/simulated/wall/wood,
 /area/surface/outside/path/wilderness)
@@ -163,6 +160,9 @@
 /area/surface/outside/river/svartan)
 "aS" = (
 /turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15;
 	outdoors = 1
 	},
 /area/surface/outside/path/wilderness)
@@ -727,7 +727,12 @@
 /obj/effect/map_effect/portal/master/side_a/wilderness_to_valley{
 	dir = 4
 	},
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15;
+	outdoors = 1
+	},
 /area/surface/outside/river/svartan)
 "xA" = (
 /obj/machinery/light/bigfloorlamp,
@@ -759,7 +764,12 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/shelter/utilityroom)
 "As" = (
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15;
+	outdoors = 1
+	},
 /area/surface/outside/river/svartan)
 "AB" = (
 /obj/effect/zone_divider,
@@ -800,7 +810,12 @@
 /obj/effect/map_effect/portal/line/side_a{
 	dir = 4
 	},
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15;
+	outdoors = 1
+	},
 /area/surface/outside/river/svartan)
 "Dk" = (
 /obj/structure/sign/department/medbay{
@@ -17003,14 +17018,14 @@ ae
 ai
 ae
 ao
-ar
-ar
-ar
+aS
+aS
+aS
 aS
 aB
-ar
-ar
-ar
+aS
+aS
+aS
 ao
 ao
 at
@@ -17261,14 +17276,14 @@ ae
 ae
 ae
 ae
-ar
-ar
+aS
+aS
 ax
 aS
 aS
-ar
-ar
-ar
+aS
+aS
+aS
 at
 ao
 ao
@@ -51587,15 +51602,15 @@ aj
 aj
 ao
 ao
-ar
-ar
-ar
-ar
-ar
-ar
-ar
-ar
-ar
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
 ao
 xt
 aG
@@ -51845,15 +51860,15 @@ aj
 aj
 ao
 ao
-ar
-ar
-ar
-ar
-ar
-ar
-ar
-ar
-ar
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
 ao
 xt
 ao
@@ -59678,8 +59693,8 @@ aK
 aK
 aK
 aK
-ar
-ar
+aS
+aS
 aK
 aM
 aM
@@ -59936,8 +59951,8 @@ aK
 aK
 aK
 aK
-ar
-ar
+aS
+aS
 aK
 aK
 aK
@@ -60194,8 +60209,8 @@ aK
 aK
 aK
 aK
-ar
-ar
+aS
+aS
 aK
 aK
 aK
