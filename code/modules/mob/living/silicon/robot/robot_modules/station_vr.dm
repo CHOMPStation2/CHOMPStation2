@@ -28,7 +28,7 @@
 					LANGUAGE_ROOTLOCAL	= 0,
 					LANGUAGE_GUTTER		= 0,
 					LANGUAGE_SCHECHI	= 1,
-					LANGUAGE_EAL		= 1,
+					//LANGUAGE_EAL		= 1, //CHOMPRemoval - all robos get this by default and having it in the list causes issues
 					LANGUAGE_SIGN		= 0,
 					LANGUAGE_BIRDSONG	= 1,
 					LANGUAGE_SAGARU		= 1,
