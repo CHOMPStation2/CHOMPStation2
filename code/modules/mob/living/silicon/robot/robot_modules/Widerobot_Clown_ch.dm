@@ -11,7 +11,8 @@
 /obj/item/weapon/robot_module/robot/clerical/honkborg
 	name = "honk-hound module"
 	sprites = list(
-					"Honkborg" = "honkborg"
+					"Honkborg" = "honkborg",
+					"K4T" = "k4tclown" //CHOMPEdit - Tallborgs
 					)
 	channels = list("Service" = 1,
 					"Entertainment" = 1)

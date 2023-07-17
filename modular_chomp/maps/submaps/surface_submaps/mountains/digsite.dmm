@@ -16,7 +16,11 @@
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/digsite)
 "f" = (
-/turf/simulated/floor/tiled/kafel_full/yellow,
+/turf/simulated/floor/tiled/kafel_full/yellow{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/digsite)
 "g" = (
 /turf/simulated/floor/plating/external,
@@ -27,28 +31,52 @@
 /area/submap/cave/digsite)
 "i" = (
 /obj/structure/bed/alien,
-/turf/simulated/floor/tiled/kafel_full/yellow,
+/turf/simulated/floor/tiled/kafel_full/yellow{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/digsite)
 "j" = (
 /obj/structure/cult/talisman,
-/turf/simulated/floor/tiled/kafel_full/yellow,
+/turf/simulated/floor/tiled/kafel_full/yellow{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/digsite)
 "k" = (
 /obj/machinery/artifact,
 /obj/structure/anomaly_container,
-/turf/simulated/floor/tiled/kafel_full/yellow,
+/turf/simulated/floor/tiled/kafel_full/yellow{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/digsite)
 "l" = (
 /obj/structure/simple_door/sandstone,
-/turf/simulated/floor/tiled/kafel_full/yellow,
+/turf/simulated/floor/tiled/kafel_full/yellow{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/digsite)
 "m" = (
 /obj/structure/loot_pile/surface/alien,
-/turf/simulated/floor/tiled/kafel_full/yellow,
+/turf/simulated/floor/tiled/kafel_full/yellow{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/digsite)
 "n" = (
 /mob/living/simple_mob/animal/passive/tindalos,
-/turf/simulated/floor/tiled/kafel_full/yellow,
+/turf/simulated/floor/tiled/kafel_full/yellow{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cave/digsite)
 "o" = (
 /obj/structure/closet/crate/secure/loot,

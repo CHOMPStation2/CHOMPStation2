@@ -4247,10 +4247,6 @@
 /area/shuttle/transport1/centcom)
 "dsR" = (
 /obj/structure/table/rack,
-/obj/item/ammo_magazine/m9mmp90,
-/obj/item/ammo_magazine/m9mmp90,
-/obj/item/ammo_magazine/m9mmp90,
-/obj/item/ammo_magazine/m9mmp90,
 /obj/item/weapon/gun/projectile/automatic/p90,
 /obj/item/weapon/gun/projectile/automatic/p90,
 /turf/unsimulated/floor{
@@ -9688,7 +9684,7 @@
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_theatre)
 "iye" = (
-/turf/unsimulated/elevator_shaft,
+/turf/simulated/floor/reinforced,
 /area/shadekin)
 "iyB" = (
 /obj/machinery/door/airlock{
@@ -22045,7 +22041,7 @@
 	nightshift_enabled = 1;
 	pixel_y = 10
 	},
-/turf/unsimulated/elevator_shaft,
+/turf/simulated/floor/reinforced,
 /area/shadekin)
 "uvq" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -23732,7 +23728,7 @@
 /area/shadekin)
 "wbJ" = (
 /obj/structure/fans/hardlight/colorable/abductor,
-/turf/unsimulated/elevator_shaft,
+/turf/simulated/floor/reinforced,
 /area/shadekin)
 "wbS" = (
 /obj/structure/table/reinforced,
