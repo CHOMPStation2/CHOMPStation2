@@ -169,7 +169,7 @@
 		return
 	src.add_fingerprint(user)
 	if(density)
-		if(allowed(user) && can_open()) 	open() //CHOMPEdit
+		if(allowed(user))	open()
 		else				do_animate("deny")
 	return
 
