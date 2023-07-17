@@ -111,6 +111,8 @@ for fileName in glob.glob(os.path.join(args.ymlDir, "*.yml")):
     if name == 'example': continue
     fileName = os.path.abspath(fileName)
     formattedDate = today.strftime(fileDateFormat)
+    if not os.path.exists(archiveDir):
+        os.makedirs(archiveDir)
     monthFile = os.path.join(archiveDir, formattedDate + '.yml')
     print(' Reading {}...'.format(fileName))
     cl = {}
