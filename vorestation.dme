@@ -4562,6 +4562,7 @@
 #include "modular_chomp\code\game\machinery\autolathe_armory.dm"
 #include "modular_chomp\code\game\machinery\colormate.dm"
 #include "modular_chomp\code\game\machinery\petrification.dm"
+#include "modular_chomp\code\game\machinery\doors\windowdoor.dm"
 #include "modular_chomp\code\game\objects\items.dm"
 #include "modular_chomp\code\game\objects\items\petrifier.dm"
 #include "modular_chomp\code\game\objects\items\clockwork\ratvarian_spear.dm"
