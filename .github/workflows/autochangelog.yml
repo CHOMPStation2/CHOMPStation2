@@ -38,5 +38,5 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Automatic changelog generation for ${{ github.event.pull_request.number }}
-          branch: ${{ github.event.pull_request.base }}
+          branch: ${{ github.event.pull_request.base.ref }}
           commit_user_name: Autochangelog Bot
