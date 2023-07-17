@@ -180,7 +180,7 @@
 		add_overlay("wreck-overlay")
 
 /mob/living/silicon/robot/proc/vr_sprite_check()
-	vis_height = 32
+	vis_height = 32 // CHOMPedit: sanitizing tile centering for larger sprites.
 	if(custom_sprite == TRUE)
 		return
 	if(wideborg == TRUE)
@@ -196,8 +196,8 @@
 			icon = 'modular_chomp/icons/mob/raptorborg/raptor_ch.dmi' //CHOMPADDITION: letting us redurect to our raptor dmi
 		else if(icontype == "MEKA" || icontype == "MEKAalt" || icontype == "NIKO" || icontype == "NIKA" || icontype == "K4T" || icontype == "K4Talt")
 			icon = 'modular_chomp/icons/mob/tallborg/tallrobots-wide.dmi' //CHOMPEDIT: TallBorg, I dunno how to code but i'll love it if someone could change this mess into how TG does it
-			vis_height = 64
-			update_transform()
+			vis_height = 64 // CHOMPedit: sanitizing tile centering for larger sprites.
+			update_transform() // CHOMPedit: sanitizing tile centering for larger sprites.
 		else
 			icon = wideborg_dept
 		return
