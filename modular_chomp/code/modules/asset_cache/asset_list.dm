@@ -4,7 +4,7 @@
 
 /datum/asset/changelog_item/New(date)
 	item_filename = sanitize_filename("[date].yml")
-	register_asset(item_filename, file("html/changelogs/archive/" + item_filename))
+	register_asset(item_filename, file("html/changelogs_ch/archive/" + item_filename))
 
 /datum/asset/changelog_item/send(client)
 	if (!item_filename)

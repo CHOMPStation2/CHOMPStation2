@@ -28,7 +28,7 @@
 	//VOREStation Edit End
 
 	// CHOMPedit Start - Better Changelogs
-	var/latest_changelog = file("/html/changelogs/archive/" + time2text(world.timeofday, "YYYY-MM") + ".yml")
+	var/latest_changelog = file("/html/changelogs_ch/archive/" + time2text(world.timeofday, "YYYY-MM") + ".yml")
 	changelog_hash = fexists(latest_changelog) ? md5(latest_changelog) : 0 //for telling if the changelog has changed recently
 	// CHOMPedit End
 

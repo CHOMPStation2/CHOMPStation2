@@ -1,6 +1,6 @@
 '''
 Usage:
-    $ python ss13_autochangelog.py [--dry-run] html/changelogs [PR_number] [PR_author] [PR_Body]
+    $ python ss13_autochangelog.py [--dry-run] html/changelogs_ch [PR_number] [PR_author] [PR_Body]
 
 ss13_autochangelog.py - Generate changelog YAML files from pull request.
 '''
@@ -26,15 +26,15 @@ all_changelog_entries = {}
 
 validPrefixes = {
     "fix": 'bugfix',
+    "fixed": 'bugfix',
 	"fixes": 'bugfix',
 	"bugfix": 'bugfix',
     "wip": 'wip',
-    "tweak": 'tweak',
-	"tweaks": 'tweak',
-	"rsctweak": 'tweak',
+    "qol": 'qol',
     "soundadd": 'soundadd',
     "sounddel": 'sounddel',
     "add": 'rscadd',
+    "added": 'rscadd',
     "adds": 'rscadd',
 	"rscadd": 'rscadd',
     "del": 'rscdel',
@@ -51,7 +51,13 @@ validPrefixes = {
 	"spellcheck": 'spellcheck',
     "experimental": 'experiment',
 	"experiments": 'experiment',
-	"experiment": 'experiment'
+	"experiment": 'experiment',
+    "balance": 'balance',
+    "code_imp": 'code_imp',
+    "refactor": 'refactor',
+    "config": 'config',
+    "admin": 'admin',
+    "server": 'server',
 }
 
 incltag = False
