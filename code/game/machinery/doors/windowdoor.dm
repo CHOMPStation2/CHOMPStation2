@@ -65,13 +65,13 @@
 	if (!( ismob(AM) ))
 		var/mob/living/bot/bot = AM
 		if(istype(bot))
-			if(density && src.check_access(bot.botcard))
+			if(density && src.check_access(bot.botcard) && can_open()) //CHOMPEdit
 				open()
 				addtimer(CALLBACK(src, PROC_REF(close)), 50)
 		else if(istype(AM, /obj/mecha))
 			var/obj/mecha/mecha = AM
 			if(density)
-				if(mecha.occupant && src.allowed(mecha.occupant))
+				if(mecha.occupant && src.allowed(mecha.occupant) && can_open()) //CHOMPEdit
 					open()
 					addtimer(CALLBACK(src, PROC_REF(close)), 50)
 		return
@@ -79,7 +79,7 @@
 		return
 	if (src.operating)
 		return
-	if (density && allowed(AM))
+	if (density && allowed(AM) && can_open()) //CHOMPEdit
 		open()
 		addtimer(CALLBACK(src, PROC_REF(close)), check_access(null)? 50 : 20)
 
@@ -162,7 +162,7 @@
 			take_damage(25)
 			return
 
-	if (src.allowed(user))
+	if (src.allowed(user) && can_open()) //CHOMPEdit
 		if (src.density)
 			open()
 		else
@@ -215,40 +215,44 @@
 			return 1
 
 		//If it's opened/emagged, crowbar can pry it out of its frame.
-		if (!density && I.is_crowbar())
-			playsound(src, I.usesound, 50, 1)
-			user.visible_message("[user] begins prying the windoor out of the frame.", "You start to pry the windoor out of the frame.")
-			if (do_after(user,40 * I.toolspeed))
-				to_chat(user,"<span class='notice'>You pried the windoor out of the frame!</span>")
+		if(I.is_crowbar()) //CHOMPEdit - this whole if block, making windoors able to be opened with no power
+			if(density)
+				if(can_open(1))
+					open()
+			else
+				playsound(src, I.usesound, 50, 1)
+				user.visible_message("[user] begins prying the windoor out of the frame.", "You start to pry the windoor out of the frame.")
+				if (do_after(user,40 * I.toolspeed))
+					to_chat(user,"<span class='notice'>You pried the windoor out of the frame!</span>")
 
-				var/obj/structure/windoor_assembly/wa = new/obj/structure/windoor_assembly(src.loc)
-				if (istype(src, /obj/machinery/door/window/brigdoor))
-					wa.secure = "secure_"
-				if (src.base_state == "right" || src.base_state == "rightsecure")
-					wa.facing = "r"
-				wa.set_dir(src.dir)
-				wa.anchored = TRUE
-				wa.created_name = name
-				wa.state = "02"
-				wa.step = 2
-				wa.update_state()
+					var/obj/structure/windoor_assembly/wa = new/obj/structure/windoor_assembly(src.loc)
+					if (istype(src, /obj/machinery/door/window/brigdoor))
+						wa.secure = "secure_"
+					if (src.base_state == "right" || src.base_state == "rightsecure")
+						wa.facing = "r"
+					wa.set_dir(src.dir)
+					wa.anchored = TRUE
+					wa.created_name = name
+					wa.state = "02"
+					wa.step = 2
+					wa.update_state()
 
-				if(operating == -1)
-					wa.electronics = new/obj/item/weapon/circuitboard/broken()
-				else
-					if(!electronics)
-						wa.electronics = new/obj/item/weapon/airlock_electronics()
-						if(LAZYLEN(req_access))
-							wa.electronics.conf_access = req_access
-						else if (LAZYLEN(req_one_access))
-							wa.electronics.conf_access = req_one_access
-							wa.electronics.one_access = 1
+					if(operating == -1)
+						wa.electronics = new/obj/item/weapon/circuitboard/broken()
 					else
-						wa.electronics = electronics
-						electronics = null
-				operating = 0
-				qdel(src)
-				return
+						if(!electronics)
+							wa.electronics = new/obj/item/weapon/airlock_electronics()
+							if(LAZYLEN(req_access))
+								wa.electronics.conf_access = req_access
+							else if (LAZYLEN(req_one_access))
+								wa.electronics.conf_access = req_one_access
+								wa.electronics.one_access = 1
+						else
+							wa.electronics = electronics
+							electronics = null
+					operating = 0
+					qdel(src)
+					return
 
 		//If it's a weapon, smash windoor. Unless it's an id card, agent card, ect.. then ignore it (Cards really shouldnt damage a door anyway)
 		if(src.density && istype(I, /obj/item/weapon) && !istype(I, /obj/item/weapon/card))
@@ -263,7 +267,7 @@
 
 	src.add_fingerprint(user)
 
-	if (src.allowed(user))
+	if (src.allowed(user) && can_open()) //CHOMPEdit
 		if (src.density)
 			open()
 		else
