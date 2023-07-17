@@ -40,6 +40,23 @@
 	var/muzzled = is_muzzled()
 	if(m_type == 2 && muzzled) return
 
+<<<<<<< HEAD
+=======
+	var/subtle_mode
+	if(autowhisper && autowhisper_mode && !mode_selection)
+		if(autowhisper_mode != "Psay/Pme")	//This isn't actually a custom subtle mode, so we shouldn't use it!
+			subtle_mode = autowhisper_mode
+	if(mode_selection && !subtle_mode)
+		subtle_mode = tgui_input_list(src, "Select Custom Subtle Mode", "Custom Subtle Mode", list("Adjacent Turfs (Default)", "My Turf", "My Table", "Current Belly (Prey)", "Specific Belly (Pred)", "Specific Person"))
+	if(!subtle_mode)
+		if(mode_selection)
+			if(message)
+				to_chat(src, "<span class='warning'>Subtle mode not selected. Your input has not been sent, but preserved:</span> [message]")
+			return
+		else
+			subtle_mode = "Adjacent Turfs (Default)"
+
+>>>>>>> 662c7e356e... Merge pull request #15152 from Very-Soft/range
 	var/input
 	if(!message)
 		input = sanitize_or_reflect(tgui_input_text(src,"Choose an emote to display."), src)
