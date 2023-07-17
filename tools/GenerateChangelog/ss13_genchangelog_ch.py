@@ -142,7 +142,7 @@ for fileName in glob.glob(os.path.join(args.ymlDir, "*.yml")):
             print('  Deleting {0} (delete-after set)...'.format(fileName))
             os.remove(fileName)
 
-    with open(monthFile, 'w', encoding='utf-8') as f:
+    with open(monthFile, 'w+', encoding='utf-8') as f:
         yaml.dump(currentEntries, f, default_flow_style=False)
 
 if errors:
