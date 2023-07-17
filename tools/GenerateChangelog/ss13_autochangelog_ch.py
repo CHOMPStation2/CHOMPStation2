@@ -69,14 +69,17 @@ new = 0
 print('Reading changelogs...')
 for line in args.pr_body.splitlines():
 	print(f"Checking line '{line}'")
-	if line == "🆑" or line == ":cl:": # Find the start of the changelog
+	if line[:1] == "🆑" or line[:4] == ":cl:": # Find the start of the changelog
 		print("Found opening :cl: tag")
 		if incltag == True: # If we're already reading logs, skip
 			continue
 		incltag = True
 
 		# Fetch the author name
-		author = line[1:]
+		if line[:1] == "🆑":
+			author = line[1:]
+		elif line[:4] == ":cl:":
+			author = line[4:]
 		author.strip()
 
 		if not len(author):
