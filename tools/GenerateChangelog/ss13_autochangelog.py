@@ -26,6 +26,7 @@ all_changelog_entries = {}
 
 validPrefixes = {
     "fix": 'bugfix',
+    "fixed": 'bugfix',
 	"fixes": 'bugfix',
 	"bugfix": 'bugfix',
     "wip": 'wip',
@@ -33,6 +34,7 @@ validPrefixes = {
     "soundadd": 'soundadd',
     "sounddel": 'sounddel',
     "add": 'rscadd',
+    "added": 'rscadd',
     "adds": 'rscadd',
 	"rscadd": 'rscadd',
     "del": 'rscdel',
