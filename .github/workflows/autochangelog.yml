@@ -29,13 +29,12 @@ jobs:
         run: |
           pip install pyyaml
           python tools/GenerateChangelog/ss13_autochangelog.py \
-            html/changelogs \
+            html/changelogs_ch \
             ${{ github.event.pull_request.number }} \
             "${{ github.event.pull_request.user.login }}" \
             "${{ github.event.pull_request.body }}"
           python tools/GenerateChangelog/ss13_genchangelog.py \
-            html/changelog.html \
-            html/changelogs
+            html/changelogs_ch
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Automatic changelog generation for ${{ github.events.pull_request.number }}
