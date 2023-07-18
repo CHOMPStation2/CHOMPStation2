@@ -39,6 +39,8 @@
 
 // Special treatment for some the more complicated heads
 
+/* CHOMPedit Remove: PTO now goes to Off-Duty Command. *
+
 // Captain gets every department combined
 /datum/job/captain/available_in_playhours(client/C)
 	if(C && config.use_playtime_restriction_for_jobs && dept_time_required)
@@ -61,6 +63,8 @@
 			remaining_time_needed = max(0, remaining_time_needed - C.play_hours[PTO_EXPLORATION])
 		return remaining_time_needed
 	return 0
+
+* CHOMPedit Remove: PTO now goes to Off-Duty Command. */
 
 /datum/job/proc/get_request_reasons()
 	return list()

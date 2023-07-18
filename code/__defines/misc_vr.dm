@@ -59,6 +59,7 @@
 #define PTO_CIVILIAN		"Civilian"
 #define PTO_CYBORG			"Cyborg"
 #define PTO_TALON			"Talon Contractor"
+#define PTO_COMMAND			"Command" // CHOMPedit: Off-Duty Command.
 
 #define DEPARTMENT_TALON	"ITV Talon"
 

@@ -1,6 +1,6 @@
 /datum/job/captain
 	disallow_jobhop = TRUE
-	pto_type = PTO_CIVILIAN
+	pto_type = PTO_COMMAND // CHOMPedit: Off-duty Command.
 	dept_time_required = 80 //Pending something more complicated
 	alt_titles = list("Overseer"= /datum/alt_title/overseer, "Facility Director" = /datum/alt_title/facility_director, "Chief Supervisor" = /datum/alt_title/chief_supervisor,
 						"Captain" = /datum/alt_title/captain)
@@ -19,7 +19,7 @@
 
 /datum/job/hop
 	disallow_jobhop = TRUE
-	pto_type = PTO_CIVILIAN
+	pto_type = PTO_COMMAND // CHOMPedit: Off-duty Command.
 	departments = list(DEPARTMENT_COMMAND, DEPARTMENT_CIVILIAN)
 	departments_managed = list(DEPARTMENT_CIVILIAN, DEPARTMENT_CARGO, DEPARTMENT_PLANET)
 	dept_time_required = 60
@@ -58,7 +58,7 @@
 
 /datum/job/secretary
 	disallow_jobhop = TRUE
-	pto_type = PTO_CIVILIAN
+	pto_type = PTO_COMMAND // CHOMPedit: Off-duty Command.
 	alt_titles = list("Command Liaison" = /datum/alt_title/command_liaison, "Command Assistant" = /datum/alt_title/command_assistant, "Command Intern" = /datum/alt_title/command_intern,
 						"Bridge Secretary" = /datum/alt_title/bridge_secretary, "Bridge Assistant" = /datum/alt_title/bridge_assistant)
 

@@ -113,3 +113,23 @@
 	job_description = "Off-duty crew has no responsibilities or authority and is just there to spend their well-deserved time off."
 	pto_type = PTO_EXPLORATION
 	economic_modifier = 5
+
+// CHOMPedit Start: Off-Duty Command.
+
+/datum/job/offduty_command
+	title = "Off-duty Command"
+	latejoin_only = TRUE
+	timeoff_factor = -1
+	total_positions = -1
+	faction = "Station"
+	departments = list(DEPARTMENT_OFFDUTY)
+	supervisors = "nobody! Enjoy your time off"
+	selection_color = "#9b633e"
+	access = list(access_maint_tunnels)
+	minimal_access = list(access_maint_tunnels)
+	outfit_type = /decl/hierarchy/outfit/job/assistant/worker
+	job_description = "Off-duty crew has no responsibilities or authority and is just there to spend their well-deserved time off."
+	pto_type = PTO_COMMAND
+	economic_modifier = 7
+
+// CHOMPedit End.
