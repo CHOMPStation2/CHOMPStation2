@@ -28,7 +28,7 @@
 
 	melee_damage_lower = 12		// Lower bound of randomized melee damage
 	melee_damage_upper = 12		// Upper bound of randomized melee damage
-	list/attacktext = list("incinerate") // "You are [attacktext] by the mob!"
+	attacktext = list("incinerate") // "You are [attacktext] by the mob!"
 	melee_miss_chance = 0			// percent chance to miss a melee attack.
 	attack_armor_type = "energy"		// What armor does this check?
 	attack_armor_pen = 30			// How much armor pen this attack has.
@@ -42,7 +42,7 @@
 	//Damage resistances
 	grab_resist = 0				// Chance for a grab attempt to fail. Note that this is not a true resist and is just a prob() of failure.
 	resistance = 0				// Damage reduction for all types
-	list/armor = list(			// Values for normal getarmor() checks
+	armor = list(			// Values for normal getarmor() checks
 				"melee" = 0,
 				"bullet" = 95,
 				"laser" = 100,
@@ -51,7 +51,7 @@
 				"bio" = 100,
 				"rad" = 100
 				)
-	list/armor_soak = list(		// Values for getsoak() checks.
+	armor_soak = list(		// Values for getsoak() checks.
 				"melee" = 15,
 				"bullet" = 15,
 				"laser" = 15,
@@ -65,6 +65,7 @@
 	cold_resist = 1.0
 	shock_resist = 0.0
 	water_resist = 0.0
+	taser_kill = 0
 
 	var/mycolour = COLOR_RED //Variable Lighting colours
 	var/original_temp = null //Value to remember temp
@@ -129,7 +130,7 @@
 
 	melee_damage_lower = 30		// Lower bound of randomized melee damage
 	melee_damage_upper = 30		// Upper bound of randomized melee damage
-	list/attacktext = list("attacked") // "You are [attacktext] by the mob!"
+	attacktext = list("attacked") // "You are [attacktext] by the mob!"
 	melee_miss_chance = 0			// percent chance to miss a melee attack.
 	attack_armor_type = "melee"		// What armor does this check?
 	attack_armor_pen = 0			// How much armor pen this attack has.
@@ -144,7 +145,7 @@
 	//Damage resistances
 	grab_resist = 0				// Chance for a grab attempt to fail. Note that this is not a true resist and is just a prob() of failure.
 	resistance = 0				// Damage reduction for all types
-	list/armor = list(			// Values for normal getarmor() checks
+	armor = list(			// Values for normal getarmor() checks
 				"melee" = 100,
 				"bullet" = 100,
 				"laser" = 0,
@@ -153,7 +154,7 @@
 				"bio" = 100,
 				"rad" = 100
 				)
-	list/armor_soak = list(		// Values for getsoak() checks.
+	armor_soak = list(		// Values for getsoak() checks.
 				"melee" = 15,
 				"bullet" = 15,
 				"laser" = 0,
@@ -205,7 +206,7 @@
 
 	melee_damage_lower = 2		// Lower bound of randomized melee damage
 	melee_damage_upper = 2		// Upper bound of randomized melee damage
-	list/attacktext = list("pinches") // "You are [attacktext] by the mob!"
+	attacktext = list("pinches") // "You are [attacktext] by the mob!"
 	melee_miss_chance = 0			// percent chance to miss a melee attack.
 	attack_armor_type = "melee"		// What armor does this check?
 	attack_armor_pen = 100			// How much armor pen this attack has.
@@ -219,7 +220,7 @@
 	//Damage resistances
 	grab_resist = 0				// Chance for a grab attempt to fail. Note that this is not a true resist and is just a prob() of failure.
 	resistance = 0				// Damage reduction for all types
-	list/armor = list(			// Values for normal getarmor() checks
+	armor = list(			// Values for normal getarmor() checks
 				"melee" = 0,
 				"bullet" = 0,
 				"laser" = 100,
@@ -228,7 +229,7 @@
 				"bio" = 100,
 				"rad" = 100
 				)
-	list/armor_soak = list(		// Values for getsoak() checks.
+	armor_soak = list(		// Values for getsoak() checks.
 				"melee" = 0,
 				"bullet" = 0,
 				"laser" = 0,
@@ -242,6 +243,7 @@
 	cold_resist = 0.0
 	shock_resist = 0.0
 	water_resist = 1.0
+	taser_kill = 0
 	var/rads = 75
 
 /mob/living/simple_mob/vore/radcrab/handle_special()
