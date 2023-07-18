@@ -215,7 +215,7 @@
 			return 1
 
 		//If it's opened/emagged, crowbar can pry it out of its frame.
-		if(I.is_crowbar()) //CHOMPEdit - this whole if block, making windoors able to be opened with no power
+		if(I.is_crowbar()) //CHOMPEdit Start - this whole if block, making windoors able to be opened with no power
 			if(density)
 				if(can_open(1))
 					open()
@@ -252,7 +252,7 @@
 							electronics = null
 					operating = 0
 					qdel(src)
-					return
+					return //CHOMPEdit End
 
 		//If it's a weapon, smash windoor. Unless it's an id card, agent card, ect.. then ignore it (Cards really shouldnt damage a door anyway)
 		if(src.density && istype(I, /obj/item/weapon) && !istype(I, /obj/item/weapon/card))
