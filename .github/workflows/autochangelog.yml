@@ -12,6 +12,7 @@ jobs:
   autochangelog:
     name: Autochangelog
     runs-on: ubuntu-20.04
+    concurrency: autochangelog_group
     if: github.event.pull_request.merged == true
     steps:
       - uses: /actions/checkout@v3
