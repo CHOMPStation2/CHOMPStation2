@@ -456,7 +456,7 @@
 	dir = 4;
 	health = 1e+006
 	},
-/obj/item/weapon/material/twohanded/sledgehammer/mjollnir,
+/obj/item/weapon/twohanded/fireaxe/fluff/mjollnir,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/ExplorerHome)
 "be" = (
