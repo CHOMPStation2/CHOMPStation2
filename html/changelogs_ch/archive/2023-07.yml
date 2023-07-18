@@ -12,5 +12,7 @@
   Jesseman1:
   - rscadd: Added new orca tail and markings.
   - bugfix: Updated female orca markings to display as intended.
+  UniquaSa:
+  - imageadd: Tallborgs finally receive some bellies, Thank you Kcin!
   Upstream:
   - bugfix: PDA records missing linebreaks & fixes communicator weather app gibberish
