@@ -5,3 +5,5 @@
 2023-07-18:
   FluffMedic:
   - bugfix: fixes the coloring of a medkit.
+  Upstream:
+  - bugfix: PDA records missing linebreaks & fixes communicator weather app gibberish
