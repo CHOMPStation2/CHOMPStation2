@@ -3,6 +3,8 @@
   - rscadd: 'Adds alt job title for secretary: Bridge Officer'
   - rscadd: Adds some start gear for Bridge Officer title
 2023-07-18:
+  Aroliacue:
+  - qol: Upped Cyborg job limit from 4 to 8.
   FluffMedic:
   - bugfix: fixes the coloring of a medkit.
   Upstream:
