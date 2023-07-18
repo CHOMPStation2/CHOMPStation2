@@ -9,5 +9,8 @@
   - bugfix: fixes the coloring of a medkit.
   FoxglovePurpur:
   - bugfix: Fix a typo in 'posessed'
+  Jesseman1:
+  - rscadd: Added new orca tail and markings.
+  - bugfix: Updated female orca markings to display as intended.
   Upstream:
   - bugfix: PDA records missing linebreaks & fixes communicator weather app gibberish
