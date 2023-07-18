@@ -1,10 +1,10 @@
 #define LOC_RIOT 0
 #define LOC_ATMOS 1
 #define LOC_DISPOSAL 2
-#define LOC_SUBSTATIONC 3
-#define LOC_SUBSTATIONCAR 4
+#define LOC_CENTRAL 3
+#define LOC_CARGO 4
 #define LOC_TECH 5
-#define LOC_AXUENGI 6
+#define LOC_AUXILIARYENGINEERING 6
 #define LOC_VAULT 7
 
 
@@ -36,16 +36,16 @@
 		if(LOC_DISPOSAL)
 			spawn_area_type = /area/maintenance/disposal
 			locstring = "the disposal"
-		if(LOC_SUBSTATIONC)
+		if(LOC_CENTRAL)
 			spawn_area_type = /area/maintenance/substation/central
 			locstring = "the central substation"
-		if(LOC_SUBSTATIONCAR)
+		if(LOC_CARGO)
 			spawn_area_type = /area/maintenance/substation/firstdeck/cargo
 			locstring = "the first deck cargo substation"
 		if(LOC_TECH)
 			spawn_area_type = /area/storage/tech
 			locstring = "technical storage"
-		if(LOC_AXUENGI)
+		if(LOC_AUXILIARYENGINEERING)
 			spawn_area_type = /area/engineering/auxiliary_engineering
 			locstring = "auxilary engineering"
 		if(LOC_VAULT)
@@ -100,10 +100,10 @@
 #undef LOC_RIOT
 #undef LOC_ATMOS
 #undef LOC_DISPOSAL
-#undef LOC_SUBSTATIONC
-#undef LOC_SUBSTATIONCAR
-#undef LOC_TEC
-#undef LOC_AXUENGI
+#undef LOC_CENTRAL
+#undef LOC_CARGO
+#undef LOC_TECH
+#undef LOC_AUXILIARYENGINEERING
 #undef LOC_VAULT
 
 

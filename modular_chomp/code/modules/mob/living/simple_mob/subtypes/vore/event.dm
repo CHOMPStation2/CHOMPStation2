@@ -5,8 +5,8 @@
 	icon_state = "solarray"
 	icon_living = "solarray"
 	icon_dead = "solarray-dead"
-	health = 45
-	maxHealth = 45
+	health = 30
+	maxHealth = 30
 
 	movement_cooldown = 3			// Lower is faster.
 	aquatic_movement = 0			// If set, the mob will move through fluids with no hinderance.
@@ -106,8 +106,8 @@
 	icon_state = "hermitcrab"
 	icon_living = "hermitcrab"
 	icon_dead = "hermitcrab-dead"
-	health = 45
-	maxHealth = 45
+	health = 30
+	maxHealth = 30
 
 	movement_cooldown = 3			//VOREStation Edit - 1 is slower than normal human speed // Lower is faster.
 	aquatic_movement = 0			// If set, the mob will move through fluids with no hinderance.
@@ -182,8 +182,8 @@
 	icon_state = "hermitcrab"
 	icon_living = "hermitcrab"
 	icon_dead = "hermitcrab-dead"
-	health = 45
-	maxHealth = 45
+	health = 30
+	maxHealth = 30
 
 	movement_cooldown = 3			//VOREStation Edit - 1 is slower than normal human speed // Lower is faster.
 	aquatic_movement = 1			// If set, the mob will move through fluids with no hinderance.
