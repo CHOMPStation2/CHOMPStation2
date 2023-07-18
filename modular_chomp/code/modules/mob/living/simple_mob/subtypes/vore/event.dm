@@ -1,6 +1,6 @@
 /mob/living/simple_mob/vore/solarray //solar moth lite, dies to water
 	name = "solar ray"
-	desc = ""
+	desc = "A sting ray of fire, drifting around"
 	icon = 'modular_chomp/icons/mob/spaceinvader.dmi'
 	icon_state = "solarray"
 	icon_living = "solarray"
@@ -37,6 +37,7 @@
 
 	melee_attack_delay = 1.5			// If set, the mob will do a windup animation and can miss if the target moves out of the way.
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate
+	hovering = TRUE
 
 	//Damage resistances
 	grab_resist = 0				// Chance for a grab attempt to fail. Note that this is not a true resist and is just a prob() of failure.
@@ -65,7 +66,7 @@
 	shock_resist = 0.0
 	water_resist = 0.0
 
-	var/mycolour = COLOR_BLUE //Variable Lighting colours
+	var/mycolour = COLOR_RED //Variable Lighting colours
 	var/original_temp = null //Value to remember temp
 	var/set_temperature = T0C + 5000	//Sets the target point of 10k degrees celsius
 	var/heating_power = 50000
@@ -99,8 +100,8 @@
 	original_temp = heating_power
 
 /mob/living/simple_mob/vore/livingice //frost solar moth or blue slime on crack. Dies to lasers or slighly toasty rooms
-	name = "solar ray"
-	desc = ""
+	name = "living icicle"
+	desc = "A strange creature, a floating shard of ice"
 	icon = 'modular_chomp/icons/mob/spaceinvader.dmi'
 	icon_state = "hermitcrab"
 	icon_living = "hermitcrab"
@@ -138,6 +139,7 @@
 	melee_attack_delay = 3			// If set, the mob will do a windup animation and can miss if the target moves out of the way..
 
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate
+	hovering = TRUE
 
 	//Damage resistances
 	grab_resist = 0				// Chance for a grab attempt to fail. Note that this is not a true resist and is just a prob() of failure.
@@ -174,8 +176,8 @@
 		env.add_thermal_energy(-5 * 1000)
 
 /mob/living/simple_mob/vore/radcrab //bullets, melee, and cold all crack the poor thing's shell
-	name = "solar ray"
-	desc = ""
+	name = "crystaline crab"
+	desc = "A largeish hermit crab glowing green, irradting the nearby area"
 	icon = 'modular_chomp/icons/mob/spaceinvader.dmi'
 	icon_state = "hermitcrab"
 	icon_living = "hermitcrab"
@@ -212,6 +214,7 @@
 
 	melee_attack_delay = 0			// If set, the mob will do a windup animation and can miss if the target moves out of the way.
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate
+	hovering = TRUE
 
 	//Damage resistances
 	grab_resist = 0				// Chance for a grab attempt to fail. Note that this is not a true resist and is just a prob() of failure.
