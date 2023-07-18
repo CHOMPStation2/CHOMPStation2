@@ -7,5 +7,7 @@
   - qol: Upped Cyborg job limit from 4 to 8.
   FluffMedic:
   - bugfix: fixes the coloring of a medkit.
+  FoxglovePurpur:
+  - bugfix: Fix a typo in 'posessed'
   Upstream:
   - bugfix: PDA records missing linebreaks & fixes communicator weather app gibberish
