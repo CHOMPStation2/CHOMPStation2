@@ -18,6 +18,9 @@
       there are new changes since you last viewed
   - bugfix: fix bug with 'changelog_hash' var not being set properly
   - bugfix: fix changelog tgui links to be correct
+  - bugfix: remove species-locked customisaiton options for xeno heads(hair) and shadekin
+      hair
+  - bugfix: removes some missed fluff items
   Scarlet-Oduko:
   - rscadd: adds a new cult faction
   UniquaSa:
