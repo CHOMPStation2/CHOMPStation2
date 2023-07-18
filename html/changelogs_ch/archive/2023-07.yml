@@ -7,6 +7,7 @@
   - qol: Upped Cyborg job limit from 4 to 8.
   FluffMedic:
   - bugfix: fixes the coloring of a medkit.
+  - rscadd: 'Balance: Swaps an item to the proper version'
   FoxglovePurpur:
   - bugfix: Fix a typo in 'posessed'
   Jesseman1:
