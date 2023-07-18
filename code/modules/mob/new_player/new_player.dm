@@ -81,6 +81,13 @@
 		else
 			output += "<p><b><a href='byond://?src=\ref[src];open_station_news=1'>Show [using_map.station_name] News (NEW!)</A></b></p>"
 
+	//ChompEDIT start: Show Changelog
+	if(client.prefs.lastchangelog == changelog_hash)
+		output += "<p><a href='byond://?src=\ref[src];open_changelog=1'>Show Changelog</A></p>"
+	else
+		output += "<p><b><a href='byond://?src=\ref[src];open_changelog=1'>Show Changelog</A><br>(NEW!)</b></p>"
+	//ChompEDIT End
+
 	output += "</div>"
 
 	if (client.prefs.lastlorenews == GLOB.news_data.newsindex)
@@ -91,7 +98,7 @@
 		client.prefs.lastlorenews = GLOB.news_data.newsindex
 		SScharacter_setup.queue_preferences_save(client.prefs)
 
-	panel = new(src, "Welcome","Welcome", 210, 300, src) // VOREStation Edit
+	panel = new(src, "Welcome","Welcome", 210, 320, src) // VOREStation Edit //ChompEDIT, height 300 -> 320
 	panel.set_window_options("can_close=0")
 	panel.set_content(output)
 	panel.open()
@@ -349,6 +356,14 @@
 			client.feedback_form.display() // In case they closed the form early.
 		else
 			client.feedback_form = new(client)
+
+	//ChompEDIT START
+	if(href_list["open_changelog"])
+		client.prefs.lastchangelog = changelog_hash
+		SScharacter_setup.queue_preferences_save(client.prefs)
+		client.changes()
+		return
+	//ChompEDIT END
 
 /mob/new_player/proc/handle_server_news()
 	if(!client)
