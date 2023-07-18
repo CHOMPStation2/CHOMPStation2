@@ -68,9 +68,9 @@
 				output += "<p><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A></p>"
 
 	if(client.check_for_new_server_news())
-		output += "<p><b><a href='byond://?src=\ref[src];shownews=1'>Show Game Updates</A> (NEW!)</b></p>"
+		output += "<p><b><a href='byond://?src=\ref[src];shownews=1'>Show Server News</A><br>(NEW!)</b></p>" //ChompEDIT 'Game updates' --> 'Server news'
 	else
-		output += "<p><a href='byond://?src=\ref[src];shownews=1'>Show Game Updates</A></p>"
+		output += "<p><a href='byond://?src=\ref[src];shownews=1'>Show Server News</A></p>" //ChompEDIT 'Game updates' --> 'Server news'
 
 	if(SSsqlite.can_submit_feedback(client))
 		output += "<p>[href(src, list("give_feedback" = 1), "Give Feedback")]</p>"
