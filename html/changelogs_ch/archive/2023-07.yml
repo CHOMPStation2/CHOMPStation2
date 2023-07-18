@@ -18,6 +18,8 @@
       there are new changes since you last viewed
   - bugfix: fix bug with 'changelog_hash' var not being set properly
   - bugfix: fix changelog tgui links to be correct
+  Scarlet-Oduko:
+  - rscadd: adds a new cult faction
   UniquaSa:
   - imageadd: Tallborgs finally receive some bellies, Thank you Kcin!
   Upstream:
