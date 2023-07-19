@@ -371,7 +371,7 @@
 /mob/new_player/proc/handle_server_news()
 	if(!client)
 		return
-	var/savefile/F = get_server_news()
+	var/savefile/F = client.get_server_news()
 	if(F)
 		//client.prefs.lastnews = md5(F["body"]) //Chomp REMOVE
 		//SScharacter_setup.queue_preferences_save(client.prefs) //Chomp REMOVE
