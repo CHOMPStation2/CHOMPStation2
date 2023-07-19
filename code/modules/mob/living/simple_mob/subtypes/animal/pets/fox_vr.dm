@@ -244,3 +244,42 @@
 	min_n2 = 0
 	max_n2 = 0
 	minbodytemp = 0
+
+//  CHOMP ADD : Living stuffie foxes!
+/mob/living/simple_mob/animal/passive/fox/stuffed
+	name = "plush-fox"
+	desc = "It's a stuffed fox! Though this one seems lively! WEIRD!"
+	tt_desc = "YIP YIP YIP YIP YIP YIP YIP"
+	icon = 'modular_chomp/icons/mob/pet.dmi'
+	icon_state = "prplfopx"
+	icon_living = "prplfopx"
+	icon_rest = "prplfopx_rest"
+	icon_dead = "prplfopx_dead"
+
+
+	var/mob/living/friend = null // Our best pal, who we'll follow. awoo.
+	ai_holder_type = /datum/ai_holder/simple_mob/passive
+	makes_dirt = FALSE	// No more dirt
+
+/mob/living/simple_mob/animal/passive/fox/stuffed/init_vore()
+	if(!voremob_loaded)
+		return
+	.=..()
+	var/obj/belly/B = vore_selected
+	B.name = "Stomach"
+	B.desc = "Slick synthetic foxguts. They seem oddly realistic!"
+
+	B.emote_lists[DM_HOLD] = list(
+		"The fox's stomach walls squeeze around you more tightly for a moment, before relaxing, as if testing you a bit.",
+		"There's a sudden squeezing as the fox presses a forepaw against their gut over you, squeezing you against the slick walls.",
+		"The fox has a stomach that seems to think you belong to it. It might be hard to argue, as it kneads at your form.",
+		"It doesn't seem like the fox wants to let you out. The stomach and owner possessively squeeze around you.",
+		"The fox's stomach walls squeeze closer, as they belch quietly, before swallowing more air. Are they doing that on purpose?")
+
+	B.emote_lists[DM_DIGEST] = list(
+		"The fox's stomach walls grind hungrily inwards, kneading acids against your form, and treating you like any other food.",
+		"The fox impatiently kneads and works acids against you, trying to claim your body for fuel.",
+		"The walls knead in firmly, squeezing and tossing you around briefly in disorienting aggression.",
+		"The fox belches, letting the remaining air grow more acrid. It burns your lungs with each breath.",
+		"A thick glob of acids drip down from above, adding to the pool of caustic fluids in the fox's belly.",
+		"There's a loud gurgle as the stomach declares the intent to make you a part of the fox.")
