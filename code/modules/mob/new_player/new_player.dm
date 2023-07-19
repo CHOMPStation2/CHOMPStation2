@@ -38,15 +38,18 @@
 
 	if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
 		if(ready)
-			output += "<p>\[ <span class='linkOn'><b>Ready</b></span> | <a href='byond://?src=\ref[src];ready=0'>Not Ready</a> \]<br></p>" //ChompEDIT - fixed height
+			output += "<p>\[ <span class='linkOn'><b>Ready</b></span> | <a href='byond://?src=\ref[src];ready=0'>Not Ready</a> \]</p>" //ChompEDIT - fixed height
 		else
-			output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Ready</a> | <span class='linkOn'><b>Not Ready</b></span> \]<br></p>" //ChompEDIT - fixed height
+			output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Ready</a> | <span class='linkOn'><b>Not Ready</b></span> \]</p>" //ChompEDIT - fixed height
+		output += "<p><s>Join Game!</s></p>" //ChompEDIT - fixed height
 
 	else
 		output += "<p><a href='byond://?src=\ref[src];manifest=1'>View the Crew Manifest</A></p>" //ChompEDIT - fixed height
 		output += "<p><a href='byond://?src=\ref[src];late_join=1'>Join Game!</A></p>"
 
 	output += "<p><a href='byond://?src=\ref[src];observe=1'>Observe</A></p>"
+
+	output += "<hr>" //ChompADD - a line divider between functional and info buttons
 
 	if(!IsGuestKey(src.key))
 		establish_db_connection()
@@ -65,25 +68,25 @@
 			if(newpoll)
 				output += "<p><b><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A><br>(NEW!)</b></p>" //ChompEDIT - fixed height
 			else
-				output += "<p><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A><br></p>" //ChompEDIT - fixed height
+				output += "<p><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A><br><i>No Changes</i></p>" //ChompEDIT - fixed height
 
 	if(client.check_for_new_server_news())
 		output += "<p><b><a href='byond://?src=\ref[src];shownews=1'>Show Server News</A><br>(NEW!)</b></p>" //ChompEDIT 'Game updates' --> 'Server news'
 	else
-		output += "<p><a href='byond://?src=\ref[src];shownews=1'>Show Server News</A><br></p>" //ChompEDIT 'Game updates' --> 'Server news'
+		output += "<p><a href='byond://?src=\ref[src];shownews=1'>Show Server News</A><br><i>No Changes</i></p>" //ChompEDIT 'Game updates' --> 'Server news'
 
 	if(SSsqlite.can_submit_feedback(client))
 		output += "<p>[href(src, list("give_feedback" = 1), "Give Feedback")]</p>"
 
 	if(GLOB.news_data.station_newspaper)
 		if(client.prefs.lastlorenews == GLOB.news_data.newsindex)
-			output += "<p><a href='byond://?src=\ref[src];open_station_news=1'>Show [using_map.station_name] News</A></p>"
+			output += "<p><a href='byond://?src=\ref[src];open_station_news=1'>Show [using_map.station_name] News<br><i>No Changes</i></A></p>" //ChompEDIT - fixed height
 		else
-			output += "<p><b><a href='byond://?src=\ref[src];open_station_news=1'>Show [using_map.station_name] News (NEW!)</A></b></p>"
+			output += "<p><b><a href='byond://?src=\ref[src];open_station_news=1'>Show [using_map.station_name] News<br>(NEW!)</A></b></p>" //ChompEDIT - fixed height
 
 	//ChompEDIT start: Show Changelog
 	if(client.prefs.lastchangelog == changelog_hash)
-		output += "<p><a href='byond://?src=\ref[src];open_changelog=1'>Show Changelog</A></p>"
+		output += "<p><a href='byond://?src=\ref[src];open_changelog=1'>Show Changelog</A><br><i>No Changes</i></p>"
 	else
 		output += "<p><b><a href='byond://?src=\ref[src];open_changelog=1'>Show Changelog</A><br>(NEW!)</b></p>"
 	//ChompEDIT End
@@ -98,7 +101,7 @@
 		client.prefs.lastlorenews = GLOB.news_data.newsindex
 		SScharacter_setup.queue_preferences_save(client.prefs)
 
-	panel = new(src, "Welcome","Welcome", 210, 350, src) // VOREStation Edit //ChompEDIT, height 300 -> 350
+	panel = new(src, "Welcome","Welcome", 210, 360, src) // VOREStation Edit //ChompEDIT, height 300 -> 360
 	panel.set_window_options("can_close=0")
 	panel.set_content(output)
 	panel.open()
