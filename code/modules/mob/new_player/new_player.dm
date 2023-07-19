@@ -373,8 +373,8 @@
 		return
 	var/savefile/F = get_server_news()
 	if(F)
-		client.prefs.lastnews = md5(F["body"])
-		SScharacter_setup.queue_preferences_save(client.prefs)
+		//client.prefs.lastnews = md5(F["body"]) //Chomp REMOVE
+		//SScharacter_setup.queue_preferences_save(client.prefs) //Chomp REMOVE
 
 		var/dat = "<html><body><center>"
 		dat += "<h1>[F["title"]]</h1>"
