@@ -5,11 +5,8 @@
 
 // Returns true if news was updated since last seen.
 /client/proc/check_for_new_server_news()
-	var/savefile/F = get_server_news()
-	if(F)
-		var/dat = "[F["body"]]" //ChompEDIT
-		if(md5(dat) != prefs.lastnews) //ChompEDIT
-			return TRUE
+	if(servernews_hash != prefs.lastnews) //ChompEDIT
+		return TRUE
 	return FALSE
 
 /client/proc/modify_server_news()
@@ -39,15 +36,17 @@
 		F["body"] << new_body
 		F["author"] << key
 		F["timestamp"] << time2text(world.realtime, "DDD, MMM DD YYYY")
+		servernews_hash = md5("[F["title"]]" + "[F["body"]]") //ChompADD - update the servernews hash global
 		message_admins("[key] modified the news to read:<br>[new_title]<br>[new_body]")
 
 /client/proc/get_server_news() //ChompEDIT - child of /client/
 	var/savefile/F = new(NEWSFILE)
 	if(F)
-		var/fbody = "[F["body"]]" //ChompADD
-		prefs.lastnews = md5(fbody) //ChompADD
-		SScharacter_setup.queue_preferences_save(prefs) //ChompADD
+		if(servernews_hash != prefs.lastnews) //ChompADD
+			prefs.lastnews = servernews_hash //ChompADD
+			SScharacter_setup.queue_preferences_save(prefs) //ChompADD
 		return F
+
 // This is used when submitting the news input, so the safe markup can get past sanitize.
 /proc/paper_markup2html(var/text)
 	text = replacetext(text, "\n", "<br>")

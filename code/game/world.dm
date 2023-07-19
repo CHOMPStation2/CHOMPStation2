@@ -1,5 +1,5 @@
 #define RECOMMENDED_VERSION 513
-
+#define NEWSFILE "data/news.sav" //ChompEDIT - news dir
 // CHOMPedit Start - Tracy
 /proc/prof_init()
 	var/lib
@@ -31,6 +31,10 @@
 	//ChompADD Start - Better Changelogs
 	var/latest_changelog = file("html/changelogs_ch/archive/" + time2text(world.timeofday, "YYYY-MM") + ".yml")
 	changelog_hash = fexists(latest_changelog) ? md5(latest_changelog) : 0 //for telling if the changelog has changed recently
+	//Newsfile
+	var/savefile/F = new(NEWSFILE)
+	if(F)
+		servernews_hash = md5("[F["title"]]" + "[F["body"]]")
 	//ChompADD End
 
 	if(byond_version < RECOMMENDED_VERSION)
