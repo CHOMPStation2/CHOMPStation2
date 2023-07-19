@@ -28,7 +28,7 @@
 					LANGUAGE_ROOTLOCAL	= 0,
 					LANGUAGE_GUTTER		= 0,
 					LANGUAGE_SCHECHI	= 1,
-					LANGUAGE_EAL		= 1,
+					//LANGUAGE_EAL		= 1, //CHOMPRemoval - all robos get this by default and having it in the list causes issues
 					LANGUAGE_SIGN		= 0,
 					LANGUAGE_BIRDSONG	= 1,
 					LANGUAGE_SAGARU		= 1,
@@ -227,6 +227,7 @@
 	src.modules += new /obj/item/weapon/dogborg/pounce(src) //Pounce
 	src.modules += new /obj/item/device/ticket_printer(src)
 	src.modules += new /obj/item/weapon/gripper/security(src) //CHOMPADD why doesnt the sec hound have the sec gripper?
+	src.modules += new /obj/item/weapon/gun/energy/locked/phasegun/unlocked/mounted/cyborg(src) //CHOMPedit: Phasegun for security hound.
 	src.emag 	 = new /obj/item/weapon/gun/energy/laser/mounted(src) //Emag. Not a big problem.
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500) //Starts full and has a max of 500

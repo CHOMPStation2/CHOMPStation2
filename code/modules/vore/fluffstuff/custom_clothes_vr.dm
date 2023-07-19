@@ -2658,6 +2658,13 @@ Departamental Swimsuits, for general use
 	else
 		item_state = "giantbow_mob"
 	..()
+
+//Halored: Mercury
+
+/obj/item/clothing/gloves/ring/material/void_opal/fluff/mercury
+	name = "Mercury's Mate Ring"
+	desc = "A band of void opal, given to Mercury by Lumen"
+
 End CHOMP Removal*/
 
 /obj/item/clothing/head/fluff/giantbow	//Public version
