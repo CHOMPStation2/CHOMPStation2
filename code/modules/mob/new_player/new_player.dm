@@ -375,11 +375,18 @@
 	if(F)
 		//client.prefs.lastnews = md5(F["body"]) //Chomp REMOVE
 		//SScharacter_setup.queue_preferences_save(client.prefs) //Chomp REMOVE
+		//ChompEDIT start - handle reads correctly
+		var/title
+		F["title"] >> title
+		F["title"] >> title //This is done twice on purpose. For some reason BYOND misses the first read, if performed before the world starts
+		var/body
+		F["body"] >> body
+		//ChompEDIT end
 
 		var/dat = "<html><body><center>"
-		dat += "<h1>[F["title"]]</h1>"
+		dat += "<h1>[title]</h1>"
 		dat += "<br>"
-		dat += "[F["body"]]"
+		dat += "[body]"
 		dat += "<br>"
 		dat += "<font size='2'><i>Last written by [F["author"]], on [F["timestamp"]].</i></font>"
 		dat += "</center></body></html>"
