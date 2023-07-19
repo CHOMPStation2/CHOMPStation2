@@ -3,9 +3,10 @@
 	active_power_usage = 500
 	density = TRUE
 	anchored = TRUE
-	
+
 	var/working = FALSE
 	var/negative_dir = null	//VOREStation Addition
+	var/hand_fed = TRUE //CHOMPAdd
 
 /obj/machinery/recycling/process()
 	return PROCESS_KILL // these are all stateful
@@ -22,7 +23,7 @@
 /obj/machinery/recycling/attackby(obj/item/O, mob/user)
 	if(!isliving(user) || !Adjacent(user))
 		return
-	
+
 	if(working)
 		to_chat("<span class='warning'>\The [src] is busy! Wait until it's idle.</span>")
 		return
@@ -33,7 +34,8 @@
 		return
 	if(default_part_replacement(user, O))
 		return
-	
+	if(!hand_fed) //CHOMPAdd
+		return
 	var/mob/living/M = user
 	if(can_accept_item(O))
 		M.drop_from_inventory(O)
@@ -95,13 +97,16 @@
 
 /obj/machinery/recycling/crusher/take_item(obj/item/O)
 	. = ..()
+	var/trash = 1//CHOMPEDIT: Trash multiplier
 	working = TRUE
 	icon_state = "crusher-process"
 	update_use_power(USE_POWER_ACTIVE)
 	sleep(5 SECONDS)
 	var/list/modified_mats = list()
+	if(istype(O,/obj/item/trash))//CHOMPEDIT: Trash multiplier
+		trash = 5 //CHOMPEDIT: Trash good
 	for(var/mat in O.matter)
-		modified_mats[mat] = O.matter[mat]*effic_factor
+		modified_mats[mat] = O.matter[mat]*effic_factor*trash//CHOMPEDIT: Trash multiplier
 	new /obj/item/debris_pack(get_step(src, dir), modified_mats)
 	update_use_power(USE_POWER_IDLE)
 	icon_state = "crusher"
@@ -132,7 +137,7 @@
 	working = TRUE
 	icon_state = "sorter-process"
 	update_use_power(USE_POWER_ACTIVE)
-	sleep(5 SECONDS)
+	sleep(2 SECONDS) //CHOMPEdit
 	sort_item(O)
 	dispense_if_possible()
 	update_use_power(USE_POWER_IDLE)
@@ -149,8 +154,8 @@
 
 /obj/machinery/recycling/sorter/proc/dispense_if_possible()
 	for(var/mat in materials)
-		while(materials[mat] >= SHEET_MATERIAL_AMOUNT)
-			materials[mat] -= SHEET_MATERIAL_AMOUNT
+		while(materials[mat] >= (SHEET_MATERIAL_AMOUNT))
+			materials[mat] -= (SHEET_MATERIAL_AMOUNT)
 			new /obj/item/material_dust(get_step(src, dir), mat)
 			sleep(2 SECONDS)
 
@@ -190,7 +195,7 @@
 		playsound(src, 'sound/machines/buzz-sigh.ogg', 50, 0)
 		warning("Dust in [src] had material_name [D.material_name], which can't be made into stacks")
 		return
-	
+
 	var/stacktype = M.stack_type
 	var/turf/T = get_step(src, dir)
 	var/obj/item/stack/S = locate(stacktype) in T

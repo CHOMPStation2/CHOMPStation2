@@ -268,13 +268,12 @@
 //If for some reason touch effects are bypassed (e.g. injecting stuff directly into a reagent container or person),
 //call the appropriate trans_to_*() proc.
 /datum/reagents/proc/trans_to(var/atom/target, var/amount = 1, var/multiplier = 1, var/copy = 0)
-	touch(target) //First, handle mere touch effects
-
-	if(ismob(target))
-		return splash_mob(target, amount, copy)
+	if(ismob(target))  //CHOMPEdit
+		return splash_mob(target, amount * multiplier, copy) //Touch effects handled by splash_mob
+	touch(target, amount * multiplier) //First, handle mere touch effects
 	if(isturf(target))
 		return trans_to_turf(target, amount, multiplier, copy)
-	if(isobj(target) && target.is_open_container())
+	if(isobj(target) && target.is_open_container() && !isbelly(target.loc)) //CHOMPEdit
 		return trans_to_obj(target, amount, multiplier, copy)
 	return 0
 
@@ -392,6 +391,11 @@
 	if(!target || !istype(target))
 		return
 	if(iscarbon(target))
+		if(isbelly(target.loc) && target.stat == DEAD) //CHOMPAdd Start
+			var/datum/reagents/R = new /datum/reagents(amount)
+			. = trans_to_holder(R, amount, multiplier, copy)
+			R.touch_mob(target)
+			return //CHOMPAdd End
 		var/mob/living/carbon/C = target
 		if(type == CHEM_BLOOD)
 			var/datum/reagents/R = C.reagents

@@ -37,6 +37,10 @@ var/list/preferences_datums = list()
 	var/be_random_name = 0				//whether we are a random name every round
 	var/nickname						//our character's nickname
 	var/age = 30						//age of character
+	var/bday_month = 0					//Birthday month
+	var/bday_day = 0					//Birthday day
+	var/last_birthday_notification = 0	//The last year we were notified about our birthday
+	var/bday_announce = FALSE			//Public announcement for birthdays
 	var/spawnpoint = "Arrivals Shuttle" //where this character will spawn (0-2).
 	var/b_type = "A+"					//blood type (not-chooseable)
 	var/backbag = 2						//backpack type
@@ -76,8 +80,9 @@ var/list/preferences_datums = list()
 	var/synth_markings = 1				//Enable/disable markings on synth parts. //VOREStation Edit - 1 by default
 
 		//Some faction information.
-	var/home_system = "Unset"           //System of birth.
-	var/citizenship = "None"            //Current home system.
+	var/home_system = "Unset"           //Current home or residence.
+	var/birthplace = "Unset"           //Location of birth.
+	var/citizenship = "None"            //Government or similar entity with which you hold citizenship.
 	var/faction = "None"                //General associated faction.
 	var/religion = "None"               //Religious association.
 	var/antag_faction = "None"			//Antag associated faction.
@@ -160,7 +165,7 @@ var/list/preferences_datums = list()
 	var/multilingual_mode = 0 // Default behaviour, delimiter-key-space, delimiter-key-delimiter, off
 
 	var/list/volume_channels = list()
-	
+
 	///If they are currently in the process of swapping slots, don't let them open 999 windows for it and get confused
 	var/selecting_slots = FALSE
 
@@ -277,7 +282,7 @@ var/list/preferences_datums = list()
 	popup.open(FALSE) // Skip registring onclose on the browser pane
 	onclose(user, "preferences_window", src) // We want to register on the window itself
 
-/datum/preferences/proc/update_character_previews(mutable_appearance/MA)
+/*datum/preferences/proc/update_character_previews(mutable_appearance/MA) //CHOMPEdit _ch override.
 	if(!client)
 		return
 
@@ -308,7 +313,7 @@ var/list/preferences_datums = list()
 			client.screen |= O
 		O.appearance = MA
 		O.dir = D
-		O.screen_loc = preview_screen_locs["[D]"]
+		O.screen_loc = preview_screen_locs["[D]"]*/
 
 /datum/preferences/proc/show_character_previews()
 	if(!client || !char_render_holders)

@@ -432,28 +432,58 @@ Turf and target are seperate in case you want to teleport some distance from a t
 /proc/sortmobs()
 	var/list/moblist = list()
 	var/list/sortmob = sortAtom(mob_list)
+	var/list/after_simplemob_minded = list() //CHOMPEdit
 	for(var/mob/observer/eye/M in sortmob)
+		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
+			after_simplemob_minded.Add(M)
+			continue
 		moblist.Add(M)
 	for(var/mob/observer/blob/M in sortmob)
+		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
+			after_simplemob_minded.Add(M)
+			continue
 		moblist.Add(M)
 	for(var/mob/living/silicon/ai/M in sortmob)
+		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
+			after_simplemob_minded.Add(M)
+			continue
 		moblist.Add(M)
 	for(var/mob/living/silicon/pai/M in sortmob)
+		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
+			after_simplemob_minded.Add(M)
+			continue
 		moblist.Add(M)
 	for(var/mob/living/silicon/robot/M in sortmob)
+		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
+			after_simplemob_minded.Add(M)
+			continue
 		moblist.Add(M)
 	for(var/mob/living/carbon/human/M in sortmob)
+		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
+			after_simplemob_minded.Add(M)
+			continue
 		moblist.Add(M)
 	for(var/mob/living/carbon/brain/M in sortmob)
+		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
+			after_simplemob_minded.Add(M)
+			continue
 		moblist.Add(M)
 	for(var/mob/living/carbon/alien/M in sortmob)
+		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
+			after_simplemob_minded.Add(M)
+			continue
 		moblist.Add(M)
 	for(var/mob/observer/dead/M in sortmob)
 		moblist.Add(M)
 	for(var/mob/new_player/M in sortmob)
 		moblist.Add(M)
 	for(var/mob/living/simple_mob/M in sortmob)
+		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
+			after_simplemob_minded.Add(M)
+			continue
 		moblist.Add(M)
+	moblist.Add(after_simplemob_minded) //CHOMPEdit
+	after_simplemob_minded.Cut()
 	//VOREStation Addition Start
 	for(var/mob/living/dominated_brain/M in sortmob)
 		moblist.Add(M)
@@ -626,7 +656,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 
 //Returns: all the areas in the world, sorted.
 /proc/return_sorted_areas()
-	return sortTim(return_areas(), /proc/cmp_text_asc)
+	return sortTim(return_areas(), GLOBAL_PROC_REF(cmp_text_asc))
 
 //Takes: Area type as text string or as typepath OR an instance of the area.
 //Returns: A list of all turfs in areas of that type of that type in the world.
@@ -1343,9 +1373,9 @@ var/mob/dview/dview_mob = new
 //datum may be null, but it does need to be a typed var
 #define NAMEOF(datum, X) (#X || ##datum.##X)
 
-#define VARSET_LIST_CALLBACK(target, var_name, var_value) CALLBACK(GLOBAL_PROC, /proc/___callbackvarset, ##target, ##var_name, ##var_value)
+#define VARSET_LIST_CALLBACK(target, var_name, var_value) CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(___callbackvarset), ##target, ##var_name, ##var_value)
 //dupe code because dm can't handle 3 level deep macros
-#define VARSET_CALLBACK(datum, var, var_value) CALLBACK(GLOBAL_PROC, /proc/___callbackvarset, ##datum, NAMEOF(##datum, ##var), ##var_value)
+#define VARSET_CALLBACK(datum, var, var_value) CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(___callbackvarset), ##datum, NAMEOF(##datum, ##var), ##var_value)
 //we'll see about those 3-level deep macros
 #define VARSET_IN(datum, var, var_value, time) addtimer(VARSET_CALLBACK(datum, var, var_value), time)
 

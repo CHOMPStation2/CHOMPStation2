@@ -30,7 +30,7 @@
 				bowl_contents += L
 		if(bowl_contents.len)
 			refilling = TRUE
-			user.visible_message("<span class='notice'>[user] flushes the toilet.</span>", "<span class='notice'>You flush the toilet.</span>")
+			user.visible_message("<span class='notice'>[user] flushes the [lowertext(name)].</span>", "<span class='notice'>You flush the [lowertext(name)].</span>")
 			playsound(src, 'sound/vore/death7.ogg', 50, 1) //Got lazy about getting new sound files. Have a sick remix lmao.
 			playsound(src, 'sound/effects/bubbles.ogg', 50, 1)
 			playsound(src, 'sound/mecha/powerup.ogg', 30, 1)
@@ -66,7 +66,7 @@
 			return
 	if(refilling)
 		playsound(src, 'sound/machines/door_locked.ogg', 30, 1)
-		to_chat(user, "<span class='notice'>The toilet is still refilling its tank.</span>")
+		to_chat(user, "<span class='notice'>The [lowertext(name)] is still refilling its tank.</span>")
 	return ..()
 
 /obj/structure/toilet/attackby(obj/item/I as obj, mob/living/user as mob)

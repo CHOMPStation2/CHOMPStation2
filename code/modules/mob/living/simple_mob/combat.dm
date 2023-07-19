@@ -14,9 +14,14 @@
 		handle_attack_delay(A, melee_attack_delay) // This will sleep this proc for a bit, which is why waitfor is false.
 
 	// Cooldown testing is done at click code (for players) and interface code (for AI).
-	setClickCooldown(get_attack_speed())
+	// VOREStation Edit Start: Simplemob Injury
+	if(injury_enrages)
+		setClickCooldown(get_attack_speed() - ((injury_level / 2) SECONDS)) // Increase how fast we can attack by our injury level / 2
+	else
+		setClickCooldown(get_attack_speed() + ((injury_level / 2) SECONDS)) // Delay how fast we can attack by our injury level / 2
+	// VOREStation Edit Stop: Simplemob Injury
 
-	// Returns a value, but will be lost if 
+	// Returns a value, but will be lost if
 	. = do_attack(A, their_T)
 
 	if(melee_attack_delay)
@@ -90,7 +95,12 @@
 	if(!istype(A) || QDELETED(A))
 		return
 
-	setClickCooldown(get_attack_speed())
+	// VOREStation Edit Start: Simplemob Injury
+	if(injury_enrages)
+		setClickCooldown(get_attack_speed() - ((injury_level / 2) SECONDS)) // Increase how fast we can attack by our injury level / 2
+	else
+		setClickCooldown(get_attack_speed() + ((injury_level / 2) SECONDS)) // Delay how fast we can attack by our injury level / 2
+	// VOREStation Edit Stop: Simplemob Injury
 
 	face_atom(A)
 
@@ -102,7 +112,7 @@
 		if(reload_count >= reload_max)
 			try_reload()
 			return FALSE
-			
+
 	//CHOMP Addition: This section here is special snowflake code for metroids only, or for whatever else in the future that you want to have move and shoot at the same time. Basically, this is a non-stupid version of the above intended for ranged vore mobs i.e. metroids. ranged_attack_delay is stupid because it sleeps the entire mob. This new ranged_cooldown_time is smarter in the sense that it is an internalized timer. Try not to confuse the names.
 	if(ranged_cooldown_time) //If you have a non-zero number in a mob's variables, this pattern begins.
 		if(ranged_cooldown <= world.time) //Further down, a timer keeps adding to the ranged_cooldown variable automatically.
@@ -110,7 +120,7 @@
 			shoot(A) //Perform the shoot action
 			if(casingtype) //If the mob is designated to leave casings...
 				new casingtype(loc) //... leave the casing.
-			ranged_cooldown = world.time + ranged_cooldown_time //Special addition here. This is a timer. Keeping updating the time after shooting. Add that ranged cooldown time specified in the mob to the world time.
+			ranged_cooldown = world.time + ranged_cooldown_time + ((injury_level / 2) SECONDS) //Special addition here. This is a timer. Keeping updating the time after shooting. Add that ranged cooldown time specified in the mob to the world time.
 		return TRUE	//End these commands here.
 
 	visible_message("<span class='danger'><b>\The [src]</b> fires at \the [A]!</span>")
@@ -120,7 +130,7 @@
 
 	if(ranged_attack_delay)
 		ranged_post_animation(A)
-	
+
 	return TRUE
 
 // Shoot a bullet at something.

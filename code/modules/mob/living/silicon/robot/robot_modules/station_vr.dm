@@ -28,7 +28,7 @@
 					LANGUAGE_ROOTLOCAL	= 0,
 					LANGUAGE_GUTTER		= 0,
 					LANGUAGE_SCHECHI	= 1,
-					LANGUAGE_EAL		= 1,
+					//LANGUAGE_EAL		= 1, //CHOMPRemoval - all robos get this by default and having it in the list causes issues
 					LANGUAGE_SIGN		= 0,
 					LANGUAGE_BIRDSONG	= 1,
 					LANGUAGE_SAGARU		= 1,
@@ -210,7 +210,11 @@
 					"Secborg model V-3" = "SecVale", //CHOMPEdit
 					"Cat" = "vixsec", //CHOMPEdit
 					"Drake" = "drakesec",
-					"Raptor V-4" = "secraptor"
+					"Raptor V-4" = "secraptor",
+					"MEKA" = "mekasec", //CHOMPEdit Start - Tallborgs
+					"NIKO" = "mmekasec",
+					"NIKA" = "fmekasec",
+					"K4T" = "k4tsec" //CHOMPEdit End - Tallborgs
 					)
 
 /obj/item/weapon/robot_module/robot/security/knine/New(var/mob/living/silicon/robot/R)
@@ -222,6 +226,8 @@
 	src.modules += new /obj/item/weapon/gun/energy/taser/mounted/cyborg(src) //They /are/ a security borg, after all.
 	src.modules += new /obj/item/weapon/dogborg/pounce(src) //Pounce
 	src.modules += new /obj/item/device/ticket_printer(src)
+	src.modules += new /obj/item/weapon/gripper/security(src) //CHOMPADD why doesnt the sec hound have the sec gripper?
+	src.modules += new /obj/item/weapon/gun/energy/locked/phasegun/unlocked/mounted/cyborg(src) //CHOMPedit: Phasegun for security hound.
 	src.emag 	 = new /obj/item/weapon/gun/energy/laser/mounted(src) //Emag. Not a big problem.
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500) //Starts full and has a max of 500
@@ -287,7 +293,12 @@
 					"Mediborg model V-3" = "vale2", //CHOMPEdit
 					"Cat" = "vixmed", //CHOMPEdit
 					"Drake" = "drakemed",
-					"Raptor V-4" = "medraptor"
+					"Raptor V-4" = "medraptor",
+					"MEKA" = "mekamed", //CHOMPEdit Start - Tallborgs
+					"NIKO" = "mmekamed",
+					"NIKA" = "fmekamed",
+					"K4T" = "k4tmed",
+					"K4Talt" = "k4tmed_alt1" //CHOMPEdit End - Tallborgs
 					)
 
 /obj/item/weapon/robot_module/robot/medical/medihound/New(var/mob/living/silicon/robot/R)
@@ -379,7 +390,8 @@
 	sprites = list(
 					"Traumahound" = "traumavale",
 					"Drake" = "draketrauma",
-					"Borgi" = "borgi-trauma"
+					"Borgi" = "borgi-trauma",
+					"Raptor V-4" = "traumaraptor"
 					)
 
 /obj/item/weapon/robot_module/robot/medical/traumahound/New(var/mob/living/silicon/robot/R)
@@ -517,7 +529,13 @@
 					"Borgi" = "borgi-jani",
 					"Otieborg" = "otiej",
 					"Cat" = "vixjani", //CHOMPEdit
-					"Drake" = "drakejanit"
+					"Drake" = "drakejanit",
+					"Raptor V-4" = "janiraptor",
+					"MEKA" = "mekajani", //CHOMPEdit Start - Tallborgs
+					"NIKO" = "mmekajani",
+					"NIKA" = "fmekajani",
+					"K4T" = "k4tjani",
+					"K4Talt" = "k4tjani_alt1" //CHOMPEdit End - Tallborgs
 					)
 	can_be_pushed = 0
 
@@ -525,6 +543,7 @@
 	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
 	src.modules += new /obj/item/device/dogborg/boop_module(src)
 	src.modules += new /obj/item/pupscrubber(src)
+	src.modules += new /obj/item/device/vac_attachment(src) //CHOMPAdd
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src) //Pounce
 
 	//Starts empty. Can only recharge with recycled material.
@@ -608,7 +627,11 @@
 					"SciHoundDark" = "scihounddark",
 					"Cat" = "vixsci", //CHOMPEdit
 					"Drake" = "drakesci",
-					"Raptor V-4" = "sciraptor"
+					"Raptor V-4" = "sciraptor",
+					"MEKA" = "mekastandard", //CHOMPEdit Start - Tallborgs
+					"NIKO" = "mmekasci",
+					"NIKA" = "fmekasci",
+					"K4T" = "k4tsci" //CHOMPEdit end - Tallborgs
 					)
 	can_be_pushed = 0
 
@@ -698,7 +721,13 @@
 					"EngiHound" = "engihound",
 					"EngiHoundDark" = "engihounddark",
 					"Cat" = "vixengi", //CHOMPEdit
-					"Drake" = "drakeeng"
+					"Drake" = "drakeeng",
+					"Raptor V-4" = "engiraptor",
+					"MEKA" = "mekaengi", //CHOMPEdit Start - Tallborgs
+					"NIKO" = "mmekaeng",
+					"NIKA" = "fmekaeng",
+					"K4T" = "k4tengi",
+					"K4Talt" = "k4tengi_alt1" //CHOMPEdit End - Tallborgs
 					)
 	can_be_pushed = 0
 
@@ -856,7 +885,15 @@
 					"ServicehoundV2" = "serve2",
 					"ServicehoundV2 Darkmode" = "servedark",
 					"Cat" = "vixserv", //CHOMPEdit
-					"Drake" = "drakemine"
+					"Drake" = "drakemine",
+					"Raptor V-4" = "serviraptor",
+					"Raptor V-4000" = "fancyraptor",
+					"MEKA" = "mekaserve", //CHOMPEdit Start - Tallborgs
+					"MEKAalt" = "mekaserve_alt",
+					"NIKO" = "mmekaserv",
+					"NIKA" = "fmekaserv",
+					"K4T" = "k4tserve",
+					"K4Talt" = "k4tserve_alt" //CHOMPEdit End - Tallborgs
 					)
 	can_be_pushed = 0
 
@@ -875,6 +912,7 @@
 	src.modules += new /obj/item/device/multitool(src) //to freeze trays
 	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
 	src.modules += new /obj/item/device/dogborg/boop_module(src)
+	src.modules += new /obj/item/device/dogborg/sleeper/compactor/brewer(src) //CHOMPAdd giving service hound at least SOMETHING for a belly
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src) //Pounce
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500) // buffy fix, was 0
@@ -934,9 +972,16 @@
 					"KMine" = "kmine",
 					"CargoHound" = "cargohound",
 					"CargoHoundDark" = "cargohounddark",
+					"Borgi" = "borgi-mine", //CHOMPEdit
 					"Cat Mining" = "vixmine", //CHOMPEdit
 					"Cat Cargo" = "vixcargo", //CHOMPEdit
-					"Drake" = "drakemine"
+					"Drake" = "drakemine",
+					"Raptor V-4" = "mineraptor",
+					"MEKA" = "mekamine", //CHOMPEdit Start - Tallborgs
+					"NIKO" = "mmekamine",
+					"NIKA" = "fmekamine",
+					"K4T" = "k4tmine",
+					"K4Talt" = "k4tmine_alt1" //CHOMPEdit End - Tallborgs
 					)
 	can_be_pushed = 0
 
@@ -951,6 +996,7 @@
 	src.modules += new /obj/item/weapon/mining_scanner(src)
 	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
 	src.modules += new /obj/item/weapon/gun/energy/locked/phasegun/unlocked/mounted/cyborg(src)  //Chompedit To let the borg defend themselves
+	src.modules += new /obj/item/device/vac_attachment(src) //CHOMPAdd
 	// New Emag gear for the minebots!
 	src.emag = new /obj/item/weapon/kinetic_crusher/machete/dagger(src)
 
@@ -972,8 +1018,8 @@
 	B.water = water
 	src.modules += B
 
-	R.icon = 'icons/mob/widerobot_car_vr.dmi'
-	R.wideborg_dept = 'icons/mob/widerobot_car_vr.dmi'
+	R.icon = 'modular_chomp/icons/mob/widerobot_car_ch.dmi' //CHOMPEdit
+	R.wideborg_dept = 'modular_chomp/icons/mob/widerobot_car_ch.dmi' //CHOMPEdit
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	R.ui_style_vr = TRUE
 	R.pixel_x 	 = -16
@@ -1024,7 +1070,6 @@
 				) //CHOMP Edit Added Vodka Komrade
 
 /obj/item/weapon/robot_module/robot/clerical/butler/booze/New(var/mob/living/silicon/robot/R)
-	..()
 	src.modules += new /obj/item/weapon/gripper/service(src)
 	//src.modules += new /obj/item/weapon/reagent_containers/glass/bucket(src)
 	//src.modules += new /obj/item/weapon/material/minihoe(src)
@@ -1035,9 +1080,10 @@
 	src.modules += new /obj/item/weapon/material/kitchen/rollingpin(src)
 	src.modules += new /obj/item/device/multitool(src) //to freeze trays
 	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
-	src.modules += new /obj/item/weapon/tray/robotray
+	//src.modules += new /obj/item/weapon/tray/robotray //CHOMPEdit Removing duplicate
 	src.modules += new /obj/item/device/dogborg/boop_module(src)
 	src.modules += new /obj/item/device/dogborg/sleeper/compactor/brewer(src)
+	src.modules += new /obj/item/weapon/reagent_containers/glass/beaker(src)//For holding the ALCOHOL //CHOMPAdd - was removed for some reason?
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src)
 	R.verbs += /mob/living/silicon/robot/proc/reskin_booze
 
@@ -1047,12 +1093,36 @@
 
 	src.modules += new /obj/item/weapon/reagent_containers/dropper/industrial(src)
 
+
 	var/obj/item/weapon/flame/lighter/zippo/L = new /obj/item/weapon/flame/lighter/zippo(src)
 	L.lit = 1
 	src.modules += L
 
+	//CHOMPAdd - adds the tongue
+	var/datum/matter_synth/water = new /datum/matter_synth()
+	water.name = "Water reserves"
+	water.recharge_rate = 0.1 // Recharging water for plants - hehe drooly borg
+	water.max_energy = 1000
+	water.energy = 0
+	R.water_res = water
+	synths += water
+
+	var/obj/item/device/dogborg/tongue/T = new /obj/item/device/dogborg/tongue(src)
+	T.water = water
+	src.modules += T
+	//CHOMPAdd end
+
 	src.modules += new /obj/item/weapon/tray/robotray(src)
-	src.modules += new /obj/item/weapon/reagent_containers/borghypo/service(src)
+	//CHOMPEdit CHOMPAdd - gives boozehounds our specific dispenser again as well as readding their emag 'beer'
+	src.modules += new /obj/item/weapon/reagent_containers/borghypo/service/booze(src)
+	src.emag = new /obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer(src)
+
+	var/datum/reagents/N = new/datum/reagents(50)
+	src.emag.reagents = N
+	N.my_atom = src.emag
+	N.add_reagent("beer2", 50)
+	src.emag.name = "Mickey Finn's Special Brew"
+	//CHOMPAdd End
 
 	R.icon 		 = 'icons/mob/widerobot_colors_vr.dmi'
 	R.wideborg_dept = 'icons/mob/widerobot_colors_vr.dmi'
@@ -1067,7 +1137,13 @@
 	R.vore_capacity_ex = list("stomach" = 1)
 	//CHOMPEdit End
 	R.wideborg = TRUE
-	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
+	R.verbs -= /mob/living/silicon/robot/proc/ex_reserve_refill
+	//CHOMPEdit - add missing verbs
+	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
+	R.verbs |= /mob/living/proc/toggle_rider_reins
+	R.verbs |= /mob/living/proc/shred_limb
+	//R.verbs |= /mob/living/silicon/robot/proc/rest_style -- but not this one, they dont have the alt sprites
+	//CHOMPEdit End
 	..()
 
 /obj/item/weapon/robot_module/robot/clerical/butler/booze/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)

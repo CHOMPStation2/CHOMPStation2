@@ -107,7 +107,7 @@
 //BADvanced size gun
 //
 /obj/item/weapon/gun/energy/sizegun/not_advanced
-	name = "Corrupted size gun"
+	name = "\improper corrupted size gun"	// CHOMPedit Adds \improper
 	desc = "A highly advanced ray gun with a knob on the side to adjust the size you desire. Or at least that's what it used to be."
 	projectile_type = /obj/item/projectile/beam/sizelaser/chaos
 	charge_cost = 60 //1/3 of the base price for a normal one.

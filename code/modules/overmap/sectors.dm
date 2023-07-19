@@ -12,8 +12,15 @@
 	var/known = TRUE
 	/// Name prior to being scanned if !known
 	var/unknown_name = "unknown sector"
+	var/real_name
+	var/real_desc
 	/// Icon_state prior to being scanned if !known
 	var/unknown_state = "field"
+	//Set to null. Exists only for admins/GMs when spawning overmap objects.
+	//We need these as normal functionality relies on initial() which do not work at all with GM shenanigans.
+	var/real_icon //Holds the .dmi file for icon_state to pick from. Leave null if using standard overmap.dmi
+	var/real_icon_state //actual icon name to be used. Find examples inside 'icons/obj/overmap.dmi'
+	var/real_color
 
 	var/list/map_z = list()
 	var/list/extra_z_levels //if you need to manually insist that these z-levels are part of this sector, for things like edge-of-map step trigger transitions rather than multi-z complexes
@@ -36,6 +43,11 @@
 	var/has_distress_beacon
 	var/list/levels_for_distress
 	var/list/unowned_areas // areas we don't own despite them being present on our z
+
+	var/list/possible_descriptors = list() //While only affects sectors for now, initialized here for proc definition convenience.
+	var/visitable_renamed = FALSE //changed if non-default name is assigned.
+
+	var/unique_identifier //Define this for objs that we want to be able to rename. Needed to avoid compiler errors if not included.
 
 /obj/effect/overmap/visitable/Initialize()
 	. = ..()
@@ -68,10 +80,28 @@
 	else
 		real_appearance = image(icon, src, icon_state)
 		real_appearance.override = TRUE
+		real_name = name
 		name = unknown_name
 		icon_state = unknown_state
 		color = null
+		real_desc = desc
 		desc = "Scan this to find out more information."
+	//at the moment only used for the OM location renamer. Initializing here in case we want shuttles incl as well in future. Also proc definition convenience.
+	visitable_overmap_object_instances |= src
+
+//To be used by GMs and calling through var edits for the overmap object
+//It causes the overmap object to "reinitialize" its real_appearance for known = FALSE objects
+//Includes an argument that allows GMs/Admins to set a previously known sector to unknown. Set to any value except 0/False/Null to activate
+/obj/effect/overmap/visitable/proc/gmtools_update_omobject_vars(var/setToHidden)
+	real_appearance = image(real_icon, src, real_icon_state)
+	real_appearance.override = TRUE
+	if(setToHidden && known) //
+		name = unknown_name
+		icon = 'icons/obj/overmap.dmi'
+		icon_state = unknown_state
+		color = null
+		desc = "Scan this to find out more information."
+		known = FALSE
 
 
 // You generally shouldn't destroy these.
@@ -125,10 +155,24 @@
 /obj/effect/overmap/visitable/get_scan_data()
 	if(!known)
 		known = TRUE
-		name = initial(name)
-		icon_state = initial(icon_state)
-		color = initial(color)
-		desc = initial(desc)
+		if(real_name)
+			name = real_name
+		else
+			name = initial(name)
+		if(real_icon_state) //Only true when GMs/Admins play with the object
+			if(real_icon)  //Only true if GMs/Admins want a non-standard icon from outside 'icons/obj/overmap.dmi'
+				icon = real_icon
+			icon_state = real_icon_state
+		else
+			icon_state = initial(icon_state)
+		if(real_color)
+			color = real_color
+		else
+			color = initial(color)
+		if(real_desc)
+			desc = real_desc
+		else
+			desc = initial(desc)
 	return ..()
 
 /obj/effect/overmap/visitable/proc/get_space_zlevels()
@@ -224,7 +268,7 @@
 	I.appearance_flags = KEEP_APART|RESET_TRANSFORM|RESET_COLOR
 	add_overlay(I)
 
-	addtimer(CALLBACK(src, .proc/distress_update), 5 MINUTES)
+	addtimer(CALLBACK(src, PROC_REF(distress_update)), 5 MINUTES)
 	return TRUE
 
 /obj/effect/overmap/visitable/proc/get_distress_info()

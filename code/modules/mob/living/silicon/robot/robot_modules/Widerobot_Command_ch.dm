@@ -6,6 +6,7 @@
 /hook/startup/proc/Modular_Borg_init_Unity()
 	robot_modules["UnityHound"] = /obj/item/weapon/robot_module/robot/chound //Add to module array
 	robot_module_types += "UnityHound" //Add ourselves to global
+	return 1
 
 //Create our list of known languages.
 /obj/item/weapon/robot_module/robot/chound
@@ -35,7 +36,8 @@
 	name = "Unity Hound Module"
 	sprites = list(
 					"Kcom" = "kcom",
-					"Raptor V-4.1" = "chraptor"
+					"Raptor V-4.1" = "chraptor",
+					"Borgi" = "borgi"
 					)
 	channels = list(
 			"Medical" = 1,

@@ -46,7 +46,7 @@
 		var/datum/radio_frequency/connection = signal.data["connection"]
 
 		var/list/forced_radios
-		for(var/weakref/wr in linked_radios_weakrefs)
+		for(var/datum/weakref/wr in linked_radios_weakrefs)
 			var/obj/item/device/radio/R = wr.resolve()
 			if(istype(R))
 				LAZYDISTINCTADD(forced_radios, R)

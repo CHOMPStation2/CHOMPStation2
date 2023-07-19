@@ -10,7 +10,7 @@
 	shock_resist = 1
 	poison_resist = 1
 
-	movement_cooldown = 0
+	movement_cooldown = -2
 	mob_bump_flag = 0 // If the illusion can't be swapped it will be obvious.
 
 	response_help   = "pushes a hand through"
@@ -23,6 +23,8 @@
 
 	var/atom/movable/copying = null // The thing we're trying to look like.
 	var/realistic = FALSE // If true, things like bullets and weapons will hit it, to be a bit more convincing from a distance.
+
+	can_pain_emote = FALSE // CHOMPEdit: Hallucinations can't feel pain and shouldn't take damage anyways, but, sanity
 
 /mob/living/simple_mob/illusion/update_icon() // We don't want the appearance changing AT ALL unless by copy_appearance().
 	return

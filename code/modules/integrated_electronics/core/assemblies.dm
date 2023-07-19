@@ -213,7 +213,9 @@
 	. = ..()
 	if(Adjacent(user))
 		for(var/obj/item/integrated_circuit/IC in contents)
-			. += IC.external_examine(user)
+			var/external_examine = IC.external_examine(user)
+			if (external_examine != null)
+				. += external_examine
 		if(opened)
 			tgui_interact(user)
 
@@ -263,7 +265,7 @@
 	if(proximity)
 		var/scanned = FALSE
 		for(var/obj/item/integrated_circuit/input/sensor/S in contents)
-//			S.set_pin_data(IC_OUTPUT, 1, weakref(target))
+//			S.set_pin_data(IC_OUTPUT, 1, WEAKREF(target))
 //			S.check_then_do_work()
 			if(S.scan(target))
 				scanned = TRUE

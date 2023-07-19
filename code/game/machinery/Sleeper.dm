@@ -169,7 +169,7 @@
 /obj/machinery/sleeper/attack_hand(var/mob/user)
 	if(!controls_inside)
 		return FALSE
-	
+
 	if(user == occupant)
 		tgui_interact(user)
 
@@ -481,10 +481,12 @@
 		M.loc = src
 		update_use_power(USE_POWER_ACTIVE)
 		occupant = M
+		occupant.cozyloop.start() // CHOMPStation Add: Cozy Music
 		update_icon()
 
 /obj/machinery/sleeper/proc/go_out()
 	if(!occupant || occupant.loc != src)
+		occupant.cozyloop.stop() // CHOMPStation Add: Cozy Music
 		occupant = null // JUST IN CASE
 		return
 	if(occupant.client)
@@ -492,6 +494,7 @@
 		occupant.client.perspective = MOB_PERSPECTIVE
 	occupant.Stasis(0)
 	occupant.loc = src.loc
+	occupant.cozyloop.stop() // CHOMPStation Add: Cozy Music
 	occupant = null
 	for(var/atom/movable/A in src) // In case an object was dropped inside or something
 		if(A == beaker || A == circuit)

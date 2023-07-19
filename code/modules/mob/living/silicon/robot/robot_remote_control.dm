@@ -45,24 +45,6 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 
 /mob/living/silicon/robot/proc/transfer_shell(var/mob/living/silicon/robot/target)
 	var/mob/living/silicon/ai/AI = mainframe
-	//Prep old shell
-	if(!deployed || !mind || !mainframe)
-		return
-//	mainframe.redeploy_action.Grant(mainframe)
-//	mainframe.redeploy_action.last_used_shell = src
-	to_chat(src, span("notice", "Transferring Shell"))
-	deployed = FALSE
-	updateicon()
-	mainframe.teleop = null
-	mainframe.deployed_shell = null
-	SetName("[modtype] AI Shell [num2text(ident)]")
-	if(radio) //Return radio to normal
-		radio.recalculateChannels()
-	if(!QDELETED(camera))
-		camera.c_tag = real_name	//update the camera name too
-	if(mainframe.laws)
-		mainframe.laws.show_laws(mainframe) //Always remind the AI when switching
-	mainframe = null
 	//relay AI
 	if(!config.allow_ai_shells)
 		to_chat(src, span("warning", "AI Shells are not allowed on this server. You shouldn't have this verb because of it, so consider making a bug report."))
@@ -114,6 +96,19 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 		return
 
 	else if(mind)
+		to_chat(src, span("notice", "Transferring Shell"))
+		deployed = FALSE
+		updateicon()
+		mainframe.teleop = null
+		mainframe.deployed_shell = null
+		SetName("[modtype] AI Shell [num2text(ident)]")
+		if(radio) //Return radio to normal
+			radio.recalculateChannels()
+		if(!QDELETED(camera))
+			camera.c_tag = real_name	//update the camera name too
+		if(mainframe.laws)
+			mainframe.laws.show_laws(mainframe) //Always remind the AI when switching
+		mainframe = null
 		soul_link(/datum/soul_link/shared_body, src, target)
 		AI.deployed_shell = target
 		target.deploy_init(AI)

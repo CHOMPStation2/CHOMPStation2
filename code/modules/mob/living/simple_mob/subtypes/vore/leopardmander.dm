@@ -22,7 +22,7 @@
 	response_help = "pats"
 	response_disarm = "shoves"
 	response_harm = "bops"
-	movement_cooldown = 2
+	movement_cooldown = -1
 	maxHealth = 1500
 	attacktext = list("chomped")
 	see_in_dark = 8
@@ -48,8 +48,13 @@
 	vore_bump_emote = "tries to snap up"
 
 	nom_mob = TRUE
-	
+
 	can_be_drop_prey = FALSE //CHOMP Add
+	// CHOMPAdd: :c
+	pain_sound = canine_pain_sounds
+	pain_emote_1p = list("yelp", "whine", "bark", "growl")
+	pain_emote_3p = list("yelps", "whines", "barks", "growls")
+	death_sound = canine_death_sounds
 
 /datum/category_item/catalogue/fauna/leopardmander
 	name = "Sivian Fauna - Va'aen Drake"
@@ -58,7 +63,7 @@
 	The Va'aen drake, or Sivian leopardmander, is a very large predator known for its unusual ability to heal people's wounds via saliva, or storing them in one of its multiple stomachs for extended periods of time. \
 	The majority of the Va'aen drake's long life is spent in isolation, hunting saviks and shantaks in Sif's mountainous regions or roaming the vast tundras of Sif, \
 	only seeking out other individuals during the summer mating season where they spend several months in courtship, usually only producing a single egg. \
-	Though completely docile towards humans and other large sapients, the Va'aen drake posesses great strength and a very potent paralyzing venom; \
+	Though completely docile towards humans and other large sapients, the Va'aen drake possesses great strength and a very potent paralyzing venom; \
 	a provoked Va'aen can be a danger to even the most hardy of explorers due to its surprising speed, crushing bite, and long lasting venom. \
 	The Va'aen has been hunted to near extinction by poachers due to its secretions' unusual healing properties, and its beautiful hide; encountering one has become very rare."
 	value = CATALOGUER_REWARD_HARD
@@ -69,7 +74,7 @@
 		riding_datum = new /datum/riding/simple_mob(src)
 	verbs |= /mob/living/simple_mob/proc/animal_mount
 	verbs |= /mob/living/proc/toggle_rider_reins
-	movement_cooldown = 2
+	movement_cooldown = -1
 
 /mob/living/simple_mob/vore/leopardmander/Initialize()
 	..()

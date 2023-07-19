@@ -25,7 +25,7 @@
 
 	faction = "pakkun"
 
-	movement_cooldown = 6
+	movement_cooldown = 2
 	can_be_drop_pred = 1 //They can tongue vore.
 
 	meat_amount = 5
@@ -130,23 +130,24 @@
 /mob/living/simple_mob/vore/pakkun/on_throw_vore_special(var/pred, var/mob/living/target)
 	if(pred && !extra_posessive && !(LAZYFIND(prey_excludes, target)))
 		LAZYSET(prey_excludes, target, world.time)
-		addtimer(CALLBACK(src, .proc/removeMobFromPreyExcludes, weakref(target)), 5 MINUTES)
+		addtimer(CALLBACK(src, PROC_REF(removeMobFromPreyExcludes), WEAKREF(target)), 5 MINUTES)
 	if(ai_holder)
 		ai_holder.remove_target()
 
 /mob/living/simple_mob/vore/pakkun/init_vore()
 	..()
 	var/obj/belly/B = vore_selected
-	B.name = "stomach"
-	B.desc = "you land with a soft bump in what can only be described as a big soft slimy sack, the walls effortlessly stretching to match your every move with no sign of reaching any kind of elastic \
-	limit - and to add insult to injury, it seems the thing is... pressing on you, kneading over the lump you make in its midsection, as though rubbing in the fact that you've just been caught."
-	B.absorbed_desc = "the endless smooshing and kneading has taken its toll, your form softening and sinking into the body of the greedy little reptile. It seems like you might be here for some time - \
-	assuming you ever get out at all. For now though, you're stuck as some extra softness padding out a cute little lizard."
-	B.belly_fullscreen = "a_tumby"
-	B.escapechance = 25
-	B.absorbchance = 0
-	B.digestchance = 0
-	B.digest_mode = DM_SELECT
+	if(isbelly(B)) //ChompEDIT - fix a runtime
+		B.name = "stomach"
+		B.desc = "you land with a soft bump in what can only be described as a big soft slimy sack, the walls effortlessly stretching to match your every move with no sign of reaching any kind of elastic \
+		limit - and to add insult to injury, it seems the thing is... pressing on you, kneading over the lump you make in its midsection, as though rubbing in the fact that you've just been caught."
+		B.absorbed_desc = "the endless smooshing and kneading has taken its toll, your form softening and sinking into the body of the greedy little reptile. It seems like you might be here for some time - \
+		assuming you ever get out at all. For now though, you're stuck as some extra softness padding out a cute little lizard."
+		B.belly_fullscreen = "a_tumby"
+		B.escapechance = 25
+		B.absorbchance = 0
+		B.digestchance = 0
+		B.digest_mode = DM_SELECT
 
 /mob/living/simple_mob/vore/pakkun/attackby(var/obj/item/O, var/mob/user) //if they're newspapered, they'll spit out any junk they've eaten for whatever reason
     if(istype(O, /obj/item/weapon/newspaper) && !ckey && isturf(user.loc))
@@ -155,7 +156,7 @@
         for(var/mob/living/L in living_mobs(0))
             if(!(LAZYFIND(prey_excludes, L)))
                 LAZYSET(prey_excludes, L, world.time)
-                addtimer(CALLBACK(src, .proc/removeMobFromPreyExcludes, weakref(L)), 5 MINUTES)
+                addtimer(CALLBACK(src, PROC_REF(removeMobFromPreyExcludes), WEAKREF(L)), 5 MINUTES)
     else
         ..()
 
@@ -223,8 +224,9 @@
 /mob/living/simple_mob/vore/pakkun/snapdragon/snappy/init_vore()
 	..()
 	var/obj/belly/B = vore_selected
-	B.digest_mode = DM_HOLD
-	B.desc = "the lizard gently yet insistently stuffs you down her gullet - evidently enjoying this moment of playtime as you land in a sprawled heap in the stretchy, clinging sack that makes up \
-	most of her girth. Your movements are rewarded only with squeezing from outside, the skin of the reptile easily stretching out to match your movements no matter how hard you try to push. If anything, \
-	wriggling about just seems to prompt the playful creature to mess with you more, mooshing her paws into the bulges you make, wrapping both arms around you and squeezing you tight, making it absolutely \
-	plain that she's more than happy to just keep you in there - and is more than capable of doing so if she so chooses."
+	if(isbelly(B)) //ChompEDIT - fix a runtime
+		B.digest_mode = DM_HOLD
+		B.desc = "the lizard gently yet insistently stuffs you down her gullet - evidently enjoying this moment of playtime as you land in a sprawled heap in the stretchy, clinging sack that makes up \
+		most of her girth. Your movements are rewarded only with squeezing from outside, the skin of the reptile easily stretching out to match your movements no matter how hard you try to push. If anything, \
+		wriggling about just seems to prompt the playful creature to mess with you more, mooshing her paws into the bulges you make, wrapping both arms around you and squeezing you tight, making it absolutely \
+		plain that she's more than happy to just keep you in there - and is more than capable of doing so if she so chooses."

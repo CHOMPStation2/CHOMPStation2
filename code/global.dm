@@ -41,6 +41,7 @@ var/const/starsys_name	= "Virgo-Erigone"
 //CHOMPStation Removal End
 var/const/game_version	= "CHOMPStation"	//CHOMPStation Edit TFF 24/12/19 - Chompers
 var/changelog_hash		= ""
+var/servernews_hash		= "" //ChompADD - news hash gen
 var/game_year			= (text2num(time2text(world.realtime, "YYYY")) + 544) //YW EDIT
 var/round_progressing = 1
 
@@ -177,7 +178,11 @@ var/static/list/scarySounds = list(
 	'sound/items/Welder2.ogg',
 	'sound/machines/door/old_airlock.ogg',
 	'sound/effects/clownstep1.ogg',
-	'sound/effects/clownstep2.ogg'
+	'sound/effects/clownstep2.ogg',
+	'sound/voice/teppi/roar.ogg',	//VOREStation Add
+	'sound/voice/moth/scream_moth.ogg',	//VOREStation Add
+	'sound/voice/nya.ogg',	//VOREStation Add
+	'sound/voice/succlet_shriek.ogg'	//VOREStation Add
 )
 
 // Bomb cap!

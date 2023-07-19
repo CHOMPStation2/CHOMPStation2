@@ -1,0 +1,2312 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ae" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor,
+/area/survivalpod/superpose/GrandLibrary)
+"aj" = (
+/obj/structure/curtain/black,
+/obj/machinery/light_switch{
+	pixel_x = 21;
+	pixel_y = 11
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"as" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"av" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/obj/structure/mirror{
+	pixel_x = 28
+	},
+/turf/simulated/floor/tiled/kafel_full/purple,
+/area/survivalpod/superpose/GrandLibrary)
+"az" = (
+/obj/structure/barricade/cutout/wizard{
+	anchored = 1
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"aZ" = (
+/obj/structure/bed/chair/wood{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"bc" = (
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	anchored = 1;
+	pixel_y = 32
+	},
+/obj/structure/mopbucket,
+/obj/item/weapon/mop,
+/obj/item/weapon/reagent_containers/glass/bucket,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"be" = (
+/obj/structure/bookcase,
+/obj/item/weapon/book/custom_library/reference,
+/obj/item/weapon/book/custom_library/reference,
+/obj/item/weapon/book/manual,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"bz" = (
+/obj/structure/bookcase,
+/obj/item/weapon/book/custom_library/nonfiction,
+/obj/item/weapon/book/custom_library/fiction,
+/obj/item/weapon/book/custom_library/fiction,
+/obj/item/weapon/book/manual,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"bG" = (
+/obj/structure/bookcase/manuals/xenoarchaeology,
+/obj/item/weapon/book/custom_library/reference,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"cd" = (
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	anchored = 1;
+	pixel_y = 32
+	},
+/obj/structure/bookcase/manuals/medical,
+/obj/item/weapon/book/custom_library/reference,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"ck" = (
+/obj/structure/bookcase,
+/obj/item/weapon/book/custom_library/reference,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"cG" = (
+/obj/structure/bookcase,
+/obj/item/weapon/book/custom_library/nonfiction,
+/obj/item/weapon/book/manual,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"dm" = (
+/obj/structure/prop/statue/pillar/dark,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"es" = (
+/obj/structure/closet/secure_closet/freezer/fridge,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
+/obj/item/weapon/reagent_containers/food/drinks/soymilk,
+/obj/item/weapon/reagent_containers/food/drinks/soymilk,
+/obj/item/weapon/reagent_containers/food/drinks/soymilk,
+/obj/item/weapon/reagent_containers/food/drinks/soymilk,
+/obj/item/weapon/reagent_containers/food/drinks/soymilk,
+/obj/item/weapon/reagent_containers/food/condiment/carton/flour{
+	pixel_x = -5;
+	pixel_y = -2
+	},
+/obj/item/weapon/reagent_containers/food/condiment/carton/flour{
+	pixel_x = -5;
+	pixel_y = -2
+	},
+/obj/item/weapon/reagent_containers/food/condiment/carton/flour{
+	pixel_x = -5;
+	pixel_y = -2
+	},
+/obj/item/weapon/reagent_containers/food/condiment/sugar{
+	pixel_x = 10;
+	pixel_y = 2
+	},
+/obj/item/weapon/reagent_containers/food/condiment/sugar{
+	pixel_x = 10;
+	pixel_y = 2
+	},
+/obj/item/weapon/reagent_containers/food/condiment/sugar{
+	pixel_x = 10;
+	pixel_y = 2
+	},
+/turf/simulated/floor/tiled/eris/cafe,
+/area/survivalpod/superpose/GrandLibrary)
+"fi" = (
+/obj/structure/bed/chair/wood{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"gt" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/tiled/kafel_full/purple,
+/area/survivalpod/superpose/GrandLibrary)
+"gO" = (
+/obj/structure/bookcase,
+/obj/item/weapon/book/custom_library/nonfiction,
+/obj/item/weapon/book/custom_library/fiction,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"gX" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor,
+/area/survivalpod/superpose/GrandLibrary)
+"hf" = (
+/obj/structure/table/fancyblack,
+/obj/item/weapon/paper_bin{
+	pixel_y = 3
+	},
+/obj/item/weapon/pen{
+	pixel_y = 3
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"hg" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/survivalpod/superpose/GrandLibrary)
+"hE" = (
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"hR" = (
+/obj/structure/flora/pottedplant/minitree,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"iG" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/kafel_full/purple,
+/area/survivalpod/superpose/GrandLibrary)
+"ja" = (
+/obj/structure/bookcase,
+/obj/item/weapon/book/custom_library/reference,
+/obj/item/weapon/book/custom_library/nonfiction,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"jd" = (
+/obj/structure/simple_door/wood,
+/obj/structure/barricade/planks,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"jk" = (
+/obj/structure/bookcase,
+/obj/item/weapon/book/custom_library/nonfiction,
+/obj/item/weapon/book/custom_library/nonfiction,
+/obj/item/weapon/book/manual,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"jA" = (
+/obj/structure/flora/pottedplant/minitree,
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/carpet/blucarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"jB" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"kw" = (
+/obj/structure/flora/ausbushes/brflowers,
+/turf/simulated/floor/outdoors/grass/sif/planetuse,
+/area/template_noop)
+"kZ" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/flame/candle/candelabra{
+	pixel_y = 5
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"lo" = (
+/obj/structure/bed/chair/wood{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/turf/simulated/floor/carpet/blucarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"lI" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"nq" = (
+/obj/item/device/gps/computer,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"nv" = (
+/obj/structure/table/rack/shelf/steel,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"nQ" = (
+/obj/structure/table/standard,
+/obj/random/soap,
+/obj/random/soap,
+/turf/simulated/floor/tiled/kafel_full/purple,
+/area/survivalpod/superpose/GrandLibrary)
+"nV" = (
+/obj/structure/table/fancyblack,
+/obj/item/weapon/pen/red{
+	pixel_x = 4;
+	pixel_y = 8
+	},
+/obj/item/weapon/pen{
+	pixel_x = 1;
+	pixel_y = 4
+	},
+/obj/item/weapon/pen/blue{
+	pixel_x = -1
+	},
+/turf/simulated/floor/carpet/blue2,
+/area/survivalpod/superpose/GrandLibrary)
+"on" = (
+/obj/structure/bookcase,
+/obj/item/weapon/book/custom_library/nonfiction,
+/obj/item/weapon/book/custom_library/nonfiction,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"oD" = (
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 4;
+	pixel_x = 24
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"oF" = (
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	anchored = 1;
+	pixel_x = 32
+	},
+/obj/structure/bookcase/manuals/engineering,
+/obj/item/weapon/book/custom_library/reference,
+/obj/item/weapon/book/custom_library/nonfiction,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"oJ" = (
+/obj/structure/bed/chair/wood{
+	dir = 8
+	},
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	anchored = 1;
+	pixel_y = -32
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"oX" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/weapon/book/custom_library/reference/fistfulofd6splayersguide,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"pn" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/hand_labeler{
+	pixel_x = -7;
+	pixel_y = 8
+	},
+/obj/item/weapon/reagent_containers/spray/cleaner{
+	pixel_y = 6;
+	pixel_x = 7
+	},
+/obj/item/weapon/reagent_containers/glass/rag,
+/turf/simulated/floor/tiled/eris/cafe,
+/area/survivalpod/superpose/GrandLibrary)
+"pT" = (
+/obj/structure/bed/chair/sofa/right,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"pZ" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor,
+/area/survivalpod/superpose/GrandLibrary)
+"qd" = (
+/turf/simulated/wall/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"qX" = (
+/obj/item/weapon/reagent_containers/food/drinks/shaker{
+	pixel_x = 4;
+	pixel_y = 8
+	},
+/obj/item/weapon/reagent_containers/food/drinks/teapot{
+	pixel_x = -5;
+	pixel_y = 1
+	},
+/obj/structure/table/marble,
+/turf/simulated/floor/tiled/eris/cafe,
+/area/survivalpod/superpose/GrandLibrary)
+"rj" = (
+/obj/structure/table/woodentable,
+/obj/machinery/recharger,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"rs" = (
+/obj/structure/table/woodentable,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/blucarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"rw" = (
+/obj/structure/table/fancyblack,
+/obj/item/weapon/pen{
+	pixel_x = 1;
+	pixel_y = 4
+	},
+/obj/item/weapon/pen/red{
+	pixel_x = 4;
+	pixel_y = 8
+	},
+/obj/item/weapon/pen/blue{
+	pixel_x = -1
+	},
+/obj/machinery/light/floortube,
+/turf/simulated/floor/carpet/blue2,
+/area/survivalpod/superpose/GrandLibrary)
+"rA" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"rG" = (
+/obj/structure/bookcase,
+/obj/item/weapon/book/custom_library/nonfiction,
+/obj/item/weapon/book/custom_library/fiction,
+/obj/item/weapon/book/manual,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"sa" = (
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	anchored = 1;
+	pixel_y = -32
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"sc" = (
+/obj/structure/bed/chair/wood{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 5
+	},
+/turf/simulated/floor/carpet/blucarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"sm" = (
+/obj/structure/bookcase/manuals/engineering,
+/obj/item/weapon/book/custom_library/religious,
+/obj/item/weapon/book/custom_library/religious,
+/obj/item/weapon/book/custom_library/fiction,
+/obj/item/weapon/book/manual,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"st" = (
+/obj/structure/bookcase,
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	anchored = 1;
+	pixel_x = 32
+	},
+/obj/item/weapon/book/custom_library/religious,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"sE" = (
+/obj/structure/atmospheric_retention_field/underdoors,
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"sY" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"tg" = (
+/obj/structure/bookcase,
+/obj/item/weapon/book/custom_library/reference,
+/obj/item/weapon/book/manual,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"tN" = (
+/mob/living/simple_mob/mechanical/cyber_horror/cat_cyber_horror{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"ur" = (
+/turf/simulated/floor/tiled/kafel_full/purple,
+/area/survivalpod/superpose/GrandLibrary)
+"uY" = (
+/obj/structure/bookcase,
+/obj/item/weapon/book/custom_library/religious,
+/obj/item/weapon/book/custom_library/nonfiction,
+/obj/item/weapon/book/manual,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"vi" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor,
+/area/survivalpod/superpose/GrandLibrary)
+"vL" = (
+/obj/structure/curtain/black,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"vQ" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/obj/machinery/newscaster{
+	pixel_y = 29
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"wg" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/flame/candle/candelabra/everburn,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"wr" = (
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "glcafe"
+	},
+/turf/simulated/floor/tiled/eris/cafe,
+/area/survivalpod/superpose/GrandLibrary)
+"wH" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/tiled/eris/cafe,
+/area/survivalpod/superpose/GrandLibrary)
+"wM" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
+	},
+/turf/simulated/floor/carpet/blucarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"xd" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/obj/structure/curtain/open,
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"xh" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"xi" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/obj/item/weapon/stool/baystool/padded{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"xs" = (
+/obj/structure/table/fancyblack,
+/obj/item/weapon/pen/red{
+	pixel_x = 4;
+	pixel_y = 8
+	},
+/obj/item/weapon/pen{
+	pixel_x = 1;
+	pixel_y = 4
+	},
+/obj/item/weapon/pen/blue{
+	pixel_x = -1
+	},
+/obj/machinery/light/floortube,
+/turf/simulated/floor/carpet/blue2,
+/area/survivalpod/superpose/GrandLibrary)
+"xx" = (
+/obj/structure/bookcase/manuals/research_and_development,
+/obj/item/weapon/book/custom_library/reference,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"xC" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor,
+/area/survivalpod/superpose/GrandLibrary)
+"xJ" = (
+/obj/structure/bookcase,
+/obj/item/weapon/book/custom_library/fiction,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"xY" = (
+/obj/structure/bookcase/manuals/xenoarchaeology,
+/obj/item/weapon/book/custom_library/religious,
+/obj/item/weapon/book/custom_library/nonfiction,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"yc" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	pixel_y = -6
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"yz" = (
+/obj/structure/bookcase,
+/obj/item/weapon/book/custom_library/religious,
+/obj/item/weapon/book/custom_library/religious,
+/obj/item/weapon/book/manual,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"yH" = (
+/obj/structure/table/fancyblack,
+/obj/item/weapon/paper_bin{
+	pixel_y = 5
+	},
+/obj/item/weapon/pen/red{
+	pixel_x = 4;
+	pixel_y = 8
+	},
+/obj/item/weapon/pen{
+	pixel_x = 1;
+	pixel_y = 4
+	},
+/obj/item/weapon/pen/blue{
+	pixel_x = -1
+	},
+/obj/machinery/light/floortube,
+/turf/simulated/floor/carpet/blue2,
+/area/survivalpod/superpose/GrandLibrary)
+"yJ" = (
+/obj/item/weapon/storage/box/glasses/coffeecup,
+/obj/item/weapon/storage/box/glasses/coffeecup,
+/obj/item/weapon/storage/box/glasses/coffeecup,
+/obj/item/weapon/storage/box/glasses/coffeecup,
+/obj/item/weapon/storage/box/glasses/coffeecup,
+/obj/structure/table/rack/shelf,
+/obj/item/weapon/storage/box/glass_extras/straws,
+/obj/item/weapon/storage/box/glass_extras/straws,
+/obj/item/weapon/storage/box/buns{
+	pixel_y = 12
+	},
+/obj/item/weapon/storage/box/buns{
+	pixel_y = 12
+	},
+/obj/item/weapon/storage/box/buns{
+	pixel_y = 12
+	},
+/turf/simulated/floor/tiled/eris/cafe,
+/area/survivalpod/superpose/GrandLibrary)
+"yX" = (
+/turf/simulated/floor/tiled/eris/cafe,
+/area/survivalpod/superpose/GrandLibrary)
+"zG" = (
+/obj/structure/flora/pottedplant/large,
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	anchored = 1;
+	pixel_x = 32
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"zR" = (
+/obj/structure/bed/chair/comfy/red,
+/turf/simulated/floor/carpet/blue2,
+/area/survivalpod/superpose/GrandLibrary)
+"AG" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 5
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"AU" = (
+/obj/effect/floor_decal/spline/fancy/wood/corner,
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"Bh" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"Bm" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 10
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"BG" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	anchored = 1;
+	pixel_x = -32
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"BJ" = (
+/obj/structure/bookcase,
+/obj/item/weapon/book/custom_library/nonfiction,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"Cx" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 10
+	},
+/turf/simulated/floor/carpet/blucarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"CE" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
+	},
+/obj/machinery/newscaster{
+	pixel_x = 30
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"CM" = (
+/obj/structure/bed/chair/sofa{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"CZ" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/paper_bin{
+	pixel_y = 3
+	},
+/obj/item/weapon/pen{
+	pixel_y = 3
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"Dq" = (
+/obj/effect/floor_decal/spline/fancy/wood/corner,
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"DH" = (
+/obj/effect/floor_decal/spline/fancy/wood/cee{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"DL" = (
+/obj/structure/table/fancyblack,
+/obj/machinery/photocopier/faxmachine{
+	department = "Grand_Library";
+	pixel_y = 6
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"DR" = (
+/obj/structure/toilet,
+/turf/simulated/floor/tiled/kafel_full/purple,
+/area/survivalpod/superpose/GrandLibrary)
+"Fb" = (
+/obj/structure/sink/countertop{
+	pixel_y = 7
+	},
+/obj/structure/table/marble,
+/turf/simulated/floor/tiled/eris/cafe,
+/area/survivalpod/superpose/GrandLibrary)
+"FE" = (
+/obj/machinery/vending/event/costume,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"FF" = (
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"FH" = (
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"FU" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/melee/umbrella/random,
+/obj/item/weapon/melee/umbrella/random,
+/obj/item/weapon/melee/umbrella/random,
+/obj/item/weapon/melee/umbrella/random,
+/obj/item/weapon/melee/umbrella/random,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"FW" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood/corner,
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"Gg" = (
+/obj/structure/flora/ausbushes/ppflowers,
+/turf/simulated/floor/outdoors/grass/sif/planetuse,
+/area/template_noop)
+"Gz" = (
+/obj/structure/bed/chair/sofa/corner,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 5
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"GC" = (
+/obj/item/weapon/gun/projectile/revolver/nagant{
+	pixel_x = 10;
+	pixel_y = 7
+	},
+/obj/effect/decal/remains/human,
+/obj/item/ammo_magazine/s357{
+	pixel_x = -13;
+	pixel_y = 9
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"GG" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"GM" = (
+/obj/structure/bookcase,
+/obj/item/weapon/book/custom_library/religious,
+/obj/item/weapon/book/custom_library/religious,
+/obj/item/weapon/book/custom_library/nonfiction,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"GX" = (
+/obj/structure/bookcase,
+/obj/item/weapon/book/custom_library/religious,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"Ha" = (
+/obj/machinery/chemical_dispenser/bar_coffee/full{
+	pixel_y = 7
+	},
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	anchored = 1;
+	pixel_y = 32
+	},
+/obj/structure/table/marble,
+/turf/simulated/floor/tiled/eris/cafe,
+/area/survivalpod/superpose/GrandLibrary)
+"Hp" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"HO" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/clothing/head/wizard/marisa/fake,
+/obj/item/clothing/head/wizard/fake/realistic,
+/obj/item/clothing/accessory/poncho/roles/cloak/mining,
+/obj/item/clothing/accessory/poncho/roles/cloak/research,
+/obj/item/clothing/gloves/combat/knight_costume,
+/obj/item/clothing/gloves/combat/knight_costume/brown,
+/obj/item/clothing/shoes/knight_costume,
+/obj/item/clothing/shoes/knight_costume/black,
+/obj/item/clothing/suit/storage/hooded/knight_costume/galahad,
+/obj/item/clothing/suit/storage/hooded/knight_costume/lancelot,
+/obj/item/clothing/suit/storage/hooded/knight_costume/robin,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"Ip" = (
+/obj/effect/floor_decal/spline/fancy/wood/cee{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"Iw" = (
+/obj/item/ammo_magazine/s357{
+	pixel_y = -9
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"IH" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	anchored = 1;
+	pixel_x = 32
+	},
+/obj/item/device/starcaster_news,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"IK" = (
+/obj/structure/bed/chair/wood{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"IS" = (
+/obj/machinery/photocopier,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"IU" = (
+/obj/structure/simple_door/wood,
+/obj/structure/curtain/black,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"Je" = (
+/obj/structure/table/woodentable,
+/obj/item/device/starcaster_news,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"Jv" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	anchored = 1;
+	pixel_y = 32
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"JQ" = (
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"JW" = (
+/obj/structure/bed/chair/wood{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/blue2,
+/area/survivalpod/superpose/GrandLibrary)
+"Ko" = (
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"KE" = (
+/obj/structure/table/fancyblack,
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	pixel_y = 3
+	},
+/turf/simulated/floor/carpet/blue2,
+/area/survivalpod/superpose/GrandLibrary)
+"LG" = (
+/obj/item/weapon/tool/wrench{
+	pixel_x = 10;
+	pixel_y = 4
+	},
+/obj/item/clothing/accessory/collar/bell{
+	desc = "A bell collar, on it reads. My beloved cat Mitzy"
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"LS" = (
+/obj/machinery/vending/wallmed1{
+	dir = 1;
+	name = "Emergency NanoMed";
+	pixel_y = -25
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"Mm" = (
+/obj/machinery/newscaster{
+	pixel_x = 30
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"Mp" = (
+/obj/machinery/reagentgrinder{
+	pixel_y = 8
+	},
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	anchored = 1;
+	pixel_y = 32
+	},
+/obj/structure/table/marble,
+/turf/simulated/floor/tiled/eris/cafe,
+/area/survivalpod/superpose/GrandLibrary)
+"Mr" = (
+/obj/structure/bed/chair/wood,
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	anchored = 1;
+	pixel_x = -32
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"Mu" = (
+/obj/structure/flora/ausbushes/ywflowers,
+/turf/simulated/floor/outdoors/grass/sif/planetuse,
+/area/template_noop)
+"Mx" = (
+/obj/structure/bookcase,
+/obj/item/weapon/book/custom_library/religious,
+/obj/item/weapon/book/custom_library/fiction,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"My" = (
+/obj/machinery/door/blast/shutters{
+	dir = 2
+	},
+/turf/simulated/floor/tiled/eris/cafe,
+/area/survivalpod/superpose/GrandLibrary)
+"MQ" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"Na" = (
+/obj/item/weapon/storage/box/donut{
+	pixel_x = 3;
+	pixel_y = -4
+	},
+/obj/structure/table/marble,
+/obj/item/weapon/storage/box/donut{
+	pixel_x = 3;
+	pixel_y = 11
+	},
+/turf/simulated/floor/tiled/eris/cafe,
+/area/survivalpod/superpose/GrandLibrary)
+"Nb" = (
+/obj/machinery/bookbinder,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"Nl" = (
+/obj/machinery/recharge_station,
+/turf/simulated/floor/tiled/kafel_full/purple,
+/area/survivalpod/superpose/GrandLibrary)
+"Ny" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor,
+/area/survivalpod/superpose/GrandLibrary)
+"NG" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"NN" = (
+/obj/structure/bed/chair/wood,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"Ob" = (
+/obj/structure/bookcase,
+/obj/item/weapon/book/custom_library/reference,
+/obj/item/weapon/book/custom_library/nonfiction,
+/obj/item/weapon/book/custom_library/nonfiction,
+/obj/item/weapon/book/manual,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"Ok" = (
+/obj/structure/table/woodentable,
+/obj/machinery/vending/wallmed1{
+	dir = 1;
+	name = "Emergency NanoMed";
+	pixel_y = -25
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"Oq" = (
+/obj/structure/bookcase,
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	anchored = 1;
+	pixel_y = -32
+	},
+/obj/item/weapon/book/custom_library/religious,
+/obj/item/weapon/book/custom_library/nonfiction,
+/obj/item/weapon/book/custom_library/fiction,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"OL" = (
+/obj/structure/flora/pottedplant/large,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"OO" = (
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	anchored = 1;
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/kafel_full/purple,
+/area/survivalpod/superpose/GrandLibrary)
+"PH" = (
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"Qa" = (
+/obj/structure/bookcase/bookcart,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"Qr" = (
+/obj/structure/fans,
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	anchored = 1;
+	pixel_y = 32
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"QL" = (
+/obj/effect/floor_decal/spline/fancy/wood/cee{
+	dir = 8
+	},
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	anchored = 1;
+	pixel_x = -32
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"Rq" = (
+/obj/structure/table/woodentable,
+/obj/item/ammo_magazine/s357,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"RE" = (
+/obj/machinery/librarycomp,
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	anchored = 1;
+	pixel_y = 32
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"RG" = (
+/obj/structure/bookcase/manuals/medical,
+/obj/item/weapon/book/custom_library/reference,
+/obj/item/weapon/book/manual,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"RM" = (
+/obj/structure/bookcase/manuals/engineering,
+/obj/item/weapon/book/custom_library/religious,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"Sd" = (
+/obj/machinery/libraryscanner,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"Sz" = (
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"SF" = (
+/obj/structure/bed/chair/sofa/left{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"SP" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/stock_parts/spring{
+	pixel_x = 5;
+	pixel_y = 8
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"SU" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"Ts" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/tool/screwdriver{
+	pixel_x = -8;
+	pixel_y = 4
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"Tv" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	anchored = 1;
+	pixel_y = -32
+	},
+/obj/machinery/recharger,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"TR" = (
+/obj/structure/bookcase/manuals/research_and_development,
+/obj/item/weapon/book/custom_library/reference,
+/obj/item/weapon/book/manual,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"Uk" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	anchored = 1;
+	pixel_y = -32
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"Up" = (
+/obj/structure/atmospheric_retention_field/underdoors,
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"VM" = (
+/obj/structure/bookcase/manuals/engineering,
+/obj/item/weapon/book/custom_library/reference,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"Wg" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/book/custom_library/reference/fistfulofd6splayersguide,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"Wi" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/bed/chair/sofa,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"WN" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	pixel_y = 7
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"Xd" = (
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	anchored = 1;
+	pixel_x = 32
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"Xg" = (
+/obj/structure/bookcase,
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	anchored = 1;
+	pixel_y = 32
+	},
+/obj/item/weapon/book/custom_library/reference,
+/obj/item/weapon/book/manual,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"Xi" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/obj/structure/curtain/open,
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"Xt" = (
+/obj/structure/flora/pottedplant/minitree,
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	anchored = 1;
+	pixel_y = 32
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"XJ" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/paper_bin{
+	pixel_y = 5
+	},
+/obj/item/weapon/pen{
+	pixel_x = 1;
+	pixel_y = 4
+	},
+/obj/item/weapon/pen/red{
+	pixel_x = 4;
+	pixel_y = 8
+	},
+/obj/item/weapon/pen/blue{
+	pixel_x = -1
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"XN" = (
+/obj/structure/bookcase/manuals/xenoarchaeology,
+/obj/item/weapon/book/custom_library/reference,
+/obj/item/weapon/book/manual,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"XS" = (
+/obj/machinery/button/remote/blast_door{
+	dir = 1;
+	id = "glcafe";
+	pixel_y = -25
+	},
+/turf/simulated/floor/tiled/eris/cafe,
+/area/survivalpod/superpose/GrandLibrary)
+"Yu" = (
+/obj/machinery/newscaster{
+	layer = 3.3;
+	pixel_y = -27
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"Yw" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"YE" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	pixel_y = -6
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"YM" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor,
+/area/survivalpod/superpose/GrandLibrary)
+"Zc" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/storage/briefcase/bookbag,
+/obj/item/weapon/storage/briefcase/bookbag,
+/obj/item/weapon/storage/briefcase/bookbag,
+/obj/item/weapon/storage/briefcase/bookbag,
+/obj/item/weapon/storage/briefcase/bookbag,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"Zn" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/stock_parts/gear{
+	pixel_x = -8;
+	pixel_y = 3
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"Zp" = (
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"ZA" = (
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/menu9,
+/obj/item/weapon/storage/mre/menu9,
+/obj/item/weapon/storage/mre/menu10,
+/obj/item/weapon/storage/mre/menu10,
+/obj/item/weapon/storage/mre/menu11,
+/obj/item/weapon/storage/mre/menu11,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/fbp_backup_cell,
+/obj/item/weapon/storage/pill_bottle/antitox,
+/obj/item/weapon/storage/box/survival/space,
+/obj/item/device/healthanalyzer,
+/obj/item/weapon/storage/pill_bottle/dice_nerd,
+/obj/item/weapon/storage/firstaid/regular,
+/obj/item/weapon/extinguisher/mini,
+/obj/item/weapon/extinguisher/mini,
+/obj/item/weapon/storage/box/survival/space,
+/obj/item/weapon/storage/box/survival/space,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/starcaster_news,
+/obj/item/device/starcaster_news,
+/obj/item/device/threadneedle,
+/obj/item/device/flashlight,
+/obj/item/device/flashlight,
+/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/weapon/storage/pill_bottle/spaceacillin,
+/obj/random/soap,
+/obj/item/weapon/material/knife/machete/hatchet,
+/obj/item/weapon/storage/box/flare,
+/obj/structure/closet/crate/wooden,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol/unlocked,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"ZI" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"ZM" = (
+/obj/effect/floor_decal/spline/fancy/wood/cee,
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/GrandLibrary)
+"ZR" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	anchored = 1;
+	pixel_x = 32
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"ZT" = (
+/obj/structure/bookcase,
+/obj/item/weapon/book/custom_library/reference,
+/obj/item/weapon/book/custom_library/fiction,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+"ZY" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/toy/figure/abe,
+/obj/item/toy/figure/acolyte,
+/obj/item/toy/figure/agent,
+/obj/item/toy/figure/assistant,
+/obj/item/toy/figure/atmos,
+/obj/item/toy/figure/bandit,
+/obj/item/toy/figure/barking_dog,
+/obj/item/toy/figure/bartender,
+/obj/item/toy/figure/borg,
+/obj/item/toy/figure/bounty_hunter,
+/obj/item/toy/figure/captain,
+/obj/item/toy/figure/cargotech,
+/obj/item/toy/figure/carrion,
+/obj/item/toy/figure/ce,
+/obj/item/toy/figure/chaplain,
+/obj/item/toy/figure/chef,
+/obj/item/toy/figure/chemist,
+/obj/item/toy/figure/clown,
+/obj/item/toy/figure/cmo,
+/obj/item/toy/figure/corgi,
+/obj/item/toy/figure/detective,
+/obj/item/toy/figure/dsquad,
+/obj/item/toy/figure/engineer,
+/obj/item/toy/figure/error,
+/obj/item/toy/figure/ert,
+/obj/item/toy/figure/excelsior,
+/obj/item/toy/figure/gardener,
+/obj/item/toy/figure/geneticist,
+/obj/item/toy/figure/hop,
+/obj/item/toy/figure/hos,
+/obj/item/toy/figure/janitor,
+/obj/item/toy/figure/leadbandit,
+/obj/item/toy/figure/librarian,
+/obj/item/toy/figure/md,
+/obj/item/toy/figure/metacat,
+/obj/item/toy/figure/metro_patrolman,
+/obj/item/toy/figure/mime,
+/obj/item/toy/figure/miner,
+/obj/item/toy/figure/ninja,
+/obj/item/toy/figure/paramedic,
+/obj/item/toy/figure/prisoner,
+/obj/item/toy/figure/profwho,
+/obj/item/toy/figure/psychologist,
+/obj/item/toy/figure/qm,
+/obj/item/toy/figure/ranger,
+/obj/item/toy/figure/rd,
+/obj/item/toy/figure/red_soldier,
+/obj/item/toy/figure/roach,
+/obj/item/toy/figure/roboticist,
+/obj/item/toy/figure/rooster,
+/obj/item/toy/figure/scientist,
+/obj/item/toy/figure/secofficer,
+/obj/item/toy/figure/serbian,
+/obj/item/toy/figure/shitcurity,
+/obj/item/toy/figure/syndie,
+/obj/item/toy/figure/vagabond,
+/obj/item/toy/figure/virologist,
+/obj/item/toy/figure/warden,
+/obj/item/toy/figure/wizard,
+/obj/item/toy/figure/station,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
+
+(1,1,1) = {"
+qd
+qd
+qd
+Mu
+Gg
+Mu
+qd
+qd
+qd
+Gg
+kw
+Mu
+kw
+qd
+qd
+Mu
+Gg
+kw
+Mu
+Gg
+kw
+qd
+qd
+qd
+"}
+(2,1,1) = {"
+qd
+qd
+qd
+qd
+vi
+qd
+qd
+qd
+qd
+qd
+Ny
+iG
+qd
+qd
+qd
+qd
+xC
+pZ
+YM
+qd
+qd
+qd
+qd
+qd
+"}
+(3,1,1) = {"
+qd
+qd
+on
+xh
+Bm
+xY
+bG
+QL
+IS
+PH
+Qa
+Qa
+PH
+BG
+NN
+Je
+IK
+PH
+aZ
+PH
+Mr
+jB
+qd
+qd
+"}
+(4,1,1) = {"
+ae
+lo
+Cx
+ZI
+lI
+xY
+XN
+GG
+hf
+PH
+Qa
+Qa
+PH
+Bh
+NN
+jB
+IK
+PH
+jB
+PH
+PH
+oJ
+qd
+kw
+"}
+(5,1,1) = {"
+gX
+rs
+jA
+ZI
+lI
+bG
+XN
+GG
+DL
+PH
+Qa
+Qa
+PH
+rA
+PH
+PH
+PH
+PH
+fi
+PH
+PH
+PH
+vi
+Gg
+"}
+(6,1,1) = {"
+hg
+sc
+wM
+ZI
+JQ
+Yw
+Yw
+FH
+Yw
+Yw
+Yw
+Yw
+Yw
+Yw
+Yw
+Yw
+Yw
+Yw
+Yw
+Yw
+Bm
+aZ
+qd
+Gg
+"}
+(7,1,1) = {"
+qd
+qd
+ck
+ZI
+Dq
+MQ
+MQ
+AU
+MQ
+MQ
+MQ
+MQ
+MQ
+MQ
+MQ
+MQ
+MQ
+MQ
+MQ
+Sz
+lI
+Je
+qd
+qd
+"}
+(8,1,1) = {"
+kw
+qd
+be
+ZI
+lI
+gO
+rG
+GG
+GX
+uY
+uY
+st
+PH
+PH
+dm
+Mm
+PH
+PH
+dm
+ZI
+lI
+oJ
+qd
+qd
+"}
+(9,1,1) = {"
+Gg
+qd
+cd
+ZI
+lI
+gO
+bz
+GG
+Mx
+qd
+qd
+qd
+qd
+qd
+qd
+qd
+wg
+Zc
+PH
+ZI
+lI
+PH
+qd
+qd
+"}
+(10,1,1) = {"
+qd
+qd
+tg
+ZI
+lI
+BJ
+xJ
+GG
+Mx
+qd
+Qr
+ZA
+PH
+SU
+PH
+PH
+PH
+jB
+PH
+ZI
+JQ
+FW
+ZM
+sE
+"}
+(11,1,1) = {"
+qd
+qd
+ck
+ZI
+lI
+YE
+jB
+GG
+Oq
+qd
+nq
+PH
+Yu
+qd
+Sd
+PH
+NN
+jB
+PH
+ZI
+hE
+lI
+FU
+qd
+"}
+(12,1,1) = {"
+qd
+qd
+RG
+ZI
+lI
+xx
+tg
+GG
+gO
+qd
+RE
+PH
+PH
+qd
+Nb
+oD
+PH
+CZ
+PH
+ZI
+Dq
+NG
+ZM
+Up
+"}
+(13,1,1) = {"
+kw
+qd
+Xg
+ZI
+lI
+ck
+TR
+GG
+ZT
+qd
+qd
+qd
+SU
+qd
+qd
+qd
+wg
+jB
+PH
+ZI
+lI
+jB
+qd
+qd
+"}
+(14,1,1) = {"
+Mu
+qd
+RG
+ZI
+lI
+xx
+cG
+GG
+ja
+Ob
+jk
+cG
+DH
+PH
+dm
+PH
+PH
+PH
+dm
+ZI
+lI
+Ok
+qd
+qd
+"}
+(15,1,1) = {"
+qd
+qd
+ck
+ZI
+JQ
+Yw
+Yw
+FH
+Yw
+Yw
+Yw
+Yw
+Ko
+Yw
+Yw
+Yw
+Yw
+Yw
+Yw
+Zp
+lI
+rj
+qd
+qd
+"}
+(16,1,1) = {"
+ae
+lo
+Cx
+ZI
+Dq
+MQ
+MQ
+AU
+MQ
+MQ
+MQ
+Sz
+hE
+Dq
+MQ
+MQ
+Sz
+hE
+hE
+hE
+lI
+Tv
+qd
+Mu
+"}
+(17,1,1) = {"
+gX
+rs
+jA
+ZI
+lI
+yz
+RM
+GG
+VM
+qd
+dm
+ZI
+hE
+lI
+dm
+qd
+pT
+hE
+hE
+hE
+lI
+PH
+vi
+kw
+"}
+(18,1,1) = {"
+hg
+sc
+wM
+ZI
+lI
+sm
+GM
+GG
+tg
+qd
+Xt
+ZI
+hE
+lI
+hR
+qd
+Wi
+yc
+Hp
+hE
+lI
+hR
+qd
+kw
+"}
+(19,1,1) = {"
+qd
+qd
+ZT
+AG
+CE
+GX
+oF
+Ip
+VM
+qd
+dm
+AG
+hE
+as
+dm
+qd
+Gz
+CM
+CM
+SF
+WN
+qd
+qd
+qd
+"}
+(20,1,1) = {"
+qd
+qd
+qd
+jd
+qd
+qd
+qd
+qd
+qd
+qd
+qd
+qd
+xd
+qd
+qd
+qd
+qd
+qd
+qd
+qd
+qd
+qd
+qd
+qd
+"}
+(21,1,1) = {"
+qd
+qd
+Iw
+PH
+qd
+yJ
+yX
+yX
+My
+yX
+wH
+xi
+hE
+Bm
+aZ
+qd
+HO
+vL
+PH
+PH
+PH
+PH
+qd
+qd
+"}
+(22,1,1) = {"
+qd
+qd
+kZ
+GC
+qd
+Ha
+yX
+Fb
+My
+yX
+wH
+xi
+hE
+lI
+Uk
+qd
+ZY
+vL
+KE
+rw
+JW
+sa
+qd
+Gg
+"}
+(23,1,1) = {"
+qd
+qd
+Rq
+LG
+qd
+Na
+yX
+qX
+My
+yX
+wH
+xi
+hE
+lI
+fi
+qd
+FE
+vL
+zR
+yH
+JW
+PH
+qd
+Mu
+"}
+(24,1,1) = {"
+qd
+qd
+Ts
+tN
+qd
+Mp
+yX
+yX
+wr
+yX
+wH
+xi
+hE
+lI
+LS
+qd
+nv
+vL
+nV
+xs
+JW
+sa
+qd
+qd
+"}
+(25,1,1) = {"
+qd
+qd
+Zn
+SP
+qd
+es
+yX
+XS
+qd
+pn
+wH
+xi
+hE
+lI
+aZ
+qd
+oX
+aj
+PH
+PH
+PH
+PH
+qd
+qd
+"}
+(26,1,1) = {"
+kw
+qd
+qd
+qd
+qd
+qd
+qd
+SU
+qd
+vQ
+Yw
+Zp
+hE
+lI
+Uk
+qd
+qd
+qd
+qd
+qd
+IU
+qd
+qd
+qd
+"}
+(27,1,1) = {"
+Mu
+qd
+DR
+gt
+ur
+nQ
+qd
+PH
+qd
+Jv
+hE
+hE
+hE
+lI
+fi
+qd
+Wg
+XJ
+jB
+az
+DH
+az
+qd
+Gg
+"}
+(28,1,1) = {"
+Gg
+qd
+qd
+qd
+OO
+ur
+SU
+PH
+SU
+AG
+MQ
+MQ
+MQ
+NG
+sY
+Xi
+sY
+sY
+sY
+sY
+FF
+sa
+qd
+kw
+"}
+(29,1,1) = {"
+qd
+qd
+Nl
+gt
+ur
+av
+qd
+bc
+qd
+NN
+ZR
+IK
+NN
+IH
+IK
+qd
+OL
+Xd
+OL
+PH
+zG
+PH
+qd
+qd
+"}
+(30,1,1) = {"
+qd
+qd
+qd
+qd
+qd
+qd
+qd
+qd
+qd
+qd
+qd
+qd
+qd
+qd
+qd
+qd
+qd
+qd
+qd
+qd
+qd
+qd
+qd
+qd
+"}
+(31,1,1) = {"
+qd
+qd
+qd
+Gg
+kw
+Gg
+qd
+qd
+qd
+kw
+Mu
+kw
+kw
+Gg
+Mu
+qd
+qd
+qd
+kw
+Gg
+Gg
+qd
+qd
+qd
+"}

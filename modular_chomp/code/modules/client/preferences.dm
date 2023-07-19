@@ -244,6 +244,7 @@
 	if(!voice_sound)
 		character.voice_sounds_list = talk_sound
 	else
+	/* CHOMPREMOVAL, redundant list
 		switch(voice_sound)
 			if("beep-boop")
 				character.voice_sounds_list = talk_sound
@@ -273,6 +274,8 @@
 				character.voice_sounds_list = goon_speak_roach_sound
 			if("goon speak skelly")
 				character.voice_sounds_list = goon_speak_skelly_sound
+	*/ //CHOMPREMOVAL, redundant list
+		character.voice_sounds_list = get_talk_sound(voice_sound)
 
 	character.species?.blood_color = blood_color
 

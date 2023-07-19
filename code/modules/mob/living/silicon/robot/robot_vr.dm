@@ -1,6 +1,6 @@
 /mob/living/silicon/robot
-	var/sleeper_g
-	var/sleeper_r
+	var/sleeper_g //Set to True only for Medical mechs when patient alive
+	var/sleeper_r //Used in every other case. Currently also for Vorebellies. Ideally vorebellies will use sleeper_o once icons are made
 	var/sleeper_resting = FALSE //CHOMPEdit - Enable resting belly sprites for dogborgs that have the sprites
 	var/leaping = 0
 	var/pounce_cooldown = 0
@@ -118,10 +118,29 @@
 		if(vore_capacity_ex["stomach"] > 1 && vore_fullness_ex["stomach"] > 1)
 			fullness_extension = "_[vore_fullness_ex["stomach"]]"
 		//CHOMPEdit end
-		if(sleeper_g == TRUE)
-			add_overlay("[module_sprites[icontype]]-sleeper_g")
-		if(sleeper_r == TRUE || (!sleeper_g && vore_fullness_ex["stomach"])) //CHOMPEdit - Also allow normal vore bellies to affect this sprite
-			add_overlay("[module_sprites[icontype]]-sleeper_r[fullness_extension]") //CHOMPEdit - Allow multiple belly sizes...
+		if(vore_selected.silicon_belly_overlay_preference == "Sleeper")
+			if(sleeper_g == TRUE)
+				add_overlay("[module_sprites[icontype]]-sleeper_g")
+			if(sleeper_r == TRUE || (!sleeper_g && vore_fullness_ex["stomach"])) //CHOMPEdit - Also allow normal vore bellies to affect this sprite
+				add_overlay("[module_sprites[icontype]]-sleeper_r[fullness_extension]") //CHOMPEdit - Allow multiple belly sizes...
+		else if(vore_selected.silicon_belly_overlay_preference == "Vorebelly")
+			if(LAZYLEN(vore_selected.contents) >= vore_selected.visible_belly_minimum_prey)
+				if(vore_selected.overlay_min_prey_size == 0)	//if min size is 0, we dont check for size
+					add_overlay("[module_sprites[icontype]]-sleeper_r")
+				else
+					var/show_belly = FALSE
+					if(vore_selected.override_min_prey_size && (LAZYLEN(vore_selected.contents) > vore_selected.override_min_prey_num))
+						show_belly = TRUE	//Override regardless of content size
+					else
+						for(var/content in vore_selected.contents)	//If ANY in belly are big enough, we set to true
+							if(!istype(content, /mob/living)) continue
+							var/mob/living/prey = content
+							if(prey.size_multiplier >= vore_selected.overlay_min_prey_size)
+								show_belly = TRUE
+								break
+					if(show_belly)
+						add_overlay("[module_sprites[icontype]]-sleeper_r")
+
 		if(istype(module_active,/obj/item/weapon/gun/energy/laser/mounted))
 			add_overlay("laser")
 		if(istype(module_active,/obj/item/weapon/gun/energy/taser/mounted/cyborg))
@@ -161,6 +180,7 @@
 		add_overlay("wreck-overlay")
 
 /mob/living/silicon/robot/proc/vr_sprite_check()
+	vis_height = 32 // CHOMPedit: sanitizing tile centering for larger sprites.
 	if(custom_sprite == TRUE)
 		return
 	if(wideborg == TRUE)
@@ -170,10 +190,14 @@
 			icon = 'modular_chomp/icons/mob/widerobot_ch.dmi'
 		else if(icontype == "Cat" || icontype == "Cat Mining" || icontype == "Cat Cargo") // CHOMPEdit
 			icon = 'modular_chomp/icons/mob/catborg/catborg.dmi'
-		else if(icontype == "Raptor V-4") //Added for raptor sprites
-			icon = 'icons/mob/raptorborg/raptor.dmi'
+		else if(icontype == "Raptor V-4" || icontype == "Raptor V-4000") //Added for raptor sprites
+			icon = 'modular_chomp/icons/mob/raptorborg/raptor.dmi' //CHOMPEDIT: moving to modular so i can fix all the things
 		else if(icontype == "Raptor V-4.1") //CHOMPADDITION: letting us redurect to our raptor dmi
-			icon = 'modular_chomp/icons/mob/raptor_ch.dmi' //CHOMPADDITION: letting us redurect to our raptor dmi
+			icon = 'modular_chomp/icons/mob/raptorborg/raptor_ch.dmi' //CHOMPADDITION: letting us redurect to our raptor dmi
+		else if(icontype == "MEKA" || icontype == "MEKAalt" || icontype == "NIKO" || icontype == "NIKA" || icontype == "K4T" || icontype == "K4Talt")
+			icon = 'modular_chomp/icons/mob/tallborg/tallrobots-wide.dmi' //CHOMPEDIT: TallBorg, I dunno how to code but i'll love it if someone could change this mess into how TG does it
+			vis_height = 64 // CHOMPedit: sanitizing tile centering for larger sprites.
+			update_transform() // CHOMPedit: sanitizing tile centering for larger sprites.
 		else
 			icon = wideborg_dept
 		return
@@ -196,9 +220,9 @@
 					amount = water.energy
 				water.use_charge(amount)
 				E.reagents.add_reagent("water", amount)
-				to_chat(src, "You refill the extinguisher using your water reserves.")
+				to_chat(src, "<span class='filter_notice'>You refill the extinguisher using your water reserves.</span>")
 			else
-				to_chat(src, "Insufficient water reserves.")
+				to_chat(src, "<span class='filter_notice'>Insufficient water reserves.</span>")
 
 //RIDING
 /datum/riding/dogborg

@@ -19,6 +19,9 @@
 	var/dos_capacity = 500		// Amount of DoS "packets" in buffer required to crash the relay
 	var/dos_dissipate = 1		// Amount of DoS "packets" dissipated over time.
 
+	var/datum/looping_sound/tcomms/soundloop // CHOMPStation Add: Hummy noises
+	var/noisy = TRUE  // CHOMPStation Add: Hummy noises
+
 
 // TODO: Implement more logic here. For now it's only a placeholder.
 /obj/machinery/ntnet_relay/operable()
@@ -33,8 +36,13 @@
 /obj/machinery/ntnet_relay/update_icon()
 	if(operable())
 		icon_state = initial(icon_state)
+		if(!noisy)
+			soundloop.start() // CHOMPStation Add: Hummy noises
+			noisy = TRUE // CHOMPStation Add: Hummy noises
 	else
 		icon_state = "[initial(icon_state)]_off"
+		soundloop.stop() // CHOMPStation Add: Hummy noises
+		noisy = FALSE // CHOMPStation Add: Hummy noises
 
 /obj/machinery/ntnet_relay/process()
 	if(operable())
@@ -106,6 +114,20 @@
 		ntnet_global.relays.Add(src)
 		NTNet = ntnet_global
 		ntnet_global.add_log("New quantum relay activated. Current amount of linked relays: [NTNet.relays.len]")
+	// CHOMPAdd: PDA Multicaster Server humming
+	soundloop = new(list(src), FALSE)
+	if(prob(60)) // 60% chance to change the midloop
+		if(prob(40))
+			soundloop.mid_sounds = list('sound/machines/tcomms/tcomms_02.ogg' = 1)
+			soundloop.mid_length = 40
+		else if(prob(20))
+			soundloop.mid_sounds = list('sound/machines/tcomms/tcomms_03.ogg' = 1)
+			soundloop.mid_length = 10
+		else
+			soundloop.mid_sounds = list('sound/machines/tcomms/tcomms_04.ogg' = 1)
+			soundloop.mid_length = 30
+	soundloop.start() // Have to do this here bc it starts on
+	// CHOMPAdd End
 
 /obj/machinery/ntnet_relay/Destroy()
 	if(ntnet_global)
@@ -115,6 +137,7 @@
 	for(var/datum/computer_file/program/ntnet_dos/D in dos_sources)
 		D.target = null
 		D.error = "Connection to quantum relay severed"
+	QDEL_NULL(soundloop)
 	. = ..()
 
 /obj/machinery/ntnet_relay/attackby(var/obj/item/W as obj, var/mob/user as mob)

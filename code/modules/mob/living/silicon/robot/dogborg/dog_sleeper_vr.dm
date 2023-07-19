@@ -43,6 +43,9 @@
 	var/recycles = FALSE
 	var/medsensor = TRUE //Does belly sprite come with patient ok/dead light?
 	var/obj/item/device/healthanalyzer/med_analyzer = null
+	var/ore_storage = FALSE //CHOMPAdd
+	var/max_ore_storage = 500 //CHOMPAdd
+	var/current_capacity = 0 //CHOMPAdd
 
 /obj/item/device/dogborg/sleeper/New()
 	..()
@@ -94,8 +97,10 @@
 				playsound(src, gulpsound, vol = 60, vary = 1, falloff = 0.1, preference = /datum/client_preference/eating_noises)
 				if(analyzer && istype(target,/obj/item))
 					var/obj/item/tech_item = target
+					var/list/tech_levels = list()
 					for(var/T in tech_item.origin_tech)
-						to_chat(user, "<span class='notice'>\The [tech_item] has level [tech_item.origin_tech[T]] in [CallTechName(T)].</span>")
+						tech_levels += "\The [tech_item] has level [tech_item.origin_tech[T]] in [CallTechName(T)]."
+					to_chat(user, "<span class='notice'>[jointext(tech_levels, "<br>")]</span>")
 				if(delivery)
 					if(islist(deliverylists[delivery_tag]))
 						deliverylists[delivery_tag] |= target
@@ -130,7 +135,7 @@
 				trashman.reset_view(src)
 				START_PROCESSING(SSobj, src)
 				user.visible_message("<span class='warning'>[hound.name]'s [src.name] groans lightly as [trashman] slips inside.</span>", "<span class='notice'>Your [src.name] groans lightly as [trashman] slips inside.</span>")
-				log_attack("[key_name(hound)] has eaten [key_name(patient)] as a dogborg. ([hound ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[hound.x];Y=[hound.y];Z=[hound.z]'>JMP</a>" : "null"])")//CHOMPEdit from message_admins
+				log_attack("[key_name(hound)] has eaten [key_name(patient)] as a dogborg. ([hound ? "<a href='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[hound.x];Y=[hound.y];Z=[hound.z]'>JMP</a>" : "null"])")//CHOMPEdit from message_admins
 				playsound(src, gulpsound, vol = 100, vary = 1, falloff = 0.1, preference = /datum/client_preference/eating_noises)
 				if(delivery)
 					if(islist(deliverylists[delivery_tag]))
@@ -278,6 +283,9 @@
 	if(!delivery && compactor && length(contents))//garbage counter for trashpup
 		dat += "<font color='red'><B>Current load:</B> [length(contents)] / [max_item_count] objects.</font><BR>"
 		dat += "<font color='gray'>([contents.Join(", ")])</font><BR><BR>"
+
+	if(ore_storage) //CHOMPAdd
+		dat += "<font color='red'><B>Current ore capacity:</B> [current_capacity] / [max_ore_storage].</font><BR>"
 
 	if(delivery && length(contents))
 		dat += "<font color='red'><B>Current load:</B> [length(contents)] / [max_item_count] objects.</font><BR>"
@@ -627,7 +635,7 @@
 							for(var/atom/movable/thing in B)
 								thing.forceMove(src)
 								if(ismob(thing))
-									to_chat(thing, "As [T] melts away around you, you find yourself in [hound]'s [name]")
+									to_chat(thing, "<span class='filter_notice'>As [T] melts away around you, you find yourself in [hound]'s [name].</span>")
 					for(var/obj/item/I in T)
 						if(istype(I,/obj/item/organ/internal/mmi_holder/posibrain))
 							var/obj/item/organ/internal/mmi_holder/MMI = I
@@ -767,10 +775,53 @@
 
 /obj/item/device/dogborg/sleeper/compactor/supply //Miner borg belly
 	name = "Supply Satchel"
-	desc = "A mounted survival unit with fuel processor."
+	desc = "A mounted survival unit with fuel processor and ore storage." //CHOMPEdit Start
 	icon_state = "sleeperc"
 	injection_chems = list("glucose","inaprovaline","tricordrazine")
-	max_item_count = 1
+	max_item_count = 20
+	ore_storage = TRUE
+	var/list/stored_ore = list(
+		"sand" = 0,
+		"hematite" = 0,
+		"carbon" = 0,
+		"raw copper" = 0,
+		"raw tin" = 0,
+		"void opal" = 0,
+		"painite" = 0,
+		"quartz" = 0,
+		"raw bauxite" = 0,
+		"phoron" = 0,
+		"silver" = 0,
+		"gold" = 0,
+		"marble" = 0,
+		"uranium" = 0,
+		"diamond" = 0,
+		"platinum" = 0,
+		"lead" = 0,
+		"mhydrogen" = 0,
+		"verdantium" = 0,
+		"rutile" = 0)
+
+/obj/item/device/dogborg/sleeper/compactor/supply/Entered(atom/movable/thing, atom/OldLoc)
+	. = ..()
+	if(istype(thing, /obj/item/weapon/ore))
+		var/obj/item/weapon/ore/ore = thing
+		stored_ore[ore.material]++
+		current_capacity++
+		qdel(ore)
+
+/obj/structure/ore_box/attackby(obj/item/weapon/W as obj, mob/user as mob)
+	if(istype(W, /obj/item/device/dogborg/sleeper/compactor/supply))
+		var/obj/item/device/dogborg/sleeper/compactor/supply/S = W
+		for(var/ore in S.stored_ore)
+			if(S.stored_ore[ore] > 0)
+				var/ore_amount = S.stored_ore[ore]	// How many ores does the satchel have?
+				stored_ore[ore] += ore_amount 		// Add the ore to the machine.
+				S.stored_ore[ore] = 0 				// Set the value of the ore in the satchel to 0.
+				S.current_capacity = 0				// Set the amount of ore in the satchel  to 0.
+		to_chat(user, "<span class='notice'>You empty the satchel into the box.</span>")
+		return
+	..() //CHOMPEdit End
 
 /obj/item/device/dogborg/sleeper/command //Command borg belly //CHOMP addition
 	name = "Bluespace Filing Belly"

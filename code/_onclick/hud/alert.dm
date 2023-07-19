@@ -53,7 +53,7 @@
 	animate(alert, transform = matrix(), time = 2.5, easing = CUBIC_EASING)
 
 	if(alert.timeout)
-		addtimer(CALLBACK(src, .proc/alert_timeout, alert, category), alert.timeout)
+		addtimer(CALLBACK(src, PROC_REF(alert_timeout), alert, category), alert.timeout)
 		alert.timeout = world.time + alert.timeout - world.tick_lag
 	return alert
 
@@ -135,10 +135,10 @@ The box in your backpack has an oxygen tank and breath mask in it."
 	desc = "You're not getting enough phoron. Find some good air before you pass out!"
 	icon_state = "not_enough_tox"
 
-/obj/screen/alert/tox_in_air
-	name = "Choking (Phoron)"
-	desc = "There's highly flammable, toxic phoron in the air and you're breathing it in. Find some fresh air. \
-The box in your backpack has an oxygen tank and gas mask in it."
+/obj/screen/alert/tox_in_air											// CHOMP EDIT : Oxygen is toxic to phoron breathers and nitrogen breathers. I'm tired of seeing "You're choking on phoron!" when it's not phoron.
+	name = "Choking (Toxic)"										// CHOMP EDIT
+	desc = "There's a dangerous toxin in the air and you're breathing it in. Find some fresh air. \
+Your emergency supply kit should have an air tank and gas mask in it!"						// CHOMP EDIT
 	icon_state = "too_much_tox"
 
 /obj/screen/alert/not_enough_fuel
@@ -154,12 +154,12 @@ The box in your backpack has an oxygen tank and gas mask in it."
 
 
 /obj/screen/alert/fat
-	name = "Fat"
-	desc = "You ate too much food, lardass. Run around the station and lose some weight."
+	name = "Full"
+	desc = "You've eaten more than you can handle, maybe you should slow down?"
 	icon_state = "fat"
 
 /obj/screen/alert/fat/vampire
-	desc = "You drank too much blood, lardass. Run around the station and lose some weight."
+	desc = "You've had more than enough blood, for now."
 	icon_state = "v_fat"
 
 /obj/screen/alert/fat/synth
@@ -172,7 +172,7 @@ The box in your backpack has an oxygen tank and gas mask in it."
 	icon_state = "hungry"
 
 /obj/screen/alert/hungry/vampire
-	desc = "You could use a bloodsnack or two."
+	desc = "You could go for a bite right now..."
 	icon_state = "v_hungry"
 
 /obj/screen/alert/hungry/synth
@@ -180,8 +180,8 @@ The box in your backpack has an oxygen tank and gas mask in it."
 	icon_state = "c_hungry"
 
 /obj/screen/alert/starving
-	name = "Starving"
-	desc = "You're severely malnourished. The hunger pains make moving around a chore."
+	name = "Very Hungry"
+	desc = "You're starving. You barely have enough energy to move around."
 	icon_state = "starving"
 
 /obj/screen/alert/starving/vampire
@@ -256,7 +256,7 @@ or something covering your eyes."
 
 /obj/screen/alert/high
 	name = "High"
-	desc = "Whoa man, you're tripping balls! Careful you don't get addicted... if you aren't already."
+	desc = "Whoa, you're tripping balls!"
 	icon_state = "high"
 
 /obj/screen/alert/embeddedobject
@@ -297,8 +297,8 @@ or shoot a gun to move around via Newton's 3rd Law of Motion."
 //ALIENS
 
 /obj/screen/alert/alien_tox
-	name = "Plasma"
-	desc = "There's flammable plasma in the air. If it lights up, you'll be toast."
+	name = "Phoron"
+	desc = "There's flammable phoron in the air. If it lights up, you'll be toast."
 	icon_state = "alien_tox"
 	alerttooltipstyle = "alien"
 
@@ -433,16 +433,16 @@ so as to remain in compliance with the most up-to-date laws."
 		return 1
 	for(var/i = 1, i <= alerts.len, i++)
 		var/obj/screen/alert/alert = alerts[alerts[i]]
-		
+
 		if(alert.icon_state in cached_icon_states(ui_style))
 			alert.icon = ui_style
-		
+
 		else if(!alert.no_underlay)
 			var/image/I = image(icon = ui_style, icon_state = "template")
 			I.color = ui_color
 			I.alpha = ui_alpha
 			alert.underlays = list(I)
-		
+
 		switch(i)
 			if(1)
 				. = ui_alert1

@@ -15,7 +15,7 @@
 	melee_damage_lower = 1
 	melee_damage_upper = 3
 
-	movement_cooldown = 1.5
+	movement_cooldown = -1
 
 	mob_size = MOB_MINISCULE
 	pass_flags = PASSTABLE
@@ -40,11 +40,15 @@
 
 	say_list_type = /datum/say_list/mouse
 
-	var/body_color //brown, gray and white, leave blank for random
-	
+	var/body_color //brown, gray, white and black, leave blank for random
+
 	//CHOMP Addition: Added these vore variables in and swapped the booleans from their defaults too.
 	can_be_drop_prey = TRUE
 	can_be_drop_pred = FALSE
+	species_sounds = "Mouse"
+
+	pain_emote_1p = list("squeak", "squik") // CHOMP Addition: Pain/etc sounds
+	pain_emote_1p = list("squeaks", "squiks") // CHOMP Addition: Pain/etc sounds
 
 /mob/living/simple_mob/animal/passive/mouse/New()
 	..()
@@ -57,7 +61,7 @@
 	real_name = name
 
 	if(!body_color)
-		body_color = pick( list("brown","gray","white") )
+		body_color = pick( list("brown","gray","white","black") )
 	icon_state = "mouse_[body_color]"
 	item_state = "mouse_[body_color]"
 	icon_living = "mouse_[body_color]"
@@ -177,7 +181,7 @@
 	min_n2 = 0
 	max_n2 = 0
 	maxbodytemp = 700
-	
+
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
 
 //The names Cheese... Agent Cheese
@@ -195,3 +199,21 @@
 	speak = list("Squeek!","SQUEEK!","Squeek?")
 	emote_hear = list("squeeks","squeaks","squiks")
 	emote_see = list("runs in a circle", "shakes", "scritches at something")
+
+// CHOMPAdd - Verb for mice colour changing
+/mob/living/simple_mob/animal/passive/mouse/verb/set_mouse_colour()
+	set name = "Set Mouse Colour"
+	set category = "Abilities"
+	set desc = "Set the colour of your mouse."
+	var/new_mouse_colour = tgui_input_list(usr, "Set Mouse Colour", "Pick a colour", list("brown","gray","white","black"))
+	if(!new_mouse_colour) return
+	icon_state = resting ? "mouse_[new_mouse_colour]_sleep" : "mouse_[new_mouse_colour]"
+	item_state = "mouse_[new_mouse_colour]"
+	icon_living = "mouse_[new_mouse_colour]"
+	icon_dead = "mouse_[new_mouse_colour]_dead"
+	icon_rest = "mouse_[new_mouse_colour]_sleep"
+	desc = "A small [new_mouse_colour] rodent, often seen hiding in maintenance areas and making a nuisance of itself."
+	holder_type = text2path("/obj/item/weapon/holder/mouse/[new_mouse_colour]")
+	to_chat(src, SPAN_NOTICE("You are now a [new_mouse_colour] mouse!"))
+	verbs -= /mob/living/simple_mob/animal/passive/mouse/verb/set_mouse_colour
+// CHOMPAdd End

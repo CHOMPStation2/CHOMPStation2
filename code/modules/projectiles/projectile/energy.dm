@@ -256,11 +256,13 @@
 		M.Weaken(2)
 		M.ear_damage += rand(1, 10)
 		M.ear_deaf = max(M.ear_deaf,15)
+		M.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
 	if (M.ear_damage >= 15)
 		to_chat(M, "<span class='danger'>Your ears start to ring badly!</span>")
 		if (prob(M.ear_damage - 5))
 			to_chat(M, "<span class='danger'>You can't hear anything!</span>")
 			M.sdisabilities |= DEAF
+			M.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
 	else
 		if (M.ear_damage >= 5)
 			to_chat(M, "<span class='danger'>Your ears start to ring!</span>")
@@ -286,6 +288,7 @@
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/monochrome_laser
 	hud_state = "plasma_sphere"
 
+/* ChompEdit, moving over to energy_ch.dm
 /obj/item/projectile/energy/phase
 	name = "phase wave"
 	icon_state = "phase"
@@ -310,6 +313,7 @@
 	damage = 15
 	SA_bonus_damage = 60	// 75 total on animals
 	hud_state = "laser_heat"
+*/
 
 /obj/item/projectile/energy/electrode/strong
 	agony = 70

@@ -187,6 +187,28 @@
 	name = "Wilderness Shelter Utility Room"
 	icon_state = "substation"
 
+//Valley stuffs, chomps Edit by Jasper, for wilds but stranger.
+/area/surface/outpost/unfinished
+	name = "Unfinished"
+	icon_state = "red"
+
+/area/surface/outside/valley/inner
+	name = "Valley Inner"
+	icon_state = "yellow"
+
+/area/surface/outside/valley/walls
+	name = "Valley Walls"
+	icon_state = "yellow"
+	outdoors = OUTDOORS_NO
+
+/area/surface/outside/valley/edge
+	name = "Valley Edge"
+	icon_state = "yellow"
+
+/area/surface/outside/valley/river
+	name = "Valley River"
+	icon_state = "yellow"
+
 // Main mining outpost
 /area/surface/outpost/mining_main
 	name = "North Mining Outpost"
@@ -818,6 +840,15 @@ z
 	name = "\improper First Deck Fore Auxiliary Dock"
 	icon_state = "docking_hallway"
 
+//CHOMPStation Edit. Two new areas for the vault.
+/area/hallway/primary/firstdeck/vaultcheckpoint
+    name = "\improper Vault Checkpoint"
+    icon_state = "nuke_storage"
+
+/area/hallway/primary/firstdeck/vaultlobby
+    name = "\improper Vault Lobby"
+    icon_state = "nuke_storage"
+
 //CHOMPStation Edit Start TFF 4/5/20 - One of these ain't the same thing, bruh. Escape Pod 1, Escape Pod 2, Research Access Hallway.
 /area/hallway/secondary/escape/firstdeck/ep_port
 	name = "\improper Large Escape Pod 2 Port"
@@ -874,6 +905,11 @@ z
 	name = "\improper First-Aid Station"
 	icon_state = "medbay2"
 
+//CHOMPedit begin 7/9/23, adds chem distillery
+/area/medical/distillery
+	name ="\improper Chemistry Distillery"
+	icon_state = "chem"
+//CHOMPedit end
 /area/medical/first_aid_station/firstdeck/
 	name = "\improper First Deck First-Aid Station"
 
@@ -2040,6 +2076,7 @@ End Chompstation Edit*/
 	name = "\improper Wreck"
 	icon_state = "storage"
 	ambience = AMBIENCE_RUINS
+
 
 //Temp Removal TFF 15/2/20
 /*
