@@ -263,11 +263,16 @@
 	name = "Secret Tunnel Room"
 	icon_state = "blue"
 	requires_power = 0
+	flags = PHASE_SHIELDED
 
 /area/awaymission/darkrp/toll
 	name = "Toll Booth"
 	icon_state = "blue"
 	requires_power = 0
+
+/area/awaymission/darkrp/lockdown1
+	name = "Lock Down Checkpoint"
+	icon_state = "blue"
 
 /area/awaymission/darkrp/brokehouse
 	name = "Dilapidated House"
