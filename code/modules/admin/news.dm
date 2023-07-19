@@ -45,8 +45,8 @@
 	var/savefile/F = new(NEWSFILE)
 	if(F)
 		var/fbody = "[F["body"]]" //ChompADD
-		client.prefs.lastnews = md5(fbody) //ChompADD
-		SScharacter_setup.queue_preferences_save(client.prefs) //ChompADD
+		prefs.lastnews = md5(fbody) //ChompADD
+		SScharacter_setup.queue_preferences_save(prefs) //ChompADD
 		return F
 // This is used when submitting the news input, so the safe markup can get past sanitize.
 /proc/paper_markup2html(var/text)
