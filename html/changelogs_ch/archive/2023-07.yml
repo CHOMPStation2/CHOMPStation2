@@ -28,3 +28,7 @@
   - imageadd: Tallborgs finally receive some bellies, Thank you Kcin!
   Upstream:
   - bugfix: PDA records missing linebreaks & fixes communicator weather app gibberish
+2023-07-19:
+  VictorZisthus:
+  - rscadd: HoS now has a fun new gun at round-start!
+  - bugfix: fixed a few missing things from several closets.
