@@ -10,6 +10,7 @@
 	var/large = 1
 	wall_mounted = 0 //never solid (You can always pass over it)
 	health = 200
+	anchored = 1 //CHOMPADD - Making them properly IMMOBILE. Like the Desc says? Yeah...
 
 	closet_appearance = /decl/closet_appearance/secure_closet
 

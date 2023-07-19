@@ -3095,7 +3095,7 @@
 	},
 /area/vr/outdoors/powered)
 "dOT" = (
-/mob/living/simple_mob/otie/cotie/chubby,
+/mob/living/simple_mob/vore/otie/cotie/chubby,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/powered/dungeon)
 "dPB" = (
@@ -5858,7 +5858,7 @@
 /turf/simulated/floor/weird_things/dark,
 /area/vr/powered/rocks)
 "gXF" = (
-/mob/living/simple_mob/mobs_monsters/clowns/big/c_shift/chlown,
+/mob/living/simple_mob/clowns/big/c_shift/chlown,
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/vr/powered/dungeon)
 "gYy" = (
@@ -21471,7 +21471,7 @@
 /obj/item/weapon/ore/osmium,
 /obj/item/weapon/ore/silver,
 /obj/item/weapon/ore/uranium,
-/obj/item/weapon/ore/bluespace_crystal,
+/obj/item/weapon/bluespace_crystal,
 /obj/item/clothing/head/sombrero,
 /obj/item/clothing/head/sombrero,
 /obj/item/clothing/suit/poncho,

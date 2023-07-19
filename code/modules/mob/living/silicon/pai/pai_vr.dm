@@ -13,7 +13,11 @@
 	var/list/wide_chassis = list( //CHOMPEDIT: This doesnt need to be /Global/ and actually makes us unable to make unique children
 		"rat",
 		"panther",
-		"teppi"
+		"teppi",
+		"pai-diredog",
+		"pai-horse_lune",
+		"pai-horse_soleil",
+		"pai-pdragon"
 		)
 	var/list/flying_chassis = list( //CHOMPEDIT: This doesnt need to be /Global/ and actually makes us unable to make unique children
 		"pai-parrot",

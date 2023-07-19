@@ -126,7 +126,8 @@ but they don't actually change anything about the load order
 
 	//CHOMPStation Addition End
 	lateload_gateway = list(
-		list("Snow Field")
+		list("Snow Field"),
+		list("Maddness Lab")
 		) //CHOMPedit: Gateway maps. For now nothing fancy, just some already existing maps while we make our own.
 
 	lateload_gateway = null

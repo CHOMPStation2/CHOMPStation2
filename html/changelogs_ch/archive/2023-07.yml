@@ -1,0 +1,30 @@
+2023-07-17:
+  Aroliacue:
+  - rscadd: 'Adds alt job title for secretary: Bridge Officer'
+  - rscadd: Adds some start gear for Bridge Officer title
+2023-07-18:
+  Aroliacue:
+  - qol: Upped Cyborg job limit from 4 to 8.
+  FluffMedic:
+  - bugfix: fixes the coloring of a medkit.
+  - rscadd: 'Balance: Swaps an item to the proper version'
+  FoxglovePurpur:
+  - bugfix: Fix a typo in 'posessed'
+  Jesseman1:
+  - rscadd: Added new orca tail and markings.
+  - bugfix: Updated female orca markings to display as intended.
+  Raeschen:
+  - bugfix: change 'Show Game Updates' button to 'Show Server News'
+  - rscadd: Adds changelog button to new_player screen, with highlight behavior if
+      there are new changes since you last viewed
+  - bugfix: fix bug with 'changelog_hash' var not being set properly
+  - bugfix: fix changelog tgui links to be correct
+  - bugfix: remove species-locked customisaiton options for xeno heads(hair) and shadekin
+      hair
+  - bugfix: removes some missed fluff items
+  Scarlet-Oduko:
+  - rscadd: adds a new cult faction
+  UniquaSa:
+  - imageadd: Tallborgs finally receive some bellies, Thank you Kcin!
+  Upstream:
+  - bugfix: PDA records missing linebreaks & fixes communicator weather app gibberish

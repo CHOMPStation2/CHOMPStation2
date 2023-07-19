@@ -68,9 +68,9 @@
 				output += "<p><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A></p>"
 
 	if(client.check_for_new_server_news())
-		output += "<p><b><a href='byond://?src=\ref[src];shownews=1'>Show Game Updates</A> (NEW!)</b></p>"
+		output += "<p><b><a href='byond://?src=\ref[src];shownews=1'>Show Server News</A><br>(NEW!)</b></p>" //ChompEDIT 'Game updates' --> 'Server news'
 	else
-		output += "<p><a href='byond://?src=\ref[src];shownews=1'>Show Game Updates</A></p>"
+		output += "<p><a href='byond://?src=\ref[src];shownews=1'>Show Server News</A></p>" //ChompEDIT 'Game updates' --> 'Server news'
 
 	if(SSsqlite.can_submit_feedback(client))
 		output += "<p>[href(src, list("give_feedback" = 1), "Give Feedback")]</p>"
@@ -80,6 +80,13 @@
 			output += "<p><a href='byond://?src=\ref[src];open_station_news=1'>Show [using_map.station_name] News</A></p>"
 		else
 			output += "<p><b><a href='byond://?src=\ref[src];open_station_news=1'>Show [using_map.station_name] News (NEW!)</A></b></p>"
+
+	//ChompEDIT start: Show Changelog
+	if(client.prefs.lastchangelog == changelog_hash)
+		output += "<p><a href='byond://?src=\ref[src];open_changelog=1'>Show Changelog</A></p>"
+	else
+		output += "<p><b><a href='byond://?src=\ref[src];open_changelog=1'>Show Changelog</A><br>(NEW!)</b></p>"
+	//ChompEDIT End
 
 	output += "</div>"
 
@@ -91,7 +98,7 @@
 		client.prefs.lastlorenews = GLOB.news_data.newsindex
 		SScharacter_setup.queue_preferences_save(client.prefs)
 
-	panel = new(src, "Welcome","Welcome", 210, 300, src) // VOREStation Edit
+	panel = new(src, "Welcome","Welcome", 210, 320, src) // VOREStation Edit //ChompEDIT, height 300 -> 320
 	panel.set_window_options("can_close=0")
 	panel.set_content(output)
 	panel.open()
@@ -350,6 +357,14 @@
 		else
 			client.feedback_form = new(client)
 
+	//ChompEDIT START
+	if(href_list["open_changelog"])
+		client.prefs.lastchangelog = changelog_hash
+		SScharacter_setup.queue_preferences_save(client.prefs)
+		client.changes()
+		return
+	//ChompEDIT END
+
 /mob/new_player/proc/handle_server_news()
 	if(!client)
 		return
@@ -510,7 +525,7 @@
 
 	//CHOMPEdit Begin - non-crew join don't get a message
 	if(rank == JOB_OUTSIDER)
-		log_and_message_admins("has joined the round as non-crew. (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[T.x];Y=[T.y];Z=[T.z]'>JMP</a>)",character)
+		log_and_message_admins("has joined the round as non-crew. (<A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[T.x];Y=[T.y];Z=[T.z]'>JMP</a>)",character)
 		if(!(J.mob_type & JOB_SILICON))
 			ticker.minds += character.mind
 	//CHOMPEdit End

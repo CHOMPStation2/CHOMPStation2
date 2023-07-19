@@ -129,7 +129,6 @@ var/list/mentor_verbs_default = list(
 		GLOB.tickets.BrowseTickets(text2num(href_list["tickets"]))
 	// CHOMPedit End
 
-
 /datum/mentor/Topic(href, href_list)
 	..()
 	if (usr.client != src.owner || (!usr.client.mentorholder))
