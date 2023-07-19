@@ -11,7 +11,8 @@
 /obj/item/weapon/robot_module/robot/clerical/honkborg
 	name = "honk-hound module"
 	sprites = list(
-					"Honkborg" = "honkborg"
+					"Honkborg" = 	list(SKIN_ICON_STATE = "honkborg", SKIN_ICON = 'modular_chomp/icons/mob/widerobot_ch.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
+					"K4T" = 		list(SKIN_ICON_STATE = "k4tclown", SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64) //CHOMPEdit - Tallborgs
 					)
 	channels = list("Service" = 1,
 					"Entertainment" = 1)
@@ -77,5 +78,3 @@
 	R.verbs |= /mob/living/proc/shred_limb
 	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
-
-

@@ -7,7 +7,7 @@
 	var/pounce_cooldown_time = 40
 	var/leap_at
 	var/dogborg = FALSE //Dogborg special features (overlays etc.)
-	var/wideborg = FALSE //When the borg simply doesn't use standard 32p size.
+	var/wideborg = FALSE //When the borg simply doesn't use standard 32p size. - CHOMPNote No longer used, this info is defined per sprite
 	var/scrubbing = FALSE //Floor cleaning enabled
 	var/datum/matter_synth/water_res = null
 	var/notransform
@@ -106,7 +106,7 @@
 			sitting = TRUE
 		if("Belly up")
 			bellyup = TRUE
-
+/* //CHOMPEdit moving all this code to modular_chomp\code\modules\mob\living\silicon\robot\robot_vr.dm in order to make this more flexible
 /mob/living/silicon/robot/updateicon()
 	vr_sprite_check()
 	..()
@@ -202,7 +202,7 @@
 		icon = 'icons/mob/robots_vr.dmi'
 	else if(!(icon_state in vr_icons))
 		icon = original_icon
-
+*/
 /mob/living/silicon/robot/proc/ex_reserve_refill()
 	set name = "Refill Extinguisher"
 	set category = "Object"

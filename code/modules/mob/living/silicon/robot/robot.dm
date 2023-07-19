@@ -1,5 +1,11 @@
 #define CYBORG_POWER_USAGE_MULTIPLIER 2 // Multiplier for amount of power cyborgs use.
 
+#define SKIN_ICON "skin_icon"
+#define SKIN_ICON_STATE "skin_icon_state"
+#define SKIN_OFFSET "skin_offset"
+#define SKIN_HEIGHT "skin_height"
+#define SKIN_REST "skin_rest"
+
 /mob/living/silicon/robot
 	name = "Cyborg"
 	real_name = "Cyborg"
@@ -31,6 +37,7 @@
 
 	var/icontype 				//Persistent icontype tracking allows for cleaner icon updates
 	var/module_sprites[0] 		//Used to store the associations between sprite names and sprite index.
+	var/selected_icon 			//CHOMPAdd - for storing the iconstate now that it isnt as direct
 	var/icon_selected = 1		//If icon selection has been completed yet
 	var/icon_selection_tries = 0//Remaining attempts to select icon before a selection is forced
 
@@ -114,7 +121,8 @@
 	robot_modules_background = new()
 	robot_modules_background.icon_state = "block"
 	ident = rand(1, 999)
-	module_sprites["Basic"] = "robot"
+	module_sprites["Basic"] = list(SKIN_ICON_STATE = "robot", SKIN_ICON = 'icons/mob/robots.dmi')
+	selected_icon = "robot"
 	icontype = "Basic"
 	updatename(modtype)
 	updateicon()
@@ -256,7 +264,8 @@
 			icontype = "Custom"
 		else
 			icontype = module_sprites[1]
-			icon_state = module_sprites[icontype]
+			selected_icon = module_sprites[icontype][SKIN_ICON_STATE]
+			icon_state = module_sprites[icontype][SKIN_ICON_STATE]
 	updateicon()
 	return module_sprites
 
@@ -847,7 +856,7 @@
 	cut_overlays()
 	if(stat == CONSCIOUS)
 		if(!shell || deployed) // Shell borgs that are not deployed will have no eyes.
-			add_overlay("eyes-[module_sprites[icontype]]")
+			add_overlay("eyes-[selected_icon]")
 
 	if(opened)
 		var/panelprefix = custom_sprite ? "[src.ckey]-[src.sprite_name]" : "ov"
@@ -861,13 +870,13 @@
 	if(has_active_type(/obj/item/borg/combat/shield))
 		var/obj/item/borg/combat/shield/shield = locate() in src
 		if(shield && shield.active)
-			add_overlay("[module_sprites[icontype]]-shield")
+			add_overlay("[selected_icon]-shield")
 
 	if(modtype == "Combat")
 		if(module_active && istype(module_active,/obj/item/borg/combat/mobility))
-			icon_state = "[module_sprites[icontype]]-roll"
+			icon_state = "[selected_icon]-roll"
 		else
-			icon_state = module_sprites[icontype]
+			icon_state = selected_icon
 
 /mob/living/silicon/robot/proc/installed_modules()
 	if(weapon_lock)
@@ -1053,6 +1062,12 @@
 		icontype = tgui_input_list(usr, "Select an icon! [triesleft ? "You have [triesleft] more chance\s." : "This is your last try."]", "Robot Icon", module_sprites)
 		if(!icontype)
 			icontype = module_sprites[1]
+		if(!islist(module_sprites[icontype]))
+			to_chat(src, "Something is wrong with the sprite definition. Harass a coder.")
+			icontype = module_sprites[1]
+		if(isnull(module_sprites[icontype][SKIN_ICON])|isnull(module_sprites[icontype][SKIN_ICON_STATE]))
+			to_chat(src, "Something is wrong with the sprite definition. Harass a coder.")
+			icontype = module_sprites[1]
 		if(notransform)				//VOREStation edit start: sprite animation
 			to_chat(src, "Your current transformation has not finished yet!")
 			choose_icon(icon_selection_tries, module_sprites)
@@ -1060,11 +1075,8 @@
 		else
 			transform_with_anim()	//VOREStation edit end: sprite animation
 
-	if(icontype == "Custom")
-		icon = CUSTOM_ITEM_SYNTH
-	else // This is to fix an issue where someone with a custom borg sprite chooses a non-custom sprite and turns invisible.
-		vr_sprite_check() //VOREStation Edit
-	icon_state = module_sprites[icontype]
+	selected_icon = module_sprites[icontype][SKIN_ICON_STATE]
+	icon_state = module_sprites[icontype][SKIN_ICON_STATE]
 	updateicon()
 
 	if (module_sprites.len > 1 && triesleft >= 1 && client)
