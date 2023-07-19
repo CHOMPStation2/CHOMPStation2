@@ -29,6 +29,11 @@
   Upstream:
   - bugfix: PDA records missing linebreaks & fixes communicator weather app gibberish
 2023-07-19:
+  Raeschen:
+  - bugfix: start menu consistency/redesign
+  - bugfix: Show server news (NEW) now resets on read
+  - bugfix: fix a runtime in inducer.vr
+  - bugfix: fixed weird savefile behavior when done before roundstart
   Upstream:
   - rscadd: adds ui buttons for language panel, pose, move up, move down, and using
       objects on self
