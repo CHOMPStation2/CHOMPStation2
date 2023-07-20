@@ -211,10 +211,11 @@
 					"Cat" = "vixsec", //CHOMPEdit
 					"Drake" = "drakesec",
 					"Raptor V-4" = "secraptor",
-					"MEKA" = "mekasec", //CHOMPEdit Start - Tallborgs
+					"MEKA" = "mekasec",
+					//"MEKA v2" = "newmekasec", //ChompREMOVE - we put the better sprite on the base
 					"NIKO" = "mmekasec",
 					"NIKA" = "fmekasec",
-					"K4T" = "k4tsec" //CHOMPEdit End - Tallborgs
+					"K4T" = "k4tsec"
 					)
 
 /obj/item/weapon/robot_module/robot/security/knine/New(var/mob/living/silicon/robot/R)
@@ -295,17 +296,18 @@
 					"Cat" = "vixmed", //CHOMPEdit
 					"Drake" = "drakemed",
 					"Raptor V-4" = "medraptor",
-					"MEKA" = "mekamed", //CHOMPEdit Start - Tallborgs
-					"NIKO" = "mmekamed",
+					"MEKA" = "mekamed",
+					//"MEKA v2" = "newmekamed", //ChompREMOVE - we put the better sprite on the base
 					"NIKA" = "fmekamed",
+					"NIKO" = "mmekamed",
 					"K4T" = "k4tmed",
-					"K4Talt" = "k4tmed_alt1", //CHOMPEdit End - Tallborgs
-// CHOMPedit start: Trauma sprites for regular medihound borgs.
+					"K4Talt" = "k4tmed_alt1",
+					// CHOMPedit start: Trauma sprites for regular medihound borgs.
 					"Traumahound" = "traumavale",
 					"Traumadrake" = "draketrauma",
 					"Traumaborgi" = "borgi-trauma",
 					"Traumaraptor V-4" = "traumaraptor"
-// CHOMPedit end: Trauma sprites for regular medihound borgs.
+					// CHOMPedit end: Trauma sprites for regular medihound borgs.
 					)
 
 /obj/item/weapon/robot_module/robot/medical/medihound/New(var/mob/living/silicon/robot/R)
@@ -561,11 +563,12 @@
 					"Cat" = "vixjani", //CHOMPEdit
 					"Drake" = "drakejanit",
 					"Raptor V-4" = "janiraptor",
-					"MEKA" = "mekajani", //CHOMPEdit Start - Tallborgs
+					"MEKA" = "mekajani",
+					//"MEKA v2" = "newmekajani", //ChompREMOVE - we put the better sprite on the base
 					"NIKO" = "mmekajani",
 					"NIKA" = "fmekajani",
 					"K4T" = "k4tjani",
-					"K4Talt" = "k4tjani_alt1" //CHOMPEdit End - Tallborgs
+					"K4Talt" = "k4tjani_alt1"
 					)
 	can_be_pushed = 0
 
@@ -658,10 +661,11 @@
 					"Cat" = "vixsci", //CHOMPEdit
 					"Drake" = "drakesci",
 					"Raptor V-4" = "sciraptor",
-					"MEKA" = "mekastandard", //CHOMPEdit Start - Tallborgs
+					"MEKA" = "mekasci",
+					//"MEKA v2" = "newmekasci", //ChompREMOVE - we put the better sprite on the base
 					"NIKO" = "mmekasci",
 					"NIKA" = "fmekasci",
-					"K4T" = "k4tsci" //CHOMPEdit end - Tallborgs
+					"K4T" = "k4tsci"
 					)
 	can_be_pushed = 0
 
@@ -753,11 +757,12 @@
 					"Cat" = "vixengi", //CHOMPEdit
 					"Drake" = "drakeeng",
 					"Raptor V-4" = "engiraptor",
-					"MEKA" = "mekaengi", //CHOMPEdit Start - Tallborgs
+					"MEKA" = "mekaengi",
+					//"MEKA v2" = "newmekaengi", //ChompREMOVE - we put the better sprite on the base
 					"NIKO" = "mmekaeng",
 					"NIKA" = "fmekaeng",
 					"K4T" = "k4tengi",
-					"K4Talt" = "k4tengi_alt1" //CHOMPEdit End - Tallborgs
+					"K4Talt" = "k4tengi_alt1"
 					)
 	can_be_pushed = 0
 
@@ -918,17 +923,17 @@
 					"Drake" = "drakemine",
 					"Raptor V-4" = "serviraptor",
 					"Raptor V-4000" = "fancyraptor",
-					"MEKA" = "mekaserve", //CHOMPEdit Start - Tallborgs
-					"MEKAalt" = "mekaserve_alt",
+					"MEKA" = "mekaserve",
+					//"MEKA v2" = "newmekaserve", //ChompREMOVE - we put the better sprite on the base
 					"NIKO" = "mmekaserv",
 					"NIKA" = "fmekaserv",
 					"K4T" = "k4tserve",
-					"K4Talt" = "k4tserve_alt" //CHOMPEdit End - Tallborgs
+					"K4Talt" = "k4tserve_alt1"
 					)
 	can_be_pushed = 0
 
 
-// In a nutshell, basicly service/butler robot but in dog form. - Port from CitadelRP
+// In a nutshell, basically service/butler robot but in dog form. - Port from CitadelRP
 /obj/item/weapon/robot_module/robot/clerical/butler/brodog/New(var/mob/living/silicon/robot/R)
 	src.modules += new /obj/item/weapon/gripper/service(src)
 	src.modules += new /obj/item/weapon/reagent_containers/glass/bucket(src)
@@ -1007,11 +1012,12 @@
 					"Cat Cargo" = "vixcargo", //CHOMPEdit
 					"Drake" = "drakemine",
 					"Raptor V-4" = "mineraptor",
-					"MEKA" = "mekamine", //CHOMPEdit Start - Tallborgs
+					"MEKA" = "mekamine",
+					//"MEKA v2" = "newmekamine", //ChompREMOVE - we put the better sprite on the base
 					"NIKO" = "mmekamine",
 					"NIKA" = "fmekamine",
 					"K4T" = "k4tmine",
-					"K4Talt" = "k4tmine_alt1" //CHOMPEdit End - Tallborgs
+					"K4Talt" = "k4tmine_alt1"
 					)
 	can_be_pushed = 0
 
