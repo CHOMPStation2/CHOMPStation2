@@ -322,6 +322,7 @@
 	src.modules += new /obj/item/weapon/gripper/medical(src) //Let them do literally anything in medbay other than patch external damage and lick people
 	src.modules += new /obj/item/weapon/reagent_containers/dropper/industrial(src) //dropper is nice to have for so much actually
 // CHOMPedit start: Combining Medihound and Traumahound.
+	src.modules += new /obj/item/weapon/reagent_containers/borghypo/hound(src)
 	src.modules += new /obj/item/weapon/autopsy_scanner(src)
 	src.modules += new /obj/item/weapon/surgical/scalpel/cyborg(src)
 	src.modules += new /obj/item/weapon/surgical/hemostat/cyborg(src)
@@ -351,16 +352,20 @@
 	src.modules += C
 	src.modules += S
 
-	var/datum/matter_synth/water = new /datum/matter_synth(1000) // CHOMPedit: Now starts with maximum water capacity.
+	var/datum/matter_synth/water = new /datum/matter_synth(1000) // CHOMPedit: Water to 1000.
 	water.name = "Water reserves"
-	water.recharge_rate = 20  //CHOMPedit water shouldn't be a giant pain to get, rechargers should provide it. Doubled to account for new max capacity.
-	water.max_energy = 1000  //CHOMPedit increased water storage from 500 to 1000
+	water.recharge_rate = 20 // CHOMPedit: Water charge rate doubled alongside max capacity.
+	water.max_energy = 1000  // CHOMPedit: Water to 1000
 	R.water_res = water
 	synths += water
 
-	var/obj/item/weapon/reagent_containers/borghypo/hound/H = new /obj/item/weapon/reagent_containers/borghypo/hound(src) // CHOMPedit: Updated with new chems.
+/* CHOMPedit start: Hypo no longer uses water. *
+
+	var/obj/item/weapon/reagent_containers/borghypo/hound/H = new /obj/item/weapon/reagent_containers/borghypo/hound(src)
 	H.water = water
 	src.modules += H
+
+* CHOMPedit end: Hypo no longer uses water. */
 
 	var/obj/item/device/dogborg/tongue/T = new /obj/item/device/dogborg/tongue(src)
 	T.water = water
