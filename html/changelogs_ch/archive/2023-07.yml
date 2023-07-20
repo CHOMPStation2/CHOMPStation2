@@ -46,3 +46,6 @@
       similar to a multitool.'
   Upstream:
   - rscadd: Adds 'twin drills long' hair
+  - bugfix: Renames custom subtle back to subtle (Custom)
+  - rscadd: cooldown on 'use item on self' UI button (not the hotkey)
+  - bugfix: mouse-hole interactions
