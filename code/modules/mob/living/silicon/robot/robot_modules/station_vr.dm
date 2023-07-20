@@ -212,7 +212,7 @@
 					"Drake" = "drakesec",
 					"Raptor V-4" = "secraptor",
 					"MEKA" = "mekasec",
-					"MEKA v2" = "newmekasec",
+					//"MEKA v2" = "newmekasec", //ChompREMOVE - we put the better sprite on the base
 					"NIKO" = "mmekasec",
 					"NIKA" = "fmekasec",
 					"K4T" = "k4tsec"
@@ -296,7 +296,7 @@
 					"Drake" = "drakemed",
 					"Raptor V-4" = "medraptor",
 					"MEKA" = "mekamed",
-					"MEKA v2" = "newmekamed",
+					//"MEKA v2" = "newmekamed", //ChompREMOVE - we put the better sprite on the base
 					"NIKA" = "fmekamed",
 					"NIKO" = "mmekamed",
 					"K4T" = "k4tmed",
@@ -534,7 +534,7 @@
 					"Drake" = "drakejanit",
 					"Raptor V-4" = "janiraptor",
 					"MEKA" = "mekajani",
-					"MEKA v2" = "newmekajani",
+					//"MEKA v2" = "newmekajani", //ChompREMOVE - we put the better sprite on the base
 					"NIKO" = "mmekajani",
 					"NIKA" = "fmekajani",
 					"K4T" = "k4tjani",
@@ -632,7 +632,7 @@
 					"Drake" = "drakesci",
 					"Raptor V-4" = "sciraptor",
 					"MEKA" = "mekasci",
-					"MEKA v2" = "newmekasci",
+					//"MEKA v2" = "newmekasci", //ChompREMOVE - we put the better sprite on the base
 					"NIKO" = "mmekasci",
 					"NIKA" = "fmekasci",
 					"K4T" = "k4tsci"
@@ -728,7 +728,7 @@
 					"Drake" = "drakeeng",
 					"Raptor V-4" = "engiraptor",
 					"MEKA" = "mekaengi",
-					"MEKA v2" = "newmekaengi",
+					//"MEKA v2" = "newmekaengi", //ChompREMOVE - we put the better sprite on the base
 					"NIKO" = "mmekaeng",
 					"NIKA" = "fmekaeng",
 					"K4T" = "k4tengi",
@@ -894,7 +894,7 @@
 					"Raptor V-4" = "serviraptor",
 					"Raptor V-4000" = "fancyraptor",
 					"MEKA" = "mekaserve",
-					"MEKA v2" = "newmekaserve",
+					//"MEKA v2" = "newmekaserve", //ChompREMOVE - we put the better sprite on the base
 					"NIKO" = "mmekaserv",
 					"NIKA" = "fmekaserv",
 					"K4T" = "k4tserve",
@@ -983,7 +983,7 @@
 					"Drake" = "drakemine",
 					"Raptor V-4" = "mineraptor",
 					"MEKA" = "mekamine",
-					"MEKA v2" = "newmekamine",
+					//"MEKA v2" = "newmekamine", //ChompREMOVE - we put the better sprite on the base
 					"NIKO" = "mmekamine",
 					"NIKA" = "fmekamine",
 					"K4T" = "k4tmine",
