@@ -51,3 +51,4 @@
   - bugfix: Renames custom subtle back to subtle (Custom)
   - rscadd: cooldown on 'use item on self' UI button (not the hotkey)
   - bugfix: mouse-hole interactions
+  - rscadd: adds a recolorable flannel jacket to loadout
