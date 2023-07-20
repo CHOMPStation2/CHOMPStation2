@@ -259,7 +259,7 @@
 
 /mob/living/silicon/robot/proc/set_module_sprites(var/list/new_sprites)
 	if(new_sprites && new_sprites.len)
-		module_sprites = (new_sprites.Copy())
+		module_sprites = new_sprites.Copy()
 		//Custom_sprite check and entry
 		if (custom_sprite == 1)
 			module_sprites["Custom"] = "[ckey]-[sprite_name]-[modtype]" //Made compliant with custom_sprites.dm line 32. (src.) was apparently redundant as it's implied. ~Mech
@@ -858,7 +858,7 @@
 	cut_overlays()
 	if(stat == CONSCIOUS)
 		if(!shell || deployed) // Shell borgs that are not deployed will have no eyes.
-			add_overlay("eyes-[selected_icon]")
+			add_overlay("eyes-[selected_icon]")//CHOMPEdit - Spriteselector
 
 	if(opened)
 		var/panelprefix = custom_sprite ? "[src.ckey]-[src.sprite_name]" : "ov"
