@@ -1,5 +1,5 @@
 
-/mob/living/silicon/robot/updateicon()
+/mob/living/silicon/robot/updateicon() //TODO - Make the belly stuff resting sprite stuff into feature flags and replace dogborg var - 7/19/23
 	vr_sprite_check()
 	..()
 	if(dogborg == TRUE && stat == CONSCIOUS)
@@ -39,35 +39,34 @@
 			add_overlay("taser")
 		if(lights_on)
 			add_overlay("eyes-[selected_icon]-lights")
-		if(module_sprites[icontype][SKIN_REST])
-			if(resting)
-				cut_overlays() // Hide that gut for it has no ground sprite yo.
-				if(sitting)
-					icon_state = "[selected_icon]-sit"
-					//CHOMPEdit Begin - Add ability to have sleeper belly sprites if available
-					if(sleeper_resting && sleeper_g == TRUE)
-						add_overlay("[selected_icon]-sleeper_g-sit")
-					if(sleeper_resting && (sleeper_r == TRUE || (!sleeper_g && vore_fullness_ex["stomach"])))
-						add_overlay("[selected_icon]-sleeper_r-sit[fullness_extension]")
-					//CHOMPEdit End
-				if(bellyup)
-					icon_state = "[selected_icon]-bellyup"
-					//CHOMPEdit Begin - Add ability to have sleeper belly sprites if available
-					if(sleeper_resting && sleeper_g == TRUE)
-						add_overlay("[selected_icon]-sleeper_g-bellyup")
-					if(sleeper_resting && (sleeper_r == TRUE || (!sleeper_g && vore_fullness_ex["stomach"])))
-						add_overlay("[selected_icon]-sleeper_r-bellyup[fullness_extension]")
-					//CHOMPEdit End
-				else if(!sitting && !bellyup)
-					icon_state = "[selected_icon]-rest"
-					//CHOMPEdit Begin - Add ability to have sleeper belly sprites if available
-					if(sleeper_resting && sleeper_g == TRUE)
-						add_overlay("[selected_icon]-sleeper_g-rest")
-					if(sleeper_resting && (sleeper_r == TRUE || (!sleeper_g && vore_fullness_ex["stomach"])))
-						add_overlay("[selected_icon]-sleeper_r-rest[fullness_extension]")
-					//CHOMPEdit End
-			else
-				icon_state = "[selected_icon]"
+		if(resting)
+			cut_overlays() // Hide that gut for it has no ground sprite yo.
+			if(sitting)
+				icon_state = "[selected_icon]-sit"
+				//CHOMPEdit Begin - Add ability to have sleeper belly sprites if available
+				if(sleeper_resting && sleeper_g == TRUE)
+					add_overlay("[selected_icon]-sleeper_g-sit")
+				if(sleeper_resting && (sleeper_r == TRUE || (!sleeper_g && vore_fullness_ex["stomach"])))
+					add_overlay("[selected_icon]-sleeper_r-sit[fullness_extension]")
+				//CHOMPEdit End
+			if(bellyup)
+				icon_state = "[selected_icon]-bellyup"
+				//CHOMPEdit Begin - Add ability to have sleeper belly sprites if available
+				if(sleeper_resting && sleeper_g == TRUE)
+					add_overlay("[selected_icon]-sleeper_g-bellyup")
+				if(sleeper_resting && (sleeper_r == TRUE || (!sleeper_g && vore_fullness_ex["stomach"])))
+					add_overlay("[selected_icon]-sleeper_r-bellyup[fullness_extension]")
+				//CHOMPEdit End
+			else if(!sitting && !bellyup)
+				icon_state = "[selected_icon]-rest"
+				//CHOMPEdit Begin - Add ability to have sleeper belly sprites if available
+				if(sleeper_resting && sleeper_g == TRUE)
+					add_overlay("[selected_icon]-sleeper_g-rest")
+				if(sleeper_resting && (sleeper_r == TRUE || (!sleeper_g && vore_fullness_ex["stomach"])))
+					add_overlay("[selected_icon]-sleeper_r-rest[fullness_extension]")
+				//CHOMPEdit End
+		else
+			icon_state = "[selected_icon]"
 	if(dogborg == TRUE && stat == DEAD)
 		icon_state = "[selected_icon]-wreck"
 		add_overlay("wreck-overlay")

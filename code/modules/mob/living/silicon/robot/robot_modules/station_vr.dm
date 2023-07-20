@@ -1,3 +1,4 @@
+//CHOMPEDIT Unticked and moved to modular_chomp for a major rework, any changes will have to be manually copied over - kcin2001
 /obj/item/weapon/robot_module
 	languages = list(LANGUAGE_SOL_COMMON= 1,
 					LANGUAGE_TRADEBAND	= 1,

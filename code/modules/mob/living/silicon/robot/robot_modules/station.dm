@@ -1,3 +1,4 @@
+//CHOMPEDIT Unticked and moved to modular_chomp for a major rework, any changes will have to be manually copied over - kcin2001
 var/global/list/robot_modules = list(
 	"Standard"		= /obj/item/weapon/robot_module/robot/standard,
 	"Service" 		= /obj/item/weapon/robot_module/robot/clerical/butler/general,

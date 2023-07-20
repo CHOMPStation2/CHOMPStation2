@@ -27,6 +27,7 @@ var/global/list/robot_modules = list(
 	var/channels = list()
 	var/networks = list()
 	var/languages = list(LANGUAGE_SOL_COMMON = 1, LANGUAGE_TRADEBAND = 1, LANGUAGE_UNATHI = 0, LANGUAGE_SIIK = 0, LANGUAGE_AKHANI = 0, LANGUAGE_SKRELLIAN = 0, LANGUAGE_GUTTER = 0, LANGUAGE_SCHECHI = 0, LANGUAGE_SIGN = 0, LANGUAGE_TERMINUS = 1, LANGUAGE_ZADDAT = 0)
+	var/defaults = list() //CHOMPAdd - Default values for sprites table entries, once i can figure out how to do this...
 	var/sprites = list()
 	var/can_be_pushed = 1
 	var/no_slip = 0
@@ -203,7 +204,7 @@ var/global/list/robot_modules = list(
 					"Insekt" = 				list(SKIN_ICON_STATE = "insekt-Default", SKIN_ICON = 'icons/mob/robots.dmi'),
 					"Usagi-II" = 			list(SKIN_ICON_STATE = "tall2standard", SKIN_ICON = 'icons/mob/robots.dmi'),
 					"Pyralis" = 			list(SKIN_ICON_STATE = "Glitterfly-Standard", SKIN_ICON = 'icons/mob/robots.dmi'),
-					"Miss M" = 				list(SKIN_ICON_STATE = "miss-standard", SKIN_ICON = 'icons/mob/robots.dmi'), // YW change, Added Miss M
+					"Miss M" = 				list(SKIN_ICON_STATE = "miss-standard", SKIN_ICON = 'icons/mob/robots_yw.dmi'), // YW change, Added Miss M
 					"Decapod" = 			list(SKIN_ICON_STATE = "decapod-Standard", SKIN_ICON = 'icons/mob/robots.dmi'),
 					"Pneuma" = 				list(SKIN_ICON_STATE = "pneuma-Standard", SKIN_ICON = 'icons/mob/robots.dmi'),
 					"Tower" = 				list(SKIN_ICON_STATE = "drider-Standard", SKIN_ICON = 'icons/mob/robots.dmi')
@@ -243,7 +244,7 @@ var/global/list/robot_modules = list(
 					"Insekt" = 				list(SKIN_ICON_STATE = "insekt-Med", SKIN_ICON = 'icons/mob/robots.dmi'),
 					"Usagi-II" = 			list(SKIN_ICON_STATE = "tall2medical", SKIN_ICON = 'icons/mob/robots.dmi'),
 					"Pyralis" = 			list(SKIN_ICON_STATE = "Glitterfly-Surgeon", SKIN_ICON = 'icons/mob/robots.dmi'),
-					"Miss M" = 				list(SKIN_ICON_STATE = "miss-medical", SKIN_ICON = 'icons/mob/robots.dmi'), // YW change, Added Miss M
+					"Miss M" = 				list(SKIN_ICON_STATE = "miss-medical", SKIN_ICON = 'icons/mob/robots_yw.dmi'), // YW change, Added Miss M
 					"Decapod" = 			list(SKIN_ICON_STATE = "decapod-Surgeon", SKIN_ICON = 'icons/mob/robots.dmi'),
 					"Pneuma" = 				list(SKIN_ICON_STATE = "pneuma-Surgeon", SKIN_ICON = 'icons/mob/robots.dmi'),
 					"Tower" = 				list(SKIN_ICON_STATE = "drider-Surgeon", SKIN_ICON = 'icons/mob/robots.dmi'),
@@ -329,7 +330,7 @@ var/global/list/robot_modules = list(
 					"Insekt" = 				list(SKIN_ICON_STATE = "insekt-Med", SKIN_ICON = 'icons/mob/robots.dmi'),
 					"Usagi-II" = 			list(SKIN_ICON_STATE = "tall2medical", SKIN_ICON = 'icons/mob/robots.dmi'),
 					"Pyralis" = 			list(SKIN_ICON_STATE = "Glitterfly-Crisis", SKIN_ICON = 'icons/mob/robots.dmi'),
-					"Miss M" = 				list(SKIN_ICON_STATE = "miss-medical", SKIN_ICON = 'icons/mob/robots.dmi'), // YW change, Added Miss M
+					"Miss M" = 				list(SKIN_ICON_STATE = "miss-medical", SKIN_ICON = 'icons/mob/robots_yw.dmi'), // YW change, Added Miss M
 					"Decapod" = 			list(SKIN_ICON_STATE = "decapod-Crisis", SKIN_ICON = 'icons/mob/robots.dmi'),
 					"Pneuma" = 				list(SKIN_ICON_STATE = "pneuma-Crisis", SKIN_ICON = 'icons/mob/robots.dmi'),
 					"Tower" = 				list(SKIN_ICON_STATE = "drider-Crisis", SKIN_ICON = 'icons/mob/robots.dmi')
@@ -530,7 +531,7 @@ var/global/list/robot_modules = list(
 					"Insekt" = 				list(SKIN_ICON_STATE = "insekt-Sec", SKIN_ICON = 'icons/mob/robots.dmi'),
 					"Usagi-II" = 			list(SKIN_ICON_STATE = "tall2security", SKIN_ICON = 'icons/mob/robots.dmi'),
 					"Pyralis" = 			list(SKIN_ICON_STATE = "Glitterfly-Security", SKIN_ICON = 'icons/mob/robots.dmi'),
-					"Miss M" = 				list(SKIN_ICON_STATE = "miss-security", SKIN_ICON = 'icons/mob/robots.dmi'), // YW change, Added Miss M
+					"Miss M" = 				list(SKIN_ICON_STATE = "miss-security", SKIN_ICON = 'icons/mob/robots_yw.dmi'), // YW change, Added Miss M
 					"Decapod" = 			list(SKIN_ICON_STATE = "decapod-Security", SKIN_ICON = 'icons/mob/robots.dmi'),
 					"Pneuma" = 				list(SKIN_ICON_STATE = "pneuma-Security", SKIN_ICON = 'icons/mob/robots.dmi'),
 					"Tower" = 				list(SKIN_ICON_STATE = "drider-Security", SKIN_ICON = 'icons/mob/robots.dmi')
@@ -580,7 +581,7 @@ var/global/list/robot_modules = list(
 					"Drone" = 				list(SKIN_ICON_STATE = "drone-janitor", SKIN_ICON = 'icons/mob/robots.dmi'),
 					"Usagi-II" = 			list(SKIN_ICON_STATE = "tall2janitor", SKIN_ICON = 'icons/mob/robots.dmi'),
 					"Pyralis" = 			list(SKIN_ICON_STATE = "Glitterfly-Janitor", SKIN_ICON = 'icons/mob/robots.dmi'),
-					"Miss M" = 				list(SKIN_ICON_STATE = "miss-janitor", SKIN_ICON = 'icons/mob/robots.dmi'), // YW change, Added Miss M
+					"Miss M" = 				list(SKIN_ICON_STATE = "miss-janitor", SKIN_ICON = 'icons/mob/robots_yw.dmi'), // YW change, Added Miss M
 					"Decapod" = 			list(SKIN_ICON_STATE = "decapod-Janitor", SKIN_ICON = 'icons/mob/robots.dmi'),
 					"Pneuma" = 				list(SKIN_ICON_STATE = "pneuma-Janitor", SKIN_ICON = 'icons/mob/robots.dmi'),
 					"Tower" = 				list(SKIN_ICON_STATE = "drider-Janitor", SKIN_ICON = 'icons/mob/robots.dmi')
@@ -650,7 +651,7 @@ var/global/list/robot_modules = list(
 					"Drone - Hydro" = 		list(SKIN_ICON_STATE = "drone-hydro", SKIN_ICON = 'icons/mob/robots.dmi'),
 					"Usagi-II" = 			list(SKIN_ICON_STATE = "tall2service", SKIN_ICON = 'icons/mob/robots.dmi'),
 					"Pyralis" = 			list(SKIN_ICON_STATE = "Glitterfly-Service", SKIN_ICON = 'icons/mob/robots.dmi'),
-					"Miss M" = 				list(SKIN_ICON_STATE = "miss-service", SKIN_ICON = 'icons/mob/robots.dmi'), // YW change, Added Miss M
+					"Miss M" = 				list(SKIN_ICON_STATE = "miss-service", SKIN_ICON = 'icons/mob/robots_yw.dmi'), // YW change, Added Miss M
 					"Decapod" = 			list(SKIN_ICON_STATE = "decapod-Service", SKIN_ICON = 'icons/mob/robots.dmi'),
 					"Pneuma" = 				list(SKIN_ICON_STATE = "pneuma-Service", SKIN_ICON = 'icons/mob/robots.dmi'),
 					"Tower" = 				list(SKIN_ICON_STATE = "drider-Service", SKIN_ICON = 'icons/mob/robots.dmi')
@@ -750,7 +751,7 @@ var/global/list/robot_modules = list(
 					"Drone" = 				list(SKIN_ICON_STATE = "drone-miner", SKIN_ICON = 'icons/mob/robots.dmi'),
 					"Usagi-II" = 			list(SKIN_ICON_STATE = "tall2miner", SKIN_ICON = 'icons/mob/robots.dmi'),
 					"Pyralis" = 			list(SKIN_ICON_STATE = "Glitterfly-Miner", SKIN_ICON = 'icons/mob/robots.dmi'),
-					"Miss M" = 				list(SKIN_ICON_STATE = "miss-miner", SKIN_ICON = 'icons/mob/robots.dmi'), // YW change, Added Miss M
+					"Miss M" = 				list(SKIN_ICON_STATE = "miss-miner", SKIN_ICON = 'icons/mob/robots_yw.dmi'), // YW change, Added Miss M
 					"Decapod" = 			list(SKIN_ICON_STATE = "decapod-Miner", SKIN_ICON = 'icons/mob/robots.dmi'),
 					"Pneuma" = 				list(SKIN_ICON_STATE = "pneuma-Miner", SKIN_ICON = 'icons/mob/robots.dmi'),
 					"Tower" = 				list(SKIN_ICON_STATE = "drider-Miner", SKIN_ICON = 'icons/mob/robots.dmi')

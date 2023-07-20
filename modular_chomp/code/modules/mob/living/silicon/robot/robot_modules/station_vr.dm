@@ -41,7 +41,7 @@
 					)
 
 /hook/startup/proc/robot_modules_vr()
-	//robot_mdules["Standard-Hound"] = /obj/item/weapon/robot_module/robot/standard/hound //CHOMPAdd
+	//robot_modules["Standard-Hound"] = /obj/item/weapon/robot_module/robot/standard/hound //CHOMPAdd - doing it here for the ordering
 	robot_modules["Medihound"] = /obj/item/weapon/robot_module/robot/medical/medihound
 	robot_modules["K9"] = /obj/item/weapon/robot_module/robot/security/knine
 	robot_modules["ERT"] = /obj/item/weapon/robot_module/robot/security/ert
@@ -79,7 +79,7 @@
 						"Acheron" = 			list(SKIN_ICON_STATE = "mechoid-Medical", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"Shellguard Noble" = 	list(SKIN_ICON_STATE = "Noble-MED", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"ZOOM-BA" = 			list(SKIN_ICON_STATE = "zoomba-medical", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
-						"W02M" = 				list(SKIN_ICON_STATE = "worm-surgeon", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
+						"W02M" = 				list(SKIN_ICON_STATE = "worm-surgeon", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi'),
 						"Feminine Humanoid" = 	list(SKIN_ICON_STATE = "uptall-medical", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"Gibbs" = 				list(SKIN_ICON_STATE = "gibbs", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi'),
 						"Servbot" = 			list(SKIN_ICON_STATE = "servbot-medi", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi')
@@ -91,7 +91,7 @@
 						"Acheron" = 			list(SKIN_ICON_STATE = "mechoid-Medical", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"Shellguard Noble" = 	list(SKIN_ICON_STATE = "Noble-MED", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"ZOOM-BA" = 			list(SKIN_ICON_STATE = "zoomba-crisis", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
-						"W02M" = 				list(SKIN_ICON_STATE = "worm-crisis", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
+						"W02M" = 				list(SKIN_ICON_STATE = "worm-crisis", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi'),
 						"Feminine Humanoid" = 	list(SKIN_ICON_STATE = "uptall-crisis", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"Gibbs" = 				list(SKIN_ICON_STATE = "gibbs", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi'),
 						"Servbot" = 			list(SKIN_ICON_STATE = "servbot-medi", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi')
@@ -107,7 +107,7 @@
 						"Acheron" = 			list(SKIN_ICON_STATE = "mechoid-Service", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"Shellguard Noble" = 	list(SKIN_ICON_STATE = "Noble-SRV", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"ZOOM-BA" = 			list(SKIN_ICON_STATE = "zoomba-service", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
-						"W02M" = 				list(SKIN_ICON_STATE = "worm-service", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
+						"W02M" = 				list(SKIN_ICON_STATE = "worm-service", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi'),
 						"Feminine Humanoid" = 	list(SKIN_ICON_STATE = "uptall-service", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"Lloyd" = 				list(SKIN_ICON_STATE = "lloyd", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi'),
 						"Servbot" = 			list(SKIN_ICON_STATE = "servbot-service", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi')
@@ -120,7 +120,7 @@
 						"Acheron" = 			list(SKIN_ICON_STATE = "mechoid-Service", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"Shellguard Noble" = 	list(SKIN_ICON_STATE = "Noble-SRV", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"ZOOM-BA" = 			list(SKIN_ICON_STATE = "zoomba-clerical", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
-						"W02M" = 				list(SKIN_ICON_STATE = "worm-service", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
+						"W02M" = 				list(SKIN_ICON_STATE = "worm-service", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi'),
 						"Feminine Humanoid" = 	list(SKIN_ICON_STATE = "uptall-service", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"Lloyd" = 				list(SKIN_ICON_STATE = "lloyd", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi'),
 						"Servbot" = 			list(SKIN_ICON_STATE = "servbot-service", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi')
@@ -135,7 +135,7 @@
 						"Acheron" = 			list(SKIN_ICON_STATE = "mechoid-Janitor", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"Shellguard Noble" = 	list(SKIN_ICON_STATE = "Noble-CLN", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"ZOOM-BA" = 			list(SKIN_ICON_STATE = "zoomba-janitor", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
-						"W02M" = 				list(SKIN_ICON_STATE = "worm-janitor", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
+						"W02M" = 				list(SKIN_ICON_STATE = "worm-janitor", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi'),
 						"Feminine Humanoid" = 	list(SKIN_ICON_STATE = "uptall-janitor", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"Han-d" = 				list(SKIN_ICON_STATE = "han-d", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi'),
 						"Flynn" = 				list(SKIN_ICON_STATE = "flynn", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi'),
@@ -151,7 +151,7 @@
 						"Acheron" = 			list(SKIN_ICON_STATE = "mechoid-Security", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"Shellguard Noble" = 	list(SKIN_ICON_STATE = "Noble-SEC", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"ZOOM-BA" = 			list(SKIN_ICON_STATE = "zoomba-security", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
-						"W02M" = 				list(SKIN_ICON_STATE = "worm-security", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
+						"W02M" = 				list(SKIN_ICON_STATE = "worm-security", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi'),
 						"Feminine Humanoid" = 	list(SKIN_ICON_STATE = "uptall-security", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"Woody" = 				list(SKIN_ICON_STATE = "woody", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi'),
 						"Servbot" = 			list(SKIN_ICON_STATE = "servbot-sec", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi')
@@ -161,7 +161,7 @@
 	vr_sprites = list(
 						"Acheron" = 			list(SKIN_ICON_STATE = "mechoid-Combat", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"ZOOM-BA" = 			list(SKIN_ICON_STATE = "zoomba-combat", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
-						"W02M" = 				list(SKIN_ICON_STATE = "worm-combat", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
+						"W02M" = 				list(SKIN_ICON_STATE = "worm-combat", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi'),
 						"Feminine Humanoid" = 	list(SKIN_ICON_STATE = "uptall-security", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"Servbot" = 			list(SKIN_ICON_STATE = "servbot-combat", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi')
 					 )
@@ -175,7 +175,7 @@
 						"Acheron" = 			list(SKIN_ICON_STATE = "mechoid-Miner", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"Shellguard Noble" = 	list(SKIN_ICON_STATE = "Noble-DIG", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"ZOOM-BA" = 			list(SKIN_ICON_STATE = "zoomba-miner", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
-						"W02M" = 				list(SKIN_ICON_STATE = "worm-miner", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
+						"W02M" = 				list(SKIN_ICON_STATE = "worm-miner", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi'),
 						"Feminine Humanoid" = 	list(SKIN_ICON_STATE = "uptall-miner", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"Ishimura" = 			list(SKIN_ICON_STATE = "ishimura", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi'),
 						"Servbot" = 			list(SKIN_ICON_STATE = "servbot-miner", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi')
@@ -188,7 +188,7 @@
 						"Acheron" = 						list(SKIN_ICON_STATE = "mechoid-Standard", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"Shellguard Noble" = 				list(SKIN_ICON_STATE = "Noble-STD", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"ZOOM-BA" = 						list(SKIN_ICON_STATE = "zoomba-standard", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
-						"W02M" = 							list(SKIN_ICON_STATE = "worm-standard", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
+						"W02M" = 							list(SKIN_ICON_STATE = "worm-standard", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi'),
 						"Feminine Humanoid" = 				list(SKIN_ICON_STATE = "uptall-standard", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"Feminine Humanoid, Variant 2" = 	list(SKIN_ICON_STATE = "uptall-standard2", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"Servbot" = 						list(SKIN_ICON_STATE = "servbot", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi'),
@@ -203,7 +203,7 @@
 						"Acheron" = 			list(SKIN_ICON_STATE = "mechoid-Engineering", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"Shellguard Noble" = 	list(SKIN_ICON_STATE = "Noble-ENG", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"ZOOM-BA" = 			list(SKIN_ICON_STATE = "zoomba-engineering", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
-						"W02M" = 				list(SKIN_ICON_STATE = "worm-engineering", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
+						"W02M" = 				list(SKIN_ICON_STATE = "worm-engineering", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi'),
 						"Feminine Humanoid" = 	list(SKIN_ICON_STATE = "uptall-engineering", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"Conagher" = 			list(SKIN_ICON_STATE = "conagher", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi'),
 						"Servbot" = 			list(SKIN_ICON_STATE = "servbot-engi", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi')
@@ -217,7 +217,7 @@
 						"Acheron" = 			list(SKIN_ICON_STATE = "mechoid-Science", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"ZOOM-BA" = 			list(SKIN_ICON_STATE = "zoomba-research", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"XI-GUS" = 				list(SKIN_ICON_STATE = "spiderscience", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
-						"W02M" = 				list(SKIN_ICON_STATE = "worm-janitor", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
+						"W02M" = 				list(SKIN_ICON_STATE = "worm-janitor", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi'),
 						"Feminine Humanoid" = 	list(SKIN_ICON_STATE = "uptall-science", SKIN_ICON = 'icons/mob/robots_vr.dmi')
 					 )
 
@@ -229,8 +229,8 @@
 					"Secborg model V-2" = 	list(SKIN_ICON_STATE = "secborg",SKIN_ICON = 'icons/mob/widerobot_sec_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
 					"Borgi" = 				list(SKIN_ICON_STATE = "borgi-sec",SKIN_ICON = 'icons/mob/widerobot_sec_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
 					"Otieborg" = 			list(SKIN_ICON_STATE = "oties",SKIN_ICON = 'icons/mob/widerobot_sec_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
-					"Secborg model V-3" = 	list(SKIN_ICON_STATE = "SecVale",SKIN_ICON = 'icons/mob/widerobot_sec_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32), //CHOMPEdit
-					"Cat" = 				list(SKIN_ICON_STATE = "vixsec",SKIN_ICON = 'modular_chomp/icons/mob/catborg/catborg.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32), //CHOMPEdit
+					"Secborg model V-3" = 	list(SKIN_ICON_STATE = "SecVale",SKIN_ICON = 'modular_chomp/icons/mob/widerobot_ch.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32), //CHOMPEdit
+					"Cat" = 				list(SKIN_ICON_STATE = "vixsec",SKIN_ICON = 'modular_chomp/icons/mob/catborg/catborg.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32,SKIN_REST_BELLY = 1), //CHOMPEdit
 					"Drake" = 				list(SKIN_ICON_STATE = "drakesec",SKIN_ICON = 'icons/mob/drakeborg/drakeborg_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
 					"Raptor V-4" = 			list(SKIN_ICON_STATE = "secraptor",SKIN_ICON = 'modular_chomp/icons/mob/raptorborg/raptor.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 45),
 					"MEKA" = 				list(SKIN_ICON_STATE = "mekasec",SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64), //CHOMPEdit Start - Tallborgs
@@ -306,21 +306,28 @@
 
 /obj/item/weapon/robot_module/robot/medical/medihound
 	name = "MediHound module"
+	/*defaults = list(
+					SKIN_ICON = 'icons/mob/widerobot_med_vr.dmi',
+					SKIN_OFFSET = -16,
+					SKIN_HEIGHT = 32,
+					SKIN_REST = 1,
+					SKIN_REST_BELLY = 0,
+					SKIN_BELLY_SIZE = 0
+					)*/
 	sprites = list(
-					"Medical Hound" = 				list(SKIN_ICON_STATE = "medihound", SKIN_ICON = 'icons/mob/widerobot_med_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32, SKIN_REST = 1),
-					"Dark Medical Hound (Static)" = list(SKIN_ICON_STATE = "medihounddark", SKIN_ICON = 'icons/mob/widerobot_med_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32, SKIN_REST = 1),
-					"Mediborg model V-2" = 			list(SKIN_ICON_STATE = "vale", SKIN_ICON = 'icons/mob/widerobot_med_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32, SKIN_REST = 1),
-					"Borgi" = 						list(SKIN_ICON_STATE = "borgi-medi", SKIN_ICON = 'icons/mob/widerobot_med_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32, SKIN_REST = 1),
-					"Mediborg model V-3" = 			list(SKIN_ICON_STATE = "vale2", SKIN_ICON = 'icons/mob/widerobot_med_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32, SKIN_REST = 1), //CHOMPEdit
-					"Cat" = 						list(SKIN_ICON_STATE = "vixmed", SKIN_ICON = 'modular_chomp/icons/mob/catborg/catborg.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32, SKIN_REST = 1), //CHOMPEdit
-					"Drake" = 						list(SKIN_ICON_STATE = "drakemed", SKIN_ICON = 'icons/mob/drakeborg/drakeborg_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32, SKIN_REST = 1),
-					"Raptor V-4" = 					list(SKIN_ICON_STATE = "medraptor", SKIN_ICON = 'modular_chomp/icons/mob/raptorborg/raptor.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 45, SKIN_REST = 1),
-					"MEKA" = 						list(SKIN_ICON_STATE = "mekamed", SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64, SKIN_REST = 1), //CHOMPEdit Start - Tallborgs
-					"NIKO" = 						list(SKIN_ICON_STATE = "mmekamed", SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64, SKIN_REST = 1),
-					"NIKA" = 						list(SKIN_ICON_STATE = "fmekamed", SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64, SKIN_REST = 1),
-					"K4T" = 						list(SKIN_ICON_STATE = "k4tmed", SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64, SKIN_REST = 1),
-					"K4Talt" = 						list(SKIN_ICON_STATE = "k4tmed_alt1", SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64, SKIN_REST = 1), //CHOMPEdit End - Tallborgs
-					"BootyBorg" =					list(SKIN_ICON_STATE = "medvore", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 32, SKIN_REST = 0)
+					"Medical Hound" = 				list(SKIN_ICON_STATE = "medihound", SKIN_ICON = 'icons/mob/widerobot_med_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
+					"Dark Medical Hound (Static)" = list(SKIN_ICON_STATE = "medihounddark", SKIN_ICON = 'icons/mob/widerobot_med_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
+					"Mediborg model V-2" = 			list(SKIN_ICON_STATE = "vale", SKIN_ICON = 'icons/mob/widerobot_med_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
+					"Borgi" = 						list(SKIN_ICON_STATE = "borgi-medi", SKIN_ICON = 'icons/mob/widerobot_med_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
+					"Mediborg model V-3" = 			list(SKIN_ICON_STATE = "vale2", SKIN_ICON = 'modular_chomp/icons/mob/widerobot_ch.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32), //CHOMPEdit
+					"Cat" = 						list(SKIN_ICON_STATE = "vixmed", SKIN_ICON = 'modular_chomp/icons/mob/catborg/catborg.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32,SKIN_REST_BELLY = 1,SKIN_REST_BELLY = 1), //CHOMPEdit
+					"Drake" = 						list(SKIN_ICON_STATE = "drakemed", SKIN_ICON = 'icons/mob/drakeborg/drakeborg_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
+					"Raptor V-4" = 					list(SKIN_ICON_STATE = "medraptor", SKIN_ICON = 'modular_chomp/icons/mob/raptorborg/raptor.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 45),
+					"MEKA" = 						list(SKIN_ICON_STATE = "mekamed", SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64), //CHOMPEdit Start - Tallborgs
+					"NIKO" = 						list(SKIN_ICON_STATE = "mmekamed", SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64),
+					"NIKA" = 						list(SKIN_ICON_STATE = "fmekamed", SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64),
+					"K4T" = 						list(SKIN_ICON_STATE = "k4tmed", SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64),
+					"K4Talt" = 						list(SKIN_ICON_STATE = "k4tmed_alt1", SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64) //CHOMPEdit End - Tallborgs
 					)
 
 /obj/item/weapon/robot_module/robot/medical/medihound/New(var/mob/living/silicon/robot/R)
@@ -550,7 +557,7 @@
 					"Janihound model V-2" = list(SKIN_ICON_STATE = "J9",SKIN_ICON = 'icons/mob/widerobot_jan_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
 					"Borgi" = 				list(SKIN_ICON_STATE = "borgi-jani",SKIN_ICON = 'icons/mob/widerobot_jan_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
 					"Otieborg" = 			list(SKIN_ICON_STATE = "otiej",SKIN_ICON = 'icons/mob/widerobot_jan_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
-					"Cat" = 				list(SKIN_ICON_STATE = "vixjani",SKIN_ICON = 'modular_chomp/icons/mob/catborg/catborg.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32), //CHOMPEdit
+					"Cat" = 				list(SKIN_ICON_STATE = "vixjani",SKIN_ICON = 'modular_chomp/icons/mob/catborg/catborg.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32,SKIN_REST_BELLY = 1), //CHOMPEdit
 					"Drake" = 				list(SKIN_ICON_STATE = "drakejanit",SKIN_ICON = 'icons/mob/drakeborg/drakeborg_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
 					"Raptor V-4" = 			list(SKIN_ICON_STATE = "janiraptor",SKIN_ICON = 'modular_chomp/icons/mob/raptorborg/raptor.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 45),
 					"MEKA" = 				list(SKIN_ICON_STATE = "mekajani",SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64), //CHOMPEdit Start - Tallborgs
@@ -647,7 +654,7 @@
 					"Borgi" = 			list(SKIN_ICON_STATE = "borgi-sci",SKIN_ICON = 'icons/mob/widerobot_sci_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
 					"SciHound" = 		list(SKIN_ICON_STATE = "scihound",SKIN_ICON = 'icons/mob/widerobot_sci_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
 					"SciHoundDark" = 	list(SKIN_ICON_STATE = "scihounddark",SKIN_ICON = 'icons/mob/widerobot_sci_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
-					"Cat" = 			list(SKIN_ICON_STATE = "vixsci",SKIN_ICON = 'modular_chomp/icons/mob/catborg/catborg.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32), //CHOMPEdit
+					"Cat" = 			list(SKIN_ICON_STATE = "vixsci",SKIN_ICON = 'modular_chomp/icons/mob/catborg/catborg.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32,SKIN_REST_BELLY = 1), //CHOMPEdit
 					"Drake" = 			list(SKIN_ICON_STATE = "drakesci",SKIN_ICON = 'icons/mob/drakeborg/drakeborg_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
 					"Raptor V-4" = 		list(SKIN_ICON_STATE = "sciraptor",SKIN_ICON = 'modular_chomp/icons/mob/raptorborg/raptor.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 45),
 					"MEKA" = 			list(SKIN_ICON_STATE = "mekastandard",SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64), //CHOMPEdit Start - Tallborgs
@@ -906,7 +913,7 @@
 					"Pinkhound" = 				list(SKIN_ICON_STATE = "k69",SKIN_ICON = 'icons/mob/widerobot_ser_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
 					"ServicehoundV2" = 			list(SKIN_ICON_STATE = "serve2",SKIN_ICON = 'icons/mob/widerobot_ser_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
 					"ServicehoundV2 Darkmode" = list(SKIN_ICON_STATE = "servedark",SKIN_ICON = 'icons/mob/widerobot_ser_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
-					"Cat" = 					list(SKIN_ICON_STATE = "vixserv",SKIN_ICON = 'modular_chomp/icons/mob/catborg/catborg.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32), //CHOMPEdit
+					"Cat" = 					list(SKIN_ICON_STATE = "vixserv",SKIN_ICON = 'modular_chomp/icons/mob/catborg/catborg.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32,SKIN_REST_BELLY = 1), //CHOMPEdit
 					"Drake" = 					list(SKIN_ICON_STATE = "drakemine",SKIN_ICON = 'icons/mob/drakeborg/drakeborg_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
 					"Raptor V-4" = 				list(SKIN_ICON_STATE = "serviraptor",SKIN_ICON = 'modular_chomp/icons/mob/raptorborg/raptor.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 45),
 					"Raptor V-4000" = 			list(SKIN_ICON_STATE = "fancyraptor",SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64),
