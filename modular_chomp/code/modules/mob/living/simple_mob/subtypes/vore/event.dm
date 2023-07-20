@@ -43,7 +43,7 @@
 	grab_resist = 0				// Chance for a grab attempt to fail. Note that this is not a true resist and is just a prob() of failure.
 	resistance = 0				// Damage reduction for all types
 	armor = list(			// Values for normal getarmor() checks
-				"melee" = 0,
+				"melee" = 90,
 				"bullet" = 95,
 				"laser" = 100,
 				"energy" = 100,
@@ -52,10 +52,10 @@
 				"rad" = 100
 				)
 	armor_soak = list(		// Values for getsoak() checks.
-				"melee" = 15,
-				"bullet" = 15,
-				"laser" = 15,
-				"energy" = 15,
+				"melee" = 7,
+				"bullet" = 7,
+				"laser" = 7,
+				"energy" = 7,
 				"bomb" = 0,
 				"bio" = 0,
 				"rad" = 0
@@ -155,8 +155,8 @@
 				"rad" = 100
 				)
 	armor_soak = list(		// Values for getsoak() checks.
-				"melee" = 15,
-				"bullet" = 15,
+				"melee" = 7,
+				"bullet" = 7,
 				"laser" = 0,
 				"energy" = 0,
 				"bomb" = 0,
@@ -221,7 +221,7 @@
 	grab_resist = 0				// Chance for a grab attempt to fail. Note that this is not a true resist and is just a prob() of failure.
 	resistance = 0				// Damage reduction for all types
 	armor = list(			// Values for normal getarmor() checks
-				"melee" = 0,
+				"melee" = -50,
 				"bullet" = 0,
 				"laser" = 100,
 				"energy" = 100,
@@ -232,8 +232,8 @@
 	armor_soak = list(		// Values for getsoak() checks.
 				"melee" = 0,
 				"bullet" = 0,
-				"laser" = 0,
-				"energy" = 0,
+				"laser" = 7,
+				"energy" = 7,
 				"bomb" = 0,
 				"bio" = 0,
 				"rad" = 0
