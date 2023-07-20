@@ -198,11 +198,11 @@
 			icon = 'modular_chomp/icons/mob/tallborg/tallrobots-wide.dmi' //CHOMPEDIT: TallBorg, I dunno how to code but i'll love it if someone could change this mess into how TG does it
 			vis_height = 64 // CHOMPedit: sanitizing tile centering for larger sprites.
 			update_transform() // CHOMPedit: sanitizing tile centering for larger sprites.
-		/* CHOMP Remove START - re use our own sprites. The icontype below is not used.
+		/* //CHOMP Remove START - re use our own sprites. The icontype below is not used.
 		else if(icontype == "MEKA v2") //tallborgs. if anyone can code them not to be a dogborg subtype please do so, but this'll do for now.
 			icon = 'icons/mob/tallborg/tallborg.dmi'
 			vis_height = 64
-			update_transform()*/ CHOMP Remove END
+			update_transform()*/ //CHOMP Remove END
 		else
 			icon = wideborg_dept
 		return
