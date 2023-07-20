@@ -735,6 +735,8 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/table/steel,
+/obj/item/tape/police,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/plazawarehouse)
 "ci" = (
@@ -970,6 +972,10 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/downtown)
+"cL" = (
+/obj/item/clothing/gloves/fyellow,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/plazawarehouse)
 "cM" = (
 /obj/effect/floor_decal/corner/blue/diagonal{
 	dir = 4
@@ -1029,6 +1035,14 @@
 	},
 /obj/effect/floor_decal/stairs{
 	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/sewers)
+"cU" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/random/junk,
+/obj/machinery/light/small{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/sewers)
@@ -1294,6 +1308,24 @@
 	outdoors = 0
 	},
 /area/awaymission/darkrp/toll)
+"dJ" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "centralbuilding3";
+	name = "Shutters Button";
+	pixel_x = 1;
+	dir = 8;
+	pixel_y = 25
+	},
+/turf/simulated/floor/outdoors/sidewalk/side{
+	movement_cost = 0;
+	temperature = 293.15
+	},
+/area/awaymission/darkrp/outside/plaza)
 "dL" = (
 /obj/structure/bonfire,
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
@@ -1745,7 +1777,9 @@
 /area/awaymission/darkrp/outside/park)
 "fp" = (
 /obj/effect/decal/cleanable/dirt,
-/mob/living/carbon/human/ai_controlled/replicant,
+/mob/living/carbon/human/ai_controlled/replicant{
+	icon_state = "rune_teleport"
+	},
 /turf/simulated/floor/concrete{
 	outdoors = 1
 	},
@@ -2482,6 +2516,8 @@
 	name = "Garage Door";
 	dir = 2
 	},
+/obj/structure/table/steel,
+/obj/item/tape/police,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/plazawarehouse)
 "hn" = (
@@ -2517,6 +2553,20 @@
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/subcondo)
+"hu" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/mob/living/carbon/human/ai_controlled/greytide{
+	icon_state = "rune_teleport"
+	},
+/turf/simulated/floor/outdoors/sidewalk/side{
+	movement_cost = 0;
+	temperature = 293.15
+	},
+/area/awaymission/darkrp/outside/plaza)
 "hv" = (
 /mob/living/simple_mob/humanoid/pirate/armored,
 /turf/simulated/floor/wood,
@@ -3268,6 +3318,15 @@
 /obj/structure/salvageable/autolathe,
 /turf/simulated/floor/plating,
 /area/awaymission/darkrp/plazabunker)
+"jY" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/item/clothing/gloves/fyellow,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/plazawarehouse)
 "jZ" = (
 /obj/machinery/appliance/cooker/grill,
 /obj/effect/decal/cleanable/dirt,
@@ -3363,6 +3422,13 @@
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside)
+"kk" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/carbon/human/ai_controlled/greytide{
+	icon_state = "rune_teleport"
+	},
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/plazawarehouse)
 "km" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -3829,7 +3895,9 @@
 /area/awaymission/darkrp/outside/plaza)
 "lM" = (
 /obj/effect/decal/cleanable/dirt,
-/mob/living/carbon/human/ai_controlled/replicant,
+/mob/living/carbon/human/ai_controlled/replicant{
+	icon_state = "rune_teleport"
+	},
 /turf/simulated/floor/outdoors/newdirt{
 	temperature = 293.15
 	},
@@ -4316,7 +4384,9 @@
 /turf/simulated/floor/tiled/white,
 /area/awaymission/darkrp/sewers)
 "nn" = (
-/mob/living/carbon/human/ai_controlled/replicant,
+/mob/living/carbon/human/ai_controlled/replicant{
+	icon_state = "rune_teleport"
+	},
 /turf/simulated/floor/concrete{
 	outdoors = 1
 	},
@@ -5800,7 +5870,7 @@
 /turf/simulated/floor/plating,
 /area/awaymission/darkrp/subpower)
 "rS" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/wood,
 /area/awaymission/darkrp/subhouse1)
 "rT" = (
 /obj/structure/cable/green{
@@ -6565,6 +6635,10 @@
 /obj/random/maintenance/cargo,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/downtowncenter)
+"ub" = (
+/obj/structure/sign/warning/high_voltage,
+/turf/simulated/wall/r_concrete,
+/area/awaymission/darkrp/tunnels/suburbs)
 "uc" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -7526,7 +7600,9 @@
 	},
 /area/awaymission/darkrp/sewers)
 "wV" = (
-/obj/structure/barricade/sandbag,
+/obj/structure/barricade/sandbag{
+	icon_state = "sandbags"
+	},
 /turf/simulated/floor/concrete{
 	outdoors = 0
 	},
@@ -7636,6 +7712,7 @@
 /obj/item/weapon/material/shard{
 	pixel_x = 6
 	},
+/obj/item/clothing/gloves/yellow,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/plazawarehouse)
 "xq" = (
@@ -7737,6 +7814,12 @@
 /obj/random/pottedplant,
 /turf/simulated/floor/wmarble,
 /area/awaymission/darkrp/subhouse2)
+"xF" = (
+/obj/machinery/floodlight,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/awaymission/darkrp/outside/suburbs)
 "xG" = (
 /obj/item/weapon/weldingtool/mini/two,
 /turf/simulated/floor/concrete{
@@ -9321,6 +9404,9 @@
 /mob/living/simple_mob/humanoid/cultist/hunter/surt,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/brokehouse)
+"Cm" = (
+/turf/simulated/wall/wood,
+/area/awaymission/darkrp/subgarage)
 "Cn" = (
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/plazawarehouse)
@@ -10182,6 +10268,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse3)
+"EP" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/clothing/gloves/fyellow,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/plazawarehouse)
 "EQ" = (
 /obj/item/weapon/hand_labeler,
 /obj/item/device/mass_spectrometer/adv,
@@ -10726,7 +10817,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/structure/barricade/sandbag,
+/obj/structure/barricade/sandbag{
+	icon_state = "sandbags"
+	},
 /turf/simulated/floor/outdoors/sidewalk/side{
 	movement_cost = 0;
 	temperature = 293.15
@@ -10936,7 +11029,9 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/centerwarehouse)
 "GS" = (
-/mob/living/carbon/human/ai_controlled/replicant,
+/mob/living/carbon/human/ai_controlled/replicant{
+	icon_state = "rune_teleport"
+	},
 /turf/simulated/floor/outdoors/rocks{
 	temperature = 293.15
 	},
@@ -12590,6 +12685,7 @@
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/clothing/gloves/heavy_engineer,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/plazawarehouse)
 "LF" = (
@@ -13712,7 +13808,9 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettohouse2)
 "OQ" = (
-/obj/structure/barricade/sandbag,
+/obj/structure/barricade/sandbag{
+	icon_state = "sandbags"
+	},
 /turf/simulated/floor/concrete{
 	outdoors = 1
 	},
@@ -13994,6 +14092,12 @@
 /obj/structure/table/rack/shelf/steel,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownshop)
+"PR" = (
+/mob/living/carbon/human/ai_controlled/greytide{
+	icon_state = "rune_teleport"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/awaymission/darkrp/plazawarehouse)
 "PT" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/random/maintenance/clean,
@@ -14144,11 +14248,11 @@
 /turf/simulated/wall/wood,
 /area/awaymission/darkrp/parkcondo)
 "Qr" = (
-/obj/structure/barricade/sandbag,
-/turf/simulated/floor/concrete{
-	outdoors = 1
+/mob/living/carbon/human/ai_controlled/greytide{
+	icon_state = "rune_teleport"
 	},
-/area/awaymission/darkrp/outside/suburbs)
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/plazawarehouse)
 "Qt" = (
 /obj/structure/cable/green{
 	d2 = 2;
@@ -15700,7 +15804,9 @@
 /area/awaymission/darkrp/outside/center)
 "UX" = (
 /obj/effect/decal/cleanable/dirt,
-/mob/living/carbon/human/ai_controlled/replicant,
+/mob/living/carbon/human/ai_controlled/replicant{
+	icon_state = "rune_teleport"
+	},
 /turf/simulated/floor/outdoors/rocks{
 	temperature = 293.15
 	},
@@ -15779,6 +15885,10 @@
 /obj/structure/closet/crate,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettowarehouse)
+"Vg" = (
+/obj/item/clothing/gloves/yellow,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/plazawarehouse)
 "Vh" = (
 /obj/structure/boulder,
 /turf/simulated/floor/concrete{
@@ -16188,10 +16298,9 @@
 /turf/simulated/floor/lino,
 /area/awaymission/darkrp/ghettoapartments)
 "Wm" = (
-/obj/machinery/floodlight{
-	dir = 1
+/obj/structure/barricade/sandbag{
+	icon_state = "sandbags"
 	},
-/obj/structure/barricade/sandbag,
 /turf/simulated/floor/concrete{
 	outdoors = 1
 	},
@@ -16415,6 +16524,12 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside)
+"WR" = (
+/obj/structure/table/steel,
+/obj/random/maintenance/engineering,
+/obj/item/clothing/gloves/fyellow,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/plazawarehouse)
 "WT" = (
 /obj/structure/railing{
 	dir = 1
@@ -17334,7 +17449,9 @@
 /area/awaymission/darkrp/plazabunker)
 "Zt" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/barricade/sandbag,
+/obj/structure/barricade/sandbag{
+	icon_state = "sandbags"
+	},
 /turf/simulated/floor/concrete{
 	outdoors = 0
 	},
@@ -31158,7 +31275,7 @@ iz
 iz
 iz
 iz
-uS
+Go
 OQ
 br
 br
@@ -36305,7 +36422,7 @@ nT
 Cn
 Cn
 ZO
-Cn
+Vg
 jm
 jm
 nu
@@ -36465,13 +36582,13 @@ WI
 WI
 nT
 Cn
+cL
 Cn
 Cn
-Cn
+kk
 jm
 jm
-jm
-Cn
+cL
 nT
 BE
 pf
@@ -36794,7 +36911,7 @@ Cn
 Cn
 fa
 fa
-Cn
+Qr
 Cn
 nT
 BE
@@ -36953,8 +37070,8 @@ nT
 Cn
 Lq
 Ra
-ZW
-Ra
+WR
+PR
 ZW
 Cn
 Cn
@@ -37270,7 +37387,7 @@ eO
 CT
 nT
 Cn
-Cn
+Qr
 Cn
 Cn
 nT
@@ -37280,10 +37397,10 @@ tD
 LE
 tD
 tD
-tD
+jY
 OR
 nT
-BE
+dJ
 pf
 pf
 pf
@@ -37436,13 +37553,13 @@ Cn
 Cn
 Cn
 Uv
-Cn
+Qr
 BX
 jm
 jm
 jm
 xp
-jm
+kk
 WV
 ch
 Sd
@@ -37514,7 +37631,7 @@ kr
 Rl
 Rl
 Rl
-mO
+cU
 rh
 KO
 rh
@@ -37601,7 +37718,7 @@ lg
 Cn
 Cn
 BX
-jm
+EP
 jm
 jm
 jm
@@ -37758,7 +37875,7 @@ nT
 Cn
 Cn
 RX
-Cn
+Qr
 lg
 Cn
 Cn
@@ -39551,7 +39668,7 @@ gq
 gq
 gq
 gq
-BE
+hu
 pf
 pf
 pf
@@ -41998,7 +42115,7 @@ UH
 Ru
 NK
 NK
-om
+bQ
 NX
 Ga
 Ga
@@ -42160,7 +42277,7 @@ FV
 Ko
 NK
 om
-fM
+bQ
 NX
 Ga
 Ga
@@ -42322,7 +42439,7 @@ FV
 Ko
 Lz
 om
-fM
+bQ
 NX
 Ga
 Ga
@@ -42484,7 +42601,7 @@ FV
 lL
 Lz
 om
-fM
+bQ
 NX
 Ga
 Ga
@@ -42646,7 +42763,7 @@ FV
 lL
 wp
 om
-fM
+bQ
 NX
 Ga
 Ga
@@ -42808,7 +42925,7 @@ FV
 Ko
 Lz
 om
-fM
+bQ
 NX
 Ga
 Ga
@@ -42970,7 +43087,7 @@ FV
 lL
 Lz
 om
-fM
+bQ
 NX
 Ga
 Ga
@@ -43132,7 +43249,7 @@ Lz
 lL
 Lz
 om
-fM
+bQ
 NX
 Ga
 Ga
@@ -43294,7 +43411,7 @@ lo
 uj
 lo
 om
-fM
+bQ
 NX
 Ga
 Ga
@@ -43455,8 +43572,8 @@ lo
 JM
 er
 lo
-fM
-fM
+om
+bQ
 NX
 Ga
 Ga
@@ -43617,8 +43734,8 @@ lo
 zu
 er
 lo
-fM
-fM
+om
+bQ
 NX
 Ga
 Ga
@@ -43779,8 +43896,8 @@ lo
 ny
 er
 lo
-fM
-fM
+om
+bQ
 NX
 Ga
 Ga
@@ -48924,7 +49041,7 @@ ay
 ay
 ay
 ay
-ay
+ub
 mE
 cC
 cC
@@ -49249,7 +49366,7 @@ HO
 HO
 HO
 Mv
-Qr
+Wm
 SO
 SO
 SO
@@ -49411,7 +49528,7 @@ HO
 HO
 HO
 Mv
-Qr
+Wm
 SO
 SO
 SO
@@ -49734,8 +49851,8 @@ ay
 ay
 ay
 ay
-ay
-Qr
+ub
+Wm
 SO
 gv
 gv
@@ -49897,7 +50014,7 @@ NA
 NA
 NA
 hk
-SO
+xF
 SO
 gv
 gv
@@ -51233,7 +51350,7 @@ LM
 LM
 LM
 LM
-eX
+Cm
 tl
 vS
 vS
@@ -51395,7 +51512,7 @@ LM
 LM
 LM
 LM
-eX
+Cm
 UK
 yR
 yR
@@ -51557,7 +51674,7 @@ Ta
 Ta
 Ta
 Ta
-eX
+Cm
 rS
 rS
 rS
