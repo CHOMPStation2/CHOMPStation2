@@ -1,4 +1,4 @@
-//CHOMPEDIT Unticked and moved to modular_chomp for a major rework, any changes will have to be manually copied over - kcin2001
+//CHOMPNOTE - if upstream edits the sprite lists it will have to be manually copied into our station_vr file, anything else is just read from here
 var/global/list/robot_modules = list(
 	"Standard"		= /obj/item/weapon/robot_module/robot/standard,
 	"Service" 		= /obj/item/weapon/robot_module/robot/clerical/butler/general,
@@ -28,6 +28,7 @@ var/global/list/robot_modules = list(
 	var/channels = list()
 	var/networks = list()
 	var/languages = list(LANGUAGE_SOL_COMMON = 1, LANGUAGE_TRADEBAND = 1, LANGUAGE_UNATHI = 0, LANGUAGE_SIIK = 0, LANGUAGE_AKHANI = 0, LANGUAGE_SKRELLIAN = 0, LANGUAGE_GUTTER = 0, LANGUAGE_SCHECHI = 0, LANGUAGE_SIGN = 0, LANGUAGE_TERMINUS = 1, LANGUAGE_ZADDAT = 0)
+	var/defaults = list() //CHOMPAdd - Default values for sprites table entries, once i can figure out how to do this...
 	var/sprites = list()
 	var/can_be_pushed = 1
 	var/no_slip = 0
@@ -188,7 +189,7 @@ var/global/list/robot_modules = list(
 
 /obj/item/weapon/robot_module/robot/standard
 	name = "standard robot module"
-	sprites = list(
+	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 					"M-USE NanoTrasen" = "robot",
 					"Cabeiri" = "eyebot-standard",
 					"Haruka" = "marinaSD",
@@ -208,7 +209,7 @@ var/global/list/robot_modules = list(
 					"Decapod" = "decapod-Standard",
 					"Pneuma" = "pneuma-Standard",
 					"Tower" = "drider-Standard"
-					)
+					)*/ //CHOMPEdit end
 
 
 /obj/item/weapon/robot_module/robot/standard/New()
@@ -227,7 +228,7 @@ var/global/list/robot_modules = list(
 
 /obj/item/weapon/robot_module/robot/medical/surgeon
 	name = "surgeon robot module"
-	sprites = list(
+	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 					"M-USE NanoTrasen" = "robotMedi",
 					"Cabeiri" = "eyebot-medical",
 					"Haruka" = "marinaMD",
@@ -248,7 +249,7 @@ var/global/list/robot_modules = list(
 					"Decapod" = "decapod-Surgeon",
 					"Pneuma" = "pneuma-Surgeon",
 					"Tower" = "drider-Surgeon"
-					)
+					)*/ //CHOMPEdit end
 
 /obj/item/weapon/robot_module/robot/medical/surgeon/New()
 	..()
@@ -313,7 +314,7 @@ var/global/list/robot_modules = list(
 /obj/item/weapon/robot_module/robot/medical/crisis
 	name = "crisis robot module"
 	subsystems = list(/mob/living/silicon/proc/subsystem_crew_monitor) //Give the medical Crisis ability to watch Crew monitor
-	sprites = list(
+	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 					"M-USE NanoTrasen" = "robotMedi",
 					"Cabeiri" = "eyebot-medical",
 					"Haruka" = "marinaMD",
@@ -334,7 +335,7 @@ var/global/list/robot_modules = list(
 					"Decapod" = "decapod-Crisis",
 					"Pneuma" = "pneuma-Crisis",
 					"Tower" = "drider-Crisis"
-					)
+					)*/ //CHOMPEdit end
 
 /obj/item/weapon/robot_module/robot/medical/crisis/New()
 	..()
@@ -394,7 +395,7 @@ var/global/list/robot_modules = list(
 	channels = list("Engineering" = 1)
 	networks = list(NETWORK_ENGINEERING)
 	subsystems = list(/mob/living/silicon/proc/subsystem_power_monitor)
-	sprites = list(
+	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 					"M-USE NanoTrasen" = "robotEngi",
 					"Cabeiri" = "eyebot-engineering",
 					"Haruka" = "marinaENG",
@@ -415,7 +416,7 @@ var/global/list/robot_modules = list(
 					"Decapod" = "decapod-Engineering",
 					"Pneuma" = "pneuma-Engineering",
 					"Tower" = "drider-Engineering"
-					)
+					)*/ //CHOMPEdit end
 
 /obj/item/weapon/robot_module/robot/engineering/general/New()
 	..()
@@ -514,7 +515,7 @@ var/global/list/robot_modules = list(
 	supported_upgrades = list(/obj/item/borg/upgrade/tasercooler)
 
 /obj/item/weapon/robot_module/robot/security/general
-	sprites = list(
+	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 					"M-USE NanoTrasen" = "robotSecy",
 					"Cabeiri" = "eyebot-security",
 					"Cerberus" = "bloodhound",
@@ -535,7 +536,7 @@ var/global/list/robot_modules = list(
 					"Decapod" = "decapod-Security",
 					"Pneuma" = "pneuma-Security",
 					"Tower" = "drider-Security"
-					)
+					)*/ //CHOMPEdit end
 
 /obj/item/weapon/robot_module/robot/security/general/New()
 	..()
@@ -568,7 +569,7 @@ var/global/list/robot_modules = list(
 /obj/item/weapon/robot_module/robot/janitor
 	name = "janitorial robot module"
 	channels = list("Service" = 1)
-	sprites = list(
+	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 					"M-USE NanoTrasen" = "robotJani",
 					"Arachne" = "crawler",
 					"Cabeiri" = "eyebot-janitor",
@@ -586,7 +587,7 @@ var/global/list/robot_modules = list(
 					"Decapod" = "decapod-Janitor",
 					"Pneuma" = "pneuma-Janitor",
 					"Tower" = "drider-Janitor"
-					)
+					)*/ //CHOMPEdit end
 
 /obj/item/weapon/robot_module/robot/janitor/general/New()
 	..()
@@ -633,7 +634,7 @@ var/global/list/robot_modules = list(
 	channels = list("Service" = 1)
 
 /obj/item/weapon/robot_module/robot/clerical/butler/general
-	sprites = list(
+	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 					"M-USE NanoTrasen" = "robotServ",
 					"Cabeiri" = "eyebot-standard",
 					"Haruka" = "marinaSV",
@@ -656,7 +657,7 @@ var/global/list/robot_modules = list(
 					"Decapod" = "decapod-Service",
 					"Pneuma" = "pneuma-Service",
 					"Tower" = "drider-Service"
-				  	)
+				  	)*/
 
 /obj/item/weapon/robot_module/robot/clerical/butler/general/New()
 	..()
@@ -694,7 +695,7 @@ var/global/list/robot_modules = list(
 
 /obj/item/weapon/robot_module/robot/clerical/general
 	name = "clerical robot module"
-	sprites = list(
+	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 					"M-USE NanoTrasen" = "robotCler",
 					"Cabeiri" = "eyebot-standard",
 					"Haruka" = "marinaSV",
@@ -714,7 +715,7 @@ var/global/list/robot_modules = list(
 					"Decapod" = "decapod-Clerical",
 					"Pneuma" = "pneuma-Clerical",
 					"Tower" = "drider-Clerical"
-					)
+					)*/ //CHOMPEdit end
 
 /obj/item/weapon/robot_module/robot/clerical/general/New()
 	..()
@@ -738,7 +739,7 @@ var/global/list/robot_modules = list(
 	name = "miner robot module"
 	channels = list("Supply" = 1)
 	networks = list(NETWORK_MINE)
-	sprites = list(
+	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 					"NM-USE NanoTrasen" = "robotMine",
 					"Cabeiri" = "eyebot-miner",
 					"Haruka" = "marinaMN",
@@ -756,7 +757,7 @@ var/global/list/robot_modules = list(
 					"Decapod" = "decapod-Miner",
 					"Pneuma" = "pneuma-Miner",
 					"Tower" = "drider-Miner"
-				)
+				)*/
 	supported_upgrades = list(/obj/item/borg/upgrade/pka, /obj/item/borg/upgrade/diamonddrill)
 
 /obj/item/weapon/robot_module/robot/miner/general/New()
@@ -781,7 +782,7 @@ var/global/list/robot_modules = list(
 /obj/item/weapon/robot_module/robot/research
 	name = "research module"
 	channels = list("Science" = 1)
-	sprites = list(
+	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 					"L'Ouef" = "peaceborg",
 					"Cabeiri" = "eyebot-science",
 					"Haruka" = "marinaSCI",
@@ -796,7 +797,7 @@ var/global/list/robot_modules = list(
 					"Decapod" = "decapod-Research",
 					"Pneuma" = "pneuma-Research",
 					"Tower" = "drider-Research"
-					)
+					)*/ //CHOMPEdit end
 	supported_upgrades = list(/obj/item/borg/upgrade/advrped)
 
 /obj/item/weapon/robot_module/robot/research/general/New()
@@ -858,12 +859,12 @@ var/global/list/robot_modules = list(
 /obj/item/weapon/robot_module/robot/security/combat
 	name = "combat robot module"
 	hide_on_manifest = TRUE
-	sprites = list(
+	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 					"Haruka" = "marinaCB",
 					"Combat Android" = "droid-combat",
 					"Insekt" = "insekt-Combat",
 					"Decapod" = "decapod-Combat"
-					)
+					)*/ //CHOMPEdit end
 
 /obj/item/weapon/robot_module/robot/security/combat/New()
 	..()

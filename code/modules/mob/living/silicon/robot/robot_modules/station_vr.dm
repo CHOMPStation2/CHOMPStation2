@@ -1,4 +1,4 @@
-//CHOMPEDIT Unticked and moved to modular_chomp for a major rework, any changes will have to be manually copied over - kcin2001
+//CHOMPNOTE - if upstream edits the sprite lists it will have to be manually copied into our station_vr file, anything else is just read from here
 /obj/item/weapon/robot_module
 	languages = list(LANGUAGE_SOL_COMMON= 1,
 					LANGUAGE_TRADEBAND	= 1,
@@ -74,7 +74,7 @@
 /obj/item/weapon/robot_module/robot/medical
 	pto_type = PTO_MEDICAL
 
-/obj/item/weapon/robot_module/robot/medical/surgeon
+/*/obj/item/weapon/robot_module/robot/medical/surgeon //CHOMPEdit Start - moved to modular_chomp
 	vr_sprites = list(
 						"Acheron" = "mechoid-Medical",
 						"Shellguard Noble" = "Noble-MED",
@@ -91,12 +91,12 @@
 						"ZOOM-BA" = "zoomba-crisis",
 						"W02M" = "worm-crisis",
 						"Feminine Humanoid" = "uptall-crisis"
-					 )
+					 )*/ //CHOMPEdit end
 
 /obj/item/weapon/robot_module/robot/clerical
 	pto_type = PTO_CIVILIAN
 
-/obj/item/weapon/robot_module/robot/clerical/butler/general
+/*/obj/item/weapon/robot_module/robot/clerical/butler/general //CHOMPEdit Start - moved to modular_chomp
 	vr_sprites = list(
 						"Handy - Service" = "handy-service",
 						"Handy - Hydro" = "handy-hydro",
@@ -115,12 +115,12 @@
 						"ZOOM-BA" = "zoomba-clerical",
 						"W02M" = "worm-service",
 						"Feminine Humanoid" = "uptall-service"
-					 )
+					 )*/ //CHOMPEdit end
 
 /obj/item/weapon/robot_module/robot/janitor
 	pto_type = PTO_CIVILIAN
 
-/obj/item/weapon/robot_module/robot/janitor/general
+/*/obj/item/weapon/robot_module/robot/janitor/general //CHOMPEdit Start - moved to modular_chomp
 	vr_sprites = list(
 						"Handy" = "handy-janitor",
 						"Acheron" = "mechoid-Janitor",
@@ -128,12 +128,12 @@
 						"ZOOM-BA" = "zoomba-janitor",
 						"W02M" = "worm-janitor",
 						"Feminine Humanoid" = "uptall-janitor"
-					 )
+					 )*/ //CHOMPEdit end
 
 /obj/item/weapon/robot_module/robot/security
 	pto_type = PTO_SECURITY
 
-/obj/item/weapon/robot_module/robot/security/general
+/*/obj/item/weapon/robot_module/robot/security/general //CHOMPEdit Start - moved to modular_chomp
 	vr_sprites = list(
 						"Handy" = "handy-sec",
 						"Acheron" = "mechoid-Security",
@@ -149,12 +149,12 @@
 						"ZOOM-BA" = "zoomba-combat",
 						"W02M" = "worm-combat",
 						"Feminine Humanoid" = "uptall-security"
-					 )
+					 )*/ //CHOMPEdit end
 
 /obj/item/weapon/robot_module/robot/miner
 	pto_type = PTO_CARGO
 
-/obj/item/weapon/robot_module/robot/miner/general
+/*/obj/item/weapon/robot_module/robot/miner/general //CHOMPEdit Start - moved to modular_chomp
 	vr_sprites = list(
 						"Handy" = "handy-miner",
 						"Acheron" = "mechoid-Miner",
@@ -174,35 +174,35 @@
 						"W02M" = "worm-standard",
 						"Feminine Humanoid" = "uptall-standard",
 						"Feminine Humanoid, Variant 2" = "uptall-standard2"
-					 )
+					 )*/ //CHOMPEdit end
 
 /obj/item/weapon/robot_module/robot/engineering
 	pto_type = PTO_ENGINEERING
 
-/obj/item/weapon/robot_module/robot/engineering/general
+/*/obj/item/weapon/robot_module/robot/engineering/general//CHOMPEdit Start - moved to modular_chomp
 	vr_sprites = list(
 						"Acheron" = "mechoid-Engineering",
 						"Shellguard Noble" = "Noble-ENG",
 						"ZOOM-BA" = "zoomba-engineering",
 						"W02M" = "worm-engineering",
 						"Feminine Humanoid" = "uptall-engineering"
-					 )
+					 )*/ //CHOMPEdit end
 
 /obj/item/weapon/robot_module/robot/research
 	pto_type = PTO_SCIENCE
 
-/obj/item/weapon/robot_module/robot/research/general
+/*/obj/item/weapon/robot_module/robot/research/general//CHOMPEdit Start - moved to modular_chomp
 	vr_sprites = list(
 						"Acheron" = "mechoid-Science",
 						"ZOOM-BA" = "zoomba-research",
 						"XI-GUS" = "spiderscience",
 						"W02M" = "worm-janitor",
 						"Feminine Humanoid" = "uptall-science"
-					 )
+					 )*/ //CHOMPEdit end
 
 /obj/item/weapon/robot_module/robot/security/knine
 	name = "k9 robot module"
-	sprites = list(
+	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 					"K9 hound" = "k9",
 					"K9 Alternative" = "k92",
 					"Secborg model V-2" = "secborg",
@@ -216,7 +216,7 @@
 					"NIKO" = "mmekasec",
 					"NIKA" = "fmekasec",
 					"K4T" = "k4tsec" //CHOMPEdit End - Tallborgs
-					)
+					)*/ //CHOMPEdit end
 
 /obj/item/weapon/robot_module/robot/security/knine/New(var/mob/living/silicon/robot/R)
 	src.modules += new /obj/item/weapon/handcuffs/cyborg(src) //You need cuffs to be a proper sec borg!
@@ -286,7 +286,7 @@
 
 /obj/item/weapon/robot_module/robot/medical/medihound
 	name = "MediHound module"
-	sprites = list(
+	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 					"Medical Hound" = "medihound",
 					"Dark Medical Hound (Static)" = "medihounddark",
 					"Mediborg model V-2" = "vale",
@@ -300,7 +300,7 @@
 					"NIKA" = "fmekamed",
 					"K4T" = "k4tmed",
 					"K4Talt" = "k4tmed_alt1" //CHOMPEdit End - Tallborgs
-					)
+					)*/ //CHOMPEdit end
 
 /obj/item/weapon/robot_module/robot/medical/medihound/New(var/mob/living/silicon/robot/R)
 	src.modules += new /obj/item/weapon/dogborg/jaws/small(src) //In case a patient is being attacked by carp.
@@ -388,12 +388,12 @@
 
 /obj/item/weapon/robot_module/robot/medical/traumahound
 	name = "traumahound robot module"
-	sprites = list(
+	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 					"Traumahound" = "traumavale",
 					"Drake" = "draketrauma",
 					"Borgi" = "borgi-trauma",
 					"Raptor V-4" = "traumaraptor"
-					)
+					)*/ //CHOMPEdit end
 
 /obj/item/weapon/robot_module/robot/medical/traumahound/New(var/mob/living/silicon/robot/R)
 	src.modules += new /obj/item/device/healthanalyzer(src)
@@ -472,11 +472,11 @@
 
 /obj/item/weapon/robot_module/robot/security/ert
 	name = "Emergency Responce module"
-	sprites = list(
+	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 					"Standard" = "ert",
 					"Classic" = "ertold",
 					"Borgi" = "borgi"
-					)
+					)*/ //CHOMPEdit end
 
 /obj/item/weapon/robot_module/robot/security/ert/New(var/mob/living/silicon/robot/R)
 	src.modules += new /obj/item/weapon/handcuffs/cyborg(src)
@@ -524,7 +524,7 @@
 
 /obj/item/weapon/robot_module/robot/janitor/scrubpup
 	name = "Custodial Hound module"
-	sprites = list(
+	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 					"Custodial Hound" = "scrubpup",
 					"Janihound model V-2" = "J9",
 					"Borgi" = "borgi-jani",
@@ -537,7 +537,7 @@
 					"NIKA" = "fmekajani",
 					"K4T" = "k4tjani",
 					"K4Talt" = "k4tjani_alt1" //CHOMPEdit End - Tallborgs
-					)
+					)*/ //CHOMPEdit end
 	can_be_pushed = 0
 
 /obj/item/weapon/robot_module/robot/janitor/scrubpup/New(var/mob/living/silicon/robot/R)
@@ -621,7 +621,7 @@
 
 /obj/item/weapon/robot_module/robot/research/sciencehound
 	name = "Research Hound Module"
-	sprites = list(
+	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 					"Research Hound" = "science",
 					"Borgi" = "borgi-sci",
 					"SciHound" = "scihound",
@@ -633,7 +633,7 @@
 					"NIKO" = "mmekasci",
 					"NIKA" = "fmekasci",
 					"K4T" = "k4tsci" //CHOMPEdit end - Tallborgs
-					)
+					)*/ //CHOMPEdit end
 	can_be_pushed = 0
 
 /obj/item/weapon/robot_module/robot/research/sciencehound/New(var/mob/living/silicon/robot/R)
@@ -715,7 +715,7 @@
 
 /obj/item/weapon/robot_module/robot/engineering/engiedog
 	name = "Construction Hound module"
-	sprites = list(
+	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 					"Pupdozer" = "pupdozer",
 					"Borgi" = "borgi-eng",
 					"V2 Engidog" = "thottbot",
@@ -729,7 +729,7 @@
 					"NIKA" = "fmekaeng",
 					"K4T" = "k4tengi",
 					"K4Talt" = "k4tengi_alt1" //CHOMPEdit End - Tallborgs
-					)
+					)*/ //CHOMPEdit end
 	can_be_pushed = 0
 
 /obj/item/weapon/robot_module/robot/engineering/engiedog/New(var/mob/living/silicon/robot/R)
@@ -880,7 +880,7 @@
 // Uses modified K9 sprites.
 /obj/item/weapon/robot_module/robot/clerical/butler/brodog
 	name = "service-hound module"
-	sprites = list(
+	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 					"Blackhound" = "k50",
 					"Pinkhound" = "k69",
 					"ServicehoundV2" = "serve2",
@@ -895,7 +895,7 @@
 					"NIKA" = "fmekaserv",
 					"K4T" = "k4tserve",
 					"K4Talt" = "k4tserve_alt" //CHOMPEdit End - Tallborgs
-					)
+					)*/ //CHOMPEdit end
 	can_be_pushed = 0
 
 
@@ -969,7 +969,7 @@
 
 /obj/item/weapon/robot_module/robot/miner/kmine
 	name = "Supply Hound Module"
-	sprites = list(
+	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 					"KMine" = "kmine",
 					"CargoHound" = "cargohound",
 					"CargoHoundDark" = "cargohounddark",
@@ -983,7 +983,7 @@
 					"NIKA" = "fmekamine",
 					"K4T" = "k4tmine",
 					"K4Talt" = "k4tmine_alt1" //CHOMPEdit End - Tallborgs
-					)
+					)*/ //CHOMPEdit end
 	can_be_pushed = 0
 
 /obj/item/weapon/robot_module/robot/miner/kmine/New(var/mob/living/silicon/robot/R)
@@ -1059,7 +1059,7 @@
 /obj/item/weapon/robot_module/robot/clerical/butler/booze
 	name = "BoozeHound robot module"
 	can_be_pushed = 0
-	sprites = list(
+	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 				"Beer Buddy" = "boozeborg",
 				"Brilliant Blue" = "boozeborg(blue)",
 				"Caffine Dispenser" = "boozeborg(coffee)",
@@ -1068,7 +1068,7 @@
 				"The Grapist" = "boozeborg(purple)",
 				"Vampire's Aid" = "boozeborg(red)",
 				"Vodka Komrade" = "boozeborg(vodka)"
-				) //CHOMP Edit Added Vodka Komrade
+				)*/ //CHOMPEdit end //CHOMP Edit Added Vodka Komrade
 
 /obj/item/weapon/robot_module/robot/clerical/butler/booze/New(var/mob/living/silicon/robot/R)
 	src.modules += new /obj/item/weapon/gripper/service(src)
