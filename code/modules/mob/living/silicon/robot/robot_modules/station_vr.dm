@@ -301,13 +301,13 @@
 					"NIKA" = "fmekamed",
 					"NIKO" = "mmekamed",
 					"K4T" = "k4tmed",
-					"K4Talt" = "k4tmed_alt1"
-// CHOMPedit start: Trauma sprites for regular medihound borgs.
+					"K4Talt" = "k4tmed_alt1",
+					// CHOMPedit start: Trauma sprites for regular medihound borgs.
 					"Traumahound" = "traumavale",
 					"Traumadrake" = "draketrauma",
 					"Traumaborgi" = "borgi-trauma",
 					"Traumaraptor V-4" = "traumaraptor"
-// CHOMPedit end: Trauma sprites for regular medihound borgs.
+					// CHOMPedit end: Trauma sprites for regular medihound borgs.
 					)
 
 /obj/item/weapon/robot_module/robot/medical/medihound/New(var/mob/living/silicon/robot/R)
