@@ -45,6 +45,7 @@
 					"Tower" = 				list(SKIN_ICON_STATE = "drider-Surgeon", SKIN_ICON = 'icons/mob/robots.dmi'),
 					)
 
+/* surgeon borg removal
 /obj/item/weapon/robot_module/robot/medical/crisis
 	sprites = list(
 					"M-USE NanoTrasen" = 	list(SKIN_ICON_STATE = "robotMedi", SKIN_ICON = 'icons/mob/robots.dmi'),
@@ -68,6 +69,7 @@
 					"Pneuma" = 				list(SKIN_ICON_STATE = "pneuma-Crisis", SKIN_ICON = 'icons/mob/robots.dmi'),
 					"Tower" = 				list(SKIN_ICON_STATE = "drider-Crisis", SKIN_ICON = 'icons/mob/robots.dmi')
 					)
+*/
 
 /obj/item/weapon/robot_module/robot/engineering
 	sprites = list(
