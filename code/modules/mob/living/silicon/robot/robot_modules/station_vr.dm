@@ -211,10 +211,18 @@
 					"Cat" = "vixsec", //CHOMPEdit
 					"Drake" = "drakesec",
 					"Raptor V-4" = "secraptor",
+<<<<<<< HEAD
 					"MEKA" = "mekasec", //CHOMPEdit Start - Tallborgs
 					"NIKO" = "mmekasec",
 					"NIKA" = "fmekasec",
 					"K4T" = "k4tsec" //CHOMPEdit End - Tallborgs
+=======
+					"MEKA" = "mekasec",
+					"MEKA v2" = "newmekasec",
+					"NIKO" = "mmekasec",
+					"NIKA" = "fmekasec",
+					"K4T" = "k4tsec"
+>>>>>>> f8feee23f1... Merge pull request #15160 from PastelPrinceDan/tallborgs
 					)
 
 /obj/item/weapon/robot_module/robot/security/knine/New(var/mob/living/silicon/robot/R)
@@ -294,11 +302,20 @@
 					"Cat" = "vixmed", //CHOMPEdit
 					"Drake" = "drakemed",
 					"Raptor V-4" = "medraptor",
+<<<<<<< HEAD
 					"MEKA" = "mekamed", //CHOMPEdit Start - Tallborgs
 					"NIKO" = "mmekamed",
 					"NIKA" = "fmekamed",
 					"K4T" = "k4tmed",
 					"K4Talt" = "k4tmed_alt1" //CHOMPEdit End - Tallborgs
+=======
+					"MEKA" = "mekamed",
+					"MEKA v2" = "newmekamed",
+					"NIKA" = "fmekamed",
+					"NIKO" = "mmekamed",
+					"K4T" = "k4tmed",
+					"K4Talt" = "k4tmed_alt1"
+>>>>>>> f8feee23f1... Merge pull request #15160 from PastelPrinceDan/tallborgs
 					)
 
 /obj/item/weapon/robot_module/robot/medical/medihound/New(var/mob/living/silicon/robot/R)
@@ -531,11 +548,20 @@
 					"Cat" = "vixjani", //CHOMPEdit
 					"Drake" = "drakejanit",
 					"Raptor V-4" = "janiraptor",
+<<<<<<< HEAD
 					"MEKA" = "mekajani", //CHOMPEdit Start - Tallborgs
 					"NIKO" = "mmekajani",
 					"NIKA" = "fmekajani",
 					"K4T" = "k4tjani",
 					"K4Talt" = "k4tjani_alt1" //CHOMPEdit End - Tallborgs
+=======
+					"MEKA" = "mekajani",
+					"MEKA v2" = "newmekajani",
+					"NIKO" = "mmekajani",
+					"NIKA" = "fmekajani",
+					"K4T" = "k4tjani",
+					"K4Talt" = "k4tjani_alt1"
+>>>>>>> f8feee23f1... Merge pull request #15160 from PastelPrinceDan/tallborgs
 					)
 	can_be_pushed = 0
 
@@ -628,10 +654,18 @@
 					"Cat" = "vixsci", //CHOMPEdit
 					"Drake" = "drakesci",
 					"Raptor V-4" = "sciraptor",
+<<<<<<< HEAD
 					"MEKA" = "mekastandard", //CHOMPEdit Start - Tallborgs
 					"NIKO" = "mmekasci",
 					"NIKA" = "fmekasci",
 					"K4T" = "k4tsci" //CHOMPEdit end - Tallborgs
+=======
+					"MEKA" = "mekasci",
+					"MEKA v2" = "newmekasci",
+					"NIKO" = "mmekasci",
+					"NIKA" = "fmekasci",
+					"K4T" = "k4tsci"
+>>>>>>> f8feee23f1... Merge pull request #15160 from PastelPrinceDan/tallborgs
 					)
 	can_be_pushed = 0
 
@@ -723,11 +757,20 @@
 					"Cat" = "vixengi", //CHOMPEdit
 					"Drake" = "drakeeng",
 					"Raptor V-4" = "engiraptor",
+<<<<<<< HEAD
 					"MEKA" = "mekaengi", //CHOMPEdit Start - Tallborgs
 					"NIKO" = "mmekaeng",
 					"NIKA" = "fmekaeng",
 					"K4T" = "k4tengi",
 					"K4Talt" = "k4tengi_alt1" //CHOMPEdit End - Tallborgs
+=======
+					"MEKA" = "mekaengi",
+					"MEKA v2" = "newmekaengi",
+					"NIKO" = "mmekaeng",
+					"NIKA" = "fmekaeng",
+					"K4T" = "k4tengi",
+					"K4Talt" = "k4tengi_alt1"
+>>>>>>> f8feee23f1... Merge pull request #15160 from PastelPrinceDan/tallborgs
 					)
 	can_be_pushed = 0
 
@@ -888,17 +931,26 @@
 					"Drake" = "drakemine",
 					"Raptor V-4" = "serviraptor",
 					"Raptor V-4000" = "fancyraptor",
+<<<<<<< HEAD
 					"MEKA" = "mekaserve", //CHOMPEdit Start - Tallborgs
 					"MEKAalt" = "mekaserve_alt",
 					"NIKO" = "mmekaserv",
 					"NIKA" = "fmekaserv",
 					"K4T" = "k4tserve",
 					"K4Talt" = "k4tserve_alt" //CHOMPEdit End - Tallborgs
+=======
+					"MEKA" = "mekaserve",
+					"MEKA v2" = "newmekaserve",
+					"NIKO" = "mmekaserv",
+					"NIKA" = "fmekaserv",
+					"K4T" = "k4tserve",
+					"K4Talt" = "k4tserve_alt1"
+>>>>>>> f8feee23f1... Merge pull request #15160 from PastelPrinceDan/tallborgs
 					)
 	can_be_pushed = 0
 
 
-// In a nutshell, basicly service/butler robot but in dog form. - Port from CitadelRP
+// In a nutshell, basically service/butler robot but in dog form. - Port from CitadelRP
 /obj/item/weapon/robot_module/robot/clerical/butler/brodog/New(var/mob/living/silicon/robot/R)
 	src.modules += new /obj/item/weapon/gripper/service(src)
 	src.modules += new /obj/item/weapon/reagent_containers/glass/bucket(src)
@@ -977,11 +1029,20 @@
 					"Cat Cargo" = "vixcargo", //CHOMPEdit
 					"Drake" = "drakemine",
 					"Raptor V-4" = "mineraptor",
+<<<<<<< HEAD
 					"MEKA" = "mekamine", //CHOMPEdit Start - Tallborgs
 					"NIKO" = "mmekamine",
 					"NIKA" = "fmekamine",
 					"K4T" = "k4tmine",
 					"K4Talt" = "k4tmine_alt1" //CHOMPEdit End - Tallborgs
+=======
+					"MEKA" = "mekamine",
+					"MEKA v2" = "newmekamine",
+					"NIKO" = "mmekamine",
+					"NIKA" = "fmekamine",
+					"K4T" = "k4tmine",
+					"K4Talt" = "k4tmine_alt1"
+>>>>>>> f8feee23f1... Merge pull request #15160 from PastelPrinceDan/tallborgs
 					)
 	can_be_pushed = 0
 

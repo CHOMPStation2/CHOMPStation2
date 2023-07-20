@@ -180,7 +180,11 @@
 		add_overlay("wreck-overlay")
 
 /mob/living/silicon/robot/proc/vr_sprite_check()
+<<<<<<< HEAD
 	vis_height = 32 // CHOMPedit: sanitizing tile centering for larger sprites.
+=======
+	vis_height = 32
+>>>>>>> f8feee23f1... Merge pull request #15160 from PastelPrinceDan/tallborgs
 	if(custom_sprite == TRUE)
 		return
 	if(wideborg == TRUE)
@@ -191,6 +195,7 @@
 		else if(icontype == "Cat" || icontype == "Cat Mining" || icontype == "Cat Cargo") // CHOMPEdit
 			icon = 'modular_chomp/icons/mob/catborg/catborg.dmi'
 		else if(icontype == "Raptor V-4" || icontype == "Raptor V-4000") //Added for raptor sprites
+<<<<<<< HEAD
 			icon = 'modular_chomp/icons/mob/raptorborg/raptor.dmi' //CHOMPEDIT: moving to modular so i can fix all the things
 		else if(icontype == "Raptor V-4.1") //CHOMPADDITION: letting us redurect to our raptor dmi
 			icon = 'modular_chomp/icons/mob/raptorborg/raptor_ch.dmi' //CHOMPADDITION: letting us redurect to our raptor dmi
@@ -198,6 +203,13 @@
 			icon = 'modular_chomp/icons/mob/tallborg/tallrobots-wide.dmi' //CHOMPEDIT: TallBorg, I dunno how to code but i'll love it if someone could change this mess into how TG does it
 			vis_height = 64 // CHOMPedit: sanitizing tile centering for larger sprites.
 			update_transform() // CHOMPedit: sanitizing tile centering for larger sprites.
+=======
+			icon = 'icons/mob/raptorborg/raptor.dmi'
+		else if(icontype == "MEKA" || icontype == "MEKA v2" || icontype == "NIKO" || icontype == "NIKA" || icontype == "K4T" || icontype == "K4Talt") //tallborgs. if anyone can code them not to be a dogborg subtype please do so, but this'll do for now.
+			icon = 'icons/mob/tallborg/tallborg.dmi'
+			vis_height = 64
+			update_transform()
+>>>>>>> f8feee23f1... Merge pull request #15160 from PastelPrinceDan/tallborgs
 		else
 			icon = wideborg_dept
 		return
