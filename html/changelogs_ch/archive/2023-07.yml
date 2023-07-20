@@ -44,6 +44,8 @@
   Aroliacue:
   - rscadd: 'balance: Stun Batons can now disrupt solargrubs infesting machinery,
       similar to a multitool.'
+  Raeschen:
+  - rscadd: xeno & a few shadekin hairstyles unlocked for all
   Upstream:
   - rscadd: Adds 'twin drills long' hair
   - bugfix: Renames custom subtle back to subtle (Custom)
