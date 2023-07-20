@@ -40,3 +40,7 @@
   VictorZisthus:
   - rscadd: HoS now has a fun new gun at round-start!
   - bugfix: fixed a few missing things from several closets.
+2023-07-20:
+  Aroliacue:
+  - rscadd: 'balance: Stun Batons can now disrupt solargrubs infesting machinery,
+      similar to a multitool.'
