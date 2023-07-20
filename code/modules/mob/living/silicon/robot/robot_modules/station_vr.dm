@@ -52,7 +52,7 @@
 	robot_modules["BoozeHound"] = /obj/item/weapon/robot_module/robot/clerical/butler/booze
 	robot_modules["KMine"] = /obj/item/weapon/robot_module/robot/miner/kmine
 	robot_modules["Stray"] = /obj/item/weapon/robot_module/robot/stray
-	robot_modules["TraumaHound"] = /obj/item/weapon/robot_module/robot/medical/traumahound
+//	robot_modules["TraumaHound"] = /obj/item/weapon/robot_module/robot/medical/traumahound // CHOMPedit: Combining Medihound and Traumahound.
 	return 1
 
 //Just add a new proc with the robot_module type if you wish to run some other vore code
@@ -212,7 +212,8 @@
 					"Cat" = "vixsec", //CHOMPEdit
 					"Drake" = "drakesec",
 					"Raptor V-4" = "secraptor",
-					"MEKA" = "mekasec", //CHOMPEdit Start - Tallborgs
+					"MEKA" = "mekasec",
+					//"MEKA v2" = "newmekasec", //ChompREMOVE - we put the better sprite on the base
 					"NIKO" = "mmekasec",
 					"NIKA" = "fmekasec",
 					"K4T" = "k4tsec" //CHOMPEdit End - Tallborgs
@@ -228,7 +229,7 @@
 	src.modules += new /obj/item/weapon/dogborg/pounce(src) //Pounce
 	src.modules += new /obj/item/device/ticket_printer(src)
 	src.modules += new /obj/item/weapon/gripper/security(src) //CHOMPADD why doesnt the sec hound have the sec gripper?
-	src.modules += new /obj/item/weapon/gun/energy/locked/phasegun/unlocked/mounted/cyborg(src) //CHOMPedit: Phasegun for security hound.
+	src.modules += new /obj/item/weapon/gun/energy/locked/phasegun/unlocked/mounted/cyborg(src) // CHOMPedit: Phasegun for security hound.
 	src.emag 	 = new /obj/item/weapon/gun/energy/laser/mounted(src) //Emag. Not a big problem.
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500) //Starts full and has a max of 500
@@ -286,6 +287,7 @@
 
 /obj/item/weapon/robot_module/robot/medical/medihound
 	name = "MediHound module"
+	subsystems = list(/mob/living/silicon/proc/subsystem_crew_monitor) //CHOMPedit: Give the Medihound ability to watch the crew monitor.
 	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 					"Medical Hound" = "medihound",
 					"Dark Medical Hound (Static)" = "medihounddark",
@@ -295,18 +297,27 @@
 					"Cat" = "vixmed", //CHOMPEdit
 					"Drake" = "drakemed",
 					"Raptor V-4" = "medraptor",
-					"MEKA" = "mekamed", //CHOMPEdit Start - Tallborgs
-					"NIKO" = "mmekamed",
+					"MEKA" = "mekamed",
+					//"MEKA v2" = "newmekamed", //ChompREMOVE - we put the better sprite on the base
 					"NIKA" = "fmekamed",
+					"NIKO" = "mmekamed",
 					"K4T" = "k4tmed",
 					"K4Talt" = "k4tmed_alt1" //CHOMPEdit End - Tallborgs
+					"K4Talt" = "k4tmed_alt1",
+					// CHOMPedit start: Trauma sprites for regular medihound borgs.
+					"Traumahound" = "traumavale",
+					"Traumadrake" = "draketrauma",
+					"Traumaborgi" = "borgi-trauma",
+					"Traumaraptor V-4" = "traumaraptor"
+					// CHOMPedit end: Trauma sprites for regular medihound borgs.
 					)*/ //CHOMPEdit end
 
 /obj/item/weapon/robot_module/robot/medical/medihound/New(var/mob/living/silicon/robot/R)
 	src.modules += new /obj/item/weapon/dogborg/jaws/small(src) //In case a patient is being attacked by carp.
 	src.modules += new /obj/item/device/dogborg/boop_module(src) //Boop the crew.
 	src.modules += new /obj/item/device/healthanalyzer(src) // See who's hurt specificially.
-	src.modules += new /obj/item/borg/sight/hud/med(src) //See who's hurt generally.
+	src.modules += new /obj/item/roller_holder(src) // CHOMPedit: Allows medihounds to deploy roller beds in case prefs don't align.
+//	src.modules += new /obj/item/borg/sight/hud/med(src) // CHOMPedit: Already has an integrated medical scanner.
 	src.modules += new /obj/item/weapon/reagent_containers/syringe(src) //In case the chemist is nice!
 	src.modules += new /obj/item/weapon/reagent_containers/glass/beaker/large(src)//For holding the chemicals when the chemist is nice, made it the large variant in 2022
 	src.modules += new /obj/item/device/sleevemate(src) //Lets them scan people.
@@ -314,10 +325,24 @@
 	src.modules += new /obj/item/weapon/inflatable_dispenser/robot(src) //This is kinda important for rescuing people without making it worse for everyone
 	src.modules += new /obj/item/weapon/gripper/medical(src) //Let them do literally anything in medbay other than patch external damage and lick people
 	src.modules += new /obj/item/weapon/reagent_containers/dropper/industrial(src) //dropper is nice to have for so much actually
+// CHOMPedit start: Combining Medihound and Traumahound.
+	src.modules += new /obj/item/weapon/reagent_containers/borghypo/hound(src)
+	src.modules += new /obj/item/weapon/autopsy_scanner(src)
+	src.modules += new /obj/item/weapon/surgical/scalpel/cyborg(src)
+	src.modules += new /obj/item/weapon/surgical/hemostat/cyborg(src)
+	src.modules += new /obj/item/weapon/surgical/retractor/cyborg(src)
+	src.modules += new /obj/item/weapon/surgical/cautery/cyborg(src)
+	src.modules += new /obj/item/weapon/surgical/bonegel/cyborg(src)
+	src.modules += new /obj/item/weapon/surgical/FixOVein/cyborg(src)
+	src.modules += new /obj/item/weapon/surgical/bonesetter/cyborg(src)
+	src.modules += new /obj/item/weapon/surgical/circular_saw/cyborg(src)
+	src.modules += new /obj/item/weapon/surgical/surgicaldrill/cyborg(src)
+	src.modules += new /obj/item/weapon/surgical/bioregen/cyborg(src)
+	src.modules += new /obj/item/weapon/gripper/no_use/organ(src)
+// CHOMPedit end: Combining Medihound and Traumahound.
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src) //Pounce
-	src.modules += new /obj/item/weapon/gripper/medical(src)//Now you can set up cyro or make peri. //CHOMPEdit
 
-	var/datum/matter_synth/medicine = new /datum/matter_synth/medicine(15000)  //CHOMPedit
+	var/datum/matter_synth/medicine = new /datum/matter_synth/medicine(30000)  //CHOMPedit: QOL, More capacity before requiring a restock.
 	synths += medicine
 
 	var/obj/item/stack/medical/advanced/clotting/C = new (src)
@@ -331,16 +356,20 @@
 	src.modules += C
 	src.modules += S
 
-	var/datum/matter_synth/water = new /datum/matter_synth(500)
+	var/datum/matter_synth/water = new /datum/matter_synth(1000) // CHOMPedit: Water to 1000.
 	water.name = "Water reserves"
-	water.recharge_rate = 10  //CHOMPedit water shouldn't be a giant pain to get, rechargers should provide it.
-	water.max_energy = 1000  //CHOMPedit increased water storage from 500 to 1000
+	water.recharge_rate = 20 // CHOMPedit: Water charge rate doubled alongside max capacity.
+	water.max_energy = 1000  // CHOMPedit: Water to 1000
 	R.water_res = water
 	synths += water
+
+/* CHOMPedit start: Hypo no longer uses water. *
 
 	var/obj/item/weapon/reagent_containers/borghypo/hound/H = new /obj/item/weapon/reagent_containers/borghypo/hound(src)
 	H.water = water
 	src.modules += H
+
+* CHOMPedit end: Hypo no longer uses water. */
 
 	var/obj/item/device/dogborg/tongue/T = new /obj/item/device/dogborg/tongue(src)
 	T.water = water
@@ -385,6 +414,8 @@
 	R.verbs |= /mob/living/proc/shred_limb
 	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
+
+/* CHOMPedit start: Commenting out Traumahound, no longer used. *
 
 /obj/item/weapon/robot_module/robot/medical/traumahound
 	name = "traumahound robot module"
@@ -470,6 +501,8 @@
 	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
 
+* CHOMPedit end: Commenting out Traumahound, no longer used. */
+
 /obj/item/weapon/robot_module/robot/security/ert
 	name = "Emergency Responce module"
 	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
@@ -532,7 +565,8 @@
 					"Cat" = "vixjani", //CHOMPEdit
 					"Drake" = "drakejanit",
 					"Raptor V-4" = "janiraptor",
-					"MEKA" = "mekajani", //CHOMPEdit Start - Tallborgs
+					"MEKA" = "mekajani",
+					//"MEKA v2" = "newmekajani", //ChompREMOVE - we put the better sprite on the base
 					"NIKO" = "mmekajani",
 					"NIKA" = "fmekajani",
 					"K4T" = "k4tjani",
@@ -629,7 +663,8 @@
 					"Cat" = "vixsci", //CHOMPEdit
 					"Drake" = "drakesci",
 					"Raptor V-4" = "sciraptor",
-					"MEKA" = "mekastandard", //CHOMPEdit Start - Tallborgs
+					"MEKA" = "mekasci",
+					//"MEKA v2" = "newmekasci", //ChompREMOVE - we put the better sprite on the base
 					"NIKO" = "mmekasci",
 					"NIKA" = "fmekasci",
 					"K4T" = "k4tsci" //CHOMPEdit end - Tallborgs
@@ -724,7 +759,8 @@
 					"Cat" = "vixengi", //CHOMPEdit
 					"Drake" = "drakeeng",
 					"Raptor V-4" = "engiraptor",
-					"MEKA" = "mekaengi", //CHOMPEdit Start - Tallborgs
+					"MEKA" = "mekaengi",
+					//"MEKA v2" = "newmekaengi", //ChompREMOVE - we put the better sprite on the base
 					"NIKO" = "mmekaeng",
 					"NIKA" = "fmekaeng",
 					"K4T" = "k4tengi",
@@ -889,8 +925,8 @@
 					"Drake" = "drakemine",
 					"Raptor V-4" = "serviraptor",
 					"Raptor V-4000" = "fancyraptor",
-					"MEKA" = "mekaserve", //CHOMPEdit Start - Tallborgs
-					"MEKAalt" = "mekaserve_alt",
+					"MEKA" = "mekaserve",
+					//"MEKA v2" = "newmekaserve", //ChompREMOVE - we put the better sprite on the base
 					"NIKO" = "mmekaserv",
 					"NIKA" = "fmekaserv",
 					"K4T" = "k4tserve",
@@ -899,7 +935,7 @@
 	can_be_pushed = 0
 
 
-// In a nutshell, basicly service/butler robot but in dog form. - Port from CitadelRP
+// In a nutshell, basically service/butler robot but in dog form. - Port from CitadelRP
 /obj/item/weapon/robot_module/robot/clerical/butler/brodog/New(var/mob/living/silicon/robot/R)
 	src.modules += new /obj/item/weapon/gripper/service(src)
 	src.modules += new /obj/item/weapon/reagent_containers/glass/bucket(src)
@@ -978,7 +1014,8 @@
 					"Cat Cargo" = "vixcargo", //CHOMPEdit
 					"Drake" = "drakemine",
 					"Raptor V-4" = "mineraptor",
-					"MEKA" = "mekamine", //CHOMPEdit Start - Tallborgs
+					"MEKA" = "mekamine",
+					//"MEKA v2" = "newmekamine", //ChompREMOVE - we put the better sprite on the base
 					"NIKO" = "mmekamine",
 					"NIKA" = "fmekamine",
 					"K4T" = "k4tmine",
