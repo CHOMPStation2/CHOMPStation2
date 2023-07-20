@@ -44,6 +44,10 @@
   Aroliacue:
   - rscadd: 'balance: Stun Batons can now disrupt solargrubs infesting machinery,
       similar to a multitool.'
+  FluffMedic:
+  - rscadd: 'adds: a new event'
+  - rscadd: 'adds: 3 new mobs similiar to solar moth, tied with the event'
+  - rscadd: 'adds: Event_container_CH, disabled the VR version'
   Raeschen:
   - rscadd: xeno & a few shadekin hairstyles unlocked for all
   Upstream:
