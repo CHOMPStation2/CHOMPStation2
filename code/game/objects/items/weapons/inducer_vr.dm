@@ -259,9 +259,10 @@
 
 /obj/item/weapon/cell/standin/New(newloc, var/mob/living/carbon/human/H)
 	..()
-	hume = H
-	charge = H.nutrition
-	maxcharge = initial(H.nutrition)
+	if(istype(H, /mob/living/carbon/human))//ChompEDIT - fix a runtime
+		hume = H
+		charge = H.nutrition
+		maxcharge = initial(H.nutrition)
 
 	QDEL_IN(src, 20 SECONDS)
 
