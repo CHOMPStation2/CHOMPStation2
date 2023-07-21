@@ -928,7 +928,7 @@
 					"NIKO" = "mmekaserv",
 					"NIKA" = "fmekaserv",
 					"K4T" = "k4tserve",
-					"K4Talt" = "k4tserve_alt1"
+					"K4Talt" = "k4tserve_alt" //ChompEDIT - using icon_states in modular_chomp dmi, not upstream's.
 					)
 	can_be_pushed = 0
 
