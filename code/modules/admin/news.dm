@@ -1,12 +1,14 @@
-//#define NEWSFILE "data/news.sav"	//where the memos are saved //ChompEDIT - moved to __defines/admin_ch
+#define NEWSFILE "data/news.sav"	//where the memos are saved
 
 /client/
 	//var/last_news_hash = null // Stores a hash of the last news window it saw, which gets compared to the current one to see if it is different.
 
 // Returns true if news was updated since last seen.
 /client/proc/check_for_new_server_news()
-	if(servernews_hash != prefs.lastnews) //ChompEDIT
-		return TRUE
+	var/savefile/F = get_server_news()
+	if(F)
+		if(md5(F["body"]) != prefs.lastnews)
+			return TRUE
 	return FALSE
 
 /client/proc/modify_server_news()
@@ -18,15 +20,8 @@
 
 	var/savefile/F = new(NEWSFILE)
 	if(F)
-		//ChompEDIT start - handle reads correctly
-		var/title
-		F["title"] >> title //This is done twice on purpose. For some reason BYOND misses the first read, if performed before the world starts
-		F["title"] >> title
-		var/body
-		F["body"] >> body
-		body = html2paper_markup(body)
-		//ChompEDIT end
-
+		var/title = F["title"]
+		var/body = html2paper_markup(F["body"])
 		var/new_title = sanitize(tgui_input_text(src,"Write a good title for the news update.  Note: HTML is NOT supported.","Write News", title), extra = 0)
 		if(!new_title)
 			return
@@ -39,21 +34,16 @@
 
 		if(findtext(new_body,"<script",1,0) ) // Is this needed with santize()?
 			return
-		servernews_hash = md5("[new_title]" + "[new_body]") //ChompADD - update the servernews hash global
 		F["title"] << new_title
 		F["body"] << new_body
 		F["author"] << key
 		F["timestamp"] << time2text(world.realtime, "DDD, MMM DD YYYY")
 		message_admins("[key] modified the news to read:<br>[new_title]<br>[new_body]")
 
-/client/proc/get_server_news() //ChompEDIT - child of /client/
+/proc/get_server_news()
 	var/savefile/F = new(NEWSFILE)
 	if(F)
-		if(servernews_hash != prefs.lastnews) //ChompADD
-			prefs.lastnews = servernews_hash //ChompADD
-			SScharacter_setup.queue_preferences_save(prefs) //ChompADD
 		return F
-
 // This is used when submitting the news input, so the safe markup can get past sanitize.
 /proc/paper_markup2html(var/text)
 	text = replacetext(text, "\n", "<br>")

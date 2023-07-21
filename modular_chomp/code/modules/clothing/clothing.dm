@@ -101,7 +101,7 @@
 
 	switch(pred.a_intent)
 		if(I_HELP)
-			if(prob(10)) //Reducing spam exclusively on I_HELP. Still more frequent than old pitiful prob(1)
+			if(prob(40)) //Reducing spam exclusively on I_HELP. Still more frequent than old pitiful prob(1)
 				if(pred.m_intent == "run")
 					message_prey = pick(
 						"You feel weightless for a brief moment as \the [name] move upwards.",

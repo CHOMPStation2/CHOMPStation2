@@ -22,7 +22,7 @@
 	reagent_ids = list("tricordrazine", "inaprovaline", "oxycodone", "dexalin" ,"spaceacillin")
 
 /obj/item/weapon/reagent_containers/borghypo/crisis
-	reagent_ids = list("inaprovaline", "tricordrazine", "dexalin", "bicaridine", "kelotane", "anti_toxin", "spaceacillin", "tramadol", "adranol") // CHOMPedit: Unifying chems with dogborg equivalent.
+	reagent_ids = list("tricordrazine", "inaprovaline", "anti_toxin", "tramadol", "dexalin" ,"spaceacillin")
 
 /obj/item/weapon/reagent_containers/borghypo/lost
 	reagent_ids = list("tricordrazine", "bicaridine", "dexalin", "anti_toxin", "tramadol", "spaceacillin")

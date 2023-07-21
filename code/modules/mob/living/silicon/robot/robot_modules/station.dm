@@ -5,7 +5,7 @@ var/global/list/robot_modules = list(
 	"Research" 		= /obj/item/weapon/robot_module/robot/research/general,
 	"Miner" 		= /obj/item/weapon/robot_module/robot/miner/general,
 	"Crisis" 		= /obj/item/weapon/robot_module/robot/medical/crisis,
-//	"Surgeon" 		= /obj/item/weapon/robot_module/robot/medical/surgeon, // CHOMPedit: Surgeon module removal.
+	"Surgeon" 		= /obj/item/weapon/robot_module/robot/medical/surgeon,
 	"Security" 		= /obj/item/weapon/robot_module/robot/security/general,
 	"Combat" 		= /obj/item/weapon/robot_module/robot/security/combat,
 	"Engineering"	= /obj/item/weapon/robot_module/robot/engineering/general,
@@ -224,8 +224,6 @@ var/global/list/robot_modules = list(
 	subsystems = list(/mob/living/silicon/proc/subsystem_crew_monitor) //Give the surgeon ability to watch Crew monitor
 	can_be_pushed = 0
 
-/* CHOMPedit start: Removal of Surgeon module. *
-
 /obj/item/weapon/robot_module/robot/medical/surgeon
 	name = "surgeon robot module"
 	sprites = list(
@@ -311,8 +309,6 @@ var/global/list/robot_modules = list(
 
 	..()
 
-* CHOMPedit end: Removal of Surgeon module. */
-
 /obj/item/weapon/robot_module/robot/medical/crisis
 	name = "crisis robot module"
 	subsystems = list(/mob/living/silicon/proc/subsystem_crew_monitor) //Give the medical Crisis ability to watch Crew monitor
@@ -347,41 +343,22 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/weapon/reagent_containers/borghypo/crisis(src)
 	src.modules += new /obj/item/weapon/reagent_containers/glass/beaker/large(src)
 	src.modules += new /obj/item/weapon/reagent_containers/dropper/industrial(src)
-	src.modules += new /obj/item/device/sleevemate(src) // CHOMPedit: Lets them scan people.
 	src.modules += new /obj/item/weapon/reagent_containers/syringe(src)
 	src.modules += new /obj/item/weapon/gripper/no_use/organ(src)
 	src.modules += new /obj/item/weapon/gripper/medical(src)
 	src.modules += new /obj/item/weapon/shockpaddles/robot(src)
 	src.modules += new /obj/item/weapon/inflatable_dispenser/robot(src) //VOREStation Add - This is kinda important for rescuing people without making it worse for everyone
-// CHOMPedit start: Combining Surgeon and Crisis.
-	src.modules += new /obj/item/weapon/autopsy_scanner(src)
-	src.modules += new /obj/item/weapon/surgical/scalpel/cyborg(src)
-	src.modules += new /obj/item/weapon/surgical/hemostat/cyborg(src)
-	src.modules += new /obj/item/weapon/surgical/retractor/cyborg(src)
-	src.modules += new /obj/item/weapon/surgical/cautery/cyborg(src)
-	src.modules += new /obj/item/weapon/surgical/bonegel/cyborg(src)
-	src.modules += new /obj/item/weapon/surgical/FixOVein/cyborg(src)
-	src.modules += new /obj/item/weapon/surgical/bonesetter/cyborg(src)
-	src.modules += new /obj/item/weapon/surgical/circular_saw/cyborg(src)
-	src.modules += new /obj/item/weapon/surgical/surgicaldrill/cyborg(src)
-	src.modules += new /obj/item/weapon/surgical/bioregen/cyborg(src)
-// CHOMPedit end: Combining Surgeon and Crisis.
 	src.emag = new /obj/item/weapon/reagent_containers/spray(src)
+	src.modules += new /obj/item/device/sleevemate(src)
 	src.emag.reagents.add_reagent("pacid", 250)
 	src.emag.name = "Polyacid spray"
 
-	var/datum/matter_synth/medicine = new /datum/matter_synth/medicine(30000) // CHOMPedit: Increased capacity.
+	var/datum/matter_synth/medicine = new /datum/matter_synth/medicine(15000)
 	synths += medicine
 
-	var/obj/item/stack/medical/advanced/clotting/C = new (src) // CHOMPedit: Clotting kit from medhound.
 	var/obj/item/stack/medical/advanced/ointment/O = new /obj/item/stack/medical/advanced/ointment(src)
 	var/obj/item/stack/medical/advanced/bruise_pack/B = new /obj/item/stack/medical/advanced/bruise_pack(src)
 	var/obj/item/stack/medical/splint/S = new /obj/item/stack/medical/splint(src)
-// CHOMPedit start: Clotting kit from medhound.
-	C.uses_charge = 1
-	C.charge_costs = list(5000)
-	C.synths = list(medicine)
-// CHOMPedit end: Clotting kit from medhound.
 	O.uses_charge = 1
 	O.charge_costs = list(1000)
 	O.synths = list(medicine)
@@ -569,7 +546,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/weapon/reagent_containers/spray/pepper(src)
 	src.modules += new /obj/item/weapon/gripper/security(src)
 	src.modules += new /obj/item/device/ticket_printer(src)	//VOREStation Add
-	src.modules += new /obj/item/weapon/gun/energy/locked/phasegun/unlocked/mounted/cyborg(src) // CHOMPedit: Phasegun for regular sec cyborg.
+	src.modules += new /obj/item/weapon/gun/energy/locked/phasegun/unlocked/mounted/cyborg(src) //CHOMPedit: Phasegun for regular sec cyborg.
 	src.emag = new /obj/item/weapon/gun/energy/laser/mounted(src)
 
 /obj/item/weapon/robot_module/robot/security/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)

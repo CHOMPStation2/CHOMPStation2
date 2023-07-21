@@ -80,12 +80,6 @@
 	icon_add = 'icons/mob/human_face_vr_add.dmi'
 	icon_state = "hair_twincurl"
 
-/datum/sprite_accessory/hair/twindrillslong
-	name = "Twin Drills Long"
-	icon = 'icons/mob/human_face_vr.dmi'
-	icon_add = 'icons/mob/human_face_vr_add.dmi'
-	icon_state = "hair_twincurllong"
-
 /datum/sprite_accessory/hair/crescent_moon
 	name = "Crescent-Moon"
 	icon = 'icons/mob/human_face_vr.dmi'
@@ -405,7 +399,7 @@
 	icon = 'modular_chomp/icons/mob/human_face_ch.dmi' //chompstation edit
 	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi' //chompstation edit
 	icon_state = "cxeno_drone"
-	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN_YW, SPECIES_ALTEVIAN) //ChompEDIT: allow for all
+	species_allowed = list(SPECIES_XENOHYBRID)
 	gender = NEUTER
 // figure this one out for better coloring
 /datum/sprite_accessory/hair/xeno_head_sentinel_color
@@ -413,7 +407,7 @@
 	icon = 'modular_chomp/icons/mob/human_face_ch.dmi'//chompstation edit
 	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi'//chompstation edit
 	icon_state = "cxeno_sentinel"
-	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN_YW, SPECIES_ALTEVIAN) //ChompEDIT: allow for all
+	species_allowed = list(SPECIES_XENOHYBRID)
 	gender = NEUTER
 
 /datum/sprite_accessory/hair/xeno_head_queen_color
@@ -421,7 +415,7 @@
 	icon = 'modular_chomp/icons/mob/human_face_ch.dmi'//chompstation edit
 	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi'//chompstation edit
 	icon_state = "cxeno_queen"
-	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN_YW, SPECIES_ALTEVIAN) //ChompEDIT: allow for all
+	species_allowed = list(SPECIES_XENOHYBRID)
 	gender = NEUTER
 
 /datum/sprite_accessory/hair/xeno_head_hunter_color
@@ -429,7 +423,7 @@
 	icon = 'modular_chomp/icons/mob/human_face_ch.dmi'//chompstation edit
 	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi'//chompstation edit
 	icon_state = "cxeno_hunter"
-	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN_YW, SPECIES_ALTEVIAN) //ChompEDIT: allow for all
+	species_allowed = list(SPECIES_XENOHYBRID)
 	gender = NEUTER
 
 /datum/sprite_accessory/hair/xeno_head_praetorian_color
@@ -437,7 +431,7 @@
 	icon = 'modular_chomp/icons/mob/human_face_ch.dmi'//chompstation edit
 	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi'//chompstation edit
 	icon_state = "cxeno_praetorian"
-	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN_YW, SPECIES_ALTEVIAN) //ChompEDIT: allow for all
+	species_allowed = list(SPECIES_XENOHYBRID)
 	gender = NEUTER
 
 // Shadekin stuffs
@@ -446,7 +440,7 @@
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_add = 'icons/mob/human_face_vr_add.dmi'
 	icon_state = "shadekin_short"
-	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN_YW, SPECIES_ALTEVIAN) //ChompEDIT: allow for all
+	species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
 	gender = NEUTER
 
 /datum/sprite_accessory/hair/shadekin_hair_poofy
@@ -454,7 +448,7 @@
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_add = 'icons/mob/human_face_vr_add.dmi'
 	icon_state = "shadekin_poofy"
-	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN_YW, SPECIES_ALTEVIAN) //ChompEDIT: allow for all
+	species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
 	gender = NEUTER
 
 /datum/sprite_accessory/hair/shadekin_hair_long
@@ -462,17 +456,17 @@
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_add = 'icons/mob/human_face_vr_add.dmi'
 	icon_state = "shadekin_long"
-	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN_YW, SPECIES_ALTEVIAN) //ChompEDIT: allow for all
+	species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
 	gender = NEUTER
 
-/* /datum/sprite_accessory/hair/shadekin_hair_rivyr //Chomp REMOVE START
+/datum/sprite_accessory/hair/shadekin_hair_rivyr
 	name = "Rivyr Hair"
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_add = 'icons/mob/human_face_vr_add.dmi'
 	icon_state = "shadekin_rivyr"
 	ckeys_allowed = list("verysoft")
 	species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
-	gender = NEUTER */ //Chomp REMOVE END
+	gender = NEUTER
 
 /datum/sprite_accessory/hair/slicker
 	name = "Slicker"

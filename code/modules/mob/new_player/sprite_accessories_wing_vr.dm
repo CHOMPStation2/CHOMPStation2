@@ -52,11 +52,11 @@
 	icon_state = "dragonfly"
 	color_blend_mode = ICON_MULTIPLY
 
-/* /datum/sprite_accessory/wing/citheroniamoth //Chomp REMOVE START
+/datum/sprite_accessory/wing/citheroniamoth
 	name = "citheronia wings"
 	desc = ""
 	icon_state = "citheronia_wings"
-	ckeys_allowed = list("kira72") */ //Chomp REMOVE END
+	ckeys_allowed = list("kira72")
 
 /datum/sprite_accessory/wing/feathered
 	name = "feathered wings, colorable"
