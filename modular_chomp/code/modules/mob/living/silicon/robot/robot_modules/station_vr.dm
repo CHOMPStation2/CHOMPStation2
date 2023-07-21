@@ -58,7 +58,8 @@
 						"Feminine Humanoid" = 	list(SKIN_ICON_STATE = "uptall-janitor", SKIN_ICON = 'icons/mob/robots_vr.dmi'),
 						"Han-d" = 				list(SKIN_ICON_STATE = "han-d", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi'),
 						"Flynn" = 				list(SKIN_ICON_STATE = "flynn", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi'),
-						"Servbot" = 			list(SKIN_ICON_STATE = "servbot-jani", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi')
+						"Servbot" = 			list(SKIN_ICON_STATE = "servbot-jani", SKIN_ICON = 'modular_chomp/icons/mob/robots_ch.dmi'),
+						"Xenomaid" = 			list(SKIN_ICON_STATE = "xenomaid", SKIN_ICON = 'icons/mob/robots_yw.dmi')
 					 )
 
 /obj/item/weapon/robot_module/robot/security/general
