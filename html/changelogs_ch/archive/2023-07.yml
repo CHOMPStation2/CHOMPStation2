@@ -64,3 +64,4 @@
 2023-07-21:
   Raeschen:
   - bugfix: fixed a bad MekaSCI iconstate
+  - bugfix: fix a bad tallborg icon_state
