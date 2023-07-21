@@ -662,7 +662,7 @@
 					"Cat" = "vixsci", //CHOMPEdit
 					"Drake" = "drakesci",
 					"Raptor V-4" = "sciraptor",
-					"MEKA" = "mekasci",
+					"MEKA" = "mekastandard", //ChompEDIT - different iconstate
 					//"MEKA v2" = "newmekasci", //ChompREMOVE - we put the better sprite on the base
 					"NIKO" = "mmekasci",
 					"NIKA" = "fmekasci",
@@ -929,7 +929,7 @@
 					"NIKO" = "mmekaserv",
 					"NIKA" = "fmekaserv",
 					"K4T" = "k4tserve",
-					"K4Talt" = "k4tserve_alt"
+					"K4Talt" = "k4tserve_alt" //ChompEDIT - using icon_states in modular_chomp dmi, not upstream's.
 					)*/ //CHOMPEdit end
 	can_be_pushed = 0
 
