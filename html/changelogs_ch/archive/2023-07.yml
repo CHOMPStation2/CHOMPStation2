@@ -65,3 +65,4 @@
   Raeschen:
   - bugfix: fixed a bad MekaSCI iconstate
   - bugfix: fix a bad tallborg icon_state
+  - bugfix: '''No shoes'' loadout option is now specie-unrestricted.'
