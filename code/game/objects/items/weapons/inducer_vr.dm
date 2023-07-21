@@ -259,7 +259,7 @@
 
 /obj/item/weapon/cell/standin/New(newloc, var/mob/living/carbon/human/H)
 	..()
-	if(istype(H, /mob/living/carbon/human)) //ChompEDIT - fix a runtime
+	if(istype(H, /mob/living/carbon/human))//ChompEDIT - fix a runtime
 		hume = H
 		charge = H.nutrition
 		maxcharge = initial(H.nutrition)
