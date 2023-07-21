@@ -1,5 +1,13 @@
 #define CYBORG_POWER_USAGE_MULTIPLIER 2 // Multiplier for amount of power cyborgs use.
 
+#define SKIN_ICON "skin_icon" //CHOMPAdd start - the variables for the borg icon lists
+#define SKIN_ICON_STATE "skin_icon_state"
+#define SKIN_OFFSET "skin_offset"
+#define SKIN_HEIGHT "skin_height"
+#define SKIN_REST "skin_rest"
+#define SKIN_REST_BELLY "skin_rest_belly"
+#define SKIN_BELLY_SIZE "skin_rest_belly" //CHOMPAdd end
+
 /mob/living/silicon/robot
 	name = "Cyborg"
 	real_name = "Cyborg"
@@ -31,6 +39,7 @@
 
 	var/icontype 				//Persistent icontype tracking allows for cleaner icon updates
 	var/module_sprites[0] 		//Used to store the associations between sprite names and sprite index.
+	var/selected_icon 			//CHOMPAdd - for storing the iconstate now that it isnt as direct
 	var/icon_selected = 1		//If icon selection has been completed yet
 	var/icon_selection_tries = 0//Remaining attempts to select icon before a selection is forced
 
@@ -114,7 +123,8 @@
 	robot_modules_background = new()
 	robot_modules_background.icon_state = "block"
 	ident = rand(1, 999)
-	module_sprites["Basic"] = "robot"
+	module_sprites["Basic"] = list(SKIN_ICON_STATE = "robot", SKIN_ICON = 'icons/mob/robots.dmi') //CHOMPEdit - Spriteselector
+	selected_icon = "robot" //CHOMPEdit - Spriteselector
 	icontype = "Basic"
 	updatename(modtype)
 	updateicon()
@@ -256,7 +266,8 @@
 			icontype = "Custom"
 		else
 			icontype = module_sprites[1]
-			icon_state = module_sprites[icontype]
+			selected_icon = module_sprites[icontype][SKIN_ICON_STATE]//CHOMPEdit - Spriteselector
+			icon_state = module_sprites[icontype][SKIN_ICON_STATE]//CHOMPEdit - Spriteselector
 	updateicon()
 	return module_sprites
 
@@ -847,7 +858,7 @@
 	cut_overlays()
 	if(stat == CONSCIOUS)
 		if(!shell || deployed) // Shell borgs that are not deployed will have no eyes.
-			add_overlay("eyes-[module_sprites[icontype]]")
+			add_overlay("eyes-[selected_icon]")//CHOMPEdit - Spriteselector
 
 	if(opened)
 		var/panelprefix = custom_sprite ? "[src.ckey]-[src.sprite_name]" : "ov"
@@ -861,13 +872,13 @@
 	if(has_active_type(/obj/item/borg/combat/shield))
 		var/obj/item/borg/combat/shield/shield = locate() in src
 		if(shield && shield.active)
-			add_overlay("[module_sprites[icontype]]-shield")
+			add_overlay("[selected_icon]-shield")//CHOMPEdit - Spriteselector
 
 	if(modtype == "Combat")
 		if(module_active && istype(module_active,/obj/item/borg/combat/mobility))
-			icon_state = "[module_sprites[icontype]]-roll"
+			icon_state = "[selected_icon]-roll"//CHOMPEdit - Spriteselector
 		else
-			icon_state = module_sprites[icontype]
+			icon_state = selected_icon//CHOMPEdit - Spriteselector
 
 /mob/living/silicon/robot/proc/installed_modules()
 	if(weapon_lock)
@@ -1053,18 +1064,22 @@
 		icontype = tgui_input_list(usr, "Select an icon! [triesleft ? "You have [triesleft] more chance\s." : "This is your last try."]", "Robot Icon", module_sprites)
 		if(!icontype)
 			icontype = module_sprites[1]
+		if(!islist(module_sprites[icontype]))//CHOMPEdit Start - Spriteselector
+			to_chat(src, "Something is wrong with the sprite definition. Harass a coder.")
+			icontype = module_sprites[1]
+		if(isnull(module_sprites[icontype][SKIN_ICON])|isnull(module_sprites[icontype][SKIN_ICON_STATE]))
+			to_chat(src, "Something is wrong with the sprite definition. Harass a coder.")
+			icontype = module_sprites[1]//CHOMPEdit END
 		if(notransform)				//VOREStation edit start: sprite animation
 			to_chat(src, "Your current transformation has not finished yet!")
+			icontype = module_sprites[1]//CHOMPEdit - Spriteselector
 			choose_icon(icon_selection_tries, module_sprites)
 			return
 		else
 			transform_with_anim()	//VOREStation edit end: sprite animation
 
-	if(icontype == "Custom")
-		icon = CUSTOM_ITEM_SYNTH
-	else // This is to fix an issue where someone with a custom borg sprite chooses a non-custom sprite and turns invisible.
-		vr_sprite_check() //VOREStation Edit
-	icon_state = module_sprites[icontype]
+	selected_icon = module_sprites[icontype][SKIN_ICON_STATE]//CHOMPEdit - Spriteselector
+	icon_state = module_sprites[icontype][SKIN_ICON_STATE]//CHOMPEdit - Spriteselector
 	updateicon()
 
 	if (module_sprites.len > 1 && triesleft >= 1 && client)
@@ -1075,12 +1090,12 @@
 			return
 
 	//CHOMPEdit Begin - Allow multiple sizes of vore sprites and/or resting vore sprites
-	if(dogborg && (icontype == "Cat" || icontype == "Cat Mining" || icontype == "Cat Cargo"))
+	if(dogborg && module_sprites[icontype][SKIN_REST_BELLY])//CHOMPEdit - Spriteselector
 		sleeper_resting = TRUE
 	else
 		sleeper_resting = FALSE
 	//And then for multiple belly sizes...
-	if(dogborg && (icontype == "example"))
+	if(dogborg && module_sprites[icontype][SKIN_BELLY_SIZE])//CHOMPEdit - Spriteselector
 		vore_capacity = 2
 		vore_capacity_ex["stomach"] = 2
 	else if(dogborg)

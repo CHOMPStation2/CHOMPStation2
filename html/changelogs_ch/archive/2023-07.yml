@@ -40,3 +40,29 @@
   VictorZisthus:
   - rscadd: HoS now has a fun new gun at round-start!
   - bugfix: fixed a few missing things from several closets.
+2023-07-20:
+  Aroliacue:
+  - rscadd: 'balance: Stun Batons can now disrupt solargrubs infesting machinery,
+      similar to a multitool.'
+  - balance: Combined the medical borg and surgeon borg modules into one.
+  - balance: Doubled medical borg's medicine capacity from 15,000 to 30,000.
+  - balance: medical borgs now have access to more basic chems from their hyposprays.
+  - balance: medihound hypospray no longer requires water to function.
+  - qol: Gave the medihound access to the remote crew monitor, which it was lacking.
+  FluffMedic:
+  - rscadd: 'adds: a new event'
+  - rscadd: 'adds: 3 new mobs similiar to solar moth, tied with the event'
+  - rscadd: 'adds: Event_container_CH, disabled the VR version'
+  Raeschen:
+  - rscadd: xeno & a few shadekin hairstyles unlocked for all
+  Upstream:
+  - rscadd: Adds 'twin drills long' hair
+  - bugfix: Renames custom subtle back to subtle (Custom)
+  - rscadd: cooldown on 'use item on self' UI button (not the hotkey)
+  - bugfix: mouse-hole interactions
+  - rscadd: adds a recolorable flannel jacket to loadout
+2023-07-21:
+  Raeschen:
+  - bugfix: fixed a bad MekaSCI iconstate
+  - bugfix: fix a bad tallborg icon_state
+  - bugfix: '''No shoes'' loadout option is now specie-unrestricted.'
