@@ -212,7 +212,7 @@
 		icon = 'icons/mob/robots_vr.dmi'
 	else if(!(icon_state in vr_icons))
 		icon = original_icon
-*/
+*/ //CHOMPEdit end
 /mob/living/silicon/robot/proc/ex_reserve_refill()
 	set name = "Refill Extinguisher"
 	set category = "Object"
