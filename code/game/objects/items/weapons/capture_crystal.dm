@@ -36,6 +36,11 @@
 	if(owner)
 		UnregisterSignal(owner, COMSIG_PARENT_QDELETING)
 		owner = null
+	if(in_gut) // CHOMPedit start
+		UnregisterSignal(in_gut, COMSIG_PARENT_QDELETING)
+		UnregisterSignal(in_gut, COMSIG_BELLY_UPDATE_VORE_FX)
+		UnregisterSignal(in_gut, COMSIG_BELLY_UPDATE_PREY_LOOP)
+		in_gut = null // CHOMPedit end
 	return ..()
 
 /obj/item/capture_crystal/examine(user)
