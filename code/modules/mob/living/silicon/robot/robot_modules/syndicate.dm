@@ -1,3 +1,4 @@
+//CHOMPNOTE - if upstream edits the sprite lists it will have to be manually copied into our station_vr file, anything else is just read from here
 /* Syndicate modules */
 
 /obj/item/weapon/robot_module/robot/syndicate
@@ -18,7 +19,7 @@
 					LANGUAGE_TERMINUS = 1,
 					LANGUAGE_ZADDAT = 0
 					)
-	sprites = list(
+	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 					"Cerberus" = "syndie_bloodhound",
 					"Cerberus - Treaded" = "syndie_treadhound",
 					"Ares" = "squats",
@@ -26,7 +27,7 @@
 					"WTOperator" = "hosborg",
 					"XI-GUS" = "spidersyndi",
 					"XI-ALP" = "syndi-heavy"
-				)
+				)*/ //CHOMPEdit end
 	var/id
 
 // All syndie modules get these, and the base borg items (flash, crowbar, etc).
@@ -57,12 +58,12 @@
 // Gets a big shield and a gun that shoots really fast to scare the opposing force.
 /obj/item/weapon/robot_module/robot/syndicate/protector
 	name = "protector robot module"
-	sprites = list(
+	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 		"Cerberus - Treaded" = "syndie_treadhound",
 		"Cerberus" = "syndie_bloodhound",
 		"Ares" = "squats",
 		"XI-ALP" = "syndi-heavy"
-		)
+		)*/ //CHOMPEdit end
 
 /obj/item/weapon/robot_module/robot/syndicate/protector/New(var/mob/living/silicon/robot/R)
 	..()
@@ -74,10 +75,10 @@
 // 95% engi-borg and 15% roboticist.
 /obj/item/weapon/robot_module/robot/syndicate/mechanist
 	name = "mechanist robot module"
-	sprites = list(
+	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 		"XI-GUS" = "spidersyndi",
 		"WTOperator" = "sleekhos"
-		)
+		)*/ //CHOMPEdit end
 
 /obj/item/weapon/robot_module/robot/syndicate/mechanist/New(var/mob/living/silicon/robot/R)
 	..()
@@ -143,9 +144,9 @@
 // Mediborg optimized for on-the-field healing, but can also do surgery if needed.
 /obj/item/weapon/robot_module/robot/syndicate/combat_medic
 	name = "combat medic robot module"
-	sprites = list(
+	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 		"Telemachus" = "toiletbotantag"
-		)
+		)*/ //CHOMPEdit end
 
 /obj/item/weapon/robot_module/robot/syndicate/combat_medic/New(var/mob/living/silicon/robot/R)
 	..()

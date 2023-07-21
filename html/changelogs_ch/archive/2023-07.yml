@@ -61,3 +61,8 @@
   - rscadd: cooldown on 'use item on self' UI button (not the hotkey)
   - bugfix: mouse-hole interactions
   - rscadd: adds a recolorable flannel jacket to loadout
+2023-07-21:
+  Raeschen:
+  - bugfix: fixed a bad MekaSCI iconstate
+  - bugfix: fix a bad tallborg icon_state
+  - bugfix: '''No shoes'' loadout option is now specie-unrestricted.'
