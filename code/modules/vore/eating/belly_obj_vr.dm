@@ -348,7 +348,6 @@
 	if(!owner)
 		thing.forceMove(get_turf(src))
 		return
-	thing.enter_belly(src) // Atom movable proc, does nothing by default. Overridden in children for special behavior.
 	if(owner && istype(owner.loc,/turf/simulated) && !cycle_sloshed && reagents.total_volume > 0)
 		var/turf/simulated/T = owner.loc
 		var/S = pick(T.vorefootstep_sounds["human"])
@@ -423,15 +422,15 @@
 			to_chat(M, "<span class='warning'><B>You splash into a pool of [reagent_name]!</B></span>")
 	else if(count_items_for_sprite) //CHOMPEdit - If this is enabled also update fullness for non-living things
 		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
-	//if(istype(thing, /obj/item/capture_crystal)) //CHOMPEdit start: Capture crystal occupant gets to see belly text too. Moved to modular_chomp capture_crystal.dm.
-		//var/obj/item/capture_crystal/CC = thing
-		//if(CC.bound_mob && desc)
-			//if(CC.bound_mob in CC.contents)
-				//var/formatted_desc
-				//formatted_desc = replacetext(desc, "%belly", lowertext(name)) //replace with this belly's name
-				//formatted_desc = replacetext(formatted_desc, "%pred", owner) //replace with this belly's owner
-				//formatted_desc = replacetext(formatted_desc, "%prey", thing) //replace with whatever mob entered into this belly
-				//to_chat(CC.bound_mob, "<span class='notice'><B>[formatted_desc]</B></span>") //CHOMPedit end
+	if(istype(thing, /obj/item/capture_crystal)) //CHOMPEdit: Capture crystal occupant gets to see belly text too.
+		var/obj/item/capture_crystal/CC = thing
+		if(CC.bound_mob && desc)
+			if(CC.bound_mob in CC.contents)
+				var/formatted_desc
+				formatted_desc = replacetext(desc, "%belly", lowertext(name)) //replace with this belly's name
+				formatted_desc = replacetext(formatted_desc, "%pred", owner) //replace with this belly's owner
+				formatted_desc = replacetext(formatted_desc, "%prey", thing) //replace with whatever mob entered into this belly
+				to_chat(CC.bound_mob, "<span class='notice'><B>[formatted_desc]</B></span>")
 
 	/*/ Intended for simple mobs //CHMOPEdit: Counting belly cycles now.
 	if((!owner.client || autotransfer_enabled) && autotransferlocation && autotransferchance > 0)
@@ -441,7 +440,6 @@
 // Called whenever an atom leaves this belly
 /obj/belly/Exited(atom/movable/thing, atom/OldLoc)
 	. = ..()
-	thing.exit_belly(src) // CHOMPedit - atom movable proc, does nothing by default. Overridden in children for special behavior.
 	if(isliving(thing) && !isbelly(thing.loc))
 		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 		var/mob/living/L = thing
@@ -470,9 +468,6 @@
 			for(var/count in I.d_mult to 1 step 0.25)
 				I.add_overlay(I.d_stage_overlay, TRUE) //CHOMPEdit end
 
-// CHOMPedit: SEND_SIGNAL(COMSIG_BELLY_UPDATE_VORE_FX) is sometimes used when calling vore_fx() to send belly visuals
-// to certain non-belly atoms. Not called here as vore_fx() is usually only called if a mob is in the belly.
-// Don't forget it if you need to rework vore_fx().
 /obj/belly/proc/vore_fx(mob/living/L, var/update, var/severity = 0) //CHOMPEdit
 	if(!istype(L))
 		return
@@ -501,7 +496,7 @@
 				var/obj/screen/fullscreen/F4 = L.overlay_fullscreen("belly4", /obj/screen/fullscreen/belly/colorized/overlay)
 				F4.icon_state = "[belly_fullscreen]_nc"
 			*/ //Chomp Disable END
-
+			
 			// Chomp EDIT Begin
 			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly, severity) //CHOMPEdit Start: preserving save data
 			F.icon = file("modular_chomp/icons/mob/vore_fullscreens/[belly_fullscreen].dmi")
@@ -587,7 +582,7 @@
 				F4.icon_state = "[belly_fullscreen]_nc"
 			*/ //Chomp Disable END
 			//CHOMPedit Start: preserving save data
-			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly, reagents.total_volume)
+			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly, reagents.total_volume) 
 			F.icon = file("modular_chomp/icons/mob/vore_fullscreens/[belly_fullscreen].dmi")
 			F.cut_overlays()
 			var/image/I = image(F.icon, belly_fullscreen)

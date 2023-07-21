@@ -169,8 +169,7 @@
 				gen_interval = 0
 			else
 				gen_interval++
-	if(reagents.total_volume && LAZYLEN(contents))
-		SEND_SIGNAL(src, COMSIG_BELLY_UPDATE_VORE_FX, FALSE, reagents.total_volume) // Signals vore_fx() reagents updates.
+	if(reagents.total_volume)
 		for(var/mob/living/L in contents)
 			if(L.digestable && digest_mode == DM_DIGEST)
 				if(reagents.total_volume)
@@ -470,8 +469,6 @@
 /////////////////////////// CHOMP PCL END ///////////////////////////
 
 /obj/belly/proc/update_internal_overlay()
-	if(LAZYLEN(contents))
-		SEND_SIGNAL(src, COMSIG_BELLY_UPDATE_VORE_FX, TRUE) // Signals vore_fx() to listening atoms. Atoms must handle appropriate isliving() checks.
 	for(var/A in contents)
 		if(isliving(A))
 			vore_fx(A,1)

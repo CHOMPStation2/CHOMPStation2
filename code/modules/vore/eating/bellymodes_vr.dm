@@ -35,7 +35,6 @@
 
 	var/play_sound //Potential sound to play at the end to avoid code duplication.
 	var/to_update = FALSE //Did anything update worthy happen?
-	SEND_SIGNAL(src, COMSIG_BELLY_UPDATE_PREY_LOOP) // CHOMPedit: signals listening atoms to update prey_loop. May be cancelled by early exit otherwise.
 
 /////////////////////////// Exit Early ////////////////////////////
 	var/list/touchable_atoms = contents - items_preserved
