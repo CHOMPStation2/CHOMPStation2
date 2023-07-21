@@ -1,9 +1,10 @@
+//CHOMPNOTE - if upstream edits the sprite lists it will have to be manually copied into our station_vr file, anything else is just read from here
 /obj/item/weapon/robot_module/robot/stray
 	name = "stray robot module"
 	hide_on_manifest = 1
-	sprites = list(
+	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 					"Stray" = "stray"
-				)
+				)*/ //CHOMPEdit end
 
 /obj/item/weapon/robot_module/robot/stray/New(var/mob/living/silicon/robot/R)
 	..()
@@ -53,7 +54,7 @@
 	R.pixel_x 	 = -16
 	R.old_x 	 = -16
 	R.default_pixel_x = -16
-	R.dogborg = TRUE	
+	R.dogborg = TRUE
 	//CHOMPEdit - Add vore capacity
 	R.vore_capacity = 1
 	R.vore_capacity_ex = list("stomach" = 1)
