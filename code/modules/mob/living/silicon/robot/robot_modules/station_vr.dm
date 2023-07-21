@@ -216,7 +216,7 @@
 					//"MEKA v2" = "newmekasec", //ChompREMOVE - we put the better sprite on the base
 					"NIKO" = "mmekasec",
 					"NIKA" = "fmekasec",
-					"K4T" = "k4tsec" //CHOMPEdit End - Tallborgs
+					"K4T" = "k4tsec"
 					)*/ //CHOMPEdit end
 
 /obj/item/weapon/robot_module/robot/security/knine/New(var/mob/living/silicon/robot/R)
@@ -302,7 +302,6 @@
 					"NIKA" = "fmekamed",
 					"NIKO" = "mmekamed",
 					"K4T" = "k4tmed",
-					"K4Talt" = "k4tmed_alt1" //CHOMPEdit End - Tallborgs
 					"K4Talt" = "k4tmed_alt1",
 					// CHOMPedit start: Trauma sprites for regular medihound borgs.
 					"Traumahound" = "traumavale",
@@ -570,7 +569,7 @@
 					"NIKO" = "mmekajani",
 					"NIKA" = "fmekajani",
 					"K4T" = "k4tjani",
-					"K4Talt" = "k4tjani_alt1" //CHOMPEdit End - Tallborgs
+					"K4Talt" = "k4tjani_alt1"
 					)*/ //CHOMPEdit end
 	can_be_pushed = 0
 
@@ -667,7 +666,7 @@
 					//"MEKA v2" = "newmekasci", //ChompREMOVE - we put the better sprite on the base
 					"NIKO" = "mmekasci",
 					"NIKA" = "fmekasci",
-					"K4T" = "k4tsci" //CHOMPEdit end - Tallborgs
+					"K4T" = "k4tsci"
 					)*/ //CHOMPEdit end
 	can_be_pushed = 0
 
@@ -764,7 +763,7 @@
 					"NIKO" = "mmekaeng",
 					"NIKA" = "fmekaeng",
 					"K4T" = "k4tengi",
-					"K4Talt" = "k4tengi_alt1" //CHOMPEdit End - Tallborgs
+					"K4Talt" = "k4tengi_alt1"
 					)*/ //CHOMPEdit end
 	can_be_pushed = 0
 
@@ -930,7 +929,7 @@
 					"NIKO" = "mmekaserv",
 					"NIKA" = "fmekaserv",
 					"K4T" = "k4tserve",
-					"K4Talt" = "k4tserve_alt" //CHOMPEdit End - Tallborgs
+					"K4Talt" = "k4tserve_alt"
 					)*/ //CHOMPEdit end
 	can_be_pushed = 0
 
@@ -1019,7 +1018,7 @@
 					"NIKO" = "mmekamine",
 					"NIKA" = "fmekamine",
 					"K4T" = "k4tmine",
-					"K4Talt" = "k4tmine_alt1" //CHOMPEdit End - Tallborgs
+					"K4Talt" = "k4tmine_alt1"
 					)*/ //CHOMPEdit end
 	can_be_pushed = 0
 
