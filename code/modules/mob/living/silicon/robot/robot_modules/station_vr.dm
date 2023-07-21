@@ -661,7 +661,7 @@
 					"Cat" = "vixsci", //CHOMPEdit
 					"Drake" = "drakesci",
 					"Raptor V-4" = "sciraptor",
-					"MEKA" = "mekasci",
+					"MEKA" = "mekastandard", //ChompEDIT - different iconstate
 					//"MEKA v2" = "newmekasci", //ChompREMOVE - we put the better sprite on the base
 					"NIKO" = "mmekasci",
 					"NIKA" = "fmekasci",
