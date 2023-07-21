@@ -50,12 +50,13 @@
 	display_name = "Adjust - No Shoes"
 	path = /obj/item/clothing/shoes/none
 	cost = 0
-	species_restricted = null
 	
 /obj/item/clothing/shoes/none
 	name = "No Shoes"
 	desc = "shoeless?"
 	icon_state = ""
+	species_restricted = null
+	
 /obj/item/clothing/shoes/none/Initialize()
 	. = INITIALIZE_HINT_QDEL //Fuck them shoes
 	..()
