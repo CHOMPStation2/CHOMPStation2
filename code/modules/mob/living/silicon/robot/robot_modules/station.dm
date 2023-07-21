@@ -680,7 +680,7 @@ var/global/list/robot_modules = list(
 					"Decapod" = "decapod-Service",
 					"Pneuma" = "pneuma-Service",
 					"Tower" = "drider-Service"
-				  	)*/
+				  	)*/ //CHOMPEdit end
 
 /obj/item/weapon/robot_module/robot/clerical/butler/general/New()
 	..()
