@@ -55,6 +55,8 @@
 	name = "No Shoes"
 	desc = "shoeless?"
 	icon_state = ""
+	species_restricted = null
+	
 /obj/item/clothing/shoes/none/Initialize()
 	. = INITIALIZE_HINT_QDEL //Fuck them shoes
 	..()
