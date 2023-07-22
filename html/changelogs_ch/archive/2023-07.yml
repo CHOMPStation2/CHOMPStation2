@@ -66,3 +66,7 @@
   - bugfix: fixed a bad MekaSCI iconstate
   - bugfix: fix a bad tallborg icon_state
   - bugfix: '''No shoes'' loadout option is now specie-unrestricted.'
+2023-07-22:
+  kcin2001:
+  - bugfix: pixelshifting not working right on wideborgs
+  - bugfix: boozehound sprite changing not working
