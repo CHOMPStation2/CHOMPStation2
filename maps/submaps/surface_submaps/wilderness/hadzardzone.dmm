@@ -39,8 +39,7 @@
 /turf/simulated/floor,
 /area/submap/Hadzardzone)
 "i" = (
-/obj/effect/map_effect/interval/effect_emitter/smoke/shock,
-/turf/simulated/floor/water/contaminated,
+/turf/simulated/floor/water,
 /area/submap/Hadzardzone)
 "j" = (
 /obj/effect/floor_decal/rust,
@@ -71,6 +70,7 @@
 /obj/item/weapon/spacecash/c1000,
 /obj/item/weapon/spacecash/c1000,
 /obj/item/weapon/spacecash/c1000,
+/obj/item/device/personal_shield_generator/security/strong/loaded,
 /obj/item/device/personal_shield_generator/security/strong/loaded,
 /turf/simulated/floor,
 /area/submap/Hadzardzone)
@@ -112,7 +112,7 @@
 "u" = (
 /obj/effect/map_effect/interval/effect_emitter/smoke/shock,
 /obj/effect/map_effect/interval/effect_emitter/smoke/shock,
-/turf/simulated/floor/water/contaminated,
+/turf/simulated/floor/water,
 /area/submap/Hadzardzone)
 "w" = (
 /obj/effect/landmark/loot_spawn,
@@ -124,7 +124,7 @@
 /area/submap/Hadzardzone)
 "x" = (
 /obj/structure/prop/poicanister,
-/turf/simulated/floor/water/contaminated,
+/turf/simulated/floor/water,
 /area/submap/Hadzardzone)
 "z" = (
 /obj/structure/largecrate/animal/guardmutant,
@@ -138,6 +138,7 @@
 /obj/item/weapon/storage/pill_bottle/alkysine,
 /obj/item/weapon/storage/pill_bottle/nutriment,
 /obj/item/weapon/storage/pill_bottle/osteodaxon,
+/obj/item/weapon/storage/pill_bottle/assorted,
 /turf/simulated/floor{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -183,6 +184,10 @@
 /area/submap/Hadzardzone)
 "N" = (
 /turf/simulated/mineral/ignore_mapgen,
+/area/submap/Hadzardzone)
+"P" = (
+/obj/effect/map_effect/interval/effect_emitter/smoke/shock,
+/turf/simulated/floor/water,
 /area/submap/Hadzardzone)
 "Q" = (
 /turf/template_noop,
@@ -627,7 +632,7 @@ i
 H
 H
 j
-D
+i
 F
 F
 N
@@ -659,13 +664,13 @@ N
 N
 F
 F
-D
-D
+i
+i
 H
 H
 H
-D
-D
+i
+i
 F
 F
 N
@@ -695,15 +700,15 @@ N
 N
 F
 F
-D
-D
+i
+i
 j
 H
 H
 H
-D
-D
-D
+i
+i
+i
 F
 F
 N
@@ -731,17 +736,17 @@ N
 N
 F
 F
-D
-D
-D
+i
+i
+i
 H
 H
 j
 H
 H
-D
-D
 i
+i
+P
 F
 F
 N
@@ -768,8 +773,8 @@ N
 F
 F
 x
-D
-D
+i
+i
 j
 H
 H
@@ -777,8 +782,8 @@ H
 H
 H
 H
-D
-D
+i
+i
 x
 F
 F
@@ -804,9 +809,9 @@ a
 N
 F
 D
-D
-D
-D
+i
+i
+P
 H
 j
 H
@@ -815,9 +820,9 @@ H
 j
 H
 j
-D
-D
-D
+i
+i
+i
 F
 N
 N
@@ -841,13 +846,13 @@ X
 N
 F
 D
-D
-D
-D
+i
+i
+i
 H
 H
 H
-D
+i
 H
 H
 H
@@ -878,14 +883,14 @@ X
 N
 F
 r
-D
-D
-D
+i
+i
+i
 T
 R
-D
 i
-D
+P
+i
 F
 k
 S
@@ -914,14 +919,14 @@ X
 X
 N
 F
-D
-D
-D
-D
+i
+i
+i
+i
 H
 H
 H
-D
+i
 H
 H
 H
@@ -951,10 +956,10 @@ X
 X
 N
 F
-D
-D
+i
+i
 x
-D
+i
 j
 H
 H
@@ -963,9 +968,9 @@ H
 H
 j
 H
-D
-D
-D
+i
+i
+i
 F
 N
 b
@@ -989,9 +994,9 @@ X
 N
 F
 F
-D
-D
-D
+i
+i
+P
 H
 j
 H
@@ -999,9 +1004,9 @@ H
 j
 H
 H
-D
-D
-D
+i
+i
+i
 F
 F
 N
@@ -1028,15 +1033,15 @@ N
 F
 F
 D
-D
+i
 H
 H
 H
 H
 H
 H
-D
-D
+i
+i
 u
 F
 F
@@ -1065,15 +1070,15 @@ N
 N
 F
 F
-D
-D
+i
+i
 H
 H
 H
 j
-D
-D
-D
+i
+i
+i
 F
 F
 N
@@ -1103,12 +1108,12 @@ N
 N
 F
 F
-D
-D
+i
+i
 q
 H
 H
-D
+i
 x
 F
 F
@@ -1145,7 +1150,7 @@ i
 H
 H
 j
-D
+i
 F
 F
 N
