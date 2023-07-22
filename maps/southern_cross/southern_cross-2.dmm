@@ -22734,7 +22734,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/glass/beaker/sulphuric,
 /turf/simulated/wall/r_wall,
 /area/maintenance/disposal)
 "brZ" = (
