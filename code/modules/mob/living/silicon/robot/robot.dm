@@ -266,8 +266,16 @@
 			icontype = "Custom"
 		else
 			icontype = module_sprites[1]
-			selected_icon = module_sprites[icontype][SKIN_ICON_STATE]//CHOMPEdit - Spriteselector
-			icon_state = module_sprites[icontype][SKIN_ICON_STATE]//CHOMPEdit - Spriteselector
+			selected_icon = module_sprites[icontype][SKIN_ICON_STATE]//CHOMPEdit Start- Spriteselector
+			icon_state = module_sprites[icontype][SKIN_ICON_STATE]
+			if (isnull(module_sprites[icontype][SKIN_OFFSET]))
+				pixel_x = 0
+				old_x = 0
+				default_pixel_x = 0
+			else
+				pixel_x = module_sprites[icontype][SKIN_OFFSET]
+				old_x = module_sprites[icontype][SKIN_OFFSET]
+				default_pixel_x = module_sprites[icontype][SKIN_OFFSET]//CHOMPEdit End
 	updateicon()
 	return module_sprites
 
@@ -1078,8 +1086,16 @@
 		else
 			transform_with_anim()	//VOREStation edit end: sprite animation
 
-	selected_icon = module_sprites[icontype][SKIN_ICON_STATE]//CHOMPEdit - Spriteselector
-	icon_state = module_sprites[icontype][SKIN_ICON_STATE]//CHOMPEdit - Spriteselector
+	selected_icon = module_sprites[icontype][SKIN_ICON_STATE]//CHOMPEdit Start - Spriteselector
+	icon_state = module_sprites[icontype][SKIN_ICON_STATE]
+	if (isnull(module_sprites[icontype][SKIN_OFFSET]))
+		pixel_x = 0
+		old_x = 0
+		default_pixel_x = 0
+	else
+		pixel_x = module_sprites[icontype][SKIN_OFFSET]
+		old_x = module_sprites[icontype][SKIN_OFFSET]
+		default_pixel_x = module_sprites[icontype][SKIN_OFFSET]//CHOMPEdit End
 	updateicon()
 
 	if (module_sprites.len > 1 && triesleft >= 1 && client)

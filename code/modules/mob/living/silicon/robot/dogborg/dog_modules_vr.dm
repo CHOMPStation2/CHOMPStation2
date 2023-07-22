@@ -538,6 +538,7 @@
 	var/choice = tgui_input_list(M, "Choose your drink!", "Drink Choice", options)
 	if(src && choice && !M.stat && in_range(M,src))
 		icontype = options[choice]
+		selected_icon = module_sprites[icontype][SKIN_ICON_STATE] //CHOMPEdit - sprite selection refactor
 		var/active_sound = 'sound/effects/bubbles.ogg'
 		playsound(src.loc, "[active_sound]", 100, 0, 4)
 		to_chat(M, "<span class='filter_notice'>Your Tank now displays [choice]. Drink up and enjoy!</span>")
