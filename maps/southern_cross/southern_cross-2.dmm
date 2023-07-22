@@ -76476,12 +76476,6 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/secondary/entry/D2)
-"uXT" = (
-/obj/machinery/camera/network/medbay{
-	c_tag = "MED - Patient Hallway Port"
-	},
-/turf/space,
-/area/space)
 "uYd" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /obj/effect/wingrille_spawn/reinforced,
@@ -138414,7 +138408,7 @@ aaa
 aaa
 aaa
 aaa
-uXT
+aaa
 aaa
 aaa
 aaa
