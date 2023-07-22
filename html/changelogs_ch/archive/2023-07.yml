@@ -67,6 +67,9 @@
   - bugfix: fix a bad tallborg icon_state
   - bugfix: '''No shoes'' loadout option is now specie-unrestricted.'
 2023-07-22:
+  FluffMedic:
+  - balance: Made it so hadzardzone and it's alts are less lethal and their safes
+      are more rewarding.
   kcin2001:
   - bugfix: pixelshifting not working right on wideborgs
   - bugfix: boozehound sprite changing not working
