@@ -159,20 +159,20 @@
 					"Medical Hound" = 				list(SKIN_ICON_STATE = "medihound", SKIN_ICON = 'icons/mob/widerobot_med_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
 					"Dark Medical Hound (Static)" = list(SKIN_ICON_STATE = "medihounddark", SKIN_ICON = 'icons/mob/widerobot_med_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
 					"Mediborg model V-2" = 			list(SKIN_ICON_STATE = "vale", SKIN_ICON = 'icons/mob/widerobot_med_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
-					"Borgi" = 						list(SKIN_ICON_STATE = "borgi-medi", SKIN_ICON = 'icons/mob/widerobot_med_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
+					"Borgi-Med" =					list(SKIN_ICON_STATE = "borgi-medi", SKIN_ICON = 'icons/mob/widerobot_med_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
 					"Mediborg model V-3" = 			list(SKIN_ICON_STATE = "vale2", SKIN_ICON = 'modular_chomp/icons/mob/widerobot_ch.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32), //CHOMPEdit
-					"Cat" = 						list(SKIN_ICON_STATE = "vixmed", SKIN_ICON = 'modular_chomp/icons/mob/catborg/catborg.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32,SKIN_REST_BELLY = 1,SKIN_REST_BELLY = 1), //CHOMPEdit
-					"Drake" = 						list(SKIN_ICON_STATE = "drakemed", SKIN_ICON = 'icons/mob/drakeborg/drakeborg_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
-					"Raptor V-4" = 					list(SKIN_ICON_STATE = "medraptor", SKIN_ICON = 'modular_chomp/icons/mob/raptorborg/raptor.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 45),
+					"Cat-Med" = 					list(SKIN_ICON_STATE = "vixmed", SKIN_ICON = 'modular_chomp/icons/mob/catborg/catborg.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32,SKIN_REST_BELLY = 1,SKIN_REST_BELLY = 1), //CHOMPEdit
+					"Drake-Med" =					list(SKIN_ICON_STATE = "drakemed", SKIN_ICON = 'icons/mob/drakeborg/drakeborg_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
+					"Raptor V-4-Med" = 				list(SKIN_ICON_STATE = "medraptor", SKIN_ICON = 'modular_chomp/icons/mob/raptorborg/raptor.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 45),
 					"MEKA" = 						list(SKIN_ICON_STATE = "mekamed", SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64), //CHOMPEdit Start - Tallborgs
 					"NIKO" = 						list(SKIN_ICON_STATE = "mmekamed", SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64),
 					"NIKA" = 						list(SKIN_ICON_STATE = "fmekamed", SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64),
 					"K4T" = 						list(SKIN_ICON_STATE = "k4tmed", SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64),
 					"K4Talt" = 						list(SKIN_ICON_STATE = "k4tmed_alt1", SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64), //CHOMPEdit End - Tallborgs
 					"Traumahound" = 				list(SKIN_ICON_STATE = "traumavale",SKIN_ICON = 'icons/mob/widerobot_trauma_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
-					"Drake" = 						list(SKIN_ICON_STATE = "draketrauma",SKIN_ICON = 'icons/mob/widerobot_trauma_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
-					"Borgi" = 						list(SKIN_ICON_STATE = "borgi-trauma",SKIN_ICON = 'icons/mob/widerobot_trauma_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
-					"Raptor V-4" = 					list(SKIN_ICON_STATE = "traumaraptor",SKIN_ICON = 'modular_chomp/icons/mob/raptorborg/raptor.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 45)
+					"Drake-Tramua" =				list(SKIN_ICON_STATE = "draketrauma",SKIN_ICON = 'icons/mob/drakeborg/drakeborg_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
+					"Borgi-Tramua" =				list(SKIN_ICON_STATE = "borgi-trauma",SKIN_ICON = 'icons/mob/widerobot_trauma_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
+					"Raptor V-4-Tramua" = 			list(SKIN_ICON_STATE = "traumaraptor",SKIN_ICON = 'modular_chomp/icons/mob/raptorborg/raptor.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 45)
 					)
 
 /* merged into medihound list
@@ -260,10 +260,10 @@
 
 /obj/item/weapon/robot_module/robot/miner/kmine
 	sprites = list(
-					"KMine" = 			list(SKIN_ICON_STATE = "kmine",SKIN_ICON = 'icons/mob/widerobot_car_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
-					"CargoHound" = 		list(SKIN_ICON_STATE = "cargohound",SKIN_ICON = 'icons/mob/widerobot_car_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
-					"CargoHoundDark" = 	list(SKIN_ICON_STATE = "cargohounddark",SKIN_ICON = 'icons/mob/widerobot_car_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
-					"Borgi" = 			list(SKIN_ICON_STATE = "borgi-mine",SKIN_ICON = 'icons/mob/widerobot_car_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32), //CHOMPEdit
+					"KMine" = 			list(SKIN_ICON_STATE = "kmine",SKIN_ICON = 'modular_chomp/icons/mob/widerobot_car_ch.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
+					"CargoHound" = 		list(SKIN_ICON_STATE = "cargohound",SKIN_ICON = 'modular_chomp/icons/mob/widerobot_car_ch.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
+					"CargoHoundDark" = 	list(SKIN_ICON_STATE = "cargohounddark",SKIN_ICON = 'modular_chomp/icons/mob/widerobot_car_ch.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
+					"Borgi" = 			list(SKIN_ICON_STATE = "borgi-mine",SKIN_ICON = 'modular_chomp/icons/mob/widerobot_car_ch.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32), //CHOMPEdit
 					"Cat Mining" = 		list(SKIN_ICON_STATE = "vixmine",SKIN_ICON = 'modular_chomp/icons/mob/catborg/catborg.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32), //CHOMPEdit
 					"Cat Cargo" = 		list(SKIN_ICON_STATE = "vixcargo",SKIN_ICON = 'modular_chomp/icons/mob/catborg/catborg.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32), //CHOMPEdit
 					"Drake" = 			list(SKIN_ICON_STATE = "drakemine",SKIN_ICON = 'icons/mob/drakeborg/drakeborg_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
