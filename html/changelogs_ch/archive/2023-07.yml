@@ -75,3 +75,6 @@
   - bugfix: boozehound sprite changing not working
   - rscadd: Added gold tag collar to looty inc.
   - bugfix: fixed silver tag collar being the wrong item in looty inc.
+2023-07-23:
+  kcin2001:
+  - bugfix: reset module being borg
