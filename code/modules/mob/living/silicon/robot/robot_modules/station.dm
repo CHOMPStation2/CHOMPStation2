@@ -79,7 +79,7 @@ var/global/list/robot_modules = list(
 
 	if(R.radio)
 		R.radio.recalculateChannels()
-	R.choose_icon(0, R.set_module_sprites(list("Default" = "robot")))
+	R.choose_icon(0, R.set_module_sprites(list("Default" = list(SKIN_ICON_STATE = "robot", SKIN_ICON = 'icons/mob/robots.dmi'))))//CHOMPEdit - Sprite selector
 
 /obj/item/weapon/robot_module/Destroy()
 	for(var/module in modules)
