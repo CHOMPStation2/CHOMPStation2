@@ -4582,6 +4582,7 @@
 #include "modular_chomp\code\game\objects\structures\crate_lockers\largecrate.dm"
 #include "modular_chomp\code\game\turfs\turf.dm"
 #include "modular_chomp\code\game\turfs\simulated\outdoors\desert_planet.dm"
+#include "modular_chomp\code\game\turfs\simulated\outdoors\lava_land.dm"
 #include "modular_chomp\code\matrices\color_matrix.dm"
 #include "modular_chomp\code\modules\admin\functions\modify_traits.dm"
 #include "modular_chomp\code\modules\artifice\deadringer.dm"
