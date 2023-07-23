@@ -260,10 +260,10 @@
 
 /obj/item/weapon/robot_module/robot/miner/kmine
 	sprites = list(
-					"KMine" = 			list(SKIN_ICON_STATE = "kmine",SKIN_ICON = 'icons/mob/widerobot_car_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
-					"CargoHound" = 		list(SKIN_ICON_STATE = "cargohound",SKIN_ICON = 'icons/mob/widerobot_car_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
-					"CargoHoundDark" = 	list(SKIN_ICON_STATE = "cargohounddark",SKIN_ICON = 'icons/mob/widerobot_car_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
-					"Borgi" = 			list(SKIN_ICON_STATE = "borgi-mine",SKIN_ICON = 'icons/mob/widerobot_car_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32), //CHOMPEdit
+					"KMine" = 			list(SKIN_ICON_STATE = "kmine",SKIN_ICON = 'icons/mob/widerobot_car_ch.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
+					"CargoHound" = 		list(SKIN_ICON_STATE = "cargohound",SKIN_ICON = 'icons/mob/widerobot_car_ch.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
+					"CargoHoundDark" = 	list(SKIN_ICON_STATE = "cargohounddark",SKIN_ICON = 'icons/mob/widerobot_car_ch.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
+					"Borgi" = 			list(SKIN_ICON_STATE = "borgi-mine",SKIN_ICON = 'icons/mob/widerobot_car_ch.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32), //CHOMPEdit
 					"Cat Mining" = 		list(SKIN_ICON_STATE = "vixmine",SKIN_ICON = 'modular_chomp/icons/mob/catborg/catborg.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32), //CHOMPEdit
 					"Cat Cargo" = 		list(SKIN_ICON_STATE = "vixcargo",SKIN_ICON = 'modular_chomp/icons/mob/catborg/catborg.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32), //CHOMPEdit
 					"Drake" = 			list(SKIN_ICON_STATE = "drakemine",SKIN_ICON = 'icons/mob/drakeborg/drakeborg_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
