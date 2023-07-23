@@ -4516,9 +4516,12 @@
 #include "maps\atoll\atoll_objs.dm"
 #include "maps\atoll\atoll_turfs.dm"
 #include "maps\gateway_archive_vr\blackmarketpackers.dm"
+<<<<<<< HEAD
 #include "maps\southern_cross\southern_cross.dm"
 #include "maps\southern_cross\items\encryptionkey_sc.dm"
 #include "maps\southern_cross\items\headset_sc.dm"
+=======
+>>>>>>> e8985681d9... Merge pull request #15168 from Heroman3003/mapswap5
 #include "maps\southern_cross\items\clothing\sc_accessory.dm"
 #include "maps\southern_cross\items\clothing\sc_suit.dm"
 #include "maps\southern_cross\items\clothing\sc_under.dm"
@@ -4534,6 +4537,17 @@
 #include "maps\southern_cross\turfs\outdoors.dm"
 #include "maps\submaps\_helpers.dm"
 #include "maps\submaps\_readme.dm"
+<<<<<<< HEAD
+=======
+#include "maps\submaps\engine_submaps\engine.dm"
+#include "maps\submaps\engine_submaps\engine_areas.dm"
+#include "maps\submaps\engine_submaps_vr\tether\_engine_submaps.dm"
+#include "maps\submaps\space_submaps\space.dm"
+#include "maps\submaps\space_submaps\debrisfield\debrisfield.dm"
+#include "maps\submaps\surface_submaps\wilderness\wilderness.dm"
+#include "maps\submaps\surface_submaps\wilderness\wilderness_areas.dm"
+#include "maps\tether\tether.dm"
+>>>>>>> e8985681d9... Merge pull request #15168 from Heroman3003/mapswap5
 #include "maps\~map_system\maps.dm"
 #include "modular_chomp\code\coalesce_ch.dm"
 #include "modular_chomp\code\global.dm"
