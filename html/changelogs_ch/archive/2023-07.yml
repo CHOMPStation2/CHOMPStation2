@@ -78,3 +78,6 @@
 2023-07-23:
   kcin2001:
   - bugfix: reset module being borg
+2023-07-24:
+  FluffMedic:
+  - bugfix: volcanic tiles not showing up in map edit
