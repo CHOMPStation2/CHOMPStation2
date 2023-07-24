@@ -81,5 +81,6 @@
 2023-07-24:
   FluffMedic:
   - bugfix: volcanic tiles not showing up in map edit
+  - rscadd: sergal sprites to the xenotech/xenoweave/precursor rig
   kcin2001:
   - bugfix: crisis borg being broken
