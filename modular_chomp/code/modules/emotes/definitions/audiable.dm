@@ -25,3 +25,11 @@
 			"vol" = vol,
 			"volchannel" = VOLUME_CHANNEL_SPECIES_SOUNDS
 		)
+
+/decl/emote/audible/mgeow
+	key = "mgeow"
+	emote_message_1p = "You mgeow."
+	emote_message_3p = "mgeows."
+	emote_message_1p_target = "You mgeow at TARGET."
+	emote_message_3p_target = "mgeow at TARGET."
+	emote_sound = 'modular_chomp/sound/voice/mgeow.ogg'
