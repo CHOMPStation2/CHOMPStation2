@@ -81,3 +81,5 @@
 2023-07-24:
   FluffMedic:
   - bugfix: volcanic tiles not showing up in map edit
+  kcin2001:
+  - bugfix: crisis borg being broken
