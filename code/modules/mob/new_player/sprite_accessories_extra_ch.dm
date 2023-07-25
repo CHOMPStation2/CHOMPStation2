@@ -6,29 +6,29 @@
 	icon = 'icons/mob/human_races/markings_ch.dmi'
 
 /datum/sprite_accessory/marking/ch/orca_head
-	name = "Orca head"
-	icon_state = "orca_head"
+	name = "Orca Head"
+	icon_state = "orca"
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_HEAD)
 	species_allowed = list(SPECIES_AKULA)
 
 /datum/sprite_accessory/marking/ch/orca_body
-	name = "Orca body(female)"
-	icon_state = "orca_body"
+	name = "Orca Body (female)"
+	icon_state = "orca"
 	color_blend_mode = ICON_MULTIPLY
-	body_parts = list(BP_TORSO)
+	body_parts = list(BP_TORSO,BP_GROIN)
 	species_allowed = list(SPECIES_AKULA)
 
 /datum/sprite_accessory/marking/ch/orca_legs
-	name = "Orca legs"
-	icon_state = "orca_leg"
+	name = "Orca Legs"
+	icon_state = "orca"
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_L_LEG,BP_R_LEG)
 	species_allowed = list(SPECIES_AKULA)
 
 /datum/sprite_accessory/marking/ch/orca_arms
-	name = "Orca arms"
-	icon_state = "orca_arm"
+	name = "Orca Arms"
+	icon_state = "orca"
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_L_ARM,BP_R_ARM)
 	species_allowed = list(SPECIES_AKULA)

@@ -459,6 +459,12 @@
 	ckeywhitelist = list("hunterbirk")
 	character_name = list("Aria Blue")
 
+/datum/gear/fluff/mercury_vopal_ring
+	path = /obj/item/clothing/gloves/ring/material/void_opal/fluff/mercury
+	display_name = "Mercury's Mate Ring"
+	ckeywhitelist = list("haloren")
+	character_name = list("Mercury")
+
 //  I CKEYS
 /datum/gear/fluff/ruda_badge
 	path = /obj/item/clothing/accessory/badge/holo/detective/ruda
@@ -1121,6 +1127,13 @@
 	ckeywhitelist = list("suicidalpickles")
 	character_name = list("Silent Stripes")
 
+/datum/gear/fluff/parrizjacket
+    path = /obj/item/clothing/suit/storage/toggle/labcoat/fluff/parrizjacket
+    display_name = "pink crop bomber"
+    slot = slot_wear_suit
+    ckeywhitelist = list("satinisle")
+    character_name = list("Parriz Tavakdavi")
+
 //  T CKEYS
 /datum/gear/fluff/ascian_medal
 	path = /obj/item/clothing/accessory/medal/silver/unity/tabiranth
@@ -1310,6 +1323,17 @@
 	display_name = "Shine-Runner's ITG-ID card"
 	ckeywhitelist = list("verysoft")
 	character_name = list("Shine-Runner")
+
+/datum/gear/fluff/dessa_hat
+	path = /obj/item/clothing/head/fluff/giantbow/dessa
+	display_name = "Dessa's Giant Bow"
+	slot = slot_head
+	ckeywhitelist = list("verysoft")
+	character_name = list("Dessa Ton")
+
+/datum/gear/fluff/dessa_hat/New()
+	..()
+	gear_tweaks += gear_tweak_free_color_choice
 
 //  W CKEYS
 /datum/gear/fluff/sthasha_bracer

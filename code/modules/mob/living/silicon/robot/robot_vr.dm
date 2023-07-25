@@ -7,7 +7,7 @@
 	var/pounce_cooldown_time = 40
 	var/leap_at
 	var/dogborg = FALSE //Dogborg special features (overlays etc.)
-	var/wideborg = FALSE //When the borg simply doesn't use standard 32p size.
+	var/wideborg = FALSE //When the borg simply doesn't use standard 32p size. - CHOMPNote No longer used, this info is defined per sprite
 	var/scrubbing = FALSE //Floor cleaning enabled
 	var/datum/matter_synth/water_res = null
 	var/notransform
@@ -106,7 +106,7 @@
 			sitting = TRUE
 		if("Belly up")
 			bellyup = TRUE
-
+/* //CHOMPEdit moving all this code to modular_chomp\code\modules\mob\living\silicon\robot\robot_vr.dm in order to make this more flexible
 /mob/living/silicon/robot/updateicon()
 	vr_sprite_check()
 	..()
@@ -180,6 +180,7 @@
 		add_overlay("wreck-overlay")
 
 /mob/living/silicon/robot/proc/vr_sprite_check()
+	vis_height = 32
 	if(custom_sprite == TRUE)
 		return
 	if(wideborg == TRUE)
@@ -193,8 +194,15 @@
 			icon = 'modular_chomp/icons/mob/raptorborg/raptor.dmi' //CHOMPEDIT: moving to modular so i can fix all the things
 		else if(icontype == "Raptor V-4.1") //CHOMPADDITION: letting us redurect to our raptor dmi
 			icon = 'modular_chomp/icons/mob/raptorborg/raptor_ch.dmi' //CHOMPADDITION: letting us redurect to our raptor dmi
-		else if(icontype == "MEKA" || icontype == "MEKAalt" || icontype == "NIKO" || icontype == "NIKA" || icontype == "K4T" || icontype == "K4Talt") 
+		else if(icontype == "MEKA" || icontype == "MEKAalt" || icontype == "NIKO" || icontype == "NIKA" || icontype == "K4T" || icontype == "K4Talt")
 			icon = 'modular_chomp/icons/mob/tallborg/tallrobots-wide.dmi' //CHOMPEDIT: TallBorg, I dunno how to code but i'll love it if someone could change this mess into how TG does it
+			vis_height = 64 // CHOMPedit: sanitizing tile centering for larger sprites.
+			update_transform() // CHOMPedit: sanitizing tile centering for larger sprites.
+		/* //CHOMP Remove START - re use our own sprites. The icontype below is not used.
+		else if(icontype == "MEKA v2") //tallborgs. if anyone can code them not to be a dogborg subtype please do so, but this'll do for now.
+			icon = 'icons/mob/tallborg/tallborg.dmi'
+			vis_height = 64
+			update_transform()*/ //CHOMP Remove END
 		else
 			icon = wideborg_dept
 		return
@@ -204,7 +212,7 @@
 		icon = 'icons/mob/robots_vr.dmi'
 	else if(!(icon_state in vr_icons))
 		icon = original_icon
-
+*/ //CHOMPEdit end
 /mob/living/silicon/robot/proc/ex_reserve_refill()
 	set name = "Refill Extinguisher"
 	set category = "Object"

@@ -19,7 +19,7 @@
 					LANGUAGE_ROOTLOCAL	= 0,
 					LANGUAGE_GUTTER		= 0,
 					LANGUAGE_SCHECHI	= 1,
-					LANGUAGE_EAL		= 1,
+					//LANGUAGE_EAL		= 1, //missed this in my other EAL removal. same reason as before, dont want borgs to lose eal
 					LANGUAGE_SIGN		= 0,
 					LANGUAGE_BIRDSONG	= 1,
 					LANGUAGE_SAGARU		= 1,
@@ -35,9 +35,9 @@
 /obj/item/weapon/robot_module/robot/chound
 	name = "Unity Hound Module"
 	sprites = list(
-					"Kcom" = "kcom",
-					"Raptor V-4.1" = "chraptor",
-					"Borgi" = "borgi"
+					"Kcom" = 			list(SKIN_ICON_STATE = "kcom", SKIN_ICON = 'modular_chomp/icons/mob/widerobot_ch.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
+					"Raptor V-4.1" = 	list(SKIN_ICON_STATE = "chraptor", SKIN_ICON = 'modular_chomp/icons/mob/raptorborg/raptor_ch.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 45),
+					"Borgi" = 			list(SKIN_ICON_STATE = "borgi", SKIN_ICON = 'modular_chomp/icons/mob/widerobot_ch.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32)
 					)
 	channels = list(
 			"Medical" = 1,

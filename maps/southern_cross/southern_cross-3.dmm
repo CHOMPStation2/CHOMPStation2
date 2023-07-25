@@ -21674,6 +21674,9 @@
 	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/industrial/warning,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Library Office"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/dorms)
 "tRd" = (
@@ -26029,7 +26032,7 @@
 "xpa" = (
 /obj/machinery/portable_atmospherics/canister/air,
 /obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Library Office"
+	c_tag = "Deck Three - Substation"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/dorms)
