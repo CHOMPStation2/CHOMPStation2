@@ -84,3 +84,17 @@
   - rscadd: sergal sprites to the xenotech/xenoweave/precursor rig
   kcin2001:
   - bugfix: crisis borg being broken
+2023-07-25:
+  FluffMedic:
+  - imageadd: Teshari now have a precursor rig sprite
+  Raeschen:
+  - bugfix: criminal detected
+  UniquaSa:
+  - rscadd: Unity MEKA is now a thing
+2023-07-26:
+  Raeschen:
+  - rscadd: mgeow
+  - soundadd: mgeow
+  VictorZisthus:
+  - bugfix: Fixed an issue where Promethean's were taking toxins when consuming blood.
+      Eat away at it now!
