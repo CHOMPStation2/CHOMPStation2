@@ -95,3 +95,6 @@
   Raeschen:
   - rscadd: mgeow
   - soundadd: mgeow
+  VictorZisthus:
+  - bugfix: Fixed an issue where Promethean's were taking toxins when consuming blood.
+      Eat away at it now!
