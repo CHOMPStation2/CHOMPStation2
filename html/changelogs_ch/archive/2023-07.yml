@@ -95,6 +95,10 @@
   Raeschen:
   - rscadd: mgeow
   - soundadd: mgeow
+  UniquaSa:
+  - rscadd: Unity NIKA and NIKO has been added
+  - bugfix: Fixed cargo NIKA's eyes and MEKA's eyes when their lights are switched
+      on.
   VictorZisthus:
   - bugfix: Fixed an issue where Promethean's were taking toxins when consuming blood.
       Eat away at it now!
