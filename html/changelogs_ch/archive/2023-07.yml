@@ -105,3 +105,4 @@
 2023-07-27:
   Verkister:
   - bugfix: Fixed grille sprites being jank and ugly
+  - bugfix: fixed missing grille subtype icons
