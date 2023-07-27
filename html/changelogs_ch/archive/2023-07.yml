@@ -102,3 +102,6 @@
   VictorZisthus:
   - bugfix: Fixed an issue where Promethean's were taking toxins when consuming blood.
       Eat away at it now!
+2023-07-27:
+  Verkister:
+  - bugfix: Fixed grille sprites being jank and ugly
