@@ -249,7 +249,7 @@
 					"Cat" = 					list(SKIN_ICON_STATE = "vixserv",SKIN_ICON = 'modular_chomp/icons/mob/catborg/catborg.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32,SKIN_REST_BELLY = 1), //CHOMPEdit
 					"Drake" = 					list(SKIN_ICON_STATE = "drakemine",SKIN_ICON = 'icons/mob/drakeborg/drakeborg_vr.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
 					"Raptor V-4" = 				list(SKIN_ICON_STATE = "serviraptor",SKIN_ICON = 'modular_chomp/icons/mob/raptorborg/raptor.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 45),
-					"Raptor V-4000" = 			list(SKIN_ICON_STATE = "fancyraptor",SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64),
+					"Raptor V-4000" = 			list(SKIN_ICON_STATE = "fancyraptor",SKIN_ICON = 'modular_chomp/icons/mob/raptorborg/raptor.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 45),
 					"MEKA" = 					list(SKIN_ICON_STATE = "mekaserve",SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64), //CHOMPEdit Start - Tallborgs
 					"MEKAalt" = 				list(SKIN_ICON_STATE = "mekaserve_alt",SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64),
 					"NIKO" = 					list(SKIN_ICON_STATE = "mmekaserv",SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64),
