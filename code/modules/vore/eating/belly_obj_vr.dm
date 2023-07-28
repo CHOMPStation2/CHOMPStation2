@@ -533,7 +533,7 @@
 				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
 				I.color = mush_color
 				I.alpha = mush_alpha
-				I.pixel_y = -450 + (450 / max(max_mush, 1) * min(max_mush, owner.nutrition))
+				I.pixel_y = -450 + (450 / max(max_mush, 1) * max(min(max_mush, owner.nutrition), 1))
 				F.add_overlay(I)
 			if(L.liquidbelly_visuals && liquid_overlay && reagents.total_volume)
 				if(digest_mode == DM_HOLD && item_digest_mode == IM_HOLD)
@@ -564,7 +564,7 @@
 				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
 				I.color = mush_color
 				I.alpha = mush_alpha
-				I.pixel_y = -450 + (450 / max(max_mush, 1) * min(max_mush, owner.nutrition))
+				I.pixel_y = -450 + (450 / max(max_mush, 1) * max(min(max_mush, owner.nutrition), 1))
 				F.add_overlay(I)
 			if(L.liquidbelly_visuals && liquid_overlay && reagents.total_volume)
 				var/image/I
@@ -642,7 +642,7 @@
 				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
 				I.color = mush_color
 				I.alpha = mush_alpha
-				I.pixel_y = -450 + (450 / max(max_mush, 1) * min(max_mush, owner.nutrition))
+				I.pixel_y = -450 + (450 / max(max_mush, 1) * max(min(max_mush, owner.nutrition), 1))
 				F.add_overlay(I)
 			if(L.liquidbelly_visuals && liquid_overlay && reagents.total_volume)
 				if(digest_mode == DM_HOLD && item_digest_mode == IM_HOLD)
@@ -672,7 +672,7 @@
 				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
 				I.color = mush_color
 				I.alpha = mush_alpha
-				I.pixel_y = -450 + (450 / max_mush * min(max_mush, owner.nutrition))
+				I.pixel_y = -450 + (450 / max(max_mush, 1) * max(min(max_mush, owner.nutrition), 1))
 				F.add_overlay(I)
 			if(L.liquidbelly_visuals && liquid_overlay && reagents.total_volume)
 				var/image/I
