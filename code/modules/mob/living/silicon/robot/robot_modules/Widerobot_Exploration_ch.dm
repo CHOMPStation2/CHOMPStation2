@@ -29,8 +29,8 @@
 
 /obj/item/weapon/robot_module/robot/exploration
 	sprites = list(
-				"ExploreHound" = "exploration",
-				"ExploreHound V2" = "exploration-v2",
+				"ExploreHound" = 	list(SKIN_ICON_STATE = "exploration", SKIN_ICON = 'modular_chomp/icons/mob/widerobot_exp_ch.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
+				"ExploreHound V2" = list(SKIN_ICON_STATE = "exploration-v2", SKIN_ICON = 'modular_chomp/icons/mob/widerobot_exp_ch.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
 				)
 	can_be_pushed = 0
 /obj/item/weapon/robot_module/robot/exploration/New(var/mob/living/silicon/robot/R)

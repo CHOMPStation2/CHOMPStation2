@@ -440,13 +440,11 @@
 	if(!GLOB.changelog_tgui)
 		GLOB.changelog_tgui = new /datum/changelog()
 	GLOB.changelog_tgui.tgui_interact(usr)
-
-	/*
+	// CHOMPedit END
 	if(prefs.lastchangelog != changelog_hash)
 		prefs.lastchangelog = changelog_hash
 		SScharacter_setup.queue_preferences_save(prefs)
-		winset(src, "rpane.changelog", "background-color=none;font-style=;")
-	*/ // CHOMPedit End
+		// winset(src, "rpane.changelog", "background-color=none;font-style=;") //ChompREMOVE
 
 /mob/verb/observe()
 	set name = "Observe"

@@ -186,9 +186,11 @@ export class Changelog extends Component {
         </p>
         <p>
           {'Visit our wiki '}
-          <a href="https://wiki.vore-station.net/Main_Page">here</a>
+          <a href="https://wiki.chompstation13.net/index.php/Chomp_Station_Wiki">
+            here
+          </a>
           {', check out our discord server '}
-          <a href="https://discord.gg/BaZnwYpAzc">here</a>.
+          <a href="https://discord.com/invite/chompers">here</a>.
         </p>
         {dateDropdown}
       </Section>

@@ -1,7 +1,7 @@
 /obj/structure/grille
 	name = "grille"
 	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor."
-	icon = 'icons/obj/structures_vr.dmi' // VOREStation Edit - New icons
+	icon = 'modular_chomp/icons/obj/structures.dmi' //CHOMPEdit
 	icon_state = "grille"
 	density = TRUE
 	anchored = TRUE

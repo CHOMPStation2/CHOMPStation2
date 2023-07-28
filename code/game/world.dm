@@ -1,5 +1,4 @@
 #define RECOMMENDED_VERSION 513
-
 // CHOMPedit Start - Tracy
 /proc/prof_init()
 	var/lib
@@ -27,10 +26,20 @@
 	debug_log = start_log("[log_path]-debug.log")
 	//VOREStation Edit End
 
-	// CHOMPedit Start - Better Changelogs
-	var/latest_changelog = file("/html/changelogs_ch/archive/" + time2text(world.timeofday, "YYYY-MM") + ".yml")
+	//changelog_hash = md5('html/changelog.html') //used for telling if the changelog has changed recently //Chomp REMOVE
+	//ChompADD Start - Better Changelogs
+	var/latest_changelog = file("html/changelogs_ch/archive/" + time2text(world.timeofday, "YYYY-MM") + ".yml")
 	changelog_hash = fexists(latest_changelog) ? md5(latest_changelog) : 0 //for telling if the changelog has changed recently
-	// CHOMPedit End
+	//Newsfile
+	var/savefile/F = new(NEWSFILE)
+	if(F)
+		var/title
+		F["title"] >> title
+		F["title"] >> title //This is done twice on purpose. For some reason BYOND misses the first read, if performed before the world starts
+		var/body
+		F["body"] >> body
+		servernews_hash = md5("[title]" + "[body]")
+	//ChompADD End
 
 	if(byond_version < RECOMMENDED_VERSION)
 		to_world_log("Your server's byond version does not meet the recommended requirements for this server. Please update BYOND")

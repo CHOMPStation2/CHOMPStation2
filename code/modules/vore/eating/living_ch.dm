@@ -326,3 +326,18 @@
 	set desc = "Toggle liquidbelly fullscreen visual effect."
 	liquidbelly_visuals = !liquidbelly_visuals
 	to_chat(src, "<span class='warning'>Liquidbelly overlays [liquidbelly_visuals ? "enabled" : "disabled"].</span>")
+
+/mob/living/proc/fix_vore_effects()
+	set name = "Fix Vore Effects"
+	set category = "OOC"
+	set desc = "Fix certain vore effects lingering after you've exited a belly."
+
+	if(!isbelly(src.loc))
+		if(alert(src, "Only use this verb if you are affected by certain vore effects outside of a belly, such as muffling or a stuck belly fullscreen.", "Clear Vore Effects", "Continue", "Nevermind") != "Continue")
+			return
+
+		absorbed = FALSE
+		muffled = FALSE
+		clear_fullscreen("belly")
+		clear_fullscreen(ATOM_BELLY_FULLSCREEN)
+		stop_sound_channel(CHANNEL_PREYLOOP)
