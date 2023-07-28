@@ -529,11 +529,11 @@
 			I.color = belly_fullscreen_color4
 			I.alpha = belly_fullscreen_alpha
 			F.add_overlay(I)
-			if(L.liquidbelly_visuals && mush_overlay && owner.nutrition > 0)
+			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0))
 				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
 				I.color = mush_color
 				I.alpha = mush_alpha
-				I.pixel_y = -450 + (450 / max_mush * min(max_mush, owner.nutrition))
+				I.pixel_y = -450 + (450 / max_mush * max(min(max_mush, owner.nutrition), 1))
 				F.add_overlay(I)
 			if(L.liquidbelly_visuals && liquid_overlay && reagents.total_volume)
 				if(digest_mode == DM_HOLD && item_digest_mode == IM_HOLD)
@@ -559,12 +559,12 @@
 			F.add_overlay(image(F.icon, belly_fullscreen+"-2"))
 			F.add_overlay(image(F.icon, belly_fullscreen+"-3"))
 			F.add_overlay(image(F.icon, belly_fullscreen+"-4"))
-			if(L.liquidbelly_visuals && mush_overlay && owner.nutrition > 0)
+			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0))
 				var/image/I
 				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
 				I.color = mush_color
 				I.alpha = mush_alpha
-				I.pixel_y = -450 + (450 / max_mush * min(max_mush, owner.nutrition))
+				I.pixel_y = -450 + (450 / max_mush * max(min(max_mush, owner.nutrition), 1))
 				F.add_overlay(I)
 			if(L.liquidbelly_visuals && liquid_overlay && reagents.total_volume)
 				var/image/I
@@ -638,11 +638,11 @@
 			I.color = belly_fullscreen_color4
 			I.alpha = belly_fullscreen_alpha
 			F.add_overlay(I)
-			if(L.liquidbelly_visuals && mush_overlay && owner.nutrition > 0)
+			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0))
 				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
 				I.color = mush_color
 				I.alpha = mush_alpha
-				I.pixel_y = -450 + (450 / max_mush * min(max_mush, owner.nutrition))
+				I.pixel_y = -450 + (450 / max_mush * max(min(max_mush, owner.nutrition), 1))
 				F.add_overlay(I)
 			if(L.liquidbelly_visuals && liquid_overlay && reagents.total_volume)
 				if(digest_mode == DM_HOLD && item_digest_mode == IM_HOLD)
