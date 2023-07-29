@@ -105,7 +105,7 @@
 	name = "Radiation Immunity"
 	desc = "For whatever reason, be it a more dense build or some quirk of your genetic code, your body is completely immune to radiation."
 	cost = 3
-	var_changes = list("radiation_mod" = 0.0, "rad_removal_mod" = 10, "rad_levels" = list("safe" = 100, "danger_1" = 150, "danger_2" = 200, "danger_3" = 300))
+	var_changes = list("radiation_mod" = 0.0, "rad_removal_mod" = 10, "rad_levels" = list("safe" = 300, "danger_1" = 300, "danger_2" = 300, "danger_3" = 300))
 
 /datum/trait/positive/more_blood
 	name = "Blood Volume, High"
