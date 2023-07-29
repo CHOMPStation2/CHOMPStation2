@@ -242,6 +242,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"mush_color" = selected.mush_color,
 			"mush_alpha" = selected.mush_alpha,
 			"max_mush" = selected.max_mush,
+			"min_mush" = selected.min_mush,
 			"vorespawn_blacklist" = selected.vorespawn_blacklist,
 			"sound_volume" = selected.sound_volume,
 			"affects_voresprite" = selected.affects_vore_sprites,
@@ -381,6 +382,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			selected_list["liq_interacts"]["mush_color"] = selected.mush_color
 			selected_list["liq_interacts"]["mush_alpha"] = selected.mush_alpha
 			selected_list["liq_interacts"]["max_mush"] = selected.max_mush
+			selected_list["liq_interacts"]["min_mush"] = selected.min_mush
 
 		selected_list["show_liq_fullness"] = selected.show_fullness_messages
 		selected_list["liq_messages"] = list()
@@ -1269,6 +1271,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				if(isnum(belly_data["max_mush"]))
 					var/max_mush = belly_data["max_mush"]
 					new_belly.max_mush = CLAMP(max_mush, 0, 6000)
+
+				if(isnum(belly_data["min_mush"]))
+					var/min_mush = belly_data["min_mush"]
+					new_belly.min_mush = CLAMP(min_mush, 0, 100)
 
 				if(isnum(belly_data["liquid_overlay"]))
 					var/new_liquid_overlay = belly_data["liquid_overlay"]
@@ -3024,6 +3030,14 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				return FALSE
 			var/new_new_max_mush = CLAMP(new_max_mush, 0, 6000)
 			host.vore_selected.max_mush = new_new_max_mush
+			host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_min_mush")
+			var/new_min_mush = input(user, "Set custom minimum mush level. 0-100%", "Set Custom Minimum.", host.vore_selected.min_mush) as num|null
+			if(new_min_mush == null)
+				return FALSE
+			var/new_new_min_mush = CLAMP(new_min_mush, 0, 100)
+			host.vore_selected.min_mush = new_new_min_mush
 			host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_liq_purge")

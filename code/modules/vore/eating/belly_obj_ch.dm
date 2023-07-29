@@ -19,6 +19,7 @@
 	var/mush_color = "#664330"						//Nutrition mush overlay color
 	var/mush_alpha = 255							//Mush overlay transparency.
 	var/max_mush = 500								//How much nutrition for full mush overlay
+	var/min_mush = 0								//Manual setting for lowest mush level
 
 	var/nutri_reagent_gen = FALSE					//if belly produces reagent over time using nutrition, needs to be optimized to use subsystem - Jack
 	var/list/generated_reagents = list("water" = 1) //Any number of reagents, the associated value is how many units are generated per process()

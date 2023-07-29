@@ -1711,6 +1711,7 @@ const VoreSelectedBellyLiquidOptions = (props, context) => {
     mush_color,
     mush_alpha,
     max_mush,
+    min_mush,
   } = belly;
 
   return (
@@ -1885,6 +1886,16 @@ const VoreSelectedBellyLiquidOptions = (props, context) => {
                 })
               }
               content={liq_interacts.max_mush}
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Minimum Mush Level">
+            <Button
+              onClick={() =>
+                act('liq_set_attribute', {
+                  liq_attribute: 'b_min_mush',
+                })
+              }
+              content={liq_interacts.min_mush + '%'}
             />
           </LabeledList.Item>
           <LabeledList.Item label="Purge Liquids">
