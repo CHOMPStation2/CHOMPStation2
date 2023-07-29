@@ -266,6 +266,7 @@
 	"mush_color",
 	"mush_alpha",
 	"max_mush",
+	"min_mush",
 	"custom_reagentcolor",
 	"custom_reagentalpha",
 	"gen_cost",
@@ -1655,6 +1656,7 @@
 	dupe.mush_color = mush_color
 	dupe.mush_alpha = mush_alpha
 	dupe.max_mush = max_mush
+	dupe.min_mush = min_mush
 	dupe.custom_reagentcolor = custom_reagentcolor
 	dupe.custom_reagentalpha = custom_reagentalpha
 	dupe.gen_cost = gen_cost
