@@ -18,7 +18,7 @@ opt = argparse.ArgumentParser()
 opt.add_argument('target_dir', help='The location to write changelog files to.')
 opt.add_argument('pr_numb', help='The number of the pull request.')
 opt.add_argument('pr_author', help='The author of the pull request. If specific authors aren\'t specified, the PR author will be used')
-opt.add_argument('pr_body', help='The body of the pull request to parse for changelogs.')
+opt.add_argument('pr_body', help='Name of a .txt file with the pr body to scan')
 
 args = opt.parse_args()
 
@@ -67,7 +67,12 @@ new = 0
 
 # Parse PR body for changelog entries
 print('Reading changelogs...')
-for line in args.pr_body.splitlines():
+f = open(args.pr_body, "r")
+pr_body = f.read()
+f.close()
+
+print('Reading changelogs...')
+for line in pr_body.splitlines():
 	print(f"Checking line '{line}'")
 	if line[:1] == "🆑" or line[:4] == ":cl:": # Find the start of the changelog
 		print("Found opening :cl: tag")
