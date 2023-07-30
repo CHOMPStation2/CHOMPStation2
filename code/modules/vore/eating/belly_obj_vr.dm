@@ -397,7 +397,7 @@
 			recent_sound = TRUE
 
 	if(reagents.total_volume > 0 && !isliving(thing)) //CHOMPAdd
-		reagents.trans_to(thing, reagents.total_volume, 0.1 / (LAZYLEN(contents) ? LAZYLEN(contents) : 1), FALSE) //CHOMPAdd
+		reagents.trans_to(thing, reagents.total_volume * 0.1, 1 / max(LAZYLEN(contents), 1), FALSE) //CHOMPAdd
 	//Messages if it's a mob
 	if(isliving(thing))
 		var/mob/living/M = thing
