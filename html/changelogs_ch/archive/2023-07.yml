@@ -123,3 +123,5 @@
   - rscadd: Added per-belly setting buttons for custom liquid/mush colors and transparency.
   - rscadd: Added a simple vorepanel prey interaction for a basic health/maxhealth
       check.
+  - bugfix: fixed liquidbelly reagents getting erased by swallowed sauce packets and
+      such.
