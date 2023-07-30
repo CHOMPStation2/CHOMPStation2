@@ -34,7 +34,7 @@ jobs:
             html/changelogs_ch \
             ${{ github.event.pull_request.number }} \
             "${{ github.event.pull_request.user.login }}" \
-            ""$PRBODY""
+            '$PRBODY'
           python tools/GenerateChangelog/ss13_genchangelog_ch.py \
             html/changelogs_ch
       - uses: stefanzweifel/git-auto-commit-action@v4
