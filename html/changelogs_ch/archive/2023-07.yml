@@ -115,3 +115,11 @@
 2023-07-30:
   Upstream:
   - rscadd: recolorable fingerless gloves
+  - rscadd: HYPER boxers, briefs
+  - admin: Adds AI reinitialisation/editing in VV menu
+  - admin: '''Triggerable landmarks'' for events'
+  Verkister:
+  - rscadd: Added dynamic belly mush overlay system.
+  - rscadd: Added per-belly setting buttons for custom liquid/mush colors and transparency.
+  - rscadd: Added a simple vorepanel prey interaction for a basic health/maxhealth
+      check.
