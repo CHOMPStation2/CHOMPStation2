@@ -47,10 +47,12 @@
 //-------------------------------------------
 // Standard procs
 //-------------------------------------------
+//ChompADD START
 /obj/vehicle/Initialize()
 	.=..()
 	soundloop = new(list(src), FALSE)
 	return
+//ChompADD END
 
 ///obj/vehicle/New()
 //	..()
@@ -58,7 +60,7 @@
 
 /obj/vehicle/Destroy()
 	QDEL_NULL(riding_datum)
-	QDEL_NULL(soundloop)
+	QDEL_NULL(soundloop) //ChompADD
 	return ..()
 
 //BUCKLE HOOKS
@@ -431,6 +433,7 @@
 	spawn(1) healthcheck()
 	return 1
 
+//ChompADD START
 //----------------------------
 // Engine sounds datum
 //----------------------------
@@ -442,3 +445,5 @@
 	volume = 10
 	exclusive = TRUE
 	volume_chan = VOLUME_CHANNEL_AMBIENCE
+
+//ChompADD END
