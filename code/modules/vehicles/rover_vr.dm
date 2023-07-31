@@ -2,8 +2,8 @@
 //I don't know what the hell I'm doing right now. Please help. Especially with the update_icons stuff. -Joan Risu
 
 /obj/vehicle/train/rover/engine
-	name = "\improper NT T-41LV Humvee"
-	desc = "The corporate market model of the UF T-41LV, a SolGov reconnaissance and exploration vehicle, painted in Nanotrasen blue. Trailers can be latched for transporting heavy equipment, though its performance will noticeably degrade with more than one."
+	name = "\improper NT T-41LV Humvee" //ChompEDIT
+	desc = "The corporate market model of the UF T-41LV, a SolGov reconnaissance and exploration vehicle, painted in Nanotrasen blue. Trailers can be latched for transporting heavy equipment, though its performance will noticeably degrade with more than one." //ChompEDIT
 	icon = 'icons/vore/rover_vr.dmi'
 	icon_state = "rover"
 	light_power = 2 // CHOMPedit: 1 to 2, more light range.
