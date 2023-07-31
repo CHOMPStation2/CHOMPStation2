@@ -1704,6 +1704,14 @@ const VoreSelectedBellyLiquidOptions = (props, context) => {
     liq_msg3,
     liq_msg4,
     liq_msg5,
+    custom_reagentcolor,
+    custom_reagentalpha,
+    liquid_overlay,
+    mush_overlay,
+    mush_color,
+    mush_alpha,
+    max_mush,
+    min_mush,
   } = belly;
 
   return (
@@ -1812,6 +1820,82 @@ const VoreSelectedBellyLiquidOptions = (props, context) => {
               }
               ml={1}
               icon="plus"
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Custom Liquid Color">
+            <LiquidColorInput
+              action_name="b_custom_reagentcolor"
+              value_of={null}
+              back_color={liq_interacts.custom_reagentcolor}
+              name_of="Custom Liquid Color"
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Liquid Overlay">
+            <Button
+              onClick={() =>
+                act('liq_set_attribute', { liq_attribute: 'b_liquid_overlay' })
+              }
+              icon={liq_interacts.liquid_overlay ? 'toggle-on' : 'toggle-off'}
+              selected={liq_interacts.liquid_overlay}
+              content={liq_interacts.liquid_overlay ? 'On' : 'Off'}
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Custom Liquid Alpha">
+            <Button
+              onClick={() =>
+                act('liq_set_attribute', {
+                  liq_attribute: 'b_custom_reagentalpha',
+                })
+              }
+              content={liq_interacts.custom_reagentalpha}
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Fullness Overlay">
+            <Button
+              onClick={() =>
+                act('liq_set_attribute', { liq_attribute: 'b_mush_overlay' })
+              }
+              icon={liq_interacts.mush_overlay ? 'toggle-on' : 'toggle-off'}
+              selected={liq_interacts.mush_overlay}
+              content={liq_interacts.mush_overlay ? 'On' : 'Off'}
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Mush Overlay Color">
+            <LiquidColorInput
+              action_name="b_mush_color"
+              value_of={null}
+              back_color={liq_interacts.mush_color}
+              name_of="Custom Mush Color"
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Mush Overlay Alpha">
+            <Button
+              onClick={() =>
+                act('liq_set_attribute', {
+                  liq_attribute: 'b_mush_alpha',
+                })
+              }
+              content={liq_interacts.mush_alpha}
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Mush Overlay Scaling">
+            <Button
+              onClick={() =>
+                act('liq_set_attribute', {
+                  liq_attribute: 'b_max_mush',
+                })
+              }
+              content={liq_interacts.max_mush}
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Minimum Mush Level">
+            <Button
+              onClick={() =>
+                act('liq_set_attribute', {
+                  liq_attribute: 'b_min_mush',
+                })
+              }
+              content={liq_interacts.min_mush + '%'}
             />
           </LabeledList.Item>
           <LabeledList.Item label="Purge Liquids">
@@ -2629,6 +2713,34 @@ const FeatureColorInput = (props, context) => {
     <Button
       onClick={() => {
         act('set_attribute', { attribute: action_name, val: value_of });
+      }}>
+      <Stack align="center" fill>
+        <Stack.Item>
+          <Box
+            style={{
+              background: back_color.startsWith('#')
+                ? back_color
+                : `#${back_color}`,
+              border: '2px solid white',
+              'box-sizing': 'content-box',
+              height: '11px',
+              width: '11px',
+            }}
+          />
+        </Stack.Item>
+        <Stack.Item>Change {name_of}</Stack.Item>
+      </Stack>
+    </Button>
+  );
+};
+
+const LiquidColorInput = (props, context) => {
+  const { act } = useBackend(context);
+  const { action_name, value_of, back_color, name_of } = props;
+  return (
+    <Button
+      onClick={() => {
+        act('liq_set_attribute', { liq_attribute: action_name, val: value_of });
       }}>
       <Stack align="center" fill>
         <Stack.Item>

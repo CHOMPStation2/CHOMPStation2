@@ -6,12 +6,13 @@ on:
       - master
 
 env:
-  BASENAME: "vorestation"
+  BASENAME: "chompstation"
 
 jobs:
   autochangelog:
     name: Autochangelog
     runs-on: ubuntu-20.04
+    concurrency: autochangelog_group
     if: github.event.pull_request.merged == true
     steps:
       - uses: /actions/checkout@v3
@@ -22,22 +23,34 @@ jobs:
       - name: Ensure +x on CI directory
         run: |
           chmod -R +x ./tools/ci
+          chmod -R +x ./tools/GenerateChangelog/prbody.txt
       - uses: actions/setup-python@v4
         with:
           python-version: '3.7'
+      - name: Write PR body to prbody.txt
+        uses: "DamianReeves/write-file-action@master"
+        with:
+          path: ./tools/GenerateChangelog/prbody.txt
+          write-mode: overwrite
+          contents: '${{ github.event.pull_request.body }}'
       - name: Generate Changelog
         run: |
           pip install pyyaml
-          python tools/GenerateChangelog/ss13_autochangelog.py \
-            html/changelogs \
+          python tools/GenerateChangelog/ss13_autochangelog_ch.py \
+            html/changelogs_ch \
             ${{ github.event.pull_request.number }} \
-            "${{ github.event.pull_request.user.login }}" \
-            "${{ github.event.pull_request.body }}"
-          python tools/GenerateChangelog/ss13_genchangelog.py \
-            html/changelog.html \
-            html/changelogs
+            '${{ github.event.pull_request.user.login }}' \
+            'tools/GenerateChangelog/prbody.txt'
+          python tools/GenerateChangelog/ss13_genchangelog_ch.py \
+            html/changelogs_ch
+      - name: Empty prbody.txt
+        uses: "DamianReeves/write-file-action@master"
+        with:
+          path: ./tools/GenerateChangelog/prbody.txt
+          write-mode: overwrite
+          contents: ' '
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Automatic changelog generation for ${{ github.events.pull_request.number }}
-          branch: ${{ github.events.pull_request.base }}
+          commit_message: Automatic changelog generation for ${{ github.event.pull_request.number }}
+          branch: ${{ github.event.pull_request.base.ref }}
           commit_user_name: Autochangelog Bot

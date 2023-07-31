@@ -545,6 +545,7 @@
 		crystal.unleash()
 		crystal.bound_mob = null
 		crystal.bound_mob = capture_crystal = 0
+		clear_fullscreen(ATOM_BELLY_FULLSCREEN) // CHOMPedit
 		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of [crystal] owned by [crystal.owner]. [ADMIN_FLW(src)]")
 
 	//You've been turned into an item!
@@ -946,8 +947,8 @@
 			var/obj/item/capture_crystal/C = I
 			if(C.bound_mob && (C.bound_mob in C.contents))
 				if(isbelly(C.loc))
-					var/obj/belly/B = C.loc
-					to_chat(C.bound_mob, "<span class= 'notice'>Outside of your crystal, you can see; <B>[B.desc]</B></span>")
+					//var/obj/belly/B = C.loc //CHOMPedit
+					//to_chat(C.bound_mob, "<span class= 'notice'>Outside of your crystal, you can see; <B>[B.desc]</B></span>") //CHOMPedit: moved to modular_chomp capture_crystal.dm
 					to_chat(src, "<span class='notice'>You can taste the the power of command.</span>")
 		// CHOMPedit begin
 		else if(istype(I,/obj/item/device/starcaster_news))

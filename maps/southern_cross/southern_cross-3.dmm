@@ -26029,7 +26029,7 @@
 "xpa" = (
 /obj/machinery/portable_atmospherics/canister/air,
 /obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Library Office"
+	c_tag = "Deck Three - Substation"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/dorms)

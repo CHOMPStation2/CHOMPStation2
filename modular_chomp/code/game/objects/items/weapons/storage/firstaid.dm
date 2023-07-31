@@ -1,6 +1,5 @@
 /obj/item/weapon/storage/firstaid/experimental
 	name = "experimental firstaid kit"
-	color = "#FF3300"
 	icon = 'modular_chomp/icons/obj/storage.dmi'
 	icon_state = "expirmentalaid"
 	starts_with = list(
