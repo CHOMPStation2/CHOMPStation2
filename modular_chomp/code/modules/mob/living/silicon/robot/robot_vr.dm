@@ -73,14 +73,6 @@
 
 /mob/living/silicon/robot/proc/vr_sprite_check()
 	icon = module_sprites[icontype][SKIN_ICON]
-	if (isnull(module_sprites[icontype][SKIN_OFFSET]))
-		pixel_x = 0
-		old_x = 0
-		default_pixel_x = 0
-	else
-		pixel_x = module_sprites[icontype][SKIN_OFFSET]
-		old_x = module_sprites[icontype][SKIN_OFFSET]
-		default_pixel_x = module_sprites[icontype][SKIN_OFFSET]
 
 	if (isnull(module_sprites[icontype][SKIN_HEIGHT]))
 		vis_height = 32

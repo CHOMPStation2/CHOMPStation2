@@ -66,3 +66,66 @@
   - bugfix: fixed a bad MekaSCI iconstate
   - bugfix: fix a bad tallborg icon_state
   - bugfix: '''No shoes'' loadout option is now specie-unrestricted.'
+2023-07-22:
+  FluffMedic:
+  - balance: Made it so hadzardzone and it's alts are less lethal and their safes
+      are more rewarding.
+  kcin2001:
+  - bugfix: pixelshifting not working right on wideborgs
+  - bugfix: boozehound sprite changing not working
+  - rscadd: Added gold tag collar to looty inc.
+  - bugfix: fixed silver tag collar being the wrong item in looty inc.
+2023-07-23:
+  kcin2001:
+  - bugfix: reset module being borg
+2023-07-24:
+  FluffMedic:
+  - bugfix: volcanic tiles not showing up in map edit
+  - rscadd: sergal sprites to the xenotech/xenoweave/precursor rig
+  kcin2001:
+  - bugfix: crisis borg being broken
+2023-07-25:
+  FluffMedic:
+  - imageadd: Teshari now have a precursor rig sprite
+  Raeschen:
+  - bugfix: criminal detected
+  UniquaSa:
+  - rscadd: Unity MEKA is now a thing
+2023-07-26:
+  Raeschen:
+  - rscadd: mgeow
+  - soundadd: mgeow
+  UniquaSa:
+  - rscadd: Unity NIKA and NIKO has been added
+  - bugfix: Fixed cargo NIKA's eyes and MEKA's eyes when their lights are switched
+      on.
+  VictorZisthus:
+  - bugfix: Fixed an issue where Promethean's were taking toxins when consuming blood.
+      Eat away at it now!
+2023-07-27:
+  Verkister:
+  - bugfix: Fixed grille sprites being jank and ugly
+  - bugfix: fixed missing grille subtype icons
+2023-07-28:
+  kcin2001:
+  - bugfix: fancy raptor using wrong sprite
+2023-07-29:
+  Jesseman1:
+  - rscadd: Radiation Immunity positive trait
+2023-07-30:
+  Upstream:
+  - rscadd: recolorable fingerless gloves
+  - rscadd: HYPER boxers, briefs
+  - admin: Adds AI reinitialisation/editing in VV menu
+  - admin: '''Triggerable landmarks'' for events'
+  - rscadd: Adds staves. Craftable from most metal sheets.
+  Verkister:
+  - rscadd: Added dynamic belly mush overlay system.
+  - rscadd: Added per-belly setting buttons for custom liquid/mush colors and transparency.
+  - rscadd: Added a simple vorepanel prey interaction for a basic health/maxhealth
+      check.
+  - bugfix: fixed liquidbelly reagents getting erased by swallowed sauce packets and
+      such.
+2023-07-31:
+  Upstream:
+  - rscadd: 'tweak: Make staves only able to block melee attacks'

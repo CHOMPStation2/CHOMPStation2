@@ -37,7 +37,10 @@
 	sprites = list(
 					"Kcom" = 			list(SKIN_ICON_STATE = "kcom", SKIN_ICON = 'modular_chomp/icons/mob/widerobot_ch.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
 					"Raptor V-4.1" = 	list(SKIN_ICON_STATE = "chraptor", SKIN_ICON = 'modular_chomp/icons/mob/raptorborg/raptor_ch.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 45),
-					"Borgi" = 			list(SKIN_ICON_STATE = "borgi", SKIN_ICON = 'modular_chomp/icons/mob/widerobot_ch.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32)
+					"Borgi" = 			list(SKIN_ICON_STATE = "borgi", SKIN_ICON = 'modular_chomp/icons/mob/widerobot_ch.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
+					"MEKA" = 						list(SKIN_ICON_STATE = "mekaunity", SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64),
+					"NIKO" = 						list(SKIN_ICON_STATE = "mmekaunity", SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64),
+					"NIKA" = 						list(SKIN_ICON_STATE = "fmekaunity", SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64)
 					)
 	channels = list(
 			"Medical" = 1,
