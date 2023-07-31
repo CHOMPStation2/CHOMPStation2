@@ -22734,7 +22734,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/glass/beaker/sulphuric,
 /turf/simulated/wall/r_wall,
 /area/maintenance/disposal)
 "brZ" = (
@@ -35308,7 +35307,7 @@
 /obj/effect/floor_decal/corner/lime/bordercorner,
 /obj/structure/closet/secure_closet/hydroponics,
 /obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Library Starboard";
+	c_tag = "CIV - Hydroponics Starboard";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/hydro,
@@ -76464,12 +76463,6 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/secondary/entry/D2)
-"uXT" = (
-/obj/machinery/camera/network/medbay{
-	c_tag = "MED - Patient Hallway Port"
-	},
-/turf/space,
-/area/space)
 "uYd" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /obj/effect/wingrille_spawn/reinforced,
@@ -138402,7 +138395,7 @@ aaa
 aaa
 aaa
 aaa
-uXT
+aaa
 aaa
 aaa
 aaa

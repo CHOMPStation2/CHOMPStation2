@@ -265,7 +265,7 @@
 		if(alert)
 			for(var/client/X in GLOB.admins)
 				if(X.is_preference_enabled(/datum/client_preference/holder/play_adminhelp_ping))
-					X << 'sound/voice/bcriminal.ogg'
+					X << 'sound/voice/bcriminal.ogg' //ChompEDIT - back to beepsky
 				window_flash(X)
 		//VOREStation Edit end.
 

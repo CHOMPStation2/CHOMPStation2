@@ -532,7 +532,7 @@
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "cobra_hood-inner"
 
-// Special snowflake ears go below here.
+/* // Special snowflake ears go below here. //ChompEDIT - no they don't
 
 /datum/sprite_accessory/ears/molenar_kitsune
 	name = "quintail kitsune ears (Molenar)"
@@ -625,6 +625,7 @@
     desc = ""
     icon_state = "pipears"
     ckeys_allowed = list("phoaly")
+*/ //ChompEDIT END
 
 /datum/sprite_accessory/ears/elf_caprine_colorable
 	name = "Caprine horns with pointy ears, colorable"

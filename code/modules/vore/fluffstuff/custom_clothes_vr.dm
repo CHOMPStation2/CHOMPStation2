@@ -2658,6 +2658,7 @@ Departamental Swimsuits, for general use
 	else
 		item_state = "giantbow_mob"
 	..()
+
 End CHOMP Removal*/
 
 /obj/item/clothing/head/fluff/giantbow	//Public version
@@ -2670,3 +2671,16 @@ End CHOMP Removal*/
 
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "giantbow_mob"
+
+//Halored: Mercury
+
+/* /obj/item/clothing/gloves/ring/material/void_opal/fluff/mercury //Chomp REMOVE Start
+	name = "Mercury's Mate Ring"
+	desc = "A band of void opal, given to Mercury by Lumen"
+
+//satinisle: Parriz Tavakdavi
+
+/obj/item/clothing/suit/storage/toggle/labcoat/fluff/parrizjacket
+	name = "pink crop bomber"
+	desc = "A pink crop bomber jacket that is just barely able to zip up at the front. It has a small Virgo Orbital Research Establishment patch on each shoulder."
+	icon_state = "parriz_jacket" */ //Chomp REMOVE END

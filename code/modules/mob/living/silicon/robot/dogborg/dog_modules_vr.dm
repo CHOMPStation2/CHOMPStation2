@@ -196,9 +196,11 @@
 /obj/item/weapon/reagent_containers/borghypo/hound
 	name = "MediHound hypospray"
 	desc = "An advanced chemical synthesizer and injection system utilizing carrier's reserves, designed for heavy-duty medical equipment."
-	charge_cost = 10
-	reagent_ids = list("inaprovaline", "dexalin", "bicaridine", "kelotane", "anti_toxin", "spaceacillin", "paracetamol")
+//	charge_cost = 10 // CHOMPedit: Water requirement removal.
+	reagent_ids = list("inaprovaline", "tricordrazine", "dexalin", "bicaridine", "kelotane", "anti_toxin", "spaceacillin", "tramadol", "adranol") // CHOMPedit: More chems for Medihound
 	var/datum/matter_synth/water = null
+
+/* CHOMPedit start: Water requirement removal. *
 
 /obj/item/weapon/reagent_containers/borghypo/hound/process() //Recharges in smaller steps and uses the water reserves as well.
 	if(isrobot(loc))
@@ -210,6 +212,8 @@
 					water.use_charge(charge_cost)
 					reagent_volumes[T] = min(reagent_volumes[T] + 1, volume)
 	return 1
+
+* CHOMPedit end: Water requirement removal. */
 
 /obj/item/weapon/reagent_containers/borghypo/hound/lost
 	name = "Hound hypospray"
@@ -534,6 +538,7 @@
 	var/choice = tgui_input_list(M, "Choose your drink!", "Drink Choice", options)
 	if(src && choice && !M.stat && in_range(M,src))
 		icontype = options[choice]
+		selected_icon = module_sprites[icontype][SKIN_ICON_STATE] //CHOMPEdit - sprite selection refactor
 		var/active_sound = 'sound/effects/bubbles.ogg'
 		playsound(src.loc, "[active_sound]", 100, 0, 4)
 		to_chat(M, "<span class='filter_notice'>Your Tank now displays [choice]. Drink up and enjoy!</span>")

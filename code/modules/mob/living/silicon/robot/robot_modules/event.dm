@@ -1,12 +1,14 @@
+//CHOMPNOTE - if upstream edits the sprite lists it will have to be manually copied into our station_vr file, anything else is just read from here
 /* Other, unaffiliated modules */
 
 // The module that borgs on the surface have.  Generally has a lot of useful tools in exchange for questionable loyalty to the crew.
 /obj/item/weapon/robot_module/robot/lost
 	name = "lost robot module"
 	hide_on_manifest = TRUE
-	sprites = list(
+
+	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 					"Drone" = "drone-lost"
-				)
+				)*/ //CHOMPEdit end
 
 /obj/item/weapon/robot_module/robot/lost/New(var/mob/living/silicon/robot/R)
 	..()
@@ -42,10 +44,10 @@
 /obj/item/weapon/robot_module/robot/gravekeeper
 	name = "gravekeeper robot module"
 	hide_on_manifest = TRUE
-	sprites = list(
+	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 					"Drone" = "drone-gravekeeper",
 					"Sleek" = "sleek-gravekeeper"
-				)
+				)*/ //CHOMPEdit end
 
 /obj/item/weapon/robot_module/robot/gravekeeper/New(var/mob/living/silicon/robot/R)
 	..()
@@ -78,7 +80,7 @@
 	var/obj/item/stack/material/cyborg/wood/W = new (src)
 	W.synths = list(wood)
 	src.modules += W
-	
+
 	//CHOMPEdit - "Giving the gravekeeper drone more modules to allow it to actually do it's job."
 	src.modules += new /obj/item/weapon/tool/wirecutters/cyborg(src) //Gotta clear those pesky landmines somehow. Also allows for deconstruction of things in the way!
 	src.modules += new /obj/item/device/multitool(src)
@@ -96,11 +98,11 @@
 	src.modules += new /obj/item/weapon/hand_labeler(src)
 	src.modules += new /obj/item/weapon/stamp(src)
 	src.modules += new /obj/item/weapon/stamp/denied(src)
-	
+
 	var/obj/item/weapon/flame/lighter/zippo/L = new /obj/item/weapon/flame/lighter/zippo(src)
 	L.lit = 1
 	src.modules += L
-	
+
 	var/datum/matter_synth/metal = new /datum/matter_synth/metal(50000)
 	var/datum/matter_synth/glass = new /datum/matter_synth/glass(50000)
 	var/datum/matter_synth/plasteel = new /datum/matter_synth/plasteel(20000)
@@ -136,7 +138,7 @@
 	var/obj/item/stack/material/cyborg/plasteel/PS = new (src)
 	PS.synths = list(plasteel)
 	src.modules += PS
-	
+
 	var/obj/item/stack/tile/wood/cyborg/WT = new /obj/item/stack/tile/wood/cyborg(src)
 	WT.synths = list(wood)
 	src.modules += WT

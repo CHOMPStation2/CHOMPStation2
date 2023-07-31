@@ -61,7 +61,7 @@
 		M.heal_organ_damage(0.2 * removed * volume_mod, 0)	// More 'effective' blood means more usable material.
 		M.adjust_nutrition(20 * removed * volume_mod)
 		M.add_chemical_effect(CE_BLOODRESTORE, 4 * removed)
-		M.adjustToxLoss(removed / 2)	// Still has some water in the form of plasma.
+		//M.adjustToxLoss(removed / 2)	// Still has some water in the form of plasma. | CHOMP EDIT - No. Soda does not kill a prommie, their own blood should not either.
 		return
 
 	if(effective_dose > 5)
