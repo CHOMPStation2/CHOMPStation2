@@ -126,3 +126,6 @@
       check.
   - bugfix: fixed liquidbelly reagents getting erased by swallowed sauce packets and
       such.
+2023-07-31:
+  Upstream:
+  - rscadd: 'tweak: Make staves only able to block melee attacks'
