@@ -52489,10 +52489,13 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "hzO" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/black{
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/tiled/white,
 /area/medical/distillery)
 "hzX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -52825,13 +52828,13 @@
 /turf/simulated/floor/tiled/hydro,
 /area/hallway/primary/seconddeck/ascenter)
 "hIR" = (
-/obj/machinery/atmospherics/pipe/simple/visible/black,
 /obj/effect/floor_decal/borderfloorwhite/corner,
 /obj/effect/floor_decal/corner/paleblue/bordercorner,
 /obj/structure/table/steel,
 /obj/item/weapon/tool/wrench,
 /obj/item/weapon/reagent_containers/glass/beaker/large,
 /obj/item/weapon/reagent_containers/glass/beaker/large,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/white,
 /area/medical/distillery)
 "hJg" = (
@@ -53668,10 +53671,13 @@
 /turf/simulated/floor/grass,
 /area/hallway/primary/seconddeck/fscenter)
 "hXE" = (
-/obj/machinery/atmospherics/pipe/simple/visible/black{
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/tiled/white,
 /area/medical/distillery)
 "hXY" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -54224,14 +54230,11 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "ilR" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/black,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 10
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/white,
 /area/medical/distillery)
 "ini" = (
@@ -58491,9 +58494,6 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/medical/foyer)
 "kCx" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 6
 	},
@@ -69525,9 +69525,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/D3)
 "qKX" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
 /obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/white,
@@ -71255,6 +71252,10 @@
 	},
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 8
+	},
+/obj/item/weapon/extinguisher/atmo{
+	desc = "A heavy duty fire extinguisher meant to fight large fires, this one has tape covering up an Atmospherics symbol, with the word \"Chemistry\" scribbled onto it.";
+	name = "chemistry fire extinguisher"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/distillery)
@@ -77407,8 +77408,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "vyg" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/black,
-/turf/simulated/floor/reinforced,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden,
+/turf/simulated/floor/tiled/white,
 /area/medical/distillery)
 "vyn" = (
 /obj/structure/cable/green{
@@ -78537,13 +78541,13 @@
 /obj/item/clothing/suit/radiation,
 /obj/item/clothing/head/radiation,
 /obj/item/weapon/storage/toolbox/emergency,
-/obj/machinery/atmospherics/pipe/simple/visible/black,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/white,
 /area/medical/distillery)
 "wdx" = (
