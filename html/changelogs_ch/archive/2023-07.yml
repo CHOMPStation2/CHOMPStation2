@@ -129,3 +129,5 @@
 2023-07-31:
   Upstream:
   - rscadd: 'tweak: Make staves only able to block melee attacks'
+  Verkister:
+  - rscadd: Added liquidbelly setting for maximum liquid overlay level.
