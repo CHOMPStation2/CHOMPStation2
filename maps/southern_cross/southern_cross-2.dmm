@@ -26264,15 +26264,22 @@
 "bBL" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/storage/fancy/vials{
-	pixel_x = 5;
+	pixel_x = 6;
 	pixel_y = 5
 	},
-/obj/item/weapon/storage/fancy/vials,
+/obj/item/weapon/storage/fancy/vials{
+	pixel_x = 6
+	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
+	},
+/obj/item/weapon/storage/quickdraw/syringe_case/clotting{
+	name = "clotting syringe case";
+	pixel_x = -7;
+	pixel_y = 3
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/sc/cmo)
@@ -28297,6 +28304,12 @@
 /obj/item/device/defib_kit/compact/combat/loaded,
 /obj/item/weapon/cmo_disk_holder,
 /obj/item/device/denecrotizer/medical,
+/obj/item/weapon/storage/quickdraw/syringe_case/clonemed{
+	name = "clonemed syringe case"
+	},
+/obj/item/weapon/storage/quickdraw/syringe_case/bonemed{
+	name = "bonemed syringe case"
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/sc/cmo)
 "bIL" = (
@@ -44425,6 +44438,7 @@
 /obj/item/bodybag/cryobag{
 	pixel_x = -3
 	},
+/obj/item/weapon/storage/box/bodybags,
 /obj/structure/table/steel,
 /obj/item/device/sleevemate,
 /obj/machinery/light{
@@ -44797,12 +44811,14 @@
 	pixel_x = -3;
 	pixel_y = 2
 	},
+/obj/item/weapon/cane,
 /obj/item/weapon/storage/box/gloves{
 	pixel_x = 4;
 	pixel_y = 4
 	},
-/obj/item/weapon/storage/box/rxglasses,
-/obj/item/weapon/cane,
+/obj/item/weapon/storage/box/rxglasses{
+	pixel_y = 2
+	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/surgery_storage)
 "dtI" = (
@@ -53515,13 +53531,129 @@
 /turf/simulated/floor/grass,
 /area/hallway/primary/seconddeck/fscenter)
 "hWO" = (
-/obj/structure/sink{
-	pixel_y = 16
-	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/structure/table/rack/shelf/steel,
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Surgery Storage";
+	dir = 6
+	},
+/obj/item/weapon/syringe_cartridge{
+	pixel_x = 9;
+	pixel_y = 5
+	},
+/obj/item/weapon/syringe_cartridge{
+	pixel_x = 4;
+	pixel_y = 5
+	},
+/obj/item/weapon/syringe_cartridge{
+	pixel_x = -4;
+	pixel_y = 5
+	},
+/obj/item/weapon/syringe_cartridge{
+	pixel_y = 5
+	},
+/obj/item/weapon/syringe_cartridge{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/weapon/syringe_cartridge{
+	pixel_x = 7;
+	pixel_y = 5
+	},
+/obj/item/weapon/syringe_cartridge{
+	pixel_x = 3;
+	pixel_y = 5
+	},
+/obj/item/weapon/syringe_cartridge{
+	pixel_x = 12;
+	pixel_y = 5
+	},
+/obj/item/weapon/syringe_cartridge{
+	pixel_x = 10;
+	pixel_y = 5
+	},
+/obj/item/weapon/syringe_cartridge{
+	pixel_x = 6;
+	pixel_y = 5
+	},
+/obj/item/weapon/syringe_cartridge{
+	pixel_x = 2;
+	pixel_y = 5
+	},
+/obj/item/weapon/syringe_cartridge{
+	pixel_x = -2;
+	pixel_y = 5
+	},
+/obj/item/weapon/syringe_cartridge{
+	pixel_x = -6;
+	pixel_y = 5
+	},
+/obj/item/weapon/gun/launcher/syringe{
+	pixel_y = 4
+	},
+/obj/item/weapon/grenade/chem_grenade{
+	pixel_x = 10;
+	pixel_y = -5
+	},
+/obj/item/weapon/grenade/chem_grenade{
+	pixel_x = 6;
+	pixel_y = -5
+	},
+/obj/item/weapon/grenade/chem_grenade{
+	pixel_x = 2;
+	pixel_y = -5
+	},
+/obj/item/weapon/grenade/chem_grenade{
+	pixel_x = -2;
+	pixel_y = -5
+	},
+/obj/item/weapon/grenade/chem_grenade{
+	pixel_x = -6;
+	pixel_y = -5
+	},
+/obj/item/device/assembly/igniter{
+	pixel_x = -1;
+	pixel_y = -7
+	},
+/obj/item/device/assembly/igniter{
+	pixel_x = -1;
+	pixel_y = -7
+	},
+/obj/item/device/assembly/igniter{
+	pixel_x = -1;
+	pixel_y = -7
+	},
+/obj/item/device/assembly/igniter{
+	pixel_x = -1;
+	pixel_y = -7
+	},
+/obj/item/device/assembly/igniter{
+	pixel_x = -1;
+	pixel_y = -7
+	},
+/obj/item/device/assembly/timer{
+	pixel_x = 6;
+	pixel_y = -7
+	},
+/obj/item/device/assembly/timer{
+	pixel_x = 6;
+	pixel_y = -7
+	},
+/obj/item/device/assembly/timer{
+	pixel_x = 6;
+	pixel_y = -7
+	},
+/obj/item/device/assembly/timer{
+	pixel_x = 6;
+	pixel_y = -7
+	},
+/obj/item/device/assembly/timer{
+	pixel_x = 6;
+	pixel_y = -7
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/surgery_storage)
@@ -77660,9 +77792,17 @@
 /turf/simulated/floor/tiled/white,
 /area/hallway/secondary/seconddeck/research_medical)
 "vIn" = (
-/obj/machinery/camera/network/medbay{
-	c_tag = "MED - Surgery Storage";
-	dir = 8
+/obj/item/weapon/storage/box/brainzsnax{
+	pixel_x = 8;
+	pixel_y = 5
+	},
+/obj/item/weapon/storage/box/brainzsnax/red{
+	pixel_x = 8;
+	pixel_y = 15
+	},
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/surgery_storage)
