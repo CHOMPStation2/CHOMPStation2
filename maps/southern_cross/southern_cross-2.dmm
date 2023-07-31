@@ -26276,9 +26276,9 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
 	},
-/obj/item/weapon/storage/quickdraw/syringe_case/clotting{
-	name = "clotting syringe case";
-	pixel_x = -7;
+/obj/item/weapon/storage/quickdraw/syringe_case/clonemed{
+	name = "clonemed syringe case";
+	pixel_x = -8;
 	pixel_y = 3
 	},
 /turf/simulated/floor/tiled/white,
@@ -28304,12 +28304,6 @@
 /obj/item/device/defib_kit/compact/combat/loaded,
 /obj/item/weapon/cmo_disk_holder,
 /obj/item/device/denecrotizer/medical,
-/obj/item/weapon/storage/quickdraw/syringe_case/clonemed{
-	name = "clonemed syringe case"
-	},
-/obj/item/weapon/storage/quickdraw/syringe_case/bonemed{
-	name = "bonemed syringe case"
-	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/sc/cmo)
 "bIL" = (
