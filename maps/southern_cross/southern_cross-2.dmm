@@ -53590,67 +53590,7 @@
 	pixel_y = 5
 	},
 /obj/item/weapon/gun/launcher/syringe{
-	pixel_y = 4
-	},
-/obj/item/weapon/grenade/chem_grenade{
-	pixel_x = 10;
-	pixel_y = -5
-	},
-/obj/item/weapon/grenade/chem_grenade{
-	pixel_x = 6;
-	pixel_y = -5
-	},
-/obj/item/weapon/grenade/chem_grenade{
-	pixel_x = 2;
-	pixel_y = -5
-	},
-/obj/item/weapon/grenade/chem_grenade{
-	pixel_x = -2;
-	pixel_y = -5
-	},
-/obj/item/weapon/grenade/chem_grenade{
-	pixel_x = -6;
-	pixel_y = -5
-	},
-/obj/item/device/assembly/igniter{
-	pixel_x = -1;
-	pixel_y = -7
-	},
-/obj/item/device/assembly/igniter{
-	pixel_x = -1;
-	pixel_y = -7
-	},
-/obj/item/device/assembly/igniter{
-	pixel_x = -1;
-	pixel_y = -7
-	},
-/obj/item/device/assembly/igniter{
-	pixel_x = -1;
-	pixel_y = -7
-	},
-/obj/item/device/assembly/igniter{
-	pixel_x = -1;
-	pixel_y = -7
-	},
-/obj/item/device/assembly/timer{
-	pixel_x = 6;
-	pixel_y = -7
-	},
-/obj/item/device/assembly/timer{
-	pixel_x = 6;
-	pixel_y = -7
-	},
-/obj/item/device/assembly/timer{
-	pixel_x = 6;
-	pixel_y = -7
-	},
-/obj/item/device/assembly/timer{
-	pixel_x = 6;
-	pixel_y = -7
-	},
-/obj/item/device/assembly/timer{
-	pixel_x = 6;
-	pixel_y = -7
+	pixel_y = -4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/surgery_storage)
