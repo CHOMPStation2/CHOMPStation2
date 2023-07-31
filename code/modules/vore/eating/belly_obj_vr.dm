@@ -262,6 +262,7 @@
 	"reagentid",
 	"reagentcolor",
 	"liquid_overlay",
+	"max_liquid_level",
 	"mush_overlay",
 	"mush_color",
 	"mush_alpha",
@@ -551,7 +552,7 @@
 					I.alpha = custom_reagentalpha
 				else
 					I.alpha = max(150, min(custom_max_volume, 255)) - (255 - belly_fullscreen_alpha)
-				I.pixel_y = -450 + (450 / custom_max_volume * reagents.total_volume)
+				I.pixel_y = -450 + min((450 / custom_max_volume * reagents.total_volume), 450 / 100 * max_liquid_level)
 				F.add_overlay(I)
 			F.update_for_view(L.client.view)
 		else
@@ -585,7 +586,7 @@
 					I.alpha = custom_reagentalpha
 				else
 					I.alpha = max(150, min(custom_max_volume, 255)) - (255 - belly_fullscreen_alpha)
-				I.pixel_y = -450 + (450 / custom_max_volume * reagents.total_volume)
+				I.pixel_y = -450 + min((450 / custom_max_volume * reagents.total_volume), 450 / 100 * max_liquid_level)
 				F.add_overlay(I)
 			F.update_for_view(L.client.view)
 			 //CHOMPEdit End
@@ -664,7 +665,7 @@
 					I.alpha = custom_reagentalpha
 				else
 					I.alpha = max(150, min(custom_max_volume, 255)) - (255 - belly_fullscreen_alpha)
-				I.pixel_y = -450 + (450 / custom_max_volume * reagents.total_volume)
+				I.pixel_y = -450 + min((450 / custom_max_volume * reagents.total_volume), 450 / 100 * max_liquid_level)
 				F.add_overlay(I)
 			F.update_for_view(L.client.view)
 		else
@@ -697,7 +698,7 @@
 					I.alpha = custom_reagentalpha
 				else
 					I.alpha = max(150, min(custom_max_volume, 255)) - (255 - belly_fullscreen_alpha)
-				I.pixel_y = -450 + (450 / custom_max_volume * reagents.total_volume)
+				I.pixel_y = -450 + min((450 / custom_max_volume * reagents.total_volume), 450 / 100 * max_liquid_level)
 				F.add_overlay(I)
 			F.update_for_view(L.client.view)
 			//CHOMPEdit End
@@ -1652,6 +1653,7 @@
 	dupe.reagentid = reagentid
 	dupe.reagentcolor = reagentcolor
 	dupe.liquid_overlay = liquid_overlay
+	dupe.max_liquid_level = max_liquid_level
 	dupe.mush_overlay = mush_overlay
 	dupe.mush_color = mush_color
 	dupe.mush_alpha = mush_alpha

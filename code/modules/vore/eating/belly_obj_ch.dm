@@ -15,6 +15,7 @@
 	var/show_liquids = FALSE //Moved from vorepanel_ch to be a belly var
 	var/show_fullness_messages = FALSE //Moved from vorepanel_ch to be a belly var
 	var/liquid_overlay = TRUE						//Belly-specific liquid overlay toggle
+	var/max_liquid_level = 100						//Custom max level for liquid overlay
 	var/mush_overlay = FALSE						//Toggle for nutrition mush overlay
 	var/mush_color = "#664330"						//Nutrition mush overlay color
 	var/mush_alpha = 255							//Mush overlay transparency.

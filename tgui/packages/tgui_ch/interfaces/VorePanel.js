@@ -1707,6 +1707,7 @@ const VoreSelectedBellyLiquidOptions = (props, context) => {
     custom_reagentcolor,
     custom_reagentalpha,
     liquid_overlay,
+    max_liquid_level,
     mush_overlay,
     mush_color,
     mush_alpha,
@@ -1838,6 +1839,16 @@ const VoreSelectedBellyLiquidOptions = (props, context) => {
               icon={liq_interacts.liquid_overlay ? 'toggle-on' : 'toggle-off'}
               selected={liq_interacts.liquid_overlay}
               content={liq_interacts.liquid_overlay ? 'On' : 'Off'}
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Max Liquid Level">
+            <Button
+              onClick={() =>
+                act('liq_set_attribute', {
+                  liq_attribute: 'b_max_liquid_level',
+                })
+              }
+              content={liq_interacts.max_liquid_level + '%'}
             />
           </LabeledList.Item>
           <LabeledList.Item label="Custom Liquid Alpha">

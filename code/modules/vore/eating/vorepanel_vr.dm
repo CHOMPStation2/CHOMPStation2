@@ -238,6 +238,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"custom_reagentcolor" = selected.custom_reagentcolor,
 			"custom_reagentalpha" = selected.custom_reagentalpha,
 			"liquid_overlay" = selected.liquid_overlay,
+			"max_liquid_level" = selected.max_liquid_level,
 			"mush_overlay" = selected.mush_overlay,
 			"mush_color" = selected.mush_color,
 			"mush_alpha" = selected.mush_alpha,
@@ -378,6 +379,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			selected_list["liq_interacts"]["custom_reagentcolor"] = selected.custom_reagentcolor ? selected.custom_reagentcolor : selected.reagentcolor
 			selected_list["liq_interacts"]["custom_reagentalpha"] = selected.custom_reagentalpha ? selected.custom_reagentalpha : "Default"
 			selected_list["liq_interacts"]["liquid_overlay"] = selected.liquid_overlay
+			selected_list["liq_interacts"]["max_liquid_level"] = selected.max_liquid_level
 			selected_list["liq_interacts"]["mush_overlay"] = selected.mush_overlay
 			selected_list["liq_interacts"]["mush_color"] = selected.mush_color
 			selected_list["liq_interacts"]["mush_alpha"] = selected.mush_alpha
@@ -1282,6 +1284,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						new_belly.liquid_overlay = FALSE
 					if(new_liquid_overlay == 1)
 						new_belly.liquid_overlay = TRUE
+
+				if(isnum(belly_data["max_liquid_level"]))
+					var/max_liquid_level = belly_data["max_liquid_level"]
+					new_belly.max_liquid_level = CLAMP(max_liquid_level, 0, 100)
 
 				if(isnum(belly_data["mush_overlay"]))
 					var/new_mush_overlay = belly_data["mush_overlay"]
@@ -2986,6 +2992,14 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			else
 				host.vore_selected.liquid_overlay = 0
 				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] no longer has liquid overlay enabled.</span>")
+			. = TRUE
+		if("b_max_liquid_level")
+			var/new_max_liquid_level = input(user, "Set custom maximum liquid level. 0-100%", "Set Custom Max Level.", host.vore_selected.max_liquid_level) as num|null
+			if(new_max_liquid_level == null)
+				return FALSE
+			var/new_new_max_liquid_level = CLAMP(new_max_liquid_level, 0, 100)
+			host.vore_selected.max_liquid_level = new_new_max_liquid_level
+			host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_custom_reagentcolor")
 			var/newcolor = input(usr, "Choose custom color for liquid overlay. Cancel for normal reagent color.", "", host.vore_selected.custom_reagentcolor) as color|null
