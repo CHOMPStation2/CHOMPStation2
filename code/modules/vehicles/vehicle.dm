@@ -42,15 +42,25 @@
 	var/load_offset_y = 0		//pixel_y offset for item overlay
 	var/mob_offset_y = 0		//pixel_y offset for mob overlay
 
+	var/datum/looping_sound/idle_carengine/soundloop //CHOMPedit: Looping engine audio.
+
 //-------------------------------------------
 // Standard procs
 //-------------------------------------------
-/obj/vehicle/New()
-	..()
-	//spawn the cell you want in each vehicle
+//ChompADD START
+/obj/vehicle/Initialize()
+	.=..()
+	soundloop = new(list(src), FALSE)
+	return
+//ChompADD END
+
+///obj/vehicle/New()
+//	..()
+//	//spawn the cell you want in each vehicle // CHOMPedit: Commented out in favour of initialize.
 
 /obj/vehicle/Destroy()
 	QDEL_NULL(riding_datum)
+	QDEL_NULL(soundloop) //ChompADD
 	return ..()
 
 //BUCKLE HOOKS
@@ -200,7 +210,8 @@
 	if(on)
 		return FALSE
 	on = 1
-	playsound(src, 'sound/machines/vehicle/ignition.ogg', 50, 1, -3)
+	playsound(src, 'modular_chomp/sound/effects/vehicle/ignition_car.ogg', 60, 2, -2) //CHOMPedit: New sound effects.
+	soundloop.start()
 	set_light(initial(light_range))
 	update_icon()
 	return TRUE
@@ -211,6 +222,8 @@
 	if(!mechanical)
 		return FALSE
 	on = 0
+	playsound(src, 'modular_chomp/sound/effects/vehicle/engine_off.ogg', 60, 2, -2) //CHOMPedit: New sound effects.
+	soundloop.stop()
 	set_light(0)
 	update_icon()
 
@@ -227,6 +240,7 @@
 
 /obj/vehicle/proc/explode()
 	src.visible_message("<font color='red'><B>[src] blows apart!</B></font>", 1)
+	playsound(src, 'modular_chomp/sound/effects/explosions/vehicleexplosion.ogg', 100, 8, 3) //CHOMPedit: New sound effects.
 	var/turf/Tsec = get_turf(src)
 
 	//stuns people who are thrown off a train that has been blown up
@@ -418,3 +432,18 @@
 		new /obj/effect/decal/cleanable/blood/oil(src.loc)
 	spawn(1) healthcheck()
 	return 1
+
+//ChompADD START
+//----------------------------
+// Engine sounds datum
+//----------------------------
+
+/datum/looping_sound/idle_carengine
+	mid_sounds = 'modular_chomp/sound/effects/vehicle/engine_loop.ogg'
+	mid_length = 2.60 SECONDS
+	chance = 100
+	volume = 10
+	exclusive = TRUE
+	volume_chan = VOLUME_CHANNEL_AMBIENCE
+
+//ChompADD END

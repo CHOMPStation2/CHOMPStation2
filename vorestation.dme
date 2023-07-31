@@ -4771,6 +4771,7 @@
 #include "modular_chomp\code\modules\vore\resizing\resize.dm"
 #include "modular_chomp\code\modules\weapons\melee.dm"
 #include "modular_chomp\code\modules\xenobio\machinery\monkey_processor.dm"
+#include "modular_chomp\maps\overmap\aegis_carrier\aegis_objs.dm"
 #include "modular_chomp\game\objects\effects\spiders.dm"
 #include "modular_chomp\maps\overmap\space_pois\space_areas.dm"
 #include "modular_chomp\maps\overmap\space_pois\space_pois.dm"
