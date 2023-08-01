@@ -14,3 +14,6 @@
   Seris02:
   - qol: improved language scrambling with punctuation, etc
   - bugfix: fixed mech/in-object targetting
+  Verkister:
+  - rscadd: Added support for simple taur bellysprites.
+  - rscadd: Added a bunch of those simple bellysprites.
