@@ -17,3 +17,4 @@
   Verkister:
   - rscadd: Added support for simple taur bellysprites.
   - rscadd: Added a bunch of those simple bellysprites.
+  - bugfix: Fixed another case of certain reagent containers erasing liquidbelly contents.
