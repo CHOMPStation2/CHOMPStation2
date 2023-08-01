@@ -58,7 +58,7 @@
 
 /mob/proc/saypiece_scramble(datum/multilingual_say_piece/SP)
 	if(SP.speaking)
-		return SP.speaking.scramble(SP.message)
+		return SP.speaking.scramble(SP.message, languages) //CHOMPEdit: fix for partial understanding
 	else
 		return stars(SP.message)
 

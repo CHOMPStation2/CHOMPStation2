@@ -4635,6 +4635,7 @@
 #include "modular_chomp\code\modules\mob\holder.dm"
 #include "modular_chomp\code\modules\mob\mob.dm"
 #include "modular_chomp\code\modules\mob\dead\observer\observer.dm"
+#include "modular_chomp\code\modules\mob\language\language.dm"
 #include "modular_chomp\code\modules\mob\living\emote.dm"
 #include "modular_chomp\code\modules\mob\living\living.dm"
 #include "modular_chomp\code\modules\mob\living\carbon\carbon.dm"

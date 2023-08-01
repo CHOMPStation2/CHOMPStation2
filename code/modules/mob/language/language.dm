@@ -44,6 +44,7 @@
 /datum/language
 	var/list/scramble_cache = list()
 
+/* CHOMPEdit: moved to modular_chomp because it was edited so much.
 /datum/language/proc/scramble(var/input, var/list/known_languages)
 	var/understand_chance = 0
 	for(var/datum/language/L in known_languages)
@@ -113,6 +114,7 @@
 		scramble_cache.Cut(1, scramble_cache.len-SCRAMBLE_CACHE_LEN-1)
 
 	return scrambled_text
+*/
 
 /datum/language/proc/format_message(message, verb)
 	return "<span class='message'><span class='[colour]'>[message]</span></span>"
