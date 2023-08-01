@@ -428,7 +428,7 @@
 			M.ai_holder.go_sleep()
 		if(reagents.total_volume > 0 && M.digestable) //CHOMPEdit Start
 			if(digest_mode == DM_DIGEST)
-				reagents.trans_to(M, reagents.total_volume, 0.1 / (LAZYLEN(contents) ? LAZYLEN(contents) : 1), FALSE)
+				reagents.trans_to(M, reagents.total_volume * 0.1, 1 / max(LAZYLEN(contents), 1), FALSE)
 			to_chat(M, "<span class='warning'><B>You splash into a pool of [reagent_name]!</B></span>")
 	else if(count_items_for_sprite) //CHOMPEdit - If this is enabled also update fullness for non-living things
 		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
