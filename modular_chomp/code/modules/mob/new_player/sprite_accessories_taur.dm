@@ -3,6 +3,7 @@
     var/belly_variant_when_loaf = FALSE
     var/fullness_icons = 0
     var/struggle_anim = FALSE
+    var/bellies_icon_path = 'modular_chomp/icons/mob/vore/Taur_Bellies.dmi'
 
 /datum/sprite_accessory/tail/taur/wolf
 	vore_tail_sprite_variant = "N"
