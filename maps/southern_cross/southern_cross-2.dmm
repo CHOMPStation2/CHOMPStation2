@@ -9513,7 +9513,7 @@
 /turf/simulated/floor/tiled,
 /area/ai_monitored/storage/emergency/eva)
 "aCo" = (
-/obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/structure/dispenser/phoron,
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = 24
@@ -81971,6 +81971,8 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/item/weapon/tank/emergency/phoron/double,
+/obj/item/weapon/tank/emergency/phoron/double,
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_monitored/storage/emergency/eva)
 "yiw" = (
