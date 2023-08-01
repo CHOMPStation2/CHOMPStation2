@@ -5,3 +5,4 @@
   - rscadd: Pocket sized double phoron tank (Vox, Customs)
   Seris02:
   - qol: improved language scrambling with punctuation, etc
+  - bugfix: fixed mech/in-object targetting
