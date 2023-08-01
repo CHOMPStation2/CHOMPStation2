@@ -12,6 +12,12 @@
 		cloaks[initial(cloak_type.name)] = cloak_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cloaks))
 
+/datum/gear/double_tank/
+	display_name = "Pocket sized double oxygen tank"
+	path = /obj/item/weapon/tank/emergency/oxygen/double
+	whitelisted = SPECIES_CUSTOM
+	sort_category = "Xenowear"
+
 /datum/gear/double_tank/nitrogen
 	display_name = "Pocket sized double nitrogen tank (Customs)"
 	path = /obj/item/weapon/tank/emergency/nitrogen/double
