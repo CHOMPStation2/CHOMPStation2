@@ -73,8 +73,8 @@ f.close()
 
 print('Reading changelogs...')
 for line in pr_body.splitlines():
-    line = line.replace('"','\\"')
-    #line = line.replace("'","''")
+	line = line.replace('"','\\"')
+	#line = line.replace("'","''")
 	print(f"Checking line '{line}'")
 	if line[:1] == "🆑" or line[:4] == ":cl:": # Find the start of the changelog
 		print("Found opening :cl: tag")
