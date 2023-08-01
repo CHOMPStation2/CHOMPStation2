@@ -83,7 +83,8 @@
 	if(tail_style && istaurtail(tail_style) && tail_style:vore_tail_sprite_variant)
 		var/vs_fullness = vore_fullness_ex["taur belly"]
 		var/loaf_alt = lying && tail_style:belly_variant_when_loaf
-		var/icon/vorebelly_s = new/icon(icon = 'icons/mob/vore/Taur_Bellies.dmi', icon_state = "Taur[tail_style:vore_tail_sprite_variant]-Belly-[vs_fullness][loaf_alt ? " loaf" : (struggle_anim_taur ? "" : " idle")]")
+		var/fullness_icons = min(tail_style.fullness_icons, vs_fullness)
+		var/icon/vorebelly_s = new/icon(icon = 'icons/mob/vore/Taur_Bellies.dmi', icon_state = "Taur[tail_style:vore_tail_sprite_variant]-Belly-[fullness_icons][loaf_alt ? " loaf" : (struggle_anim_taur ? "" : " idle")]")
 		vorebelly_s.Blend(vore_sprite_color["taur belly"], vore_sprite_multiply["taur belly"] ? ICON_MULTIPLY : ICON_ADD)
 		var/image/working = image(vorebelly_s)
 		working.pixel_x = -16
@@ -93,7 +94,7 @@
 	return null
 
 /mob/living/carbon/human/proc/vore_tail_animation()
-	if(!struggle_anim_taur)
+	if(tail_style.struggle_anim && !struggle_anim_taur)
 		struggle_anim_taur = TRUE
 		update_vore_tail_sprite()
 		spawn(12)
