@@ -183,11 +183,11 @@
 		for(var/mob/living/L in contents)
 			if(L.digestable && digest_mode == DM_DIGEST)
 				if(reagents.total_volume)
-					reagents.trans_to(L, reagents.total_volume, 0.1 / (LAZYLEN(contents) ? LAZYLEN(contents) : 1), FALSE)
+					reagents.trans_to(L, reagents.total_volume * 0.1, 1 / max(LAZYLEN(contents), 1), FALSE)
 			vore_fx(L, FALSE, reagents.total_volume)
 		for(var/obj/item/I in contents)
 			if(reagents.total_volume)
-				reagents.trans_to(I, reagents.total_volume, 0.1 / (LAZYLEN(contents) ? LAZYLEN(contents) : 1), FALSE)
+				reagents.trans_to(I, reagents.total_volume * 0.1, 1 / max(LAZYLEN(contents), 1), FALSE)
 
 /obj/belly/proc/GenerateBellyReagents()
 	if(isrobot(owner))
