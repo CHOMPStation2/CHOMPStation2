@@ -1713,6 +1713,7 @@ const VoreSelectedBellyLiquidOptions = (props, context) => {
     mush_alpha,
     max_mush,
     min_mush,
+    item_mush_val,
   } = belly;
 
   return (
@@ -1907,6 +1908,16 @@ const VoreSelectedBellyLiquidOptions = (props, context) => {
                 })
               }
               content={liq_interacts.min_mush + '%'}
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Item Mush Value">
+            <Button
+              onClick={() =>
+                act('liq_set_attribute', {
+                  liq_attribute: 'b_item_mush_val',
+                })
+              }
+              content={liq_interacts.item_mush_val + ' fullness per item'}
             />
           </LabeledList.Item>
           <LabeledList.Item label="Purge Liquids">
