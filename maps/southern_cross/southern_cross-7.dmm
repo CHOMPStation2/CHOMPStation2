@@ -15789,6 +15789,13 @@
 /obj/effect/floor_decal/corner/green/bordercorner{
 	dir = 4
 	},
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	pixel_x = 24;
+	frequency = 1380;
+	id_tag = "exphangar_1";
+	name = "shuttle bay controller";
+	tag_door = "exphangar_1_door"
+	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarone)
 "mtG" = (
