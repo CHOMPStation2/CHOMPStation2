@@ -17,3 +17,6 @@
   - rscadd: Added support for simple taur bellysprites.
   - rscadd: Added a bunch of those simple bellysprites.
   - bugfix: Fixed another case of certain reagent containers erasing liquidbelly contents.
+2023-08-02:
+  Verkister:
+  - admin: Changed Remote LOOC logs to use a different color from normal LOOC logs.
