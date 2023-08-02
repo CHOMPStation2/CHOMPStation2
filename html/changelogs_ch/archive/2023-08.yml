@@ -24,3 +24,4 @@
   - admin: Changed Remote LOOC logs to use a different color from normal LOOC logs.
   - rscadd: Added belly overlay setting for contained items to affect the mush level.
   - bugfix: Fixed belly overlay item mush level not working when starved to 0.
+  - bugfix: fixed drake taur belly bulge alignment.
