@@ -268,6 +268,7 @@
 	"mush_alpha",
 	"max_mush",
 	"min_mush",
+	"item_mush_val",
 	"custom_reagentcolor",
 	"custom_reagentalpha",
 	"gen_cost",
@@ -535,7 +536,8 @@
 				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
 				I.color = mush_color
 				I.alpha = mush_alpha
-				I.pixel_y = -450 + (450 / max(max_mush, 1) * max(min(max_mush, owner.nutrition), 1))
+				var/total_mush_content = owner.nutrition + LAZYLEN(contents) * item_mush_val
+				I.pixel_y = -450 + (450 / max(max_mush, 1) * max(min(max_mush, total_mush_content), 1))
 				if(I.pixel_y < -450 + (450 / 100 * min_mush))
 					I.pixel_y = -450 + (450 / 100 * min_mush)
 				F.add_overlay(I)
@@ -568,7 +570,8 @@
 				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
 				I.color = mush_color
 				I.alpha = mush_alpha
-				I.pixel_y = -450 + (450 / max(max_mush, 1) * max(min(max_mush, owner.nutrition), 1))
+				var/total_mush_content = owner.nutrition + LAZYLEN(contents) * item_mush_val
+				I.pixel_y = -450 + (450 / max(max_mush, 1) * max(min(max_mush, total_mush_content), 1))
 				if(I.pixel_y < -450 + (450 / 100 * min_mush))
 					I.pixel_y = -450 + (450 / 100 * min_mush)
 				F.add_overlay(I)
@@ -648,7 +651,8 @@
 				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
 				I.color = mush_color
 				I.alpha = mush_alpha
-				I.pixel_y = -450 + (450 / max(max_mush, 1) * max(min(max_mush, owner.nutrition), 1))
+				var/total_mush_content = owner.nutrition + LAZYLEN(contents) * item_mush_val
+				I.pixel_y = -450 + (450 / max(max_mush, 1) * max(min(max_mush, total_mush_content), 1))
 				if(I.pixel_y < -450 + (450 / 100 * min_mush))
 					I.pixel_y = -450 + (450 / 100 * min_mush)
 				F.add_overlay(I)
@@ -680,7 +684,8 @@
 				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
 				I.color = mush_color
 				I.alpha = mush_alpha
-				I.pixel_y = -450 + (450 / max(max_mush, 1) * max(min(max_mush, owner.nutrition), 1))
+				var/total_mush_content = owner.nutrition + LAZYLEN(contents) * item_mush_val
+				I.pixel_y = -450 + (450 / max(max_mush, 1) * max(min(max_mush, total_mush_content), 1))
 				if(I.pixel_y < -450 + (450 / 100 * min_mush))
 					I.pixel_y = -450 + (450 / 100 * min_mush)
 				F.add_overlay(I)
@@ -1659,6 +1664,7 @@
 	dupe.mush_alpha = mush_alpha
 	dupe.max_mush = max_mush
 	dupe.min_mush = min_mush
+	dupe.item_mush_val = item_mush_val
 	dupe.custom_reagentcolor = custom_reagentcolor
 	dupe.custom_reagentalpha = custom_reagentalpha
 	dupe.gen_cost = gen_cost
