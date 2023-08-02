@@ -90,6 +90,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 		if(B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.reagents.maximum_volume) //digestion producing reagents
 			var/mob/living/silicon/robot/R = B.owner
 			R.cell.charge += 20*damage_gain
+			B.digest_nutri_gain += offset * (1.5 * damage_gain / difference)
 			B.GenerateBellyReagents_digesting()
 		else
 			var/mob/living/silicon/robot/R = B.owner
@@ -97,7 +98,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	if(offset && damage_gain > 0) // If any different than default weight, multiply the % of offset.
 		if(B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.reagents.maximum_volume) //digestion producing reagents
 			B.owner.adjust_nutrition(offset * (3 * damage_gain / difference) * L.get_digestion_nutrition_modifier() * B.owner.get_digestion_efficiency_modifier()) //Uncertain if balanced fairly, can adjust by multiplier for the cost of reagent, dont go below 1 or else it will result in more nutrition than normal - Jack
-			B.digest_nutri_gain = offset * (1.5 * damage_gain / difference) * L.get_digestion_nutrition_modifier() * B.owner.get_digestion_efficiency_modifier() //for transfering nutrition value over to GenerateBellyReagents_digesting()
+			B.digest_nutri_gain += offset * (1.5 * damage_gain / difference) * L.get_digestion_nutrition_modifier() * B.owner.get_digestion_efficiency_modifier() //for transfering nutrition value over to GenerateBellyReagents_digesting()
 			B.GenerateBellyReagents_digesting()
 		else
 			B.owner.adjust_nutrition(offset * (4.5 * damage_gain / difference) * L.get_digestion_nutrition_modifier() * B.owner.get_digestion_efficiency_modifier()) //4.5 nutrition points per health point. Normal same size 100+100 health prey with average weight would give 900 points if the digestion was instant. With all the size/weight offset taxes plus over time oxyloss+hunger taxes deducted with non-instant digestion, this should be enough to not leave the pred starved.
@@ -223,7 +224,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	B.put_in_egg(H, 1)*/
 
 /datum/digest_mode/egg/handle_atoms(obj/belly/B, list/touchable_atoms)
-	if(B.owner.nutrition < 25) //CHOMPEdit Start
+	if(B.owner.nutrition < 5) //CHOMPEdit Start
 		return
 	var/list/egg_contents = list()
 	for(var/E in touchable_atoms)
@@ -249,7 +250,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 			if(B.egg_type in tf_vore_egg_types)
 				B.egg_path = tf_vore_egg_types[B.egg_type]
 			B.ownegg = new B.egg_path(B)
-			B.owner.adjust_nutrition(-25)
+			B.owner.adjust_nutrition(-5)
 			if(B.ownegg && B.egg_name)
 				B.ownegg.egg_name = B.egg_name
 				B.ownegg.name = B.egg_name //CHOMPEdit End

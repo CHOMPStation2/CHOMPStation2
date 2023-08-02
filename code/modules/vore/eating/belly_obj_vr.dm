@@ -398,7 +398,7 @@
 			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
 			recent_sound = TRUE
 
-	if(reagents.total_volume > 0 && !isliving(thing)) //CHOMPAdd
+	if(reagents.total_volume >= 5 && !isliving(thing)) //CHOMPAdd
 		reagents.trans_to(thing, reagents.total_volume * 0.1, 1 / max(LAZYLEN(contents), 1), FALSE) //CHOMPAdd
 	//Messages if it's a mob
 	if(isliving(thing))
@@ -427,7 +427,7 @@
 		//Stop AI processing in bellies
 		if(M.ai_holder)
 			M.ai_holder.go_sleep()
-		if(reagents.total_volume > 0 && M.digestable) //CHOMPEdit Start
+		if(reagents.total_volume >= 5 && M.digestable) //CHOMPEdit Start
 			if(digest_mode == DM_DIGEST)
 				reagents.trans_to(M, reagents.total_volume * 0.1, 1 / max(LAZYLEN(contents), 1), FALSE)
 			to_chat(M, "<span class='warning'><B>You splash into a pool of [reagent_name]!</B></span>")
