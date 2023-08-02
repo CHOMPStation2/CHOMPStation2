@@ -532,7 +532,7 @@
 			I.color = belly_fullscreen_color4
 			I.alpha = belly_fullscreen_alpha
 			F.add_overlay(I)
-			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0))
+			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0 || (LAZYLEN(contents) * item_mush_val) > 0))
 				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
 				I.color = mush_color
 				I.alpha = mush_alpha
@@ -565,7 +565,7 @@
 			F.add_overlay(image(F.icon, belly_fullscreen+"-2"))
 			F.add_overlay(image(F.icon, belly_fullscreen+"-3"))
 			F.add_overlay(image(F.icon, belly_fullscreen+"-4"))
-			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0))
+			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0 || (LAZYLEN(contents) * item_mush_val) > 0))
 				var/image/I
 				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
 				I.color = mush_color
@@ -647,7 +647,7 @@
 			I.color = belly_fullscreen_color4
 			I.alpha = belly_fullscreen_alpha
 			F.add_overlay(I)
-			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0))
+			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0 || (LAZYLEN(contents) * item_mush_val) > 0))
 				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
 				I.color = mush_color
 				I.alpha = mush_alpha
@@ -679,7 +679,7 @@
 			F.add_overlay(image(F.icon, belly_fullscreen+"-2"))
 			F.add_overlay(image(F.icon, belly_fullscreen+"-3"))
 			F.add_overlay(image(F.icon, belly_fullscreen+"-4"))
-			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0))
+			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0 || (LAZYLEN(contents) * item_mush_val) > 0))
 				var/image/I
 				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
 				I.color = mush_color
