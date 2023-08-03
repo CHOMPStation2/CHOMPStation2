@@ -25,3 +25,6 @@
   - rscadd: Added belly overlay setting for contained items to affect the mush level.
   - bugfix: Fixed belly overlay item mush level not working when starved to 0.
   - bugfix: fixed drake taur belly bulge alignment.
+2023-08-03:
+  Verkister:
+  - bugfix: fixed a bunch of janky mechanics around liquidbelly acid mechanics.
