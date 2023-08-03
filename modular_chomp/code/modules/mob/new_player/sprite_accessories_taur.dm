@@ -210,3 +210,20 @@
 	extra_overlay = "cow_alt_2"
 	vore_tail_sprite_variant = "CowAlt"
 	fullness_icons = 1
+
+/datum/sprite_accessory/tail/taur/ch/bigleggy
+	name = "Big Leggies"
+	icon_state = "bigleggy"
+	extra_overlay = "bigleggy_markings"
+
+/datum/sprite_accessory/tail/taur/ch/bigleggy/canine
+	name = "Big Leggies (Canine Tail)"
+	extra_overlay2 = "bigleggy_canine"
+
+/datum/sprite_accessory/tail/taur/ch/bigleggy/feline
+	name = "Big Leggies (Feline Tail)"
+	extra_overlay2 = "bigleggy_feline"
+
+/datum/sprite_accessory/tail/taur/ch/bigleggy/reptile
+	name = "Big Leggies (Reptile Tail)"
+	extra_overlay2 = "bigleggy_reptile"
