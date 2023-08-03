@@ -179,16 +179,20 @@
 				gen_interval = 0
 			else
 				gen_interval++
-	if(reagents.total_volume && LAZYLEN(contents))
+	if(reagents.total_volume >= 5 && LAZYLEN(contents))
 		SEND_SIGNAL(src, COMSIG_BELLY_UPDATE_VORE_FX, FALSE, reagents.total_volume) // Signals vore_fx() reagents updates.
-		for(var/mob/living/L in contents)
-			if(L.digestable && digest_mode == DM_DIGEST)
+		var/affecting_amt = reagents.total_volume / max(LAZYLEN(contents), 1)
+		if(affecting_amt > 5)
+			affecting_amt = 5
+		if(affecting_amt >= 1)
+			for(var/mob/living/L in contents)
+				if(L.digestable && digest_mode == DM_DIGEST)
+					if(reagents.total_volume)
+						reagents.trans_to(L, affecting_amt, 1, FALSE)
+				vore_fx(L, FALSE, reagents.total_volume)
+			for(var/obj/item/I in contents)
 				if(reagents.total_volume)
-					reagents.trans_to(L, reagents.total_volume * 0.1, 1 / max(LAZYLEN(contents), 1), FALSE)
-			vore_fx(L, FALSE, reagents.total_volume)
-		for(var/obj/item/I in contents)
-			if(reagents.total_volume)
-				reagents.trans_to(I, reagents.total_volume * 0.1, 1 / max(LAZYLEN(contents), 1), FALSE)
+					reagents.trans_to(I, affecting_amt, 1, FALSE)
 
 /obj/belly/proc/GenerateBellyReagents()
 	if(isrobot(owner))
@@ -209,7 +213,7 @@
 			reagents.add_reagent(reagent, generated_reagents[reagent] * digest_nutri_gain / gen_cost)
 	else
 		owner.adjust_nutrition((4.5 * digest_nutri_gain) * owner.get_digestion_efficiency_modifier())
-		digest_nutri_gain = 0
+	digest_nutri_gain = 0
 
 /obj/belly/proc/GenerateBellyReagents_digested()
 	if(reagents.total_volume <= custom_max_volume - 25 * gen_amount)
@@ -218,6 +222,7 @@
 	else
 		for(var/reagent in generated_reagents)
 			reagents.add_reagent(reagent, generated_reagents[reagent] / gen_amount * (custom_max_volume - reagents.total_volume))
+	digest_nutri_gain = 0
 
 //////////////////////////// REAGENT_ABSORB ////////////////////////
 
