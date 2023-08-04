@@ -30627,7 +30627,7 @@
 /obj/machinery/door/airlock/atmos{
 	name = "Riot Control Maintenance";
 	req_access = newlist();
-	req_one_access = list(2,12,24)
+	req_one_access = list(2)
 	},
 /turf/simulated/floor/plating,
 /area/security/riot_control)
