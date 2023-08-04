@@ -1316,33 +1316,33 @@ const VoreSelectedBellyVisuals = (props, context) => {
             back_color="#FFFFFF"
             name_of="Alpha"
           />
-          <LabeledList.Item label="Enable Coloration">
-            <Button
-              onClick={() =>
-                act('set_attribute', { attribute: 'b_colorization_enabled' })
-              }
-              icon={colorization_enabled ? 'toggle-on' : 'toggle-off'}
-              selected={colorization_enabled}
-              content={colorization_enabled ? 'Yes' : 'No'}
-            />
-          </LabeledList.Item>
-          <LabeledList.Item label="Preview Belly">
-            <Button
-              onClick={() =>
-                act('set_attribute', { attribute: 'b_preview_belly' })
-              }
-              content={'Preview'}
-            />
-          </LabeledList.Item>
-          <LabeledList.Item label="Clear Preview">
-            <Button
-              onClick={() =>
-                act('set_attribute', { attribute: 'b_clear_preview' })
-              }
-              content={'Clear'}
-            />
-          </LabeledList.Item>
         </Flex>
+        <LabeledList.Item label="Enable Coloration">
+          <Button
+            onClick={() =>
+              act('set_attribute', { attribute: 'b_colorization_enabled' })
+            }
+            icon={colorization_enabled ? 'toggle-on' : 'toggle-off'}
+            selected={colorization_enabled}
+            content={colorization_enabled ? 'Yes' : 'No'}
+          />
+        </LabeledList.Item>
+        <LabeledList.Item label="Preview Belly">
+          <Button
+            onClick={() =>
+              act('set_attribute', { attribute: 'b_preview_belly' })
+            }
+            content={'Preview'}
+          />
+        </LabeledList.Item>
+        <LabeledList.Item label="Clear Preview">
+          <Button
+            onClick={() =>
+              act('set_attribute', { attribute: 'b_clear_preview' })
+            }
+            content={'Clear'}
+          />
+        </LabeledList.Item>
       </Section>
       <Section>
         <Section title="Vore FX">
