@@ -29,3 +29,7 @@
   Verkister:
   - bugfix: fixed a bunch of janky mechanics around liquidbelly acid mechanics.
   - rscadd: Added Big Leggies.
+2023-08-04:
+  Razgriz1032:
+  - rscadd: Riot control is now rad shielded.
+  - rscdel: Removed maint access and atmos access from riot control atmos door.
