@@ -86,7 +86,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	var/difference = B.owner.size_multiplier / L.size_multiplier
 	if(B.health_impacts_size) //CHOMPEdit - Health probably changed so...
 		B.owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
-	if(isrobot(B.owner))
+	/*if(isrobot(B.owner)) //CHOMPEdit: Borgos can now use nutrition too
 		if(B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.reagents.maximum_volume) //digestion producing reagents
 			var/mob/living/silicon/robot/R = B.owner
 			R.cell.charge += 20*damage_gain
@@ -94,7 +94,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 			B.GenerateBellyReagents_digesting()
 		else
 			var/mob/living/silicon/robot/R = B.owner
-			R.cell.charge += 25*damage_gain
+			R.cell.charge += 25*damage_gain */
 	if(offset && damage_gain > 0) // If any different than default weight, multiply the % of offset.
 		if(B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.reagents.maximum_volume) //digestion producing reagents
 			B.owner.adjust_nutrition(offset * (3 * damage_gain / difference) * L.get_digestion_nutrition_modifier() * B.owner.get_digestion_efficiency_modifier()) //Uncertain if balanced fairly, can adjust by multiplier for the cost of reagent, dont go below 1 or else it will result in more nutrition than normal - Jack
