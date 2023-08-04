@@ -20094,6 +20094,7 @@
 /obj/effect/decal/cleanable/cobweb{
 	icon_state = "cobweb2"
 	},
+/obj/effect/landmark/stardog,
 /turf/simulated/floor/plating,
 /area/maintenance/lower/atmos)
 "aIN" = (
@@ -28685,6 +28686,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
+/obj/effect/landmark/stardog,
 /turf/simulated/floor/plating,
 /area/maintenance/lower/south)
 "bak" = (
@@ -33807,6 +33809,10 @@
 /obj/effect/mouse_hole_spawner,
 /turf/simulated/floor/tiled/techmaint,
 /area/tether/surfacebase/surface_two_hall)
+"ien" = (
+/obj/effect/landmark/stardog,
+/turf/simulated/floor,
+/area/maintenance/lower/north)
 "ilH" = (
 /obj/structure/table/standard,
 /obj/item/weapon/aiModule/reset,
@@ -35487,6 +35493,11 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
+"tYW" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/landmark/stardog,
+/turf/simulated/floor/plating,
+/area/maintenance/lower/rnd)
 "tZD" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -42283,6 +42294,90 @@ aab
 aab
 abn
 abn
+<<<<<<< HEAD
+=======
+acn
+acQ
+adz
+aei
+aeL
+afA
+agt
+ahi
+ahV
+ajd
+akb
+alf
+amk
+agu
+aoq
+apA
+ahn
+arA
+arA
+ahn
+aur
+avn
+avT
+awy
+axa
+axT
+avT
+awY
+ayw
+azq
+azq
+ayw
+byX
+aCr
+ayw
+azq
+ayw
+axR
+axR
+axR
+axR
+awY
+tYW
+aql
+aIP
+aJn
+aJH
+aKf
+aKS
+aLz
+aMm
+aMW
+aNv
+aOj
+aOZ
+aaH
+aPH
+aPH
+aRM
+atz
+auB
+aUm
+aUm
+aUm
+aUm
+aUm
+aUm
+aUm
+aHE
+aHE
+aZV
+aHE
+adt
+abn
+abn
+abn
+abn
+abn
+abn
+abn
+abn
+>>>>>>> dd881251ef... Merge pull request #15167 from Very-Soft/stardog
 abn
 =======
 >>>>>>> 413c0b13d21... Merge pull request #12168 from Very-Soft/anodawun
@@ -45687,7 +45782,7 @@ ann
 ann
 ann
 ann
-auA
+ien
 auy
 ajE
 aAA

@@ -3238,6 +3238,7 @@ no
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
+/obj/effect/landmark/stardog,
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck1/starboardcent)
 "bA" = (
@@ -4911,12 +4912,18 @@ no
 /turf/simulated/floor,
 /area/maintenance/stellardelight/substation/exploration)
 "ey" = (
+<<<<<<< HEAD
 /obj/structure/cable/green{
 	color = "#42038a";
 	icon_state = "1-2"
 	},
 /turf/simulated/wall/bay/purple,
 /area/stellardelight/deck1/exploration)
+=======
+/obj/effect/landmark/stardog,
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck1/portfore)
+>>>>>>> dd881251ef... Merge pull request #15167 from Very-Soft/stardog
 "ez" = (
 /obj/structure/table/reinforced,
 /obj/item/clothing/gloves/sterile/latex,
@@ -7696,6 +7703,7 @@ no
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
+/obj/effect/landmark/stardog,
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck1/portcent)
 "kn" = (
@@ -13155,6 +13163,11 @@ no
 /turf/simulated/floor/tiled/dark,
 /area/security/security_lockerroom)
 "wf" = (
+<<<<<<< HEAD
+=======
+/obj/machinery/alarm/angled,
+/obj/effect/landmark/stardog,
+>>>>>>> dd881251ef... Merge pull request #15167 from Very-Soft/stardog
 /turf/simulated/floor,
 /area/maintenance/security_port)
 "wg" = (
@@ -13682,6 +13695,7 @@ no
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/effect/landmark/stardog,
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck1/starboardfore)
 "xs" = (
@@ -21170,6 +21184,10 @@ no
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/lobby)
+"NO" = (
+/obj/effect/landmark/stardog,
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck1/exploration)
 "NP" = (
 /turf/simulated/wall/bay/r_wall/steel,
 /area/maintenance/stellardelight/deck1/portaft)
@@ -22338,6 +22356,7 @@ no
 	color = "#42038a";
 	icon_state = "1-4"
 	},
+/obj/effect/landmark/stardog,
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck1/starboardaft)
 "QA" = (
@@ -33093,8 +33112,13 @@ BP
 Cc
 gw
 xw
+<<<<<<< HEAD
 vT
 Gy
+=======
+NO
+DX
+>>>>>>> dd881251ef... Merge pull request #15167 from Very-Soft/stardog
 ra
 bD
 vF
@@ -34029,7 +34053,7 @@ dS
 kx
 Zz
 Bb
-cB
+ey
 cB
 cB
 Dj
