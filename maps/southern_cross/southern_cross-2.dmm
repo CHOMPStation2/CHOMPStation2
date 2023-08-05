@@ -78718,6 +78718,8 @@
 /obj/item/weapon/tool/crowbar/red,
 /obj/item/weapon/tool/crowbar/red,
 /obj/item/weapon/storage/firstaid/surgery,
+/obj/item/clothing/suit/straight_jacket,
+/obj/item/clothing/suit/straight_jacket,
 /turf/simulated/floor/tiled/dark,
 /area/medical/surgery_storage)
 "wls" = (

@@ -610,7 +610,7 @@
 				var/actual_brute = T.getBruteLoss() - old_brute
 				var/actual_burn = T.getFireLoss() - old_burn
 				var/damage_gain = actual_brute + actual_burn
-				drain(-25 * damage_gain) //25*total loss as with voreorgan stats.
+				hound.nutrition += 2.5 * damage_gain //drain(-25 * damage_gain) //25*total loss as with voreorgan stats.//CHOMPEdit
 				if(water)
 					water.add_charge(damage_gain)
 				if(T.stat == DEAD)
@@ -698,10 +698,10 @@
 									plastic.add_charge(total_material)
 								if(material == "wood" && wood)
 									wood.add_charge(total_material)
-					drain(-50 * digested)
+					hound.nutrition += 5 * digested //drain(-50 * digested) //CHOMPEdit
 			else if(istype(target,/obj/effect/decal/remains))
 				qdel(target)
-				drain(-100)
+				hound.nutrition += 10 //drain(-100) //CHOMPEdit
 			else
 				items_preserved |= target
 		update_patient()
