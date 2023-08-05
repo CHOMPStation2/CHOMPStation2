@@ -1,9 +1,5 @@
 var/list/obj/machinery/photocopier/faxmachine/allfaxes = list()
-<<<<<<< HEAD
 var/list/admin_departments = list("[using_map.boss_name]", "Solar Central Government", "Central Command Job Boards", "Supply") // YW EDIT
-=======
-var/list/admin_departments = list("[using_map.boss_name]", "Virgo-Prime Governmental Authority", "Virgo-Erigonne Job Boards", "Supply")
->>>>>>> 212d1fba68... Merge pull request #15197 from Runa-Dacino/faxbuttonwhatcouldgowrong
 var/list/alldepartments = list()
 var/global/last_fax_role_request
 
@@ -331,13 +327,8 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 	// Sadly, we can't use a switch statement here due to not using a constant value for the current map's centcom name.
 	if(destination == using_map.boss_name)
 		message_admins(sender, "[uppertext(using_map.boss_short)] FAX", rcvdcopy, "CentComFaxReply", "#006100")
-<<<<<<< HEAD
 	else if(destination == "Solar Central Government") // Vorestation Edit //CHOMPedit
 		message_admins(sender, "Solar Central Government FAX", rcvdcopy, "CentComFaxReply", "#1F66A0") // Vorestation Edit //CHOMPedit
-=======
-	else if(destination == "Virgo-Prime Governmental Authority")
-		message_admins(sender, "VIRGO GOVERNMENT FAX", rcvdcopy, "CentComFaxReply", "#1F66A0")
->>>>>>> 212d1fba68... Merge pull request #15197 from Runa-Dacino/faxbuttonwhatcouldgowrong
 	else if(destination == "Supply")
 		message_admins(sender, "[uppertext(using_map.boss_short)] SUPPLY FAX", rcvdcopy, "CentComFaxReply", "#5F4519")
 	else
