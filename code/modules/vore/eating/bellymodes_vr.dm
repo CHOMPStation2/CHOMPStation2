@@ -362,21 +362,20 @@
 	if((mode_flags & DM_FLAG_LEAVEREMAINS) && M.digest_leave_remains)
 		handle_remains_leaving(M)
 	digestion_death(M)
-	//if(!ishuman(owner)) CHOMPremoval. Bad.
+	//if(!ishuman(owner)) CHOMPEdit Start
 	//	owner.update_icons()
-	if(isrobot(owner))
+	/*if(isrobot(owner))
 		var/mob/living/silicon/robot/R = owner
 		if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMPedit: digestion producing reagents
 			R.cell.charge += (nutrition_percent / 100) * compensation * 15 * personal_nutrition_modifier
 			GenerateBellyReagents_digested()
 		else
-			R.cell.charge += (nutrition_percent / 100) * compensation * 25 * personal_nutrition_modifier
+			R.cell.charge += (nutrition_percent / 100) * compensation * 25 * personal_nutrition_modifier*/
+	if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMP digestion producing reagents
+		owner.adjust_nutrition((nutrition_percent / 100) * compensation * 3 * personal_nutrition_modifier)
+		GenerateBellyReagents_digested()
 	else
-		if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMP digestion producing reagents
-			owner.adjust_nutrition((nutrition_percent / 100) * compensation * 3 * personal_nutrition_modifier)
-			GenerateBellyReagents_digested()
-		else
-			owner.adjust_nutrition((nutrition_percent / 100) * compensation * 4.5 * personal_nutrition_modifier * pred_digestion_efficiency) //CHOMPedit end
+		owner.adjust_nutrition((nutrition_percent / 100) * compensation * 4.5 * personal_nutrition_modifier * pred_digestion_efficiency) //CHOMPedit end
 
 /obj/belly/proc/steal_nutrition(mob/living/L)
 	if(L.nutrition >= 100)
