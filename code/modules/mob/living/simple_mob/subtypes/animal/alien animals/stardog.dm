@@ -1311,7 +1311,6 @@
 	var/mob/living/L = null
 	if(isliving(AM))
 		L = AM
-		if(check_prefs && (!L.devourable || !L.allowmobvore))
 			return
 		if(check_keys && !L.ckey)
 			return
