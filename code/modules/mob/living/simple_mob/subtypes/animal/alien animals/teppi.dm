@@ -160,14 +160,11 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 	vore_default_contamination_flavor = "Wet"
 	vore_default_contamination_color = "grey"
 	vore_default_item_mode = IM_DIGEST
-<<<<<<< HEAD
-	can_be_drop_prey = FALSE //CHOMP Add
-=======
 	vore_bump_chance = 5
 	vore_pounce_chance = 35
 	vore_pounce_falloff = 0
 	vore_standing_too = TRUE
->>>>>>> dd881251ef... Merge pull request #15167 from Very-Soft/stardog
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /mob/living/simple_mob/vore/alienanimals/teppi/init_vore()
 	if(!voremob_loaded) //CHOMPEdit
