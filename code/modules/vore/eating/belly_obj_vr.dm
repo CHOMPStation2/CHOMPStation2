@@ -453,6 +453,9 @@
 /obj/belly/Exited(atom/movable/thing, atom/OldLoc)
 	. = ..()
 	thing.exit_belly(src) // CHOMPedit - atom movable proc, does nothing by default. Overridden in children for special behavior.
+	if(isbelly(thing.loc)) //CHOMPEdit
+		if(count_items_for_sprite) //CHOMPEdit
+			owner.update_fullness() //CHOMPEdit
 	if(isliving(thing) && !isbelly(thing.loc))
 		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 		var/mob/living/L = thing
