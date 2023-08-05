@@ -221,7 +221,6 @@
 		list(list("Honleth Highlands A", "Honleth Highlands B")),
 		list("Arynthi Lake Underground A","Arynthi Lake A"),
 		list("Arynthi Lake Underground B","Arynthi Lake B"),
-		list("Eggnog Town Underground","Eggnog Town"),
 		list("Wild West")
 		)
 
@@ -233,14 +232,10 @@
 		list("Teppi Ranch"),
 		list("Innland"),
 		list("Abandoned Island"),
-<<<<<<< HEAD
-		list("Dark Adventure")
-=======
 		list("Dark Adventure"),
 		list("Eggnog Town Underground","Eggnog Town"),
 		list("Star Dog"),
 		list("Hotsprings")
->>>>>>> 7f5e9a3ac0... Merge pull request #15200 from SatinIsle/Warm-rocks
 		)
 
 	lateload_gb_north = list(
@@ -468,9 +463,6 @@
 	name = "Remmi Aerostat - Z1 Aerostat"
 	desc = "The Virgo 2 Aerostat away mission."
 	mappath = 'maps/expedition_vr/aerostat/aerostat.dmm'
-<<<<<<< HEAD
-	associated_map_datum = /datum/map_z_level/common_lateload/away_aerostat
-=======
 	associated_map_datum = /datum/map_z_level/common_lateload/away_aerostat
 
 ////////////////////////////////////////////////////////////////////////
@@ -543,8 +535,6 @@
 	desc = "Wilderness"
 	mappath = 'maps/groundbase/southwilds/southwilds2.dmm'
 	associated_map_datum = /datum/map_z_level/gb_lateload/gb_south_wilds
-<<<<<<< HEAD
-=======
 /datum/map_template/gb_lateload/wilds/south/type3
 	name = "Southern Wilds 3"
 	desc = "Wilderness"
@@ -556,7 +546,6 @@
 	//seed_submaps(list(Z_LEVEL_GB_WILD_S), 6, /area/submap/groundbase/poi/wildvillage/plot/square, /datum/map_template/groundbase/wildvillage/square)	//POI seeding
 	//seed_submaps(list(Z_LEVEL_GB_WILD_S), 2, /area/submap/groundbase/poi/wildvillage/plot/wide, /datum/map_template/groundbase/wildvillage/wide)
 	//seed_submaps(list(Z_LEVEL_GB_WILD_S), 1, /area/submap/groundbase/poi/wildvillage/plot/long, /datum/map_template/groundbase/wildvillage/long)
->>>>>>> 6aa6c45620... Merge pull request #12842 from Heroman3003/poi-guarantee
 
 /datum/map_template/gb_lateload/wilds/east/type1
 	name = "Eastern Wilds 1"
@@ -590,8 +579,3 @@
 */
 
 ////////////////////////////////////////////////////////////////////////
-<<<<<<< HEAD
-
->>>>>>> ae6ecf6fb4... Merge pull request #12817 from Very-Soft/gbwilds
-=======
->>>>>>> 26e29da7c4... Merge pull request #13242 from ItsSelis/selis-multiz

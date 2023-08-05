@@ -27,7 +27,8 @@
 		"logo2" = 50,
 		"gateway" = 5,
 		"youcanttaketheskyfromme" = 200,
-		"intothedark" = 200
+		"intothedark" = 200,
+		"above3b" = 200
 	))
 	if(choice)
 		lobby_screens = list(choice)
@@ -150,7 +151,6 @@
 		list(list("Honleth Highlands A", "Honleth Highlands B")),
 		list("Arynthi Lake Underground A","Arynthi Lake A"),
 		list("Arynthi Lake Underground B","Arynthi Lake B"),
-		list("Eggnog Town Underground","Eggnog Town"),
 		list("Wild West")
 		)
 
@@ -162,14 +162,11 @@
 		list("Teppi Ranch"),
 		list("Innland"),
 		list("Abandoned Island"),
-<<<<<<< HEAD
-		list("Dark Adventure")
-=======
 		list("Dark Adventure"),
 		list("Eggnog Town Underground","Eggnog Town"),
 		list("Star Dog"),
 		list("Hotsprings")
->>>>>>> 7f5e9a3ac0... Merge pull request #15200 from SatinIsle/Warm-rocks
+		list("Star Dog")
 		)
 
 	ai_shell_restricted = TRUE
