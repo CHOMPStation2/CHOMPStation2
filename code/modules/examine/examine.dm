@@ -85,11 +85,7 @@
 
 
 		if(description_holders["info"])
-<<<<<<< HEAD
-			stat(null,"<font color='#6F6FE2'><b>[description_holders["info"]]</b></font>") //Blue, informative text.
-=======
 			stat(null,"<font color=[color_i]><b>[description_holders["info"]]</b></font>") //Blue, informative text.
->>>>>>> d8fed4fa08... Merge pull request #15206 from Runa-Dacino/descinfodarkmode
 		if(description_holders["interactions"])
 			for(var/line in description_holders["interactions"])
 				stat(null, "<font color=[color_i]><b>[line]</b></font>")
