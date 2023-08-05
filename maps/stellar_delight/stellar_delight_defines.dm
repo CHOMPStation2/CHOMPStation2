@@ -159,10 +159,20 @@
 		)
 
 	lateload_redgate = list(
+<<<<<<< HEAD
 		list("Teppi Ranch"),
 		list("Innland"),
 		list("Abandoned Island"),
 		list("Dark Adventure")
+=======
+//		list("Teppi Ranch"),
+//		list("Innland"),
+//		list("Abandoned Island"),
+//		list("Dark Adventure"),
+//		list("Eggnog Town Underground","Eggnog Town"),
+		list("Star Dog")
+//		list("Hotsprings")
+>>>>>>> 682fd5879b... Merge pull request #15211 from Very-Soft/master
 		)
 
 	ai_shell_restricted = TRUE
