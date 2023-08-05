@@ -2,8 +2,6 @@
 	if(the_target && !isturf(the_target.loc) && !ismecha(the_target.loc))    //CHOMPEdit, AI shouldn't be targetting people inside objects of any kind
 		return FALSE
 	return ..()
-<<<<<<< HEAD
-=======
 
 /datum/ai_holder/simple_mob/vore
 	hostile = FALSE
@@ -51,4 +49,3 @@
 		return null
 	give_target(new_target)
 	return new_target
->>>>>>> 355c343dbf... Merge pull request #15203 from Very-Soft/stardog
