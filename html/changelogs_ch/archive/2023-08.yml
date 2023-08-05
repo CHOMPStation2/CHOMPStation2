@@ -53,3 +53,5 @@
       than a summary of the PR's contents. -->
   Verkister:
   - refactor: Reworked how egg belly mode functions.
+  - qol: More borg vore charge gains converted for nutrition. Also new ability verb
+      to check nutrition level.
