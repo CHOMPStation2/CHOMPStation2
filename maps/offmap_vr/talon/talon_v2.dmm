@@ -1572,6 +1572,12 @@
 /obj/random/multiple/corp_crate/talon_cargo,
 /turf/simulated/floor/tiled/techfloor,
 /area/talon_v2/maintenance/wing_starboard)
+"es" = (
+/obj/machinery/light/small,
+/obj/structure/catwalk,
+/obj/effect/landmark/stardog,
+/turf/simulated/floor/plating,
+/area/talon_v2/maintenance/fore_starboard)
 "et" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -8032,6 +8038,7 @@
 "zz" = (
 /obj/structure/catwalk,
 /obj/machinery/light/small,
+/obj/effect/landmark/stardog,
 /turf/simulated/floor/plating,
 /area/talon_v2/maintenance/fore_port)
 "zA" = (
@@ -8187,6 +8194,7 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
+/obj/effect/landmark/stardog,
 /turf/simulated/floor/plating,
 /area/talon_v2/engineering/port_store)
 "Ag" = (
@@ -10369,6 +10377,7 @@
 	dir = 4
 	},
 /obj/structure/closet/walllocker_double/survival/north,
+/obj/effect/landmark/stardog,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/talonboat)
 "Hz" = (
@@ -15462,6 +15471,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/effect/landmark/stardog,
 /turf/simulated/floor/plating,
 /area/talon_v2/engineering/star_store)
 "WV" = (
@@ -29030,7 +29040,7 @@ Sg
 uZ
 rx
 XD
-jr
+es
 Bw
 av
 yJ
