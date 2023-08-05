@@ -36,5 +36,16 @@
   Verkister:
   - qol: Rearranged belly overlay color/preview buttons for better convenience.
 2023-08-05:
+  TheGreatKitsune:
+  - rscadd: Carbonkin will now automatically convert excess dark energy into nutrition,
+      and excess nutrition into dark energy
+  - rscadd: Bellies are now dark for shadekin
+  - rscadd: '<!-- Both :cl:''s are required for the changelog to work! You can put
+      your name to the right of the first :cl: if you want to overwrite your GitHub
+      username as author ingame. -->'
+  - rscadd: <!-- You can use multiple of the same prefix (they're only used for the
+      icon ingame) and delete the unneeded ones. Despite some of the tags, changelogs
+      should generally represent how a player might be affected by the changes rather
+      than a summary of the PR's contents. -->
   Verkister:
   - refactor: Reworked how egg belly mode functions.
