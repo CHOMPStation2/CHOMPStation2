@@ -278,6 +278,11 @@
 	desc = "A comfortable snowy town."
 	mappath = 'maps/redgate/eggnogtownunderground.dmm'
 
+/datum/map_template/common_lateload/redgate/hotsprings
+	name = "Hotsprings"
+	desc = "This place is rather cosy for somewhere so abandoned!"
+	mappath = 'maps/redgate/hotsprings.dmm'
+
 
 //////////////////////////////////////////////////////////////////////////////////////
 // Admin-use z-levels for loading whenever an admin feels like
