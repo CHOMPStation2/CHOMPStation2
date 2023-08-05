@@ -1,4 +1,10 @@
-/mob/living/carbon/human/update_fullness()
+/mob/living/carbon/human/update_fullness(var/returning = FALSE)
+	if(!returning)
+		if(updating_fullness)
+			return
+		updating_fullness = TRUE
+		spawn(2)
+		updating_fullness = FALSE
 	var/previous_stomach_fullness = vore_fullness_ex["stomach"]
 	var/previous_taur_fullness = vore_fullness_ex["taur belly"]
 	//update_vore_tail_sprite()
