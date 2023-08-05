@@ -387,7 +387,7 @@ var/list/ai_verbs_default = list(
 		return
 
 	if(confirm == "Yes")
-		call_shuttle_proc(src)
+		call_shuttle_proc(src) // AI can still call the shuttle they're pretty much Aghost lite, right?
 
 	// hack to display shuttle timer
 	if(emergency_shuttle.online())

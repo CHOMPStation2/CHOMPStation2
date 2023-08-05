@@ -274,13 +274,10 @@
 				return
 
 			//CHOMPEdit Start - Add confirmation message
-			var/response = tgui_alert(usr, "OOC: You are required to Ahelp first before calling the shuttle. Please obtain confirmation from staff before calling the shuttle. \n\n Are you sure you want to call the shuttle?", "Confirm", list("Yes", "No"))
+			var/response = tgui_alert(usr, "OOC: You motherfucker, you thought you could call the shuttle? What a fucking dumbass, you should know we enforce our 6 hour rounds here regardless of the state of the station and you're a dead motherfucker for even considering ending the round before then. Go back to your LRP TG station, you griefing shitler.", "UH OH BOZO", list("Explode"))
 
-			if(response == "Yes") //CHOMPEdit End
-				call_shuttle_proc(usr)
-				if(emergency_shuttle.online())
-					post_status(src, "shuttle", user = usr)
-				setMenuState(usr, COMM_SCREEN_MAIN)
+			if(response == "Explode") //CHOMPEdit End
+				explosion(get_turf(usr), 5, 10, 25, 25, 1)
 
 		if("cancelshuttle")
 			if(isAI(usr) || isrobot(usr))
