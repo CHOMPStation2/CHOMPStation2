@@ -726,8 +726,6 @@
 				result |= get_all_prey_recursive(P, client_check)
 
 	return result
-<<<<<<< HEAD
-=======
 
 /proc/random_color(saturated)	//Returns a random color. If saturated is true, it will avoid pure white or pure black
 	var/r = rand(1,255)
@@ -746,4 +744,3 @@
 
 	var/color = rgb(r, g, b)
 	return color
->>>>>>> dd881251ef... Merge pull request #15167 from Very-Soft/stardog
