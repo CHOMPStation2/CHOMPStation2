@@ -341,3 +341,9 @@
 		clear_fullscreen("belly")
 		clear_fullscreen(ATOM_BELLY_FULLSCREEN)
 		stop_sound_channel(CHANNEL_PREYLOOP)
+
+/mob/living/verb/vore_check_nutrition()
+	set name = "Check Nutrition"
+	set category = "Abilities"
+	set desc = "Check your current nutrition level."
+	to_chat(src, "<span class='notice'>Current nutrition level: [nutrition].</span>")
