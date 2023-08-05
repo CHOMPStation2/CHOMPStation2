@@ -36,6 +36,10 @@
   Verkister:
   - qol: Rearranged belly overlay color/preview buttons for better convenience.
 2023-08-05:
+  FluffMedic:
+  - maptweak: changed SC's maint bar's empety dispenser to a filled one.
+  - maptweak: Added two straight jackets to medical's storage
+  - maptweak: Turned Hydro's caves turrets to buildable ones
   TheGreatKitsune:
   - rscadd: Carbonkin will now automatically convert excess dark energy into nutrition,
       and excess nutrition into dark energy
