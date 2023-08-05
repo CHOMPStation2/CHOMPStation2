@@ -38,9 +38,17 @@
 	SEND_SIGNAL(src, COMSIG_BELLY_UPDATE_PREY_LOOP) // CHOMPedit: signals listening atoms to update prey_loop. May be cancelled by early exit otherwise.
 
 /////////////////////////// Exit Early ////////////////////////////
-	var/list/touchable_atoms = contents - items_preserved
+	var/list/touchable_atoms = contents.Copy() //CHOMPEdit Start
 	for(var/mob/observer/G in touchable_atoms) //CHOMPEdit: don't bother trying to process ghosts.
 		touchable_atoms -= G
+	if(!length(touchable_atoms))
+		return
+	var/datum/digest_mode/DM = GLOB.digest_modes["[digest_mode]"]
+	if(DM == DM_EGG)
+		if(DM.handle_atoms(src, touchable_atoms))
+			updateVRPanels()
+		return
+	touchable_atoms -= items_preserved
 	if(!length(touchable_atoms))
 		return
 
@@ -57,11 +65,10 @@
 
 ///////////////////// Early Non-Mode Handling /////////////////////
 
-	var/datum/digest_mode/DM = GLOB.digest_modes["[digest_mode]"]
 	if(!DM)
 		log_debug("Digest mode [digest_mode] didn't exist in the digest_modes list!!")
 		return FALSE
-	if(DM.handle_atoms(src, touchable_atoms))
+	if(DM.handle_atoms(src, touchable_atoms)) //CHOMPEdit End
 		updateVRPanels()
 		return
 
