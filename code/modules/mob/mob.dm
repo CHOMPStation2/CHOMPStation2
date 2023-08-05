@@ -433,18 +433,18 @@
 /client/verb/changes()
 	set name = "Changelog"
 	set category = "OOC"
-	// CHOMPedit Start - Better Changelog		src << link("https://wiki.vore-station.net/Changelog")
-	//src << browse('html/changelog.html', "window=changes;size=675x650")	
-	//return		/*
+	// CHOMPedit Start - Better Changelog
+	//src << browse('html/changelog.html', "window=changes;size=675x650")
+	//return
 
 	if(prefs.lastchangelog != changelog_hash)
-	if(!GLOB.changelog_tgui)			prefs.lastchangelog = changelog_hash
-		GLOB.changelog_tgui = new /datum/changelog()			SScharacter_setup.queue_preferences_save(prefs)
-	GLOB.changelog_tgui.tgui_interact(usr)			winset(src, "rpane.changelog", "background-color=none;font-style=;")
-	// CHOMPedit END		*/
-	if(prefs.lastchangelog != changelog_hash)	
-		prefs.lastchangelog = changelog_hash	/mob/verb/observe()
-		SScharacter_setup.queue_preferences_save(prefs)		set name = "Observe"
+	if(!GLOB.changelog_tgui)
+		GLOB.changelog_tgui = new /datum/changelog()
+	GLOB.changelog_tgui.tgui_interact(usr)
+	// CHOMPedit END
+	if(prefs.lastchangelog != changelog_hash)
+		prefs.lastchangelog = changelog_hash
+		SScharacter_setup.queue_preferences_save(prefs)
 		// winset(src, "rpane.changelog", "background-color=none;font-style=;") //ChompREMOVE
 
 /mob/verb/observe()
