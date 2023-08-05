@@ -166,7 +166,6 @@
 		list("Eggnog Town Underground","Eggnog Town"),
 		list("Star Dog"),
 		list("Hotsprings")
-		list("Star Dog")
 		)
 
 	ai_shell_restricted = TRUE
