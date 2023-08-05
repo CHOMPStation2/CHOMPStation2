@@ -422,10 +422,6 @@
 					"Traumahound" = "traumavale",
 					"Drake" = "draketrauma",
 					"Borgi" = "borgi-trauma",
-<<<<<<< HEAD
-					"Raptor V-4" = "traumaraptor"
-					)*/ //CHOMPEdit end
-=======
 					"Raptor V-4" = "traumaraptor",
 					"MEKA" = "mekamed",
 					"MEKA v2" = "newmekamed",
@@ -433,8 +429,7 @@
 					"NIKO" = "mmekamed",
 					"K4T" = "k4tmed",
 					"K4Talt" = "k4tmed_alt1"
-					)
->>>>>>> 468f2374ca... Merge pull request #15199 from PastelPrinceDan/traumabutbig
+					)*/ //CHOMPEdit end
 
 /obj/item/weapon/robot_module/robot/medical/traumahound/New(var/mob/living/silicon/robot/R)
 	src.modules += new /obj/item/device/healthanalyzer(src)
