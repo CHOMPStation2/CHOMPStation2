@@ -55,3 +55,5 @@
   - refactor: Reworked how egg belly mode functions.
   - qol: More borg vore charge gains converted for nutrition. Also new ability verb
       to check nutrition level.
+  - bugfix: Fixed belly icons not updating when transfering contents to iconless belly
+      and optimized fullness update call stacking.
