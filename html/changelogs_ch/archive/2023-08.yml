@@ -35,3 +35,6 @@
   - rscdel: Removed maint access and atmos access from riot control atmos door.
   Verkister:
   - qol: Rearranged belly overlay color/preview buttons for better convenience.
+2023-08-05:
+  Verkister:
+  - refactor: Reworked how egg belly mode functions.
