@@ -285,6 +285,32 @@
 	desc = "This place seems broken!"
 	mappath = 'maps/redgate/darkadventure.dmm'
 
+<<<<<<< HEAD
+=======
+
+/datum/map_template/common_lateload/redgate/stardog
+	name = "Star Dog"
+	desc = "That's a big dog!"
+	mappath = 'maps/redgate/stardog.dmm'
+
+#include "../redgate/eggnogtown.dm"
+/datum/map_template/common_lateload/redgate/eggnogtown
+	name = "Eggnog Town"
+	desc = "A comfortable snowy town."
+	mappath = 'maps/redgate/eggnogtown.dmm'
+
+/datum/map_template/common_lateload/redgate/eggnogtownunderground
+	name = "Eggnog Town Underground"
+	desc = "A comfortable snowy town."
+	mappath = 'maps/redgate/eggnogtownunderground.dmm'
+
+/datum/map_template/common_lateload/redgate/hotsprings
+	name = "Hotsprings"
+	desc = "This place is rather cosy for somewhere so abandoned!"
+	mappath = 'maps/redgate/hotsprings.dmm'
+
+
+>>>>>>> 7f5e9a3ac0... Merge pull request #15200 from SatinIsle/Warm-rocks
 //////////////////////////////////////////////////////////////////////////////////////
 // Admin-use z-levels for loading whenever an admin feels like
 #if AWAY_MISSION_TEST

@@ -190,7 +190,14 @@
 		list("Teppi Ranch"),
 		list("Innland"),
 		list("Abandoned Island"),
+<<<<<<< HEAD
 		list("Dark Adventure")
+=======
+		list("Dark Adventure"),
+		list("Eggnog Town Underground","Eggnog Town"),
+		list("Star Dog"),
+		list("Hotsprings")
+>>>>>>> 7f5e9a3ac0... Merge pull request #15200 from SatinIsle/Warm-rocks
 		)
 
 	ai_shell_restricted = TRUE
