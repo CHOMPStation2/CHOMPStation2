@@ -248,7 +248,7 @@
 /obj/structure/grille/broken/rustic
 	icon_state = "grillerustic-b"
 
-
+/* CHOMPEdit - moved this block to modular_chomp\code\game\objects\items\weapons\rcd.dm
 /obj/structure/grille/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
 		if(RCD_WINDOWGRILLE)
@@ -281,6 +281,7 @@
 			WD.anchored = TRUE
 			return TRUE
 	return FALSE
+*/
 
 /obj/structure/grille/take_damage(var/damage)
 	health -= damage

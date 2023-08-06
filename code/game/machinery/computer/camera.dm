@@ -134,8 +134,13 @@ GLOBAL_LIST_EMPTY(entertainment_screens)
 		if(isliving(usr) && Adjacent(usr) && !usr.incapacitated())
 			toggle()
 			visible_message("<b>[usr]</b> toggles [src] [enabled ? "on" : "off"].","You toggle [src] [enabled ? "on" : "off"].", runemessage = "click")
-	else
+	//CHOMPEdit start - Changing click to only come into play when shift or alt clicking. These things are ANNOYING.
+			return
+	if(modifiers["shift"])
 		attack_hand(usr)
+		return
+	..()
+	//CHOMPEdit end
 
 /obj/machinery/computer/security/telescreen/entertainment/update_icon()
 	return // NUH
