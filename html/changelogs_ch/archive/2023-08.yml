@@ -58,6 +58,26 @@
   - bugfix: Fixed belly icons not updating when transfering contents to iconless belly
       and optimized fullness update call stacking.
 2023-08-06:
+  BlackMajor:
+  - qol: RCD's have been given a significant useability tweak, including numerous
+      new construction modes and the capacity to deconstruct way more things.
+  - qol: RCD can now be reloaded with steel/plasteel/glass/reinforced glass/rods/tiles/borosilicate/reinforced
+      borosilicate
+  - qol: RCD can now construct everything a frame can when applied to a wall
+  - qol: RCD can now deconstruct those same wall mounted machines
+  - qol: RCD can now construct/deconstruct firelocks
+  - qol: RCD can now customise an airlock before deploying it
+  - qol: RCD can now construct/deconstruct conveyors
+  - qol: RCD can now place directional glass windows as well as full ones
+  - qol: RCD can now construct/deconstruct windoors
+  - qol: RCD can now place machine/computer frames
+  - qol: RCD will now target the grille/girder on the target turf when in the respective
+      mode instead of doing nothing
+  - rscadd: Added a janitorial holosign projector to the janitorial closet
+  - rscadd: Added an atmospherics holofan projector to the atmospherics lockers
+  - rscadd: Added an advanced RCD to the chief engineers locker
+  - bugfix: Fixed jank involving radial menu scaling and layering. Making them always
+      render at the proper scale, luminosity and plane.
   Verkister:
   - bugfix: fixed belly reagent digestion generation overflow giving 4.5x more nutrition
       than supposed to.
