@@ -920,15 +920,15 @@
 			else
 				to_chat(src, "<span class='notice'>You can taste the flavor of really bad ideas.</span>")
 		else if(istype(I,/obj/item/toy))
-			visible_message("<span class='warning'>[src] demonstrates their voracious capabilities by swallowing [I] whole!</span>")
+			visible_message("<span class='warning'>[src] demonstrates the voracious capabilities of their [lowertext(vore_selected.name)] by making [I] disappear!</span>") //CHOMPEdit
 		else if(istype(I,/obj/item/weapon/bikehorn/tinytether))
 			to_chat(src, "<span class='notice'>You feel a rush of power swallowing such a large, err, tiny structure.</span>")
-			visible_message("<span class='warning'>[src] demonstrates their voracious capabilities by swallowing [I] whole!</span>")
+			visible_message("<span class='warning'>[src] demonstrates the voracious capabilities of their [lowertext(vore_selected.name)] by making [I] disappear!</span>") //CHOMPEdit
 		else if(istype(I,/obj/item/device/mmi/digital/posibrain) || istype(I,/obj/item/device/aicard))
-			visible_message("<span class='warning'>[src] demonstrates their voracious capabilities by swallowing [I] whole!</span>")
+			visible_message("<span class='warning'>[src] demonstrates the voracious capabilities of their [lowertext(vore_selected.name)] by making [I] disappear!</span>") //CHOMPEdit
 			to_chat(src, "<span class='notice'>You can taste the sweet flavor of digital friendship. Or maybe it is something else.</span>")
 		else if(istype(I,/obj/item/device/paicard))
-			visible_message("<span class='warning'>[src] demonstrates their voracious capabilities by swallowing [I] whole!</span>")
+			visible_message("<span class='warning'>[src] demonstrates the voracious capabilities of their [lowertext(vore_selected.name)] by making [I] disappear!</span>") //CHOMPEdit
 			to_chat(src, "<span class='notice'>You can taste the sweet flavor of digital friendship.</span>")
 			var/obj/item/device/paicard/ourcard = I
 			if(ourcard.pai && ourcard.pai.client && isbelly(ourcard.loc))
@@ -941,7 +941,7 @@
 			else
 				to_chat(src, "<span class='notice'>You can taste the flavor of gluttonous waste of food.</span>")
 		else if (istype(I,/obj/item/clothing/accessory/collar))
-			visible_message("<span class='warning'>[src] demonstrates their voracious capabilities by swallowing [I] whole!</span>")
+			visible_message("<span class='warning'>[src] demonstrates the voracious capabilities of their [lowertext(vore_selected.name)] by making [I] disappear!</span>") //CHOMPEdit
 			to_chat(src, "<span class='notice'>You can taste the submissiveness in the wearer of [I]!</span>")
 		else if(iscapturecrystal(I))
 			var/obj/item/capture_crystal/C = I
