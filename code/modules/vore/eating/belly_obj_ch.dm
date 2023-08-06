@@ -213,7 +213,7 @@
 		for(var/reagent in generated_reagents)
 			reagents.add_reagent(reagent, generated_reagents[reagent] * digest_nutri_gain / gen_cost)
 	else
-		owner.adjust_nutrition((4.5 * digest_nutri_gain) * owner.get_digestion_efficiency_modifier())
+		owner.adjust_nutrition(digest_nutri_gain * owner.get_digestion_efficiency_modifier())
 	digest_nutri_gain = 0
 
 /obj/belly/proc/GenerateBellyReagents_digested()
