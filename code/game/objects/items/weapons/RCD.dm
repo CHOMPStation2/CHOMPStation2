@@ -31,7 +31,7 @@
 	var/make_rwalls = FALSE // If true, when building walls, they will be reinforced.
 /* VOREStation Removal - Unused
 /obj/item/weapon/rcd/Initialize()
-	
+
 	src.spark_system = new /datum/effect/effect/system/spark_spread
 	spark_system.set_up(5, 0, src)
 	spark_system.attach(src)
@@ -103,6 +103,10 @@
 		return FALSE
 
 	var/list/rcd_results = A.rcd_values(user, src, modes[mode_index])
+	//CHOMPEdit start
+	if(rcd_results == 1)
+		return FALSE
+	//CHOMPEdit end
 	if(!rcd_results)
 		to_chat(user, span("warning", "\The [src] blinks a red light as you point it towards \the [A], indicating \
 		that it won't work. Try changing the mode, or use it on something else."))

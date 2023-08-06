@@ -365,6 +365,7 @@
 	cover = 60
 	girder_material = "resin"
 
+/* CHOMPEdit - moved this block to modular_chomp\code\game\objects\items\weapons\rcd.dm
 /obj/structure/girder/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
 	var/turf/simulated/T = get_turf(src)
 	if(!istype(T) || T.density)
@@ -413,6 +414,7 @@
 			to_chat(user, span("notice", "You deconstruct \the [src]."))
 			qdel(src)
 			return TRUE
+*/
 
 /obj/structure/girder/bay
 	wall_type = /turf/simulated/wall/bay

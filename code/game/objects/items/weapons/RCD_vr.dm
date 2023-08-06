@@ -64,6 +64,7 @@
 		qdel(effects[A])
 		effects -= A
 
+/* CHOMPEdit - moved this block to modular_chomp\code\game\objects\items\weapons\rcd.dm
 /obj/item/weapon/rcd/attackby(obj/item/weapon/W, mob/user)
 	if(istype(W, /obj/item/weapon/rcd_ammo))
 		var/obj/item/weapon/rcd_ammo/cartridge = W
@@ -82,6 +83,7 @@
 		update_icon()
 		return TRUE
 	return ..()
+*/
 
 /obj/item/weapon/rcd/proc/check_menu(mob/living/user)
 	if(!istype(user))
@@ -106,6 +108,7 @@
 
 	return TRUE
 
+/* CHOMPEdit - moved this block to modular_chomp\code\game\objects\items\weapons\rcd.dm
 /obj/item/weapon/rcd/attack_self(mob/living/user)
 	..()
 	var/list/choices = list(
@@ -170,6 +173,7 @@
 			return
 	playsound(src, 'sound/effects/pop.ogg', 50, FALSE)
 	to_chat(user, "<span class='notice'>You change RCD's mode to '[choice]'.</span>")
+*/
 
 //////////////////
 /obj/item/weapon/rcd/electric/update_icon()
