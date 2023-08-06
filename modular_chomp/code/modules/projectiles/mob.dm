@@ -88,23 +88,55 @@
 	modifier_type_to_apply = /datum/modifier/fire
 	modifier_duration = 6 SECONDS
 	color = "#38b9ff"
+	speed = 2.6
 
 /obj/item/projectile/bullet/pistol/medium/ap/eclipse
 	armor_penetration = 20
 	ricochets = 1
 	ricochets_max = 8
 	ricochet_chance = 100
+	speed = 2.6
 
 /obj/item/projectile/energy/electrode/eclipse
 	damage = 20
 	damage_type = BURN
 	color = "#38b9ff"
+	speed = 2.6
+
+/obj/item/projectile/arc/fragmentation/moth
+	name = "solar mortar"
+	icon_state = "fireball"
+	list/fragment_types = list(
+		/obj/item/projectile/energy/blob/moth, /obj/item/projectile/energy/blob/moth, \
+		/obj/item/projectile/energy/blob/moth, /obj/item/projectile/energy/blob/moth
+		)
+	fragment_amount = 3 // Same as a grenade.
+	spread_range = 7
 
 /obj/item/projectile/beam/sniper/eclipse
 	armor_penetration = 50
-	damage = 30
+	damage = 50
 
 /obj/item/projectile/energy/declone/burn
-	damage = 10
+	damage = 15
 	armor_penetration = 10
 	nodamage = 0
+	speed = 2.6
+	irradiate = 60
+
+/obj/item/projectile/bullet/shotgun/split
+	damage = 15
+	speed = 2.0
+	var/list/fragment_types = list(
+		/obj/item/projectile/bullet/shotgun/slow, /obj/item/projectile/bullet/shotgun/slow, \
+		/obj/item/projectile/bullet/shotgun/slow, /obj/item/projectile/bullet/shotgun/slow
+		)
+	var/fragment_amount = 3 // Same as a grenade.
+	var/spread_range = 7
+
+/obj/item/projectile/bullet/shotgun/split/on_impact(turf/T)
+	fragmentate(T, fragment_amount, spread_range, fragment_types)
+
+
+/obj/item/projectile/bullet/shotgun/slow
+	speed = 2.0
