@@ -53,25 +53,15 @@
 	var/ooc_style = "everyone"
 	if(holder && !holder.fakekey)
 		ooc_style = "elevated"
-<<<<<<< HEAD
-		//YawnWider Block Edit Start
-		if(holder.rights & R_MOD && !(holder.rights & R_BAN)) //Moderator
-=======
 
 		if(holder.rights & R_EVENT) //Retired Admins
 			ooc_style = "event_manager"
 		if(holder.rights & R_ADMIN && !(holder.rights & R_BAN)) //Game Masters
->>>>>>> dc30e2c2f6... Merge pull request #15207 from Runa-Dacino/filter_rlooc
 			ooc_style = "moderator"
 		if(holder.rights & R_DEBUG && !(holder.rights & R_BAN)) //Developers
 			ooc_style = "developer"
 		if(holder.rights & R_ADMIN && holder.rights & R_BAN) //Admins
 			ooc_style = "admin"
-<<<<<<< HEAD
-		//YawnWider Block Edit End
-=======
-
->>>>>>> dc30e2c2f6... Merge pull request #15207 from Runa-Dacino/filter_rlooc
 
 	for(var/client/target in GLOB.clients)
 		if(target.is_preference_enabled(/datum/client_preference/show_ooc))
