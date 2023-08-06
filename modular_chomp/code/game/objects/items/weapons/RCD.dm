@@ -1354,3 +1354,19 @@ rborosilicate = 12
 		qdel(src)
 		return TRUE
 	return FALSE
+
+/obj/machinery/door/window/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+	if(passed_mode == RCD_DECONSTRUCT)
+		return list(
+			RCD_VALUE_MODE = RCD_DECONSTRUCT,
+			RCD_VALUE_DELAY = 3 SECONDS,
+			RCD_VALUE_COST = RCD_SHEETS_PER_MATTER_UNIT * 3
+		)
+	return FALSE
+
+/obj/machinery/door/window/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+	if(passed_mode == RCD_DECONSTRUCT)
+		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		qdel(src)
+		return TRUE
+	return FALSE
