@@ -106,7 +106,7 @@
 /obj/item/projectile/arc/fragmentation/moth
 	name = "solar mortar"
 	icon_state = "fireball"
-	list/fragment_types = list(
+	fragment_types = list(
 		/obj/item/projectile/energy/blob/moth, /obj/item/projectile/energy/blob/moth, \
 		/obj/item/projectile/energy/blob/moth, /obj/item/projectile/energy/blob/moth
 		)
