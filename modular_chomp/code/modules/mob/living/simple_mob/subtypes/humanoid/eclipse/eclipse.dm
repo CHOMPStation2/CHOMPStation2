@@ -131,7 +131,7 @@
 
 /mob/living/simple_mob/humanoid/eclipse/solar/teslanoodle
 	name = "Solar Eclipse Tesla Serpent"
-	desc = "A naga claded in strange orange armor, seemingly guarded from lasers and energy based weaponry."
+	desc = "A naga cladded in strange orange armor, seemingly guarded from lasers and energy based weaponry."
 	health = 100
 	maxHealth = 100
 	icon_state = "eclipse_tesla"
@@ -171,7 +171,7 @@
 
 /mob/living/simple_mob/humanoid/eclipse/solar/snipertesh
 	name = "Solar Eclipse Sniper"
-	desc = "An armroed teshari with a sniper, protected from laser and energy based attacks"
+	desc = "An armrored teshari with a sniper, protected from laser and energy based attacks"
 	health = 50
 	maxHealth = 50
 	movement_cooldown = -1
@@ -253,7 +253,7 @@
 //The lunar mobs, highly resistant to brute based damage.
 /mob/living/simple_mob/humanoid/eclipse/lunar
 	name = "Lunar Eclipse Initiate"
-	desc = "A hungry looking naga, their strange armor protecting them from ballastics and physical weaponry."
+	desc = "A hungry looking naga, their strange armor protecting them from ballistics and physical weaponry."
 
 	armor = list(melee = 75, bullet = 75, laser = -10, energy = -10, bomb = 50, bio = 100, rad = 100) //Lunar members are nigh immune to burns.
 	armor_soak = list(melee = 15, bullet = 15, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0) //15 because every melee weapon has dumb amount of AP
@@ -303,13 +303,13 @@
 	icon_state = "eclipse_shotwuff"
 	icon_living = "eclipse_shotwuff"
 
-	projectiletype = /obj/item/projectile/bullet/shotgun/split
+	projectiletype = /obj/item/projectile/bullet/shotgun/slow
 
 	ranged_attack_delay = 0.5 SECONDS
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm //tesh got a gun
 	name = "Lunar Eclipse Judge"
-	desc = "A teshari wildly weidling a pistol, wearing bullet and sword protective gear."
+	desc = "A teshari wildly wiedling a pistol, wearing bullet and sword protective gear."
 	health = 50
 	maxHealth = 50
 	icon_state = "eclipse_shottesh"
@@ -326,7 +326,7 @@
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/ravanger //Tanky boi. Very deadly melee
 	name = "Lunar Eclipse Ravanger"
-	desc = "An indivual wearing strange armor that seems to be living, and breathing while providing protection from bullets and swords."
+	desc = "An individual wearing strange armor that seems to be living, and breathing while providing protection from bullets and swords."
 	health = 125
 	maxHealth = 125
 	icon_state = "eclipse_ravanger"
@@ -353,7 +353,7 @@
 
 /mob/living/simple_mob/humanoid/eclipse/solar/hellhound
 	name = "Solar Eclipse Hound"
-	desc = "A heavy armored creature, flames dancing around it's burn and energy proof armor."
+	desc = "A heavly armored creature, flames dancing around it's burn and energy proof armor."
 	health = 150
 	maxHealth = 150
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
@@ -374,7 +374,7 @@
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/wheel
 	name = "Lunar Eclipse Armadillo"
-	desc = "A silver armadillo coiled up, and spinning at you, all bullets and close quarters attack bouncing off."
+	desc = "A silver armadillo coiled up, and spinning at you, all bullets and close quarters attacks bouncing off."
 	health = 150
 	maxHealth = 150
 	melee_damage_lower = 10
@@ -471,7 +471,7 @@
 /////////////////
 /mob/living/simple_mob/humanoid/eclipse/solar/guardian
 	name = "Solar Eclipse Guardian"
-	desc = "A squishy bouncy indivual, it seeming to harmlessly absorb lasers and energy in general.."
+	desc = "A squishy bouncy individual, it seeming to harmlessly absorb lasers and energy in general.."
 	projectiletype = /obj/item/projectile/ion
 	icon_state = "eclipse_guardian"
 	icon_living = "eclipse_guardian"

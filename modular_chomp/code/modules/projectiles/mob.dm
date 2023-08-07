@@ -124,19 +124,5 @@
 	speed = 2.6
 	irradiate = 60
 
-/obj/item/projectile/bullet/shotgun/split
-	damage = 15
-	speed = 2.0
-	var/list/fragment_types = list(
-		/obj/item/projectile/bullet/shotgun/slow, /obj/item/projectile/bullet/shotgun/slow, \
-		/obj/item/projectile/bullet/shotgun/slow, /obj/item/projectile/bullet/shotgun/slow
-		)
-	var/fragment_amount = 3 // Same as a grenade.
-	var/spread_range = 7
-
-/obj/item/projectile/bullet/shotgun/split/on_impact(turf/T)
-	fragmentate(T, fragment_amount, spread_range, fragment_types)
-
-
 /obj/item/projectile/bullet/shotgun/slow
 	speed = 2.0
