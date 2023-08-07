@@ -84,3 +84,4 @@
 2023-08-07:
   Verkister:
   - bugfix: Fixed egg mode bug with item digestion/preservation modes.
+  - bugfix: Fixed TF items spitting out visible voice ghosts when despawned via cryo/gateway/etc.
