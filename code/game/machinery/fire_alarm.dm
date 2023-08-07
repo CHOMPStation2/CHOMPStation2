@@ -71,7 +71,7 @@ FIRE ALARM
 	QDEL_NULL(engalarm) // CHOMPEdit: Clearing the loop here too
 	QDEL_NULL(critalarm) // CHOMPEdit: Clearing the loop here too
 	QDEL_NULL(causality) // CHOMPEdit: Clearing the loop here too
-	reset()
+	reset()		//CHOMPEdit alarm needs to go when destroyed
 	return ..()
 
 /obj/machinery/firealarm/proc/offset_alarm()
