@@ -57,7 +57,6 @@ rborosilicate = 12
 			user.drop_from_inventory(W)
 			qdel(W)
 		loaded = 1
-		return TRUE
 	if(istype(W,/obj/item/stack))
 		var/obj/item/stack/S = W
 		if(istype(S,/obj/item/stack/material/glass/phoronrglass))
@@ -88,7 +87,6 @@ rborosilicate = 12
 		var/amount_to_use = min(S.amount, maxsheets)
 		S.use(amount_to_use)
 		stored_matter += value*amount_to_use
-		playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
 		to_chat(user, "<span class='notice'>You insert [amount_to_use] [S.name] sheets into [src]. </span>")
 		return 1
 	to_chat(user, "<span class='warning'>You can't insert any more [S.name] sheets into [src]!</span>")
@@ -1454,7 +1452,7 @@ rborosilicate = 12
 		return TRUE
 	return FALSE
 
-/obj/machinery/button/doorbell/rcd_values/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/button/doorbell/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
