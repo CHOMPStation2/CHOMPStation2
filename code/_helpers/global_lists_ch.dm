@@ -93,7 +93,7 @@ var/global/list/vr_mob_spawner_options = list(
 	"Horse" = /mob/living/simple_mob/vore/horse/big,
 	"Hippo" = /mob/living/simple_mob/vore/hippo,
 	"Sheep" = /mob/living/simple_mob/vore/sheep,
-	"Squirrel" = /mob/living/simple_mob/vore/squirrel/big,
+	"Squirrel" = /mob/living/simple_mob/vore/squirrel,
 	"Red panda" = /mob/living/simple_mob/vore/redpanda,
 	"Fennec" = /mob/living/simple_mob/vore/fennec,
 	"Corgi" = /mob/living/simple_mob/animal/passive/dog/corgi,
@@ -176,5 +176,5 @@ var/global/list/vr_mob_spawner_options = list(
 	"Sobaka" = /mob/living/carbon/human/sharkm,
 	"Farwa" = /mob/living/carbon/human/farwa,
 	"Neaera" = /mob/living/carbon/human/neaera,
-	"Stok" = /mob/living/carbon/human/stok,
+	"Stok" = /mob/living/carbon/human/stok
 	)
