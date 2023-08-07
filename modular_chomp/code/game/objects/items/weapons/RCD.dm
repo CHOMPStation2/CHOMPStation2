@@ -8,8 +8,10 @@
 	var/frame_type = /obj/structure/frame
 	var/wall_frame_type = /obj/machinery/alarm
 	var/window_dir = "FULL"
+	var/emagged = 0
 	window_type = "rglass"
-	modes = list(RCD_FLOORWALL, RCD_AIRLOCK, RCD_WINDOWGRILLE, RCD_DECONSTRUCT, RCD_WINDOOR, RCD_FIRELOCK, RCD_FRAME, RCD_WALLFRAME, RCD_CONVEYOR)
+	var/turret_faction = null
+	modes = list(RCD_FLOORWALL, RCD_AIRLOCK, RCD_WINDOWGRILLE, RCD_DECONSTRUCT, RCD_WINDOOR, RCD_FIRELOCK, RCD_FRAME, RCD_WALLFRAME, RCD_CONVEYOR, RCD_TURRET)
 	var/static/image/radial_image_firelock = image(icon = 'modular_chomp/icons/mob/radial.dmi', icon_state = "firelock")
 	var/static/image/radial_image_windoor = image(icon= 'modular_chomp/icons/mob/radial.dmi', icon_state = "windoor")
 	var/static/image/radial_image_frame = image(icon = 'icons/mob/radial.dmi', icon_state = "machine")
@@ -17,6 +19,10 @@
 	var/static/image/radial_image_access = image(icon = 'icons/mob/radial.dmi', icon_state = "access")
 	var/static/image/radial_image_airlock_type = image(icon = 'icons/mob/radial.dmi', icon_state = "airlocktype")
 	var/static/image/radial_image_conveyor = image(icon = 'modular_chomp/icons/mob/radial.dmi', icon_state = "conveyor")
+	var/static/image/radial_image_turret = image(icon = 'modular_chomp/icons/mob/radial.dmi', icon_state = "turret")
+
+/obj/item/weapon/rcd/advanced
+	can_remove_rwalls = 1
 /*
 Material values
 plasteel = 12
@@ -28,6 +34,13 @@ rglass = 6
 borosilicate = 9
 rborosilicate = 12
 */
+
+/obj/item/weapon/rcd/emag_act(var/remaining_charges, var/mob/user)
+	..()
+	if(!emagged)
+		emagged = 1
+		to_chat(user, span("warning","You short out the safeties on \the [src]'s construction limiter"))
+		return TRUE
 
 /obj/item/weapon/rcd/attackby(obj/item/W, mob/user)
 	var/loaded = 0
@@ -44,7 +57,6 @@ rborosilicate = 12
 			user.drop_from_inventory(W)
 			qdel(W)
 		loaded = 1
-		return TRUE
 	if(istype(W,/obj/item/stack))
 		var/obj/item/stack/S = W
 		if(istype(S,/obj/item/stack/material/glass/phoronrglass))
@@ -75,7 +87,6 @@ rborosilicate = 12
 		var/amount_to_use = min(S.amount, maxsheets)
 		S.use(amount_to_use)
 		stored_matter += value*amount_to_use
-		playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
 		to_chat(user, "<span class='notice'>You insert [amount_to_use] [S.name] sheets into [src]. </span>")
 		return 1
 	to_chat(user, "<span class='warning'>You can't insert any more [S.name] sheets into [src]!</span>")
@@ -96,6 +107,8 @@ rborosilicate = 12
 		"Change Airlock Type" = radial_image_airlock_type,
 		"Conveyors" = radial_image_conveyor
 		)
+	if(emagged)
+		choices["Turrets"] = radial_image_turret
 	var/choice = show_radial_menu(user, user, choices, radius = 42, custom_check = CALLBACK(src, PROC_REF(check_menu), user), tooltips = TRUE)
 	if(!check_menu(user))
 		return
@@ -134,7 +147,8 @@ rborosilicate = 12
 			"Air Alarm" = image(icon = 'modular_chomp/icons/mob/radial.dmi', icon_state = "wallframe"),
 			"Light Bulb" = image(icon = 'modular_chomp/icons/mob/radial.dmi', icon_state = "lightbulb"),
 			"Light Tube" = image(icon = 'modular_chomp/icons/mob/radial.dmi', icon_state = "lighttube"),
-			"Doorbell" = image(icon = 'modular_chomp/icons/mob/radial.dmi', icon_state = "doorbell"),
+			"Doorbell Chime" = image(icon = 'modular_chomp/icons/mob/radial.dmi', icon_state = "doorbell"),
+			"Doorbell Button" = image(icon = 'modular_chomp/icons/mob/radial.dmi', icon_state = "doorbellbutton"),
 			"Status Display" = image(icon = 'modular_chomp/icons/mob/radial.dmi', icon_state = "status"),
 			"Supply Requests Console" = image(icon = 'modular_chomp/icons/mob/radial.dmi', icon_state = "supply"),
 			"ATM" = image(icon = 'modular_chomp/icons/mob/radial.dmi', icon_state = "atm"),
@@ -163,8 +177,10 @@ rborosilicate = 12
 					wall_frame_type = /obj/machinery/light/small
 				if("Light Tube")
 					wall_frame_type = /obj/machinery/light
-				if("Doorbell")
+				if("Doorbell Chime")
 					wall_frame_type = /obj/machinery/doorbell_chime
+				if("Doorbell Button")
+					wall_frame_type = /obj/machinery/button/doorbell
 				if("Status Display")
 					wall_frame_type = /obj/machinery/status_display
 				if("Supply Requests Console")
@@ -209,6 +225,20 @@ rborosilicate = 12
 			return
 		if("Conveyors")
 			mode_index = modes.Find(RCD_CONVEYOR)
+		if("Turrets")
+			var/list/turret_factions = list(
+			"HOSTILE TO ALL" = image(icon = 'modular_chomp/icons/mob/radial.dmi', icon_state = "turret1"),
+			"HOSTILE TO ENEMIES" = image(icon = 'modular_chomp/icons/mob/radial.dmi', icon_state = "turret2")
+			)
+			var/selected_turret_faction = show_radial_menu(user, src, turret_factions, custom_check = CALLBACK(src, .proc/check_menu, user), require_near = ranged?FALSE:TRUE, tooltips = TRUE)
+			if(!check_menu(user))
+				return
+			switch(selected_turret_faction)
+				if("HOSTILE TO ALL")
+					turret_faction = null
+				if("HOSTILE TO ENEMIES")
+					turret_faction = user.faction
+			mode_index = modes.Find(RCD_TURRET)
 		else
 			return
 	playsound(src, 'sound/effects/pop.ogg', 50, FALSE)
@@ -502,6 +532,12 @@ rborosilicate = 12
 				RCD_VALUE_DELAY = 1.5 SECONDS,
 				RCD_VALUE_COST = RCD_SHEETS_PER_MATTER_UNIT * 6
 			)
+		if(RCD_TURRET)
+			return list(
+				RCD_VALUE_MODE = RCD_TURRET,
+				RCD_VALUE_DELAY = 6 SECONDS,
+				RCD_VALUE_COST = RCD_SHEETS_PER_MATTER_UNIT * 10
+			)
 	return FALSE
 
 
@@ -586,7 +622,7 @@ rborosilicate = 12
 			A.autoclose = TRUE
 			return TRUE
 		if(RCD_FIRELOCK)
-			if(locate(/obj/machinery/door/firedoor/glass) in src)
+			if(locate(/obj/machinery/door/firedoor) in src)
 				return FALSE
 			to_chat(user, span("notice", "You build a firelock."))
 			new /obj/machinery/door/firedoor/glass(src)
@@ -657,6 +693,10 @@ rborosilicate = 12
 				if("WEST")
 					C.set_dir(WEST)
 			to_chat(user, span("notice", "You build a conveyor"))
+			return TRUE
+		if(RCD_TURRET)
+			var/obj/machinery/porta_turret/T = new /obj/machinery/porta_turret/rcd(src)
+			T.faction = the_rcd.turret_faction
 			return TRUE
 
 //////////////////////////////////////
@@ -800,6 +840,9 @@ rborosilicate = 12
 				RCD_VALUE_DELAY = 2 SECONDS,
 				RCD_VALUE_COST = RCD_SHEETS_PER_MATTER_UNIT * 1
 			)
+		if(RCD_WINDOWGRILLE)
+			the_rcd.use_rcd(get_turf(src), user)
+			return 1
 
 /obj/structure/window/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
@@ -911,6 +954,9 @@ rborosilicate = 12
 				RCD_VALUE_DELAY = 4 SECONDS,
 				RCD_VALUE_COST = RCD_SHEETS_PER_MATTER_UNIT * 4
 			)
+		if(RCD_FIRELOCK)
+			the_rcd.use_rcd(get_turf(src), user)
+			return 1
 	return FALSE
 
 /obj/machinery/door/airlock/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
@@ -1368,6 +1414,54 @@ rborosilicate = 12
 	return FALSE
 
 /obj/machinery/door/window/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+	if(passed_mode == RCD_DECONSTRUCT)
+		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		qdel(src)
+		return TRUE
+	return FALSE
+
+/obj/structure/firedoor_assembly/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+	if(passed_mode == RCD_DECONSTRUCT)
+		return list(
+			RCD_VALUE_MODE = RCD_DECONSTRUCT,
+			RCD_VALUE_DELAY = 1 SECONDS,
+			RCD_VALUE_COST = RCD_SHEETS_PER_MATTER_UNIT * 1
+		)
+	return FALSE
+
+/obj/structure/firedoor_assembly/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+	if(passed_mode == RCD_DECONSTRUCT)
+		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		qdel(src)
+		return TRUE
+	return FALSE
+
+/obj/structure/door_assembly/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+	if(passed_mode == RCD_DECONSTRUCT)
+		return list(
+			RCD_VALUE_MODE = RCD_DECONSTRUCT,
+			RCD_VALUE_DELAY = 1 SECONDS,
+			RCD_VALUE_COST = RCD_SHEETS_PER_MATTER_UNIT * 1
+		)
+	return FALSE
+
+/obj/structure/door_assembly/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+	if(passed_mode == RCD_DECONSTRUCT)
+		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		qdel(src)
+		return TRUE
+	return FALSE
+
+/obj/machinery/button/doorbell/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+	if(passed_mode == RCD_DECONSTRUCT)
+		return list(
+			RCD_VALUE_MODE = RCD_DECONSTRUCT,
+			RCD_VALUE_DELAY = 1 SECONDS,
+			RCD_VALUE_COST = RCD_SHEETS_PER_MATTER_UNIT * 1
+		)
+	return FALSE
+
+/obj/machinery/button/doorbell/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)

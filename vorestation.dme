@@ -4569,6 +4569,7 @@
 #include "modular_chomp\code\game\machinery\autolathe_armory.dm"
 #include "modular_chomp\code\game\machinery\colormate.dm"
 #include "modular_chomp\code\game\machinery\petrification.dm"
+#include "modular_chomp\code\game\machinery\portable_turret.dm"
 #include "modular_chomp\code\game\objects\items.dm"
 #include "modular_chomp\code\game\objects\items\holosign_creator.dm"
 #include "modular_chomp\code\game\objects\items\petrifier.dm"

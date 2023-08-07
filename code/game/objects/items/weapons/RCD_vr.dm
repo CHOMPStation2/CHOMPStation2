@@ -195,6 +195,7 @@
 	return "It currently holds [remaining]/[initial(remaining)] matter-units."
 
 //////////////////
+//CHOMPEdit start
 /obj/effect/constructing_effect
 	icon = 'icons/effects/effects_rcd.dmi'
 	icon_state = ""
@@ -202,21 +203,12 @@
 	layer = ABOVE_TURF_LAYER
 	anchored = TRUE
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
-	var/status = 0
-	var/delay = 0
 
 /obj/effect/constructing_effect/Initialize(mapload, rcd_delay, rcd_status)
 	. = ..()
-	status = rcd_status
-	delay = rcd_delay
-	if (status == RCD_DECONSTRUCT)
-		addtimer(CALLBACK(src, TYPE_PROC_REF(/atom, update_icon)), 11)
-		delay -= 11
-		icon_state = "rcd_end_reverse"
-	else
-		update_icon()
+	update_icon(rcd_delay, rcd_status)
 
-/obj/effect/constructing_effect/update_icon()
+/obj/effect/constructing_effect/update_icon(var/delay = 30, var/status)
 	icon_state = "rcd"
 	if (delay < 10)
 		icon_state += "_shortest"
@@ -226,13 +218,15 @@
 		icon_state += "_short"
 	if (status == RCD_DECONSTRUCT)
 		icon_state += "_reverse"
+	addtimer(CALLBACK(src, PROC_REF(end_animation), status), delay)
 
-/obj/effect/constructing_effect/proc/end_animation()
+/obj/effect/constructing_effect/proc/end_animation(status)
 	if (status == RCD_DECONSTRUCT)
-		qdel(src)
+		icon_state = "rcd_end_reverse"
 	else
 		icon_state = "rcd_end"
-		addtimer(CALLBACK(src, PROC_REF(end)), 15)
+	addtimer(CALLBACK(src, PROC_REF(end)), 15)
 
 /obj/effect/constructing_effect/proc/end()
 	qdel(src)
+//CHOMPEdit end

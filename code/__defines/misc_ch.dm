@@ -22,3 +22,4 @@
 #define RCD_FRAME			"Frame"				// Build a Machine or Computer frame
 #define RCD_WALLFRAME		"WallFrame"			// Build a selection of wall frames
 #define RCD_CONVEYOR		"Conveyor"			// Build direction conveyors
+#define RCD_TURRET			"Turret"			// Build turrets when emagged
