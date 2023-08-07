@@ -6,7 +6,7 @@
 /mob/living/simple_mob/humanoid/eclipse
 	name = "Eclipse Initiate"
 	tt_desc = "E Homo sapiens"
-	desc = "A silver cladded, dangerous looking indivual."
+	desc = "You shouldn't be seeing this."
 	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 	icon_state = "syndicate"
 	icon_living = "syndicate"
@@ -124,7 +124,7 @@
 //The solar part of the faction, highly resistant to burns and stuff
 /mob/living/simple_mob/humanoid/eclipse/solar
 	name = "Solar Eclipse Initiate"
-	desc = "A dangerous indivual, a gleaming orange shield surronding them, seeming protected from energy and burns."
+	desc = "You shouldn't be seeing this. But don't use lasers or energy weapons"
 
 	armor = list(melee = -10, bullet = -10, laser = 75, energy = 75, bomb = 50, bio = 100, rad = 100) //Solar members are nigh immune to burns.
 	armor_soak = list(melee = 0, bullet = 0, laser = 15, energy = 15, bomb = 0, bio = 0, rad = 0)
@@ -253,7 +253,7 @@
 //The lunar mobs, highly resistant to brute based damage.
 /mob/living/simple_mob/humanoid/eclipse/lunar
 	name = "Lunar Eclipse Initiate"
-	desc = "A hungry looking naga, their strange armor protecting them from ballistics and physical weaponry."
+	desc = "You shouldn't be seeing this, but don't use melee weapons or bullets."
 
 	armor = list(melee = 75, bullet = 75, laser = -10, energy = -10, bomb = 50, bio = 100, rad = 100) //Lunar members are nigh immune to burns.
 	armor_soak = list(melee = 15, bullet = 15, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0) //15 because every melee weapon has dumb amount of AP
