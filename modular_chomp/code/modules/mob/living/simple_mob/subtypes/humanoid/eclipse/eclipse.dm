@@ -139,7 +139,7 @@
 	reload_max = 5
 	movement_cooldown = 1
 
-	special_attack_cooldown = 15 SECONDS
+	special_attack_cooldown = 5 SECONDS
 	special_attack_min_range = 1
 	special_attack_max_range = 7
 
@@ -158,7 +158,7 @@
 	icon_living = "eclipse_moth"
 	reload_max = 10
 
-	special_attack_cooldown = 15 SECONDS
+	special_attack_cooldown = 8 SECONDS
 	special_attack_min_range = 1
 	special_attack_max_range = 7
 
@@ -260,6 +260,7 @@
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle //Bouncing bullet extreme
 	name = "Lunar Eclipse Silver Serpent"
+	desc = "A hungry looking naga, their strange armor protecting them from ballistics and physical weaponry."
 	health = 100
 	maxHealth = 100
 	reload_max = 6
@@ -471,7 +472,7 @@
 /////////////////
 /mob/living/simple_mob/humanoid/eclipse/solar/guardian
 	name = "Solar Eclipse Guardian"
-	desc = "A squishy bouncy individual, it seeming to harmlessly absorb lasers and energy in general.."
+	desc = "A squishy bouncy individual, it seeming to harmlessly absorb lasers and energy in general."
 	projectiletype = /obj/item/projectile/ion
 	icon_state = "eclipse_guardian"
 	icon_living = "eclipse_guardian"
