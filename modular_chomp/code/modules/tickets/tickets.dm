@@ -129,13 +129,13 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 	if(C.current_ticket)
 		C.current_ticket.AddInteraction("Client reconnected.")
 		C.current_ticket.initiator = C
-		C.current_ticket.initiator.mob.throw_alert("open ticket", /obj/screen/alert/open_ticket)
+		// C.current_ticket.initiator.mob.throw_alert("open ticket", /obj/screen/alert/open_ticket) // Uncomment this line to enable player-side ticket ui
 
 //Dissasociate ticket
 /datum/tickets/proc/ClientLogout(client/C)
 	if(C.current_ticket)
 		C.current_ticket.AddInteraction("Client disconnected.")
-		C.current_ticket.initiator.mob.clear_alert("open ticket")
+		// C.current_ticket.initiator.mob.clear_alert("open ticket") // Uncomment this line to enable player-side ticket ui
 		C.current_ticket.initiator = null
 		C.current_ticket = null
 
@@ -301,7 +301,8 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 	//var/datum/ticket_chat/TC = new()
 	//TC.T = src
 	//TC.tgui_interact(C.mob)
-	C.mob.throw_alert("open ticket", /obj/screen/alert/open_ticket)
+
+	// C.mob.throw_alert("open ticket", /obj/screen/alert/open_ticket) // Uncomment this line to enable player-side ticket ui
 
 /datum/ticket/Destroy()
 	RemoveActive()
@@ -471,7 +472,7 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 				"color" = COLOR_WEBHOOK_BAD
 			)
 		)
-	initiator?.mob?.clear_alert("open ticket")
+	// initiator?.mob?.clear_alert("open ticket") // Uncomment this line to enable player-side ticket ui
 
 //Mark open ticket as resolved/legitimate, returns ahelp verb
 /datum/ticket/proc/Resolve(silent = FALSE)
@@ -502,7 +503,7 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 					"color" = COLOR_WEBHOOK_GOOD
 				)
 			)
-	initiator?.mob?.clear_alert("open ticket")
+	// initiator?.mob?.clear_alert("open ticket") // Uncomment this line to enable player-side ticket ui
 
 //Close and return ahelp verb, use if ticket is incoherent
 /datum/ticket/proc/Reject(key_name = key_name_admin(usr))
