@@ -369,7 +369,7 @@ rborosilicate = 12
 			airlock_type = /obj/machinery/door/airlock
 			airlock_glass = FALSE
 
-/obj/item/weapon/rcd/verb/change_airlock_access(mob/user)
+/obj/item/weapon/rcd/proc/change_airlock_access(mob/user)
 
 	if (!ishuman(user) && !istype(user,/mob/living/silicon/robot))
 		return
@@ -695,6 +695,8 @@ rborosilicate = 12
 			to_chat(user, span("notice", "You build a conveyor"))
 			return TRUE
 		if(RCD_TURRET)
+			if(locate(/obj/machinery/porta_turret) in src)
+				return FALSE
 			var/obj/machinery/porta_turret/T = new /obj/machinery/porta_turret/rcd(src)
 			T.faction = the_rcd.turret_faction
 			return TRUE

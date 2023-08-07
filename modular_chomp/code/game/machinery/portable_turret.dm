@@ -61,3 +61,7 @@
 	else
 		// Its closed.
 		icon_state = "turret_cover_[turret_type]"
+
+/obj/machinery/porta_turret/rcd/die()
+	spark_system.start()
+	qdel(src)
