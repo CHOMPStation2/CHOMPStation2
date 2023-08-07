@@ -224,6 +224,18 @@ export const TicketsPanel = (props, context) => {
                 </LabeledList>
                 <Divider />
                 <Flex direction="column">
+                  <Flex.Item maxWidth={'500px'}>
+                    {Object.keys(selected_ticket.log)
+                      .slice(0)
+                      .map((L) => (
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: selected_ticket.log[L],
+                          }}
+                        />
+                      ))}
+                  </Flex.Item>
+                  <Divider />
                   <Flex.Item>
                     <Flex>
                       <Flex.Item grow>
@@ -255,19 +267,6 @@ export const TicketsPanel = (props, context) => {
                         />
                       </Flex.Item>
                     </Flex>
-                  </Flex.Item>
-                  <Divider />
-                  <Flex.Item maxWidth={'500px'}>
-                    {Object.keys(selected_ticket.log)
-                      .slice(0)
-                      .reverse()
-                      .map((L) => (
-                        <div
-                          dangerouslySetInnerHTML={{
-                            __html: selected_ticket.log[L],
-                          }}
-                        />
-                      ))}
                   </Flex.Item>
                 </Flex>
               </Section>

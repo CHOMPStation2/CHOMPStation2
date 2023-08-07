@@ -104,6 +104,14 @@ export const Ticket = (props, context) => {
           <Divider />
           <Flex direction="column">
             <Flex.Item>
+              {Object.keys(log)
+                .slice(0)
+                .map((L) => (
+                  <div dangerouslySetInnerHTML={{ __html: log[L] }} />
+                ))}
+            </Flex.Item>
+            <Divider />
+            <Flex.Item>
               <Flex>
                 <Flex.Item grow>
                   <Input
@@ -140,15 +148,6 @@ export const Ticket = (props, context) => {
                   />
                 </Flex.Item>
               </Flex>
-            </Flex.Item>
-            <Divider />
-            <Flex.Item>
-              {Object.keys(log)
-                .slice(0)
-                .reverse()
-                .map((L) => (
-                  <div dangerouslySetInnerHTML={{ __html: log[L] }} />
-                ))}
             </Flex.Item>
           </Flex>
         </Section>
