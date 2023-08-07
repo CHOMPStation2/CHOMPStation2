@@ -171,7 +171,7 @@
 
 /mob/living/simple_mob/humanoid/eclipse/solar/snipertesh
 	name = "Solar Eclipse Sniper"
-	desc = "An armrored teshari with a sniper, protected from laser and energy based attacks"
+	desc = "An armored teshari with a sniper, protected from laser and energy based attacks"
 	health = 50
 	maxHealth = 50
 	movement_cooldown = -1
