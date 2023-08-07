@@ -744,6 +744,9 @@ rborosilicate = 12
 			else
 				if(dx > 0)	direction = EAST
 				else		direction = WEST
+			if(gotwallitem(get_step(src,direction), direction))
+				to_chat(user, span("warning", "There is already a wall item there!"))
+				return FALSE
 			var/obj/O = new the_rcd.wall_frame_type(get_step(src,direction))
 			O.dir = direction
 			if(istype(O,/obj/machinery/light))

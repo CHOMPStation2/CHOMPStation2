@@ -1170,7 +1170,10 @@ var/list/WALLITEMS = list(
 	/obj/machinery/newscaster, /obj/machinery/firealarm, /obj/structure/noticeboard, /obj/machinery/button/remote,
 	/obj/machinery/computer/security/telescreen, /obj/machinery/embedded_controller/radio,
 	/obj/item/weapon/storage/secure/safe, /obj/machinery/door_timer, /obj/machinery/flasher, /obj/machinery/keycard_auth,
-	/obj/structure/mirror, /obj/structure/fireaxecabinet, /obj/machinery/computer/security/telescreen/entertainment
+	/obj/structure/mirror, /obj/structure/fireaxecabinet, /obj/machinery/computer/security/telescreen/entertainment,
+	/obj/machinery/doorbell_chime, /obj/machinery/button/doorbell, /obj/machinery/atm, /obj/machinery/recharger/wallcharger,	//CHOMPEdit
+	/obj/machinery/computer/guestpass, /obj/item/device/geiger/wall, /obj/machinery/button/windowtint, /obj/machinery/computer/id_restorer,	//CHOMPEdit
+	/obj/machinery/computer/timeclock, /obj/machinery/station_map, /obj/machinery/ai_status_display	//CHOMPEdit
 	)
 /proc/gotwallitem(loc, dir)
 	for(var/obj/O in loc)
