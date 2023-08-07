@@ -296,7 +296,7 @@
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/shotgunner //wuff with shotgun
 	name = "Lunar Eclipse Shotgunner"
-	desc = "A vulpakin or the like in a red-purple flashing rigsuit, it defending them from physical damage of close and long ranges."
+	desc = "A Vulpkanin or the like in a red-purple flashing rigsuit, it defending them from physical damage of close and long ranges."
 	health = 75
 	maxHealth = 75
 	reload_max = 2
@@ -310,7 +310,7 @@
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm //tesh got a gun
 	name = "Lunar Eclipse Judge"
-	desc = "A teshari wildly wiedling a pistol, wearing bullet and sword protective gear."
+	desc = "A teshari wildly wielding a pistol, wearing bullet and sword protective gear."
 	health = 50
 	maxHealth = 50
 	icon_state = "eclipse_shottesh"
@@ -354,7 +354,7 @@
 
 /mob/living/simple_mob/humanoid/eclipse/solar/hellhound
 	name = "Solar Eclipse Hound"
-	desc = "A heavly armored creature, flames dancing around it's burn and energy proof armor."
+	desc = "A heavily armored creature, flames dancing around it's burn and energy proof armor."
 	health = 150
 	maxHealth = 150
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
