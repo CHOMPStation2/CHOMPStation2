@@ -312,11 +312,11 @@
 	w_class = ITEMSIZE_SMALL
 	origin_tech = list(TECH_MATERIAL = 2)
 	matter = list(DEFAULT_WALL_MATERIAL = 30000,MAT_GLASS = 15000)
-	var/remaining = RCD_MAX_CAPACITY / 3
+	var/remaining = RCD_MAX_CAPACITY / 0.75	//CHOMPEdit
 
 /obj/item/weapon/rcd_ammo/large
 	name = "high-capacity matter cartridge"
 	desc = "Do not ingest."
 	matter = list(DEFAULT_WALL_MATERIAL = 45000,MAT_GLASS = 22500)
 	origin_tech = list(TECH_MATERIAL = 4)
-	remaining = RCD_MAX_CAPACITY
+	remaining = RCD_MAX_CAPACITY * 2	//CHOMPEdit
