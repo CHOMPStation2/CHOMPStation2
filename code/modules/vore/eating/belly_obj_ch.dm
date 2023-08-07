@@ -121,6 +121,7 @@
 	var/sound_volume = 100					// Volume knob.
 	var/speedy_mob_processing = FALSE		// Independent belly processing to utilize SSobj instead of SSbellies 3x speed.
 	var/cycle_sloshed = FALSE				// Has vorgan entrance made a wet slosh this cycle? Soundspam prevention for multiple items entered.
+	var/egg_cycles = 0						// Process egg mode after 10 cycles.
 
 /obj/belly/proc/GetFullnessFromBelly()
 	if(!affects_vore_sprites)
@@ -212,7 +213,7 @@
 		for(var/reagent in generated_reagents)
 			reagents.add_reagent(reagent, generated_reagents[reagent] * digest_nutri_gain / gen_cost)
 	else
-		owner.adjust_nutrition((4.5 * digest_nutri_gain) * owner.get_digestion_efficiency_modifier())
+		owner.adjust_nutrition(digest_nutri_gain * owner.get_digestion_efficiency_modifier())
 	digest_nutri_gain = 0
 
 /obj/belly/proc/GenerateBellyReagents_digested()
