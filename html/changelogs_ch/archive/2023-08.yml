@@ -81,3 +81,6 @@
   Verkister:
   - bugfix: fixed belly reagent digestion generation overflow giving 4.5x more nutrition
       than supposed to.
+2023-08-07:
+  Verkister:
+  - bugfix: Fixed egg mode bug with item digestion/preservation modes.
