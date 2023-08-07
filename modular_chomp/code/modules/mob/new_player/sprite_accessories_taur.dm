@@ -227,3 +227,11 @@
 /datum/sprite_accessory/tail/taur/ch/bigleggy/reptile
 	name = "Big Leggies (Reptile Tail)"
 	extra_overlay2 = "bigleggy_reptile"
+
+/datum/sprite_accessory/tail/taur/ch/bigleggy/snake
+	name = "Big Leggies (Snake Tail)"
+	extra_overlay2 = "bigleggy_snake"
+
+/datum/sprite_accessory/tail/taur/ch/bigleggy/fox
+	name = "Big Leggies (Fox Tail)"
+	extra_overlay2 = "bigleggy_vulpine"
