@@ -421,7 +421,7 @@
 	items -= announce // or the autosay radio.
 
 	for(var/obj/item/W in items)
-		if(islist(W.possessed_voice)) //CHOMPAdd
+		if(istype(W) && islist(W.possessed_voice)) //CHOMPAdd
 			for(var/mob/living/V in possessed_voice)
 				despawn_occupant(V)
 		//VOREStation Addition Start
