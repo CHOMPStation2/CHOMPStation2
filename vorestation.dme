@@ -4579,6 +4579,7 @@
 #include "modular_chomp\code\game\objects\items\weapons\capture_crystal.dm"
 #include "modular_chomp\code\game\objects\items\weapons\cigs_lighters.dm"
 #include "modular_chomp\code\game\objects\items\weapons\RCD.dm"
+#include "modular_chomp\code\game\objects\items\weapons\storage\backpack.dm"
 #include "modular_chomp\code\game\objects\items\weapons\storage\firstaid.dm"
 #include "modular_chomp\code\game\objects\random\mapping.dm"
 #include "modular_chomp\code\game\objects\structures\desert_planet_structures.dm"
