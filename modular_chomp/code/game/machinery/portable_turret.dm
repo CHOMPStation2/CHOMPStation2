@@ -3,7 +3,7 @@
 	use_power = FALSE
 	idle_power_usage = 0
 	active_power_usage = 0
-	health = 20
+	health = 5	//extremely brittle
 	maxhealth = 20
 	reqpower = 0
 	enabled = TRUE
