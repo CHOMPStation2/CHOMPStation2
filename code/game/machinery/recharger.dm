@@ -31,70 +31,94 @@
 			if(C)				// Sometimes we get things without cells in it.
 				. += "Current charge: [C.charge] / [C.maxcharge]"
 
+//CHOMPEdit Start - Let borgs clickdrag things into chargers
+/obj/machinery/recharger/proc/do_allowed_checks(obj/item/G, mob/user)
+	. = FALSE
+	if(charging)
+		to_chat(user, "<span class='warning'>\A [charging] is already charging here.</span>")
+		return
+	// Checks to make sure he's not in space doing it, and that the area got proper power.
+	if(!powered())
+		to_chat(user, "<span class='warning'>\The [src] blinks red as you try to insert [G]!</span>")
+		return
+	if(istype(G, /obj/item/weapon/gun/energy))
+		var/obj/item/weapon/gun/energy/E = G
+		if(E.self_recharge)
+			to_chat(user, "<span class='notice'>\The [E] has no recharge port.</span>")
+			return
+	if(istype(G, /obj/item/modular_computer))
+		var/obj/item/modular_computer/C = G
+		if(!C.battery_module)
+			to_chat(user, "<span class='notice'>\The [C] does not have a battery installed. </span>")
+			return
+	if(istype(G, /obj/item/weapon/melee/baton))
+		var/obj/item/weapon/melee/baton/B = G
+		if(B.use_external_power)
+			to_chat(user, "<span class='notice'>\The [B] has no recharge port.</span>")
+			return
+	if(istype(G, /obj/item/device/flash))
+		var/obj/item/device/flash/F = G
+		if(F.use_external_power)
+			to_chat(user, "<span class='notice'>\The [F] has no recharge port.</span>")
+			return
+	if(istype(G, /obj/item/weapon/weldingtool/electric))
+		var/obj/item/weapon/weldingtool/electric/EW = G
+		if(EW.use_external_power)
+			to_chat(user, "<span class='notice'>\The [EW] has no recharge port.</span>")
+			return
+	else if(istype(G, /obj/item/ammo_magazine/cell_mag)) // CHOMPedit start
+		var/obj/item/ammo_magazine/cell_mag/maggy = G
+		if(maggy.stored_ammo.len < 1)
+			to_chat(user, "\The [G] does not have any cells installed.")
+			return
+	else if(istype(G, /obj/item/weapon/gun/projectile/cell_loaded))
+		var/obj/item/weapon/gun/projectile/cell_loaded/gunny = G
+		if(gunny.ammo_magazine)
+			var/obj/item/ammo_magazine/cell_mag/maggy = gunny.ammo_magazine
+			if(maggy.stored_ammo.len < 1)
+				to_chat(user, "\The [G] does not have any cell in its magazine installed.")
+				return
+		else
+			to_chat(user, "\The [G] does not have a magazine installed..") // CHOMPedit end
+	if(istype(G, /obj/item/device/paicard))
+		var/obj/item/device/paicard/ourcard = G
+		if(ourcard.panel_open)
+			to_chat(user, "<span class='warning'>\The [ourcard] won't fit in the recharger with its panel open.</span>")
+			return
+		if(ourcard.pai)
+			if(ourcard.pai.stat == CONSCIOUS)
+				to_chat(user, "<span class='warning'>\The [ourcard] boops... it doesn't need to be recharged!</span>")
+				return
+		else
+			to_chat(user, "<span class='warning'>\The [ourcard] doesn't have a personality!</span>")
+			return
+	return TRUE
+
+/obj/machinery/recharger/MouseDrop_T(obj/item/weapon/G as obj, mob/user as mob)
+	var/allowed = 0
+	for (var/allowed_type in allowed_devices)
+		if(istype(G, allowed_type)) allowed = 1
+
+	if(allowed)
+		if(!do_allowed_checks(G, user))
+			return
+
+		G.loc = src
+		charging = G
+		update_icon()
+		user.visible_message("[user] inserts [charging] into [src].", "You insert [charging] into [src].")
+//CHOMPEdit End
+
 /obj/machinery/recharger/attackby(obj/item/weapon/G as obj, mob/user as mob)
 	var/allowed = 0
 	for (var/allowed_type in allowed_devices)
 		if(istype(G, allowed_type)) allowed = 1
 
 	if(allowed)
-		if(charging)
-			to_chat(user, "<span class='warning'>\A [charging] is already charging here.</span>")
+		//CHOMPEdit Start - move checks into their own proc
+		if(!do_allowed_checks(G, user))
 			return
-		// Checks to make sure he's not in space doing it, and that the area got proper power.
-		if(!powered())
-			to_chat(user, "<span class='warning'>\The [src] blinks red as you try to insert [G]!</span>")
-			return
-		if(istype(G, /obj/item/weapon/gun/energy))
-			var/obj/item/weapon/gun/energy/E = G
-			if(E.self_recharge)
-				to_chat(user, "<span class='notice'>\The [E] has no recharge port.</span>")
-				return
-		if(istype(G, /obj/item/modular_computer))
-			var/obj/item/modular_computer/C = G
-			if(!C.battery_module)
-				to_chat(user, "<span class='notice'>\The [C] does not have a battery installed. </span>")
-				return
-		if(istype(G, /obj/item/weapon/melee/baton))
-			var/obj/item/weapon/melee/baton/B = G
-			if(B.use_external_power)
-				to_chat(user, "<span class='notice'>\The [B] has no recharge port.</span>")
-				return
-		if(istype(G, /obj/item/device/flash))
-			var/obj/item/device/flash/F = G
-			if(F.use_external_power)
-				to_chat(user, "<span class='notice'>\The [F] has no recharge port.</span>")
-				return
-		if(istype(G, /obj/item/weapon/weldingtool/electric))
-			var/obj/item/weapon/weldingtool/electric/EW = G
-			if(EW.use_external_power)
-				to_chat(user, "<span class='notice'>\The [EW] has no recharge port.</span>")
-				return
-		else if(istype(G, /obj/item/ammo_magazine/cell_mag)) // CHOMPedit start
-			var/obj/item/ammo_magazine/cell_mag/maggy = G
-			if(maggy.stored_ammo.len < 1)
-				to_chat(user, "\The [G] does not have any cells installed.")
-				return
-		else if(istype(G, /obj/item/weapon/gun/projectile/cell_loaded))
-			var/obj/item/weapon/gun/projectile/cell_loaded/gunny = G
-			if(gunny.ammo_magazine)
-				var/obj/item/ammo_magazine/cell_mag/maggy = gunny.ammo_magazine
-				if(maggy.stored_ammo.len < 1)
-					to_chat(user, "\The [G] does not have any cell in its magazine installed.")
-					return
-			else
-				to_chat(user, "\The [G] does not have a magazine installed..") // CHOMPedit end
-		if(istype(G, /obj/item/device/paicard))
-			var/obj/item/device/paicard/ourcard = G
-			if(ourcard.panel_open)
-				to_chat(user, "<span class='warning'>\The [ourcard] won't fit in the recharger with its panel open.</span>")
-				return
-			if(ourcard.pai)
-				if(ourcard.pai.stat == CONSCIOUS)
-					to_chat(user, "<span class='warning'>\The [ourcard] boops... it doesn't need to be recharged!</span>")
-					return
-			else
-				to_chat(user, "<span class='warning'>\The [ourcard] doesn't have a personality!</span>")
-				return
+		//CHOMPEdit End
 
 		user.drop_item()
 		G.loc = src
