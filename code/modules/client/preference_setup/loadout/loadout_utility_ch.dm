@@ -143,3 +143,21 @@
 	description = "Not a portable keyboard"
 	path = /obj/item/instrument/piano_synth
 	cost = 3
+
+/datum/gear/utility/saddlebag_common/lightweight
+	display_name = "saddle bag, common (Light)"
+	path = /obj/item/weapon/storage/backpack/saddlebag_common/lightweight
+	slot = slot_back
+	cost = 2
+
+/datum/gear/utility/saddlebag_common/robust/lightweight
+	display_name = "saddle bag, robust (Light)"
+	path = /obj/item/weapon/storage/backpack/saddlebag_common/robust/lightweight
+	slot = slot_back
+	cost = 2
+
+/datum/gear/utility/saddlebag_common/vest/heavy
+	display_name = "taur duty vest (backpack) (Heavy)"
+	path = /obj/item/weapon/storage/backpack/saddlebag_common/vest/heavy
+	slot = slot_back
+	cost = 1
