@@ -230,6 +230,8 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	B.egg_cycles = 0
 	var/list/egg_contents = list()
 	for(var/E in touchable_atoms)
+		if(istype(E, /mob/observer))
+			continue
 		if(istype(E, /obj/item/weapon/storage/vore_egg)) // Don't egg other eggs.
 			var/obj/item/weapon/storage/vore_egg/EG = E
 			if(EG.egg_name != B.egg_name)
