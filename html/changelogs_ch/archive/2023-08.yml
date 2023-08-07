@@ -82,6 +82,11 @@
   - bugfix: fixed belly reagent digestion generation overflow giving 4.5x more nutrition
       than supposed to.
 2023-08-07:
+  ItsSelis:
+  - rscdel: player-side ticket ui has been temporarily disabled until an issue related
+      to it's interface has been mitigated.
+  - admin: the order of the interaction log in all ticket ui's has been turned around
+      for better readability.
   Verkister:
   - bugfix: Fixed egg mode bug with item digestion/preservation modes.
   - bugfix: Fixed TF items spitting out visible voice ghosts when despawned via cryo/gateway/etc.
