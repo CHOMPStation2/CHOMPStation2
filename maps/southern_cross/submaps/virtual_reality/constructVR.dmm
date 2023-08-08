@@ -4240,6 +4240,10 @@
 	temperature = 311
 	},
 /area/vr/outdoors/powered)
+"eTS" = (
+/obj/machinery/button/mob_spawner_button,
+/turf/simulated/wall/r_wall,
+/area/vr/powered/building2)
 "eUa" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/simple_door/wood,
@@ -8318,6 +8322,10 @@
 	outdoors = 0
 	},
 /area/vr/powered/dungeon)
+"jKl" = (
+/obj/effect/landmark/button_mob_spawner_landmark/second,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/vr/powered/building2)
 "jKA" = (
 /obj/machinery/door/airlock{
 	id_tag = "VR1";
@@ -9170,6 +9178,10 @@
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered)
+"kKK" = (
+/obj/effect/landmark/button_mob_spawner_landmark,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/vr/powered/building2)
 "kLz" = (
 /obj/machinery/power/emitter/antique,
 /obj/structure/cable/green,
@@ -16852,6 +16864,10 @@
 /mob/living/simple_mob/animal/passive/lizard,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/powered/dungeon)
+"tim" = (
+/obj/machinery/button/mob_spawner_button/second,
+/turf/simulated/wall/r_wall,
+/area/vr/powered/building2)
 "tkb" = (
 /obj/machinery/light{
 	dir = 1
@@ -23787,7 +23803,7 @@ rcK
 rcK
 rcK
 rcK
-rcK
+jKl
 rcK
 rcK
 rcK
@@ -24303,7 +24319,7 @@ rcK
 rcK
 rcK
 rcK
-rcK
+kKK
 rcK
 rcK
 rcK
@@ -25337,8 +25353,8 @@ tgD
 rcK
 rcK
 rcK
-tgD
-tgD
+eTS
+tim
 tgD
 tgD
 cwz
