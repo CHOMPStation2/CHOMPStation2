@@ -261,7 +261,7 @@
 	desc = "May the force be within you."
 	icon_state = "esword"
 	item_state = "esword"
-	active_force = 30
+	active_force = 50 //CHOMPedit: Damage buff.
 	active_armourpen = 50
 	active_throwforce = 20
 	active_w_class = ITEMSIZE_HUGE //CHOMP Edit
