@@ -68,7 +68,7 @@
 				decontaminate()
 				if(istype(B))
 					gurgled_color = B.contamination_color //Apply the correct color setting so uncontaminable things can still have the right overlay.
-					gurgle_contaminate(B, B.contamination_flavor, B.contamination_color) //CHOMPEdit End
+					gurgle_contaminate(B, B.contamination_flavor, B.contamination_color)
 	if(digest_stage <= 0)
 		if(istype(src, /obj/item/device/pda))
 			var/obj/item/device/pda/P = src
@@ -101,7 +101,7 @@
 		else
 			GLOB.items_digested_roundstat++
 			var/g_sound_volume = 100
-			if(istype(B)) //CHOMPEdit Start
+			if(istype(B))
 				g_sound_volume = B.sound_volume
 			var/soundfile
 			if(w_class >= 4)
