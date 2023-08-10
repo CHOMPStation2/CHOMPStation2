@@ -126,3 +126,4 @@
   - rscadd: Added bird big leggies.
   - bugfix: Fixed digest_act proc not working properly for non-belly use (acid turfs
       etc.)
+  - bugfix: Trasheater toy tease messages are no longer oral-specific.
