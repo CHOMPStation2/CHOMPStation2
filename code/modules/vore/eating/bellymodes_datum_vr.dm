@@ -41,6 +41,9 @@ GLOBAL_LIST_INIT(digest_modes, list())
 			return list("to_update" = TRUE, "soundToPlay" = sound(get_sfx("fancy_death_pred")))
 		else
 			B.handle_digestion_death(L)
+		if(!L)
+			B.owner.update_fullness()
+			return list("to_update" = TRUE)
 	if(!L)
 		return //CHOMPEdit End
 
