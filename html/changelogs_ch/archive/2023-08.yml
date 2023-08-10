@@ -98,3 +98,6 @@
   UniquaSa:
   - rscadd: Added Mob Spawner
   - bugfix: Added Squirrel sprites
+2023-08-10:
+  Verkister:
+  - bugfix: Fixed too fast mob digestion failing to update belly sprites.
