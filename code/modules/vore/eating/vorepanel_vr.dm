@@ -244,6 +244,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"mush_alpha" = selected.mush_alpha,
 			"max_mush" = selected.max_mush,
 			"min_mush" = selected.min_mush,
+			"item_mush_val" = selected.item_mush_val,
 			"vorespawn_blacklist" = selected.vorespawn_blacklist,
 			"sound_volume" = selected.sound_volume,
 			"affects_voresprite" = selected.affects_vore_sprites,
@@ -385,6 +386,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			selected_list["liq_interacts"]["mush_alpha"] = selected.mush_alpha
 			selected_list["liq_interacts"]["max_mush"] = selected.max_mush
 			selected_list["liq_interacts"]["min_mush"] = selected.min_mush
+			selected_list["liq_interacts"]["item_mush_val"] = selected.item_mush_val
 
 		selected_list["show_liq_fullness"] = selected.show_fullness_messages
 		selected_list["liq_messages"] = list()
@@ -1277,6 +1279,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				if(isnum(belly_data["min_mush"]))
 					var/min_mush = belly_data["min_mush"]
 					new_belly.min_mush = CLAMP(min_mush, 0, 100)
+
+				if(isnum(belly_data["item_mush_val"]))
+					var/item_mush_val = belly_data["item_mush_val"]
+					new_belly.item_mush_val = CLAMP(item_mush_val, 0, 1000)
 
 				if(isnum(belly_data["liquid_overlay"]))
 					var/new_liquid_overlay = belly_data["liquid_overlay"]
@@ -3052,6 +3058,14 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				return FALSE
 			var/new_new_min_mush = CLAMP(new_min_mush, 0, 100)
 			host.vore_selected.min_mush = new_new_min_mush
+			host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_item_mush_val")
+			var/new_item_mush_val = input(user, "Set how much solid belly contents affect mush level. 0-1000 fullness per item.", "Set Item Mush Value.", host.vore_selected.item_mush_val) as num|null
+			if(new_item_mush_val == null)
+				return FALSE
+			var/new_new_item_mush_val = CLAMP(new_item_mush_val, 0, 1000)
+			host.vore_selected.item_mush_val = new_new_item_mush_val
 			host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_liq_purge")

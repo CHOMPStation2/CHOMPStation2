@@ -9733,6 +9733,12 @@
 	outdoors = 0
 	},
 /area/groundbase/cargo/office)
+"BJ" = (
+/obj/effect/landmark/stardog,
+/turf/simulated/floor/outdoors/newdirt{
+	outdoors = 0
+	},
+/area/groundbase/level2/se)
 "BK" = (
 /obj/structure/sink/kitchen{
 	pixel_y = 22
@@ -17370,6 +17376,12 @@
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level2/se)
+"WI" = (
+/obj/effect/landmark/stardog,
+/turf/simulated/floor/outdoors/newdirt_nograss{
+	outdoors = 0
+	},
+/area/groundbase/level2/nw)
 "WK" = (
 /obj/structure/bed/chair/sofa/corp/right,
 /obj/machinery/atmospherics/unary/vent_pump/on,
@@ -18922,7 +18934,7 @@ Kl
 Kl
 xE
 xE
-KW
+WI
 xE
 xE
 xE
@@ -35444,7 +35456,7 @@ fk
 fk
 oF
 oF
-oF
+BJ
 fk
 fk
 fk

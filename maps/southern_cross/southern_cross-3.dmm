@@ -11720,7 +11720,7 @@
 /turf/simulated/floor/wood/sif,
 /area/maintenance/thirddeck/aftstarboard)
 "kFY" = (
-/obj/machinery/chemical_dispenser/bar_alc{
+/obj/machinery/chemical_dispenser/bar_alc/full{
 	dir = 4;
 	pixel_x = -5
 	},

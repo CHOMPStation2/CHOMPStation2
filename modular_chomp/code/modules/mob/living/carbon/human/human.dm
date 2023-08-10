@@ -1,9 +1,15 @@
-/mob/living/carbon/human/update_fullness()
+/mob/living/carbon/human/update_fullness(var/returning = FALSE)
+	if(!returning)
+		if(updating_fullness)
+			return
+		updating_fullness = TRUE
+		spawn(2)
+		updating_fullness = FALSE
 	var/previous_stomach_fullness = vore_fullness_ex["stomach"]
 	var/previous_taur_fullness = vore_fullness_ex["taur belly"]
 	//update_vore_tail_sprite()
 	//update_vore_belly_sprite()
-	var/list/new_fullness = ..()
+	var/list/new_fullness = ..(TRUE)
 	. = new_fullness
 	for(var/datum/category_group/underwear/undergarment_class in global_underwear.categories)
 		if(!new_fullness[undergarment_class.name])

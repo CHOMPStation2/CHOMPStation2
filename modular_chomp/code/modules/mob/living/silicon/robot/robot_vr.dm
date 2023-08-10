@@ -1,3 +1,5 @@
+/mob/living/silicon/robot
+	nutrition = 0 //No starter nutrition to overcharge the cell with.
 
 /mob/living/silicon/robot/updateicon() //TODO - Make the belly stuff resting sprite stuff into feature flags and replace dogborg var - 7/19/23
 	vr_sprite_check()
@@ -79,3 +81,10 @@
 	else if (vis_height != module_sprites[icontype][SKIN_HEIGHT])
 		vis_height = module_sprites[icontype][SKIN_HEIGHT]
 		update_transform()
+
+/mob/living/silicon/robot/use_power()
+	if(cell && cell.charge < cell.maxcharge)
+		if(nutrition >= 1 * CYBORG_POWER_USAGE_MULTIPLIER)
+			nutrition -= 1 * CYBORG_POWER_USAGE_MULTIPLIER
+			cell.charge += 10 * CYBORG_POWER_USAGE_MULTIPLIER
+	..()

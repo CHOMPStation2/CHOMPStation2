@@ -31,6 +31,7 @@
 	var/digestchance = 0					// % Chance of stomach beginning to digest if prey struggles
 	var/absorbchance = 0					// % Chance of stomach beginning to absorb if prey struggles
 	var/escapechance = 0 					// % Chance of prey beginning to escape if prey struggles.
+	var/escape_stun = 0						// AI controlled mobs with a number here will be weakened by the provided var when someone escapes, to prevent endless nom loops
 	var/transferchance = 0 					// % Chance of prey being trasnsfered, goes from 0-100%
 	var/transferchance_secondary = 0 		// % Chance of prey being transfered to transferchance_secondary, also goes 0-100%
 	var/save_digest_mode = TRUE				// Whether this belly's digest mode persists across rounds
@@ -268,6 +269,7 @@
 	"mush_alpha",
 	"max_mush",
 	"min_mush",
+	"item_mush_val",
 	"custom_reagentcolor",
 	"custom_reagentalpha",
 	"gen_cost",
@@ -397,7 +399,7 @@
 			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
 			recent_sound = TRUE
 
-	if(reagents.total_volume > 0 && !isliving(thing)) //CHOMPAdd
+	if(reagents.total_volume >= 5 && !isliving(thing)) //CHOMPAdd
 		reagents.trans_to(thing, reagents.total_volume * 0.1, 1 / max(LAZYLEN(contents), 1), FALSE) //CHOMPAdd
 	//Messages if it's a mob
 	if(isliving(thing))
@@ -426,9 +428,9 @@
 		//Stop AI processing in bellies
 		if(M.ai_holder)
 			M.ai_holder.go_sleep()
-		if(reagents.total_volume > 0 && M.digestable) //CHOMPEdit Start
+		if(reagents.total_volume >= 5 && M.digestable) //CHOMPEdit Start
 			if(digest_mode == DM_DIGEST)
-				reagents.trans_to(M, reagents.total_volume, 0.1 / (LAZYLEN(contents) ? LAZYLEN(contents) : 1), FALSE)
+				reagents.trans_to(M, reagents.total_volume * 0.1, 1 / max(LAZYLEN(contents), 1), FALSE)
 			to_chat(M, "<span class='warning'><B>You splash into a pool of [reagent_name]!</B></span>")
 	else if(count_items_for_sprite) //CHOMPEdit - If this is enabled also update fullness for non-living things
 		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
@@ -451,6 +453,9 @@
 /obj/belly/Exited(atom/movable/thing, atom/OldLoc)
 	. = ..()
 	thing.exit_belly(src) // CHOMPedit - atom movable proc, does nothing by default. Overridden in children for special behavior.
+	if(isbelly(thing.loc)) //CHOMPEdit
+		if(count_items_for_sprite) //CHOMPEdit
+			owner.update_fullness() //CHOMPEdit
 	if(isliving(thing) && !isbelly(thing.loc))
 		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 		var/mob/living/L = thing
@@ -531,11 +536,12 @@
 			I.color = belly_fullscreen_color4
 			I.alpha = belly_fullscreen_alpha
 			F.add_overlay(I)
-			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0))
+			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0 || (LAZYLEN(contents) * item_mush_val) > 0))
 				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
 				I.color = mush_color
 				I.alpha = mush_alpha
-				I.pixel_y = -450 + (450 / max(max_mush, 1) * max(min(max_mush, owner.nutrition), 1))
+				var/total_mush_content = owner.nutrition + LAZYLEN(contents) * item_mush_val
+				I.pixel_y = -450 + (450 / max(max_mush, 1) * max(min(max_mush, total_mush_content), 1))
 				if(I.pixel_y < -450 + (450 / 100 * min_mush))
 					I.pixel_y = -450 + (450 / 100 * min_mush)
 				F.add_overlay(I)
@@ -563,12 +569,13 @@
 			F.add_overlay(image(F.icon, belly_fullscreen+"-2"))
 			F.add_overlay(image(F.icon, belly_fullscreen+"-3"))
 			F.add_overlay(image(F.icon, belly_fullscreen+"-4"))
-			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0))
+			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0 || (LAZYLEN(contents) * item_mush_val) > 0))
 				var/image/I
 				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
 				I.color = mush_color
 				I.alpha = mush_alpha
-				I.pixel_y = -450 + (450 / max(max_mush, 1) * max(min(max_mush, owner.nutrition), 1))
+				var/total_mush_content = owner.nutrition + LAZYLEN(contents) * item_mush_val
+				I.pixel_y = -450 + (450 / max(max_mush, 1) * max(min(max_mush, total_mush_content), 1))
 				if(I.pixel_y < -450 + (450 / 100 * min_mush))
 					I.pixel_y = -450 + (450 / 100 * min_mush)
 				F.add_overlay(I)
@@ -644,11 +651,12 @@
 			I.color = belly_fullscreen_color4
 			I.alpha = belly_fullscreen_alpha
 			F.add_overlay(I)
-			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0))
+			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0 || (LAZYLEN(contents) * item_mush_val) > 0))
 				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
 				I.color = mush_color
 				I.alpha = mush_alpha
-				I.pixel_y = -450 + (450 / max(max_mush, 1) * max(min(max_mush, owner.nutrition), 1))
+				var/total_mush_content = owner.nutrition + LAZYLEN(contents) * item_mush_val
+				I.pixel_y = -450 + (450 / max(max_mush, 1) * max(min(max_mush, total_mush_content), 1))
 				if(I.pixel_y < -450 + (450 / 100 * min_mush))
 					I.pixel_y = -450 + (450 / 100 * min_mush)
 				F.add_overlay(I)
@@ -675,12 +683,13 @@
 			F.add_overlay(image(F.icon, belly_fullscreen+"-2"))
 			F.add_overlay(image(F.icon, belly_fullscreen+"-3"))
 			F.add_overlay(image(F.icon, belly_fullscreen+"-4"))
-			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0))
+			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0 || (LAZYLEN(contents) * item_mush_val) > 0))
 				var/image/I
 				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
 				I.color = mush_color
 				I.alpha = mush_alpha
-				I.pixel_y = -450 + (450 / max(max_mush, 1) * max(min(max_mush, owner.nutrition), 1))
+				var/total_mush_content = owner.nutrition + LAZYLEN(contents) * item_mush_val
+				I.pixel_y = -450 + (450 / max(max_mush, 1) * max(min(max_mush, total_mush_content), 1))
 				if(I.pixel_y < -450 + (450 / 100 * min_mush))
 					I.pixel_y = -450 + (450 / 100 * min_mush)
 				F.add_overlay(I)
@@ -848,6 +857,9 @@
 	if(ismob(M))
 		var/mob/ourmob = M
 		ourmob.reset_view(null)
+
+	if(!owner.ckey && escape_stun)
+		owner.Weaken(escape_stun)
 
 	return 1
 
@@ -1310,9 +1322,9 @@
 		items_preserved |= item
 	else
 		owner.adjust_nutrition((nutrition_percent / 100) * 5 * digested)
-		if(isrobot(owner))
-			var/mob/living/silicon/robot/R = owner
-			R.cell.charge += ((nutrition_percent / 100) * 50 * digested)
+		// if(isrobot(owner)) //CHOMPEdit: Borgos can now use nutrition too.
+		//	var/mob/living/silicon/robot/R = owner
+		//	R.cell.charge += ((nutrition_percent / 100) * 50 * digested)
 		digested = TRUE //CHOMPEdit
 	return digested
 
@@ -1659,6 +1671,7 @@
 	dupe.mush_alpha = mush_alpha
 	dupe.max_mush = max_mush
 	dupe.min_mush = min_mush
+	dupe.item_mush_val = item_mush_val
 	dupe.custom_reagentcolor = custom_reagentcolor
 	dupe.custom_reagentalpha = custom_reagentalpha
 	dupe.gen_cost = gen_cost

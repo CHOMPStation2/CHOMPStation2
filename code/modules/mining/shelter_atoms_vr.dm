@@ -118,7 +118,7 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	template_id = "shelter_epsilon"
 	unique_id = "shelter_5"
 	is_ship = TRUE
-	
+
 /obj/item/device/survivalcapsule/popcabin
 	name = "pop-out cabin shelter capsule"
 	desc = "A cozy cabin; crammed into a survival capsule."
@@ -295,6 +295,15 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	var/buildstacktype = /obj/item/stack/material/steel
 	var/buildstackamount = 5
 
+//CHOMPAdd start - fans weren't updating atmos when destroyed or placed
+/obj/structure/fans/Destroy()
+	update_nearby_tiles()
+	return ..()
+
+/obj/structure/fans/Initialize(mapload)
+	.=..()
+	update_nearby_tiles()
+//CHOMPAdd end
 /*
 /obj/structure/fans/proc/deconstruct()
 	new buildstacktype(loc,buildstackamount)

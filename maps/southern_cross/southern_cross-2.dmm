@@ -9830,9 +9830,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/hatch{
-	icon_state = "door_locked";
 	id_tag = "engine_electrical_maintenance";
-	locked = 1;
 	name = "SMES Access";
 	req_access = list(10)
 	},
@@ -30629,7 +30627,7 @@
 /obj/machinery/door/airlock/atmos{
 	name = "Riot Control Maintenance";
 	req_access = newlist();
-	req_one_access = list(2,12,24)
+	req_one_access = list(2)
 	},
 /turf/simulated/floor/plating,
 /area/security/riot_control)
@@ -78720,6 +78718,8 @@
 /obj/item/weapon/tool/crowbar/red,
 /obj/item/weapon/tool/crowbar/red,
 /obj/item/weapon/storage/firstaid/surgery,
+/obj/item/clothing/suit/straight_jacket,
+/obj/item/clothing/suit/straight_jacket,
 /turf/simulated/floor/tiled/dark,
 /area/medical/surgery_storage)
 "wls" = (

@@ -41,6 +41,9 @@ GLOBAL_LIST_INIT(digest_modes, list())
 			return list("to_update" = TRUE, "soundToPlay" = sound(get_sfx("fancy_death_pred")))
 		else
 			B.handle_digestion_death(L)
+		if(!L)
+			B.owner.update_fullness()
+			return list("to_update" = TRUE)
 	if(!L)
 		return //CHOMPEdit End
 
@@ -86,18 +89,19 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	var/difference = B.owner.size_multiplier / L.size_multiplier
 	if(B.health_impacts_size) //CHOMPEdit - Health probably changed so...
 		B.owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
-	if(isrobot(B.owner))
+	/*if(isrobot(B.owner)) //CHOMPEdit: Borgos can now use nutrition too
 		if(B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.reagents.maximum_volume) //digestion producing reagents
 			var/mob/living/silicon/robot/R = B.owner
 			R.cell.charge += 20*damage_gain
+			B.digest_nutri_gain += offset * (1.5 * damage_gain / difference)
 			B.GenerateBellyReagents_digesting()
 		else
 			var/mob/living/silicon/robot/R = B.owner
-			R.cell.charge += 25*damage_gain
+			R.cell.charge += 25*damage_gain */
 	if(offset && damage_gain > 0) // If any different than default weight, multiply the % of offset.
 		if(B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.reagents.maximum_volume) //digestion producing reagents
 			B.owner.adjust_nutrition(offset * (3 * damage_gain / difference) * L.get_digestion_nutrition_modifier() * B.owner.get_digestion_efficiency_modifier()) //Uncertain if balanced fairly, can adjust by multiplier for the cost of reagent, dont go below 1 or else it will result in more nutrition than normal - Jack
-			B.digest_nutri_gain = offset * (1.5 * damage_gain / difference) * L.get_digestion_nutrition_modifier() * B.owner.get_digestion_efficiency_modifier() //for transfering nutrition value over to GenerateBellyReagents_digesting()
+			B.digest_nutri_gain += offset * (1.5 * damage_gain / difference) * L.get_digestion_nutrition_modifier() * B.owner.get_digestion_efficiency_modifier() //for transfering nutrition value over to GenerateBellyReagents_digesting()
 			B.GenerateBellyReagents_digesting()
 		else
 			B.owner.adjust_nutrition(offset * (4.5 * damage_gain / difference) * L.get_digestion_nutrition_modifier() * B.owner.get_digestion_efficiency_modifier()) //4.5 nutrition points per health point. Normal same size 100+100 health prey with average weight would give 900 points if the digestion was instant. With all the size/weight offset taxes plus over time oxyloss+hunger taxes deducted with non-instant digestion, this should be enough to not leave the pred starved.
@@ -223,10 +227,14 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	B.put_in_egg(H, 1)*/
 
 /datum/digest_mode/egg/handle_atoms(obj/belly/B, list/touchable_atoms)
-	if(B.owner.nutrition < 25) //CHOMPEdit Start
+	if(B.egg_cycles < 10) //CHOMPEdit Start
+		B.egg_cycles ++
 		return
+	B.egg_cycles = 0
 	var/list/egg_contents = list()
 	for(var/E in touchable_atoms)
+		if(istype(E, /mob/observer))
+			continue
 		if(istype(E, /obj/item/weapon/storage/vore_egg)) // Don't egg other eggs.
 			var/obj/item/weapon/storage/vore_egg/EG = E
 			if(EG.egg_name != B.egg_name)
@@ -249,10 +257,10 @@ GLOBAL_LIST_INIT(digest_modes, list())
 			if(B.egg_type in tf_vore_egg_types)
 				B.egg_path = tf_vore_egg_types[B.egg_type]
 			B.ownegg = new B.egg_path(B)
-			B.owner.adjust_nutrition(-25)
 			if(B.ownegg && B.egg_name)
 				B.ownegg.egg_name = B.egg_name
-				B.ownegg.name = B.egg_name //CHOMPEdit End
+				B.ownegg.name = B.egg_name
+		var/scale_clamp = 1
 		for(var/atom/movable/C in egg_contents)
 			if(isitem(C) && egg_contents.len == 1) //Only egging one item
 				var/obj/item/I = C
@@ -265,32 +273,34 @@ GLOBAL_LIST_INIT(digest_modes, list())
 				egg_contents -= I
 				B.ownegg = null
 				return list("to_update" = TRUE)
-			if(isliving(C))
-				var/mob/living/M = C
-				var/mob_holder_type = M.holder_type || /obj/item/weapon/holder
-				B.ownegg.w_class = M.size_multiplier * 4 //Egg size and weight scaled to match occupant.
-				var/obj/item/weapon/holder/H = new mob_holder_type(B.ownegg, M)
-				B.ownegg.max_storage_space = H.w_class
-				B.ownegg.icon_scale_x = 0.25 * B.ownegg.w_class
-				B.ownegg.icon_scale_y = 0.25 * B.ownegg.w_class
-				B.ownegg.update_transform()
-				egg_contents -= M
-				if(B.ownegg.w_class > 4)
-					B.ownegg.slowdown = B.ownegg.w_class - 4
-				B.ownegg = null
-				return list("to_update" = TRUE)
-			C.forceMove(B.ownegg)
 			if(isitem(C))
 				var/obj/item/I = C
 				B.ownegg.w_class += I.w_class //Let's assume a regular outfit can reach total w_class of 16.
+				I.forceMove(B.ownegg)
+			if(isliving(C))
+				var/mob/living/M = C
+				var/mob_holder_type = M.holder_type || /obj/item/weapon/holder
+				B.ownegg.w_class += M.size_multiplier * 4 //Egg size and weight scaled to match occupant.
+				if(M.size_multiplier > scale_clamp)
+					scale_clamp = M.size_multiplier
+				var/obj/item/weapon/holder/H = new mob_holder_type(B.ownegg, M)
+				B.ownegg.max_storage_space = H.w_class
+				//B.ownegg.icon_scale_x = 0.25 * B.ownegg.w_class
+				//B.ownegg.icon_scale_y = 0.25 * B.ownegg.w_class
+				//B.ownegg.update_transform()
+				egg_contents -= M
+				//if(B.ownegg.w_class > 4)
+				//	B.ownegg.slowdown = B.ownegg.w_class - 4
+				//B.ownegg = null
+				//return list("to_update" = TRUE)
 		B.ownegg.calibrate_size()
 		B.ownegg.orient2hud()
 		B.ownegg.w_class = clamp(B.ownegg.w_class * 0.25, 1, 8) //A total w_class of 16 will result in a backpack sized egg.
-		B.ownegg.icon_scale_x = clamp(0.25 * B.ownegg.w_class, 0.25, 1)
-		B.ownegg.icon_scale_y = clamp(0.25 * B.ownegg.w_class, 0.25, 1)
+		B.ownegg.icon_scale_x = clamp(0.25 * B.ownegg.w_class, 0.25, scale_clamp)
+		B.ownegg.icon_scale_y = clamp(0.25 * B.ownegg.w_class, 0.25, scale_clamp)
 		B.ownegg.update_transform()
 		if(B.ownegg.w_class > 4)
-			B.ownegg.slowdown = B.ownegg.w_class - 4
+			B.ownegg.slowdown = 4 //CHOMPEdit End
 		B.ownegg = null
 		return list("to_update" = TRUE)
 	return

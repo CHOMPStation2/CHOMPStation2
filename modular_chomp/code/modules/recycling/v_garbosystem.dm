@@ -66,7 +66,7 @@
 		for(var/atom/movable/A in affecting)
 			if(!isobj(A) && !isliving(A))
 				continue
-			if(istype(A, /obj/effect/decal/cleanable))
+			if(istype(A, /obj/effect/decal/cleanable) || istype(A, /mob/living/voice))
 				qdel(A)
 			if(!A.anchored)
 				if(A.loc == src.loc)

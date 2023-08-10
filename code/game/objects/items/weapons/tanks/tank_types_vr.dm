@@ -8,8 +8,8 @@
 	gauge_cap = 3
 	volume = 12		// CHOMP EDIT double extended
 
-/obj/item/weapon/tank/emergency/phoron/double/New()
-	..()
+/obj/item/weapon/tank/emergency/phoron/double/Initialize() //ChompEDIT New() -> Initialize()
+	. = ..()
 	air_contents.adjust_gas("phoron", (10*ONE_ATMOSPHERE)*volume/(R_IDEAL_GAS_EQUATION*T20C))
 
 //New icons

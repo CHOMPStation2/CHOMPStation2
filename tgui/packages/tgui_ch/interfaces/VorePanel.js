@@ -1316,33 +1316,33 @@ const VoreSelectedBellyVisuals = (props, context) => {
             back_color="#FFFFFF"
             name_of="Alpha"
           />
-          <LabeledList.Item label="Enable Coloration">
-            <Button
-              onClick={() =>
-                act('set_attribute', { attribute: 'b_colorization_enabled' })
-              }
-              icon={colorization_enabled ? 'toggle-on' : 'toggle-off'}
-              selected={colorization_enabled}
-              content={colorization_enabled ? 'Yes' : 'No'}
-            />
-          </LabeledList.Item>
-          <LabeledList.Item label="Preview Belly">
-            <Button
-              onClick={() =>
-                act('set_attribute', { attribute: 'b_preview_belly' })
-              }
-              content={'Preview'}
-            />
-          </LabeledList.Item>
-          <LabeledList.Item label="Clear Preview">
-            <Button
-              onClick={() =>
-                act('set_attribute', { attribute: 'b_clear_preview' })
-              }
-              content={'Clear'}
-            />
-          </LabeledList.Item>
         </Flex>
+        <LabeledList.Item label="Enable Coloration">
+          <Button
+            onClick={() =>
+              act('set_attribute', { attribute: 'b_colorization_enabled' })
+            }
+            icon={colorization_enabled ? 'toggle-on' : 'toggle-off'}
+            selected={colorization_enabled}
+            content={colorization_enabled ? 'Yes' : 'No'}
+          />
+        </LabeledList.Item>
+        <LabeledList.Item label="Preview Belly">
+          <Button
+            onClick={() =>
+              act('set_attribute', { attribute: 'b_preview_belly' })
+            }
+            content={'Preview'}
+          />
+        </LabeledList.Item>
+        <LabeledList.Item label="Clear Preview">
+          <Button
+            onClick={() =>
+              act('set_attribute', { attribute: 'b_clear_preview' })
+            }
+            content={'Clear'}
+          />
+        </LabeledList.Item>
       </Section>
       <Section>
         <Section title="Vore FX">
@@ -1713,6 +1713,7 @@ const VoreSelectedBellyLiquidOptions = (props, context) => {
     mush_alpha,
     max_mush,
     min_mush,
+    item_mush_val,
   } = belly;
 
   return (
@@ -1907,6 +1908,16 @@ const VoreSelectedBellyLiquidOptions = (props, context) => {
                 })
               }
               content={liq_interacts.min_mush + '%'}
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Item Mush Value">
+            <Button
+              onClick={() =>
+                act('liq_set_attribute', {
+                  liq_attribute: 'b_item_mush_val',
+                })
+              }
+              content={liq_interacts.item_mush_val + ' fullness per item'}
             />
           </LabeledList.Item>
           <LabeledList.Item label="Purge Liquids">
