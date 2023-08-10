@@ -122,3 +122,5 @@
   - balance: Cockroaches now carry the same drainable nutrition value as mice do.
   - balance: Borg nutrition recharge now uses smaller increments with higher frequency.
   - qol: Lick/Smell verbs can now be used on held mobs and yourself.
+  - rscadd: Added bellysprites for big leggies (3 sizes, "taur" belly).
+  - rscadd: Added bird big leggies.
