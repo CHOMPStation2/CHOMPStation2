@@ -103,6 +103,8 @@
   - balance: Parry shield belt to last twice as long, but takes an extra second to
       recharge.
   - bugfix: Cell can no longer be removed from the parry shield belt.
+  Seris02:
+  - rscadd: adds user_vars_to_edit (for events and stuff or just fun)
   Upstream:
   - rscadd: Zone based marking customisation
   Verkister:
