@@ -12,14 +12,22 @@ jobs:
   autochangelog:
     name: Autochangelog
     runs-on: ubuntu-20.04
-    concurrency: autochangelog_group
+    permissions:
+      contents: write # to push to branch
+      pull-requests: write # to create pull requests (repo-sync/pull-request)
+    concurrency: 
+      group: autochangelog_group
+      cancel-in-progress: false
     if: github.event.pull_request.merged == true
     steps:
-      - uses: /actions/checkout@v3
-        with:
-          ref: master
-      - name: Update repository to master
-        run: git pull "origin" master
+      - name: Clone
+        uses: /actions/checkout@v3
+      - name: Branch and pull
+        run: |
+          git fetch origin
+          git pull "origin" master
+          git checkout changelog_generation
+          git pull "origin" master
       - name: Ensure +x on CI directory
         run: |
           chmod -R +x ./tools/ci
@@ -49,8 +57,20 @@ jobs:
           path: ./tools/GenerateChangelog/prbody.txt
           write-mode: overwrite
           contents: ' '
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Commit CL
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Changelog Generation"
+          git add .
+          git commit -m "Changelog Auto-Update (`date`)" -a || true
+          git push -f -u origin changelog_generation
+      - name: Create Pull Request
+        uses: repo-sync/pull-request@v2
         with:
-          commit_message: Automatic changelog generation for ${{ github.event.pull_request.number }}
-          branch: ${{ github.event.pull_request.base.ref }}
-          commit_user_name: Autochangelog Bot
+          source_branch: "nanomaps_generation"
+          destination_branch: "master"
+          pr_title: "Automatic NanoMap Update"
+          pr_body: "This pull request updates the nanomap images to the latest version of the map."
+          pr_label: "Infrastructure"
+          pr_allow_empty: false
+          github_token: ${{ secrets.GITHUB_TOKEN }}
