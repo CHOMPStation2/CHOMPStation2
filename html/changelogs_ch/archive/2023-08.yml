@@ -99,5 +99,11 @@
   - rscadd: Added Mob Spawner
   - bugfix: Added Squirrel sprites
 2023-08-10:
+  Aroliacue:
+  - balance: Parry shield belt to last twice as long, but takes an extra second to
+      recharge.
+  - bugfix: Cell can no longer be removed from the parry shield belt.
+  Upstream:
+  - rscadd: Zone based marking customisation
   Verkister:
   - bugfix: Fixed too fast mob digestion failing to update belly sprites.
