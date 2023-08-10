@@ -57,7 +57,7 @@ SUBSYSTEM_DEF(circuit)
 		/obj/item/device/electronic_assembly/tiny/box,
 		/obj/item/device/electronic_assembly/medium/default,
 		/obj/item/device/electronic_assembly/medium/box,
-		/obj/item/device/electronic_assembly/medium/tank,
+		/obj/item/device/electronic_assembly/medium/tank, //ChompAdd needed to make assembly appear in list
 		/obj/item/device/electronic_assembly/medium/clam,
 		/obj/item/device/electronic_assembly/medium/medical,
 		/obj/item/device/electronic_assembly/medium/gun,
