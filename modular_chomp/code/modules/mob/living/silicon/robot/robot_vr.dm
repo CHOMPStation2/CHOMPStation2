@@ -84,7 +84,7 @@
 
 /mob/living/silicon/robot/use_power()
 	if(cell && cell.charge < cell.maxcharge)
-		if(nutrition >= 20 * CYBORG_POWER_USAGE_MULTIPLIER)
-			nutrition -= 20 * CYBORG_POWER_USAGE_MULTIPLIER
-			cell.charge += 200 * CYBORG_POWER_USAGE_MULTIPLIER
+		if(nutrition >= 1 * CYBORG_POWER_USAGE_MULTIPLIER)
+			nutrition -= 1 * CYBORG_POWER_USAGE_MULTIPLIER
+			cell.charge += 10 * CYBORG_POWER_USAGE_MULTIPLIER
 	..()
