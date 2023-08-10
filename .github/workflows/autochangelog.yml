@@ -12,16 +12,20 @@ jobs:
   autochangelog:
     name: Autochangelog
     runs-on: ubuntu-20.04
+    permissions:
+      contents: write # to push to branch
+      pull-requests: write # to create pull requests (repo-sync/pull-request)
     concurrency: 
       group: autochangelog_group
       cancel-in-progress: false
     if: github.event.pull_request.merged == true
     steps:
-      - uses: /actions/checkout@v3
-        with:
-          ref: master
-      - name: Update repository to master
-        run: git pull "origin" master
+      - name: Clone
+        uses: /actions/checkout@v3
+      - name: Branch or checkout
+        run: |
+          git fetch origin
+          git checkout changelog_generation 2>/dev/null || git checkout -b changelog_generation
       - name: Ensure +x on CI directory
         run: |
           chmod -R +x ./tools/ci
@@ -51,8 +55,36 @@ jobs:
           path: ./tools/GenerateChangelog/prbody.txt
           write-mode: overwrite
           contents: ' '
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Commit CL
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Changelog Generation"
+          git add .
+          git commit -m "Changelog Auto-Update (`date`)" -a || true
+          git push -u origin changelog_generation
+      - name: Check if PR exists
+        id: check
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          prs=$(gh pr list \
+              --repo "$GITHUB_REPOSITORY" \
+              --json baseRefName,headRefName \
+              --jq '
+                  map(select(.baseRefName == "master" and .headRefName == "changelog_generation"))
+                  | length
+              ')
+          if ((prs > 0)); then
+              echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Create Pull Request
+        if: '!steps.check.outputs.skip'
+        uses: repo-sync/pull-request@v2
         with:
-          commit_message: Automatic changelog generation for ${{ github.event.pull_request.number }}
-          branch: ${{ github.event.pull_request.base.ref }}
-          commit_user_name: Autochangelog Bot
+          source_branch: "changelog_generation"
+          destination_branch: "master"
+          pr_title: "Automatic Changelog Generation"
+          pr_body: "This pull request updates the changelog"
+          pr_label: "Infrastructure"
+          pr_allow_empty: false
+          github_token: ${{ secrets.GITHUB_TOKEN }}
