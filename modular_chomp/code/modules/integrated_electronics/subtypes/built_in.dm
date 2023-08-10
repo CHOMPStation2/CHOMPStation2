@@ -1,13 +1,11 @@
 /obj/item/integrated_circuit/built_in
-	name = "integrated circuit"
-	desc = "It's a tiny chip!  This one doesn't seem to do much, however."
-	icon = 'icons/obj/integrated_electronics/electronic_setups.dmi'
-	icon_state = "template"
-	size = -1
-	w_class = ITEMSIZE_TINY
-	removable = FALSE 			// Determines if a circuit is removable from the assembly.
 	var/volume = 0
 	unacidable = TRUE
+
+/obj/item/integrated_circuit/built_in/New()
+	..()
+	if(volume)
+		create_reagents(volume)
 
 /obj/item/integrated_circuit/built_in/tank
 	name = "integrated fluid tank"
