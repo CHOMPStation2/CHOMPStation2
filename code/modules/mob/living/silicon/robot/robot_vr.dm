@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /mob/living/silicon/robot
 	var/sleeper_g //Set to True only for Medical mechs when patient alive
 	var/sleeper_r //Used in every other case. Currently also for Vorebellies. Ideally vorebellies will use sleeper_o once icons are made
@@ -79,6 +80,8 @@
 					   )					//List of all used sprites that are in robots_vr.dmi
 
 
+=======
+>>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 /mob/living/silicon/robot/verb/robot_nom(var/mob/living/T in living_mobs(1))
 	set name = "Robot Nom"
 	set category = "IC"
@@ -88,6 +91,7 @@
 		return
 	return feed_grabbed_to_self(src,T)
 
+<<<<<<< HEAD
 /mob/living/silicon/robot/lay_down()
 	 . = ..()
 	 updateicon()
@@ -229,6 +233,8 @@
 			else
 				to_chat(src, "<span class='filter_notice'>Insufficient water reserves.</span>")
 
+=======
+>>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 //RIDING
 /datum/riding/dogborg
 	keytype = /obj/item/weapon/material/twohanded/riding_crop // Crack!
@@ -278,8 +284,6 @@
 /mob/living/silicon/robot/buckle_mob(mob/living/M, forced = FALSE, check_loc = TRUE)
 	if(forced)
 		return ..() // Skip our checks
-	if(!dogborg)
-		return FALSE
 	if(lying)
 		return FALSE
 	if(!ishuman(M))

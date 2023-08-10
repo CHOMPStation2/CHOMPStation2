@@ -19,6 +19,7 @@
 					LANGUAGE_TERMINUS = 1,
 					LANGUAGE_ZADDAT = 0
 					)
+<<<<<<< HEAD
 	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 					"Cerberus" = "syndie_bloodhound",
 					"Cerberus - Treaded" = "syndie_treadhound",
@@ -28,12 +29,13 @@
 					"XI-GUS" = "spidersyndi",
 					"XI-ALP" = "syndi-heavy"
 				)*/ //CHOMPEdit end
+=======
+>>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 	var/id
 
 // All syndie modules get these, and the base borg items (flash, crowbar, etc).
-/obj/item/weapon/robot_module/robot/syndicate/New(var/mob/living/silicon/robot/R)
+/obj/item/weapon/robot_module/robot/syndicate/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
-	loc = R
 	src.modules += new /obj/item/weapon/pinpointer/shuttle/merc(src)
 	src.modules += new /obj/item/weapon/melee/energy/sword(src)
 
@@ -45,9 +47,9 @@
 
 	var/jetpack = new/obj/item/weapon/tank/jetpack/carbondioxide(src)
 	src.modules += jetpack
-	R.internals = jetpack
+	robot.internals = jetpack
 
-	id = R.idcard
+	id = robot.idcard
 	src.modules += id
 
 /obj/item/weapon/robot_module/robot/syndicate/Destroy()
@@ -58,6 +60,7 @@
 // Gets a big shield and a gun that shoots really fast to scare the opposing force.
 /obj/item/weapon/robot_module/robot/syndicate/protector
 	name = "protector robot module"
+<<<<<<< HEAD
 	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 		"Cerberus - Treaded" = "syndie_treadhound",
 		"Cerberus" = "syndie_bloodhound",
@@ -66,6 +69,10 @@
 		)*/ //CHOMPEdit end
 
 /obj/item/weapon/robot_module/robot/syndicate/protector/New(var/mob/living/silicon/robot/R)
+=======
+
+/obj/item/weapon/robot_module/robot/syndicate/protector/create_equipment(var/mob/living/silicon/robot/robot)
+>>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 	..()
 	src.modules += new /obj/item/shield_projector/rectangle/weak(src)
 	src.modules += new /obj/item/weapon/gun/energy/dakkalaser(src)
@@ -75,12 +82,15 @@
 // 95% engi-borg and 15% roboticist.
 /obj/item/weapon/robot_module/robot/syndicate/mechanist
 	name = "mechanist robot module"
+<<<<<<< HEAD
 	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 		"XI-GUS" = "spidersyndi",
 		"WTOperator" = "sleekhos"
 		)*/ //CHOMPEdit end
+=======
+>>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 
-/obj/item/weapon/robot_module/robot/syndicate/mechanist/New(var/mob/living/silicon/robot/R)
+/obj/item/weapon/robot_module/robot/syndicate/mechanist/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
 	// General engineering/hacking.
 	src.modules += new /obj/item/borg/sight/meson(src)
@@ -144,11 +154,14 @@
 // Mediborg optimized for on-the-field healing, but can also do surgery if needed.
 /obj/item/weapon/robot_module/robot/syndicate/combat_medic
 	name = "combat medic robot module"
+<<<<<<< HEAD
 	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
 		"Telemachus" = "toiletbotantag"
 		)*/ //CHOMPEdit end
+=======
+>>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 
-/obj/item/weapon/robot_module/robot/syndicate/combat_medic/New(var/mob/living/silicon/robot/R)
+/obj/item/weapon/robot_module/robot/syndicate/combat_medic/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
 	src.modules += new /obj/item/borg/sight/hud/med(src)
 	src.modules += new /obj/item/device/healthanalyzer/phasic(src)
