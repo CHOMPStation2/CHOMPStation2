@@ -124,3 +124,5 @@
   - qol: Lick/Smell verbs can now be used on held mobs and yourself.
   - rscadd: Added bellysprites for big leggies (3 sizes, "taur" belly).
   - rscadd: Added bird big leggies.
+  - bugfix: Fixed digest_act proc not working properly for non-belly use (acid turfs
+      etc.)
