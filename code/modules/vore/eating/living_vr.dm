@@ -417,7 +417,7 @@
 //
 // Clearly super important. Obviously.
 //
-/mob/living/proc/lick(mob/living/tasted in living_mobs(1))
+/mob/living/proc/lick(mob/living/tasted in living_mobs(1, TRUE)) //CHOMPEdit
 	set name = "Lick"
 	set category = "IC"
 	set desc = "Lick someone nearby!"
@@ -430,8 +430,10 @@
 		return
 
 	setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
-
-	visible_message("<span class='warning'>[src] licks [tasted]!</span>","<span class='notice'>You lick [tasted]. They taste rather like [tasted.get_taste_message()].</span>","<b>Slurp!</b>")
+	if(tasted == src) //CHOMPEdit Start
+		visible_message("<span class='warning'>[src] licks themself!</span>","<span class='notice'>You lick yourself. You taste rather like [tasted.get_taste_message()].</span>","<b>Slurp!</b>")
+	else
+		visible_message("<span class='warning'>[src] licks [tasted]!</span>","<span class='notice'>You lick [tasted]. They taste rather like [tasted.get_taste_message()].</span>","<b>Slurp!</b>") //CHOMPEdit End
 
 
 /mob/living/proc/get_taste_message(allow_generic = 1)
@@ -458,7 +460,7 @@
 
 
 //This is just the above proc but switched about.
-/mob/living/proc/smell(mob/living/smelled in living_mobs(1))
+/mob/living/proc/smell(mob/living/smelled in living_mobs(1, TRUE)) //CHOMPEdit
 	set name = "Smell"
 	set category = "IC"
 	set desc = "Smell someone nearby!"
@@ -470,7 +472,10 @@
 		return
 
 	setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
-	visible_message("<span class='warning'>[src] smells [smelled]!</span>","<span class='notice'>You smell [smelled]. They smell like [smelled.get_smell_message()].</span>","<b>Sniff!</b>")
+	if(smelled == src) //CHOMPEdit Start
+		visible_message("<span class='warning'>[src] smells themself!</span>","<span class='notice'>You smell yourself. You smell like [smelled.get_smell_message()].</span>","<b>Sniff!</b>")
+	else
+		visible_message("<span class='warning'>[src] smells [smelled]!</span>","<span class='notice'>You smell [smelled]. They smell like [smelled.get_smell_message()].</span>","<b>Sniff!</b>") //CHOMPEdit End
 
 /mob/living/proc/get_smell_message(allow_generic = 1)
 	if(!vore_smell && !allow_generic)
