@@ -215,6 +215,8 @@
 	name = "Big Leggies"
 	icon_state = "bigleggy"
 	extra_overlay = "bigleggy_markings"
+	vore_tail_sprite_variant = "bigleggy"
+	fullness_icons = 3
 
 /datum/sprite_accessory/tail/taur/ch/bigleggy/canine
 	name = "Big Leggies (Canine Tail)"
@@ -235,3 +237,9 @@
 /datum/sprite_accessory/tail/taur/ch/bigleggy/fox
 	name = "Big Leggies (Fox Tail)"
 	extra_overlay2 = "bigleggy_vulpine"
+
+/datum/sprite_accessory/tail/taur/ch/bigleggy/bird
+	name = "Big Leggies (Bird)"
+	icon_state = "bigleggy"
+	extra_overlay = "bigleggy_m_bird"
+	extra_overlay2 = "bigleggy_bird"
