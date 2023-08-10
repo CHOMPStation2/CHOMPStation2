@@ -121,3 +121,4 @@
   - bugfix: Fixed too fast mob digestion failing to update belly sprites.
   - balance: Cockroaches now carry the same drainable nutrition value as mice do.
   - balance: Borg nutrition recharge now uses smaller increments with higher frequency.
+  - qol: Lick/Smell verbs can now be used on held mobs and yourself.
