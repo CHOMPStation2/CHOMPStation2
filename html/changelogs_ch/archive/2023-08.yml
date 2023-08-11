@@ -128,3 +128,6 @@
       etc.)
   - bugfix: Trasheater toy tease messages are no longer oral-specific.
   - qol: Vore nutrition is no longer useless for borgs.
+2023-08-11:
+  Seris02:
+  - bugfix: fixes the input for customized markings not defaulting to their color
