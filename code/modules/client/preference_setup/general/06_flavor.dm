@@ -49,12 +49,9 @@
 	character.flavor_texts["legs"]		= pref.flavor_texts["legs"]
 	character.flavor_texts["feet"]		= pref.flavor_texts["feet"]
 	character.ooc_notes 				= pref.metadata //VOREStation Add
-<<<<<<< HEAD
-=======
 	character.ooc_notes_likes			= pref.metadata_likes
 	character.ooc_notes_dislikes		= pref.metadata_dislikes
 	character.custom_link				= pref.custom_link
->>>>>>> 62a4bef39a... Merge pull request #15230 from Very-Soft/oocnotes
 
 /datum/category_item/player_setup_item/general/flavor/content(var/mob/user)
 	. += "<b>Flavor:</b><br>"
