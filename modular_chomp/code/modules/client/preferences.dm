@@ -173,12 +173,11 @@
 	for(var/M in body_markings)
 		priority += 1
 		var/datum/sprite_accessory/marking/mark_datum = body_marking_styles_list[M]
-		var/mark_color = "[body_markings[M]]"
 
 		for(var/BP in mark_datum.body_parts)
 			var/obj/item/organ/external/O = character.organs_by_name[BP]
 			if(O)
-				O.markings[M] = list("color" = mark_color, "datum" = mark_datum, "priority" = priority)
+				O.markings[M] = list("color" = body_markings[M][BP]["color"], "datum" = mark_datum, "priority" = priority, "on" = body_markings[M][BP]["on"])
 	character.markings_len = priority
 
 	var/list/last_descriptors = list()
