@@ -131,3 +131,5 @@
 2023-08-11:
   Seris02:
   - bugfix: fixes the input for customized markings not defaulting to their color
+  Verkister:
+  - bugfix: Fixed Big Leggies belly sprites.
