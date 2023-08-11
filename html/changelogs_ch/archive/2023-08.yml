@@ -134,5 +134,6 @@
   - bugfix: fixes the vanity_copy_to proc which broke with the new marking customization
   Upstream:
   - refactor: OOC notes reworked into a panel
+  - rscadd: Custom URL link for examine text
   Verkister:
   - bugfix: Fixed Big Leggies belly sprites.
