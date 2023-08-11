@@ -132,5 +132,7 @@
   Seris02:
   - bugfix: fixes the input for customized markings not defaulting to their color
   - bugfix: fixes the vanity_copy_to proc which broke with the new marking customization
+  Upstream:
+  - refactor: OOC notes reworked into a panel
   Verkister:
   - bugfix: Fixed Big Leggies belly sprites.
