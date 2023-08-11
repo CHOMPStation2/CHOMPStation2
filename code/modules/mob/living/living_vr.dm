@@ -32,8 +32,6 @@
 		ooc_notes = new_metadata
 		to_chat(usr, "<span class='filter_notice'>OOC notes updated.</span>")
 		log_admin("[key_name(usr)] updated their OOC notes mid-round.")
-<<<<<<< HEAD
-=======
 		ooc_notes_window(usr)
 
 /mob/living/proc/set_metainfo_likes()
@@ -83,7 +81,6 @@
 		custom_link = new_link
 		to_chat(usr, "<span class = 'notice'>Link set: [custom_link]</span>")
 		log_admin("[usr]/[usr.ckey] set their custom link to [custom_link]")
->>>>>>> 62a4bef39a... Merge pull request #15230 from Very-Soft/oocnotes
 
 /mob/living/verb/set_voice_freq()
 	set name = "Set Voice Frequency"
