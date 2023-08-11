@@ -5,13 +5,6 @@
 /obj/item/weapon/robot_module/robot/lost
 	name = "lost robot module"
 	hide_on_manifest = TRUE
-<<<<<<< HEAD
-
-	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
-					"Drone" = "drone-lost"
-				)*/ //CHOMPEdit end
-=======
->>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 
 /obj/item/weapon/robot_module/robot/lost/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
@@ -51,13 +44,6 @@
 /obj/item/weapon/robot_module/robot/gravekeeper
 	name = "gravekeeper robot module"
 	hide_on_manifest = TRUE
-<<<<<<< HEAD
-	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
-					"Drone" = "drone-gravekeeper",
-					"Sleek" = "sleek-gravekeeper"
-				)*/ //CHOMPEdit end
-=======
->>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 
 /obj/item/weapon/robot_module/robot/gravekeeper/create_equipment(var/mob/living/silicon/robot/robot)
 	..()

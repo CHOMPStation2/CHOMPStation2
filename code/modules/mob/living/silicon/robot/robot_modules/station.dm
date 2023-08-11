@@ -1,4 +1,3 @@
-//CHOMPNOTE - if upstream edits the sprite lists it will have to be manually copied into our station_vr file, anything else is just read from here
 var/global/list/robot_modules = list(
 	"Standard"		= /obj/item/weapon/robot_module/robot/standard,
 	"Service" 		= /obj/item/weapon/robot_module/robot/clerical/butler,
@@ -28,12 +27,6 @@ var/global/list/robot_modules = list(
 	var/hide_on_manifest = FALSE
 	var/channels = list()
 	var/networks = list()
-<<<<<<< HEAD
-	var/languages = list(LANGUAGE_SOL_COMMON = 1, LANGUAGE_TRADEBAND = 1, LANGUAGE_UNATHI = 0, LANGUAGE_SIIK = 0, LANGUAGE_AKHANI = 0, LANGUAGE_SKRELLIAN = 0, LANGUAGE_GUTTER = 0, LANGUAGE_SCHECHI = 0, LANGUAGE_SIGN = 0, LANGUAGE_TERMINUS = 1, LANGUAGE_ZADDAT = 0)
-	var/defaults = list() //CHOMPAdd - Default values for sprites table entries, once i can figure out how to do this...
-	var/sprites = list()
-	var/can_be_pushed = 1
-=======
 	var/languages = list(LANGUAGE_SOL_COMMON= 1,
 					LANGUAGE_TRADEBAND	= 1,
 					LANGUAGE_UNATHI		= 0,
@@ -50,7 +43,6 @@ var/global/list/robot_modules = list(
 					LANGUAGE_ENOCHIAN	= 0,
 					LANGUAGE_DRUDAKAR	= 0)
 	var/can_be_pushed = 0
->>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 	var/no_slip = 0
 	var/list/modules = list()
 	var/list/datum/matter_synth/synths = list()
@@ -104,13 +96,9 @@ var/global/list/robot_modules = list(
 
 	if(R.radio)
 		R.radio.recalculateChannels()
-<<<<<<< HEAD
-	R.choose_icon(0, R.set_module_sprites(list("Default" = list(SKIN_ICON_STATE = "robot", SKIN_ICON = 'icons/mob/robots.dmi'))))//CHOMPEdit - Sprite selector
-=======
 	R.choose_icon(0)
 
 	R.scrubbing = FALSE
->>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 
 /obj/item/weapon/robot_module/Destroy()
 	for(var/module in modules)
@@ -222,41 +210,12 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/device/robot_tongue(src)
 	src.modules += new /obj/item/device/flash/robot(src)
 	src.modules += new /obj/item/weapon/extinguisher(src)
-<<<<<<< HEAD
-	src.modules += new /obj/item/device/gps/robot(src)
 	src.modules += new /obj/item/weapon/gripper/scene(src) //CHOMPEdit - Give all borgs a scene gripper
-	vr_new() // Vorestation Edit: For modules in robot_modules_vr.dm
-
-/obj/item/weapon/robot_module/robot/standard
-	name = "standard robot module"
-	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
-					"M-USE NanoTrasen" = "robot",
-					"Cabeiri" = "eyebot-standard",
-					"Haruka" = "marinaSD",
-					"Usagi" = "tallflower",
-					"Telemachus" = "toiletbot",
-					"WTOperator" = "sleekstandard",
-					"WTOmni" = "omoikane",
-					"XI-GUS" = "spider",
-					"XI-ALP" = "heavyStandard",
-					"Basic" = "robot_old",
-					"Android" = "droid",
-					"Drone" = "drone-standard",
-					"Insekt" = "insekt-Default",
-					"Usagi-II" = "tall2standard",
-					"Pyralis" = "Glitterfly-Standard",
-					"Miss M" = "miss-standard", // YW change, Added Miss M
-					"Decapod" = "decapod-Standard",
-					"Pneuma" = "pneuma-Standard",
-					"Tower" = "drider-Standard"
-					)*/ //CHOMPEdit end
-=======
 	src.modules += new /obj/item/weapon/tool/crowbar/cyborg(src)
 
 /obj/item/weapon/robot_module/robot/standard
 	name = "standard robot module"
 	pto_type = PTO_CIVILIAN
->>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 
 /obj/item/weapon/robot_module/robot/standard/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
@@ -272,43 +231,13 @@ var/global/list/robot_modules = list(
 	name = "medical robot module"
 	channels = list("Medical" = 1)
 	networks = list(NETWORK_MEDICAL)
-<<<<<<< HEAD
-	subsystems = list(/mob/living/silicon/proc/subsystem_crew_monitor) //Give the surgeon ability to watch Crew monitor
-	can_be_pushed = 0
-=======
 	subsystems = list(/mob/living/silicon/proc/subsystem_crew_monitor)
 	pto_type = PTO_MEDICAL
->>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 
 /* CHOMPedit start: Removal of Surgeon module. *
 
 /obj/item/weapon/robot_module/robot/medical/surgeon
 	name = "surgeon robot module"
-<<<<<<< HEAD
-	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
-					"M-USE NanoTrasen" = "robotMedi",
-					"Cabeiri" = "eyebot-medical",
-					"Haruka" = "marinaMD",
-					"Minako" = "arachne",
-					"Usagi" = "tallwhite",
-					"Telemachus" = "toiletbotsurgeon",
-					"WTOperator" = "sleekcmo",
-					"XI-ALP" = "heavyMed",
-					"Basic" = "Medbot",
-					"Advanced Droid" = "droid-medical",
-					"Needles" = "medicalrobot",
-					"Drone" = "drone-surgery",
-					"Handy" = "handy-med",
-					"Insekt" = "insekt-Med",
-					"Usagi-II" = "tall2medical",
-					"Pyralis" = "Glitterfly-Surgeon",
-					"Miss M" = "miss-medical", // YW change, Added Miss M
-					"Decapod" = "decapod-Surgeon",
-					"Pneuma" = "pneuma-Surgeon",
-					"Tower" = "drider-Surgeon"
-					)*/ //CHOMPEdit end
-=======
->>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 
 
 /obj/item/weapon/robot_module/robot/medical/surgeon/create_equipment(var/mob/living/silicon/robot/robot)
@@ -332,19 +261,12 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/weapon/shockpaddles/robot(src)
 	src.modules += new /obj/item/weapon/reagent_containers/dropper(src) // Allows surgeon borg to fix necrosis
 	src.modules += new /obj/item/weapon/reagent_containers/syringe(src)
-<<<<<<< HEAD
-	src.modules += new /obj/item/device/sleevemate(src)
-	src.modules += new /obj/item/weapon/surgical/bioregen(src) //chompstation addition
-	src.emag = new /obj/item/weapon/reagent_containers/spray(src)
-	src.emag.reagents.add_reagent("pacid", 250)
-	src.emag.name = "Polyacid spray"
-=======
-
+	
 	var/obj/item/weapon/reagent_containers/spray/PS = new /obj/item/weapon/reagent_containers/spray(src)
+	
 	src.emag += PS
 	PS.reagents.add_reagent("pacid", 250)
 	PS.name = "Polyacid spray"
->>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 
 	var/datum/matter_synth/medicine = new /datum/matter_synth/medicine(10000)
 	synths += medicine
@@ -387,32 +309,6 @@ var/global/list/robot_modules = list(
 
 /obj/item/weapon/robot_module/robot/medical/crisis
 	name = "crisis robot module"
-<<<<<<< HEAD
-	subsystems = list(/mob/living/silicon/proc/subsystem_crew_monitor) //Give the medical Crisis ability to watch Crew monitor
-	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
-					"M-USE NanoTrasen" = "robotMedi",
-					"Cabeiri" = "eyebot-medical",
-					"Haruka" = "marinaMD",
-					"Minako" = "arachne",
-					"Usagi" = "tallwhite",
-					"Telemachus" = "toiletbotmedical",
-					"WTOperator" = "sleekmedic",
-					"XI-ALP" = "heavyMed",
-					"Basic" = "Medbot",
-					"Advanced Droid" = "droid-medical",
-					"Needles" = "medicalrobot",
-					"Drone - Medical" = "drone-medical",
-					"Drone - Chemistry" = "drone-chemistry",
-					"Insekt" = "insekt-Med",
-					"Usagi-II" = "tall2medical",
-					"Pyralis" = "Glitterfly-Crisis",
-					"Miss M" = "miss-medical", // YW change, Added Miss M
-					"Decapod" = "decapod-Crisis",
-					"Pneuma" = "pneuma-Crisis",
-					"Tower" = "drider-Crisis"
-					)*/ //CHOMPEdit end
-=======
->>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 
 /obj/item/weapon/robot_module/robot/medical/crisis/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
@@ -423,13 +319,10 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/weapon/reagent_containers/borghypo/crisis(src)
 	src.modules += new /obj/item/weapon/reagent_containers/glass/beaker/large(src)
 	src.modules += new /obj/item/weapon/reagent_containers/dropper/industrial(src)
-	src.modules += new /obj/item/device/sleevemate(src) // CHOMPedit: Lets them scan people.
 	src.modules += new /obj/item/weapon/reagent_containers/syringe(src)
 	src.modules += new /obj/item/weapon/gripper/no_use/organ(src)
 	src.modules += new /obj/item/weapon/gripper/medical(src)
 	src.modules += new /obj/item/weapon/shockpaddles/robot(src)
-<<<<<<< HEAD
-	src.modules += new /obj/item/weapon/inflatable_dispenser/robot(src) //VOREStation Add - This is kinda important for rescuing people without making it worse for everyone
 // CHOMPedit start: Combining Surgeon and Crisis.
 	src.modules += new /obj/item/weapon/autopsy_scanner(src)
 	src.modules += new /obj/item/weapon/surgical/scalpel/cyborg(src)
@@ -443,16 +336,11 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/weapon/surgical/surgicaldrill/cyborg(src)
 	src.modules += new /obj/item/weapon/surgical/bioregen/cyborg(src)
 // CHOMPedit end: Combining Surgeon and Crisis.
-	src.emag = new /obj/item/weapon/reagent_containers/spray(src)
-	src.emag.reagents.add_reagent("pacid", 250)
-	src.emag.name = "Polyacid spray"
-=======
 	src.modules += new /obj/item/weapon/inflatable_dispenser/robot(src)
 	var/obj/item/weapon/reagent_containers/spray/PS = new /obj/item/weapon/reagent_containers/spray(src)
 	src.emag += PS
 	PS.reagents.add_reagent("pacid", 250)
 	PS.name = "Polyacid spray"
->>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 
 	var/datum/matter_synth/medicine = new /datum/matter_synth/medicine(30000) // CHOMPedit: Increased capacity.
 	synths += medicine
@@ -503,32 +391,7 @@ var/global/list/robot_modules = list(
 	channels = list("Engineering" = 1)
 	networks = list(NETWORK_ENGINEERING)
 	subsystems = list(/mob/living/silicon/proc/subsystem_power_monitor)
-<<<<<<< HEAD
-	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
-					"M-USE NanoTrasen" = "robotEngi",
-					"Cabeiri" = "eyebot-engineering",
-					"Haruka" = "marinaENG",
-					"Usagi" = "tallyellow",
-					"Telemachus" = "toiletbotengineering",
-					"WTOperator" = "sleekce",
-					"XI-GUS" = "spidereng",
-					"XI-ALP" = "heavyEng",
-					"Basic" = "Engineering",
-					"Antique" = "engineerrobot",
-					"Landmate" = "landmate",
-					"Landmate - Treaded" = "engiborg+tread",
-					"Drone" = "drone-engineer",
-					"Treadwell" = "treadwell",
-					"Handy" = "handy-engineer",
-					"Usagi-II" = "tall2engineer",
-					"Pyralis" = "Glitterfly-Engineering",
-					"Decapod" = "decapod-Engineering",
-					"Pneuma" = "pneuma-Engineering",
-					"Tower" = "drider-Engineering"
-					)*/ //CHOMPEdit end
-=======
 	pto_type = PTO_ENGINEERING
->>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 
 /obj/item/weapon/robot_module/robot/engineering/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
@@ -635,32 +498,7 @@ var/global/list/robot_modules = list(
 	pto_type = PTO_SECURITY
 
 /obj/item/weapon/robot_module/robot/security/general
-<<<<<<< HEAD
-	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
-					"M-USE NanoTrasen" = "robotSecy",
-					"Cabeiri" = "eyebot-security",
-					"Cerberus" = "bloodhound",
-					"Cerberus - Treaded" = "treadhound",
-					"Haruka" = "marinaSC",
-					"Usagi" = "tallred",
-					"Telemachus" = "toiletbotsecurity",
-					"WTOperator" = "sleeksecurity",
-					"XI-GUS" = "spidersec",
-					"XI-ALP" = "heavySec",
-					"Basic" = "secborg",
-					"Black Knight" = "securityrobot",
-					"Drone" = "drone-sec",
-					"Insekt" = "insekt-Sec",
-					"Usagi-II" = "tall2security",
-					"Pyralis" = "Glitterfly-Security",
-					"Miss M" = "miss-security", // YW change, Added Miss M
-					"Decapod" = "decapod-Security",
-					"Pneuma" = "pneuma-Security",
-					"Tower" = "drider-Security"
-					)*/ //CHOMPEdit end
-=======
 	name = "security robot module"
->>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 
 /obj/item/weapon/robot_module/robot/security/general/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
@@ -671,15 +509,11 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/weapon/reagent_containers/spray/pepper(src)
 	src.modules += new /obj/item/weapon/gripper/security(src)
 	src.modules += new /obj/item/device/ticket_printer(src)	//VOREStation Add
-<<<<<<< HEAD
 	src.modules += new /obj/item/weapon/gun/energy/locked/phasegun/unlocked/mounted/cyborg(src) // CHOMPedit: Phasegun for regular sec cyborg.
-	src.emag = new /obj/item/weapon/gun/energy/laser/mounted(src)
-=======
 	src.emag += new /obj/item/weapon/gun/energy/laser/mounted(src)
 
 	src.modules += new /obj/item/device/dogborg/sleeper/K9(src) //Eat criminals. Bring them to the brig.
 	src.modules += new /obj/item/weapon/dogborg/pounce(src) //Pounce
->>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 
 /obj/item/weapon/robot_module/robot/security/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
 	var/obj/item/device/flash/F = locate() in src.modules
@@ -699,29 +533,7 @@ var/global/list/robot_modules = list(
 /obj/item/weapon/robot_module/robot/janitor
 	name = "janitorial robot module"
 	channels = list("Service" = 1)
-<<<<<<< HEAD
-	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
-					"M-USE NanoTrasen" = "robotJani",
-					"Arachne" = "crawler",
-					"Cabeiri" = "eyebot-janitor",
-					"Haruka" = "marinaJN",
-					"Telemachus" = "toiletbotjanitor",
-					"WTOperator" = "sleekjanitor",
-					"XI-ALP" = "heavyRes",
-					"Basic" = "JanBot2",
-					"Mopbot"  = "janitorrobot",
-					"Mop Gear Rex" = "mopgearrex",
-					"Drone" = "drone-janitor",
-					"Usagi-II" = "tall2janitor",
-					"Pyralis" = "Glitterfly-Janitor",
-					"Miss M" = "miss-janitor", // YW change, Added Miss M
-					"Decapod" = "decapod-Janitor",
-					"Pneuma" = "pneuma-Janitor",
-					"Tower" = "drider-Janitor"
-					)*/ //CHOMPEdit end
-=======
 	pto_type = PTO_CIVILIAN
->>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 
 /obj/item/weapon/robot_module/robot/janitor/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
@@ -730,12 +542,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/weapon/mop(src)
 	src.modules += new /obj/item/pupscrubber(src)
 	src.modules += new /obj/item/device/lightreplacer(src)
-<<<<<<< HEAD
 	src.modules += new /obj/item/device/vac_attachment(src) //CHOMPAdd
-	src.emag = new /obj/item/weapon/reagent_containers/spray(src)
-	src.emag.reagents.add_reagent("lube", 250)
-	src.emag.name = "Lube spray"
-=======
 	var/obj/item/weapon/reagent_containers/spray/LS = new /obj/item/weapon/reagent_containers/spray(src)
 	src.emag += LS
 	LS.reagents.add_reagent("lube", 250)
@@ -752,7 +559,6 @@ var/global/list/robot_modules = list(
 	glass.recharge_rate = 0
 	glass.max_energy = 50000
 	glass.energy = 0
->>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 
 	synths += metal
 	synths += glass
@@ -820,40 +626,10 @@ var/global/list/robot_modules = list(
 /obj/item/weapon/robot_module/robot/clerical/butler
 	channels = list("Service" = 1)
 
-<<<<<<< HEAD
-/obj/item/weapon/robot_module/robot/clerical/butler/general
-	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
-					"M-USE NanoTrasen" = "robotServ",
-					"Cabeiri" = "eyebot-standard",
-					"Haruka" = "marinaSV",
-					"Michiru" = "maidbot",
-					"Usagi" = "tallgreen",
-					"Telemachus" = "toiletbot",
-					"WTOperator" = "sleekservice",
-					"WTOmni" = "omoikane",
-					"XI-GUS" = "spider",
-					"XI-ALP" = "heavyServ",
-					"Standard" = "Service2",
-					"Waitress" = "Service",
-					"Bro" = "Brobot",
-					"Rich" = "maximillion",
-					"Drone - Service" = "drone-service",
-					"Drone - Hydro" = "drone-hydro",
-					"Usagi-II" = "tall2service",
-					"Pyralis" = "Glitterfly-Service",
-					"Miss M" = "miss-service", // YW change, Added Miss M
-					"Decapod" = "decapod-Service",
-					"Pneuma" = "pneuma-Service",
-					"Tower" = "drider-Service"
-				  	)*/ //CHOMPEdit end
-
-/obj/item/weapon/robot_module/robot/clerical/butler/general/New()
-=======
 /obj/item/weapon/robot_module/robot/clerical/butler
 	name = "service robot module"
 
 /obj/item/weapon/robot_module/robot/clerical/butler/create_equipment(var/mob/living/silicon/robot/robot)
->>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 	..()
 	src.modules += new /obj/item/weapon/gripper/service(src)
 	src.modules += new /obj/item/weapon/reagent_containers/glass/bucket(src)
@@ -902,30 +678,6 @@ var/global/list/robot_modules = list(
 
 /obj/item/weapon/robot_module/robot/clerical/general
 	name = "clerical robot module"
-<<<<<<< HEAD
-	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
-					"M-USE NanoTrasen" = "robotCler",
-					"Cabeiri" = "eyebot-standard",
-					"Haruka" = "marinaSV",
-					"Usagi" = "tallgreen",
-					"Telemachus" = "toiletbot",
-					"WTOperator" = "sleekclerical",
-					"WTOmni" = "omoikane",
-					"XI-GUS" = "spidercom",
-					"XI-ALP" = "heavyServ",
-					"Waitress" = "Service",
-					"Bro" = "Brobot",
-					"Rich" = "maximillion",
-					"Default" = "Service2",
-					"Drone" = "drone-blu",
-					"Usagi-II" = "tall2service",
-					"Pyralis" = "Glitterfly-Clerical",
-					"Decapod" = "decapod-Clerical",
-					"Pneuma" = "pneuma-Clerical",
-					"Tower" = "drider-Clerical"
-					)*/ //CHOMPEdit end
-=======
->>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 
 /obj/item/weapon/robot_module/robot/clerical/general/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
@@ -945,28 +697,6 @@ var/global/list/robot_modules = list(
 	name = "miner robot module"
 	channels = list("Supply" = 1)
 	networks = list(NETWORK_MINE)
-<<<<<<< HEAD
-	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
-					"NM-USE NanoTrasen" = "robotMine",
-					"Cabeiri" = "eyebot-miner",
-					"Haruka" = "marinaMN",
-					"Telemachus" = "toiletbotminer",
-					"WTOperator" = "sleekminer",
-					"XI-GUS" = "spidermining",
-					"XI-ALP" = "heavyMiner",
-					"Basic" = "Miner_old",
-					"Advanced Droid" = "droid-miner",
-					"Treadhead" = "Miner",
-					"Drone" = "drone-miner",
-					"Usagi-II" = "tall2miner",
-					"Pyralis" = "Glitterfly-Miner",
-					"Miss M" = "miss-miner", // YW change, Added Miss M
-					"Decapod" = "decapod-Miner",
-					"Pneuma" = "pneuma-Miner",
-					"Tower" = "drider-Miner"
-				)*/
-=======
->>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 	supported_upgrades = list(/obj/item/borg/upgrade/pka, /obj/item/borg/upgrade/diamonddrill)
 	pto_type = PTO_CARGO
 
@@ -980,14 +710,9 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/weapon/storage/bag/sheetsnatcher/borg(src)
 	src.modules += new /obj/item/weapon/gripper/miner(src)
 	src.modules += new /obj/item/weapon/mining_scanner(src)
-<<<<<<< HEAD
 	src.modules += new /obj/item/weapon/gun/energy/locked/phasegun/unlocked/mounted/cyborg(src) //CHOMPedit: Phasegun for regular mining cyborg.
 	src.modules += new /obj/item/device/vac_attachment(src) //CHOMPAdd
-	// New Emag gear for the minebots!
-	src.emag = new /obj/item/weapon/kinetic_crusher/machete/dagger(src)
-=======
 	src.emag += new /obj/item/weapon/kinetic_crusher/machete/dagger(src)
->>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 
 	src.modules += new /obj/item/device/dogborg/sleeper/supply(src)
 	src.emag += new /obj/item/weapon/dogborg/pounce(src)
@@ -995,25 +720,6 @@ var/global/list/robot_modules = list(
 /obj/item/weapon/robot_module/robot/research
 	name = "research module"
 	channels = list("Science" = 1)
-<<<<<<< HEAD
-	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
-					"L'Ouef" = "peaceborg",
-					"Cabeiri" = "eyebot-science",
-					"Haruka" = "marinaSCI",
-					"WTDove" = "whitespider",
-					"WTOperator" = "sleekscience",
-					"Droid" = "droid-science",
-					"Drone" = "drone-science",
-					"Handy" = "handy-science",
-					"Insekt" = "insekt-Sci",
-					"Usagi-II" = "tall2peace",
-					"Pyralis" = "Glitterfly-Research",
-					"Decapod" = "decapod-Research",
-					"Pneuma" = "pneuma-Research",
-					"Tower" = "drider-Research"
-					)*/ //CHOMPEdit end
-=======
->>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 	supported_upgrades = list(/obj/item/borg/upgrade/advrped)
 	pto_type = PTO_SCIENCE
 
@@ -1077,15 +783,6 @@ var/global/list/robot_modules = list(
 /obj/item/weapon/robot_module/robot/security/combat
 	name = "combat robot module"
 	hide_on_manifest = TRUE
-<<<<<<< HEAD
-	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
-					"Haruka" = "marinaCB",
-					"Combat Android" = "droid-combat",
-					"Insekt" = "insekt-Combat",
-					"Decapod" = "decapod-Combat"
-					)*/ //CHOMPEdit end
-=======
->>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 
 /obj/item/weapon/robot_module/robot/security/combat/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
@@ -1220,9 +917,5 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/weapon/pickaxe/borgdrill(src)
 	src.modules += new /obj/item/weapon/storage/bag/ore(src)
 	src.modules += new /obj/item/weapon/storage/bag/sheetsnatcher/borg(src)
-<<<<<<< HEAD
 	src.modules += new /obj/item/weapon/gun/energy/locked/phasegun/unlocked/mounted/cyborg(src)  //Chompedit, makes the mining borg able to defend itself.
-	src.emag = new /obj/item/weapon/pickaxe/diamonddrill(src)
-=======
 	src.emag += new /obj/item/weapon/pickaxe/diamonddrill(src)
->>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end

@@ -28,14 +28,10 @@
 					)
 
 /obj/item/weapon/robot_module/robot/exploration
-	sprites = list(
-				"ExploreHound" = 	list(SKIN_ICON_STATE = "exploration", SKIN_ICON = 'modular_chomp/icons/mob/widerobot_exp_ch.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
-				"ExploreHound V2" = list(SKIN_ICON_STATE = "exploration-v2", SKIN_ICON = 'modular_chomp/icons/mob/widerobot_exp_ch.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
-				)
 	can_be_pushed = 0
 /obj/item/weapon/robot_module/robot/exploration/New(var/mob/living/silicon/robot/R)
 	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
-	src.modules += new /obj/item/device/dogborg/boop_module(src)
+	src.modules += new /obj/item/device/boop_module(src)
 	src.modules += new /obj/item/device/dogborg/sleeper/K9/exploration(src)
 	src.modules += new /obj/item/weapon/gun/energy/locked/phasegun/unlocked/mounted/cyborg(src)
 	src.modules += new /obj/item/device/cataloguer(src)
@@ -50,7 +46,7 @@
 	R.water_res = water
 	synths += water
 
-	var/obj/item/device/dogborg/tongue/T = new /obj/item/device/dogborg/tongue(src)
+	var/obj/item/device/robot_tongue/T = new /obj/item/device/robot_tongue(src)
 	T.water = water
 	src.modules += T
 
@@ -70,7 +66,7 @@
 	R.vore_capacity = 1
 	R.vore_capacity_ex = list("stomach" = 1)
 	R.wideborg = TRUE
-	R.verbs |= /mob/living/silicon/robot/proc/rest_style
+	R.verbs |= /mob/living/silicon/robot/verb/rest_style
 	..()
 
 /obj/item/device/dogborg/sleeper/K9/exploration //The K9 portabrig

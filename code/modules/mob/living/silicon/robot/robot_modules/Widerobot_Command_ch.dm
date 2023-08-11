@@ -34,14 +34,6 @@
 //Build our Module
 /obj/item/weapon/robot_module/robot/chound
 	name = "Unity Hound Module"
-	sprites = list(
-					"Kcom" = 			list(SKIN_ICON_STATE = "kcom", SKIN_ICON = 'modular_chomp/icons/mob/widerobot_ch.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
-					"Raptor V-4.1" = 	list(SKIN_ICON_STATE = "chraptor", SKIN_ICON = 'modular_chomp/icons/mob/raptorborg/raptor_ch.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 45),
-					"Borgi" = 			list(SKIN_ICON_STATE = "borgi", SKIN_ICON = 'modular_chomp/icons/mob/widerobot_ch.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
-					"MEKA" = 						list(SKIN_ICON_STATE = "mekaunity", SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64),
-					"NIKO" = 						list(SKIN_ICON_STATE = "mmekaunity", SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64),
-					"NIKA" = 						list(SKIN_ICON_STATE = "fmekaunity", SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64)
-					)
 	channels = list(
 			"Medical" = 1,
 			"Engineering" = 1,
@@ -72,7 +64,7 @@
 	R.water_res = water
 	synths += water
 
-	var/obj/item/device/dogborg/tongue/T = new /obj/item/device/dogborg/tongue(src)
+	var/obj/item/device/robot_tongue/T = new /obj/item/device/robot_tongue(src)
 	T.water = water
 	src.modules += T
 
@@ -91,10 +83,9 @@
 	R.vore_capacity = 1
 	R.vore_capacity_ex = list("stomach" = 1)
 	R.wideborg = TRUE
-	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
 	R.verbs |= /mob/living/proc/toggle_rider_reins
 	R.verbs |= /mob/living/proc/shred_limb
-	R.verbs |= /mob/living/silicon/robot/proc/rest_style
+	R.verbs |= /mob/living/silicon/robot/verb/rest_style
 
 	..()

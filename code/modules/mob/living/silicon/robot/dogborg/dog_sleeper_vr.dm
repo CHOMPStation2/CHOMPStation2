@@ -134,11 +134,7 @@
 				trashman.reset_view(src)
 				START_PROCESSING(SSobj, src)
 				user.visible_message("<span class='warning'>[hound.name]'s [src.name] groans lightly as [trashman] slips inside.</span>", "<span class='notice'>Your [src.name] groans lightly as [trashman] slips inside.</span>")
-<<<<<<< HEAD
-				log_attack("[key_name(hound)] has eaten [key_name(patient)] as a dogborg. ([hound ? "<a href='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[hound.x];Y=[hound.y];Z=[hound.z]'>JMP</a>" : "null"])")//CHOMPEdit from message_admins
-=======
-				log_admin("[key_name(hound)] has eaten [key_name(patient)] with a cyborg belly. ([hound ? "<a href='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[hound.x];Y=[hound.y];Z=[hound.z]'>JMP</a>" : "null"])")
->>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
+				log_attack("[key_name(hound)] has eaten [key_name(patient)] with a cyborg belly. ([hound ? "<a href='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[hound.x];Y=[hound.y];Z=[hound.z]'>JMP</a>" : "null"])")
 				playsound(src, gulpsound, vol = 100, vary = 1, falloff = 0.1, preference = /datum/client_preference/eating_noises)
 				if(delivery)
 					if(islist(deliverylists[delivery_tag]))
@@ -598,13 +594,7 @@
 				var/actual_brute = T.getBruteLoss() - old_brute
 				var/actual_burn = T.getFireLoss() - old_burn
 				var/damage_gain = actual_brute + actual_burn
-<<<<<<< HEAD
 				hound.nutrition += 2.5 * damage_gain //drain(-25 * damage_gain) //25*total loss as with voreorgan stats.//CHOMPEdit
-				if(water)
-					water.add_charge(damage_gain)
-=======
-				drain(-25 * damage_gain) //25*total loss as with voreorgan stats.
->>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 				if(T.stat == DEAD)
 					if(ishuman(T))
 						log_admin("[key_name(hound)] has digested [key_name(T)] with a cyborg belly. ([hound ? "<a href='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[hound.x];Y=[hound.y];Z=[hound.z]'>JMP</a>" : "null"])")
@@ -780,8 +770,9 @@
 		"mhydrogen" = 0,
 		"verdantium" = 0,
 		"rutile" = 0)
+	medsensor = FALSE
 
-/obj/item/device/dogborg/sleeper/compactor/supply/Entered(atom/movable/thing, atom/OldLoc)
+/obj/item/device/dogborg/sleeper/supply/Entered(atom/movable/thing, atom/OldLoc)
 	. = ..()
 	if(istype(thing, /obj/item/weapon/ore))
 		var/obj/item/weapon/ore/ore = thing
@@ -790,8 +781,8 @@
 		qdel(ore)
 
 /obj/structure/ore_box/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(istype(W, /obj/item/device/dogborg/sleeper/compactor/supply))
-		var/obj/item/device/dogborg/sleeper/compactor/supply/S = W
+	if(istype(W, /obj/item/device/dogborg/sleeper/supply))
+		var/obj/item/device/dogborg/sleeper/supply/S = W
 		for(var/ore in S.stored_ore)
 			if(S.stored_ore[ore] > 0)
 				var/ore_amount = S.stored_ore[ore]	// How many ores does the satchel have?
@@ -810,12 +801,9 @@
 	injection_chems = null
 	compactor = TRUE
 	recycles = FALSE
-<<<<<<< HEAD
 	max_item_count = 25
 	//CHOMP addition end
-=======
 	medsensor = FALSE
->>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 
 /obj/item/device/dogborg/sleeper/brewer
 	name = "Brew Belly"

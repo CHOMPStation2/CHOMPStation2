@@ -10,10 +10,6 @@
 
 /obj/item/weapon/robot_module/robot/clerical/honkborg
 	name = "honk-hound module"
-	sprites = list(
-					"Honkborg" = 	list(SKIN_ICON_STATE = "honkborg", SKIN_ICON = 'modular_chomp/icons/mob/widerobot_ch.dmi', SKIN_OFFSET = -16, SKIN_HEIGHT = 32),
-					"K4T" = 		list(SKIN_ICON_STATE = "k4tclown", SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64) //CHOMPEdit - Tallborgs
-					)
 	channels = list("Service" = 1,
 					"Entertainment" = 1)
 	pto_type = PTO_CIVILIAN
@@ -24,11 +20,11 @@
 	src.modules += new /obj/item/weapon/reagent_containers/glass/bucket(src)
 	src.modules += new /obj/item/weapon/material/minihoe(src)
 	src.modules += new /obj/item/device/analyzer/plant_analyzer(src)
-	src.modules += new /obj/item/weapon/storage/bag/dogborg(src)
+	src.modules += new /obj/item/weapon/storage/bag/serviceborg(src)
 	src.modules += new /obj/item/weapon/robot_harvester(src)
 	src.modules += new /obj/item/device/multitool(src)
 	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
-	src.modules += new /obj/item/device/dogborg/boop_module(src)
+	src.modules += new /obj/item/device/boop_module(src)
 	src.modules += new /obj/item/weapon/dogborg/pounce(src)
 	src.modules += new /obj/item/weapon/bikehorn(src)
 	src.modules += new /obj/item/weapon/gun/launcher/confetti_cannon/honkborg(src)
@@ -40,7 +36,7 @@
 	R.water_res = water
 	synths += water
 
-	var/obj/item/device/dogborg/tongue/T = new /obj/item/device/dogborg/tongue(src)
+	var/obj/item/device/robot_tongue/T = new /obj/item/device/robot_tongue(src)
 	T.water = water
 	src.modules += T
 
@@ -72,9 +68,8 @@
 	R.vore_capacity = 1
 	R.vore_capacity_ex = list("stomach" = 1)
 	R.wideborg = TRUE
-	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
 	R.verbs |= /mob/living/proc/toggle_rider_reins
 	R.verbs |= /mob/living/proc/shred_limb
-	R.verbs |= /mob/living/silicon/robot/proc/rest_style
+	R.verbs |= /mob/living/silicon/robot/verb/rest_style
 	..()

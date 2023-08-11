@@ -98,7 +98,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 	else if(mind)
 		to_chat(src, span("notice", "Transferring Shell"))
 		deployed = FALSE
-		updateicon()
+		update_icon()
 		mainframe.teleop = null
 		mainframe.deployed_shell = null
 		SetName("[modtype] AI Shell [num2text(ident)]")

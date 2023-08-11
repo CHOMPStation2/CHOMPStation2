@@ -144,12 +144,8 @@ var/global/list/alphabet_uppercase = list("A","B","C","D","E","F","G","H","I","J
 var/list/robot_module_types = list(
 	"Standard", "Engineering",/* "Surgeon",*/  "Crisis", //CHOMPedit: Combining Surgeon and Crisis.
 	"Miner",    "Janitor",     "Service",      "Clerical", "Security",
-<<<<<<< HEAD
 	"Research", "Medihound", "K9", "Janihound", "Sci-borg", "Pupdozer",
 	"Service-Hound", "BoozeHound", "KMine"//, "TraumaHound" // CHOMPedit: Combining Medihound and Traumahound.
-=======
-	"Research"
->>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 )
 // List of modules added during code red
 var/list/emergency_module_types = list(

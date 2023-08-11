@@ -1,4 +1,3 @@
-//CHOMPNOTE - if upstream edits the sprite lists it will have to be manually copied into our station_vr file, anything else is just read from here
 /* Syndicate modules */
 
 /obj/item/weapon/robot_module/robot/syndicate
@@ -19,18 +18,6 @@
 					LANGUAGE_TERMINUS = 1,
 					LANGUAGE_ZADDAT = 0
 					)
-<<<<<<< HEAD
-	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
-					"Cerberus" = "syndie_bloodhound",
-					"Cerberus - Treaded" = "syndie_treadhound",
-					"Ares" = "squats",
-					"Telemachus" = "toiletbotantag",
-					"WTOperator" = "hosborg",
-					"XI-GUS" = "spidersyndi",
-					"XI-ALP" = "syndi-heavy"
-				)*/ //CHOMPEdit end
-=======
->>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 	var/id
 
 // All syndie modules get these, and the base borg items (flash, crowbar, etc).
@@ -60,19 +47,8 @@
 // Gets a big shield and a gun that shoots really fast to scare the opposing force.
 /obj/item/weapon/robot_module/robot/syndicate/protector
 	name = "protector robot module"
-<<<<<<< HEAD
-	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
-		"Cerberus - Treaded" = "syndie_treadhound",
-		"Cerberus" = "syndie_bloodhound",
-		"Ares" = "squats",
-		"XI-ALP" = "syndi-heavy"
-		)*/ //CHOMPEdit end
-
-/obj/item/weapon/robot_module/robot/syndicate/protector/New(var/mob/living/silicon/robot/R)
-=======
 
 /obj/item/weapon/robot_module/robot/syndicate/protector/create_equipment(var/mob/living/silicon/robot/robot)
->>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 	..()
 	src.modules += new /obj/item/shield_projector/rectangle/weak(src)
 	src.modules += new /obj/item/weapon/gun/energy/dakkalaser(src)
@@ -82,13 +58,6 @@
 // 95% engi-borg and 15% roboticist.
 /obj/item/weapon/robot_module/robot/syndicate/mechanist
 	name = "mechanist robot module"
-<<<<<<< HEAD
-	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
-		"XI-GUS" = "spidersyndi",
-		"WTOperator" = "sleekhos"
-		)*/ //CHOMPEdit end
-=======
->>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 
 /obj/item/weapon/robot_module/robot/syndicate/mechanist/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
@@ -154,12 +123,6 @@
 // Mediborg optimized for on-the-field healing, but can also do surgery if needed.
 /obj/item/weapon/robot_module/robot/syndicate/combat_medic
 	name = "combat medic robot module"
-<<<<<<< HEAD
-	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
-		"Telemachus" = "toiletbotantag"
-		)*/ //CHOMPEdit end
-=======
->>>>>>> 98fe284f92... Merge pull request #15215 from Heroman3003/dogborg-end
 
 /obj/item/weapon/robot_module/robot/syndicate/combat_medic/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
