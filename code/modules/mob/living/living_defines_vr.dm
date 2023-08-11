@@ -5,12 +5,9 @@
 	var/autowhisper_mode = null			// Mode to use with autowhisper
 /mob/living
 	var/ooc_notes = null
-<<<<<<< HEAD
-=======
 	var/ooc_notes_likes = null
 	var/ooc_notes_dislikes = null
 	var/custom_link = null
->>>>>>> 62a4bef39a... Merge pull request #15230 from Very-Soft/oocnotes
 	appearance_flags = TILE_BOUND|PIXEL_SCALE|KEEP_TOGETHER|LONG_GLIDE
 	var/hunger_rate = DEFAULT_HUNGER_FACTOR
 //custom say verbs
