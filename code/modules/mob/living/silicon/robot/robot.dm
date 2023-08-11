@@ -368,6 +368,12 @@
 		var/meta_info = client.prefs.metadata
 		if (meta_info)
 			ooc_notes = meta_info
+<<<<<<< HEAD
+=======
+			ooc_notes_likes = client.prefs.metadata_likes
+			ooc_notes_dislikes = client.prefs.metadata_dislikes
+		custom_link = client.prefs.custom_link
+>>>>>>> 62a4bef39a... Merge pull request #15230 from Very-Soft/oocnotes
 
 /mob/living/silicon/robot/verb/Namepick()
 	set category = "Robot Commands"
@@ -1304,3 +1310,29 @@
 
 /mob/living/silicon/robot/get_cell()
 	return cell
+<<<<<<< HEAD
+=======
+
+/mob/living/silicon/robot/lay_down()
+	 . = ..()
+	 update_icon()
+
+/mob/living/silicon/robot/verb/rest_style()
+	set name = "Switch Rest Style"
+	set desc = "Select your resting pose."
+	set category = "IC"
+
+	if(!sprite_datum || !sprite_datum.has_rest_sprites || sprite_datum.rest_sprite_options.len < 1)
+		to_chat(src, "<span class='notice'>Your current appearance doesn't have any resting styles!</span>")
+		rest_style = "Default"
+		return
+
+	if(sprite_datum.rest_sprite_options.len == 1)
+		to_chat(src, "<span class='notice'>Your current appearance only has a single resting style!</span>")
+		rest_style = "Default"
+		return
+
+	rest_style = tgui_alert(src, "Select resting pose", "Resting Pose", sprite_datum.rest_sprite_options)
+	if(!rest_style)
+		rest_style = "Default"
+>>>>>>> 62a4bef39a... Merge pull request #15230 from Very-Soft/oocnotes
