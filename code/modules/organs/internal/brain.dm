@@ -103,7 +103,13 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 		if(istype(H))
 			brainmob.dna = H.dna.Clone()
 			brainmob.timeofhostdeath = H.timeofdeath
+<<<<<<< HEAD
 			brainmob.ooc_notes = H.ooc_notes //VOREStation Edit 
+=======
+			brainmob.ooc_notes = H.ooc_notes //VOREStation Edit
+			brainmob.ooc_notes_likes = H.ooc_notes_likes
+			brainmob.ooc_notes_dislikes = H.ooc_notes_dislikes
+>>>>>>> 84d239d6ed... Merge pull request #15229 from Very-Soft/oocnotes
 
 		// Copy modifiers.
 		for(var/datum/modifier/M in H.modifiers)
@@ -254,6 +260,8 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 		R.dna.real_name = "promethean ([rand(0,999)])"
 	H.real_name = R.dna.real_name
 	H.ooc_notes = brainmob.ooc_notes // VOREStation Edit
+	H.ooc_notes_likes = brainmob.ooc_notes_likes
+	H.ooc_notes_dislikes = brainmob.ooc_notes_dislikes
 
 	H.nutrition = 260 //Enough to try to regenerate ONCE.
 	H.adjustBruteLoss(40)
