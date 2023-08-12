@@ -785,7 +785,7 @@
 
 /obj/structure/ore_box/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/device/dogborg/sleeper/compactor/supply))
-		var/obj/item/device/dogborg/sleeper/supply/S = W
+		var/obj/item/device/dogborg/sleeper/compactor/supply/S = W
 		for(var/ore in S.stored_ore)
 			if(S.stored_ore[ore] > 0)
 				var/ore_amount = S.stored_ore[ore]	// How many ores does the satchel have?
