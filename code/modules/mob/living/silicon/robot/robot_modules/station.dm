@@ -713,8 +713,25 @@ var/global/list/robot_modules = list(
 	src.emag.reagents = R
 	R.my_atom = src.emag
 	R.add_reagent("beer2", 50)
+<<<<<<< HEAD
 	src.emag.name = "Auntie Hong's Final Sip"
 	src.emag.desc = "A bottle of very special mix of alcohol and poison. Some may argue that there's alcohol to die for, but Auntie Hong took it to next level."
+=======
+	PB.name = "Auntie Hong's Final Sip"
+	PB.desc = "A bottle of very special mix of alcohol and poison. Some may argue that there's alcohol to die for, but Auntie Hong took it to next level."
+
+	src.modules += new /obj/item/device/dogborg/sleeper/compactor/brewer(src)
+
+	src.emag += new /obj/item/weapon/dogborg/pounce(src) //Pounce
+
+/obj/item/weapon/robot_module/robot/clerical/butler/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
+	var/obj/item/weapon/reagent_containers/food/condiment/enzyme/E = locate() in src.modules
+	E.reagents.add_reagent("enzyme", 2 * amount)
+
+	var/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/PB = locate() in src.emag
+	if(PB)
+		PB.reagents.add_reagent("beer2", 2 * amount)
+>>>>>>> f095aaad11... Merge pull request #15237 from Heroman3003/borgfollowup
 
 /obj/item/weapon/robot_module/robot/clerical/general
 	name = "clerical robot module"
@@ -798,9 +815,14 @@ var/global/list/robot_modules = list(
 	// New Emag gear for the minebots!
 	src.emag = new /obj/item/weapon/kinetic_crusher/machete/dagger(src)
 
+<<<<<<< HEAD
 	// No reason for these, upgrade modules replace them.
 	//src.emag = new /obj/item/weapon/pickaxe/plasmacutter/borg(src)
 	//src.emag = new /obj/item/weapon/pickaxe/diamonddrill(src)
+=======
+	src.modules += new /obj/item/device/dogborg/sleeper/compactor/supply(src)
+	src.emag += new /obj/item/weapon/dogborg/pounce(src)
+>>>>>>> f095aaad11... Merge pull request #15237 from Heroman3003/borgfollowup
 
 /obj/item/weapon/robot_module/robot/research
 	name = "research module"

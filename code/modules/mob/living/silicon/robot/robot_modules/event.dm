@@ -41,6 +41,12 @@
 	C.synths = list(wire)
 	src.modules += C
 
+<<<<<<< HEAD
+=======
+	src.modules += new /obj/item/device/dogborg/sleeper/lost(src)
+	src.modules += new /obj/item/weapon/dogborg/pounce(src)
+
+>>>>>>> f095aaad11... Merge pull request #15237 from Heroman3003/borgfollowup
 /obj/item/weapon/robot_module/robot/gravekeeper
 	name = "gravekeeper robot module"
 	hide_on_manifest = TRUE
@@ -81,6 +87,7 @@
 	W.synths = list(wood)
 	src.modules += W
 
+<<<<<<< HEAD
 	//CHOMPEdit - "Giving the gravekeeper drone more modules to allow it to actually do it's job."
 	src.modules += new /obj/item/weapon/tool/wirecutters/cyborg(src) //Gotta clear those pesky landmines somehow. Also allows for deconstruction of things in the way!
 	src.modules += new /obj/item/device/multitool(src)
@@ -158,3 +165,8 @@
 	var/obj/item/stack/material/cyborg/plastic/PL = new (src)
 	PL.synths = list(plastic)
 	src.modules += PL //CHOMEdit End
+=======
+	// For uwu
+	src.modules += new /obj/item/device/dogborg/sleeper/compactor/generic(src)
+	src.emag += new /obj/item/weapon/dogborg/pounce(src)
+>>>>>>> f095aaad11... Merge pull request #15237 from Heroman3003/borgfollowup
