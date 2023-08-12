@@ -20,7 +20,25 @@ hollifex - Diona
 inuzari - Diona
 jademanique - Xenochimera
 ktccd - Diona
+<<<<<<< HEAD
 khanivore - Protean
+=======
+lavenderrs - Teppi
+lazzar - Black-Eyed Shadekin
+lianvee - Black-Eyed Shadekin
+lillianfyre - Xenochimera
+lizehrd - Xenochimera
+looptyloo - Protean
+lordlag - Black-Eyed Shadekin
+lorgenz - Protean
+losstinspess - Protean
+losstinspess - Xenochimera
+negatist - Protean
+magpiemayhem - Vox
+magpiemayhem - Xenochimera
+makkinindorn - Protean
+marcobarko - Protean
+>>>>>>> 6064514492... Merge pull request #15240 from TankTheBirb/TankTheBirb-whitelist-add-1
 mewchild - Diona
 mewchild - Vox
 mrsebbi - Xenochimera
