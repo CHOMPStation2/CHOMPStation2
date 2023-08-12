@@ -714,14 +714,8 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/device/vac_attachment(src) //CHOMPAdd
 	src.emag += new /obj/item/weapon/kinetic_crusher/machete/dagger(src)
 
-<<<<<<< HEAD
-	// No reason for these, upgrade modules replace them.
-	//src.emag = new /obj/item/weapon/pickaxe/plasmacutter/borg(src)
-	//src.emag = new /obj/item/weapon/pickaxe/diamonddrill(src)
-=======
 	src.modules += new /obj/item/device/dogborg/sleeper/compactor/supply(src)
 	src.emag += new /obj/item/weapon/dogborg/pounce(src)
->>>>>>> f095aaad11... Merge pull request #15237 from Heroman3003/borgfollowup
 
 /obj/item/weapon/robot_module/robot/research
 	name = "research module"
