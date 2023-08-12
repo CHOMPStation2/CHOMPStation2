@@ -775,7 +775,7 @@
 		"rutile" = 0)
 	medsensor = FALSE
 
-/obj/item/device/dogborg/sleeper/supply/Entered(atom/movable/thing, atom/OldLoc)
+/obj/item/device/dogborg/sleeper/compactor/supply/Entered(atom/movable/thing, atom/OldLoc)
 	. = ..()
 	if(istype(thing, /obj/item/weapon/ore))
 		var/obj/item/weapon/ore/ore = thing
@@ -784,7 +784,7 @@
 		qdel(ore)
 
 /obj/structure/ore_box/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(istype(W, /obj/item/device/dogborg/sleeper/supply))
+	if(istype(W, /obj/item/device/dogborg/sleeper/compactor/supply))
 		var/obj/item/device/dogborg/sleeper/supply/S = W
 		for(var/ore in S.stored_ore)
 			if(S.stored_ore[ore] > 0)
@@ -796,6 +796,7 @@
 		return
 	..() //CHOMPEdit End
 
+//CHOMPAdd START
 /obj/item/device/dogborg/sleeper/command //Command borg belly //CHOMP addition
 	name = "Bluespace Filing Belly"
 	desc = "A mounted bluespace storage unit for carrying paperwork"
@@ -805,11 +806,10 @@
 	compactor = TRUE
 	recycles = FALSE
 	max_item_count = 25
-	//CHOMP addition end
-	stabilizer = TRUE
 	medsensor = FALSE
+//CHOMP addition end
 
-/obj/item/device/dogborg/sleeper/brewer
+/obj/item/device/dogborg/sleeper/compactor/brewer
 	name = "Brew Belly"
 	desc = "A mounted drunk tank unit with fuel processor, for putting away particularly rowdy patrons."
 	icon_state = "brewer"
