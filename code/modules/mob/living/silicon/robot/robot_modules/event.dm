@@ -38,7 +38,7 @@
 	C.synths = list(wire)
 	src.modules += C
 
-	src.modules += new /obj/item/device/dogborg/sleeper(src)
+	src.modules += new /obj/item/device/dogborg/sleeper/lost(src)
 	src.modules += new /obj/item/weapon/dogborg/pounce(src)
 
 /obj/item/weapon/robot_module/robot/gravekeeper
@@ -76,7 +76,11 @@
 	var/obj/item/stack/material/cyborg/wood/W = new (src)
 	W.synths = list(wood)
 	src.modules += W
-
+	
+	// For uwu
+	src.modules += new /obj/item/device/dogborg/sleeper/compactor/generic(src)
+	src.emag += new /obj/item/weapon/dogborg/pounce(src)
+	
 	//CHOMPEdit - "Giving the gravekeeper drone more modules to allow it to actually do it's job."
 	src.modules += new /obj/item/weapon/tool/wirecutters/cyborg(src) //Gotta clear those pesky landmines somehow. Also allows for deconstruction of things in the way!
 	src.modules += new /obj/item/device/multitool(src)
