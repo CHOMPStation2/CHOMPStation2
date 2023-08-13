@@ -246,18 +246,18 @@
 		return 1
 
 // Tall sprites
-
+//CHOMPNote -- many of the lines in this is overriden in modular
 /datum/robot_sprite/dogborg/tall/service
 	module_type = "Service"
 	sprite_icon = 'icons/mob/robot/service_large.dmi'
 
-/datum/robot_sprite/dogborg/tall/service/raptor
+/datum/robot_sprite/dogborg/raptor/service/raptor //CHOMPEdit - changing typepath
 	name = "Raptor V-4"
 	sprite_icon_state = "raptor"
 	has_custom_equipment_sprites = TRUE
 	rest_sprite_options = list("Default", "Bellyup")
 
-/datum/robot_sprite/dogborg/tall/service/fancyraptor
+/datum/robot_sprite/dogborg/raptor/service/fancyraptor //CHOMPEdit - changing typepath
 	name = "Raptor V-4000"
 	sprite_icon_state = "fancyraptor"
 	has_custom_equipment_sprites = TRUE
@@ -271,6 +271,7 @@
 	has_vore_belly_sprites = FALSE
 	rest_sprite_options = list("Default", "Sit")
 
+/* //CHOMPRemove - we dont use the old sprites so this is useless
 /datum/robot_sprite/dogborg/tall/service/newmeka
 	name = "MEKA v2"
 	sprite_icon_state = "newmeka"
@@ -278,7 +279,7 @@
 	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = FALSE
 	rest_sprite_options = list("Default", "Sit")
-
+*/
 /datum/robot_sprite/dogborg/tall/service/mmeka
 	name = "NIKO"
 	sprite_icon_state = "mmeka"

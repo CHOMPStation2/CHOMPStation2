@@ -261,9 +261,9 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/weapon/shockpaddles/robot(src)
 	src.modules += new /obj/item/weapon/reagent_containers/dropper(src) // Allows surgeon borg to fix necrosis
 	src.modules += new /obj/item/weapon/reagent_containers/syringe(src)
-	
+
 	var/obj/item/weapon/reagent_containers/spray/PS = new /obj/item/weapon/reagent_containers/spray(src)
-	
+
 	src.emag += PS
 	PS.reagents.add_reagent("pacid", 250)
 	PS.name = "Polyacid spray"
@@ -366,6 +366,7 @@ var/global/list/robot_modules = list(
 	src.modules += O
 	src.modules += B
 	src.modules += S
+	src.modules += C //CHOMPEdit - AND ACTUALLY ADD IT TO THE MODULES LIST
 
 	src.modules += new /obj/item/device/dogborg/sleeper(src)
 	src.emag += new /obj/item/weapon/dogborg/pounce(src) //Pounce

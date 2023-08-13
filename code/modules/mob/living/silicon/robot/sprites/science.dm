@@ -143,12 +143,12 @@
 	sprite_icon_state = "drake"
 
 // Tall sprites
-
+//CHOMPNote -- many of the lines in this is overriden in modular
 /datum/robot_sprite/dogborg/tall/science
 	module_type = "Research"
 	sprite_icon = 'icons/mob/robot/science_large.dmi'
 
-/datum/robot_sprite/dogborg/tall/science/do_equipment_glamour(var/obj/item/weapon/robot_module/module)
+/datum/robot_sprite/dogborg/raptor/science/do_equipment_glamour(var/obj/item/weapon/robot_module/module) //CHOMPEdit - changed typepath
 	if(!has_custom_equipment_sprites)
 		return
 
@@ -162,7 +162,7 @@
 		J.icon_state = "defibpaddles0"
 		J.attack_verb = list("batted", "pawed", "bopped", "whapped")
 
-/datum/robot_sprite/dogborg/tall/science/raptor
+/datum/robot_sprite/dogborg/raptor/science/raptor //CHOMPEdit - changed typepath
 	name = "Raptor V-4"
 	sprite_icon_state = "raptor"
 	has_custom_equipment_sprites = TRUE
@@ -176,12 +176,14 @@
 	has_vore_belly_sprites = FALSE
 	rest_sprite_options = list("Default", "Sit")
 
+/* //CHOMPRemoval Start - we dont use the old sprites
 /datum/robot_sprite/dogborg/tall/science/newmeka
 	name = "MEKA v2"
 	sprite_icon_state = "newmeka"
 	has_eye_light_sprites = TRUE
 	has_custom_open_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
+*/ //CHOMPRemoval End
 
 /datum/robot_sprite/dogborg/tall/science/mmeka
 	name = "NIKO"
