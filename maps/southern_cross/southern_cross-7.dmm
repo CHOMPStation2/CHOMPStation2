@@ -81,8 +81,8 @@
 	dir = 1
 	},
 /obj/machinery/door/window/westright{
-	req_one_access = list(47);
-	name = "Research and Development"
+	name = "Research and Development";
+	req_one_access = list(47)
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/rnd)
@@ -202,8 +202,8 @@
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/airlock/multi_tile/glass{
-	name = "Hangar - Ursula";
-	dir = 1
+	dir = 1;
+	name = "Hangar - Ursula"
 	},
 /turf/simulated/floor,
 /area/expoutpost/hangarthree)
@@ -292,8 +292,8 @@
 	},
 /obj/machinery/access_button{
 	dir = 4;
-	pixel_y = -27;
-	pixel_x = -7
+	pixel_x = -7;
+	pixel_y = -27
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -691,8 +691,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	name = "Q-Pad Junction";
-	dir = 1
+	dir = 1;
+	name = "Q-Pad Junction"
 	},
 /turf/simulated/floor,
 /area/expoutpost/portqpadjunction)
@@ -786,8 +786,8 @@
 "aGJ" = (
 /obj/machinery/door/firedoor/multi_tile/glass,
 /obj/machinery/door/airlock/multi_tile/glass{
-	req_one_access = list(48);
-	name = "Mining Foyer"
+	name = "Mining Foyer";
+	req_one_access = list(48)
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/miningfoyer)
@@ -887,8 +887,8 @@
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/machinery/door/airlock/glass_external{
 	icon_state = "door_locked";
-	name = "Port Bow Outer Airlock";
-	locked = 1
+	locked = 1;
+	name = "Port Bow Outer Airlock"
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/reinforced,
@@ -1252,9 +1252,9 @@
 /area/expoutpost/bar)
 "aZU" = (
 /obj/machinery/power/quantumpad{
-	name = "Medbay Q-Pad";
 	map_pad_id = "aeg_medbay_padout";
-	map_pad_link_id = "aeg_medbay_padin"
+	map_pad_link_id = "aeg_medbay_padin";
+	name = "Medbay Q-Pad"
 	},
 /obj/machinery/light{
 	dir = 1
@@ -1385,8 +1385,8 @@
 "bfx" = (
 /obj/machinery/computer/general_air_control/supermatter_core{
 	dir = 1;
-	name = "Aegis Core Cooling Control";
 	input_tag = "aegrust_cooling_in";
+	name = "Aegis Core Cooling Control";
 	output_tag = "aegrust_cooling_out";
 	sensors = list("aegrustengine_sensor"="Aegis Engine Temperature")
 	},
@@ -1715,9 +1715,9 @@
 /area/expoutpost/starqpadjunction)
 "btC" = (
 /obj/machinery/power/quantumpad{
-	name = "EVA Q-Pad";
 	map_pad_id = "aeg_eva_padout";
-	map_pad_link_id = "aeg_eva_padin"
+	map_pad_link_id = "aeg_eva_padin";
+	name = "EVA Q-Pad"
 	},
 /obj/structure/cable/green{
 	d2 = 8;
@@ -2043,11 +2043,11 @@
 /area/shuttle/baby_mammoth)
 "bKJ" = (
 /obj/machinery/power/smes/buildable{
-	input_attempt = 1;
-	charge = 2e+006;
 	RCon_tag = "Reactor Input - Aegis";
-	name = "Reactor SMES - Input";
-	cur_coils = 6
+	charge = 2e+006;
+	cur_coils = 6;
+	input_attempt = 1;
+	name = "Reactor SMES - Input"
 	},
 /obj/structure/cable/cyan{
 	d2 = 4;
@@ -2099,8 +2099,8 @@
 /obj/structure/cable/yellow{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	dir = 1;
+	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
 	d1 = 2;
@@ -2343,17 +2343,17 @@
 	},
 /obj/machinery/button/remote/blast_door{
 	dir = 1;
-	pixel_y = -28;
+	id = "aeg_bar_blastdoor";
 	name = "Bar Blast Doors";
-	id = "aeg_bar_blastdoor"
+	pixel_y = -28
 	},
 /turf/simulated/floor/wood,
 /area/expoutpost/bar)
 "bVY" = (
 /obj/machinery/power/quantumpad{
-	name = "TO - MINING";
 	map_pad_id = "aeg_mining_padin";
-	map_pad_link_id = "aeg_mining_padout"
+	map_pad_link_id = "aeg_mining_padout";
+	name = "TO - MINING"
 	},
 /obj/structure/cable/green{
 	d2 = 4;
@@ -2389,9 +2389,9 @@
 	},
 /obj/machinery/power/smes/buildable/power_shuttle{
 	charge = 4e+006;
+	input_attempt = 1;
 	inputting = 1;
-	outputting = 1;
-	input_attempt = 1
+	outputting = 1
 	},
 /obj/structure/cable/green{
 	d2 = 4;
@@ -2636,8 +2636,8 @@
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
 	dir = 1;
-	req_one_access = list(43,67);
-	name = "Exploration Ready Room"
+	name = "Exploration Ready Room";
+	req_one_access = list(43,67)
 	},
 /turf/simulated/floor,
 /area/expoutpost/explobriefroom)
@@ -2957,8 +2957,8 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/airlock/silver{
-	name = "Suite One";
-	id_tag = "aeg_suiteone_bolt"
+	id_tag = "aeg_suiteone_bolt";
+	name = "Suite One"
 	},
 /turf/simulated/floor,
 /area/expoutpost/suite1)
@@ -3081,9 +3081,9 @@
 	dir = 4
 	},
 /obj/machinery/button/remote/blast_door{
-	pixel_y = 28;
+	id = "aeg_mining_storage";
 	name = "Mining Storage";
-	id = "aeg_mining_storage"
+	pixel_y = 28
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/miningfoyer)
@@ -3333,8 +3333,8 @@
 "cIJ" = (
 /obj/machinery/door/airlock/glass_external{
 	icon_state = "door_locked";
-	name = "Port Bow Outer Airlock";
-	locked = 1
+	locked = 1;
+	name = "Port Bow Outer Airlock"
 	},
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/effect/floor_decal/industrial/warning,
@@ -3568,8 +3568,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	name = "Mining Office";
-	dir = 1
+	dir = 1;
+	name = "Mining Office"
 	},
 /turf/simulated/floor,
 /area/expoutpost/miningfoyer)
@@ -3852,10 +3852,10 @@
 	pixel_x = -23
 	},
 /obj/machinery/power/port_gen/pacman/super/potato{
-	sheets = 50;
-	power_gen = 200000;
 	active = 1;
-	power_output = 4
+	power_gen = 200000;
+	power_output = 4;
+	sheets = 50
 	},
 /obj/structure/catwalk,
 /obj/structure/cable/yellow,
@@ -4173,8 +4173,8 @@
 	},
 /obj/machinery/light_switch{
 	dir = 1;
-	pixel_y = 24;
-	pixel_x = 12
+	pixel_x = 12;
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/engoffice)
@@ -4308,8 +4308,8 @@
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/firedoor/multi_tile/glass,
 /obj/machinery/door/airlock/multi_tile/glass{
-	name = "Breakroom";
-	dir = 8
+	dir = 8;
+	name = "Breakroom"
 	},
 /turf/simulated/floor,
 /area/expoutpost/breakroom)
@@ -4563,9 +4563,9 @@
 /area/expoutpost/eva)
 "dJw" = (
 /obj/machinery/power/quantumpad{
-	name = "TO - SCIENCE";
 	map_pad_id = "aeg_science_padin";
-	map_pad_link_id = "aeg_science_padout"
+	map_pad_link_id = "aeg_science_padout";
+	name = "TO - SCIENCE"
 	},
 /obj/structure/cable/green{
 	d2 = 8;
@@ -4619,8 +4619,8 @@
 	pixel_x = 24
 	},
 /obj/machinery/light_switch{
-	pixel_y = -24;
-	pixel_x = -12
+	pixel_x = -12;
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/cic)
@@ -4962,8 +4962,8 @@
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/airlock/multi_tile/glass{
-	name = "Hangar - Echidna";
-	dir = 2
+	dir = 2;
+	name = "Hangar - Echidna"
 	},
 /turf/simulated/floor,
 /area/expoutpost/hangarsix)
@@ -5129,8 +5129,8 @@
 "elu" = (
 /obj/machinery/door/firedoor/multi_tile/glass,
 /obj/machinery/door/airlock/multi_tile/glass{
-	req_one_access = list(5);
-	name = "Triage"
+	name = "Triage";
+	req_one_access = list(5)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/medicalbay)
@@ -5404,10 +5404,10 @@
 	},
 /obj/machinery/button/remote/blast_door{
 	dir = 8;
+	id = "aeg_bar_shutter";
+	name = "Bar Shutters";
 	pixel_x = 28;
 	pixel_y = 8;
-	name = "Bar Shutters";
-	id = "aeg_bar_shutter";
 	req_access = list(25)
 	},
 /turf/simulated/floor/tiled/white,
@@ -5646,9 +5646,9 @@
 /obj/item/weapon/material/kitchen/rollingpin,
 /obj/machinery/button/remote/blast_door{
 	dir = 8;
-	pixel_x = 28;
+	id = "aeg_kitchen_shutter";
 	name = "Kitchen Shutters";
-	id = "aeg_kitchen_shutter"
+	pixel_x = 28
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/kitchen)
@@ -5817,8 +5817,8 @@
 	},
 /obj/machinery/light_switch{
 	dir = 1;
-	pixel_y = 24;
-	pixel_x = 12
+	pixel_x = 12;
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/miningfoyer)
@@ -5882,9 +5882,9 @@
 /area/shuttle/stargazer)
 "eMf" = (
 /obj/machinery/power/quantumpad{
-	name = "Engineering Q-Pad";
 	map_pad_id = "aeg_engineering_padout";
-	map_pad_link_id = "aeg_engineering_padin"
+	map_pad_link_id = "aeg_engineering_padin";
+	name = "Engineering Q-Pad"
 	},
 /obj/machinery/light{
 	dir = 1
@@ -5949,11 +5949,11 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Core Access Hatch";
-	req_one_access = list(11);
-	locked = 1;
 	icon_state = "door_locked";
-	id_tag = "aeg_reactor_bolt"
+	id_tag = "aeg_reactor_bolt";
+	locked = 1;
+	name = "Core Access Hatch";
+	req_one_access = list(11)
 	},
 /obj/machinery/door/blast/radproof{
 	dir = 4;
@@ -6066,8 +6066,8 @@
 "eRs" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/silver{
-	name = "Unit 1";
-	id_tag = "aeg_pubshower_bolt"
+	id_tag = "aeg_pubshower_bolt";
+	name = "Unit 1"
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/expoutpost/washroom)
@@ -6106,8 +6106,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	name = "Hangar - Stargazer";
-	dir = 1
+	dir = 1;
+	name = "Hangar - Stargazer"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/hangarfour)
@@ -6303,8 +6303,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	name = "Hangar - Mammoth";
-	dir = 2
+	dir = 2;
+	name = "Hangar - Mammoth"
 	},
 /obj/effect/catwalk_plated/techfloor,
 /turf/simulated/floor,
@@ -6359,8 +6359,8 @@
 /obj/structure/cable/yellow{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	dir = 1;
+	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -6460,8 +6460,8 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/hatch{
-	req_one_access = list(10);
-	name = "Secondary Nuclear Reactor"
+	name = "Secondary Nuclear Reactor";
+	req_one_access = list(10)
 	},
 /obj/effect/catwalk_plated/dark,
 /turf/simulated/floor,
@@ -6495,8 +6495,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	name = "Medbay Lobby";
-	dir = 1
+	dir = 1;
+	name = "Medbay Lobby"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/medbaylobby)
@@ -6513,10 +6513,10 @@
 /obj/structure/table/wooden_reinforced,
 /obj/machinery/button/remote/airlock{
 	dir = 8;
+	id = "aeg_suiteone_bolt";
+	name = "Door Bolt";
 	pixel_x = 24;
 	pixel_y = 8;
-	name = "Door Bolt";
-	id = "aeg_suiteone_bolt";
 	specialfunctions = 4
 	},
 /turf/simulated/floor/carpet,
@@ -6638,8 +6638,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	name = "Hangar - Mammoth";
-	dir = 2
+	dir = 2;
+	name = "Hangar - Mammoth"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/hangartwo)
@@ -6761,8 +6761,8 @@
 /obj/effect/catwalk_plated/white,
 /obj/machinery/door/firedoor/multi_tile/glass,
 /obj/machinery/door/airlock/multi_tile/glass{
-	req_one_access = list(5);
-	name = "Triage"
+	name = "Triage";
+	req_one_access = list(5)
 	},
 /turf/simulated/floor,
 /area/expoutpost/medicalbay)
@@ -6772,8 +6772,8 @@
 	pixel_y = -24
 	},
 /obj/machinery/light_switch{
-	pixel_y = -24;
-	pixel_x = -12
+	pixel_x = -12;
+	pixel_y = -24
 	},
 /obj/structure/cable/green,
 /obj/effect/floor_decal/borderfloorblack/corner,
@@ -6978,16 +6978,16 @@
 	},
 /obj/machinery/access_button{
 	dir = 1;
-	pixel_y = -22;
+	name = "interior access button";
 	pixel_x = 8;
-	name = "interior access button"
+	pixel_y = -22
 	},
 /obj/effect/map_helper/airlock/button/int_button,
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/machinery/door/airlock/glass_external{
 	icon_state = "door_locked";
-	name = "Port Bow Outer Airlock";
-	locked = 1
+	locked = 1;
+	name = "Port Bow Outer Airlock"
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/reinforced,
@@ -7144,8 +7144,8 @@
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/firedoor/multi_tile/glass,
 /obj/machinery/door/airlock/multi_tile/glass{
-	name = "Breakroom";
-	dir = 8
+	dir = 8;
+	name = "Breakroom"
 	},
 /turf/simulated/floor,
 /area/expoutpost/breakroom)
@@ -7239,8 +7239,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	name = "Hangar - Shuttle";
-	dir = 2
+	dir = 2;
+	name = "Hangar - Shuttle"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/hangarone)
@@ -7525,8 +7525,8 @@
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/airlock/multi_tile/glass{
-	name = "Hangar - Stargazer";
-	dir = 1
+	dir = 1;
+	name = "Hangar - Stargazer"
 	},
 /turf/simulated/floor,
 /area/expoutpost/hangarfour)
@@ -7551,16 +7551,16 @@
 	dir = 8
 	},
 /obj/machinery/access_button{
+	name = "exterior access button";
 	pixel_x = -8;
-	pixel_y = -22;
-	name = "exterior access button"
+	pixel_y = -22
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/effect/map_helper/airlock/button/ext_button,
 /obj/machinery/door/airlock/glass_external{
 	icon_state = "door_locked";
-	name = "Port Bow Outer Airlock";
-	locked = 1
+	locked = 1;
+	name = "Port Bow Outer Airlock"
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/reinforced,
@@ -7596,8 +7596,8 @@
 	pixel_y = -24
 	},
 /obj/machinery/light_switch{
-	pixel_y = -24;
-	pixel_x = -12
+	pixel_x = -12;
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/secoffice)
@@ -7641,8 +7641,8 @@
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/airlock/multi_tile/glass{
-	name = "Hangar - Shuttle";
-	dir = 2
+	dir = 2;
+	name = "Hangar - Shuttle"
 	},
 /turf/simulated/floor,
 /area/expoutpost/hangarone)
@@ -8419,10 +8419,10 @@
 /obj/machinery/papershredder,
 /obj/machinery/button/remote/airlock{
 	dir = 4;
+	id = "aeg_seccomm_bolt";
+	name = "Door Bolt";
 	pixel_x = -24;
 	pixel_y = -8;
-	name = "Door Bolt";
-	id = "aeg_seccomm_bolt";
 	specialfunctions = 4
 	},
 /turf/simulated/floor/carpet,
@@ -8819,9 +8819,9 @@
 	},
 /obj/machinery/power/apc{
 	dir = 1;
+	lighting = 0;
 	name = "north bump";
-	pixel_y = 24;
-	lighting = 0
+	pixel_y = 24
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -8831,8 +8831,8 @@
 	},
 /obj/machinery/light_switch{
 	dir = 1;
-	pixel_y = 24;
-	pixel_x = 12
+	pixel_x = 12;
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/techstorage)
@@ -9013,8 +9013,8 @@
 	},
 /obj/effect/catwalk_plated/dark,
 /obj/machinery/door/airlock/silver{
-	name = "Dorm Two";
-	id_tag = "aeg_dormtwo_bolt"
+	id_tag = "aeg_dormtwo_bolt";
+	name = "Dorm Two"
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor,
@@ -9392,8 +9392,8 @@
 	dir = 4
 	},
 /obj/machinery/light_switch{
-	pixel_y = -24;
-	pixel_x = -12
+	pixel_x = -12;
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/gateway)
@@ -9462,16 +9462,16 @@
 "hCj" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/button/remote/blast_door{
-	pixel_y = 22;
-	pixel_x = -20;
 	id = "aeg_bridge_armory";
 	name = "EMERGENCY Bridge Armory";
+	pixel_x = -20;
+	pixel_y = 22;
 	req_access = list(17);
 	req_one_access = list(17)
 	},
 /obj/machinery/button/remote/blast_door{
-	pixel_y = 22;
-	pixel_x = 20
+	pixel_x = 20;
+	pixel_y = 22
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/cic)
@@ -9540,6 +9540,9 @@
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 8
+	},
+/obj/item/weapon/storage/box/nifsofts_pilot{
+	pixel_y = 7
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/cic)
@@ -9780,8 +9783,8 @@
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/machinery/door/airlock/glass_external{
 	icon_state = "door_locked";
-	name = "Starboard Bow Inner Airlock";
-	locked = 1
+	locked = 1;
+	name = "Starboard Bow Inner Airlock"
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/reinforced,
@@ -10100,9 +10103,9 @@
 	},
 /obj/machinery/button/remote/blast_door{
 	dir = 8;
+	id = "aeg_botany_blastdoor";
 	name = "Botany Blast Doors";
-	pixel_x = 28;
-	id = "aeg_botany_blastdoor"
+	pixel_x = 28
 	},
 /turf/simulated/floor/grass2,
 /area/expoutpost/botany)
@@ -10409,8 +10412,8 @@
 	dir = 4
 	},
 /obj/machinery/conveyor_switch/oneway{
-	name = "Ore Processing conveyor";
-	id = "aegis_ore_conveyor"
+	id = "aegis_ore_conveyor";
+	name = "Ore Processing conveyor"
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/miningfoyer)
@@ -10522,8 +10525,8 @@
 /area/expoutpost/portbowhallway)
 "isf" = (
 /obj/machinery/vending/dinnerware{
-	pixel_y = 24;
-	density = 0
+	density = 0;
+	pixel_y = 24
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -10875,8 +10878,8 @@
 "iIB" = (
 /obj/machinery/door/blast/radproof{
 	dir = 8;
-	name = "Emergency Blast Door";
-	id = "aeg_enginevent_stagetwo"
+	id = "aeg_enginevent_stagetwo";
+	name = "Emergency Blast Door"
 	},
 /turf/simulated/floor,
 /area/expoutpost/reactorroom)
@@ -10936,8 +10939,8 @@
 	dir = 8
 	},
 /obj/machinery/light_switch{
-	pixel_y = -24;
-	pixel_x = -12
+	pixel_x = -12;
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/exploarmory)
@@ -11496,8 +11499,8 @@
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/machinery/door/airlock/glass_external{
 	icon_state = "door_locked";
-	name = "Port Bow Outer Airlock";
-	locked = 1
+	locked = 1;
+	name = "Port Bow Outer Airlock"
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/reinforced,
@@ -11592,9 +11595,9 @@
 /area/expoutpost/washroom)
 "jmy" = (
 /obj/machinery/power/apc/hyper{
-	pixel_y = -24;
 	coverlocked = 0;
-	locked = 0
+	locked = 0;
+	pixel_y = -24
 	},
 /obj/structure/cable/green{
 	d2 = 4;
@@ -11695,10 +11698,10 @@
 /area/expoutpost/starsternairlock)
 "jpQ" = (
 /obj/machinery/button/remote/airlock{
-	pixel_y = 24;
-	name = "Door Bolt";
 	id = "aeg_pubshower_bolt";
-	pixel_x = 8
+	name = "Door Bolt";
+	pixel_x = 8;
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/expoutpost/washroom)
@@ -12184,9 +12187,9 @@
 /area/shuttle/stargazer)
 "jIb" = (
 /obj/machinery/power/quantumpad{
-	name = "TO - BRIDGE";
 	map_pad_id = "aeg_bridge_padin";
-	map_pad_link_id = "aeg_bridge_padout"
+	map_pad_link_id = "aeg_bridge_padout";
+	name = "TO - BRIDGE"
 	},
 /obj/structure/cable/green{
 	d2 = 4;
@@ -12692,16 +12695,16 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/airlock/silver{
-	name = "Suite Two";
-	id_tag = "aeg_suitetwo_bolt"
+	id_tag = "aeg_suitetwo_bolt";
+	name = "Suite Two"
 	},
 /turf/simulated/floor,
 /area/expoutpost/suite2)
 "kdc" = (
 /obj/machinery/door/firedoor/multi_tile/glass,
 /obj/machinery/door/airlock/multi_tile/glass{
-	name = "Hangar - Mammoth";
-	dir = 8
+	dir = 8;
+	name = "Hangar - Mammoth"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/hangartwo)
@@ -12865,8 +12868,8 @@
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
 	dir = 1;
-	req_one_access = list(1,5,43,67);
-	name = "Joint Gateway Hub"
+	name = "Joint Gateway Hub";
+	req_one_access = list(1,5,43,67)
 	},
 /turf/simulated/floor,
 /area/expoutpost/gatewayeva)
@@ -12880,8 +12883,8 @@
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/machinery/door/airlock/glass_external{
 	icon_state = "door_locked";
-	name = "Port Bow Outer Airlock";
-	locked = 1
+	locked = 1;
+	name = "Port Bow Outer Airlock"
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/reinforced,
@@ -13224,8 +13227,8 @@
 /obj/structure/cable/yellow{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	dir = 1;
+	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -13704,9 +13707,9 @@
 /area/expoutpost/staginghangar)
 "kYS" = (
 /obj/machinery/power/quantumpad{
-	name = "Hangar Q-Pad";
 	map_pad_id = "aeg_hangar_padout";
-	map_pad_link_id = "aeg_hangar_padin"
+	map_pad_link_id = "aeg_hangar_padin";
+	name = "Hangar Q-Pad"
 	},
 /obj/structure/cable/green,
 /obj/structure/cable/green{
@@ -13843,17 +13846,17 @@
 	},
 /obj/machinery/button/remote/airlock{
 	dir = 1;
+	id = "aeg_toilet2_bolt";
 	name = "Door Bolt";
 	pixel_y = -24;
-	id = "aeg_toilet2_bolt";
 	specialfunctions = 4
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/expoutpost/restrooms)
 "leU" = (
 /obj/machinery/door/airlock{
-	name = "Unit 1";
-	id_tag = "aeg_toilet1_bolt"
+	id_tag = "aeg_toilet1_bolt";
+	name = "Unit 1"
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/freezer,
@@ -14722,9 +14725,9 @@
 /area/expoutpost/gateway)
 "lKV" = (
 /obj/machinery/power/quantumpad{
-	name = "TO - MEDBAY";
 	map_pad_id = "aeg_medbay_padin";
-	map_pad_link_id = "aeg_medbay_padout"
+	map_pad_link_id = "aeg_medbay_padout";
+	name = "TO - MEDBAY"
 	},
 /obj/structure/cable/green{
 	d2 = 8;
@@ -14792,8 +14795,8 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/shutters{
 	dir = 1;
-	name = "Bar Shutter";
-	id = "aeg_bar_shutter"
+	id = "aeg_bar_shutter";
+	name = "Bar Shutter"
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/bar)
@@ -15070,8 +15073,8 @@
 	},
 /obj/machinery/light_switch{
 	dir = 1;
-	pixel_y = 24;
-	pixel_x = 12
+	pixel_x = 12;
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/engstorage)
@@ -15199,8 +15202,8 @@
 /area/expoutpost/staginghangar)
 "lZt" = (
 /obj/machinery/power/smes/buildable{
-	name = "AI Core SMES";
-	input_attempt = 1
+	input_attempt = 1;
+	name = "AI Core SMES"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/cable/blue{
@@ -15224,8 +15227,8 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/shutters{
 	dir = 8;
-	name = "Bar Shutter";
-	id = "aeg_bar_shutter"
+	id = "aeg_bar_shutter";
+	name = "Bar Shutter"
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/bar)
@@ -15329,8 +15332,8 @@
 /obj/item/weapon/pen,
 /obj/structure/window/reinforced,
 /obj/machinery/door/window/westleft{
-	req_one_access = list(47);
-	name = "Research and Development"
+	name = "Research and Development";
+	req_one_access = list(47)
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/rnd)
@@ -15442,8 +15445,8 @@
 "mgQ" = (
 /obj/machinery/power/smes/buildable/power_shuttle{
 	charge = 2e+006;
-	inputting = 1;
-	input_attempt = 1
+	input_attempt = 1;
+	inputting = 1
 	},
 /obj/structure/cable/green,
 /turf/simulated/shuttle/floor/black,
@@ -15669,8 +15672,8 @@
 "mqo" = (
 /obj/machinery/door/airlock/glass_external{
 	icon_state = "door_locked";
-	name = "Port Stern Inner Airlock";
-	locked = 1
+	locked = 1;
+	name = "Port Stern Inner Airlock"
 	},
 /obj/machinery/access_button{
 	dir = 1;
@@ -15700,9 +15703,9 @@
 	pixel_y = -35
 	},
 /obj/machinery/door/window/southright{
+	dir = 8;
 	name = "Bar";
-	req_access = list(25);
-	dir = 8
+	req_access = list(25)
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/white,
@@ -15790,10 +15793,10 @@
 	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	pixel_x = 24;
 	frequency = 1380;
 	id_tag = "exphangar_1";
 	name = "shuttle bay controller";
+	pixel_x = 24;
 	tag_door = "exphangar_1_door"
 	},
 /turf/simulated/floor/tiled,
@@ -15812,8 +15815,8 @@
 /obj/structure/table/marble,
 /obj/structure/sink/countertop{
 	dir = 8;
-	pixel_y = 4;
-	pixel_x = 4
+	pixel_x = 4;
+	pixel_y = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/kitchen)
@@ -16072,16 +16075,16 @@
 	},
 /obj/machinery/access_button{
 	dir = 1;
+	name = "exterior access button";
 	pixel_x = 8;
-	pixel_y = -22;
-	name = "exterior access button"
+	pixel_y = -22
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/effect/map_helper/airlock/button/ext_button,
 /obj/machinery/door/airlock/glass_external{
 	icon_state = "door_locked";
-	name = "Starboard Bow Outer Airlock";
-	locked = 1
+	locked = 1;
+	name = "Starboard Bow Outer Airlock"
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/reinforced,
@@ -16142,8 +16145,8 @@
 	},
 /obj/machinery/access_button{
 	dir = 4;
-	pixel_y = -27;
-	pixel_x = 7
+	pixel_x = 7;
+	pixel_y = -27
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/effect/map_helper/airlock/button/ext_button,
@@ -17166,9 +17169,9 @@
 	},
 /obj/machinery/button/remote/blast_door{
 	dir = 1;
-	pixel_y = -28;
-	name = "Security Armory";
 	id = "aeg_security_armory";
+	name = "Security Armory";
+	pixel_y = -28;
 	req_access = list(3)
 	},
 /turf/simulated/floor/tiled,
@@ -17276,8 +17279,8 @@
 "nwM" = (
 /obj/machinery/door/firedoor/multi_tile/glass,
 /obj/machinery/door/airlock/multi_tile/glass{
-	name = "Breakroom";
-	dir = 8
+	dir = 8;
+	name = "Breakroom"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/breakroom)
@@ -17480,10 +17483,10 @@
 	},
 /obj/machinery/button/remote/blast_door{
 	dir = 4;
-	pixel_y = 8;
-	pixel_x = -24;
-	name = "Secure Storage";
 	id = "aeg_securestorage_blastdoor";
+	name = "Secure Storage";
+	pixel_x = -24;
+	pixel_y = 8;
 	req_one_access = list(10,30)
 	},
 /turf/simulated/floor/tiled/dark,
@@ -17561,11 +17564,11 @@
 "nFb" = (
 /obj/machinery/power/smes/buildable{
 	RCon_tag = "Reactor Primary - Aegis";
-	input_attempt = 1;
 	charge = 2e+006;
-	name = "Reactor SMES - Main";
 	cur_coils = 4;
+	input_attempt = 1;
 	input_level = 750000;
+	name = "Reactor SMES - Main";
 	output_level = 750000
 	},
 /obj/structure/cable/green,
@@ -17921,9 +17924,9 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/quantumpad{
-	name = "TO - ENGINEERING";
 	map_pad_id = "aeg_engineering_padin";
-	map_pad_link_id = "aeg_engineering_padout"
+	map_pad_link_id = "aeg_engineering_padout";
+	name = "TO - ENGINEERING"
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/expoutpost/starqpadjunction)
@@ -18171,17 +18174,17 @@
 	},
 /obj/machinery/button/remote/blast_door{
 	dir = 1;
-	pixel_y = -5;
-	pixel_x = 5;
+	id = "aeg_enginevent_stagetwo";
 	name = "EMERGENCY Engine Vent Stage Two";
-	id = "aeg_enginevent_stagetwo"
+	pixel_x = 5;
+	pixel_y = -5
 	},
 /obj/machinery/button/remote/blast_door{
 	dir = 1;
-	pixel_y = -5;
-	pixel_x = -5;
+	id = "aeg_enginevent_stageone";
 	name = "EMERGENCY Engine Vent Stage One";
-	id = "aeg_enginevent_stageone"
+	pixel_x = -5;
+	pixel_y = -5
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/reactorcr)
@@ -18649,9 +18652,9 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/quantumpad{
-	name = "TO - EXPLORATION";
 	map_pad_id = "aeg_explo_padin";
-	map_pad_link_id = "aeg_explo_padout"
+	map_pad_link_id = "aeg_explo_padout";
+	name = "TO - EXPLORATION"
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/expoutpost/portqpadjunction)
@@ -18753,9 +18756,9 @@
 /area/expoutpost/miningfoyer)
 "oDM" = (
 /obj/machinery/power/quantumpad{
-	name = "TO - HANGAR BAY";
 	map_pad_id = "aeg_hangar_padin";
-	map_pad_link_id = "aeg_hangar_padout"
+	map_pad_link_id = "aeg_hangar_padout";
+	name = "TO - HANGAR BAY"
 	},
 /obj/structure/cable/green{
 	d2 = 8;
@@ -18839,8 +18842,8 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/shutters{
 	dir = 8;
-	name = "Security Checkpoint Shutters";
-	id = "aeg_checkpoint_shutter"
+	id = "aeg_checkpoint_shutter";
+	name = "Security Checkpoint Shutters"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/secbowcheckpoint)
@@ -19262,13 +19265,13 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/window/westleft{
-	req_access = list(1);
-	name = "Security Checkpoint"
+	name = "Security Checkpoint";
+	req_access = list(1)
 	},
 /obj/machinery/door/blast/shutters{
 	dir = 8;
-	name = "Security Checkpoint Shutters";
-	id = "aeg_checkpoint_shutter"
+	id = "aeg_checkpoint_shutter";
+	name = "Security Checkpoint Shutters"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/secbowcheckpoint)
@@ -19561,9 +19564,9 @@
 /area/expoutpost/medicalbay)
 "pom" = (
 /obj/machinery/power/quantumpad{
-	name = "Mining Q-Pad";
 	map_pad_id = "aeg_mining_padout";
-	map_pad_link_id = "aeg_mining_padin"
+	map_pad_link_id = "aeg_mining_padin";
+	name = "Mining Q-Pad"
 	},
 /obj/structure/cable/green{
 	d2 = 8;
@@ -19621,8 +19624,8 @@
 	},
 /obj/effect/catwalk_plated/dark,
 /obj/machinery/door/airlock/silver{
-	name = "Dorm One";
-	id_tag = "aeg_dormone_bolt"
+	id_tag = "aeg_dormone_bolt";
+	name = "Dorm One"
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor,
@@ -19890,9 +19893,9 @@
 	dir = 1
 	},
 /obj/machinery/power/quantumpad{
-	name = "Exploration Q-Pad";
 	map_pad_id = "aeg_explo_padout";
-	map_pad_link_id = "aeg_explo_padin"
+	map_pad_link_id = "aeg_explo_padin";
+	name = "Exploration Q-Pad"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
@@ -20106,8 +20109,8 @@
 /obj/structure/cable/yellow{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	dir = 1;
+	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -20617,9 +20620,9 @@
 	dir = 1
 	},
 /obj/machinery/button/remote/blast_door{
-	pixel_y = 28;
-	name = "Gateway Access";
 	id = "aeg_gateway_access";
+	name = "Gateway Access";
+	pixel_y = 28;
 	req_one_access = list(1,5,43,67)
 	},
 /turf/simulated/floor/tiled,
@@ -20732,8 +20735,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	name = "Hangar - Needle";
-	dir = 1
+	dir = 1;
+	name = "Hangar - Needle"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/hangarfive)
@@ -21059,8 +21062,8 @@
 "qvR" = (
 /obj/machinery/door/airlock/glass_external{
 	icon_state = "door_locked";
-	name = "Port Bow Outer Airlock";
-	locked = 1
+	locked = 1;
+	name = "Port Bow Outer Airlock"
 	},
 /obj/machinery/access_button{
 	dir = 1;
@@ -21136,8 +21139,8 @@
 /obj/structure/table/marble,
 /obj/structure/sink/countertop{
 	dir = 8;
-	pixel_y = 4;
-	pixel_x = 4
+	pixel_x = 4;
+	pixel_y = 4
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
@@ -21179,8 +21182,8 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
-	name = "Emergency Blast Door";
-	id = "aeg_enginevent_stageone"
+	id = "aeg_enginevent_stageone";
+	name = "Emergency Blast Door"
 	},
 /turf/simulated/floor/reinforced,
 /area/expoutpost/reactorroom)
@@ -21325,8 +21328,8 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/radproof{
 	dir = 8;
-	name = "Emergency Blast Door";
-	id = "aeg_enginevent_stagetwo"
+	id = "aeg_enginevent_stagetwo";
+	name = "Emergency Blast Door"
 	},
 /turf/simulated/floor/reinforced,
 /area/expoutpost/reactorroom)
@@ -21989,10 +21992,10 @@
 	},
 /obj/machinery/button/remote/airlock{
 	dir = 4;
+	id = "aeg_dormtwo_bolt";
+	name = "Door Bolt";
 	pixel_x = -24;
 	pixel_y = -14;
-	name = "Door Bolt";
-	id = "aeg_dormtwo_bolt";
 	specialfunctions = 4
 	},
 /obj/structure/disposalpipe/segment,
@@ -22197,9 +22200,9 @@
 	},
 /obj/machinery/button/remote/airlock{
 	dir = 1;
+	id = "aeg_toilet1_bolt";
 	name = "Door Bolt";
 	pixel_y = -24;
-	id = "aeg_toilet1_bolt";
 	specialfunctions = 4
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -22531,8 +22534,8 @@
 	pixel_y = -24
 	},
 /obj/machinery/light_switch{
-	pixel_y = -24;
-	pixel_x = -12
+	pixel_x = -12;
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/secarmory)
@@ -22725,12 +22728,12 @@
 "rGj" = (
 /obj/machinery/atmospherics/omni/mixer{
 	name = "Air Mixer";
+	tag_east = 1;
+	tag_east_con = 0.79;
 	tag_north = 1;
 	tag_south = 1;
 	tag_south_con = 0.21;
-	tag_west = 2;
-	tag_east_con = 0.79;
-	tag_east = 1
+	tag_west = 2
 	},
 /turf/simulated/floor,
 /area/expoutpost/atmospherics)
@@ -22851,16 +22854,16 @@
 	dir = 1
 	},
 /obj/machinery/access_button{
+	name = "interior access button";
 	pixel_x = -8;
-	pixel_y = -22;
-	name = "interior access button"
+	pixel_y = -22
 	},
 /obj/effect/map_helper/airlock/button/int_button,
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/machinery/door/airlock/glass_external{
 	icon_state = "door_locked";
-	name = "Starboard Bow Inner Airlock";
-	locked = 1
+	locked = 1;
+	name = "Starboard Bow Inner Airlock"
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/reinforced,
@@ -22934,9 +22937,9 @@
 /area/expoutpost/starbowhallway)
 "rLH" = (
 /obj/machinery/power/quantumpad{
-	name = "Science Q-Pad";
 	map_pad_id = "aeg_science_padout";
-	map_pad_link_id = "aeg_science_padin"
+	map_pad_link_id = "aeg_science_padin";
+	name = "Science Q-Pad"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
@@ -23096,8 +23099,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	name = "Medbay Lobby";
-	dir = 1
+	dir = 1;
+	name = "Medbay Lobby"
 	},
 /turf/simulated/floor,
 /area/expoutpost/medbaylobby)
@@ -23301,10 +23304,10 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/airlock/silver{
+	id_tag = "aeg_seccomm_bolt";
 	name = "Security Commander's Quarters";
 	req_access = list(58);
-	req_one_access = list(19);
-	id_tag = "aeg_seccomm_bolt"
+	req_one_access = list(19)
 	},
 /turf/simulated/floor,
 /area/expoutpost/commanderroom)
@@ -23485,10 +23488,10 @@
 	pixel_x = 21
 	},
 /obj/machinery/power/port_gen/pacman/super/potato{
-	sheets = 50;
-	power_gen = 200000;
 	active = 1;
-	power_output = 4
+	power_gen = 200000;
+	power_output = 4;
+	sheets = 50
 	},
 /obj/structure/catwalk,
 /obj/structure/cable/yellow,
@@ -23609,8 +23612,8 @@
 /area/expoutpost/hangarfive)
 "sky" = (
 /obj/machinery/power/smes/buildable{
-	name = "Telecomms SMES";
-	input_attempt = 1
+	input_attempt = 1;
+	name = "Telecomms SMES"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/cable/blue{
@@ -23941,17 +23944,17 @@
 /obj/structure/window/reinforced,
 /obj/machinery/button/remote/blast_door{
 	dir = 1;
-	pixel_y = -5;
-	pixel_x = -5;
+	id = "Aeg_EngineShroud";
 	name = "Control Room Shielding";
-	id = "Aeg_EngineShroud"
+	pixel_x = -5;
+	pixel_y = -5
 	},
 /obj/machinery/button/remote/blast_door{
 	dir = 1;
-	pixel_y = -5;
-	pixel_x = 5;
+	id = "Aeg_CoreShroud";
 	name = "Core Shielding";
-	id = "Aeg_CoreShroud"
+	pixel_x = 5;
+	pixel_y = -5
 	},
 /obj/machinery/door/window/northleft{
 	name = "Blast Door Controls";
@@ -24149,8 +24152,8 @@
 	},
 /obj/machinery/light_switch{
 	dir = 1;
-	pixel_y = 24;
-	pixel_x = 12
+	pixel_x = 12;
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/gatewayeva)
@@ -24256,8 +24259,8 @@
 /obj/structure/window/reinforced,
 /obj/structure/table/steel_reinforced,
 /obj/machinery/door/window/eastright{
-	req_access = list(48);
-	name = "Mining Office"
+	name = "Mining Office";
+	req_access = list(48)
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/miningfoyer)
@@ -24321,8 +24324,8 @@
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/machinery/door/airlock/glass_external{
 	icon_state = "door_locked";
-	name = "Starboard Bow Inner Airlock";
-	locked = 1
+	locked = 1;
+	name = "Starboard Bow Inner Airlock"
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/reinforced,
@@ -24632,8 +24635,8 @@
 /obj/structure/cable/yellow{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	dir = 1;
+	icon_state = "4-8"
 	},
 /obj/effect/catwalk_plated/dark,
 /obj/machinery/door/airlock/engineeringatmos{
@@ -25182,8 +25185,8 @@
 	},
 /obj/machinery/door/airlock/multi_tile/metal{
 	dir = 1;
-	name = "Sauna";
-	id_tag = "aeg_sauna_bolt"
+	id_tag = "aeg_sauna_bolt";
+	name = "Sauna"
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/expoutpost/washroom)
@@ -25195,12 +25198,12 @@
 	dir = 4;
 	external_pressure_bound = 100;
 	external_pressure_bound_default = 0;
+	frequency = 1438;
 	icon_state = "map_vent_in";
 	id_tag = "aegrust_cooling_out";
 	initialize_directions = 1;
 	pump_direction = 0;
-	use_power = 1;
-	frequency = 1438
+	use_power = 1
 	},
 /obj/structure/cable/yellow{
 	d1 = 2;
@@ -25410,9 +25413,9 @@
 /area/expoutpost/commanderroom)
 "tJC" = (
 /obj/machinery/power/quantumpad{
-	name = "TO - EVA";
 	map_pad_id = "aeg_eva_padin";
-	map_pad_link_id = "aeg_eva_padout"
+	map_pad_link_id = "aeg_eva_padout";
+	name = "TO - EVA"
 	},
 /obj/structure/cable/green{
 	d2 = 4;
@@ -25932,10 +25935,10 @@
 	dir = 4
 	},
 /obj/machinery/button/remote/blast_door{
-	pixel_y = 28;
-	pixel_x = 16;
-	name = "Exploration Armory";
 	id = "aeg_explo_armory";
+	name = "Exploration Armory";
+	pixel_x = 16;
+	pixel_y = 28;
 	req_one_access = list(43,67,5)
 	},
 /turf/simulated/floor/tiled,
@@ -25996,8 +25999,8 @@
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/airlock/multi_tile/glass{
-	name = "Hangar - Needle";
-	dir = 1
+	dir = 1;
+	name = "Hangar - Needle"
 	},
 /turf/simulated/floor,
 /area/expoutpost/hangarfive)
@@ -26101,8 +26104,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	name = "Hangar - Echidna";
-	dir = 2
+	dir = 2;
+	name = "Hangar - Echidna"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/hangarsix)
@@ -26192,8 +26195,8 @@
 /obj/structure/cable/yellow{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	dir = 1;
+	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/engineering{
@@ -26213,8 +26216,8 @@
 "umd" = (
 /obj/machinery/door/airlock/glass_external{
 	icon_state = "door_locked";
-	name = "Port Stern Inner Airlock";
-	locked = 1
+	locked = 1;
+	name = "Port Stern Inner Airlock"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -26884,9 +26887,9 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/airlock/silver{
+	id_tag = "aeg_pathfinderroom_bolt";
 	name = "Exploration Manager's Office";
-	req_one_access = list(62);
-	id_tag = "aeg_pathfinderroom_bolt"
+	req_one_access = list(62)
 	},
 /turf/simulated/floor,
 /area/expoutpost/pathfinderroom)
@@ -26981,13 +26984,13 @@
 	},
 /obj/machinery/light_switch{
 	dir = 1;
-	pixel_y = 24;
-	pixel_x = 12
+	pixel_x = 12;
+	pixel_y = 24
 	},
 /obj/machinery/button/windowtint{
-	pixel_y = 24;
+	id = "aeg_surgery_tint";
 	pixel_x = -10;
-	id = "aeg_surgery_tint"
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/surgical1)
@@ -27054,8 +27057,8 @@
 /obj/structure/cable/yellow{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	dir = 1;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/expoutpost/reactorroom)
@@ -27328,8 +27331,8 @@
 /obj/structure/disposalpipe/trunk,
 /obj/machinery/light_switch{
 	dir = 1;
-	pixel_y = 24;
-	pixel_x = 12
+	pixel_x = 12;
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/expoutpost/restrooms)
@@ -27642,16 +27645,16 @@
 	pixel_y = 21
 	},
 /obj/machinery/button/windowtint{
-	pixel_y = 24;
-	pixel_x = 12;
+	id = "aeg_sauna_tint";
 	name = "Sauna window tint";
-	id = "aeg_sauna_tint"
+	pixel_x = 12;
+	pixel_y = 24
 	},
 /obj/machinery/button/remote/airlock{
-	pixel_y = 24;
-	pixel_x = -16;
-	name = "Door Bolt";
 	id = "aeg_sauna_bolt";
+	name = "Door Bolt";
+	pixel_x = -16;
+	pixel_y = 24;
 	specialfunctions = 4
 	},
 /turf/simulated/floor/wood,
@@ -28796,8 +28799,8 @@
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/machinery/door/airlock/glass_external{
 	icon_state = "door_locked";
-	name = "Starboard Bow Outer Airlock";
-	locked = 1
+	locked = 1;
+	name = "Starboard Bow Outer Airlock"
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/reinforced,
@@ -29272,8 +29275,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	name = "Hangar - Ursula";
-	dir = 1
+	dir = 1;
+	name = "Hangar - Ursula"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/hangarthree)
@@ -29286,8 +29289,8 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
-	name = "Emergency Blast Door";
-	id = "aeg_enginevent_stageone"
+	id = "aeg_enginevent_stageone";
+	name = "Emergency Blast Door"
 	},
 /turf/simulated/floor/reinforced,
 /area/expoutpost/reactorroom)
@@ -29473,8 +29476,8 @@
 /obj/structure/cable/yellow{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	dir = 1;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor,
 /area/expoutpost/reactorroom)
@@ -29631,8 +29634,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	name = "Q-Pad Junction";
-	dir = 1
+	dir = 1;
+	name = "Q-Pad Junction"
 	},
 /turf/simulated/floor,
 /area/expoutpost/starqpadjunction)
@@ -29827,8 +29830,8 @@
 /obj/structure/table/steel_reinforced,
 /obj/machinery/light_switch{
 	dir = 1;
-	pixel_y = 24;
-	pixel_x = 12
+	pixel_x = 12;
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/secbowcheckpoint)
@@ -29945,8 +29948,8 @@
 /area/expoutpost/medicalbay)
 "xbq" = (
 /obj/machinery/door/airlock{
-	name = "Unit 2";
-	id_tag = "aeg_toilet2_bolt"
+	id_tag = "aeg_toilet2_bolt";
+	name = "Unit 2"
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/freezer,
@@ -30069,14 +30072,14 @@
 	},
 /obj/machinery/light_switch{
 	dir = 1;
-	pixel_y = 24;
-	pixel_x = 12
+	pixel_x = 12;
+	pixel_y = 24
 	},
 /obj/machinery/button/remote/airlock{
-	pixel_y = 24;
-	pixel_x = -13;
+	id = "aeg_reactor_bolt";
 	name = "Reactor Door Bolt";
-	id = "aeg_reactor_bolt"
+	pixel_x = -13;
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/reactorcr)
@@ -30173,8 +30176,8 @@
 "xiR" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/northright{
-	req_access = list(5);
-	name = "Medical Office"
+	name = "Medical Office";
+	req_access = list(5)
 	},
 /turf/simulated/floor/carpet/blue,
 /area/expoutpost/medicalbay)
@@ -30193,9 +30196,9 @@
 /obj/effect/catwalk_plated/dark,
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/silver{
-	name = "IN CONSTRUCTION";
+	icon_state = "door_locked";
 	locked = 1;
-	icon_state = "door_locked"
+	name = "IN CONSTRUCTION"
 	},
 /obj/item/tape/engineering,
 /turf/simulated/floor,
@@ -30578,10 +30581,10 @@
 /obj/structure/table/wooden_reinforced,
 /obj/machinery/button/remote/airlock{
 	dir = 4;
+	id = "aeg_suitetwo_bolt";
+	name = "Door Bolt";
 	pixel_x = -24;
 	pixel_y = 8;
-	name = "Door Bolt";
-	id = "aeg_suitetwo_bolt";
 	specialfunctions = 4
 	},
 /turf/simulated/floor/carpet,
@@ -30647,8 +30650,8 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/shutters{
 	dir = 8;
-	name = "Bar Shutter";
-	id = "aeg_bar_shutter"
+	id = "aeg_bar_shutter";
+	name = "Bar Shutter"
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/bar)
@@ -30674,8 +30677,8 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/shutters{
 	dir = 8;
-	name = "Security Checkpoint Shutters";
-	id = "aeg_checkpoint_shutter"
+	id = "aeg_checkpoint_shutter";
+	name = "Security Checkpoint Shutters"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/secbowcheckpoint)
@@ -30882,10 +30885,10 @@
 	},
 /obj/machinery/button/remote/airlock{
 	dir = 4;
+	id = "aeg_dormone_bolt";
+	name = "Door Bolt";
 	pixel_x = -24;
 	pixel_y = -14;
-	name = "Door Bolt";
-	id = "aeg_dormone_bolt";
 	specialfunctions = 4
 	},
 /obj/structure/disposalpipe/segment,
@@ -31055,10 +31058,10 @@
 /obj/machinery/papershredder,
 /obj/machinery/button/remote/airlock{
 	dir = 8;
+	id = "aeg_pathfinderroom_bolt";
+	name = "Door Bolt";
 	pixel_x = 24;
 	pixel_y = -8;
-	name = "Door Bolt";
-	id = "aeg_pathfinderroom_bolt";
 	specialfunctions = 4
 	},
 /turf/simulated/floor/carpet,
@@ -31379,10 +31382,10 @@
 /obj/structure/table/steel_reinforced,
 /obj/machinery/button/remote/blast_door{
 	dir = 1;
-	pixel_x = 6;
-	pixel_y = -5;
+	id = "aeg_checkpoint_shutter";
 	name = "Security Checkpoint Shutters";
-	id = "aeg_checkpoint_shutter"
+	pixel_x = 6;
+	pixel_y = -5
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/secbowcheckpoint)
@@ -31462,8 +31465,8 @@
 /obj/item/weapon/paper_bin,
 /obj/item/weapon/pen/fountain,
 /obj/machinery/door/window/eastleft{
-	req_access = list(48);
-	name = "Mining Office"
+	name = "Mining Office";
+	req_access = list(48)
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/miningfoyer)
@@ -31544,8 +31547,8 @@
 	id = "aeg_disposal_conveyor"
 	},
 /obj/machinery/button/remote/driver{
-	pixel_y = -24;
-	id = "aeg_disposal_driver"
+	id = "aeg_disposal_driver";
+	pixel_y = -24
 	},
 /turf/simulated/floor,
 /area/expoutpost/disposals)
@@ -31687,9 +31690,9 @@
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/airlock/engineering{
-	name = "Secure Storage";
+	icon_state = "door_locked";
 	locked = 1;
-	icon_state = "door_locked"
+	name = "Secure Storage"
 	},
 /obj/item/tape/engineering,
 /turf/simulated/floor,
@@ -31758,11 +31761,11 @@
 "yjG" = (
 /obj/machinery/power/smes/buildable{
 	RCon_tag = "Auxiliary Reactor - Aegis";
-	input_attempt = 1;
 	charge = 2e+006;
-	name = "Auxiliary Reactor SMES";
 	cur_coils = 2;
+	input_attempt = 1;
 	input_level = 500000;
+	name = "Auxiliary Reactor SMES";
 	output_level = 350000
 	},
 /obj/effect/engine_setup/smes,
