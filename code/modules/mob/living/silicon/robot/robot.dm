@@ -85,6 +85,7 @@
 	//var/list/laws = list()
 	var/viewalerts = 0
 	var/modtype = "Default"
+	var/sprite_type = null
 	var/lower_mod = 0
 	var/jetpack = 0
 	var/datum/effect/effect/system/ion_trail_follow/ion_trail = null
@@ -1061,9 +1062,21 @@
 
 	return
 
+<<<<<<< HEAD
 /mob/living/silicon/robot/proc/choose_icon(var/triesleft, var/list/module_sprites)
 	if(!module_sprites.len)
 		to_chat(src, "Something is badly wrong with the sprite selection. Harass a coder.")
+=======
+/mob/living/silicon/robot/proc/choose_icon(var/triesleft)
+	var/robot_species = null
+	if(!SSrobot_sprites)
+		to_chat(src, "Robot Sprites have not been initialized yet. How are you choosing a sprite? Harass a coder.")
+		return
+
+	var/list/module_sprites = SSrobot_sprites.get_module_sprites(modtype, src)
+	if(!module_sprites || !module_sprites.len)
+		to_chat(src, "Your module appears to have no sprite options. Harass a coder.")
+>>>>>>> c372f5354f... Merge pull request #15252 from Very-Soft/robotspecies
 		return
 
 	icon_selected = 0
@@ -1072,6 +1085,7 @@
 		if(!(icontype in module_sprites))
 			icontype = module_sprites[1]
 	else
+<<<<<<< HEAD
 		icontype = tgui_input_list(usr, "Select an icon! [triesleft ? "You have [triesleft] more chance\s." : "This is your last try."]", "Robot Icon", module_sprites)
 		if(!icontype)
 			icontype = module_sprites[1]
@@ -1082,6 +1096,13 @@
 			to_chat(src, "Something is wrong with the sprite definition. Harass a coder.")
 			icontype = module_sprites[1]//CHOMPEdit END
 		if(notransform)				//VOREStation edit start: sprite animation
+=======
+		var/selection = tgui_input_list(src, "Select an icon! [triesleft ? "You have [triesleft] more chance\s." : "This is your last try."]", "Robot Icon", module_sprites)
+		sprite_datum = selection
+		if(!istype(src,/mob/living/silicon/robot/drone))
+			robot_species = sprite_datum.name
+		if(notransform)
+>>>>>>> c372f5354f... Merge pull request #15252 from Very-Soft/robotspecies
 			to_chat(src, "Your current transformation has not finished yet!")
 			icontype = module_sprites[1]//CHOMPEdit - Spriteselector
 			choose_icon(icon_selection_tries, module_sprites)
@@ -1127,6 +1148,7 @@
 
 	icon_selected = 1
 	icon_selection_tries = 0
+	sprite_type = robot_species
 	to_chat(src, "<span class='filter_notice'>Your icon has been set. You now require a module reset to change it.</span>")
 
 /mob/living/silicon/robot/proc/sensor_mode() //Medical/Security HUD controller for borgs
