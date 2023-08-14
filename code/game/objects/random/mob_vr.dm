@@ -270,7 +270,7 @@
 
 /obj/random/mob/wildscugs/item_to_spawn()
 	return pick(prob(99); /mob/living/simple_mob/vore/alienanimals/catslug,
-				prob(1); /mob/living/simple_mob/vore/alienanimals/catslug/suslug/color) //A super rare surprise
+//				prob(1); /mob/living/simple_mob/vore/alienanimals/catslug/suslug/color) //A super rare surprise //CHOMP Remove Among Us meme
 
 /obj/random/mob/wildscugs/spawn_item()
 	var/build_path = item_to_spawn()
