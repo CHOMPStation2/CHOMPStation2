@@ -149,5 +149,6 @@
   - refactor: Pounce is now a emag / scrambled equip item
   - refactor: Boozerhound belly color customisation moved to 'Customise appearance'
       verb
+  - rscadd: More vore screen overlays
   kcin2001:
   - rscadd: Readd all chomp-specific borg changes to the new overhauled code
