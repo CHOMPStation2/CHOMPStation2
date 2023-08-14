@@ -138,6 +138,10 @@
   Verkister:
   - bugfix: Fixed Big Leggies belly sprites.
 2023-08-14:
+  FirstSgtDan:
+  - rscadd: Added a box of Pilot NIFsoft to Sling Carrier exploration briefing room.
+  - rscadd: 'tweak: Rearranged boxes on the table with death alarms to fit the new
+      box.'
   Seris02:
   - bugfix: fixes up the transparency/marking customization toggling in modular code
   Upstream:
