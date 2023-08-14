@@ -31,6 +31,7 @@
 	var/digestchance = 0					// % Chance of stomach beginning to digest if prey struggles
 	var/absorbchance = 0					// % Chance of stomach beginning to absorb if prey struggles
 	var/escapechance = 0 					// % Chance of prey beginning to escape if prey struggles.
+	var/escape_stun = 0						// AI controlled mobs with a number here will be weakened by the provided var when someone escapes, to prevent endless nom loops
 	var/transferchance = 0 					// % Chance of prey being trasnsfered, goes from 0-100%
 	var/transferchance_secondary = 0 		// % Chance of prey being transfered to transferchance_secondary, also goes 0-100%
 	var/save_digest_mode = TRUE				// Whether this belly's digest mode persists across rounds
@@ -452,6 +453,9 @@
 /obj/belly/Exited(atom/movable/thing, atom/OldLoc)
 	. = ..()
 	thing.exit_belly(src) // CHOMPedit - atom movable proc, does nothing by default. Overridden in children for special behavior.
+	if(isbelly(thing.loc)) //CHOMPEdit
+		if(count_items_for_sprite) //CHOMPEdit
+			owner.update_fullness() //CHOMPEdit
 	if(isliving(thing) && !isbelly(thing.loc))
 		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 		var/mob/living/L = thing
@@ -503,13 +507,19 @@
 				var/obj/screen/fullscreen/F2 = L.overlay_fullscreen("belly2", /obj/screen/fullscreen/belly/colorized/overlay)
 				F2.icon_state = "[belly_fullscreen]_l1"
 				F2.color = belly_fullscreen_color_secondary
+			else
+				L.clear_fullscreen("belly2")
 			if("[belly_fullscreen]_l2" in icon_states('icons/mob/screen_full_colorized_vore_overlays.dmi'))
 				var/obj/screen/fullscreen/F3 = L.overlay_fullscreen("belly3", /obj/screen/fullscreen/belly/colorized/overlay)
 				F3.icon_state = "[belly_fullscreen]_l2"
 				F3.color = belly_fullscreen_color_trinary
+			else
+				L.clear_fullscreen("belly3")
 			if("[belly_fullscreen]_nc" in icon_states('icons/mob/screen_full_colorized_vore_overlays.dmi'))
 				var/obj/screen/fullscreen/F4 = L.overlay_fullscreen("belly4", /obj/screen/fullscreen/belly/colorized/overlay)
 				F4.icon_state = "[belly_fullscreen]_nc"
+			else
+				L.clear_fullscreen("belly4")
 			*/ //Chomp Disable END
 
 			// Chomp EDIT Begin
@@ -853,6 +863,9 @@
 	if(ismob(M))
 		var/mob/ourmob = M
 		ourmob.reset_view(null)
+
+	if(!owner.ckey && escape_stun)
+		owner.Weaken(escape_stun)
 
 	return 1
 
@@ -1315,9 +1328,9 @@
 		items_preserved |= item
 	else
 		owner.adjust_nutrition((nutrition_percent / 100) * 5 * digested)
-		if(isrobot(owner))
-			var/mob/living/silicon/robot/R = owner
-			R.cell.charge += ((nutrition_percent / 100) * 50 * digested)
+		// if(isrobot(owner)) //CHOMPEdit: Borgos can now use nutrition too.
+		//	var/mob/living/silicon/robot/R = owner
+		//	R.cell.charge += ((nutrition_percent / 100) * 50 * digested)
 		digested = TRUE //CHOMPEdit
 	return digested
 
@@ -1575,7 +1588,7 @@
 		owner.update_icon()
 	for(var/mob/living/M in contents)
 		M.updateVRPanel()
-	owner.updateicon()
+	owner.update_icon()
 
 //Autotransfer callback CHOMPEdit Start
 /obj/belly/proc/check_autotransfer(var/atom/movable/prey)

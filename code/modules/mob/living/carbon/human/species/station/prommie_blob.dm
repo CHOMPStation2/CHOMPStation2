@@ -410,6 +410,8 @@
 	blob.transforming = TRUE
 	blob.ckey = ckey
 	blob.ooc_notes = ooc_notes
+	blob.ooc_notes_likes = ooc_notes_likes
+	blob.ooc_notes_dislikes = ooc_notes_dislikes
 	blob.transforming = FALSE
 	blob.name = name
 	blob.real_name = real_name //CHOMPEdit
@@ -497,6 +499,8 @@
 	transforming = TRUE
 	ckey = blob.ckey
 	ooc_notes = blob.ooc_notes // Updating notes incase they change them in blob form.
+	ooc_notes_likes = blob.ooc_notes_likes
+	ooc_notes_dislikes = blob.ooc_notes_dislikes
 	transforming = FALSE
 	blob.name = "Promethean Blob"
 	var/obj/item/hat = blob.hat

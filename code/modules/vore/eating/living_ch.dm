@@ -22,10 +22,17 @@
 	var/vore_sprite_color = list("stomach" = "#000", "taur belly" = "#000")
 
 	var/list/vore_icon_bellies = list("stomach")
+	var/updating_fullness = FALSE
 
 
 // Update fullness based on size & quantity of belly contents
-/mob/living/proc/update_fullness()
+/mob/living/proc/update_fullness(var/returning = FALSE)
+	if(!returning)
+		if(updating_fullness)
+			return
+		updating_fullness = TRUE
+		spawn(2)
+		updating_fullness = FALSE
 	var/list/new_fullness = list()
 	vore_fullness = 0
 	for(var/belly_class in vore_icon_bellies)
@@ -341,3 +348,9 @@
 		clear_fullscreen("belly")
 		clear_fullscreen(ATOM_BELLY_FULLSCREEN)
 		stop_sound_channel(CHANNEL_PREYLOOP)
+
+/mob/living/verb/vore_check_nutrition()
+	set name = "Check Nutrition"
+	set category = "Abilities"
+	set desc = "Check your current nutrition level."
+	to_chat(src, "<span class='notice'>Current nutrition level: [nutrition].</span>")

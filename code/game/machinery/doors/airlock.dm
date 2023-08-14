@@ -13,10 +13,10 @@
 	power_channel = ENVIRON
 
 	explosion_resistance = 10
-	
+
 	// Doors do their own stuff
 	bullet_vulnerability = 0
-	
+
 	blocks_emissive = EMISSIVE_BLOCK_GENERIC // Not quite as nice as /tg/'s custom masks. We should make those sometime
 
 	var/aiControlDisabled = 0 //If 1, AI control is disabled until the AI hacks back in and disables the lock. If 2, the AI has bypassed the lock. If -1, the control is enabled but the AI had bypassed it earlier, so if it is disabled again the AI would have no trouble getting back in.
@@ -1004,7 +1004,7 @@ About the new airlock wires panel:
 
 /* // CHOMPEDIT: disabling becaue alt-clicking to view a turf is pretty important.
 /obj/machinery/door/airlock/AltClick(mob/user as mob)
-		 
+
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if(!Adjacent(user))
 		return
@@ -1563,7 +1563,7 @@ About the new airlock wires panel:
 		src.lock()
 	return
 
-
+/* CHOMPEdit - moved this block to modular_chomp\code\game\objects\items\weapons\rcd.dm
 /obj/machinery/door/airlock/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
 		if(RCD_DECONSTRUCT)
@@ -1583,3 +1583,4 @@ About the new airlock wires panel:
 			qdel(src)
 			return TRUE
 	return FALSE
+*/

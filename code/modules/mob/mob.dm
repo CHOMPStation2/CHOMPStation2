@@ -703,7 +703,6 @@
 					for(var/datum/SDQL2_query/Q as anything in GLOB.sdql2_queries)
 						Q.generate_stat()
 
-
 		if(has_mentor_powers(client) || client.holder) // CHOMPedit - Ticket System
 			if(statpanel("Tickets"))
 				GLOB.tickets.stat_entry() // CHOMPedit - Ticket System
@@ -1009,9 +1008,6 @@
 
 	return 0
 
-/mob/proc/updateicon()
-	return
-
 // Please always use this proc, never just set the var directly.
 /mob/proc/set_stat(var/new_stat)
 	. = (stat != new_stat)
@@ -1099,6 +1095,33 @@
 	if(pixel_x <= (default_pixel_x + 16))
 		pixel_x++
 		is_shifted = TRUE
+
+/mob/verb/planeup()
+	set hidden = TRUE
+	if(!canface())
+		return FALSE
+	if(plane >= MOB_PLANE + 3)	//Don't bother going too high!
+		return
+	if(layer == MOB_LAYER)	//Become higher
+		layer = ABOVE_MOB_LAYER
+	plane += 1		//Increase the plane
+	if(plane == MOB_PLANE)	//Return to normal
+		layer = MOB_LAYER
+	is_shifted = TRUE
+
+/mob/verb/planedown()
+	set hidden = TRUE
+	if(!canface())
+		return FALSE
+	if(plane <= MOB_PLANE - 3)	//Don't bother going too low!
+		return
+	if(layer == MOB_LAYER)	//Become lower
+		layer = BELOW_MOB_LAYER
+	plane -= 1		//Decrease the plane
+	if(plane == MOB_PLANE)	//Return to normal
+		layer = MOB_LAYER
+	is_shifted = TRUE
+
 // End VOREstation edit
 
 /mob/proc/adjustEarDamage()

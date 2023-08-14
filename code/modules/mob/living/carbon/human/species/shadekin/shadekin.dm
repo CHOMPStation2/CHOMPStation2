@@ -118,6 +118,7 @@
 	var/kin_type
 	var/energy_light = 0.25
 	var/energy_dark = 0.75
+	var/nutrition_conversion_scaling = 0.5 //CHOMPEdit - Add nutrition <-> dark energy conversion
 	var/phase_gentle = FALSE //CHOMPEdit - Add gentle phasing
 	var/doing_phase = FALSE //CHOMPEdit - Prevent bugs when spamming phase button
 	var/manual_respite = FALSE //CHOMPEdit - Dark Respite
@@ -311,6 +312,10 @@
 		return
 
 	var/brightness = T.get_lumcount() //Brightness in 0.0 to 1.0
+	//CHOMPEdit begin - dark in bellies
+	if(isbelly(H.loc))
+		brightness = 0
+	//CHOMPEdit end
 	darkness = 1-brightness //Invert
 	var/is_dark = (darkness >= 0.5)
 
@@ -327,6 +332,13 @@
 			dark_gains = energy_dark
 		else
 			dark_gains = energy_light
+		//CHOMPEdit begin - Energy <-> nutrition conversion
+		if(get_energy(H) == 100 && dark_gains > 0)
+			H.nutrition += dark_gains * 5 * nutrition_conversion_scaling
+		else if(get_energy(H) < 50 && H.nutrition > 500)
+			H.nutrition -= nutrition_conversion_scaling * 50
+			dark_gains += nutrition_conversion_scaling
+		//CHOMPEdit end
 
 	set_energy(H, get_energy(H) + dark_gains)
 
@@ -457,26 +469,32 @@
 			total_health = 100
 			energy_light = 0.5
 			energy_dark = 0.5
+			nutrition_conversion_scaling = 0.5 //CHOMPEdit - Add nutrition <-> dark energy conversion
 		if(RED_EYES)
 			total_health = 200
 			energy_light = -1
 			energy_dark = 0.1
+			nutrition_conversion_scaling = 2 //CHOMPEdit - Add nutrition <-> dark energy conversion
 		if(PURPLE_EYES)
 			total_health = 150
 			energy_light = -0.5
 			energy_dark = 1
+			nutrition_conversion_scaling = 1 //CHOMPEdit - Add nutrition <-> dark energy conversion
 		if(YELLOW_EYES)
 			total_health = 100
 			energy_light = -2
 			energy_dark = 3
+			nutrition_conversion_scaling = 0.5 //CHOMPEdit - Add nutrition <-> dark energy conversion
 		if(GREEN_EYES)
 			total_health = 100
 			energy_light = 0.125
 			energy_dark = 2
+			nutrition_conversion_scaling = 0.5 //CHOMPEdit - Add nutrition <-> dark energy conversion
 		if(ORANGE_EYES)
 			total_health = 175
 			energy_light = -0.5
 			energy_dark = 0.25
+			nutrition_conversion_scaling = 1.5 //CHOMPEdit - Add nutrition <-> dark energy conversion
 
 	H.maxHealth = total_health
 

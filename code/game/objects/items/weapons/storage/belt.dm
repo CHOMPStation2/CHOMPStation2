@@ -73,6 +73,9 @@
 		/obj/item/weapon/extinguisher/mini,
 		/obj/item/weapon/tape_roll,
 		/obj/item/device/integrated_electronics/wirer,
+		/obj/item/weapon/pipe_dispenser, //CHOMPAdd
+		/obj/item/weapon/holosign_creator/combifan, //CHOMPAdd
+		/obj/item/weapon/rcd, //CHOMPAdd
 		/obj/item/device/integrated_electronics/debugger, //Vorestation edit adding debugger to toolbelt can hold list
 		/obj/item/weapon/shovel/spade, //VOREStation edit. If it can hold minihoes and hatchers, why not the gardening spade?
 		/obj/item/stack/nanopaste, //VOREStation edit. Think of it as a tube of superglue. Belts hold that all the time.
@@ -119,6 +122,8 @@
 	storage_slots = 8	//If they get better everything-else, why not the belt too?
 	can_hold = list(
 		/obj/item/weapon/rcd,	//They've given one from the get-go, it's hard to imagine they wouldn't be given something that can store it neater than a bag
+		/obj/item/weapon/pipe_dispenser, //CHOMPAdd
+		/obj/item/weapon/holosign_creator/combifan, //CHOMPAdd
 		/obj/item/weapon/tool/crowbar,
 		/obj/item/weapon/tool/screwdriver,
 		/obj/item/weapon/weldingtool,
@@ -479,6 +484,7 @@
 		/obj/item/taperoll,
 		/obj/item/weapon/reagent_containers/spray,
 		/obj/item/weapon/soap,
+		/obj/item/weapon/holosign_creator, //CHOMPAdd
 		/obj/item/device/lightreplacer //VOREStation edit
 		)
 

@@ -458,11 +458,16 @@ Turf and target are seperate in case you want to teleport some distance from a t
 			after_simplemob_minded.Add(M)
 			continue
 		moblist.Add(M)
+	var/list/delaylist = list()
 	for(var/mob/living/carbon/human/M in sortmob)
-		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
-			after_simplemob_minded.Add(M)
-			continue
-		moblist.Add(M)
+		if(M.low_sorting_priority && !M.client)
+			delaylist.Add(M)
+		else
+			if (!M.client && !M.disconnect_time) //ChompADD Start
+				after_simplemob_minded.Add(M)
+				continue //ChompADD End
+			moblist.Add(M)
+	moblist.Add(delaylist)
 	for(var/mob/living/carbon/brain/M in sortmob)
 		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
 			after_simplemob_minded.Add(M)
@@ -1170,7 +1175,10 @@ var/list/WALLITEMS = list(
 	/obj/machinery/newscaster, /obj/machinery/firealarm, /obj/structure/noticeboard, /obj/machinery/button/remote,
 	/obj/machinery/computer/security/telescreen, /obj/machinery/embedded_controller/radio,
 	/obj/item/weapon/storage/secure/safe, /obj/machinery/door_timer, /obj/machinery/flasher, /obj/machinery/keycard_auth,
-	/obj/structure/mirror, /obj/structure/fireaxecabinet, /obj/machinery/computer/security/telescreen/entertainment
+	/obj/structure/mirror, /obj/structure/fireaxecabinet, /obj/machinery/computer/security/telescreen/entertainment,
+	/obj/machinery/doorbell_chime, /obj/machinery/button/doorbell, /obj/machinery/atm, /obj/machinery/recharger/wallcharger,	//CHOMPEdit
+	/obj/machinery/computer/guestpass, /obj/item/device/geiger/wall, /obj/machinery/button/windowtint, /obj/machinery/computer/id_restorer,	//CHOMPEdit
+	/obj/machinery/computer/timeclock, /obj/machinery/station_map, /obj/machinery/ai_status_display	//CHOMPEdit
 	)
 /proc/gotwallitem(loc, dir)
 	for(var/obj/O in loc)

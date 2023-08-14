@@ -370,6 +370,9 @@
 	contains = list(
 			/obj/item/weapon/storage/backpack/saddlebag_common,
 			/obj/item/weapon/storage/backpack/saddlebag_common/robust,
+			/obj/item/weapon/storage/backpack/saddlebag_common/robust/lightweight,	//CHOMPEdit
+			/obj/item/weapon/storage/backpack/saddlebag_common/vest/heavy,	//CHOMPEdit
+			/obj/item/weapon/storage/backpack/saddlebag_common/lightweight,	//CHOMPEdit
 			/obj/item/weapon/storage/backpack/saddlebag_common/vest
 			)
 	cost = 60
@@ -395,7 +398,7 @@
 	cost = 10
 	containertype = /obj/structure/closet/crate
 	containername = "Knights Gear Crate"
-	
+
 /datum/supply_pack/costumes/christmas
 	name = "Christmas costume pack"
 	contains = list(
@@ -412,4 +415,4 @@
 			)
 	cost = 20
 	containertype = /obj/structure/closet/crate
-	containername = "Christmas costume pack" 
+	containername = "Christmas costume pack"
