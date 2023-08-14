@@ -15211,16 +15211,11 @@
 	req_one_access = list(13);
 	tag_door = "centcom_dock_airlock"
 	},
-<<<<<<< HEAD
-/turf/simulated/floor/reinforced/virgo3c{
-	edge_blending_priority = -1
-=======
 /turf/simulated/floor/tiled,
 /area/centcom/main_hall)
 "XI" = (
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_y = 30
->>>>>>> 10391d7496... Merge pull request #15242 from Heroman3003/framefix
 	},
 /area/centcom)
 "M" = (
