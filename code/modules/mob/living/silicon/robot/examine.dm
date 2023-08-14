@@ -29,12 +29,8 @@
 				. += "It appears to be in stand-by mode." //afk
 		if(UNCONSCIOUS)		. += "<span class='warning'>It doesn't seem to be responding.</span>"
 		if(DEAD)			. += "<span class='deadsay'>It looks completely unsalvageable.</span>"
-<<<<<<< HEAD
 	. += attempt_vr(src,"examine_reagent_bellies",args) //CHOMP reagent bellies
 	
-=======
-
->>>>>>> c372f5354f... Merge pull request #15252 from Very-Soft/robotspecies
 	// VOREStation Edit: Start
 	. += attempt_vr(src,"examine_bellies_borg",args) //VOREStation Edit
 	// VOREStation Edit: End
