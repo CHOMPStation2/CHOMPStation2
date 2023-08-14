@@ -518,7 +518,8 @@
 			if("[belly_fullscreen]_nc" in icon_states('icons/mob/screen_full_colorized_vore_overlays.dmi'))
 				var/obj/screen/fullscreen/F4 = L.overlay_fullscreen("belly4", /obj/screen/fullscreen/belly/colorized/overlay)
 				F4.icon_state = "[belly_fullscreen]_nc"
-<<<<<<< HEAD
+			else
+				L.clear_fullscreen("belly4")
 			*/ //Chomp Disable END
 
 			// Chomp EDIT Begin
@@ -566,10 +567,6 @@
 				I.pixel_y = -450 + min((450 / custom_max_volume * reagents.total_volume), 450 / 100 * max_liquid_level)
 				F.add_overlay(I)
 			F.update_for_view(L.client.view)
-=======
-			else
-				L.clear_fullscreen("belly4")
->>>>>>> 6927b4b584... Merge pull request #15241 from Heroman3003/fullscreen-adjusts
 		else
 			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly/fixed, severity) //preserving save data
 			F.icon = file("modular_chomp/icons/mob/vore_fullscreens/[belly_fullscreen].dmi")
