@@ -138,6 +138,8 @@
   Verkister:
   - bugfix: Fixed Big Leggies belly sprites.
 2023-08-14:
+  Seris02:
+  - bugfix: fixes up the transparency/marking customization toggling in modular code
   Upstream:
   - refactor: Changed borg/dogborg system entirely. Dogborg sprites are now merged
       with normal borg modules.
