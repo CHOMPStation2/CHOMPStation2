@@ -87,7 +87,7 @@
 		// None yet
 */
 // Tall sprites
-
+//CHOMPNote -- many of the lines in this is overriden in modular
 /datum/robot_sprite/dogborg/tall/medical
 	module_type = list("Crisis", "Surgeon")
 	sprite_icon = 'icons/mob/robot/medical_large.dmi'
@@ -100,12 +100,14 @@
 	has_vore_belly_sprites = FALSE
 	rest_sprite_options = list("Default", "Sit")
 
+/* //CHOMPRemoval Start - we dont use the old sprites
 /datum/robot_sprite/dogborg/tall/medical/newmeka
 	name = "MEKA v2"
 	sprite_icon_state = "newmeka"
 	has_eye_light_sprites = TRUE
 	has_custom_open_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
+*/ //CHOMPRemoval End
 
 /datum/robot_sprite/dogborg/tall/medical/mmeka
 	name = "NIKO"
@@ -232,7 +234,7 @@
 	sprite_icon_state = "drake"
 
 // Tall sprites
-
+//CHOMPNote -- many of the lines in this is overriden in modular
 /datum/robot_sprite/dogborg/tall/surgical
 	module_type = "Surgeon"
 	sprite_icon = 'icons/mob/robot/surgical_large.dmi'
@@ -251,7 +253,7 @@
 		SP.icon_state = "defibpaddles0"
 		SP.attack_verb = list("batted", "pawed", "bopped", "whapped")
 
-/datum/robot_sprite/dogborg/tall/surgical/raptor
+/datum/robot_sprite/dogborg/raptor/surgical/raptor //CHOMPEdit - changed typepath
 	name = "Raptor V-4"
 	sprite_icon_state = "raptor"
 	has_custom_equipment_sprites = TRUE
@@ -390,7 +392,7 @@
 		SP.icon_state = "defibpaddles0"
 		SP.attack_verb = list("batted", "pawed", "bopped", "whapped")
 
-/datum/robot_sprite/dogborg/tall/crisis/raptor
+/datum/robot_sprite/dogborg/raptor/crisis/raptor //CHOMPEDIT - changed typepath
 	name = "Raptor V-4"
 	sprite_icon_state = "raptor"
 	has_custom_equipment_sprites = TRUE

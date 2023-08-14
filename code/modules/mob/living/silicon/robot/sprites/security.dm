@@ -172,12 +172,12 @@
 	has_taser_sprite = TRUE
 
 // Tall sprites
-
+//CHOMPNote -- many of the lines in this is overriden in modular
 /datum/robot_sprite/dogborg/tall/security
 	module_type = "Security"
 	sprite_icon = 'icons/mob/robot/security_large.dmi'
 
-/datum/robot_sprite/dogborg/tall/security/raptor
+/datum/robot_sprite/dogborg/raptor/security/raptor //CHOMPEdit - changed typepath
 	name = "Raptor V-4"
 	sprite_icon_state = "raptor"
 	has_custom_equipment_sprites = TRUE
@@ -191,12 +191,14 @@
 	has_vore_belly_sprites = FALSE
 	rest_sprite_options = list("Default", "Sit")
 
+/* //CHOMPRemoval Start - we dont use the old sprites
 /datum/robot_sprite/dogborg/tall/security/newmeka
 	name = "MEKA v2"
 	sprite_icon_state = "newmeka"
 	has_eye_light_sprites = TRUE
 	has_custom_open_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
+*/ //CHOMPRemoval End
 
 /datum/robot_sprite/dogborg/tall/security/mmeka
 	name = "NIKO"

@@ -30,10 +30,18 @@
 
 /datum/robot_sprite/proc/get_belly_overlay(var/mob/living/silicon/robot/ourborg)
 	return "[sprite_icon_state]-sleeper"
-
+//CHOMPEdit Start - gives the function functionality
 /datum/robot_sprite/proc/get_belly_resting_overlay(var/mob/living/silicon/robot/ourborg)
-	return
-
+	if(!(ourborg.rest_style in rest_sprite_options))
+		ourborg.rest_style = "Default"
+	switch(ourborg.rest_style)
+		if("Sit")
+			return "[get_belly_overlay(ourborg)]-sit"
+		if("Bellyup")
+			return "[get_belly_overlay(ourborg)]-bellyup"
+		else
+			return "[get_belly_overlay(ourborg)]-rest"
+//CHOMPEdit End
 /datum/robot_sprite/proc/get_eyes_overlay(var/mob/living/silicon/robot/ourborg)
 	if(!(ourborg.resting && has_rest_sprites))
 		return "[sprite_icon_state]-eyes"
@@ -121,7 +129,7 @@
 	has_dead_sprite_overlay = FALSE
 	has_custom_equipment_sprites = FALSE
 	vis_height = 64
-
+	pixel_x = 0 //CHOMPEdit - our tallborgs arent wide
 
 // Default module sprite
 
@@ -131,3 +139,10 @@
 	sprite_icon = 'icons/mob/robot/default.dmi'
 	sprite_icon_state = "default"
 	default_sprite = TRUE
+
+//CHOMPAdd Start - new definition for raptors
+/datum/robot_sprite/dogborg/raptor
+	has_dead_sprite_overlay = FALSE
+	vis_height = 45
+	pixel_x = -16
+//CHOMPAdd End
