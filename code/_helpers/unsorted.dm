@@ -463,9 +463,9 @@ Turf and target are seperate in case you want to teleport some distance from a t
 		if(M.low_sorting_priority && !M.client)
 			delaylist.Add(M)
 		else
-			if (!M.client && !M.disconnect_time) //CHOMPADD Start
+			if (!M.client && !M.disconnect_time) //ChompADD Start
 				after_simplemob_minded.Add(M)
-				continue
+				continue //ChompADD End
 			moblist.Add(M)
 	moblist.Add(delaylist)
 	for(var/mob/living/carbon/brain/M in sortmob)
