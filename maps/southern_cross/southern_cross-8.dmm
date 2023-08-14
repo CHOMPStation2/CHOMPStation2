@@ -681,8 +681,8 @@
 "aex" = (
 /obj/item/toy/plushie/borgplushie/scrubpuppy,
 /obj/item/toy/plushie/nymph{
-	pixel_y = -13;
-	pixel_x = -14
+	pixel_x = -14;
+	pixel_y = -13
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -882,8 +882,8 @@
 	color = "#2b2b2b"
 	},
 /obj/structure/flora/pottedplant/flower{
-	pixel_y = 10;
-	name = "Rosola"
+	name = "Rosola";
+	pixel_y = 10
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/shadekin)
@@ -909,6 +909,13 @@
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
+	},
+/obj/machinery/button/remote/airlock{
+	dir = 1;
+	id = "DarkResDorm_7";
+	name = "Bolt Control";
+	pixel_y = -22;
+	specialfunctions = 4
 	},
 /turf/simulated/floor/wood/sif,
 /area/shadekin)
@@ -1085,8 +1092,8 @@
 "azA" = (
 /obj/item/weapon/bedsheet/greendouble,
 /obj/item/weapon/bedsheet/hosdouble{
-	pixel_y = 5;
-	pixel_x = 7
+	pixel_x = 7;
+	pixel_y = 5
 	},
 /turf/simulated/floor/carpet/geo,
 /area/shadekin)
@@ -1356,20 +1363,20 @@
 "aOW" = (
 /obj/structure/table/rack/gun_rack/steel,
 /obj/item/clothing/under/wedding/bride_red{
-	pixel_y = -1;
-	pixel_x = 3
+	pixel_x = 3;
+	pixel_y = -1
 	},
 /obj/item/clothing/under/wedding/bride_purple{
-	pixel_y = 1;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 1
 	},
 /obj/item/clothing/under/wedding/bride_orange{
-	pixel_y = 10;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 10
 	},
 /obj/item/clothing/under/wedding/bride_blue{
-	pixel_y = 8;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = 8
 	},
 /obj/effect/floor_decal/milspec/cargo,
 /turf/simulated/floor/tiled/techmaint,
@@ -1472,12 +1479,12 @@
 /area/syndicate_station)
 "aSc" = (
 /obj/item/toy/plushie/basset{
-	pixel_y = 3;
-	pixel_x = 2
+	pixel_x = 2;
+	pixel_y = 3
 	},
 /obj/item/toy/plushie/spider{
-	pixel_y = 21;
-	pixel_x = 14
+	pixel_x = 14;
+	pixel_y = 21
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -1825,8 +1832,8 @@
 "bhm" = (
 /obj/structure/table/marble,
 /obj/item/weapon/reagent_containers/dropper{
-	pixel_y = 5;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = 5
 	},
 /obj/item/weapon/reagent_containers/glass/beaker/measuring_cup{
 	pixel_x = 6;
@@ -1843,8 +1850,8 @@
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/black/diagonal,
 /obj/item/weapon/reagent_containers/dropper{
-	pixel_y = 5;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = 5
 	},
 /obj/item/weapon/reagent_containers/glass/beaker/measuring_cup{
 	pixel_x = 6;
@@ -1924,6 +1931,20 @@
 	},
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_basketball)
+"bmk" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/button/remote/airlock{
+	dir = 1;
+	id = "DarkResDorm_9";
+	name = "Bolt Control";
+	pixel_y = -22;
+	specialfunctions = 4
+	},
+/turf/simulated/floor/wood/sif,
+/area/shadekin)
 "bmp" = (
 /obj/machinery/status_display{
 	layer = 4;
@@ -2049,6 +2070,7 @@
 "bqs" = (
 /obj/machinery/door/airlock/angled_tgmc/cell{
 	dir = 8;
+	id_tag = "DarkResDorm_5";
 	name = "Room 5"
 	},
 /obj/structure/disposalpipe/segment{
@@ -2182,8 +2204,8 @@
 /obj/structure/table/marble,
 /obj/item/weapon/material/knife/butch,
 /obj/item/weapon/material/kitchen/rollingpin{
-	pixel_y = 4;
-	pixel_x = -8
+	pixel_x = -8;
+	pixel_y = 4
 	},
 /obj/effect/floor_decal/corner/green/diagonal,
 /turf/simulated/floor/tiled/white,
@@ -2211,8 +2233,8 @@
 	color = "#2b2b2b"
 	},
 /obj/structure/flora/pottedplant/largebush{
-	pixel_y = 10;
-	name = "Altuda"
+	name = "Altuda";
+	pixel_y = 10
 	},
 /turf/simulated/floor/bronze,
 /area/shadekin)
@@ -2757,8 +2779,8 @@
 	color = "#2b2b2b"
 	},
 /obj/item/weapon/flame/candle/candelabra/everburn{
-	pixel_y = 19;
-	lit = 1
+	lit = 1;
+	pixel_y = 19
 	},
 /turf/simulated/floor/carpet/retro_red,
 /area/shadekin)
@@ -2926,8 +2948,8 @@
 "cfm" = (
 /obj/item/toy/plushie/borgplushie/drake/jani,
 /obj/item/toy/plushie/green_fox{
-	pixel_y = 9;
-	pixel_x = 14
+	pixel_x = 14;
+	pixel_y = 9
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -2946,28 +2968,28 @@
 /obj/item/weapon/reagent_containers/food/drinks/smallmilk,
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/item/weapon/reagent_containers/food/drinks/bottle/orangejuice{
-	pixel_y = -3;
-	pixel_x = -9
+	pixel_x = -9;
+	pixel_y = -3
 	},
 /obj/item/weapon/reagent_containers/food/drinks/bottle/orangejuice{
-	pixel_y = -3;
-	pixel_x = -9
+	pixel_x = -9;
+	pixel_y = -3
 	},
 /obj/item/weapon/reagent_containers/food/drinks/bottle/orangejuice{
-	pixel_y = -3;
-	pixel_x = -9
+	pixel_x = -9;
+	pixel_y = -3
 	},
 /obj/item/weapon/reagent_containers/food/drinks/bottle/cream{
-	pixel_y = -4;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = -4
 	},
 /obj/item/weapon/reagent_containers/food/drinks/bottle/cream{
-	pixel_y = -4;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = -4
 	},
 /obj/item/weapon/reagent_containers/food/drinks/bottle/cream{
-	pixel_y = -4;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = -4
 	},
 /obj/effect/floor_decal/milspec/color/silver,
 /obj/machinery/light{
@@ -3251,8 +3273,8 @@
 "cwo" = (
 /obj/item/toy/plushie/carp/void,
 /obj/item/toy/plushie/lizard{
-	pixel_y = -9;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = -9
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -3494,9 +3516,9 @@
 	dir = 1
 	},
 /obj/structure/sign/electricshock{
-	pixel_y = 32;
+	desc = "Shockingly isn't it? Live Music festival. Septober-23-1900. Electronic music to shock your senses~";
 	name = "Shockunura!";
-	desc = "Shockingly isn't it? Live Music festival. Septober-23-1900. Electronic music to shock your senses~"
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
@@ -3549,9 +3571,9 @@
 	nightshift_enabled = 1
 	},
 /obj/effect/floor_decal/emblem/itgdauntless{
-	pixel_y = -32;
+	desc = "Tired of your footwear breaking down with time? Why bother buying something that will eventually erode when you can realy on the Dauntless footwear. Now in gunmetal black!";
 	name = "Dauntless Boots";
-	desc = "Tired of your footwear breaking down with time? Why bother buying something that will eventually erode when you can realy on the Dauntless footwear. Now in gunmetal black!"
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
@@ -4086,12 +4108,12 @@
 /area/shadekin)
 "dhM" = (
 /obj/item/weapon/bedsheet/double{
-	pixel_y = -3;
-	pixel_x = -9
+	pixel_x = -9;
+	pixel_y = -3
 	},
 /obj/item/weapon/bedsheet/hosdouble{
-	pixel_y = -4;
-	pixel_x = 10
+	pixel_x = 10;
+	pixel_y = -4
 	},
 /obj/item/toy/plushie/fluff,
 /turf/simulated/floor/carpet/geo,
@@ -4168,8 +4190,8 @@
 /area/shadekin)
 "dne" = (
 /obj/item/device/flashlight/lamp{
-	pixel_y = 17;
-	pixel_x = -11
+	pixel_x = -11;
+	pixel_y = 17
 	},
 /obj/machinery/cash_register/civilian{
 	dir = 4
@@ -4227,6 +4249,7 @@
 "dqP" = (
 /obj/machinery/door/airlock/angled_tgmc/cell{
 	dir = 8;
+	id_tag = "DarkResDorm_6";
 	name = "Room 6"
 	},
 /obj/structure/disposalpipe/segment{
@@ -4433,16 +4456,16 @@
 	pixel_y = 21
 	},
 /obj/item/weapon/storage/box/donkpockets{
-	pixel_y = -2;
-	pixel_x = 8
+	pixel_x = 8;
+	pixel_y = -2
 	},
 /obj/item/weapon/storage/box/donkpockets{
-	pixel_y = 2;
-	pixel_x = 8
+	pixel_x = 8;
+	pixel_y = 2
 	},
 /obj/item/weapon/storage/box/donkpockets{
-	pixel_y = 7;
-	pixel_x = 8
+	pixel_x = 8;
+	pixel_y = 7
 	},
 /obj/structure/table/marble{
 	color = "#2b2b2b"
@@ -4452,19 +4475,19 @@
 /area/shadekin)
 "dBP" = (
 /obj/structure/bed/double/padded{
-	pixel_y = 25;
-	pixel_x = 10
+	pixel_x = 10;
+	pixel_y = 25
 	},
 /obj/structure/bed/double/padded{
 	pixel_x = 10
 	},
 /obj/item/weapon/bedsheet/mimedouble{
-	pixel_y = 27;
-	pixel_x = 10
+	pixel_x = 10;
+	pixel_y = 27
 	},
 /obj/item/weapon/bedsheet/mimedouble{
-	pixel_y = 0;
-	pixel_x = 10
+	pixel_x = 10;
+	pixel_y = 0
 	},
 /turf/simulated/floor/carpet/blue2,
 /area/shadekin)
@@ -4826,10 +4849,10 @@
 /area/holodeck/source_courtroom)
 "dRZ" = (
 /obj/effect/floor_decal/emblem/itgdauntless{
+	desc = "Tired of your footwear breaking down with time? Why bother buying something that will eventually erode when you can realy on the Dauntless footwear. Now in gunmetal black!";
 	dir = 8;
-	pixel_y = -32;
 	name = "Dauntless Boots";
-	desc = "Tired of your footwear breaking down with time? Why bother buying something that will eventually erode when you can realy on the Dauntless footwear. Now in gunmetal black!"
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
@@ -5054,10 +5077,10 @@
 "eay" = (
 /obj/effect/floor_decal/milspec/color/orange,
 /obj/effect/floor_decal/emblem/itgdauntless{
+	desc = "Why bother with bags, when you the tools can be a part of you. ITG, effortless draw.";
 	dir = 1;
-	pixel_y = -32;
 	name = "Internal Tactical Gear";
-	desc = "Why bother with bags, when you the tools can be a part of you. ITG, effortless draw."
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
@@ -5183,10 +5206,10 @@
 /area/shuttle/merchant)
 "eim" = (
 /obj/machinery/light/floortube{
-	nightshift_enabled = 1;
-	pixel_y = 0;
 	dir = 4;
-	pixel_x = -6
+	nightshift_enabled = 1;
+	pixel_x = -6;
+	pixel_y = 0
 	},
 /turf/simulated/floor/wood/alt,
 /area/shadekin)
@@ -5440,24 +5463,24 @@
 "ewn" = (
 /obj/structure/table/standard,
 /obj/item/weapon/storage/rollingpapers/blunt{
-	pixel_y = 1;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 1
 	},
 /obj/item/weapon/storage/rollingpapers{
-	pixel_y = 0;
-	pixel_x = 8
+	pixel_x = 8;
+	pixel_y = 0
 	},
 /obj/item/weapon/storage/rollingpapers/blunt{
-	pixel_y = 4;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 4
 	},
 /obj/item/weapon/storage/rollingpapers{
-	pixel_y = 3;
-	pixel_x = 8
+	pixel_x = 8;
+	pixel_y = 3
 	},
 /obj/item/weapon/storage/rollingpapers{
-	pixel_y = 6;
-	pixel_x = 8
+	pixel_x = 8;
+	pixel_y = 6
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shadekin)
@@ -5634,8 +5657,8 @@
 "eGz" = (
 /obj/item/weapon/bedsheet/greendouble,
 /obj/item/weapon/bedsheet/hosdouble{
-	pixel_y = 5;
-	pixel_x = 7
+	pixel_x = 7;
+	pixel_y = 5
 	},
 /turf/simulated/floor/carpet/green,
 /area/shadekin)
@@ -5742,12 +5765,12 @@
 /area/shuttle/escape_pod1/centcom)
 "eOM" = (
 /obj/item/weapon/bedsheet/double{
-	pixel_y = -3;
-	pixel_x = -9
+	pixel_x = -9;
+	pixel_y = -3
 	},
 /obj/item/weapon/bedsheet/hosdouble{
-	pixel_y = -4;
-	pixel_x = 10
+	pixel_x = 10;
+	pixel_y = -4
 	},
 /obj/item/toy/plushie/fluff,
 /turf/simulated/floor/carpet/green,
@@ -6228,9 +6251,9 @@
 "fro" = (
 /obj/effect/floor_decal/milspec/color/orange,
 /obj/effect/floor_decal/emblem/stellardelight/center{
-	pixel_y = 32;
+	desc = "Vacation? Consider our Stellar Delight Cruise! Drift away to a galactic paradise with all of your needs covered while discovering the most beautiful spots of the milkyway.";
 	name = "Stellar Delight Cruise";
-	desc = "Vacation? Consider our Stellar Delight Cruise! Drift away to a galactic paradise with all of your needs covered while discovering the most beautiful spots of the milkyway."
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
@@ -6322,12 +6345,12 @@
 /area/shuttle/response_ship)
 "fxx" = (
 /obj/item/toy/plushie/girly_corgi{
-	pixel_y = 7;
-	pixel_x = -12
+	pixel_x = -12;
+	pixel_y = 7
 	},
 /obj/item/toy/plushie/squid/blue{
-	pixel_y = -8;
-	pixel_x = 7
+	pixel_x = 7;
+	pixel_y = -8
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -6401,12 +6424,12 @@
 /area/wizard_station)
 "fBC" = (
 /obj/structure/bed/double{
-	pixel_y = 0;
-	pixel_x = 10
+	pixel_x = 10;
+	pixel_y = 0
 	},
 /obj/item/weapon/bedsheet/browndouble{
-	pixel_y = 0;
-	pixel_x = 10
+	pixel_x = 10;
+	pixel_y = 0
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/shadekin)
@@ -6475,6 +6498,7 @@
 "fHP" = (
 /obj/machinery/door/airlock/angled_tgmc/cell{
 	dir = 8;
+	id_tag = "DarkResDorm_1";
 	name = "Room 1"
 	},
 /obj/structure/disposalpipe/segment{
@@ -6606,8 +6630,8 @@
 	color = "#2b2b2b"
 	},
 /obj/structure/flora/pottedplant/bamboo{
-	pixel_y = 10;
-	name = "Brono"
+	name = "Brono";
+	pixel_y = 10
 	},
 /turf/simulated/floor/carpet/brown,
 /area/shadekin)
@@ -7001,8 +7025,8 @@
 /area/shuttle/ninja)
 "gjv" = (
 /obj/item/toy/plushie/box{
-	pixel_y = -6;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = -6
 	},
 /obj/item/toy/plushie/borgplushie/drake/eng{
 	pixel_y = -8
@@ -7059,12 +7083,12 @@
 "glC" = (
 /obj/item/toy/plushie/blue_fox,
 /obj/item/toy/plushie/borgplushie/medihound{
-	pixel_y = 3;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = 3
 	},
 /obj/item/toy/plushie/slimeplushie{
-	pixel_y = 15;
-	pixel_x = 14
+	pixel_x = 14;
+	pixel_y = 15
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -7254,8 +7278,8 @@
 "gxy" = (
 /obj/item/toy/plushie/borgplushie/drake/mine,
 /obj/item/toy/plushie/carp/ice{
-	pixel_y = -5;
-	pixel_x = -7
+	pixel_x = -7;
+	pixel_y = -5
 	},
 /obj/item/toy/plushie/coffee_fox{
 	pixel_x = 7;
@@ -7340,6 +7364,20 @@
 /obj/random/maintenance/medical,
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
+"gCT" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/button/remote/airlock{
+	dir = 1;
+	id = "DarkResDorm_3";
+	name = "Bolt Control";
+	pixel_y = -22;
+	specialfunctions = 4
+	},
+/turf/simulated/floor/wood/alt,
+/area/shadekin)
 "gCY" = (
 /obj/effect/floor_decal/corner/white/diagonal,
 /obj/structure/table/marble,
@@ -7387,8 +7425,8 @@
 "gDN" = (
 /obj/item/weapon/bedsheet/browndouble,
 /obj/item/weapon/bedsheet/hopdouble{
-	pixel_y = -11;
-	pixel_x = 7
+	pixel_x = 7;
+	pixel_y = -11
 	},
 /turf/simulated/floor/carpet/green,
 /area/shadekin)
@@ -7400,8 +7438,8 @@
 /area/shuttle/supply)
 "gEf" = (
 /obj/item/toy/plushie/marble_fox{
-	pixel_y = -8;
-	pixel_x = -17
+	pixel_x = -17;
+	pixel_y = -8
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -7497,8 +7535,8 @@
 /area/skipjack_station)
 "gIe" = (
 /obj/effect/floor_decal/emblem/black{
-	name = "Hecate Guardian";
-	desc = "Enough firepower to terminate a battlecruiser, never feel unsafe for the right prize!"
+	desc = "Enough firepower to terminate a battlecruiser, never feel unsafe for the right prize!";
+	name = "Hecate Guardian"
 	},
 /turf/simulated/wall/tgmc/darkwall,
 /area/shadekin)
@@ -7539,10 +7577,10 @@
 	dir = 1
 	},
 /obj/machinery/light/floortube{
-	nightshift_enabled = 1;
-	pixel_y = 0;
 	dir = 4;
-	pixel_x = -6
+	nightshift_enabled = 1;
+	pixel_x = -6;
+	pixel_y = 0
 	},
 /turf/simulated/floor/wood/alt,
 /area/shadekin)
@@ -7707,10 +7745,10 @@
 	dir = 1
 	},
 /obj/machinery/light/floortube{
-	nightshift_enabled = 1;
-	pixel_y = 0;
 	dir = 4;
-	pixel_x = -6
+	nightshift_enabled = 1;
+	pixel_x = -6;
+	pixel_y = 0
 	},
 /turf/simulated/floor/wood/sif,
 /area/shadekin)
@@ -8059,8 +8097,8 @@
 "heO" = (
 /obj/item/toy/plushie/borgplushie/drake/trauma,
 /obj/item/toy/plushie/squid/yellow{
-	pixel_y = -7;
-	pixel_x = -15
+	pixel_x = -15;
+	pixel_y = -7
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -8193,60 +8231,60 @@
 	pixel_y = 11
 	},
 /obj/item/weapon/bedsheet/browndouble{
-	pixel_y = -2;
-	pixel_x = 15
+	pixel_x = 15;
+	pixel_y = -2
 	},
 /obj/item/weapon/bedsheet/piratedouble{
-	pixel_y = 1;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = 1
 	},
 /turf/simulated/floor/carpet/geo,
 /area/shadekin)
 "hlD" = (
 /obj/structure/undies_wardrobe,
 /obj/item/weapon/towel/random{
-	pixel_y = 10;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 10
 	},
 /obj/item/weapon/towel/random{
-	pixel_y = 15;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 15
 	},
 /obj/item/weapon/towel/random{
-	pixel_y = 10;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 10
 	},
 /obj/item/weapon/towel/random{
-	pixel_y = 9;
-	pixel_x = -7
+	pixel_x = -7;
+	pixel_y = 9
 	},
 /obj/item/weapon/towel/random{
-	pixel_y = 15;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 15
 	},
 /obj/item/weapon/towel/random{
-	pixel_y = 15;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 15
 	},
 /obj/item/weapon/towel/random{
-	pixel_y = 14;
-	pixel_x = -7
+	pixel_x = -7;
+	pixel_y = 14
 	},
 /obj/item/weapon/towel/random{
-	pixel_y = 9;
-	pixel_x = -7
+	pixel_x = -7;
+	pixel_y = 9
 	},
 /obj/item/weapon/towel/random{
-	pixel_y = 9;
-	pixel_x = -7
+	pixel_x = -7;
+	pixel_y = 9
 	},
 /obj/item/weapon/towel/random{
-	pixel_y = 14;
-	pixel_x = -7
+	pixel_x = -7;
+	pixel_y = 14
 	},
 /obj/item/weapon/towel/random{
-	pixel_y = 14;
-	pixel_x = -7
+	pixel_x = -7;
+	pixel_y = 14
 	},
 /obj/machinery/light/small{
 	nightshift_enabled = 1
@@ -8288,8 +8326,8 @@
 "hmy" = (
 /obj/machinery/chemical_dispenser/bar_alc/full{
 	dir = 8;
-	pixel_y = 0;
-	pixel_x = 14
+	pixel_x = 14;
+	pixel_y = 0
 	},
 /obj/structure/table/marble{
 	color = "#2b2b2b"
@@ -8441,6 +8479,17 @@
 	icon_state = "wood_broken3"
 	},
 /area/skipjack_station)
+"hrS" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/angled_tgmc/cell{
+	dir = 8;
+	id_tag = "DarkResDorm_9";
+	name = "Room 9"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shadekin)
 "hst" = (
 /obj/machinery/vending/medical,
 /turf/simulated/shuttle/floor/red,
@@ -8688,12 +8737,12 @@
 "hFG" = (
 /obj/item/toy/plushie/borgplushie/medihound,
 /obj/item/toy/plushie/nukeplushie{
-	pixel_y = 10;
-	pixel_x = 15
+	pixel_x = 15;
+	pixel_y = 10
 	},
 /obj/item/toy/plushie/snakeplushie{
-	pixel_y = 9;
-	pixel_x = -9
+	pixel_x = -9;
+	pixel_y = 9
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -8735,8 +8784,8 @@
 "hHc" = (
 /obj/item/weapon/reagent_containers/food/condiment/small/sugar,
 /obj/item/weapon/reagent_containers/food/snacks/donkpocket/spicy{
-	pixel_y = 13;
-	pixel_x = 8
+	pixel_x = 8;
+	pixel_y = 13
 	},
 /obj/structure/table/marble{
 	color = "#2b2b2b"
@@ -8752,12 +8801,12 @@
 "hIC" = (
 /obj/item/toy/plushie/black_cat,
 /obj/item/toy/plushie/carp/electric{
-	pixel_y = 7;
-	pixel_x = 4
+	pixel_x = 4;
+	pixel_y = 7
 	},
 /obj/item/toy/plushie/red_fox{
-	pixel_y = 14;
-	pixel_x = 9
+	pixel_x = 9;
+	pixel_y = 14
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -8808,6 +8857,17 @@
 	},
 /turf/simulated/floor/holofloor/grass,
 /area/holodeck/source_picnicarea)
+"hLw" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/angled_tgmc/cell{
+	dir = 8;
+	id_tag = "DarkResDorm_4";
+	name = "Room 4"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shadekin)
 "hMe" = (
 /obj/structure/bed/chair/comfy/black{
 	dir = 1
@@ -9517,12 +9577,12 @@
 	pixel_x = 2
 	},
 /obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
-	pixel_y = 3;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = 3
 	},
 /obj/item/weapon/reagent_containers/food/condiment/small/peppergrinder{
-	pixel_y = 2;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 2
 	},
 /obj/structure/curtain/open/bed,
 /obj/structure/window/reinforced/survival_pod{
@@ -9684,7 +9744,18 @@
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_theatre)
 "iye" = (
-/turf/simulated/floor/reinforced,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/button/remote/airlock{
+	dir = 1;
+	id = "DarkResDorm_1";
+	name = "Bolt Control";
+	pixel_y = -22;
+	specialfunctions = 4
+	},
+/turf/simulated/floor/wood/alt,
 /area/shadekin)
 "iyB" = (
 /obj/machinery/door/airlock{
@@ -9697,6 +9768,7 @@
 "iyX" = (
 /obj/machinery/door/airlock/angled_tgmc/cell{
 	dir = 8;
+	id_tag = "DarkResDorm_2";
 	name = "Room 2"
 	},
 /obj/structure/disposalpipe/segment{
@@ -9746,10 +9818,10 @@
 	nightshift_enabled = 1
 	},
 /obj/effect/floor_decal/emblem/stellardelight{
+	desc = "Vacation? Consider our Stellar Delight Cruise! Drift away to a galactic paradise with all of your needs covered while discovering the most beautiful spots of the milkyway.";
 	dir = 8;
-	pixel_y = 32;
 	name = "Stellar Delight Cruise";
-	desc = "Vacation? Consider our Stellar Delight Cruise! Drift away to a galactic paradise with all of your needs covered while discovering the most beautiful spots of the milkyway."
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
@@ -9868,8 +9940,8 @@
 "iFK" = (
 /obj/machinery/chemical_dispenser/bar_coffee/full{
 	dir = 8;
-	pixel_y = 0;
-	pixel_x = 14
+	pixel_x = 14;
+	pixel_y = 0
 	},
 /obj/structure/table/marble{
 	color = "#2b2b2b"
@@ -9958,8 +10030,8 @@
 /obj/structure/table/marble,
 /obj/machinery/chemical_dispenser/bar_alc/full{
 	dir = 8;
-	pixel_y = 0;
-	pixel_x = 14
+	pixel_x = 14;
+	pixel_y = 0
 	},
 /obj/structure/window/reinforced/survival_pod{
 	opacity = 1
@@ -10029,12 +10101,12 @@
 /area/skipjack_station)
 "iQW" = (
 /turf/unsimulated/wall{
+	block_tele = 1;
+	blocks_nonghost_incorporeal = 1;
 	desc = "It's a strange, impenetrable darkness.";
-	name = "dark";
 	icon = 'icons/turf/flooring/weird_vr.dmi';
 	icon_state = "dark";
-	blocks_nonghost_incorporeal = 1;
-	block_tele = 1
+	name = "dark"
 	},
 /area/shadekin)
 "iQX" = (
@@ -10133,8 +10205,8 @@
 /obj/structure/table/standard,
 /obj/item/weapon/material/knife/machete/hatchet,
 /obj/item/weapon/material/minihoe{
-	pixel_y = 3;
-	pixel_x = 7
+	pixel_x = 7;
+	pixel_y = 3
 	},
 /obj/item/weapon/reagent_containers/glass/bucket,
 /obj/item/weapon/reagent_containers/glass/bucket,
@@ -10312,16 +10384,16 @@
 	pixel_y = 8
 	},
 /obj/item/weapon/storage/box/brainzsnax{
-	pixel_y = 19;
-	pixel_x = 9
+	pixel_x = 9;
+	pixel_y = 19
 	},
 /obj/item/weapon/storage/box/brainzsnax/red{
-	pixel_y = 19;
-	pixel_x = 9
+	pixel_x = 9;
+	pixel_y = 19
 	},
 /obj/item/weapon/storage/box/condimentbottles{
-	pixel_y = 19;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 19
 	},
 /obj/effect/floor_decal/milspec/color/silver,
 /turf/simulated/floor/tiled/techmaint,
@@ -10329,8 +10401,8 @@
 "jdd" = (
 /obj/item/weapon/bedsheet/browndouble,
 /obj/item/weapon/bedsheet/hopdouble{
-	pixel_y = -11;
-	pixel_x = 7
+	pixel_x = 7;
+	pixel_y = -11
 	},
 /turf/simulated/floor/carpet/geo,
 /area/shadekin)
@@ -10449,8 +10521,8 @@
 /obj/structure/table/marble,
 /obj/machinery/chemical_dispenser/bar_alc/full{
 	dir = 8;
-	pixel_y = 0;
-	pixel_x = 14
+	pixel_x = 14;
+	pixel_y = 0
 	},
 /obj/structure/window/reinforced/survival_pod{
 	opacity = 1
@@ -10592,8 +10664,8 @@
 	color = "#2b2b2b"
 	},
 /obj/item/weapon/flame/candle/candelabra/everburn{
-	pixel_y = 19;
-	lit = 1
+	lit = 1;
+	pixel_y = 19
 	},
 /turf/simulated/floor/carpet/brown,
 /area/shadekin)
@@ -10638,12 +10710,12 @@
 /area/syndicate_station)
 "jsz" = (
 /turf/unsimulated/wall{
+	block_tele = 1;
+	blocks_nonghost_incorporeal = 1;
 	desc = "It's a strange, impenetrable darkness.";
-	name = "dark";
 	icon = 'icons/turf/flooring/weird_vr.dmi';
 	icon_state = "dark";
-	blocks_nonghost_incorporeal = 1;
-	block_tele = 1
+	name = "dark"
 	},
 /area/space)
 "jsR" = (
@@ -11142,8 +11214,8 @@
 "jPi" = (
 /obj/structure/table/hardwoodtable,
 /obj/item/weapon/flame/candle/candelabra/everburn{
-	pixel_y = 19;
-	lit = 1
+	lit = 1;
+	pixel_y = 19
 	},
 /obj/random/junk,
 /obj/effect/floor_decal/spline/fancy/wood,
@@ -11194,8 +11266,8 @@
 /area/space)
 "jSn" = (
 /obj/machinery/reagentgrinder{
-	pixel_y = 12;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 12
 	},
 /obj/structure/table/marble{
 	color = "#2b2b2b"
@@ -11385,8 +11457,8 @@
 /obj/structure/table/marble,
 /obj/machinery/chemical_dispenser/bar_alc/full{
 	dir = 8;
-	pixel_y = 0;
-	pixel_x = 14
+	pixel_x = 14;
+	pixel_y = 0
 	},
 /obj/effect/floor_decal/corner/black/diagonal,
 /obj/structure/window/reinforced/survival_pod{
@@ -11498,12 +11570,12 @@
 /obj/structure/table/rack/shelf/steel,
 /obj/item/weapon/storage/box/condimentbottles,
 /obj/item/weapon/reagent_containers/food/condiment/sugar{
-	pixel_y = 0;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = 0
 	},
 /obj/item/weapon/storage/box/donkpockets{
-	pixel_y = 8;
-	pixel_x = 4
+	pixel_x = 4;
+	pixel_y = 8
 	},
 /obj/structure/curtain/open/bed,
 /obj/effect/floor_decal/corner/green/diagonal,
@@ -11594,8 +11666,8 @@
 	pixel_y = 2
 	},
 /obj/random/soap{
-	pixel_y = 5;
-	pixel_x = 2
+	pixel_x = 2;
+	pixel_y = 5
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/shadekin)
@@ -11975,6 +12047,19 @@
 	icon_state = "asteroid"
 	},
 /area/ninja_dojo/dojo)
+"kuP" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/button/remote/airlock{
+	dir = 1;
+	id = "DarkResDorm_4";
+	name = "Bolt Control";
+	pixel_y = -22;
+	specialfunctions = 4
+	},
+/turf/simulated/floor/wood/sif,
+/area/shadekin)
 "kvr" = (
 /obj/effect/floor_decal/milspec/color/silver,
 /obj/structure/toilet/prison{
@@ -12206,8 +12291,8 @@
 /area/syndicate_station)
 "kEe" = (
 /obj/item/toy/plushie/kitten{
-	pixel_y = -7;
-	pixel_x = -8
+	pixel_x = -8;
+	pixel_y = -7
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -12298,8 +12383,8 @@
 /area/centcom/medical)
 "kKH" = (
 /obj/effect/floor_decal/emblem/nt2{
-	name = "Nanotrasen";
-	desc = "Looking for a stable, high paying and death free enviroment? NT is hiring +NOW!+. Apply now at any of our offices."
+	desc = "Looking for a stable, high paying and death free enviroment? NT is hiring +NOW!+. Apply now at any of our offices.";
+	name = "Nanotrasen"
 	},
 /turf/simulated/wall/tgmc/darkwall,
 /area/shadekin)
@@ -12520,6 +12605,20 @@
 	icon_state = "dark"
 	},
 /area/centcom/specops)
+"kTB" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/button/remote/airlock{
+	dir = 1;
+	id = "DarkResDorm_5";
+	name = "Bolt Control";
+	pixel_y = -22;
+	specialfunctions = 4
+	},
+/turf/simulated/floor/wood/alt,
+/area/shadekin)
 "kTG" = (
 /obj/item/weapon/stool/padded,
 /turf/unsimulated/floor{
@@ -12896,8 +12995,8 @@
 "lqC" = (
 /obj/machinery/shower{
 	dir = 8;
-	pixel_y = 0;
-	pixel_x = 7
+	pixel_x = 7;
+	pixel_y = 0
 	},
 /obj/structure/curtain/open/shower,
 /turf/simulated/floor/tiled/freezer,
@@ -13095,8 +13194,8 @@
 /area/shuttle/merchant)
 "lCt" = (
 /obj/machinery/reagentgrinder{
-	pixel_y = 12;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = 12
 	},
 /obj/structure/table/marble{
 	color = "#2b2b2b"
@@ -13438,11 +13537,13 @@
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_theatre)
 "lRw" = (
-/obj/machinery/door/airlock/angled_tgmc/cell{
-	dir = 8
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/door/airlock/angled_tgmc/cell{
+	dir = 8;
+	id_tag = "DarkResDorm_7";
+	name = "Room 7"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shadekin)
@@ -13982,8 +14083,8 @@
 "mui" = (
 /obj/structure/table/hardwoodtable,
 /obj/item/weapon/flame/candle/candelabra/everburn{
-	pixel_y = 19;
-	lit = 1
+	lit = 1;
+	pixel_y = 19
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/shadekin)
@@ -14248,9 +14349,9 @@
 	color = "#2b2b2b"
 	},
 /obj/structure/sink/countertop{
-	pixel_y = -7;
+	dir = 1;
 	pixel_x = 1;
-	dir = 1
+	pixel_y = -7
 	},
 /obj/item/trash/plate{
 	pixel_y = -2
@@ -14827,8 +14928,8 @@
 /area/wizard_station)
 "niv" = (
 /obj/effect/floor_decal/emblem/talon{
-	name = "Surgeria";
-	desc = "Looking to improve your body? Surgeria will fit the right organ for your perfect body."
+	desc = "Looking to improve your body? Surgeria will fit the right organ for your perfect body.";
+	name = "Surgeria"
 	},
 /turf/simulated/wall/tgmc/darkwall,
 /area/shadekin)
@@ -15068,10 +15169,10 @@
 "nvf" = (
 /obj/effect/floor_decal/milspec/color/orange,
 /obj/effect/floor_decal/emblem/stellardelight{
+	desc = "Vacation? Consider our Stellar Delight Cruise! Drift away to a galactic paradise with all of your needs covered while discovering the most beautiful spots of the milkyway.";
 	dir = 4;
-	pixel_y = 32;
 	name = "Stellar Delight Cruise";
-	desc = "Vacation? Consider our Stellar Delight Cruise! Drift away to a galactic paradise with all of your needs covered while discovering the most beautiful spots of the milkyway."
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
@@ -15384,8 +15485,8 @@
 	color = "#2b2b2b"
 	},
 /obj/structure/flora/pottedplant/decorative{
-	pixel_y = 10;
-	name = "Butro"
+	name = "Butro";
+	pixel_y = 10
 	},
 /turf/simulated/floor/carpet/blucarpet,
 /area/shadekin)
@@ -15668,8 +15769,8 @@
 /area/centcom/specops)
 "oal" = (
 /obj/item/weapon/material/knife{
-	pixel_y = 0;
-	pixel_x = 8
+	pixel_x = 8;
+	pixel_y = 0
 	},
 /obj/item/weapon/material/knife,
 /obj/structure/table/marble{
@@ -15715,8 +15816,8 @@
 /area/centcom/specops)
 "oaz" = (
 /obj/effect/floor_decal/emblem/nt3{
-	name = "Nanotrasen";
-	desc = "Looking for a stable, high paying and death free enviroment? NT is hiring +NOW!+. Apply now at any of our offices."
+	desc = "Looking for a stable, high paying and death free enviroment? NT is hiring +NOW!+. Apply now at any of our offices.";
+	name = "Nanotrasen"
 	},
 /turf/simulated/wall/tgmc/darkwall,
 /area/shadekin)
@@ -15983,8 +16084,8 @@
 	color = "#2b2b2b"
 	},
 /obj/structure/flora/pottedplant/crystal{
-	pixel_y = 10;
-	name = "Cratal"
+	name = "Cratal";
+	pixel_y = 10
 	},
 /turf/simulated/floor/carpet/geo,
 /area/shadekin)
@@ -16347,13 +16448,13 @@
 /area/ninja_dojo/dojo)
 "oMV" = (
 /obj/structure/bed/double{
-	pixel_y = 0;
-	pixel_x = 1
+	pixel_x = 1;
+	pixel_y = 0
 	},
 /obj/item/weapon/bedsheet/hopdouble,
 /obj/item/weapon/bedsheet/hopdouble{
-	pixel_y = 0;
-	pixel_x = 16
+	pixel_x = 16;
+	pixel_y = 0
 	},
 /turf/simulated/floor/carpet/gaycarpet,
 /area/shadekin)
@@ -16485,8 +16586,8 @@
 "paX" = (
 /obj/structure/table/marble,
 /obj/item/weapon/reagent_containers/dropper{
-	pixel_y = 5;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = 5
 	},
 /obj/item/weapon/reagent_containers/glass/beaker/measuring_cup{
 	pixel_x = 6;
@@ -16584,10 +16685,10 @@
 /area/ninja_dojo/dojo)
 "pfy" = (
 /obj/machinery/light/floortube{
-	nightshift_enabled = 1;
-	pixel_y = 0;
 	dir = 4;
-	pixel_x = -6
+	nightshift_enabled = 1;
+	pixel_x = -6;
+	pixel_y = 0
 	},
 /turf/simulated/floor/wood/sif,
 /area/shadekin)
@@ -16609,8 +16710,8 @@
 "pfT" = (
 /obj/item/toy/plushie/bigcat,
 /obj/item/toy/plushie/therapy/blue{
-	pixel_y = -4;
-	pixel_x = 14
+	pixel_x = 14;
+	pixel_y = -4
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -16952,9 +17053,9 @@
 /area/shuttle/syndicate)
 "pyc" = (
 /obj/effect/floor_decal/emblem/orangeline{
+	desc = "Exhausted of late deliveries? Annoyed by damaged goods? Being charged for multiple transports? Rely on Orange Line. The right prize for the right package.";
 	dir = 8;
-	name = "Orange Line";
-	desc = "Exhausted of late deliveries? Annoyed by damaged goods? Being charged for multiple transports? Rely on Orange Line. The right prize for the right package."
+	name = "Orange Line"
 	},
 /turf/simulated/wall/tgmc/darkwall,
 /area/shadekin)
@@ -17035,8 +17136,8 @@
 "pCs" = (
 /obj/machinery/shower{
 	dir = 8;
-	pixel_y = -6;
-	pixel_x = 3
+	pixel_x = 3;
+	pixel_y = -6
 	},
 /obj/structure/window/basic{
 	dir = 1
@@ -17173,8 +17274,8 @@
 /area/shuttle/syndicate)
 "pIn" = (
 /obj/item/toy/plushie/white_cat{
-	pixel_y = 11;
-	pixel_x = 26
+	pixel_x = 26;
+	pixel_y = 11
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -17569,10 +17670,10 @@
 "qfC" = (
 /obj/effect/floor_decal/milspec/color/orange,
 /obj/effect/floor_decal/emblem/itgdauntless{
+	desc = "Tired of your footwear breaking down with time? Why bother buying something that will eventually erode when you can realy on the Dauntless footwear. Now in gunmetal black!";
 	dir = 4;
-	pixel_y = -32;
 	name = "Dauntless Boots";
-	desc = "Tired of your footwear breaking down with time? Why bother buying something that will eventually erode when you can realy on the Dauntless footwear. Now in gunmetal black!"
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
@@ -17645,8 +17746,8 @@
 "qkX" = (
 /obj/item/toy/plushie/deer,
 /obj/item/toy/plushie/mouse{
-	pixel_y = -4;
-	pixel_x = 10
+	pixel_x = 10;
+	pixel_y = -4
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -17671,6 +17772,17 @@
 	icon_state = "vault"
 	},
 /area/centcom/specops)
+"qng" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/angled_tgmc/cell{
+	dir = 8;
+	id_tag = "DarkResDorm_8";
+	name = "Room 8"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shadekin)
 "qnI" = (
 /obj/effect/floor_decal/corner/brown/diagonal,
 /turf/simulated/floor/tiled/white,
@@ -17716,8 +17828,8 @@
 /area/holodeck/source_courtroom)
 "qpy" = (
 /obj/effect/floor_decal/emblem/ark{
-	name = "Ark and Unity";
-	desc = "Solving issues as one, call for admission at 943-3256345745314-111"
+	desc = "Solving issues as one, call for admission at 943-3256345745314-111";
+	name = "Ark and Unity"
 	},
 /turf/simulated/wall/tgmc/darkwall,
 /area/shadekin)
@@ -17817,8 +17929,8 @@
 	color = "#2b2b2b"
 	},
 /obj/item/weapon/flame/candle/candelabra/everburn{
-	pixel_y = 19;
-	lit = 1
+	lit = 1;
+	pixel_y = 19
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/shadekin)
@@ -18024,12 +18136,12 @@
 /area/shuttle/syndicate)
 "qJS" = (
 /obj/structure/bed/double{
-	pixel_y = -2;
-	pixel_x = 10
+	pixel_x = 10;
+	pixel_y = -2
 	},
 /obj/item/weapon/bedsheet/browndouble{
-	pixel_y = -2;
-	pixel_x = 10
+	pixel_x = 10;
+	pixel_y = -2
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/shadekin)
@@ -18215,12 +18327,12 @@
 /obj/structure/table/rack/shelf/steel,
 /obj/item/weapon/storage/box/condimentbottles,
 /obj/item/weapon/reagent_containers/food/condiment/sugar{
-	pixel_y = 0;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = 0
 	},
 /obj/item/weapon/storage/box/donkpockets{
-	pixel_y = 8;
-	pixel_x = 4
+	pixel_x = 4;
+	pixel_y = 8
 	},
 /obj/structure/curtain/open/bed,
 /turf/simulated/floor/tiled/white,
@@ -18254,8 +18366,8 @@
 /area/shadekin)
 "qXR" = (
 /obj/effect/floor_decal/emblem/orangeline{
-	name = "Orange Line";
-	desc = "Exhausted of late deliveries? Annoyed by damaged goods? Being charged for multiple transports? Rely on Orange Line. The right prize for the right package."
+	desc = "Exhausted of late deliveries? Annoyed by damaged goods? Being charged for multiple transports? Rely on Orange Line. The right prize for the right package.";
+	name = "Orange Line"
 	},
 /turf/simulated/wall/tgmc/darkwall,
 /area/shadekin)
@@ -18273,8 +18385,8 @@
 "qZO" = (
 /obj/item/toy/plushie/face_hugger,
 /obj/item/toy/plushie/moth{
-	pixel_y = 9;
-	pixel_x = -15
+	pixel_x = -15;
+	pixel_y = 9
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -18333,12 +18445,12 @@
 	pixel_x = 2
 	},
 /obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
-	pixel_y = 3;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = 3
 	},
 /obj/item/weapon/reagent_containers/food/condiment/small/peppergrinder{
-	pixel_y = 2;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 2
 	},
 /obj/structure/curtain/open/bed,
 /obj/structure/window/reinforced/survival_pod{
@@ -18353,8 +18465,8 @@
 	pixel_y = 8
 	},
 /obj/item/toy/plushie/squid/orange{
-	pixel_y = -15;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = -15
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -18457,16 +18569,16 @@
 "rgL" = (
 /obj/item/toy/plushie/borgplushie/drake/mine,
 /obj/item/toy/plushie/carp/gold{
-	pixel_y = -1;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = -1
 	},
 /obj/item/toy/plushie/crimson_fox{
-	pixel_y = -11;
-	pixel_x = -9
+	pixel_x = -9;
+	pixel_y = -11
 	},
 /obj/item/toy/plushie/siamese_cat{
-	pixel_y = 11;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 11
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -18697,8 +18809,8 @@
 "rpC" = (
 /obj/structure/table/hardwoodtable,
 /obj/item/weapon/flame/candle/candelabra/everburn{
-	pixel_y = 19;
-	lit = 1
+	lit = 1;
+	pixel_y = 19
 	},
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/bronze,
@@ -19088,8 +19200,8 @@
 /area/centcom/creed)
 "rJW" = (
 /obj/item/weapon/flame/candle/candelabra/everburn{
-	pixel_y = 19;
-	lit = 1
+	lit = 1;
+	pixel_y = 19
 	},
 /obj/structure/table/hardwoodtable,
 /turf/simulated/floor/carpet/blucarpet,
@@ -19220,8 +19332,8 @@
 "rOX" = (
 /obj/item/toy/plushie/carp,
 /obj/item/toy/plushie/corgi{
-	pixel_y = 6;
-	pixel_x = -7
+	pixel_x = -7;
+	pixel_y = 6
 	},
 /obj/item/toy/plushie/robo_corgi{
 	pixel_x = 4;
@@ -19567,6 +19679,7 @@
 "ses" = (
 /obj/machinery/door/airlock/angled_tgmc/cell{
 	dir = 8;
+	id_tag = "DarkResDorm_3";
 	name = "Room 3"
 	},
 /obj/structure/disposalpipe/segment{
@@ -19793,8 +19906,8 @@
 /area/shuttle/merchant)
 "sns" = (
 /obj/machinery/computer/security/telescreen/entertainment{
-	pixel_y = 0;
-	pixel_x = -32
+	pixel_x = -32;
+	pixel_y = 0
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shadekin)
@@ -19811,9 +19924,9 @@
 "snM" = (
 /obj/effect/floor_decal/milspec/color/orange,
 /obj/effect/floor_decal/emblem/red{
-	pixel_y = 32;
+	desc = "Making sure that one bullet is enough. Now with state of the art nanomachine ammunition!";
 	name = "Crimson Arsenal";
-	desc = "Making sure that one bullet is enough. Now with state of the art nanomachine ammunition!"
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
@@ -20297,8 +20410,8 @@
 /area/shuttle/merchant)
 "sMC" = (
 /obj/effect/floor_decal/emblem/blu{
-	name = "Evangelian Scouts";
-	desc = "Space fairing combat, the safe way to sparing other ships. Submit your ship today!"
+	desc = "Space fairing combat, the safe way to sparing other ships. Submit your ship today!";
+	name = "Evangelian Scouts"
 	},
 /turf/simulated/wall/tgmc/darkwall,
 /area/shadekin)
@@ -20412,6 +20525,19 @@
 /obj/structure/reagent_dispensers/he3,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
+"sVe" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/button/remote/airlock{
+	dir = 1;
+	id = "DarkResDorm_2";
+	name = "Bolt Control";
+	pixel_y = -22;
+	specialfunctions = 4
+	},
+/turf/simulated/floor/wood/alt,
+/area/shadekin)
 "sVf" = (
 /obj/structure/closet/wardrobe/pjs,
 /turf/simulated/shuttle/floor/black,
@@ -20440,12 +20566,12 @@
 "sWO" = (
 /obj/item/toy/plushie/carp/toxin,
 /obj/item/toy/plushie/grey_cat{
-	pixel_y = -8;
-	pixel_x = -7
+	pixel_x = -7;
+	pixel_y = -8
 	},
 /obj/item/toy/plushie/octopus{
-	pixel_y = 12;
-	pixel_x = 8
+	pixel_x = 8;
+	pixel_y = 12
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -20588,12 +20714,12 @@
 /area/holodeck/source_thunderdomecourt)
 "tcW" = (
 /obj/item/toy/plushie/mouse/white{
-	pixel_y = 3;
-	pixel_x = -12
+	pixel_x = -12;
+	pixel_y = 3
 	},
 /obj/item/toy/plushie/therapy/green{
-	pixel_y = -5;
-	pixel_x = 7
+	pixel_x = 7;
+	pixel_y = -5
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -20739,8 +20865,8 @@
 /area/tdome)
 "tiU" = (
 /obj/item/toy/plushie/tuxedo_cat{
-	pixel_y = -6;
-	pixel_x = 17
+	pixel_x = 17;
+	pixel_y = -6
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -20974,6 +21100,19 @@
 /obj/machinery/light,
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/escape/centcom)
+"tum" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/button/remote/airlock{
+	dir = 1;
+	id = "DarkResDorm_6";
+	name = "Bolt Control";
+	pixel_y = -22;
+	specialfunctions = 4
+	},
+/turf/simulated/floor/wood/alt,
+/area/shadekin)
 "tuy" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/weapon/paper_bin{
@@ -20997,8 +21136,8 @@
 /area/centcom/specops)
 "twG" = (
 /obj/structure/sink/kitchen{
-	pixel_y = -18;
-	name = "sink"
+	name = "sink";
+	pixel_y = -18
 	},
 /turf/simulated/wall/tgmc/darkwall,
 /area/shadekin)
@@ -21114,12 +21253,12 @@
 /area/centcom/specops)
 "tCh" = (
 /obj/item/toy/plushie/orange_fox{
-	pixel_y = -5;
-	pixel_x = -15
+	pixel_x = -15;
+	pixel_y = -5
 	},
 /obj/item/toy/plushie/therapy/orange{
-	pixel_y = -7;
-	pixel_x = 8
+	pixel_x = 8;
+	pixel_y = -7
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -21146,8 +21285,8 @@
 	pixel_y = 2
 	},
 /obj/random/soap{
-	pixel_y = 5;
-	pixel_x = 2
+	pixel_x = 2;
+	pixel_y = 5
 	},
 /obj/structure/window/basic{
 	dir = 4
@@ -21348,8 +21487,8 @@
 /area/centcom/command)
 "tLj" = (
 /obj/machinery/cash_register/civilian{
-	pixel_y = 0;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = 0
 	},
 /obj/structure/table/marble{
 	color = "#2b2b2b"
@@ -21392,8 +21531,8 @@
 /area/shuttle/skipjack)
 "tMW" = (
 /obj/effect/floor_decal/emblem/nt1{
-	name = "Nanotrasen";
-	desc = "Looking for a stable, high paying and death free enviroment? NT is hiring +NOW!+. Apply now at any of our offices."
+	desc = "Looking for a stable, high paying and death free enviroment? NT is hiring +NOW!+. Apply now at any of our offices.";
+	name = "Nanotrasen"
 	},
 /turf/simulated/wall/tgmc/darkwall,
 /area/shadekin)
@@ -21409,8 +21548,8 @@
 /obj/structure/table/marble,
 /obj/item/weapon/material/knife/butch,
 /obj/item/weapon/material/kitchen/rollingpin{
-	pixel_y = 4;
-	pixel_x = -8
+	pixel_x = -8;
+	pixel_y = 4
 	},
 /obj/effect/floor_decal/corner/black/diagonal,
 /turf/simulated/floor/tiled/white,
@@ -21533,8 +21672,8 @@
 /obj/structure/table/marble,
 /obj/item/weapon/material/knife/butch,
 /obj/item/weapon/material/kitchen/rollingpin{
-	pixel_y = 4;
-	pixel_x = -8
+	pixel_x = -8;
+	pixel_y = 4
 	},
 /obj/effect/floor_decal/corner/brown/diagonal,
 /turf/simulated/floor/tiled/white,
@@ -21577,8 +21716,8 @@
 /obj/effect/catwalk_plated/techmaint,
 /obj/machinery/light/small{
 	dir = 4;
-	pixel_y = 0;
-	nightshift_enabled = 1
+	nightshift_enabled = 1;
+	pixel_y = 0
 	},
 /turf/simulated/floor,
 /area/shadekin)
@@ -21690,8 +21829,8 @@
 "ueJ" = (
 /obj/item/toy/plushie/foxbear,
 /obj/item/toy/plushie/otter{
-	pixel_y = -6;
-	pixel_x = -11
+	pixel_x = -11;
+	pixel_y = -6
 	},
 /obj/item/toy/plushie/teshari{
 	pixel_y = -16
@@ -21729,12 +21868,12 @@
 	pixel_x = 2
 	},
 /obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
-	pixel_y = 3;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = 3
 	},
 /obj/item/weapon/reagent_containers/food/condiment/small/peppergrinder{
-	pixel_y = 2;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 2
 	},
 /obj/structure/curtain/open/bed,
 /obj/structure/window/reinforced/survival_pod{
@@ -22129,9 +22268,9 @@
 "uxO" = (
 /obj/effect/floor_decal/milspec/color/silver,
 /obj/structure/sink/kitchen{
-	pixel_y = 0;
 	dir = 8;
-	pixel_x = -13
+	pixel_x = -13;
+	pixel_y = 0
 	},
 /obj/structure/mirror{
 	dir = 4;
@@ -22348,16 +22487,16 @@
 /area/shuttle/skipjack)
 "uMw" = (
 /obj/item/toy/plushie/orange_cat{
-	pixel_y = -4;
-	pixel_x = 15
+	pixel_x = 15;
+	pixel_y = -4
 	},
 /obj/item/toy/plushie/squid/green{
-	pixel_y = 6;
-	pixel_x = -10
+	pixel_x = -10;
+	pixel_y = 6
 	},
 /obj/item/toy/plushie/therapy/purple{
-	pixel_y = 7;
-	pixel_x = 19
+	pixel_x = 19;
+	pixel_y = 7
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -22367,8 +22506,8 @@
 /area/shadekin)
 "uNs" = (
 /obj/item/toy/plushie/vox{
-	pixel_y = -13;
-	pixel_x = -8
+	pixel_x = -8;
+	pixel_y = -13
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -22487,8 +22626,8 @@
 	color = "#2b2b2b"
 	},
 /obj/structure/flora/pottedplant/aquatic{
-	pixel_y = 10;
-	name = "Kulutula"
+	name = "Kulutula";
+	pixel_y = 10
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/shadekin)
@@ -22719,9 +22858,9 @@
 /area/centcom/specops)
 "vda" = (
 /obj/effect/floor_decal/emblem/orangeline{
+	desc = "Exhausted of late deliveries? Annoyed by damaged goods? Being charged for multiple transports? Rely on Orange Line. The right prize for the right package.";
 	dir = 4;
-	name = "Orange Line";
-	desc = "Exhausted of late deliveries? Annoyed by damaged goods? Being charged for multiple transports? Rely on Orange Line. The right prize for the right package."
+	name = "Orange Line"
 	},
 /turf/simulated/wall/tgmc/darkwall,
 /area/shadekin)
@@ -22878,12 +23017,12 @@
 	pixel_y = 11
 	},
 /obj/item/weapon/bedsheet/browndouble{
-	pixel_y = -2;
-	pixel_x = 15
+	pixel_x = 15;
+	pixel_y = -2
 	},
 /obj/item/weapon/bedsheet/piratedouble{
-	pixel_y = 1;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = 1
 	},
 /turf/simulated/floor/carpet/green,
 /area/shadekin)
@@ -23689,15 +23828,15 @@
 "vYu" = (
 /obj/item/toy/chewtoy/poly,
 /obj/item/toy/chewtoy/tall/poly{
-	pixel_y = 3;
-	pixel_x = -10
+	pixel_x = -10;
+	pixel_y = 3
 	},
 /obj/item/toy/plushie/carp/candy{
 	pixel_y = -6
 	},
 /obj/item/toy/plushie/possum{
-	pixel_y = 10;
-	pixel_x = 10
+	pixel_x = 10;
+	pixel_y = 10
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -23967,9 +24106,9 @@
 "wmy" = (
 /obj/effect/floor_decal/milspec/color/orange,
 /obj/effect/floor_decal/emblem/sword{
-	pixel_y = 32;
+	desc = "Sharp enough to slice durasteel like butter, buy 5 get 1 for free!";
 	name = "Salient Weaponry";
-	desc = "Sharp enough to slice durasteel like butter, buy 5 get 1 for free!"
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
@@ -24012,8 +24151,8 @@
 "wpP" = (
 /obj/effect/floor_decal/milspec/color/silver,
 /obj/structure/mirror{
-	pixel_y = 36;
-	pixel_x = 1
+	pixel_x = 1;
+	pixel_y = 36
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/shadekin)
@@ -24365,16 +24504,16 @@
 "wJV" = (
 /obj/item/toy/plushie/black_fox,
 /obj/item/toy/plushie/carp/pink{
-	pixel_y = -6;
-	pixel_x = -7
+	pixel_x = -7;
+	pixel_y = -6
 	},
 /obj/item/toy/plushie/pink_fox{
-	pixel_y = -16;
-	pixel_x = -15
+	pixel_x = -15;
+	pixel_y = -16
 	},
 /obj/item/toy/plushie/purple_fox{
-	pixel_y = 9;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = 9
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -24650,12 +24789,12 @@
 /obj/structure/table/rack/shelf/steel,
 /obj/item/weapon/storage/box/condimentbottles,
 /obj/item/weapon/reagent_containers/food/condiment/sugar{
-	pixel_y = 0;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = 0
 	},
 /obj/item/weapon/storage/box/donkpockets{
-	pixel_y = 8;
-	pixel_x = 4
+	pixel_x = 4;
+	pixel_y = 8
 	},
 /obj/structure/curtain/open/bed,
 /obj/effect/floor_decal/corner/brown/diagonal,
@@ -24951,6 +25090,20 @@
 /obj/item/weapon/storage/box/donkpockets,
 /turf/simulated/floor/carpet,
 /area/shuttle/merchant)
+"xoY" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/button/remote/airlock{
+	dir = 1;
+	id = "DarkResDorm_8";
+	name = "Bolt Control";
+	pixel_y = -22;
+	specialfunctions = 4
+	},
+/turf/simulated/floor/wood/alt,
+/area/shadekin)
 "xoZ" = (
 /obj/item/device/radio/electropack,
 /obj/structure/table/steel,
@@ -25262,10 +25415,10 @@
 /area/shadekin)
 "xDw" = (
 /obj/machinery/light/floortube{
-	nightshift_enabled = 1;
-	pixel_y = 0;
 	dir = 4;
-	pixel_x = -6
+	nightshift_enabled = 1;
+	pixel_x = -6;
+	pixel_y = 0
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
@@ -25513,9 +25666,9 @@
 "xNN" = (
 /obj/structure/table/sifwooden_reinforced,
 /obj/structure/flora/pottedplant/smelly{
-	pixel_y = 12;
 	desc = "This is some kind of tropical plant. It reeks of rotten eggs. Quite a dirty plant";
-	name = "Dan"
+	name = "Dan";
+	pixel_y = 12
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shadekin)
@@ -25898,16 +26051,16 @@
 /area/shuttle/merchant)
 "yib" = (
 /obj/item/toy/plushie/borgplushie/drake/sci{
-	pixel_y = 3;
-	pixel_x = -3
+	pixel_x = -3;
+	pixel_y = 3
 	},
 /obj/item/toy/plushie/carp/dragon{
-	pixel_y = -5;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = -5
 	},
 /obj/item/toy/plushie/carp/nebula{
-	pixel_y = 5;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 5
 	},
 /obj/item/toy/plushie/squid/pink{
 	pixel_y = 13
@@ -48224,21 +48377,21 @@ fqz
 bMy
 cMS
 uxc
-vfM
+iye
 bMy
 bMy
 bMy
 bMy
 cMS
 uxc
-vfM
+gCT
 bMy
 bMy
 bMy
 bMy
 cMS
 uxc
-vfM
+kTB
 bMy
 bMy
 bMy
@@ -51320,7 +51473,7 @@ mas
 bMy
 iGQ
 ecS
-ffE
+sVe
 bMy
 bMy
 bMy
@@ -51334,7 +51487,7 @@ bMy
 bMy
 sou
 wZf
-ffE
+tum
 bMy
 bMy
 bMy
@@ -53649,7 +53802,7 @@ bMy
 bMy
 qoU
 uMg
-qzw
+kuP
 bMy
 bMy
 bMy
@@ -54939,7 +55092,7 @@ bMy
 bMy
 bMy
 bMy
-lRw
+hLw
 bMy
 bMy
 bMy
@@ -55713,14 +55866,14 @@ bMy
 bMy
 bMy
 bMy
-lRw
+qng
 bMy
 bMy
 bMy
 bMy
 bMy
 bMy
-lRw
+hrS
 bMy
 bMy
 bMy
@@ -56745,14 +56898,14 @@ bMy
 bMy
 nmT
 uxc
-tfB
+xoY
 bMy
 bMy
 bMy
 bMy
 ntW
 rbF
-asG
+bmk
 bMy
 bMy
 bMy
@@ -59826,12 +59979,12 @@ aOW
 xDc
 mNu
 wrf
-iye
-iye
+rtJ
+rtJ
 ydh
-iye
-iye
-iye
+rtJ
+rtJ
+rtJ
 ydh
 kLq
 uCB
@@ -60084,13 +60237,13 @@ oTO
 uCB
 oTO
 wrf
-iye
+rtJ
 vne
-iye
+rtJ
 ydh
-iye
+rtJ
 vne
-iye
+rtJ
 kLq
 oTO
 oTO
@@ -60343,12 +60496,12 @@ isj
 mNu
 wrf
 ydh
-iye
-iye
+rtJ
+rtJ
 ydh
 ydh
-iye
-iye
+rtJ
+rtJ
 kLq
 oTO
 oTO
@@ -60600,12 +60753,12 @@ lZH
 jGm
 mNu
 wrf
-iye
+rtJ
 ydh
 ydh
 iVg
 ydh
-iye
+rtJ
 ydh
 kLq
 oTO
@@ -60860,11 +61013,11 @@ oTO
 ydh
 ydh
 ydh
-iye
+rtJ
 ydh
-iye
-iye
-iye
+rtJ
+rtJ
+rtJ
 kLq
 oTO
 oTO
@@ -61116,11 +61269,11 @@ vpY
 vpY
 mNu
 wrf
-iye
+rtJ
 luZ
-iye
-iye
-iye
+rtJ
+rtJ
+rtJ
 vne
 ydh
 ydh
@@ -61374,13 +61527,13 @@ oTO
 oTO
 oTO
 wrf
-iye
-iye
-iye
+rtJ
+rtJ
+rtJ
 ydh
-iye
-iye
-iye
+rtJ
+rtJ
+rtJ
 kLq
 uCB
 oTO
@@ -64971,14 +65124,14 @@ wbJ
 wbJ
 wbJ
 rVH
-iye
+rtJ
 bMy
 rVH
 wbJ
 wbJ
 rVH
-iye
-iye
+rtJ
+rtJ
 rVH
 wbJ
 bMy
