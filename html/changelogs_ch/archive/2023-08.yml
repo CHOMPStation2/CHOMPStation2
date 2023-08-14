@@ -154,5 +154,7 @@
   - refactor: Boozerhound belly color customisation moved to 'Customise appearance'
       verb
   - rscadd: More vore screen overlays
+  Verkister:
+  - bugfix: Actually fixed Big Leggies belly sprites.
   kcin2001:
   - rscadd: Readd all chomp-specific borg changes to the new overhauled code
