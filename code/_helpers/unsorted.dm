@@ -460,18 +460,14 @@ Turf and target are seperate in case you want to teleport some distance from a t
 		moblist.Add(M)
 	var/list/delaylist = list()
 	for(var/mob/living/carbon/human/M in sortmob)
-<<<<<<< HEAD
-		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
-			after_simplemob_minded.Add(M)
-			continue
-		moblist.Add(M)
-=======
 		if(M.low_sorting_priority && !M.client)
 			delaylist.Add(M)
 		else
+			if (!M.client && !M.disconnect_time) //CHOMPADD Start
+				after_simplemob_minded.Add(M)
+				continue
 			moblist.Add(M)
 	moblist.Add(delaylist)
->>>>>>> 8a9b5ee0e4... Merge pull request #15245 from Heroman3003/sort-adjust
 	for(var/mob/living/carbon/brain/M in sortmob)
 		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
 			after_simplemob_minded.Add(M)
