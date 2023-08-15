@@ -179,6 +179,7 @@
 	vore_tail_sprite_variant = "SectDrone"
 	belly_variant_when_loaf = TRUE
 	loaf_offset = 3
+	fullness_icons = 3
 
 	msg_owner_disarm_run = "You quickly push %prey to the ground with your leg!"
 	msg_prey_disarm_run = "%owner pushes you down to the ground with their leg!"
