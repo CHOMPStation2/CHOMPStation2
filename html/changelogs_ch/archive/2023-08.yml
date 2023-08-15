@@ -163,3 +163,5 @@
   FoxglovePurpur:
   - qol: Adds the ability to lock the Shadekin Dorm Rooms
   - imageadd: Adds locked open door sprites to TGMC Angled doors.
+  Verkister:
+  - bugfix: Fixed sect drone taur bellysprites.
