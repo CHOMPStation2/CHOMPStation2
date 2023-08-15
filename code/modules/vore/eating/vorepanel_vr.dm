@@ -211,6 +211,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"is_feedable" = selected.is_feedable, //CHOMPAdd
 			"egg_type" = selected.egg_type,
 			"egg_name" = selected.egg_name, //CHOMPAdd
+			"recycling" = selected.recycling, //CHOMPAdd
 			"nutrition_percent" = selected.nutrition_percent,
 			"digest_brute" = selected.digest_brute,
 			"digest_burn" = selected.digest_burn,
@@ -295,6 +296,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 		selected_list["egg_type"] = selected.egg_type
 		selected_list["egg_name"] = selected.egg_name //CHOMPAdd
+		selected_list["recycling"] = selected.recycling //CHOMPAdd
 		selected_list["contaminates"] = selected.contaminates
 		selected_list["contaminate_flavor"] = null
 		selected_list["contaminate_color"] = null
@@ -855,12 +857,19 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						if(new_egg_type in global_vore_egg_types)
 							new_belly.egg_type = new_egg_type
 
-				if(istext(belly_data["egg_name"]))
+				if(istext(belly_data["egg_name"])) //CHOMPAdd Start
 					var/new_egg_name = html_encode(belly_data["egg_name"])
 					if(new_egg_name)
 						new_egg_name = readd_quotes(new_egg_name)
 					if(length(new_egg_name) >= BELLIES_NAME_MIN && length(new_egg_name) <= BELLIES_NAME_MAX)
 						new_belly.egg_name = new_egg_name
+
+				if(isnum(belly_data["recycling"]))
+					var/new_recycling = belly_data["recycling"]
+					if(new_recycling == 0)
+						new_belly.recycling = FALSE
+					if(new_recycling == 1)
+						new_belly.recycling = TRUE //CHOMPAdd End
 
 				if(istext(belly_data["selective_preference"]))
 					var/new_selective_preference = belly_data["selective_preference"]
@@ -2188,7 +2197,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				tgui_alert_async(usr, "Entered name too long (max [BELLIES_NAME_MAX]).","Error")
 				return FALSE
 			host.vore_selected.egg_name = new_egg_name
-			. = TRUE //CHOMPAdd End
+			. = TRUE
+		if("b_recycling")
+			host.vore_selected.recycling = !host.vore_selected.recycling
+			. = TRUE//CHOMPAdd End
 		if("b_desc")
 			var/new_desc = html_encode(tgui_input_text(usr,"Belly Description, '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name. ([BELLIES_DESC_MAX] char limit):","New Description",host.vore_selected.desc, multiline = TRUE, prevent_enter = TRUE))
 

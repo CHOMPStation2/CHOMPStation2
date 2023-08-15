@@ -103,10 +103,23 @@
 	update_use_power(USE_POWER_ACTIVE)
 	sleep(5 SECONDS)
 	var/list/modified_mats = list()
-	if(istype(O,/obj/item/trash))//CHOMPEDIT: Trash multiplier
+	if(istype(O,/obj/item/trash))//CHOMPEDIT Start: Trash multiplier
 		trash = 5 //CHOMPEDIT: Trash good
+	if(istype(O,/obj/item/stack))
+		var/obj/item/stack/S = O
+		trash = S.amount
 	for(var/mat in O.matter)
-		modified_mats[mat] = O.matter[mat]*effic_factor*trash//CHOMPEDIT: Trash multiplier
+		modified_mats[mat] = O.matter[mat] * effic_factor * trash//CHOMPEDIT: Trash multiplier
+	var/turf/T = get_step(src, dir)
+	for(var/obj/item/debris_pack/D in T.contents)
+		if(istype(D))
+			for(var/mat in modified_mats)
+				D.matter[mat] += modified_mats[mat]
+			update_use_power(USE_POWER_IDLE)
+			icon_state = "crusher"
+			qdel(O)
+			working = FALSE
+			return //CHOMPEdit End
 	new /obj/item/debris_pack(get_step(src, dir), modified_mats)
 	update_use_power(USE_POWER_IDLE)
 	icon_state = "crusher"
