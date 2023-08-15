@@ -163,5 +163,6 @@
   FoxglovePurpur:
   - qol: Adds the ability to lock the Shadekin Dorm Rooms
   - imageadd: Adds locked open door sprites to TGMC Angled doors.
+  - rscdel: Removes nonfunctional Haste, Minor trait.
   Verkister:
   - bugfix: Fixed sect drone taur bellysprites.
