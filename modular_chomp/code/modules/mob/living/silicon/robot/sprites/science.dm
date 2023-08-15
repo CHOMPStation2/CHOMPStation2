@@ -17,7 +17,7 @@
 	module_type = "Research"
 	sprite_icon = 'modular_chomp/icons/mob/raptorborg/raptor.dmi'
 
-/datum/robot_sprite/dogborg/tall/science/raptor
+/datum/robot_sprite/dogborg/raptor/science/raptor
 	sprite_icon_state = "sciraptor"
 
 /datum/robot_sprite/dogborg/tall/science/meka
