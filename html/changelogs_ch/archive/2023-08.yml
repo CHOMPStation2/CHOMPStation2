@@ -166,3 +166,9 @@
   - rscdel: Removes nonfunctional Haste, Minor trait.
   Verkister:
   - bugfix: Fixed sect drone taur bellysprites.
+  - rscadd: Added recycling feature for vorebellies (found in options tab). Produces
+      mixed matter piles that can be recycled in cargo/autolathes. (mechanically similar
+      to trash grinder output stuff)
+  - qol: Cargo trash grinder now merges existing matter piles on the output tile instead
+      of spawning a new one for each item.
+  - bugfix: Fixed cargo trash grinder ignoring sheet amount on stack items.
