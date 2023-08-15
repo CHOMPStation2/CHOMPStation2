@@ -81,13 +81,8 @@
 
 /mob/living/carbon/human/Destroy()
 	if(stored_blob)
-<<<<<<< HEAD
-		stored_blob.l_hand?.forceMove(loc) // CHHOMPedit - Make sure that stored_blob actually has the hand before trying to forceMove.
-		stored_blob.r_hand?.forceMove(loc) // CHHOMPedit - ^
-=======
 		stored_blob.drop_l_hand()
 		stored_blob.drop_r_hand()
->>>>>>> 36b26c5c2a... Merge pull request #15264 from Heroman3003/runtime-fixes-2
 		stored_blob = null
 		qdel(stored_blob)
 	return ..()
