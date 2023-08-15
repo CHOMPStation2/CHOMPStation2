@@ -159,3 +159,7 @@
   - bugfix: Actually fixed Big Leggies belly sprites.
   kcin2001:
   - rscadd: Readd all chomp-specific borg changes to the new overhauled code
+2023-08-15:
+  FoxglovePurpur:
+  - qol: Adds the ability to lock the Shadekin Dorm Rooms
+  - imageadd: Adds locked open door sprites to TGMC Angled doors.
