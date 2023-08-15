@@ -314,6 +314,7 @@
 	"sound_volume",
 	"speedy_mob_processing",
 	"egg_name",
+	"recycling",
 	"is_feedable", //CHOMP end of variables from CHOMP
 	"egg_type",
 	"save_digest_mode",
@@ -1714,6 +1715,7 @@
 	dupe.slow_brutal = slow_brutal
 	dupe.sound_volume = sound_volume
 	dupe.egg_name = egg_name
+	dupe.recycling = recycling
 	dupe.is_feedable = is_feedable //CHOMP end of variables from CHOMP
 
 	dupe.belly_fullscreen = belly_fullscreen
