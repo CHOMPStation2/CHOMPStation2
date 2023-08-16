@@ -41,11 +41,11 @@
 	var/vore_default_contamination_flavor = "Generic"	//Contamination descriptors
 	var/vore_default_contamination_color = "green"		//Contamination color
 
-	var/belly_size_multiplier = 1
 	//CHOMPEDIT start - Moved to code/modules/vore/eating/living_ch
 	//var/vore_fullness = 0				// How "full" the belly is (controls icons)
 	//var/vore_icons = 0					// Bitfield for which fields we have vore icons for.
 	//var/vore_eyes = FALSE				// For mobs with fullness specific eye overlays.
+	//var/belly_size_multiplier = 1
 	//CHOMPEDIT end.
 
 	var/life_disabled = 0				// For performance reasons
