@@ -501,7 +501,7 @@
 	else if(istype(ammo_magazine,/obj/item/ammo_magazine/m45tommydrum))
 		icon_state = "tommygun-drum"
 	else
-		icon_state = "tommygun-e"
+		icon_state = "tommygun-empty"
 	update_held_icon()
 
 /*
