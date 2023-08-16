@@ -159,15 +159,6 @@
 		)
 
 	lateload_redgate = list(
-<<<<<<< HEAD
-//		list("Teppi Ranch"),
-//		list("Innland"),
-//		list("Abandoned Island"),
-//		list("Dark Adventure"),
-//		list("Eggnog Town Underground","Eggnog Town"),
-		list("Star Dog")
-//		list("Hotsprings")
-=======
 		list("Redgate - Teppi Ranch"),
 		list("Redgate - Innland"),
 //		list("Redgate - Abandoned Island"),	//This will come back later
@@ -175,7 +166,6 @@
 		list("Redgate - Eggnog Town Underground","Redgate - Eggnog Town"),
 		list("Redgate - Star Dog"),
 		list("Redgate - Hotsprings")
->>>>>>> 3e18102402... Merge pull request #15268 from Very-Soft/redgate
 		)
 
 	ai_shell_restricted = TRUE
