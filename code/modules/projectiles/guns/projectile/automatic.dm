@@ -501,11 +501,7 @@
 	else if(istype(ammo_magazine,/obj/item/ammo_magazine/m45tommydrum))
 		icon_state = "tommygun-drum"
 	else
-<<<<<<< HEAD
-		icon_state = "tommygun-e"
-=======
 		icon_state = "tommygun-empty"
->>>>>>> 08b111c750... Merge pull request #15269 from Heroman3003/fixes-2
 	update_held_icon()
 
 /*
