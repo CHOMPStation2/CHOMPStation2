@@ -172,3 +172,6 @@
   - qol: Cargo trash grinder now merges existing matter piles on the output tile instead
       of spawning a new one for each item.
   - bugfix: Fixed cargo trash grinder ignoring sheet amount on stack items.
+2023-08-16:
+  TheCaramelion:
+  - rscadd: 55 sprites for digitigrade legs for the neo uniforms
