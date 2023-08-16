@@ -41,18 +41,13 @@
 	var/vore_default_contamination_flavor = "Generic"	//Contamination descriptors
 	var/vore_default_contamination_color = "green"		//Contamination color
 
-<<<<<<< HEAD
+	var/belly_size_multiplier = 1
 	//CHOMPEDIT start - Moved to living
 	//var/vore_fullness = 0				// How "full" the belly is (controls icons)
 	//var/vore_icons = 0					// Bitfield for which fields we have vore icons for.
 	//var/vore_eyes = FALSE				// For mobs with fullness specific eye overlays.
 	//CHOMPEDIT end.
-=======
-	var/vore_fullness = 0				// How "full" the belly is (controls icons)
-	var/vore_icons = 0					// Bitfield for which fields we have vore icons for.
-	var/vore_eyes = FALSE				// For mobs with fullness specific eye overlays.
-	var/belly_size_multiplier = 1
->>>>>>> a7411bc24b... Merge pull request #15266 from Heroman3003/seagull
+
 	var/life_disabled = 0				// For performance reasons
 
 	var/mount_offset_x = 5				// Horizontal riding offset.
