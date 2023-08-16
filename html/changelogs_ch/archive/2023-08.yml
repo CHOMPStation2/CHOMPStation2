@@ -175,5 +175,7 @@
 2023-08-16:
   TheCaramelion:
   - rscadd: 55 sprites for digitigrade legs for the neo uniforms
+  - rscadd: neo_gorka sprites for each department
+  - qol: Rearranged sprites to follow mob.dmi order
   Upstream:
   - rscadd: Seagull mob
