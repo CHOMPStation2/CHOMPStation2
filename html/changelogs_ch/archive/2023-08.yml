@@ -179,3 +179,9 @@
   - qol: Rearranged sprites to follow mob.dmi order
   Upstream:
   - rscadd: Seagull mob
+2023-08-17:
+  TheCaramelion:
+  - rscadd: Sprites for uniforms with jeans for all the departments.
+  - rscadd: Sprites for the a variety of pants and their alternative versions.
+  - qol: Revamped the galoshes sprite.
+  - bugfix: Misaligned sprites on some of the uniforms.
