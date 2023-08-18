@@ -94,17 +94,12 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			name = strangername
 			species = "[H.custom_species ? H.custom_species : H.species.name]"
 			ooc_notes = H.ooc_notes
-<<<<<<< HEAD
-			ooc_notes += "\n\n LIKES\n\n[H.ooc_notes_likes]\n\nDISLIKES\n\n[H.ooc_notes_dislikes]"
-			if(LAZYLEN(H.flavor_texts)) //ChompEDIT
-				flavor_text = H.flavor_texts["general"] //ChompEDIT
-=======
 			if(H.ooc_notes_likes)
 				ooc_notes += "\n\nLIKES\n\n[H.ooc_notes_likes]"
 			if(H.ooc_notes_dislikes)
 				ooc_notes += "\n\nDISLIKES\n\n[H.ooc_notes_dislikes]"
-			flavor_text = H.flavor_texts["general"]
->>>>>>> 963f2e06aa... Merge pull request #15272 from Very-Soft/oocnotes
+			if(LAZYLEN(H.flavor_texts)) //ChompEDIT
+				flavor_text = H.flavor_texts["general"] //ChompEDIT
 
 		if(isAI(C.mob))
 			var/mob/living/silicon/ai/A = C.mob
