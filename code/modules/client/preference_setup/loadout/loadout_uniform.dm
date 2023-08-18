@@ -371,6 +371,10 @@
 	display_name = "ripped punk jeans"
 	path = /obj/item/clothing/under/rippedpunk
 
+/datum/gear/uniform/denim_jean
+	display_name = "denim jeans"
+	path = /obj/item/clothing/under/denim_jean
+
 /datum/gear/uniform/gothic
 	display_name = "gothic dress"
 	path = /obj/item/clothing/under/dress/gothic

@@ -141,6 +141,11 @@ Talon winter coat
 	path = /obj/item/clothing/suit/cyberpunk/recolorable
 	cost = 2 //It's got armor, yo.
 
+/datum/gear/suit/cyberpunk/peacetaker
+	display_name = "Peacetaker Jacket"
+	path = /obj/item/clothing/suit/cyberpunk/peacetaker
+	cost = 2 //It's got armor, yo.
+
 /datum/gear/suit/cyberpunk_recolorable/New()
 	gear_tweaks += gear_tweak_free_color_choice
 

@@ -51,6 +51,18 @@
 	path = /obj/item/clothing/gloves/duty
 	cost = 3
 
+/datum/gear/gloves/duty/mmablack
+	display_name = "grappling gloves, red"
+	description = "A pair of tough, padded gloves made for martial arts and contact sports."
+	path = /obj/item/clothing/gloves/mma
+	cost = 3
+
+/datum/gear/gloves/duty/mma
+	display_name = "grappling gloves, black"
+	description = "A pair of tough, padded gloves made for martial arts and contact sports."
+	path = /obj/item/clothing/gloves/mmablack
+	cost = 3
+
 /datum/gear/gloves/forensic
 	display_name = "gloves, forensic (Detective)"
 	path = /obj/item/clothing/gloves/forensic

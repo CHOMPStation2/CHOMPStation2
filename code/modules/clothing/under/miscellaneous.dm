@@ -959,6 +959,11 @@
 	desc = "Black ripped jeans and a fishnet top. How punk."
 	icon_state = "rippedpunk"
 
+/obj/item/clothing/under/denim_jean
+	name = "denim pants"
+	desc = "Tough denim pants, for causing all sorts of trouble."
+	icon_state = "denim_jean"
+
 /obj/item/clothing/under/greenasym
 	name = "green asymmetrical jumpsuit"
 	desc = "A green futuristic uniform with asymmetrical pants. Trendy!"
