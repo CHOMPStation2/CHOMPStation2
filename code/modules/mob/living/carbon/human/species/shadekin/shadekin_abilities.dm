@@ -257,7 +257,7 @@
 		incorporeal_move = TRUE
 		density = FALSE
 		force_max_speed = TRUE
-<<<<<<< HEAD
+		ability_flags &= ~AB_PHASE_SHIFTING
 	SK.doing_phase = FALSE //CHOMPEdit - Prevent bugs when spamming phase button
 
 //CHOMPEdit start - gentle phasing for carbonkin
@@ -285,9 +285,6 @@
 	name = "Shadekin Phasing"
 	evasion = 100
 //CHOMPEdit End
-=======
-		ability_flags &= ~AB_PHASE_SHIFTING
->>>>>>> 5fabd9f272... Merge pull request #15275 from Heroman3003/shadekin-fixes
 
 /datum/modifier/shadekin_phase_vision
 	name = "Shadekin Phase Vision"
