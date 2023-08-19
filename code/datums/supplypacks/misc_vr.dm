@@ -177,14 +177,13 @@
 	)
 	one_access = TRUE
 
-<<<<<<< HEAD
 /datum/supply_pack/misc/swoopie //CHOMPAdd
 	name = "SWOOPIE XL CleanBot Kit"
 	contains = list()
 	cost = 100
 	containertype = /obj/structure/largecrate/animal/swoopie
 	containername = "SWOOPIE XL CleanBot Starter Kit"
-=======
+
 /datum/supply_pack/misc/emergency_beacons
 	name = "emergency locator beacons (x4)"
 	contains = list(
@@ -193,4 +192,3 @@
 	cost = 20
 	containertype = /obj/structure/closet/crate
 	containername = "emergency beacons crate"
->>>>>>> 4c4044333d... Merge pull request #15276 from KillianKirilenko/kk-bacon
