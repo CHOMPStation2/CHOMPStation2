@@ -99,30 +99,17 @@
 	max_heat_protection_temperature = GLOVES_MAX_HEAT_PROTECTION_TEMPERATURE
 // CHOMPEdit End
 
-/obj/item/clothing/gloves/mma
+/obj/item/clothing/gloves/duty/mma
 	desc = "A pair of tough, padded gloves made for martial arts and contact sports."
 	name = "Red Grappling Gloves"
 	icon_state = "fightgloves"
 	item_state = "fightgloves"
-	armor = list(melee = 10, bullet = 10, laser = 10, energy = 5, bomb = 0, bio = 0, rad = 0)
-// CHOMPEdit Start - If they resist lasers and energy they should help inulate against heat and cold.
-	cold_protection = HANDS
-	min_cold_protection_temperature = GLOVES_MIN_COLD_PROTECTION_TEMPERATURE
-	heat_protection = HANDS
-	max_heat_protection_temperature = GLOVES_MAX_HEAT_PROTECTION_TEMPERATURE
 
-/obj/item/clothing/gloves/mmablack
+/obj/item/clothing/gloves/duty/mmablack
 	desc = "A pair of tough, padded gloves made for martial arts and contact sports."
 	name = "Black Grappling Gloves"
 	icon_state = "fightglovesblack"
 	item_state = "fightglovesblack"
-	armor = list(melee = 10, bullet = 10, laser = 10, energy = 5, bomb = 0, bio = 0, rad = 0)
-// CHOMPEdit Start - If they resist lasers and energy they should help inulate against heat and cold.
-	cold_protection = HANDS
-	min_cold_protection_temperature = GLOVES_MIN_COLD_PROTECTION_TEMPERATURE
-	heat_protection = HANDS
-	max_heat_protection_temperature = GLOVES_MAX_HEAT_PROTECTION_TEMPERATURE
-
 
 /obj/item/clothing/gloves/tactical
 	desc = "These brown tactical gloves are made from a durable synthetic, and have hardened knuckles."

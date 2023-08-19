@@ -154,9 +154,6 @@
 	desc = "A tough looking, slightly armored jacket, with a peace symbol spraypainted on the back."
 	icon = 'icons/inventory/suit/item_vr.dmi'
 	icon_state = "peacetaker"
-	allowed = list (/obj/item/weapon/pen, /obj/item/weapon/paper, /obj/item/device/flashlight, /obj/item/weapon/tank/emergency/oxygen, /obj/item/weapon/storage/fancy/cigarettes, /obj/item/weapon/storage/box/matches, /obj/item/weapon/reagent_containers/food/drinks/flask)
-	body_parts_covered = UPPER_TORSO|ARMS|LOWER_TORSO
-
 
 // Altevian admiralty stuff
 /obj/item/clothing/suit/captunic/capjacket/altevian_admiral				// Subtype of capjacket because A) it makes sense and B) conviniently matching stats
