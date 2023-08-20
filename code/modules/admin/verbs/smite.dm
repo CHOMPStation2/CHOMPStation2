@@ -8,12 +8,9 @@
 	if(!istype(target))
 		return
 
-<<<<<<< HEAD
-	var/list/smite_types = list(SMITE_PIE, SMITE_SPICE, SMITE_BREAKLEGS,SMITE_BLUESPACEARTILLERY,SMITE_SPONTANEOUSCOMBUSTION,SMITE_LIGHTNINGBOLT) //CHOMP Add pie and spicy air
-=======
 	var/list/smite_types = list(SMITE_BREAKLEGS,SMITE_BLUESPACEARTILLERY,SMITE_SPONTANEOUSCOMBUSTION,SMITE_LIGHTNINGBOLT,
-								SMITE_SHADEKIN_ATTACK,SMITE_SHADEKIN_NOMF,SMITE_AD_SPAM,SMITE_REDSPACE_ABDUCT,SMITE_AUTOSAVE,SMITE_AUTOSAVE_WIDE)
->>>>>>> f08bcb8d91... Merge pull request #15280 from Heroman3003/variet-fies
+								SMITE_SHADEKIN_ATTACK,SMITE_SHADEKIN_NOMF,SMITE_AD_SPAM,SMITE_REDSPACE_ABDUCT,SMITE_AUTOSAVE,SMITE_AUTOSAVE_WIDE,
+								SMITE_PIE, SMITE_SPICE) //CHOMP Add pie and spicy air
 
 	var/smite_choice = tgui_input_list(usr, "Select the type of SMITE for [target]","SMITE Type Choice", smite_types)
 	if(!smite_choice)
@@ -48,21 +45,6 @@
 			target.electrocute_act(75,def_zone = BP_HEAD)
 			target.visible_message("<span class='danger'>[target] is struck by lightning!</span>")
 
-<<<<<<< HEAD
-		if(SMITE_PIE) //CHOMP Add
-			new/obj/effect/decal/cleanable/pie_smudge(get_turf(target))
-			playsound(target, 'sound/effects/slime_squish.ogg', 100, 1, get_rand_frequency(), falloff = 5)
-			target.Weaken(1)
-			target.visible_message("<span class='danger'>[target] is struck by pie!</span>")
-
-		if(SMITE_SPICE) //CHOMP Add
-			to_chat(target, "<span class='warning'>Spice spice baby!</span>")
-			target.eye_blurry = max(target.eye_blurry, 25)
-			target.Blind(10)
-			target.Stun(5)
-			target.Weaken(5)
-			playsound(target, 'sound/effects/spray2.ogg', 100, 1, get_rand_frequency(), falloff = 5)
-=======
 		if(SMITE_SHADEKIN_ATTACK)
 			var/turf/Tt = get_turf(target) //Turf for target
 
@@ -176,7 +158,20 @@
 		if(SMITE_AD_SPAM)
 			if(target.client)
 				target.client.create_fake_ad_popup_multiple(/obj/screen/popup/default, 15)
->>>>>>> f08bcb8d91... Merge pull request #15280 from Heroman3003/variet-fies
+
+		if(SMITE_PIE) //CHOMP Add
+			new/obj/effect/decal/cleanable/pie_smudge(get_turf(target))
+			playsound(target, 'sound/effects/slime_squish.ogg', 100, 1, get_rand_frequency(), falloff = 5)
+			target.Weaken(1)
+			target.visible_message("<span class='danger'>[target] is struck by pie!</span>")
+
+		if(SMITE_SPICE) //CHOMP Add
+			to_chat(target, "<span class='warning'>Spice spice baby!</span>")
+			target.eye_blurry = max(target.eye_blurry, 25)
+			target.Blind(10)
+			target.Stun(5)
+			target.Weaken(5)
+			playsound(target, 'sound/effects/spray2.ogg', 100, 1, get_rand_frequency(), falloff = 5)
 
 		else
 			return //Injection? Don't print any messages.
