@@ -120,3 +120,10 @@
 			to_chat(src, "<span class='warning'>Your connection with the shell is suddenly interrupted!</span>")
 			undeploy()
 	..()
+
+/mob/living/silicon/robot/use_power() //CHOMPAdd
+	if(cell && cell.charge < cell.maxcharge)
+		if(nutrition >= 1 * CYBORG_POWER_USAGE_MULTIPLIER)
+			nutrition -= 1 * CYBORG_POWER_USAGE_MULTIPLIER
+			cell.charge += 10 * CYBORG_POWER_USAGE_MULTIPLIER
+	..()
