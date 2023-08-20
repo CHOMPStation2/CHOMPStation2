@@ -193,5 +193,8 @@
   - rscadd: Digitigrade sprites for a variety of uniforms
   - rscadd: Digitigrade sprites for some of the skirts and dresses
   - qol: Fixed some misaligned and sprite mistakes.
+  Upstream:
+  - rscadd: Scugs can now have hats. Click with hat to put on, click with grab intent
+      to remove.
   Verkister:
   - bugfix: Fixed borg nutrition recharge stuff.
