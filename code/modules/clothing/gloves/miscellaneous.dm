@@ -99,17 +99,21 @@
 	max_heat_protection_temperature = GLOVES_MAX_HEAT_PROTECTION_TEMPERATURE
 // CHOMPEdit End
 
-/obj/item/clothing/gloves/duty/mma
+//CHOMPedit- funny gloves
+/obj/item/clothing/gloves/mma
 	desc = "A pair of tough, padded gloves made for martial arts and contact sports."
 	name = "Red Grappling Gloves"
 	icon_state = "fightgloves"
 	item_state = "fightgloves"
+//CHOMPedit end
 
-/obj/item/clothing/gloves/duty/mmablack
+//CHOMPedit-funny gloves
+/obj/item/clothing/gloves/mmablack
 	desc = "A pair of tough, padded gloves made for martial arts and contact sports."
 	name = "Black Grappling Gloves"
 	icon_state = "fightglovesblack"
 	item_state = "fightglovesblack"
+//CHOMPedit end
 
 /obj/item/clothing/gloves/tactical
 	desc = "These brown tactical gloves are made from a durable synthetic, and have hardened knuckles."

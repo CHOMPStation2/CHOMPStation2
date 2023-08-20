@@ -1098,6 +1098,14 @@
 	allowed = list (/obj/item/weapon/pen, /obj/item/weapon/paper, /obj/item/device/flashlight, /obj/item/weapon/tank/emergency/oxygen, /obj/item/weapon/storage/fancy/cigarettes, /obj/item/weapon/storage/box/matches, /obj/item/weapon/reagent_containers/food/drinks/flask) //same as leather jackets
 	body_parts_covered = UPPER_TORSO|ARMS
 
+	// CHOMPedit  - funny jacket
+/obj/item/clothing/suit/storage/peacetaker
+	name = "Peacetaker Jacket"
+	desc = "A tough looking, slightly armored jacket, with a peace symbol spraypainted on the back."
+	icon = 'icons/inventory/suit/item_vr.dmi'
+	icon_state = "peacetaker"
+ //CHOMPedit end
+
 /obj/item/clothing/suit/storage/punkvest
     name = "punk vest"
     desc = "For the spiritual rebels that nevertheless wish to conform to standard goth trends. You're totally showing them your anti-authority spunk."

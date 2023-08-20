@@ -51,17 +51,21 @@
 	path = /obj/item/clothing/gloves/duty
 	cost = 3
 
-/datum/gear/gloves/duty/mmablack
+//CHOMPedit- funny gloves
+/datum/gear/gloves/mma
 	display_name = "grappling gloves, red"
 	description = "A pair of tough, padded gloves made for martial arts and contact sports."
-	path = /obj/item/clothing/gloves/duty/mma
-	cost = 3
+	path = /obj/item/clothing/gloves/mma
+	cost = 1
+//CHOMPedit end
 
-/datum/gear/gloves/duty/mma
+//CHOMPedit- funny gloves, now in black.
+/datum/gear/gloves/mmablack
 	display_name = "grappling gloves, black"
 	description = "A pair of tough, padded gloves made for martial arts and contact sports."
-	path = /obj/item/clothing/gloves/duty/mmablack
-	cost = 3
+	path = /obj/item/clothing/gloves/mmablack
+	cost = 1
+//CHOMPedit end
 
 /datum/gear/gloves/forensic
 	display_name = "gloves, forensic (Detective)"

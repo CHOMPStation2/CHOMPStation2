@@ -959,10 +959,12 @@
 	desc = "Black ripped jeans and a fishnet top. How punk."
 	icon_state = "rippedpunk"
 
+//CHOMPedit - funny pants
 /obj/item/clothing/under/denim_jean
 	name = "denim pants"
 	desc = "Tough denim pants, for causing all sorts of trouble."
 	icon_state = "denim_jean"
+//CHOMPedit - end
 
 /obj/item/clothing/under/greenasym
 	name = "green asymmetrical jumpsuit"

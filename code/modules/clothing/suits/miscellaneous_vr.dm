@@ -148,13 +148,6 @@
 
 	icon_state = "cyberpunk_recolor"
 
-// Cyberpunk recolorable vest
-/obj/item/clothing/suit/cyberpunk/peacetaker
-	name = "Peacetaker Jacket"
-	desc = "A tough looking, slightly armored jacket, with a peace symbol spraypainted on the back."
-	icon = 'icons/inventory/suit/item_vr.dmi'
-	icon_state = "peacetaker"
-
 // Altevian admiralty stuff
 /obj/item/clothing/suit/captunic/capjacket/altevian_admiral				// Subtype of capjacket because A) it makes sense and B) conviniently matching stats
 	name = "altevian officer's suit"
