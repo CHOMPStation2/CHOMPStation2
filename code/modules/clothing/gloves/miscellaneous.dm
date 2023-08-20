@@ -195,3 +195,4 @@
 	name = "water wings"
 	desc = "Swim aids designed to help a wearer float in water and learn to swim."
 	icon_state = "waterwings"
+
