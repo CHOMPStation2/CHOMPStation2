@@ -55,14 +55,10 @@
 
 	has_langs = list(LANGUAGE_SIGN)
 
-<<<<<<< HEAD
-	//var/picked_color = FALSE //CHOMPEdit - now on simplemob.
-=======
 	var/obj/item/clothing/head/hat = null // Scughat.
 	var/can_wear_hat = TRUE				  // Some have inbuilt hats
 
-	var/picked_color = FALSE
->>>>>>> 869bdb4371... Merge pull request #15281 from Heroman3003/scughats
+	//var/picked_color = FALSE //CHOMPEdit - now on simplemob.
 
 	can_enter_vent_with = list(
 		/obj/item/weapon/implant,
