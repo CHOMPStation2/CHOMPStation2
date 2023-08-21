@@ -1,3 +1,5 @@
+var/static/list/fake_sunlight_zs = list()
+
 /obj/effect/fake_sun
 	name = "fake sun"
 	desc = "Deletes itself, but first updates all the lighting on outdoor turfs."
@@ -128,8 +130,19 @@
 	sun.set_color(choice["color"])
 	sun.set_alpha(round(CLAMP01(choice["brightness"])*255,1))
 
+<<<<<<< HEAD
 	for(var/turf/T as anything in turfs_to_use)
 		sun.apply_to_turf(T)
+=======
+	if(do_sun)
+		fake_sunlight_zs |= z
+		for(var/turf/T as anything in turfs_to_use)
+			sun.apply_to_turf(T)
+
+	if(do_weather)
+		for(var/turf/T as anything in turfs_to_use)
+			T.vis_contents += visuals
+>>>>>>> 505df6a184... Merge pull request #15290 from Very-Soft/outdoors
 
 /obj/effect/fake_sun/warm
 	name = "warm fake sun"
