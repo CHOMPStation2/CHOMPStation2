@@ -44,6 +44,7 @@
 /datum/language
 	var/list/scramble_cache = list()
 
+/* CHOMPEdit: moved to modular_chomp because it was edited so much.
 /datum/language/proc/scramble(var/input, var/list/known_languages)
 	var/understand_chance = 0
 	for(var/datum/language/L in known_languages)
@@ -113,6 +114,7 @@
 		scramble_cache.Cut(1, scramble_cache.len-SCRAMBLE_CACHE_LEN-1)
 
 	return scrambled_text
+*/
 
 /datum/language/proc/format_message(message, verb)
 	return "<span class='message'><span class='[colour]'>[message]</span></span>"
@@ -130,9 +132,9 @@
 /datum/language/proc/broadcast(var/mob/living/speaker,var/message,var/speaker_mask)
 	log_say("(HIVE) [message]", speaker)
 
-	speaker.verbs |= /mob/proc/adjust_hive_range	//VOREStation Add - If you don't have the verb you should.
+	speaker.verbs |= /mob/proc/adjust_hive_range
 
-	if(!speaker_mask) speaker_mask = speaker.name
+	if(!speaker_mask) speaker_mask = speaker.real_name
 	message = "[get_spoken_verb(message)], \"[format_message(message, get_spoken_verb(message))]\""
 	//VOREStation Edit Start
 	if(speaker.hive_lang_range == -1)

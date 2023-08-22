@@ -6,7 +6,7 @@
 	desc = "Allows you to move faster on average than baseline."
 	cost = 4 //CHOMPEdit
 	var_changes = list("slowdown" = -0.5)
-	excludes = list(/datum/trait/positive/hardy,/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy_plus,/datum/trait/positive/speed_fast_minor)
+	excludes = list(/datum/trait/positive/hardy,/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy_plus)
 
 
 /datum/trait/positive/hardy
@@ -21,7 +21,7 @@
 	desc = "Allows you to carry heavy equipment with almost no slowdown."
 	cost = 2
 	var_changes = list("item_slowdown_mod" = 0.25)
-	excludes = list(/datum/trait/positive/speed_fast,/datum/trait/positive/speed_fast_minor,/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy) // CHOMPEdit: Prevents Haste + Hardy being taken together.
+	excludes = list(/datum/trait/positive/speed_fast,/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy) // CHOMPEdit: Prevents Haste + Hardy being taken together.
 
 
 /datum/trait/positive/endurance_high

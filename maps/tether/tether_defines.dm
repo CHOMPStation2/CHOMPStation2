@@ -172,14 +172,13 @@
 		)
 
 	lateload_gateway = list(
-		list("Carp Farm"),
-		list("Snow Field"),
-		list("Listening Post"),
-		list(list("Honleth Highlands A", "Honleth Highlands B")),
-		list("Arynthi Lake Underground A","Arynthi Lake A"),
-		list("Arynthi Lake Underground B","Arynthi Lake B"),
-		list("Eggnog Town Underground","Eggnog Town"),
-		list("Wild West")
+		list("Gateway - Carp Farm"),
+		list("Gateway - Snow Field"),
+		list("Gateway - Listening Post"),
+		list(list("Gateway - Honleth Highlands A", "Gateway - Honleth Highlands B")),
+		list("Gateway - Arynthi Lake Underground A","Gateway - Arynthi Lake A"),
+		list("Gateway - Arynthi Lake Underground B","Gateway - Arynthi Lake B"),
+		list("Gateway - Wild West")
 		)
 
 	lateload_overmap = list(
@@ -187,10 +186,13 @@
 		)
 
 	lateload_redgate = list(
-		list("Teppi Ranch"),
-		list("Innland"),
-		list("Abandoned Island"),
-		list("Dark Adventure")
+		list("Redgate - Teppi Ranch"),
+		list("Redgate - Innland"),
+//		list("Redgate - Abandoned Island"),	//This will come back later
+		list("Redgate - Dark Adventure"),
+		list("Redgate - Eggnog Town Underground","Redgate - Eggnog Town"),
+		list("Redgate - Star Dog"),
+		list("Redgate - Hotsprings")
 		)
 
 	ai_shell_restricted = TRUE
@@ -289,6 +291,7 @@
 	)
 
 	levels_for_distress = list(Z_LEVEL_OFFMAP1, Z_LEVEL_BEACH, Z_LEVEL_AEROSTAT, Z_LEVEL_DEBRISFIELD, Z_LEVEL_FUELDEPOT)
+	var/mob_announce_cooldown = 0
 
 /obj/effect/overmap/visitable/sector/virgo3b/Crossed(var/atom/movable/AM)
 	. = ..()
@@ -302,6 +305,11 @@
 	return list(Z_LEVEL_SPACE_LOW)
 
 /obj/effect/overmap/visitable/sector/virgo3b/proc/announce_atc(var/atom/movable/AM, var/going = FALSE)
+	if(istype(AM, /obj/effect/overmap/visitable/ship/simplemob))
+		if(world.time < mob_announce_cooldown)
+			return
+		else
+			mob_announce_cooldown = world.time + 5 MINUTES
 	var/message = "Sensor contact for vessel '[AM.name]' has [going ? "left" : "entered"] ATC control area."
 	//For landables, we need to see if their shuttle is cloaked
 	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))

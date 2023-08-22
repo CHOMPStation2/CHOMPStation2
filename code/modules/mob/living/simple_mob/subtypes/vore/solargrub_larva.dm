@@ -295,3 +295,13 @@ var/global/list/grub_machine_overlays = list()
 				to_chat(user, "<span class='warning'>You disturb a grub nesting in \the [O]!</span>")
 				return
 	return ..()
+
+/obj/item/weapon/melee/baton/afterattack(obj/O, mob/user, proximity)
+	if(proximity)
+		if(istype(O, /obj/machinery))
+			var/mob/living/simple_mob/animal/solargrub_larva/grub = locate() in O
+			if(grub)
+				grub.eject_from_machine(O)
+				to_chat(user, "<span class='warning'>You disturb a grub nesting in \the [O]!</span>")
+				return
+	return ..()

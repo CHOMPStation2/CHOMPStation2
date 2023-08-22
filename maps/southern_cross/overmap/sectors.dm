@@ -77,7 +77,11 @@
 		"d2_near_sw",
 		"d3_near_w",
 		"d3_near_se",
-		"baby_mammoth_dock"
+		"baby_mammoth_dock",
+		"ursula_dock",
+		"stargazer_dock",
+		"needle_dock",
+		"echidna_dock"
 		)
 
 /obj/effect/overmap/visitable/sector/Southern_Cross/get_space_zlevels() //These are the primary levels that our space station resides in. This also indicates what levels astronauts can drift into.

@@ -6,13 +6,21 @@
 /mob/living/simple_mob
 	var/nameset
 	var/limit_renames = TRUE
+	var/copy_prefs_to_mob = TRUE
 
 /mob/living/simple_mob/Login()
 	. = ..()
 	verbs |= /mob/living/simple_mob/proc/set_name
 	verbs |= /mob/living/simple_mob/proc/set_desc
 
+	if(copy_prefs_to_mob)
+		login_prefs()
+
+/mob/living/proc/login_prefs()
+
 	ooc_notes = client.prefs.metadata
+	ooc_notes_likes = client.prefs.metadata_likes
+	ooc_notes_dislikes = client.prefs.metadata_dislikes
 	digestable = client.prefs_vr.digestable
 	devourable = client.prefs_vr.devourable
 	absorbable = client.prefs_vr.absorbable
@@ -37,7 +45,6 @@
 	show_vore_fx = client.prefs_vr.show_vore_fx
 	step_mechanics_pref = client.prefs_vr.step_mechanics_pref
 	pickup_pref = client.prefs_vr.pickup_pref
-
 
 /mob/living/simple_mob/proc/set_name()
 	set name = "Set Name"

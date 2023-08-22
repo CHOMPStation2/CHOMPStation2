@@ -9513,7 +9513,7 @@
 /turf/simulated/floor/tiled,
 /area/ai_monitored/storage/emergency/eva)
 "aCo" = (
-/obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/structure/dispenser/phoron,
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = 24
@@ -9830,9 +9830,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/hatch{
-	icon_state = "door_locked";
 	id_tag = "engine_electrical_maintenance";
-	locked = 1;
 	name = "SMES Access";
 	req_access = list(10)
 	},
@@ -22734,7 +22732,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/glass/beaker/sulphuric,
 /turf/simulated/wall/r_wall,
 /area/maintenance/disposal)
 "brZ" = (
@@ -26265,15 +26262,22 @@
 "bBL" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/storage/fancy/vials{
-	pixel_x = 5;
+	pixel_x = 6;
 	pixel_y = 5
 	},
-/obj/item/weapon/storage/fancy/vials,
+/obj/item/weapon/storage/fancy/vials{
+	pixel_x = 6
+	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
+	},
+/obj/item/weapon/storage/quickdraw/syringe_case/clonemed{
+	name = "clonemed syringe case";
+	pixel_x = -8;
+	pixel_y = 3
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/sc/cmo)
@@ -30623,7 +30627,7 @@
 /obj/machinery/door/airlock/atmos{
 	name = "Riot Control Maintenance";
 	req_access = newlist();
-	req_one_access = list(2,12,24)
+	req_one_access = list(2)
 	},
 /turf/simulated/floor/plating,
 /area/security/riot_control)
@@ -35308,7 +35312,7 @@
 /obj/effect/floor_decal/corner/lime/bordercorner,
 /obj/structure/closet/secure_closet/hydroponics,
 /obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Library Starboard";
+	c_tag = "CIV - Hydroponics Starboard";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/hydro,
@@ -44426,6 +44430,7 @@
 /obj/item/bodybag/cryobag{
 	pixel_x = -3
 	},
+/obj/item/weapon/storage/box/bodybags,
 /obj/structure/table/steel,
 /obj/item/device/sleevemate,
 /obj/machinery/light{
@@ -44798,12 +44803,14 @@
 	pixel_x = -3;
 	pixel_y = 2
 	},
+/obj/item/weapon/cane,
 /obj/item/weapon/storage/box/gloves{
 	pixel_x = 4;
 	pixel_y = 4
 	},
-/obj/item/weapon/storage/box/rxglasses,
-/obj/item/weapon/cane,
+/obj/item/weapon/storage/box/rxglasses{
+	pixel_y = 2
+	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/surgery_storage)
 "dtI" = (
@@ -52474,10 +52481,13 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "hzO" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/black{
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/tiled/white,
 /area/medical/distillery)
 "hzX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -52810,13 +52820,13 @@
 /turf/simulated/floor/tiled/hydro,
 /area/hallway/primary/seconddeck/ascenter)
 "hIR" = (
-/obj/machinery/atmospherics/pipe/simple/visible/black,
 /obj/effect/floor_decal/borderfloorwhite/corner,
 /obj/effect/floor_decal/corner/paleblue/bordercorner,
 /obj/structure/table/steel,
 /obj/item/weapon/tool/wrench,
 /obj/item/weapon/reagent_containers/glass/beaker/large,
 /obj/item/weapon/reagent_containers/glass/beaker/large,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/white,
 /area/medical/distillery)
 "hJg" = (
@@ -53516,13 +53526,69 @@
 /turf/simulated/floor/grass,
 /area/hallway/primary/seconddeck/fscenter)
 "hWO" = (
-/obj/structure/sink{
-	pixel_y = 16
-	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/structure/table/rack/shelf/steel,
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Surgery Storage";
+	dir = 6
+	},
+/obj/item/weapon/syringe_cartridge{
+	pixel_x = 9;
+	pixel_y = 5
+	},
+/obj/item/weapon/syringe_cartridge{
+	pixel_x = 4;
+	pixel_y = 5
+	},
+/obj/item/weapon/syringe_cartridge{
+	pixel_x = -4;
+	pixel_y = 5
+	},
+/obj/item/weapon/syringe_cartridge{
+	pixel_y = 5
+	},
+/obj/item/weapon/syringe_cartridge{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/weapon/syringe_cartridge{
+	pixel_x = 7;
+	pixel_y = 5
+	},
+/obj/item/weapon/syringe_cartridge{
+	pixel_x = 3;
+	pixel_y = 5
+	},
+/obj/item/weapon/syringe_cartridge{
+	pixel_x = 12;
+	pixel_y = 5
+	},
+/obj/item/weapon/syringe_cartridge{
+	pixel_x = 10;
+	pixel_y = 5
+	},
+/obj/item/weapon/syringe_cartridge{
+	pixel_x = 6;
+	pixel_y = 5
+	},
+/obj/item/weapon/syringe_cartridge{
+	pixel_x = 2;
+	pixel_y = 5
+	},
+/obj/item/weapon/syringe_cartridge{
+	pixel_x = -2;
+	pixel_y = 5
+	},
+/obj/item/weapon/syringe_cartridge{
+	pixel_x = -6;
+	pixel_y = 5
+	},
+/obj/item/weapon/gun/launcher/syringe{
+	pixel_y = -4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/surgery_storage)
@@ -53537,10 +53603,13 @@
 /turf/simulated/floor/grass,
 /area/hallway/primary/seconddeck/fscenter)
 "hXE" = (
-/obj/machinery/atmospherics/pipe/simple/visible/black{
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/tiled/white,
 /area/medical/distillery)
 "hXY" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -54093,14 +54162,11 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "ilR" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/black,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 10
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/white,
 /area/medical/distillery)
 "ini" = (
@@ -58360,9 +58426,6 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/medical/foyer)
 "kCx" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 6
 	},
@@ -69394,9 +69457,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/D3)
 "qKX" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
 /obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/white,
@@ -71124,6 +71184,10 @@
 	},
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 8
+	},
+/obj/item/weapon/extinguisher/atmo{
+	desc = "A heavy duty fire extinguisher meant to fight large fires, this one has tape covering up an Atmospherics symbol, with the word \"Chemistry\" scribbled onto it.";
+	name = "chemistry fire extinguisher"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/distillery)
@@ -76476,12 +76540,6 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/secondary/entry/D2)
-"uXT" = (
-/obj/machinery/camera/network/medbay{
-	c_tag = "MED - Patient Hallway Port"
-	},
-/turf/space,
-/area/space)
 "uYd" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /obj/effect/wingrille_spawn/reinforced,
@@ -77282,8 +77340,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "vyg" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/black,
-/turf/simulated/floor/reinforced,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden,
+/turf/simulated/floor/tiled/white,
 /area/medical/distillery)
 "vyn" = (
 /obj/structure/cable/green{
@@ -77667,9 +77728,17 @@
 /turf/simulated/floor/tiled/white,
 /area/hallway/secondary/seconddeck/research_medical)
 "vIn" = (
-/obj/machinery/camera/network/medbay{
-	c_tag = "MED - Surgery Storage";
-	dir = 8
+/obj/item/weapon/storage/box/brainzsnax{
+	pixel_x = 8;
+	pixel_y = 5
+	},
+/obj/item/weapon/storage/box/brainzsnax/red{
+	pixel_x = 8;
+	pixel_y = 15
+	},
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/surgery_storage)
@@ -78404,13 +78473,13 @@
 /obj/item/clothing/suit/radiation,
 /obj/item/clothing/head/radiation,
 /obj/item/weapon/storage/toolbox/emergency,
-/obj/machinery/atmospherics/pipe/simple/visible/black,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/white,
 /area/medical/distillery)
 "wdx" = (
@@ -78649,6 +78718,8 @@
 /obj/item/weapon/tool/crowbar/red,
 /obj/item/weapon/tool/crowbar/red,
 /obj/item/weapon/storage/firstaid/surgery,
+/obj/item/clothing/suit/straight_jacket,
+/obj/item/clothing/suit/straight_jacket,
 /turf/simulated/floor/tiled/dark,
 /area/medical/surgery_storage)
 "wls" = (
@@ -81978,6 +82049,8 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/item/weapon/tank/emergency/phoron/double,
+/obj/item/weapon/tank/emergency/phoron/double,
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_monitored/storage/emergency/eva)
 "yiw" = (
@@ -138414,7 +138487,7 @@ aaa
 aaa
 aaa
 aaa
-uXT
+aaa
 aaa
 aaa
 aaa

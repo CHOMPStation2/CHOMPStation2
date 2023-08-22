@@ -18,14 +18,22 @@
 	var/list/vore_fullness_ex = list("stomach" = 0) // Expanded list of fullness
 	var/vore_icons = 0					// Bitfield for which fields we have vore icons for.
 	var/vore_eyes = FALSE				// For mobs with fullness specific eye overlays.
+	var/belly_size_multiplier = 1
 	var/vore_sprite_multiply = list("stomach" = FALSE, "taur belly" = FALSE)
 	var/vore_sprite_color = list("stomach" = "#000", "taur belly" = "#000")
 
 	var/list/vore_icon_bellies = list("stomach")
+	var/updating_fullness = FALSE
 
 
 // Update fullness based on size & quantity of belly contents
-/mob/living/proc/update_fullness()
+/mob/living/proc/update_fullness(var/returning = FALSE)
+	if(!returning)
+		if(updating_fullness)
+			return
+		updating_fullness = TRUE
+		spawn(2)
+		updating_fullness = FALSE
 	var/list/new_fullness = list()
 	vore_fullness = 0
 	for(var/belly_class in vore_icon_bellies)
@@ -41,6 +49,7 @@
 			new_fullness[B.undergarment_chosen + "-color"] = B.undergarment_color
 	for(var/belly_class in vore_icon_bellies)
 		new_fullness[belly_class] /= size_multiplier //Divided by pred's size so a macro mob won't get macro belly from a regular prey.
+		new_fullness[belly_class] *= belly_size_multiplier // Some mobs are small even at 100% size. Let's account for that.
 		new_fullness[belly_class] = round(new_fullness[belly_class], 1) // Because intervals of 0.25 are going to make sprite artists cry.
 		vore_fullness_ex[belly_class] = min(vore_capacity_ex[belly_class], new_fullness[belly_class])
 		vore_fullness += new_fullness[belly_class]
@@ -326,3 +335,24 @@
 	set desc = "Toggle liquidbelly fullscreen visual effect."
 	liquidbelly_visuals = !liquidbelly_visuals
 	to_chat(src, "<span class='warning'>Liquidbelly overlays [liquidbelly_visuals ? "enabled" : "disabled"].</span>")
+
+/mob/living/proc/fix_vore_effects()
+	set name = "Fix Vore Effects"
+	set category = "OOC"
+	set desc = "Fix certain vore effects lingering after you've exited a belly."
+
+	if(!isbelly(src.loc))
+		if(alert(src, "Only use this verb if you are affected by certain vore effects outside of a belly, such as muffling or a stuck belly fullscreen.", "Clear Vore Effects", "Continue", "Nevermind") != "Continue")
+			return
+
+		absorbed = FALSE
+		muffled = FALSE
+		clear_fullscreen("belly")
+		clear_fullscreen(ATOM_BELLY_FULLSCREEN)
+		stop_sound_channel(CHANNEL_PREYLOOP)
+
+/mob/living/verb/vore_check_nutrition()
+	set name = "Check Nutrition"
+	set category = "Abilities"
+	set desc = "Check your current nutrition level."
+	to_chat(src, "<span class='notice'>Current nutrition level: [nutrition].</span>")

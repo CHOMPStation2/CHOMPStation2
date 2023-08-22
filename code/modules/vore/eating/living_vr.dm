@@ -417,7 +417,7 @@
 //
 // Clearly super important. Obviously.
 //
-/mob/living/proc/lick(mob/living/tasted in living_mobs(1))
+/mob/living/proc/lick(mob/living/tasted in living_mobs(1, TRUE)) //CHOMPEdit
 	set name = "Lick"
 	set category = "IC"
 	set desc = "Lick someone nearby!"
@@ -430,8 +430,10 @@
 		return
 
 	setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
-
-	visible_message("<span class='warning'>[src] licks [tasted]!</span>","<span class='notice'>You lick [tasted]. They taste rather like [tasted.get_taste_message()].</span>","<b>Slurp!</b>")
+	if(tasted == src) //CHOMPEdit Start
+		visible_message("<span class='warning'>[src] licks themself!</span>","<span class='notice'>You lick yourself. You taste rather like [tasted.get_taste_message()].</span>","<b>Slurp!</b>")
+	else
+		visible_message("<span class='warning'>[src] licks [tasted]!</span>","<span class='notice'>You lick [tasted]. They taste rather like [tasted.get_taste_message()].</span>","<b>Slurp!</b>") //CHOMPEdit End
 
 
 /mob/living/proc/get_taste_message(allow_generic = 1)
@@ -458,7 +460,7 @@
 
 
 //This is just the above proc but switched about.
-/mob/living/proc/smell(mob/living/smelled in living_mobs(1))
+/mob/living/proc/smell(mob/living/smelled in living_mobs(1, TRUE)) //CHOMPEdit
 	set name = "Smell"
 	set category = "IC"
 	set desc = "Smell someone nearby!"
@@ -470,7 +472,10 @@
 		return
 
 	setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
-	visible_message("<span class='warning'>[src] smells [smelled]!</span>","<span class='notice'>You smell [smelled]. They smell like [smelled.get_smell_message()].</span>","<b>Sniff!</b>")
+	if(smelled == src) //CHOMPEdit Start
+		visible_message("<span class='warning'>[src] smells themself!</span>","<span class='notice'>You smell yourself. You smell like [smelled.get_smell_message()].</span>","<b>Sniff!</b>")
+	else
+		visible_message("<span class='warning'>[src] smells [smelled]!</span>","<span class='notice'>You smell [smelled]. They smell like [smelled.get_smell_message()].</span>","<b>Sniff!</b>") //CHOMPEdit End
 
 /mob/living/proc/get_smell_message(allow_generic = 1)
 	if(!vore_smell && !allow_generic)
@@ -526,7 +531,7 @@
 		var/mob/living/silicon/pred = loc.loc //Thing holding the belly!
 		var/obj/item/device/dogborg/sleeper/belly = loc //The belly!
 
-		var/confirm = tgui_alert(src, "Please feel free to press use this button at any time you are uncomfortable and in a belly. Consent is important.", "Confirmation", list("Okay", "Cancel")) //CHOMPedit
+		var/confirm = tgui_alert(src, "You're in a cyborg sleeper. This is for escaping from preference-breaking or if your predator disconnects/AFKs. If your preferences were being broken, please admin-help as well.", "Confirmation", list("Okay", "Cancel"))
 		if(confirm != "Okay" || loc != belly)
 			return
 		//Actual escaping
@@ -545,6 +550,7 @@
 		crystal.unleash()
 		crystal.bound_mob = null
 		crystal.bound_mob = capture_crystal = 0
+		clear_fullscreen(ATOM_BELLY_FULLSCREEN) // CHOMPedit
 		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of [crystal] owned by [crystal.owner]. [ADMIN_FLW(src)]")
 
 	//You've been turned into an item!
@@ -704,7 +710,7 @@
 	else
 		belly.nom_mob(prey, user)
 
-	user.updateicon()
+	user.update_icon()
 
 	// Inform Admins
 	if(pred == user)
@@ -919,15 +925,15 @@
 			else
 				to_chat(src, "<span class='notice'>You can taste the flavor of really bad ideas.</span>")
 		else if(istype(I,/obj/item/toy))
-			visible_message("<span class='warning'>[src] demonstrates their voracious capabilities by swallowing [I] whole!</span>")
+			visible_message("<span class='warning'>[src] demonstrates the voracious capabilities of their [lowertext(vore_selected.name)] by making [I] disappear!</span>") //CHOMPEdit
 		else if(istype(I,/obj/item/weapon/bikehorn/tinytether))
 			to_chat(src, "<span class='notice'>You feel a rush of power swallowing such a large, err, tiny structure.</span>")
-			visible_message("<span class='warning'>[src] demonstrates their voracious capabilities by swallowing [I] whole!</span>")
+			visible_message("<span class='warning'>[src] demonstrates the voracious capabilities of their [lowertext(vore_selected.name)] by making [I] disappear!</span>") //CHOMPEdit
 		else if(istype(I,/obj/item/device/mmi/digital/posibrain) || istype(I,/obj/item/device/aicard))
-			visible_message("<span class='warning'>[src] demonstrates their voracious capabilities by swallowing [I] whole!</span>")
+			visible_message("<span class='warning'>[src] demonstrates the voracious capabilities of their [lowertext(vore_selected.name)] by making [I] disappear!</span>") //CHOMPEdit
 			to_chat(src, "<span class='notice'>You can taste the sweet flavor of digital friendship. Or maybe it is something else.</span>")
 		else if(istype(I,/obj/item/device/paicard))
-			visible_message("<span class='warning'>[src] demonstrates their voracious capabilities by swallowing [I] whole!</span>")
+			visible_message("<span class='warning'>[src] demonstrates the voracious capabilities of their [lowertext(vore_selected.name)] by making [I] disappear!</span>") //CHOMPEdit
 			to_chat(src, "<span class='notice'>You can taste the sweet flavor of digital friendship.</span>")
 			var/obj/item/device/paicard/ourcard = I
 			if(ourcard.pai && ourcard.pai.client && isbelly(ourcard.loc))
@@ -940,14 +946,14 @@
 			else
 				to_chat(src, "<span class='notice'>You can taste the flavor of gluttonous waste of food.</span>")
 		else if (istype(I,/obj/item/clothing/accessory/collar))
-			visible_message("<span class='warning'>[src] demonstrates their voracious capabilities by swallowing [I] whole!</span>")
+			visible_message("<span class='warning'>[src] demonstrates the voracious capabilities of their [lowertext(vore_selected.name)] by making [I] disappear!</span>") //CHOMPEdit
 			to_chat(src, "<span class='notice'>You can taste the submissiveness in the wearer of [I]!</span>")
 		else if(iscapturecrystal(I))
 			var/obj/item/capture_crystal/C = I
 			if(C.bound_mob && (C.bound_mob in C.contents))
 				if(isbelly(C.loc))
-					var/obj/belly/B = C.loc
-					to_chat(C.bound_mob, "<span class= 'notice'>Outside of your crystal, you can see; <B>[B.desc]</B></span>")
+					//var/obj/belly/B = C.loc //CHOMPedit
+					//to_chat(C.bound_mob, "<span class= 'notice'>Outside of your crystal, you can see; <B>[B.desc]</B></span>") //CHOMPedit: moved to modular_chomp capture_crystal.dm
 					to_chat(src, "<span class='notice'>You can taste the the power of command.</span>")
 		// CHOMPedit begin
 		else if(istype(I,/obj/item/device/starcaster_news))
@@ -1117,15 +1123,32 @@
 
 /mob/living/examine(mob/user, infix, suffix)
 	. = ..()
+	if(custom_link)
+		. += "Custom link: [custom_link]"
 	if(ooc_notes)
-		. += "<span class = 'deptradio'>OOC Notes:</span> <a href='?src=\ref[src];ooc_notes=1'>\[View\]</a>"
+		. += "<span class = 'deptradio'>OOC Notes:</span> <a href='?src=\ref[src];ooc_notes=1'>\[View\]</a> - <a href='?src=\ref[src];print_ooc_notes_to_chat=1'>\[Print\]</a>"
 	. += "<span class='deptradio'><a href='?src=\ref[src];vore_prefs=1'>\[Mechanical Vore Preferences\]</a></span>"
+
 
 /mob/living/Topic(href, href_list)	//Can't find any instances of Topic() being overridden by /mob/living in polaris' base code, even though /mob/living/carbon/human's Topic() has a ..() call
 	if(href_list["vore_prefs"])
 		display_voreprefs(usr)
 	if(href_list["ooc_notes"])
 		src.Examine_OOC()
+	if(href_list["edit_ooc_notes"])
+		if(usr == src)
+			set_metainfo_panel()
+	if(href_list["edit_ooc_note_likes"])
+		if(usr == src)
+			set_metainfo_likes()
+	if(href_list["edit_ooc_note_dislikes"])
+		if(usr == src)
+			set_metainfo_dislikes()
+	if(href_list["save_ooc_panel"])
+		if(usr == src)
+			save_ooc_panel()
+	if(href_list["print_ooc_notes_to_chat"])
+		print_ooc_notes_to_chat()
 	return ..()
 
 /mob/living/proc/display_voreprefs(mob/user)	//Called by Topic() calls on instances of /mob/living (and subtypes) containing vore_prefs as an argument

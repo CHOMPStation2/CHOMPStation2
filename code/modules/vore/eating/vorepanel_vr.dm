@@ -13,7 +13,16 @@
 var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 														"a_synth_flesh_mono_hole",
 														"a_anim_belly",
-														"multi_layer_test_tummy")
+														"multi_layer_test_tummy",
+														"gematically_angular",
+														"entrance_to_a_tumby",
+														"passage_to_a_tumby",
+														"destination_tumby",
+														"destination_tumby_fluidless",
+														"post_tumby_passage",
+														"post_tumby_passage_fluidless",
+														"not_quite_tumby",
+														"could_it_be_a_tumby")
 */ //Chomp REMOVE End
 
 /mob/living
@@ -159,15 +168,14 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		inside["contents"] = inside_contents
 	data["inside"] = inside
 
-	var/is_dogborg = FALSE
+	var/is_cyborg = FALSE
 	var/is_vore_simple_mob = FALSE
 	if(isrobot(host))
-		var/mob/living/silicon/robot/R = host
-		is_dogborg = R.dogborg
+		is_cyborg = TRUE
 	else if(istype(host, /mob/living/simple_mob/vore))	//So far, this does nothing. But, creating this for future belly work
 		is_vore_simple_mob = TRUE
 	data["host_mobtype"] = list(
-		"is_dogborg" = is_dogborg,
+		"is_cyborg" = is_cyborg,
 		"is_vore_simple_mob" = is_vore_simple_mob
 	)
 
@@ -203,6 +211,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"is_feedable" = selected.is_feedable, //CHOMPAdd
 			"egg_type" = selected.egg_type,
 			"egg_name" = selected.egg_name, //CHOMPAdd
+			"recycling" = selected.recycling, //CHOMPAdd
 			"nutrition_percent" = selected.nutrition_percent,
 			"digest_brute" = selected.digest_brute,
 			"digest_burn" = selected.digest_burn,
@@ -235,6 +244,16 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"belly_fullscreen_color4" = selected.belly_fullscreen_color4,
 			"belly_fullscreen_alpha" = selected.belly_fullscreen_alpha,
 			"colorization_enabled" = selected.colorization_enabled,
+			"custom_reagentcolor" = selected.custom_reagentcolor,
+			"custom_reagentalpha" = selected.custom_reagentalpha,
+			"liquid_overlay" = selected.liquid_overlay,
+			"max_liquid_level" = selected.max_liquid_level,
+			"mush_overlay" = selected.mush_overlay,
+			"mush_color" = selected.mush_color,
+			"mush_alpha" = selected.mush_alpha,
+			"max_mush" = selected.max_mush,
+			"min_mush" = selected.min_mush,
+			"item_mush_val" = selected.item_mush_val,
 			"vorespawn_blacklist" = selected.vorespawn_blacklist,
 			"sound_volume" = selected.sound_volume,
 			"affects_voresprite" = selected.affects_vore_sprites,
@@ -277,6 +296,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 		selected_list["egg_type"] = selected.egg_type
 		selected_list["egg_name"] = selected.egg_name //CHOMPAdd
+		selected_list["recycling"] = selected.recycling //CHOMPAdd
 		selected_list["contaminates"] = selected.contaminates
 		selected_list["contaminate_flavor"] = null
 		selected_list["contaminate_color"] = null
@@ -367,6 +387,16 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					var/list/selected_list_member = selected_list["liq_interacts"]["liq_reagent_addons"]
 					ASSERT(islist(selected_list_member))
 					selected_list_member.Add(flag_name)
+			selected_list["liq_interacts"]["custom_reagentcolor"] = selected.custom_reagentcolor ? selected.custom_reagentcolor : selected.reagentcolor
+			selected_list["liq_interacts"]["custom_reagentalpha"] = selected.custom_reagentalpha ? selected.custom_reagentalpha : "Default"
+			selected_list["liq_interacts"]["liquid_overlay"] = selected.liquid_overlay
+			selected_list["liq_interacts"]["max_liquid_level"] = selected.max_liquid_level
+			selected_list["liq_interacts"]["mush_overlay"] = selected.mush_overlay
+			selected_list["liq_interacts"]["mush_color"] = selected.mush_color
+			selected_list["liq_interacts"]["mush_alpha"] = selected.mush_alpha
+			selected_list["liq_interacts"]["max_mush"] = selected.max_mush
+			selected_list["liq_interacts"]["min_mush"] = selected.min_mush
+			selected_list["liq_interacts"]["item_mush_val"] = selected.item_mush_val
 
 		selected_list["show_liq_fullness"] = selected.show_fullness_messages
 		selected_list["liq_messages"] = list()
@@ -827,12 +857,19 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						if(new_egg_type in global_vore_egg_types)
 							new_belly.egg_type = new_egg_type
 
-				if(istext(belly_data["egg_name"]))
+				if(istext(belly_data["egg_name"])) //CHOMPAdd Start
 					var/new_egg_name = html_encode(belly_data["egg_name"])
 					if(new_egg_name)
 						new_egg_name = readd_quotes(new_egg_name)
 					if(length(new_egg_name) >= BELLIES_NAME_MIN && length(new_egg_name) <= BELLIES_NAME_MAX)
 						new_belly.egg_name = new_egg_name
+
+				if(isnum(belly_data["recycling"]))
+					var/new_recycling = belly_data["recycling"]
+					if(new_recycling == 0)
+						new_belly.recycling = FALSE
+					if(new_recycling == 1)
+						new_belly.recycling = TRUE //CHOMPAdd End
 
 				if(istext(belly_data["selective_preference"]))
 					var/new_selective_preference = belly_data["selective_preference"]
@@ -1239,6 +1276,48 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					new_belly.reagent_mode_flags = 0
 					for(var/reagent_flag in belly_data["reagent_mode_flag_list"])
 						new_belly.reagent_mode_flags += new_belly.reagent_mode_flag_list[reagent_flag]
+
+				if(istext(belly_data["custom_reagentcolor"]))
+					var/custom_reagentcolor = sanitize_hexcolor(belly_data["custom_reagentcolor"],new_belly.custom_reagentcolor)
+					new_belly.custom_reagentcolor = custom_reagentcolor
+
+				if(istext(belly_data["mush_color"]))
+					var/mush_color = sanitize_hexcolor(belly_data["mush_color"],new_belly.mush_color)
+					new_belly.mush_color = mush_color
+
+				if(istext(belly_data["mush_alpha"]))
+					var/new_mush_alpha = sanitize_integer(belly_data["mush_alpha"],0,255,initial(new_belly.mush_alpha))
+					new_belly.mush_alpha = new_mush_alpha
+
+				if(isnum(belly_data["max_mush"]))
+					var/max_mush = belly_data["max_mush"]
+					new_belly.max_mush = CLAMP(max_mush, 0, 6000)
+
+				if(isnum(belly_data["min_mush"]))
+					var/min_mush = belly_data["min_mush"]
+					new_belly.min_mush = CLAMP(min_mush, 0, 100)
+
+				if(isnum(belly_data["item_mush_val"]))
+					var/item_mush_val = belly_data["item_mush_val"]
+					new_belly.item_mush_val = CLAMP(item_mush_val, 0, 1000)
+
+				if(isnum(belly_data["liquid_overlay"]))
+					var/new_liquid_overlay = belly_data["liquid_overlay"]
+					if(new_liquid_overlay == 0)
+						new_belly.liquid_overlay = FALSE
+					if(new_liquid_overlay == 1)
+						new_belly.liquid_overlay = TRUE
+
+				if(isnum(belly_data["max_liquid_level"]))
+					var/max_liquid_level = belly_data["max_liquid_level"]
+					new_belly.max_liquid_level = CLAMP(max_liquid_level, 0, 100)
+
+				if(isnum(belly_data["mush_overlay"]))
+					var/new_mush_overlay = belly_data["mush_overlay"]
+					if(new_mush_overlay == 0)
+						new_belly.mush_overlay = FALSE
+					if(new_mush_overlay == 1)
+						new_belly.mush_overlay = TRUE
 
 				// Liquid Messages
 				if(isnum(belly_data["show_fullness_messages"]))
@@ -1718,6 +1797,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		var/mob/living/datarget = target
 		if(datarget.client)
 			available_options += "Process"
+		available_options += "Health"
 	intent = tgui_input_list(user, "What would you like to do with [target]?", "Vore Pick", available_options)
 	switch(intent)
 		if("Examine")
@@ -1946,6 +2026,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 							H.reload_fullscreen()
 					MMI.body_backup = null
 			return TRUE
+		if("Health")
+			var/mob/living/ourtarget = target
+			to_chat(user, "<span class='notice'>Current health reading for \The [ourtarget]: [ourtarget.health] / [ourtarget.maxHealth] </span>")
+			return TRUE
 		//CHOMPEdit End
 		if("Process")
 			var/mob/living/ourtarget = target
@@ -2113,7 +2197,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				tgui_alert_async(usr, "Entered name too long (max [BELLIES_NAME_MAX]).","Error")
 				return FALSE
 			host.vore_selected.egg_name = new_egg_name
-			. = TRUE //CHOMPAdd End
+			. = TRUE
+		if("b_recycling")
+			host.vore_selected.recycling = !host.vore_selected.recycling
+			. = TRUE//CHOMPAdd End
 		if("b_desc")
 			var/new_desc = html_encode(tgui_input_text(usr,"Belly Description, '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name. ([BELLIES_DESC_MAX] char limit):","New Description",host.vore_selected.desc, multiline = TRUE, prevent_enter = TRUE))
 
@@ -2327,7 +2414,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			if(belly_choice == null)
 				return FALSE
 			host.vore_selected.silicon_belly_overlay_preference = belly_choice
-			host.updateicon()
+			host.update_icon()
 			. = TRUE
 		if("b_min_belly_number_flat")
 			var/new_min_belly = tgui_input_number(user, "Choose the amount of prey your belly must contain \
@@ -2337,7 +2424,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				return FALSE
 			var/new_new_min_belly = CLAMP(new_min_belly, 1, 100)	//Clamping at 100 rather than infinity. Should be close to infinity tho.
 			host.vore_selected.visible_belly_minimum_prey = new_new_min_belly
-			host.updateicon()
+			host.update_icon()
 			. = TRUE
 		if("b_min_belly_prey_size")
 			var/new_belly_size = tgui_input_number(user, "Choose the required size prey must be to trigger belly overlay, \
@@ -2349,11 +2436,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			else
 				var/new_new_belly_size = CLAMP(new_belly_size, 25, 200)
 				host.vore_selected.overlay_min_prey_size = (new_new_belly_size/100)
-			host.updateicon()
+			host.update_icon()
 			. = TRUE
 		if("b_override_min_belly_prey_size")
 			host.vore_selected.override_min_prey_size = !host.vore_selected.override_min_prey_size
-			host.updateicon()
+			host.update_icon()
 			. = TRUE
 		if("b_min_belly_number_override")
 			var/new_min_prey = tgui_input_number(user, "Choose the amount of prey your belly must contain to override min prey size \
@@ -2363,7 +2450,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				return FALSE
 			var/new_new_min_prey = CLAMP(new_min_prey, 1, 100)	//Clamping at 100 rather than infinity. Should be close to infinity tho.
 			host.vore_selected.override_min_prey_num = new_new_min_prey
-			host.updateicon()
+			host.update_icon()
 			. = TRUE
 		if("b_fancy_sound")
 			host.vore_selected.fancy_vore = !host.vore_selected.fancy_vore
@@ -2628,12 +2715,6 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.vore_selected.colorization_enabled = !host.vore_selected.colorization_enabled
 			host.vore_selected.belly_fullscreen = "dark" //This prevents you from selecting a belly that is not meant to be colored and then turning colorization on.
 			. = TRUE
-		/*
-		if("b_multilayered") //Allows for 'multilayered' stomachs. Currently not implemented. Add to TGUI.
-			host.vore_selected.multilayered = !host.vore_selected.multilayered 				//Add to stomach vars.
-			host.vore_selected.belly_fullscreen = "dark"
-			. = TRUE
-		*/
 		if("b_preview_belly")
 			host.vore_selected.vore_preview(host) //Gives them the stomach overlay. It fades away after ~2 seconds as human/life.dm removes the overlay if not in a gut.
 			. = TRUE
@@ -2672,12 +2753,12 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			. = TRUE
 		/* //Chomp REMOVE - use our solution, not upstream's
 		if("b_fullscreen_color_secondary")
-			var/newcolor = input(usr, "Choose a color.", "", host.vore_selected.belly_fullscreen_color) as color|null
+			var/newcolor = input(usr, "Choose a color.", "", host.vore_selected.belly_fullscreen_color_secondary) as color|null
 			if(newcolor)
 				host.vore_selected.belly_fullscreen_color_secondary = newcolor
 			. = TRUE
 		if("b_fullscreen_color_trinary")
-			var/newcolor = input(usr, "Choose a color.", "", host.vore_selected.belly_fullscreen_color) as color|null
+			var/newcolor = input(usr, "Choose a color.", "", host.vore_selected.belly_fullscreen_color_trinary) as color|null
 			if(newcolor)
 				host.vore_selected.belly_fullscreen_color_trinary = newcolor
 			. = TRUE
@@ -2923,6 +3004,83 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			if(!reagent_toggle_addon)
 				return FALSE
 			host.vore_selected.reagent_mode_flags ^= host.vore_selected.reagent_mode_flag_list[reagent_toggle_addon]
+			. = TRUE
+		if("b_liquid_overlay")
+			if(!host.vore_selected.liquid_overlay)
+				host.vore_selected.liquid_overlay = 1
+				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] now has liquid overlay enabled.</span>")
+			else
+				host.vore_selected.liquid_overlay = 0
+				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] no longer has liquid overlay enabled.</span>")
+			. = TRUE
+		if("b_max_liquid_level")
+			var/new_max_liquid_level = input(user, "Set custom maximum liquid level. 0-100%", "Set Custom Max Level.", host.vore_selected.max_liquid_level) as num|null
+			if(new_max_liquid_level == null)
+				return FALSE
+			var/new_new_max_liquid_level = CLAMP(new_max_liquid_level, 0, 100)
+			host.vore_selected.max_liquid_level = new_new_max_liquid_level
+			host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_custom_reagentcolor")
+			var/newcolor = input(usr, "Choose custom color for liquid overlay. Cancel for normal reagent color.", "", host.vore_selected.custom_reagentcolor) as color|null
+			if(newcolor)
+				host.vore_selected.custom_reagentcolor = newcolor
+			else
+				host.vore_selected.custom_reagentcolor = null
+			host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_custom_reagentalpha")
+			var/newalpha = tgui_input_number(usr, "Set alpha transparency between 0-255. Leave blank to use capacity based alpha.", "Custom Liquid Alpha",255,255,0,0,1)
+			if(newalpha != null)
+				host.vore_selected.custom_reagentalpha = newalpha
+			else
+				host.vore_selected.custom_reagentalpha = null
+			host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_mush_overlay")
+			if(!host.vore_selected.mush_overlay)
+				host.vore_selected.mush_overlay = 1
+				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] now has fullness overlay enabled.</span>")
+			else
+				host.vore_selected.mush_overlay = 0
+				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] no longer has fullness overlay enabled.</span>")
+			host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_mush_color")
+			var/newcolor = input(usr, "Choose custom color for mush overlay.", "", host.vore_selected.mush_color) as color|null
+			if(newcolor)
+				host.vore_selected.mush_color = newcolor
+				host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_mush_alpha")
+			var/newalpha = tgui_input_number(usr, "Set alpha transparency between 0-255", "Mush Alpha",255,255,0,0,1)
+			if(newalpha != null)
+				host.vore_selected.mush_alpha = newalpha
+				host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_max_mush")
+			var/new_max_mush = input(user, "Choose the amount of nutrition required for full mush overlay. Ranges from 0 to 6000. Default 500.", "Set Fullness Overlay Scaling.", host.vore_selected.max_mush) as num|null
+			if(new_max_mush == null)
+				return FALSE
+			var/new_new_max_mush = CLAMP(new_max_mush, 0, 6000)
+			host.vore_selected.max_mush = new_new_max_mush
+			host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_min_mush")
+			var/new_min_mush = input(user, "Set custom minimum mush level. 0-100%", "Set Custom Minimum.", host.vore_selected.min_mush) as num|null
+			if(new_min_mush == null)
+				return FALSE
+			var/new_new_min_mush = CLAMP(new_min_mush, 0, 100)
+			host.vore_selected.min_mush = new_new_min_mush
+			host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_item_mush_val")
+			var/new_item_mush_val = input(user, "Set how much solid belly contents affect mush level. 0-1000 fullness per item.", "Set Item Mush Value.", host.vore_selected.item_mush_val) as num|null
+			if(new_item_mush_val == null)
+				return FALSE
+			var/new_new_item_mush_val = CLAMP(new_item_mush_val, 0, 1000)
+			host.vore_selected.item_mush_val = new_new_item_mush_val
+			host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_liq_purge")
 			var/alert = alert("Are you sure you want to delete the liquids in your [lowertext(host.vore_selected.name)]?","Confirmation","Delete","Cancel")

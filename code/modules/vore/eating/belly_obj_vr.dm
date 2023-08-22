@@ -31,6 +31,7 @@
 	var/digestchance = 0					// % Chance of stomach beginning to digest if prey struggles
 	var/absorbchance = 0					// % Chance of stomach beginning to absorb if prey struggles
 	var/escapechance = 0 					// % Chance of prey beginning to escape if prey struggles.
+	var/escape_stun = 0						// AI controlled mobs with a number here will be weakened by the provided var when someone escapes, to prevent endless nom loops
 	var/transferchance = 0 					// % Chance of prey being trasnsfered, goes from 0-100%
 	var/transferchance_secondary = 0 		// % Chance of prey being transfered to transferchance_secondary, also goes 0-100%
 	var/save_digest_mode = TRUE				// Whether this belly's digest mode persists across rounds
@@ -261,6 +262,16 @@
 	"reagent_chosen",
 	"reagentid",
 	"reagentcolor",
+	"liquid_overlay",
+	"max_liquid_level",
+	"mush_overlay",
+	"mush_color",
+	"mush_alpha",
+	"max_mush",
+	"min_mush",
+	"item_mush_val",
+	"custom_reagentcolor",
+	"custom_reagentalpha",
 	"gen_cost",
 	"gen_amount",
 	"gen_time",
@@ -303,6 +314,7 @@
 	"sound_volume",
 	"speedy_mob_processing",
 	"egg_name",
+	"recycling",
 	"is_feedable", //CHOMP end of variables from CHOMP
 	"egg_type",
 	"save_digest_mode",
@@ -348,6 +360,7 @@
 	if(!owner)
 		thing.forceMove(get_turf(src))
 		return
+	thing.enter_belly(src) // Atom movable proc, does nothing by default. Overridden in children for special behavior.
 	if(owner && istype(owner.loc,/turf/simulated) && !cycle_sloshed && reagents.total_volume > 0)
 		var/turf/simulated/T = owner.loc
 		var/S = pick(T.vorefootstep_sounds["human"])
@@ -387,8 +400,8 @@
 			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
 			recent_sound = TRUE
 
-	if(reagents.total_volume > 0 && !isliving(thing)) //CHOMPAdd
-		reagents.trans_to(thing, reagents.total_volume, 0.1 / (LAZYLEN(contents) ? LAZYLEN(contents) : 1), FALSE) //CHOMPAdd
+	if(reagents.total_volume >= 5 && !isliving(thing)) //CHOMPAdd
+		reagents.trans_to(thing, reagents.total_volume * 0.1, 1 / max(LAZYLEN(contents), 1), FALSE) //CHOMPAdd
 	//Messages if it's a mob
 	if(isliving(thing))
 		var/mob/living/M = thing
@@ -416,21 +429,21 @@
 		//Stop AI processing in bellies
 		if(M.ai_holder)
 			M.ai_holder.go_sleep()
-		if(reagents.total_volume > 0 && M.digestable) //CHOMPEdit Start
+		if(reagents.total_volume >= 5 && M.digestable) //CHOMPEdit Start
 			if(digest_mode == DM_DIGEST)
-				reagents.trans_to(M, reagents.total_volume, 0.1 / (LAZYLEN(contents) ? LAZYLEN(contents) : 1), FALSE)
+				reagents.trans_to(M, reagents.total_volume * 0.1, 1 / max(LAZYLEN(contents), 1), FALSE)
 			to_chat(M, "<span class='warning'><B>You splash into a pool of [reagent_name]!</B></span>")
 	else if(count_items_for_sprite) //CHOMPEdit - If this is enabled also update fullness for non-living things
 		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
-	if(istype(thing, /obj/item/capture_crystal)) //CHOMPEdit: Capture crystal occupant gets to see belly text too.
-		var/obj/item/capture_crystal/CC = thing
-		if(CC.bound_mob && desc)
-			if(CC.bound_mob in CC.contents)
-				var/formatted_desc
-				formatted_desc = replacetext(desc, "%belly", lowertext(name)) //replace with this belly's name
-				formatted_desc = replacetext(formatted_desc, "%pred", owner) //replace with this belly's owner
-				formatted_desc = replacetext(formatted_desc, "%prey", thing) //replace with whatever mob entered into this belly
-				to_chat(CC.bound_mob, "<span class='notice'><B>[formatted_desc]</B></span>")
+	//if(istype(thing, /obj/item/capture_crystal)) //CHOMPEdit start: Capture crystal occupant gets to see belly text too. Moved to modular_chomp capture_crystal.dm.
+		//var/obj/item/capture_crystal/CC = thing
+		//if(CC.bound_mob && desc)
+			//if(CC.bound_mob in CC.contents)
+				//var/formatted_desc
+				//formatted_desc = replacetext(desc, "%belly", lowertext(name)) //replace with this belly's name
+				//formatted_desc = replacetext(formatted_desc, "%pred", owner) //replace with this belly's owner
+				//formatted_desc = replacetext(formatted_desc, "%prey", thing) //replace with whatever mob entered into this belly
+				//to_chat(CC.bound_mob, "<span class='notice'><B>[formatted_desc]</B></span>") //CHOMPedit end
 
 	/*/ Intended for simple mobs //CHMOPEdit: Counting belly cycles now.
 	if((!owner.client || autotransfer_enabled) && autotransferlocation && autotransferchance > 0)
@@ -440,6 +453,10 @@
 // Called whenever an atom leaves this belly
 /obj/belly/Exited(atom/movable/thing, atom/OldLoc)
 	. = ..()
+	thing.exit_belly(src) // CHOMPedit - atom movable proc, does nothing by default. Overridden in children for special behavior.
+	if(isbelly(thing.loc)) //CHOMPEdit
+		if(count_items_for_sprite) //CHOMPEdit
+			owner.update_fullness() //CHOMPEdit
 	if(isliving(thing) && !isbelly(thing.loc))
 		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 		var/mob/living/L = thing
@@ -468,6 +485,9 @@
 			for(var/count in I.d_mult to 1 step 0.25)
 				I.add_overlay(I.d_stage_overlay, TRUE) //CHOMPEdit end
 
+// CHOMPedit: SEND_SIGNAL(COMSIG_BELLY_UPDATE_VORE_FX) is sometimes used when calling vore_fx() to send belly visuals
+// to certain non-belly atoms. Not called here as vore_fx() is usually only called if a mob is in the belly.
+// Don't forget it if you need to rework vore_fx().
 /obj/belly/proc/vore_fx(mob/living/L, var/update, var/severity = 0) //CHOMPEdit
 	if(!istype(L))
 		return
@@ -488,15 +508,21 @@
 				var/obj/screen/fullscreen/F2 = L.overlay_fullscreen("belly2", /obj/screen/fullscreen/belly/colorized/overlay)
 				F2.icon_state = "[belly_fullscreen]_l1"
 				F2.color = belly_fullscreen_color_secondary
+			else
+				L.clear_fullscreen("belly2")
 			if("[belly_fullscreen]_l2" in icon_states('icons/mob/screen_full_colorized_vore_overlays.dmi'))
 				var/obj/screen/fullscreen/F3 = L.overlay_fullscreen("belly3", /obj/screen/fullscreen/belly/colorized/overlay)
 				F3.icon_state = "[belly_fullscreen]_l2"
 				F3.color = belly_fullscreen_color_trinary
+			else
+				L.clear_fullscreen("belly3")
 			if("[belly_fullscreen]_nc" in icon_states('icons/mob/screen_full_colorized_vore_overlays.dmi'))
 				var/obj/screen/fullscreen/F4 = L.overlay_fullscreen("belly4", /obj/screen/fullscreen/belly/colorized/overlay)
 				F4.icon_state = "[belly_fullscreen]_nc"
+			else
+				L.clear_fullscreen("belly4")
 			*/ //Chomp Disable END
-			
+
 			// Chomp EDIT Begin
 			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly, severity) //CHOMPEdit Start: preserving save data
 			F.icon = file("modular_chomp/icons/mob/vore_fullscreens/[belly_fullscreen].dmi")
@@ -517,14 +543,29 @@
 			I.color = belly_fullscreen_color4
 			I.alpha = belly_fullscreen_alpha
 			F.add_overlay(I)
-			if(L.liquidbelly_visuals && reagents.total_volume)
+			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0 || (LAZYLEN(contents) * item_mush_val) > 0))
+				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
+				I.color = mush_color
+				I.alpha = mush_alpha
+				var/total_mush_content = owner.nutrition + LAZYLEN(contents) * item_mush_val
+				I.pixel_y = -450 + (450 / max(max_mush, 1) * max(min(max_mush, total_mush_content), 1))
+				if(I.pixel_y < -450 + (450 / 100 * min_mush))
+					I.pixel_y = -450 + (450 / 100 * min_mush)
+				F.add_overlay(I)
+			if(L.liquidbelly_visuals && liquid_overlay && reagents.total_volume)
 				if(digest_mode == DM_HOLD && item_digest_mode == IM_HOLD)
 					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "calm")
 				else
 					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "bubbles")
-				I.color = reagentcolor
-				I.alpha = max(150, min(custom_max_volume, 255)) - (255 - belly_fullscreen_alpha)
-				I.pixel_y = -450 + (450 / custom_max_volume * reagents.total_volume)
+				if(custom_reagentcolor)
+					I.color = custom_reagentcolor
+				else
+					I.color = reagentcolor
+				if(custom_reagentalpha)
+					I.alpha = custom_reagentalpha
+				else
+					I.alpha = max(150, min(custom_max_volume, 255)) - (255 - belly_fullscreen_alpha)
+				I.pixel_y = -450 + min((450 / custom_max_volume * reagents.total_volume), 450 / 100 * max_liquid_level)
 				F.add_overlay(I)
 			F.update_for_view(L.client.view)
 		else
@@ -535,15 +576,31 @@
 			F.add_overlay(image(F.icon, belly_fullscreen+"-2"))
 			F.add_overlay(image(F.icon, belly_fullscreen+"-3"))
 			F.add_overlay(image(F.icon, belly_fullscreen+"-4"))
-			if(L.liquidbelly_visuals && reagents.total_volume)
+			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0 || (LAZYLEN(contents) * item_mush_val) > 0))
+				var/image/I
+				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
+				I.color = mush_color
+				I.alpha = mush_alpha
+				var/total_mush_content = owner.nutrition + LAZYLEN(contents) * item_mush_val
+				I.pixel_y = -450 + (450 / max(max_mush, 1) * max(min(max_mush, total_mush_content), 1))
+				if(I.pixel_y < -450 + (450 / 100 * min_mush))
+					I.pixel_y = -450 + (450 / 100 * min_mush)
+				F.add_overlay(I)
+			if(L.liquidbelly_visuals && liquid_overlay && reagents.total_volume)
 				var/image/I
 				if(digest_mode == DM_HOLD && item_digest_mode == IM_HOLD)
 					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "calm")
 				else
 					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "bubbles")
-				I.color = reagentcolor
-				I.alpha = max(150, min(custom_max_volume, 255)) - (255 - belly_fullscreen_alpha)
-				I.pixel_y = -450 + (450 / custom_max_volume * reagents.total_volume)
+				if(custom_reagentcolor)
+					I.color = custom_reagentcolor
+				else
+					I.color = reagentcolor
+				if(custom_reagentalpha)
+					I.alpha = custom_reagentalpha
+				else
+					I.alpha = max(150, min(custom_max_volume, 255)) - (255 - belly_fullscreen_alpha)
+				I.pixel_y = -450 + min((450 / custom_max_volume * reagents.total_volume), 450 / 100 * max_liquid_level)
 				F.add_overlay(I)
 			F.update_for_view(L.client.view)
 			 //CHOMPEdit End
@@ -582,7 +639,7 @@
 				F4.icon_state = "[belly_fullscreen]_nc"
 			*/ //Chomp Disable END
 			//CHOMPedit Start: preserving save data
-			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly, reagents.total_volume) 
+			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly, reagents.total_volume)
 			F.icon = file("modular_chomp/icons/mob/vore_fullscreens/[belly_fullscreen].dmi")
 			F.cut_overlays()
 			var/image/I = image(F.icon, belly_fullscreen)
@@ -601,14 +658,29 @@
 			I.color = belly_fullscreen_color4
 			I.alpha = belly_fullscreen_alpha
 			F.add_overlay(I)
-			if(L.liquidbelly_visuals && reagents.total_volume)
+			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0 || (LAZYLEN(contents) * item_mush_val) > 0))
+				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
+				I.color = mush_color
+				I.alpha = mush_alpha
+				var/total_mush_content = owner.nutrition + LAZYLEN(contents) * item_mush_val
+				I.pixel_y = -450 + (450 / max(max_mush, 1) * max(min(max_mush, total_mush_content), 1))
+				if(I.pixel_y < -450 + (450 / 100 * min_mush))
+					I.pixel_y = -450 + (450 / 100 * min_mush)
+				F.add_overlay(I)
+			if(L.liquidbelly_visuals && liquid_overlay && reagents.total_volume)
 				if(digest_mode == DM_HOLD && item_digest_mode == IM_HOLD)
 					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "calm")
 				else
 					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "bubbles")
-				I.color = reagentcolor
-				I.alpha = max(150, min(custom_max_volume, 255)) - (255 - belly_fullscreen_alpha)
-				I.pixel_y = -450 + (450 / custom_max_volume * reagents.total_volume)
+				if(custom_reagentcolor)
+					I.color = custom_reagentcolor
+				else
+					I.color = reagentcolor
+				if(custom_reagentalpha)
+					I.alpha = custom_reagentalpha
+				else
+					I.alpha = max(150, min(custom_max_volume, 255)) - (255 - belly_fullscreen_alpha)
+				I.pixel_y = -450 + min((450 / custom_max_volume * reagents.total_volume), 450 / 100 * max_liquid_level)
 				F.add_overlay(I)
 			F.update_for_view(L.client.view)
 		else
@@ -618,15 +690,31 @@
 			F.add_overlay(image(F.icon, belly_fullscreen+"-2"))
 			F.add_overlay(image(F.icon, belly_fullscreen+"-3"))
 			F.add_overlay(image(F.icon, belly_fullscreen+"-4"))
-			if(L.liquidbelly_visuals && reagents.total_volume)
+			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0 || (LAZYLEN(contents) * item_mush_val) > 0))
+				var/image/I
+				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
+				I.color = mush_color
+				I.alpha = mush_alpha
+				var/total_mush_content = owner.nutrition + LAZYLEN(contents) * item_mush_val
+				I.pixel_y = -450 + (450 / max(max_mush, 1) * max(min(max_mush, total_mush_content), 1))
+				if(I.pixel_y < -450 + (450 / 100 * min_mush))
+					I.pixel_y = -450 + (450 / 100 * min_mush)
+				F.add_overlay(I)
+			if(L.liquidbelly_visuals && liquid_overlay && reagents.total_volume)
 				var/image/I
 				if(digest_mode == DM_HOLD && item_digest_mode == IM_HOLD)
 					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "calm")
 				else
 					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "bubbles")
-				I.color = reagentcolor
-				I.alpha = max(150, min(custom_max_volume, 255)) - (255 - belly_fullscreen_alpha)
-				I.pixel_y = -450 + (450 / custom_max_volume * reagents.total_volume)
+				if(custom_reagentcolor)
+					I.color = custom_reagentcolor
+				else
+					I.color = reagentcolor
+				if(custom_reagentalpha)
+					I.alpha = custom_reagentalpha
+				else
+					I.alpha = max(150, min(custom_max_volume, 255)) - (255 - belly_fullscreen_alpha)
+				I.pixel_y = -450 + min((450 / custom_max_volume * reagents.total_volume), 450 / 100 * max_liquid_level)
 				F.add_overlay(I)
 			F.update_for_view(L.client.view)
 			//CHOMPEdit End
@@ -776,6 +864,9 @@
 	if(ismob(M))
 		var/mob/ourmob = M
 		ourmob.reset_view(null)
+
+	if(!owner.ckey && escape_stun)
+		owner.Weaken(escape_stun)
 
 	return 1
 
@@ -1238,9 +1329,9 @@
 		items_preserved |= item
 	else
 		owner.adjust_nutrition((nutrition_percent / 100) * 5 * digested)
-		if(isrobot(owner))
-			var/mob/living/silicon/robot/R = owner
-			R.cell.charge += ((nutrition_percent / 100) * 50 * digested)
+		// if(isrobot(owner)) //CHOMPEdit: Borgos can now use nutrition too.
+		//	var/mob/living/silicon/robot/R = owner
+		//	R.cell.charge += ((nutrition_percent / 100) * 50 * digested)
 		digested = TRUE //CHOMPEdit
 	return digested
 
@@ -1498,7 +1589,7 @@
 		owner.update_icon()
 	for(var/mob/living/M in contents)
 		M.updateVRPanel()
-	owner.updateicon()
+	owner.update_icon()
 
 //Autotransfer callback CHOMPEdit Start
 /obj/belly/proc/check_autotransfer(var/atom/movable/prey)
@@ -1580,6 +1671,16 @@
 	dupe.reagent_chosen = reagent_chosen
 	dupe.reagentid = reagentid
 	dupe.reagentcolor = reagentcolor
+	dupe.liquid_overlay = liquid_overlay
+	dupe.max_liquid_level = max_liquid_level
+	dupe.mush_overlay = mush_overlay
+	dupe.mush_color = mush_color
+	dupe.mush_alpha = mush_alpha
+	dupe.max_mush = max_mush
+	dupe.min_mush = min_mush
+	dupe.item_mush_val = item_mush_val
+	dupe.custom_reagentcolor = custom_reagentcolor
+	dupe.custom_reagentalpha = custom_reagentalpha
 	dupe.gen_cost = gen_cost
 	dupe.gen_amount = gen_amount
 	dupe.gen_time = gen_time
@@ -1614,6 +1715,7 @@
 	dupe.slow_brutal = slow_brutal
 	dupe.sound_volume = sound_volume
 	dupe.egg_name = egg_name
+	dupe.recycling = recycling
 	dupe.is_feedable = is_feedable //CHOMP end of variables from CHOMP
 
 	dupe.belly_fullscreen = belly_fullscreen

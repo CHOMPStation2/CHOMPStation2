@@ -290,8 +290,8 @@
 			// CHOMPedit start - Sounds for mech footsteps.
 			if ("powerloaderstep")
 				soundin = pick(
-					'modular_chomp/sound/effects/powerloader_step.ogg',
-					'modular_chomp/sound/effects/powerloader_step2.ogg')
+					'modular_chomp/sound/effects/mech/powerloader_step.ogg',
+					'modular_chomp/sound/effects/mech/powerloader_step2.ogg')
 			// CHOMPedit end.
 	return soundin
 

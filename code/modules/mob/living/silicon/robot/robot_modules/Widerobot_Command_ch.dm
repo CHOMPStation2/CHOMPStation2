@@ -4,8 +4,8 @@
 
 //Add ourselves to the borg list
 /hook/startup/proc/Modular_Borg_init_Unity()
-	robot_modules["UnityHound"] = /obj/item/weapon/robot_module/robot/chound //Add to module array
-	robot_module_types += "UnityHound" //Add ourselves to global
+	robot_modules["Command"] = /obj/item/weapon/robot_module/robot/chound //Add to module array
+	robot_module_types += "Command" //Add ourselves to global
 	return 1
 
 //Create our list of known languages.
@@ -19,7 +19,7 @@
 					LANGUAGE_ROOTLOCAL	= 0,
 					LANGUAGE_GUTTER		= 0,
 					LANGUAGE_SCHECHI	= 1,
-					LANGUAGE_EAL		= 1,
+					//LANGUAGE_EAL		= 1, //missed this in my other EAL removal. same reason as before, dont want borgs to lose eal
 					LANGUAGE_SIGN		= 0,
 					LANGUAGE_BIRDSONG	= 1,
 					LANGUAGE_SAGARU		= 1,
@@ -33,12 +33,7 @@
 
 //Build our Module
 /obj/item/weapon/robot_module/robot/chound
-	name = "Unity Hound Module"
-	sprites = list(
-					"Kcom" = "kcom",
-					"Raptor V-4.1" = "chraptor",
-					"Borgi" = "borgi"
-					)
+	name = "command robot module"
 	channels = list(
 			"Medical" = 1,
 			"Engineering" = 1,
@@ -52,7 +47,7 @@
 	pto_type = PTO_CIVILIAN
 	can_be_pushed = 0
 
-/obj/item/weapon/robot_module/robot/chound/New(var/mob/living/silicon/robot/R)
+/obj/item/weapon/robot_module/robot/chound/create_equipment(var/mob/living/silicon/robot/R)
 	src.modules += new /obj/item/weapon/pen/robopen(src)
 	src.modules += new /obj/item/weapon/form_printer(src)
 	src.modules += new /obj/item/weapon/gripper/paperwork(src)
@@ -63,35 +58,5 @@
 	src.emag = new /obj/item/weapon/stamp/chameleon(src)
 	//src.emag = new /obj/item/weapon/pen/chameleon(src)
 
-	var/datum/matter_synth/water = new /datum/matter_synth(500)
-	water.name = "Water reserves"
-	water.recharge_rate = 0
-	R.water_res = water
-	synths += water
-
-	var/obj/item/device/dogborg/tongue/T = new /obj/item/device/dogborg/tongue(src)
-	T.water = water
-	src.modules += T
-
-	var/obj/item/device/dogborg/sleeper/B = new /obj/item/device/dogborg/sleeper/command(src)
-	B.water = water
-	src.modules += B
-
-	R.icon = 'modular_chomp/icons/mob/widerobot_ch.dmi'
-	R.wideborg_dept = 'modular_chomp/icons/mob/widerobot_ch.dmi'
-	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
-	R.ui_style_vr = TRUE
-	R.pixel_x 	 = -16
-	R.old_x  	 = -16
-	R.default_pixel_x = -16
-	R.dogborg = TRUE
-	R.vore_capacity = 1
-	R.vore_capacity_ex = list("stomach" = 1)
-	R.wideborg = TRUE
-	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
-	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
-	R.verbs |= /mob/living/proc/toggle_rider_reins
-	R.verbs |= /mob/living/proc/shred_limb
-	R.verbs |= /mob/living/silicon/robot/proc/rest_style
-
+	src.modules += new /obj/item/device/dogborg/sleeper/command(src)
 	..()
