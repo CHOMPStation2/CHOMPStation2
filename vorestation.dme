@@ -3792,7 +3792,11 @@
 #include "code\modules\power\gravitygenerator_vr.dm"
 #include "code\modules\power\grid_checker.dm"
 #include "code\modules\power\lighting.dm"
+<<<<<<< HEAD
 #include "code\modules\power\lighting_ch.dm"
+=======
+#include "code\modules\power\lighting_neon.dm"
+>>>>>>> 68d8b5d3ce... Merge pull request #15295 from SatinIsle/RainCity
 #include "code\modules\power\lighting_vr.dm"
 #include "code\modules\power\lightswitch_vr.dm"
 #include "code\modules\power\port_gen.dm"
