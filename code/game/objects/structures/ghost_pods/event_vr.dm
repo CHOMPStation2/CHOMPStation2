@@ -61,7 +61,12 @@
 								  "Weretiger" = /mob/living/simple_mob/vore/weretiger,
 								  "Lesser Large Dragon" = /mob/living/simple_mob/vore/bigdragon/friendly/maintpred,	//CHOMPStation add.
 								  "Catslug" = /mob/living/simple_mob/vore/alienanimals/catslug,
-								  "Squirrel" = /mob/living/simple_mob/vore/squirrel/big
+								  "Squirrel" = /mob/living/simple_mob/vore/squirrel/big,
+								  "Pakkun" =/mob/living/simple_mob/vore/pakkun,
+								  "Snapdragon" =/mob/living/simple_mob/vore/pakkun/snapdragon,
+								  "Sand pakkun" = /mob/living/simple_mob/vore/pakkun/sand,
+								  "Fire pakkun" = /mob/living/simple_mob/vore/pakkun/fire,
+								  "Amethyst pakkun" = /mob/living/simple_mob/vore/pakkun/purple
 								  )
 
 /obj/structure/ghost_pod/ghost_activated/maintpred/create_occupant(var/mob/M)
