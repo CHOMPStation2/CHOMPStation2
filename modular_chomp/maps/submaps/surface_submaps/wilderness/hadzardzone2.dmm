@@ -40,15 +40,6 @@
 /obj/machinery/door/airlock/external,
 /turf/simulated/floor,
 /area/submap/Hadzardzone)
-"k" = (
-/obj/effect/map_effect/interval/effect_emitter/smoke/shock,
-/obj/effect/map_effect/interval/effect_emitter/smoke/fire,
-/turf/simulated/floor/lava{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
-/area/submap/Hadzardzone)
 "l" = (
 /obj/effect/landmark/loot_spawn,
 /obj/effect/landmark/loot_spawn,
@@ -1038,7 +1029,7 @@ W
 W
 s
 s
-k
+e
 f
 f
 G
