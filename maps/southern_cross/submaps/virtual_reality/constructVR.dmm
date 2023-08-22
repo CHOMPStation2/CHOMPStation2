@@ -4241,8 +4241,11 @@
 	},
 /area/vr/outdoors/powered)
 "eTS" = (
-/obj/machinery/button/mob_spawner_button,
-/turf/simulated/wall/r_wall,
+/obj/machinery/button/mob_spawner_button{
+	pixel_x = -10;
+	pixel_y = 0
+	},
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
 /area/vr/powered/building2)
 "eUa" = (
 /obj/effect/floor_decal/rust,
@@ -8281,20 +8284,20 @@
 "jHb" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/effect/floor_decal/industrial/warning,
-/obj/item/ammo_magazine/m9mml,
-/obj/item/ammo_magazine/m9mml,
-/obj/item/ammo_magazine/m9mml,
-/obj/item/ammo_magazine/m9mml,
-/obj/item/ammo_magazine/m9mml,
-/obj/item/ammo_magazine/m9mml,
-/obj/item/ammo_magazine/m9mml,
-/obj/item/ammo_magazine/m9mml,
-/obj/item/ammo_magazine/m9mml,
-/obj/item/ammo_magazine/m9mml,
-/obj/item/ammo_magazine/m9mml,
-/obj/item/ammo_magazine/m9mml,
-/obj/item/ammo_magazine/m9mml,
-/obj/item/ammo_magazine/m9mml,
+/obj/item/ammo_magazine/m9mmAdvanced,
+/obj/item/ammo_magazine/m9mmAdvanced,
+/obj/item/ammo_magazine/m9mmAdvanced,
+/obj/item/ammo_magazine/m9mmAdvanced,
+/obj/item/ammo_magazine/m9mmAdvanced,
+/obj/item/ammo_magazine/m9mmAdvanced,
+/obj/item/ammo_magazine/m9mmAdvanced,
+/obj/item/ammo_magazine/m9mmAdvanced,
+/obj/item/ammo_magazine/m9mmAdvanced,
+/obj/item/ammo_magazine/m9mmAdvanced,
+/obj/item/ammo_magazine/m9mmAdvanced,
+/obj/item/ammo_magazine/m9mmAdvanced,
+/obj/item/ammo_magazine/m9mmAdvanced,
+/obj/item/ammo_magazine/m9mmAdvanced,
 /turf/simulated/shuttle/floor/black,
 /area/vr/powered/armory)
 "jHo" = (
@@ -9644,6 +9647,12 @@
 "lkR" = (
 /turf/simulated/floor/wood/broken,
 /area/vr/powered)
+"lli" = (
+/obj/effect/floor_decal/industrial/arrows/red{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/vr/powered/building2)
 "llk" = (
 /obj/effect/floor_decal/chapel{
 	dir = 8
@@ -16865,8 +16874,10 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/powered/dungeon)
 "tim" = (
-/obj/machinery/button/mob_spawner_button/second,
-/turf/simulated/wall/r_wall,
+/obj/machinery/button/mob_spawner_button/second{
+	pixel_x = -10
+	},
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
 /area/vr/powered/building2)
 "tkb" = (
 /obj/machinery/light{
@@ -25095,8 +25106,8 @@ iDh
 rcK
 rcK
 rcK
-rcK
-rcK
+lli
+lli
 cdu
 tgD
 cwz
