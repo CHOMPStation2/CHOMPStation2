@@ -30,7 +30,6 @@
 	latejoin_vore = client.prefs_vr.latejoin_vore //CHOMPedit
 	throw_vore = client.prefs_vr.throw_vore
 	food_vore = client.prefs_vr.food_vore
-	allow_inbelly_spawning = client.prefs_vr.allow_inbelly_spawning
 	allow_spontaneous_tf = client.prefs_vr.allow_spontaneous_tf
 	digest_leave_remains = client.prefs_vr.digest_leave_remains
 	allowmobvore = client.prefs_vr.allowmobvore
