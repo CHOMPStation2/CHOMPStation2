@@ -2491,6 +2491,9 @@ const VoreUserPreferences = (props, context) => {
           <VoreUserPreferenceItem spec={preferences.toggle_food_vore} />
         </Flex.Item>
         <Flex.Item basis="32%" grow={1}>
+          <VoreUserPreferenceItem spec={preferences.spawnbelly} />
+        </Flex.Item>
+        <Flex.Item basis="32%" grow={1}>
           <VoreUserPreferenceItem spec={preferences.spawnprey} />
         </Flex.Item>
         <Flex.Item basis="32%">
