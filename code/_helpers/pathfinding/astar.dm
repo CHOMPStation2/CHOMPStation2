@@ -171,11 +171,11 @@
 		considering = get_step(current, NORTH)
 		ASTAR_HELL_DEFINE(considering)
 		considering = get_step(current, SOUTH)
-		ASTER_HELL_DEFINE(considering)
+		ASTAR_HELL_DEFINE(considering)
 		considering = get_step(current, EAST)
-		ASTER_HELL_DEFINE(considering)
+		ASTAR_HELL_DEFINE(considering)
 		considering = get_step(current, WEST)
-		ASTER_HELL_DEFINE(considering)
+		ASTAR_HELL_DEFINE(considering)
 
 		#ifdef ASTAR_DEBUGGING
 		top.pos.color = ASTAR_VISUAL_COLOR_CLOSED

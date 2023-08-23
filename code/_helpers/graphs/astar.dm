@@ -118,6 +118,6 @@
 			open.enqueue(next_node)
 
 			if(max_nodes && open.length() > max_nodes)
-				open.remove_index(open.length())
+				open.remove(open.length())
 
 	return path
