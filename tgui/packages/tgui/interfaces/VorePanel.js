@@ -2190,11 +2190,6 @@ const VoreUserPreferences = (props, context) => {
         disabled: 'Throw Vore Disabled',
       },
     },
-<<<<<<< HEAD
-    spawnbelly: {
-      action: 'toggle_latejoin_vore',
-      test: latejoin_vore,
-=======
     toggle_food_vore: {
       action: 'toggle_food_vore',
       test: food_vore,
@@ -2210,10 +2205,9 @@ const VoreUserPreferences = (props, context) => {
         disabled: 'Food Vore Disabled',
       },
     },
-    inbelly_spawning: {
-      action: 'toggle_allow_inbelly_spawning',
-      test: allow_inbelly_spawning,
->>>>>>> a5b55d4da9... Merge pull request #15292 from Heroman3003/food-vore
+    spawnbelly: {
+      action: 'toggle_latejoin_vore',
+      test: latejoin_vore,
       tooltip: {
         main: 'Toggle late join vore spawnpoint.',
         enable: 'Click here to turn on vorish spawnpoint.',
@@ -2494,17 +2488,10 @@ const VoreUserPreferences = (props, context) => {
           <VoreUserPreferenceItem spec={preferences.toggle_throw_vore} />
         </Flex.Item>
         <Flex.Item basis="32%">
-<<<<<<< HEAD
-          <VoreUserPreferenceItem spec={preferences.spawnbelly} />
-        </Flex.Item>
-        <Flex.Item basis="32%" grow={1}>
-          <VoreUserPreferenceItem spec={preferences.spawnprey} />
-=======
           <VoreUserPreferenceItem spec={preferences.toggle_food_vore} />
         </Flex.Item>
         <Flex.Item basis="32%" grow={1}>
-          <VoreUserPreferenceItem spec={preferences.inbelly_spawning} />
->>>>>>> a5b55d4da9... Merge pull request #15292 from Heroman3003/food-vore
+          <VoreUserPreferenceItem spec={preferences.spawnprey} />
         </Flex.Item>
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.noisy} />
@@ -2512,12 +2499,9 @@ const VoreUserPreferences = (props, context) => {
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.noisy_full} />
         </Flex.Item>
-<<<<<<< HEAD
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.resize} />
         </Flex.Item>
-=======
->>>>>>> a5b55d4da9... Merge pull request #15292 from Heroman3003/food-vore
         <Flex.Item basis="32%" grow={1}>
           <VoreUserPreferenceItem
             spec={preferences.steppref}
