@@ -204,3 +204,13 @@
   - qol: modernized pray input dialog
   - qol: prayer message filter added to vchat
   - admin: enables pray logging
+2023-08-23:
+  FluffMedic:
+  - maptweak: the hadzard zone POI areas have better placed smoke clouds, and better
+      loot.
+  Upstream:
+  - rscadd: Adds food-vore (putting micros in food-objects)
+  - rscadd: vwag ringtail
+  - rscadd: raccoon tail
+  tacoguy7765093:
+  - maptweak: VR map improvements
