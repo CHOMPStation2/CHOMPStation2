@@ -2009,6 +2009,7 @@ const VoreUserPreferences = (props, context) => {
     stumble_vore,
     slip_vore,
     throw_vore,
+    food_vore,
     nutrition_message_visible,
     weight_message_visible,
     eating_privacy_global,
@@ -2187,6 +2188,21 @@ const VoreUserPreferences = (props, context) => {
       content: {
         enabled: 'Throw Vore Enabled',
         disabled: 'Throw Vore Disabled',
+      },
+    },
+    toggle_food_vore: {
+      action: 'toggle_food_vore',
+      test: food_vore,
+      tooltip: {
+        main:
+          'Allows for food related spontaneous vore to occur. ' +
+          ' Note, you still need spontaneous vore pred and/or prey enabled.',
+        enable: 'Click here to allow for food vore.',
+        disable: 'Click here to disable food vore.',
+      },
+      content: {
+        enabled: 'Food Vore Enabled',
+        disabled: 'Food Vore Disabled',
       },
     },
     spawnbelly: {
@@ -2472,6 +2488,9 @@ const VoreUserPreferences = (props, context) => {
           <VoreUserPreferenceItem spec={preferences.toggle_throw_vore} />
         </Flex.Item>
         <Flex.Item basis="32%">
+          <VoreUserPreferenceItem spec={preferences.toggle_food_vore} />
+        </Flex.Item>
+        <Flex.Item basis="32%" grow={1}>
           <VoreUserPreferenceItem spec={preferences.spawnbelly} />
         </Flex.Item>
         <Flex.Item basis="32%" grow={1}>
@@ -2492,7 +2511,7 @@ const VoreUserPreferences = (props, context) => {
             tooltipPosition="top"
           />
         </Flex.Item>
-        <Flex.Item basis="32%" grow={1}>
+        <Flex.Item basis="32%">
           <VoreUserPreferenceItem
             spec={preferences.vore_fx}
             tooltipPosition="top"
@@ -2504,13 +2523,13 @@ const VoreUserPreferences = (props, context) => {
             tooltipPosition="top"
           />
         </Flex.Item>
-        <Flex.Item basis="32%">
+        <Flex.Item basis="32%" grow={1}>
           <VoreUserPreferenceItem
             spec={preferences.pickuppref}
             tooltipPosition="top"
           />
         </Flex.Item>
-        <Flex.Item basis="32%" grow={1}>
+        <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.spontaneous_tf} />
         </Flex.Item>
         <Flex.Item basis="32%">
