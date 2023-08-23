@@ -138,6 +138,8 @@
 		#ifdef ASTAR_DEBUGGING
 		top.pos.color = ASTAR_VISUAL_COLOR_CURRENT
 		sleep(ASTAR_VISUAL_DELAY)
+		#else
+		CHECK_TICK
 		#endif
 
 		// get distance and check completion
