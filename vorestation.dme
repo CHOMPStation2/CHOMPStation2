@@ -3792,6 +3792,7 @@
 #include "code\modules\power\gravitygenerator_vr.dm"
 #include "code\modules\power\grid_checker.dm"
 #include "code\modules\power\lighting.dm"
+#include "code\modules\power\lighting_neon.dm"
 #include "code\modules\power\lighting_ch.dm"
 #include "code\modules\power\lighting_vr.dm"
 #include "code\modules\power\lightswitch_vr.dm"
