@@ -5165,10 +5165,10 @@
 /obj/item/weapon/gun/energy/medigun,
 /obj/item/weapon/gun/energy/medigun,
 /obj/item/weapon/gun/energy/medigun,
-/obj/item/slime_extract/yellow,
-/obj/item/slime_extract/yellow,
-/obj/item/slime_extract/yellow,
-/obj/item/slime_extract/yellow,
+/obj/item/weapon/cell/slime,
+/obj/item/weapon/cell/slime,
+/obj/item/weapon/cell/slime,
+/obj/item/weapon/cell/slime,
 /turf/simulated/floor/reinforced,
 /area/vr/powered/bluebase)
 "fWQ" = (
@@ -13372,10 +13372,10 @@
 /obj/item/weapon/gun/energy/medigun,
 /obj/item/weapon/gun/energy/medigun,
 /obj/item/weapon/gun/energy/medigun,
-/obj/item/slime_extract/yellow,
-/obj/item/slime_extract/yellow,
-/obj/item/slime_extract/yellow,
-/obj/item/slime_extract/yellow,
+/obj/item/weapon/cell/slime,
+/obj/item/weapon/cell/slime,
+/obj/item/weapon/cell/slime,
+/obj/item/weapon/cell/slime,
 /turf/simulated/shuttle/floor/black,
 /area/vr/powered/armory)
 "pgX" = (
@@ -21265,10 +21265,10 @@
 /obj/item/weapon/gun/energy/medigun,
 /obj/item/weapon/gun/energy/medigun,
 /obj/item/weapon/gun/energy/medigun,
-/obj/item/slime_extract/yellow,
-/obj/item/slime_extract/yellow,
-/obj/item/slime_extract/yellow,
-/obj/item/slime_extract/yellow,
+/obj/item/weapon/cell/slime,
+/obj/item/weapon/cell/slime,
+/obj/item/weapon/cell/slime,
+/obj/item/weapon/cell/slime,
 /turf/simulated/floor/reinforced,
 /area/vr/powered/redbase)
 "xWh" = (
