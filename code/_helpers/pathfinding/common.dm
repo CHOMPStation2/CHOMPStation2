@@ -76,6 +76,9 @@ GLOBAL_DATUM_INIT(generic_pathfinding_actor, /atom/movable/pathfinding_predicate
 	RETURN_TYPE(/list)
 	CRASH("Not implemented on base type.")
 
+/datum/pathfinding/proc/debug_log_string()
+	return json_encode(vars)
+
 /datum/pathfinding_context
 
 /datum/pathfinding_context/proc/adjacency(turf/A, turf/B, atom/movable/actor, datum/pathfinding/search)

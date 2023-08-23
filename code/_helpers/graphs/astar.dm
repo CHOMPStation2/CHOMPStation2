@@ -41,9 +41,9 @@
 
 // Also added 'exclude' turf to avoid travelling over; defaults to null
 
-/PathNode
+/datum/graph_astar_node
 	var/datum/position
-	var/PathNode/previous_node
+	var/datum/graph_astar_node/previous_node
 
 	var/best_estimated_cost
 	var/estimated_cost
@@ -51,7 +51,7 @@
 	var/cost
 	var/nodes_traversed
 
-/PathNode/New(_position, _previous_node, _known_cost, _cost, _nodes_traversed)
+/datum/graph_astar_node/New(_position, _previous_node, _known_cost, _cost, _nodes_traversed)
 	position = _position
 	previous_node = _previous_node
 
@@ -62,11 +62,11 @@
 	best_estimated_cost = estimated_cost
 	nodes_traversed = _nodes_traversed
 
-/proc/PathWeightCompare(PathNode/a, PathNode/b)
+/proc/cmp_graph_astar_node(datum/graph_astar_node/a, datum/graph_astar_node/b)
 	return a.estimated_cost - b.estimated_cost
 
-/proc/AStar(start, end, adjacent, dist, max_nodes, max_node_depth = 30, min_target_dist = 0, min_node_dist, id, datum/exclude)
-	var/datum/priority_queue/open = new(/proc/PathWeightCompare)
+/proc/graph_astar(start, end, adjacent, dist, max_nodes, max_node_depth = 30, min_target_dist = 0, min_node_dist, id, datum/exclude)
+	var/datum/priority_queue/open = new(/proc/cmp_graph_astar_node)
 	var/list/closed = list()
 	var/list/path
 	var/list/path_node_by_position = list()
@@ -74,10 +74,10 @@
 	if(!start)
 		return 0
 
-	open.enqueue(new /PathNode(start, null, 0, call(start, dist)(end), 0))
+	open.enqueue(new /datum/graph_astar_node(start, null, 0, call(start, dist)(end), 0))
 
 	while(!open.is_empty() && !path)
-		var/PathNode/current = open.dequeue()
+		var/datum/graph_astar_node/current = open.dequeue()
 		closed.Add(current.position)
 
 		if(current.position == end || call(current.position, dist)(end) <= min_target_dist)
@@ -106,14 +106,14 @@
 
 			//handle removal of sub-par positions
 			if(datum in path_node_by_position)
-				var/PathNode/target = path_node_by_position[datum]
+				var/datum/graph_astar_node/target = path_node_by_position[datum]
 				if(target.best_estimated_cost)
 					if(best_estimated_cost + call(datum, dist)(end) < target.best_estimated_cost)
 						open.remove_item(target)
 					else
 						continue
 
-			var/PathNode/next_node = new (datum, current, best_estimated_cost, call(datum, dist)(end), current.nodes_traversed + 1)
+			var/datum/graph_astar_node/next_node = new (datum, current, best_estimated_cost, call(datum, dist)(end), current.nodes_traversed + 1)
 			path_node_by_position[datum] = next_node
 			open.enqueue(next_node)
 
