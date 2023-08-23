@@ -43,14 +43,18 @@ GLOBAL_DATUM_INIT(generic_pathfinding_actor, /atom/movable/pathfinding_predicate
 	/// this just tells the algorithm when it should give up
 	/// different algorithms respond differently to this.
 	var/max_path_length
-	/// context to call adjacency call on
+	/// context to call adjacency/distance call on
 	/// null = global proc
-	var/adjacency_context
+	var/datum/context
 	/// checks if we can go to a turf
 	/// defaults to default density / canpass / etc checks
 	/// called with (turf/A, turf/B, atom/movable/actor, datum/pathfinding/pathfinding)
 	/// it should return the distance to that turf
-	var/adjacency_call
+	var/adjacency_call = /proc/default_pathfinding_adjacency
+	/// checks distance from turf to target / end turf
+	/// defaults to just get dist
+	/// called with (turf/current, turf/goal)
+	var/heuristic_call = /proc/default_pathfinding_heuristic
 	/// danger flags to ignore
 	var/turf_path_danger_ignore = NONE
 
@@ -73,11 +77,12 @@ GLOBAL_DATUM_INIT(generic_pathfinding_actor, /atom/movable/pathfinding_predicate
 	CRASH("Not implemented on base type.")
 
 /datum/pathfinding_context
-	/// normal proc on turf to call with (other, actor, search)
-	var/turf_call = /turf/proc/pathfinding_adjacency
 
-/datum/pathfinding_context/adjacency(turf/A, turf/B, atom/movable/actor, datum/pathfinding/search)
-	return call(A, turf_call)(B, actor, search)
+/datum/pathfinding_context/proc/adjacency(turf/A, turf/B, atom/movable/actor, datum/pathfinding/search)
+	return default_pathfinding_adjacency(A, B, actor, search)
+
+/datum/pathfinding_context/proc/heuristic(turf/current, turf/goal)
+	return default_pathfinding_heuristic(current, goal)
 
 /datum/pathfinding_context/ignoring
 	/// ignore typecache
@@ -90,8 +95,15 @@ GLOBAL_DATUM_INIT(generic_pathfinding_actor, /atom/movable/pathfinding_predicate
 		return FALSE
 	if(!isnull(turf_ignore_cache) && turf_ignore_cache[B.type])
 		return FALSE
-	return call(A, turf_call)(B, actor, search)
+	return default_pathfinding_adjacency(A, B, actor, search)
 
-/turf/proc/pathfinding_adjacency(turf/other, atom/movable/actor, datum/pathfinding/search)
+//* ENSURE BELOW PROCS MATCH EACH OTHER IN THEIR PAIRS *//
+//* This allows for fast default implementations while *//
+//* allowing for advanced checks when a pathfinding    *//
+//* context is supplied.                               *//
 
-	#warn impl
+/proc/default_pathfinding_adjacency(turf/A, turf/B, atom/movable/actor, datum/pathfinding/search)
+
+/proc/default_pathfinding_heuristic(turf/current, turf/goal)
+
+#warn impl above

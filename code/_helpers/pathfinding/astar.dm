@@ -55,7 +55,9 @@
 
 #define ASTAR_HELL_DEFINE(TURF) \
 	if(!isnull(TURF)) { \
-		
+		if(isnull(context)? call(adjacency_call)(current, considering, actor, src) : call(context, adjacency_call)(current, considering, actor, src)) { \
+			
+		} \
 	}
 
 /proc/AStar(start, end, adjacent, dist, max_nodes, max_node_depth = 30, min_target_dist = 0, min_node_dist, id, datum/exclude)
@@ -100,6 +102,7 @@
 	var/max_depth = src.max_path_length
 	var/turf/goal = src.goal
 	var/target_distance = src.target_distance
+	var/atom/movable/actor = src.actor
 	// add operating vars
 	var/turf/current
 	var/turf/considering
@@ -112,6 +115,9 @@
 		// get best node
 		var/datum/astar_node/top = open.dequeue()
 		current = top.pos
+		#ifdef ASTAR_DEBUGGING
+		top.pos.color = ASTAR_VISUAL_COLOR_CURRENT
+		#endif
 
 		// get distance and check completion
 		if(get_dist(top.pos, goal) <= target_distance)
@@ -136,6 +142,9 @@
 
 		// too deep, abort
 		if(top.depth >= max_depth)
+			#ifdef ASTAR_DEBUGGING
+			top.pos.color = ASTAR_VISUAL_COLOR_CLOSED
+			#endif
 			continue
 
 		considering = get_step(current, NORTH)
@@ -146,6 +155,10 @@
 		ASTER_HELL_DEFINE(considering)
 		considering = get_step(current, WEST)
 		ASTER_HELL_DEFINE(considering)
+
+		#ifdef ASTAR_DEBUGGING
+		top.pos.color = ASTAR_VISUAL_COLOR_CLOSED
+		#endif
 
 #undef ASTAR_HELL_DEFINE
 
