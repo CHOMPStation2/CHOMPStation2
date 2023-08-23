@@ -131,7 +131,7 @@
 	open.enqueue(initial_node)
 	node_by_turf[start] = initial_node
 
-	while(length(open))
+	while(length(open.queue))
 		// get best node
 		var/datum/astar_node/top = open.dequeue()
 		current = top.pos

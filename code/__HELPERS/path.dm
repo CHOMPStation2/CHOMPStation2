@@ -1,45 +1,5 @@
 #warn get rid of this file
 
-/**
- * This file contains the stuff you need for using JPS (Jump Point Search) pathing, an alternative to A* that skips
- * over large numbers of uninteresting tiles resulting in much quicker pathfinding solutions. Mind that diagonals
- * cost the same as cardinal moves currently, so paths may look a bit strange, but should still be optimal.
- */
-
-/**
- * This is the proc you use whenever you want to have pathfinding more complex than "try stepping towards the thing".
- * If no path was found, returns an empty list, which is important for bots like medibots who expect an empty list rather than nothing.
- *
- * Arguments:
- * * caller: The movable atom that's trying to find the path
- * * end: What we're trying to path to. It doesn't matter if this is a turf or some other atom, we're gonna just path to the turf it's on anyway
- * * max_distance: The maximum number of steps we can take in a given path to search (default: 30, 0 = infinite)
- * * mintargetdistance: Minimum distance to the target before path returns, could be used to get near a target, but not right to it - for an AI mob with a gun, for example.
- * * id: An ID card representing what access we have and what doors we can open. Its location relative to the pathing atom is irrelevant
- * * simulated_only: Whether we consider turfs without atmos simulation (AKA do we want to ignore space)
- * * exclude: If we want to avoid a specific turf, like if we're a mulebot who already got blocked by some turf
- * * skip_first: Whether or not to delete the first item in the path. This would be done because the first item is the starting tile, which can break movement for some creatures.
- */
-/proc/get_path_to(caller, end, max_distance = 30, mintargetdist, id=null, simulated_only = TRUE, turf/exclude, skip_first=TRUE)
-	if(!caller || !get_turf(end))
-		return
-
-	var/l = SSpathfinder.mobs.getfree(caller)
-	while(!l)
-		stoplag(3)
-		l = SSpathfinder.mobs.getfree(caller)
-
-	var/list/path
-	var/datum/pathfind/pathfind_datum = new(caller, end, id, max_distance, mintargetdist, simulated_only, exclude)
-	path = pathfind_datum.search()
-	qdel(pathfind_datum)
-
-	SSpathfinder.mobs.found(l)
-	if(!path)
-		path = list()
-	if(length(path) > 0 && skip_first)
-		path.Cut(1,2)
-	return path
 
 /**
  * A helper macro to see if it's possible to step from the first turf into the second one, minding things like door access and directional windows.
@@ -237,7 +197,7 @@
 			return
 		else
 			sources[current_turf] = original_turf
-			
+
 		if(parent_node && parent_node.number_tiles + steps_taken > max_distance)
 			return
 
