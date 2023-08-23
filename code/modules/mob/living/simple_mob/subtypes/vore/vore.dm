@@ -29,11 +29,8 @@
 	can_be_drop_pred = client.prefs_vr.can_be_drop_pred
 	latejoin_vore = client.prefs_vr.latejoin_vore //CHOMPedit
 	throw_vore = client.prefs_vr.throw_vore
-<<<<<<< HEAD
-=======
 	food_vore = client.prefs_vr.food_vore
 	allow_inbelly_spawning = client.prefs_vr.allow_inbelly_spawning
->>>>>>> a5b55d4da9... Merge pull request #15292 from Heroman3003/food-vore
 	allow_spontaneous_tf = client.prefs_vr.allow_spontaneous_tf
 	digest_leave_remains = client.prefs_vr.digest_leave_remains
 	allowmobvore = client.prefs_vr.allowmobvore
