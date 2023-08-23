@@ -208,5 +208,7 @@
   FluffMedic:
   - maptweak: the hadzard zone POI areas have better placed smoke clouds, and better
       loot.
+  Upstream:
+  - rscadd: Adds food-vore (putting micros in food-objects)
   tacoguy7765093:
   - maptweak: VR map improvements
