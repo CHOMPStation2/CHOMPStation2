@@ -13,9 +13,6 @@
 	#define ASTAR_VISUAL_COLOR_OPEN "#0000ff"
 	#define ASTAR_VISUAL_COLOR_CURRENT "#ffff00"
 	#define ASTAR_VISUAL_COLOR_FOUND "#00ff00"
-#endif
-
-#ifdef ASTAR_DEBUGGING
 
 /proc/astar_wipe_colors_after(list/turf/turfs, time)
 	set waitfor = FALSE
@@ -28,6 +25,9 @@
 
 #endif
 
+/// this is almost a megabyte
+#define ASTAR_SANE_NODE_LIMIT 15000
+
 /datum/astar_node
 	/// turf
 	var/turf/pos
@@ -36,55 +36,69 @@
 
 	/// our heuristic
 	var/heuristic
-	/// our current best cost (so cost from prev)
-	var/minimum_cost
 	/// our inherent cost
 	var/weight
 	/// node depth to get to here
 	var/depth
+	/// cost to get here from prev - built off of prev
+	var/cost
 
-/datum/astar_node/New(turf/pos, datum/astar_node/prev, heuristic, weight, depth)
+/datum/astar_node/New(turf/pos, datum/astar_node/prev, heuristic, weight, depth, cost)
 	src.pos = pos
 	src.prev = prev
 	src.heuristic = heuristic
 	src.weight = weight
 	src.depth = depth
+	src.cost = cost
 
 /proc/cmp_astar_node(datum/astar_node/A, datum/astar_node/B)
 	return A.heuristic - B.heuristic
 
-#define ASTAR_HELL_DEFINE(TURF) \
-	if(!isnull(TURF)) { \
-		if(isnull(context)? call(adjacency_call)(current, considering, actor, src) : call(context, adjacency_call)(current, considering, actor, src)) { \
-			
-		} \
-	}
-
-/proc/AStar(start, end, adjacent, dist, max_nodes, max_node_depth = 30, min_target_dist = 0, min_node_dist, id, datum/exclude)
-	var/list/path_node_by_position = list()
-
-	while(!open.is_empty() && !path)
-		for(var/datum/datum in call(current.position, adjacent)(id))
-			if(datum == exclude)
-				continue
-
-			var/best_estimated_cost = current.estimated_cost + call(current.position, dist)(datum)
-
-			//handle removal of sub-par positions
-			if(datum in path_node_by_position)
-				var/PathNode/target = path_node_by_position[datum]
-				if(target.best_estimated_cost)
-					if(best_estimated_cost + call(datum, dist)(end) < target.best_estimated_cost)
-						open.remove_item(target)
-					else
-						continue
-
-			var/PathNode/next_node = new (datum, current, best_estimated_cost, call(datum, dist)(end), current.nodes_traversed + 1)
-			path_node_by_position[datum] = next_node
-			open.enqueue(next_node)
-
-			if(max_nodes && open.length() > max_nodes)
-				open.remove_index(open.length())
+#define ASTAR_HEURISTIC_CALL(TURF) isnull(context)? call(heuristic_call)(TURF, goal) : call(context, heuristic_call)(TURF, goal)
+#define ASTAR_ADJACENCY_CALL(A, B) isnull(context)? call(adjacency_call)(A, B, actor, src) : call(context, adjacency_call)(A, B, actor, src)
+#ifdef ASTAR_DEBUGGING
+	#define ASTAR_HELL_DEFINE(TURF) \
+		if(!isnull(TURF)) { \
+			if(ASTAR_ADJACENCY_CALL(current, considering)) { \
+				considering_heuristic = ASTAR_HEURISTIC_CALL(considering); \
+				considering_cost = top.cost + considering.path_weight; \
+				considering_node = node_by_turf[considering]; \
+				if(isnull(considering_node)) { \
+					considering_node = new /datum/astar_node(considering, top, considering_heuristic, considering.path_weight, top.depth + 1, considering_cost); \
+					open.enqueue(considering_node); \
+					node_by_turf[considering] = considering_node; \
+					turfs_got_colored[considering] = TRUE; \
+					considering.color = ASTAR_VISUAL_COLOR_OPEN; \
+				} \
+				else { \
+					if(considering_node.cost > considering_cost) { \
+						considering_node.cost = considering_cost; \
+						considering_node.prev = top; \
+					} \
+				} \
+			} \
+		}
+#else
+	#define ASTAR_HELL_DEFINE(TURF) \
+		if(!isnull(TURF)) { \
+			if(ASTAR_ADJACENCY_CALL(current, considering)) { \
+				considering_heuristic = ASTAR_HEURISTIC_CALL(considering); \
+				considering_cost = top.cost + considering.path_weight; \
+				considering_node = node_by_turf[considering]; \
+				if(isnull(considering_node)) { \
+					considering_node = new /datum/astar_node(considering, top, considering_heuristic, considering.path_weight, top.depth + 1, considering_cost); \
+					open.enqueue(considering_node); \
+					node_by_turf[considering] = considering_node; \
+				} \
+				else { \
+					if(considering_node.cost > considering_cost) { \
+						considering_node.cost = considering_cost; \
+						considering_node.prev = top; \
+					} \
+				} \
+			} \
+		}
+#endif
 
 /**
  * AStar
@@ -106,10 +120,16 @@
 	// add operating vars
 	var/turf/current
 	var/turf/considering
+	var/considering_heuristic
+	var/considering_cost
+	var/datum/astar_node/considering_node
+	var/list/node_by_turf = list()
 	// make queue
 	var/datum/priority_queue/open = new(/proc/cmp_astar_node)
 	// add initial node
-	open.enqueue(new /datum/astar_node(start, null, , start.path_weight, 0))
+	var/datum/astar_node/initial_node = new(start, null, ASTAR_HEURISTIC_CALL(start), start.path_weight, 0, 0)
+	open.enqueue(initial_node)
+	node_by_turf[start] = initial_node
 
 	while(length(open))
 		// get best node
@@ -117,6 +137,7 @@
 		current = top.pos
 		#ifdef ASTAR_DEBUGGING
 		top.pos.color = ASTAR_VISUAL_COLOR_CURRENT
+		sleep(ASTAR_VISUAL_DELAY)
 		#endif
 
 		// get distance and check completion
@@ -160,7 +181,14 @@
 		top.pos.color = ASTAR_VISUAL_COLOR_CLOSED
 		#endif
 
+		if(length(open.queue) > ASTAR_SANE_NODE_LIMIT)
+			CRASH("A* hit node limit - something went horribly wrong! args: [json_encode(args)]; vars: [json_encode(vars)]")
+
 #undef ASTAR_HELL_DEFINE
+#undef ASTAR_HEURISTIC_CALL
+#undef ASTAR_ADJACENCY_CALL
+
+#undef ASTAR_SANE_NODE_LIMIT
 
 #ifdef ASTAR_DEBUGGING
 	#undef ASTAR_DEBUGGING
