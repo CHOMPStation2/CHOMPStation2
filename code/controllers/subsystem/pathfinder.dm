@@ -17,6 +17,10 @@ SUBSYSTEM_DEF(pathfinder)
 	/// pathfinding calls blocked
 	var/pathfinding_blocked = 0
 
+/**
+ * be aware that this emits a set of disjunct nodes
+ * use [jps_output_turfs()] to convert them into a proper turf path list.
+ */
 /datum/controller/subsystem/pathfinder/proc/get_path_jps(atom/movable/actor, turf/goal, turf/start = get_turf(actor), target_distance = 1, max_path_length = 128)
 	var/datum/pathfinding/jps/instance = new(actor, start, goal, target_distance, max_path_length)
 	return run_pathfinding(instance)
@@ -28,8 +32,15 @@ SUBSYSTEM_DEF(pathfinder)
 /datum/controller/subsystem/pathfinder/proc/default_ai_pathfinding(datum/ai_holder/holder, turf/goal)
 	return get_path_astar(holder.holder, goal, get_turf(holder.holder), 1, 128)
 
-/datum/controller/subsystem/pathfinder/proc/default_circuit_pathfinding(obj/item/electronic_assembly/assembly, turf/goal)
-	return jps_output_turfs(get_path_jps(assembly, goal, get_turf(assembly), 0, 128))
+/datum/controller/subsystem/pathfinder/proc/default_circuit_pathfinding(obj/item/electronic_assembly/assembly, turf/goal, min_dist = 1, max_path = 128)
+	var/datum/pathfinding/jps/instance = new(assembly, get_turf(assembly), goal, min_dist, max_path)
+	instance.ss13_with_access = assembly.access_card?.access?.Copy()
+	return jps_output_turfs(run_pathfinding(instance))
+
+/datum/controller/subsystem/pathfinder/proc/default_bot_pathfinding(mob/living/bot/bot, turf/goal, min_dist = 1, max_path = 128)
+	var/datum/pathfinding/jps/instance = new(bot, get_turf(bot), goal, min_dist, max_path)
+	instance.ss13_with_access = bot.botcard.access?.Copy()
+	return jps_output_turfs(run_pathfinding(instance))
 
 /datum/controller/subsystem/pathfinder/proc/run_pathfinding(datum/pathfinding/instance)
 	var/started = world.time

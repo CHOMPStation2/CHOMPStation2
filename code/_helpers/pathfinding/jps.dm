@@ -291,9 +291,9 @@
  * takes a list of turf nodes from JPS return and converts it into a proper list of turfs to walk
  */
 /proc/jps_output_turfs(list/turf/nodes)
-	. = list()
 	if(isnull(nodes))
 		return
+	. = list()
 	switch(length(nodes))
 		if(0)
 			return
