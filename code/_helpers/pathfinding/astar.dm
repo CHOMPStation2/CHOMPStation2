@@ -8,7 +8,7 @@
 
 #warn ASTAR pathfinding visualizations enabled
 /// visualization delay
-GLOBAL_VAR_INIT(astar_visualization_delay, 0.2 SECONDS)
+GLOBAL_VAR_INIT(astar_visualization_delay, 0.05 SECONDS)
 /// how long to persist the visuals
 GLOBAL_VAR_INIT(astar_visualization_persist, 3 SECONDS)
 #define ASTAR_VISUAL_COLOR_CLOSED "#ff0000"
