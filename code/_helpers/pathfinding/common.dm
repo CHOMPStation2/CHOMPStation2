@@ -116,10 +116,10 @@ GLOBAL_DATUM_INIT(generic_pathfinding_actor, /atom/movable/pathfinding_predicate
 		var/td1 = dir & (NORTH|SOUTH)
 		var/td2 = dir & (EAST|WEST)
 		var/turf/scan = get_step(A, td1)
-		if(!isnull(scan) && default_pathfinding_adjacency(A, scan, actor, saerch) && default_pathfinding_adjacency(scan, B, actor, search))
+		if(!isnull(scan) && default_pathfinding_adjacency(A, scan, actor, search) && default_pathfinding_adjacency(scan, B, actor, search))
 			return TRUE
 		scan = get_step(A, td2)
-		if(!isnull(scan) && default_pathfinding_adjacency(A, scan, actor, saerch) && default_pathfinding_adjacency(scan, B, actor, search))
+		if(!isnull(scan) && default_pathfinding_adjacency(A, scan, actor, search) && default_pathfinding_adjacency(scan, B, actor, search))
 			return TRUE
 		return FALSE
 

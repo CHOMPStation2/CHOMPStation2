@@ -102,7 +102,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 
 	var/mob/living/carbon/human/H = src
 	if(istype(H))
-		var/saved_dna = H.dna.Clone() /// Prevent transform from breaking. 
+		var/saved_dna = H.dna.Clone() /// Prevent transform from breaking.
 		var/datum/absorbed_dna/newDNA = new(H.real_name, saved_dna, H.species.name, H.languages, H.identifying_gender, H.flavor_texts, H.modifiers)
 		absorbDNA(newDNA)
 
@@ -209,8 +209,8 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 		to_chat(src, "<span class='warning'>We cannot reach \the [M] with a sting!</span>")
 		return 0 //One is inside, the other is outside something.
 	// Maximum queued turfs set to 25; I don't *think* anything raises sting_range above 2, but if it does the 25 may need raising
-	if(!AStar(src.loc, M.loc, /turf/proc/AdjacentTurfsRangedSting, /turf/proc/Distance, max_nodes=25, max_node_depth=sting_range)) //If we can't find a path, fail
-		to_chat(src, "<span class='warning'>We cannot find a path to sting \the [M] by!</span>")
+	if(!SSpathfinder.get_path_jps(src, get_turf(src), get_turf(M), max_path_length = 25))
+		to_chat(src, SPAN_WARNING("We cannot find a path to sting \the [M] by!"))
 		return 0
 	return 1
 

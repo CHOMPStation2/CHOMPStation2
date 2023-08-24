@@ -1473,7 +1473,7 @@ About the new airlock wires panel:
 	return ..(M)
 
 /obj/machinery/door/airlock/can_pathfinding_pass(atom/movable/actor, dir, datum/pathfinding/search)
-	return ..() || ((!isnull(searching.ss13_with_access) && check_access_list(searching.ss13_with_access)) && !locked && !inoperable)
+	return ..() || ((!isnull(search.ss13_with_access) && check_access_list(search.ss13_with_access)) && !locked && !inoperable())
 
 	//if assembly is given, create the new door from the assembly
 	if (assembly && istype(assembly))
