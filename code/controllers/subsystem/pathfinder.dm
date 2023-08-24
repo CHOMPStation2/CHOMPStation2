@@ -48,4 +48,4 @@ SUBSYSTEM_DEF(pathfinder)
 		log_debug("pathfinder timeout of instance with debug variables [instance.debug_log_string()]")
 	pathfinding_mutex = FALSE
 
-#undef PATHFINDER_TIMEOUT 50
+#undef PATHFINDER_TIMEOUT

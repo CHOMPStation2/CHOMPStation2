@@ -72,7 +72,7 @@ GLOBAL_DATUM_INIT(generic_pathfinding_actor, /atom/movable/pathfinding_predicate
 /**
  * returns raw list of nodes returned by algorithm
  */
-/datum/pathfinding/proc/pathfind()
+/datum/pathfinding/proc/search()
 	RETURN_TYPE(/list)
 	CRASH("Not implemented on base type.")
 

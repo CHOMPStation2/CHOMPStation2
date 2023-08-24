@@ -265,7 +265,7 @@
 			// diagonal - relatively hard
 			jdir1 = turn(jdir, -45)
 			jdir2 = turn(jdir, 45)
-			considering = get_step(current, dir)
+			considering = get_step(current, jdir)
 			while(!isnull(considering)) {
 				dpass = TRUE
 				JPS_CARDINAL_SCAN(jdir1)
