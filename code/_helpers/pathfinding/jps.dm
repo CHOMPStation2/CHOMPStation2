@@ -292,6 +292,8 @@
  */
 /proc/jps_output_turfs(list/turf/nodes)
 	. = list()
+	if(isnull(nodes))
+		return
 	switch(length(nodes))
 		if(0)
 			return

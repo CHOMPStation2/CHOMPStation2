@@ -94,7 +94,7 @@
 	return density? ATMOS_PASS_AIR_BLOCKED : ATMOS_PASS_ZONE_BLOCKED
 
 /obj/machinery/door/window/can_pathfinding_pass(atom/movable/actor, dir, datum/pathfinding/search)
-	return ..() || (src.dir != dir) || ((!isnull(search.ss13_with_access) && check_access_list(search.ss13_with_access)) && !inoperable)
+	return ..() || (src.dir != dir) || ((!isnull(search.ss13_with_access) && check_access_list(search.ss13_with_access)) && !inoperable())
 
 /obj/machinery/door/window/CheckExit(atom/movable/AM, atom/newLoc)
 	if(!(get_dir(src, newLoc) & dir))
