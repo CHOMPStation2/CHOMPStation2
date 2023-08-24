@@ -57,8 +57,8 @@ GLOBAL_VAR_INIT(jps_visualization_delay, 0.5 SECONDS)
 /proc/cmp_jps_node(datum/jps_node/A, datum/jps_node/B)
 	return A.heuristic - B.heuristic
 
-#define JPS_HEURISTIC_CALL(TURF) isnull(context)? call(heuristic_call)(TURF, goal) : call(context, heuristic_call)(TURF, goal)
-#define JPS_ADJACENCY_CALL(A, B) isnull(context)? call(adjacency_call)(A, B, actor, src) : call(context, adjacency_call)(A, B, actor, src)
+#define JPS_HEURISTIC_CALL(TURF) (isnull(context)? call(heuristic_call)(TURF, goal) : call(context, heuristic_call)(TURF, goal))
+#define JPS_ADJACENCY_CALL(A, B) (isnull(context)? call(adjacency_call)(A, B, actor, src) : call(context, adjacency_call)(A, B, actor, src))
 
 #ifdef JPS_DEBUGGING
 
@@ -96,13 +96,17 @@ GLOBAL_VAR_INIT(jps_visualization_delay, 0.5 SECONDS)
 				} \
 			} \
 		} \
+		next = get_step(considering, DIR); \
+		if(!JPS_ADJACENCY_CALL(considering, next)) { \
+			return; \
+		} \
 		if(!cpass) { \
 			considering.color = JPS_VISUAL_COLOR_OPEN; \
 			turfs_got_colored[considering] = TRUE; \
 			open.enqueue(new /datum/jps_node(considering, top, cheuristic, csteps, top.cost + csteps, DIR)); \
 			break; \
 		} \
-		considering = get_step(considering, DIR); \
+		considering = next; \
 		++csteps; \
 	}
 
@@ -142,11 +146,15 @@ GLOBAL_VAR_INIT(jps_visualization_delay, 0.5 SECONDS)
 				} \
 			} \
 		} \
+		next = get_step(considering, DIR); \
+		if(!JPS_ADJACENCY_CALL(considering, next)) { \
+			break; \
+		} \
 		if(!cpass) { \
 			open.enqueue(new /datum/jps_node(considering, top, cheuristic, csteps, top.cost + csteps, DIR)); \
 			break; \
 		} \
-		considering = get_step(considering, DIR); \
+		considering = next; \
 		++csteps; \
 	}
 
@@ -182,6 +190,7 @@ GLOBAL_VAR_INIT(jps_visualization_delay, 0.5 SECONDS)
 	var/turf/considering
 	var/turf/scan1
 	var/turf/scan2
+	var/turf/next
 	var/jdir
 	var/jdir1
 	var/jdir2
@@ -273,12 +282,15 @@ GLOBAL_VAR_INIT(jps_visualization_delay, 0.5 SECONDS)
 				JPS_CARDINAL_SCAN(jdir2)
 				if(!cpass)
 					dpass = FALSE
+				next = get_step(considering, jdir)
+				if(!JPS_ADJACENCY_CALL(considering, next))
+					return
 				if(!dpass)
 					considering.color = JPS_VISUAL_COLOR_OPEN
 					turfs_got_colored[considering] = TRUE;
 					open.enqueue(new /datum/jps_node(considering, top, JPS_HEURISTIC_CALL(considering), dsteps, top.cost + dsteps, jdir))
 					break
-				considering = get_step(considering, jdir)
+				considering = next
 				++dsteps
 			}
 		else
@@ -315,7 +327,6 @@ GLOBAL_VAR_INIT(jps_visualization_delay, 0.5 SECONDS)
 #ifdef JPS_DEBUGGING
 	#undef JPS_DEBUGGING
 
-	#undef JPS_VISUAL_TICK
 	#undef JPS_VISUAL_COLOR_CLOSED
 	#undef JPS_VISUAL_COLOR_OPEN
 	#undef JPS_VISUAL_COLOR_CURRENT

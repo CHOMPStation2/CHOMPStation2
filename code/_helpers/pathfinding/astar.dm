@@ -57,8 +57,8 @@ GLOBAL_VAR_INIT(astar_visualization_delay, 0.2 SECONDS)
 /proc/cmp_astar_node(datum/astar_node/A, datum/astar_node/B)
 	return A.heuristic - B.heuristic
 
-#define ASTAR_HEURISTIC_CALL(TURF) isnull(context)? call(heuristic_call)(TURF, goal) : call(context, heuristic_call)(TURF, goal)
-#define ASTAR_ADJACENCY_CALL(A, B) isnull(context)? call(adjacency_call)(A, B, actor, src) : call(context, adjacency_call)(A, B, actor, src)
+#define ASTAR_HEURISTIC_CALL(TURF) (isnull(context)? call(heuristic_call)(TURF, goal) : call(context, heuristic_call)(TURF, goal))
+#define ASTAR_ADJACENCY_CALL(A, B) (isnull(context)? call(adjacency_call)(A, B, actor, src) : call(context, adjacency_call)(A, B, actor, src))
 #ifdef ASTAR_DEBUGGING
 	#define ASTAR_HELL_DEFINE(TURF) \
 		if(!isnull(TURF)) { \
@@ -212,7 +212,6 @@ GLOBAL_VAR_INIT(astar_visualization_delay, 0.2 SECONDS)
 #ifdef ASTAR_DEBUGGING
 	#undef ASTAR_DEBUGGING
 
-	#undef ASTAR_VISUAL_TICK
 	#undef ASTAR_VISUAL_COLOR_CLOSED
 	#undef ASTAR_VISUAL_COLOR_OPEN
 	#undef ASTAR_VISUAL_COLOR_CURRENT
