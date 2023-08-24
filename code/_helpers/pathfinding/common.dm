@@ -110,6 +110,11 @@ GLOBAL_DATUM_INIT(generic_pathfinding_actor, /atom/movable/pathfinding_predicate
 	// this currently catches abstract stuff like lighting objects
 	// not great for performance.
 
+	if(A.density)
+		return FALSE
+	if(B.density)
+		return FALSE
+
 	var/dir = get_dir(A, B)
 
 	if(dir & (dir - 1))

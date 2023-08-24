@@ -74,7 +74,11 @@ SUBSYSTEM_DEF(pathfinder)
 #undef PATHFINDER_TIMEOUT
 
 /proc/astar_debug(turf/target)
-	SSpathfinder.get_path_astar(usr, target, get_turf(usr))
+	if(isnull(target))
+		return
+	return SSpathfinder.get_path_astar(usr, target, get_turf(usr))
 
 /proc/jps_debug(turf/target)
-	SSpathfinder.get_path_jps(usr, target, get_turf(usr))
+	if(isnull(target))
+		return
+	return SSpathfinder.get_path_jps(usr, target, get_turf(usr))

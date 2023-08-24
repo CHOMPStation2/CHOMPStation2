@@ -5,14 +5,16 @@
 #define JPS_DEBUGGING
 
 #ifdef JPS_DEBUGGING
-	/// visualization delay
-	#define JPS_VISUAL_TICK 5
-	/// how long to persist the visuals
-	#define JPS_VISUAL_DELAY 10 SECONDS
-	#define JPS_VISUAL_COLOR_CLOSED "#ff0000"
-	#define JPS_VISUAL_COLOR_OPEN "#0000ff"
-	#define JPS_VISUAL_COLOR_FOUND "#00ff00"
-	#define JPS_VISUAL_COLOR_CURRENT "#ffff00"
+
+#warn JPS pathfinding visualizations enabled
+/// visualization delay
+GLOBAL_VAR_INIT(jps_visualization_delay, 0.5 SECONDS)
+/// how long to persist the visuals
+#define JPS_VISUAL_DELAY 10 SECONDS
+#define JPS_VISUAL_COLOR_CLOSED "#ff0000"
+#define JPS_VISUAL_COLOR_OPEN "#0000ff"
+#define JPS_VISUAL_COLOR_FOUND "#00ff00"
+#define JPS_VISUAL_COLOR_CURRENT "#ffff00"
 
 /proc/jps_wipe_colors_after(list/turf/turfs, time)
 	set waitfor = FALSE
@@ -217,7 +219,7 @@
 		#ifdef JPS_DEBUGGING
 		top.pos.color = JPS_VISUAL_COLOR_CURRENT
 		turfs_got_colored[top.pos] = TRUE
-		sleep(JPS_VISUAL_TICK)
+		sleep(GLOB.jps_visualization_delay)
 		#else
 		CHECK_TICK
 		#endif

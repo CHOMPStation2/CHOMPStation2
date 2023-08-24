@@ -5,14 +5,16 @@
 #define ASTAR_DEBUGGING
 
 #ifdef ASTAR_DEBUGGING
-	/// visualization delay
-	#define ASTAR_VISUAL_TICK 2.5
-	/// how long to persist the visuals
-	#define ASTAR_VISUAL_DELAY 10 SECONDS
-	#define ASTAR_VISUAL_COLOR_CLOSED "#ff0000"
-	#define ASTAR_VISUAL_COLOR_OPEN "#0000ff"
-	#define ASTAR_VISUAL_COLOR_CURRENT "#ffff00"
-	#define ASTAR_VISUAL_COLOR_FOUND "#00ff00"
+
+#warn ASTAR pathfinding visualizations enabled
+/// visualization delay
+GLOBAL_VAR_INIT(astar_visualization_delay, 0.2 SECONDS)
+/// how long to persist the visuals
+#define ASTAR_VISUAL_DELAY 10 SECONDS
+#define ASTAR_VISUAL_COLOR_CLOSED "#ff0000"
+#define ASTAR_VISUAL_COLOR_OPEN "#0000ff"
+#define ASTAR_VISUAL_COLOR_CURRENT "#ffff00"
+#define ASTAR_VISUAL_COLOR_FOUND "#00ff00"
 
 /proc/astar_wipe_colors_after(list/turf/turfs, time)
 	set waitfor = FALSE
@@ -61,8 +63,8 @@
 	#define ASTAR_HELL_DEFINE(TURF) \
 		if(!isnull(TURF)) { \
 			if(ASTAR_ADJACENCY_CALL(current, considering)) { \
-				considering_heuristic = ASTAR_HEURISTIC_CALL(considering); \
 				considering_cost = top.cost + considering.path_weight; \
+				considering_heuristic = ASTAR_HEURISTIC_CALL(considering) + considering_cost; \
 				considering_node = node_by_turf[considering]; \
 				if(isnull(considering_node)) { \
 					considering_node = new /datum/astar_node(considering, top, considering_heuristic, considering.path_weight, top.depth + 1, considering_cost); \
@@ -83,8 +85,8 @@
 	#define ASTAR_HELL_DEFINE(TURF) \
 		if(!isnull(TURF)) { \
 			if(ASTAR_ADJACENCY_CALL(current, considering)) { \
-				considering_heuristic = ASTAR_HEURISTIC_CALL(considering); \
 				considering_cost = top.cost + considering.path_weight; \
+				considering_heuristic = ASTAR_HEURISTIC_CALL(considering) + considering_cost; \
 				considering_node = node_by_turf[considering]; \
 				if(isnull(considering_node)) { \
 					considering_node = new /datum/astar_node(considering, top, considering_heuristic, considering.path_weight, top.depth + 1, considering_cost); \
@@ -150,7 +152,7 @@
 		#ifdef ASTAR_DEBUGGING
 		top.pos.color = ASTAR_VISUAL_COLOR_CURRENT
 		turfs_got_colored[top.pos] = TRUE
-		sleep(ASTAR_VISUAL_TICK)
+		sleep(GLOB.astar_visualization_delay)
 		#else
 		CHECK_TICK
 		#endif
