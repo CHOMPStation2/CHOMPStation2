@@ -117,7 +117,7 @@
 			path_node_by_position[datum] = next_node
 			open.enqueue(next_node)
 
-			if(max_nodes && open.length() > max_nodes)
-				open.remove(open.length())
+			if(max_nodes && length(open.queue) > max_nodes)
+				open.remove(length(open.queue))
 
 	return path

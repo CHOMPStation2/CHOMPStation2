@@ -78,7 +78,7 @@
 			} \
 			else { \
 				if(cfailed1) { \
-					open.enqueue(new /datum/jps_node(considering, top, JPS_HEURISTIC_CALL(considering), csteps, top.cost + csteps, cdir1 | DIR)); \
+					open.enqueue(new /datum/jps_node(considering, top, cheuristic, csteps, top.cost + csteps, cdir1 | DIR)); \
 					cpass = FALSE; \
 				} \
 			} \
@@ -89,7 +89,7 @@
 			} \
 			else { \
 				if(cfailed2) { \
-					open.enqueue(new /datum/jps_node(considering, top, JPS_HEURISTIC_CALL(considering), csteps, top.cost + csteps, cdir2 | DIR)); \
+					open.enqueue(new /datum/jps_node(considering, top, cheuristic, csteps, top.cost + csteps, cdir2 | DIR)); \
 					cpass = FALSE; \
 				} \
 			} \
@@ -97,10 +97,9 @@
 		if(!cpass) { \
 			considering.color = JPS_VISUAL_COLOR_OPEN; \
 			turfs_got_colored[considering] = TRUE; \
-			open.enqueue(new /datum/jps_node(considering, top, JPS_HEURISTIC_CALL(considering), csteps, top.cost + csteps, DIR)); \
+			open.enqueue(new /datum/jps_node(considering, top, cheuristic, csteps, top.cost + csteps, DIR)); \
 			break; \
 		} \
-		clast = considering; \
 		considering = get_step(considering, DIR); \
 		++csteps; \
 	}
@@ -125,7 +124,7 @@
 			} \
 			else { \
 				if(cfailed1) { \
-					open.enqueue(new /datum/jps_node(considering, top, JPS_HEURISTIC_CALL(considering), csteps, top.cost + csteps, cdir1 | DIR)); \
+					open.enqueue(new /datum/jps_node(considering, top, cheuristic, csteps, top.cost + csteps, cdir1 | DIR)); \
 					cpass = FALSE; \
 				} \
 			} \
@@ -136,16 +135,15 @@
 			} \
 			else { \
 				if(cfailed2) { \
-					open.enqueue(new /datum/jps_node(considering, top, JPS_HEURISTIC_CALL(considering), csteps, top.cost + csteps, cdir2 | DIR)); \
+					open.enqueue(new /datum/jps_node(considering, top, cheuristic, csteps, top.cost + csteps, cdir2 | DIR)); \
 					cpass = FALSE; \
 				} \
 			} \
 		} \
 		if(!cpass) { \
-			open.enqueue(new /datum/jps_node(considering, top, JPS_HEURISTIC_CALL(considering), csteps, top.cost + csteps, DIR)); \
+			open.enqueue(new /datum/jps_node(considering, top, cheuristic, csteps, top.cost + csteps, DIR)); \
 			break; \
 		} \
-		clast = considering; \
 		considering = get_step(considering, DIR); \
 		++csteps; \
 	}
@@ -187,6 +185,7 @@
 	var/jdir2
 	var/cdir1
 	var/cdir2
+	var/cheuristic
 	var/cfailed1
 	var/cfailed2
 	var/cpass
