@@ -69,8 +69,8 @@ GLOBAL_VAR_INIT(jps_visualization_delay, 0.5 SECONDS)
 	cpass = TRUE; \
 	cfailed1 = FALSE; \
 	cfailed2 = FALSE; \
-	cheuristic = JPS_HEURISTIC_CALL(considering); \
 	considering = get_step(current, DIR); \
+	cheuristic = JPS_HEURISTIC_CALL(considering); \
 	while(!isnull(considering)) { \
 		scan1 = get_step(considering, cdir1); \
 		scan2 = get_step(considering, cdir2); \
