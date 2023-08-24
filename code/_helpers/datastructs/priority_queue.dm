@@ -57,7 +57,7 @@
 /datum/priority_queue/proc/clone_list()
 	return queue.Copy()
 
-/datum/priority_queue/proc/length()
+/datum/priority_queue/proc/size()
 	return queue.len
 
 /datum/priority_queue/proc/remove_item(data)

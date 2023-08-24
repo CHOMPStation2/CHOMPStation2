@@ -110,8 +110,8 @@
 /datum/pathfinding/astar
 
 /datum/pathfinding/astar/search()
-	ASSERT(isturf(start) && isturf(goal) && start.z == goal.z)
-	if(start == goal)
+	ASSERT(isturf(src.start) && isturf(src.goal) && src.start.z == src.goal.z)
+	if(src.start == src.goal)
 		return list()
 	#ifdef ASTAR_DEBUGGING
 	var/list/turf/turfs_got_colored = list()
@@ -132,7 +132,7 @@
 	var/datum/astar_node/considering_node
 	var/list/node_by_turf = list()
 	// make queue
-	var/datum/priority_queue/open = new(/proc/cmp_astar_node)
+	var/datum/priority_queue/open = new /datum/priority_queue(/proc/cmp_astar_node)
 	// add initial node
 	var/datum/astar_node/initial_node = new(start, null, ASTAR_HEURISTIC_CALL(start), 0, 0, 0)
 	open.enqueue(initial_node)

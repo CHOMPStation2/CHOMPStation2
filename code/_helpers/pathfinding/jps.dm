@@ -163,8 +163,8 @@
 /datum/pathfinding/jps
 
 /datum/pathfinding/jps/search()
-	ASSERT(isturf(start) && isturf(goal) && start.z == goal.z)
-	if(start == goal)
+	ASSERT(isturf(src.start) && isturf(src.goal) && src.start.z == src.goal.z)
+	if(src.start == src.goal)
 		return list()
 	#ifdef JPS_DEBUGGING
 	var/list/turf/turfs_got_colored = list()
@@ -186,17 +186,15 @@
 	var/jdir1
 	var/jdir2
 	var/cdir1
-	var/turf/clast
 	var/cdir2
 	var/cfailed1
 	var/cfailed2
-	var/cheuristic
 	var/cpass
 	var/dpass
 	var/csteps
 	var/dsteps
 	// make queue
-	var/datum/priority_queue/open = new(/proc/cmp_jps_node)
+	var/datum/priority_queue/open = new /datum/priority_queue(/proc/cmp_jps_node)
 	// add initial nodes
 	var/start_heuristic = JPS_HEURISTIC_CALL(start)
 	open.enqueue(new /datum/jps_node(start, null, start_heuristic, 0, 0, NORTH))

@@ -66,7 +66,7 @@
 	return a.estimated_cost - b.estimated_cost
 
 /proc/graph_astar(start, end, adjacent, dist, max_nodes, max_node_depth = 30, min_target_dist = 0, min_node_dist, id, datum/exclude)
-	var/datum/priority_queue/open = new(/proc/cmp_graph_astar_node)
+	var/datum/priority_queue/open = new /datum/priority_queue(/proc/cmp_graph_astar_node)
 	var/list/closed = list()
 	var/list/path
 	var/list/path_node_by_position = list()
