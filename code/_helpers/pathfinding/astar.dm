@@ -22,6 +22,7 @@
 	sleep(time)
 	for(var/turf/T in turfs)
 		T.color = null
+		T.maptext = null
 
 #endif
 
@@ -109,6 +110,9 @@
 /datum/pathfinding/astar
 
 /datum/pathfinding/astar/search()
+	ASSERT(isturf(start) && isturf(goal) && start.z == goal.z)
+	if(start == goal)
+		return list()
 	#ifdef ASTAR_DEBUGGING
 	var/list/turf/turfs_got_colored = list()
 	#endif
@@ -117,6 +121,9 @@
 	var/turf/goal = src.goal
 	var/target_distance = src.target_distance
 	var/atom/movable/actor = src.actor
+	var/adjacency_call = src.adjacency_call
+	var/heuristic_call = src.adjacency_call
+	var/datum/context = src.context
 	// add operating vars
 	var/turf/current
 	var/turf/considering
@@ -127,9 +134,14 @@
 	// make queue
 	var/datum/priority_queue/open = new(/proc/cmp_astar_node)
 	// add initial node
-	var/datum/astar_node/initial_node = new(start, null, ASTAR_HEURISTIC_CALL(start), start.path_weight, 0, 0)
+	var/datum/astar_node/initial_node = new(start, null, ASTAR_HEURISTIC_CALL(start), 0, 0, 0)
 	open.enqueue(initial_node)
 	node_by_turf[start] = initial_node
+
+	#ifdef ASTAR_DEBUGGING
+	turfs_got_colored[start] = TRUE
+	start.color = ASTAR_VISUAL_COLOR_OPEN
+	#endif
 
 	while(length(open.queue))
 		// get best node
@@ -137,14 +149,15 @@
 		current = top.pos
 		#ifdef ASTAR_DEBUGGING
 		top.pos.color = ASTAR_VISUAL_COLOR_CURRENT
+		turfs_got_colored[top.pos] = TRUE
 		sleep(ASTAR_VISUAL_DELAY)
 		#else
 		CHECK_TICK
 		#endif
 
 		// get distance and check completion
-		if(get_dist(top.pos, goal) <= target_distance)
-			// found; build path end to finish with nodes
+		if(get_dist(current, goal) <= target_distance)
+			// found; build path end to start of nodes
 			var/list/path_built = list()
 			while(top)
 				path_built += top.pos
@@ -167,6 +180,7 @@
 		if(top.depth >= max_depth)
 			#ifdef ASTAR_DEBUGGING
 			top.pos.color = ASTAR_VISUAL_COLOR_CLOSED
+			turfs_got_colored[top.pos] = TRUE
 			#endif
 			continue
 
@@ -181,6 +195,7 @@
 
 		#ifdef ASTAR_DEBUGGING
 		top.pos.color = ASTAR_VISUAL_COLOR_CLOSED
+		turfs_got_colored[top.pos] = TRUE
 		#endif
 
 		if(length(open.queue) > ASTAR_SANE_NODE_LIMIT)
