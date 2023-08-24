@@ -173,7 +173,7 @@
 	var/target_distance = src.target_distance
 	var/atom/movable/actor = src.actor
 	var/adjacency_call = src.adjacency_call
-	var/heuristic_call = src.adjacency_call
+	var/heuristic_call = src.heuristic_call
 	var/datum/context = src.context
 	// add operating vars
 	var/turf/current
@@ -217,7 +217,7 @@
 		#ifdef JPS_DEBUGGING
 		top.pos.color = JPS_VISUAL_COLOR_CURRENT
 		turfs_got_colored[top.pos] = TRUE
-		sleep(JPS_VISUAL_DELAY)
+		sleep(JPS_VISUAL_TICK)
 		#else
 		CHECK_TICK
 		#endif
