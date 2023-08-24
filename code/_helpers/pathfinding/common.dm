@@ -106,12 +106,35 @@ GLOBAL_DATUM_INIT(generic_pathfinding_actor, /atom/movable/pathfinding_predicate
 //* context is supplied.                               *//
 
 /proc/default_pathfinding_adjacency(turf/A, turf/B, atom/movable/actor, datum/pathfinding/search)
+	// we really need to optimize this furthur
+	// this currently catches abstract stuff like lighting objects
+	// not great for performance.
 
+	var/dir = get_dir(A, B)
+
+	if(dir & (dir - 1))
+		var/td1 = dir & (NORTH|SOUTH)
+		var/td2 = dir & (EAST|WEST)
+		var/turf/scan = get_step(A, td1)
+		if(!isnull(scan) && default_pathfinding_adjacency(A, scan, actor, saerch) && default_pathfinding_adjacency(scan, B, actor, search))
+			return TRUE
+		scan = get_step(A, td2)
+		if(!isnull(scan) && default_pathfinding_adjacency(A, scan, actor, saerch) && default_pathfinding_adjacency(scan, B, actor, search))
+			return TRUE
+		return FALSE
+
+	var/rdir = turn(dir, 180)
+
+	for(var/atom/movable/AM as anything in A)
+		if(!AM.can_pathfinding_pass(actor, dir, search))
+			return FALSE
+	for(var/atom/movable/AM as anything in B)
+		if(!AM.can_pathfinding_pass(actor, rdir, search))
+			return FALSE
+	return TRUE
 
 /proc/default_pathfinding_heuristic(turf/current, turf/goal)
 	return get_dist(current, goal)
-
-#warn impl above
 
 /**
  * This is a pretty hot proc used during pathfinding to see if something
