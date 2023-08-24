@@ -28,7 +28,7 @@
 	else
 		return
 
-/obj/structure/plasticflaps/can_pathfinding_pass(atom/movable/actor, dir, datum/pathfinding/search)
+/obj/structure/plasticflaps/can_pathfinding_enter(atom/movable/actor, dir, datum/pathfinding/search)
 	if(isliving(actor))
 		var/mob/living/L = actor
 		if(isbot(L))
@@ -38,7 +38,7 @@
 		if(L.mob_size <= MOB_TINY)
 			return TRUE
 		return FALSE
-	return isnull(actor.pulling)? TRUE : can_pathfinding_pass(actor.pulling, dir, search)
+	return isnull(actor.pulling)? TRUE : can_pathfinding_enter(actor.pulling, dir, search)
 
 /obj/structure/plasticflaps/CanPass(atom/A, turf/T)
 	if(istype(A) && A.checkpass(PASSGLASS))

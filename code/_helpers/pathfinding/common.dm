@@ -114,6 +114,8 @@ GLOBAL_DATUM_INIT(generic_pathfinding_actor, /atom/movable/pathfinding_predicate
 		return FALSE
 	if(B.density)
 		return FALSE
+	if((B.turf_path_danger & search.turf_path_danger_ignore) != B.turf_path_danger)
+		return FALSE
 
 	var/dir = get_dir(A, B)
 
@@ -131,10 +133,10 @@ GLOBAL_DATUM_INIT(generic_pathfinding_actor, /atom/movable/pathfinding_predicate
 	var/rdir = turn(dir, 180)
 
 	for(var/atom/movable/AM as anything in A)
-		if(!AM.can_pathfinding_pass(actor, dir, search))
+		if(!AM.can_pathfinding_exit(actor, dir, search))
 			return FALSE
 	for(var/atom/movable/AM as anything in B)
-		if(!AM.can_pathfinding_pass(actor, rdir, search))
+		if(!AM.can_pathfinding_enter(actor, rdir, search))
 			return FALSE
 	return TRUE
 
@@ -144,6 +146,17 @@ GLOBAL_DATUM_INIT(generic_pathfinding_actor, /atom/movable/pathfinding_predicate
 /**
  * This is a pretty hot proc used during pathfinding to see if something
  * should be able to pass through this movable in a certain direction.
+ *
+ * dir is where they're coming from
  */
-/atom/movable/proc/can_pathfinding_pass(atom/movable/actor, dir, datum/pathfinding/search)
+/atom/movable/proc/can_pathfinding_enter(atom/movable/actor, dir, datum/pathfinding/search)
 	return !density || (pass_flags_self & actor.pass_flags)
+
+/**
+ * This is a pretty hot proc used during pathfinding to see if something
+ * should be able to pass out of this movable in a certain direction.
+ *
+ * dir is where they're going to
+ */
+/atom/movable/proc/can_pathfinding_exit(atom/movable/actor, dir, datum/pathfinding/search)
+	return !(atom_flags & ATOM_BORDER) || !density || (pass_flags_self & actor.pass_flags)

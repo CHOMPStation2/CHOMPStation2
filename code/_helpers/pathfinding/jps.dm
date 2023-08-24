@@ -10,6 +10,21 @@
 /// visualization delay
 GLOBAL_VAR_INIT(jps_visualization_delay, 0.5 SECONDS)
 /// how long to persist the visuals
+GLOBAL_VAR_INIT(jps_visualization_persist, 3 SECONDS)
+
+GLOBAL_VAR_INIT(jps_visualization_scan_overlay, make_jps_scan_overlay())
+
+/proc/make_jps_scan_overlay()
+	var/mutable_appearance/MA = new
+	MA.icon = 'icons/screen/debug/pathfinding.dmi'
+	MA.icon_state = "jps_scan"
+	return MA
+
+/proc/get_jps_scan_overlay(dir)
+	var/mutable_appearance/MA = GLOB.jps_visualization_scan_overlay
+	MA.dir = dir
+	return MA
+
 #define JPS_VISUAL_DELAY 10 SECONDS
 #define JPS_VISUAL_COLOR_CLOSED "#ff0000"
 #define JPS_VISUAL_COLOR_OPEN "#0000ff"
@@ -25,6 +40,8 @@ GLOBAL_VAR_INIT(jps_visualization_delay, 0.5 SECONDS)
 	for(var/turf/T in turfs)
 		T.color = null
 		T.maptext = null
+		// lol just cut all this is a debug proc anyways
+		T.overlays.len = 0
 
 #endif
 
@@ -82,6 +99,7 @@ GLOBAL_VAR_INIT(jps_visualization_delay, 0.5 SECONDS)
 				return jps_unwind_path(new /datum/jps_node(cardscan, top, cheuristic, csteps, top.cost + csteps, DIR), turfs_got_colored); \
 			} \
 		} \
+		cardscan.overlays += get_jps_scan_overlay(DIR); \
 		scan1 = get_step(cardscan, cdir1); \
 		scan2 = get_step(cardscan, cdir2); \
 		if(!isnull(scan1)) { \
@@ -108,7 +126,7 @@ GLOBAL_VAR_INIT(jps_visualization_delay, 0.5 SECONDS)
 		} \
 		next = get_step(cardscan, DIR); \
 		if(!JPS_ADJACENCY_CALL(cardscan, next)) { \
-			return; \
+			break; \
 		} \
 		if(!cpass) { \
 			cardscan.color = JPS_VISUAL_COLOR_OPEN; \
@@ -287,8 +305,13 @@ GLOBAL_VAR_INIT(jps_visualization_delay, 0.5 SECONDS)
 				// this, along with the ones in the macros, can be micro-optimized to take one less unnecessary
 				// check per iteration by putting it at end instead of beginning
 				if(get_dist(considering, goal) <= target_distance) {
+					#ifdef JPS_DEBUGGING
+					return jps_unwind_path(new /datum/jps_node(considering, top, cheuristic, csteps, top.cost + csteps, jdir), turfs_got_colored)
+					#else
 					return jps_unwind_path(new /datum/jps_node(considering, top, cheuristic, csteps, top.cost + csteps, jdir))
+					#endif
 				}
+				considering.overlays += get_jps_scan_overlay(jdir)
 				dpass = TRUE
 				JPS_CARDINAL_SCAN(jdir1)
 				if(!cpass)
@@ -298,7 +321,7 @@ GLOBAL_VAR_INIT(jps_visualization_delay, 0.5 SECONDS)
 					dpass = FALSE
 				next = get_step(considering, jdir)
 				if(!JPS_ADJACENCY_CALL(considering, next))
-					return
+					break
 				if(!dpass)
 					considering.color = JPS_VISUAL_COLOR_OPEN
 					turfs_got_colored[considering] = TRUE;
@@ -310,6 +333,10 @@ GLOBAL_VAR_INIT(jps_visualization_delay, 0.5 SECONDS)
 		else
 			// cardinal - relatively easy
 			JPS_CARDINAL_SCAN(jdir)
+
+	#ifdef JPS_DEBUGGING
+	jps_wipe_colors_after(turfs_got_colored, GLOB.jps_visualization_persist)
+	#endif
 
 #ifdef JPS_DEBUGGING
 /datum/pathfinding/jps/proc/jps_unwind_path(datum/jps_node/top, list/turfs_got_colored)
@@ -331,7 +358,7 @@ GLOBAL_VAR_INIT(jps_visualization_delay, 0.5 SECONDS)
 	while(head < tail)
 		path_built.Swap(head++, tail--)
 	#ifdef JPS_DEBUGGING
-	jps_wipe_colors_after(turfs_got_colored, JPS_VISUAL_DELAY)
+	jps_wipe_colors_after(turfs_got_colored, GLOB.jps_visualization_persist)
 	#endif
 	return path_built
 

@@ -10,7 +10,7 @@
 /// visualization delay
 GLOBAL_VAR_INIT(astar_visualization_delay, 0.2 SECONDS)
 /// how long to persist the visuals
-#define ASTAR_VISUAL_DELAY 10 SECONDS
+GLOBAL_VAR_INIT(astar_visualization_persist, 3 SECONDS)
 #define ASTAR_VISUAL_COLOR_CLOSED "#ff0000"
 #define ASTAR_VISUAL_COLOR_OPEN "#0000ff"
 #define ASTAR_VISUAL_COLOR_CURRENT "#ffff00"
@@ -174,7 +174,7 @@ GLOBAL_VAR_INIT(astar_visualization_delay, 0.2 SECONDS)
 			while(head < tail)
 				path_built.Swap(head++, tail--)
 			#ifdef ASTAR_DEBUGGING
-			astar_wipe_colors_after(turfs_got_colored, ASTAR_VISUAL_DELAY)
+			astar_wipe_colors_after(turfs_got_colored, GLOB.astar_visualization_persist)
 			#endif
 			return path_built
 
@@ -201,7 +201,14 @@ GLOBAL_VAR_INIT(astar_visualization_delay, 0.2 SECONDS)
 		#endif
 
 		if(length(open.queue) > ASTAR_SANE_NODE_LIMIT)
+			#ifdef ASTAR_DEBUGGING
+			astar_wipe_colors_after(turfs_got_colored, GLOB.astar_visualization_persist)
+			#endif
 			CRASH("A* hit node limit - something went horribly wrong! args: [json_encode(args)]; vars: [json_encode(vars)]")
+
+	#ifdef ASTAR_DEBUGGING
+	astar_wipe_colors_after(turfs_got_colored, GLOB.astar_visualization_persist)
+	#endif
 
 #undef ASTAR_HELL_DEFINE
 #undef ASTAR_HEURISTIC_CALL

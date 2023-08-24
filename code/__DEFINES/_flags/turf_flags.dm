@@ -37,6 +37,8 @@ DEFINE_BITFIELD(turf_flags, list(
 #define TURF_PATH_DANGER_FALL (1<<1)
 /// will just fucking obliterate you
 #define TURF_PATH_DANGER_ANNIHILATION (1<<2)
+/// this, is literally space.
+#define TURF_PATH_DANGER_SPACE (1<<3)
 
 DEFINE_SHARED_BITFIELD(turf_path_danger, list(
 	"turf_path_danger",
@@ -45,4 +47,5 @@ DEFINE_SHARED_BITFIELD(turf_path_danger, list(
 	BITFIELD(TURF_PATH_DANGER_BURN),
 	BITFIELD(TURF_PATH_DANGER_FALL),
 	BITFIELD(TURF_PATH_DANGER_ANNIHILATION),
+	BITFIELD(TURF_PATH_DANGER_SPACE),
 ))
