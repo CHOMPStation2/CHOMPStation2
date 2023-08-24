@@ -17,10 +17,18 @@ SUBSYSTEM_DEF(pathfinder)
 	/// pathfinding calls blocked
 	var/pathfinding_blocked = 0
 
-/datum/controller/subsystem/pathfinder/proc/get_path_jps()
+/datum/controller/subsystem/pathfinder/proc/get_path_jps(atom/movable/actor, turf/goal, turf/start = get_turf(actor), target_distance = 1, max_path_length = 128)
+	var/datum/pathfinding/jps/instance = new(actor, start, goal, target_distance, max_path_length)
+	return run_pathfinding(instance)
+
+/datum/controller/subsystem/pathfinder/proc/get_path_astar(atom/movable/actor, turf/goal, turf/start = get_turf(actor), target_distance = 1, max_path_length = 128)
+	var/datum/pathfinding/astar/instance = new(actor, start, goal, target_distance, max_path_length)
+	return run_pathfinding(instance)
+
+/datum/controller/subsystem/pathfinder/proc/default_ai_pathfinding(datum/ai_holder/holder, turf/goal)
 	#warn impl
 
-/datum/controller/subsystem/pathfinder/proc/get_path_astar()
+/datum/controller/subsystem/pathfinder/proc/default_circuit_pathfinding(obj/item/electronic_assembly/assembly, turf/goal)
 	#warn impl
 
 /datum/controller/subsystem/pathfinder/proc/run_pathfinding(datum/pathfinding/instance)

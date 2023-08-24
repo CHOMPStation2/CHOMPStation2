@@ -117,6 +117,9 @@
 	return
 
 
+/obj/structure/window/can_pathfinding_pass(atom/movable/actor, dir, datum/pathfinding/search)
+	return ..() || (!fulltile && (src.dir != dir))
+
 /obj/structure/window/ex_act(severity)
 	switch(severity)
 		if(1.0)

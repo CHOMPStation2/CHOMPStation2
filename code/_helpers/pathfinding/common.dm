@@ -107,6 +107,15 @@ GLOBAL_DATUM_INIT(generic_pathfinding_actor, /atom/movable/pathfinding_predicate
 
 /proc/default_pathfinding_adjacency(turf/A, turf/B, atom/movable/actor, datum/pathfinding/search)
 
+
 /proc/default_pathfinding_heuristic(turf/current, turf/goal)
+	return get_dist(current, goal)
 
 #warn impl above
+
+/**
+ * This is a pretty hot proc used during pathfinding to see if something
+ * should be able to pass through this movable in a certain direction.
+ */
+/atom/movable/proc/can_pathfinding_pass(atom/movable/actor, dir, datum/pathfinding/search)
+	return !density || (pass_flags_self & actor.pass_flags)

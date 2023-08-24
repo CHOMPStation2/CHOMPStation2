@@ -86,12 +86,20 @@
 /obj/machinery/door/window/CanPass(atom/movable/mover, turf/target)
 	if(istype(mover) && mover.checkpass(PASSGLASS))
 		return TRUE
-	if(get_dir(mover, target) == reverse_dir[dir]) // From elsewhere to here, can't move against our dir
-		return !density
-	return TRUE
+	return ..()
 
-/obj/machinery/door/window/Uncross(atom/movable/mover, turf/target)
-	if(istype(mover) && mover.checkpass(PASSGLASS))
+/obj/machinery/door/window/CanAtmosPass(turf/T, d)
+	if(d != dir)
+		return ATMOS_PASS_NOT_BLOCKED
+	return density? ATMOS_PASS_AIR_BLOCKED : ATMOS_PASS_ZONE_BLOCKED
+
+/obj/machinery/door/window/can_pathfinding_pass(atom/movable/actor, dir, datum/pathfinding/search)
+	return ..() || (src.dir != dir) || ((!isnull(search.ss13_with_access) && check_access_list(search.ss13_with_access)) && !inoperable)
+
+/obj/machinery/door/window/CheckExit(atom/movable/AM, atom/newLoc)
+	if(!(get_dir(src, newLoc) & dir))
+		return TRUE
+	if(check_standard_flag_pass(AM))
 		return TRUE
 	if(get_dir(mover, target) == dir) // From here to elsewhere, can't move in our dir
 		return !density

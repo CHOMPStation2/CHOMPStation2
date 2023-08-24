@@ -1472,8 +1472,8 @@ About the new airlock wires panel:
 		return 0
 	return ..(M)
 
-/obj/machinery/door/airlock/New(var/newloc, var/obj/structure/door_assembly/assembly=null)
-	..()
+/obj/machinery/door/airlock/can_pathfinding_pass(atom/movable/actor, dir, datum/pathfinding/search)
+	return ..() || ((!isnull(searching.ss13_with_access) && check_access_list(searching.ss13_with_access)) && !locked && !inoperable)
 
 	//if assembly is given, create the new door from the assembly
 	if (assembly && istype(assembly))
