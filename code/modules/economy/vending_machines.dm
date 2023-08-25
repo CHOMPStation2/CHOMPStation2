@@ -803,12 +803,8 @@
 					/obj/item/toy/plushie/nukeplushie = 1,
 					/obj/item/toy/plushie/otter = 1,
 					/obj/item/toy/plushie/vox = 1,
-<<<<<<< HEAD
-					/obj/item/toy/mistletoe = 1,
-=======
 					/obj/item/toy/plushie/shark = 1,
-					/obj/item/toy/mistletoe = 1)
->>>>>>> c500466c81... Merge pull request #15305 from PastelPrinceDan/blahaj
+					/obj/item/toy/mistletoe = 1,
 					//VOREStation Add End
 					//YawnWider Add Start
 					/obj/item/toy/plushie/teshari/_yw = 1,
@@ -856,12 +852,8 @@
 					/obj/item/toy/plushie/nukeplushie = 50,
 					/obj/item/toy/plushie/otter = 50,
 					/obj/item/toy/plushie/vox = 50,
-<<<<<<< HEAD
-					/obj/item/toy/mistletoe = 50,
-=======
 					/obj/item/toy/plushie/shark = 50,
-					/obj/item/toy/mistletoe = 50)
->>>>>>> c500466c81... Merge pull request #15305 from PastelPrinceDan/blahaj
+					/obj/item/toy/mistletoe = 50,
 					//VOREStation Add End
 					//YawnWider Add Start
 					/obj/item/toy/plushie/teshari/_yw = 150,
