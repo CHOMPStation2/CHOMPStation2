@@ -25,11 +25,11 @@ SUBSYSTEM_DEF(pathfinder)
  * be aware that this emits a set of disjunct nodes
  * use [jps_output_turfs()] to convert them into a proper turf path list.
  */
-/datum/controller/subsystem/pathfinder/proc/get_path_jps(atom/movable/actor, turf/goal, turf/start = get_turf(actor), target_distance = 1, max_path_length = 128)
+/datum/controller/subsystem/pathfinder/proc/get_path_jps(atom/movable/actor = GLOB.generic_pathfinding_actor, turf/goal, turf/start = get_turf(actor), target_distance = 1, max_path_length = 128)
 	var/datum/pathfinding/jps/instance = new(actor, start, goal, target_distance, max_path_length)
 	return run_pathfinding(instance)
 
-/datum/controller/subsystem/pathfinder/proc/get_path_astar(atom/movable/actor, turf/goal, turf/start = get_turf(actor), target_distance = 1, max_path_length = 128)
+/datum/controller/subsystem/pathfinder/proc/get_path_astar(atom/movable/actor = GLOB.generic_pathfinding_actor, turf/goal, turf/start = get_turf(actor), target_distance = 1, max_path_length = 128)
 	var/datum/pathfinding/astar/instance = new(actor, start, goal, target_distance, max_path_length)
 	return run_pathfinding(instance)
 
@@ -88,9 +88,9 @@ SUBSYSTEM_DEF(pathfinder)
 	return SSpathfinder.get_path_jps(usr, target, get_turf(usr))
 
 /proc/pathfinding_run_all(turf/start, turf/goal)
-	SSpathfinder.get_path_astar(goal = goal, start = start, target_distance = 1, max_path_length = 128)
-	SSpathfinder.get_path_jps(goal = goal, start = start, target_distance = 1, max_path_length = 128)
-	graph_astar(
+	var/pass_silicons_astar = SSpathfinder.get_path_astar(goal = goal, start = start, target_distance = 1, max_path_length = 128)
+	var/pass_silicons_jps = SSpathfinder.get_path_jps(goal = goal, start = start, target_distance = 1, max_path_length = 128)
+	var/pass_old_astar = graph_astar(
 		start,
 		goal,
 		TYPE_PROC_REF(/turf, CardinalTurfsWithAccess),
@@ -101,7 +101,13 @@ SUBSYSTEM_DEF(pathfinder)
 	)
 	var/atom/movable/delegate_for_tg = new(start)
 	var/datum/tg_jps_pathfind/tg_instance = new(delegate_for_tg, goal, null, 128, 1, FALSE, null)
-	tg_instance.search()
+	var/pass_tg_jps = tg_instance.search()
+	pass_silicons_astar = !!length(pass_silicons_astar)
+	pass_silicons_jps = !!length(pass_silicons_jps)
+	pass_old_astar = !!length(pass_old_astar)
+	pass_tg_jps = !!length(pass_tg_jps)
+	if(pass_silicons_astar != pass_silicons_jps || pass_silicons_jps != pass_old_astar || pass_old_astar != pass_tg_jps)
+		log_and_message_admins("turf pair [COORD(start)], [COORD(goal)] mismatch silicons-astar [pass_silicons_astar] silicons-jps [pass_silicons_jps] old-astar [pass_old_astar] tg-jps [pass_tg_jps]")
 
 /proc/pathfinding_run_benchmark(times = 1000, turf/source = get_turf(usr))
 	var/list/turf/nearby = RANGE_TURFS(100, source)
