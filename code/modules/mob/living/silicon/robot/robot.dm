@@ -893,11 +893,11 @@
 	if(stat == CONSCIOUS)
 		var/show_belly = FALSE
 		if(sprite_datum.has_vore_belly_sprites)
-			update_fullness()
+			update_fullness() //CHOMPEdit Start
 			if(vore_fullness)
 				show_belly = TRUE
 			else
-				for(var/obj/belly/B in vore_organs) //CHOMPEdit Start
+				for(var/obj/belly/B in vore_organs)
 					if(B.silicon_belly_overlay_preference == "Sleeper")
 						if(sleeper_state)
 							show_belly = TRUE
