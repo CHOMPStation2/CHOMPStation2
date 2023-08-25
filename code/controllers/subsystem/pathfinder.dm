@@ -87,7 +87,7 @@ SUBSYSTEM_DEF(pathfinder)
 		return
 	return SSpathfinder.get_path_jps(usr, target, get_turf(usr))
 
-/proc/pathfinding_run_all(turf/start, turf/goal)
+/proc/pathfinding_run_all(turf/start = get_turf(usr), turf/goal)
 	var/pass_silicons_astar = SSpathfinder.get_path_astar(goal = goal, start = start, target_distance = 1, max_path_length = 128)
 	var/pass_silicons_jps = SSpathfinder.get_path_jps(goal = goal, start = start, target_distance = 1, max_path_length = 128)
 	var/pass_old_astar = graph_astar(

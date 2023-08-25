@@ -31,6 +31,7 @@ GLOBAL_VAR_INIT(jps_visualization_resolve, TRUE)
 
 #define JPS_VISUAL_DELAY 10 SECONDS
 #define JPS_VISUAL_COLOR_CLOSED "#ff0000"
+#define JPS_VISUAL_COLOR_OUT_OF_BOUNDS "#555555"
 #define JPS_VISUAL_COLOR_OPEN "#0000ff"
 #define JPS_VISUAL_COLOR_FOUND "#00ff00"
 #define JPS_VISUAL_COLOR_CURRENT "#ffff00"
@@ -86,6 +87,135 @@ GLOBAL_VAR_INIT(jps_visualization_resolve, TRUE)
 #define JPS_ADJACENCY_CALL(A, B) (isnull(context)? call(adjacency_call)(A, B, actor, src) : call(context, adjacency_call)(A, B, actor, src))
 
 #ifdef JPS_DEBUGGING
+
+#define JPS_CARDINAL_SCAN(FROM, DIR) \
+	cdir1 = turn(DIR, 90); \
+	cdir2 = turn(DIR, -90); \
+	csteps = 1; \
+	cinitialsteps = (jdir & (jdir - 1))? dsteps + top.depth : top.depth; \
+	cpass = TRUE; \
+	cfailed1 = FALSE; \
+	cfailed2 = FALSE; \
+	if(cskipfirst) { \
+		cardscan = get_step(FROM, DIR); \
+	} \
+	else { \
+		cardscan = FROM; \
+		cskipfirst = TRUE; \
+	} \
+	while(!isnull(cardscan)) { \
+		cheuristic = JPS_HEURISTIC_CALL(cardscan) + top.cost + csteps; \
+		cardscan.overlays += get_jps_scan_overlay(DIR, TRUE); \
+		if(get_dist(cardscan, goal) <= target_distance && (target_distance != 1 || !require_adjacency_when_going_adjacent || cardscan.TurfAdjacency(goal))) { \
+			cardscan.color = JPS_VISUAL_COLOR_OPEN; \
+			turfs_got_colored[cardscan] = TRUE; \
+			if(jdir & (jdir - 1)) { \
+				if(isnull(dmadenode)) { \
+					considering.color = JPS_VISUAL_COLOR_OPEN; \
+					turfs_got_colored[considering] = TRUE; \
+					considering.overlays += get_jps_scan_overlay(jdir, TRUE); \
+					dmadenode = new /datum/jps_node(considering, top, JPS_HEURISTIC_CALL(considering) + top.cost + dsteps, dsteps, top.cost + dsteps, jdir); \
+					open.enqueue(dmadenode); \
+				} \
+				cardscan.color = JPS_VISUAL_COLOR_OPEN; \
+				turfs_got_colored[cardscan] = TRUE; \
+				creating_node = new /datum/jps_node(cardscan, dmadenode, JPS_HEURISTIC_CALL(cardscan) + dmadenode.cost + csteps, csteps, dmadenode.cost + csteps, DIR); \
+				open.enqueue(creating_node); \
+				return jps_unwind_path(creating_node, turfs_got_colored); \
+			} \
+			else { \
+				cardscan.color = JPS_VISUAL_COLOR_OPEN; \
+				turfs_got_colored[cardscan] = TRUE; \
+				creating_node = new /datum/jps_node(cardscan, top, cheuristic, csteps, top.cost + csteps, DIR); \
+				open.enqueue(creating_node); \
+				return jps_unwind_path(creating_node, turfs_got_colored); \
+			} \
+		} \
+		turfs_got_colored[cardscan] = TRUE; \
+		if(csteps + cinitialsteps + get_dist(cardscan, goal) > max_depth) { \
+			cardscan.color = JPS_VISUAL_COLOR_OUT_OF_BOUNDS; \
+			break; \
+		} \
+		cscan1 = get_step(cardscan, cdir1); \
+		cscan2 = get_step(cardscan, cdir2); \
+		if(!isnull(cscan1)) { \
+			if(!JPS_ADJACENCY_CALL(cardscan, cscan1)) { \
+				cfailed1 = TRUE; \
+			} \
+			else { \
+				if(cfailed1) { \
+					if(cardscan.pathfinding_cycle != cycle) { \
+						if((jdir & (jdir - 1)) && isnull(dmadenode)) { \
+							dmadenode = new /datum/jps_node(considering, top, JPS_HEURISTIC_CALL(considering) + top.cost + dsteps, dsteps, top.cost + dsteps, jdir); \
+							creating_node = new /datum/jps_node(clast, dmadenode, JPS_HEURISTIC_CALL(clast) + dmadenode.cost + csteps, csteps, dmadenode.cost + csteps, cdir1 | DIR); \
+						} \
+						else { \
+							creating_node = new /datum/jps_node(clast, top, cheuristic, csteps, top.cost + csteps, cdir1 | DIR); \
+						} \
+						clast.color = JPS_VISUAL_COLOR_OPEN; \
+						turfs_got_colored[clast] = TRUE; \
+						clast.overlays += get_jps_scan_overlay(cdir1 | DIR, TRUE); \
+						nodes_by_turf[clast] = creating_node; \
+						open.enqueue(creating_node); \
+					} \
+					cpass = FALSE; \
+				} \
+			} \
+		} \
+		if(!isnull(cscan2)) { \
+			if(!JPS_ADJACENCY_CALL(cardscan, cscan2)) { \
+				cfailed2 = TRUE; \
+			} \
+			else { \
+				if(cfailed2) { \
+					if(cardscan.pathfinding_cycle != cycle) { \
+						if((jdir & (jdir - 1)) && isnull(dmadenode)) { \
+							dmadenode = new /datum/jps_node(considering, top, JPS_HEURISTIC_CALL(considering) + top.cost + dsteps, dsteps, top.cost + dsteps, jdir); \
+							creating_node = new /datum/jps_node(clast, dmadenode, JPS_HEURISTIC_CALL(clast) + dmadenode.cost + csteps, csteps, dmadenode.cost + csteps, cdir2 | DIR); \
+						} \
+						else { \
+							creating_node = new /datum/jps_node(clast, top, cheuristic, csteps, top.cost + csteps, cdir2 | DIR); \
+						} \
+						clast.color = JPS_VISUAL_COLOR_OPEN; \
+						turfs_got_colored[clast] = TRUE; \
+						clast.overlays += get_jps_scan_overlay(cdir2 | DIR, TRUE); \
+						nodes_by_turf[clast] = creating_node; \
+						open.enqueue(creating_node); \
+					} \
+					cpass = FALSE; \
+				} \
+			} \
+		} \
+		next = get_step(cardscan, DIR); \
+		if(isnull(next) || !JPS_ADJACENCY_CALL(cardscan, next)) { \
+			cardscan.pathfinding_cycle = cycle; \
+			break; \
+		} \
+		if(!cpass) { \
+			if(cardscan.pathfinding_cycle != cycle) { \
+				if((jdir & (jdir - 1)) && isnull(dmadenode)) { \
+					dmadenode = new /datum/jps_node(considering, top, JPS_HEURISTIC_CALL(considering) + top.cost + dsteps, dsteps, top.cost + dsteps, jdir); \
+					creating_node = new /datum/jps_node(clast, dmadenode, JPS_HEURISTIC_CALL(clast) + dmadenode.cost + csteps, csteps, dmadenode.cost + csteps, DIR); \
+				} \
+				else { \
+					creating_node = new /datum/jps_node(clast, top, cheuristic, csteps, top.cost + csteps, DIR); \
+				} \
+				clast.color = JPS_VISUAL_COLOR_OPEN; \
+				turfs_got_colored[clast] = TRUE; \
+				clast.overlays += get_jps_scan_overlay(DIR, TRUE); \
+				nodes_by_turf[clast] = creating_node; \
+				open.enqueue(creating_node); \
+				cardscan.pathfinding_cycle = cycle; \
+			} \
+			break; \
+		} \
+		clast = cardscan; \
+		cardscan.pathfinding_cycle = cycle; \
+		cardscan = next; \
+		++csteps; \
+	}
+
+#else
 
 #define JPS_CARDINAL_SCAN(FROM, DIR) \
 	cdir1 = turn(DIR, 90); \
@@ -181,7 +311,7 @@ GLOBAL_VAR_INIT(jps_visualization_resolve, TRUE)
 			} \
 		} \
 		next = get_step(cardscan, DIR); \
-		if(!JPS_ADJACENCY_CALL(cardscan, next)) { \
+		if(isnull(next) || !JPS_ADJACENCY_CALL(cardscan, next)) { \
 			cardscan.pathfinding_cycle = cycle; \
 			break; \
 		} \
@@ -209,68 +339,6 @@ GLOBAL_VAR_INIT(jps_visualization_resolve, TRUE)
 		++csteps; \
 	}
 
-#else
-
-#define JPS_CARDINAL_SCAN(FROM, DIR) \
-	cdir1 = turn(DIR, 90); \
-	cdir2 = turn(DIR, -90); \
-	csteps = 1; \
-	cpass = TRUE; \
-	cfailed1 = FALSE; \
-	cfailed2 = FALSE; \
-	cardscan = get_step(FROM, DIR); \
-	while(!isnull(cardscan)) { \
-		cheuristic = JPS_HEURISTIC_CALL(cardscan); \
-		if(get_dist(cardscan, goal) <= target_distance) { \
-			if(jdir & (jdir - 1)) { \
-				top = new /datum/jps_node(considering, top, JPS_HEURISTIC_CALL(considering), dsteps, top.cost + dsteps, jdir); \
-				open.enqueue(top) ; \
-				return jps_unwind_path(new /datum/jps_node(cardscan, top, cheuristic, csteps, top.cost + csteps, DIR)); \
-			} \
-			else { \
-				return jps_unwind_path(new /datum/jps_node(cardscan, top, cheuristic, csteps, top.cost + csteps, DIR)); \
-			} \
-		} \
-		cscan1 = get_step(cardscan, cdir1); \
-		cscan2 = get_step(cardscan, cdir2); \
-		if(!isnull(cscan1)) { \
-			if(!JPS_ADJACENCY_CALL(cardscan, cscan1)) { \
-				cfailed1 = TRUE; \
-			} \
-			else { \
-				if(cfailed1) { \
-					open.enqueue(new /datum/jps_node(clast, top, cheuristic, csteps, top.cost + csteps, cdir1 | DIR)); \
-					cpass = FALSE; \
-				} \
-			} \
-		} \
-		if(!isnull(cscan2)) { \
-			if(!JPS_ADJACENCY_CALL(cardscan, cscan2)) { \
-				cfailed2 = TRUE; \
-			} \
-			else { \
-				if(cfailed2) { \
-					open.enqueue(new /datum/jps_node(clast, top, cheuristic, csteps, top.cost + csteps, cdir2 | DIR)); \
-					cpass = FALSE; \
-				} \
-			} \
-		} \
-		next = get_step(cardscan, DIR); \
-		clast = cardscan; \
-		if(!JPS_ADJACENCY_CALL(cardscan, next)) { \
-			break; \
-		} \
-		if(!cpass) { \
-			open.enqueue(new /datum/jps_node(clast, top, cheuristic, csteps, top.cost + csteps, DIR)); \
-			break; \
-		} \
-		if(csteps + top.depth > max_depth) { \
-			break; \
-		} \
-		cardscan = next; \
-		++csteps; \
-	}
-
 #endif
 
 /**
@@ -290,6 +358,9 @@ GLOBAL_VAR_INIT(jps_visualization_resolve, TRUE)
 	ASSERT(isturf(src.start) && isturf(src.goal) && src.start.z == src.goal.z)
 	if(src.start == src.goal)
 		return list()
+	// too far away
+	if(get_long_dist(src.start, src.goal) > max_path_length)
+		return null
 	#ifdef JPS_DEBUGGING
 	var/list/turf/turfs_got_colored = list()
 	#endif
@@ -326,6 +397,7 @@ GLOBAL_VAR_INIT(jps_visualization_resolve, TRUE)
 	var/cheuristic
 	var/cfailed1
 	var/cfailed2
+	var/cinitialsteps
 	var/cdir1
 	var/cdir2
 	var/cpass
@@ -343,8 +415,8 @@ GLOBAL_VAR_INIT(jps_visualization_resolve, TRUE)
 	#define JPS_START_DIR(DIR) \
 		start_check_dir = DIR ; \
 		start_check = get_step(start, start_check_dir); \
-		if(JPS_ADJACENCY_CALL(start, start_check)) { \
-			start.overlays += get_jps_scan_overlay(DIR); \
+		if(!isnull(start_check) && JPS_ADJACENCY_CALL(start, start_check)) { \
+			start.overlays += get_jps_scan_overlay(DIR, TRUE); \
 			creating_node = new /datum/jps_node(start, null, start_heuristic, 0, 0, start_check_dir) ; \
 			nodes_by_turf[start] = creating_node; \
 			open.enqueue(creating_node); \
@@ -353,7 +425,7 @@ GLOBAL_VAR_INIT(jps_visualization_resolve, TRUE)
 	#define JPS_START_DIR(DIR) \
 		start_check_dir = DIR ; \
 		start_check = get_step(start, start_check_dir); \
-		if(JPS_ADJACENCY_CALL(start, start_check)) { \
+		if(!isnull(start_check) && JPS_ADJACENCY_CALL(start, start_check)) { \
 			creating_node = new /datum/jps_node(start, null, start_heuristic, 0, 0, start_check_dir) ; \
 			nodes_by_turf[start] = creating_node; \
 			open.enqueue(creating_node); \
@@ -394,7 +466,7 @@ GLOBAL_VAR_INIT(jps_visualization_resolve, TRUE)
 			#endif
 
 		// too deep, abort
-		if(top.depth >= max_depth)
+		if(top.depth + get_dist(current, goal) >= max_depth)
 			#ifdef JPS_DEBUGGING
 			top.pos.color = JPS_VISUAL_COLOR_CLOSED
 			turfs_got_colored[top.pos] = TRUE
@@ -433,7 +505,7 @@ GLOBAL_VAR_INIT(jps_visualization_resolve, TRUE)
 				#endif
 				dpass = TRUE
 				next = get_step(considering, jdir1)
-				if(JPS_ADJACENCY_CALL(considering, next))
+				if(!isnull(next) && JPS_ADJACENCY_CALL(considering, next))
 					// don't skip first tile
 					cskipfirst = FALSE
 					JPS_CARDINAL_SCAN(considering, jdir1)
@@ -442,7 +514,7 @@ GLOBAL_VAR_INIT(jps_visualization_resolve, TRUE)
 					if(!cpass)
 						dpass = FALSE
 				next = get_step(considering, jdir2)
-				if(JPS_ADJACENCY_CALL(considering, next))
+				if(!isnull(next) && JPS_ADJACENCY_CALL(considering, next))
 					// don't skip first tile
 					cskipfirst = FALSE
 					JPS_CARDINAL_SCAN(considering, jdir2)
@@ -451,7 +523,7 @@ GLOBAL_VAR_INIT(jps_visualization_resolve, TRUE)
 					if(!cpass)
 						dpass = FALSE
 				next = get_step(considering, jdir)
-				if(!JPS_ADJACENCY_CALL(considering, next))
+				if(isnull(next) || !JPS_ADJACENCY_CALL(considering, next))
 					considering = next
 					considering.pathfinding_cycle = cycle
 					break
@@ -471,7 +543,11 @@ GLOBAL_VAR_INIT(jps_visualization_resolve, TRUE)
 						open.enqueue(creating_node)
 						considering.pathfinding_cycle = cycle
 					break
-				if(dsteps + top.depth > max_depth)
+				if(dsteps + top.depth + get_dist(considering, goal) > max_depth)
+					#ifdef JPS_DEBUGGING
+					considering.color = JPS_VISUAL_COLOR_OUT_OF_BOUNDS
+					turfs_got_colored[considering] = TRUE
+					#endif
 					considering.pathfinding_cycle = cycle
 					break
 				considering.pathfinding_cycle = cycle
@@ -542,11 +618,13 @@ GLOBAL_VAR_INIT(jps_visualization_resolve, TRUE)
 		var/turf/current = nodes[index]
 		var/turf/next = nodes[index + 1]
 		var/safety = get_dist(current, next)
-		while(current)
+		while(current && current != next)
 			. += current
 			current = get_step_towards(current, next)
 			if(!safety--)
 				CRASH("failed jps output processing due to running out of safety, that shouldn't be possible")
+		++index
+
 	. += nodes[index]
 
 #undef JPS_SANE_NODE_LIMIT

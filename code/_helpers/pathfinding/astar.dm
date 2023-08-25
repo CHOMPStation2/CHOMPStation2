@@ -12,6 +12,7 @@ GLOBAL_VAR_INIT(astar_visualization_delay, 0.05 SECONDS)
 /// how long to persist the visuals
 GLOBAL_VAR_INIT(astar_visualization_persist, 3 SECONDS)
 #define ASTAR_VISUAL_COLOR_CLOSED "#ff0000"
+#define ASTAR_VISUAL_COLOR_OUT_OF_BOUNDS "#555555"
 #define ASTAR_VISUAL_COLOR_OPEN "#0000ff"
 #define ASTAR_VISUAL_COLOR_CURRENT "#ffff00"
 #define ASTAR_VISUAL_COLOR_FOUND "#00ff00"
@@ -72,10 +73,13 @@ GLOBAL_VAR_INIT(astar_visualization_persist, 3 SECONDS)
 					node_by_turf[considering] = considering_node; \
 					turfs_got_colored[considering] = TRUE; \
 					considering.color = ASTAR_VISUAL_COLOR_OPEN; \
+					considering.maptext = num2text(top.depth + 1); \
 				} \
 				else { \
 					if(considering_node.cost > considering_cost) { \
 						considering_node.cost = considering_cost; \
+						considering_node.depth = top.depth + 1; \
+						considering_node.pos.maptext = num2text(top.depth + 1); \
 						considering_node.prev = top; \
 					} \
 				} \
@@ -96,6 +100,7 @@ GLOBAL_VAR_INIT(astar_visualization_persist, 3 SECONDS)
 				else { \
 					if(considering_node.cost > considering_cost) { \
 						considering_node.cost = considering_cost; \
+						considering_node.depth = top.depth + 1; \
 						considering_node.prev = top; \
 					} \
 				} \
@@ -115,6 +120,9 @@ GLOBAL_VAR_INIT(astar_visualization_persist, 3 SECONDS)
 	ASSERT(isturf(src.start) && isturf(src.goal) && src.start.z == src.goal.z)
 	if(src.start == src.goal)
 		return list()
+	// too far away
+	if(get_long_dist(src.start, src.goal) > max_path_length)
+		return null
 	#ifdef ASTAR_DEBUGGING
 	var/list/turf/turfs_got_colored = list()
 	#endif
@@ -179,9 +187,9 @@ GLOBAL_VAR_INIT(astar_visualization_persist, 3 SECONDS)
 			return path_built
 
 		// too deep, abort
-		if(top.depth >= max_depth)
+		if(top.depth + get_dist(current, goal) > max_depth)
 			#ifdef ASTAR_DEBUGGING
-			top.pos.color = ASTAR_VISUAL_COLOR_CLOSED
+			top.pos.color = ASTAR_VISUAL_COLOR_OUT_OF_BOUNDS
 			turfs_got_colored[top.pos] = TRUE
 			#endif
 			continue
