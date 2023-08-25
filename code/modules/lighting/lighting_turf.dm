@@ -1,3 +1,5 @@
+var/static/list/planet_lighting_zs = list() // Tracks which z-levels use planetary lighting. // CHOMPedit
+
 /turf
 	///Lumcount added by sources other than lighting datum objects, such as the overlay lighting component.
 	var/dynamic_lumcount = 0
@@ -104,7 +106,7 @@
 
 ///Checks planets and fake_suns to see if our turf should be handled by either
 /turf/proc/check_for_sun()
-	if((z in SSplanets.z_to_planet) || (z in fake_sunlight_zs))
+	if((z in planet_lighting_zs) || (z in fake_sunlight_zs)) // CHOMPedit
 		return TRUE
 	return FALSE
 

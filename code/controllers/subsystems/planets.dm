@@ -31,6 +31,7 @@ SUBSYSTEM_DEF(planets)
 				admin_notice("<span class='danger'>Z[Z] is shared by more than one planet!</span>", R_DEBUG)
 				continue
 			z_to_planet[Z] = NP
+			planet_lighting_zs |= Z // I guess this is problematic if planet datums get deleted later. // CHOMPedit
 
 // DO NOT CALL THIS DIRECTLY UNLESS IT'S IN INITIALIZE,
 // USE turf/simulated/proc/make_indoors() and
