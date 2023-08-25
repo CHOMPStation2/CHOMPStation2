@@ -12,6 +12,16 @@
 	var/nitrogen = 0
 	var/phoron = 0
 
+	//* Movement / Pathfinding
+	/// How much the turf slows down movement, if any.
+	var/slowdown = 0
+	/// Pathfinding cost; null defaults to slowdown
+	var/path_weight = 0
+	/// danger flags to avoid
+	var/turf_path_danger = NONE
+	/// pathfinding id - used to avoid needing a big closed list to iterate through every cycle of jps
+	var/pathfinding_cycle
+
 	//Properties for airtight tiles (/wall)
 	var/thermal_conductivity = 0.05
 	var/heat_capacity = 1

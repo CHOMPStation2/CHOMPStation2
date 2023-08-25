@@ -36,6 +36,8 @@ GLOBAL_DATUM_INIT(generic_pathfinding_actor, /atom/movable/pathfinding_predicate
 	/// this is in byond distance, *not* pathfinding distance
 	/// this means that 1 tile away diagonally = 1, 2 diagonally away = 2, etc.
 	var/target_distance
+	/// if target distance is one, we require adjacency
+	var/require_adjacency_when_going_adjacent = TRUE
 	/// how far away total we can search
 	/// this is not distance from source we want to go, this is how far away we can *search*
 	/// (the former might be the case for some algorithms, though).
@@ -110,8 +112,6 @@ GLOBAL_DATUM_INIT(generic_pathfinding_actor, /atom/movable/pathfinding_predicate
 	// this currently catches abstract stuff like lighting objects
 	// not great for performance.
 
-	if(A.density)
-		return FALSE
 	if(B.density)
 		return FALSE
 	if((B.turf_path_danger & search.turf_path_danger_ignore) != B.turf_path_danger)

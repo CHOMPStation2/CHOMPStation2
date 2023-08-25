@@ -158,7 +158,7 @@ GLOBAL_VAR_INIT(astar_visualization_persist, 3 SECONDS)
 		#endif
 
 		// get distance and check completion
-		if(get_dist(current, goal) <= target_distance)
+		if(get_dist(current, goal) <= target_distance && (target_distance != 1 || !require_adjacency_when_going_adjacent || current.TurfAdjacency(goal)))
 			// found; build path end to start of nodes
 			var/list/path_built = list()
 			while(top)

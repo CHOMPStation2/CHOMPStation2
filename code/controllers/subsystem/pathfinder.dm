@@ -16,6 +16,10 @@ SUBSYSTEM_DEF(pathfinder)
 	var/pathfinding_mutex = FALSE
 	/// pathfinding calls blocked
 	var/pathfinding_blocked = 0
+	/// pathfinding cycle - this is usable because of the mutex
+	/// this is used in place of a closed list in algorithms like JPS
+	/// to maximize performance.
+	var/pathfinding_cycle = 0
 
 /**
  * be aware that this emits a set of disjunct nodes
@@ -82,3 +86,25 @@ SUBSYSTEM_DEF(pathfinder)
 	if(isnull(target))
 		return
 	return SSpathfinder.get_path_jps(usr, target, get_turf(usr))
+
+/proc/pathfinding_run_all(turf/start, turf/goal)
+	SSpathfinder.get_path_astar(goal = goal, start = start, target_distance = 1, max_path_length = 128)
+	SSpathfinder.get_path_jps(goal = goal, start = start, target_distance = 1, max_path_length = 128)
+	graph_astar(
+		start,
+		goal,
+		TYPE_PROC_REF(/turf, CardinalTurfsWithAccess),
+		TYPE_PROC_REF(/turf, Distance),
+		0,
+		128,
+		1,
+	)
+	var/atom/movable/delegate_for_tg = new(start)
+	var/datum/tg_jps_pathfind/tg_instance = new(delegate_for_tg, goal, null, 128, 1, FALSE, null)
+	tg_instance.search()
+
+/proc/pathfinding_run_benchmark(times = 1000, turf/source = get_turf(usr))
+	var/list/turf/nearby = RANGE_TURFS(100, source)
+	for(var/i in 1 to min(times, 10000))
+		var/turf/picked = pick(nearby)
+		pathfinding_run_all(source, picked)
