@@ -100,8 +100,11 @@
 
 /datum/robot_sprite/standard/worm
 	name = "W02M"
-	sprite_icon_state = "worm"
+	sprite_icon_state = "worm-standard" //CHOMPEdit
 	has_custom_open_sprites = TRUE
+	sprite_icon = 'modular_chomp/icons/mob/wormborg.dmi' //CHOMPEdit
+	has_vore_belly_sprites = TRUE //CHOMPEdit
+	has_dead_sprite = TRUE //CHOMPEdit
 
 /datum/robot_sprite/standard/uptall
 	name = "Feminine Humanoid"

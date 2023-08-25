@@ -70,8 +70,11 @@
 
 /datum/robot_sprite/civilian/worm
 	name = "W02M"
-	sprite_icon_state = "worm"
+	sprite_icon_state = "worm-service" //CHOMPEdit
 	has_custom_open_sprites = TRUE
+	sprite_icon = 'modular_chomp/icons/mob/wormborg.dmi' //CHOMPEdit
+	has_vore_belly_sprites = TRUE //CHOMPEdit
+	has_dead_sprite = TRUE //CHOMPEdit
 
 /datum/robot_sprite/civilian/uptall
 	name = "Feminine Humanoid"
@@ -163,6 +166,14 @@
 	name = "ZOOM-BA"
 	sprite_icon_state = "zoomba"
 	has_dead_sprite = TRUE
+
+/datum/robot_sprite/service/worm //CHOMPAdd Start
+	name = "W02M"
+	sprite_icon_state = "worm-service"
+	has_custom_open_sprites = TRUE
+	sprite_icon = 'modular_chomp/icons/mob/wormborg.dmi'
+	has_vore_belly_sprites = TRUE
+	has_dead_sprite = TRUE //CHOMPAdd End
 
 // Wide/dogborg sprites
 
