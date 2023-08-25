@@ -24,17 +24,22 @@ SUBSYSTEM_DEF(pathfinder)
 /**
  * be aware that this emits a set of disjunct nodes
  * use [jps_output_turfs()] to convert them into a proper turf path list.
+ *
+ * Please see [code/__HELPERS/pathfinding/jps.dm] for details on what JPS does/is.
  */
 /datum/controller/subsystem/pathfinder/proc/get_path_jps(atom/movable/actor = GLOB.generic_pathfinding_actor, turf/goal, turf/start = get_turf(actor), target_distance = 1, max_path_length = 128)
 	var/datum/pathfinding/jps/instance = new(actor, start, goal, target_distance, max_path_length)
 	return run_pathfinding(instance)
 
+/**
+ * Please see [code/__HELPERS/pathfinding/astar.dm] for details on what JPS does/is.
+ */
 /datum/controller/subsystem/pathfinder/proc/get_path_astar(atom/movable/actor = GLOB.generic_pathfinding_actor, turf/goal, turf/start = get_turf(actor), target_distance = 1, max_path_length = 128)
 	var/datum/pathfinding/astar/instance = new(actor, start, goal, target_distance, max_path_length)
 	return run_pathfinding(instance)
 
 /datum/controller/subsystem/pathfinder/proc/default_ai_pathfinding(datum/ai_holder/holder, turf/goal, min_dist = 1, max_path = 128)
-	var/datum/pathfinding/astar/instance = new(holder.holder, get_turf(holder.holder), goal, min_dist, max_path)
+	var/datum/pathfinding/astar/instance = new(holder.holder, get_turf(holder.holder), goal, min_dist, max_path * 2)
 	var/obj/item/card/id/potential_id = holder.holder.GetIdCard()
 	if(!isnull(potential_id))
 		instance.ss13_with_access = potential_id.access?.Copy()

@@ -38,8 +38,8 @@ GLOBAL_VAR_INIT(astar_visualization_persist, 3 SECONDS)
 	/// previous
 	var/datum/astar_node/prev
 
-	/// our heuristic
-	var/heuristic
+	/// our score
+	var/score
 	/// our inherent cost
 	var/weight
 	/// node depth to get to here
@@ -47,16 +47,16 @@ GLOBAL_VAR_INIT(astar_visualization_persist, 3 SECONDS)
 	/// cost to get here from prev - built off of prev
 	var/cost
 
-/datum/astar_node/New(turf/pos, datum/astar_node/prev, heuristic, weight, depth, cost)
+/datum/astar_node/New(turf/pos, datum/astar_node/prev, score, weight, depth, cost)
 	src.pos = pos
 	src.prev = prev
-	src.heuristic = heuristic
+	src.score = score
 	src.weight = weight
 	src.depth = depth
 	src.cost = cost
 
 /proc/cmp_astar_node(datum/astar_node/A, datum/astar_node/B)
-	return A.heuristic - B.heuristic
+	return A.score - B.score
 
 #define ASTAR_HEURISTIC_CALL(TURF) (isnull(context)? call(heuristic_call)(TURF, goal) : call(context, heuristic_call)(TURF, goal))
 #define ASTAR_ADJACENCY_CALL(A, B) (isnull(context)? call(adjacency_call)(A, B, actor, src) : call(context, adjacency_call)(A, B, actor, src))
@@ -65,10 +65,10 @@ GLOBAL_VAR_INIT(astar_visualization_persist, 3 SECONDS)
 		if(!isnull(TURF)) { \
 			if(ASTAR_ADJACENCY_CALL(current, considering)) { \
 				considering_cost = top.cost + considering.path_weight; \
-				considering_heuristic = ASTAR_HEURISTIC_CALL(considering) + considering_cost; \
+				considering_score = ASTAR_HEURISTIC_CALL(considering) + considering_cost; \
 				considering_node = node_by_turf[considering]; \
 				if(isnull(considering_node)) { \
-					considering_node = new /datum/astar_node(considering, top, considering_heuristic, considering.path_weight, top.depth + 1, considering_cost); \
+					considering_node = new /datum/astar_node(considering, top, considering_score, considering.path_weight, top.depth + 1, considering_cost); \
 					open.enqueue(considering_node); \
 					node_by_turf[considering] = considering_node; \
 					turfs_got_colored[considering] = TRUE; \
@@ -90,10 +90,10 @@ GLOBAL_VAR_INIT(astar_visualization_persist, 3 SECONDS)
 		if(!isnull(TURF)) { \
 			if(ASTAR_ADJACENCY_CALL(current, considering)) { \
 				considering_cost = top.cost + considering.path_weight; \
-				considering_heuristic = ASTAR_HEURISTIC_CALL(considering) + considering_cost; \
+				considering_score = ASTAR_HEURISTIC_CALL(considering) + considering_cost; \
 				considering_node = node_by_turf[considering]; \
 				if(isnull(considering_node)) { \
-					considering_node = new /datum/astar_node(considering, top, considering_heuristic, considering.path_weight, top.depth + 1, considering_cost); \
+					considering_node = new /datum/astar_node(considering, top, considering_score, considering.path_weight, top.depth + 1, considering_cost); \
 					open.enqueue(considering_node); \
 					node_by_turf[considering] = considering_node; \
 				} \
@@ -113,6 +113,7 @@ GLOBAL_VAR_INIT(astar_visualization_persist, 3 SECONDS)
  * * Non uniform grids
  * * Slower than JPS
  * * Inherently cardinals-only
+ * * Node limit is manhattan, so 128 is a lot less than BYOND's get_dist(128).
  */
 /datum/pathfinding/astar
 
@@ -121,7 +122,7 @@ GLOBAL_VAR_INIT(astar_visualization_persist, 3 SECONDS)
 	if(src.start == src.goal)
 		return list()
 	// too far away
-	if(get_long_dist(src.start, src.goal) > max_path_length)
+	if(get_manhattan_dist(src.start, src.goal) > max_path_length)
 		return null
 	#ifdef ASTAR_DEBUGGING
 	var/list/turf/turfs_got_colored = list()
@@ -137,7 +138,7 @@ GLOBAL_VAR_INIT(astar_visualization_persist, 3 SECONDS)
 	// add operating vars
 	var/turf/current
 	var/turf/considering
-	var/considering_heuristic
+	var/considering_score
 	var/considering_cost
 	var/datum/astar_node/considering_node
 	var/list/node_by_turf = list()
