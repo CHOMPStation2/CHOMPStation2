@@ -214,3 +214,6 @@
   - rscadd: raccoon tail
   tacoguy7765093:
   - maptweak: VR map improvements
+2023-08-25:
+  Upstream:
+  - bugfix: fixes 'bad href token' message when trying to view a new fax
