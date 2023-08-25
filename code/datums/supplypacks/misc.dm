@@ -86,10 +86,7 @@
 			/obj/item/toy/plushie/nukeplushie,
 			/obj/item/toy/plushie/otter,
 			/obj/item/toy/plushie/vox,
-<<<<<<< HEAD
-=======
-			/obj/item/toy/plushie/shark)
->>>>>>> c500466c81... Merge pull request #15305 from PastelPrinceDan/blahaj
+			/obj/item/toy/plushie/shark,
 			//VOREStation Add End
 			//YawnWider Add Start
 			/obj/item/toy/plushie/teshari/_yw,
