@@ -391,7 +391,7 @@ GLOBAL_LIST_INIT(legacy_tg_space_type_cache, typecacheof(/turf/space))
 */
 /turf/proc/LinkBlockedWithAccess(turf/destination_turf, caller, ID)
 	var/static/datum/pathfinding/whatever = new
-	return global.default_pathfinding_adjacency(src, destination_turf, GLOB.generic_pathfinding_actor, whatever)
+	return !global.default_pathfinding_adjacency(src, destination_turf, GLOB.generic_pathfinding_actor, whatever)
 
 #undef CAN_STEP
 #undef STEP_NOT_HERE_BUT_THERE

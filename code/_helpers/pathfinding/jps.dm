@@ -4,7 +4,7 @@
 /// visualization; obviously slow as hell
 /// JPS visualization is currently not nearly as perfect as A*'s.
 /// notably is sometimes marks stuff closed that isn't because of the weird backtracking stuff I put in.
-#define JPS_DEBUGGING
+// #define JPS_DEBUGGING
 
 #ifdef JPS_DEBUGGING
 
@@ -111,6 +111,7 @@ GLOBAL_VAR_INIT(jps_visualization_resolve, TRUE)
 	while(!isnull(cardscan)) { \
 		cheuristic = JPS_HEURISTIC_CALL(cardscan); \
 		cardscan.overlays += get_jps_scan_overlay(DIR, TRUE); \
+		cardscan.maptext = "[cinitialsteps + csteps]"; \
 		if(get_dist(cardscan, goal) <= target_distance && (target_distance != 1 || !require_adjacency_when_going_adjacent || cardscan.TurfAdjacency(goal))) { \
 			cardscan.color = JPS_VISUAL_COLOR_OPEN; \
 			turfs_got_colored[cardscan] = TRUE; \
@@ -239,35 +240,23 @@ GLOBAL_VAR_INIT(jps_visualization_resolve, TRUE)
 	} \
 	while(!isnull(cardscan)) { \
 		cheuristic = JPS_HEURISTIC_CALL(cardscan); \
-		cardscan.overlays += get_jps_scan_overlay(DIR, TRUE); \
 		if(get_dist(cardscan, goal) <= target_distance && (target_distance != 1 || !require_adjacency_when_going_adjacent || cardscan.TurfAdjacency(goal))) { \
-			cardscan.color = JPS_VISUAL_COLOR_OPEN; \
-			turfs_got_colored[cardscan] = TRUE; \
 			if(jdir & (jdir - 1)) { \
 				if(isnull(dmadenode)) { \
-					considering.color = JPS_VISUAL_COLOR_OPEN; \
-					turfs_got_colored[considering] = TRUE; \
-					considering.overlays += get_jps_scan_overlay(jdir, TRUE); \
 					dmadenode = new /datum/jps_node(considering, top, JPS_HEURISTIC_CALL(considering), top.depth + dsteps, top.cost + dsteps, jdir); \
 					open.enqueue(dmadenode); \
 				} \
-				cardscan.color = JPS_VISUAL_COLOR_OPEN; \
-				turfs_got_colored[cardscan] = TRUE; \
 				creating_node = new /datum/jps_node(cardscan, dmadenode, JPS_HEURISTIC_CALL(cardscan), dmadenode.depth + csteps, dmadenode.cost + csteps, DIR); \
 				open.enqueue(creating_node); \
-				return jps_unwind_path(creating_node, turfs_got_colored); \
+				return jps_unwind_path(creating_node); \
 			} \
 			else { \
-				cardscan.color = JPS_VISUAL_COLOR_OPEN; \
-				turfs_got_colored[cardscan] = TRUE; \
 				creating_node = new /datum/jps_node(cardscan, top, cheuristic, top.depth + csteps, top.cost + csteps, DIR); \
 				open.enqueue(creating_node); \
-				return jps_unwind_path(creating_node, turfs_got_colored); \
+				return jps_unwind_path(creating_node); \
 			} \
 		} \
-		turfs_got_colored[cardscan] = TRUE; \
 		if(csteps + cinitialsteps + get_dist(cardscan, goal) > max_depth) { \
-			cardscan.color = JPS_VISUAL_COLOR_OUT_OF_BOUNDS; \
 			break; \
 		} \
 		cscan1 = get_step(cardscan, cdir1); \
@@ -286,9 +275,6 @@ GLOBAL_VAR_INIT(jps_visualization_resolve, TRUE)
 						else { \
 							creating_node = new /datum/jps_node(clast, top, cheuristic, top.depth + csteps, top.cost + csteps, cdir1 | DIR); \
 						} \
-						clast.color = JPS_VISUAL_COLOR_OPEN; \
-						turfs_got_colored[clast] = TRUE; \
-						clast.overlays += get_jps_scan_overlay(cdir1 | DIR, TRUE); \
 						nodes_by_turf[clast] = creating_node; \
 						open.enqueue(creating_node); \
 					} \
@@ -310,9 +296,6 @@ GLOBAL_VAR_INIT(jps_visualization_resolve, TRUE)
 						else { \
 							creating_node = new /datum/jps_node(clast, top, cheuristic, top.depth + csteps, top.cost + csteps, cdir2 | DIR); \
 						} \
-						clast.color = JPS_VISUAL_COLOR_OPEN; \
-						turfs_got_colored[clast] = TRUE; \
-						clast.overlays += get_jps_scan_overlay(cdir2 | DIR, TRUE); \
 						nodes_by_turf[clast] = creating_node; \
 						open.enqueue(creating_node); \
 					} \
@@ -334,9 +317,6 @@ GLOBAL_VAR_INIT(jps_visualization_resolve, TRUE)
 				else { \
 					creating_node = new /datum/jps_node(clast, top, cheuristic, top.depth + csteps, top.cost + csteps, DIR); \
 				} \
-				clast.color = JPS_VISUAL_COLOR_OPEN; \
-				turfs_got_colored[clast] = TRUE; \
-				clast.overlays += get_jps_scan_overlay(DIR, TRUE); \
 				nodes_by_turf[clast] = creating_node; \
 				open.enqueue(creating_node); \
 				cardscan.pathfinding_cycle = cycle; \
@@ -512,6 +492,7 @@ GLOBAL_VAR_INIT(jps_visualization_resolve, TRUE)
 				}
 				#ifdef JPS_DEBUGGING
 				considering.overlays += get_jps_scan_overlay(jdir, TRUE)
+				considering.maptext = "[top.depth + dsteps]"
 				turfs_got_colored[considering] = TRUE
 				#endif
 				dpass = TRUE

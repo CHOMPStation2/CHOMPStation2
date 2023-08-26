@@ -2,7 +2,7 @@
 //* Copyright (c) 2023 Citadel Station developers.          *//
 
 /// visualization; obviously slow as hell
-#define ASTAR_DEBUGGING
+// #define ASTAR_DEBUGGING
 
 #ifdef ASTAR_DEBUGGING
 
@@ -11,11 +11,13 @@
 GLOBAL_VAR_INIT(astar_visualization_delay, 0.05 SECONDS)
 /// how long to persist the visuals
 GLOBAL_VAR_INIT(astar_visualization_persist, 3 SECONDS)
-#define ASTAR_VISUAL_COLOR_CLOSED "#ff0000"
+#define ASTAR_VISUAL_COLOR_CLOSED "#ff4444"
 #define ASTAR_VISUAL_COLOR_OUT_OF_BOUNDS "#555555"
-#define ASTAR_VISUAL_COLOR_OPEN "#0000ff"
+#define ASTAR_VISUAL_COLOR_OPEN "#4444ff"
 #define ASTAR_VISUAL_COLOR_CURRENT "#ffff00"
 #define ASTAR_VISUAL_COLOR_FOUND "#00ff00"
+
+#define ASTAR_TRACE_COLOR_REDIRECTED "#7777ff"
 
 /proc/astar_wipe_colors_after(list/turf/turfs, time)
 	set waitfor = FALSE
@@ -26,6 +28,23 @@ GLOBAL_VAR_INIT(astar_visualization_persist, 3 SECONDS)
 	for(var/turf/T in turfs)
 		T.color = null
 		T.maptext = null
+		T.overlays.len = 0
+
+/proc/get_astar_scan_overlay(dir, forwards, color)
+	var/image/I = new
+	I.icon = icon('icons/screen/debug/pathfinding.dmi', "jps_scan", dir)
+	I.appearance_flags = KEEP_APART | RESET_ALPHA | RESET_COLOR | RESET_TRANSFORM
+	I.plane = OBJ_PLANE
+	I.color = color
+	if(dir & NORTH)
+		I.pixel_y = forwards? 16 : -16
+	else if(dir & SOUTH)
+		I.pixel_y = forwards? -16 : 16
+	if(dir & EAST)
+		I.pixel_x = forwards? 16 : -16
+	else if(dir & WEST)
+		I.pixel_x = forwards? -16 : 16
+	return I
 
 #endif
 
@@ -60,40 +79,43 @@ GLOBAL_VAR_INIT(astar_visualization_persist, 3 SECONDS)
 
 #define ASTAR_HEURISTIC_CALL(TURF) (isnull(context)? call(heuristic_call)(TURF, goal) : call(context, heuristic_call)(TURF, goal))
 #define ASTAR_ADJACENCY_CALL(A, B) (isnull(context)? call(adjacency_call)(A, B, actor, src) : call(context, adjacency_call)(A, B, actor, src))
+#define ASTAR_HEURISTIC_WEIGHT 1.2
 #ifdef ASTAR_DEBUGGING
-	#define ASTAR_HELL_DEFINE(TURF) \
+	#define ASTAR_HELL_DEFINE(TURF, DIR) \
 		if(!isnull(TURF)) { \
 			if(ASTAR_ADJACENCY_CALL(current, considering)) { \
 				considering_cost = top.cost + considering.path_weight; \
-				considering_score = ASTAR_HEURISTIC_CALL(considering) + considering_cost; \
+				considering_score = ASTAR_HEURISTIC_CALL(considering) * ASTAR_HEURISTIC_WEIGHT + considering_cost; \
 				considering_node = node_by_turf[considering]; \
 				if(isnull(considering_node)) { \
-					considering_node = new /datum/astar_node(considering, top, considering_score, considering.path_weight, top.depth + 1, considering_cost); \
+					considering_node = new /datum/astar_node(considering, top, considering_score, considering_cost, top.depth + 1, considering_cost); \
 					open.enqueue(considering_node); \
 					node_by_turf[considering] = considering_node; \
 					turfs_got_colored[considering] = TRUE; \
 					considering.color = ASTAR_VISUAL_COLOR_OPEN; \
-					considering.maptext = num2text(top.depth + 1); \
+					considering.maptext = MAPTEXT("[top.depth + 1], [considering_cost], [considering_score]"); \
+					considering.overlays += get_astar_scan_overlay(DIR); \
 				} \
 				else { \
 					if(considering_node.cost > considering_cost) { \
 						considering_node.cost = considering_cost; \
 						considering_node.depth = top.depth + 1; \
-						considering_node.pos.maptext = num2text(top.depth + 1); \
+						considering_node.pos.maptext = MAPTEXT("X [top.depth + 1], [considering_cost], [considering_score]"); \
+						considering.overlays += get_astar_scan_overlay(DIR, TRUE, ASTAR_TRACE_COLOR_REDIRECTED); \
 						considering_node.prev = top; \
 					} \
 				} \
 			} \
 		}
 #else
-	#define ASTAR_HELL_DEFINE(TURF) \
+	#define ASTAR_HELL_DEFINE(TURF, DIR) \
 		if(!isnull(TURF)) { \
 			if(ASTAR_ADJACENCY_CALL(current, considering)) { \
 				considering_cost = top.cost + considering.path_weight; \
-				considering_score = ASTAR_HEURISTIC_CALL(considering) + considering_cost; \
+				considering_score = ASTAR_HEURISTIC_CALL(considering) * ASTAR_HEURISTIC_WEIGHT + considering_cost; \
 				considering_node = node_by_turf[considering]; \
 				if(isnull(considering_node)) { \
-					considering_node = new /datum/astar_node(considering, top, considering_score, considering.path_weight, top.depth + 1, considering_cost); \
+					considering_node = new /datum/astar_node(considering, top, considering_score, considering_cost, top.depth + 1, considering_cost); \
 					open.enqueue(considering_node); \
 					node_by_turf[considering] = considering_node; \
 				} \
@@ -196,13 +218,13 @@ GLOBAL_VAR_INIT(astar_visualization_persist, 3 SECONDS)
 			continue
 
 		considering = get_step(current, NORTH)
-		ASTAR_HELL_DEFINE(considering)
+		ASTAR_HELL_DEFINE(considering, NORTH)
 		considering = get_step(current, SOUTH)
-		ASTAR_HELL_DEFINE(considering)
+		ASTAR_HELL_DEFINE(considering, SOUTH)
 		considering = get_step(current, EAST)
-		ASTAR_HELL_DEFINE(considering)
+		ASTAR_HELL_DEFINE(considering, EAST)
 		considering = get_step(current, WEST)
-		ASTAR_HELL_DEFINE(considering)
+		ASTAR_HELL_DEFINE(considering, WEST)
 
 		#ifdef ASTAR_DEBUGGING
 		top.pos.color = ASTAR_VISUAL_COLOR_CLOSED
@@ -224,6 +246,7 @@ GLOBAL_VAR_INIT(astar_visualization_persist, 3 SECONDS)
 #undef ASTAR_ADJACENCY_CALL
 
 #undef ASTAR_SANE_NODE_LIMIT
+#undef ASTAR_HEURISTIC_WEIGHT
 
 #ifdef ASTAR_DEBUGGING
 	#undef ASTAR_DEBUGGING

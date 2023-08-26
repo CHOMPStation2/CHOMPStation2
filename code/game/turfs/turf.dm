@@ -15,8 +15,8 @@
 	//* Movement / Pathfinding
 	/// How much the turf slows down movement, if any.
 	var/slowdown = 0
-	/// Pathfinding cost; null defaults to slowdown
-	var/path_weight = 0
+	/// Pathfinding cost
+	var/path_weight = 1
 	/// danger flags to avoid
 	var/turf_path_danger = NONE
 	/// pathfinding id - used to avoid needing a big closed list to iterate through every cycle of jps

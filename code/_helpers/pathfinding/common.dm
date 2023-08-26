@@ -141,7 +141,7 @@ GLOBAL_DATUM_INIT(generic_pathfinding_actor, /atom/movable/pathfinding_predicate
 	return TRUE
 
 /proc/default_pathfinding_heuristic(turf/current, turf/goal)
-	return sqrt((current.x - goal.x)**2 + (current.y - goal.y)**2)
+	return max(abs(current.x - goal.x), abs(current.y - goal.y))
 
 /**
  * This is a pretty hot proc used during pathfinding to see if something
