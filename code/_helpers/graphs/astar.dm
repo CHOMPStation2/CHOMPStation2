@@ -1,3 +1,8 @@
+// todo: DO NOT FUCKING USE THIS
+// it is *EXTREMELY* inefficient, and scales up quadratically in time complexity
+// DO NOT USE THIS UNTIL IT IS REWRITTEN
+// notably that "bad node trimming" is actually horrifying.
+
 /**
  * A Star pathfinding algorithm
  *
