@@ -1,3 +1,14 @@
+/proc/prof_init()
+	var/lib
+
+	switch(world.system_type)
+		if(MS_WINDOWS) lib = "prof.dll"
+		if(UNIX) lib = "libprof.so"
+		else CRASH("unsupported platform")
+
+	var/init = call_ext(lib, "init")()
+	if("0" != init) CRASH("[lib] init error: [init]")
+
 #define RECOMMENDED_VERSION 513
 // CHOMPedit Start - Tracy
 /proc/prof_init()
