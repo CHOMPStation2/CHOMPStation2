@@ -177,7 +177,8 @@ var/list/_human_default_emotes = list(
 	//CHOMP Add start
 	/decl/emote/audible/prbt2,
 	/decl/emote/audible/pain,
-	/decl/emote/audible/mgeow
+	/decl/emote/audible/mgeow,
+	/decl/emote/visible/flip/slip
 	//CHOMP Add end
 )
 

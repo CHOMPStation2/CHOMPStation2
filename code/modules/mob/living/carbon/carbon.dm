@@ -424,7 +424,7 @@
 	playsound(src, 'sound/misc/slip.ogg', 50, 1, -3)
 	if(slip_reflex && !lying) //CHOMPEdit Start
 		if(world.time >= next_emote)
-			src.emote("flip")
+			src.emote("sflip")
 			return 1 //CHOMPEdit End
 	Weaken(FLOOR(stun_duration/2, 1))
 	return 1
