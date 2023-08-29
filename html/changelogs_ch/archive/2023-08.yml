@@ -222,3 +222,6 @@
   - qol: New and improved wormborg sprites with wrecks and bulges.
   - bugfix: Fixed borgs spawning with extra nutrition for roundstart overcharge.
   - bugfix: Fixed borg belly icons not working with our vorebelly icon system.
+2023-08-29:
+  Verkister:
+  - rscadd: Added Slippery Reflexes trait.
