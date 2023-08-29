@@ -321,11 +321,11 @@
 	desc = "A precursor mecha on it's last legs, sparking, seeming vunerable up close"
 	movement_cooldown = 60
 	projectiletype = /obj/item/projectile/energy/homing_bolt/missile
-	melee_attack_delay = 4 SECOND
-	ranged_attack_delay = 2.5 SECONDS
+	ranged_attack_delay = 0.5 SECONDS
 	special_attack_min_range = 1
 	special_attack_max_range = 9
 	special_attack_cooldown = 5 SECONDS
+	melee_attack_delay = 1 SECOND
 
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 
@@ -394,6 +394,13 @@
 			)
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase5/proc/electric_defense(atom/target)
+	var/turf/T = get_turf(target)
+	visible_message(span("warning", "\The [src] fires an energetic sphere into the air!"))
+	playsound(src, 'sound/weapons/Laser.ogg', 50, 1)
+	face_atom(T)
+	var/obj/item/projectile/arc/microsingulo/sphere = new(loc)
+	sphere.old_style_target(T, src)
+	sphere.fire()
 	var/obj/item/projectile/P = new /obj/item/projectile/bullet/imperionspear(get_turf(src))
 	P.launch_projectile(target, BP_TORSO, src)
 	if(prob(50))
@@ -414,6 +421,28 @@
 		A.launch_projectile(target, BP_TORSO, src)
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase5/proc/launch_microsingularity(atom/target)
+	set waitfor = FALSE
+
+	// Telegraph our next move.
+	Beam(target, icon_state = "sat_beam", time = 3.5 SECONDS, maxdistance = INFINITY)
+	visible_message(span("warning", "\The [src] deploys a missile rack!"))
+	playsound(src, 'sound/effects/turret/move1.wav', 50, 1)
+	sleep(0.5 SECONDS)
+
+	for(var/i = 1 to 3)
+		if(target) // Might get deleted in the meantime.
+			var/turf/T = get_turf(target)
+			if(T)
+				visible_message(span("warning", "\The [src] fires a rocket into the air!"))
+				playsound(src, 'sound/weapons/rpg.ogg', 70, 1)
+				face_atom(T)
+				var/obj/item/projectile/arc/explosive_rocket/rocket = new(loc)
+				rocket.old_style_target(T, src)
+				rocket.fire()
+				sleep(1 SECOND)
+
+	visible_message(span("warning", "\The [src] retracts the missile rack."))
+	playsound(src, 'sound/effects/turret/move2.wav', 50, 1)
 	var/obj/item/projectile/P = new /obj/item/projectile/bullet/imperiontesla(get_turf(src))
 	P.launch_projectile(target, BP_TORSO, src)
 	if(prob(50))
@@ -467,9 +496,9 @@
 	only_submunitions = 1
 	range = 0
 	embed_chance = 0
-	submunition_spread_max = 1200
-	submunition_spread_min = 50
-	submunitions = list(/obj/item/projectile/energy/imperionblaster = 7)
+	submunition_spread_max = 1500
+	submunition_spread_min = 300
+	submunitions = list(/obj/item/projectile/energy/imperionblaster = 8)
 
 /obj/item/projectile/bullet/imperionblaster/on_range()
 	qdel(src)
@@ -490,9 +519,9 @@
 	only_submunitions = 1
 	range = 0
 	embed_chance = 0
-	submunition_spread_max = 300
-	submunition_spread_min = 100
-	submunitions = list(/obj/item/projectile/energy/imperiontesla = 3)
+	submunition_spread_max = 400
+	submunition_spread_min = 50
+	submunitions = list(/obj/item/projectile/energy/imperiontesla = 2)
 
 /obj/item/projectile/bullet/imperiontesla/on_range()
 	qdel(src)

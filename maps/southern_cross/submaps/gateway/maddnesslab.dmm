@@ -4046,7 +4046,12 @@
 /turf/simulated/floor/carpet/brown,
 /area/awaymission/mol/vistortunnel/orange)
 "Pf" = (
-/turf/simulated/floor/outdoors/shelfice,
+/turf/simulated/floor/outdoors/shelfice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15;
+	outdoors = -1
+	},
 /area/awaymission/mol/vr/shattered)
 "Ph" = (
 /obj/structure/table/standard,
@@ -15820,7 +15825,7 @@ Jw
 Jw
 Jw
 Jw
-lo
+Pf
 AQ
 AQ
 AQ
@@ -16062,7 +16067,7 @@ Jw
 Jw
 Jw
 Jw
-lo
+Pf
 AQ
 AQ
 AQ
@@ -16077,7 +16082,7 @@ Jw
 Jw
 Jw
 Jw
-lo
+Pf
 AQ
 AQ
 AQ
@@ -16319,7 +16324,7 @@ Jw
 Jw
 Jw
 Jw
-lo
+Pf
 AQ
 AQ
 AQ
@@ -16334,7 +16339,7 @@ Jw
 Jw
 Jw
 Jw
-lo
+Pf
 AQ
 AQ
 AQ
@@ -16344,7 +16349,7 @@ AQ
 AQ
 AQ
 AQ
-lo
+Pf
 Jw
 jd
 NL
@@ -17635,7 +17640,7 @@ AQ
 AQ
 AQ
 AQ
-Jw
+Pf
 jd
 NL
 NL
@@ -17892,7 +17897,7 @@ tP
 AQ
 AQ
 AQ
-lo
+Pf
 Jw
 jd
 NL
@@ -18133,8 +18138,8 @@ lo
 AQ
 AQ
 AQ
-lo
-lo
+Pf
+Pf
 AQ
 AQ
 Jw
@@ -18390,7 +18395,7 @@ Jw
 Jw
 AQ
 AQ
-lo
+Pf
 xd
 xd
 lo
@@ -18407,7 +18412,7 @@ AQ
 AQ
 AQ
 AQ
-lo
+Pf
 Jw
 Jw
 jd
@@ -18647,7 +18652,7 @@ Jw
 Jw
 Jw
 Pf
-lo
+Pf
 xd
 xd
 xd
@@ -19420,7 +19425,7 @@ Jw
 Jw
 Jw
 Jw
-lo
+Pf
 xd
 JO
 xd
@@ -19679,11 +19684,11 @@ Jw
 Jw
 Jw
 AQ
-lo
+Pf
 xd
 xd
 xd
-lo
+Pf
 Jw
 Jw
 Jw
@@ -19692,7 +19697,7 @@ Jw
 Jw
 Jw
 Jw
-lo
+Pf
 AQ
 AQ
 Od
@@ -19938,11 +19943,11 @@ Jw
 lo
 AQ
 AQ
-lo
-lo
-lo
+Pf
+Pf
+Pf
 AQ
-lo
+Pf
 Jw
 Jw
 Jw
@@ -20214,7 +20219,7 @@ AQ
 AQ
 AQ
 AQ
-lo
+Pf
 Jw
 xd
 xd
@@ -20459,19 +20464,19 @@ AQ
 AQ
 AQ
 AQ
-lo
+Pf
 Jw
 Jw
 Jw
 Jw
 Jw
-lo
+Pf
 AQ
 AQ
 AQ
 AQ
 AQ
-lo
+Pf
 Jw
 Jw
 jd
@@ -21501,7 +21506,7 @@ AQ
 AQ
 AQ
 AQ
-lo
+Pf
 Jw
 Jw
 Jw
@@ -22001,7 +22006,7 @@ AQ
 AQ
 AQ
 AQ
-lo
+Pf
 Jw
 Jw
 Jw
@@ -22265,7 +22270,7 @@ Jw
 Jw
 Jw
 Jw
-lo
+Pf
 AQ
 AQ
 AQ
@@ -22525,7 +22530,7 @@ Jw
 Jw
 Jw
 Jw
-lo
+Pf
 AQ
 AQ
 AQ
@@ -30503,39 +30508,39 @@ Nh
 Nh
 Nh
 Nh
-tG
-tG
-tG
-tG
-tG
-tG
-tG
-tG
-tG
-tG
-tG
-tG
-tG
-tG
-tG
-tG
-tG
-tG
-tG
-tG
-tG
-tG
-tG
-tG
-tG
-tG
-tG
-tG
-tG
-tG
-tG
-tG
-tG
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
 jd
 jd
 jd
