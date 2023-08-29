@@ -241,7 +241,4 @@
 	load_method = SINGLE_CASING
 	max_shells = 5
 	ammo_type = /obj/item/ammo_casing/a12g/beanbag
-<<<<<<< HEAD
-=======
 
->>>>>>> b7ae14e27a... Merge pull request #15321 from KillianKirilenko/kk-mini1
