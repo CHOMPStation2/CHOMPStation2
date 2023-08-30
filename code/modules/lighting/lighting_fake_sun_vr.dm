@@ -205,4 +205,19 @@ var/static/list/fake_sunlight_zs = list()
 			"brightness" = 0.1,
 			"color" = "#27024B"
 		)
+<<<<<<< HEAD
 	)
+=======
+	)
+
+/obj/effect/fake_sun/underwater
+	do_weather = TRUE
+	weather_visuals_icon = 'icons/effects/weather.dmi'
+	weather_visuals_icon_state = "underwater"
+	possible_light_setups = list(
+		list(
+			"brightness" = 1,
+			"color" = "#1c49ff"
+		)
+	)
+>>>>>>> b39f94bb0d... Merge pull request #15328 from SatinIsle/islands
