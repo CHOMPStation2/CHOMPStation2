@@ -4905,6 +4905,11 @@
 	blocks_nonghost_incorporeal = 1
 	},
 /area/awaymission/mol/audiotorium)
+"WZ" = (
+/obj/structure/table/marble,
+/obj/machinery/recharger,
+/turf/simulated/floor/tiled/red,
+/area/awaymission/mol/security)
 "Xk" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/bmarble,
@@ -36761,11 +36766,11 @@ iA
 iA
 CO
 iA
+WZ
+WZ
 iA
-iA
-iA
-iA
-iA
+WZ
+WZ
 iA
 Fb
 iA
@@ -37793,11 +37798,11 @@ iA
 iA
 Bn
 iA
+WZ
+WZ
 iA
-iA
-iA
-iA
-iA
+WZ
+WZ
 iA
 We
 iA
