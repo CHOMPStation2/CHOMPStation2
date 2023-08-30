@@ -45,8 +45,8 @@
 	name = "hacked autolathe"
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab{
-	temperature = 293.15;
-	movement_cost = 0
+	movement_cost = 0;
+	temperature = 293.15
 	},
 /area/vr/outdoors/powered)
 "afd" = (
@@ -98,8 +98,8 @@
 "ajB" = (
 /obj/structure/table/rack/shelf,
 /obj/item/weapon/reagent_containers/food/condiment/ketchup{
-	pixel_y = 0;
-	pixel_x = -7
+	pixel_x = -7;
+	pixel_y = 0
 	},
 /obj/item/weapon/reagent_containers/food/condiment/mustard{
 	pixel_x = -2
@@ -417,8 +417,8 @@
 /area/vr/powered/dungeon)
 "aEi" = (
 /obj/structure/railing/grey{
-	pixel_y = 0;
-	dir = 8
+	dir = 8;
+	pixel_y = 0
 	},
 /obj/structure/railing/grey,
 /obj/structure/prop/statue/pillar,
@@ -678,8 +678,8 @@
 "aTO" = (
 /obj/structure/table/standard,
 /obj/item/weapon/surgical/cautery{
-	pixel_y = 0;
-	pixel_x = 2
+	pixel_x = 2;
+	pixel_y = 0
 	},
 /obj/item/weapon/surgical/surgicaldrill,
 /turf/simulated/floor/tiled/white,
@@ -845,12 +845,12 @@
 	},
 /obj/effect/floor_decal/rust,
 /obj/item/weapon/bone/skull{
-	pixel_y = -11;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = -11
 	},
 /obj/item/clothing/head/that{
-	pixel_y = -3;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = -3
 	},
 /turf/simulated/floor/plating,
 /area/vr/powered/dungeon)
@@ -908,8 +908,8 @@
 	},
 /obj/random/cash/huge,
 /turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15;
-	outdoors = -1
+	outdoors = -1;
+	temperature = 293.15
 	},
 /area/vr/powered/dungeon)
 "bgo" = (
@@ -944,8 +944,8 @@
 	icon_state = "beartrap1"
 	},
 /turf/simulated/floor/outdoors/dirt{
-	temperature = 293.15;
-	outdoors = 0
+	outdoors = 0;
+	temperature = 293.15
 	},
 /area/vr/powered/dungeon)
 "bhs" = (
@@ -956,8 +956,8 @@
 /area/vr/powered/space/sciship)
 "bhB" = (
 /obj/structure/bed/chair/comfy/red{
-	pixel_y = 0;
-	dir = 4
+	dir = 4;
+	pixel_y = 0
 	},
 /obj/structure/plushie/ian{
 	dir = 4
@@ -1132,8 +1132,8 @@
 	icon_state = "beartrap1"
 	},
 /turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15;
-	outdoors = -1
+	outdoors = -1;
+	temperature = 293.15
 	},
 /area/vr/powered/dungeon)
 "bsn" = (
@@ -1163,12 +1163,12 @@
 /area/vr/outdoors/powered)
 "btN" = (
 /obj/machinery/transhuman/autoresleever{
-	respawn = 0;
-	vore_respawn = 0;
-	equip_body = 1;
-	name = "VR Ghost Cafe Spawn";
 	desc = "Clicking on this as a ghost will spawn you in as a NPC exclusive to the VR world loaded into the station.";
-	ghost_spawns = 1
+	equip_body = 1;
+	ghost_spawns = 1;
+	name = "VR Ghost Cafe Spawn";
+	respawn = 0;
+	vore_respawn = 0
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/cafe)
@@ -1248,8 +1248,8 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/item/weapon/reagent_containers/food/snacks/sliceable/sharkchunk,
 /turf/simulated/floor/outdoors/dirt{
-	temperature = 293.15;
-	outdoors = 0
+	outdoors = 0;
+	temperature = 293.15
 	},
 /area/vr/powered/dungeon)
 "bAV" = (
@@ -1301,8 +1301,8 @@
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab{
-	temperature = 293.15;
-	movement_cost = 0
+	movement_cost = 0;
+	temperature = 293.15
 	},
 /area/vr/outdoors/powered)
 "bED" = (
@@ -1597,10 +1597,10 @@
 	name = "Cargo Hold"
 	},
 /obj/machinery/door/blast/regular{
+	density = 0;
 	dir = 4;
 	id = "kalipsoshutters";
 	name = "Kalipso Blast Shielding";
-	density = 0;
 	opacity = 0
 	},
 /obj/structure/fans/tiny,
@@ -1644,17 +1644,17 @@
 "bZo" = (
 /obj/structure/table/fancyblack,
 /obj/item/weapon/bikehorn/tinytether{
-	pixel_y = 5;
-	pixel_x = 2
+	pixel_x = 2;
+	pixel_y = 5
 	},
 /obj/item/weapon/bikehorn/tinytether{
-	pixel_y = 11;
-	pixel_x = 8
+	pixel_x = 8;
+	pixel_y = 11
 	},
 /obj/item/weapon/paperplane{
 	dir = 4;
-	pixel_y = 2;
-	pixel_x = -9
+	pixel_x = -9;
+	pixel_y = 2
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/cult)
@@ -1670,8 +1670,8 @@
 /area/vr/powered/cult)
 "cbm" = (
 /obj/structure/railing/grey{
-	pixel_y = 0;
-	dir = 1
+	dir = 1;
+	pixel_y = 0
 	},
 /turf/simulated/floor/concrete{
 	outdoors = 0
@@ -1948,8 +1948,8 @@
 /obj/random/cash/huge,
 /obj/random/cash/huge,
 /turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15;
-	outdoors = -1
+	outdoors = -1;
+	temperature = 293.15
 	},
 /area/vr/powered/dungeon)
 "cmz" = (
@@ -2105,12 +2105,6 @@
 /obj/item/stack/material/gold,
 /turf/simulated/floor/flock,
 /area/vr/powered/rocks)
-"cwz" = (
-/turf/simulated/floor/outdoors/sidewalk/slab{
-	temperature = 293.15;
-	movement_cost = 0
-	},
-/area/vr/outdoors/powered)
 "cwE" = (
 /obj/machinery/vending/wardrobe/cargodrobe{
 	req_access = null
@@ -2122,8 +2116,8 @@
 "cxq" = (
 /obj/structure/flora/rocks2,
 /turf/simulated/floor/outdoors/sidewalk/slab{
-	temperature = 293.15;
-	movement_cost = 0
+	movement_cost = 0;
+	temperature = 293.15
 	},
 /area/vr/outdoors/powered)
 "cxA" = (
@@ -2177,8 +2171,8 @@
 	pixel_x = -6
 	},
 /obj/random/cigarettes{
-	pixel_y = 0;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 0
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/bar)
@@ -2224,8 +2218,8 @@
 "cFf" = (
 /obj/random/trash,
 /turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15;
-	outdoors = -1
+	outdoors = -1;
+	temperature = 293.15
 	},
 /area/vr/powered/dungeon)
 "cFn" = (
@@ -2343,10 +2337,10 @@
 /area/vr/powered/space/sciship)
 "cOM" = (
 /obj/machinery/button/remote/blast_door{
+	dir = 1;
 	id = "vrsewers1";
 	pixel_x = -22;
-	pixel_y = -7;
-	dir = 1
+	pixel_y = -7
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
@@ -2643,8 +2637,8 @@
 /area/vr/powered/armory)
 "dlP" = (
 /obj/structure/showcase/sign{
-	name = "WARNING: OSHA VIOLATIONS";
-	desc = "Don't Fall."
+	desc = "Don't Fall.";
+	name = "WARNING: OSHA VIOLATIONS"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
 	outdoors = 1;
@@ -3364,8 +3358,8 @@
 /area/vr/powered)
 "dXV" = (
 /obj/effect/simple_portal/linked{
-	portal_id = 70;
-	name = "Fast Travel to City"
+	name = "Fast Travel to City";
+	portal_id = 70
 	},
 /turf/simulated/floor/concrete{
 	outdoors = 1
@@ -3416,8 +3410,8 @@
 "dYY" = (
 /obj/structure/prop/rock/small/wateralt,
 /turf/simulated/floor/water{
-	temperature = 311;
-	outdoors = 0
+	outdoors = 0;
+	temperature = 311
 	},
 /area/vr/outdoors/powered)
 "dZm" = (
@@ -3486,8 +3480,8 @@
 "efo" = (
 /obj/structure/railing/grey,
 /obj/structure/railing/grey{
-	pixel_y = 0;
-	dir = 4
+	dir = 4;
+	pixel_y = 0
 	},
 /obj/structure/prop/statue/pillar,
 /turf/simulated/floor/concrete{
@@ -3783,8 +3777,8 @@
 	pixel_y = 6
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab{
-	temperature = 293.15;
-	movement_cost = 0
+	movement_cost = 0;
+	temperature = 293.15
 	},
 /area/vr/outdoors/powered)
 "eAf" = (
@@ -3795,8 +3789,8 @@
 /area/vr/powered/vendor)
 "eAn" = (
 /mob/living/simple_mob/construct/harvester{
-	dir = 8;
-	ai_holder_type = null
+	ai_holder_type = null;
+	dir = 8
 	},
 /turf/simulated/floor/redgrid/off,
 /area/vr/powered/cult)
@@ -3828,8 +3822,8 @@
 /area/vr/powered)
 "eCs" = (
 /turf/simulated/floor/water/pool{
-	temperature = 293.15;
-	outdoors = 1
+	outdoors = 1;
+	temperature = 293.15
 	},
 /area/vr/outdoors/powered)
 "eCJ" = (
@@ -3837,8 +3831,8 @@
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/dirt{
-	temperature = 293.15;
-	outdoors = 0
+	outdoors = 0;
+	temperature = 293.15
 	},
 /area/vr/powered/dungeon)
 "eCT" = (
@@ -4073,8 +4067,8 @@
 	special_attack_max_range = 15
 	},
 /turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15;
-	outdoors = -1
+	outdoors = -1;
+	temperature = 293.15
 	},
 /area/vr/powered/dungeon)
 "eIW" = (
@@ -4212,8 +4206,8 @@
 /area/vr/powered/rocks)
 "eRP" = (
 /obj/structure/railing/grey{
-	pixel_y = 0;
-	dir = 4
+	dir = 4;
+	pixel_y = 0
 	},
 /obj/structure/prop/statue/pillar,
 /turf/simulated/floor/concrete{
@@ -4229,8 +4223,8 @@
 /area/vr/space)
 "eTl" = (
 /obj/structure/bed/chair/sofa/right/brown{
-	pixel_y = 0;
-	dir = 1
+	dir = 1;
+	pixel_y = 0
 	},
 /turf/simulated/floor/wmarble,
 /area/vr/powered/motel)
@@ -4241,8 +4235,11 @@
 	},
 /area/vr/outdoors/powered)
 "eTS" = (
-/obj/machinery/button/mob_spawner_button,
-/turf/simulated/wall/r_wall,
+/obj/machinery/button/mob_spawner_button{
+	pixel_x = -10;
+	pixel_y = 0
+	},
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
 /area/vr/powered/building2)
 "eUa" = (
 /obj/effect/floor_decal/rust,
@@ -4498,12 +4495,12 @@
 /obj/structure/table/reinforced,
 /obj/item/weapon/storage/box/wormcan,
 /obj/item/weapon/storage/box/wormcan{
-	pixel_y = 0;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 0
 	},
 /obj/item/weapon/storage/box/wormcan/deluxe{
-	pixel_y = -1;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = -1
 	},
 /turf/simulated/floor/tiled,
 /area/vr/powered/gunshop)
@@ -4516,8 +4513,8 @@
 "fiJ" = (
 /turf/simulated/floor/water/beach{
 	dir = 8;
-	temperature = 311;
-	outdoors = 0
+	outdoors = 0;
+	temperature = 311
 	},
 /area/vr/powered/rocks)
 "fiL" = (
@@ -4535,8 +4532,8 @@
 "fjR" = (
 /obj/structure/prop/rock/round,
 /turf/simulated/floor/outdoors/dirt{
-	temperature = 311;
-	outdoors = 0
+	outdoors = 0;
+	temperature = 311
 	},
 /area/vr/powered/rocks)
 "fki" = (
@@ -4582,8 +4579,8 @@
 "fmo" = (
 /obj/random/cash/huge,
 /turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15;
-	outdoors = -1
+	outdoors = -1;
+	temperature = 293.15
 	},
 /area/vr/powered/dungeon)
 "foh" = (
@@ -4751,8 +4748,8 @@
 "fyf" = (
 /obj/structure/prop/rock/small/alt,
 /turf/simulated/floor/outdoors/dirt{
-	temperature = 311;
-	outdoors = 0
+	outdoors = 0;
+	temperature = 311
 	},
 /area/vr/powered/rocks)
 "fyX" = (
@@ -4911,8 +4908,8 @@
 "fHm" = (
 /obj/structure/table/standard,
 /obj/item/weapon/surgical/FixOVein{
-	pixel_y = 0;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 0
 	},
 /obj/item/weapon/surgical/bonegel{
 	pixel_x = -5;
@@ -5040,12 +5037,12 @@
 /area/vr/outdoors/powered)
 "fRu" = (
 /obj/structure/railing/grey{
-	pixel_y = 0;
-	dir = 4
+	dir = 4;
+	pixel_y = 0
 	},
 /obj/structure/bed/chair/sofa/bench/marble{
-	pixel_y = 0;
-	dir = 8
+	dir = 8;
+	pixel_y = 0
 	},
 /turf/simulated/floor/concrete{
 	outdoors = 0
@@ -5162,10 +5159,10 @@
 /obj/item/weapon/gun/energy/medigun,
 /obj/item/weapon/gun/energy/medigun,
 /obj/item/weapon/gun/energy/medigun,
-/obj/item/slime_extract/yellow,
-/obj/item/slime_extract/yellow,
-/obj/item/slime_extract/yellow,
-/obj/item/slime_extract/yellow,
+/obj/item/weapon/cell/slime,
+/obj/item/weapon/cell/slime,
+/obj/item/weapon/cell/slime,
+/obj/item/weapon/cell/slime,
 /turf/simulated/floor/reinforced,
 /area/vr/powered/bluebase)
 "fWQ" = (
@@ -5241,8 +5238,8 @@
 /area/vr/outdoors/powered/lava)
 "gfB" = (
 /mob/living/simple_mob/construct/wraith{
-	dir = 8;
-	ai_holder_type = null
+	ai_holder_type = null;
+	dir = 8
 	},
 /turf/simulated/floor/redgrid/off,
 /area/vr/powered/cult)
@@ -5355,8 +5352,8 @@
 	},
 /obj/structure/table/steel_reinforced,
 /obj/item/weapon/cell/hyper{
-	pixel_y = -2;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = -2
 	},
 /obj/item/weapon/cell/hyper{
 	pixel_y = 2
@@ -5379,8 +5376,8 @@
 "gqM" = (
 /obj/effect/decal/remains,
 /turf/simulated/floor/outdoors/dirt{
-	temperature = 293.15;
-	outdoors = 0
+	outdoors = 0;
+	temperature = 293.15
 	},
 /area/vr/powered/dungeon)
 "grL" = (
@@ -5623,8 +5620,8 @@
 "gGD" = (
 /obj/structure/table/standard,
 /obj/item/weapon/surgical/hemostat{
-	pixel_y = 0;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = 0
 	},
 /obj/item/weapon/surgical/retractor,
 /turf/simulated/floor/tiled/white,
@@ -6045,8 +6042,8 @@
 "hiL" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/weapon/reagent_containers/food/drinks/coffee{
-	pixel_y = 6;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 6
 	},
 /obj/item/weapon/reagent_containers/food/snacks/soydope,
 /turf/simulated/floor/wood,
@@ -6249,8 +6246,8 @@
 /area/vr/powered)
 "htW" = (
 /mob/living/simple_mob/construct/harvester{
-	dir = 1;
-	ai_holder_type = null
+	ai_holder_type = null;
+	dir = 1
 	},
 /turf/simulated/floor/redgrid/animated,
 /area/vr/powered/cult)
@@ -6281,8 +6278,8 @@
 /obj/fiftyspawner/glass,
 /obj/fiftyspawner/glass,
 /turf/simulated/floor/outdoors/sidewalk/slab{
-	temperature = 293.15;
-	movement_cost = 0
+	movement_cost = 0;
+	temperature = 293.15
 	},
 /area/vr/outdoors/powered)
 "hvJ" = (
@@ -6476,8 +6473,8 @@
 /area/vr/space)
 "hIL" = (
 /obj/machinery/chemical_dispenser/bar_soft/full{
-	pixel_y = 8;
-	dir = 2
+	dir = 2;
+	pixel_y = 8
 	},
 /obj/structure/table/marble,
 /turf/simulated/floor/wood,
@@ -6494,8 +6491,8 @@
 /area/vr/powered)
 "hNG" = (
 /turf/simulated/floor/outdoors/dirt{
-	temperature = 311;
-	outdoors = 0
+	outdoors = 0;
+	temperature = 311
 	},
 /area/vr/powered/rocks)
 "hNK" = (
@@ -6530,8 +6527,8 @@
 /obj/random/cash/huge,
 /obj/random/cash/huge,
 /turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15;
-	outdoors = -1
+	outdoors = -1;
+	temperature = 293.15
 	},
 /area/vr/powered/dungeon)
 "hQi" = (
@@ -6622,8 +6619,8 @@
 "hTV" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/reagent_containers/food/snacks/pancakes{
-	pixel_y = -6;
-	pixel_x = 12
+	pixel_x = 12;
+	pixel_y = -6
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/bar)
@@ -6978,8 +6975,8 @@
 /area/vr/powered)
 "ijL" = (
 /obj/structure/showcase/sign{
-	name = "WARNING: OSHA VIOLATIONS";
-	desc = "Don't Fall."
+	desc = "Don't Fall.";
+	name = "WARNING: OSHA VIOLATIONS"
 	},
 /turf/simulated/floor/outdoors/rocks{
 	temperature = 293.15
@@ -7007,9 +7004,9 @@
 /obj/effect/floor_decal/techfloor,
 /obj/machinery/light/poi,
 /obj/machinery/button/remote/blast_door{
+	dir = 4;
 	id = "alienroompuzzlevr";
 	name = "Alien Room Unlocker";
-	dir = 4;
 	pixel_x = 8;
 	pixel_y = -24
 	},
@@ -7163,8 +7160,8 @@
 /obj/item/weapon/rcd_ammo/large,
 /obj/item/weapon/rcd_ammo/large,
 /turf/simulated/floor/outdoors/sidewalk/slab{
-	temperature = 293.15;
-	movement_cost = 0
+	movement_cost = 0;
+	temperature = 293.15
 	},
 /area/vr/outdoors/powered)
 "iuE" = (
@@ -7223,7 +7220,7 @@
 /turf/simulated/floor/cult,
 /area/vr/powered/cult)
 "ixP" = (
-/mob/living/simple_mob/vore/alienanimals/catslug/suslug/color/red,
+/mob/living/simple_mob/vore/alienanimals/catslug,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/powered/dungeon)
 "ixS" = (
@@ -7473,8 +7470,8 @@
 /area/vr/powered)
 "iRw" = (
 /obj/structure/bed/chair/office/dark{
-	pixel_y = 0;
-	dir = 4
+	dir = 4;
+	pixel_y = 0
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/dungeon)
@@ -7800,8 +7797,8 @@
 "jhG" = (
 /turf/simulated/floor/water/beach/corner{
 	dir = 4;
-	temperature = 311;
-	outdoors = 0
+	outdoors = 0;
+	temperature = 311
 	},
 /area/vr/powered/rocks)
 "jin" = (
@@ -7867,8 +7864,8 @@
 /area/vr/powered)
 "jkL" = (
 /obj/structure/railing/grey{
-	pixel_y = 0;
-	dir = 8
+	dir = 8;
+	pixel_y = 0
 	},
 /obj/structure/prop/statue/pillar,
 /turf/simulated/floor/concrete{
@@ -7878,8 +7875,8 @@
 "jkT" = (
 /obj/effect/floor_decal/rust,
 /obj/item/weapon/bone/leg{
-	pixel_y = 0;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 0
 	},
 /obj/item/weapon/bone/leg{
 	pixel_x = 4
@@ -7918,8 +7915,8 @@
 /obj/structure/barricade,
 /obj/item/tape/police,
 /turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15;
-	outdoors = -1
+	outdoors = -1;
+	temperature = 293.15
 	},
 /area/vr/powered/dungeon)
 "joe" = (
@@ -8281,20 +8278,20 @@
 "jHb" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/effect/floor_decal/industrial/warning,
-/obj/item/ammo_magazine/m9mml,
-/obj/item/ammo_magazine/m9mml,
-/obj/item/ammo_magazine/m9mml,
-/obj/item/ammo_magazine/m9mml,
-/obj/item/ammo_magazine/m9mml,
-/obj/item/ammo_magazine/m9mml,
-/obj/item/ammo_magazine/m9mml,
-/obj/item/ammo_magazine/m9mml,
-/obj/item/ammo_magazine/m9mml,
-/obj/item/ammo_magazine/m9mml,
-/obj/item/ammo_magazine/m9mml,
-/obj/item/ammo_magazine/m9mml,
-/obj/item/ammo_magazine/m9mml,
-/obj/item/ammo_magazine/m9mml,
+/obj/item/ammo_magazine/m9mmAdvanced,
+/obj/item/ammo_magazine/m9mmAdvanced,
+/obj/item/ammo_magazine/m9mmAdvanced,
+/obj/item/ammo_magazine/m9mmAdvanced,
+/obj/item/ammo_magazine/m9mmAdvanced,
+/obj/item/ammo_magazine/m9mmAdvanced,
+/obj/item/ammo_magazine/m9mmAdvanced,
+/obj/item/ammo_magazine/m9mmAdvanced,
+/obj/item/ammo_magazine/m9mmAdvanced,
+/obj/item/ammo_magazine/m9mmAdvanced,
+/obj/item/ammo_magazine/m9mmAdvanced,
+/obj/item/ammo_magazine/m9mmAdvanced,
+/obj/item/ammo_magazine/m9mmAdvanced,
+/obj/item/ammo_magazine/m9mmAdvanced,
 /turf/simulated/shuttle/floor/black,
 /area/vr/powered/armory)
 "jHo" = (
@@ -8565,8 +8562,8 @@
 "jXX" = (
 /obj/item/weapon/storage/part_replacer/adv/discount_bluespace,
 /turf/simulated/floor/outdoors/sidewalk/slab{
-	temperature = 293.15;
-	movement_cost = 0
+	movement_cost = 0;
+	temperature = 293.15
 	},
 /area/vr/outdoors/powered)
 "jYM" = (
@@ -8645,8 +8642,8 @@
 "keX" = (
 /obj/structure/prop/rock/sharp,
 /turf/simulated/floor/outdoors/dirt{
-	temperature = 311;
-	outdoors = 0
+	outdoors = 0;
+	temperature = 311
 	},
 /area/vr/powered/rocks)
 "kfo" = (
@@ -8811,8 +8808,8 @@
 "kmG" = (
 /turf/simulated/floor/water/beach/corner{
 	dir = 1;
-	temperature = 311;
-	outdoors = 0
+	outdoors = 0;
+	temperature = 311
 	},
 /area/vr/outdoors/powered)
 "knh" = (
@@ -8877,8 +8874,8 @@
 /area/vr/powered/cult)
 "kuc" = (
 /mob/living/simple_mob/construct/artificer{
-	dir = 8;
-	ai_holder_type = null
+	ai_holder_type = null;
+	dir = 8
 	},
 /turf/simulated/floor/redgrid/off,
 /area/vr/powered/cult)
@@ -8941,8 +8938,8 @@
 	pixel_y = 9
 	},
 /obj/item/weapon/reagent_containers/food/snacks/sharkmeatdip{
-	pixel_y = 0;
-	pixel_x = -3
+	pixel_x = -3;
+	pixel_y = 0
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/conspawn)
@@ -8990,12 +8987,12 @@
 /area/vr/powered/cult)
 "kzD" = (
 /obj/machinery/transhuman/autoresleever{
-	respawn = 0;
-	vore_respawn = 0;
-	equip_body = 1;
-	name = "VR Ghost Cafe Spawn";
 	desc = "Clicking on this as a ghost will spawn you in as a NPC exclusive to the VR world loaded into the station.";
-	ghost_spawns = 1
+	equip_body = 1;
+	ghost_spawns = 1;
+	name = "VR Ghost Cafe Spawn";
+	respawn = 0;
+	vore_respawn = 0
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/conspawn)
@@ -9003,8 +9000,8 @@
 /obj/random/trash,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/dirt{
-	temperature = 293.15;
-	outdoors = 0
+	outdoors = 0;
+	temperature = 293.15
 	},
 /area/vr/powered/dungeon)
 "kAh" = (
@@ -9339,8 +9336,8 @@
 /area/vr/powered/dungeon)
 "kPH" = (
 /mob/living/simple_mob/construct/harvester{
-	dir = 1;
-	ai_holder_type = null
+	ai_holder_type = null;
+	dir = 1
 	},
 /turf/simulated/floor/cult,
 /area/vr/powered/cult)
@@ -9463,8 +9460,8 @@
 "kYR" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/dirt{
-	temperature = 293.15;
-	outdoors = 0
+	outdoors = 0;
+	temperature = 293.15
 	},
 /area/vr/powered/dungeon)
 "kZv" = (
@@ -9644,6 +9641,12 @@
 "lkR" = (
 /turf/simulated/floor/wood/broken,
 /area/vr/powered)
+"lli" = (
+/obj/effect/floor_decal/industrial/arrows/red{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/vr/powered/building2)
 "llk" = (
 /obj/effect/floor_decal/chapel{
 	dir = 8
@@ -9820,10 +9823,10 @@
 	dir = 1
 	},
 /obj/machinery/door/blast/regular{
+	density = 0;
 	dir = 4;
 	id = "kalipsoshutters";
 	name = "Kalipso Blast Shielding";
-	density = 0;
 	opacity = 0
 	},
 /turf/simulated/floor/plating,
@@ -9891,28 +9894,28 @@
 	dir = 5
 	},
 /obj/item/device/soulstone{
-	pixel_y = 9;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 9
 	},
 /obj/item/device/soulstone{
-	pixel_y = 9;
-	pixel_x = -2
+	pixel_x = -2;
+	pixel_y = 9
 	},
 /obj/item/device/soulstone{
-	pixel_y = 3;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 3
 	},
 /obj/item/device/soulstone{
-	pixel_y = 4;
-	pixel_x = -2
+	pixel_x = -2;
+	pixel_y = 4
 	},
 /obj/item/device/soulstone{
-	pixel_y = -3;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = -3
 	},
 /obj/item/device/soulstone{
-	pixel_y = -3;
-	pixel_x = -3
+	pixel_x = -3;
+	pixel_y = -3
 	},
 /turf/simulated/floor/cult,
 /area/vr/powered/cult)
@@ -9974,8 +9977,8 @@
 "lyW" = (
 /obj/structure/prop/rock/flat,
 /turf/simulated/floor/outdoors/dirt{
-	temperature = 311;
-	outdoors = 0
+	outdoors = 0;
+	temperature = 311
 	},
 /area/vr/powered/rocks)
 "lze" = (
@@ -11246,8 +11249,8 @@
 "mQL" = (
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15;
-	outdoors = -1
+	outdoors = -1;
+	temperature = 293.15
 	},
 /area/vr/powered/dungeon)
 "mQQ" = (
@@ -11258,8 +11261,8 @@
 /obj/effect/spawner/parts/t5,
 /obj/effect/spawner/parts/t5,
 /turf/simulated/floor/outdoors/sidewalk/slab{
-	temperature = 293.15;
-	movement_cost = 0
+	movement_cost = 0;
+	temperature = 293.15
 	},
 /area/vr/outdoors/powered)
 "mRy" = (
@@ -11384,8 +11387,8 @@
 	icon = 'icons/obj/abductor.dmi';
 	icon_state = "dispenser";
 	name = "Drug-Dispenser";
-	req_access = list(777);
-	pixel_y = -4
+	pixel_y = -4;
+	req_access = list(777)
 	},
 /obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/soporific,
 /obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/soporific,
@@ -11554,8 +11557,8 @@
 /area/vr/powered/cult)
 "njG" = (
 /obj/structure/bed/chair/sofa/brown{
-	pixel_y = 0;
-	dir = 1
+	dir = 1;
+	pixel_y = 0
 	},
 /turf/simulated/floor/wmarble,
 /area/vr/powered/motel)
@@ -11623,8 +11626,8 @@
 "nmj" = (
 /obj/random/trash,
 /turf/simulated/floor/outdoors/dirt{
-	temperature = 293.15;
-	outdoors = 0
+	outdoors = 0;
+	temperature = 293.15
 	},
 /area/vr/powered/dungeon)
 "nmu" = (
@@ -11781,8 +11784,8 @@
 /area/vr/powered)
 "ntz" = (
 /obj/structure/showcase/sign{
-	name = "UNDER CONSTRUCTION";
-	desc = "This sign appears to be telling you that there are more maps under construction."
+	desc = "This sign appears to be telling you that there are more maps under construction.";
+	name = "UNDER CONSTRUCTION"
 	},
 /turf/simulated/floor/outdoors/grass{
 	temperature = 293.15
@@ -11790,8 +11793,8 @@
 /area/vr/outdoors/powered)
 "ntG" = (
 /mob/living/simple_mob/construct/wraith{
-	dir = 1;
-	ai_holder_type = null
+	ai_holder_type = null;
+	dir = 1
 	},
 /turf/simulated/floor/cult,
 /area/vr/powered/cult)
@@ -11908,15 +11911,15 @@
 "nCX" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/weapon/reagent_containers/food/drinks/bottle/space_up{
-	pixel_y = 0;
-	pixel_x = -9
+	pixel_x = -9;
+	pixel_y = 0
 	},
 /obj/item/weapon/reagent_containers/food/drinks/bottle/space_mountain_wind{
 	pixel_x = -2
 	},
 /obj/item/weapon/reagent_containers/food/drinks/bottle/dr_gibb{
-	pixel_y = 0;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 0
 	},
 /turf/simulated/floor/tiled,
 /area/vr/powered/constore)
@@ -11952,8 +11955,8 @@
 	pixel_y = 0
 	},
 /obj/item/stack/material/durasteel{
-	material = 50;
-	amount = 50
+	amount = 50;
+	material = 50
 	},
 /obj/item/stack/material/phoron{
 	amount = 50
@@ -11975,8 +11978,8 @@
 	material = 50
 	},
 /obj/item/stack/material/platinum{
-	matter = 25;
-	amount = 50
+	amount = 50;
+	matter = 25
 	},
 /obj/item/stack/material/silver{
 	amount = 25
@@ -11991,8 +11994,8 @@
 	amount = 50
 	},
 /obj/item/stack/material/uranium{
-	material = 25;
-	amount = 50
+	amount = 50;
+	material = 25
 	},
 /obj/item/stack/rods{
 	amount = 50
@@ -12135,8 +12138,8 @@
 "nKv" = (
 /obj/structure/prop/rock/small,
 /turf/simulated/floor/outdoors/dirt{
-	temperature = 311;
-	outdoors = 0
+	outdoors = 0;
+	temperature = 311
 	},
 /area/vr/powered/rocks)
 "nKw" = (
@@ -12255,8 +12258,8 @@
 /area/vr/powered/armory)
 "nPI" = (
 /obj/effect/simple_portal/linked{
-	portal_id = 71;
-	name = "Fast Travel to VR Armory"
+	name = "Fast Travel to VR Armory";
+	portal_id = 71
 	},
 /turf/simulated/shuttle/floor/black,
 /area/vr/outdoors/powered)
@@ -12321,8 +12324,8 @@
 /obj/structure/barricade,
 /obj/item/tape/police,
 /turf/simulated/floor/outdoors/dirt{
-	temperature = 293.15;
-	outdoors = 0
+	outdoors = 0;
+	temperature = 293.15
 	},
 /area/vr/powered/dungeon)
 "nSN" = (
@@ -12406,23 +12409,23 @@
 "oaU" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/effect/simple_portal/linked{
-	portal_id = 69;
-	name = "Fast Travel to Construct"
+	name = "Fast Travel to Construct";
+	portal_id = 69
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab{
-	temperature = 293.15;
-	movement_cost = 0
+	movement_cost = 0;
+	temperature = 293.15
 	},
 /area/vr/outdoors/powered)
 "oaZ" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/reagent_containers/food/snacks/popcorn{
-	pixel_y = 0;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = 0
 	},
 /obj/item/weapon/reagent_containers/food/snacks/popcorn{
-	pixel_y = 0;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 0
 	},
 /turf/simulated/floor/tiled,
 /area/vr/powered/constore)
@@ -13207,10 +13210,10 @@
 	name = "reinforced grille"
 	},
 /obj/machinery/door/blast/regular{
+	density = 0;
 	dir = 4;
 	id = "kalipsoshutters";
 	name = "Kalipso Blast Shielding";
-	density = 0;
 	opacity = 0
 	},
 /turf/simulated/shuttle/plating,
@@ -13363,10 +13366,10 @@
 /obj/item/weapon/gun/energy/medigun,
 /obj/item/weapon/gun/energy/medigun,
 /obj/item/weapon/gun/energy/medigun,
-/obj/item/slime_extract/yellow,
-/obj/item/slime_extract/yellow,
-/obj/item/slime_extract/yellow,
-/obj/item/slime_extract/yellow,
+/obj/item/weapon/cell/slime,
+/obj/item/weapon/cell/slime,
+/obj/item/weapon/cell/slime,
+/obj/item/weapon/cell/slime,
 /turf/simulated/shuttle/floor/black,
 /area/vr/powered/armory)
 "pgX" = (
@@ -13376,8 +13379,8 @@
 "pha" = (
 /obj/structure/flora/ausbushes/sunnybush,
 /turf/simulated/floor/outdoors/sidewalk/slab{
-	temperature = 293.15;
-	movement_cost = 0
+	movement_cost = 0;
+	temperature = 293.15
 	},
 /area/vr/outdoors/powered)
 "phT" = (
@@ -13418,8 +13421,8 @@
 /obj/item/device/tvcamera,
 /obj/item/device/tvcamera,
 /turf/simulated/floor/outdoors/sidewalk/slab{
-	temperature = 293.15;
-	movement_cost = 0
+	movement_cost = 0;
+	temperature = 293.15
 	},
 /area/vr/outdoors/powered)
 "pki" = (
@@ -13609,10 +13612,10 @@
 /area/vr/powered/rocks)
 "pwd" = (
 /obj/machinery/door/blast/multi_tile/four_tile_hor_sec{
-	icon_state = "open";
-	opacity = 0;
 	autoclose = 0;
-	density = 0
+	density = 0;
+	icon_state = "open";
+	opacity = 0
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/powered/cult)
@@ -13636,8 +13639,8 @@
 "pyc" = (
 /turf/simulated/floor/water/beach{
 	dir = 10;
-	temperature = 311;
-	outdoors = 0
+	outdoors = 0;
+	temperature = 311
 	},
 /area/vr/outdoors/powered)
 "pyt" = (
@@ -13790,8 +13793,8 @@
 /area/vr/powered/armory)
 "pGz" = (
 /turf/simulated/floor/water{
-	temperature = 311;
-	outdoors = 0
+	outdoors = 0;
+	temperature = 311
 	},
 /area/vr/powered/rocks)
 "pHN" = (
@@ -13846,16 +13849,16 @@
 "pKp" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/weapon/reagent_containers/food/drinks/bottle/cola{
-	pixel_y = 0;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 0
 	},
 /obj/item/weapon/reagent_containers/food/drinks/bottle/cola{
-	pixel_y = 0;
-	pixel_x = -9
+	pixel_x = -9;
+	pixel_y = 0
 	},
 /obj/item/weapon/reagent_containers/food/drinks/bottle/cola{
-	pixel_y = 0;
-	pixel_x = -2
+	pixel_x = -2;
+	pixel_y = 0
 	},
 /turf/simulated/floor/tiled,
 /area/vr/powered/constore)
@@ -14251,10 +14254,10 @@
 	name = "reinforced grille"
 	},
 /obj/machinery/door/blast/regular{
+	density = 0;
 	dir = 4;
 	id = "kalipsoshutters";
 	name = "Kalipso Blast Shielding";
-	density = 0;
 	opacity = 0
 	},
 /turf/simulated/shuttle/plating,
@@ -14300,8 +14303,8 @@
 "qkv" = (
 /obj/effect/floor_decal/rust,
 /obj/item/weapon/bone/ribs{
-	pixel_y = -8;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = -8
 	},
 /obj/item/weapon/bone{
 	pixel_y = 7
@@ -14482,8 +14485,8 @@
 "qvP" = (
 /obj/structure/barricade,
 /turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15;
-	outdoors = -1
+	outdoors = -1;
+	temperature = 293.15
 	},
 /area/vr/powered/dungeon)
 "qvQ" = (
@@ -14554,8 +14557,8 @@
 	icon_state = "beartrap1"
 	},
 /turf/simulated/floor/outdoors/dirt{
-	temperature = 293.15;
-	outdoors = 0
+	outdoors = 0;
+	temperature = 293.15
 	},
 /area/vr/powered/dungeon)
 "qyR" = (
@@ -14765,8 +14768,8 @@
 "qFb" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/reagent_containers/food/snacks/pancakes{
-	pixel_y = -2;
-	pixel_x = 3
+	pixel_x = 3;
+	pixel_y = -2
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/bar)
@@ -14868,10 +14871,10 @@
 	name = "reinforced grille"
 	},
 /obj/machinery/door/blast/regular{
+	density = 0;
 	dir = 4;
 	id = "kalipsoshutters";
 	name = "Kalipso Blast Shielding";
-	density = 0;
 	opacity = 0
 	},
 /turf/simulated/shuttle/plating,
@@ -14917,8 +14920,8 @@
 "qOa" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/door/blast/shutters{
-	id = "vrgunshop";
-	dir = 2
+	dir = 2;
+	id = "vrgunshop"
 	},
 /obj/machinery/door/window/northright,
 /obj/machinery/door/window/southleft,
@@ -14946,12 +14949,12 @@
 /obj/structure/table/wooden_reinforced,
 /obj/item/weapon/material/kitchen/utensil/fork,
 /obj/item/weapon/reagent_containers/pill/happy{
-	pixel_y = 6;
-	pixel_x = 7
+	pixel_x = 7;
+	pixel_y = 6
 	},
 /obj/item/weapon/reagent_containers/pill/diet{
-	pixel_y = 2;
-	pixel_x = 4
+	pixel_x = 4;
+	pixel_y = 2
 	},
 /obj/item/weapon/reagent_containers/food/condiment/soysauce,
 /turf/simulated/floor/wood,
@@ -15051,8 +15054,8 @@
 "qZc" = (
 /turf/simulated/floor/water/beach{
 	dir = 9;
-	temperature = 311;
-	outdoors = 0
+	outdoors = 0;
+	temperature = 311
 	},
 /area/vr/powered/rocks)
 "qZC" = (
@@ -15732,9 +15735,9 @@
 	name = "reinforced grille"
 	},
 /obj/machinery/door/blast/regular{
+	density = 0;
 	id = "kalipsoshutters";
 	name = "Kalipso Blast Shielding";
-	density = 0;
 	opacity = 0
 	},
 /obj/machinery/computer/rdconsole/core{
@@ -15747,8 +15750,8 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/remains,
 /turf/simulated/floor/outdoors/dirt{
-	temperature = 293.15;
-	outdoors = 0
+	outdoors = 0;
+	temperature = 293.15
 	},
 /area/vr/powered/dungeon)
 "rOL" = (
@@ -15916,8 +15919,8 @@
 "saH" = (
 /obj/structure/showcase/sign,
 /turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15;
-	outdoors = -1
+	outdoors = -1;
+	temperature = 293.15
 	},
 /area/vr/powered/dungeon)
 "sbA" = (
@@ -15978,12 +15981,12 @@
 /area/vr/powered/cult)
 "seJ" = (
 /obj/structure/railing/grey{
-	pixel_y = 0;
-	dir = 8
+	dir = 8;
+	pixel_y = 0
 	},
 /obj/structure/bed/chair/sofa/bench/marble{
-	pixel_y = 0;
-	dir = 4
+	dir = 4;
+	pixel_y = 0
 	},
 /turf/simulated/floor/concrete{
 	outdoors = 1
@@ -16064,16 +16067,16 @@
 /area/vr/powered/dungeon)
 "shu" = (
 /obj/machinery/door/window/brigdoor/eastright{
-	req_access = null;
-	dir = 2
+	dir = 2;
+	req_access = null
 	},
 /obj/machinery/door/window/brigdoor/eastleft{
-	req_access = null;
-	dir = 1
+	dir = 1;
+	req_access = null
 	},
 /obj/machinery/door/window/brigdoor/eastright{
-	req_access = null;
-	dir = 2
+	dir = 2;
+	req_access = null
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/dungeon)
@@ -16291,28 +16294,28 @@
 	},
 /obj/structure/table/rack/shelf/steel,
 /obj/item/weapon/tool/crowbar/red{
+	desc = "Used to remove floors and to pry open doors. This one looks like it can pack quite a punch";
 	force = 15;
-	throwforce = 16;
 	name = "heavy crowbar";
-	desc = "Used to remove floors and to pry open doors. This one looks like it can pack quite a punch"
+	throwforce = 16
 	},
 /obj/item/weapon/tool/crowbar/red{
+	desc = "Used to remove floors and to pry open doors. This one looks like it can pack quite a punch";
 	force = 15;
-	throwforce = 16;
 	name = "heavy crowbar";
-	desc = "Used to remove floors and to pry open doors. This one looks like it can pack quite a punch"
+	throwforce = 16
 	},
 /obj/item/weapon/tool/crowbar/red{
+	desc = "Used to remove floors and to pry open doors. This one looks like it can pack quite a punch";
 	force = 15;
-	throwforce = 16;
 	name = "heavy crowbar";
-	desc = "Used to remove floors and to pry open doors. This one looks like it can pack quite a punch"
+	throwforce = 16
 	},
 /obj/item/weapon/tool/crowbar/red{
+	desc = "Used to remove floors and to pry open doors. This one looks like it can pack quite a punch";
 	force = 15;
-	throwforce = 16;
 	name = "heavy crowbar";
-	desc = "Used to remove floors and to pry open doors. This one looks like it can pack quite a punch"
+	throwforce = 16
 	},
 /turf/simulated/shuttle/floor/black,
 /area/vr/powered/armory)
@@ -16470,8 +16473,8 @@
 /area/vr/powered/vet)
 "sEh" = (
 /obj/effect/simple_portal/linked{
-	portal_id = 71;
-	name = "Fast Travel to City"
+	name = "Fast Travel to City";
+	portal_id = 71
 	},
 /turf/simulated/floor/concrete{
 	outdoors = 1
@@ -16490,12 +16493,12 @@
 /area/vr/powered/space/mechfactory)
 "sFk" = (
 /obj/effect/simple_portal/linked{
-	portal_id = 70;
-	name = "Fast Travel to Construct"
+	name = "Fast Travel to Construct";
+	portal_id = 70
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab{
-	temperature = 293.15;
-	movement_cost = 0
+	movement_cost = 0;
+	temperature = 293.15
 	},
 /area/vr/outdoors/powered)
 "sFH" = (
@@ -16697,8 +16700,8 @@
 "sUK" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/simulated/floor/outdoors/sidewalk/slab{
-	temperature = 293.15;
-	movement_cost = 0
+	movement_cost = 0;
+	temperature = 293.15
 	},
 /area/vr/outdoors/powered)
 "sVe" = (
@@ -16811,9 +16814,9 @@
 /obj/effect/map_helper/airlock/button/ext_button,
 /obj/machinery/door/airlock/hatch,
 /obj/machinery/door/blast/regular{
+	density = 0;
 	id = "kalipsoshutters";
 	name = "Kalipso Blast Shielding";
-	density = 0;
 	opacity = 0
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -16833,20 +16836,20 @@
 "tfh" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle{
-	pixel_y = -1;
-	pixel_x = 9
+	pixel_x = 9;
+	pixel_y = -1
 	},
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle{
-	pixel_y = -1;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = -1
 	},
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle{
-	pixel_y = -1;
-	pixel_x = 4
+	pixel_x = 4;
+	pixel_y = -1
 	},
 /obj/machinery/light{
 	dir = 8
@@ -16865,8 +16868,10 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/powered/dungeon)
 "tim" = (
-/obj/machinery/button/mob_spawner_button/second,
-/turf/simulated/wall/r_wall,
+/obj/machinery/button/mob_spawner_button/second{
+	pixel_x = -10
+	},
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
 /area/vr/powered/building2)
 "tkb" = (
 /obj/machinery/light{
@@ -17170,8 +17175,8 @@
 /area/vr/powered/cult)
 "tzL" = (
 /mob/living/simple_mob/construct/juggernaut/behemoth{
-	dir = 8;
-	ai_holder_type = null
+	ai_holder_type = null;
+	dir = 8
 	},
 /turf/simulated/floor/redgrid/off,
 /area/vr/powered/cult)
@@ -17226,10 +17231,10 @@
 /obj/structure/window/reinforced/survival_pod,
 /obj/effect/catwalk_plated/dark,
 /obj/machinery/door/blast/regular{
+	density = 0;
 	dir = 4;
 	id = "kalipsoshutters";
 	name = "Kalipso Blast Shielding";
-	density = 0;
 	opacity = 0
 	},
 /turf/simulated/floor/airless,
@@ -17291,14 +17296,14 @@
 /area/vr/powered/space/sciship)
 "tHK" = (
 /turf/simulated/floor/outdoors/dirt{
-	temperature = 293.15;
-	outdoors = 0
+	outdoors = 0;
+	temperature = 293.15
 	},
 /area/vr/powered/dungeon)
 "tHR" = (
 /turf/simulated/floor/water{
-	temperature = 311;
-	outdoors = 0
+	outdoors = 0;
+	temperature = 311
 	},
 /area/vr/outdoors/powered)
 "tKh" = (
@@ -17398,8 +17403,8 @@
 /obj/random/cash/huge,
 /obj/item/weapon/storage/bag/cash,
 /turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15;
-	outdoors = -1
+	outdoors = -1;
+	temperature = 293.15
 	},
 /area/vr/powered/dungeon)
 "tQq" = (
@@ -17682,8 +17687,8 @@
 	icon = 'icons/obj/abductor.dmi';
 	icon_state = "dispenser";
 	name = "Garmentier";
-	req_access = list(777);
-	pixel_y = 0
+	pixel_y = 0;
+	req_access = list(777)
 	},
 /obj/item/clothing/head/headband/maid,
 /obj/item/clothing/head/headband/maid,
@@ -17753,19 +17758,19 @@
 "ufp" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/weapon/paper/crumpled{
-	pixel_y = -3;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = -3
 	},
 /obj/item/weapon/reagent_containers/food/condiment/cornoil{
-	pixel_y = 0;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 0
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/dungeon)
 "ufu" = (
 /turf/simulated/floor/water/beach{
-	temperature = 311;
-	outdoors = 0
+	outdoors = 0;
+	temperature = 311
 	},
 /area/vr/outdoors/powered)
 "uga" = (
@@ -18290,8 +18295,8 @@
 	pixel_y = 6
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab{
-	temperature = 293.15;
-	movement_cost = 0
+	movement_cost = 0;
+	temperature = 293.15
 	},
 /area/vr/outdoors/powered)
 "uGW" = (
@@ -18368,10 +18373,10 @@
 /area/vr/powered)
 "uNc" = (
 /obj/machinery/door/blast/regular{
+	density = 0;
 	dir = 4;
 	id = "kalipsoshutters";
 	name = "Kalipso Blast Shielding";
-	density = 0;
 	opacity = 0
 	},
 /obj/structure/fans/tiny,
@@ -18577,9 +18582,9 @@
 	name = "reinforced grille"
 	},
 /obj/machinery/door/blast/regular{
+	density = 0;
 	id = "kalipsoshutters";
 	name = "Kalipso Blast Shielding";
-	density = 0;
 	opacity = 0
 	},
 /obj/structure/window/reinforced/survival_pod{
@@ -18609,8 +18614,8 @@
 "vhw" = (
 /obj/structure/prop/rock/small/water,
 /turf/simulated/floor/water{
-	temperature = 311;
-	outdoors = 0
+	outdoors = 0;
+	temperature = 311
 	},
 /area/vr/powered/rocks)
 "vil" = (
@@ -18624,8 +18629,8 @@
 /area/vr/powered/space/whiteship)
 "viH" = (
 /obj/effect/simple_portal/linked{
-	portal_id = 69;
-	name = "Fast Travel to Beachhouses"
+	name = "Fast Travel to Beachhouses";
+	portal_id = 69
 	},
 /turf/simulated/floor/beach/sand/desert{
 	can_atmos_pass = 0;
@@ -18842,8 +18847,8 @@
 /area/vr/powered/dungeon)
 "vtI" = (
 /obj/structure/bed/chair/sofa/left/brown{
-	pixel_y = 0;
-	dir = 1
+	dir = 1;
+	pixel_y = 0
 	},
 /turf/simulated/floor/wmarble,
 /area/vr/powered/motel)
@@ -18914,8 +18919,8 @@
 /area/vr/powered/dungeon)
 "vAi" = (
 /turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15;
-	outdoors = -1
+	outdoors = -1;
+	temperature = 293.15
 	},
 /area/vr/powered/dungeon)
 "vBj" = (
@@ -18931,8 +18936,8 @@
 /area/vr/powered/dungeon)
 "vCh" = (
 /obj/item/modular_computer/console/preset/civilian{
-	pixel_y = 0;
-	dir = 8
+	dir = 8;
+	pixel_y = 0
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/dungeon)
@@ -19024,8 +19029,8 @@
 "vHn" = (
 /obj/item/weapon/material/twohanded/sledgehammer,
 /turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15;
-	outdoors = -1
+	outdoors = -1;
+	temperature = 293.15
 	},
 /area/vr/powered/dungeon)
 "vHs" = (
@@ -19089,8 +19094,8 @@
 /obj/random/cash/huge,
 /obj/random/cash/huge,
 /turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15;
-	outdoors = -1
+	outdoors = -1;
+	temperature = 293.15
 	},
 /area/vr/powered/dungeon)
 "vJB" = (
@@ -19105,12 +19110,12 @@
 	pixel_y = -5
 	},
 /obj/random/action_figure{
-	pixel_y = 5;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = 5
 	},
 /obj/random/action_figure{
-	pixel_y = -5;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = -5
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/dungeon)
@@ -19277,9 +19282,9 @@
 	name = "reinforced grille"
 	},
 /obj/machinery/door/blast/regular{
+	density = 0;
 	id = "kalipsoshutters";
 	name = "Kalipso Blast Shielding";
-	density = 0;
 	opacity = 0
 	},
 /turf/simulated/shuttle/plating,
@@ -19366,12 +19371,12 @@
 /area/vr/powered/cult)
 "vXW" = (
 /obj/machinery/door/window/brigdoor/eastright{
-	req_access = null;
-	dir = 4
+	dir = 4;
+	req_access = null
 	},
 /obj/machinery/door/window/brigdoor/eastright{
-	req_access = null;
-	dir = 8
+	dir = 8;
+	req_access = null
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/powered/dungeon)
@@ -19544,9 +19549,9 @@
 	pixel_y = 0
 	},
 /obj/structure/fireplace{
+	density = 0;
 	dir = 2;
-	pixel_x = 10;
-	density = 0
+	pixel_x = 10
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/cafe)
@@ -19612,8 +19617,8 @@
 	dir = 1
 	},
 /turf/simulated/floor/outdoors/dirt{
-	temperature = 293.15;
-	outdoors = 0
+	outdoors = 0;
+	temperature = 293.15
 	},
 /area/vr/powered/dungeon)
 "wgX" = (
@@ -19758,24 +19763,24 @@
 	pixel_y = 1
 	},
 /obj/item/weapon/storage/box/glasses/rocks{
-	pixel_y = 1;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 1
 	},
 /obj/item/weapon/storage/box/glasses/pint{
-	pixel_y = 11;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 11
 	},
 /obj/item/weapon/storage/box/glasses/meta/metapint{
-	pixel_y = 11;
-	pixel_x = 9
+	pixel_x = 9;
+	pixel_y = 11
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/bar)
 "wnA" = (
 /obj/machinery/vending/medical{
+	dir = 4;
 	req_access = null;
-	req_log_access = null;
-	dir = 4
+	req_log_access = null
 	},
 /turf/simulated/shuttle/floor/black,
 /area/vr/powered/armory)
@@ -19927,8 +19932,8 @@
 /area/vr/powered/bar)
 "wBm" = (
 /mob/living/simple_mob/construct/juggernaut/behemoth{
-	dir = 1;
-	ai_holder_type = null
+	ai_holder_type = null;
+	dir = 1
 	},
 /turf/simulated/floor/redgrid/animated,
 /area/vr/powered/cult)
@@ -20247,8 +20252,8 @@
 "wOc" = (
 /obj/structure/prop/rock,
 /turf/simulated/floor/outdoors/dirt{
-	temperature = 311;
-	outdoors = 0
+	outdoors = 0;
+	temperature = 311
 	},
 /area/vr/powered/rocks)
 "wPa" = (
@@ -20593,8 +20598,8 @@
 /area/vr/powered/cult)
 "xkd" = (
 /turf/simulated/floor/outdoors/sidewalk{
-	temperature = 293.15;
-	movement_cost = 0
+	movement_cost = 0;
+	temperature = 293.15
 	},
 /area/vr/outdoors/powered)
 "xkp" = (
@@ -20633,8 +20638,8 @@
 /obj/structure/window/phoronreinforced,
 /obj/structure/window/phoronreinforced,
 /obj/structure/prop/statue/phoron{
-	pixel_y = 0;
-	pixel_x = 16
+	pixel_x = 16;
+	pixel_y = 0
 	},
 /turf/simulated/floor/redgrid/animated,
 /area/vr/powered/cult)
@@ -20874,8 +20879,8 @@
 /area/vr/powered/dungeon)
 "xBc" = (
 /mob/living/simple_mob/construct/wraith{
-	dir = 1;
-	ai_holder_type = null
+	ai_holder_type = null;
+	dir = 1
 	},
 /turf/simulated/floor/redgrid/animated,
 /area/vr/powered/cult)
@@ -20920,8 +20925,8 @@
 /area/vr/powered/space/whiteship)
 "xEd" = (
 /mob/living/simple_mob/construct/juggernaut/behemoth{
-	dir = 1;
-	ai_holder_type = null
+	ai_holder_type = null;
+	dir = 1
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/vr/powered/cult)
@@ -21126,8 +21131,8 @@
 "xQE" = (
 /obj/fiftyspawner/wood,
 /turf/simulated/floor/outdoors/sidewalk/slab{
-	temperature = 293.15;
-	movement_cost = 0
+	movement_cost = 0;
+	temperature = 293.15
 	},
 /area/vr/outdoors/powered)
 "xQL" = (
@@ -21209,9 +21214,9 @@
 	name = "reinforced grille"
 	},
 /obj/machinery/door/blast/regular{
+	density = 0;
 	id = "kalipsoshutters";
 	name = "Kalipso Blast Shielding";
-	density = 0;
 	opacity = 0
 	},
 /turf/simulated/shuttle/plating,
@@ -21254,10 +21259,10 @@
 /obj/item/weapon/gun/energy/medigun,
 /obj/item/weapon/gun/energy/medigun,
 /obj/item/weapon/gun/energy/medigun,
-/obj/item/slime_extract/yellow,
-/obj/item/slime_extract/yellow,
-/obj/item/slime_extract/yellow,
-/obj/item/slime_extract/yellow,
+/obj/item/weapon/cell/slime,
+/obj/item/weapon/cell/slime,
+/obj/item/weapon/cell/slime,
+/obj/item/weapon/cell/slime,
 /turf/simulated/floor/reinforced,
 /area/vr/powered/redbase)
 "xWh" = (
@@ -21293,8 +21298,8 @@
 	light_color = "#DDFFD3"
 	},
 /turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15;
-	outdoors = -1
+	outdoors = -1;
+	temperature = 293.15
 	},
 /area/vr/powered/dungeon)
 "xXi" = (
@@ -22507,19 +22512,19 @@ lTR
 lTR
 hHa
 hHa
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
 kIl
 kIl
 kIl
@@ -22765,7 +22770,7 @@ dXV
 lTR
 vcM
 vcM
-cwz
+uiA
 tgD
 tgD
 tgD
@@ -22777,7 +22782,7 @@ tgD
 tgD
 tgD
 tgD
-cwz
+uiA
 kIl
 kIl
 kIl
@@ -23023,7 +23028,7 @@ vcM
 vcM
 vcM
 vcM
-cwz
+uiA
 sww
 iyq
 iyq
@@ -23035,7 +23040,7 @@ udG
 udG
 udG
 tgD
-cwz
+uiA
 kIl
 kIl
 kIl
@@ -23281,7 +23286,7 @@ viH
 fqb
 vcM
 vcM
-cwz
+uiA
 sww
 qyR
 rcK
@@ -23293,7 +23298,7 @@ rcK
 rcK
 tGi
 tgD
-cwz
+uiA
 kIl
 kIl
 kIl
@@ -23539,7 +23544,7 @@ fqb
 fqb
 aZv
 aZv
-cwz
+uiA
 tgD
 rcK
 rcK
@@ -23551,7 +23556,7 @@ pVA
 pVA
 pVA
 tgD
-cwz
+uiA
 kIl
 kIl
 kIl
@@ -23797,7 +23802,7 @@ aZv
 aZv
 aZv
 aZv
-cwz
+uiA
 rcK
 rcK
 rcK
@@ -23809,7 +23814,7 @@ rcK
 rcK
 rcK
 rcK
-cwz
+uiA
 kIl
 kIl
 kIl
@@ -24067,7 +24072,7 @@ rcK
 rcK
 rcK
 rcK
-cwz
+uiA
 dRV
 dRV
 kIl
@@ -24313,7 +24318,7 @@ rLE
 rLE
 rLE
 aZv
-cwz
+uiA
 rcK
 rcK
 rcK
@@ -24325,7 +24330,7 @@ rcK
 rcK
 rcK
 rcK
-cwz
+uiA
 kIl
 kIl
 kIl
@@ -24571,7 +24576,7 @@ hiz
 hiz
 rLE
 aZv
-cwz
+uiA
 tgD
 tvI
 tvI
@@ -24583,7 +24588,7 @@ acf
 mRY
 krk
 tgD
-cwz
+uiA
 kIl
 dRV
 crG
@@ -24829,7 +24834,7 @@ mOo
 hiz
 rLE
 aZv
-cwz
+uiA
 tgD
 qyR
 rcK
@@ -24841,7 +24846,7 @@ rcK
 rcK
 uFe
 tgD
-cwz
+uiA
 kIl
 kIl
 kIl
@@ -25087,7 +25092,7 @@ hiz
 pfw
 rLE
 aZv
-cwz
+uiA
 tgD
 lvo
 wCR
@@ -25095,11 +25100,11 @@ iDh
 rcK
 rcK
 rcK
-rcK
-rcK
+lli
+lli
 cdu
 tgD
-cwz
+uiA
 kIl
 kIl
 kIl
@@ -25345,7 +25350,7 @@ eEd
 hiz
 rLE
 aZv
-cwz
+uiA
 tgD
 tgD
 tgD
@@ -25357,7 +25362,7 @@ eTS
 tim
 tgD
 tgD
-cwz
+uiA
 kIl
 kIl
 kIl
@@ -25603,19 +25608,19 @@ eEd
 hiz
 rLE
 aZv
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
 sns
 sns
 sns
@@ -25630,8 +25635,8 @@ sns
 sns
 sns
 sns
-cwz
-cwz
+uiA
+uiA
 wHR
 wHR
 wHR
@@ -25888,8 +25893,8 @@ sns
 sns
 sns
 sns
-cwz
-cwz
+uiA
+uiA
 wHR
 cKr
 cKr
@@ -26146,8 +26151,8 @@ sns
 sns
 sns
 sns
-cwz
-cwz
+uiA
+uiA
 wHR
 cKr
 cKr
@@ -26404,8 +26409,8 @@ sns
 sns
 sns
 sns
-cwz
-cwz
+uiA
+uiA
 wHR
 wHR
 wHR
@@ -26579,8 +26584,8 @@ vKr
 vKr
 vKr
 pha
-cwz
-cwz
+uiA
+uiA
 cem
 cIZ
 vKr
@@ -26662,8 +26667,8 @@ sns
 sns
 sns
 sns
-cwz
-cwz
+uiA
+uiA
 kIo
 kIo
 kIo
@@ -26836,9 +26841,9 @@ vKr
 iQe
 pOg
 elg
-cwz
+uiA
 oaU
-cwz
+uiA
 vKr
 vKr
 vKr
@@ -26920,8 +26925,8 @@ sns
 sns
 sns
 sns
-cwz
-cwz
+uiA
+uiA
 kIo
 kIo
 kIo
@@ -27096,7 +27101,7 @@ reW
 elg
 cxq
 sUK
-cwz
+uiA
 vKr
 rgY
 vKr
@@ -27178,8 +27183,8 @@ sns
 sns
 sns
 sns
-cwz
-cwz
+uiA
+uiA
 kIo
 qTf
 kIo
@@ -27436,8 +27441,8 @@ sns
 sns
 sns
 sns
-cwz
-cwz
+uiA
+uiA
 wHR
 wHR
 wHR
@@ -27694,8 +27699,8 @@ sns
 sns
 sns
 sns
-cwz
-cwz
+uiA
+uiA
 wHR
 cKr
 cKr
@@ -27952,8 +27957,8 @@ sns
 sns
 sns
 sns
-cwz
-cwz
+uiA
+uiA
 wHR
 cKr
 cKr
@@ -28210,8 +28215,8 @@ sns
 sns
 sns
 sns
-cwz
-cwz
+uiA
+uiA
 wHR
 wHR
 wHR
@@ -28728,8 +28733,8 @@ kIl
 kIl
 tvB
 xQE
-cwz
-cwz
+uiA
+uiA
 aed
 xoh
 xoh
@@ -28986,8 +28991,8 @@ kIl
 kIl
 kIl
 xQE
-cwz
-cwz
+uiA
+uiA
 hvI
 xoh
 oHJ
@@ -29244,8 +29249,8 @@ kIl
 kIl
 kIl
 xQE
-cwz
-cwz
+uiA
+uiA
 uGw
 xoh
 oHJ
@@ -29501,9 +29506,9 @@ kIl
 kIl
 kIl
 tkF
-cwz
-cwz
-cwz
+uiA
+uiA
+uiA
 eAb
 xoh
 oHJ
@@ -29759,9 +29764,9 @@ dRV
 dRV
 kIl
 ntz
-cwz
-cwz
-cwz
+uiA
+uiA
+uiA
 eAb
 xoh
 qyT
@@ -30017,8 +30022,8 @@ kIl
 kIl
 kIl
 tkF
-cwz
-cwz
+uiA
+uiA
 jXX
 mQQ
 xoh
@@ -30275,9 +30280,9 @@ kIl
 crG
 kIl
 kIl
-cwz
-cwz
-cwz
+uiA
+uiA
+uiA
 iuB
 xoh
 bLO
@@ -30533,10 +30538,10 @@ kIl
 dRV
 kIl
 kIl
-cwz
-cwz
-cwz
-cwz
+uiA
+uiA
+uiA
+uiA
 rDu
 rDu
 rDu
@@ -30791,9 +30796,9 @@ kIl
 kIl
 kIl
 kIl
-cwz
-cwz
-cwz
+uiA
+uiA
+uiA
 pjA
 xoh
 oqY
@@ -31049,10 +31054,10 @@ kIl
 kIl
 dRV
 kIl
-cwz
-cwz
-cwz
-cwz
+uiA
+uiA
+uiA
+uiA
 xoh
 xoh
 rDu
@@ -31307,11 +31312,11 @@ kIl
 kIl
 kIl
 kIl
-cwz
-cwz
-cwz
-cwz
-cwz
+uiA
+uiA
+uiA
+uiA
+uiA
 xoh
 rDu
 rDu
@@ -31565,11 +31570,11 @@ kIl
 kIl
 kIl
 dRV
-cwz
-cwz
-cwz
-cwz
-cwz
+uiA
+uiA
+uiA
+uiA
+uiA
 rDu
 rDu
 rDu
@@ -31823,11 +31828,11 @@ kIl
 dRV
 kIl
 dRV
-cwz
-cwz
-cwz
-cwz
-cwz
+uiA
+uiA
+uiA
+uiA
+uiA
 rDu
 rDu
 rDu
@@ -32081,11 +32086,11 @@ kIl
 kIl
 kIl
 kIl
-cwz
-cwz
-cwz
-cwz
-cwz
+uiA
+uiA
+uiA
+uiA
+uiA
 xoh
 tkb
 rDu
@@ -32339,11 +32344,11 @@ kIl
 kIl
 kIl
 kIl
-cwz
-cwz
-cwz
-cwz
-cwz
+uiA
+uiA
+uiA
+uiA
+uiA
 xoh
 rDu
 rDu
@@ -32597,11 +32602,11 @@ kIl
 kIl
 kIl
 kIl
-cwz
-cwz
-cwz
-cwz
-cwz
+uiA
+uiA
+uiA
+uiA
+uiA
 xoh
 xoh
 rDu
@@ -32857,16 +32862,16 @@ kIl
 kIl
 kIl
 kIl
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
 hHa
 vRo
 vRo
@@ -33115,16 +33120,16 @@ kIl
 kIl
 kIl
 kIl
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
 hHa
 vRo
 vRo
@@ -33373,16 +33378,16 @@ kIl
 kIl
 kIl
 kIl
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
 hHa
 vRo
 vRo
@@ -36947,21 +36952,21 @@ sns
 sns
 hHa
 sns
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
 kIl
 sdm
 ttg
@@ -37205,7 +37210,7 @@ sns
 sns
 hHa
 sns
-cwz
+uiA
 uEa
 uEa
 uEa
@@ -37218,8 +37223,8 @@ uEa
 uEa
 uEa
 uEa
-cwz
-cwz
+uiA
+uiA
 kIl
 sdm
 ttg
@@ -37391,9 +37396,9 @@ lTR
 lTR
 lTR
 hHa
-cwz
-cwz
-cwz
+uiA
+uiA
+uiA
 pwc
 pwc
 pwc
@@ -37463,7 +37468,7 @@ sns
 sns
 hHa
 sns
-cwz
+uiA
 uEa
 fcS
 vYv
@@ -37476,8 +37481,8 @@ nPi
 rLu
 fVp
 uEa
-cwz
-cwz
+uiA
+uiA
 kIl
 sdm
 ttg
@@ -37649,9 +37654,9 @@ lTR
 lTR
 lTR
 lTR
-cwz
+uiA
 sFk
-cwz
+uiA
 pwc
 pwc
 pwc
@@ -37721,7 +37726,7 @@ sns
 sns
 hHa
 sns
-cwz
+uiA
 uEa
 cRO
 lvU
@@ -37734,8 +37739,8 @@ lvU
 lvU
 jHb
 uEa
-cwz
-cwz
+uiA
+uiA
 kIl
 sdm
 ttg
@@ -37979,7 +37984,7 @@ sns
 sns
 hHa
 sns
-cwz
+uiA
 uEa
 wFG
 gqq
@@ -37992,8 +37997,8 @@ jbF
 gqq
 ffS
 uEa
-cwz
-cwz
+uiA
+uiA
 kIl
 sdm
 ttg
@@ -38237,7 +38242,7 @@ sns
 sns
 hHa
 sns
-cwz
+uiA
 uEa
 pSh
 pSh
@@ -38250,8 +38255,8 @@ pSh
 pSh
 pSh
 uEa
-cwz
-cwz
+uiA
+uiA
 kIl
 sdm
 ttg
@@ -38495,7 +38500,7 @@ sns
 sns
 hHa
 sns
-cwz
+uiA
 uEa
 svI
 vYv
@@ -38508,8 +38513,8 @@ hgm
 iav
 lKP
 vYv
-cwz
-cwz
+uiA
+uiA
 kIl
 sdm
 ttg
@@ -38753,7 +38758,7 @@ sns
 sns
 hHa
 sns
-cwz
+uiA
 uEa
 ion
 cLE
@@ -38766,8 +38771,8 @@ cLE
 cLE
 cLE
 cLE
-cwz
-cwz
+uiA
+uiA
 kIl
 sdm
 ttg
@@ -39011,7 +39016,7 @@ sns
 sns
 hHa
 sns
-cwz
+uiA
 uEa
 kOr
 gqq
@@ -39024,8 +39029,8 @@ gqq
 gqq
 gqq
 gqq
-cwz
-cwz
+uiA
+uiA
 crG
 sdm
 ttg
@@ -39269,7 +39274,7 @@ sns
 sns
 hHa
 sns
-cwz
+uiA
 uEa
 pSh
 pSh
@@ -39282,8 +39287,8 @@ lsr
 pSh
 pSh
 uEa
-cwz
-cwz
+uiA
+uiA
 kIl
 sdm
 ttg
@@ -39527,7 +39532,7 @@ sns
 sns
 hHa
 sns
-cwz
+uiA
 uEa
 mUd
 vYv
@@ -39540,8 +39545,8 @@ lvU
 lvU
 nSr
 uEa
-cwz
-cwz
+uiA
+uiA
 kIl
 sdm
 ttg
@@ -39785,7 +39790,7 @@ sns
 sns
 hHa
 sns
-cwz
+uiA
 uEa
 jRl
 lvU
@@ -39798,8 +39803,8 @@ lvU
 lvU
 szE
 uEa
-cwz
-cwz
+uiA
+uiA
 vdd
 sdm
 ttg
@@ -40043,7 +40048,7 @@ sns
 sns
 hHa
 sns
-cwz
+uiA
 uEa
 vDz
 dlu
@@ -40056,8 +40061,8 @@ frW
 rUY
 pgm
 uEa
-cwz
-cwz
+uiA
+uiA
 kIl
 sdm
 ttg
@@ -40301,7 +40306,7 @@ sns
 sns
 hHa
 sns
-cwz
+uiA
 uEa
 uEa
 uEa
@@ -40314,8 +40319,8 @@ uEa
 uEa
 uEa
 uEa
-cwz
-cwz
+uiA
+uiA
 kIl
 sdm
 ttg
@@ -40559,21 +40564,21 @@ sns
 sns
 hHa
 sns
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
-cwz
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
+uiA
 kIl
 sdm
 ttg
