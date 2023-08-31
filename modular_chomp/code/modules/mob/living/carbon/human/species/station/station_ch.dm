@@ -71,7 +71,7 @@
 	metabolic_rate = 1.2 // Very physically active species, thus requiring more nutritional intake.
 	item_slowdown_mod = 0.90 // They carry heavy things slightly better.
 	mob_size = MOB_LARGE
-	blood_volume = 800 // More blood to compound their high health.
+	blood_volume = 640 // More blood to compound their high health.
 	bloodloss_rate = 0.90 // Bleed slightly slower.
 	num_alternate_languages = 3
 	secondary_langs = list(LANGUAGE_XENOLINGUA)
