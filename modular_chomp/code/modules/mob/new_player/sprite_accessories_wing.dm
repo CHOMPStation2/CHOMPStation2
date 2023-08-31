@@ -42,6 +42,32 @@
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "dragon_2_mark"
 
+/// XENO BACKPLATES ///
+
+/datum/sprite_accessory/wing/xeno_standard_backplate
+	name = "Xenomorph backplate (standard)"
+	desc = ""
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
+	icon_state = "xeno_standard"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/wing/xeno_royal_backplate
+	name = "Xenomorph backplate (royal)"
+	desc = ""
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
+	icon_state = "xeno_royal"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/wing/xeno_down_backplate
+	name = "Xenomorph backplate (down)"
+	desc = ""
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
+	icon_state = "xeno_down"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
 //
 // x64 Wings below this point.
 //
