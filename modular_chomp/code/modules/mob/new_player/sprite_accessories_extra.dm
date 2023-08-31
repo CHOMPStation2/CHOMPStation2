@@ -240,14 +240,30 @@
 	icon = 'icons/mob/human_races/markings_digi_ch.dmi'
 	icon_state = "xeno_digi"
 	digitigrade_acceptance = MARKING_DIGITIGRADE_ONLY
-	body_parts = list(BP_R_LEG)
+	body_parts = list(BP_R_LEG, BP_R_FOOT)
+
+/datum/sprite_accessory/marking/ch/xenomorph/digi_r_leg_hidden
+	name = "Xenomorph right leg (digitigrade, hide)"
+	icon = 'icons/mob/human_races/markings_digi_ch.dmi'
+	icon_state = "xeno_digi"
+	digitigrade_acceptance = MARKING_DIGITIGRADE_ONLY
+	body_parts = list(BP_R_LEG, BP_R_FOOT)
+	hide_body_parts = list(BP_R_LEG, BP_R_FOOT)
 
 /datum/sprite_accessory/marking/ch/xenomorph/digi_l_leg
 	name = "Xenomorph left leg (digitigrade)"
 	icon = 'icons/mob/human_races/markings_digi_ch.dmi'
 	icon_state = "xeno_digi"
 	digitigrade_acceptance = MARKING_DIGITIGRADE_ONLY
-	body_parts = list(BP_L_LEG)
+	body_parts = list(BP_L_LEG, BP_L_FOOT)
+
+/datum/sprite_accessory/marking/ch/xenomorph/digi_l_leg_hidden
+	name = "Xenomorph left leg (digitigrade, hide)"
+	icon = 'icons/mob/human_races/markings_digi_ch.dmi'
+	icon_state = "xeno_digi"
+	digitigrade_acceptance = MARKING_DIGITIGRADE_ONLY
+	body_parts = list(BP_L_LEG, BP_L_FOOT)
+	hide_body_parts = list(BP_L_LEG, BP_L_FOOT)
 
 // TORSOS //
 

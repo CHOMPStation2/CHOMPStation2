@@ -77,17 +77,17 @@
 /datum/language/xenocommon
 	name = "Xenolingua" //CHOMPedit
 	colour = "alien"
-	desc = "The common tongue of both the xenomorphs and the Genaprawns." //CHOMPedit
+	desc = "The common tongue of both the Xenomorphs and the Genaprawns." //CHOMPedit
 	speech_verb = "hisses"
 	ask_verb = "hisses"
 	exclaim_verb = "hisses"
 	key = "u"
-	flags = RESTRICTED
+// 	flags = RESTRICTED // CHOMPedit: Anyone can use it.
 	syllables = list("sss","sSs","SSS")
 
 /datum/language/xenos
 	name = "Hivemind"
-	desc = "Some aliens have the strange ability to commune over a psychic hivemind." //CHOMPedit
+	desc = "A psychic link permitting members of a Xenomorph hive to communicate over enormous distances." //CHOMPedit
 	speech_verb = "hisses"
 	ask_verb = "hisses"
 	exclaim_verb = "hisses"
