@@ -205,9 +205,6 @@ var/static/list/fake_sunlight_zs = list()
 			"brightness" = 0.1,
 			"color" = "#27024B"
 		)
-<<<<<<< HEAD
-	)
-=======
 	)
 
 /obj/effect/fake_sun/underwater
@@ -220,4 +217,3 @@ var/static/list/fake_sunlight_zs = list()
 			"color" = "#1c49ff"
 		)
 	)
->>>>>>> b39f94bb0d... Merge pull request #15328 from SatinIsle/islands
