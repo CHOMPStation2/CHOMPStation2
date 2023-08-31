@@ -70,7 +70,7 @@
 	flash_mod = 1.1 // Flashes are slightly more effective.
 	metabolic_rate = 1.2 // Very physically active species, thus requiring more nutritional intake.
 	item_slowdown_mod = 0.90 // They carry heavy things slightly better.
-	mob_size = MOB_LARGE
+	mob_size = MOB_MEDIUM // Technically doesn't even need this but still adding the override just in case.
 	blood_volume = 640 // More blood to compound their high health.
 	bloodloss_rate = 0.90 // Bleed slightly slower.
 	num_alternate_languages = 3
