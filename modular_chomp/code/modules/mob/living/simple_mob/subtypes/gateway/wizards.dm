@@ -1,7 +1,7 @@
 /datum/category_item/catalogue/fauna/vrerror
 	name = "VR Creations"
 	desc = "Upon investigation of the strange creatures, they appear \
-	to be constructed of hardlight technolgy, with connections to common \
+	to be constructed of hardlight technology, with connections to common \
 	VR equipment. It is unknown what their purpose is at this time."
 	value = CATALOGUER_REWARD_MEDIUM
 
