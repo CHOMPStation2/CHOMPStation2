@@ -2,10 +2,10 @@
 /datum/category_item/catalogue/fauna/livingcandy
 	name = "Living Candy"
 	desc = "Upon investigation of the strange creatures, a mix of \
-	promthean biolgy alongside various candies can be found. The purpose \
+	promethean biology alongside various candies can be found. The purpose \
 	of such a creation is unknown but it seems to function at a middle ground \
-	between slimes and prometheans. Lacking the full sentience of prometheans \
-	but their prescense bolstering others of their kind."
+	between slimes and prometheans. Lacking the full sentience of prometheans  \
+	but their presence bolstering others of their kind."
 	value = CATALOGUER_REWARD_MEDIUM
 
 //Someone remind me to get someone to make actual sprites for this things.
@@ -61,7 +61,7 @@
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
-	B.desc = "The fearsome preadtor gets a firm grip upon you, before dunking you into it's maw, then with a powerful swift gulp you're sent tumbling into it's stomach.."
+	B.desc = "The fearsome preadtor gets a firm grip upon you, before dunking you into it's maw, then with a powerful swift gulp you're sent tumbling into it's stomach."
 
 	B.emote_lists[DM_HOLD] = list(
 		"Your surroundings are momentarily filled with tour predator's pleased rumbling, its hands stroking over the taut swell you make in its belly.",)
