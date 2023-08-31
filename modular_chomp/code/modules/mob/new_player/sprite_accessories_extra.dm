@@ -265,6 +265,7 @@
 	body_parts = list(BP_L_LEG, BP_L_FOOT)
 	hide_body_parts = list(BP_L_LEG, BP_L_FOOT)
 
+
 // TORSOS //
 
 /datum/sprite_accessory/marking/ch/xenomorph/xeno_chest_m
