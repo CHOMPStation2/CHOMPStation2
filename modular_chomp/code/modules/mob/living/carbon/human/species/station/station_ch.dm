@@ -83,6 +83,7 @@
 	throwforce_absorb_threshold = 10 // Heavy.
 
 	economic_modifier = 5 // While they aren't true Xenomorphs, they still draw a lot of social stigma, and are generally mistreated and underpaid as a result.
+	rarity_value = 4 // Very rare to find these guys on human stations.
 
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
@@ -90,6 +91,11 @@
 	flesh_color = "##242424"
 	blood_color = "##00C202"
 	base_color = "##242424"
+
+	blurb = "Xenomorph Hybrids are a strange amalgamation of xenomorph and alternative-species DNA of \
+	disputed origin. While hybrids share many traits with their species's namesake, the vast majority \
+	are no less docile or aggressive than the vast majority of spacefaring races. Even still, their unsettling appearance, \
+	demeanour and innate xenomorph-inherited abilities are enough to draw widespread ire and distrust."
 
 	min_age = 18
 	max_age = 300 // Big number lol
@@ -126,8 +132,8 @@
 		O_APPENDIX = 	/obj/item/organ/internal/appendix,
 		O_STOMACH =		/obj/item/organ/internal/stomach,
 		O_INTESTINE =	/obj/item/organ/internal/intestine,
-		O_PLASMA =   	/obj/item/organ/internal/xenos/plasmavessel/queen,
-		O_HIVE =     	/obj/item/organ/internal/xenos/hivenode,
+		O_PLASMA =   	/obj/item/organ/internal/xenos/plasmavessel/weak, // Less plasma capacity.
+		O_HIVE =     	/obj/item/organ/internal/xenos/hivenode, // Lets them speak Hivemind and open resin doors.
 		O_RESIN =		/obj/item/organ/internal/xenos/resinspinner/weak // Weaker weed nodes with less spread range.
 		)
 
@@ -142,7 +148,7 @@
 		"The cold bites through our carapace."
 		)
 
-	var/weeds_plasma_rate = 3 	// Plasma regen on weeds. Much lower than actual xenos.
+	var/weeds_plasma_rate = 3 	// Plasma regen. Much lower than actual xenos. Faster on weeds.
 	var/weeds_heal_rate = 0.5   // Health regen on weeds. No healing unless resting.
 
 /datum/species/xenomorph_hybrid/handle_environment_special(var/mob/living/carbon/human/H)
@@ -161,10 +167,10 @@
 
 /datum/species/xenomorph_hybrid/proc/regenerate(var/mob/living/carbon/human/H)
 	var/heal_rate = weeds_heal_rate
-	var/mend_prob = 3 // Much lower than regular xenos.
+	var/mend_prob = 5 // Much lower than regular xenos.
 	if (!H.resting)
-		heal_rate = weeds_heal_rate / 2 // Much lower than regular xenos.
-		mend_prob = 1
+		heal_rate = 0 // No passive health regen without resting.
+		mend_prob = 0 // No passive health regen without resting.
 
 	//first heal damages
 	if (H.getBruteLoss() || H.getFireLoss() || H.getOxyLoss() || H.getToxLoss())
@@ -184,7 +190,7 @@
 				to_chat(H, "<span class='alien'>We feel a soothing sensation within our [I.parent_organ]...</span>")
 			return 1
 
-	//next mend broken bones, approx 10 ticks each
+	//next mend broken bones. May remove this if it's abused.
 	for(var/obj/item/organ/external/E in H.bad_external_organs)
 		if (E.status & ORGAN_BROKEN)
 			if (prob(mend_prob))
@@ -199,26 +205,77 @@
 // ABILITIES //
 
 /mob/living/carbon/human/proc/plant_weak()
-	set name = "Plant Weeds (50)"
+	set name = "Plant Weeds (150)"
 	set desc = "Plants some alien weeds."
 	set category = "Abilities"
 
-	if(check_alien_ability(50,1,O_RESIN))
+	if(check_alien_ability(150,1,O_RESIN))
 		visible_message("<span class='alium'><B>[src] has planted some alien weeds!</B></span>")
 		new /obj/effect/alien/weeds/node/weak(get_turf(src), null, "#321D37")	// Aliens.dm for weed node origin.
+		playsound(src, 'sound/effects/blobattack.ogg', 40, 1)
 	return
 
-/* /mob/living/carbon/human/proc/check_plasma_amount(mob/living/carbon/human/M as mob in oview())
+/mob/living/carbon/human/proc/check_plasma_amount(mob/living/carbon/human/M as mob)
 	set name = "Check Plasma Reserves"
 	set category = "Abilities"
 
 	var/obj/item/organ/internal/xenos/plasmavessel/I = M.internal_organs_by_name[O_PLASMA]
 	if(!istype(I))
-		to_chat(M, "<span class='alium'>Our plasma vessel is missing!</span>")
+		to_chat(src, "<span class='alium'>Our plasma vessel is missing!</span>")
 		return
-	else
-		to_chat(M, "Your plasma reserves are at [I.stored_plasma]/[I.max_plasma].")
-	return */ // Not working, will fix later probably.
+
+	to_chat(src, "Our plasma reserves are at [I.stored_plasma]/[I.max_plasma].")
+	return 0
+
+/mob/living/carbon/human/proc/resin_weak() // Technically stronger in some aspects.
+	set name = "Secrete Resin (25)"
+	set desc = "Secrete tough, malleable resin in front of us."
+	set category = "Abilities"
+
+	var/list/options = list("resin door","resin wall","resin membrane","nest","resin blob")
+	for(var/option in options)
+		LAZYSET(options, option, new /image('icons/mob/alien.dmi', option)) // based off 'icons/effects/thinktank_labels.dmi'
+
+	var/choice = show_radial_menu(src, src, options, radius = 42, require_near = TRUE)
+
+	if(!choice || QDELETED(src) || src.incapacitated())
+		return FALSE
+
+	var/targetLoc = get_step(src, dir)
+
+	if(iswall(targetLoc))
+		targetLoc = get_turf(src)
+
+	var/obj/O
+
+	switch(choice)
+		if("resin door")
+			if(!check_alien_ability(25,1,O_RESIN))
+				return
+			else O = new /obj/structure/simple_door/resin(targetLoc)
+		if("resin wall")
+			if(!check_alien_ability(25,1,O_RESIN))
+				return
+			else O = new /obj/structure/alien/wall(targetLoc)
+		if("resin membrane")
+			if(!check_alien_ability(25,1,O_RESIN))
+				return
+			else O = new /obj/structure/alien/membrane(targetLoc)
+		if("nest")
+			if(!check_alien_ability(25,1,O_RESIN))
+				return
+			else O = new /obj/structure/bed/nest(targetLoc)
+		if("resin blob")
+			if(!check_alien_ability(25,1,O_RESIN))
+				return
+			else O = new /obj/item/stack/material/resin(targetLoc)
+
+	if(O)
+		visible_message("<span class='warning'><B>[src] vomits up a thick purple substance and begins to shape it!</B></span>", "<span class='alium'>You shape a [choice].</span>")
+		O.color = "#321D37"
+		playsound(src, 'sound/effects/blobattack.ogg', 40, 1)
+
+	return
 
 // ORGANS //
 
@@ -229,7 +286,12 @@
 	organ_tag = O_RESIN
 
 	organ_verbs = list(
-		/mob/living/carbon/human/proc/resin,
+		/mob/living/carbon/human/proc/resin_weak,
 		/mob/living/carbon/human/proc/plant_weak,
-//		/mob/living/carbon/human/proc/check_plasma_amount
+		/mob/living/carbon/human/proc/check_plasma_amount
 		)
+
+/obj/item/organ/internal/xenos/plasmavessel/weak
+	name = "hybrid plasma vessel"
+	stored_plasma = 250 // Starts with max plasma.
+	max_plasma = 250 // Maximum of 250 plasma stored at any one time. Drones normally have 500.
