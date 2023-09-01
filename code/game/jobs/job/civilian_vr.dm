@@ -261,13 +261,9 @@
 	alt_titles = list("Performer" = /datum/alt_title/performer, "Musician" = /datum/alt_title/musician, "Stagehand" = /datum/alt_title/stagehand,
 						"Actor" = /datum/alt_title/actor, "Dancer" = /datum/alt_title/dancer, "Singer" = /datum/alt_title/singer,
 						"Magician" = /datum/alt_title/magician, "Comedian" = /datum/alt_title/comedian, "Tragedian" = /datum/alt_title/tragedian,
-<<<<<<< HEAD
 						"Clown" = /datum/alt_title/clown, "Jester" = /datum/alt_title/clown/jester,"Fool" = /datum/alt_title/clown/fool,
 						"Mime"= /datum/alt_title/mime,"Poseur"= /datum/alt_title/mime/poseur, //CHOMPEDIT: Adding clown + mime and their alts as alts of entertainer
-						"Artist" = /datum/alt_title/artist)
-=======
 						"Artist" = /datum/alt_title/artist, "Fitness Instructor" = /datum/alt_title/fitnessinstructor)
->>>>>>> d11c7486db... Merge pull request #15335 from SatinIsle/fitness-instructor
 
 // Entertainer Alt Titles
 /datum/alt_title/actor
