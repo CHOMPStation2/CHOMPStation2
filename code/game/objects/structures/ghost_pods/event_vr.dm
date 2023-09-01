@@ -29,6 +29,7 @@
 								  "Lizardman" = /mob/living/simple_mob/vore/aggressive/lizardman,//CHOMPedit: more mobs
 								  "Giant Frog" = /mob/living/simple_mob/vore/aggressive/frog,
 								  "Giant Rat" = /mob/living/simple_mob/vore/aggressive/rat,
+								  "Giant Lab Rat" = /mob/living/simple_mob/vore/aggressive/rat/labrat,//CHOMPedit: more mobs
 								  "Jelly Blob" = /mob/living/simple_mob/vore/jelly,
 								  "Wolf" = /mob/living/simple_mob/vore/wolf,
 								  "Dire Wolf" = /mob/living/simple_mob/vore/wolf/direwolf,//CHOMPedit: more mobs
