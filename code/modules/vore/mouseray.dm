@@ -118,7 +118,11 @@
 					continue
 				M.drop_from_inventory(W)
 
-		qdel(target)
+		if(M.tf_form == ourmob) //CHOMPEdit Start
+			ourmob.tf_form = M
+			M.forceMove(ourmob)
+		else
+			qdel(target) //CHOMPEdit End
 		return
 	else
 		if(M.stat == DEAD)	//We can let it undo the TF, because the person will be dead, but otherwise things get weird.
@@ -207,7 +211,11 @@
 				continue
 			src.drop_from_inventory(W)
 
-	qdel(src)
+	if(tf_form == ourmob) //CHOMPEdit Start
+		ourmob.tf_form = src
+		src.forceMove(ourmob)
+	else
+		qdel(src) //CHOMPEdit End
 
 
 /mob/living/proc/handle_tf_holder()
@@ -330,7 +338,11 @@
 					continue
 				M.drop_from_inventory(W)
 
-		qdel(target)
+		if(M.tf_form == ourmob) //CHOMPEdit Start
+			ourmob.tf_form = M
+			M.forceMove(ourmob)
+		else
+			qdel(target) //CHOMPEdit End
 		firer.visible_message("<span class='notice'>\The [shot_from] boops pleasantly.</span>")
 		return
 	else

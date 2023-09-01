@@ -12,6 +12,7 @@
 	var/death_sound_override = null
 	var/virtual_reality_mob = FALSE // gross boolean for keeping VR mobs in VR
 	var/datum/looping_sound/mob/on_fire/firesoundloop
+	var/mob/living/tf_form // Shapeshifter shenanigans
 	// var/datum/looping_sound/mob/stunned/stunnedloop
 	/* // Not sure if needed, screams aren't a carbon thing rn.
 	var/scream_sound = null
@@ -92,7 +93,7 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 // For some reason upstream made a general revert proc but not a general transform proc, so here it is.
 // Requires a /mob/living type path for transformation. Returns the new mob on success, null in all other cases.
 // Just handles mob TF right now, but maybe we'll want to do something similar for items in the future.
-/mob/living/proc/transform_into_mob(mob/living/new_form, pref_override = FALSE, revert = FALSE)
+/mob/living/proc/transform_into_mob(mob/living/new_form, pref_override = FALSE, revert = FALSE, shapeshifting = FALSE)
 	if(!src.mind)
 		return
 	if(!src.allow_spontaneous_tf && !pref_override)
@@ -106,9 +107,16 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 	else
 		if(src.stat == DEAD)
 			return
-		if(!ispath(new_form, /mob/living))
+		if(!ispath(new_form, /mob/living) && !ismob(new_form))
 			return
-		var/mob/living/new_mob = new new_form(get_turf(src))
+		var/mob/living/new_mob
+		if(shapeshifting && src.tf_form)
+			new_mob = src.tf_form
+			new_mob.verbs |= /mob/living/proc/shapeshift_form
+			new_mob.tf_form = src
+			new_mob.forceMove(src.loc)
+		else
+			new_mob = new new_form(get_turf(src))
 		new_mob.faction = src.faction
 
 		if(new_mob && isliving(new_mob))
@@ -154,3 +162,13 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 			src.forceMove(new_mob)
 			new_mob.tf_mob_holder = src
 			return new_mob
+
+/mob/living/proc/shapeshift_form()
+	set name = "Shapeshift Form"
+	set category = "Abilities"
+	set desc = "Shape shift between set mob forms."
+	if(!istype(tf_form))
+		to_chat(src, "<span class='notice'>No shapeshift form set.</span>")
+		return
+	else
+		transform_into_mob(tf_form, TRUE, TRUE, TRUE)
