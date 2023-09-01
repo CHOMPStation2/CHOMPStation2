@@ -1,6 +1,6 @@
 /datum/material/resin
 	name = "resin"
-	icon_colour = "#353C40"
+	icon_colour = "#353C40" // CHOMPedit: Alternative colour to distinguish from weed floor tiles.
 	icon_base = "resin"
 	dooropen_noise = 'sound/effects/attackblob.ogg'
 	door_icon_base = "resin"
