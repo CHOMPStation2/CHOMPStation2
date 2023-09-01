@@ -60,7 +60,6 @@
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp) // Innate claws and bite.
 	darksight = 8 // Same as Tajarans.
 	ambiguous_genders = TRUE
-	gluttonous = 1
 	slowdown = -0.2 // Slightly faster than average.
 	total_health = 150 // Takes a lot of effort to take a Xenomorph down.
 	brute_mod = 0.90 // Physical damage doesn't phase them as much.
@@ -74,9 +73,10 @@
 	blood_volume = 640 // More blood to compound their high health.
 	bloodloss_rate = 0.90 // Bleed slightly slower.
 	num_alternate_languages = 3
-	secondary_langs = list(LANGUAGE_XENOLINGUA)
 	name_language = LANGUAGE_XENOLINGUA
 	species_language = LANGUAGE_XENOLINGUA
+	secondary_langs = list(LANGUAGE_XENOLINGUA, LANGUAGE_HIVEMIND)
+	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX, LANGUAGE_PROMETHEAN) // Can use the Hivemind language.
 	color_mult = 1
 	health_hud_intensity = 1.5
 	chem_strength_alcohol = 1.2 // They don't handle their drinks very well.
