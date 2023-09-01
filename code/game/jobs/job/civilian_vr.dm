@@ -263,7 +263,7 @@
 						"Magician" = /datum/alt_title/magician, "Comedian" = /datum/alt_title/comedian, "Tragedian" = /datum/alt_title/tragedian,
 						"Clown" = /datum/alt_title/clown, "Jester" = /datum/alt_title/clown/jester,"Fool" = /datum/alt_title/clown/fool,
 						"Mime"= /datum/alt_title/mime,"Poseur"= /datum/alt_title/mime/poseur, //CHOMPEDIT: Adding clown + mime and their alts as alts of entertainer
-						"Artist" = /datum/alt_title/artist)
+						"Artist" = /datum/alt_title/artist, "Fitness Instructor" = /datum/alt_title/fitnessinstructor)
 
 // Entertainer Alt Titles
 /datum/alt_title/actor
@@ -305,3 +305,7 @@
 /datum/alt_title/artist
 	title = "Artist"
 	title_blurb = "An Artist's calling is to create beautiful arts! Whatever form may they take, create and have people astonished with your creativity."
+
+/datum/alt_title/fitnessinstructor
+	title = "Fitness Instructor"
+	title_blurb = "A Fitness Instructor dedicates themselves to improving the health of the crew through physical activity, and boy, do they need the help."
