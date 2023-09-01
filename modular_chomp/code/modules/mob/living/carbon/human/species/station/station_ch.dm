@@ -143,7 +143,7 @@
 		)
 
 	var/weeds_plasma_rate = 3 	// Plasma regen on weeds. Much lower than actual xenos.
-	var/weeds_heal_rate = 0   	// Health regen on weeds. No healing unless resting.
+	var/weeds_heal_rate = 0.5   // Health regen on weeds. No healing unless resting.
 
 /datum/species/xenomorph_hybrid/handle_environment_special(var/mob/living/carbon/human/H)
 
