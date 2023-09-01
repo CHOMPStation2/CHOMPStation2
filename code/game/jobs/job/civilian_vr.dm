@@ -261,13 +261,9 @@
 	alt_titles = list("Performer" = /datum/alt_title/performer, "Musician" = /datum/alt_title/musician, "Stagehand" = /datum/alt_title/stagehand,
 						"Actor" = /datum/alt_title/actor, "Dancer" = /datum/alt_title/dancer, "Singer" = /datum/alt_title/singer,
 						"Magician" = /datum/alt_title/magician, "Comedian" = /datum/alt_title/comedian, "Tragedian" = /datum/alt_title/tragedian,
-<<<<<<< HEAD
 						"Clown" = /datum/alt_title/clown, "Jester" = /datum/alt_title/clown/jester,"Fool" = /datum/alt_title/clown/fool,
 						"Mime"= /datum/alt_title/mime,"Poseur"= /datum/alt_title/mime/poseur, //CHOMPEDIT: Adding clown + mime and their alts as alts of entertainer
-						"Artist" = /datum/alt_title/artist)
-=======
-						"Artist" = /datum/alt_title/artist, "Game Master" = /datum/alt_title/game_master)
->>>>>>> 183e983a31... Merge pull request #15338 from Heroman3003/entrepreneur
+						"Artist" = /datum/alt_title/artist, "Fitness Instructor" = /datum/alt_title/fitnessinstructor, "Game Master" = /datum/alt_title/game_master)
 
 // Entertainer Alt Titles
 /datum/alt_title/actor
@@ -309,8 +305,6 @@
 /datum/alt_title/artist
 	title = "Artist"
 	title_blurb = "An Artist's calling is to create beautiful arts! Whatever form may they take, create and have people astonished with your creativity."
-<<<<<<< HEAD
-=======
 
 /datum/alt_title/game_master
 	title = "Game Master"
@@ -412,6 +406,6 @@
 	title = "Spirit Healer"
 	title_blurb = "A Spirit Healer offers alternative forms of medicine. Rituals, magic rocks, seances... It totally works. What's that about placebo?"
 
-
-
->>>>>>> 183e983a31... Merge pull request #15338 from Heroman3003/entrepreneur
+/datum/alt_title/fitnessinstructor
+	title = "Fitness Instructor"
+	title_blurb = "A Fitness Instructor dedicates themselves to improving the health of the crew through physical activity, and boy, do they need the help."
