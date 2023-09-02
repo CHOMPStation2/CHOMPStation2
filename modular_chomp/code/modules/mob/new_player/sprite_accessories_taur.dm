@@ -7,6 +7,7 @@
 
 /datum/sprite_accessory/tail/taur/wolf
 	vore_tail_sprite_variant = "N"
+	fullness_icons = 3
 
 /datum/sprite_accessory/tail/taur/naga/naga_2c
 	vore_tail_sprite_variant = "Naga"
