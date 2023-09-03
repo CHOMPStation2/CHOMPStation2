@@ -98,6 +98,9 @@
 			var/datum/ai_holder/our_AI = ourmob.ai_holder
 			our_AI.set_stance(STANCE_IDLE)
 		M.tf_mob_holder = null
+		var/ourmob_ckey  //CHOMPEdit Start
+		if(ourmob.ckey)
+			ourmob_ckey = ourmob.ckey
 		ourmob.ckey = M.ckey
 		var/turf/get_dat_turf = get_turf(target)
 		ourmob.loc = get_dat_turf
@@ -118,7 +121,9 @@
 					continue
 				M.drop_from_inventory(W)
 
-		if(M.tf_form == ourmob) //CHOMPEdit Start
+		if(M.tf_form == ourmob)
+			if(ourmob_ckey)
+				M.ckey = ourmob_ckey
 			ourmob.tf_form = M
 			M.forceMove(ourmob)
 		else
@@ -190,6 +195,9 @@
 		var/datum/ai_holder/our_AI = ourmob.ai_holder
 		our_AI.set_stance(STANCE_IDLE)
 	tf_mob_holder = null
+	var/ourmob_ckey  //CHOMPEdit Start
+	if(ourmob.ckey)
+		ourmob_ckey = ourmob.ckey
 	ourmob.ckey = ckey
 	var/turf/get_dat_turf = get_turf(src)
 	ourmob.loc = get_dat_turf
@@ -211,7 +219,9 @@
 				continue
 			src.drop_from_inventory(W)
 
-	if(tf_form == ourmob) //CHOMPEdit Start
+	if(tf_form == ourmob)
+		if(ourmob_ckey)
+			src.ckey = ourmob_ckey
 		ourmob.tf_form = src
 		src.forceMove(ourmob)
 	else
@@ -317,6 +327,9 @@
 			var/datum/ai_holder/our_AI = ourmob.ai_holder
 			our_AI.set_stance(STANCE_IDLE)
 		M.tf_mob_holder = null
+		var/ourmob_ckey  //CHOMPEdit Start
+		if(ourmob.ckey)
+			ourmob_ckey = ourmob.ckey
 		ourmob.ckey = M.ckey
 		var/turf/get_dat_turf = get_turf(target)
 		ourmob.loc = get_dat_turf
@@ -339,6 +352,8 @@
 				M.drop_from_inventory(W)
 
 		if(M.tf_form == ourmob) //CHOMPEdit Start
+			if(ourmob_ckey)
+				M.ckey = ourmob_ckey
 			ourmob.tf_form = M
 			M.forceMove(ourmob)
 		else

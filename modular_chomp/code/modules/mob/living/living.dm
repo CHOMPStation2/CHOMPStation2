@@ -110,11 +110,14 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 		if(!ispath(new_form, /mob/living) && !ismob(new_form))
 			return
 		var/mob/living/new_mob
+		var/new_mob_ckey
 		if(shapeshifting && src.tf_form)
 			new_mob = src.tf_form
 			new_mob.verbs |= /mob/living/proc/shapeshift_form
 			new_mob.tf_form = src
 			new_mob.forceMove(src.loc)
+			if(new_mob.ckey)
+				new_mob_ckey = new_mob.ckey
 		else
 			new_mob = new new_form(get_turf(src))
 		new_mob.faction = src.faction
@@ -152,6 +155,8 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 				new_mob.vore_organs += B
 
 			new_mob.ckey = src.ckey
+			if(new_mob_ckey)
+				src.ckey = new_mob_ckey
 			if(src.ai_holder && new_mob.ai_holder)
 				var/datum/ai_holder/old_AI = src.ai_holder
 				old_AI.set_stance(STANCE_SLEEP)
