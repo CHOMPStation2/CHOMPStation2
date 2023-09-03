@@ -166,7 +166,7 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 /mob/living/proc/shapeshift_form()
 	set name = "Shapeshift Form"
 	set category = "Abilities"
-	set desc = "Shape shift between set mob forms."
+	set desc = "Shape shift between set mob forms. (Requires a spawned mob to be varedited into the user's tf_form var as mob reference.)"
 	if(!istype(tf_form))
 		to_chat(src, "<span class='notice'>No shapeshift form set. (Requires a spawned mob to be varedited into the user's tf_form var as mob reference.)</span>")
 		return
