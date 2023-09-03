@@ -1,28 +1,48 @@
+/mob/living/simple_mob/humanoid/cultist
+	maxHealth = 75
+	health = 75
+
 /mob/living/simple_mob/humanoid/cultist/human
 	movement_cooldown = 1
+	melee_damage_lower = 15
+	melee_damage_upper = 15
 
 /mob/living/simple_mob/humanoid/cultist/caster
 	movement_cooldown = 1
 	projectiletype = /obj/item/projectile/energy/inversion
+	melee_damage_lower = 7
+	melee_damage_upper = 7
 
 /mob/living/simple_mob/humanoid/cultist/tesh
 	movement_cooldown = -1
+	melee_damage_lower = 7
+	melee_damage_upper = 7
 
 /mob/living/simple_mob/humanoid/cultist/castertesh
 	movement_cooldown = -1
 	projectiletype = /obj/item/projectile/energy/inversion
+	melee_damage_lower = 7
+	melee_damage_upper = 7
 
 /mob/living/simple_mob/humanoid/cultist/elite
 	movement_cooldown = 1
+	melee_damage_lower = 15
+	melee_damage_upper = 15
 
 /mob/living/simple_mob/humanoid/cultist/magus
 	movement_cooldown = 1
 	projectiletype = /obj/item/projectile/energy/inversion
+	maxHealth = 100
+	health = 100
+	melee_damage_lower = 15
+	melee_damage_upper = 15
 
 /mob/living/simple_mob/humanoid/cultist/hunter
-	maxHealth = 175 //Ehhh, this AI is like mini-boss at best
-	health = 175
+	maxHealth = 87 //Ehhh, this AI is like mini-boss at best
+	health = 87
 	movement_cooldown = 0
+	melee_damage_lower = 21	//Saw Cleaver Brutality
+	melee_damage_upper = 21
 
 /mob/living/simple_mob/humanoid/cultist/human/bloodjaunt/fireball //Teleporting Cultists, now with fireballs
 	name = "Burning Mage"
@@ -35,9 +55,8 @@
 	movement_cooldown = 0
 
 	harm_intent_damage = 5
-	melee_damage_lower = 5
-	melee_damage_upper = 10
-
+	melee_damage_lower = 7
+	melee_damage_upper = 7
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged
 	projectiletype = /obj/item/projectile/energy/fireball
 
@@ -46,8 +65,8 @@
 	desc = "An indiuval wrapped up in a makeshift rig, made from fallen cultist."
 	icon_state = "cobra-cultist"
 	icon_living = "cobra-cultist"
-	maxHealth = 150
-	health = 150
+	maxHealth = 75
+	health = 75
 
 	faction = "cult"
 
@@ -58,8 +77,8 @@
 	response_harm = "hits"
 
 	harm_intent_damage = 5
-	melee_damage_lower = 15
-	melee_damage_upper = 25
+	melee_damage_lower = 7
+	melee_damage_upper = 7
 	attack_sharp = 1
 	attack_edge = 1
 	attacktext = list("slashed", "stabbed")

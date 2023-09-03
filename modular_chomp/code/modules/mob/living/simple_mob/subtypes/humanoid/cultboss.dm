@@ -1,10 +1,10 @@
 /mob/living/simple_mob/humanoid/cultist/magus/rift
 	name = "Rift Magus"
-	maxHealth = 450 //Boss Mobs should be tanky.
-	health = 450
+	maxHealth = 225 //Boss Mobs should be tanky.
+	health = 225
 
-	melee_damage_lower = 30
-	melee_damage_upper = 45
+	melee_damage_lower = 15
+	melee_damage_upper = 22
 	attack_armor_pen = 50
 	var/grenade_type = /obj/item/weapon/grenade/spawnergrenade/riftwallers
 	var/grenade_timer = 5

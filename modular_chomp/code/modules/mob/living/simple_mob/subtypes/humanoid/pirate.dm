@@ -3,3 +3,7 @@
 
 /mob/living/simple_mob/humanoid/pirate/captain
 	projectiletype = /obj/item/projectile/energy/mob/heavylaser
+
+/mob/living/simple_mob/humanoid/pirate
+	maxHealth = 75
+	health = 75
