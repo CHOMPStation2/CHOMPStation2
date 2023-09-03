@@ -351,7 +351,7 @@
 					continue
 				M.drop_from_inventory(W)
 
-		if(M.tf_form == ourmob) //CHOMPEdit Start
+		if(M.tf_form == ourmob)
 			if(ourmob_ckey)
 				M.ckey = ourmob_ckey
 			ourmob.tf_form = M
