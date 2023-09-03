@@ -168,7 +168,7 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 	set category = "Abilities"
 	set desc = "Shape shift between set mob forms."
 	if(!istype(tf_form))
-		to_chat(src, "<span class='notice'>No shapeshift form set.</span>")
+		to_chat(src, "<span class='notice'>No shapeshift form set. (Requires a spawned mob to be varedited into the user's tf_form var as mob reference.)</span>")
 		return
 	else
 		transform_into_mob(tf_form, TRUE, TRUE, TRUE)
