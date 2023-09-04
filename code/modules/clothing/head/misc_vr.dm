@@ -45,7 +45,7 @@
 
 /obj/item/clothing/head/shiny_hood/closed/poly
 	name = "polychromic closed shiny hood"
-	icon_state = "hood_col_o"
+	icon_state = "hood_col"
 	polychromic = TRUE
 
 /obj/item/clothing/head/pelt
