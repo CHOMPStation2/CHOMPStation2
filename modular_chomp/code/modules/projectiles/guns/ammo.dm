@@ -121,3 +121,110 @@
 
 /obj/item/ammo_magazine/m75
 	max_ammo = 10
+
+//zz_magazines
+/obj/item/ammo_magazine/a57p90
+	max_ammo = 125
+
+/obj/item/ammo_magazine/m10mm
+	max_ammo = 50
+
+/obj/item/ammo_magazine/a57
+	max_ammo = 50
+
+/obj/item/ammo_magazine/mp5mag
+	max_ammo = 75
+
+/obj/item/ammo_magazine/pitchmag
+	max_ammo = 75
+
+/obj/item/ammo_magazine/asval
+	max_ammo = 50
+
+/obj/item/ammo_magazine/akm
+	max_ammo = 75
+
+/obj/item/ammo_magazine/akm/rubber
+	max_ammo = 75
+
+/obj/item/ammo_magazine/ak74
+	max_ammo = 75
+
+/obj/item/ammo_magazine/m16
+	max_ammo = 75
+
+/obj/item/ammo_magazine/m16/patriot
+	max_ammo = 250
+
+/obj/item/ammo_magazine/m41
+	max_ammo = 100
+
+/obj/item/ammo_magazine/m41/rubber
+	max_ammo = 100
+
+/obj/item/ammo_magazine/t12
+	max_ammo = 100
+
+/obj/item/ammo_magazine/clip/sks
+	max_ammo = 25
+
+/obj/item/ammo_magazine/clip/mosin
+	max_ammo = 12
+
+/obj/item/ammo_magazine/type901
+	max_ammo = 75
+
+/obj/item/ammo_magazine/ar10
+	max_ammo = 50
+
+/obj/item/ammo_magazine/fal
+	max_ammo = 50
+
+/obj/item/ammo_magazine/awp
+	max_ammo = 12
+
+/obj/item/ammo_magazine/hectate
+	max_ammo = 17
+
+/obj/item/ammo_magazine/ppsh
+	max_ammo = 177
+
+/obj/item/ammo_magazine/plamya
+	max_ammo = 125
+
+/obj/item/ammo_magazine/strela
+	max_ammo = 17
+
+/obj/item/ammo_magazine/molniya
+	max_ammo = 250
+
+/obj/item/ammo_magazine/kord
+	max_ammo = 250
+
+/obj/item/ammo_magazine/pkm
+	max_ammo = 250
+
+/obj/item/ammo_magazine/rpd
+	max_ammo = 250
+
+/obj/item/ammo_magazine/akm/drum
+	max_ammo = 187
+
+/obj/item/ammo_magazine/ssp4
+	max_ammo = 20
+
+/obj/item/ammo_magazine/makarov
+	max_ammo = 20
+
+/obj/item/ammo_magazine/m9mm/vp70
+	max_ammo = 37
+
+
+/obj/item/ammo_magazine/tp23s
+	max_ammo = 25
+
+/obj/item/ammo_magazine/tp23
+	max_ammo = 35
+
+/obj/item/ammo_magazine/s45lc
+	max_ammo = 15
