@@ -23,8 +23,8 @@
 
 	faction = "candy"
 
-	maxHealth = 50
-	health = 50
+	maxHealth = 25
+	health = 25
 	movement_cooldown = 2
 	melee_attack_delay = 3 SECOND
 	can_be_drop_prey = TRUE

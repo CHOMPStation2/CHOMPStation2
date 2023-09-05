@@ -11,8 +11,8 @@
 	icon_state = "imperion"
 	icon_living = "imperion"
 	desc = "A strange precursor mecha"
-	maxHealth = 400
-	health = 400
+	maxHealth = 200
+	health = 200
 	movement_cooldown = -1
 	unsuitable_atoms_damage = 0
 	projectiletype = /obj/item/projectile/energy/gaussrifle

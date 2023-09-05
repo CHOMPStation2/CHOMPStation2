@@ -4712,6 +4712,8 @@
 #include "modular_chomp\code\modules\mob\living\simple_mob\subtypes\fleshtaker.dm"
 #include "modular_chomp\code\modules\mob\living\simple_mob\subtypes\xenomorph.dm"
 #include "modular_chomp\code\modules\mob\living\simple_mob\subtypes\xenomorph_abilities.dm"
+#include "modular_chomp\code\modules\mob\living\simple_mob\subtypes\animal\mines.dm"
+#include "modular_chomp\code\modules\mob\living\simple_mob\subtypes\animal\sif.dm"
 #include "modular_chomp\code\modules\mob\living\simple_mob\subtypes\animal\spider.dm"
 #include "modular_chomp\code\modules\mob\living\simple_mob\subtypes\animal\space\alien.dm"
 #include "modular_chomp\code\modules\mob\living\simple_mob\subtypes\animal\space\mouse_army_ch.dm"
