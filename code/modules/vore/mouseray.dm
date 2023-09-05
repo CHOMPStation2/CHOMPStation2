@@ -98,6 +98,9 @@
 			var/datum/ai_holder/our_AI = ourmob.ai_holder
 			our_AI.set_stance(STANCE_IDLE)
 		M.tf_mob_holder = null
+		var/ourmob_ckey  //CHOMPEdit Start
+		if(ourmob.ckey)
+			ourmob_ckey = ourmob.ckey
 		ourmob.ckey = M.ckey
 		var/turf/get_dat_turf = get_turf(target)
 		ourmob.loc = get_dat_turf
@@ -118,7 +121,13 @@
 					continue
 				M.drop_from_inventory(W)
 
-		qdel(target)
+		if(M.tf_form == ourmob)
+			if(ourmob_ckey)
+				M.ckey = ourmob_ckey
+			ourmob.tf_form = M
+			M.forceMove(ourmob)
+		else
+			qdel(target) //CHOMPEdit End
 		return
 	else
 		if(M.stat == DEAD)	//We can let it undo the TF, because the person will be dead, but otherwise things get weird.
@@ -186,6 +195,9 @@
 		var/datum/ai_holder/our_AI = ourmob.ai_holder
 		our_AI.set_stance(STANCE_IDLE)
 	tf_mob_holder = null
+	var/ourmob_ckey  //CHOMPEdit Start
+	if(ourmob.ckey)
+		ourmob_ckey = ourmob.ckey
 	ourmob.ckey = ckey
 	var/turf/get_dat_turf = get_turf(src)
 	ourmob.loc = get_dat_turf
@@ -207,7 +219,13 @@
 				continue
 			src.drop_from_inventory(W)
 
-	qdel(src)
+	if(tf_form == ourmob)
+		if(ourmob_ckey)
+			src.ckey = ourmob_ckey
+		ourmob.tf_form = src
+		src.forceMove(ourmob)
+	else
+		qdel(src) //CHOMPEdit End
 
 
 /mob/living/proc/handle_tf_holder()
@@ -309,6 +327,9 @@
 			var/datum/ai_holder/our_AI = ourmob.ai_holder
 			our_AI.set_stance(STANCE_IDLE)
 		M.tf_mob_holder = null
+		var/ourmob_ckey  //CHOMPEdit Start
+		if(ourmob.ckey)
+			ourmob_ckey = ourmob.ckey
 		ourmob.ckey = M.ckey
 		var/turf/get_dat_turf = get_turf(target)
 		ourmob.loc = get_dat_turf
@@ -330,7 +351,13 @@
 					continue
 				M.drop_from_inventory(W)
 
-		qdel(target)
+		if(M.tf_form == ourmob)
+			if(ourmob_ckey)
+				M.ckey = ourmob_ckey
+			ourmob.tf_form = M
+			M.forceMove(ourmob)
+		else
+			qdel(target) //CHOMPEdit End
 		firer.visible_message("<span class='notice'>\The [shot_from] boops pleasantly.</span>")
 		return
 	else

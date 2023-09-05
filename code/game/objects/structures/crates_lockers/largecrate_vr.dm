@@ -53,6 +53,7 @@
 						/mob/living/simple_mob/vore/aggressive/mimic,
 						/mob/living/simple_mob/vore/aggressive/rat,
 						/mob/living/simple_mob/vore/aggressive/rat/tame,
+						/mob/living/simple_mob/vore/aggressive/rat/labrat, //CHOMPEdit
 						/mob/living/simple_mob/vore/otie/zorgoia, //CHOMPstation edit
 						/mob/living/simple_mob/vore/rabbit,
 						/mob/living/simple_mob/vore/weretiger;0.5,

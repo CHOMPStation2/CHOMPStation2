@@ -32,6 +32,7 @@ var/const/PATHFINDER 		=(1<<11)
 var/const/EXPLORER 			=(1<<12)
 var/const/SAR 				=(1<<13)
 var/const/XENOBOTANIST		=(1<<14)
+var/const/PILOT 			=(1<<15) //ChompEDIT - ours is with the other explo jobs.
 
 var/const/CIVILIAN			=(1<<2)
 
@@ -48,7 +49,7 @@ var/const/LAWYER			=(1<<9)
 var/const/CHAPLAIN			=(1<<10)
 var/const/ASSISTANT			=(1<<11)
 var/const/BRIDGE			=(1<<12)
-var/const/PILOT 			=(1<<13)
+//var/const/PILOT 			=(1<<13) //ChompEDIT - ours is with the other explo jobs.
 var/const/ENTERTAINER		=(1<<14)
 var/const/ENTREPRENEUR		=(1<<15)
 

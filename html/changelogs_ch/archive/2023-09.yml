@@ -5,3 +5,19 @@
   - rscadd: Added Xenolingua and Hivemind as selectable languages. Hivemind requires
       you to be a Xenomorph Hybrid.
   - qol: Gave Zaddat the ability to move much faster with their special Shroud voidsuits.
+2023-09-02:
+  Aroliacue:
+  - rscadd: Added in some new skinsuit types and digitigrade variations.
+2023-09-03:
+  Verkister:
+  - rscadd: Added giant lab rat mob
+  - rscadd: Added event/shenanigans vareditable shapeshifter mechanic
+  - rscadd: Added some recyclable material to more things.
+2023-09-04:
+  FluffMedic:
+  - maptweak: The Lab gateway and contents has been tweaked. One of many
+  Razgriz1032:
+  - bugfix: A couple upstream bugs with the modular shiny clothes set
+  - maptweak: Added more items to the hidden crate on deck 2
+  Upstream:
+  - rscadd: New tesla coil types for tesla engines

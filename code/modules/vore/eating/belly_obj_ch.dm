@@ -521,7 +521,7 @@
 		var/obj/item/stack/S = O
 		trash = S.amount
 	for(var/mat in O.matter)
-		modified_mats[mat] = O.matter[mat] * 0.5 * trash
+		modified_mats[mat] = O.matter[mat] * trash
 	for(var/obj/item/debris_pack/digested/D in contents)
 		if(istype(D))
 			for(var/mat in modified_mats)
