@@ -22,5 +22,13 @@
   Upstream:
   - rscadd: New tesla coil types for tesla engines
 2023-09-05:
+  Darlantanis:
+  - rscadd: Replaces booleans in configuration_ch.dm with TRUE/FALSE defines
+  - rscadd: Tweaks whitelisted positions
+  - rscadd: Adds whitelist_only vars in new job_whitelist_overrides.dm file
+  - rscadd: Comments out return value of guest_jobbans proc which broke the jobwhitelist
+      system.
+  - rscadd: Adds numerous missing CHOMPedit comments
+  - rscadd: Adds jobwhitelist.txt to gitignore
   Verkister:
   - rscadd: BS compostor can now recycle materials too.
