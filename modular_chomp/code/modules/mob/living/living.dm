@@ -116,6 +116,7 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 			new_mob.verbs |= /mob/living/proc/shapeshift_form
 			new_mob.tf_form = src
 			new_mob.forceMove(src.loc)
+			visible_message("<span class='warning'>[src] twists and contorts, shapeshifting into a different form!</span>")
 			if(new_mob.ckey)
 				new_mob_ckey = new_mob.ckey
 		else
