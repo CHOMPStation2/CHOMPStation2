@@ -32,3 +32,4 @@
   - rscadd: Adds jobwhitelist.txt to gitignore
   Verkister:
   - rscadd: BS compostor can now recycle materials too.
+  - bugfix: Fixed multiplayer shapeshifter vorgan reversion issue.
