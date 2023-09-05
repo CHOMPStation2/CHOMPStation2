@@ -101,18 +101,19 @@
 		var/ourmob_ckey  //CHOMPEdit Start
 		if(ourmob.ckey)
 			ourmob_ckey = ourmob.ckey
-		ourmob.ckey = M.ckey
 		var/turf/get_dat_turf = get_turf(target)
 		ourmob.loc = get_dat_turf
 		ourmob.forceMove(get_dat_turf)
-		ourmob.vore_selected = M.vore_selected
-		M.vore_selected = null
-		for(var/obj/belly/B as anything in M.vore_organs)
-			B.loc = ourmob
-			B.forceMove(ourmob)
-			B.owner = ourmob
-			M.vore_organs -= B
-			ourmob.vore_organs += B
+		if(!ourmob.ckey)
+			ourmob.vore_selected = M.vore_selected
+			M.vore_selected = null
+			for(var/obj/belly/B as anything in M.vore_organs)
+				B.loc = ourmob
+				B.forceMove(ourmob)
+				B.owner = ourmob
+				M.vore_organs -= B
+				ourmob.vore_organs += B
+		ourmob.ckey = M.ckey
 
 		ourmob.Life(1)
 		if(ishuman(M))
@@ -198,19 +199,19 @@
 	var/ourmob_ckey  //CHOMPEdit Start
 	if(ourmob.ckey)
 		ourmob_ckey = ourmob.ckey
-	ourmob.ckey = ckey
 	var/turf/get_dat_turf = get_turf(src)
 	ourmob.loc = get_dat_turf
 	ourmob.forceMove(get_dat_turf)
-	ourmob.vore_selected = vore_selected
-	vore_selected = null
-	for(var/obj/belly/B as anything in vore_organs)
-		B.loc = ourmob
-		B.forceMove(ourmob)
-		B.owner = ourmob
-		vore_organs -= B
-		ourmob.vore_organs += B
-
+	if(!ourmob.ckey)
+		ourmob.vore_selected = vore_selected
+		vore_selected = null
+		for(var/obj/belly/B as anything in vore_organs)
+			B.loc = ourmob
+			B.forceMove(ourmob)
+			B.owner = ourmob
+			vore_organs -= B
+			ourmob.vore_organs += B
+	ourmob.ckey = ckey
 	ourmob.Life(1)
 
 	if(ishuman(src))
@@ -330,18 +331,19 @@
 		var/ourmob_ckey  //CHOMPEdit Start
 		if(ourmob.ckey)
 			ourmob_ckey = ourmob.ckey
-		ourmob.ckey = M.ckey
 		var/turf/get_dat_turf = get_turf(target)
 		ourmob.loc = get_dat_turf
 		ourmob.forceMove(get_dat_turf)
-		ourmob.vore_selected = M.vore_selected
-		M.vore_selected = null
-		for(var/obj/belly/B as anything in M.vore_organs)
-			B.loc = ourmob
-			B.forceMove(ourmob)
-			B.owner = ourmob
-			M.vore_organs -= B
-			ourmob.vore_organs += B
+		if(!ourmob.ckey)
+			ourmob.vore_selected = M.vore_selected
+			M.vore_selected = null
+			for(var/obj/belly/B as anything in M.vore_organs)
+				B.loc = ourmob
+				B.forceMove(ourmob)
+				B.owner = ourmob
+				M.vore_organs -= B
+				ourmob.vore_organs += B
+		ourmob.ckey = M.ckey
 
 		ourmob.Life(1)
 
