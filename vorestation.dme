@@ -4587,6 +4587,7 @@
 #include "modular_chomp\code\game\dna\dna2.dm"
 #include "modular_chomp\code\game\jobs\job\captain.dm"
 #include "modular_chomp\code\game\jobs\job\department.dm"
+#include "modular_chomp\code\game\jobs\job\job_whitelist_overrides.dm"
 #include "modular_chomp\code\game\jobs\job\noncrew.dm"
 #include "modular_chomp\code\game\jobs\job\silicon.dm"
 #include "modular_chomp\code\game\machinery\airconditioner_ch.dm"
