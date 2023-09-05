@@ -21,3 +21,6 @@
   - maptweak: Added more items to the hidden crate on deck 2
   Upstream:
   - rscadd: New tesla coil types for tesla engines
+2023-09-05:
+  Verkister:
+  - rscadd: BS compostor can now recycle materials too.
