@@ -60,3 +60,22 @@
 /obj/item/projectile/beam/phaser/heavy/cannon
 	damage = 15
 	SA_bonus_damage = 15
+
+
+/obj/item/projectile/scatter/laser
+	damage = 20
+
+	submunition_spread_max = 40
+	submunition_spread_min = 10
+
+	submunitions = list(
+		/obj/item/projectile/beam/prismatic = 4
+		)
+
+/obj/item/projectile/beam/prismatic
+	name = "prismatic beam"
+	icon_state = "omnilaser"
+	damage = 5
+	damage_type = BURN
+	check_armour = "laser"
+	light_color = "#00C6FF"

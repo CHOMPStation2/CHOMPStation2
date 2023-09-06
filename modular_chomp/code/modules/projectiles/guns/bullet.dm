@@ -45,7 +45,7 @@
 	embed_chance = 0
 
 /obj/item/projectile/bullet/pellet/shotgun
-	damage = 8
+	damage = 6
 	pellets = 6
 	range_step = 1
 	spread_step = 10
@@ -117,3 +117,13 @@
 
 /obj/item/projectile/bullet/rifle/a44rifle
 	damage = 30
+
+/obj/item/projectile/bullet/pellet
+	damage = 10
+
+/obj/item/projectile/bullet/pellet/fragment
+	damage = 5
+	muzzle_type = null
+
+/obj/item/projectile/bullet/pellet/fragment/strong
+	damage = 7

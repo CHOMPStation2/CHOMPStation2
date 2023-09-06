@@ -89,6 +89,15 @@
 	movement_cooldown = 2
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged
 
+/obj/item/shield_projector/rectangle/automatic/magus
+	name = "cult shield stone"
+	desc = "A stone wielded by only the most powerful of cult leaders. It projects a shield around the user."
+	icon = 'icons/obj/device.dmi'
+	icon_state = "implant_melted"
+	shield_health = 100
+	max_shield_health = 100
+	shield_regen_delay = 10 SECONDS
+
 //Nibbler//
 /mob/living/simple_mob/humanoid/cultist/human/bloodjaunt/fireball
 	vore_active = 1

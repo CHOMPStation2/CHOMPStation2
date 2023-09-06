@@ -457,8 +457,8 @@
 	return ..()
 
 /obj/item/shield_projector/rectangle/automatic/imperion
-	shield_health = 500
-	max_shield_health = 500
+	shield_health = 250
+	max_shield_health = 250
 	shield_regen_delay = 60 SECONDS
 	shield_regen_amount = 50
 	size_x = 2
@@ -483,7 +483,7 @@
 /obj/item/projectile/energy/imperionspear
 	name = "energy spear"
 	icon_state = "arcane_barrage"
-	damage = 35
+	damage = 16
 	armor_penetration = 35
 	damage_type = BURN
 	check_armour = "laser"
@@ -529,7 +529,7 @@
 /obj/item/projectile/energy/imperiontesla
 	name = "energy sphere"
 	icon_state = "tesla_projectile"
-	damage = 50
+	damage = 25
 	armor_penetration = 50
 	damage_type = BURN
 	check_armour = "energy"
@@ -541,7 +541,7 @@
 /obj/item/projectile/energy/homing_bolt/missile
 	name = "homing rocket"
 	icon_state = "atrocket"
-	damage = 40
+	damage = 20
 	damage_type = BURN
 	check_armour = "bullet"
 

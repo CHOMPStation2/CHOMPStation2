@@ -33,10 +33,10 @@
 	injury_enrages = TRUE
 
 	armor_soak = list(
-		"melee" = 5,
-		"bullet" = 5,
-		"laser" = 5,
-		"energy" = 5,
+		"melee" = 2,
+		"bullet" = 2,
+		"laser" = 2,
+		"energy" = 2,
 		"bomb" = 0,
 		"bio" = 0,
 		"rad" = 0
