@@ -127,6 +127,8 @@
 		if(M.tf_form == ourmob)
 			if(ourmob_ckey)
 				M.ckey = ourmob_ckey
+			else
+				ourmob.mind = null
 			ourmob.tf_form = M
 			M.forceMove(ourmob)
 		else
@@ -234,6 +236,8 @@
 	if(tf_form == ourmob)
 		if(ourmob_ckey)
 			src.ckey = ourmob_ckey
+		else
+			ourmob.mind = null
 		ourmob.tf_form = src
 		src.forceMove(ourmob)
 	else
@@ -368,6 +372,8 @@
 		if(M.tf_form == ourmob)
 			if(ourmob_ckey)
 				M.ckey = ourmob_ckey
+			else
+				ourmob.mind = null
 			ourmob.tf_form = M
 			M.forceMove(ourmob)
 		else
