@@ -121,9 +121,15 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 				new_mob_ckey = new_mob.ckey
 		else
 			new_mob = new new_form(get_turf(src))
-		new_mob.faction = src.faction
 
 		if(new_mob && isliving(new_mob))
+			new_mob.faction = src.faction
+			if(istype(new_mob, /mob/living/simple_mob))
+				var/mob/living/simple_mob/S = new_mob
+				if(!S.voremob_loaded)
+					S.voremob_loaded = TRUE
+					S.init_vore()
+			new /obj/effect/effect/teleport_greyscale(src.loc)
 			if(!new_mob.ckey)
 				for(var/obj/belly/B as anything in new_mob.vore_organs)
 					new_mob.vore_organs -= B
@@ -155,6 +161,7 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 					B.owner = new_mob
 					src.vore_organs -= B
 					new_mob.vore_organs += B
+				new_mob.nutrition = src.nutrition
 
 			new_mob.ckey = src.ckey
 			if(new_mob_ckey)

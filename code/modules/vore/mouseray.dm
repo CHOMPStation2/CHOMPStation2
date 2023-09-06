@@ -93,6 +93,7 @@
 		if(!M.allow_spontaneous_tf && !tf_admin_pref_override)
 			return
 	if(M.tf_mob_holder)
+		new /obj/effect/effect/teleport_greyscale(M.loc) //CHOMPAdd
 		var/mob/living/ourmob = M.tf_mob_holder
 		if(ourmob.ai_holder)
 			var/datum/ai_holder/our_AI = ourmob.ai_holder
@@ -113,6 +114,7 @@
 				B.owner = ourmob
 				M.vore_organs -= B
 				ourmob.vore_organs += B
+			ourmob.nutrition = M.nutrition
 		ourmob.ckey = M.ckey
 
 		ourmob.Life(1)
@@ -134,9 +136,15 @@
 		if(M.stat == DEAD)	//We can let it undo the TF, because the person will be dead, but otherwise things get weird.
 			return
 		var/mob/living/new_mob = spawn_mob(M)
-		new_mob.faction = M.faction
 
 		if(new_mob && isliving(new_mob))
+			new_mob.faction = M.faction //CHOMPEdit Start
+			if(istype(new_mob, /mob/living/simple_mob))
+				var/mob/living/simple_mob/S = new_mob
+				if(!S.voremob_loaded)
+					S.voremob_loaded = TRUE
+					S.init_vore()
+			new /obj/effect/effect/teleport_greyscale(M.loc) //CHOMPEdit End
 			for(var/obj/belly/B as anything in new_mob.vore_organs)
 				new_mob.vore_organs -= B
 				qdel(B)
@@ -167,6 +175,7 @@
 				B.owner = new_mob
 				M.vore_organs -= B
 				new_mob.vore_organs += B
+			new_mob.nutrition = M.nutrition //CHOMPAdd
 
 			new_mob.ckey = M.ckey
 			if(M.ai_holder && new_mob.ai_holder)
@@ -191,6 +200,7 @@
 /mob/living/proc/revert_mob_tf()
 	if(!tf_mob_holder)
 		return
+	new /obj/effect/effect/teleport_greyscale(src.loc) //CHOMPAdd
 	var/mob/living/ourmob = tf_mob_holder
 	if(ourmob.ai_holder)
 		var/datum/ai_holder/our_AI = ourmob.ai_holder
@@ -211,6 +221,7 @@
 			B.owner = ourmob
 			vore_organs -= B
 			ourmob.vore_organs += B
+		ourmob.nutrition = nutrition
 	ourmob.ckey = ckey
 	ourmob.Life(1)
 
@@ -343,6 +354,7 @@
 				B.owner = ourmob
 				M.vore_organs -= B
 				ourmob.vore_organs += B
+			ourmob.nutrition = M.nutrition
 		ourmob.ckey = M.ckey
 
 		ourmob.Life(1)
