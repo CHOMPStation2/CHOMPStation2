@@ -372,19 +372,12 @@
 	cost = 2
 	var_changes = list("flash_mod" = 0.5)
 
-/datum/trait/positive/speed_fast_minor
-	name = "Haste, Minor"
-	desc = "Allows you to move a little bit faster on average than baseline."
-	cost = 2
-	var_changes = list("slowdown" = -0.25)
-	excludes = list(/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy_plus,/datum/trait/positive/speed_fast)
-
 /datum/trait/positive/hardy_extreme
 	name = "Hardy, Extreme"
 	desc = "Allows you to carry heavy equipment with no slowdown at all."
 	cost = 3
 	var_changes = list("item_slowdown_mod" = 0.0)
-	excludes = list(/datum/trait/positive/speed_fast,/datum/trait/positive/speed_fast_minor,/datum/trait/positive/hardy,/datum/trait/positive/hardy_plus)
+	excludes = list(/datum/trait/positive/speed_fast,/datum/trait/positive/hardy,/datum/trait/positive/hardy_plus)
 
 /datum/trait/positive/bloodsucker_plus
 	name = "Evolved Bloodsucker"

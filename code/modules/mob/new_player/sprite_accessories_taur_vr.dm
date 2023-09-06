@@ -1026,7 +1026,20 @@
 	name = "Naga (Taur, Fat, dual color)"
 	icon_state = "fatnaga_s"
 	extra_overlay = "fatnaga_markings"
+	suit_sprites = null
 
+/datum/sprite_accessory/tail/taur/fox
+	name = "Fox (Taur, 3-color)"
+	icon_state = "fox"
+	extra_overlay = "fox_markings"
+	extra_overlay2 = "fox_markings2"
+	can_loaf = TRUE
+	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
+	loaf_offset = 4
+
+/datum/sprite_accessory/tail/taur/kitsune
+	name = "Kitsune (Taur)"
+	icon_state = "kitsune"
 
 /*
 /datum/sprite_accessory/tail/taur/teppi			// Mostly used as example/template/test subject as to how you use the 'big' taur sprites. Pls give it better icons before uncommenting...

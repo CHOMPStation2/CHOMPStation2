@@ -122,6 +122,7 @@
 	var/speedy_mob_processing = FALSE		// Independent belly processing to utilize SSobj instead of SSbellies 3x speed.
 	var/cycle_sloshed = FALSE				// Has vorgan entrance made a wet slosh this cycle? Soundspam prevention for multiple items entered.
 	var/egg_cycles = 0						// Process egg mode after 10 cycles.
+	var/recycling = FALSE					// Recycling mode.
 
 /obj/belly/proc/GetFullnessFromBelly()
 	if(!affects_vore_sprites)
@@ -500,3 +501,33 @@
 		START_PROCESSING(SSobj, src)
 	else
 		START_PROCESSING(SSbellies, src)
+
+/obj/item/debris_pack/digested
+	name = "digested material"
+	desc = "Some thoroughly digested mass of ... something. Might be useful for recycling."
+	icon = 'icons/obj/recycling.dmi'
+	icon_state = "matdust"
+	color = "#664330"
+	w_class = ITEMSIZE_SMALL
+
+/obj/belly/proc/recycle(var/obj/item/O)
+	if(!recycling || !LAZYLEN(O.matter))
+		return FALSE
+	var/list/modified_mats = list()
+	var/trash = 1
+	if(istype(O,/obj/item/trash))
+		trash = 5
+	if(istype(O,/obj/item/stack))
+		var/obj/item/stack/S = O
+		trash = S.amount
+	for(var/mat in O.matter)
+		modified_mats[mat] = O.matter[mat] * trash
+	for(var/obj/item/debris_pack/digested/D in contents)
+		if(istype(D))
+			for(var/mat in modified_mats)
+				D.matter[mat] += modified_mats[mat]
+			if(O.w_class > D.w_class)
+				D.w_class = O.w_class
+			return TRUE
+	new /obj/item/debris_pack/digested(src, modified_mats)
+	return TRUE

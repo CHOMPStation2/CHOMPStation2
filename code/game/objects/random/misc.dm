@@ -549,6 +549,9 @@
 				/obj/item/pizzabox/vegetable,
 				/obj/item/pizzabox/pineapple)
 
+/obj/random/pizzabox/supplypack
+	drop_get_turf = FALSE
+
 /obj/random/material //Random materials for building stuff
 	name = "random material"
 	desc = "This is a random material."
@@ -764,6 +767,7 @@
 				/obj/item/toy/plushie/nukeplushie,
 				/obj/item/toy/plushie/otter,
 				/obj/item/toy/plushie/vox,
+				/obj/item/toy/plushie/shark,
 				pick(list(/obj/item/toy/plushie/borgplushie/drake/sec,
 							/obj/item/toy/plushie/borgplushie/drake/med,
 							/obj/item/toy/plushie/borgplushie/drake/sci,

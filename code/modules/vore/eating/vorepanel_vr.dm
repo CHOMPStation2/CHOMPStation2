@@ -13,7 +13,16 @@
 var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 														"a_synth_flesh_mono_hole",
 														"a_anim_belly",
-														"multi_layer_test_tummy")
+														"multi_layer_test_tummy",
+														"gematically_angular",
+														"entrance_to_a_tumby",
+														"passage_to_a_tumby",
+														"destination_tumby",
+														"destination_tumby_fluidless",
+														"post_tumby_passage",
+														"post_tumby_passage_fluidless",
+														"not_quite_tumby",
+														"could_it_be_a_tumby")
 */ //Chomp REMOVE End
 
 /mob/living
@@ -159,15 +168,14 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		inside["contents"] = inside_contents
 	data["inside"] = inside
 
-	var/is_dogborg = FALSE
+	var/is_cyborg = FALSE
 	var/is_vore_simple_mob = FALSE
 	if(isrobot(host))
-		var/mob/living/silicon/robot/R = host
-		is_dogborg = R.dogborg
+		is_cyborg = TRUE
 	else if(istype(host, /mob/living/simple_mob/vore))	//So far, this does nothing. But, creating this for future belly work
 		is_vore_simple_mob = TRUE
 	data["host_mobtype"] = list(
-		"is_dogborg" = is_dogborg,
+		"is_cyborg" = is_cyborg,
 		"is_vore_simple_mob" = is_vore_simple_mob
 	)
 
@@ -203,6 +211,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"is_feedable" = selected.is_feedable, //CHOMPAdd
 			"egg_type" = selected.egg_type,
 			"egg_name" = selected.egg_name, //CHOMPAdd
+			"recycling" = selected.recycling, //CHOMPAdd
 			"nutrition_percent" = selected.nutrition_percent,
 			"digest_brute" = selected.digest_brute,
 			"digest_burn" = selected.digest_burn,
@@ -287,6 +296,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 		selected_list["egg_type"] = selected.egg_type
 		selected_list["egg_name"] = selected.egg_name //CHOMPAdd
+		selected_list["recycling"] = selected.recycling //CHOMPAdd
 		selected_list["contaminates"] = selected.contaminates
 		selected_list["contaminate_flavor"] = null
 		selected_list["contaminate_color"] = null
@@ -432,6 +442,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		"slip_vore" = host.slip_vore,
 		"stumble_vore" = host.stumble_vore,
 		"throw_vore" = host.throw_vore,
+		"food_vore" = host.food_vore,
 		"nutrition_message_visible" = host.nutrition_message_visible,
 		"nutrition_messages" = host.nutrition_messages,
 		"weight_message_visible" = host.weight_message_visible,
@@ -847,12 +858,19 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						if(new_egg_type in global_vore_egg_types)
 							new_belly.egg_type = new_egg_type
 
-				if(istext(belly_data["egg_name"]))
+				if(istext(belly_data["egg_name"])) //CHOMPAdd Start
 					var/new_egg_name = html_encode(belly_data["egg_name"])
 					if(new_egg_name)
 						new_egg_name = readd_quotes(new_egg_name)
 					if(length(new_egg_name) >= BELLIES_NAME_MIN && length(new_egg_name) <= BELLIES_NAME_MAX)
 						new_belly.egg_name = new_egg_name
+
+				if(isnum(belly_data["recycling"]))
+					var/new_recycling = belly_data["recycling"]
+					if(new_recycling == 0)
+						new_belly.recycling = FALSE
+					if(new_recycling == 1)
+						new_belly.recycling = TRUE //CHOMPAdd End
 
 				if(istext(belly_data["selective_preference"]))
 					var/new_selective_preference = belly_data["selective_preference"]
@@ -1623,6 +1641,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.throw_vore = !host.throw_vore
 			unsaved_changes = TRUE
 			return TRUE
+		if("toggle_food_vore")
+			host.food_vore = !host.food_vore
+			unsaved_changes = TRUE
+			return TRUE
 		if("switch_selective_mode_pref")
 			host.selective_preference = tgui_input_list(usr, "What would you prefer happen to you with selective bellymode?","Selective Bellymode", list(DM_DEFAULT, DM_DIGEST, DM_ABSORB, DM_DRAIN))
 			if(!(host.selective_preference))
@@ -2180,7 +2202,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				tgui_alert_async(usr, "Entered name too long (max [BELLIES_NAME_MAX]).","Error")
 				return FALSE
 			host.vore_selected.egg_name = new_egg_name
-			. = TRUE //CHOMPAdd End
+			. = TRUE
+		if("b_recycling")
+			host.vore_selected.recycling = !host.vore_selected.recycling
+			. = TRUE//CHOMPAdd End
 		if("b_desc")
 			var/new_desc = html_encode(tgui_input_text(usr,"Belly Description, '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name. ([BELLIES_DESC_MAX] char limit):","New Description",host.vore_selected.desc, multiline = TRUE, prevent_enter = TRUE))
 
@@ -2394,7 +2419,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			if(belly_choice == null)
 				return FALSE
 			host.vore_selected.silicon_belly_overlay_preference = belly_choice
-			host.updateicon()
+			host.update_icon()
 			. = TRUE
 		if("b_min_belly_number_flat")
 			var/new_min_belly = tgui_input_number(user, "Choose the amount of prey your belly must contain \
@@ -2404,7 +2429,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				return FALSE
 			var/new_new_min_belly = CLAMP(new_min_belly, 1, 100)	//Clamping at 100 rather than infinity. Should be close to infinity tho.
 			host.vore_selected.visible_belly_minimum_prey = new_new_min_belly
-			host.updateicon()
+			host.update_icon()
 			. = TRUE
 		if("b_min_belly_prey_size")
 			var/new_belly_size = tgui_input_number(user, "Choose the required size prey must be to trigger belly overlay, \
@@ -2416,11 +2441,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			else
 				var/new_new_belly_size = CLAMP(new_belly_size, 25, 200)
 				host.vore_selected.overlay_min_prey_size = (new_new_belly_size/100)
-			host.updateicon()
+			host.update_icon()
 			. = TRUE
 		if("b_override_min_belly_prey_size")
 			host.vore_selected.override_min_prey_size = !host.vore_selected.override_min_prey_size
-			host.updateicon()
+			host.update_icon()
 			. = TRUE
 		if("b_min_belly_number_override")
 			var/new_min_prey = tgui_input_number(user, "Choose the amount of prey your belly must contain to override min prey size \
@@ -2430,7 +2455,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				return FALSE
 			var/new_new_min_prey = CLAMP(new_min_prey, 1, 100)	//Clamping at 100 rather than infinity. Should be close to infinity tho.
 			host.vore_selected.override_min_prey_num = new_new_min_prey
-			host.updateicon()
+			host.update_icon()
 			. = TRUE
 		if("b_fancy_sound")
 			host.vore_selected.fancy_vore = !host.vore_selected.fancy_vore
@@ -2695,12 +2720,6 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.vore_selected.colorization_enabled = !host.vore_selected.colorization_enabled
 			host.vore_selected.belly_fullscreen = "dark" //This prevents you from selecting a belly that is not meant to be colored and then turning colorization on.
 			. = TRUE
-		/*
-		if("b_multilayered") //Allows for 'multilayered' stomachs. Currently not implemented. Add to TGUI.
-			host.vore_selected.multilayered = !host.vore_selected.multilayered 				//Add to stomach vars.
-			host.vore_selected.belly_fullscreen = "dark"
-			. = TRUE
-		*/
 		if("b_preview_belly")
 			host.vore_selected.vore_preview(host) //Gives them the stomach overlay. It fades away after ~2 seconds as human/life.dm removes the overlay if not in a gut.
 			. = TRUE
@@ -2739,12 +2758,12 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			. = TRUE
 		/* //Chomp REMOVE - use our solution, not upstream's
 		if("b_fullscreen_color_secondary")
-			var/newcolor = input(usr, "Choose a color.", "", host.vore_selected.belly_fullscreen_color) as color|null
+			var/newcolor = input(usr, "Choose a color.", "", host.vore_selected.belly_fullscreen_color_secondary) as color|null
 			if(newcolor)
 				host.vore_selected.belly_fullscreen_color_secondary = newcolor
 			. = TRUE
 		if("b_fullscreen_color_trinary")
-			var/newcolor = input(usr, "Choose a color.", "", host.vore_selected.belly_fullscreen_color) as color|null
+			var/newcolor = input(usr, "Choose a color.", "", host.vore_selected.belly_fullscreen_color_trinary) as color|null
 			if(newcolor)
 				host.vore_selected.belly_fullscreen_color_trinary = newcolor
 			. = TRUE

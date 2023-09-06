@@ -314,6 +314,7 @@
 	"sound_volume",
 	"speedy_mob_processing",
 	"egg_name",
+	"recycling",
 	"is_feedable", //CHOMP end of variables from CHOMP
 	"egg_type",
 	"save_digest_mode",
@@ -507,13 +508,19 @@
 				var/obj/screen/fullscreen/F2 = L.overlay_fullscreen("belly2", /obj/screen/fullscreen/belly/colorized/overlay)
 				F2.icon_state = "[belly_fullscreen]_l1"
 				F2.color = belly_fullscreen_color_secondary
+			else
+				L.clear_fullscreen("belly2")
 			if("[belly_fullscreen]_l2" in icon_states('icons/mob/screen_full_colorized_vore_overlays.dmi'))
 				var/obj/screen/fullscreen/F3 = L.overlay_fullscreen("belly3", /obj/screen/fullscreen/belly/colorized/overlay)
 				F3.icon_state = "[belly_fullscreen]_l2"
 				F3.color = belly_fullscreen_color_trinary
+			else
+				L.clear_fullscreen("belly3")
 			if("[belly_fullscreen]_nc" in icon_states('icons/mob/screen_full_colorized_vore_overlays.dmi'))
 				var/obj/screen/fullscreen/F4 = L.overlay_fullscreen("belly4", /obj/screen/fullscreen/belly/colorized/overlay)
 				F4.icon_state = "[belly_fullscreen]_nc"
+			else
+				L.clear_fullscreen("belly4")
 			*/ //Chomp Disable END
 
 			// Chomp EDIT Begin
@@ -1582,7 +1589,7 @@
 		owner.update_icon()
 	for(var/mob/living/M in contents)
 		M.updateVRPanel()
-	owner.updateicon()
+	owner.update_icon()
 
 //Autotransfer callback CHOMPEdit Start
 /obj/belly/proc/check_autotransfer(var/atom/movable/prey)
@@ -1708,6 +1715,7 @@
 	dupe.slow_brutal = slow_brutal
 	dupe.sound_volume = sound_volume
 	dupe.egg_name = egg_name
+	dupe.recycling = recycling
 	dupe.is_feedable = is_feedable //CHOMP end of variables from CHOMP
 
 	dupe.belly_fullscreen = belly_fullscreen

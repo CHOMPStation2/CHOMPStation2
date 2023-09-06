@@ -29,6 +29,7 @@
 								  "Lizardman" = /mob/living/simple_mob/vore/aggressive/lizardman,//CHOMPedit: more mobs
 								  "Giant Frog" = /mob/living/simple_mob/vore/aggressive/frog,
 								  "Giant Rat" = /mob/living/simple_mob/vore/aggressive/rat,
+								  "Giant Lab Rat" = /mob/living/simple_mob/vore/aggressive/rat/labrat,//CHOMPedit: more mobs
 								  "Jelly Blob" = /mob/living/simple_mob/vore/jelly,
 								  "Wolf" = /mob/living/simple_mob/vore/wolf,
 								  "Dire Wolf" = /mob/living/simple_mob/vore/wolf/direwolf,//CHOMPedit: more mobs
@@ -61,7 +62,12 @@
 								  "Weretiger" = /mob/living/simple_mob/vore/weretiger,
 								  "Lesser Large Dragon" = /mob/living/simple_mob/vore/bigdragon/friendly/maintpred,	//CHOMPStation add.
 								  "Catslug" = /mob/living/simple_mob/vore/alienanimals/catslug,
-								  "Squirrel" = /mob/living/simple_mob/vore/squirrel/big
+								  "Squirrel" = /mob/living/simple_mob/vore/squirrel/big,
+								  "Pakkun" =/mob/living/simple_mob/vore/pakkun,
+								  "Snapdragon" =/mob/living/simple_mob/vore/pakkun/snapdragon,
+								  "Sand pakkun" = /mob/living/simple_mob/vore/pakkun/sand,
+								  "Fire pakkun" = /mob/living/simple_mob/vore/pakkun/fire,
+								  "Amethyst pakkun" = /mob/living/simple_mob/vore/pakkun/purple
 								  )
 
 /obj/structure/ghost_pod/ghost_activated/maintpred/create_occupant(var/mob/M)

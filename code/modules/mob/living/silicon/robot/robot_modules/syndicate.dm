@@ -1,4 +1,3 @@
-//CHOMPNOTE - if upstream edits the sprite lists it will have to be manually copied into our station_vr file, anything else is just read from here
 /* Syndicate modules */
 
 /obj/item/weapon/robot_module/robot/syndicate
@@ -19,21 +18,11 @@
 					LANGUAGE_TERMINUS = 1,
 					LANGUAGE_ZADDAT = 0
 					)
-	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
-					"Cerberus" = "syndie_bloodhound",
-					"Cerberus - Treaded" = "syndie_treadhound",
-					"Ares" = "squats",
-					"Telemachus" = "toiletbotantag",
-					"WTOperator" = "hosborg",
-					"XI-GUS" = "spidersyndi",
-					"XI-ALP" = "syndi-heavy"
-				)*/ //CHOMPEdit end
 	var/id
 
 // All syndie modules get these, and the base borg items (flash, crowbar, etc).
-/obj/item/weapon/robot_module/robot/syndicate/New(var/mob/living/silicon/robot/R)
+/obj/item/weapon/robot_module/robot/syndicate/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
-	loc = R
 	src.modules += new /obj/item/weapon/pinpointer/shuttle/merc(src)
 	src.modules += new /obj/item/weapon/melee/energy/sword(src)
 
@@ -45,9 +34,9 @@
 
 	var/jetpack = new/obj/item/weapon/tank/jetpack/carbondioxide(src)
 	src.modules += jetpack
-	R.internals = jetpack
+	robot.internals = jetpack
 
-	id = R.idcard
+	id = robot.idcard
 	src.modules += id
 
 /obj/item/weapon/robot_module/robot/syndicate/Destroy()
@@ -58,29 +47,22 @@
 // Gets a big shield and a gun that shoots really fast to scare the opposing force.
 /obj/item/weapon/robot_module/robot/syndicate/protector
 	name = "protector robot module"
-	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
-		"Cerberus - Treaded" = "syndie_treadhound",
-		"Cerberus" = "syndie_bloodhound",
-		"Ares" = "squats",
-		"XI-ALP" = "syndi-heavy"
-		)*/ //CHOMPEdit end
 
-/obj/item/weapon/robot_module/robot/syndicate/protector/New(var/mob/living/silicon/robot/R)
+/obj/item/weapon/robot_module/robot/syndicate/protector/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
 	src.modules += new /obj/item/shield_projector/rectangle/weak(src)
 	src.modules += new /obj/item/weapon/gun/energy/dakkalaser(src)
 	src.modules += new /obj/item/weapon/handcuffs/cyborg(src)
 	src.modules += new /obj/item/weapon/melee/baton/robot(src)
 
+	src.modules += new /obj/item/device/dogborg/sleeper/K9/syndie(src)
+	src.modules += new /obj/item/weapon/dogborg/pounce(src)
+
 // 95% engi-borg and 15% roboticist.
 /obj/item/weapon/robot_module/robot/syndicate/mechanist
 	name = "mechanist robot module"
-	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
-		"XI-GUS" = "spidersyndi",
-		"WTOperator" = "sleekhos"
-		)*/ //CHOMPEdit end
 
-/obj/item/weapon/robot_module/robot/syndicate/mechanist/New(var/mob/living/silicon/robot/R)
+/obj/item/weapon/robot_module/robot/syndicate/mechanist/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
 	// General engineering/hacking.
 	src.modules += new /obj/item/borg/sight/meson(src)
@@ -138,17 +120,20 @@
 	RG.synths = list(metal, glass)
 	src.modules += RG
 
+	var/obj/item/device/dogborg/sleeper/compactor/syndie/MD = new /obj/item/device/dogborg/sleeper/compactor/syndie(src)
+	MD.metal = metal
+	MD.glass = glass
+	src.modules += MD
+
+	src.modules += new /obj/item/weapon/dogborg/pounce(src)
 
 
 
 // Mediborg optimized for on-the-field healing, but can also do surgery if needed.
 /obj/item/weapon/robot_module/robot/syndicate/combat_medic
 	name = "combat medic robot module"
-	/*sprites = list( //CHOMPEdit Start - moved to modular_chomp
-		"Telemachus" = "toiletbotantag"
-		)*/ //CHOMPEdit end
 
-/obj/item/weapon/robot_module/robot/syndicate/combat_medic/New(var/mob/living/silicon/robot/R)
+/obj/item/weapon/robot_module/robot/syndicate/combat_medic/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
 	src.modules += new /obj/item/borg/sight/hud/med(src)
 	src.modules += new /obj/item/device/healthanalyzer/phasic(src)
@@ -193,6 +178,9 @@
 	src.modules += O
 	src.modules += B
 	src.modules += S
+
+	src.modules += new /obj/item/device/dogborg/sleeper/syndie(src)
+	src.modules += new /obj/item/weapon/dogborg/pounce(src)
 
 /obj/item/weapon/robot_module/robot/syndicate/combat_medic/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
 

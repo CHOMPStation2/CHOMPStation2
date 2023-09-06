@@ -422,6 +422,10 @@
 	stop_pulling()
 	to_chat(src, "<span class='warning'>You slipped on [slipped_on]!</span>")
 	playsound(src, 'sound/misc/slip.ogg', 50, 1, -3)
+	if(slip_reflex && !lying) //CHOMPEdit Start
+		if(world.time >= next_emote)
+			src.emote("sflip")
+			return 1 //CHOMPEdit End
 	Weaken(FLOOR(stun_duration/2, 1))
 	return 1
 

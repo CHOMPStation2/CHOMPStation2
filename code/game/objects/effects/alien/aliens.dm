@@ -224,6 +224,12 @@
 		health -= 5
 		healthcheck()
 
+// CHOMPedit start - Smaller-ranged nodes for Xenomorph Hybrids.
+/obj/effect/alien/weeds/node/weak
+	light_range = 2
+	node_range = 1
+// CHOMPedit end.
+
 #undef NODERANGE
 #undef WEED_NORTH_EDGING
 #undef WEED_SOUTH_EDGING

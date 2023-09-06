@@ -364,16 +364,14 @@
 	user.position_hud_item(src,slot)
 	if(user.client)	user.client.screen |= src
 	if(user.pulling == src) user.stop_pulling()
-	// Chomp edit starts
-	if((slot_flags & slot))
-		if(equip_sound && !muffled_by_belly(user))
-			playsound(src, equip_sound, 20)
-		else if(!muffled_by_belly(user))
-			playsound(src, drop_sound, 20)
+	if(("[slot]" in slot_flags_enumeration) && (slot_flags & slot_flags_enumeration["[slot]"]))
+		if(equip_sound && !muffled_by_belly(user)) //ChompEDIT
+			playsound(src, equip_sound, 20, preference = /datum/client_preference/pickup_sounds)
+		else if(!muffled_by_belly(user)) //ChompEDIT
+			playsound(src, drop_sound, 20, preference = /datum/client_preference/pickup_sounds)
 	else if(slot == slot_l_hand || slot == slot_r_hand)
-		if(!muffled_by_belly(user))
+		if(!muffled_by_belly(user)) //ChompEDIT
 			playsound(src, pickup_sound, 20, preference = /datum/client_preference/pickup_sounds)
-	// Chomp edit stops
 	return
 
 // As above but for items being equipped to an active module on a robot.

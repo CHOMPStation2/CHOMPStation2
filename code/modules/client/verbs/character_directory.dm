@@ -94,7 +94,10 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			name = strangername
 			species = "[H.custom_species ? H.custom_species : H.species.name]"
 			ooc_notes = H.ooc_notes
-			ooc_notes += "\n\n LIKES\n\n[H.ooc_notes_likes]\n\nDISLIKES\n\n[H.ooc_notes_dislikes]"
+			if(H.ooc_notes_likes)
+				ooc_notes += "\n\nLIKES\n\n[H.ooc_notes_likes]"
+			if(H.ooc_notes_dislikes)
+				ooc_notes += "\n\nDISLIKES\n\n[H.ooc_notes_dislikes]"
 			if(LAZYLEN(H.flavor_texts)) //ChompEDIT
 				flavor_text = H.flavor_texts["general"] //ChompEDIT
 
@@ -103,7 +106,11 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			name = A.name
 			species = "Artificial Intelligence"
 			ooc_notes = A.ooc_notes
-			ooc_notes += "\n\nLIKES\n\n[A.ooc_notes_likes]\n\nDISLIKES\n\n[A.ooc_notes_dislikes]"
+			if(A.ooc_notes_likes)
+				ooc_notes += "\n\nLIKES\n\n[A.ooc_notes_likes]"
+			if(A.ooc_notes_dislikes)
+				ooc_notes += "\n\nDISLIKES\n\n[A.ooc_notes_dislikes]"
+
 			flavor_text = null // No flavor text for AIs :c
 
 		if(isrobot(C.mob))
@@ -113,7 +120,11 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			name = R.name
 			species = "[R.modtype] [R.braintype]"
 			ooc_notes = R.ooc_notes
-			ooc_notes += "\n\nLIKES\n\n[R.ooc_notes_likes]\n\nDISLIKES\n\n[R.ooc_notes_dislikes]"
+			if(R.ooc_notes_likes)
+				ooc_notes += "\n\nLIKES\n\n[R.ooc_notes_likes]"
+			if(R.ooc_notes_dislikes)
+				ooc_notes += "\n\nDISLIKES\n\n[R.ooc_notes_dislikes]"
+
 			flavor_text = R.flavor_text
 
 		if(istype(C.mob, /mob/living/silicon/pai))
