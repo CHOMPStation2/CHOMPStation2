@@ -93,19 +93,16 @@
 		if(!M.allow_spontaneous_tf && !tf_admin_pref_override)
 			return
 	if(M.tf_mob_holder)
-		new /obj/effect/effect/teleport_greyscale(M.loc) //CHOMPAdd
+		new /obj/effect/effect/teleport_greyscale(M.loc) //CHOMPEdit Start
 		var/mob/living/ourmob = M.tf_mob_holder
 		if(ourmob.ai_holder)
 			var/datum/ai_holder/our_AI = ourmob.ai_holder
 			our_AI.set_stance(STANCE_IDLE)
 		M.tf_mob_holder = null
-		var/ourmob_ckey  //CHOMPEdit Start
-		if(ourmob.ckey)
-			ourmob_ckey = ourmob.ckey
 		var/turf/get_dat_turf = get_turf(target)
 		ourmob.loc = get_dat_turf
 		ourmob.forceMove(get_dat_turf)
-		if(!ourmob.ckey)
+		if(!M.tf_form_ckey)
 			ourmob.vore_selected = M.vore_selected
 			M.vore_selected = null
 			for(var/obj/belly/B as anything in M.vore_organs)
@@ -125,10 +122,10 @@
 				M.drop_from_inventory(W)
 
 		if(M.tf_form == ourmob)
-			if(ourmob_ckey)
-				M.ckey = ourmob_ckey
+			if(M.tf_form_ckey)
+				M.ckey = M.tf_form_ckey
 			else
-				ourmob.mind = null
+				M.mind = null
 			ourmob.tf_form = M
 			M.forceMove(ourmob)
 		else
@@ -202,19 +199,16 @@
 /mob/living/proc/revert_mob_tf()
 	if(!tf_mob_holder)
 		return
-	new /obj/effect/effect/teleport_greyscale(src.loc) //CHOMPAdd
+	new /obj/effect/effect/teleport_greyscale(src.loc) //CHOMPEdit Start
 	var/mob/living/ourmob = tf_mob_holder
 	if(ourmob.ai_holder)
 		var/datum/ai_holder/our_AI = ourmob.ai_holder
 		our_AI.set_stance(STANCE_IDLE)
 	tf_mob_holder = null
-	var/ourmob_ckey  //CHOMPEdit Start
-	if(ourmob.ckey)
-		ourmob_ckey = ourmob.ckey
 	var/turf/get_dat_turf = get_turf(src)
 	ourmob.loc = get_dat_turf
 	ourmob.forceMove(get_dat_turf)
-	if(!ourmob.ckey)
+	if(!tf_form_ckey)
 		ourmob.vore_selected = vore_selected
 		vore_selected = null
 		for(var/obj/belly/B as anything in vore_organs)
@@ -234,10 +228,10 @@
 			src.drop_from_inventory(W)
 
 	if(tf_form == ourmob)
-		if(ourmob_ckey)
-			src.ckey = ourmob_ckey
+		if(tf_form_ckey)
+			src.ckey = tf_form_ckey
 		else
-			ourmob.mind = null
+			src.mind = null
 		ourmob.tf_form = src
 		src.forceMove(ourmob)
 	else
@@ -343,13 +337,10 @@
 			var/datum/ai_holder/our_AI = ourmob.ai_holder
 			our_AI.set_stance(STANCE_IDLE)
 		M.tf_mob_holder = null
-		var/ourmob_ckey  //CHOMPEdit Start
-		if(ourmob.ckey)
-			ourmob_ckey = ourmob.ckey
 		var/turf/get_dat_turf = get_turf(target)
 		ourmob.loc = get_dat_turf
 		ourmob.forceMove(get_dat_turf)
-		if(!ourmob.ckey)
+		if(!M.tf_form_ckey) //CHOMPEdit Start
 			ourmob.vore_selected = M.vore_selected
 			M.vore_selected = null
 			for(var/obj/belly/B as anything in M.vore_organs)
@@ -370,10 +361,10 @@
 				M.drop_from_inventory(W)
 
 		if(M.tf_form == ourmob)
-			if(ourmob_ckey)
-				M.ckey = ourmob_ckey
+			if(M.tf_form_ckey)
+				M.ckey = M.tf_form_ckey
 			else
-				ourmob.mind = null
+				M.mind = null
 			ourmob.tf_form = M
 			M.forceMove(ourmob)
 		else
