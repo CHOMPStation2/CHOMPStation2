@@ -50,7 +50,7 @@
 	melee_damage_lower = 5
 	melee_damage_upper = 12
 
-/mob/living/simple_mob/animal/giant_spider/tunneler_spider //disrupter, old 120
+/mob/living/simple_mob/animal/giant_spider/tunneler //disrupter, old 120
 	maxHealth = 30
 	health = 30
 

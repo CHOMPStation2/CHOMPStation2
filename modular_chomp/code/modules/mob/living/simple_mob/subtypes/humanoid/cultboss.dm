@@ -276,6 +276,7 @@
 	light_range = 2
 	light_power = -2
 	light_color = "#FFFFFF"
+	damage_type = BURN
 
 /mob/living/simple_mob/humanoid/cultist/magus/rift
 	vore_active = 1
