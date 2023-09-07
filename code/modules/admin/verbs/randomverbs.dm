@@ -942,7 +942,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	set category = "Admin"
 	set name = "Cancel Shuttle"
 
-	if(!check_rights(R_ADMIN))	return //VOREStation Edit
+	if(!check_rights(R_ADMIN|R_FUN))	return // CHOMPstation edit: Lets anyone cancel the shuttle.
 
 	if(tgui_alert(src, "You sure?", "Confirm", list("Yes", "No")) != "Yes") return
 
