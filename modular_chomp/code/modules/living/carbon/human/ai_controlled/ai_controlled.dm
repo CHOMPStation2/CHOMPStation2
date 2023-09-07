@@ -18,7 +18,7 @@
 	..()
 
 /mob/living/carbon/human/ai_controlled/greytide
-	name = "John Greytide"
+	name = "John Greytide" //theyll get a normal name on spawn
 	to_wear_helmet = null
 	to_wear_glasses = null
 	//to_wear_mask = null ///obj/item/clothing/mask/gas
