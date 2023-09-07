@@ -13,7 +13,8 @@
 	power_equip = 0
 	power_environ = 1
 	power_light = 1
-	outdoors = 1
+	outdoors = OUTDOORS_YES
+	ambience = AMBIENCE_SIF
 
 /area/awaymission/darkrp/tunnels
 	icon_state = "green"

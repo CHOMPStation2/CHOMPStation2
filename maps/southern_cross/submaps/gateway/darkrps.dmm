@@ -130,6 +130,9 @@
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/park)
+"ar" = (
+/turf/simulated/floor/plating,
+/area/awaymission/darkrp/outside/suburbs)
 "as" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -140,6 +143,10 @@
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/park)
+"at" = (
+/mob/living/simple_mob/vore/alienanimals/skeleton/alt,
+/turf/simulated/floor/carpet/blue,
+/area/awaymission/darkrp/plazahotel)
 "au" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/wood,
@@ -206,6 +213,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse3)
+"aC" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/weapon/storage/box/scattershot,
+/obj/item/weapon/storage/box/scattershot,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/parkcondo)
 "aD" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/carpet,
@@ -287,6 +300,11 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/warehouses)
+"aO" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/weapon/cell/hyper,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/subgarage)
 "aP" = (
 /turf/simulated/wall/r_wall,
 /area/awaymission/darkrp/warehouseshack)
@@ -301,19 +319,8 @@
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/awaymission/darkrp/outside)
 "aS" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/structure/barricade/sandbag{
-	icon_state = "sandbags"
-	},
-/turf/simulated/floor/outdoors/sidewalk/side{
-	movement_cost = 0;
-	temperature = 293.15
-	},
-/area/awaymission/darkrp/outside/suburbs)
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/plazarecroom)
 "aT" = (
 /obj/random/trash,
 /obj/random/junk,
@@ -672,9 +679,7 @@
 /area/awaymission/darkrp/ghettowarehouse)
 "bN" = (
 /obj/effect/floor_decal/industrial/warning/dust,
-/turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/lavaland/basalt,
 /area/awaymission/darkrp/outside/plaza)
 "bO" = (
 /obj/machinery/light{
@@ -697,7 +702,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/wood,
 /area/awaymission/darkrp/plazarecroom)
 "bS" = (
 /mob/living/simple_mob/vore/aggressive/rat/event,
@@ -1009,6 +1014,13 @@
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/suburbs)
+"cD" = (
+/obj/machinery/light{
+	layer = 3
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/ghettooffice)
 "cE" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/grass/heavy{
@@ -1128,13 +1140,18 @@
 "cS" = (
 /obj/effect/map_effect/portal/master/side_a{
 	dir = 1;
-	portal_id = "deepsewers"
+	portal_id = "gsewer1"
 	},
 /obj/effect/floor_decal/stairs{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/sewers)
+"cT" = (
+/obj/structure/closet/crate,
+/obj/item/weapon/storage/box/pillbottles,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/parkwallbunker)
 "cU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/random/junk,
@@ -1236,6 +1253,8 @@
 /area/awaymission/darkrp/outside/ghetto)
 "dh" = (
 /obj/structure/table/steel,
+/obj/item/weapon/tool/wirecutters,
+/obj/item/weapon/weldingtool/electric,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/plazawarehouse)
 "di" = (
@@ -1303,6 +1322,10 @@
 /obj/structure/bed/chair/wood,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownresturaunt)
+"dq" = (
+/mob/living/simple_mob/humanoid/merc/melee/sword,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/subapartments)
 "dr" = (
 /mob/living/simple_mob/humanoid/merc/ranged/ionrifle,
 /turf/simulated/floor/concrete{
@@ -1312,6 +1335,12 @@
 "ds" = (
 /turf/simulated/wall/concrete,
 /area/awaymission/darkrp/tunnels/suburbs)
+"dt" = (
+/obj/structure/closet/crate,
+/obj/item/weapon/storage/box/snappops,
+/obj/item/weapon/storage/box/snappops,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/parkwallbunker)
 "du" = (
 /turf/simulated/floor/concrete{
 	outdoors = 1
@@ -1382,6 +1411,10 @@
 /obj/item/ammo_magazine/s357,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/downtowngunshop)
+"dE" = (
+/mob/living/simple_mob/humanoid/merc/ranged/rifle,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/ghettobank)
 "dF" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -1440,6 +1473,10 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/plaza)
+"dK" = (
+/mob/living/simple_mob/vore/aggressive/rat,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/sewers)
 "dL" = (
 /obj/structure/bonfire,
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
@@ -1469,6 +1506,10 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside)
+"dP" = (
+/obj/structure/closet/secure_closet/freezer/money,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/parkwallbunker)
 "dQ" = (
 /obj/random/vendordrink,
 /turf/simulated/floor/concrete{
@@ -1520,6 +1561,8 @@
 /area/awaymission/darkrp/parkcondo)
 "dZ" = (
 /obj/structure/table/rack/shelf/steel,
+/obj/item/clothing/suit/armor/material/makeshift/durasteel,
+/obj/item/clothing/head/helmet/material/makeshift/durasteel,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/plazawarehouse)
 "ea" = (
@@ -1720,6 +1763,7 @@
 "eB" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/stack/cable_coil/pink,
+/obj/item/clothing/suit/armor/pcarrier/light,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse3)
 "eC" = (
@@ -1744,9 +1788,7 @@
 	pixel_y = 0;
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/lavaland/basalt,
 /area/awaymission/darkrp/outside/plaza)
 "eF" = (
 /mob/living/simple_mob/mechanical/viscerator,
@@ -1812,14 +1854,18 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/center)
+"eP" = (
+/mob/living/simple_mob/humanoid/merc/ranged/laser,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/awaymission/darkrp/sewers)
 "eQ" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/ammo_magazine/m12gdrum/pellet,
-/obj/item/ammo_magazine/m12gdrum/pellet,
-/obj/item/ammo_magazine/m12gdrum/pellet,
-/obj/item/ammo_magazine/m12gdrum/pellet,
-/obj/item/ammo_magazine/m12gdrum/pellet,
-/obj/item/ammo_magazine/m12gdrum/pellet,
+/obj/item/ammo_magazine/m12gdrumjack/pellet,
+/obj/item/ammo_magazine/m12gdrumjack/pellet,
+/obj/item/ammo_magazine/m12gdrumjack/pellet,
+/obj/item/ammo_magazine/m12gdrumjack/pellet,
+/obj/item/ammo_magazine/m12gdrumjack/pellet,
+/obj/item/ammo_magazine/m12gdrumjack/pellet,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/centerwarehouse)
 "eR" = (
@@ -1948,6 +1994,11 @@
 /obj/effect/decal/remains,
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/awaymission/darkrp/reference)
+"fl" = (
+/obj/structure/closet/crate,
+/obj/item/clothing/suit/armor/pcarrier/explorer/deluxe,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/downtowncenter)
 "fm" = (
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettobank)
@@ -2151,7 +2202,9 @@
 /area/awaymission/darkrp/tunnels/plaza)
 "fO" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/mecha_wreckage/gunpod,
+/obj/effect/decal/mecha_wreckage/gunpod{
+	anchored = 1
+	},
 /turf/simulated/floor/lava/harmless,
 /area/awaymission/darkrp/outside/ghetto)
 "fP" = (
@@ -2317,9 +2370,7 @@
 	dir = 8
 	},
 /obj/structure/railing/grey,
-/turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/lavaland/basalt,
 /area/awaymission/darkrp/outside/plaza)
 "gk" = (
 /obj/random/junk,
@@ -2373,9 +2424,7 @@
 /turf/simulated/wall/r_wall,
 /area/awaymission/darkrp/plazahotel)
 "gr" = (
-/turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/lavaland/basalt,
 /area/awaymission/darkrp/outside/suburbs)
 "gs" = (
 /obj/structure/cable/green{
@@ -2406,6 +2455,7 @@
 /obj/structure/table/steel,
 /obj/random/maintenance/engineering,
 /obj/item/stack/material/iron,
+/obj/item/clothing/suit/armor/material/makeshift/glass,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/plazawarehouse)
 "gv" = (
@@ -2485,6 +2535,13 @@
 /obj/item/weapon/bedsheet/greendouble,
 /turf/simulated/floor/lino,
 /area/awaymission/darkrp/ghettoapartments)
+"gF" = (
+/mob/living/simple_mob/animal/synx/ai/pet/greed/synth{
+	faction = "cult";
+	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
+	},
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/plazarecroom)
 "gG" = (
 /turf/simulated/floor/outdoors/sidewalk/side{
 	movement_cost = 0;
@@ -3010,9 +3067,7 @@
 	},
 /area/awaymission/darkrp/tunnel/ghettos)
 "hZ" = (
-/turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/lavaland/basalt,
 /area/awaymission/darkrp/outside/plaza)
 "ia" = (
 /obj/structure/table/steel_reinforced,
@@ -3031,6 +3086,13 @@
 	icon_state = "dmg1"
 	},
 /area/awaymission/darkrp/tunnels/suburbs)
+"id" = (
+/obj/structure/table/steel,
+/obj/item/stack/material/leather{
+	amount = 21
+	},
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/plazawarehouse)
 "ie" = (
 /obj/machinery/chemical_analyzer,
 /turf/simulated/floor/tiled/neutral,
@@ -3222,6 +3284,12 @@
 "iK" = (
 /turf/simulated/wall/wood,
 /area/awaymission/darkrp/subcondo)
+"iL" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/downtownbar)
 "iM" = (
 /obj/structure/table/rack/shelf,
 /obj/item/clothing/head/helmet/bulletproof,
@@ -3259,6 +3327,12 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/awaymission/darkrp/sewers)
+"iS" = (
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/basic,
+/turf/simulated/floor/outdoors/newdirt{
+	temperature = 293.15
+	},
+/area/awaymission/darkrp/outside/plaza)
 "iT" = (
 /turf/simulated/floor/tiled/techmaint,
 /area/awaymission/darkrp/sewers)
@@ -3305,6 +3379,14 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/plaza)
+"ja" = (
+/obj/item/modular_computer/console/preset/civilian{
+	pixel_y = 0;
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/ghettooffice)
 "jb" = (
 /obj/machinery/portable_atmospherics/canister/oxygen/prechilled,
 /turf/simulated/floor/tiled/neutral,
@@ -3346,6 +3428,10 @@
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/plaza)
+"jg" = (
+/mob/living/simple_mob/vore/alienanimals/skeleton/alt,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/subgas)
 "jh" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -3433,6 +3519,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/darkrp/plazacoffee)
+"js" = (
+/mob/living/simple_mob/humanoid/merc/melee,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/awaymission/darkrp/outside/park)
 "jt" = (
 /obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/wood,
@@ -3495,6 +3587,7 @@
 "jC" = (
 /obj/structure/table/steel,
 /obj/random/tool/power,
+/obj/random/toolbox,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/plazawarehouse)
 "jD" = (
@@ -3626,6 +3719,10 @@
 	icon_state = "side-walk1"
 	},
 /area/awaymission/darkrp/outside/warehouses)
+"jU" = (
+/mob/living/simple_mob/humanoid/merc/ranged/ionrifle,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/sewers)
 "jV" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/effect/floor_decal/corner/grey/diagonal{
@@ -3756,6 +3853,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/plazawarehouse)
+"kl" = (
+/obj/machinery/light{
+	dir = 2
+	},
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/downtownbar)
 "km" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -3792,6 +3895,10 @@
 "kr" = (
 /turf/simulated/floor/water/indoors,
 /area/awaymission/darkrp/sewers)
+"ks" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/ghettooffice)
 "kt" = (
 /obj/effect/floor_decal/rust,
 /obj/random/obstruction,
@@ -3931,6 +4038,7 @@
 	icon_state = "0-8"
 	},
 /obj/structure/table/rack/shelf/steel,
+/obj/item/weapon/cell/hyper,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/subgarage)
 "kL" = (
@@ -3980,6 +4088,11 @@
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/parkghetto2)
+"kS" = (
+/obj/structure/closet/crate,
+/obj/item/weapon/storage/box/smokes,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/parkwallbunker)
 "kT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/random/trash,
@@ -4038,6 +4151,9 @@
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/ghettooffice)
+"la" = (
+/turf/simulated/wall,
+/area/awaymission/darkrp/outside/warehouses)
 "lb" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/storage/box/glasses/mug,
@@ -4061,6 +4177,10 @@
 /obj/structure/closet/secure_closet/freezer/fridge,
 /turf/simulated/floor/wmarble,
 /area/awaymission/darkrp/subhouse2)
+"le" = (
+/obj/structure/barricade/cutout/cultist,
+/turf/simulated/floor/carpet/purcarpet,
+/area/awaymission/darkrp/plazarecroom)
 "lf" = (
 /obj/structure/table/standard,
 /obj/effect/decal/cleanable/dirt,
@@ -4118,6 +4238,12 @@
 /obj/item/weapon/stock_parts/gear,
 /turf/simulated/floor/lino,
 /area/awaymission/darkrp/ghettoapartments)
+"lr" = (
+/obj/structure/sign/warning/lethal_turrets{
+	name = "\improper SNIPER"
+	},
+/turf/simulated/wall/r_concrete,
+/area/awaymission/darkrp/sewers)
 "ls" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -4492,11 +4618,21 @@
 /obj/item/weapon/spacecash/c10,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/centersidehouse)
+"mn" = (
+/obj/structure/table/wooden_reinforced,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/plazarecroom)
 "mo" = (
 /obj/structure/bed/chair/sofa/bench/marble{
 	pixel_y = 0;
 	dir = 4
 	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/awaymission/darkrp/outside/park)
+"mp" = (
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/backline,
 /turf/simulated/floor/concrete{
 	outdoors = 1
 	},
@@ -4551,6 +4687,10 @@
 /obj/item/weapon/deck/cards,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownbar)
+"mx" = (
+/mob/living/simple_mob/vore/alienanimals/skeleton/alt,
+/turf/simulated/floor/carpet/oracarpet,
+/area/awaymission/darkrp/plazahotel)
 "my" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/wood,
@@ -4561,6 +4701,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettobank)
+"mA" = (
+/obj/item/weapon/moneybag,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/parkwallbunker)
 "mB" = (
 /obj/structure/barricade/sandbag{
 	icon_state = "sandbags"
@@ -4684,6 +4828,11 @@
 /obj/item/weapon/stool/padded,
 /turf/simulated/floor/carpet/retro,
 /area/awaymission/darkrp/plazarecroom)
+"mS" = (
+/obj/structure/closet/crate,
+/obj/item/weapon/storage/box/mousetraps,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/parkwallbunker)
 "mT" = (
 /turf/simulated/floor/outdoors/rocks{
 	temperature = 293.15;
@@ -4768,6 +4917,18 @@
 /obj/effect/decal/cleanable/liquid_fuel,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/parkmaint)
+"nf" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/porta_turret/stationary/syndie/CIWS,
+/turf/simulated/floor/outdoors/sidewalk/side{
+	movement_cost = 0;
+	temperature = 293.15
+	},
+/area/awaymission/darkrp/outside/center)
 "ng" = (
 /mob/living/simple_mob/humanoid/merc/melee,
 /turf/simulated/floor/tiled,
@@ -4826,6 +4987,10 @@
 /obj/structure/table/rack/shelf/steel,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/sewers)
+"nq" = (
+/mob/living/simple_mob/vore/alienanimals/skeleton/alt,
+/turf/simulated/floor/wmarble,
+/area/awaymission/darkrp/plazahotel)
 "nr" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -4966,6 +5131,7 @@
 /area/awaymission/darkrp/warehouseshack)
 "nH" = (
 /obj/structure/bed/chair/comfy/brown,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/ghettooffice)
 "nI" = (
@@ -5084,6 +5250,11 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/plaza)
+"oc" = (
+/obj/effect/floor_decal/rust,
+/obj/random/obstruction,
+/turf/simulated/floor/plating,
+/area/awaymission/darkrp/downtownempty)
 "od" = (
 /obj/machinery/light{
 	dir = 1
@@ -5379,6 +5550,7 @@
 	dir = 4;
 	pixel_x = 11
 	},
+/mob/living/simple_mob/vore/alienanimals/skeleton/alt,
 /turf/simulated/floor/wmarble,
 /area/awaymission/darkrp/plazahotel)
 "oU" = (
@@ -5412,6 +5584,7 @@
 /obj/machinery/light{
 	layer = 3
 	},
+/obj/structure/barricade/cutout/fluke,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/parkwallbunker)
 "oY" = (
@@ -5515,6 +5688,15 @@
 	outdoors = 1
 	},
 /area/awaymission/darkrp/subpower)
+"pm" = (
+/obj/structure/table/woodentable,
+/obj/item/device/flashlight/lamp/green{
+	pixel_x = 1;
+	pixel_y = 5
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/ghettooffice)
 "pn" = (
 /obj/structure/salvageable/data_os,
 /turf/simulated/floor/tiled,
@@ -5560,7 +5742,7 @@
 /area/awaymission/darkrp/outside/park)
 "pt" = (
 /obj/effect/map_effect/portal/master/side_b{
-	portal_id = "deepsewers"
+	portal_id = "deepsewers2"
 	},
 /turf/simulated/floor/concrete,
 /area/awaymission/darkrp/sewers)
@@ -5718,14 +5900,21 @@
 	outdoors = 0
 	},
 /area/awaymission/darkrp/toll)
+"pR" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/humanoid/merc/ranged/rifle/mag,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/awaymission/darkrp/outside/park)
 "pS" = (
 /mob/living/simple_mob/humanoid/cultist/tesh,
 /turf/simulated/floor/carpet/purcarpet,
 /area/awaymission/darkrp/plazarecroom)
 "pT" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/gun/projectile/smartgun,
-/obj/item/weapon/gun/projectile/smartgun,
+/obj/item/clothing/suit/armor/pcarrier/bulletproof/full,
+/obj/item/clothing/suit/armor/pcarrier/bulletproof/full,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/centerwarehouse)
 "pU" = (
@@ -5858,6 +6047,11 @@
 /mob/living/simple_mob/humanoid/merc/ranged/garand,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse2)
+"qo" = (
+/obj/structure/table/woodentable,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/ghettooffice)
 "qp" = (
 /turf/simulated/floor/water/contaminated,
 /area/awaymission/darkrp/outside)
@@ -5932,6 +6126,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/mob/living/simple_mob/animal/giant_spider,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/darkrp/sewers)
 "qA" = (
@@ -5966,6 +6161,14 @@
 /obj/structure/table/rack/shelf/steel,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
+"qE" = (
+/obj/structure/bed/chair/comfy/black{
+	pixel_y = 0;
+	dir = 4
+	},
+/mob/living/simple_mob/humanoid/merc/melee/poi,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/subapartments)
 "qF" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/reagent_containers/food/drinks/cup{
@@ -6064,6 +6267,12 @@
 "qT" = (
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/awaymission/darkrp/tunnels/suburbs)
+"qU" = (
+/mob/living/simple_mob/humanoid/merc/voxpirate/ranged/suppressor,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/awaymission/darkrp/outside/ghetto)
 "qV" = (
 /obj/random/trash_pile,
 /turf/simulated/floor/plating,
@@ -6191,6 +6400,18 @@
 /obj/random/trash,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse2)
+"rn" = (
+/obj/structure/toilet{
+	dir = 8
+	},
+/obj/machinery/light/small{
+	dir = 4;
+	pixel_y = 0
+	},
+/obj/effect/decal/remains,
+/obj/effect/decal/cleanable/filth,
+/turf/simulated/floor/tiled/freezer,
+/area/awaymission/darkrp/plazahotel)
 "ro" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -6262,6 +6483,12 @@
 /obj/random/contraband/nofail,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownshop)
+"rv" = (
+/obj/structure/table/woodentable,
+/obj/random/maintenance/clean,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/ghettooffice)
 "rw" = (
 /obj/structure/filingcabinet/chestdrawer,
 /turf/simulated/floor/tiled,
@@ -6476,6 +6703,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/centerwarehouse)
+"sc" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/weapon/cell/high,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/subgarage)
 "sd" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/clothing/head/radiation,
@@ -6599,6 +6831,13 @@
 	},
 /turf/simulated/floor/carpet,
 /area/awaymission/darkrp/subhouse1)
+"ss" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/ghettooffice)
 "st" = (
 /obj/machinery/door/blast/shutters{
 	id = "warehouse1";
@@ -6689,6 +6928,11 @@
 /obj/effect/decal/cleanable/liquid_fuel,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/parkmaint)
+"sD" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/scattershot,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/parkcondo)
 "sE" = (
 /obj/item/weapon/material/twohanded/spear,
 /turf/simulated/floor/lino,
@@ -6711,6 +6955,13 @@
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
+"sI" = (
+/obj/item/weapon/stool/padded{
+	dir = 4
+	},
+/obj/effect/decal/remains/human,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/downtownbar)
 "sJ" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -6746,6 +6997,7 @@
 /obj/random/maintenance/clean,
 /obj/random/maintenance/clean,
 /obj/effect/landmark/loot_spawn,
+/obj/item/clothing/suit/armor/pcarrier/medium,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse1)
 "sN" = (
@@ -6975,6 +7227,10 @@
 	},
 /turf/simulated/wall/r_concrete,
 /area/awaymission/darkrp/tunnels/suburbs)
+"tt" = (
+/obj/item/device/multitool,
+/turf/simulated/floor/plating,
+/area/awaymission/darkrp/parkcondo)
 "tu" = (
 /obj/random/trash,
 /turf/simulated/floor/tiled,
@@ -7010,6 +7266,7 @@
 	dir = 8
 	},
 /obj/structure/table/woodentable,
+/obj/item/weapon/storage/firstaid/adv,
 /turf/simulated/floor/carpet/turcarpet,
 /area/awaymission/darkrp/warehouseshack)
 "tz" = (
@@ -7135,6 +7392,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/plazashop)
+"tL" = (
+/obj/machinery/power/quantumpad,
+/turf/simulated/floor/plating,
+/area/awaymission/darkrp/parkcondo)
 "tM" = (
 /obj/structure/plushie/ian,
 /turf/simulated/floor/carpet/purcarpet,
@@ -7187,6 +7448,8 @@
 	dir = 1
 	},
 /obj/machinery/door/window/eastleft,
+/obj/item/clothing/suit/cultrobes/alt,
+/obj/item/clothing/suit/cultrobes/alt,
 /turf/simulated/floor/carpet/purcarpet,
 /area/awaymission/darkrp/plazarecroom)
 "tU" = (
@@ -7238,6 +7501,11 @@
 /obj/random/maintenance/cargo,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/downtowncenter)
+"tZ" = (
+/obj/structure/closet/crate,
+/obj/item/weapon/storage/box/survival/space,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/parkwallbunker)
 "ua" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/random/maintenance/cargo,
@@ -7271,10 +7539,13 @@
 /area/awaymission/darkrp/ghettobank)
 "ud" = (
 /obj/item/clothing/accessory/watch,
-/turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/lavaland/basalt,
 /area/awaymission/darkrp/outside/suburbs)
+"ue" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/awaymission/darkrp/sewers)
 "uf" = (
 /obj/machinery/vending/cola,
 /turf/simulated/floor/wood,
@@ -7348,6 +7619,11 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/suburbs)
+"us" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/clothing/head/collectable/tophat,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/plazarecroom)
 "ut" = (
 /obj/structure/railing/grey{
 	pixel_y = 0;
@@ -7543,6 +7819,9 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/item/weapon/stool{
+	dir = 4
+	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/awaymission/darkrp/plazarecroom)
 "uS" = (
@@ -7673,6 +7952,7 @@
 /area/awaymission/darkrp/outside/center)
 "vi" = (
 /obj/structure/table/woodentable,
+/obj/item/clothing/suit/armor/pcarrier/merc,
 /turf/simulated/floor/carpet/turcarpet,
 /area/awaymission/darkrp/warehouseshack)
 "vj" = (
@@ -7798,6 +8078,7 @@
 /area/awaymission/darkrp/centersidehouse)
 "vA" = (
 /obj/structure/bed/chair/office/dark,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/ghettooffice)
 "vB" = (
@@ -7995,6 +8276,12 @@
 /obj/random/maintenance/morestuff,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownshop)
+"wc" = (
+/obj/effect/floor_decal/stairs/wood_stairs{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/awaymission/darkrp/plazarecroom)
 "wd" = (
 /obj/structure/table/rack/shelf,
 /obj/item/weapon/reagent_containers/food/condiment/ketchup{
@@ -8114,11 +8401,17 @@
 /obj/machinery/power/port_gen/pacman/super,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/subpowermaint)
+"wr" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/clothing/suit/armor/material/makeshift,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/plazawarehouse)
 "ws" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/weapon/melee/classic_baton,
 /obj/item/weapon/gun/energy/taser,
 /obj/item/weapon/gun/energy/taser,
+/obj/item/clothing/suit/armor/pcarrier/riot/full,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/pd)
 "wt" = (
@@ -8291,6 +8584,10 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/awaymission/darkrp/sewers)
+"wP" = (
+/obj/machinery/power/port_gen/pacman/super,
+/turf/simulated/floor/plating,
+/area/awaymission/darkrp/parkcondo)
 "wQ" = (
 /obj/structure/table/steel,
 /obj/item/clothing/gloves/yellow,
@@ -8319,6 +8616,10 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/sewers)
+"wU" = (
+/mob/living/simple_mob/humanoid/merc/voxpirate/ranged/captain,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/ghettowarehouse)
 "wV" = (
 /obj/structure/barricade/sandbag{
 	icon_state = "sandbags"
@@ -8351,6 +8652,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/ghettooffice)
 "xb" = (
@@ -8466,6 +8768,7 @@
 /obj/item/weapon/gun/energy/taser,
 /obj/item/weapon/gun/energy/taser,
 /obj/machinery/recharger,
+/obj/item/clothing/suit/armor/pcarrier/riot/full,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/pd)
 "xt" = (
@@ -8616,6 +8919,10 @@
 /obj/structure/table/woodentable,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettobank)
+"xP" = (
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/basic,
+/turf/simulated/floor/outdoors/lavaland/basalt,
+/area/awaymission/darkrp/outside/plaza)
 "xQ" = (
 /obj/machinery/light{
 	layer = 3
@@ -8644,6 +8951,14 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/awaymission/darkrp/sewers)
+"xU" = (
+/obj/machinery/light{
+	layer = 3
+	},
+/obj/structure/closet/crate,
+/obj/item/weapon/storage/box/syndie_kit/combat_armor,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/parkwallbunker)
 "xV" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -8661,6 +8976,13 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/center)
+"xW" = (
+/obj/structure/table/woodentable,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/downtownbar)
 "xX" = (
 /obj/machinery/light/small{
 	dir = 4;
@@ -8766,6 +9088,11 @@
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/plaza)
+"yf" = (
+/obj/structure/filingcabinet/chestdrawer,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/ghettooffice)
 "yg" = (
 /obj/effect/floor_decal/corner/blue/diagonal{
 	dir = 4
@@ -8832,6 +9159,8 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/mob/living/simple_mob/humanoid/merc/voxpirate/boarder,
+/obj/item/weapon/gun/projectile/shotgun/doublebarrel/pellet,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/parkcondo)
 "yp" = (
@@ -8846,6 +9175,7 @@
 "yq" = (
 /obj/structure/table/steel,
 /obj/random/toolbox,
+/obj/item/weapon/cell/hyper,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/subpowermaint)
 "yr" = (
@@ -8881,6 +9211,10 @@
 /obj/item/weapon/mop,
 /turf/simulated/floor/wmarble,
 /area/awaymission/darkrp/plazahotel)
+"yw" = (
+/mob/living/simple_mob/humanoid/merc/voxpirate/pirate,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/ghettowarehouse)
 "yx" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -9017,9 +9351,7 @@
 	dir = 2
 	},
 /obj/effect/floor_decal/industrial/warning/dust,
-/turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/lavaland/basalt,
 /area/awaymission/darkrp/reference)
 "yR" = (
 /obj/structure/cable/green{
@@ -9187,6 +9519,10 @@
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside)
+"zm" = (
+/mob/living/simple_mob/humanoid/cultist/human/bloodjaunt,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/plazarecroom)
 "zn" = (
 /obj/machinery/power/apc{
 	dir = 4;
@@ -9220,6 +9556,10 @@
 /obj/structure/bed/chair/sofa/right/lime,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/brokehouse)
+"zr" = (
+/mob/living/simple_mob/humanoid/pirate/machete/armored,
+/turf/simulated/floor/lino,
+/area/awaymission/darkrp/subhouse1)
 "zs" = (
 /obj/structure/table/rack/shelf/steel,
 /turf/simulated/floor/tiled,
@@ -9361,19 +9701,10 @@
 	},
 /area/awaymission/darkrp/outside/ghetto)
 "zN" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/barricade/sandbag{
-	icon_state = "sandbags"
-	},
-/turf/simulated/floor/concrete{
-	outdoors = 0
-	},
-/area/awaymission/darkrp/tunnels/suburbs)
+/obj/structure/closet/crate,
+/obj/item/clothing/suit/armor/pcarrier/laserproof/full,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/downtowncenter)
 "zO" = (
 /turf/simulated/floor/carpet,
 /area/awaymission/darkrp/plazashop)
@@ -9467,9 +9798,7 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/lavaland/basalt,
 /area/awaymission/darkrp/outside/plaza)
 "Ab" = (
 /obj/structure/cable/green{
@@ -9496,8 +9825,13 @@
 	},
 /obj/structure/table/steel,
 /obj/random/toolbox,
+/obj/item/weapon/inducer/unloaded,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/subpowermaint)
+"Ae" = (
+/mob/living/simple_mob/humanoid/merc/ranged/poi,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/ghettobank)
 "Af" = (
 /obj/random/meat,
 /obj/effect/decal/remains/human,
@@ -9511,6 +9845,7 @@
 /area/awaymission/darkrp/subhouse1)
 "Ah" = (
 /obj/structure/table/reinforced,
+/obj/item/weapon/reagent_containers/food/condiment/ketchup,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/subgas)
 "Ai" = (
@@ -9534,9 +9869,13 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/darkrp/downtownwarehouse)
+"Al" = (
+/mob/living/simple_mob/humanoid/merc/ranged/laser/poi,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/ghettobank)
 "Am" = (
 /obj/effect/map_effect/portal/master/side_b{
-	portal_id = "sewer1"
+	portal_id = "gsewer1"
 	},
 /obj/effect/floor_decal/stairs{
 	dir = 1
@@ -9548,9 +9887,7 @@
 /area/awaymission/darkrp/subcondo)
 "Ao" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/lavaland/basalt,
 /area/awaymission/darkrp/outside/plaza)
 "Ap" = (
 /turf/simulated/floor/outdoors/rocks{
@@ -9579,6 +9916,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/concrete,
 /area/awaymission/darkrp/sewers)
+"At" = (
+/mob/living/simple_mob/mechanical/hivebot/precusor/laser,
+/turf/simulated/wall/r_wall,
+/area/awaymission/darkrp/plazacoffee)
 "Au" = (
 /obj/structure/flora/ausbushes/grassybush,
 /turf/simulated/floor/outdoors/grass/heavy{
@@ -9805,6 +10146,11 @@
 	outdoors = -1
 	},
 /area/awaymission/darkrp/sewers)
+"AY" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/humanoid/merc/melee/sword,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/sewers)
 "AZ" = (
 /obj/structure/table/woodentable,
 /obj/item/stack/cable_coil{
@@ -9818,6 +10164,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/plazashop)
+"Ba" = (
+/obj/machinery/porta_turret/stationary/syndie/CIWS,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/awaymission/darkrp/outside/center)
 "Bb" = (
 /obj/machinery/door/airlock/glass_security{
 	req_one_access = list(860)
@@ -9942,6 +10294,14 @@
 /obj/structure/table/woodentable,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/ghettohouse1)
+"Bu" = (
+/mob/living/simple_mob/humanoid/pirate/mate/ranged/rifle,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/pd)
+"Bv" = (
+/mob/living/simple_mob/humanoid/merc/voxpirate/pirate,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/parkcondo)
 "Bw" = (
 /obj/machinery/light{
 	dir = 1
@@ -9995,9 +10355,7 @@
 /area/awaymission/darkrp/outside)
 "BD" = (
 /obj/item/weapon/tool/screwdriver/diamonddrill,
-/turf/simulated/floor/concrete{
-	outdoors = 1
-	},
+/turf/simulated/floor/plating,
 /area/awaymission/darkrp/outside/suburbs)
 "BE" = (
 /obj/structure/cable/green{
@@ -10028,6 +10386,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse3)
+"BH" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/wall/r_wall,
+/area/awaymission/darkrp/plazarecroom)
 "BI" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -10076,14 +10438,12 @@
 /area/awaymission/darkrp/ghettoeats)
 "BN" = (
 /obj/item/weapon/tool/screwdriver,
-/turf/simulated/floor/concrete{
-	outdoors = 1
-	},
+/turf/simulated/floor/plating,
 /area/awaymission/darkrp/outside/suburbs)
 "BO" = (
 /obj/effect/map_effect/portal/master/side_a{
 	dir = 1;
-	portal_id = "deepsewers"
+	portal_id = "deepsewers2"
 	},
 /turf/simulated/floor/concrete,
 /area/awaymission/darkrp/sewers)
@@ -10116,6 +10476,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/centersidehouse)
+"BT" = (
+/mob/living/simple_mob/mechanical/hivebot,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/awaymission/darkrp/outside/park)
 "BU" = (
 /obj/item/stack/animalhide/lizard,
 /turf/simulated/floor/lino,
@@ -10237,9 +10603,8 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/darkrp/reference)
 "Cg" = (
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/animal/giant_spider,
-/turf/simulated/floor/concrete,
+/obj/machinery/door/airlock/alien,
+/turf/simulated/floor/tiled/milspec,
 /area/awaymission/darkrp/sewers)
 "Ch" = (
 /obj/effect/floor_decal/stairs,
@@ -10350,6 +10715,7 @@
 /area/awaymission/darkrp/downtowngunshop)
 "Cy" = (
 /obj/structure/reagent_dispensers/water_cooler/full,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/ghettooffice)
 "Cz" = (
@@ -10495,9 +10861,7 @@
 /area/awaymission/darkrp/outside/ghetto)
 "CS" = (
 /obj/random/junk,
-/turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/lavaland/basalt,
 /area/awaymission/darkrp/outside/suburbs)
 "CT" = (
 /turf/simulated/floor/outdoors/sidewalk/side{
@@ -10545,6 +10909,12 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/park)
+"Dc" = (
+/obj/structure/table/reinforced,
+/obj/item/clothing/suit/storage/toggle/denim_jacket,
+/obj/item/clothing/shoes/slippers,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/subgas)
 "Dd" = (
 /obj/structure/cable/green{
 	d2 = 2;
@@ -10646,6 +11016,11 @@
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside)
+"Dm" = (
+/obj/item/weapon/gun/projectile/revolvershotgun,
+/obj/structure/table/gamblingtable,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/parkwallbunker)
 "Dn" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -11312,6 +11687,7 @@
 "EY" = (
 /obj/structure/table/steel,
 /obj/random/tool/powermaint,
+/obj/item/weapon/gun/energy/mininglaser,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/subpowermaint)
 "EZ" = (
@@ -11320,6 +11696,7 @@
 "Fa" = (
 /obj/structure/table/woodentable,
 /obj/random/toy,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/ghettooffice)
 "Fb" = (
@@ -11345,24 +11722,15 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
-/obj/item/ammo_magazine/smartgun{
-	pixel_y = 0;
-	pixel_x = 7
-	},
-/obj/item/ammo_magazine/smartgun{
-	pixel_y = 0;
-	pixel_x = -8
-	},
-/obj/item/ammo_magazine/smartgun{
-	pixel_y = 0;
-	pixel_x = -3
-	},
-/obj/item/ammo_magazine/smartgun{
-	pixel_y = 0;
-	pixel_x = 3
-	},
+/obj/structure/table/rack/shelf/steel,
+/obj/item/clothing/suit/armor/pcarrier/merc,
+/obj/item/clothing/suit/armor/pcarrier/merc,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/centerwarehouse)
+"Fd" = (
+/mob/living/simple_mob/humanoid/merc,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/awaymission/darkrp/sewers)
 "Fe" = (
 /obj/machinery/light{
 	dir = 8
@@ -11489,6 +11857,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/ghettohouse1)
+"Fv" = (
+/obj/item/weapon/stool/padded{
+	dir = 8
+	},
+/obj/effect/decal/remains/human,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/downtownbar)
 "Fw" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/modular_computer/laptop/preset/custom_loadout/cheap,
@@ -11771,6 +12146,16 @@
 /obj/machinery/optable,
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/awaymission/darkrp/sewers)
+"Gi" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/liquid_fuel,
+/obj/item/weapon/rig/merc,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/parkmaint)
 "Gj" = (
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownshop)
@@ -12039,10 +12424,17 @@
 /turf/simulated/floor/tiled/white,
 /area/awaymission/darkrp/ghettoeats)
 "GP" = (
-/mob/living/simple_mob/humanoid/pirate/armored,
+/mob/living/carbon/human/ai_controlled/greytide{
+	icon_state = "rune_teleport"
+	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/awaymission/darkrp/plazabunker)
+"GQ" = (
+/obj/structure/closet/crate,
+/obj/item/weapon/storage/box/syndie_kit/demolitions_super_heavy,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/parkwallbunker)
 "GR" = (
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/centerwarehouse)
@@ -12054,6 +12446,14 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/ghetto)
+"GT" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/table/wooden_reinforced,
+/obj/structure/curtain/open,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/plazarecroom)
 "GU" = (
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/darkrp/subcondo)
@@ -12243,6 +12643,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/subgarage)
+"Hv" = (
+/mob/living/simple_mob/humanoid/merc/ranged/sniper{
+	special_attack_max_range = 15;
+	ai_holder_type = /datum/ai_holder/simple_mob/merc/eclipse/ranged/sniper
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/awaymission/darkrp/sewers)
 "Hw" = (
 /obj/structure/flora/pottedplant/fern,
 /obj/effect/floor_decal/carpet,
@@ -12683,6 +13090,8 @@
 	dir = 1
 	},
 /obj/machinery/door/window/westleft,
+/obj/item/clothing/suit/space/cult,
+/obj/item/clothing/suit/space/cult,
 /turf/simulated/floor/carpet/purcarpet,
 /area/awaymission/darkrp/plazarecroom)
 "Iu" = (
@@ -12795,12 +13204,14 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse3)
 "IJ" = (
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/mechanical/hivebot/support,
-/turf/simulated/floor/concrete{
-	outdoors = 1
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
 	},
-/area/awaymission/darkrp/outside/downtown)
+/mob/living/carbon/human/ai_controlled/greytide{
+	icon_state = "rune_teleport"
+	},
+/turf/simulated/floor/tiled/white,
+/area/awaymission/darkrp/ghettoeats)
 "IK" = (
 /obj/effect/floor_decal/rust,
 /mob/living/simple_mob/vore/aggressive/rat/event,
@@ -12809,6 +13220,7 @@
 "IL" = (
 /obj/structure/table/steel,
 /obj/random/tool,
+/obj/item/weapon/reagent_containers/glass/bucket,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/plazawarehouse)
 "IM" = (
@@ -12854,6 +13266,13 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside)
+"IV" = (
+/obj/structure/closet/crate,
+/obj/item/weapon/storage/box/pocky,
+/obj/item/weapon/storage/box/pocky,
+/obj/item/weapon/storage/box/pocky,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/parkwallbunker)
 "IW" = (
 /obj/structure/bed/chair/wood{
 	dir = 1
@@ -12943,6 +13362,24 @@
 /obj/structure/sign/warning/high_voltage,
 /turf/simulated/wall/r_wall,
 /area/awaymission/darkrp/subpower)
+"Jj" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "spawnwarehouse";
+	name = "Shutters Button";
+	pixel_x = 1;
+	dir = 4;
+	pixel_y = 25
+	},
+/turf/simulated/floor/outdoors/sidewalk/side{
+	movement_cost = 0;
+	temperature = 293.15
+	},
+/area/awaymission/darkrp/outside/center)
 "Jk" = (
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/darkrp/centersidehouse)
@@ -13000,6 +13437,9 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/machinery/light{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/darkrp/lockdown1)
@@ -13124,6 +13564,10 @@
 "JI" = (
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/subapartments)
+"JJ" = (
+/mob/living/simple_mob/vore/aggressive/rat,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/awaymission/darkrp/sewers)
 "JK" = (
 /turf/simulated/wall/wood,
 /area/awaymission/darkrp/subhouse2)
@@ -13156,7 +13600,9 @@
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/subhouse2)
 "JQ" = (
-/obj/effect/decal/mecha_wreckage/shuttlecraft,
+/obj/effect/decal/mecha_wreckage/shuttlecraft{
+	anchored = 1
+	},
 /turf/simulated/floor/lava/harmless,
 /area/awaymission/darkrp/outside/ghetto)
 "JR" = (
@@ -13221,6 +13667,12 @@
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside)
+"JZ" = (
+/obj/random/outcrop,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/awaymission/darkrp/outside/downtown)
 "Ka" = (
 /turf/simulated/mineral/ignore_oregen,
 /area/awaymission/darkrp/sewers)
@@ -13485,9 +13937,7 @@
 /area/awaymission/darkrp/ghettosouthwarehouse)
 "KH" = (
 /mob/living/simple_mob/mechanical/hivebot/precusor/laser,
-/turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/lavaland/basalt,
 /area/awaymission/darkrp/outside/plaza)
 "KI" = (
 /obj/item/stack/cable_coil/green,
@@ -13522,6 +13972,15 @@
 /mob/living/simple_mob/mechanical/hivebot/precusor/lobber,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/downtownempty)
+"KN" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/mob/living/simple_mob/humanoid/pirate/mate/ranged/rifle,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/pd)
 "KO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/random/trash,
@@ -13597,6 +14056,11 @@
 	},
 /turf/simulated/floor/lino,
 /area/awaymission/darkrp/subhouse1)
+"KZ" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/instrument/piano_synth,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/plazarecroom)
 "La" = (
 /obj/machinery/light/small{
 	dir = 4;
@@ -13686,6 +14150,15 @@
 "Lg" = (
 /turf/simulated/wall,
 /area/awaymission/darkrp/warehouse3)
+"Lh" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/filth,
+/turf/simulated/floor/wmarble,
+/area/awaymission/darkrp/plazahotel)
 "Li" = (
 /obj/structure/table/wooden_reinforced,
 /obj/machinery/microwave,
@@ -13745,7 +14218,8 @@
 /area/awaymission/darkrp/outside)
 "Lq" = (
 /obj/structure/table/steel,
-/obj/random/toolbox,
+/obj/machinery/recharger,
+/obj/item/clothing/suit/armor/material/makeshift,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/plazawarehouse)
 "Lr" = (
@@ -13819,18 +14293,9 @@
 	},
 /area/awaymission/darkrp/outside/plaza)
 "LA" = (
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/structure/barricade/sandbag{
-	icon_state = "sandbags"
-	},
-/turf/simulated/floor/concrete{
-	outdoors = 1
-	},
-/area/awaymission/darkrp/outside/suburbs)
+/obj/structure/barricade,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/awaymission/darkrp/sewers)
 "LB" = (
 /obj/structure/closet/crate,
 /obj/effect/floor_decal/industrial/warning/dust{
@@ -14074,6 +14539,15 @@
 /obj/effect/decal/cleanable/filth,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/pd)
+"Mf" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/mob/living/simple_mob/humanoid/pirate/machete/armored,
+/turf/simulated/floor/lino,
+/area/awaymission/darkrp/subhouse1)
 "Mg" = (
 /obj/structure/cliff/automatic{
 	dir = 4
@@ -14088,6 +14562,9 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettohouse2)
+"Mi" = (
+/turf/simulated/floor/plating,
+/area/awaymission/darkrp/parkcondo)
 "Mj" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -14101,6 +14578,10 @@
 /obj/structure/table/marble,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/centersidehouse)
+"Mk" = (
+/mob/living/simple_mob/humanoid/merc/voxpirate/boarder,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/ghettowarehouse)
 "Ml" = (
 /obj/effect/map_effect/portal/line/side_b,
 /turf/simulated/floor/concrete,
@@ -14162,6 +14643,12 @@
 /obj/item/weapon/reagent_containers/blood/OMinus,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
+"Mt" = (
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/basic,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/awaymission/darkrp/outside/park)
 "Mu" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -14194,6 +14681,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownbar)
 "Mx" = (
@@ -14206,6 +14696,10 @@
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/suburbs)
+"My" = (
+/obj/structure/curtain/open,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/plazarecroom)
 "Mz" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -14281,6 +14775,7 @@
 /obj/structure/table/marble,
 /obj/item/weapon/gun/projectile/automatic/serdy/m41ab,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/ammo_magazine/m41,
 /turf/simulated/floor/tiled/techmaint,
 /area/awaymission/darkrp/sewers)
 "MJ" = (
@@ -14427,6 +14922,14 @@
 "Nc" = (
 /turf/simulated/wall/r_wall,
 /area/awaymission/darkrp/downtowncenter)
+"Nd" = (
+/obj/structure/table/gamblingtable,
+/obj/item/ammo_magazine/m12gdrumjack/pellet,
+/obj/item/ammo_magazine/m12gdrumjack/pellet,
+/obj/item/ammo_magazine/m12gdrumjack/pellet,
+/obj/item/ammo_magazine/m12gdrumjack/pellet,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/parkwallbunker)
 "Ne" = (
 /obj/machinery/light/bigfloorlamp{
 	light_range = 10
@@ -14473,9 +14976,7 @@
 /obj/machinery/light/bigfloorlamp{
 	light_range = 10
 	},
-/turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/lavaland/basalt,
 /area/awaymission/darkrp/outside/plaza)
 "Nl" = (
 /obj/structure/cable/green{
@@ -14840,6 +15341,11 @@
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/awaymission/darkrp/sewers)
+"Ol" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/animal/giant_spider/lurker,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/ghettooffice)
 "Om" = (
 /obj/structure/table/rack/shelf,
 /obj/item/weapon/storage/pill_bottle/citalopram,
@@ -15078,6 +15584,14 @@
 /obj/random/action_figure,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettohouse2)
+"OP" = (
+/obj/structure/safe,
+/obj/item/weapon/bluespace_harpoon,
+/obj/item/weapon/cell/device/weapon/recharge/alien,
+/obj/item/weapon/aliencoin/phoron,
+/obj/item/weapon/aliencoin/silver,
+/turf/simulated/floor/carpet/turcarpet,
+/area/awaymission/darkrp/warehouseshack)
 "OQ" = (
 /obj/structure/barricade/sandbag{
 	icon_state = "sandbags"
@@ -15202,6 +15716,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/brokehouse)
+"Pj" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/humanoid/merc/ranged/laser,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/awaymission/darkrp/sewers)
 "Pk" = (
 /obj/structure/closet/crate/trashcart,
 /obj/random/junk,
@@ -15218,6 +15737,9 @@
 	name = "south bump";
 	pixel_y = -24;
 	start_charge = 0
+	},
+/obj/effect/map_effect/perma_light{
+	light_range = 2
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/darkrp/lockdown1)
@@ -15341,9 +15863,7 @@
 /area/awaymission/darkrp/pd)
 "PC" = (
 /obj/structure/railing/grey,
-/turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/lavaland/basalt,
 /area/awaymission/darkrp/outside/plaza)
 "PD" = (
 /obj/structure/flora/tree/jungle_small,
@@ -15382,6 +15902,7 @@
 "PJ" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/pen,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/ghettooffice)
 "PK" = (
@@ -15397,6 +15918,10 @@
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/brokehouse)
+"PM" = (
+/mob/living/simple_mob/humanoid/merc/ranged/poi,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/ghettohouse1)
 "PN" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/carpet/oracarpet,
@@ -15429,6 +15954,13 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/awaymission/darkrp/plazawarehouse)
+"PS" = (
+/obj/effect/decal/cleanable/liquid_fuel,
+/mob/living/simple_mob/humanoid/merc/melee,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/awaymission/darkrp/outside/park)
 "PT" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/random/maintenance/clean,
@@ -15436,6 +15968,10 @@
 /obj/random/maintenance/morestuff,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse1)
+"PU" = (
+/mob/living/simple_mob/vore/aggressive/rat,
+/turf/simulated/floor/plating,
+/area/awaymission/darkrp/sewers)
 "PV" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -15563,6 +16099,14 @@
 /obj/machinery/computer/arcade,
 /turf/simulated/floor/carpet/retro,
 /area/awaymission/darkrp/plazarecroom)
+"Qi" = (
+/obj/effect/landmark/corpse/doctor,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/pd)
+"Qj" = (
+/obj/structure/barricade/cutout/fluke,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/parkwallbunker)
 "Qk" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/random/trash,
@@ -15649,6 +16193,11 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside)
+"Qw" = (
+/obj/structure/flora/pottedplant/drooping,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/ghettooffice)
 "Qx" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/greenglow,
@@ -15895,6 +16444,10 @@
 	},
 /turf/simulated/floor/concrete,
 /area/awaymission/darkrp/sewers)
+"Rg" = (
+/obj/item/weapon/storage/secure/briefcase/money,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/parkwallbunker)
 "Rh" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/weapon/grenade/confetti/party_ball,
@@ -16150,6 +16703,7 @@
 "RR" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/paper_bin,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/ghettooffice)
 "RS" = (
@@ -16271,6 +16825,12 @@
 /obj/random/maintenance/clean,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/subapartments)
+"Sf" = (
+/obj/item/weapon/stool{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/awaymission/darkrp/plazarecroom)
 "Sg" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/weapon/tool/screwdriver/power,
@@ -16454,6 +17014,7 @@
 "SE" = (
 /obj/structure/table/marble,
 /obj/item/weapon/gun/projectile/automatic/serdy/m41ab,
+/obj/item/ammo_magazine/m41,
 /turf/simulated/floor/tiled/techmaint,
 /area/awaymission/darkrp/sewers)
 "SF" = (
@@ -16537,6 +17098,10 @@
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/suburbs)
+"SP" = (
+/obj/structure/closet/crate,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/parkwallbunker)
 "SQ" = (
 /obj/structure/fence{
 	dir = 4
@@ -16560,6 +17125,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
+"ST" = (
+/mob/living/simple_mob/animal/giant_spider,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/ghettooffice)
 "SU" = (
 /obj/machinery/light{
 	dir = 1;
@@ -16911,9 +17480,28 @@
 /area/awaymission/darkrp/outside)
 "TV" = (
 /obj/structure/table/gamblingtable,
-/obj/random/cigarettes,
+/obj/item/weapon/spacecasinocash{
+	pixel_y = 2
+	},
+/obj/item/weapon/spacecasinocash{
+	pixel_y = -10
+	},
+/obj/item/weapon/spacecasinocash{
+	pixel_y = -7
+	},
+/obj/item/weapon/spacecasinocash{
+	pixel_y = -4
+	},
+/obj/item/weapon/spacecasinocash{
+	pixel_y = -1
+	},
+/obj/item/weapon/gun/projectile/revolver,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownbar)
+"TW" = (
+/obj/item/stack/cable_coil,
+/turf/simulated/floor/plating,
+/area/awaymission/darkrp/parkcondo)
 "TX" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/concrete{
@@ -16932,6 +17520,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettohouse2)
+"TZ" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/mob/living/simple_mob/humanoid/pirate/machete,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/pd)
 "Ua" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -17010,6 +17607,7 @@
 	dir = 4;
 	pixel_y = 0
 	},
+/mob/living/simple_mob/vore/alienanimals/skeleton/alt,
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/darkrp/plazahotel)
 "Uk" = (
@@ -17135,6 +17733,9 @@
 /obj/machinery/appliance/cooker/fryer,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/darkrp/ghettoeats)
+"UA" = (
+/turf/unsimulated/wall,
+/area/awaymission/darkrp/sewers)
 "UB" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/random/action_figure{
@@ -17361,6 +17962,7 @@
 /obj/structure/table/rack/shelf/steel,
 /obj/random/maintenance/engineering,
 /obj/random/maintenance/engineering,
+/obj/item/clothing/accessory/stethoscope,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse2)
 "Vc" = (
@@ -17760,6 +18362,11 @@
 /obj/random/multiple/gun/projectile/handgun,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/pd)
+"Wa" = (
+/obj/structure/closet/crate,
+/obj/item/weapon/storage/box/syndie_kit/chameleon,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/parkwallbunker)
 "Wb" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark,
@@ -17896,11 +18503,17 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/centerwarehouse)
 "Ws" = (
-/obj/item/weapon/reagent_containers/syringe/ld50_syringe/choral,
+/obj/item/weapon/reagent_containers/syringe/ld50_syringe/choral{
+	pixel_y = 8
+	},
 /obj/structure/table/steel_reinforced,
 /obj/item/weapon/storage/secure/safe{
 	pixel_x = 5;
 	pixel_y = -26
+	},
+/obj/item/weapon/reagent_containers/syringe/ld50_syringe/choral,
+/obj/item/weapon/reagent_containers/syringe/ld50_syringe/choral{
+	pixel_y = 4
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/pd)
@@ -18105,6 +18718,7 @@
 /obj/structure/table/steel,
 /obj/random/maintenance/engineering,
 /obj/item/clothing/gloves/fyellow,
+/obj/item/clothing/head/helmet/material/makeshift,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/plazawarehouse)
 "WS" = (
@@ -18114,7 +18728,8 @@
 	icon_state = "1-2"
 	},
 /mob/living/simple_mob/humanoid/merc/ranged/sniper{
-	special_attack_max_range = 15
+	special_attack_max_range = 15;
+	ai_holder_type = /datum/ai_holder/simple_mob/ranged/sniper
 	},
 /turf/simulated/floor/concrete{
 	outdoors = 1
@@ -18190,6 +18805,7 @@
 	dir = 8
 	},
 /obj/structure/table/gamblingtable,
+/obj/random/cigarettes,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownbar)
 "Xc" = (
@@ -18222,6 +18838,11 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside)
+"Xg" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/humanoid/merc/melee/poi,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/subapartments)
 "Xh" = (
 /obj/structure/closet/secure_closet/medical1{
 	req_access = null
@@ -18256,6 +18877,11 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/suburbs)
+"Xm" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/instrument/guitar,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/plazarecroom)
 "Xn" = (
 /obj/machinery/door/airlock/glass_medical{
 	id_tag = "MedbayFoyer";
@@ -18303,6 +18929,7 @@
 "Xr" = (
 /obj/structure/table/gamblingtable,
 /obj/item/weapon/material/ashtray/glass,
+/obj/item/weapon/card/emag,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownbar)
 "Xs" = (
@@ -18420,6 +19047,13 @@
 	outdoors = 1
 	},
 /area/awaymission/darkrp/outside/downtown)
+"XG" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/humanoid/merc/melee,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/awaymission/darkrp/outside/park)
 "XH" = (
 /obj/structure/flora/tree/jungle_small,
 /turf/simulated/floor/outdoors/newdirt{
@@ -18542,12 +19176,9 @@
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownbar)
 "XZ" = (
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/mechanical/hivebot/support/commander,
-/turf/simulated/floor/concrete{
-	outdoors = 1
-	},
-/area/awaymission/darkrp/outside/downtown)
+/mob/living/simple_mob/humanoid/pirate/machete,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/pd)
 "Ya" = (
 /obj/random/junk,
 /turf/simulated/floor/outdoors/grass/heavy{
@@ -18779,6 +19410,10 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
+"Yy" = (
+/mob/living/simple_mob/humanoid/pirate,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/subgarage)
 "Yz" = (
 /obj/structure/prop/war/tgmc_missile/banshee,
 /turf/simulated/floor/tiled,
@@ -18790,6 +19425,11 @@
 /obj/random/maintenance/cargo,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/downtowncenter)
+"YB" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/vore/aggressive/rat,
+/turf/simulated/floor/plating,
+/area/awaymission/darkrp/sewers)
 "YC" = (
 /obj/random/trash,
 /turf/simulated/floor/plating,
@@ -19049,6 +19689,15 @@
 	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/ghetto)
+"Zj" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/awaymission/darkrp/ghettooffice)
 "Zk" = (
 /obj/item/weapon/weldingtool/mini,
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
@@ -20684,13 +21333,13 @@ RE
 RE
 RE
 IB
-pv
-Bs
-Bs
+UA
+UA
+UA
+UA
+UA
+UA
 oz
-NA
-NA
-NA
 NA
 Xa
 Xa
@@ -20846,13 +21495,13 @@ RE
 RE
 RE
 IB
-pv
-Bs
-Bs
+UA
+RE
+RE
+RE
+RE
+UA
 oz
-NA
-NA
-NA
 Xa
 Xa
 Xa
@@ -21008,13 +21657,13 @@ RE
 RE
 RE
 IB
-pv
-Bs
-Bs
+UA
+RE
+RE
+RE
+RE
+UA
 oz
-NA
-NA
-NA
 Xa
 Xa
 Xa
@@ -21167,16 +21816,16 @@ RE
 pN
 pv
 RE
+RE
+RE
+IB
+Cg
+RE
 iR
 vk
 of
-pv
-Bs
-Bs
+UA
 oz
-NA
-NA
-NA
 Xa
 Xa
 Xa
@@ -21329,16 +21978,16 @@ Pz
 pv
 pv
 pv
+RE
+hq
+IB
+Cg
+RE
 vT
 wO
 ew
-pv
-Bs
-Bs
+UA
 oz
-NA
-NA
-NA
 Xa
 Xa
 Xa
@@ -21491,16 +22140,16 @@ RE
 pN
 pv
 RE
+RE
+RE
+IB
+Cg
+RE
 DW
 uw
 uP
-pv
-Bs
-Bs
+UA
 oz
-NA
-NA
-NA
 Xa
 Xa
 Xa
@@ -21653,16 +22302,16 @@ RE
 RE
 pv
 RE
-OY
+RE
 RE
 IB
-pv
-Bs
-Bs
+UA
+OY
+RE
+RE
+RE
+UA
 oz
-oz
-NA
-NA
 Xa
 Xa
 Xa
@@ -21818,13 +22467,13 @@ RE
 RE
 RE
 IB
-pv
-Bs
-Bs
+UA
+RE
+RE
+RE
+RE
+UA
 oz
-oz
-NA
-NA
 Xa
 Xa
 Xa
@@ -21980,13 +22629,13 @@ RE
 RE
 RE
 IB
-pv
-Bs
-Bs
+UA
+UA
+UA
+UA
+UA
+UA
 oz
-oz
-NA
-NA
 Xa
 Xa
 Xa
@@ -25039,7 +25688,7 @@ Pe
 Pe
 TK
 TK
-Cg
+Pe
 TK
 xI
 Bs
@@ -28018,7 +28667,7 @@ fm
 fm
 fm
 xk
-fm
+Ae
 fm
 vu
 vs
@@ -28177,7 +28826,7 @@ fm
 fm
 pU
 fm
-fm
+dE
 fm
 fm
 fm
@@ -28302,11 +28951,11 @@ VF
 fD
 dC
 iB
-dC
-dC
-Kv
-dC
-NW
+ks
+ks
+ss
+ks
+qo
 iB
 Cr
 Cr
@@ -28461,14 +29110,14 @@ th
 Dy
 iB
 nH
-fD
-dC
+Zj
+ST
 nd
-dC
-dC
-dC
-dC
-rk
+ks
+ks
+ks
+ks
+cD
 iB
 Cr
 Cr
@@ -28622,14 +29271,14 @@ Cr
 th
 rs
 iB
-NW
-fD
+qo
+Zj
 dC
 iB
 qX
-dC
-dC
-dC
+ks
+ks
+ks
 cJ
 lx
 Cr
@@ -28785,7 +29434,7 @@ th
 rs
 lx
 nH
-fD
+Zj
 rk
 iB
 iB
@@ -28813,7 +29462,7 @@ gQ
 rZ
 vV
 XO
-rZ
+IJ
 xw
 fR
 vs
@@ -28822,7 +29471,7 @@ fm
 fm
 fm
 fm
-fm
+Al
 fm
 fm
 fm
@@ -28947,12 +29596,12 @@ Cr
 rs
 iB
 Cy
-fD
+Zj
 dC
 iB
-MF
+rv
 RR
-pL
+ja
 Fa
 PJ
 iB
@@ -29109,14 +29758,14 @@ Cr
 rs
 iB
 OC
-fD
+Zj
 dC
 iB
-NW
-dC
-dC
+qo
+ks
+ks
 vA
-uZ
+pm
 iB
 Cr
 Cr
@@ -29252,7 +29901,7 @@ NA
 NA
 xf
 Vf
-nQ
+Mk
 Vf
 nQ
 rV
@@ -29274,11 +29923,11 @@ aV
 xa
 dC
 nd
-dC
-dC
-dC
-dC
-rk
+ks
+ks
+ks
+ks
+cD
 iB
 Cr
 Cr
@@ -29421,7 +30070,7 @@ xf
 nQ
 cY
 xf
-Cr
+qU
 Cr
 Cr
 Cr
@@ -29434,13 +30083,13 @@ CI
 iB
 dC
 dC
-dC
+ST
 iB
-qX
-dC
-dC
-dC
-cJ
+yf
+ks
+ks
+ks
+Qw
 lx
 Cr
 Cr
@@ -29580,7 +30229,7 @@ nQ
 nQ
 nQ
 xf
-nQ
+yw
 nQ
 xf
 Cr
@@ -29757,7 +30406,7 @@ Cr
 CI
 lx
 dC
-NW
+dC
 ff
 NW
 ct
@@ -29901,7 +30550,7 @@ NA
 xf
 Ow
 nQ
-nQ
+wU
 nQ
 rV
 Gb
@@ -29919,7 +30568,7 @@ Cr
 CI
 iB
 dC
-NW
+ks
 Kv
 OC
 dC
@@ -30081,9 +30730,9 @@ Cr
 CI
 iB
 dC
-dC
-dC
-dC
+ks
+Ol
+ks
 dC
 Lv
 vY
@@ -30231,7 +30880,7 @@ xf
 Ux
 xf
 xf
-Cr
+qU
 Cr
 Cr
 Cr
@@ -30243,10 +30892,10 @@ Cr
 CI
 lx
 dC
-dC
-dC
-dC
-dC
+ks
+ks
+ks
+ks
 iB
 wM
 vY
@@ -30875,7 +31524,7 @@ nQ
 nQ
 Kw
 nQ
-nQ
+Mk
 ZR
 hc
 xf
@@ -30930,7 +31579,7 @@ rC
 Zh
 QJ
 Xb
-TS
+sI
 QJ
 QJ
 QJ
@@ -31080,7 +31729,7 @@ Cr
 CI
 MR
 CV
-CV
+PM
 CV
 CV
 CV
@@ -31254,7 +31903,7 @@ rC
 EE
 QJ
 QJ
-Oa
+Fv
 Oa
 Oa
 QJ
@@ -31484,7 +32133,7 @@ it
 vi
 ty
 QU
-CG
+OP
 aP
 qI
 PY
@@ -31737,7 +32386,7 @@ MR
 MR
 sY
 rC
-Ly
+xW
 Ly
 up
 bF
@@ -31746,7 +32395,7 @@ nI
 Uo
 xu
 QJ
-QJ
+kl
 rC
 mg
 Ax
@@ -31775,7 +32424,7 @@ FD
 Vi
 yK
 Vi
-FD
+dQ
 FD
 gk
 gk
@@ -32381,9 +33030,9 @@ Cb
 ve
 oO
 oO
-oO
-oO
-oO
+SP
+mS
+dt
 rC
 QJ
 HG
@@ -32543,11 +33192,11 @@ Cb
 ve
 oO
 oO
-oO
-oO
-oO
+IV
+Wa
+tZ
 rC
-QJ
+iL
 QJ
 JA
 rC
@@ -32705,9 +33354,9 @@ Cb
 ve
 oO
 oO
-oO
-oO
-oX
+cT
+SP
+xU
 rC
 ac
 vp
@@ -32867,9 +33516,9 @@ Cb
 ve
 oO
 oO
-oO
-oO
-oO
+kS
+SP
+GQ
 rC
 rC
 rC
@@ -33032,8 +33681,8 @@ oO
 oO
 oO
 oO
-OZ
-FD
+rC
+rC
 FD
 FD
 FD
@@ -33499,7 +34148,7 @@ ea
 Cb
 Cb
 Cb
-Cb
+BT
 Cb
 CE
 Py
@@ -33675,11 +34324,11 @@ Cb
 Cb
 aq
 ve
+Qj
+mA
+Rg
 oO
-oO
-oO
-oO
-oO
+Qj
 tj
 Wc
 Wc
@@ -33820,7 +34469,7 @@ oz
 oz
 oz
 ea
-Cb
+mp
 Cb
 Cb
 Cb
@@ -33837,11 +34486,11 @@ Cb
 Cb
 aq
 ve
+Qj
 oO
 oO
 oO
-oO
-oO
+Qj
 tj
 Wc
 Ur
@@ -33987,9 +34636,9 @@ Cb
 Cb
 Cb
 Cb
+Mt
 Cb
-Cb
-Cb
+Mt
 Cb
 eK
 eK
@@ -33999,9 +34648,9 @@ eK
 Cb
 aq
 ve
+Qj
 oO
-oO
-oO
+Dm
 oO
 oX
 tj
@@ -34145,7 +34794,7 @@ oz
 oz
 ea
 Cb
-Cb
+BT
 Cb
 Cb
 Cb
@@ -34161,11 +34810,11 @@ Cb
 Cb
 aq
 ve
+Qj
 oO
+Nd
 oO
-oO
-oO
-oO
+Qj
 tj
 Wc
 Wc
@@ -34310,7 +34959,7 @@ Cb
 Cb
 Cb
 Cb
-Cb
+BT
 gU
 Py
 Cb
@@ -34323,11 +34972,11 @@ eK
 Cb
 aq
 ve
+Qj
 oO
 oO
 oO
-oO
-oO
+Qj
 tj
 Wc
 Wc
@@ -34401,7 +35050,7 @@ Xw
 Xw
 Xw
 Xw
-Th
+la
 uS
 br
 br
@@ -34485,11 +35134,11 @@ CD
 Do
 as
 ve
+Qj
+dP
 oO
-oO
-oO
-oO
-oO
+mA
+Qj
 tj
 Jm
 dD
@@ -34563,7 +35212,7 @@ BW
 BW
 BW
 Xw
-Th
+la
 Ua
 br
 br
@@ -34725,7 +35374,7 @@ BW
 BW
 BW
 Xw
-Th
+la
 uS
 br
 br
@@ -34887,7 +35536,7 @@ BW
 BW
 BW
 Xw
-Th
+la
 uS
 br
 br
@@ -35049,7 +35698,7 @@ BW
 BW
 BW
 Xw
-Th
+la
 uS
 br
 br
@@ -35211,7 +35860,7 @@ BW
 BW
 BW
 Xw
-Th
+la
 uS
 br
 br
@@ -35340,7 +35989,7 @@ mk
 FD
 XF
 XF
-IJ
+XF
 FD
 XF
 zY
@@ -35373,7 +36022,7 @@ BW
 BW
 BW
 Xw
-Th
+la
 Go
 OQ
 br
@@ -35506,7 +36155,7 @@ XF
 XF
 XF
 zY
-XZ
+XF
 XF
 FD
 FD
@@ -35523,9 +36172,9 @@ CM
 xq
 CM
 Nc
-Th
-Th
-Th
+la
+la
+la
 Xw
 BW
 BW
@@ -35535,7 +36184,7 @@ BW
 BW
 BW
 Xw
-Th
+la
 Go
 OQ
 br
@@ -35687,7 +36336,7 @@ CM
 Nc
 Xv
 Xv
-Th
+la
 Xw
 Xw
 Xw
@@ -35697,7 +36346,7 @@ Xw
 Xw
 Xw
 Xw
-Th
+la
 jT
 br
 br
@@ -35811,8 +36460,8 @@ KR
 KR
 KR
 KR
-sF
-sF
+oc
+oc
 Nv
 KR
 FD
@@ -35849,17 +36498,17 @@ Zz
 Nc
 sK
 Zm
-Th
-Th
-Th
-Th
-Th
-Th
-Th
-Th
-Th
-Th
-Th
+la
+la
+la
+la
+la
+la
+la
+la
+la
+la
+la
 uS
 br
 br
@@ -35942,9 +36591,9 @@ Qq
 ot
 uI
 uI
-jt
+aC
 yo
-jt
+sD
 uI
 Qq
 Re
@@ -36165,8 +36814,8 @@ CM
 CM
 CM
 Av
-uF
-uF
+zN
+fl
 uF
 YA
 YA
@@ -36264,7 +36913,7 @@ Cb
 cq
 Qq
 ot
-uI
+Bv
 uI
 uI
 uI
@@ -36652,7 +37301,7 @@ Eo
 IM
 ZH
 IM
-ZH
+Bu
 ZH
 ZH
 ZH
@@ -36812,11 +37461,11 @@ ZH
 Tw
 ZH
 Cw
-ZH
+XZ
 IM
 SU
 ZH
-ZH
+Bu
 ZH
 IM
 FJ
@@ -37078,15 +37727,15 @@ jt
 jt
 IW
 uI
-uI
+Bv
 Qq
 Qz
 Jr
 Qq
 Re
+JZ
 FD
-FD
-FD
+JZ
 Re
 KR
 ll
@@ -37133,7 +37782,7 @@ FD
 xc
 IM
 ZH
-Tw
+KN
 ZH
 IM
 QO
@@ -37464,7 +38113,7 @@ ZH
 IM
 ZH
 ZH
-ZH
+Qi
 Me
 ZH
 FJ
@@ -37619,7 +38268,7 @@ FD
 xc
 IM
 yt
-Tw
+TZ
 ZH
 IM
 ZH
@@ -37723,11 +38372,11 @@ pg
 Qq
 kq
 uI
+Bv
 uI
-uI
-uI
-uI
-uI
+tL
+Mi
+TW
 uI
 uI
 bC
@@ -37784,7 +38433,7 @@ ZH
 Tw
 ZH
 IM
-ZH
+XZ
 IM
 uU
 ZH
@@ -37887,9 +38536,9 @@ uI
 uI
 uI
 uI
-uI
-uI
-uI
+tt
+Mi
+wP
 uI
 uI
 bC
@@ -38218,13 +38867,13 @@ Re
 Re
 Re
 Re
+JZ
 FD
 FD
 FD
 FD
 FD
-FD
-FD
+JZ
 Re
 XU
 Up
@@ -38381,11 +39030,11 @@ Re
 Re
 Re
 vl
+JZ
 FD
 FD
 FD
-FD
-FD
+JZ
 vl
 Re
 XU
@@ -38414,7 +39063,7 @@ WI
 nT
 IL
 dh
-dh
+id
 TD
 nv
 Cn
@@ -39225,7 +39874,7 @@ Uv
 Qr
 BX
 jm
-jm
+wr
 kk
 xp
 kk
@@ -39566,7 +40215,7 @@ eL
 eL
 eL
 AU
-Lt
+At
 Bd
 Of
 Lt
@@ -39685,7 +40334,7 @@ NA
 NA
 NA
 XU
-Up
+Ba
 Up
 Up
 Up
@@ -39985,7 +40634,7 @@ dS
 Db
 Cb
 eK
-eK
+pR
 Cb
 cq
 bw
@@ -40189,11 +40838,11 @@ Up
 NU
 gq
 Gz
-Gz
+at
 IO
 gq
 yF
-yF
+mx
 eo
 gq
 gt
@@ -40683,7 +41332,7 @@ QM
 QM
 QM
 wY
-Yo
+Lh
 wY
 wY
 wY
@@ -40829,7 +41478,7 @@ GR
 ov
 ga
 ZL
-vh
+nf
 Up
 Up
 Up
@@ -40869,7 +41518,7 @@ RI
 QA
 cE
 MG
-hZ
+xP
 ti
 hZ
 Ao
@@ -41031,7 +41680,7 @@ RI
 QA
 dR
 Hm
-fM
+iS
 ti
 ti
 dR
@@ -41161,7 +41810,7 @@ Up
 NU
 gq
 yF
-yF
+mx
 QH
 gq
 hR
@@ -41280,7 +41929,7 @@ NA
 dS
 Db
 aM
-aM
+PS
 aM
 aM
 WB
@@ -41327,7 +41976,7 @@ yF
 fn
 gq
 hR
-Gz
+at
 iu
 gq
 wY
@@ -41478,7 +42127,7 @@ zG
 GR
 hM
 vh
-Bc
+Up
 Up
 Up
 Up
@@ -41603,7 +42252,7 @@ Bs
 NA
 dS
 Db
-Cb
+js
 eK
 aM
 aM
@@ -41801,7 +42450,7 @@ tu
 Us
 lR
 ZL
-vh
+Jj
 Bc
 Up
 Up
@@ -41840,7 +42489,7 @@ RT
 Qm
 pf
 hZ
-hZ
+xP
 tw
 lu
 hZ
@@ -41935,7 +42584,7 @@ cq
 oZ
 VQ
 Pp
-Pp
+Gi
 Oo
 oZ
 Cb
@@ -41981,7 +42630,7 @@ wY
 wY
 oQ
 gq
-Uj
+rn
 VC
 Uj
 gq
@@ -42001,7 +42650,7 @@ RT
 Hq
 oN
 hZ
-hZ
+xP
 lu
 lu
 lu
@@ -42125,7 +42774,7 @@ co
 pT
 Fc
 ZL
-vh
+nf
 Up
 Up
 Up
@@ -42296,7 +42945,7 @@ MA
 MA
 eO
 gq
-wY
+nq
 yv
 nP
 FN
@@ -42616,7 +43265,7 @@ Up
 mM
 mM
 mM
-jQ
+Im
 Im
 Im
 gq
@@ -42639,7 +43288,7 @@ pf
 pf
 pf
 rL
-KK
+QS
 KK
 OX
 RI
@@ -43062,7 +43711,7 @@ NA
 dS
 Db
 Cb
-eK
+XG
 eK
 Cb
 Db
@@ -43910,8 +44559,8 @@ xh
 ay
 wV
 Zt
-Zt
-zN
+TX
+bu
 ay
 sq
 Uc
@@ -44069,12 +44718,12 @@ qT
 qT
 Fj
 xh
-ay
+ts
 HO
 TX
 HO
 Hp
-ay
+Hg
 sq
 Uc
 Uc
@@ -45230,11 +45879,11 @@ vb
 vb
 vb
 vb
-vb
-vb
+Sf
+Sf
 uR
-vb
-vb
+Sf
+Sf
 df
 CY
 lo
@@ -45551,15 +46200,15 @@ Xw
 Xw
 CY
 CY
+BH
 CY
 CY
-CY
-vb
-vb
+wc
+wc
 hu
 vb
-vb
-vb
+wc
+wc
 CY
 lo
 ny
@@ -45715,13 +46364,13 @@ CY
 vb
 vb
 vb
-rg
-vb
-vb
-vb
-vb
-vb
-vb
+CY
+My
+My
+GT
+GT
+My
+My
 CY
 lo
 lo
@@ -45878,12 +46527,12 @@ vb
 vb
 vb
 CY
-vb
-hu
-vb
-vb
-vb
-vb
+aS
+zm
+aS
+gF
+aS
+aS
 CY
 qV
 hA
@@ -46040,12 +46689,12 @@ vb
 Kt
 vb
 CY
-vb
-vb
+Xm
+KZ
 bR
-vb
-vb
-vb
+aS
+us
+mn
 CY
 kQ
 JM
@@ -46526,7 +47175,7 @@ tM
 Iq
 vc
 vb
-vb
+le
 CY
 jG
 ih
@@ -46987,10 +47636,10 @@ NA
 LM
 kv
 Wm
-Wm
-Wm
-LA
-aS
+SO
+SO
+zZ
+FF
 SO
 SO
 SO
@@ -47104,7 +47753,7 @@ yI
 yI
 yI
 yI
-yI
+JJ
 yI
 xI
 Xz
@@ -47941,9 +48590,9 @@ SO
 SO
 SO
 SO
-SO
+ar
 BN
-SO
+ar
 SO
 SO
 SO
@@ -48103,9 +48752,9 @@ SO
 SO
 SO
 SO
-SO
+ar
 BD
-SO
+ar
 SO
 SO
 SO
@@ -48265,9 +48914,9 @@ SO
 SO
 SO
 SO
-SO
+ar
 BN
-SO
+ar
 SO
 SO
 SO
@@ -48391,7 +49040,7 @@ Ka
 Ka
 xI
 Pv
-Pv
+PU
 Pv
 Pv
 MY
@@ -48717,7 +49366,7 @@ xI
 Pv
 Pv
 Pv
-Pv
+PU
 Ft
 xI
 Ka
@@ -49608,7 +50257,7 @@ mv
 xJ
 ph
 QY
-mv
+qE
 mv
 xJ
 ph
@@ -49926,7 +50575,7 @@ LM
 LM
 xJ
 ta
-vH
+Xg
 Tf
 Jc
 xJ
@@ -50035,8 +50684,8 @@ yI
 yI
 Xz
 rh
-rh
-yI
+AY
+Fd
 yI
 xI
 Bs
@@ -50194,9 +50843,9 @@ Ka
 Ka
 xI
 yI
-yI
+Fd
 rh
-rh
+Ky
 Xz
 yI
 yI
@@ -50261,7 +50910,7 @@ Bm
 xJ
 ge
 QY
-QY
+dq
 Bm
 xJ
 Ya
@@ -50358,7 +51007,7 @@ xI
 yI
 yI
 xI
-xI
+lr
 xI
 yI
 yI
@@ -51651,13 +52300,13 @@ Ka
 Ka
 Ka
 xI
-yI
-yI
+LA
+LA
 xI
 Ka
 xI
-yI
-yI
+LA
+LA
 xI
 Bs
 Bs
@@ -51950,11 +52599,11 @@ Pv
 Pv
 xI
 np
-Xz
+dK
 np
-Xz
+dK
 np
-Xz
+dK
 np
 xI
 Ka
@@ -51975,13 +52624,13 @@ Ka
 Ka
 Ka
 xI
-yI
-yI
+Hv
+Vr
 xI
 Ka
 xI
-yI
-yI
+ok
+Hv
 xI
 Bs
 Bs
@@ -52039,7 +52688,7 @@ SO
 hk
 LM
 eX
-oe
+Yy
 za
 fe
 oe
@@ -52299,13 +52948,13 @@ Ka
 Ka
 Ka
 xI
-FC
-FC
+ue
+ue
 xI
 Ka
 xI
-yI
-yI
+LA
+LA
 xI
 Bs
 Bs
@@ -52679,7 +53328,7 @@ VN
 GM
 wj
 Ah
-Ah
+Dc
 Ue
 VN
 SO
@@ -52688,18 +53337,18 @@ hk
 LM
 eX
 oe
+sc
 zs
-zs
-zs
+aO
 kK
 YD
 zi
 zi
 eX
-ib
+Mf
 BB
 vS
-vS
+zr
 rS
 bT
 dj
@@ -52771,7 +53420,7 @@ xI
 xI
 xI
 Ft
-Ft
+YB
 Ft
 Pv
 xI
@@ -52840,7 +53489,7 @@ SO
 VN
 aZ
 Jl
-Jl
+jg
 Jl
 Jl
 VN
@@ -53092,7 +53741,7 @@ nD
 Ft
 Pv
 Pv
-Pv
+PU
 Pv
 Ft
 Ft
@@ -53109,7 +53758,7 @@ Ka
 Ka
 Ka
 xI
-FC
+Pj
 yI
 xI
 Ka
@@ -53246,7 +53895,7 @@ Ft
 Ft
 Ft
 Ft
-Ft
+YB
 Ft
 Ft
 Ft
@@ -53276,7 +53925,7 @@ yI
 xI
 Ka
 xI
-yI
+eP
 yI
 xI
 Bs
@@ -54408,7 +55057,7 @@ xI
 yI
 yI
 Xz
-Xz
+jU
 Xz
 yI
 yI
