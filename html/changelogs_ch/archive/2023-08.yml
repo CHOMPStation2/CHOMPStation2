@@ -204,3 +204,29 @@
   - qol: modernized pray input dialog
   - qol: prayer message filter added to vchat
   - admin: enables pray logging
+2023-08-23:
+  FluffMedic:
+  - maptweak: the hadzard zone POI areas have better placed smoke clouds, and better
+      loot.
+  Upstream:
+  - rscadd: Adds food-vore (putting micros in food-objects)
+  - rscadd: vwag ringtail
+  - rscadd: raccoon tail
+  tacoguy7765093:
+  - maptweak: VR map improvements
+2023-08-25:
+  Upstream:
+  - bugfix: fixes 'bad href token' message when trying to view a new fax
+2023-08-27:
+  Verkister:
+  - qol: New and improved wormborg sprites with wrecks and bulges.
+  - bugfix: Fixed borgs spawning with extra nutrition for roundstart overcharge.
+  - bugfix: Fixed borg belly icons not working with our vorebelly icon system.
+2023-08-29:
+  Seris02:
+  - bugfix: container sounds now correctly play
+  Verkister:
+  - rscadd: Added Slippery Reflexes trait.
+2023-08-31:
+  Aroliacue:
+  - rscadd: Ported over some new Xenomorph markings and backplates from Citadel.

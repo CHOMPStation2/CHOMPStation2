@@ -35,7 +35,7 @@
 			return
 
 	if(P.stored_plasma < cost)
-		to_chat(src, "<span class='danger'>You don't have enough phoron stored to do that.</span>")
+		to_chat(src, "<span class='danger'>We lack the plasma reserves to perform that task.</span>") // CHOMPedit: It's PLASMA, not PHORON. Fuck I hate mass edits.
 		return 0
 
 	if(needs_foundation)

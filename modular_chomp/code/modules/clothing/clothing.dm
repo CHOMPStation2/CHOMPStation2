@@ -1,4 +1,5 @@
 /obj/item/clothing
+	matter = list(MAT_FIBERS = 50)
 	var/update_icon_define_orig = null // temp storage for original update_icon_define (if it exists)
 	var/update_icon_define_digi = null
 	var/fit_for_digi = FALSE // flag for if clothing has already been reskinned to digitigrade

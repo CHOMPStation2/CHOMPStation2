@@ -75,8 +75,11 @@
 
 /datum/robot_sprite/medical/worm
 	name = "W02M"
-	sprite_icon_state = "worm"
+	sprite_icon_state = "worm-crisis" //CHOMPEdit
 	has_custom_open_sprites = TRUE
+	sprite_icon = 'modular_chomp/icons/mob/wormborg.dmi' //CHOMPEdit
+	has_vore_belly_sprites = TRUE //CHOMPEdit
+	has_dead_sprite = TRUE //CHOMPEdit
 
 // Wide/dogborg sprites
 /*
@@ -184,6 +187,14 @@
 /datum/robot_sprite/surgical/uptall
 	name = "Feminine Humanoid"
 	sprite_icon_state = "uptall"
+
+/datum/robot_sprite/surgical/worm //CHOMPAdd Start
+	name = "W02M"
+	sprite_icon_state = "worm-surgeon"
+	has_custom_open_sprites = TRUE
+	sprite_icon = 'modular_chomp/icons/mob/wormborg.dmi'
+	has_vore_belly_sprites = TRUE
+	has_dead_sprite = TRUE //CHOMPAdd End
 
 // Wide/dogborg sprites
 

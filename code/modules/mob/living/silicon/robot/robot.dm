@@ -8,6 +8,7 @@
 	icon_state = "robot"
 	maxHealth = 200
 	health = 200
+	nutrition = 0 //CHOMPEdit
 
 	mob_bump_flag = ROBOT
 	mob_swap_flags = ~HEAVY
@@ -892,23 +893,29 @@
 	if(stat == CONSCIOUS)
 		var/show_belly = FALSE
 		if(sprite_datum.has_vore_belly_sprites)
-			if(vore_selected.silicon_belly_overlay_preference == "Sleeper")
-				if(sleeper_state)
-					show_belly = TRUE
-			else if(vore_selected.silicon_belly_overlay_preference == "Vorebelly")
-				if(LAZYLEN(vore_selected.contents) >= vore_selected.visible_belly_minimum_prey)
-					if(vore_selected.overlay_min_prey_size == 0)	//if min size is 0, we dont check for size
-						show_belly = TRUE
-					else
-						if(vore_selected.override_min_prey_size && (LAZYLEN(vore_selected.contents) > vore_selected.override_min_prey_num))
-							show_belly = TRUE	//Override regardless of content size
-						else
-							for(var/content in vore_selected.contents)	//If ANY in belly are big enough, we set to true
-								if(!istype(content, /mob/living)) continue
-								var/mob/living/prey = content
-								if(prey.size_multiplier >= vore_selected.overlay_min_prey_size)
-									show_belly = TRUE
-									break
+			update_fullness() //CHOMPEdit Start
+			if(vore_fullness)
+				show_belly = TRUE
+			else
+				for(var/obj/belly/B in vore_organs)
+					if(B.silicon_belly_overlay_preference == "Sleeper")
+						if(sleeper_state)
+							show_belly = TRUE
+							break
+					else if(B.silicon_belly_overlay_preference == "Vorebelly")
+						if(LAZYLEN(B.contents) >= B.visible_belly_minimum_prey)
+							if(B.overlay_min_prey_size == 0)	//if min size is 0, we dont check for size
+								show_belly = TRUE
+							else
+								if(B.override_min_prey_size && (LAZYLEN(B.contents) > B.override_min_prey_num))
+									show_belly = TRUE	//Override regardless of content size
+								else
+									for(var/content in B.contents)	//If ANY in belly are big enough, we set to true
+										if(!istype(content, /mob/living)) continue
+										var/mob/living/prey = content
+										if(prey.size_multiplier >= B.overlay_min_prey_size)
+											show_belly = TRUE
+											break //CHOMPEdit End
 		if(show_belly)
 			add_overlay(sprite_datum.get_belly_overlay(src))
 

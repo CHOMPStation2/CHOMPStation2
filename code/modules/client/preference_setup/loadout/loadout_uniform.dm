@@ -543,6 +543,8 @@
 	"feminine skinsuit"=/obj/item/clothing/under/skinsuit/fem,
 	"gray skinsuit"=/obj/item/clothing/under/skinsuit/gray,
 	"feminine gray skinsuit"=/obj/item/clothing/under/skinsuit/fem/gray,
+	"short gray skinsuit"=/obj/item/clothing/under/skinsuit/gray/short, // CHOMPedit: New skinsuits.
+	"feminine short gray skinsuit"=/obj/item/clothing/under/skinsuit/fem/gray/short, // CHOMPedit: New skinsuits.
 	"leotard skinsuit"=/obj/item/clothing/under/skinsuit/leotard,
 	"feminine leotard skinsuit"=/obj/item/clothing/under/skinsuit/fem/leotard,
 	"gray leotard skinsuit"=/obj/item/clothing/under/skinsuit/leotard/gray,

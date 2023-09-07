@@ -12,6 +12,7 @@
 	var/death_sound_override = null
 	var/virtual_reality_mob = FALSE // gross boolean for keeping VR mobs in VR
 	var/datum/looping_sound/mob/on_fire/firesoundloop
+	var/mob/living/tf_form // Shapeshifter shenanigans
 	// var/datum/looping_sound/mob/stunned/stunnedloop
 	/* // Not sure if needed, screams aren't a carbon thing rn.
 	var/scream_sound = null
@@ -92,7 +93,7 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 // For some reason upstream made a general revert proc but not a general transform proc, so here it is.
 // Requires a /mob/living type path for transformation. Returns the new mob on success, null in all other cases.
 // Just handles mob TF right now, but maybe we'll want to do something similar for items in the future.
-/mob/living/proc/transform_into_mob(mob/living/new_form, pref_override = FALSE, revert = FALSE)
+/mob/living/proc/transform_into_mob(mob/living/new_form, pref_override = FALSE, revert = FALSE, shapeshifting = FALSE)
 	if(!src.mind)
 		return
 	if(!src.allow_spontaneous_tf && !pref_override)
@@ -106,44 +107,58 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 	else
 		if(src.stat == DEAD)
 			return
-		if(!ispath(new_form, /mob/living))
+		if(!ispath(new_form, /mob/living) && !ismob(new_form))
 			return
-		var/mob/living/new_mob = new new_form(get_turf(src))
+		var/mob/living/new_mob
+		var/new_mob_ckey
+		if(shapeshifting && src.tf_form)
+			new_mob = src.tf_form
+			new_mob.verbs |= /mob/living/proc/shapeshift_form
+			new_mob.tf_form = src
+			new_mob.forceMove(src.loc)
+			visible_message("<span class='warning'>[src] twists and contorts, shapeshifting into a different form!</span>")
+			if(new_mob.ckey)
+				new_mob_ckey = new_mob.ckey
+		else
+			new_mob = new new_form(get_turf(src))
 		new_mob.faction = src.faction
 
 		if(new_mob && isliving(new_mob))
-			for(var/obj/belly/B as anything in new_mob.vore_organs)
-				new_mob.vore_organs -= B
-				qdel(B)
-			new_mob.vore_organs = list()
-			new_mob.name = src.name
-			new_mob.real_name = src.real_name
-			for(var/lang in src.languages)
-				new_mob.languages |= lang
-			src.copy_vore_prefs_to_mob(new_mob)
-			new_mob.vore_selected = src.vore_selected
-			if(ishuman(src))
-				var/mob/living/carbon/human/H = src
-				if(ishuman(new_mob))
-					var/mob/living/carbon/human/N = new_mob
-					N.gender = H.gender
-					N.identifying_gender = H.identifying_gender
+			if(!new_mob.ckey)
+				for(var/obj/belly/B as anything in new_mob.vore_organs)
+					new_mob.vore_organs -= B
+					qdel(B)
+				new_mob.vore_organs = list()
+				new_mob.name = src.name
+				new_mob.real_name = src.real_name
+				for(var/lang in src.languages)
+					new_mob.languages |= lang
+				src.copy_vore_prefs_to_mob(new_mob)
+				new_mob.vore_selected = src.vore_selected
+				if(ishuman(src))
+					var/mob/living/carbon/human/H = src
+					if(ishuman(new_mob))
+						var/mob/living/carbon/human/N = new_mob
+						N.gender = H.gender
+						N.identifying_gender = H.identifying_gender
+					else
+						new_mob.gender = H.gender
 				else
-					new_mob.gender = H.gender
-			else
-				new_mob.gender = src.gender
-				if(ishuman(new_mob))
-					var/mob/living/carbon/human/N = new_mob
-					N.identifying_gender = src.gender
+					new_mob.gender = src.gender
+					if(ishuman(new_mob))
+						var/mob/living/carbon/human/N = new_mob
+						N.identifying_gender = src.gender
 
-			for(var/obj/belly/B as anything in src.vore_organs)
-				B.loc = new_mob
-				B.forceMove(new_mob)
-				B.owner = new_mob
-				src.vore_organs -= B
-				new_mob.vore_organs += B
+				for(var/obj/belly/B as anything in src.vore_organs)
+					B.loc = new_mob
+					B.forceMove(new_mob)
+					B.owner = new_mob
+					src.vore_organs -= B
+					new_mob.vore_organs += B
 
 			new_mob.ckey = src.ckey
+			if(new_mob_ckey)
+				src.ckey = new_mob_ckey
 			if(src.ai_holder && new_mob.ai_holder)
 				var/datum/ai_holder/old_AI = src.ai_holder
 				old_AI.set_stance(STANCE_SLEEP)
@@ -154,3 +169,13 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 			src.forceMove(new_mob)
 			new_mob.tf_mob_holder = src
 			return new_mob
+
+/mob/living/proc/shapeshift_form()
+	set name = "Shapeshift Form"
+	set category = "Abilities"
+	set desc = "Shape shift between set mob forms. (Requires a spawned mob to be varedited into the user's tf_form var as mob reference.)"
+	if(!istype(tf_form))
+		to_chat(src, "<span class='notice'>No shapeshift form set. (Requires a spawned mob to be varedited into the user's tf_form var as mob reference.)</span>")
+		return
+	else
+		transform_into_mob(tf_form, TRUE, TRUE, TRUE)
