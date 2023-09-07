@@ -33,3 +33,6 @@
   Verkister:
   - rscadd: BS compostor can now recycle materials too.
   - bugfix: Fixed multiplayer shapeshifter vorgan reversion issue.
+2023-09-07:
+  Aroliacue:
+  - admin: All staff can now cancel the evac shuttle.
