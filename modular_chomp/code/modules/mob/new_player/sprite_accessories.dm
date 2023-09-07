@@ -10,12 +10,6 @@
 /datum/sprite_accessory/hair
 	icon_add = 'modular_chomp/icons/mob/human_face.dmi'
 
-/datum/sprite_accessory/hair/astolfo
-	icon_add = 'modular_chomp/icons/mob/human_face.dmi'
-
-/datum/sprite_accessory/hair/citheronia_colorable
-	icon_add = 'modular_chomp/icons/mob/human_face.dmi'
-
 /datum/sprite_accessory/hair/braid
 	icon_add = 'modular_chomp/icons/mob/human_face_alt_add.dmi'
 
