@@ -641,7 +641,7 @@
 	body_parts = list(BP_TORSO,BP_GROIN)
 
 /datum/sprite_accessory/marking/ch/organs_cv
-	name = "Internal Organs - Heart & Lungs"
+	name = "Internal Organs - Heart,Lungs"
 	icon_state = "organs_cardio" //Look I know cardio doesn't include the lungs but I don't care that's what I'm calling it
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_TORSO)
