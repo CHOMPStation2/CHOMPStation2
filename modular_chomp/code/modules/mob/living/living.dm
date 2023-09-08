@@ -13,6 +13,7 @@
 	var/virtual_reality_mob = FALSE // gross boolean for keeping VR mobs in VR
 	var/datum/looping_sound/mob/on_fire/firesoundloop
 	var/mob/living/tf_form // Shapeshifter shenanigans
+	var/tf_form_ckey
 	// var/datum/looping_sound/mob/stunned/stunnedloop
 	/* // Not sure if needed, screams aren't a carbon thing rn.
 	var/scream_sound = null
@@ -110,7 +111,6 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 		if(!ispath(new_form, /mob/living) && !ismob(new_form))
 			return
 		var/mob/living/new_mob
-		var/new_mob_ckey
 		if(shapeshifting && src.tf_form)
 			new_mob = src.tf_form
 			new_mob.verbs |= /mob/living/proc/shapeshift_form
@@ -118,12 +118,18 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 			new_mob.forceMove(src.loc)
 			visible_message("<span class='warning'>[src] twists and contorts, shapeshifting into a different form!</span>")
 			if(new_mob.ckey)
-				new_mob_ckey = new_mob.ckey
+				new_mob.tf_form_ckey = new_mob.ckey
 		else
 			new_mob = new new_form(get_turf(src))
-		new_mob.faction = src.faction
 
 		if(new_mob && isliving(new_mob))
+			new_mob.faction = src.faction
+			if(istype(new_mob, /mob/living/simple_mob))
+				var/mob/living/simple_mob/S = new_mob
+				if(!S.voremob_loaded)
+					S.voremob_loaded = TRUE
+					S.init_vore()
+			new /obj/effect/effect/teleport_greyscale(src.loc)
 			if(!new_mob.ckey)
 				for(var/obj/belly/B as anything in new_mob.vore_organs)
 					new_mob.vore_organs -= B
@@ -155,10 +161,11 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 					B.owner = new_mob
 					src.vore_organs -= B
 					new_mob.vore_organs += B
+				new_mob.nutrition = src.nutrition
 
 			new_mob.ckey = src.ckey
-			if(new_mob_ckey)
-				src.ckey = new_mob_ckey
+			if(new_mob.tf_form_ckey)
+				src.ckey = new_mob.tf_form_ckey
 			if(src.ai_holder && new_mob.ai_holder)
 				var/datum/ai_holder/old_AI = src.ai_holder
 				old_AI.set_stance(STANCE_SLEEP)
