@@ -44,3 +44,4 @@
   - bugfix: Stored reverted non-multiplayer tf_forms no longer cause double cryo announcements
       when user leaves round.
   - qol: Fixed highlight icon inconsistencies on Polaris hairs.
+  - rscadd: Big Leggies can now *vwag into digilegs stance.
