@@ -34,6 +34,8 @@
 		updating_fullness = TRUE
 		spawn(2)
 		updating_fullness = FALSE
+		src.update_fullness(TRUE)
+		return
 	var/list/new_fullness = list()
 	vore_fullness = 0
 	for(var/belly_class in vore_icon_bellies)
@@ -56,6 +58,7 @@
 	if(vore_fullness < 0)
 		vore_fullness = 0
 	vore_fullness = min(vore_capacity, vore_fullness)
+	updating_fullness = FALSE
 	return new_fullness
 
 
