@@ -25,7 +25,11 @@
 	sprite_icon_state = "fancyraptor"
 
 /datum/robot_sprite/dogborg/tall/service/meka
-	sprite_icon_state = "mekaserv"
+	sprite_icon_state = "mekaserve"
+	has_vore_belly_sprites = TRUE
+
+/datum/robot_sprite/dogborg/tall/service/meka_alt
+	sprite_icon_state = "mekaserve_alt"
 	has_vore_belly_sprites = TRUE
 
 /datum/robot_sprite/dogborg/tall/service/mmeka
@@ -37,9 +41,9 @@
 	has_vore_belly_sprites = TRUE
 
 /datum/robot_sprite/dogborg/tall/service/k4t
-	sprite_icon_state = "k4tserv"
+	sprite_icon_state = "k4tserve"
 	has_vore_belly_sprites = FALSE
 
 /datum/robot_sprite/dogborg/tall/service/k4t_alt1
-	sprite_icon_state = "k4tserv_alt1"
+	sprite_icon_state = "k4tserve_alt1"
 	has_vore_belly_sprites = FALSE
