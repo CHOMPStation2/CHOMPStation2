@@ -50,6 +50,14 @@
   - rscadd: Xenomorph Hybrids now have some exclusive traits to change up their playstyle,
       found in the Neutral tab.
   - rscadd: Xenomorph Hybrids can now use Protean Rigs.
+  - rscadd: Vests and the bluespace badge no longer have specific role/job requirements,
+      to facilitate more character customization.
+  - rscadd: 'Added in a new holster option: left leg holsters. These just visibly
+      sit on your left leg.'
+  - balance: Increased the loadout cost of vests and drop pouches from 1 to 2, as
+      they carry more than the simple webbing.
+  - bugfix: Fixed black holster sprites not showing up on mob correctly, and also
+      not showing up in the loadout.
   Verkister:
   - bugfix: Fixed cloth and fiber materials missing sheet type definitions.
   - bugfix: Fixed a bellysprite update lag bug.
