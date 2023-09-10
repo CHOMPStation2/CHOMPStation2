@@ -33,3 +33,19 @@
   Verkister:
   - rscadd: BS compostor can now recycle materials too.
   - bugfix: Fixed multiplayer shapeshifter vorgan reversion issue.
+2023-09-07:
+  Aroliacue:
+  - admin: All staff can now cancel the evac shuttle.
+2023-09-08:
+  Verkister:
+  - rscadd: Added visual effect and shared nutrition to mob TF mechanics.
+  - bugfix: Fixed mob TF with uninitialized voremobs overwriting user's main vorgan
+      with the mob's own settings.
+  - bugfix: Stored reverted non-multiplayer tf_forms no longer cause double cryo announcements
+      when user leaves round.
+  - qol: Fixed highlight icon inconsistencies on Polaris hairs.
+  - rscadd: Big Leggies can now *vwag into digilegs stance.
+2023-09-10:
+  tacoguy7765093:
+  - rscadd: Added new gateway into rotation
+  - rscadd: Added a mob and a weapon for use in the gateway.
