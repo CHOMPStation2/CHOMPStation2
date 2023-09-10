@@ -1,27 +1,21 @@
 /mob/living/carbon/human/ai_controlled/greytide/Initialize()
 	to_wear_r_hand = pick(
-		prob(20)
-			/obj/item/weapon/storage/toolbox/electrical,
-		prob(20)
-			/obj/item/weapon/storage/toolbox/mechanical,
-		prob(20)
-			/obj/item/weapon/storage/toolbox/emergency,
-		prob(50)
-			/obj/item/weapon/melee/baton/cattleprod,
+		prob(20); /obj/item/weapon/storage/toolbox/electrical,
+		prob(20); /obj/item/weapon/storage/toolbox/mechanical,
+		prob(20); /obj/item/weapon/storage/toolbox/emergency,
+		prob(50); /obj/item/weapon/melee/baton/cattleprod,
 	)
-	to_wear_mask = pick(
-		prob(75)
-			null,
-		prob(25)
-			/obj/item/clothing/mask/gas/wwii,
-	)
+	if(prob(25))
+		to_wear_mask = /obj/item/clothing/mask/gas/wwii
+	else
+		to_wear_mask = null
 	..()
 
 /mob/living/carbon/human/ai_controlled/greytide
 	name = "John Greytide" //theyll get a normal name on spawn
 	to_wear_helmet = null
 	to_wear_glasses = null
-	//to_wear_mask = null ///obj/item/clothing/mask/gas
+	//to_wear_mask =
 	to_wear_l_radio = /obj/item/device/radio/headset
 	to_wear_r_radio = null
 	to_wear_uniform = /obj/item/clothing/under/color/grey
