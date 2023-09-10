@@ -4694,6 +4694,7 @@
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\station\protean\protean_species.dm"
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\station\traits\negative.dm"
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\station\traits\positive.dm"
+#include "modular_chomp\code\modules\mob\living\carbon\human\species\station\traits\xenomorph_hybrid_trait.dm"
 #include "modular_chomp\code\modules\mob\living\silicon\robot\drone\drone_items.dm"
 #include "modular_chomp\code\modules\mob\living\silicon\robot\sprites\civilian.dm"
 #include "modular_chomp\code\modules\mob\living\silicon\robot\sprites\clown.dm"
