@@ -57,8 +57,8 @@
 	path = /obj/item/clothing/accessory/collar/holo/indigestible
 
 /datum/gear/accessory/holster
-	display_name = "holster selection" // CHOMPedit: Anyone can use.
-//	allowed_roles = list("Site Manager", "Head of Personnel", "Security Officer", "Warden", "Head of Security","Detective","Field Medic","Explorer","Pathfinder","Talon Captain","Talon Guard") // CHOMPedit: Anyone can use.
+	display_name = "holster selection (SM, HoP, Sec, Explo)" // CHOMPedit: Clearer description.
+	allowed_roles = list("Site Manager", "Head of Personnel", "Security Officer", "Warden", "Head of Security","Detective","Field Medic","Explorer","Pathfinder","Talon Captain","Talon Guard") // CHOMPedit: Readd explo
 
 /datum/gear/accessory/brown_vest
 	display_name = "webbing, brown" // CHOMPedit: Anyone can use.
