@@ -58,6 +58,8 @@
       they carry more than the simple webbing.
   - bugfix: Fixed black holster sprites not showing up on mob correctly, and also
       not showing up in the loadout.
+  UniquaSa:
+  - bugfix: You should be able to play as a tallborg in security and service..
   Verkister:
   - bugfix: Fixed cloth and fiber materials missing sheet type definitions.
   - bugfix: Fixed a bellysprite update lag bug.
