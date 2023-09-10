@@ -52,6 +52,7 @@
   - rscadd: Xenomorph Hybrids can now use Protean Rigs.
   Verkister:
   - bugfix: Fixed cloth and fiber materials missing sheet type definitions.
+  - bugfix: Fixed a bellysprite update lag bug.
   tacoguy7765093:
   - rscadd: Added new gateway into rotation
   - rscadd: Added a mob and a weapon for use in the gateway.
