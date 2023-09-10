@@ -46,6 +46,13 @@
   - qol: Fixed highlight icon inconsistencies on Polaris hairs.
   - rscadd: Big Leggies can now *vwag into digilegs stance.
 2023-09-10:
+  Aroliacue:
+  - rscadd: Xenomorph Hybrids now have some exclusive traits to change up their playstyle,
+      found in the Neutral tab.
+  - rscadd: Xenomorph Hybrids can now use Protean Rigs.
+  Verkister:
+  - bugfix: Fixed cloth and fiber materials missing sheet type definitions.
+  - bugfix: Fixed a bellysprite update lag bug.
   tacoguy7765093:
   - rscadd: Added new gateway into rotation
   - rscadd: Added a mob and a weapon for use in the gateway.
