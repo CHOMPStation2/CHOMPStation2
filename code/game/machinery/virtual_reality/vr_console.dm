@@ -254,7 +254,6 @@
 		//Yes, I am using a aheal just so your markings transfer over, I could not get .prefs.copy_to working. This is very stupid, and I can't be assed to rewrite this.  Too bad!
 		avatar.revive()
 		avatar.species.equip_survival_gear(avatar)
-			equip_custom_items(avatar)
 		avatar.verbs += /mob/living/carbon/human/proc/exit_vr //ahealing removes the prommie verbs and the VR verbs, giving it back
 
 //CHOMPedit end
