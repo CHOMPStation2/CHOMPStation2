@@ -61,7 +61,7 @@
 	display_name = "neck gaiter selection"
 	path = /obj/item/clothing/accessory/gaiter
 	cost = 1
-	
+
 //CHOMPAdd - Put this mask in loadout
 /datum/gear/mask/death
 	display_name = "white mask"
@@ -82,3 +82,7 @@
 
 /datum/gear/mask/lace/New()
 	gear_tweaks += gear_tweak_free_color_choice
+
+/datum/gear/mask/kitsune
+	display_name = "kitsune mask"
+	path = /obj/item/clothing/mask/kitsune

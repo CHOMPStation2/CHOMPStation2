@@ -406,3 +406,10 @@
 	icon_state = "mouthwheat"
 	w_class = ITEMSIZE_SMALL
 	body_parts_covered = 0
+
+/obj/item/clothing/mask/kitsune
+	name = "kitsune mask"
+	desc = "A mask styled after a mythological creature from ancient earth."
+	icon_state = "kitsune"
+	w_class = ITEMSIZE_SMALL
+	body_parts_covered = 0
