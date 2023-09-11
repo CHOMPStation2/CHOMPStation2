@@ -94,7 +94,7 @@
 /obj/item/weapon/storage/backpack/holding/singularity_act(S, current_size)
 	var/dist = max((current_size - 2), 1)
 	explosion(src.loc,(dist),(dist*2),(dist*4))
-	return 1000
+	return -1000	//CHOMPEDIT - Consistency with literally every other codebase
 
 /turf/singularity_act(S, current_size)
 	if(!is_plating())
