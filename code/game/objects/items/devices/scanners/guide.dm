@@ -91,7 +91,7 @@
 	if(organ)
 		dat += "<b>Organ Damage</b> - Administer Peridaxon. Perform a full body scan for targeted organ repair surgery.<br>"
 	if(bloodloss)
-		dat += "<b>Low Blood Volume</b> - Commence blood transfusion via intravenous drip or provide iron supplements. Ensure the patient is well-fed."
+		dat += "<b>Low blood volume</b> - Commence blood transfusion via IV drip or provide blood-restorative chemicals (e.g.: Copper for zorren and skrell, iron for the rest)."
 	if(M.getToxLoss())
 		dat += "<b>Toxin Buildup</b> - Inject Dylovene or Carthatoline. Monitor for damage to the liver or kidneys.<br>"
 	if(M.getBruteLoss())

@@ -21,3 +21,54 @@
   - maptweak: Added more items to the hidden crate on deck 2
   Upstream:
   - rscadd: New tesla coil types for tesla engines
+2023-09-05:
+  Darlantanis:
+  - rscadd: Replaces booleans in configuration_ch.dm with TRUE/FALSE defines
+  - rscadd: Tweaks whitelisted positions
+  - rscadd: Adds whitelist_only vars in new job_whitelist_overrides.dm file
+  - rscadd: Comments out return value of guest_jobbans proc which broke the jobwhitelist
+      system.
+  - rscadd: Adds numerous missing CHOMPedit comments
+  - rscadd: Adds jobwhitelist.txt to gitignore
+  Verkister:
+  - rscadd: BS compostor can now recycle materials too.
+  - bugfix: Fixed multiplayer shapeshifter vorgan reversion issue.
+2023-09-07:
+  Aroliacue:
+  - admin: All staff can now cancel the evac shuttle.
+2023-09-08:
+  Verkister:
+  - rscadd: Added visual effect and shared nutrition to mob TF mechanics.
+  - bugfix: Fixed mob TF with uninitialized voremobs overwriting user's main vorgan
+      with the mob's own settings.
+  - bugfix: Stored reverted non-multiplayer tf_forms no longer cause double cryo announcements
+      when user leaves round.
+  - qol: Fixed highlight icon inconsistencies on Polaris hairs.
+  - rscadd: Big Leggies can now *vwag into digilegs stance.
+2023-09-10:
+  Aroliacue:
+  - rscadd: Xenomorph Hybrids now have some exclusive traits to change up their playstyle,
+      found in the Neutral tab.
+  - rscadd: Xenomorph Hybrids can now use Protean Rigs.
+  - rscadd: Vests and the bluespace badge no longer have specific role/job requirements,
+      to facilitate more character customization.
+  - rscadd: 'Added in a new holster option: left leg holsters. These just visibly
+      sit on your left leg.'
+  - balance: Increased the loadout cost of vests and drop pouches from 1 to 2, as
+      they carry more than the simple webbing.
+  - bugfix: Fixed black holster sprites not showing up on mob correctly, and also
+      not showing up in the loadout.
+  UniquaSa:
+  - bugfix: You should be able to play as a tallborg in security and service..
+  Verkister:
+  - bugfix: Fixed cloth and fiber materials missing sheet type definitions.
+  - bugfix: Fixed a bellysprite update lag bug.
+  tacoguy7765093:
+  - rscadd: Added new gateway into rotation
+  - rscadd: Added a mob and a weapon for use in the gateway.
+2023-09-11:
+  tacoguy7765093:
+  - bugfix: VR works again
+2023-09-12:
+  Upstream:
+  - rscadd: Various bird related markings

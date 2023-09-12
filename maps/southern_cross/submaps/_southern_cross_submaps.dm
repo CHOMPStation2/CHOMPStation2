@@ -35,11 +35,17 @@
 	name = "Gateway Destination"
 	z = Z_LEVEL_GATEWAY
 
-#include "gateway/snowfield_ch.dm"	//CHOMPEDIT - Use the good one instead
+#include "gateway/snowfield_ch.dm" //CHOMPEDIT - Use the good one instead
 /datum/map_template/sc_lateload/gateway/snowfield
 	name = "Snow Field"
 	desc = "An old base in middle of snowy wasteland"
 	mappath = 'gateway/snowfield.dmm'
+
+#include "gateway/darkrps.dm"
+/datum/map_template/sc_lateload/gateway/darkrps
+	name = "Abandoned City"
+	desc = "An abandoned city overrun with piracy and mercernaries."
+	mappath = 'gateway/darkrps.dmm'
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
 
 #include "gateway/BaseBlep.dm"

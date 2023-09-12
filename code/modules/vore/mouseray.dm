@@ -93,26 +93,26 @@
 		if(!M.allow_spontaneous_tf && !tf_admin_pref_override)
 			return
 	if(M.tf_mob_holder)
+		new /obj/effect/effect/teleport_greyscale(M.loc) //CHOMPEdit Start
 		var/mob/living/ourmob = M.tf_mob_holder
 		if(ourmob.ai_holder)
 			var/datum/ai_holder/our_AI = ourmob.ai_holder
 			our_AI.set_stance(STANCE_IDLE)
 		M.tf_mob_holder = null
-		var/ourmob_ckey  //CHOMPEdit Start
-		if(ourmob.ckey)
-			ourmob_ckey = ourmob.ckey
-		ourmob.ckey = M.ckey
 		var/turf/get_dat_turf = get_turf(target)
 		ourmob.loc = get_dat_turf
 		ourmob.forceMove(get_dat_turf)
-		ourmob.vore_selected = M.vore_selected
-		M.vore_selected = null
-		for(var/obj/belly/B as anything in M.vore_organs)
-			B.loc = ourmob
-			B.forceMove(ourmob)
-			B.owner = ourmob
-			M.vore_organs -= B
-			ourmob.vore_organs += B
+		if(!M.tf_form_ckey)
+			ourmob.vore_selected = M.vore_selected
+			M.vore_selected = null
+			for(var/obj/belly/B as anything in M.vore_organs)
+				B.loc = ourmob
+				B.forceMove(ourmob)
+				B.owner = ourmob
+				M.vore_organs -= B
+				ourmob.vore_organs += B
+			ourmob.nutrition = M.nutrition
+		ourmob.ckey = M.ckey
 
 		ourmob.Life(1)
 		if(ishuman(M))
@@ -122,8 +122,10 @@
 				M.drop_from_inventory(W)
 
 		if(M.tf_form == ourmob)
-			if(ourmob_ckey)
-				M.ckey = ourmob_ckey
+			if(M.tf_form_ckey)
+				M.ckey = M.tf_form_ckey
+			else
+				M.mind = null
 			ourmob.tf_form = M
 			M.forceMove(ourmob)
 		else
@@ -133,9 +135,15 @@
 		if(M.stat == DEAD)	//We can let it undo the TF, because the person will be dead, but otherwise things get weird.
 			return
 		var/mob/living/new_mob = spawn_mob(M)
-		new_mob.faction = M.faction
 
 		if(new_mob && isliving(new_mob))
+			new_mob.faction = M.faction //CHOMPEdit Start
+			if(istype(new_mob, /mob/living/simple_mob))
+				var/mob/living/simple_mob/S = new_mob
+				if(!S.voremob_loaded)
+					S.voremob_loaded = TRUE
+					S.init_vore()
+			new /obj/effect/effect/teleport_greyscale(M.loc) //CHOMPEdit End
 			for(var/obj/belly/B as anything in new_mob.vore_organs)
 				new_mob.vore_organs -= B
 				qdel(B)
@@ -166,6 +174,7 @@
 				B.owner = new_mob
 				M.vore_organs -= B
 				new_mob.vore_organs += B
+			new_mob.nutrition = M.nutrition //CHOMPAdd
 
 			new_mob.ckey = M.ckey
 			if(M.ai_holder && new_mob.ai_holder)
@@ -190,27 +199,26 @@
 /mob/living/proc/revert_mob_tf()
 	if(!tf_mob_holder)
 		return
+	new /obj/effect/effect/teleport_greyscale(src.loc) //CHOMPEdit Start
 	var/mob/living/ourmob = tf_mob_holder
 	if(ourmob.ai_holder)
 		var/datum/ai_holder/our_AI = ourmob.ai_holder
 		our_AI.set_stance(STANCE_IDLE)
 	tf_mob_holder = null
-	var/ourmob_ckey  //CHOMPEdit Start
-	if(ourmob.ckey)
-		ourmob_ckey = ourmob.ckey
-	ourmob.ckey = ckey
 	var/turf/get_dat_turf = get_turf(src)
 	ourmob.loc = get_dat_turf
 	ourmob.forceMove(get_dat_turf)
-	ourmob.vore_selected = vore_selected
-	vore_selected = null
-	for(var/obj/belly/B as anything in vore_organs)
-		B.loc = ourmob
-		B.forceMove(ourmob)
-		B.owner = ourmob
-		vore_organs -= B
-		ourmob.vore_organs += B
-
+	if(!tf_form_ckey)
+		ourmob.vore_selected = vore_selected
+		vore_selected = null
+		for(var/obj/belly/B as anything in vore_organs)
+			B.loc = ourmob
+			B.forceMove(ourmob)
+			B.owner = ourmob
+			vore_organs -= B
+			ourmob.vore_organs += B
+		ourmob.nutrition = nutrition
+	ourmob.ckey = ckey
 	ourmob.Life(1)
 
 	if(ishuman(src))
@@ -220,8 +228,10 @@
 			src.drop_from_inventory(W)
 
 	if(tf_form == ourmob)
-		if(ourmob_ckey)
-			src.ckey = ourmob_ckey
+		if(tf_form_ckey)
+			src.ckey = tf_form_ckey
+		else
+			src.mind = null
 		ourmob.tf_form = src
 		src.forceMove(ourmob)
 	else
@@ -327,21 +337,20 @@
 			var/datum/ai_holder/our_AI = ourmob.ai_holder
 			our_AI.set_stance(STANCE_IDLE)
 		M.tf_mob_holder = null
-		var/ourmob_ckey  //CHOMPEdit Start
-		if(ourmob.ckey)
-			ourmob_ckey = ourmob.ckey
-		ourmob.ckey = M.ckey
 		var/turf/get_dat_turf = get_turf(target)
 		ourmob.loc = get_dat_turf
 		ourmob.forceMove(get_dat_turf)
-		ourmob.vore_selected = M.vore_selected
-		M.vore_selected = null
-		for(var/obj/belly/B as anything in M.vore_organs)
-			B.loc = ourmob
-			B.forceMove(ourmob)
-			B.owner = ourmob
-			M.vore_organs -= B
-			ourmob.vore_organs += B
+		if(!M.tf_form_ckey) //CHOMPEdit Start
+			ourmob.vore_selected = M.vore_selected
+			M.vore_selected = null
+			for(var/obj/belly/B as anything in M.vore_organs)
+				B.loc = ourmob
+				B.forceMove(ourmob)
+				B.owner = ourmob
+				M.vore_organs -= B
+				ourmob.vore_organs += B
+			ourmob.nutrition = M.nutrition
+		ourmob.ckey = M.ckey
 
 		ourmob.Life(1)
 
@@ -352,8 +361,10 @@
 				M.drop_from_inventory(W)
 
 		if(M.tf_form == ourmob)
-			if(ourmob_ckey)
-				M.ckey = ourmob_ckey
+			if(M.tf_form_ckey)
+				M.ckey = M.tf_form_ckey
+			else
+				M.mind = null
 			ourmob.tf_form = M
 			M.forceMove(ourmob)
 		else

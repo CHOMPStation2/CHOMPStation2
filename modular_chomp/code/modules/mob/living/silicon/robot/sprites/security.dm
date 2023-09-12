@@ -20,7 +20,7 @@
 
 /datum/robot_sprite/dogborg/tall/security
 	module_type = "Security"
-	sprite_icon = 'icons/mob/robot/security_large.dmi'
+	sprite_icon = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi'
 
 /datum/robot_sprite/dogborg/raptor/security
 	module_type = "Security"

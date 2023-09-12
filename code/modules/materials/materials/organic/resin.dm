@@ -2,6 +2,7 @@
 	name = "resin"
 	icon_colour = "#353C40" // CHOMPedit: Alternative colour to distinguish from weed floor tiles.
 	icon_base = "resin"
+	table_icon_base = "stone"
 	dooropen_noise = 'sound/effects/attackblob.ogg'
 	door_icon_base = "resin"
 	icon_reinf = "reinf_mesh"
