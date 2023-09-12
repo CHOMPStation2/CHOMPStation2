@@ -242,7 +242,6 @@ var/global/list/edible_trash = list(/obj/item/broken_device,
 				/obj/item/weapon/storage/vore_egg,
 				/obj/item/weapon/bikehorn/tinytether,
 				/obj/item/capture_crystal,
-<<<<<<< HEAD
 				/obj/item/weapon/material/kitchen, //chompstation addition start
 				/obj/item/weapon/storage/mre,
 				/obj/item/weapon/storage/mrebag,
@@ -267,10 +266,7 @@ var/global/list/edible_trash = list(/obj/item/broken_device,
 				/obj/item/weapon/coin,
 				/obj/item/clothing/ears, //chompstation addition end
 				//CHOMPedit: disabled because this is in a file we don't use /obj/item/roulette_ball
-=======
-				/obj/item/roulette_ball,
 				/obj/item/pizzabox
->>>>>>> cbf497baa3... Merge pull request #15372 from lm40/master
 				)
 
 var/global/list/contamination_flavors = list(
