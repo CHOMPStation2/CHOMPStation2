@@ -994,8 +994,6 @@
 	icon_state = "teshi_heterochromia_l"
 	body_parts = list(BP_HEAD)
 	species_allowed = list(SPECIES_TESHARI)
-<<<<<<< HEAD
-=======
 
 /datum/sprite_accessory/marking/vr/nevrean_beak //that's right, its bird rework time
 	name = "nevrean beak"
@@ -1094,4 +1092,3 @@
 	icon_state = "cheeks_nev"
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_HEAD)
->>>>>>> f3af868274... Merge pull request #15367 from TankTheBirb/bird-care-package
