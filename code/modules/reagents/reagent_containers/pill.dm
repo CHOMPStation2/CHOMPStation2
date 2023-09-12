@@ -309,8 +309,6 @@
 	reagents.add_reagent("iron", 30) //VOREStation Edit
 	color = reagents.get_color()
 
-<<<<<<< HEAD
-=======
 /obj/item/weapon/reagent_containers/pill/copper
 	name = "Copper (30u)"
 	desc = "Used to aid in blood regeneration after bleeding for blue-blooded crew."
@@ -321,7 +319,6 @@
 	reagents.add_reagent("copper", 30)
 	color = reagents.get_color()
 
->>>>>>> c548752ee3... Merge pull request #15374 from Runa-Dacino/zorrencopper
 //Not-quite-medicine
 /obj/item/weapon/reagent_containers/pill/happy
 	name = "Happy pill"
