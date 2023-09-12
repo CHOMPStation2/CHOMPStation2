@@ -326,9 +326,7 @@
 	icon = 'icons/mob/vore/wings_vr.dmi'
 	icon_state = "feathered_kara"
 	ckeys_allowed = list("satinisle")
-<<<<<<< HEAD
 */
-=======
 
 /datum/sprite_accessory/wing/winglets //smol wingarms at the elbow
 	name = "feathered winglets"
@@ -369,4 +367,3 @@
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "feather2_tricolor-1"
 	extra_overlay2 = "feather2_tricolor-2"
->>>>>>> f3af868274... Merge pull request #15367 from TankTheBirb/bird-care-package
