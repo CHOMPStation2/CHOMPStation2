@@ -162,13 +162,8 @@ h1.alert, h2.alert		{color: #000000;}
 .soghun					{color: #50BA6C;}
 .solcom					{color: #3333CE;}
 .inverted .solcom		{color: #6da6f0;}
-<<<<<<< HEAD
-.changeling				{color: #800080;}
-.inverted .changeling	{color: #ff0084;} /* CHOMPStation Add */
-=======
 .changeling				{color: #800080;font-style: italic;}
 .inverted .changeling	{color: #b000b1;}
->>>>>>> 26d7b5bab9... Merge pull request #15383 from Very-Soft/fancy
 .sergal					{color: #0077FF;}
 .birdsongc				{color: #CC9900;}
 .vulpkanin				{color: #B97A57;}
