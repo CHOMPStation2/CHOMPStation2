@@ -301,7 +301,7 @@
 
 /obj/item/weapon/reagent_containers/pill/iron
 	name = "Iron (30u)" //VOREStation Edit
-	desc = "Used to aid in blood regeneration after bleeding."
+	desc = "Used to aid in blood regeneration after bleeding for red-blooded crew."
 	icon_state = "pill1"
 
 /obj/item/weapon/reagent_containers/pill/iron/Initialize()

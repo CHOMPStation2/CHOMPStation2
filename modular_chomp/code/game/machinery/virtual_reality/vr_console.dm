@@ -266,7 +266,8 @@
 		occupant.enter_vr(avatar)
 		avatar.regenerate_icons()
 		avatar.update_transform()
-		avatar.species.equip_survival_gear(avatar)
+		var/decl/hierarchy/outfit/outfit = outfit_by_type(/decl/hierarchy/outfit/job/assistant) //you spawn with assistant gear, I tried to make loadout spawn but the code sucks
+		outfit.equip(avatar, "VR Avatar", "VR Avatar")
 		avatar.verbs += /mob/living/carbon/human/proc/exit_vr
 		avatar.verbs += /mob/living/carbon/human/proc/vr_transform_into_mob
 		avatar.verbs |= /mob/living/proc/set_size // Introducing NeosVR
