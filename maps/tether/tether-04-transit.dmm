@@ -107,8 +107,6 @@
 	icon_state = "pipe-c"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -118,8 +116,6 @@
 	dir = 5
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
@@ -644,6 +640,7 @@
 >>>>>>> bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
 /obj/structure/cable{
 <<<<<<< HEAD
+<<<<<<< HEAD
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
@@ -652,6 +649,9 @@
 	d2 = 2;
 	icon_state = "1-2";
 	pixel_y = 0
+=======
+	icon_state = "1-2"
+>>>>>>> 0df343a0a4... Merge pull request #15385 from Very-Soft/backtotether
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -663,10 +663,14 @@
 /area/tether/midpoint)
 "tB" = (
 /obj/structure/cable{
+<<<<<<< HEAD
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2";
 	pixel_y = 0
+=======
+	icon_state = "1-2"
+>>>>>>> 0df343a0a4... Merge pull request #15385 from Very-Soft/backtotether
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
@@ -846,8 +850,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -895,9 +897,36 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/tether/midpoint)
+<<<<<<< HEAD
 "N" = (
 /obj/structure/table/woodentable,
 /obj/machinery/camera/network/civilian{
+=======
+"EI" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/tether/midpoint)
+"Gl" = (
+/turf/simulated/floor/holofloor/tiled/dark,
+/area/tether/elevator)
+"GU" = (
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+>>>>>>> 0df343a0a4... Merge pull request #15385 from Very-Soft/backtotether
 	dir = 1
 	},
 /turf/simulated/floor/wood,
@@ -923,7 +952,16 @@
 	dir = 2
 	},
 /turf/simulated/floor/wood,
+<<<<<<< HEAD
 =======
+=======
+/area/tether/midpoint)
+"HK" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+>>>>>>> 0df343a0a4... Merge pull request #15385 from Very-Soft/backtotether
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
@@ -935,6 +973,7 @@
 /area/tether/midpoint)
 "P" = (
 /obj/structure/cable{
+<<<<<<< HEAD
 <<<<<<< HEAD
 	icon_state = "1-4"
 ||||||| parent of bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
@@ -948,6 +987,8 @@
 =======
 	d1 = 1;
 	d2 = 2;
+=======
+>>>>>>> 0df343a0a4... Merge pull request #15385 from Very-Soft/backtotether
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -1084,10 +1125,14 @@
 /area/tether/midpoint)
 "Oq" = (
 /obj/structure/cable{
+<<<<<<< HEAD
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2";
 	pixel_y = 0
+=======
+	icon_state = "1-2"
+>>>>>>> 0df343a0a4... Merge pull request #15385 from Very-Soft/backtotether
 	},
 /obj/structure/lattice,
 /obj/structure/disposalpipe/down,
@@ -1133,9 +1178,16 @@
 /area/tether/midpoint)
 "Oq" = (
 /obj/structure/cable{
+<<<<<<< HEAD
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+=======
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+>>>>>>> 0df343a0a4... Merge pull request #15385 from Very-Soft/backtotether
 	},
 /obj/structure/lattice,
 /obj/structure/disposalpipe/down,
@@ -1216,9 +1268,19 @@
 	},
 >>>>>>> 1df6e69b74... Merge pull request #13038 from Very-Soft/teppipai
 /obj/structure/cable{
+<<<<<<< HEAD
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+=======
+	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+>>>>>>> 0df343a0a4... Merge pull request #15385 from Very-Soft/backtotether
 	},
 /obj/machinery/alarm{
 	pixel_y = 26
@@ -1305,12 +1367,26 @@
 /turf/simulated/floor/wood,
 >>>>>>> 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
 /area/tether/midpoint)
+<<<<<<< HEAD
 "YB" = (
 /obj/structure/table/woodentable,
 /obj/structure/flora/pottedplant/smallcactus{
 	pixel_x = 0;
 	pixel_y = 8
 =======
+=======
+"XO" = (
+/obj/effect/floor_decal/borderfloorblack,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -28
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+>>>>>>> 0df343a0a4... Merge pull request #15385 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/dark,
 /area/tether/midpoint)
 "YB" = (
