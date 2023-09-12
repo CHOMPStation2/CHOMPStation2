@@ -1364,7 +1364,7 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
-*/ //Chomp REMOVE START
+/* //Chomp REMOVE START
 /datum/sprite_accessory/tail/kara //SatinIsle fluff item
 	name = "Pterokara Tail"
 	icon = 'icons/mob/vore/tails_vr.dmi'
