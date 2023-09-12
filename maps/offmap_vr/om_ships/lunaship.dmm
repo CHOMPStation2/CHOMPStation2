@@ -10,8 +10,6 @@
 /area/lunaship/park)
 "af" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -36,8 +34,6 @@
 /area/space)
 "aL" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
@@ -48,13 +44,9 @@
 /area/lunaship/engineering)
 "aQ" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -80,8 +72,6 @@
 /area/lunaship/robotics_bay)
 "aY" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
@@ -105,16 +95,12 @@
 	},
 /obj/structure/lattice,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/space,
 /area/space)
 "bD" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/techfloor/corner{
@@ -128,8 +114,6 @@
 /area/lunaship/bar)
 "bK" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -141,6 +125,12 @@
 /turf/space/internal_edge/topright,
 /area/lunaship/cockpit)
 "cj" = (
+<<<<<<< HEAD
+=======
+/obj/structure/cable/cyan{
+	icon_state = "2-4"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /obj/structure/hull_corner/long_vert{
 	dir = 6
 	},
@@ -149,6 +139,15 @@
 "cx" = (
 /turf/space/internal_edge/left,
 /area/lunaship/park)
+<<<<<<< HEAD
+=======
+"cB" = (
+/obj/structure/cable/cyan{
+	icon_state = "2-4"
+	},
+/turf/space,
+/area/space)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "cK" = (
 /obj/structure/bed/chair/sofa/purp,
 /turf/simulated/floor/tiled/eris/steel/bar_dance,
@@ -164,8 +163,6 @@
 /area/lunaship/engineering)
 "cU" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -192,21 +189,15 @@
 	icon_state = "0-2"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/white/gray_platform,
 /area/lunaship/engineering)
 "dB" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/techfloor/orange/corner{
@@ -233,6 +224,18 @@
 "eE" = (
 /turf/simulated/floor/water/indoors/surfluid,
 /area/lunaship/engineering)
+<<<<<<< HEAD
+=======
+"eN" = (
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/space)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "eO" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 4
@@ -241,8 +244,6 @@
 /area/lunaship/cockpit)
 "fc" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -280,16 +281,12 @@
 	dir = 6
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/eris/white/gray_platform,
 /area/lunaship/engineering)
 "gc" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -302,8 +299,6 @@
 /area/lunaship/robotics_bay)
 "gj" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -337,16 +332,22 @@
 	},
 /obj/structure/lattice,
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/space,
 /area/space)
+<<<<<<< HEAD
+=======
+"gQ" = (
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
+	},
+/obj/structure/lattice,
+/turf/space,
+/area/space)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "gT" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -379,8 +380,6 @@
 /area/lunaship/cockpit)
 "hs" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/effect/floor_decal/techfloor/orange{
@@ -426,8 +425,6 @@
 /area/lunaship/robotics_bay)
 "ih" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
@@ -487,8 +484,6 @@
 /area/lunaship/medical)
 "iw" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/milspec/color/black/half{
@@ -524,8 +519,6 @@
 /area/space)
 "iN" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -589,8 +582,6 @@
 /area/lunaship/cockpit)
 "ku" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/outdoors/grass/heavy{
@@ -602,13 +593,9 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -645,6 +632,18 @@
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/lunaship/medical)
+<<<<<<< HEAD
+=======
+"kR" = (
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
+	},
+/obj/structure/hull_corner/long_vert{
+	dir = 10
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/space)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "kZ" = (
 /obj/item/device/radio/beacon,
 /turf/simulated/floor/tiled/milspec/raised,
@@ -699,8 +698,6 @@
 /area/lunaship/bar)
 "lW" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/techfloor/corner,
@@ -748,8 +745,6 @@
 /area/lunaship/robotics_bay)
 "mr" = (
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -766,17 +761,26 @@
 	},
 /obj/structure/lattice,
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/space,
 /area/space)
+<<<<<<< HEAD
+=======
+"mB" = (
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
+	},
+/obj/structure/hull_corner/long_vert{
+	dir = 6
+	},
+/obj/structure/lattice,
+/turf/space,
+/area/space)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "mV" = (
 /obj/effect/shuttle_landmark/premade/luna_near_fore_star,
 /turf/space,
@@ -804,8 +808,6 @@
 /area/lunaship/robotics_bay)
 "nn" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -853,13 +855,9 @@
 "nC" = (
 /obj/structure/lattice,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/space,
@@ -873,10 +871,24 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/lunaship/hallway_port)
+<<<<<<< HEAD
+=======
+"nN" = (
+/turf/simulated/floor/outdoors/grass/heavy/atoll,
+/area/lunaship/park)
+"nR" = (
+/obj/structure/lattice,
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
+	},
+/obj/structure/hull_corner{
+	dir = 1
+	},
+/turf/space,
+/area/space)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "nZ" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/carpet/turcarpet,
@@ -899,8 +911,6 @@
 "oj" = (
 /obj/structure/lattice,
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/space,
@@ -925,8 +935,6 @@
 /area/lunaship/office)
 "pj" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -973,6 +981,7 @@
 /area/space)
 "pV" = (
 /obj/structure/cable/cyan{
+<<<<<<< HEAD
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
@@ -981,6 +990,15 @@
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
+=======
+	icon_state = "1-8"
+	},
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
+	},
+/obj/structure/hull_corner/long_vert{
+	dir = 10
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 	},
 /turf/simulated/wall/rpshull,
 /area/space)
@@ -993,8 +1011,6 @@
 	dir = 6
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/space,
@@ -1026,8 +1042,6 @@
 /area/lunaship/hallway_starboard)
 "rn" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/wall/rpshull,
@@ -1061,8 +1075,6 @@
 "rB" = (
 /obj/machinery/door/airlock/angled_tgmc/wide/generic_steel,
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1072,13 +1084,9 @@
 /area/lunaship/park)
 "rD" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -1087,20 +1095,14 @@
 /area/lunaship/office)
 "rK" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -1153,8 +1155,6 @@
 /area/lunaship/medical)
 "sD" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -1199,8 +1199,6 @@
 /area/lunaship/engineering)
 "sW" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/milspec/color/black/corner,
@@ -1237,21 +1235,15 @@
 	dir = 10
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/space,
 /area/space)
 "tm" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -1275,13 +1267,9 @@
 /area/lunaship/engineering)
 "tW" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/wall/rpshull,
@@ -1297,6 +1285,7 @@
 /area/lunaship/medical)
 "um" = (
 /obj/structure/cable/cyan{
+<<<<<<< HEAD
 	d1 = 2;
 	d2 = 4;
 	icon_state = "2-4"
@@ -1305,6 +1294,12 @@
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
+=======
+	icon_state = "2-8"
+	},
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 	},
 /turf/simulated/wall/rpshull,
 /area/space)
@@ -1320,8 +1315,6 @@
 /area/lunaship/hallway_port)
 "uW" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -1348,8 +1341,6 @@
 "vt" = (
 /obj/effect/floor_decal/milspec_sterile/green/half,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -1358,8 +1349,6 @@
 /area/lunaship/medical)
 "vw" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating/eris/under,
@@ -1378,15 +1367,11 @@
 /area/lunaship/cockpit)
 "vD" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -1417,8 +1402,6 @@
 /obj/fiftyspawner/glass,
 /obj/fiftyspawner/titanium,
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/floor_decal/milspec/color/black/half{
@@ -1435,8 +1418,6 @@
 "vU" = (
 /obj/structure/lattice,
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/space,
@@ -1446,8 +1427,6 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -1456,8 +1435,6 @@
 /area/lunaship/robotics_bay)
 "wd" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -1488,9 +1465,20 @@
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/lunaship/medical)
 "wM" = (
+<<<<<<< HEAD
+=======
+/obj/structure/lattice,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/hull_corner{
+	dir = 4
+	},
+/turf/space,
+/area/space)
+"wP" = (
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
+/obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
 /turf/simulated/wall/rpshull,
@@ -1517,8 +1505,6 @@
 /area/space)
 "xg" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -1543,8 +1529,6 @@
 /area/lunaship/hallway_port)
 "xJ" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -1555,6 +1539,24 @@
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/lunaship/office)
+<<<<<<< HEAD
+=======
+"xR" = (
+/obj/structure/cable/cyan{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/space)
+"xV" = (
+/obj/structure/cable/cyan{
+	icon_state = "1-4"
+	},
+/obj/structure/hull_corner/long_vert{
+	dir = 5
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/space)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "yh" = (
 /obj/machinery/power/apc/hyper{
 	alarms_hidden = 1;
@@ -1572,13 +1574,9 @@
 /area/lunaship/bar)
 "yl" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/wall/rpshull,
@@ -1615,8 +1613,6 @@
 	dir = 6
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1658,8 +1654,6 @@
 /area/space)
 "zp" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1692,6 +1686,12 @@
 /turf/simulated/floor/plating/eris/under,
 /area/lunaship/engineering)
 "zG" = (
+<<<<<<< HEAD
+=======
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /obj/structure/hull_corner/long_vert{
 	dir = 10
 	},
@@ -1699,8 +1699,6 @@
 /area/space)
 "zJ" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -1743,8 +1741,6 @@
 	dir = 8
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -1770,8 +1766,6 @@
 /area/lunaship/cockpit)
 "As" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -1798,16 +1792,12 @@
 /obj/structure/fans/hardlight,
 /obj/machinery/door/airlock/angled_tgmc/wide/generic_steel,
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/steel/panels,
 /area/lunaship/hallway_port)
 "Bg" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -1816,6 +1806,38 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/lunaship/robotics_bay)
+<<<<<<< HEAD
+=======
+"Bi" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/space)
+"BA" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/wall/tgmc/durawall,
+/area/lunaship/park)
+"BB" = (
+/turf/simulated/floor/water/indoors,
+/area/lunaship/park)
+"BM" = (
+/obj/structure/flora/ausbushes/ppflowers,
+/turf/simulated/floor/outdoors/grass/heavy/atoll,
+/area/lunaship/park)
+"BO" = (
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/space)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "BT" = (
 /obj/effect/floor_decal/techfloor/corner,
 /turf/simulated/floor/tiled/milspec/raised,
@@ -1828,8 +1850,6 @@
 /area/lunaship/robotics_bay)
 "Cf" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/space,
@@ -1848,16 +1868,12 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/lunaship/hallway_port)
 "CJ" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/wall/rpshull,
@@ -1876,8 +1892,6 @@
 	dir = 10
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/space,
@@ -1922,16 +1936,12 @@
 	dir = 8
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/lunaship/hallway_starboard)
 "Ez" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -1974,8 +1984,6 @@
 /area/lunaship/cockpit)
 "EQ" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/space,
@@ -1983,8 +1991,6 @@
 "ER" = (
 /obj/structure/lattice,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/space,
@@ -1994,21 +2000,15 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/white/gray_platform,
 /area/lunaship/engineering)
 "Fb" = (
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/milspec/raised,
@@ -2021,8 +2021,6 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/space,
@@ -2042,8 +2040,6 @@
 /area/lunaship/hallway_starboard)
 "Ge" = (
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/wall/rpshull,
@@ -2053,24 +2049,18 @@
 	dir = 1
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/space,
 /area/space)
 "Gu" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/wall/rpshull,
 /area/space)
 "GI" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -2119,8 +2109,6 @@
 "Hf" = (
 /obj/structure/lattice,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/space,
@@ -2147,10 +2135,21 @@
 /obj/item/device/flashlight/lamp,
 /turf/simulated/floor/wood,
 /area/lunaship/office)
+<<<<<<< HEAD
+=======
+"HQ" = (
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
+	},
+/obj/structure/hull_corner/long_vert{
+	dir = 10
+	},
+/obj/structure/lattice,
+/turf/space,
+/area/space)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "HR" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/milspec/color/black/half{
@@ -2187,8 +2186,6 @@
 "Iv" = (
 /obj/structure/lattice,
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/space,
@@ -2216,16 +2213,50 @@
 /area/lunaship/engineering)
 "Jn" = (
 /obj/structure/cable/cyan{
+<<<<<<< HEAD
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
+=======
+	icon_state = "1-2"
+	},
+/turf/space,
+/area/space)
+"IZ" = (
+/obj/effect/floor_decal/techfloor/corner{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec/raised{
+	name = "computer corium plating"
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
+<<<<<<< HEAD
 /turf/simulated/wall/rpshull,
+=======
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
+	},
+/obj/structure/hull_corner/long_vert{
+	dir = 6
+	},
+/obj/structure/lattice,
+/turf/space,
+/area/space)
+"Jo" = (
+/turf/space/internal_edge/bottomright,
+/area/lunaship/park)
+"Jp" = (
+/obj/structure/hull_corner/long_horiz{
+	dir = 10
+	},
+/turf/space,
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /area/space)
 "Jv" = (
 /obj/machinery/light{
@@ -2236,8 +2267,6 @@
 "JK" = (
 /obj/machinery/door/airlock/angled_tgmc/wide/generic_steel,
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -2262,8 +2291,6 @@
 /area/space)
 "JW" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -2284,8 +2311,6 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -2307,13 +2332,9 @@
 /area/lunaship/bar)
 "KY" = (
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -2324,6 +2345,18 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/lunaship/engineering)
+<<<<<<< HEAD
+=======
+"Lt" = (
+/obj/structure/cable/cyan{
+	icon_state = "1-8"
+	},
+/obj/structure/hull_corner/long_vert{
+	dir = 9
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/space)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "LA" = (
 /obj/effect/floor_decal/milspec/color/black/corner,
 /turf/simulated/floor/tiled/milspec,
@@ -2352,13 +2385,9 @@
 "Mx" = (
 /obj/structure/lattice,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/space,
@@ -2495,13 +2524,9 @@
 /area/lunaship/office)
 "OH" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -2510,8 +2535,6 @@
 /area/lunaship/hallway_port)
 "OK" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -2559,8 +2582,6 @@
 /area/lunaship/office)
 "PL" = (
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -2570,12 +2591,23 @@
 /area/lunaship/medical)
 "PS" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/space)
+<<<<<<< HEAD
+=======
+"PT" = (
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
+	},
+/obj/structure/hull_corner/long_vert{
+	dir = 5
+	},
+/obj/structure/lattice,
+/turf/space,
+/area/space)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "PU" = (
 /obj/effect/shuttle_landmark/premade/luna_near_aft_port,
 /turf/space,
@@ -2651,10 +2683,17 @@
 "Ri" = (
 /turf/simulated/wall/tgmc/durawall,
 /area/lunaship/office)
+<<<<<<< HEAD
+=======
+"Rm" = (
+/obj/structure/cable/cyan{
+	icon_state = "2-8"
+	},
+/turf/space,
+/area/space)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "RA" = (
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/cyan{
@@ -2669,10 +2708,15 @@
 /turf/simulated/floor/plating/eris/under,
 /area/lunaship/engineering)
 "RI" = (
+<<<<<<< HEAD
 /obj/structure/table/steel,
 /obj/item/weapon/storage/toolbox/mechanical,
 /obj/item/weapon/storage/toolbox/electrical{
 	pixel_y = 5
+=======
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 	},
 /obj/effect/floor_decal/milspec/color/black/half{
 	dir = 4
@@ -2694,8 +2738,6 @@
 /area/lunaship/cockpit)
 "RS" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -2713,13 +2755,9 @@
 /area/lunaship/engineering)
 "SC" = (
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -2732,6 +2770,7 @@
 /area/lunaship/office)
 "SN" = (
 /obj/structure/cable/cyan{
+<<<<<<< HEAD
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
@@ -2740,6 +2779,12 @@
 	d1 = 2;
 	d2 = 4;
 	icon_state = "2-4"
+=======
+	icon_state = "2-4"
+	},
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 	},
 /turf/simulated/wall/rpshull,
 /area/space)
@@ -2754,6 +2799,25 @@
 /obj/effect/floor_decal/techfloor,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/lunaship/cockpit)
+<<<<<<< HEAD
+=======
+"Tg" = (
+/obj/structure/cable/cyan{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/space)
+"Tr" = (
+/obj/structure/sign/directions/bar{
+	dir = 1
+	},
+/obj/structure/sign/directions/recreation{
+	dir = 1;
+	pixel_y = 7
+	},
+/turf/simulated/wall/tgmc/durawall,
+/area/lunaship/bar)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "Ty" = (
 /obj/machinery/computer/ship/sensors{
 	req_one_access = list(777)
@@ -2769,8 +2833,6 @@
 	},
 /obj/structure/lattice,
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/space,
@@ -2780,13 +2842,9 @@
 	dir = 8
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -2802,6 +2860,15 @@
 	opacity = 1
 	},
 /area/lunaship/bar)
+<<<<<<< HEAD
+=======
+"Uy" = (
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/outdoors/grass/heavy/atoll,
+/area/lunaship/park)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "UK" = (
 /obj/structure/table/glass,
 /obj/item/device/healthanalyzer/advanced{
@@ -2833,8 +2900,6 @@
 	},
 /obj/structure/lattice,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/space,
@@ -2847,8 +2912,6 @@
 /area/lunaship/office)
 "Vm" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -2864,8 +2927,6 @@
 /area/lunaship/cockpit)
 "Vx" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -2876,8 +2937,6 @@
 /area/lunaship/office)
 "Vz" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -2897,8 +2956,6 @@
 /obj/structure/fans/hardlight,
 /obj/machinery/door/airlock/angled_tgmc/wide/generic_steel,
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/steel/panels,
@@ -2977,10 +3034,20 @@
 /obj/effect/floor_decal/techfloor,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/lunaship/cockpit)
+<<<<<<< HEAD
+=======
+"Xe" = (
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
+	},
+/obj/structure/hull_corner/long_vert{
+	dir = 10
+	},
+/turf/space,
+/area/space)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "Xg" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -2988,15 +3055,23 @@
 	},
 /turf/simulated/floor/tiled/eris/steel/bar_flat,
 /area/lunaship/bar)
+<<<<<<< HEAD
+=======
+"Xi" = (
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
+	},
+/obj/structure/hull_corner/long_vert{
+	dir = 6
+	},
+/turf/space,
+/area/space)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "Xn" = (
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -3009,8 +3084,6 @@
 /obj/effect/floor_decal/milspec/color/orange/half,
 /obj/machinery/door/airlock/angled_tgmc/wide/generic_steel,
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -3077,8 +3150,6 @@
 	},
 /obj/structure/lattice,
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/space,
@@ -3095,8 +3166,6 @@
 "Zm" = (
 /obj/structure/lattice,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/space,
@@ -3123,8 +3192,6 @@
 /area/lunaship/cockpit)
 "Zy" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -3132,6 +3199,16 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/lunaship/park)
+<<<<<<< HEAD
+=======
+"ZA" = (
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
+	},
+/obj/structure/lattice,
+/turf/simulated/floor/reinforced/airless,
+/area/space)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "ZD" = (
 /obj/machinery/light{
 	dir = 4;
@@ -3161,8 +3238,6 @@
 /area/space)
 "ZM" = (
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/wall/rpshull,
@@ -3188,13 +3263,9 @@
 /area/space)
 "ZX" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,

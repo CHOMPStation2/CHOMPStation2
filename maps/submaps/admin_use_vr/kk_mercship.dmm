@@ -81,7 +81,6 @@
 /area/ship/manta/armoury_st)
 "ak" = (
 /obj/structure/cable/orange{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc/hyper{
@@ -95,8 +94,6 @@
 	pixel_y = -26
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -115,8 +112,6 @@
 /area/ship/manta/hangar)
 "am" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -160,8 +155,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/blast/regular/open{
@@ -198,8 +191,6 @@
 /area/ship/manta/hangar)
 "aM" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -403,13 +394,9 @@
 /area/ship/manta/armoury_st)
 "bc" = (
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/floor_decal/techfloor/corner{
@@ -431,8 +418,6 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -490,13 +475,9 @@
 /area/ship/manta/hallways_port)
 "br" = (
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -518,8 +499,6 @@
 	pixel_x = 26
 	},
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -599,6 +578,12 @@
 /obj/machinery/pointdefense{
 	id_tag = "mercenary_pd"
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "0-2"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/reinforced/airless,
 /area/ship/manta/armoury_st)
 "bI" = (
@@ -843,7 +828,6 @@
 /area/ship/manta/bridge)
 "cG" = (
 /obj/structure/cable/orange{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc/hyper{
@@ -870,12 +854,16 @@
 /obj/machinery/pointdefense{
 	id_tag = "mercenary_pd"
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "0-2"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/reinforced/airless,
 /area/ship/manta/med)
 "cK" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -889,6 +877,12 @@
 /obj/structure/bed,
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/techfloor,
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-4"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/dark,
 /area/ship/manta/holding)
 "cP" = (
@@ -919,7 +913,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/orange{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -960,6 +953,18 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/armoury_st)
+<<<<<<< HEAD
+=======
+"cR" = (
+/obj/effect/floor_decal/techfloor/corner{
+	dir = 5
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/white,
+/area/ship/manta/med)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "cS" = (
 /obj/structure/hull_corner/long_horiz{
 	dir = 6
@@ -975,8 +980,6 @@
 /area/ship/manta/recreation)
 "cX" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -986,6 +989,12 @@
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 5
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/recreation)
 "cY" = (
@@ -1008,8 +1017,6 @@
 /area/ship/manta/recreation)
 "cZ" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/techfloor,
@@ -1043,8 +1050,6 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -1085,8 +1090,6 @@
 /area/ship/manta/barracks/bed_1)
 "dr" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -1094,10 +1097,17 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/bridge)
+<<<<<<< HEAD
+=======
+"dy" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/wall/rshull,
+/area/ship/manta/hallways_port)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "dC" = (
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/wood,
@@ -1130,8 +1140,28 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/recreation)
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/manta/recreation)
+"dK" = (
+/obj/structure/toilet{
+	dir = 1
+	},
+/obj/effect/floor_decal/techfloor{
+	dir = 6
+	},
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/ship/manta/holding)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "dM" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 8
@@ -1173,6 +1203,12 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/glass_external,
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/gunnery)
 "dX" = (
@@ -1207,6 +1243,12 @@
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 10
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/dark,
 /area/ship/manta/holding)
 "ec" = (
@@ -1312,6 +1354,12 @@
 	dir = 5
 	},
 /obj/item/weapon/reagent_containers/glass/beaker/large,
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/white,
 /area/ship/manta/med)
 "eG" = (
@@ -1334,6 +1382,12 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 9
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/armoury_st)
 "eN" = (
@@ -1381,8 +1435,6 @@
 "fg" = (
 /obj/effect/floor_decal/techfloor,
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1466,8 +1518,6 @@
 /area/ship/manta/bridge)
 "fE" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/table/steel_reinforced,
@@ -1606,8 +1656,6 @@
 /area/ship/manta/recreation)
 "gl" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -1639,8 +1687,6 @@
 "gB" = (
 /obj/effect/floor_decal/techfloor,
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1661,6 +1707,12 @@
 /obj/structure/railing{
 	dir = 8
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/plating,
 /area/ship/manta/engine)
 "gF" = (
@@ -1674,7 +1726,6 @@
 	dir = 1
 	},
 /obj/structure/cable/orange{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/floor_decal/industrial/outline/blue,
@@ -1691,13 +1742,9 @@
 /area/ship/manta/teleporter)
 "gG" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -1728,8 +1775,6 @@
 	dir = 9
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -1759,8 +1804,6 @@
 /area/ship/manta/bridge)
 "gX" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/table/steel_reinforced,
@@ -1831,8 +1874,6 @@
 	dir = 8
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -1861,8 +1902,6 @@
 	req_one_access = list(150)
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -1880,6 +1919,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/recreation)
 "hx" = (
@@ -1951,6 +1996,12 @@
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 10
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/dark,
 /area/ship/manta/holding)
 "hS" = (
@@ -1991,8 +2042,6 @@
 /area/ship/manta/engine)
 "hW" = (
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -2008,6 +2057,12 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/dark,
 /area/ship/manta/holding)
 "ia" = (
@@ -2054,7 +2109,6 @@
 "il" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
 /obj/structure/cable/orange{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -2174,8 +2228,6 @@
 	dir = 8
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -2203,8 +2255,6 @@
 	req_one_access = list(150)
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/techfloor,
@@ -2221,13 +2271,9 @@
 /area/ship/manta/bridge)
 "iK" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -2252,7 +2298,6 @@
 	dir = 8
 	},
 /obj/structure/cable/orange{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/wood,
@@ -2261,6 +2306,12 @@
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 1
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/armoury_st)
 "iS" = (
@@ -2305,8 +2356,6 @@
 	dir = 1
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -2315,6 +2364,27 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/hangar)
+<<<<<<< HEAD
+=======
+"ja" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/grille,
+/obj/structure/window/plastitanium/full,
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/ship/manta/gunnery)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "jc" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -2337,7 +2407,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/orange{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -2403,10 +2472,17 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/recreation)
+<<<<<<< HEAD
+=======
+"jt" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/wall/shull,
+/area/ship/manta/med)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "jv" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -2471,8 +2547,6 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -2513,8 +2587,6 @@
 /area/ship/manta/hangar)
 "jT" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/techfloor,
@@ -2562,6 +2634,12 @@
 /area/ship/manta/med)
 "ki" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/white,
 /area/ship/manta/med)
 "kl" = (
@@ -2579,8 +2657,6 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -2653,8 +2729,6 @@
 	dir = 10
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -2695,8 +2769,6 @@
 	dir = 1
 	},
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -2741,10 +2813,17 @@
 /obj/effect/floor_decal/techfloor,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/dock_port)
+<<<<<<< HEAD
+=======
+"lh" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/turf/simulated/wall/rshull,
+/area/ship/manta/mech_bay)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "li" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/techfloor,
@@ -2777,6 +2856,15 @@
 /obj/item/ammo_magazine/m10mm,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/armoury_st)
+<<<<<<< HEAD
+=======
+"lk" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/manta/armoury_st)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "lm" = (
 /turf/simulated/wall/rshull,
 /area/ship/manta/recreation)
@@ -2808,6 +2896,15 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/effect/catwalk_plated/dark,
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-8"
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-4"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/plating,
 /area/ship/manta/engine)
 "lz" = (
@@ -2827,8 +2924,6 @@
 /area/ship/manta/armoury_st)
 "lA" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/techfloor,
@@ -2848,8 +2943,6 @@
 /area/ship/manta/hallways_aft)
 "lG" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -2882,8 +2975,6 @@
 	dir = 8
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -2944,7 +3035,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/orange{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -2967,8 +3057,6 @@
 /obj/structure/table/woodentable,
 /obj/item/weapon/storage/box/donut,
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/wood,
@@ -3018,8 +3106,6 @@
 	},
 /obj/effect/floor_decal/techfloor,
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -3042,6 +3128,12 @@
 	dir = 9
 	},
 /obj/item/mecha_parts/mecha_equipment/cloak,
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/mech_bay)
 "ms" = (
@@ -3079,8 +3171,6 @@
 /area/ship/manta/med)
 "mD" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -3095,6 +3185,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/white,
 /area/ship/manta/med)
 "mL" = (
@@ -3137,13 +3233,9 @@
 /area/ship/manta/hallways_star)
 "mW" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -3159,6 +3251,12 @@
 /area/ship/manta/med)
 "na" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/mech_bay)
 "nf" = (
@@ -3181,8 +3279,6 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -3204,7 +3300,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/orange{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -3214,8 +3309,6 @@
 /area/ship/manta/mech_bay)
 "np" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -3232,8 +3325,6 @@
 /area/ship/manta/magazine)
 "nu" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -3262,6 +3353,12 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 1
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-8"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/white,
 /area/ship/manta/med)
 "nz" = (
@@ -3286,6 +3383,15 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/armoury_st)
+<<<<<<< HEAD
+=======
+"nG" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/wall/rshull,
+/area/ship/manta/med)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "nH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /obj/effect/floor_decal/industrial/warning,
@@ -3295,6 +3401,12 @@
 /obj/machinery/pointdefense{
 	id_tag = "mercenary_pd"
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "0-2"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/reinforced/airless,
 /area/ship/manta/gunnery)
 "nL" = (
@@ -3305,8 +3417,6 @@
 /area/ship/manta/dock_port)
 "nP" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/techfloor/corner{
@@ -3344,17 +3454,19 @@
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 9
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-4"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/dark,
 /area/ship/manta/holding)
 "nY" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -3397,13 +3509,23 @@
 	},
 /turf/simulated/floor/plating,
 /area/ship/manta/hallways_port)
+<<<<<<< HEAD
+=======
+"oh" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/manta/armoury_st)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "oi" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 1
 	},
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -3423,8 +3545,6 @@
 /area/ship/manta/hallways_aft)
 "om" = (
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -3440,8 +3560,6 @@
 /area/ship/manta/hallways_port)
 "op" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/light/small,
@@ -3454,6 +3572,12 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/mech_bay)
 "ou" = (
@@ -3472,7 +3596,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/orange{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -3604,13 +3727,17 @@
 /obj/mecha/combat/gygax/dark{
 	desc = "A lightweight combat exosuit, based off the standard Gygax chassis but no doubt thoroughly customized and upgraded."
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "2-8"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/mech_bay)
 "oU" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -3702,8 +3829,6 @@
 "pB" = (
 /obj/effect/floor_decal/techfloor,
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -3734,8 +3859,6 @@
 /area/ship/manta/magazine)
 "pO" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/techfloor,
@@ -3762,7 +3885,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/orange{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/catwalk_plated/dark,
@@ -3822,11 +3944,9 @@
 "qw" = (
 /obj/machinery/power/terminal,
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -3871,6 +3991,12 @@
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 6
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/white,
 /area/ship/manta/med)
 "qB" = (
@@ -3896,6 +4022,12 @@
 /obj/machinery/power/pointdefense{
 	id_tag = "mercenary_pd"
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "0-4"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/reinforced/airless,
 /area/ship/manta/dock_star)
 "qJ" = (
@@ -3930,8 +4062,6 @@
 /area/ship/manta/mech_bay)
 "qP" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/firealarm/alarms_hidden{
@@ -3951,6 +4081,12 @@
 /obj/machinery/pointdefense{
 	id_tag = "mercenary_pd"
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "0-8"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/reinforced/airless,
 /area/ship/manta/magazine)
 "qR" = (
@@ -3985,13 +4121,17 @@
 /area/ship/manta/med)
 "rb" = (
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 6
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/white,
 /area/ship/manta/med)
 "rl" = (
@@ -4002,7 +4142,6 @@
 	},
 /obj/effect/floor_decal/techfloor,
 /obj/structure/cable/orange{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/white,
@@ -4015,6 +4154,12 @@
 /obj/machinery/pointdefense{
 	id_tag = "mercenary_pd"
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "0-4"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/reinforced/airless,
 /area/ship/manta/mech_bay)
 "rq" = (
@@ -4048,8 +4193,6 @@
 /area/ship/manta/mech_bay)
 "rC" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -4137,8 +4280,6 @@
 	req_one_access = list(150)
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/border_only,
@@ -4152,8 +4293,6 @@
 /area/ship/manta/armoury_st)
 "rX" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -4188,6 +4327,15 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/armoury_st)
+<<<<<<< HEAD
+=======
+"sl" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/ship/manta/magazine)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "sn" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
@@ -4200,8 +4348,6 @@
 /area/shuttle/manta_ship_boat)
 "sq" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -4221,13 +4367,9 @@
 	dir = 1
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -4282,6 +4424,12 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/white,
 /area/ship/manta/med)
 "sM" = (
@@ -4299,10 +4447,17 @@
 "sN" = (
 /turf/simulated/wall/shull,
 /area/ship/manta/bridge)
+<<<<<<< HEAD
+=======
+"sR" = (
+/obj/structure/cable/orange{
+	icon_state = "1-8"
+	},
+/turf/simulated/wall/rshull,
+/area/ship/manta/holding)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "sS" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -4326,8 +4481,6 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/white,
@@ -4363,6 +4516,12 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/gunnery)
 "tk" = (
@@ -4433,8 +4592,6 @@
 	dir = 1
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -4485,8 +4642,6 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -4503,6 +4658,12 @@
 /obj/machinery/power/pointdefense{
 	id_tag = "mercenary_pd"
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "0-8"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/reinforced/airless,
 /area/ship/manta/dock_port)
 "tV" = (
@@ -4520,8 +4681,6 @@
 /area/ship/manta/hangar)
 "ua" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/techfloor/corner{
@@ -4541,8 +4700,6 @@
 /area/ship/manta/dock_port)
 "uc" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/firealarm/alarms_hidden{
@@ -4668,8 +4825,6 @@
 /area/ship/manta/hallways_star)
 "uK" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -4689,6 +4844,12 @@
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 5
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/hallways_star)
 "uN" = (
@@ -4721,8 +4882,6 @@
 /area/ship/manta/hallways_star)
 "uS" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/techfloor/corner{
@@ -4764,12 +4923,16 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 5
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "2-4"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/hallways_star)
 "uY" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -4777,7 +4940,6 @@
 "uZ" = (
 /obj/machinery/power/port_gen/pacman/super/potato,
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/light/no_nightshift{
@@ -4792,12 +4954,26 @@
 	req_one_access = list(150)
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/engineering)
+<<<<<<< HEAD
+=======
+"vr" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/obj/structure/cable/orange{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/plating,
+/area/ship/manta/engine)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "vt" = (
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 6
@@ -4812,6 +4988,12 @@
 	dir = 1
 	},
 /obj/machinery/meter,
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/gunnery)
 "vu" = (
@@ -4841,6 +5023,12 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-8"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/plating,
 /area/ship/manta/dock_port)
 "vA" = (
@@ -4925,7 +5113,6 @@
 	dir = 1
 	},
 /obj/structure/cable/orange{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/floor_decal/industrial/outline/blue,
@@ -4946,10 +5133,22 @@
 	},
 /turf/simulated/floor/plating,
 /area/ship/manta/engine)
+<<<<<<< HEAD
+=======
+"vT" = (
+/obj/machinery/door/window/brigdoor/northleft{
+	req_access = list(150);
+	req_one_access = list(150)
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/ship/manta/holding)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "vU" = (
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -4964,6 +5163,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "2-8"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/hallways_port)
 "vV" = (
@@ -4984,13 +5189,9 @@
 "vW" = (
 /obj/effect/floor_decal/techfloor,
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
@@ -5002,13 +5203,9 @@
 /area/ship/manta/hallways_port)
 "wb" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -5038,8 +5235,6 @@
 	req_one_access = list(150)
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -5048,6 +5243,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-4"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/armoury_st)
 "wd" = (
@@ -5058,8 +5259,6 @@
 /area/ship/manta/bridge)
 "wi" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -5088,8 +5287,6 @@
 /area/ship/manta/bridge)
 "wn" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -5100,8 +5297,6 @@
 /area/ship/manta/armoury_st)
 "wo" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -5112,8 +5307,6 @@
 /area/ship/manta/armoury_st)
 "wp" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -5134,8 +5327,6 @@
 	},
 /obj/effect/floor_decal/techfloor,
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/light/no_nightshift,
@@ -5178,8 +5369,6 @@
 /area/ship/manta/armoury_st)
 "wy" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -5195,13 +5384,9 @@
 /area/ship/manta/armoury_st)
 "wC" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -5210,25 +5395,25 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-4"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/armoury_st)
 "wM" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/engineering)
 "wO" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -5238,8 +5423,6 @@
 /area/ship/manta/armoury_st)
 "wP" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/techfloor/corner{
@@ -5257,8 +5440,6 @@
 	req_one_access = list(150)
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -5272,8 +5453,6 @@
 /area/ship/manta/bridge)
 "wX" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/techfloor/corner{
@@ -5284,8 +5463,6 @@
 "wZ" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -5293,13 +5470,9 @@
 /area/ship/manta/hangar)
 "xa" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/techfloor/corner{
@@ -5377,8 +5550,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -5413,8 +5584,6 @@
 	dir = 8
 	},
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -5435,8 +5604,6 @@
 /area/ship/manta/magazine)
 "xF" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/techfloor/corner{
@@ -5454,16 +5621,12 @@
 	},
 /obj/effect/floor_decal/techfloor,
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/hangar)
 "xK" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -5489,8 +5652,6 @@
 "xN" = (
 /obj/effect/floor_decal/techfloor,
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -5504,8 +5665,6 @@
 "xP" = (
 /obj/effect/floor_decal/techfloor,
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/light/no_nightshift,
@@ -5515,6 +5674,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-8"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/hallways_star)
 "xQ" = (
@@ -5541,8 +5706,6 @@
 "xW" = (
 /obj/effect/floor_decal/techfloor,
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -5558,8 +5721,6 @@
 	dir = 8
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -5589,8 +5750,6 @@
 	dir = 1
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -5604,7 +5763,6 @@
 "yj" = (
 /obj/machinery/power/port_gen/pacman/super/potato,
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/light/no_nightshift{
@@ -5614,8 +5772,6 @@
 /area/ship/manta/engineering)
 "yk" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/firealarm/alarms_hidden{
@@ -5642,17 +5798,19 @@
 /turf/simulated/floor/reinforced/airless,
 /area/ship/manta/dock_star)
 "yo" = (
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-4"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/reinforced/airless,
 /area/ship/manta/dock_port)
 "yp" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -5669,8 +5827,6 @@
 "ys" = (
 /obj/effect/floor_decal/techfloor,
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/light/no_nightshift,
@@ -5685,13 +5841,9 @@
 "yt" = (
 /obj/effect/floor_decal/techfloor,
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -5717,8 +5869,6 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -5727,6 +5877,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-8"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/hallways_star)
 "yw" = (
@@ -5745,6 +5901,12 @@
 "yy" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
+<<<<<<< HEAD
+=======
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 	},
 /turf/simulated/floor/plating,
 /area/ship/manta/engine)
@@ -5803,13 +5965,9 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -5826,6 +5984,12 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 1
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "2-4"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/dark,
 /area/ship/manta/holding)
 "yT" = (
@@ -5849,6 +6013,12 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 5
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/dark,
 /area/ship/manta/holding)
 "yW" = (
@@ -5897,8 +6067,6 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -5927,8 +6095,6 @@
 	layer = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/border_only,
@@ -5949,8 +6115,6 @@
 /area/ship/manta/recreation)
 "zp" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -5961,6 +6125,12 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 10
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/mech_bay)
 "zv" = (
@@ -5986,6 +6156,12 @@
 /obj/machinery/power/pointdefense{
 	id_tag = "mercenary_pd"
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "0-4"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/reinforced/airless,
 /area/ship/manta/recreation)
 "zx" = (
@@ -6054,8 +6230,6 @@
 /area/ship/manta/bridge)
 "zC" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -6118,8 +6292,6 @@
 /area/ship/manta/barracks)
 "zU" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -6133,6 +6305,16 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/bridge)
+<<<<<<< HEAD
+=======
+"zV" = (
+/obj/machinery/flasher,
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/ship/manta/holding)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "zX" = (
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 8
@@ -6146,6 +6328,12 @@
 	dir = 8;
 	pixel_x = 23
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/plating,
 /area/ship/manta/holding)
 "zY" = (
@@ -6172,8 +6360,6 @@
 "Aj" = (
 /obj/effect/floor_decal/techfloor,
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -6198,8 +6384,6 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -6239,13 +6423,9 @@
 /area/ship/manta/atmos)
 "AC" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/effect/floor_decal/techfloor,
@@ -6277,6 +6457,22 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/manta_ship_boat)
+<<<<<<< HEAD
+=======
+"AI" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/ship/manta/engine)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "AJ" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
@@ -6295,8 +6491,6 @@
 	dir = 8
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -6309,8 +6503,6 @@
 	req_access = list(150)
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -6339,6 +6531,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "2-8"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/dark,
 /area/ship/manta/holding)
 "AX" = (
@@ -6351,6 +6549,15 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/barracks)
+<<<<<<< HEAD
+=======
+"AZ" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/wall/rshull,
+/area/ship/manta/dock_star)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "Bi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -6358,6 +6565,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/gunnery)
 "Bk" = (
@@ -6368,7 +6581,6 @@
 	pixel_x = -24
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -6378,8 +6590,6 @@
 /area/ship/manta/engineering)
 "Bn" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/border_only,
@@ -6402,12 +6612,19 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/barracks)
+<<<<<<< HEAD
+=======
+"Bz" = (
+/obj/structure/cable/orange{
+	icon_state = "2-8"
+	},
+/turf/simulated/wall/rshull,
+/area/ship/manta/dock_star)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "BJ" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 8
@@ -6438,8 +6655,6 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -6484,6 +6699,12 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-4"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/plating,
 /area/ship/manta/dock_star)
 "Cp" = (
@@ -6554,6 +6775,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/mech_bay)
 "CF" = (
@@ -6631,8 +6858,6 @@
 /area/ship/manta/recreation)
 "Dc" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -6724,8 +6949,6 @@
 /area/ship/manta/atmos)
 "Dp" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -6766,8 +6989,6 @@
 /area/ship/manta/armoury_st)
 "Dw" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/light_switch{
@@ -6855,6 +7076,12 @@
 	dir = 9
 	},
 /obj/structure/catwalk,
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/plating,
 /area/ship/manta/magazine)
 "DR" = (
@@ -6910,6 +7137,15 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/manta_ship_boat)
+<<<<<<< HEAD
+=======
+"Ed" = (
+/obj/structure/cable/orange{
+	icon_state = "2-4"
+	},
+/turf/simulated/wall/rshull,
+/area/ship/manta/dock_port)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "Eg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 6
@@ -6926,8 +7162,6 @@
 	req_access = list(999)
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -6937,8 +7171,6 @@
 	dir = 8
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -6993,12 +7225,19 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-4"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/hallways_port)
 "Ey" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -7057,8 +7296,6 @@
 /area/ship/manta/armoury_st)
 "EI" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -7087,8 +7324,6 @@
 /area/shuttle/manta_ship_boat)
 "EN" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -7100,13 +7335,21 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/dock_star)
+<<<<<<< HEAD
+=======
+"EU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/manta/armoury_st)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "EY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -7137,8 +7380,6 @@
 /area/ship/manta/barracks)
 "Fb" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/alarm/alarms_hidden{
@@ -7208,7 +7449,6 @@
 	pixel_y = -24
 	},
 /obj/structure/cable/orange{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/light/no_nightshift{
@@ -7216,10 +7456,20 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/armoury_as)
+<<<<<<< HEAD
+=======
+"Fy" = (
+/obj/effect/floor_decal/techfloor/corner{
+	dir = 10
+	},
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/manta/recreation)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "FB" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/wood,
@@ -7229,10 +7479,20 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/ship/manta/magazine)
+<<<<<<< HEAD
+=======
+"FE" = (
+/obj/effect/floor_decal/techfloor/corner{
+	dir = 5
+	},
+/obj/structure/cable/orange{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/white,
+/area/ship/manta/med)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "FH" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/border_only,
@@ -7259,8 +7519,6 @@
 /area/ship/manta/holding)
 "FQ" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -7284,7 +7542,6 @@
 	hacked = 1
 	},
 /obj/structure/cable/orange{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -7311,8 +7568,6 @@
 "Gg" = (
 /obj/structure/table/woodentable,
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/item/weapon/paper/manta_new_personnel_brief,
@@ -7350,8 +7605,6 @@
 /area/ship/manta/atmos)
 "Gu" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -7379,8 +7632,6 @@
 	},
 /obj/machinery/meter,
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
@@ -7430,17 +7681,19 @@
 	req_one_access = list(150)
 	},
 /obj/machinery/door/firedoor/glass,
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/dark,
 /area/ship/manta/holding)
 "GS" = (
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/effect/floor_decal/techfloor/corner{
@@ -7453,8 +7706,6 @@
 	dir = 8
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
@@ -7550,8 +7801,6 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -7609,8 +7858,6 @@
 /area/ship/manta/armoury_st)
 "HV" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -7622,8 +7869,6 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -7645,24 +7890,18 @@
 	},
 /obj/machinery/meter,
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
 /area/ship/manta/dock_star)
 "In" = (
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/floor_decal/techfloor{
 	dir = 8
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -7679,13 +7918,9 @@
 /area/ship/manta/hallways_aft)
 "Io" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/effect/floor_decal/techfloor,
@@ -7741,8 +7976,6 @@
 /area/ship/manta/engineering)
 "IG" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -7781,8 +8014,6 @@
 /area/ship/manta/armoury_st)
 "IK" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/techfloor,
@@ -7805,16 +8036,12 @@
 /area/ship/manta/hallways_aft)
 "IO" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/engineering)
 "IT" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/wood,
@@ -7868,8 +8095,6 @@
 /area/ship/manta/holding)
 "Jk" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -7885,8 +8110,6 @@
 /area/ship/manta/bridge)
 "Jl" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -7912,17 +8135,19 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 10
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/recreation)
 "Js" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -7965,13 +8190,9 @@
 /area/ship/manta/armoury_st)
 "Jw" = (
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -8014,8 +8235,6 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/light/no_nightshift{
@@ -8027,8 +8246,6 @@
 /area/ship/manta/hallways_star)
 "JX" = (
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -8043,6 +8260,12 @@
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 6
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/gunnery)
 "JY" = (
@@ -8079,8 +8302,6 @@
 /area/shuttle/manta_ship_boat)
 "Kn" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -8096,8 +8317,6 @@
 /area/ship/manta/bridge)
 "Ko" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
@@ -8109,16 +8328,12 @@
 /area/ship/manta/hallways_star)
 "Kp" = (
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -8135,8 +8350,6 @@
 "Kq" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -8179,6 +8392,18 @@
 /obj/item/clothing/accessory/storage/pouches/large/green,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/barracks)
+<<<<<<< HEAD
+=======
+"KC" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/ship/manta/magazine)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "KE" = (
 /obj/machinery/door/window/brigdoor/eastright{
 	req_access = list();
@@ -8220,6 +8445,12 @@
 /obj/machinery/power/pointdefense{
 	id_tag = "mercenary_pd"
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "0-8"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/reinforced/airless,
 /area/ship/manta/holding)
 "KL" = (
@@ -8227,8 +8458,6 @@
 	dir = 8
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -8277,8 +8506,6 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/techfloor/corner{
@@ -8334,8 +8561,6 @@
 /area/ship/manta/holding)
 "Lj" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -8362,6 +8587,22 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ship/manta/holding)
+<<<<<<< HEAD
+=======
+"Ls" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/ship/manta/engine)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "Lt" = (
 /obj/machinery/computer/teleporter{
 	dir = 2
@@ -8385,7 +8626,6 @@
 	pixel_y = -24
 	},
 /obj/structure/cable/orange{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -8398,6 +8638,12 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/plating,
 /area/ship/manta/engine)
 "LJ" = (
@@ -8415,8 +8661,6 @@
 /area/ship/manta/engineering)
 "LM" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -8437,6 +8681,15 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/hangar)
+<<<<<<< HEAD
+=======
+"LR" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/ship/manta/gunnery)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "LS" = (
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 4
@@ -8471,6 +8724,12 @@
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 10
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "2-4"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/dark,
 /area/ship/manta/holding)
 "LU" = (
@@ -8505,15 +8764,20 @@
 	},
 /turf/simulated/floor/plating,
 /area/ship/manta/hallways_star)
+<<<<<<< HEAD
+=======
+"Me" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/turf/simulated/wall/rshull,
+/area/ship/manta/magazine)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "Mf" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -8542,6 +8806,12 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-4"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/dark,
 /area/ship/manta/holding)
 "Ml" = (
@@ -8593,13 +8863,9 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -8621,6 +8887,12 @@
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 9
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/dark,
 /area/ship/manta/holding)
 "Mz" = (
@@ -8636,12 +8908,16 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-8"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/dark,
 /area/ship/manta/holding)
 "MI" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/techfloor/corner{
@@ -8763,8 +9039,6 @@
 "Ng" = (
 /obj/effect/floor_decal/techfloor,
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
@@ -8825,8 +9099,6 @@
 /area/space)
 "Nw" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/alarm/alarms_hidden{
@@ -8923,8 +9195,6 @@
 /area/ship/manta/engineering)
 "NK" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -8956,8 +9226,6 @@
 /obj/structure/railing,
 /obj/structure/catwalk,
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -9069,8 +9337,6 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/light/no_nightshift{
@@ -9112,6 +9378,15 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ship/manta/holding)
+<<<<<<< HEAD
+=======
+"ON" = (
+/obj/structure/cable/orange{
+	icon_state = "2-4"
+	},
+/turf/simulated/wall/rshull,
+/area/ship/manta/magazine)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "OO" = (
 /obj/structure/sign/warning/radioactive,
 /turf/simulated/wall/rshull,
@@ -9139,8 +9414,6 @@
 /area/ship/manta/hallways_star)
 "OV" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/alarm/alarms_hidden{
@@ -9176,8 +9449,6 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/light/no_nightshift{
@@ -9195,8 +9466,6 @@
 	pixel_y = -23
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/light/no_nightshift,
@@ -9259,6 +9528,15 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/dark,
 /area/ship/manta/holding)
+<<<<<<< HEAD
+=======
+"PI" = (
+/obj/structure/cable/orange{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/ship/manta/dock_star)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "PJ" = (
 /obj/machinery/vending/fitness{
 	prices = list()
@@ -9291,12 +9569,16 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/dark,
 /area/ship/manta/holding)
 "PP" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -9309,8 +9591,6 @@
 /area/ship/manta/commander)
 "PU" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -9322,6 +9602,12 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/mech_bay)
 "PW" = (
@@ -9370,7 +9656,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/orange{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/light/no_nightshift{
@@ -9386,7 +9671,6 @@
 	pixel_x = -24
 	},
 /obj/structure/cable/orange{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/catwalk_plated/dark,
@@ -9394,8 +9678,6 @@
 /area/ship/manta/magazine)
 "Qj" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/wood,
@@ -9416,11 +9698,15 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/catwalk,
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/plating,
 /area/ship/manta/engine)
 "Qx" = (
@@ -9434,8 +9720,6 @@
 /area/ship/manta/recreation)
 "Qy" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/techfloor,
@@ -9443,8 +9727,6 @@
 /area/ship/manta/bridge)
 "QD" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/light_switch{
@@ -9465,8 +9747,6 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -9503,8 +9783,6 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -9542,6 +9820,12 @@
 	},
 /obj/effect/floor_decal/techfloor{
 	dir = 9
+<<<<<<< HEAD
+=======
+	},
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/gunnery)
@@ -9613,8 +9897,6 @@
 /area/ship/manta/recreation)
 "RJ" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -9709,6 +9991,12 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 1
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/mech_bay)
 "RU" = (
@@ -9749,6 +10037,15 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/armoury_st)
+<<<<<<< HEAD
+=======
+"RV" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/turf/simulated/wall/rshull,
+/area/ship/manta/gunnery)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "RY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -9795,8 +10092,6 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -9807,8 +10102,6 @@
 /area/ship/manta/hangar)
 "Sf" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
@@ -9844,6 +10137,18 @@
 	},
 /turf/simulated/floor/wood,
 /area/ship/manta/barracks)
+<<<<<<< HEAD
+=======
+"Sr" = (
+/obj/machinery/power/pointdefense{
+	id_tag = "mercenary_pd"
+	},
+/obj/structure/cable/orange{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/ship/manta/gunnery)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "Ss" = (
 /obj/machinery/door/airlock/multi_tile/glass{
 	req_one_access = list(150)
@@ -9853,8 +10158,6 @@
 	dir = 8
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -9867,6 +10170,15 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/armoury_st)
+<<<<<<< HEAD
+=======
+"SB" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/wall/rshull,
+/area/ship/manta/magazine)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "SF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/industrial/warning{
@@ -9890,8 +10202,6 @@
 	req_one_access = list(150)
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -9907,20 +10217,23 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/mech_bay)
+<<<<<<< HEAD
+=======
+"SP" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/turf/simulated/wall/rshull,
+/area/ship/manta/holding)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "SV" = (
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
@@ -9961,7 +10274,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/orange{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -10065,6 +10377,12 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "2-4"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/plating,
 /area/ship/manta/engine)
 "Tp" = (
@@ -10083,6 +10401,18 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/hallways_port)
+<<<<<<< HEAD
+=======
+"Tr" = (
+/obj/structure/cable/orange{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-8"
+	},
+/turf/simulated/wall/rshull,
+/area/ship/manta/magazine)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "Tu" = (
 /obj/structure/hull_corner/long_vert{
 	dir = 9
@@ -10140,6 +10470,16 @@
 	},
 /turf/simulated/floor/wood,
 /area/ship/manta/barracks/bed_2)
+<<<<<<< HEAD
+=======
+"TC" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/manta/armoury_st)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "TD" = (
 /obj/machinery/light/small,
 /obj/effect/floor_decal/industrial/outline,
@@ -10189,8 +10529,6 @@
 "TN" = (
 /obj/effect/floor_decal/techfloor,
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/light/no_nightshift,
@@ -10224,6 +10562,15 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "2-4"
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-4"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/mech_bay)
 "TY" = (
@@ -10245,6 +10592,12 @@
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 9
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/dark,
 /area/ship/manta/holding)
 "Ub" = (
@@ -10324,8 +10677,6 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -10341,8 +10692,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/multi_tile/metal{
@@ -10361,6 +10710,12 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 8
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/gunnery)
 "UM" = (
@@ -10384,6 +10739,12 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/dark,
 /area/ship/manta/holding)
 "UQ" = (
@@ -10400,8 +10761,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -10420,8 +10779,6 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/glass_engineering{
@@ -10447,8 +10804,6 @@
 /area/ship/manta/engine)
 "Vg" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -10477,8 +10832,6 @@
 /area/ship/manta/mech_bay)
 "Vl" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -10536,7 +10889,6 @@
 "Vz" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
 /obj/structure/cable/orange{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -10576,8 +10928,6 @@
 	req_one_access = list(150)
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -10653,8 +11003,6 @@
 	pixel_y = 26
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/item/weapon/storage/firstaid/fire,
@@ -10665,10 +11013,17 @@
 /obj/structure/table/steel_reinforced,
 /turf/simulated/floor/tiled/dark,
 /area/ship/manta/holding)
+<<<<<<< HEAD
+=======
+"VO" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/wall/rshull,
+/area/ship/manta/engine)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "VP" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/techfloor,
@@ -10692,8 +11047,6 @@
 	dir = 1
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -10706,8 +11059,6 @@
 /area/ship/manta/hallways_aft)
 "We" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -10734,8 +11085,6 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -10776,8 +11125,6 @@
 "WN" = (
 /obj/machinery/door/firedoor/multi_tile,
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -10794,16 +11141,12 @@
 "WO" = (
 /obj/structure/table/woodentable,
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/wood,
 /area/ship/manta/barracks)
 "WU" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/multi_tile/metal{
@@ -10827,8 +11170,6 @@
 /area/ship/manta/bridge)
 "Xa" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -10847,8 +11188,6 @@
 	dir = 8
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -10866,8 +11205,6 @@
 /area/ship/manta/hallways_port)
 "Xl" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -10885,8 +11222,6 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -10897,15 +11232,20 @@
 	},
 /turf/simulated/floor/wood,
 /area/ship/manta/barracks/bed_1)
+<<<<<<< HEAD
+=======
+"Xn" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/wall/rshull,
+/area/ship/manta/armoury_st)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "Xo" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
@@ -10922,8 +11262,6 @@
 	},
 /obj/structure/catwalk,
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
@@ -10950,13 +11288,9 @@
 "Xy" = (
 /obj/structure/bed/chair/comfy/black,
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -11019,13 +11353,9 @@
 /area/ship/manta/engine)
 "XF" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -11042,9 +11372,28 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/engineering)
+<<<<<<< HEAD
 "XO" = (
 /turf/simulated/floor/reinforced/airless,
 /area/ship/manta/magazine)
+=======
+"XL" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/wall/rshull,
+/area/ship/manta/gunnery)
+"XO" = (
+/turf/simulated/floor/reinforced/airless,
+/area/ship/manta/magazine)
+"XP" = (
+/obj/structure/catwalk,
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/ship/manta/magazine)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "XQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -11053,8 +11402,6 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/techfloor/corner{
@@ -11094,8 +11441,6 @@
 	dir = 1
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -11108,6 +11453,12 @@
 /obj/machinery/power/pointdefense{
 	id_tag = "mercenary_pd"
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "0-2"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/reinforced/airless,
 /area/ship/manta/hallways_port)
 "Yd" = (
@@ -11132,8 +11483,6 @@
 /area/ship/manta/barracks)
 "Yh" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/techfloor/corner{
@@ -11148,6 +11497,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/manta/recreation)
 "Yj" = (
@@ -11194,8 +11549,6 @@
 /area/ship/manta/holding)
 "Yp" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -11216,11 +11569,18 @@
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled/dark,
 /area/ship/manta/holding)
+<<<<<<< HEAD
+=======
+"Ys" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/wall/rshull,
+/area/ship/manta/dock_port)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "YA" = (
 /obj/structure/bed/chair/bay/comfy/red,
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -11236,7 +11596,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/orange{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/catwalk_plated/dark,
@@ -11255,8 +11614,6 @@
 /area/ship/manta/bridge)
 "YF" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
@@ -11294,8 +11651,6 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -11307,7 +11662,6 @@
 "YS" = (
 /obj/machinery/power/terminal,
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -11326,8 +11680,6 @@
 /area/ship/manta/bridge)
 "YW" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -11368,16 +11720,31 @@
 /area/ship/manta/gunnery)
 "Zh" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/dark,
 /area/ship/manta/holding)
+=======
+/obj/structure/cable/orange{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/ship/manta/holding)
+"Zk" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/turf/simulated/wall/rshull,
+/area/ship/manta/recreation)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "Zn" = (
 /obj/structure/table/rack,
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/grenade/frag,
@@ -11411,13 +11778,23 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ship/manta/holding)
+<<<<<<< HEAD
+=======
+"Zw" = (
+/obj/effect/floor_decal/techfloor/corner{
+	dir = 10
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/manta/mech_bay)
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 "Zy" = (
 /turf/simulated/wall/shull,
 /area/ship/manta/dock_port)
 "Zz" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -11427,17 +11804,27 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/plating,
 /area/ship/manta/magazine)
 "ZB" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable/orange{
+	icon_state = "2-8"
+	},
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 /turf/simulated/floor/tiled/dark,
 /area/ship/manta/holding)
 "ZF" = (
@@ -11453,7 +11840,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/orange{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -11471,8 +11857,6 @@
 /area/ship/manta/recreation)
 "ZI" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/techfloor/corner{
@@ -11529,8 +11913,6 @@
 	dir = 8
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,

@@ -27868,7 +27868,11 @@ Ua
 	icon_state = "4-8"
 	},
 /obj/structure/cable/cyan{
+<<<<<<< HEAD
 	icon_state = "1-8"
+=======
+	icon_state = "2-8"
+>>>>>>> ab8e03d31e... Merge pull request #15390 from Very-Soft/backtotether
 	},
 /turf/simulated/floor/tiled/eris/dark,
 /area/aro3/power)
@@ -31172,8 +31176,6 @@ Ua
 /area/aro3/power)
 "Br" = (
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/milspec/color/silver/half{
@@ -34187,8 +34189,6 @@ Ua
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/milspec/stripe,
