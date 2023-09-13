@@ -74,7 +74,7 @@
 	light_color = "#FF0099"
 
 	hud_state = "plasma_rifle"
-	damage = 30
+	damage = 25
 	armor_penetration = 10
 
 

@@ -42,7 +42,7 @@
 	armor_penetration = 40
 
 /obj/item/projectile/beam/precursor
-	damage = 30
+	damage = 25
 
 /obj/item/projectile/beam/phaser //The "medium" phaser beam.
 	damage = 10

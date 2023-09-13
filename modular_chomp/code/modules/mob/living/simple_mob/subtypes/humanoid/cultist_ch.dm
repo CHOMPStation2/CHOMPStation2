@@ -17,12 +17,16 @@
 	movement_cooldown = -1
 	melee_damage_lower = 7
 	melee_damage_upper = 7
+	maxHealth = 37
+	health = 37
 
 /mob/living/simple_mob/humanoid/cultist/castertesh
 	movement_cooldown = -1
 	projectiletype = /obj/item/projectile/energy/inversion
 	melee_damage_lower = 7
 	melee_damage_upper = 7
+	maxHealth = 37
+	health = 37
 
 /mob/living/simple_mob/humanoid/cultist/elite
 	movement_cooldown = 1
