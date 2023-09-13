@@ -96,12 +96,14 @@
 	density = TRUE
 	var/muffin_mode = FALSE
 	var/mob/living/simple_mob/vore/aggressive/corrupthound/muffinmonster
+	var/obj/machinery/recycling/crusher/crusher //Bluespace connection for recyclables
 
 /obj/structure/biowaste_tank/Initialize()
 	muffinmonster = new /mob/living/simple_mob/vore/aggressive/corrupthound/muffinmonster(src)
 	muffinmonster.name = "Activate Muffin Monster"
 	muffinmonster.voremob_loaded = TRUE
 	muffinmonster.init_vore()
+	crusher = locate(/obj/machinery/recycling/crusher)
 	return ..()
 
 /obj/structure/biowaste_tank/AllowDrop()
@@ -120,6 +122,9 @@
 			for(var/atom/movable/C in thing.contents)
 				C.forceMove(src)
 		qdel(thing)
+		return
+	if(istype(crusher) && istype(thing, /obj/item/debris_pack))
+		crusher.take_item(thing)
 		return
 	if(muffin_mode)
 		if(muffinmonster)
@@ -175,3 +180,4 @@
 	B.desc = "With a resounding CRUNCH, your form has gotten snagged by the Muffin Monster's rotational interlocking cutters indiscriminately crunching away at anything unlucky enough to end up in its hopper, only for the insatiable machine to grind it all down into a slurry mulch fine enough to pass through the narrow sewage lines trouble-free..."
 	B.digest_brute = 20
 	B.special_entrance_sound = 'sound/machines/blender.ogg'
+	B.recycling = TRUE

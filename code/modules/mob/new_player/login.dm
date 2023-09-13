@@ -31,6 +31,10 @@ var/obj/effect/lobby_image = new /obj/effect/lobby_image
 	if(join_motd)
 		to_chat(src, "<div class=\"motd\">[join_motd]</div>")
 
+	if(has_respawned)
+		to_chat(usr, config.respawn_message)
+		has_respawned = FALSE
+
 	if(!mind)
 		mind = new /datum/mind(key)
 		mind.active = 1

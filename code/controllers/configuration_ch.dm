@@ -3,9 +3,9 @@
 
 
 /datum/configuration
-	var/discord_restriction = 0
-	var/use_jobwhitelist = 1
-	var/emojis = 1
+	var/discord_restriction = FALSE
+	var/use_jobwhitelist = TRUE
+	var/emojis = FALSE
 
 	var/vorefootstep_volume = 75	//In future see about making a function to adjust volume serverside in config.txt, easy to do with reenable values. - Jack
 

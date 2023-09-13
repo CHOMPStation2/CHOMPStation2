@@ -68,6 +68,7 @@ var/const/TALMIN			=(1<<5)
 //VOREStation Add End
 */
 
+//CHOMPedit start: next chunk doesn't exist upstream, not sure what it's actually used for.
 var/list/assistant_occupations = list(
 )
 
@@ -159,12 +160,12 @@ var/list/whitelisted_positions = list(
 	"Chief Engineer",
 	"Research Director",
 	"Chief Medical Officer",
-	"Warden",
+	"Internal Affairs Agent",
 	"AI"
-) //CHOMPEdit: Removed Command Secretary from whitelisted jobs.
+) //CHOMPEdit: end
 
 /proc/guest_jobbans(var/job)
-	return ((job in whitelisted_positions))
+	return // ((job in whitelisted_positions)) // CHOMPedit: spaghetti that is our whitelist system means this prevents use of config/jobswhitelist.txt
 
 /proc/get_job_datums()
 	var/list/occupations = list()

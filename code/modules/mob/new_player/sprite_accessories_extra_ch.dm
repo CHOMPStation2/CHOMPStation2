@@ -633,3 +633,21 @@
 	icon_state = "spectre_eyes"
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/organs_gi
+	name = "Internal Organs - Digestive"
+	icon_state = "organs_gastro"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_TORSO,BP_GROIN)
+
+/datum/sprite_accessory/marking/ch/organs_cv
+	name = "Internal Organs - Heart,Lungs"
+	icon_state = "organs_cardio" //Look I know cardio doesn't include the lungs but I don't care that's what I'm calling it
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_TORSO)
+
+/datum/sprite_accessory/marking/ch/organs_ribs
+	name = "Internal Organs - Ribcage"
+	icon_state = "organs_ribs"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_TORSO)

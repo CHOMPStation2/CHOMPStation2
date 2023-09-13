@@ -272,7 +272,10 @@
 		"The churning walls slowly pulverize you into meaty nutrients.",
 		"The stomach glorps and gurgles as it tries to work you into slop.")
 	can_be_drop_pred = TRUE // Mobs will eat anyone that decides to drop/slip into them by default.
-	B.belly_fullscreen = "yet_another_tumby"
+//	B.belly_fullscreen = "yet_another_tumby" //Chompedit - Why are they even using this one, I do not understand.
+	B.belly_fullscreen = "a_tumby" //Chompedit
+	B.belly_fullscreen_color = "#823232" //Chompedit
+	B.belly_fullscreen_color2 = "#823232" //Chompedit
 
 /mob/living/simple_mob/Bumped(var/atom/movable/AM, yes)
 	if(tryBumpNom(AM))

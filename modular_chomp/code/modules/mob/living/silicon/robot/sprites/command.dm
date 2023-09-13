@@ -28,7 +28,7 @@
 
 /datum/robot_sprite/dogborg/tall/command/meka
 	name = "MEKA"
-	sprite_icon_state = "mmekaunity"
+	sprite_icon_state = "mekaunity"
 	has_eye_light_sprites = TRUE
 	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
