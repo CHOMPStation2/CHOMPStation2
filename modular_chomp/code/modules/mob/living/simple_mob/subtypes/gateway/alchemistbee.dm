@@ -1,9 +1,9 @@
 /datum/category_item/catalogue/fauna/alchemistbee
 	name = "VR Creations"
-	desc = "Upon investigation of the strange creatures, they appear \
-	to be constructed of hardlight technology, with connections to common \
-	VR equipment. It is unknown what their purpose is at this time."
-	value = CATALOGUER_REWARD_MEDIUM
+	desc = "A creature made of hardlight. \
+	There appears to be remnants of code within the strange construct, \
+	of dialog, and player interaction. But all that code seems inactive"
+	value = CATALOGUER_REWARD_HARD
 
 /mob/living/simple_mob/vr/alchemistbee
 	name = "vr creation"
@@ -14,9 +14,11 @@
 	icon_dead = "beedead"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/alchemistbee)
 
-	maxHealth = 300
-	health = 300
-	movement_cooldown = 1
+	faction = "terror" //Ai seemed bugged during test, and it fighting the book bats might be niche but nice
+
+	maxHealth = 250
+	health = 250
+	movement_cooldown = 0
 	unsuitable_atoms_damage = 0
 	projectiletype = /obj/item/projectile/energy/homing_bolt/wizard/boss
 	melee_attack_delay = 1 SECOND
@@ -107,8 +109,7 @@
 	var/chemblast_threshold = 3		// How many non-targeted people are needed in close proximity before electric defense is viable.
 	var/dangerbolt_threshold = 1			// Similar to above, but uses an area around the target.
 
-// Used to control the mob's positioning based on which special attack it has done.
-// Note that the intent will not change again until the next special attack is about to happen.
+
 /datum/ai_holder/simple_mob/intentional/alchemistbee/on_engagement(atom/A)
 	// Make the AI backpeddle if using an AoE special attack.
 	var/list/risky_intents = list(I_GRAB, I_HURT) // Mini-singulo and missiles.
@@ -127,8 +128,6 @@
 	else if(get_dist(holder, A) > closest_desired_distance)
 		holder.IMove(get_step_towards(holder, A))
 
-// Changes the mob's intent, which controls which special attack is used.
-// I_DISARM causes Electric Defense, I_GRAB causes Micro-Singularity, and I_HURT causes Missile Barrage.
 /datum/ai_holder/simple_mob/intentional/alchemistbee/pre_special_attack(atom/A)
 	if(isliving(A))
 		var/mob/living/target = A
@@ -148,28 +147,25 @@
 			holder.a_intent = I_DISARM
 			return
 
-		// Otherwise they're a fair distance away and we're not getting mobbed up close.
-		// See if we should use missiles or microsingulo.
-		tally = 0 // Let's recycle the var.
 		for(var/atom/movable/AM in potential_targets)
-			if(get_dist(target, AM) > dangerbolt_radius) // Deliberately tests distance between target and nearby targets and not the holder.
+			if(get_dist(target, AM) > dangerbolt_radius)
 				continue
 			if(!can_attack(AM))
 				continue
-			if(AM.anchored) // Microsingulo doesn't do anything to anchored things.
+			if(AM.anchored)
 				tally--
 			else
 				tally++
 
-		// Lots of people means minisingulo would be more useful.
+
 		if(tally >= dangerbolt_threshold)
 			holder.a_intent = I_GRAB
-		else // Otherwise use rockets.
+		else
 			holder.a_intent = I_HURT
 
 	else
 		if(get_dist(holder, A) >= homingcluster_radius + 1)
-			holder.a_intent = I_HURT // Fire rockets if it's an obj/turf.
+			holder.a_intent = I_HURT
 		else
 			holder.a_intent = I_DISARM
 
