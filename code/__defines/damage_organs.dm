@@ -47,7 +47,7 @@
 #define DROPLIMB_BURN 2
 
 // Damage above this value must be repaired with surgery.
-#define ROBOLIMB_REPAIR_CAP 30
+#define ROBOLIMB_REPAIR_CAP 50 //chompedit from 30 to 50
 
 #define ORGAN_FLESH    0 // Normal organic organs.
 #define ORGAN_ASSISTED 1 // Like pacemakers, not robotic
