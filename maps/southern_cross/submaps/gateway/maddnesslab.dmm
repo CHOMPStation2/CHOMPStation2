@@ -112,7 +112,7 @@
 "bo" = (
 /mob/living/simple_mob/vr/firewiz,
 /turf/simulated/floor/bmarble,
-/area/awaymission/mol/entrancetunnel)
+/area/awaymission/mol/hardlightentrance)
 "bu" = (
 /mob/living/simple_mob/vr/firewiz,
 /turf/simulated/floor/tiled/yellow,
@@ -261,6 +261,9 @@
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/scraptunnels/room2)
+"df" = (
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/vr/shattered)
 "dg" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 4
@@ -296,6 +299,13 @@
 /obj/effect/floor_decal/corner/lime/diagonal,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vistortunnel)
+"dy" = (
+/obj/machinery/light{
+	dir = 1;
+	layer = 3
+	},
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/entrancetunnel)
 "dB" = (
 /obj/structure/railing,
 /obj/structure/railing{
@@ -792,6 +802,12 @@
 /obj/machinery/door/airlock,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/kitchen/chamberC)
+"iz" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/conveyorcontrol)
 "iA" = (
 /turf/simulated/wall/dungeon,
 /area/awaymission/mol/security)
@@ -898,6 +914,12 @@
 /obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/mol/kitchen/chamberB)
+"jv" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/hardlightentrance)
 "jx" = (
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/mines)
@@ -1381,6 +1403,19 @@
 /obj/effect/floor_decal/corner/lightorange/diagonal,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vistortunnel)
+"ow" = (
+/obj/structure/table/rack,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/item/weapon/gun/energy/lasertag/blue,
+/obj/item/weapon/gun/energy/lasertag/blue,
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/hardlightentrance)
 "oz" = (
 /obj/effect/floor_decal/corner/lightorange,
 /obj/effect/floor_decal/corner/pink{
@@ -1565,6 +1600,12 @@
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/kafel_full,
 /area/awaymission/mol/kitchen/ChamberD)
+"pT" = (
+/obj/machinery/sleeper/survival_pod{
+	dir = 5
+	},
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/hardlightentrance)
 "pV" = (
 /obj/machinery/light,
 /turf/simulated/floor/bmarble,
@@ -1676,6 +1717,19 @@
 /obj/effect/map_helper/no_phaseshift,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/entrancetunnel)
+"qW" = (
+/obj/structure/table/rack,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/item/weapon/gun/energy/lasertag/blue,
+/obj/item/weapon/gun/energy/lasertag/blue,
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/hardlightentrance)
 "qZ" = (
 /obj/structure/table/marble,
 /obj/random/meat,
@@ -1970,6 +2024,10 @@
 /mob/living/simple_mob/vr/glitch,
 /turf/simulated/floor/flock,
 /area/awaymission/mol/vr/shattered)
+"tR" = (
+/obj/machinery/light,
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/securitycheckpoint)
 "tT" = (
 /obj/machinery/door/blast/puzzle{
 	id = "VistorGreen"
@@ -2147,6 +2205,9 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/kafel_full,
 /area/awaymission/mol/kitchen/ChamberD)
+"vM" = (
+/turf/simulated/wall/r_wall,
+/area/awaymission/mol/hardlightentrance)
 "vO" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/machinery/light{
@@ -2264,9 +2325,11 @@
 /turf/simulated/floor/wmarble,
 /area/awaymission/mol/vistortunnel)
 "wS" = (
-/mob/living/simple_mob/vr/poisonwiz,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/bmarble,
-/area/awaymission/mol/entrancetunnel)
+/area/awaymission/mol/hardlightentrance)
 "wW" = (
 /obj/machinery/door/airlock/medical,
 /turf/simulated/floor/bmarble,
@@ -2978,6 +3041,10 @@
 	check_weapons = 1;
 	installation = /obj/item/weapon/gun/energy/lasershotgun
 	},
+/obj/machinery/light{
+	dir = 1;
+	layer = 3
+	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/securitycheckpoint)
 "Dw" = (
@@ -3031,6 +3098,23 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/mol/audiotorium)
+"DV" = (
+/obj/machinery/light,
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/hardlightentrance)
+"DY" = (
+/obj/structure/table/rack,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/item/weapon/gun/energy/lasertag/red,
+/obj/item/weapon/gun/energy/lasertag/red,
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/hardlightentrance)
 "DZ" = (
 /turf/simulated/wall/r_wall,
 /area/awaymission/mol/vistortunnel/purple)
@@ -3224,7 +3308,7 @@
 "Fz" = (
 /mob/living/simple_mob/vr/lightingwiz,
 /turf/simulated/floor/bmarble,
-/area/awaymission/mol/entrancetunnel)
+/area/awaymission/mol/hardlightentrance)
 "FA" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/structure/table/marble,
@@ -3521,9 +3605,8 @@
 /turf/simulated/floor/wmarble,
 /area/awaymission/mol/medical)
 "If" = (
-/mob/living/simple_mob/vr/glitch,
 /turf/simulated/floor/bmarble,
-/area/awaymission/mol/entrancetunnel)
+/area/awaymission/mol/hardlightentrance)
 "Ih" = (
 /obj/structure/table/sifwooden_reinforced,
 /obj/item/weapon/reagent_containers/glass/beaker/bluespace,
@@ -3772,6 +3855,12 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/awaymission/mol/medical)
+"KE" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/conveyorcontrol)
 "KG" = (
 /mob/living/simple_mob/vr/firewiz,
 /turf/simulated/floor/dungeon,
@@ -3836,11 +3925,30 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vr/observation)
+"Li" = (
+/obj/structure/table/rack,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/item/weapon/gun/energy/lasertag/red,
+/obj/item/weapon/gun/energy/lasertag/red,
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/hardlightentrance)
 "Lj" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /mob/living/simple_mob/mechanical/cyber_horror/corgi,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/scraptunnels/room3)
+"Lq" = (
+/obj/structure/cryofeed{
+	dir = 4
+	},
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/hardlightentrance)
 "Lr" = (
 /mob/living/simple_mob/vore/candy/bluecabold,
 /obj/machinery/conveyor{
@@ -4046,6 +4154,12 @@
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/scraptunnels/room3)
+"Nl" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/conveyorcontrol)
 "Nn" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/effect/floor_decal/corner/grey/diagonal,
@@ -4193,6 +4307,10 @@
 "Os" = (
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/audiotorium)
+"Ot" = (
+/obj/structure/cryofeed,
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/hardlightentrance)
 "Ou" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 10
@@ -4272,6 +4390,10 @@
 /obj/random/maintenance/research,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vr/observationroom)
+"Pm" = (
+/obj/machinery/door/airlock,
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/hardlightentrance)
 "Po" = (
 /obj/structure/table/marble,
 /obj/random/meat,
@@ -4321,6 +4443,15 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/medical)
+"PJ" = (
+/obj/machinery/porta_turret/poi{
+	faction = "syndicate";
+	check_weapons = 1;
+	installation = /obj/item/weapon/gun/energy/lasershotgun
+	},
+/obj/machinery/light,
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/securitycheckpoint)
 "PQ" = (
 /obj/effect/floor_decal/corner/yellow/border,
 /obj/machinery/bodyscanner,
@@ -4566,6 +4697,10 @@
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/kitchen)
+"Sk" = (
+/obj/structure/fans/hardlight,
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/hardlightentrance)
 "Sl" = (
 /obj/structure/mopbucket,
 /obj/item/weapon/reagent_containers/glass/bucket,
@@ -4682,6 +4817,10 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/kafel_full,
 /area/awaymission/mol/kitchen/ChamberD)
+"Tk" = (
+/mob/living/simple_mob/vr/frostwiz,
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/hardlightentrance)
 "Tn" = (
 /mob/living/simple_mob/vore/candy/redcabold,
 /obj/effect/floor_decal/corner/white/diagonal,
@@ -4730,6 +4869,7 @@
 /obj/machinery/button/remote/blast_door{
 	id = "MoLockC"
 	},
+/obj/machinery/light,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/securitycheckpoint)
 "TC" = (
@@ -4791,6 +4931,10 @@
 "TO" = (
 /turf/simulated/floor/wood,
 /area/awaymission/mol/audiotorium)
+"TR" = (
+/obj/machinery/sleeper/survival_pod,
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/hardlightentrance)
 "TY" = (
 /mob/living/simple_mob/vore/candy/bluecabold,
 /obj/effect/floor_decal/corner/white/diagonal,
@@ -5009,6 +5153,13 @@
 /obj/structure/table/hardwoodtable,
 /turf/simulated/floor/carpet/blue,
 /area/awaymission/mol/vistortunnel/blue)
+"VI" = (
+/obj/machinery/light{
+	dir = 1;
+	layer = 3
+	},
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/securitycheckpoint)
 "VK" = (
 /obj/structure/table/gold,
 /obj/machinery/button/remote/blast_door{
@@ -5042,6 +5193,30 @@
 	temperature = 293.15
 	},
 /area/awaymission/mol/vr/shattered)
+"VX" = (
+/obj/structure/closet/secure_closet/guncabinet{
+	name = "ammo cabinet"
+	},
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
+/obj/item/ammo_magazine/m75,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/conveyorcontrol)
 "Wa" = (
 /obj/structure/table/marble,
 /turf/simulated/floor/bmarble,
@@ -5093,6 +5268,7 @@
 /obj/machinery/button/remote/blast_door{
 	id = "MoLockA"
 	},
+/obj/machinery/light,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/securitycheckpoint)
 "WB" = (
@@ -5150,6 +5326,12 @@
 /obj/machinery/recharger,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
+"Xg" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/hardlightentrance)
 "Xk" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/bmarble,
@@ -5263,6 +5445,10 @@
 "Yp" = (
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vr/observation)
+"Yq" = (
+/obj/machinery/light,
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/conveyorcontrol)
 "Yr" = (
 /obj/structure/table/standard,
 /obj/item/weapon/paper{
@@ -22316,11 +22502,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -22574,11 +22760,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -22832,11 +23018,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -23090,11 +23276,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -23348,11 +23534,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-oH
-rt
-Qh
-Ae
+vM
+wS
+If
+DV
+vM
 Nh
 Nh
 Nh
@@ -23606,11 +23792,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -23864,11 +24050,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -24122,11 +24308,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -24380,11 +24566,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-rt
+vM
+If
 Fz
-rt
-Ae
+If
+vM
 Nh
 Nh
 Nh
@@ -24638,11 +24824,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -24896,11 +25082,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -25154,11 +25340,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -25412,11 +25598,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -25670,11 +25856,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-oH
-rt
-Qh
-Ae
+vM
+wS
+If
+DV
+vM
 Nh
 Nh
 Nh
@@ -25928,11 +26114,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -26186,11 +26372,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -26444,11 +26630,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -26702,11 +26888,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -26960,11 +27146,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -27218,11 +27404,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -27476,11 +27662,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -27734,11 +27920,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -27992,11 +28178,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -28250,11 +28436,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -28508,11 +28694,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-oH
-rt
-Qh
-Ae
+vM
+wS
+If
+DV
+vM
 Nh
 Nh
 Nh
@@ -28766,11 +28952,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -29024,11 +29210,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -29282,11 +29468,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -29540,11 +29726,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -29798,11 +29984,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -30056,11 +30242,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -30314,11 +30500,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -30572,11 +30758,11 @@ jd
 Nh
 Nh
 Nh
-Ae
-oH
-rt
-Qh
-Ae
+vM
+wS
+If
+DV
+vM
 Nh
 Nh
 Nh
@@ -30798,43 +30984,43 @@ jd
 jd
 jd
 jd
-Ae
-rt
-rt
-rt
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-yO
-Ae
-Ae
+jd
+df
+df
+df
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+jd
+vM
+vM
+vM
+Sk
+Sk
+Sk
+vM
+vM
+vM
+vM
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -31056,43 +31242,43 @@ Nh
 Nh
 Nh
 Nh
-Ae
-rt
-rt
-rt
-kL
-rt
-rt
-rt
-kL
-rt
-rt
-kL
-rt
-rt
-kL
-rt
-rt
-rt
-kL
-rt
-rt
-rt
-rt
-rt
-kL
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-kL
-rt
-rt
-rt
-Ae
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+vM
+If
+jv
+If
+If
+If
+jv
+If
+If
+jv
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -31314,43 +31500,43 @@ Nh
 Nh
 Nh
 Nh
-Ae
-rt
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+vM
 If
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-wS
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-rt
+If
+If
 bo
-rt
-Ae
+If
+If
+If
+If
+If
+Pm
+If
+bo
+If
+vM
 Nh
 Nh
 Nh
@@ -31572,43 +31758,43 @@ Nh
 Nh
 Nh
 Nh
-Ae
-rt
-rt
-rt
-ZY
-rt
-rt
-rt
-ZY
-rt
-rt
-ZY
-rt
-rt
-ZY
-rt
-rt
-rt
-ZY
-rt
-rt
-rt
-rt
-rt
-ZY
-rt
-rt
-rt
-rt
-rt
-rt
-rt
-ZY
-rt
-rt
-rt
-Ae
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+vM
+qW
+qW
+If
+If
+If
+pT
+pT
+pT
+If
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -31830,43 +32016,43 @@ Nh
 Nh
 Nh
 Nh
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-Ae
-rt
-rt
-rt
-Ae
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+vM
+ow
+ow
+If
+If
+If
+Ot
+Ot
+Ot
+DV
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -32110,21 +32296,21 @@ Nh
 Nh
 Nh
 Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+If
+If
+If
+If
+If
+If
+If
+If
+If
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -32368,21 +32554,21 @@ Nh
 Nh
 Nh
 Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+DY
+DY
+If
+If
+If
+Lq
+Lq
+Lq
+DV
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -32626,21 +32812,21 @@ Nh
 Nh
 Nh
 Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Ae
-oH
-rt
-rt
-Ae
+vM
+Li
+Li
+If
+If
+If
+TR
+TR
+TR
+If
+vM
+wS
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -32884,21 +33070,21 @@ Nh
 Nh
 Nh
 Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+If
+If
+If
+Tk
+If
+If
+If
+If
+If
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -33142,21 +33328,21 @@ Nh
 Nh
 Nh
 Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Ae
-rt
-rt
-rt
-Ae
+vM
+If
+Xg
+If
+If
+If
+Xg
+If
+If
+Xg
+vM
+If
+If
+If
+vM
 Nh
 Nh
 Nh
@@ -38326,11 +38512,11 @@ Nh
 Nh
 uo
 Sv
+iz
 Sv
 Sv
 Sv
-Sv
-Sv
+iz
 Sv
 Sv
 Sv
@@ -38846,7 +39032,7 @@ Sv
 Sv
 Sv
 Sv
-Sv
+iz
 Sv
 Sv
 Sv
@@ -39099,9 +39285,9 @@ Nh
 Nh
 uo
 uo
+Nl
 Sv
-Sv
-Sv
+Yq
 uo
 uo
 uo
@@ -39364,7 +39550,7 @@ Bt
 uo
 Dc
 Dc
-Sv
+iz
 Sv
 Sv
 Sv
@@ -40131,9 +40317,9 @@ Nh
 Nh
 uo
 uo
+Nl
 Sv
-Sv
-Sv
+Yq
 uo
 uo
 EZ
@@ -41164,7 +41350,7 @@ Nh
 uo
 uo
 Cs
-Cs
+VX
 Cs
 uo
 uo
@@ -41429,7 +41615,7 @@ uo
 Sv
 Sv
 Sv
-Sv
+KE
 EZ
 EZ
 Ae
@@ -41947,7 +42133,7 @@ Sv
 Sv
 Sv
 Sv
-Sv
+iz
 Sv
 Sv
 Sv
@@ -42200,6 +42386,7 @@ Nh
 Nh
 Nh
 uo
+Nl
 Sv
 Sv
 Sv
@@ -42208,12 +42395,11 @@ Sv
 Sv
 Sv
 Sv
-Sv
-Sv
+Yq
 Ae
+dy
 rt
-rt
-rt
+Qh
 Ae
 Nh
 Nh
@@ -42463,7 +42649,7 @@ Sv
 Sv
 Sv
 Sv
-Sv
+KE
 Sv
 Sv
 Sv
@@ -43503,7 +43689,7 @@ Im
 RB
 Im
 Im
-Im
+tR
 Wp
 Nh
 Nh
@@ -44271,7 +44457,7 @@ Nh
 Nh
 Nh
 Wp
-Im
+VI
 Im
 Wv
 Wp
@@ -44535,7 +44721,7 @@ UT
 Wp
 Du
 Im
-Du
+PJ
 Wp
 Nh
 Nh
@@ -45825,7 +46011,7 @@ UT
 Wp
 Du
 Im
-Du
+PJ
 Wp
 Nh
 Nh
@@ -46077,7 +46263,7 @@ Nh
 Nh
 Nh
 Wp
-Im
+VI
 Im
 TA
 Wp
@@ -46857,7 +47043,7 @@ Im
 RB
 Im
 Im
-Im
+tR
 Wp
 Nh
 Nh
@@ -48145,9 +48331,9 @@ Nh
 Nh
 Nh
 Wp
+VI
 Im
-Im
-Im
+tR
 Wp
 Nh
 Nh
@@ -49901,27 +50087,27 @@ Sd
 Sd
 Sd
 ID
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
+tG
+tG
+tG
+tG
+tG
+tG
+tG
+tG
+tG
+tG
+tG
+tG
+tG
+tG
+tG
+tG
+tG
+tG
+tG
+tG
+tG
 GP
 Sd
 Sd
@@ -50179,7 +50365,7 @@ Nh
 Nh
 Nh
 Nh
-Nh
+tG
 pJ
 Sd
 Sd
