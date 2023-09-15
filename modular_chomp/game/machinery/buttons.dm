@@ -27,3 +27,7 @@
 
 /obj/machinery/button/mob_spawner_button/second
 	link = "MOBSPAWNSECOND"
+
+/obj/machinery/button/remote/noemag/emag_act(var/remaining_charges, var/mob/user)
+	to_chat(usr, "<span class='warning'>The cryptographic sequencer seems to do nothing.</b></span>")
+	return 0

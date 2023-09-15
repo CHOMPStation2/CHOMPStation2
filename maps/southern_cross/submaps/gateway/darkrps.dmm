@@ -11244,6 +11244,16 @@
 /obj/random/trash,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/brokehouse)
+"nTm" = (
+/obj/random/trash,
+/obj/machinery/button/remote/noemag{
+	req_one_access = list(887);
+	desc = "A heavy and old button that appears to be access locked by a special ID found elsewhere.";
+	id = "ultrasecret2";
+	name = "Slab Button II"
+	},
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/awaymission/darkrp/tunnels/suburbs)
 "nTD" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/concrete{
@@ -11430,17 +11440,16 @@
 /turf/simulated/wall/r_wall,
 /area/awaymission/darkrp/parkmaint)
 "ofj" = (
-/obj/machinery/button/remote/blast_door{
-	id = "ultrasecret2";
-	name = "Slab Button II";
-	pixel_x = 1;
-	dir = 4;
-	pixel_y = 24;
-	req_one_access = list(887);
-	desc = "A heavy and old button that appears to be access locked by a special ID found elsewhere."
-	},
 /obj/machinery/light/small{
 	dir = 1
+	},
+/obj/machinery/button/remote/noemag{
+	req_one_access = list(887);
+	desc = "A heavy and old button that appears to be access locked by a special ID found elsewhere.";
+	id = "ultrasecret2";
+	name = "Slab Button II";
+	pixel_y = 26;
+	dir = 4
 	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/darkrp/reference)
@@ -12399,17 +12408,16 @@
 /turf/simulated/floor/carpet/purcarpet,
 /area/awaymission/darkrp/plazarecroom)
 "pgQ" = (
-/obj/machinery/button/remote/blast_door{
-	id = "ultrasecret1";
-	name = "Slab Button I";
-	pixel_x = 1;
-	dir = 4;
-	pixel_y = 24;
-	req_one_access = list(886);
-	desc = "A heavy and old button that appears to be access locked by a special ID found elsewhere."
-	},
 /obj/machinery/light/small{
 	dir = 1
+	},
+/obj/machinery/button/remote/noemag{
+	desc = "A heavy and old button that appears to be access locked by a special ID found elsewhere.";
+	id = "ultrasecret1";
+	name = "Slab Button I";
+	req_one_access = list(886);
+	pixel_y = 24;
+	dir = 4
 	},
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/awaymission/darkrp/reference)
@@ -45967,7 +45975,7 @@ vpp
 vpp
 tFu
 tkP
-veo
+nTm
 xSx
 moz
 moz
