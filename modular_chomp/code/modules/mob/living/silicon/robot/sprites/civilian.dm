@@ -27,14 +27,17 @@
 /datum/robot_sprite/dogborg/tall/service/meka
 	sprite_icon_state = "mekaserv"
 	has_vore_belly_sprites = TRUE
+	belly_light_list = list("sleeper")
 
 /datum/robot_sprite/dogborg/tall/service/mmeka
 	sprite_icon_state = "mmekaserv"
 	has_vore_belly_sprites = TRUE
+	belly_light_list = list("sleeper")
 
 /datum/robot_sprite/dogborg/tall/service/fmeka
 	sprite_icon_state = "fmekaserv"
 	has_vore_belly_sprites = TRUE
+	belly_light_list = list("sleeper")
 
 /datum/robot_sprite/dogborg/tall/service/k4t
 	sprite_icon_state = "k4tserv"

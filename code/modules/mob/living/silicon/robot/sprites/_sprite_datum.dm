@@ -12,6 +12,7 @@
 	var/has_custom_open_sprites = FALSE
 	var/has_vore_belly_sprites = FALSE
 	var/has_vore_belly_resting_sprites = FALSE
+	var/list/belly_light_list = list() //CHOMPAdd: Support colored sleepers
 	var/has_rest_sprites = FALSE
 	var/list/rest_sprite_options
 	var/has_dead_sprite = FALSE
@@ -28,19 +29,28 @@
 /datum/robot_sprite/proc/handle_extra_icon_updates(var/mob/living/silicon/robot/ourborg)
 	return
 
-/datum/robot_sprite/proc/get_belly_overlay(var/mob/living/silicon/robot/ourborg)
-	return "[sprite_icon_state]-sleeper"
+/datum/robot_sprite/proc/get_belly_overlay(var/mob/living/silicon/robot/ourborg, var/Bclass, var/size = 1)
+	if(belly_light_list.Find(Bclass)) //CHOMPEdit: Vore Belly rework
+		//TODO: Insert code here that determines if the borg's sleeper belly should show red or green light
+
+		//First, Sleeper base icon is input. Second the belly class, supposedly taken from the borg's vore_fullness_ex list.
+		//The belly class should be the same as the belly sprite's name, with as many size values as you defined in the
+		//vore_capacity_ex list. Finally, if the borg has a red/green light sleeper, it'll use g or r appended to the end.
+		//Bellies with lights should be defined in belly_light_list
+		return "[sprite_icon_state]-[Bclass]-[size]-[(ourborg.sleeper_state == 2) ? "g" : "r"]"
+
+	return "[sprite_icon_state]-[Bclass]-[size]"
 //CHOMPEdit Start - gives the function functionality
-/datum/robot_sprite/proc/get_belly_resting_overlay(var/mob/living/silicon/robot/ourborg)
+/datum/robot_sprite/proc/get_belly_resting_overlay(var/mob/living/silicon/robot/ourborg, var/Bclass, var/size = 1)
 	if(!(ourborg.rest_style in rest_sprite_options))
 		ourborg.rest_style = "Default"
 	switch(ourborg.rest_style)
 		if("Sit")
-			return "[get_belly_overlay(ourborg)]-sit"
+			return "[get_belly_overlay(ourborg, Bclass, size)]-sit"
 		if("Bellyup")
-			return "[get_belly_overlay(ourborg)]-bellyup"
+			return "[get_belly_overlay(ourborg, Bclass, size)]-bellyup"
 		else
-			return "[get_belly_overlay(ourborg)]-rest"
+			return "[get_belly_overlay(ourborg, Bclass, size)]-rest"
 //CHOMPEdit End
 /datum/robot_sprite/proc/get_eyes_overlay(var/mob/living/silicon/robot/ourborg)
 	if(!(ourborg.resting && has_rest_sprites))
@@ -97,6 +107,9 @@
 	has_custom_equipment_sprites = TRUE
 	pixel_x = -16
 
+//CHOMPRemoval Start: 	Duplicated a few procs, overiding them for no reason.
+//						Removing these as im updating the procs for a new system that should handle all sprites. -Reo
+/*
 /datum/robot_sprite/dogborg/get_rest_sprite(var/mob/living/silicon/robot/ourborg)
 	if(!(ourborg.rest_style in rest_sprite_options))
 		ourborg.rest_style = "Default"
@@ -110,7 +123,7 @@
 
 /datum/robot_sprite/dogborg/get_belly_overlay(var/mob/living/silicon/robot/ourborg)
 	return "[sprite_icon_state]-sleeper"
-
+*/	//CHOMPRemoval End
 /datum/robot_sprite/dogborg/do_equipment_glamour(var/obj/item/weapon/robot_module/module)
 	if(!has_custom_equipment_sprites)
 		return

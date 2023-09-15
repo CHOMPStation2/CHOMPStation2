@@ -30,7 +30,8 @@
 	sprite_icon_state = "mekamine"
 	has_eye_light_sprites = TRUE
 	has_custom_open_sprites = TRUE
-	has_vore_belly_sprites = FALSE
+	has_vore_belly_sprites = TRUE //Why was this set to false?? They very clearly DO have a sprite!!
+	belly_light_list = list("sleeper")
 	rest_sprite_options = list("Default", "Sit")
 
 /datum/robot_sprite/dogborg/tall/mining/mmeka
@@ -38,6 +39,7 @@
 	sprite_icon_state = "mmekamine"
 	has_eye_light_sprites = TRUE
 	has_custom_open_sprites = TRUE
+	belly_light_list = list("sleeper")
 	rest_sprite_options = list("Default", "Sit")
 
 /datum/robot_sprite/dogborg/tall/mining/fmeka
@@ -45,6 +47,7 @@
 	sprite_icon_state = "fmekamine"
 	has_eye_light_sprites = TRUE
 	has_custom_open_sprites = TRUE
+	belly_light_list = list("sleeper")
 	rest_sprite_options = list("Default", "Sit")
 
 /datum/robot_sprite/dogborg/tall/mining/k4t
@@ -76,6 +79,7 @@
 	sprite_icon_state = "mmekacargo"
 	has_eye_light_sprites = TRUE
 	has_custom_open_sprites = TRUE
+	belly_light_list = list("sleeper")
 	rest_sprite_options = list("Default", "Sit")
 
 /datum/robot_sprite/dogborg/tall/mining/fmekacargo
@@ -83,6 +87,7 @@
 	sprite_icon_state = "fmekacargo"
 	has_eye_light_sprites = TRUE
 	has_custom_open_sprites = TRUE
+	belly_light_list = list("sleeper")
 	rest_sprite_options = list("Default", "Sit")
 
 /datum/robot_sprite/dogborg/tall/mining/k4tcargo

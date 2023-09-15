@@ -9,6 +9,9 @@
 	maxHealth = 200
 	health = 200
 	nutrition = 0 //CHOMPEdit
+	vore_capacity_ex = list("sleeper" = 1) //CHOMPEdit Borgs have sleepers, not stomachs. Important Semantics!!
+	vore_fullness_ex = list("sleeper" = 0)
+	vore_icon_bellies = list("sleeper")
 
 	mob_bump_flag = ROBOT
 	mob_swap_flags = ~HEAVY
@@ -891,6 +894,7 @@
 		old_x = sprite_datum.pixel_x
 
 	if(stat == CONSCIOUS)
+		/* CHOMPRemoval Start: Borg belly sprites, with support for multiple bellies, along with just less jank code.
 		var/show_belly = FALSE
 		if(sprite_datum.has_vore_belly_sprites)
 			update_fullness() //CHOMPEdit Start
@@ -918,14 +922,27 @@
 											break //CHOMPEdit End
 		if(show_belly)
 			add_overlay(sprite_datum.get_belly_overlay(src))
+		*/ //CHOMPRemove End
+		if(sprite_datum.has_vore_belly_sprites) //CHOMPAdd Multiple Borg Belly support
+			for(var/belly_class in vore_fullness_ex)
+				var/vs_fullness = vore_fullness_ex[belly_class]
+				if(belly_class == "sleeper" && sleeper_state != 0 && !(vs_fullness + 1 > vore_capacity_ex[belly_class]))
+					vs_fullness += 1
+				if(!vs_fullness > 0) continue
+				if(resting && sprite_datum.has_vore_belly_resting_sprites)
+					add_overlay(sprite_datum.get_belly_resting_overlay(src, belly_class, vs_fullness))
+				else
+					add_overlay(sprite_datum.get_belly_overlay(src, belly_class, vs_fullness))
+
+
 
 		sprite_datum.handle_extra_icon_updates(src)			// Various equipment-based sprites go here.
 
-		if(resting && sprite_datum.has_rest_sprites)
-			cut_overlays() // Hide that gut for it has no ground sprite yo.
+		if(resting && sprite_datum.has_rest_sprites) //CHOMPRemoval Vore Belly Resting sprites handled earlier.
+		//	cut_overlays() // Hide that gut for it has no ground sprite yo.
 			icon_state = sprite_datum.get_rest_sprite(src)
-			if(show_belly && sprite_datum.has_vore_belly_sprites && sprite_datum.has_vore_belly_resting_sprites)	// Or DOES IT?
-				add_overlay(sprite_datum.get_belly_resting_overlay(src))
+		//	if(show_belly && sprite_datum.has_vore_belly_sprites && sprite_datum.has_vore_belly_resting_sprites)	// Or DOES IT?
+		//		add_overlay(sprite_datum.get_belly_resting_overlay(src))
 
 		if(sprite_datum.has_eye_sprites)
 			if(!shell || deployed) // Shell borgs that are not deployed will have no eyes.

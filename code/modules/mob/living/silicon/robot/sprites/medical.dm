@@ -202,15 +202,15 @@
 	module_type = "Surgeon"
 	sprite_icon = 'icons/mob/robot/surgical_wide.dmi'
 
-	var/has_sleeper_light_indicator = FALSE
-
+	//var/has_sleeper_light_indicator = FALSE //CHOMPEdit: Removed for new list-based system
+/* //CHOMPRemoval Start: All borgs can use lights, not just medical shells
 /datum/robot_sprite/dogborg/surgical/get_belly_overlay(var/mob/living/silicon/robot/ourborg)
 	if(has_sleeper_light_indicator)
 		if(ourborg.sleeper_state == 2 && !(ourborg.vore_selected?.silicon_belly_overlay_preference == "Vorebelly")) return "[sprite_icon_state]-sleeper_g"
 		else return "[sprite_icon_state]-sleeper_r"
 	else
 		return ..()
-
+*/ //CHOMPRemoval End
 /datum/robot_sprite/dogborg/surgical/do_equipment_glamour(var/obj/item/weapon/robot_module/module)
 	if(!has_custom_equipment_sprites)
 		return
@@ -230,7 +230,8 @@
 	sprite_icon_state = "vale"
 	sprite_hud_icon_state = "medihound"
 	has_eye_light_sprites = TRUE
-	has_sleeper_light_indicator = TRUE
+	//has_sleeper_light_indicator = TRUE //CHOMPEdit: New system
+	belly_light_list = list("sleeper")
 
 /datum/robot_sprite/dogborg/surgical/borgi
 	name = "Borgi"
@@ -327,15 +328,16 @@
 	module_type = "Crisis"
 	sprite_icon = 'icons/mob/robot/crisis_wide.dmi'
 
-	var/has_sleeper_light_indicator = FALSE
+	//var/has_sleeper_light_indicator = FALSE //CHOMPEdit: Removed for new list-based system
 
+/* //CHOMPRemoval Start: All borgs can use lights, not just medical shells 2, electric boogaloo
 /datum/robot_sprite/dogborg/crisis/get_belly_overlay(var/mob/living/silicon/robot/ourborg)
 	if(has_sleeper_light_indicator)
 		if(ourborg.sleeper_state == 2 && !(ourborg.vore_selected?.silicon_belly_overlay_preference == "Vorebelly")) return "[sprite_icon_state]-sleeper_g"
 		else return "[sprite_icon_state]-sleeper_r"
 	else
 		return ..()
-
+*/ //CHOMPRemoval End
 /datum/robot_sprite/dogborg/crisis/do_equipment_glamour(var/obj/item/weapon/robot_module/module)
 	if(!has_custom_equipment_sprites)
 		return
@@ -355,21 +357,24 @@
 	sprite_icon_state = "hound"
 	sprite_hud_icon_state = "medihound"
 	has_eye_light_sprites = TRUE
-	has_sleeper_light_indicator = TRUE
+	//has_sleeper_light_indicator = TRUE //CHOMPEdit: New system
+	belly_light_list = list("sleeper")
 
 /datum/robot_sprite/dogborg/crisis/hounddark
 	name = "Medihound Dark"
 	sprite_icon_state = "hounddark"
 	sprite_hud_icon_state = "medihound"
 	has_eye_light_sprites = TRUE
-	has_sleeper_light_indicator = TRUE
+	//has_sleeper_light_indicator = TRUE //CHOMPEdit: New system
+	belly_light_list = list("sleeper")
 
 /datum/robot_sprite/dogborg/crisis/vale
 	name = "Medihound V2"
 	sprite_icon_state = "vale"
 	sprite_hud_icon_state = "medihound"
 	has_eye_light_sprites = TRUE
-	has_sleeper_light_indicator = TRUE
+	//has_sleeper_light_indicator = TRUE //CHOMPEdit: New system
+	belly_light_list = list("sleeper")
 
 /datum/robot_sprite/dogborg/crisis/borgi
 	name = "Borgi"

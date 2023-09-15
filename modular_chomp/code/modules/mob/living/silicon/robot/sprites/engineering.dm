@@ -18,6 +18,7 @@
 /datum/robot_sprite/dogborg/tall/engineering/meka
 	sprite_icon_state = "mekaengi"
 	has_vore_belly_sprites = TRUE
+	belly_light_list = list("sleeper")
 
 /datum/robot_sprite/dogborg/tall/engineering/mmeka
 	sprite_icon_state = "mmekaeng"
