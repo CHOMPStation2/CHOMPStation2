@@ -11,7 +11,8 @@
 	pass_stack_colors = TRUE
 	supply_conversion_value = 2
 	hardness = 5
-	
+	stack_type = /obj/item/stack/material/cloth //CHOMPEdit
+
 
 /datum/material/cloth/generate_recipes() //Vorestation Add - adding some funny cool storage pouches to this so botany can do things other than food
 	recipes = list(
@@ -153,4 +154,5 @@
 	conductive = 0
 	pass_stack_colors = TRUE
 	hardness = 5
-	integrity = 5 
+	integrity = 5
+	stack_type = /obj/item/stack/material/fiber //CHOMPEdit

@@ -45,3 +45,30 @@
       when user leaves round.
   - qol: Fixed highlight icon inconsistencies on Polaris hairs.
   - rscadd: Big Leggies can now *vwag into digilegs stance.
+2023-09-10:
+  Aroliacue:
+  - rscadd: Xenomorph Hybrids now have some exclusive traits to change up their playstyle,
+      found in the Neutral tab.
+  - rscadd: Xenomorph Hybrids can now use Protean Rigs.
+  - rscadd: Vests and the bluespace badge no longer have specific role/job requirements,
+      to facilitate more character customization.
+  - rscadd: 'Added in a new holster option: left leg holsters. These just visibly
+      sit on your left leg.'
+  - balance: Increased the loadout cost of vests and drop pouches from 1 to 2, as
+      they carry more than the simple webbing.
+  - bugfix: Fixed black holster sprites not showing up on mob correctly, and also
+      not showing up in the loadout.
+  UniquaSa:
+  - bugfix: You should be able to play as a tallborg in security and service..
+  Verkister:
+  - bugfix: Fixed cloth and fiber materials missing sheet type definitions.
+  - bugfix: Fixed a bellysprite update lag bug.
+  tacoguy7765093:
+  - rscadd: Added new gateway into rotation
+  - rscadd: Added a mob and a weapon for use in the gateway.
+2023-09-11:
+  tacoguy7765093:
+  - bugfix: VR works again
+2023-09-12:
+  Upstream:
+  - rscadd: Various bird related markings

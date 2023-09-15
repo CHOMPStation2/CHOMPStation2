@@ -16,7 +16,7 @@
 	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_ALTEVIAN) //This lets all races use
 
 	var/list/lower_layer_dirs = list(SOUTH)
-	var/icon_loaf = null //CHOMPEdit
+	var/icon_loaf = null
 
 // Species-unique tails
 
@@ -246,49 +246,50 @@
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "eboop_mark"
 
-/*/datum/sprite_accessory/tail/molenar_kitsune //CHOMP Remove
+/* // Chomp REMOVE START
+/datum/sprite_accessory/tail/molenar_kitsune
 	name = "quintail kitsune tails (Molenar)"
 	desc = ""
 	icon_state = "molenar-kitsune"
 	ckeys_allowed = list("molenar")
 
-/datum/sprite_accessory/tail/miria_fluffdragon //CHOMP Remove
+/datum/sprite_accessory/tail/miria_fluffdragon
 	name = "fluffdragon tail (Miria Masters)"
 	desc = ""
 	icon_state = "miria-fluffdragontail"
 	ckeys_allowed = list("miriamasters")
 
-/datum/sprite_accessory/tail/miria_kitsune //CHOMP Remove
+/datum/sprite_accessory/tail/miria_kitsune
 	name = "Black kitsune tails (Miria Masters)"
 	desc = ""
 	icon_state = "miria-kitsunetail"
 	ckeys_allowed = list("miriamasters")
 
-/datum/sprite_accessory/tail/molenar_deathclaw //CHOMP Remove
+/datum/sprite_accessory/tail/molenar_deathclaw
 	name = "deathclaw bits (Molenar)"
 	desc = ""
 	icon_state = "molenar-deathclaw"
 	ckeys_allowed = list("molenar","silvertalismen","jertheace")
 
-/datum/sprite_accessory/tail/runac //CHOMP Remove
+/datum/sprite_accessory/tail/runac
 	name = "fennecsune tails (Runac)"
 	desc = ""
 	icon_state = "runac"
 	ckeys_allowed = list("rebcom1807")
 
-/datum/sprite_accessory/tail/reika //Leaving this since it was too hard to split the wings from the tail. //CHOMP Remove
+/datum/sprite_accessory/tail/reika //Leaving this since it was too hard to split the wings from the tail.
 	name = "fox tail (+ beewings) (Reika)"
 	desc = ""
 	icon_state = "reika"
 	ckeys_allowed = list("rikaru19xjenkins")
 
-/datum/sprite_accessory/tail/rosey //CHOMP Remove
+/datum/sprite_accessory/tail/rosey
 	name = "tritail kitsune tails (Rosey)"
 	desc = ""
 	icon_state = "rosey_three"
 	ckeys_allowed = list("joey4298")
 
-/datum/sprite_accessory/tail/rosey2 //CHOMP Remove
+/datum/sprite_accessory/tail/rosey2
 	name = "pentatail kitsune tails (Rosey)" //I predict seven tails next. ~CK
 	desc = ""
 	icon_state = "rosey_five"
@@ -296,31 +297,32 @@
 	color_blend_mode = ICON_MULTIPLY
 	ckeys_allowed = list("joey4298")
 
-/datum/sprite_accessory/tail/scree //CHOMP Remove
+/datum/sprite_accessory/tail/scree
 	name = "green taj tail (Scree)"
 	desc = ""
 	icon_state = "scree"
 	ckeys_allowed = list("scree")
 
-/datum/sprite_accessory/tail/aronai //CHOMP Remove
+/datum/sprite_accessory/tail/aronai
 	name = "aronai tail (Aronai)"
 	desc = ""
 	icon_state = "aronai"
 	ckeys_allowed = list("arokha")
 
-/datum/sprite_accessory/tail/cabletail //CHOMP Remove
+/datum/sprite_accessory/tail/cabletail
     name = "cabletail"
     desc = "cabletail"
     icon_state = "cabletail"
     ckeys_allowed = list("tucker0666")
 
-/datum/sprite_accessory/tail/featherfluff_tail //CHOMP Remove
+/datum/sprite_accessory/tail/featherfluff_tail
     name = "featherfluff_tail"
     desc = ""
     icon_state = "featherfluff_tail"
     ckeys_allowed = list("tucker0666")
-*/  //CHOMP Remove end
-/datum/sprite_accessory/tail/ketrai_wag //CHOMP Remove
+*/ //Chomp REMOVE END
+
+/datum/sprite_accessory/tail/ketrai_wag
 	name = "fennix tail (vwag)"
 	desc = ""
 	icon_state = "ketraitail"
@@ -366,12 +368,14 @@
 	extra_overlay = "raccoon-stripes"
 	extra_overlay_w = "raccoon-stripes_w"
 
-/*/datum/sprite_accessory/tail/holly  //CHOMP Remove
+/* // Chomp REMOVE START
+/datum/sprite_accessory/tail/holly
 	name = "tigress tail (Holly)"
 	desc = ""
 	icon_state = "tigresstail"
 	ckeys_allowed = list("hoodoo")
-*/  //CHOMP Remove end
+*/ // Chomp REMOVE END
+
 /datum/sprite_accessory/tail/satyr
 	name = "goat legs, colorable"
 	desc = ""
@@ -1188,7 +1192,8 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
-/*/datum/sprite_accessory/tail/peacocktail_red //this is ckey locked for now, but prettiebyrd wants these tails to be unlocked at a later date //CHOMP Remove and now it'll never be unlocked
+/* // Chomp REMOVE START
+/datum/sprite_accessory/tail/peacocktail_red //this is ckey locked for now, but prettiebyrd wants these tails to be unlocked at a later date
 	name = "Peacock tail (vwag)"
 	desc = ""
 	icon = 'icons/mob/vore/tails_vr.dmi'
@@ -1205,7 +1210,8 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	ckeys_allowed = list("prettiebyrd")
-*/  //CHOMP Remove end
+*/ // Chomp REMOVE END
+
 /datum/sprite_accessory/tail/altevian
 	name = "Altevian Tail"
 	icon = 'icons/mob/vore/tails_vr.dmi'
@@ -1230,12 +1236,14 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
-/*/datum/sprite_accessory/tail/perrin_tentacles  //CHOMP Remove
+/* // Chomp REMOVE START
+/datum/sprite_accessory/tail/perrin_tentacles
 	name = "octopus tentacles"
 	desc = ""
 	icon_state = "perrintentacles"
 	ckeys_allowed = list("codeme", "siennaathens")
-*/
+*/ // Chomp REMOVE END
+
 /datum/sprite_accessory/tail/teshbeethorax
 	name = "Teshari bee thorax"
 	desc = ""
@@ -1340,7 +1348,7 @@
 	hide_body_parts = list(BP_L_LEG, BP_L_FOOT, BP_R_LEG, BP_R_FOOT) //Exclude pelvis just in case.
 	clip_mask_icon = 'icons/mob/vore/taurs_vr.dmi'
 	clip_mask_state = "taur_clip_mask_def" //Used to clip off the lower part of suits & uniforms.
-	
+
 /datum/sprite_accessory/tail/blade_like_tail
 	name = "Blade-like Tail"
 	icon = 'icons/mob/vore/tails_vr.dmi'
@@ -1356,13 +1364,14 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
-/*/datum/sprite_accessory/tail/kara //SatinIsle fluff item //CHOMP Remove
+/* //Chomp REMOVE START
+/datum/sprite_accessory/tail/kara //SatinIsle fluff item
 	name = "Pterokara Tail"
 	icon = 'icons/mob/vore/tails_vr.dmi'
 	icon_state = "kara_tail"
 	ckeys_allowed = list("satinisle")
-*/
-	
+*/ // Chomp REMOVE END
+
 //LONG TAILS ARE NOT TAUR BUTTS >:O
 /datum/sprite_accessory/tail/longtail
 	name = "You should not see this..."
@@ -1406,7 +1415,7 @@
 	clip_mask_icon = 'icons/mob/vore/taurs_vr.dmi'
 	clip_mask_state = "taur_clip_mask_def" //Used to clip off the lower part of suits & uniforms.
 	extra_overlay = "horse" //I can't believe this works.
-	
+
 /datum/sprite_accessory/tail/turkey //Would have been a really good thing for Thanksgiving probably but I'm not going to wait that long.
 	name = "turkey"
 	desc = ""
@@ -1435,3 +1444,18 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "sharktail_tipmarkings"
+
+/datum/sprite_accessory/tail/narrow_tail
+	name = "feathered narrow tail, colorable"
+	desc = ""
+	icon_state = "narrowtail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/narrow_tail2
+	name = "feathered narrow tail, 2 colors"
+	desc = ""
+	icon_state = "narrowtail_2color"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "narrowtail_2color-1"

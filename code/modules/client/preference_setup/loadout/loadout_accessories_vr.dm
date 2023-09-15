@@ -57,37 +57,43 @@
 	path = /obj/item/clothing/accessory/collar/holo/indigestible
 
 /datum/gear/accessory/holster
-	display_name = "holster selection (Security, SM, HoP, Exploration)" //CHOMP keep explo
-	allowed_roles = list("Site Manager", "Head of Personnel", "Security Officer", "Warden", "Head of Security","Detective","Field Medic","Explorer","Pathfinder","Talon Captain","Talon Guard") //CHOMP keep explo
+	display_name = "holster selection (SM, HoP, Sec, Explo)" // CHOMPedit: Clearer description.
+	allowed_roles = list("Site Manager", "Head of Personnel", "Security Officer", "Warden", "Head of Security","Detective","Field Medic","Explorer","Pathfinder","Talon Captain","Talon Guard") // CHOMPedit: Readd explo
 
 /datum/gear/accessory/brown_vest
-	display_name = "webbing, brown (Eng, Sec, Med, Exploration, Miner)" //CHOMP keep explo
-	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner","Blueshield Guard","Security Pilot", "Talon Captain","Talon Doctor","Talon Engineer","Talon Guard", "Talon Miner") //YW ADDITIONS
+	display_name = "webbing, brown" // CHOMPedit: Anyone can use.
+//	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner","Blueshield Guard","Security Pilot", "Talon Captain","Talon Doctor","Talon Engineer","Talon Guard", "Talon Miner") // CHOMPedit: Anyone can use.
+	cost = 2 // CHOMPedit: Cost increase.
 
 /datum/gear/accessory/black_vest
-	display_name = "webbing, black (Eng, Sec, Med, Exploration, Miner)" //CHOMP keep explo
-	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner","Blueshield Guard","Security Pilot", "Talon Captain","Talon Doctor","Talon Engineer","Talon Guard", "Talon Miner") //YW ADDITIONS
+	display_name = "webbing, black" // CHOMPedit: Anyone can use.
+//	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner","Blueshield Guard","Security Pilot", "Talon Captain","Talon Doctor","Talon Engineer","Talon Guard", "Talon Miner") // CHOMPedit: Anyone can use.
+	cost = 2 // CHOMPedit: Cost increase.
 
 /datum/gear/accessory/white_vest
-	display_name = "webbing, white (Medical)"
-	allowed_roles = list("Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic")  //CHOMP keep explo
+	display_name = "webbing, white" // CHOMPedit: Anyone can use.
+//	allowed_roles = list("Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic")  // CHOMPedit: Anyone can use.
+	cost = 2 // CHOMPedit: Cost increase.
 
 /datum/gear/accessory/brown_drop_pouches
-	display_name = "drop pouches, brown (Eng, Sec, Med, Exploration, Miner)" //CHOMP keep explo
-	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner","Blueshield Guard","Security Pilot", "Talon Captain","Talon Doctor","Talon Engineer","Talon Guard", "Talon Miner") //YW ADDITIONS
+	display_name = "drop pouches, brown" // CHOMPedit: Anyone can use.
+//	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner","Blueshield Guard","Security Pilot", "Talon Captain","Talon Doctor","Talon Engineer","Talon Guard", "Talon Miner") // CHOMPedit: Anyone can use.
+	cost = 2 // CHOMPedit: Cost increase.
 
 /datum/gear/accessory/black_drop_pouches
-	display_name = "drop pouches, black (Eng, Sec, Med, Exploration, Miner)" //CHOMP keep explo
-	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner","Blueshield Guard","Security Pilot", "Talon Captain","Talon Doctor","Talon Engineer","Talon Guard", "Talon Miner") //YW ADDITIONS
+	display_name = "drop pouches, black" // CHOMPedit: Anyone can use.
+//	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner","Blueshield Guard","Security Pilot", "Talon Captain","Talon Doctor","Talon Engineer","Talon Guard", "Talon Miner") // CHOMPedit: Anyone can use.
+	cost = 2 // CHOMPedit: Cost increase.
 
 /datum/gear/accessory/white_drop_pouches
-	display_name = "drop pouches, white (Medical)"
-	allowed_roles = list("Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic") //CHOMP keep explo
+	display_name = "drop pouches, white" // CHOMPedit: Anyone can use.
+//	allowed_roles = list("Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic") // CHOMPedit: Anyone can use.
+	cost = 2 // CHOMPedit: Cost increase.
 
 /datum/gear/accessory/bluespace
-	display_name = "bluespace badge (Eng, Sec, Med, Exploration, Miner, Pilot)" //CHOMP keep explo
+	display_name = "bluespace badge" // CHOMPedit: Anyone can use.
 	path = /obj/item/clothing/accessory/storage/bluespace
-	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner","Talon Captain","Talon Doctor","Talon Engineer","Talon Guard","Talon Miner","Pilot") //CHOMP keep explo
+//	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner","Talon Captain","Talon Doctor","Talon Engineer","Talon Guard","Talon Miner","Pilot") // CHOMPedit: Anyone can use.
 	cost = 2
 
 /datum/gear/accessory/webbing

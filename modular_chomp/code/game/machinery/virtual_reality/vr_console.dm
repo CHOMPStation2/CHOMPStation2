@@ -266,7 +266,7 @@
 		occupant.enter_vr(avatar)
 		avatar.regenerate_icons()
 		avatar.update_transform()
-		avatar.species.equip_survival_gear(avatar)
+		job_master.EquipRank(avatar,"Visitor", 1, FALSE)
 		avatar.verbs += /mob/living/carbon/human/proc/exit_vr
 		avatar.verbs += /mob/living/carbon/human/proc/vr_transform_into_mob
 		avatar.verbs |= /mob/living/proc/set_size // Introducing NeosVR
