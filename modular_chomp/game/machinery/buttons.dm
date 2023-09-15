@@ -29,5 +29,5 @@
 	link = "MOBSPAWNSECOND"
 
 /obj/machinery/button/remote/noemag/emag_act(var/remaining_charges, var/mob/user)
-	to_chat(usr, "<span class='warning'>The cryptographic sequencer seems to do nothing.</b></span>")
+	to_chat(usr, "<span class='warning'>The cryptographic sequencer seems to do nothing.</span>")
 	return 0
