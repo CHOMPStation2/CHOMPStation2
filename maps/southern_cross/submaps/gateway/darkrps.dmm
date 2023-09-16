@@ -737,7 +737,8 @@
 /obj/random/trash,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/reagent_containers/glass/bottle/dermaline,
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/phosphorus,
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/carbon,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse2)
 "bbI" = (
@@ -1776,6 +1777,10 @@
 	},
 /turf/simulated/floor,
 /area/awaymission/darkrp/brokehouse)
+"cpy" = (
+/obj/machinery/chemical_dispenser,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/warehouse2)
 "cpL" = (
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/parkghetto2)
@@ -4228,9 +4233,7 @@
 /area/awaymission/darkrp/subhouse2)
 "fiP" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/reagent_containers/glass/bottle/bicaridine{
-	pixel_y = 9
-	},
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/silicon,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse2)
 "fjR" = (
@@ -7191,7 +7194,8 @@
 /area/awaymission/darkrp/pd)
 "iUb" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/reagent_containers/glass/bottle/toxin,
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/oxygen,
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/mercury,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse2)
 "iUn" = (
@@ -10216,6 +10220,11 @@
 /obj/structure/table/rack/shelf/steel,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/stack/cable_coil/pink,
+/obj/item/weapon/stock_parts/matter_bin,
+/obj/item/weapon/stock_parts/matter_bin,
+/obj/item/weapon/stock_parts/matter_bin,
+/obj/item/weapon/stock_parts/manipulator,
+/obj/item/weapon/stock_parts/console_screen,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse3)
 "mMC" = (
@@ -11806,6 +11815,7 @@
 "oHy" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/stack/nanopaste,
+/obj/item/weapon/circuitboard/autolathe,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse3)
 "oHQ" = (
@@ -19049,7 +19059,9 @@
 	},
 /area/awaymission/darkrp/outside/suburbs)
 "wRG" = (
-/obj/machinery/autolathe/armory,
+/obj/structure/frame{
+	anchored = 1
+	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse3)
@@ -36497,7 +36509,7 @@ ruD
 sVM
 gva
 gva
-uiW
+cpy
 sVM
 cSO
 "}
