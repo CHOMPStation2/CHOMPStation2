@@ -71,7 +71,7 @@
 	sprite_icon_state = "mekacargo"
 	has_eye_light_sprites = TRUE
 	has_custom_open_sprites = TRUE
-	has_vore_belly_sprites = FALSE
+	belly_light_list = list("sleeper")
 	rest_sprite_options = list("Default", "Sit")
 
 /datum/robot_sprite/dogborg/tall/mining/mmekacargo
