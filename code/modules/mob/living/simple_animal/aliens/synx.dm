@@ -835,4 +835,5 @@ This includes the sprites of the below Mob which are based upon SCP 939.
 
 #undef SYNX_LOWER_DAMAGE
 #undef SYNX_UPPER_DAMAGE
+
  */
