@@ -187,10 +187,10 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 			update_tail_showing() // VOREStation Edit: Taur Loafing
 		layer = MOB_LAYER // Fix for a byond bug where turf entry order no longer matters
 
-	if(instant) //CHOMPEdit
-		transform = M //CHOMPEdit
+	if(instant) //CHOMPEdit Start
+		transform = M
 	else
-		animate(src, transform = M, time = anim_time)
+		animate(src, transform = M, time = anim_time) //CHOMPEdit End
 	update_icon_special() //May contain transform-altering things
 
 //DAMAGE OVERLAYS
