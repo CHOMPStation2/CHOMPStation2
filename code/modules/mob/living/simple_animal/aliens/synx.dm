@@ -834,4 +834,4 @@ This includes the sprites of the below Mob which are based upon SCP 939.
 	pixel_x = -15
 
 #undef SYNX_LOWER_DAMAGE
-#undef SYNX_UPPER_DAMAGE
+#undef SYNX_UPPER_DAMAGE */
