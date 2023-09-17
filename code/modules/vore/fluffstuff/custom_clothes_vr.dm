@@ -197,9 +197,13 @@
 	item_state = "brittrenchcoat"
 
 //For general use
+<<<<<<< HEAD
 /obj/item/clothing/suit/storage/vest/hoscoat/axis_greatcoat
+=======
+/obj/item/clothing/suit/storage/vest/hoscoat/ancient_greatcoat
+>>>>>>> 7eb4aec7d1... Merge pull request #15398 from Very-Soft/spacenazis
 	name = "Greatcoat"
-	desc = "Perfect attire for kicking down the doors of suspected dissidents; this coat gives off an imposing look, while offering a luxuriously plush fur liner."
+	desc = "This coat gives off an imposing look, while offering a luxuriously plush fur liner."
 
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "greatcoat"

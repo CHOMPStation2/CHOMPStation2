@@ -15,6 +15,7 @@
 	name = "\improper SpacEx reciept"
 	info = {"1 x Stechtkin pistol plus ammo - $600<br>1 x silencer - $200<br>shipping charge - $4360<br>total - $5160"}
 
+<<<<<<< HEAD
 
 //////// 2558 ////////
 
@@ -217,6 +218,8 @@
 	info = {"A loud, painfully high pitched SSTV signal came across global comms. It seems to be a distress signal
 			of some kind. To what, I have no idea. Efforts to trace the signal's origin have fallen inconclusive."}
 
+=======
+>>>>>>> 7eb4aec7d1... Merge pull request #15398 from Very-Soft/spacenazis
 /obj/item/weapon/paper/crumpled/listeningpost/fanfiction
 	name = "\improper Regarding Latest Report"
 	info = {"I swear to god, Dave, if you send us your stupid 'Futuristic version of VORE' fanfiction instead of actual
