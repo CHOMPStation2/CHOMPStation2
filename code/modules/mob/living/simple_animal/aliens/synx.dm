@@ -1,5 +1,3 @@
-/* Handled by synx_ch now for the modular system. -Azel
-
 #define SYNX_LOWER_DAMAGE 2 //Using defines to make damage easier to tweak for hacky burn attack code.
 #define SYNX_UPPER_DAMAGE 6
 
@@ -834,4 +832,4 @@ This includes the sprites of the below Mob which are based upon SCP 939.
 	pixel_x = -15
 
 #undef SYNX_LOWER_DAMAGE
-#undef SYNX_UPPER_DAMAGE */
+#undef SYNX_UPPER_DAMAGE
