@@ -363,7 +363,7 @@
 	thing.enter_belly(src) // Atom movable proc, does nothing by default. Overridden in children for special behavior.
 	if(owner && istype(owner.loc,/turf/simulated) && !cycle_sloshed && reagents.total_volume > 0)
 		var/turf/simulated/T = owner.loc
-		var/S = pick(T.vorefootstep_sounds["human"])
+		var/S = pick(T.base_vorefootstep_sounds["human"])
 		if(S)
 			playsound(T, S, sound_volume * (reagents.total_volume / 100), FALSE, preference = /datum/client_preference/digestion_noises)
 			cycle_sloshed = TRUE
