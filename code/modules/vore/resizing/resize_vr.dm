@@ -30,11 +30,12 @@
 /mob/living/update_icons()
 	. = ..()
 	ASSERT(!ishuman(src))
-	if(fuzzy || offset_override) //CHOMPEdit
-		center_offset = 0 //CHOMPEdit
+	var/cent_offset = center_offset
+	if(fuzzy || offset_override || dir == EAST || dir == WEST) //CHOMPEdit
+		cent_offset = 0 //CHOMPEdit
 	var/matrix/M = matrix()
 	M.Scale(size_multiplier * icon_scale_x, size_multiplier * icon_scale_y)
-	M.Translate(center_offset * size_multiplier * icon_scale_x, (vis_height/2)*(size_multiplier-1)) //CHOMPEdit
+	M.Translate(cent_offset * size_multiplier * icon_scale_x, (vis_height/2)*(size_multiplier-1)) //CHOMPEdit
 	transform = M
 
 /**

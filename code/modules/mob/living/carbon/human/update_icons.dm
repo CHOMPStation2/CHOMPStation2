@@ -124,7 +124,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	//Do any species specific layering updates, such as when hiding.
 	update_icon_special()
 
-/mob/living/carbon/human/update_transform()
+/mob/living/carbon/human/update_transform(var/instant = FALSE) //CHOMPEdit
 	/* VOREStation Edit START
 	// First, get the correct size.
 	var/desired_scale_x = icon_scale_x
@@ -143,9 +143,9 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	var/desired_scale_y = size_multiplier * icon_scale_y
 	desired_scale_x *= species.icon_scale_x
 	desired_scale_y *= species.icon_scale_y
-	center_offset = species.center_offset //CHOMPEdit
-	if(offset_override) //CHOMPEdit
-		center_offset = 0 //CHOMPEdit
+	var/cent_offset = species.center_offset //CHOMPEdit
+	if(fuzzy || offset_override || dir == EAST || dir == WEST) //CHOMPEdit
+		cent_offset = 0 //CHOMPEdit
 	vis_height = species.icon_height
 	appearance_flags |= PIXEL_SCALE
 	if(fuzzy)
@@ -177,17 +177,20 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 			else
 				M.Translate(1,-6)
 			M.Scale(desired_scale_y, desired_scale_x)
-		M.Translate(center_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1)) //CHOMPEdit
+		M.Translate(cent_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1)) //CHOMPEdit
 		// CHOMPEdit End
 		layer = MOB_LAYER -0.01 // Fix for a byond bug where turf entry order no longer matters
 	else
 		M.Scale(desired_scale_x, desired_scale_y)//VOREStation Edit
-		M.Translate(center_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1)) //CHOMPEdit
+		M.Translate(cent_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1)) //CHOMPEdit
 		if(tail_style?.can_loaf) // VOREStation Edit: Taur Loafing
 			update_tail_showing() // VOREStation Edit: Taur Loafing
 		layer = MOB_LAYER // Fix for a byond bug where turf entry order no longer matters
 
-	animate(src, transform = M, time = anim_time)
+	if(instant) //CHOMPEdit
+		transform = M //CHOMPEdit
+	else
+		animate(src, transform = M, time = anim_time)
 	update_icon_special() //May contain transform-altering things
 
 //DAMAGE OVERLAYS
@@ -333,7 +336,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 				pixel_y = tail_style.mob_offset_y
 				default_pixel_x = tail_style.mob_offset_x
 				default_pixel_y = tail_style.mob_offset_y
-			
+
 			//ChompEDIT START
 			//icon_key addition for digitigrade switch
 			if(digitigrade && (part.organ_tag == BP_R_LEG  || part.organ_tag == BP_L_LEG || part.organ_tag == BP_R_FOOT || part.organ_tag == BP_L_FOOT))
