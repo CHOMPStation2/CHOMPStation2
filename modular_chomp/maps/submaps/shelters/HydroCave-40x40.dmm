@@ -1,297 +1,3659 @@
-"ah" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/turf/simulated/wall/r_wall,/area/survivalpod/superpose/HydroCave)
-"ak" = (/obj/structure/flora/ausbushes/brflowers,/turf/simulated/floor/grass,/area/survivalpod/superpose/HydroCave)
-"at" = (/obj/structure/closet/emcloset,/obj/item/clothing/mask/breath,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"av" = (/obj/structure/toilet{dir = 1},/obj/machinery/light/small{dir = 8},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/freezer,/area/survivalpod/superpose/HydroCave)
-"aF" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 5; level = 2},/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"aM" = (/obj/machinery/light{dir = 8},/obj/machinery/alarm/monitor{dir = 4; locked = 0; pixel_x = -23; req_access = null},/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"aX" = (/obj/structure/salvageable/console_broken_os,/turf/simulated/floor/tiled/red,/area/survivalpod/superpose/HydroCave)
-"br" = (/obj/machinery/door/firedoor,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/HydroCave)
-"bz" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"ci" = (/obj/structure/disposalpipe/segment{dir = 2; icon_state = "pipe-c"},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/structure/sink{pixel_y = 25},/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"cv" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/simulated/wall,/area/survivalpod/superpose/HydroCave)
-"cG" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/door/airlock{id_tag = "awaydorm3"; name = "Dorm 3"},/obj/machinery/door/firedoor,/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"cI" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/vending/snack,/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"cN" = (/obj/machinery/atmospherics/unary/vent_pump{dir = 1; on = 1},/obj/structure/table/glass,/turf/simulated/floor/carpet,/area/survivalpod/superpose/HydroCave)
-"cT" = (/obj/structure/extinguisher_cabinet{pixel_y = -28},/obj/structure/flora/pumpkin,/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"cY" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"dh" = (/obj/structure/sign/warning/lethal_turrets,/turf/simulated/wall/r_wall,/area/survivalpod/superpose/HydroCave)
-"dz" = (/obj/structure/grille,/obj/structure/window/reinforced,/obj/machinery/door/firedoor/border_only,/obj/structure/window/reinforced{dir = 8},/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"dG" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 6},/turf/simulated/floor/tiled/red,/area/survivalpod/superpose/HydroCave)
-"dI" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/vending/coffee,/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"dU" = (/obj/structure/flora/ausbushes/ywflowers,/turf/simulated/floor/grass,/area/survivalpod/superpose/HydroCave)
-"ep" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply,/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"er" = (/obj/structure/grille,/obj/structure/window/reinforced{dir = 4},/obj/machinery/door/firedoor/border_only,/obj/structure/window/reinforced{dir = 8},/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"ev" = (/obj/effect/decal/cleanable/dirt,/obj/structure/flora/pumpkin,/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"eV" = (/obj/structure/closet/secure_closet{icon_broken = "hydrosecurebroken"; icon_closed = "hydrosecure"; icon_locked = "hydrosecure1"; icon_off = "hydrosecureoff"; icon_opened = "hydrosecureopen"; icon_state = "hydrosecure"; locked = 0; name = "botanist's locker"; req_access_txt = "201"},/obj/item/clothing/mask/bandana,/turf/simulated/floor/tiled/hydro,/area/survivalpod/superpose/HydroCave)
-"fc" = (/obj/structure/bed/chair{dir = 4},/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"fj" = (/obj/structure/bed/chair{dir = 4},/turf/simulated/floor/tiled/red,/area/survivalpod/superpose/HydroCave)
-"fm" = (/obj/structure/table/reinforced,/obj/machinery/door/firedoor,/obj/machinery/door/window/southleft{base_state = "right"; dir = 8; icon_state = "right"; name = "Security Checkpoint"; req_access_txt = "201"},/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"fo" = (/obj/machinery/light{dir = 4},/obj/machinery/door/firedoor,/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"fz" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/random/trash,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"fM" = (/obj/structure/bed/chair{dir = 8},/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"fN" = (/obj/effect/decal/cleanable/dirt,/obj/structure/flora/pumpkin,/turf/simulated/floor/tiled{icon_state = "dark"},/area/survivalpod/superpose/HydroCave)
-"ga" = (/obj/structure/table/reinforced,/obj/machinery/door/firedoor,/obj/machinery/door/window/southleft{dir = 8; name = "Security Checkpoint"; req_access_txt = "201"},/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"gh" = (/obj/structure/disposalpipe/segment{dir = 1; icon_state = "pipe-c"},/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"gX" = (/obj/machinery/vending/hydroseeds{slogan_delay = 700},/turf/simulated/floor/tiled/hydro,/area/survivalpod/superpose/HydroCave)
-"hM" = (/obj/machinery/alarm/monitor{dir = 4; locked = 0; pixel_x = -23; req_access = null},/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"id" = (/obj/effect/decal/cleanable/dirt,/turf/template_noop,/area/template_noop)
-"ih" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"it" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"iD" = (/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 1; initialize_directions = 14; tag = "icon-manifold-r-f (NORTH)"},/turf/simulated/wall,/area/survivalpod/superpose/HydroCave)
-"iY" = (/obj/machinery/door/airlock/security{name = "Security Checkpoint"; req_access_txt = "201"},/obj/machinery/door/firedoor,/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"jg" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 10},/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"ji" = (/obj/machinery/seed_extractor,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/hydro,/area/survivalpod/superpose/HydroCave)
-"jm" = (/turf/simulated/mineral/ignore_mapgen/cave,/area/template_noop)
-"ju" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"jw" = (/obj/machinery/biogenerator,/turf/simulated/floor/tiled/hydro,/area/survivalpod/superpose/HydroCave)
-"jY" = (/obj/machinery/atmospherics/unary/vent_pump{dir = 1; on = 1},/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"kc" = (/turf/simulated/wall,/area/survivalpod/superpose/HydroCave)
-"kO" = (/obj/effect/decal/cleanable/blood/splatter{color = "red"},/turf/template_noop,/area/template_noop)
-"la" = (/obj/structure/disposalpipe/segment{dir = 4},/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"lU" = (/obj/item/weapon/beartrap/hunting{anchored = 1; deployed = 1; icon_state = "beartrap1"},/turf/simulated/mineral/floor/ignore_mapgen/cave,/area/template_noop)
-"lX" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/effect/decal/cleanable/dirt,/obj/random/trash,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"lY" = (/obj/machinery/atmospherics/unary/vent_scrubber{dir = 1; on = 1; scrub_N2O = 0; scrub_Toxins = 0},/obj/structure/bed,/obj/item/weapon/bedsheet/pirate,/turf/simulated/floor/carpet,/area/survivalpod/superpose/HydroCave)
-"mc" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/effect/decal/cleanable/blood/oil{color = "black"},/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"mg" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/wall/r_wall,/area/survivalpod/superpose/HydroCave)
-"mx" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"mz" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"mA" = (/obj/machinery/light/small{dir = 1},/obj/machinery/alarm/monitor{locked = 0; pixel_y = 23; req_access = null},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 10},/turf/simulated/floor/carpet,/area/survivalpod/superpose/HydroCave)
-"mE" = (/obj/machinery/door/firedoor,/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"mJ" = (/obj/structure/reagent_dispensers/beerkeg/fakenuke,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/HydroCave)
-"mV" = (/obj/machinery/light/small,/obj/machinery/alarm/monitor{dir = 1; locked = 0; pixel_y = -23; req_access = null},/turf/simulated/floor/tiled/freezer,/area/survivalpod/superpose/HydroCave)
-"nb" = (/obj/machinery/porta_turret/stationary/syndie,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/HydroCave)
-"nj" = (/obj/machinery/light{dir = 1},/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"nk" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/door/airlock/maintenance{name = "Security Checkpoint Maintenance"; req_access_txt = "201"; req_one_access_txt = "0"},/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"nV" = (/obj/machinery/vending/deluxe_dinner{req_access = null; req_log_access = null},/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"og" = (/obj/structure/closet/crate,/obj/item/stack/material/cardboard{amount = 50},/obj/item/stack/material/cardboard{amount = 50},/obj/item/stack/material/cardboard{amount = 50},/obj/item/stack/material/cardboard{amount = 50},/obj/fiftyspawner/blucarpet,/obj/fiftyspawner/oracarpet,/obj/fiftyspawner/purcarpet,/obj/fiftyspawner/sblucarpet,/obj/fiftyspawner/tealcarpet,/obj/fiftyspawner/turcarpet,/obj/item/stack/material/wood{amount = 50; color = "#824B28"},/obj/item/stack/material/wood{amount = 50; color = "#824B28"},/obj/item/stack/material/wood/hard{amount = 50},/obj/item/stack/material/wood/hard{amount = 50},/obj/item/stack/material/wood/sif{amount = 50},/obj/item/stack/material/wood/sif{amount = 50},/obj/item/stack/material/marble{amount = 50},/obj/item/stack/material/marble{amount = 50},/obj/item/stack/material/marble{amount = 50},/obj/item/stack/material/cloth{amount = 50},/obj/item/stack/material/cloth{amount = 50},/obj/item/stack/material/algae{amount = 50},/obj/item/stack/material/sandstone,/obj/item/stack/material/sandstone,/obj/item/stack/material/sandstone,/obj/item/stack/material/lead{amount = 30},/obj/item/stack/material/plasteel{amount = 30; pixel_y = 5},/obj/item/stack/material/resin{amount = 50},/obj/item/stack/material/smolebricks{amount = 50},/obj/item/stack/material/smolebricks{amount = 50},/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 1; initialize_directions = 14; tag = "icon-manifold-b-f (NORTH)"},/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"oq" = (/obj/structure/closet/walllocker_double/north,/obj/item/device/gps,/obj/item/sticky_pad/random,/obj/item/device/starcaster_news,/obj/item/weapon/pen/blue,/obj/item/device/pda,/obj/item/weapon/card/id/external,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,/obj/item/weapon/reagent_containers/food/snacks/sosjerky,/obj/item/weapon/reagent_containers/food/snacks/sosjerky,/obj/item/weapon/gun/energy/locked/phasegun/pistol,/obj/item/weapon/material/knife/tacknife/survival,/obj/item/clothing/accessory/permit/gun,/obj/item/device/camera,/obj/item/device/binoculars,/obj/item/device/threadneedle,/obj/random/soap,/obj/item/weapon/towel/random,/obj/item/bodybag/cryobag,/obj/item/device/flashlight/flare,/obj/item/device/flashlight/flare,/obj/item/device/flashlight/color/yellow,/obj/item/device/radio,/obj/item/device/radio,/obj/item/weapon/flame/lighter/random,/obj/item/weapon/cell/device/hyper,/obj/item/weapon/cell/device/hyper,/obj/item/weapon/extinguisher/mini,/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,/obj/item/weapon/reagent_containers/pill/spaceacillin,/obj/item/weapon/reagent_containers/pill/spaceacillin,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/device/suit_cooling_unit/emergency,/obj/item/stack/nanopaste,/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,/obj/item/weapon/storage/backpack/messenger,/obj/item/clothing/accessory/storage/black_drop_pouches,/obj/item/clothing/accessory/poncho/thermal,/obj/item/weapon/storage/box/survival/comp,/obj/item/weapon/storage/toolbox/brass,/obj/item/weapon/storage/box/khcrystal,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"oQ" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/door/airlock{id_tag = "awaydorm2"; name = "Dorm 2"},/obj/machinery/door/firedoor,/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"oX" = (/obj/effect/decal/cleanable/blood/oil{color = "black"},/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"oZ" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/simulated/wall/r_wall,/area/survivalpod/superpose/HydroCave)
-"pd" = (/obj/machinery/disposal,/obj/structure/disposalpipe/trunk,/obj/structure/sign/deathsposal{desc = "A warning sign which reads 'DISPOSAL: LEADS TO EXTERIOR'"; name = "\improper DISPOSAL: LEADS TO EXTERIOR"; pixel_y = 32},/turf/simulated/floor/tiled/hydro,/area/survivalpod/superpose/HydroCave)
-"ph" = (/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"pA" = (/obj/structure/table/reinforced,/obj/machinery/door/firedoor,/obj/machinery/door/window/southleft{base_state = "right"; dir = 4; icon_state = "right"; name = "Hydroponics Desk"; req_access_txt = "201"},/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"pG" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 8; initialize_directions = 7; tag = "icon-manifold-b-f (WEST)"},/obj/machinery/newscaster{pixel_x = -30},/turf/simulated/floor/carpet,/area/survivalpod/superpose/HydroCave)
-"pT" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 6},/obj/random/trash,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"qi" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 10},/turf/simulated/wall,/area/survivalpod/superpose/HydroCave)
-"qw" = (/obj/machinery/atmospherics/unary/vent_pump{dir = 1; on = 1},/obj/machinery/portable_atmospherics/hydroponics,/obj/item/seeds/pumpkinseed,/turf/simulated/floor/tiled/hydro,/area/survivalpod/superpose/HydroCave)
-"qN" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 1; initialize_directions = 14; tag = "icon-manifold-b-f (NORTH)"},/turf/simulated/floor/tiled/red,/area/survivalpod/superpose/HydroCave)
-"rn" = (/obj/structure/closet/secure_closet{icon_broken = "secbroken"; icon_closed = "sec"; icon_locked = "sec1"; icon_off = "secoff"; icon_opened = "secopen"; icon_state = "sec1"; name = "security officer's locker"; req_access_txt = "201"},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/red,/area/survivalpod/superpose/HydroCave)
-"rs" = (/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,/obj/machinery/door/firedoor,/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"rD" = (/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 8; initialize_directions = 7; tag = "icon-manifold-r-f (WEST)"},/turf/simulated/floor/carpet,/area/survivalpod/superpose/HydroCave)
-"rK" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/random/trash,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"rP" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"se" = (/turf/simulated/floor/tiled{icon_state = "dark"},/area/survivalpod/superpose/HydroCave)
-"sh" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/recharger{pixel_y = 4},/obj/machinery/newscaster/security_unit{pixel_x = -30},/obj/effect/decal/cleanable/dirt,/obj/structure/table/standard,/turf/simulated/floor/tiled/red,/area/survivalpod/superpose/HydroCave)
-"sm" = (/obj/machinery/door/airlock{name = "Unit 2"},/turf/simulated/floor/tiled/steel_grid,/area/survivalpod/superpose/HydroCave)
-"sQ" = (/obj/machinery/light{dir = 4},/obj/machinery/alarm/monitor{dir = 8; locked = 0; pixel_x = 23; req_access = null},/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"sR" = (/obj/structure/table/steel,/obj/item/stack/material/phoron{amount = 5},/obj/item/stack/material/phoron{amount = 5},/obj/fiftyspawner/wood,/obj/fiftyspawner/steel,/turf/simulated/floor,/area/survivalpod/superpose/HydroCave)
-"sZ" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 9},/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"tt" = (/obj/structure/disposalpipe/junction{dir = 4; icon_state = "pipe-j2"; tag = "icon-pipe-j1 (WEST)"},/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"tu" = (/obj/machinery/atmospherics/unary/vent_scrubber{on = 1; scrub_N2O = 0; scrub_Toxins = 0},/turf/simulated/floor/tiled/red,/area/survivalpod/superpose/HydroCave)
-"up" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/power/port_gen/pacman,/obj/structure/cable,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"uH" = (/obj/structure/toilet{dir = 1},/obj/machinery/light/small{dir = 8},/turf/simulated/floor/tiled/freezer,/area/survivalpod/superpose/HydroCave)
-"vD" = (/obj/machinery/vending/hydronutrients,/turf/simulated/floor/tiled/hydro,/area/survivalpod/superpose/HydroCave)
-"vK" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/structure/closet/emcloset/legacy,/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"wi" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 8; initialize_directions = 7; tag = "icon-manifold-b-f (WEST)"},/obj/structure/closet/secure_closet{desc = "It's a secure locker for personnel. The first card swiped gains control."; icon_broken = "cabinetdetective_broken"; icon_closed = "cabinetdetective"; icon_locked = "cabinetdetective_locked"; icon_off = "cabinetdetective_broken"; icon_opened = "cabinetdetective_open"; icon_state = "cabinetdetective"; locked = 0; name = "personal closet"; req_access_txt = "201"},/obj/item/clothing/under/suit_jacket/female,/turf/simulated/floor/carpet,/area/survivalpod/superpose/HydroCave)
-"wj" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/structure/bed/chair/office/dark,/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"wo" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"wz" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 8; initialize_directions = 7; tag = "icon-manifold-b-f (WEST)"},/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"wC" = (/obj/structure/flora/ausbushes/ppflowers,/turf/simulated/floor/grass,/area/survivalpod/superpose/HydroCave)
-"wO" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 10},/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"wV" = (/turf/simulated/floor/tiled/techfloor,/area/template_noop)
-"xe" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"xz" = (/obj/structure/disposalpipe/segment,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/effect/decal/cleanable/dirt,/obj/machinery/portable_atmospherics/hydroponics,/obj/item/seeds/pumpkinseed,/turf/simulated/floor/tiled/hydro,/area/survivalpod/superpose/HydroCave)
-"xL" = (/obj/structure/table/glass,/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"xR" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/tiled/red,/area/survivalpod/superpose/HydroCave)
-"xV" = (/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"xZ" = (/obj/machinery/door/firedoor,/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"yk" = (/obj/structure/bed,/turf/simulated/floor/carpet,/area/survivalpod/superpose/HydroCave)
-"yn" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 5},/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"yw" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 10},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/blood/oil{color = "black"},/obj/random/trash,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"yL" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 6},/turf/simulated/wall,/area/survivalpod/superpose/HydroCave)
-"zf" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/turf/simulated/wall,/area/survivalpod/superpose/HydroCave)
-"zj" = (/obj/structure/grille,/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 4},/obj/machinery/door/firedoor/border_only,/obj/structure/window/reinforced{dir = 8},/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"zz" = (/obj/machinery/door/airlock/angled_tgmc/wide/generic_steel{dir = 4},/obj/machinery/door/firedoor,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/HydroCave)
-"zA" = (/turf/simulated/mineral/floor/ignore_mapgen/cave,/area/template_noop)
-"zB" = (/obj/structure/disposalpipe/segment{dir = 4; icon_state = "pipe-c"},/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"zR" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 5},/obj/structure/closet,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"Aa" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 1; initialize_directions = 14; tag = "icon-manifold-b-f (NORTH)"},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"Ax" = (/turf/simulated/floor/tiled/red,/area/survivalpod/superpose/HydroCave)
-"AE" = (/obj/machinery/light{dir = 8},/obj/machinery/door/firedoor,/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"AV" = (/obj/structure/extinguisher_cabinet{pixel_x = -25},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"Bs" = (/obj/structure/grille,/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced{dir = 4},/obj/machinery/door/firedoor/border_only,/obj/structure/window/reinforced{dir = 8},/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"Bv" = (/obj/effect/fusion_em_field,/turf/simulated/mineral/floor/ignore_mapgen/cave,/area/template_noop)
-"By" = (/obj/structure/bed/chair{dir = 8},/turf/simulated/floor/tiled/red,/area/survivalpod/superpose/HydroCave)
-"BI" = (/obj/structure/grille,/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 4},/obj/machinery/door/firedoor/border_only,/obj/structure/window/reinforced{dir = 8},/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"BX" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 6},/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"BY" = (/obj/machinery/newscaster{pixel_y = -28},/turf/simulated/floor/carpet,/area/survivalpod/superpose/HydroCave)
-"Ci" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 5},/obj/effect/decal/cleanable/blood/oil{color = "black"},/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"Cs" = (/obj/machinery/atmospherics/unary/vent_scrubber{dir = 1; on = 1; scrub_N2O = 0; scrub_Toxins = 0},/obj/structure/table/glass,/turf/simulated/floor/carpet,/area/survivalpod/superpose/HydroCave)
-"Ct" = (/turf/simulated/floor/tiled/freezer,/area/survivalpod/superpose/HydroCave)
-"CT" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/red,/area/survivalpod/superpose/HydroCave)
-"CV" = (/obj/structure/safe/floor,/obj/item/weapon/moneybag/vault,/obj/item/weapon/moneybag/vault,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/HydroCave)
-"DN" = (/obj/structure/closet/emcloset/legacy,/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"DW" = (/obj/machinery/door/firedoor,/obj/structure/disposalpipe/segment{dir = 4},/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"Eh" = (/obj/structure/sink{pixel_y = 25},/turf/simulated/floor/tiled/freezer,/area/survivalpod/superpose/HydroCave)
-"EB" = (/obj/machinery/alarm/monitor{dir = 4; locked = 0; pixel_x = -23; req_access = null},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/filingcabinet,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/red,/area/survivalpod/superpose/HydroCave)
-"EC" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/turf/simulated/wall,/area/survivalpod/superpose/HydroCave)
-"EE" = (/obj/machinery/atmospherics/unary/vent_pump{dir = 8; on = 1},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"Fb" = (/obj/structure/table/wooden_reinforced,/obj/item/weapon/reagent_containers/food/snacks/clownburger,/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"Fc" = (/obj/structure/sign/warning/secure_area,/turf/simulated/wall/r_wall,/area/survivalpod/superpose/HydroCave)
-"Ff" = (/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 8; initialize_directions = 7; tag = "icon-manifold-r-f (WEST)"},/obj/structure/reagent_dispensers/peppertank{pixel_y = 30},/turf/simulated/floor/tiled/red,/area/survivalpod/superpose/HydroCave)
-"Fg" = (/obj/machinery/portable_atmospherics/canister/air,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"Fh" = (/obj/machinery/atmospherics/unary/vent_pump{dir = 1; on = 1},/obj/structure/bed,/obj/item/weapon/bedsheet/mime,/turf/simulated/floor/carpet,/area/survivalpod/superpose/HydroCave)
-"Fn" = (/obj/effect/decal/cleanable/blood/tracks{color = "red"; desc = "Your instincts say you shouldn't be following these."; icon = 'icons/effects/blood.dmi'; icon_state = "tracks"},/turf/template_noop,/area/template_noop)
-"FB" = (/obj/machinery/atmospherics/unary/vent_pump{on = 1},/turf/simulated/floor/tiled/red,/area/survivalpod/superpose/HydroCave)
-"Ge" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"Gf" = (/obj/structure/grille,/obj/structure/window/reinforced{dir = 1},/obj/machinery/door/firedoor/border_only,/obj/structure/window/reinforced{dir = 8},/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"Gg" = (/obj/structure/disposalpipe/segment{dir = 4},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"Gj" = (/obj/structure/disposalpipe/segment,/obj/machinery/portable_atmospherics/hydroponics,/obj/item/seeds/pumpkinseed,/turf/simulated/floor/tiled/hydro,/area/survivalpod/superpose/HydroCave)
-"Gm" = (/obj/structure/closet/crate/hydroponics,/obj/structure/flora/pumpkin,/obj/structure/flora/pumpkin,/obj/structure/flora/pumpkin,/obj/structure/flora/pumpkin,/obj/structure/flora/pumpkin,/obj/structure/flora/pumpkin,/obj/structure/flora/pumpkin,/obj/structure/flora/pumpkin,/obj/structure/flora/pumpkin,/obj/structure/flora/pumpkin,/obj/structure/flora/pumpkin,/turf/simulated/floor/tiled{icon_state = "dark"},/area/survivalpod/superpose/HydroCave)
-"Gx" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/freezer,/area/survivalpod/superpose/HydroCave)
-"Gy" = (/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"GJ" = (/obj/effect/decal/cleanable/dirt,/obj/random/trash,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"Hr" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/table/standard,/turf/simulated/floor/tiled/red,/area/survivalpod/superpose/HydroCave)
-"HA" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/structure/closet/secure_closet{desc = "It's a secure locker for personnel. The first card swiped gains control."; icon_broken = "cabinetdetective_broken"; icon_closed = "cabinetdetective"; icon_locked = "cabinetdetective_locked"; icon_off = "cabinetdetective_broken"; icon_opened = "cabinetdetective_open"; icon_state = "cabinetdetective"; locked = 0; name = "personal closet"; req_access_txt = "201"},/obj/item/clothing/under/pj/blue,/turf/simulated/floor/carpet,/area/survivalpod/superpose/HydroCave)
-"HB" = (/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 1; initialize_directions = 14; tag = "icon-manifold-r-f (NORTH)"},/turf/simulated/wall/r_wall,/area/survivalpod/superpose/HydroCave)
-"HE" = (/obj/machinery/light{dir = 1},/obj/structure/disposalpipe/segment{dir = 4},/obj/structure/flora/pumpkin,/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"HP" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/random/trash,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"Ig" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"Im" = (/obj/effect/decal/cleanable/blood/tracks{color = "red"; desc = "Your instincts say you shouldn't be following these."; icon = 'icons/effects/blood.dmi'; icon_state = "tracks"},/turf/simulated/mineral/floor/ignore_mapgen/cave,/area/template_noop)
-"In" = (/obj/structure/disposalpipe/segment,/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"It" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 9},/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"Iu" = (/obj/structure/grille,/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 4},/obj/machinery/door/firedoor/border_only,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"ID" = (/obj/structure/sink{pixel_y = 25},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/freezer,/area/survivalpod/superpose/HydroCave)
-"IY" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 1; initialize_directions = 14; tag = "icon-manifold-b-f (NORTH)"},/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"Jj" = (/obj/machinery/light{dir = 4},/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"Jp" = (/obj/machinery/disposal,/obj/structure/disposalpipe/trunk{dir = 1},/obj/structure/sign/deathsposal{desc = "A warning sign which reads 'DISPOSAL: LEADS TO EXTERIOR'"; name = "\improper DISPOSAL: LEADS TO EXTERIOR"; pixel_y = -32},/turf/simulated/floor/tiled{icon_state = "dark"},/area/survivalpod/superpose/HydroCave)
-"Ju" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/structure/table/standard,/turf/simulated/floor/tiled/red,/area/survivalpod/superpose/HydroCave)
-"JY" = (/turf/simulated/wall/r_wall,/area/survivalpod/superpose/HydroCave)
-"Kb" = (/obj/structure/grille,/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced,/obj/machinery/door/firedoor/border_only,/obj/structure/window/reinforced{dir = 8},/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"Kp" = (/obj/structure/grille,/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 4},/obj/machinery/door/firedoor/border_only,/obj/structure/disposalpipe/segment,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"Ku" = (/obj/structure/grille,/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced{dir = 4},/obj/machinery/door/firedoor/border_only,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"KK" = (/obj/structure/grille,/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 4},/obj/machinery/door/firedoor/border_only,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"KO" = (/obj/structure/disposalpipe/segment{dir = 1; icon_state = "pipe-c"},/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"Lg" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/effect/decal/cleanable/blood/oil{color = "black"},/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"LO" = (/obj/machinery/light{dir = 8},/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"LY" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"Mj" = (/obj/structure/disposalpipe/segment{dir = 4},/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"Ms" = (/obj/structure/disposalpipe/segment{dir = 4; icon_state = "pipe-c"},/obj/structure/reagent_dispensers/watertank,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"My" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/turf/simulated/wall/r_wall,/area/survivalpod/superpose/HydroCave)
-"MF" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 5},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"MM" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/portable_atmospherics/hydroponics,/obj/item/seeds/pumpkinseed,/turf/simulated/floor/tiled/hydro,/area/survivalpod/superpose/HydroCave)
-"Nd" = (/obj/structure/table/standard,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/hydro,/area/survivalpod/superpose/HydroCave)
-"Nq" = (/obj/machinery/atmospherics/unary/vent_scrubber{on = 1; scrub_N2O = 0; scrub_Toxins = 0},/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"Nw" = (/obj/structure/flora/pumpkin,/turf/simulated/floor/tiled{icon_state = "dark"},/area/survivalpod/superpose/HydroCave)
-"NA" = (/obj/item/toy/plushie/box,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/HydroCave)
-"NF" = (/obj/structure/disposalpipe/segment{dir = 4},/obj/machinery/door/airlock/maintenance{name = "Hydroponics Maintenance"; req_access_txt = "201"},/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"NI" = (/obj/structure/disposalpipe/segment,/obj/machinery/atmospherics/unary/vent_scrubber{dir = 1; on = 1; scrub_N2O = 0; scrub_Toxins = 0},/obj/machinery/portable_atmospherics/hydroponics,/obj/item/seeds/pumpkinseed,/turf/simulated/floor/tiled/hydro,/area/survivalpod/superpose/HydroCave)
-"NO" = (/obj/structure/disposalpipe/segment{dir = 4},/turf/simulated/floor/tiled{icon_state = "dark"},/area/survivalpod/superpose/HydroCave)
-"Oh" = (/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/HydroCave)
-"Om" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/carpet,/area/survivalpod/superpose/HydroCave)
-"Oz" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/random/trash,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"OB" = (/obj/structure/disposalpipe/segment{dir = 8; icon_state = "pipe-c"},/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"OV" = (/obj/structure/closet/crate,/obj/item/stack/material/plastic{amount = 50},/obj/item/stack/material/plastic{amount = 50},/obj/item/stack/material/plastic{amount = 50},/obj/item/stack/material/plastic{amount = 50},/obj/item/stack/material/steel{amount = 50},/obj/item/stack/material/steel{amount = 50},/obj/item/stack/material/steel{amount = 50},/obj/item/stack/material/steel{amount = 50},/obj/item/stack/material/glass{amount = 50},/obj/item/stack/material/glass{amount = 50},/obj/item/stack/material/glass{amount = 50},/obj/item/stack/material/glass{amount = 50},/obj/item/stack/rods{amount = 50},/obj/item/stack/rods{amount = 50},/obj/item/stack/rods{amount = 50},/obj/item/stack/rods{amount = 50},/obj/item/stack/cable_coil{pixel_x = 3; pixel_y = 3},/obj/item/stack/cable_coil{pixel_x = 3; pixel_y = 3},/obj/item/stack/cable_coil/green,/obj/item/stack/cable_coil/blue,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"Pi" = (/obj/machinery/light/small,/obj/machinery/alarm/monitor{dir = 1; locked = 0; pixel_y = -23; req_access = null},/obj/machinery/atmospherics/unary/vent_scrubber{dir = 1; on = 1; scrub_N2O = 0; scrub_Toxins = 0},/turf/simulated/floor/carpet,/area/survivalpod/superpose/HydroCave)
-"Pm" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/effect/decal/cleanable/dirt,/obj/random/trash,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"Pn" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/door/airlock{id_tag = "awaydorm1"; name = "Dorm 1"},/obj/machinery/door/firedoor,/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"Pu" = (/obj/machinery/light/small{dir = 8},/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"PE" = (/obj/structure/closet,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"PQ" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/wall,/area/survivalpod/superpose/HydroCave)
-"Qd" = (/obj/effect/decal/cleanable/dirt,/obj/machinery/portable_atmospherics/hydroponics,/obj/item/seeds/pumpkinseed,/turf/simulated/floor/tiled/hydro,/area/survivalpod/superpose/HydroCave)
-"Qo" = (/obj/item/stack/rods,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"Qz" = (/obj/machinery/door/airlock{name = "Unit 1"},/turf/simulated/floor/tiled/steel_grid,/area/survivalpod/superpose/HydroCave)
-"QE" = (/obj/structure/disposalpipe/segment{dir = 4},/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"QF" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/structure/reagent_dispensers/watertank/high,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"QK" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"QT" = (/obj/machinery/alarm/monitor{locked = 0; pixel_y = 23; req_access = null},/obj/machinery/light{dir = 1},/obj/structure/disposalpipe/segment{dir = 4},/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"Rb" = (/obj/random/trash,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"Rq" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"Rx" = (/obj/structure/table/standard,/obj/machinery/reagentgrinder,/turf/simulated/floor/tiled/hydro,/area/survivalpod/superpose/HydroCave)
-"RB" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/structure/window/basic{dir = 8; tag = "icon-window (WEST)"},/obj/random/trash,/obj/machinery/floodlight,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"RF" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/simulated/floor/tiled/red,/area/survivalpod/superpose/HydroCave)
-"RG" = (/obj/structure/disposalpipe/segment{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/sink{pixel_y = 25},/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"RP" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/newscaster{pixel_x = 30},/turf/simulated/floor/carpet,/area/survivalpod/superpose/HydroCave)
-"RT" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 9},/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"Sv" = (/obj/machinery/door/airlock{name = "Unisex Restrooms"; req_access_txt = "0"},/obj/machinery/door/firedoor,/turf/simulated/floor/tiled/steel_grid,/area/survivalpod/superpose/HydroCave)
-"SM" = (/obj/structure/table/standard,/obj/structure/flora/pumpkin,/obj/structure/flora/pumpkin,/obj/structure/flora/pumpkin,/obj/structure/flora/pumpkin,/turf/simulated/floor/tiled/hydro,/area/survivalpod/superpose/HydroCave)
-"SP" = (/obj/machinery/door/firedoor/border_only,/obj/machinery/door/airlock/angled_tgmc/dropship2_pilot,/turf/simulated/floor/tiled/steel_grid,/area/survivalpod/superpose/HydroCave)
-"Ta" = (/obj/structure/extinguisher_cabinet{pixel_y = -28},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"Tj" = (/obj/machinery/floodlight,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"TP" = (/obj/structure/grille,/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced,/obj/machinery/door/firedoor/border_only,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"TX" = (/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 1; initialize_directions = 14; tag = "icon-manifold-r-f (NORTH)"},/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"Uq" = (/obj/machinery/atmospherics/unary/vent_scrubber{dir = 8; on = 1; scrub_N2O = 0; scrub_Toxins = 0},/turf/simulated/floor/tiled/red,/area/survivalpod/superpose/HydroCave)
-"UW" = (/obj/structure/disposalpipe/segment{dir = 2; icon_state = "pipe-c"},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"Vx" = (/obj/machinery/power/apc/alarms_hidden{dir = 1; pixel_y = 20},/obj/structure/cable{d2 = 2; icon_state = "0-2"},/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"VB" = (/obj/item/weapon/beartrap/hunting{anchored = 1; deployed = 1; icon_state = "beartrap1"},/turf/template_noop,/area/template_noop)
-"VF" = (/obj/machinery/door/airlock/maintenance{req_access_txt = "0"; req_one_access_txt = "0"},/obj/machinery/door/firedoor,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"Wd" = (/obj/structure/table/wooden_reinforced,/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"Wt" = (/obj/machinery/door/airlock/maintenance{req_access_txt = "0"; req_one_access_txt = "0"},/obj/machinery/door/firedoor,/turf/simulated/floor/tiled/steel_grid,/area/survivalpod/superpose/HydroCave)
-"WC" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/structure/reagent_dispensers/fueltank,/obj/structure/window/basic{dir = 4; tag = "icon-window (EAST)"},/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"WE" = (/obj/structure/table/reinforced,/obj/machinery/door/firedoor,/obj/machinery/door/window/southleft{dir = 4; name = "Hydroponics Desk"; req_access_txt = "201"},/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"WL" = (/obj/machinery/portable_atmospherics/hydroponics,/obj/item/seeds/pumpkinseed,/turf/simulated/floor/tiled/hydro,/area/survivalpod/superpose/HydroCave)
-"WN" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/turf/simulated/floor/carpet,/area/survivalpod/superpose/HydroCave)
-"WT" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"WU" = (/obj/structure/flora/pumpkin,/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"WY" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"Xj" = (/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 1; initialize_directions = 14; tag = "icon-manifold-r-f (NORTH)"},/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"Xw" = (/obj/effect/decal/cleanable/dirt,/obj/structure/bed/chair{dir = 8},/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"XS" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"XW" = (/obj/structure/disposalpipe/segment{dir = 2; icon_state = "pipe-c"},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"Yb" = (/turf/template_noop,/area/template_noop)
-"Yf" = (/obj/structure/disposalpipe/segment,/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"Yo" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 10},/turf/simulated/floor/tiled/red,/area/survivalpod/superpose/HydroCave)
-"Yq" = (/obj/machinery/vending/coffee,/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"YE" = (/obj/effect/decal/cleanable/blood/tracks{color = "red"; desc = "Your instincts say you shouldn't be following these."; dir = 4; icon = 'icons/effects/blood.dmi'; icon_state = "tracks"},/turf/simulated/mineral/floor/ignore_mapgen/cave,/area/template_noop)
-"YL" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"YN" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/door/airlock/maintenance{req_access_txt = "0"; req_one_access_txt = "0"},/obj/machinery/door/firedoor,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"YS" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 9},/turf/simulated/floor/tiled/dark,/area/survivalpod/superpose/HydroCave)
-"Zq" = (/obj/effect/decal/cleanable/blood/splatter{color = "red"},/turf/simulated/mineral/floor/ignore_mapgen/cave,/area/template_noop)
-"ZJ" = (/obj/machinery/vending/cola,/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
-"ZM" = (/obj/machinery/computer/security/telescreen/entertainment{layer = 4; pixel_y = -32},/turf/simulated/floor/tiled/red,/area/survivalpod/superpose/HydroCave)
-"ZO" = (/obj/structure/reagent_dispensers/watertank,/turf/simulated/floor/plating,/area/survivalpod/superpose/HydroCave)
-"ZW" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/door/firedoor,/turf/simulated/floor/tiled,/area/survivalpod/superpose/HydroCave)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ah" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/wall/r_wall,
+/area/survivalpod/superpose/HydroCave)
+"ak" = (
+/obj/structure/flora/ausbushes/brflowers,
+/turf/simulated/floor/grass,
+/area/survivalpod/superpose/HydroCave)
+"at" = (
+/obj/structure/closet/emcloset,
+/obj/item/clothing/mask/breath,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"av" = (
+/obj/structure/toilet{
+	dir = 1
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/HydroCave)
+"aF" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5;
+	level = 2
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"aM" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/alarm/monitor{
+	dir = 4;
+	locked = 0;
+	pixel_x = -23;
+	req_access = null
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"aX" = (
+/obj/structure/salvageable/console_broken_os,
+/turf/simulated/floor/tiled/red,
+/area/survivalpod/superpose/HydroCave)
+"br" = (
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/HydroCave)
+"bz" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"ci" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/sink{
+	pixel_y = 25
+	},
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"cv" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/wall,
+/area/survivalpod/superpose/HydroCave)
+"cG" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/door/airlock{
+	id_tag = "awaydorm3";
+	name = "Dorm 3"
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"cI" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/vending/snack,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"cN" = (
+/obj/machinery/atmospherics/unary/vent_pump{
+	dir = 1;
+	on = 1
+	},
+/obj/structure/table/glass,
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/HydroCave)
+"cT" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -28
+	},
+/obj/structure/flora/pumpkin,
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"cY" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"dh" = (
+/obj/structure/sign/warning/lethal_turrets,
+/turf/simulated/wall/r_wall,
+/area/survivalpod/superpose/HydroCave)
+"dz" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"dG" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/red,
+/area/survivalpod/superpose/HydroCave)
+"dI" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/vending/coffee,
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"dU" = (
+/obj/structure/flora/ausbushes/ywflowers,
+/turf/simulated/floor/grass,
+/area/survivalpod/superpose/HydroCave)
+"ep" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"er" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"ev" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/flora/pumpkin,
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"eV" = (
+/obj/structure/closet/secure_closet{
+	icon_broken = "hydrosecurebroken";
+	icon_closed = "hydrosecure";
+	icon_locked = "hydrosecure1";
+	icon_off = "hydrosecureoff";
+	icon_opened = "hydrosecureopen";
+	icon_state = "hydrosecure";
+	locked = 0;
+	name = "botanist's locker";
+	req_access_txt = "201"
+	},
+/obj/item/clothing/mask/bandana,
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/HydroCave)
+"fc" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"fj" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/red,
+/area/survivalpod/superpose/HydroCave)
+"fm" = (
+/obj/structure/table/reinforced,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/window/southleft{
+	base_state = "right";
+	dir = 8;
+	icon_state = "right";
+	name = "Security Checkpoint";
+	req_access_txt = "201"
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"fo" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"fz" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"fM" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"fN" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/flora/pumpkin,
+/turf/simulated/floor/tiled{
+	icon_state = "dark"
+	},
+/area/survivalpod/superpose/HydroCave)
+"ga" = (
+/obj/structure/table/reinforced,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/window/southleft{
+	dir = 8;
+	name = "Security Checkpoint";
+	req_access_txt = "201"
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"gh" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"gX" = (
+/obj/machinery/vending/hydroseeds{
+	slogan_delay = 700
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/HydroCave)
+"hM" = (
+/obj/machinery/alarm/monitor{
+	dir = 4;
+	locked = 0;
+	pixel_x = -23;
+	req_access = null
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"id" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/template_noop,
+/area/template_noop)
+"ih" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"it" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"iD" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1;
+	initialize_directions = 14;
+	tag = "icon-manifold-r-f (NORTH)"
+	},
+/turf/simulated/wall,
+/area/survivalpod/superpose/HydroCave)
+"iY" = (
+/obj/machinery/door/airlock/security{
+	name = "Security Checkpoint";
+	req_access_txt = "201"
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"jg" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"ji" = (
+/obj/machinery/seed_extractor,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/HydroCave)
+"jm" = (
+/turf/simulated/mineral/ignore_mapgen/cave,
+/area/template_noop)
+"ju" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"jw" = (
+/obj/machinery/biogenerator,
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/HydroCave)
+"jY" = (
+/obj/machinery/atmospherics/unary/vent_pump{
+	dir = 1;
+	on = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"kc" = (
+/turf/simulated/wall,
+/area/survivalpod/superpose/HydroCave)
+"kO" = (
+/obj/effect/decal/cleanable/blood/splatter{
+	color = "red"
+	},
+/turf/template_noop,
+/area/template_noop)
+"la" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"lU" = (
+/obj/item/weapon/beartrap/hunting{
+	anchored = 1;
+	deployed = 1;
+	icon_state = "beartrap1"
+	},
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/template_noop)
+"lX" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"lY" = (
+/obj/machinery/atmospherics/unary/vent_scrubber{
+	dir = 1;
+	on = 1;
+	scrub_N2O = 0;
+	scrub_Toxins = 0
+	},
+/obj/structure/bed,
+/obj/item/weapon/bedsheet/pirate,
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/HydroCave)
+"mc" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/decal/cleanable/blood/oil{
+	color = "black"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"mg" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/wall/r_wall,
+/area/survivalpod/superpose/HydroCave)
+"mx" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"mz" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"mA" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/alarm/monitor{
+	locked = 0;
+	pixel_y = 23;
+	req_access = null
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/HydroCave)
+"mE" = (
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"mJ" = (
+/obj/structure/reagent_dispensers/beerkeg/fakenuke,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/HydroCave)
+"mV" = (
+/obj/machinery/light/small,
+/obj/machinery/alarm/monitor{
+	dir = 1;
+	locked = 0;
+	pixel_y = -23;
+	req_access = null
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/HydroCave)
+"nb" = (
+/obj/machinery/porta_turret_construct,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/HydroCave)
+"nj" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"nk" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance{
+	name = "Security Checkpoint Maintenance";
+	req_access_txt = "201";
+	req_one_access_txt = "0"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"nV" = (
+/obj/machinery/vending/deluxe_dinner{
+	req_access = null;
+	req_log_access = null
+	},
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"og" = (
+/obj/structure/closet/crate,
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/fiftyspawner/blucarpet,
+/obj/fiftyspawner/oracarpet,
+/obj/fiftyspawner/purcarpet,
+/obj/fiftyspawner/sblucarpet,
+/obj/fiftyspawner/tealcarpet,
+/obj/fiftyspawner/turcarpet,
+/obj/item/stack/material/wood{
+	amount = 50;
+	color = "#824B28"
+	},
+/obj/item/stack/material/wood{
+	amount = 50;
+	color = "#824B28"
+	},
+/obj/item/stack/material/wood/hard{
+	amount = 50
+	},
+/obj/item/stack/material/wood/hard{
+	amount = 50
+	},
+/obj/item/stack/material/wood/sif{
+	amount = 50
+	},
+/obj/item/stack/material/wood/sif{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/cloth{
+	amount = 50
+	},
+/obj/item/stack/material/cloth{
+	amount = 50
+	},
+/obj/item/stack/material/algae{
+	amount = 50
+	},
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/lead{
+	amount = 30
+	},
+/obj/item/stack/material/plasteel{
+	amount = 30;
+	pixel_y = 5
+	},
+/obj/item/stack/material/resin{
+	amount = 50
+	},
+/obj/item/stack/material/smolebricks{
+	amount = 50
+	},
+/obj/item/stack/material/smolebricks{
+	amount = 50
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1;
+	initialize_directions = 14;
+	tag = "icon-manifold-b-f (NORTH)"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"oq" = (
+/obj/structure/closet/walllocker_double/north,
+/obj/item/device/gps,
+/obj/item/sticky_pad/random,
+/obj/item/device/starcaster_news,
+/obj/item/weapon/pen/blue,
+/obj/item/device/pda,
+/obj/item/weapon/card/id/external,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
+/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
+/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/clothing/accessory/permit/gun,
+/obj/item/device/camera,
+/obj/item/device/binoculars,
+/obj/item/device/threadneedle,
+/obj/random/soap,
+/obj/item/weapon/towel/random,
+/obj/item/bodybag/cryobag,
+/obj/item/device/flashlight/flare,
+/obj/item/device/flashlight/flare,
+/obj/item/device/flashlight/color/yellow,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/weapon/flame/lighter/random,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/extinguisher/mini,
+/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/weapon/reagent_containers/pill/spaceacillin,
+/obj/item/weapon/reagent_containers/pill/spaceacillin,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/stack/nanopaste,
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/weapon/storage/backpack/messenger,
+/obj/item/clothing/accessory/storage/black_drop_pouches,
+/obj/item/clothing/accessory/poncho/thermal,
+/obj/item/weapon/storage/box/survival/comp,
+/obj/item/weapon/storage/toolbox/brass,
+/obj/item/weapon/storage/box/khcrystal,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"oQ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/airlock{
+	id_tag = "awaydorm2";
+	name = "Dorm 2"
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"oX" = (
+/obj/effect/decal/cleanable/blood/oil{
+	color = "black"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"oZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/wall/r_wall,
+/area/survivalpod/superpose/HydroCave)
+"pd" = (
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk,
+/obj/structure/sign/deathsposal{
+	desc = "A warning sign which reads 'DISPOSAL: LEADS TO EXTERIOR'";
+	name = "\improper DISPOSAL: LEADS TO EXTERIOR";
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/HydroCave)
+"ph" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"pA" = (
+/obj/structure/table/reinforced,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/window/southleft{
+	base_state = "right";
+	dir = 4;
+	icon_state = "right";
+	name = "Hydroponics Desk";
+	req_access_txt = "201"
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"pG" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8;
+	initialize_directions = 7;
+	tag = "icon-manifold-b-f (WEST)"
+	},
+/obj/machinery/newscaster{
+	pixel_x = -30
+	},
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/HydroCave)
+"pT" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"qi" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/turf/simulated/wall,
+/area/survivalpod/superpose/HydroCave)
+"qw" = (
+/obj/machinery/atmospherics/unary/vent_pump{
+	dir = 1;
+	on = 1
+	},
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/item/seeds/pumpkinseed,
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/HydroCave)
+"qN" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1;
+	initialize_directions = 14;
+	tag = "icon-manifold-b-f (NORTH)"
+	},
+/turf/simulated/floor/tiled/red,
+/area/survivalpod/superpose/HydroCave)
+"rn" = (
+/obj/structure/closet/secure_closet{
+	icon_broken = "secbroken";
+	icon_closed = "sec";
+	icon_locked = "sec1";
+	icon_off = "secoff";
+	icon_opened = "secopen";
+	icon_state = "sec1";
+	name = "security officer's locker";
+	req_access_txt = "201"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/red,
+/area/survivalpod/superpose/HydroCave)
+"rs" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"rD" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8;
+	initialize_directions = 7;
+	tag = "icon-manifold-r-f (WEST)"
+	},
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/HydroCave)
+"rK" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"rP" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"se" = (
+/turf/simulated/floor/tiled{
+	icon_state = "dark"
+	},
+/area/survivalpod/superpose/HydroCave)
+"sh" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/recharger{
+	pixel_y = 4
+	},
+/obj/machinery/newscaster/security_unit{
+	pixel_x = -30
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/red,
+/area/survivalpod/superpose/HydroCave)
+"sm" = (
+/obj/machinery/door/airlock{
+	name = "Unit 2"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/survivalpod/superpose/HydroCave)
+"sQ" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/alarm/monitor{
+	dir = 8;
+	locked = 0;
+	pixel_x = 23;
+	req_access = null
+	},
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"sR" = (
+/obj/structure/table/steel,
+/obj/item/stack/material/phoron{
+	amount = 5
+	},
+/obj/item/stack/material/phoron{
+	amount = 5
+	},
+/obj/fiftyspawner/wood,
+/obj/fiftyspawner/steel,
+/turf/simulated/floor,
+/area/survivalpod/superpose/HydroCave)
+"sZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"tt" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2";
+	tag = "icon-pipe-j1 (WEST)"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"tu" = (
+/obj/machinery/atmospherics/unary/vent_scrubber{
+	on = 1;
+	scrub_N2O = 0;
+	scrub_Toxins = 0
+	},
+/turf/simulated/floor/tiled/red,
+/area/survivalpod/superpose/HydroCave)
+"up" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/power/port_gen/pacman,
+/obj/structure/cable,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"uH" = (
+/obj/structure/toilet{
+	dir = 1
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/HydroCave)
+"vD" = (
+/obj/machinery/vending/hydronutrients,
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/HydroCave)
+"vK" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/emcloset/legacy,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"wi" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8;
+	initialize_directions = 7;
+	tag = "icon-manifold-b-f (WEST)"
+	},
+/obj/structure/closet/secure_closet{
+	desc = "It's a secure locker for personnel. The first card swiped gains control.";
+	icon_broken = "cabinetdetective_broken";
+	icon_closed = "cabinetdetective";
+	icon_locked = "cabinetdetective_locked";
+	icon_off = "cabinetdetective_broken";
+	icon_opened = "cabinetdetective_open";
+	icon_state = "cabinetdetective";
+	locked = 0;
+	name = "personal closet";
+	req_access_txt = "201"
+	},
+/obj/item/clothing/under/suit_jacket/female,
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/HydroCave)
+"wj" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/bed/chair/office/dark,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"wo" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"wz" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8;
+	initialize_directions = 7;
+	tag = "icon-manifold-b-f (WEST)"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"wC" = (
+/obj/structure/flora/ausbushes/ppflowers,
+/turf/simulated/floor/grass,
+/area/survivalpod/superpose/HydroCave)
+"wO" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"wV" = (
+/turf/simulated/floor/tiled/techfloor,
+/area/template_noop)
+"xe" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"xz" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/item/seeds/pumpkinseed,
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/HydroCave)
+"xL" = (
+/obj/structure/table/glass,
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"xR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/red,
+/area/survivalpod/superpose/HydroCave)
+"xV" = (
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"xZ" = (
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"yk" = (
+/obj/structure/bed,
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/HydroCave)
+"yn" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"yw" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood/oil{
+	color = "black"
+	},
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"yL" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/turf/simulated/wall,
+/area/survivalpod/superpose/HydroCave)
+"zf" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/wall,
+/area/survivalpod/superpose/HydroCave)
+"zj" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"zz" = (
+/obj/machinery/door/airlock/angled_tgmc/wide/generic_steel{
+	dir = 4
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/HydroCave)
+"zA" = (
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/template_noop)
+"zB" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"zR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/structure/closet,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"Aa" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1;
+	initialize_directions = 14;
+	tag = "icon-manifold-b-f (NORTH)"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"Ax" = (
+/turf/simulated/floor/tiled/red,
+/area/survivalpod/superpose/HydroCave)
+"AE" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"AV" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -25
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"Bs" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"Bv" = (
+/obj/effect/fusion_em_field,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/template_noop)
+"By" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/red,
+/area/survivalpod/superpose/HydroCave)
+"BI" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"BX" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"BY" = (
+/obj/machinery/newscaster{
+	pixel_y = -28
+	},
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/HydroCave)
+"Ci" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/effect/decal/cleanable/blood/oil{
+	color = "black"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"Cs" = (
+/obj/machinery/atmospherics/unary/vent_scrubber{
+	dir = 1;
+	on = 1;
+	scrub_N2O = 0;
+	scrub_Toxins = 0
+	},
+/obj/structure/table/glass,
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/HydroCave)
+"Ct" = (
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/HydroCave)
+"CT" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/red,
+/area/survivalpod/superpose/HydroCave)
+"CV" = (
+/obj/structure/safe/floor,
+/obj/item/weapon/moneybag/vault,
+/obj/item/weapon/moneybag/vault,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/HydroCave)
+"DN" = (
+/obj/structure/closet/emcloset/legacy,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"DW" = (
+/obj/machinery/door/firedoor,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"Eh" = (
+/obj/structure/sink{
+	pixel_y = 25
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/HydroCave)
+"EB" = (
+/obj/machinery/alarm/monitor{
+	dir = 4;
+	locked = 0;
+	pixel_x = -23;
+	req_access = null
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/filingcabinet,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/red,
+/area/survivalpod/superpose/HydroCave)
+"EC" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/wall,
+/area/survivalpod/superpose/HydroCave)
+"EE" = (
+/obj/machinery/atmospherics/unary/vent_pump{
+	dir = 8;
+	on = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"Fb" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/weapon/reagent_containers/food/snacks/clownburger,
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"Fc" = (
+/obj/structure/sign/warning/secure_area,
+/turf/simulated/wall/r_wall,
+/area/survivalpod/superpose/HydroCave)
+"Ff" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8;
+	initialize_directions = 7;
+	tag = "icon-manifold-r-f (WEST)"
+	},
+/obj/structure/reagent_dispensers/peppertank{
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled/red,
+/area/survivalpod/superpose/HydroCave)
+"Fg" = (
+/obj/machinery/portable_atmospherics/canister/air,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"Fh" = (
+/obj/machinery/atmospherics/unary/vent_pump{
+	dir = 1;
+	on = 1
+	},
+/obj/structure/bed,
+/obj/item/weapon/bedsheet/mime,
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/HydroCave)
+"Fn" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	color = "red";
+	desc = "Your instincts say you shouldn't be following these.";
+	icon = 'icons/effects/blood.dmi';
+	icon_state = "tracks"
+	},
+/turf/template_noop,
+/area/template_noop)
+"FB" = (
+/obj/machinery/atmospherics/unary/vent_pump{
+	on = 1
+	},
+/turf/simulated/floor/tiled/red,
+/area/survivalpod/superpose/HydroCave)
+"Ge" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"Gf" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"Gg" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"Gj" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/item/seeds/pumpkinseed,
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/HydroCave)
+"Gm" = (
+/obj/structure/closet/crate/hydroponics,
+/obj/structure/flora/pumpkin,
+/obj/structure/flora/pumpkin,
+/obj/structure/flora/pumpkin,
+/obj/structure/flora/pumpkin,
+/obj/structure/flora/pumpkin,
+/obj/structure/flora/pumpkin,
+/obj/structure/flora/pumpkin,
+/obj/structure/flora/pumpkin,
+/obj/structure/flora/pumpkin,
+/obj/structure/flora/pumpkin,
+/obj/structure/flora/pumpkin,
+/turf/simulated/floor/tiled{
+	icon_state = "dark"
+	},
+/area/survivalpod/superpose/HydroCave)
+"Gx" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/HydroCave)
+"Gy" = (
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"GJ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"Hr" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/red,
+/area/survivalpod/superpose/HydroCave)
+"HA" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/closet/secure_closet{
+	desc = "It's a secure locker for personnel. The first card swiped gains control.";
+	icon_broken = "cabinetdetective_broken";
+	icon_closed = "cabinetdetective";
+	icon_locked = "cabinetdetective_locked";
+	icon_off = "cabinetdetective_broken";
+	icon_opened = "cabinetdetective_open";
+	icon_state = "cabinetdetective";
+	locked = 0;
+	name = "personal closet";
+	req_access_txt = "201"
+	},
+/obj/item/clothing/under/pj/blue,
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/HydroCave)
+"HB" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1;
+	initialize_directions = 14;
+	tag = "icon-manifold-r-f (NORTH)"
+	},
+/turf/simulated/wall/r_wall,
+/area/survivalpod/superpose/HydroCave)
+"HE" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/flora/pumpkin,
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"HP" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"Ig" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"Im" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	color = "red";
+	desc = "Your instincts say you shouldn't be following these.";
+	icon = 'icons/effects/blood.dmi';
+	icon_state = "tracks"
+	},
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/template_noop)
+"In" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"It" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"Iu" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"ID" = (
+/obj/structure/sink{
+	pixel_y = 25
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/HydroCave)
+"IY" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1;
+	initialize_directions = 14;
+	tag = "icon-manifold-b-f (NORTH)"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"Jj" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"Jp" = (
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/structure/sign/deathsposal{
+	desc = "A warning sign which reads 'DISPOSAL: LEADS TO EXTERIOR'";
+	name = "\improper DISPOSAL: LEADS TO EXTERIOR";
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled{
+	icon_state = "dark"
+	},
+/area/survivalpod/superpose/HydroCave)
+"Ju" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/red,
+/area/survivalpod/superpose/HydroCave)
+"JY" = (
+/turf/simulated/wall/r_wall,
+/area/survivalpod/superpose/HydroCave)
+"Kb" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"Kp" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"Ku" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"KK" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"KO" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"Lg" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/decal/cleanable/blood/oil{
+	color = "black"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"LO" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"LY" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"Mj" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"Ms" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/structure/reagent_dispensers/watertank,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"My" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/wall/r_wall,
+/area/survivalpod/superpose/HydroCave)
+"MF" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"MM" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/item/seeds/pumpkinseed,
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/HydroCave)
+"Nd" = (
+/obj/structure/table/standard,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/HydroCave)
+"Nq" = (
+/obj/machinery/atmospherics/unary/vent_scrubber{
+	on = 1;
+	scrub_N2O = 0;
+	scrub_Toxins = 0
+	},
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"Nw" = (
+/obj/structure/flora/pumpkin,
+/turf/simulated/floor/tiled{
+	icon_state = "dark"
+	},
+/area/survivalpod/superpose/HydroCave)
+"NA" = (
+/obj/item/toy/plushie/box,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/HydroCave)
+"NF" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance{
+	name = "Hydroponics Maintenance";
+	req_access_txt = "201"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"NI" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/unary/vent_scrubber{
+	dir = 1;
+	on = 1;
+	scrub_N2O = 0;
+	scrub_Toxins = 0
+	},
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/item/seeds/pumpkinseed,
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/HydroCave)
+"NO" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled{
+	icon_state = "dark"
+	},
+/area/survivalpod/superpose/HydroCave)
+"Oh" = (
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/HydroCave)
+"Om" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/HydroCave)
+"Oz" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"OB" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"OV" = (
+/obj/structure/closet/crate,
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/cable_coil/green,
+/obj/item/stack/cable_coil/blue,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"Pi" = (
+/obj/machinery/light/small,
+/obj/machinery/alarm/monitor{
+	dir = 1;
+	locked = 0;
+	pixel_y = -23;
+	req_access = null
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber{
+	dir = 1;
+	on = 1;
+	scrub_N2O = 0;
+	scrub_Toxins = 0
+	},
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/HydroCave)
+"Pm" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"Pn" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/airlock{
+	id_tag = "awaydorm1";
+	name = "Dorm 1"
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"Pu" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"PE" = (
+/obj/structure/closet,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"PQ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/wall,
+/area/survivalpod/superpose/HydroCave)
+"Qd" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/item/seeds/pumpkinseed,
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/HydroCave)
+"Qo" = (
+/obj/item/stack/rods,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"Qz" = (
+/obj/machinery/door/airlock{
+	name = "Unit 1"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/survivalpod/superpose/HydroCave)
+"QE" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"QF" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/reagent_dispensers/watertank/high,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"QK" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"QT" = (
+/obj/machinery/alarm/monitor{
+	locked = 0;
+	pixel_y = 23;
+	req_access = null
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"Rb" = (
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"Rq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"Rx" = (
+/obj/structure/table/standard,
+/obj/machinery/reagentgrinder,
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/HydroCave)
+"RB" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/window/basic{
+	dir = 8;
+	tag = "icon-window (WEST)"
+	},
+/obj/random/trash,
+/obj/machinery/floodlight,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"RF" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/red,
+/area/survivalpod/superpose/HydroCave)
+"RG" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/sink{
+	pixel_y = 25
+	},
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"RP" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/newscaster{
+	pixel_x = 30
+	},
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/HydroCave)
+"RT" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"Sv" = (
+/obj/machinery/door/airlock{
+	name = "Unisex Restrooms";
+	req_access_txt = "0"
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled/steel_grid,
+/area/survivalpod/superpose/HydroCave)
+"SM" = (
+/obj/structure/table/standard,
+/obj/structure/flora/pumpkin,
+/obj/structure/flora/pumpkin,
+/obj/structure/flora/pumpkin,
+/obj/structure/flora/pumpkin,
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/HydroCave)
+"SP" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/angled_tgmc/dropship2_pilot,
+/turf/simulated/floor/tiled/steel_grid,
+/area/survivalpod/superpose/HydroCave)
+"Ta" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -28
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"Tj" = (
+/obj/machinery/floodlight,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"TP" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"TX" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1;
+	initialize_directions = 14;
+	tag = "icon-manifold-r-f (NORTH)"
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"Uq" = (
+/obj/machinery/atmospherics/unary/vent_scrubber{
+	dir = 8;
+	on = 1;
+	scrub_N2O = 0;
+	scrub_Toxins = 0
+	},
+/turf/simulated/floor/tiled/red,
+/area/survivalpod/superpose/HydroCave)
+"UW" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"Vx" = (
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 1;
+	pixel_y = 20
+	},
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"VB" = (
+/obj/item/weapon/beartrap/hunting{
+	anchored = 1;
+	deployed = 1;
+	icon_state = "beartrap1"
+	},
+/turf/template_noop,
+/area/template_noop)
+"VF" = (
+/obj/machinery/door/airlock/maintenance{
+	req_access_txt = "0";
+	req_one_access_txt = "0"
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"Wd" = (
+/obj/structure/table/wooden_reinforced,
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"Wt" = (
+/obj/machinery/door/airlock/maintenance{
+	req_access_txt = "0";
+	req_one_access_txt = "0"
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled/steel_grid,
+/area/survivalpod/superpose/HydroCave)
+"WC" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/reagent_dispensers/fueltank,
+/obj/structure/window/basic{
+	dir = 4;
+	tag = "icon-window (EAST)"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"WE" = (
+/obj/structure/table/reinforced,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/window/southleft{
+	dir = 4;
+	name = "Hydroponics Desk";
+	req_access_txt = "201"
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"WL" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/item/seeds/pumpkinseed,
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/HydroCave)
+"WN" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/HydroCave)
+"WT" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"WU" = (
+/obj/structure/flora/pumpkin,
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"WY" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"Xj" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1;
+	initialize_directions = 14;
+	tag = "icon-manifold-r-f (NORTH)"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"Xw" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"XS" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"XW" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"Yb" = (
+/turf/template_noop,
+/area/template_noop)
+"Yf" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"Yo" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/red,
+/area/survivalpod/superpose/HydroCave)
+"Yq" = (
+/obj/machinery/vending/coffee,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"YE" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	color = "red";
+	desc = "Your instincts say you shouldn't be following these.";
+	dir = 4;
+	icon = 'icons/effects/blood.dmi';
+	icon_state = "tracks"
+	},
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/template_noop)
+"YL" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"YN" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance{
+	req_access_txt = "0";
+	req_one_access_txt = "0"
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"YS" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/dark,
+/area/survivalpod/superpose/HydroCave)
+"Zq" = (
+/obj/effect/decal/cleanable/blood/splatter{
+	color = "red"
+	},
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/template_noop)
+"ZJ" = (
+/obj/machinery/vending/cola,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
+"ZM" = (
+/obj/machinery/computer/security/telescreen/entertainment{
+	layer = 4;
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/red,
+/area/survivalpod/superpose/HydroCave)
+"ZO" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"ZW" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
 
 (1,1,1) = {"
-YbYbYbYbYbYbYbYbYbYbYbYbYbYbYbYbYbYbYbYbjmjmjmjmjmYbYbYbYbYbYbYbYbYbYbYbYbYbYbYb
-YbYbjmjmYbYbYbYbYbYbYbYbYbYbYbYbzAzAjmjmjmjmjmjmjmjmjmYbYbYbYbYbYbYbYbYbjmjmYbYb
-YbjmjmjmYbYbYbYbYbYbYbYbYbzAjmjmjmjmjmjmjmjmjmjmjmjmjmjmYbYbYbYbYbYbYbYbjmjmYbYb
-YbYbYbYbYbYbYbYbYbYbzAJYJYJYJYJYJYJYJYjmjmjmjmjmjmjmjmjmjmYbYbYbYbYbFnYbjmYbYbYb
-YbYbYbYbYbjmzAzAzAzAjmJYJYJYJYJYJYJYJYjmjmjmjmjmjmjmjmjmjmjmYbYbYbYbFnYbYbYbYbYb
-YbYbYbYbzAjmzAzAjmjmjmJYJYCVnbnbCVJYJYjmjmjmjmjmjmjmjmjmjmjmjmjmzAzAFnYbYbYbYbYb
-YbYbYbjmzAzAzAjmjmjmjmJYJYmJOhOhNAJYJYjmjmjmjmjmjmjmjmjmjmjmjmjmjmzAFnYbYbYbYbYb
-YbYbjmjmzAzAjmjmjmjmjmJYJYCVOhOhCVJYJYjmjmjmjmjmjmjmjmzAzAzAjmjmjmjmYbYbYbYbYbYb
-YbYbjmjmImjmjmjmjmjmjmJYJYJYzzbrJYJYJYjmjmjmjmjmjmjmjmzABvjmzAjmjmjmzAYbYbYbYbYb
-jmjmjmjmzAzAjmjmjmjmjmJYJYJYzzbrJYJYJYjmjmjmjmjmjmjmjmzAzAzAjmjmjmjmzAYbYbYbYbYb
-jmjmjmjmZqlUjmjmjmJYJYJYJYdhzzbrFcJYJYJYJYjmjmjmjmjmjmzAzAjmjmjmjmjmzAjmjmYbYbYb
-zAjmjmjmzAImjmjmjmkcVxGyGyGyGyGyGyGyGynVkcjmjmjmjmjmjmjmjmjmzAzAzAzAzAzAzAYbYbYb
-zAjmjmjmjmzAjmjmjmkcupcYcYxVxVxVxVxVcYYqkcjmjmjmjmjmjmjmjmzAjmlUjmjmjmjmzAjmjmYb
-jmjmjmjmjmImjmjmjmkcsRcYxVxVxVcYcYxVxVZJkcjmjmjmjmjmjmjmzAzAzAzAjmjmjmzAzAzAjmYb
-jmjmjmjmzAzAjmjmjmJYJYAEmEKbTPTPKKmEfoJYJYjmjmjmjmjmzAzAzAZqjmjmjmjmjmzAzAzAjmYb
-jmjmjmzAzAzAzAzAzAYEBsxVGyAxAxAxCTGyxVBszAzAzAYEYEYEjmzAzAjmjmjmjmjmzAzAzAzAjmYb
-jmjmzAYEzAYEzAYEzAzAzjxVAxfjFbWdByAxxVerzAYEzAjmzAzAYEzAjmjmjmjmjmjmzAzAzAjmjmYb
-jmjmzAzAjmjmJYJYJYJYJYhMtufjWdWdByFBxVerzAzAzAjmjmjmjmjmjmjmjmjmjmjmZqzAzAjmjmYb
-jmjmzAjmkckckcEhIDEhJYAVRFAxZMZMAxxRxVzjzAjmjmjmjmjmjmjmjmjmjmjmjmzAzAjmjmjmYbYb
-jmzAzAjmJYoXWtGxmVCtSvxVWTkckckckcXSxVJYjmjmjmjmjmjmjmjmjmjmjmjmjmImjmjmjmzAYbYb
-ZqYbzAjmJYRbkcsmkcQzJYLOynbzYodGRqYSJjJYjmjmjmjmjmjmjmjmjmjmjmjmzAlUjmjmjmzAYbYb
-YbzAzAjmkcRbkcuHCtavJYDNxVxVmxihcYxVDNJYjmjmjmjmjmjmjmjmjmjmjmjmzAImjmjmjmzAYbYb
-YbzAjmjmkcRbJYyLzfahahzfiDahrsZWzfzfahHBzfzfqijmjmjmjmjmzAzAzAjmzAzAjmjmjmjmYbYb
-jmjmjmjmJYGJRbIgpTwoAafzmcYNGeepYNIYworKLYywoZjmjmjmjmzAzAzAzAzAzAImzAzAjmjmjmYb
-jmjmjmkckckckccvjuJYmgkccvJYPuxVkcmgkcoZJYWYcvjmjmjmzAzAzAzAzAzAzAzAzAzAjmjmjmYb
-jmjmjmkcFgTjPEcvWYJYpGmAHAkccYxVJYwimARPkcWYcvkcJYJYJYJYJYJYKbKKJYJYJYJYJYjmjmYb
-jmjmjmkcatxeZOBsWYkccNOmlYkccYxVkcFhOmCsJYWYaFYLYLYLHPHPYLHPPmXjYLRBQFWCJYjmjmjm
-jmjmjmkcBIQoKbIujuJYkcoQkcJYxZxZkckcPnkcJYzROVogECECECMyECMyMyQKwowowojgJYjmjmjm
-jmjmjmkcpTLYworKRTVFcYitcIoqxVxVoqnjihdIkckcJYPQkcvDgXpdjijwJYoZkcJYkclXJYjmjmjm
-jmjmjmkclXJYJYoZJYJYaMMFwOxVxVxVxVBXsZGyKbKKMsRGQTGgMjttMjGgHEciGyeVkclXJYjmjmjm
-jmjmjmkcjuJYrnFfUqiYxVxVjYfcxLxLXwjYzBMjDWQEOBMMseQdseWLseWLNwxzGyeVkcOzJYjmjmjm
-YbjmjmkcCinkqNEEAxBIGyxVGyGfTPTPKumzYfGyxZxVGyqwNwWLseWLNwWLseNIGyRxJYWYJYjmjmjm
-YbjmjmkckcJYEBmxCTfmGyxVGyerwCakerGyYfGyKbKKGyWLseWLseWLNwWLseGjWUNdJYwzJYjmjmjm
-YbjmjmjmjmJYshwjAxgaGyxVmzerakdUerGyYfGyGyWEGyWLNwQdseWLseWLseGjevSMkcOzJYjmjmjm
-YbkOYbjmjmJYHrJuaXBIGyxVmzdzTPTPIuGyYfGymzpAmzGyGyGymzGycTmzWUInGyJYJYLgJYjmjmYb
-YbYbYbjmjmJYmgoZJYJYLOxVNqfcxLxLfMNqYfsQJYJYJYKbTPTPKKJYJYGmfNghNONFlaXWJYjmjmYb
-YbVBjmjmjmkccNrDWNcGrPrPphTXrPrPrPItKOUWJYjmzAzAzAzAzAjmJYJYJYJYJYJYKbKpJYjmjmYb
-YbkOYbYbjmJYBYPiykkcvKxVxVmxxVTacYseseJpJYjmYbYbYbYbYbjmjmjmjmzAzAzAzAzAjmjmjmYb
-YbYbFnYbjmJYJYkckcJYJYSPJYSPJYJYKbTPKKJYJYYbYbYbjmYbYbYbjmjmYbYbYbYbYbYbjmjmYbYb
-YbYbFnYbYbjmjmjmjmjmwVwVwVwVwVidYbYbYbYbYbYbYbYbYbYbYbYbYbYbYbYbYbYbYbYbYbYbYbYb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+jm
+jm
+zA
+zA
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+Zq
+Yb
+Yb
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+"}
+(2,1,1) = {"
+Yb
+Yb
+jm
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+zA
+Yb
+zA
+zA
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+kO
+Yb
+VB
+kO
+Yb
+Yb
+"}
+(3,1,1) = {"
+Yb
+jm
+jm
+Yb
+Yb
+Yb
+Yb
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+zA
+zA
+zA
+zA
+zA
+zA
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+Yb
+Yb
+jm
+Yb
+Fn
+Fn
+"}
+(4,1,1) = {"
+Yb
+jm
+jm
+Yb
+Yb
+Yb
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+zA
+YE
+zA
+jm
+jm
+jm
+jm
+jm
+jm
+kc
+kc
+kc
+kc
+kc
+kc
+kc
+kc
+kc
+jm
+jm
+jm
+jm
+Yb
+Yb
+Yb
+"}
+(5,1,1) = {"
+Yb
+Yb
+Yb
+Yb
+Yb
+zA
+zA
+zA
+Im
+zA
+Zq
+zA
+jm
+jm
+zA
+zA
+zA
+jm
+kc
+JY
+JY
+kc
+kc
+JY
+kc
+Fg
+at
+BI
+pT
+lX
+ju
+Ci
+kc
+jm
+jm
+jm
+jm
+jm
+jm
+Yb
+"}
+(6,1,1) = {"
+Yb
+Yb
+Yb
+Yb
+jm
+jm
+zA
+zA
+jm
+zA
+lU
+Im
+zA
+Im
+zA
+zA
+YE
+jm
+kc
+oX
+Rb
+Rb
+Rb
+GJ
+kc
+Tj
+xe
+Qo
+LY
+JY
+JY
+nk
+JY
+JY
+JY
+JY
+kc
+JY
+JY
+jm
+"}
+(7,1,1) = {"
+Yb
+Yb
+Yb
+Yb
+zA
+zA
+zA
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+zA
+zA
+JY
+kc
+Wt
+kc
+kc
+JY
+Rb
+kc
+PE
+ZO
+Kb
+wo
+JY
+rn
+qN
+EB
+sh
+Hr
+mg
+cN
+BY
+JY
+jm
+"}
+(8,1,1) = {"
+Yb
+Yb
+Yb
+Yb
+zA
+zA
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+zA
+YE
+JY
+Eh
+Gx
+sm
+uH
+yL
+Ig
+cv
+cv
+Bs
+Iu
+rK
+oZ
+Ff
+EE
+mx
+wj
+Ju
+oZ
+rD
+Pi
+kc
+jm
+"}
+(9,1,1) = {"
+Yb
+Yb
+Yb
+Yb
+zA
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+zA
+zA
+JY
+ID
+mV
+kc
+Ct
+zf
+pT
+ju
+WY
+WY
+ju
+RT
+JY
+Uq
+Ax
+CT
+Ax
+aX
+JY
+WN
+yk
+kc
+jm
+"}
+(10,1,1) = {"
+Yb
+Yb
+Yb
+Yb
+zA
+jm
+jm
+jm
+jm
+jm
+JY
+kc
+kc
+kc
+JY
+YE
+zA
+JY
+Eh
+Ct
+Qz
+av
+ah
+wo
+JY
+JY
+kc
+JY
+VF
+JY
+iY
+BI
+fm
+ga
+BI
+JY
+cG
+kc
+JY
+jm
+"}
+(11,1,1) = {"
+Yb
+Yb
+Yb
+zA
+jm
+jm
+jm
+jm
+jm
+jm
+JY
+Vx
+up
+sR
+JY
+Bs
+zj
+JY
+JY
+Sv
+JY
+JY
+ah
+Aa
+mg
+pG
+cN
+kc
+cY
+aM
+xV
+Gy
+Gy
+Gy
+Gy
+LO
+rP
+vK
+JY
+wV
+"}
+(12,1,1) = {"
+Yb
+Yb
+Yb
+JY
+JY
+JY
+JY
+JY
+JY
+JY
+JY
+Gy
+cY
+cY
+AE
+xV
+xV
+hM
+AV
+xV
+LO
+DN
+zf
+fz
+kc
+mA
+Om
+oQ
+it
+MF
+xV
+xV
+xV
+xV
+xV
+xV
+rP
+xV
+SP
+wV
+"}
+(13,1,1) = {"
+Yb
+Yb
+Yb
+JY
+JY
+JY
+JY
+JY
+JY
+JY
+JY
+Gy
+cY
+xV
+mE
+Gy
+Ax
+tu
+RF
+WT
+yn
+xV
+iD
+mc
+cv
+HA
+lY
+kc
+cI
+wO
+jY
+Gy
+Gy
+mz
+mz
+Nq
+ph
+xV
+JY
+wV
+"}
+(14,1,1) = {"
+Yb
+Yb
+zA
+JY
+JY
+CV
+mJ
+CV
+JY
+JY
+dh
+Gy
+xV
+xV
+Kb
+Ax
+fj
+fj
+Ax
+kc
+bz
+xV
+ah
+YN
+JY
+kc
+kc
+JY
+oq
+xV
+fc
+Gf
+er
+er
+dz
+fc
+TX
+mx
+SP
+wV
+"}
+(15,1,1) = {"
+Yb
+Yb
+jm
+JY
+JY
+nb
+Oh
+Oh
+zz
+zz
+zz
+Gy
+xV
+xV
+TP
+Ax
+Fb
+Wd
+ZM
+kc
+Yo
+mx
+rs
+Ge
+Pu
+cY
+cY
+xZ
+xV
+xV
+xL
+TP
+wC
+ak
+TP
+xL
+rP
+xV
+JY
+wV
+"}
+(16,1,1) = {"
+Yb
+Yb
+jm
+JY
+JY
+nb
+Oh
+Oh
+br
+br
+br
+Gy
+xV
+cY
+TP
+Ax
+Wd
+Wd
+ZM
+kc
+dG
+ih
+ZW
+ep
+xV
+xV
+xV
+xZ
+xV
+xV
+xL
+TP
+ak
+dU
+TP
+xL
+rP
+Ta
+JY
+id
+"}
+(17,1,1) = {"
+Yb
+zA
+jm
+JY
+JY
+CV
+NA
+CV
+JY
+JY
+Fc
+Gy
+xV
+cY
+KK
+CT
+By
+By
+Ax
+kc
+Rq
+cY
+zf
+YN
+kc
+JY
+kc
+kc
+oq
+xV
+Xw
+Ku
+er
+er
+Iu
+fM
+rP
+cY
+Kb
+Yb
+"}
+(18,1,1) = {"
+Yb
+zA
+jm
+JY
+JY
+JY
+JY
+JY
+JY
+JY
+JY
+Gy
+xV
+xV
+mE
+Gy
+Ax
+FB
+xR
+XS
+YS
+xV
+zf
+IY
+mg
+wi
+Fh
+kc
+nj
+BX
+jY
+mz
+Gy
+Gy
+Gy
+Nq
+It
+se
+TP
+Yb
+"}
+(19,1,1) = {"
+Yb
+jm
+jm
+JY
+JY
+JY
+JY
+JY
+JY
+JY
+JY
+Gy
+cY
+xV
+fo
+xV
+xV
+xV
+xV
+xV
+Jj
+DN
+ah
+wo
+kc
+mA
+Om
+Pn
+ih
+sZ
+zB
+Yf
+Yf
+Yf
+Yf
+Yf
+KO
+se
+KK
+Yb
+"}
+(20,1,1) = {"
+Yb
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+JY
+nV
+Yq
+ZJ
+JY
+Bs
+er
+er
+zj
+JY
+JY
+JY
+HB
+rK
+oZ
+RP
+Cs
+kc
+dI
+Gy
+Mj
+Gy
+Gy
+Gy
+Gy
+sQ
+UW
+Jp
+JY
+Yb
+"}
+(21,1,1) = {"
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+JY
+kc
+kc
+kc
+JY
+zA
+zA
+zA
+zA
+jm
+jm
+jm
+zf
+LY
+JY
+kc
+JY
+JY
+kc
+Kb
+DW
+xZ
+Kb
+Gy
+mz
+JY
+JY
+JY
+JY
+Yb
+"}
+(22,1,1) = {"
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+zA
+YE
+zA
+jm
+jm
+jm
+jm
+zf
+yw
+WY
+WY
+WY
+zR
+kc
+KK
+QE
+xV
+KK
+WE
+pA
+JY
+jm
+jm
+Yb
+Yb
+"}
+(23,1,1) = {"
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+zA
+zA
+zA
+jm
+jm
+jm
+jm
+qi
+oZ
+cv
+cv
+aF
+OV
+JY
+Ms
+OB
+Gy
+Gy
+Gy
+mz
+JY
+zA
+Yb
+Yb
+Yb
+"}
+(24,1,1) = {"
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+YE
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+kc
+YL
+og
+PQ
+RG
+MM
+qw
+WL
+WL
+Gy
+Kb
+zA
+Yb
+Yb
+Yb
+"}
+(25,1,1) = {"
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+YE
+zA
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+JY
+YL
+EC
+kc
+QT
+se
+Nw
+se
+Nw
+Gy
+TP
+zA
+Yb
+jm
+Yb
+"}
+(26,1,1) = {"
+Yb
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+YE
+zA
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+JY
+YL
+EC
+vD
+Gg
+Qd
+WL
+WL
+Qd
+Gy
+TP
+zA
+Yb
+Yb
+Yb
+"}
+(27,1,1) = {"
+Yb
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+zA
+jm
+YE
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+zA
+JY
+HP
+EC
+gX
+Mj
+se
+se
+se
+se
+mz
+KK
+zA
+Yb
+Yb
+Yb
+"}
+(28,1,1) = {"
+Yb
+Yb
+jm
+jm
+jm
+jm
+jm
+zA
+zA
+zA
+zA
+jm
+jm
+jm
+zA
+zA
+zA
+jm
+jm
+jm
+jm
+jm
+jm
+zA
+zA
+JY
+HP
+My
+pd
+tt
+WL
+WL
+WL
+WL
+Gy
+JY
+jm
+jm
+Yb
+Yb
+"}
+(29,1,1) = {"
+Yb
+Yb
+Yb
+jm
+jm
+jm
+jm
+zA
+Bv
+zA
+zA
+jm
+jm
+zA
+zA
+zA
+jm
+jm
+jm
+jm
+jm
+jm
+zA
+zA
+zA
+JY
+YL
+EC
+ji
+Mj
+se
+Nw
+Nw
+se
+cT
+JY
+JY
+jm
+jm
+Yb
+"}
+(30,1,1) = {"
+Yb
+Yb
+Yb
+Yb
+jm
+jm
+jm
+zA
+jm
+zA
+jm
+jm
+zA
+zA
+Zq
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+zA
+zA
+zA
+JY
+HP
+My
+jw
+Gg
+WL
+WL
+WL
+WL
+mz
+Gm
+JY
+jm
+jm
+Yb
+"}
+(31,1,1) = {"
+Yb
+Yb
+Yb
+Yb
+Yb
+jm
+jm
+jm
+zA
+jm
+jm
+zA
+jm
+zA
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+zA
+zA
+zA
+Kb
+Pm
+My
+JY
+HE
+Nw
+se
+se
+se
+WU
+fN
+JY
+jm
+Yb
+Yb
+"}
+(32,1,1) = {"
+Yb
+Yb
+Yb
+Yb
+Yb
+jm
+jm
+jm
+jm
+jm
+jm
+zA
+lU
+zA
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+zA
+zA
+KK
+Xj
+QK
+oZ
+ci
+xz
+NI
+Gj
+Gj
+In
+gh
+JY
+zA
+Yb
+Yb
+"}
+(33,1,1) = {"
+Yb
+Yb
+Yb
+Yb
+Yb
+zA
+jm
+jm
+jm
+jm
+jm
+zA
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+zA
+zA
+zA
+zA
+zA
+JY
+YL
+wo
+kc
+Gy
+Gy
+Gy
+WU
+ev
+Gy
+NO
+JY
+zA
+Yb
+Yb
+"}
+(34,1,1) = {"
+Yb
+Yb
+Yb
+Yb
+Yb
+zA
+zA
+jm
+jm
+jm
+jm
+zA
+jm
+jm
+jm
+jm
+jm
+jm
+zA
+Im
+lU
+Im
+zA
+Im
+zA
+JY
+RB
+wo
+JY
+eV
+eV
+Rx
+Nd
+SM
+JY
+NF
+JY
+zA
+Yb
+Yb
+"}
+(35,1,1) = {"
+Yb
+Yb
+Yb
+Fn
+Fn
+Fn
+Fn
+Yb
+zA
+zA
+zA
+zA
+jm
+jm
+jm
+zA
+zA
+Zq
+zA
+jm
+jm
+jm
+jm
+zA
+zA
+JY
+QF
+wo
+kc
+kc
+kc
+JY
+JY
+kc
+JY
+la
+Kb
+zA
+Yb
+Yb
+"}
+(36,1,1) = {"
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+jm
+zA
+jm
+zA
+zA
+zA
+zA
+zA
+jm
+jm
+jm
+jm
+jm
+zA
+zA
+JY
+WC
+jg
+lX
+lX
+Oz
+WY
+wz
+Oz
+Lg
+XW
+Kp
+zA
+Yb
+Yb
+"}
+(37,1,1) = {"
+Yb
+jm
+jm
+jm
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+jm
+zA
+zA
+zA
+zA
+zA
+zA
+zA
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+JY
+JY
+JY
+JY
+JY
+JY
+JY
+JY
+JY
+JY
+JY
+JY
+jm
+jm
+Yb
+"}
+(38,1,1) = {"
+Yb
+jm
+jm
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+jm
+zA
+zA
+zA
+jm
+jm
+jm
+zA
+zA
+zA
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+Yb
+"}
+(39,1,1) = {"
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+jm
+jm
+jm
+jm
+jm
+jm
+Yb
+Yb
+Yb
+Yb
+Yb
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+Yb
+Yb
+"}
+(40,1,1) = {"
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+jm
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
 "}

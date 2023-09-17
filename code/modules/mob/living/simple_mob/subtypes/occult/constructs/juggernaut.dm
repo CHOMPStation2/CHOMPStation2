@@ -23,7 +23,7 @@
 	mob_size = MOB_HUGE
 
 
-	movement_cooldown = 6 //Not super fast, but it might catch up to someone in armor who got punched once or twice.
+	movement_cooldown = 2 //Not super fast, but it might catch up to someone in armor who got punched once or twice.
 
 //	environment_smash = 2	// Whatever this gets renamed to, Juggernauts need to break things
 
@@ -50,7 +50,7 @@
 	..()
 
 /mob/living/simple_mob/construct/juggernaut/bullet_act(var/obj/item/projectile/P)
-	var/reflectchance = 80 - round(P.damage/3)
+	var/reflectchance = 100 - round(P.damage)
 	if(prob(reflectchance))
 		var/damage_mod = rand(2,4)
 		var/projectile_dam_type = P.damage_type
@@ -125,7 +125,7 @@
 							)
 
 /mob/living/simple_mob/construct/juggernaut/behemoth/bullet_act(var/obj/item/projectile/P)
-	var/reflectchance = 80 - round(P.damage/3)
+	var/reflectchance = 100 - round(P.damage)
 	if(prob(reflectchance))
 		visible_message("<span class='danger'>The [P.name] gets reflected by [src]'s shell!</span>", \
 						"<span class='userdanger'>The [P.name] gets reflected by [src]'s shell!</span>")

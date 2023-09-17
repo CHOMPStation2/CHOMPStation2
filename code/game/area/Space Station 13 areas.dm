@@ -1761,6 +1761,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/security/riot_control
 	name = "\improper Security - Riot Control"
 	icon_state = "riot_control"
+	flags = RAD_SHIELDED //CHOMP Add
 
 /area/security/detectives_office
 	name = "\improper Security - Forensic Office"
@@ -1823,7 +1824,6 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Vault"
 	icon_state = "nuke_storage"
 	ambience = AMBIENCE_HIGHSEC
-	limit_shadekin_phasing = TRUE // CHOMPEdit
 
 /area/security/checkpoint
 	name = "\improper Security Checkpoint"

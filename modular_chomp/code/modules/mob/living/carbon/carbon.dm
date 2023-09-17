@@ -1,5 +1,6 @@
 /mob/living/carbon
 	var/datum/looping_sound/mob/cozyloop/cozyloop
+	var/slip_reflex = FALSE
 
 /mob/living/carbon/Initialize()
 	. = ..()

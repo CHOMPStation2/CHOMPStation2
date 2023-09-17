@@ -13,6 +13,16 @@
 	possible_transfer_amounts = list(5,10,15,25,30)
 	volume = 50
 	var/trash = null
+	var/cant_open = 0
+	var/cant_chance = 0
+
+	/// Yims
+	food_can_insert_micro = TRUE
+
+/obj/item/weapon/reagent_containers/food/drinks/Initialize()
+	. = ..()
+	if (prob(cant_chance))
+		cant_open = 1
 
 /obj/item/weapon/reagent_containers/food/drinks/on_reagent_change()
 	if (reagents.reagent_list.len > 0)
@@ -23,9 +33,82 @@
 			price_tag = null
 	return
 
-/obj/item/weapon/reagent_containers/food/drinks/proc/On_Consume(var/mob/M, var/mob/user, var/changed = FALSE)
+/obj/item/weapon/reagent_containers/food/drinks/Destroy()
+	if(food_inserted_micros)
+		for(var/mob/M in food_inserted_micros)
+			M.dropInto(loc)
+			food_inserted_micros -= M
+	. = ..()
+
+	return
+
+/obj/item/weapon/reagent_containers/food/drinks/attackby(obj/item/weapon/W as obj, mob/user as mob)
+	if(food_can_insert_micro && istype(W, /obj/item/weapon/holder))
+		if(!(istype(W, /obj/item/weapon/holder/micro) || istype(W, /obj/item/weapon/holder/mouse)))
+			. = ..()
+			return
+
+		if(!is_open_container())
+			to_chat(user, "<span class='warning'>You cannot drop anything into \the [src] without opening it first.</span>")
+			return
+
+		var/obj/item/weapon/holder/H = W
+
+		if(!food_inserted_micros)
+			food_inserted_micros = list()
+
+		var/mob/living/M = H.held_mob
+
+		M.forceMove(src)
+		H.held_mob = null
+		user.drop_from_inventory(H)
+		qdel(H)
+
+		food_inserted_micros += M
+
+		to_chat(user, "<span class='warning'>You drop [M] into \the [src].</span>")
+		to_chat(M, "<span class='warning'>[user] drops you into \the [src].</span>")
+		return
+
+	return ..()
+
+/obj/item/weapon/reagent_containers/food/drinks/MouseDrop_T(mob/living/M, mob/user)
+	if(!user.stat && istype(M) && (M == user) && Adjacent(M) && (M.get_effective_size(TRUE) <= 0.50) && food_can_insert_micro)
+		if(!food_inserted_micros)
+			food_inserted_micros = list()
+
+		M.forceMove(src)
+
+		food_inserted_micros += M
+
+		to_chat(user, "<span class='warning'>You climb into \the [src].</span>")
+		return
+
+	return ..()
+
+/obj/item/weapon/reagent_containers/food/drinks/proc/On_Consume(var/mob/living/M, var/mob/user, var/changed = FALSE)
 	if(!user)
 		user = M
+
+	if(food_inserted_micros && food_inserted_micros.len)
+		if(M.can_be_drop_pred && M.food_vore && M.vore_selected)
+			for(var/mob/living/F in food_inserted_micros)
+				if(!F.can_be_drop_prey || !F.food_vore)
+					continue
+
+				var/do_nom = FALSE
+
+				if(!reagents.total_volume)
+					do_nom = TRUE
+				else
+					var/nom_chance = (1 - (reagents.total_volume / volume))*100
+					if(prob(nom_chance))
+						do_nom = TRUE
+
+				if(do_nom)
+					F.forceMove(M.vore_selected)
+					food_inserted_micros -= F
+
 	if(!reagents.total_volume && changed)
 		M.visible_message("<span class='notice'>[M] finishes drinking \the [src].</span>","<span class='notice'>You finish drinking \the [src].</span>")
 		if(trash)
@@ -46,10 +129,14 @@
 		open(user)
 
 /obj/item/weapon/reagent_containers/food/drinks/proc/open(mob/user)
-	playsound(src,"canopen", rand(10,50), 1)
-	GLOB.cans_opened_roundstat++
-	to_chat(user, "<span class='notice'>You open [src] with an audible pop!</span>")
-	flags |= OPENCONTAINER
+	if(!cant_open)
+		playsound(src,"canopen", rand(10,50), 1)
+		GLOB.cans_opened_roundstat++
+		to_chat(user, "<span class='notice'>You open [src] with an audible pop!</span>")
+		flags |= OPENCONTAINER
+	else
+		to_chat(user, "<span class='warning'>...wait a second, this one doesn't have a ring pull. It's not a <b>can</b>, it's a <b>can't!</b></span>")
+		name = "\improper can't of [initial(name)]"	//don't update the name until they try to open it
 
 /obj/item/weapon/reagent_containers/food/drinks/attack(mob/M as mob, mob/user as mob, def_zone)
 	if(force && !(flags & NOBLUDGEON) && user.a_intent == I_HURT)
@@ -100,6 +187,10 @@
 /obj/item/weapon/reagent_containers/food/drinks/examine(mob/user)
 	. = ..()
 	if(Adjacent(user))
+		if(cant_open)
+			. += "<span class='warning'>It doesn't have a ring pull!</span>"
+		if(food_inserted_micros && food_inserted_micros.len)
+			. += "<span class='notice'>It has [english_list(food_inserted_micros)] [!reagents?.total_volume ? "sitting" : "floating"] in it.</span>"
 		if(!reagents?.total_volume)
 			. += "<span class='notice'>It is empty!</span>"
 		else if (reagents.total_volume <= volume * 0.25)

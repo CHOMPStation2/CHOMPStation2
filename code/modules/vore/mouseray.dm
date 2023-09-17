@@ -11,6 +11,7 @@
 	origin_tech = list(TECH_BLUESPACE = 4)
 	battery_lock = 1
 	firemodes = list()
+	force = 0 //CHOMPEdit
 	var/tf_type = /mob/living/simple_mob/animal/passive/mouse	//This type is what kind of mob it will try to turn people into!
 	var/cooldown = 0											//automatically set when used
 	var/cooldown_time = 15 SECONDS								//the amount of time between shots
@@ -92,23 +93,26 @@
 		if(!M.allow_spontaneous_tf && !tf_admin_pref_override)
 			return
 	if(M.tf_mob_holder)
+		new /obj/effect/effect/teleport_greyscale(M.loc) //CHOMPEdit Start
 		var/mob/living/ourmob = M.tf_mob_holder
 		if(ourmob.ai_holder)
 			var/datum/ai_holder/our_AI = ourmob.ai_holder
 			our_AI.set_stance(STANCE_IDLE)
 		M.tf_mob_holder = null
-		ourmob.ckey = M.ckey
 		var/turf/get_dat_turf = get_turf(target)
 		ourmob.loc = get_dat_turf
 		ourmob.forceMove(get_dat_turf)
-		ourmob.vore_selected = M.vore_selected
-		M.vore_selected = null
-		for(var/obj/belly/B as anything in M.vore_organs)
-			B.loc = ourmob
-			B.forceMove(ourmob)
-			B.owner = ourmob
-			M.vore_organs -= B
-			ourmob.vore_organs += B
+		if(!M.tf_form_ckey)
+			ourmob.vore_selected = M.vore_selected
+			M.vore_selected = null
+			for(var/obj/belly/B as anything in M.vore_organs)
+				B.loc = ourmob
+				B.forceMove(ourmob)
+				B.owner = ourmob
+				M.vore_organs -= B
+				ourmob.vore_organs += B
+			ourmob.nutrition = M.nutrition
+		ourmob.ckey = M.ckey
 
 		ourmob.Life(1)
 		if(ishuman(M))
@@ -117,15 +121,29 @@
 					continue
 				M.drop_from_inventory(W)
 
-		qdel(target)
+		if(M.tf_form == ourmob)
+			if(M.tf_form_ckey)
+				M.ckey = M.tf_form_ckey
+			else
+				M.mind = null
+			ourmob.tf_form = M
+			M.forceMove(ourmob)
+		else
+			qdel(target) //CHOMPEdit End
 		return
 	else
 		if(M.stat == DEAD)	//We can let it undo the TF, because the person will be dead, but otherwise things get weird.
 			return
 		var/mob/living/new_mob = spawn_mob(M)
-		new_mob.faction = M.faction
 
 		if(new_mob && isliving(new_mob))
+			new_mob.faction = M.faction //CHOMPEdit Start
+			if(istype(new_mob, /mob/living/simple_mob))
+				var/mob/living/simple_mob/S = new_mob
+				if(!S.voremob_loaded)
+					S.voremob_loaded = TRUE
+					S.init_vore()
+			new /obj/effect/effect/teleport_greyscale(M.loc) //CHOMPEdit End
 			for(var/obj/belly/B as anything in new_mob.vore_organs)
 				new_mob.vore_organs -= B
 				qdel(B)
@@ -156,6 +174,7 @@
 				B.owner = new_mob
 				M.vore_organs -= B
 				new_mob.vore_organs += B
+			new_mob.nutrition = M.nutrition //CHOMPAdd
 
 			new_mob.ckey = M.ckey
 			if(M.ai_holder && new_mob.ai_holder)
@@ -180,24 +199,26 @@
 /mob/living/proc/revert_mob_tf()
 	if(!tf_mob_holder)
 		return
+	new /obj/effect/effect/teleport_greyscale(src.loc) //CHOMPEdit Start
 	var/mob/living/ourmob = tf_mob_holder
 	if(ourmob.ai_holder)
 		var/datum/ai_holder/our_AI = ourmob.ai_holder
 		our_AI.set_stance(STANCE_IDLE)
 	tf_mob_holder = null
-	ourmob.ckey = ckey
 	var/turf/get_dat_turf = get_turf(src)
 	ourmob.loc = get_dat_turf
 	ourmob.forceMove(get_dat_turf)
-	ourmob.vore_selected = vore_selected
-	vore_selected = null
-	for(var/obj/belly/B as anything in vore_organs)
-		B.loc = ourmob
-		B.forceMove(ourmob)
-		B.owner = ourmob
-		vore_organs -= B
-		ourmob.vore_organs += B
-
+	if(!tf_form_ckey)
+		ourmob.vore_selected = vore_selected
+		vore_selected = null
+		for(var/obj/belly/B as anything in vore_organs)
+			B.loc = ourmob
+			B.forceMove(ourmob)
+			B.owner = ourmob
+			vore_organs -= B
+			ourmob.vore_organs += B
+		ourmob.nutrition = nutrition
+	ourmob.ckey = ckey
 	ourmob.Life(1)
 
 	if(ishuman(src))
@@ -206,7 +227,15 @@
 				continue
 			src.drop_from_inventory(W)
 
-	qdel(src)
+	if(tf_form == ourmob)
+		if(tf_form_ckey)
+			src.ckey = tf_form_ckey
+		else
+			src.mind = null
+		ourmob.tf_form = src
+		src.forceMove(ourmob)
+	else
+		qdel(src) //CHOMPEdit End
 
 
 /mob/living/proc/handle_tf_holder()
@@ -222,6 +251,8 @@
 	//For primarily copying vore preference settings from a carbon mob to a simplemob
 	//It can be used for other things, but be advised, if you're using it to put a simplemob into a carbon mob, you're gonna be overriding a bunch of prefs
 	new_mob.ooc_notes = ooc_notes
+	new_mob.ooc_notes_likes = ooc_notes_likes
+	new_mob.ooc_notes_dislikes = ooc_notes_dislikes
 	new_mob.digestable = digestable
 	new_mob.devourable = devourable
 	new_mob.absorbable = absorbable
@@ -240,6 +271,7 @@
 	new_mob.stumble_vore = stumble_vore
 	new_mob.slip_vore = slip_vore
 	new_mob.throw_vore = throw_vore
+	new_mob.food_vore = food_vore
 	new_mob.resizable = resizable
 	new_mob.show_vore_fx = show_vore_fx
 	new_mob.step_mechanics_pref = step_mechanics_pref
@@ -248,6 +280,7 @@
 	new_mob.vore_smell = vore_smell
 	new_mob.nutrition_message_visible = nutrition_message_visible
 	new_mob.allow_spontaneous_tf = allow_spontaneous_tf
+	new_mob.eating_privacy_global = eating_privacy_global
 
 /////SUBTYPES/////
 
@@ -304,18 +337,20 @@
 			var/datum/ai_holder/our_AI = ourmob.ai_holder
 			our_AI.set_stance(STANCE_IDLE)
 		M.tf_mob_holder = null
-		ourmob.ckey = M.ckey
 		var/turf/get_dat_turf = get_turf(target)
 		ourmob.loc = get_dat_turf
 		ourmob.forceMove(get_dat_turf)
-		ourmob.vore_selected = M.vore_selected
-		M.vore_selected = null
-		for(var/obj/belly/B as anything in M.vore_organs)
-			B.loc = ourmob
-			B.forceMove(ourmob)
-			B.owner = ourmob
-			M.vore_organs -= B
-			ourmob.vore_organs += B
+		if(!M.tf_form_ckey) //CHOMPEdit Start
+			ourmob.vore_selected = M.vore_selected
+			M.vore_selected = null
+			for(var/obj/belly/B as anything in M.vore_organs)
+				B.loc = ourmob
+				B.forceMove(ourmob)
+				B.owner = ourmob
+				M.vore_organs -= B
+				ourmob.vore_organs += B
+			ourmob.nutrition = M.nutrition
+		ourmob.ckey = M.ckey
 
 		ourmob.Life(1)
 
@@ -325,7 +360,15 @@
 					continue
 				M.drop_from_inventory(W)
 
-		qdel(target)
+		if(M.tf_form == ourmob)
+			if(M.tf_form_ckey)
+				M.ckey = M.tf_form_ckey
+			else
+				M.mind = null
+			ourmob.tf_form = M
+			M.forceMove(ourmob)
+		else
+			qdel(target) //CHOMPEdit End
 		firer.visible_message("<span class='notice'>\The [shot_from] boops pleasantly.</span>")
 		return
 	else
@@ -391,18 +434,18 @@
 		"space bear" = /mob/living/simple_mob/animal/space/bear,
 		"voracious lizard" = /mob/living/simple_mob/vore/aggressive/dino,
 		"giant frog" = /mob/living/simple_mob/vore/aggressive/frog,
-		"jelly blob" = /mob/living/simple_mob/animal/space/jelly,
-		"wolf" = /mob/living/simple_mob/animal/wolf,
-		"direwolf" = /mob/living/simple_mob/animal/wolf/direwolf,
+		"jelly blob" = /mob/living/simple_mob/vore/jelly,
+		"wolf" = /mob/living/simple_mob/vore/wolf,
+		"direwolf" = /mob/living/simple_mob/vore/wolf/direwolf,
 		"great wolf" = /mob/living/simple_mob/vore/greatwolf,
 		"sect queen" = /mob/living/simple_mob/vore/sect_queen,
 		"sect drone" = /mob/living/simple_mob/vore/sect_drone,
 		"panther" = /mob/living/simple_mob/vore/aggressive/panther,
 		"giant snake" = /mob/living/simple_mob/vore/aggressive/giant_snake,
 		"deathclaw" = /mob/living/simple_mob/vore/aggressive/deathclaw,
-		"otie" = /mob/living/simple_mob/otie,
-		"mutated otie" =/mob/living/simple_mob/otie/feral,
-		"red otie" = /mob/living/simple_mob/otie/red,
+		"otie" = /mob/living/simple_mob/vore/otie,
+		"mutated otie" =/mob/living/simple_mob/vore/otie/feral,
+		"red otie" = /mob/living/simple_mob/vore/otie/red,
 		"defanged xenomorph" = /mob/living/simple_mob/vore/xeno_defanged,
 		"catslug" = /mob/living/simple_mob/vore/alienanimals/catslug,
 		"teppi" = /mob/living/simple_mob/vore/alienanimals/teppi,
@@ -469,11 +512,11 @@
 
 /obj/item/weapon/gun/energy/mouseray/otie
 	name = "otie ray"
-	tf_type = /mob/living/simple_mob/otie
+	tf_type = /mob/living/simple_mob/vore/otie
 
 /obj/item/weapon/gun/energy/mouseray/direwolf
 	name = "dire wolf ray"
-	tf_type = /mob/living/simple_mob/animal/wolf/direwolf
+	tf_type = /mob/living/simple_mob/vore/wolf/direwolf
 
 /obj/item/weapon/gun/energy/mouseray/giantrat
 	name = "giant rat ray"

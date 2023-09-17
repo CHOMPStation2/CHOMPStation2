@@ -84,7 +84,7 @@
 	title = "Supermatter Engine Operating Manual"
 
 /obj/item/weapon/book/manual/supermatter_engine/New()
-	..()
+	..()			//CHOMPEdit Start - Updated Supermatter Engine Manual
 	dat = {"<html>
 				<head>
 				<style>
@@ -101,7 +101,7 @@
 				<br>
 				<h2>OPERATING PRINCIPLES</h2>
 				<br>
-				<li>The supermatter crystal serves as the fundamental power source of the engine. Upon being charged, it begins to emit large amounts of heat and radiation, as well and oxygen and phoron gas. As oxygen accelerates the reaction and reacts with phoron to start a fire, it must be filtered out. It's recommended to filter out all gases besides nitrogen for standard operation. </li>
+				<li>The supermatter crystal serves as the fundamental power source of the engine. Upon being charged, it begins to emit large amounts of heat and radiation, as well and oxygen and phoron gas. As oxygen accelerates the reaction and reacts with phoron to start a fire, it must be filtered out. It's recommended to filter out all gases besides phoron for standard operation. </li>
 				<br>
 				<li>Gas in the reactor chamber housing the supermatter is circulated through the reactor loop, which passes through the filters and thermoelectric generators. The thermoelectric generators transfer heat from the reactor loop to the colder radiator loop, thereby generating power. Additional power is generated from internal turbines in the circulators.</li>
 				<br>
@@ -120,13 +120,15 @@
 				<br>
 				<h2>STANDARD STARTUP PROCEDURE</h2>
 				<ol>
-				<li>Fill reactor loop and radiator loop with three (3) standard canisters of nitrogen gas each.</li>
-				<li>Fill the waste handling radiator loop with one (1) standard canister of carbon dioxide gas.</li>
+				<li>Fill reactor loop and radiator loop with two (2) standard canisters (1871.75 moles, 20 celsius) of phoron gas each.</li>
+				<li>Fill the waste handling radiator loop with one (1) standard canister (1871.75 as well) of carbon dioxide gas.</li>
+				<li>You can confirm your canisters got enough gas in them by using your PDA's "Gas Scanner" feature, you must enable it and press your PDA against the canister.</li>
 				<li>Enable both the high power gas pumps near the thermo-electric generators and maximize the desired output.</li>
-				<li>Enable both the omni-filters and ensure they are set to filter nitrogen back into the system.</li>
+				<li>Enable both the omni-filters and ensure they are set to filter phoron back into the system.</li>
 				<li>Enable the gas pump from the filters to waste handling and maximize the desired output.</li>
 				<li>Close the monitoring room blast doors and open the reactor blast doors,</li>
-				<li>Fire 8-9 pulses from emitter at supermatter crystal. The expected power output is around a megawatt. NOTE: It will take a few minutes to heat up.</li>
+				<li>Fire 12-16 pulses from emitter at supermatter crystal. The expected power output is around a megawatt. NOTE: It will take a few minutes to heat up.</li>
+				<li>You can confirm desired power levels by checking the computer in the minotoring room, "Supermatter Monitoring". You want 300 EPR, more is safe but no higher than 700</li>
 				<li>Close the reactor blast doors and keep the monitoring room blast doors closed to prevent radiation leaking.</li>
 				</ol>
 				<br>
@@ -134,7 +136,7 @@
 				<ol>
 				<li>Ensure that radiation protection and meson goggles are worn at all times while working in the engine room.</li>
 				<li>Ensure that reactor and radiator loops are undamaged and unobstructed.</li>
-				<li>Ensure that, in a standard setup, only nitrogen is being filtered back into the system. Do not allow exhaust pressure to exceed 4500 kPa.</li>
+				<li>Ensure that, in a standard setup, only phoron is being filtered back into the system. Do not allow exhaust pressure to exceed 4500 kPa.</li>
 				<li>Ensure that engine room Area Power Controller (APC) and engine Superconducting Magnetic Energy Storage unit (SMES) are properly charged.</li>
 				<li>Ensure that reactor temperature does not exceed 5000K. In event of reactor temperature exceeding 5000K, see EMERGENCY COOLING PROCEDURE.</li>
 				<li>In event of imminent and/or unavoidable delamination, see EJECTION PROCEDURE.</li>
@@ -151,12 +153,12 @@
 				<h2>EJECTION PROCEDURE</h2>
 				<ol>
 				<li>Ensure the engine room has power. The blast doors and ejection platform are unresponsive without power.</li>
-				<li>Press Engine Ventilatory Control button to open engine core blast door to space.</li>
-				<li>Press Emergency Core Eject button to eject supermatter crystal. NOTE: Attempting crystal ejection while engine core vent is closed will result in ejection failure.</li>
-				<li>In event of ejection failure, <i>pending</i></li>
+				<li>Press Engine Ventilatory Control button to open engine core blast door to space. (In CE Office and next to the reactor shroud)</li>
+				<li>Press Emergency Core Eject button to eject supermatter crystal. (In CE Office, only) NOTE: Attempting crystal ejection while engine core vent is closed will result in ejection failure.</li>
+				<li>In event of ejection failure, <i>good luck.</i></li>
 				</ol>
 				</body>
-			</html>"}
+			</html>"}			//CHOMPEdit End - Updated Supermatter Engine Manual
 
 // TESLA Engine
 
@@ -230,14 +232,15 @@
 			</html>"}
 
 //R-UST port
-/obj/item/weapon/book/manual/rust_engine
+/obj/item/weapon/book/manual/rust_engine	// CHOMPedit START : Updating the R-UST manual
 	name = "R-UST Operating Manual"
-	icon_state = "bookSupermatter"
+	icon = 'icons/obj/library_ch.dmi'
+	icon_state = "bookRusty" 				// Chompedit : Changed this to a new unique R-UST manual icon rather than just re-using the Supermatter book cover sprite
 	item_state = "book15"
-	author = "Cindy Crawfish"
+	author = "Central Engineering Division"
 	title = "R-UST Operating Manual"
 
-//R-UST guide Re-Writen by Gozulio to reflect how the R-UST actually operates.
+//R-UST guide Re-Writen by Gozulio to reflect how the R-UST actually operates. (CHOMPedit, re-written again :3 By Foxglove)
 /obj/item/weapon/book/manual/rust_engine/New()
 	..()
 	dat = {"<html>
@@ -252,35 +255,69 @@
 				</style>
 				</head>
 				<body>
-				<br><br>
+				<h1>OPERATING MANUAL FOR R-UST MK 8 FUSION CORE 'TOKAMAK'</h1>
+				<br>
+				<h2>OPERATING PRINCIPLES</h2>
+				<br>
+				<li>The Tokamak is a system built that generates power off of two systems. The fusion core, AKA, the MK 8 R-UST. And the TEGs located <mark>north</mark> of the reactor shroud. </li>
+				<br>
+				<li> Using a projected field within the shroud, fuel and reactors can be kept stable and produce heat and radiation relatively safely in a controlled environment. </li>
+				<br>
+				<li> Using a gyrotron as a sort of catalyst, fuel can be ignited in carefully calculated methods, this reaction takes place in the <i>aforementioned</i> projected field. </li>
+				<br>
+				<li> While ensuring radiation is kept within the reactor chamber, and the reactor shroud, heat is allowed to be pumped and cycled to power a TEG <mark>north</mark> of the shroud, as well as a cycling coolant pipe using the temperatures of the space, or in your case, Sif's atmospheric temperatures. </li>
+				<br>
+				<li> Using the TEG to produce a small amount of energy, the R-UST can be initiated, causing a reaction that can create energy to then allow the TEG to create more energy, as well as have the R-UST produce energy on its own. These two methods together ensure the SMES and outpost both remained powered. </li>
+				<br>
+				<h2>REACTOR HANDLING</h2>
+				<li> Ensure you are wearing all required protective equipment when within the reactor chamber at all times. It is advised to also wear this suit in the engine control room. The minimum requires is a full radiation suit equipped with a sealed hood. Mesons are <em>not</em> required to be worn. </li>
+				<li> When the R-UST is not powered, both the engine control room and the shroud may be opened. When the R-UST is powered, is it safe to leave the shroud open <b>only if the engine control room is sealed</b>. </li>
+				<li> Wearing insulated gloves over your radiation suit is also considered good practice, however it is <em>not</em> required to be worn. </li>
+				<li> In order to start the R-UST and TEG system, you must be equipped with at minimum a wrench, basic knowledge of piping, the ability to follow instructions, and preferably, the ability to read or be read this guide by someone else. </li>
+				<li> The reactor may in rare instances require a secondary power source to start it, if this is the case, see <ins>ADDITIONAL INFORMATION <strong>1.</strong></ins> below. </li>
+				<br>
+				<h2>TEG STANDARD STARTUP PROCEDURE</h2>
 				<ol>
-				<li>Go to engine gas storage to the south of the engine room and fetch two Canisters of Nitrogen. and two canisters of Phoron.</li>
-				<li>Secure the Phoron canister to the port that pumps into the Cold (Green/Cyan) loop, and the Nitrogen canister into the Hot(Yellow/Red) loop. long story short, The reactor doesn't like Phoron.</li>
-				<li><b>DO NOT OPEN THE VALVE ON THE GAS CANISTERS, OR SPACE GOD WILL HATE YOU.</b> Turn both pumps on to maximum input, Swap the canisters for full ones when necessary. Each loop only needs 2 canisters of gas.</li>
-				<li>Turn on the pump just to the West of the Pump Station and set it to maximum pressure.</li>
-				<li>Now Coolant is flowing, lets actually start the reactor.</li>
-				<li>Go into the Engine Monitoring room and close the Monitoring room Blast Doors.</li>
-				<li>Get the PACMAN from hard storage and Secure it in the Engine SMES room, and load it with Phoron.</li>
-				<li>Go into the Reactor Control room and open the reactor shroud.</li>
-				<li>Enable max input and output on the engine SMES and shut off the input off on the Station SMES. This is to make sure the Gyrotron gets as much power as it can during start up.</li>
-				<li>Turn the PACMAN on, setting it to power 4/5.</li>
-				<li>Go into the reactor Control Room (East of the reactor) and take the stack of Deuterium off the table, and click it on the compressor twice, this should make two Deuterium Fuel rods. Ignore the Tritium.</li>
-				<li>In the Control room go to the Core Control console, Access the field, and set its strength/size to 600, then bring the field on-line. This will give you a field of about 7x7 tiles. Make note of the field size, A bigger field can EMP machinery or doors around it, a smaller field may allow Gyrotron shots to miss, and punch holes in the back wall.</li>
-				<li>In the Control room go to the Gyrotron Control console and turn the Gyrotrons on, delay 3 power 3.</li>
-				<li>In the Control room go to the Fuel Injector console and start injecting fuel.</li>
-				<li>Go back to the Core Control Console, and now wait for the temperature to spike from 296 Kelvin up to 3,000 to 10,000 Kelvin. When the temperature spikes it means you have achieved fusion</li>
-				<li>Now turn the Gyrotrons off, You can turn off one of the two fuel injectors as well if you wish to conserve fuel.</li>
-				<li>Now close the Reactor Shroud and the Control Room Shroud.</li>
-				<li>You should be producing power now, a lot of it. Now go turn on the Station SMES and turn off the PACMAN before it explodes.</li>
+				<li> <mark>North</mark> of the shroud lays the TEG. You will need to go there. The standard piping has a green cold loop set of pipes and a yellow hot loop set of pipes. <i>Remember that the reactor heats up the gas that is cycling through the hot loop, so it must be able to be cycle into and out of the reactor chamber freely, there is a cyan pipe that is directly connected to the reactor's core room to allow this to happen.</i> </li>
+				<li> The <mark>green</mark> cold loop is first as it takes longer to fill. <b>First</b> power and max the main cool-loop valve, this is located <ins>at the very north-west</ins> corner of the room. Remember that the red mark on a valve refers to which direction the valve allows gas to flow. Now power and max the <mark>north</mark> most valve that connects the cold-loop to the intake, and wrench a phoron canister to the intake. If you would like, skip to step four and return to step three after completing it.  </li>
+				<li> Once the phoron canister is empty, unwrench it and replace it with a second canister and wrench it down in the original canister's place. The cold-loop requires two canisters of phoron gas to remain stable and safe. <i>Once the cold-loop is set up, you may power down the <b>intake</b> pipe, located adjacent <ins>south-west</ins> of the intake connector port</i>. </li>
+				<li> Next you will look to the hot-loop, due to contamination this loop has two ports for canisters. The <i>left</i> port is the intake. The <i>right</i> port is the outlet. For the purposes of simplicity, <b>ignore the right outlet port and valve</b> Wrench a CO<sup>2</sup> canister to the intake port and open and max the intake valve.  </li>
+				<li> Once the CO<sup>2</sup> canister is empty, unwrench it and replace it with a second canister and wrench it down in the original canister's place. The hot-loop requires two canisters of CO<sup>2</sup> to remain stable and safe. <i>Once the hot-loop is set up, you may power down the <b>intake</b> pipe, located directly <ins>south</ins> of the intake connector port</i>.</li>
+				<li> While not <i>required</i> there is an omni-filter you can set-up and power on <mark>just north</mark> of the reactor shroud. It can be used to filter gas out of reactor, it is not required, however, and can be safely ignored for standard basic set-up of TEG and R-UST alike. </li>
+				</ol>
+                <br>
+				<h2>R-UST STANDARD STARTUP PROCEDURE</h2>
+                <h1>The Engine Control Room and what to know.</h1>
+                <li> <b><ins>Gyrotron Controller</ins></b> <em>This is the terminal located on the far <mark>west</mark> and controls the gyrotron. This device can be viewed as the catalyst that causes the reaction within the core and must remain turned on <b>only during use</b></em>. </li>
+                <li> <b><ins>Fuel Injector Control</b></ins> <em>This is the terminal <mark>adjacent</mark> to the gyrotron controller, it controls the injectors that pump fuel into the reactor core chamber and must remained turned on <b>only when in use <ins>and</ins> with the projection field powered and active</b></em>. </li>
+                <li> <b><ins>R-UST Core Monitoring</ins></b> <em>This is the terminal in the <mark>middle</mark> of the room. It gives you information about the status of the reactor, the core chamber, and the reaction going on within the R-UST</em>.</li>
+                <li> <b><ins>Engine Cooling Control</ins></b> <em>This is the terminal directly <mark>in front of you</mark> when you walk into the engine control room. This terminal controls the cooling pumps and systems within the R-UST core</em>. </li>
+                <li> <b><ins>Shroud Controls</ins></b> <em>There are two buttons that control and cycle the monitoring room shroud and the reactor core shroud. These are located <mark>on the sides</mark> of the monitoring room. The reactor shroud should be left open during setup. And the monitoring room shroud should be left shut <b>after</b> setup is complete</em>. </li>
+                <li> <b><ins>Deuterium</ins></b> <em>The standard set-up for your R-UST reaction is Deuterium-Dueterium. Go to the fuel storage chamber <mark>east</mark> of the reactor shroud and ensure you have two rods on hand for set-up. You may safely grab <b>two</b> of these rods now and insert them into the two <mark>southern</mark> fuel injectors. If you do, skip the first step below</em>.</li>
+                <br>
+                <ol>
+				<li> Collect two (2) deuterium fuel rods from the fuel storage chamber and socket them into any two fuel injectors. <i>It is adviced to use the two <mark>southern</mark> injectors to allow for easier visual checks from the engine control room.</i> </li>
+				<li> Assuming the room and controls are powered open both the reactor shroud and the control room shroud. If the room is not powered (which you can check by looking at the R-UST Core Monitor and seeing if the buttons are greyed out or not, if they are grey it does not have enough power). If it is unpowered or otherwise does not have sufficient power see <ins>ADDITIONAL INFORMATION <strong>1.</strong></ins> below.</li>
+				<li> Now, please ensure everyone in the engine control room is wearing full radiation protection gear, ensure the control room door will not be opened during set-up to prevent radiation leakage. </li>
+				<li> Using the R-UST Core Monitor, set <mark><b>Field Strength</b></mark> to fifty-one (51). <em>This is the minimum required to catch all injected fuel, anything lower will not be strong enough to be safe, too much higher and it could cause instability that will result in an EMP of your equipment. <i>If you read slowly, read the next steps before turning this online, as the field requires a lot of upkeep power. Once you have done so or are ready to move on, turn on the field and continue.</i></em></li>
+				<li> Using the Fuel Injector, turn on the two (2) injectors that have deuterium in them. <em>Understand that this alone will not cause a reaction, but using other fuel reagents, such as a tritium, the reactions would begin after this step.</em></li>
+				<li> Finally, using the gyrotron controller, step the fire delay to three (3) and the strength to one (1). Turn it on and close <b>the engine control room shroud</b> before leaving to reduce risks of radiation leakage.</li>
 				</ol>
 				<br>
-				<b>NOTES FOR NEWBIES</b>
+				<h2>OPERATION AND MAINTENANCE</h2>
+				<li> Past this point you do not need to actively maintain the field. So long as the injectors and shield projectors are powered, the system is self-sustaining, even using the excess heat to power the TEG system <mark>north</mark> of the reactor shroud.</li>
+				<li> From here-on, understand that the room is now flooded with radiation, you will need to wear a full radiation-suit when going into either the engine control room, or the reactor chamber or core.</li>
+				<li> You will notice a jump in temperature. The pattern should be easy to spot, as the R-UST heats up slowly until a reaction happens. When that reaction happens, that is when you will notice the spike. Ensuring the room is constantly flooded with cycling a CO<sup>2</sup> coolant to ensure safe temperatures.</li>
+				<li> The majority of power created by this standard set-up is from the TEG, and not the actual R-UST itself. This means the R-UST can be left with lower reactives inside of it, while still ensuring the outpost is powered. Knowing this, you can also safely leave the outpost and acknowledge that periodic temperature checks are recommended. </li>
+				</li>
 				<br>
-				Anything touching the field will mess with its stability and eventually cause it to rupture. Rupturing is bad. Use the gyrotron to keep instability down if you're running the engine on unstable fuel.
-				<br><br>
-				Likewise, no matter how sad the core seems, don't fucking hug it, you'll blow the field out and set the engine room on fire.
+				<h2>ADDITIONAL INFORMATION</h2>
+				<ol>
+				<li> To the <mark>east</mark> of the shroud there are three doors, the north room is the equipment storage room, the central room is the fuel storage room, and south is the SMES room. Ensure you check that both SMES are turned on before reading further... <i> if the SMES are fully unpowered, go to the <mark>north</mark> door and find the standard PACMAN and phoron prepared for you in the storage room. You insulted gloves, wire coils, and the aforementioned PACMAN/phoron for this.</i> Once you are prepared, bring the PACMAN to the SMES room. That is the <mark>south</mark> room, wire it up to the TEG lines and power the PACMAN with phoron.  </li><br>
+				<li> Due to the TEG generating such a high amount of power, you can safely go into the SMES chamber and max out the INPUT and OUTPUT to both SMES units. One will ensure that even in the rare event of a TEG shutdown, the R-UST will have enough power to allow engineers to set up different reactions to ensure the outpost stays powered. The other SMES will ensure the outpost has some spare power until the TEG is repaired, or otherwise replaced. </li><br>
+				</ol>
 				</body>
-			</html>"}
+			</html>"}			// CHOMPedit END : Updating the R-UST manual
 
 /obj/item/weapon/book/manual/engineering_hacking
 	name = "Hacking"
@@ -328,7 +365,7 @@
 
 				<h2>Power outage</h2>
 
-				A power problem has made the entire station lose power? Could be station-wide wiring problems or syndicate power sinks. In any case follow these steps:
+				A power problem has made the entire station lose power? Could be station-wide wiring problems or illegal power sinks. In any case follow these steps:
 
 				<ol>
 					<li><b><font color='red'>PANIC!</font></b></li>
@@ -1126,7 +1163,7 @@
 	name = "Fission Mailed: Nuclear Sabotage 101"
 	icon_state ="bookNuclear"
 	item_state = "book8"
-	author = "Syndicate"
+	author = "Stealth Assault Enterprises"
 	title = "Fission Mailed: Nuclear Sabotage 101"
 
 	dat = {"<html>
@@ -1142,7 +1179,7 @@
 				</head>
 				<body>
 				<h1>Nuclear Explosives 101</h1>
-				Hello and thank you for choosing the Syndicate for your nuclear information needs. Today's crash course will deal with the operation of a Nuclear Fission Device.<br><br>
+				Hello and thank you for choosing Stealth Assault Enterprises for your nuclear information needs. Today's crash course will deal with the operation of a Nuclear Fission Device.<br><br>
 
 				First and foremost, DO NOT TOUCH ANYTHING UNTIL THE BOMB IS IN PLACE. Pressing any button on the compacted bomb will cause it to extend and bolt itself into place. If this is done, to unbolt it, one must completely log in, which at this time may not be possible.<br>
 
@@ -1158,7 +1195,7 @@
 
 				You now have activated the device. To deactivate the buttons at anytime, for example when you've already prepped the bomb for detonation, remove the authentication disk OR press R on the keypad.<br><br>
 				Now the bomb CAN ONLY be detonated using the timer. Manual detonation is not an option. Toggle off the SAFETY.<br>
-				<b>Note</b>: You wouldn't believe how many Syndicate Operatives with doctorates have forgotten this step.<br><br>
+				<b>Note</b>: You wouldn't believe how many SAARE Operatives with doctorates have forgotten this step.<br><br>
 
 				So use the - - and + + to set a detonation time between 5 seconds and 10 minutes. Then press the timer toggle button to start the countdown. Now remove the authentication disk so that the buttons deactivate.<br>
 				<b>Note</b>: THE BOMB IS STILL SET AND WILL DETONATE<br><br>

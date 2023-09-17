@@ -46,6 +46,11 @@
 	if(my_kin.stat)
 		to_chat(my_kin,"<span class='warning'>Can't use that ability in your state!</span>")
 		return FALSE
+	//CHOMPEdit Begin - Dark Respite
+	if(my_kin.ability_flags & AB_DARK_RESPITE)
+		to_chat(src, "<span class='warning'>You can't use that so soon after an emergency warp!</span>")
+		return FALSE
+	//CHOMPEdit End
 	if(shift_mode == NOT_WHILE_SHIFTED && (my_kin.ability_flags & AB_PHASE_SHIFTED))
 		to_chat(my_kin,"<span class='warning'>Can't use that ability while phase shifted!</span>")
 		return FALSE
@@ -166,3 +171,23 @@
 	if(!..())
 		return
 */
+
+//CHOMPEdit start - Add dark tunneling ability
+/obj/effect/shadekin_ability/dark_tunneling
+	ability_name = "Dark Tunneling"
+	desc = "Make a passage to the dark. (Once)"
+	icon_state = "minion0"
+	cost = 100
+	shift_mode = NOT_WHILE_SHIFTED
+	ab_sound = 'sound/effects/stealthoff.ogg'
+/obj/effect/shadekin_ability/dark_tunneling/do_ability()
+	if(my_kin.ability_flags & AB_DARK_TUNNEL)
+		to_chat(src, "<span class='warning'>You have already made a tunnel to the Dark!</span>")
+		return FALSE
+	if(!..())
+		return
+	if(!my_kin.dark_tunneling())
+		my_kin.energy += cost //Refund due to abort
+	else
+		my_kin.energy += 10 //Refund enough to open the dark portal
+//CHOMPEdit End

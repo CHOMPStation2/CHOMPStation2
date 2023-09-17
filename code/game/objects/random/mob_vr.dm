@@ -73,6 +73,7 @@
 				prob(2);/obj/item/weapon/twohanded/fireaxe,\
 				prob(2);/obj/item/weapon/gun/projectile/luger/brown,\
 				prob(2);/obj/item/weapon/gun/launcher/crossbow,\
+				prob(2);/obj/item/weapon/melee/shock_maul,\
 			/*	prob(1);/obj/item/weapon/gun/projectile/automatic/battlerifle,\ */ // Too OP
 				prob(1);/obj/item/weapon/gun/projectile/deagle/gold,\
 				prob(1);/obj/item/weapon/gun/energy/imperial,\
@@ -108,7 +109,9 @@
 				prob(4);/obj/item/ammo_magazine/m45uzi,\
 				prob(4);/obj/item/ammo_magazine/m9mml,\
 				prob(4);/obj/item/ammo_magazine/m9mmt,\
-				prob(4);/obj/item/ammo_magazine/m9mmp90,\
+//CHOMPedit start: new P90 magazine.
+				prob(4);/obj/item/ammo_magazine/a57p90,\
+//CHOMPedit end.
 				prob(4);/obj/item/ammo_magazine/m10mm,\
 				prob(4);/obj/item/ammo_magazine/m545/small,\
 				prob(3);/obj/item/ammo_magazine/clip/c44,\
@@ -183,7 +186,7 @@
 /obj/random/outside_mob/item_to_spawn() // Special version for mobs to have the same faction.
 	return pick(
 				prob(50);/mob/living/simple_mob/animal/passive/gaslamp,
-//				prob(50);/mob/living/simple_mob/otie/feral, // Removed until Otie code is unfucked.
+//				prob(50);/mob/living/simple_mob/vore/otie/feral, // Removed until Otie code is unfucked.
 				prob(20);/mob/living/simple_mob/vore/aggressive/dino/virgo3b,
 				prob(1);/mob/living/simple_mob/vore/aggressive/dragon/virgo3b)
 

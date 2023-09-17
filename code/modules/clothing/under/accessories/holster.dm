@@ -31,8 +31,7 @@
 	if(istype(user))
 		user.stop_aiming(no_message=1)
 	holstered = I
-	user.drop_from_inventory(holstered)
-	holstered.loc = src
+	user.drop_from_inventory(holstered, target = src)
 	holstered.add_fingerprint(user)
 	w_class = max(w_class, holstered.w_class)
 	user.visible_message("<span class='notice'>[user] holsters \the [holstered].</span>", "<span class='notice'>You holster \the [holstered].</span>")
@@ -152,6 +151,7 @@
 	icon_state = "holster"
 
 /obj/item/clothing/accessory/holster/armpit/black
+	name = "black armpit holster" // CHOMPedit: Loaodut bugfix
 	icon_state = "holster_b"
 
 /obj/item/clothing/accessory/holster/waist
@@ -162,7 +162,9 @@
 	concealed_holster = 0
 
 /obj/item/clothing/accessory/holster/waist/black
+	name = "black waist holster" // CHOMPedit: Loadout bugfix
 	icon_state = "holster_b_low"
+	overlay_state = "holster_b_low" // CHOMPedit
 
 /obj/item/clothing/accessory/holster/hip
 	name = "hip holster"
@@ -171,6 +173,7 @@
 	concealed_holster = 0
 
 /obj/item/clothing/accessory/holster/hip/black
+	name = "black hip holster" // CHOMPedit: Loadout bugfix
 	desc = "A handgun holster slung low on the hip, draw pardner!"
 	icon_state = "holster_b_hip"
 
@@ -182,5 +185,7 @@
 	concealed_holster = 0
 
 /obj/item/clothing/accessory/holster/leg/black
+	name = "black leg holster" // CHOMPedit: Loadout bugfix
 	desc = "A tacticool handgun holster. Worn on the upper leg."
 	icon_state = "holster_b_leg"
+	overlay_state = "holster_b_leg" // CHOMPedit

@@ -518,3 +518,13 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "dragon-horns"
+
+/datum/sprite_accessory/ears/zorgoia_alt //CHOMPEdit - Changed name to prevent conflict with our existing zorgoia ears
+	name = "Zorgoia (New)"
+	desc = ""
+	icon = 'icons/mob/human_races/sprite_accessories/ears.dmi'
+	icon_state = "zorgoia"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "zorgoia_inner"
+	extra_overlay2 = "zorgoia_tips"

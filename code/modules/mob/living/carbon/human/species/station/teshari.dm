@@ -19,14 +19,16 @@
 
 	health_hud_intensity = 3
 
-	male_cough_sounds = list('sound/effects/mob_effects/tesharicougha.ogg','sound/effects/mob_effects/tesharicoughb.ogg')
-	female_cough_sounds = list('sound/effects/mob_effects/tesharicougha.ogg','sound/effects/mob_effects/tesharicoughb.ogg')
-	male_sneeze_sound = 'sound/effects/mob_effects/tesharisneeze.ogg'
-	female_sneeze_sound = 'sound/effects/mob_effects/tesharisneeze.ogg'
+	// CHOMPEdit Start: Species Sounds
+	species_sounds = "Teshari"
+	// male_cough_sounds = list('sound/effects/mob_effects/tesharicougha.ogg','sound/effects/mob_effects/tesharicoughb.ogg')
+	// female_cough_sounds = list('sound/effects/mob_effects/tesharicougha.ogg','sound/effects/mob_effects/tesharicoughb.ogg')
+	// male_sneeze_sound = 'sound/effects/mob_effects/tesharisneeze.ogg'
+	// female_sneeze_sound = 'sound/effects/mob_effects/tesharisneeze.ogg'
 
 	//CHOMPStation Add. Y'know I should probably just put this upstream.
-	male_scream_sound = 'sound/effects/mob_effects/teshariscream.ogg'
-	female_scream_sound = 'sound/effects/mob_effects/teshariscream.ogg'
+	// male_scream_sound = 'sound/effects/mob_effects/teshariscream.ogg'
+	// female_scream_sound = 'sound/effects/mob_effects/teshariscream.ogg'
 	center_offset = 0 //CHOMPEdit
 	//CHOMPStation Add End
 

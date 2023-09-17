@@ -12,7 +12,7 @@
 
 	var/vore_active = 0					// If vore behavior is enabled for this mob
 
-	//CHOMPEdit - Vore_capacity is now defined on living
+	//CHOMPEdit - Vore_capacity is now defined on code/modules/vore/eating/living_ch.dm
 	vore_capacity = 1					// The capacity (in people) this person can hold
 	var/vore_max_size = RESIZE_HUGE		// The max size this mob will consider eating
 	var/vore_min_size = RESIZE_TINY 	// The min size this mob will consider eating
@@ -41,12 +41,16 @@
 	var/vore_default_contamination_flavor = "Generic"	//Contamination descriptors
 	var/vore_default_contamination_color = "green"		//Contamination color
 
-	//CHOMPEDIT start - Moved to living
+	//CHOMPEDIT start - Moved to code/modules/vore/eating/living_ch
 	//var/vore_fullness = 0				// How "full" the belly is (controls icons)
 	//var/vore_icons = 0					// Bitfield for which fields we have vore icons for.
 	//var/vore_eyes = FALSE				// For mobs with fullness specific eye overlays.
+	//var/belly_size_multiplier = 1
 	//CHOMPEDIT end.
+
 	var/life_disabled = 0				// For performance reasons
+
+	var/vore_attack_override = FALSE	// Enable on mobs you want to have special behaviour on melee grab attack.
 
 	var/mount_offset_x = 5				// Horizontal riding offset.
 	var/mount_offset_y = 8				// Vertical riding offset
@@ -73,13 +77,14 @@
 		return myid
 
 // Update fullness based on size & quantity of belly contents
-/* CHOMPEdit - moved to living
+/* CHOMPEdit - moved to code/modules/vore/eating/living_ch
 /mob/living/simple_mob/proc/update_fullness()
 	var/new_fullness = 0
 	for(var/obj/belly/B as anything in vore_organs)
 		for(var/mob/living/M in B)
 			new_fullness += M.size_multiplier
 	new_fullness = new_fullness / size_multiplier //Divided by pred's size so a macro mob won't get macro belly from a regular prey.
+	new_fullness = new_fullness * belly_size_multiplier // Some mobs are small even at 100% size. Let's account for that.
 	new_fullness = round(new_fullness, 1) // Because intervals of 0.25 are going to make sprite artists cry.
 	vore_fullness = min(vore_capacity, new_fullness)
 */
@@ -267,7 +272,10 @@
 		"The churning walls slowly pulverize you into meaty nutrients.",
 		"The stomach glorps and gurgles as it tries to work you into slop.")
 	can_be_drop_pred = TRUE // Mobs will eat anyone that decides to drop/slip into them by default.
-	B.belly_fullscreen = "yet_another_tumby"
+//	B.belly_fullscreen = "yet_another_tumby" //Chompedit - Why are they even using this one, I do not understand.
+	B.belly_fullscreen = "a_tumby" //Chompedit
+	B.belly_fullscreen_color = "#823232" //Chompedit
+	B.belly_fullscreen_color2 = "#823232" //Chompedit
 
 /mob/living/simple_mob/Bumped(var/atom/movable/AM, yes)
 	if(tryBumpNom(AM))
@@ -277,6 +285,8 @@
 /mob/living/simple_mob/proc/tryBumpNom(var/mob/tmob)
 	//returns TRUE if we actually start an attempt to bumpnom, FALSE if checks fail or the random bump nom chance fails
 	if(istype(tmob) && will_eat(tmob) && !istype(tmob, type) && prob(vore_bump_chance) && !ckey) //check if they decide to eat. Includes sanity check to prevent cannibalism.
+		if(!faction_bump_vore && faction == tmob.faction)
+			return FALSE
 		if(tmob.canmove && prob(vore_pounce_chance)) //if they'd pounce for other noms, pounce for these too, otherwise still try and eat them if they hold still
 			tmob.Weaken(5)
 		tmob.visible_message("<span class='danger'>\The [src] [vore_bump_emote] \the [tmob]!</span>!")

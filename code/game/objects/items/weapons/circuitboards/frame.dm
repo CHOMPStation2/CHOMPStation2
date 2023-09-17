@@ -74,6 +74,12 @@
 	board_type = new /datum/frame/frame_types/geiger
 	matter = list(MAT_STEEL = 50, MAT_GLASS = 50)
 
+/obj/item/weapon/circuitboard/electrochromic
+	name = T_BOARD("electrochromic button")
+	build_path = /obj/machinery/button/windowtint
+	board_type = new /datum/frame/frame_types/electrochromic_button
+	matter = list(MAT_STEEL = 50, "glass" = 50)
+
 //Computer
 
 /obj/item/weapon/circuitboard/holopad
@@ -183,7 +189,7 @@
 //	origin_tech = list(TECH_DATA = 2, TECH_BLUESPACE = 4)
 //CHOMPedit Balance
 	req_components = list(
-							/obj/item/weapon/ore/bluespace_crystal = 2,
+							/obj/item/weapon/bluespace_crystal = 2,
 							/obj/item/weapon/stock_parts/capacitor = 2,
 							/obj/item/weapon/stock_parts/scanning_module = 2,
 							/obj/item/weapon/stock_parts/micro_laser =2,

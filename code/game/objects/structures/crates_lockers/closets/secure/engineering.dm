@@ -11,6 +11,9 @@
 		///obj/item/clamp,	//VOREStation Removal: without leaks those are pointless,
 		/obj/item/clothing/under/rank/chief_engineer,
 		/obj/item/clothing/under/rank/chief_engineer/skirt,
+		/obj/item/clothing/under/rank/neo_chiefengi,
+		/obj/item/clothing/under/rank/neo_chiefengi_skirt,
+		/obj/item/clothing/under/rank/neo_ce_gorka,
 		/obj/item/clothing/head/hardhat/white,
 		///obj/item/clothing/head/welding,	//VOREStation Removal: Locker bloat, grr. They get fancy goggles or can raid the welding supplies locker for one of these.
 		/obj/item/clothing/gloves/heavy_engineer,	//VOREStation Edit: chief gets the good shit
@@ -34,6 +37,8 @@
 		/obj/item/clothing/head/beret/engineering/ce/white,
 		/obj/item/weapon/tank/emergency/oxygen/double,	//VOREStation Edit: chief gets the good shit
 		/obj/item/weapon/reagent_containers/spray/windowsealant, //VOREStation Add,
+		/obj/item/weapon/holosign_creator/combifan, //CHOMPAdd
+		/obj/item/weapon/rcd/advanced/loaded, //CHOMPAdd
 		/obj/item/weapon/pipe_dispenser) //YW Add
 
 /obj/structure/closet/secure_closet/engineering_chief/Initialize()
@@ -135,6 +140,8 @@
 		/obj/item/clothing/suit/storage/hooded/wintercoat/engineering/atmos,
 		/obj/item/clothing/shoes/boots/winter/atmos,
 		/obj/item/weapon/tank/emergency/oxygen/engi,
+		/obj/item/weapon/holosign_creator/combifan, //CHOMPAdd
+		/obj/item/weapon/pipe_dispenser, //CHOMPAdd
 		/obj/item/weapon/storage/belt/utility/atmostech) //VOREStation edit. They don't get a toolbox to fill it from, so why not give a spare one that's full already?
 
 /obj/structure/closet/secure_closet/atmos_personal/Initialize()

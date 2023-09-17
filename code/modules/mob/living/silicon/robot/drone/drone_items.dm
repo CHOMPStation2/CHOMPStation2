@@ -22,7 +22,7 @@
 		/obj/item/weapon/circuitboard,
 		/obj/item/weapon/smes_coil,
 		/obj/item/weapon/fuel_assembly,
-		/obj/item/weapon/ore/bluespace_crystal
+		/obj/item/weapon/bluespace_crystal //Chomp EDIT
 		) // CHOMPEdit - Buffing the gripper to allow bluespace crystal use for telesci building.
 
 	var/obj/item/wrapped = null // Item currently being held.
@@ -403,7 +403,7 @@
 
 				A.cell.add_fingerprint(user)
 				A.cell.update_icon()
-				A.updateicon()
+				A.update_icon()
 				A.cell.loc = src
 				A.cell = null
 
@@ -582,15 +582,24 @@
 		else
 			resources += module_string
 
-	dat += tools
-
 	if (emagged)
-		if (!module.emag)
-			dat += text("<B>Resource depleted</B><BR>")
-		else if(activated(module.emag))
-			dat += text("[module.emag]: <B>Activated</B><BR>")
-		else
-			dat += text("[module.emag]: <A HREF=?src=\ref[src];act=\ref[module.emag]>Activate</A><BR>")
+		for (var/O in module.emag)
+
+			var/module_string = ""
+
+			if (!O)
+				module_string += text("<B>Resource depleted</B><BR>")
+			else if(activated(O))
+				module_string += text("[O]: <B>Activated</B><BR>")
+			else
+				module_string += text("[O]: <A HREF=?src=\ref[src];act=\ref[O]>Activate</A><BR>")
+
+			if((istype(O,/obj/item/weapon) || istype(O,/obj/item/device)) && !(istype(O,/obj/item/stack/cable_coil)))
+				tools += module_string
+			else
+				resources += module_string
+
+	dat += tools
 
 	dat += resources
 

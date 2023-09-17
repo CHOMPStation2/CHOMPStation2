@@ -64,6 +64,13 @@ var/list/mentor_verbs_default = list(
 	to_chat(src, "<span class='pm notice'>You have made [C] a mentor.</span>")
 	log_admin("[key_name(src)] made [key_name(C)] a mentor.")
 	feedback_add_details("admin_verb","Make Mentor") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+	// CHOMPedit Start - Adding to DB Logic
+	var/result = tgui_alert(src, "Do you want to add this person into the mentor database? This will allow them to be a mentor in future rounds too.", "Add to Database", list("Yes", "No"))
+	if(result == "Yes")
+		var/DBQuery/query = SSdbcore.NewQuery("INSERT INTO erro_mentor (ckey, mentor) VALUES (:ckey, :mentor)", list("ckey" = C.ckey, "mentor" = 1))
+		query.Execute()
+		qdel(query)
+	// CHOMPedit End
 
 /client/proc/unmake_mentor()
 	set category = "Special Verbs"
@@ -83,6 +90,11 @@ var/list/mentor_verbs_default = list(
 	to_chat(src, "<span class='pm notice'>You have revoked [C]'s mentorship.</span>")
 	log_admin("[key_name(src)] revoked [key_name(C)]'s mentorship.")
 	feedback_add_details("admin_verb","Unmake Mentor") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+	// CHOMPedit Start - Removing from DB Logic
+	var/DBQuery/query = SSdbcore.NewQuery("DELETE FROM erro_mentor WHERE ckey = :ckey", list("ckey" = C.ckey))
+	query.Execute()
+	qdel(query)
+	// CHOMPedit End
 
 /client/proc/cmd_mentor_say(msg as text)
 	set category = "Admin"
@@ -104,17 +116,18 @@ var/list/mentor_verbs_default = list(
 		to_chat(C, create_text_tag("mentor", "MENTOR:", C) + " <span class='mentor_channel'><span class='name'>[src]</span>: <span class='message'>[msg]</span></span>")
 
 /proc/mentor_commands(href, href_list, client/C)
-	if(href_list["mhelp"])
-		var/mhelp_ref = href_list["mhelp"]
-		var/datum/mentor_help/MH = locate(mhelp_ref)
-		if (MH && istype(MH, /datum/mentor_help))
-			MH.Action(href_list["mhelp_action"])
+	// CHOMPedit Start - Tickets System
+	if(href_list["ticket"])
+		var/ticket_ref = href_list["ticket"]
+		var/datum/ticket/T = locate(ticket_ref)
+		if (T && istype(T, /datum/ticket))
+			T.Action(href_list["ticket_action"])
 		else
-			to_chat(C, "Ticket [mhelp_ref] has been deleted!")
+			to_chat(C, "Ticket [ticket_ref] has been deleted!")
 
-	if (href_list["mhelp_tickets"])
-		GLOB.mhelp_tickets.BrowseTickets(text2num(href_list["mhelp_tickets"]))
-
+	if (href_list["tickets"])
+		GLOB.tickets.BrowseTickets(text2num(href_list["tickets"]))
+	// CHOMPedit End
 
 /datum/mentor/Topic(href, href_list)
 	..()
@@ -146,15 +159,15 @@ var/list/mentor_verbs_default = list(
 			to_chat(src, "<span class='pm warning'>Error: Mentor-PM: Client not found.</span>")
 		return
 
-	var/datum/mentor_help/MH = C.current_mentorhelp
+	var/datum/ticket/T = C.current_ticket // CHOMPedit - Ticket System
 
-	if(MH)
+	if(T) // CHOMPedit - Ticket System
 		message_mentors("<span class='mentor_channel'>[src] has started replying to [C]'s mentor help.</span>")
 	var/msg = tgui_input_text(src,"Message:", "Private message to [C]")
 	if (!msg)
 		message_mentors("<span class='mentor_channel'>[src] has cancelled their reply to [C]'s mentor help.</span>")
 		return
-	cmd_mentor_pm(whom, msg, MH)
+	cmd_mentor_pm(whom, msg, T) // CHOMPedit - Ticket System
 
 /proc/has_mentor_powers(client/C)
 	return C.holder || C.mentorholder
@@ -177,7 +190,7 @@ var/list/mentor_verbs_default = list(
 	adminhelp(msg)
 
 
-/client/proc/cmd_mentor_pm(whom, msg, datum/mentor_help/MH)
+/client/proc/cmd_mentor_pm(whom, msg, datum/ticket/T) // CHOMPedit - Ticket System
 	set category = "Admin"
 	set name = "Mentor-PM"
 	set hidden = 1
@@ -187,7 +200,7 @@ var/list/mentor_verbs_default = list(
 		return
 
 	//Not a mentor and no open ticket
-	if(!has_mentor_powers(src) && !current_mentorhelp)
+	if(!has_mentor_powers(src) && !current_ticket) // CHOMPedit - Ticket System
 		to_chat(src, "<span class='pm warning'>You can no longer reply to this ticket, please open another one by using the Mentorhelp verb if need be.</span>")
 		to_chat(src, "<span class='pm notice'>Message: [msg]</span>")
 		return
@@ -217,11 +230,11 @@ var/list/mentor_verbs_default = list(
 				to_chat(src, msg)
 			else
 				log_admin("Mentorhelp: [key_name(src)]: [msg]")
-				current_mentorhelp.MessageNoRecipient(msg)
+				current_ticket.MessageNoRecipient(msg) // CHOMPedit - Ticket System
 			return
 
 	//Has mentor powers but the recipient no longer has an open ticket
-	if(has_mentor_powers(src) && !recipient.current_mentorhelp)
+	if(has_mentor_powers(src) && !recipient.current_ticket) // CHOMPedit - Ticket System
 		to_chat(src, "<span class='pm warning'>You can no longer reply to this ticket.</span>")
 		to_chat(src, "<span class='pm notice'>Message: [msg]</span>")
 		return
@@ -235,17 +248,19 @@ var/list/mentor_verbs_default = list(
 
 	var/interaction_message = "<span class='pm notice'>Mentor-PM from-<b>[src]</b> to-<b>[recipient]</b>: [msg]</span>"
 
-	if (recipient.current_mentorhelp && !has_mentor_powers(recipient))
-		recipient.current_mentorhelp.AddInteraction(interaction_message)
-	if (src.current_mentorhelp && !has_mentor_powers(src))
-		src.current_mentorhelp.AddInteraction(interaction_message)
+	// CHOMPedit Start - Ticket System
+	if (recipient.current_ticket && !has_mentor_powers(recipient))
+		recipient.current_ticket.AddInteraction(interaction_message)
+	if (src.current_ticket && !has_mentor_powers(src))
+		src.current_ticket.AddInteraction(interaction_message)
 
 	// It's a little fucky if they're both mentors, but while admins may need to adminhelp I don't really see any reason a mentor would have to mentorhelp since you can literally just ask any other mentors online
 	if (has_mentor_powers(recipient) && has_mentor_powers(src))
-		if (recipient.current_mentorhelp)
-			recipient.current_mentorhelp.AddInteraction(interaction_message)
-		if (src.current_mentorhelp)
-			src.current_mentorhelp.AddInteraction(interaction_message)
+		if (recipient.current_ticket)
+			recipient.current_ticket.AddInteraction(interaction_message)
+		if (src.current_ticket)
+			src.current_ticket.AddInteraction(interaction_message)
+	// CHOMPedit End
 
 	to_chat(recipient, "<i><span class='mentor'>Mentor-PM from-<b><a href='?mentorhelp_msg=\ref[src]'>[src]</a></b>: [msg]</span></i>")
 	to_chat(src, "<i><span class='mentor'>Mentor-PM to-<b>[recipient]</b>: [msg]</span></i>")

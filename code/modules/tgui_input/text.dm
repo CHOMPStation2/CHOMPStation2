@@ -122,8 +122,8 @@
 	data["multiline"] = multiline
 	data["placeholder"] = default // Default is a reserved keyword
 	data["swapped_buttons"] = !user.client.prefs.tgui_swapped_buttons
+	// CHOMPedit - prevent_enter should be completely removed in the future
 	data["title"] = title
-	data["prevent_enter"] = prevent_enter
 	return data
 
 /datum/tgui_input_text/tgui_data(mob/user)

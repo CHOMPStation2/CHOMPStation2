@@ -30,7 +30,7 @@
 	maxHealth = 60
 	health = 60
 
-	movement_cooldown = 0
+	movement_cooldown = -2
 
 	melee_damage_lower = 10
 	melee_damage_upper = 15
@@ -58,10 +58,10 @@
 
 /mob/living/simple_mob/animal/sif/siffet/IIsAlly(mob/living/L)
 	. = ..()
-	//CHOMPADDIITON: Compatibility with structures
-	if(!. && isnull(L.mob_size))
+	//CHOMPAdd START: Compatibility with structures
+	if(!. && !istype(L, /mob/living))
 		return TRUE
-	//CHOMPADDIITON: Compatibility with structures
 	else
 		if(!. && L.mob_size > 10) //Attacks things it considers small enough to take on, otherwise only attacks if attacked.
 			return TRUE
+	//CHOMPAdd END

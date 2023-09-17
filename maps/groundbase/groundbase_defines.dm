@@ -18,6 +18,7 @@
 #define Z_LEVEL_OFFMAP1						17
 #define Z_LEVEL_GATEWAY						18
 #define Z_LEVEL_OM_ADVENTURE				19
+#define Z_LEVEL_REDGATE						20
 
 //Camera networks
 #define NETWORK_HALLS "Halls"
@@ -214,18 +215,30 @@
 		)
 
 	lateload_gateway = list(
-		list("Carp Farm"),
-		list("Snow Field"),
-		list("Listening Post"),
-		list(list("Honleth Highlands A", "Honleth Highlands B")),
-		list("Arynthi Lake Underground A","Arynthi Lake A"),
-		list("Arynthi Lake Underground B","Arynthi Lake B"),
-		list("Eggnog Town Underground","Eggnog Town"),
-		list("Wild West")
+		list("Gateway - Carp Farm"),
+		list("Gateway - Snow Field"),
+		list("Gateway - Listening Post"),
+		list(list("Gateway - Honleth Highlands A", "Gateway - Honleth Highlands B")),
+		list("Gateway - Arynthi Lake Underground A","Gateway - Arynthi Lake A"),
+		list("Gateway - Arynthi Lake Underground B","Gateway - Arynthi Lake B"),
+		list("Gateway - Wild West")
 		)
 
 	lateload_overmap = list(
 		list("Grass Cave")
+		)
+
+	lateload_redgate = list(
+		list("Redgate - Teppi Ranch"),
+		list("Redgate - Innland"),
+//		list("Redgate - Abandoned Island"),	//This will come back later
+		list("Redgate - Dark Adventure"),
+		list("Redgate - Eggnog Town Underground","Redgate - Eggnog Town"),
+		list("Redgate - Star Dog"),
+		list("Redgate - Hotsprings"),
+		list("Redgate - Rain City"),
+		list("Redgate - Islands Underwater","Redgate - Islands"),
+		list("Redgate - Moving Train", "Redgate - Moving Train Upper Level")
 		)
 
 	lateload_gb_north = list(
@@ -453,9 +466,6 @@
 	name = "Remmi Aerostat - Z1 Aerostat"
 	desc = "The Virgo 2 Aerostat away mission."
 	mappath = 'maps/expedition_vr/aerostat/aerostat.dmm'
-<<<<<<< HEAD
-	associated_map_datum = /datum/map_z_level/common_lateload/away_aerostat
-=======
 	associated_map_datum = /datum/map_z_level/common_lateload/away_aerostat
 
 ////////////////////////////////////////////////////////////////////////
@@ -528,8 +538,6 @@
 	desc = "Wilderness"
 	mappath = 'maps/groundbase/southwilds/southwilds2.dmm'
 	associated_map_datum = /datum/map_z_level/gb_lateload/gb_south_wilds
-<<<<<<< HEAD
-=======
 /datum/map_template/gb_lateload/wilds/south/type3
 	name = "Southern Wilds 3"
 	desc = "Wilderness"
@@ -541,7 +549,6 @@
 	//seed_submaps(list(Z_LEVEL_GB_WILD_S), 6, /area/submap/groundbase/poi/wildvillage/plot/square, /datum/map_template/groundbase/wildvillage/square)	//POI seeding
 	//seed_submaps(list(Z_LEVEL_GB_WILD_S), 2, /area/submap/groundbase/poi/wildvillage/plot/wide, /datum/map_template/groundbase/wildvillage/wide)
 	//seed_submaps(list(Z_LEVEL_GB_WILD_S), 1, /area/submap/groundbase/poi/wildvillage/plot/long, /datum/map_template/groundbase/wildvillage/long)
->>>>>>> 6aa6c45620... Merge pull request #12842 from Heroman3003/poi-guarantee
 
 /datum/map_template/gb_lateload/wilds/east/type1
 	name = "Eastern Wilds 1"
@@ -575,8 +582,3 @@
 */
 
 ////////////////////////////////////////////////////////////////////////
-<<<<<<< HEAD
-
->>>>>>> ae6ecf6fb4... Merge pull request #12817 from Very-Soft/gbwilds
-=======
->>>>>>> 26e29da7c4... Merge pull request #13242 from ItsSelis/selis-multiz

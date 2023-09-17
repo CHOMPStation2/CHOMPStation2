@@ -910,7 +910,7 @@ personally I recommend using the ship's boat if you need to evacuate, but if you
 				/obj/random/medical,
 				/obj/random/medical/lite,
 				/obj/random/medical/lite,
-				/obj/structure/closet/crate/veymed //VM GRABBAG
+				/obj/structure/closet/crate/freezer/veymed //VM GRABBAG
 			),
 			prob(10);list(
 				/obj/random/firstaid,
@@ -919,7 +919,14 @@ personally I recommend using the ship's boat if you need to evacuate, but if you
 				/obj/random/firstaid,
 				/obj/random/unidentified_medicine/fresh_medicine,
 				/obj/random/unidentified_medicine/fresh_medicine,
-				/obj/structure/closet/crate/veymed //VM FAKS
+				/obj/structure/closet/crate/freezer/veymed //VM FAKS
+			),
+			prob(5);list(
+				/obj/random/internal_organ,
+				/obj/random/internal_organ,
+				/obj/random/internal_organ,
+				/obj/random/internal_organ,
+				/obj/structure/closet/crate/freezer/veymed //VM ORGANSES
 			),
 			prob(10);list(
 				/obj/random/tech_supply/nofail,
@@ -936,7 +943,7 @@ personally I recommend using the ship's boat if you need to evacuate, but if you
 				/obj/random/medical/pillbottle,
 				/obj/random/medical/lite,
 				/obj/random/medical/lite,
-				/obj/structure/closet/crate/zenghu //ZENGHU GRABBAG
+				/obj/structure/closet/crate/freezer/zenghu //ZENGHU GRABBAG
 			),
 			prob(10);list(
 				/obj/random/medical/pillbottle,
@@ -945,7 +952,7 @@ personally I recommend using the ship's boat if you need to evacuate, but if you
 				/obj/random/medical/pillbottle,
 				/obj/random/unidentified_medicine/fresh_medicine,
 				/obj/random/unidentified_medicine/fresh_medicine,
-				/obj/structure/closet/crate/zenghu //ZENGHU PILLS
+				/obj/structure/closet/crate/freezer/zenghu //ZENGHU PILLS
 			),
 			prob(10);list(
 				/obj/item/device/toner,

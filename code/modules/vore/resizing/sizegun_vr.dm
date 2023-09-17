@@ -25,7 +25,7 @@
 
 /obj/item/weapon/gun/energy/sizegun/New()
 	..()
-	verbs += .proc/select_size
+	verbs += PROC_REF(select_size)
 
 /obj/item/weapon/gun/energy/sizegun/attack_self(mob/user)
 	. = ..()
@@ -156,7 +156,7 @@
 				return
 		if(!M.resize(set_size, uncapped = M.has_large_resize_bounds(), ignore_prefs = ignoring_prefs))
 			to_chat(M, "<font color='blue'>The beam fires into your body, changing your size!</font>")
-		M.updateicon()
+		M.update_icon()
 		return
 	return 1
 
@@ -176,7 +176,7 @@
 		M.resize(set_size, uncapped = TRUE, ignore_prefs = TRUE) // Always ignores prefs, caution is advisable
 
 		to_chat(M, "<font color='blue'>The beam fires into your body, changing your size!</font>")
-		M.updateicon()
+		M.update_icon()
 		return
 	return 1
 

@@ -35,7 +35,9 @@ module.exports = (env = {}, argv) => {
     entry: {
       'tgui': [
         './packages/tgui-polyfill',
-        './packages/tgui',
+        // CHOMPstation Edit - TGUI Modulation
+        // './packages/tgui',
+        './packages/tgui_ch',
       ],
     },
     output: {

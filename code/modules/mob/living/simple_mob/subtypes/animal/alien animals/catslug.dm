@@ -26,7 +26,7 @@
 	faction = "catslug"
 	maxHealth = 50
 	health = 50
-	movement_cooldown = 2
+	movement_cooldown = -1
 	meat_amount = 2
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 	holder_type = /obj/item/weapon/holder/catslug
@@ -43,8 +43,10 @@
 	mob_size = MOB_SMALL
 	friendly = list("hugs")
 	see_in_dark = 8
+	can_climb = TRUE
+	climbing_delay = 2.0
 
-	mobcard_provided = TRUE
+	ID_provided = TRUE
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug)
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive/catslug
@@ -52,6 +54,9 @@
 	player_msg = "You have escaped the foul weather, into this much more pleasant place. You are an intelligent creature capable of more than most think. You can pick up and use many things, and even carry some of them with you into the vents, which you can use to move around quickly. You're quiet and capable, you speak with your hands and your deeds! <br>- - - - -<br> <span class='notice'>Keep in mind, your goal should generally be to survive. You're expected to follow the same rules as everyone else, so don't go self antagging without permission from the staff team, but you are able and capable of defending yourself from those who would attack you for no reason.</span>"
 
 	has_langs = list(LANGUAGE_SIGN)
+
+	var/obj/item/clothing/head/hat = null // Scughat.
+	var/can_wear_hat = TRUE				  // Some have inbuilt hats
 
 	//var/picked_color = FALSE //CHOMPEdit - now on simplemob.
 
@@ -115,7 +120,7 @@
 	B.name = "stomach"
 	B.desc = "The hot slick gut of a catslug!! Copious slime smears over you as you’re packed away into the gloom and oppressive humidity of this churning gastric sac. The pressure around you is intense, the squashy flesh bends and forms to your figure, clinging to you insistently! There’s basically no free space at all as your ears are filled with the slick slide of flesh against flesh and the burbling of gastric juices glooping all around you. The thumping of a heart booms from somewhere nearby, making everything pulse in against you in time with it! This is it! You’ve been devoured by a catslug!!!"
 	B.mode_flags = 40
-	B.belly_fullscreen = "yet_another_tumby"
+//	B.belly_fullscreen = "yet_another_tumby" //Chompedit - Belly Fullscreen change
 	B.digest_brute = 0.5
 	B.digest_burn = 0.5
 	B.digestchance = 10
@@ -135,8 +140,16 @@
 	verbs += /mob/living/proc/hide
 	verbs += /mob/living/simple_mob/vore/alienanimals/catslug/proc/catslug_color
 
+/mob/living/simple_mob/vore/alienanimals/catslug/Destroy()
+	if(hat)
+		drop_hat()
+	return ..()
+
 /mob/living/simple_mob/vore/alienanimals/catslug/attackby(var/obj/item/weapon/reagent_containers/food/snacks/O as obj, var/mob/user as mob)
-	if(!istype(O, /obj/item/weapon/reagent_containers/food/snacks))
+	if(istype(O, /obj/item/clothing/head)) // Handle hat simulator.
+		give_hat(O, user)
+		return
+	else if(!istype(O, /obj/item/weapon/reagent_containers/food/snacks))
 		return ..()
 	if(resting)
 		to_chat(user, "<span class='notice'>\The [src] is napping, and doesn't respond to \the [O].</span>")
@@ -170,6 +183,9 @@
 	if(stat == DEAD)
 		return ..()
 	if(M.a_intent != I_HELP)
+		if(M.a_intent == I_GRAB && hat)
+			remove_hat(M)
+			return
 		return ..()
 	playsound(src, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 	if(resting)
@@ -215,10 +231,57 @@
 	else
 		return ..()
 
+/mob/living/simple_mob/vore/alienanimals/catslug/update_icon()
+	..()
+
+	if(hat)
+		var/hat_state = hat.item_state ? hat.item_state : hat.icon_state
+		var/image/I = image('icons/inventory/head/mob.dmi', src, hat_state)
+		I.pixel_y = -7
+		I.color = hat.color
+		I.appearance_flags = RESET_COLOR | KEEP_APART
+		I.blend_mode = BLEND_OVERLAY
+		add_overlay(I)
+
+/mob/living/simple_mob/vore/alienanimals/catslug/proc/give_hat(var/obj/item/clothing/head/new_hat, var/mob/living/user)
+	if(!istype(new_hat))
+		to_chat(user, span("warning", "\The [new_hat] isn't a hat."))
+		return
+	if(hat)
+		to_chat(user, span("warning", "\The [src] is already wearing \a [hat]."))
+		return
+	else if(!can_wear_hat)
+		to_chat(user, span("warning", "\The [src] is unable to wear \a [hat]."))
+	else
+		user.drop_item(new_hat)
+		hat = new_hat
+		new_hat.forceMove(src)
+		to_chat(user, span("notice", "You place \a [new_hat] on \the [src]. How adorable!"))
+		update_icon()
+		return
+
+/mob/living/simple_mob/vore/alienanimals/catslug/proc/remove_hat(var/mob/living/user)
+	if(!hat)
+		to_chat(user, "<span class='warning'>\The [src] doesn't have a hat to remove.</span>")
+	else
+		hat.forceMove(get_turf(src))
+		user.put_in_hands(hat)
+		to_chat(user, "<span class='warning'>You take away \the [src]'s [hat.name]. How mean.</span>")
+		hat = null
+		update_icon()
+
+/mob/living/simple_mob/vore/alienanimals/catslug/proc/drop_hat()
+	if(!hat)
+		return
+	hat.forceMove(get_turf(src))
+	hat = null
+	update_icon()
+
 /mob/living/simple_mob/vore/alienanimals/catslug/Login()	//If someone plays as us let's just be a passive mob in case accidents happen if the player D/Cs
 	. = ..()
-	ai_holder.hostile = FALSE
-	ai_holder.wander = FALSE
+	if(ai_holder)
+		ai_holder.hostile = FALSE
+		ai_holder.wander = FALSE
 
 /mob/living/simple_mob/vore/alienanimals/catslug/proc/catslug_color()
 	set name = "Pick Color"
@@ -230,7 +293,7 @@
 	var/newcolor = input(usr, "Choose a color.", "", color) as color|null
 	if(newcolor)
 		color = newcolor
-	picked_color = TRUE
+		picked_color = TRUE
 	update_icon()
 
 /datum/ai_holder/simple_mob/melee/evasive/catslug/proc/consider_awakening()
@@ -244,7 +307,7 @@
 	else if(prob(0.5))
 		holder.lay_down()
 		go_sleep()
-		addtimer(CALLBACK(src, .proc/consider_awakening), rand(1 MINUTE, 5 MINUTES), TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_STOPPABLE)
+		addtimer(CALLBACK(src, PROC_REF(consider_awakening)), rand(1 MINUTE, 5 MINUTES), TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_STOPPABLE)
 	else
 		return ..()
 
@@ -292,6 +355,7 @@
 	digestable = 0
 	humanoid_hands = 1	//These should all be ones requiring admin-intervention to play as, so they can get decent tool-usage, as a treat.
 	var/siemens_coefficient = 1 		//Referenced later by others.
+	can_wear_hat = FALSE
 
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/Initialize()
 	. = ..()
@@ -428,7 +492,7 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug/custom/engislug)
 	holder_type = /obj/item/weapon/holder/catslug/custom/engislug
 	say_list_type = /datum/say_list/catslug/custom/engislug
-	mobcard_access = list(access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_construction, access_atmospherics)
+	myid_access = list(access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_construction, access_atmospherics)
 	siemens_coefficient = 0 		//Noodly fella's gone and built up an immunity from many small shocks
 
 	minbodytemp = 200
@@ -545,7 +609,7 @@
 		"bio" = 0,
 		"rad" = 0
 		)		//Similarly, \some\ armour values for a smidge more survivability compared to other catslugs.
-	mobcard_access = list(access_security, access_sec_doors, access_forensics_lockers, access_maint_tunnels)
+	myid_access = list(access_security, access_sec_doors, access_forensics_lockers, access_maint_tunnels)
 
 /datum/say_list/catslug/custom/gatslug
 	speak = list("Have any flashbangs?", "Valids!", "Heard spiders?", "What is that?", "Freeze!", "What are you doing?", "How did you get here?", "Red alert means big bangsticks.", "No being naughty now.", "WAOW!", "Who ate all the donuts?")
@@ -582,7 +646,7 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug/custom/medislug)
 	holder_type = /obj/item/weapon/holder/catslug/custom/medislug
 	say_list_type = /datum/say_list/catslug/custom/medislug
-	mobcard_access = list(access_medical, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics)
+	myid_access = list(access_medical, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics)
 
 /datum/say_list/catslug/custom/medislug
 	speak = list("Have any osteodaxon?", "What is that?", "Suit sensors!", "What are you doing?", "How did you get here?", "Put a mask on!", "No smoking!", "WAOW!", "Stop getting blood everywhere!", "WHERE IN MAINT?")
@@ -618,7 +682,7 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug/custom/scienceslug)
 	holder_type = /obj/item/weapon/holder/catslug/custom/scienceslug
 	say_list_type = /datum/say_list/catslug/custom/scienceslug
-	mobcard_access = list(access_robotics, access_tox, access_tox_storage, access_research, access_xenobiology, access_xenoarch)
+	myid_access = list(access_robotics, access_tox, access_tox_storage, access_research, access_xenobiology, access_xenoarch)
 
 
 /datum/say_list/catslug/custom/scienceslug
@@ -656,7 +720,7 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug/custom/cargoslug)
 	holder_type = /obj/item/weapon/holder/catslug/custom/cargoslug
 	say_list_type = /datum/say_list/catslug/custom/cargoslug
-	mobcard_access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_mining, access_mining_station)
+	myid_access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_mining, access_mining_station)
 
 /datum/say_list/catslug/custom/cargoslug
 	speak = list("Disposals is not for slip and slide.", "What is that?", "Stamp those manifests!", "What are you doing?", "How did you get here?", "Can order pizza crate?", "WAOW!", "Where are all of our materials?", "Got glubbs?")
@@ -695,7 +759,7 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug/custom/capslug)
 	holder_type = /obj/item/weapon/holder/catslug/custom/capslug
 	say_list_type = /datum/say_list/catslug/custom/capslug
-	mobcard_access = list(access_maint_tunnels)		//The all_station_access part below adds onto this.
+	myid_access = list(access_maint_tunnels)		//The all_station_access part below adds onto this.
 
 /datum/say_list/catslug/custom/capslug
 	speak = list("How open big glass box with shiny inside?.", "What is that?", "Respect my authority!", "What are you doing?", "How did you get here?", "Fax for yellow-shirts!", "WAOW!", "Why is that console blinking and clicking?", "Do we need to call for ERT?", "Have been called comdom before, not sure why they thought I was a balloon.")
@@ -710,7 +774,7 @@
 	mob_radio.ks2type = /obj/item/device/encryptionkey/heads/captain 		//Might not be able to speak, but the catslug can listen.
 	mob_radio.keyslot2 = new /obj/item/device/encryptionkey/heads/captain(mob_radio)
 	mob_radio.recalculateChannels(1)
-	mobcard.access |= get_all_station_access()
+	myid.access |= get_all_station_access()
 
 //=============================================================================
 //Admin-spawn only catslugs below - Expect overpowered things & silliness below
@@ -727,7 +791,7 @@
 	icon_dead = "deathslug_dead"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug) 			//So they don't get the spaceslug's cataloguer entry
 	say_list_type = /datum/say_list/catslug 			//Similarly, so they don't get the spaceslug's speech lines.
-	mobcard_access = list(access_cent_general, access_cent_specops, access_cent_living, access_cent_storage)
+	myid_access = list(access_cent_general, access_cent_specops, access_cent_living, access_cent_storage)
 	maxHealth = 100		//Tough noodles
 	health = 100
 	taser_kill = 0
@@ -752,7 +816,7 @@
 	. = ..()
 	mob_radio = new /obj/item/device/radio/headset/mob_headset(src)
 	mob_radio.frequency = DTH_FREQ 			//Can't tell if bugged, deathsquad freq in general seems broken
-	mobcard.access |= get_all_station_access()
+	myid.access |= get_all_station_access()
 
 //Syndicate catslug
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug/syndislug
@@ -765,7 +829,7 @@
 	icon_dead = "syndislug_dead"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug)
 	say_list_type = /datum/say_list/catslug
-	mobcard_access = list(access_maint_tunnels, access_syndicate, access_external_airlocks)
+	myid_access = list(access_maint_tunnels, access_syndicate, access_external_airlocks)
 	faction = "syndicate"
 	maxHealth = 100		//Tough noodles
 	health = 100
@@ -797,7 +861,7 @@
 	mob_radio.ks2type = /obj/item/device/encryptionkey/syndicate
 	mob_radio.keyslot2 = new /obj/item/device/encryptionkey/syndicate(mob_radio)
 	mob_radio.recalculateChannels(1)
-	mobcard.access |= get_all_station_access()
+	myid.access |= get_all_station_access()
 
 //ERT catslug
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug/responseslug
@@ -810,7 +874,7 @@
 	icon_dead = "responseslug_dead"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug)
 	say_list_type = /datum/say_list/catslug
-	mobcard_access = list(access_cent_general, access_cent_specops, access_cent_living, access_cent_storage)
+	myid_access = list(access_cent_general, access_cent_specops, access_cent_living, access_cent_storage)
 	maxHealth = 100		//Tough noodles
 	health = 100
 	taser_kill = 0
@@ -841,7 +905,7 @@
 	mob_radio.ks2type = /obj/item/device/encryptionkey/ert
 	mob_radio.keyslot2 = new /obj/item/device/encryptionkey/ert(mob_radio)
 	mob_radio.recalculateChannels(1)
-	mobcard.access |= get_all_station_access()
+	myid.access |= get_all_station_access()
 
 //Pilot Catslug
 
@@ -852,6 +916,8 @@
 	color = "#2b2b2b"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug/custom/pilotslug)
 	say_list_type = /datum/say_list/catslug/custom/pilotslug
+
+	can_wear_hat = TRUE
 
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/pilotslug/Initialize()
 	. = ..()
@@ -907,6 +973,7 @@
 	var/image/eye_image
 	var/is_impostor = FALSE
 	var/kill_cooldown
+	can_wear_hat = FALSE
 
 /mob/living/simple_mob/vore/alienanimals/catslug/suslug/impostor
 	is_impostor = TRUE

@@ -13,8 +13,9 @@
 
 	maxHealth = 1
 	health = 1
+	nutrition = 20 //CHOMPEdit
 
-	movement_cooldown = 2.5
+	movement_cooldown = -1
 
 	mob_size = MOB_MINISCULE
 	pass_flags = PASSTABLE

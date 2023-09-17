@@ -366,7 +366,7 @@ var/list/table_icon_cache = list()
 		if(material)
 			for(var/i = 1 to 4)
 				var/connect = connections?[i] || 0
-				var/image/I = get_table_image(icon, "[material.icon_base]_[connect]", 1<<(i-1), material.icon_colour, 255 * material.opacity)
+				var/image/I = get_table_image(icon, "[material.table_icon_base]_[connect]", 1<<(i-1), material.icon_colour, 255 * material.opacity)
 				add_overlay(I)
 
 		// Reinforcements
@@ -400,7 +400,7 @@ var/list/table_icon_cache = list()
 
 		icon_state = "flip[type]"
 		if(material)
-			var/image/I = image(icon, "[material.icon_base]_flip[type]")
+			var/image/I = image(icon, "[material.table_icon_base]_flip[type]")
 			I.color = material.icon_colour
 			I.alpha = 255 * material.opacity
 			add_overlay(I)
@@ -416,6 +416,27 @@ var/list/table_icon_cache = list()
 
 		if(carpeted)
 			add_overlay("carpet_flip[type]")
+
+/obj/structure/table/proc/get_all_connected_tables(var/list/connections)
+	if(!connections)
+		connections = list(src)
+	else
+		connections |= src
+	if(istype(src, /obj/structure/table/rack))
+		return connections
+
+	for(var/direction in cardinal)
+		var/turf/T = get_step(src, direction)
+		if(T)
+			var/obj/structure/table/nextT = locate(/obj/structure/table) in T
+			if(!nextT || !istype(nextT))
+				continue
+			if(istype(nextT, /obj/structure/table/rack) || (istype(nextT, /obj/structure/table/bench) && !istype(src, /obj/structure/table/bench)) ||  (!istype(nextT, /obj/structure/table/bench) && istype(src, /obj/structure/table/bench)))
+				continue
+			if(!(nextT in connections))
+				connections |= nextT.get_all_connected_tables(connections)
+
+	return connections
 
 
 #define CORNER_NONE 0

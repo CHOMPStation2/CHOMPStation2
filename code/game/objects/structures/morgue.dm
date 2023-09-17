@@ -242,8 +242,8 @@ GLOBAL_LIST_BOILERPLATE(all_crematoriums, /obj/structure/morgue/crematorium)
 				A.forceMove(src.connected.loc)
 			src.connected.icon_state = "cremat"
 		else
-			//src.connected = null
 			qdel(src.connected)
+			src.connected = null //CHOMPEdit - Fix morgues breaking for a while with something solid in front of door.
 	src.add_fingerprint(user)
 	update()
 

@@ -34,20 +34,21 @@
 		SSradiation.z_radiate(locate(1, 1, z), radiation_level, 1)
 
 	for(var/mob/living/carbon/C in living_mob_list)
-		var/area/A = get_area(C)
-		if(!A)
-			continue
-		if(A.flags & RAD_SHIELDED)
-			continue
-		if(istype(C,/mob/living/carbon/human))
-			var/mob/living/carbon/human/H = C
-			if(prob(5))
-				if (prob(75))
-					randmutb(H) // Applies bad mutation
-					domutcheck(H,null,MUTCHK_FORCED)
-				else
-					randmutg(H) // Applies good mutation
-					domutcheck(H,null,MUTCHK_FORCED)
+		if((C.z in using_map.station_levels) && !C.isSynthetic())	//CHOMPEdit
+			var/area/A = get_area(C)
+			if(!A)
+				continue
+			if(A.flags & RAD_SHIELDED)
+				continue
+			if(istype(C,/mob/living/carbon/human))
+				var/mob/living/carbon/human/H = C
+				if(prob(5))
+					if (prob(75))
+						randmutb(H) // Applies bad mutation
+						domutcheck(H,null,MUTCHK_FORCED)
+					else
+						randmutg(H) // Applies good mutation
+						domutcheck(H,null,MUTCHK_FORCED)
 
 /datum/event/radiation_storm/end()
 	revoke_maint_all_access()

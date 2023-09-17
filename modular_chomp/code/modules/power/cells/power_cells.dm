@@ -20,7 +20,7 @@
 	name = "security borg rechargable D battery"
 	origin_tech = list(TECH_POWER = 0)
 	icon_state = "secborg"
-	maxcharge = 600	//600 max charge / 100 charge per shot = six shots
+	maxcharge = 2400	//who the hell thought 6 shots was enough for a dogborg taser?
 	matter = list(MAT_STEEL = 700, MAT_GLASS = 40)
 
 /obj/item/weapon/cell/secborg/empty/New()
@@ -88,7 +88,7 @@
  */
 /obj/item/weapon/cell/giga
 	name = "giga-capacity power cell"
-	origin_tech = list(TECH_POWER = 6, TECH_PRECURSOR = 1)
+	origin_tech = list(TECH_POWER = 8)
 	icon_state = "meb_b_hi"
 	maxcharge = 40000
 	matter = list(MAT_STEEL = 1000, MAT_GLASS = 100)
@@ -162,7 +162,7 @@
 	icon_state = "yellow slime extract" //"potato_battery"
 	description_info = "This 'cell' holds a max charge of 20k and self recharges over time."
 	maxcharge = 20000
-	charge_amount = 1000 // 5%.
+	charge_amount = 500 // 2.5%.
 	matter = null
 	self_recharge = TRUE
 	standard_overlays = FALSE

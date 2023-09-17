@@ -3,9 +3,9 @@
 
 
 /datum/configuration
-	var/discord_restriction = 0
-	var/use_jobwhitelist = 1
-	var/emojis = 1
+	var/discord_restriction = FALSE
+	var/use_jobwhitelist = TRUE
+	var/emojis = FALSE
 
 	var/vorefootstep_volume = 75	//In future see about making a function to adjust volume serverside in config.txt, easy to do with reenable values. - Jack
 
@@ -16,6 +16,8 @@
 	var/discord_faxes_disabled = 0		//Turn this off if you don't want the TGS bot sending you messages whenever a fax is sent to central.
 	var/discord_ahelps_disabled = 0		//Turn this off if you don't want the TGS bot sending you messages whenever an ahelp ticket is created.
 	var/discord_ahelps_all = 0			//Turn this on if you want all admin-PMs to go to be sent to discord, and not only the first message of a ticket.
+
+	var/list/ip_whitelist = list()
 
 /hook/startup/proc/read_ch_config()
 	var/list/Lines = file2list("config/config.txt")
@@ -62,4 +64,20 @@
 				config.nodebot_location = value
 			if ("ahelp_channel_tag")
 				config.ahelp_channel_tag = value
+
+	var/list/ip_whitelist_lines = file2list("config/ip_whitelist.txt")
+	var/increment = 1
+	for(var/t in ip_whitelist_lines)
+		if (!t) continue
+		t = trim(t)
+		if (length(t) == 0)
+			continue
+		else if (copytext(t, 1, 2) == "#")
+			continue
+		var/ip_address = splittext(t, ",")
+		for (var/name in ip_address)
+			config.ip_whitelist[name] = increment
+		increment += 1
+
+
 	return 1

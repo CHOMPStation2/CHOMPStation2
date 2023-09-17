@@ -40,7 +40,7 @@
 	melee_damage_lower = 1
 	melee_damage_upper = 3	//low damage, they prefer to flee
 
-	movement_cooldown = 8
+	movement_cooldown = 3.5
 
 	meat_type = /obj/item/weapon/ore/coal
 
@@ -98,7 +98,7 @@
 	icon_living = "lavagrub"
 	icon_dead = "lavagrub-dead"
 
-	movement_cooldown = 5
+	movement_cooldown = 2
 	maxHealth = 75 //lavagrubs are really hardy
 	health = 75
 	vore_pounce_chance = 80 // Full-grown grubs should pounce. More homf opportunities if you're dumb enough to poke it.

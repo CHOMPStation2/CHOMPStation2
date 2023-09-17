@@ -116,3 +116,15 @@ var/list/grass_types = list(
 
 	. = ..()
 //CHOMPedit end
+
+/turf/simulated/floor/outdoors/grass/sif/attackby(obj/item/C, mob/user)//CHOMPedit begin, other tiles have ways to build on them, sif grass doesnt. So I put this snowflake on just sif grass
+	if(istype(C, /obj/item/stack/tile/floor))
+		var/obj/item/stack/tile/floor/S = C
+		if (S.get_amount() < 1)
+			return
+		playsound(src, 'sound/weapons/Genhit.ogg', 50, 1)
+		ChangeTurf(/turf/simulated/floor)
+		S.use(1)
+		return
+	. = ..()
+//CHOMPedit end

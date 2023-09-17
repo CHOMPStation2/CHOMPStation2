@@ -142,6 +142,8 @@
 
 	user.drop_item()
 	if(I)
+		if(istype(I, /obj/item/weapon/holder/micro))
+			log_and_message_admins("placed [I.name]  inside \the [src]", user)
 		I.forceMove(src)
 
 	to_chat(user, "You place \the [I] into the [src].")
@@ -181,6 +183,7 @@
 											// must be awake, not stunned or whatever
 		msg = "[user.name] climbs into the [src]."
 		to_chat(user, "You climb into the [src].")
+		log_and_message_admins("climbed into disposals!", user)
 	else if(target != user && !user.restrained() && !user.stat && !user.weakened && !user.stunned && !user.paralysis)
 		msg = "[user.name] stuffs [target.name] into the [src]!"
 		to_chat(user, "You stuff [target.name] into the [src]!")
@@ -527,6 +530,8 @@
 	. = ..()
 	if(istype(AM, /obj/item) && !istype(AM, /obj/item/projectile))
 		if(prob(75))
+			if(istype(AM, /obj/item/weapon/holder/micro))
+				log_and_message_admins("[AM] was thrown into \the [src]")
 			AM.forceMove(src)
 			visible_message("\The [AM] lands in \the [src].")
 		else
@@ -541,6 +546,8 @@
 			return
 		if(prob(75))
 			I.forceMove(src)
+			if(istype(I, /obj/item/weapon/holder/micro))
+				log_and_message_admins("[I.name] was thrown into \the [src]")
 			for(var/mob/M in viewers(src))
 				M.show_message("\The [I] lands in \the [src].", 3)
 		else
@@ -832,13 +839,13 @@
 // change visibility status and force update of icon
 /obj/structure/disposalpipe/hide(var/intact)
 	invisibility = intact ? 101: 0	// hide if floor is intact
-	updateicon()
+	update_icon()
 
 // update actual icon_state depending on visibility
 // if invisible, append "f" to icon_state to show faded version
 // this will be revealed if a T-scanner is used
 // if visible, use regular icon_state
-/obj/structure/disposalpipe/proc/updateicon()
+/obj/structure/disposalpipe/update_icon()
 /*	if(invisibility)	//we hide things with alpha now, no need for transparent icons
 		icon_state = "[base_icon_state]f"
 	else
@@ -1528,6 +1535,7 @@
 	var/active = 0
 	var/turf/target	// this will be where the output objects are 'thrown' to.
 	var/mode = 0
+	var/launch_dist = 3 //CHOMPEdit
 
 /obj/structure/disposaloutlet/Initialize()
 	. = ..()
@@ -1559,7 +1567,7 @@
 			AM.pipe_eject(dir)
 			if(!istype(AM,/mob/living/silicon/robot/drone)) //Drones keep smashing windows from being fired out of chutes. Bad for the station. ~Z
 				spawn(5)
-					AM.throw_at(target, 3, 1)
+					AM.throw_at(target, launch_dist, 1) //CHOMPEdit
 		H.vent_gas(src.loc)
 		qdel(H)
 

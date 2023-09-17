@@ -1,3 +1,5 @@
+//CHOMPedit: This file has been disabled and moved to the modular_chomp folder. Check that one if you're bug-fixing!
+
 /obj/machinery/vr_sleeper
 	name = "virtual reality sleeper"
 	desc = "A fancy bed with built-in sensory I/O ports and connectors to interface users' minds with their bodies in virtual reality."
@@ -262,4 +264,3 @@
 
 	else
 		occupant.enter_vr(avatar)
-

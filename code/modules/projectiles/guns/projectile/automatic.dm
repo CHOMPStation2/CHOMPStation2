@@ -1,3 +1,6 @@
+/*
+ * Daka SMG (Code Base)
+ */
 /obj/item/weapon/gun/projectile/automatic //This should never be spawned in, it is just here because of code necessities.
 	name = "daka SMG"
 	desc = "A small SMG. You really shouldn't be able to get this gun. Uses 9mm rounds."
@@ -13,11 +16,15 @@
 		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
 		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)))
 
+/*
+ * Advanced SMG
+ */
+
 /obj/item/weapon/gun/projectile/automatic/advanced_smg
 	name = "advanced SMG"
 	desc = "An advanced submachine gun with a reflective laser optic that makes burst fire less inaccurate than other SMGs. Uses 9mm rounds."
 	icon = 'icons/obj/gun.dmi'
-	icon_state = "advanced_smg-e" //CHOMPedit
+	icon_state = "advanced_smg-e"
 	w_class = ITEMSIZE_NORMAL
 	load_method = MAGAZINE
 	caliber = "9mm"
@@ -33,18 +40,26 @@
 
 /obj/item/weapon/gun/projectile/automatic/advanced_smg/update_icon()
 	..()
-	icon_state = (ammo_magazine)? "advanced_smg" : "advanced_smg-e" //CHOMPedit
-	return
+	if(ammo_magazine)
+		icon_state = "advanced_smg"
+	else
+		icon_state = "advanced_smg-e"
 
 /obj/item/weapon/gun/projectile/automatic/advanced_smg/loaded
 	magazine_type = /obj/item/ammo_magazine/m9mmAdvanced
+
+/*
+ * C-20r
+ */
+
+ /* CHOMPedit remove: Moved to automatic_ch.dm. *
 
 /obj/item/weapon/gun/projectile/automatic/c20r
 	name = "submachine gun"
 	desc = "The C-20r is a lightweight and rapid firing SMG, for when you REALLY need someone dead. It has 'Scarborough Arms - Per falcis, per pravitas', inscribed on the stock. Uses 10mm rounds."
 	description_fluff = "The C-20r is produced by Scarborough Arms, a specialist high-end weapons manufacturer based out of Titan, Sol. Scarborough has resisted numerous efforts by Trans-Stellars to acquire the brand since its founding in 2511, and has gained a dedicated following among a certain flavor of private operative."
-	icon = 'icons/obj/64x32guns_ch.dmi'
-	icon_expected_width = 64
+	icon = 'icons/obj/64x32guns_ch.dmi' //Chomp Edit
+	icon_expected_width = 64 //Chomp EDIT
 	icon_state = "c20r"
 	item_state = "c20r"
 	w_class = ITEMSIZE_NORMAL
@@ -59,7 +74,8 @@
 	auto_eject = 1
 	auto_eject_sound = 'sound/weapons/smg_empty_alarm.ogg'
 
-//	one_handed_penalty = 15
+/obj/item/weapon/gun/projectile/automatic/c20r/rubber
+	magazine_type = /obj/item/ammo_magazine/m10mm/rubber
 
 /obj/item/weapon/gun/projectile/automatic/c20r/empty
 	magazine_type = null
@@ -72,6 +88,11 @@
 		icon_state = "c20r"
 	return
 
+ * CHOMPedit remove: Moved to automatic_ch.dm. */
+
+/*
+ * Assault Carbine (STS-35)
+ */
 /obj/item/weapon/gun/projectile/automatic/sts35
 	name = "assault rifle"
 	desc = "The rugged Jindal Arms STS-35 is a durable automatic weapon of a make popular on the frontier worlds. Uses 5.45mm rounds."
@@ -98,7 +119,6 @@
 	firemodes = list(
 		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
 		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=6,    burst_accuracy=list(0,-15,-30), dispersion=list(0.0, 0.6, 0.6))
-//		list(mode_name="short bursts", 	burst=5, fire_delay=null, move_delay=6,    burst_accuracy=list(0,-15,-30,-30,-45), dispersion=list(0.6, 1.0, 1.0, 1.0, 1.2)),
 		)
 
 /obj/item/weapon/gun/projectile/automatic/sts35/update_icon(var/ignore_inhands)
@@ -109,11 +129,44 @@
 		icon_state = (ammo_magazine)? "arifle" : "arifle-empty"
 	if(!ignore_inhands) update_held_icon()
 
+/*
+ * X-9mm (PDW)
+ */
+/obj/item/weapon/gun/projectile/automatic/pdw
+	name = "personal defense weapon"
+	desc = "The X-9mm is a select-fire personal defense weapon designed in-house by Xing Private Security. It was made to compete with the WT550 Saber, \
+	but never caught on with NanoTrasen. Uses 9mm rounds."
+	icon_state = "pdw"
+	item_state = "c20r"
+	w_class = ITEMSIZE_NORMAL
+	caliber = "9mm"
+	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2)
+	slot_flags = SLOT_BELT
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/m9mmAdvanced
+	allowed_magazines = list(/obj/item/ammo_magazine/m9mmAdvanced)
+
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=6,    burst_accuracy=list(0,-15,-30), dispersion=list(0.0, 0.6, 0.6))
+		)
+
+/obj/item/weapon/gun/projectile/automatic/pdw/update_icon(var/ignore_inhands)
+	..()
+	if(ammo_magazine)
+		icon_state = "pdw"
+	else
+		icon_state = "pdw-e"
+	return
+
+/*
+ * Machine Pistol (WT550)
+ */
 /obj/item/weapon/gun/projectile/automatic/wt550
 	name = "machine pistol"
 	desc = "The WT550 Saber is a cheap self-defense weapon mass-produced by Ward-Takahashi for paramilitary and private use. Uses 9mm rounds."
-	icon = 'icons/obj/64x32guns_ch.dmi'
-	icon_expected_width = 64
+	icon = 'icons/obj/64x32guns_ch.dmi' //Chomp EDIT
+	icon_expected_width = 64 //Chomp EDIT
 	icon_state = "wt550"
 	item_state = "wt550"
 	w_class = ITEMSIZE_NORMAL
@@ -135,17 +188,21 @@
 		icon_state = "wt550"
 	return
 
+/*
+ * Battle Rifle (Z8)
+ */
 /obj/item/weapon/gun/projectile/automatic/z8
 	name = "battle rifle"
-	desc = "The Z8 Bulldog is an older model battle rifle, made by the now defunct Zendai Foundries. Makes you feel like an old-school badass when you hold it, even though it can only hold 10 round magazines. Uses 7.62mm rounds and has an under barrel grenade launcher."
+	desc = "The Z8 Bulldog is an older model battle rifle, made by the now defunct Zendai Foundries. Makes you feel like an old-school badass when you hold it, \
+	even though it can only hold 10 round magazines. Uses 7.62mm rounds and has an under barrel grenade launcher."
 	description_fluff = "Zendai Foundries was a well-respected mid-sized arms company that operated until 2508, when it was acquired by Hephaestus Industries. \
 	Plans to integrate the brand into wider corporate operations were brought to an abrupt halt by the SolGov-Hegemony war, and the company was left by the wayside. \
 	Hephaestus still produces replacement parts for many of Zendai's most popular weapons, including the Z8 Bulldog, and a great detail remain in service."
-	icon = 'icons/obj/64x32guns_ch.dmi'
-	icon_expected_width = 64
+	icon = 'icons/obj/64x32guns_ch.dmi' //Chomp EDIT
+	icon_expected_width = 64 //Chomp EDIT
 	icon_state = "carbine" // This isn't a carbine. :T
 	item_state = "z8carbine"
-	wielded_item_state = "z8carbine-wielded"
+	wielded_item_state = "z8bulldog-wielded"
 	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 	force = 10
 	caliber = "7.62mm"
@@ -213,12 +270,15 @@
 /obj/item/weapon/gun/projectile/automatic/z8/empty
 	magazine_type = null
 
+/*
+ * LMG (L6 SAW)
+ */
 /obj/item/weapon/gun/projectile/automatic/l6_saw
 	name = "light machine gun"
-	desc = "A rather sturdily made L6 SAW with a reassuringly ergonomic pistol grip. 'Hephaestus Industries' is engraved on the reciever. Uses 5.45mm rounds. It's also compatible with magazines from STS-35 assault rifles."
+	desc = "A rather sturdily made L6 SAW with a reassuringly ergonomic pistol grip. 'Hephaestus Industries' is engraved on the receiver. Uses 5.45mm rounds. It's also compatible with magazines from STS-35 assault rifles."
 	description_fluff = "The leading arms producer in the SCG, Hephaestus typically only uses its 'top level' branding for its military-grade equipment used by professional armed forces across human space."
-	icon = 'icons/obj/64x32guns_ch.dmi'
-	icon_expected_width = 64
+	icon = 'icons/obj/64x32guns_ch.dmi' //Chomp EDIT
+	icon_expected_width = 64 //Chomp EDIT
 	icon_state = "l6closed100"
 	item_state = "l6closed"
 	wielded_item_state = "genericLMG-wielded"
@@ -237,15 +297,6 @@
 	one_handed_penalty = 90
 
 	var/cover_open = 0
-
-/*	Commented out for quality control and testing.
-	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null, automatic = 0),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-1,-1), dispersion=list(0.0, 0.6, 1.0), automatic = 0),
-		list(mode_name="short bursts",	burst=5, move_delay=6, burst_accuracy = list(0,-1,-1,-2,-2), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2), automatic = 0),
-		list(mode_name="automatic",       burst=1, fire_delay=-1,    move_delay=null, burst_accuracy=null, dispersion=null, automatic = 1),
-		)
-*/
 
 	firemodes = list(
 		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
@@ -299,7 +350,7 @@
 	..()
 
 /*
- * Automatic Shotgun
+ * Automatic Shotgun (AS-24)
  */
 /obj/item/weapon/gun/projectile/automatic/as24
 	name = "automatic shotgun"
@@ -335,15 +386,18 @@
 		icon_state = "ashot-empty"
 	return
 
+/*
+ * Uzi
+ */
 /obj/item/weapon/gun/projectile/automatic/mini_uzi
 	name = "micro-smg"
 	desc = "The infamous ProTek Spitz is a lightweight, compact, fast firing machine pistol. Cheaply produced under the ProTek consumer brand, the Spitz seems to find its way into every corner of the galaxy. Uses .45 rounds."
 	description_fluff = "Budget-grade weapons for the budget-grade consumer! Hephaestus’ low-end brand of cheaply made, low-maintenance personal defense weapons for those who just need a handgun with absolutely no frills. \
 	Early ProTek weapons were notoriously unsafe and unreliable, though more recent designs have improved somewhat - they still aren’t very good. \
 	Though sold for a pittance, the profit margin is too irresistible for Hephaestus to discontinue the brand."
-	icon = 'icons/obj/64x32guns_ch.dmi'
-	icon_expected_width = 64
-	icon_state = "mini-uzi"
+	icon = 'icons/obj/64x32guns_ch.dmi' //Chomp EDIT
+	icon_expected_width = 64 //Chomp EDIT
+	icon_state = "mini-uzi" //Chomp EDIT - uzi --> mini-uzi
 	w_class = ITEMSIZE_NORMAL
 	load_method = MAGAZINE
 	caliber = ".45"
@@ -395,6 +449,7 @@
 		transform = transform.Translate(-16,0)
 // CHOMPEdit end: Uzi tilting
 
+/* CHOMPEDIT Commented out, moved to automatic_ch.dm *
 /obj/item/weapon/gun/projectile/automatic/p90
 	name = "personal defense weapon"
 	desc = "The H90K is a compact, large capacity submachine gun produced by MarsTech. Despite its fierce reputation, it still manages to feel like a toy. Uses 9mm rounds."
@@ -416,12 +471,17 @@
 
 /obj/item/weapon/gun/projectile/automatic/p90/update_icon()
 	icon_state = "p90smg-[ammo_magazine ? round(ammo_magazine.stored_ammo.len, 6) : "empty"]"
+* CHOMPEDIT Commented out, moved to automatic_ch.dm */
 
+/*
+ * Tommy Gun
+ */
 /obj/item/weapon/gun/projectile/automatic/tommygun
 	name = "\improper Tommy Gun"
 	desc = "This weapon was made famous by gangsters in the 20th century. Cybersun Industries is currently reproducing these for a target market of historic gun collectors and classy criminals. Uses .45 rounds."
 	description_fluff = "Cybersun Industries is a minor arms manufacturer specialising in replica firearms from eras past. Though they offer a wide selection of made-to-order models, their products are seen as little more than novelty items to most serious collectors."
 	icon_state = "tommygun"
+	item_state = "stg44"
 	w_class = ITEMSIZE_NORMAL
 	caliber = ".45"
 	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2, TECH_ILLEGAL = 5)
@@ -436,19 +496,17 @@
 		)
 
 /obj/item/weapon/gun/projectile/automatic/tommygun/update_icon()
-	//VOREStation Edit Start - vr sprite
 	if(istype(ammo_magazine,/obj/item/ammo_magazine/m45tommy))
 		icon_state = "tommygun-mag"
-		item_state = icon_state
 	else if(istype(ammo_magazine,/obj/item/ammo_magazine/m45tommydrum))
 		icon_state = "tommygun-drum"
-		item_state = icon_state
 	else
 		icon_state = "tommygun-empty"
-		item_state = icon_state
 	update_held_icon()
-	//VOREStation Edit End
 
+/*
+ * Bullpup Rifle
+ */
 /obj/item/weapon/gun/projectile/automatic/bullpup // Admin abuse assault rifle. ToDo: Make this less shit. Maybe remove its autofire, and make it spawn with only 10 rounds at start.
 	name = "bullpup rifle"
 	desc = "The bullpup configured GP3000 is a battle rifle produced by Gurov Projectile Weapons LLC. It is sold almost exclusively to standing armies. Uses 7.62mm rounds."
@@ -483,7 +541,9 @@
 	if(!ignore_inhands)
 		update_held_icon()
 
-//Functionally a mini-uzi with slightly less terrible burst spread.
+/*
+ * Combat SMG (PP3 Ten)
+ */
 /obj/item/weapon/gun/projectile/automatic/combatsmg
 	name = "\improper PP3 Ten"
 	desc = "The Bishamonten PP3 Ten personal defense weapon is a rare design much sought after - though more for its looks than its functionality. Uses 9mm rounds."

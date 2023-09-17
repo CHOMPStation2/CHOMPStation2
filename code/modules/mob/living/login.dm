@@ -21,6 +21,8 @@
 	verbs |= /mob/living/proc/switch_scaling
 	verbs |= /mob/living/proc/mute_entry //CHOMPEdit
 	verbs |= /mob/living/proc/center_offset //CHOMPEdit
+	verbs |= /mob/living/proc/liquidbelly_visuals //CHOMPEdit
+	verbs |= /mob/living/proc/fix_vore_effects //CHOMPedit
 
 	if(!no_vore)
 		verbs |= /mob/living/proc/vorebelly_printout

@@ -1,11 +1,6 @@
 // Expand shoe layer to allow changing the icon for digi legs
 // For some reason, suit and uniform already has this funcitonality, but shoes do not.
 
-//Duplicate defines so the code below can compile. See non-modular update_icons.dm for proper placement.
-#define SHOES_LAYER_ALT			10		//Shoe-slot item (when set to be under uniform via verb)
-#define SHOES_LAYER				13		//Shoe-slot item
-#define VORE_BELLY_LAYER		33		//Should be the same that it is in update_icons.dm
-
 /mob/living/carbon/human/update_inv_shoes()
 	//. = ..()
 	remove_layer(SHOES_LAYER)
@@ -56,7 +51,7 @@
 /mob/living/carbon/human/proc/get_vore_belly_image()
 	if(!(wear_suit && wear_suit.flags_inv & HIDETAIL))
 		var/vs_fullness = vore_fullness_ex["stomach"]
-		var/icon/vorebelly_s = new/icon(icon = 'icons/mob/vore/Bellies.dmi', icon_state = "[species.vore_belly_default_variant]Belly[vs_fullness][struggle_anim_stomach ? "" : " idle"]")
+		var/icon/vorebelly_s = new/icon(icon = 'modular_chomp/icons/mob/vore/Bellies.dmi', icon_state = "[species.vore_belly_default_variant]Belly[vs_fullness][struggle_anim_stomach ? "" : " idle"]")
 		vorebelly_s.Blend(vore_sprite_color["stomach"], vore_sprite_multiply["stomach"] ? ICON_MULTIPLY : ICON_ADD)
 		var/image/working = image(vorebelly_s)
 		working.overlays += em_block_image_generic(working)
@@ -88,7 +83,8 @@
 	if(tail_style && istaurtail(tail_style) && tail_style:vore_tail_sprite_variant)
 		var/vs_fullness = vore_fullness_ex["taur belly"]
 		var/loaf_alt = lying && tail_style:belly_variant_when_loaf
-		var/icon/vorebelly_s = new/icon(icon = 'icons/mob/vore/Taur_Bellies.dmi', icon_state = "Taur[tail_style:vore_tail_sprite_variant]-Belly-[vs_fullness][loaf_alt ? " loaf" : (struggle_anim_taur ? "" : " idle")]")
+		var/fullness_icons = min(tail_style.fullness_icons, vs_fullness)
+		var/icon/vorebelly_s = new/icon(icon = tail_style.bellies_icon_path, icon_state = "Taur[tail_style:vore_tail_sprite_variant]-Belly-[fullness_icons][loaf_alt ? " loaf" : (struggle_anim_taur ? "" : " idle")]")
 		vorebelly_s.Blend(vore_sprite_color["taur belly"], vore_sprite_multiply["taur belly"] ? ICON_MULTIPLY : ICON_ADD)
 		var/image/working = image(vorebelly_s)
 		working.pixel_x = -16
@@ -98,7 +94,7 @@
 	return null
 
 /mob/living/carbon/human/proc/vore_tail_animation()
-	if(!struggle_anim_taur)
+	if(tail_style.struggle_anim && !struggle_anim_taur)
 		struggle_anim_taur = TRUE
 		update_vore_tail_sprite()
 		spawn(12)

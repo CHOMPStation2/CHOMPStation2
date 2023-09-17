@@ -37,6 +37,10 @@ var/list/preferences_datums = list()
 	var/be_random_name = 0				//whether we are a random name every round
 	var/nickname						//our character's nickname
 	var/age = 30						//age of character
+	var/bday_month = 0					//Birthday month
+	var/bday_day = 0					//Birthday day
+	var/last_birthday_notification = 0	//The last year we were notified about our birthday
+	var/bday_announce = FALSE			//Public announcement for birthdays
 	var/spawnpoint = "Arrivals Shuttle" //where this character will spawn (0-2).
 	var/b_type = "A+"					//blood type (not-chooseable)
 	var/backbag = 2						//backpack type
@@ -121,10 +125,11 @@ var/list/preferences_datums = list()
 	var/list/rlimb_data = list()
 	var/list/player_alt_titles = new()		// the default name of a job like "Medical Doctor"
 
-	var/list/body_markings = list() // "name" = "#rgbcolor"
+	var/list/body_markings = list() // "name" = "#rgbcolor" //VOREStation Edit: "name" = list(BP_HEAD = list("on" = <enabled>, "color" = "#rgbcolor"), BP_TORSO = ...)
 
 	var/list/flavor_texts = list()
 	var/list/flavour_texts_robot = list()
+	var/custom_link = null
 
 	var/list/body_descriptors = list()
 
@@ -140,6 +145,8 @@ var/list/preferences_datums = list()
 
 	// OOC Metadata:
 	var/metadata = ""
+	var/metadata_likes = ""
+	var/metadata_dislikes = ""
 	var/list/ignored_players = list()
 
 	var/client/client = null
@@ -161,7 +168,7 @@ var/list/preferences_datums = list()
 	var/multilingual_mode = 0 // Default behaviour, delimiter-key-space, delimiter-key-delimiter, off
 
 	var/list/volume_channels = list()
-	
+
 	///If they are currently in the process of swapping slots, don't let them open 999 windows for it and get confused
 	var/selecting_slots = FALSE
 
@@ -278,7 +285,7 @@ var/list/preferences_datums = list()
 	popup.open(FALSE) // Skip registring onclose on the browser pane
 	onclose(user, "preferences_window", src) // We want to register on the window itself
 
-/datum/preferences/proc/update_character_previews(mutable_appearance/MA)
+/*datum/preferences/proc/update_character_previews(mutable_appearance/MA) //CHOMPEdit _ch override.
 	if(!client)
 		return
 
@@ -309,7 +316,7 @@ var/list/preferences_datums = list()
 			client.screen |= O
 		O.appearance = MA
 		O.dir = D
-		O.screen_loc = preview_screen_locs["[D]"]
+		O.screen_loc = preview_screen_locs["[D]"]*/
 
 /datum/preferences/proc/show_character_previews()
 	if(!client || !char_render_holders)

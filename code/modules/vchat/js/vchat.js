@@ -30,6 +30,14 @@ var vchat_opts = {
 	vchatTabsVer: 1.0 //Version of vchat tabs save 'file'
 };
 
+/***********
+* If you are changing either tabBackgroundColor in dark or lightmode,
+* lease keep this synchronized with code\modules\examine\examine.dm
+* I cannot think of a elegant way to ensure it tracks these settings properly.
+* As long as LIGHTMODE stays as "none", stuff should not break.
+* Thank you!
+************/
+
 var DARKMODE_COLORS = {
 	buttonBgColor: "#40628a",
 	buttonTextColor: "#FFFFFF",
@@ -177,7 +185,15 @@ function start_vue() {
 					admin: false
 				},
 				{
-					matches: ".filter_ooc, .ooc:not(.looc)",
+					matches: ".filter_pray",
+					becomes: "vc_pray",
+					pretty: "Pray",
+					tooltip: "Prayer messages",
+					required: false,
+					admin: false
+				},
+				{
+					matches: ".ooc, .filter_ooc",
 					becomes: "vc_globalooc",
 					pretty: "Global OOC",
 					tooltip: "The bluewall of global OOC messages",
@@ -267,11 +283,19 @@ function start_vue() {
 					admin: true
 				},
 				{
-					matches: ".ooc.looc, .ooc, .looc", //Dumb game
+					matches: ".looc",
 					becomes: "vc_looc",
 					pretty: "Local OOC",
 					tooltip: "Local OOC messages",
 					required: false //YW Edit
+				},
+				{
+					matches: ".rlooc",
+					becomes: "vc_rlooc",
+					pretty: "Remote LOOC",
+					tooltip: "Remote LOOC messages",
+					required: false,
+					admin: true
 				},
 				{
 					matches: ".boldannounce, .filter_system",
@@ -279,6 +303,14 @@ function start_vue() {
 					pretty: "System Messages",
 					tooltip: "Messages from your client, always enabled",
 					required: true
+				},
+				{
+					matches: ".unsorted",
+					becomes: "vc_unsorted",
+					pretty: "Unsorted",
+					tooltip: "Messages that don't have any filters.",
+					required: false,
+					admin: false
 				}
 			],
 		},
@@ -586,6 +618,11 @@ function start_vue() {
 				//Get a category
 				newmessage.category = this.get_category(newmessage.content);
 
+				//Put it in unsorted blocks
+				if (newmessage.category == "vc_unsorted") {
+					newmessage.content = "<span class='unsorted'>" + newmessage.content + "</span>";
+				}
+
 				//Try to crush it with one of the last few
 				if(this.crushing) {
 					let crushwith = this.messages.slice(-(this.crushing));
@@ -663,7 +700,7 @@ function start_vue() {
 				let doc = domparser.parseFromString(message, 'text/html');
 				let evaluating = doc.querySelector('span');
 
-				let category = "nomatch"; //What we use if the classes aren't anything we know.
+				let category = "vc_unsorted"; //What we use if the classes aren't anything we know.
 				if(!evaluating) return category;
 				this.type_table.find( function(type) {
 					if(evaluating.msMatchesSelector(type.matches)) {
@@ -678,13 +715,16 @@ function start_vue() {
 				var textToSave = "<html><head><style>"+this.ext_styles+"</style></head><body>";
 
 				var messagesToSave = this.archived_messages.concat(this.messages);
+				var cats = this.current_categories;
 
 				messagesToSave.forEach( function(message) {
-					textToSave += message.content;
-					if(message.repeats > 1) {
-						textToSave += "(x"+message.repeats+")";
+					if(cats.length == 0 || (cats.indexOf(message.category) >= 0)) { //only in the active tab
+						textToSave += message.content;
+						if(message.repeats > 1) {
+							textToSave += "(x"+message.repeats+")";
+						}
+						textToSave += "<br>\n";
 					}
-					textToSave += "<br>\n";
 				});
 				textToSave += "</body></html>";
 

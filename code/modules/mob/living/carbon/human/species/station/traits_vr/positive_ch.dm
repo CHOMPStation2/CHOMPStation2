@@ -24,23 +24,63 @@
 	excludes = list(/datum/trait/negative/hollow)
 
 /datum/trait/positive/densebones/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..(S,H)
+	..()
 	for(var/obj/item/organ/external/organ in H.organs)
 		if(istype(organ))
 			organ.min_broken_damage *= 1.5
 			organ.brokenpain *= 2
 
-/datum/trait/positive/lowpressureres
-	name = "Pressure Resistance, Low"
-	desc = "Your body is more resistant to low pressures. Pretty simple."
-	cost = 3
+/datum/trait/positive/lowpressureresminor // Same as original trait with cost reduced, much more useful as filler.
+	name = "Low Pressure Resistance, Minor"
+	desc = "Your body is more resistant to low pressures and you can breathe better in those conditions. Pretty simple."
+	cost = 1
 	var_changes = list("hazard_low_pressure" = HAZARD_LOW_PRESSURE*0.66, "warning_low_pressure" = WARNING_LOW_PRESSURE*0.66, "minimum_breath_pressure" = 16*0.66)
+	excludes = list(/datum/trait/positive/lowpressureresmajor,/datum/trait/positive/pressureres,/datum/trait/positive/pressureresmajor)
 
-/datum/trait/positive/highpressureres
-	name = "Pressure Resistance, High"
+/datum/trait/positive/lowpressureresmajor // Still need an oxygen tank, otherwise you'll suffocate.
+	name = "Low Pressure Resistance, Major"
+	desc = "Your body is immune to low pressures and you can breathe significantly better in low-pressure conditions, though you'll still need an oxygen supply."
+	cost = 2
+	var_changes = list("hazard_low_pressure" = HAZARD_LOW_PRESSURE*0, "warning_low_pressure" = WARNING_LOW_PRESSURE*0, "minimum_breath_pressure" = 16*0.33)
+	excludes = list(/datum/trait/positive/lowpressureresminor,/datum/trait/positive/pressureres,/datum/trait/positive/pressureresmajor)
+
+/datum/trait/positive/highpressureresminor // Increased high pressure cap as previous amount was neglible.
+	name = "High Pressure Resistance, Minor"
 	desc = "Your body is more resistant to high pressures. Pretty simple."
+	cost = 1
+	var_changes = list("hazard_high_pressure" = HAZARD_HIGH_PRESSURE*2, "warning_high_pressure" = WARNING_HIGH_PRESSURE*2)
+	excludes = list(/datum/trait/positive/highpressureresmajor,/datum/trait/positive/pressureres,/datum/trait/positive/pressureresmajor)
+
+/datum/trait/positive/highpressureresmajor
+	name = "High Pressure Resistance, Major"
+	desc = "Your body is significantly more resistant to high pressures. Pretty simple."
+	cost = 2
+	var_changes = list("hazard_high_pressure" = HAZARD_HIGH_PRESSURE*4, "warning_high_pressure" = WARNING_HIGH_PRESSURE*4)
+	excludes = list(/datum/trait/positive/highpressureresminor,/datum/trait/positive/pressureres,/datum/trait/positive/pressureresmajor)
+
+/datum/trait/positive/pressureres
+	name = "General Pressure Resistance"
+	desc = "Your body is much more resistant to both high and low pressures. Pretty simple."
 	cost = 3
-	var_changes = list("hazard_high_pressure" = HAZARD_HIGH_PRESSURE*1.5, "warning_high_pressure" = WARNING_HIGH_PRESSURE*1.5)
+	var_changes = list("hazard_high_pressure" = HAZARD_HIGH_PRESSURE*3,
+					   "warning_high_pressure" = WARNING_HIGH_PRESSURE*3,
+					   "hazard_low_pressure" = HAZARD_LOW_PRESSURE*0.33,
+					   "warning_low_pressure" = WARNING_LOW_PRESSURE*0.33,
+					   "minimum_breath_pressure" = 16*0.33
+					   )
+	excludes = list(/datum/trait/positive/lowpressureresminor,/datum/trait/positive/lowpressureresmajor,/datum/trait/positive/highpressureresminor,/datum/trait/positive/highpressureresmajor,/datum/trait/positive/pressureresmajor)
+
+/datum/trait/positive/pressureresmajor // If they have the points and want more freedom with atmos, let them.
+	name = "General Pressure Resistance, Major"
+	desc = "Your body is significantly more resistant to high pressures and immune to low pressures, though you'll still need an oxygen supply."
+	cost = 4
+	var_changes = list("hazard_high_pressure" = HAZARD_HIGH_PRESSURE*4,
+					   "warning_high_pressure" = WARNING_HIGH_PRESSURE*4,
+					   "hazard_low_pressure" = HAZARD_LOW_PRESSURE*0,
+					   "warning_low_pressure" = WARNING_LOW_PRESSURE*0,
+					   "minimum_breath_pressure" = 16*0.33
+					   )
+	excludes = list(/datum/trait/positive/lowpressureresminor,/datum/trait/positive/lowpressureresmajor,/datum/trait/positive/highpressureresminor,/datum/trait/positive/highpressureresmajor,/datum/trait/positive/pressureres)
 
 /datum/trait/positive/photosynth
 	name = "Photosynthesis"
@@ -60,6 +100,12 @@
 	desc = "You are much more resistant to radiation, and it dissipates much faster from your body."
 	cost = 2
 	var_changes = list("radiation_mod" = 0.5, "rad_removal_mod" = 5, "rad_levels" = list("safe" = 40, "danger_1" = 100, "danger_2" = 150, "danger_3" = 250))
+
+/datum/trait/positive/rad_immune
+	name = "Radiation Immunity"
+	desc = "For whatever reason, be it a more dense build or some quirk of your genetic code, your body is completely immune to radiation."
+	cost = 3
+	var_changes = list("radiation_mod" = 0.0, "rad_removal_mod" = 10, "rad_levels" = list("safe" = 300, "danger_1" = 300, "danger_2" = 300, "danger_3" = 300))
 
 /datum/trait/positive/more_blood
 	name = "Blood Volume, High"
@@ -81,7 +127,7 @@
 	name = "Heavyweight"
 	desc = "You are more heavyweight or otherwise more sturdy than most species, and as such, more resistant to knockdown effects and stuns. Stuns are only half as effective on you, and neither players nor mobs can trade places with you or bump you out of the way."
 	cost = 2
-	var_changes = list("stun_mod" = 0.75, "weaken_mod" = 0.75) // Stuns are 75% as effective - a stun of 3 seconds will be 2 seconds after rounding. Set to 0.75 to make a 3 second stun 2 seconds.(Weaken is used alongside stun to prevent aiming.)
+	var_changes = list("stun_mod" = 0.5, "weaken_mod" = 0.5) // Stuns are 50% as effective - a stun of 3 seconds will be 2 seconds due to rounding up. Set to 0.5 to be in-line with the trait's description. (Weaken is used alongside stun to prevent aiming.)
 
 /datum/trait/positive/heavyweight/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
@@ -92,10 +138,12 @@
 	name = "Table Passer"
 	desc = "You move over or under tables with ease of a Teshari."
 	cost = 2
+	has_preferences = list("pass_table" = list(TRAIT_PREF_TYPE_BOOLEAN, "On spawn", TRAIT_NO_VAREDIT_TARGET, TRUE))
 
-/datum/trait/positive/table_passer/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/positive/table_passer/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/list/trait_prefs)
 	..()
-	H.pass_flags = PASSTABLE
+	if (trait_prefs?["pass_table"] || !trait_prefs)
+		H.pass_flags |= PASSTABLE
 	H.verbs |= /mob/living/proc/toggle_pass_table
 
 /datum/trait/positive/grappling_expert
@@ -230,7 +278,7 @@
 	name = "Adrenaline detox"
 	desc = "After an adrenaline rush, one will find themselves suffering from adrenaline detox, which is their body recovering from an intense adrenaline rush."
 	on_created_text = "<span class='danger'>Your body aches and groans, forcing you into a period of rest as it recovers from the intense adrenaline rush.</span>"
-	on_expired_text = "<span class='notice'>You finally recover from your adrenaline rush, your body returning to it's normal state.</span>"
+	on_expired_text = "<span class='notice'>You finally recover from your adrenaline rush, your body returning to its normal state.</span>"
 
 	disable_duration_percent = 1.35
 	outgoing_melee_damage_percent = 0.75
@@ -251,7 +299,7 @@
 	cost = 1
 
 /datum/trait/positive/insect_sting/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..(S,H)
+	..()
 	H.verbs |= /mob/living/proc/insect_sting
 
 // TANKINESS LETS GOOOOOOOOO
@@ -277,7 +325,7 @@
 	excludes = list(/datum/trait/positive/endurance_high, /datum/trait/positive/endurance_extremely_high)
 
 /datum/trait/positive/endurance_very_high/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..(S,H)
+	..()
 	H.setMaxHealth(S.total_health)
 
 
@@ -289,7 +337,7 @@
 	excludes = list(/datum/trait/positive/endurance_high, /datum/trait/positive/endurance_very_high)
 
 /datum/trait/positive/endurance_extremely_high/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..(S,H)
+	..()
 	H.setMaxHealth(S.total_health)
 
 // CHOMPNote: Reshuffling traits to match our current upstream, VORE.
@@ -324,19 +372,12 @@
 	cost = 2
 	var_changes = list("flash_mod" = 0.5)
 
-/datum/trait/positive/speed_fast_minor
-	name = "Haste, Minor"
-	desc = "Allows you to move a little bit faster on average than baseline."
-	cost = 2
-	var_changes = list("slowdown" = -0.25)
-	excludes = list(/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy_plus,/datum/trait/positive/speed_fast)
-
 /datum/trait/positive/hardy_extreme
 	name = "Hardy, Extreme"
 	desc = "Allows you to carry heavy equipment with no slowdown at all."
 	cost = 3
 	var_changes = list("item_slowdown_mod" = 0.0)
-	excludes = list(/datum/trait/positive/speed_fast,/datum/trait/positive/speed_fast_minor,/datum/trait/positive/hardy,/datum/trait/positive/hardy_plus)
+	excludes = list(/datum/trait/positive/speed_fast,/datum/trait/positive/hardy,/datum/trait/positive/hardy_plus)
 
 /datum/trait/positive/bloodsucker_plus
 	name = "Evolved Bloodsucker"
@@ -346,7 +387,7 @@
 	excludes = list(/datum/trait/neutral/bloodsucker)
 
 /datum/trait/positive/bloodsucker_plus/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..(S,H)
+	..()
 	H.verbs |= /mob/living/carbon/human/proc/bloodsuck
 
 /datum/trait/positive/sonar
@@ -355,7 +396,7 @@
 	cost = 1
 
 /datum/trait/positive/sonar/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..(S,H)
+	..()
 	H.verbs |= /mob/living/carbon/human/proc/sonar_ping
 
 /datum/trait/positive/toxin_gut
@@ -364,5 +405,5 @@
 	cost = 1
 
 /datum/trait/positive/toxin_gut/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..(S,H)
+	..()
 	H.toxin_gut = TRUE

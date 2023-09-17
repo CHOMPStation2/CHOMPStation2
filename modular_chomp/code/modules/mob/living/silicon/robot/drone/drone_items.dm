@@ -1,3 +1,4 @@
+//CHOMPADDITIONS
 /obj/item/weapon/gripper/scene
 	name = "misc gripper"
 	desc = "A simple grasping tool that can hold a variety of 'general' objects..."
@@ -8,5 +9,7 @@
 		/obj/item/weapon/implanter,
 		/obj/item/weapon/disk/nifsoft/compliance,
 		/obj/item/weapon/handcuffs,
-		/obj/item/toy
+		/obj/item/toy,
+		/obj/item/petrifier,
+		/obj/item/weapon/dice
 	)
