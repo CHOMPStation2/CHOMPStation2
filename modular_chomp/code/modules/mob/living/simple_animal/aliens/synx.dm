@@ -662,7 +662,7 @@
 		if("Body")
 			options = body_styles
 			for(var/option in options)
-				var/image/I = new /image('modular_chomp/icons/mob/synx_modular.dmi', "synx_body[option]", dir = 2, pixel_x = -0)
+				var/image/I = new /image('modular_chomp/icons/mob/synx_modular.dmi', "synx_body[option]", dir = 2)
 				LAZYSET(options, option, I)
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
@@ -675,7 +675,7 @@
 		if("Horns")
 			options = horn_styles
 			for(var/option in options)
-				var/image/I = new /image('modular_chomp/icons/mob/synx_modular.dmi', "synx_horns[option]", dir = 2, pixel_x = -0, pixel_y = -0)
+				var/image/I = new /image('modular_chomp/icons/mob/synx_modular.dmi', "synx_horns[option]", dir = 2)
 				LAZYSET(options, option, I)
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
@@ -688,7 +688,7 @@
 		if("Marks")
 			options = marking_styles
 			for(var/option in options)
-				var/image/I = new /image('modular_chomp/icons/mob/synx_modular.dmi', "synx_markings[option]", dir = 2, pixel_x = -0, pixel_y = -0)
+				var/image/I = new /image('modular_chomp/icons/mob/synx_modular.dmi', "synx_markings[option]", dir = 2)
 				LAZYSET(options, option, I)
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
@@ -701,7 +701,7 @@
 		if("Eyes")
 			options = eye_styles
 			for(var/option in options)
-				var/image/I = new /image('modular_chomp/icons/mob/synx_modular.dmi', "synx_eyes[option]", dir = 2, pixel_x = -0, pixel_y = -0)
+				var/image/I = new /image('modular_chomp/icons/mob/synx_modular.dmi', "synx_eyes[option]", dir = 2)
 				LAZYSET(options, option, I)
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
