@@ -31,6 +31,7 @@ var/list/preferences_datums = list()
 	var/tgui_input_mode = FALSE			// All the Input Boxes (Text,Number,List,Alert)
 	var/tgui_large_buttons = TRUE
 	var/tgui_swapped_buttons = FALSE
+	var/chat_timestamp = FALSE
 
 	//character preferences
 	var/real_name						//our character's name
