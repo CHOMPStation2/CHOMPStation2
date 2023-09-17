@@ -449,6 +449,10 @@
 /obj/item/weapon/melee/cullingcane,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/mol/kitchen/ChamberD)
+"et" = (
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/carpet/green,
+/area/awaymission/mol/vistortunnel/green)
 "ex" = (
 /obj/structure/table/hardwoodtable,
 /turf/simulated/floor/carpet/green,
@@ -554,6 +558,10 @@
 /mob/living/simple_mob/vr/poisonwiz,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vr/observation)
+"fN" = (
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/carpet/bcarpet,
+/area/awaymission/mol/vistortunnel/yellow)
 "fQ" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/structure/table/steel,
@@ -592,6 +600,10 @@
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
+"gh" = (
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/entrancetunnel)
 "gn" = (
 /obj/structure/table/sifwooden_reinforced,
 /obj/item/weapon/reagent_containers/pill/healing_nanites,
@@ -639,6 +651,11 @@
 /mob/living/simple_mob/mechanical/cyber_horror/cat_cyber_horror,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/scraptunnels/room2)
+"gX" = (
+/obj/effect/floor_decal/corner/green/diagonal,
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/tiled/freezer,
+/area/awaymission/mol/kitchen/chamberA)
 "gY" = (
 /obj/machinery/door/airlock,
 /turf/simulated/floor/bmarble,
@@ -715,6 +732,10 @@
 /obj/structure/table/hardwoodtable,
 /turf/simulated/floor/carpet/bcarpet,
 /area/awaymission/mol/vistortunnel/yellow)
+"hJ" = (
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/weird_things/dark,
+/area/awaymission/mol/realitycore)
 "hL" = (
 /obj/random/obstruction,
 /turf/simulated/floor/bmarble,
@@ -781,6 +802,11 @@
 /obj/structure/grille,
 /turf/simulated/floor/wmarble,
 /area/awaymission/mol/vistortunnel)
+"io" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/scraptunnels/room1)
 "ip" = (
 /obj/structure/table/sifwooden_reinforced,
 /obj/item/weapon/reagent_containers/pill/dermaline,
@@ -811,6 +837,11 @@
 "iA" = (
 /turf/simulated/wall/dungeon,
 /area/awaymission/mol/security)
+"iC" = (
+/obj/effect/floor_decal/corner/white/diagonal,
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/tiled/freezer,
+/area/awaymission/mol/kitchen/chamberC)
 "iF" = (
 /obj/machinery/light,
 /turf/simulated/floor/carpet/retro_red,
@@ -1005,6 +1036,10 @@
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vistortunnel)
+"kF" = (
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/wall/r_wall,
+/area/awaymission/mol/securitycheckpoint)
 "kH" = (
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 4
@@ -1030,6 +1065,10 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/entrancetunnel)
+"kN" = (
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/flock,
+/area/awaymission/mol/vr/shattered)
 "kP" = (
 /obj/machinery/crystal/ice,
 /obj/machinery/crystal/ice,
@@ -1143,6 +1182,10 @@
 /mob/living/simple_mob/mechanical/cyber_horror/grey,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/scraptunnels/room3)
+"lZ" = (
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/carpet/brown,
+/area/awaymission/mol/vistortunnel/orange)
 "ma" = (
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 8
@@ -1393,6 +1436,10 @@
 /obj/machinery/door/airlock,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/scraptunnels/room2)
+"on" = (
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/medical)
 "oo" = (
 /turf/simulated/floor/tiled/milspec/raised,
 /area/awaymission/mol/serverroom)
@@ -1643,6 +1690,10 @@
 	outdoors = 1
 	},
 /area/awaymission/mol/vr/shattered)
+"qp" = (
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/wall/solidrock,
+/area/awaymission/mol/mines)
 "qq" = (
 /obj/effect/floor_decal/corner/yellow/bordercorner{
 	dir = 8
@@ -1898,6 +1949,10 @@
 "sq" = (
 /turf/simulated/wall/r_wall,
 /area/awaymission/mol/vr/observation)
+"ss" = (
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/conveyorcontrol)
 "sz" = (
 /obj/structure/janitorialcart,
 /obj/effect/floor_decal/corner/paleblue/border{
@@ -2063,6 +2118,10 @@
 /obj/machinery/light,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vistortunnel)
+"uh" = (
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/wmarble,
+/area/awaymission/mol/vistortunnel)
 "ui" = (
 /obj/effect/map_helper/no_tele,
 /turf/simulated/wall/solidrock,
@@ -2141,6 +2200,11 @@
 /obj/effect/floor_decal/corner/black/diagonal,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/mines)
+"ve" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/scraptunnels/room3)
 "vk" = (
 /obj/effect/floor_decal/corner/lightorange,
 /obj/effect/floor_decal/corner/pink{
@@ -2273,6 +2337,10 @@
 	outdoors = 1
 	},
 /area/awaymission/mol/vr/shattered)
+"wm" = (
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/vr/observation)
 "wr" = (
 /obj/structure/flora/tree/palm,
 /turf/simulated/floor/beach/sand{
@@ -2334,6 +2402,10 @@
 /obj/machinery/door/airlock/medical,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/medical)
+"wY" = (
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/carpet/purple,
+/area/awaymission/mol/vistortunnel/purple)
 "xa" = (
 /mob/living/simple_mob/vore/candy/redcabold,
 /obj/machinery/conveyor{
@@ -2345,6 +2417,12 @@
 "xd" = (
 /turf/unsimulated/ai_visible,
 /area/awaymission/mol/vr/shattered)
+"xg" = (
+/obj/effect/floor_decal/corner/white/diagonal,
+/obj/effect/decal/cleanable/blood/gibs/body,
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/tiled/freezer,
+/area/awaymission/mol/kitchen/chamberB)
 "xh" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -2509,6 +2587,10 @@
 /obj/effect/floor_decal/corner/green/diagonal,
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/mol/kitchen/chamberA)
+"yH" = (
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/scraptunnels/room2)
 "yK" = (
 /obj/structure/table/rack/shelf,
 /obj/item/weapon/gun/energy/imperial,
@@ -2795,6 +2877,11 @@
 "AX" = (
 /turf/simulated/floor/lava/harmless,
 /area/awaymission/mol/vr/shattered)
+"Bc" = (
+/obj/effect/floor_decal/corner/lightorange/diagonal,
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/vistortunnel)
 "Bf" = (
 /obj/machinery/light{
 	dir = 8
@@ -3047,6 +3134,12 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/securitycheckpoint)
+"Dv" = (
+/obj/structure/table/marble,
+/obj/machinery/recharger,
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/tiled/red,
+/area/awaymission/mol/security)
 "Dw" = (
 /obj/machinery/light{
 	dir = 1
@@ -3180,10 +3273,25 @@
 	nitrogen = 82.1472
 	},
 /area/awaymission/mol/entrancetunnel)
+"EF" = (
+/obj/machinery/conveyor{
+	dir = 1;
+	id = "Candy Zone"
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/tiled/red,
+/area/awaymission/mol/kitchen)
 "EH" = (
 /obj/structure/bed/chair/office/dark,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/mines)
+"EM" = (
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/reinforced,
+/area/awaymission/mol/audiotorium)
 "EO" = (
 /obj/structure/closet/jcloset,
 /obj/item/weapon/soap/rainbow_soap,
@@ -3522,6 +3630,14 @@
 /obj/effect/floor_decal/corner/black/diagonal,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/mines)
+"HA" = (
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/outdoors/desert_planet/deep_sand{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
+/area/awaymission/mol/outside)
 "HF" = (
 /turf/simulated/wall/r_wall,
 /area/awaymission/mol/scraptunnels)
@@ -3881,6 +3997,10 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/medical)
+"KN" = (
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/vr/observationroom)
 "KP" = (
 /turf/simulated/floor/grass{
 	outdoors = 1
@@ -3943,6 +4063,10 @@
 /mob/living/simple_mob/mechanical/cyber_horror/corgi,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/scraptunnels/room3)
+"Lm" = (
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/carpet/retro_red,
+/area/awaymission/mol/vistortunnel/red)
 "Lq" = (
 /obj/structure/cryofeed{
 	dir = 4
@@ -4335,6 +4459,11 @@
 /obj/machinery/crystal,
 /turf/simulated/floor/wmarble,
 /area/awaymission/mol/vistortunnel)
+"OH" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/tiled/red,
+/area/awaymission/mol/kitchen)
 "OI" = (
 /obj/structure/cliff/automatic,
 /turf/simulated/floor/outdoors/dirt{
@@ -4350,6 +4479,16 @@
 	outdoors = 1
 	},
 /area/awaymission/mol/vr/shattered)
+"OL" = (
+/obj/effect/floor_decal/corner/lightorange,
+/obj/effect/floor_decal/corner/pink{
+	dir = 1
+	},
+/obj/structure/table/standard,
+/obj/random/maintenance/foodstuff,
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/tiled/kafel_full,
+/area/awaymission/mol/kitchen/ChamberD)
 "OM" = (
 /obj/effect/map_helper/no_phaseshift,
 /turf/simulated/floor/weird_things/dark,
@@ -4928,6 +5067,14 @@
 /obj/item/weapon/bedsheet/blue,
 /turf/simulated/floor/carpet/purple,
 /area/awaymission/mol/vistortunnel/purple)
+"TN" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/scraptunnels)
 "TO" = (
 /turf/simulated/floor/wood,
 /area/awaymission/mol/audiotorium)
@@ -5536,6 +5683,11 @@
 /obj/item/clothing/gloves/yellow,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/engi)
+"Zn" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/serverroom)
 "Zo" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -5553,6 +5705,11 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/awaymission/mol/medical)
+"Zs" = (
+/mob/living/simple_mob/vr/firewiz,
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/hardlightentrance)
 "Zv" = (
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 4
@@ -12184,7 +12341,7 @@ Yp
 Yp
 Yp
 Yp
-Yp
+wm
 Yp
 sq
 Nh
@@ -15539,7 +15696,7 @@ oo
 nu
 ZH
 Af
-ZH
+Zn
 nu
 oo
 Lb
@@ -18893,7 +19050,7 @@ Ph
 lC
 Gj
 Gj
-Gj
+KN
 XM
 Nh
 Nh
@@ -21937,7 +22094,7 @@ AQ
 AQ
 AQ
 AQ
-AQ
+kN
 AQ
 AQ
 AQ
@@ -22817,7 +22974,7 @@ HX
 HX
 zu
 HX
-HX
+ve
 zu
 HX
 Zc
@@ -27746,7 +27903,7 @@ Nh
 Nh
 Nh
 Nh
-Nh
+qp
 Nh
 Nh
 Nh
@@ -29777,7 +29934,7 @@ ZU
 AC
 pN
 pN
-ZU
+yH
 pN
 ZU
 ZU
@@ -31327,7 +31484,7 @@ qv
 zv
 zv
 zv
-qv
+TN
 zv
 zv
 zv
@@ -31534,7 +31691,7 @@ If
 If
 Pm
 If
-bo
+Zs
 If
 vM
 Nh
@@ -32859,7 +33016,7 @@ WQ
 WQ
 WQ
 WQ
-WQ
+io
 WQ
 WQ
 qE
@@ -33898,7 +34055,7 @@ rt
 rt
 rt
 rt
-rt
+gh
 rt
 rt
 rt
@@ -36800,7 +36957,7 @@ Ib
 Ib
 Ib
 Ib
-Ib
+HA
 Ib
 Ib
 Ib
@@ -37506,7 +37663,7 @@ Iz
 Iz
 Iz
 Iz
-Iz
+on
 Iz
 Iz
 Fq
@@ -37666,7 +37823,7 @@ HI
 HI
 HI
 HI
-HI
+EM
 ze
 zm
 zm
@@ -38234,7 +38391,7 @@ iA
 WZ
 WZ
 iA
-WZ
+Dv
 WZ
 iA
 We
@@ -41227,7 +41384,7 @@ Nh
 Nh
 Nh
 Nh
-Nh
+qp
 Nh
 Nh
 Nh
@@ -41355,7 +41512,7 @@ Cs
 uo
 uo
 kS
-Sv
+ss
 Sv
 Sv
 Sv
@@ -43399,7 +43556,7 @@ Cd
 RP
 RP
 RP
-Cd
+EF
 vB
 Sd
 Sd
@@ -44460,7 +44617,7 @@ Wp
 VI
 Im
 Wv
-Wp
+kF
 yB
 yB
 yB
@@ -44863,7 +45020,7 @@ kj
 kj
 kj
 kj
-kj
+hJ
 kj
 kj
 kj
@@ -47009,7 +47166,7 @@ Cp
 yE
 LO
 yE
-yE
+gX
 LO
 yE
 yE
@@ -50127,7 +50284,7 @@ Fu
 fr
 fr
 xv
-fr
+lZ
 fr
 ME
 we
@@ -50368,7 +50525,7 @@ Nh
 tG
 pJ
 Sd
-Sd
+OH
 Sd
 pF
 ID
@@ -50905,7 +51062,7 @@ Fu
 Fu
 Fu
 ov
-we
+Bc
 we
 we
 lF
@@ -52163,7 +52320,7 @@ jt
 Rg
 Ho
 UW
-Md
+xg
 Ho
 Ho
 UW
@@ -55816,7 +55973,7 @@ QI
 QI
 QI
 QI
-QI
+uh
 xh
 nj
 nj
@@ -56318,7 +56475,7 @@ Nh
 BA
 fY
 fY
-fY
+Lm
 fY
 fY
 GQ
@@ -56342,7 +56499,7 @@ nj
 tT
 BG
 BG
-BG
+et
 BG
 BG
 oN
@@ -57332,7 +57489,7 @@ RH
 RH
 BT
 RH
-RH
+iC
 HO
 RH
 RH
@@ -62251,7 +62408,7 @@ ch
 ch
 DZ
 aK
-Zx
+wY
 jg
 Zx
 GI
@@ -62791,7 +62948,7 @@ Hr
 Hr
 VD
 lD
-lD
+fN
 lD
 lD
 lD
@@ -64809,7 +64966,7 @@ YK
 YK
 YK
 YK
-YK
+OL
 YK
 YK
 YK
