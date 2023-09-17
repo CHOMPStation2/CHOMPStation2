@@ -4604,6 +4604,7 @@
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\station\traits\negative.dm"
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\station\traits\positive.dm"
 #include "modular_chomp\code\modules\mob\living\silicon\robot\drone\drone_items.dm"
+#include "modular_chomp\code\modules\mob\living\simple_animal\aliens\synx.dm"
 #include "modular_chomp\code\modules\mob\living\simple_mob\donteatbossmonsters.dm"
 #include "modular_chomp\code\modules\mob\living\simple_mob\simple_mob.dm"
 #include "modular_chomp\code\modules\mob\living\simple_mob\simple_mob_abilities.dm"

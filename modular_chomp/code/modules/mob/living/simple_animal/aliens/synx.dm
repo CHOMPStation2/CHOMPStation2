@@ -1,17 +1,15 @@
-/* Handled by synx_ch now for the modular system. -Azel
-
 #define SYNX_LOWER_DAMAGE 2 //Using defines to make damage easier to tweak for hacky burn attack code.
 #define SYNX_UPPER_DAMAGE 6
 
 
-/mob/living/simple_mob/animal/synx //Player controlled variant
+/mob/living/simple_mob/animal/synx/ //Player controlled variant
 	//on inteligence https://synx.fandom.com/wiki/Behavior/Intelligence //keeping this here for player controlled synxes.
 	name = "Synx"
 	desc = "A cold blooded, genderless, parasitic eel from the more distant and stranger areas of the cosmos. Plain, white, perpetually grinning and possessing a hunger as enthusiastic and endless as humanity's sense of exploration."
 	tt_desc = "synxus pergulus"
 
 	 //Synx species belongs to ChimeraSynx , Base sprites made by: SpitefulCrow
-	icon = 'icons/mob/synx.dmi'//giving synxes their own DMI file!
+	icon = 'modular_chomp/icons/mob/synx_modular.dmi'//giving synxes their own DMI file!
 	icon_state = "synx_living"
 	icon_living = "synx_living"
 	icon_dead = "synx_dead"
@@ -27,8 +25,8 @@
 	var/poison_per_bite = 1 //Even with 2 this was OP with a 99% injection chance
 	var/poison_chance = 99.666
 	var/poison_type = "synxchem"//inaprovalin, but evil
-	var/transformed_state = "synx_transformed"
-	var/stomach_distended_state = "synx_stomach_distended"
+	var/transformed_state = "synx_t"
+	var/stomach_distended_state = "synx_s"
 	var/transformed = FALSE
 	var/memorysize = 50 //Var for how many messages synxes remember if they know speechcode
 	var/list/voices = list()
@@ -36,9 +34,36 @@
 	var/acid_damage_upper = SYNX_UPPER_DAMAGE - 1
 	var/stomach_distended = 0 //Check for whether or not the synx has vomitted up its stomach.
 	var/forcefeedchance = 20 //This needs to be defined in the parent because code.
-
-
-
+	// Recycling bigdragon code for modular system. Hope this works! -Azel
+		//Sprites are layered ontop of one-another in order of this list
+	var/list/overlay_colors = list(
+		"Body" = "#FFFFFF",
+		"Horns" = "#FFFFFF",
+		"Marks" = "#FFFFFF",
+		"Eyes" = "#FFFFFF"
+	)
+	//If you add any more, it's as easy as adding the icons to these lists
+	var/list/body_styles = list(
+		"Normal"
+	)
+	var/body
+	var/list/horn_styles = list(
+		"None",
+		"Curved",
+		"Straight",
+	)
+	var/horns
+	var/list/marking_styles = list(
+		"None",
+		"Basic",
+		"Star",
+	)
+	var/markings
+	var/list/eye_styles = list(
+		"Normal"
+	)
+	var/eyes
+//TODO: Add more customization options, these are pretty scarce
 	faction = "Synx"
 
 	//intelligence_level = SA_ANIMAL
@@ -76,6 +101,13 @@
 	attack_edge = 1
 	attack_armor_type = "melee" //Default is melee but I'm stating this explicitly to make it more obvious to anybody reading this
 
+/mob/living/simple_mob/animal/synx/Initialize()
+	..()
+	src.adjust_nutrition(src.max_nutrition)
+	build_icons(1)
+	voremob_loaded = 1
+	mob_radio = new /obj/item/device/radio/headset/mob_headset(src)	//We always give radios to spawned mobs anyway
+
 //Vore stuff//leaving most of this here even though its no going to be an AI controlled variant.
 	vore_active = 1
 	vore_capacity = 2
@@ -88,7 +120,7 @@
 	vore_digest_chance = 45		// Chance to switch to digest mode if resisted
 	vore_absorb_chance = 0
 	vore_escape_chance = 10
-	vore_icons = 0 //no vore icons
+	vore_icons = 0 //no vore icons //TODO: Implement these, I have the sprites done but they're unnecessary for core function rn and I'd rather get this into a working state first -Azel
 	swallowTime = 6 SECONDS //Enter the eel you nerd
 
 //Shouldn't be affected by lack of atmos, it's a space eel. //nah lets give him some temperature
@@ -179,6 +211,7 @@
 	verbs |= /mob/living/proc/shred_limb
 	verbs |= /mob/living/simple_mob/animal/synx/proc/disguise
 	verbs |= /mob/living/simple_mob/animal/synx/proc/randomspeech
+	verbs |= /mob/living/simple_mob/animal/synx/proc/set_style
 	realname = name
 	voices += "Garbled voice"
 	voices += "Unidentifiable Voice"
@@ -349,7 +382,7 @@
 			update_icon()
 			set_AI_busy(FALSE)
 */
-		if(L.reagents)
+		if(L.reagents) //Seemingly broken. Would probably be really annoying anyways, so probably for the best that it doesn't work. -Azel
 			var/target_zone = pick(BP_TORSO,BP_TORSO,BP_TORSO,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_HEAD)
 			if(L.can_inject(src, null, target_zone))
 				if(prob(poison_chance))
@@ -411,14 +444,14 @@
 		status_flags &= ~HIDING
 		reset_plane_and_layer()
 		to_chat(src,"<span class='notice'>You have stopped hiding.</span>")
-		movement_cooldown = 3
 	else
 		status_flags |= HIDING
 		layer = HIDING_LAYER //Just above cables with their 2.44
 		plane = OBJ_PLANE
 		to_chat(src,"<span class='notice'>You are now hiding.</span>")
-		movement_cooldown = 6
 
+
+	update_icons()
 
 /mob/living/simple_mob/animal/synx/proc/disguise()
 	set name = "Toggle Form"
@@ -435,9 +468,11 @@
 	if(!transformed)
 		to_chat(src,"<span class='warning'>Now they see your true form.</span>")
 		icon_living = transformed_state //Switch state to transformed state
+		movement_cooldown = 3
 	else // If transformed is true.
 		to_chat(src,"<span class='warning'>You changed back into your disguise.</span>")
 		icon_living = initial(icon_living) //Switch state to what it was originally defined.
+		movement_cooldown = 6
 
 
 	transformed = !transformed
@@ -518,7 +553,11 @@
 	set desc = "Allows you to throw up your stomach, giving your attacks burn damage at the cost of your stomach contents going everywhere. Yuck."
 	set category = "Abilities"
 
-	if(!stomach_distended) //true if stomach distended is null, 0, or ""
+	if(transformed)
+		to_chat(src,"<span class='warning'>Your limbs are in the way!</span>") //Kind of a weak excuse but since you already can't transform when your stomach is out, this avoids situations calling a sprite that doesn't exist and lightens my workload on making and implementing them
+		return
+
+	if(!stomach_distended && !transformed) //true if stomach distended is null, 0, or ""
 		stomach_distended = !stomach_distended //switch statement
 		to_chat (src, "<span class='notice'>You disgorge your stomach, spilling its contents!</span>")
 		melee_damage_lower = 1 //Hopefully this will make all brute damage not apply while stomach is distended. I don't see a better way to do this.
@@ -547,6 +586,133 @@
 		attacktext -= distend_attacktext
 		update_icons()
 		return
+
+///
+///		Icon generation stuff
+///
+
+/mob/living/simple_mob/animal/synx/update_icon()
+	update_fullness()
+	build_icons()
+
+
+
+/mob/living/simple_mob/animal/synx/proc/build_icons(var/random)
+	cut_overlays()
+	if(stat == DEAD)
+		icon_state = "synx_dead"
+		plane = MOB_LAYER
+		return
+	if(random)
+		var/list/bodycolors = list("#FFFFFF")
+		body = pick(body_styles)
+		overlay_colors["Body"] = pick(bodycolors)
+		horns = pick(horn_styles)
+		var/list/horncolors = list("#FFE100","#A75A35","#1C4DFF","#FF0000","#404C6D","#2F2F2F","#55CE21","#711BFF","#DEDEE0")
+		overlay_colors["Horns"] = pick(horncolors)
+		var/list/markingcolors = list("#2F2F2F")
+		markings = pick(marking_styles)
+		overlay_colors["Marks"] = pick(markingcolors)
+		var/list/eyecolors = list("#FFE100","#FF6A00","#1C4DFF","#FF0000","#3D5EBE","#FF006E","#55CE21","#711BFF","#939EFF")
+		eyes = pick(eye_styles)
+		overlay_colors["Eyes"] = pick(eyecolors)
+
+
+	var/image/I = image(icon, "synx_body[body][transformed? "-t" : null][stomach_distended? "-s" : null]")
+	I.color = overlay_colors["Body"]
+	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
+	I.plane = (status_flags & HIDING)? OBJ_PLANE : MOB_PLANE
+	I.layer = (status_flags & HIDING)? HIDING_LAYER : MOB_LAYER
+	add_overlay(I)
+
+	I = image(icon, "synx_horns[horns][transformed? "-t" : null]")
+	I.color = overlay_colors["Horns"]
+	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
+	I.plane = (status_flags & HIDING)? OBJ_PLANE : MOB_PLANE
+	I.layer = (status_flags & HIDING)? HIDING_LAYER : MOB_LAYER
+	add_overlay(I)
+
+	I = image(icon, "synx_markings[markings][transformed? "-t" : null]")
+	I.color = overlay_colors["Marks"]
+	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
+	I.plane = (status_flags & HIDING)? OBJ_PLANE : MOB_PLANE
+	I.layer = (status_flags & HIDING)? HIDING_LAYER : MOB_LAYER
+	add_overlay(I)
+
+	I = image(icon, "synx_eyes[eyes][transformed? "-t" : null]")
+	I.color = overlay_colors["Eyes"]
+	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
+	I.plane = (status_flags & HIDING)? OBJ_PLANE : MOB_PLANE
+	I.layer = (status_flags & HIDING)? HIDING_LAYER : MOB_LAYER
+	add_overlay(I)
+
+/mob/living/simple_mob/animal/synx/proc/set_style()
+	set name = "Set Style"
+	set desc = "Customise your icons."
+	set category = "Abilities"
+
+	var/list/options = list("Body","Horns","Marks","Eyes")
+	for(var/option in options)
+		LAZYSET(options, option, new /image('icons/effects/synx_labels_ch.dmi', option))
+	var/choice = show_radial_menu(src, src, options, radius = 60)
+	if(!choice || QDELETED(src) || src.incapacitated())
+		return FALSE
+	. = TRUE
+	switch(choice)
+		if("Body")
+			options = body_styles
+			for(var/option in options)
+				var/image/I = new /image('modular_chomp/icons/mob/synx_modular.dmi', "synx_body[option]", dir = 2, pixel_x = -0)
+				LAZYSET(options, option, I)
+			choice = show_radial_menu(src, src, options, radius = 90)
+			if(!choice || QDELETED(src) || src.incapacitated())
+				return 0
+			var/new_color = input("Pick body color:","Body Color", overlay_colors["Body"]) as null|color
+			if(!new_color)
+				return 0
+			body = choice
+			overlay_colors["Body"] = new_color
+		if("Horns")
+			options = horn_styles
+			for(var/option in options)
+				var/image/I = new /image('modular_chomp/icons/mob/synx_modular.dmi', "synx_horns[option]", dir = 2, pixel_x = -0, pixel_y = -0)
+				LAZYSET(options, option, I)
+			choice = show_radial_menu(src, src, options, radius = 90)
+			if(!choice || QDELETED(src) || src.incapacitated())
+				return 0
+			var/new_color = input("Pick horn color:","Horn Color", overlay_colors["Horns"]) as null|color
+			if(!new_color)
+				return 0
+			horns = choice
+			overlay_colors["Horns"] = new_color
+		if("Marks")
+			options = marking_styles
+			for(var/option in options)
+				var/image/I = new /image('modular_chomp/icons/mob/synx_modular.dmi', "synx_markings[option]", dir = 2, pixel_x = -0, pixel_y = -0)
+				LAZYSET(options, option, I)
+			choice = show_radial_menu(src, src, options, radius = 90)
+			if(!choice || QDELETED(src) || src.incapacitated())
+				return 0
+			var/new_color = input("Pick marking color:","Marking Color", overlay_colors["Marks"]) as null|color
+			if(!new_color)
+				return 0
+			markings = choice
+			overlay_colors["Marks"] = new_color
+		if("Eyes")
+			options = eye_styles
+			for(var/option in options)
+				var/image/I = new /image('modular_chomp/icons/mob/synx_modular.dmi', "synx_eyes[option]", dir = 2, pixel_x = -0, pixel_y = -0)
+				LAZYSET(options, option, I)
+			choice = show_radial_menu(src, src, options, radius = 90)
+			if(!choice || QDELETED(src) || src.incapacitated())
+				return 0
+			var/new_color = input("Pick eye color:","Eye Color", overlay_colors["Eyes"]) as null|color
+			if(!new_color)
+				return 0
+			eyes = choice
+			overlay_colors["Eyes"] = new_color
+	if(.)
+		build_icons()
 
 ////////////////////////////////////////
 ////////////////PET VERSION/////////////
@@ -610,6 +776,7 @@
 ////////////////////////////////////////
 ////////////////SYNX VARIATIONS/////////
 ////////////////////////////////////////
+//TODO: Figure out a way to properly implement these into the customization system. Not important rn as far as getting the system out goes, since none of them are actually in use, but these should probably be either commented out/removed or otherwise implemented into the system- their sprites don't play nice with it as things stand!
 /mob/living/simple_mob/animal/synx/ai/pet/holo
 	poison_chance = 100
 	poison_type = "fakesynxchem" //unlike synxchem this one heals!
@@ -635,7 +802,8 @@
 	vore_escape_chance = 30 //Much higher escape chance.. it's a hologram.
 	swallowTime = 10 SECONDS //Much more time to run
 
-/mob/living/simple_mob/animal/synx/ai/pet/greed
+//Commenting out OC content as to fit with content policy while I'm at it-- it won't work with the modular system anyways currently. Sorry, Shark!! I might try to add in a back marking category at some point so Greed can be recreated here at least, though. -Azel
+/*/mob/living/simple_mob/animal/synx/ai/pet/greed
 	name = "Greed"
 	desc = "A cold blooded, genderless, parasitic eel from the more distant and stranger areas of the cosmos. black, perpetually grinning and possessing a hunger as enthusiastic and endless as humanity's sense of exploration.. This one has the name Greed burnt into its back, the burnt in name seems to be luminescent making it harder for it to blend into the dark."
 	//icon= //icon= would just set what DMI we are using, we already have our special one set.
@@ -654,6 +822,7 @@
 	vore_escape_chance = 5 //Multivore allows for people to shove eachother out so lower normal escape chance.
 
 /mob/living/simple_mob/animal/synx/ai/pet/greed/synth
+
 /*
 ▓███▓     ▓▓▓     ▓▓▓     ▓▓▓     ▓▓▓     ▓███▓
  ▓▓   ▓▓▓█ ▓▓  ▓▓█ ▓▓  ▓▓█ ▓▓  ▓▓█ ▓▓  ▓▓█ ▓▓   ▓▓▓█
@@ -724,7 +893,7 @@
 	speak = list( )
 	//Vore Section
 	vore_capacity = 2
-
+*/
 /mob/living/simple_mob/animal/synx/ai/pet/clown
 	//hostile = 1
 	poison_chance = 100
@@ -785,9 +954,10 @@
 	name = "This is synxes"
 
 /obj/random/mob/synx/item_to_spawn()
-	return pick(prob(66);/mob/living/simple_mob/animal/synx/ai/pet/greed,
-		prob(33);/mob/living/simple_mob/animal/synx/ai/pet/holo,
-		prob(50);/mob/living/simple_mob/animal/synx/ai,) //normal eel boyo.
+//	return pick(prob(66);/mob/living/simple_mob/animal/synx/ai/pet/greed,
+//		prob(33);/mob/living/simple_mob/animal/synx/ai/pet/holo, // Commented out as it doesn't currently work with the modular sprite system. Will try and get this up and working before TOO long, hopefully. -Azel
+	return /*pick (prob(50);*//mob/living/simple_mob/animal/synx/ai///) //normal eel boyo.
+
 
 ////////////////////////////////////////////////////////////////////////////
 //////////////////////////NOT A SYNX///////but acts kinda like one/////////
@@ -835,4 +1005,3 @@ This includes the sprites of the below Mob which are based upon SCP 939.
 
 #undef SYNX_LOWER_DAMAGE
 #undef SYNX_UPPER_DAMAGE
- */
