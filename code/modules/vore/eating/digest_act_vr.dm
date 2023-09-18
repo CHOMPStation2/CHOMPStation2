@@ -93,8 +93,10 @@
 				O.forceMove(src.loc)
 		GLOB.items_digested_roundstat++
 		var/g_sound_volume = 100
+		var/noise_freq = 42500
 		if(istype(B))
 			g_sound_volume = B.sound_volume
+			noise_freq = B.noise_freq
 		var/soundfile
 		if(w_class >= 4)
 			soundfile = pick('sound/vore/shortgurgles/gurgle_L1.ogg', 'sound/vore/shortgurgles/gurgle_L2.ogg', 'sound/vore/shortgurgles/gurgle_L3.ogg')
@@ -102,7 +104,7 @@
 			soundfile = pick('sound/vore/shortgurgles/gurgle_M1.ogg', 'sound/vore/shortgurgles/gurgle_M2.ogg', 'sound/vore/shortgurgles/gurgle_M3.ogg')
 		else
 			soundfile = pick('sound/vore/shortgurgles/gurgle_S1.ogg', 'sound/vore/shortgurgles/gurgle_S2.ogg', 'sound/vore/shortgurgles/gurgle_S3.ogg')
-		playsound(src, soundfile, vol = g_sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE)
+		playsound(src, soundfile, vol = g_sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
 		if(istype(B) && B.recycle(src))
 			g_damage = w_class / 2
 			qdel(src)

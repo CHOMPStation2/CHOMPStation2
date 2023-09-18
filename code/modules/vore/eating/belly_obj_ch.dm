@@ -124,6 +124,7 @@
 	var/egg_cycles = 0						// Process egg mode after 10 cycles.
 	var/recycling = FALSE					// Recycling mode.
 	var/entrance_logs = TRUE				// Belly-specific entry message toggle.
+	var/noise_freq = 42500					// Tasty sound prefs.
 
 /obj/belly/proc/GetFullnessFromBelly()
 	if(!affects_vore_sprites)
