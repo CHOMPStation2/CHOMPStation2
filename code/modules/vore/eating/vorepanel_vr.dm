@@ -212,6 +212,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"egg_type" = selected.egg_type,
 			"egg_name" = selected.egg_name, //CHOMPAdd
 			"recycling" = selected.recycling, //CHOMPAdd
+			"entrance_logs" = selected.entrance_logs, //CHOMPAdd
 			"nutrition_percent" = selected.nutrition_percent,
 			"digest_brute" = selected.digest_brute,
 			"digest_burn" = selected.digest_burn,
@@ -870,7 +871,14 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					if(new_recycling == 0)
 						new_belly.recycling = FALSE
 					if(new_recycling == 1)
-						new_belly.recycling = TRUE //CHOMPAdd End
+						new_belly.recycling = TRUE
+
+				if(isnum(belly_data["entrance_logs"]))
+					var/new_entrance_logs = belly_data["entrance_logs"]
+					if(new_entrance_logs == 0)
+						new_belly.entrance_logs = FALSE
+					if(new_entrance_logs == 1)
+						new_belly.entrance_logs = TRUE //CHOMPAdd End
 
 				if(istext(belly_data["selective_preference"]))
 					var/new_selective_preference = belly_data["selective_preference"]
@@ -2516,6 +2524,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			. = TRUE
 		if("b_feedable") //CHOMPAdd
 			host.vore_selected.is_feedable = !host.vore_selected.is_feedable
+			. = TRUE
+		if("b_entrance_logs") //CHOMPAdd
+			host.vore_selected.entrance_logs = !host.vore_selected.entrance_logs
 			. = TRUE
 		if("b_bulge_size")
 			var/new_bulge = tgui_input_number(user, "Choose the required size prey must be to show up on examine, ranging from 25% to 200% Set this to 0 for no text on examine.", "Set Belly Examine Size.", max_value = 200, min_value = 0)

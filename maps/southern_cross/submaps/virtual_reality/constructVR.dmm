@@ -4070,7 +4070,8 @@
 /area/vr/powered/redbase)
 "eIg" = (
 /mob/living/simple_mob/humanoid/merc/ranged/sniper{
-	special_attack_max_range = 15
+	special_attack_max_range = 15;
+	ai_holder_type = /datum/ai_holder/simple_mob/merc/eclipse/ranged/sniper
 	},
 /turf/simulated/floor/outdoors/rocks{
 	temperature = 293.15;

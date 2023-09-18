@@ -123,6 +123,7 @@
 	var/cycle_sloshed = FALSE				// Has vorgan entrance made a wet slosh this cycle? Soundspam prevention for multiple items entered.
 	var/egg_cycles = 0						// Process egg mode after 10 cycles.
 	var/recycling = FALSE					// Recycling mode.
+	var/entrance_logs = TRUE				// Belly-specific entry message toggle.
 
 /obj/belly/proc/GetFullnessFromBelly()
 	if(!affects_vore_sprites)
