@@ -18,10 +18,10 @@
 
 	assisted_langs = list()
 
-	male_cough_sounds = list('sound/effects/mob_effects/m_cougha.ogg','sound/effects/mob_effects/m_coughb.ogg', 'sound/effects/mob_effects/m_coughc.ogg')
-	female_cough_sounds = list('sound/effects/mob_effects/f_cougha.ogg','sound/effects/mob_effects/f_coughb.ogg')
-	male_sneeze_sound = 'sound/effects/mob_effects/sneeze.ogg'
-	female_sneeze_sound = 'sound/effects/mob_effects/f_sneeze.ogg'
+	// male_cough_sounds = list('sound/effects/mob_effects/m_cougha.ogg','sound/effects/mob_effects/m_coughb.ogg', 'sound/effects/mob_effects/m_coughc.ogg')
+	// female_cough_sounds = list('sound/effects/mob_effects/f_cougha.ogg','sound/effects/mob_effects/f_coughb.ogg')
+	// male_sneeze_sound = 'sound/effects/mob_effects/sneeze.ogg'
+	// female_sneeze_sound = 'sound/effects/mob_effects/f_sneeze.ogg'
 
 	valid_transform_species = list(SPECIES_HUMAN, SPECIES_HUMAN_VATBORN, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_SKRELL, SPECIES_DIONA, SPECIES_TESHARI, SPECIES_VOX, SPECIES_MONKEY, SPECIES_SKELETON)
 
@@ -91,6 +91,11 @@
 
 	if(!vr_holder)
 		return
+	if(tfed_into_mob_check()) //CHOMPedit start: make sure we're not TFed and revert if we are before checking for a mind.
+		var/mob/living/M = loc
+		if(istype(M)) // Sanity check, though shouldn't be needed since this is already checked by the proc.
+			M.revert_mob_tf() // CHOMPedit end
+
 	if(!mind)
 		return
 

@@ -63,6 +63,7 @@
 //	var/do_glow = TRUE
 
 	can_be_drop_prey = FALSE //CHOMP Add
+	can_pain_emote = FALSE // CHOMPEdit: Can't feel pain
 
 /mob/living/simple_mob/construct/place_spell_in_hand(var/path)
 	if(!path || !ispath(path))
@@ -105,7 +106,7 @@
 	real_name = name
 	for(var/spell in construct_spells)
 		src.add_spell(new spell, "const_spell_ready")
-	updateicon()
+	update_icon()
 
 /*
 /mob/living/simple_mob/construct/update_icon()

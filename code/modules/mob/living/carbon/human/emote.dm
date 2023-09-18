@@ -171,9 +171,14 @@ var/list/_human_default_emotes = list(
 	/decl/emote/audible/croon,
 	/decl/emote/audible/lwarble,
 	/decl/emote/audible/croak_skrell,
+	/decl/emote/audible/roarbark,
+	/decl/emote/audible/dook,
 	//VOREStation Add End
 	//CHOMP Add start
-	/decl/emote/audible/prbt2
+	/decl/emote/audible/prbt2,
+	/decl/emote/audible/pain,
+	/decl/emote/audible/mgeow,
+	/decl/emote/visible/flip/slip
 	//CHOMP Add end
 )
 
@@ -315,8 +320,11 @@ var/list/_simple_mob_default_emotes = list(
 	/decl/emote/audible/vox_shriek,
 	/decl/emote/audible/purr,
 	/decl/emote/audible/purrlong,
+	/decl/emote/audible/dook,
 	//CHOMP Add start
-	/decl/emote/audible/prbt2
+	/decl/emote/audible/prbt2,
+	/decl/emote/audible/pain,
+	/decl/emote/audible/mgeow
 	//CHOMP Add end
 	)
 	//VOREStation Add End
@@ -336,7 +344,7 @@ var/list/_simple_mob_default_emotes = list(
 
 	var/datum/gender/T = gender_datums[get_visible_gender()]
 
-	pose = sanitize(tgui_input_text(usr, "This is [src]. [T.he]...", "Pose", null))
+	pose = strip_html_simple(tgui_input_text(usr, "This is [src]. [T.he]...", "Pose", null))
 
 /mob/living/carbon/human/verb/set_flavor()
 	set name = "Set Flavour Text"

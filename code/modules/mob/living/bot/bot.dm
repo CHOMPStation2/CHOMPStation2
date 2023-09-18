@@ -42,6 +42,8 @@
 	var/frustration = 0
 	var/max_frustration = 0
 
+	can_pain_emote = FALSE // CHOMPEdit: Sanity/safety, if bots ever get emotes later, undo this
+
 /mob/living/bot/New()
 	..()
 	update_icons()
@@ -325,7 +327,7 @@
 	if(makeStep(patrol_path))
 		frustration = 0
 	else if(max_frustration)
-		frustration++ 
+		frustration++
 	//CHOMPEdit End
 	return
 
@@ -532,6 +534,8 @@
 	src.ckey = AI.ckey
 	name = AI.name
 	ooc_notes = AI.ooc_notes
+	ooc_notes_likes = AI.ooc_notes_likes
+	ooc_notes_dislikes = AI.ooc_notes_dislikes
 	to_chat(src, span_notice("You feel a tingle in your circuits as your systems interface with \the [initial(src.name)]."))
 	if(AI.idcard.access)
 		botcard.access	|= AI.idcard.access
@@ -541,6 +545,8 @@
 		var/mob/living/silicon/pai/AI = paicard.pai
 		AI.ckey = src.ckey
 		AI.ooc_notes = ooc_notes
+		AI.ooc_notes_likes = ooc_notes_likes
+		AI.ooc_notes_dislikes = ooc_notes_dislikes
 		paicard.forceMove(src.loc)
 		paicard = null
 		name = initial(name)

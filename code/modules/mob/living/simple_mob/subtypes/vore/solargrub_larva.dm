@@ -11,7 +11,7 @@ var/global/list/grub_machine_overlays = list()
 
 	health = 5
 	maxHealth = 5
-	movement_cooldown = 3
+	movement_cooldown = 0
 
 	melee_damage_lower = 1	// This is a tiny worm. It will nibble and thats about it.
 	melee_damage_upper = 1
@@ -175,6 +175,7 @@ var/global/list/grub_machine_overlays = list()
 /mob/living/simple_mob/animal/solargrub_larva/proc/expand_grub()
 	eject_from_machine()
 	visible_message("<span class='warning'>\The [src] suddenly balloons in size!</span>")
+	log_game("A larva has matured into a grub in area [src.loc.name] ([src.x],[src.y],[src.z]")
 	var/mob/living/simple_mob/vore/solargrub/adult = new(get_turf(src))
 	adult.tracked = tracked
 //	grub.power_drained = power_drained //TODO
@@ -287,6 +288,16 @@ var/global/list/grub_machine_overlays = list()
 
 
 /obj/item/device/multitool/afterattack(obj/O, mob/user, proximity)
+	if(proximity)
+		if(istype(O, /obj/machinery))
+			var/mob/living/simple_mob/animal/solargrub_larva/grub = locate() in O
+			if(grub)
+				grub.eject_from_machine(O)
+				to_chat(user, "<span class='warning'>You disturb a grub nesting in \the [O]!</span>")
+				return
+	return ..()
+
+/obj/item/weapon/melee/baton/afterattack(obj/O, mob/user, proximity)
 	if(proximity)
 		if(istype(O, /obj/machinery))
 			var/mob/living/simple_mob/animal/solargrub_larva/grub = locate() in O

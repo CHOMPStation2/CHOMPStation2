@@ -56,7 +56,7 @@ var/global/list/default_medbay_channels = list(
 
 	// Bluespace radios talk directly to telecomms equipment
 	var/bluespace_radio = FALSE
-	var/weakref/bs_tx_weakref //Maybe misleading, this is the device to TRANSMIT TO
+	var/datum/weakref/bs_tx_weakref //Maybe misleading, this is the device to TRANSMIT TO
 	// For mappers or subtypes, to start them prelinked to these devices
 	var/bs_tx_preload_id
 	var/bs_rx_preload_id
@@ -104,14 +104,14 @@ var/global/list/default_medbay_channels = list(
 			//Try to find a receiver
 			for(var/obj/machinery/telecomms/receiver/RX in telecomms_list)
 				if(RX.id == bs_tx_preload_id) //Again, bs_tx is the thing to TRANSMIT TO, so a receiver.
-					bs_tx_weakref = weakref(RX)
+					bs_tx_weakref = WEAKREF(RX)
 					RX.link_radio(src)
 					break
 			//Hmm, howabout an AIO machine
 			if(!bs_tx_weakref)
 				for(var/obj/machinery/telecomms/allinone/AIO in telecomms_list)
 					if(AIO.id == bs_tx_preload_id)
-						bs_tx_weakref = weakref(AIO)
+						bs_tx_weakref = WEAKREF(AIO)
 						AIO.link_radio(src)
 						break
 			if(!bs_tx_weakref)
@@ -490,7 +490,12 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 	else if(subspace_transmission)
 		var/list/jamming = is_jammed(src)
 		if(jamming)
-			var/distance = jamming["distance"]
+			var/distance = 0
+			var/area/our_area = get_area(src)
+			if(our_area.no_comms)
+				distance = 99
+			else
+				distance = jamming["distance"]
 			to_chat(M, "<span class='danger'>\icon[src][bicon(src)] You hear the [distance <= 2 ? "loud hiss" : "soft hiss"] of static.</span>")
 			return FALSE
 

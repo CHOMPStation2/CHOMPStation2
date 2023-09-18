@@ -12,7 +12,7 @@ These are just guidelines, not rules, use your best judgment and feel free to pr
 
 [How Can I Contribute?](#how-can-i-contribute)
   * [Your First Code Contribution](#your-first-code-contribution)
-  * [Chomp Station Coding Standards](#Chomp Station-coding-standards)
+  * [Chomp Station Coding Standards](#chomp-station-coding-standards)
   * [Pull Requests](#pull-requests)
   * [Git Commit Messages](#git-commit-messages)
 
@@ -31,6 +31,14 @@ By participating, you are expected to uphold this code.
 ### Your First Code Contribution
 
 Unsure where to begin contributing to Chomp Station? You can start by looking through the issues tab.
+
+### Chomp Station Map Edits
+
+* Our base map files are in [map/southern_cross/].
+* Our stationary overmap location files are in [maps/southern_cross/overmap/].
+* Our random overmap POI files are in [modular_chomp/code/modules/overmap/].
+* Our surface POI map files (Wilderness, plains, ...) are in [modular_chomp/maps/submaps/surface_submaps/].
+* Map changes must be in tgm format. See the [Mapmerge2 Readme] for details, or use [StrongDMM] which can automatically save maps as tgm.
 
 ### Chomp Station Coding Standards
 
@@ -55,7 +63,6 @@ Mostly for chomp exclusive stuff, otherwise if you need to modify a base file fo
 * Change whitespace as little as possible. Do not randomly add/remove whitespace.
 * Any new files should preferrably go into the modular_chomp folder following the file structure of where it would be placed normally. The old method was to have "_ch" at the end. For example, "life_ch.dm".
 * Do not make changes to base icon files. New icon files should go into modular_chomp and code should be changed to point to the new file.
-* Map changes must be in tgm format. See the [Mapmerge2 Readme] for details, or use [StrongDMM] which can automatically save maps as tgm.
 
 The `attempt_ch()` proc has been added for your convienence. It allows a many-line change to become a single-line change in the existing Polaris files, preserving mergeability and allowing better code separation while preventing your new code from causing runtimes that stop the original code from running. If you are wanting to inject new procedures into an existing proc, called `update_atoms()` for example, you would create `update_atoms_ch()` in a nearby `_ch.dm` file, and then call to it from a single line in the original `update_atoms()` with `attempt_ch()`.
 

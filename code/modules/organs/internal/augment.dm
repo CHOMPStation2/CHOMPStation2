@@ -27,7 +27,7 @@
 	var/radial_name = null	// The augment's name in the Radial Menu.
 	var/radial_state = null	// Icon state for the augment's radial icon.
 
-	var/aug_cooldown = 30 SECONDS
+	var/aug_cooldown = 1 SECONDS //CHOMPedit, no reason for it to be 30 seconds, the powerful implants already have their own values
 	var/cooldown = null
 
 /obj/item/organ/internal/augment/Initialize()

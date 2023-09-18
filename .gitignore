@@ -26,3 +26,5 @@ temp.dmi
 
 node_modules/
 package-lock.json
+
+config/jobwhitelist.txt

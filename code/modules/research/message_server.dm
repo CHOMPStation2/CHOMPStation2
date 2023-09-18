@@ -70,15 +70,33 @@ var/global/list/obj/machinery/message_server/message_servers = list()
 			//Messages having theese tokens will be rejected by server. Case sensitive
 	var/spamfilter_limit = MESSAGE_SERVER_DEFAULT_SPAM_LIMIT	//Maximal amount of tokens
 
+	var/datum/looping_sound/tcomms/soundloop // CHOMPStation Add: Hummy noises
+	var/noisy = FALSE  // CHOMPStation Add: Hummy noises
+
 /obj/machinery/message_server/New()
 	message_servers += src
 	decryptkey = GenerateKey()
 	send_pda_message("System Administrator", "system", "This is an automated message. The messaging system is functioning correctly.")
+
+	// CHOMPAdd: PDA Messaging Server humming
+	soundloop = new(list(src), FALSE)
+	if(prob(60)) // 60% chance to change the midloop
+		if(prob(40))
+			soundloop.mid_sounds = list('sound/machines/tcomms/tcomms_02.ogg' = 1)
+			soundloop.mid_length = 40
+		else if(prob(20))
+			soundloop.mid_sounds = list('sound/machines/tcomms/tcomms_03.ogg' = 1)
+			soundloop.mid_length = 10
+		else
+			soundloop.mid_sounds = list('sound/machines/tcomms/tcomms_04.ogg' = 1)
+			soundloop.mid_length = 30
+	// CHOMPAdd End
 	..()
 	return
 
 /obj/machinery/message_server/Destroy()
 	message_servers -= src
+	QDEL_NULL(soundloop) // CHOMPStation Add: Hummy noises
 	..()
 	return
 
@@ -99,7 +117,12 @@ var/global/list/obj/machinery/message_server/message_servers = list()
 	//	decryptkey = generateKey()
 	if(active && (stat & (BROKEN|NOPOWER)))
 		active = 0
+		soundloop.stop() // CHOMPStation Add: Hummy noises
+		noisy = FALSE // CHOMPStation Add: Hummy noises
 		return
+	if(!noisy && active) // CHOMPStation Add: Hummy noises
+		soundloop.start() // CHOMPStation Add: Hummy noises
+		noisy = TRUE // CHOMPStation Add: Hummy noises
 	update_icon()
 	return
 
@@ -143,7 +166,7 @@ var/global/list/obj/machinery/message_server/message_servers = list()
 
 /obj/machinery/message_server/attack_hand(user as mob)
 //	to_chat(user, "<font color='blue'>There seem to be some parts missing from this server. They should arrive on the station in a few days, give or take a few CentCom delays.</font>")
-	to_chat(user, "You toggle PDA message passing from [active ? "On" : "Off"] to [active ? "Off" : "On"]")
+	to_chat(user, "<span class='filter_notice'>You toggle PDA message passing from [active ? "On" : "Off"] to [active ? "Off" : "On"].</span>")
 	active = !active
 	update_icon()
 
@@ -155,7 +178,7 @@ var/global/list/obj/machinery/message_server/message_servers = list()
 		spamfilter_limit += round(MESSAGE_SERVER_DEFAULT_SPAM_LIMIT / 2)
 		user.drop_item()
 		qdel(O)
-		to_chat(user, "You install additional memory and processors into message server. Its filtering capabilities been enhanced.")
+		to_chat(user, "<span class='filter_notice'>You install additional memory and processors into message server. Its filtering capabilities been enhanced.</span>")
 	else
 		..(O, user)
 

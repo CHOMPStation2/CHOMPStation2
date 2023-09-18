@@ -84,7 +84,7 @@
 	if(ghost.client.prefs.species) // In case we somehow don't have a species set here.
 		chosen_species = GLOB.all_species[ghost_client.prefs.species]
 
-	if(chosen_species.flags && NO_SCAN)
+	if((chosen_species.spawn_flags & SPECIES_IS_WHITELISTED) || (chosen_species.spawn_flags & SPECIES_IS_RESTRICTED))
 		to_chat(ghost, "<span class='warning'>This species cannot be resleeved!</span>")
 		return
 	// CHOMPEdit End: Add checks for Whitelist + Resleeving
@@ -172,12 +172,12 @@
 			var/datum/language/keylang = GLOB.all_languages[ghost_client.prefs.language_custom_keys[key]]
 			if(keylang)
 				new_character.language_keys[key] = keylang
-	// CHOMPStation Add: Preferred Language Setting;
+	// VOREStation Add: Preferred Language Setting;
 	if(ghost_client.prefs.preferred_language) // Do we have a preferred language?
 		var/datum/language/def_lang = GLOB.all_languages[ghost_client.prefs.preferred_language]
 		if(def_lang)
 			new_character.default_language = def_lang
-	// CHOMPStation Add End
+	// VOREStation Add End
 
 	//If desired, apply equipment.
 	if(equip_body)

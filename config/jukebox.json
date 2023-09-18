@@ -3533,6 +3533,7 @@
 "url": "https://files.catbox.moe/8rn8uz.mp3",
 "title": "I Wupped Batman's Ass",
 "duration": 3270,
+"genre": "Miscellaneous",
 "artist": "Wesley Willis Fiasco",
 "secret": true,
 "lobby": false,
@@ -3974,6 +3975,7 @@
 "url": "https://files.catbox.moe/3h38kn.mp3",
 "title": "Among Us",
 "duration": 720,
+"artist": "Leonz",
 "genre": "Disco, Funk, Soul, and R&B",
 "secret": false,
 "lobby": false,
@@ -3983,6 +3985,7 @@
 "url": "https://files.catbox.moe/rqhxj1.mp3",
 "title": "Leggy Zone",
 "duration": 1470,
+"artist": "Binox",
 "genre": "Electronic",
 "secret": true,
 "lobby": false,
@@ -3992,6 +3995,7 @@
 "url": "https://files.catbox.moe/e6l6mw.mp3",
 "title": "Shop Theme",
 "duration": 8910,
+"artist": "Kazumi Totaka/Nintendo",
 "genre": "Electronic",
 "secret": false,
 "lobby": false,
@@ -4450,7 +4454,7 @@
 {
 "url": "https://files.catbox.moe/ngtv3e.mp3",
 "title": "Where My Heart Will Take Me",
-"duration": 0,
+"duration": 2490,
 "artist": "Russell Watson",
 "genre": "Country and Western",
 "secret": false,
@@ -4698,6 +4702,16 @@
 "genre": "Rock"
 },
 {
+"url": "https://files.catbox.moe/8r5d7q.mp3",
+"title": "Take me to Snurch (Snail Church)",
+"duration": 2370,
+"genre": "Pop",
+"artist": "fairyeiry",
+"secret": true,
+"lobby": false,
+"jukebox": true
+},
+{
 "url": "https://files.catbox.moe/2ozzmg.m4a",
 "title": "Charlie's Inferno",
 "duration": 2250,
@@ -4852,6 +4866,26 @@
 "duration": 2110,
 "artist": "Warframe",
 "genre": "Folk and Indie",
+"secret": false,
+"lobby": false,
+"jukebox": true
+},
+{
+"url": "https://archive.org/download/i-care-because-you-do-flac/10.%20Aphex%20Twin%20-%20Alberto%20Balsalm.mp3",
+"title": "Alberto Balsalm",
+"duration": 3110,
+ "artist": "Aphex Twin",
+"genre": "Electronic",
+"secret": false,
+"lobby": false,
+"jukebox": true
+},
+{
+"url": "https://archive.org/download/selected-ambient-works-85-92-flac/01.%20Aphex%20Twin%20-%20Xtal.mp3",
+"title": "Xtal",
+"duration": 2930,
+"artist": "Aphex Twin",
+"genre": "Electronic",
 "secret": false,
 "lobby": false,
 "jukebox": true

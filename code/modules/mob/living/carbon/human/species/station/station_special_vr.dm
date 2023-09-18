@@ -35,8 +35,7 @@
 	min_age = 18
 	max_age = 80
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
+	species_sounds = "Unset" // CHOMPEdit: Chimera get a default/safety of unset, going off their icon base if there's none overriding.
 
 	blurb = "Some amalgamation of different species from across the universe,with extremely unstable DNA, making them unfit for regular cloners. \
 	Widely known for their voracious nature and violent tendencies when stressed or left unfed for long periods of time. \
@@ -338,6 +337,7 @@
 	slowdown = -0.15	//Small speedboost, as they've got a bunch of legs. Or something. I dunno.
 	brute_mod = 0.8		//20% brute damage reduction
 	burn_mod =  1.15	//15% burn damage increase. They're spiders. Aerosol can+lighter = dead spiders.
+	throwforce_absorb_threshold = 10
 
 	num_alternate_languages = 3
 	species_language = LANGUAGE_VESPINAE
@@ -357,8 +357,9 @@
 	min_age = 18
 	max_age = 80
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
+	species_sounds = "Spider"
+	// male_scream_sound = null //CHOMPedit
+	// female_scream_sound = null //CHOMPedit
 
 	blurb = "Vasilissans are a tall, lanky, spider like people. \
 	Each having four eyes, an extra four, large legs sprouting from their back, and a chitinous plating on their body, and the ability to spit webs \
@@ -433,12 +434,17 @@
 	primitive_form = "Wolpin"
 	color_mult = 1
 	icon_height = 64
+	can_climb = TRUE
+	climbing_delay = 1
 
 	min_age = 18
 	max_age = 200
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
+	// CHOMPEdit Start: Species Sounds
+	species_sounds = "Canine"
+	// male_scream_sound = null
+	// female_scream_sound = null
+	// CHOMPEdit End
 
 	blurb = "Big buff werewolves. These are a limited functionality event species that are not balanced for regular gameplay. Adminspawn only."
 
@@ -473,4 +479,3 @@
 		BP_L_FOOT = list("path" = /obj/item/organ/external/foot),
 		BP_R_FOOT = list("path" = /obj/item/organ/external/foot/right)
 		)
-

@@ -75,17 +75,37 @@
 
 	// The languages the species can't speak without an assisted organ.
 	// This list is a guess at things that no one other than the parent species should be able to speak
-	var/list/assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX, LANGUAGE_PROMETHEAN) //VOREStation Edit
+	var/list/assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX, LANGUAGE_PROMETHEAN, LANGUAGE_HIVEMIND) //CHOMPedit: Added Hivemind.
 
 	//Soundy emotey things.
 	var/scream_verb_1p = "scream"
 	var/scream_verb_3p = "screams"
+	// CHOMPEdit Start: Overriding with our own species-specific sounds.
+	// If you're wanting to know where the lists are per-species, go to sound.dm
+	/*
 	var/male_scream_sound = list('sound/effects/mob_effects/m_scream_1.ogg','sound/effects/mob_effects/m_scream_2.ogg','sound/effects/mob_effects/m_scream_3.ogg','sound/effects/mob_effects/m_scream_4.ogg') //CHOMpedit start : Added tgstation screams
 	var/female_scream_sound = list('sound/effects/mob_effects/f_scream_1.ogg','sound/effects/mob_effects/f_scream_2.ogg','sound/effects/mob_effects/f_scream_3.ogg','sound/effects/mob_effects/f_scream_4.ogg') //CHOMPedit end
 	var/male_cough_sounds = list('sound/effects/mob_effects/m_cougha.ogg','sound/effects/mob_effects/m_coughb.ogg', 'sound/effects/mob_effects/m_coughc.ogg')
 	var/female_cough_sounds = list('sound/effects/mob_effects/f_cougha.ogg','sound/effects/mob_effects/f_coughb.ogg')
 	var/male_sneeze_sound = 'sound/effects/mob_effects/sneeze.ogg'
 	var/female_sneeze_sound = 'sound/effects/mob_effects/f_sneeze.ogg'
+	*/
+	/* Our base species sounds.
+	 * Note that species_sounds is meant to be used in the place of gendered sound.
+	 * If your species has gendered sounds, set 'gender_specific_species_sounds' to TRUE, and define your gendered sounds below.
+	*/
+	var/species_sounds = "None"
+	var/gender_specific_species_sounds = FALSE // This variable controls if our audible emotes pick based off of gender. Only humans have these so far.
+	var/species_sounds_male = "None" // Safely ignored if the above is set FALSE
+	var/species_sounds_female = "None" // Safely ignored if the above is set FALSE
+	var/cough_volume = 50 // Self-explanatory, define this separately on your species if the sound files are louder.
+	var/sneeze_volume = 50 // Self-explanatory, define this separately on your species if the sound files are louder.
+	var/scream_volume = 60 // Self-explanatory, define this separately on your species if the sound files are louder.
+	var/pain_volume = 50 // Self-explanatory, define this separately on your species if the sound files are louder.
+	var/gasp_volume = 50 // Self-explanatory, define this separately on your species if the sound files are louder.
+	var/death_volume = 50 // Self-explanatory, define this separately on your species if the sound files are louder.
+	// var/species_sounds_herm // If you want a custom sound played for other genders, just add them like so
+	// CHOMPEdit End
 
 	// Combat/health/chem/etc. vars.
 	var/total_health = 100								// How much damage the mob can take before entering crit.
@@ -102,6 +122,7 @@
 	var/flash_mod =     1								// Stun from blindness modifier (flashes and flashbangs)
 	var/flash_burn =    0								// how much damage to take from being flashed if light hypersensitive
 	var/sound_mod =     1								// Multiplier to the effective *range* of flashbangs. a flashbang's bang hits an entire screen radius, with some falloff.
+	var/throwforce_absorb_threshold = 0					// Ignore damage of thrown items below this value
 
 	var/chem_strength_heal =    1						// Multiplier to most beneficial chem strength
 	var/chem_strength_pain =    1						// Multiplier to painkiller strength (could be used in a negative trait to simulate long-term addiction reducing effects, etc.)
@@ -575,4 +596,3 @@
 
 /datum/species/proc/post_spawn_special(mob/living/carbon/human/H)
 	return
-

@@ -9,18 +9,18 @@
 /// Away Missions
 /// If you're reading this and want to add a new away mission, reference /tether/submaps/_tether_submaps.dm or existing away missions for how to set it up.
 
-/*
+// This is for integration tests only.
+// Always add any new away missions/gateways/lateloaded maps that are not PoIs here.
 #if AWAY_MISSION_TEST
-#include "beach/beach.dmm"
-#include "beach/cave.dmm"
-#include "alienship/alienship.dmm"
-#include "aerostat/aerostat.dmm"
-#include "aerostat/surface.dmm"
-#include "space/debrisfield.dmm"
+#include "../overmap/planets/kara/aerostat/aerostat.dmm"
+#include "../overmap/planets/kara/northern_star/northern_star_mine.dmm"
+#include "../overmap/space/fueldepot.dmm"
+#include "gateway/BaseBlep.dmm"
+#include "gateway/maddnesslab.dmm"
+#include "gateway/snowfield.dmm"
+#include "virtual_reality/constructVR.dmm"
 #endif
-*/
 
-// Commented out until we either port or replace away missions, but this is the framework for loading each away mission.
 
 //////////////////////////////////////////////////////////////////////////////////////
 
@@ -35,11 +35,32 @@
 	name = "Gateway Destination"
 	z = Z_LEVEL_GATEWAY
 
-#include "gateway/snowfield_ch.dm"	//CHOMPEDIT - Use the good one instead
+#include "gateway/snowfield_ch.dm" //CHOMPEDIT - Use the good one instead
 /datum/map_template/sc_lateload/gateway/snowfield
 	name = "Snow Field"
 	desc = "An old base in middle of snowy wasteland"
 	mappath = 'gateway/snowfield.dmm'
+
+#include "gateway/darkrps.dm"
+/datum/map_template/sc_lateload/gateway/darkrps
+	name = "Abandoned City"
+	desc = "An abandoned city overrun with piracy and mercernaries."
+	mappath = 'gateway/darkrps.dmm'
+	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
+
+#include "gateway/BaseBlep.dm"
+/datum/map_template/sc_lateload/gateway/baseblep
+	name = "Base Blep"
+	desc = "A brand new but already lost base at the end of a squishy canyon"
+
+	mappath = 'gateway/BaseBlep.dmm'
+	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
+
+#include "gateway/maddnesslab.dm"
+/datum/map_template/sc_lateload/gateway/maddnesslab
+	name = "Maddness Lab"
+	desc = "An ancient base brimming with creations of maddness"
+	mappath = 'gateway/maddnesslab.dmm'
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
 
 #include "gateway/carpfarm.dm"
@@ -50,7 +71,7 @@
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
 
 //VR maps go here, tell me if theres a better way to load this
-#include "virtual_reality/constructVR.dm"
+// #include "virtual_reality/constructVR.dm" Virtual Reality areas included by default.
 /datum/map_template/sc_lateload/vr_world
 	name = "VR World"
 	desc = "A dynamic, virtual world."
@@ -62,6 +83,7 @@
 	z = Z_LEVEL_VR_REALM
 
 //Space submaps/sectors/POIs/whatever you wanna freaking call it, go here.
+/* Pretty sure we don't use this.
 #include "../../expedition_vr/space/_fueldepot.dm"
 /datum/map_template/sc_lateload/away_fueldepot
 	name = "Fuel Depot - Z1 Space"
@@ -72,7 +94,7 @@
 /datum/map_z_level/sc_lateload/away_fueldepot
 	name = "Away Mission - Fuel Depot"
 	z = Z_LEVEL_FUELDEPOT
-
+*/
 
 //////////////////////////////////////////////////////////////////////////////////////
 // Code Shenanigans for lateload maps

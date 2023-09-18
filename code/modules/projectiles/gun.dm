@@ -80,6 +80,8 @@
 	var/sel_mode = 1 //index of the currently selected mode
 	var/list/firemodes = list()
 
+	var/reload_time = 1		//Base reload time in seconds
+
 	//aiming system stuff
 	var/keep_aim = 1 	//1 for keep shooting until aim is lowered
 						//0 for one bullet after tarrget moves and aim is lowered
@@ -309,13 +311,15 @@
 	if(!canremove)
 		return
 
+	//CHOMPEdit start - move these around so that nonhumans can actually click-drag guns at all
+	if (istype(usr.loc,/obj/mecha)) // stops inventory actions in a mech. why?
+		return
+
+	if (!( istype(over_object, /obj/screen) ))
+		return ..()
+
 	if (ishuman(usr) || issmall(usr)) //so monkeys can take off their backpacks -- Urist
-
-		if (istype(usr.loc,/obj/mecha)) // stops inventory actions in a mech. why?
-			return
-
-		if (!( istype(over_object, /obj/screen) ))
-			return ..()
+	//CHOMPEdit End
 
 		//makes sure that the thing is equipped, so that we can't drag it into our hand from miles away.
 		//there's got to be a better way of doing this.
@@ -436,7 +440,7 @@
 		else
 			set_light(0)
 		//VOREStation Edit End
-		
+
 	//YAWNEDIT: Recoil knockdown for micros, ported from CHOMPStation
 	if(recoil_mode && iscarbon(user))
 		var/mob/living/carbon/nerd = user
@@ -449,9 +453,9 @@
 					to_chat(nerd, "<span class='danger'>You're so tiny that you drop the gun and hurt yourself from the recoil!</span>")
 				else
 					to_chat(nerd, "<span class='danger'>You're so tiny that the pull of the trigger causes you to drop the gun!</span>")
-				
+
 	//YAWNEDIT: Knockdown code end
-	
+
 	user.hud_used.update_ammo_hud(user, src)
 
 // Similar to the above proc, but does not require a user, which is ideal for things like turrets.
@@ -802,16 +806,16 @@
 
 /obj/item/weapon/gun/proc/get_ammo_count()
 	return FALSE
-	
+
 /obj/item/weapon/gun/equipped(mob/living/user, slot) // When a gun is equipped to your hands, we'll add the HUD to the user. Pending porting over TGMC guncode where wielding is far more sensible.
 	if(slot == slot_l_hand || slot == slot_r_hand)
 		user.hud_used.add_ammo_hud(user, src)
 	else
 		user.hud_used.remove_ammo_hud(user, src)
-	
+
 	return ..()
 
 /obj/item/weapon/gun/dropped(mob/living/user) // Ditto as above, we remove the HUD. Pending porting TGMC code to clean up this fucking nightmare of spaghetti.
 	user.hud_used.remove_ammo_hud(user, src)
-	
+
 	..()

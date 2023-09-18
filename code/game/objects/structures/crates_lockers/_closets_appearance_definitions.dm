@@ -809,6 +809,19 @@
 		"nano" = COLOR_OFF_WHITE
 	)
 
+/decl/closet_appearance/crate/freezer/veymed
+	color = COLOR_BABY_BLUE
+	extra_decals = list(
+		"lid_stripes" = COLOR_RED,
+		"crate_cross" = COLOR_GREEN
+	)
+
+/decl/closet_appearance/crate/freezer/zenghu
+	color = COLOR_BABY_BLUE
+	extra_decals = list(
+		"zenghu" = COLOR_OFF_WHITE
+	)
+
 // Corporate Branding
 
 /decl/closet_appearance/crate/aether
@@ -1564,6 +1577,15 @@
 
 /decl/closet_appearance/wall_double/generic_civ
 	color = COLOR_DARK_BLUE_GRAY
+
+/decl/closet_appearance/wall_double/casino
+	color = COLOR_GRAY20
+	decals = null
+	extra_decals = list(
+		"stripe_outer" = COLOR_GOLD,
+		"stripe_inner" = COLOR_ORANGE,
+		"thaler" = COLOR_GREEN
+	)
 
 // Carts
 /decl/closet_appearance/cart

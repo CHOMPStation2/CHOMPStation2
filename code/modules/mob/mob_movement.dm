@@ -302,6 +302,10 @@
 	if((direct & (direct - 1)) && mob.loc == n)
 		my_mob.setMoveCooldown(total_delay * SQRT_2) //CHOMPEDIT
 
+	if(!isliving(my_mob)) //CHOMPAdd
+		moving = 0
+		return
+
 	// If we have a grab
 	var/list/grablist = my_mob.ret_grab()
 	if(LAZYLEN(grablist))
@@ -355,6 +359,10 @@
 			if(mob.check_holy(T))
 				to_chat(mob, "<span class='warning'>You cannot get past holy grounds while you are in this plane of existence!</span>")
 				return
+			//CHOMPEdit start - add ability to block incorporeal movement for nonghosts
+			else if(!istype(mob, /mob/observer/dead) && T.blocks_nonghost_incorporeal)
+				return
+			//CHOMPEdit end
 			else
 				mob.forceMove(get_step(mob, direct))
 				mob.dir = direct

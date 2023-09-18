@@ -52,11 +52,11 @@
 	icon_state = "dragonfly"
 	color_blend_mode = ICON_MULTIPLY
 
-/datum/sprite_accessory/wing/citheroniamoth
+/* /datum/sprite_accessory/wing/citheroniamoth //Chomp REMOVE START
 	name = "citheronia wings"
 	desc = ""
 	icon_state = "citheronia_wings"
-	ckeys_allowed = list("kira72")
+	ckeys_allowed = list("kira72") */ //Chomp REMOVE END
 
 /datum/sprite_accessory/wing/feathered
 	name = "feathered wings, colorable"
@@ -249,6 +249,13 @@
 	icon_state = "sepulchre_wingsc"
 	do_colouration = 1
 
+/datum/sprite_accessory/wing/sepulchre_c_yw_w
+	name = "demon wings (colorable, whitescale)"
+	desc = ""
+	icon_state = "sepulchre_wingsc_w"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
 /datum/sprite_accessory/wing/cyberdragon
 	name = "Cyber dragon wing (colorable)"
 	desc = ""
@@ -304,3 +311,59 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "snail_shell_markings"
+
+/datum/sprite_accessory/wing/sectdrone_wing //We should some day make a variable to make some wings not be able to fly
+	name = "Sect drone wings (To use with bodytype marking)"
+	desc = ""
+	icon = 'icons/mob/vore/wings_vr.dmi'
+	icon_state = "sectdrone_wing"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/*/datum/sprite_accessory/wing/kara //SatinIsle Fluff Item //Chomp REMOVE
+	name = "Pterokara wings"
+	desc = ""
+	icon = 'icons/mob/vore/wings_vr.dmi'
+	icon_state = "feathered_kara"
+	ckeys_allowed = list("satinisle")
+*/
+
+/datum/sprite_accessory/wing/winglets //smol wingarms at the elbow
+	name = "feathered winglets"
+	desc = ""
+	icon_state = "winglets"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/wing/wingarms_speckles
+	name = "wingarms, speckled"
+	desc = ""
+	icon_state = "wingarms_speckles"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "wingarms_speckles-speckles"
+
+/datum/sprite_accessory/wing/wingarms_2tone
+	name = "wingarms, 2 colors"
+	desc = ""
+	icon_state = "wingarms_2tone"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "wingarms_2tone-1"
+
+/datum/sprite_accessory/wing/feather2_speckles
+	name = "large feathered wings, speckled"
+	desc = ""
+	icon_state = "feather2_speckles"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "feather2_speckles-speckles"
+
+/datum/sprite_accessory/wing/feather2_tricolor
+	name = "large feathered wings, tricolor"
+	desc = ""
+	icon_state = "feather2_tricolor"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "feather2_tricolor-1"
+	extra_overlay2 = "feather2_tricolor-2"

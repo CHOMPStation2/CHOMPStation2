@@ -1591,7 +1591,9 @@
 
 		if(!isbelly(loc)) //VOREStation Add - Belly fullscreens safety
 			clear_fullscreen("belly")
-			//clear_fullscreen("belly2") //For multilayered stomachs. Not currently implemented.
+			//clear_fullscreen("belly2") //Chomp disable, using our own implementation 
+			//clear_fullscreen("belly3") //Chomp disable, using our own implementation 
+			//clear_fullscreen("belly4") //Chomp disable, using our own implementation 
 
 		if(config.welder_vision)
 			var/found_welder
@@ -1769,6 +1771,12 @@
 	if(isturf(loc) && rand(1,1000) == 1)
 		var/turf/T = loc
 		if(T.get_lumcount() <= LIGHTING_SOFT_THRESHOLD)
+			//VOREStation Add Start
+			if(text2num(time2text(world.timeofday, "MM")) == 4)
+				if(text2num(time2text(world.timeofday, "DD")) == 1)
+					playsound_local(src,pick(scawwySownds),50, 0)
+					return
+			//VOREStation Add End
 			playsound_local(src,pick(scarySounds),50, 1, -1)
 
 /mob/living/carbon/human/handle_stomach()
@@ -1878,17 +1886,27 @@
 		if (prob(5))
 			if(traumatic_shock >= 80)
 				to_chat(src, "<span class='danger'>[pick("The pain is excruciating", "Please&#44; just end the pain", "Your whole body is going numb")]!</span>")
+				// CHOMPEdit: Pain
+				if(prob(20) && !isbelly(loc)) // Hopefully not spammy, only 20% of the time will we groan in pain + sanity for in-belly
+					emote("pain")
+				// CHOMPEdit End
 			Weaken(20)
 
 	if(shock_stage >= 120)
 		if (prob(2))
 			if(traumatic_shock >= 80)
 				to_chat(src, "<span class='danger'>[pick("You black out", "You feel like you could die any moment now", "You are about to lose consciousness")]!</span>")
+				// CHOMPEdit: Pain
+				if(prob(40) && !isbelly(loc)) // Hopefully not spammy, only 40% of the time will we groan in pain + sanity for in-belly
+					emote("pain")
+				// CHOMPEdit End
 			Paralyse(5)
 
 	if(shock_stage == 150)
 		if(!isbelly(loc)) //VOREStation Edit
 			custom_emote(VISIBLE_MESSAGE, "can no longer stand, collapsing!")
+			if(prob(60)) // Hopefully not spammy, only 60% of the time will we groan in pain
+				emote("pain")
 		Weaken(20)
 
 	if(shock_stage >= 150)

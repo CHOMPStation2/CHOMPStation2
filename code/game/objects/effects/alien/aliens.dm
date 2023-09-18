@@ -10,7 +10,7 @@
  */
 /obj/effect/alien
 	name = "alien thing"
-	desc = "theres something alien about this"
+	desc = "there's something alien about this"
 	icon = 'icons/mob/alien.dmi'
 
 /*
@@ -224,6 +224,12 @@
 		health -= 5
 		healthcheck()
 
+// CHOMPedit start - Smaller-ranged nodes for Xenomorph Hybrids.
+/obj/effect/alien/weeds/node/weak
+	light_range = 2
+	node_range = 1
+// CHOMPedit end.
+
 #undef NODERANGE
 #undef WEED_NORTH_EDGING
 #undef WEED_SOUTH_EDGING
@@ -289,3 +295,5 @@
 		if(0 to 1)
 			visible_message("<span class='alium'>[src.target] begins to crumble under the acid!</span>")
 	spawn(rand(150, 200)) tick()
+
+//Xenomorph Effect egg removed, replaced with Structure Egg.

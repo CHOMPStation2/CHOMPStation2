@@ -6,6 +6,9 @@
 	var/mauling = FALSE						// Attacks unconscious mobs
 	var/unconscious_vore = FALSE			//VOREStation Add - allows a mob to go for unconcious targets IF their vore prefs align
 	var/handle_corpse = FALSE				// Allows AI to acknowledge corpses (e.g. nurse spiders)
+	var/vore_hostile = FALSE				// The same as hostile, but with vore pref checks
+	var/micro_hunt = FALSE					// Will target mobs at or under the micro_hunt_size size, requires vore_hostile to be true
+	var/micro_hunt_size = 0.25
 
 	var/atom/movable/target = null			// The thing (mob or object) we're trying to kill.
 	var/atom/movable/preferred_target = null// If set, and if given the chance, we will always prefer to target this over other options.
@@ -21,6 +24,8 @@
 	var/list/attackers = list()				// List of strings of names of people who attacked us before in our life.
 											// This uses strings and not refs to allow for disguises, and to avoid needing to use weakrefs.
 	var/destructive = FALSE					// Will target 'neutral' structures/objects and not just 'hostile' ones.
+
+	var/forgive_resting = TRUE				//VOREStation add - If TRUE on a RETALIATE mob, then mob will drop target if it becomes hostile to you but hasn't taken damage
 
 // A lot of this is based off of /TG/'s AI code.
 
@@ -139,6 +144,14 @@
 				//VOREStation Add End
 				else
 					return FALSE
+		//VOREStation add start
+		else if(forgive_resting && !isbelly(holder.loc))	//Doing it this way so we only think about the other conditions if the var is actually set
+			if((holder.health == holder.maxHealth) && !hostile && (L.resting || L.weakened || L.stunned))	//If our health is full, no one is fighting us, we can forgive
+				var/mob/living/simple_mob/vore/eater = holder
+				if(!eater.will_eat(L))		//We forgive people we can eat by eating them
+					set_stance(STANCE_IDLE)
+					return FALSE	//Forgiven
+		//VOREStation add end
 		if(holder.IIsAlly(L))
 			return FALSE
 		return TRUE
@@ -304,3 +317,14 @@
 /datum/ai_holder/proc/lose_taunt()
 	ai_log("lose_taunt() : Resetting preferred_target.", AI_LOG_INFO)
 	preferred_target = null
+
+/datum/ai_holder/proc/vore_check(mob/living/L)
+	if(!holder.vore_selected)	//We probably don't have a belly so don't even try
+		return FALSE
+	if(!isliving(L))	//We only want mob/living
+		return FALSE
+	if(!L.devourable || !L.allowmobvore)	//Check their prefs
+		return FALSE
+	if(micro_hunt && !(L.get_effective_size(TRUE) <= micro_hunt_size))	//Are they small enough to get?
+		return FALSE
+	return TRUE // Let's go!

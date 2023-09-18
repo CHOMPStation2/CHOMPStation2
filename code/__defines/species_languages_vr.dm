@@ -18,3 +18,8 @@
 #define LANGUAGE_MOUSE "Mouse"
 
 #define LANGUAGE_SHADEKIN "Shadekin Empathy"
+
+//CHOMPedit Start - Xeno languages selectable
+#define LANGUAGE_XENOLINGUA "Xenolingua"
+#define LANGUAGE_HIVEMIND "Hivemind"
+// CHOMPedit End.

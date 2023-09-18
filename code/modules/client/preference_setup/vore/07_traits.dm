@@ -64,6 +64,9 @@
 					. += link + (trait_prefs[identifier] ? "Enabled" : "Disabled")
 				if (2) //TRAIT_PREF_TYPE_COLOR
 					. += " " + color_square(hex = trait_prefs[identifier]) + link + "Change"
+				if (3) //TRAIT_PREF_TYPE_STRING - CHOMPEdit
+					var/string = trait_prefs[identifier]
+					. += link + (length(string) > 0 ? string : "\[Empty\]")
 			. += "</a></li>"
 	. += "</ul>"
 	if (altered)
@@ -102,6 +105,9 @@
 			var/new_color = input(user, "Choose the color for this trait preference:", "Trait Preference", trait_prefs[preference]) as color|null
 			if (new_color)
 				trait_prefs[preference] = new_color
+		if (3) //TRAIT_PREF_TYPE_STRING - CHOMPEdit
+			var/new_string = instance.apply_sanitization_to_string(preference, tgui_input_text(user, "What should the new value be?", instance.has_preferences[preference][2], trait_prefs[preference], MAX_NAME_LEN))
+			trait_prefs[preference] = new_string
 
 // Definition of the stuff for Ears
 /datum/category_item/player_setup_item/vore/traits
@@ -257,6 +263,17 @@
 	//Any additional non-trait settings can be applied here
 	new_S.blood_color = pref.blood_color
 
+	/*
+	if(pref.species_sound) // CHOMPEdit: Custom Scream/Death/Gasp/Pain Sounds. Don't try to do this if it doesn't exist. //  && new_S.selects_bodytype && pref.custom_base) // we aren't a custom species, and we don't have a custom base.
+		new_S.copy_species_sounds(new_S, pref.species_sound, pref.custom_base) // CHOMPEdit: Custom Scream/Death/Gasp/Pain Sounds
+	*/
+	// CHOMPEdit: Custom Scream/Death/Gasp/Pain Sounds.
+	var/species_sounds_to_copy = pref.species_sound // What sounds are we using?
+	if(species_sounds_to_copy == "Unset") // Are we unset?
+		species_sounds_to_copy = select_default_species_sound(pref) // This will also grab gendered versions of the sounds, if they exist.
+
+	new_S.species_sounds = species_sounds_to_copy // Now we send our sounds over to the mob
+
 	if(pref.species == SPECIES_CUSTOM)
 		//Statistics for this would be nice
 		var/english_traits = english_list(new_S.traits, and_text = ";", comma_text = ";")
@@ -328,7 +345,7 @@
 	. += "<a href='?src=\ref[src];custom_exclaim=1'>Set Exclaim Verb</a>"
 	. += "(<a href='?src=\ref[src];reset_exclaim=1'>Reset</A>)"
 	. += "<br>"
-	. += "<b>Custom heat Discomfort: </b>"
+	. += "<b>Custom Heat Discomfort: </b>"
 	. += "<a href='?src=\ref[src];custom_heat=1'>Set Heat Messages</a>"
 	. += "(<a href='?src=\ref[src];reset_heat=1'>Reset</A>)"
 	. += "<br>"

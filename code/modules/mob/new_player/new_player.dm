@@ -6,6 +6,7 @@
 	var/totalPlayers = 0		//Player counts for the Lobby tab
 	var/totalPlayersReady = 0
 	var/show_hidden_jobs = 0	//Show jobs that are set to "Never" in preferences
+	var/has_respawned = FALSE	//Determines if we're using RESPAWN_MESSAGE
 	var/datum/browser/panel
 	universal_speak = 1
 
@@ -38,15 +39,18 @@
 
 	if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
 		if(ready)
-			output += "<p>\[ <span class='linkOn'><b>Ready</b></span> | <a href='byond://?src=\ref[src];ready=0'>Not Ready</a> \]</p>"
+			output += "<p>\[ <span class='linkOn'><b>Ready</b></span> | <a href='byond://?src=\ref[src];ready=0'>Not Ready</a> \]</p>" //ChompEDIT - fixed height
 		else
-			output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Ready</a> | <span class='linkOn'><b>Not Ready</b></span> \]</p>"
+			output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Ready</a> | <span class='linkOn'><b>Not Ready</b></span> \]</p>" //ChompEDIT - fixed height
+		output += "<p><s>Join Game!</s></p>" //ChompEDIT - fixed height
 
 	else
-		output += "<a href='byond://?src=\ref[src];manifest=1'>View the Crew Manifest</A><br><br>"
+		output += "<p><a href='byond://?src=\ref[src];manifest=1'>View the Crew Manifest</A></p>" //ChompEDIT - fixed height
 		output += "<p><a href='byond://?src=\ref[src];late_join=1'>Join Game!</A></p>"
 
 	output += "<p><a href='byond://?src=\ref[src];observe=1'>Observe</A></p>"
+
+	output += "<hr>" //ChompADD - a line divider between functional and info buttons
 
 	if(!IsGuestKey(src.key))
 		establish_db_connection()
@@ -63,23 +67,30 @@
 				break
 			qdel(query) //CHOMPEdit TGSQL
 			if(newpoll)
-				output += "<p><b><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A> (NEW!)</b></p>"
+				output += "<p><b><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A><br>(NEW!)</b></p>" //ChompEDIT - fixed height
 			else
-				output += "<p><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A></p>"
+				output += "<p><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A><br><i>No Changes</i></p>" //ChompEDIT - fixed height
 
 	if(client.check_for_new_server_news())
-		output += "<p><b><a href='byond://?src=\ref[src];shownews=1'>Show Game Updates</A> (NEW!)</b></p>"
+		output += "<p><b><a href='byond://?src=\ref[src];shownews=1'>Show Server News</A><br>(NEW!)</b></p>" //ChompEDIT 'Game updates' --> 'Server news'
 	else
-		output += "<p><a href='byond://?src=\ref[src];shownews=1'>Show Game Updates</A></p>"
+		output += "<p><a href='byond://?src=\ref[src];shownews=1'>Show Server News</A><br><i>No Changes</i></p>" //ChompEDIT 'Game updates' --> 'Server news'
 
 	if(SSsqlite.can_submit_feedback(client))
 		output += "<p>[href(src, list("give_feedback" = 1), "Give Feedback")]</p>"
 
 	if(GLOB.news_data.station_newspaper)
 		if(client.prefs.lastlorenews == GLOB.news_data.newsindex)
-			output += "<p><a href='byond://?src=\ref[src];open_station_news=1'>Show [using_map.station_name] News</A></p>"
+			output += "<p><a href='byond://?src=\ref[src];open_station_news=1'>Show [using_map.station_name] News<br><i>No Changes</i></A></p>" //ChompEDIT - fixed height
 		else
-			output += "<p><b><a href='byond://?src=\ref[src];open_station_news=1'>Show [using_map.station_name] News (NEW!)</A></b></p>"
+			output += "<p><b><a href='byond://?src=\ref[src];open_station_news=1'>Show [using_map.station_name] News<br>(NEW!)</A></b></p>" //ChompEDIT - fixed height
+
+	//ChompEDIT start: Show Changelog
+	if(client.prefs.lastchangelog == changelog_hash)
+		output += "<p><a href='byond://?src=\ref[src];open_changelog=1'>Show Changelog</A><br><i>No Changes</i></p>"
+	else
+		output += "<p><b><a href='byond://?src=\ref[src];open_changelog=1'>Show Changelog</A><br>(NEW!)</b></p>"
+	//ChompEDIT End
 
 	output += "</div>"
 
@@ -91,7 +102,7 @@
 		client.prefs.lastlorenews = GLOB.news_data.newsindex
 		SScharacter_setup.queue_preferences_save(client.prefs)
 
-	panel = new(src, "Welcome","Welcome", 210, 300, src) // VOREStation Edit
+	panel = new(src, "Welcome","Welcome", 210, 360, src) // VOREStation Edit //ChompEDIT, height 300 -> 360
 	panel.set_window_options("can_close=0")
 	panel.set_content(output)
 	panel.open()
@@ -117,7 +128,7 @@
 			var/datum/job/refJob = null
 			for(var/mob/new_player/player in player_list)
 				refJob = player.client.prefs.get_highest_job()
-				stat("[player.key]", (player.ready)?("(Playing as: [(refJob)?(refJob.title):("Unknown")])"):(null))
+				stat("Player", (player.ready)?("(Playing as: [(refJob)?(refJob.title):("Unknown")])"):(null)) //CHOMPEDIT: Anonymizing [player.key]
 				totalPlayers++
 				if(player.ready)totalPlayersReady++
 
@@ -350,18 +361,33 @@
 		else
 			client.feedback_form = new(client)
 
+	//ChompEDIT START
+	if(href_list["open_changelog"])
+		client.prefs.lastchangelog = changelog_hash
+		SScharacter_setup.queue_preferences_save(client.prefs)
+		client.changes()
+		return
+	//ChompEDIT END
+
 /mob/new_player/proc/handle_server_news()
 	if(!client)
 		return
-	var/savefile/F = get_server_news()
+	var/savefile/F = client.get_server_news()
 	if(F)
-		client.prefs.lastnews = md5(F["body"])
-		SScharacter_setup.queue_preferences_save(client.prefs)
+		//client.prefs.lastnews = md5(F["body"]) //Chomp REMOVE
+		//SScharacter_setup.queue_preferences_save(client.prefs) //Chomp REMOVE
+		//ChompEDIT start - handle reads correctly
+		var/title
+		F["title"] >> title
+		F["title"] >> title //This is done twice on purpose. For some reason BYOND misses the first read, if performed before the world starts
+		var/body
+		F["body"] >> body
+		//ChompEDIT end
 
 		var/dat = "<html><body><center>"
-		dat += "<h1>[F["title"]]</h1>"
+		dat += "<h1>[title]</h1>"
 		dat += "<br>"
-		dat += "[F["body"]]"
+		dat += "[body]"
 		dat += "<br>"
 		dat += "<font size='2'><i>Last written by [F["author"]], on [F["timestamp"]].</i></font>"
 		dat += "</center></body></html>"
@@ -440,6 +466,32 @@
 	spawning = 1
 	close_spawn_windows()
 
+	//CHOMPEdit start - join as mob in crystal...
+	var/obj/item/itemtf = join_props["itemtf"]
+	if(itemtf && istype(itemtf, /obj/item/capture_crystal))
+		var/obj/item/capture_crystal/cryst = itemtf
+		if(cryst.spawn_mob_type)
+			// We want to be a spawned mob instead of a person aaaaa
+			var/mob/living/carrier = join_props["carrier"]
+			var/vorgans = join_props["vorgans"]
+			cryst.bound_mob = new cryst.spawn_mob_type(cryst)
+			cryst.spawn_mob_type = null
+			cryst.bound_mob.ai_holder_type = /datum/ai_holder/simple_mob/inert
+			cryst.bound_mob.key = src.key
+			log_and_message_admins("[key_name_admin(src)] joined [cryst.bound_mob] inside a capture crystal [ADMIN_FLW(cryst.bound_mob)]")
+			if(vorgans)
+				cryst.bound_mob.copy_from_prefs_vr()
+			if(istype(carrier))
+				cryst.capture(cryst.bound_mob, carrier)
+			else
+				//Something went wrong, but lets try to do as much as we can.
+				cryst.bound_mob.capture_caught = TRUE
+				cryst.persist_storable = FALSE
+			cryst.update_icon()
+			qdel(src)
+			return
+	//CHOMPEdit end
+
 	job_master.AssignRole(src, rank, 1)
 
 	var/mob/living/character = create_character(T)	//creates the human and transfers vars and mind
@@ -484,7 +536,7 @@
 
 	//CHOMPEdit Begin - non-crew join don't get a message
 	if(rank == JOB_OUTSIDER)
-		log_and_message_admins("has joined the round as non-crew. (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[T.x];Y=[T.y];Z=[T.z]'>JMP</a>)",character)
+		log_and_message_admins("has joined the round as non-crew. (<A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[T.x];Y=[T.y];Z=[T.z]'>JMP</a>)",character)
 		if(!(J.mob_type & JOB_SILICON))
 			ticker.minds += character.mind
 	//CHOMPEdit End
@@ -503,8 +555,14 @@
 	var/gut = join_props["voreny"]
 	var/mob/living/prey = join_props["prey"]
 	//CHOMPEdit Start - Item TF
-	var/obj/item/itemtf = join_props["itemtf"]
-	if(itemtf)
+	if(itemtf && istype(itemtf, /obj/item/capture_crystal))
+		//We want to be in the crystal, not actually possessing the crystal.
+		var/obj/item/capture_crystal/cryst = itemtf
+		var/mob/living/carrier = join_props["carrier"]
+		cryst.capture(character, carrier)
+		character.forceMove(cryst)
+		cryst.update_icon()
+	else if(itemtf)
 		itemtf.inhabit_item(character, itemtf.name, character)
 		var/mob/living/possessed_voice = itemtf.possessed_voice
 		itemtf.trash_eatable = character.devourable
@@ -652,12 +710,12 @@
 			var/datum/language/keylang = GLOB.all_languages[client.prefs.language_custom_keys[key]]
 			if(keylang)
 				new_character.language_keys[key] = keylang
-	// CHOMPStation Add: Preferred Language Setting;
+	// VOREStation Add: Preferred Language Setting;
 	if(client.prefs.preferred_language) // Do we have a preferred language?
 		var/datum/language/def_lang = GLOB.all_languages[client.prefs.preferred_language]
 		if(def_lang)
 			new_character.default_language = def_lang
-	// CHOMPStation Add End
+	// VOREStation Add End
 	// And uncomment this, too.
 	//new_character.dna.UpdateSE()
 

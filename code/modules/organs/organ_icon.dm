@@ -79,9 +79,11 @@ var/global/list/limb_icon_cache = list()
 
 	return res
 
-/obj/item/organ/external/proc/get_icon(var/skeletal)
+/obj/item/organ/external/proc/get_icon(var/skeletal, var/can_apply_transparency = TRUE)
 
 	for(var/M in markings)
+		if (!markings[M]["on"])
+			continue
 		var/datum/sprite_accessory/marking/mark = markings[M]["datum"]
 		if(mark.organ_override)
 			var/icon/mark_s = new/icon("icon" = mark.icon, "icon_state" = "[mark.icon_state]-[organ_tag]")
@@ -90,6 +92,8 @@ var/global/list/limb_icon_cache = list()
 			mob_icon.Blend(mark_s, ICON_OVERLAY) //So when it's on your body, it has icons
 			icon_cache_key = "[M][markings[M]["color"]]"
 			for(var/MM in markings)
+				if (!markings[MM]["on"])
+					continue
 				var/datum/sprite_accessory/marking/mark_style = markings[MM]["datum"]
 				if(mark_style.organ_override)
 					continue
@@ -106,6 +110,8 @@ var/global/list/limb_icon_cache = list()
 	var/gender = "m"
 	if(owner && owner.gender == FEMALE)
 		gender = "f"
+
+	var/should_apply_transparency = FALSE
 
 	if(!force_icon_key)
 		icon_cache_key = "[icon_name]_[species ? species.get_bodytype() : SPECIES_HUMAN]" //VOREStation Edit
@@ -131,14 +137,18 @@ var/global/list/limb_icon_cache = list()
 				mob_icon = new /icon('icons/mob/human_races/r_skeleton.dmi', "[icon_name][gender ? "_[gender]" : ""]")
 			else if (robotic >= ORGAN_ROBOT)
 				mob_icon = new /icon('icons/mob/human_races/robotic.dmi', "[icon_name][gender ? "_[gender]" : ""]")
+				should_apply_transparency = TRUE
 				apply_colouration(mob_icon)
 			else
 				mob_icon = new /icon(species.get_icobase(owner, (status & ORGAN_MUTATED)), "[icon_name][gender ? "_[gender]" : ""]")
+				should_apply_transparency = TRUE
 				apply_colouration(mob_icon)
 
 			//Body markings, actually does not include head this time. Done separately above.
 			if(!istype(src,/obj/item/organ/external/head))
 				for(var/M in markings)
+					if (!markings[M]["on"])
+						continue
 					var/datum/sprite_accessory/marking/mark_style = markings[M]["datum"]
 					var/icon/mark_s = new/icon("icon" = mark_style.icon, "icon_state" = "[mark_style.icon_state]-[organ_tag]")
 					mark_s.Blend(markings[M]["color"], mark_style.color_blend_mode) // VOREStation edit
@@ -165,9 +175,12 @@ var/global/list/limb_icon_cache = list()
 
 	if(model)
 		icon_cache_key += "_model_[model]"
+		should_apply_transparency = TRUE
 		apply_colouration(mob_icon)
 		if(owner && owner.synth_markings)
 			for(var/M in markings)
+				if (!markings[M]["on"])
+					continue
 				var/datum/sprite_accessory/marking/mark_style = markings[M]["datum"]
 				var/icon/mark_s = new/icon("icon" = mark_style.icon, "icon_state" = "[mark_style.icon_state]-[organ_tag]")
 				mark_s.Blend(markings[M]["color"], mark_style.color_blend_mode) // VOREStation edit
@@ -183,6 +196,9 @@ var/global/list/limb_icon_cache = list()
 				limb_icon_cache[cache_key] = I
 			mob_icon.Blend(limb_icon_cache[cache_key], ICON_OVERLAY)
 		// VOREStation edit ends here
+
+	if (transparent && !istype(src,/obj/item/organ/external/head) && can_apply_transparency && should_apply_transparency) //VORESTATION EDIT: transparent instead of nonsolid
+		mob_icon += rgb(,,,180) //do it here so any markings become transparent as well
 
 	dir = EAST
 	icon = mob_icon
@@ -217,9 +233,6 @@ var/global/list/limb_icon_cache = list()
 			applying.Blend(rgb(s_col[1], s_col[2], s_col[3]), ICON_ADD)
 			icon_cache_key += "_color_[s_col[1]]_[s_col[2]]_[s_col[3]]_[ICON_ADD]"
 		//VOREStation Edit End
-
-	// Translucency.
-	if(transparent) applying += rgb(,,,180) // SO INTUITIVE TY BYOND //VOREStation Edit
 
 	return applying
 

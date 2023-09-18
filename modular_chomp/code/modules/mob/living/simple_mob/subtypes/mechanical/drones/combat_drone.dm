@@ -1,9 +1,12 @@
+/mob/living/simple_mob/mechanical/combat_drone
+	projectiletype = /obj/item/projectile/energy/mob/drone
+
 /mob/living/simple_mob/mechanical/combat_drone/lesser/aerostat
 	desc = "A Vir System Authority automated combat drone with an aged apperance."
 	movement_cooldown = 10
 	say_list_type = /datum/say_list/malf_drone/drone_aerostat
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged/kiting/threatening/drone_aerostat
-	
+
 /datum/say_list/malf_drone/drone_aerostat
 	speak = list("ALERT.","Hostile-ile-ile entities dee-twhoooo-wected.","Threat parameterszzzz- szzet.","Bring sub-sub-sub-systems uuuup to combat alert alpha-a-a.")
 	emote_see = list("beeps menacingly","whirrs threateningly","scans its immediate vicinity")

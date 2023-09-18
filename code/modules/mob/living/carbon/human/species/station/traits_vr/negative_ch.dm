@@ -74,7 +74,7 @@
 /datum/trait/negative/blindness
 	name = "Permanently blind"
 	desc = "You are blind. For whatever reason, nothing is able to change this fact, not even surgery. WARNING: YOU WILL NOT BE ABLE TO SEE ANY POSTS USING THE ME VERB, ONLY SUBTLE AND DIALOGUE ARE VIEWABLE TO YOU, YOU HAVE BEEN WARNED."
-	cost = -8
+	cost = -12
 	special_env = TRUE
 	custom_only = FALSE
 
@@ -185,22 +185,29 @@
 
 
 /datum/trait/negative/agoraphobia/proc/handle_loneliness(var/mob/living/carbon/human/H)
-	var/ms = ""
-	if(H.loneliness_stage == escalation_speed)
-		ms = "You notice there's more people than you feel comfortable with around you..."
-	if(H.loneliness_stage >= 50)
-		ms = "You start to feel anxious from the number of people around you."
-	if(H.loneliness_stage >= 250)
-		ms = "[pick("You don't think you can last much longer with this much company!", "You should go find some space!")]"
-		if(H.stuttering < hallucination_cap)
-			H.stuttering += 5
-	if(H.loneliness_stage >= warning_cap)
-		ms = "<span class='danger'><b>[pick("Why am I still here? I have to leave and get some space!", "Please, just let me be alone!", "I need to be alone!")]</b></span>"
 	if(world.time < H.next_loneliness_time)
-		return
-	if(ms != "")
+		return //Moved this at the top so we dont waste time assigning vars we will never use
+	var/ms = handle_loneliness_message(H)
+	if(ms)
 		to_chat(H, ms)
 	H.next_loneliness_time = world.time+500
+
+/datum/trait/negative/agoraphobia/proc/handle_loneliness_message(var/mob/living/carbon/human/H)
+	var/Lonely = H.loneliness_stage
+	if(Lonely == escalation_speed)
+		return "You notice there's more people than you feel comfortable with around you..."
+	else if(Lonely >= 50 && Lonely < 250)
+		return "You start to feel anxious from the number of people around you."
+	else if(Lonely >= 250 && Lonely < warning_cap)
+		if(H.stuttering < hallucination_cap)
+			H.stuttering += 5
+		return "[pick("You don't think you can last much longer with this much company!", "You should go find some space!")]" //if we add more here make it a list for readability
+	else if(Lonely >= warning_cap)
+		var/list/panicmessages = list(	"Why am I still here? I have to leave and get some space!",
+						"Please, just let me be alone!",
+						"I need to be alone!")
+		return "<span class='danger'><b>[pick(panicmessages)]</b></span>"
+	return FALSE
 
 /datum/trait/negative/agoraphobia/proc/find_held_by(var/atom/item)
 	if(!item || !istype(item))
@@ -385,7 +392,7 @@
 	var_changes = list("total_health" = 25)
 
 /datum/trait/negative/endurance_glass/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..(S,H)
+	..()
 	H.setMaxHealth(S.total_health)
 
 /datum/trait/negative/reduced_biocompat_minor
@@ -430,7 +437,7 @@
 	can_take = ORGANICS
 
 /datum/trait/negative/haemophilia_plus/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..(S,H)
+	..()
 	H.add_modifier(/datum/modifier/trait/haemophilia)
 
 /datum/trait/negative/pain_intolerance_basic
