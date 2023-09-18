@@ -17,7 +17,7 @@
 	parasitic = TRUE //Digestion immunity var
 
 	var/list/speak = list()
-	var/speak_chance = 0 //MAy have forgotten to readd that.
+	var/speak_chance = 1 //MAy have forgotten to readd that.
 	//Synx speech code overrides normal speech code but is still a x in 200 chance of triggereing, as all mobs do.
 	//VAR$ SETUP
 	//annoying for player controlled synxes.
@@ -26,7 +26,7 @@
 	var/poison_chance = 99.666
 	var/poison_type = "synxchem"//inaprovalin, but evil
 	var/transformed_state = "synx_transformed"
-	var/stomach_distended_state = "synx_stomach_distended"
+	var/stomach_distended_state = "synx_pet_rainbow" //Proof of concept for now until actual sprite exists
 	var/transformed = FALSE
 	var/memorysize = 50 //Var for how many messages synxes remember if they know speechcode
 	var/list/voices = list()
@@ -56,7 +56,6 @@
 				"bio" = 50, //Nerfed from 100. They should have some protection against these things, but 100 is pushing it. -Lo
 				"rad" = 100) //Keeping 100 rad armor as mobs cannot easily get radiation storm announcements. If this is reduced it'd be a good idea to make it 100 for the ai types.
 	has_hands = 1
-	pass_flags = PASSTABLE
 
 	response_help  = "pokes the synx, shifting the fur-like bristles on its body."
 	response_disarm = "gently pushes aside the synx, dislodging a clump of bristly hair in your hand. The substance quickly melts upon contact with your sweat."
@@ -171,7 +170,7 @@
 //some things should be here that arent tho.
 	..()
 	verbs |= /mob/living/proc/ventcrawl
-	verbs |= /mob/living/simple_mob/animal/synx/proc/distend_stomach
+	verbs |= /mob/living/simple_mob/animal/synx/proc/distend_stomach //to do later: sprites of stomach outside the body.
 	verbs |= /mob/living/simple_mob/proc/contort
 	verbs |= /mob/living/simple_mob/animal/synx/proc/sonar_ping
 	verbs |= /mob/living/proc/shred_limb
@@ -417,7 +416,6 @@
 		to_chat(src,"<span class='notice'>You are now hiding.</span>")
 		movement_cooldown = 6
 
-
 /mob/living/simple_mob/animal/synx/proc/disguise()
 	set name = "Toggle Form"
 	set desc = "Switch between amorphous and humanoid forms."
@@ -431,10 +429,10 @@
 		to_chat(src,"<span class='warning'>You can't disguise with your stomach outside of your body!</span>")
 		return
 	if(!transformed)
-		to_chat(src,"<span class='warning'>Now they see your true form.</span>")
+		to_chat(src,"<span class='warning'>You changed back into your disguise.</span>")
 		icon_living = transformed_state //Switch state to transformed state
 	else // If transformed is true.
-		to_chat(src,"<span class='warning'>You changed back into your disguise.</span>")
+		to_chat(src,"<span class='warning'>Now they see your true form.</span>")
 		icon_living = initial(icon_living) //Switch state to what it was originally defined.
 
 
