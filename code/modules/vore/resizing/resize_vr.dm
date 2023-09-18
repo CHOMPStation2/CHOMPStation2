@@ -30,7 +30,7 @@
 /mob/living/update_icons()
 	. = ..()
 	ASSERT(!ishuman(src))
-	var/cent_offset = center_offset
+	var/cent_offset = center_offset //ChompEDIT
 	if(fuzzy || offset_override || dir == EAST || dir == WEST) //CHOMPEdit
 		cent_offset = 0 //CHOMPEdit
 	var/matrix/M = matrix()
