@@ -84,5 +84,7 @@
       ones can be flushed too (much weaker tho and not connected to station systems)
   - bugfix: Fixed flushing ignoring mob size_multiplier.
   - rscadd: Added belly-specific toggle setting for entrance logs.
+  - bugfix: Fixed runtime spam with vore footsteps.
+  - bugfix: Symmetry scaling no longer un-symmetrifies the side views.
   tacoguy7765093:
   - balance: Synth limb HP is 60 instead of 30 now, just like organics.
