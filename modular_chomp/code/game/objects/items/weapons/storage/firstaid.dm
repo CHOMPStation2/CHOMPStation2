@@ -59,7 +59,7 @@
 
 //Pills
 /obj/item/weapon/reagent_containers/pill/neotane
-	name = "Neo Kelotane (15u)"
+	name = "Neo Kelotane (10u)"
 	desc = "An experimental pill."
 
 	icon_state = "pill2"
