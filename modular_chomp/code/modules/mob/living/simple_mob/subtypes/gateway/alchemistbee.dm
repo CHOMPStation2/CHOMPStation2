@@ -211,14 +211,14 @@
 
 /mob/living/simple_mob/vr/alchemistbee/proc/homingcluster(atom/target)
 	var/obj/item/projectile/A = new /obj/item/projectile/bullet/homingcluster(get_turf(src))
-		A.launch_projectile(target, BP_TORSO, src)
+	A.launch_projectile(target, BP_TORSO, src)
 
 /mob/living/simple_mob/vr/alchemistbee/proc/dangerbolt(atom/target)
 	visible_message(span("warning", "\The [src] prepares a powerful spell!"))
 	Beam(target, icon_state = "sat_beam", time = 2.0 SECONDS, maxdistance = INFINITY)
 	sleep(1.5 SECONDS)
 	var/obj/item/projectile/A = new /obj/item/projectile/energy/nuclearblast(get_turf(src))
-		A.launch_projectile(target, BP_TORSO, src)
+	A.launch_projectile(target, BP_TORSO, src)
 
 /obj/item/projectile/bullet/homingcluster
 	use_submunitions = 1
