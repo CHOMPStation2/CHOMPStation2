@@ -59,7 +59,7 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/melee
 
 	var/knockdown_chance = 15
-	
+
 	can_be_drop_prey = FALSE //CHOMP Add
 
 /mob/living/simple_mob/animal/space/carp/apply_melee_effects(var/atom/A)
@@ -147,7 +147,9 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/vore
 
 /mob/living/simple_mob/animal/space/carp/large/huge/vorny/init_vore()
-	..()
+	if(!voremob_loaded) //CHOMPAdd
+		return //CHOMPAdd
+	.=..() //CHOMPEdit
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "You've been swallowed whole and alive by a massive white carp! The stomach around you is oppressively tight, squeezing and grinding wrinkled walls across your body, making it hard to make any movement at all. The chamber is flooded with fluids that completely overwhelm you."
