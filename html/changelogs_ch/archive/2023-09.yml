@@ -81,3 +81,5 @@
   - rscadd: Flushing too much/big stuff can now glog toilets. Also un-bluespaced non-station
       ones can be flushed too (much weaker tho and not connected to station systems)
   - bugfix: Fixed flushing ignoring mob size_multiplier.
+  tacoguy7765093:
+  - balance: Synth limb HP is 60 instead of 30 now, just like organics.
