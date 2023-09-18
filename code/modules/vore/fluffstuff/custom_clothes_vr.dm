@@ -197,11 +197,7 @@
 	item_state = "brittrenchcoat"
 
 //For general use
-<<<<<<< HEAD
-/obj/item/clothing/suit/storage/vest/hoscoat/axis_greatcoat
-=======
 /obj/item/clothing/suit/storage/vest/hoscoat/ancient_greatcoat
->>>>>>> 7eb4aec7d1... Merge pull request #15398 from Very-Soft/spacenazis
 	name = "Greatcoat"
 	desc = "This coat gives off an imposing look, while offering a luxuriously plush fur liner."
 
