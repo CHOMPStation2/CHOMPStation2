@@ -4592,6 +4592,7 @@
 #include "modular_chomp\code\game\machinery\airconditioner_ch.dm"
 #include "modular_chomp\code\game\machinery\autolathe_armory.dm"
 #include "modular_chomp\code\game\machinery\colormate.dm"
+#include "modular_chomp\code\game\machinery\holosign.dm"
 #include "modular_chomp\code\game\machinery\petrification.dm"
 #include "modular_chomp\code\game\machinery\portable_turret.dm"
 #include "modular_chomp\code\game\machinery\virtual_reality\vr_console.dm"

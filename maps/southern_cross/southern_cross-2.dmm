@@ -60016,6 +60016,12 @@
 /obj/effect/floor_decal/corner/beige/border{
 	dir = 6
 	},
+/obj/machinery/button/holosign{
+	pixel_x = -11;
+	pixel_y = -24;
+	name = "Chemist on duty sign";
+	id = "chemon"
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "lxe" = (
@@ -60680,6 +60686,12 @@
 	pixel_x = -36
 	},
 /obj/structure/cable/green,
+/obj/machinery/button/holosign{
+	pixel_x = -35;
+	name = "Roboticist on duty sign";
+	id = "roboton";
+	pixel_y = 9
+	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "lRO" = (
@@ -63277,6 +63289,14 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/central)
+"nsN" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/holosign/robotics{
+	id = "roboton"
+	},
+/turf/simulated/floor/plating,
+/area/assembly/robotics)
 "nsS" = (
 /obj/effect/floor_decal/steeldecal/steel_decals6{
 	dir = 4
@@ -69300,6 +69320,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/dockhallway)
+"qDw" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/holosign/chemistry{
+	id = "chemon"
+	},
+/turf/simulated/floor/plating,
+/area/medical/chemistry)
 "qDV" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -124045,7 +124073,7 @@ hru
 iej
 iVx
 jYj
-iVx
+nsN
 ifd
 mVk
 nTb
@@ -124305,7 +124333,7 @@ iVF
 jZy
 kTT
 ifd
-iVx
+nsN
 nTF
 oRM
 ifd
@@ -127163,7 +127191,7 @@ rHH
 yhv
 rHH
 cUx
-mEB
+qDw
 tlx
 fdL
 wum
