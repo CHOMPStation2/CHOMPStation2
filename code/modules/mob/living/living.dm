@@ -1039,7 +1039,7 @@
 	// First, get the correct size.
 	var/desired_scale_x = size_multiplier * icon_scale_x //VOREStation edit
 	var/desired_scale_y = size_multiplier * icon_scale_y //VOREStation edit
-	var/cent_offset = center_offset
+	var/cent_offset = center_offset //CHOMPEdit
 	// Now for the regular stuff.
 	if(fuzzy || offset_override || dir == EAST || dir == WEST) //CHOMPEdit
 		cent_offset = 0 //CHOMPEdit
