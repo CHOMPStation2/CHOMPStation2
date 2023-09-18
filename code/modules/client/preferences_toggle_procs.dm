@@ -379,8 +379,6 @@
 		You will have to reload VChat and/or reconnect to the server for these changes to take place. \
 		VChat message persistence is not guaranteed if you change this again before the start of the next round.")
 
-<<<<<<< HEAD
-=======
 /client/verb/toggle_tgui_inputlock()
 	set name = "Toggle TGUI Input Lock"
 	set category = "Preferences"
@@ -402,7 +400,6 @@
 
 	to_chat(src, span_notice("You have toggled chat timestamps: [prefs.chat_timestamp ? "ON" : "OFF"]."))
 
->>>>>>> f01bd05a7d... Merge pull request #15400 from KillianKirilenko/kk-timestamps
 /client/verb/toggle_status_indicators()
 	set name = "Toggle Status Indicators"
 	set category = "Preferences"
