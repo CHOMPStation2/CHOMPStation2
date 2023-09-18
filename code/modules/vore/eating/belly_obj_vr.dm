@@ -315,7 +315,8 @@
 	"speedy_mob_processing",
 	"egg_name",
 	"recycling",
-	"is_feedable", //CHOMP end of variables from CHOMP
+	"is_feedable",
+	"entrance_logs", //CHOMP end of variables from CHOMP
 	"egg_type",
 	"save_digest_mode",
 	"eating_privacy_local",
@@ -384,7 +385,7 @@
 	//CHOMPEdit end
 
 	//Generic entered message
-	if(!owner.mute_entry) //CHOMPEdit
+	if(!owner.mute_entry && entrance_logs) //CHOMPEdit
 		to_chat(owner,"<span class='notice'>[thing] slides into your [lowertext(name)].</span>")
 
 	//Sound w/ antispam flag setting
@@ -1718,7 +1719,8 @@
 	dupe.sound_volume = sound_volume
 	dupe.egg_name = egg_name
 	dupe.recycling = recycling
-	dupe.is_feedable = is_feedable //CHOMP end of variables from CHOMP
+	dupe.is_feedable = is_feedable
+	dupe.entrance_logs = entrance_logs //CHOMP end of variables from CHOMP
 
 	dupe.belly_fullscreen = belly_fullscreen
 	dupe.disable_hud = disable_hud
