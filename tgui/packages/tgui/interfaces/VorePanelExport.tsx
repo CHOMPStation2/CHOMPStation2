@@ -201,6 +201,7 @@ type Belly = {
   autotransferlocation_secondary: string;
   autotransfer_min_amount: number;
   autotransfer_max_amount: number;
+  autotransfer_absorbed: BooleanLike;
 
   // Liquid Options
   show_liquids: BooleanLike;
@@ -334,6 +335,7 @@ const generateBellyString = (belly: Belly, index: number) => {
     autotransfer_enabled,
     autotransfer_min_amount,
     autotransfer_max_amount,
+	autotransfer_absorbed,
 
     // Liquid Options
     show_liquids,
@@ -674,6 +676,7 @@ const generateBellyString = (belly: Belly, index: number) => {
   result += '<li class="list-group-item">Auto-Transfer Location: ' + autotransferlocation_secondary + '</li>';
   result += '<li class="list-group-item">Auto-Transfer Min Amount: ' + autotransfer_min_amount + '</li>';
   result += '<li class="list-group-item">Auto-Transfer Max Amount: ' + autotransfer_max_amount + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Absorbed Creatures: ' + (autotransfer_absorbed ? '<span style="color: green;">Yes' : '<span style="color: red;">No') + '</li>';
   result += '</ul>';
   result += '</div></div></div>';
 
