@@ -77,3 +77,7 @@
   - rscadd: New on duty signs for robotics and chemistry
   - maptweak: Added on duty signs and buttons for turning them on to Robotics and
       Chemistry
+  Verkister:
+  - rscadd: Flushing too much/big stuff can now glog toilets. Also un-bluespaced non-station
+      ones can be flushed too (much weaker tho and not connected to station systems)
+  - bugfix: Fixed flushing ignoring mob size_multiplier.
