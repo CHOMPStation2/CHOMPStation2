@@ -72,3 +72,31 @@
 2023-09-12:
   Upstream:
   - rscadd: Various bird related markings
+2023-09-18:
+  HatArchAzel:
+  - rscadd: Added a modular system cloned from the big dragon one on live to simplemob
+      synx, allowing customization of the body, eyes, facial markings, and horns.
+  - rscdel: Commented out some old OC insert content in the synx code as per content
+      standards.
+  - balance: Tweaked some factors such as movement to make synx a little bit more
+      accurate. Overall, they're probably a little weaker now, but should encourage
+      roleplaying them more accurately when playing as one and allow for a few nice
+      QoL changes in the process.
+  - bugfix: Fixed several bugs in synx code.
+  - imageadd: Added 'transformed' and 'stomach distended' synx sprites, replacing
+      the previous placeholders.
+  TheGreatKitsune:
+  - rscadd: New on duty signs for robotics and chemistry
+  - maptweak: Added on duty signs and buttons for turning them on to Robotics and
+      Chemistry
+  Upstream:
+  - rscadd: adds 'Health & Damage' section in mob spawner
+  Verkister:
+  - rscadd: Flushing too much/big stuff can now glog toilets. Also un-bluespaced non-station
+      ones can be flushed too (much weaker tho and not connected to station systems)
+  - bugfix: Fixed flushing ignoring mob size_multiplier.
+  - rscadd: Added belly-specific toggle setting for entrance logs.
+  - bugfix: Fixed runtime spam with vore footsteps.
+  - bugfix: Symmetry scaling no longer un-symmetrifies the side views.
+  tacoguy7765093:
+  - balance: Synth limb HP is 60 instead of 30 now, just like organics.
