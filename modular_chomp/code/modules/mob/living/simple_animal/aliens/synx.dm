@@ -51,12 +51,16 @@
 		"None",
 		"Curved",
 		"Straight",
+		"Nub",
+		"Capra",
 	)
 	var/horns
 	var/list/marking_styles = list(
 		"None",
 		"Basic",
 		"Star",
+		"Short",
+		"Long",
 	)
 	var/markings
 	var/list/eye_styles = list(
