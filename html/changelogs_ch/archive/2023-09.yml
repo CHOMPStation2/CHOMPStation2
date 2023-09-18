@@ -72,3 +72,8 @@
 2023-09-12:
   Upstream:
   - rscadd: Various bird related markings
+2023-09-18:
+  TheGreatKitsune:
+  - rscadd: New on duty signs for robotics and chemistry
+  - maptweak: Added on duty signs and buttons for turning them on to Robotics and
+      Chemistry
