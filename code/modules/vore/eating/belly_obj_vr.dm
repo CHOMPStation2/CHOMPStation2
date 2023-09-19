@@ -72,6 +72,7 @@
 	var/autotransferlocation_secondary		// Second place to send them //CHOMPAdd
 	var/autotransfer_enabled = FALSE		// Player toggle
 	var/autotransfer_absorbed = FALSE		// If belly can auto transfer absorbed creatures //CHOMPAdd
+	var/autotransfer_absorbed_only = FALSE	// If belly ONLY auto transfers absorbed creatures //CHOMPAdd
 	var/autotransfer_min_amount = 0			// Minimum amount of things to pass at once. //CHOMPAdd
 	var/autotransfer_max_amount = 0			// Maximum amount of things to pass at once. //CHOMPAdd
 	var/tmp/list/autotransfer_queue = list()// Reserve for above things. //CHOMPAdd
@@ -307,6 +308,7 @@
 	"autotransferlocation",
 	"autotransfer_enabled",
 	"autotransfer_absorbed",
+	"autotransfer_absorbed_only",
 	"autotransferchance_secondary",
 	"autotransferlocation_secondary",
 	"autotransfer_min_amount",

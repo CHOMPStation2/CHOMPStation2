@@ -23,6 +23,7 @@
 			if(isliving(M))
 				var/mob/living/L = M
 				if(!src.autotransfer_absorbed && L.absorbed) continue
+				if(src.autotransfer_absorbed && src.autotransfer_absorbed_only && !L.absorbed) continue
 			M.belly_cycles++
 			if(M.belly_cycles < autotransferwait / 60) continue
 			autotransferables += M
