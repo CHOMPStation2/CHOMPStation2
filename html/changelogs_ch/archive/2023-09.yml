@@ -100,3 +100,6 @@
   - bugfix: Symmetry scaling no longer un-symmetrifies the side views.
   tacoguy7765093:
   - balance: Synth limb HP is 60 instead of 30 now, just like organics.
+2023-09-19:
+  FluffMedic:
+  - rscadd: MoL's VR area has a small expansion
