@@ -302,6 +302,10 @@
 	if((direct & (direct - 1)) && mob.loc == n)
 		my_mob.setMoveCooldown(total_delay * SQRT_2) //CHOMPEDIT
 
+	if(!isliving(my_mob)) //CHOMPAdd
+		moving = 0
+		return
+
 	// If we have a grab
 	var/list/grablist = my_mob.ret_grab()
 	if(LAZYLEN(grablist))

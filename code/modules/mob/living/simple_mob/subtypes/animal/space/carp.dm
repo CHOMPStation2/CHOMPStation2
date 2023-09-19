@@ -59,7 +59,7 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/melee
 
 	var/knockdown_chance = 15
-	
+
 	can_be_drop_prey = FALSE //CHOMP Add
 
 /mob/living/simple_mob/animal/space/carp/apply_melee_effects(var/atom/A)
@@ -147,12 +147,14 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/vore
 
 /mob/living/simple_mob/animal/space/carp/large/huge/vorny/init_vore()
-	..()
+	if(!voremob_loaded) //CHOMPAdd
+		return //CHOMPAdd
+	.=..() //CHOMPEdit
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "You've been swallowed whole and alive by a massive white carp! The stomach around you is oppressively tight, squeezing and grinding wrinkled walls across your body, making it hard to make any movement at all. The chamber is flooded with fluids that completely overwhelm you."
 	B.mode_flags = DM_FLAG_THICKBELLY
-	B.belly_fullscreen = "yet_another_tumby"
+//	B.belly_fullscreen = "yet_another_tumby" //Chompedit - Belly Fullscreen change
 	B.digest_brute = 2
 	B.digest_burn = 2
 	B.digest_oxy = 1
@@ -199,3 +201,56 @@
 /mob/living/simple_mob/animal/space/carp/holographic/death()
 	..()
 	derez()
+
+// a slow-moving carp with the appearance of a sea mine and behaviour of a sea mine
+/mob/living/simple_mob/animal/space/carp/puffer
+	name = "puffercarp"
+	desc = "A bloated, inflated carp covered in spines."
+	catalogue_data = list(/datum/category_item/catalogue/fauna/carp, /datum/category_item/catalogue/fauna/carp/puffer)
+	icon_state = "puffercarp"
+	icon_living = "puffercarp"
+	icon_dead = "puffercarp_dead"
+	icon_gib = "generic_gib"
+	movement_cooldown = 15
+	var/ready_to_blow = TRUE
+
+/datum/category_item/catalogue/fauna/carp/puffer
+	name = "Voidborne Fauna - Space Carp: puffer variant"
+	desc = "An unusual subspecies of space carp with a novel defensive \
+	and reproductive strategy - once the puffercarp is ready to spread spores \
+	it begins to produce a highly volatile compound within its gas bladders, \
+	which in addition to providing them with a means of propulsion through space \
+	as per most space carp species, affords the puffercarp with a somewhat unique trait \
+	- namely, that they are able to ignite and detonate their gas bladders \
+	at will, and will do so aggressively when threatened. The bladders also tend to ignite \
+	when struck by thermal or electrical discharges, or even sympathetic detonation from \
+	other explosives - including other nearby puffercarp. As a result, most voidborne \
+	predators have a tendency to keep clear, but even if this deterrent doesn't work the resulting \
+	explosion serves to scatter their spores over a massive area - this improved seeding \
+	strategy compared to regular carp results in the propagation of the species despite the \
+	fact that it means each adult carp can only reproduce exactly once. \
+	<br><br>\
+	Due to their premature mortality it is extremely rare to see a puffercarp grow to any notable \
+	size, often appearing to be somewhat stunted in growth compared to other subspecies, \
+	their gas bloating being the only thing that brings them close to \
+	the normal scale of an adult carp. "
+	value = CATALOGUER_REWARD_HARD //if you can hang around close enough to this thing without setting it off, you deserve it
+
+/mob/living/simple_mob/animal/space/carp/puffer/proc/kaboom()
+	if(ready_to_blow)
+		ready_to_blow = FALSE
+		gib()
+		var/turf/T = get_turf(src)
+		explosion(T, -1, -1, 4, 4)
+
+
+/mob/living/simple_mob/animal/space/carp/puffer/apply_melee_effects() //it gets close enough to attack? EXPLODE
+	kaboom()
+
+/mob/living/simple_mob/animal/space/carp/puffer/adjustFireLoss(var/amount,var/include_robo) //you make it hot? EXPLODE
+	if(amount>0)
+		kaboom()
+	..()
+
+/mob/living/simple_mob/animal/space/carp/puffer/ex_act() //explode? YOU BETTER BELIEVE THAT'S AN EXPLODE
+	kaboom()

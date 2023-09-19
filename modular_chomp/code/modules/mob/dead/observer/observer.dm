@@ -59,7 +59,7 @@
 
 	avatar.regenerate_icons()
 	avatar.update_transform()
-	avatar.species.equip_survival_gear(avatar)
+	job_master.EquipRank(avatar,"Visitor", 1, FALSE)
 	avatar.verbs += /mob/living/carbon/human/proc/fake_exit_vr
 	avatar.verbs += /mob/living/carbon/human/proc/vr_transform_into_mob
 	avatar.verbs |= /mob/living/proc/set_size // Introducing NeosVR
@@ -69,37 +69,3 @@
 	var/newname = sanitize(tgui_input_text(avatar, "You are entering virtual reality. Your username is currently [src.name]. Would you like to change it to something else?", "Name change", null, MAX_NAME_LEN), MAX_NAME_LEN)
 	if(newname)
 		avatar.real_name = newname
-
-/mob/living/carbon/human/proc/vr_transform_into_mob()
-	set name = "Transform Into Creature"
-	set category = "Abilities"
-	set desc = "Become a different creature"
-
-	var/tf = null
-	var/k = tgui_input_list(usr, "Please select a creature:", "Mob list", vr_mob_tf_options)
-	if(!k)
-		return 0
-	tf = vr_mob_tf_options[k]
-
-	var/mob/living/new_form = transform_into_mob(tf, TRUE, TRUE)
-	if(isliving(new_form)) // Sanity check
-		new_form.verbs += /mob/living/proc/vr_revert_mob_tf
-		new_form.virtual_reality_mob = TRUE
-
-/mob/living/proc/vr_revert_mob_tf()
-	set name = "Revert Transformation"
-	set category = "Abilities"
-
-	revert_mob_tf()
-
-// Exiting VR but for ghosts
-/mob/living/carbon/human/proc/fake_exit_vr()
-	set name = "Log Out Of Virtual Reality"
-	set category = "Abilities"
-
-	if(tgui_alert(usr, "Would you like to log out of virtual reality?", "Log out?", list("Yes", "No")) == "Yes")
-		release_vore_contents(TRUE)
-		for(var/obj/item/I in src)
-			drop_from_inventory(I)
-		qdel(src)
-//CHOMPedit end

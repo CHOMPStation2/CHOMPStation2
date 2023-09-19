@@ -112,10 +112,10 @@
 	result_amount = 4
 
 //tier 3
-/decl/chemical_reaction/instant/liquidangel
-	name = "liquidangel"
-	id = "liquidangel"
-	result = "liquidangel"
+/decl/chemical_reaction/instant/liquidhealer
+	name = "liquidhealer"
+	id = "liquidhealer"
+	result = "liquidhealer"
 	required_reagents = list("bicard" = 1, "kelotane" = 1, "liquidlife" = 1, "carpotoxin" = 1, "quadcord" = 1, "cryptobiolin" = 1)
 	result_amount = 6
 

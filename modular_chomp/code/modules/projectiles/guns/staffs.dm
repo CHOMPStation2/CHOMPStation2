@@ -34,3 +34,9 @@
 	description_info = "Will slow down and minorly poison targets."
 	projectile_type = /obj/item/projectile/energy/homing_bolt/wizard/frost
 	color = "#00CCFF"
+
+/obj/item/weapon/gun/magic/firestaff/vrwizard/nuclear
+	description_info = "A high powered staff that burns through energy quickly but unleashes high energy bolts."
+	projectile_type = /obj/item/projectile/energy/nuclearblast
+	color = "#660066"
+	max_charges = 4

@@ -8,6 +8,10 @@
 	var/negative_dir = null	//VOREStation Addition
 	var/hand_fed = TRUE //CHOMPAdd
 
+/obj/machinery/recycling/Initialize() //CHOMPAdd
+	. = ..()
+	default_apply_parts()
+
 /obj/machinery/recycling/process()
 	return PROCESS_KILL // these are all stateful
 

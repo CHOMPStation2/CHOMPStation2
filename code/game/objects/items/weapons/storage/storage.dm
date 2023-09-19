@@ -14,6 +14,7 @@
 		)
 	w_class = ITEMSIZE_NORMAL
 	show_messages = 1
+	matter = list(MAT_FIBERS = 50) //CHOMPAdd
 
 	/// List of objects which this item can store (if set, it can't store anything else)
 	var/list/can_hold

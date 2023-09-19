@@ -212,6 +212,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"egg_type" = selected.egg_type,
 			"egg_name" = selected.egg_name, //CHOMPAdd
 			"recycling" = selected.recycling, //CHOMPAdd
+			"entrance_logs" = selected.entrance_logs, //CHOMPAdd
 			"nutrition_percent" = selected.nutrition_percent,
 			"digest_brute" = selected.digest_brute,
 			"digest_burn" = selected.digest_burn,
@@ -275,7 +276,8 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"tail_to_change_to" = selected.tail_to_change_to,
 			"tail_colouration" = selected.tail_colouration,
 			"tail_extra_overlay" = selected.tail_extra_overlay,
-			"tail_extra_overlay2" = selected.tail_extra_overlay2
+			"tail_extra_overlay2" = selected.tail_extra_overlay2,
+			"noise_freq" = selected.noise_freq
 			//"marking_to_add" = selected.marking_to_add
 			//CHOMPEdit end
 		)
@@ -872,7 +874,14 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					if(new_recycling == 0)
 						new_belly.recycling = FALSE
 					if(new_recycling == 1)
-						new_belly.recycling = TRUE //CHOMPAdd End
+						new_belly.recycling = TRUE
+
+				if(isnum(belly_data["entrance_logs"]))
+					var/new_entrance_logs = belly_data["entrance_logs"]
+					if(new_entrance_logs == 0)
+						new_belly.entrance_logs = FALSE
+					if(new_entrance_logs == 1)
+						new_belly.entrance_logs = TRUE //CHOMPAdd End
 
 				if(istext(belly_data["selective_preference"]))
 					var/new_selective_preference = belly_data["selective_preference"]
@@ -933,6 +942,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				if(isnum(belly_data["sound_volume"]))
 					var/new_sound_volume = belly_data["sound_volume"]
 					new_belly.sound_volume = sanitize_integer(new_sound_volume, 0, 100, initial(new_belly.sound_volume))
+
+				if(isnum(belly_data["noise_freq"])) //CHOMPAdd Start
+					var/new_noise_freq = belly_data["noise_freq"]
+					new_belly.noise_freq = sanitize_integer(new_noise_freq, MIN_VOICE_FREQ, MAX_VOICE_FREQ, initial(new_belly.noise_freq)) //CHOMPAdd End
 
 				// Visuals
 				if(isnum(belly_data["affects_vore_sprites"]))
@@ -2522,17 +2535,37 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			if(voretest)
 				SEND_SOUND(user, voretest)
 			. = TRUE
-		if("b_sound_volume") //CHOMPAdd
+		if("b_sound_volume") //CHOMPAdd Start
 			var/sound_volume_input = tgui_input_number(user, "Set belly sound volume percentage.", "Sound Volume", null, 100, 0)
 			if(!isnull(sound_volume_input)) //These have to be 'null' because both cancel and 0 are valid, separate options
 				host.vore_selected.sound_volume = sanitize_integer(sound_volume_input, 0, 100, initial(host.vore_selected.sound_volume))
 			. = TRUE
+		if("b_noise_freq")
+			var/list/preset_noise_freqs = list("high" = MAX_VOICE_FREQ, "middle-high" = 56250, "middle" = 42500, "middle-low"= 28750, "low" = MIN_VOICE_FREQ, "custom" = 1, "random" = 0)
+			var/choice = tgui_input_list(user, "What would you like to set your noise frequency to? ([MIN_VOICE_FREQ] - [MAX_VOICE_FREQ])", "Noise Frequency", preset_noise_freqs)
+			if(!choice)
+				return
+			choice = preset_noise_freqs[choice]
+			if(choice == 0)
+				host.vore_selected.noise_freq = 42500
+				return TOPIC_REFRESH
+			else if(choice == 1)
+				choice = tgui_input_number(user, "Choose your organ's noise frequency, ranging from [MIN_VOICE_FREQ] to [MAX_VOICE_FREQ]", "Custom Noise Frequency", null, MAX_VOICE_FREQ, MIN_VOICE_FREQ, round_value = TRUE)
+			if(choice > MAX_VOICE_FREQ)
+				choice = MAX_VOICE_FREQ
+			else if(choice < MIN_VOICE_FREQ)
+				choice = MIN_VOICE_FREQ
+			host.vore_selected.noise_freq = choice
+			. = TRUE  //CHOMPAdd End
 		if("b_tastes")
 			host.vore_selected.can_taste = !host.vore_selected.can_taste
 			. = TRUE
-		if("b_feedable") //CHOMPAdd
+		if("b_feedable") //CHOMPAdd Start
 			host.vore_selected.is_feedable = !host.vore_selected.is_feedable
 			. = TRUE
+		if("b_entrance_logs")
+			host.vore_selected.entrance_logs = !host.vore_selected.entrance_logs
+			. = TRUE //CHOMPAdd End
 		if("b_bulge_size")
 			var/new_bulge = tgui_input_number(user, "Choose the required size prey must be to show up on examine, ranging from 25% to 200% Set this to 0 for no text on examine.", "Set Belly Examine Size.", max_value = 200, min_value = 0)
 			if(new_bulge == null)

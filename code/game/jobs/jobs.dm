@@ -32,6 +32,7 @@ var/const/PATHFINDER 		=(1<<11)
 var/const/EXPLORER 			=(1<<12)
 var/const/SAR 				=(1<<13)
 var/const/XENOBOTANIST		=(1<<14)
+var/const/PILOT 			=(1<<15) //ChompEDIT - ours is with the other explo jobs.
 
 var/const/CIVILIAN			=(1<<2)
 
@@ -48,7 +49,7 @@ var/const/LAWYER			=(1<<9)
 var/const/CHAPLAIN			=(1<<10)
 var/const/ASSISTANT			=(1<<11)
 var/const/BRIDGE			=(1<<12)
-var/const/PILOT 			=(1<<13)
+//var/const/PILOT 			=(1<<13) //ChompEDIT - ours is with the other explo jobs.
 var/const/ENTERTAINER		=(1<<14)
 var/const/ENTREPRENEUR		=(1<<15)
 
@@ -67,6 +68,7 @@ var/const/TALMIN			=(1<<5)
 //VOREStation Add End
 */
 
+//CHOMPedit start: next chunk doesn't exist upstream, not sure what it's actually used for.
 var/list/assistant_occupations = list(
 )
 
@@ -158,12 +160,12 @@ var/list/whitelisted_positions = list(
 	"Chief Engineer",
 	"Research Director",
 	"Chief Medical Officer",
-	"Warden",
+	"Internal Affairs Agent",
 	"AI"
-) //CHOMPEdit: Removed Command Secretary from whitelisted jobs.
+) //CHOMPEdit: end
 
 /proc/guest_jobbans(var/job)
-	return ((job in whitelisted_positions))
+	return // ((job in whitelisted_positions)) // CHOMPedit: spaghetti that is our whitelist system means this prevents use of config/jobswhitelist.txt
 
 /proc/get_job_datums()
 	var/list/occupations = list()

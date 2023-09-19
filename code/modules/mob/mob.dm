@@ -46,6 +46,7 @@
 	return ..()
 
 /mob/proc/show_message(msg, type, alt, alt_type)//Message, type of message (1 or 2), alternative message, alt message type (1 or 2)
+	var/time = say_timestamp()
 
 	if(!client && !teleop)	return
 
@@ -68,9 +69,12 @@
 	if(stat == UNCONSCIOUS || sleeping > 0)
 		to_chat(src, "<span class='filter_notice'><I>... You can almost hear someone talking ...</I></span>")
 	else
-		to_chat(src,msg)
-		if(teleop)
+		if(client.prefs.chat_timestamp)
+			to_chat(src,"[time] [msg]")
+		else if(teleop)
 			to_chat(teleop, create_text_tag("body", "BODY:", teleop.client) + "[msg]")
+		else
+			to_chat(src,msg)
 	return
 
 // Show a message to all mobs and objects in sight of this one
@@ -366,7 +370,9 @@
 		if(choice == "No, wait")
 			return
 		else if(mind.assigned_role)
-			var/extra_check = tgui_alert(usr, "Do you want to Quit This Round before you return to lobby? This will properly remove you from manifest, as well as prevent resleeving.","Quit This Round",list("Quit Round","Cancel"))
+			var/extra_check = tgui_alert(usr, "Do you want to Quit This Round before you return to lobby?\
+			This will properly remove you from manifest, as well as prevent resleeving. BEWARE: Pressing 'NO' will STILL return you to lobby!",
+			"Quit This Round",list("Quit Round","No"))
 			if(extra_check == "Quit Round")
 				//Update any existing objectives involving this mob.
 				for(var/datum/objective/O in all_objectives)
@@ -406,7 +412,6 @@
 				to_chat(src,"<span class='notice'>Your job has been free'd up, and you can rejoin as another character or quit. Thanks for properly quitting round, it helps the server!</span>")
 
 	// Beyond this point, you're going to respawn
-	to_chat(usr, config.respawn_message)
 
 	if(!client)
 		log_game("[usr.key] AM failed due to disconnect.")
@@ -425,7 +430,9 @@
 		qdel(M)
 		return
 
+	M.has_respawned = TRUE //When we returned to main menu, send respawn message
 	M.key = key
+
 	if(M.mind)
 		M.mind.reset()
 	return

@@ -24268,6 +24268,40 @@
 /obj/random/contraband,
 /obj/random/contraband,
 /obj/structure/closet/crate,
+/obj/item/clothing/accessory/shiny/gloves,
+/obj/item/clothing/accessory/shiny/socks,
+/obj/item/clothing/head/shiny_hood,
+/obj/item/clothing/head/shiny_hood/closed,
+/obj/item/clothing/under/shiny/catsuit,
+/obj/item/clothing/under/shiny/leotard,
+/obj/item/clothing/under/shiny/leotard/poly,
+/obj/item/weapon/handcuffs/fuzzy,
+/obj/item/weapon/handcuffs/legcuffs/fuzzy,
+/obj/item/weapon/material/twohanded/riding_crop,
+/obj/item/weapon/tape_roll,
+/obj/item/stack/cable_coil/random,
+/obj/item/clothing/under/fluff/latexmaid,
+/obj/item/weapon/melee/fluff/holochain/mass,
+/obj/item/clothing/accessory/collar/shock,
+/obj/item/clothing/glasses/sunglasses/blindfold,
+/obj/item/clothing/mask/muzzle,
+/obj/item/clothing/mask/muzzle/ballgag,
+/obj/item/clothing/mask/muzzle/ballgag/ringgag,
+/obj/item/clothing/under/skinsuit,
+/obj/item/clothing/under/skinsuit/fem,
+/obj/item/clothing/under/skinsuit/fem/gray,
+/obj/item/clothing/under/skinsuit/fem/leotard,
+/obj/item/clothing/under/skinsuit/fem/leotard/gray,
+/obj/item/clothing/under/skinsuit/gray,
+/obj/item/clothing/under/skinsuit/leotard,
+/obj/item/clothing/under/skinsuit/leotard/gray,
+/obj/item/clothing/under/rank/nullsuit/civ,
+/obj/item/clothing/accessory/shiny/gloves/poly,
+/obj/item/clothing/accessory/shiny/socks/poly,
+/obj/item/clothing/head/shiny_hood/poly,
+/obj/item/clothing/head/shiny_hood/closed/poly,
+/obj/item/clothing/under/shiny/catsuit/poly,
+/obj/item/clothing/under/shiny/leotard/poly,
 /turf/simulated/floor/plating,
 /area/maintenance/medbay)
 "bwR" = (
@@ -59982,6 +60016,12 @@
 /obj/effect/floor_decal/corner/beige/border{
 	dir = 6
 	},
+/obj/machinery/button/holosign{
+	pixel_x = -11;
+	pixel_y = -24;
+	name = "Chemist on duty sign";
+	id = "chemon"
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "lxe" = (
@@ -60646,6 +60686,12 @@
 	pixel_x = -36
 	},
 /obj/structure/cable/green,
+/obj/machinery/button/holosign{
+	pixel_x = -35;
+	name = "Roboticist on duty sign";
+	id = "roboton";
+	pixel_y = 9
+	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "lRO" = (
@@ -63243,6 +63289,14 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/central)
+"nsN" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/holosign/robotics{
+	id = "roboton"
+	},
+/turf/simulated/floor/plating,
+/area/assembly/robotics)
 "nsS" = (
 /obj/effect/floor_decal/steeldecal/steel_decals6{
 	dir = 4
@@ -69266,6 +69320,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/dockhallway)
+"qDw" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/holosign/chemistry{
+	id = "chemon"
+	},
+/turf/simulated/floor/plating,
+/area/medical/chemistry)
 "qDV" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -73846,7 +73908,6 @@
 /area/medical/medbay)
 "tpy" = (
 /obj/machinery/chemical_synthesizer,
-/obj/machinery/hologram/holopad,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
@@ -76400,6 +76461,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "uSG" = (
@@ -124011,7 +124073,7 @@ hru
 iej
 iVx
 jYj
-iVx
+nsN
 ifd
 mVk
 nTb
@@ -124271,7 +124333,7 @@ iVF
 jZy
 kTT
 ifd
-iVx
+nsN
 nTF
 oRM
 ifd
@@ -127129,7 +127191,7 @@ rHH
 yhv
 rHH
 cUx
-mEB
+qDw
 tlx
 fdL
 wum

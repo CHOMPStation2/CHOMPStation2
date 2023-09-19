@@ -138,7 +138,9 @@
 		ai_holder.remove_target()
 
 /mob/living/simple_mob/vore/pakkun/init_vore()
-	..()
+	if(!voremob_loaded) //CHOMPAdd
+		return //CHOMPAdd
+	.=..() //CHOMPEdit
 	var/obj/belly/B = vore_selected
 	if(isbelly(B)) //ChompEDIT - fix a runtime
 		B.name = "stomach"
@@ -263,7 +265,9 @@
 	..()
 
 /mob/living/simple_mob/vore/pakkun/snapdragon/snappy/init_vore()
-	..()
+	if(!voremob_loaded) //CHOMPAdd
+		return //CHOMPAdd
+	.=..() //CHOMPEdit
 	var/obj/belly/B = vore_selected
 	if(isbelly(B)) //ChompEDIT - fix a runtime
 		B.digest_mode = DM_HOLD
