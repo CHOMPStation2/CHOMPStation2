@@ -9,9 +9,9 @@
 	maxHealth = 200
 	health = 200
 	nutrition = 0 //CHOMPEdit
-	vore_capacity_ex = list("sleeper" = 1) //CHOMPEdit Borgs have sleepers, not stomachs. Important Semantics!!
+	vore_capacity_ex = list("sleeper" = 1) //CHOMPAdd Start: Borgs have sleepers, not stomachs. Important Semantics!!
 	vore_fullness_ex = list("sleeper" = 0)
-	vore_icon_bellies = list("sleeper")
+	vore_icon_bellies = list("sleeper") //CHOMPAdd End
 
 	mob_bump_flag = ROBOT
 	mob_swap_flags = ~HEAVY
@@ -773,6 +773,10 @@
 
 	notify_ai(ROBOT_NOTIFICATION_MODULE_RESET, module.name)
 	module.Reset(src)
+	//CHOMPEdit Start: Reset additional vore capacities possibly set by modules
+	vore_capacity_ex = list("sleeper" = 1)
+	vore_fullness_ex = list("sleeper" = 0)
+	//CHOMPEdit End
 	qdel(module)
 	module = null
 	updatename("Default")
@@ -923,26 +927,32 @@
 		if(show_belly)
 			add_overlay(sprite_datum.get_belly_overlay(src))
 		*/ //CHOMPRemove End
-		if(sprite_datum.has_vore_belly_sprites) //CHOMPAdd Multiple Borg Belly support
+		//CHOMPAdd Multiple Borg Belly support
+		if(sprite_datum.has_vore_belly_sprites)
+			update_fullness()
 			for(var/belly_class in vore_fullness_ex)
 				var/vs_fullness = vore_fullness_ex[belly_class]
 				if(belly_class == "sleeper" && sleeper_state != 0 && !(vs_fullness + 1 > vore_capacity_ex[belly_class]))
 					vs_fullness += 1
 				if(!vs_fullness > 0) continue
-				if(resting && sprite_datum.has_vore_belly_resting_sprites)
+				if(resting)
+					if(!sprite_datum.has_vore_belly_resting_sprites)
+						continue
 					add_overlay(sprite_datum.get_belly_resting_overlay(src, belly_class, vs_fullness))
 				else
 					add_overlay(sprite_datum.get_belly_overlay(src, belly_class, vs_fullness))
-
+		//CHOMPAdd End
 
 
 		sprite_datum.handle_extra_icon_updates(src)			// Various equipment-based sprites go here.
 
-		if(resting && sprite_datum.has_rest_sprites) //CHOMPRemoval Vore Belly Resting sprites handled earlier.
-		//	cut_overlays() // Hide that gut for it has no ground sprite yo.
+		if(resting && sprite_datum.has_rest_sprites)/* //CHOMPRemoval Start: Vore Belly Resting sprites handled earlier.
+			cut_overlays() // Hide that gut for it has no ground sprite yo.
 			icon_state = sprite_datum.get_rest_sprite(src)
-		//	if(show_belly && sprite_datum.has_vore_belly_sprites && sprite_datum.has_vore_belly_resting_sprites)	// Or DOES IT?
-		//		add_overlay(sprite_datum.get_belly_resting_overlay(src))
+			if(show_belly && sprite_datum.has_vore_belly_sprites && sprite_datum.has_vore_belly_resting_sprites)	// Or DOES IT?
+				add_overlay(sprite_datum.get_belly_resting_overlay(src))
+			*/	//CHOMPRemoval End
+			icon_state = sprite_datum.get_rest_sprite(src) //CHOMPEdit: Exept this one line.
 
 		if(sprite_datum.has_eye_sprites)
 			if(!shell || deployed) // Shell borgs that are not deployed will have no eyes.
@@ -1154,6 +1164,12 @@
 	else
 		var/selection = tgui_input_list(src, "Select an icon! [triesleft ? "You have [triesleft] more chance\s." : "This is your last try."]", "Robot Icon", module_sprites)
 		sprite_datum = selection
+		//CHOMPEdit Start: Apply icon specific vore bellies
+		vore_capacity_ex = sprite_datum.belly_capacity_list
+		vore_fullness_ex = sprite_datum.belly_capacity_list
+		for(var/belly in sprite_datum.belly_capacity_list) //vore icons list only contains a list of names with no associated data
+			vore_icon_bellies += belly
+		//CHOMPEdit End
 		if(!istype(src,/mob/living/silicon/robot/drone))
 			robot_species = sprite_datum.name
 		if(notransform)

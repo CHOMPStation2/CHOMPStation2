@@ -231,7 +231,7 @@
 	sprite_hud_icon_state = "medihound"
 	has_eye_light_sprites = TRUE
 	//has_sleeper_light_indicator = TRUE //CHOMPEdit: New system
-	belly_light_list = list("sleeper")
+	belly_light_list = list("sleeper")  //CHOMPEdit
 
 /datum/robot_sprite/dogborg/surgical/borgi
 	name = "Borgi"
@@ -358,7 +358,7 @@
 	sprite_hud_icon_state = "medihound"
 	has_eye_light_sprites = TRUE
 	//has_sleeper_light_indicator = TRUE //CHOMPEdit: New system
-	belly_light_list = list("sleeper")
+	belly_light_list = list("sleeper")  //CHOMPEdit
 
 /datum/robot_sprite/dogborg/crisis/hounddark
 	name = "Medihound Dark"
@@ -366,7 +366,7 @@
 	sprite_hud_icon_state = "medihound"
 	has_eye_light_sprites = TRUE
 	//has_sleeper_light_indicator = TRUE //CHOMPEdit: New system
-	belly_light_list = list("sleeper")
+	belly_light_list = list("sleeper")  //CHOMPEdit
 
 /datum/robot_sprite/dogborg/crisis/vale
 	name = "Medihound V2"
@@ -374,7 +374,7 @@
 	sprite_hud_icon_state = "medihound"
 	has_eye_light_sprites = TRUE
 	//has_sleeper_light_indicator = TRUE //CHOMPEdit: New system
-	belly_light_list = list("sleeper")
+	belly_light_list = list("sleeper")  //CHOMPEdit
 
 /datum/robot_sprite/dogborg/crisis/borgi
 	name = "Borgi"

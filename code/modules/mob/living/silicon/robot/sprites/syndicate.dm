@@ -105,4 +105,4 @@
 	sprite_icon_state = "vale"
 	has_eye_light_sprites = TRUE
 	//has_sleeper_light_indicator = TRUE //CHOMPEdit: New system
-	belly_light_list = list("sleeper")
+	belly_light_list = list("sleeper")  //CHOMPEdit

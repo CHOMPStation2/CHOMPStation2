@@ -12,7 +12,8 @@
 	var/has_custom_open_sprites = FALSE
 	var/has_vore_belly_sprites = FALSE
 	var/has_vore_belly_resting_sprites = FALSE
-	var/list/belly_light_list = list() //CHOMPAdd: Support colored sleepers
+	var/list/belly_light_list = list() //CHOMPEdit: Support colored sleepers
+	var/list/belly_capacity_list = list("sleeper" = 1) //CHOMPEdit: Support multiple bellies as well as more than 1 size state.
 	var/has_rest_sprites = FALSE
 	var/list/rest_sprite_options
 	var/has_dead_sprite = FALSE
@@ -28,9 +29,9 @@
 
 /datum/robot_sprite/proc/handle_extra_icon_updates(var/mob/living/silicon/robot/ourborg)
 	return
-
+//CHOMPEdit Start: Vore Belly rework
 /datum/robot_sprite/proc/get_belly_overlay(var/mob/living/silicon/robot/ourborg, var/Bclass, var/size = 1)
-	if(belly_light_list.Find(Bclass)) //CHOMPEdit: Vore Belly rework
+	if(belly_light_list.Find(Bclass))
 		//TODO: Insert code here that determines if the borg's sleeper belly should show red or green light
 
 		//First, Sleeper base icon is input. Second the belly class, supposedly taken from the borg's vore_fullness_ex list.
@@ -40,6 +41,7 @@
 		return "[sprite_icon_state]-[Bclass]-[size]-[(ourborg.sleeper_state == 2) ? "g" : "r"]"
 
 	return "[sprite_icon_state]-[Bclass]-[size]"
+	//CHOMPEdit End
 //CHOMPEdit Start - gives the function functionality
 /datum/robot_sprite/proc/get_belly_resting_overlay(var/mob/living/silicon/robot/ourborg, var/Bclass, var/size = 1)
 	if(!(ourborg.rest_style in rest_sprite_options))
@@ -65,7 +67,17 @@
 		return
 
 /datum/robot_sprite/proc/get_rest_sprite(var/mob/living/silicon/robot/ourborg)
-	return
+	//CHOMPEdit Start: This was limited to dogborgs subtypes for some reason. There's no reason for that.
+	if(!(ourborg.rest_style in rest_sprite_options))
+		ourborg.rest_style = "Default"
+	switch(ourborg.rest_style)
+		if("Sit")
+			return "[sprite_icon_state]-sit"
+		if("Bellyup")
+			return "[sprite_icon_state]-bellyup"
+		else
+			return "[sprite_icon_state]-rest"
+	//CHOMPEdit End
 
 /datum/robot_sprite/proc/get_dead_sprite(var/mob/living/silicon/robot/ourborg)
 	return "[sprite_icon_state]-wreck"
