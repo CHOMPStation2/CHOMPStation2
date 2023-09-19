@@ -1607,16 +1607,6 @@ const VoreSelectedBellyInteractions = (props, context) => {
                 }
               />
             </LabeledList.Item>
-			<LabeledList.Item label="Auto-Transfer Absorbed Creatures">
-              <Button
-                onClick={() =>
-                  act('set_attribute', { attribute: 'b_autotransfer_absorbed' })
-                }
-                icon={autotransfer_absorbed ? 'toggle-on' : 'toggle-off'}
-                selected={autotransfer_absorbed}
-                content={autotransfer_absorbed ? 'Yes' : 'No'}
-              />
-            </LabeledList.Item>
           </LabeledList>
         ) : (
           'These options only display while Auto-Transfer is enabled.'
