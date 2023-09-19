@@ -6,7 +6,7 @@
 	if(body_backup)
 		qdel(body_backup)
 		body_backup = null
-	..()
+	return ..()
 
 // Persistence vars not included as we probably don't want losing limbs in the game mean losing limbs in real life. Definitely can't backfire.
 /mob/observer/dead/verb/fake_enter_vr()
