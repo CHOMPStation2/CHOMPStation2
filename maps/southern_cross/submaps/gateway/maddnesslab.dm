@@ -104,6 +104,9 @@
 /area/awaymission/mol/engi
 	name = "Lab Enginering"
 
+/area/awaymission/mol/hardlightentrance
+	name = "Hardlight Zone Entrance"
+
 /obj/structure/prop/blackbox/maddnesslab
 	catalogue_data = list(/datum/category_item/catalogue/information/blackbox/maddnesslab)
 

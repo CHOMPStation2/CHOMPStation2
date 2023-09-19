@@ -379,6 +379,16 @@
 		You will have to reload VChat and/or reconnect to the server for these changes to take place. \
 		VChat message persistence is not guaranteed if you change this again before the start of the next round.")
 
+/client/verb/toggle_chat_timestamps()
+	set name = "Toggle Chat Timestamps"
+	set category = "Preferences"
+	set desc = "Toggles whether or not messages in chat will display timestamps. Enabling this will not add timestamps to messages that have already been sent."
+
+	prefs.chat_timestamp = !prefs.chat_timestamp	//There is no preference datum for tgui input lock, nor for any TGUI prefs.
+	SScharacter_setup.queue_preferences_save(prefs)
+
+	to_chat(src, span_notice("You have toggled chat timestamps: [prefs.chat_timestamp ? "ON" : "OFF"]."))
+
 /client/verb/toggle_status_indicators()
 	set name = "Toggle Status Indicators"
 	set category = "Preferences"

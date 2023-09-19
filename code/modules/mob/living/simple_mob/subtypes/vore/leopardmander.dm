@@ -81,6 +81,8 @@
 	src.adjust_nutrition(src.max_nutrition)
 
 /mob/living/simple_mob/vore/leopardmander/init_vore()
+	if(!voremob_loaded) //CHOMPAdd
+		return //CHOMPAdd
 	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"

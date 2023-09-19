@@ -95,8 +95,8 @@
 	name = "prison toilet"
 	icon_state = "toilet2"
 
-/obj/structure/toilet/prison/attack_hand(mob/living/user)
-	return
+//obj/structure/toilet/prison/attack_hand(mob/living/user) //CHOMPEdit
+//	return
 
 /obj/structure/toilet/prison/attackby(obj/item/I, mob/living/user)
 	if(istype(I, /obj/item/weapon/grab))
@@ -123,7 +123,7 @@
 					GM.adjustBruteLoss(5)
 			else
 				to_chat(user, "<span class='notice'>You need a tighter grip.</span>")
-	
+
 
 /obj/structure/urinal
 	name = "urinal"
