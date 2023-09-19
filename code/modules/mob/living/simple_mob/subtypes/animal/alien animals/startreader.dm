@@ -85,7 +85,7 @@
 
 	var/flipped = FALSE
 	var/flip_cooldown = 0
-	
+
 	can_be_drop_prey = FALSE //CHOMP Add
 
 /datum/say_list/startreader
@@ -94,7 +94,9 @@
 
 
 /mob/living/simple_mob/vore/alienanimals/startreader/init_vore()
-	..()
+	if(!voremob_loaded) //CHOMPAdd
+		return //CHOMPAdd
+	.=..() //CHOMPEdit
 	var/obj/belly/B = vore_selected
 	B.name = "gastric sac"
 	B.desc = "It's cramped and hot! You're forced into a small ball as your shape is squeezed into the slick, wet chamber. Despite being swallowed into the creature, you find that you actually stretch out of the top a ways, and can JUST BARELY wiggle around..."

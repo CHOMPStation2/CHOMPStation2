@@ -16,6 +16,7 @@
 	S["tgui_input_mode"]		>> pref.tgui_input_mode
 	S["tgui_large_buttons"]		>> pref.tgui_large_buttons
 	S["tgui_swapped_buttons"]	>> pref.tgui_swapped_buttons
+	S["chat_timestamp"]			>> pref.chat_timestamp
 
 /datum/category_item/player_setup_item/player_global/ui/save_preferences(var/savefile/S)
 	S["UI_style"]				<< pref.UI_style
@@ -31,6 +32,7 @@
 	S["tgui_input_mode"]		<< pref.tgui_input_mode
 	S["tgui_large_buttons"]		<< pref.tgui_large_buttons
 	S["tgui_swapped_buttons"]	<< pref.tgui_swapped_buttons
+	S["chat_timestamp"]			<< pref.chat_timestamp
 
 /datum/category_item/player_setup_item/player_global/ui/sanitize_preferences()
 	pref.UI_style			= sanitize_inlist(pref.UI_style, all_ui_styles, initial(pref.UI_style))
@@ -46,6 +48,7 @@
 	pref.tgui_input_mode	= sanitize_integer(pref.tgui_input_mode, 0, 1, initial(pref.tgui_input_mode))
 	pref.tgui_large_buttons	= sanitize_integer(pref.tgui_large_buttons, 0, 1, initial(pref.tgui_large_buttons))
 	pref.tgui_swapped_buttons	= sanitize_integer(pref.tgui_swapped_buttons, 0, 1, initial(pref.tgui_swapped_buttons))
+	pref.chat_timestamp		= sanitize_integer(pref.chat_timestamp, 0, 1, initial(pref.chat_timestamp))
 
 /datum/category_item/player_setup_item/player_global/ui/content(var/mob/user)
 	. = "<b>UI Style:</b> <a href='?src=\ref[src];select_style=1'><b>[pref.UI_style]</b></a><br>"
@@ -61,6 +64,7 @@
 	. += "<b>TGUI Input Framework:</b> <a href='?src=\ref[src];tgui_input_mode=1'><b>[(pref.tgui_input_mode) ? "Enabled" : "Disabled (default)"]</b></a><br>"
 	. += "<b>TGUI Large Buttons:</b> <a href='?src=\ref[src];tgui_large_buttons=1'><b>[(pref.tgui_large_buttons) ? "Enabled (default)" : "Disabled"]</b></a><br>"
 	. += "<b>TGUI Swapped Buttons:</b> <a href='?src=\ref[src];tgui_swapped_buttons=1'><b>[(pref.tgui_swapped_buttons) ? "Enabled" : "Disabled (default)"]</b></a><br>"
+	. += "<b>Chat Timestamps:</b> <a href='?src=\ref[src];chat_timestamps=1'><b>[(pref.chat_timestamp) ? "Enabled" : "Disabled (default)"]</b></a><br>"
 	if(can_select_ooc_color(user))
 		. += "<b>OOC Color:</b>"
 		if(pref.ooccolor == initial(pref.ooccolor))
@@ -140,6 +144,10 @@
 
 	else if(href_list["tgui_swapped_buttons"])
 		pref.tgui_swapped_buttons = !pref.tgui_swapped_buttons
+		return TOPIC_REFRESH
+
+	else if(href_list["chat_timestamps"])
+		pref.chat_timestamp = !pref.chat_timestamp
 		return TOPIC_REFRESH
 
 	else if(href_list["reset"])

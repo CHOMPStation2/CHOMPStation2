@@ -49,7 +49,7 @@ const digestModeToPreyMode = {
  *   show_liq, liq_interacts, liq_reagent_gen, liq_reagent_type, liq_reagent_name,
  *   liq_reagent_transfer_verb, liq_reagent_nutri_rate, liq_reagent_capacity, liq_sloshing, liq_reagent_addons,
  *   show_liq_fullness, liq_messages, liq_msg_toggle1, liq_msg_toggle2, liq_msg_toggle3, liq_msg_toggle4,
- *   liq_msg_toggle5, liq_msg1, liq_msg2, liq_msg3, liq_msg4, liq_msg5, sound_volume, egg_name, recycling,
+ *   liq_msg_toggle5, liq_msg1, liq_msg2, liq_msg3, liq_msg4, liq_msg5, sound_volume, egg_name, recycling, entrance_logs, noise_freq,
  *   custom_reagentcolor, custom_reagentalpha, liquid_overlay, max_liquid_level, mush_overlay, mush_color, mush_alpha, max_mush, min_mush, item_mush_val
  *
  * To the tabs section of VoreSelectedBelly return
@@ -688,6 +688,7 @@ const VoreSelectedBellyOptions = (props, context) => {
     egg_type,
     egg_name,
     recycling,
+    entrance_logs,
     selective_preference,
     save_digest_mode,
     eating_privacy_local,
@@ -892,6 +893,16 @@ const VoreSelectedBellyOptions = (props, context) => {
               content={recycling ? 'Enabled' : 'Disabled'}
             />
           </LabeledList.Item>
+          <LabeledList.Item label="Entrance Logs">
+            <Button
+              onClick={() =>
+                act('set_attribute', { attribute: 'b_entrance_logs' })
+              }
+              icon={entrance_logs ? 'toggle-on' : 'toggle-off'}
+              selected={entrance_logs}
+              content={entrance_logs ? 'Enabled' : 'Disabled'}
+            />
+          </LabeledList.Item>
           <LabeledList.Item label="Selective Mode Preference">
             <Button
               onClick={() =>
@@ -997,7 +1008,15 @@ const VoreSelectedBellySounds = (props, context) => {
   const { act } = useBackend(context);
 
   const { belly } = props;
-  const { is_wet, wet_loop, fancy, sound, release_sound, sound_volume } = belly;
+  const {
+    is_wet,
+    wet_loop,
+    fancy,
+    sound,
+    release_sound,
+    sound_volume,
+    noise_freq,
+  } = belly;
 
   return (
     <Flex wrap="wrap">
@@ -1057,6 +1076,14 @@ const VoreSelectedBellySounds = (props, context) => {
                 act('set_attribute', { attribute: 'b_sound_volume' })
               }
               content={sound_volume + '%'}
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Noise Frequency">
+            <Button
+              onClick={() =>
+                act('set_attribute', { attribute: 'b_noise_freq' })
+              }
+              content={noise_freq}
             />
           </LabeledList.Item>
         </LabeledList>
