@@ -941,9 +941,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					var/new_sound_volume = belly_data["sound_volume"]
 					new_belly.sound_volume = sanitize_integer(new_sound_volume, 0, 100, initial(new_belly.sound_volume))
 
-				if(isnum(belly_data["noise_freq"])) //CHOMPAdd
+				if(isnum(belly_data["noise_freq"])) //CHOMPAdd Start
 					var/new_noise_freq = belly_data["noise_freq"]
-					new_belly.noise_freq = sanitize_integer(new_noise_freq, MIN_VOICE_FREQ, MAX_VOICE_FREQ, initial(new_belly.noise_freq))
+					new_belly.noise_freq = sanitize_integer(new_noise_freq, MIN_VOICE_FREQ, MAX_VOICE_FREQ, initial(new_belly.noise_freq)) //CHOMPAdd End
 
 				// Visuals
 				if(isnum(belly_data["affects_vore_sprites"]))
@@ -2519,12 +2519,12 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			if(voretest)
 				SEND_SOUND(user, voretest)
 			. = TRUE
-		if("b_sound_volume") //CHOMPAdd
+		if("b_sound_volume") //CHOMPAdd Start
 			var/sound_volume_input = tgui_input_number(user, "Set belly sound volume percentage.", "Sound Volume", null, 100, 0)
 			if(!isnull(sound_volume_input)) //These have to be 'null' because both cancel and 0 are valid, separate options
 				host.vore_selected.sound_volume = sanitize_integer(sound_volume_input, 0, 100, initial(host.vore_selected.sound_volume))
 			. = TRUE
-		if("b_noise_freq") //CHOMPAdd
+		if("b_noise_freq")
 			var/list/preset_noise_freqs = list("high" = MAX_VOICE_FREQ, "middle-high" = 56250, "middle" = 42500, "middle-low"= 28750, "low" = MIN_VOICE_FREQ, "custom" = 1, "random" = 0)
 			var/choice = tgui_input_list(user, "What would you like to set your noise frequency to? ([MIN_VOICE_FREQ] - [MAX_VOICE_FREQ])", "Noise Frequency", preset_noise_freqs)
 			if(!choice)
@@ -2540,16 +2540,16 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			else if(choice < MIN_VOICE_FREQ)
 				choice = MIN_VOICE_FREQ
 			host.vore_selected.noise_freq = choice
-			. = TRUE
+			. = TRUE  //CHOMPAdd End
 		if("b_tastes")
 			host.vore_selected.can_taste = !host.vore_selected.can_taste
 			. = TRUE
-		if("b_feedable") //CHOMPAdd
+		if("b_feedable") //CHOMPAdd Start
 			host.vore_selected.is_feedable = !host.vore_selected.is_feedable
 			. = TRUE
-		if("b_entrance_logs") //CHOMPAdd
+		if("b_entrance_logs")
 			host.vore_selected.entrance_logs = !host.vore_selected.entrance_logs
-			. = TRUE
+			. = TRUE //CHOMPAdd End
 		if("b_bulge_size")
 			var/new_bulge = tgui_input_number(user, "Choose the required size prey must be to show up on examine, ranging from 25% to 200% Set this to 0 for no text on examine.", "Set Belly Examine Size.", max_value = 200, min_value = 0)
 			if(new_bulge == null)
