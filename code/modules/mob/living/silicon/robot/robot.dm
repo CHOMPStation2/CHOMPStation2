@@ -770,13 +770,13 @@
 	uneq_all()
 	modtype = initial(modtype)
 	hands.icon_state = get_hud_module_icon()
-
-	notify_ai(ROBOT_NOTIFICATION_MODULE_RESET, module.name)
-	module.Reset(src)
 	//CHOMPEdit Start: Reset additional vore capacities possibly set by modules
 	vore_capacity_ex = list("sleeper" = 1)
 	vore_fullness_ex = list("sleeper" = 0)
 	//CHOMPEdit End
+
+	notify_ai(ROBOT_NOTIFICATION_MODULE_RESET, module.name)
+	module.Reset(src)
 	qdel(module)
 	module = null
 	updatename("Default")
@@ -1165,10 +1165,14 @@
 		var/selection = tgui_input_list(src, "Select an icon! [triesleft ? "You have [triesleft] more chance\s." : "This is your last try."]", "Robot Icon", module_sprites)
 		sprite_datum = selection
 		//CHOMPEdit Start: Apply icon specific vore bellies
-		vore_capacity_ex = sprite_datum.belly_capacity_list
-		vore_fullness_ex = sprite_datum.belly_capacity_list
+		vore_icon_bellies = list() //Clear any belly options that may not exist now
+		vore_capacity_ex = list()
+		vore_fullness_ex = list()
 		for(var/belly in sprite_datum.belly_capacity_list) //vore icons list only contains a list of names with no associated data
+			vore_capacity_ex[belly] = sprite_datum.belly_capacity_list[belly] //I dont know why but this wasnt working when I just
+			vore_fullness_ex[belly] = 0 //set the lists equal to the old lists
 			vore_icon_bellies += belly
+		update_fullness() //Set how full the newly defined bellies are, if they're already full
 		//CHOMPEdit End
 		if(!istype(src,/mob/living/silicon/robot/drone))
 			robot_species = sprite_datum.name
