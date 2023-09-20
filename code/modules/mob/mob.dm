@@ -12,7 +12,8 @@
 		client.screen = list()
 	if(mind && mind.current == src)
 		spellremove(src)
-	ghostize()
+	if(!istype(src,/mob/observer)) //CHOMPEdit
+		ghostize() //CHOMPEdit
 	QDEL_NULL(plane_holder)
 	..()
 	return QDEL_HINT_HARDDEL_NOW
