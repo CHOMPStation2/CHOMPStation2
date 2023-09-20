@@ -176,7 +176,13 @@ type Belly = {
   belly_sprite_to_affect: string;
 
   // Visuals (Belly Fullscreens Preview and Coloring)
+  belly_fullscreen: string;
   belly_fullscreen_color: string;
+  belly_fullscreen_color2: string;
+  belly_fullscreen_color3: string;
+  belly_fullscreen_color4: string;
+  belly_fullscreen_alpha: number;
+  colorization_enabled: BooleanLike;
 
   // Visuals (Vore FX)
   disable_hud: BooleanLike;
@@ -264,7 +270,7 @@ const generateBellyString = (belly: Belly, index: number) => {
     digest_oxy,
 
     can_taste,
-	is_feedable,
+    is_feedable,
     contaminates,
     contamination_flavor,
     contamination_color,
@@ -325,7 +331,13 @@ const generateBellyString = (belly: Belly, index: number) => {
     belly_sprite_to_affect,
 
     // Visuals (Belly Fullscreens Preview and Coloring)
+    belly_fullscreen,
     belly_fullscreen_color,
+    belly_fullscreen_color2,
+    belly_fullscreen_color3,
+    belly_fullscreen_color4,
+    belly_fullscreen_alpha,
+    colorization_enabled,
 
     // Visuals (Vore FX)
     disable_hud,
@@ -346,16 +358,16 @@ const generateBellyString = (belly: Belly, index: number) => {
     digestchance,
 
     // Interactions (Auto-Transfer)
-	autotransferwait,
+    autotransferwait,
     autotransferchance,
     autotransferlocation,
-	autotransferchance_secondary,
+    autotransferchance_secondary,
     autotransferlocation_secondary,
     autotransfer_enabled,
     autotransfer_min_amount,
     autotransfer_max_amount,
-	autotransfer_absorbed,
-	autotransfer_absorbed_only,
+    autotransfer_absorbed,
+    autotransfer_absorbed_only,
 
     // Liquid Options
     show_liquids,
