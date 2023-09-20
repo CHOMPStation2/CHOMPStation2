@@ -123,6 +123,9 @@ type Belly = {
   vorespawn_blacklist: BooleanLike;
   egg_type: string;
   selective_preference: string;
+  recycling: BooleanLike;
+  entrance_logs: BooleanLike;
+  noise_freq: number;
 
   // Messages
   struggle_messages_outside: string[];
@@ -157,6 +160,7 @@ type Belly = {
   fancy_vore: BooleanLike;
   vore_sound: string;
   release_sound: string;
+  sound_volume: number;
 
   // Visuals
   affects_vore_sprites: BooleanLike;
@@ -214,6 +218,16 @@ type Belly = {
   custom_max_volume: number;
   vorefootsteps_sounds: BooleanLike;
   reagent_mode_flag_list: string[];
+  liquid_overlay: BooleanLike;
+  max_liquid_level: number;
+  mush_overlay: BooleanLike;
+  mush_color: string;
+  mush_alpha: number;
+  max_mush: number;
+  min_mush: number;
+  item_mush_val: number;
+  custom_reagentcolor: string;
+  custom_reagentalpha: number;
 
   // Liquid Messages
   liquid_fullness1_messages: BooleanLike;
@@ -264,6 +278,9 @@ const generateBellyString = (belly: Belly, index: number) => {
     vorespawn_blacklist,
     egg_type,
     selective_preference,
+    recycling,
+    entrance_logs,
+    noise_freq,
 
     // Messages
     struggle_messages_outside,
@@ -298,6 +315,7 @@ const generateBellyString = (belly: Belly, index: number) => {
     fancy_vore,
     vore_sound,
     release_sound,
+    sound_volume,
 
     // Visuals
     affects_vore_sprites,
@@ -341,14 +359,24 @@ const generateBellyString = (belly: Belly, index: number) => {
 
     // Liquid Options
     show_liquids,
-		reagentbellymode,
-		reagent_chosen,
-		reagent_name,
-		reagent_transfer_verb,
-		gen_time_display,
-		custom_max_volume,
-		vorefootsteps_sounds,
-		reagent_mode_flag_list,
+    reagentbellymode,
+    reagent_chosen,
+    reagent_name,
+    reagent_transfer_verb,
+    gen_time_display,
+    custom_max_volume,
+    vorefootsteps_sounds,
+    reagent_mode_flag_list,
+    liquid_overlay,
+    max_liquid_level,
+    mush_overlay,
+    mush_color,
+    mush_alpha,
+    max_mush,
+    min_mush,
+    item_mush_val,
+    custom_reagentcolor,
+    custom_reagentalpha,
 
     // Liquid Messages
     liquid_fullness1_messages,
