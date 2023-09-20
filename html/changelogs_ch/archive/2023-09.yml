@@ -108,3 +108,5 @@
 2023-09-20:
   Fracshun:
   - rscadd: Added new belly option to allow auto-transfer of absorbed creatures
+  TheGreatKitsune:
+  - rscadd: Liquid belly sloshing noises now work for robots
