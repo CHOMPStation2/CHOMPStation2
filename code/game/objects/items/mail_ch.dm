@@ -14,8 +14,11 @@
 	var/datum/weakref/recipient
 	// How many goodies this mail contains.
 	var/goodie_count = 1
-	// Goodies which can be given to anyone. The base weight for cash is 56. For there to be a 50/50 chance of getting a department item, they need 56 weight as well.
+	// Goodies which can be given to anyone.
 	var/list/generic_goodies = list(
+		/obj/item/weapon/reagent_containers/food/snacks/chips = 20,
+		/obj/item/weapon/reagent_containers/food/drinks/cans/cola = 20,
+		/obj/item/trash/gumpack = 15,
 		/obj/item/weapon/spacecash/c50 = 10,
 		/obj/item/weapon/spacecash/c100 = 25,
 		/obj/item/weapon/spacecash/c200 = 15,
@@ -101,8 +104,6 @@
 				to_chat(user, "<span class='notice'>You have labeled the destination as [O.currTag].</span>")
 				if(!src.sortTag)
 					src.sortTag = O.currTag
-				else
-					src.sortTag = O.currTag
 				playsound(src, 'sound/machines/twobeep.ogg', 50, 1)
 			else
 				to_chat(user, "<span class='warning'>The mail is already labeled for [O.currTag].</span>")
@@ -111,16 +112,26 @@
 	return
 
 /obj/item/mail/attack_self(mob/user)
-	. = ..()
+	if(!unwrap(user))
+		return FALSE
+	return after_unwrap(user)
+
+/obj/item/mail/proc/unwrap(mob/user)
 	if(recipient && user != recipient)
 		to_chat(user, "<span class='notice'>You can't open somebody's mail! That's <em>illegal</em></span>")
-		return
+		return FALSE
 
 	if(!do_after(user, 1.5 SECONDS, target = user))
-		return
+		return FALSE
+	return TRUE
+
+/obj/item/mail/proc/after_unwrap(mob/user)
 	user.temporarilyRemoveItemFromInventory(src, TRUE)
-	if(contents.len)
-		user.put_in_hands(contents[1])
+	for(var/obj/stuff as anything in contents)
+		if(isitem(stuff))
+			user.put_in_hands(stuff)
+		else
+			stuff.forceMove(drop_location())
 	playsound(loc, 'sound/items/poster_ripped.ogg', 100, TRUE)
 	qdel(src)
 
@@ -140,7 +151,7 @@
 			else
 				goodies += job_goodies
 
-	for(var/iterator = 0, iterator < goodie_count, iterator++)
+	for(var/iterator in 1 to goodie_count)
 		var/target_good = pick(goodies)
 		if(ispath(target_good, /datum/reagent))
 			var/obj/item/weapon/reagent_containers/target_container = new /obj/item/weapon/reagent_containers/glass/bottle(src)
@@ -173,6 +184,7 @@
 			/obj/item/weapon/reagent_containers/food/snacks/donkpocket/pizza,
 			/obj/item/weapon/reagent_containers/food/snacks/donkpocket/spicy,
 			/obj/item/weapon/reagent_containers/food/snacks/donkpocket/teriyaki,
+			/obj/item/toy/figure,
 		))
 
 	var/list/junk_names = list(
@@ -189,6 +201,7 @@
 		/obj/item/weapon/reagent_containers/food/snacks/donkpocket/pizza = "[initial(name)] with NEW PIZZA-POCKET.",
 		/obj/item/weapon/reagent_containers/food/snacks/donkpocket/spicy = "[initial(name)] with NEW SPICY-POCKET.",
 		/obj/item/weapon/reagent_containers/food/snacks/donkpocket/teriyaki = "[initial(name)] with NEW TERIYAKI-POCKET.",
+		/obj/item/toy/figure = "[initial(name)] from DoN**K*Ko"
 	)
 
 	color = pick(department_colors)
@@ -206,22 +219,13 @@
 	. = ..()
 	junk_mail()
 
-// Crate mail from CentComm
+// Mail Crate
 /obj/structure/closet/crate/mail
 	name = "mail crate"
-	desc = "A certificied post crate from CentComm."
-/*
-	icon = 'modular_chomp/icons/obj/closets/mailcrate.dmi'
+	desc = "An official mail crate from CentComm"
+	points_per_crate = 0
+	closet_appearance = /decl/closet_appearance/crate/nanotrasen
 
-/obj/structure/closet/crate/mail/update_icon()
-	. = ..()
-	if(opened)
-		icon_state = "[initial(icon_state)]open"
-		if(locate(/obj/item/mail) in src)
-			icon_state = initial(icon_state)
-	else
-		icon_state = "[initial(icon_state)]sealed"
-*/
 /obj/structure/closet/crate/mail/full/Initialize()
 	. = ..()
 	var/list/mail_recipients = list()
