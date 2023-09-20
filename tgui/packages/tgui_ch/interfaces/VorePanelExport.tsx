@@ -122,10 +122,10 @@ type Belly = {
   shrink_grow_size: number;
   vorespawn_blacklist: BooleanLike;
   egg_type: string;
+  egg_name: string;
   selective_preference: string;
   recycling: BooleanLike;
   entrance_logs: BooleanLike;
-  noise_freq: number;
 
   // Messages
   struggle_messages_outside: string[];
@@ -161,6 +161,7 @@ type Belly = {
   vore_sound: string;
   release_sound: string;
   sound_volume: number;
+  noise_freq: number;
 
   // Visuals
   affects_vore_sprites: BooleanLike;
@@ -283,10 +284,10 @@ const generateBellyString = (belly: Belly, index: number) => {
     shrink_grow_size,
     vorespawn_blacklist,
     egg_type,
+    egg_name,
     selective_preference,
     recycling,
     entrance_logs,
-    noise_freq,
 
     // Messages
     struggle_messages_outside,
@@ -322,6 +323,7 @@ const generateBellyString = (belly: Belly, index: number) => {
     vore_sound,
     release_sound,
     sound_volume,
+    noise_freq,
 
     // Visuals
     affects_vore_sprites,
