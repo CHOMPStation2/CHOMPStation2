@@ -31,3 +31,19 @@
 /obj/machinery/button/remote/noemag/emag_act(var/remaining_charges, var/mob/user)
 	to_chat(usr, "<span class='warning'>The cryptographic sequencer seems to do nothing.</span>")
 	return 0
+
+/obj/machinery/button/button_that_makes_you_explode //Funny
+	name = "Button that makes you explode"
+	desc = "This button will make you explode if you press it."
+	description_info = "<span class='warning'>Pressing this button will actually kill you, be careful!</span>"
+	explosion_resistance = 1
+
+/obj/machinery/button/button_that_makes_you_explode/attack_hand(var/mob/living/user)
+	. = ..()
+	visible_message("<span class='warning'>[user] presses \the [src], exploding!</span>")
+	explosion(user.loc, 0, 0, 3, 6)
+	user.gib()
+	log_and_message_admins("[key_name_admin(user)] has pressed the button that makes you explode and exploded.") //Admins should know when someone explodes
+
+/obj/machinery/button/button_that_makes_you_explode/ex_act() //The button is immune to explosions so it doesnt blow itself up
+	return
