@@ -142,6 +142,8 @@
 	. = ..()
 
 /mob/living/simple_mob/shadekin/init_vore()
+	if(!voremob_loaded) //CHOMPAdd
+		return //CHOMPAdd
 	if(LAZYLEN(vore_organs))
 		return
 

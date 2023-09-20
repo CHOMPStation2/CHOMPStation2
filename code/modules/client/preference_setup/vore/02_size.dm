@@ -57,7 +57,7 @@
 	pref.fuzzy				= sanitize_integer(pref.fuzzy, 0, 1, initial(pref.fuzzy))
 	pref.offset_override	= sanitize_integer(pref.offset_override, 0, 1, initial(pref.offset_override)) //CHOMPEdit
 	if(pref.voice_freq != 0)
-		pref.voice_freq			= sanitize_integer(pref.voice_freq, MIN_VOICE_FREQ, MAX_VOICE_FREQ, initial(pref.fuzzy))
+		pref.voice_freq			= sanitize_integer(pref.voice_freq, MIN_VOICE_FREQ, MAX_VOICE_FREQ, initial(pref.voice_freq)) //CHOMPEdit
 	if(pref.size_multiplier == null || pref.size_multiplier < RESIZE_TINY || pref.size_multiplier > RESIZE_HUGE)
 		pref.size_multiplier = initial(pref.size_multiplier)
 	if(!(pref.custom_speech_bubble in selectable_speech_bubbles))
@@ -203,7 +203,7 @@
 			return
 		choice = preset_voice_freqs[choice]
 		if(choice == 0)
-			pref.voice_freq = choice
+			pref.voice_freq = 42500 //CHOMPEdit
 			return TOPIC_REFRESH
 		else if(choice == 1)
 			choice = tgui_input_number(user, "Choose your character's voice frequency, ranging from [MIN_VOICE_FREQ] to [MAX_VOICE_FREQ]", "Custom Voice Frequency", null, MAX_VOICE_FREQ, MIN_VOICE_FREQ, round_value = TRUE)
