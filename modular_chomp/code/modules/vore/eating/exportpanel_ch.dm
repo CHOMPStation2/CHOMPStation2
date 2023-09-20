@@ -246,6 +246,8 @@
 			belly_data["autotransferlocation_secondary"] = B.autotransferlocation_secondary
 			belly_data["autotransfer_min_amount"] = B.autotransfer_min_amount
 			belly_data["autotransfer_max_amount"] = B.autotransfer_max_amount
+			belly_data["autotransfer_absorbed"] = B.autotransfer_absorbed
+			belly_data["autotransfer_absorbed_only"] = B.autotransfer_absorbed_only
 
 			// Liquid Options
 			belly_data["show_liquids"] = B.show_liquids
