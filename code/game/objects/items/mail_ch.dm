@@ -16,12 +16,16 @@
 	var/goodie_count = 1
 	// Goodies which can be given to anyone.
 	var/list/generic_goodies = list(
-		/obj/item/weapon/reagent_containers/food/snacks/chips = 20,
-		/obj/item/weapon/reagent_containers/food/drinks/cans/cola = 20,
-		/obj/item/trash/gumpack = 15,
-		/obj/item/weapon/spacecash/c50 = 10,
 		/obj/item/weapon/spacecash/c100 = 25,
+		/obj/random/snack = 20,
+		/obj/random/drinksoft = 20,
+		/obj/item/weapon/reagent_containers/food/drinks/coffee = 15,
+		/obj/item/weapon/reagent_containers/food/drinks/tea = 15,
 		/obj/item/weapon/spacecash/c200 = 15,
+		/obj/item/weapon/storage/box/ = 15,
+		/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/nt = 10,
+		/obj/item/weapon/spacecash/c50 = 10,
+		/obj/item/weapon/pen/fountain = 5,
 		/obj/item/weapon/spacecash/c500 = 5,
 		/obj/item/weapon/spacecash/c1000 = 1,
 	)
@@ -54,14 +58,14 @@
 	RegisterSignal(src, COMSIG_MOVABLE_DISPOSING, .proc/disposal_handling)
 	if(isnull(department_colors))
 		department_colors = list(
-			DEPARTMENT_COMMAND = COLOR_CYAN_BLUE,
-			DEPARTMENT_CIVILIAN = COLOR_WHITE,
-			DEPARTMENT_ENGINEERING = COLOR_PALE_ORANGE,
-			DEPARTMENT_RESEARCH = COLOR_PALE_PURPLE_GRAY,
-			DEPARTMENT_MEDICAL = COLOR_PALE_BLUE_GRAY,
-			DEPARTMENT_PLANET = COLOR_PALE_GREEN_GRAY,
-			DEPARTMENT_CARGO = COLOR_BEIGE,
-			DEPARTMENT_SECURITY = COLOR_PALE_RED_GRAY,
+			COLOR_CYAN_BLUE = DEPARTMENT_COMMAND,
+			COLOR_WHITE = DEPARTMENT_CIVILIAN,
+			COLOR_PALE_ORANGE = DEPARTMENT_ENGINEERING,
+			COLOR_PALE_PURPLE_GRAY = DEPARTMENT_RESEARCH,
+			COLOR_PALE_BLUE_GRAY = DEPARTMENT_MEDICAL,
+			COLOR_PALE_GREEN_GRAY = DEPARTMENT_PLANET,
+			COLOR_BEIGE = DEPARTMENT_CARGO,
+			COLOR_PALE_RED_GRAY = DEPARTMENT_SECURITY,
 		)
 
 	// Icons
@@ -152,8 +156,8 @@
 				goodies += job_goodies
 
 	for(var/iterator in 1 to goodie_count)
-		var/target_good = pick(goodies)
-		if(ispath(target_good, /datum/reagent))
+		var/target_good = pickweight(goodies)
+		if(!ispath(target_good, /obj/item))
 			var/obj/item/weapon/reagent_containers/target_container = new /obj/item/weapon/reagent_containers/glass/bottle(src)
 			target_container.reagents.add_reagent(target_good, target_container.volume)
 			target_container.name = "[target_container.reagents.reagent_list[1].name] bottle"
@@ -185,6 +189,8 @@
 			/obj/item/weapon/reagent_containers/food/snacks/donkpocket/spicy,
 			/obj/item/weapon/reagent_containers/food/snacks/donkpocket/teriyaki,
 			/obj/item/toy/figure,
+			/obj/random/contraband,
+			/obj/random/bluespace,
 		))
 
 	var/list/junk_names = list(
@@ -201,7 +207,9 @@
 		/obj/item/weapon/reagent_containers/food/snacks/donkpocket/pizza = "[initial(name)] with NEW PIZZA-POCKET.",
 		/obj/item/weapon/reagent_containers/food/snacks/donkpocket/spicy = "[initial(name)] with NEW SPICY-POCKET.",
 		/obj/item/weapon/reagent_containers/food/snacks/donkpocket/teriyaki = "[initial(name)] with NEW TERIYAKI-POCKET.",
-		/obj/item/toy/figure = "[initial(name)] from DoN**K*Ko"
+		/obj/item/toy/figure = "[initial(name)] from DoN**K*oC",
+		/obj/random/contraband = "[initial(name)] with CONFIDENTIAL ITEMS. DO NOT SCAN.",
+		/obj/random/bluespace = "[initial(name)] with CONFIDENTIAL ITEMS. DO NOT SCAN."
 	)
 
 	color = pick(department_colors)
@@ -251,10 +259,11 @@
 	desc = "A bag for letters, envelopes and other postage."
 	icon = 'modular_chomp/icons/obj/bureaucracy.dmi'
 	icon_state = "mailbag"
-	slot_flags = SLOT_BELT | SLOT_POCKET
-	w_class = ITEMSIZE_NORMAL
+	slot_flags = SLOT_BELT
+	w_class = ITEMSIZE_LARGE
 	storage_slots = 20
 	allow_quick_empty = 1
+	max_storage_space = 42
 	max_w_class = ITEMSIZE_NORMAL
 	can_hold = list(
 		/obj/item/mail,
