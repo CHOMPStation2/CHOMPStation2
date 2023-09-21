@@ -122,7 +122,10 @@ type Belly = {
   shrink_grow_size: number;
   vorespawn_blacklist: BooleanLike;
   egg_type: string;
+  egg_name: string;
   selective_preference: string;
+  recycling: BooleanLike;
+  entrance_logs: BooleanLike;
 
   // Messages
   struggle_messages_outside: string[];
@@ -157,6 +160,8 @@ type Belly = {
   fancy_vore: BooleanLike;
   vore_sound: string;
   release_sound: string;
+  sound_volume: number;
+  noise_freq: number;
 
   // Visuals
   affects_vore_sprites: BooleanLike;
@@ -172,7 +177,13 @@ type Belly = {
   belly_sprite_to_affect: string;
 
   // Visuals (Belly Fullscreens Preview and Coloring)
+  belly_fullscreen: string;
   belly_fullscreen_color: string;
+  belly_fullscreen_color2: string;
+  belly_fullscreen_color3: string;
+  belly_fullscreen_color4: string;
+  belly_fullscreen_alpha: number;
+  colorization_enabled: BooleanLike;
 
   // Visuals (Vore FX)
   disable_hud: BooleanLike;
@@ -214,6 +225,16 @@ type Belly = {
   custom_max_volume: number;
   vorefootsteps_sounds: BooleanLike;
   reagent_mode_flag_list: string[];
+  liquid_overlay: BooleanLike;
+  max_liquid_level: number;
+  mush_overlay: BooleanLike;
+  mush_color: string;
+  mush_alpha: number;
+  max_mush: number;
+  min_mush: number;
+  item_mush_val: number;
+  custom_reagentcolor: string;
+  custom_reagentalpha: number;
 
   // Liquid Messages
   liquid_fullness1_messages: BooleanLike;
@@ -250,7 +271,7 @@ const generateBellyString = (belly: Belly, index: number) => {
     digest_oxy,
 
     can_taste,
-	is_feedable,
+    is_feedable,
     contaminates,
     contamination_flavor,
     contamination_color,
@@ -263,7 +284,10 @@ const generateBellyString = (belly: Belly, index: number) => {
     shrink_grow_size,
     vorespawn_blacklist,
     egg_type,
+    egg_name,
     selective_preference,
+    recycling,
+    entrance_logs,
 
     // Messages
     struggle_messages_outside,
@@ -298,6 +322,8 @@ const generateBellyString = (belly: Belly, index: number) => {
     fancy_vore,
     vore_sound,
     release_sound,
+    sound_volume,
+    noise_freq,
 
     // Visuals
     affects_vore_sprites,
@@ -307,7 +333,13 @@ const generateBellyString = (belly: Belly, index: number) => {
     belly_sprite_to_affect,
 
     // Visuals (Belly Fullscreens Preview and Coloring)
+    belly_fullscreen,
     belly_fullscreen_color,
+    belly_fullscreen_color2,
+    belly_fullscreen_color3,
+    belly_fullscreen_color4,
+    belly_fullscreen_alpha,
+    colorization_enabled,
 
     // Visuals (Vore FX)
     disable_hud,
@@ -328,27 +360,37 @@ const generateBellyString = (belly: Belly, index: number) => {
     digestchance,
 
     // Interactions (Auto-Transfer)
-	autotransferwait,
+    autotransferwait,
     autotransferchance,
     autotransferlocation,
-	autotransferchance_secondary,
+    autotransferchance_secondary,
     autotransferlocation_secondary,
     autotransfer_enabled,
     autotransfer_min_amount,
     autotransfer_max_amount,
-	autotransfer_absorbed,
-	autotransfer_absorbed_only,
+    autotransfer_absorbed,
+    autotransfer_absorbed_only,
 
     // Liquid Options
     show_liquids,
-		reagentbellymode,
-		reagent_chosen,
-		reagent_name,
-		reagent_transfer_verb,
-		gen_time_display,
-		custom_max_volume,
-		vorefootsteps_sounds,
-		reagent_mode_flag_list,
+    reagentbellymode,
+    reagent_chosen,
+    reagent_name,
+    reagent_transfer_verb,
+    gen_time_display,
+    custom_max_volume,
+    vorefootsteps_sounds,
+    reagent_mode_flag_list,
+    liquid_overlay,
+    max_liquid_level,
+    mush_overlay,
+    mush_color,
+    mush_alpha,
+    max_mush,
+    min_mush,
+    item_mush_val,
+    custom_reagentcolor,
+    custom_reagentalpha,
 
     // Liquid Messages
     liquid_fullness1_messages,
