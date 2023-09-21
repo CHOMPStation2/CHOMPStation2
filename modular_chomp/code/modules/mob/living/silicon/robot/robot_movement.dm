@@ -1,5 +1,12 @@
 //CHOMP reagent vore belly sloshing
 
+/mob/living/silicon/robot
+	var/step_count = 0
+
+/mob/living/silicon/robot/handle_footstep(var/turf/T)
+	if(step_count++ % 2)
+		check_vorefootstep("run", T) //CHOMPstation edit: sloshing reagent belly walk system
+
 // Handle footstep sounds
 /mob/living/silicon/robot/handle_vorefootstep(var/m_intent, var/turf/T)
 
