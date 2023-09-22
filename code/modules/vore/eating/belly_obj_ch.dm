@@ -183,18 +183,20 @@
 				gen_interval = 0
 			else
 				gen_interval++
+
+/obj/belly/proc/HandleBellyReagentEffects(var/list/touchable_atoms)
 	if(reagents.total_volume >= 5 && LAZYLEN(contents))
 		SEND_SIGNAL(src, COMSIG_BELLY_UPDATE_VORE_FX, FALSE, reagents.total_volume) // Signals vore_fx() reagents updates.
-		var/affecting_amt = reagents.total_volume / max(LAZYLEN(contents), 1)
+		var/affecting_amt = reagents.total_volume / max(LAZYLEN(touchable_atoms), 1)
 		if(affecting_amt > 5)
 			affecting_amt = 5
 		if(affecting_amt >= 1)
-			for(var/mob/living/L in contents)
+			for(var/mob/living/L in touchable_atoms)
 				if(L.digestable && digest_mode == DM_DIGEST)
 					if(reagents.total_volume)
 						reagents.trans_to(L, affecting_amt, 1, FALSE)
 				vore_fx(L, FALSE, reagents.total_volume)
-			for(var/obj/item/I in contents)
+			for(var/obj/item/I in touchable_atoms)
 				if(reagents.total_volume)
 					reagents.trans_to(I, affecting_amt, 1, FALSE)
 

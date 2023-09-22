@@ -406,7 +406,7 @@
 			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
 			recent_sound = TRUE
 
-	if(reagents.total_volume >= 5 && !isliving(thing)) //CHOMPAdd
+	if(reagents.total_volume >= 5 && !isliving(thing) && (item_digest_mode == IM_DIGEST || item_digest_mode == IM_DIGEST_PARALLEL)) //CHOMPAdd
 		reagents.trans_to(thing, reagents.total_volume * 0.1, 1 / max(LAZYLEN(contents), 1), FALSE) //CHOMPAdd
 	//Messages if it's a mob
 	if(isliving(thing))

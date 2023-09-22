@@ -84,6 +84,9 @@
 	if(!digestion_noise_chance)
 		digestion_noise_chance = DM.noise_chance
 
+	touchable_atoms -= items_preserved //CHOMPAdd
+	HandleBellyReagentEffects(touchable_atoms) //CHOMPAdd
+
 /////////////////////////// Make any noise ///////////////////////////
 	if(digestion_noise_chance && prob(digestion_noise_chance))
 		for(var/mob/M in contents)
