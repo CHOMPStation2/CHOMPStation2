@@ -5,7 +5,7 @@
 	name = "sizeoxadone"
 	id = "sizeoxadone"
 	result = "sizeoxadone"
-	required_reagents = list("clonexadone" = 1, "tramadol" = 3, "phoron" = 1)
+	required_reagents = list("cryptobiolin" = 1, "tramadol" = 3) //CHOMPEdit: Replaced cloneadex with cryptobiolin, removed phoron
 	catalysts = list("phoron" = 5)
 	result_amount = 5
 
