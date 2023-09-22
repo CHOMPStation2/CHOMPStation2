@@ -4,6 +4,7 @@
 
 /mob/observer/Destroy()
 	if(body_backup)
+		body_backup.moveToNullspace() //YEET
 		qdel(body_backup)
 		body_backup = null
 	return ..()
