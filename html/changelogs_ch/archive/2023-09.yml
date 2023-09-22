@@ -114,3 +114,8 @@
   Verkister:
   - bugfix: Fixed exonet_node runtime spam.
   - bugfix: Fixed vorepanel export missing a lot of the newer vars.
+2023-09-22:
+  FluffMedic:
+  - qol: Removed phoron from the base of size chems, replacing clonedex with cryptobiolin
+  Verkister:
+  - bugfix: Fixed other missing exportpanel vars.
