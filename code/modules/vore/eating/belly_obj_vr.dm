@@ -70,12 +70,15 @@
 	var/autotransferlocation				// Place to send them
 	var/autotransferchance_secondary = 0 	// % Chance of prey being autotransferred to secondary transfer location //CHOMPAdd
 	var/autotransferlocation_secondary		// Second place to send them //CHOMPAdd
+	var/autotransfer_secondary_whitelist = 0// Flags for what can be transferred to the secondary location //CHOMPAdd
 	var/autotransfer_enabled = FALSE		// Player toggle
 	var/autotransfer_absorbed = FALSE		// If belly can auto transfer absorbed creatures //CHOMPAdd
 	var/autotransfer_absorbed_only = FALSE	// If belly ONLY auto transfers absorbed creatures //CHOMPAdd
 	var/autotransfer_min_amount = 0			// Minimum amount of things to pass at once. //CHOMPAdd
 	var/autotransfer_max_amount = 0			// Maximum amount of things to pass at once. //CHOMPAdd
 	var/tmp/list/autotransfer_queue = list()// Reserve for above things. //CHOMPAdd
+	//Auto-transfer flags for whitelist //CHOMPAdd
+	var/tmp/static/list/autotransfer_flags_list = list("Creatures" = AT_FLAG_CREATURES, "Absorbed" = AT_FLAG_ABSORBED)
 
 	//I don't think we've ever altered these lists. making them static until someone actually overrides them somewhere.
 	//Actual full digest modes
@@ -311,6 +314,7 @@
 	"autotransfer_absorbed_only",
 	"autotransferchance_secondary",
 	"autotransferlocation_secondary",
+	"autotransfer_secondary_whitelist",
 	"autotransfer_min_amount",
 	"autotransfer_max_amount",
 	"slow_digestion",
@@ -1603,7 +1607,7 @@
 /obj/belly/proc/check_autotransfer(var/atom/movable/prey)
 	if(!(prey in contents) || !prey.autotransferable) return
 	var/dest_belly_name
-	if(autotransferlocation_secondary && prob(autotransferchance_secondary))
+	if(autotransferlocation_secondary && prob(autotransferchance_secondary) && autotransfer_filter(prey, autotransfer_secondary_whitelist))
 		dest_belly_name = autotransferlocation_secondary
 	if(autotransferlocation && prob(autotransferchance))
 		dest_belly_name = autotransferlocation
@@ -1618,6 +1622,17 @@
 	if(!dest_belly) return
 	transfer_contents(prey, dest_belly)
 	return TRUE //CHOMPEdit end
+
+//Autotransfer filter CHOMPEdit Start
+/obj/belly/proc/autotransfer_filter(var/atom/movable/prey, var/whitelist)
+	if(whitelist == 0) return TRUE
+	if(whitelist & autotransfer_flags_list["Creatures"])
+		if(isliving(prey)) return TRUE
+	if(whitelist & autotransfer_flags_list["Absorbed"])
+		if(isliving(prey))
+			var/mob/living/L = prey
+			if(L.absorbed) return TRUE
+	return FALSE //CHOMPEdit end
 
 // Belly copies and then returns the copy
 // Needs to be updated for any var changes

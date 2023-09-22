@@ -251,6 +251,11 @@
 			belly_data["autotransfer_max_amount"] = B.autotransfer_max_amount
 			belly_data["autotransfer_absorbed"] = B.autotransfer_absorbed
 			belly_data["autotransfer_absorbed_only"] = B.autotransfer_absorbed_only
+			var/list/at_secondary_whitelist = list()
+			for(var/flag_name in B.autotransfer_flags_list)
+				if(B.autotransfer_secondary_whitelist & B.autotransfer_flags_list[flag_name])
+					at_secondary_whitelist.Add(flag_name)
+			belly_data["autotransfer_secondary_whitelist"] = at_secondary_whitelist
 
 			// Liquid Options
 			belly_data["show_liquids"] = B.show_liquids

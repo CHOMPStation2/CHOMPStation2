@@ -1610,6 +1610,20 @@ const VoreSelectedBellyInteractions = (props, context) => {
                 }
               />
             </LabeledList.Item>
+            <LabeledList.Item label="Auto-Transfer Secondary Whitelist">
+              {(autotransfer.autotransfer_secondary_whitelist.length &&
+                autotransfer.autotransfer_secondary_whitelist.join(', ')) ||
+                'Everything'}
+              <Button
+                onClick={() =>
+                  act('set_attribute', {
+                    attribute: 'b_autotransfer_secondary_whitelist',
+                  })
+                }
+                ml={1}
+                icon="plus"
+              />
+            </LabeledList.Item>
             <LabeledList.Item label="Auto-Transfer Min Amount">
               <Button
                 content={autotransfer.autotransfer_min_amount}

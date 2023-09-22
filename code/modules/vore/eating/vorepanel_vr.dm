@@ -330,6 +330,13 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			selected_list["autotransfer"]["autotransfer_max_amount"] = selected.autotransfer_max_amount
 			selected_list["autotransfer"]["autotransfer_absorbed"] = selected.autotransfer_absorbed						//CHOMPAdd
 			selected_list["autotransfer"]["autotransfer_absorbed_only"] = selected.autotransfer_absorbed_only			//CHOMPAdd
+			//CHOMPAdd auto-transfer flags
+			var/list/at_secondary_whitelist = list()
+			for(var/flag_name in selected.autotransfer_flags_list)
+				if(selected.autotransfer_secondary_whitelist & selected.autotransfer_flags_list[flag_name])
+					at_secondary_whitelist.Add(flag_name)
+			selected_list["autotransfer"]["autotransfer_secondary_whitelist"] = at_secondary_whitelist
+			//CHOMPAdd END
 
 		selected_list["disable_hud"] = selected.disable_hud
 		selected_list["colorization_enabled"] = selected.colorization_enabled
@@ -1160,6 +1167,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 							new_belly.transferlocation_secondary = new_transferlocation_secondary
 						if(new_transferlocation_secondary == new_belly.name)
 							new_belly.transferlocation_secondary = null
+
+				if(islist(belly_data["autotransfer_secondary_whitelist"]))
+					new_belly.autotransfer_secondary_whitelist = 0
+					for(var/at_flag in belly_data["autotransfer_secondary_whitelist"])
+						new_belly.autotransfer_secondary_whitelist += new_belly.autotransfer_flags_list[at_flag]
 
 				if(isnum(belly_data["absorbchance"]))
 					var/new_absorbchance = belly_data["absorbchance"]
@@ -2744,6 +2756,13 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.autotransferlocation_secondary = null
 			else
 				host.vore_selected.autotransferlocation_secondary = choice.name
+			. = TRUE
+		if("b_autotransfer_secondary_whitelist")
+			var/list/menu_list = host.vore_selected.autotransfer_flags_list.Copy()
+			var/toggle_addon = tgui_input_list(usr, "Toggle Whitelist", "Whitelist Choice", menu_list)
+			if(!toggle_addon)
+				return FALSE
+			host.vore_selected.autotransfer_secondary_whitelist ^= host.vore_selected.autotransfer_flags_list[toggle_addon]
 			. = TRUE
 		if("b_autotransfer_min_amount")
 			var/autotransfer_min_amount_input = input(user, "Set the minimum amount of items your belly can belly auto-transfer at once. Set to 0 for no limit.", "Auto-Transfer Min Amount") as num|null

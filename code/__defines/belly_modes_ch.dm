@@ -16,3 +16,7 @@
 
 //For belly fullscreen shennanigans outside of bellies, due to Life() clearing belly fullscreens outside of bellies.
 #define ATOM_BELLY_FULLSCREEN "belly_atom_vfx"
+
+//Auto-transfer flags
+#define AT_FLAG_CREATURES		0x1
+#define AT_FLAG_ABSORBED		0x2
