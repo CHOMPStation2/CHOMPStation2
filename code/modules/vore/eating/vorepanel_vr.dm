@@ -2512,6 +2512,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				releasetest = classic_release_sounds[host.vore_selected.release_sound]
 
 			if(releasetest)
+				releasetest.frequency = host.vore_selected.noise_freq
 				SEND_SOUND(user, releasetest)
 			. = TRUE
 		if("b_sound")
@@ -2533,6 +2534,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			else
 				voretest = classic_vore_sounds[host.vore_selected.vore_sound]
 			if(voretest)
+				voretest.frequency = host.vore_selected.noise_freq
 				SEND_SOUND(user, voretest)
 			. = TRUE
 		if("b_sound_volume") //CHOMPAdd Start
