@@ -114,3 +114,6 @@
   Verkister:
   - bugfix: Fixed exonet_node runtime spam.
   - bugfix: Fixed vorepanel export missing a lot of the newer vars.
+2023-09-22:
+  Verkister:
+  - bugfix: Fixed other missing exportpanel vars.
