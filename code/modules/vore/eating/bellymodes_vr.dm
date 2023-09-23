@@ -20,10 +20,8 @@
 		var/list/autotransferables = list()
 		for(var/atom/movable/M in contents)
 			if(!M || !M.autotransferable) continue
-			if(isliving(M))
-				var/mob/living/L = M
-				if(!src.autotransfer_absorbed && L.absorbed) continue
-				if(src.autotransfer_absorbed && src.autotransfer_absorbed_only && !L.absorbed) continue
+			// If the prey can't pass the filter of at least one transfer location, skip it
+			if(!(autotransfer_filter(M, autotransfer_secondary_whitelist, autotransfer_secondary_blacklist) || autotransfer_filter(M, autotransfer_whitelist, autotransfer_blacklist))) continue
 			M.belly_cycles++
 			if(M.belly_cycles < autotransferwait / 60) continue
 			autotransferables += M

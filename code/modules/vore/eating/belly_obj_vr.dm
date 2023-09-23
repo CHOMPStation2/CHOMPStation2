@@ -68,12 +68,13 @@
 	var/autotransferchance = 0 				// % Chance of prey being autotransferred to transfer location
 	var/autotransferwait = 10 				// Time between trying to transfer.
 	var/autotransferlocation				// Place to send them
+	var/autotransfer_whitelist = 0			// Flags for what can be transferred to the primary location //CHOMPAdd
+	var/autotransfer_blacklist = 2			// Flags for what can not be transferred to the primary location, defaults to Absorbed //CHOMPAdd
 	var/autotransferchance_secondary = 0 	// % Chance of prey being autotransferred to secondary transfer location //CHOMPAdd
 	var/autotransferlocation_secondary		// Second place to send them //CHOMPAdd
 	var/autotransfer_secondary_whitelist = 0// Flags for what can be transferred to the secondary location //CHOMPAdd
+	var/autotransfer_secondary_blacklist = 2// Flags for what can not be transferred to the secondary location, defaults to Absorbed //CHOMPAdd
 	var/autotransfer_enabled = FALSE		// Player toggle
-	var/autotransfer_absorbed = FALSE		// If belly can auto transfer absorbed creatures //CHOMPAdd
-	var/autotransfer_absorbed_only = FALSE	// If belly ONLY auto transfers absorbed creatures //CHOMPAdd
 	var/autotransfer_min_amount = 0			// Minimum amount of things to pass at once. //CHOMPAdd
 	var/autotransfer_max_amount = 0			// Maximum amount of things to pass at once. //CHOMPAdd
 	var/tmp/list/autotransfer_queue = list()// Reserve for above things. //CHOMPAdd
@@ -310,11 +311,12 @@
 	"autotransferwait",
 	"autotransferlocation",
 	"autotransfer_enabled",
-	"autotransfer_absorbed",
-	"autotransfer_absorbed_only",
 	"autotransferchance_secondary",
 	"autotransferlocation_secondary",
 	"autotransfer_secondary_whitelist",
+	"autotransfer_secondary_blacklist",
+	"autotransfer_whitelist",
+	"autotransfer_blacklist",
 	"autotransfer_min_amount",
 	"autotransfer_max_amount",
 	"slow_digestion",
@@ -1607,9 +1609,9 @@
 /obj/belly/proc/check_autotransfer(var/atom/movable/prey)
 	if(!(prey in contents) || !prey.autotransferable) return
 	var/dest_belly_name
-	if(autotransferlocation_secondary && prob(autotransferchance_secondary) && autotransfer_filter(prey, autotransfer_secondary_whitelist))
+	if(autotransferlocation_secondary && prob(autotransferchance_secondary) && autotransfer_filter(prey, autotransfer_secondary_whitelist, autotransfer_secondary_blacklist))
 		dest_belly_name = autotransferlocation_secondary
-	if(autotransferlocation && prob(autotransferchance))
+	if(autotransferlocation && prob(autotransferchance) && autotransfer_filter(prey, autotransfer_whitelist, autotransfer_blacklist))
 		dest_belly_name = autotransferlocation
 	if(!dest_belly_name) // Didn't transfer, so wait before retrying
 		prey.belly_cycles = 0
@@ -1624,7 +1626,14 @@
 	return TRUE //CHOMPEdit end
 
 //Autotransfer filter CHOMPEdit Start
-/obj/belly/proc/autotransfer_filter(var/atom/movable/prey, var/whitelist)
+/obj/belly/proc/autotransfer_filter(var/atom/movable/prey, var/whitelist, var/blacklist)
+	if(blacklist & autotransfer_flags_list["Creatures"])
+		if(isliving(prey)) return FALSE
+	if(blacklist & autotransfer_flags_list["Absorbed"])
+		if(isliving(prey))
+			var/mob/living/L = prey
+			if(L.absorbed) return FALSE
+
 	if(whitelist == 0) return TRUE
 	if(whitelist & autotransfer_flags_list["Creatures"])
 		if(isliving(prey)) return TRUE

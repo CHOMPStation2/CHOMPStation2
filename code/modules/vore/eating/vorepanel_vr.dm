@@ -328,14 +328,27 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			selected_list["autotransfer"]["autotransferlocation_secondary"] = selected.autotransferlocation_secondary	//CHOMPAdd
 			selected_list["autotransfer"]["autotransfer_min_amount"] = selected.autotransfer_min_amount
 			selected_list["autotransfer"]["autotransfer_max_amount"] = selected.autotransfer_max_amount
-			selected_list["autotransfer"]["autotransfer_absorbed"] = selected.autotransfer_absorbed						//CHOMPAdd
-			selected_list["autotransfer"]["autotransfer_absorbed_only"] = selected.autotransfer_absorbed_only			//CHOMPAdd
 			//CHOMPAdd auto-transfer flags
+			var/list/at_whitelist = list()
+			for(var/flag_name in selected.autotransfer_flags_list)
+				if(selected.autotransfer_whitelist & selected.autotransfer_flags_list[flag_name])
+					at_whitelist.Add(flag_name)
+			selected_list["autotransfer"]["autotransfer_whitelist"] = at_whitelist
+			var/list/at_blacklist = list()
+			for(var/flag_name in selected.autotransfer_flags_list)
+				if(selected.autotransfer_blacklist & selected.autotransfer_flags_list[flag_name])
+					at_blacklist.Add(flag_name)
+			selected_list["autotransfer"]["autotransfer_blacklist"] = at_blacklist
 			var/list/at_secondary_whitelist = list()
 			for(var/flag_name in selected.autotransfer_flags_list)
 				if(selected.autotransfer_secondary_whitelist & selected.autotransfer_flags_list[flag_name])
 					at_secondary_whitelist.Add(flag_name)
 			selected_list["autotransfer"]["autotransfer_secondary_whitelist"] = at_secondary_whitelist
+			var/list/at_secondary_blacklist = list()
+			for(var/flag_name in selected.autotransfer_flags_list)
+				if(selected.autotransfer_secondary_blacklist & selected.autotransfer_flags_list[flag_name])
+					at_secondary_blacklist.Add(flag_name)
+			selected_list["autotransfer"]["autotransfer_secondary_blacklist"] = at_secondary_blacklist
 			//CHOMPAdd END
 
 		selected_list["disable_hud"] = selected.disable_hud
@@ -1168,10 +1181,25 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						if(new_transferlocation_secondary == new_belly.name)
 							new_belly.transferlocation_secondary = null
 
+				if(islist(belly_data["autotransfer_whitelist"]))
+					new_belly.autotransfer_whitelist = 0
+					for(var/at_flag in belly_data["autotransfer_whitelist"])
+						new_belly.autotransfer_whitelist += new_belly.autotransfer_flags_list[at_flag]
+
+				if(islist(belly_data["autotransfer_blacklist"]))
+					new_belly.autotransfer_blacklist = 0
+					for(var/at_flag in belly_data["autotransfer_blacklist"])
+						new_belly.autotransfer_blacklist += new_belly.autotransfer_flags_list[at_flag]
+
 				if(islist(belly_data["autotransfer_secondary_whitelist"]))
 					new_belly.autotransfer_secondary_whitelist = 0
 					for(var/at_flag in belly_data["autotransfer_secondary_whitelist"])
 						new_belly.autotransfer_secondary_whitelist += new_belly.autotransfer_flags_list[at_flag]
+
+				if(islist(belly_data["autotransfer_secondary_blacklist"]))
+					new_belly.autotransfer_secondary_blacklist = 0
+					for(var/at_flag in belly_data["autotransfer_secondary_blacklist"])
+						new_belly.autotransfer_secondary_blacklist += new_belly.autotransfer_flags_list[at_flag]
 
 				if(isnum(belly_data["absorbchance"]))
 					var/new_absorbchance = belly_data["absorbchance"]
@@ -1231,20 +1259,6 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				if(isnum(belly_data["autotransfer_max_amount"]))
 					var/new_autotransfer_max_amount = belly_data["autotransfer_max_amount"]
 					new_belly.autotransfer_max_amount = sanitize_integer(new_autotransfer_max_amount, 0, 100, initial(new_belly.autotransfer_max_amount))
-
-				if(isnum(belly_data["autotransfer_absorbed"]))
-					var/new_autotransfer_absorbed = belly_data["autotransfer_absorbed"]
-					if(new_autotransfer_absorbed == 0)
-						new_belly.autotransfer_absorbed = FALSE
-					if(new_autotransfer_absorbed == 1)
-						new_belly.autotransfer_absorbed = TRUE
-
-				if(isnum(belly_data["autotransfer_absorbed_only"]))
-					var/new_autotransfer_absorbed_only = belly_data["autotransfer_absorbed_only"]
-					if(new_autotransfer_absorbed_only == 0)
-						new_belly.autotransfer_absorbed_only = FALSE
-					if(new_autotransfer_absorbed_only == 1)
-						new_belly.autotransfer_absorbed_only = TRUE
 
 				// Liquid Options
 				if(isnum(belly_data["show_liquids"]))
@@ -2757,12 +2771,33 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			else
 				host.vore_selected.autotransferlocation_secondary = choice.name
 			. = TRUE
+		if("b_autotransfer_whitelist")
+			var/list/menu_list = host.vore_selected.autotransfer_flags_list.Copy()
+			var/toggle_addon = tgui_input_list(usr, "Toggle Whitelist", "Whitelist Choice", menu_list)
+			if(!toggle_addon)
+				return FALSE
+			host.vore_selected.autotransfer_whitelist ^= host.vore_selected.autotransfer_flags_list[toggle_addon]
+			. = TRUE
+		if("b_autotransfer_blacklist")
+			var/list/menu_list = host.vore_selected.autotransfer_flags_list.Copy()
+			var/toggle_addon = tgui_input_list(usr, "Toggle Blacklist", "Blacklist Choice", menu_list)
+			if(!toggle_addon)
+				return FALSE
+			host.vore_selected.autotransfer_blacklist ^= host.vore_selected.autotransfer_flags_list[toggle_addon]
+			. = TRUE
 		if("b_autotransfer_secondary_whitelist")
 			var/list/menu_list = host.vore_selected.autotransfer_flags_list.Copy()
 			var/toggle_addon = tgui_input_list(usr, "Toggle Whitelist", "Whitelist Choice", menu_list)
 			if(!toggle_addon)
 				return FALSE
 			host.vore_selected.autotransfer_secondary_whitelist ^= host.vore_selected.autotransfer_flags_list[toggle_addon]
+			. = TRUE
+		if("b_autotransfer_secondary_blacklist")
+			var/list/menu_list = host.vore_selected.autotransfer_flags_list.Copy()
+			var/toggle_addon = tgui_input_list(usr, "Toggle Blacklist", "Blacklist Choice", menu_list)
+			if(!toggle_addon)
+				return FALSE
+			host.vore_selected.autotransfer_secondary_blacklist ^= host.vore_selected.autotransfer_flags_list[toggle_addon]
 			. = TRUE
 		if("b_autotransfer_min_amount")
 			var/autotransfer_min_amount_input = input(user, "Set the minimum amount of items your belly can belly auto-transfer at once. Set to 0 for no limit.", "Auto-Transfer Min Amount") as num|null
@@ -2776,12 +2811,6 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			. = TRUE
 		if("b_autotransfer_enabled")
 			host.vore_selected.autotransfer_enabled = !host.vore_selected.autotransfer_enabled
-			. = TRUE
-		if("b_autotransfer_absorbed")
-			host.vore_selected.autotransfer_absorbed = !host.vore_selected.autotransfer_absorbed
-			. = TRUE
-		if("b_autotransfer_absorbed_only")
-			host.vore_selected.autotransfer_absorbed_only = !host.vore_selected.autotransfer_absorbed_only
 			. = TRUE //CHOMPedit End
 		if("b_fullscreen")
 			host.vore_selected.belly_fullscreen = params["val"]
