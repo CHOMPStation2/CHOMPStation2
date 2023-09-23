@@ -79,7 +79,7 @@
 	var/autotransfer_max_amount = 0			// Maximum amount of things to pass at once. //CHOMPAdd
 	var/tmp/list/autotransfer_queue = list()// Reserve for above things. //CHOMPAdd
 	//Auto-transfer flags for whitelist //CHOMPAdd
-	var/tmp/static/list/autotransfer_flags_list = list("Creatures" = AT_FLAG_CREATURES, "Absorbed" = AT_FLAG_ABSORBED, "Animals" = AT_FLAG_ANIMALS, "Mice" = AT_FLAG_MICE, "Carbon" = AT_FLAG_CARBON, "Dead" = AT_FLAG_DEAD, "Items" = AT_FLAG_ITEMS, "Trash" = AT_FLAG_TRASH, "Eggs" = AT_FLAG_EGGS, "Indigestible" = AT_FLAG_INDIGESTIBLE)
+	var/tmp/static/list/autotransfer_flags_list = list("Creatures" = AT_FLAG_CREATURES, "Absorbed" = AT_FLAG_ABSORBED, "Animals" = AT_FLAG_ANIMALS, "Mice" = AT_FLAG_MICE, "Carbon" = AT_FLAG_CARBON, "Dead" = AT_FLAG_DEAD, "Digestable Creatures" = AT_FLAG_CANDIGEST, "Absorbable Creatures" = AT_FLAG_CANABSORB, "Items" = AT_FLAG_ITEMS, "Trash" = AT_FLAG_TRASH, "Eggs" = AT_FLAG_EGGS, "Remains" = AT_FLAG_REMAINS, "Indigestible Items" = AT_FLAG_INDIGESTIBLE)
 
 	//I don't think we've ever altered these lists. making them static until someone actually overrides them somewhere.
 	//Actual full digest modes
@@ -1644,13 +1644,23 @@
 			if(isliving(prey))
 				var/mob/living/L = prey
 				if(L.stat == DEAD) return FALSE
+		if(blacklist & autotransfer_flags_list["Digestable Creatures"])
+			if(isliving(prey))
+				var/mob/living/L = prey
+				if(L.digestable) return FALSE
+		if(blacklist & autotransfer_flags_list["Absorbable Creatures"])
+			if(isliving(prey))
+				var/mob/living/L = prey
+				if(L.absorbable) return FALSE
 		if(blacklist & autotransfer_flags_list["Items"])
 			if(isitem(prey)) return FALSE
 		if(blacklist & autotransfer_flags_list["Trash"])
 			if(istype(prey, /obj/item/trash)) return FALSE
 		if(blacklist & autotransfer_flags_list["Eggs"])
 			if(istype(prey, /obj/item/weapon/storage/vore_egg)) return FALSE
-		if(blacklist & autotransfer_flags_list["Indigestible"])
+		if(blacklist & autotransfer_flags_list["Remains"])
+			if(istype(prey, /obj/item/weapon/digestion_remains)) return FALSE
+		if(blacklist & autotransfer_flags_list["Indigestible Items"])
 			if(prey in items_preserved) return FALSE
 
 	if(whitelist == 0) return TRUE
@@ -1670,13 +1680,23 @@
 		if(isliving(prey))
 			var/mob/living/L = prey
 			if(L.stat == DEAD) return TRUE
+	if(whitelist & autotransfer_flags_list["Digestable Creatures"])
+		if(isliving(prey))
+			var/mob/living/L = prey
+			if(L.digestable) return TRUE
+	if(whitelist & autotransfer_flags_list["Absorbable Creatures"])
+		if(isliving(prey))
+			var/mob/living/L = prey
+			if(L.absorbable) return TRUE
 	if(whitelist & autotransfer_flags_list["Items"])
 		if(isitem(prey)) return TRUE
 	if(whitelist & autotransfer_flags_list["Trash"])
 		if(istype(prey, /obj/item/trash)) return TRUE
 	if(whitelist & autotransfer_flags_list["Eggs"])
 		if(istype(prey, /obj/item/weapon/storage/vore_egg)) return TRUE
-	if(whitelist & autotransfer_flags_list["Indigestible"])
+	if(whitelist & autotransfer_flags_list["Remains"])
+		if(istype(prey, /obj/item/weapon/digestion_remains)) return TRUE
+	if(whitelist & autotransfer_flags_list["Indigestible Items"])
 		if(prey in items_preserved) return TRUE
 	return FALSE //CHOMPEdit end
 
