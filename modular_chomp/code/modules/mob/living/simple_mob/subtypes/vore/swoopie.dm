@@ -1,6 +1,6 @@
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie
 	name = "SWOOPIE XL"
-	desc = "A large birdlike robot with thick assets, plump belly, and a long elastic vacuum hose of a neck. Somehow still a cleanbot, even if just for its duties."
+	desc = "A large birdlike robot with thick assets, plump belly, and a long elastic vacuum hose of a neck. Somehow still a cleanbot, even if just for its duties. Use DISARM intent to access Vac-Pack settings."
 	icon_state = "swoopie"
 	icon_living = "swoopie"
 	icon_dead = "swoopie_dead"
@@ -176,7 +176,7 @@
 	. = ..()
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/attack_hand(mob/living/L)
-	if(L.a_intent == I_DISARM && Vac && has_AI())
+	if(L.a_intent == I_DISARM && Vac)
 		Vac.attack_self(L)
 		return
 	. = ..()
