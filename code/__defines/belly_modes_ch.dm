@@ -20,3 +20,11 @@
 //Auto-transfer flags
 #define AT_FLAG_CREATURES		0x1
 #define AT_FLAG_ABSORBED		0x2
+#define AT_FLAG_ANIMALS			0x4
+#define AT_FLAG_MICE			0x8
+#define AT_FLAG_CARBON			0x10
+#define AT_FLAG_DEAD			0x20
+#define AT_FLAG_ITEMS			0x100
+#define AT_FLAG_TRASH			0x200
+#define AT_FLAG_EGGS			0x400
+#define AT_FLAG_INDIGESTIBLE	0x800
