@@ -133,6 +133,7 @@
 	retaliate = TRUE
 	speak_chance = 0.5
 	wander = TRUE
+	belly_attack = FALSE
 
 /mob/living/simple_mob/vore/alienanimals/catslug/Initialize()
 	. = ..()
