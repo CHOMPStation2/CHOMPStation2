@@ -46,9 +46,11 @@ const ReagentAddonIcon = {
 const AutotransferFlagIcon = {
   'Creatures': '',
   'Absorbed': '',
+  'Carbon': '',
+  'Silicon': '',
+  'Mobs': '',
   'Animals': '',
   'Mice': '',
-  'Carbon': '',
   'Dead': '',
   'Digestable Creatures': '',
   'Absorbable Creatures': '',

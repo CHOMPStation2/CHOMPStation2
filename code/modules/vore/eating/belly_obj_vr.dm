@@ -79,7 +79,7 @@
 	var/autotransfer_max_amount = 0			// Maximum amount of things to pass at once. //CHOMPAdd
 	var/tmp/list/autotransfer_queue = list()// Reserve for above things. //CHOMPAdd
 	//Auto-transfer flags for whitelist //CHOMPAdd
-	var/tmp/static/list/autotransfer_flags_list = list("Creatures" = AT_FLAG_CREATURES, "Absorbed" = AT_FLAG_ABSORBED, "Animals" = AT_FLAG_ANIMALS, "Mice" = AT_FLAG_MICE, "Carbon" = AT_FLAG_CARBON, "Dead" = AT_FLAG_DEAD, "Digestable Creatures" = AT_FLAG_CANDIGEST, "Absorbable Creatures" = AT_FLAG_CANABSORB, "Items" = AT_FLAG_ITEMS, "Trash" = AT_FLAG_TRASH, "Eggs" = AT_FLAG_EGGS, "Remains" = AT_FLAG_REMAINS, "Indigestible Items" = AT_FLAG_INDIGESTIBLE)
+	var/tmp/static/list/autotransfer_flags_list = list("Creatures" = AT_FLAG_CREATURES, "Absorbed" = AT_FLAG_ABSORBED, "Carbon" = AT_FLAG_CARBON, "Silicon" = AT_FLAG_SILICON, "Mobs" = AT_FLAG_MOBS, "Animals" = AT_FLAG_ANIMALS, "Mice" = AT_FLAG_MICE, "Dead" = AT_FLAG_DEAD, "Digestable Creatures" = AT_FLAG_CANDIGEST, "Absorbable Creatures" = AT_FLAG_CANABSORB, "Items" = AT_FLAG_ITEMS, "Trash" = AT_FLAG_TRASH, "Eggs" = AT_FLAG_EGGS, "Remains" = AT_FLAG_REMAINS, "Indigestible Items" = AT_FLAG_INDIGESTIBLE)
 
 	//I don't think we've ever altered these lists. making them static until someone actually overrides them somewhere.
 	//Actual full digest modes
@@ -1634,12 +1634,16 @@
 	if(blacklist != 2) // Default is 2 for Absorbed, if it's not 2, check everything else
 		if(blacklist & autotransfer_flags_list["Creatures"])
 			if(isliving(prey)) return FALSE
-		if(blacklist & autotransfer_flags_list["Animals"])
-			if(isanimal(prey)) return FALSE
-		if(blacklist & autotransfer_flags_list["Mice"])
-			if(ismouse(prey)) return FALSE
 		if(blacklist & autotransfer_flags_list["Carbon"])
 			if(iscarbon(prey)) return FALSE
+		if(blacklist & autotransfer_flags_list["Silicon"])
+			if(issilicon(prey)) return FALSE
+		if(blacklist & autotransfer_flags_list["Mobs"])
+			if(istype(prey, /mob/living/simple_mob)) return FALSE
+		if(blacklist & autotransfer_flags_list["Animals"])
+			if(istype(prey, /mob/living/simple_mob/animal)) return FALSE
+		if(blacklist & autotransfer_flags_list["Mice"])
+			if(ismouse(prey)) return FALSE
 		if(blacklist & autotransfer_flags_list["Dead"])
 			if(isliving(prey))
 				var/mob/living/L = prey
@@ -1670,12 +1674,16 @@
 		if(isliving(prey))
 			var/mob/living/L = prey
 			if(L.absorbed) return TRUE
-	if(whitelist & autotransfer_flags_list["Animals"])
-		if(isanimal(prey)) return TRUE
-	if(whitelist & autotransfer_flags_list["Mice"])
-		if(ismouse(prey)) return TRUE
 	if(whitelist & autotransfer_flags_list["Carbon"])
 		if(iscarbon(prey)) return TRUE
+	if(whitelist & autotransfer_flags_list["Silicon"])
+		if(issilicon(prey)) return TRUE
+	if(whitelist & autotransfer_flags_list["Mobs"])
+		if(istype(prey, /mob/living/simple_mob)) return TRUE
+	if(whitelist & autotransfer_flags_list["Animals"])
+		if(istype(prey, /mob/living/simple_mob/animal)) return TRUE
+	if(whitelist & autotransfer_flags_list["Mice"])
+		if(ismouse(prey)) return TRUE
 	if(whitelist & autotransfer_flags_list["Dead"])
 		if(isliving(prey))
 			var/mob/living/L = prey
