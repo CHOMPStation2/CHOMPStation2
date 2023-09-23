@@ -50,3 +50,12 @@
 	set desc = "Toggle glasses worn icon visibility."
 	hide_glasses = !hide_glasses
 	update_inv_glasses()
+
+/mob/living/carbon/human/verb/flip_lying()
+	set name = "Flip Resting Direction"
+	set category = "Abilities"
+	set desc = "Switch your horizontal direction while prone."
+	if(isnull(resting_dir))
+		resting_dir = FALSE
+	resting_dir = !resting_dir
+	update_transform(TRUE)

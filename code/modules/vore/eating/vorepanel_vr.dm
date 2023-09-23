@@ -328,6 +328,8 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			selected_list["autotransfer"]["autotransferlocation_secondary"] = selected.autotransferlocation_secondary	//CHOMPAdd
 			selected_list["autotransfer"]["autotransfer_min_amount"] = selected.autotransfer_min_amount
 			selected_list["autotransfer"]["autotransfer_max_amount"] = selected.autotransfer_max_amount
+			selected_list["autotransfer"]["autotransfer_absorbed"] = selected.autotransfer_absorbed						//CHOMPAdd
+			selected_list["autotransfer"]["autotransfer_absorbed_only"] = selected.autotransfer_absorbed_only			//CHOMPAdd
 
 		selected_list["disable_hud"] = selected.disable_hud
 		selected_list["colorization_enabled"] = selected.colorization_enabled
@@ -1217,6 +1219,20 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				if(isnum(belly_data["autotransfer_max_amount"]))
 					var/new_autotransfer_max_amount = belly_data["autotransfer_max_amount"]
 					new_belly.autotransfer_max_amount = sanitize_integer(new_autotransfer_max_amount, 0, 100, initial(new_belly.autotransfer_max_amount))
+
+				if(isnum(belly_data["autotransfer_absorbed"]))
+					var/new_autotransfer_absorbed = belly_data["autotransfer_absorbed"]
+					if(new_autotransfer_absorbed == 0)
+						new_belly.autotransfer_absorbed = FALSE
+					if(new_autotransfer_absorbed == 1)
+						new_belly.autotransfer_absorbed = TRUE
+
+				if(isnum(belly_data["autotransfer_absorbed_only"]))
+					var/new_autotransfer_absorbed_only = belly_data["autotransfer_absorbed_only"]
+					if(new_autotransfer_absorbed_only == 0)
+						new_belly.autotransfer_absorbed_only = FALSE
+					if(new_autotransfer_absorbed_only == 1)
+						new_belly.autotransfer_absorbed_only = TRUE
 
 				// Liquid Options
 				if(isnum(belly_data["show_liquids"]))
@@ -2741,6 +2757,12 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			. = TRUE
 		if("b_autotransfer_enabled")
 			host.vore_selected.autotransfer_enabled = !host.vore_selected.autotransfer_enabled
+			. = TRUE
+		if("b_autotransfer_absorbed")
+			host.vore_selected.autotransfer_absorbed = !host.vore_selected.autotransfer_absorbed
+			. = TRUE
+		if("b_autotransfer_absorbed_only")
+			host.vore_selected.autotransfer_absorbed_only = !host.vore_selected.autotransfer_absorbed_only
 			. = TRUE //CHOMPedit End
 		if("b_fullscreen")
 			host.vore_selected.belly_fullscreen = params["val"]

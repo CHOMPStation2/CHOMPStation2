@@ -176,6 +176,8 @@
 			belly_data["egg_type"] = B.egg_type
 			belly_data["egg_name"] = B.egg_name
 			belly_data["selective_preference"] = B.selective_preference
+			belly_data["recycling"] = B.recycling
+			belly_data["entrance_logs"] = B.entrance_logs
 
 			// Sounds
 			belly_data["is_wet"] = B.is_wet
@@ -184,6 +186,7 @@
 			belly_data["vore_sound"] = B.vore_sound
 			belly_data["release_sound"] = B.release_sound
 			belly_data["sound_volume"] = B.sound_volume
+			belly_data["noise_freq"] = B.noise_freq
 
 			// Visuals
 			belly_data["affects_vore_sprites"] = B.affects_vore_sprites
@@ -246,6 +249,8 @@
 			belly_data["autotransferlocation_secondary"] = B.autotransferlocation_secondary
 			belly_data["autotransfer_min_amount"] = B.autotransfer_min_amount
 			belly_data["autotransfer_max_amount"] = B.autotransfer_max_amount
+			belly_data["autotransfer_absorbed"] = B.autotransfer_absorbed
+			belly_data["autotransfer_absorbed_only"] = B.autotransfer_absorbed_only
 
 			// Liquid Options
 			belly_data["show_liquids"] = B.show_liquids
@@ -256,6 +261,16 @@
 			belly_data["gen_time_display"] = B.gen_time_display
 			belly_data["custom_max_volume"] = B.custom_max_volume
 			belly_data["vorefootsteps_sounds"] = B.vorefootsteps_sounds
+			belly_data["liquid_overlay"] = B.liquid_overlay
+			belly_data["max_liquid_level"] = B.max_liquid_level
+			belly_data["mush_overlay"] = B.mush_overlay
+			belly_data["mush_color"] = B.mush_color
+			belly_data["mush_alpha"] = B.mush_alpha
+			belly_data["max_mush"] = B.max_mush
+			belly_data["min_mush"] = B.min_mush
+			belly_data["item_mush_val"] = B.item_mush_val
+			belly_data["custom_reagentcolor"] = B.custom_reagentcolor
+			belly_data["custom_reagentalpha"] = B.custom_reagentalpha
 
 			var/list/reagent_flags = list()
 			for(var/flag_name in B.reagent_mode_flag_list)

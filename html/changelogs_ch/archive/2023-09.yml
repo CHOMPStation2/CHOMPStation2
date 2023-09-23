@@ -105,3 +105,17 @@
   - rscadd: MoL's VR area has a small expansion
   Verkister:
   - rscadd: Added vorgan-specific noise pitch/frequency setting for belly noises.
+2023-09-20:
+  Fracshun:
+  - rscadd: Added new belly option to allow auto-transfer of absorbed creatures
+  TheGreatKitsune:
+  - rscadd: Liquid belly sloshing noises now work for robots
+2023-09-21:
+  Verkister:
+  - bugfix: Fixed exonet_node runtime spam.
+  - bugfix: Fixed vorepanel export missing a lot of the newer vars.
+2023-09-22:
+  FluffMedic:
+  - qol: Removed phoron from the base of size chems, replacing clonedex with cryptobiolin
+  Verkister:
+  - bugfix: Fixed other missing exportpanel vars.
