@@ -221,4 +221,32 @@
 			icon_state = "big_flamp-construct-stage2"
 		if(3)
 			icon_state = "big_flamp-empty"
+<<<<<<< HEAD
 */
+=======
+*/
+
+/obj/item/weapon/light/bulb/torch
+	brightness_range = 6
+	color = "#fabf87"
+	brightness_color = "#fabf87"
+	init_brightness_range = 6
+
+/obj/machinery/light/small/torch
+	icon = 'icons/obj/lighting_vr.dmi'
+	name = "wall torch"
+	icon_state = "torch1"
+	base_state = "torch"
+	desc = "A small torch held in a wall sconce."
+	light_type = /obj/item/weapon/light/bulb/torch
+	shows_alerts = FALSE
+	anchored = TRUE
+	plane = ABOVE_MOB_PLANE
+	layer = ABOVE_MOB_LAYER
+	construct_type = null
+	overlay_color = LIGHT_COLOR_INCANDESCENT_BULB
+	overlay_above_everything = TRUE
+
+/obj/machinery/light/small/torch/attackby()
+	return
+>>>>>>> dda0a07458... Merge pull request #15412 from SatinIsle/fantasy
