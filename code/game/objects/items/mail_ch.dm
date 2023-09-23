@@ -15,19 +15,18 @@
 	// How many goodies this mail contains.
 	var/goodie_count = 1
 	// Goodies which can be given to anyone.
+	// Weight sum will be 1000
 	var/list/generic_goodies = list(
-		/obj/item/weapon/spacecash/c100 = 25,
-		/obj/random/snack = 20,
-		/obj/random/drinksoft = 20,
-		/obj/item/weapon/reagent_containers/food/drinks/coffee = 15,
-		/obj/item/weapon/reagent_containers/food/drinks/tea = 15,
-		/obj/item/weapon/spacecash/c200 = 15,
-		/obj/item/weapon/storage/box/ = 15,
-		/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/nt = 10,
-		/obj/item/weapon/spacecash/c50 = 10,
-		/obj/item/weapon/pen/fountain = 5,
-		/obj/item/weapon/spacecash/c500 = 5,
-		/obj/item/weapon/spacecash/c1000 = 1,
+		/obj/item/weapon/reagent_containers/food/snacks/chips = 100,
+		/obj/item/weapon/reagent_containers/food/drinks/coffee = 100,
+		/obj/item/weapon/reagent_containers/food/drinks/tea = 100,
+		/obj/item/weapon/reagent_containers/food/drinks/cans/cola = 100,
+		/obj/item/weapon/spacecash/c50 = 100,
+		/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/nt = 125,
+		/obj/item/weapon/spacecash/c100 = 125,
+		/obj/item/weapon/spacecash/c200 = 100,
+		/obj/item/weapon/spacecash/c500 = 50,
+		/obj/item/weapon/spacecash/c1000 = 20,
 	)
 	// Overlays (pure fluff)
 	// Does the letter have the postmark overlay?
@@ -188,9 +187,7 @@
 			/obj/item/weapon/reagent_containers/food/snacks/donkpocket/pizza,
 			/obj/item/weapon/reagent_containers/food/snacks/donkpocket/spicy,
 			/obj/item/weapon/reagent_containers/food/snacks/donkpocket/teriyaki,
-			/obj/item/toy/figure,
-			/obj/random/contraband,
-			/obj/random/bluespace,
+			/obj/item/toy/figure
 		))
 
 	var/list/junk_names = list(
@@ -207,9 +204,7 @@
 		/obj/item/weapon/reagent_containers/food/snacks/donkpocket/pizza = "[initial(name)] with NEW PIZZA-POCKET.",
 		/obj/item/weapon/reagent_containers/food/snacks/donkpocket/spicy = "[initial(name)] with NEW SPICY-POCKET.",
 		/obj/item/weapon/reagent_containers/food/snacks/donkpocket/teriyaki = "[initial(name)] with NEW TERIYAKI-POCKET.",
-		/obj/item/toy/figure = "[initial(name)] from DoN**K*oC",
-		/obj/random/contraband = "[initial(name)] with CONFIDENTIAL ITEMS. DO NOT SCAN.",
-		/obj/random/bluespace = "[initial(name)] with CONFIDENTIAL ITEMS. DO NOT SCAN."
+		/obj/item/toy/figure = "[initial(name)] from DoN**K*oC"
 	)
 
 	color = pick(department_colors)
