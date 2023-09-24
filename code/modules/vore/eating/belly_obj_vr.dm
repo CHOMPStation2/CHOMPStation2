@@ -340,9 +340,10 @@
 /obj/belly/Initialize()
 	. = ..()
 	//If not, we're probably just in a prefs list or something.
-	if(isliving(loc))
+	if(ismob(loc))
 		owner = loc
 		owner.vore_organs |= src
+<<<<<<< HEAD
 		if(speedy_mob_processing) //CHOMPEdit Start
 			START_PROCESSING(SSobj, src)
 		else
@@ -350,6 +351,10 @@
 
 	create_reagents(300)	//CHOMP So we can have some liquids in bellies
 	flags |= NOREACT		// We dont want bellies to start bubling nonstop due to people mixing when transfering and making different reagents
+=======
+		if(isliving(loc))
+			START_PROCESSING(SSbellies, src)
+>>>>>>> 6e5c9c561d... Merge pull request #15406 from Heroman3003/test-vore-setup
 
 /obj/belly/Destroy()
 	if(speedy_mob_processing)
