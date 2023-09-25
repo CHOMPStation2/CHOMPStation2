@@ -50,7 +50,8 @@ const digestModeToPreyMode = {
  *   liq_reagent_transfer_verb, liq_reagent_nutri_rate, liq_reagent_capacity, liq_sloshing, liq_reagent_addons,
  *   show_liq_fullness, liq_messages, liq_msg_toggle1, liq_msg_toggle2, liq_msg_toggle3, liq_msg_toggle4,
  *   liq_msg_toggle5, liq_msg1, liq_msg2, liq_msg3, liq_msg4, liq_msg5, sound_volume, egg_name, recycling, entrance_logs, noise_freq,
- *   custom_reagentcolor, custom_reagentalpha, liquid_overlay, max_liquid_level, mush_overlay, mush_color, mush_alpha, max_mush, min_mush, item_mush_val
+ *   custom_reagentcolor, custom_reagentalpha, liquid_overlay, max_liquid_level, mush_overlay, mush_color, mush_alpha, max_mush, min_mush, item_mush_val,
+ *   metabolism_overlay, metabolism_mush_ratio, max_ingested, custom_ingested_color, custom_ingested_alpha
  *
  * To the tabs section of VoreSelectedBelly return
  *       <Tabs.Tab selected={tabIndex === 5} onClick={() => setTabIndex(5)}>
@@ -1787,6 +1788,11 @@ const VoreSelectedBellyLiquidOptions = (props, context) => {
     max_mush,
     min_mush,
     item_mush_val,
+    metabolism_overlay,
+    metabolism_mush_ratio,
+    max_ingested,
+    custom_ingested_color,
+    custom_ingested_alpha,
   } = belly;
 
   return (
@@ -1991,6 +1997,61 @@ const VoreSelectedBellyLiquidOptions = (props, context) => {
                 })
               }
               content={liq_interacts.item_mush_val + ' fullness per item'}
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Metabolism Overlay">
+            <Button
+              onClick={() =>
+                act('liq_set_attribute', {
+                  liq_attribute: 'b_metabolism_overlay',
+                })
+              }
+              icon={
+                liq_interacts.metabolism_overlay ? 'toggle-on' : 'toggle-off'
+              }
+              selected={liq_interacts.metabolism_overlay}
+              content={liq_interacts.metabolism_overlay ? 'On' : 'Off'}
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Metabolism Mush Ratio">
+            <Button
+              onClick={() =>
+                act('liq_set_attribute', {
+                  liq_attribute: 'b_metabolism_mush_ratio',
+                })
+              }
+              content={
+                liq_interacts.metabolism_mush_ratio +
+                ' fullness per reagent unit'
+              }
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Metabolism Overlay Scaling">
+            <Button
+              onClick={() =>
+                act('liq_set_attribute', {
+                  liq_attribute: 'b_max_ingested',
+                })
+              }
+              content={liq_interacts.max_ingested}
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Custom Metabolism Color">
+            <LiquidColorInput
+              action_name="b_custom_ingested_color"
+              value_of={null}
+              back_color={liq_interacts.custom_ingested_color}
+              name_of="Custom Metabolism Color"
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Metabolism Overlay Alpha">
+            <Button
+              onClick={() =>
+                act('liq_set_attribute', {
+                  liq_attribute: 'b_custom_ingested_alpha',
+                })
+              }
+              content={liq_interacts.custom_ingested_alpha}
             />
           </LabeledList.Item>
           <LabeledList.Item label="Purge Liquids">

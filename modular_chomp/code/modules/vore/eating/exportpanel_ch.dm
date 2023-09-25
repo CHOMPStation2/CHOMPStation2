@@ -271,6 +271,11 @@
 			belly_data["item_mush_val"] = B.item_mush_val
 			belly_data["custom_reagentcolor"] = B.custom_reagentcolor
 			belly_data["custom_reagentalpha"] = B.custom_reagentalpha
+			belly_data["metabolism_overlay"] = B.metabolism_overlay
+			belly_data["metabolism_mush_ratio"] = B.metabolism_mush_ratio
+			belly_data["max_ingested"] = B.max_ingested
+			belly_data["custom_ingested_color"] = B.custom_ingested_color
+			belly_data["custom_ingested_alpha"] = B.custom_ingested_alpha
 
 			var/list/reagent_flags = list()
 			for(var/flag_name in B.reagent_mode_flag_list)
