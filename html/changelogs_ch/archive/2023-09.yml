@@ -128,6 +128,7 @@
   - rscadd: Added new filtering options for auto-transfer
   TheGreatKitsune:
   - bugfix: Posibrains and similar not being able to use ' or such
+  - qol: A few more traits opened up to non-custom species
   Theonewhowaits:
   - balance: rebalances combat mobs health alongside weapon damage
   Verkister:
