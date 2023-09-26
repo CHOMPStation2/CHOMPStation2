@@ -126,6 +126,8 @@
   - bugfix: chemical imbalances in several meats
   Fracshun:
   - rscadd: Added new filtering options for auto-transfer
+  TheGreatKitsune:
+  - bugfix: Posibrains and similar not being able to use ' or such
   Theonewhowaits:
   - balance: rebalances combat mobs health alongside weapon damage
   Verkister:
