@@ -22,6 +22,12 @@
 	var/max_mush = 500								//How much nutrition for full mush overlay
 	var/min_mush = 0								//Manual setting for lowest mush level
 	var/item_mush_val = 0							//How much solid belly contents raise mush level per item
+	var/metabolism_overlay = FALSE					//Extra mush layer for ingested reagents currently in metabolism.
+	var/metabolism_mush_ratio = 15					//Metabolism reagent volume per unit compared to nutrition units.
+	var/max_ingested = 500							//How much metabolism content for full overlay.
+	var/ingested_color = "#664330"					//Normal color holder for ingested layer. Blended from existing reagent colors.
+	var/custom_ingested_color = null				//Custom color for ingested reagent layer.
+	var/custom_ingested_alpha = 255					//Custom alpha for ingested reagent layer if not using normal mush layer.
 
 	var/nutri_reagent_gen = FALSE					//if belly produces reagent over time using nutrition, needs to be optimized to use subsystem - Jack
 	var/list/generated_reagents = list("water" = 1) //Any number of reagents, the associated value is how many units are generated per process()
@@ -199,6 +205,8 @@
 			for(var/obj/item/I in touchable_atoms)
 				if(reagents.total_volume)
 					reagents.trans_to(I, affecting_amt, 1, FALSE)
+	if(owner.previewing_belly == src)
+		vore_fx(owner, FALSE, reagents.total_volume)
 
 /obj/belly/proc/GenerateBellyReagents()
 	if(isrobot(owner))
@@ -496,6 +504,11 @@
 	for(var/A in contents)
 		if(isliving(A))
 			vore_fx(A,1)
+	if(owner.previewing_belly == src)
+		if(isbelly(owner.loc))
+			owner.previewing_belly = null
+			return
+		vore_fx(owner,1)
 
 /obj/belly/deserialize(var/list/data)
 	..()

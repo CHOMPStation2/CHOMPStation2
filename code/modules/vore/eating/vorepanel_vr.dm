@@ -255,6 +255,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"max_mush" = selected.max_mush,
 			"min_mush" = selected.min_mush,
 			"item_mush_val" = selected.item_mush_val,
+			"metabolism_overlay" = selected.metabolism_overlay,
+			"metabolism_mush_ratio" = selected.metabolism_mush_ratio,
+			"max_ingested" = selected.max_ingested,
+			"custom_ingested_color" = selected.custom_ingested_color,
+			"custom_ingested_alpha" = selected.custom_ingested_alpha,
 			"vorespawn_blacklist" = selected.vorespawn_blacklist,
 			"sound_volume" = selected.sound_volume,
 			"affects_voresprite" = selected.affects_vore_sprites,
@@ -421,6 +426,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			selected_list["liq_interacts"]["max_mush"] = selected.max_mush
 			selected_list["liq_interacts"]["min_mush"] = selected.min_mush
 			selected_list["liq_interacts"]["item_mush_val"] = selected.item_mush_val
+			selected_list["liq_interacts"]["metabolism_overlay"] = selected.metabolism_overlay
+			selected_list["liq_interacts"]["metabolism_mush_ratio"] = selected.metabolism_mush_ratio
+			selected_list["liq_interacts"]["max_ingested"] = selected.max_ingested
+			selected_list["liq_interacts"]["custom_ingested_color"] = selected.custom_ingested_color ? selected.custom_ingested_color : "#3f6088"
+			selected_list["liq_interacts"]["custom_ingested_alpha"] = selected.custom_ingested_alpha
 
 		selected_list["show_liq_fullness"] = selected.show_fullness_messages
 		selected_list["liq_messages"] = list()
@@ -3195,6 +3205,45 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			var/new_new_item_mush_val = CLAMP(new_item_mush_val, 0, 1000)
 			host.vore_selected.item_mush_val = new_new_item_mush_val
 			host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_metabolism_overlay")
+			if(!host.vore_selected.metabolism_overlay)
+				host.vore_selected.metabolism_overlay = 1
+				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] now has ingested metabolism overlay enabled.</span>")
+			else
+				host.vore_selected.metabolism_overlay = 0
+				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] no longer has ingested metabolism overlay enabled.</span>")
+			host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_metabolism_mush_ratio")
+			var/new_metabolism_mush_ratio = input(user, "How much should ingested reagents affect fullness overlay compared to nutrition? Nutrition units per reagent unit. Default 15.", "Set Metabolism Mush Ratio.", host.vore_selected.metabolism_mush_ratio) as num|null
+			if(new_metabolism_mush_ratio == null)
+				return FALSE
+			var/new_new_metabolism_mush_ratio = CLAMP(new_metabolism_mush_ratio, 0, 500)
+			host.vore_selected.metabolism_mush_ratio = new_new_metabolism_mush_ratio
+			host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_max_ingested")
+			var/new_max_ingested = input(user, "Choose the amount of reagents within ingested metabolism required for full mush overlay when not using mush overlay option. Ranges from 0 to 6000. Default 500.", "Set Metabolism Overlay Scaling.", host.vore_selected.max_ingested) as num|null
+			if(new_max_ingested == null)
+				return FALSE
+			var/new_new_max_ingested = CLAMP(new_max_ingested, 0, 6000)
+			host.vore_selected.max_ingested = new_new_max_ingested
+			host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_custom_ingested_color")
+			var/newcolor = input(usr, "Choose custom color for ingested metabolism overlay. Cancel for reagent-based dynamic blend.", "", host.vore_selected.custom_ingested_color) as color|null
+			if(newcolor)
+				host.vore_selected.custom_ingested_color = newcolor
+			else
+				host.vore_selected.custom_ingested_color = null
+			host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_custom_ingested_alpha")
+			var/newalpha = tgui_input_number(usr, "Set alpha transparency between 0-255 when not using mush overlay option.", "Custom Ingested Alpha",255,255,0,0,1)
+			if(newalpha != null)
+				host.vore_selected.custom_ingested_alpha = newalpha
+				host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_liq_purge")
 			var/alert = alert("Are you sure you want to delete the liquids in your [lowertext(host.vore_selected.name)]?","Confirmation","Delete","Cancel")

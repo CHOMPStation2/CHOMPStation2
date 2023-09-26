@@ -279,6 +279,11 @@ type Belly = {
   item_mush_val: number;
   custom_reagentcolor: string;
   custom_reagentalpha: number;
+  metabolism_overlay: BooleanLike;
+  metabolism_mush_ratio: number;
+  max_ingested: number;
+  custom_ingested_color: string;
+  custom_ingested_alpha: number;
 
   // Liquid Messages
   liquid_fullness1_messages: BooleanLike;
@@ -437,6 +442,11 @@ const generateBellyString = (belly: Belly, index: number) => {
     item_mush_val,
     custom_reagentcolor,
     custom_reagentalpha,
+    metabolism_overlay,
+    metabolism_mush_ratio,
+    max_ingested,
+    custom_ingested_color,
+    custom_ingested_alpha,
 
     // Liquid Messages
     liquid_fullness1_messages,

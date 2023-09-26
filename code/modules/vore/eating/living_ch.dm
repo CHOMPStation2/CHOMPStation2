@@ -24,6 +24,7 @@
 
 	var/list/vore_icon_bellies = list("stomach")
 	var/updating_fullness = FALSE
+	var/obj/belly/previewing_belly
 
 
 // Update fullness based on size & quantity of belly contents

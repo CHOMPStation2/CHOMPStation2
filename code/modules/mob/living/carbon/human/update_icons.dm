@@ -172,10 +172,10 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 			if(isnull(resting_dir))
 				resting_dir = pick(FALSE, TRUE)
 			if(resting_dir)
-				M.Translate((1 / desired_scale_x * -6) + (desired_scale_x * cent_offset), 0.5)
+				M.Translate((1 / desired_scale_x * -4) + (desired_scale_x * cent_offset), 0)
 				M.Turn(-90)
 			else
-				M.Translate((1 / desired_scale_x * 6) + (desired_scale_x * cent_offset), 0.5)
+				M.Translate((1 / desired_scale_x * 4) - (desired_scale_x * cent_offset), 0)
 				M.Turn(90)
 		// CHOMPEdit End
 		layer = MOB_LAYER -0.01 // Fix for a byond bug where turf entry order no longer matters

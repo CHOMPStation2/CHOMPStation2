@@ -278,6 +278,11 @@
 	"item_mush_val",
 	"custom_reagentcolor",
 	"custom_reagentalpha",
+	"metabolism_overlay",
+	"metabolism_mush_ratio",
+	"max_ingested",
+	"custom_ingested_color",
+	"custom_ingested_alpha",
 	"gen_cost",
 	"gen_amount",
 	"gen_time",
@@ -437,6 +442,8 @@
 		if(can_taste && (taste = M.get_taste_message(FALSE)))
 			to_chat(owner, "<span class='notice'>[M] tastes of [taste].</span>")
 		vore_fx(M, TRUE) //CHOMPEdit: update belleh
+		if(owner.previewing_belly == src) //CHOMPEdit
+			vore_fx(owner, TRUE) //CHOMPEdit: update belleh
 		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 		//Stop AI processing in bellies
 		if(M.ai_holder)
@@ -507,8 +514,14 @@
 		return
 	if(!L.client)
 		return
+	if(L.previewing_belly != src) //CHOMPEdit Start
+		return
+	if(L.previewing_belly == src && L.vore_selected != src)
+		L.previewing_belly = null
+		return
 	if(!L.show_vore_fx)
 		L.clear_fullscreen("belly")
+		L.previewing_belly = null //CHOMPEdit End
 		return
 	if(update)
 		L.clear_fullscreen("belly")
@@ -557,15 +570,39 @@
 			I.color = belly_fullscreen_color4
 			I.alpha = belly_fullscreen_alpha
 			F.add_overlay(I)
+			var/extra_mush = 0
+			var/extra_mush_color = mush_color
+			if(L.liquidbelly_visuals && ishuman(owner) && metabolism_overlay && metabolism_mush_ratio > 0)
+				var/mob/living/carbon/human/H = owner
+				var/datum/reagents/metabolism/ingested = H.ingested
+				if(ingested && ingested.total_volume > 0)
+					if(custom_ingested_color)
+						extra_mush_color = custom_ingested_color
+					else
+						extra_mush_color = ingested.get_color()
+					extra_mush = ingested.total_volume * metabolism_mush_ratio
+				if(!mush_overlay)
+					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
+					I.color = extra_mush_color
+					I.alpha = custom_ingested_alpha
+					I.pixel_y = -450 + (450 / max(max_ingested, 1) * max(min(max_ingested, ingested.total_volume), 1))
+					F.add_overlay(I)
 			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0 || (LAZYLEN(contents) * item_mush_val) > 0))
 				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
 				I.color = mush_color
 				I.alpha = mush_alpha
-				var/total_mush_content = owner.nutrition + LAZYLEN(contents) * item_mush_val
+				var/total_mush_content = owner.nutrition + LAZYLEN(contents) * item_mush_val + extra_mush
 				I.pixel_y = -450 + (450 / max(max_mush, 1) * max(min(max_mush, total_mush_content), 1))
 				if(I.pixel_y < -450 + (450 / 100 * min_mush))
 					I.pixel_y = -450 + (450 / 100 * min_mush)
+				var/stored_y = I.pixel_y
 				F.add_overlay(I)
+				if(metabolism_overlay && metabolism_mush_ratio > 0 && extra_mush > 0)
+					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
+					I.color = extra_mush_color
+					I.alpha = min(mush_alpha, (extra_mush / max(total_mush_content, 1)) * mush_alpha)
+					I.pixel_y = stored_y
+					F.add_overlay(I)
 			if(L.liquidbelly_visuals && liquid_overlay && reagents.total_volume)
 				if(digest_mode == DM_HOLD && item_digest_mode == IM_HOLD)
 					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "calm")
@@ -590,18 +627,41 @@
 			F.add_overlay(image(F.icon, belly_fullscreen+"-2"))
 			F.add_overlay(image(F.icon, belly_fullscreen+"-3"))
 			F.add_overlay(image(F.icon, belly_fullscreen+"-4"))
+			var/image/I
+			var/extra_mush = 0
+			var/extra_mush_color = mush_color
+			if(L.liquidbelly_visuals && ishuman(owner) && metabolism_overlay && metabolism_mush_ratio > 0)
+				var/mob/living/carbon/human/H = owner
+				var/datum/reagents/metabolism/ingested = H.ingested
+				if(ingested && ingested.total_volume > 0)
+					if(custom_ingested_color)
+						extra_mush_color = custom_ingested_color
+					else
+						extra_mush_color = ingested.get_color()
+					extra_mush = ingested.total_volume * metabolism_mush_ratio
+				if(!mush_overlay)
+					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
+					I.color = extra_mush_color
+					I.alpha = custom_ingested_alpha
+					I.pixel_y = -450 + (450 / max(max_ingested, 1) * max(min(max_ingested, ingested.total_volume), 1))
+					F.add_overlay(I)
 			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0 || (LAZYLEN(contents) * item_mush_val) > 0))
-				var/image/I
 				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
 				I.color = mush_color
 				I.alpha = mush_alpha
-				var/total_mush_content = owner.nutrition + LAZYLEN(contents) * item_mush_val
+				var/total_mush_content = owner.nutrition + LAZYLEN(contents) * item_mush_val + extra_mush
 				I.pixel_y = -450 + (450 / max(max_mush, 1) * max(min(max_mush, total_mush_content), 1))
 				if(I.pixel_y < -450 + (450 / 100 * min_mush))
 					I.pixel_y = -450 + (450 / 100 * min_mush)
+				var/stored_y = I.pixel_y
 				F.add_overlay(I)
+				if(metabolism_overlay && metabolism_mush_ratio > 0 && extra_mush > 0)
+					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
+					I.color = extra_mush_color
+					I.alpha = min(mush_alpha, (extra_mush / max(total_mush_content, 1)) * mush_alpha)
+					I.pixel_y = stored_y
+					F.add_overlay(I)
 			if(L.liquidbelly_visuals && liquid_overlay && reagents.total_volume)
-				var/image/I
 				if(digest_mode == DM_HOLD && item_digest_mode == IM_HOLD)
 					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "calm")
 				else
@@ -630,10 +690,14 @@
 			L.toggle_hud_vis(TRUE)
 
 /obj/belly/proc/vore_preview(mob/living/L)
-	if(!istype(L))
+	if(!istype(L) || !L.client) //CHOMPEdit Start
+		L.previewing_belly = null
 		return
-	if(!L.client)
-		return
+	L.previewing_belly = src
+	vore_fx(L)
+	//CHOMPEdit End
+
+/* //CHOMPRemove. Using regular vore_fx above.
 	if(belly_fullscreen)
 		if(colorization_enabled)
 			/* //Chomp Disable - disable upstream's solution, use ours
@@ -672,18 +736,42 @@
 			I.color = belly_fullscreen_color4
 			I.alpha = belly_fullscreen_alpha
 			F.add_overlay(I)
+			var/extra_mush = 0
+			var/extra_mush_color = mush_color
+			if(L.liquidbelly_visuals && ishuman(owner) && metabolism_overlay && metabolism_mush_ratio > 0)
+				var/mob/living/carbon/human/H = owner
+				var/datum/reagents/metabolism/ingested = H.ingested
+				if(ingested && ingested.total_volume > 0)
+					if(custom_ingested_color)
+						extra_mush_color = custom_ingested_color
+					else
+						extra_mush_color = ingested.get_color()
+					extra_mush = ingested.total_volume * metabolism_mush_ratio
+				if(!mush_overlay)
+					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
+					I.color = extra_mush_color
+					I.alpha = custom_ingested_alpha
+					I.pixel_y = -450 + (450 / max(max_ingested, 1) * max(min(max_ingested, ingested.total_volume), 1))
+					F.add_overlay(I)
 			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0 || (LAZYLEN(contents) * item_mush_val) > 0))
 				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
 				I.color = mush_color
 				I.alpha = mush_alpha
-				var/total_mush_content = owner.nutrition + LAZYLEN(contents) * item_mush_val
+				var/total_mush_content = owner.nutrition + LAZYLEN(contents) * item_mush_val + extra_mush
 				I.pixel_y = -450 + (450 / max(max_mush, 1) * max(min(max_mush, total_mush_content), 1))
 				if(I.pixel_y < -450 + (450 / 100 * min_mush))
 					I.pixel_y = -450 + (450 / 100 * min_mush)
+				var/stored_y = I.pixel_y
 				F.add_overlay(I)
+				if(metabolism_overlay && metabolism_mush_ratio > 0 && extra_mush > 0)
+					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
+					I.color = extra_mush_color
+					I.alpha = min(mush_alpha, (extra_mush / max(total_mush_content, 1)) * mush_alpha)
+					I.pixel_y = stored_y
+					F.add_overlay(I)
 			if(L.liquidbelly_visuals && liquid_overlay && reagents.total_volume)
 				if(digest_mode == DM_HOLD && item_digest_mode == IM_HOLD)
-					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "calm")
+					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
 				else
 					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "bubbles")
 				if(custom_reagentcolor)
@@ -704,18 +792,41 @@
 			F.add_overlay(image(F.icon, belly_fullscreen+"-2"))
 			F.add_overlay(image(F.icon, belly_fullscreen+"-3"))
 			F.add_overlay(image(F.icon, belly_fullscreen+"-4"))
+			var/image/I
+			var/extra_mush = 0
+			var/extra_mush_color = mush_color
+			if(L.liquidbelly_visuals && ishuman(owner) && metabolism_overlay && metabolism_mush_ratio > 0)
+				var/mob/living/carbon/human/H = owner
+				var/datum/reagents/metabolism/ingested = H.ingested
+				if(ingested && ingested.total_volume > 0)
+					if(custom_ingested_color)
+						extra_mush_color = custom_ingested_color
+					else
+						extra_mush_color = ingested.get_color()
+					extra_mush = ingested.total_volume * metabolism_mush_ratio
+				if(!mush_overlay)
+					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
+					I.color = extra_mush_color
+					I.alpha = custom_ingested_alpha
+					I.pixel_y = -450 + (450 / max(max_ingested, 1) * max(min(max_ingested, ingested.total_volume), 1))
+					F.add_overlay(I)
 			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0 || (LAZYLEN(contents) * item_mush_val) > 0))
-				var/image/I
 				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
 				I.color = mush_color
 				I.alpha = mush_alpha
-				var/total_mush_content = owner.nutrition + LAZYLEN(contents) * item_mush_val
+				var/total_mush_content = owner.nutrition + LAZYLEN(contents) * item_mush_val + extra_mush
 				I.pixel_y = -450 + (450 / max(max_mush, 1) * max(min(max_mush, total_mush_content), 1))
 				if(I.pixel_y < -450 + (450 / 100 * min_mush))
 					I.pixel_y = -450 + (450 / 100 * min_mush)
+				var/stored_y = I.pixel_y
 				F.add_overlay(I)
+				if(metabolism_overlay && metabolism_mush_ratio > 0 && extra_mush > 0)
+					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
+					I.color = extra_mush_color
+					I.alpha = min(mush_alpha, (extra_mush / max(total_mush_content, 1)) * mush_alpha)
+					I.pixel_y = stored_y
+					F.add_overlay(I)
 			if(L.liquidbelly_visuals && liquid_overlay && reagents.total_volume)
-				var/image/I
 				if(digest_mode == DM_HOLD && item_digest_mode == IM_HOLD)
 					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "calm")
 				else
@@ -737,8 +848,10 @@
 		//L.clear_fullscreen("belly2") //Chomp Disable - disable upstream's solution, use ours
 		//L.clear_fullscreen("belly3") //Chomp Disable - disable upstream's solution, use ours
 		//L.clear_fullscreen("belly4") //Chomp Disable - disable upstream's solution, use ours
+*/
 
 /obj/belly/proc/clear_preview(mob/living/L)
+	L.previewing_belly = null //CHOMPAdd
 	L.clear_fullscreen("belly")
 	//L.clear_fullscreen("belly2") //Chomp Disable - disable upstream's solution, use ours
 	//L.clear_fullscreen("belly3") //Chomp Disable - disable upstream's solution, use ours
@@ -1778,6 +1891,11 @@
 	dupe.item_mush_val = item_mush_val
 	dupe.custom_reagentcolor = custom_reagentcolor
 	dupe.custom_reagentalpha = custom_reagentalpha
+	dupe.metabolism_overlay = metabolism_overlay
+	dupe.metabolism_mush_ratio = metabolism_mush_ratio
+	dupe.max_ingested = max_ingested
+	dupe.custom_ingested_color = custom_ingested_color
+	dupe.custom_ingested_alpha = custom_ingested_alpha
 	dupe.gen_cost = gen_cost
 	dupe.gen_amount = gen_amount
 	dupe.gen_time = gen_time
