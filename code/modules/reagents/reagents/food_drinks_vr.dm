@@ -624,8 +624,6 @@
 	description = "A mixture of water and protein commonly used as a meal supplement. This one has added strawberry flavoring."
 	taste_description = "strawberry"
 	color = "#e28585"
-<<<<<<< HEAD
-=======
 
 //SOUPS. Don't use the base soup reagent.
 /datum/reagent/drink/soup
@@ -699,4 +697,3 @@
 	taste_description = "spicy, sour tofu"
 	color = "#5f1b06"
 	allergen_type = ALLERGEN_BEANS|ALLERGEN_VEGETABLE|ALLERGEN_FUNGI //tofu is soy-based, ergo, beans. base recipe also uses cabbage and mushroom.
->>>>>>> 68cce98f69... Merge pull request #15417 from KillianKirilenko/kk-soup
