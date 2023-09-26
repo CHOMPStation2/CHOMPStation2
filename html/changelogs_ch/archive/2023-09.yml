@@ -120,6 +120,10 @@
   Verkister:
   - bugfix: Fixed other missing exportpanel vars.
 2023-09-26:
+  FluffMedic:
+  - qol: curea now uses spacechillin instead of dylvo, and iron instead of carbon
+  - bugfix: fire bird chem can properly be made
+  - bugfix: chemical imbalances in several meats
   Fracshun:
   - rscadd: Added new filtering options for auto-transfer
   Theonewhowaits:
