@@ -119,3 +119,6 @@
   - qol: Removed phoron from the base of size chems, replacing clonedex with cryptobiolin
   Verkister:
   - bugfix: Fixed other missing exportpanel vars.
+2023-09-26:
+  Theonewhowaits:
+  - balance: rebalances combat mobs health alongside weapon damage
