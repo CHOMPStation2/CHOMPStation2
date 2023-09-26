@@ -132,3 +132,5 @@
   - bugfix: Fixed runtime spam caused by putting cake hat on Torta.
   - rscadd: SWOOPIE XL suck mechanics overhaul with integrated hands-free Vac-Pack
       implementation.
+  tacoguy7765093:
+  - rscadd: Players can now create an area innately for off-station construction.
