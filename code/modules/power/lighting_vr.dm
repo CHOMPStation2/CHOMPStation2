@@ -221,9 +221,6 @@
 			icon_state = "big_flamp-construct-stage2"
 		if(3)
 			icon_state = "big_flamp-empty"
-<<<<<<< HEAD
-*/
-=======
 */
 
 /obj/item/weapon/light/bulb/torch
@@ -249,4 +246,3 @@
 
 /obj/machinery/light/small/torch/attackby()
 	return
->>>>>>> dda0a07458... Merge pull request #15412 from SatinIsle/fantasy
