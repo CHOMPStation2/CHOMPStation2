@@ -203,6 +203,8 @@
 			for(var/obj/item/I in contents)
 				if(reagents.total_volume)
 					reagents.trans_to(I, affecting_amt, 1, FALSE)
+	if(owner.previewing_belly == src)
+		vore_fx(owner, FALSE, reagents.total_volume)
 
 /obj/belly/proc/GenerateBellyReagents()
 	if(isrobot(owner))
@@ -500,6 +502,11 @@
 	for(var/A in contents)
 		if(isliving(A))
 			vore_fx(A,1)
+	if(owner.previewing_belly == src)
+		if(isbelly(owner.loc))
+			owner.previewing_belly = null
+			return
+		vore_fx(owner,1)
 
 /obj/belly/deserialize(var/list/data)
 	..()

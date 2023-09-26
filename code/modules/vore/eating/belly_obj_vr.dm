@@ -436,6 +436,8 @@
 		if(can_taste && (taste = M.get_taste_message(FALSE)))
 			to_chat(owner, "<span class='notice'>[M] tastes of [taste].</span>")
 		vore_fx(M, TRUE) //CHOMPEdit: update belleh
+		if(owner.previewing_belly == src) //CHOMPEdit
+			vore_fx(owner, TRUE) //CHOMPEdit: update belleh
 		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 		//Stop AI processing in bellies
 		if(M.ai_holder)
@@ -506,8 +508,14 @@
 		return
 	if(!L.client)
 		return
+	if(L.previewing_belly != src) //CHOMPEdit Start
+		return
+	if(L.previewing_belly == src && L.vore_selected != src)
+		L.previewing_belly = null
+		return
 	if(!L.show_vore_fx)
 		L.clear_fullscreen("belly")
+		L.previewing_belly = null //CHOMPEdit End
 		return
 	if(update)
 		L.clear_fullscreen("belly")
@@ -676,10 +684,14 @@
 			L.toggle_hud_vis(TRUE)
 
 /obj/belly/proc/vore_preview(mob/living/L)
-	if(!istype(L))
+	if(!istype(L) || !L.client) //CHOMPEdit Start
+		L.previewing_belly = null
 		return
-	if(!L.client)
-		return
+	L.previewing_belly = src
+	vore_fx(L)
+	//CHOMPEdit End
+
+/* //CHOMPRemove. Using regular vore_fx above.
 	if(belly_fullscreen)
 		if(colorization_enabled)
 			/* //Chomp Disable - disable upstream's solution, use ours
@@ -830,8 +842,10 @@
 		//L.clear_fullscreen("belly2") //Chomp Disable - disable upstream's solution, use ours
 		//L.clear_fullscreen("belly3") //Chomp Disable - disable upstream's solution, use ours
 		//L.clear_fullscreen("belly4") //Chomp Disable - disable upstream's solution, use ours
+*/
 
 /obj/belly/proc/clear_preview(mob/living/L)
+	L.previewing_belly = null //CHOMPAdd
 	L.clear_fullscreen("belly")
 	//L.clear_fullscreen("belly2") //Chomp Disable - disable upstream's solution, use ours
 	//L.clear_fullscreen("belly3") //Chomp Disable - disable upstream's solution, use ours
