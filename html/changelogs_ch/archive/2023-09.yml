@@ -139,5 +139,8 @@
   - bugfix: Fixed runtime spam caused by putting cake hat on Torta.
   - rscadd: SWOOPIE XL suck mechanics overhaul with integrated hands-free Vac-Pack
       implementation.
+  - rscadd: Added mush overlay settings for ingested metabolism stuff.
+  - qol: Reworked how vore fx preview stuff works.
+  - bugfix: Adjusted wonky resting pose vertical offset.
   tacoguy7765093:
   - rscadd: Players can now create an area innately for off-station construction.
