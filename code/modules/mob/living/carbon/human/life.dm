@@ -1589,9 +1589,8 @@
 		else
 			clear_alert("high")
 
-		if(!isbelly(loc)) //VOREStation Add - Belly fullscreens safety
-			if(!previewing_belly) //CHOMPEdit
-				clear_fullscreen("belly") //CHOMPEdit
+		if(!isbelly(loc) && !previewing_belly) //VOREStation Add - Belly fullscreens safety //CHOMPEdit
+			clear_fullscreen("belly")
 			//clear_fullscreen("belly2") //Chomp disable, using our own implementation
 			//clear_fullscreen("belly3") //Chomp disable, using our own implementation
 			//clear_fullscreen("belly4") //Chomp disable, using our own implementation
