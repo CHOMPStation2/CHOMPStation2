@@ -58605,6 +58605,7 @@
 /obj/item/weapon/packageWrap,
 /obj/item/weapon/packageWrap,
 /obj/item/weapon/packageWrap,
+/obj/item/weapon/storage/bag/mail,
 /obj/item/device/destTagger{
 	pixel_x = 4;
 	pixel_y = 3

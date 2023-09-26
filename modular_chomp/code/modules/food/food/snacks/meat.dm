@@ -21,7 +21,7 @@
 	nutriment_desc = list("protein" = 6, "liquidfire" = 6)
 	bitesize = 6
 
-/obj/item/weapon/reagent_containers/food/snacks/deathclawmeat/Initialize()
+/obj/item/weapon/reagent_containers/food/snacks/dragonmeat/Initialize()
 	. = ..()
 	reagents.add_reagent("protein", 6)
 	reagents.add_reagent("liquidfire", 6)
@@ -35,7 +35,7 @@
 	nutriment_desc = list("protein" = 6, "neoliquidfire" = 6, "phoron" = 3)
 	bitesize = 6
 
-/obj/item/weapon/reagent_containers/food/snacks/deathclawmeat/Initialize()
+/obj/item/weapon/reagent_containers/food/snacks/phorondragonmeat/Initialize()
 	. = ..()
 	reagents.add_reagent("protein", 6)
 	reagents.add_reagent("neoliquidfire", 6)
@@ -50,7 +50,7 @@
 	nutriment_desc = list("protein" = 3, "liquidlife" = 3)
 	bitesize = 6
 
-/obj/item/weapon/reagent_containers/food/snacks/deathclawmeat/Initialize()
+/obj/item/weapon/reagent_containers/food/snacks/metroidmeat/Initialize()
 	. = ..()
 	reagents.add_reagent("protein", 3)
 	reagents.add_reagent("liquidlife", 3)

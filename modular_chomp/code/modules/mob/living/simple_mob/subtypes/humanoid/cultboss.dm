@@ -1,10 +1,10 @@
 /mob/living/simple_mob/humanoid/cultist/magus/rift
 	name = "Rift Magus"
-	maxHealth = 450 //Boss Mobs should be tanky.
-	health = 450
+	maxHealth = 225 //Boss Mobs should be tanky.
+	health = 225
 
-	melee_damage_lower = 30
-	melee_damage_upper = 45
+	melee_damage_lower = 15
+	melee_damage_upper = 22
 	attack_armor_pen = 50
 	var/grenade_type = /obj/item/weapon/grenade/spawnergrenade/riftwallers
 	var/grenade_timer = 5
@@ -33,10 +33,10 @@
 	injury_enrages = TRUE
 
 	armor_soak = list(
-		"melee" = 5,
-		"bullet" = 5,
-		"laser" = 5,
-		"energy" = 5,
+		"melee" = 2,
+		"bullet" = 2,
+		"laser" = 2,
+		"energy" = 2,
 		"bomb" = 0,
 		"bio" = 0,
 		"rad" = 0
@@ -276,6 +276,7 @@
 	light_range = 2
 	light_power = -2
 	light_color = "#FFFFFF"
+	damage_type = BURN
 
 /mob/living/simple_mob/humanoid/cultist/magus/rift
 	vore_active = 1

@@ -235,8 +235,6 @@
 				prob(5);/obj/item/organ/internal/stomach,
 				prob(5);/obj/item/organ/internal/voicebox,
 				)
-<<<<<<< HEAD
-=======
 
 /obj/random/potion
 	name = "random potion"
@@ -368,4 +366,3 @@
 				prob(10);/obj/item/device/perfect_tele/magic,
 				prob(10);/obj/item/weapon/reagent_containers/glass/bottle/potion/truepolymorph
 				)
->>>>>>> 67bea3343d... Merge pull request #15420 from SatinIsle/fantasy

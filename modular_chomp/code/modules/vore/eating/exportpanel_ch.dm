@@ -249,8 +249,26 @@
 			belly_data["autotransferlocation_secondary"] = B.autotransferlocation_secondary
 			belly_data["autotransfer_min_amount"] = B.autotransfer_min_amount
 			belly_data["autotransfer_max_amount"] = B.autotransfer_max_amount
-			belly_data["autotransfer_absorbed"] = B.autotransfer_absorbed
-			belly_data["autotransfer_absorbed_only"] = B.autotransfer_absorbed_only
+			var/list/at_whitelist = list()
+			for(var/flag_name in B.autotransfer_flags_list)
+				if(B.autotransfer_whitelist & B.autotransfer_flags_list[flag_name])
+					at_whitelist.Add(flag_name)
+			belly_data["autotransfer_whitelist"] = at_whitelist
+			var/list/at_blacklist = list()
+			for(var/flag_name in B.autotransfer_flags_list)
+				if(B.autotransfer_blacklist & B.autotransfer_flags_list[flag_name])
+					at_blacklist.Add(flag_name)
+			belly_data["autotransfer_blacklist"] = at_blacklist
+			var/list/at_secondary_whitelist = list()
+			for(var/flag_name in B.autotransfer_flags_list)
+				if(B.autotransfer_secondary_whitelist & B.autotransfer_flags_list[flag_name])
+					at_secondary_whitelist.Add(flag_name)
+			belly_data["autotransfer_secondary_whitelist"] = at_secondary_whitelist
+			var/list/at_secondary_blacklist = list()
+			for(var/flag_name in B.autotransfer_flags_list)
+				if(B.autotransfer_secondary_blacklist & B.autotransfer_flags_list[flag_name])
+					at_secondary_blacklist.Add(flag_name)
+			belly_data["autotransfer_secondary_blacklist"] = at_secondary_blacklist
 
 			// Liquid Options
 			belly_data["show_liquids"] = B.show_liquids

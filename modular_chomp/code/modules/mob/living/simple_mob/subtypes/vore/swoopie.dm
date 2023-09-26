@@ -1,6 +1,6 @@
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie
 	name = "SWOOPIE XL"
-	desc = "A large birdlike robot with thick assets, plump belly, and a long elastic vacuum hose of a neck. Somehow still a cleanbot, even if just for its duties."
+	desc = "A large birdlike robot with thick assets, plump belly, and a long elastic vacuum hose of a neck. Somehow still a cleanbot, even if just for its duties. Use DISARM intent to access Vac-Pack settings."
 	icon_state = "swoopie"
 	icon_living = "swoopie"
 	icon_dead = "swoopie_dead"
@@ -21,8 +21,20 @@
 	faction = "neutral"
 	say_list_type = /datum/say_list/swoopie
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate
+	mob_bump_flag = 0
 	var/static/list/crew_creatures = list(	/mob/living/simple_mob/protean_blob,
 											/mob/living/simple_mob/slime/promethean)
+	var/obj/item/device/vac_attachment/Vac
+
+/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/Initialize()
+	. = ..()
+	if(!voremob_loaded)
+		voremob_loaded = TRUE
+		init_vore()
+	Vac = new /obj/item/device/vac_attachment(src)
+	if(istype(Vac))
+		Vac.output_dest = vore_selected
+		Vac.vac_power = 3
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/IIsAlly(mob/living/L)
 	. = ..()
@@ -32,6 +44,8 @@
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/init_vore()
 	if(!voremob_loaded)
 		return
+	if(LAZYLEN(vore_organs))
+		return TRUE
 	verbs |= /mob/living/proc/eat_trash
 	verbs |= /mob/living/proc/toggle_trash_catching
 	verbs |= /mob/living/proc/restrict_trasheater
@@ -51,7 +65,7 @@
 	B.sound_volume = 25
 	B.count_items_for_sprite = TRUE
 
-	B = new /obj/belly/longneck/(src)
+	B = new /obj/belly/longneck(src)
 	B.affects_vore_sprites = TRUE
 	B.belly_sprite_to_affect = "neck4"
 	B.name = "vacuum hose 4"
@@ -61,7 +75,7 @@
 	B.vore_sound = "Stomach Move"
 	B.sound_volume = 20
 
-	B = new /obj/belly/longneck/(src)
+	B = new /obj/belly/longneck(src)
 	B.affects_vore_sprites = TRUE
 	B.belly_sprite_to_affect = "neck3"
 	B.name = "vacuum hose 3"
@@ -71,7 +85,7 @@
 	B.vore_sound = "Stomach Move"
 	B.sound_volume = 40
 
-	B = new /obj/belly/longneck/(src)
+	B = new /obj/belly/longneck(src)
 	B.affects_vore_sprites = TRUE
 	B.belly_sprite_to_affect = "neck2"
 	B.name = "vacuum hose 2"
@@ -81,7 +95,7 @@
 	B.vore_sound = "Stomach Move"
 	B.sound_volume = 80
 
-	B = new /obj/belly/longneck/(src)
+	B = new /obj/belly/longneck(src)
 	B.affects_vore_sprites = TRUE
 	B.belly_sprite_to_affect = "neck1"
 	B.name = "vacuum hose"
@@ -121,36 +135,25 @@
 	item_multiplier = 10
 	health_impacts_size = FALSE
 	speedy_mob_processing = TRUE
+	size_factor_for_sprite = 5
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/Life()
 	. =..()
 	var/turf/T = get_turf(src)
-	if(istype(T))
-		for(var/obj/O in T)
-			if(O.clean_blood())
-				adjust_nutrition(1)
-			if(has_AI())
-				if(is_type_in_list(O, edible_trash) && !O.anchored)
-					put_in_active_hand(O)
-					break
-		if(has_AI())
-			var/obj/item/I = get_active_hand()
-			if(istype(I))
-				if(!voremob_loaded)
-					voremob_loaded = TRUE
-					init_vore()
-				eat_trash()
-				drop_item()
-			for(var/mob/living/simple_mob/animal/passive/mouse/M in T)
-				perform_the_nom(src,M,src,src.vore_selected,1)
-				break
+	if(istype(T) && istype(Vac) && has_AI())
 		if(istype(T, /turf/simulated))
 			var/turf/simulated/S = T
-			if(T.clean_blood())
-				adjust_nutrition(1)
-			if(S.dirt > 50)
-				S.dirt = 0
-				adjust_nutrition(1)
+			if(S.dirt > 10)
+				Vac.afterattack(S, src, 1)
+				return
+		for(var/obj/O in T)
+			if(is_type_in_list(O, edible_trash) && !O.anchored)
+				Vac.afterattack(T, src, 1)
+				return
+		for(var/mob/living/L in T)
+			if(!L.anchored || L.devourable || !L == src || !L.buckled || L.can_be_drop_prey)
+				Vac.afterattack(L, src, 1)
+				return
 
 /datum/say_list/swoopie
 	speak = list("Scanning for debris...", "Scanning for dirt...", "Scanning for pests...", "Squawk!")
@@ -158,3 +161,22 @@
 	emote_see = list("twitches.", "sways.", "stretches its neck.", "stomps idly.")
 	say_maybe_target = list("Pest detected?")
 	say_got_target = list("PEST DETECTED!")
+
+/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/ClickOn(var/atom/A, var/params)
+	if(istype(Vac) && A.Adjacent(src))
+		face_atom(A)
+		if(A == src)
+			Vac.attack_self(src)
+			return
+		if(Vac.vac_power != 0)
+			var/resolved = Vac.resolve_attackby(A, src, click_parameters = params)
+			if(!resolved && A && Vac)
+				Vac.afterattack(A, src, 1, params)
+				return
+	. = ..()
+
+/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/attack_hand(mob/living/L)
+	if(L.a_intent == I_DISARM && Vac)
+		Vac.attack_self(L)
+		return
+	. = ..()
