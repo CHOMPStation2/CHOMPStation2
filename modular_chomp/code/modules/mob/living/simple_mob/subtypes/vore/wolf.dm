@@ -3,5 +3,5 @@
     verbs += /mob/living/simple_mob/proc/pick_color
 
 /mob/living/simple_mob/vore/wolf/direwolf
-	maxHealth = 100
-	health = 100
+	maxHealth = 50
+	health = 50

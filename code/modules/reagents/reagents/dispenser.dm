@@ -438,13 +438,13 @@
 /datum/reagent/acid/touch_obj(var/obj/O, var/amount) //CHOMPEdit Start
 	if(isbelly(O.loc))
 		var/obj/belly/B = O.loc
-		if(B.item_digest_mode == IM_HOLD || B.item_digest_mode == IM_DIGEST_FOOD)
+		if(B.item_digest_mode == IM_HOLD)
 			return
 		var/obj/item/I = O
 		var/spent_amt = I.digest_act(I.loc, 1, amount / (meltdose / 3))
+		remove_self(spent_amt) //10u stomacid per w_class, less if stronger acid.
 		if(B.owner)
 			B.owner.adjust_nutrition((B.nutrition_percent / 100) * 5 * spent_amt)
-		remove_self(spent_amt) //10u stomacid per w_class, less if stronger acid.
 		return
 	..()
 	if(O.unacidable || is_type_in_list(O,item_digestion_blacklist)) //CHOMPEdit End
