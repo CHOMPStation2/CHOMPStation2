@@ -124,3 +124,9 @@
   - balance: rebalances combat mobs health alongside weapon damage
   Verkister:
   - bugfix: Fixed Unathi Big Horns ear style.
+  - qol: Food item digestion now uses gradual item digestion rather than instant qdel.
+      Also reagent content no longer nerfed to half.
+  - bugfix: Fixed vorepanel sound previews not using custom noise freq.
+  - bugfix: Fixed runtime spam caused by putting cake hat on Torta.
+  - rscadd: SWOOPIE XL suck mechanics overhaul with integrated hands-free Vac-Pack
+      implementation.
