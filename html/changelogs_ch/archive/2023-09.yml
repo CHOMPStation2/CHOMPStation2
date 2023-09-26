@@ -120,6 +120,8 @@
   Verkister:
   - bugfix: Fixed other missing exportpanel vars.
 2023-09-26:
+  Fracshun:
+  - rscadd: Added new filtering options for auto-transfer
   Theonewhowaits:
   - balance: rebalances combat mobs health alongside weapon damage
   Verkister:
