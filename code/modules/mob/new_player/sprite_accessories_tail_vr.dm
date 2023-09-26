@@ -246,7 +246,7 @@
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "eboop_mark"
 
-/* // Chomp REMOVE START
+/* // Chomp REMOVE start
 /datum/sprite_accessory/tail/molenar_kitsune
 	name = "quintail kitsune tails (Molenar)"
 	desc = ""
@@ -320,7 +320,7 @@
     desc = ""
     icon_state = "featherfluff_tail"
     ckeys_allowed = list("tucker0666")
-*/ //Chomp REMOVE END
+*/ // Chomp REMOVE end
 
 /datum/sprite_accessory/tail/ketrai_wag
 	name = "fennix tail (vwag)"
@@ -368,13 +368,13 @@
 	extra_overlay = "raccoon-stripes"
 	extra_overlay_w = "raccoon-stripes_w"
 
-/* // Chomp REMOVE START
+/* // Chomp REMOVE start
 /datum/sprite_accessory/tail/holly
 	name = "tigress tail (Holly)"
 	desc = ""
 	icon_state = "tigresstail"
 	ckeys_allowed = list("hoodoo")
-*/ // Chomp REMOVE END
+*/ // Chomp REMOVE end
 
 /datum/sprite_accessory/tail/satyr
 	name = "goat legs, colorable"
@@ -1192,7 +1192,7 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
-/* // Chomp REMOVE START
+/* // Chomp REMOVE start
 /datum/sprite_accessory/tail/peacocktail_red //this is ckey locked for now, but prettiebyrd wants these tails to be unlocked at a later date
 	name = "Peacock tail (vwag)"
 	desc = ""
@@ -1210,7 +1210,7 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	ckeys_allowed = list("prettiebyrd")
-*/ // Chomp REMOVE END
+*/ // Chomp REMOVE end
 
 /datum/sprite_accessory/tail/altevian
 	name = "Altevian Tail"
@@ -1236,13 +1236,13 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
-/* // Chomp REMOVE START
+/* // Chomp REMOVE start
 /datum/sprite_accessory/tail/perrin_tentacles
 	name = "octopus tentacles"
 	desc = ""
 	icon_state = "perrintentacles"
 	ckeys_allowed = list("codeme", "siennaathens")
-*/ // Chomp REMOVE END
+*/ // Chomp REMOVE end
 
 /datum/sprite_accessory/tail/teshbeethorax
 	name = "Teshari bee thorax"
@@ -1364,13 +1364,13 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
-/* //Chomp REMOVE START
+/* // Chomp REMOVE start
 /datum/sprite_accessory/tail/kara //SatinIsle fluff item
 	name = "Pterokara Tail"
 	icon = 'icons/mob/vore/tails_vr.dmi'
 	icon_state = "kara_tail"
 	ckeys_allowed = list("satinisle")
-*/ // Chomp REMOVE END
+*/ // Chomp REMOVE end
 
 //LONG TAILS ARE NOT TAUR BUTTS >:O
 /datum/sprite_accessory/tail/longtail
@@ -1459,3 +1459,22 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "narrowtail_2color-1"
+
+
+// Dino Tails
+
+/datum/sprite_accessory/tail/clubtail
+	name = "dino clubtail, colorable"
+	desc = ""
+	icon_state = "clubtail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "clubtail-1"
+
+/datum/sprite_accessory/tail/spiketail
+	name = "dino spiketail, colorable"
+	desc = ""
+	icon_state = "spiketail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "spiketail-1"

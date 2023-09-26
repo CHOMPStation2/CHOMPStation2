@@ -665,3 +665,4 @@
 		if(istype(M, circuit)) // Yes, we remove circuit twice. Yes, it's necessary. Yes, it's stupid.
 			workingList -= M
 	return workingList
+
