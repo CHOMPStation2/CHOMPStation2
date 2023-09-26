@@ -18,8 +18,8 @@
 
 	faction = "vr"
 
-	maxHealth = 100
-	health = 100
+	maxHealth = 50
+	health = 50
 	movement_cooldown = 1
 	unsuitable_atoms_damage = 0
 	projectiletype = /obj/item/projectile/energy/homing_bolt/wizard

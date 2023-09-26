@@ -23,8 +23,8 @@
 
 	faction = "candy"
 
-	maxHealth = 50
-	health = 50
+	maxHealth = 25
+	health = 25
 	movement_cooldown = 2
 	melee_attack_delay = 3 SECOND
 	can_be_drop_prey = TRUE
@@ -206,8 +206,8 @@
 	icon_living = "blue"
 	icon_dead = "blue_dead"
 
-	maxHealth = 50
-	health = 50
+	maxHealth = 25
+	health = 25
 
 	melee_damage_lower = 7
 	melee_damage_upper = 12
@@ -230,8 +230,8 @@
 	icon_living = "red"
 	icon_dead = "red_dead"
 
-	maxHealth = 125
-	health = 125
+	maxHealth = 82
+	health = 82
 
 	melee_damage_lower = 2
 	melee_damage_upper = 2
@@ -259,8 +259,8 @@
 	icon_living = "yellow"
 	icon_dead = "yellow_dead"
 
-	maxHealth = 50
-	health = 50
+	maxHealth = 25
+	health = 25
 
 	melee_damage_lower = 8
 	melee_damage_upper = 15
@@ -307,8 +307,8 @@
 	icon_living = "purple"
 	icon_dead = "purple_dead"
 
-	maxHealth = 50
-	health = 50
+	maxHealth = 25
+	health = 25
 
 	melee_damage_lower = 7
 	melee_damage_upper = 12
@@ -333,8 +333,8 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged/kiting
 
-	maxHealth = 50
-	health = 50
+	maxHealth = 25
+	health = 25
 
 	melee_damage_lower = 4
 	melee_damage_upper = 8

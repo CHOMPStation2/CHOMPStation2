@@ -22,8 +22,8 @@
 	response_disarm = "shoves"
 	response_harm = "hits"
 
-	health = 100
-	maxHealth = 100
+	health = 50
+	maxHealth = 50
 	harm_intent_damage = 5
 	melee_damage_lower = 15		//Tac Knife damage
 	melee_damage_upper = 15
@@ -152,8 +152,8 @@
 /mob/living/simple_mob/humanoid/eclipse/solar/firemoff
 	name = "Solar Eclipse Inferno Moth"
 	desc = "A moth like creature cladded in armor, wisps of flames swirling around it. Protected from lasers and energy."
-	health = 75
-	maxHealth = 75
+	health = 37
+	maxHealth = 37
 	icon_state = "eclipse_moth"
 	icon_living = "eclipse_moth"
 	reload_max = 10
@@ -172,8 +172,8 @@
 /mob/living/simple_mob/humanoid/eclipse/solar/snipertesh
 	name = "Solar Eclipse Sniper"
 	desc = "An armored teshari with a sniper, protected from laser and energy based attacks"
-	health = 50
-	maxHealth = 50
+	health = 25
+	maxHealth = 25
 	movement_cooldown = -1
 
 	icon_state = "eclipse_snipertesh"
@@ -230,8 +230,8 @@
 /mob/living/simple_mob/humanoid/eclipse/solar/radiation
 	name = "Solar Eclipse Irradiator"
 	desc = "A lizard emitting radiation, whilst protected from it, alongside energy and laser based weapons"
-	health = 150
-	maxHealth = 150
+	health = 75
+	maxHealth = 75
 	glow_toggle = TRUE
 	reload_max = 3
 
@@ -261,8 +261,8 @@
 /mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle //Bouncing bullet extreme
 	name = "Lunar Eclipse Silver Serpent"
 	desc = "A hungry looking naga, their strange armor protecting them from ballistics and physical weaponry."
-	health = 100
-	maxHealth = 100
+	health = 50
+	maxHealth = 50
 	reload_max = 6
 	movement_cooldown = 1
 
@@ -297,8 +297,8 @@
 /mob/living/simple_mob/humanoid/eclipse/lunar/shotgunner //wuff with shotgun
 	name = "Lunar Eclipse Shotgunner"
 	desc = "A Vulpkanin or the like in a red-purple flashing rigsuit, it defending them from physical damage of close and long ranges."
-	health = 75
-	maxHealth = 75
+	health = 37
+	maxHealth = 37
 	reload_max = 2
 
 	icon_state = "eclipse_shotwuff"
@@ -311,8 +311,8 @@
 /mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm //tesh got a gun
 	name = "Lunar Eclipse Judge"
 	desc = "A teshari wildly wielding a pistol, wearing bullet and sword protective gear."
-	health = 50
-	maxHealth = 50
+	health = 25
+	maxHealth = 25
 	icon_state = "eclipse_shottesh"
 	icon_living = "eclipse_shottesh"
 	movement_cooldown = -1
@@ -328,8 +328,8 @@
 /mob/living/simple_mob/humanoid/eclipse/lunar/ravanger //Tanky boi. Very deadly melee
 	name = "Lunar Eclipse Ravanger"
 	desc = "An individual wearing strange armor that seems to be living, and breathing while providing protection from bullets and swords."
-	health = 125
-	maxHealth = 125
+	health = 62
+	maxHealth = 62
 	icon_state = "eclipse_ravanger"
 	icon_living = "eclipse_ravanger"
 
@@ -355,8 +355,8 @@
 /mob/living/simple_mob/humanoid/eclipse/solar/hellhound
 	name = "Solar Eclipse Hound"
 	desc = "A heavily armored creature, flames dancing around it's burn and energy proof armor."
-	health = 150
-	maxHealth = 150
+	health = 75
+	maxHealth = 75
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 	projectiletype = null //Flashing was to much for this mob.
 	movement_cooldown = -1
@@ -376,8 +376,8 @@
 /mob/living/simple_mob/humanoid/eclipse/lunar/wheel
 	name = "Lunar Eclipse Armadillo"
 	desc = "A silver armadillo coiled up, and spinning at you, all bullets and close quarters attacks bouncing off."
-	health = 150
-	maxHealth = 150
+	health = 75
+	maxHealth = 75
 	melee_damage_lower = 10
 	melee_damage_upper = 10
 	attack_armor_pen = 50

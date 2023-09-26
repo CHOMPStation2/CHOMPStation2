@@ -43,6 +43,24 @@ const ReagentAddonIcon = {
   'Draining Liquids': '',
 };
 
+const AutotransferFlagIcon = {
+  'Creatures': '',
+  'Absorbed': '',
+  'Carbon': '',
+  'Silicon': '',
+  'Mobs': '',
+  'Animals': '',
+  'Mice': '',
+  'Dead': '',
+  'Digestable Creatures': '',
+  'Absorbable Creatures': '',
+  'Items': '',
+  'Trash': '',
+  'Eggs': '',
+  'Remains': '',
+  'Indigestible Items': '',
+};
+
 const GetAddons = (addons: string[]) => {
   let result: string[] = [];
 
@@ -78,6 +96,30 @@ const GetLiquidAddons = (addons: string[]) => {
 
   if (result.length === 0) {
     result.push('No Addons Set');
+  }
+
+  return result;
+};
+
+const GetAutotransferFlags = (addons: string[], whitelist: BooleanLike) => {
+  let result: string[] = [];
+
+  addons?.forEach((addon) => {
+    result.push(
+      '<span class="badge text-bg-secondary"><i class="' +
+        AutotransferFlagIcon[addon] +
+        '"></i>' +
+        addon +
+        '</span>'
+    );
+  });
+
+  if (result.length === 0) {
+    if (whitelist) {
+      result.push('Everything');
+    } else {
+      result.push('Nothing');
+    }
   }
 
   return result;
@@ -212,8 +254,10 @@ type Belly = {
   autotransferlocation_secondary: string;
   autotransfer_min_amount: number;
   autotransfer_max_amount: number;
-  autotransfer_absorbed: BooleanLike;
-  autotransfer_absorbed_only: BooleanLike;
+  autotransfer_whitelist: string[];
+  autotransfer_blacklist: string[];
+  autotransfer_secondary_whitelist: string[];
+  autotransfer_secondary_blacklist: string[];
 
   // Liquid Options
   show_liquids: BooleanLike;
@@ -373,8 +417,10 @@ const generateBellyString = (belly: Belly, index: number) => {
     autotransfer_enabled,
     autotransfer_min_amount,
     autotransfer_max_amount,
-    autotransfer_absorbed,
-    autotransfer_absorbed_only,
+	autotransfer_whitelist,
+	autotransfer_blacklist,
+	autotransfer_secondary_whitelist,
+	autotransfer_secondary_blacklist,
 
     // Liquid Options
     show_liquids,
@@ -724,14 +770,16 @@ const generateBellyString = (belly: Belly, index: number) => {
   '</span>)</b>';
   result += '<ul class="list-group">';
   result += '<li class="list-group-item">Auto-Transfer Time: ' + autotransferwait / 10 + 's</li>';
-  result += '<li class="list-group-item">Auto-Transfer Chance: ' + autotransferchance + '%</li>';
-  result += '<li class="list-group-item">Auto-Transfer Location: ' + autotransferlocation + '</li>';
-  result += '<li class="list-group-item">Auto-Transfer Chance: ' + autotransferchance_secondary + '%</li>';
-  result += '<li class="list-group-item">Auto-Transfer Location: ' + autotransferlocation_secondary + '</li>';
   result += '<li class="list-group-item">Auto-Transfer Min Amount: ' + autotransfer_min_amount + '</li>';
   result += '<li class="list-group-item">Auto-Transfer Max Amount: ' + autotransfer_max_amount + '</li>';
-  result += '<li class="list-group-item">Auto-Transfer Absorbed Creatures: ' + (autotransfer_absorbed ? '<span style="color: green;">Yes' : '<span style="color: red;">No') + '</li>';
-  result += '<li class="list-group-item">Only Auto-Transfer Absorbed Creatures: ' + (autotransfer_absorbed_only ? '<span style="color: green;">Yes' : '<span style="color: red;">No') + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Primary Chance: ' + autotransferchance + '%</li>';
+  result += '<li class="list-group-item">Auto-Transfer Primary Location: ' + autotransferlocation + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Primary Whitelist: ' + GetAutotransferFlags(autotransfer_whitelist, true) + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Primary Blacklist: ' + GetAutotransferFlags(autotransfer_blacklist, false) + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Secondary Chance: ' + autotransferchance_secondary + '%</li>';
+  result += '<li class="list-group-item">Auto-Transfer Secondary Location: ' + autotransferlocation_secondary + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Secondary Whitelist: ' + GetAutotransferFlags(autotransfer_secondary_whitelist, true) + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Secondary Blacklist: ' + GetAutotransferFlags(autotransfer_secondary_blacklist, false) + '</li>';
   result += '</ul>';
   result += '</div></div></div>';
 
