@@ -6,7 +6,7 @@ SUBSYSTEM_DEF(mail)
 	flags = SS_NO_TICK_CHECK
 
 	var/mail_waiting = 0					// Pending mail
-	var/mail_per_process = 2				// Mail to be generated
+	var/mail_per_process = 0.75				// Mail to be generated
 
 /datum/controller/subsystem/mail/fire()
 	mail_waiting += mail_per_process
