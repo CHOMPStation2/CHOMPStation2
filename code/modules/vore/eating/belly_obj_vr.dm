@@ -514,7 +514,7 @@
 		return
 	if(!L.client)
 		return
-	if(L.previewing_belly != src) //CHOMPEdit Start
+	if(L.previewing_belly && L.previewing_belly != src) //CHOMPEdit Start
 		return
 	if(L.previewing_belly == src && L.vore_selected != src)
 		L.previewing_belly = null
