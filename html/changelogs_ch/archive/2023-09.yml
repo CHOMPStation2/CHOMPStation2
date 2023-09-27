@@ -144,3 +144,7 @@
   - bugfix: Adjusted wonky resting pose vertical offset.
   tacoguy7765093:
   - rscadd: Players can now create an area innately for off-station construction.
+2023-09-27:
+  Verkister:
+  - bugfix: Fixed vorgan nutrition percent not affecting food/drink reagent gains.
+  - bugfix: Fixed vorgan overlays not showing up for prey.
