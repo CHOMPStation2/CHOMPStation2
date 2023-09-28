@@ -1243,14 +1243,9 @@
 	var/mob/living/owner = parent
 	if(owner.client)
 		create_mob_button(parent)
-<<<<<<< HEAD
-	owner.verbs |= /mob/living/proc/insidePanel
+	owner.verbs |= /mob/proc/insidePanel
 	if(!owner.vorePanel) //CHOMPEdit
 		owner.vorePanel = new(owner)
-=======
-	owner.verbs |= /mob/proc/insidePanel
-	owner.vorePanel = new(owner)
->>>>>>> 6e5c9c561d... Merge pull request #15406 from Heroman3003/test-vore-setup
 
 /datum/component/vore_panel/UnregisterFromParent()
 	. = ..()
