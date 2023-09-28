@@ -22,7 +22,7 @@
 
 
 // Update fullness based on size & quantity of belly contents
-/mob/proc/update_fullness(var/returning = FALSE)
+/mob/living/proc/update_fullness(var/returning = FALSE)
 	if(!returning)
 		if(updating_fullness)
 			return
