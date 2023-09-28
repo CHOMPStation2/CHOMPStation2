@@ -17,14 +17,14 @@
 	// Goodies which can be given to anyone.
 	// Weight sum will be 1000
 	var/list/generic_goodies = list(
-		/obj/item/weapon/reagent_containers/food/snacks/chips = 100,
-		/obj/item/weapon/reagent_containers/food/drinks/coffee = 100,
-		/obj/item/weapon/reagent_containers/food/drinks/tea = 100,
-		/obj/item/weapon/reagent_containers/food/drinks/cans/cola = 100,
-		/obj/item/weapon/spacecash/c50 = 100,
-		/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/nt = 125,
-		/obj/item/weapon/spacecash/c100 = 125,
-		/obj/item/weapon/spacecash/c200 = 100,
+		/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/nt = 130,
+		/obj/item/weapon/spacecash/c50 = 125,
+		/obj/item/weapon/reagent_containers/food/snacks/chips = 105,
+		/obj/item/weapon/reagent_containers/food/drinks/coffee = 105,
+		/obj/item/weapon/reagent_containers/food/drinks/tea = 105,
+		/obj/item/weapon/reagent_containers/food/drinks/cans/cola = 105,
+		/obj/item/weapon/spacecash/c100 = 100,
+		/obj/item/weapon/spacecash/c200 = 75,
 		/obj/item/weapon/spacecash/c500 = 50,
 		/obj/item/weapon/spacecash/c1000 = 20,
 	)
@@ -55,17 +55,6 @@
 /obj/item/mail/Initialize()
 	. = ..()
 	RegisterSignal(src, COMSIG_MOVABLE_DISPOSING, .proc/disposal_handling)
-	if(isnull(department_colors))
-		department_colors = list(
-			COLOR_CYAN_BLUE = DEPARTMENT_COMMAND,
-			COLOR_GREEN_GRAY = DEPARTMENT_CIVILIAN,
-			COLOR_PALE_ORANGE = DEPARTMENT_ENGINEERING,
-			COLOR_PALE_PURPLE_GRAY = DEPARTMENT_RESEARCH,
-			COLOR_PALE_BLUE_GRAY = DEPARTMENT_MEDICAL,
-			COLOR_PALE_GREEN_GRAY = DEPARTMENT_PLANET,
-			COLOR_BEIGE = DEPARTMENT_CARGO,
-			COLOR_PALE_RED_GRAY = DEPARTMENT_SECURITY,
-		)
 
 	// Icons
 	// Add some random stamps.
@@ -145,8 +134,7 @@
 
 	var/datum/job/this_job = SSjob.name_occupations[new_recipient.job]
 	if(this_job)
-		if(SSjob.get_primary_department_of_job(this_job) && department_colors[SSjob.get_primary_department_of_job(this_job)])
-			color = department_colors[SSjob.get_primary_department_of_job(this_job)]
+		color = SSjob.get_primary_department_of_job(this_job).color
 		var/list/job_goodies = this_job.get_mail_goodies()
 		if(LAZYLEN(job_goodies))
 			if(this_job.exclusive_mail_goodies)
@@ -207,7 +195,6 @@
 		/obj/item/toy/figure = "[initial(name)] from DoN**K*oC"
 	)
 
-	color = pick(department_colors)
 	name = special_name ? junk_names[junk] : "important [initial(name)]"
 
 	junk = new junk(src)
