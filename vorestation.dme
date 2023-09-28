@@ -1565,6 +1565,7 @@
 #include "code\game\objects\random\misc.dm"
 #include "code\game\objects\random\misc_vr.dm"
 #include "code\game\objects\random\mob.dm"
+#include "code\game\objects\random\mob_ch.dm"
 #include "code\game\objects\random\mob_vr.dm"
 #include "code\game\objects\random\spacesuits.dm"
 #include "code\game\objects\random\unidentified\medicine.dm"
