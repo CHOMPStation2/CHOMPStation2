@@ -10,19 +10,12 @@
 	var/liquidbelly_visuals = TRUE			//Toggle for liquidbelly level visuals.
 
 	// CHOMP vore icons refactor (Now on living)
-	var/vore_capacity = 0				// Maximum capacity, -1 for unlimited
-	var/vore_capacity_ex = list("stomach" = 0) //expanded list of capacities
-	var/vore_fullness = 0				// How "full" the belly is (controls icons)
 	var/list/vore_fullness_ex = list("stomach" = 0) // Expanded list of fullness
 	var/vore_icons = 0					// Bitfield for which fields we have vore icons for.
 	var/vore_eyes = FALSE				// For mobs with fullness specific eye overlays.
-	var/belly_size_multiplier = 1
-
-	var/updating_fullness = FALSE
-
 
 // Update fullness based on size & quantity of belly contents
-/mob/living/proc/update_fullness(var/returning = FALSE)
+/mob/proc/update_fullness(var/returning = FALSE)
 	if(!returning)
 		if(updating_fullness)
 			return
