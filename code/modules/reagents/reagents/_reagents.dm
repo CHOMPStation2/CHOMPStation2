@@ -64,7 +64,7 @@
 		return
 	if(!affects_dead && M.stat == DEAD)
 		return
-	if(!affects_robots && M.isSynthetic())
+	if(!affects_robots && M.isSynthetic() && M.synth_reag_processing) //CHOMPEdit
 		return
 	if(!istype(location))
 		return
