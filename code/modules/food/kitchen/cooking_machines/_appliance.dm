@@ -606,7 +606,7 @@
 /obj/machinery/appliance/attack_hand(var/mob/user)
 	if(..())
 		return
-	
+
 	if(cooking_objs.len)
 		removal_menu(user)
 
@@ -734,7 +734,7 @@
 /datum/cooking_item
 	var/max_cookwork
 	var/cookwork
-	var/overcook_mult = 3 // How long it takes to overcook. This is max_cookwork x overcook mult. If you're changing this, mind that at 3x, a max_cookwork of 30 becomes 90 ticks for the purpose of burning, and a max_cookwork of 4 only has 12 before burning!
+	var/overcook_mult = 6 // How long it takes to overcook. This is max_cookwork x overcook mult. If you're changing this, mind that at 3x, a max_cookwork of 30 becomes 90 ticks for the purpose of burning, and a max_cookwork of 4 only has 12 before burning! // CHOMPedit: doubled to 6
 	var/result_type = 0
 	var/obj/item/weapon/reagent_containers/cooking_container/container = null
 	var/combine_target = null
