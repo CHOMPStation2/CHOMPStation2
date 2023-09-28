@@ -48074,7 +48074,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/engineering)
 "fhn" = (
-/obj/machinery/smartfridge/produce,
+/obj/machinery/smartfridge/produce/persistent_lossy,
 /turf/simulated/wall/r_wall,
 /area/hydroponics)
 "fhH" = (
