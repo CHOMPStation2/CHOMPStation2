@@ -1589,11 +1589,11 @@
 		else
 			clear_alert("high")
 
-		if(!isbelly(loc)) //VOREStation Add - Belly fullscreens safety
+		if(!isbelly(loc) && !previewing_belly) //VOREStation Add - Belly fullscreens safety //CHOMPEdit
 			clear_fullscreen("belly")
-			//clear_fullscreen("belly2") //Chomp disable, using our own implementation 
-			//clear_fullscreen("belly3") //Chomp disable, using our own implementation 
-			//clear_fullscreen("belly4") //Chomp disable, using our own implementation 
+			//clear_fullscreen("belly2") //Chomp disable, using our own implementation
+			//clear_fullscreen("belly3") //Chomp disable, using our own implementation
+			//clear_fullscreen("belly4") //Chomp disable, using our own implementation
 
 		if(config.welder_vision)
 			var/found_welder

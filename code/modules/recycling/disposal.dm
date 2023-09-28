@@ -636,6 +636,11 @@
 		if(istype(AM, /mob/living/silicon/robot/drone))
 			var/mob/living/silicon/robot/drone/drone = AM
 			src.destinationTag = drone.mail_destination
+		// CHOMPEdit Start -- Envelopes can be sent through as well!
+		if(istype(AM, /obj/item/mail) && !hasmob)
+			var/obj/item/mail/T = AM
+			src.destinationTag = T.sortTag
+		// CHOMPEdit End
 
 
 // start the movement process

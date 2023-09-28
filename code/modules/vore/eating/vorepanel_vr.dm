@@ -262,6 +262,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"max_mush" = selected.max_mush,
 			"min_mush" = selected.min_mush,
 			"item_mush_val" = selected.item_mush_val,
+			"metabolism_overlay" = selected.metabolism_overlay,
+			"metabolism_mush_ratio" = selected.metabolism_mush_ratio,
+			"max_ingested" = selected.max_ingested,
+			"custom_ingested_color" = selected.custom_ingested_color,
+			"custom_ingested_alpha" = selected.custom_ingested_alpha,
 			"vorespawn_blacklist" = selected.vorespawn_blacklist,
 			"sound_volume" = selected.sound_volume,
 			"affects_voresprite" = selected.affects_vore_sprites,
@@ -335,8 +340,28 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			selected_list["autotransfer"]["autotransferlocation_secondary"] = selected.autotransferlocation_secondary	//CHOMPAdd
 			selected_list["autotransfer"]["autotransfer_min_amount"] = selected.autotransfer_min_amount
 			selected_list["autotransfer"]["autotransfer_max_amount"] = selected.autotransfer_max_amount
-			selected_list["autotransfer"]["autotransfer_absorbed"] = selected.autotransfer_absorbed						//CHOMPAdd
-			selected_list["autotransfer"]["autotransfer_absorbed_only"] = selected.autotransfer_absorbed_only			//CHOMPAdd
+			//CHOMPAdd auto-transfer flags
+			var/list/at_whitelist = list()
+			for(var/flag_name in selected.autotransfer_flags_list)
+				if(selected.autotransfer_whitelist & selected.autotransfer_flags_list[flag_name])
+					at_whitelist.Add(flag_name)
+			selected_list["autotransfer"]["autotransfer_whitelist"] = at_whitelist
+			var/list/at_blacklist = list()
+			for(var/flag_name in selected.autotransfer_flags_list)
+				if(selected.autotransfer_blacklist & selected.autotransfer_flags_list[flag_name])
+					at_blacklist.Add(flag_name)
+			selected_list["autotransfer"]["autotransfer_blacklist"] = at_blacklist
+			var/list/at_secondary_whitelist = list()
+			for(var/flag_name in selected.autotransfer_flags_list)
+				if(selected.autotransfer_secondary_whitelist & selected.autotransfer_flags_list[flag_name])
+					at_secondary_whitelist.Add(flag_name)
+			selected_list["autotransfer"]["autotransfer_secondary_whitelist"] = at_secondary_whitelist
+			var/list/at_secondary_blacklist = list()
+			for(var/flag_name in selected.autotransfer_flags_list)
+				if(selected.autotransfer_secondary_blacklist & selected.autotransfer_flags_list[flag_name])
+					at_secondary_blacklist.Add(flag_name)
+			selected_list["autotransfer"]["autotransfer_secondary_blacklist"] = at_secondary_blacklist
+			//CHOMPAdd END
 
 		selected_list["disable_hud"] = selected.disable_hud
 		selected_list["colorization_enabled"] = selected.colorization_enabled
@@ -408,6 +433,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			selected_list["liq_interacts"]["max_mush"] = selected.max_mush
 			selected_list["liq_interacts"]["min_mush"] = selected.min_mush
 			selected_list["liq_interacts"]["item_mush_val"] = selected.item_mush_val
+			selected_list["liq_interacts"]["metabolism_overlay"] = selected.metabolism_overlay
+			selected_list["liq_interacts"]["metabolism_mush_ratio"] = selected.metabolism_mush_ratio
+			selected_list["liq_interacts"]["max_ingested"] = selected.max_ingested
+			selected_list["liq_interacts"]["custom_ingested_color"] = selected.custom_ingested_color ? selected.custom_ingested_color : "#3f6088"
+			selected_list["liq_interacts"]["custom_ingested_alpha"] = selected.custom_ingested_alpha
 
 		selected_list["show_liq_fullness"] = selected.show_fullness_messages
 		selected_list["liq_messages"] = list()
@@ -1168,6 +1198,26 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						if(new_transferlocation_secondary == new_belly.name)
 							new_belly.transferlocation_secondary = null
 
+				if(islist(belly_data["autotransfer_whitelist"]))
+					new_belly.autotransfer_whitelist = 0
+					for(var/at_flag in belly_data["autotransfer_whitelist"])
+						new_belly.autotransfer_whitelist += new_belly.autotransfer_flags_list[at_flag]
+
+				if(islist(belly_data["autotransfer_blacklist"]))
+					new_belly.autotransfer_blacklist = 0
+					for(var/at_flag in belly_data["autotransfer_blacklist"])
+						new_belly.autotransfer_blacklist += new_belly.autotransfer_flags_list[at_flag]
+
+				if(islist(belly_data["autotransfer_secondary_whitelist"]))
+					new_belly.autotransfer_secondary_whitelist = 0
+					for(var/at_flag in belly_data["autotransfer_secondary_whitelist"])
+						new_belly.autotransfer_secondary_whitelist += new_belly.autotransfer_flags_list[at_flag]
+
+				if(islist(belly_data["autotransfer_secondary_blacklist"]))
+					new_belly.autotransfer_secondary_blacklist = 0
+					for(var/at_flag in belly_data["autotransfer_secondary_blacklist"])
+						new_belly.autotransfer_secondary_blacklist += new_belly.autotransfer_flags_list[at_flag]
+
 				if(isnum(belly_data["absorbchance"]))
 					var/new_absorbchance = belly_data["absorbchance"]
 					new_belly.absorbchance = sanitize_integer(new_absorbchance, 0, 100, initial(new_belly.absorbchance))
@@ -1226,20 +1276,6 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				if(isnum(belly_data["autotransfer_max_amount"]))
 					var/new_autotransfer_max_amount = belly_data["autotransfer_max_amount"]
 					new_belly.autotransfer_max_amount = sanitize_integer(new_autotransfer_max_amount, 0, 100, initial(new_belly.autotransfer_max_amount))
-
-				if(isnum(belly_data["autotransfer_absorbed"]))
-					var/new_autotransfer_absorbed = belly_data["autotransfer_absorbed"]
-					if(new_autotransfer_absorbed == 0)
-						new_belly.autotransfer_absorbed = FALSE
-					if(new_autotransfer_absorbed == 1)
-						new_belly.autotransfer_absorbed = TRUE
-
-				if(isnum(belly_data["autotransfer_absorbed_only"]))
-					var/new_autotransfer_absorbed_only = belly_data["autotransfer_absorbed_only"]
-					if(new_autotransfer_absorbed_only == 0)
-						new_belly.autotransfer_absorbed_only = FALSE
-					if(new_autotransfer_absorbed_only == 1)
-						new_belly.autotransfer_absorbed_only = TRUE
 
 				// Liquid Options
 				if(isnum(belly_data["show_liquids"]))
@@ -2523,6 +2559,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				releasetest = classic_release_sounds[host.vore_selected.release_sound]
 
 			if(releasetest)
+				releasetest = sound(releasetest) //CHOMPAdd
+				releasetest.volume = host.vore_selected.sound_volume //CHOMPAdd
+				releasetest.frequency = host.vore_selected.noise_freq //CHOMPAdd
 				SEND_SOUND(user, releasetest)
 			. = TRUE
 		if("b_sound")
@@ -2544,6 +2583,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			else
 				voretest = classic_vore_sounds[host.vore_selected.vore_sound]
 			if(voretest)
+				voretest = sound(voretest) //CHOMPAdd
+				voretest.volume = host.vore_selected.sound_volume //CHOMPAdd
+				voretest.frequency = host.vore_selected.noise_freq //CHOMPAdd
 				SEND_SOUND(user, voretest)
 			. = TRUE
 		if("b_sound_volume") //CHOMPAdd Start
@@ -2756,6 +2798,34 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			else
 				host.vore_selected.autotransferlocation_secondary = choice.name
 			. = TRUE
+		if("b_autotransfer_whitelist")
+			var/list/menu_list = host.vore_selected.autotransfer_flags_list.Copy()
+			var/toggle_addon = tgui_input_list(usr, "Toggle Whitelist", "Whitelist Choice", menu_list)
+			if(!toggle_addon)
+				return FALSE
+			host.vore_selected.autotransfer_whitelist ^= host.vore_selected.autotransfer_flags_list[toggle_addon]
+			. = TRUE
+		if("b_autotransfer_blacklist")
+			var/list/menu_list = host.vore_selected.autotransfer_flags_list.Copy()
+			var/toggle_addon = tgui_input_list(usr, "Toggle Blacklist", "Blacklist Choice", menu_list)
+			if(!toggle_addon)
+				return FALSE
+			host.vore_selected.autotransfer_blacklist ^= host.vore_selected.autotransfer_flags_list[toggle_addon]
+			. = TRUE
+		if("b_autotransfer_secondary_whitelist")
+			var/list/menu_list = host.vore_selected.autotransfer_flags_list.Copy()
+			var/toggle_addon = tgui_input_list(usr, "Toggle Whitelist", "Whitelist Choice", menu_list)
+			if(!toggle_addon)
+				return FALSE
+			host.vore_selected.autotransfer_secondary_whitelist ^= host.vore_selected.autotransfer_flags_list[toggle_addon]
+			. = TRUE
+		if("b_autotransfer_secondary_blacklist")
+			var/list/menu_list = host.vore_selected.autotransfer_flags_list.Copy()
+			var/toggle_addon = tgui_input_list(usr, "Toggle Blacklist", "Blacklist Choice", menu_list)
+			if(!toggle_addon)
+				return FALSE
+			host.vore_selected.autotransfer_secondary_blacklist ^= host.vore_selected.autotransfer_flags_list[toggle_addon]
+			. = TRUE
 		if("b_autotransfer_min_amount")
 			var/autotransfer_min_amount_input = input(user, "Set the minimum amount of items your belly can belly auto-transfer at once. Set to 0 for no limit.", "Auto-Transfer Min Amount") as num|null
 			if(!isnull(autotransfer_min_amount_input))
@@ -2768,12 +2838,6 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			. = TRUE
 		if("b_autotransfer_enabled")
 			host.vore_selected.autotransfer_enabled = !host.vore_selected.autotransfer_enabled
-			. = TRUE
-		if("b_autotransfer_absorbed")
-			host.vore_selected.autotransfer_absorbed = !host.vore_selected.autotransfer_absorbed
-			. = TRUE
-		if("b_autotransfer_absorbed_only")
-			host.vore_selected.autotransfer_absorbed_only = !host.vore_selected.autotransfer_absorbed_only
 			. = TRUE //CHOMPedit End
 		if("b_fullscreen")
 			host.vore_selected.belly_fullscreen = params["val"]
@@ -3152,6 +3216,45 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			var/new_new_item_mush_val = CLAMP(new_item_mush_val, 0, 1000)
 			host.vore_selected.item_mush_val = new_new_item_mush_val
 			host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_metabolism_overlay")
+			if(!host.vore_selected.metabolism_overlay)
+				host.vore_selected.metabolism_overlay = 1
+				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] now has ingested metabolism overlay enabled.</span>")
+			else
+				host.vore_selected.metabolism_overlay = 0
+				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] no longer has ingested metabolism overlay enabled.</span>")
+			host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_metabolism_mush_ratio")
+			var/new_metabolism_mush_ratio = input(user, "How much should ingested reagents affect fullness overlay compared to nutrition? Nutrition units per reagent unit. Default 15.", "Set Metabolism Mush Ratio.", host.vore_selected.metabolism_mush_ratio) as num|null
+			if(new_metabolism_mush_ratio == null)
+				return FALSE
+			var/new_new_metabolism_mush_ratio = CLAMP(new_metabolism_mush_ratio, 0, 500)
+			host.vore_selected.metabolism_mush_ratio = new_new_metabolism_mush_ratio
+			host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_max_ingested")
+			var/new_max_ingested = input(user, "Choose the amount of reagents within ingested metabolism required for full mush overlay when not using mush overlay option. Ranges from 0 to 6000. Default 500.", "Set Metabolism Overlay Scaling.", host.vore_selected.max_ingested) as num|null
+			if(new_max_ingested == null)
+				return FALSE
+			var/new_new_max_ingested = CLAMP(new_max_ingested, 0, 6000)
+			host.vore_selected.max_ingested = new_new_max_ingested
+			host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_custom_ingested_color")
+			var/newcolor = input(usr, "Choose custom color for ingested metabolism overlay. Cancel for reagent-based dynamic blend.", "", host.vore_selected.custom_ingested_color) as color|null
+			if(newcolor)
+				host.vore_selected.custom_ingested_color = newcolor
+			else
+				host.vore_selected.custom_ingested_color = null
+			host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_custom_ingested_alpha")
+			var/newalpha = tgui_input_number(usr, "Set alpha transparency between 0-255 when not using mush overlay option.", "Custom Ingested Alpha",255,255,0,0,1)
+			if(newalpha != null)
+				host.vore_selected.custom_ingested_alpha = newalpha
+				host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_liq_purge")
 			var/alert = alert("Are you sure you want to delete the liquids in your [lowertext(host.vore_selected.name)]?","Confirmation","Delete","Cancel")

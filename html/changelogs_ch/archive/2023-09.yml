@@ -119,3 +119,36 @@
   - qol: Removed phoron from the base of size chems, replacing clonedex with cryptobiolin
   Verkister:
   - bugfix: Fixed other missing exportpanel vars.
+2023-09-26:
+  FluffMedic:
+  - qol: curea now uses spacechillin instead of dylvo, and iron instead of carbon
+  - bugfix: fire bird chem can properly be made
+  - bugfix: chemical imbalances in several meats
+  Fracshun:
+  - rscadd: Added new filtering options for auto-transfer
+  TheGreatKitsune:
+  - bugfix: Posibrains and similar not being able to use ' or such
+  - qol: A few more traits opened up to non-custom species
+  Theonewhowaits:
+  - balance: rebalances combat mobs health alongside weapon damage
+  Verkister:
+  - bugfix: Fixed Unathi Big Horns ear style.
+  - qol: Food item digestion now uses gradual item digestion rather than instant qdel.
+      Also reagent content no longer nerfed to half.
+  - bugfix: Fixed vorepanel sound previews not using custom noise freq.
+  - bugfix: Fixed runtime spam caused by putting cake hat on Torta.
+  - rscadd: SWOOPIE XL suck mechanics overhaul with integrated hands-free Vac-Pack
+      implementation.
+  - rscadd: Added mush overlay settings for ingested metabolism stuff.
+  - qol: Reworked how vore fx preview stuff works.
+  - bugfix: Adjusted wonky resting pose vertical offset.
+  tacoguy7765093:
+  - rscadd: Players can now create an area innately for off-station construction.
+2023-09-27:
+  TheCaramelion:
+  - bugfix: mail per minute 2 to 0.75
+  - bugfix: mailbag capacity changed to 21
+  - bugfix: envelopes now have department colours
+  Verkister:
+  - bugfix: Fixed vorgan nutrition percent not affecting food/drink reagent gains.
+  - bugfix: Fixed vorgan overlays not showing up for prey.

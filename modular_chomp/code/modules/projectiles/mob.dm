@@ -6,7 +6,7 @@
 	icon_state = "impact_beam_heavy"
 	fire_sound = 'sound/weapons/lasercannonfire.ogg'
 	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE
-	damage = 60
+	damage = 25
 	armor_penetration = 30
 	light_range = 3
 	light_power = 1
@@ -17,7 +17,7 @@
 	icon_state = "impact_laser"
 	fire_sound = 'sound/weapons/Laser.ogg'
 	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE
-	damage = 40
+	damage = 20
 	armor_penetration = 10
 	damage_type = BURN
 	check_armour = "laser"
@@ -27,7 +27,7 @@
 	icon_state = "impact_laser"
 	fire_sound = 'sound/weapons/Laser.ogg'
 	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE
-	damage = 30
+	damage = 10
 	armor_penetration = 0
 	damage_type = BURN
 	check_armour = "laser"
@@ -74,7 +74,7 @@
 	light_color = "#FF0099"
 
 	hud_state = "plasma_rifle"
-	damage = 48
+	damage = 25
 	armor_penetration = 10
 
 

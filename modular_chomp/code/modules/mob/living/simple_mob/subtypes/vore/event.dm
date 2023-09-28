@@ -277,3 +277,15 @@
 	vore_capacity = 1
 	vore_pounce_chance = 0
 	vore_default_mode = DM_DIGEST
+
+/mob/living/simple_mob/vore/aggressive/rat
+	maxHealth = 75
+	health = 75
+
+/mob/living/simple_mob/vore/aggressive/rat/phoron
+	maxHealth = 87
+	health = 87
+
+/mob/living/simple_mob/vore/aggressive/rat/event
+	maxHealth = 25
+	health = 25

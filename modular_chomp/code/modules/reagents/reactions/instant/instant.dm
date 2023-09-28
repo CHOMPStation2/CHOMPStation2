@@ -108,7 +108,7 @@
 	name = "curea"
 	id = "curea"
 	result = "curea"
-	required_reagents = list("anti_toxin" = 1, "adranol" = 1, "inaprovaline" = 1, "carbon" = 1)
+	required_reagents = list("spaceacillin" = 1, "adranol" = 1, "inaprovaline" = 1, "iron" = 1)
 	result_amount = 4
 
 //tier 3

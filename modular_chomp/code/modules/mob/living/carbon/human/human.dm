@@ -59,3 +59,18 @@
 		resting_dir = FALSE
 	resting_dir = !resting_dir
 	update_transform(TRUE)
+
+
+//Formally used from a paper, gave this to everyone.
+/mob/living/carbon/human/verb/create_area()
+    set name = "Create Area"
+    set desc = "Create an area in a enclosed space, making it able to be powered by an APC."
+    set category = "IC"
+
+    if(stat || world.time < last_special)
+        to_chat(usr, "<span class='warning'>You recently tried to create an area. Wait a while before using it again.</span>")
+        return
+
+    last_special = world.time + 2 SECONDS // Antispam.
+    create_new_area(usr)
+    return

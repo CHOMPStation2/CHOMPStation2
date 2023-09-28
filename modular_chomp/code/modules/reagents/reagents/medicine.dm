@@ -370,7 +370,7 @@
 
 /datum/reagent/phoenixbreath
 	name = "Phoenix Breath"
-	id = "phoneixbreath"
+	id = "phoenixbreath"
 	description = "An improvement on the original soul dew chemical"
 	taste_description = "ash"
 	reagent_state = LIQUID
