@@ -1,15 +1,5 @@
 ///////////////////// Mob Living /////////////////////
 /mob/living
-<<<<<<< HEAD
-	var/digestable = TRUE				// Can the mob be digested inside a belly?
-	var/devourable = TRUE				// Can the mob be devoured at all?
-	var/feeding = TRUE					// Can the mob be vorishly force fed or fed to others?
-	var/absorbable = TRUE				// Are you allowed to absorb this person?
-	var/resizable = TRUE				// Can other people resize you? (Usually ignored for self-resizes)
-	var/digest_leave_remains = FALSE	// Will this mob leave bones/skull/etc after the melty demise?
-	var/allowmobvore = TRUE				// Will simplemobs attempt to eat the mob?
-=======
->>>>>>> 6e5c9c561d... Merge pull request #15406 from Heroman3003/test-vore-setup
 	var/showvoreprefs = TRUE			// Determines if the mechanical vore preferences button will be displayed on the mob or not.
 	var/list/temp_language_sources = list()	//VOREStation Addition - Absorbs add languages to the pred
 	var/list/temp_languages = list()		//VOREStation Addition - Absorbs add languages to the pred
@@ -27,41 +17,16 @@
 	var/absorbing_prey = 0 				// Determines if the person is using the succubus drain or not. See station_special_abilities_vr.
 	var/drain_finalized = 0				// Determines if the succubus drain will be KO'd/absorbed. Can be toggled on at any time.
 	var/fuzzy = 0						// Preference toggle for sharp/fuzzy icon.
-<<<<<<< HEAD
 //	var/voice_freq = 0					// Preference for character voice frequency		CHOMPEdit - Moved to modular_chomp/code/modules/mob/mob.dm
 //	var/list/voice_sounds_list = list()	// The sound list containing our voice sounds!	CHOMPEdit - Moved to modular_chomp/code/modules/mob/mob.dm
-	var/permit_healbelly = TRUE
-	var/stumble_vore = TRUE				//Enabled by default since you have to enable drop pred/prey to do this anyway
-	var/slip_vore = TRUE				//Enabled by default since you have to enable drop pred/prey to do this anyway
-	var/drop_vore = TRUE				//Enabled by default since you have to enable drop pred/prey to do this anyway
-	var/throw_vore = TRUE				//Enabled by default since you have to enable drop pred/prey to do this anyway
-	var/food_vore = TRUE				//Enabled by default since you have to enable drop pred/prey to do this anyway
-	var/can_be_drop_prey = FALSE
-	var/can_be_drop_pred = FALSE
-	var/allow_spontaneous_tf = FALSE	// Obviously.
-=======
-	var/voice_freq = 0					// Preference for character voice frequency
-	var/list/voice_sounds_list = list()	// The sound list containing our voice sounds!
->>>>>>> 6e5c9c561d... Merge pull request #15406 from Heroman3003/test-vore-setup
 	var/next_preyloop					// For Fancy sound internal loop
 	var/stuffing_feeder = FALSE			// Can feed foods to others whole, like trash eater can eat them on their own.
 	var/adminbus_trash = FALSE			// For abusing trash eater for event shenanigans.
 	var/adminbus_eat_minerals = FALSE	// This creature subsists on a diet of pure adminium.
 	var/vis_height = 32					// Sprite height used for resize features.
-<<<<<<< HEAD
-	var/show_vore_fx = TRUE				// Show belly fullscreens
-	var/latejoin_vore = FALSE			//CHOMPedit: If enabled, latejoiners can spawn into this, assuming they have a client
-	var/latejoin_prey = FALSE			//CHOMPedit: If enabled, latejoiners can spawn ontop of and instantly eat the victim
-	var/noisy_full = FALSE				//CHOMPedit: Enables belching when a mob has overeaten
-	var/selective_preference = DM_DEFAULT	// Preference for selective bellymode
 	var/appendage_color = "#e03997" //Default pink. Used for the 'long_vore' trait.
 	var/appendage_alt_setting = FALSE	// Dictates if 'long_vore' user pulls prey to them or not. 1 = user thrown towards target.
-	var/eating_privacy_global = FALSE //Makes eating attempt/success messages only reach for subtle range if true, overwritten by belly-specific var
 	var/digestion_in_progress = FALSE	// CHOMPEdit: Gradual corpse gurgles
-=======
-	var/appendage_color = "#e03997" //Default pink. Used for the 'long_vore' trait.
-	var/appendage_alt_setting = FALSE	// Dictates if 'long_vore' user pulls prey to them or not. 1 = user thrown towards target.
->>>>>>> 6e5c9c561d... Merge pull request #15406 from Heroman3003/test-vore-setup
 	var/regen_sounds = list(
 		'sound/effects/mob_effects/xenochimera/regen_1.ogg',
 		'sound/effects/mob_effects/xenochimera/regen_2.ogg',
@@ -299,11 +264,7 @@
 //
 //	Proc for applying vore preferences, given bellies
 //
-<<<<<<< HEAD
-/mob/living/proc/copy_from_prefs_vr(var/bellies = TRUE, var/full_vorgans = FALSE) //CHOMPedit: full_vorgans var to bypass 1-belly load optimization.
-=======
-/mob/proc/copy_from_prefs_vr(var/bellies = TRUE)
->>>>>>> 6e5c9c561d... Merge pull request #15406 from Heroman3003/test-vore-setup
+/mob/proc/copy_from_prefs_vr(var/bellies = TRUE, var/full_vorgans = FALSE) //CHOMPedit: full_vorgans var to bypass 1-belly load optimization.
 	if(!client || !client.prefs_vr)
 		to_chat(src,"<span class='warning'>You attempted to apply your vore prefs but somehow you're in this character without a client.prefs_vr variable. Tell a dev.</span>")
 		return FALSE
@@ -351,15 +312,10 @@
 	vore_sprite_multiply = P.vore_sprite_multiply
 
 	if(bellies)
-<<<<<<< HEAD
-		release_vore_contents(silent = TRUE)
-		QDEL_LIST(vore_organs)
-=======
 		if(isliving(src))
 			var/mob/living/L = src
 			L.release_vore_contents(silent = TRUE)
-		vore_organs.Cut()
->>>>>>> 6e5c9c561d... Merge pull request #15406 from Heroman3003/test-vore-setup
+		QDEL_LIST(vore_organs) // CHOMPedit
 		for(var/entry in P.belly_prefs)
 			list_to_object(entry,src)
 
