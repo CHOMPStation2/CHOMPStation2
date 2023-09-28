@@ -10,7 +10,6 @@
 	var/liquidbelly_visuals = TRUE			//Toggle for liquidbelly level visuals.
 
 	// CHOMP vore icons refactor (Now on living)
-	var/list/vore_fullness_ex = list("stomach" = 0) // Expanded list of fullness
 	var/vore_icons = 0					// Bitfield for which fields we have vore icons for.
 	var/vore_eyes = FALSE				// For mobs with fullness specific eye overlays.
 
