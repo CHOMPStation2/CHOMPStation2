@@ -67,18 +67,19 @@
 
 /datum/job/bartender
 	mail_goodies = list(
-		/obj/item/weapon/reagent_containers/food/drinks/metaglass/metapint = 700,
-		/obj/item/stack/material/uranium = 200,
+		/obj/item/weapon/reagent_containers/food/drinks/metaglass/metapint = 350,
+		"gelatin" = 300,
+		/obj/item/stack/material/uranium = 250,
 		/obj/item/clothing/accessory/bowtie/black = 100
 	)
 
 /datum/job/chef
 	mail_goodies = list(
 		"cakebatter" = 200,
+		"cinnamonpowder" = 200,
 		/obj/item/weapon/reagent_containers/food/condiment/soysauce = 200,
 		/obj/item/weapon/reagent_containers/food/drinks/soymilk = 200,
 		/obj/item/weapon/reagent_containers/food/snacks/cuttlefish = 200,
-		/obj/item/weapon/reagent_containers/glass/beaker/large = 200,
 	)
 
 /datum/job/hydro
