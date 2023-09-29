@@ -38,7 +38,7 @@ SUBSYSTEM_DEF(mail)
 			mail_to = pick(mail_recipients)
 			new_mail.initialize_for_recipient(mail_to)
 			mail_recipients -= mail_to
-		else
+		else if (prob(65))
 			new_mail.junk_mail()
 	mail_waiting = 0
 	mailcrate.update_icon()
