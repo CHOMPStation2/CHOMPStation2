@@ -67,10 +67,12 @@
 
 /datum/job/bartender
 	mail_goodies = list(
-		/obj/item/weapon/reagent_containers/food/drinks/metaglass/metapint = 350,
+		/obj/item/weapon/reagent_containers/food/drinks/metaglass/metapint = 320,
 		"gelatin" = 300,
 		/obj/item/stack/material/uranium = 250,
-		/obj/item/clothing/accessory/bowtie/black = 100
+		/obj/item/clothing/accessory/bowtie/black = 100,
+		/obj/item/weapon/reagent_containers/chem_disp_cartridge/nothing = 15,
+		/obj/item/weapon/reagent_containers/chem_disp_cartridge/gelatin = 15,
 	)
 
 /datum/job/chef
@@ -332,17 +334,17 @@
 		/obj/item/weapon/cell/super = 100,
 		/obj/item/weapon/cell/hyper = 100,
 		/obj/item/stack/material/plasteel{amount = 10} = 70,
-		/obj/item/weapon/stock_parts/matter_bin/adv{amount = 3} = 45,
-		/obj/item/weapon/stock_parts/manipulator/nano{amount = 3} = 45,
-		/obj/item/weapon/stock_parts/capacitor/adv{amount = 3} = 45,
-		/obj/item/weapon/stock_parts/scanning_module/adv{amount = 3} = 45,
-		/obj/item/weapon/stock_parts/micro_laser/high{amount = 3} = 45,
+		/obj/item/weapon/stock_parts/matter_bin/adv = 45,
+		/obj/item/weapon/stock_parts/manipulator/nano = 45,
+		/obj/item/weapon/stock_parts/capacitor/adv = 45,
+		/obj/item/weapon/stock_parts/scanning_module/adv = 45,
+		/obj/item/weapon/stock_parts/micro_laser/high = 45,
 		/obj/item/stack/nanopaste = 30,
-		/obj/item/weapon/stock_parts/matter_bin/super{amount = 3} = 5,
-		/obj/item/weapon/stock_parts/manipulator/pico{amount = 3} = 5,
-		/obj/item/weapon/stock_parts/capacitor/super{amount = 3} = 5,
-		/obj/item/weapon/stock_parts/scanning_module/phasic{amount = 3} = 5,
-		/obj/item/weapon/stock_parts/micro_laser/ultra{amount = 3} = 5
+		/obj/item/weapon/stock_parts/matter_bin/super = 5,
+		/obj/item/weapon/stock_parts/manipulator/pico = 5,
+		/obj/item/weapon/stock_parts/capacitor/super = 5,
+		/obj/item/weapon/stock_parts/scanning_module/phasic = 5,
+		/obj/item/weapon/stock_parts/micro_laser/ultra = 5
 	)
 
 /datum/job/xenobiologist
