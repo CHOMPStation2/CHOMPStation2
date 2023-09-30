@@ -322,9 +322,12 @@
 		/obj/item/weapon/cell/super = 155,
 		/obj/item/weapon/cell/hyper = 125,
 		/obj/item/weapon/pen/fountain6 = 75,
-		/obj/effect/spawner/parts/t2 = 50,
-		/obj/effect/spawner/parts/t3 = 25,
 		/obj/item/toy/plushie/borgplushie/drake/sci = 20,
+		/obj/item/weapon/stock_parts/matter_bin/hyper = 15,
+		/obj/item/weapon/stock_parts/manipulator/hyper = 15,
+		/obj/item/weapon/stock_parts/capacitor/hyper = 15,
+		/obj/item/weapon/stock_parts/scanning_module/hyper = 15,
+		/obj/item/weapon/stock_parts/micro_laser/hyper = 15
 	)
 
 /datum/job/scientist
