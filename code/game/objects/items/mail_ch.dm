@@ -134,7 +134,7 @@
 
 	var/datum/job/this_job = SSjob.name_occupations[new_recipient.job]
 	if(this_job)
-		color = SSjob.get_primary_department_of_job(this_job).color
+		color = this_job.selection_color
 		var/list/job_goodies = this_job.get_mail_goodies()
 		if(LAZYLEN(job_goodies))
 			if(this_job.exclusive_mail_goodies)
