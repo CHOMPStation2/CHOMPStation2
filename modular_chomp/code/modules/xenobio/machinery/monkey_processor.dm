@@ -4,7 +4,7 @@
 /obj/machinery/processor/monkey
 	name = "monkey processor"
 	desc = "An industrial grinder used to automate the process of monkey recycling."
-	description_info = "Clickdrag dead monkeys to it to insert them.  It will make a new monkey cube for every monkey it processes."
+	description_info = "Clickdrag dead monkeys to it to insert them. It will make a new monkey cube for every monkey it processes."
 
 /obj/item/weapon/circuitboard/processor/monkey
 	name = T_BOARD("monkey processor")
