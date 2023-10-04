@@ -1,3 +1,8 @@
 2023-10-04:
   Verkister:
   - bugfix: Fixed disabled autotransfer un-disabling itself when aghosted/SSD
+  - rscadd: Added bellysprites for sergal and skunk taurs.
+  - rscadd: Added a verb for synths to plug their leaking stomach.
+  - bugfix: Fixed vorgan overlay preview removing the owner's hud if hud hiding setting
+      is enabled.
+  - bugfix: Fixed prey vorgan overlay updates requiring 5u of liquid.
