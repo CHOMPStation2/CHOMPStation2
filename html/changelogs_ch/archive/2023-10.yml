@@ -6,5 +6,8 @@
   - bugfix: Fixed vorgan overlay preview removing the owner's hud if hud hiding setting
       is enabled.
   - bugfix: Fixed prey vorgan overlay updates requiring 5u of liquid.
+  purplefoxy27:
+  - spellcheck: Fixed a few typos in inshoe steppies, proteans, outsider capsules
+      and a few other miscs.
   tacoguy7765093:
   - maptweak: Botany fridges are now semi-persistent, have fun farming!
