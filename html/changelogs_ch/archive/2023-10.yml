@@ -6,3 +6,5 @@
   - bugfix: Fixed vorgan overlay preview removing the owner's hud if hud hiding setting
       is enabled.
   - bugfix: Fixed prey vorgan overlay updates requiring 5u of liquid.
+  tacoguy7765093:
+  - maptweak: Botany fridges are now semi-persistent, have fun farming!
