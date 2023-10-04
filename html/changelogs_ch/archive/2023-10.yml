@@ -6,6 +6,8 @@
   - bugfix: Fixed vorgan overlay preview removing the owner's hud if hud hiding setting
       is enabled.
   - bugfix: Fixed prey vorgan overlay updates requiring 5u of liquid.
+  - balance: Excess borg nutrition now causes slowdown.
+  - bugfix: Fixed logged out ghosts getting timeout deleted while still on manifest.
   purplefoxy27:
   - spellcheck: Fixed a few typos in inshoe steppies, proteans, outsider capsules
       and a few other miscs.
