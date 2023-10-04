@@ -126,43 +126,43 @@
 	shelter_id = "SurvivalBarracks"
 	mappath = "modular_chomp/maps/submaps/shelters/SurvivalBarracks-11x11.dmm"
 	name = "Survival barracks."
-	description = "NT pantented living quarters survival pod, all the needs to host 4 crew-mates."
+	description = "NT patented living quarters survival pod, all the needs to host 4 crew-mates."
 
 /datum/map_template/shelter/superpose/SurvivalCargo
 	shelter_id = "SurvivalCargo"
 	mappath = "modular_chomp/maps/submaps/shelters/SurvivalCargo-11x11.dmm"
 	name = "Survival cargo dep."
-	description = "NT pantented cargo department survival pod, loaded with mining, crates and cargo gear."
+	description = "NT patented cargo department survival pod, loaded with mining, crates and cargo gear."
 
 /datum/map_template/shelter/superpose/SurvivalDIY_11x11
 	shelter_id = "SurvivalDIY_11x11"
 	mappath = "modular_chomp/maps/submaps/shelters/SurvivalDIY-11x11.dmm"
 	name = "Survival DIY large."
-	description = "NT pantented Do-it-yourself survival pod, a large inflatable building filled with building materials. It even has a RCD and a cargo vehicle."
+	description = "NT patented Do-it-yourself survival pod, a large inflatable building filled with building materials. It even has a RCD and a cargo vehicle."
 
 /datum/map_template/shelter/superpose/SurvivalDIY_7x7
 	shelter_id = "SurvivalDIY_7x7"
 	mappath = "modular_chomp/maps/submaps/shelters/SurvivalDIY-7x7.dmm"
 	name = "Survival DIY medium."
-	description = "NT pantented Do-it-yourself survival pod, a medium inflatable building filled with building materials. It even has a RCD and a quad-bike."
+	description = "NT patented Do-it-yourself survival pod, a medium inflatable building filled with building materials. It even has a RCD and a quad-bike."
 
 /datum/map_template/shelter/superpose/SurvivalDIY_9x9
 	shelter_id = "SurvivalDIY_9x9"
 	mappath = "modular_chomp/maps/submaps/shelters/SurvivalDIY-9x9.dmm"
 	name = "Survival DIY small."
-	description = "NT pantented Do-it-yourself survival pod, a small inflatable building filled with building materials. It even has a RCD."
+	description = "NT patented Do-it-yourself survival pod, a small inflatable building filled with building materials. It even has a RCD."
 
 /datum/map_template/shelter/superpose/SurvivalDinner
 	shelter_id = "SurvivalDinner"
 	mappath = "modular_chomp/maps/submaps/shelters/SurvivalDinner-11x11.dmm"
 	name = "Survival mess hall."
-	description = "NT pantented mess hall and kitchen survival pod, it has all a kitchen requires to cook food. Bathroom included!"
+	description = "NT patented mess hall and kitchen survival pod, it has all a kitchen requires to cook food. Bathroom included!"
 
 /datum/map_template/shelter/superpose/SurvivalEngineering
 	shelter_id = "SurvivalEngineering"
 	mappath = "modular_chomp/maps/submaps/shelters/SurvivalEngineering-9x9.dmm"
 	name = "Survival engineering dep."
-	description = "NT pantented engineering survival pod, loaded with tools, machines and materials to patch and fix any facility."
+	description = "NT patented engineering survival pod, loaded with tools, machines and materials to patch and fix any facility."
 
 /datum/map_template/shelter/superpose/SurvivalHome
 	shelter_id = "SurvivalHome"
@@ -174,19 +174,19 @@
 	shelter_id = "SurvivalHydro"
 	mappath = "modular_chomp/maps/submaps/shelters/SurvivalHydro-9x9.dmm"
 	name = "Survival hydroponics bay. "
-	description = "NT pantented hydroponics survival pod, loaded with everything you need to start growing food."
+	description = "NT patented hydroponics survival pod, loaded with everything you need to start growing food."
 
 /datum/map_template/shelter/superpose/SurvivalJanitor
 	shelter_id = "SurvivalJanitor"
 	mappath = "modular_chomp/maps/submaps/shelters/SurvivalJanitor-7x7.dmm"
 	name = "Survival janitor pod."
-	description = "NT pantented janitor survival pod, loaded with enough cleaning supplies to clean any mess."
+	description = "NT patented janitor survival pod, loaded with enough cleaning supplies to clean any mess."
 
 /datum/map_template/shelter/superpose/SurvivalLeisure
 	shelter_id = "SurvivalLeisure"
 	mappath = "modular_chomp/maps/submaps/shelters/SurvivalLeisure-9x9.dmm"
 	name = "Survival leisure pod."
-	description = "NT pantented leisure survival pod, loaded with various recreational goods to stave off boredom."
+	description = "NT patented leisure survival pod, loaded with various recreational goods to stave off boredom."
 
 /datum/map_template/shelter/superpose/SurvivalLuxuryBar
 	shelter_id = "SurvivalLuxuryBar"
@@ -204,31 +204,31 @@
 	shelter_id = "SurvivalMedical"
 	mappath = "modular_chomp/maps/submaps/shelters/SurvivalMedical-9x9.dmm"
 	name = "Survival medical dep."
-	description = "NT  pantented medical survival pod, loaded with medical equipment, scanner, sleeper and a surgery table."
+	description = "NT patented medical survival pod, loaded with medical equipment, scanner, sleeper and a surgery table."
 
 /datum/map_template/shelter/superpose/SurvivalPool
 	shelter_id = "SurvivalPool"
 	mappath = "modular_chomp/maps/submaps/shelters/SurvivalPool-11x11.dmm"
 	name = "Survival pool pod."
-	description = "NT pantented leisure pool survival pod, a leisure structure for crew to workout and relax."
+	description = "NT patented leisure pool survival pod, a leisure structure for crew to workout and relax."
 
 /datum/map_template/shelter/superpose/SurvivalQuarters
 	shelter_id = "SurvivalQuarters"
 	mappath = "modular_chomp/maps/submaps/shelters/SurvivalQuarters-9x9.dmm"
 	name = "Survival living quarters."
-	description = "NT pantented survival quarters pod, loaded with survival equipment and enough beds for 4 crewmates."
+	description = "NT patented survival quarters pod, loaded with survival equipment and enough beds for 4 crewmates."
 
 /datum/map_template/shelter/superpose/SurvivalScience
 	shelter_id = "SurvivalScience"
 	mappath = "modular_chomp/maps/submaps/shelters/SurvivalScience-9x9.dmm"
 	name = "Survival science dep."
-	description = "NT pantented science survival pod, loaded with research terminals, mech fabricator, autolathe and everything to do field research."
+	description = "NT patented science survival pod, loaded with research terminals, mech fabricator, autolathe and everything to do field research."
 
 /datum/map_template/shelter/superpose/SurvivalSecurity
 	shelter_id = "SurvivalSecurity"
 	mappath = "modular_chomp/maps/submaps/shelters/SurvivalSecurity-9x9.dmm"
 	name = "Survival security dep."
-	description = "NT pantented security survival pod, a high security brig with and some security equipment."
+	description = "NT patented security survival pod, a high security brig with and some security equipment."
 
 /datum/map_template/shelter/superpose/TinyCombatShip
 	shelter_id = "TinyCombatShip"
@@ -252,7 +252,7 @@
 	shelter_id = "AnimalHospital"
 	mappath = "modular_chomp/maps/submaps/shelters/AnimalHospital-20x28.dmm"
 	name = "Low-Tech Hospital."
-	description = "An animal hospital, doesnt not contain high end medical supplies, better then nothing."
+	description = "An animal hospital, does not contain high end medical supplies, better then nothing."
 
 /datum/map_template/shelter/superpose/RestaurationBar
 	shelter_id = "RestaurationBar"
@@ -301,13 +301,13 @@
 	shelter_id = "SurvivalScienceV2"
 	mappath = "modular_chomp/maps/submaps/shelters/SurvivalScience2-9x9.dmm"
 	name = "Survival Science V2"
-	description = "NT pantented science survival pod, loaded with research terminals, mech fabricator, autolathe and everything to do field research."
+	description = "NT patented science survival pod, loaded with research terminals, mech fabricator, autolathe and everything to do field research."
 
 /datum/map_template/shelter/superpose/SurvivalSecurityV2
 	shelter_id = "SurvivalSecurityV2"
 	mappath = "modular_chomp/maps/submaps/shelters/SurvivalSecurity2-9x9.dmm"
 	name = "Survival Security V2"
-	description = "NT pantented security survival pod, a high security brig with and some security equipment."
+	description = "NT patented security survival pod, a high security brig with and some security equipment."
 
 /datum/map_template/shelter/superpose/HillOutpost
 	shelter_id = "HillOutpost"

@@ -128,8 +128,8 @@
 				message_pred = "You step on [prey], squishing and pinning them within your [name]!"
 				message_prey = "[pred] steps on you, squishing and pinning you within their [name]!"
 			else
-				message_pred = "You firmly push your foot down on [prey], painfully but harmlessly pinning them to the sole of your [name]!"
-				message_prey = "[pred] firmly pushes their foot down on you, painfully but harmlessly pinning you to the sole of their [name]!"
+				message_pred = "You firmly push your foot down on [prey], painfully but harmlessly pinning them to the insole of your [name]!"
+				message_prey = "[pred] firmly pushes their foot down on you, painfully but harmlessly pinning you to the insole of their [name]!"
 				prey.Weaken(5) // For flavour, only noticed prey if tossed out of shoe
 				add_attack_logs(pred, prey, "Pinned inshoe (walk, weaken(5))")
 
@@ -138,8 +138,8 @@
 				message_pred = "You step down onto [prey], squishing and trapping them inbetween your toes!"
 				message_prey = "[pred] steps down on you, squishing and trapping you inbetween their toes!"
 			else
-				message_pred = "You pin [prey] down against the sole of your [name] with your foot, your toes curling up around their body, tightly trapping them inbetween them!"
-				message_prey = "[pred] pins you down against the sole of their [name] with their foot, their toes curling up around your body, tighly trapping you inbetween them!"
+				message_pred = "You pin [prey] down against the insole of your [name] with your foot, your toes curling up around their body, tightly trapping them inbetween them!"
+				message_prey = "[pred] pins you down against the insole of their [name] with their foot, their toes curling up around your body, tighly trapping you inbetween them!"
 				prey.Weaken(5) // For flavour, only noticed prey if tossed out of shoe
 				add_attack_logs(pred, prey, "Grabbed inshoe (walk, weaken(5))")
 
@@ -155,12 +155,12 @@
 			if(pred.m_intent == "run")
 				message_pred = "You carelessly step down onto [prey], crushing them within your [name]!"
 				message_prey = "[pred] steps carelessly on your body, crushing you within their [name]!"
-				add_attack_logs(pred, prey, "Crushed underfoot (run, about [damage] damage per limb)")
+				add_attack_logs(pred, prey, "Crushed inshoe (run, about [damage] damage per limb)")
 			else
-				message_pred = "You methodically place your foot down upon [prey]'s body, applying pressure, crushing them against the sole of your [name]!"
-				message_prey = "[pred] methodically places their foot upon your body, applying pressure, crushing you against the sole of their [name]!"
+				message_pred = "You methodically place your foot down upon [prey]'s body, applying pressure, crushing them against the insole of your [name]!"
+				message_prey = "[pred] methodically places their foot upon your body, applying pressure, crushing you against the insole of their [name]!"
 				damage *= 3.5 //Walking damage multiplier
-				add_attack_logs(pred, prey, "Crushed underfoot (walk, about [damage] damage per limb)")
+				add_attack_logs(pred, prey, "Crushed inshoe (walk, about [damage] damage per limb)")
 
 			for(var/obj/item/organ/external/I in prey.organs)
 				// Running Total: 1.50 damage min, 28.875 damage max, depending on size & RNG.

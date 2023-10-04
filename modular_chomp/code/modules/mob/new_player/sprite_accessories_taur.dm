@@ -53,6 +53,11 @@
 	belly_variant_when_loaf = TRUE
 	fullness_icons = 1
 
+/datum/sprite_accessory/tail/taur/skunk
+	vore_tail_sprite_variant = "Skunk"
+	belly_variant_when_loaf = TRUE
+	fullness_icons = 1
+
 /datum/sprite_accessory/tail/taur/ch
 	icon = 'icons/mob/vore/taurs_ch.dmi'//Parent which allows us to not need to set icon every time.
 
@@ -136,11 +141,14 @@
 	icon_state = "sergwheat"
 	icon_sprite_tag = "wolf"
 	vore_tail_sprite_variant = "N"
+	fullness_icons = 3
 
 /datum/sprite_accessory/tail/taur/ch/sergal/fatwheaties
 	name = "Fat Sergal (Taur)"
 	icon_state = "fatsergal"
 	icon_sprite_tag = "wolf"
+	vore_tail_sprite_variant = "N"
+	fullness_icons = 3
 
 /datum/sprite_accessory/tail/taur/ch/sergal/wheaties_2c
 	name = "Sergal (Taur, dual-color)"
@@ -148,12 +156,15 @@
 	extra_overlay = "sergwheat_markings"
 	icon_sprite_tag = "wolf"
 	vore_tail_sprite_variant = "N"
+	fullness_icons = 3
 
 /datum/sprite_accessory/tail/taur/ch/sergal/fatwheaties_2c
 	name = "Fat Sergal (Taur, dual-color)"
 	icon_state = "fatsergal"
 	extra_overlay = "sergwheat_markings"
 	icon_sprite_tag = "wolf"
+	vore_tail_sprite_variant = "N"
+	fullness_icons = 3
 
 /datum/sprite_accessory/tail/taur/ch/longvirus
 	name = "Long Virus (Taur)"
