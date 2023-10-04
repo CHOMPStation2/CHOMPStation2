@@ -10,13 +10,8 @@
 	icon_state = "sheater0"
 	name = "space heater"
 	desc = "Made by Space Amish using traditional space techniques, this heater is guaranteed not to set the station on fire."
-<<<<<<< HEAD
 	
 	light_system = STATIC_LIGHT	//CHOMPEdit, runtime cleanup
-=======
-
-	light_system = MOVABLE_LIGHT
->>>>>>> f8bf22e5e6... Merge pull request #15428 from Heroman3003/big-tool-refactor
 	light_range = 3
 	light_power = 1
 	light_on = FALSE
