@@ -4,8 +4,11 @@
 /turf/space,
 /area/space)
 "ab" = (
-/obj/machinery/pointdefense{
+/obj/machinery/power/pointdefense{
 	id_tag = "vonbraun_pd"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/ship/ert/barracks)
@@ -37,16 +40,13 @@
 	dir = 8
 	},
 /turf/simulated/floor/reinforced/airless,
-<<<<<<< HEAD
-/area/ship/ert/mech_bay)
-"ag" = (
-/obj/machinery/pointdefense{
-=======
 /area/ship/ert/barracks)
 "aj" = (
 /obj/machinery/power/pointdefense{
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	id_tag = "vonbraun_pd"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/ship/ert/engine)
@@ -92,9 +92,6 @@
 /area/ship/ert/mech_bay)
 "ay" = (
 /obj/effect/floor_decal/industrial/outline/grey,
-<<<<<<< HEAD
-/obj/structure/dispenser/oxygen,
-=======
 /obj/machinery/gear_dispenser/suit/ert,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/barracks)
@@ -104,8 +101,6 @@
 /area/ship/ert/barracks)
 "aC" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/wall/shull,
@@ -137,7 +132,6 @@
 	pixel_y = -24
 	},
 /obj/structure/cable/yellow,
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/eng_storage)
 "aE" = (
@@ -192,53 +186,9 @@
 /obj/item/weapon/storage/backpack/ert/security{
 	pixel_y = 3
 	},
-<<<<<<< HEAD
-/obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
-/obj/item/device/holomap_beacon/ert,
-/obj/item/device/holomap_beacon/ert,
-/obj/item/device/mapping_unit/ert,
-/turf/simulated/floor/wood,
-/area/ship/ert/commander)
-"at" = (
-/obj/item/device/mapping_unit/ert,
-/turf/simulated/floor/wood,
-/area/ship/ert/commander)
-"ar" = (
-/obj/structure/table/rack/steel,
-/obj/item/toy/plushie/squid/blue{
-	desc = "A small, cute and loveable squid friend. This one is blue. Despite the name, it seems no more or less deadly than your regular plush squid.";
-	name = "NT 'Deathsquid' Plushie"
-	},
-/obj/effect/floor_decal/industrial/outline/grey,
-/obj/item/device/mapping_unit/deathsquad,
-/obj/item/device/holomap_beacon/deathsquad,
-/obj/item/device/holomap_beacon/deathsquad,
-/obj/item/device/holomap_beacon/deathsquad,
-/obj/item/device/holomap_beacon/deathsquad,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/barracks)
-"as" = (
-/obj/machinery/light_switch{
-	pixel_y = 23
-	},
-/obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
-/obj/item/device/holomap_beacon/ert,
-/obj/item/device/holomap_beacon/ert,
-/obj/item/device/mapping_unit/ert,
-/turf/simulated/floor/wood,
-/area/ship/ert/commander)
-"at" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-=======
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/item/weapon/storage/backpack/ert/security{
 	pixel_y = 6
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	},
 /obj/item/weapon/storage/backpack/ert/security{
 	pixel_y = 9
@@ -254,13 +204,8 @@
 /obj/item/clothing/suit/space/void/responseteam/security,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/barracks)
-<<<<<<< HEAD
-"av" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-=======
 "aJ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/universal,
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/atmos)
 "aQ" = (
@@ -274,7 +219,6 @@
 	id_tag = "vonbraun_pd"
 	},
 /obj/structure/cable/yellow{
-	d2 = 4;
 	dir = 4;
 	icon_state = "0-4"
 	},
@@ -319,8 +263,6 @@
 	pixel_x = -32
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/corner/red{
@@ -350,8 +292,6 @@
 /area/ship/ert/mech_bay)
 "bv" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -396,25 +336,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-<<<<<<< HEAD
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/barracks)
-"aC" = (
-/obj/machinery/pointdefense{
-	id_tag = "vonbraun_pd"
-	},
-/turf/simulated/floor/reinforced/airless,
-=======
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /area/ship/ert/med_surg)
 "bI" = (
 /obj/structure/railing/grey{
@@ -437,8 +365,6 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/table/rack/steel,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/item/weapon/rig/ert/medical,
@@ -483,8 +409,6 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -494,7 +418,6 @@
 	id_tag = "vonbraun_pd"
 	},
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -518,8 +441,6 @@
 /obj/machinery/light/no_nightshift,
 /obj/effect/floor_decal/industrial/outline,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -544,33 +465,15 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-<<<<<<< HEAD
-/obj/effect/floor_decal/corner/white{
-	dir = 10
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/ship/ert/hangar)
-"aQ" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/firstaid/surgery,
-/obj/machinery/light/no_nightshift{
-	dir = 8
-	},
-/obj/item/weapon/surgical/bone_clamp,
-/obj/item/weapon/surgical/scalpel/manager,
-/obj/item/weapon/surgical/circular_saw/manager,
-/obj/item/stack/nanopaste,
-/turf/simulated/floor/tiled/white,
-/area/ship/ert/med_surg)
-"aV" = (
-/obj/machinery/pointdefense{
-=======
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/brig)
 "cJ" = (
 /obj/machinery/power/pointdefense{
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	id_tag = "vonbraun_pd"
+	},
+/obj/structure/cable/yellow{
+	dir = 4;
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/ship/ert/hallways_aft)
@@ -617,27 +520,9 @@
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 6
 	},
-<<<<<<< HEAD
-/obj/structure/window/reinforced,
-/turf/simulated/floor/airless,
-/area/ship/ert/gunnery)
-<<<<<<< HEAD
-"bI" = (
-/obj/machinery/light/no_nightshift{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/outline/grey,
-/obj/structure/table/rack/steel,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/barracks)
-=======
->>>>>>> 7f76eb5c10d... Merge pull request #12174 from Novacat/nova-basicfixes
-"bJ" = (
-=======
 /turf/simulated/wall/rshull,
 /area/ship/ert/dock_port)
 "cY" = (
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8
 	},
@@ -649,54 +534,9 @@
 	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/techfloor,
-<<<<<<< HEAD
-/area/ship/ert/dock_star)
-"bM" = (
-/turf/simulated/wall/rshull,
-/area/ship/ert/mech_bay)
-"bO" = (
-/turf/simulated/floor/reinforced/airless,
-/area/ship/ert/atmos)
-"bR" = (
-/obj/machinery/light/no_nightshift,
-/turf/simulated/floor/reinforced/airless,
-/area/ship/ert/atmos)
-"bU" = (
-/obj/structure/hull_corner/long_horiz{
-	dir = 5
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/ship/ert/hallways_aft)
-"bW" = (
-/obj/structure/hull_corner/long_horiz{
-	dir = 6
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/ship/ert/atmos)
-"ch" = (
-/obj/machinery/door/airlock/glass_external,
-/obj/effect/map_helper/airlock/door/int_door,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/dock_star)
-"ci" = (
-/turf/simulated/floor/reinforced/airless,
-/area/ship/ert/med_surg)
-"ck" = (
-/turf/simulated/floor/tiled/techmaint,
-/area/ship/ert/dock_star)
-"cl" = (
-/obj/effect/shuttle_landmark/premade/ert_ship_near_aft,
-/turf/space,
-/area/space)
-"cs" = (
-/obj/machinery/atmospherics/pipe/tank/air{
-	dir = 4;
-	start_pressure = 740.5
-=======
 /area/ship/ert/dock_port)
 "db" = (
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc/hyper{
@@ -724,10 +564,7 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/dispenser/oxygen,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/barracks)
@@ -791,11 +628,9 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -803,8 +638,6 @@
 /area/ship/ert/brig)
 "dx" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -822,13 +655,9 @@
 /area/ship/ert/barracks)
 "dC" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -837,8 +666,6 @@
 /obj/machinery/shield_capacitor,
 /obj/effect/floor_decal/industrial/outline/blue,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -848,8 +675,6 @@
 	dir = 9
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -859,8 +684,6 @@
 /area/ship/ert/barracks)
 "dW" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/wall/rshull,
@@ -909,32 +732,12 @@
 /area/ship/ert/bridge)
 "ee" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
-<<<<<<< HEAD
-/obj/machinery/pointdefense{
-	id_tag = "vonbraun_pd"
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/ship/ert/gunnery)
-/obj/machinery/power/pointdefense{
-	id_tag = "vonbraun_pd"
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/ship/ert/gunnery)
-/turf/space,
-/area/space)
-"dX" = (
-=======
 /turf/simulated/wall/rshull,
 /area/ship/ert/mech_bay)
 "ef" = (
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/border_only,
@@ -948,80 +751,9 @@
 	req_one_access = list(103)
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
-<<<<<<< HEAD
-/obj/item/clothing/glasses/night{
-	pixel_x = 4;
-	pixel_y = 4
-	},
-/obj/item/clothing/glasses/night{
-	pixel_x = 6;
-	pixel_y = 6
-	},
-/obj/machinery/firealarm/alarms_hidden{
-	pixel_y = 26
-	},
-/obj/effect/floor_decal/industrial/outline/grey,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/barracks)
-"eg" = (
-/obj/structure/table/rack/steel,
-/obj/item/clothing/glasses/night{
-	pixel_x = -4;
-	pixel_y = -4
-	},
-/obj/item/clothing/glasses/night{
-	pixel_x = -2;
-	pixel_y = -2
-	},
-/obj/item/clothing/glasses/night,
-/obj/item/clothing/glasses/night{
-	pixel_x = 2;
-	pixel_y = 2
-	},
-/obj/item/clothing/glasses/night{
-	pixel_x = 4;
-	pixel_y = 4
-	},
-/obj/item/clothing/glasses/night{
-	pixel_x = 6;
-	pixel_y = 6
-	},
-/obj/machinery/atm{
-	pixel_y = 26
-	},
-/obj/effect/floor_decal/industrial/outline/grey,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/barracks)
-"ej" = (
-/obj/machinery/door/blast/regular{
-	id = "Von_Braun_Cannon";
-	name = "Cannon Firing Port"
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/ship/ert/gunnery)
-"es" = (
-/obj/structure/closet/crate{
-	dir = 2
-	},
-/obj/item/ammo_magazine/m9mml/ap,
-/obj/item/ammo_magazine/m9mml/ap,
-/obj/item/ammo_magazine/m9mml/ap,
-/obj/item/ammo_magazine/m9mml/ap,
-/obj/item/ammo_magazine/m9mml/ap,
-/obj/item/ammo_magazine/m9mml/ap,
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/industrial/outline/red,
-=======
 /obj/machinery/door/firedoor/border_only,
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/bridge)
 "et" = (
@@ -1035,14 +767,9 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
-<<<<<<< HEAD
-/area/ship/ert/teleporter)
-=======
 /area/ship/ert/engine)
 "eG" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/multi_tile{
@@ -1056,11 +783,8 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/barracks)
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 "eH" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/wall/rshull,
@@ -1091,8 +815,6 @@
 /obj/effect/landmark/late_antag/ert,
 /obj/structure/table/bench/steel,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -1114,8 +836,6 @@
 /area/ship/ert/barracks)
 "fk" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/wall/rshull,
@@ -1125,7 +845,6 @@
 	id_tag = "vonbraun_pd"
 	},
 /obj/structure/cable/yellow{
-	d2 = 4;
 	dir = 4;
 	icon_state = "0-4"
 	},
@@ -1141,24 +860,6 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
-<<<<<<< HEAD
-/area/ship/ert/dock_star)
-"fx" = (
-/obj/structure/table/steel_reinforced,
-/obj/machinery/light/no_nightshift{
-	dir = 8
-	},
-/obj/machinery/firealarm/alarms_hidden{
-	pixel_y = 26
-	},
-/obj/machinery/light_switch{
-	dir = 4;
-	pixel_x = -23
-	},
-/obj/item/rig_module/sprinter{
-	pixel_x = -4;
-	pixel_y = 4
-=======
 /area/ship/ert/brig)
 "fp" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -1168,8 +869,6 @@
 	name = "Commando"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -1179,8 +878,6 @@
 	dir = 5
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -1188,28 +885,20 @@
 "ft" = (
 /obj/machinery/sleeper{
 	dir = 4
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	},
 /obj/machinery/light/no_nightshift{
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
-<<<<<<< HEAD
-=======
 /turf/simulated/floor/tiled/white,
 /area/ship/ert/med_surg)
 "fu" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/hallways_aft)
 "fx" = (
@@ -1319,9 +1008,6 @@
 /obj/item/stack/nanopaste,
 /obj/item/stack/nanopaste,
 /turf/simulated/floor/tiled/techfloor,
-<<<<<<< HEAD
-/area/ship/ert/eng_storage)
-=======
 /area/ship/ert/med)
 "gi" = (
 /obj/structure/closet/crate/medical,
@@ -1358,11 +1044,8 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/barracks)
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 "gn" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1373,22 +1056,8 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/atmos)
-<<<<<<< HEAD
-"gx" = (
-/obj/structure/table/rack/steel,
-/obj/item/weapon/melee/baton{
-	pixel_x = -6
-	},
-/obj/item/weapon/melee/baton{
-	pixel_x = -2
-	},
-/obj/item/weapon/melee/baton{
-	pixel_x = 2
-=======
 "go" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/wall/rshull,
@@ -1397,7 +1066,6 @@
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /obj/machinery/airlock_sensor{
 	pixel_x = 24
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	},
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/techfloor,
@@ -1410,8 +1078,6 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
@@ -1423,8 +1089,6 @@
 /area/ship/ert/dock_star)
 "gx" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/wall/rshull,
@@ -1449,8 +1113,6 @@
 /area/ship/ert/mech_bay)
 "gN" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -1500,8 +1162,6 @@
 	dir = 6
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1585,8 +1245,6 @@
 /area/ship/ert/armoury_dl)
 "gY" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
@@ -1602,16 +1260,15 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
 /area/ship/ert/med_surg)
 "ha" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -1620,14 +1277,10 @@
 	name = "Teleporter Chamber";
 	req_one_access = list(103)
 	},
-<<<<<<< HEAD
-=======
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/teleporter)
 "hb" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/wall/rshull,
@@ -1636,7 +1289,6 @@
 /obj/machinery/sleep_console{
 	dir = 4
 	},
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /turf/simulated/floor/tiled/white,
 /area/ship/ert/med_surg)
 "hd" = (
@@ -1691,48 +1343,14 @@
 	},
 /obj/structure/reagent_dispensers/foam,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/outline,
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/hangar)
-<<<<<<< HEAD
-"hW" = (
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 1
-	},
-/obj/machinery/pointdefense{
-	id_tag = "vonbraun_pd"
-	},
-/obj/machinery/light/no_nightshift{
-	dir = 8
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/ship/ert/hangar)
-"hW" = (
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 1
-	},
-/obj/machinery/power/pointdefense{
-	id_tag = "vonbraun_pd"
-	},
-/obj/machinery/light/no_nightshift{
-	dir = 8
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/ship/ert/hangar)
-"hY" = (
-/obj/structure/hull_corner{
-	dir = 4
-=======
 "hq" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -1774,55 +1392,6 @@
 	pixel_x = -2;
 	pixel_y = -2
 	},
-<<<<<<< HEAD
-/obj/effect/floor_decal/industrial/outline/grey,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/barracks)
-"ib" = (
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 8
-	},
-/obj/machinery/pointdefense{
-	id_tag = "vonbraun_pd"
-	},
-/obj/machinery/light/no_nightshift{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 8
-	},
-/obj/machinery/power/pointdefense{
-	id_tag = "vonbraun_pd"
-	},
-/obj/machinery/light/no_nightshift{
-	dir = 8
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/ship/ert/hangar)
-"ij" = (
-/turf/simulated/floor/tiled/white,
-/area/ship/ert/med_surg)
-"ik" = (
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/tiled/techmaint,
-/area/ship/ert/dock_port)
-"ip" = (
-/turf/simulated/floor/tiled/techmaint,
-/area/ship/ert/barracks)
-"ix" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/glass{
-	req_one_access = list(103)
-	},
-/obj/structure/sign/warning/airlock{
-	pixel_y = -32
-	},
-=======
 /obj/item/weapon/storage/firstaid/toxin{
 	pixel_x = -2;
 	pixel_y = -2
@@ -1843,13 +1412,11 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/ship/ert/engine)
 "hF" = (
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/teleporter)
 "hN" = (
@@ -1864,15 +1431,6 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/item/modular_computer/laptop/preset/custom_loadout/elite,
 /turf/simulated/floor/tiled/techfloor,
-<<<<<<< HEAD
-/area/ship/ert/med)
-"iO" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/techmaint,
-=======
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /area/ship/ert/barracks)
 "hQ" = (
 /obj/machinery/door/airlock/glass_medical{
@@ -1885,11 +1443,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-<<<<<<< HEAD
-=======
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
@@ -1906,8 +1460,6 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/item/modular_computer/laptop/preset/custom_loadout/elite,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -1930,8 +1482,6 @@
 /obj/item/ammo_magazine/m9mml/ap,
 /obj/item/ammo_magazine/m9mml/ap,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/outline/red,
@@ -1972,14 +1522,11 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/engine)
 "ij" = (
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /turf/simulated/floor/tiled/white,
 /area/ship/ert/med_surg)
 "ik" = (
@@ -2001,8 +1548,6 @@
 /area/ship/ert/barracks)
 "ir" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/wall/shull,
@@ -2091,27 +1636,16 @@
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/techfloor,
-<<<<<<< HEAD
-/area/ship/ert/armoury_st)
-"kh" = (
-/obj/machinery/light/no_nightshift{
-	dir = 8
-=======
 /area/ship/ert/barracks)
 "iz" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/wall/shull,
 /area/ship/ert/mech_bay)
 "iC" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/eng_storage)
@@ -2133,32 +1667,10 @@
 /obj/machinery/light/no_nightshift{
 	dir = 1
 	},
-<<<<<<< HEAD
-/turf/simulated/floor/tiled/techmaint,
-/area/ship/ert/hallways_aft)
-"km" = (
-/obj/effect/floor_decal/corner/white{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/med)
-"kt" = (
-/obj/machinery/door/blast/regular/open{
-	id = "ERT_Shuttle_Rear";
-	name = "Boarding Hatch"
-	},
-/obj/machinery/button/remote/blast_door{
-	id = "ERT_Shuttle_Rear";
-	name = "ERT Shuttle Access";
-	pixel_y = 24;
-	req_access = list(103)
-=======
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/eng_storage)
 "iK" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/table/steel_reinforced,
@@ -2168,8 +1680,6 @@
 /area/ship/ert/brig)
 "iO" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/machinery/light/no_nightshift{
@@ -2183,8 +1693,6 @@
 	},
 /obj/effect/map_helper/airlock/sensor/int_sensor,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -2192,7 +1700,6 @@
 "iT" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/hallways)
@@ -2200,23 +1707,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-<<<<<<< HEAD
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/med)
-"kz" = (
-/obj/structure/closet/crate{
-	dir = 1
-=======
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /obj/machinery/firealarm/alarms_hidden{
 	pixel_y = 26
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
@@ -2232,8 +1729,6 @@
 	name = "Commando"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -2246,13 +1741,9 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/white,
@@ -2351,7 +1842,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/yellow,
@@ -2380,8 +1870,6 @@
 /area/ship/ert/eng_storage)
 "jK" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -2403,8 +1891,6 @@
 /area/ship/ert/barracks)
 "jZ" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/table/steel_reinforced,
@@ -2422,8 +1908,6 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/railing,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/reinforced,
@@ -2464,15 +1948,10 @@
 /obj/machinery/atmospherics/portables_connector/fuel{
 	dir = 8
 	},
-<<<<<<< HEAD
-=======
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/outline/red,
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/engine)
 "kt" = (
@@ -2485,33 +1964,10 @@
 	battery_lock = 0;
 	pixel_y = 6
 	},
-<<<<<<< HEAD
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/barracks)
-"mr" = (
-/obj/structure/reagent_dispensers/water_cooler/full,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/barracks)
-"mt" = (
-/obj/structure/cable/green,
-/obj/structure/cable/green{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/obj/structure/cable/green{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/structure/cable/green{
-	d2 = 8;
-	icon_state = "0-8"
-=======
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/armoury_st)
 "kw" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -2539,8 +1995,6 @@
 	dir = 6
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -2550,49 +2004,18 @@
 /obj/machinery/firealarm/alarms_hidden{
 	dir = 1;
 	pixel_y = -26
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	},
 /obj/machinery/power/port_gen/pacman/mrs,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
-<<<<<<< HEAD
-/turf/simulated/floor/tiled/techmaint,
-/area/ship/ert/armoury_dl)
-"mC" = (
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled/techmaint,
-/area/ship/ert/barracks)
-"mF" = (
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/ship/ert/barracks)
-"mH" = (
-/obj/structure/bed/chair/bay/shuttle,
-/obj/machinery/recharger/wallcharger{
-	pixel_x = -23;
-	pixel_y = 5
-=======
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/eng_storage)
 "kG" = (
 /obj/structure/table/rack/steel,
 /obj/item/weapon/gun/projectile/automatic/z8{
 	pixel_y = 3
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	},
 /obj/item/weapon/gun/projectile/automatic/z8{
 	pixel_y = -3
@@ -2654,13 +2077,6 @@
 /obj/structure/medical_stand,
 /turf/simulated/floor/tiled/white,
 /area/ship/ert/med_surg)
-<<<<<<< HEAD
-"mR" = (
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-=======
 "kS" = (
 /obj/machinery/light/no_nightshift{
 	dir = 1
@@ -2685,8 +2101,6 @@
 /area/ship/ert/engine)
 "lm" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/wall/shull,
@@ -2703,7 +2117,6 @@
 	master_tag = "von_braun_master";
 	name = "Port Docking Control";
 	pixel_x = 22
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/dock_port)
@@ -2735,13 +2148,9 @@
 /area/ship/ert/barracks)
 "lz" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
@@ -2766,8 +2175,6 @@
 /area/ship/ert/teleporter)
 "lR" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -2777,8 +2184,6 @@
 /area/ship/ert/hallways_aft)
 "lU" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -2849,8 +2254,6 @@
 	dir = 9
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -2911,8 +2314,6 @@
 /area/ship/ert/barracks)
 "mt" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/power/apc/hyper{
@@ -2922,7 +2323,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -2964,8 +2364,6 @@
 	name = "Commando"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -2985,42 +2383,17 @@
 /area/ship/ert/med_surg)
 "mR" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
-<<<<<<< HEAD
-/turf/simulated/floor/tiled/techmaint,
-/area/ship/ert/mech_bay)
-"nq" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/white,
-/area/ship/ert/med_surg)
-"nr" = (
-/obj/machinery/porta_turret/stationary/CIWS,
-/turf/simulated/floor/reinforced/airless,
-/area/ship/ert/gunnery)
-"nt" = (
-=======
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/barracks)
 "mV" = (
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -3044,13 +2417,9 @@
 /area/ship/ert/brig)
 "mZ" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -3070,8 +2439,6 @@
 /area/ship/ert/barracks)
 "nc" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -3091,8 +2458,6 @@
 /area/ship/ert/med_surg)
 "nn" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -3101,64 +2466,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-<<<<<<< HEAD
-/obj/machinery/door/airlock/glass_security{
-	req_one_access = list(103)
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/ship/ert/mech_bay)
-"nB" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/ship/ert/gunnery)
-"nC" = (
-/turf/simulated/floor/reinforced/airless,
-/area/ship/ert/dock_star)
-"nM" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/engineering)
-"nX" = (
-/obj/machinery/light/no_nightshift{
-	dir = 1
-	},
-/obj/machinery/atmospherics/unary/engine{
-	dir = 4
-	},
-/turf/space,
-/area/ship/ert/engine)
-"nY" = (
-/obj/structure/ship_munition/disperser_charge/emp,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/turf/simulated/floor/reinforced,
-/area/ship/ert/hallways_aft)
-"oa" = (
-/obj/structure/table/rack,
-/obj/item/weapon/hand_tele,
-/obj/item/device/perfect_tele,
-/obj/item/device/binoculars,
-/obj/item/device/survivalcapsule{
-	pixel_x = 3
-=======
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/barracks)
 "np" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -3175,23 +2490,9 @@
 	req_one_access = list(103)
 	},
 /turf/simulated/floor/tiled/techmaint,
-<<<<<<< HEAD
-/area/ship/ert/hallways_aft)
-"ok" = (
-/obj/machinery/alarm/alarms_hidden{
-	pixel_y = 26
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/engine)
-"op" = (
-/obj/machinery/firealarm/alarms_hidden{
-	pixel_y = 26
-=======
 /area/ship/ert/barracks)
 "nq" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/wall/rshull,
@@ -3202,7 +2503,6 @@
 /obj/item/weapon/storage/box/backup_kit{
 	pixel_x = -1;
 	pixel_y = -1
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	},
 /obj/item/weapon/storage/box/backup_kit{
 	pixel_x = 1;
@@ -3212,8 +2512,6 @@
 /area/ship/ert/barracks)
 "nv" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
@@ -3239,21 +2537,11 @@
 	pixel_x = -25;
 	req_one_access = list(108)
 	},
-<<<<<<< HEAD
-/turf/simulated/floor/tiled/techmaint,
-/area/ship/ert/eng_storage)
-"oQ" = (
-/obj/effect/floor_decal/corner/white{
-	dir = 9
-=======
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/gunnery)
 "nB" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -3265,8 +2553,6 @@
 /area/ship/ert/mech_bay)
 "nC" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -3283,8 +2569,6 @@
 /area/ship/ert/gunnery)
 "nS" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/corner/red{
@@ -3330,8 +2614,6 @@
 /area/space)
 "ob" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -3398,8 +2680,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -3419,7 +2699,6 @@
 	name = "ERT NIFSoft Vendor"
 	},
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -3468,8 +2747,6 @@
 	},
 /obj/effect/map_helper/airlock/sensor/int_sensor,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -3482,8 +2759,6 @@
 /area/ship/ert/gunnery)
 "oX" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -3520,13 +2795,9 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -3853,7 +3124,6 @@
 	id_tag = "vonbraun_pd"
 	},
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -3881,8 +3151,8 @@
 /obj/item/stack/nanopaste/advanced,
 /obj/item/stack/nanopaste/advanced,
 /obj/item/weapon/reagent_containers/food/drinks/drinkingglass/fitnessflask/glucose,
-/obj/item/weapon/storage/pill_bottle/iron,
-/obj/item/weapon/storage/pill_bottle/iron,
+/obj/item/weapon/storage/pill_bottle/blood_regen,
+/obj/item/weapon/storage/pill_bottle/blood_regen,
 /obj/item/weapon/storage/pill_bottle/sleevingcure/full,
 /obj/item/weapon/storage/box/syringes,
 /obj/item/weapon/storage/box/syringes{
@@ -3904,8 +3174,6 @@
 /area/ship/ert/med_surg)
 "ql" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -3915,8 +3183,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -3952,8 +3218,6 @@
 	req_access = list(103)
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -3973,15 +3237,12 @@
 "qt" = (
 /obj/structure/cable/green,
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -3992,8 +3253,6 @@
 /area/ship/ert/brig)
 "qy" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -4003,8 +3262,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -4053,61 +3310,12 @@
 	},
 /obj/machinery/porta_turret/stationary/CIWS,
 /turf/simulated/floor/reinforced/airless,
-<<<<<<< HEAD
-/area/ship/ert/gunnery)
-"pS" = (
-/obj/effect/shuttle_landmark/premade/ert_ship_near_port,
-/turf/space,
-/area/space)
-"pU" = (
-/obj/machinery/body_scanconsole,
-/turf/simulated/floor/tiled/white,
-/area/ship/ert/med_surg)
-"pV" = (
-/turf/simulated/wall/shull,
-/area/ship/ert/atmos)
-"pW" = (
-/obj/structure/table/rack/steel,
-/obj/item/weapon/gun/energy/plasmastun{
-	pixel_y = -3
-	},
-/obj/item/weapon/gun/energy/plasmastun{
-	pixel_y = 3
-	},
-/obj/effect/floor_decal/industrial/outline/grey,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/armoury_dl)
-"pY" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/weapon/cell/hyper,
-/obj/item/weapon/cell/hyper,
-/obj/item/weapon/cell/hyper,
-/obj/item/weapon/cell/hyper,
-/obj/item/weapon/cell/hyper,
-/obj/item/weapon/cell/hyper,
-/obj/item/weapon/cell/hyper,
-/obj/item/weapon/cell/hyper,
-/obj/machinery/cell_charger,
-/obj/item/weapon/cell/hyper,
-/obj/item/weapon/cell/hyper,
-/obj/item/weapon/cell/hyper,
-/obj/item/weapon/cell/hyper,
-/obj/item/weapon/tool/screwdriver,
-/obj/item/weapon/tool/wrench,
-/obj/item/weapon/tool/crowbar,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/mech_bay)
-"ql" = (
-=======
 /area/ship/ert/dock_star)
 "qJ" = (
 /turf/simulated/wall/shull,
 /area/ship/ert/hallways)
 "qP" = (
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -4119,13 +3327,10 @@
 /obj/machinery/door/firedoor/multi_tile{
 	dir = 1
 	},
-<<<<<<< HEAD
-=======
 /obj/machinery/door/airlock/glass_engineering{
 	name = "RIG Bay & ORB Access";
 	req_access = list(103)
 	},
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/mech_bay)
 "qR" = (
@@ -4144,7 +3349,6 @@
 	id_tag = "vonbraun_pd"
 	},
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -4187,7 +3391,6 @@
 /area/ship/ert/gunnery)
 "rr" = (
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc/hyper{
@@ -4206,51 +3409,21 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/engine)
 "rt" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
-<<<<<<< HEAD
-/turf/simulated/floor/tiled/techmaint,
-/area/ship/ert/gunnery)
-"qR" = (
-/obj/machinery/recharge_station,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/atmos)
-"rp" = (
-/obj/structure/disposaloutlet,
-/obj/structure/disposalpipe/trunk{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/warning,
-/turf/simulated/floor/airless,
-/area/ship/ert/gunnery)
-"rr" = (
-/obj/machinery/door/airlock/glass_external,
-/obj/effect/map_helper/airlock/door/ext_door,
-/turf/simulated/floor/airless,
-/area/ship/ert/gunnery)
-"rs" = (
-/obj/machinery/atmospherics/pipe/simple/visible/universal,
-=======
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/wall/rshull,
 /area/ship/ert/engine)
 "ry" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -4264,11 +3437,8 @@
 	dir = 10
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/engine)
 "rN" = (
@@ -4304,23 +3474,6 @@
 	dir = 4;
 	pixel_x = -23
 	},
-<<<<<<< HEAD
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/engine)
-"rD" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 10
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/engine)
-"rM" = (
-/obj/machinery/atmospherics/pipe/tank/air,
-/turf/simulated/floor/airless,
-/area/ship/ert/gunnery)
-"rO" = (
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/gunnery)
-=======
 /obj/item/rig_module/sprinter{
 	pixel_x = -4;
 	pixel_y = 4
@@ -4333,8 +3486,6 @@
 	pixel_y = -2
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -4342,17 +3493,12 @@
 "rP" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/hallways_aft)
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 "rR" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -4398,8 +3544,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -4412,8 +3556,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -4501,25 +3643,7 @@
 /obj/machinery/door/airlock/glass_command{
 	req_one_access = list(103)
 	},
-<<<<<<< HEAD
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/bridge)
-"sB" = (
-/obj/machinery/pointdefense{
-	id_tag = "vonbraun_pd"
-	},
-/obj/machinery/power/pointdefense{
-	id_tag = "vonbraun_pd"
-	},
-/obj/structure/hull_corner,
-/turf/simulated/floor/reinforced/airless,
-/area/ship/ert/barracks)
-"sC" = (
-=======
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -4611,8 +3735,6 @@
 /area/ship/ert/armoury_dl)
 "sU" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -4624,16 +3746,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/eng_storage)
 "sW" = (
-<<<<<<< HEAD
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/ship/ert/eng_storage)
-=======
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/light/no_nightshift{
@@ -4641,7 +3754,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/dock_star)
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 "sX" = (
 /obj/structure/bed/chair/bay/comfy/captain{
 	dir = 4
@@ -4651,8 +3763,6 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/button/remote/blast_door{
@@ -4682,8 +3792,6 @@
 /area/ship/ert/med)
 "tn" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/light/no_nightshift{
@@ -4753,19 +3861,7 @@
 "tH" = (
 /turf/simulated/wall/rshull,
 /area/ship/ert/armoury_st)
-<<<<<<< HEAD
-"tK" = (
-/obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/machinery/door/window/brigdoor/northleft,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/hallways_aft)
-"tL" = (
-/obj/machinery/atmospherics/pipe/simple/visible/fuel{
-	dir = 9
-	},
-=======
 "tW" = (
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/machinery/door/firedoor/border_only,
@@ -4793,8 +3889,6 @@
 	dir = 9
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -4807,8 +3901,6 @@
 /area/ship/ert/med)
 "uc" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -4822,33 +3914,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
-<<<<<<< HEAD
-/obj/structure/window/reinforced,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/mech_bay)
-"tZ" = (
-/obj/effect/floor_decal/industrial/warning,
-/turf/simulated/floor/airless,
-/area/ship/ert/gunnery)
-"ug" = (
-/obj/item/device/healthanalyzer/phasic{
-	pixel_x = 2;
-	pixel_y = 2
-	},
-/obj/item/device/healthanalyzer/phasic,
-/obj/item/device/healthanalyzer/phasic{
-	pixel_x = -2;
-	pixel_y = -2
-	},
-/obj/structure/table/rack/steel,
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/outline,
-=======
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/white,
@@ -4858,11 +3924,8 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/engine)
 "uh" = (
@@ -4896,8 +3959,6 @@
 /area/ship/ert/commander)
 "ut" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -4910,8 +3971,6 @@
 /area/ship/ert/hallways_aft)
 "uu" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -4922,15 +3981,9 @@
 "uD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
-<<<<<<< HEAD
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-=======
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/engine)
 "uE" = (
@@ -4976,28 +4029,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-<<<<<<< HEAD
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/engine)
-"vb" = (
-/obj/machinery/sleeper{
-	dir = 4
-=======
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/blast/regular/open{
 	id = "VB_Rear_Blast";
 	name = "Blast Shield"
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/engineering)
@@ -5009,8 +4047,6 @@
 /area/ship/ert/engine)
 "vd" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/wall/rshull,
@@ -5023,8 +4059,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -5045,8 +4079,6 @@
 /area/shuttle/ert_ship_boat)
 "vp" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/light/no_nightshift{
@@ -5055,9 +4087,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techmaint,
-<<<<<<< HEAD
-/area/ship/ert/hallways_aft)
-=======
 /area/ship/ert/dock_star)
 "vt" = (
 /obj/item/modular_computer/console/preset/sysadmin{
@@ -5077,7 +4106,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/light/small{
@@ -5085,7 +4113,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/dock_port)
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 "vK" = (
 /turf/simulated/wall/rshull,
 /area/ship/ert/gunnery)
@@ -5101,8 +4128,6 @@
 "wh" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -5115,8 +4140,6 @@
 	dir = 6
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -5141,39 +4164,17 @@
 	},
 /obj/structure/window/titanium,
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/techmaint,
-<<<<<<< HEAD
-/area/ship/ert/teleporter)
-"wp" = (
-/obj/machinery/sleep_console,
-/turf/simulated/floor/tiled/white,
-/area/ship/ert/med_surg)
-"wr" = (
-/obj/machinery/power/pointdefense{
-	id_tag = "vonbraun_pd"
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/ship/ert/hallways_aft)
-"wt" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/firstaid/bonemed{
-	pixel_x = 4;
-	pixel_y = 4
-=======
 /area/ship/ert/brig)
 "wC" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/light_switch{
@@ -5185,8 +4186,6 @@
 "wG" = (
 /obj/structure/reagent_dispensers/water_cooler/full,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -5199,27 +4198,14 @@
 	name = "Medical Bay";
 	req_access = list(103)
 	},
-<<<<<<< HEAD
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/med)
-"wG" = (
-/obj/structure/hull_corner/long_horiz{
-	dir = 5
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/ship/ert/engine)
-=======
 /turf/simulated/floor/tiled/white,
 /area/ship/ert/med_surg)
 "wM" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/wall/shull,
 /area/ship/ert/med_surg)
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 "wO" = (
 /obj/machinery/light/no_nightshift,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -5229,29 +4215,21 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/engineering)
 "wU" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/barracks)
 "wX" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -5263,11 +4241,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/med)
 "wZ" = (
-<<<<<<< HEAD
-/obj/machinery/oxygen_pump/anesthetic,
-/turf/simulated/wall/shull,
-/area/ship/ert/med_surg)
-=======
 /obj/machinery/power/apc/hyper{
 	alarms_hidden = 1;
 	name = "VB APC - South";
@@ -5281,13 +4254,10 @@
 	dir = 6
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/barracks)
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 "xe" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -5296,8 +4266,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/glass_security{
@@ -5341,8 +4309,6 @@
 /area/ship/ert/brig)
 "xt" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -5393,7 +4359,6 @@
 	id_tag = "vonbraun_pd"
 	},
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -5449,8 +4414,6 @@
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -5482,8 +4445,6 @@
 	req_access = list(103)
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -5576,8 +4537,6 @@
 /area/ship/ert/med)
 "xX" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -5601,13 +4560,9 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -5717,8 +4672,6 @@
 	dir = 9
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -5731,10 +4684,6 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-<<<<<<< HEAD
-/area/ship/ert/eng_storage)
-"xG" = (
-=======
 /area/shuttle/ert_ship_boat)
 "ys" = (
 /obj/structure/hull_corner{
@@ -5747,7 +4696,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/gunnery)
 "yx" = (
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /obj/machinery/portable_atmospherics/canister/air,
 /obj/machinery/alarm/alarms_hidden{
 	pixel_y = 26
@@ -5800,8 +4748,6 @@
 	pixel_y = -26
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -5809,6 +4755,9 @@
 "yJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/hallways_aft)
 "yM" = (
@@ -5826,8 +4775,6 @@
 /area/ship/ert/hangar)
 "yR" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/light/no_nightshift{
@@ -5848,44 +4795,8 @@
 	pixel_x = -2;
 	pixel_y = -2
 	},
-<<<<<<< HEAD
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/ship/ert/hangar)
-"yj" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/machinery/space_heater,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/ship/ert/hangar)
-"yl" = (
-/obj/structure/ship_munition/disperser_charge/emp,
-/obj/effect/floor_decal/industrial/warning,
-/turf/simulated/floor/reinforced,
-/area/ship/ert/hallways_aft)
-"yo" = (
-/obj/machinery/door/airlock/external,
-/obj/effect/map_helper/airlock/door/ext_door,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/dock_star)
-"yp" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/firstaid/fire{
-	pixel_x = 4;
-	pixel_y = 4
-	},
-/obj/item/weapon/storage/firstaid/fire{
-=======
 /obj/item/device/radio/off,
 /obj/item/device/radio/off{
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	pixel_x = 2;
 	pixel_y = 2
 	},
@@ -5911,51 +4822,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/hangar)
-<<<<<<< HEAD
-"yG" = (
-/obj/structure/ship_munition/disperser_charge/explosive,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/turf/simulated/floor/reinforced,
-/area/ship/ert/hallways_aft)
-"yI" = (
-/obj/structure/sign/department/medbay,
-/turf/simulated/wall/shull,
-/area/ship/ert/med)
-"yJ" = (
-/obj/structure/table/steel_reinforced,
-/obj/machinery/chemical_dispenser/biochemistry/full,
-/obj/machinery/light/no_nightshift,
-/obj/item/weapon/reagent_containers/glass/beaker/large,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/med)
-"yR" = (
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/effect/catwalk_plated/techmaint,
-/turf/simulated/floor/plating,
-/area/ship/ert/engineering)
-"yX" = (
-/turf/simulated/wall/rshull,
-/area/ship/ert/hangar)
-=======
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 "yY" = (
 /turf/simulated/floor/reinforced/airless,
 /area/ship/ert/barracks)
@@ -5981,24 +4847,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-<<<<<<< HEAD
-/obj/machinery/firealarm/alarms_hidden{
-	pixel_y = 26
-	},
-/turf/simulated/floor/tiled/white,
-/area/ship/ert/med_surg)
-"zc" = (
-/turf/simulated/wall/shull,
-/area/ship/ert/eng_storage)
-=======
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/med)
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 "zg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -6027,11 +4880,6 @@
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
 	dir = 8
 	},
-<<<<<<< HEAD
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-=======
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/engine)
 "zo" = (
@@ -6043,8 +4891,6 @@
 /area/ship/ert/teleporter)
 "zs" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -6054,8 +4900,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -6132,8 +4976,6 @@
 /area/ship/ert/hallways_aft)
 "Aq" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/wood,
@@ -6173,8 +5015,6 @@
 /area/ship/ert/barracks)
 "Av" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -6190,8 +5030,6 @@
 /area/ship/ert/teleporter)
 "Ay" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -6228,101 +5066,15 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/wood,
 /area/ship/ert/commander)
-<<<<<<< HEAD
-"Ao" = (
-/obj/item/modular_computer/console/preset/medical{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/bridge)
-"Aq" = (
-/obj/machinery/firealarm/alarms_hidden{
-	pixel_y = 26
-	},
-/obj/item/modular_computer/console/preset/security,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/bridge)
-"Ar" = (
-/obj/structure/table/steel_reinforced,
-/obj/fiftyspawner/phoron,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/plasteel,
-/obj/fiftyspawner/plasteel,
-/obj/fiftyspawner/plasteel,
-/obj/fiftyspawner/plasteel,
-/obj/fiftyspawner/rglass,
-/obj/fiftyspawner/rglass,
-/obj/fiftyspawner/rglass,
-/obj/fiftyspawner/phoronglass,
-/obj/fiftyspawner/phoronglass,
-/obj/fiftyspawner/rods,
-/obj/fiftyspawner/rods,
-/obj/fiftyspawner/rods,
-/obj/fiftyspawner/rods,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/eng_storage)
-"Av" = (
-/obj/item/modular_computer/console/preset/security,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/bridge)
-"Ay" = (
-/obj/machinery/door/airlock/glass_security{
-	req_one_access = list(103)
-	},
-/obj/machinery/door/blast/regular{
-	id = "NRV_DELTA"
-	},
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/ship/ert/armoury_dl)
-"AI" = (
-/obj/machinery/power/thermoregulator,
-/obj/effect/floor_decal/industrial/outline,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/eng_storage)
-"AK" = (
-/obj/item/modular_computer/console/preset/research,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/bridge)
-"AL" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/box/pillbottles,
-/obj/item/weapon/storage/box/pillbottles,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/med)
-"AS" = (
-/obj/item/modular_computer/console/preset/medical,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/bridge)
-"AZ" = (
-/obj/machinery/alarm/alarms_hidden{
-	pixel_y = 26
-=======
 "AN" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/wall/rshull,
@@ -6336,7 +5088,6 @@
 	},
 /obj/item/weapon/reagent_containers/spray/cleaner{
 	pixel_x = -2
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	},
 /obj/item/weapon/reagent_containers/spray/cleaner{
 	pixel_x = 2
@@ -6405,8 +5156,6 @@
 /area/ship/ert/med)
 "AW" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/wall/rshull,
@@ -6457,8 +5206,6 @@
 /area/ship/ert/barracks)
 "Bp" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -6496,13 +5243,9 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -6518,8 +5261,6 @@
 /area/ship/ert/hallways)
 "BF" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -6541,8 +5282,6 @@
 /area/ship/ert/engineering)
 "BM" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -6556,8 +5295,6 @@
 	dir = 6
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/light/no_nightshift{
@@ -6595,8 +5332,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -6621,8 +5356,6 @@
 /area/ship/ert/med)
 "Cx" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -6657,8 +5390,6 @@
 /area/shuttle/ert_ship_boat)
 "CK" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -6668,8 +5399,6 @@
 /area/ship/ert/dock_star)
 "CL" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -6682,8 +5411,6 @@
 /area/ship/ert/armoury_st)
 "CM" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -6695,12 +5422,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/armoury_st)
 "CN" = (
-<<<<<<< HEAD
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-=======
 /obj/machinery/atmospherics/pipe/simple/visible/universal,
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/engine)
 "CP" = (
@@ -6708,8 +5430,6 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/white,
@@ -6728,29 +5448,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/atmos)
 "CZ" = (
-<<<<<<< HEAD
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/light/no_nightshift{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/engine)
-"Dd" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/machinery/door/blast/regular{
-	closed_layer = 4;
-	dir = 4;
-	id = "NRV_DELTA";
-	layer = 4
-	},
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/barracks)
-"Dh" = (
-=======
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/machinery/door/firedoor/border_only,
@@ -6801,8 +5498,6 @@
 "Dk" = (
 /obj/structure/sign/nosmoking_1,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/wall/rshull,
@@ -6927,8 +5622,6 @@
 /area/ship/ert/hallways_aft)
 "Eb" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/border_only,
@@ -6936,14 +5629,11 @@
 	name = "Delta Armoury";
 	req_one_access = list(103)
 	},
-<<<<<<< HEAD
-=======
 /obj/machinery/door/blast/regular{
 	closed_layer = 4;
 	id = "NRV_DELTA";
 	layer = 4
 	},
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/armoury_dl)
 "Ed" = (
@@ -6976,8 +5666,6 @@
 /area/ship/ert/armoury_dl)
 "Eo" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -6998,8 +5686,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -7051,8 +5737,6 @@
 /area/ship/ert/hangar)
 "Fg" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/wood,
@@ -7072,31 +5756,11 @@
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/techfloor,
-<<<<<<< HEAD
-/area/ship/ert/armoury_dl)
-"Fz" = (
-/obj/structure/bed/chair/bay/chair/padded/blue{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/ship/ert/bridge)
-"FD" = (
-/turf/simulated/floor/tiled/techmaint,
-/area/ship/ert/bridge)
-"FF" = (
-/obj/effect/shuttle_landmark/premade/ert_ship_port,
-/turf/space,
-/area/space)
-"FJ" = (
-/obj/machinery/door/airlock/glass_command{
-	req_one_access = list(103)
-=======
 /area/ship/ert/hallways)
 "Fq" = (
 /obj/structure/table/rack/steel,
 /obj/item/weapon/gun/energy/gun/burst{
 	pixel_y = 3
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	},
 /obj/item/weapon/gun/energy/gun/burst{
 	pixel_y = -3
@@ -7104,15 +5768,6 @@
 /obj/item/weapon/gun/energy/lasershotgun{
 	pixel_y = -3
 	},
-<<<<<<< HEAD
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled/techmaint,
-/area/ship/ert/hallways)
-"FM" = (
-/obj/effect/floor_decal/corner/yellow{
-	dir = 10
-=======
 /obj/item/weapon/gun/energy/lasershotgun{
 	pixel_y = 3
 	},
@@ -7120,7 +5775,6 @@
 /obj/machinery/recharger/wallcharger{
 	pixel_x = -23;
 	pixel_y = -12
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	},
 /obj/machinery/recharger/wallcharger{
 	pixel_x = -23;
@@ -7263,8 +5917,6 @@
 	dir = 9
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -7273,8 +5925,6 @@
 /area/ship/ert/hallways)
 "FY" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -7284,8 +5934,6 @@
 /area/ship/ert/hallways)
 "Gn" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/wall/rshull,
@@ -7323,8 +5971,6 @@
 	pixel_y = 26
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -7344,8 +5990,6 @@
 /area/ship/ert/commander)
 "GQ" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -7426,8 +6070,6 @@
 /area/ship/ert/armoury_dl)
 "GY" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -7532,8 +6174,6 @@
 	dir = 9
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -7555,39 +6195,6 @@
 /obj/machinery/door/airlock/glass{
 	req_one_access = list(103)
 	},
-<<<<<<< HEAD
-/obj/item/ammo_magazine/m762,
-/obj/item/ammo_magazine/m762,
-/obj/item/ammo_magazine/m762,
-/obj/item/ammo_magazine/m762,
-/obj/item/ammo_magazine/m762,
-/obj/item/ammo_magazine/m762,
-/obj/item/ammo_magazine/m762,
-/obj/item/ammo_magazine/m762,
-/obj/item/ammo_magazine/m762/ap,
-/obj/item/ammo_magazine/m762/ap,
-/obj/item/ammo_magazine/m762/ap,
-/obj/item/ammo_magazine/m762/ap,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/armoury_dl)
-"Gr" = (
-/obj/machinery/power/emitter,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/eng_storage)
-"Gv" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
-/obj/machinery/door/window/brigdoor/southleft,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/hallways_aft)
-"Gw" = (
-/obj/structure/closet/wardrobe/ert,
-/obj/item/modular_computer/tablet/preset/custom_loadout/elite,
-/obj/item/weapon/storage/box/survival/comp{
-	starts_with = list(/obj/item/weapon/tool/prybar/red,/obj/item/clothing/glasses/goggles,/obj/item/weapon/reagent_containers/hypospray/autoinjector,/obj/item/stack/medical/bruise_pack,/obj/item/device/flashlight/glowstick,/obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar,/obj/item/clothing/mask/breath,/obj/item/weapon/tank/emergency/oxygen/engi)
-=======
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 1
@@ -7612,7 +6219,6 @@
 /obj/item/clothing/accessory/storage/black_vest{
 	pixel_x = 2;
 	pixel_y = 2
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	},
 /obj/item/clothing/accessory/storage/black_vest{
 	pixel_x = 4;
@@ -7658,8 +6264,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -7694,7 +6298,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/alarm/alarms_hidden{
@@ -7711,8 +6314,6 @@
 /area/ship/ert/hangar)
 "Is" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -7726,7 +6327,6 @@
 	id_tag = "vonbraun_pd"
 	},
 /obj/structure/cable/yellow{
-	d2 = 4;
 	dir = 4;
 	icon_state = "0-4"
 	},
@@ -7750,11 +6350,9 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -7785,7 +6383,6 @@
 	},
 /obj/structure/window/titanium,
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -7818,8 +6415,6 @@
 /area/ship/ert/med_surg)
 "Jh" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/white,
@@ -7847,12 +6442,8 @@
 /area/ship/ert/mech_bay)
 "Jy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-<<<<<<< HEAD
-=======
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -7861,7 +6452,6 @@
 /obj/structure/bed/chair/bay/chair/padded/blue{
 	dir = 8
 	},
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/hallways_aft)
 "JA" = (
@@ -7948,8 +6538,6 @@
 /area/ship/ert/engine)
 "JM" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -7983,8 +6571,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -7999,16 +6585,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/engine)
 "Kd" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -8018,13 +6600,9 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/corner/red{
@@ -8057,7 +6635,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -8088,8 +6665,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
@@ -8110,8 +6685,6 @@
 /area/ship/ert/commander)
 "KM" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -8121,16 +6694,12 @@
 /area/ship/ert/bridge)
 "KN" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/wall/shull,
 /area/ship/ert/barracks)
 "KO" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -8220,8 +6789,6 @@
 /area/ship/ert/brig)
 "Lh" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -8231,8 +6798,6 @@
 	dir = 6
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -8266,7 +6831,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -8323,8 +6887,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -8335,31 +6897,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techmaint,
-<<<<<<< HEAD
-/area/ship/ert/bridge)
-"JY" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/engine)
-"JZ" = (
-/obj/structure/table/rack/steel,
-/obj/item/weapon/gun/projectile/heavysniper,
-/obj/item/weapon/storage/box/sniperammo,
-/obj/item/weapon/storage/box/sniperammo,
-/obj/effect/floor_decal/industrial/outline/grey,
-/obj/machinery/alarm/alarms_hidden{
-	dir = 1;
-	pixel_y = -26
-=======
 /area/ship/ert/hangar)
 "LF" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -8370,14 +6910,11 @@
 "LI" = (
 /obj/machinery/light/no_nightshift{
 	dir = 8
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -8388,21 +6925,6 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
-<<<<<<< HEAD
-/area/ship/ert/teleporter)
-"Kk" = (
-/obj/effect/landmark/late_antag/ert,
-/obj/structure/table/bench/steel,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/barracks)
-"Kq" = (
-/obj/machinery/light/no_nightshift{
-	dir = 4
-	},
-/obj/machinery/atmospherics/portables_connector/fuel{
-	dir = 8
-	},
-=======
 /area/ship/ert/med)
 "LL" = (
 /obj/machinery/alarm/alarms_hidden{
@@ -8419,10 +6941,7 @@
 /obj/machinery/chemical_dispenser/biochemistry/full,
 /obj/machinery/light/no_nightshift,
 /obj/item/weapon/reagent_containers/glass/beaker/large,
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -8439,18 +6958,12 @@
 	dir = 9
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -8466,8 +6979,6 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/catwalk_plated/techmaint,
@@ -8481,8 +6992,6 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/white,
@@ -8542,27 +7051,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-<<<<<<< HEAD
-/obj/structure/table/steel_reinforced,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/bridge)
-"KM" = (
-/obj/structure/bed/chair/bay/chair/padded/blue{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/ship/ert/bridge)
-"KO" = (
-/obj/machinery/vending/tool,
-/obj/machinery/light/no_nightshift{
-	dir = 1
-=======
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -8570,17 +7062,12 @@
 "Mk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/teleporter)
 "Mm" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/table/steel_reinforced,
@@ -8691,31 +7178,7 @@
 /area/ship/ert/hangar)
 "MD" = (
 /obj/structure/table/rack/steel,
-/obj/item/weapon/gun/energy/gun/martin{
-	battery_lock = 0
-	},
-/obj/item/weapon/gun/energy/gun/martin{
-	battery_lock = 0
-	},
-/obj/item/weapon/gun/energy/gun/martin{
-	battery_lock = 0
-	},
-/obj/item/weapon/gun/energy/gun/martin{
-	battery_lock = 0
-	},
-/obj/item/weapon/gun/energy/gun/martin{
-	battery_lock = 0
-	},
-/obj/item/weapon/gun/energy/gun/martin{
-	battery_lock = 0
-	},
 /obj/effect/floor_decal/industrial/outline/grey,
-/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
-/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
-/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
-/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
-/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
-/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
 /obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked{
 	pixel_y = 6
 	},
@@ -8734,47 +7197,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/armoury_st)
-<<<<<<< HEAD
-"LA" = (
-/obj/structure/table/rack/steel,
-<<<<<<< HEAD
-/obj/item/weapon/storage/box/shotgunshells/large,
-/obj/item/weapon/storage/box/shotgunshells/large,
-/obj/item/weapon/storage/box/shotgunammo/large,
-/obj/item/weapon/storage/box/shotgunammo/large,
-/obj/item/weapon/storage/box/empshells/large,
-/obj/item/weapon/storage/box/flashshells/large,
-/obj/item/weapon/storage/box/beanbags/large,
-/obj/item/weapon/storage/box/beanbags/large,
-/obj/item/weapon/storage/box/stunshells/large,
-=======
-/obj/item/ammo_magazine/ammo_box/b12g/pellet,
-/obj/item/ammo_magazine/ammo_box/b12g/pellet,
-/obj/item/ammo_magazine/ammo_box/b12g,
-/obj/item/ammo_magazine/ammo_box/b12g,
-/obj/item/ammo_magazine/ammo_box/b12g/emp,
-/obj/item/ammo_magazine/ammo_box/b12g/flash,
-/obj/item/ammo_magazine/ammo_box/b12g/beanbag,
-/obj/item/ammo_magazine/ammo_box/b12g/beanbag,
-/obj/item/ammo_magazine/ammo_box/b12g/stunshell,
->>>>>>> aa6720eacd... Merge pull request #13898 from KillianKirilenko/kk-talontweaks
-/obj/effect/floor_decal/industrial/outline/grey,
-/obj/item/weapon/gun/projectile/shotgun/pump/combat{
-	pixel_y = 3
-	},
-/obj/item/weapon/gun/projectile/shotgun/pump/combat{
-	pixel_y = -3
-=======
 "MK" = (
 /obj/machinery/light/no_nightshift{
 	dir = 8
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -8795,16 +7224,9 @@
 	dir = 5
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
-<<<<<<< HEAD
-/turf/simulated/floor/tiled/white,
-=======
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -8823,12 +7245,9 @@
 /area/ship/ert/brig)
 "MZ" = (
 /turf/simulated/wall/rshull,
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /area/ship/ert/med_surg)
 "Nb" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/table/steel_reinforced,
@@ -8844,8 +7263,6 @@
 /area/ship/ert/med)
 "Nf" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -8868,34 +7285,17 @@
 /area/shuttle/ert_ship_boat)
 "Nh" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
-<<<<<<< HEAD
-/turf/simulated/floor/tiled/white,
-/area/ship/ert/med_surg)
-"LR" = (
-/obj/machinery/door/airlock/external,
-/obj/effect/map_helper/airlock/door/ext_door,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/dock_port)
-"LV" = (
-/obj/structure/table/steel_reinforced,
-=======
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/brig)
@@ -8918,19 +7318,12 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/catwalk_plated/techfloor,
@@ -8960,19 +7353,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-<<<<<<< HEAD
-=======
 /obj/machinery/atmospherics/binary/pump/fuel/on,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/engine)
 "NJ" = (
 /obj/machinery/body_scanconsole,
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /turf/simulated/floor/tiled/white,
 /area/ship/ert/med_surg)
 "NN" = (
@@ -8989,63 +7377,23 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
-<<<<<<< HEAD
-/area/ship/ert/armoury_st)
-"Me" = (
-/obj/structure/table/rack/steel,
-<<<<<<< HEAD
-/obj/item/weapon/storage/box/shotgunshells/large,
-/obj/item/weapon/storage/box/shotgunshells/large,
-/obj/item/weapon/storage/box/shotgunammo/large,
-/obj/item/weapon/storage/box/shotgunammo/large,
-/obj/item/weapon/storage/box/empshells/large,
-/obj/item/weapon/storage/box/flashshells/large,
-/obj/item/weapon/storage/box/beanbags/large,
-/obj/item/weapon/storage/box/beanbags/large,
-/obj/item/weapon/storage/box/stunshells/large,
-=======
-/obj/item/ammo_magazine/ammo_box/b12g/pellet,
-/obj/item/ammo_magazine/ammo_box/b12g/pellet,
-/obj/item/ammo_magazine/ammo_box/b12g,
-/obj/item/ammo_magazine/ammo_box/b12g,
-/obj/item/ammo_magazine/ammo_box/b12g/emp,
-/obj/item/ammo_magazine/ammo_box/b12g/flash,
-/obj/item/ammo_magazine/ammo_box/b12g/beanbag,
-/obj/item/ammo_magazine/ammo_box/b12g/beanbag,
-/obj/item/ammo_magazine/ammo_box/b12g/stunshell,
->>>>>>> aa6720eacd... Merge pull request #13898 from KillianKirilenko/kk-talontweaks
-/obj/effect/floor_decal/industrial/outline/grey,
-/obj/item/weapon/gun/projectile/automatic/as24{
-	pixel_y = 3
-=======
 /area/ship/ert/engine)
 "NR" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/catwalk_plated/techmaint,
@@ -9059,8 +7407,6 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -9076,8 +7422,6 @@
 /area/ship/ert/hallways)
 "NY" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -9091,8 +7435,6 @@
 /area/ship/ert/hallways_aft)
 "NZ" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -9102,63 +7444,23 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
-<<<<<<< HEAD
-/area/shuttle/ert_ship_boat)
-"Nk" = (
-/obj/machinery/pointdefense{
-	id_tag = "vonbraun_pd"
-	},
-/obj/machinery/light/no_nightshift{
-	dir = 4
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/ship/ert/engine)
-"Np" = (
-/obj/machinery/light/no_nightshift{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/engine)
-"Nq" = (
-/obj/structure/cable/yellow{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/obj/machinery/power/apc/hyper{
-	alarms_hidden = 1;
-	dir = 8;
-	name = "VB APC - West";
-	pixel_x = -24
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/gunnery)
-"Nu" = (
-/obj/structure/hull_corner/long_horiz{
-=======
 /area/ship/ert/engineering)
 "Oa" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 9
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/effect/floor_decal/corner/red{
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	dir = 6
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -9166,70 +7468,16 @@
 "Of" = (
 /turf/simulated/wall/rshull,
 /area/ship/ert/hangar)
-<<<<<<< HEAD
-"NH" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 8
-	},
-<<<<<<< HEAD
-/obj/effect/catwalk_plated/dark,
-=======
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-=======
 "Og" = (
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
-<<<<<<< HEAD
-/obj/effect/catwalk_plated/techfloor,
->>>>>>> aa6720eacd... Merge pull request #13898 from KillianKirilenko/kk-talontweaks
-/turf/simulated/floor/plating,
-/area/ship/ert/engine)
-"NI" = (
-/obj/structure/table/rack,
-/obj/item/weapon/storage/secure/briefcase/nsfw_pack_hybrid,
-/obj/item/weapon/storage/belt/explorer/pathfinder,
-/obj/item/weapon/storage/belt/explorer/pathfinder{
-	name = "ERT belt"
-	},
-/turf/simulated/floor/wood,
-/area/ship/ert/commander)
-"NJ" = (
-/obj/machinery/optable,
-/turf/simulated/floor/tiled/white,
-/area/ship/ert/med_surg)
-"NP" = (
-=======
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-<<<<<<< HEAD
-/obj/machinery/atmospherics/binary/pump/fuel/on,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/engine)
-"NR" = (
-/obj/machinery/light/no_nightshift,
-=======
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/glass_security{
 	name = "Prisoner Containment";
@@ -9239,11 +7487,8 @@
 /area/ship/ert/brig)
 "Oh" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -9254,8 +7499,6 @@
 /area/ship/ert/brig)
 "Oi" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -9292,21 +7535,15 @@
 /area/ship/ert/hallways_aft)
 "Ox" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/engineering)
 "Oy" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -9315,11 +7552,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-<<<<<<< HEAD
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/engine)
-"Og" = (
-=======
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/brig)
 "OA" = (
@@ -9327,8 +7559,6 @@
 /area/ship/ert/med)
 "OB" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -9339,26 +7569,17 @@
 /turf/simulated/floor/reinforced/airless,
 /area/ship/ert/hangar)
 "OF" = (
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
-<<<<<<< HEAD
-=======
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/ship/ert/hallways_aft)
@@ -9378,11 +7599,8 @@
 /area/ship/ert/engine)
 "ON" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/mech_bay)
 "OO" = (
@@ -9393,8 +7611,6 @@
 /area/ship/ert/bridge)
 "OR" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/bed/chair/bay/chair/padded/blue,
@@ -9402,8 +7618,6 @@
 /area/ship/ert/bridge)
 "OS" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -9412,40 +7626,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-<<<<<<< HEAD
-/turf/simulated/floor/tiled/techmaint,
-/area/ship/ert/bridge)
-"Ok" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	id_tag = "ert_boarding_shuttle_dock";
-	pixel_y = 22
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/ship/ert/hangar)
-"Om" = (
-/obj/machinery/pointdefense{
-	id_tag = "vonbraun_pd"
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/ship/ert/gunnery)
-"On" = (
-/turf/simulated/floor/tiled/techmaint,
-/area/ship/ert/armoury_dl)
-"Oq" = (
-/obj/machinery/light/no_nightshift{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
-=======
 /obj/machinery/light/no_nightshift{
 	dir = 1
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/hallways_aft)
@@ -9455,8 +7637,6 @@
 /area/ship/ert/atmos)
 "OU" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
@@ -9470,18 +7650,6 @@
 /area/ship/ert/dock_star)
 "OW" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-<<<<<<< HEAD
-	icon_state = "1-8"
-	},
-/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
-/obj/effect/catwalk_plated/techmaint,
-/turf/simulated/floor/plating,
-/area/ship/ert/bridge)
-"OE" = (
-=======
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -9497,20 +7665,13 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/bridge)
 "OX" = (
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
@@ -9608,8 +7769,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -9639,8 +7798,6 @@
 /obj/machinery/light/no_nightshift,
 /turf/simulated/floor/reinforced/airless,
 /area/ship/ert/atmos)
-<<<<<<< HEAD
-=======
 "Px" = (
 /obj/structure/table/rack/steel,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -9673,7 +7830,6 @@
 /obj/item/clothing/mask/gas/half,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/barracks)
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 "Py" = (
 /obj/machinery/light/no_nightshift{
 	dir = 1
@@ -9686,8 +7842,6 @@
 /area/ship/ert/med)
 "PC" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -9697,8 +7851,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/catwalk_plated/techmaint,
@@ -9747,7 +7899,6 @@
 	id_tag = "vonbraun_pd"
 	},
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -9763,16 +7914,12 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/teleporter)
 "Qc" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -9817,8 +7964,6 @@
 /area/shuttle/ert_ship_boat)
 "QF" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -9829,21 +7974,10 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/teleporter)
-<<<<<<< HEAD
-"PZ" = (
-/obj/structure/table/bench/steel,
-/obj/effect/landmark{
-	name = "Commando"
-	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/space)
-"Qc" = (
-=======
 "QP" = (
 /turf/simulated/wall/rshull,
 /area/ship/ert/armoury_dl)
 "QR" = (
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /obj/machinery/power/apc/hyper{
 	alarms_hidden = 1;
 	dir = 8;
@@ -9851,7 +7985,6 @@
 	pixel_x = -24
 	},
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/light/no_nightshift{
@@ -9872,7 +8005,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/floor_decal/industrial/outline,
@@ -9918,24 +8050,18 @@
 /area/ship/ert/engineering)
 "Rh" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/armoury_st)
 "Rt" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/armoury_st)
 "Rv" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -9956,15 +8082,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
-<<<<<<< HEAD
-=======
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/engine)
 "RC" = (
@@ -9978,8 +8099,6 @@
 	dir = 9
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -10006,8 +8125,6 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -10050,8 +8167,6 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -10066,8 +8181,6 @@
 /obj/structure/table/steel_reinforced,
 /obj/machinery/recharger,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -10084,8 +8197,6 @@
 /area/ship/ert/teleporter)
 "Sn" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/glass_security{
@@ -10186,66 +8297,26 @@
 "SG" = (
 /turf/simulated/wall/shull,
 /area/ship/ert/dock_star)
-<<<<<<< HEAD
-"SA" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/power/apc/hyper{
-	alarms_hidden = 1;
-	dir = 4;
-	name = "VB APC - East";
-	pixel_x = 24
-	},
-/obj/structure/cable/yellow{
-	d2 = 2;
-	icon_state = "0-2"
-=======
 "SI" = (
 /obj/machinery/firealarm/alarms_hidden{
 	pixel_y = 26
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/dock_star)
 "SJ" = (
 /obj/structure/bed/chair/bay/chair/padded/blue{
 	dir = 4
 	},
-<<<<<<< HEAD
-/turf/simulated/floor/tiled/white,
-/area/ship/ert/med_surg)
-"SD" = (
-/obj/structure/table/rack,
-/obj/item/ammo_magazine/m44{
-	pixel_x = -3
-	},
-/obj/item/ammo_magazine/m44{
-	pixel_x = 3
-	},
-/obj/item/weapon/gun/projectile/deagle,
-/turf/simulated/floor/wood,
-/area/ship/ert/commander)
-"SE" = (
-/obj/machinery/light/no_nightshift{
-	dir = 4
-=======
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/hallways_aft)
 "SM" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -10278,8 +8349,6 @@
 /area/space)
 "SY" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -10302,8 +8371,6 @@
 	dir = 9
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -10469,8 +8536,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-<<<<<<< HEAD
-=======
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -10483,30 +8548,18 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/engine)
 "TB" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/firealarm/alarms_hidden{
 	pixel_y = 26
 	},
-<<<<<<< HEAD
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/engineering)
-=======
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -10514,7 +8567,6 @@
 "TD" = (
 /turf/simulated/wall/rshull,
 /area/ship/ert/mech_bay)
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 "TF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -10523,8 +8575,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
@@ -10546,18 +8596,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/hallways)
 "TM" = (
-<<<<<<< HEAD
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled/techmaint,
-/area/ship/ert/hallways_aft)
-"TR" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced{
-	dir = 4
-=======
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
@@ -10566,7 +8604,6 @@
 "TQ" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	},
 /obj/effect/floor_decal/corner/white{
 	dir = 8
@@ -10608,8 +8645,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/teleporter)
-<<<<<<< HEAD
-=======
 "TZ" = (
 /obj/structure/grille,
 /obj/structure/window/titanium/full,
@@ -10641,14 +8676,11 @@
 /area/ship/ert/brig)
 "Uk" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/engineering)
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 "Ul" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/techmaint,
@@ -10678,7 +8710,6 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/yellow,
@@ -10742,8 +8773,6 @@
 /area/ship/ert/bridge)
 "UI" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/wall/rshull,
@@ -10764,14 +8793,10 @@
 	},
 /obj/structure/window/titanium,
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/techmaint,
-<<<<<<< HEAD
-/area/ship/ert/teleporter)
-=======
 /area/ship/ert/brig)
 "UK" = (
 /obj/structure/hull_corner/long_horiz{
@@ -10788,22 +8813,17 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/yellow{
-	d2 = 4;
 	dir = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/hallways_aft)
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 "UT" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -10842,16 +8862,12 @@
 /area/ship/ert/brig)
 "Vg" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/hallways)
 "Vh" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -10873,8 +8889,6 @@
 /area/ship/ert/engineering)
 "Vq" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
@@ -10882,17 +8896,6 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
-<<<<<<< HEAD
-/area/ship/ert/gunnery)
-"VC" = (
-/obj/machinery/power/port_gen/pacman/super/potato,
-/obj/structure/cable/green,
-/obj/machinery/light/no_nightshift,
-/obj/effect/decal/cleanable/greenglow,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/engineering)
-"VJ" = (
-=======
 /area/ship/ert/mech_bay)
 "Vx" = (
 /obj/machinery/light/no_nightshift{
@@ -10905,7 +8908,6 @@
 	name = "Armoury";
 	req_one_access = list(103)
 	},
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /obj/machinery/door/firedoor/multi_tile{
 	dir = 1
 	},
@@ -10921,8 +8923,6 @@
 /area/ship/ert/armoury_st)
 "VI" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/corner/red{
@@ -10932,34 +8932,15 @@
 /area/ship/ert/hallways_aft)
 "VJ" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-<<<<<<< HEAD
-/obj/structure/bed/pod,
-/obj/item/weapon/bedsheet/blue,
-/obj/structure/curtain/open/bed,
-/turf/simulated/floor/wood,
-/area/ship/ert/commander)
-"Wd" = (
-/obj/machinery/telecomms/relay,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/atmos)
-"Wj" = (
-/obj/machinery/light/no_nightshift{
-	dir = 8
-=======
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -10970,17 +8951,11 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/ship/ert/med)
-<<<<<<< HEAD
-"Wq" = (
-=======
 "VN" = (
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/gunnery)
 "VO" = (
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -10993,8 +8968,6 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/item/weapon/plastique,
@@ -11047,19 +9020,11 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/armoury_st)
 "WF" = (
-<<<<<<< HEAD
-/obj/machinery/pointdefense{
-	id_tag = "vonbraun_pd"
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/ship/ert/med)
-=======
 /obj/structure/hull_corner{
 	dir = 8
 	},
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/ert_ship_boat)
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 "WH" = (
 /obj/structure/closet/wardrobe/ert,
 /obj/item/modular_computer/tablet/preset/custom_loadout/elite,
@@ -11077,14 +9042,9 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/hallways_aft)
 "WO" = (
-<<<<<<< HEAD
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
-=======
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 8
 	},
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/engine)
 "WP" = (
@@ -11135,19 +9095,12 @@
 	name = "Commando"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/barracks)
-<<<<<<< HEAD
-"Xg" = (
-=======
 "WW" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -11157,11 +9110,8 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/atmos)
 "WZ" = (
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -11186,7 +9136,6 @@
 	},
 /obj/structure/window/titanium,
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -11194,8 +9143,6 @@
 /area/ship/ert/brig)
 "Xo" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -11216,26 +9163,14 @@
 /area/ship/ert/armoury_dl)
 "Xw" = (
 /turf/simulated/floor/tiled/techfloor,
-<<<<<<< HEAD
-/area/ship/ert/teleporter)
-"XB" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-=======
 /area/ship/ert/mech_bay)
 "Xz" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/engineering{
 	req_one_access = list(103)
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/dock_star)
@@ -11254,23 +9189,10 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/engine)
 "XM" = (
-<<<<<<< HEAD
-/obj/effect/map_helper/airlock/sensor/chamber_sensor,
-/obj/machinery/airlock_sensor{
-	pixel_x = 24
-	},
-/obj/effect/floor_decal/industrial/warning,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/dock_star)
-"XS" = (
-=======
 /turf/simulated/floor/reinforced/airless,
 /area/ship/ert/hallways_aft)
 "XN" = (
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -11296,8 +9218,6 @@
 /area/ship/ert/med)
 "XS" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/alarm/alarms_hidden{
@@ -11340,7 +9260,6 @@
 	},
 /obj/machinery/power/shield_generator/charged,
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/railing/grey{
@@ -11349,20 +9268,11 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/bridge)
 "Ye" = (
-<<<<<<< HEAD
-/turf/simulated/floor/reinforced/airless,
-/area/ship/ert/barracks)
-"Yk" = (
-/obj/structure/cable/yellow{
-	d2 = 2;
-	icon_state = "0-2"
-=======
 /turf/simulated/wall/rshull,
 /area/ship/ert/dock_port)
 "Yf" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	},
 /obj/machinery/meter,
 /obj/machinery/power/apc/hyper{
@@ -11382,21 +9292,15 @@
 /area/ship/ert/barracks)
 "Ys" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/hallways_aft)
 "Yt" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -11406,8 +9310,6 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -11425,15 +9327,10 @@
 /area/ship/ert/engineering)
 "Yx" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techfloor,
-<<<<<<< HEAD
-/area/ship/ert/bridge)
-=======
 /area/ship/ert/teleporter)
 "YC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -11443,29 +9340,22 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/med)
 "YK" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/white,
 /area/ship/ert/med_surg)
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 "YN" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Reactor Access";
 	req_access = list(103)
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/blast/regular/open{
@@ -11480,13 +9370,9 @@
 	dir = 10
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
@@ -11496,8 +9382,6 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/outline/red,
@@ -11521,13 +9405,9 @@
 /area/ship/ert/commander)
 "YW" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -11555,28 +9435,13 @@
 	pixel_y = -23
 	},
 /obj/effect/floor_decal/industrial/outline,
-<<<<<<< HEAD
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/med)
-"ZI" = (
-/obj/machinery/power/terminal{
-=======
 /turf/simulated/floor/tiled/white,
 /area/ship/ert/med_surg)
 "Za" = (
 /obj/structure/bed/chair/bay/shuttle{
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
-<<<<<<< HEAD
-/area/ship/ert/engineering)
-"ZL" = (
-/obj/machinery/pointdefense{
-	id_tag = "vonbraun_pd"
-	},
-/turf/simulated/floor/reinforced/airless,
-=======
 /area/shuttle/ert_ship_boat)
 "Zb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
@@ -11584,12 +9449,9 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /area/ship/ert/engine)
 "Zc" = (
 /obj/structure/table/standard,
@@ -11601,10 +9463,6 @@
 	pixel_x = -2;
 	pixel_y = -2
 	},
-<<<<<<< HEAD
-/obj/machinery/power/port_gen/pacman/mrs,
-/obj/effect/floor_decal/industrial/outline/yellow,
-=======
 /obj/item/weapon/soap{
 	pixel_x = 2;
 	pixel_y = 2
@@ -11642,7 +9500,6 @@
 "Zi" = (
 /obj/machinery/shieldwallgen,
 /obj/effect/floor_decal/industrial/outline/blue,
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/eng_storage)
 "Zo" = (
@@ -11677,12 +9534,9 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -11707,7 +9561,6 @@
 	dir = 1
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -11715,8 +9568,6 @@
 "ZK" = (
 /obj/structure/table/steel_reinforced,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
@@ -11740,8 +9591,6 @@
 /area/ship/ert/bridge)
 "ZP" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -11759,16 +9608,12 @@
 /area/ship/ert/med)
 "ZU" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/wall/shull,
 /area/ship/ert/eng_storage)
 "ZW" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -11786,8 +9631,6 @@
 /area/ship/ert/bridge)
 "ZY" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/bed/chair/bay/chair/padded/blue{
@@ -16410,13 +14253,9 @@ yz
 yz
 yz
 yz
-<<<<<<< HEAD
-Hf
-=======
 yz
 hA
 yz
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 yz
 yz
 yz
@@ -16547,29 +14386,6 @@ yz
 yz
 yz
 yz
-<<<<<<< HEAD
-lZ
-ZL
-kL
-yz
-yz
-yz
-Hf
-nX
-DN
-JW
-Hf
-nX
-DN
-JW
-Hf
-yz
-yz
-yz
-lZ
-ZL
-lZ
-=======
 yz
 yz
 yz
@@ -16591,7 +14407,6 @@ yz
 yz
 yz
 yz
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 yz
 yz
 yz
@@ -16714,27 +14529,6 @@ yz
 yz
 yz
 lZ
-<<<<<<< HEAD
-Hf
-Hf
-nX
-DN
-JW
-Hf
-uh
-et
-tL
-Hf
-uh
-et
-tL
-Hf
-nX
-DN
-JW
-Hf
-Hf
-=======
 pY
 vb
 yz
@@ -16754,7 +14548,6 @@ yz
 yz
 lZ
 pY
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 lZ
 yz
 yz
@@ -16877,27 +14670,13 @@ yz
 yz
 yz
 yz
-<<<<<<< HEAD
-Do
-Hf
-=======
 lZ
 AW
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 Hf
 yG
 EP
 JJ
 Hf
-<<<<<<< HEAD
-GI
-rA
-GI
-MK
-GI
-rA
-GI
-=======
 nX
 DN
 JW
@@ -16905,19 +14684,13 @@ AW
 nX
 DN
 JW
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 Hf
 yG
 EP
 JJ
 Hf
-<<<<<<< HEAD
-Hf
-Do
-=======
 AW
 lZ
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 yz
 yz
 yz
@@ -17039,13 +14812,8 @@ yz
 yz
 yz
 yz
-<<<<<<< HEAD
-aj
-Hf
-=======
 kX
 AW
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 Hf
 nX
 DN
@@ -17063,13 +14831,8 @@ nX
 DN
 JW
 Hf
-<<<<<<< HEAD
-Hf
-Ia
-=======
 AW
 kX
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 yz
 yz
 yz
@@ -17191,29 +14954,6 @@ yz
 yz
 yz
 yz
-<<<<<<< HEAD
-ZL
-Hf
-Hf
-ok
-rD
-ux
-zk
-CN
-Ig
-JY
-NH
-RC
-Tx
-WO
-CZ
-Of
-RO
-XH
-Hf
-Hf
-ZL
-=======
 Do
 AW
 Hf
@@ -17235,7 +14975,6 @@ uh
 Hf
 AW
 kk
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 yz
 yz
 yz
@@ -18633,33 +16372,6 @@ yz
 yz
 yz
 yz
-<<<<<<< HEAD
-wr
-DS
-yl
-tK
-Oq
-ya
-ya
-ya
-ya
-SA
-FW
-Kr
-Og
-Ed
-TM
-TM
-TM
-TM
-TM
-ya
-kh
-Gv
-nY
-DS
-wr
-=======
 cs
 DS
 DS
@@ -18685,7 +16397,6 @@ vX
 XW
 XW
 RW
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 yz
 yz
 yz
@@ -20506,35 +18217,6 @@ yz
 yz
 yz
 yz
-<<<<<<< HEAD
-ab
-Zo
-Bo
-ef
-iO
-mj
-Kk
-sz
-ZM
-Av
-us
-FD
-sH
-OS
-HZ
-FD
-Yx
-zo
-ZM
-sS
-Zv
-xC
-sW
-PS
-zc
-XG
-aV
-=======
 kO
 Ye
 ia
@@ -20562,7 +18244,6 @@ Zv
 Zv
 Zv
 GJ
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 yz
 yz
 yz
@@ -20822,17 +18503,6 @@ yz
 yz
 af
 Ye
-<<<<<<< HEAD
-Zo
-Gw
-Kk
-OU
-pg
-Kk
-lv
-ZM
-AS
-=======
 vw
 ef
 iO
@@ -20841,7 +18511,6 @@ Ye
 sz
 Kr
 Av
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 us
 jy
 Wq
@@ -20971,28 +18640,6 @@ yz
 yz
 yz
 yz
-<<<<<<< HEAD
-Ye
-yY
-lv
-Kk
-OU
-pg
-Kk
-sz
-ZM
-AZ
-FD
-FD
-KM
-OX
-KM
-FD
-ZP
-iy
-ZM
-KO
-=======
 yz
 yz
 yz
@@ -21016,7 +18663,6 @@ ZC
 uG
 sN
 Kt
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 Zv
 SI
 oO
@@ -21144,11 +18790,6 @@ cY
 Gw
 Kk
 OU
-<<<<<<< HEAD
-pg
-Kk
-lv
-=======
 kl
 Ye
 Ye
@@ -21161,7 +18802,6 @@ OW
 ZM
 ZM
 ZM
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 ZM
 ZM
 Zv
@@ -21175,7 +18815,7 @@ gs
 yz
 SX
 yz
-PZ
+yz
 yz
 yz
 yz
@@ -21571,35 +19211,6 @@ yz
 yz
 yz
 yz
-<<<<<<< HEAD
-ab
-Zo
-Gw
-Kk
-OU
-mF
-ip
-ip
-BW
-Bc
-BW
-Js
-BW
-sX
-BW
-VP
-sX
-Jf
-BW
-Br
-Br
-Br
-eI
-Zv
-ZU
-XG
-aV
-=======
 ah
 Zo
 Bo
@@ -21627,7 +19238,6 @@ EF
 AI
 XG
 uj
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 yz
 yz
 yz
@@ -22168,37 +19778,6 @@ yz
 yz
 yz
 yz
-<<<<<<< HEAD
-ab
-Zo
-an
-WH
-WH
-Jd
-mF
-so
-tH
-LC
-SF
-FR
-FR
-wl
-Pl
-xZ
-On
-FY
-UH
-nb
-ZT
-Jc
-QT
-sU
-Pq
-Pq
-ZF
-ZT
-WF
-=======
 yz
 yY
 Zo
@@ -22228,7 +19807,6 @@ Dm
 ZF
 LM
 yz
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 yz
 yz
 yz
@@ -22912,46 +20490,7 @@ yz
 yz
 yz
 ab
-<<<<<<< HEAD
-Zo
-bI
-WH
-WH
-ip
-mV
-pd
-=======
 nq
-<<<<<<< HEAD
-au
-Wo
-Wo
-AX
-eG
-aG
->>>>>>> 7f76eb5c10d... Merge pull request #12174 from Novacat/nova-basicfixes
-tH
-xt
-BU
-FR
-FR
-Md
-Pl
-Sy
-On
-FY
-On
-JZ
-ZT
-Wl
-DJ
-QT
-Pq
-Pq
-yJ
-ZT
-WF
-=======
 hS
 eX
 iX
@@ -22978,7 +20517,6 @@ kE
 go
 aV
 yz
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 yz
 yz
 yz
@@ -24086,36 +21624,6 @@ yz
 yz
 yz
 yz
-<<<<<<< HEAD
-ag
-bM
-Cx
-fx
-jQ
-np
-pM
-Cx
-yj
-WC
-YW
-HO
-kt
-ML
-Pe
-HO
-YW
-WC
-dk
-dq
-gf
-TF
-ij
-hv
-dq
-MZ
-aC
-yz
-=======
 yY
 ap
 dX
@@ -24145,7 +21653,6 @@ PA
 XQ
 TU
 rh
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 yz
 yz
 yz
@@ -24703,18 +22210,6 @@ QR
 hl
 HH
 dT
-<<<<<<< HEAD
-WC
-Zx
-nl
-pb
-nq
-ij
-MC
-dq
-MZ
-ci
-=======
 sy
 RX
 tX
@@ -24725,7 +22220,6 @@ GT
 vn
 TU
 rh
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 yz
 yz
 yz
@@ -24983,35 +22477,6 @@ yz
 yz
 yz
 yz
-<<<<<<< HEAD
-pO
-vK
-Cf
-gh
-Nq
-qP
-qz
-vK
-Ok
-WC
-Hu
-GZ
-MT
-Jx
-MT
-EG
-dT
-WC
-Zx
-nl
-aQ
-nq
-ij
-aQ
-dq
-MZ
-Jg
-=======
 yY
 dY
 ix
@@ -25039,7 +22504,6 @@ Pq
 Pq
 TU
 rh
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 yz
 yz
 yz
@@ -25166,17 +22630,6 @@ Ip
 My
 WC
 WC
-<<<<<<< HEAD
-Zx
-nl
-cO
-nq
-ij
-Mb
-dq
-MZ
-ci
-=======
 WC
 WC
 WC
@@ -25193,7 +22646,6 @@ SO
 vn
 TU
 rh
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 yz
 yz
 yz
@@ -25309,17 +22761,6 @@ yz
 yz
 yz
 yz
-<<<<<<< HEAD
-PO
-vK
-Cf
-rO
-av
-nB
-FP
-vK
-xO
-=======
 aG
 TD
 Cf
@@ -25329,17 +22770,8 @@ qP
 qz
 Cf
 Ok
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 WC
 WC
-<<<<<<< HEAD
-Zx
-nl
-NJ
-nq
-ij
-NJ
-=======
 GZ
 WC
 WC
@@ -25353,7 +22785,6 @@ aQ
 hQ
 wI
 dq
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 dq
 MZ
 Jg
@@ -25472,16 +22903,9 @@ yz
 yz
 yz
 yz
-<<<<<<< HEAD
-nr
-vK
-vK
-gF
-=======
 PO
 ee
 iz
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 rO
 ON
 qy
@@ -25621,17 +23045,6 @@ yz
 yz
 yz
 yz
-<<<<<<< HEAD
-PO
-vK
-vK
-gW
-TG
-BM
-Vq
-vK
-xO
-=======
 Om
 TD
 Cf
@@ -25641,7 +23054,6 @@ nB
 FP
 Jx
 MC
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 WC
 HO
 HO
@@ -25651,17 +23063,10 @@ Il
 HO
 HO
 WC
-<<<<<<< HEAD
-aK
-Sh
-ij
-nq
-=======
 Mx
 nl
 NJ
 TF
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 ij
 YS
 dq
@@ -25782,21 +23187,12 @@ yz
 yz
 yz
 yz
-<<<<<<< HEAD
-PO
-vK
-vK
-hj
-db
-vK
-=======
 Om
 TD
 Cf
 gF
 sF
 Vq
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 Xw
 Jx
 ML
@@ -26016,38 +23412,8 @@ yz
 yz
 yz
 yz
-<<<<<<< HEAD
-Om
-vK
-rM
-hk
-eO
-bv
-cH
-vK
-yD
-QE
-QE
-QE
-QE
-QE
-QE
-QE
-QE
-QE
-Ff
-dq
-vb
-iW
-LJ
-vb
-dq
-MZ
-aC
-=======
 "}
 (98,1,1) = {"
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 yz
 yz
 yz
@@ -26188,38 +23554,8 @@ yz
 yz
 yz
 yz
-<<<<<<< HEAD
-pO
-vK
-vK
-hj
-rr
-vK
-pr
-vK
-yX
-CH
-CH
-CH
-CH
-CH
-CH
-CH
-CH
-CH
-yX
-MZ
-dq
-ij
-ij
-dq
-MZ
-MZ
-Jg
-=======
 "}
 (99,1,1) = {"
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 yz
 yz
 yz
@@ -26364,34 +23700,6 @@ yz
 (100,1,1) = {"
 yz
 yz
-<<<<<<< HEAD
-vK
-vK
-rp
-SN
-tZ
-Bl
-vK
-ib
-za
-za
-za
-za
-za
-za
-za
-za
-za
-ib
-MZ
-dq
-jv
-ij
-dq
-MZ
-MZ
-=======
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 yz
 yz
 yz
@@ -26556,16 +23864,6 @@ yz
 yz
 yz
 yz
-<<<<<<< HEAD
-MZ
-MZ
-GY
-GY
-MZ
-MZ
-YO
-=======
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 yz
 yz
 yz
@@ -26722,15 +24020,6 @@ yz
 yz
 yz
 yz
-<<<<<<< HEAD
-MZ
-MZ
-MZ
-MZ
-MZ
-YO
-=======
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 yz
 yz
 yz
@@ -26889,14 +24178,6 @@ yz
 yz
 yz
 yz
-<<<<<<< HEAD
-Cr
-MZ
-MZ
-MZ
-YO
-=======
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 yz
 yz
 yz
@@ -27080,13 +24361,6 @@ yz
 yz
 yz
 yz
-<<<<<<< HEAD
-CR
-MZ
-MZ
-YO
-=======
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 yz
 yz
 yz
@@ -27249,12 +24523,6 @@ yz
 yz
 yz
 yz
-<<<<<<< HEAD
-ci
-MZ
-YO
-=======
->>>>>>> c55e7a1c3b... Merge pull request #14538 from KillianKirilenko/kk-vbupg
 yz
 yz
 yz

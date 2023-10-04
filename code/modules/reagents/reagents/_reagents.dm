@@ -64,7 +64,7 @@
 		return
 	if(!affects_dead && M.stat == DEAD)
 		return
-	if(!affects_robots && M.isSynthetic())
+	if(!affects_robots && M.isSynthetic() && M.synth_reag_processing) //CHOMPEdit
 		return
 	if(!istype(location))
 		return
@@ -183,6 +183,8 @@
 
 /datum/reagent/proc/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	M.bloodstr.add_reagent(id, removed)
+	if(src.id == M.species.blood_reagents)
+		M.add_chemical_effect(CE_BLOODRESTORE, 8 * removed)
 	return
 
 /datum/reagent/proc/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)

@@ -1337,6 +1337,18 @@ window "rpane"
 		saved-params = "splitter"
 		right = "outputwindow"
 		is-vert = false
+	elem "patreon"
+		type = BUTTON
+		pos = 488,0
+		size = 60x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = '#005813'
+		text-color = #FFFFFF
+		saved-params = "is-checked"
+		text = "Patreon"
+		command = "patreon"
+		group = "rpanemode"
 	elem "discord"
 		type = BUTTON
 		pos = 428,0
@@ -1500,6 +1512,24 @@ window "preferences_window"
 		anchor2 = 100,100
 		right-click = true
 		saved-params = "zoom;letterbox;zoom-mode"
+
+window "ooc_notes"
+	elem "ooc_notes"
+		type = MAIN
+		pos = 25,25
+		size = 500x600
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		is-visible = false
+		saved-params = "pos;is-minimized;is-maximized"
+		statusbar = false
+	elem "ooc_notes_panel"
+		type = BROWSER
+		pos = 0,0
+		size = 500x600
+		anchor1 = 0,0
+		anchor2 = 80,100
+		saved-params = ""
 
 window "infowindow"
 	elem "infowindow"

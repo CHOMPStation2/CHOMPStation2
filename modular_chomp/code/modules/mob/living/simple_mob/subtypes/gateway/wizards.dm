@@ -1,3 +1,10 @@
+/datum/category_item/catalogue/fauna/vrerror
+	name = "VR Creations"
+	desc = "Upon investigation of the strange creatures, they appear \
+	to be constructed of hardlight technology, with connections to common \
+	VR equipment. It is unknown what their purpose is at this time."
+	value = CATALOGUER_REWARD_MEDIUM
+
 /mob/living/simple_mob/vr
 	name = "vr creation"
 	desc = "A digital creature"
@@ -5,13 +12,14 @@
 	icon_state = "bookbat_purple"
 	icon_living = "bookbat_purple"
 	icon_dead = "bookbat_purple_dead"
+	catalogue_data = list(/datum/category_item/catalogue/fauna/vrerror)
 
 	mob_class = MOB_CLASS_ABERRATION
 
 	faction = "vr"
 
-	maxHealth = 100
-	health = 100
+	maxHealth = 50
+	health = 50
 	movement_cooldown = 1
 	unsuitable_atoms_damage = 0
 	projectiletype = /obj/item/projectile/energy/homing_bolt/wizard
@@ -109,6 +117,7 @@
 /obj/item/projectile/energy/homing_bolt/wizard/fire
 	modifier_type_to_apply = /datum/modifier/wizfire
 	modifier_duration = 6 SECONDS
+	icon_state = "fireball2"
 
 /obj/item/projectile/energy/homing_bolt/wizard/lighting
 	modifier_type_to_apply = /datum/modifier/wizfire/lighting
@@ -117,10 +126,12 @@
 /obj/item/projectile/energy/homing_bolt/wizard/poison
 	modifier_type_to_apply = /datum/modifier/wizpoison
 	modifier_duration = 6 SECONDS
+	icon_state = "green_pellet"
 
 /obj/item/projectile/energy/homing_bolt/wizard/frost
 	modifier_type_to_apply = /datum/modifier/wizpoison/frost
 	modifier_duration = 6 SECONDS
+	icon_state = "ice_2"
 
 /datum/modifier/wizfire
 	name = "wizfire"

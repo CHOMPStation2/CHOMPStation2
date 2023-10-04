@@ -148,12 +148,12 @@
 		lastJob = job
 		. += "<a href='?src=\ref[src];job_info=[rank]'>"
 		if(jobban_isbanned(user, rank))
-			if(config.usewhitelist && !check_whitelist(user))
+			if(config.usewhitelist && !check_whitelist(user)) // CHOMPedit start
 				. += "<del>[rank]</del></td><td><b> \[WHITELISTED]</b></td></tr>"
 				continue
 			else
 				. += "<del>[rank]</del></td><td><b> \[BANNED]</b></td></tr>"
-				continue
+				continue // CHOMPedit end
 		if(!job.player_old_enough(user.client))
 			var/available_in_days = job.available_in_days(user.client)
 			. += "<del>[rank]</del></td></a><td> \[IN [(available_in_days)] DAYS]</td></tr>"

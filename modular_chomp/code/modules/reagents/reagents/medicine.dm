@@ -262,6 +262,8 @@
 	scannable = 1
 	overdose = REAGENTS_OVERDOSE * 2
 	affects_dead = TRUE
+	mrate_static = TRUE
+	metabolism = 0.5
 
 /datum/reagent/souldew/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
@@ -327,21 +329,48 @@
 	M.remove_a_modifier_of_type(/datum/modifier/fire)
 
 //tier 3
-/datum/reagent/modapplying/liquidangel
+/datum/reagent/modapplying/liquidhealer
 	name = "Liquid Healer"
-	id = "liquidangel"
+	id = "liquidhealer"
 	description = "An experimental drug that mimics rapid regeneration seen in squishy creatures."
 	taste_description = "sweet"
 	reagent_state = LIQUID
 	color = "#00CCFF"
 	scannable = 1
-	overdose = REAGENTS_OVERDOSE * 0.25
-	modifier_to_add = /datum/modifier/aura/slime_heal
-	modifier_duration = 2 SECONDS
+	overdose = REAGENTS_OVERDOSE * 0.5
+	modifier_to_add = /datum/modifier/liquidhealer
+	modifier_duration = 3 SECONDS
+
+/datum/modifier/liquidhealer
+	name = "liquidhealer"
+	desc = "You are filled with an overwhelming healing."
+
+	on_created_text = "<span class='critical'>You feel your body's natural healing quick into overdrive!</span>"
+	on_expired_text = "<span class='notice'>Your body returns to normal.</span>"
+
+	incoming_healing_percent = 1.2
+
+/datum/modifier/liquidhealer/tick()
+	if(holder.stat == DEAD)
+		expire()
+
+	if(ishuman(holder)) // Robolimbs need this code sadly.
+		var/mob/living/carbon/human/H = holder
+		for(var/obj/item/organ/external/E in H.organs)
+			var/obj/item/organ/external/O = E
+			O.heal_damage(1, 1, 0, 1)
+	else
+		holder.adjustBruteLoss(-1)
+		holder.adjustFireLoss(-1)
+
+	holder.adjustToxLoss(-1)
+	holder.adjustOxyLoss(-1)
+	holder.adjustCloneLoss(-1)
+
 
 /datum/reagent/phoenixbreath
 	name = "Phoenix Breath"
-	id = "phoneixbreath"
+	id = "phoenixbreath"
 	description = "An improvement on the original soul dew chemical"
 	taste_description = "ash"
 	reagent_state = LIQUID
@@ -349,14 +378,16 @@
 	scannable = 1
 	overdose = REAGENTS_OVERDOSE
 	affects_dead = TRUE
+	mrate_static = TRUE
+	metabolism = 0.5
 
 /datum/reagent/phoenixbreath/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
 	if(M.stat == DEAD)
 		M.adjustOxyLoss(-3 * removed * chem_effective)
-		M.heal_organ_damage(3 * removed * chem_effective, 3 * removed * chem_effective)
+		M.heal_organ_damage(4 * removed * chem_effective, 4 * removed * chem_effective)
 		M.adjustToxLoss(-3 * removed * chem_effective)
 	M.adjustOxyLoss(-2 * removed * chem_effective)
-	M.heal_organ_damage(2 * removed * chem_effective, 3 * removed * chem_effective)
+	M.heal_organ_damage(4 * removed * chem_effective, 4 * removed * chem_effective)
 	M.adjustToxLoss(-2 * removed * chem_effective)
 	M.add_chemical_effect(CE_PAINKILLER, 10 * M.species.chem_strength_pain)

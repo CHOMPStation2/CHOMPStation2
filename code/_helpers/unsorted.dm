@@ -458,11 +458,16 @@ Turf and target are seperate in case you want to teleport some distance from a t
 			after_simplemob_minded.Add(M)
 			continue
 		moblist.Add(M)
+	var/list/delaylist = list()
 	for(var/mob/living/carbon/human/M in sortmob)
-		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
-			after_simplemob_minded.Add(M)
-			continue
-		moblist.Add(M)
+		if(M.low_sorting_priority && !M.client)
+			delaylist.Add(M)
+		else
+			if (!M.client && !M.disconnect_time) //ChompADD Start
+				after_simplemob_minded.Add(M)
+				continue //ChompADD End
+			moblist.Add(M)
+	moblist.Add(delaylist)
 	for(var/mob/living/carbon/brain/M in sortmob)
 		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
 			after_simplemob_minded.Add(M)
@@ -1069,7 +1074,7 @@ var/global/list/common_tools = list(
 
 
 /proc/is_wire_tool(obj/item/I)
-	if(istype(I, /obj/item/device/multitool) || I.is_wirecutter())
+	if(istype(I, /obj/item/device/multitool) || I.has_tool_quality(TOOL_WIRECUTTER))
 		return TRUE
 	if(istype(I, /obj/item/device/assembly/signaler))
 		return TRUE
@@ -1080,6 +1085,12 @@ var/global/list/common_tools = list(
 		if(/obj/item/weapon/weldingtool)
 			var/obj/item/weapon/weldingtool/WT = W
 			if(WT.isOn())
+				return 3800
+			else
+				return 0
+		if(/obj/item/weapon/tool/transforming)
+			var/obj/item/weapon/tool/transforming/TT = W
+			if(TT.possible_tooltypes[TT.current_tooltype] == TOOL_WELDER)
 				return 3800
 			else
 				return 0
@@ -1130,7 +1141,7 @@ var/global/list/common_tools = list(
 	if(W.sharp)
 		return TRUE
 	return ( \
-		W.is_screwdriver()		     				              || \
+		W.has_tool_quality(TOOL_SCREWDRIVER)		     				              || \
 		istype(W, /obj/item/weapon/pen)                           || \
 		istype(W, /obj/item/weapon/weldingtool)					  || \
 		istype(W, /obj/item/weapon/flame/lighter/zippo)			  || \

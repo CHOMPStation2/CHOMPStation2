@@ -18,11 +18,13 @@
 	var/list/vore_fullness_ex = list("stomach" = 0) // Expanded list of fullness
 	var/vore_icons = 0					// Bitfield for which fields we have vore icons for.
 	var/vore_eyes = FALSE				// For mobs with fullness specific eye overlays.
+	var/belly_size_multiplier = 1
 	var/vore_sprite_multiply = list("stomach" = FALSE, "taur belly" = FALSE)
 	var/vore_sprite_color = list("stomach" = "#000", "taur belly" = "#000")
 
 	var/list/vore_icon_bellies = list("stomach")
 	var/updating_fullness = FALSE
+	var/obj/belly/previewing_belly
 
 
 // Update fullness based on size & quantity of belly contents
@@ -33,6 +35,8 @@
 		updating_fullness = TRUE
 		spawn(2)
 		updating_fullness = FALSE
+		src.update_fullness(TRUE)
+		return
 	var/list/new_fullness = list()
 	vore_fullness = 0
 	for(var/belly_class in vore_icon_bellies)
@@ -48,12 +52,14 @@
 			new_fullness[B.undergarment_chosen + "-color"] = B.undergarment_color
 	for(var/belly_class in vore_icon_bellies)
 		new_fullness[belly_class] /= size_multiplier //Divided by pred's size so a macro mob won't get macro belly from a regular prey.
+		new_fullness[belly_class] *= belly_size_multiplier // Some mobs are small even at 100% size. Let's account for that.
 		new_fullness[belly_class] = round(new_fullness[belly_class], 1) // Because intervals of 0.25 are going to make sprite artists cry.
 		vore_fullness_ex[belly_class] = min(vore_capacity_ex[belly_class], new_fullness[belly_class])
 		vore_fullness += new_fullness[belly_class]
 	if(vore_fullness < 0)
 		vore_fullness = 0
 	vore_fullness = min(vore_capacity, vore_fullness)
+	updating_fullness = FALSE
 	return new_fullness
 
 

@@ -1,11 +1,18 @@
+//Trying to explain Jasper's attempt at a super boss
+//Phase 1 Dark Gygax but diffrent
+//Phase 2 All of it's attacks are meant to be some form of CC, with a single ion attack
+//Phase 3 Orginally was meant to be a timed phase but couldn't get the debuff to work. Instead melee based phase?
+//Phase 4 A mix of phases 1 through 3
+//Phase 5, it stands there with increased defense and shields. Bullet hell, highly rewarding if you can get melee in
+
 /mob/living/simple_mob/mechanical/mecha/imperion
 	name = "imperion"
 	icon = 'icons/mecha/mecha.dmi'
 	icon_state = "imperion"
 	icon_living = "imperion"
 	desc = "A strange precursor mecha"
-	maxHealth = 350
-	health = 350
+	maxHealth = 200
+	health = 200
 	movement_cooldown = -1
 	unsuitable_atoms_damage = 0
 	projectiletype = /obj/item/projectile/energy/gaussrifle
@@ -41,16 +48,6 @@
 			launch_microsingularity(A)
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase2/do_special_attack(atom/A)
-	. = TRUE // So we don't fire a bolt as well.
-	switch(a_intent)
-		if(I_DISARM) // Side gun
-			electric_defense(A)
-		if(I_HURT) // Rockets
-			launch_rockets(A)
-		if(I_GRAB) // Micro-singulo
-			launch_microsingularity(A)
-
-/mob/living/simple_mob/mechanical/mecha/imperion/phase3/do_special_attack(atom/A)
 	. = TRUE // So we don't fire a bolt as well.
 	switch(a_intent)
 		if(I_DISARM) // Side gun
@@ -162,33 +159,73 @@
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase3 //DPS check
 	movement_cooldown = -1
-	projectiletype = /obj/item/projectile/energy/gaussrifle
-	melee_attack_delay = 4 SECOND
+	projectiletype = null
+	melee_attack_delay = 2 SECOND
 
-	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
+	ai_holder_type = /datum/ai_holder/simple_mob/ranged/aggressive/meleeimperion
 
 	wreckage = null
 	pilot_type = /mob/living/simple_mob/mechanical/mecha/imperion/phase4
 
-	special_attack_min_range = 1
-	special_attack_max_range = 9
-	special_attack_cooldown = 15 SECONDS
+	special_attack_min_range = 3
+	special_attack_max_range = 14 //this thing will not let you recover during phase 3. It blitz you down, or you blitz it down.
+	special_attack_cooldown = 5 SECONDS
 
-/mob/living/simple_mob/mechanical/mecha/imperion/phase3/proc/electric_defense(atom/target)
+/mob/living/simple_mob/mechanical/mecha/imperion/phase3/do_special_attack(atom/A)
+	// Teleport attack.
+	if(!A)
+		to_chat(src, span("warning", "There's nothing to teleport to."))
+		return FALSE
+
+	var/list/nearby_things = range(1, A)
+	var/list/valid_turfs = list()
+
+	// All this work to just go to a non-dense tile.
+	for(var/turf/potential_turf in nearby_things)
+		var/valid_turf = TRUE
+		if(potential_turf.density)
+			continue
+		for(var/atom/movable/AM in potential_turf)
+			if(AM.density)
+				valid_turf = FALSE
+		if(valid_turf)
+			valid_turfs.Add(potential_turf)
+
+	if(!(valid_turfs.len))
+		to_chat(src, span("warning", "There wasn't an unoccupied spot to teleport to."))
+		return FALSE
+
+	var/turf/target_turf = pick(valid_turfs)
+	var/turf/T = get_turf(src)
+
+	var/datum/effect/effect/system/spark_spread/s1 = new /datum/effect/effect/system/spark_spread
+	s1.set_up(5, 1, T)
+	var/datum/effect/effect/system/spark_spread/s2 = new /datum/effect/effect/system/spark_spread
+	s2.set_up(5, 1, target_turf)
+
+
+	T.visible_message(span("notice", "\The [src] vanishes!"))
+	s1.start()
+
+	forceMove(target_turf)
+	playsound(target_turf, 'sound/effects/phasein.ogg', 50, 1)
+	to_chat(src, span("notice", "You teleport to \the [target_turf]."))
+
+	target_turf.visible_message(span("warning", "\The [src] appears!"))
+	s2.start()
+
+/datum/ai_holder/simple_mob/ranged/aggressive/meleeimperion
+	home_low_priority = TRUE
+	vision_range = 28 //cheesy Ai for absurdly aggressive phase
+
+/datum/ai_holder/simple_mob/ranged/aggressive/meleeimperion/react_to_attack()
 	var/obj/item/projectile/P = new /obj/item/projectile/forcebolt(get_turf(src))
 	P.launch_projectile(target, BP_TORSO, src)
 
-/mob/living/simple_mob/mechanical/mecha/imperion/phase3/proc/launch_rockets(atom/target)
-	var/obj/item/projectile/P = new /obj/item/projectile/energy/homing_bolt/wizard/lighting(get_turf(src))
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/mechanical/mecha/imperion/phase3/proc/launch_microsingularity(atom/target)
-	var/obj/item/projectile/P = new /obj/item/projectile/arc/radioactive(get_turf(src))
-	P.launch_projectile(target, BP_TORSO, src)
-
+//Phase four, fusion time.
 /mob/living/simple_mob/mechanical/mecha/imperion/phase4 //Starts to slow down
 	movement_cooldown = 0
-	projectiletype = /obj/item/projectile/energy/plasma/vepr
+	projectiletype = /obj/item/projectile/energy/homing_bolt
 	melee_attack_delay = 4 SECOND
 
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
@@ -198,7 +235,7 @@
 
 	special_attack_min_range = 1
 	special_attack_max_range = 9
-	special_attack_cooldown = 15 SECONDS
+	special_attack_cooldown = 12 SECONDS
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase4/proc/electric_defense(atom/target)
 	set waitfor = FALSE
@@ -225,42 +262,83 @@
 	playsound(src, 'sound/effects/turret/move2.wav', 50, 1)
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase4/proc/launch_rockets(atom/target)
-	var/obj/item/projectile/P = new /obj/item/projectile/bullet/srmrocket(get_turf(src))
-	P.launch_projectile(target, BP_TORSO, src)
+	if(!target)
+		to_chat(src, span("warning", "There's nothing to teleport to."))
+		return FALSE
+
+	var/list/nearby_things = range(1, target)
+	var/list/valid_turfs = list()
+
+	// All this work to just go to a non-dense tile.
+	for(var/turf/potential_turf in nearby_things)
+		var/valid_turf = TRUE
+		if(potential_turf.density)
+			continue
+		for(var/atom/movable/AM in potential_turf)
+			if(AM.density)
+				valid_turf = FALSE
+		if(valid_turf)
+			valid_turfs.Add(potential_turf)
+
+	if(!(valid_turfs.len))
+		to_chat(src, span("warning", "There wasn't an unoccupied spot to teleport to."))
+		return FALSE
+
+	var/turf/target_turf = pick(valid_turfs)
+	var/turf/T = get_turf(src)
+
+	var/datum/effect/effect/system/spark_spread/s1 = new /datum/effect/effect/system/spark_spread
+	s1.set_up(5, 1, T)
+	var/datum/effect/effect/system/spark_spread/s2 = new /datum/effect/effect/system/spark_spread
+	s2.set_up(5, 1, target_turf)
+
+
+	T.visible_message(span("notice", "\The [src] vanishes!"))
+	s1.start()
+
+	forceMove(target_turf)
+	playsound(target_turf, 'sound/effects/phasein.ogg', 50, 1)
+	to_chat(src, span("notice", "You teleport to \the [target_turf]."))
+
+	target_turf.visible_message(span("warning", "\The [src] appears!"))
+	s2.start()
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase4/proc/launch_microsingularity(atom/target)
-	var/obj/item/projectile/P = new /obj/item/projectile/bullet/pistol/medium/hp(get_turf(src))
-	P.launch_projectile(target, BP_TORSO, src)
+	var/turf/T = get_turf(target)
+	visible_message(span("warning", "\The [src] fires an energetic sphere into the air!"))
+	playsound(src, 'sound/weapons/Laser.ogg', 50, 1)
+	face_atom(T)
+	var/obj/item/projectile/arc/microsingulo/sphere = new(loc)
+	sphere.old_style_target(T, src)
+	sphere.fire()
+
+
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase5 //Final stand
 	icon_state = "imperion-phase"
 	icon_living = "imperion-phase"
 	icon_dead = "imperion-phase"
 	desc = "A precursor mecha on it's last legs, sparking, seeming vunerable up close"
-	movement_cooldown = 45
-	projectiletype = /obj/item/projectile/bullet/magnetic/fuelrod/tritium
-	melee_attack_delay = 4 SECOND
-	ranged_attack_delay = 1.5 SECONDS
+	movement_cooldown = 60
+	projectiletype = /obj/item/projectile/energy/homing_bolt/missile
+	ranged_attack_delay = 0.5 SECONDS
 	special_attack_min_range = 1
 	special_attack_max_range = 9
-	special_attack_cooldown = 15 SECONDS
+	special_attack_cooldown = 5 SECONDS
+	melee_attack_delay = 1 SECOND
 
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 
 	wreckage = null
 	pilot_type = null
-	var/grenade_type = /obj/item/weapon/grenade/shooter/energy/tesla
-	var/grenade_timer = 10
-	var/grenade_type2 = /obj/item/weapon/grenade/shooter/rubber
-	var/grenade_type3 = /obj/item/weapon/grenade/shooter/laserpellet
 	var/obj/item/shield_projector/shields = null
 
 	armor = list(
-				"melee"		= -300,
-				"bullet"	= 65,
-				"laser"		= 65,
-				"energy"	= 65,
-				"bomb"		= 65,
+				"melee"		= -500,
+				"bullet"	= 75,
+				"laser"		= 75,
+				"energy"	= 75,
+				"bomb"		= 75,
 				"bio"		= 100,
 				"rad"		= 100
 				)
@@ -308,53 +386,80 @@
 			/obj/item/clothing/head/psy_crown/candycrown = 60,
 			/obj/item/clothing/gloves/stamina = 60,
 			/obj/item/clothing/suit/armor/buffvest = 60,
-			/obj/item/weapon/melee/cullingcane = 60
+			/obj/item/weapon/melee/cullingcane = 60,
+			/obj/item/weapon/bluespace_harpoon = 60,
+			/obj/item/weapon/flame/lighter/supermatter/syndismzippo = 60,
+			/obj/item/weapon/gun/energy/vepr/plasma = 60,
+			/obj/item/weapon/gun/energy/medigun = 60
 			)
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase5/proc/electric_defense(atom/target)
-	set waitfor = FALSE
-	visible_message(span("warning", "\The [src] crackles with lighting!"))
-
-	var/obj/item/weapon/grenade/G = new grenade_type(get_turf(src))
-	if(istype(G))
-		G.throw_at(G.throw_range, G.throw_speed, src)
-		G.det_time = grenade_timer
-		G.activate(src)
-
-	set_AI_busy(FALSE)
+	var/turf/T = get_turf(target)
+	visible_message(span("warning", "\The [src] fires an energetic sphere into the air!"))
+	playsound(src, 'sound/weapons/Laser.ogg', 50, 1)
+	face_atom(T)
+	var/obj/item/projectile/arc/microsingulo/sphere = new(loc)
+	sphere.old_style_target(T, src)
+	sphere.fire()
+	var/obj/item/projectile/P = new /obj/item/projectile/bullet/imperionspear(get_turf(src))
+	P.launch_projectile(target, BP_TORSO, src)
+	if(prob(50))
+		var/obj/item/projectile/B = new /obj/item/projectile/bullet/imperionblaster(get_turf(src))
+		B.launch_projectile(target, BP_TORSO, src)
+	else
+		var/obj/item/projectile/A = new /obj/item/projectile/bullet/imperiontesla(get_turf(src))
+		A.launch_projectile(target, BP_TORSO, src)
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase5/proc/launch_rockets(atom/target)
-	set waitfor = FALSE
-	visible_message(span("warning", "\The [src] prepares lasers!"))
-
-	var/obj/item/weapon/grenade/G = new grenade_type2(get_turf(src))
-	if(istype(G))
-		G.throw_at(G.throw_range, G.throw_speed, src)
-		G.det_time = grenade_timer
-		G.activate(src)
-
-	set_AI_busy(FALSE)
+	var/obj/item/projectile/P = new /obj/item/projectile/bullet/imperionblaster(get_turf(src))
+	P.launch_projectile(target, BP_TORSO, src)
+	if(prob(50))
+		var/obj/item/projectile/B = new /obj/item/projectile/bullet/imperionspear(get_turf(src))
+		B.launch_projectile(target, BP_TORSO, src)
+	else
+		var/obj/item/projectile/A = new /obj/item/projectile/bullet/imperiontesla(get_turf(src))
+		A.launch_projectile(target, BP_TORSO, src)
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase5/proc/launch_microsingularity(atom/target)
 	set waitfor = FALSE
-	visible_message(span("warning", "\The [src] prepares it's machine gun!"))
 
-	var/obj/item/weapon/grenade/G = new grenade_type3(get_turf(src))
-	if(istype(G))
-		G.throw_at(G.throw_range, G.throw_speed, src)
-		G.det_time = grenade_timer
-		G.activate(src)
+	// Telegraph our next move.
+	Beam(target, icon_state = "sat_beam", time = 3.5 SECONDS, maxdistance = INFINITY)
+	visible_message(span("warning", "\The [src] deploys a missile rack!"))
+	playsound(src, 'sound/effects/turret/move1.wav', 50, 1)
+	sleep(0.5 SECONDS)
 
-	set_AI_busy(FALSE)
+	for(var/i = 1 to 3)
+		if(target) // Might get deleted in the meantime.
+			var/turf/T = get_turf(target)
+			if(T)
+				visible_message(span("warning", "\The [src] fires a rocket into the air!"))
+				playsound(src, 'sound/weapons/rpg.ogg', 70, 1)
+				face_atom(T)
+				var/obj/item/projectile/arc/explosive_rocket/rocket = new(loc)
+				rocket.old_style_target(T, src)
+				rocket.fire()
+				sleep(1 SECOND)
+
+	visible_message(span("warning", "\The [src] retracts the missile rack."))
+	playsound(src, 'sound/effects/turret/move2.wav', 50, 1)
+	var/obj/item/projectile/P = new /obj/item/projectile/bullet/imperiontesla(get_turf(src))
+	P.launch_projectile(target, BP_TORSO, src)
+	if(prob(50))
+		var/obj/item/projectile/B = new /obj/item/projectile/bullet/imperionblaster(get_turf(src))
+		B.launch_projectile(target, BP_TORSO, src)
+	else
+		var/obj/item/projectile/A = new /obj/item/projectile/bullet/imperionspear(get_turf(src))
+		A.launch_projectile(target, BP_TORSO, src)
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase5/Initialize(mapload)
 	shields = new /obj/item/shield_projector/rectangle/automatic/imperion(src)
 	return ..()
 
 /obj/item/shield_projector/rectangle/automatic/imperion
-	shield_health = 500
-	max_shield_health = 500
-	shield_regen_delay = 30 SECONDS
+	shield_health = 250
+	max_shield_health = 250
+	shield_regen_delay = 60 SECONDS
 	shield_regen_amount = 50
 	size_x = 2
 	size_y = 2
@@ -362,6 +467,91 @@
 	high_color = "#631644"
 	low_color = "#631644"
 
+//projectile time, mostly for phase five
+/obj/item/projectile/bullet/imperionspear
+	use_submunitions = 1
+	only_submunitions = 1
+	range = 0
+	embed_chance = 0
+	submunition_spread_max = 700
+	submunition_spread_min = 200
+	submunitions = list(/obj/item/projectile/energy/imperionspear = 5)
+
+/obj/item/projectile/bullet/imperionspear/on_range()
+	qdel(src)
+
+/obj/item/projectile/energy/imperionspear
+	name = "energy spear"
+	icon_state = "arcane_barrage"
+	damage = 16
+	armor_penetration = 35
+	damage_type = BURN
+	check_armour = "laser"
+	speed = 4.4
+
+	flash_strength = 0
+
+/obj/item/projectile/bullet/imperionblaster
+	use_submunitions = 1
+	only_submunitions = 1
+	range = 0
+	embed_chance = 0
+	submunition_spread_max = 1500
+	submunition_spread_min = 300
+	submunitions = list(/obj/item/projectile/energy/imperionblaster = 8)
+
+/obj/item/projectile/bullet/imperionblaster/on_range()
+	qdel(src)
+
+/obj/item/projectile/energy/imperionblaster
+	name = "energy pellet"
+	icon_state = "dark_pellet"
+	damage = 15
+	armor_penetration = 100
+	damage_type = BURN
+	check_armour = "laser"
+	speed = 4.4
+
+	flash_strength = 0
+
+/obj/item/projectile/bullet/imperiontesla
+	use_submunitions = 1
+	only_submunitions = 1
+	range = 0
+	embed_chance = 0
+	submunition_spread_max = 400
+	submunition_spread_min = 50
+	submunitions = list(/obj/item/projectile/energy/imperiontesla = 2)
+
+/obj/item/projectile/bullet/imperiontesla/on_range()
+	qdel(src)
+
+/obj/item/projectile/energy/imperiontesla
+	name = "energy sphere"
+	icon_state = "tesla_projectile"
+	damage = 25
+	armor_penetration = 50
+	damage_type = BURN
+	check_armour = "energy"
+	agony = 50
+	speed = 8.2
+
+	flash_strength = 0
+
+/obj/item/projectile/energy/homing_bolt/missile
+	name = "homing rocket"
+	icon_state = "atrocket"
+	damage = 20
+	damage_type = BURN
+	check_armour = "bullet"
+
+/obj/item/projectile/energy/homing_bolt/missile/on_hit(atom/target, blocked=0)
+	explosion(target, 0, 0, 2, 4)//No need to have a question.
+	return 1
+
+/obj/item/projectile/energy/homing_bolt/missile/throw_impact(atom/target, var/speed)
+	explosion(target, 0, 0, 2, 4)//No need to have a question.
+	qdel(src)
 
 //Cool boss visuals, auras, and me saying no to stun.
 
@@ -370,10 +560,9 @@
 	desc = "Unleashes not hit scan lasers."
 	projectile_types = list(/obj/item/projectile/energy/mob/midlaser)
 
-
+//te,porarly removing 	mob_overlay_state = "red_electricity_constant" to try and fix the visual bug
 /datum/modifier/bossbuff
 	name = "boss_buff"
-	mob_overlay_state = "red_electricity_constant"
 
 	on_created_text = "<span class='critical'>You feel an intense and overwhelming rage overtake you as you go berserk!</span>"
 	on_expired_text = "<span class='notice'>The blaze of rage inside you has ran out.</span>"

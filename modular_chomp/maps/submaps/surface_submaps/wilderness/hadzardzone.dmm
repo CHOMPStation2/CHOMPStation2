@@ -34,6 +34,10 @@
 	blocks_nonghost_incorporeal = 1
 	},
 /area/submap/Hadzardzone)
+"g" = (
+/obj/structure/prop/poicanister,
+/turf/simulated/floor/water,
+/area/submap/Hadzardzone)
 "h" = (
 /obj/structure/closet/crate/secure/loot,
 /turf/simulated/floor,
@@ -71,6 +75,7 @@
 /obj/item/weapon/spacecash/c1000,
 /obj/item/weapon/spacecash/c1000,
 /obj/item/weapon/spacecash/c1000,
+/obj/item/device/personal_shield_generator/security/strong/loaded,
 /obj/item/device/personal_shield_generator/security/strong/loaded,
 /turf/simulated/floor,
 /area/submap/Hadzardzone)
@@ -138,6 +143,7 @@
 /obj/item/weapon/storage/pill_bottle/alkysine,
 /obj/item/weapon/storage/pill_bottle/nutriment,
 /obj/item/weapon/storage/pill_bottle/osteodaxon,
+/obj/item/weapon/storage/pill_bottle/assorted,
 /turf/simulated/floor{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -183,6 +189,10 @@
 /area/submap/Hadzardzone)
 "N" = (
 /turf/simulated/mineral/ignore_mapgen,
+/area/submap/Hadzardzone)
+"P" = (
+/obj/effect/map_effect/interval/effect_emitter/smoke/shock,
+/turf/simulated/floor/water,
 /area/submap/Hadzardzone)
 "Q" = (
 /turf/template_noop,
@@ -231,6 +241,9 @@
 	oxygen = 20.7263;
 	temperature = 243.15
 	},
+/area/submap/Hadzardzone)
+"V" = (
+/turf/simulated/floor/water,
 /area/submap/Hadzardzone)
 "X" = (
 /turf/simulated/mineral/ignore_mapgen,
@@ -623,11 +636,11 @@ N
 N
 F
 F
-i
+V
 H
 H
 j
-D
+V
 F
 F
 N
@@ -659,13 +672,13 @@ N
 N
 F
 F
-D
-D
+V
+V
 H
 H
 H
-D
-D
+V
+V
 F
 F
 N
@@ -695,14 +708,14 @@ N
 N
 F
 F
-D
-D
+V
+V
 j
 H
 H
 H
-D
-D
+V
+V
 D
 F
 F
@@ -731,15 +744,15 @@ N
 N
 F
 F
-D
-D
-D
+V
+V
+V
 H
 H
 j
 H
 H
-D
+V
 D
 i
 F
@@ -767,9 +780,9 @@ a
 N
 F
 F
-x
-D
-D
+g
+V
+V
 j
 H
 H
@@ -804,9 +817,9 @@ a
 N
 F
 D
-D
-D
-D
+V
+V
+P
 H
 j
 H
@@ -841,13 +854,13 @@ X
 N
 F
 D
-D
-D
-D
+V
+V
+V
 H
 H
 H
-D
+V
 H
 H
 H
@@ -878,14 +891,14 @@ X
 N
 F
 r
-D
-D
-D
+V
+V
+V
 T
 R
-D
-i
-D
+V
+P
+V
 F
 k
 S
@@ -914,14 +927,14 @@ X
 X
 N
 F
-D
-D
-D
-D
+V
+V
+V
+V
 H
 H
 H
-D
+V
 H
 H
 H
@@ -951,10 +964,10 @@ X
 X
 N
 F
-D
-D
-x
-D
+V
+V
+g
+V
 j
 H
 H
@@ -989,9 +1002,9 @@ X
 N
 F
 F
-D
-D
-D
+V
+V
+P
 H
 j
 H
@@ -1028,14 +1041,14 @@ N
 F
 F
 D
-D
+V
 H
 H
 H
 H
 H
 H
-D
+V
 D
 u
 F
@@ -1065,14 +1078,14 @@ N
 N
 F
 F
-D
-D
+V
+V
 H
 H
 H
 j
-D
-D
+V
+V
 D
 F
 F
@@ -1103,13 +1116,13 @@ N
 N
 F
 F
-D
-D
+V
+V
 q
 H
 H
-D
-x
+V
+g
 F
 F
 N
@@ -1141,11 +1154,11 @@ N
 N
 F
 F
-i
+V
 H
 H
 j
-D
+V
 F
 F
 N

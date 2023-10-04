@@ -459,6 +459,12 @@
 	ckeywhitelist = list("hunterbirk")
 	character_name = list("Aria Blue")
 
+/datum/gear/fluff/elizabeth_conduct_medal
+	path = /obj/item/clothing/accessory/medal/conduct
+	display_name = "Elizabeth's Distinguished Conduct Medal"
+	ckeywhitelist = list("hunterbirk")
+	character_name = list("Elizabeth Bayou")
+
 /datum/gear/fluff/mercury_vopal_ring
 	path = /obj/item/clothing/gloves/ring/material/void_opal/fluff/mercury
 	display_name = "Mercury's Mate Ring"
@@ -1183,6 +1189,12 @@
 	ckeywhitelist = list ("thedavestdave")
 	character_name = list("Lucky")
 	allowed_roles = list("Chaplain")
+
+/datum/gear/fluff/lovec_gasmask
+	path = /obj/item/clothing/mask/gas/explorer
+	display_name = "Explorer's Gas Mask"
+	ckeywhitelist = list("thenewmeta")
+	character_name = list("Lovec")
 
 /datum/gear/fluff/monty_balaclava
 	path = /obj/item/clothing/mask/balaclava

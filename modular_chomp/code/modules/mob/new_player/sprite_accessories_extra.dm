@@ -193,3 +193,113 @@
 	icon_state = "normeyes"
 	body_parts = list(BP_HEAD)
 	color_blend_mode = ICON_MULTIPLY
+
+/// NEW XENOMORPH SPRITE_ACCESSORIES - Borrowed from Citadel, should blend a bit more nicely. ///
+
+/datum/sprite_accessory/marking/ch/xenomorph // This is just here to create an easy-to-follow typepath.
+	icon = 'icons/mob/human_races/markings_ch.dmi'
+	color_blend_mode = ICON_MULTIPLY
+	species_allowed = list(SPECIES_HUMAN, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE) // Anyone can use these.
+
+// LIMBS //
+
+/datum/sprite_accessory/marking/ch/xenomorph/xeno_r_arm
+	name = "Xenomorph right arm"
+	icon_state = "xeno"
+	body_parts = list(BP_R_ARM)
+
+/datum/sprite_accessory/marking/ch/xenomorph/xeno_l_arm
+	name = "Xenomorph left arm"
+	icon_state = "xeno"
+	body_parts = list(BP_L_ARM)
+
+/datum/sprite_accessory/marking/ch/xenomorph/xeno_r_leg
+	name = "Xenomorph right leg"
+	icon_state = "xeno"
+	body_parts = list(BP_R_LEG)
+
+/datum/sprite_accessory/marking/ch/xenomorph/xeno_l_leg
+	name = "Xenomorph left leg"
+	icon_state = "xeno"
+	body_parts = list(BP_L_LEG)
+
+/datum/sprite_accessory/marking/ch/xenomorph/xeno_r_hand
+	name = "Xenomorph right hand"
+	icon_state = "xeno"
+	body_parts = list(BP_R_HAND)
+
+/datum/sprite_accessory/marking/ch/xenomorph/xeno_l_hand
+	name = "Xenomorph left hand"
+	icon_state = "xeno"
+	body_parts = list(BP_L_HAND)
+
+// DIGI LEGS //
+
+/datum/sprite_accessory/marking/ch/xenomorph/digi_r_leg
+	name = "Xenomorph right leg (digitigrade)"
+	icon = 'icons/mob/human_races/markings_digi_ch.dmi'
+	icon_state = "xeno_digi"
+	digitigrade_acceptance = MARKING_DIGITIGRADE_ONLY
+	body_parts = list(BP_R_LEG, BP_R_FOOT)
+
+/datum/sprite_accessory/marking/ch/xenomorph/digi_r_leg_hidden
+	name = "Xenomorph right leg (digitigrade, hide)"
+	icon = 'icons/mob/human_races/markings_digi_ch.dmi'
+	icon_state = "xeno_digi"
+	digitigrade_acceptance = MARKING_DIGITIGRADE_ONLY
+	body_parts = list(BP_R_LEG, BP_R_FOOT)
+	hide_body_parts = list(BP_R_LEG, BP_R_FOOT)
+
+/datum/sprite_accessory/marking/ch/xenomorph/digi_l_leg
+	name = "Xenomorph left leg (digitigrade)"
+	icon = 'icons/mob/human_races/markings_digi_ch.dmi'
+	icon_state = "xeno_digi"
+	digitigrade_acceptance = MARKING_DIGITIGRADE_ONLY
+	body_parts = list(BP_L_LEG, BP_L_FOOT)
+
+/datum/sprite_accessory/marking/ch/xenomorph/digi_l_leg_hidden
+	name = "Xenomorph left leg (digitigrade, hide)"
+	icon = 'icons/mob/human_races/markings_digi_ch.dmi'
+	icon_state = "xeno_digi"
+	digitigrade_acceptance = MARKING_DIGITIGRADE_ONLY
+	body_parts = list(BP_L_LEG, BP_L_FOOT)
+	hide_body_parts = list(BP_L_LEG, BP_L_FOOT)
+
+
+// TORSOS //
+
+/datum/sprite_accessory/marking/ch/xenomorph/xeno_chest_m
+	name = "Xenomorph chest (male)"
+	icon_state = "xeno"
+	body_parts = list(BP_TORSO)
+
+/datum/sprite_accessory/marking/ch/xenomorph/xeno_chest_f
+	name = "Xenomorph chest (female)"
+	icon_state = "xeno_f"
+	body_parts = list(BP_TORSO)
+
+// HEADS //
+
+/datum/sprite_accessory/marking/ch/xenomorph/xeno_headcrest_standard
+	name = "Xenomorph headcrest (drone)"
+	icon_state = "xeno_drone"
+	body_parts = list(BP_HEAD)
+	hide_body_parts = list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/xenomorph/xeno_headcrest_royal
+	name = "Xenomorph headcrest (royal)"
+	icon_state = "xeno_royal"
+	body_parts = list(BP_HEAD)
+	hide_body_parts = list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/xenomorph/xeno_headcrest_warrior
+	name = "Xenomorph headcrest (warrior)"
+	icon_state = "xeno_warrior"
+	body_parts = list(BP_HEAD)
+	hide_body_parts = list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/xenomorph/xeno_headcrest_hollywood
+	name = "Xenomorph headcrest (hollywood)"
+	icon_state = "xeno_hollywood"
+	body_parts = list(BP_HEAD)
+	hide_body_parts = list(BP_HEAD)

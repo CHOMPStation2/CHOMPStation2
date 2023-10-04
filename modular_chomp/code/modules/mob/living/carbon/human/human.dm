@@ -2,9 +2,6 @@
 	if(!returning)
 		if(updating_fullness)
 			return
-		updating_fullness = TRUE
-		spawn(2)
-		updating_fullness = FALSE
 	var/previous_stomach_fullness = vore_fullness_ex["stomach"]
 	var/previous_taur_fullness = vore_fullness_ex["taur belly"]
 	//update_vore_tail_sprite()
@@ -53,3 +50,32 @@
 	set desc = "Toggle glasses worn icon visibility."
 	hide_glasses = !hide_glasses
 	update_inv_glasses()
+
+/mob/living/carbon/human/verb/flip_lying()
+	set name = "Flip Resting Direction"
+	set category = "Abilities"
+	set desc = "Switch your horizontal direction while prone."
+	if(isnull(resting_dir))
+		resting_dir = FALSE
+	resting_dir = !resting_dir
+	update_transform(TRUE)
+
+/mob/living/carbon/human/proc/synth_reag_toggle()
+	set name = "Toggle Reagent Processing"
+	set category = "Abilities"
+	set desc = "Toggle reagent processing as synth."
+	synth_reag_processing = !synth_reag_processing
+
+//Formally used from a paper, gave this to everyone.
+/mob/living/carbon/human/verb/create_area()
+    set name = "Create Area"
+    set desc = "Create an area in a enclosed space, making it able to be powered by an APC."
+    set category = "IC"
+
+    if(stat || world.time < last_special)
+        to_chat(usr, "<span class='warning'>You recently tried to create an area. Wait a while before using it again.</span>")
+        return
+
+    last_special = world.time + 2 SECONDS // Antispam.
+    create_new_area(usr)
+    return

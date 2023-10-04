@@ -266,6 +266,7 @@ var/global/list/edible_trash = list(/obj/item/broken_device,
 				/obj/item/weapon/coin,
 				/obj/item/clothing/ears, //chompstation addition end
 				//CHOMPedit: disabled because this is in a file we don't use /obj/item/roulette_ball
+				/obj/item/pizzabox
 				)
 
 var/global/list/contamination_flavors = list(
@@ -781,6 +782,7 @@ var/global/list/xenobio_gold_mobs_safe = list(
 										/mob/living/simple_mob/vore/bee,
 										/mob/living/simple_mob/vore/fennec,
 										/mob/living/simple_mob/vore/fennix,
+										/mob/living/simple_mob/vore/seagull,
 										/mob/living/simple_mob/vore/hippo,
 										/mob/living/simple_mob/vore/horse,
 										/mob/living/simple_mob/vore/jelly,

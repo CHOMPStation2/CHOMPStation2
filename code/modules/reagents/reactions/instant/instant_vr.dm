@@ -5,8 +5,8 @@
 	name = "sizeoxadone"
 	id = "sizeoxadone"
 	result = "sizeoxadone"
-	required_reagents = list("clonexadone" = 1, "tramadol" = 3, "phoron" = 1)
-	catalysts = list("phoron" = 5)
+	required_reagents = list("cryptobiolin" = 1, "tramadol" = 3) //CHOMPEdit: Replaced cloneadex with cryptobiolin, removed phoron
+	//catalysts = list("phoron" = 5) CHOMPedit: Please no locking my scene tool behind phoron, please and thank you.
 	result_amount = 5
 
 /decl/chemical_reaction/instant/macrocillin

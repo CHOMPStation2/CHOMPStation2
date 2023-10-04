@@ -341,6 +341,7 @@
 	flash_mod = 1.2
 	chemOD_mod = 0.9
 
+	blood_reagents = "copper"
 	bloodloss_rate = 1.5
 
 	ambiguous_genders = TRUE
@@ -423,6 +424,7 @@
 	flash_mod = 2
 	flash_burn = 15 //flashing a zaddat probably counts as police brutality
 	metabolic_rate = 0.7 //did u know if your ancestors starved ur body will actually start in starvation mode?
+	item_slowdown_mod = 0.30 //CHOMPedit: They can actually wear their living-required spacesuits without enormous slowdown now.
 	gluttonous = 1
 	taste_sensitivity = TASTE_SENSITIVE
 	num_alternate_languages = 3

@@ -84,13 +84,13 @@
 	name = "Delta Mines"
 
 /area/awaymission/mol/realitycore
-	name = "Realitycore"
+	name = "Void"
 
 /area/awaymission/mol/audiotorium
 	name = "Audiotorium"
 
 /area/awaymission/mol/conveyorcontrol
-	name = "Conveyor Control Room"
+	name = "Beta Control Room"
 
 /area/awaymission/mol/dorm
 	name = "Dorm"
@@ -101,6 +101,11 @@
 /area/awaymission/mol/securitycheckpoint
 	name = "Security Checkpoint"
 
+/area/awaymission/mol/engi
+	name = "Lab Enginering"
+
+/area/awaymission/mol/hardlightentrance
+	name = "Hardlight Zone Entrance"
 
 /obj/structure/prop/blackbox/maddnesslab
 	catalogue_data = list(/datum/category_item/catalogue/information/blackbox/maddnesslab)

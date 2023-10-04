@@ -144,7 +144,7 @@ Talon jumpsuit
 
 //Altevian Uniforms
 /datum/gear/uniform/altevian
-	description = "An extremely comfortable set of clothing that's made to help people handle their day to day work around the fleets with little to no discomfort."
+	description = "A comfortable set of clothing for people to handle their day to day work around the fleets with little to no discomfort."
 	display_name = "altevian uniform selection"
 
 /datum/gear/uniform/altevian/New()
@@ -213,3 +213,32 @@ Talon jumpsuit
 /datum/gear/uniform/stripeddungarees
 	display_name = "striped dungarees"
 	path = /obj/item/clothing/under/stripeddungarees
+
+// recolorable flame dress
+
+/datum/gear/uniform/cdress_fire
+	display_name = "flame dress, colorable"
+	path = /obj/item/clothing/under/dress/cdress_fire
+
+/datum/gear/uniform/cdress_fire/New()
+	..()
+	gear_tweaks += gear_tweak_free_color_choice
+
+
+// recolorable yellow dress
+/datum/gear/uniform/cbridesmaid
+	display_name = "fancy dress, colorable"
+	path = /obj/item/clothing/under/dress/cbridesmaid
+
+/datum/gear/uniform/cbridesmaid/New()
+	..()
+	gear_tweaks += gear_tweak_free_color_choice
+
+// recolorable orange swoop dress
+/datum/gear/uniform/cswoopdress
+	display_name = "swoop dress, recolorable"
+	path = /obj/item/clothing/under/dress/cswoopdress
+
+/datum/gear/uniform/cswoopdress/New()
+	..()
+	gear_tweaks += gear_tweak_free_color_choice

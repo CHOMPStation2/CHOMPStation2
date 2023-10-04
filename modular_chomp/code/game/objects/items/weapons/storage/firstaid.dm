@@ -14,37 +14,37 @@
 
 /obj/item/weapon/storage/pill_bottle/neotane
 	name = "pill bottle (neo kelotane)"
-	desc = "Contains experimental pills."
+	desc = "Contains experimental pills, good for soothing burns but tends to mangle the flesh."
 	starts_with = list(/obj/item/weapon/reagent_containers/pill/neotane = 7)
 	wrapper_color = COLOR_ORANGE
 
 /obj/item/weapon/storage/pill_bottle/burncard
 	name = "pill bottle (burning bicard)"
-	desc = "Contains experimental pills."
+	desc = "Contains experimental pills, good for sealing cuts and bruises but is quite searing."
 	starts_with = list(/obj/item/weapon/reagent_containers/pill/burncard = 7)
 	wrapper_color = COLOR_RED
 
 /obj/item/weapon/storage/pill_bottle/flamecure
 	name = "pill bottle (Flame Cure)"
-	desc = "Contains experimental pills."
+	desc = "Contains experimental pills, good for searing shut internal wounds."
 	starts_with = list(/obj/item/weapon/reagent_containers/pill/flamecure = 7)
 	wrapper_color = COLOR_ORANGE
 
 /obj/item/weapon/storage/pill_bottle/juggernog
 	name = "pill bottle (juggernog)"
-	desc = "Contains experimental pills."
+	desc = "Contains experimental pills good for letting folks keep standing underneath relentless pummeling."
 	starts_with = list(/obj/item/weapon/reagent_containers/pill/juggernog = 7)
 	wrapper_color = COLOR_RED
 
 /obj/item/weapon/storage/pill_bottle/curea
 	name = "pill bottle (curea)"
-	desc = "Contains experimental pills."
+	desc = "Contains experimental pills, very effective for frostfly and poisonfly hunting."
 	starts_with = list(/obj/item/weapon/reagent_containers/pill/curea = 7)
 	wrapper_color = COLOR_BLUE
 
 /obj/item/weapon/storage/pill_bottle/souldew
 	name = "pill bottle (soul dew)"
-	desc = "Contains experimental pills."
+	desc = "Contains experimental pills, for feeding the dead."
 	starts_with = list(/obj/item/weapon/reagent_containers/pill/souldew = 7)
 	wrapper_color = COLOR_GREEN
 
@@ -52,14 +52,14 @@
 
 	name = "pill bottle (purifying agent)"
 
-	desc = "Contains experimental pills."
+	desc = "Contains experimental pills, having application as an anti-toxin."
 	starts_with = list(/obj/item/weapon/reagent_containers/pill/purifyingagent = 7)
 
 	wrapper_color = COLOR_GREEN
 
 //Pills
 /obj/item/weapon/reagent_containers/pill/neotane
-	name = "Neo Kelotane (15u)"
+	name = "Neo Kelotane (10u)"
 	desc = "An experimental pill."
 
 	icon_state = "pill2"

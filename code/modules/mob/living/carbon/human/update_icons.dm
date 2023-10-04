@@ -124,7 +124,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	//Do any species specific layering updates, such as when hiding.
 	update_icon_special()
 
-/mob/living/carbon/human/update_transform()
+/mob/living/carbon/human/update_transform(var/instant = FALSE) //CHOMPEdit
 	/* VOREStation Edit START
 	// First, get the correct size.
 	var/desired_scale_x = icon_scale_x
@@ -143,9 +143,9 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	var/desired_scale_y = size_multiplier * icon_scale_y
 	desired_scale_x *= species.icon_scale_x
 	desired_scale_y *= species.icon_scale_y
-	center_offset = species.center_offset //CHOMPEdit
-	if(offset_override) //CHOMPEdit
-		center_offset = 0 //CHOMPEdit
+	var/cent_offset = species.center_offset //CHOMPEdit
+	if(fuzzy || offset_override || dir == EAST || dir == WEST) //CHOMPEdit
+		cent_offset = 0 //CHOMPEdit
 	vis_height = species.icon_height
 	appearance_flags |= PIXEL_SCALE
 	if(fuzzy)
@@ -166,28 +166,30 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		if(tail_style?.can_loaf && resting) // Only call these if we're resting?
 			update_tail_showing()
 			M.Scale(desired_scale_x, desired_scale_y)
+			M.Translate(cent_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1)) //CHOMPEdit
 		else
-			var/randn = rand(1, 2)
-			if(randn <= 1) // randomly choose a rotation
+			M.Scale(desired_scale_x, desired_scale_y)
+			if(isnull(resting_dir))
+				resting_dir = pick(FALSE, TRUE)
+			if(resting_dir)
+				M.Translate((1 / desired_scale_x * -4) + (desired_scale_x * cent_offset), 0)
 				M.Turn(-90)
 			else
+				M.Translate((1 / desired_scale_x * 4) - (desired_scale_x * cent_offset), 0)
 				M.Turn(90)
-			if(species.icon_height == 64)
-				M.Translate(13,-22)
-			else
-				M.Translate(1,-6)
-			M.Scale(desired_scale_y, desired_scale_x)
-		M.Translate(center_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1)) //CHOMPEdit
 		// CHOMPEdit End
 		layer = MOB_LAYER -0.01 // Fix for a byond bug where turf entry order no longer matters
 	else
 		M.Scale(desired_scale_x, desired_scale_y)//VOREStation Edit
-		M.Translate(center_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1)) //CHOMPEdit
+		M.Translate(cent_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1)) //CHOMPEdit
 		if(tail_style?.can_loaf) // VOREStation Edit: Taur Loafing
 			update_tail_showing() // VOREStation Edit: Taur Loafing
 		layer = MOB_LAYER // Fix for a byond bug where turf entry order no longer matters
 
-	animate(src, transform = M, time = anim_time)
+	if(instant) //CHOMPEdit Start
+		transform = M
+	else
+		animate(src, transform = M, time = anim_time) //CHOMPEdit End
 	update_icon_special() //May contain transform-altering things
 
 //DAMAGE OVERLAYS
@@ -277,7 +279,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 			if (species.selects_bodytype != SELECTS_BODYTYPE_FALSE)
 				var/headtype = GLOB.all_species[species.base_species]?.has_limbs[BP_HEAD]
 				var/obj/item/organ/external/head/headtypepath = headtype["path"]
-				if (headtypepath)
+				if (headtypepath && !head.eye_icon_override)
 					head.eye_icon = initial(headtypepath.eye_icon)
 					head.eye_icon_location = initial(headtypepath.eye_icon_location)
 			icon_key += "[head.eye_icon]"
@@ -333,7 +335,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 				pixel_y = tail_style.mob_offset_y
 				default_pixel_x = tail_style.mob_offset_x
 				default_pixel_y = tail_style.mob_offset_y
-			
+
 			//ChompEDIT START
 			//icon_key addition for digitigrade switch
 			if(digitigrade && (part.organ_tag == BP_R_LEG  || part.organ_tag == BP_L_LEG || part.organ_tag == BP_R_FOOT || part.organ_tag == BP_L_FOOT))

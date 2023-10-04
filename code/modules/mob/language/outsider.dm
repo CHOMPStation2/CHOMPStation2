@@ -82,18 +82,19 @@
 	ask_verb = "hisses"
 	exclaim_verb = "hisses"
 	key = "u"
-	flags = RESTRICTED
+// 	flags = RESTRICTED // CHOMPedit: Anyone can use it.
 	syllables = list("sss","sSs","SSS")
 
 /datum/language/xenos
 	name = "Hivemind"
-	desc = "Some aliens have the strange ability to commune over a psychic hivemind." //CHOMPedit
+	desc = "A psychic link permitting members of a xenomorph hive to communicate over enormous distances. Requires a specialized organ only found in xenomorph specimens." //CHOMPedit
+	machine_understands = 0 // CHOMPedit: Borgs and AI can't figure this one out.
 	speech_verb = "hisses"
 	ask_verb = "hisses"
 	exclaim_verb = "hisses"
 	colour = "alien"
 	key = "a"
-	flags = RESTRICTED | HIVEMIND
+	flags = /*RESTRICTED |*/ HIVEMIND // CHOMPedit: Restricted makes it inaccessible.
 
 /datum/language/xenos/check_special_condition(var/mob/other)
 

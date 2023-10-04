@@ -137,3 +137,96 @@
   - rscadd: Custom URL link for examine text
   Verkister:
   - bugfix: Fixed Big Leggies belly sprites.
+2023-08-14:
+  FirstSgtDan:
+  - rscadd: Added a box of Pilot NIFsoft to Sling Carrier exploration briefing room.
+  - rscadd: 'tweak: Rearranged boxes on the table with death alarms to fit the new
+      box.'
+  Seris02:
+  - bugfix: fixes up the transparency/marking customization toggling in modular code
+  Upstream:
+  - refactor: Changed borg/dogborg system entirely. Dogborg sprites are now merged
+      with normal borg modules.
+  - refactor: Puppy jaws and crowbar are merged
+  - refactor: All borgs have belly modules now, not just dogborgs
+  - refactor: All borgs have boop modules
+  - refactor: Pounce is now a emag / scrambled equip item
+  - refactor: Boozerhound belly color customisation moved to 'Customise appearance'
+      verb
+  - rscadd: More vore screen overlays
+  - rscadd: Automated job/staff request in fax machines
+  Verkister:
+  - bugfix: Actually fixed Big Leggies belly sprites.
+  kcin2001:
+  - rscadd: Readd all chomp-specific borg changes to the new overhauled code
+2023-08-15:
+  FoxglovePurpur:
+  - qol: Adds the ability to lock the Shadekin Dorm Rooms
+  - imageadd: Adds locked open door sprites to TGMC Angled doors.
+  - rscdel: Removes nonfunctional Haste, Minor trait.
+  Verkister:
+  - bugfix: Fixed sect drone taur bellysprites.
+  - rscadd: Added recycling feature for vorebellies (found in options tab). Produces
+      mixed matter piles that can be recycled in cargo/autolathes. (mechanically similar
+      to trash grinder output stuff)
+  - qol: Cargo trash grinder now merges existing matter piles on the output tile instead
+      of spawning a new one for each item.
+  - bugfix: Fixed cargo trash grinder ignoring sheet amount on stack items.
+2023-08-16:
+  TheCaramelion:
+  - rscadd: 55 sprites for digitigrade legs for the neo uniforms
+  - rscadd: neo_gorka sprites for each department
+  - qol: Rearranged sprites to follow mob.dmi order
+  Upstream:
+  - rscadd: Seagull mob
+2023-08-17:
+  TheCaramelion:
+  - rscadd: Sprites for uniforms with jeans for all the departments.
+  - rscadd: Sprites for the a variety of pants and their alternative versions.
+  - qol: Revamped the galoshes sprite.
+  - bugfix: Misaligned sprites on some of the uniforms.
+  Verkister:
+  - bugfix: Fixed throw vore mobvore prey pref check being in wrong place and bricking
+      the feature for mob preds.
+2023-08-20:
+  TheCaramelion:
+  - rscadd: Digitigrade sprites for a variety of uniforms
+  - rscadd: Digitigrade sprites for some of the skirts and dresses
+  - qol: Fixed some misaligned and sprite mistakes.
+  Upstream:
+  - rscadd: Scugs can now have hats. Click with hat to put on, click with grab intent
+      to remove.
+  Verkister:
+  - bugfix: Fixed borg nutrition recharge stuff.
+2023-08-22:
+  Upstream:
+  - rscadd: Fox and kitsune taurs
+  - qol: modernized pray input dialog
+  - qol: prayer message filter added to vchat
+  - admin: enables pray logging
+2023-08-23:
+  FluffMedic:
+  - maptweak: the hadzard zone POI areas have better placed smoke clouds, and better
+      loot.
+  Upstream:
+  - rscadd: Adds food-vore (putting micros in food-objects)
+  - rscadd: vwag ringtail
+  - rscadd: raccoon tail
+  tacoguy7765093:
+  - maptweak: VR map improvements
+2023-08-25:
+  Upstream:
+  - bugfix: fixes 'bad href token' message when trying to view a new fax
+2023-08-27:
+  Verkister:
+  - qol: New and improved wormborg sprites with wrecks and bulges.
+  - bugfix: Fixed borgs spawning with extra nutrition for roundstart overcharge.
+  - bugfix: Fixed borg belly icons not working with our vorebelly icon system.
+2023-08-29:
+  Seris02:
+  - bugfix: container sounds now correctly play
+  Verkister:
+  - rscadd: Added Slippery Reflexes trait.
+2023-08-31:
+  Aroliacue:
+  - rscadd: Ported over some new Xenomorph markings and backplates from Citadel.

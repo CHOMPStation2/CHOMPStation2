@@ -108,14 +108,14 @@
 	name = "curea"
 	id = "curea"
 	result = "curea"
-	required_reagents = list("anti_toxin" = 1, "adranol" = 1, "inaprovaline" = 1, "carbon" = 1)
+	required_reagents = list("spaceacillin" = 1, "adranol" = 1, "inaprovaline" = 1, "iron" = 1)
 	result_amount = 4
 
 //tier 3
-/decl/chemical_reaction/instant/liquidangel
-	name = "liquidangel"
-	id = "liquidangel"
-	result = "liquidangel"
+/decl/chemical_reaction/instant/liquidhealer
+	name = "liquidhealer"
+	id = "liquidhealer"
+	result = "liquidhealer"
 	required_reagents = list("bicard" = 1, "kelotane" = 1, "liquidlife" = 1, "carpotoxin" = 1, "quadcord" = 1, "cryptobiolin" = 1)
 	result_amount = 6
 

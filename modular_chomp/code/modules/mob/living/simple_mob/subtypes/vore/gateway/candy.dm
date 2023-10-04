@@ -1,3 +1,13 @@
+//Cataloguer things
+/datum/category_item/catalogue/fauna/livingcandy
+	name = "Living Candy"
+	desc = "Upon investigation of the strange creatures, a mix of \
+	promethean biology alongside various candies can be found. The purpose \
+	of such a creation is unknown but it seems to function at a middle ground \
+	between slimes and prometheans. Lacking the full sentience of prometheans  \
+	but their presence bolstering others of their kind."
+	value = CATALOGUER_REWARD_MEDIUM
+
 //Someone remind me to get someone to make actual sprites for this things.
 /mob/living/simple_mob/vore/candy
 	name = "candy critter"
@@ -6,14 +16,15 @@
 	icon_state = "drone0"
 	icon_living = "drone0"
 	icon_dead = "drone0"
+	catalogue_data = list(/datum/category_item/catalogue/fauna/livingcandy)
 
 	mob_class = MOB_CLASS_ABERRATION
 	ai_holder_type = /datum/ai_holder/simple_mob/melee
 
 	faction = "candy"
 
-	maxHealth = 50
-	health = 50
+	maxHealth = 25
+	health = 25
 	movement_cooldown = 2
 	melee_attack_delay = 3 SECOND
 	can_be_drop_prey = TRUE
@@ -32,7 +43,8 @@
 
 	can_be_drop_prey = TRUE //CHOMP Add
 
-/mob/living/simple_mob/vore/candy/Login()
+//bluenom
+/mob/living/simple_mob/vore/candy/bluecabold/Login()
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
@@ -40,19 +52,149 @@
 	verbs |= /mob/living/proc/toggle_rider_reins
 	movement_cooldown = 1
 
-/mob/living/simple_mob/vore/candy/MouseDrop_T(mob/living/M, mob/living/user)
+/mob/living/simple_mob/vore/candy/bluecabold/MouseDrop_T(mob/living/M, mob/living/user)
 	return
 
-/mob/living/simple_mob/vore/candy/init_vore()
+/mob/living/simple_mob/vore/candy/bluecabold/init_vore()
 	if(!voremob_loaded)
 		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
-	B.desc = "The fearsome preadtor gets a firm grip upon you, before dunking you into it's maw, then with a powerful swift gulp you're sent tumbling into it's stomach.."
+	B.desc = "The fearsome predator gets a firm grip upon you, before dunking you into it's maw, then with a powerful swift gulp you're sent tumbling into it's stomach."
 
 	B.emote_lists[DM_HOLD] = list(
-		"Your surroundings are momentarily filled with tour predator's pleased rumbling, its hands stroking over the taut swell you make in its belly.",)
+		"Your surroundings are momentarily filled with your predator's pleased rumbling, its hands stroking over the taut swell you make in its belly.",)
+
+	B.emote_lists[DM_DIGEST] = list(
+		"Every clench of the predator's stomach grinds powerful digestive fluids into your body, forcibly churning away your strength!")
+
+//rednom
+/mob/living/simple_mob/vore/candy/redcabold/Login()
+	. = ..()
+	if(!riding_datum)
+		riding_datum = new /datum/riding/simple_mob(src)
+	verbs |= /mob/living/simple_mob/proc/animal_mount
+	verbs |= /mob/living/proc/toggle_rider_reins
+	movement_cooldown = 1
+
+/mob/living/simple_mob/vore/candy/redcabold/MouseDrop_T(mob/living/M, mob/living/user)
+	return
+
+/mob/living/simple_mob/vore/candy/redcabold/init_vore()
+	if(!voremob_loaded)
+		return
+	.=..()
+	var/obj/belly/B = vore_selected
+	B.name = "stomach"
+	B.desc = "The fearsome predator gets a firm grip upon you, before dunking you into it's maw, then with a powerful swift gulp you're sent tumbling into it's stomach."
+
+	B.emote_lists[DM_HOLD] = list(
+		"Your surroundings are momentarily filled with your predator's pleased rumbling, its hands stroking over the taut swell you make in its belly.",)
+
+	B.emote_lists[DM_DIGEST] = list(
+		"Every clench of the predator's stomach grinds powerful digestive fluids into your body, forcibly churning away your strength!")
+
+//yellow
+/mob/living/simple_mob/vore/candy/yellowcabold/Login()
+	. = ..()
+	if(!riding_datum)
+		riding_datum = new /datum/riding/simple_mob(src)
+	verbs |= /mob/living/simple_mob/proc/animal_mount
+	verbs |= /mob/living/proc/toggle_rider_reins
+	movement_cooldown = 1
+
+/mob/living/simple_mob/vore/candy/yellowcabold/MouseDrop_T(mob/living/M, mob/living/user)
+	return
+
+/mob/living/simple_mob/vore/candy/yellowcabold/init_vore()
+	if(!voremob_loaded)
+		return
+	.=..()
+	var/obj/belly/B = vore_selected
+	B.name = "stomach"
+	B.desc = "The fearsome predator gets a firm grip upon you, before dunking you into it's maw, then with a powerful swift gulp you're sent tumbling into it's stomach."
+
+	B.emote_lists[DM_HOLD] = list(
+		"Your surroundings are momentarily filled with your predator's pleased rumbling, its hands stroking over the taut swell you make in its belly.",)
+
+	B.emote_lists[DM_DIGEST] = list(
+		"Every clench of the predator's stomach grinds powerful digestive fluids into your body, forcibly churning away your strength!")
+
+//orange
+/mob/living/simple_mob/vore/candy/orangecabold/Login()
+	. = ..()
+	if(!riding_datum)
+		riding_datum = new /datum/riding/simple_mob(src)
+	verbs |= /mob/living/simple_mob/proc/animal_mount
+	verbs |= /mob/living/proc/toggle_rider_reins
+	movement_cooldown = 1
+
+/mob/living/simple_mob/vore/candy/orangecabold/MouseDrop_T(mob/living/M, mob/living/user)
+	return
+
+/mob/living/simple_mob/vore/candy/orangecabold/init_vore()
+	if(!voremob_loaded)
+		return
+	.=..()
+	var/obj/belly/B = vore_selected
+	B.name = "stomach"
+	B.desc = "The fearsome predator gets a firm grip upon you, before dunking you into it's maw, then with a powerful swift gulp you're sent tumbling into it's stomach."
+
+	B.emote_lists[DM_HOLD] = list(
+		"Your surroundings are momentarily filled with your predator's pleased rumbling, its hands stroking over the taut swell you make in its belly.",)
+
+	B.emote_lists[DM_DIGEST] = list(
+		"Every clench of the predator's stomach grinds powerful digestive fluids into your body, forcibly churning away your strength!")
+
+//purplenom
+/mob/living/simple_mob/vore/candy/purplecabold/Login()
+	. = ..()
+	if(!riding_datum)
+		riding_datum = new /datum/riding/simple_mob(src)
+	verbs |= /mob/living/simple_mob/proc/animal_mount
+	verbs |= /mob/living/proc/toggle_rider_reins
+	movement_cooldown = 1
+
+/mob/living/simple_mob/vore/candy/purplecabold/MouseDrop_T(mob/living/M, mob/living/user)
+	return
+
+/mob/living/simple_mob/vore/candy/purplecabold/init_vore()
+	if(!voremob_loaded)
+		return
+	.=..()
+	var/obj/belly/B = vore_selected
+	B.name = "stomach"
+	B.desc = "The fearsome predator gets a firm grip upon you, before dunking you into it's maw, then with a powerful swift gulp you're sent tumbling into it's stomach."
+
+	B.emote_lists[DM_HOLD] = list(
+		"Your surroundings are momentarily filled with your predator's pleased rumbling, its hands stroking over the taut swell you make in its belly.",)
+
+	B.emote_lists[DM_DIGEST] = list(
+		"Every clench of the predator's stomach grinds powerful digestive fluids into your body, forcibly churning away your strength!")
+
+//marshmellownom
+/mob/living/simple_mob/vore/candy/marshmellowserpent/Login()
+	. = ..()
+	if(!riding_datum)
+		riding_datum = new /datum/riding/simple_mob(src)
+	verbs |= /mob/living/simple_mob/proc/animal_mount
+	verbs |= /mob/living/proc/toggle_rider_reins
+	movement_cooldown = 1
+
+/mob/living/simple_mob/vore/candy/marshmellowserpent/MouseDrop_T(mob/living/M, mob/living/user)
+	return
+
+/mob/living/simple_mob/vore/candy/marshmellowserpent/init_vore()
+	if(!voremob_loaded)
+		return
+	.=..()
+	var/obj/belly/B = vore_selected
+	B.name = "stomach"
+	B.desc = "The fearsome predator gets a firm grip upon you, before dunking you into it's maw, then with a powerful swift gulp you're sent tumbling into it's stomach."
+
+	B.emote_lists[DM_HOLD] = list(
+		"Your surroundings are momentarily filled with your predator's pleased rumbling, its hands stroking over the taut swell you make in its belly.",)
 
 	B.emote_lists[DM_DIGEST] = list(
 		"Every clench of the predator's stomach grinds powerful digestive fluids into your body, forcibly churning away your strength!")
@@ -62,10 +204,10 @@
 	desc = "A creature made of candy"
 	icon_state = "blue"
 	icon_living = "blue"
-	icon_dead = "blue"
+	icon_dead = "blue_dead"
 
-	maxHealth = 50
-	health = 50
+	maxHealth = 25
+	health = 25
 
 	melee_damage_lower = 7
 	melee_damage_upper = 12
@@ -86,10 +228,10 @@
 	desc = "A creature made of candy"
 	icon_state = "red"
 	icon_living = "red"
-	icon_dead = "red"
+	icon_dead = "red_dead"
 
-	maxHealth = 125
-	health = 125
+	maxHealth = 82
+	health = 82
 
 	melee_damage_lower = 2
 	melee_damage_upper = 2
@@ -115,10 +257,10 @@
 	desc = "A creature made of candy"
 	icon_state = "yellow"
 	icon_living = "yellow"
-	icon_dead = "yellow"
+	icon_dead = "yellow_dead"
 
-	maxHealth = 50
-	health = 50
+	maxHealth = 25
+	health = 25
 
 	melee_damage_lower = 8
 	melee_damage_upper = 15
@@ -139,7 +281,7 @@
 	desc = "A creature made of candy"
 	icon_state = "orange"
 	icon_living = "orange"
-	icon_dead = "orange"
+	icon_dead = "orange_dead"
 
 	maxHealth = 50
 	health = 50
@@ -163,10 +305,10 @@
 	desc = "A creature made of candy"
 	icon_state = "purple"
 	icon_living = "purple"
-	icon_dead = "purple"
+	icon_dead = "purple_dead"
 
-	maxHealth = 50
-	health = 50
+	maxHealth = 25
+	health = 25
 
 	melee_damage_lower = 7
 	melee_damage_upper = 12
@@ -187,12 +329,12 @@
 	desc = "A creature made of candy"
 	icon_state = "marshmellow"
 	icon_living = "marshmellow"
-	icon_dead = "marshmellow"
+	icon_dead = "marshmellow_dead"
 
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged/kiting
 
-	maxHealth = 50
-	health = 50
+	maxHealth = 25
+	health = 25
 
 	melee_damage_lower = 4
 	melee_damage_upper = 8

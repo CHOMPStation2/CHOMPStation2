@@ -192,8 +192,8 @@
 
 	var/damage = W.force / 4.0
 
-	if(istype(W, /obj/item/weapon/weldingtool))
-		var/obj/item/weapon/weldingtool/WT = W
+	if(W.has_tool_quality(TOOL_WELDER))
+		var/obj/item/weapon/weldingtool/WT = W.get_welder()
 
 		if(WT.remove_fuel(0, user))
 			damage = 15
@@ -223,6 +223,12 @@
 	if(exposed_temperature > 300 + T0C)
 		health -= 5
 		healthcheck()
+
+// CHOMPedit start - Smaller-ranged nodes for Xenomorph Hybrids.
+/obj/effect/alien/weeds/node/weak
+	light_range = 2
+	node_range = 1
+// CHOMPedit end.
 
 #undef NODERANGE
 #undef WEED_NORTH_EDGING

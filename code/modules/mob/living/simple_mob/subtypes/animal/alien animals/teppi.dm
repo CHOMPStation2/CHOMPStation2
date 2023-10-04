@@ -124,7 +124,7 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 	attack_sound = 'sound/voice/teppi/roar.ogg' // make a better one idiot
 	friendly = list("snoofs", "nuzzles", "nibbles", "smooshes on")
 
-	ai_holder_type = /datum/ai_holder/simple_mob/vore/micro_hunter
+	ai_holder_type = /datum/ai_holder/simple_mob/teppi
 
 	mob_size = MOB_LARGE
 
@@ -174,7 +174,7 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 	B.name = "stomach"
 	B.desc = "The heat of the roiling flesh around you bakes into you immediately as you’re cast into the gloom of a Teppi’s primary gastric chamber. The undulations are practically smothering, clinging to you and grinding you all over as the Teppi continues about its day. The walls are heavy against you, so it’s really difficult to move at all, while the heart of this creature pulses rhythmically somewhere nearby, and you can feel the throb of its pulse in the doughy squish pressing up against you. Your figure sinks a ways into the flesh as it presses in, wrapping limbs up between countless slick folds and kneading waves. It’s not long before you’re positively soaked in a thin layer of slime as you’re rocked and squeezed and jostled in the stomach of your captor."
 	B.mode_flags = 40
-	B.belly_fullscreen = "yet_another_tumby"
+//	B.belly_fullscreen = "yet_another_tumby" //Chompedit - Belly Fullscreen change
 	B.digest_brute = 0.05
 	B.digest_burn = 0.05
 	B.digestchance = 5
@@ -304,7 +304,7 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 	p.contamination_flavor = "Wet"
 	p.contamination_color = "grey"
 	p.item_digest_mode = IM_HOLD
-	p.belly_fullscreen = "yet_another_tumby"
+//	p.belly_fullscreen = "yet_another_tumby" //Chompedit - Belly Fullscreen change
 	p.fancy_vore = 1
 	p.vore_verb = "nyomp"
 	friend_zone = p
@@ -860,17 +860,17 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 		affinity[person.real_name] = -100	//Don't hold a grudge though.
 
 /datum/say_list/teppi
-	speak = list("Gyooh~", "Gyuuuh!", "Gyuh?", "Gyaah...", "Iuuuuhh.", "Uoounh!", "GyoooOOOOoooh!", "Gyoh~", "Gyouh~")
+	speak = list("Gyooh~", "Gyuuuh!", "Gyuh?", "Gyaah...", "Iuuuuhh.", "Uoounh!", "GyoooOOOOoooh!", "Gyoh~", "Gyouh~","Gyuuuuh...", "Rrrr...", "Uuah~", "Groh!")
 	emote_hear = list("puffs", "huffs", "rumbles", "gyoohs","pants", "snoofs")
 	emote_see = list("sways its tail", "stretches", "yawns", "turns their head")
-	say_maybe_target = list("Gyuuh?")
+	say_maybe_target = list("Gyuuh?", "Rrrr!")
 	say_got_target = list("GYOOOHHHH!!!")
 
 /datum/say_list/teppibaby
-	speak = list("Gyooh~", "Gyuuuh!", "Gyuh?", "Gyaah...", "Iuuuuhh.", "Uoounh!", "GyoooOOOOoooh!", "Gyoh~", "Gyouh~", "Yip!")
+	speak = list("Gyooh~", "Gyuuuh!", "Gyuh?", "Gyaah...", "Iuuuuhh.", "Uoounh!", "GyoooOOOOoooh!", "Gyoh~", "Gyouh~","Gyuuuuh...", "Rrrr...", "Uuah~", "Groh!", "Yip!")
 	emote_hear = list("puffs", "huffs", "rumbles", "gyoohs","pants", "snoofs", "yips")
 	emote_see = list("sways its tail", "stretches", "yawns", "turns their head")
-	say_maybe_target = list("Gyuuh?")
+	say_maybe_target = list("Gyuuh?", "Rrrr!")
 	say_got_target = list("GYOOOHHHH!!!")
 
 

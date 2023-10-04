@@ -43,6 +43,24 @@ const ReagentAddonIcon = {
   'Draining Liquids': '',
 };
 
+const AutotransferFlagIcon = {
+  'Creatures': '',
+  'Absorbed': '',
+  'Carbon': '',
+  'Silicon': '',
+  'Mobs': '',
+  'Animals': '',
+  'Mice': '',
+  'Dead': '',
+  'Digestable Creatures': '',
+  'Absorbable Creatures': '',
+  'Items': '',
+  'Trash': '',
+  'Eggs': '',
+  'Remains': '',
+  'Indigestible Items': '',
+};
+
 const GetAddons = (addons: string[]) => {
   let result: string[] = [];
 
@@ -78,6 +96,30 @@ const GetLiquidAddons = (addons: string[]) => {
 
   if (result.length === 0) {
     result.push('No Addons Set');
+  }
+
+  return result;
+};
+
+const GetAutotransferFlags = (addons: string[], whitelist: BooleanLike) => {
+  let result: string[] = [];
+
+  addons?.forEach((addon) => {
+    result.push(
+      '<span class="badge text-bg-secondary"><i class="' +
+        AutotransferFlagIcon[addon] +
+        '"></i>' +
+        addon +
+        '</span>'
+    );
+  });
+
+  if (result.length === 0) {
+    if (whitelist) {
+      result.push('Everything');
+    } else {
+      result.push('Nothing');
+    }
   }
 
   return result;
@@ -122,7 +164,10 @@ type Belly = {
   shrink_grow_size: number;
   vorespawn_blacklist: BooleanLike;
   egg_type: string;
+  egg_name: string;
   selective_preference: string;
+  recycling: BooleanLike;
+  entrance_logs: BooleanLike;
 
   // Messages
   struggle_messages_outside: string[];
@@ -157,6 +202,8 @@ type Belly = {
   fancy_vore: BooleanLike;
   vore_sound: string;
   release_sound: string;
+  sound_volume: number;
+  noise_freq: number;
 
   // Visuals
   affects_vore_sprites: BooleanLike;
@@ -172,7 +219,13 @@ type Belly = {
   belly_sprite_to_affect: string;
 
   // Visuals (Belly Fullscreens Preview and Coloring)
+  belly_fullscreen: string;
   belly_fullscreen_color: string;
+  belly_fullscreen_color2: string;
+  belly_fullscreen_color3: string;
+  belly_fullscreen_color4: string;
+  belly_fullscreen_alpha: number;
+  colorization_enabled: BooleanLike;
 
   // Visuals (Vore FX)
   disable_hud: BooleanLike;
@@ -201,6 +254,10 @@ type Belly = {
   autotransferlocation_secondary: string;
   autotransfer_min_amount: number;
   autotransfer_max_amount: number;
+  autotransfer_whitelist: string[];
+  autotransfer_blacklist: string[];
+  autotransfer_secondary_whitelist: string[];
+  autotransfer_secondary_blacklist: string[];
 
   // Liquid Options
   show_liquids: BooleanLike;
@@ -212,6 +269,21 @@ type Belly = {
   custom_max_volume: number;
   vorefootsteps_sounds: BooleanLike;
   reagent_mode_flag_list: string[];
+  liquid_overlay: BooleanLike;
+  max_liquid_level: number;
+  mush_overlay: BooleanLike;
+  mush_color: string;
+  mush_alpha: number;
+  max_mush: number;
+  min_mush: number;
+  item_mush_val: number;
+  custom_reagentcolor: string;
+  custom_reagentalpha: number;
+  metabolism_overlay: BooleanLike;
+  metabolism_mush_ratio: number;
+  max_ingested: number;
+  custom_ingested_color: string;
+  custom_ingested_alpha: number;
 
   // Liquid Messages
   liquid_fullness1_messages: BooleanLike;
@@ -248,7 +320,7 @@ const generateBellyString = (belly: Belly, index: number) => {
     digest_oxy,
 
     can_taste,
-	is_feedable,
+    is_feedable,
     contaminates,
     contamination_flavor,
     contamination_color,
@@ -261,7 +333,10 @@ const generateBellyString = (belly: Belly, index: number) => {
     shrink_grow_size,
     vorespawn_blacklist,
     egg_type,
+    egg_name,
     selective_preference,
+    recycling,
+    entrance_logs,
 
     // Messages
     struggle_messages_outside,
@@ -296,6 +371,8 @@ const generateBellyString = (belly: Belly, index: number) => {
     fancy_vore,
     vore_sound,
     release_sound,
+    sound_volume,
+    noise_freq,
 
     // Visuals
     affects_vore_sprites,
@@ -305,7 +382,13 @@ const generateBellyString = (belly: Belly, index: number) => {
     belly_sprite_to_affect,
 
     // Visuals (Belly Fullscreens Preview and Coloring)
+    belly_fullscreen,
     belly_fullscreen_color,
+    belly_fullscreen_color2,
+    belly_fullscreen_color3,
+    belly_fullscreen_color4,
+    belly_fullscreen_alpha,
+    colorization_enabled,
 
     // Visuals (Vore FX)
     disable_hud,
@@ -326,25 +409,44 @@ const generateBellyString = (belly: Belly, index: number) => {
     digestchance,
 
     // Interactions (Auto-Transfer)
-	autotransferwait,
+    autotransferwait,
     autotransferchance,
     autotransferlocation,
-	autotransferchance_secondary,
+    autotransferchance_secondary,
     autotransferlocation_secondary,
     autotransfer_enabled,
     autotransfer_min_amount,
     autotransfer_max_amount,
+	autotransfer_whitelist,
+	autotransfer_blacklist,
+	autotransfer_secondary_whitelist,
+	autotransfer_secondary_blacklist,
 
     // Liquid Options
     show_liquids,
-		reagentbellymode,
-		reagent_chosen,
-		reagent_name,
-		reagent_transfer_verb,
-		gen_time_display,
-		custom_max_volume,
-		vorefootsteps_sounds,
-		reagent_mode_flag_list,
+    reagentbellymode,
+    reagent_chosen,
+    reagent_name,
+    reagent_transfer_verb,
+    gen_time_display,
+    custom_max_volume,
+    vorefootsteps_sounds,
+    reagent_mode_flag_list,
+    liquid_overlay,
+    max_liquid_level,
+    mush_overlay,
+    mush_color,
+    mush_alpha,
+    max_mush,
+    min_mush,
+    item_mush_val,
+    custom_reagentcolor,
+    custom_reagentalpha,
+    metabolism_overlay,
+    metabolism_mush_ratio,
+    max_ingested,
+    custom_ingested_color,
+    custom_ingested_alpha,
 
     // Liquid Messages
     liquid_fullness1_messages,
@@ -668,12 +770,16 @@ const generateBellyString = (belly: Belly, index: number) => {
   '</span>)</b>';
   result += '<ul class="list-group">';
   result += '<li class="list-group-item">Auto-Transfer Time: ' + autotransferwait / 10 + 's</li>';
-  result += '<li class="list-group-item">Auto-Transfer Chance: ' + autotransferchance + '%</li>';
-  result += '<li class="list-group-item">Auto-Transfer Location: ' + autotransferlocation + '</li>';
-  result += '<li class="list-group-item">Auto-Transfer Chance: ' + autotransferchance_secondary + '%</li>';
-  result += '<li class="list-group-item">Auto-Transfer Location: ' + autotransferlocation_secondary + '</li>';
   result += '<li class="list-group-item">Auto-Transfer Min Amount: ' + autotransfer_min_amount + '</li>';
   result += '<li class="list-group-item">Auto-Transfer Max Amount: ' + autotransfer_max_amount + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Primary Chance: ' + autotransferchance + '%</li>';
+  result += '<li class="list-group-item">Auto-Transfer Primary Location: ' + autotransferlocation + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Primary Whitelist: ' + GetAutotransferFlags(autotransfer_whitelist, true) + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Primary Blacklist: ' + GetAutotransferFlags(autotransfer_blacklist, false) + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Secondary Chance: ' + autotransferchance_secondary + '%</li>';
+  result += '<li class="list-group-item">Auto-Transfer Secondary Location: ' + autotransferlocation_secondary + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Secondary Whitelist: ' + GetAutotransferFlags(autotransfer_secondary_whitelist, true) + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Secondary Blacklist: ' + GetAutotransferFlags(autotransfer_secondary_blacklist, false) + '</li>';
   result += '</ul>';
   result += '</div></div></div>';
 

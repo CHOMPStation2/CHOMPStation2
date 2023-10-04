@@ -79,10 +79,6 @@
 	taste_description = "pennies"
 	color = "#6E3B08"
 
-/datum/reagent/copper/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_SKRELL)
-		M.add_chemical_effect(CE_BLOODRESTORE, 8 * removed)
-
 /datum/reagent/ethanol
 	name = "Ethanol" //Parent class for all alcoholic reagents.
 	id = "ethanol"
@@ -245,10 +241,6 @@
 	taste_description = "metal"
 	reagent_state = SOLID
 	color = "#353535"
-
-/datum/reagent/iron/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien != IS_DIONA && alien != IS_SKRELL)
-		M.add_chemical_effect(CE_BLOODRESTORE, 8 * removed)
 
 /datum/reagent/lithium
 	name = "Lithium"
@@ -446,13 +438,13 @@
 /datum/reagent/acid/touch_obj(var/obj/O, var/amount) //CHOMPEdit Start
 	if(isbelly(O.loc))
 		var/obj/belly/B = O.loc
-		if(B.item_digest_mode == IM_HOLD || B.item_digest_mode == IM_DIGEST_FOOD)
+		if(B.item_digest_mode == IM_HOLD)
 			return
 		var/obj/item/I = O
 		var/spent_amt = I.digest_act(I.loc, 1, amount / (meltdose / 3))
+		remove_self(spent_amt) //10u stomacid per w_class, less if stronger acid.
 		if(B.owner)
 			B.owner.adjust_nutrition((B.nutrition_percent / 100) * 5 * spent_amt)
-		remove_self(spent_amt) //10u stomacid per w_class, less if stronger acid.
 		return
 	..()
 	if(O.unacidable || is_type_in_list(O,item_digestion_blacklist)) //CHOMPEdit End

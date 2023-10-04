@@ -278,6 +278,7 @@ GLOBAL_LIST_EMPTY(##LIST_NAME);\
 #define IS_CROWBAR			"crowbar"
 #define IS_WIRECUTTER		"wirecutter"
 #define IS_WRENCH			"wrench"
+#define IS_WELDER			"welder"
 
 
 // Diagonal movement

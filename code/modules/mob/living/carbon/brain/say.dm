@@ -3,7 +3,7 @@
 	if(silent)
 		return
 
-	message = sanitize(message)
+	//message = sanitize(message) //CHOMPEdit: This causes.... so many more problems then it fixes. Also should just be handled in the super function
 
 	if(!(container && container.can_speak))
 		return //Certain objects can speak, like MMIs. Most others cannot. -Q

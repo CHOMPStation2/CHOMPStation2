@@ -16,13 +16,12 @@
 		return
 
 	//CHOMPEdit Start: Autotransfer count moved here.
-	if(!owner.client || autotransfer_enabled)
+	if(autotransfer_enabled)
 		var/list/autotransferables = list()
 		for(var/atom/movable/M in contents)
 			if(!M || !M.autotransferable) continue
-			if(isliving(M))
-				var/mob/living/L = M
-				if(L.absorbed) continue
+			// If the prey can't pass the filter of at least one transfer location, skip it
+			if(!(autotransfer_filter(M, autotransfer_secondary_whitelist, autotransfer_secondary_blacklist) || autotransfer_filter(M, autotransfer_whitelist, autotransfer_blacklist))) continue
 			M.belly_cycles++
 			if(M.belly_cycles < autotransferwait / 60) continue
 			autotransferables += M
@@ -83,6 +82,9 @@
 	if(!digestion_noise_chance)
 		digestion_noise_chance = DM.noise_chance
 
+	touchable_atoms -= items_preserved //CHOMPAdd
+	HandleBellyReagentEffects(touchable_atoms) //CHOMPAdd
+
 /////////////////////////// Make any noise ///////////////////////////
 	if(digestion_noise_chance && prob(digestion_noise_chance))
 		for(var/mob/M in contents)
@@ -99,9 +101,9 @@
 					continue
 				if(isturf(M.loc) || (M.loc != src)) //to avoid people on the inside getting the outside sounds and their direct sounds + built in sound pref check
 					if(fancy_vore)
-						M.playsound_local(get_turf(owner), play_sound, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF) //CHOMPEdit
+						M.playsound_local(get_turf(owner), play_sound, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq) //CHOMPEdit
 					else
-						M.playsound_local(get_turf(owner), play_sound, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF) //CHOMPEdit
+						M.playsound_local(get_turf(owner), play_sound, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq) //CHOMPEdit
 					 //these are all external sound triggers now, so it's ok.
 		return
 
@@ -126,9 +128,9 @@
 				continue
 			if(isturf(M.loc) || (M.loc != src)) //to avoid people on the inside getting the outside sounds and their direct sounds + built in sound pref check
 				if(fancy_vore)
-					M.playsound_local(get_turf(owner), play_sound, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF) //CHOMPEdit
+					M.playsound_local(get_turf(owner), play_sound, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq) //CHOMPEdit
 				else
-					M.playsound_local(get_turf(owner), play_sound, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF) //CHOMPEdit
+					M.playsound_local(get_turf(owner), play_sound, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq) //CHOMPEdit
 				 //these are all external sound triggers now, so it's ok.
 
 	if(emote_active)
@@ -272,7 +274,7 @@
 		if(isbelly(M.loc) && is_wet && wet_loop && (world.time > M.next_preyloop))
 			M.stop_sound_channel(CHANNEL_PREYLOOP)
 			var/sound/preyloop = sound('sound/vore/sunesound/prey/loop.ogg')
-			M.playsound_local(get_turf(src), preyloop, 80, 0, channel = CHANNEL_PREYLOOP)
+			M.playsound_local(get_turf(src), preyloop, 80, 0, channel = CHANNEL_PREYLOOP, frequency = noise_freq) //CHOMPEdit
 			M.next_preyloop = (world.time + (52 SECONDS))
 
 /obj/belly/proc/handle_digesting_item(obj/item/I, touchable_amount) //CHOMPEdit

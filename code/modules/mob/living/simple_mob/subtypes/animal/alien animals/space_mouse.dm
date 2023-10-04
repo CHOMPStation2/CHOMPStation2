@@ -65,7 +65,9 @@
 	vore_default_item_mode = IM_DIGEST
 
 /mob/living/simple_mob/vore/alienanimals/dustjumper/init_vore()
-	..()
+	if(!voremob_loaded) //CHOMPAdd
+		return //CHOMPAdd
+	.=..() //CHOMPEdit
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "You've been packed into the impossibly tight stomach of the dust jumper!!! The broiling heat seeps into you while the walls churn in powerfully, forcing you to curl up in the darkness."
@@ -80,8 +82,9 @@
 	. = ..()
 	if(!.)
 		return
-	if(vore_fullness == 0 && movement_cooldown == 50)
+	if(vore_fullness == 0 && movement_cooldown == 10)
 		movement_cooldown = initial(movement_cooldown)
+
 /mob/living/simple_mob/vore/alienanimals/dustjumper/perform_the_nom(mob/living/user, mob/living/prey, mob/living/pred, obj/belly/belly, delay)
 	. = ..()
 	movement_cooldown = 10

@@ -3,7 +3,7 @@
 	desc = "You hear chirping and cawing inside the crate. It sounds like there are a lot of birds in there..."
 
 /obj/structure/largecrate/birds/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(W.is_crowbar())
+	if(W.has_tool_quality(TOOL_CROWBAR))
 		new /obj/item/stack/material/wood(src)
 		new /mob/living/simple_mob/animal/passive/bird(src)
 		new /mob/living/simple_mob/animal/passive/bird/parrot/kea(src)
@@ -53,6 +53,7 @@
 						/mob/living/simple_mob/vore/aggressive/mimic,
 						/mob/living/simple_mob/vore/aggressive/rat,
 						/mob/living/simple_mob/vore/aggressive/rat/tame,
+						/mob/living/simple_mob/vore/aggressive/rat/labrat, //CHOMPEdit
 						/mob/living/simple_mob/vore/otie/zorgoia, //CHOMPstation edit
 						/mob/living/simple_mob/vore/rabbit,
 						/mob/living/simple_mob/vore/weretiger;0.5,

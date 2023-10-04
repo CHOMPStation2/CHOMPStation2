@@ -13,6 +13,7 @@
 	var/hide_glasses = FALSE
 	var/speech_sound_enabled = TRUE
 	var/nutrition_hidden = FALSE
+	var/resting_dir = null
 
 /mob/living/carbon/human/ai_controlled
 	low_priority = TRUE

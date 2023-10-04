@@ -7,6 +7,7 @@
 
 /datum/sprite_accessory/tail/taur/wolf
 	vore_tail_sprite_variant = "N"
+	fullness_icons = 3
 
 /datum/sprite_accessory/tail/taur/naga/naga_2c
 	vore_tail_sprite_variant = "Naga"
@@ -49,6 +50,11 @@
 
 /datum/sprite_accessory/tail/taur/deer
 	vore_tail_sprite_variant = "Deer"
+	belly_variant_when_loaf = TRUE
+	fullness_icons = 1
+
+/datum/sprite_accessory/tail/taur/skunk
+	vore_tail_sprite_variant = "Skunk"
 	belly_variant_when_loaf = TRUE
 	fullness_icons = 1
 
@@ -135,11 +141,14 @@
 	icon_state = "sergwheat"
 	icon_sprite_tag = "wolf"
 	vore_tail_sprite_variant = "N"
+	fullness_icons = 3
 
 /datum/sprite_accessory/tail/taur/ch/sergal/fatwheaties
 	name = "Fat Sergal (Taur)"
 	icon_state = "fatsergal"
 	icon_sprite_tag = "wolf"
+	vore_tail_sprite_variant = "N"
+	fullness_icons = 3
 
 /datum/sprite_accessory/tail/taur/ch/sergal/wheaties_2c
 	name = "Sergal (Taur, dual-color)"
@@ -147,12 +156,15 @@
 	extra_overlay = "sergwheat_markings"
 	icon_sprite_tag = "wolf"
 	vore_tail_sprite_variant = "N"
+	fullness_icons = 3
 
 /datum/sprite_accessory/tail/taur/ch/sergal/fatwheaties_2c
 	name = "Fat Sergal (Taur, dual-color)"
 	icon_state = "fatsergal"
 	extra_overlay = "sergwheat_markings"
 	icon_sprite_tag = "wolf"
+	vore_tail_sprite_variant = "N"
+	fullness_icons = 3
 
 /datum/sprite_accessory/tail/taur/ch/longvirus
 	name = "Long Virus (Taur)"
@@ -179,6 +191,7 @@
 	vore_tail_sprite_variant = "SectDrone"
 	belly_variant_when_loaf = TRUE
 	loaf_offset = 3
+	fullness_icons = 3
 
 	msg_owner_disarm_run = "You quickly push %prey to the ground with your leg!"
 	msg_prey_disarm_run = "%owner pushes you down to the ground with their leg!"
@@ -217,29 +230,38 @@
 	extra_overlay = "bigleggy_markings"
 	vore_tail_sprite_variant = "bigleggy"
 	fullness_icons = 3
+	ani_state = "bigleggy_stanced"
+	extra_overlay_w = "bigleggy_markings_stanced"
 
 /datum/sprite_accessory/tail/taur/ch/bigleggy/canine
 	name = "Big Leggies (Canine Tail)"
 	extra_overlay2 = "bigleggy_canine"
+	extra_overlay2_w = "bigleggy_canine"
 
 /datum/sprite_accessory/tail/taur/ch/bigleggy/feline
 	name = "Big Leggies (Feline Tail)"
 	extra_overlay2 = "bigleggy_feline"
+	extra_overlay2_w = "bigleggy_feline"
 
 /datum/sprite_accessory/tail/taur/ch/bigleggy/reptile
 	name = "Big Leggies (Reptile Tail)"
 	extra_overlay2 = "bigleggy_reptile"
+	extra_overlay2_w = "bigleggy_reptile"
 
 /datum/sprite_accessory/tail/taur/ch/bigleggy/snake
 	name = "Big Leggies (Snake Tail)"
 	extra_overlay2 = "bigleggy_snake"
+	extra_overlay2_w = "bigleggy_snake"
 
 /datum/sprite_accessory/tail/taur/ch/bigleggy/fox
 	name = "Big Leggies (Fox Tail)"
 	extra_overlay2 = "bigleggy_vulpine"
+	extra_overlay2_w = "bigleggy_vulpine"
 
 /datum/sprite_accessory/tail/taur/ch/bigleggy/bird
 	name = "Big Leggies (Bird)"
 	icon_state = "bigleggy"
 	extra_overlay = "bigleggy_m_bird"
 	extra_overlay2 = "bigleggy_bird"
+	extra_overlay_w = "bigleggy_m_bird_stanced"
+	extra_overlay2_w = "bigleggy_bird"
