@@ -16,7 +16,7 @@
 		return
 
 	//CHOMPEdit Start: Autotransfer count moved here.
-	if(!owner.client || autotransfer_enabled)
+	if(autotransfer_enabled)
 		var/list/autotransferables = list()
 		for(var/atom/movable/M in contents)
 			if(!M || !M.autotransferable) continue
