@@ -1,4 +1,8 @@
 2023-10-04:
+  FluffMedic:
+  - qol: Adds descriptions to experimental firstaid kit's pill bottles.
+  - qol: Made speedloaders 18, because revolvers hold six.
+  - bugfix: turrets where missed in the refactor, well their health
   Verkister:
   - bugfix: Fixed disabled autotransfer un-disabling itself when aghosted/SSD
   - rscadd: Added bellysprites for sergal and skunk taurs.
