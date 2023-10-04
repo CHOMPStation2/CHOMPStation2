@@ -5,10 +5,10 @@
 	max_ammo = 50
 
 /obj/item/ammo_magazine/s357
-	max_ammo = 15
+	max_ammo = 18
 
 /obj/item/ammo_magazine/s38
-	max_ammo = 15
+	max_ammo = 18
 
 // Makarov
 /obj/item/ammo_magazine/m38/makarov
@@ -33,7 +33,7 @@
 	max_ammo = 22
 
 /obj/item/ammo_magazine/s45
-	max_ammo = 15
+	max_ammo = 18
 
 /obj/item/ammo_magazine/m5mmcaseless
 	max_ammo = 75
@@ -96,7 +96,7 @@
 	max_ammo = 22
 
 /obj/item/ammo_magazine/s44
-	max_ammo = 15
+	max_ammo = 18
 
 /obj/item/ammo_magazine/m762
 	max_ammo = 25
@@ -227,4 +227,4 @@
 	max_ammo = 35
 
 /obj/item/ammo_magazine/s45lc
-	max_ammo = 15
+	max_ammo = 18
