@@ -1,10 +1,10 @@
 /datum/trait/negative/deep_sleeper
 	custom_only = FALSE
 
-/datum/trait/positive/deep_breather
+/datum/trait/negative/deep_breather
 	name ="Deep Breather"
 	desc = "You need more air for your lungs to properly work.."
-	cost = 1
+	cost = -1
 
 	custom_only = FALSE
 	can_take = ORGANICS
