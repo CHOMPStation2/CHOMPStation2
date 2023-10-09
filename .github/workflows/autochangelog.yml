@@ -45,6 +45,7 @@ jobs:
           python tools/GenerateChangelog/ss13_autochangelog_ch.py \
             html/changelogs_ch \
             ${{ github.event.pull_request.number }} \
+<<<<<<< HEAD
             '${{ github.event.pull_request.user.login }}' \
             'tools/GenerateChangelog/prbody.txt'
           python tools/GenerateChangelog/ss13_genchangelog_ch.py \
@@ -80,6 +81,14 @@ jobs:
       - name: Create Pull Request
         if: '!steps.check.outputs.skip'
         uses: repo-sync/pull-request@v2
+=======
+            "${{ github.event.pull_request.user.login }}" \
+            "${{ github.event.pull_request.body }}"
+          python tools/GenerateChangelog/ss13_genchangelog.py \
+            html/changelog.html \
+            html/changelogs
+      - uses: stefanzweifel/git-auto-commit-action@v5
+>>>>>>> 0a8e91919a... Merge pull request #15441 from VOREStation/dependabot/github_actions/stefanzweifel/git-auto-commit-action-5
         with:
           source_branch: "changelog_generation"
           destination_branch: "master"
