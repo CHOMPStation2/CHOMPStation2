@@ -25,22 +25,22 @@
 
 	if(prob(50)) //50/50 chance on spiders or metroids.
 		log_debug("Hord event, spiders selected.")
-		spawncount = rand(4 * severity, 10 * severity)	
+		spawncount = rand(4 * severity, 10 * severity)
 		sent_spiders_to_station = 0
 		spiders = TRUE
-		
+
 	else
 		log_debug("Horde event, metroids selected.")
 		spawncount = rand(2 * severity, 4 * severity)
 		metroids = TRUE
-		
-	
+
+
 /datum/event/horde_infestation/announce()
 	if(spiders) //Horrible way of doing this
 		command_announcement.Announce("Unidentified lifesigns detected coming aboard [station_name()]. Secure any exterior access, including ducting and ventilation.", "Lifesign Alert", new_sound = 'sound/AI/aliens.ogg')
 	if(metroids) //Horrible way of doing this
 		command_announcement.Announce("High-energy lifeforms detected coming aboard [station_name()]. All crew members, stay alert, and listen to security instructions.", "Lifesign Alert", new_sound = 'sound/misc/alarm1.ogg')
-		
+
 /datum/event/horde_infestation/start()
 	if(spiders)
 		for(var/obj/machinery/atmospherics/unary/vent_pump/temp_vent in machines)
@@ -58,9 +58,9 @@
 			var/obj/vent = pick(vents)
 		//CHOMPEDIT START adding spider EGGS to the possible spawns instead of singular spiderling spawns.
 			var/spawn_spiderlings = pickweight(list(
-				/obj/effect/spider/spiderling/broodling = 95,
-				/obj/effect/spider/eggcluster/broodling = 4,
-				/obj/effect/spider/eggcluster/royal/broodling = 1
+				/obj/effect/spider/spiderling/space = 95,
+				/obj/effect/spider/eggcluster/space = 4,
+				/obj/effect/spider/eggcluster/royal/space = 1
 				))
 			new spawn_spiderlings(vent.loc) //VOREStation Edit - No nurses //Oh my JESUS CHRIST, this slipped past me. Literally no nurses. Well guess what, nurses are back.
 		//CHOMPEDIT END
