@@ -4806,6 +4806,7 @@
 #include "modular_chomp\code\modules\projectiles\guns\magnetic.dm"
 #include "modular_chomp\code\modules\projectiles\guns\phase.dm"
 #include "modular_chomp\code\modules\projectiles\guns\staffs.dm"
+#include "modular_chomp\code\modules\projectiles\guns\energy\laser.dm"
 #include "modular_chomp\code\modules\projectiles\guns\projectile\revolver.dm"
 #include "modular_chomp\code\modules\reagents\machinery\dispenser\chem_synthesizer_ch.dm"
 #include "modular_chomp\code\modules\reagents\reactions\instant\drinks.dm"
