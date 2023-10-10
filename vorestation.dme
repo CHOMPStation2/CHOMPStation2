@@ -4798,6 +4798,7 @@
 #include "modular_chomp\code\modules\power\cells\power_cells.dm"
 #include "modular_chomp\code\modules\projectiles\gun.dm"
 #include "modular_chomp\code\modules\projectiles\mob.dm"
+#include "modular_chomp\code\modules\projectiles\projectile.dm"
 #include "modular_chomp\code\modules\projectiles\clockwork\clockwork_guns_ch.dm"
 #include "modular_chomp\code\modules\projectiles\guns\ammo.dm"
 #include "modular_chomp\code\modules\projectiles\guns\beam.dm"
