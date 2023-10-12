@@ -35,3 +35,8 @@
   - rscadd: Colours for each department
   - qol: Removed random colours for junk mail
   - qol: Bigger money quantities are a little bit more rare now
+  Verkister:
+  - bugfix: Fixed special clicks not working for player-controlled swoopies while
+      vac is powered.
+  - bugfix: Fixed synth metabolism processing toggle.
+  - bugfix: Fixed simplemobs being unable to use handheld ID cards.
