@@ -25,6 +25,12 @@
   tacoguy7765093:
   - bugfix: Fixes some guns appearing invisible
 2023-10-12:
+  Darlantanis:
+  - rscadd: Reduces codex memory usage, also fixing a memory leak.
+  - rscadd: Fixes bug with "go back" button in codexes.
+  - rscadd: Adds a cooking codex which algorithmically documents all cooking recipes.
+  - rscadd: Adds .dmi for new manual. Doesn't actually make new sprites.
+  - rscadd: Doubles cooking burn time.
   TheCaramelion:
   - rscadd: Colours for each department
   - qol: Removed random colours for junk mail
