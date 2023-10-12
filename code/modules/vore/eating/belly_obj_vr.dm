@@ -332,7 +332,8 @@
 	"recycling",
 	"is_feedable",
 	"entrance_logs",
-	"noise_freq", //CHOMP end of variables from CHOMP
+	"noise_freq",
+	"item_digest_logs", //CHOMP end of variables from CHOMP
 	"egg_type",
 	"save_digest_mode",
 	"eating_privacy_local",
@@ -1933,7 +1934,8 @@
 	dupe.recycling = recycling
 	dupe.is_feedable = is_feedable
 	dupe.entrance_logs = entrance_logs
-	dupe.noise_freq = noise_freq //CHOMP end of variables from CHOMP
+	dupe.noise_freq = noise_freq
+	dupe.item_digest_logs = item_digest_logs //CHOMP end of variables from CHOMP
 
 	dupe.belly_fullscreen = belly_fullscreen
 	dupe.disable_hud = disable_hud

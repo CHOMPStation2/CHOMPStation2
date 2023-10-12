@@ -131,6 +131,7 @@
 	var/recycling = FALSE					// Recycling mode.
 	var/entrance_logs = TRUE				// Belly-specific entry message toggle.
 	var/noise_freq = 42500					// Tasty sound prefs.
+	var/item_digest_logs = FALSE			// Chat messages for digested items.
 
 /obj/belly/proc/GetFullnessFromBelly()
 	if(!affects_vore_sprites)

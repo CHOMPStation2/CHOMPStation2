@@ -49,7 +49,7 @@ const digestModeToPreyMode = {
  *   show_liq, liq_interacts, liq_reagent_gen, liq_reagent_type, liq_reagent_name,
  *   liq_reagent_transfer_verb, liq_reagent_nutri_rate, liq_reagent_capacity, liq_sloshing, liq_reagent_addons,
  *   show_liq_fullness, liq_messages, liq_msg_toggle1, liq_msg_toggle2, liq_msg_toggle3, liq_msg_toggle4,
- *   liq_msg_toggle5, liq_msg1, liq_msg2, liq_msg3, liq_msg4, liq_msg5, sound_volume, egg_name, recycling, entrance_logs, noise_freq,
+ *   liq_msg_toggle5, liq_msg1, liq_msg2, liq_msg3, liq_msg4, liq_msg5, sound_volume, egg_name, recycling, entrance_logs, item_digest_logs, noise_freq,
  *   custom_reagentcolor, custom_reagentalpha, liquid_overlay, max_liquid_level, mush_overlay, mush_color, mush_alpha, max_mush, min_mush, item_mush_val,
  *   metabolism_overlay, metabolism_mush_ratio, max_ingested, custom_ingested_color, custom_ingested_alpha
  *
@@ -690,6 +690,7 @@ const VoreSelectedBellyOptions = (props, context) => {
     egg_name,
     recycling,
     entrance_logs,
+    item_digest_logs,
     selective_preference,
     save_digest_mode,
     eating_privacy_local,
@@ -902,6 +903,16 @@ const VoreSelectedBellyOptions = (props, context) => {
               icon={entrance_logs ? 'toggle-on' : 'toggle-off'}
               selected={entrance_logs}
               content={entrance_logs ? 'Enabled' : 'Disabled'}
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Item Digestion Logs">
+            <Button
+              onClick={() =>
+                act('set_attribute', { attribute: 'b_item_digest_logs' })
+              }
+              icon={item_digest_logs ? 'toggle-on' : 'toggle-off'}
+              selected={item_digest_logs}
+              content={item_digest_logs ? 'Enabled' : 'Disabled'}
             />
           </LabeledList.Item>
           <LabeledList.Item label="Selective Mode Preference">
