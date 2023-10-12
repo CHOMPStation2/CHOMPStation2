@@ -40,3 +40,4 @@
       vac is powered.
   - bugfix: Fixed synth metabolism processing toggle.
   - bugfix: Fixed simplemobs being unable to use handheld ID cards.
+  - bugfix: Fixed ghost body re-entering bug.
