@@ -70,7 +70,7 @@
 	if(stat == UNCONSCIOUS || sleeping > 0)
 		to_chat(src, "<span class='filter_notice'><I>... You can almost hear someone talking ...</I></span>")
 	else
-		if(client.prefs.chat_timestamp)
+		if(client && client.prefs.chat_timestamp) //CHOMPEdit
 			to_chat(src,"[time] [msg]")
 		else if(teleop)
 			to_chat(teleop, create_text_tag("body", "BODY:", teleop.client) + "[msg]")
