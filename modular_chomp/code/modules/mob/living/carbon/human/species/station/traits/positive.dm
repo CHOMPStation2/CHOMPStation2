@@ -15,4 +15,4 @@
 	custom_only = FALSE
 	can_take = ORGANICS
 	var_changes = list("minimum_breath_pressure" = 12)
-	excludes = list(/datum/trait/positive/deep_breather)
+	excludes = list(/datum/trait/negative/deep_breather)
