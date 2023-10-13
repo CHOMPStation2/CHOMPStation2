@@ -344,6 +344,16 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				if(selected.autotransfer_blacklist & selected.autotransfer_flags_list[flag_name])
 					at_blacklist.Add(flag_name)
 			selected_list["autotransfer"]["autotransfer_blacklist"] = at_blacklist
+			var/list/at_whitelist_items = list()
+			for(var/flag_name in selected.autotransfer_flags_list_items)
+				if(selected.autotransfer_whitelist_items & selected.autotransfer_flags_list_items[flag_name])
+					at_whitelist_items.Add(flag_name)
+			selected_list["autotransfer"]["autotransfer_whitelist_items"] = at_whitelist_items
+			var/list/at_blacklist_items = list()
+			for(var/flag_name in selected.autotransfer_flags_list_items)
+				if(selected.autotransfer_blacklist_items & selected.autotransfer_flags_list_items[flag_name])
+					at_blacklist_items.Add(flag_name)
+			selected_list["autotransfer"]["autotransfer_blacklist_items"] = at_blacklist_items
 			var/list/at_secondary_whitelist = list()
 			for(var/flag_name in selected.autotransfer_flags_list)
 				if(selected.autotransfer_secondary_whitelist & selected.autotransfer_flags_list[flag_name])
@@ -354,6 +364,16 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				if(selected.autotransfer_secondary_blacklist & selected.autotransfer_flags_list[flag_name])
 					at_secondary_blacklist.Add(flag_name)
 			selected_list["autotransfer"]["autotransfer_secondary_blacklist"] = at_secondary_blacklist
+			var/list/at_secondary_whitelist_items = list()
+			for(var/flag_name in selected.autotransfer_flags_list_items)
+				if(selected.autotransfer_secondary_whitelist_items & selected.autotransfer_flags_list_items[flag_name])
+					at_secondary_whitelist_items.Add(flag_name)
+			selected_list["autotransfer"]["autotransfer_secondary_whitelist_items"] = at_secondary_whitelist_items
+			var/list/at_secondary_blacklist_items = list()
+			for(var/flag_name in selected.autotransfer_flags_list_items)
+				if(selected.autotransfer_secondary_blacklist_items & selected.autotransfer_flags_list_items[flag_name])
+					at_secondary_blacklist_items.Add(flag_name)
+			selected_list["autotransfer"]["autotransfer_secondary_blacklist_items"] = at_secondary_blacklist_items
 			//CHOMPAdd END
 
 		selected_list["disable_hud"] = selected.disable_hud
@@ -2814,6 +2834,35 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			if(!toggle_addon)
 				return FALSE
 			host.vore_selected.autotransfer_secondary_blacklist ^= host.vore_selected.autotransfer_flags_list[toggle_addon]
+			. = TRUE
+			. = TRUE
+		if("b_autotransfer_whitelist_items")
+			var/list/menu_list = host.vore_selected.autotransfer_flags_list_items.Copy()
+			var/toggle_addon = tgui_input_list(usr, "Toggle Whitelist", "Whitelist Choice", menu_list)
+			if(!toggle_addon)
+				return FALSE
+			host.vore_selected.autotransfer_whitelist_items ^= host.vore_selected.autotransfer_flags_list_items[toggle_addon]
+			. = TRUE
+		if("b_autotransfer_blacklist_items")
+			var/list/menu_list = host.vore_selected.autotransfer_flags_list_items.Copy()
+			var/toggle_addon = tgui_input_list(usr, "Toggle Blacklist", "Blacklist Choice", menu_list)
+			if(!toggle_addon)
+				return FALSE
+			host.vore_selected.autotransfer_blacklist_items ^= host.vore_selected.autotransfer_flags_list_items[toggle_addon]
+			. = TRUE
+		if("b_autotransfer_secondary_whitelist_items")
+			var/list/menu_list = host.vore_selected.autotransfer_flags_list_items.Copy()
+			var/toggle_addon = tgui_input_list(usr, "Toggle Whitelist", "Whitelist Choice", menu_list)
+			if(!toggle_addon)
+				return FALSE
+			host.vore_selected.autotransfer_secondary_whitelist_items ^= host.vore_selected.autotransfer_flags_list_items[toggle_addon]
+			. = TRUE
+		if("b_autotransfer_secondary_blacklist_items")
+			var/list/menu_list = host.vore_selected.autotransfer_flags_list_items.Copy()
+			var/toggle_addon = tgui_input_list(usr, "Toggle Blacklist", "Blacklist Choice", menu_list)
+			if(!toggle_addon)
+				return FALSE
+			host.vore_selected.autotransfer_secondary_blacklist_items ^= host.vore_selected.autotransfer_flags_list_items[toggle_addon]
 			. = TRUE
 		if("b_autotransfer_min_amount")
 			var/autotransfer_min_amount_input = input(user, "Set the minimum amount of items your belly can belly auto-transfer at once. Set to 0 for no limit.", "Auto-Transfer Min Amount") as num|null

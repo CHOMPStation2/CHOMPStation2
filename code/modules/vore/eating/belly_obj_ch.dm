@@ -530,23 +530,33 @@
 	w_class = ITEMSIZE_SMALL
 
 /obj/belly/proc/recycle(var/obj/item/O)
-	if(!recycling || !LAZYLEN(O.matter))
+	if(!recycling || (!LAZYLEN(O.matter) && !istype(O, /obj/item/weapon/ore)))
 		return FALSE
-	var/list/modified_mats = list()
-	var/trash = 1
-	if(istype(O,/obj/item/trash))
-		trash = 5
-	if(istype(O,/obj/item/stack))
-		var/obj/item/stack/S = O
-		trash = S.amount
-	for(var/mat in O.matter)
-		modified_mats[mat] = O.matter[mat] * trash
-	for(var/obj/item/debris_pack/digested/D in contents)
-		if(istype(D))
-			for(var/mat in modified_mats)
-				D.matter[mat] += modified_mats[mat]
-			if(O.w_class > D.w_class)
-				D.w_class = O.w_class
-			return TRUE
-	new /obj/item/debris_pack/digested(src, modified_mats)
+	if(istype(O, /obj/item/weapon/ore))
+		var/obj/item/weapon/ore/ore = O
+		for(var/obj/item/ore_chunk/C in contents)
+			if(istype(C))
+				C.stored_ore[ore.material]++
+				return TRUE
+		var/obj/item/ore_chunk/newchunk = new /obj/item/ore_chunk(src)
+		newchunk.stored_ore[ore.material]++
+		return TRUE
+	else
+		var/list/modified_mats = list()
+		var/trash = 1
+		if(istype(O,/obj/item/trash))
+			trash = 5
+		if(istype(O,/obj/item/stack))
+			var/obj/item/stack/S = O
+			trash = S.amount
+		for(var/mat in O.matter)
+			modified_mats[mat] = O.matter[mat] * trash
+		for(var/obj/item/debris_pack/digested/D in contents)
+			if(istype(D))
+				for(var/mat in modified_mats)
+					D.matter[mat] += modified_mats[mat]
+				if(O.w_class > D.w_class)
+					D.w_class = O.w_class
+				return TRUE
+		new /obj/item/debris_pack/digested(src, modified_mats)
 	return TRUE
