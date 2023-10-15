@@ -42,9 +42,6 @@
 	// Physical offset of stamps on the object. Y direction.
 	var/stamp_offset_y = 2
 
-	// Mail will have the color of the department the recipient is in.
-	var/static/list/department_colors
-
 /obj/item/mail/envelope
 	name = "envelope"
 	icon_state = "mail_large"
@@ -62,7 +59,6 @@
 		var/stamp_count = rand(1, stamp_max)
 		for(var/i = 1, i <= stamp_count, i++)
 			stamps += list("stamp_[rand(2, 8)]")
-	update_icon()
 
 /obj/item/mail/update_icon()
 	. = ..()
@@ -81,7 +77,7 @@
 		var/image/postmark_image = image(
 			icon = icon,
 			icon_state = "postmark",
-			pixel_x = stamp_offset_x + rand(-3, 1),
+			pixel_x = stamp_offset_x + rand(-4, 0),
 			pixel_y = stamp_offset_y + rand(bonus_stamp_offset + 3, 1)
 		)
 		postmark_image.appearance_flags |= RESET_COLOR
@@ -134,7 +130,10 @@
 
 	var/datum/job/this_job = SSjob.name_occupations[new_recipient.job]
 	if(this_job)
-		color = this_job.selection_color
+		var/image/envelope = image(icon, icon_state)
+		envelope.color = this_job.selection_color
+		envelope.alpha = 128
+		add_overlay(envelope)
 		var/list/job_goodies = this_job.get_mail_goodies()
 		if(LAZYLEN(job_goodies))
 			if(this_job.exclusive_mail_goodies)
@@ -152,7 +151,7 @@
 		else
 			var/atom/movable/target_atom = new target_good(src)
 			log_game("[key_name(new_recipient)] received [target_atom.name] in the mail ([target_good])")
-
+	update_icon()
 	return TRUE
 
 /obj/item/mail/proc/junk_mail()
@@ -198,6 +197,7 @@
 	name = special_name ? junk_names[junk] : "important [initial(name)]"
 
 	junk = new junk(src)
+	update_icon()
 	return TRUE
 
 /obj/item/mail/proc/disposal_handling(disposal_source, obj/structure/disposalholder/disposal_holder, obj/machinery/disposal/deliveryChute, hasmob)
