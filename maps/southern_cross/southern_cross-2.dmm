@@ -50318,11 +50318,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
-"gmM" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/effect/wingrille_spawn/reinforced,
-/turf/simulated/floor/plating,
-/area/space)
 "gmX" = (
 /obj/machinery/vending/wallmed1{
 	name = "NanoMed Wall";
@@ -113025,7 +113020,7 @@ bvV
 bDr
 aaa
 aaa
-bXN
+cbx
 cbx
 bGP
 tqM
@@ -113283,7 +113278,7 @@ bvU
 bzL
 bzL
 aaa
-bXN
+cbx
 cFW
 bGN
 ump
@@ -113541,7 +113536,7 @@ bvV
 aVV
 bzL
 aaa
-bXN
+cbx
 bIn
 bkt
 tqM
@@ -113799,7 +113794,7 @@ bvW
 bxP
 bDr
 aaa
-bXN
+cbx
 cAq
 bGP
 wcF
@@ -114057,7 +114052,7 @@ bxQ
 dBF
 bDr
 aaa
-bXN
+cbx
 cbx
 bGP
 bIp
@@ -116861,7 +116856,7 @@ cwA
 cuE
 cFV
 aWb
-bXN
+aWb
 aaa
 enG
 hdd
@@ -117119,7 +117114,7 @@ crE
 cDR
 cDZ
 iXZ
-bXN
+aWb
 aaa
 enG
 hdV
@@ -117377,7 +117372,7 @@ cCp
 cuE
 cDZ
 gjV
-bXN
+aWb
 aaa
 enG
 hex
@@ -117635,7 +117630,7 @@ cCs
 cDS
 cFX
 cDQ
-bXN
+aWb
 aaa
 asV
 vad
@@ -117893,7 +117888,7 @@ crE
 cDW
 cDZ
 cuE
-gmM
+csa
 aaa
 asV
 asV
@@ -118151,7 +118146,7 @@ crE
 cDW
 cFY
 cuE
-gmM
+csa
 aaa
 aaa
 enG
@@ -118409,7 +118404,7 @@ crE
 cDW
 cDZ
 cDP
-gmM
+csa
 aaa
 aaa
 enG
@@ -118667,7 +118662,7 @@ crE
 cDW
 cDZ
 aWb
-bXN
+aWb
 aaa
 aaa
 aaa
