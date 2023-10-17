@@ -9343,6 +9343,13 @@
 	},
 /turf/simulated/wall,
 /area/hallway/primary/thirddeck/central)
+"hUd" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/wall/r_wall,
+/area/maintenance/thirddeck/hiddenkitchen)
 "hVq" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 9
@@ -12784,6 +12791,10 @@
 "lGC" = (
 /obj/structure/sign/poster{
 	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/wood/alt/panel,
 /area/maintenance/thirddeck/hiddenkitchen)
@@ -17962,10 +17973,9 @@
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
 "qgd" = (
-/turf/simulated/wall/r_wall{
-	can_open = 1
-	},
-/area/space)
+/obj/structure/disposalpipe/segment,
+/turf/simulated/wall/r_wall,
+/area/maintenance/thirddeck/hiddenkitchen)
 "qhw" = (
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/grey/border,
@@ -18816,8 +18826,12 @@
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "qRl" = (
-/turf/simulated/floor/wood/alt/panel,
-/area/space)
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/wall/r_wall,
+/area/maintenance/thirddeck/hiddenkitchen)
 "qRF" = (
 /obj/random/trash_pile,
 /turf/simulated/floor/plating,
@@ -21107,10 +21121,13 @@
 	name = "Third Deck Aft Maintenance"
 	})
 "sWr" = (
-/obj/structure/disposalpipe/trunk,
 /obj/machinery/disposal/deliveryChute{
 	dir = 8
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/airless,
 /area/maintenance/thirddeck/hiddenkitchen)
 "sXw" = (
@@ -60024,7 +60041,7 @@ wzA
 apc
 apc
 apc
-qRl
+apc
 apc
 apc
 apc
@@ -66990,7 +67007,7 @@ jhg
 jhg
 jhg
 jhg
-uMq
+qgd
 sWr
 dyU
 kqu
@@ -67249,10 +67266,10 @@ jhg
 jhg
 jhg
 uMq
-uMq
-uMq
-uMq
-uMq
+hUd
+qgd
+qgd
+qRl
 uMq
 sSL
 orR
@@ -69311,7 +69328,7 @@ apc
 apc
 apc
 apc
-qgd
+apc
 apc
 apc
 apc
