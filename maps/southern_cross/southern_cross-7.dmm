@@ -6948,7 +6948,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/eva)
 "fyp" = (
-/obj/machinery/r_n_d/protolathe,
+/obj/machinery/r_n_d/protolathe/science,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/expoutpost/rnd)
