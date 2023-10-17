@@ -1348,6 +1348,10 @@ z
 	name = "Third Deck Aft Starboard Maintenance"
 	icon_state = "asmaint"
 
+/area/maintenance/thirddeck/hiddenkitchen
+	name = "Third Deck Hidden Kitchen"
+	icon_state = "asmaint"
+
 /area/maintenance/thirddeck/dormsatmos
 	name = "Third Deck Dorm's Atmospherics"
 	icon_state = "asmaint"
