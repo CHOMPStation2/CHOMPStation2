@@ -42,6 +42,8 @@
   - bugfix: Fixed simplemobs being unable to use handheld ID cards.
   - bugfix: Fixed ghost body re-entering bug.
 2023-10-17:
+  FluffMedic:
+  - rscadd: Walls that are breakable that have the looks of some shuttle walls
   Kazzc:
   - rscadd: Deck 2, finally fixed pipes shuttle lounge area.
   - rscadd: Deck 2, Fixed some inconsistent tiles.
