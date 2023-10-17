@@ -1,5 +1,5 @@
 /obj/machinery/r_n_d/protolathe
-	name = "Master Protolathe"
+	name = "Master Control Protolathe"
 	icon_state = "protolathe"
 	circuit = /obj/item/weapon/circuitboard/protolathe
 
