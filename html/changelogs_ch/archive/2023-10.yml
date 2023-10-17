@@ -41,3 +41,9 @@
   - bugfix: Fixed synth metabolism processing toggle.
   - bugfix: Fixed simplemobs being unable to use handheld ID cards.
   - bugfix: Fixed ghost body re-entering bug.
+2023-10-17:
+  Kazzc:
+  - rscadd: Deck 2, finally fixed pipes shuttle lounge area.
+  - rscadd: Deck 2, Fixed some inconsistent tiles.
+  - rscadd: Deck 3, new hidden kitchen.
+  - rscadd: Added a new area for the hidden kitchen.
