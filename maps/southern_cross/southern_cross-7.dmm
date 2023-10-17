@@ -5015,6 +5015,19 @@
 /obj/effect/catwalk_plated/techfloor,
 /turf/simulated/floor,
 /area/expoutpost/slingcarrierdock)
+"egZ" = (
+/obj/effect/floor_decal/borderfloorblack/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/green/bordercorner{
+	dir = 8
+	},
+/obj/machinery/computer/rdconsole/core{
+	dir = 1;
+	name = "Protolathe Console"
+	},
+/turf/simulated/floor/tiled,
+/area/expoutpost/explobriefroom)
 "ehd" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 8
@@ -16484,6 +16497,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarone)
+"mYa" = (
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/corner/green/border,
+/obj/machinery/light,
+/obj/machinery/r_n_d/protolathe/exploration,
+/turf/simulated/floor/tiled,
+/area/expoutpost/explobriefroom)
 "mYy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -59632,7 +59652,7 @@ liP
 liP
 liP
 lyU
-glq
+mYa
 eoO
 mYy
 aQF
@@ -59890,7 +59910,7 @@ liP
 liP
 liP
 lyU
-jcU
+egZ
 vCa
 vCa
 vCa

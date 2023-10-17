@@ -4100,10 +4100,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
 "akh" = (
-/obj/structure/table/rack{
-	dir = 8;
-	layer = 2.6
-	},
 /obj/structure/window/reinforced{
 	dir = 4;
 	health = 1e+006
@@ -4114,14 +4110,10 @@
 /obj/effect/floor_decal/corner/red/full{
 	dir = 1
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/flash,
-/obj/item/ammo_magazine/ammo_box/b12g/beanbag,
-/obj/item/ammo_magazine/ammo_box/b12g/beanbag,
-/obj/item/ammo_magazine/ammo_box/b12g/stunshell,
-/obj/item/ammo_magazine/ammo_box/b12g/stunshell,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/machinery/autolathe/armory,
 /obj/machinery/door/window/brigdoor/westright{
 	name = "Ammo"
 	},
@@ -4213,6 +4205,10 @@
 	},
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/machinery/computer/rdconsole/core{
+	name = "Protolathe Console";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
@@ -6416,6 +6412,11 @@
 /obj/machinery/door/window/brigdoor/westleft{
 	name = "Ammo"
 	},
+/obj/item/ammo_magazine/ammo_box/b12g/flash,
+/obj/item/ammo_magazine/ammo_box/b12g/beanbag,
+/obj/item/ammo_magazine/ammo_box/b12g/beanbag,
+/obj/item/ammo_magazine/ammo_box/b12g/stunshell,
+/obj/item/ammo_magazine/ammo_box/b12g/stunshell,
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
 "arS" = (
@@ -6813,7 +6814,7 @@
 	dir = 1;
 	pixel_y = -22
 	},
-/obj/machinery/autolathe/armory,
+/obj/machinery/r_n_d/protolathe/security,
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
 "atu" = (
@@ -13153,6 +13154,11 @@
 	pixel_x = 3;
 	pixel_y = 3
 	},
+/obj/item/clothing/gloves/black,
+/obj/item/clothing/gloves/black,
+/obj/item/weapon/storage/box/lights/mixed,
+/obj/item/weapon/tool/crowbar/red,
+/obj/item/weapon/tool/crowbar,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/workshop)
 "aOL" = (
@@ -14880,6 +14886,15 @@
 	pixel_y = 4
 	},
 /obj/item/device/radio/off,
+/obj/machinery/cell_charger,
+/obj/item/weapon/cell/high{
+	charge = 100;
+	maxcharge = 15000
+	},
+/obj/item/weapon/cell/high{
+	charge = 100;
+	maxcharge = 15000
+	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/workshop)
 "aTV" = (
@@ -27108,7 +27123,6 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/warehouse)
 "bEy" = (
-/obj/structure/closet/crate/medical,
 /obj/machinery/camera/network/cargo{
 	c_tag = "CRG - Cargo Warehouse South";
 	dir = 10;
@@ -27116,6 +27130,7 @@
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/brown/border,
+/obj/machinery/r_n_d/protolathe/cargo,
 /turf/simulated/floor/tiled,
 /area/quartermaster/warehouse)
 "bEz" = (
@@ -28213,7 +28228,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/central)
 "bIn" = (
-/obj/structure/catwalk,
 /obj/random/plushielarge,
 /turf/simulated/floor/plating,
 /area/maintenance/bar)
@@ -43378,23 +43392,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/research)
 "cFW" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -22
-	},
+/obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
-/area/maintenance/research)
+/area/maintenance/bar)
 "cFX" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
@@ -47403,6 +47403,8 @@
 /obj/machinery/ai_status_display{
 	pixel_x = -32
 	},
+/obj/random/tech_supply,
+/obj/random/tech_supply,
 /turf/simulated/floor/tiled,
 /area/storage/primary)
 "eMV" = (
@@ -48400,13 +48402,9 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
 "foZ" = (
-/obj/structure/table/standard,
-/obj/random/tech_supply,
-/obj/random/tech_supply,
-/obj/random/tech_supply,
-/obj/random/tech_supply,
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/yellow/border,
+/obj/machinery/r_n_d/protolathe/service,
 /turf/simulated/floor/tiled,
 /area/storage/primary)
 "fpc" = (
@@ -49797,12 +49795,14 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/aft)
@@ -50181,6 +50181,10 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/white,
 /area/medical/first_aid_station/seconddeck/port)
+"gjV" = (
+/obj/random/trash_pile,
+/turf/simulated/floor/plating,
+/area/maintenance/research)
 "gkh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -50992,6 +50996,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/drone_fabrication)
+"gGS" = (
+/obj/machinery/computer/rdconsole/core{
+	dir = 1;
+	name = "Protolathe Console"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/medical/surgery_storage)
 "gHy" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -52367,6 +52378,11 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
+"hvf" = (
+/obj/structure/closet/l3closet/medical,
+/obj/machinery/r_n_d/protolathe/medical,
+/turf/simulated/floor/tiled/dark,
+/area/medical/surgery_storage)
 "hvG" = (
 /obj/structure/cable/green,
 /obj/machinery/power/apc{
@@ -55402,6 +55418,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
+"iXZ" = (
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -22
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/research)
 "iYb" = (
 /obj/effect/floor_decal/sign/dock/three,
 /turf/simulated/floor/tiled,
@@ -59052,11 +59075,11 @@
 /turf/simulated/floor/plating,
 /area/maintenance/research)
 "kQH" = (
-/obj/machinery/r_n_d/protolathe,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/reagent_dispensers/acid{
 	pixel_x = -30
 	},
+/obj/machinery/r_n_d/protolathe/science,
 /turf/simulated/floor/tiled,
 /area/rnd/lab)
 "kQV" = (
@@ -59852,9 +59875,12 @@
 /turf/simulated/floor/tiled,
 /area/engineering/workshop)
 "lsH" = (
-/obj/structure/reagent_dispensers/watertank,
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/machinery/r_n_d/protolathe/engineering,
+/obj/structure/reagent_dispensers/acid{
+	pixel_x = 30
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/workshop)
@@ -61709,12 +61735,10 @@
 /turf/simulated/floor/tiled,
 /area/construction/seconddeck/construction1)
 "mut" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/clothing/gloves/black,
-/obj/item/clothing/gloves/black,
-/obj/item/weapon/tool/crowbar,
-/obj/item/weapon/tool/crowbar/red,
-/obj/item/weapon/storage/box/lights/mixed,
+/obj/machinery/computer/rdconsole/core{
+	dir = 8;
+	name = "Protolathe Console"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/workshop)
 "muM" = (
@@ -62987,16 +63011,10 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "nkI" = (
-/obj/structure/table/steel_reinforced,
-/obj/machinery/cell_charger,
-/obj/item/weapon/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/weapon/tool/wrench,
 /obj/machinery/status_display{
 	pixel_y = -32
 	},
+/obj/machinery/r_n_d/circuit_imprinter,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/workshop)
 "nkN" = (
@@ -66361,8 +66379,8 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/docking_hallway2)
@@ -66750,6 +66768,12 @@
 	dir = 8;
 	name = "Gallery";
 	sortType = "Gallery"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/seconddeck/aft)
@@ -68244,6 +68268,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 4
 	},
+/obj/structure/closet/crate/medical,
 /turf/simulated/floor/tiled,
 /area/quartermaster/warehouse)
 "pWZ" = (
@@ -69384,18 +69409,16 @@
 /turf/simulated/floor/plating,
 /area/maintenance/research_medical)
 "qFK" = (
-/obj/structure/table/standard,
-/obj/machinery/cell_charger,
-/obj/random/tech_supply,
-/obj/random/tech_supply,
-/obj/random/tech_supply,
-/obj/random/tech_supply,
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV - Primary Tool Storage";
 	dir = 1
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/yellow/border,
+/obj/machinery/computer/rdconsole/core{
+	dir = 1;
+	name = "Protolathe Console"
+	},
 /turf/simulated/floor/tiled,
 /area/storage/primary)
 "qGw" = (
@@ -69801,6 +69824,7 @@
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 8
 	},
+/obj/random/tech_supply,
 /turf/simulated/floor/tiled,
 /area/storage/primary)
 "qXP" = (
@@ -70883,11 +70907,15 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/starboard)
 "rEG" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/seconddeck/aft)
@@ -72408,9 +72436,12 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "sxu" = (
-/obj/structure/closet/crate/internals,
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/brown/border,
+/obj/machinery/computer/rdconsole/core{
+	dir = 1;
+	name = "Protolathe Console"
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/warehouse)
 "sxI" = (
@@ -73081,6 +73112,7 @@
 /obj/effect/floor_decal/steeldecal/monofloor{
 	dir = 8
 	},
+/obj/structure/closet/crate/internals,
 /turf/simulated/floor/tiled,
 /area/quartermaster/warehouse)
 "sQN" = (
@@ -73463,6 +73495,8 @@
 	pixel_x = 3;
 	pixel_y = 3
 	},
+/obj/random/tech_supply,
+/obj/machinery/cell_charger,
 /turf/simulated/floor/tiled,
 /area/storage/primary)
 "tfd" = (
@@ -74341,6 +74375,12 @@
 /area/hallway/secondary/entry/D2/arrivals)
 "tCI" = (
 /obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -75377,7 +75417,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/entry/D3)
 "ump" = (
-/obj/machinery/portable_atmospherics/powered/pump/filled,
 /obj/machinery/power/apc{
 	name = "south bump";
 	pixel_y = -24
@@ -81057,6 +81096,10 @@
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 6
 	},
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
 /turf/simulated/floor/tiled,
 /area/storage/primary)
 "xAj" = (
@@ -112234,7 +112277,7 @@ aaa
 aaa
 aaa
 aaa
-cbx
+cza
 aai
 nGq
 bpD
@@ -112492,7 +112535,7 @@ aaa
 aaa
 aaa
 aaa
-cbx
+cza
 bGL
 nGq
 cNV
@@ -112750,9 +112793,9 @@ bDr
 aaa
 aaa
 aaa
-cbx
+cza
 bBd
-cAq
+nGq
 clg
 bts
 bNj
@@ -113007,8 +113050,8 @@ bvV
 bDr
 aaa
 aaa
-aaa
-cza
+cbx
+cbx
 bGP
 tqM
 clg
@@ -113265,8 +113308,8 @@ bvU
 bzL
 bzL
 aaa
-aaa
-cza
+cbx
+cFW
 bGN
 ump
 clg
@@ -113523,10 +113566,10 @@ bvV
 aVV
 bzL
 aaa
-aaa
-cza
-bkt
+cbx
 bIn
+bkt
+tqM
 clg
 bLJ
 bNo
@@ -113781,8 +113824,8 @@ bvW
 bxP
 bDr
 aaa
-aaa
 cbx
+cAq
 bGP
 wcF
 clg
@@ -114039,7 +114082,7 @@ bxQ
 dBF
 bDr
 aaa
-aaa
+cbx
 cbx
 bGP
 bIp
@@ -116324,7 +116367,7 @@ cwf
 cxA
 csw
 aWb
-cDP
+cuE
 cDZ
 aWb
 enG
@@ -116840,10 +116883,10 @@ cwj
 cxK
 csw
 cwA
-cDQ
+cuE
 cFV
 aWb
-aaa
+aWb
 aaa
 enG
 hdd
@@ -117099,9 +117142,9 @@ crE
 crE
 crE
 cDR
-cFW
+cDZ
+iXZ
 aWb
-aaa
 aaa
 enG
 hdV
@@ -117358,8 +117401,8 @@ czZ
 cCp
 cuE
 cDZ
+gjV
 aWb
-aaa
 aaa
 enG
 hex
@@ -117616,8 +117659,8 @@ cAb
 cCs
 cDS
 cFX
-csa
-aaa
+cDQ
+aWb
 aaa
 asV
 vad
@@ -117874,8 +117917,8 @@ cAc
 crE
 cDW
 cDZ
+cuE
 csa
-aaa
 aaa
 asV
 asV
@@ -118132,8 +118175,8 @@ cAu
 crE
 cDW
 cFY
+cuE
 csa
-aaa
 aaa
 aaa
 enG
@@ -118390,8 +118433,8 @@ cAv
 crE
 cDW
 cDZ
-aWb
-aaa
+cDP
+csa
 aaa
 aaa
 enG
@@ -118649,7 +118692,7 @@ crE
 cDW
 cDZ
 aWb
-aaa
+aWb
 aaa
 aaa
 aaa
@@ -128242,7 +128285,7 @@ nvr
 gPc
 uTu
 kmi
-xDM
+dPW
 oPy
 vNi
 aaa
@@ -128757,8 +128800,8 @@ rYP
 jyb
 okt
 rSH
-xDM
-dPW
+wlr
+rEl
 qws
 vNi
 aaa
@@ -129015,7 +129058,7 @@ wbc
 jyb
 deQ
 xDM
-rEl
+hvf
 vNi
 vNi
 vNi
@@ -129273,7 +129316,7 @@ nqY
 jyb
 dtw
 vIn
-wlr
+gGS
 vNi
 aaa
 aaa

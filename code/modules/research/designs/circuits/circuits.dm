@@ -199,13 +199,15 @@ CIRCUITS BELOW
 	req_tech = list(TECH_DATA = 2, TECH_MAGNET = 2, TECH_ENGINEERING = 2)
 	build_path = /obj/item/weapon/circuitboard/destructive_analyzer
 	sort_string = "HABAA"
-
+//CHOMPedit, no bypassing departmental lathes.
+/*
 /datum/design/circuit/protolathe
 	name = "protolathe"
 	id = "protolathe"
 	req_tech = list(TECH_DATA = 2, TECH_ENGINEERING = 2)
 	build_path = /obj/item/weapon/circuitboard/protolathe
 	sort_string = "HABAB"
+*/
 
 /datum/design/circuit/circuit_imprinter
 	name = "circuit imprinter"
