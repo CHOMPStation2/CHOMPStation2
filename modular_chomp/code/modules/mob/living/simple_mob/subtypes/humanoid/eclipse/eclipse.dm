@@ -7,11 +7,12 @@
 	name = "Eclipse Initiate"
 	tt_desc = "E Homo sapiens"
 	desc = "You shouldn't be seeing this."
-	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
-	icon_state = "syndicate"
-	icon_living = "syndicate"
+	icon = 'modular_chomp/icons/mob/eclipse.dmi'
+	icon_state = "sun"
+	icon_living = "sun"
 	icon_dead = "statisgem"
 	icon_gib = "syndicate_gib"
+	taser_kill = 0
 
 	faction = "eclipse"
 	movement_cooldown = 0
@@ -63,7 +64,22 @@
 	special_attack_cooldown = 45 SECONDS
 	special_attack_min_range = 2
 	special_attack_max_range = 7
+	var/has_heal_droid = FALSE
 
+//Want a self heal for a spefic dude, and to increase diffculty of some POIs
+/mob/living/simple_mob/humanoid/eclipse/handle_special()
+	if(has_heal_droid)
+		adjustBruteLoss(-1.0)
+		adjustFireLoss(-1.0)
+		adjustToxLoss(-1.0)
+		adjustOxyLoss(-1.0)
+		adjustCloneLoss(-1.0)
+	..()
+
+/mob/living/simple_mob/humanoid/eclipse/update_icon()
+	..() // Cuts everything else, so do that first.
+	if(has_heal_droid)
+		add_overlay(image(icon = 'modular_chomp/icons/mob/eclipse.dmi', icon_state = "heal_droid"))
 
 ////////////////////////////////
 //		Grenade Attack
@@ -493,7 +509,7 @@
 /mob/living/simple_mob/humanoid/eclipse/lunar/pummler
 	name = "Lunar Eclipse Pummeler"
 	desc = "A strange creature moving at quick speed, bullets and melee sliding off it's hide."
-	projectiletype = /obj/item/projectile/bullet/shotgun/ion
+	projectiletype = /obj/item/projectile/bullet/shotgun/beanbag/weak
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 	melee_damage_lower = 10
 	melee_damage_upper = 10
@@ -508,6 +524,10 @@
 	var/poison_chance = 10
 	var/shock_chance = 60
 	base_attack_cooldown = 6
+
+/obj/item/projectile/bullet/shotgun/beanbag/weak
+	agony = 15
+	speed = 2.6
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/pummler/apply_melee_effects(var/atom/A)
 	if(isliving(A))
@@ -533,3 +553,213 @@
 	if(prob(poison_chance))
 		to_chat(L, "<span class='warning'>You feel a small shock rushing through your veins.</span>")
 		L.reagents.add_reagent(poison_type, poison_per_bite)
+
+
+//Freezing winds update
+
+/mob/living/simple_mob/humanoid/eclipse/lunar/aeroblaster //Air sniper
+	name = "Lunar Eclipse Aeroblaster"
+	desc = "WIP."
+	health = 25
+	maxHealth = 25
+	ai_holder_type = /datum/ai_holder/simple_mob/merc/eclipse/ranged/sniper
+	projectiletype = /obj/item/projectile/bullet/rifle/a145/aero
+
+	icon_state = "aeroblaster"
+	icon_living = "aeroblaster"
+
+	ranged_attack_delay = 1.5 SECONDS
+
+/mob/living/simple_mob/humanoid/eclipse/lunar/aeroblaster/ranged_pre_animation(atom/A)
+	Beam(get_turf(A), icon_state = "sniper_beam", time = 1 SECONDS, maxdistance = 15)
+	. = ..()
+
+/mob/living/simple_mob/humanoid/eclipse/lunar/aeroblaster/shoot_target(atom/A)
+	set waitfor = FALSE
+
+	if(!istype(A) || QDELETED(A))
+		return
+
+	setClickCooldown(get_attack_speed())
+
+	face_atom(A)
+
+	var/atom/orig_targ = A
+
+	if(ranged_attack_delay)
+		A = get_turf(orig_targ)
+		ranged_pre_animation(A)
+		handle_attack_delay(A, ranged_attack_delay) // This will sleep this proc for a bit, which is why waitfor is false.
+
+	if(needs_reload)
+		if(reload_count >= reload_max)
+			try_reload()
+			return FALSE
+
+	visible_message("<span class='danger'><b>\The [src]</b> fires at \the [orig_targ]!</span>")
+	shoot(A)
+	if(casingtype)
+		new casingtype(loc)
+
+	if(ranged_attack_delay)
+		ranged_post_animation(A)
+
+	return TRUE
+
+/obj/item/projectile/bullet/rifle/a145/aero
+	damage = 10
+	stun = 0
+	weaken = 0
+	penetrating = 10
+	armor_penetration = 90
+	hud_state = "sniper_flak"
+
+/mob/living/simple_mob/humanoid/eclipse/lunar/miner //Confusion?
+	name = "Lunar Eclipse Miner"
+	desc = "WIP."
+	health = 50
+	maxHealth = 50
+	projectiletype = /obj/item/projectile/energy/excavate/weak
+	special_attack_cooldown = 50 SECONDS
+	special_attack_min_range = 4
+	special_attack_max_range = 7
+	icon_state = "miner"
+	icon_living = "miner"
+
+/mob/living/simple_mob/humanoid/eclipse/lunar/miner/do_special_attack(atom/A)
+	new /mob/living/simple_mob/mechanical/mining_drone/scavenger/eclipse (src.loc)
+	..(null,"creates a mining drone.")
+
+/mob/living/simple_mob/mechanical/mining_drone/scavenger/eclipse
+	health = 1
+	maxHealth = 1
+	faction = "eclipse"
+
+/mob/living/simple_mob/humanoid/eclipse/solar/froststalker //teleporting stalker
+	name = "Lunar Eclipse Froststalker"
+	health = 50
+	maxHealth = 50
+	desc = "WIP."
+	alpha = 180
+	melee_damage_lower = 20
+	melee_damage_upper = 20
+	attack_armor_pen = 30
+	special_attack_cooldown = 5 SECONDS
+	special_attack_min_range = 1
+	special_attack_max_range = 7
+	projectiletype = null
+	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
+	icon_state = "froststalker"
+	icon_living = "froststalker"
+	cold_resist = 0.75
+
+/mob/living/simple_mob/humanoid/eclipse/solar/froststalker/do_special_attack(atom/A)
+	// Teleport attack.
+	if(!A)
+		to_chat(src, span("warning", "There's nothing to teleport to."))
+		return FALSE
+
+	var/list/nearby_things = range(1, A)
+	var/list/valid_turfs = list()
+
+	// All this work to just go to a non-dense tile.
+	for(var/turf/potential_turf in nearby_things)
+		var/valid_turf = TRUE
+		if(potential_turf.density)
+			continue
+		for(var/atom/movable/AM in potential_turf)
+			if(AM.density)
+				valid_turf = FALSE
+		if(valid_turf)
+			valid_turfs.Add(potential_turf)
+
+	if(!(valid_turfs.len))
+		to_chat(src, span("warning", "There wasn't an unoccupied spot to teleport to."))
+		return FALSE
+
+	var/turf/target_turf = pick(valid_turfs)
+	var/turf/T = get_turf(src)
+
+	var/datum/effect/effect/system/spark_spread/s1 = new /datum/effect/effect/system/smoke_spread/frost
+	s1.set_up(5, 1, T)
+	var/datum/effect/effect/system/spark_spread/s2 = new /datum/effect/effect/system/smoke_spread/frost
+	s2.set_up(5, 1, target_turf)
+
+
+	T.visible_message(span("notice", "\The [src] vanishes!"))
+	s1.start()
+
+	forceMove(target_turf)
+	playsound(target_turf, 'sound/effects/phasein.ogg', 50, 1)
+	to_chat(src, span("notice", "You teleport to \the [target_turf]."))
+
+	target_turf.visible_message(span("warning", "\The [src] appears!"))
+	s2.start()
+
+/mob/living/simple_mob/humanoid/eclipse/solar/cryomancer //Freezing slowdown unit
+	name = "Lunar Eclipse Cryomancer"
+	desc = "WIP."
+	health = 150
+	maxHealth = 150
+	projectiletype = /obj/item/projectile/bullet/frostshotgun
+	has_heal_droid = TRUE
+	reload_max = 5
+	icon_state = "cryo"
+	icon_living = "cryo"
+	grenade_type = /obj/item/weapon/grenade/chem_grenade/frost
+	cold_resist = 1.0
+	has_heal_droid = TRUE
+	ai_holder_type = /datum/ai_holder/simple_mob/merc/eclipse/ranged/cyro
+
+	loot_list = list(/obj/item/weapon/gun/energy/freezegun = 100,
+			)
+
+/obj/item/weapon/grenade/chem_grenade/frost
+	name = "frost grenade"
+	desc = "Currently in the testing phase, pratical purposes are unknown."
+	icon_state = "foam"
+	path = 1
+	stage = 2
+	sealed = TRUE
+
+/obj/item/weapon/grenade/chem_grenade/frost/Initialize()
+	. = ..()
+	var/obj/item/weapon/reagent_containers/glass/beaker/bluespace/B1 = new(src)
+	var/obj/item/weapon/reagent_containers/glass/beaker/bluespace/B2 = new(src)
+
+	B1.reagents.add_reagent("cryoslurry", 150)
+	B1.reagents.add_reagent("potassium", 150)
+	B2.reagents.add_reagent("phosphorous", 150)
+	B2.reagents.add_reagent("sugar", 150)
+
+	detonator = new/obj/item/device/assembly_holder/timer_igniter(src)
+
+	beakers += B1
+
+/obj/item/projectile/bullet/frostshotgun
+	use_submunitions = 1
+	only_submunitions = 1
+	range = 0
+	embed_chance = 0
+	submunition_spread_max = 1200
+	submunition_spread_min = 50
+	submunitions = list(/obj/item/projectile/energy/frostsphere = 4)
+
+/obj/item/projectile/bullet/frostshotgun/on_range()
+	qdel(src)
+
+/obj/item/projectile/energy/frostsphere
+	name = "frost sphere"
+	icon_state = "ice_2"
+	fire_sound = 'sound/weapons/pulse3.ogg'
+	damage = 20
+	modifier_type_to_apply = /datum/modifier/cryogelled
+	modifier_duration = 0.25 MINUTE
+	speed = 2.5
+
+/datum/ai_holder/simple_mob/merc/eclipse/ranged/cyro
+	can_flee = TRUE					// If they're even allowed to flee.
+	flee_when_dying = TRUE			// If they should flee when low on health.
+	dying_threshold = 0.3		// How low on health the holder needs to be before fleeing. Defaults to 30% or lower health.
+	flee_when_outmatched = TRUE	// If they should flee upon reaching a specific tension threshold.
+	outmatched_threshold = 300

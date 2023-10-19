@@ -17,6 +17,10 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "ca" = (
@@ -24,17 +28,26 @@
 /obj/item/weapon/rig/combat/equipped,
 /obj/item/rig_module/vision/nvg,
 /obj/random/energy/highend,
+/obj/effect/floor_decal/corner/blue/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "cC" = (
 /obj/item/weapon/stool/padded,
 /obj/machinery/light,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "dm" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/item/seeds/celery,
 /obj/machinery/light,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "eb" = (
@@ -42,6 +55,10 @@
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
+	},
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
@@ -54,6 +71,14 @@
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
+/obj/item/weapon/paper{
+	info = "Secured the old fortress. Attempts to set up mass stimm farms have been unfruitful. Supply drops continue to get intercepted by cultists, pirates or the various mercenary groups.  Lake reads to be much deeper then it appears to be. Please forward a suggestion to the Precursor Initiative to send a task force to investigate. For the possibility of precursor ruins or sunken technology.";
+	name = "Status Report"
+	},
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "fi" = (
@@ -64,10 +89,18 @@
 /area/submap/eclipseaqua)
 "gA" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/snipertesh,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "gH" = (
 /mob/living/simple_mob/humanoid/eclipse/lunar/ravanger,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "gR" = (
@@ -80,11 +113,19 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "jw" = (
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
@@ -92,15 +133,28 @@
 /obj/machinery/light,
 /obj/structure/bed/double/padded,
 /obj/item/weapon/bedsheet/bluedouble,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "kd" = (
 /mob/living/simple_mob/humanoid/eclipse/lunar/pummler,
+/obj/effect/floor_decal/corner/blue/diagonal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseaqua)
+"lR" = (
+/obj/effect/floor_decal/corner/blue/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "lS" = (
 /obj/structure/table/steel,
 /obj/item/weapon/storage/box/ambrosiadeus,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "mi" = (
@@ -111,6 +165,10 @@
 /obj/random/ammo,
 /obj/random/ammo,
 /obj/random/projectile/random,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "nc" = (
@@ -121,10 +179,18 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "nz" = (
 /obj/machinery/biogenerator,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "ob" = (
@@ -133,6 +199,10 @@
 /area/submap/eclipseaqua)
 "pq" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "pE" = (
@@ -161,11 +231,26 @@
 /area/submap/eclipseaqua)
 "rR" = (
 /mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseaqua)
+"sp" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "sX" = (
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
@@ -174,6 +259,10 @@
 /area/submap/eclipseaqua)
 "uU" = (
 /obj/structure/reagent_dispensers/fueltank,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "vt" = (
@@ -192,10 +281,25 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseaqua)
+"xL" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "xO" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/guardian,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "yn" = (
@@ -203,6 +307,10 @@
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
 /obj/random/maintenance/security,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "yX" = (
@@ -218,6 +326,8 @@
 	},
 /obj/item/stack/material/void_opal,
 /obj/structure/table/rack,
+/obj/effect/map_helper/no_phaseshift/area,
+/obj/effect/floor_decal/corner/blue/diagonal,
 /turf/simulated/floor/reinforced/airless,
 /area/submap/eclipseaqua)
 "zo" = (
@@ -231,6 +341,10 @@
 /obj/item/seeds/celery,
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
@@ -246,10 +360,20 @@
 	pixel_y = -24
 	},
 /obj/structure/cable,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "CM" = (
 /mob/living/simple_mob/humanoid/eclipse/lunar/wheel,
+/obj/effect/floor_decal/corner/blue/diagonal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseaqua)
+"Dt" = (
+/obj/machinery/door/airlock/voidcraft,
+/obj/effect/floor_decal/corner/grey,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "Dv" = (
@@ -257,6 +381,7 @@
 /obj/random/rigsuit,
 /obj/item/rig_module/mounted/egun,
 /obj/random/energy/highend,
+/obj/effect/floor_decal/corner/blue/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "Dw" = (
@@ -264,6 +389,10 @@
 /obj/random/ammo,
 /obj/random/ammo,
 /obj/random/energy/highend,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "Ej" = (
@@ -271,6 +400,10 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
@@ -287,6 +420,7 @@
 /obj/random/rigsuit,
 /obj/item/rig_module/chem_dispenser/combat,
 /obj/random/energy/highend,
+/obj/effect/floor_decal/corner/blue/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "EE" = (
@@ -301,6 +435,10 @@
 /area/submap/eclipseaqua)
 "Ho" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/firemoff,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "HD" = (
@@ -322,6 +460,10 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "IY" = (
@@ -330,11 +472,19 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "JQ" = (
 /obj/structure/bed/double/padded,
 /obj/item/weapon/bedsheet/bluedouble,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "Kh" = (
@@ -346,6 +496,10 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "Kv" = (
@@ -353,6 +507,10 @@
 /obj/random/ammo,
 /obj/random/ammo,
 /obj/random/handgun,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "KH" = (
@@ -361,6 +519,26 @@
 /obj/random/maintenance/research,
 /obj/random/maintenance/morestuff,
 /obj/random/maintenance/security,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseaqua)
+"KI" = (
+/obj/structure/table/steel,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseaqua)
+"KX" = (
+/obj/machinery/light,
+/obj/effect/floor_decal/corner/blue/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "LC" = (
@@ -368,6 +546,10 @@
 /obj/random/ammo,
 /obj/random/ammo,
 /obj/random/medical/pillbottle,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "My" = (
@@ -394,6 +576,18 @@
 /obj/structure/window/titanium{
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseaqua)
+"On" = (
+/obj/machinery/door/airlock/voidcraft,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "Oo" = (
@@ -401,6 +595,10 @@
 /obj/random/ammo,
 /obj/random/ammo,
 /obj/random/grenade/lethal,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "Pf" = (
@@ -419,6 +617,10 @@
 "Qc" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/item/seeds/celery,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "Qu" = (
@@ -429,12 +631,25 @@
 /obj/random/ammo,
 /obj/random/ammo,
 /obj/random/toolbox,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "Rt" = (
 /turf/simulated/floor/outdoors/rocks,
 /area/submap/eclipseaqua)
 "Ry" = (
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseaqua)
+"RH" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/guardian,
+/obj/effect/floor_decal/corner/blue/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "SE" = (
@@ -448,6 +663,7 @@
 /obj/item/weapon/rig/breacher,
 /obj/item/rig_module/pat_module,
 /obj/random/energy/highend,
+/obj/effect/floor_decal/corner/blue/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "UF" = (
@@ -463,6 +679,10 @@
 /obj/random/ammo,
 /obj/random/ammo,
 /obj/random/firstaid,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "UI" = (
@@ -472,6 +692,10 @@
 /obj/random/maintenance/morestuff,
 /obj/random/maintenance/security,
 /obj/item/stack/nanopaste/advanced,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "UJ" = (
@@ -487,10 +711,18 @@
 /obj/structure/window/titanium{
 	dir = 8
 	},
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "US" = (
 /obj/machinery/light,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "UU" = (
@@ -502,6 +734,10 @@
 /area/submap/eclipseaqua)
 "Vg" = (
 /obj/item/weapon/stool/padded,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "Vn" = (
@@ -509,11 +745,26 @@
 /obj/random/ammo,
 /obj/random/ammo,
 /obj/random/gun/random,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseaqua)
+"Wc" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/blue/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "WG" = (
 /obj/structure/bed/double/padded,
 /obj/item/weapon/bedsheet/iandouble,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "WS" = (
@@ -528,10 +779,15 @@
 /obj/structure/table/steel,
 /obj/random/ammo,
 /obj/random/ammo,
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "Yt" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/teslanoodle,
+/obj/effect/floor_decal/corner/blue/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "Zm" = (
@@ -544,6 +800,10 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner/grey,
+/obj/effect/floor_decal/corner/black{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
@@ -1230,7 +1490,7 @@ vt
 Qu
 Qu
 Qu
-ob
+Dt
 Qu
 Qu
 Qu
@@ -1240,7 +1500,7 @@ Pf
 Qu
 Qu
 Qu
-ob
+On
 Qu
 Qu
 Qu
@@ -1327,15 +1587,15 @@ Ho
 Ry
 Ry
 Ry
-ob
+Dt
 Pf
 zo
 Pf
 Qu
 Ry
 Vg
-eK
-eK
+KI
+KI
 cC
 Qu
 nf
@@ -1368,7 +1628,7 @@ ta
 Ek
 Ry
 gA
-ob
+On
 Ry
 Ry
 Ry
@@ -1382,9 +1642,9 @@ Qu
 nf
 Vg
 eK
-eK
+KI
 Vg
-ob
+On
 gA
 Ry
 UF
@@ -1422,9 +1682,9 @@ Ry
 Ry
 Qc
 Qu
-Ry
-jw
-Ry
+lR
+Wc
+lR
 ob
 Ry
 Ry
@@ -1469,9 +1729,9 @@ zB
 Ry
 Qu
 Qu
-Ry
-Ry
-Ry
+lR
+lR
+lR
 Qu
 Qu
 Ry
@@ -1513,12 +1773,12 @@ Qu
 Qu
 Qu
 Qu
-ob
+On
 Qu
 Ev
-Ry
-Ry
-Ry
+lR
+lR
+lR
 ca
 Qu
 Qu
@@ -1560,15 +1820,15 @@ Pf
 Pf
 Pf
 Qu
-Ry
-Ry
-Ry
-Ry
+lR
+lR
+lR
+lR
 Yt
-Ry
-Ry
-Ry
-Ry
+lR
+lR
+lR
+lR
 Qu
 Pf
 Pf
@@ -1607,15 +1867,15 @@ Pf
 gR
 ew
 Qu
-nf
-Ry
-Ry
-xO
+xL
+lR
+lR
+RH
 yX
 CM
-Ry
-Ry
-US
+lR
+lR
+KX
 Qu
 fi
 gR
@@ -1654,15 +1914,15 @@ Pf
 Pf
 Pf
 Qu
-Ry
-Ry
-Ry
-Ry
+lR
+lR
+lR
+lR
 kd
-Ry
-Ry
-Ry
-Ry
+lR
+lR
+lR
+lR
 Qu
 Pf
 Pf
@@ -1704,9 +1964,9 @@ Qu
 Qu
 Qu
 TA
-Ry
-Ry
-Ry
+lR
+lR
+lR
 Dv
 Qu
 ob
@@ -1751,9 +2011,9 @@ UJ
 pq
 Qu
 Qu
-Ry
-Ry
-Ry
+lR
+lR
+lR
 Qu
 Qu
 Ry
@@ -1798,9 +2058,9 @@ Ry
 vu
 Ry
 ob
-Ry
-sX
-Ry
+lR
+sp
+lR
 Qu
 WG
 Ry
@@ -1838,7 +2098,7 @@ ta
 Ek
 Ry
 gA
-ob
+Dt
 Ry
 Ry
 Ry
@@ -1854,7 +2114,7 @@ Ry
 gH
 Ry
 Ry
-ob
+Dt
 gA
 Ry
 Ek
@@ -1982,7 +2242,7 @@ UU
 Qu
 Qu
 Qu
-ob
+Dt
 Qu
 Qu
 Qu
@@ -1992,7 +2252,7 @@ Pf
 Qu
 Qu
 Qu
-ob
+Dt
 Qu
 Qu
 Qu
