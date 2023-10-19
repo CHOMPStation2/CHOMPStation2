@@ -32,7 +32,7 @@
 #include "warzone.dmm"
 #include "frozenlab.dmm"
 #include "terror.dmm"
-#include "toxiclake"
+#include "toxiclake.dmm"
 #include "laserpuzzle.dmm"
 #endif
 
