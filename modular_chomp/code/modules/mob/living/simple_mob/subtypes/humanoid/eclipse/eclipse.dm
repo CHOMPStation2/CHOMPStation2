@@ -566,6 +566,7 @@
 	icon_living = "aeroblaster"
 
 	ranged_attack_delay = 1.5 SECONDS
+	hovering = TRUE
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/aeroblaster/ranged_pre_animation(atom/A)
 	Beam(get_turf(A), icon_state = "sniper_beam", time = 1 SECONDS, maxdistance = 15)
@@ -697,8 +698,8 @@
 /mob/living/simple_mob/humanoid/eclipse/solar/cryomancer //Freezing slowdown unit
 	name = "Lunar Eclipse Cryomancer"
 	desc = "A being wearing ice and burn resistaint armor."
-	health = 150
-	maxHealth = 150
+	health = 100
+	maxHealth = 100
 	projectiletype = /obj/item/projectile/bullet/frostshotgun
 	has_heal_droid = TRUE
 	reload_max = 5
@@ -709,7 +710,7 @@
 	has_heal_droid = TRUE
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/eclipse/ranged/cyro
 
-	ranged_attack_delay = 0.75 SECONDS
+	ranged_attack_delay = 1.5 SECONDS
 
 	loot_list = list(/obj/item/weapon/gun/energy/freezegun = 100,
 			)
