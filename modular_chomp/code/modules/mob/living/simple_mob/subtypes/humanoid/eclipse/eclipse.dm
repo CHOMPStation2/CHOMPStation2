@@ -142,7 +142,7 @@
 	name = "Solar Eclipse Initiate"
 	desc = "You shouldn't be seeing this. But don't use lasers or energy weapons"
 
-	armor = list(melee = -10, bullet = -10, laser = 75, energy = 75, bomb = 50, bio = 100, rad = 100) //Solar members are nigh immune to burns.
+	armor = list(melee = -20, bullet = -20, laser = 85, energy = 85, bomb = 50, bio = 100, rad = 100) //Solar members are nigh immune to burns.
 	armor_soak = list(melee = 0, bullet = 0, laser = 15, energy = 15, bomb = 0, bio = 0, rad = 0)
 
 /mob/living/simple_mob/humanoid/eclipse/solar/teslanoodle
@@ -271,7 +271,7 @@
 	name = "Lunar Eclipse Initiate"
 	desc = "You shouldn't be seeing this, but don't use melee weapons or bullets."
 
-	armor = list(melee = 75, bullet = 75, laser = -10, energy = -10, bomb = 50, bio = 100, rad = 100) //Lunar members are nigh immune to burns.
+	armor = list(melee = 85, bullet = 85, laser = -20, energy = -20, bomb = 50, bio = 100, rad = 100) //Lunar members are nigh immune to burns.
 	armor_soak = list(melee = 15, bullet = 15, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0) //15 because every melee weapon has dumb amount of AP
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle //Bouncing bullet extreme
@@ -509,7 +509,7 @@
 /mob/living/simple_mob/humanoid/eclipse/lunar/pummler
 	name = "Lunar Eclipse Pummeler"
 	desc = "A strange creature moving at quick speed, bullets and melee sliding off it's hide."
-	projectiletype = /obj/item/projectile/bullet/shotgun/beanbag/weak
+	projectiletype = /obj/item/projectile/bola
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 	melee_damage_lower = 10
 	melee_damage_upper = 10
@@ -524,10 +524,7 @@
 	var/poison_chance = 10
 	var/shock_chance = 60
 	base_attack_cooldown = 6
-
-/obj/item/projectile/bullet/shotgun/beanbag/weak
-	agony = 15
-	speed = 2.6
+	hovering = TRUE
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/pummler/apply_melee_effects(var/atom/A)
 	if(isliving(A))
@@ -559,7 +556,7 @@
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/aeroblaster //Air sniper
 	name = "Lunar Eclipse Aeroblaster"
-	desc = "WIP."
+	desc = "A strange somewhat see through floating jellyfish."
 	health = 25
 	maxHealth = 25
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/eclipse/ranged/sniper
@@ -616,7 +613,7 @@
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/miner //Confusion?
 	name = "Lunar Eclipse Miner"
-	desc = "WIP."
+	desc = "A slime creature in red and blue armor."
 	health = 50
 	maxHealth = 50
 	projectiletype = /obj/item/projectile/energy/excavate/weak
@@ -639,7 +636,7 @@
 	name = "Lunar Eclipse Froststalker"
 	health = 50
 	maxHealth = 50
-	desc = "WIP."
+	desc = "A somewhat see through being wearing a burn resistaint coat."
 	alpha = 180
 	melee_damage_lower = 20
 	melee_damage_upper = 20
@@ -651,7 +648,8 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 	icon_state = "froststalker"
 	icon_living = "froststalker"
-	cold_resist = 0.75
+	cold_resist = 1.0
+	melee_attack_delay = 2.0
 
 /mob/living/simple_mob/humanoid/eclipse/solar/froststalker/do_special_attack(atom/A)
 	// Teleport attack.
@@ -698,7 +696,7 @@
 
 /mob/living/simple_mob/humanoid/eclipse/solar/cryomancer //Freezing slowdown unit
 	name = "Lunar Eclipse Cryomancer"
-	desc = "WIP."
+	desc = "A being wearing ice and burn resistaint armor."
 	health = 150
 	maxHealth = 150
 	projectiletype = /obj/item/projectile/bullet/frostshotgun
@@ -711,8 +709,13 @@
 	has_heal_droid = TRUE
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/eclipse/ranged/cyro
 
+	ranged_attack_delay = 0.75 SECONDS
+
 	loot_list = list(/obj/item/weapon/gun/energy/freezegun = 100,
 			)
+
+	armor_soak = list(melee = 0, bullet = 0, laser = 20, energy = 20, bomb = 0, bio = 0, rad = 0)
+
 
 /obj/item/weapon/grenade/chem_grenade/frost
 	name = "frost grenade"
@@ -741,8 +744,8 @@
 	only_submunitions = 1
 	range = 0
 	embed_chance = 0
-	submunition_spread_max = 1200
-	submunition_spread_min = 50
+	submunition_spread_max = 1800
+	submunition_spread_min = 500
 	submunitions = list(/obj/item/projectile/energy/frostsphere = 4)
 
 /obj/item/projectile/bullet/frostshotgun/on_range()
@@ -756,6 +759,7 @@
 	modifier_type_to_apply = /datum/modifier/cryogelled
 	modifier_duration = 0.25 MINUTE
 	speed = 2.5
+	range = 8
 
 /datum/ai_holder/simple_mob/merc/eclipse/ranged/cyro
 	can_flee = TRUE					// If they're even allowed to flee.
