@@ -361,7 +361,6 @@
 	},
 /area/submap/unfinishedoutpost)
 "Kj" = (
-/obj/machinery/telecomms/relay/preset/southerncross/valley,
 /obj/structure/cable,
 /turf/simulated/floor/plating{
 	oxygen = 20.7263;
