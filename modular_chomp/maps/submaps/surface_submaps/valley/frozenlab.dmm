@@ -15,7 +15,11 @@
 /area/submap/frozenlab)
 "d" = (
 /obj/machinery/atmospherics/unary/cryo_cell,
-/turf/simulated/floor/outdoors/shelfice,
+/turf/simulated/floor/outdoors/shelfice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
 /area/submap/frozenlab)
 "e" = (
 /obj/machinery/portable_atmospherics/canister/oxygen/prechilled,
@@ -31,7 +35,11 @@
 /area/submap/frozenlab)
 "g" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/froststalker,
-/turf/simulated/floor/outdoors/shelfice,
+/turf/simulated/floor/outdoors/shelfice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
 /area/submap/frozenlab)
 "h" = (
 /obj/machinery/portable_atmospherics/canister/oxygen/prechilled,
@@ -123,7 +131,11 @@
 /area/submap/frozenlab)
 "L" = (
 /obj/machinery/atmospherics/unary/freezer,
-/turf/simulated/floor/outdoors/shelfice,
+/turf/simulated/floor/outdoors/shelfice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
 /area/submap/frozenlab)
 "M" = (
 /obj/structure/table/steel,
@@ -160,7 +172,11 @@
 "R" = (
 /obj/structure/table/steel,
 /obj/item/weapon/storage/belt/medical/alien,
-/turf/simulated/floor/outdoors/shelfice,
+/turf/simulated/floor/outdoors/shelfice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
 /area/submap/frozenlab)
 "S" = (
 /obj/random/material/refined,
@@ -171,28 +187,40 @@
 /turf/simulated/floor/snow,
 /area/template_noop)
 "T" = (
-/turf/simulated/floor/outdoors/shelfice,
+/turf/simulated/floor/outdoors/shelfice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
 /area/submap/frozenlab)
 "U" = (
 /obj/machinery/portable_atmospherics/powered/reagent_distillery/industrial,
-/obj/machinery/atmospherics/portables_connector{
-	dir = 1
-	},
 /obj/machinery/light,
-/turf/simulated/floor/outdoors/shelfice,
+/turf/simulated/floor/outdoors/shelfice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
 /area/submap/frozenlab)
 "V" = (
 /obj/machinery/portable_atmospherics/powered/reagent_distillery/industrial,
-/obj/machinery/atmospherics/portables_connector,
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/shelfice,
+/turf/simulated/floor/outdoors/shelfice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
 /area/submap/frozenlab)
 "W" = (
 /obj/structure/table/steel,
 /obj/item/weapon/reagent_containers/glass/beaker/bluespace,
-/turf/simulated/floor/outdoors/shelfice,
+/turf/simulated/floor/outdoors/shelfice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
 /area/submap/frozenlab)
 "X" = (
 /obj/structure/table/steel,

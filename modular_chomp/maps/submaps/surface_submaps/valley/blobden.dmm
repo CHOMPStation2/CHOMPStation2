@@ -57,7 +57,7 @@
 "eY" = (
 /obj/structure/table/borosilicate,
 /obj/item/rig_module/rad_shield/advanced,
-/obj/structure/blob/normal,
+/obj/structure/blob/factory,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "fb" = (
@@ -79,7 +79,7 @@
 "ig" = (
 /obj/structure/table/borosilicate,
 /obj/item/rig_module/mounted/egun,
-/obj/structure/blob/normal,
+/obj/structure/blob/factory,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "iN" = (
@@ -89,6 +89,9 @@
 /obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
+"jD" = (
+/turf/simulated/mineral,
+/area/template_noop)
 "kY" = (
 /obj/effect/floor_decal/corner/purple/border,
 /obj/structure/blob/normal,
@@ -182,6 +185,10 @@
 	dir = 10
 	},
 /obj/structure/blob/normal,
+/turf/simulated/floor/tiled/white,
+/area/submap/blobden)
+"sP" = (
+/obj/structure/blob/factory,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "uj" = (
@@ -281,7 +288,7 @@
 /obj/structure/table/borosilicate,
 /obj/item/rig_module/chem_dispenser/combat,
 /obj/random/medical,
-/obj/structure/blob/normal,
+/obj/structure/blob/factory,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "FA" = (
@@ -388,7 +395,7 @@
 "Qg" = (
 /obj/structure/table/borosilicate,
 /obj/item/rig_module/grenade_launcher/metalfoam,
-/obj/structure/blob/normal,
+/obj/structure/blob/factory,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "Qp" = (
@@ -464,56 +471,58 @@
 /area/submap/blobden)
 
 (1,1,1) = {"
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
 "}
 (2,1,1) = {"
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
 "}
 (3,1,1) = {"
+jD
+jD
 lt
 lt
 lt
@@ -533,12 +542,12 @@ lt
 lt
 lt
 lt
-lt
-lt
-lt
-lt
+jD
+jD
 "}
 (4,1,1) = {"
+jD
+jD
 lt
 lt
 lt
@@ -558,16 +567,14 @@ lt
 lt
 lt
 lt
-lt
-lt
-lt
-lt
+jD
+jD
 "}
 (5,1,1) = {"
+jD
+jD
 lt
 lt
-lt
-lt
 ak
 ak
 ak
@@ -585,12 +592,12 @@ ak
 ak
 lt
 lt
-lt
-lt
+jD
+jD
 "}
 (6,1,1) = {"
-lt
-lt
+jD
+jD
 lt
 lt
 ak
@@ -610,12 +617,12 @@ Bc
 ak
 lt
 lt
-lt
-lt
+jD
+jD
 "}
 (7,1,1) = {"
-lt
-lt
+jD
+jD
 lt
 lt
 ak
@@ -625,7 +632,7 @@ NS
 dt
 ak
 zE
-pU
+sP
 qz
 ak
 yW
@@ -635,12 +642,12 @@ kY
 ak
 lt
 lt
-lt
-lt
+jD
+jD
 "}
 (8,1,1) = {"
-lt
-lt
+jD
+jD
 lt
 lt
 ak
@@ -660,12 +667,12 @@ kY
 ak
 lt
 lt
-lt
-lt
+jD
+jD
 "}
 (9,1,1) = {"
-lt
-lt
+jD
+jD
 lt
 lt
 ak
@@ -685,12 +692,12 @@ wX
 ak
 lt
 lt
-lt
-lt
+jD
+jD
 "}
 (10,1,1) = {"
-lt
-lt
+jD
+jD
 lt
 lt
 ak
@@ -710,12 +717,12 @@ ak
 ak
 lt
 lt
-lt
-lt
+jD
+jD
 "}
 (11,1,1) = {"
-lt
-lt
+jD
+jD
 lt
 lt
 ak
@@ -735,17 +742,17 @@ sJ
 ak
 lt
 lt
-lt
-lt
+jD
+jD
 "}
 (12,1,1) = {"
-lt
-lt
+jD
+jD
 lt
 lt
 ak
 zE
-pU
+sP
 pU
 pU
 dL
@@ -755,17 +762,17 @@ xW
 dL
 pU
 pU
-pU
+sP
 qz
 ak
 lt
 lt
-lt
-lt
+jD
+jD
 "}
 (13,1,1) = {"
-lt
-lt
+jD
+jD
 lt
 lt
 ak
@@ -785,12 +792,12 @@ DR
 ak
 lt
 lt
-lt
-lt
+jD
+jD
 "}
 (14,1,1) = {"
-lt
-lt
+jD
+jD
 lt
 lt
 ak
@@ -810,12 +817,12 @@ ak
 ak
 lt
 lt
-lt
-lt
+jD
+jD
 "}
 (15,1,1) = {"
-lt
-lt
+jD
+jD
 lt
 lt
 ak
@@ -835,12 +842,12 @@ WG
 ak
 lt
 lt
-lt
-lt
+jD
+jD
 "}
 (16,1,1) = {"
-lt
-lt
+jD
+jD
 lt
 lt
 ak
@@ -860,12 +867,12 @@ eL
 ak
 lt
 lt
-lt
-lt
+jD
+jD
 "}
 (17,1,1) = {"
-lt
-lt
+jD
+jD
 lt
 lt
 ak
@@ -875,7 +882,7 @@ Hs
 La
 ak
 zE
-pU
+sP
 qz
 ak
 ry
@@ -885,12 +892,12 @@ eL
 ak
 lt
 lt
-lt
-lt
+jD
+jD
 "}
 (18,1,1) = {"
-lt
-lt
+jD
+jD
 lt
 lt
 ak
@@ -910,14 +917,14 @@ Kc
 ak
 lt
 lt
-lt
-lt
+jD
+jD
 "}
 (19,1,1) = {"
+jD
+jD
 lt
 lt
-lt
-lt
 ak
 ak
 ak
@@ -935,10 +942,12 @@ ak
 ak
 lt
 lt
-lt
-lt
+jD
+jD
 "}
 (20,1,1) = {"
+jD
+jD
 lt
 lt
 lt
@@ -958,12 +967,12 @@ lt
 lt
 lt
 lt
-lt
-lt
-lt
-lt
+jD
+jD
 "}
 (21,1,1) = {"
+jD
+jD
 lt
 lt
 lt
@@ -983,58 +992,56 @@ lt
 lt
 lt
 lt
-lt
-lt
-lt
-lt
+jD
+jD
 "}
 (22,1,1) = {"
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
 "}
 (23,1,1) = {"
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
 "}
