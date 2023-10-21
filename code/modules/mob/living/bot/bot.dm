@@ -124,7 +124,7 @@
 			else
 				to_chat(user, "<span class='warning'>Access denied.</span>")
 		return
-	else if(O.is_screwdriver())
+	else if(O.has_tool_quality(TOOL_SCREWDRIVER))
 		if(!locked)
 			open = !open
 			to_chat(user, "<span class='notice'>Maintenance panel is now [open ? "opened" : "closed"].</span>")
@@ -132,7 +132,7 @@
 		else
 			to_chat(user, "<span class='notice'>You need to unlock the controls first.</span>")
 		return
-	else if(istype(O, /obj/item/weapon/weldingtool))
+	else if(O.has_tool_quality(TOOL_WELDER))
 		if(health < getMaxHealth())
 			if(open)
 				if(getBruteLoss() < 10)
@@ -164,7 +164,7 @@
 			to_chat(user, span_notice("You slot the card into \the [initial(src.name)]."))
 		else
 			to_chat(user, span_notice("You must open the panel first!"))
-	else if(O.is_crowbar())
+	else if(O.has_tool_quality(TOOL_CROWBAR))
 		if(open && paicard)
 			to_chat(user, span_notice("You are attempting to remove the pAI.."))
 			if(do_after(user,10 * O.toolspeed))

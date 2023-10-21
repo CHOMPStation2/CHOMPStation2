@@ -7227,7 +7227,6 @@
 /turf/simulated/floor/cult,
 /area/vr/powered/cult)
 "ixP" = (
-/mob/living/simple_mob/vore/alienanimals/catslug/suslug/color/red,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/powered/dungeon)
 "ixS" = (
@@ -9324,7 +9323,7 @@
 /obj/item/weapon/surgical/scalpel{
 	pixel_y = 11
 	},
-/obj/item/weapon/surgical/circular_saw/cyborg,
+/obj/item/weapon/surgical/circular_saw,
 /turf/simulated/floor/tiled/white,
 /area/vr/powered/vet)
 "kPd" = (

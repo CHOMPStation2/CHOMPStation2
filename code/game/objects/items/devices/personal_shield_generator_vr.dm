@@ -179,7 +179,7 @@
 			to_chat(user, "<span class='notice'>You install a cell in \the [src].</span>")
 			update_icon()
 
-	else if(W.is_screwdriver())
+	else if(W.has_tool_quality(TOOL_SCREWDRIVER))
 		if(bcell)
 			if(istype(bcell, /obj/item/weapon/cell/device/shield_generator/parry)) //CHOMPedit: Cannot remove the cell from Parry shields.
 				to_chat(user,"<span class='notice'>You cannot remove the cell from this device.</span>") //CHOMPedit: No cell removal.

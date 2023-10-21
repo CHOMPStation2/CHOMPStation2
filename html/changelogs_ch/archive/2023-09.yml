@@ -144,3 +144,11 @@
   - bugfix: Adjusted wonky resting pose vertical offset.
   tacoguy7765093:
   - rscadd: Players can now create an area innately for off-station construction.
+2023-09-27:
+  TheCaramelion:
+  - bugfix: mail per minute 2 to 0.75
+  - bugfix: mailbag capacity changed to 21
+  - bugfix: envelopes now have department colours
+  Verkister:
+  - bugfix: Fixed vorgan nutrition percent not affecting food/drink reagent gains.
+  - bugfix: Fixed vorgan overlays not showing up for prey.

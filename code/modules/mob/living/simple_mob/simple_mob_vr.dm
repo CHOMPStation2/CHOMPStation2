@@ -73,6 +73,11 @@
 
 //For all those ID-having mobs
 /mob/living/simple_mob/GetIdCard()
+	if(get_active_hand()) //CHOMPAdd Start
+		var/obj/item/I = get_active_hand()
+		var/id = I.GetID()
+		if(id)
+			return id //CHOMPAdd End
 	if(myid)
 		return myid
 

@@ -1,0 +1,1023 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"bX" = (
+/obj/machinery/door/airlock/maintenance/sec,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/xenobioeclipse)
+"cG" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/mob/living/simple_mob/slime/xenobio/oil{
+	faction = "eclipse";
+	unity = 1
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/xenobioeclipse)
+"eh" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/froststalker,
+/turf/template_noop,
+/area/submap/xenobioeclipse)
+"er" = (
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/xenobioeclipse)
+"eu" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/mob/living/simple_mob/slime/xenobio/yellow{
+	faction = "eclipse";
+	unity = 1
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/xenobioeclipse)
+"eB" = (
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/corner/white/diagonal,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/medical,
+/obj/item/weapon/reagent_containers/glass/beaker/bluespace,
+/turf/simulated/floor/tiled/freezer,
+/area/submap/xenobioeclipse)
+"fJ" = (
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/corner/white/diagonal,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/medical,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/submap/xenobioeclipse)
+"gY" = (
+/obj/structure/fans/hardlight/colorable/abductor,
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/xenobioeclipse)
+"hx" = (
+/turf/simulated/wall/r_lead,
+/area/submap/xenobioeclipse)
+"hP" = (
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/corner/white/diagonal,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/medical,
+/obj/item/weapon/paper{
+	info = "All experimentation involving shadekin and the slime units are to cease effective immediately. An attempt to forcefully meld a bluespace hunter unit and a shadekin resulted in mass damage to the carrier ship it was upon, along greatly reducing the number and effectiveness of other slime units aboard. If shadekin are to be spotted, they are to be contained and captured under normal methods. Extermination must be directly approved by Admiral Virrzzur Vazzeck.";
+	name = "Command Report"
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/submap/xenobioeclipse)
+"hX" = (
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/xenobioeclipse)
+"iC" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/firemoff,
+/obj/effect/floor_decal/corner/white/diagonal,
+/turf/simulated/floor/tiled/freezer,
+/area/submap/xenobioeclipse)
+"jb" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1"
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/xenobioeclipse)
+"jE" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/mob/living/simple_mob/slime/xenobio/emerald{
+	unity = 1;
+	faction = "eclipse"
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/xenobioeclipse)
+"kF" = (
+/obj/effect/floor_decal/corner/white/diagonal,
+/obj/machinery/transhuman/resleever,
+/turf/simulated/floor/tiled/freezer,
+/area/submap/xenobioeclipse)
+"lN" = (
+/obj/machinery/mining/brace{
+	anchored = 1;
+	dir = 8
+	},
+/turf/template_noop,
+/area/submap/xenobioeclipse)
+"lP" = (
+/obj/structure/table/steel,
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/xenobioeclipse)
+"mb" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh,
+/obj/effect/floor_decal/corner/white/diagonal,
+/turf/simulated/floor/tiled/freezer,
+/area/submap/xenobioeclipse)
+"mU" = (
+/obj/effect/floor_decal/corner/white/diagonal,
+/obj/machinery/optable,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/freezer,
+/area/submap/xenobioeclipse)
+"ns" = (
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/corner/white/diagonal,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/medical,
+/turf/simulated/floor/tiled/freezer,
+/area/submap/xenobioeclipse)
+"nH" = (
+/obj/effect/floor_decal/corner/white/diagonal,
+/obj/item/weapon/storage/firstaid/surgery,
+/obj/structure/table/reinforced,
+/turf/simulated/floor/tiled/freezer,
+/area/submap/xenobioeclipse)
+"og" = (
+/obj/effect/floor_decal/corner/white/diagonal,
+/obj/machinery/clonepod/transhuman/full,
+/turf/simulated/floor/tiled/freezer,
+/area/submap/xenobioeclipse)
+"oS" = (
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/corner/white/diagonal,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/medical,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/freezer,
+/area/submap/xenobioeclipse)
+"qh" = (
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/corner/white/diagonal,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/medical,
+/obj/machinery/chemical_dispenser/full,
+/turf/simulated/floor/tiled/freezer,
+/area/submap/xenobioeclipse)
+"uu" = (
+/obj/machinery/mining/brace{
+	anchored = 1;
+	dir = 4
+	},
+/turf/template_noop,
+/area/submap/xenobioeclipse)
+"vD" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/miner,
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/xenobioeclipse)
+"vR" = (
+/obj/effect/floor_decal/corner/white/diagonal,
+/obj/machinery/computer/transhuman/resleeving,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/submap/xenobioeclipse)
+"xf" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/xenobioeclipse)
+"yr" = (
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/xenobioeclipse)
+"yw" = (
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/mob/living/simple_mob/humanoid/eclipse/lunar/shotgunner,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/xenobioeclipse)
+"Ab" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/mob/living/simple_mob/slime/xenobio/ruby{
+	faction = "eclipse";
+	unity = 1
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/xenobioeclipse)
+"Au" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/tiled/red,
+/area/submap/xenobioeclipse)
+"BO" = (
+/obj/structure/table/steel,
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/xenobioeclipse)
+"BP" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/mob/living/simple_mob/slime/xenobio/bluespace{
+	faction = "eclipse";
+	unity = 1
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/xenobioeclipse)
+"Co" = (
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/xenobioeclipse)
+"De" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/guardian,
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/xenobioeclipse)
+"Dh" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/miner,
+/obj/effect/floor_decal/corner/white/diagonal,
+/turf/simulated/floor/tiled/freezer,
+/area/submap/xenobioeclipse)
+"IV" = (
+/obj/structure/table/steel,
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/xenobioeclipse)
+"Jy" = (
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/mob/living/simple_mob/humanoid/eclipse/solar/radiation,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/xenobioeclipse)
+"JO" = (
+/obj/effect/floor_decal/corner/white/diagonal,
+/obj/machinery/computer/operating{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/submap/xenobioeclipse)
+"Li" = (
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/corner/white/diagonal,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/medical,
+/obj/machinery/chemical_dispenser/biochemistry/full,
+/turf/simulated/floor/tiled/freezer,
+/area/submap/xenobioeclipse)
+"Ls" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm,
+/obj/effect/floor_decal/corner/white/diagonal,
+/turf/simulated/floor/tiled/freezer,
+/area/submap/xenobioeclipse)
+"Nt" = (
+/obj/effect/floor_decal/corner/white/diagonal,
+/obj/machinery/optable,
+/turf/simulated/floor/tiled/freezer,
+/area/submap/xenobioeclipse)
+"NQ" = (
+/turf/template_noop,
+/area/submap/xenobioeclipse)
+"Oa" = (
+/obj/machinery/mining/drill/loaded{
+	anchored = 1
+	},
+/turf/template_noop,
+/area/submap/xenobioeclipse)
+"PM" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/teslanoodle,
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/xenobioeclipse)
+"PO" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/mob/living/simple_mob/slime/xenobio/sapphire{
+	faction = "eclipse";
+	unity = 1
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/xenobioeclipse)
+"QJ" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/ravanger,
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/xenobioeclipse)
+"Rh" = (
+/obj/effect/floor_decal/corner/white/diagonal,
+/turf/simulated/floor/tiled/freezer,
+/area/submap/xenobioeclipse)
+"Rq" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/mob/living/simple_mob/slime/xenobio/pink{
+	faction = "eclipse";
+	unity = 1
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/xenobioeclipse)
+"Tr" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/mob/living/simple_mob/slime/xenobio/amber{
+	faction = "eclipse";
+	unity = 1
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/xenobioeclipse)
+"VS" = (
+/obj/machinery/door/airlock/maintenance/rnd,
+/turf/simulated/floor/tiled/freezer,
+/area/submap/xenobioeclipse)
+"Xy" = (
+/obj/effect/floor_decal/corner/white/diagonal,
+/obj/machinery/computer/transhuman/resleeving,
+/turf/simulated/floor/tiled/freezer,
+/area/submap/xenobioeclipse)
+"ZX" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
+/turf/template_noop,
+/area/submap/xenobioeclipse)
+
+(1,1,1) = {"
+NQ
+NQ
+NQ
+NQ
+NQ
+NQ
+NQ
+NQ
+NQ
+NQ
+NQ
+NQ
+NQ
+NQ
+NQ
+NQ
+NQ
+NQ
+NQ
+NQ
+NQ
+NQ
+NQ
+NQ
+NQ
+"}
+(2,1,1) = {"
+NQ
+NQ
+NQ
+NQ
+NQ
+NQ
+NQ
+NQ
+NQ
+NQ
+hx
+hx
+hx
+hx
+hx
+NQ
+NQ
+NQ
+NQ
+NQ
+NQ
+NQ
+NQ
+NQ
+NQ
+"}
+(3,1,1) = {"
+NQ
+NQ
+NQ
+NQ
+hx
+hx
+hx
+hx
+hx
+hx
+hx
+Au
+jb
+Au
+hx
+hx
+hx
+hx
+hx
+hx
+hx
+NQ
+NQ
+NQ
+NQ
+"}
+(4,1,1) = {"
+NQ
+NQ
+NQ
+NQ
+hx
+BO
+lP
+BO
+hx
+hx
+Au
+jE
+Au
+Rq
+Au
+hx
+hx
+BO
+lP
+BO
+hx
+NQ
+NQ
+NQ
+NQ
+"}
+(5,1,1) = {"
+NQ
+NQ
+NQ
+uu
+hx
+er
+er
+er
+hx
+Au
+PO
+Au
+Au
+Au
+BP
+Au
+hx
+er
+er
+er
+hx
+uu
+NQ
+NQ
+NQ
+"}
+(6,1,1) = {"
+NQ
+NQ
+NQ
+Oa
+hx
+er
+er
+QJ
+bX
+Au
+Au
+Au
+Au
+Au
+Au
+Au
+bX
+QJ
+er
+er
+hx
+Oa
+NQ
+NQ
+NQ
+"}
+(7,1,1) = {"
+NQ
+NQ
+NQ
+lN
+hx
+er
+De
+er
+hx
+Au
+eu
+Au
+Au
+Au
+Ab
+Au
+hx
+er
+De
+er
+hx
+lN
+NQ
+NQ
+NQ
+"}
+(8,1,1) = {"
+NQ
+NQ
+NQ
+NQ
+hx
+er
+er
+er
+hx
+hx
+Au
+cG
+Au
+Tr
+Au
+hx
+hx
+er
+er
+er
+hx
+NQ
+NQ
+NQ
+NQ
+"}
+(9,1,1) = {"
+NQ
+NQ
+NQ
+NQ
+hx
+hX
+er
+er
+hx
+hx
+hx
+xf
+xf
+xf
+hx
+hx
+hx
+er
+er
+yr
+hx
+NQ
+NQ
+NQ
+NQ
+"}
+(10,1,1) = {"
+NQ
+NQ
+NQ
+uu
+hx
+PM
+er
+er
+hx
+hx
+hx
+BO
+BO
+BO
+hx
+hx
+hx
+er
+er
+PM
+hx
+uu
+NQ
+NQ
+NQ
+"}
+(11,1,1) = {"
+NQ
+NQ
+NQ
+Oa
+hx
+er
+er
+er
+hx
+BO
+lP
+er
+er
+er
+IV
+BO
+hx
+er
+er
+er
+hx
+Oa
+NQ
+NQ
+NQ
+"}
+(12,1,1) = {"
+NQ
+NQ
+NQ
+lN
+hx
+er
+vD
+er
+er
+er
+er
+er
+Co
+er
+er
+er
+er
+er
+er
+er
+hx
+lN
+NQ
+NQ
+NQ
+"}
+(13,1,1) = {"
+NQ
+NQ
+NQ
+NQ
+hx
+er
+er
+er
+er
+er
+er
+er
+er
+er
+er
+er
+er
+er
+vD
+er
+hx
+NQ
+NQ
+NQ
+NQ
+"}
+(14,1,1) = {"
+NQ
+NQ
+NQ
+NQ
+hx
+er
+er
+er
+hx
+yw
+er
+er
+er
+er
+er
+Jy
+hx
+er
+er
+er
+hx
+NQ
+NQ
+NQ
+NQ
+"}
+(15,1,1) = {"
+NQ
+NQ
+NQ
+uu
+hx
+hx
+VS
+hx
+hx
+hx
+hx
+gY
+hx
+gY
+hx
+hx
+hx
+hx
+VS
+hx
+hx
+uu
+NQ
+NQ
+NQ
+"}
+(16,1,1) = {"
+NQ
+NQ
+NQ
+Oa
+hx
+og
+Rh
+Rh
+ns
+hx
+eh
+NQ
+NQ
+NQ
+eh
+hx
+Li
+Rh
+Rh
+nH
+hx
+Oa
+NQ
+NQ
+NQ
+"}
+(17,1,1) = {"
+NQ
+NQ
+NQ
+lN
+hx
+vR
+Rh
+Rh
+oS
+hx
+NQ
+ZX
+NQ
+ZX
+NQ
+hx
+fJ
+Rh
+Rh
+mU
+hx
+lN
+NQ
+NQ
+NQ
+"}
+(18,1,1) = {"
+NQ
+NQ
+NQ
+NQ
+hx
+kF
+Ls
+mb
+ns
+hx
+NQ
+NQ
+NQ
+NQ
+NQ
+hx
+ns
+Dh
+iC
+JO
+hx
+NQ
+NQ
+NQ
+NQ
+"}
+(19,1,1) = {"
+NQ
+NQ
+NQ
+NQ
+hx
+og
+Rh
+Rh
+ns
+hx
+NQ
+NQ
+NQ
+NQ
+NQ
+hx
+eB
+Rh
+Rh
+nH
+hx
+NQ
+NQ
+NQ
+NQ
+"}
+(20,1,1) = {"
+NQ
+NQ
+NQ
+uu
+hx
+Xy
+Rh
+Rh
+ns
+hx
+NQ
+NQ
+NQ
+NQ
+NQ
+hx
+hP
+Rh
+Rh
+Nt
+hx
+uu
+NQ
+NQ
+NQ
+"}
+(21,1,1) = {"
+NQ
+NQ
+NQ
+Oa
+hx
+kF
+Rh
+Rh
+ns
+hx
+NQ
+NQ
+NQ
+NQ
+NQ
+hx
+eB
+Rh
+Rh
+JO
+hx
+Oa
+NQ
+NQ
+NQ
+"}
+(22,1,1) = {"
+NQ
+NQ
+NQ
+lN
+hx
+og
+mb
+Ls
+ns
+hx
+NQ
+NQ
+NQ
+NQ
+NQ
+hx
+ns
+Dh
+iC
+nH
+hx
+lN
+NQ
+NQ
+NQ
+"}
+(23,1,1) = {"
+NQ
+NQ
+NQ
+NQ
+hx
+vR
+Rh
+Rh
+oS
+hx
+NQ
+NQ
+NQ
+NQ
+NQ
+hx
+fJ
+Rh
+Rh
+mU
+hx
+NQ
+NQ
+NQ
+NQ
+"}
+(24,1,1) = {"
+NQ
+NQ
+NQ
+NQ
+hx
+kF
+Rh
+Rh
+ns
+hx
+NQ
+NQ
+NQ
+NQ
+NQ
+hx
+qh
+Rh
+Rh
+JO
+hx
+NQ
+NQ
+NQ
+NQ
+"}
+(25,1,1) = {"
+NQ
+NQ
+NQ
+NQ
+hx
+hx
+hx
+hx
+hx
+hx
+NQ
+NQ
+NQ
+NQ
+NQ
+hx
+hx
+hx
+hx
+hx
+hx
+NQ
+NQ
+NQ
+NQ
+"}

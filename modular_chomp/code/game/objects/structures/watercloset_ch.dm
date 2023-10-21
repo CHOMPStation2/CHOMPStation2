@@ -10,6 +10,7 @@
 	var/no_destination = TRUE
 	var/max_w_class = 3 //glogged
 	var/total_w = 0
+	var/panic_mult = 1
 
 /obj/structure/toilet/Initialize()
 	if(z in global.using_map.map_levels)
@@ -25,7 +26,9 @@
 	return ..()
 
 /obj/structure/toilet/attack_hand(mob/living/user as mob)
-	if(open && !refilling && no_destination || (teleplumbed && exit_landmark))
+	if(open && !refilling && (no_destination || (teleplumbed && exit_landmark)))
+		if(user.a_intent == I_HURT)
+			panic_mult += 1
 		var/list/bowl_contents = list()
 		for(var/obj/item/I in loc.contents)
 			if(istype(I) && !I.anchored)
@@ -34,7 +37,6 @@
 			if((L.resting || L.lying) && !L.buckled)
 				bowl_contents += L
 		if(bowl_contents.len)
-			refilling = TRUE
 			user.visible_message("<span class='notice'>[user] flushes the [lowertext(name)].</span>", "<span class='notice'>You flush the [lowertext(name)].</span>")
 			playsound(src, 'sound/vore/death7.ogg', 50, 1) //Got lazy about getting new sound files. Have a sick remix lmao.
 			playsound(src, 'sound/effects/bubbles.ogg', 50, 1)
@@ -54,12 +56,14 @@
 							if(isliving(F))
 								var/mob/living/L = F
 								total_w += L.size_multiplier * 13
-							if(total_w <= max_w_class)
+							if(total_w <= max_w_class * panic_mult)
 								taken_contents |= F
 								F.forceMove(src)
 							else
 								visible_message("The [lowertext(name)] glurks and splutters, unable to guzzle more stuff down in a single flush!")
 								break
+			refilling = TRUE
+			panic_mult = 1
 			spawn(refill_cooldown)
 				for(var/atom/movable/F in taken_contents)
 					if(F.loc == src)
@@ -69,6 +73,8 @@
 				total_w = 0
 				refilling = FALSE
 			return
+		else
+			panic_mult = 1
 	if(refilling)
 		playsound(src, 'sound/machines/door_locked.ogg', 30, 1)
 		to_chat(user, "<span class='notice'>The [lowertext(name)] is still refilling its tank.</span>")

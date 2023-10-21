@@ -34,6 +34,8 @@
 
 	if(get_restraining_bolt())	// Borgs with Restraining Bolts move slower.
 		. += 1
+	if(nutrition > 1000) //CHOMPAdd
+		. += nutrition / 2000 //CHOMPAdd
 
 	. += config.robot_delay
 
