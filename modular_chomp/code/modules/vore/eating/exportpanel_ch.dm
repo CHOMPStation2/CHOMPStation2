@@ -281,6 +281,7 @@
 			belly_data["vorefootsteps_sounds"] = B.vorefootsteps_sounds
 			belly_data["liquid_overlay"] = B.liquid_overlay
 			belly_data["max_liquid_level"] = B.max_liquid_level
+			belly_data["reagent_toches"] = B.reagent_touches
 			belly_data["mush_overlay"] = B.mush_overlay
 			belly_data["mush_color"] = B.mush_color
 			belly_data["mush_alpha"] = B.mush_alpha

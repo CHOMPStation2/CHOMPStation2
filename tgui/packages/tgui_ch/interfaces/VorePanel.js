@@ -50,7 +50,7 @@ const digestModeToPreyMode = {
  *   liq_reagent_transfer_verb, liq_reagent_nutri_rate, liq_reagent_capacity, liq_sloshing, liq_reagent_addons,
  *   show_liq_fullness, liq_messages, liq_msg_toggle1, liq_msg_toggle2, liq_msg_toggle3, liq_msg_toggle4,
  *   liq_msg_toggle5, liq_msg1, liq_msg2, liq_msg3, liq_msg4, liq_msg5, sound_volume, egg_name, recycling, entrance_logs, noise_freq,
- *   custom_reagentcolor, custom_reagentalpha, liquid_overlay, max_liquid_level, mush_overlay, mush_color, mush_alpha, max_mush, min_mush, item_mush_val,
+ *   custom_reagentcolor, custom_reagentalpha, liquid_overlay, max_liquid_level, mush_overlay, reagent_touches, mush_color, mush_alpha, max_mush, min_mush, item_mush_val,
  *   metabolism_overlay, metabolism_mush_ratio, max_ingested, custom_ingested_color, custom_ingested_alpha
  *
  * To the tabs section of VoreSelectedBelly return
@@ -1804,6 +1804,7 @@ const VoreSelectedBellyLiquidOptions = (props, context) => {
     custom_reagentalpha,
     liquid_overlay,
     max_liquid_level,
+    reagent_touches,
     mush_overlay,
     mush_color,
     mush_alpha,
@@ -1923,6 +1924,16 @@ const VoreSelectedBellyLiquidOptions = (props, context) => {
               }
               ml={1}
               icon="plus"
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Liquid Application to Prey">
+            <Button
+              onClick={() =>
+                act('liq_set_attribute', { liq_attribute: 'b_reagent_touches' })
+              }
+              icon={liq_interacts.reagent_touches ? 'toggle-on' : 'toggle-off'}
+              selected={liq_interacts.reagent_touches}
+              content={liq_interacts.reagent_touches ? 'On' : 'Off'}
             />
           </LabeledList.Item>
           <LabeledList.Item label="Custom Liquid Color">

@@ -249,6 +249,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"custom_reagentalpha" = selected.custom_reagentalpha,
 			"liquid_overlay" = selected.liquid_overlay,
 			"max_liquid_level" = selected.max_liquid_level,
+			"reagent_touches" = selected.reagent_touches,
 			"mush_overlay" = selected.mush_overlay,
 			"mush_color" = selected.mush_color,
 			"mush_alpha" = selected.mush_alpha,
@@ -420,6 +421,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			selected_list["liq_interacts"]["custom_reagentalpha"] = selected.custom_reagentalpha ? selected.custom_reagentalpha : "Default"
 			selected_list["liq_interacts"]["liquid_overlay"] = selected.liquid_overlay
 			selected_list["liq_interacts"]["max_liquid_level"] = selected.max_liquid_level
+			selected_list["liq_interacts"]["reagent_touches"] = selected.reagent_touches
 			selected_list["liq_interacts"]["mush_overlay"] = selected.mush_overlay
 			selected_list["liq_interacts"]["mush_color"] = selected.mush_color
 			selected_list["liq_interacts"]["mush_alpha"] = selected.mush_alpha
@@ -1377,6 +1379,13 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				if(isnum(belly_data["max_liquid_level"]))
 					var/max_liquid_level = belly_data["max_liquid_level"]
 					new_belly.max_liquid_level = CLAMP(max_liquid_level, 0, 100)
+
+				if(isnum(belly_data["reagent_touches"]))
+					var/new_reagent_touches = belly_data["reagent_touches"]
+					if(new_reagent_touches == 0)
+						new_belly.reagent_touches = FALSE
+					if(new_reagent_touches == 1)
+						new_belly.reagent_touches = TRUE
 
 				if(isnum(belly_data["mush_overlay"]))
 					var/new_mush_overlay = belly_data["mush_overlay"]
@@ -3160,6 +3169,14 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			else
 				host.vore_selected.custom_reagentalpha = null
 			host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_reagent_touches")
+			if(!host.vore_selected.reagent_touches)
+				host.vore_selected.reagent_touches = 1
+				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] will now apply reagents to creatures when digesting.</span>")
+			else
+				host.vore_selected.reagent_touches = 0
+				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] will no longer apply reagents to creatures when digesting.</span>")
 			. = TRUE
 		if("b_mush_overlay")
 			if(!host.vore_selected.mush_overlay)
