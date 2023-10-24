@@ -891,35 +891,6 @@
 		old_x = sprite_datum.pixel_x
 
 	if(stat == CONSCIOUS)
-<<<<<<< HEAD
-		var/show_belly = FALSE
-		if(sprite_datum.has_vore_belly_sprites)
-			update_fullness() //CHOMPEdit Start
-			if(vore_fullness)
-				show_belly = TRUE
-			else
-				for(var/obj/belly/B in vore_organs)
-					if(B.silicon_belly_overlay_preference == "Sleeper")
-						if(sleeper_state)
-							show_belly = TRUE
-							break
-					else if(B.silicon_belly_overlay_preference == "Vorebelly")
-						if(LAZYLEN(B.contents) >= B.visible_belly_minimum_prey)
-							if(B.overlay_min_prey_size == 0)	//if min size is 0, we dont check for size
-								show_belly = TRUE
-							else
-								if(B.override_min_prey_size && (LAZYLEN(B.contents) > B.override_min_prey_num))
-									show_belly = TRUE	//Override regardless of content size
-								else
-									for(var/content in B.contents)	//If ANY in belly are big enough, we set to true
-										if(!istype(content, /mob/living)) continue
-										var/mob/living/prey = content
-										if(prey.size_multiplier >= B.overlay_min_prey_size)
-											show_belly = TRUE
-											break //CHOMPEdit End
-		if(show_belly)
-			add_overlay(sprite_datum.get_belly_overlay(src))
-=======
 		var/belly_size = 0
 		if(sprite_datum.has_vore_belly_sprites && vore_selected.belly_overall_mult != 0)
 			if(vore_selected.silicon_belly_overlay_preference == "Sleeper")
@@ -966,7 +937,6 @@
 				add_overlay(sprite_datum.get_belly_resting_overlay(src, belly_size))
 			else
 				add_overlay(sprite_datum.get_belly_overlay(src, belly_size))
->>>>>>> 241a40af3d... Merge pull request #15425 from ReoDaProtovali/Borg-belly-naming-change
 
 		sprite_datum.handle_extra_icon_updates(src)			// Various equipment-based sprites go here.
 
