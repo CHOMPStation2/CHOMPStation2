@@ -67,18 +67,21 @@
 
 /datum/job/bartender
 	mail_goodies = list(
-		/obj/item/weapon/reagent_containers/food/drinks/metaglass/metapint = 700,
-		/obj/item/stack/material/uranium = 200,
-		/obj/item/clothing/accessory/bowtie/black = 100
+		/obj/item/weapon/reagent_containers/food/drinks/metaglass/metapint = 320,
+		"gelatin" = 300,
+		/obj/item/stack/material/uranium = 250,
+		/obj/item/clothing/accessory/bowtie/black = 100,
+		/obj/item/weapon/reagent_containers/chem_disp_cartridge/nothing = 15,
+		/obj/item/weapon/reagent_containers/chem_disp_cartridge/gelatin = 15,
 	)
 
 /datum/job/chef
 	mail_goodies = list(
 		"cakebatter" = 200,
+		"cinnamonpowder" = 200,
 		/obj/item/weapon/reagent_containers/food/condiment/soysauce = 200,
 		/obj/item/weapon/reagent_containers/food/drinks/soymilk = 200,
 		/obj/item/weapon/reagent_containers/food/snacks/cuttlefish = 200,
-		/obj/item/weapon/reagent_containers/glass/beaker/large = 200,
 	)
 
 /datum/job/hydro
@@ -319,22 +322,32 @@
 		/obj/item/weapon/cell/super = 155,
 		/obj/item/weapon/cell/hyper = 125,
 		/obj/item/weapon/pen/fountain6 = 75,
-		/obj/effect/spawner/parts/t2 = 50,
-		/obj/effect/spawner/parts/t3 = 25,
 		/obj/item/toy/plushie/borgplushie/drake/sci = 20,
+		/obj/item/weapon/stock_parts/matter_bin/hyper = 15,
+		/obj/item/weapon/stock_parts/manipulator/hyper = 15,
+		/obj/item/weapon/stock_parts/capacitor/hyper = 15,
+		/obj/item/weapon/stock_parts/scanning_module/hyper = 15,
+		/obj/item/weapon/stock_parts/micro_laser/hyper = 15
 	)
 
 /datum/job/scientist
 	mail_goodies = list(
 		/obj/item/stack/material/steel{amount = 10} = 250,
-		/obj/item/stack/material/glass{amount = 10} = 175,
-		/obj/effect/spawner/parts/t1 = 175,
+		/obj/item/stack/material/glass{amount = 10} = 200,
 		/obj/item/weapon/cell/super = 100,
 		/obj/item/weapon/cell/hyper = 100,
-		/obj/effect/spawner/parts/t2 = 75,
 		/obj/item/stack/material/plasteel{amount = 10} = 70,
+		/obj/item/weapon/stock_parts/matter_bin/adv = 45,
+		/obj/item/weapon/stock_parts/manipulator/nano = 45,
+		/obj/item/weapon/stock_parts/capacitor/adv = 45,
+		/obj/item/weapon/stock_parts/scanning_module/adv = 45,
+		/obj/item/weapon/stock_parts/micro_laser/high = 45,
 		/obj/item/stack/nanopaste = 30,
-		/obj/effect/spawner/parts/t3 = 25,
+		/obj/item/weapon/stock_parts/matter_bin/super = 5,
+		/obj/item/weapon/stock_parts/manipulator/pico = 5,
+		/obj/item/weapon/stock_parts/capacitor/super = 5,
+		/obj/item/weapon/stock_parts/scanning_module/phasic = 5,
+		/obj/item/weapon/stock_parts/micro_laser/ultra = 5
 	)
 
 /datum/job/xenobiologist

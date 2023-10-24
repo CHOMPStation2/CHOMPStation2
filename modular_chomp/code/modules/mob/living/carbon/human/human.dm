@@ -60,6 +60,11 @@
 	resting_dir = !resting_dir
 	update_transform(TRUE)
 
+/mob/living/carbon/human/proc/synth_reag_toggle()
+	set name = "Toggle Reagent Processing"
+	set category = "Abilities"
+	set desc = "Toggle reagent processing as synth."
+	synth_reag_processing = !synth_reag_processing
 
 //Formally used from a paper, gave this to everyone.
 /mob/living/carbon/human/verb/create_area()

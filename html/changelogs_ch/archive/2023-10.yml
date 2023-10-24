@@ -1,0 +1,21 @@
+2023-10-04:
+  FluffMedic:
+  - qol: Adds descriptions to experimental firstaid kit's pill bottles.
+  - qol: Made speedloaders 18, because revolvers hold six.
+  - bugfix: turrets where missed in the refactor, well their health
+  Verkister:
+  - bugfix: Fixed disabled autotransfer un-disabling itself when aghosted/SSD
+  - rscadd: Added bellysprites for sergal and skunk taurs.
+  - rscadd: Added a verb for synths to plug their leaking stomach.
+  - bugfix: Fixed vorgan overlay preview removing the owner's hud if hud hiding setting
+      is enabled.
+  - bugfix: Fixed prey vorgan overlay updates requiring 5u of liquid.
+  - balance: Excess borg nutrition now causes slowdown.
+  - bugfix: Fixed logged out ghosts getting timeout deleted while still on manifest.
+  - bugfix: Fixed unintentional glogged toilet spammability.
+  - rscadd: Added intentional glogged toilet spammability (harm intent panic mode)
+  purplefoxy27:
+  - spellcheck: Fixed a few typos in inshoe steppies, proteans, outsider capsules
+      and a few other miscs.
+  tacoguy7765093:
+  - maptweak: Botany fridges are now semi-persistent, have fun farming!

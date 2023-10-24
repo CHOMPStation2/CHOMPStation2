@@ -1828,9 +1828,8 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/subgarage)
 "csy" = (
-/mob/living/simple_mob/animal/synx/ai/pet/greed/synth{
-	faction = "cult";
-	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
+/mob/living/simple_mob/animal/synx/scp{
+	faction = "cult"
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/plazarecroom)
@@ -2510,7 +2509,7 @@
 	},
 /mob/living/simple_mob/humanoid/merc/ranged/sniper{
 	special_attack_max_range = 15;
-	ai_holder_type = /datum/ai_holder/simple_mob/ranged/sniper
+	ai_holder_type = /datum/ai_holder/simple_mob/merc/eclipse/ranged/sniper
 	},
 /turf/simulated/floor/concrete{
 	outdoors = 1

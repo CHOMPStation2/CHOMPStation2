@@ -76,6 +76,8 @@
 		/obj/item/weapon/weldingtool,
 		/obj/item/weapon/tool/wirecutters,
 		/obj/item/weapon/tool/wrench,
+		/obj/item/weapon/tool/transforming/powerdrill,
+		/obj/item/weapon/tool/transforming/jawsoflife,
 		/obj/item/device/multitool,
 		/obj/item/device/flashlight,
 		/obj/item/weapon/cell/device,

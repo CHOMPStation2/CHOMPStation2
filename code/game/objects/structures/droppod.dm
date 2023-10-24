@@ -27,15 +27,15 @@
 	if(!T)
 		warning("Drop pod wasn't spawned on a turf")
 		return
-	
+
 	moveToNullspace()
 	icon_state = "[initial(icon_state)]_falling"
-	
+
 	// Show warning on 3x3 area centred on our drop spot
 	var/list/turfs_nearby = block(get_step(T, SOUTHWEST), get_step(T, NORTHEAST))
 	for(var/turf/TN in turfs_nearby)
 		new /obj/effect/temporary_effect/shuttle_landing(TN)
-	
+
 	// Wait a minute
 	sleep(4 SECONDS)
 
@@ -54,7 +54,7 @@
 	T.hotspot_expose(900)
 	sleep(1 SECOND)
 	filters = null
-	
+
 	// CRONCH
 	playsound(src, 'sound/effects/meteorimpact.ogg', 50, 1)
 	if(!polite)
@@ -65,7 +65,7 @@
 	else
 		for(var/turf/simulated/floor/F in view(1, T))
 			F.burn_tile(900)
-		
+
 	for(var/obj/O in T)
 		if(O == src)
 			continue
@@ -76,7 +76,7 @@
 	// Landed! Simmer
 	plane = initial(plane)
 	icon_state = "[initial(icon_state)]"
-	
+
 	if(auto_open)
 		sleep(2 SECONDS)
 		open_pod()
@@ -105,7 +105,7 @@
 			user.visible_message("<b>[user]</b> opens \the [src]!","You open \the [src]!")
 
 /obj/structure/drop_pod/attackby(obj/item/O, mob/user)
-	if(O.is_wrench())
+	if(O.has_tool_quality(TOOL_WRENCH))
 		if(finished)
 			to_chat(user, "<span class='notice'>You start breaking down \the [src].</span>")
 			if(do_after(user, 10 SECONDS, src, exclusive = TASK_ALL_EXCLUSIVE))

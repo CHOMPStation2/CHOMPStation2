@@ -1,0 +1,917 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/floor/tiled/milspec,
+/area/submap/frozenlab)
+"b" = (
+/obj/machinery/portable_atmospherics/canister/oxygen/prechilled,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/frozenlab)
+"c" = (
+/turf/simulated/wall/r_lead,
+/area/submap/frozenlab)
+"d" = (
+/obj/machinery/atmospherics/unary/cryo_cell,
+/turf/simulated/floor/outdoors/shelfice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
+/area/submap/frozenlab)
+"e" = (
+/obj/machinery/portable_atmospherics/canister/oxygen/prechilled,
+/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/frozenlab)
+"f" = (
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/frozenlab)
+"g" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/froststalker,
+/turf/simulated/floor/outdoors/shelfice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
+/area/submap/frozenlab)
+"h" = (
+/obj/machinery/portable_atmospherics/canister/oxygen/prechilled,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/frozenlab)
+"k" = (
+/obj/machinery/portable_atmospherics/canister/oxygen/prechilled,
+/obj/machinery/atmospherics/portables_connector,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/frozenlab)
+"m" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/ravanger,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/frozenlab)
+"n" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm,
+/turf/simulated/floor/snow,
+/area/template_noop)
+"o" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/wheel,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/frozenlab)
+"p" = (
+/obj/random/material/refined,
+/obj/random/material/precious,
+/obj/random/material,
+/obj/structure/closet,
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/bicaridine,
+/turf/simulated/floor/snow,
+/area/template_noop)
+"q" = (
+/obj/random/material/refined,
+/obj/random/material/precious,
+/obj/random/material,
+/obj/structure/closet,
+/turf/simulated/floor/snow,
+/area/template_noop)
+"s" = (
+/obj/structure/table/steel,
+/obj/random/firstaid,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/security,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/frozenlab)
+"t" = (
+/obj/machinery/door/airlock/phoron,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/frozenlab)
+"u" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/froststalker,
+/turf/simulated/floor/snow,
+/area/template_noop)
+"v" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/frozenlab)
+"w" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/cryomancer,
+/turf/simulated/floor/snow,
+/area/template_noop)
+"z" = (
+/obj/machinery/portable_atmospherics/canister/oxygen/prechilled,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/frozenlab)
+"A" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/hellhound{
+	has_heal_droid = 1
+	},
+/turf/simulated/floor/snow,
+/area/template_noop)
+"D" = (
+/turf/template_noop,
+/area/template_noop)
+"E" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/shotgunner,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/frozenlab)
+"G" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/frozenlab)
+"L" = (
+/obj/machinery/atmospherics/unary/freezer,
+/turf/simulated/floor/outdoors/shelfice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
+/area/submap/frozenlab)
+"M" = (
+/obj/structure/table/steel,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/security,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/frozenlab)
+"N" = (
+/obj/structure/table/steel,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/security,
+/obj/item/weapon/paper{
+	info = "Failure rate continues to increase. Heavy casualties and interruptions are constantly disrupting the processes. Three cyromancers formed, and given partial training. Due to high risk zone, sent to Admiral Narsch's flag ship for reassignment. Stalker units are being sent to other high risk facilities. Suggesting evac as soon as possible, the facility's structure has been damaged due to the 98.7 percent failure fate.";
+	name = "Status Report"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/frozenlab)
+"O" = (
+/obj/structure/table/steel,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/security,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/frozenlab)
+"P" = (
+/turf/simulated/floor/snow,
+/area/template_noop)
+"Q" = (
+/obj/machinery/light,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/frozenlab)
+"R" = (
+/obj/structure/table/steel,
+/obj/item/weapon/storage/belt/medical/alien,
+/turf/simulated/floor/outdoors/shelfice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
+/area/submap/frozenlab)
+"S" = (
+/obj/random/material/refined,
+/obj/random/material/precious,
+/obj/random/material,
+/obj/structure/closet,
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/coco,
+/turf/simulated/floor/snow,
+/area/template_noop)
+"T" = (
+/turf/simulated/floor/outdoors/shelfice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
+/area/submap/frozenlab)
+"U" = (
+/obj/machinery/portable_atmospherics/powered/reagent_distillery/industrial,
+/obj/machinery/light,
+/turf/simulated/floor/outdoors/shelfice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
+/area/submap/frozenlab)
+"V" = (
+/obj/machinery/portable_atmospherics/powered/reagent_distillery/industrial,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/shelfice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
+/area/submap/frozenlab)
+"W" = (
+/obj/structure/table/steel,
+/obj/item/weapon/reagent_containers/glass/beaker/bluespace,
+/turf/simulated/floor/outdoors/shelfice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
+/area/submap/frozenlab)
+"X" = (
+/obj/structure/table/steel,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/security,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/frozenlab)
+"Y" = (
+/obj/machinery/portable_atmospherics/canister/oxygen/prechilled,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/frozenlab)
+"Z" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/pummler,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/frozenlab)
+
+(1,1,1) = {"
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+"}
+(2,1,1) = {"
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+"}
+(3,1,1) = {"
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+c
+c
+t
+c
+c
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+"}
+(4,1,1) = {"
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+c
+k
+a
+h
+c
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+"}
+(5,1,1) = {"
+D
+D
+D
+D
+D
+D
+D
+c
+c
+c
+c
+k
+a
+h
+c
+c
+c
+c
+D
+D
+D
+D
+D
+D
+D
+"}
+(6,1,1) = {"
+D
+D
+D
+D
+D
+D
+c
+c
+M
+O
+c
+e
+a
+b
+c
+s
+M
+c
+c
+D
+D
+D
+D
+D
+D
+"}
+(7,1,1) = {"
+D
+D
+D
+D
+D
+c
+c
+a
+a
+a
+c
+k
+a
+h
+c
+a
+a
+a
+c
+c
+D
+D
+D
+D
+D
+"}
+(8,1,1) = {"
+D
+D
+D
+D
+c
+c
+m
+a
+f
+a
+t
+a
+o
+a
+t
+a
+a
+a
+Z
+c
+c
+D
+D
+D
+D
+"}
+(9,1,1) = {"
+D
+D
+D
+c
+c
+a
+a
+a
+a
+a
+c
+c
+c
+c
+c
+a
+a
+a
+a
+a
+c
+c
+D
+D
+D
+"}
+(10,1,1) = {"
+D
+D
+D
+c
+L
+T
+a
+a
+a
+c
+c
+S
+q
+q
+c
+c
+a
+a
+a
+T
+L
+c
+D
+D
+D
+"}
+(11,1,1) = {"
+D
+D
+D
+c
+d
+g
+T
+Q
+c
+c
+P
+P
+n
+P
+P
+c
+c
+v
+T
+g
+d
+c
+D
+D
+D
+"}
+(12,1,1) = {"
+D
+D
+D
+c
+W
+T
+a
+a
+c
+P
+P
+A
+P
+P
+P
+P
+c
+a
+a
+T
+R
+c
+D
+D
+D
+"}
+(13,1,1) = {"
+D
+D
+D
+c
+V
+a
+a
+a
+t
+P
+u
+P
+P
+P
+u
+P
+t
+a
+a
+a
+U
+c
+D
+D
+D
+"}
+(14,1,1) = {"
+D
+D
+D
+c
+R
+T
+a
+a
+c
+P
+P
+P
+P
+w
+P
+P
+c
+a
+a
+T
+W
+c
+D
+D
+D
+"}
+(15,1,1) = {"
+D
+D
+D
+c
+d
+g
+T
+Q
+c
+c
+P
+P
+n
+P
+P
+c
+c
+v
+T
+g
+d
+c
+D
+D
+D
+"}
+(16,1,1) = {"
+D
+D
+D
+c
+L
+T
+a
+a
+a
+c
+c
+q
+q
+p
+c
+c
+a
+a
+a
+T
+L
+c
+D
+D
+D
+"}
+(17,1,1) = {"
+D
+D
+D
+c
+c
+a
+a
+a
+a
+a
+c
+c
+c
+c
+c
+a
+a
+a
+a
+a
+c
+c
+D
+D
+D
+"}
+(18,1,1) = {"
+D
+D
+D
+D
+c
+c
+G
+a
+a
+a
+t
+a
+o
+a
+t
+a
+a
+a
+E
+c
+c
+D
+D
+D
+D
+"}
+(19,1,1) = {"
+D
+D
+D
+D
+D
+c
+c
+a
+a
+a
+c
+Y
+a
+h
+c
+a
+a
+a
+c
+c
+D
+D
+D
+D
+D
+"}
+(20,1,1) = {"
+D
+D
+D
+D
+D
+D
+c
+c
+X
+s
+c
+z
+a
+b
+c
+N
+X
+c
+c
+D
+D
+D
+D
+D
+D
+"}
+(21,1,1) = {"
+D
+D
+D
+D
+D
+D
+D
+c
+c
+c
+c
+Y
+a
+h
+c
+c
+c
+c
+D
+D
+D
+D
+D
+D
+D
+"}
+(22,1,1) = {"
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+c
+Y
+a
+h
+c
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+"}
+(23,1,1) = {"
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+c
+c
+t
+c
+c
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+"}
+(24,1,1) = {"
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+"}
+(25,1,1) = {"
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+"}

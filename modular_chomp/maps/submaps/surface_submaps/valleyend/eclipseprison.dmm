@@ -1,0 +1,1598 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aS" = (
+/obj/structure/dark_portal/minion,
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"cd" = (
+/obj/structure/table/steel,
+/obj/random/material,
+/obj/random/material/precious,
+/obj/random/material/refined,
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"cs" = (
+/obj/effect/floor_decal/industrial/warning/corner,
+/obj/effect/floor_decal/corner/red/border{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"cx" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/machinery/teleport/hub,
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"cO" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/miner,
+/obj/effect/floor_decal/corner/mauve/diagonal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"du" = (
+/obj/item/weapon/stock_parts/capacitor/omni,
+/obj/item/weapon/stock_parts/capacitor/omni,
+/obj/item/weapon/stock_parts/capacitor/omni,
+/obj/item/weapon/stock_parts/capacitor/omni,
+/obj/item/weapon/stock_parts/scanning_module/omni,
+/obj/structure/table/marble,
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/turf/simulated/floor/tiled/freezer{
+	temperature = 0
+	},
+/area/submap/eclipseprison)
+"dS" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"ej" = (
+/obj/machinery/mining/drill/loaded{
+	anchored = 1
+	},
+/turf/simulated/floor/outdoors/dirt{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
+/area/submap/eclipseprison)
+"ek" = (
+/obj/machinery/mining/brace{
+	anchored = 1;
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/dirt{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
+/area/submap/eclipseprison)
+"eK" = (
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"fb" = (
+/obj/structure/table/steel,
+/obj/random/material,
+/obj/random/material/precious,
+/obj/random/material/refined,
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/item/weapon/paper{
+	info = "During transport, the sedative routine was interrupted by a meteor storm. The shadekin awoken as the doctor, and two guards entered the chamber. A fight ensued. Alvan Roggen attempted to restrain them, but was too forceful with their gear and ended up popping them. I have sent them to the Paradoxical fleet's training satellite XA7 in order to prevent future incidents. I have stationed myself here to monitor the dark site, in hopes of capturing a new specimen, and guard the delivery of goods until pick up is ready.";
+	name = "Status Report"
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"fZ" = (
+/obj/structure/fans/hardlight,
+/obj/machinery/door/blast/puzzle{
+	id = "prisonarms"
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/freezer{
+	temperature = 0
+	},
+/area/submap/eclipseprison)
+"gs" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"gC" = (
+/obj/structure/fans/hardlight,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"gF" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"gG" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"gW" = (
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/turf/simulated/floor/tiled/freezer{
+	temperature = 0
+	},
+/area/submap/eclipseprison)
+"ha" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"hh" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/ravanger,
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"if" = (
+/turf/simulated/floor/weird_things/dark,
+/area/submap/eclipseprison)
+"ij" = (
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/freezer{
+	temperature = 0
+	},
+/area/submap/eclipseprison)
+"iO" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/firemoff,
+/obj/effect/floor_decal/corner/mauve/diagonal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"iX" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/pummler,
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"iZ" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"jv" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"jG" = (
+/obj/machinery/door/airlock/silver,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"jX" = (
+/obj/structure/fans/hardlight,
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"ll" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/red/border,
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"lm" = (
+/obj/structure/fans/hardlight,
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"lo" = (
+/obj/machinery/door/airlock/silver,
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"lV" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"mu" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"nm" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm,
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"nD" = (
+/obj/effect/floor_decal/industrial/warning/corner,
+/obj/effect/floor_decal/corner/red/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"nS" = (
+/obj/structure/closet,
+/obj/item/weapon/tool/screwdriver/diamonddrill,
+/obj/item/weapon/syndie/c4explosive/heavy,
+/obj/effect/floor_decal/corner/mauve/diagonal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"ow" = (
+/obj/structure/fans/hardlight,
+/obj/machinery/door/blast/puzzle{
+	id = "prisonarms"
+	},
+/turf/simulated/floor/tiled/freezer{
+	temperature = 0
+	},
+/area/submap/eclipseprison)
+"oI" = (
+/obj/machinery/porta_turret/poi{
+	faction = "eclipse"
+	},
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"pE" = (
+/obj/structure/table/steel,
+/obj/machinery/button/remote/blast_door{
+	id = "prisonarms"
+	},
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"qn" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"qr" = (
+/obj/structure/closet,
+/obj/item/weapon/gun/energy/mininglaser,
+/obj/item/weapon/syndie/c4explosive/heavy,
+/obj/effect/floor_decal/corner/mauve/diagonal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"rN" = (
+/obj/structure/fans/hardlight,
+/obj/effect/floor_decal/borderfloor,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"sn" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"tg" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"tk" = (
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/freezer{
+	temperature = 0
+	},
+/area/submap/eclipseprison)
+"ui" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/hellhound,
+/obj/effect/floor_decal/corner/mauve/diagonal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"uT" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/cryomancer,
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"uZ" = (
+/obj/structure/table/steel,
+/obj/random/material,
+/obj/random/material/precious,
+/obj/random/material/refined,
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"vf" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/miner,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"vo" = (
+/obj/effect/floor_decal/borderfloor,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"vJ" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"ym" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"yG" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"yJ" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"yM" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/shotgunner,
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"yP" = (
+/obj/structure/table/steel,
+/obj/item/weapon/cell/device/weapon/recharge,
+/obj/item/weapon/cell/device/weapon/recharge,
+/obj/item/weapon/cell/device/weapon/recharge,
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"yT" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/teslanoodle,
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"zb" = (
+/obj/effect/floor_decal/corner/mauve/diagonal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"zB" = (
+/obj/item/weapon/stock_parts/matter_bin/omni,
+/obj/item/weapon/stock_parts/matter_bin/omni,
+/obj/item/weapon/stock_parts/matter_bin/omni,
+/obj/item/weapon/stock_parts/matter_bin/omni,
+/obj/item/weapon/stock_parts/scanning_module/omni,
+/obj/structure/table/marble,
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/turf/simulated/floor/tiled/freezer{
+	temperature = 0
+	},
+/area/submap/eclipseprison)
+"BE" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/guardian,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"BN" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/aeroblaster,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"Cy" = (
+/turf/template_noop,
+/area/submap/eclipseprison)
+"Dy" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/wheel,
+/obj/effect/floor_decal/corner/mauve/diagonal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"Ea" = (
+/obj/structure/table/steel,
+/obj/random/firstaid,
+/obj/item/weapon/gun/energy/hunter,
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"Er" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"Et" = (
+/obj/item/weapon/stock_parts/manipulator/omni,
+/obj/item/weapon/stock_parts/manipulator/omni,
+/obj/item/weapon/stock_parts/manipulator/omni,
+/obj/item/weapon/stock_parts/manipulator/omni,
+/obj/item/weapon/stock_parts/scanning_module/omni,
+/obj/structure/table/marble,
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/turf/simulated/floor/tiled/freezer{
+	temperature = 0
+	},
+/area/submap/eclipseprison)
+"Fh" = (
+/obj/structure/table/marble,
+/obj/item/stack/material/supermatter,
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/reinforced/n20,
+/area/submap/eclipseprison)
+"Fj" = (
+/obj/structure/safe,
+/obj/item/weapon/gun/energy/freezegun,
+/obj/item/stack/material/void_opal,
+/obj/item/weapon/paper{
+	info = "Due to health issues, and the desires of Admiral Virrzzur Vazzeck, I am being relocated. I leave our findings for who picks up in my place. The Paracausality has discovered several portals that lead to the home realm of the shadekin. Three have been lost due to natural disasters, whilst two remain within our grasp. The portals themselves have only activate upon a shadekin's touch, any outside tampering has proofed fruitless as of writing. Three guards are to be stationed at the portal all times, preferably one being a hellhound unit for quick sedation. The laws that bind the shadekin together dictate they cannot become ethereal with three watchers. What defines a watcher would require further testing, but due to our high demand for shadekin test subjects physically and the low supply, capture is required over testing the definitions of a watcher. At least half the guards in a shift are to have restraint training, do not use lethals on shadekin for once their body reaches critical conditions they vanish. Sif is a high point of interest for the Paracausality Initiative, and any such findings should be sent to Admiral Virrzzur Vazzeck effective immediately.";
+	name = "The Dark Expirmentation"
+	},
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"FK" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/froststalker,
+/obj/effect/floor_decal/corner/mauve/diagonal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"FP" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/miner,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"FU" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"Hg" = (
+/obj/structure/table/steel,
+/obj/item/clothing/accessory/stethoscope,
+/obj/random/firstaid,
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"Hx" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"Ib" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"IU" = (
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/freezer{
+	temperature = 0
+	},
+/area/submap/eclipseprison)
+"Jy" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/radiation,
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"JA" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"JW" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"JY" = (
+/turf/simulated/floor/outdoors/dirt{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
+/area/submap/eclipseprison)
+"Ki" = (
+/obj/structure/table/steel,
+/obj/random/material,
+/obj/random/material/precious,
+/obj/random/material/refined,
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"Kv" = (
+/obj/machinery/power/rtg,
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"KG" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"KI" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"LD" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"LM" = (
+/obj/structure/closet,
+/obj/item/weapon/storage/backpack/dufflebag/syndie,
+/obj/item/weapon/syndie/c4explosive/heavy,
+/obj/effect/floor_decal/corner/mauve/diagonal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"LZ" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"Ni" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"Nx" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"NK" = (
+/obj/item/weapon/stock_parts/micro_laser/omni,
+/obj/item/weapon/stock_parts/micro_laser/omni,
+/obj/item/weapon/stock_parts/micro_laser/omni,
+/obj/item/weapon/stock_parts/micro_laser/omni,
+/obj/item/weapon/stock_parts/scanning_module/omni,
+/obj/structure/table/marble,
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/turf/simulated/floor/tiled/freezer{
+	temperature = 0
+	},
+/area/submap/eclipseprison)
+"PF" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red/border,
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"Qb" = (
+/obj/effect/floor_decal/borderfloor/corner,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"QC" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"SX" = (
+/obj/machinery/mining/brace{
+	anchored = 1;
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/dirt{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
+/area/submap/eclipseprison)
+"TB" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"Um" = (
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/machinery/light{
+	dir = 4;
+	layer = 3
+	},
+/turf/simulated/floor/tiled/freezer{
+	temperature = 0
+	},
+/area/submap/eclipseprison)
+"UB" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/ravanger,
+/obj/effect/floor_decal/corner/mauve/diagonal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"VJ" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/dirt{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
+/area/submap/eclipseprison)
+"Wi" = (
+/turf/simulated/wall/skipjack,
+/area/submap/eclipseprison)
+"Ws" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/guardian,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"XE" = (
+/turf/simulated/wall/silvergold,
+/area/submap/eclipseprison)
+"XG" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"XW" = (
+/obj/structure/fans/hardlight,
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"Zz" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseprison)
+"ZD" = (
+/obj/structure/fans/hardlight,
+/obj/machinery/door/blast/puzzle{
+	id = "prisonarms"
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/freezer{
+	temperature = 0
+	},
+/area/submap/eclipseprison)
+"ZI" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/froststalker,
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+"ZK" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseprison)
+
+(1,1,1) = {"
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+"}
+(2,1,1) = {"
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+XE
+lm
+gC
+rN
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+lm
+gC
+rN
+XE
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+"}
+(3,1,1) = {"
+Cy
+Cy
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+gs
+eK
+vo
+XE
+LM
+qr
+nS
+qr
+LM
+XE
+gs
+eK
+vo
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+Cy
+Cy
+Cy
+"}
+(4,1,1) = {"
+Cy
+Cy
+XE
+Fj
+TB
+TB
+TB
+oI
+TB
+TB
+TB
+oI
+XE
+JW
+eK
+vo
+XE
+zb
+zb
+zb
+zb
+zb
+XE
+gs
+eK
+vo
+XE
+cs
+tg
+XG
+nD
+tg
+XG
+nD
+tg
+QC
+XE
+Cy
+Cy
+Cy
+"}
+(5,1,1) = {"
+Cy
+Cy
+XE
+Hg
+TB
+TB
+ZI
+TB
+TB
+if
+TB
+TB
+XE
+gs
+eK
+vo
+jG
+zb
+iO
+zb
+UB
+zb
+jG
+gs
+eK
+Nx
+XE
+Ib
+ek
+gG
+vf
+ek
+BE
+FU
+ek
+ll
+XE
+Cy
+Cy
+Cy
+"}
+(6,1,1) = {"
+Cy
+Cy
+XE
+yP
+TB
+TB
+TB
+TB
+if
+aS
+if
+TB
+XE
+gs
+eK
+vo
+jG
+zb
+cO
+zb
+ui
+zb
+jG
+gs
+eK
+vo
+XE
+VJ
+ej
+JY
+JY
+ej
+JY
+JY
+ej
+JY
+XE
+Cy
+Cy
+Cy
+"}
+(7,1,1) = {"
+Cy
+Cy
+XE
+Ea
+TB
+TB
+lV
+TB
+TB
+if
+TB
+TB
+XE
+gs
+eK
+vo
+XE
+zb
+zb
+zb
+zb
+zb
+XE
+gs
+eK
+vo
+XE
+Er
+SX
+ha
+Ws
+SX
+FP
+yJ
+SX
+PF
+XE
+Cy
+Cy
+Cy
+"}
+(8,1,1) = {"
+Cy
+Cy
+XE
+pE
+TB
+TB
+TB
+oI
+TB
+TB
+TB
+oI
+XE
+JW
+eK
+Nx
+XE
+Wi
+ow
+ow
+ow
+Wi
+XE
+gs
+eK
+vo
+XE
+iZ
+mu
+vJ
+qn
+mu
+vJ
+qn
+sn
+yG
+XE
+Cy
+Cy
+Cy
+"}
+(9,1,1) = {"
+XE
+XE
+XE
+XE
+lo
+lo
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+gs
+eK
+vo
+Wi
+Wi
+gW
+gW
+gW
+Wi
+Wi
+JW
+eK
+Nx
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+lo
+lo
+XE
+XE
+XE
+XE
+Cy
+"}
+(10,1,1) = {"
+jX
+JA
+JA
+JA
+JA
+JA
+Zz
+JA
+JA
+JA
+JA
+JA
+Zz
+jv
+KG
+Hx
+fZ
+gW
+du
+Um
+NK
+gW
+fZ
+jv
+BN
+LD
+Zz
+JA
+JA
+JA
+Zz
+JA
+JA
+JA
+JA
+JA
+Zz
+JA
+jX
+Cy
+"}
+(11,1,1) = {"
+gC
+eK
+eK
+eK
+eK
+eK
+eK
+eK
+eK
+eK
+eK
+eK
+eK
+eK
+eK
+eK
+ow
+gW
+ij
+Fh
+IU
+gW
+ow
+eK
+eK
+eK
+eK
+eK
+eK
+eK
+eK
+eK
+eK
+eK
+eK
+eK
+eK
+eK
+gC
+Cy
+"}
+(12,1,1) = {"
+XW
+dS
+dS
+dS
+dS
+dS
+KI
+dS
+dS
+dS
+dS
+dS
+KI
+LZ
+BN
+Qb
+ZD
+gW
+Et
+tk
+zB
+gW
+ZD
+LZ
+KG
+Qb
+KI
+dS
+dS
+dS
+KI
+dS
+dS
+dS
+dS
+dS
+dS
+dS
+XW
+Cy
+"}
+(13,1,1) = {"
+XE
+XE
+XE
+XE
+lo
+lo
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+JW
+eK
+Nx
+Wi
+Wi
+gW
+gW
+gW
+Wi
+Wi
+JW
+eK
+Nx
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+lo
+lo
+XE
+XE
+XE
+XE
+Cy
+"}
+(14,1,1) = {"
+Cy
+Cy
+XE
+TB
+TB
+TB
+ym
+nm
+ym
+yT
+TB
+TB
+XE
+gs
+eK
+vo
+XE
+Wi
+ow
+ow
+ow
+Wi
+XE
+gs
+eK
+vo
+XE
+Ki
+Ki
+uZ
+Ki
+Ki
+uZ
+TB
+TB
+Ki
+XE
+Cy
+Cy
+Cy
+"}
+(15,1,1) = {"
+Cy
+Cy
+XE
+TB
+Kv
+TB
+Kv
+TB
+Kv
+TB
+Kv
+TB
+XE
+gs
+eK
+vo
+XE
+zb
+zb
+zb
+zb
+zb
+XE
+gs
+eK
+vo
+XE
+cx
+TB
+iX
+TB
+TB
+TB
+TB
+TB
+Ki
+XE
+Cy
+Cy
+Cy
+"}
+(16,1,1) = {"
+Cy
+Cy
+XE
+ZK
+TB
+TB
+TB
+TB
+TB
+TB
+TB
+Ni
+XE
+gs
+eK
+vo
+jG
+zb
+Dy
+zb
+cO
+zb
+jG
+gs
+eK
+vo
+XE
+cx
+uT
+TB
+TB
+TB
+TB
+TB
+TB
+Ki
+XE
+Cy
+Cy
+Cy
+"}
+(17,1,1) = {"
+Cy
+Cy
+XE
+TB
+Kv
+TB
+Kv
+TB
+Kv
+TB
+Kv
+TB
+XE
+gs
+eK
+vo
+jG
+zb
+FK
+zb
+iO
+zb
+jG
+gs
+eK
+Nx
+XE
+cx
+TB
+hh
+TB
+TB
+TB
+TB
+TB
+Ki
+XE
+Cy
+Cy
+Cy
+"}
+(18,1,1) = {"
+Cy
+Cy
+XE
+TB
+TB
+TB
+gF
+Jy
+gF
+yM
+TB
+TB
+XE
+JW
+eK
+vo
+XE
+zb
+zb
+zb
+zb
+zb
+XE
+gs
+eK
+vo
+XE
+Ki
+Ki
+fb
+Ki
+Ki
+cd
+Ki
+Ki
+Ki
+XE
+Cy
+Cy
+Cy
+"}
+(19,1,1) = {"
+Cy
+Cy
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+gs
+eK
+vo
+XE
+LM
+qr
+nS
+qr
+LM
+XE
+gs
+eK
+vo
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+Cy
+Cy
+Cy
+"}
+(20,1,1) = {"
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+XE
+lm
+gC
+rN
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+lm
+gC
+rN
+XE
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+Cy
+"}
