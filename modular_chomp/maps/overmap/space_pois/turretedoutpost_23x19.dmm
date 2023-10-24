@@ -318,9 +318,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/turretedoutpost)
 "EN" = (
-/obj/machinery/porta_turret/industrial/military{
-	installation = rrrrrrrrr
-	},
+/obj/machinery/porta_turret/industrial,
 /turf/simulated/floor/plating,
 /area/submap/turretedoutpost)
 "Ff" = (
@@ -390,9 +388,7 @@
 /turf/simulated/floor/plating,
 /area/submap/turretedoutpost)
 "Pm" = (
-/obj/machinery/porta_turret/industrial/military{
-	installation = rrrrrrrrr
-	},
+/obj/machinery/porta_turret/industrial,
 /turf/simulated/floor/airless,
 /area/submap/turretedoutpost)
 "Qg" = (
