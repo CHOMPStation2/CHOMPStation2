@@ -16,7 +16,7 @@
 	result = /obj/item/clothing/suit/armor/pcarrier/primative
 	reqs = list(
 		list(/obj/item/stack/material/leather = 10),
-		list(/obj/item/stack/rod = 4),
+		list(/obj/item/stack/rods = 4),
 		list(/obj/item/stack/material/cloth = 5)
 	)
 	time = 120
@@ -27,7 +27,7 @@
 	result = /obj/machinery/optable
 	reqs = list(
 		list(/obj/item/stack/material/silver = 12),
-		list(/obj/item/stack/rod = 10),
+		list(/obj/item/stack/rods = 10),
 		list(/obj/item/stack/material/leather = 1)
 	)
 	time = 240
