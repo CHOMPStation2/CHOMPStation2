@@ -12,7 +12,7 @@
 	path =/obj/item/weapon/stock_parts/manipulator
 
 /datum/category_item/autolathe/engineering/micro_laser
-	name = "micro laser"
+	name = "micro-laser"
 	path =/obj/item/weapon/stock_parts/micro_laser
 
 /datum/category_item/autolathe/engineering/matter_bin

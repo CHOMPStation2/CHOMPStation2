@@ -1,8 +1,6 @@
 ///////////////////// Mob Living /////////////////////
 /mob/living
 	var/list/vore_organs_reagents = list()	//Reagent datums in vore bellies in a mob
-	var/receive_reagents = FALSE			//Pref for people to avoid others transfering reagents into them.
-	var/give_reagents = FALSE				//Pref for people to avoid others taking reagents from them.
 	var/vore_footstep_volume = 0			//Variable volume for a mob, updated every 5 steps where a footstep hasnt occurred.
 	var/vore_footstep_chance = 0
 	var/vore_footstep_volume_cooldown = 0	//goes up each time a step isnt heard, and will proc update of list of viable bellies to determine the most filled and loudest one to base audio on.
@@ -12,23 +10,11 @@
 	var/liquidbelly_visuals = TRUE			//Toggle for liquidbelly level visuals.
 
 	// CHOMP vore icons refactor (Now on living)
-	var/vore_capacity = 0				// Maximum capacity, -1 for unlimited
-	var/vore_capacity_ex = list("stomach" = 0) //expanded list of capacities
-	var/vore_fullness = 0				// How "full" the belly is (controls icons)
-	var/list/vore_fullness_ex = list("stomach" = 0) // Expanded list of fullness
 	var/vore_icons = 0					// Bitfield for which fields we have vore icons for.
 	var/vore_eyes = FALSE				// For mobs with fullness specific eye overlays.
-	var/belly_size_multiplier = 1
-	var/vore_sprite_multiply = list("stomach" = FALSE, "taur belly" = FALSE)
-	var/vore_sprite_color = list("stomach" = "#000", "taur belly" = "#000")
-
-	var/list/vore_icon_bellies = list("stomach")
-	var/updating_fullness = FALSE
-	var/obj/belly/previewing_belly
-
 
 // Update fullness based on size & quantity of belly contents
-/mob/living/proc/update_fullness(var/returning = FALSE)
+/mob/proc/update_fullness(var/returning = FALSE)
 	if(!returning)
 		if(updating_fullness)
 			return

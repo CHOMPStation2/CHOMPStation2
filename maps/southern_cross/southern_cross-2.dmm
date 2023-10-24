@@ -28213,7 +28213,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/central)
 "bIn" = (
-/obj/structure/catwalk,
 /obj/random/plushielarge,
 /turf/simulated/floor/plating,
 /area/maintenance/bar)
@@ -43378,23 +43377,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/research)
 "cFW" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -22
-	},
+/obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
-/area/maintenance/research)
+/area/maintenance/bar)
 "cFX" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
@@ -48074,7 +48059,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/engineering)
 "fhn" = (
-/obj/machinery/smartfridge/produce,
+/obj/machinery/smartfridge/produce/persistent_lossy,
 /turf/simulated/wall/r_wall,
 /area/hydroponics)
 "fhH" = (
@@ -49797,12 +49782,14 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/aft)
@@ -50181,6 +50168,10 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/white,
 /area/medical/first_aid_station/seconddeck/port)
+"gjV" = (
+/obj/random/trash_pile,
+/turf/simulated/floor/plating,
+/area/maintenance/research)
 "gkh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -51358,7 +51349,7 @@
 	dir = 4
 	},
 /obj/structure/table/marble,
-/obj/item/weapon/book/manual/chef_recipes,
+/obj/item/weapon/book/codex/chef_recipes,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "gRL" = (
@@ -55402,6 +55393,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
+"iXZ" = (
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -22
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/research)
 "iYb" = (
 /obj/effect/floor_decal/sign/dock/three,
 /turf/simulated/floor/tiled,
@@ -66361,8 +66359,8 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/docking_hallway2)
@@ -66750,6 +66748,12 @@
 	dir = 8;
 	name = "Gallery";
 	sortType = "Gallery"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/seconddeck/aft)
@@ -70883,11 +70887,15 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/starboard)
 "rEG" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/seconddeck/aft)
@@ -74343,6 +74351,12 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/seconddeck/aft)
 "tCR" = (
@@ -75377,7 +75391,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/entry/D3)
 "ump" = (
-/obj/machinery/portable_atmospherics/powered/pump/filled,
 /obj/machinery/power/apc{
 	name = "south bump";
 	pixel_y = -24
@@ -112234,7 +112247,7 @@ aaa
 aaa
 aaa
 aaa
-cbx
+cza
 aai
 nGq
 bpD
@@ -112492,7 +112505,7 @@ aaa
 aaa
 aaa
 aaa
-cbx
+cza
 bGL
 nGq
 cNV
@@ -112750,9 +112763,9 @@ bDr
 aaa
 aaa
 aaa
-cbx
+cza
 bBd
-cAq
+nGq
 clg
 bts
 bNj
@@ -113007,8 +113020,8 @@ bvV
 bDr
 aaa
 aaa
-aaa
-cza
+cbx
+cbx
 bGP
 tqM
 clg
@@ -113265,8 +113278,8 @@ bvU
 bzL
 bzL
 aaa
-aaa
-cza
+cbx
+cFW
 bGN
 ump
 clg
@@ -113523,10 +113536,10 @@ bvV
 aVV
 bzL
 aaa
-aaa
-cza
-bkt
+cbx
 bIn
+bkt
+tqM
 clg
 bLJ
 bNo
@@ -113781,8 +113794,8 @@ bvW
 bxP
 bDr
 aaa
-aaa
 cbx
+cAq
 bGP
 wcF
 clg
@@ -114039,7 +114052,7 @@ bxQ
 dBF
 bDr
 aaa
-aaa
+cbx
 cbx
 bGP
 bIp
@@ -116324,7 +116337,7 @@ cwf
 cxA
 csw
 aWb
-cDP
+cuE
 cDZ
 aWb
 enG
@@ -116840,10 +116853,10 @@ cwj
 cxK
 csw
 cwA
-cDQ
+cuE
 cFV
 aWb
-aaa
+aWb
 aaa
 enG
 hdd
@@ -117099,9 +117112,9 @@ crE
 crE
 crE
 cDR
-cFW
+cDZ
+iXZ
 aWb
-aaa
 aaa
 enG
 hdV
@@ -117358,8 +117371,8 @@ czZ
 cCp
 cuE
 cDZ
+gjV
 aWb
-aaa
 aaa
 enG
 hex
@@ -117616,8 +117629,8 @@ cAb
 cCs
 cDS
 cFX
-csa
-aaa
+cDQ
+aWb
 aaa
 asV
 vad
@@ -117874,8 +117887,8 @@ cAc
 crE
 cDW
 cDZ
+cuE
 csa
-aaa
 aaa
 asV
 asV
@@ -118132,8 +118145,8 @@ cAu
 crE
 cDW
 cFY
+cuE
 csa
-aaa
 aaa
 aaa
 enG
@@ -118390,8 +118403,8 @@ cAv
 crE
 cDW
 cDZ
-aWb
-aaa
+cDP
+csa
 aaa
 aaa
 enG
@@ -118649,7 +118662,7 @@ crE
 cDW
 cDZ
 aWb
-aaa
+aWb
 aaa
 aaa
 aaa

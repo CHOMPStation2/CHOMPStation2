@@ -351,13 +351,14 @@
 /obj/belly/Initialize()
 	. = ..()
 	//If not, we're probably just in a prefs list or something.
-	if(isliving(loc))
+	if(ismob(loc))
 		owner = loc
 		owner.vore_organs |= src
-		if(speedy_mob_processing) //CHOMPEdit Start
-			START_PROCESSING(SSobj, src)
-		else
-			START_PROCESSING(SSbellies, src)
+		if(isliving(loc))
+			if(speedy_mob_processing) //CHOMPEdit Start
+				START_PROCESSING(SSobj, src)
+			else
+				START_PROCESSING(SSbellies, src)
 
 	create_reagents(300)	//CHOMP So we can have some liquids in bellies
 	flags |= NOREACT		// We dont want bellies to start bubling nonstop due to people mixing when transfering and making different reagents
@@ -585,7 +586,7 @@
 					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
 					I.color = extra_mush_color
 					I.alpha = custom_ingested_alpha
-					I.pixel_y = -450 + (450 / max(max_ingested, 1) * max(min(max_ingested, ingested.total_volume), 1))
+					I.pixel_y = -450 + ((450 / max(max_ingested, 1)) * min(max_ingested, ingested.total_volume))
 					F.add_overlay(I)
 			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0 || (LAZYLEN(contents) * item_mush_val) > 0))
 				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
@@ -684,7 +685,7 @@
 		//L.clear_fullscreen("belly3") //Chomp Disable - disable upstream's solution, use ours
 		//L.clear_fullscreen("belly4") //Chomp Disable - disable upstream's solution, use ours
 
-	if(disable_hud)
+	if(disable_hud && L != owner)
 		if(L?.hud_used?.hud_shown)
 			to_chat(L, "<span class='notice'>((Your pred has disabled huds in their belly. Turn off vore FX and hit F12 to get it back; or relax, and enjoy the serenity.))</span>")
 			L.toggle_hud_vis(TRUE)
