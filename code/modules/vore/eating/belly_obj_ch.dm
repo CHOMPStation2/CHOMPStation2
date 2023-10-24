@@ -165,7 +165,7 @@
 			else if(I.w_class == ITEMSIZE_HUGE)
 				fullness_to_add = ITEMSIZE_COST_HUGE
 			else
-				fullness_to_add = ITEMSIZE_COST_NO_CONTAINER
+				fullness_to_add = I.w_class
 			fullness_to_add /= 32
 			belly_fullness += fullness_to_add * item_multiplier
 	belly_fullness *= size_factor_for_sprite
