@@ -294,6 +294,7 @@
 					arguments = list()
 					)
 	H.verbs += /mob/living/carbon/human/proc/phase_strength_toggle //CHOMPEdit - Add gentle phasing
+	H.verbs += /mob/living/carbon/human/proc/nutrition_conversion_toggle //CHOMPEdit - Add nutrition conversion toggle
 
 /datum/species/shadekin/proc/handle_shade(var/mob/living/carbon/human/H)
 	//CHOMPEdit begin - No energy during dark respite
