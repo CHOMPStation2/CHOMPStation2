@@ -231,11 +231,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"belly_fullscreen" = selected.belly_fullscreen,
 			"eating_privacy_local" = selected.eating_privacy_local,
 			"silicon_belly_overlay_preference"	= selected.silicon_belly_overlay_preference,
-<<<<<<< HEAD
-			"visible_belly_minimum_prey"	= selected.visible_belly_minimum_prey,
-			"overlay_min_prey_size"	= selected.overlay_min_prey_size,
-			"override_min_prey_size" = selected.override_min_prey_size,
-			"override_min_prey_num"	= selected.override_min_prey_num,
+			"belly_mob_mult" = selected.belly_mob_mult,
+			"belly_item_mult" = selected.belly_item_mult,
+			"belly_overall_mult" = selected.belly_overall_mult,
 			//CHOMP add: vore sprite options and additional stuff
 			"belly_fullscreen_color" = selected.belly_fullscreen_color,
 			//"belly_fullscreen_color_secondary" = selected.belly_fullscreen_color_secondary, // Chomp REMOVE - use our solution, not upstream's
@@ -286,12 +284,6 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"noise_freq" = selected.noise_freq
 			//"marking_to_add" = selected.marking_to_add
 			//CHOMPEdit end
-=======
-			"belly_mob_mult" = selected.belly_mob_mult,
-			"belly_item_mult" = selected.belly_item_mult,
-			"belly_overall_mult" = selected.belly_overall_mult,
-
->>>>>>> 241a40af3d... Merge pull request #15425 from ReoDaProtovali/Borg-belly-naming-change
 		)
 
 		var/list/addons = list()
