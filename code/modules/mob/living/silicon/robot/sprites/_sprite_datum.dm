@@ -30,12 +30,6 @@
 /datum/robot_sprite/proc/handle_extra_icon_updates(var/mob/living/silicon/robot/ourborg)
 	return
 
-<<<<<<< HEAD
-/datum/robot_sprite/proc/get_belly_overlay(var/mob/living/silicon/robot/ourborg)
-	return "[sprite_icon_state]-sleeper"
-//CHOMPEdit Start - gives the function functionality
-/datum/robot_sprite/proc/get_belly_resting_overlay(var/mob/living/silicon/robot/ourborg)
-=======
 /datum/robot_sprite/proc/get_belly_overlay(var/mob/living/silicon/robot/ourborg, var/size = 1)
 	//Size
 	if(has_sleeper_light_indicator)
@@ -46,26 +40,16 @@
 	return "[sprite_icon_state]-sleeper-[size]"
 
 /datum/robot_sprite/proc/get_belly_resting_overlay(var/mob/living/silicon/robot/ourborg, var/size = 1)
->>>>>>> 241a40af3d... Merge pull request #15425 from ReoDaProtovali/Borg-belly-naming-change
 	if(!(ourborg.rest_style in rest_sprite_options))
 		ourborg.rest_style = "Default"
 	switch(ourborg.rest_style)
 		if("Sit")
-<<<<<<< HEAD
-			return "[get_belly_overlay(ourborg)]-sit"
-		if("Bellyup")
-			return "[get_belly_overlay(ourborg)]-bellyup"
-		else
-			return "[get_belly_overlay(ourborg)]-rest"
-//CHOMPEdit End
-=======
 			return "[get_belly_overlay(ourborg, size)]-sit"
 		if("Bellyup")
 			return "[get_belly_overlay(ourborg, size)]-bellyup"
 		else
 			return "[get_belly_overlay(ourborg, size)]-rest"
 
->>>>>>> 241a40af3d... Merge pull request #15425 from ReoDaProtovali/Borg-belly-naming-change
 /datum/robot_sprite/proc/get_eyes_overlay(var/mob/living/silicon/robot/ourborg)
 	if(!(ourborg.resting && has_rest_sprites))
 		return "[sprite_icon_state]-eyes"
@@ -171,7 +155,6 @@
 	sprite_icon = 'icons/mob/robot/default.dmi'
 	sprite_icon_state = "default"
 	default_sprite = TRUE
-<<<<<<< HEAD
 
 //CHOMPAdd Start - new definition for raptors
 /datum/robot_sprite/dogborg/raptor
@@ -179,5 +162,3 @@
 	vis_height = 45
 	pixel_x = -16
 //CHOMPAdd End
-=======
->>>>>>> 241a40af3d... Merge pull request #15425 from ReoDaProtovali/Borg-belly-naming-change
