@@ -690,17 +690,10 @@ const VoreSelectedBellyOptions = (props, context) => {
     save_digest_mode,
     eating_privacy_local,
     silicon_belly_overlay_preference,
-<<<<<<< HEAD
-    visible_belly_minimum_prey,
-    overlay_min_prey_size,
-    override_min_prey_size,
-    override_min_prey_num,
-    vorespawn_blacklist,
-=======
     belly_mob_mult,
     belly_item_mult,
     belly_overall_mult,
->>>>>>> 241a40af3d... Merge pull request #15425 from ReoDaProtovali/Borg-belly-naming-change
+    vorespawn_blacklist,
   } = belly;
 
   return (
