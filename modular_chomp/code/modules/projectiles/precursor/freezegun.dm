@@ -9,7 +9,7 @@
 	origin_tech = list(TECH_COMBAT = 6, TECH_POWER = 5, TECH_PRECURSOR = 3)
 
 
-	charge_cost = 480 //How much energy is needed to fire.
+	charge_cost = 120 //How much energy is needed to fire.
 
 	accept_cell_type = /obj/item/weapon/cell/device
 	cell_type = /obj/item/weapon/cell/device/weapon
