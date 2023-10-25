@@ -67,6 +67,8 @@
   - bugfix: NT stamp no longer goes past the edges of the envelopes.
   - qol: The mail colours have been revamped
   - rscdel: Removed unused variables
+  TheGreatKitsune:
+  - rscadd: Verb in IC to clear nutrition as a borg.
   Upstream:
   - rscadd: added ability to toggle conveyor speed (slow/fast)
   - bugfix: fixed tool usage on conveyor switches
