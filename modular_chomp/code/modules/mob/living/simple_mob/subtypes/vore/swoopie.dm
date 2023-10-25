@@ -154,7 +154,7 @@
 		if(!Vac.output_dest)
 			if(isbelly(vore_selected))
 				Vac.output_dest = vore_selected
-	if(istype(T) && istype(Vac) && has_AI())
+	if(istype(T) && istype(Vac) && has_AI() && Vac.loc == src)
 		if(istype(T, /turf/simulated))
 			var/turf/simulated/S = T
 			if(S.dirt > 10)
