@@ -365,9 +365,11 @@
 	if(speedy_mob_processing)
 		STOP_PROCESSING(SSobj, src)
 	else
-		STOP_PROCESSING(SSbellies, src) //CHOMPEdit End
+		STOP_PROCESSING(SSbellies, src)
 	owner?.vore_organs?.Remove(src)
 	owner = null
+	for(var/mob/observer/G in src)
+		G.forceMove(get_turf(src)) //CHOMPEdit End
 	return ..()
 
 // Called whenever an atom enters this belly
