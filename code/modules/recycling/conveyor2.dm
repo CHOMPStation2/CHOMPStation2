@@ -310,21 +310,6 @@
 		if(!input)
 			to_chat(user, "No input found. Please hang up and try your call again.")
 			return
-<<<<<<< HEAD
-			
-	if(istype(I, /obj/item/weapon/tool/wrench))
-		if(panel_open)
-			if(oneway == 1)
-				to_chat(user, "You set the switch to two way operation.")
-				oneway = 0
-				playsound(src, I.usesound, 50, 1)
-				return
-			else
-				to_chat(user, "You set the switch to one way operation.")
-				oneway = 1
-				playsound(src, I.usesound, 50, 1)
-				return
-=======
 		id = input
 		conveyors = list() // Clear list so they aren't double added.
 		for(var/obj/machinery/conveyor/C in machines)
@@ -349,15 +334,7 @@
 		toggle_speed()
 		to_chat(user, "You adjust the speed of the conveyor switch")
 		return
->>>>>>> cf2734d5b0... Merge pull request #15440 from ReoDaProtovali/Missed-a-spot
 
-//CHOMPedit: Conveyor belts can be fast :)
-	if(istype(I, /obj/item/weapon/tool/wirecutters))
-		if(panel_open)
-			toggle_speed()
-			to_chat(user, "You adjust the speed of the conveyor switch.")
-			return
-//CHOMPedit End
 /obj/machinery/conveyor_switch/oneway
 	oneway = 1
 
