@@ -1582,15 +1582,11 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/machinery/recharger/wallcharger{
-	pixel_x = 4;
-	pixel_y = -28
-	},
 /obj/structure/cable/blue{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+	d2 = 4;
+	icon_state = "0-4"
 	},
+/obj/machinery/power/terminal,
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/needle)
 "bnN" = (
@@ -2870,6 +2866,10 @@
 	dir = 1
 	},
 /obj/effect/overmap/visitable/ship/landable/ursula,
+/obj/structure/panic_button{
+	pixel_x = -32;
+	pixel_y = 32
+	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/ursula)
 "cpa" = (
@@ -6951,14 +6951,14 @@
 "fzd" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	frequency = 1380;
-	id_tag = "shuttle4_pump"
+	id_tag = "baby_mammoth_pump"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
 	},
 /obj/machinery/airlock_sensor{
 	frequency = 1380;
-	id_tag = "shuttle4_sensor";
+	id_tag = "baby_mammoth_sensor";
 	pixel_y = 28
 	},
 /turf/simulated/shuttle/plating,
@@ -7125,6 +7125,17 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarsix)
+"fFf" = (
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 1
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 32;
+	pixel_y = 3
+	},
+/turf/simulated/shuttle/floor/black,
+/area/shuttle/needle)
 "fGm" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/green{
 	dir = 4
@@ -7705,7 +7716,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
 	frequency = 1380;
-	id_tag = "shuttle4_pump"
+	id_tag = "baby_mammoth_pump"
 	},
 /obj/structure/closet/emcloset,
 /turf/simulated/shuttle/plating,
@@ -9242,14 +9253,13 @@
 /turf/simulated/floor/tiled/milspec/raised,
 /area/expoutpost/staginghangar)
 "hsz" = (
-/obj/structure/bed/chair/bay/shuttle{
-	dir = 1
-	},
 /obj/structure/closet/walllocker/emerglocker/south,
-/obj/structure/cable/blue{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+/obj/machinery/power/smes/buildable/point_of_interest{
+	input_attempt = 1
+	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/stargazer)
@@ -14932,19 +14942,19 @@
 "lRz" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	frequency = 1380;
-	id_tag = "shuttle4_pump"
+	id_tag = "baby_mammoth_pump"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	frequency = 1380;
-	id_tag = "shuttle4_shuttle";
+	id_tag = "baby_mammoth";
 	pixel_y = 26;
-	tag_airpump = "shuttle4_pump";
-	tag_chamber_sensor = "shuttle4_sensor";
-	tag_exterior_door = "shuttle4_outer";
-	tag_interior_door = "shuttle4_inner"
+	tag_airpump = "baby_mammoth_pump";
+	tag_chamber_sensor = "baby_mammoth_sensor";
+	tag_exterior_door = "baby_mammoth_outer";
+	tag_interior_door = "baby_mammoth_inner"
 	},
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_x = -25;
@@ -15260,6 +15270,9 @@
 /obj/item/weapon/cell/device/weapon,
 /obj/item/weapon/cell/device/weapon,
 /obj/item/weapon/cell/device/weapon,
+/obj/structure/panic_button{
+	pixel_x = -32
+	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/baby_mammoth)
 "mbg" = (
@@ -16559,6 +16572,9 @@
 /area/expoutpost/reactorcr)
 "mZV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
 /turf/simulated/shuttle/wall/voidcraft/hard_corner,
 /area/shuttle/needle)
 "nas" = (
@@ -16721,6 +16737,10 @@
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
+"nfK" = (
+/obj/effect/catwalk_plated/dark,
+/turf/space,
+/area/space)
 "ngg" = (
 /obj/machinery/portable_atmospherics/canister/air/airlock,
 /obj/machinery/atmospherics/portables_connector{
@@ -16902,6 +16922,17 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/miningfoyer)
+"nlv" = (
+/obj/effect/floor_decal/industrial/warning/cee,
+/obj/machinery/power/smes/buildable/point_of_interest{
+	input_attempt = 1
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/shuttle/floor/yellow,
+/area/shuttle/needle)
 "nlT" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
 	id_tag = "ursula_hatch";
@@ -16965,9 +16996,11 @@
 /area/expoutpost/bar)
 "nni" = (
 /obj/structure/cable/blue{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/machinery/power/terminal{
+	dir = 4
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/stargazer)
@@ -17249,7 +17282,7 @@
 "nwH" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
 	frequency = 1380;
-	id_tag = "shuttle4_outer";
+	id_tag = "baby_mammoth_outer";
 	locked = 1;
 	name = "External Access"
 	},
@@ -20955,7 +20988,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/structure/cable/blue{
+/obj/structure/cable/green{
 	d2 = 4;
 	icon_state = "0-4"
 	},
@@ -22365,9 +22398,6 @@
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/commanderroom)
 "rrP" = (
-/obj/structure/bed/chair/bay/shuttle{
-	dir = 1
-	},
 /obj/machinery/power/apc/hyper{
 	coverlocked = 0;
 	dir = 4;
@@ -22377,7 +22407,10 @@
 	locked = 0;
 	pixel_x = 23
 	},
-/obj/structure/cable/blue{
+/obj/structure/panic_button{
+	pixel_y = -32
+	},
+/obj/structure/cable/green{
 	d2 = 8;
 	icon_state = "0-8"
 	},
@@ -24452,6 +24485,18 @@
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/expoutpost/portsternairlock)
+"sWr" = (
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	frequency = 1380;
+	id_tag = "shuttle4_shuttle";
+	pixel_y = 26;
+	tag_airpump = "shuttle4_pump";
+	tag_chamber_sensor = "shuttle4_sensor";
+	tag_exterior_door = "shuttle4_outer";
+	tag_interior_door = "shuttle4_inner"
+	},
+/turf/simulated/wall/r_wall,
+/area/expoutpost/staruppermaint)
 "sWF" = (
 /obj/machinery/door/airlock/glass_centcom{
 	req_one_access = list(67)
@@ -24782,10 +24827,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 10
 	},
-/obj/structure/cable/blue{
-	d1 = 4;
+/obj/structure/cable/green{
+	d1 = 2;
 	d2 = 8;
-	icon_state = "4-8"
+	icon_state = "2-8"
 	},
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/needle)
@@ -25564,6 +25609,9 @@
 	dir = 1
 	},
 /obj/structure/bed/chair/bay/shuttle,
+/obj/structure/panic_button{
+	pixel_x = 32
+	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/needle)
 "tNr" = (
@@ -27943,6 +27991,7 @@
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_x = 32
 	},
+/obj/structure/bed/chair/bay/shuttle,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/stargazer)
 "vxS" = (
@@ -28844,7 +28893,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
 	frequency = 1380;
-	id_tag = "shuttle4_pump"
+	id_tag = "baby_mammoth_pump"
 	},
 /obj/machinery/light,
 /turf/simulated/shuttle/plating,
@@ -28883,7 +28932,7 @@
 	},
 /obj/machinery/door/airlock/voidcraft/vertical{
 	frequency = 1380;
-	id_tag = "shuttle4_inner";
+	id_tag = "baby_mammoth_inner";
 	locked = 1;
 	name = "Internal Access"
 	},
@@ -30832,6 +30881,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/techstorage)
+"xHV" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/panic_button{
+	pixel_x = 32
+	},
+/turf/simulated/shuttle/floor/yellow,
+/area/shuttle/echidna)
 "xIx" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 4
@@ -61377,9 +61436,9 @@ nBb
 uyH
 tNm
 hKt
-hlp
+fFf
 bnp
-jlO
+nlv
 lRD
 oGk
 oGk
@@ -68618,7 +68677,7 @@ lGm
 gAU
 fEH
 iBn
-dMm
+iBn
 hsz
 lOl
 fEH
@@ -69116,7 +69175,7 @@ xnV
 dTw
 flk
 eTt
-wRB
+xHV
 wRB
 usC
 wRB
@@ -74325,7 +74384,7 @@ cwA
 xEV
 xEV
 xEV
-qWQ
+sWr
 qWQ
 qWQ
 qWQ
@@ -82057,7 +82116,7 @@ cwA
 cwA
 cwA
 cwA
-cwA
+nfK
 cwA
 cwA
 cwA
