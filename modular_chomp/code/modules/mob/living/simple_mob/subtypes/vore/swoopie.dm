@@ -163,6 +163,9 @@
 	say_got_target = list("PEST DETECTED!")
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/ClickOn(var/atom/A, var/params)
+	var/list/modifiers = params2list(params)
+	if(modifiers["shift"] || modifiers["ctrl"] || modifiers["middle"] || modifiers["alt"])
+		return ..()
 	if(istype(Vac) && A.Adjacent(src))
 		face_atom(A)
 		if(A == src)

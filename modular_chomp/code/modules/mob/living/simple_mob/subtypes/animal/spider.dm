@@ -115,3 +115,97 @@
 
 	melee_damage_lower = 5
 	melee_damage_upper = 10
+
+//Hijacking this file to make new event spiders
+
+/mob/living/simple_mob/animal/giant_spider/frost/space
+	name = "giant space spider"
+	min_oxy = 0
+	max_tox = 0
+	max_co2 = 0
+
+	maxHealth = 20
+	health = 20
+
+	melee_damage_lower = 5
+	melee_damage_upper = 7
+
+/mob/living/simple_mob/animal/giant_spider/electric/space
+	name = "giant space spider"
+	min_oxy = 0
+	max_tox = 0
+	max_co2 = 0
+
+	maxHealth = 15
+	health = 15
+
+/mob/living/simple_mob/animal/giant_spider/hunter/space
+	name = "giant space spider"
+	min_oxy = 0
+	max_tox = 0
+	max_co2 = 0
+
+	maxHealth = 20
+	health = 20
+
+/mob/living/simple_mob/animal/giant_spider/lurker/space
+	maxHealth = 20
+	health = 20
+
+/mob/living/simple_mob/animal/giant_spider/nurse/space
+	name = "giant space spider"
+	min_oxy = 0
+	max_tox = 0
+	max_co2 = 0
+
+	egg_type = /obj/effect/spider/eggcluster/royal/space
+
+	maxHealth = 30
+	health = 30
+
+/mob/living/simple_mob/animal/giant_spider/pepper/space
+	name = "giant space spider"
+	min_oxy = 0
+	max_tox = 0
+	max_co2 = 0
+
+	maxHealth = 20
+	health = 20
+
+/mob/living/simple_mob/animal/giant_spider/thermic/space
+	name = "giant space spider"
+	min_oxy = 0
+	max_tox = 0
+	max_co2 = 0
+	maxHealth = 20
+	health = 20
+
+	melee_damage_lower = 5
+	melee_damage_upper = 7
+
+/mob/living/simple_mob/animal/giant_spider/tunneler/space
+	name = "giant space spider"
+	min_oxy = 0
+	max_tox = 0
+	max_co2 = 0
+	maxHealth = 20
+	health = 20
+
+/mob/living/simple_mob/animal/giant_spider/webslinger/space
+	name = "giant space spider"
+	min_oxy = 0
+	max_tox = 0
+	max_co2 = 0
+	maxHealth = 15
+	health = 15
+
+/mob/living/simple_mob/animal/giant_spider/space
+	name = "giant space spider"
+	min_oxy = 0
+	max_tox = 0
+	max_co2 = 0
+	maxHealth = 30
+	health = 30
+
+	melee_damage_lower = 5
+	melee_damage_upper = 10

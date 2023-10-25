@@ -88,3 +88,12 @@
 	cost = 50
 	containertype = /obj/structure/closet/crate/freezer
 	containername = "Chinese takeout crate"
+
+/datum/supply_pack/randomised/hospitality/jaffacake
+	contains = list(
+		/obj/item/weapon/storage/box/jaffacake = 10
+		)
+	name = "Desatti jaffa cake crate"
+	cost = 25
+	containertype = /obj/structure/closet/crate/freezer
+	containername = "Desatti jaffa cake crate"
