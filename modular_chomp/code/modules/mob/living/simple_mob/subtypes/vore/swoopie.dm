@@ -37,6 +37,7 @@
 		Vac.vac_power = 3
 		Vac.item_state = null
 		Vac.vac_owner = src
+		Vac.icon = 'modular_chomp/icons/mob/vacpack_swoop.dmi'
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/IIsAlly(mob/living/L)
 	. = ..()
@@ -196,6 +197,12 @@
 	if(L.a_intent == I_DISARM && Vac)
 		Vac.attack_self(L)
 		return
+	if(L.a_intent == I_GRAB && Vac && Vac.loc == src)
+		if(L.zone_sel.selecting == BP_HEAD)
+			if(L.put_in_active_hand(Vac))
+				L.visible_message("<span class='warning'>[L] grabs [src] by the neck, brandishing the thing like a regular vacuum cleaner!</span>")
+				L.start_pulling(src)
+				return
 	. = ..()
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/verb/borrow_vac()

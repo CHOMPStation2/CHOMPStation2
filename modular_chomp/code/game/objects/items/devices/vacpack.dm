@@ -256,6 +256,10 @@
 	.=..()
 	icon_state = "sucker-[vac_power]"
 
+/obj/item/device/vac_attachment/equipped()
+	.=..()
+	icon_state = "sucker-[vac_power]"
+
 /obj/item/device/vac_attachment/dropped(mob/user as mob)
 	.=..()
 	icon_state = "sucker_drop"
