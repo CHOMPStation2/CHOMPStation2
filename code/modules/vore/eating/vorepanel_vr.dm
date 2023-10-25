@@ -288,7 +288,8 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"tail_colouration" = selected.tail_colouration,
 			"tail_extra_overlay" = selected.tail_extra_overlay,
 			"tail_extra_overlay2" = selected.tail_extra_overlay2,
-			"noise_freq" = selected.noise_freq
+			"noise_freq" = selected.noise_freq,
+			"item_digest_logs" = selected.item_digest_logs,
 			//"marking_to_add" = selected.marking_to_add
 			//CHOMPEdit end
 		)
@@ -310,6 +311,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		selected_list["egg_type"] = selected.egg_type
 		selected_list["egg_name"] = selected.egg_name //CHOMPAdd
 		selected_list["recycling"] = selected.recycling //CHOMPAdd
+		selected_list["item_digest_logs"] = selected.item_digest_logs //CHOMPAdd
 		selected_list["contaminates"] = selected.contaminates
 		selected_list["contaminate_flavor"] = null
 		selected_list["contaminate_color"] = null
@@ -917,7 +919,14 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					if(new_entrance_logs == 0)
 						new_belly.entrance_logs = FALSE
 					if(new_entrance_logs == 1)
-						new_belly.entrance_logs = TRUE //CHOMPAdd End
+						new_belly.entrance_logs = TRUE
+
+				if(isnum(belly_data["item_digest_logs"]))
+					var/new_item_digest_logs = belly_data["item_digest_logs"]
+					if(new_item_digest_logs == 0)
+						new_belly.item_digest_logs = FALSE
+					if(new_item_digest_logs == 1)
+						new_belly.item_digest_logs = TRUE //CHOMPAdd End
 
 				if(istext(belly_data["selective_preference"]))
 					var/new_selective_preference = belly_data["selective_preference"]
@@ -2633,6 +2642,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			. = TRUE
 		if("b_entrance_logs")
 			host.vore_selected.entrance_logs = !host.vore_selected.entrance_logs
+			. = TRUE
+		if("b_item_digest_logs")
+			host.vore_selected.item_digest_logs = !host.vore_selected.item_digest_logs
 			. = TRUE //CHOMPAdd End
 		if("b_bulge_size")
 			var/new_bulge = tgui_input_number(user, "Choose the required size prey must be to show up on examine, ranging from 25% to 200% Set this to 0 for no text on examine.", "Set Belly Examine Size.", max_value = 200, min_value = 0)
