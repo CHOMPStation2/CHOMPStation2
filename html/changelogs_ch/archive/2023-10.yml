@@ -68,3 +68,6 @@
   - bugfix: fixed scel going invisible when they eat more than one prey.
   - bugfix: fixed scel automatically and randomly using special attacks when controlled
       by a player.
+  tacoguy7765093:
+  - rscadd: The overmap shuttles now got enough budget to deploy distress beacons
+  - rscadd: SMESs on the missing shuttles, no more losing power.
