@@ -1859,14 +1859,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 	var/list/available_options = list("Examine", "Eject", "Move", "Transfer")
 	if(ishuman(target))
 		available_options += "Transform"
-<<<<<<< HEAD
+		available_options += "Health Check"
 	//CHOMPEdit Begin - Add Reforming
 	if(isobserver(target) || istype(target,/obj/item/device/mmi))
 		available_options += "Reform"
 	//CHOMPEdit End
-=======
-		available_options += "Health Check"
->>>>>>> 222d2de023... Merge pull request #15456 from SatinIsle/vore-health
 	if(isliving(target))
 		var/mob/living/datarget = target
 		if(datarget.client)
