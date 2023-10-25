@@ -62,3 +62,9 @@
   Upstream:
   - rscadd: added ability to toggle conveyor speed (slow/fast)
   - bugfix: fixed tool usage on conveyor switches
+  - rscadd: added a new proc that imitates the leapers lunge attack, which can be
+      given to mobs to use as an ability when player controlled.
+  - rscadd: added the lunge ability to player controlled scel.
+  - bugfix: fixed scel going invisible when they eat more than one prey.
+  - bugfix: fixed scel automatically and randomly using special attacks when controlled
+      by a player.
