@@ -3,6 +3,8 @@
   - qol: Adds descriptions to experimental firstaid kit's pill bottles.
   - qol: Made speedloaders 18, because revolvers hold six.
   - bugfix: turrets where missed in the refactor, well their health
+  Razgriz1032:
+  - rscdel: Removed Among Us slugcats
   Verkister:
   - bugfix: Fixed disabled autotransfer un-disabling itself when aghosted/SSD
   - rscadd: Added bellysprites for sergal and skunk taurs.
@@ -19,3 +21,37 @@
       and a few other miscs.
   tacoguy7765093:
   - maptweak: Botany fridges are now semi-persistent, have fun farming!
+2023-10-05:
+  tacoguy7765093:
+  - bugfix: Fixes some guns appearing invisible
+2023-10-12:
+  Darlantanis:
+  - rscadd: Reduces codex memory usage, also fixing a memory leak.
+  - rscadd: Fixes bug with "go back" button in codexes.
+  - rscadd: Adds a cooking codex which algorithmically documents all cooking recipes.
+  - rscadd: Adds .dmi for new manual. Doesn't actually make new sprites.
+  - rscadd: Doubles cooking burn time.
+  TheCaramelion:
+  - rscadd: Colours for each department
+  - qol: Removed random colours for junk mail
+  - qol: Bigger money quantities are a little bit more rare now
+  Verkister:
+  - bugfix: Fixed special clicks not working for player-controlled swoopies while
+      vac is powered.
+  - bugfix: Fixed synth metabolism processing toggle.
+  - bugfix: Fixed simplemobs being unable to use handheld ID cards.
+  - bugfix: Fixed ghost body re-entering bug.
+2023-10-17:
+  FluffMedic:
+  - rscadd: Walls that are breakable that have the looks of some shuttle walls
+  Kazzc:
+  - rscadd: Deck 2, finally fixed pipes shuttle lounge area.
+  - rscadd: Deck 2, Fixed some inconsistent tiles.
+  - rscadd: Deck 3, new hidden kitchen.
+  - rscadd: Added a new area for the hidden kitchen.
+2023-10-21:
+  FluffMedic:
+  - rscadd: Eclipse lore and more stuff in the valley
+2023-10-24:
+  FluffMedic:
+  - rscadd: Two minor traits that mess with how much air your character needs to breath.

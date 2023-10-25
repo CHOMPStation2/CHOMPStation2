@@ -351,13 +351,14 @@
 /obj/belly/Initialize()
 	. = ..()
 	//If not, we're probably just in a prefs list or something.
-	if(isliving(loc))
+	if(ismob(loc))
 		owner = loc
 		owner.vore_organs |= src
-		if(speedy_mob_processing) //CHOMPEdit Start
-			START_PROCESSING(SSobj, src)
-		else
-			START_PROCESSING(SSbellies, src)
+		if(isliving(loc))
+			if(speedy_mob_processing) //CHOMPEdit Start
+				START_PROCESSING(SSobj, src)
+			else
+				START_PROCESSING(SSbellies, src)
 
 	create_reagents(300)	//CHOMP So we can have some liquids in bellies
 	flags |= NOREACT		// We dont want bellies to start bubling nonstop due to people mixing when transfering and making different reagents
