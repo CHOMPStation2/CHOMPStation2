@@ -69,6 +69,8 @@
   - rscdel: Removed unused variables
   TheGreatKitsune:
   - rscadd: Verb in IC to clear nutrition as a borg.
+  - rscadd: new verb for shadekin to toggle off nutrition <-> energy convversion
+  - balance: shadekin no longer count as observers for phasing
   Upstream:
   - rscadd: added ability to toggle conveyor speed (slow/fast)
   - bugfix: fixed tool usage on conveyor switches
