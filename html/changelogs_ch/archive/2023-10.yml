@@ -61,6 +61,7 @@
   - balance: changes projectile speed from 0.8 to 3.
   - rscadd: A handful more sprites added for precursor and Aegis rigsuits, well teshari
       sprites.
+  - bugfix: cryogel is makeable
   TheCaramelion:
   - bugfix: Stamps no longer get colours on them.
   - bugfix: NT stamp no longer goes past the edges of the envelopes.
