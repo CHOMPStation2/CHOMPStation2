@@ -368,7 +368,12 @@ var/list/channel_to_radio_key = new
 
 			if(M && src) //If we still exist, when the spawn processes
 				//VOREStation Add - Ghosts don't hear whispers
+<<<<<<< HEAD
 				if(whispering && !(is_preference_enabled(/datum/client_preference/whisubtle_vis) || (isbelly(M.loc) && src == M.loc:owner)) && isobserver(M) && !M.client?.holder)
+=======
+				if(whispering && isobserver(M) && (!M.is_preference_enabled(/datum/client_preference/ghost_see_whisubtle) || \
+				(!is_preference_enabled(/datum/client_preference/whisubtle_vis)  && !M.client?.holder)))
+>>>>>>> 2b32547bc0... Merge pull request #15473 from Runa-Dacino/ghostears
 					M.show_message("<span class='game say'><span class='name'>[src.name]</span> [w_not_heard].</span>", 2)
 					return
 				//VOREStation Add End
