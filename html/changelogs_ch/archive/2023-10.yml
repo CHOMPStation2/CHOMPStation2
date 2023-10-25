@@ -61,6 +61,11 @@
   - balance: changes projectile speed from 0.8 to 3.
   - rscadd: A handful more sprites added for precursor and Aegis rigsuits, well teshari
       sprites.
+  TheCaramelion:
+  - bugfix: Stamps no longer get colours on them.
+  - bugfix: NT stamp no longer goes past the edges of the envelopes.
+  - qol: The mail colours have been revamped
+  - rscdel: Removed unused variables
   Upstream:
   - rscadd: added ability to toggle conveyor speed (slow/fast)
   - bugfix: fixed tool usage on conveyor switches
