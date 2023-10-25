@@ -62,6 +62,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 //CHOMPEDIT: edit the file human/update_icons.dm in the modular_chomp folder as well, if you update these (and clothing/clothing.dm line 789, the hardcoded layer there in /obj/item/clothing/suit/make_worn_icon)
 //Human Overlays Indexes/////////
 #define MUTATIONS_LAYER			1		//Mutations like fat, and lasereyes
+<<<<<<< HEAD
 #define TAIL_LOWER_LAYER		2		//Tail as viewed from the south //CHOMPStation edit - underneath bodyparts
 #define WING_LOWER_LAYER		3		//Wings as viewed from the south //CHOMPStation edit - underneath bodyparts
 #define BODYPARTS_LAYER			4		//Bodyparts layer - CHOMPStation edit
@@ -87,12 +88,40 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 #define EARS_LAYER				24		//Both ear-slot items (combined image)
 #define EYES_LAYER				25		//Mob's eyes (used for glowing eyes)
 #define FACEMASK_LAYER			26		//Mask-slot item
+=======
+#define SKIN_LAYER				2		//Skin things added by a call on species
+#define BLOOD_LAYER				3		//Bloodied hands/feet/anything else
+#define MOB_DAM_LAYER			4		//Injury overlay sprites like open wounds
+#define SURGERY_LAYER			5		//Overlays for open surgical sites
+#define UNDERWEAR_LAYER  		6		//Underwear/bras/etc
+#define TAIL_LOWER_LAYER		7		//Tail as viewed from the south
+#define WING_LOWER_LAYER		8		//Wings as viewed from the south
+#define SHOES_LAYER_ALT			9		//Shoe-slot item (when set to be under uniform via verb)
+#define UNIFORM_LAYER			10		//Uniform-slot item
+#define ID_LAYER				11		//ID-slot item
+#define SHOES_LAYER				12		//Shoe-slot item
+#define GLOVES_LAYER			13		//Glove-slot item
+#define BELT_LAYER				14		//Belt-slot item
+#define SUIT_LAYER				15		//Suit-slot item
+#define TAIL_UPPER_LAYER		16		//Some species have tails to render (As viewed from the N, E, or W)
+#define GLASSES_LAYER			17		//Eye-slot item
+#define BELT_LAYER_ALT			18		//Belt-slot item (when set to be above suit via verb)
+#define SUIT_STORE_LAYER		19		//Suit storage-slot item
+#define BACK_LAYER				20		//Back-slot item
+#define HAIR_LAYER				21		//The human's hair
+#define HAIR_ACCESSORY_LAYER	22		//VOREStation edit. Simply move this up a number if things are added.
+#define EARS_LAYER				23		//Both ear-slot items (combined image)
+#define EYES_LAYER				24		//Mob's eyes (used for glowing eyes)
+#define FACEMASK_LAYER			25		//Mask-slot item
+#define GLASSES_LAYER_ALT		26		//So some glasses can appear on top of hair and things
+>>>>>>> 696b24f98f... Merge pull request #15476 from Very-Soft/backtotether
 #define HEAD_LAYER				27		//Head-slot item
 #define HANDCUFF_LAYER			28		//Handcuffs, if the human is handcuffed, in a secret inv slot
 #define LEGCUFF_LAYER			29		//Same as handcuffs, for legcuffs
 #define L_HAND_LAYER			30		//Left-hand item
 #define R_HAND_LAYER			31		//Right-hand item
 #define WING_LAYER				32		//Wings or protrusions over the suit.
+<<<<<<< HEAD
 #define VORE_BELLY_LAYER		33		//CHOMPStation edit - Move this and everything after up if things are added.
 #define VORE_TAIL_LAYER			34		//CHOMPStation edit - Move this and everything after up if things are added.
 #define TAIL_UPPER_LAYER_ALT	35		//Modified tail-sprite layer. Tend to be larger.
@@ -101,6 +130,14 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 #define MOB_WATER_LAYER			38		//'Mob submerged' overlay layer
 #define TARGETED_LAYER			39		//'Aimed at' overlay layer
 #define TOTAL_LAYERS			39		//CHOMPStation edit. <---- KEEP THIS UPDATED, should always equal the highest number here, used to initialize a list.
+=======
+#define TAIL_UPPER_LAYER_ALT	33		//Modified tail-sprite layer. Tend to be larger.
+#define MODIFIER_EFFECTS_LAYER	34		//Effects drawn by modifiers
+#define FIRE_LAYER				35		//'Mob on fire' overlay layer
+#define MOB_WATER_LAYER			36		//'Mob submerged' overlay layer
+#define TARGETED_LAYER			37		//'Aimed at' overlay layer
+#define TOTAL_LAYERS			37		//VOREStation edit. <---- KEEP THIS UPDATED, should always equal the highest number here, used to initialize a list.
+>>>>>>> 696b24f98f... Merge pull request #15476 from Very-Soft/backtotether
 //////////////////////////////////
 
 //These two are only used for gargoyles currently
@@ -774,13 +811,20 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		return
 
 	remove_layer(GLASSES_LAYER)
+	remove_layer(GLASSES_LAYER_ALT)
 
 	if(!glasses || hide_glasses) // CHOMPEdit - Add "|| hide_glasses" for glasses hiding
 		return //Not wearing glasses, no need to update anything.
 
-	overlays_standing[GLASSES_LAYER] = glasses.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_gloves_str, default_icon = INV_EYES_DEF_ICON, default_layer = GLASSES_LAYER)
+	var/glasses_layer = GLASSES_LAYER
+	if(istype(glasses, /obj/item/clothing/glasses))
+		var/obj/item/clothing/glasses/our_glasses = glasses
+		if(our_glasses.glasses_layer_above)
+			glasses_layer = GLASSES_LAYER_ALT
 
-	apply_layer(GLASSES_LAYER)
+	overlays_standing[glasses_layer] = glasses.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_gloves_str, default_icon = INV_EYES_DEF_ICON, default_layer = glasses_layer)
+
+	apply_layer(glasses_layer)
 
 /mob/living/carbon/human/update_inv_ears()
 	if(QDESTROYING(src))
