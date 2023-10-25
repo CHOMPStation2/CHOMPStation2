@@ -88,8 +88,6 @@
 	cost = 50
 	containertype = /obj/structure/closet/crate/freezer
 	containername = "Chinese takeout crate"
-<<<<<<< HEAD
-=======
 
 /datum/supply_pack/randomised/hospitality/jaffacake
 	contains = list(
@@ -99,4 +97,3 @@
 	cost = 25
 	containertype = /obj/structure/closet/crate/freezer
 	containername = "Desatti jaffa cake crate"
->>>>>>> fa1db41de9... Merge pull request #15462 from SatinIsle/jaffa-cakes

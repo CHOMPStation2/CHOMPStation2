@@ -209,6 +209,10 @@
 	name = "Valley River"
 	icon_state = "yellow"
 
+/area/surface/outside/valley/end
+	name = "Valley's End"
+	icon_state = "red"
+
 // Main mining outpost
 /area/surface/outpost/mining_main
 	name = "North Mining Outpost"
