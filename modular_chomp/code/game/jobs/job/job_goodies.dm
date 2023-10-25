@@ -2,10 +2,19 @@
 /datum/job/
 	var/list/mail_goodies = list()		  // Goodies that can be received via the mail system
 	var/exclusive_mail_goodies = FALSE	  // If this job's mail goodies compete with generic goodies.
+	var/mail_color = "#FFF"
+
+/datum/alt_title/
+	var/list/mail_goodies = list()
+	var/exclusive_mail_goodies = FALSE
 
 // Get mail goodies
 /datum/job/proc/get_mail_goodies(mob/recipient)
 	return mail_goodies
+
+// Get mail colour
+/datum/job/proc/get_mail_color(mob/recipient)
+	return mail_color
 
 // Assistant
 
@@ -20,6 +29,7 @@
 		/obj/item/weapon/cell/device/hyper = 50,
 		/obj/item/weapon/cell/hyper = 50,
 	)
+	mail_color = COMMS_COLOR_ENTERTAIN
 
 // Cargo
 
@@ -36,6 +46,7 @@
 		/obj/item/stack/material/diamond{amount = 3} = 75,
 		/obj/item/toy/plushie/borgplushie/drake/mine = 25,
 	)
+	mail_color = COMMS_COLOR_SUPPLY
 
 /datum/job/cargo_tech
 	mail_goodies = list(
@@ -50,6 +61,7 @@
 		/obj/item/pizzabox/pineapple = 75,
 		/obj/item/weapon/coin/silver = 50,
 	)
+	mail_color = COMMS_COLOR_SUPPLY
 
 /datum/job/mining
 	mail_goodies = list(
@@ -62,6 +74,7 @@
 		/obj/item/weapon/pickaxe/advdrill = 100,
 		/obj/item/weapon/storage/bag/ore/holding = 100
 	)
+	mail_color = COMMS_COLOR_SUPPLY
 
 // Civilian
 
@@ -74,6 +87,7 @@
 		/obj/item/weapon/reagent_containers/chem_disp_cartridge/nothing = 15,
 		/obj/item/weapon/reagent_containers/chem_disp_cartridge/gelatin = 15,
 	)
+	mail_color = COMMS_COLOR_SERVICE
 
 /datum/job/chef
 	mail_goodies = list(
@@ -83,6 +97,7 @@
 		/obj/item/weapon/reagent_containers/food/drinks/soymilk = 200,
 		/obj/item/weapon/reagent_containers/food/snacks/cuttlefish = 200,
 	)
+	mail_color = COMMS_COLOR_SERVICE
 
 /datum/job/hydro
 	mail_goodies = list(
@@ -92,6 +107,7 @@
 		/obj/item/weapon/gun/energy/floragun = 100,
 		/obj/item/weapon/grenade/chem_grenade/antiweed = 50
 	)
+	mail_color = COMMS_COLOR_SERVICE
 
 /datum/job/janitor
 	mail_goodies = list(
@@ -103,6 +119,7 @@
 		/obj/item/weapon/grenade/chem_grenade/cleaner = 100,
 		/obj/item/toy/plushie/borgplushie/drake/jani = 50,
 	)
+	mail_color = COMMS_COLOR_SERVICE
 
 /datum/job/librarian
 	mail_goodies = list(
@@ -116,11 +133,13 @@
 		/obj/item/weapon/pen/fountain3 = 50,
 		/obj/item/weapon/reagent_containers/food/snacks/egg = 10
 	)
+	mail_color = COMMS_COLOR_SERVICE
 
 /datum/job/lawyer
 	mail_goodies = list(
 		/obj/item/weapon/pen/fountain8 = 1000,
 	)
+	mail_color = COMMS_COLOR_SERVICE
 
 /datum/job/chaplain
 	mail_goodies = list(
@@ -128,6 +147,7 @@
 		/obj/item/weapon/storage/fancy/whitecandle_box = 330,
 		/obj/item/weapon/storage/fancy/blackcandle_box = 330
 	)
+	mail_color = COMMS_COLOR_SERVICE
 
 /datum/job/entertainer
 		// Still need to separate the goodies for each title, mimes and clows shouldn't get the same thing.
@@ -139,11 +159,13 @@
 		/obj/random/instrument = 175,
 		/obj/item/weapon/storage/pill_bottle/dice_nerd = 100,
 	)
+	mail_color = COMMS_COLOR_SERVICE
 
 /datum/job/entrepreneur // Same for these guys! What could they get?
 	mail_goodies = list(
 		/obj/item/weapon/reagent_containers/food/drinks/coffee = 100, // For now, they'll get extra on coffee.
 	)
+	mail_color = COMMS_COLOR_SERVICE
 
 // Command
 
@@ -154,12 +176,14 @@
 		/obj/item/weapon/storage/fancy/cigar/havana = 250,
 		/obj/item/weapon/pen/fountain6 = 50,
 	)
+	mail_color = COMMS_COLOR_COMMAND
 
 /datum/job/hop
 	mail_goodies = list( // Currently only 350, less chance for their fance stuff. What could they get?
 		/obj/item/weapon/pen/fountain6 = 250,
 		/obj/item/toy/figure/corgi = 100,
 	)
+	mail_color = COMMS_COLOR_COMMAND
 
 /datum/job/secretary
 	mail_goodies = list( // Wish to be command? You can almost be with these figurines. Chain of command weight!
@@ -171,6 +195,7 @@
 		/obj/item/toy/figure/captain = 50,
 		/obj/item/weapon/pen/fountain6 = 25
 	)
+	mail_color = COMMS_COLOR_COMMAND
 
 // Engineering
 
@@ -185,6 +210,7 @@
 		/obj/item/weapon/pen/fountain6 = 50,
 		/obj/item/toy/plushie/borgplushie/drake/eng = 25,
 	)
+	mail_color = COMMS_COLOR_COMMAND
 
 /datum/job/engineer
 	mail_goodies = list(
@@ -201,6 +227,14 @@
 		/obj/item/weapon/weldingtool/electric = 10,
 		/obj/item/weapon/tool/wrench/power = 10,
 	)
+	mail_color = COMMS_COLOR_ENGINEER
+
+ // Engineer Alt Titles
+
+/datum/alt_title/electrician
+	mail_goodies = list(
+		/obj/item/stack/xenochitin{amount = 10} = 20000
+	)
 
 /datum/job/atmos
 	mail_goodies = list(
@@ -213,6 +247,7 @@
 		/obj/item/weapon/weldingtool/electric = 10,
 		/obj/item/weapon/weldingtool/experimental = 10,
 	)
+	mail_color = COMMS_COLOR_ENGINEER
 
 // Exploration
 
@@ -223,6 +258,7 @@
 		/obj/item/weapon/storage/mre/menu2 = 150,
 		/obj/item/device/flashlight/slime = 50,
 	)
+	mail_color = "#274d0a"
 
 /datum/job/pilot
 	mail_goodies = list(
@@ -235,12 +271,14 @@
 		/obj/item/weapon/storage/firstaid/adv = 10,
 		/obj/item/weapon/storage/firstaid/fire = 10,
 	)
+	mail_color = "#274d0a"
 
 /datum/job/explorer
 	mail_goodies = list(
 		/obj/item/weapon/storage/mre/menu2 = 850,
 		/obj/item/device/binoculars/spyglass = 150,
 	)
+	mail_color = "#274d0a"
 
 /datum/job/sar
 	mail_goodies = list(
@@ -251,7 +289,9 @@
 		/obj/item/weapon/storage/firstaid/adv = 10,
 		/obj/item/weapon/storage/firstaid/fire = 10,
 	)
+	mail_color = "#274d0a"
 
+// Medical
 /datum/job/cmo
 	mail_goodies = list(
 		/obj/item/device/healthanalyzer/advanced = 250,
@@ -265,6 +305,7 @@
 		/obj/item/weapon/reagent_containers/pill/myelamine = 20,
 		/obj/item/toy/plushie/borgplushie/medihound = 20,
 	)
+	mail_color = COMMS_COLOR_COMMAND
 
 /datum/job/doctor
 	mail_goodies = list(
@@ -278,6 +319,7 @@
 		/obj/item/weapon/storage/firstaid/experimental = 40,
 		/obj/item/weapon/reagent_containers/pill/myelamine = 10
 	)
+	mail_color = COMMS_COLOR_MEDICAL
 
 /datum/job/chemist
 	mail_goodies = list(
@@ -288,6 +330,7 @@
 		/obj/item/stack/material/phoron{amount = 5} = 125,
 		/obj/item/weapon/reagent_containers/pill/healing_nanites = 150
 	)
+	mail_color = COMMS_COLOR_MEDICAL
 
 /datum/job/psychiatrist
 	mail_goodies = list(
@@ -298,6 +341,7 @@
 		/obj/item/toy/plushie/shark = 75,
 		/obj/item/weapon/storage/pill_bottle/happy = 50,
 	)
+	mail_color = COMMS_COLOR_MEDICAL
 
 /datum/job/paramedic
 	mail_goodies = list(
@@ -312,6 +356,7 @@
 		/obj/item/weapon/storage/firstaid/experimental = 40,
 		/obj/item/weapon/reagent_containers/pill/myelamine = 10
 	)
+	mail_color = COMMS_COLOR_MEDICAL
 
 // Science
 
@@ -329,6 +374,7 @@
 		/obj/item/weapon/stock_parts/scanning_module/hyper = 15,
 		/obj/item/weapon/stock_parts/micro_laser/hyper = 15
 	)
+	mail_color = COMMS_COLOR_COMMAND
 
 /datum/job/scientist
 	mail_goodies = list(
@@ -349,6 +395,7 @@
 		/obj/item/weapon/stock_parts/scanning_module/phasic = 5,
 		/obj/item/weapon/stock_parts/micro_laser/ultra = 5
 	)
+	mail_color = COMMS_COLOR_SCIENCE
 
 /datum/job/xenobiologist
 	mail_goodies = list(
@@ -356,6 +403,7 @@
 		/obj/item/clothing/head/helmet = 100,
 		/obj/item/weapon/melee/baton/slime = 100,
 	)
+	mail_color = COMMS_COLOR_SCIENCE
 
 /datum/job/roboticist
 	mail_goodies = list(
@@ -377,6 +425,7 @@
 		/obj/item/weapon/weldingtool/electric = 10,
 		/obj/item/weapon/weldingtool/experimental = 10,
 	)
+	mail_color = COMMS_COLOR_SCIENCE
 
 /datum/job/xenobotanist
 	mail_goodies = list(
@@ -386,6 +435,7 @@
 		/obj/item/weapon/gun/energy/floragun = 100,
 		/obj/item/weapon/grenade/chem_grenade/antiweed = 50
 	)
+	mail_color = COMMS_COLOR_SCIENCE
 
 // Security
 
@@ -403,6 +453,7 @@
 		/obj/item/ammo_magazine/m9mmt = 50,
 		/obj/item/toy/plushie/borgplushie/drake/sec = 10
 	)
+	mail_color = COMMS_COLOR_COMMAND
 
 /datum/job/warden
 	mail_goodies = list(
@@ -416,6 +467,7 @@
 		/obj/item/ammo_magazine/m45 = 20,
 		/obj/item/ammo_magazine/m9mmt = 20,
 	)
+	mail_color = COMMS_COLOR_SECURITY
 
 /datum/job/detective
 	mail_goodies = list(
@@ -435,6 +487,7 @@
 		/obj/item/clothing/mask/smokable/cigarette/cigar/cohiba = 10,
 		/obj/item/clothing/mask/smokable/cigarette/cigar/havana = 10
 	)
+	mail_color = COMMS_COLOR_SECURITY
 
 /datum/job/officer
 	mail_goodies = list(
@@ -451,3 +504,4 @@
 		/obj/item/ammo_magazine/m45/rubber = 25,
 		/obj/item/ammo_magazine/m45/flash = 25,
 	)
+	mail_color = COMMS_COLOR_SECURITY
