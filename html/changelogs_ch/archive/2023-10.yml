@@ -58,3 +58,6 @@
 2023-10-25:
   FluffMedic:
   - bugfix: event spiders deleting themselves
+  Upstream:
+  - rscadd: added ability to toggle conveyor speed (slow/fast)
+  - bugfix: fixed tool usage on conveyor switches
