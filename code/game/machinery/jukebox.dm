@@ -22,6 +22,7 @@
 	active_power_usage = 100
 	circuit = /obj/item/weapon/circuitboard/jukebox
 	clicksound = 'sound/machines/buttonbeep.ogg'
+	volume = 0.5 //CHOMPEdit
 
 	// Vars for hacking
 	var/datum/wires/jukebox/wires = null
