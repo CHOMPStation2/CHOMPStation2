@@ -19,6 +19,7 @@
 			"auto-level" = 7,
 			"output destination" = 8
 			)
+	var/vac_owner = null
 
 /obj/item/device/vac_attachment/New()
 	..()
@@ -32,6 +33,9 @@
 		set_input = tgui_input_list(user, "Set your vacuum attachment's power level or output mode.", "Vac Settings", vac_settings)
 	if(set_input)
 		if(set_input == "output destination")
+			if(vac_owner && user != vac_owner)
+				to_chat(user, "<span class='warning'>Only designated owner can change this setting.</span>")
+				return
 			var/set_output = tgui_input_list(user, "Set your vacuum attachment's connection port", "Vac Settings", list("Vore Belly", "Borg Belly", "Trash Bag"))
 			if(set_output)
 				if(set_output == "Borg Belly")
@@ -92,8 +96,10 @@
 				to_chat(user, "<span class='warning'>Ore storage full. Deposit ore contents to a box continue.</span>")
 				return
 	if(isbelly(output_dest))
-		var/obj/belly/B = output_dest
-		if(B.loc != user && !B.loc.Adjacent(user)) //Can still be used as a feeding tube by another adjacent player.
+		var/turf/T = get_turf(output_dest)
+		if(!T.Adjacent(user)) //Can still be used as a feeding tube by another adjacent player.
+			if(vac_owner && user != vac_owner)
+				return
 			vac_power = 0
 			icon_state = "sucker-0"
 			output_dest = null
