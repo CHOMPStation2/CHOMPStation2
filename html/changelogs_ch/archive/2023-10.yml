@@ -59,6 +59,8 @@
   FluffMedic:
   - bugfix: event spiders deleting themselves
   - balance: changes projectile speed from 0.8 to 3.
+  - rscadd: A handful more sprites added for precursor and Aegis rigsuits, well teshari
+      sprites.
   Upstream:
   - rscadd: added ability to toggle conveyor speed (slow/fast)
   - bugfix: fixed tool usage on conveyor switches
