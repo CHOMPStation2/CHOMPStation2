@@ -2683,10 +2683,7 @@ End CHOMP Removal*/
 /obj/item/clothing/suit/storage/toggle/labcoat/fluff/parrizjacket
 	name = "pink crop bomber"
 	desc = "A pink crop bomber jacket that is just barely able to zip up at the front. It has a small Virgo Orbital Research Establishment patch on each shoulder."
-<<<<<<< HEAD
-	icon_state = "parriz_jacket" */ //Chomp REMOVE END
-=======
-	icon_state = "parriz_jacket"
+	icon_state = "parriz_jacket" 
 
 //verysoft: Casey Brown
 /obj/item/clothing/glasses/big_round
@@ -2696,5 +2693,4 @@ End CHOMP Removal*/
 	icon_override = 'icons/inventory/eyes/mob_vr.dmi'
 	icon_state = "bigroundglasses"
 	slot_flags = SLOT_EYES | SLOT_EARS
-	glasses_layer_above = TRUE
->>>>>>> 696b24f98f... Merge pull request #15476 from Very-Soft/backtotether
+	glasses_layer_above = TRUE */ //Chomp REMOVE END
