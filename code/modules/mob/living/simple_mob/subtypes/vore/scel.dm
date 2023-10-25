@@ -71,7 +71,7 @@
 	vore_escape_chance = 5
 	vore_pounce_chance = 100
 	vore_active = 1
-	vore_icons = 2
+	vore_icons = 1
 	vore_icons = SA_ICON_LIVING | SA_ICON_REST
 	vore_capacity = 2
 	swallowTime = 50
@@ -89,6 +89,7 @@
 	verbs |= /mob/living/proc/glow_toggle
 	verbs |= /mob/living/proc/glow_color
 	verbs |= /mob/living/proc/long_vore
+	verbs |= /mob/living/proc/target_lunge
 	movement_cooldown = -1
 
 /mob/living/simple_mob/vore/scel/init_vore()
@@ -143,6 +144,8 @@
 
 /mob/living/simple_mob/vore/scel/do_special_attack(atom/A)
 	. = TRUE
+	if(ckey)
+		return
 	if(prob(50))
 		lunge(A)
 	else
@@ -192,7 +195,7 @@
 	name = "Extra-Realspace Fauna - Scel"
 	desc = "Classification: Voidwyrm\
 	<br><br>\
-	Scel, colloquially known as Voidwyrms, are creatures originating from outside of realspace, typically found at extradimensional breaches such as redpsace tears or within redgate locations. \
+	Scel, colloquially known as Voidwyrms, are creatures originating from outside of realspace, typically found at extradimensional breaches such as bluepsace tears. \
 	While they are known to appear in many variants, the serpentine shape with antennae or whiskers is known to be the most common, due to being the closest and most accurate approximation of their natural forms from their home reality. \
 	Scel bodies, contrary to popular belief, are not slime. They are solid matter, but are still incredibly malleable, which they use to 'shapeshift' when desired. The shifting is limited to just their figure. A scel attempting to look human would still have black squishy flesh and glowing eyes and spots for example. \
 	Various other appendages seem to manifest at will, growing out of their body when needed. Tentacles are by-far the most preferred and commonly seen, but hardened legs and even clawed hands have been seen. While able to shapeshift into even human or animal shapes, it is always in shape only, and certain traits are universal. \
