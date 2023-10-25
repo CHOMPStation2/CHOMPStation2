@@ -194,6 +194,18 @@
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
+"sQ" = (
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/structure/table/reinforced,
+/obj/item/weapon/archaeological_find,
+/obj/item/weapon/archaeological_find,
+/obj/random/tool/alien,
+/obj/item/weapon/paper{
+	info = "High volume of precursor artifacts have been located within the surrounding mountain range. Our scouting teams have even engaged with several living precursor remnants, and those armed with similar gear. Causalities have been kept to a minimum,  but this area is full of hostiles. We had a mass firefight with a group of invaders, several seeming to return from the death, just within the last week. We are making a request to the Head Admiral to gain access to one mecha unit.";
+	name = "Status Report"
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/submap/eclipsedigsight)
 "th" = (
 /obj/machinery/power/apc{
 	pixel_y = -24
@@ -450,6 +462,10 @@
 /obj/machinery/light,
 /mob/living/simple_mob/humanoid/eclipse/lunar/pummler,
 /turf/simulated/floor/reinforced,
+/area/submap/eclipsedigsight)
+"OT" = (
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/outdoors/dirt,
 /area/submap/eclipsedigsight)
 "Pb" = (
 /obj/effect/floor_decal/borderfloorwhite{
@@ -1354,7 +1370,7 @@ YH
 pW
 pW
 pW
-pW
+OT
 mm
 sH
 sH
@@ -1527,7 +1543,7 @@ Zo
 sH
 rk
 sH
-Zv
+sQ
 mm
 pW
 pW
@@ -1720,8 +1736,8 @@ Qb
 lF
 pW
 pW
-Qb
-lF
+Dq
+pW
 pW
 Xx
 wm

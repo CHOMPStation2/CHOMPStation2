@@ -172,6 +172,7 @@ but they don't actually change anything about the load order
 	seed_submaps(list(Z_LEVEL_SURFACE_WILD), 240, /area/surface/outside/wilderness/deep, /datum/map_template/surface/wilderness/deep)  //CHOMPEdit bumped up from 60 to 150
 	seed_submaps(list(Z_LEVEL_SURFACE_VALLEY), 200, /area/surface/outside/valley/walls, /datum/map_template/surface/valley/walls)
 	seed_submaps(list(Z_LEVEL_SURFACE_VALLEY), 200, /area/surface/outside/valley/inner, /datum/map_template/surface/valley/inner)
+	seed_submaps(list(Z_LEVEL_SURFACE_VALLEY), 200, /area/surface/outside/valley/end, /datum/map_template/surface/valley/end)
 	// If Space submaps are made, add a line to make them here as well.
 
 	// Now for the tunnels. (This decides the load order of ore generation and cave generation. Check Random_Map to see % )

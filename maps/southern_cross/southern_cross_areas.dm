@@ -209,6 +209,10 @@
 	name = "Valley River"
 	icon_state = "yellow"
 
+/area/surface/outside/valley/end
+	name = "Valley's End"
+	icon_state = "red"
+
 // Main mining outpost
 /area/surface/outpost/mining_main
 	name = "North Mining Outpost"
@@ -1346,6 +1350,10 @@ z
 
 /area/maintenance/thirddeck/dormsaft
 	name = "Third Deck Aft Starboard Maintenance"
+	icon_state = "asmaint"
+
+/area/maintenance/thirddeck/hiddenkitchen
+	name = "Third Deck Hidden Kitchen"
 	icon_state = "asmaint"
 
 /area/maintenance/thirddeck/dormsatmos

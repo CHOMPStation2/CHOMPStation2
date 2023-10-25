@@ -59,10 +59,9 @@
 	var/eating_privacy_local = "default"	//Overrides eating_privacy_global if not "default". Determines if attempt/success messages are subtle/loud
 	var/is_feedable = TRUE					// If this belly shows up in belly selections for others. //CHOMPAdd
 	var/silicon_belly_overlay_preference = "Sleeper" //Selects between placing belly overlay in sleeper or normal vore mode. Exclusive
-	var/visible_belly_minimum_prey = 1 //What LAZYLEN(vore_selected.contents) we require to show the belly. Customizable
-	var/overlay_min_prey_size	= 0 	//Minimum prey size for belly overlay to show. 0 to disable
-	var/override_min_prey_size = FALSE	//If true, exceeding override prey number will override minimum size requirements
-	var/override_min_prey_num	= 1		//We check belly contents against this to override min size
+	var/belly_mob_mult = 1		//Multiplier for how filling mob types are in borg bellies
+	var/belly_item_mult = 1 	//Multiplier for how filling items are in borg borg bellies. Items are also weighted on item size
+	var/belly_overall_mult = 1	//Multiplier applied ontop of any other specific multipliers
 
 	// Generally just used by AI
 	var/autotransferchance = 0 				// % Chance of prey being autotransferred to transfer location
@@ -337,10 +336,9 @@
 	"save_digest_mode",
 	"eating_privacy_local",
 	"silicon_belly_overlay_preference",
-	"visible_belly_minimum_prey",
-	"overlay_min_prey_size",
-	"override_min_prey_size",
-	"override_min_prey_num",
+	"belly_mob_mult",
+	"belly_item_mult",
+	"belly_overall_mult",
 	)
 
 	if (save_digest_mode == 1)
@@ -351,13 +349,14 @@
 /obj/belly/Initialize()
 	. = ..()
 	//If not, we're probably just in a prefs list or something.
-	if(isliving(loc))
+	if(ismob(loc))
 		owner = loc
 		owner.vore_organs |= src
-		if(speedy_mob_processing) //CHOMPEdit Start
-			START_PROCESSING(SSobj, src)
-		else
-			START_PROCESSING(SSbellies, src)
+		if(isliving(loc))
+			if(speedy_mob_processing) //CHOMPEdit Start
+				START_PROCESSING(SSobj, src)
+			else
+				START_PROCESSING(SSbellies, src)
 
 	create_reagents(300)	//CHOMP So we can have some liquids in bellies
 	flags |= NOREACT		// We dont want bellies to start bubling nonstop due to people mixing when transfering and making different reagents
@@ -1948,10 +1947,9 @@
 	dupe.save_digest_mode = save_digest_mode
 	dupe.eating_privacy_local = eating_privacy_local
 	dupe.silicon_belly_overlay_preference = silicon_belly_overlay_preference
-	dupe.visible_belly_minimum_prey	= visible_belly_minimum_prey
-	dupe.overlay_min_prey_size	= overlay_min_prey_size
-	dupe.override_min_prey_size = override_min_prey_size
-	dupe.override_min_prey_num	= override_min_prey_num
+	dupe.belly_mob_mult = belly_mob_mult
+	dupe.belly_item_mult = belly_item_mult
+	dupe.belly_overall_mult	= belly_overall_mult
 
 	//// Object-holding variables
 	//struggle_messages_outside - strings
