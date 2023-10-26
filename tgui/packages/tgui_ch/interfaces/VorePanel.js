@@ -1603,7 +1603,7 @@ const VoreSelectedBellyInteractions = (props, context) => {
                 }
               />
             </LabeledList.Item>
-            <LabeledList.Item label="Auto-Transfer Primary Whitelist">
+            <LabeledList.Item label="Auto-Transfer Primary Whitelist (Mobs)">
               {(autotransfer.autotransfer_whitelist.length &&
                 autotransfer.autotransfer_whitelist.join(', ')) ||
                 'Everything'}
@@ -1617,7 +1617,21 @@ const VoreSelectedBellyInteractions = (props, context) => {
                 icon="plus"
               />
             </LabeledList.Item>
-            <LabeledList.Item label="Auto-Transfer Primary Blacklist">
+            <LabeledList.Item label="Auto-Transfer Primary Whitelist (Items)">
+              {(autotransfer.autotransfer_whitelist_items.length &&
+                autotransfer.autotransfer_whitelist_items.join(', ')) ||
+                'Everything'}
+              <Button
+                onClick={() =>
+                  act('set_attribute', {
+                    attribute: 'b_autotransfer_whitelist_items',
+                  })
+                }
+                ml={1}
+                icon="plus"
+              />
+            </LabeledList.Item>
+            <LabeledList.Item label="Auto-Transfer Primary Blacklist (Mobs)">
               {(autotransfer.autotransfer_blacklist.length &&
                 autotransfer.autotransfer_blacklist.join(', ')) ||
                 'Nothing'}
@@ -1625,6 +1639,20 @@ const VoreSelectedBellyInteractions = (props, context) => {
                 onClick={() =>
                   act('set_attribute', {
                     attribute: 'b_autotransfer_blacklist',
+                  })
+                }
+                ml={1}
+                icon="plus"
+              />
+            </LabeledList.Item>
+            <LabeledList.Item label="Auto-Transfer Primary Blacklist (Items)">
+              {(autotransfer.autotransfer_blacklist_items.length &&
+                autotransfer.autotransfer_blacklist_items.join(', ')) ||
+                'Nothing'}
+              <Button
+                onClick={() =>
+                  act('set_attribute', {
+                    attribute: 'b_autotransfer_blacklist_items',
                   })
                 }
                 ml={1}
@@ -1656,7 +1684,7 @@ const VoreSelectedBellyInteractions = (props, context) => {
                 }
               />
             </LabeledList.Item>
-            <LabeledList.Item label="Auto-Transfer Secondary Whitelist">
+            <LabeledList.Item label="Auto-Transfer Secondary Whitelist (Mobs)">
               {(autotransfer.autotransfer_secondary_whitelist.length &&
                 autotransfer.autotransfer_secondary_whitelist.join(', ')) ||
                 'Everything'}
@@ -1670,7 +1698,23 @@ const VoreSelectedBellyInteractions = (props, context) => {
                 icon="plus"
               />
             </LabeledList.Item>
-            <LabeledList.Item label="Auto-Transfer Secondary Blacklist">
+            <LabeledList.Item label="Auto-Transfer Secondary Whitelist (Items)">
+              {(autotransfer.autotransfer_secondary_whitelist_items.length &&
+                autotransfer.autotransfer_secondary_whitelist_items.join(
+                  ', '
+                )) ||
+                'Everything'}
+              <Button
+                onClick={() =>
+                  act('set_attribute', {
+                    attribute: 'b_autotransfer_secondary_whitelist_items',
+                  })
+                }
+                ml={1}
+                icon="plus"
+              />
+            </LabeledList.Item>
+            <LabeledList.Item label="Auto-Transfer Secondary Blacklist (Mobs)">
               {(autotransfer.autotransfer_secondary_blacklist.length &&
                 autotransfer.autotransfer_secondary_blacklist.join(', ')) ||
                 'Nothing'}
@@ -1678,6 +1722,22 @@ const VoreSelectedBellyInteractions = (props, context) => {
                 onClick={() =>
                   act('set_attribute', {
                     attribute: 'b_autotransfer_secondary_blacklist',
+                  })
+                }
+                ml={1}
+                icon="plus"
+              />
+            </LabeledList.Item>
+            <LabeledList.Item label="Auto-Transfer Secondary Blacklist (Items)">
+              {(autotransfer.autotransfer_secondary_blacklist_items.length &&
+                autotransfer.autotransfer_secondary_blacklist_items.join(
+                  ', '
+                )) ||
+                'Nothing'}
+              <Button
+                onClick={() =>
+                  act('set_attribute', {
+                    attribute: 'b_autotransfer_secondary_blacklist_items',
                   })
                 }
                 ml={1}
