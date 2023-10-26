@@ -178,6 +178,7 @@
 			belly_data["selective_preference"] = B.selective_preference
 			belly_data["recycling"] = B.recycling
 			belly_data["entrance_logs"] = B.entrance_logs
+			belly_data["item_digest_logs"] = B.item_digest_logs
 
 			// Sounds
 			belly_data["is_wet"] = B.is_wet
