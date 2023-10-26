@@ -68,7 +68,7 @@
 	for(var/thing in orange(7, src))
 		if(istype(thing, /mob/living/carbon/human))
 			var/mob/living/carbon/human/watchers = thing
-			if(watchers in oviewers(7,src))	// And they can see us...
+			if(watchers in oviewers(7,src) && watchers.species != SPECIES_SHADEKIN)	// And they can see us... //CHOMPEDIT - (And aren't themselves a shadekin)
 				if(!(watchers.stat) && !isbelly(watchers.loc) && !istype(watchers.loc, /obj/item/weapon/holder))	// And they are alive and not being held by someone...
 					watcher++	// They are watching us!
 		else if(istype(thing, /mob/living/silicon/robot))
@@ -278,6 +278,25 @@
 	else
 		to_chat(src, "<span class='notice'>Phasing toggled to Gentle. You won't damage lights, but concentrating on that incurs a short stun.</span>")
 		SK.phase_gentle = 1
+//CHOMPEdit End
+
+//CHOMPEdit Start - Toggle to Nutrition conversion
+/mob/living/carbon/human/proc/nutrition_conversion_toggle()
+	set name = "Toggle Energy <-> Nutrition conversions"
+	set desc = "Toggle dark energy and nutrition being converted into each other when full"
+	set category = "Shadekin"
+
+	var/datum/species/shadekin/SK = species
+	if(!istype(SK))
+		to_chat(src, "<span class='warning'>Only a shadekin can use that!</span>")
+		return FALSE
+
+	if(SK.nutrition_energy_conversion)
+		to_chat(src, "<span class='notice'>Nutrition and dark energy conversions disabled.</span>")
+		SK.nutrition_energy_conversion = 0
+	else
+		to_chat(src, "<span class='notice'>Nutrition and dark energy conversions enabled.</span>")
+		SK.nutrition_energy_conversion = 1
 //CHOMPEdit End
 
 //CHOMPEdit Start - Shadekin probably shouldn't be hit while phasing

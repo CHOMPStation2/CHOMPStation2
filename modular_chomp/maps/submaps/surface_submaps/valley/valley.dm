@@ -28,6 +28,12 @@
 #include "teppifarm.dmm"
 #include "vault.dmm"
 #include "xenobio.dmm"
+#include  "xenobioeclipse.dmm"
+#include "warzone.dmm"
+#include "frozenlab.dmm"
+#include "terror.dmm"
+#include "toxiclake.dmm"
+#include "laserpuzzle.dmm"
 #endif
 
 /datum/map_template/surface/valley
@@ -284,4 +290,40 @@
 	name = "Xenobio Lab"
 	desc = "A ruined xenobio"
 	mappath = 'modular_chomp/maps/submaps/surface_submaps/valley/xenobio.dmm'
+	cost = 25
+
+/datum/map_template/surface/valley/inner/xenobioeclipse
+	name = "Eclipse Xenobio Lab"
+	desc = "A slime pit of the eclipse"
+	mappath = 'modular_chomp/maps/submaps/surface_submaps/valley/xenobioeclipse.dmm'
+	cost = 25
+
+/datum/map_template/surface/valley/inner/warzone
+	name = "Warzone"
+	desc = "A radio shack being assualted from all sides"
+	mappath = 'modular_chomp/maps/submaps/surface_submaps/valley/warzone.dmm'
+	cost = 25
+
+/datum/map_template/surface/valley/inner/frozenlab
+	name = "Frozen Lab"
+	desc = "An Eclipse site for creation attempts of cryomancers"
+	mappath = 'modular_chomp/maps/submaps/surface_submaps/valley/frozenlab.dmm'
+	cost = 25
+
+/datum/map_template/surface/valley/wall/terror
+	name = "Terror"
+	desc = "A scouting group of the Eclipse"
+	mappath = 'modular_chomp/maps/submaps/surface_submaps/valley/terror.dmm'
+	cost = 25
+
+/datum/map_template/surface/valley/wall/toxiclake
+	name = "Toxic Lake"
+	desc = "A lake brimming with toxins"
+	mappath = 'modular_chomp/maps/submaps/surface_submaps/valley/toxiclake.dmm'
+	cost = 25
+
+/datum/map_template/surface/valley/wall/laserdome
+	name = "Laser Dome"
+	desc = "A strange building with a simple puzzle of sorts."
+	mappath = 'modular_chomp/maps/submaps/surface_submaps/valley/laserpuzzle.dmm'
 	cost = 25

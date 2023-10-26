@@ -131,6 +131,7 @@
 	var/recycling = FALSE					// Recycling mode.
 	var/entrance_logs = TRUE				// Belly-specific entry message toggle.
 	var/noise_freq = 42500					// Tasty sound prefs.
+	var/item_digest_logs = FALSE			// Chat messages for digested items.
 
 /obj/belly/proc/GetFullnessFromBelly()
 	if(!affects_vore_sprites)
@@ -165,7 +166,7 @@
 			else if(I.w_class == ITEMSIZE_HUGE)
 				fullness_to_add = ITEMSIZE_COST_HUGE
 			else
-				fullness_to_add = ITEMSIZE_COST_NO_CONTAINER
+				fullness_to_add = I.w_class
 			fullness_to_add /= 32
 			belly_fullness += fullness_to_add * item_multiplier
 	belly_fullness *= size_factor_for_sprite
@@ -175,7 +176,7 @@
 ///////////////////// NUTRITION REAGENT PRODUCTION /////////////////
 
 /obj/belly/proc/HandleBellyReagents()
-	if(reagentbellymode && reagent_mode_flags & DM_FLAG_REAGENTSNUTRI && reagents.total_volume < custom_max_volume) //Removed if(reagentbellymode == TRUE) since that's less optimized
+	if(reagentbellymode && reagent_mode_flags & DM_FLAG_REAGENTSNUTRI && reagents.total_volume < custom_max_volume && !isnewplayer(owner)) //Removed if(reagentbellymode == TRUE) since that's less optimized
 		if(isrobot(owner))
 			var/mob/living/silicon/robot/R = owner
 			if(R.cell.charge >= gen_cost*10 && gen_interval >= gen_time)

@@ -173,6 +173,7 @@ type Belly = {
   selective_preference: string;
   recycling: BooleanLike;
   entrance_logs: BooleanLike;
+  item_digest_logs: BooleanLike;
 
   // Messages
   struggle_messages_outside: string[];
@@ -346,6 +347,7 @@ const generateBellyString = (belly: Belly, index: number) => {
     selective_preference,
     recycling,
     entrance_logs,
+    item_digest_logs,
 
     // Messages
     struggle_messages_outside,

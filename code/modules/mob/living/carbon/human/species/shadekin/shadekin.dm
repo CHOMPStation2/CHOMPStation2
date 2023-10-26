@@ -123,6 +123,7 @@
 	var/doing_phase = FALSE //CHOMPEdit - Prevent bugs when spamming phase button
 	var/manual_respite = FALSE //CHOMPEdit - Dark Respite
 	var/respite_activating = FALSE //CHOMPEdit - Dark Respite
+	var/nutrition_energy_conversion = TRUE //CHOMPEdit - Add toggle to nutrition and energy conversions
 
 /datum/species/shadekin/New()
 	..()
@@ -293,6 +294,7 @@
 					arguments = list()
 					)
 	H.verbs += /mob/living/carbon/human/proc/phase_strength_toggle //CHOMPEdit - Add gentle phasing
+	H.verbs += /mob/living/carbon/human/proc/nutrition_conversion_toggle //CHOMPEdit - Add nutrition conversion toggle
 
 /datum/species/shadekin/proc/handle_shade(var/mob/living/carbon/human/H)
 	//CHOMPEdit begin - No energy during dark respite
@@ -333,9 +335,9 @@
 		else
 			dark_gains = energy_light
 		//CHOMPEdit begin - Energy <-> nutrition conversion
-		if(get_energy(H) == 100 && dark_gains > 0)
+		if(nutrition_energy_conversion && get_energy(H) == 100 && dark_gains > 0)
 			H.nutrition += dark_gains * 5 * nutrition_conversion_scaling
-		else if(get_energy(H) < 50 && H.nutrition > 500)
+		else if(nutrition_energy_conversion && get_energy(H) < 50 && H.nutrition > 500)
 			H.nutrition -= nutrition_conversion_scaling * 50
 			dark_gains += nutrition_conversion_scaling
 		//CHOMPEdit end

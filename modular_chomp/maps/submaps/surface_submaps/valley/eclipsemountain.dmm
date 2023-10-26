@@ -216,6 +216,10 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/submap/eclipsemountain)
+"uw" = (
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipsemountain)
 "uz" = (
 /mob/living/simple_mob/humanoid/eclipse/lunar/pummler,
 /turf/simulated/floor/tiled/dark,
@@ -1628,7 +1632,7 @@ Mr
 Yh
 Fg
 ki
-ki
+uw
 qO
 iU
 iU
