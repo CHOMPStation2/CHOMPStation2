@@ -51,7 +51,7 @@
 		to_chat(mob, "<span class='warning'>You could go for a bite of [pick(nearby)]...</span>")
 	else if (prob(20))
 		var/list/item = mob.get_equipped_items()
-		to_chat(mob, "<span class='warning'>[pick(item)] looks oddly [pick("delicious", "tasty", "scrumptious", "inviting")]...")
+		to_chat(mob, "<span class='warning'>[pick(item)] looks oddly [pick("delicious", "tasty", "scrumptious", "inviting")]...</span>")
 
 ///////////////////////////////////////////////
 /////////////////// Stage 2 ///////////////////
