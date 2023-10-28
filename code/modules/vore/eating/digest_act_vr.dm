@@ -4,6 +4,8 @@
 
 // Ye default implementation.
 /obj/item/proc/digest_act(atom/movable/item_storage = null, touchable_amount, splashing = 0) //CHOMPEdit
+	if(!digestable) //CHOMPAdd
+		return FALSE //CHOMPAdd
 	if(istype(item_storage, /obj/item/device/dogborg/sleeper))
 		if(istype(src, /obj/item/device/pda))
 			var/obj/item/device/pda/P = src
@@ -122,6 +124,8 @@
 					reagents.trans_to_holder(H.ingested, (reagents.total_volume), B.nutrition_percent / 100, 0)
 				else if(isliving(B.owner))
 					B.owner.nutrition += 15 * w_class * B.nutrition_percent / 100
+			if(B.item_digest_logs)
+				to_chat(B.owner,"<span class='notice'>[src] was digested inside your [lowertext(B.name)].</span>")
 			qdel(src)//CHOMPEdit End
 	if(g_damage > w_class)
 		return w_class
@@ -198,6 +202,13 @@
 	. = ..()
 
 /obj/item/debris_pack/digested/digest_act(atom/movable/item_storage = null) //CHOMPAdd
+	if(isbelly(item_storage))
+		var/obj/belly/B = item_storage
+		if(istype(B) && B.recycling)
+			return FALSE
+	. = ..()
+
+/obj/item/ore_chunk/digest_act(atom/movable/item_storage = null) //CHOMPAdd
 	if(isbelly(item_storage))
 		var/obj/belly/B = item_storage
 		if(istype(B) && B.recycling)

@@ -178,6 +178,7 @@
 			belly_data["selective_preference"] = B.selective_preference
 			belly_data["recycling"] = B.recycling
 			belly_data["entrance_logs"] = B.entrance_logs
+			belly_data["item_digest_logs"] = B.item_digest_logs
 
 			// Sounds
 			belly_data["is_wet"] = B.is_wet
@@ -259,6 +260,16 @@
 				if(B.autotransfer_blacklist & B.autotransfer_flags_list[flag_name])
 					at_blacklist.Add(flag_name)
 			belly_data["autotransfer_blacklist"] = at_blacklist
+			var/list/at_whitelist_items = list()
+			for(var/flag_name in B.autotransfer_flags_list_items)
+				if(B.autotransfer_whitelist_items & B.autotransfer_flags_list_items[flag_name])
+					at_whitelist_items.Add(flag_name)
+			belly_data["autotransfer_whitelist_items"] = at_whitelist_items
+			var/list/at_blacklist_items = list()
+			for(var/flag_name in B.autotransfer_flags_list_items)
+				if(B.autotransfer_blacklist_items & B.autotransfer_flags_list_items[flag_name])
+					at_blacklist_items.Add(flag_name)
+			belly_data["autotransfer_blacklist_items"] = at_blacklist_items
 			var/list/at_secondary_whitelist = list()
 			for(var/flag_name in B.autotransfer_flags_list)
 				if(B.autotransfer_secondary_whitelist & B.autotransfer_flags_list[flag_name])
@@ -269,6 +280,16 @@
 				if(B.autotransfer_secondary_blacklist & B.autotransfer_flags_list[flag_name])
 					at_secondary_blacklist.Add(flag_name)
 			belly_data["autotransfer_secondary_blacklist"] = at_secondary_blacklist
+			var/list/at_secondary_whitelist_items = list()
+			for(var/flag_name in B.autotransfer_flags_list_items)
+				if(B.autotransfer_secondary_whitelist_items & B.autotransfer_flags_list_items[flag_name])
+					at_secondary_whitelist_items.Add(flag_name)
+			belly_data["autotransfer_secondary_whitelist_items"] = at_secondary_whitelist_items
+			var/list/at_secondary_blacklist_items = list()
+			for(var/flag_name in B.autotransfer_flags_list_items)
+				if(B.autotransfer_secondary_blacklist_items & B.autotransfer_flags_list_items[flag_name])
+					at_secondary_blacklist_items.Add(flag_name)
+			belly_data["autotransfer_secondary_blacklist_items"] = at_secondary_blacklist_items
 
 			// Liquid Options
 			belly_data["show_liquids"] = B.show_liquids
