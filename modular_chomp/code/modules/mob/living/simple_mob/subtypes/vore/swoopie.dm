@@ -35,6 +35,9 @@
 	if(istype(Vac))
 		Vac.output_dest = vore_selected
 		Vac.vac_power = 3
+		Vac.item_state = null
+		Vac.vac_owner = src
+		Vac.icon = 'modular_chomp/icons/mob/vacpack_swoop.dmi'
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/IIsAlly(mob/living/L)
 	. = ..()
@@ -140,7 +143,19 @@
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/Life()
 	. =..()
 	var/turf/T = get_turf(src)
-	if(istype(T) && istype(Vac) && has_AI())
+	if(istype(Vac))
+		if(Vac.loc != src)
+			var/turf/VT = get_turf(Vac)
+			if(!T.Adjacent(VT) || isturf(Vac.loc))
+				if(isliving(Vac.loc))
+					var/mob/living/L = Vac.loc
+					L.remove_from_mob(Vac, src)
+				else
+					Vac.forceMove(src)
+		if(!Vac.output_dest)
+			if(isbelly(vore_selected))
+				Vac.output_dest = vore_selected
+	if(istype(T) && istype(Vac) && has_AI() && Vac.loc == src)
 		if(istype(T, /turf/simulated))
 			var/turf/simulated/S = T
 			if(S.dirt > 10)
@@ -182,4 +197,24 @@
 	if(L.a_intent == I_DISARM && Vac)
 		Vac.attack_self(L)
 		return
+	if(L.a_intent == I_GRAB && Vac && Vac.loc == src)
+		if(L.zone_sel.selecting == BP_HEAD)
+			if(L.put_in_active_hand(Vac))
+				L.visible_message("<span class='warning'>[L] grabs [src] by the neck, brandishing the thing like a regular vacuum cleaner!</span>")
+				L.start_pulling(src)
+				return
 	. = ..()
+
+/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/verb/borrow_vac()
+	set name = "Borrow Vac-Pack"
+	set desc = "Allows adjacent user to borrow Swoopie's Vac-Pack"
+	set category = "Object"
+	set src in oview(1)
+	if(istype(Vac))
+		if(usr != src)
+			usr.put_in_active_hand(Vac)
+		else
+			var/mob/living/L = input("Borrow Vac-Pack for") as null| mob in view(1,usr.loc)
+			if(!L || L == usr)
+				return
+			L.put_in_active_hand(Vac)
