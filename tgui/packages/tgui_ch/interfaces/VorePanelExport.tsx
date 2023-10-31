@@ -281,6 +281,7 @@ type Belly = {
   reagent_mode_flag_list: string[];
   liquid_overlay: BooleanLike;
   max_liquid_level: number;
+  reagent_touches: BooleanLike;
   mush_overlay: BooleanLike;
   mush_color: string;
   mush_alpha: number;
@@ -449,6 +450,7 @@ const generateBellyString = (belly: Belly, index: number) => {
     reagent_mode_flag_list,
     liquid_overlay,
     max_liquid_level,
+    reagent_touches,
     mush_overlay,
     mush_color,
     mush_alpha,

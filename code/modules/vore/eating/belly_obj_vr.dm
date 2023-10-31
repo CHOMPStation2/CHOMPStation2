@@ -274,6 +274,7 @@
 	"reagentcolor",
 	"liquid_overlay",
 	"max_liquid_level",
+	"reagent_touches",
 	"mush_overlay",
 	"mush_color",
 	"mush_alpha",
@@ -1930,6 +1931,7 @@
 	dupe.reagentcolor = reagentcolor
 	dupe.liquid_overlay = liquid_overlay
 	dupe.max_liquid_level = max_liquid_level
+	dupe.reagent_touches = reagent_touches
 	dupe.mush_overlay = mush_overlay
 	dupe.mush_color = mush_color
 	dupe.mush_alpha = mush_alpha

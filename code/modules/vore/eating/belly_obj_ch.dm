@@ -17,6 +17,7 @@
 	var/liquid_overlay = TRUE						//Belly-specific liquid overlay toggle
 	var/max_liquid_level = 100						//Custom max level for liquid overlay
 	var/mush_overlay = FALSE						//Toggle for nutrition mush overlay
+	var/reagent_touches = TRUE						//If reagents touch and interact with things in belly
 	var/mush_color = "#664330"						//Nutrition mush overlay color
 	var/mush_alpha = 255							//Mush overlay transparency.
 	var/max_mush = 500								//How much nutrition for full mush overlay
@@ -193,7 +194,7 @@
 
 /obj/belly/proc/HandleBellyReagentEffects(var/list/touchable_atoms)
 	if(LAZYLEN(contents))
-		if(reagents.total_volume >= 5)
+		if(reagent_touches && reagents.total_volume >= 5)
 			var/affecting_amt = reagents.total_volume / max(LAZYLEN(touchable_atoms), 1)
 			if(affecting_amt > 5)
 				affecting_amt = 5

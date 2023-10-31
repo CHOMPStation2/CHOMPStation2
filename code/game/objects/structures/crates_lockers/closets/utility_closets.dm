@@ -16,7 +16,6 @@
 	name = "emergency closet"
 	desc = "It's a storage unit for emergency breathmasks and O2 tanks."
 	closet_appearance = /decl/closet_appearance/oxygen
-	anchored = 1 //CHOMPADD - No more lockers flying away!
 
 /obj/structure/closet/emcloset/Initialize()
 	switch (pickweight(list("small" = 55, "aid" = 25, "tank" = 10, "both" = 10)))
@@ -60,7 +59,6 @@
 	return ..()
 
 /obj/structure/closet/emcloset/legacy
-	anchored = 1 //CHOMPADD - No more lockers flying away!
 	starts_with = list(
 		/obj/item/weapon/tank/oxygen,
 		/obj/item/clothing/mask/gas)
@@ -72,7 +70,6 @@
 	name = "fire-safety closet"
 	desc = "It's a storage unit for fire-fighting supplies."
 	closet_appearance = /decl/closet_appearance/oxygen/fire
-	anchored = 1 //CHOMPADD - No more lockers flying away!
 
 	starts_with = list(
 		/obj/item/clothing/suit/fire,
