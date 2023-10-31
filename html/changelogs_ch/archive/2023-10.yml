@@ -106,6 +106,27 @@
   - rscadd: Teppi is public use
   - rscadd: Added new plants
   - rscadd: Added a seed to seed vendors
+  ReoDaProtovali:
+  - rscadd: Added spawn message for player swoopies that let them know how to control
+      the suck birb
+  - rscadd: Moved the description part informing the player how to use swoopie's vac
+      pack to a description_info section as well as adding information about how to
+      use the swoopie like a normal vaccum
+  - rscadd: also gave swoopies a muffling belly by default
+  - rscdel: Removed contaminates from swoopie's neck bellies. Their belly is the messy
+      place
+  - qol: made swoopies' integrated vac-pack only trigger while they're on grab intent
+  - balance: rebalanced something
+  - qol: made swoopie's neck bellies not have entrance logs by default. This should
+      reduce message spam when sucking down stuff.
+  - bugfix: Fixed swoopies being able to suck while dead
+  - bugfix: Fixed swoopies AI returning to the mob and being able to vaccum the ground
+      while the player was dead and ghosted (also presumably fixing pure AI swoopies
+      from doing this too)
+  - code_imp: changed swoopies from using speedy_mob_processing to using TURBO MODE
+      belly flags. It does the same thing, but TURBO MODE is ingame accessable without
+      varedit, so I think that's the proper implementation that should be used going
+      forward
   TheCaramelion:
   - rscadd: 3 new stage 1 symptoms, 2 new stage 2 symptoms
   tacoguy7765093:
