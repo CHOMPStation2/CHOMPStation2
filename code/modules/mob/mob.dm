@@ -70,11 +70,7 @@
 	if(stat == UNCONSCIOUS || sleeping > 0)
 		to_chat(src, "<span class='filter_notice'><I>... You can almost hear someone talking ...</I></span>")
 	else
-<<<<<<< HEAD
-		if(client && client.prefs.chat_timestamp) //CHOMPEdit
-=======
 		if(client && client.prefs.chat_timestamp)
->>>>>>> a8009eefa8... Merge pull request #15482 from Heroman3003/clfix
 			msg = replacetext(msg, new/regex("^(<span(?: \[^>]*)?>)(.*</span>)", ""), "$1[time] $2")
 			to_chat(src,msg)
 		else if(teleop)
