@@ -80,6 +80,33 @@
   - bugfix: fixed scel going invisible when they eat more than one prey.
   - bugfix: fixed scel automatically and randomly using special attacks when controlled
       by a player.
+  Verkister:
+  - rscadd: Added vorgan setting for item digestion logs.
+  - bugfix: Fixed bug with affect-worn item digestion with liquids.
+  - rscadd: Adjacent users can now borrow Swoopie's vac tube.
+  - bugfix: Fixed non-swoopie users being able to accidentally link swoopie's vac
+      to their own vorgans.
+  - bugfix: Borrowed vac-packs can now maintain vorgan connection with held/contained
+      vorgan owners.
+  - qol: Jukebox default volume reduced to a more sensible level.
   tacoguy7765093:
   - rscadd: The overmap shuttles now got enough budget to deploy distress beacons
   - rscadd: SMESs on the missing shuttles, no more losing power.
+2023-10-26:
+  Verkister:
+  - rscadd: Added more autotransfer filters.
+  - rscadd: Added a right-click verb to toggle item's digestability.
+  - rscadd: Recycling mode can now churn loose ores into an ore chunk.
+  - bugfix: Fixed a bug with client-less teleop messages breaking chat.
+2023-10-30:
+  TheGreatKitsune:
+  - rscadd: Toggle for liquids automatically applying to prey
+2023-10-31:
+  FluffMedic:
+  - rscadd: Teppi is public use
+  - rscadd: Added new plants
+  - rscadd: Added a seed to seed vendors
+  TheCaramelion:
+  - rscadd: 3 new stage 1 symptoms, 2 new stage 2 symptoms
+  tacoguy7765093:
+  - rscdel: Removed those rusty bolts off oxygen lockers.
