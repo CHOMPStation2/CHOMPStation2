@@ -1,7 +1,7 @@
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie
 	name = "SWOOPIE XL"
 	desc = "A large birdlike robot with thick assets, plump belly, and a long elastic vacuum hose of a neck. Somehow still a cleanbot, even if just for its duties."
-	description_info = "Use DISARM intent to access the integrated Vac-Pack settings.<br>Use GRAB intent to grab the SWOOPIE XL's neck and use it as a vaccum."
+	description_info = "Use DISARM intent to access the integrated Vac-Pack settings.<br>Use GRAB intent while targeting the head damage zone to grab the SWOOPIE XL's neck and use it as a vaccum."
 	icon_state = "swoopie"
 	icon_living = "swoopie"
 	icon_dead = "swoopie_dead"
