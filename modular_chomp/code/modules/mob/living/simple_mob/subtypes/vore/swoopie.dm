@@ -1,3 +1,22 @@
+/datum/category_item/catalogue/technology/drone/corrupt_hound/swoopie // Writing this so that they arnt corrupt hounds! -Reo
+	name = "Drone - SWOOPIE XL"
+	desc = "A large drone that typically wanders about maintenance or other places that are dirty, mindlessly sucking \
+	up everything it deems to be debris, trash or a pest. \
+	It looks like a blue and yellow long-necked bird with a large distinct black, plump belly and flexible neck that \
+	bulges with every object it swoops. \
+	They tend to run on extremely basic AI until proper ones are available to be downloaded from an external, \
+	oddly spooky, provider. \
+	<br><br>\
+	The SWOOPIE's belly and neck are made of a synthetic rubber compound that is durable enough to allow them to pack \
+	away even the most fiesty of pests once they make it past the synthbird's beak, and staring into that beak would allow \
+	one to see far down into the drone, though the frequent curving of the SWOOPIE's neck often makes seeing down \
+	the entire length next to impossible even with a cooperative unit, let alone the passive suction that threatens to \
+	make anything that gets too close vanish into the drone's dangerous depths. SWOOPIE XLs are equipped with powerful \
+	CHURNO-VAC digestive chambers that are able to effectively melt down most anything that gets claimed by their vac-beaks, \
+	indescriminately melting anything that happens to end up in that chamber, it would be a terrible idea to allow yourself \
+	get swooped by one of these drones, unless you want to add to their biofuel reserves."
+	value = CATALOGUER_REWARD_MEDIUM
+
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie
 	name = "SWOOPIE XL"
 	desc = "A large birdlike robot with thick assets, plump belly, and a long elastic vacuum hose of a neck. Somehow still a cleanbot, even if just for its duties."
@@ -168,7 +187,7 @@
 		if(!Vac.output_dest)
 			if(isbelly(vore_selected))
 				Vac.output_dest = vore_selected
-	if(!(src.stat && istype(T) && istype(Vac) && has_AI() && Vac.loc == src))
+	if(!(istype(T) && istype(Vac) && has_AI() && Vac.loc == src) && stat)
 		return
 	if(istype(T, /turf/simulated))
 		var/turf/simulated/S = T
@@ -195,7 +214,7 @@
 	var/list/modifiers = params2list(params)
 	if(modifiers["shift"] || modifiers["ctrl"] || modifiers["middle"] || modifiers["alt"])
 		return ..()
-	if(!stat) //Cant suck if we're dead...
+	if(stat) //Cant suck if we're not able to...
 		return ..()
 	if(istype(Vac) && A.Adjacent(src))
 		face_atom(A)
@@ -212,7 +231,7 @@
 	. = ..()
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/attack_hand(mob/living/L)
-	if(!stat) //Make sure we're alive
+	if(stat) //Make sure we're alive
 		return ..()
 	if(L.a_intent == I_DISARM && Vac)
 		Vac.attack_self(L)
