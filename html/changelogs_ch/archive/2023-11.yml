@@ -1,0 +1,5 @@
+2023-11-01:
+  ReoDaProtovali:
+  - rscadd: SWOOPIE XL catalouge data
+  - bugfix: fixes swoopies checking if they were dead to do stuff when they should've
+      been checking if they were alive
