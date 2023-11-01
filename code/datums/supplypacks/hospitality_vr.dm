@@ -91,9 +91,36 @@
 
 /datum/supply_pack/randomised/hospitality/jaffacake
 	contains = list(
-		/obj/item/weapon/storage/box/jaffacake = 10
+		/obj/item/weapon/storage/box/jaffacake,
+		/obj/item/weapon/storage/box/jaffacake,
+		/obj/item/weapon/storage/box/jaffacake,
+		/obj/item/weapon/storage/box/jaffacake,
+		/obj/item/weapon/storage/box/jaffacake,
+		/obj/item/weapon/storage/box/jaffacake,
+		/obj/item/weapon/storage/box/jaffacake,
+		/obj/item/weapon/storage/box/jaffacake,
+		/obj/item/weapon/storage/box/jaffacake,
+		/obj/item/weapon/storage/box/jaffacake
 		)
 	name = "Desatti jaffa cake crate"
 	cost = 25
 	containertype = /obj/structure/closet/crate/freezer
+<<<<<<< HEAD
 	containername = "Desatti jaffa cake crate"
+=======
+	containername = "Desatti jaffa cake crate"
+
+/datum/supply_pack/randomised/hospitality/sweets
+	num_contained = 5
+	contains = list(
+			/obj/item/weapon/storage/box/jaffacake,
+			/obj/item/weapon/storage/box/winegum,
+			/obj/item/weapon/storage/box/saucer,
+			/obj/item/weapon/storage/box/shrimpsandbananas,
+			/obj/item/weapon/storage/box/rhubarbcustard
+			)
+	name = "Sweets crate"
+	cost = 25
+	containertype = /obj/structure/closet/crate/freezer
+	containername = "Sweets crate"
+>>>>>>> da408ad37e... Merge pull request #15487 from SatinIsle/desatti-foods
