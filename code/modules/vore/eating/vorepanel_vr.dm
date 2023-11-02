@@ -2193,8 +2193,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 							thismuch = thismuch * h.species.digestion_nutrition_modifier
 						l.adjust_nutrition(thismuch)
 					ourtarget.death()		// To make sure all on-death procs get properly called
-					if(ourtarget)
-						b.handle_digestion_death(ourtarget)
+					if(ourtarget) // CHOMPedit start.
+						if(ourtarget.is_preference_enabled(/datum/client_preference/digestion_noises))
+							SEND_SOUND(ourtarget, sound(get_sfx("fancy_death_prey")))
+						b.handle_digestion_death(ourtarget) // CHOMPedit end.
 				if("Absorb")
 					if(tgui_alert(ourtarget, "\The [usr] is attempting to instantly absorb you. Is this something you are okay with happening to you?","Instant Absorb", list("No", "Yes")) != "Yes")
 						to_chat(usr, "<span class= 'warning'>\The [ourtarget] declined your absorb attempt.</span>")
