@@ -69,16 +69,16 @@
 	name = "Kitchen Hallways"
 
 /area/awaymission/mol/kitchen/chamberA
-	name = "Plant Zone"
+	name = "Delta Kitchen Chamber A"
 
 /area/awaymission/mol/kitchen/chamberB
-	name = "Butchering Zone"
+	name = "Delta Kitchen Chamber B"
 
 /area/awaymission/mol/kitchen/chamberC
-	name = "Cooking Zone"
+	name = "Delta Kitchen Chamber C"
 
 /area/awaymission/mol/kitchen/ChamberD
-	name = "Dining Hall"
+	name = "Delta Kitchen Chamber D"
 
 /area/awaymission/mol/mines
 	name = "Delta Mines"
@@ -106,6 +106,12 @@
 
 /area/awaymission/mol/hardlightentrance
 	name = "Hardlight Zone Entrance"
+
+/area/awaymission/mol/dorms
+	name = "Delta Lab Dorms"
+
+/area/awaymission/mol/headdorms
+	name = "Delta Lab Head Dorms"
 
 /obj/structure/prop/blackbox/maddnesslab
 	catalogue_data = list(/datum/category_item/catalogue/information/blackbox/maddnesslab)

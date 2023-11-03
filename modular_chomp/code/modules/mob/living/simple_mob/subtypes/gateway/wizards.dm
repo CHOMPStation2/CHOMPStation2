@@ -18,8 +18,8 @@
 
 	faction = "vr"
 
-	maxHealth = 50
-	health = 50
+	maxHealth = 40
+	health = 40
 	movement_cooldown = 1
 	unsuitable_atoms_damage = 0
 	projectiletype = /obj/item/projectile/energy/homing_bolt/wizard
@@ -94,15 +94,15 @@
 	name = "vr creation"
 	projectiletype = null
 
-	maxHealth = 250
-	health = 250
+	maxHealth = 70
+	health = 70
 	movement_cooldown = 4
 	unsuitable_atoms_damage = 0
 	projectiletype = null
 	melee_attack_delay = 8 SECOND
 
-	melee_damage_lower = 0
-	melee_damage_upper = 0
+	melee_damage_lower = 30
+	melee_damage_upper = 30
 
 /mob/living/simple_mob/vr/doomknight/apply_melee_effects(var/atom/A) //If you get hit by this slow thing, you have 5 minuites to live.
 	if(isliving(A))

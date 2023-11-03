@@ -11,8 +11,8 @@
 	icon_state = "imperion"
 	icon_living = "imperion"
 	desc = "A strange precursor mecha"
-	maxHealth = 200
-	health = 200
+	maxHealth = 300
+	health = 300
 	movement_cooldown = -1
 	unsuitable_atoms_damage = 0
 	projectiletype = /obj/item/projectile/energy/gaussrifle
@@ -117,7 +117,7 @@
 	playsound(src, 'sound/effects/turret/move2.wav', 50, 1)
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase1/proc/launch_rockets(atom/target)
-	var/obj/item/projectile/P = new /obj/item/projectile/energy/dart(get_turf(src))
+	var/obj/item/projectile/P = new /obj/item/projectile/energy/excavate(get_turf(src))
 	P.launch_projectile(target, BP_TORSO, src)
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase1/proc/launch_microsingularity(atom/target)
@@ -169,7 +169,7 @@
 
 	special_attack_min_range = 3
 	special_attack_max_range = 14 //this thing will not let you recover during phase 3. It blitz you down, or you blitz it down.
-	special_attack_cooldown = 5 SECONDS
+	special_attack_cooldown = 2 SECONDS
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase3/do_special_attack(atom/A)
 	// Teleport attack.
