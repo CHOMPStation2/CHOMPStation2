@@ -6,17 +6,11 @@
 	melee_damage_lower = 15
 	melee_damage_upper = 22
 	attack_armor_pen = 50
-	var/grenade_type = /obj/item/weapon/grenade/spawnergrenade/riftwallers
-	var/grenade_timer = 5
 	heat_resist = 1
 	cold_resist = 1
 	movement_cooldown = -1.5
-	var/leap_warmup = 2 SECOND
-	var/leap_sound = 'sound/weapons/gauss_shoot.ogg'
-	var/jaunt_warning = 1.0 SECONDS	// How long the jaunt telegraphing is.
-	var/jaunt_tile_speed = 15		// How long to wait between each tile. Higher numbers result in an easier to dodge tunnel attack.
 	projectiletype = /obj/item/projectile/energy/plasma/vepr/inversion
-	melee_attack_delay = 12 SECOND
+	melee_attack_delay = 4 SECOND
 	ranged_attack_delay = 1.5 SECONDS
 	special_attack_min_range = 1
 	special_attack_max_range = 7
@@ -75,190 +69,53 @@
 			launch_microsingularity(A)
 
 /mob/living/simple_mob/humanoid/cultist/magus/rift/proc/launch_microsingularity(atom/target)
-	set waitfor = FALSE
-
-	var/obj/item/weapon/grenade/G = new grenade_type(get_turf(src))
-	if(istype(G))
-		G.throw_at(G.throw_range, G.throw_speed, src)
-		G.det_time = grenade_timer	//CHOMPEdit
-		G.activate(src)	//CHOMPEdit
-
-	set_AI_busy(FALSE)
+	new /mob/living/simple_mob/vore/demonAI (src.loc)
 
 /mob/living/simple_mob/humanoid/cultist/magus/rift/proc/electric_defense(atom/target)
-	set waitfor = FALSE
-	set_AI_busy(TRUE)
+	var/obj/item/projectile/P = new /obj/item/projectile/energy/fireball(get_turf(src))
+	P.launch_projectile(target, BP_TORSO, src)
 
-	// Save where we're gonna go soon.
-	var/turf/destination = get_turf(target)
-	var/turf/starting_turf = get_turf(src)
-
-	// Telegraph to give a small window to dodge if really close.
-	flick("phase_shift",target)
-	icon_state = "bloodin"
-	sleep(jaunt_warning) // For the telegraphing.
-
-	// Do the dig!
-	visible_message(span("danger","\The [src] vanishes into thin air \the [target]!"))
-	flick("phase_shift",target)
-	icon_state = "phase_shift"
-
-	if(handle_jaunt(destination) == FALSE)
-		set_AI_busy(FALSE)
-		flick("phase_shift2",target)
-		icon_state = "bloodout"
+/mob/living/simple_mob/humanoid/cultist/magus/rift/proc/launch_rockets(atom/target)
+	if(!target)
+		to_chat(src, span("warning", "There's nothing to teleport to."))
 		return FALSE
 
-	// Did we make it?
-	if(!(src in destination))
-		set_AI_busy(FALSE)
-		icon_state = "bloodout"
-		flick("phase_shift2",target)
-		return FALSE
+	var/list/nearby_things = range(1, target)
+	var/list/valid_turfs = list()
 
-	var/overshoot = TRUE
-
-	// Test if something is at destination.
-	for(var/mob/living/L in destination)
-		if(L == src)
+	// All this work to just go to a non-dense tile.
+	for(var/turf/potential_turf in nearby_things)
+		var/valid_turf = TRUE
+		if(potential_turf.density)
 			continue
+		for(var/atom/movable/AM in potential_turf)
+			if(AM.density)
+				valid_turf = FALSE
+		if(valid_turf)
+			valid_turfs.Add(potential_turf)
 
-		visible_message(span("danger","\The [src] appears in a flurry of slashes \the [L]!"))
-		playsound(L, 'sound/weapons/heavysmash.ogg', 75, 1)
-		L.Weaken(3)
-		overshoot = FALSE
-
-	if(!overshoot) // We hit the target, or something, at destination, so we're done.
-		set_AI_busy(FALSE)
-		icon_state = "bloodout"
-		flick("phase_shift2",target)
-		return TRUE
-
-	// Otherwise we need to keep going.
-	to_chat(src, span("warning", "You overshoot your target!"))
-	playsound(src, 'sound/weapons/punchmiss.ogg', 75, 1)
-	var/dir_to_go = get_dir(starting_turf, destination)
-	for(var/i = 1 to rand(2, 4))
-		destination = get_step(destination, dir_to_go)
-
-	if(handle_jaunt(destination) == FALSE)
-		set_AI_busy(FALSE)
-		icon_state = "bloodout"
-		flick("phase_shift2",target)
+	if(!(valid_turfs.len))
+		to_chat(src, span("warning", "There wasn't an unoccupied spot to teleport to."))
 		return FALSE
 
-	set_AI_busy(FALSE)
-	icon_state = "bloodout"
-	flick("phase_shift2",target)
-	return FALSE
+	var/turf/target_turf = pick(valid_turfs)
+	var/turf/T = get_turf(src)
+
+	var/datum/effect/effect/system/spark_spread/s1 = new /datum/effect/effect/system/smoke_spread
+	s1.set_up(5, 1, T)
+	var/datum/effect/effect/system/spark_spread/s2 = new /datum/effect/effect/system/smoke_spread
+	s2.set_up(5, 1, target_turf)
 
 
+	T.visible_message(span("notice", "\The [src] vanishes!"))
+	s1.start()
 
-/mob/living/simple_mob/humanoid/cultist/magus/rift/proc/launch_rockets(atom/A)
-	set waitfor = FALSE
-	set_AI_busy(TRUE)
+	forceMove(target_turf)
+	playsound(target_turf, 'sound/effects/phasein.ogg', 50, 1)
+	to_chat(src, span("notice", "You teleport to \the [target_turf]."))
 
-	// Save where we're gonna go soon.
-	var/turf/destination = get_turf(A)
-	var/turf/starting_turf = get_turf(src)
-
-	// Telegraph to give a small window to dodge if really close.
-	flick("phase_shift",A)
-	icon_state = "bloodin"
-	sleep(jaunt_warning) // For the telegraphing.
-
-	// Do the dig!
-	visible_message(span("danger","\The [src] vanishes into thin air \the [A]!"))
-	flick("phase_shift",A)
-	icon_state = "bloodin"
-
-	if(handle_jaunt(destination) == FALSE)
-		set_AI_busy(FALSE)
-		flick("phase_shift2",A)
-		icon_state = "bloodout"
-		return FALSE
-
-	// Did we make it?
-	if(!(src in destination))
-		set_AI_busy(FALSE)
-		icon_state = "bloodout"
-		flick("phase_shift2",A)
-		return FALSE
-
-	var/overshoot = TRUE
-
-	// Test if something is at destination.
-	for(var/mob/living/L in destination)
-		if(L == src)
-			continue
-
-		visible_message(span("danger","\The [src] appears in a flurry of slashes \the [L]!"))
-		playsound(L, 'sound/weapons/heavysmash.ogg', 75, 1)
-		L.Weaken(3)
-		overshoot = FALSE
-
-	if(!overshoot) // We hit the target, or something, at destination, so we're done.
-		set_AI_busy(FALSE)
-		icon_state = "phase_shift2"
-		flick("phase_shift2",A)
-		return TRUE
-
-	// Otherwise we need to keep going.
-	to_chat(src, span("warning", "You overshoot your target!"))
-	playsound(src, 'sound/weapons/punchmiss.ogg', 75, 1)
-	var/dir_to_go = get_dir(starting_turf, destination)
-	for(var/i = 1 to rand(2, 4))
-		destination = get_step(destination, dir_to_go)
-
-	if(handle_jaunt(destination) == FALSE)
-		set_AI_busy(FALSE)
-		icon_state = "bloodout"
-		flick("phase_shift2",A)
-		return FALSE
-
-	set_AI_busy(FALSE)
-	icon_state = "bloodout"
-	flick("phase_shift2",A)
-	return FALSE
-
-// Does the jaunt movement
-/mob/living/simple_mob/humanoid/cultist/magus/rift/proc/handle_jaunt(turf/destination)
-	var/turf/T = get_turf(src) // Hold our current tile.
-
-	// Regular tunnel loop.
-	for(var/i = 1 to get_dist(src, destination))
-		if(stat)
-			return FALSE // We died or got knocked out on the way.
-		if(loc == destination)
-			break // We somehow got there early.
-
-		// Update T.
-		T = get_step(src, get_dir(src, destination))
-		if(T.check_density(ignore_mobs = TRUE))
-			to_chat(src, span("critical", "You hit something really solid!"))
-			playsound(src, "punch", 75, 1)
-			Weaken(5)
-			add_modifier(/datum/modifier/tunneler_vulnerable, 10 SECONDS)
-			return FALSE // Hit a wall.
-
-		// Get into the tile.
-		forceMove(T)
-
-
-/mob/living/simple_mob/humanoid/cultist/magus/rift/should_special_attack(atom/A)
-	// Make sure its possible for the wraith to reach the target so it doesn't try to go through a window.
-	var/turf/destination = get_turf(A)
-	var/turf/starting_turf = get_turf(src)
-	var/turf/T = starting_turf
-	for(var/i = 1 to get_dist(starting_turf, destination))
-		if(T == destination)
-			break
-
-		T = get_step(T, get_dir(T, destination))
-		if(T.check_density(ignore_mobs = TRUE))
-			return FALSE
-	return T == destination
-
+	target_turf.visible_message(span("warning", "\The [src] appears!"))
+	s2.start()
 
 /obj/item/weapon/grenade/spawnergrenade/riftwallers
 	name = "manhack delivery grenade"
