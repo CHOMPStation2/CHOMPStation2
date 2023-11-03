@@ -130,3 +130,8 @@
 
 /area/security/nuke_storage
 	flags = PHASE_SHIELDED
+
+/area/quartermaster/disposal_sort
+	name = "\improper Cargo - Disposals Sorting"
+	icon_state = "quart"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT

@@ -23278,9 +23278,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/security/warden)
-"bud" = (
-/turf/simulated/wall,
-/area/quartermaster/delivery)
 "buf" = (
 /obj/machinery/computer/supplycomp/control{
 	dir = 8
@@ -47103,7 +47100,7 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
-/area/quartermaster/delivery)
+/area/quartermaster/disposal_sort)
 "eIu" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -47694,7 +47691,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/quartermaster/delivery)
+/area/quartermaster/disposal_sort)
 "eXs" = (
 /obj/structure/sink{
 	dir = 4;
@@ -47922,7 +47919,7 @@
 	pixel_x = -32
 	},
 /turf/simulated/floor/plating,
-/area/quartermaster/delivery)
+/area/quartermaster/disposal_sort)
 "fdK" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -48514,7 +48511,7 @@
 "fub" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/wall,
-/area/quartermaster/delivery)
+/area/quartermaster/disposal_sort)
 "fur" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -48953,7 +48950,7 @@
 	pixel_x = -32
 	},
 /turf/simulated/floor/plating,
-/area/quartermaster/delivery)
+/area/quartermaster/disposal_sort)
 "fFv" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance{
@@ -49815,13 +49812,8 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
-/obj/machinery/light,
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -24
-	},
 /turf/simulated/floor/tiled,
-/area/quartermaster/delivery)
+/area/quartermaster/disposal_sort)
 "gcB" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -50413,8 +50405,11 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/landmark/start{
+	name = "Cargo Technician"
+	},
 /turf/simulated/floor/tiled,
-/area/quartermaster/delivery)
+/area/quartermaster/disposal_sort)
 "gqm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -52683,7 +52678,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled,
-/area/quartermaster/delivery)
+/area/quartermaster/disposal_sort)
 "hEr" = (
 /obj/structure/table/standard,
 /obj/random/tech_supply,
@@ -54033,8 +54028,8 @@
 	},
 /obj/structure/disposalpipe/sortjunction{
 	dir = 8;
-	name = "Sorting Office";
-	sortType = "Sorting Office"
+	name = "Disposal Sorting";
+	sortType = "Disposal Sorting"
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
@@ -54624,6 +54619,9 @@
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/warehouse)
+"iEa" = (
+/turf/simulated/wall,
+/area/quartermaster/disposal_sort)
 "iEe" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -55054,11 +55052,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 8
-	},
 /turf/simulated/floor/tiled,
-/area/quartermaster/delivery)
+/area/quartermaster/disposal_sort)
 "iOI" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
@@ -55599,7 +55594,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/quartermaster/delivery)
+/area/quartermaster/disposal_sort)
 "jci" = (
 /obj/item/device/t_scanner,
 /obj/item/weapon/storage/box/lights/mixed,
@@ -56755,7 +56750,7 @@
 	dir = 4
 	},
 /turf/simulated/wall,
-/area/quartermaster/delivery)
+/area/quartermaster/disposal_sort)
 "jGV" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4
@@ -56972,7 +56967,7 @@
 	pixel_x = -32
 	},
 /turf/simulated/floor/plating,
-/area/quartermaster/delivery)
+/area/quartermaster/disposal_sort)
 "jMn" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external{
@@ -58495,7 +58490,7 @@
 /obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/dark,
-/area/quartermaster/delivery)
+/area/quartermaster/disposal_sort)
 "kDK" = (
 /obj/structure/table/glass,
 /obj/item/weapon/reagent_containers/blood/AMinus,
@@ -58583,9 +58578,6 @@
 /area/crew_quarters/seconddeck/artgallery)
 "kFY" = (
 /obj/structure/table/steel,
-/obj/item/weapon/wrapping_paper,
-/obj/item/weapon/wrapping_paper,
-/obj/item/weapon/wrapping_paper,
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
@@ -58598,20 +58590,15 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
-/obj/item/weapon/packageWrap,
-/obj/item/weapon/packageWrap,
-/obj/item/weapon/packageWrap,
-/obj/item/weapon/packageWrap,
-/obj/item/weapon/packageWrap,
-/obj/item/weapon/storage/bag/mail,
-/obj/item/device/destTagger{
-	pixel_x = 4;
-	pixel_y = 3
-	},
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/brown/bordercorner,
+/obj/item/weapon/storage/bag/trash,
+/obj/item/weapon/storage/bag/trash{
+	pixel_x = -5;
+	pixel_y = 5
+	},
 /turf/simulated/floor/tiled,
-/area/quartermaster/delivery)
+/area/quartermaster/disposal_sort)
 "kGf" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -60016,10 +60003,10 @@
 	dir = 6
 	},
 /obj/machinery/button/holosign{
-	pixel_x = -11;
-	pixel_y = -24;
+	id = "chemon";
 	name = "Chemist on duty sign";
-	id = "chemon"
+	pixel_x = -11;
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
@@ -60686,9 +60673,9 @@
 	},
 /obj/structure/cable/green,
 /obj/machinery/button/holosign{
-	pixel_x = -35;
-	name = "Roboticist on duty sign";
 	id = "roboton";
+	name = "Roboticist on duty sign";
+	pixel_x = -35;
 	pixel_y = 9
 	},
 /turf/simulated/floor/tiled/white,
@@ -61539,7 +61526,7 @@
 	pixel_x = -28
 	},
 /turf/simulated/floor/tiled,
-/area/quartermaster/delivery)
+/area/quartermaster/disposal_sort)
 "mor" = (
 /obj/machinery/holosign/bar{
 	id = "baropen"
@@ -64462,7 +64449,7 @@
 	icon_state = "pipe-c"
 	},
 /turf/simulated/wall,
-/area/quartermaster/delivery)
+/area/quartermaster/disposal_sort)
 "nZM" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -64599,20 +64586,20 @@
 	name = "security camera"
 	},
 /obj/structure/table/steel,
-/obj/item/weapon/paper_bin{
-	pixel_x = -3;
-	pixel_y = 7
-	},
-/obj/item/weapon/storage/box,
-/obj/item/weapon/storage/box,
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/brown/bordercorner{
 	dir = 4
 	},
+/obj/item/stack/material/cardboard,
+/obj/item/clothing/gloves/brown,
+/obj/item/weapon/reagent_containers/spray/sterilizine{
+	pixel_x = 8;
+	pixel_y = 8
+	},
 /turf/simulated/floor/tiled,
-/area/quartermaster/delivery)
+/area/quartermaster/disposal_sort)
 "odi" = (
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/lime/border,
@@ -65485,11 +65472,11 @@
 "oCj" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance{
-	name = "Delivery Office Maintenance";
+	name = "Disposal Sorting Maintenance";
 	req_access = list(50)
 	},
 /turf/simulated/floor/plating,
-/area/quartermaster/delivery)
+/area/quartermaster/disposal_sort)
 "oCL" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/grass,
@@ -67236,7 +67223,7 @@
 /obj/structure/disposalpipe/trunk,
 /obj/structure/plasticflaps/mining,
 /turf/simulated/floor/plating,
-/area/quartermaster/delivery)
+/area/quartermaster/disposal_sort)
 "pzW" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/research_medical)
@@ -67487,17 +67474,12 @@
 "pFE" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/westright{
-	name = "Mailing Room";
+	name = "Disposal Sorting";
 	req_access = list(50)
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/item/weapon/folder/yellow,
-/obj/item/weapon/pen{
-	pixel_x = 4;
-	pixel_y = 4
-	},
 /turf/simulated/floor/tiled,
-/area/quartermaster/delivery)
+/area/quartermaster/disposal_sort)
 "pFH" = (
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Research Hallway Aft";
@@ -68530,10 +68512,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/D1)
 "qiq" = (
-/obj/machinery/autolathe,
-/obj/machinery/alarm{
-	pixel_y = 23
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
@@ -68668,12 +68646,6 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/quartermaster/warehouse)
 "qlc" = (
-/obj/structure/bed/chair{
-	dir = 4
-	},
-/obj/effect/landmark/start{
-	name = "Cargo Technician"
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
@@ -68689,7 +68661,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/quartermaster/delivery)
+/area/quartermaster/disposal_sort)
 "qle" = (
 /turf/simulated/wall,
 /area/maintenance/locker)
@@ -69150,7 +69122,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/quartermaster/delivery)
+/area/quartermaster/disposal_sort)
 "qxn" = (
 /obj/item/glass_jar,
 /obj/random/mob/mouse,
@@ -70149,7 +70121,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/quartermaster/delivery)
+/area/quartermaster/disposal_sort)
 "rhX" = (
 /obj/item/weapon/stool/padded,
 /turf/simulated/floor,
@@ -71136,6 +71108,10 @@
 /obj/random/maintenance/research,
 /turf/simulated/floor,
 /area/maintenance/research_medical)
+"rMm" = (
+/obj/machinery/door/firedoor/glass,
+/turf/unsimulated/mask,
+/area/hallway/primary/seconddeck/port)
 "rMJ" = (
 /obj/machinery/atmospherics/tvalve/digital{
 	dir = 8;
@@ -74714,7 +74690,7 @@
 	id = "packageSort1"
 	},
 /turf/simulated/floor/plating,
-/area/quartermaster/delivery)
+/area/quartermaster/disposal_sort)
 "tSo" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -78355,7 +78331,7 @@
 "vXh" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_mining{
-	name = "Delivery Office";
+	name = "Disposal Sorting";
 	req_access = list(50)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -78369,7 +78345,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/quartermaster/delivery)
+/area/quartermaster/disposal_sort)
 "vXB" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -78638,7 +78614,7 @@
 	pixel_x = -32
 	},
 /turf/simulated/floor/plating,
-/area/quartermaster/delivery)
+/area/quartermaster/disposal_sort)
 "whv" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -81857,7 +81833,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/quartermaster/delivery)
+/area/quartermaster/disposal_sort)
 "xZu" = (
 /obj/random/trash,
 /obj/structure/loot_pile/surface/medicine_cabinet{
@@ -81984,11 +81960,11 @@
 "ydm" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_mining{
-	name = "Delivery Office";
+	name = "Disposal Sorting";
 	req_access = list(50)
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/quartermaster/delivery)
+/area/quartermaster/disposal_sort)
 "ydn" = (
 /obj/machinery/light/small,
 /obj/structure/catwalk,
@@ -102169,7 +102145,7 @@ bGl
 bGl
 bGl
 bGl
-bGl
+rMm
 bxq
 bfY
 aEK
@@ -103204,13 +103180,13 @@ bGl
 bGl
 bxq
 bga
-bud
-bud
-bud
-bud
-bud
-bud
-bud
+iEa
+iEa
+iEa
+iEa
+iEa
+iEa
+iEa
 jGK
 lYj
 mOu
@@ -103720,14 +103696,14 @@ baV
 vUV
 beq
 bgb
-bud
-bud
+iEa
+iEa
 hDI
 gpI
 gck
-bud
-bud
-bud
+iEa
+iEa
+iEa
 bGn
 xlj
 aXQ
@@ -104237,7 +104213,7 @@ beq
 beq
 bgb
 fzk
-bud
+iEa
 qlc
 ode
 xYN
@@ -104494,14 +104470,14 @@ vco
 beq
 bgb
 bgb
-bud
-bud
+iEa
+iEa
 pFE
 rhm
 ydm
-bud
-bud
-bud
+iEa
+iEa
+iEa
 qiq
 bEJ
 bCU
