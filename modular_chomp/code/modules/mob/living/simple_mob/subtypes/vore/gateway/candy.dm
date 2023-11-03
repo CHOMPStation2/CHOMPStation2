@@ -444,9 +444,6 @@
 	var/grenade_type = /obj/item/weapon/grenade/concussion
 	var/grenade_timer = 1
 
-	var/leap_warmup = 0.5 SECOND // How long the leap telegraphing is.
-	var/leap_sound = 'sound/weapons/spiderlunge.ogg'
-
 	special_attack_min_range = 1
 	special_attack_max_range = 15
 	special_attack_cooldown = 7 SECONDS
@@ -672,3 +669,55 @@
 	new /obj/random/mob/candycritter (src.loc)
 	new /obj/random/mob/candycritter (src.loc)
 	new /obj/random/mob/candycritter (src.loc)
+
+/mob/living/simple_mob/vore/candy/worm/Login()
+	. = ..()
+	if(!riding_datum)
+		riding_datum = new /datum/riding/simple_mob(src)
+	verbs |= /mob/living/simple_mob/proc/animal_mount
+	verbs |= /mob/living/proc/toggle_rider_reins
+	movement_cooldown = 1
+
+/mob/living/simple_mob/vore/candy/worm/MouseDrop_T(mob/living/M, mob/living/user)
+	return
+
+/mob/living/simple_mob/vore/candy/worm/redcabold/init_vore()
+	if(!voremob_loaded)
+		return
+	.=..()
+	var/obj/belly/B = vore_selected
+	B.name = "stomach"
+	B.desc = "The fearsome predator gets a firm grip upon you, before dunking you into it's maw, then with a powerful swift gulp you're sent tumbling into it's stomach."
+
+	B.emote_lists[DM_HOLD] = list(
+		"Your surroundings are momentarily filled with your predator's pleased rumbling, its hands stroking over the taut swell you make in its belly.",)
+
+	B.emote_lists[DM_DIGEST] = list(
+		"Every clench of the predator's stomach grinds powerful digestive fluids into your body, forcibly churning away your strength!")
+
+/mob/living/simple_mob/vore/candy/peppermint/Login()
+	. = ..()
+	if(!riding_datum)
+		riding_datum = new /datum/riding/simple_mob(src)
+	verbs |= /mob/living/simple_mob/proc/animal_mount
+	verbs |= /mob/living/proc/toggle_rider_reins
+	movement_cooldown = 1
+
+/mob/living/simple_mob/vore/candy/peppermint/MouseDrop_T(mob/living/M, mob/living/user)
+	return
+
+/mob/living/simple_mob/vore/candy/peppermint/init_vore()
+	if(!voremob_loaded)
+		return
+	.=..()
+	var/obj/belly/B = vore_selected
+	B.name = "stomach"
+	B.desc = "The fearsome predator gets a firm grip upon you, before dunking you into it's maw, then with a powerful swift gulp you're sent tumbling into it's stomach."
+
+	B.emote_lists[DM_HOLD] = list(
+		"Your surroundings are momentarily filled with your predator's pleased rumbling, its hands stroking over the taut swell you make in its belly.",)
+
+	B.emote_lists[DM_DIGEST] = list(
+		"Every clench of the predator's stomach grinds powerful digestive fluids into your body, forcibly churning away your strength!")
+
+v

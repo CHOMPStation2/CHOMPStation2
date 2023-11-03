@@ -39,28 +39,28 @@
 			)
 
 /mob/living/simple_mob/vr/firewiz
-	name = "vr creation"
+	name = "hardlight creation fire"
 	icon_state = "bookbat_red"
 	icon_living = "bookbat_red"
 	icon_dead = "bookbat_red_dead"
 	projectiletype = /obj/item/projectile/energy/homing_bolt/wizard/fire
 
 /mob/living/simple_mob/vr/poisonwiz
-	name = "vr creation"
+	name = "hardlight creation poison"
 	icon_state = "bookbat_green"
 	icon_living = "bookbat_green"
 	icon_dead = "bookbat_green_dead"
 	projectiletype = /obj/item/projectile/energy/homing_bolt/wizard/poison
 
 /mob/living/simple_mob/vr/lightingwiz
-	name = "vr creation"
+	name = "hardlight creation lighting"
 	icon_state = "bookbat_woody"
 	icon_living = "bookbat_woody"
 	icon_dead = "bookbat_woody_dead"
 	projectiletype = /obj/item/projectile/energy/homing_bolt/wizard/lighting
 
 /mob/living/simple_mob/vr/frostwiz
-	name = "vr creation"
+	name = "hardlight creation frost"
 	icon_state = "bookbat_blue"
 	icon_living = "bookbat_blue"
 	icon_dead = "bookbat_blue_dead"
@@ -82,8 +82,8 @@
 	projectiletype = null
 	melee_attack_delay = 0 SECOND
 
-	melee_damage_lower = 6
-	melee_damage_upper = 6
+	melee_damage_lower = 8
+	melee_damage_upper = 8
 
 /mob/living/simple_mob/vr/glitch/apply_melee_effects(var/atom/A)
 	if(isliving(A))
@@ -91,7 +91,7 @@
 		L.add_modifier(/datum/modifier/digitizing, 60 SECONDS)
 
 /mob/living/simple_mob/vr/doomknight
-	name = "vr creation"
+	name = "hardlight creation doomknight"
 	projectiletype = null
 
 	maxHealth = 70
@@ -113,6 +113,7 @@
 //Spells
 /obj/item/projectile/energy/homing_bolt/wizard
 	damage = 15
+	speed = 1.0
 
 /obj/item/projectile/energy/homing_bolt/wizard/fire
 	modifier_type_to_apply = /datum/modifier/wizfire
@@ -141,7 +142,7 @@
 	on_created_text = "<span class='warning'>You are on digital fire.</span>"
 	on_expired_text = "<span class='notice'>You feel better.</span>"
 	stacks = MODIFIER_STACK_ALLOWED // Multiple instances will hurt a lot.
-	var/damage_per_tick = 0.2
+	var/damage_per_tick = 1.5
 	bleeding_rate_percent = 0.7
 
 /datum/modifier/wizfire/tick()
@@ -155,7 +156,7 @@
 	on_created_text = "<span class='warning'>You are filled with digital lighting.</span>"
 	on_expired_text = "<span class='notice'>You feel better.</span>"
 	stacks = MODIFIER_STACK_ALLOWED // Multiple instances will hurt a lot.
-	damage_per_tick = 0.05
+	damage_per_tick = 1.0
 	incoming_fire_damage_percent = 1.1
 
 /datum/modifier/wizpoison

@@ -1,4 +1,13 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/item/weapon/aliencoin{
+	name = "Very useful Collectable";
+	desc = "It will make a nice collection number go up, increasing your completion percentage."
+	},
+/turf/simulated/floor/wood{
+	outdoors = 1
+	},
+/area/awaymission/mol/vr/shattered)
 "ac" = (
 /obj/structure/flora/ausbushes/leafybush,
 /mob/living/simple_mob/vr/glitch,
@@ -50,6 +59,10 @@
 /area/awaymission/mol/headdorms)
 "at" = (
 /obj/machinery/honey_extractor,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 9
+	},
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/awaymission/mol/kitchen/chamberB)
 "az" = (
@@ -71,6 +84,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
 "aI" = (
@@ -78,6 +92,13 @@
 	outdoors = 1
 	},
 /area/awaymission/mol/vr/shattered)
+"aJ" = (
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/awaymission/mol/kitchen)
 "aK" = (
 /obj/machinery/light{
 	dir = 1
@@ -149,8 +170,18 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen)
+"bh" = (
+/obj/item/weapon/aliencoin{
+	name = "Very useful Collectable";
+	desc = "It will make a nice collection number go up, increasing your completion percentage."
+	},
+/turf/simulated/floor/grass2{
+	outdoors = 1
+	},
+/area/awaymission/mol/vr/shattered)
 "bi" = (
 /mob/living/simple_mob/mechanical/mecha/vistor/vistorblue/shielded,
 /turf/simulated/floor/carpet/blue,
@@ -172,6 +203,8 @@
 /area/awaymission/mol/hardlightentrance)
 "bu" = (
 /obj/machinery/light,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/effect/floor_decal/corner/green/border,
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/awaymission/mol/kitchen/chamberA)
 "bv" = (
@@ -191,6 +224,8 @@
 /area/awaymission/mol/scraptunnels/room3)
 "bH" = (
 /mob/living/simple_mob/vore/candy/yellowcabold,
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen)
 "bI" = (
@@ -244,6 +279,7 @@
 /area/awaymission/mol/kitchen/chamberC)
 "bZ" = (
 /mob/living/simple_mob/vore/candy/redcabold,
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
 "cc" = (
@@ -251,8 +287,16 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen)
+"cd" = (
+/obj/structure/safe,
+/obj/item/device/encryptionkey/omni,
+/obj/item/clothing/glasses/omni,
+/obj/item/ammo_casing/microbattery/medical/omni3,
+/turf/simulated/floor/wood,
+/area/awaymission/mol/audiotorium)
 "ce" = (
 /obj/machinery/light{
 	dir = 1
@@ -335,6 +379,10 @@
 /obj/machinery/light{
 	dir = 1;
 	layer = 3
+	},
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/awaymission/mol/kitchen/chamberA)
@@ -446,13 +494,12 @@
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/entrancetunnel)
 "dI" = (
-/obj/structure/table/marble,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/glass,
-/obj/machinery/recharger,
-/obj/effect/floor_decal/corner/orange/diagonal,
-/turf/simulated/floor/tiled/red,
-/area/awaymission/mol/security)
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/awaymission/mol/kitchen)
 "dJ" = (
 /obj/structure/table/rack/shelf,
 /obj/item/clothing/suit/armor/combat/imperial,
@@ -471,6 +518,13 @@
 /obj/effect/floor_decal/corner/green/diagonal,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vistortunnel)
+"dP" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/red,
+/area/awaymission/mol/security)
 "dQ" = (
 /turf/unsimulated/ai_visible,
 /area/awaymission/mol/vr/observation)
@@ -538,6 +592,7 @@
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
 "ef" = (
@@ -610,8 +665,12 @@
 	dir = 4
 	},
 /obj/machinery/light,
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
+"eD" = (
+/turf/simulated/wall/solidrock,
+/area/awaymission/mol/security)
 "eF" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk,
@@ -624,11 +683,16 @@
 /area/awaymission/mol/scraptunnels/room3)
 "eR" = (
 /mob/living/simple_mob/vore/candy/orangecabold,
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen)
 "fa" = (
 /obj/item/weapon/stool/padded,
 /mob/living/simple_mob/vore/candy/orangecabold,
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
 "fb" = (
@@ -646,6 +710,13 @@
 /mob/living/simple_mob/vore/candy/purplecabold,
 /turf/simulated/floor/tiled/kafel_full/blue,
 /area/awaymission/mol/kitchen/chamberA)
+"fg" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/structure/table/rack/shelf,
+/obj/item/weapon/gun/projectile/revolver/saa,
+/obj/item/weapon/gun/projectile/revolver/judge,
+/turf/simulated/floor/tiled/red,
+/area/awaymission/mol/security)
 "fk" = (
 /obj/structure/table/marble,
 /obj/item/device/flashlight/slime,
@@ -693,6 +764,20 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/awaymission/mol/medical)
+"fz" = (
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/awaymission/mol/kitchen)
+"fB" = (
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full/green,
+/area/awaymission/mol/kitchen/chamberA)
 "fD" = (
 /obj/structure/table/standard,
 /obj/item/weapon/paper{
@@ -806,6 +891,10 @@
 /area/awaymission/mol/medical)
 "gH" = (
 /obj/machinery/seed_extractor,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/awaymission/mol/kitchen/chamberB)
 "gJ" = (
@@ -837,6 +926,7 @@
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
 "gW" = (
@@ -943,6 +1033,7 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen)
 "hI" = (
@@ -981,6 +1072,10 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen)
 "hU" = (
@@ -1009,6 +1104,16 @@
 /obj/structure/table/standard,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/medical)
+"ie" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/kafel_full/green,
+/area/awaymission/mol/kitchen/chamberA)
 "ii" = (
 /obj/structure/table/marble,
 /obj/machinery/microwave,
@@ -1053,6 +1158,12 @@
 "is" = (
 /turf/simulated/wall/r_wall,
 /area/awaymission/mol/kitchen)
+"it" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/structure/table/rack/shelf,
+/obj/item/weapon/material/twohanded/fireaxe/scythe,
+/turf/simulated/floor/tiled/red,
+/area/awaymission/mol/security)
 "iz" = (
 /obj/machinery/light{
 	dir = 8
@@ -1064,12 +1175,21 @@
 /area/awaymission/mol/security)
 "iE" = (
 /obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
 "iF" = (
 /obj/machinery/light,
 /turf/simulated/floor/carpet/retro_red,
 /area/awaymission/mol/vistortunnel/red)
+"iH" = (
+/obj/machinery/honey_extractor,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/kafel_full/green,
+/area/awaymission/mol/kitchen/chamberA)
 "iI" = (
 /obj/random/trash_pile,
 /turf/simulated/floor/bmarble,
@@ -1129,6 +1249,10 @@
 	outdoors = 1
 	},
 /area/awaymission/mol/vr/shattered)
+"iV" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/wall/solidrock,
+/area/awaymission/mol/vr/shattered)
 "iW" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 3
@@ -1139,6 +1263,12 @@
 	nitrogen = 82.1472
 	},
 /area/awaymission/mol/entrancetunnel)
+"jc" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/structure/table/rack/shelf,
+/obj/item/weapon/gun/projectile/revolver/saa,
+/turf/simulated/floor/tiled/red,
+/area/awaymission/mol/security)
 "jd" = (
 /turf/simulated/wall/r_wall,
 /area/awaymission/mol/vr/shattered)
@@ -1176,6 +1306,14 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/hardlightentrance)
+"jw" = (
+/mob/living/simple_mob/vore/candy/bluecabold,
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/awaymission/mol/kitchen)
 "jx" = (
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/mines)
@@ -1189,6 +1327,21 @@
 "jz" = (
 /turf/simulated/wall/r_wall,
 /area/awaymission/mol/vistortunnel)
+"jB" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/machinery/door/blast/puzzle{
+	id = "FinaleGate3"
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/red,
+/area/awaymission/mol/security)
+"jI" = (
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/awaymission/mol/kitchen)
 "jM" = (
 /obj/machinery/light{
 	dir = 8
@@ -1209,6 +1362,19 @@
 /obj/structure/bed/chair/comfy/brown,
 /turf/simulated/floor/lino,
 /area/awaymission/mol/mines)
+"jT" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/structure/table/rack/shelf,
+/obj/item/weapon/storage/firstaid/experimental,
+/obj/item/weapon/storage/firstaid/clotting,
+/turf/simulated/floor/tiled/red,
+/area/awaymission/mol/security)
+"jV" = (
+/mob/living/simple_mob/vore/candy/worm,
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/awaymission/mol/kitchen)
 "jW" = (
 /obj/structure/table/marble,
 /obj/random/meat,
@@ -1310,6 +1476,20 @@
 	outdoors = 1
 	},
 /area/awaymission/mol/vr/shattered)
+"kA" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/kafel_full/green,
+/area/awaymission/mol/kitchen/chamberB)
+"kC" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/structure/table/rack/shelf,
+/obj/item/weapon/gun/energy/vepr/plasma,
+/turf/simulated/floor/tiled/red,
+/area/awaymission/mol/security)
 "kF" = (
 /obj/effect/map_helper/no_phaseshift/area,
 /turf/simulated/wall/r_wall,
@@ -1385,6 +1565,13 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/scraptunnels/room1)
+"lf" = (
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/awaymission/mol/kitchen)
 "lh" = (
 /turf/simulated/floor/carpet/oracarpet,
 /area/awaymission/mol/mines)
@@ -1399,6 +1586,10 @@
 	dir = 8
 	},
 /obj/machinery/seed_extractor,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/awaymission/mol/kitchen/chamberA)
 "ln" = (
@@ -1417,6 +1608,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
 "lt" = (
@@ -1469,6 +1661,14 @@
 /obj/machinery/appliance/cooker/oven,
 /turf/simulated/floor/tiled/kafel_full/yellow,
 /area/awaymission/mol/kitchen/chamberC)
+"lM" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/structure/table/rack/shelf,
+/obj/item/weapon/material/twohanded/fireaxe/scythe,
+/obj/item/weapon/melee/energy/sword/imperial,
+/obj/item/weapon/shield/energy/imperial,
+/turf/simulated/floor/tiled/red,
+/area/awaymission/mol/security)
 "lU" = (
 /obj/structure/flora/ausbushes/leafybush,
 /turf/simulated/floor/grass2{
@@ -1528,6 +1728,13 @@
 /obj/structure/ghost_pod/manual/lost_drone,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/scraptunnels/room3)
+"mo" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/structure/table/rack/shelf,
+/obj/item/weapon/gun/energy/vepr/plasma,
+/obj/item/weapon/gun/energy/imperial,
+/turf/simulated/floor/tiled/red,
+/area/awaymission/mol/security)
 "mq" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/effect/map_helper/no_phaseshift,
@@ -1573,6 +1780,13 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/awaymission/mol/medical)
+"mD" = (
+/obj/structure/disposalpipe/trunk,
+/obj/machinery/disposal/deliveryChute{
+	dir = 1
+	},
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/vr/shattered)
 "mE" = (
 /obj/machinery/light{
 	dir = 4
@@ -1729,6 +1943,16 @@
 "nP" = (
 /obj/structure/railing,
 /obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/effect/floor_decal/corner/green/border,
+/turf/simulated/floor/tiled/kafel_full/green,
+/area/awaymission/mol/kitchen/chamberB)
+"nS" = (
+/obj/structure/railing,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 6
+	},
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/awaymission/mol/kitchen/chamberB)
 "nT" = (
@@ -1883,6 +2107,11 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vistortunnel)
+"oX" = (
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/effect/floor_decal/corner/green/border,
+/turf/simulated/floor/tiled/kafel_full/green,
+/area/awaymission/mol/kitchen/chamberA)
 "oZ" = (
 /obj/random/maintenance/engineering,
 /turf/simulated/floor,
@@ -2007,6 +2236,10 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/medical)
+"pY" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/lava,
+/area/awaymission/mol/vr/shattered)
 "qb" = (
 /turf/simulated/floor/tiled/kafel_full/red,
 /area/awaymission/mol/kitchen/chamberC)
@@ -2020,6 +2253,7 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen)
 "qf" = (
@@ -2042,6 +2276,10 @@
 /area/awaymission/mol/scraptunnels/room2)
 "ql" = (
 /obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/effect/floor_decal/corner/green/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full/green,
@@ -2129,6 +2367,13 @@
 /obj/item/clothing/shoes/leg_guard/combat/imperial,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
+"qS" = (
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/kafel_full/green,
+/area/awaymission/mol/kitchen/chamberA)
 "qT" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -2169,6 +2414,7 @@
 "rb" = (
 /obj/item/weapon/stool/padded,
 /mob/living/simple_mob/vore/candy/yellowcabold,
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
 "rd" = (
@@ -2235,6 +2481,11 @@
 /mob/living/simple_mob/vore/candy/greencabold,
 /turf/simulated/floor/tiled/kafel_full/yellow,
 /area/awaymission/mol/kitchen/chamberC)
+"rE" = (
+/obj/structure/table/darkglass,
+/obj/item/weapon/bluespace_harpoon,
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/vr/shattered)
 "rK" = (
 /obj/structure/table/steel,
 /obj/structure/curtain,
@@ -2276,6 +2527,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
 "rU" = (
@@ -2306,6 +2558,17 @@
 	},
 /turf/simulated/wall/solidrock,
 /area/awaymission/mol/mines)
+"sc" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/awaymission/mol/kitchen)
 "sd" = (
 /obj/structure/closet/secure_closet/freezer/meat,
 /turf/simulated/floor/tiled/kafel_full/yellow,
@@ -2360,6 +2623,7 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
+/obj/effect/floor_decal/corner/lime/diagonal,
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/awaymission/mol/kitchen/chamberB)
 "sI" = (
@@ -2367,6 +2631,10 @@
 /turf/simulated/floor/dungeon,
 /area/awaymission/mol/vr/shattered)
 "sK" = (
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/awaymission/mol/kitchen/chamberB)
 "sM" = (
@@ -2410,6 +2678,7 @@
 /area/awaymission/mol/headdorms)
 "tf" = (
 /mob/living/simple_mob/vore/candy/peppermint,
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen)
 "tg" = (
@@ -2424,6 +2693,10 @@
 /area/awaymission/mol/entrancetunnel)
 "tl" = (
 /obj/machinery/biogenerator,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/awaymission/mol/kitchen/chamberB)
 "tn" = (
@@ -2470,12 +2743,30 @@
 /obj/item/weapon/reagent_containers/glass/beaker/bluespace,
 /turf/simulated/floor/wmarble,
 /area/awaymission/mol/medical)
+"tB" = (
+/obj/item/weapon/aliencoin{
+	name = "Very useful Collectable";
+	desc = "It will make a nice collection number go up, increasing your completion percentage."
+	},
+/turf/unsimulated/ai_visible,
+/area/awaymission/mol/vr/shattered)
+"tD" = (
+/obj/structure/flora/ausbushes/leafybush,
+/obj/item/weapon/aliencoin{
+	name = "Very useful Collectable";
+	desc = "It will make a nice collection number go up, increasing your completion percentage."
+	},
+/turf/simulated/floor/grass2{
+	outdoors = 1
+	},
+/area/awaymission/mol/vr/shattered)
 "tG" = (
 /turf/simulated/wall/r_wall,
 /area/awaymission/mol/mines)
 "tH" = (
 /obj/item/weapon/stool/padded,
 /mob/living/simple_mob/vore/candy/marshmellowserpent,
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
 "tK" = (
@@ -2558,11 +2849,25 @@
 "uc" = (
 /turf/simulated/wall/r_wall,
 /area/awaymission/mol/scraptunnels/room3)
+"ud" = (
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/awaymission/mol/kitchen)
 "uf" = (
 /obj/effect/floor_decal/corner/mauve/diagonal,
 /obj/machinery/light,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vistortunnel)
+"ug" = (
+/obj/structure/loot_pile/surface/bones,
+/obj/machinery/conveyor_switch{
+	id = "Candy Zone"
+	},
+/turf/simulated/floor/tiled/kafel_full/yellow,
+/area/awaymission/mol/kitchen/chamberC)
 "uh" = (
 /obj/effect/map_helper/no_phaseshift/area,
 /turf/simulated/floor/wmarble,
@@ -2626,6 +2931,10 @@
 /area/awaymission/mol/kitchen/chamberC)
 "uF" = (
 /mob/living/simple_mob/vore/candy/worm,
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen)
 "uH" = (
@@ -2635,6 +2944,12 @@
 "uJ" = (
 /turf/simulated/mineral/crystal_shiny,
 /area/awaymission/mol/vr/shattered)
+"uM" = (
+/obj/machinery/conveyor_switch{
+	id = "Candy Zone"
+	},
+/turf/simulated/floor/tiled/kafel_full/yellow,
+/area/awaymission/mol/kitchen/chamberC)
 "uN" = (
 /obj/machinery/door/blast/regular{
 	id = "MolFluffV2"
@@ -2681,6 +2996,16 @@
 /obj/effect/floor_decal/corner/black/diagonal,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/mines)
+"vd" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/awaymission/mol/kitchen)
 "ve" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/effect/map_helper/no_phaseshift/area,
@@ -2767,6 +3092,13 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/scraptunnels/room3)
+"vQ" = (
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/awaymission/mol/kitchen)
 "vR" = (
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 10
@@ -2829,6 +3161,14 @@
 /obj/effect/map_helper/no_phaseshift/area,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vr/observation)
+"wn" = (
+/obj/machinery/autolathe,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/red,
+/area/awaymission/mol/security)
 "wq" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 8
@@ -2879,6 +3219,10 @@
 /obj/effect/floor_decal/corner/green/diagonal,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vistortunnel)
+"wK" = (
+/obj/effect/floor_decal/corner/lime/diagonal,
+/turf/simulated/floor/tiled/kafel_full/green,
+/area/awaymission/mol/kitchen/chamberB)
 "wM" = (
 /obj/structure/curtain/open/shower,
 /obj/machinery/shower{
@@ -2887,6 +3231,13 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/awaymission/mol/vistortunnel)
+"wO" = (
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/awaymission/mol/kitchen)
 "wP" = (
 /obj/structure/railing{
 	dir = 8
@@ -3098,6 +3449,7 @@
 /area/awaymission/mol/kitchen/chamberC)
 "yj" = (
 /mob/living/simple_mob/vore/candy/bluecabold,
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
 "yl" = (
@@ -3112,11 +3464,22 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen)
 "yu" = (
 /turf/simulated/wall/solidrock,
 /area/awaymission/mol/vr/shattered)
+"yz" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/machinery/door/blast/puzzle{
+	id = "FinaleGate3"
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/red,
+/area/awaymission/mol/security)
 "yA" = (
 /obj/effect/decal/mecha_wreckage/janus,
 /obj/effect/floor_decal/corner/black/diagonal,
@@ -3138,6 +3501,7 @@
 /area/awaymission/mol/scraptunnels/room2)
 "yI" = (
 /mob/living/simple_mob/vore/candy/marshmellowserpent,
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
 "yK" = (
@@ -3245,8 +3609,13 @@
 /area/awaymission/mol/vr/shattered)
 "zq" = (
 /mob/living/simple_mob/vore/candy/orangecabold,
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
+"zr" = (
+/obj/structure/disposalpipe/trunk,
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/vr/observationroom)
 "zs" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/structure/table/steel,
@@ -3341,6 +3710,7 @@
 /area/awaymission/mol/vistortunnel)
 "Ad" = (
 /obj/machinery/portable_atmospherics/hydroponics,
+/obj/effect/floor_decal/corner/lime/diagonal,
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/awaymission/mol/kitchen/chamberA)
 "Ae" = (
@@ -3409,6 +3779,13 @@
 /mob/living/simple_mob/mechanical/cyber_horror/grey,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/scraptunnels/room3)
+"AE" = (
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/awaymission/mol/kitchen)
 "AG" = (
 /obj/structure/bed,
 /obj/item/weapon/bedsheet/captain,
@@ -3469,12 +3846,46 @@
 /obj/effect/floor_decal/corner/mauve/diagonal,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vistortunnel)
+"Bm" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/awaymission/mol/kitchen)
 "Bn" = (
 /obj/machinery/door/blast/puzzle{
 	id = "FinaleGate3"
 	},
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
+"Bo" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/hardlightentrance)
+"Bp" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/machinery/door/blast/puzzle{
+	id = "FinaleGate4"
+	},
+/turf/simulated/floor/tiled/red,
+/area/awaymission/mol/security)
+"Br" = (
+/obj/structure/disposalpipe/trunk,
+/obj/structure/disposaloutlet{
+	dir = 4
+	},
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/vr/shattered)
+"Bs" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/awaymission/mol/kitchen)
 "Bt" = (
 /obj/item/clothing/accessory/poncho/roles/cloak/security,
 /obj/item/weapon/gun/projectile/gyropistol,
@@ -3502,6 +3913,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
 "Bz" = (
@@ -3625,18 +4037,22 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/awaymission/mol/vistortunnel)
+"CF" = (
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/awaymission/mol/kitchen)
 "CH" = (
 /mob/living/simple_mob/vore/candy/peppermint,
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
 "CL" = (
-/obj/machinery/light{
-	dir = 1
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
-/obj/machinery/autolathe/armory,
-/obj/effect/floor_decal/corner/orange/diagonal,
-/turf/simulated/floor/tiled/red,
-/area/awaymission/mol/security)
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/awaymission/mol/kitchen)
 "CO" = (
 /obj/machinery/door/blast/puzzle{
 	id = "FinaleGate2"
@@ -3663,6 +4079,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/machinery/light,
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
 "CY" = (
@@ -3694,6 +4111,7 @@
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
 "Di" = (
@@ -3738,6 +4156,13 @@
 	nitrogen = 82.1472
 	},
 /area/awaymission/mol/entrancetunnel)
+"Dq" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/wall/solidrock,
+/area/awaymission/mol/mines)
 "Ds" = (
 /obj/random/obstruction,
 /obj/effect/floor_decal/corner/grey/diagonal,
@@ -3773,6 +4198,10 @@
 "DE" = (
 /turf/simulated/shuttle/wall/alien,
 /area/awaymission/mol/realitycore)
+"DF" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/vr/shattered)
 "DI" = (
 /mob/living/simple_mob/vr/glitch,
 /turf/simulated/floor/water{
@@ -3820,6 +4249,10 @@
 /obj/random/maintenance/research,
 /turf/simulated/floor/wmarble,
 /area/awaymission/mol/vistortunnel)
+"DS" = (
+/obj/effect/floor_decal/corner/white/diagonal,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/awaymission/mol/kitchen)
 "DU" = (
 /obj/machinery/light,
 /turf/simulated/floor/tiled/neutral,
@@ -3881,6 +4314,7 @@
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vr/observation)
 "Eo" = (
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
 "Eq" = (
@@ -3924,10 +4358,12 @@
 /area/awaymission/mol/entrancetunnel)
 "EH" = (
 /obj/structure/bed/chair/office/dark,
+/mob/living/carbon/human/ai_controlled/replicant,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/mines)
 "EL" = (
 /mob/living/simple_mob/vore/candy/yellowcabold,
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
 "EM" = (
@@ -3981,6 +4417,7 @@
 /area/awaymission/mol/conveyorcontrol)
 "Fa" = (
 /obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/lime/diagonal,
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/awaymission/mol/kitchen/chamberB)
 "Fb" = (
@@ -4072,6 +4509,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
 "Ft" = (
@@ -4092,6 +4530,7 @@
 /area/awaymission/mol/vistortunnel/orange)
 "Fv" = (
 /mob/living/simple_mob/vore/candy/purplecabold,
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
 "Fx" = (
@@ -4235,6 +4674,19 @@
 	temperature = 293.15
 	},
 /area/awaymission/mol/mines)
+"GD" = (
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/effect/floor_decal/corner/green/border,
+/turf/simulated/floor/tiled/kafel_full/green,
+/area/awaymission/mol/kitchen/chamberB)
+"GG" = (
+/obj/structure/railing,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/kafel_full/green,
+/area/awaymission/mol/kitchen/chamberB)
 "GH" = (
 /obj/structure/railing{
 	dir = 4
@@ -4250,8 +4702,13 @@
 "GJ" = (
 /obj/item/weapon/stool/padded,
 /mob/living/simple_mob/vore/candy/purplecabold,
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
+"GL" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/wall/r_wall,
+/area/awaymission/mol/hardlightentrance)
 "GP" = (
 /turf/simulated/floor/carpet/blue,
 /area/awaymission/mol/dorms)
@@ -4261,6 +4718,13 @@
 	},
 /turf/simulated/floor/carpet/retro_red,
 /area/awaymission/mol/vistortunnel/red)
+"GR" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/wall/r_wall,
+/area/awaymission/mol/scraptunnels/room2)
 "GS" = (
 /obj/machinery/chem_master/condimaster,
 /turf/simulated/floor/tiled/kafel_full/yellow,
@@ -4283,6 +4747,7 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen)
 "GZ" = (
@@ -4319,6 +4784,16 @@
 	},
 /turf/simulated/floor/wood/sif,
 /area/awaymission/mol/dorms)
+"Hl" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/awaymission/mol/kitchen)
 "Ho" = (
 /obj/structure/table/hardwoodtable,
 /obj/item/device/flashlight/lamp/green,
@@ -4372,6 +4847,7 @@
 /area/awaymission/mol/scraptunnels)
 "HG" = (
 /obj/machinery/portable_atmospherics/hydroponics,
+/obj/effect/floor_decal/corner/lime/diagonal,
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/awaymission/mol/kitchen/chamberB)
 "HH" = (
@@ -4558,8 +5034,19 @@
 	temperature = 293.15
 	},
 /area/awaymission/mol/outside)
+"IO" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/kafel_full/green,
+/area/awaymission/mol/kitchen/chamberB)
 "IT" = (
 /obj/structure/safe,
+/obj/item/weapon/gun/energy/vepr/plasma,
+/obj/item/stack/material/supermatter,
+/obj/item/device/perfect_tele/alien,
 /turf/simulated/floor/wood,
 /area/awaymission/mol/audiotorium)
 "IV" = (
@@ -4590,6 +5077,13 @@
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen)
+"Ja" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/wall/solidrock,
+/area/awaymission/mol/mines)
 "Jb" = (
 /turf/simulated/floor/beach/sand,
 /area/awaymission/mol/vr/shattered)
@@ -4627,6 +5121,7 @@
 	},
 /area/awaymission/mol/entrancetunnel)
 "Jo" = (
+/obj/effect/floor_decal/corner/lime/diagonal,
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/awaymission/mol/kitchen/chamberA)
 "Js" = (
@@ -4650,6 +5145,16 @@
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vistortunnel)
+"JB" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/machinery/door/blast/puzzle{
+	id = "FinaleGate1"
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/red,
+/area/awaymission/mol/security)
 "JF" = (
 /obj/effect/spider/stickyweb/dark,
 /obj/structure/table/hardwoodtable,
@@ -4663,6 +5168,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen)
 "JL" = (
@@ -4687,6 +5193,14 @@
 /mob/living/simple_mob/vore/candy/yellowcabold,
 /turf/simulated/floor/tiled/kafel_full/blue,
 /area/awaymission/mol/kitchen/chamberA)
+"JW" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/autolathe,
+/turf/simulated/floor/tiled/red,
+/area/awaymission/mol/security)
 "JZ" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/random/trash_pile,
@@ -4694,8 +5208,16 @@
 /area/awaymission/mol/scraptunnels/room3)
 "Kc" = (
 /obj/item/weapon/stool/padded,
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
+"Ke" = (
+/obj/structure/table/marble,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/glass,
+/obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/red,
+/area/awaymission/mol/security)
 "Kh" = (
 /obj/structure/kitchenspike,
 /turf/simulated/floor/tiled/kafel_full/red,
@@ -4717,6 +5239,14 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/awaymission/mol/medical)
+"Kz" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/kafel_full/green,
+/area/awaymission/mol/kitchen/chamberA)
 "KE" = (
 /obj/machinery/light{
 	dir = 4
@@ -4817,6 +5347,16 @@
 /mob/living/simple_mob/mechanical/cyber_horror/corgi,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/scraptunnels/room3)
+"Ll" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/structure/table/rack/shelf,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/item/weapon/storage/firstaid/bonemed,
+/obj/item/weapon/storage/firstaid/experimental,
+/turf/simulated/floor/tiled/red,
+/area/awaymission/mol/security)
 "Lm" = (
 /obj/effect/map_helper/no_phaseshift/area,
 /turf/simulated/floor/carpet/retro_red,
@@ -4879,6 +5419,13 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/awaymission/mol/hardlightentrance)
+"LS" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/red,
+/area/awaymission/mol/security)
 "LV" = (
 /obj/item/weapon/paper{
 	name = "Dev Notes 5";
@@ -4906,10 +5453,15 @@
 /area/awaymission/mol/kitchen/chamberA)
 "Md" = (
 /mob/living/simple_mob/vore/candy/greencabold,
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen)
 "Me" = (
 /mob/living/simple_mob/vore/candy/worm,
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
 "Mf" = (
@@ -4945,8 +5497,18 @@
 	dir = 8
 	},
 /obj/machinery/portable_atmospherics/hydroponics,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/awaymission/mol/kitchen/chamberA)
+"Mx" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/wall/dungeon{
+	blocks_nonghost_incorporeal = 1
+	},
+/area/awaymission/mol/vr/shattered)
 "Mz" = (
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /obj/machinery/light{
@@ -5063,6 +5625,11 @@
 	},
 /turf/simulated/floor/carpet/blue,
 /area/awaymission/mol/vistortunnel/blue)
+"Ns" = (
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/effect/floor_decal/industrial/warning/corner,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/awaymission/mol/kitchen)
 "Nv" = (
 /obj/effect/map_helper/no_phaseshift,
 /turf/simulated/floor/tiled/neutral,
@@ -5225,8 +5792,20 @@
 	nitrogen = 82.1472
 	},
 /area/awaymission/mol/entrancetunnel)
+"Ov" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/kafel_full/green,
+/area/awaymission/mol/kitchen/chamberA)
 "Oy" = (
 /mob/living/simple_mob/vore/candy/bluecabold,
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen)
 "Oz" = (
@@ -5275,6 +5854,9 @@
 	oxygen = 21.8366;
 	temperature = 293.15
 	},
+/area/awaymission/mol/vr/shattered)
+"OP" = (
+/turf/simulated/floor/lava,
 /area/awaymission/mol/vr/shattered)
 "OS" = (
 /obj/machinery/power/emitter,
@@ -5419,6 +6001,10 @@
 /area/awaymission/mol/vr/observationroom)
 "PW" = (
 /obj/machinery/seed_extractor,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/awaymission/mol/kitchen/chamberA)
 "PX" = (
@@ -5439,6 +6025,13 @@
 /obj/structure/loot_pile/surface/bones,
 /turf/simulated/floor/tiled/kafel_full/purple,
 /area/awaymission/mol/kitchen/chamberC)
+"Qe" = (
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/kafel_full/green,
+/area/awaymission/mol/kitchen/chamberB)
 "Qf" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/structure/disposalpipe/segment,
@@ -5480,6 +6073,16 @@
 /obj/effect/floor_decal/corner/black/diagonal,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/mines)
+"QE" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/machinery/door/blast/puzzle{
+	id = "FinaleGate1"
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/red,
+/area/awaymission/mol/security)
 "QF" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -5527,6 +6130,12 @@
 /mob/living/simple_mob/vr/glitch,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vr/observationroom)
+"Rc" = (
+/mob/living/simple_mob/vore/candy/marshmellowserpent,
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/awaymission/mol/kitchen)
 "Rh" = (
 /mob/living/simple_mob/mechanical/mining_drone,
 /turf/simulated/floor/outdoors/dirt{
@@ -5578,6 +6187,13 @@
 	},
 /turf/simulated/floor,
 /area/awaymission/mol/securitycheckpoint)
+"RC" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/machinery/door/blast/puzzle{
+	id = "FinaleGate2"
+	},
+/turf/simulated/floor/tiled/red,
+/area/awaymission/mol/security)
 "RE" = (
 /obj/structure/table/marble,
 /obj/structure/disposalpipe/segment{
@@ -5605,6 +6221,10 @@
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen)
+"RN" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/wall/solidrock,
+/area/awaymission/mol/scraptunnels/room2)
 "RO" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 4
@@ -5620,6 +6240,10 @@
 /area/awaymission/mol/entrancetunnel)
 "RP" = (
 /obj/structure/railing{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/effect/floor_decal/corner/green/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full/green,
@@ -5932,6 +6556,10 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen)
 "TW" = (
@@ -5956,6 +6584,20 @@
 	nitrogen = 82.1472
 	},
 /area/awaymission/mol/entrancetunnel)
+"Ub" = (
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/awaymission/mol/kitchen)
+"Uc" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/machinery/door/blast/puzzle{
+	id = "FinaleGate3"
+	},
+/turf/simulated/floor/tiled/red,
+/area/awaymission/mol/security)
 "Uk" = (
 /obj/structure/flora/tree/bigtree,
 /turf/simulated/floor/grass2{
@@ -6002,8 +6644,17 @@
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/awaymission/mol/vistortunnel/yellow)
+"Ux" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/machinery/door/blast/puzzle{
+	id = "FinaleGate1"
+	},
+/turf/simulated/floor/tiled/red,
+/area/awaymission/mol/security)
 "UB" = (
 /obj/structure/railing,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/effect/floor_decal/corner/green/border,
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/awaymission/mol/kitchen/chamberB)
 "UC" = (
@@ -6058,6 +6709,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
 "UO" = (
@@ -6075,6 +6727,17 @@
 /obj/random/maintenance/foodstuff,
 /turf/simulated/floor/carpet/retro_red,
 /area/awaymission/mol/vistortunnel/red)
+"Va" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/wall/r_wall,
+/area/awaymission/mol/mines)
+"Vc" = (
+/obj/item/weapon/aliencoin{
+	name = "Very useful Collectable";
+	desc = "It will make a nice collection number go up, increasing your completion percentage."
+	},
+/turf/simulated/floor/flock,
+/area/awaymission/mol/vr/shattered)
 "Vd" = (
 /obj/machinery/conveyor{
 	id = "Candy Zone";
@@ -6100,8 +6763,15 @@
 /obj/effect/spider/stickyweb/dark,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/awaymission/mol/headdorms)
+"Vh" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/structure/table/rack/shelf,
+/obj/item/weapon/storage/firstaid/experimental,
+/turf/simulated/floor/tiled/red,
+/area/awaymission/mol/security)
 "Vj" = (
 /mob/living/simple_mob/vore/candy/greencabold,
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
 "Vn" = (
@@ -6138,6 +6808,10 @@
 /area/awaymission/mol/medical)
 "Vu" = (
 /obj/machinery/biogenerator,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/awaymission/mol/kitchen/chamberA)
 "Vx" = (
@@ -6162,6 +6836,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
 "VG" = (
@@ -6198,6 +6873,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
 "VN" = (
@@ -6369,6 +7045,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
 "WW" = (
@@ -6381,6 +7058,25 @@
 /obj/machinery/recharger,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
+"Xa" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/awaymission/mol/kitchen)
+"Xb" = (
+/obj/item/weapon/aliencoin{
+	name = "Very useful Collectable";
+	desc = "It will make a nice collection number go up, increasing your completion percentage."
+	},
+/turf/simulated/floor/beach/sand,
+/area/awaymission/mol/vr/shattered)
+"Xd" = (
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full/green,
+/area/awaymission/mol/kitchen/chamberB)
 "Xg" = (
 /obj/machinery/light{
 	dir = 4
@@ -6400,6 +7096,7 @@
 "Xn" = (
 /obj/item/weapon/stool/padded,
 /mob/living/simple_mob/vore/candy/redcabold,
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
 "Xr" = (
@@ -6475,6 +7172,13 @@
 /obj/machinery/light,
 /turf/simulated/floor/carpet/brown,
 /area/awaymission/mol/vistortunnel/orange)
+"XQ" = (
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/awaymission/mol/kitchen)
 "XR" = (
 /obj/item/weapon/material/barbedwire{
 	anchored = 1;
@@ -6498,6 +7202,7 @@
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
 "XX" = (
@@ -6529,6 +7234,20 @@
 	},
 /turf/simulated/floor/tiled/yellow,
 /area/awaymission/mol/mines)
+"Yf" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/structure/table/rack/shelf,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/clothing/glasses/night,
+/obj/item/clothing/glasses/night,
+/obj/item/clothing/glasses/night,
+/obj/item/clothing/glasses/night,
+/obj/item/clothing/glasses/night,
+/obj/item/clothing/glasses/night,
+/turf/simulated/floor/tiled/red,
+/area/awaymission/mol/security)
 "Yj" = (
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/red,
@@ -6594,6 +7313,16 @@
 /obj/effect/map_helper/no_phaseshift,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vr/observation)
+"YT" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/structure/table/rack/shelf,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/item/weapon/gun/energy/vepr/plasma,
+/obj/item/weapon/gun/energy/imperial,
+/turf/simulated/floor/tiled/red,
+/area/awaymission/mol/security)
 "YW" = (
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15;
@@ -6661,6 +7390,10 @@
 /area/awaymission/mol/medical)
 "Zs" = (
 /obj/machinery/honey_extractor,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 9
+	},
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/awaymission/mol/kitchen/chamberA)
 "Zv" = (
@@ -8112,7 +8845,7 @@ xd
 xd
 xd
 xd
-xd
+tB
 xd
 xd
 of
@@ -11962,7 +12695,7 @@ yu
 of
 xd
 xd
-xd
+tB
 xd
 xd
 xd
@@ -13788,7 +14521,7 @@ cW
 Jb
 Jb
 Jb
-Jb
+Xb
 Jb
 Jb
 of
@@ -14529,7 +15262,7 @@ zo
 WH
 WH
 WH
-WH
+Vc
 WH
 WH
 df
@@ -14771,7 +15504,7 @@ Nh
 Nh
 of
 WH
-WH
+Vc
 WH
 WH
 WH
@@ -14870,7 +15603,7 @@ ch
 ch
 ch
 Nh
-ch
+Nh
 Nh
 Nh
 Nh
@@ -18171,7 +18904,7 @@ cW
 cW
 cW
 aI
-aI
+aa
 aI
 Jb
 Jb
@@ -18899,7 +19632,7 @@ Nh
 Nh
 of
 WH
-WH
+Vc
 zo
 uJ
 uJ
@@ -19187,7 +19920,7 @@ of
 Jb
 Jb
 Jb
-Jb
+Xb
 Jb
 Jb
 Jb
@@ -20828,7 +21561,7 @@ uc
 bF
 bF
 uc
-uc
+Ta
 bF
 bF
 RW
@@ -21086,7 +21819,7 @@ HX
 HX
 HX
 HX
-uc
+Ta
 vP
 HX
 HX
@@ -21299,7 +22032,7 @@ Ph
 Gj
 Gj
 XM
-Nh
+tG
 Nh
 Nh
 Nh
@@ -21344,7 +22077,7 @@ HX
 sf
 zu
 HX
-uc
+Ta
 zu
 HX
 HX
@@ -21556,12 +22289,12 @@ TL
 Ph
 Gj
 Gj
-XM
-Nh
-Nh
-Nh
-Nh
-Nh
+zr
+Va
+dm
+dm
+dm
+VJ
 Nh
 Nh
 Nh
@@ -21602,7 +22335,7 @@ HX
 zu
 zu
 HX
-uc
+Ta
 zu
 HX
 HX
@@ -21815,11 +22548,11 @@ Ph
 Gj
 Gj
 XM
+tG
 Nh
 Nh
 Nh
-Nh
-Nh
+NB
 Nh
 Nh
 Nh
@@ -21860,7 +22593,7 @@ HX
 zu
 zu
 HX
-uc
+Ta
 MW
 HX
 HX
@@ -22077,7 +22810,7 @@ Nh
 Nh
 Nh
 Nh
-Nh
+NB
 Nh
 Nh
 Nh
@@ -22118,7 +22851,7 @@ HX
 zu
 zu
 HX
-uc
+Ta
 zu
 Cc
 HX
@@ -22267,7 +23000,7 @@ TZ
 TZ
 lU
 TZ
-TZ
+bh
 DN
 TZ
 TZ
@@ -22335,7 +23068,7 @@ Nh
 Nh
 Nh
 Nh
-Nh
+NB
 Nh
 Nh
 Nh
@@ -22376,7 +23109,7 @@ HX
 zu
 zu
 rl
-uc
+Ta
 zu
 HX
 HX
@@ -22593,7 +23326,7 @@ Nh
 Nh
 Nh
 Nh
-Nh
+NB
 Nh
 Nh
 Nh
@@ -22634,7 +23367,7 @@ HX
 zu
 zu
 HX
-uc
+Ta
 zu
 HX
 HX
@@ -22851,7 +23584,7 @@ Nh
 Nh
 Nh
 Nh
-Nh
+NB
 Nh
 Nh
 Nh
@@ -22892,7 +23625,7 @@ HX
 zu
 zu
 mq
-uc
+Ta
 zu
 HX
 HX
@@ -23109,7 +23842,7 @@ Nh
 Nh
 Nh
 Nh
-Nh
+NB
 Nh
 Nh
 Nh
@@ -23150,7 +23883,7 @@ HX
 zu
 zu
 HX
-uc
+Ta
 zu
 HX
 HX
@@ -23367,7 +24100,7 @@ Nh
 Nh
 Nh
 Nh
-Nh
+NB
 Nh
 Nh
 Nh
@@ -23408,7 +24141,7 @@ rl
 fQ
 zu
 HX
-uc
+Ta
 zu
 HX
 HX
@@ -23625,7 +24358,7 @@ Nh
 Nh
 Nh
 Nh
-Nh
+NB
 Nh
 Nh
 Nh
@@ -23666,7 +24399,7 @@ HX
 zu
 zu
 HX
-uc
+Ta
 MW
 Lj
 HX
@@ -23860,17 +24593,17 @@ yu
 yu
 yu
 yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
+of
+of
+of
+of
+of
+of
+of
+of
+of
+of
+of
 yu
 yu
 yu
@@ -23883,7 +24616,7 @@ Nh
 Nh
 Nh
 Nh
-Nh
+NB
 Nh
 Nh
 Nh
@@ -23924,7 +24657,7 @@ HX
 zu
 zu
 HX
-uc
+Ta
 zu
 HX
 HX
@@ -24118,30 +24851,30 @@ yu
 yu
 yu
 yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-vM
-If
-If
-If
-vM
-Nh
-Nh
-Nh
-Nh
-Nh
+of
+OP
+OP
+OP
+OP
+OP
+OP
+df
+Br
+DF
+Mx
+iV
+iV
+iV
+GL
+Bo
+Bo
+Bo
+GL
+dm
+dm
+dm
+dm
+Ja
 Nh
 Nh
 Nh
@@ -24182,7 +24915,7 @@ HX
 zu
 zu
 rl
-uc
+Ta
 zu
 HX
 HX
@@ -24376,17 +25109,17 @@ yu
 yu
 yu
 yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
+of
+OP
+OP
+OP
+OP
+OP
+OP
+df
+df
+df
+of
 yu
 yu
 yu
@@ -24440,7 +25173,7 @@ rl
 zu
 zu
 HX
-uc
+Ta
 MW
 HX
 eL
@@ -24634,17 +25367,17 @@ yu
 yu
 yu
 yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
+of
+OP
+OP
+OP
+OP
+OP
+OP
+df
+df
+df
+of
 yu
 yu
 yu
@@ -24698,7 +25431,7 @@ HX
 zu
 zu
 HX
-uc
+Ta
 zu
 HX
 HX
@@ -24892,17 +25625,17 @@ yu
 yu
 yu
 yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
+of
+df
+df
+df
+OP
+OP
+OP
+OP
+pY
+OP
+of
 yu
 yu
 yu
@@ -24956,7 +25689,7 @@ HX
 zu
 zu
 HX
-uc
+Ta
 zu
 HX
 HX
@@ -25150,17 +25883,17 @@ yu
 yu
 yu
 yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
+of
+df
+rE
+df
+OP
+OP
+OP
+OP
+pY
+OP
+of
 yu
 yu
 yu
@@ -25214,7 +25947,7 @@ HX
 lW
 Cc
 HX
-uc
+Ta
 HX
 HX
 HX
@@ -25408,17 +26141,17 @@ yu
 yu
 yu
 yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
+of
+df
+df
+df
+OP
+OP
+OP
+OP
+pY
+OP
+of
 yu
 yu
 yu
@@ -25472,7 +26205,7 @@ Cy
 Cy
 Cy
 Cy
-Cy
+Jw
 Cy
 Cy
 Cy
@@ -25630,7 +26363,7 @@ TZ
 TZ
 Uk
 TZ
-TZ
+bh
 TZ
 TZ
 TZ
@@ -25666,17 +26399,17 @@ of
 of
 of
 of
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
+of
+OP
+OP
+OP
+OP
+OP
+OP
+df
+df
+df
+of
 yu
 yu
 yu
@@ -25730,7 +26463,7 @@ dc
 fu
 zL
 dc
-Cy
+Jw
 IV
 dc
 dc
@@ -25924,17 +26657,17 @@ aA
 aA
 UD
 of
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
+of
+OP
+OP
+OP
+OP
+OP
+OP
+df
+df
+df
+of
 yu
 yu
 yu
@@ -25988,7 +26721,7 @@ dc
 qL
 zs
 dc
-Cy
+Jw
 Ok
 dc
 dc
@@ -26153,7 +26886,7 @@ TZ
 TZ
 TZ
 TZ
-TZ
+bh
 XE
 Ah
 TZ
@@ -26182,71 +26915,71 @@ aA
 pE
 aA
 of
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-vM
-If
-If
-If
-vM
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-NB
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-HF
-zv
-zv
-zv
-HF
-pK
-pK
-pK
-Cy
-dc
-zs
-dc
-dc
-zs
-dc
-dc
-zs
-Jw
-dc
-zs
-zs
-dc
-Cy
+of
+OP
+OP
+OP
+OP
+OP
+OP
+df
+df
+mD
+Mx
+iV
+iV
+iV
+GL
+Bo
+Bo
+Bo
+GL
+dm
+dm
+dm
+dm
+dm
+dm
+dm
+dm
+dm
+dm
+Dq
+dm
+dm
+dm
+dm
+dm
+dm
+dm
+dm
+dm
+dm
+dm
+dm
+Aj
+Qf
+Qf
+Qf
+Aj
+RN
+RN
+RN
+qj
+og
+yY
+og
+og
+yY
+og
+og
+yY
+GR
+og
+yY
+yY
+og
+kZ
 Ok
 dc
 dc
@@ -26440,17 +27173,17 @@ Vp
 aA
 aA
 of
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
-yu
+of
+of
+of
+of
+of
+of
+of
+of
+of
+of
+of
 yu
 yu
 yu
@@ -27951,7 +28684,7 @@ Ah
 TZ
 TZ
 TZ
-lU
+tD
 TZ
 TZ
 TZ
@@ -36505,6 +37238,7 @@ Nh
 iA
 iA
 iA
+kC
 iA
 iA
 iA
@@ -36512,8 +37246,7 @@ iA
 iA
 iA
 iA
-iA
-iA
+it
 iA
 iA
 iA
@@ -36762,17 +37495,17 @@ Nh
 Nh
 iA
 dJ
+dP
 Yj
-fZ
-Yj
+dP
 dJ
 iA
 iA
 iA
 dJ
+dP
 Yj
-fZ
-Yj
+dP
 dJ
 iA
 Nh
@@ -37536,17 +38269,17 @@ Nh
 Nh
 iA
 iA
+LS
 Yj
-Yj
-Yj
+LS
 iA
 iA
 iA
 iA
 iA
+LS
 Yj
-Yj
-Yj
+LS
 iA
 iA
 Nh
@@ -37731,7 +38464,7 @@ YJ
 tX
 Pr
 MP
-IT
+cd
 tX
 Dw
 TO
@@ -38040,16 +38773,16 @@ rt
 rt
 rt
 Ae
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
+eD
+iA
+iA
+iA
+iA
+iA
+eD
+eD
+iA
+iA
 iA
 iA
 iA
@@ -38298,18 +39031,18 @@ rt
 rt
 rt
 Ae
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
 iA
 iA
+lM
+YT
+mo
+iA
+iA
+iA
+iA
+Ke
+wn
+Ke
 iA
 CO
 iA
@@ -38556,18 +39289,18 @@ rt
 rt
 rt
 Ae
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
 iA
-dI
+lM
+Yj
+Yj
+Yj
+JB
+Bp
+RC
+yz
+Yj
+Yj
+Yj
 Yj
 Yj
 Yj
@@ -38814,18 +39547,18 @@ rt
 rt
 Qh
 Ae
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
 iA
-CL
+Yf
+Yj
+Yj
+Yj
+Ux
+Bp
+RC
+Uc
+Yj
+Yj
+Yj
 Yj
 Yj
 Yj
@@ -39072,18 +39805,18 @@ rt
 rt
 rt
 Ae
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
 iA
-dI
+fg
+Yj
+Yj
+Yj
+QE
+Bp
+RC
+jB
+Yj
+Yj
+Yj
 Yj
 Yj
 Yj
@@ -39330,18 +40063,18 @@ rt
 rt
 rt
 Ae
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
 iA
 iA
+fg
+Ll
+jT
+iA
+iA
+iA
+iA
+Ke
+JW
+Ke
 iA
 Bn
 iA
@@ -39588,16 +40321,16 @@ rt
 rt
 rt
 Ae
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
-Nh
+eD
+iA
+iA
+iA
+iA
+iA
+eD
+eD
+iA
+iA
 iA
 iA
 iA
@@ -40116,17 +40849,17 @@ Nh
 Nh
 iA
 iA
+dP
 Yj
-Yj
-Yj
+dP
 iA
 iA
 iA
 iA
 iA
+dP
 Yj
-Yj
-Yj
+dP
 iA
 iA
 Nh
@@ -40890,17 +41623,17 @@ Nh
 Nh
 iA
 dJ
+LS
 Yj
-Ii
-Yj
+LS
 dJ
 iA
 iA
 iA
 qP
+LS
 Yj
-Ii
-Yj
+LS
 qP
 iA
 Nh
@@ -41149,6 +41882,7 @@ Nh
 iA
 iA
 iA
+Vh
 iA
 iA
 iA
@@ -41156,8 +41890,7 @@ iA
 iA
 iA
 iA
-iA
-iA
+jc
 iA
 iA
 iA
@@ -43218,15 +43951,15 @@ Zs
 Vu
 lm
 PW
-Ad
-Ad
+Kz
+Kz
 Mw
-Ad
-Ad
+Kz
+Kz
 PW
 lm
 Vu
-Zs
+iH
 is
 tN
 tN
@@ -43472,6 +44205,7 @@ Cd
 Cd
 Cd
 is
+fB
 Jo
 Jo
 Jo
@@ -43483,18 +44217,17 @@ Jo
 Jo
 Jo
 Jo
-Jo
-Jo
+oX
 is
 RH
-xq
-hS
-xq
-xq
-xq
-xq
+Ub
+Bs
+wO
+wO
+wO
+wO
 Md
-xq
+aJ
 QS
 is
 Nh
@@ -43730,7 +44463,7 @@ Cd
 Cd
 Cd
 is
-Jo
+fB
 Ad
 Jo
 Ad
@@ -43742,17 +44475,17 @@ Jo
 Ad
 Jo
 Ad
-Jo
+oX
 is
 RH
-xq
+lf
 yp
-db
-db
-db
-db
+Xa
+Xa
+Xa
+Xa
 cc
-xq
+jI
 QS
 is
 Nh
@@ -43988,6 +44721,7 @@ Cd
 Cd
 Cd
 is
+fB
 Jo
 Jo
 Jo
@@ -43999,18 +44733,17 @@ Jo
 Jo
 Jo
 Jo
-Jo
-Jo
+oX
 is
 RH
-xq
-xq
-xq
-xq
-xq
-xq
-hS
-xq
+XQ
+dI
+dI
+dI
+dI
+fz
+CL
+jI
 QS
 is
 Nh
@@ -44266,9 +44999,9 @@ LO
 LO
 rm
 LO
-xq
-hS
-xq
+lf
+CL
+jI
 QS
 is
 Nh
@@ -44504,19 +45237,19 @@ Cd
 Cd
 Cd
 is
+ie
 RP
 RP
 RP
 RP
-RP
-Jo
-Jo
-Jo
-RP
+qS
+qS
+qS
 RP
 RP
 RP
 RP
+Ov
 is
 is
 is
@@ -44524,9 +45257,9 @@ is
 is
 is
 qO
-xq
-hS
-xq
+lf
+CL
+jI
 QS
 is
 Nh
@@ -44783,7 +45516,7 @@ Mc
 is
 RH
 eR
-hS
+CL
 bH
 QS
 is
@@ -45040,9 +45773,9 @@ oI
 oI
 is
 RH
-xq
-hS
-xq
+lf
+CL
+jI
 QS
 is
 Nh
@@ -45298,9 +46031,9 @@ Mc
 Mc
 xq
 RH
-xq
-hS
-xq
+lf
+CL
+jI
 QS
 is
 Nh
@@ -45556,9 +46289,9 @@ oI
 oI
 xq
 RH
-xq
-hS
-xq
+lf
+CL
+jI
 QS
 is
 Nh
@@ -45630,8 +46363,8 @@ ch
 ch
 ch
 Nh
-ch
-ch
+Nh
+Nh
 Nh
 Nh
 Nh
@@ -45814,9 +46547,9 @@ Mc
 Mc
 xq
 RH
-xq
-hS
-xq
+lf
+CL
+jI
 QS
 is
 Nh
@@ -46072,9 +46805,9 @@ oI
 oI
 is
 RH
-xq
-hS
-xq
+lf
+CL
+jI
 QS
 is
 Nh
@@ -46330,9 +47063,9 @@ Mc
 Mc
 is
 RH
-xq
-hS
-xq
+lf
+CL
+jI
 QS
 is
 Nh
@@ -46588,9 +47321,9 @@ is
 is
 is
 qO
-Oy
-hS
-xq
+jw
+CL
+jI
 QS
 is
 Nh
@@ -46846,9 +47579,9 @@ tN
 tN
 zl
 RH
-xq
-hS
-xq
+lf
+CL
+jI
 QS
 is
 Nh
@@ -47085,27 +47818,27 @@ Cd
 Cd
 is
 RH
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-hS
+Ub
+wO
+wO
+wO
+wO
+wO
+wO
+wO
+wO
+wO
+wO
+wO
+wO
+wO
+wO
+wO
+wO
+wO
+wO
+ud
+CL
 Oy
 QS
 is
@@ -47343,28 +48076,28 @@ Cd
 Cd
 is
 RH
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
+lf
+CF
+CF
+CF
+CF
+CF
+CF
+CF
+CF
+CF
+CF
+CF
+CF
+CF
+CF
+CF
+CF
+CF
+CF
+CF
 bg
-xq
+jI
 QS
 is
 Nh
@@ -47601,28 +48334,28 @@ Cd
 Cd
 is
 RH
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-hS
-xq
+lf
+CF
+Ns
+dI
+dI
+dI
+dI
+dI
+dI
+dI
+dI
+dI
+dI
+dI
+dI
+dI
+dI
+dI
+dI
+dI
+Hl
+AE
 QS
 is
 Nh
@@ -47859,9 +48592,9 @@ Cd
 Cd
 is
 RH
-xq
-xq
-xq
+lf
+CF
+jI
 QS
 rm
 LO
@@ -48117,9 +48850,9 @@ Cd
 Cd
 is
 Vd
-xq
-xq
-xq
+lf
+CF
+jI
 ni
 is
 is
@@ -48375,9 +49108,9 @@ Cd
 Cd
 is
 RH
-xq
-xq
-xq
+lf
+CF
+jI
 QS
 is
 Zo
@@ -48633,9 +49366,9 @@ Cd
 Cd
 is
 RH
-qd
-db
-db
+sc
+Xa
+Bm
 MO
 kJ
 Eb
@@ -48892,8 +49625,8 @@ Cd
 is
 RH
 hS
-xq
-xq
+CF
+jI
 QS
 xq
 Zo
@@ -49150,8 +49883,8 @@ Cd
 is
 RH
 hS
-xq
-xq
+CF
+jI
 QS
 oG
 SB
@@ -49408,8 +50141,8 @@ Cd
 is
 RH
 hS
-xq
-xq
+CF
+jI
 QS
 xq
 Zo
@@ -49666,8 +50399,8 @@ Cd
 is
 RH
 hS
-xq
-xq
+CF
+jI
 QS
 is
 SB
@@ -49924,8 +50657,8 @@ Cd
 is
 RH
 hS
-xq
-xq
+CF
+jI
 QS
 is
 Zo
@@ -50182,8 +50915,8 @@ Cd
 is
 Vd
 TV
-xq
-oG
+CF
+Rc
 ni
 is
 VG
@@ -50440,23 +51173,23 @@ Cd
 is
 RH
 hS
-xq
-xq
+CF
+jI
 QS
 is
 at
 sK
-HG
+kA
 sK
-HG
+kA
 sK
-HG
+kA
 sK
-HG
+kA
 sK
-HG
+kA
 sK
-UB
+GG
 Zo
 Zo
 Zo
@@ -50698,22 +51431,22 @@ Cd
 is
 RH
 hS
-xq
-xq
+CF
+jI
 QS
 is
-sK
-sK
-sK
-sK
-sK
-sK
-sK
-sK
-sK
-sK
-sK
-sK
+Xd
+wK
+wK
+wK
+wK
+wK
+wK
+wK
+wK
+wK
+wK
+wK
 UB
 hw
 SB
@@ -50956,23 +51689,23 @@ Cd
 is
 RH
 hS
-xq
-xq
+CF
+jI
 QS
 is
 gH
-sK
+wK
 HG
-sK
+wK
 HG
-sK
+wK
 HG
-sK
+wK
 HG
-sK
+wK
 HG
-sK
-sK
+wK
+GD
 Zo
 Zo
 Zo
@@ -51214,15 +51947,15 @@ Cd
 is
 RH
 hS
-xq
-xq
+CF
+jI
 QS
 is
-sK
-sK
-sK
-sK
-sK
+Xd
+wK
+wK
+wK
+wK
 sB
 Fa
 Fa
@@ -51472,23 +52205,23 @@ Cd
 is
 RH
 hS
-xq
-xq
+CF
+jI
 QS
 is
 tl
-sK
-HG
-sK
-HG
+Qe
+IO
+Qe
+IO
 ql
-HG
-sK
-HG
-sK
-HG
-sK
-UB
+IO
+Qe
+IO
+Qe
+IO
+Qe
+nS
 Zo
 Zo
 sh
@@ -51730,8 +52463,8 @@ Cd
 is
 Vd
 hS
-xq
-xq
+CF
+jI
 ni
 is
 VG
@@ -51988,8 +52721,8 @@ Cd
 is
 RH
 hS
-xq
-xq
+CF
+jI
 QS
 is
 Zo
@@ -52246,8 +52979,8 @@ Cd
 is
 RH
 TV
-xq
-oG
+CF
+Rc
 QS
 is
 SB
@@ -52504,8 +53237,8 @@ Cd
 is
 RH
 hS
-xq
-xq
+CF
+jI
 QS
 xq
 Zo
@@ -52762,8 +53495,8 @@ Cd
 is
 RH
 hS
-xq
-xq
+CF
+jI
 QS
 oG
 SB
@@ -53020,8 +53753,8 @@ Cd
 is
 RH
 hS
-xq
-xq
+CF
+jI
 QS
 xq
 Zo
@@ -53278,8 +54011,8 @@ Cd
 is
 RH
 hS
-xq
-xq
+CF
+jI
 QS
 is
 SB
@@ -53536,8 +54269,8 @@ Cd
 is
 RH
 hS
-xq
-xq
+CF
+jI
 QS
 is
 Zo
@@ -53794,8 +54527,8 @@ Cd
 is
 Vd
 hS
-xq
-xq
+CF
+jI
 ni
 is
 is
@@ -54052,8 +54785,8 @@ Cd
 is
 RH
 hS
-xq
-xq
+CF
+jI
 tN
 zl
 tN
@@ -54310,27 +55043,27 @@ Cd
 is
 RH
 hS
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-hS
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-hS
-xq
+CF
+vQ
+wO
+wO
+wO
+wO
+wO
+wO
+wO
+Bs
+wO
+wO
+wO
+wO
+wO
+wO
+wO
+wO
+wO
+Bs
+aJ
 QS
 is
 jz
@@ -54568,27 +55301,27 @@ Cd
 is
 RH
 hS
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-hS
+CF
+CF
+CF
+CF
+CF
+CF
+CF
+CF
+CF
+CL
 tf
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-hS
-xq
+CF
+CF
+CF
+CF
+CF
+CF
+CF
+CF
+CL
+jI
 QS
 is
 jz
@@ -54825,28 +55558,28 @@ Cd
 Cd
 is
 RH
-hS
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-hS
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-hS
-xq
+vd
+dI
+dI
+dI
+dI
+dI
+dI
+dI
+dI
+dI
+Hl
+dI
+dI
+dI
+dI
+dI
+dI
+dI
+dI
+fz
+CL
+jI
 QS
 is
 jz
@@ -55102,9 +55835,9 @@ LO
 LO
 rm
 LO
-xq
-hS
-xq
+lf
+CL
+jI
 QS
 is
 jz
@@ -55360,9 +56093,9 @@ is
 is
 is
 qO
-xq
-hS
-xq
+lf
+CL
+jI
 QS
 is
 Nh
@@ -55618,9 +56351,9 @@ zC
 zC
 is
 RH
-xq
-hS
-xq
+lf
+CL
+jI
 QS
 is
 Nh
@@ -55876,9 +56609,9 @@ Er
 zC
 is
 RH
-xq
-hS
-xq
+lf
+CL
+jI
 QS
 is
 Nh
@@ -56134,9 +56867,9 @@ qb
 zC
 Cx
 RH
-xq
-hS
-xq
+lf
+CL
+jI
 QS
 is
 BA
@@ -56392,9 +57125,9 @@ qb
 zC
 Cx
 RH
-xq
-hS
-xq
+lf
+CL
+jI
 QS
 is
 BA
@@ -56650,9 +57383,9 @@ qb
 zC
 Cx
 RH
-xq
-hS
-xq
+lf
+CL
+jI
 QS
 is
 BA
@@ -56908,9 +57641,9 @@ qb
 zC
 is
 RH
-xq
-hS
-xq
+lf
+CL
+jI
 QS
 is
 BA
@@ -57166,9 +57899,9 @@ zC
 zC
 is
 RH
-xq
-hS
-xq
+lf
+CL
+jI
 QS
 is
 BA
@@ -57424,9 +58157,9 @@ is
 is
 is
 qO
-xq
-hS
-xq
+lf
+CL
+jI
 QS
 is
 BA
@@ -57683,8 +58416,8 @@ gn
 IZ
 RH
 uF
-hS
-uF
+CL
+jV
 QS
 is
 BA
@@ -57921,28 +58654,28 @@ GP
 GP
 cj
 RH
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-hS
-xq
+Ub
+wO
+wO
+wO
+wO
+wO
+wO
+wO
+wO
+wO
+wO
+wO
+wO
+wO
+wO
+wO
+wO
+wO
+wO
+ud
+CL
+jI
 QS
 is
 BA
@@ -58179,28 +58912,28 @@ GP
 GP
 cj
 RH
-xq
+lf
 qd
-db
-db
-db
-db
-db
-db
-db
-db
-db
-db
-db
-db
-db
-db
-db
-db
-db
-db
+Xa
+Xa
+Xa
+Xa
+Xa
+Xa
+Xa
+Xa
+Xa
+Xa
+Xa
+Xa
+Xa
+Xa
+Xa
+Xa
+Xa
+Xa
 hE
-xq
+jI
 QS
 is
 BA
@@ -58437,28 +59170,28 @@ GP
 GP
 cj
 RH
-xq
-hS
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
-xq
+lf
+CL
+Ns
+dI
+dI
+dI
+dI
+dI
+dI
+dI
+dI
+dI
+dI
+dI
+dI
+dI
+dI
+dI
+dI
+dI
+dI
+AE
 QS
 is
 Nh
@@ -58695,9 +59428,9 @@ jf
 jf
 is
 RH
-xq
+lf
 JJ
-xq
+jI
 QS
 rm
 LO
@@ -58954,8 +59687,8 @@ TE
 is
 qO
 uF
-hS
-uF
+CL
+jV
 ni
 is
 is
@@ -59211,9 +59944,9 @@ TE
 TE
 is
 RH
-xq
-hS
-xq
+lf
+CL
+jI
 QS
 is
 zC
@@ -59469,9 +60202,9 @@ TE
 TE
 is
 RH
-xq
-hS
-xq
+lf
+CL
+jI
 QS
 is
 zC
@@ -59727,9 +60460,9 @@ TE
 TE
 is
 RH
-xq
-hS
-xq
+lf
+CL
+jI
 QS
 xq
 QP
@@ -59985,9 +60718,9 @@ TE
 TE
 is
 RH
-xq
+lf
 GY
-db
+Bm
 MO
 db
 qF
@@ -60243,9 +60976,9 @@ TE
 TE
 is
 RH
-xq
-xq
-xq
+lf
+CF
+jI
 QS
 xq
 QP
@@ -60501,9 +61234,9 @@ TE
 TE
 is
 RH
-xq
-xq
-xq
+lf
+CF
+jI
 QS
 is
 zC
@@ -60759,9 +61492,9 @@ TE
 TE
 is
 RH
-xq
-xq
-xq
+lf
+CF
+jI
 QS
 is
 zC
@@ -61017,22 +61750,22 @@ TE
 TE
 is
 qO
-xq
-xq
-xq
+lf
+CF
+jI
 AX
 is
 SL
 SL
 dw
+uM
 Nb
-Nb
 SL
 SL
 SL
 SL
 Nb
-WR
+ug
 Nb
 SL
 SL
@@ -61275,9 +62008,9 @@ TE
 TE
 is
 RH
-xq
-xq
-xq
+lf
+CF
+jI
 QS
 is
 KY
@@ -61533,9 +62266,9 @@ TE
 TE
 is
 RH
-xq
-xq
-xq
+lf
+CF
+jI
 QS
 is
 KY
@@ -61791,9 +62524,9 @@ TE
 TE
 is
 RH
-xq
-xq
-xq
+lf
+CF
+jI
 QS
 is
 Wk
@@ -62049,9 +62782,9 @@ TE
 TE
 is
 RH
-xq
-xq
-xq
+lf
+CF
+jI
 QS
 is
 lz
@@ -62307,9 +63040,9 @@ TE
 TE
 is
 qO
-xq
-xq
-xq
+lf
+CF
+jI
 AX
 is
 Wk
@@ -62565,9 +63298,9 @@ TE
 TE
 is
 RH
-xq
-xq
-xq
+XQ
+dI
+AE
 QS
 is
 KY
@@ -63081,9 +63814,9 @@ TE
 TE
 is
 is
-xq
-xq
-xq
+DS
+DS
+DS
 is
 is
 is
