@@ -253,6 +253,7 @@
 	name = special_name ? junk_names[junk] : "important [initial(name)]"
 
 	junk = new junk(src)
+	update_icon()
 	return TRUE
 
 /obj/item/weapon/paper/fluff/junkmail_generic/Initialize()
