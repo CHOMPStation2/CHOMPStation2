@@ -85,7 +85,7 @@
  * * ignore_prefs - CHANGE_ME. Default: FALSE
  * * aura_animation - CHANGE_ME. Default: TRUE
  */
-/mob/living/proc/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = TRUE)
+/mob/living/proc/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = FALSE) //CHOMPEdit - Disable aura_animation. Too expensive for something you can't even see.
 	if(!uncapped)
 		new_size = clamp(new_size, RESIZE_MINIMUM, RESIZE_MAXIMUM)
 		var/datum/component/resize_guard/guard = GetComponent(/datum/component/resize_guard)
@@ -134,7 +134,7 @@
 	else
 		update_transform() //Lame way
 
-/mob/living/carbon/human/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = TRUE)
+/mob/living/carbon/human/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = FALSE) //CHOMPEdit - Disable aura_animation. Too expensive for something you can't even see.
 	if(!resizable && !ignore_prefs)
 		return 1
 	. = ..()
