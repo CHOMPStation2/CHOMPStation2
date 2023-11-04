@@ -3,3 +3,6 @@
   - rscadd: SWOOPIE XL catalouge data
   - bugfix: fixes swoopies checking if they were dead to do stuff when they should've
       been checking if they were alive
+2023-11-04:
+  FluffMedic:
+  - maptweak: weird lab gateway be different
