@@ -105,9 +105,6 @@
 	name = "Desatti jaffa cake crate"
 	cost = 25
 	containertype = /obj/structure/closet/crate/freezer
-<<<<<<< HEAD
-	containername = "Desatti jaffa cake crate"
-=======
 	containername = "Desatti jaffa cake crate"
 
 /datum/supply_pack/randomised/hospitality/sweets
@@ -123,4 +120,3 @@
 	cost = 25
 	containertype = /obj/structure/closet/crate/freezer
 	containername = "Sweets crate"
->>>>>>> da408ad37e... Merge pull request #15487 from SatinIsle/desatti-foods
