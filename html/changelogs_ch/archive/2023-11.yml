@@ -7,5 +7,7 @@
   FluffMedic:
   - maptweak: weird lab gateway be different
 2023-11-05:
+  ReoDaProtovali:
+  - bugfix: Fixes swoopie AI behavior when player controlled
   purplefoxy27:
   - rscadd: Add weight mechanics to remaining gym machines and punching bags.
