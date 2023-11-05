@@ -9,5 +9,7 @@
 2023-11-05:
   ReoDaProtovali:
   - bugfix: Fixes swoopie AI behavior when player controlled
+  TheGreatKitsune:
+  - bugfix: Hitting X to close reset prompt is no longer counted as hitting yes.
   purplefoxy27:
   - rscadd: Add weight mechanics to remaining gym machines and punching bags.
