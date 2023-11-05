@@ -91,15 +91,11 @@
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX, LANGUAGE_PROMETHEAN)
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair, /mob/living/carbon/human/proc/water_stealth, /mob/living/carbon/human/proc/underwater_devour)
 	min_age = 18
-<<<<<<< HEAD
-	max_age = 110
-
+	//max_age = 80
+	max_age = 110 //CHOMPedit
+	digi_allowed = TRUE
 	// male_scream_sound = null //CHOMPedit
 	// female_scream_sound = null //CHOMPedit
-=======
-	max_age = 80
-	digi_allowed = TRUE
->>>>>>> 6321fe46de... Merge pull request #15464 from KillianKirilenko/kk-leggies
 
 	blurb = "The Akula are a species of amphibious humanoids like the Skrell, but have an appearance very similar to that of a shark. \
 	They were first discovered as a primitive race of underwater dwelling tribal creatures by the Skrell. At first they were not believed \
@@ -152,16 +148,12 @@
 		/mob/living/proc/start_wings_hovering,
 		/mob/living/carbon/human/proc/tie_hair)
 	min_age = 18
-<<<<<<< HEAD
-	max_age = 110
-
+	//max_age = 80
+	max_age = 110 //CHOMPedit
+	digi_allowed = TRUE
 	// male_scream_sound = null //CHOMPedit
 	// female_scream_sound = null //CHOMPedit
 	// CHOMPEdit Start: Missing Sounds, so none for this race.
-=======
-	max_age = 80
-	digi_allowed = TRUE
->>>>>>> 6321fe46de... Merge pull request #15464 from KillianKirilenko/kk-leggies
 
 	blurb = "Nevreans are a race of avian and dinosaur-like creatures living on Tal. They belong to a group of races that hails from Eltus, \
 	in the Vilous system. Unlike sergals whom they share a star system with, their species is a very peaceful one. They possess remarkable \
@@ -205,11 +197,8 @@
 	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds,
 		/mob/living/proc/shred_limb,
 		/mob/living/carbon/human/proc/tie_hair)
-<<<<<<< HEAD
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)	//AEIOU edit: Zorren can speak Terminus unassisted.
-=======
 	digi_allowed = TRUE
->>>>>>> 6321fe46de... Merge pull request #15464 from KillianKirilenko/kk-leggies
 
 	min_age = 18
 	max_age = 110

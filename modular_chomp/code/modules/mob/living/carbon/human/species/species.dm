@@ -15,8 +15,6 @@
 	var/grab_power_self = 0
 	var/waking_speed = 1
 	var/mudking = FALSE
-	var/icodigi = 'modular_chomp/icons/mob/human_races/r_digi.dmi'
-	var/digi_allowed = FALSE
 	var/vanity_base_fit //when shapeshifting using vanity_copy_to, this allows you to have add something so they can go back to their original species fit
 
 // Handles non-standard eyes when using a species that utilizes a custom base icon set.

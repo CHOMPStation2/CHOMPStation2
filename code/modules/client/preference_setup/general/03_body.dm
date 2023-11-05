@@ -130,7 +130,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	S["Wingdings"]			>> pref.wingdings //YWadd start
 	S["colorblind_mono"]	>> pref.colorblind_mono
 	S["colorblind_vulp"]	>> pref.colorblind_vulp
-	S["colorblind_taj"] 	>> pref.colorblind_taj 
+	S["colorblind_taj"] 	>> pref.colorblind_taj
 	S["haemophilia"]        >> pref.haemophilia //YWadd end
 	S["ear_style"]		>> pref.ear_style
 	S["r_ears"]			>> pref.r_ears
@@ -201,7 +201,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	S["Wingdings"]          << pref.wingdings //YWadd start
 	S["colorblind_mono"]	<< pref.colorblind_mono
 	S["colorblind_vulp"]	<< pref.colorblind_vulp
-	S["colorblind_taj"] 	<< pref.colorblind_taj 
+	S["colorblind_taj"] 	<< pref.colorblind_taj
 	S["haemophilia"]        << pref.haemophilia //YWadd end
 	S["ear_style"]		<< pref.ear_style
 	S["r_ears"]			<< pref.r_ears
@@ -381,7 +381,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	character.g_wing3 =    pref.g_wing3
 
 	character.set_gender(pref.biological_gender)
-  
+
 	if(pref.species == "Grey")//YWadd START
 		character.wingdings = pref.wingdings
 
@@ -396,8 +396,8 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 	if(pref.haemophilia == 1)
 		character.add_modifier(/datum/modifier/trait/haemophilia)
-	//YWadd END	
-  
+	//YWadd END
+
 	// Destroy/cyborgize organs and limbs.
 	//VOREStation Edit
 	character.synthetic = pref.species == "Protean" ? all_robolimbs["protean"] : null //Clear the existing var. (unless protean, then switch it to the normal protean limb)
@@ -622,12 +622,8 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		. += "<br><b>Body Color</b><br>"
 		. += "<a href='?src=\ref[src];skin_color=1'>Change Color</a> [color_square(pref.r_skin, pref.g_skin, pref.b_skin)]<br>"
 
-<<<<<<< HEAD
-	. += chomp_custom_additions_body(user, mob_species) //CHOMPEdit - add custom chomp specific body customisation data with this proc.
-=======
 	if(mob_species.digi_allowed)
 		. += "<br><b>Digitigrade?:</b> <a href='?src=\ref[src];digitigrade=1'><b>[pref.digitigrade ? "Yes" : "No"]</b></a><br>"
->>>>>>> 6321fe46de... Merge pull request #15464 from KillianKirilenko/kk-leggies
 
 	. += "<h2>Genetics Settings</h2>"
 
@@ -790,7 +786,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			pref.g_hair = hex2num(copytext(new_hair, 4, 6))
 			pref.b_hair = hex2num(copytext(new_hair, 6, 8))
 			return TOPIC_REFRESH_UPDATE_PREVIEW
-			
+
 	else if(href_list["grad_color"])
 		if(!has_flag(mob_species, HAS_HAIR_COLOR))
 			return TOPIC_NOACTION
@@ -818,7 +814,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		if(new_h_style && CanUseTopic(user))
 			pref.h_style = new_h_style
 			return TOPIC_REFRESH_UPDATE_PREVIEW
-			
+
 	else if(href_list["grad_style"])
 		var/list/valid_gradients = GLOB.hair_gradients
 
@@ -1269,7 +1265,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	else if(href_list["cycle_bg"])
 		pref.bgstate = next_in_list(pref.bgstate, pref.bgstate_options)
 		return TOPIC_REFRESH_UPDATE_PREVIEW
-		
+
 	//YW Add Start
 
 	else if(href_list["wingdings"])
