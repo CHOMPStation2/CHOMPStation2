@@ -16,7 +16,7 @@ if [ "$TG_BOOTSTRAP_CACHE" ]; then
 fi
 OldPWD="$PWD"
 cd "$Bootstrap/../.."
-. ./dependencies.sh  # sets NODE_VERSION_PRECISE
+. ./_build_dependencies.sh  # sets NODE_VERSION_PRECISE
 cd "$OldPWD"
 NodeVersion="$NODE_VERSION_PRECISE"
 NodeFullVersion="node-v$NodeVersion-win-x64"
