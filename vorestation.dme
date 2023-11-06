@@ -4828,6 +4828,7 @@
 #include "modular_chomp\code\modules\reagents\reagents\toxin.dm"
 #include "modular_chomp\code\modules\recycling\v_garbosystem.dm"
 #include "modular_chomp\code\modules\research\mechfab_designs.dm"
+#include "modular_chomp\code\modules\research\designs\devices.dm"
 #include "modular_chomp\code\modules\research\designs\implants.dm"
 #include "modular_chomp\code\modules\research\designs\misc.dm"
 #include "modular_chomp\code\modules\research\designs\power_cells.dm"
