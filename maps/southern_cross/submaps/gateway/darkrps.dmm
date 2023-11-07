@@ -1650,7 +1650,7 @@
 /area/awaymission/darkrp/brokehouse)
 "ceR" = (
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/humanoid/merc/melee/drone,
+/mob/living/simple_mob/humanoid/merc/melee,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse2)
 "cfu" = (
