@@ -209,6 +209,7 @@ var/global/list/PDA_Manifest = list()
 /datum/datacore/proc/get_manifest_list()
 	if(PDA_Manifest.len)
 		return
+	/* CHOMPedit Start - Crew Manifest
 	var/list/heads = list()
 	var/list/sec = list()
 	var/list/eng = list()
@@ -306,6 +307,8 @@ var/global/list/PDA_Manifest = list()
 		list("cat" = "Silicon", "elems" = bot),
 		list("cat" = "Miscellaneous", "elems" = misc)
 		)
+	*/ // CHOMPedit End
+	PDA_Manifest = get_manifest()
 	return
 
 /datum/datacore/proc/manifest()
