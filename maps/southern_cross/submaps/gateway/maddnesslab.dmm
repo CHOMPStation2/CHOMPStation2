@@ -166,11 +166,11 @@
 /turf/simulated/floor/wood/sif,
 /area/awaymission/mol/dorms)
 "bg" = (
-/mob/living/simple_mob/vore/candy/worm,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
+/mob/living/simple_mob/vore/candy/peppermint,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen)
 "bh" = (
@@ -5410,11 +5410,6 @@
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
-"LZ" = (
-/mob/living/simple_mob/vore/candy/worm,
-/obj/structure/loot_pile/surface/bones,
-/turf/simulated/floor/tiled/kafel_full/yellow,
-/area/awaymission/mol/kitchen/chamberC)
 "Mc" = (
 /turf/simulated/floor/tiled/kafel_full/beige,
 /area/awaymission/mol/kitchen/chamberA)
@@ -5427,10 +5422,10 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen)
 "Me" = (
-/mob/living/simple_mob/vore/candy/worm,
-/obj/effect/floor_decal/corner/white/diagonal,
+/obj/effect/floor_decal/corner/lightgrey/diagonal,
+/mob/living/simple_mob/vore/candy/peppermint,
 /turf/simulated/floor/tiled/kafel_full/white,
-/area/awaymission/mol/kitchen/ChamberD)
+/area/awaymission/mol/kitchen)
 "Mf" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/loot_pile/surface/bones,
@@ -48050,7 +48045,7 @@ CF
 CF
 CF
 CF
-bg
+CL
 jI
 QS
 is
@@ -57080,7 +57075,7 @@ zC
 Cx
 RH
 lf
-CL
+bg
 jI
 QS
 is
@@ -62479,7 +62474,7 @@ TE
 is
 RH
 lf
-CF
+Me
 jI
 QS
 is
@@ -63525,7 +63520,7 @@ ob
 gA
 Nb
 Nb
-LZ
+WR
 Nb
 Nb
 Qs
@@ -66867,7 +66862,7 @@ Eo
 Eo
 Eo
 aF
-Me
+Eo
 Vj
 yI
 yj
@@ -67138,7 +67133,7 @@ Eo
 Eo
 Vj
 VF
-Me
+Eo
 Eo
 Eo
 pI
