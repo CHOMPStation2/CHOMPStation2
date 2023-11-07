@@ -311,6 +311,9 @@
 	},
 /area/awaymission/mol/mines)
 "cj" = (
+/obj/machinery/door/blast/puzzle{
+	id = "FinaleGate2"
+	},
 /turf/simulated/floor/carpet/blue,
 /area/awaymission/mol/kitchen)
 "ck" = (
@@ -1369,12 +1372,6 @@
 /obj/item/weapon/storage/firstaid/clotting,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
-"jV" = (
-/mob/living/simple_mob/vore/candy/worm,
-/obj/effect/floor_decal/corner/lightgrey/diagonal,
-/obj/effect/floor_decal/industrial/warning,
-/turf/simulated/floor/tiled/kafel_full/white,
-/area/awaymission/mol/kitchen)
 "jW" = (
 /obj/structure/table/marble,
 /obj/random/meat,
@@ -2929,14 +2926,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full/purple,
 /area/awaymission/mol/kitchen/chamberC)
-"uF" = (
-/mob/living/simple_mob/vore/candy/worm,
-/obj/effect/floor_decal/corner/lightgrey/diagonal,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/kafel_full/white,
-/area/awaymission/mol/kitchen)
 "uH" = (
 /mob/living/simple_mob/vore/candy/peppermint,
 /turf/simulated/floor/tiled/kafel_full/purple,
@@ -3015,13 +3004,6 @@
 /mob/living/simple_mob/vore/candy/marshmellowserpent,
 /turf/simulated/floor/tiled/kafel_full/blue,
 /area/awaymission/mol/kitchen/chamberB)
-"vk" = (
-/obj/machinery/conveyor{
-	dir = 4;
-	id = "Candy Zone"
-	},
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/entrancetunnel)
 "vr" = (
 /obj/machinery/light{
 	dir = 4
@@ -3399,10 +3381,6 @@
 	},
 /turf/simulated/floor,
 /area/awaymission/mol/headdorms)
-"xU" = (
-/mob/living/simple_mob/vore/candy/worm,
-/turf/simulated/floor/tiled/kafel_full/yellow,
-/area/awaymission/mol/kitchen/chamberC)
 "xX" = (
 /obj/structure/table/hardwoodtable,
 /obj/random/maintenance/foodstuff,
@@ -4567,13 +4545,6 @@
 /obj/effect/floor_decal/corner/black/diagonal,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/mines)
-"FK" = (
-/obj/machinery/conveyor{
-	dir = 1;
-	id = "Candy Zone"
-	},
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/entrancetunnel)
 "FQ" = (
 /obj/machinery/light,
 /obj/item/weapon/beartrap/hunting{
@@ -4932,10 +4903,6 @@
 "If" = (
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/hardlightentrance)
-"Ih" = (
-/mob/living/simple_mob/vore/candy/worm,
-/turf/simulated/floor/tiled/kafel_full/purple,
-/area/awaymission/mol/kitchen/chamberC)
 "Ii" = (
 /obj/machinery/light{
 	dir = 4
@@ -6381,13 +6348,6 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vistortunnel)
-"SX" = (
-/obj/machinery/conveyor{
-	id = "Candy Zone";
-	dir = 8
-	},
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/entrancetunnel)
 "Ta" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -7127,12 +7087,6 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/awaymission/mol/vistortunnel)
-"Xz" = (
-/obj/machinery/conveyor{
-	id = "Candy Zone"
-	},
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/entrancetunnel)
 "XC" = (
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 1
@@ -43181,8 +43135,8 @@ rt
 rt
 rt
 rt
-SX
-vk
+rt
+rt
 rt
 rt
 rt
@@ -43439,8 +43393,8 @@ ZY
 rt
 rt
 rt
-FK
-Xz
+rt
+rt
 rt
 rt
 rt
@@ -58415,9 +58369,9 @@ gn
 gn
 IZ
 RH
-uF
+lf
 CL
-jV
+jI
 QS
 is
 BA
@@ -59686,9 +59640,9 @@ TE
 TE
 is
 qO
-uF
+lf
 CL
-jV
+jI
 ni
 is
 is
@@ -59953,7 +59907,7 @@ zC
 zC
 Qd
 uD
-Ih
+zC
 zC
 zC
 Ij
@@ -61510,7 +61464,7 @@ zC
 zC
 zC
 Qd
-Ih
+zC
 hY
 zC
 zC
@@ -62017,7 +61971,7 @@ KY
 Nb
 nx
 Nb
-xU
+Nb
 Wx
 WR
 Nb
@@ -64335,11 +64289,11 @@ Eo
 yj
 Eo
 Eo
-Me
 Eo
 Eo
 Eo
-Me
+Eo
+Eo
 Eo
 Eo
 EL
@@ -65629,7 +65583,7 @@ Eo
 Eo
 Eo
 Eo
-Me
+Eo
 Vj
 Eo
 Eo
