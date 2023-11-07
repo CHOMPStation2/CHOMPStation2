@@ -136,10 +136,9 @@ const sendLogEntry = (level, ns, ...args) => {
 
 const setupHotReloading = () => {
   if (
-    // prettier-ignore
-    process.env.NODE_ENV !== 'production'
-      && process.env.WEBPACK_HMR_ENABLED
-      && window.WebSocket
+    process.env.NODE_ENV !== 'production' &&
+    process.env.WEBPACK_HMR_ENABLED &&
+    window.WebSocket
   ) {
     if (module.hot) {
       ensureConnection();

@@ -94890,9 +94890,7 @@ var sendLogEntry = function sendLogEntry(level, ns) {
   }
 };
 var setupHotReloading = function setupHotReloading() {
-  if (
-  // prettier-ignore
-  false) {}
+  if (false) {}
 };
 module.exports = {
   subscribe: subscribe,
