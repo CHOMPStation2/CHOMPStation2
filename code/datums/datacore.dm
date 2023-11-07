@@ -17,41 +17,28 @@
 	var/static/list/locked = list()
 
 // CHOMPedit Start - Crew Manifest
-/datum/datacore/proc/get_manifest()
+/datum/datacore/proc/get_manifest(OOC)
 	var/list/manifest_out = list(
-		"Command",
+		"Heads",
 		"Security",
 		"Engineering",
 		"Medical",
 		"Science",
-		"Supply",
-		"Service",
+		"Cargo",
+		"Exploration",
+		"Civillian",
 		"Silicon"
 	)
 
-	/*
-	var/list/heads = new()
-	var/list/sec = new()
-	var/list/eng = new()
-	var/list/med = new()
-	var/list/sci = new()
-	var/list/car = new()
-	var/list/pla = new() //VOREStation Edit
-	var/list/civ = new()
-	var/list/bot = new()
-	var/list/off = new()
-	var/list/misc = new()
-	var/list/isactive = new()
-	*/
-
 	var/list/departments = list(
-		"Command" = SSjob.get_job_titles_in_department(DEPARTMENT_COMMAND),
+		"Heads" = SSjob.get_job_titles_in_department(DEPARTMENT_COMMAND),
 		"Security" = SSjob.get_job_titles_in_department(DEPARTMENT_SECURITY),
 		"Engineering" = SSjob.get_job_titles_in_department(DEPARTMENT_ENGINEERING),
 		"Medical" = SSjob.get_job_titles_in_department(DEPARTMENT_MEDICAL),
 		"Science" = SSjob.get_job_titles_in_department(DEPARTMENT_RESEARCH),
-		"Supply" = SSjob.get_job_titles_in_department(DEPARTMENT_CARGO),
-		"Service" = SSjob.get_job_titles_in_department(DEPARTMENT_CIVILIAN),
+		"Cargo" = SSjob.get_job_titles_in_department(DEPARTMENT_CARGO),
+		"Exploration" = SSjob.get_job_titles_in_department(DEPARTMENT_PLANET),
+		"Civillian" = SSjob.get_job_titles_in_department(DEPARTMENT_CIVILIAN),
 		"Silicon" = SSjob.get_job_titles_in_department(DEPARTMENT_SYNTHETIC)
 	)
 
@@ -76,13 +63,13 @@
 				if (real_rank == "Captain" || (department != "Command" && (SSjob.is_job_in_department(real_rank, DEPARTMENT_COMMAND))))
 					manifest_out[department] = list(list(
 						"name" = name,
-						"rank" = real_rank,
+						"rank" = rank,
 						"active" = active ? "Active" : "Inactive"
 					)) + manifest_out[department]
 				else
 					manifest_out[department] += list(list(
 						"name" = name,
-						"rank" = real_rank,
+						"rank" = rank,
 						"active" = active ? "Active" : "Inactive"
 					))
 				has_department = TRUE
@@ -91,9 +78,51 @@
 				manifest_out["Misc"] = list()
 			manifest_out["Misc"] += list(list(
 				"name" = name,
-				"rank" = real_rank,
+				"rank" = rank,
 				"active" = active ? "Active" : "Inactive"
 			))
+
+	if(OOC)
+		manifest_out += "Offmap Spawns"
+
+		for(var/datum/data/record/t in hidden_general)
+			var/name = t.fields["name"]
+			var/rank = t.fields["rank"]
+			var/real_rank = make_list_rank(t.fields["real_rank"])
+
+			var/active = 0
+			for(var/mob/M in player_list)
+				if(M.real_name == name && M.client && M.client.inactivity <= 10 MINUTES)
+					active = 1
+					break
+
+			var/datum/job/J = SSjob.get_job(real_rank)
+			if(J?.offmap_spawn)
+				manifest_out["Offmap Spawns"] += list(list(
+					"name" = name,
+					"rank" = rank,
+					"active" = active ? "Active" : "Inactive"
+				))
+
+	// Synthetics don't have actual records, so we will pull them from here.
+	for(var/mob/living/silicon/ai/ai in mob_list)
+		manifest_out["Silicon"] += list(list(
+			"name" = ai.name,
+			"rank" = "Artificial Intelligence",
+			//"active" = active ? "Active" : "Inactive"
+			"active" = ""
+		))
+
+	for(var/mob/living/silicon/robot/robot in mob_list)
+		// No combat/syndicate cyborgs, no drones, and no AI shells.
+		if(!robot.scrambledcodes && !robot.shell && !(robot.module && robot.module.hide_on_manifest()))
+			manifest_out["Silicon"] += list(list(
+				"name" = robot.name,
+				"rank" = "[robot.modtype] [robot.braintype]",
+				//"active" = active ? "Active" : "Inactive"
+				"active" = ""
+			))
+
 	for (var/department in departments)
 		if (!manifest_out[department])
 			manifest_out -= department
