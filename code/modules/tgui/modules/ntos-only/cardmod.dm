@@ -155,8 +155,8 @@
 				else
 					var/contents = {"<h4>Crew Manifest</h4>
 									<br>
-									[data_core ? data_core.get_manifest(0) : ""]
-									"}
+									[data_core ? data_core.get_manifest_html(0) : ""]
+									"} // CHOMPEdit - Crew Manifest
 					if(!computer.nano_printer.print_text(contents,text("crew manifest ([])", stationtime2text())))
 						to_chat(usr, "<span class='notice'>Hardware error: Printer was unable to print the file. It may be out of paper.</span>")
 						return
@@ -231,4 +231,3 @@
 
 	if(id_card)
 		id_card.name = text("[id_card.registered_name]'s ID Card ([id_card.assignment])")
-

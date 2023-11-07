@@ -258,8 +258,8 @@
 						P.name = text("crew manifest ([])", stationtime2text())
 						P.info = {"<h4>Crew Manifest</h4>
 							<br>
-							[data_core ? data_core.get_manifest(0) : ""]
-						"}
+							[data_core ? data_core.get_manifest_html(0) : ""]
+						"} // CHOMPEdit - Crew Manifest
 					else if(modify)
 						P.name = "access report"
 						P.info = {"<h4>Access Report</h4>

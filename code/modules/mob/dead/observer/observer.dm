@@ -703,11 +703,17 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set name = "Show Crew Manifest"
 	set category = "Ghost"
 
+	/* CHOMPedit Begin - Crew Manifest
 	var/dat
 	dat += "<h4>Crew Manifest</h4>"
-	dat += data_core.get_manifest()
+	dat += data_core.get_manifest_html()
+	*/
+	if(!GLOB.crew_manifest_tgui)
+		GLOB.crew_manifest_tgui = new /datum/crew_manifest(src)
 
-	src << browse(dat, "window=manifest;size=370x420;can_close=1")
+	//src << browse(dat, "window=manifest;size=370x420;can_close=1")
+	GLOB.crew_manifest_tgui.tgui_interact(src)
+	// CHOMPedit End
 
 //This is called when a ghost is drag clicked to something.
 /mob/observer/dead/MouseDrop(atom/over)

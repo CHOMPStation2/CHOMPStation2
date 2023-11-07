@@ -16,8 +16,20 @@
 	//This list tracks characters spawned in the world and cannot be modified in-game. Currently referenced by respawn_character().
 	var/static/list/locked = list()
 
+// CHOMPedit Start - Crew Manifest
+/datum/datacore/proc/get_manifest()
+	var/list/manifest_out = list(
+		"Command",
+		"Security",
+		"Engineering",
+		"Medical",
+		"Science",
+		"Supply",
+		"Service",
+		"Silicon"
+	)
 
-/datum/datacore/proc/get_manifest(monochrome, OOC,var/snowflake = FALSE) //CHOMPStation Edit
+	/*
 	var/list/heads = new()
 	var/list/sec = new()
 	var/list/eng = new()
@@ -30,26 +42,64 @@
 	var/list/off = new()
 	var/list/misc = new()
 	var/list/isactive = new()
-	var/dat = {"
-	<head><style>
-		.manifest {border-collapse:collapse;}
-		.manifest td, th {border:1px solid [monochrome?"black":"[OOC?"black; background-color:#272727; color:white":"#DEF; background-color:white; color:black"]"]; padding:.25em}
-		.manifest th {height: 2em; [monochrome?"border-top-width: 3px":"background-color: [OOC?"#40628A":"#48C"]; color:white"]}
-		.manifest tr.head th { [monochrome?"border-top-width: 1px":"background-color: [OOC?"#013D3B;":"#488;"]"] }
-		.manifest td:first-child {text-align:right}
-		.manifest tr.alt td {[monochrome?"border-top-width: 2px":"background-color: [OOC?"#373737; color:white":"#DEF"]"]}
-	</style></head>
-	<table class="manifest" width='350px'>
-	[snowflake?"<tr><th colspan=3 style = \"background-color: #026e6a\"><b>Online players:</b> [TGS_CLIENT_COUNT]</th></tr><tr><th colspan=3 style = \"background-color: #027a76\"><b>Crew members:</b> [data_core.general.len]</th></tr><tr class='head'>":""]
-	<tr class='head'><th>Name</th><th>Rank</th><th>Activity</th></tr>
-	"} //Also a chompstation edit with the snowflake stuff on line 43
-	var/even = 0
-	// sort mobs
+	*/
+
+	var/list/departments = list(
+		"Command" = SSjob.get_job_titles_in_department(DEPARTMENT_COMMAND),
+		"Security" = SSjob.get_job_titles_in_department(DEPARTMENT_SECURITY),
+		"Engineering" = SSjob.get_job_titles_in_department(DEPARTMENT_ENGINEERING),
+		"Medical" = SSjob.get_job_titles_in_department(DEPARTMENT_MEDICAL),
+		"Science" = SSjob.get_job_titles_in_department(DEPARTMENT_RESEARCH),
+		"Supply" = SSjob.get_job_titles_in_department(DEPARTMENT_CARGO),
+		"Service" = SSjob.get_job_titles_in_department(DEPARTMENT_CIVILIAN),
+		"Silicon" = SSjob.get_job_titles_in_department(DEPARTMENT_SYNTHETIC)
+	)
+
 	for(var/datum/data/record/t in data_core.general)
 		var/name = t.fields["name"]
 		var/rank = t.fields["rank"]
 		var/real_rank = make_list_rank(t.fields["real_rank"])
 
+		var/active = 0
+		for(var/mob/M in player_list)
+			if(M.real_name == name && M.client && M.client.inactivity <= 10 MINUTES)
+				active = 1
+				break
+
+		var/has_department = FALSE
+		for(var/department in departments)
+			var/list/jobs = departments[department]
+			if(real_rank in jobs)
+				if(!manifest_out[department])
+					manifest_out[department] = list()
+				// Append to beginning of list if captain or department head
+				if (real_rank == "Captain" || (department != "Command" && (SSjob.is_job_in_department(real_rank, DEPARTMENT_COMMAND))))
+					manifest_out[department] = list(list(
+						"name" = name,
+						"rank" = real_rank,
+						"active" = active ? "Active" : "Inactive"
+					)) + manifest_out[department]
+				else
+					manifest_out[department] += list(list(
+						"name" = name,
+						"rank" = real_rank,
+						"active" = active ? "Active" : "Inactive"
+					))
+				has_department = TRUE
+		if(!has_department)
+			if(!manifest_out["Misc"])
+				manifest_out["Misc"] = list()
+			manifest_out["Misc"] += list(list(
+				"name" = name,
+				"rank" = real_rank,
+				"active" = active ? "Active" : "Inactive"
+			))
+	for (var/department in departments)
+		if (!manifest_out[department])
+			manifest_out -= department
+	return manifest_out
+
+		/*
 		if(OOC)
 			var/active = 0
 			for(var/mob/M in player_list)
@@ -98,12 +148,7 @@
 			var/rank = t.fields["rank"]
 			var/real_rank = make_list_rank(t.fields["real_rank"])
 
-			var/active = 0
-			for(var/mob/M in player_list)
-				if(M.real_name == name && M.client && M.client.inactivity <= 10 MINUTES)
-					active = 1
-					break
-			isactive[name] = active ? "Active" : "Inactive"
+
 
 			var/datum/job/J = SSjob.get_job(real_rank)
 			if(J?.offmap_spawn)
@@ -118,72 +163,39 @@
 		if(!robot.scrambledcodes && !robot.shell && !(robot.module && robot.module.hide_on_manifest()))
 			bot[robot.name] = "[robot.modtype] [robot.braintype]"
 
+*/
 
-	if(heads.len > 0)
-		dat += "<tr><th colspan=3>Heads</th></tr>"
-		for(name in heads)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[heads[name]]</td><td>[isactive[name]]</td></tr>"
-			even = !even
-	if(sec.len > 0)
-		dat += "<tr><th colspan=3>Security</th></tr>"
-		for(name in sec)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[sec[name]]</td><td>[isactive[name]]</td></tr>"
-			even = !even
-	if(eng.len > 0)
-		dat += "<tr><th colspan=3>Engineering</th></tr>"
-		for(name in eng)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[eng[name]]</td><td>[isactive[name]]</td></tr>"
-			even = !even
-	if(med.len > 0)
-		dat += "<tr><th colspan=3>Medical</th></tr>"
-		for(name in med)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[med[name]]</td><td>[isactive[name]]</td></tr>"
-			even = !even
-	if(sci.len > 0)
-		dat += "<tr><th colspan=3>Science</th></tr>"
-		for(name in sci)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[sci[name]]</td><td>[isactive[name]]</td></tr>"
-			even = !even
-	if(car.len > 0)
-		dat += "<tr><th colspan=3>Cargo</th></tr>"
-		for(name in car)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[car[name]]</td><td>[isactive[name]]</td></tr>"
-			even = !even
-	//VOREStation Edit Begin
-	if(pla.len > 0)
-		dat += "<tr><th colspan=3>Exploration</th></tr>"
-		for(name in pla)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[pla[name]]</td><td>[isactive[name]]</td></tr>"
-			even = !even
-	//VOREStation Edit End
-	if(civ.len > 0)
-		dat += "<tr><th colspan=3>Civilian</th></tr>"
-		for(name in civ)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[civ[name]]</td><td>[isactive[name]]</td></tr>"
-			even = !even
-	// in case somebody is insane and added them to the manifest, why not
-	if(bot.len > 0)
-		dat += "<tr><th colspan=3>Silicon</th></tr>"
-		for(name in bot)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[bot[name]]</td><td>[isactive[name]]</td></tr>"
-			even = !even
-	// offmap spawners
-	if(off.len > 0)
-		dat += "<tr><th colspan=3>Offmap Spawns</th></tr>"
-		for(name in off)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[off[name]]</td><td>[isactive[name]]</td></tr>"
-			even = !even
-	// misc guys
-	if(misc.len > 0)
-		dat += "<tr><th colspan=3>Miscellaneous</th></tr>"
-		for(name in misc)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[misc[name]]</td><td>[isactive[name]]</td></tr>"
+/datum/datacore/proc/get_manifest_html(monochrome = FALSE, OOC, snowflake = FALSE)
+	var/list/manifest = get_manifest()
+	var/dat = {"
+	<head><style>
+		.manifest {border-collapse:collapse;}
+		.manifest td, th {border:1px solid [monochrome?"black":"[OOC?"black; background-color:#272727; color:white":"#DEF; background-color:white; color:black"]"]; padding:.25em}
+		.manifest th {height: 2em; [monochrome?"border-top-width: 3px":"background-color: [OOC?"#40628A":"#48C"]; color:white"]}
+		.manifest tr.head th { [monochrome?"border-top-width: 1px":"background-color: [OOC?"#013D3B;":"#488;"]"] }
+		.manifest td:first-child {text-align:right}
+		.manifest tr.alt td {[monochrome?"border-top-width: 2px":"background-color: [OOC?"#373737; color:white":"#DEF"]"]}
+	</style></head>
+	<table class="manifest" width='350px'>
+	[snowflake?"<tr><th colspan=3 style = \"background-color: #026e6a\"><b>Online players:</b> [TGS_CLIENT_COUNT]</th></tr><tr><th colspan=3 style = \"background-color: #027a76\"><b>Crew members:</b> [data_core.general.len]</th></tr><tr class='head'>":""]
+	<tr class='head'><th>Name</th><th>Rank</th><th>Activity</th></tr>
+	"} //Also a chompstation edit with the snowflake stuff on line 43
+
+	for(var/department in manifest)
+		var/list/entries = manifest[department]
+		dat += "<tr><th colspan=3>[department]</th></tr>"
+		//JUST
+		var/even = 0
+		for(var/entry in entries)
+			var/list/entry_list = entry
+			dat += "<tr[even ? " class='alt'" : ""]><td>[entry_list["name"]]</td><td>[entry_list["rank"]]</td><td>[entry_list["active"]]</td></tr>"
 			even = !even
 
 	dat += "</table>"
 	dat = replacetext(dat, "\n", "") // so it can be placed on paper correctly
 	dat = replacetext(dat, "\t", "")
 	return dat
+// CHOMPEdit End
 
 /*
 We can't just insert in HTML into the nanoUI so we need the raw data to play with.
