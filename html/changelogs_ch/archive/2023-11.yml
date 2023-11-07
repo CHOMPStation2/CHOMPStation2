@@ -1,0 +1,25 @@
+2023-11-01:
+  ReoDaProtovali:
+  - rscadd: SWOOPIE XL catalouge data
+  - bugfix: fixes swoopies checking if they were dead to do stuff when they should've
+      been checking if they were alive
+2023-11-04:
+  FluffMedic:
+  - maptweak: weird lab gateway be different
+2023-11-05:
+  ReoDaProtovali:
+  - bugfix: Fixes swoopie AI behavior when player controlled
+  TheGreatKitsune:
+  - bugfix: Hitting X to close reset prompt is no longer counted as hitting yes.
+  purplefoxy27:
+  - rscadd: Add weight mechanics to remaining gym machines and punching bags.
+2023-11-07:
+  Aroliacue:
+  - qol: Ported storage reach, allowing you to pull out items from a storage slot
+      inside of another storage slot. For example, pulling out medkit equipment from
+      your bag without holding the medkit.
+  FluffMedic:
+  - rscadd: Some new crafting things.
+  - bugfix: fixed a few POIs, and missed balance alterations
+  ItsSelis:
+  - code_imp: fixed mirror conflict of the upstream port of the confetti cannon
