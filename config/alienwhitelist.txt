@@ -20,7 +20,29 @@ hollifex - Diona
 inuzari - Diona
 jademanique - Xenochimera
 ktccd - Diona
+<<<<<<< HEAD
 khanivore - Protean
+=======
+kyrendragon - Black-Eyed Shadekin
+lavenderrs - Teppi
+lazzar - Black-Eyed Shadekin
+lianvee - Black-Eyed Shadekin
+lillianfyre - Xenochimera
+liquidfirefly - Protean
+lizehrd - Xenochimera
+looptyloo - Protean
+lordlag - Black-Eyed Shadekin
+lorgenz - Protean
+losstinspess - Protean
+losstinspess - Xenochimera
+lykojeyot - Black-Eyed Shadekin
+negatist - Protean
+magpiemayhem - Vox
+magpiemayhem - Xenochimera
+makkinindorn - Protean
+marcobarko - Black-Eyed Shadekin
+marcobarko - Protean
+>>>>>>> 87ca2d9861... Merge pull request #15509 from Very-Soft/aliens
 mewchild - Diona
 mewchild - Vox
 mrsebbi - Xenochimera
