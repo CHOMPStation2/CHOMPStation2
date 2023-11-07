@@ -32,7 +32,8 @@ jobs:
       - name: Run Tests
         run: |
           tools/ci/validate_files.sh
-          tools/ci/build_tgui.sh
+      - name: Run TGUI Checks
+        run: tools/build/build --ci lint tgui-test
 
   dreamchecker:
     name: DreamChecker
