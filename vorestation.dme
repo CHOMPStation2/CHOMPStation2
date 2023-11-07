@@ -4802,6 +4802,7 @@
 #include "modular_chomp\code\modules\organs\organ_external.dm"
 #include "modular_chomp\code\modules\organs\organ_icon.dm"
 #include "modular_chomp\code\modules\overmap\dynamic_sector.dm"
+#include "modular_chomp\code\modules\planet\sif.dm"
 #include "modular_chomp\code\modules\player_tips\player_tips_list.dm"
 #include "modular_chomp\code\modules\power\cells\device_cells.dm"
 #include "modular_chomp\code\modules\power\cells\esoteric_cells.dm"

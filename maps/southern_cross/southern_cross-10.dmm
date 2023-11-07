@@ -557,6 +557,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/shelter/utilityroom)
+"hX" = (
+/obj/effect/overmap/visitable/planet/Sif,
+/turf/simulated/mineral/sif,
+/area/surface/outside/wilderness/mountains)
 "kh" = (
 /turf/simulated/wall/solidrock,
 /area/surface/outside/wilderness/normal)
@@ -864,7 +868,7 @@
 /obj/machinery/vending/engivend{
 	desc = "Spare tool vending for the Wilderness Shelter. What? Did you expect some witty description?";
 	name = "Wild Shelter-Vend";
-	products = list(/obj/item/device/geiger = 4, /obj/item/weapon/cell/high = 10, /obj/item/weapon/airlock_electronics = 10, /obj/item/weapon/module/power_control = 10, /obj/item/weapon/circuitboard/airalarm = 10, /obj/item/weapon/circuitboard/firealarm = 10, /obj/item/weapon/circuitboard/status_display = 2, /obj/item/weapon/circuitboard/ai_status_display = 2, /obj/item/weapon/circuitboard/newscaster = 2, /obj/item/weapon/circuitboard/holopad = 2, /obj/item/weapon/circuitboard/intercom = 4, /obj/item/weapon/circuitboard/security/telescreen/entertainment = 4, /obj/item/weapon/stock_parts/motor = 2, /obj/item/weapon/stock_parts/spring = 2, /obj/item/weapon/stock_parts/gear = 2, /obj/item/weapon/circuitboard/atm,/obj/item/weapon/circuitboard/guestpass,/obj/item/weapon/circuitboard/keycard_auth,/obj/item/weapon/circuitboard/geiger,/obj/item/weapon/circuitboard/photocopier,/obj/item/weapon/circuitboard/fax,/obj/item/weapon/circuitboard/request,/obj/item/weapon/circuitboard/microwave,/obj/item/weapon/circuitboard/washing,/obj/item/weapon/circuitboard/scanner_console,/obj/item/weapon/circuitboard/sleeper_console,/obj/item/weapon/circuitboard/body_scanner,/obj/item/weapon/circuitboard/medical_kiosk,/obj/item/weapon/circuitboard/sleeper,/obj/item/weapon/circuitboard/dna_analyzer);
+	products = list(/obj/item/device/geiger=4,/obj/item/weapon/cell/high=10,/obj/item/weapon/airlock_electronics=10,/obj/item/weapon/module/power_control=10,/obj/item/weapon/circuitboard/airalarm=10,/obj/item/weapon/circuitboard/firealarm=10,/obj/item/weapon/circuitboard/status_display=2,/obj/item/weapon/circuitboard/ai_status_display=2,/obj/item/weapon/circuitboard/newscaster=2,/obj/item/weapon/circuitboard/holopad=2,/obj/item/weapon/circuitboard/intercom=4,/obj/item/weapon/circuitboard/security/telescreen/entertainment=4,/obj/item/weapon/stock_parts/motor=2,/obj/item/weapon/stock_parts/spring=2,/obj/item/weapon/stock_parts/gear=2,/obj/item/weapon/circuitboard/atm,/obj/item/weapon/circuitboard/guestpass,/obj/item/weapon/circuitboard/keycard_auth,/obj/item/weapon/circuitboard/geiger,/obj/item/weapon/circuitboard/photocopier,/obj/item/weapon/circuitboard/fax,/obj/item/weapon/circuitboard/request,/obj/item/weapon/circuitboard/microwave,/obj/item/weapon/circuitboard/washing,/obj/item/weapon/circuitboard/scanner_console,/obj/item/weapon/circuitboard/sleeper_console,/obj/item/weapon/circuitboard/body_scanner,/obj/item/weapon/circuitboard/medical_kiosk,/obj/item/weapon/circuitboard/sleeper,/obj/item/weapon/circuitboard/dna_analyzer);
 	req_access = null
 	},
 /turf/simulated/floor/plating,
@@ -1654,7 +1658,7 @@ ac
 ac
 ac
 ac
-ac
+hX
 ab
 "}
 (3,1,1) = {"
