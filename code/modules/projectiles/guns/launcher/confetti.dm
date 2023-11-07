@@ -2,7 +2,7 @@
 /obj/item/weapon/gun/launcher/confetti_cannon
 	name = "confetti cannon"
 	desc = "For those times when you absolutely need colored paper everywhere."
-	icon = 'icons/obj/weapons_ch.dmi'
+	icon = 'icons/obj/weapons_vr.dmi'
 	icon_state = "confetti_cannon"
 	item_state = "confetti_cannon"
 	w_class = ITEMSIZE_NORMAL
@@ -58,11 +58,19 @@
 	confetti_charge = 100
 	max_confetti = 100
 
-/obj/item/weapon/gun/launcher/confetti_cannon/honkborg
+/obj/item/weapon/gun/launcher/confetti_cannon/fake_shottie
+	name = "horror movie shotgun"
+	desc = "The one necessary for survival of any Final Girl."
+	icon = 'icons/obj/gun2.dmi'
+	icon_state = "ithaca"
+	item_state = "ithaca"
+	confetti_charge = 20
+
+/obj/item/weapon/gun/launcher/confetti_cannon/robot
 	name = "Party Cannon"
 	desc = "Confetti, pies, banana peels, chaos!"
 
-/obj/item/weapon/gun/launcher/confetti_cannon/honkborg/pump(mob/M as mob)
+/obj/item/weapon/gun/launcher/confetti_cannon/robot/pump(mob/M as mob)
 	playsound(M, 'sound/weapons/shotgunpump.ogg', 60, 1)
 	if(!chambered)
 		var/choice = tgui_alert(usr, "Load the Party Canon with?", "Change What?", list("Confetti","Banana Peel","Cream Pie"))
@@ -91,7 +99,7 @@
 	else
 		to_chat(usr, "<font color='red'>The [src] is already loaded!</font>")
 
-/obj/item/weapon/gun/launcher/confetti_cannon/honkborg/consume_next_projectile()
+/obj/item/weapon/gun/launcher/confetti_cannon/robot/consume_next_projectile()
 	if(istype(chambered,/obj/item/weapon/grenade/confetti/party_ball))
 		chambered.activate(null)
 	return chambered
