@@ -17,3 +17,5 @@
   FluffMedic:
   - rscadd: Some new crafting things.
   - bugfix: fixed a few POIs, and missed balance alterations
+  ItsSelis:
+  - code_imp: fixed mirror conflict of the upstream port of the confetti cannon
