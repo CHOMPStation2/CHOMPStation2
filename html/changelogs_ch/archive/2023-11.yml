@@ -13,3 +13,7 @@
   - bugfix: Hitting X to close reset prompt is no longer counted as hitting yes.
   purplefoxy27:
   - rscadd: Add weight mechanics to remaining gym machines and punching bags.
+2023-11-07:
+  FluffMedic:
+  - rscadd: Some new crafting things.
+  - bugfix: fixed a few POIs, and missed balance alterations
