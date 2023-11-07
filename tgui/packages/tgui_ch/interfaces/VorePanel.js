@@ -50,7 +50,7 @@ const digestModeToPreyMode = {
  *   liq_reagent_transfer_verb, liq_reagent_nutri_rate, liq_reagent_capacity, liq_sloshing, liq_reagent_addons,
  *   show_liq_fullness, liq_messages, liq_msg_toggle1, liq_msg_toggle2, liq_msg_toggle3, liq_msg_toggle4,
  *   liq_msg_toggle5, liq_msg1, liq_msg2, liq_msg3, liq_msg4, liq_msg5, sound_volume, egg_name, recycling, entrance_logs, item_digest_logs, noise_freq,
- *   custom_reagentcolor, custom_reagentalpha, liquid_overlay, max_liquid_level, mush_overlay, mush_color, mush_alpha, max_mush, min_mush, item_mush_val,
+ *   custom_reagentcolor, custom_reagentalpha, liquid_overlay, max_liquid_level, mush_overlay, reagent_touches, mush_color, mush_alpha, max_mush, min_mush, item_mush_val,
  *   metabolism_overlay, metabolism_mush_ratio, max_ingested, custom_ingested_color, custom_ingested_alpha
  *
  * To the tabs section of VoreSelectedBelly return
@@ -1603,7 +1603,7 @@ const VoreSelectedBellyInteractions = (props, context) => {
                 }
               />
             </LabeledList.Item>
-            <LabeledList.Item label="Auto-Transfer Primary Whitelist">
+            <LabeledList.Item label="Auto-Transfer Primary Whitelist (Mobs)">
               {(autotransfer.autotransfer_whitelist.length &&
                 autotransfer.autotransfer_whitelist.join(', ')) ||
                 'Everything'}
@@ -1617,7 +1617,21 @@ const VoreSelectedBellyInteractions = (props, context) => {
                 icon="plus"
               />
             </LabeledList.Item>
-            <LabeledList.Item label="Auto-Transfer Primary Blacklist">
+            <LabeledList.Item label="Auto-Transfer Primary Whitelist (Items)">
+              {(autotransfer.autotransfer_whitelist_items.length &&
+                autotransfer.autotransfer_whitelist_items.join(', ')) ||
+                'Everything'}
+              <Button
+                onClick={() =>
+                  act('set_attribute', {
+                    attribute: 'b_autotransfer_whitelist_items',
+                  })
+                }
+                ml={1}
+                icon="plus"
+              />
+            </LabeledList.Item>
+            <LabeledList.Item label="Auto-Transfer Primary Blacklist (Mobs)">
               {(autotransfer.autotransfer_blacklist.length &&
                 autotransfer.autotransfer_blacklist.join(', ')) ||
                 'Nothing'}
@@ -1625,6 +1639,20 @@ const VoreSelectedBellyInteractions = (props, context) => {
                 onClick={() =>
                   act('set_attribute', {
                     attribute: 'b_autotransfer_blacklist',
+                  })
+                }
+                ml={1}
+                icon="plus"
+              />
+            </LabeledList.Item>
+            <LabeledList.Item label="Auto-Transfer Primary Blacklist (Items)">
+              {(autotransfer.autotransfer_blacklist_items.length &&
+                autotransfer.autotransfer_blacklist_items.join(', ')) ||
+                'Nothing'}
+              <Button
+                onClick={() =>
+                  act('set_attribute', {
+                    attribute: 'b_autotransfer_blacklist_items',
                   })
                 }
                 ml={1}
@@ -1656,7 +1684,7 @@ const VoreSelectedBellyInteractions = (props, context) => {
                 }
               />
             </LabeledList.Item>
-            <LabeledList.Item label="Auto-Transfer Secondary Whitelist">
+            <LabeledList.Item label="Auto-Transfer Secondary Whitelist (Mobs)">
               {(autotransfer.autotransfer_secondary_whitelist.length &&
                 autotransfer.autotransfer_secondary_whitelist.join(', ')) ||
                 'Everything'}
@@ -1670,7 +1698,23 @@ const VoreSelectedBellyInteractions = (props, context) => {
                 icon="plus"
               />
             </LabeledList.Item>
-            <LabeledList.Item label="Auto-Transfer Secondary Blacklist">
+            <LabeledList.Item label="Auto-Transfer Secondary Whitelist (Items)">
+              {(autotransfer.autotransfer_secondary_whitelist_items.length &&
+                autotransfer.autotransfer_secondary_whitelist_items.join(
+                  ', '
+                )) ||
+                'Everything'}
+              <Button
+                onClick={() =>
+                  act('set_attribute', {
+                    attribute: 'b_autotransfer_secondary_whitelist_items',
+                  })
+                }
+                ml={1}
+                icon="plus"
+              />
+            </LabeledList.Item>
+            <LabeledList.Item label="Auto-Transfer Secondary Blacklist (Mobs)">
               {(autotransfer.autotransfer_secondary_blacklist.length &&
                 autotransfer.autotransfer_secondary_blacklist.join(', ')) ||
                 'Nothing'}
@@ -1678,6 +1722,22 @@ const VoreSelectedBellyInteractions = (props, context) => {
                 onClick={() =>
                   act('set_attribute', {
                     attribute: 'b_autotransfer_secondary_blacklist',
+                  })
+                }
+                ml={1}
+                icon="plus"
+              />
+            </LabeledList.Item>
+            <LabeledList.Item label="Auto-Transfer Secondary Blacklist (Items)">
+              {(autotransfer.autotransfer_secondary_blacklist_items.length &&
+                autotransfer.autotransfer_secondary_blacklist_items.join(
+                  ', '
+                )) ||
+                'Nothing'}
+              <Button
+                onClick={() =>
+                  act('set_attribute', {
+                    attribute: 'b_autotransfer_secondary_blacklist_items',
                   })
                 }
                 ml={1}
@@ -1799,6 +1859,7 @@ const VoreSelectedBellyLiquidOptions = (props, context) => {
     custom_reagentalpha,
     liquid_overlay,
     max_liquid_level,
+    reagent_touches,
     mush_overlay,
     mush_color,
     mush_alpha,
@@ -1918,6 +1979,16 @@ const VoreSelectedBellyLiquidOptions = (props, context) => {
               }
               ml={1}
               icon="plus"
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Liquid Application to Prey">
+            <Button
+              onClick={() =>
+                act('liq_set_attribute', { liq_attribute: 'b_reagent_touches' })
+              }
+              icon={liq_interacts.reagent_touches ? 'toggle-on' : 'toggle-off'}
+              selected={liq_interacts.reagent_touches}
+              content={liq_interacts.reagent_touches ? 'On' : 'Off'}
             />
           </LabeledList.Item>
           <LabeledList.Item label="Custom Liquid Color">

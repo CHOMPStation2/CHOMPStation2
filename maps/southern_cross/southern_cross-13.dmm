@@ -4,6 +4,10 @@
 /obj/effect/zone_divider,
 /turf/simulated/mineral/sif,
 /area/surface/outside/valley/walls)
+"aL" = (
+/obj/effect/overmap/visitable/planet/Sif,
+/turf/simulated/mineral/sif,
+/area/surface/outside/valley/edge)
 "bH" = (
 /obj/structure/railing,
 /turf/simulated/floor/water/deep,
@@ -772,7 +776,7 @@ FG
 FG
 FG
 FG
-FG
+aL
 RW
 "}
 (3,1,1) = {"

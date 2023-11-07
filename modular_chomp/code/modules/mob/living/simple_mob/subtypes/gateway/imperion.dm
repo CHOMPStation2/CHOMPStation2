@@ -11,14 +11,16 @@
 	icon_state = "imperion"
 	icon_living = "imperion"
 	desc = "A strange precursor mecha"
-	maxHealth = 200
-	health = 200
+	maxHealth = 300
+	health = 300
 	movement_cooldown = -1
 	unsuitable_atoms_damage = 0
 	projectiletype = /obj/item/projectile/energy/gaussrifle
 	melee_attack_delay = 4 SECOND
 	damage_fatigue_mult = 0
 	has_repair_droid = TRUE
+
+	size_multiplier = 2.50
 
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 
@@ -85,6 +87,8 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 
+	size_multiplier = 2.50
+
 	wreckage = null
 	pilot_type = /mob/living/simple_mob/mechanical/mecha/imperion/phase2
 
@@ -117,7 +121,7 @@
 	playsound(src, 'sound/effects/turret/move2.wav', 50, 1)
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase1/proc/launch_rockets(atom/target)
-	var/obj/item/projectile/P = new /obj/item/projectile/energy/dart(get_turf(src))
+	var/obj/item/projectile/P = new /obj/item/projectile/energy/excavate(get_turf(src))
 	P.launch_projectile(target, BP_TORSO, src)
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase1/proc/launch_microsingularity(atom/target)
@@ -131,6 +135,7 @@
 	alpha = 215
 
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
+	size_multiplier = 2.25
 
 	wreckage = null
 	pilot_type = /mob/living/simple_mob/mechanical/mecha/imperion/phase3
@@ -163,13 +168,14 @@
 	melee_attack_delay = 2 SECOND
 
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged/aggressive/meleeimperion
+	size_multiplier = 2.00
 
 	wreckage = null
 	pilot_type = /mob/living/simple_mob/mechanical/mecha/imperion/phase4
 
 	special_attack_min_range = 3
 	special_attack_max_range = 14 //this thing will not let you recover during phase 3. It blitz you down, or you blitz it down.
-	special_attack_cooldown = 5 SECONDS
+	special_attack_cooldown = 2 SECONDS
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase3/do_special_attack(atom/A)
 	// Teleport attack.
@@ -229,6 +235,8 @@
 	melee_attack_delay = 4 SECOND
 
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
+
+	size_multiplier = 1.75
 
 	wreckage = null
 	pilot_type = /mob/living/simple_mob/mechanical/mecha/imperion/phase5
@@ -326,6 +334,8 @@
 	special_attack_max_range = 9
 	special_attack_cooldown = 5 SECONDS
 	melee_attack_delay = 1 SECOND
+
+	size_multiplier = 1.50
 
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 

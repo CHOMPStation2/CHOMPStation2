@@ -1,17 +1,5 @@
 /obj/item/clothing
 	matter = list(MAT_FIBERS = 50)
-	var/update_icon_define_orig = null // temp storage for original update_icon_define (if it exists)
-	var/update_icon_define_digi = null
-	var/fit_for_digi = FALSE // flag for if clothing has already been reskinned to digitigrade
-
-/obj/item/clothing/shoes
-	update_icon_define_digi = "modular_chomp/icons/inventory/feet/mob_digi.dmi"
-
-/obj/item/clothing/suit
-	update_icon_define_digi = "modular_chomp/icons/inventory/suit/mob_digi.dmi"
-
-/obj/item/clothing/under
-	update_icon_define_digi = "modular_chomp/icons/inventory/uniform/mob_digi.dmi"
 
 /obj/item/clothing/shoes/MouseDrop_T(mob/living/target, mob/living/user)
 	if(!istype(user)) return ..() // If the user passed in isn't a living mob, exit
@@ -32,57 +20,6 @@
 		user.forceMove(src)
 
 	return ..()
-
-
-/obj/item/clothing/proc/handle_digitigrade(var/mob/user)
-	if(ishuman(user))
-		var/mob/living/carbon/human/H = user
-
-		// if digitigrade-use flag is set
-		if(H.digitigrade)
-
-			// figure out what slot we care about
-			if(!update_icon_define_digi)
-				return
-
-			// Don't reset if already set
-			if(!fit_for_digi)
-				fit_for_digi = TRUE // set flag even if no icon_state exists, so we don't repeat checks
-
-				//if update_icon_define is already set to something, place it in a var to hold it temporarily
-				if(update_icon_define)
-					update_icon_define_orig = update_icon_define
-
-				// only override icon if a corresponding digitigrade replacement icon_state exists
-				// otherwise, keep the old non-digi icon_define (or nothing)
-				if(icon_state && icon_states(update_icon_define_digi).Find(icon_state))
-					update_icon_define = update_icon_define_digi
-
-
-		// if not-digitigrade, only act if the clothing was previously fit for a digitigrade char
-		else
-			if(fit_for_digi)
-				fit_for_digi = FALSE
-
-				//either reset update_icon_define to it's old value
-				// or reset update_icon_define to null
-				if(update_icon_define_orig)
-					update_icon_define = update_icon_define_orig
-					update_icon_define_orig = null
-				else
-					update_icon_define = null
-
-/obj/item/clothing/shoes/equipped(var/mob/user, var/slot)
-	. = ..()
-	handle_digitigrade(user)
-
-/obj/item/clothing/suit/equipped(var/mob/user, var/slot)
-	. = ..()
-	handle_digitigrade(user)
-
-/obj/item/clothing/under/equipped(var/mob/user, var/slot)
-	. = ..()
-	handle_digitigrade(user)
 
 //In shoe steppies!
 /obj/item/clothing/shoes/proc/handle_inshoe_stepping(var/mob/living/carbon/human/pred, var/mob/living/carbon/human/prey)

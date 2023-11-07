@@ -255,6 +255,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"custom_reagentalpha" = selected.custom_reagentalpha,
 			"liquid_overlay" = selected.liquid_overlay,
 			"max_liquid_level" = selected.max_liquid_level,
+			"reagent_touches" = selected.reagent_touches,
 			"mush_overlay" = selected.mush_overlay,
 			"mush_color" = selected.mush_color,
 			"mush_alpha" = selected.mush_alpha,
@@ -352,6 +353,16 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				if(selected.autotransfer_blacklist & selected.autotransfer_flags_list[flag_name])
 					at_blacklist.Add(flag_name)
 			selected_list["autotransfer"]["autotransfer_blacklist"] = at_blacklist
+			var/list/at_whitelist_items = list()
+			for(var/flag_name in selected.autotransfer_flags_list_items)
+				if(selected.autotransfer_whitelist_items & selected.autotransfer_flags_list_items[flag_name])
+					at_whitelist_items.Add(flag_name)
+			selected_list["autotransfer"]["autotransfer_whitelist_items"] = at_whitelist_items
+			var/list/at_blacklist_items = list()
+			for(var/flag_name in selected.autotransfer_flags_list_items)
+				if(selected.autotransfer_blacklist_items & selected.autotransfer_flags_list_items[flag_name])
+					at_blacklist_items.Add(flag_name)
+			selected_list["autotransfer"]["autotransfer_blacklist_items"] = at_blacklist_items
 			var/list/at_secondary_whitelist = list()
 			for(var/flag_name in selected.autotransfer_flags_list)
 				if(selected.autotransfer_secondary_whitelist & selected.autotransfer_flags_list[flag_name])
@@ -362,6 +373,16 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				if(selected.autotransfer_secondary_blacklist & selected.autotransfer_flags_list[flag_name])
 					at_secondary_blacklist.Add(flag_name)
 			selected_list["autotransfer"]["autotransfer_secondary_blacklist"] = at_secondary_blacklist
+			var/list/at_secondary_whitelist_items = list()
+			for(var/flag_name in selected.autotransfer_flags_list_items)
+				if(selected.autotransfer_secondary_whitelist_items & selected.autotransfer_flags_list_items[flag_name])
+					at_secondary_whitelist_items.Add(flag_name)
+			selected_list["autotransfer"]["autotransfer_secondary_whitelist_items"] = at_secondary_whitelist_items
+			var/list/at_secondary_blacklist_items = list()
+			for(var/flag_name in selected.autotransfer_flags_list_items)
+				if(selected.autotransfer_secondary_blacklist_items & selected.autotransfer_flags_list_items[flag_name])
+					at_secondary_blacklist_items.Add(flag_name)
+			selected_list["autotransfer"]["autotransfer_secondary_blacklist_items"] = at_secondary_blacklist_items
 			//CHOMPAdd END
 
 		selected_list["disable_hud"] = selected.disable_hud
@@ -428,6 +449,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			selected_list["liq_interacts"]["custom_reagentalpha"] = selected.custom_reagentalpha ? selected.custom_reagentalpha : "Default"
 			selected_list["liq_interacts"]["liquid_overlay"] = selected.liquid_overlay
 			selected_list["liq_interacts"]["max_liquid_level"] = selected.max_liquid_level
+			selected_list["liq_interacts"]["reagent_touches"] = selected.reagent_touches
 			selected_list["liq_interacts"]["mush_overlay"] = selected.mush_overlay
 			selected_list["liq_interacts"]["mush_color"] = selected.mush_color
 			selected_list["liq_interacts"]["mush_alpha"] = selected.mush_alpha
@@ -1393,6 +1415,13 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					var/max_liquid_level = belly_data["max_liquid_level"]
 					new_belly.max_liquid_level = CLAMP(max_liquid_level, 0, 100)
 
+				if(isnum(belly_data["reagent_touches"]))
+					var/new_reagent_touches = belly_data["reagent_touches"]
+					if(new_reagent_touches == 0)
+						new_belly.reagent_touches = FALSE
+					if(new_reagent_touches == 1)
+						new_belly.reagent_touches = TRUE
+
 				if(isnum(belly_data["mush_overlay"]))
 					var/new_mush_overlay = belly_data["mush_overlay"]
 					if(new_mush_overlay == 0)
@@ -2165,6 +2194,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						l.adjust_nutrition(thismuch)
 					ourtarget.death()		// To make sure all on-death procs get properly called
 					if(ourtarget)
+						if(ourtarget.is_preference_enabled(/datum/client_preference/digestion_noises))
+							if(!b.fancy_vore)
+								SEND_SOUND(ourtarget, sound(get_sfx("classic_death_sounds")))
+							else
+								SEND_SOUND(ourtarget, sound(get_sfx("fancy_death_prey")))
 						b.handle_digestion_death(ourtarget)
 				if("Absorb")
 					if(tgui_alert(ourtarget, "\The [usr] is attempting to instantly absorb you. Is this something you are okay with happening to you?","Instant Absorb", list("No", "Yes")) != "Yes")
@@ -2853,6 +2887,35 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				return FALSE
 			host.vore_selected.autotransfer_secondary_blacklist ^= host.vore_selected.autotransfer_flags_list[toggle_addon]
 			. = TRUE
+			. = TRUE
+		if("b_autotransfer_whitelist_items")
+			var/list/menu_list = host.vore_selected.autotransfer_flags_list_items.Copy()
+			var/toggle_addon = tgui_input_list(usr, "Toggle Whitelist", "Whitelist Choice", menu_list)
+			if(!toggle_addon)
+				return FALSE
+			host.vore_selected.autotransfer_whitelist_items ^= host.vore_selected.autotransfer_flags_list_items[toggle_addon]
+			. = TRUE
+		if("b_autotransfer_blacklist_items")
+			var/list/menu_list = host.vore_selected.autotransfer_flags_list_items.Copy()
+			var/toggle_addon = tgui_input_list(usr, "Toggle Blacklist", "Blacklist Choice", menu_list)
+			if(!toggle_addon)
+				return FALSE
+			host.vore_selected.autotransfer_blacklist_items ^= host.vore_selected.autotransfer_flags_list_items[toggle_addon]
+			. = TRUE
+		if("b_autotransfer_secondary_whitelist_items")
+			var/list/menu_list = host.vore_selected.autotransfer_flags_list_items.Copy()
+			var/toggle_addon = tgui_input_list(usr, "Toggle Whitelist", "Whitelist Choice", menu_list)
+			if(!toggle_addon)
+				return FALSE
+			host.vore_selected.autotransfer_secondary_whitelist_items ^= host.vore_selected.autotransfer_flags_list_items[toggle_addon]
+			. = TRUE
+		if("b_autotransfer_secondary_blacklist_items")
+			var/list/menu_list = host.vore_selected.autotransfer_flags_list_items.Copy()
+			var/toggle_addon = tgui_input_list(usr, "Toggle Blacklist", "Blacklist Choice", menu_list)
+			if(!toggle_addon)
+				return FALSE
+			host.vore_selected.autotransfer_secondary_blacklist_items ^= host.vore_selected.autotransfer_flags_list_items[toggle_addon]
+			. = TRUE
 		if("b_autotransfer_min_amount")
 			var/autotransfer_min_amount_input = input(user, "Set the minimum amount of items your belly can belly auto-transfer at once. Set to 0 for no limit.", "Auto-Transfer Min Amount") as num|null
 			if(!isnull(autotransfer_min_amount_input))
@@ -3198,6 +3261,14 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			else
 				host.vore_selected.custom_reagentalpha = null
 			host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_reagent_touches")
+			if(!host.vore_selected.reagent_touches)
+				host.vore_selected.reagent_touches = 1
+				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] will now apply reagents to creatures when digesting.</span>")
+			else
+				host.vore_selected.reagent_touches = 0
+				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] will no longer apply reagents to creatures when digesting.</span>")
 			. = TRUE
 		if("b_mush_overlay")
 			if(!host.vore_selected.mush_overlay)

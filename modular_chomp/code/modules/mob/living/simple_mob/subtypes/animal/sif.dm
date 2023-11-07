@@ -33,6 +33,15 @@
 /mob/living/simple_mob/animal/sif/frostfly
 	maxHealth = 32
 	health = 32
+	armor_soak = list(
+			"melee" = 0,
+			"bullet" = 0,
+			"laser" = 5,
+			"energy" = 0,
+			"bomb" = 0,
+			"bio" = 0,
+			"rad" = 0
+			)
 
 /mob/living/simple_mob/vore/aggressive/deathclaw
 	maxHealth = 100

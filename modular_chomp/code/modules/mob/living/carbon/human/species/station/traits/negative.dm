@@ -9,5 +9,5 @@
 	custom_only = FALSE
 	can_take = ORGANICS
 
-	var_changes = list("minimum_breath_pressure" = 22)
+	var_changes = list("minimum_breath_pressure" = 18)
 	excludes = list(/datum/trait/positive/light_breather)

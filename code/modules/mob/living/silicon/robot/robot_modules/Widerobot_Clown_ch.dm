@@ -27,7 +27,7 @@
 	src.modules += new /obj/item/device/boop_module(src)
 	src.modules += new /obj/item/weapon/dogborg/pounce(src)
 	src.modules += new /obj/item/weapon/bikehorn(src)
-	src.modules += new /obj/item/weapon/gun/launcher/confetti_cannon/honkborg(src)
+	src.modules += new /obj/item/weapon/gun/launcher/confetti_cannon/robot(src)
 
 	var/obj/item/weapon/rsf/M = new /obj/item/weapon/rsf(src)
 	M.stored_matter = 30

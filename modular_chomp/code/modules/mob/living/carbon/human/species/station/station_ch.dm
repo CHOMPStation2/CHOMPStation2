@@ -53,8 +53,8 @@
 /datum/species/xenomorph_hybrid
 	name = SPECIES_XENOMORPH_HYBRID
 	name_plural = "Xenomorph Hybrids"
-	icobase = 'modular_chomp/icons/mob/human_races/r_xenomorph_hybrid.dmi'
-	deform = 'modular_chomp/icons/mob/human_races/r_xenomorph_hybrid.dmi'
+	icobase = 'icons/mob/human_races/r_xenomorph_hybrid.dmi'
+	deform = 'icons/mob/human_races/r_xenomorph_hybrid.dmi'
 	tail = "tail"
 	icobase_tail = 1
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp) // Innate claws and bite.
@@ -102,7 +102,7 @@
 
 	move_trail = /obj/effect/decal/cleanable/blood/tracks/claw
 	digi_allowed = TRUE
-	icodigi = 'modular_chomp/icons/mob/human_races/r_digi_xeno.dmi'
+	icodigi = 'icons/mob/human_races/r_digi_xeno.dmi'
 
 	species_sounds = "Xeno"
 	gender_specific_species_sounds = FALSE

@@ -14,15 +14,18 @@
 	if(!istype(user))
 		..()
 		return
-	if(user.nutrition < 20)
+	if(user.nutrition < 70) //CHOMPEdit Set minimum nutrition to be the same as in fitness_machines_vr.dm
 		to_chat(user, "<span class='warning'>You need more energy to use the punching bag. Go eat something.</span>")
+	else if(user.weight < 70) // CHOMPAdd Begin Add weight loss to old fitness equipment
+		to_chat(user, "<span class='notice'>You're too skinny to risk losing any more weight!</span>") // CHOMPAdd End
 	else
 		if(user.a_intent == I_HURT)
 			user.setClickCooldown(user.get_attack_speed())
 			flick("[icon_state]_hit", src)
 			playsound(src, 'sound/effects/woodhit.ogg', 25, 1, -1)
 			user.do_attack_animation(src)
-			user.nutrition = user.nutrition - 5
+			user.adjust_nutrition(-10) //CHOMPEdit Set nutrition drain to be the same as in fitness_machines_vr.dm
+			user.weight -= 0.1 * (0.01 * user.weight_loss) // CHOMPAdd Add weight loss to old fitness equipment
 			to_chat(user, "<span class='warning'>You [pick(hit_message)] \the [src].</span>")
 
 /obj/structure/fitness/weightlifter
@@ -45,9 +48,12 @@
 	if(user.loc != src.loc)
 		to_chat(user, "<span class='warning'>You must be on the weight machine to use it.</span>")
 		return
-	if(user.nutrition < 50)
+	if(user.nutrition < 70) //CHOMPEdit Set minimum nutrition to be the same as in fitness_machines_vr.dm
 		to_chat(user, "<span class='warning'>You need more energy to lift weights. Go eat something.</span>")
 		return
+	if(user.weight < 70) //CHOMPAdd Begin Add weight loss to old fitness equipment
+		to_chat(user, "<span class='notice'>You're too skinny to risk losing any more weight!</span>")
+		return //CHOMPAdd End
 	if(being_used)
 		to_chat(user, "<span class='warning'>The weight machine is already in use by somebody else.</span>")
 		return
@@ -56,9 +62,10 @@
 		playsound(src, 'sound/effects/weightlifter.ogg', 50, 1)
 		user.set_dir(SOUTH)
 		flick("[icon_state]_[weight]", src)
-		if(do_after(user, 20 + (weight * 10)))
+		if(do_after(user, 30 + (weight * 10))) //CHOMPEdit Set timer to be similar to the machines in fitness_machines_vr.dm
 			playsound(src, 'sound/effects/weightdrop.ogg', 25, 1)
 			user.adjust_nutrition(weight * -10)
+			user.weight -= 0.1 * weight * (0.01 * user.weight_loss) // CHOMPAdd Add weight loss to old fitness equipment
 			to_chat(user, "<span class='notice'>You lift the weights [qualifiers[weight]].</span>")
 			being_used = 0
 		else
