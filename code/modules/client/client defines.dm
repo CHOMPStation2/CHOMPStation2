@@ -24,9 +24,9 @@
 	var/area			= null
 	var/time_died_as_mouse = null //when the client last died as a mouse
 	var/datum/tooltip/tooltips 	= null
-	var/datum/chatOutput/chatOutput
+	//var/datum/chatOutput/chatOutput CHOMPedit - tgchat
 	var/datum/volume_panel/volume_panel = null // Initialized by /client/verb/volume_panel()
-	var/chatOutputLoadedAt
+	//var/chatOutputLoadedAt CHOMPedit - tgchat
 	var/seen_news = 0
 
 	var/adminhelped = 0

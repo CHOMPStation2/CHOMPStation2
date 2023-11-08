@@ -231,7 +231,6 @@ export class TextArea extends Component {
             'color': displayedValue ? 'rgba(0, 0, 0, 0)' : 'inherit',
           }}
         />
-        {/* CHOMPedit End */}
       </Box>
     );
   }

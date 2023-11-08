@@ -60,7 +60,7 @@
 	GLOB.timezoneOffset = get_timezone_offset()
 
 	callHook("startup")
-	init_vchat()
+	//init_vchat() CHOMPedit - tgchat
 	//Emergency Fix
 	load_mods()
 	//end-emergency fix

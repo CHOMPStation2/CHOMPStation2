@@ -4,14 +4,14 @@
  * @license MIT
  */
 
-import { canRender, classes } from 'common/react';
-import { Component, createRef, InfernoNode, RefObject } from 'inferno';
-import { addScrollableNode, removeScrollableNode } from '../events';
 import { BoxProps, computeBoxClassName, computeBoxProps } from './Box';
+import { Component, InfernoNode, RefObject, createRef } from 'inferno';
+import { addScrollableNode, removeScrollableNode } from '../events';
+import { canRender, classes } from 'common/react';
 
-interface SectionProps extends BoxProps {
+export type SectionProps = BoxProps & {
   className?: string;
-  title?: string | InfernoElement<string>;
+  title?: InfernoNode;
   buttons?: InfernoNode;
   fill?: boolean;
   fitted?: boolean;
@@ -28,7 +28,7 @@ interface SectionProps extends BoxProps {
   scrollableRef?: RefObject<HTMLDivElement>;
   /** @member Callback function for the `scroll` event */
   onScroll?: (this: GlobalEventHandlers, ev: Event) => any;
-}
+};
 
 export class Section extends Component<SectionProps> {
   scrollableRef: RefObject<HTMLDivElement>;
@@ -85,7 +85,6 @@ export class Section extends Component<SectionProps> {
           fitted && 'Section--fitted',
           scrollable && 'Section--scrollable',
           scrollableHorizontal && 'Section--scrollableHorizontal',
-          flexGrow && 'Section--flex', // VOREStation Addition
           className,
           computeBoxClassName(rest),
         ])}
@@ -100,6 +99,7 @@ export class Section extends Component<SectionProps> {
           {/* Vorestation Edit Start */}
           <div
             ref={this.scrollableRef}
+            onScroll={onScroll} // CHOMPedit
             className={classes([
               'Section__content',
               !!stretchContents && 'Section__content--stretchContents',

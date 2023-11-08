@@ -14,7 +14,7 @@
  */
 
 // Run all strings to be used in an SQL query through this proc first to properly escape out injection attempts.
-/proc/sanitizeSQL(var/t as text) 
+/proc/sanitizeSQL(var/t as text)
 	//var/sqltext = dbcon.Quote(t); //CHOMPEdit Begin
 	//return copytext(sqltext, 2, length(sqltext));//Quote() adds quotes around input, we already do that
 	return t
@@ -347,7 +347,8 @@
 	if(!text_tag_cache[tagname])
 		var/icon/tag = icon(text_tag_icons, tagname)
 		text_tag_cache[tagname] = bicon(tag, TRUE, "text_tag")
-	if(C.chatOutput.broken)
+	//if(C.chatOutput.broken) CHOMPedit - tgchat
+	if(C.tgui_panel.is_ready())
 		return "<IMG src='\ref[text_tag_icons]' class='text_tag' iconstate='[tagname]'" + (tagdesc ? " alt='[tagdesc]'" : "") + ">"
 	return text_tag_cache[tagname]
 

@@ -171,7 +171,7 @@ const styleMapperByPropName = {
   italic: mapBooleanPropTo('font-style', 'italic'),
   nowrap: mapBooleanPropTo('white-space', 'nowrap'),
   preserveWhitespace: mapBooleanPropTo('white-space', 'pre-wrap'),
-  // Margins
+  // Margin
   m: mapDirectionalUnitPropTo('margin', halfUnit, [
     'top',
     'bottom',
@@ -184,7 +184,7 @@ const styleMapperByPropName = {
   mb: mapUnitPropTo('margin-bottom', halfUnit),
   ml: mapUnitPropTo('margin-left', halfUnit),
   mr: mapUnitPropTo('margin-right', halfUnit),
-  // Margins
+  // Padding
   p: mapDirectionalUnitPropTo('padding', halfUnit, [
     'top',
     'bottom',

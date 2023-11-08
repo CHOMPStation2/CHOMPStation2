@@ -135,7 +135,7 @@
 		if("usr")		hsrc = mob
 		if("prefs")		return prefs.process_link(usr,href_list)
 		if("vars")		return view_var_Topic(href,href_list,hsrc)
-		if("chat")		return chatOutput.Topic(href, href_list)
+		//if("chat")		return chatOutput.Topic(href, href_list) CHOMPedit - tgchat
 
 	switch(href_list["action"])
 		if("openLink")
@@ -174,10 +174,15 @@
 		del(src)
 		return
 
+	/* CHOMPedit start - tgchat
 	chatOutput = new /datum/chatOutput(src) //veechat
 	chatOutput.send_resources()
 	spawn()
 		chatOutput.start()
+	*/
+	// Instantiate tgui panel
+	tgui_panel = new(src, "browseroutput")
+	// CHOMPedit End
 
 	//Only show this if they are put into a new_player mob. Otherwise, "what title screen?"
 	if(isnewplayer(src.mob))
@@ -213,6 +218,9 @@
 	prefs.sanitize_preferences()
 	if(prefs)
 		prefs.selecting_slots = FALSE
+
+	// Initialize tgui panel
+	tgui_panel.initialize() // CHOMPedit - tgchat
 
 	connection_time = world.time
 	connection_realtime = world.realtime
@@ -492,6 +500,7 @@
 		return FALSE
 	return ..()
 
+/* CHOMPedit Start - tgchat
 /client/verb/reload_vchat()
 	set name = "Reload VChat"
 	set category = "OOC"
@@ -513,7 +522,7 @@
 	chatOutput.send_resources()
 	spawn()
 		chatOutput.start()
-
+*/ // CHOMPedit End
 
 //This is for getipintel.net.
 //You're welcome to replace this proc with your own that does your own cool stuff.
