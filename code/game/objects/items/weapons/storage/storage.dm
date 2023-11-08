@@ -727,13 +727,13 @@
 
 	while (cur_atom && !(cur_atom in container.contents))
 		if (isarea(cur_atom))
-			return INFINITY
+			return INFINITY // CHOMPedit
 		if (istype(cur_atom.loc, /obj/item/weapon/storage))
 			depth++
 		cur_atom = cur_atom.loc
 
 	if (!cur_atom)
-		return INFINITY	//inside something with a null loc.
+		return INFINITY	// CHOMPedit - inside something with a null loc.
 
 	return depth
 
@@ -745,13 +745,13 @@
 
 	while (cur_atom && !isturf(cur_atom))
 		if (isarea(cur_atom))
-			return INFINITY
+			return INFINITY // CHOMPedit
 		if (istype(cur_atom.loc, /obj/item/weapon/storage))
 			depth++
 		cur_atom = cur_atom.loc
 
 	if (!cur_atom)
-		return INFINITY	//inside something with a null loc.
+		return INFINITY	//CHOMPedit - inside something with a null loc.
 
 	return depth
 
