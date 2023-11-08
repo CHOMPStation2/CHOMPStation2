@@ -21,6 +21,13 @@
   FluffMedic:
   - rscadd: Some new crafting things.
   - bugfix: fixed a few POIs, and missed balance alterations
+  - rscdel: Removed a gateway thing due to a bug
   ItsSelis:
   - code_imp: fixed mirror conflict of the upstream port of the confetti cannon
   - bugfix: fixes players having infinite reach
+2023-11-08:
+  Aroliacue:
+  - qol: Ported storage reach, allowing you to pull out items from a storage slot
+      inside of another storage slot. For example, pulling out medkit equipment from
+      your bag without holding the medkit.
+  - bugfix: Storage reach no longer gives you telekinesis.
