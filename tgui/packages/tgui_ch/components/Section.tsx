@@ -85,6 +85,7 @@ export class Section extends Component<SectionProps> {
           fitted && 'Section--fitted',
           scrollable && 'Section--scrollable',
           scrollableHorizontal && 'Section--scrollableHorizontal',
+          flexGrow && 'Section--flex', // VOREStation Addition
           className,
           computeBoxClassName(rest),
         ])}
