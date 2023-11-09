@@ -1,223 +1,3027 @@
-"aa" = (/obj/machinery/button/remote/blast_door{id = "tradestarshutters"; name = "remote shutter control"; pixel_x = 30; req_access = list(160)},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"aA" = (/obj/structure/shuttle/engine/propulsion{dir = 4; icon_state = "propulsion_l"},/turf/simulated/shuttle/plating/airless/carry,/area/survivalpod/superpose/TradingShip)
-"aP" = (/obj/effect/floor_decal/industrial/warning{dir = 10},/obj/structure/largecrate/animal/corgi,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"bf" = (/obj/structure/table/standard,/obj/item/stack/cable_coil,/obj/item/stack/cable_coil,/obj/item/clothing/gloves/yellow,/obj/item/clothing/gloves/yellow,/obj/item/clothing/gloves/yellow,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"bk" = (/obj/effect/floor_decal/industrial/warning{dir = 6},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"bm" = (/obj/structure/table/standard,/obj/item/clothing/suit/space/void/merc,/obj/item/clothing/suit/space/void/merc,/obj/item/clothing/suit/space/void/merc,/obj/item/clothing/shoes/magboots,/obj/item/clothing/shoes/magboots,/obj/item/clothing/shoes/magboots,/obj/item/clothing/head/helmet/space/void/merc,/obj/item/clothing/head/helmet/space/void/merc,/obj/item/clothing/head/helmet/space/void/merc,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"ca" = (/obj/item/weapon/coin/phoron,/obj/item/weapon/coin/phoron,/obj/item/weapon/coin/phoron,/obj/item/weapon/coin/phoron,/obj/item/weapon/coin/phoron,/obj/item/weapon/coin/phoron,/obj/item/weapon/coin/phoron,/obj/item/weapon/coin/phoron,/obj/item/weapon/coin/phoron,/obj/item/weapon/coin/phoron,/obj/item/weapon/coin/phoron,/obj/item/weapon/coin/phoron,/obj/item/weapon/coin/phoron,/obj/item/weapon/coin/phoron,/obj/item/weapon/coin/phoron,/obj/item/weapon/coin/phoron,/obj/item/weapon/coin/phoron,/obj/item/weapon/coin/phoron,/obj/item/weapon/coin/phoron,/obj/item/weapon/coin/phoron,/obj/item/weapon/coin/phoron,/obj/item/weapon/coin/phoron,/obj/item/weapon/coin/phoron,/obj/item/weapon/coin/phoron,/obj/machinery/smartfridge/survival_pod{icon = 'icons/obj/vending.dmi'; icon_base = "fridge_sci"; icon_contents = "chem"; icon_state = "fridge_sci"; name = "Phoron storage"; pixel_y = 0},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"cC" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 10},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"cM" = (/obj/machinery/vending/medical{pixel_y = -32; req_access = null},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"cV" = (/obj/effect/floor_decal/industrial/warning{dir = 5},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"cX" = (/obj/structure/window/reinforced{dir = 1},/obj/machinery/door/blast/shutters{density = 0; dir = 2; icon_state = "shutter0"; id = "tradeportshutters"; name = "Blast Shutters"; opacity = 0},/obj/structure/grille,/obj/structure/window/reinforced{dir = 8},/obj/structure/window/reinforced,/obj/structure/window/reinforced/full,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/TradingShip)
-"ds" = (/obj/machinery/atmospherics/unary/engine/bigger{dir = 8},/turf/simulated/shuttle/plating/airless/carry,/area/survivalpod/superpose/TradingShip)
-"dy" = (/obj/machinery/atmospherics/pipe/manifold/visible{dir = 1},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"dP" = (/obj/effect/floor_decal/industrial/warning,/obj/structure/closet/crate/secure/loot,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"dY" = (/obj/machinery/light{dir = 4},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"dZ" = (/obj/structure/table/steel_reinforced,/obj/item/weapon/cell/high,/obj/item/weapon/cell/high,/obj/item/weapon/cell/hyper,/obj/item/weapon/cell/potato,/obj/structure/window/reinforced,/obj/item/weapon/cell/slime,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"es" = (/obj/structure/table/standard,/obj/item/stack/material/steel{amount = 2},/obj/item/stack/material/steel{amount = 2},/obj/item/stack/material/glass{amount = 15},/obj/item/stack/material/glass{amount = 15},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"eE" = (/obj/machinery/door/airlock/multi_tile/glass{dir = 2; req_access = null},/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/TradingShip)
-"eS" = (/obj/structure/table/rack,/obj/effect/floor_decal/industrial/warning{dir = 1},/obj/item/device/kit/paint/ripley/death,/obj/item/device/kit/paint/ripley/flames_blue,/obj/item/device/kit/paint/ripley/flames_red,/obj/item/device/kit/paint/ripley,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"fe" = (/obj/machinery/mineral/mint{emagged = 1},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"fm" = (/obj/structure/bed/chair/comfy/black,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"fG" = (/obj/machinery/vending/cigarette{name = "hacked cigarette machine"; prices = list(); products = list(/obj/item/weapon/storage/fancy/cigarettes=10,/obj/item/weapon/storage/box/matches=10,/obj/item/weapon/flame/lighter/zippo=4,/obj/item/clothing/mask/smokable/cigarette/cigar/havana=2)},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"fJ" = (/obj/machinery/door/airlock/silver{name = "Restroom"},/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/TradingShip)
-"fP" = (/obj/vehicle/train/engine,/obj/machinery/light{dir = 8},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"fU" = (/obj/machinery/door/window/northright{name = "Cargo Hold"; req_access = list(160)},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"gq" = (/obj/effect/floor_decal/industrial/warning,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"gA" = (/obj/machinery/light{dir = 8},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"gJ" = (/obj/effect/floor_decal/industrial/warning{dir = 1},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"hm" = (/obj/structure/table/steel_reinforced,/obj/machinery/button/remote/blast_door{id = "tradebridgeshutters"; name = "remote shutter control"; pixel_x = 30; req_access = list(150)},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"hx" = (/obj/structure/window/reinforced,/obj/structure/grille,/obj/structure/window/reinforced{dir = 4},/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced{dir = 8},/obj/machinery/door/blast/shutters{density = 0; dir = 8; icon_state = "shutter0"; id = "trade"; name = "Shop Shutters"; opacity = 0},/turf/simulated/shuttle/plating,/area/survivalpod/superpose/TradingShip)
-"hI" = (/obj/structure/closet,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"hK" = (/obj/machinery/autolathe{desc = "Your typical Autolathe. It appears to have much more options than your regular one, however..."; emagged = 1; hacked = 1; name = "Unlocked Autolathe"},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"ia" = (/obj/machinery/optable,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"jA" = (/obj/structure/fans/hardlight,/obj/machinery/door/airlock/multi_tile/metal/mait,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/TradingShip)
-"jH" = (/obj/structure/table/standard,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"kd" = (/obj/machinery/atmospherics/pipe/simple/visible,/obj/machinery/meter,/obj/structure/largecrate/animal/cat,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"kw" = (/obj/machinery/embedded_controller/radio/simple_docking_controller{dir = 4; frequency = 1380; id_tag = "trade_shuttle"; pixel_x = -25; req_one_access = list(101); tag_door = "trade_shuttle_hatch"},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"kx" = (/obj/structure/frame/computer,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"kB" = (/obj/machinery/button/remote/blast_door{id = "tradeportshutters"; name = "remote shutter control"; pixel_x = 30; req_access = list(160)},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"kD" = (/obj/effect/floor_decal/industrial/warning{dir = 9},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"kO" = (/obj/machinery/door/window/northleft{name = "Cargo Hold"; req_access = list(160)},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"kU" = (/obj/machinery/access_button{master_tag = null; pixel_x = 27; pixel_y = -7; req_one_access = null},/obj/machinery/door/airlock/external{frequency = null; icon_state = "door_locked"; id_tag = null; locked = 1; name = "Ship Hatch"; req_access = null},/obj/structure/fans/hardlight,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/TradingShip)
-"kV" = (/obj/structure/table/woodentable,/obj/item/weapon/card/id/external{access = list(160)},/obj/item/weapon/card/id/external{access = list(160)},/obj/item/weapon/card/id/external{access = list(160)},/turf/simulated/floor/carpet,/area/survivalpod/superpose/TradingShip)
-"lm" = (/obj/structure/closet/walllocker_double/north,/obj/item/device/gps,/obj/item/sticky_pad/random,/obj/item/device/starcaster_news,/obj/item/weapon/pen/blue,/obj/item/device/pda,/obj/item/weapon/card/id/external,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,/obj/item/weapon/reagent_containers/food/snacks/sosjerky,/obj/item/weapon/reagent_containers/food/snacks/sosjerky,/obj/item/weapon/gun/energy/locked/phasegun/pistol,/obj/item/weapon/material/knife/tacknife/survival,/obj/item/clothing/accessory/permit/gun,/obj/item/device/camera,/obj/item/device/binoculars,/obj/item/device/threadneedle,/obj/random/soap,/obj/item/weapon/towel/random,/obj/item/bodybag/cryobag,/obj/item/device/flashlight/flare,/obj/item/device/flashlight/flare,/obj/item/device/flashlight/color/yellow,/obj/item/device/radio,/obj/item/device/radio,/obj/item/weapon/flame/lighter/random,/obj/item/weapon/cell/device/hyper,/obj/item/weapon/cell/device/hyper,/obj/item/weapon/extinguisher/mini,/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,/obj/item/weapon/reagent_containers/pill/spaceacillin,/obj/item/weapon/reagent_containers/pill/spaceacillin,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/device/suit_cooling_unit/emergency,/obj/item/stack/nanopaste,/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,/obj/item/weapon/storage/backpack/messenger,/obj/item/clothing/accessory/storage/black_drop_pouches,/obj/item/clothing/accessory/poncho/thermal,/obj/item/weapon/storage/box/survival/comp,/obj/item/weapon/storage/toolbox/brass,/obj/item/weapon/storage/box/khcrystal,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"lv" = (/obj/structure/window/reinforced{dir = 4},/obj/machinery/door/blast/shutters{density = 0; dir = 8; icon_state = "shutter0"; id = "tradeportshutters"; name = "Blast Shutters"; opacity = 0},/obj/structure/grille,/obj/structure/window/reinforced{dir = 8},/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced/full,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/TradingShip)
-"lQ" = (/obj/structure/fans/hardlight,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/TradingShip)
-"lW" = (/obj/structure/table/standard,/obj/item/weapon/storage/toolbox/mechanical,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"md" = (/obj/structure/salvageable/console_os{dir = 4},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"mi" = (/obj/structure/window/reinforced,/obj/machinery/door/blast/shutters{density = 0; icon_state = "shutter0"; id = "tradestarshutters"; name = "Blast Shutters"; opacity = 0},/obj/structure/grille,/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced{dir = 4},/obj/structure/window/reinforced/full,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/TradingShip)
-"mF" = (/obj/structure/mirror{pixel_y = 28},/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/TradingShip)
-"mJ" = (/obj/structure/table/standard,/obj/item/clothing/gloves/sterile/latex,/obj/item/clothing/mask/surgical,/obj/item/weapon/surgical/retractor{pixel_y = 6},/obj/item/weapon/surgical/scalpel,/obj/item/weapon/surgical/surgicaldrill,/obj/item/weapon/surgical/circular_saw,/obj/item/stack/nanopaste,/obj/item/weapon/surgical/hemostat{pixel_y = 4},/obj/item/weapon/surgical/cautery{pixel_y = 4},/obj/item/weapon/surgical/FixOVein{pixel_x = -6; pixel_y = 1},/obj/item/stack/medical/advanced/bruise_pack,/obj/item/weapon/surgical/bonesetter,/obj/item/weapon/surgical/bonegel{pixel_x = 4; pixel_y = 3},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"mK" = (/obj/machinery/light{dir = 1},/obj/structure/bookcase,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"mR" = (/obj/item/weapon/paper_bin{pixel_x = -3; pixel_y = 8},/obj/item/weapon/pen{pixel_y = 4},/obj/machinery/light,/obj/structure/table/glass,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"mY" = (/obj/structure/table/steel_reinforced,/obj/item/weapon/coin/uranium,/obj/item/weapon/coin/silver,/obj/item/weapon/coin/platinum,/obj/item/weapon/coin/phoron,/obj/item/weapon/coin/iron,/obj/item/weapon/coin/gold,/obj/item/weapon/coin/diamond,/obj/structure/window/reinforced,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"nh" = (/obj/machinery/door/airlock/external{frequency = null; icon_state = "door_locked"; id_tag = null; locked = 1; name = "Ship Hatch"; req_access = null},/obj/machinery/atmospherics/pipe/simple/visible,/obj/structure/fans/hardlight,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/TradingShip)
-"nC" = (/obj/structure/table/steel_reinforced,/obj/item/clothing/head/bearpelt,/obj/item/clothing/head/bowler,/obj/item/clothing/head/caphat/cap,/obj/item/clothing/head/beaverhat,/obj/item/clothing/head/beret/centcom,/obj/item/clothing/head/beret/sec,/obj/item/clothing/head/collectable/kitty,/obj/item/clothing/head/collectable/kitty,/obj/item/clothing/head/collectable/kitty,/obj/item/clothing/head/collectable/rabbitears,/obj/item/clothing/head/collectable/rabbitears,/obj/item/clothing/head/collectable/rabbitears,/obj/item/clothing/head/collectable/petehat,/obj/item/clothing/head/collectable/pirate,/obj/item/clothing/head/collectable/wizard,/obj/item/clothing/head/collectable/xenom,/obj/item/clothing/head/pin/flower/violet,/obj/item/clothing/head/pin/flower/blue,/obj/item/clothing/head/pin/flower/orange,/obj/item/clothing/head/pin/flower/pink,/obj/item/clothing/head/justice,/obj/item/clothing/head/justice/blue,/obj/item/clothing/head/justice/green,/obj/item/clothing/head/justice/pink,/obj/item/clothing/head/justice/yellow,/obj/item/clothing/head/philosopher_wig,/obj/item/clothing/head/plaguedoctorhat,/obj/item/clothing/head/xenos,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"nD" = (/obj/structure/table/steel_reinforced,/obj/random/firstaid,/obj/random/firstaid,/obj/random/firstaid,/obj/random/firstaid,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"nT" = (/obj/machinery/vending/sovietsoda,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"nW" = (/obj/machinery/vending/snack{name = "hacked Getmore Chocolate Corp"; prices = list()},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"oi" = (/obj/structure/table/steel_reinforced,/obj/random/medical,/obj/random/medical,/obj/random/medical,/obj/random/medical,/obj/structure/window/reinforced,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"pl" = (/obj/machinery/door/airlock/glass_engineering{name = "Engineering"; req_access = null; req_one_access = null},/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/TradingShip)
-"pr" = (/obj/machinery/door/airlock/silver{name = "Toilet"},/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/TradingShip)
-"pU" = (/obj/structure/window/reinforced{dir = 4},/obj/machinery/door/blast/shutters{density = 0; dir = 8; icon_state = "shutter0"; id = "tradestarshutters"; name = "Blast Shutters"; opacity = 0},/obj/structure/grille,/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 8},/obj/structure/window/reinforced/full,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/TradingShip)
-"qc" = (/obj/structure/table/woodentable,/obj/item/weapon/paper_bin{pixel_x = -3; pixel_y = 8},/obj/item/weapon/pen{pixel_y = 4},/turf/simulated/floor/carpet,/area/survivalpod/superpose/TradingShip)
-"qo" = (/obj/machinery/door/blast/shutters{density = 0; dir = 2; icon_state = "shutter0"; id = "tradebridgeshutters"; name = "Blast Shutters"; opacity = 0},/obj/structure/grille,/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 8},/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced/full,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/TradingShip)
-"qz" = (/obj/effect/floor_decal/industrial/warning,/obj/structure/largecrate/animal/corgi,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"qT" = (/obj/machinery/door/window/southright{name = "Cargo Hold"; req_access = list(160)},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"qV" = (/obj/effect/floor_decal/industrial/warning{dir = 9},/obj/structure/largecrate/animal/cat,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"rf" = (/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/TradingShip)
-"rg" = (/obj/structure/flora/pottedplant{icon_state = "plant-10"},/turf/simulated/floor/carpet,/area/survivalpod/superpose/TradingShip)
-"ri" = (/obj/machinery/door/airlock/command{name = "Captain's Quarters"; req_access = null; req_one_access = null},/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/TradingShip)
-"rq" = (/obj/machinery/door/blast/shutters{density = 0; icon_state = "shutter0"; id = "tradebridgeshutters"; name = "Blast Shutters"; opacity = 0},/obj/structure/grille,/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 8},/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced/full,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/TradingShip)
-"rx" = (/obj/machinery/door/window/westright{name = "Storefront"; req_access = list(160)},/obj/structure/table/marble,/obj/machinery/door/blast/shutters{density = 0; dir = 8; icon_state = "shutter0"; id = "trade"; name = "Shop Shutters"; opacity = 0},/turf/simulated/shuttle/floor/darkred,/area/survivalpod/superpose/TradingShip)
-"rG" = (/obj/structure/window/reinforced{dir = 1},/obj/machinery/door/blast/shutters{density = 0; dir = 2; icon_state = "shutter0"; id = "tradeportshutters"; name = "Blast Shutters"; opacity = 0},/obj/structure/grille,/obj/structure/window/reinforced,/obj/structure/window/reinforced/full,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/TradingShip)
-"se" = (/obj/structure/curtain/open/shower,/obj/machinery/shower{pixel_y = 3},/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/TradingShip)
-"sh" = (/obj/effect/floor_decal/industrial/warning{dir = 1},/obj/structure/closet/crate/secure/loot,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"sj" = (/obj/machinery/light{dir = 1},/turf/simulated/floor/carpet,/area/survivalpod/superpose/TradingShip)
-"sT" = (/obj/machinery/bodyscanner{dir = 8},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"th" = (/obj/machinery/iv_drip,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"tu" = (/obj/structure/sink{dir = 8; pixel_x = -12; pixel_y = 2},/obj/machinery/light/small,/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/TradingShip)
-"tx" = (/obj/machinery/door/airlock/command{name = "Bridge"; req_access = null; req_one_access = null},/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/TradingShip)
-"tN" = (/obj/structure/bed/chair/office/dark{dir = 8},/turf/simulated/shuttle/floor/darkred,/area/survivalpod/superpose/TradingShip)
-"tQ" = (/obj/structure/window/reinforced{dir = 8},/obj/structure/window/reinforced,/obj/structure/grille,/obj/structure/window/reinforced{dir = 4},/turf/simulated/shuttle/plating,/area/survivalpod/superpose/TradingShip)
-"tX" = (/obj/effect/floor_decal/industrial/warning,/obj/structure/largecrate/hoverpod,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"ua" = (/obj/structure/table/standard,/obj/item/weapon/storage/box/glasses/square,/turf/simulated/floor/carpet,/area/survivalpod/superpose/TradingShip)
-"uo" = (/obj/structure/closet/crate,/obj/item/stack/material/cardboard{amount = 50},/obj/item/stack/material/cardboard{amount = 50},/obj/item/stack/material/cardboard{amount = 50},/obj/item/stack/material/cardboard{amount = 50},/obj/fiftyspawner/blucarpet,/obj/fiftyspawner/oracarpet,/obj/fiftyspawner/purcarpet,/obj/fiftyspawner/sblucarpet,/obj/fiftyspawner/tealcarpet,/obj/fiftyspawner/turcarpet,/obj/item/stack/material/wood{amount = 50; color = "#824B28"},/obj/item/stack/material/wood{amount = 50; color = "#824B28"},/obj/item/stack/material/wood/hard{amount = 50},/obj/item/stack/material/wood/hard{amount = 50},/obj/item/stack/material/wood/sif{amount = 50},/obj/item/stack/material/wood/sif{amount = 50},/obj/item/stack/material/marble{amount = 50},/obj/item/stack/material/marble{amount = 50},/obj/item/stack/material/marble{amount = 50},/obj/item/stack/material/cloth{amount = 50},/obj/item/stack/material/cloth{amount = 50},/obj/item/stack/material/algae{amount = 50},/obj/item/stack/material/sandstone,/obj/item/stack/material/sandstone,/obj/item/stack/material/sandstone,/obj/item/stack/material/lead{amount = 30},/obj/item/stack/material/plasteel{amount = 30; pixel_y = 5},/obj/item/stack/material/resin{amount = 50},/obj/item/stack/material/smolebricks{amount = 50},/obj/item/stack/material/smolebricks{amount = 50},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"uv" = (/turf/simulated/floor/carpet,/area/survivalpod/superpose/TradingShip)
-"uA" = (/obj/structure/table/rack,/obj/effect/floor_decal/industrial/warning,/obj/item/device/kit/paint/gygax/darkgygax,/obj/item/device/kit/paint/gygax/recitence,/obj/item/device/kit/paint/durand,/obj/item/device/kit/paint/durand/phazon,/obj/item/device/kit/paint/durand/seraph,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"uL" = (/obj/machinery/light,/obj/structure/table/standard,/obj/item/weapon/soap,/obj/item/weapon/towel{color = "#0000FF"},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"uR" = (/obj/structure/toilet,/obj/machinery/light/small{dir = 1},/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/TradingShip)
-"vs" = (/obj/effect/floor_decal/industrial/warning{dir = 10},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"vC" = (/obj/machinery/vending/assist{contraband = null; name = "Old Vending Machine"; products = list(/obj/item/device/assembly/prox_sensor=5,/obj/item/device/assembly/signaler=4,/obj/item/device/assembly/infra=4,/obj/item/device/assembly/prox_sensor=4,/obj/item/weapon/handcuffs=8,/obj/item/device/flash=4,/obj/item/weapon/cartridge/signal=4,/obj/item/clothing/glasses/sunglasses=4)},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"vL" = (/obj/machinery/vending/boozeomat{req_access = null},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"vM" = (/obj/structure/bed/chair{dir = 4},/turf/simulated/floor/carpet,/area/survivalpod/superpose/TradingShip)
-"wn" = (/obj/structure/flora/pottedplant{icon_state = "plant-22"},/turf/simulated/floor/carpet,/area/survivalpod/superpose/TradingShip)
-"wz" = (/obj/machinery/atmospherics/pipe/simple/visible,/obj/machinery/door/airlock/external{frequency = null; icon_state = "door_locked"; id_tag = null; locked = 1; name = "Ship Hatch"; req_access = null},/obj/machinery/access_button{dir = 1; master_tag = null; pixel_x = -27; pixel_y = 7; req_one_access = null},/obj/structure/fans/hardlight,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/TradingShip)
-"wT" = (/obj/machinery/door/window/southleft{name = "Cargo Hold"; req_access = list(160)},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"xd" = (/obj/structure/table/steel_reinforced,/obj/random/tech_supply,/obj/random/tech_supply,/obj/random/tech_supply,/obj/random/tech_supply,/obj/random/tech_supply,/obj/random/tech_supply,/obj/item/weapon/weldpack,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"xi" = (/obj/structure/table/steel_reinforced,/obj/item/weapon/inflatable_duck,/obj/random/tech_supply/nofail,/obj/random/tech_supply/nofail,/obj/random/tech_supply/nofail,/obj/random/tech_supply/nofail,/obj/random/tech_supply/nofail,/obj/random/tech_supply/nofail,/obj/random/tech_supply/nofail,/obj/random/tech_supply/nofail,/obj/random/tech_supply/nofail,/obj/random/tech_supply/nofail,/obj/random/tech_supply/nofail,/obj/random/tech_supply/nofail,/obj/random/tech_supply/nofail,/obj/random/tech_supply/nofail,/obj/random/tech_supply/nofail,/obj/random/tech_supply/nofail,/obj/random/tech_supply/nofail,/obj/random/tech_supply/nofail,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"xz" = (/obj/structure/window/reinforced,/obj/machinery/door/blast/shutters{density = 0; icon_state = "shutter0"; id = "tradestarshutters"; name = "Blast Shutters"; opacity = 0},/obj/structure/grille,/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced{dir = 8},/obj/structure/window/reinforced/full,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/TradingShip)
-"xF" = (/obj/structure/closet/wardrobe/pjs,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"xM" = (/obj/machinery/light/small{dir = 4},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"xZ" = (/obj/structure/filingcabinet/filingcabinet,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"yw" = (/obj/structure/bed/padded,/obj/item/weapon/bedsheet/rd,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"yx" = (/obj/structure/table/steel_reinforced,/obj/item/weapon/rig/internalaffairs,/obj/item/clothing/head/helmet/space/void/wizard,/obj/item/clothing/suit/space/void/wizard,/obj/item/device/survivalcapsule/luxury,/obj/item/device/survivalcapsule/luxurybar,/obj/item/device/survivalcapsule/tabiranth,/obj/item/device/survivalcapsule,/obj/item/device/survivalcapsule,/obj/item/device/survivalcapsule,/obj/item/device/survivalcapsule/luxury,/obj/item/device/survivalcapsule/luxury,/obj/item/device/survivalcapsule/superpose,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"yN" = (/obj/machinery/photocopier,/turf/simulated/floor/carpet,/area/survivalpod/superpose/TradingShip)
-"yS" = (/obj/structure/closet/crate,/obj/item/stack/material/plastic{amount = 50},/obj/item/stack/material/plastic{amount = 50},/obj/item/stack/material/plastic{amount = 50},/obj/item/stack/material/plastic{amount = 50},/obj/item/stack/material/steel{amount = 50},/obj/item/stack/material/steel{amount = 50},/obj/item/stack/material/steel{amount = 50},/obj/item/stack/material/steel{amount = 50},/obj/item/stack/material/glass{amount = 50},/obj/item/stack/material/glass{amount = 50},/obj/item/stack/material/glass{amount = 50},/obj/item/stack/material/glass{amount = 50},/obj/item/stack/rods{amount = 50},/obj/item/stack/rods{amount = 50},/obj/item/stack/rods{amount = 50},/obj/item/stack/rods{amount = 50},/obj/item/stack/cable_coil{pixel_x = 3; pixel_y = 3},/obj/item/stack/cable_coil{pixel_x = 3; pixel_y = 3},/obj/item/stack/cable_coil/green,/obj/item/stack/cable_coil/blue,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"zh" = (/obj/machinery/light{dir = 1},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"zN" = (/obj/machinery/button/remote/blast_door{id = "trade"; name = "Shop Shutters"; pixel_y = -26},/turf/simulated/shuttle/floor/darkred,/area/survivalpod/superpose/TradingShip)
-"Au" = (/obj/structure/shuttle/engine/propulsion{dir = 4; icon_state = "propulsion_r"},/turf/simulated/shuttle/plating/airless/carry,/area/survivalpod/superpose/TradingShip)
-"AL" = (/obj/machinery/atmospherics/unary/vent_pump/high_volume{dir = 1; id_tag = null},/obj/machinery/embedded_controller/radio/airlock/airlock_controller{dir = 4; frequency = 1331; id_tag = "trade2_control"; pixel_x = -25; req_access = list(150); tag_airpump = null; tag_chamber_sensor = null; tag_exterior_door = null; tag_interior_door = null},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"AR" = (/obj/structure/closet/walllocker/emerglocker{pixel_y = -32},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"Be" = (/obj/structure/shuttle/engine/heater{dir = 4},/turf/simulated/shuttle/plating/airless,/area/survivalpod/superpose/TradingShip)
-"BH" = (/obj/structure/table/steel_reinforced,/obj/item/clothing/gloves/black,/obj/item/clothing/gloves/blue,/obj/item/clothing/gloves/brown,/obj/item/clothing/gloves/captain,/obj/item/clothing/gloves/combat,/obj/item/clothing/gloves/green,/obj/item/clothing/gloves/grey,/obj/item/clothing/gloves/light_brown,/obj/item/clothing/gloves/purple,/obj/item/clothing/gloves/rainbow,/obj/item/clothing/gloves/swat,/obj/item/clothing/gloves/white,/obj/structure/window/reinforced{dir = 1},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"BU" = (/obj/structure/bed/chair,/turf/simulated/floor/carpet,/area/survivalpod/superpose/TradingShip)
-"Cu" = (/obj/structure/bed/chair/comfy/black{dir = 1},/turf/simulated/floor/carpet,/area/survivalpod/superpose/TradingShip)
-"CV" = (/turf/simulated/shuttle/floor/darkred,/area/survivalpod/superpose/TradingShip)
-"DT" = (/obj/machinery/light,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"DX" = (/obj/structure/table/steel_reinforced,/obj/random/tool,/obj/random/tool,/obj/random/tool,/obj/random/tool,/obj/random/tool,/obj/item/slimepotion/stabilizer,/obj/item/slimepotion/steroid,/obj/item/slimepotion/unity,/obj/item/slimepotion/friendship,/obj/item/slimepotion/friendship,/obj/item/slimepotion/feeding,/obj/item/slimepotion/docility,/obj/item/slimepotion/enhancer,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"EK" = (/obj/machinery/door/airlock/silver{name = "Sleeping"},/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/TradingShip)
-"ET" = (/obj/structure/undies_wardrobe,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"Fy" = (/obj/structure/table/woodentable,/obj/item/weapon/card/id/casino{desc = "An alien id card with strange glowing markings."; icon_state = "changeling"; name = "Alien id"},/obj/item/weapon/card/id/casino{desc = "An alien id card with strange glowing markings."; icon_state = "changeling"; name = "Alien id"},/obj/item/weapon/card/id/casino{desc = "An alien id card with strange glowing markings."; icon_state = "changeling"; name = "Alien id"},/obj/item/weapon/card/id/casino{desc = "An alien id card with strange glowing markings."; icon_state = "changeling"; name = "Alien id"},/obj/item/weapon/card/id/casino{desc = "An alien id card with strange glowing markings."; icon_state = "changeling"; name = "Alien id"},/obj/item/weapon/card/id/casino{desc = "An alien id card with strange glowing markings."; icon_state = "changeling"; name = "Alien id"},/obj/item/weapon/card/id/casino{desc = "An alien id card with strange glowing markings."; icon_state = "changeling"; name = "Alien id"},/obj/item/weapon/card/id/casino{desc = "An alien id card with strange glowing markings."; icon_state = "changeling"; name = "Alien id"},/obj/item/weapon/card/id/casino{desc = "An alien id card with strange glowing markings."; icon_state = "changeling"; name = "Alien id"},/obj/item/weapon/card/id/casino{desc = "An alien id card with strange glowing markings."; icon_state = "changeling"; name = "Alien id"},/turf/simulated/floor/carpet,/area/survivalpod/superpose/TradingShip)
-"FL" = (/obj/machinery/door/window/westleft{name = "Storefront"; req_access = list(160)},/obj/structure/window/reinforced,/obj/machinery/door/blast/shutters{density = 0; dir = 8; icon_state = "shutter0"; id = "trade"; name = "Shop Shutters"; opacity = 0},/obj/structure/table/marble,/obj/machinery/cash_register/civilian{dir = 4},/turf/simulated/shuttle/floor/darkred,/area/survivalpod/superpose/TradingShip)
-"FW" = (/obj/machinery/door/airlock/external{frequency = null; icon_state = "door_locked"; id_tag = null; locked = 1; name = "Ship Hatch"; req_access = null},/obj/structure/fans/hardlight,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/TradingShip)
-"Gb" = (/obj/machinery/light,/turf/simulated/floor/carpet,/area/survivalpod/superpose/TradingShip)
-"Gk" = (/obj/structure/table/standard,/obj/machinery/chemical_dispenser/bar_alc/full,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"GN" = (/obj/machinery/light/small{dir = 4},/obj/machinery/airlock_sensor{dir = 8; id_tag = null; pixel_x = 27},/obj/machinery/atmospherics/unary/vent_pump/high_volume{dir = 1; id_tag = null},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"GS" = (/obj/effect/floor_decal/industrial/warning{dir = 6},/obj/mecha/working/ripley/firefighter,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"GU" = (/obj/machinery/light{dir = 4},/obj/machinery/vending/foodstuffing,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"Hh" = (/obj/structure/table/steel_reinforced,/obj/random/action_figure,/obj/random/action_figure,/obj/random/action_figure,/obj/random/action_figure,/obj/random/action_figure,/obj/random/action_figure,/obj/random/curseditem,/obj/random/curseditem,/obj/random/curseditem,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"Hp" = (/obj/structure/table/standard,/obj/item/weapon/storage/box/donkpockets,/turf/simulated/floor/carpet,/area/survivalpod/superpose/TradingShip)
-"HB" = (/obj/machinery/atmospherics/pipe/simple/visible,/obj/structure/closet/crate/solar,/obj/machinery/light{dir = 8},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"HC" = (/obj/structure/table/standard,/obj/machinery/microwave,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"HP" = (/obj/structure/closet/walllocker/emerglocker{pixel_y = 32},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"Ii" = (/obj/machinery/computer/arcade/battle,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"IL" = (/obj/structure/window/reinforced{dir = 8},/obj/structure/window/reinforced{dir = 1},/obj/structure/grille,/obj/structure/window/reinforced{dir = 4},/turf/simulated/shuttle/plating,/area/survivalpod/superpose/TradingShip)
-"Jg" = (/obj/structure/window/reinforced,/obj/machinery/door/blast/shutters{density = 0; icon_state = "shutter0"; id = "tradestarshutters"; name = "Blast Shutters"; opacity = 0},/obj/structure/grille,/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced/full,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/TradingShip)
-"JF" = (/obj/machinery/vending/foodasian,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"JI" = (/obj/structure/window/reinforced{dir = 1},/obj/machinery/door/blast/shutters{density = 0; dir = 2; icon_state = "shutter0"; id = "tradeportshutters"; name = "Blast Shutters"; opacity = 0},/obj/structure/grille,/obj/structure/window/reinforced{dir = 4},/obj/structure/window/reinforced,/obj/structure/window/reinforced/full,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/TradingShip)
-"JN" = (/obj/machinery/body_scanconsole,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"Km" = (/obj/effect/floor_decal/industrial/warning{dir = 1},/obj/structure/largecrate/animal/cow,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"Ko" = (/obj/structure/table/glass,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"Kv" = (/obj/structure/table/steel_reinforced,/obj/item/weapon/lipstick/black,/obj/item/weapon/lipstick/jade,/obj/item/weapon/lipstick/purple,/obj/item/weapon/lipstick,/obj/item/weapon/lipstick/random,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"Lp" = (/obj/structure/window/reinforced{dir = 1},/obj/structure/table/steel_reinforced,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"Lt" = (/obj/structure/table/steel_reinforced,/obj/item/clothing/under/cheongsam,/obj/item/clothing/under/hosformalmale,/obj/item/clothing/under/hosformalfem,/obj/item/clothing/under/harness,/obj/item/clothing/under/gladiator,/obj/item/clothing/under/ert,/obj/item/clothing/under/schoolgirl,/obj/item/clothing/under/redcoat,/obj/item/clothing/under/sexymime,/obj/item/clothing/under/sexyclown,/obj/item/clothing/under/soviet,/obj/item/clothing/under/space,/obj/item/clothing/under/swimsuit/stripper/mankini,/obj/item/clothing/under/suit_jacket/female,/obj/item/clothing/under/rank/psych/turtleneck,/obj/item/clothing/under/syndicate/combat,/obj/item/clothing/under/syndicate/combat,/obj/item/clothing/under/syndicate/tacticool,/obj/item/clothing/under/syndicate/tacticool,/obj/item/clothing/under/dress/sailordress,/obj/item/clothing/under/dress/redeveninggown,/obj/item/clothing/under/dress/dress_saloon,/obj/item/clothing/under/dress/blacktango,/obj/item/clothing/under/dress/blacktango/alt,/obj/item/clothing/under/dress/dress_orange,/obj/item/clothing/under/dress/maid/janitor,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"LX" = (/obj/machinery/vending/foodfish,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"Mc" = (/turf/template_noop,/area/template_noop)
-"Mk" = (/obj/effect/floor_decal/industrial/warning,/obj/structure/closet/crate/internals,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"MO" = (/obj/structure/bed/padded,/obj/item/weapon/bedsheet/captain,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"MP" = (/obj/structure/table/steel_reinforced,/obj/item/clothing/accessory/holster/hip,/obj/item/clothing/accessory/holster/armpit,/obj/item/clothing/accessory/holster/armpit,/obj/item/clothing/accessory/holster/hip,/obj/item/clothing/accessory/storage/white_vest,/obj/item/clothing/accessory/storage/white_vest,/obj/item/clothing/accessory/storage/webbing,/obj/item/clothing/accessory/storage/webbing,/obj/item/clothing/accessory/storage/black_vest,/obj/item/clothing/accessory/storage/black_vest,/obj/item/clothing/accessory/storage/brown_vest,/obj/item/clothing/accessory/storage/brown_vest,/obj/item/clothing/accessory/scarf/white,/obj/item/clothing/accessory/scarf/lightblue,/obj/item/clothing/accessory/scarf/red,/obj/item/clothing/accessory/scarf/purple,/obj/item/clothing/accessory/armband/science,/obj/item/clothing/accessory/armband/med,/obj/item/clothing/accessory/armband/engine,/obj/item/clothing/accessory/armband/cargo,/obj/item/clothing/accessory/armband,/obj/item/clothing/accessory/medal/nobel_science,/obj/item/clothing/accessory/medal/silver,/obj/item/clothing/accessory/medal/gold,/obj/item/clothing/accessory/medal/bronze_heart,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"MT" = (/turf/simulated/shuttle/wall/dark,/area/survivalpod/superpose/TradingShip)
-"No" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 5},/obj/machinery/atm{pixel_x = -32},/obj/machinery/meter,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"Nq" = (/obj/effect/floor_decal/industrial/warning{dir = 5},/obj/mecha/working/ripley/mining,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"NE" = (/obj/vehicle/train/trolley,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"NJ" = (/obj/structure/bed/chair{dir = 8},/obj/machinery/computer/security/telescreen/entertainment{icon_state = "frame"; pixel_x = 32},/turf/simulated/floor/carpet,/area/survivalpod/superpose/TradingShip)
-"NQ" = (/obj/machinery/sleeper{dir = 4},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"Od" = (/obj/item/weapon/storage/firstaid/regular{pixel_x = -2; pixel_y = 4},/obj/item/weapon/storage/firstaid/regular{pixel_x = -2; pixel_y = 4},/obj/item/bodybag/cryobag{pixel_x = 5},/obj/item/bodybag/cryobag{pixel_x = 5},/obj/item/weapon/storage/firstaid/o2{layer = 2.8; pixel_x = 4; pixel_y = 6},/obj/item/weapon/storage/box/masks,/obj/item/weapon/storage/box/gloves{pixel_x = 3; pixel_y = 4},/obj/item/weapon/storage/firstaid/toxin,/obj/item/weapon/storage/firstaid/fire{layer = 2.9; pixel_x = 2; pixel_y = 3},/obj/item/weapon/storage/firstaid/adv{pixel_x = -2},/obj/item/weapon/reagent_containers/blood/empty,/obj/item/weapon/reagent_containers/blood/OMinus,/obj/item/weapon/reagent_containers/blood/OMinus,/obj/item/weapon/reagent_containers/blood/OMinus,/obj/item/weapon/reagent_containers/blood/OMinus,/obj/structure/closet/medical_wall{pixel_y = 32},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"OE" = (/obj/structure/bed/chair/office/dark,/turf/simulated/floor/carpet,/area/survivalpod/superpose/TradingShip)
-"OK" = (/obj/structure/table/steel_reinforced,/obj/item/clothing/suit/hgpirate,/obj/item/clothing/suit/imperium_monk,/obj/item/clothing/suit/leathercoat,/obj/item/clothing/suit/justice,/obj/item/clothing/suit/justice,/obj/item/clothing/suit/justice,/obj/item/clothing/suit/justice,/obj/item/clothing/suit/justice,/obj/item/clothing/suit/pirate,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"Pb" = (/obj/machinery/light{dir = 4},/obj/structure/sign/kiddieplaque{desc = "A plaque commemorating the construction of the cargo ship Beruang."; name = "Beruang"; pixel_x = 32},/mob/living/simple_mob/animal/passive/dog/tamaskan/Spice,/turf/simulated/shuttle/floor/darkred,/area/survivalpod/superpose/TradingShip)
-"Pv" = (/obj/machinery/atm{pixel_x = -32},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"PW" = (/obj/structure/table/steel_reinforced,/obj/structure/flora/pottedplant{icon_state = "plant-09"; name = "Esteban"; pixel_y = 8},/obj/machinery/newscaster{pixel_x = 32},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"Qm" = (/obj/structure/closet/wardrobe/captain,/obj/item/weapon/gun/projectile/revolver/mateba,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"Qp" = (/obj/machinery/newscaster{pixel_y = 32},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"QB" = (/obj/machinery/sleep_console,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"QQ" = (/obj/structure/window/reinforced{dir = 8},/obj/structure/grille,/obj/structure/window/reinforced{dir = 4},/turf/simulated/shuttle/plating,/area/survivalpod/superpose/TradingShip)
-"Ry" = (/obj/structure/table/steel_reinforced,/obj/item/weapon/paper_bin{pixel_x = -3; pixel_y = 8},/obj/item/weapon/pen{pixel_y = 4},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"Sp" = (/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"Sy" = (/obj/machinery/atmospherics/pipe/tank/air{start_pressure = 740.5},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"SE" = (/turf/simulated/shuttle/wall/dark/hard_corner,/area/survivalpod/superpose/TradingShip)
-"SI" = (/obj/effect/floor_decal/industrial/warning{dir = 1},/obj/structure/largecrate/hoverpod,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"SR" = (/obj/machinery/vending/tool{emagged = 1},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"SV" = (/obj/structure/closet/crate/secure/weapon,/obj/item/stack/material/phoron{material = 50},/obj/item/stack/material/phoron{material = 50},/obj/item/stack/material/phoron{material = 50},/obj/item/stack/material/phoron{material = 50},/obj/random/cash/huge,/obj/random/cash/huge,/obj/random/cash/huge,/obj/random/cash/huge,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"Tb" = (/obj/structure/bed/chair{dir = 8},/turf/simulated/floor/carpet,/area/survivalpod/superpose/TradingShip)
-"TJ" = (/obj/structure/bed/padded,/obj/item/weapon/bedsheet/hos,/obj/structure/sign/poster{pixel_y = -32},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"TK" = (/obj/machinery/door/airlock/multi_tile/glass,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/TradingShip)
-"TU" = (/obj/machinery/door/blast/shutters{density = 0; icon_state = "shutter0"; id = "tradebridgeshutters"; name = "Blast Shutters"; opacity = 0},/obj/structure/window/reinforced{dir = 4},/obj/structure/grille,/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced/full,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/TradingShip)
-"Uw" = (/obj/machinery/vending/coffee,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"Uy" = (/obj/structure/closet{name = "custodial"},/obj/item/weapon/reagent_containers/spray/cleaner,/obj/item/weapon/reagent_containers/glass/bucket,/obj/item/weapon/mop,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"Uz" = (/obj/structure/window/reinforced{dir = 4},/obj/machinery/door/blast/shutters{density = 0; dir = 8; icon_state = "shutter0"; id = "tradestarshutters"; name = "Blast Shutters"; opacity = 0},/obj/structure/grille,/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced{dir = 8},/obj/structure/window/reinforced/full,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/TradingShip)
-"VL" = (/obj/machinery/vending/engivend{emagged = 1},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"VP" = (/obj/machinery/door/airlock/glass_medical{name = "Medical Bay"; req_access = null; req_one_access = null},/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/TradingShip)
-"VX" = (/obj/structure/table/steel_reinforced,/obj/random/toolbox,/obj/random/toolbox,/obj/random/toolbox,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"VY" = (/obj/machinery/suit_cycler/syndicate,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"Wy" = (/obj/structure/table/steel_reinforced,/obj/random/contraband,/obj/random/contraband,/obj/random/contraband,/obj/random/contraband,/obj/random/contraband,/obj/random/contraband,/obj/item/weapon/bikehorn,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"WG" = (/obj/machinery/door/blast/shutters{density = 0; dir = 2; icon_state = "shutter0"; id = "tradebridgeshutters"; name = "Blast Shutters"; opacity = 0},/obj/structure/window/reinforced{dir = 4},/obj/structure/grille,/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced/full,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/TradingShip)
-"WK" = (/obj/structure/table/steel_reinforced,/obj/item/stack/material/mhydrogen,/obj/item/stack/material/diamond,/obj/item/stack/material/sandstone,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"WL" = (/obj/machinery/door/window/westleft{name = "Storefront"; req_access = list(160)},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"Xi" = (/obj/machinery/door/blast/shutters{density = 0; dir = 8; icon_state = "shutter0"; id = "tradebridgeshutters"; name = "Blast Shutters"; opacity = 0},/obj/structure/grille,/obj/structure/window/reinforced{dir = 4},/obj/structure/window/reinforced{dir = 8},/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced/full,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/TradingShip)
-"Xy" = (/obj/structure/noticeboard{pixel_y = 32},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"XH" = (/obj/machinery/door/airlock/multi_tile/glass{req_access = null},/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/TradingShip)
-"XL" = (/obj/structure/window/reinforced{dir = 4},/obj/machinery/door/blast/shutters{density = 0; dir = 8; icon_state = "shutter0"; id = "tradeportshutters"; name = "Blast Shutters"; opacity = 0},/obj/structure/grille,/obj/structure/window/reinforced{dir = 8},/obj/structure/window/reinforced,/obj/structure/window/reinforced/full,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/TradingShip)
-"XO" = (/turf/simulated/shuttle/plating/airless/carry,/area/survivalpod/superpose/TradingShip)
-"Yc" = (/obj/structure/sign/poster{pixel_y = -32},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"Yi" = (/obj/structure/table/steel_reinforced,/obj/random/plushie,/obj/random/plushie,/obj/random/plushie,/obj/random/plushie,/obj/random/plushie,/obj/structure/window/reinforced{dir = 1},/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"Zs" = (/obj/structure/bed/chair{dir = 8},/turf/simulated/shuttle/floor/darkred,/area/survivalpod/superpose/TradingShip)
-"ZD" = (/obj/effect/floor_decal/industrial/warning{dir = 1},/obj/structure/closet/crate/freezer/rations,/turf/simulated/shuttle/floor/black,/area/survivalpod/superpose/TradingShip)
-"ZX" = (/obj/machinery/door/blast/shutters{density = 0; dir = 8; icon_state = "shutter0"; id = "tradebridgeshutters"; name = "Blast Shutters"; opacity = 0},/obj/structure/grille,/obj/structure/window/reinforced{dir = 4},/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 8},/obj/structure/window/reinforced/full,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/TradingShip)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/machinery/button/remote/blast_door{
+	id = "tradestarshutters";
+	name = "remote shutter control";
+	pixel_x = 30;
+	req_access = list(160)
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"aA" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 4;
+	icon_state = "propulsion_l"
+	},
+/turf/simulated/shuttle/plating/airless/carry,
+/area/survivalpod/superpose/TradingShip)
+"aP" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/obj/structure/largecrate/animal/corgi,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"bf" = (
+/obj/structure/table/standard,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/clothing/gloves/yellow,
+/obj/item/clothing/gloves/yellow,
+/obj/item/clothing/gloves/yellow,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"bk" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"bm" = (
+/obj/structure/table/standard,
+/obj/item/clothing/suit/space/void/merc,
+/obj/item/clothing/suit/space/void/merc,
+/obj/item/clothing/suit/space/void/merc,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/head/helmet/space/void/merc,
+/obj/item/clothing/head/helmet/space/void/merc,
+/obj/item/clothing/head/helmet/space/void/merc,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"ca" = (
+/obj/item/weapon/coin/phoron,
+/obj/item/weapon/coin/phoron,
+/obj/item/weapon/coin/phoron,
+/obj/item/weapon/coin/phoron,
+/obj/item/weapon/coin/phoron,
+/obj/item/weapon/coin/phoron,
+/obj/item/weapon/coin/phoron,
+/obj/item/weapon/coin/phoron,
+/obj/item/weapon/coin/phoron,
+/obj/item/weapon/coin/phoron,
+/obj/item/weapon/coin/phoron,
+/obj/item/weapon/coin/phoron,
+/obj/item/weapon/coin/phoron,
+/obj/item/weapon/coin/phoron,
+/obj/item/weapon/coin/phoron,
+/obj/item/weapon/coin/phoron,
+/obj/item/weapon/coin/phoron,
+/obj/item/weapon/coin/phoron,
+/obj/item/weapon/coin/phoron,
+/obj/item/weapon/coin/phoron,
+/obj/item/weapon/coin/phoron,
+/obj/item/weapon/coin/phoron,
+/obj/item/weapon/coin/phoron,
+/obj/item/weapon/coin/phoron,
+/obj/machinery/smartfridge/survival_pod{
+	icon = 'icons/obj/vending.dmi';
+	icon_base = "fridge_sci";
+	icon_contents = "chem";
+	icon_state = "fridge_sci";
+	name = "Phoron storage";
+	pixel_y = 0
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"cC" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 10
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"cM" = (
+/obj/machinery/vending/medical{
+	pixel_y = -32;
+	req_access = null
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"cV" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"cX" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 2;
+	icon_state = "shutter0";
+	id = "tradeportshutters";
+	name = "Blast Shutters";
+	opacity = 0
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/full,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/TradingShip)
+"ds" = (
+/obj/machinery/atmospherics/unary/engine/bigger{
+	dir = 8
+	},
+/turf/simulated/shuttle/plating/airless/carry,
+/area/survivalpod/superpose/TradingShip)
+"dy" = (
+/obj/machinery/atmospherics/pipe/manifold/visible{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"dP" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/structure/closet/crate/secure/loot,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"dY" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"dZ" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/cell/high,
+/obj/item/weapon/cell/high,
+/obj/item/weapon/cell/hyper,
+/obj/item/weapon/cell/potato,
+/obj/structure/window/reinforced,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"es" = (
+/obj/structure/table/standard,
+/obj/item/stack/material/steel{
+	amount = 2
+	},
+/obj/item/stack/material/steel{
+	amount = 2
+	},
+/obj/item/stack/material/glass{
+	amount = 15
+	},
+/obj/item/stack/material/glass{
+	amount = 15
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"eE" = (
+/obj/machinery/door/airlock/multi_tile/glass{
+	dir = 2;
+	req_access = null
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/TradingShip)
+"eS" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/item/device/kit/paint/ripley/death,
+/obj/item/device/kit/paint/ripley/flames_blue,
+/obj/item/device/kit/paint/ripley/flames_red,
+/obj/item/device/kit/paint/ripley,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"fe" = (
+/obj/machinery/mineral/mint{
+	emagged = 1
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"fm" = (
+/obj/structure/bed/chair/comfy/black,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"fG" = (
+/obj/machinery/vending/cigarette{
+	name = "hacked cigarette machine";
+	prices = list();
+	products = list(/obj/item/weapon/storage/fancy/cigarettes=10,/obj/item/weapon/storage/box/matches=10,/obj/item/weapon/flame/lighter/zippo=4,/obj/item/clothing/mask/smokable/cigarette/cigar/havana=2)
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"fJ" = (
+/obj/machinery/door/airlock/silver{
+	name = "Restroom"
+	},
+/turf/simulated/shuttle/floor/white,
+/area/survivalpod/superpose/TradingShip)
+"fP" = (
+/obj/vehicle/train/engine,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"fU" = (
+/obj/machinery/door/window/northright{
+	name = "Cargo Hold";
+	req_access = list(160)
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"gq" = (
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"gA" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"gJ" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"hm" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/button/remote/blast_door{
+	id = "tradebridgeshutters";
+	name = "remote shutter control";
+	pixel_x = 30;
+	req_access = list(150)
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"hx" = (
+/obj/structure/window/reinforced,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 8;
+	icon_state = "shutter0";
+	id = "trade";
+	name = "Shop Shutters";
+	opacity = 0
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/TradingShip)
+"hI" = (
+/obj/structure/closet,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"hK" = (
+/obj/machinery/autolathe{
+	desc = "Your typical Autolathe. It appears to have much more options than your regular one, however...";
+	emagged = 1;
+	hacked = 1;
+	name = "Unlocked Autolathe"
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"ia" = (
+/obj/machinery/optable,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"jA" = (
+/obj/structure/fans/hardlight,
+/obj/machinery/door/airlock/multi_tile/metal/mait,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/TradingShip)
+"jH" = (
+/obj/structure/table/standard,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"kd" = (
+/obj/machinery/atmospherics/pipe/simple/visible,
+/obj/machinery/meter,
+/obj/structure/largecrate/animal/cat,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"kw" = (
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	dir = 4;
+	frequency = 1380;
+	id_tag = "trade_shuttle";
+	pixel_x = -25;
+	req_one_access = list(101);
+	tag_door = "trade_shuttle_hatch"
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"kx" = (
+/obj/structure/frame/computer,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"kB" = (
+/obj/machinery/button/remote/blast_door{
+	id = "tradeportshutters";
+	name = "remote shutter control";
+	pixel_x = 30;
+	req_access = list(160)
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"kD" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"kO" = (
+/obj/machinery/door/window/northleft{
+	name = "Cargo Hold";
+	req_access = list(160)
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"kU" = (
+/obj/machinery/access_button{
+	master_tag = null;
+	pixel_x = 27;
+	pixel_y = -7;
+	req_one_access = null
+	},
+/obj/machinery/door/airlock/external{
+	frequency = null;
+	icon_state = "door_locked";
+	id_tag = null;
+	locked = 1;
+	name = "Ship Hatch";
+	req_access = null
+	},
+/obj/structure/fans/hardlight,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/TradingShip)
+"kV" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/card/id/external{
+	access = list(160)
+	},
+/obj/item/weapon/card/id/external{
+	access = list(160)
+	},
+/obj/item/weapon/card/id/external{
+	access = list(160)
+	},
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/TradingShip)
+"lm" = (
+/obj/structure/closet/walllocker_double/north,
+/obj/item/device/gps,
+/obj/item/sticky_pad/random,
+/obj/item/device/starcaster_news,
+/obj/item/weapon/pen/blue,
+/obj/item/device/pda,
+/obj/item/weapon/card/id/external,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
+/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
+/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/clothing/accessory/permit/gun,
+/obj/item/device/camera,
+/obj/item/device/binoculars,
+/obj/item/device/threadneedle,
+/obj/random/soap,
+/obj/item/weapon/towel/random,
+/obj/item/bodybag/cryobag,
+/obj/item/device/flashlight/flare,
+/obj/item/device/flashlight/flare,
+/obj/item/device/flashlight/color/yellow,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/weapon/flame/lighter/random,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/extinguisher/mini,
+/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/weapon/reagent_containers/pill/spaceacillin,
+/obj/item/weapon/reagent_containers/pill/spaceacillin,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/stack/nanopaste,
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/weapon/storage/backpack/messenger,
+/obj/item/clothing/accessory/storage/black_drop_pouches,
+/obj/item/clothing/accessory/poncho/thermal,
+/obj/item/weapon/storage/box/survival/comp,
+/obj/item/weapon/storage/toolbox/brass,
+/obj/item/weapon/storage/box/khcrystal,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"lv" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 8;
+	icon_state = "shutter0";
+	id = "tradeportshutters";
+	name = "Blast Shutters";
+	opacity = 0
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced/full,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/TradingShip)
+"lQ" = (
+/obj/structure/fans/hardlight,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/TradingShip)
+"lW" = (
+/obj/structure/table/standard,
+/obj/item/weapon/storage/toolbox/mechanical,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"md" = (
+/obj/structure/salvageable/console_os{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"mi" = (
+/obj/structure/window/reinforced,
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	icon_state = "shutter0";
+	id = "tradestarshutters";
+	name = "Blast Shutters";
+	opacity = 0
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced/full,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/TradingShip)
+"mF" = (
+/obj/structure/mirror{
+	pixel_y = 28
+	},
+/turf/simulated/shuttle/floor/white,
+/area/survivalpod/superpose/TradingShip)
+"mJ" = (
+/obj/structure/table/standard,
+/obj/item/clothing/gloves/sterile/latex,
+/obj/item/clothing/mask/surgical,
+/obj/item/weapon/surgical/retractor{
+	pixel_y = 6
+	},
+/obj/item/weapon/surgical/scalpel,
+/obj/item/weapon/surgical/surgicaldrill,
+/obj/item/weapon/surgical/circular_saw,
+/obj/item/stack/nanopaste,
+/obj/item/weapon/surgical/hemostat{
+	pixel_y = 4
+	},
+/obj/item/weapon/surgical/cautery{
+	pixel_y = 4
+	},
+/obj/item/weapon/surgical/FixOVein{
+	pixel_x = -6;
+	pixel_y = 1
+	},
+/obj/item/stack/medical/advanced/bruise_pack,
+/obj/item/weapon/surgical/bonesetter,
+/obj/item/weapon/surgical/bonegel{
+	pixel_x = 4;
+	pixel_y = 3
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"mK" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/bookcase,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"mR" = (
+/obj/item/weapon/paper_bin{
+	pixel_x = -3;
+	pixel_y = 8
+	},
+/obj/item/weapon/pen{
+	pixel_y = 4
+	},
+/obj/machinery/light,
+/obj/structure/table/glass,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"mY" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/coin/uranium,
+/obj/item/weapon/coin/silver,
+/obj/item/weapon/coin/platinum,
+/obj/item/weapon/coin/phoron,
+/obj/item/weapon/coin/iron,
+/obj/item/weapon/coin/gold,
+/obj/item/weapon/coin/diamond,
+/obj/structure/window/reinforced,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"nh" = (
+/obj/machinery/door/airlock/external{
+	frequency = null;
+	icon_state = "door_locked";
+	id_tag = null;
+	locked = 1;
+	name = "Ship Hatch";
+	req_access = null
+	},
+/obj/machinery/atmospherics/pipe/simple/visible,
+/obj/structure/fans/hardlight,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/TradingShip)
+"nC" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/clothing/head/bearpelt,
+/obj/item/clothing/head/bowler,
+/obj/item/clothing/head/caphat/cap,
+/obj/item/clothing/head/beaverhat,
+/obj/item/clothing/head/beret/centcom,
+/obj/item/clothing/head/beret/sec,
+/obj/item/clothing/head/collectable/kitty,
+/obj/item/clothing/head/collectable/kitty,
+/obj/item/clothing/head/collectable/kitty,
+/obj/item/clothing/head/collectable/rabbitears,
+/obj/item/clothing/head/collectable/rabbitears,
+/obj/item/clothing/head/collectable/rabbitears,
+/obj/item/clothing/head/collectable/petehat,
+/obj/item/clothing/head/collectable/pirate,
+/obj/item/clothing/head/collectable/wizard,
+/obj/item/clothing/head/collectable/xenom,
+/obj/item/clothing/head/pin/flower/violet,
+/obj/item/clothing/head/pin/flower/blue,
+/obj/item/clothing/head/pin/flower/orange,
+/obj/item/clothing/head/pin/flower/pink,
+/obj/item/clothing/head/justice,
+/obj/item/clothing/head/justice/blue,
+/obj/item/clothing/head/justice/green,
+/obj/item/clothing/head/justice/pink,
+/obj/item/clothing/head/justice/yellow,
+/obj/item/clothing/head/philosopher_wig,
+/obj/item/clothing/head/plaguedoctorhat,
+/obj/item/clothing/head/xenos,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"nD" = (
+/obj/structure/table/steel_reinforced,
+/obj/random/firstaid,
+/obj/random/firstaid,
+/obj/random/firstaid,
+/obj/random/firstaid,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"nT" = (
+/obj/machinery/vending/sovietsoda,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"nW" = (
+/obj/machinery/vending/snack{
+	name = "hacked Getmore Chocolate Corp";
+	prices = list()
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"oi" = (
+/obj/structure/table/steel_reinforced,
+/obj/random/medical,
+/obj/random/medical,
+/obj/random/medical,
+/obj/random/medical,
+/obj/structure/window/reinforced,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"pl" = (
+/obj/machinery/door/airlock/glass_engineering{
+	name = "Engineering";
+	req_access = null;
+	req_one_access = null
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/TradingShip)
+"pr" = (
+/obj/machinery/door/airlock/silver{
+	name = "Toilet"
+	},
+/turf/simulated/shuttle/floor/white,
+/area/survivalpod/superpose/TradingShip)
+"pU" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 8;
+	icon_state = "shutter0";
+	id = "tradestarshutters";
+	name = "Blast Shutters";
+	opacity = 0
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced/full,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/TradingShip)
+"qc" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/paper_bin{
+	pixel_x = -3;
+	pixel_y = 8
+	},
+/obj/item/weapon/pen{
+	pixel_y = 4
+	},
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/TradingShip)
+"qo" = (
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 2;
+	icon_state = "shutter0";
+	id = "tradebridgeshutters";
+	name = "Blast Shutters";
+	opacity = 0
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced/full,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/TradingShip)
+"qz" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/structure/largecrate/animal/corgi,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"qT" = (
+/obj/machinery/door/window/southright{
+	name = "Cargo Hold";
+	req_access = list(160)
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"qV" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/obj/structure/largecrate/animal/cat,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"rf" = (
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/TradingShip)
+"rg" = (
+/obj/structure/flora/pottedplant{
+	icon_state = "plant-10"
+	},
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/TradingShip)
+"ri" = (
+/obj/machinery/door/airlock/command{
+	name = "Captain's Quarters";
+	req_access = null;
+	req_one_access = null
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/TradingShip)
+"rq" = (
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	icon_state = "shutter0";
+	id = "tradebridgeshutters";
+	name = "Blast Shutters";
+	opacity = 0
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced/full,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/TradingShip)
+"rx" = (
+/obj/machinery/door/window/westright{
+	name = "Storefront";
+	req_access = list(160)
+	},
+/obj/structure/table/marble,
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 8;
+	icon_state = "shutter0";
+	id = "trade";
+	name = "Shop Shutters";
+	opacity = 0
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/survivalpod/superpose/TradingShip)
+"rG" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 2;
+	icon_state = "shutter0";
+	id = "tradeportshutters";
+	name = "Blast Shutters";
+	opacity = 0
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/full,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/TradingShip)
+"se" = (
+/obj/structure/curtain/open/shower,
+/obj/machinery/shower{
+	pixel_y = 3
+	},
+/turf/simulated/shuttle/floor/white,
+/area/survivalpod/superpose/TradingShip)
+"sh" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/closet/crate/secure/loot,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"sj" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/TradingShip)
+"sT" = (
+/obj/machinery/bodyscanner{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"th" = (
+/obj/machinery/iv_drip,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"tu" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/obj/machinery/light/small,
+/turf/simulated/shuttle/floor/white,
+/area/survivalpod/superpose/TradingShip)
+"tx" = (
+/obj/machinery/door/airlock/command{
+	name = "Bridge";
+	req_access = null;
+	req_one_access = null
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/TradingShip)
+"tN" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/survivalpod/superpose/TradingShip)
+"tQ" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/TradingShip)
+"tX" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/structure/largecrate/hoverpod,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"ua" = (
+/obj/structure/table/standard,
+/obj/item/weapon/storage/box/glasses/square,
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/TradingShip)
+"uo" = (
+/obj/structure/closet/crate,
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/fiftyspawner/blucarpet,
+/obj/fiftyspawner/oracarpet,
+/obj/fiftyspawner/purcarpet,
+/obj/fiftyspawner/sblucarpet,
+/obj/fiftyspawner/tealcarpet,
+/obj/fiftyspawner/turcarpet,
+/obj/item/stack/material/wood{
+	amount = 50;
+	color = "#824B28"
+	},
+/obj/item/stack/material/wood{
+	amount = 50;
+	color = "#824B28"
+	},
+/obj/item/stack/material/wood/hard{
+	amount = 50
+	},
+/obj/item/stack/material/wood/hard{
+	amount = 50
+	},
+/obj/item/stack/material/wood/sif{
+	amount = 50
+	},
+/obj/item/stack/material/wood/sif{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/cloth{
+	amount = 50
+	},
+/obj/item/stack/material/cloth{
+	amount = 50
+	},
+/obj/item/stack/material/algae{
+	amount = 50
+	},
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/lead{
+	amount = 30
+	},
+/obj/item/stack/material/plasteel{
+	amount = 30;
+	pixel_y = 5
+	},
+/obj/item/stack/material/resin{
+	amount = 50
+	},
+/obj/item/stack/material/smolebricks{
+	amount = 50
+	},
+/obj/item/stack/material/smolebricks{
+	amount = 50
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"uv" = (
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/TradingShip)
+"uA" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/industrial/warning,
+/obj/item/device/kit/paint/gygax/darkgygax,
+/obj/item/device/kit/paint/gygax/recitence,
+/obj/item/device/kit/paint/durand,
+/obj/item/device/kit/paint/durand/phazon,
+/obj/item/device/kit/paint/durand/seraph,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"uL" = (
+/obj/machinery/light,
+/obj/structure/table/standard,
+/obj/item/weapon/soap,
+/obj/item/weapon/towel{
+	color = "#0000FF"
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"uR" = (
+/obj/structure/toilet,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/white,
+/area/survivalpod/superpose/TradingShip)
+"vs" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"vC" = (
+/obj/machinery/vending/assist{
+	contraband = null;
+	name = "Old Vending Machine";
+	products = list(/obj/item/device/assembly/prox_sensor=5,/obj/item/device/assembly/signaler=4,/obj/item/device/assembly/infra=4,/obj/item/device/assembly/prox_sensor=4,/obj/item/weapon/handcuffs=8,/obj/item/device/flash=4,/obj/item/weapon/cartridge/signal=4,/obj/item/clothing/glasses/sunglasses=4)
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"vL" = (
+/obj/machinery/vending/boozeomat{
+	req_access = null
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"vM" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/TradingShip)
+"wn" = (
+/obj/structure/flora/pottedplant{
+	icon_state = "plant-22"
+	},
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/TradingShip)
+"wz" = (
+/obj/machinery/atmospherics/pipe/simple/visible,
+/obj/machinery/door/airlock/external{
+	frequency = null;
+	icon_state = "door_locked";
+	id_tag = null;
+	locked = 1;
+	name = "Ship Hatch";
+	req_access = null
+	},
+/obj/machinery/access_button{
+	dir = 1;
+	master_tag = null;
+	pixel_x = -27;
+	pixel_y = 7;
+	req_one_access = null
+	},
+/obj/structure/fans/hardlight,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/TradingShip)
+"wT" = (
+/obj/machinery/door/window/southleft{
+	name = "Cargo Hold";
+	req_access = list(160)
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"xd" = (
+/obj/structure/table/steel_reinforced,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/item/weapon/weldpack,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"xi" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/inflatable_duck,
+/obj/random/tech_supply/nofail,
+/obj/random/tech_supply/nofail,
+/obj/random/tech_supply/nofail,
+/obj/random/tech_supply/nofail,
+/obj/random/tech_supply/nofail,
+/obj/random/tech_supply/nofail,
+/obj/random/tech_supply/nofail,
+/obj/random/tech_supply/nofail,
+/obj/random/tech_supply/nofail,
+/obj/random/tech_supply/nofail,
+/obj/random/tech_supply/nofail,
+/obj/random/tech_supply/nofail,
+/obj/random/tech_supply/nofail,
+/obj/random/tech_supply/nofail,
+/obj/random/tech_supply/nofail,
+/obj/random/tech_supply/nofail,
+/obj/random/tech_supply/nofail,
+/obj/random/tech_supply/nofail,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"xz" = (
+/obj/structure/window/reinforced,
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	icon_state = "shutter0";
+	id = "tradestarshutters";
+	name = "Blast Shutters";
+	opacity = 0
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced/full,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/TradingShip)
+"xF" = (
+/obj/structure/closet/wardrobe/pjs,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"xM" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"xZ" = (
+/obj/structure/filingcabinet/filingcabinet,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"yw" = (
+/obj/structure/bed/padded,
+/obj/item/weapon/bedsheet/rd,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"yx" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/rig/internalaffairs,
+/obj/item/clothing/head/helmet/space/void/wizard,
+/obj/item/clothing/suit/space/void/wizard,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"yN" = (
+/obj/machinery/photocopier,
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/TradingShip)
+"yS" = (
+/obj/structure/closet/crate,
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/cable_coil/green,
+/obj/item/stack/cable_coil/blue,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"zh" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"zN" = (
+/obj/machinery/button/remote/blast_door{
+	id = "trade";
+	name = "Shop Shutters";
+	pixel_y = -26
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/survivalpod/superpose/TradingShip)
+"Au" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 4;
+	icon_state = "propulsion_r"
+	},
+/turf/simulated/shuttle/plating/airless/carry,
+/area/survivalpod/superpose/TradingShip)
+"AL" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1;
+	id_tag = null
+	},
+/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
+	dir = 4;
+	frequency = 1331;
+	id_tag = "trade2_control";
+	pixel_x = -25;
+	req_access = list(150);
+	tag_airpump = null;
+	tag_chamber_sensor = null;
+	tag_exterior_door = null;
+	tag_interior_door = null
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"AR" = (
+/obj/structure/closet/walllocker/emerglocker{
+	pixel_y = -32
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"Be" = (
+/obj/structure/shuttle/engine/heater{
+	dir = 4
+	},
+/turf/simulated/shuttle/plating/airless,
+/area/survivalpod/superpose/TradingShip)
+"BH" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/clothing/gloves/black,
+/obj/item/clothing/gloves/blue,
+/obj/item/clothing/gloves/brown,
+/obj/item/clothing/gloves/captain,
+/obj/item/clothing/gloves/combat,
+/obj/item/clothing/gloves/green,
+/obj/item/clothing/gloves/grey,
+/obj/item/clothing/gloves/light_brown,
+/obj/item/clothing/gloves/purple,
+/obj/item/clothing/gloves/rainbow,
+/obj/item/clothing/gloves/swat,
+/obj/item/clothing/gloves/white,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"BU" = (
+/obj/structure/bed/chair,
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/TradingShip)
+"Cu" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 1
+	},
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/TradingShip)
+"CV" = (
+/turf/simulated/shuttle/floor/darkred,
+/area/survivalpod/superpose/TradingShip)
+"DT" = (
+/obj/machinery/light,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"DX" = (
+/obj/structure/table/steel_reinforced,
+/obj/random/tool,
+/obj/random/tool,
+/obj/random/tool,
+/obj/random/tool,
+/obj/random/tool,
+/obj/item/slimepotion/stabilizer,
+/obj/item/slimepotion/steroid,
+/obj/item/slimepotion/unity,
+/obj/item/slimepotion/friendship,
+/obj/item/slimepotion/friendship,
+/obj/item/slimepotion/feeding,
+/obj/item/slimepotion/docility,
+/obj/item/slimepotion/enhancer,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"EK" = (
+/obj/machinery/door/airlock/silver{
+	name = "Sleeping"
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/TradingShip)
+"ET" = (
+/obj/structure/undies_wardrobe,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"Fy" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/card/id/casino{
+	desc = "An alien id card with strange glowing markings.";
+	icon_state = "changeling";
+	name = "Alien id"
+	},
+/obj/item/weapon/card/id/casino{
+	desc = "An alien id card with strange glowing markings.";
+	icon_state = "changeling";
+	name = "Alien id"
+	},
+/obj/item/weapon/card/id/casino{
+	desc = "An alien id card with strange glowing markings.";
+	icon_state = "changeling";
+	name = "Alien id"
+	},
+/obj/item/weapon/card/id/casino{
+	desc = "An alien id card with strange glowing markings.";
+	icon_state = "changeling";
+	name = "Alien id"
+	},
+/obj/item/weapon/card/id/casino{
+	desc = "An alien id card with strange glowing markings.";
+	icon_state = "changeling";
+	name = "Alien id"
+	},
+/obj/item/weapon/card/id/casino{
+	desc = "An alien id card with strange glowing markings.";
+	icon_state = "changeling";
+	name = "Alien id"
+	},
+/obj/item/weapon/card/id/casino{
+	desc = "An alien id card with strange glowing markings.";
+	icon_state = "changeling";
+	name = "Alien id"
+	},
+/obj/item/weapon/card/id/casino{
+	desc = "An alien id card with strange glowing markings.";
+	icon_state = "changeling";
+	name = "Alien id"
+	},
+/obj/item/weapon/card/id/casino{
+	desc = "An alien id card with strange glowing markings.";
+	icon_state = "changeling";
+	name = "Alien id"
+	},
+/obj/item/weapon/card/id/casino{
+	desc = "An alien id card with strange glowing markings.";
+	icon_state = "changeling";
+	name = "Alien id"
+	},
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/TradingShip)
+"FL" = (
+/obj/machinery/door/window/westleft{
+	name = "Storefront";
+	req_access = list(160)
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 8;
+	icon_state = "shutter0";
+	id = "trade";
+	name = "Shop Shutters";
+	opacity = 0
+	},
+/obj/structure/table/marble,
+/obj/machinery/cash_register/civilian{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/survivalpod/superpose/TradingShip)
+"FW" = (
+/obj/machinery/door/airlock/external{
+	frequency = null;
+	icon_state = "door_locked";
+	id_tag = null;
+	locked = 1;
+	name = "Ship Hatch";
+	req_access = null
+	},
+/obj/structure/fans/hardlight,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/TradingShip)
+"Gb" = (
+/obj/machinery/light,
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/TradingShip)
+"Gk" = (
+/obj/structure/table/standard,
+/obj/machinery/chemical_dispenser/bar_alc/full,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"GN" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/machinery/airlock_sensor{
+	dir = 8;
+	id_tag = null;
+	pixel_x = 27
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1;
+	id_tag = null
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"GS" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/obj/mecha/working/ripley/firefighter,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"GU" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/vending/foodstuffing,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"Hh" = (
+/obj/structure/table/steel_reinforced,
+/obj/random/action_figure,
+/obj/random/action_figure,
+/obj/random/action_figure,
+/obj/random/action_figure,
+/obj/random/action_figure,
+/obj/random/action_figure,
+/obj/random/curseditem,
+/obj/random/curseditem,
+/obj/random/curseditem,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"Hp" = (
+/obj/structure/table/standard,
+/obj/item/weapon/storage/box/donkpockets,
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/TradingShip)
+"HB" = (
+/obj/machinery/atmospherics/pipe/simple/visible,
+/obj/structure/closet/crate/solar,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"HC" = (
+/obj/structure/table/standard,
+/obj/machinery/microwave,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"HP" = (
+/obj/structure/closet/walllocker/emerglocker{
+	pixel_y = 32
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"Ii" = (
+/obj/machinery/computer/arcade/battle,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"IL" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/TradingShip)
+"Jg" = (
+/obj/structure/window/reinforced,
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	icon_state = "shutter0";
+	id = "tradestarshutters";
+	name = "Blast Shutters";
+	opacity = 0
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced/full,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/TradingShip)
+"JF" = (
+/obj/machinery/vending/foodasian,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"JI" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 2;
+	icon_state = "shutter0";
+	id = "tradeportshutters";
+	name = "Blast Shutters";
+	opacity = 0
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/full,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/TradingShip)
+"JN" = (
+/obj/machinery/body_scanconsole,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"Km" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/largecrate/animal/cow,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"Ko" = (
+/obj/structure/table/glass,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"Kv" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/lipstick/black,
+/obj/item/weapon/lipstick/jade,
+/obj/item/weapon/lipstick/purple,
+/obj/item/weapon/lipstick,
+/obj/item/weapon/lipstick/random,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"Lp" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/table/steel_reinforced,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"Lt" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/clothing/under/cheongsam,
+/obj/item/clothing/under/hosformalmale,
+/obj/item/clothing/under/hosformalfem,
+/obj/item/clothing/under/harness,
+/obj/item/clothing/under/gladiator,
+/obj/item/clothing/under/ert,
+/obj/item/clothing/under/schoolgirl,
+/obj/item/clothing/under/redcoat,
+/obj/item/clothing/under/sexymime,
+/obj/item/clothing/under/sexyclown,
+/obj/item/clothing/under/soviet,
+/obj/item/clothing/under/space,
+/obj/item/clothing/under/swimsuit/stripper/mankini,
+/obj/item/clothing/under/suit_jacket/female,
+/obj/item/clothing/under/rank/psych/turtleneck,
+/obj/item/clothing/under/syndicate/combat,
+/obj/item/clothing/under/syndicate/combat,
+/obj/item/clothing/under/syndicate/tacticool,
+/obj/item/clothing/under/syndicate/tacticool,
+/obj/item/clothing/under/dress/sailordress,
+/obj/item/clothing/under/dress/redeveninggown,
+/obj/item/clothing/under/dress/dress_saloon,
+/obj/item/clothing/under/dress/blacktango,
+/obj/item/clothing/under/dress/blacktango/alt,
+/obj/item/clothing/under/dress/dress_orange,
+/obj/item/clothing/under/dress/maid/janitor,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"LX" = (
+/obj/machinery/vending/foodfish,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"Mc" = (
+/turf/template_noop,
+/area/template_noop)
+"Mk" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/structure/closet/crate/internals,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"MO" = (
+/obj/structure/bed/padded,
+/obj/item/weapon/bedsheet/captain,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"MP" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/clothing/accessory/holster/hip,
+/obj/item/clothing/accessory/holster/armpit,
+/obj/item/clothing/accessory/holster/armpit,
+/obj/item/clothing/accessory/holster/hip,
+/obj/item/clothing/accessory/storage/white_vest,
+/obj/item/clothing/accessory/storage/white_vest,
+/obj/item/clothing/accessory/storage/webbing,
+/obj/item/clothing/accessory/storage/webbing,
+/obj/item/clothing/accessory/storage/black_vest,
+/obj/item/clothing/accessory/storage/black_vest,
+/obj/item/clothing/accessory/storage/brown_vest,
+/obj/item/clothing/accessory/storage/brown_vest,
+/obj/item/clothing/accessory/scarf/white,
+/obj/item/clothing/accessory/scarf/lightblue,
+/obj/item/clothing/accessory/scarf/red,
+/obj/item/clothing/accessory/scarf/purple,
+/obj/item/clothing/accessory/armband/science,
+/obj/item/clothing/accessory/armband/med,
+/obj/item/clothing/accessory/armband/engine,
+/obj/item/clothing/accessory/armband/cargo,
+/obj/item/clothing/accessory/armband,
+/obj/item/clothing/accessory/medal/nobel_science,
+/obj/item/clothing/accessory/medal/silver,
+/obj/item/clothing/accessory/medal/gold,
+/obj/item/clothing/accessory/medal/bronze_heart,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"MT" = (
+/turf/simulated/shuttle/wall/dark,
+/area/survivalpod/superpose/TradingShip)
+"No" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 5
+	},
+/obj/machinery/atm{
+	pixel_x = -32
+	},
+/obj/machinery/meter,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"Nq" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
+/obj/mecha/working/ripley/mining,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"NE" = (
+/obj/vehicle/train/trolley,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"NJ" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/machinery/computer/security/telescreen/entertainment{
+	icon_state = "frame";
+	pixel_x = 32
+	},
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/TradingShip)
+"NQ" = (
+/obj/machinery/sleeper{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"Od" = (
+/obj/item/weapon/storage/firstaid/regular{
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/obj/item/weapon/storage/firstaid/regular{
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/obj/item/bodybag/cryobag{
+	pixel_x = 5
+	},
+/obj/item/bodybag/cryobag{
+	pixel_x = 5
+	},
+/obj/item/weapon/storage/firstaid/o2{
+	layer = 2.8;
+	pixel_x = 4;
+	pixel_y = 6
+	},
+/obj/item/weapon/storage/box/masks,
+/obj/item/weapon/storage/box/gloves{
+	pixel_x = 3;
+	pixel_y = 4
+	},
+/obj/item/weapon/storage/firstaid/toxin,
+/obj/item/weapon/storage/firstaid/fire{
+	layer = 2.9;
+	pixel_x = 2;
+	pixel_y = 3
+	},
+/obj/item/weapon/storage/firstaid/adv{
+	pixel_x = -2
+	},
+/obj/item/weapon/reagent_containers/blood/empty,
+/obj/item/weapon/reagent_containers/blood/OMinus,
+/obj/item/weapon/reagent_containers/blood/OMinus,
+/obj/item/weapon/reagent_containers/blood/OMinus,
+/obj/item/weapon/reagent_containers/blood/OMinus,
+/obj/structure/closet/medical_wall{
+	pixel_y = 32
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"OE" = (
+/obj/structure/bed/chair/office/dark,
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/TradingShip)
+"OK" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/clothing/suit/hgpirate,
+/obj/item/clothing/suit/imperium_monk,
+/obj/item/clothing/suit/leathercoat,
+/obj/item/clothing/suit/justice,
+/obj/item/clothing/suit/justice,
+/obj/item/clothing/suit/justice,
+/obj/item/clothing/suit/justice,
+/obj/item/clothing/suit/justice,
+/obj/item/clothing/suit/pirate,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"Pb" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/sign/kiddieplaque{
+	desc = "A plaque commemorating the construction of the cargo ship Beruang.";
+	name = "Beruang";
+	pixel_x = 32
+	},
+/mob/living/simple_mob/animal/passive/dog/tamaskan/Spice,
+/turf/simulated/shuttle/floor/darkred,
+/area/survivalpod/superpose/TradingShip)
+"Pv" = (
+/obj/machinery/atm{
+	pixel_x = -32
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"PW" = (
+/obj/structure/table/steel_reinforced,
+/obj/structure/flora/pottedplant{
+	icon_state = "plant-09";
+	name = "Esteban";
+	pixel_y = 8
+	},
+/obj/machinery/newscaster{
+	pixel_x = 32
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"Qm" = (
+/obj/structure/closet/wardrobe/captain,
+/obj/item/weapon/gun/projectile/revolver/mateba,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"Qp" = (
+/obj/machinery/newscaster{
+	pixel_y = 32
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"QB" = (
+/obj/machinery/sleep_console,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"QQ" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/TradingShip)
+"Ry" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/paper_bin{
+	pixel_x = -3;
+	pixel_y = 8
+	},
+/obj/item/weapon/pen{
+	pixel_y = 4
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"Sp" = (
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"Sy" = (
+/obj/machinery/atmospherics/pipe/tank/air{
+	start_pressure = 740.5
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"SE" = (
+/turf/simulated/shuttle/wall/dark/hard_corner,
+/area/survivalpod/superpose/TradingShip)
+"SI" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/largecrate/hoverpod,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"SR" = (
+/obj/machinery/vending/tool{
+	emagged = 1
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"SV" = (
+/obj/structure/closet/crate/secure/weapon,
+/obj/item/stack/material/phoron{
+	material = 50
+	},
+/obj/item/stack/material/phoron{
+	material = 50
+	},
+/obj/item/stack/material/phoron{
+	material = 50
+	},
+/obj/item/stack/material/phoron{
+	material = 50
+	},
+/obj/random/cash/huge,
+/obj/random/cash/huge,
+/obj/random/cash/huge,
+/obj/random/cash/huge,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"Tb" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/TradingShip)
+"TJ" = (
+/obj/structure/bed/padded,
+/obj/item/weapon/bedsheet/hos,
+/obj/structure/sign/poster{
+	pixel_y = -32
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"TK" = (
+/obj/machinery/door/airlock/multi_tile/glass,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/TradingShip)
+"TU" = (
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	icon_state = "shutter0";
+	id = "tradebridgeshutters";
+	name = "Blast Shutters";
+	opacity = 0
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced/full,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/TradingShip)
+"Uw" = (
+/obj/machinery/vending/coffee,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"Uy" = (
+/obj/structure/closet{
+	name = "custodial"
+	},
+/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/weapon/mop,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"Uz" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 8;
+	icon_state = "shutter0";
+	id = "tradestarshutters";
+	name = "Blast Shutters";
+	opacity = 0
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced/full,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/TradingShip)
+"VL" = (
+/obj/machinery/vending/engivend{
+	emagged = 1
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"VP" = (
+/obj/machinery/door/airlock/glass_medical{
+	name = "Medical Bay";
+	req_access = null;
+	req_one_access = null
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/TradingShip)
+"VX" = (
+/obj/structure/table/steel_reinforced,
+/obj/random/toolbox,
+/obj/random/toolbox,
+/obj/random/toolbox,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"VY" = (
+/obj/machinery/suit_cycler/syndicate,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"Wy" = (
+/obj/structure/table/steel_reinforced,
+/obj/random/contraband,
+/obj/random/contraband,
+/obj/random/contraband,
+/obj/random/contraband,
+/obj/random/contraband,
+/obj/random/contraband,
+/obj/item/weapon/bikehorn,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"WG" = (
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 2;
+	icon_state = "shutter0";
+	id = "tradebridgeshutters";
+	name = "Blast Shutters";
+	opacity = 0
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced/full,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/TradingShip)
+"WK" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/stack/material/mhydrogen,
+/obj/item/stack/material/diamond,
+/obj/item/stack/material/sandstone,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"WL" = (
+/obj/machinery/door/window/westleft{
+	name = "Storefront";
+	req_access = list(160)
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"Xi" = (
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 8;
+	icon_state = "shutter0";
+	id = "tradebridgeshutters";
+	name = "Blast Shutters";
+	opacity = 0
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced/full,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/TradingShip)
+"Xy" = (
+/obj/structure/noticeboard{
+	pixel_y = 32
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"XH" = (
+/obj/machinery/door/airlock/multi_tile/glass{
+	req_access = null
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/TradingShip)
+"XL" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 8;
+	icon_state = "shutter0";
+	id = "tradeportshutters";
+	name = "Blast Shutters";
+	opacity = 0
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/full,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/TradingShip)
+"XO" = (
+/turf/simulated/shuttle/plating/airless/carry,
+/area/survivalpod/superpose/TradingShip)
+"Yc" = (
+/obj/structure/sign/poster{
+	pixel_y = -32
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"Yi" = (
+/obj/structure/table/steel_reinforced,
+/obj/random/plushie,
+/obj/random/plushie,
+/obj/random/plushie,
+/obj/random/plushie,
+/obj/random/plushie,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"Zs" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/survivalpod/superpose/TradingShip)
+"ZD" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/closet/crate/freezer/rations,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"ZX" = (
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 8;
+	icon_state = "shutter0";
+	id = "tradebridgeshutters";
+	name = "Blast Shutters";
+	opacity = 0
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced/full,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/TradingShip)
 
 (1,1,1) = {"
-McMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMc
-McMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcSEjAlQSEMcMcMcMcMTMTMTMTMTMcMc
-McMcMcMcMcMcMcMcMcMTMTMTMTMTMTxzJgmiMTMcMcMcMcMcMTMTkwxMMTMTMcMcMTMTMTMTBeAuMcMc
-McMcMcMcMcMcMcMcMTSEhIywMTGkHCsjBUwnMTMTMcMcMcMTMTSEjAlQSEMTxzmiSEQBNQMTBeXOMcMc
-McMcMcMcMcMcMcMcUzQpSpSpEKSpSpuvHpTbMTMTxzJgmiMTMTPvSpSpVYMTsTJNOdSpdYMTBedsMcMc
-McMcMcMcMcMcMcMcpUxFmRTJMTSpSpvMuaNJMTxiWKyxDXVXILfPCVCVSpVPSpSpSpSpiaMTBeaAMcMc
-McMcMcMcMcMcMcMcMTMTMTMTMTMTARSpSpaaMTnDkDgJcVxdQQNECVCVSpVPSpDTcMSpSpMTMTMTMcMc
-McMcMcMcMcMcMcMcMcMcMcMcMTMTMTXHrfMTSEoiwTmYqTdZtQNECVSpARSEMTMTSEmJthMTMTMcMcMc
-McMcMcMTrqTUMTMTMTMTMTMTMTMTUwSpSpSpSpzhSpSpSpSpMTMTTKrfSEMTSVcaMTMTMTMTMcMcMcMc
-McMcMTMTIiPWMTuRMTtumFseSEMTnWSpCVCVCVCVCVCVCVCVCVSpCVSphxgACVCVfeMTBeAuMcMcMcMc
-McMcXikxCVPbMTprSEMTfJMTETMTfGCVCVqVKmZDeSshSINqCVCVCVCVrxtNCVCVLXMTBeXOMcMcMcMc
-McMcZXmdZsCVtxSpSpSpSpXySprfSpCVCVaPqzMkuAdPtXGSCVCVCVCVFLCVCVCVJFMTBedsMcMcMcMc
-McMcMTMTRyhmMTvCUynTuLYcSpeESpSpCVCVCVCVCVCVCVCVCVSpCVSpWLSpzNCVGUMTBeaAMcMcMcMc
-McMcMcMTqoWGMTMTMTMTMTMTMTSEvLSpSpSpSpDTSpSpSpSpMTMTTKrfSEMTjHlWMTMTMTMTMcMcMcMc
-McMcMcMcMcMcMcMcMcMcMcMcMTMTMTXHrfMTSELpkOYifUBHILSyCVSpHPSEMTMTMTVLSRMTMTMcMcMc
-McMcMcMcMcMcMcMcMTMTMTMTMTSpHPSpSpkBMTWyvsgqbknCQQkdCVCVSpplSpzhlmSpSpMTMTMTMcMc
-McMcMcMcMcMcMcMclvQmmKfmMTSpSpuvOEyNMTHhKvMPLtOKtQHBCVCVSpplSpSpSpSpuoMTBeAuMcMc
-McMcMcMcMcMcMcMcXLSpSpSpriSpSpqckVFyMTMTcXrGJIMTMTNodycCSpMTbmbfesSpdYMTBeXOMcMc
-McMcMcMcMcMcMcMcMTSEMOKoMTxZSpGbCurgMTMTMcMcMcMTMTSEwznhSEMTcXJIMTyShKMTBedsMcMc
-McMcMcMcMcMcMcMcMcMTMTMTMTMTMTcXrGJIMTMcMcMcMcMcMTMTALGNMTMTMcMcMTMTMTMTBeaAMcMc
-McMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcSEFWkUSEMcMcMcMcMTMTMTMTMTMcMc
-McMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMcMc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+"}
+(2,1,1) = {"
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+"}
+(3,1,1) = {"
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+MT
+Xi
+ZX
+MT
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+"}
+(4,1,1) = {"
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+MT
+MT
+kx
+md
+MT
+MT
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+"}
+(5,1,1) = {"
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+rq
+Ii
+CV
+Zs
+Ry
+qo
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+"}
+(6,1,1) = {"
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+TU
+PW
+Pb
+CV
+hm
+WG
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+"}
+(7,1,1) = {"
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+MT
+MT
+MT
+tx
+MT
+MT
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+"}
+(8,1,1) = {"
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+MT
+uR
+pr
+Sp
+vC
+MT
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+"}
+(9,1,1) = {"
+Mc
+Mc
+Mc
+MT
+Uz
+pU
+MT
+Mc
+MT
+MT
+SE
+Sp
+Uy
+MT
+Mc
+MT
+lv
+XL
+MT
+Mc
+Mc
+Mc
+"}
+(10,1,1) = {"
+Mc
+Mc
+MT
+SE
+Qp
+xF
+MT
+Mc
+MT
+tu
+MT
+Sp
+nT
+MT
+Mc
+MT
+Qm
+Sp
+SE
+MT
+Mc
+Mc
+"}
+(11,1,1) = {"
+Mc
+Mc
+MT
+hI
+Sp
+mR
+MT
+Mc
+MT
+mF
+fJ
+Sp
+uL
+MT
+Mc
+MT
+mK
+Sp
+MO
+MT
+Mc
+Mc
+"}
+(12,1,1) = {"
+Mc
+Mc
+MT
+yw
+Sp
+TJ
+MT
+Mc
+MT
+se
+MT
+Xy
+Yc
+MT
+Mc
+MT
+fm
+Sp
+Ko
+MT
+Mc
+Mc
+"}
+(13,1,1) = {"
+Mc
+Mc
+MT
+MT
+EK
+MT
+MT
+MT
+MT
+SE
+ET
+Sp
+Sp
+MT
+MT
+MT
+MT
+ri
+MT
+MT
+Mc
+Mc
+"}
+(14,1,1) = {"
+Mc
+Mc
+MT
+Gk
+Sp
+Sp
+MT
+MT
+MT
+MT
+MT
+rf
+eE
+SE
+MT
+Sp
+Sp
+Sp
+xZ
+MT
+Mc
+Mc
+"}
+(15,1,1) = {"
+Mc
+Mc
+MT
+HC
+Sp
+Sp
+AR
+MT
+Uw
+nW
+fG
+Sp
+Sp
+vL
+MT
+HP
+Sp
+Sp
+Sp
+MT
+Mc
+Mc
+"}
+(16,1,1) = {"
+Mc
+Mc
+xz
+sj
+uv
+vM
+Sp
+XH
+Sp
+Sp
+CV
+CV
+Sp
+Sp
+XH
+Sp
+uv
+qc
+Gb
+cX
+Mc
+Mc
+"}
+(17,1,1) = {"
+Mc
+Mc
+Jg
+BU
+Hp
+ua
+Sp
+rf
+Sp
+CV
+CV
+CV
+CV
+Sp
+rf
+Sp
+OE
+kV
+Cu
+rG
+Mc
+Mc
+"}
+(18,1,1) = {"
+Mc
+Mc
+mi
+wn
+Tb
+NJ
+aa
+MT
+Sp
+CV
+qV
+aP
+CV
+Sp
+MT
+kB
+yN
+Fy
+rg
+JI
+Mc
+Mc
+"}
+(19,1,1) = {"
+Mc
+Mc
+MT
+MT
+MT
+MT
+MT
+SE
+Sp
+CV
+Km
+qz
+CV
+Sp
+SE
+MT
+MT
+MT
+MT
+MT
+Mc
+Mc
+"}
+(20,1,1) = {"
+Mc
+Mc
+Mc
+MT
+MT
+xi
+nD
+oi
+zh
+CV
+ZD
+Mk
+CV
+DT
+Lp
+Wy
+Hh
+MT
+MT
+Mc
+Mc
+Mc
+"}
+(21,1,1) = {"
+Mc
+Mc
+Mc
+Mc
+xz
+WK
+kD
+wT
+Sp
+CV
+eS
+uA
+CV
+Sp
+kO
+vs
+Kv
+cX
+Mc
+Mc
+Mc
+Mc
+"}
+(22,1,1) = {"
+Mc
+Mc
+Mc
+Mc
+Jg
+yx
+gJ
+mY
+Sp
+CV
+sh
+dP
+CV
+Sp
+Yi
+gq
+MP
+rG
+Mc
+Mc
+Mc
+Mc
+"}
+(23,1,1) = {"
+Mc
+Mc
+Mc
+Mc
+mi
+DX
+cV
+qT
+Sp
+CV
+SI
+tX
+CV
+Sp
+fU
+bk
+Lt
+JI
+Mc
+Mc
+Mc
+Mc
+"}
+(24,1,1) = {"
+Mc
+Mc
+Mc
+MT
+MT
+VX
+xd
+dZ
+Sp
+CV
+Nq
+GS
+CV
+Sp
+BH
+nC
+OK
+MT
+MT
+Mc
+Mc
+Mc
+"}
+(25,1,1) = {"
+Mc
+Mc
+MT
+MT
+MT
+IL
+QQ
+tQ
+MT
+CV
+CV
+CV
+CV
+MT
+IL
+QQ
+tQ
+MT
+MT
+MT
+Mc
+Mc
+"}
+(26,1,1) = {"
+Mc
+SE
+MT
+SE
+Pv
+fP
+NE
+NE
+MT
+Sp
+CV
+CV
+Sp
+MT
+Sy
+kd
+HB
+No
+SE
+MT
+SE
+Mc
+"}
+(27,1,1) = {"
+Mc
+jA
+kw
+jA
+Sp
+CV
+CV
+CV
+TK
+CV
+CV
+CV
+CV
+TK
+CV
+CV
+CV
+dy
+wz
+AL
+FW
+Mc
+"}
+(28,1,1) = {"
+Mc
+lQ
+xM
+lQ
+Sp
+CV
+CV
+Sp
+rf
+Sp
+CV
+CV
+Sp
+rf
+Sp
+CV
+CV
+cC
+nh
+GN
+kU
+Mc
+"}
+(29,1,1) = {"
+Mc
+SE
+MT
+SE
+VY
+Sp
+Sp
+AR
+SE
+hx
+rx
+FL
+WL
+SE
+HP
+Sp
+Sp
+Sp
+SE
+MT
+SE
+Mc
+"}
+(30,1,1) = {"
+Mc
+Mc
+MT
+MT
+MT
+VP
+VP
+SE
+MT
+gA
+tN
+CV
+Sp
+MT
+SE
+pl
+pl
+MT
+MT
+MT
+Mc
+Mc
+"}
+(31,1,1) = {"
+Mc
+Mc
+Mc
+xz
+sT
+Sp
+Sp
+MT
+SV
+CV
+CV
+CV
+zN
+jH
+MT
+Sp
+Sp
+bm
+cX
+Mc
+Mc
+Mc
+"}
+(32,1,1) = {"
+Mc
+Mc
+Mc
+mi
+JN
+Sp
+DT
+MT
+ca
+CV
+CV
+CV
+CV
+lW
+MT
+zh
+Sp
+bf
+JI
+Mc
+Mc
+Mc
+"}
+(33,1,1) = {"
+Mc
+Mc
+MT
+SE
+Od
+Sp
+cM
+SE
+MT
+fe
+LX
+JF
+GU
+MT
+MT
+lm
+Sp
+es
+MT
+MT
+Mc
+Mc
+"}
+(34,1,1) = {"
+Mc
+MT
+MT
+QB
+Sp
+Sp
+Sp
+mJ
+MT
+MT
+MT
+MT
+MT
+MT
+VL
+Sp
+Sp
+Sp
+yS
+MT
+MT
+Mc
+"}
+(35,1,1) = {"
+Mc
+MT
+MT
+NQ
+dY
+ia
+Sp
+th
+MT
+Be
+Be
+Be
+Be
+MT
+SR
+Sp
+uo
+dY
+hK
+MT
+MT
+Mc
+"}
+(36,1,1) = {"
+Mc
+MT
+MT
+MT
+MT
+MT
+MT
+MT
+MT
+Au
+XO
+ds
+aA
+MT
+MT
+MT
+MT
+MT
+MT
+MT
+MT
+Mc
+"}
+(37,1,1) = {"
+Mc
+MT
+Be
+Be
+Be
+Be
+MT
+MT
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+MT
+MT
+Be
+Be
+Be
+Be
+MT
+Mc
+"}
+(38,1,1) = {"
+Mc
+MT
+Au
+XO
+ds
+aA
+MT
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+MT
+Au
+XO
+ds
+aA
+MT
+Mc
+"}
+(39,1,1) = {"
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+"}
+(40,1,1) = {"
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
 "}
