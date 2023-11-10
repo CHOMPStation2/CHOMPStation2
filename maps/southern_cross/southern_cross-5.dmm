@@ -167,7 +167,6 @@
 /obj/machinery/cell_charger,
 /obj/random/powercell,
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /obj/machinery/camera/network/engineering_outpost{
@@ -320,7 +319,6 @@
 	dir = 1
 	},
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /obj/structure/reagent_dispensers/fueltank,
@@ -1789,7 +1787,6 @@
 "dB" = (
 /obj/machinery/alarm{
 	dir = 8;
-	frequency = 1441;
 	pixel_x = 22
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -2443,7 +2440,6 @@
 	dir = 1
 	},
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /turf/simulated/floor/tiled,
@@ -3672,7 +3668,6 @@
 /area/surface/outpost/main/airlock/right_one)
 "hk" = (
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -5352,7 +5347,6 @@
 /area/surface/outpost/main/exploration/containment)
 "kc" = (
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -5741,7 +5735,6 @@
 /area/surface/outpost/main/exploration)
 "kO" = (
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /obj/effect/floor_decal/borderfloor/corner{
@@ -5915,7 +5908,6 @@
 /obj/structure/table/standard,
 /obj/item/weapon/storage/firstaid/regular,
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -8275,7 +8267,6 @@
 	amount = 25
 	},
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /turf/simulated/floor/plating,
@@ -8386,7 +8377,6 @@
 	dir = 8
 	},
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -8957,7 +8947,6 @@
 /obj/structure/table/glass,
 /obj/item/weapon/inflatable_duck,
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -15188,7 +15177,6 @@
 "BV" = (
 /obj/machinery/alarm{
 	dir = 8;
-	frequency = 1441;
 	pixel_x = 22
 	},
 /turf/simulated/floor/tiled,
@@ -15689,7 +15677,6 @@
 "CU" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /turf/simulated/floor/tiled,
@@ -16813,7 +16800,6 @@
 	dir = 8
 	},
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /obj/machinery/power/apc{
@@ -16852,7 +16838,6 @@
 	dir = 1
 	},
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -20639,7 +20624,6 @@
 /obj/item/clothing/shoes/sandal,
 /obj/item/clothing/shoes/sandal,
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /turf/simulated/floor/wood,
@@ -21245,7 +21229,6 @@
 	},
 /obj/machinery/alarm{
 	dir = 8;
-	frequency = 1441;
 	pixel_x = 22
 	},
 /turf/simulated/floor/tiled,
@@ -22662,7 +22645,6 @@
 	dir = 4
 	},
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /turf/simulated/floor/tiled,
@@ -23254,7 +23236,6 @@
 	dir = 4
 	},
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /obj/effect/floor_decal/corner/blue/border{
@@ -24270,7 +24251,6 @@
 	dir = 8
 	},
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /turf/simulated/floor/tiled/dark,
@@ -25635,7 +25615,6 @@
 /obj/random/junk,
 /obj/random/action_figure,
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /turf/simulated/floor/plating,
@@ -25811,7 +25790,6 @@
 	dir = 8
 	},
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -27080,7 +27058,6 @@
 	dir = 8
 	},
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /turf/simulated/floor/tiled/freezer,
