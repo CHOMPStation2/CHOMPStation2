@@ -31,3 +31,18 @@
       inside of another storage slot. For example, pulling out medkit equipment from
       your bag without holding the medkit.
   - bugfix: Storage reach no longer gives you telekinesis.
+2023-11-10:
+  Missile597:
+  - rscadd: Added storage tanks to deck three Atmos maintenance for waste gasses to
+      scrub to.
+  - rscadd: Connected dorms area scrubbers to the new waste tanks so that these areas
+      can scrub, which should prevent atmos issues on long shifts in this area. Scrubbers
+      are still isolated from the rest of the station for protection from spiderlings.
+  - qol: Added connectors to the air and scrubber loops in deck three atmos maintenance,
+      to allow a pump and scrubber to be filled/emptied here in case of emergency.
+  - bugfix: Fixed various air alarms across deck 3 and Sif outpost, and one on deck
+      one which had the incorrect frequency set for some reason. This should resolve
+      the issue with air alarms being unable to communicate and change settings on
+      vents and scrubbers in the area.
+  - maptweak: Atmos Maintenance on deck three has been made a bit wider, to fit the
+      added tanks and pipework in.
