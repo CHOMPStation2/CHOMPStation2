@@ -44,5 +44,5 @@
 
 	var/obj/item/device/dogborg/sleeper/compactor/honkborg/B = new /obj/item/device/dogborg/sleeper/compactor/honkborg(src)
 	src.modules += B
-
+	src.emag += new /obj/item/weapon/dogborg/pounce(src)
 	..()
