@@ -547,6 +547,7 @@
 		return
 
 	if(istype(P, /obj/item/weapon/clipboard))
+		/* CHOMPedit Start - tgui clipboards
 		var/obj/item/weapon/clipboard/CB = P
 		if(src.loc == user)
 			user.drop_from_inventory(src)
@@ -554,6 +555,9 @@
 		CB.toppaper = src
 		CB.update_icon()
 		to_chat(user, "<span class='notice'>You clip the [src] onto \the [CB].</span>")
+		*/
+		P.attackby(src, user)
+		// CHOMPedit End
 
 	if(istype(P, /obj/item/weapon/folder))
 		if(src.loc == user)
