@@ -1171,7 +1171,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/rust,
-/obj/effect/map_helper/no_phaseshift,
+/obj/effect/map_helper/no_phaseshift/area,
 /turf/simulated/floor/plating,
 /area/submap/BorgLab)
 "Su" = (

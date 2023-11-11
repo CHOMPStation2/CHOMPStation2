@@ -1260,7 +1260,7 @@
 	requires_power = 0
 	})
 "Sd" = (
-/obj/effect/map_helper/no_phaseshift,
+/obj/effect/map_helper/no_phaseshift/area,
 /turf/simulated/mineral/ignore_mapgen,
 /area/submap/AbandonedLab{
 	requires_power = 0
