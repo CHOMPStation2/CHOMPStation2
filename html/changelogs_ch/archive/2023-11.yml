@@ -47,5 +47,7 @@
   - maptweak: Atmos Maintenance on deck three has been made a bit wider, to fit the
       added tanks and pipework in.
 2023-11-11:
+  FluffMedic:
+  - bugfix: fixes a few non-functional shadekin blockers
   tacoguy7765093:
   - balance: Heart Damage is no longer debilitating at decimal values.
