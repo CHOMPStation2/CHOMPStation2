@@ -1,5 +1,5 @@
 
-#define MIDDLE_CLICK 0
+//#define MIDDLE_CLICK 0 CHOMPedit - moved to 'code/_onclick/_click_ch.dm'
 #define ALT_CLICK 1
 #define CTRL_CLICK 2
 #define MAX_HARDSUIT_CLICK_MODE 2
