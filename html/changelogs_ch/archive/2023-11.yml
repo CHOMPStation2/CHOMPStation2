@@ -49,6 +49,9 @@
 2023-11-11:
   FluffMedic:
   - bugfix: fixes a few non-functional shadekin blockers
+  - rscadd: 'rebalance: Pummeler has been nerfed further, mostly with a nerf I thought
+      I did ages ago. Also did weird bola stuff.'
+  - qol: Eclipse tells you when you're hitting them with the wrong damage type.
   ItsSelis:
   - rscadd: added http_request datum to properly use rust-g based http requests (including
       async ones).
