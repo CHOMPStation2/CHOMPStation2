@@ -2,6 +2,7 @@
 	name = "ServicehoundV2 - Alt"
 	sprite_icon = 'modular_chomp/icons/mob/widerobot_ch.dmi'
 	sprite_icon_state = "servborg"
+	rest_sprite_options = list("Default")
 	has_eye_light_sprites = TRUE
 
 /datum/robot_sprite/dogborg/service/cat
