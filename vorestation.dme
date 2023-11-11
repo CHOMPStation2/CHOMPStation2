@@ -4816,6 +4816,7 @@
 #include "modular_chomp\code\modules\projectiles\guns\energy.dm"
 #include "modular_chomp\code\modules\projectiles\guns\magnetic.dm"
 #include "modular_chomp\code\modules\projectiles\guns\phase.dm"
+#include "modular_chomp\code\modules\projectiles\guns\special.dm"
 #include "modular_chomp\code\modules\projectiles\guns\staffs.dm"
 #include "modular_chomp\code\modules\projectiles\guns\energy\laser.dm"
 #include "modular_chomp\code\modules\projectiles\guns\projectile\revolver.dm"
