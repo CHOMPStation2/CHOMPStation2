@@ -839,7 +839,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "Zy" = (
-/obj/effect/map_helper/no_phaseshift,
+/obj/effect/map_helper/no_phaseshift/area,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 
