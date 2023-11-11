@@ -56,5 +56,7 @@
   - rscadd: added http_request datum to properly use rust-g based http requests (including
       async ones).
   - code_imp: byond 515 support defines for rust-g definitions
+  Verkister:
+  - bugfix: Fixed item digestion logs not working on recycled stuff
   tacoguy7765093:
   - balance: Heart Damage is no longer debilitating at decimal values.
