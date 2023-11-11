@@ -49,5 +49,9 @@
 2023-11-11:
   FluffMedic:
   - bugfix: fixes a few non-functional shadekin blockers
+  ItsSelis:
+  - rscadd: added http_request datum to properly use rust-g based http requests (including
+      async ones).
+  - code_imp: byond 515 support defines for rust-g definitions
   tacoguy7765093:
   - balance: Heart Damage is no longer debilitating at decimal values.
