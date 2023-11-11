@@ -5044,6 +5044,7 @@ __metadata:
     debug:
       optional: true
   checksum: 584da22ec5420c837bd096559ebfb8fe69d82512d5585004e36a3b4a6ef6d5905780e0c74508c7b72f907d1fa2b7bd339e613859e9c304d0dc96af2027fd0231
+<<<<<<< HEAD
   languageName: node
   linkType: hard
 
@@ -5063,6 +5064,8 @@ __metadata:
     cross-spawn: ^7.0.0
     signal-exit: ^4.0.1
   checksum: 139d270bc82dc9e6f8bc045fe2aae4001dc2472157044fdfad376d0a3457f77857fa883c1c8b21b491c6caade9a926a4bed3d3d2e8d3c9202b151a4cbbd0bcd5
+=======
+>>>>>>> d64f66983c... Merge pull request #15513 from VOREStation/dependabot/npm_and_yarn/tgui/axios-1.6.0
   languageName: node
   linkType: hard
 
@@ -9449,7 +9452,11 @@ __metadata:
   resolution: "tgui-dev-server@workspace:packages/tgui-dev-server"
   dependencies:
     axios: ^1.6.0
+<<<<<<< HEAD
     glob: ^7.1.7
+=======
+    glob: ^8.0.3
+>>>>>>> d64f66983c... Merge pull request #15513 from VOREStation/dependabot/npm_and_yarn/tgui/axios-1.6.0
     source-map: ^0.7.3
     stacktrace-parser: ^0.1.10
     ws: ^7.5.3

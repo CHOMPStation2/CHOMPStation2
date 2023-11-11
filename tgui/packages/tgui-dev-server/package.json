@@ -5,7 +5,11 @@
   "type": "module",
   "dependencies": {
     "axios": "^1.6.0",
+<<<<<<< HEAD
     "glob": "^7.1.7",
+=======
+    "glob": "^8.0.3",
+>>>>>>> d64f66983c... Merge pull request #15513 from VOREStation/dependabot/npm_and_yarn/tgui/axios-1.6.0
     "source-map": "^0.7.3",
     "stacktrace-parser": "^0.1.10",
     "ws": "^7.5.3"
