@@ -38,6 +38,15 @@
 #define RUST_G (__rust_g || __detect_rust_g())
 #endif
 
+// CHOMPedit Start - Rust http
+// Handle 515 call() -> call_ext() changes
+#if DM_VERSION >= 515
+#define RUSTG_CALL call_ext
+#else
+#define RUSTG_CALL call
+#endif
+// CHOMPedit End - Rust http
+
 #define RUSTG_JOB_NO_RESULTS_YET "NO RESULTS YET"
 #define RUSTG_JOB_NO_SUCH_JOB "NO SUCH JOB"
 #define RUSTG_JOB_ERROR "JOB PANICKED"
@@ -91,8 +100,8 @@
 #define RUSTG_HTTP_METHOD_PATCH "patch"
 #define RUSTG_HTTP_METHOD_HEAD "head"
 #define RUSTG_HTTP_METHOD_POST "post"
-#define rustg_http_request_blocking(method, url, body, headers) LIBCALL(RUST_G, "http_request_blocking")(method, url, body, headers)
-#define rustg_http_request_async(method, url, body, headers) LIBCALL(RUST_G, "http_request_async")(method, url, body, headers)
+#define rustg_http_request_blocking(method, url, body, headers, options) RUSTG_CALL(RUST_G, "http_request_blocking")(method, url, body, headers, options) // CHOMPedit - Rust HTTP Requests
+#define rustg_http_request_async(method, url, body, headers, options) RUSTG_CALL(RUST_G, "http_request_async")(method, url, body, headers, options) // CHOMPedit - Rust HTTP Requests
 #define rustg_http_check_request(req_id) LIBCALL(RUST_G, "http_check_request")(req_id)
 
 #define rustg_sql_connect_pool(options) LIBCALL(RUST_G, "sql_connect_pool")(options)
