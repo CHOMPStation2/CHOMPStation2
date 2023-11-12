@@ -40,14 +40,16 @@
 
 	..()
 
-/obj/item/device/dogborg/sleeper/K9/exploration //The K9 portabrig
+/obj/item/device/dogborg/sleeper/exploration //No need to inherit from the brig one, we cna direclty make a proper new one
 	name = "Store-Belly"
 	desc = "Equipment for a ExploreHound unit. A mounted portable-storage device that holds supplies/person."
-	icon_state = "sleeperb"
+	icon_state = "sleeperlost"
 	injection_chems = null
+	stabilizer = TRUE
+	compactor = TRUE
+	max_item_count = 4
 	medsensor = FALSE
 	recycles = TRUE
-	max_item_count = 4
 
 /obj/item/weapon/gun/energy/taser/mounted/cyborg/flare
 	name = "flare gun"
