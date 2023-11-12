@@ -69,6 +69,7 @@
 //Upstream does not have those, if we want them, we should add them on top now
 /datum/robot_sprite/dogborg/tall/mining/ch
 	sprite_icon = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi'
+	pixel_x = 0
 
 /datum/robot_sprite/dogborg/tall/mining/ch/mekacargo
 	name = "MEKA - Cargo"

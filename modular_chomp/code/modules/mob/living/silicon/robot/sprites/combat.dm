@@ -1,6 +1,7 @@
 /datum/robot_sprite/dogborg/tall/combat/ch
 	module_type = "Combat"
 	sprite_icon = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi'
+	pixel_x = 0
 
 /datum/robot_sprite/dogborg/tall/combat/ch/meka
 	name = "MEKA"

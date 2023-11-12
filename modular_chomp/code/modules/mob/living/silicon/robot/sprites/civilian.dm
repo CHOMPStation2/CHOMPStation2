@@ -49,8 +49,9 @@
 	has_vore_belly_sprites = FALSE
 */
 
-/datum/robot_sprite/dogborg/tall/service/meka_alt
+/datum/robot_sprite/dogborg/tall/service/mekaserve_alt
 	sprite_icon = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi'
 	name = "MEKA Alt"
+	pixel_x = 0
 	sprite_icon_state = "mekaserve_alt"
 	rest_sprite_options = list("Default", "Sit")

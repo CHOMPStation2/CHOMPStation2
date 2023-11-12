@@ -16,6 +16,7 @@
 /datum/robot_sprite/dogborg/tall/explorer
 	module_type = "Exploration"
 	sprite_icon = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi'
+	pixel_x = 0
 
 /datum/robot_sprite/dogborg/raptor/explorer
 	module_type = "Exploration"
