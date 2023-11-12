@@ -148,6 +148,7 @@
 /mob/living/simple_mob/humanoid/eclipse/solar/bullet_act(obj/item/projectile/P)
 	if(istype(P, /obj/item/projectile/energy) || istype(P, /obj/item/projectile/beam))
 		visible_message("<font color='orange'><B>[P] seems ineffective!.</B></font>")
+		..()
 	else
 		..()
 
@@ -174,8 +175,8 @@
 /mob/living/simple_mob/humanoid/eclipse/solar/firemoff
 	name = "Solar Eclipse Inferno Moth"
 	desc = "A moth like creature cladded in armor, wisps of flames swirling around it. Protected from lasers and energy."
-	health = 37
-	maxHealth = 37
+	health = 35
+	maxHealth = 35
 	icon_state = "eclipse_moth"
 	icon_living = "eclipse_moth"
 	reload_max = 10
@@ -260,6 +261,11 @@
 	icon_state = "eclipse_rad"
 	icon_living = "eclipse_rad"
 
+	glow_color = "#14ff20"
+	light_color = "#14ff20"
+	glow_range = 5
+	glow_intensity = 3
+
 	projectiletype = /obj/item/projectile/energy/declone/burn
 	var/rads = 5
 
@@ -283,6 +289,7 @@
 /mob/living/simple_mob/humanoid/eclipse/lunar/bullet_act(obj/item/projectile/P)
 	if(istype(P, /obj/item/projectile/bullet))
 		visible_message("<font color='orange'><B>[P] seems ineffective!.</B></font>")
+		..()
 	else
 		..()
 
@@ -328,8 +335,8 @@
 /mob/living/simple_mob/humanoid/eclipse/lunar/shotgunner //wuff with shotgun
 	name = "Lunar Eclipse Shotgunner"
 	desc = "A Vulpkanin or the like in a red-purple flashing rigsuit, it defending them from physical damage of close and long ranges."
-	health = 37
-	maxHealth = 37
+	health = 35
+	maxHealth = 35
 	reload_max = 2
 
 	icon_state = "eclipse_shotwuff"
@@ -359,8 +366,8 @@
 /mob/living/simple_mob/humanoid/eclipse/lunar/ravanger //Tanky boi. Very deadly melee
 	name = "Lunar Eclipse Ravanger"
 	desc = "An individual wearing strange armor that seems to be living, and breathing while providing protection from bullets and swords."
-	health = 62
-	maxHealth = 62
+	health = 60
+	maxHealth = 60
 	icon_state = "eclipse_ravanger"
 	icon_living = "eclipse_ravanger"
 
@@ -535,7 +542,7 @@
 	reload_max = 5
 	size_multiplier = 1.5
 	melee_attack_delay = 3 SECOND
-	var/shock_chance = 40
+	var/shock_chance = 25
 	base_attack_cooldown = 6
 	hovering = TRUE
 	ranged_cooldown_time = 1.5
@@ -568,6 +575,9 @@
 
 	icon_state = "aeroblaster"
 	icon_living = "aeroblaster"
+
+	reload_max = 1
+	reload_time = 1.5 SECONDS
 
 	ranged_attack_delay = 1.5 SECONDS
 	hovering = TRUE
@@ -749,7 +759,7 @@
 	only_submunitions = 1
 	range = 0
 	embed_chance = 0
-	submunition_spread_max = 1800
+	submunition_spread_max = 1200
 	submunition_spread_min = 500
 	submunitions = list(/obj/item/projectile/energy/frostsphere = 4)
 
