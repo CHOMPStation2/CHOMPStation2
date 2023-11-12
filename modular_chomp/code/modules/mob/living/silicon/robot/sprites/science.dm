@@ -23,20 +23,20 @@
 /datum/robot_sprite/dogborg/tall/science/meka
 	sprite_icon_state = "mekastandard" //placeholder because i think virgo did that too and i dont want to reoverride the dmi just for this
 	has_vore_belly_sprites = TRUE
-	belly_light_list = list("sleeper")
+	has_sleeper_light_indicator = TRUE
 
 /datum/robot_sprite/dogborg/tall/science/mmeka
 	sprite_icon_state = "mmekasci"
 	has_vore_belly_sprites = TRUE
-	belly_light_list = list("sleeper")
+	has_sleeper_light_indicator = TRUE
 
 /datum/robot_sprite/dogborg/tall/science/fmeka
 	sprite_icon_state = "fmekasci"
 	has_vore_belly_sprites = TRUE
-	belly_light_list = list("sleeper")
+	has_sleeper_light_indicator = TRUE
 
 /datum/robot_sprite/dogborg/tall/science/k4t
 	sprite_icon_state = "k4tsci"
 	has_vore_belly_sprites = TRUE
-	belly_light_list = list("sleeper")
+	has_sleeper_light_indicator = TRUE
 */
