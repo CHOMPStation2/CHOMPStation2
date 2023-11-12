@@ -30,9 +30,12 @@
 	has_vore_belly_sprites = TRUE
 
 /datum/robot_sprite/dogborg/tall/service/meka_alt
+	name = "MEKA Alt"
 	sprite_icon_state = "mekaserve_alt"
+	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 	belly_light_list = list("sleeper")
+	rest_sprite_options = list("Default", "Sit")
 
 /datum/robot_sprite/dogborg/tall/service/mmeka
 	sprite_icon_state = "mmekaserv"
