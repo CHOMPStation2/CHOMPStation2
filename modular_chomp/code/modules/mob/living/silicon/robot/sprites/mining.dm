@@ -29,7 +29,6 @@
 	name = "MEKA - Mining"
 	sprite_icon_state = "mekamine"
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 	belly_light_list = list("sleeper")
 	rest_sprite_options = list("Default", "Sit")
@@ -38,7 +37,6 @@
 	name = "NIKO - Mining"
 	sprite_icon_state = "mmekamine"
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
 	belly_light_list = list("sleeper")
 	rest_sprite_options = list("Default", "Sit")
 
@@ -46,7 +44,6 @@
 	name = "NIKA - Mining"
 	sprite_icon_state = "fmekamine"
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
 	belly_light_list = list("sleeper")
 	rest_sprite_options = list("Default", "Sit")
 
@@ -54,7 +51,6 @@
 	name = "K4T - Mining"
 	sprite_icon_state = "k4tmine"
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
 	belly_light_list = list("sleeper")
 	rest_sprite_options = list("Default", "Bellyup")
 
@@ -62,7 +58,6 @@
 	name = "K4Talt - Mining"
 	sprite_icon_state = "k4tmine_alt1"
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = FALSE
 	rest_sprite_options = list("Default", "Bellyup")
 
@@ -70,7 +65,6 @@
 	name = "MEKA - Cargo"
 	sprite_icon_state = "mekacargo"
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = FALSE
 	rest_sprite_options = list("Default", "Sit")
 
@@ -78,7 +72,6 @@
 	name = "NIKO - Cargo"
 	sprite_icon_state = "mmekacargo"
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
 	belly_light_list = list("sleeper")
 	rest_sprite_options = list("Default", "Sit")
 
@@ -86,7 +79,6 @@
 	name = "NIKA - Cargo"
 	sprite_icon_state = "fmekacargo"
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
 	belly_light_list = list("sleeper")
 	rest_sprite_options = list("Default", "Sit")
 
@@ -94,7 +86,6 @@
 	name = "K4T - Cargo"
 	sprite_icon_state = "k4tcargo"
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = FALSE
 	rest_sprite_options = list("Default", "Bellyup")
 
@@ -102,6 +93,5 @@
 	name = "K4Talt - Cargo"
 	sprite_icon_state = "k4tcargo_alt1"
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = FALSE
 	rest_sprite_options = list("Default", "Bellyup")
