@@ -32,7 +32,7 @@
 	sprite_icon_state = "k4tmed_alt1"
 	has_vore_belly_sprites = FALSE
 
-/*
+*/
 // Surgeon
 
 // Regular sprites
