@@ -9,7 +9,7 @@
 	has_eye_light_sprites = TRUE
 
 // Tall sprites
-
+/*Upstream implemented
 /datum/robot_sprite/dogborg/tall/science
 	sprite_icon = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi'
 
@@ -39,3 +39,4 @@
 	sprite_icon_state = "k4tsci"
 	has_vore_belly_sprites = TRUE
 	belly_light_list = list("sleeper")
+*/

@@ -5,6 +5,7 @@
 	has_eye_light_sprites = TRUE
 	has_vore_belly_resting_sprites = TRUE
 
+/*Upstream implemented
 /datum/robot_sprite/dogborg/tall/engineering
 	sprite_icon = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi'
 
@@ -35,3 +36,4 @@
 /datum/robot_sprite/dogborg/tall/engineering/k4t_alt1
 	sprite_icon_state = "k4tengi_alt1"
 	has_vore_belly_sprites = FALSE
+*/

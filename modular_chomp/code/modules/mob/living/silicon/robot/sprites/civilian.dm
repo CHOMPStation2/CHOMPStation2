@@ -12,6 +12,7 @@
 	has_vore_belly_resting_sprites = TRUE
 	has_eye_light_sprites = TRUE
 
+/*Upstream implemented
 /datum/robot_sprite/dogborg/tall/service
 	sprite_icon = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi'
 
@@ -28,11 +29,6 @@
 /datum/robot_sprite/dogborg/tall/service/meka
 	sprite_icon_state = "mekaserve"
 	has_vore_belly_sprites = TRUE
-
-/datum/robot_sprite/dogborg/tall/service/meka_alt
-	name = "MEKA Alt"
-	sprite_icon_state = "mekaserve_alt"
-	rest_sprite_options = list("Default", "Sit")
 
 /datum/robot_sprite/dogborg/tall/service/mmeka
 	sprite_icon_state = "mmekaserv"
@@ -51,3 +47,10 @@
 /datum/robot_sprite/dogborg/tall/service/k4t_alt1
 	sprite_icon_state = "k4tserve_alt1"
 	has_vore_belly_sprites = FALSE
+*/
+
+/datum/robot_sprite/dogborg/tall/service/meka_alt
+	sprite_icon = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi'
+	name = "MEKA Alt"
+	sprite_icon_state = "mekaserve_alt"
+	rest_sprite_options = list("Default", "Sit")
