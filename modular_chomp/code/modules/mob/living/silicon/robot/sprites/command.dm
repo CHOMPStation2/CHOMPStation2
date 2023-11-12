@@ -6,13 +6,11 @@
 	name = "Commandhound V2"
 	sprite_icon_state = "kcom"
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
 
 /datum/robot_sprite/dogborg/command/borgi
 	name = "Borgi"
 	sprite_icon_state = "borgi"
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
 
 /datum/robot_sprite/dogborg/tall/command
 	module_type = "Command"
