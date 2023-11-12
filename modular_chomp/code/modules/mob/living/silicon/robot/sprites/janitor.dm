@@ -36,9 +36,9 @@
 	has_vore_belly_sprites = FALSE //Third without
 
 /datum/robot_sprite/dogborg/tall/janitor/k4t
-	sprite_icon_state = "k4janit"
+	sprite_icon_state = "k4tjani"
 	has_vore_belly_sprites = FALSE
 
-/datum/robot_sprite/dogborg/tall/mining/k4t_alt1
+/datum/robot_sprite/dogborg/tall/janitor/k4t_alt1
 	sprite_icon_state = "k4tjani_alt1"
 	has_vore_belly_sprites = FALSE
