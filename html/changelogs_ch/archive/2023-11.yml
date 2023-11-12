@@ -46,3 +46,17 @@
       vents and scrubbers in the area.
   - maptweak: Atmos Maintenance on deck three has been made a bit wider, to fit the
       added tanks and pipework in.
+2023-11-11:
+  FluffMedic:
+  - bugfix: fixes a few non-functional shadekin blockers
+  - rscadd: 'rebalance: Pummeler has been nerfed further, mostly with a nerf I thought
+      I did ages ago. Also did weird bola stuff.'
+  - qol: Eclipse tells you when you're hitting them with the wrong damage type.
+  ItsSelis:
+  - rscadd: added http_request datum to properly use rust-g based http requests (including
+      async ones).
+  - code_imp: byond 515 support defines for rust-g definitions
+  Verkister:
+  - bugfix: Fixed item digestion logs not working on recycled stuff
+  tacoguy7765093:
+  - balance: Heart Damage is no longer debilitating at decimal values.

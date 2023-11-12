@@ -695,6 +695,10 @@
 	can_open = 1
 	},
 /area/submap/DoomP)
+"qW" = (
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/water/deep,
+/area/submap/DoomP)
 "rJ" = (
 /obj/effect/floor_decal/corner/lime/full{
 	dir = 1
@@ -2387,7 +2391,7 @@ ak
 ak
 ak
 ak
-ak
+qW
 ak
 ak
 af

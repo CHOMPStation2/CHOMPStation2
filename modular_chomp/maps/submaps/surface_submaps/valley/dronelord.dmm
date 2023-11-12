@@ -57,7 +57,7 @@
 /turf/simulated/shuttle/floor/purple,
 /area/submap/dronelord)
 "dw" = (
-/obj/item/weapon/gun/projectile/automatic/as24,
+/obj/item/weapon/gun/projectile/heavysniper,
 /obj/item/weapon/tank/jetpack/oxygen,
 /turf/simulated/shuttle/floor/black,
 /area/submap/dronelord)
@@ -132,6 +132,10 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/shuttle/floor/yellow,
+/area/submap/dronelord)
+"kG" = (
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/shuttle/floor/voidcraft,
 /area/submap/dronelord)
 "lO" = (
 /mob/living/simple_mob/mechanical/combat_drone{
@@ -310,7 +314,7 @@
 /area/submap/dronelord)
 "RI" = (
 /obj/item/weapon/tank/jetpack/oxygen,
-/obj/item/weapon/gun/projectile/automatic/as24,
+/obj/item/weapon/gun/projectile/automatic/sts35,
 /turf/simulated/shuttle/floor/black,
 /area/submap/dronelord)
 "RV" = (
@@ -730,7 +734,7 @@ aj
 dw
 yh
 Gi
-Kv
+kG
 mG
 yh
 RI
