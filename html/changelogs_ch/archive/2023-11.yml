@@ -60,3 +60,7 @@
   - bugfix: Fixed item digestion logs not working on recycled stuff
   tacoguy7765093:
   - balance: Heart Damage is no longer debilitating at decimal values.
+2023-11-12:
+  FluffMedic:
+  - rscadd: Glow to the the radiation eclipse critter
+  - maptweak: Makes the Eclipse POI I forgot to make fancy, fancy
