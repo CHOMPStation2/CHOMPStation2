@@ -3204,6 +3204,7 @@
 #include "code\modules\mob\living\silicon\robot\robot_modules\syndicate.dm"
 #include "code\modules\mob\living\silicon\robot\robot_modules\Widerobot_Clown_ch.dm"
 #include "code\modules\mob\living\silicon\robot\robot_modules\Widerobot_Command_ch.dm"
+#include "code\modules\mob\living\silicon\robot\robot_modules\Widerobot_Exploration_ch.dm"
 #include "code\modules\mob\living\silicon\robot\sprites\_sprite_datum.dm"
 #include "code\modules\mob\living\silicon\robot\sprites\civilian.dm"
 #include "code\modules\mob\living\silicon\robot\sprites\combat.dm"
