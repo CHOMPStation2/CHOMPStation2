@@ -25,15 +25,15 @@
 
 /datum/robot_sprite/dogborg/tall/janitor/meka
 	sprite_icon_state = "mekajani"
-	has_vore_belly_sprites = TRUE
+	has_vore_belly_sprites = FALSE //These three oddly dont have sleeper sprites. -Reo
 
 /datum/robot_sprite/dogborg/tall/janitor/mmeka
 	sprite_icon_state = "mmekajani"
-	has_vore_belly_sprites = TRUE
+	has_vore_belly_sprites = FALSE //Second without
 
 /datum/robot_sprite/dogborg/tall/janitor/fmeka
 	sprite_icon_state = "fmekajani"
-	has_vore_belly_sprites = TRUE
+	has_vore_belly_sprites = FALSE //Third without
 
 /datum/robot_sprite/dogborg/tall/janitor/k4t
 	sprite_icon_state = "k4janit"
