@@ -85,7 +85,7 @@
 
 
 /datum/robot_sprite/dogborg/raptor/crisis/raptor
-	name = "Raptor V-4 - raptor"
+	name = "Raptor V-4 - Crisis"
 	sprite_icon_state = "medraptor"
 	has_custom_equipment_sprites = TRUE
 	rest_sprite_options = list("Default", "Bellyup")
