@@ -68,6 +68,10 @@
 	temperature = 243.15
 	},
 /area/submap/Hadzardzone)
+"l" = (
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/water,
+/area/submap/Hadzardzone)
 "m" = (
 /obj/structure/safe,
 /obj/item/weapon/spacecash/c1000,
@@ -819,7 +823,7 @@ F
 D
 V
 V
-P
+V
 H
 j
 H
@@ -891,13 +895,13 @@ X
 N
 F
 r
-V
+P
 V
 V
 T
 R
 V
-P
+l
 V
 F
 k
@@ -1004,7 +1008,7 @@ F
 F
 V
 V
-P
+V
 H
 j
 H
