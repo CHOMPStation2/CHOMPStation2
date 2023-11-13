@@ -709,7 +709,6 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "wy" = (
-/obj/machinery/computer/ship/disperser,
 /obj/effect/floor_decal/techfloor{
 	dir = 1
 	},
