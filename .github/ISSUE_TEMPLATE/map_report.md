@@ -2,7 +2,7 @@
 name: Map Bug report
 about: Create a report, specific to any map related things.
 title: '[MAPPING] '
-labels: ['Bug', 'Map Edit']
+labels: ['Type: Bug', 'Map Edit']
 assignees: ''
 
 ---
