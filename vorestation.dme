@@ -4659,6 +4659,7 @@
 #include "modular_chomp\code\modules\clothing\spacesuits\rig\modules\specific\defib.dm"
 #include "modular_chomp\code\modules\clothing\spacesuits\rig\modules\specific\mounted_gun.dm"
 #include "modular_chomp\code\modules\clothing\spacesuits\rig\modules\specific\protean.dm"
+#include "modular_chomp\code\modules\clothing\spacesuits\rig\suits\alien.dm"
 #include "modular_chomp\code\modules\clothing\suits\armor.dm"
 #include "modular_chomp\code\modules\clothing\suits\jobs.dm"
 #include "modular_chomp\code\modules\clothing\under\accessories\holster.dm"
