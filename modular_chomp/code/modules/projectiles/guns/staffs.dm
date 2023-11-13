@@ -1,12 +1,12 @@
 /obj/item/weapon/gun/magic/firestaff/vrwizard
-	name = "vr staff"
+	name = "hardlight staff"
 	desc = "A magical staff brimming with energy."
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "staffoffire"
 	item_state = "staff"
 	fire_sound = 'sound/weapons/emitter.ogg'
 	w_class = ITEMSIZE_HUGE
-	checks_antimagic = TRUE
+	checks_antimagic = FALSE
 	max_charges = 10
 	charges = 0
 	recharge_rate = 2
@@ -39,4 +39,3 @@
 	description_info = "A high powered staff that burns through energy quickly but unleashes high energy bolts."
 	projectile_type = /obj/item/projectile/energy/nuclearblast
 	color = "#660066"
-	max_charges = 4

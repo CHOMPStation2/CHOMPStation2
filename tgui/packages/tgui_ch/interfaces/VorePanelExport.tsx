@@ -54,11 +54,16 @@ const AutotransferFlagIcon = {
   'Dead': '',
   'Digestable Creatures': '',
   'Absorbable Creatures': '',
+  'Full Health': '',
   'Items': '',
   'Trash': '',
   'Eggs': '',
   'Remains': '',
   'Indigestible Items': '',
+  'Recyclable Items': '',
+  'Ores': '',
+  'Clothes and Bags': '',
+  'Food': '',
 };
 
 const GetAddons = (addons: string[]) => {
@@ -168,6 +173,7 @@ type Belly = {
   selective_preference: string;
   recycling: BooleanLike;
   entrance_logs: BooleanLike;
+  item_digest_logs: BooleanLike;
 
   // Messages
   struggle_messages_outside: string[];
@@ -258,6 +264,10 @@ type Belly = {
   autotransfer_blacklist: string[];
   autotransfer_secondary_whitelist: string[];
   autotransfer_secondary_blacklist: string[];
+  autotransfer_whitelist_items: string[];
+  autotransfer_blacklist_items: string[];
+  autotransfer_secondary_whitelist_items: string[];
+  autotransfer_secondary_blacklist_items: string[];
 
   // Liquid Options
   show_liquids: BooleanLike;
@@ -271,6 +281,7 @@ type Belly = {
   reagent_mode_flag_list: string[];
   liquid_overlay: BooleanLike;
   max_liquid_level: number;
+  reagent_touches: BooleanLike;
   mush_overlay: BooleanLike;
   mush_color: string;
   mush_alpha: number;
@@ -337,6 +348,7 @@ const generateBellyString = (belly: Belly, index: number) => {
     selective_preference,
     recycling,
     entrance_logs,
+    item_digest_logs,
 
     // Messages
     struggle_messages_outside,
@@ -421,6 +433,10 @@ const generateBellyString = (belly: Belly, index: number) => {
 	autotransfer_blacklist,
 	autotransfer_secondary_whitelist,
 	autotransfer_secondary_blacklist,
+	autotransfer_whitelist_items,
+	autotransfer_blacklist_items,
+	autotransfer_secondary_whitelist_items,
+	autotransfer_secondary_blacklist_items,
 
     // Liquid Options
     show_liquids,
@@ -434,6 +450,7 @@ const generateBellyString = (belly: Belly, index: number) => {
     reagent_mode_flag_list,
     liquid_overlay,
     max_liquid_level,
+    reagent_touches,
     mush_overlay,
     mush_color,
     mush_alpha,
@@ -774,12 +791,16 @@ const generateBellyString = (belly: Belly, index: number) => {
   result += '<li class="list-group-item">Auto-Transfer Max Amount: ' + autotransfer_max_amount + '</li>';
   result += '<li class="list-group-item">Auto-Transfer Primary Chance: ' + autotransferchance + '%</li>';
   result += '<li class="list-group-item">Auto-Transfer Primary Location: ' + autotransferlocation + '</li>';
-  result += '<li class="list-group-item">Auto-Transfer Primary Whitelist: ' + GetAutotransferFlags(autotransfer_whitelist, true) + '</li>';
-  result += '<li class="list-group-item">Auto-Transfer Primary Blacklist: ' + GetAutotransferFlags(autotransfer_blacklist, false) + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Primary Whitelist (Mobs): ' + GetAutotransferFlags(autotransfer_whitelist, true) + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Primary Whitelist (Items): ' + GetAutotransferFlags(autotransfer_whitelist_items, true) + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Primary Blacklist (Mobs): ' + GetAutotransferFlags(autotransfer_blacklist, false) + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Primary Blacklist (Items): ' + GetAutotransferFlags(autotransfer_blacklist_items, false) + '</li>';
   result += '<li class="list-group-item">Auto-Transfer Secondary Chance: ' + autotransferchance_secondary + '%</li>';
   result += '<li class="list-group-item">Auto-Transfer Secondary Location: ' + autotransferlocation_secondary + '</li>';
-  result += '<li class="list-group-item">Auto-Transfer Secondary Whitelist: ' + GetAutotransferFlags(autotransfer_secondary_whitelist, true) + '</li>';
-  result += '<li class="list-group-item">Auto-Transfer Secondary Blacklist: ' + GetAutotransferFlags(autotransfer_secondary_blacklist, false) + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Secondary Whitelist (Mobs): ' + GetAutotransferFlags(autotransfer_secondary_whitelist, true) + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Secondary Whitelist (Items): ' + GetAutotransferFlags(autotransfer_secondary_whitelist_items, true) + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Secondary Blacklist (Mobs): ' + GetAutotransferFlags(autotransfer_secondary_blacklist, false) + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Secondary Blacklist (Items): ' + GetAutotransferFlags(autotransfer_secondary_blacklist_items, false) + '</li>';
   result += '</ul>';
   result += '</div></div></div>';
 

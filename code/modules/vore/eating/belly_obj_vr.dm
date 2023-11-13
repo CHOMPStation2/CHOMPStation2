@@ -59,10 +59,9 @@
 	var/eating_privacy_local = "default"	//Overrides eating_privacy_global if not "default". Determines if attempt/success messages are subtle/loud
 	var/is_feedable = TRUE					// If this belly shows up in belly selections for others. //CHOMPAdd
 	var/silicon_belly_overlay_preference = "Sleeper" //Selects between placing belly overlay in sleeper or normal vore mode. Exclusive
-	var/visible_belly_minimum_prey = 1 //What LAZYLEN(vore_selected.contents) we require to show the belly. Customizable
-	var/overlay_min_prey_size	= 0 	//Minimum prey size for belly overlay to show. 0 to disable
-	var/override_min_prey_size = FALSE	//If true, exceeding override prey number will override minimum size requirements
-	var/override_min_prey_num	= 1		//We check belly contents against this to override min size
+	var/belly_mob_mult = 1		//Multiplier for how filling mob types are in borg bellies
+	var/belly_item_mult = 1 	//Multiplier for how filling items are in borg borg bellies. Items are also weighted on item size
+	var/belly_overall_mult = 1	//Multiplier applied ontop of any other specific multipliers
 
 	// Generally just used by AI
 	var/autotransferchance = 0 				// % Chance of prey being autotransferred to transfer location
@@ -70,16 +69,21 @@
 	var/autotransferlocation				// Place to send them
 	var/autotransfer_whitelist = 0			// Flags for what can be transferred to the primary location //CHOMPAdd
 	var/autotransfer_blacklist = 2			// Flags for what can not be transferred to the primary location, defaults to Absorbed //CHOMPAdd
+	var/autotransfer_whitelist_items = 0	// Flags for what can be transferred to the primary location //CHOMPAdd
+	var/autotransfer_blacklist_items = 0	// Flags for what can not be transferred to the primary location //CHOMPAdd
 	var/autotransferchance_secondary = 0 	// % Chance of prey being autotransferred to secondary transfer location //CHOMPAdd
 	var/autotransferlocation_secondary		// Second place to send them //CHOMPAdd
 	var/autotransfer_secondary_whitelist = 0// Flags for what can be transferred to the secondary location //CHOMPAdd
 	var/autotransfer_secondary_blacklist = 2// Flags for what can not be transferred to the secondary location, defaults to Absorbed //CHOMPAdd
+	var/autotransfer_secondary_whitelist_items = 0// Flags for what can be transferred to the secondary location //CHOMPAdd
+	var/autotransfer_secondary_blacklist_items = 0// Flags for what can not be transferred to the secondary location //CHOMPAdd
 	var/autotransfer_enabled = FALSE		// Player toggle
 	var/autotransfer_min_amount = 0			// Minimum amount of things to pass at once. //CHOMPAdd
 	var/autotransfer_max_amount = 0			// Maximum amount of things to pass at once. //CHOMPAdd
 	var/tmp/list/autotransfer_queue = list()// Reserve for above things. //CHOMPAdd
 	//Auto-transfer flags for whitelist //CHOMPAdd
-	var/tmp/static/list/autotransfer_flags_list = list("Creatures" = AT_FLAG_CREATURES, "Absorbed" = AT_FLAG_ABSORBED, "Carbon" = AT_FLAG_CARBON, "Silicon" = AT_FLAG_SILICON, "Mobs" = AT_FLAG_MOBS, "Animals" = AT_FLAG_ANIMALS, "Mice" = AT_FLAG_MICE, "Dead" = AT_FLAG_DEAD, "Digestable Creatures" = AT_FLAG_CANDIGEST, "Absorbable Creatures" = AT_FLAG_CANABSORB, "Items" = AT_FLAG_ITEMS, "Trash" = AT_FLAG_TRASH, "Eggs" = AT_FLAG_EGGS, "Remains" = AT_FLAG_REMAINS, "Indigestible Items" = AT_FLAG_INDIGESTIBLE)
+	var/tmp/static/list/autotransfer_flags_list = list("Creatures" = AT_FLAG_CREATURES, "Absorbed" = AT_FLAG_ABSORBED, "Carbon" = AT_FLAG_CARBON, "Silicon" = AT_FLAG_SILICON, "Mobs" = AT_FLAG_MOBS, "Animals" = AT_FLAG_ANIMALS, "Mice" = AT_FLAG_MICE, "Dead" = AT_FLAG_DEAD, "Digestable Creatures" = AT_FLAG_CANDIGEST, "Absorbable Creatures" = AT_FLAG_CANABSORB, "Full Health" = AT_FLAG_HEALTHY)
+	var/tmp/static/list/autotransfer_flags_list_items = list("Items" = AT_FLAG_ITEMS, "Trash" = AT_FLAG_TRASH, "Eggs" = AT_FLAG_EGGS, "Remains" = AT_FLAG_REMAINS, "Indigestible Items" = AT_FLAG_INDIGESTIBLE, "Recyclable Items" = AT_FLAG_RECYCLABLE, "Ores" = AT_FLAG_ORES, "Clothes and Bags" = AT_FLAG_CLOTHES, "Food" = AT_FLAG_FOOD)
 
 	//I don't think we've ever altered these lists. making them static until someone actually overrides them somewhere.
 	//Actual full digest modes
@@ -270,6 +274,7 @@
 	"reagentcolor",
 	"liquid_overlay",
 	"max_liquid_level",
+	"reagent_touches",
 	"mush_overlay",
 	"mush_color",
 	"mush_alpha",
@@ -322,6 +327,10 @@
 	"autotransfer_secondary_blacklist",
 	"autotransfer_whitelist",
 	"autotransfer_blacklist",
+	"autotransfer_secondary_whitelist_items",
+	"autotransfer_secondary_blacklist_items",
+	"autotransfer_whitelist_items",
+	"autotransfer_blacklist_items",
 	"autotransfer_min_amount",
 	"autotransfer_max_amount",
 	"slow_digestion",
@@ -332,15 +341,15 @@
 	"recycling",
 	"is_feedable",
 	"entrance_logs",
-	"noise_freq", //CHOMP end of variables from CHOMP
+	"noise_freq",
+	"item_digest_logs", //CHOMP end of variables from CHOMP
 	"egg_type",
 	"save_digest_mode",
 	"eating_privacy_local",
 	"silicon_belly_overlay_preference",
-	"visible_belly_minimum_prey",
-	"overlay_min_prey_size",
-	"override_min_prey_size",
-	"override_min_prey_num",
+	"belly_mob_mult",
+	"belly_item_mult",
+	"belly_overall_mult",
 	)
 
 	if (save_digest_mode == 1)
@@ -351,13 +360,14 @@
 /obj/belly/Initialize()
 	. = ..()
 	//If not, we're probably just in a prefs list or something.
-	if(isliving(loc))
+	if(ismob(loc))
 		owner = loc
 		owner.vore_organs |= src
-		if(speedy_mob_processing) //CHOMPEdit Start
-			START_PROCESSING(SSobj, src)
-		else
-			START_PROCESSING(SSbellies, src)
+		if(isliving(loc))
+			if(speedy_mob_processing) //CHOMPEdit Start
+				START_PROCESSING(SSobj, src)
+			else
+				START_PROCESSING(SSbellies, src)
 
 	create_reagents(300)	//CHOMP So we can have some liquids in bellies
 	flags |= NOREACT		// We dont want bellies to start bubling nonstop due to people mixing when transfering and making different reagents
@@ -366,9 +376,11 @@
 	if(speedy_mob_processing)
 		STOP_PROCESSING(SSobj, src)
 	else
-		STOP_PROCESSING(SSbellies, src) //CHOMPEdit End
+		STOP_PROCESSING(SSbellies, src)
 	owner?.vore_organs?.Remove(src)
 	owner = null
+	for(var/mob/observer/G in src)
+		G.forceMove(get_turf(src)) //CHOMPEdit End
 	return ..()
 
 // Called whenever an atom enters this belly
@@ -1722,10 +1734,16 @@
 /obj/belly/proc/check_autotransfer(var/atom/movable/prey)
 	if(!(prey in contents) || !prey.autotransferable) return
 	var/dest_belly_name
-	if(autotransferlocation_secondary && prob(autotransferchance_secondary) && autotransfer_filter(prey, autotransfer_secondary_whitelist, autotransfer_secondary_blacklist))
-		dest_belly_name = autotransferlocation_secondary
-	if(autotransferlocation && prob(autotransferchance) && autotransfer_filter(prey, autotransfer_whitelist, autotransfer_blacklist))
-		dest_belly_name = autotransferlocation
+	if(autotransferlocation_secondary && prob(autotransferchance_secondary))
+		if(ismob(prey) && autotransfer_filter(prey, autotransfer_secondary_whitelist, autotransfer_secondary_blacklist))
+			dest_belly_name = autotransferlocation_secondary
+		if(isitem(prey) && autotransfer_filter(prey, autotransfer_secondary_whitelist_items, autotransfer_secondary_blacklist_items))
+			dest_belly_name = autotransferlocation_secondary
+	if(autotransferlocation && prob(autotransferchance))
+		if(ismob(prey) && autotransfer_filter(prey, autotransfer_whitelist, autotransfer_blacklist))
+			dest_belly_name = autotransferlocation
+		if(isitem(prey) && autotransfer_filter(prey, autotransfer_whitelist_items, autotransfer_blacklist_items))
+			dest_belly_name = autotransferlocation
 	if(!dest_belly_name) // Didn't transfer, so wait before retrying
 		prey.belly_cycles = 0
 		return
@@ -1740,85 +1758,115 @@
 
 //Autotransfer filter CHOMPEdit Start
 /obj/belly/proc/autotransfer_filter(var/atom/movable/prey, var/whitelist, var/blacklist)
-	if(blacklist & autotransfer_flags_list["Absorbed"])
-		if(isliving(prey))
-			var/mob/living/L = prey
-			if(L.absorbed) return FALSE
-	if(blacklist != 2) // Default is 2 for Absorbed, if it's not 2, check everything else
-		if(blacklist & autotransfer_flags_list["Creatures"])
-			if(isliving(prey)) return FALSE
-		if(blacklist & autotransfer_flags_list["Carbon"])
-			if(iscarbon(prey)) return FALSE
-		if(blacklist & autotransfer_flags_list["Silicon"])
-			if(issilicon(prey)) return FALSE
-		if(blacklist & autotransfer_flags_list["Mobs"])
-			if(istype(prey, /mob/living/simple_mob)) return FALSE
-		if(blacklist & autotransfer_flags_list["Animals"])
-			if(istype(prey, /mob/living/simple_mob/animal)) return FALSE
-		if(blacklist & autotransfer_flags_list["Mice"])
-			if(ismouse(prey)) return FALSE
-		if(blacklist & autotransfer_flags_list["Dead"])
+	if(ismob(prey))
+		if(blacklist & autotransfer_flags_list["Absorbed"])
 			if(isliving(prey))
 				var/mob/living/L = prey
-				if(L.stat == DEAD) return FALSE
-		if(blacklist & autotransfer_flags_list["Digestable Creatures"])
+				if(L.absorbed) return FALSE
+		if(blacklist != 2) // Default is 2 for Absorbed, if it's not 2, check everything else
+			if(blacklist & autotransfer_flags_list["Creatures"])
+				if(isliving(prey)) return FALSE
+			if(blacklist & autotransfer_flags_list["Carbon"])
+				if(iscarbon(prey)) return FALSE
+			if(blacklist & autotransfer_flags_list["Silicon"])
+				if(issilicon(prey)) return FALSE
+			if(blacklist & autotransfer_flags_list["Mobs"])
+				if(istype(prey, /mob/living/simple_mob)) return FALSE
+			if(blacklist & autotransfer_flags_list["Animals"])
+				if(istype(prey, /mob/living/simple_mob/animal)) return FALSE
+			if(blacklist & autotransfer_flags_list["Mice"])
+				if(ismouse(prey)) return FALSE
+			if(blacklist & autotransfer_flags_list["Dead"])
+				if(isliving(prey))
+					var/mob/living/L = prey
+					if(L.stat == DEAD) return FALSE
+			if(blacklist & autotransfer_flags_list["Digestable Creatures"])
+				if(isliving(prey))
+					var/mob/living/L = prey
+					if(L.digestable) return FALSE
+			if(blacklist & autotransfer_flags_list["Absorbable Creatures"])
+				if(isliving(prey))
+					var/mob/living/L = prey
+					if(L.absorbable) return FALSE
+			if(blacklist & autotransfer_flags_list["Full Health"])
+				if(isliving(prey))
+					var/mob/living/L = prey
+					if((L.getOxyLoss() + L.getToxLoss() + L.getFireLoss() + L.getBruteLoss() + L.getCloneLoss()) == 0) return FALSE
+		if(whitelist == 0) return TRUE
+		if(whitelist & autotransfer_flags_list["Creatures"])
+			if(isliving(prey)) return TRUE
+		if(whitelist & autotransfer_flags_list["Absorbed"])
 			if(isliving(prey))
 				var/mob/living/L = prey
-				if(L.digestable) return FALSE
-		if(blacklist & autotransfer_flags_list["Absorbable Creatures"])
+				if(L.absorbed) return TRUE
+		if(whitelist & autotransfer_flags_list["Carbon"])
+			if(iscarbon(prey)) return TRUE
+		if(whitelist & autotransfer_flags_list["Silicon"])
+			if(issilicon(prey)) return TRUE
+		if(whitelist & autotransfer_flags_list["Mobs"])
+			if(istype(prey, /mob/living/simple_mob)) return TRUE
+		if(whitelist & autotransfer_flags_list["Animals"])
+			if(istype(prey, /mob/living/simple_mob/animal)) return TRUE
+		if(whitelist & autotransfer_flags_list["Mice"])
+			if(ismouse(prey)) return TRUE
+		if(whitelist & autotransfer_flags_list["Dead"])
 			if(isliving(prey))
 				var/mob/living/L = prey
-				if(L.absorbable) return FALSE
-		if(blacklist & autotransfer_flags_list["Items"])
+				if(L.stat == DEAD) return TRUE
+		if(whitelist & autotransfer_flags_list["Digestable Creatures"])
+			if(isliving(prey))
+				var/mob/living/L = prey
+				if(L.digestable) return TRUE
+		if(whitelist & autotransfer_flags_list["Absorbable Creatures"])
+			if(isliving(prey))
+				var/mob/living/L = prey
+				if(L.absorbable) return TRUE
+		if(whitelist & autotransfer_flags_list["Full Health"])
+			if(isliving(prey))
+				var/mob/living/L = prey
+				if((L.getOxyLoss() + L.getToxLoss() + L.getFireLoss() + L.getBruteLoss() + L.getCloneLoss()) == 0) return TRUE
+	else
+		if(blacklist & autotransfer_flags_list_items["Items"])
 			if(isitem(prey)) return FALSE
-		if(blacklist & autotransfer_flags_list["Trash"])
+		if(blacklist & autotransfer_flags_list_items["Trash"])
 			if(istype(prey, /obj/item/trash)) return FALSE
-		if(blacklist & autotransfer_flags_list["Eggs"])
+		if(blacklist & autotransfer_flags_list_items["Eggs"])
 			if(istype(prey, /obj/item/weapon/storage/vore_egg)) return FALSE
-		if(blacklist & autotransfer_flags_list["Remains"])
+		if(blacklist & autotransfer_flags_list_items["Remains"])
 			if(istype(prey, /obj/item/weapon/digestion_remains)) return FALSE
-		if(blacklist & autotransfer_flags_list["Indigestible Items"])
+		if(blacklist & autotransfer_flags_list_items["Indigestible Items"])
 			if(prey in items_preserved) return FALSE
-
-	if(whitelist == 0) return TRUE
-	if(whitelist & autotransfer_flags_list["Creatures"])
-		if(isliving(prey)) return TRUE
-	if(whitelist & autotransfer_flags_list["Absorbed"])
-		if(isliving(prey))
-			var/mob/living/L = prey
-			if(L.absorbed) return TRUE
-	if(whitelist & autotransfer_flags_list["Carbon"])
-		if(iscarbon(prey)) return TRUE
-	if(whitelist & autotransfer_flags_list["Silicon"])
-		if(issilicon(prey)) return TRUE
-	if(whitelist & autotransfer_flags_list["Mobs"])
-		if(istype(prey, /mob/living/simple_mob)) return TRUE
-	if(whitelist & autotransfer_flags_list["Animals"])
-		if(istype(prey, /mob/living/simple_mob/animal)) return TRUE
-	if(whitelist & autotransfer_flags_list["Mice"])
-		if(ismouse(prey)) return TRUE
-	if(whitelist & autotransfer_flags_list["Dead"])
-		if(isliving(prey))
-			var/mob/living/L = prey
-			if(L.stat == DEAD) return TRUE
-	if(whitelist & autotransfer_flags_list["Digestable Creatures"])
-		if(isliving(prey))
-			var/mob/living/L = prey
-			if(L.digestable) return TRUE
-	if(whitelist & autotransfer_flags_list["Absorbable Creatures"])
-		if(isliving(prey))
-			var/mob/living/L = prey
-			if(L.absorbable) return TRUE
-	if(whitelist & autotransfer_flags_list["Items"])
-		if(isitem(prey)) return TRUE
-	if(whitelist & autotransfer_flags_list["Trash"])
-		if(istype(prey, /obj/item/trash)) return TRUE
-	if(whitelist & autotransfer_flags_list["Eggs"])
-		if(istype(prey, /obj/item/weapon/storage/vore_egg)) return TRUE
-	if(whitelist & autotransfer_flags_list["Remains"])
-		if(istype(prey, /obj/item/weapon/digestion_remains)) return TRUE
-	if(whitelist & autotransfer_flags_list["Indigestible Items"])
-		if(prey in items_preserved) return TRUE
+		if(blacklist & autotransfer_flags_list_items["Recyclable Items"])
+			if(isitem(prey))
+				var/obj/item/I = prey
+				if(I.matter) return FALSE
+		if(blacklist & autotransfer_flags_list_items["Ores"])
+			if(istype(prey, /obj/item/weapon/ore)) return FALSE
+		if(blacklist & autotransfer_flags_list_items["Clothes and Bags"])
+			if(istype(prey, /obj/item/clothing) || istype(prey, /obj/item/weapon/storage)) return FALSE
+		if(blacklist & autotransfer_flags_list_items["Food"])
+			if(istype(prey, /obj/item/weapon/reagent_containers/food)) return FALSE
+		if(whitelist == 0) return TRUE
+		if(whitelist & autotransfer_flags_list_items["Items"])
+			if(isitem(prey)) return TRUE
+		if(whitelist & autotransfer_flags_list_items["Trash"])
+			if(istype(prey, /obj/item/trash)) return TRUE
+		if(whitelist & autotransfer_flags_list_items["Eggs"])
+			if(istype(prey, /obj/item/weapon/storage/vore_egg)) return TRUE
+		if(whitelist & autotransfer_flags_list_items["Remains"])
+			if(istype(prey, /obj/item/weapon/digestion_remains)) return TRUE
+		if(whitelist & autotransfer_flags_list_items["Indigestible Items"])
+			if(prey in items_preserved) return TRUE
+		if(whitelist & autotransfer_flags_list_items["Recyclable Items"])
+			if(isitem(prey))
+				var/obj/item/I = prey
+				if(I.matter) return TRUE
+		if(whitelist & autotransfer_flags_list_items["Ores"])
+			if(istype(prey, /obj/item/weapon/ore)) return TRUE
+		if(whitelist & autotransfer_flags_list_items["Clothes and Bags"])
+			if(istype(prey, /obj/item/clothing) || istype(prey, /obj/item/weapon/storage)) return TRUE
+		if(whitelist & autotransfer_flags_list_items["Food"])
+			if(istype(prey, /obj/item/weapon/reagent_containers/food)) return TRUE
 	return FALSE //CHOMPEdit end
 
 // Belly copies and then returns the copy
@@ -1883,6 +1931,7 @@
 	dupe.reagentcolor = reagentcolor
 	dupe.liquid_overlay = liquid_overlay
 	dupe.max_liquid_level = max_liquid_level
+	dupe.reagent_touches = reagent_touches
 	dupe.mush_overlay = mush_overlay
 	dupe.mush_color = mush_color
 	dupe.mush_alpha = mush_alpha
@@ -1933,7 +1982,8 @@
 	dupe.recycling = recycling
 	dupe.is_feedable = is_feedable
 	dupe.entrance_logs = entrance_logs
-	dupe.noise_freq = noise_freq //CHOMP end of variables from CHOMP
+	dupe.noise_freq = noise_freq
+	dupe.item_digest_logs = item_digest_logs //CHOMP end of variables from CHOMP
 
 	dupe.belly_fullscreen = belly_fullscreen
 	dupe.disable_hud = disable_hud
@@ -1948,10 +1998,9 @@
 	dupe.save_digest_mode = save_digest_mode
 	dupe.eating_privacy_local = eating_privacy_local
 	dupe.silicon_belly_overlay_preference = silicon_belly_overlay_preference
-	dupe.visible_belly_minimum_prey	= visible_belly_minimum_prey
-	dupe.overlay_min_prey_size	= overlay_min_prey_size
-	dupe.override_min_prey_size = override_min_prey_size
-	dupe.override_min_prey_num	= override_min_prey_num
+	dupe.belly_mob_mult = belly_mob_mult
+	dupe.belly_item_mult = belly_item_mult
+	dupe.belly_overall_mult	= belly_overall_mult
 
 	//// Object-holding variables
 	//struggle_messages_outside - strings

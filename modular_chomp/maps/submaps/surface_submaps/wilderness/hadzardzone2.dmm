@@ -40,6 +40,14 @@
 /obj/machinery/door/airlock/external,
 /turf/simulated/floor,
 /area/submap/Hadzardzone)
+"k" = (
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
+/area/submap/Hadzardzone)
 "l" = (
 /obj/effect/landmark/loot_spawn,
 /obj/effect/landmark/loot_spawn,
@@ -760,7 +768,7 @@ G
 f
 f
 s
-e
+s
 s
 c
 W
@@ -870,14 +878,14 @@ y
 G
 f
 z
-s
+e
 s
 s
 U
 X
 s
 s
-e
+s
 f
 P
 I
@@ -949,7 +957,7 @@ s
 s
 c
 W
-W
+k
 W
 W
 W
@@ -982,7 +990,7 @@ G
 f
 f
 s
-e
+s
 s
 W
 c
@@ -1025,7 +1033,7 @@ s
 W
 W
 W
-W
+k
 W
 s
 s

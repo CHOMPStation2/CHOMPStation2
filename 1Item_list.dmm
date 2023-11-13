@@ -44947,7 +44947,7 @@
 	},
 /area/survivalpod)
 "neL" = (
-/obj/item/weapon/gun/launcher/confetti_cannon/honkborg,
+/obj/item/weapon/gun/launcher/confetti_cannon/robot,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},

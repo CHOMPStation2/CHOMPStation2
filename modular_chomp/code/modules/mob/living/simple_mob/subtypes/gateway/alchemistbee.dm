@@ -6,7 +6,7 @@
 	value = CATALOGUER_REWARD_HARD
 
 /mob/living/simple_mob/vr/alchemistbee
-	name = "vr creation"
+	name = "large hardlight creature"
 	desc = "A digital creature"
 	icon = 'modular_chomp/icons/mob/alchemistbee.dmi'
 	icon_state = "beeliving"

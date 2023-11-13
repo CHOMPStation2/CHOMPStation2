@@ -1,9 +1,11 @@
 // Adding needed defines to /mob/living
 // Note: Polaris had this on /mob/living/carbon/human We need it higher up for animals and stuff.
-/mob/living
-	var/holder_default
+/mob
 	var/step_mechanics_pref = TRUE		// Allow participation in macro-micro step mechanics
 	var/pickup_pref = TRUE				// Allow participation in macro-micro pickup mechanics
+
+/mob/living
+	var/holder_default
 	var/pickup_active = TRUE			// Toggle whether your help intent picks up micros or pets them
 	var/center_offset = 0.5				// Center offset for uneven scaling symmetry. //CHOMPEdit
 	var/offset_override = FALSE			// Pref toggle for center offset. //CHOMPEdit
@@ -83,7 +85,7 @@
  * * ignore_prefs - CHANGE_ME. Default: FALSE
  * * aura_animation - CHANGE_ME. Default: TRUE
  */
-/mob/living/proc/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = TRUE)
+/mob/living/proc/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = FALSE) //CHOMPEdit - Disable aura_animation. Too expensive for something you can't even see.
 	if(!uncapped)
 		new_size = clamp(new_size, RESIZE_MINIMUM, RESIZE_MAXIMUM)
 		var/datum/component/resize_guard/guard = GetComponent(/datum/component/resize_guard)
@@ -132,7 +134,7 @@
 	else
 		update_transform() //Lame way
 
-/mob/living/carbon/human/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = TRUE)
+/mob/living/carbon/human/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = FALSE) //CHOMPEdit - Disable aura_animation. Too expensive for something you can't even see.
 	if(!resizable && !ignore_prefs)
 		return 1
 	. = ..()

@@ -49,8 +49,8 @@ const digestModeToPreyMode = {
  *   show_liq, liq_interacts, liq_reagent_gen, liq_reagent_type, liq_reagent_name,
  *   liq_reagent_transfer_verb, liq_reagent_nutri_rate, liq_reagent_capacity, liq_sloshing, liq_reagent_addons,
  *   show_liq_fullness, liq_messages, liq_msg_toggle1, liq_msg_toggle2, liq_msg_toggle3, liq_msg_toggle4,
- *   liq_msg_toggle5, liq_msg1, liq_msg2, liq_msg3, liq_msg4, liq_msg5, sound_volume, egg_name, recycling, entrance_logs, noise_freq,
- *   custom_reagentcolor, custom_reagentalpha, liquid_overlay, max_liquid_level, mush_overlay, mush_color, mush_alpha, max_mush, min_mush, item_mush_val,
+ *   liq_msg_toggle5, liq_msg1, liq_msg2, liq_msg3, liq_msg4, liq_msg5, sound_volume, egg_name, recycling, entrance_logs, item_digest_logs, noise_freq,
+ *   custom_reagentcolor, custom_reagentalpha, liquid_overlay, max_liquid_level, mush_overlay, reagent_touches, mush_color, mush_alpha, max_mush, min_mush, item_mush_val,
  *   metabolism_overlay, metabolism_mush_ratio, max_ingested, custom_ingested_color, custom_ingested_alpha
  *
  * To the tabs section of VoreSelectedBelly return
@@ -690,14 +690,14 @@ const VoreSelectedBellyOptions = (props, context) => {
     egg_name,
     recycling,
     entrance_logs,
+    item_digest_logs,
     selective_preference,
     save_digest_mode,
     eating_privacy_local,
     silicon_belly_overlay_preference,
-    visible_belly_minimum_prey,
-    overlay_min_prey_size,
-    override_min_prey_size,
-    override_min_prey_num,
+    belly_mob_mult,
+    belly_item_mult,
+    belly_overall_mult,
     vorespawn_blacklist,
   } = belly;
 
@@ -904,6 +904,16 @@ const VoreSelectedBellyOptions = (props, context) => {
               content={entrance_logs ? 'Enabled' : 'Disabled'}
             />
           </LabeledList.Item>
+          <LabeledList.Item label="Item Digestion Logs">
+            <Button
+              onClick={() =>
+                act('set_attribute', { attribute: 'b_item_digest_logs' })
+              }
+              icon={item_digest_logs ? 'toggle-on' : 'toggle-off'}
+              selected={item_digest_logs}
+              content={item_digest_logs ? 'Enabled' : 'Disabled'}
+            />
+          </LabeledList.Item>
           <LabeledList.Item label="Selective Mode Preference">
             <Button
               onClick={() =>
@@ -927,10 +937,9 @@ const VoreSelectedMobTypeBellyButtons = (props, context) => {
   const { belly } = props;
   const {
     silicon_belly_overlay_preference,
-    visible_belly_minimum_prey,
-    overlay_min_prey_size,
-    override_min_prey_size,
-    override_min_prey_num,
+    belly_mob_mult,
+    belly_item_mult,
+    belly_overall_mult,
   } = belly;
 
   if (is_cyborg) {
@@ -945,44 +954,30 @@ const VoreSelectedMobTypeBellyButtons = (props, context) => {
               content={capitalize(silicon_belly_overlay_preference)}
             />
           </LabeledList.Item>
-          <LabeledList.Item label="Minimum Prey num for VoreBelly">
+          <LabeledList.Item label="Mob Vorebelly Size Mult">
+            <Button
+              onClick={() =>
+                act('set_attribute', { attribute: 'b_belly_mob_mult' })
+              }
+              content={belly_mob_mult}
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Item Vorebelly Size Mult">
+            <Button
+              onClick={() =>
+                act('set_attribute', { attribute: 'b_belly_item_multi' })
+              }
+              content={belly_item_mult}
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Belly Size Multiplier">
             <Button
               onClick={() =>
                 act('set_attribute', {
-                  attribute: 'b_min_belly_number_flat',
+                  attribute: 'b_belly_overall_mult',
                 })
               }
-              content={visible_belly_minimum_prey}
-            />
-          </LabeledList.Item>
-          <LabeledList.Item label="Minimum Prey Size for Vorebelly">
-            <Button
-              onClick={() =>
-                act('set_attribute', { attribute: 'b_min_belly_prey_size' })
-              }
-              content={overlay_min_prey_size * 100 + '%'}
-            />
-          </LabeledList.Item>
-          <LabeledList.Item label="Toggle Number Override">
-            <Button
-              onClick={() =>
-                act('set_attribute', {
-                  attribute: 'b_override_min_belly_prey_size',
-                })
-              }
-              icon={override_min_prey_size ? 'toggle-on' : 'toggle-off'}
-              selected={override_min_prey_size}
-              content={override_min_prey_size ? 'On' : 'Off'}
-            />
-          </LabeledList.Item>
-          <LabeledList.Item label="Minimum Prey Number Override">
-            <Button
-              onClick={() =>
-                act('set_attribute', {
-                  attribute: 'b_min_belly_number_override',
-                })
-              }
-              content={override_min_prey_num}
+              content={belly_overall_mult}
             />
           </LabeledList.Item>
         </LabeledList>
@@ -1608,7 +1603,7 @@ const VoreSelectedBellyInteractions = (props, context) => {
                 }
               />
             </LabeledList.Item>
-            <LabeledList.Item label="Auto-Transfer Primary Whitelist">
+            <LabeledList.Item label="Auto-Transfer Primary Whitelist (Mobs)">
               {(autotransfer.autotransfer_whitelist.length &&
                 autotransfer.autotransfer_whitelist.join(', ')) ||
                 'Everything'}
@@ -1622,7 +1617,21 @@ const VoreSelectedBellyInteractions = (props, context) => {
                 icon="plus"
               />
             </LabeledList.Item>
-            <LabeledList.Item label="Auto-Transfer Primary Blacklist">
+            <LabeledList.Item label="Auto-Transfer Primary Whitelist (Items)">
+              {(autotransfer.autotransfer_whitelist_items.length &&
+                autotransfer.autotransfer_whitelist_items.join(', ')) ||
+                'Everything'}
+              <Button
+                onClick={() =>
+                  act('set_attribute', {
+                    attribute: 'b_autotransfer_whitelist_items',
+                  })
+                }
+                ml={1}
+                icon="plus"
+              />
+            </LabeledList.Item>
+            <LabeledList.Item label="Auto-Transfer Primary Blacklist (Mobs)">
               {(autotransfer.autotransfer_blacklist.length &&
                 autotransfer.autotransfer_blacklist.join(', ')) ||
                 'Nothing'}
@@ -1630,6 +1639,20 @@ const VoreSelectedBellyInteractions = (props, context) => {
                 onClick={() =>
                   act('set_attribute', {
                     attribute: 'b_autotransfer_blacklist',
+                  })
+                }
+                ml={1}
+                icon="plus"
+              />
+            </LabeledList.Item>
+            <LabeledList.Item label="Auto-Transfer Primary Blacklist (Items)">
+              {(autotransfer.autotransfer_blacklist_items.length &&
+                autotransfer.autotransfer_blacklist_items.join(', ')) ||
+                'Nothing'}
+              <Button
+                onClick={() =>
+                  act('set_attribute', {
+                    attribute: 'b_autotransfer_blacklist_items',
                   })
                 }
                 ml={1}
@@ -1661,7 +1684,7 @@ const VoreSelectedBellyInteractions = (props, context) => {
                 }
               />
             </LabeledList.Item>
-            <LabeledList.Item label="Auto-Transfer Secondary Whitelist">
+            <LabeledList.Item label="Auto-Transfer Secondary Whitelist (Mobs)">
               {(autotransfer.autotransfer_secondary_whitelist.length &&
                 autotransfer.autotransfer_secondary_whitelist.join(', ')) ||
                 'Everything'}
@@ -1675,7 +1698,23 @@ const VoreSelectedBellyInteractions = (props, context) => {
                 icon="plus"
               />
             </LabeledList.Item>
-            <LabeledList.Item label="Auto-Transfer Secondary Blacklist">
+            <LabeledList.Item label="Auto-Transfer Secondary Whitelist (Items)">
+              {(autotransfer.autotransfer_secondary_whitelist_items.length &&
+                autotransfer.autotransfer_secondary_whitelist_items.join(
+                  ', '
+                )) ||
+                'Everything'}
+              <Button
+                onClick={() =>
+                  act('set_attribute', {
+                    attribute: 'b_autotransfer_secondary_whitelist_items',
+                  })
+                }
+                ml={1}
+                icon="plus"
+              />
+            </LabeledList.Item>
+            <LabeledList.Item label="Auto-Transfer Secondary Blacklist (Mobs)">
               {(autotransfer.autotransfer_secondary_blacklist.length &&
                 autotransfer.autotransfer_secondary_blacklist.join(', ')) ||
                 'Nothing'}
@@ -1683,6 +1722,22 @@ const VoreSelectedBellyInteractions = (props, context) => {
                 onClick={() =>
                   act('set_attribute', {
                     attribute: 'b_autotransfer_secondary_blacklist',
+                  })
+                }
+                ml={1}
+                icon="plus"
+              />
+            </LabeledList.Item>
+            <LabeledList.Item label="Auto-Transfer Secondary Blacklist (Items)">
+              {(autotransfer.autotransfer_secondary_blacklist_items.length &&
+                autotransfer.autotransfer_secondary_blacklist_items.join(
+                  ', '
+                )) ||
+                'Nothing'}
+              <Button
+                onClick={() =>
+                  act('set_attribute', {
+                    attribute: 'b_autotransfer_secondary_blacklist_items',
                   })
                 }
                 ml={1}
@@ -1804,6 +1859,7 @@ const VoreSelectedBellyLiquidOptions = (props, context) => {
     custom_reagentalpha,
     liquid_overlay,
     max_liquid_level,
+    reagent_touches,
     mush_overlay,
     mush_color,
     mush_alpha,
@@ -1923,6 +1979,16 @@ const VoreSelectedBellyLiquidOptions = (props, context) => {
               }
               ml={1}
               icon="plus"
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Liquid Application to Prey">
+            <Button
+              onClick={() =>
+                act('liq_set_attribute', { liq_attribute: 'b_reagent_touches' })
+              }
+              icon={liq_interacts.reagent_touches ? 'toggle-on' : 'toggle-off'}
+              selected={liq_interacts.reagent_touches}
+              content={liq_interacts.reagent_touches ? 'On' : 'Off'}
             />
           </LabeledList.Item>
           <LabeledList.Item label="Custom Liquid Color">

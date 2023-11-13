@@ -1276,6 +1276,7 @@
 			vessel.maximum_volume = species.blood_volume
 		fixblood()
 		species.update_attack_types() //VOREStation Edit - Required for any trait that updates unarmed_types in setup.
+		species.update_vore_belly_def_variant() //CHOMPedit - Custom species post spawn logic
 
 	// Rebuild the HUD. If they aren't logged in then login() should reinstantiate it for them.
 	update_hud()

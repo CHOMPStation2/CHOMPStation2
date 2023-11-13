@@ -94,9 +94,11 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 			else if(heart.is_bruised())
 				blood_volume_raw *= 0.7
 				blood_volume *= 0.7
+			else if(heart.damage > 5) //CHOMPedit, //CHOMPedit, so 0.00005 heart damage isnt 20% of blood missing, now its 5
+				blood_volume_raw *= 0.9 //chompedit from 0.8 to 0.9
+				blood_volume *= 0.9 //chompedit from 0.8 to 0.9
 			else if(heart.damage)
-				blood_volume_raw *= 0.8
-				blood_volume *= 0.8
+				return
 
 		//Effects of bloodloss
 		var/dmg_coef = 1				//Lower means less damage taken

@@ -239,17 +239,17 @@
 	if(has_distress_beacon)
 		return FALSE
 	has_distress_beacon = TRUE
-
 	admin_chat_message(message = "Overmap panic button hit on z[z] ([name]) by '[user?.ckey || "Unknown"]'", color = "#FF2222") //VOREStation Add
+	//CHOMPedit start: Making the rescue beacon more generic rather then upstreams
 	var/message = "This is an automated distress signal from a MIL-DTL-93352-compliant beacon transmitting on [PUB_FREQ*0.1]kHz. \
-	This beacon was launched from '[real_name ? real_name : initial(name)]'. I can provide this additional information to rescuers: [get_distress_info()]. \
-	Per the Interplanetary Convention on Space SAR, those receiving this message must attempt rescue, \
-	or relay the message to those who can. This message will repeat one time in 5 minutes. Thank you for your urgent assistance."
+	This beacon was launched from '[real_name ? real_name : initial(name)]'. Additional information has been provided for rescuers: [get_distress_info()]. \
+	This message will repeat one time in 5 minutes. Thank you for your urgent assistance."
+	//CHOMPedit end
 
 	if(!levels_for_distress)
 		levels_for_distress = list(1)
 	for(var/zlevel in levels_for_distress)
-		priority_announcement.Announce(message, new_title = "Automated Distress Signal", new_sound = 'sound/AI/sos.ogg', zlevel = zlevel)
+		priority_announcement.Announce(message, new_title = "Automated Distress Signal", new_sound = 'sound/AI/sos_ch.ogg', zlevel = zlevel) //CHOMPedit, changed sound
 
 	var/image/I = image(icon, icon_state = "distress")
 	I.plane = PLANE_LIGHTING_ABOVE
@@ -262,12 +262,13 @@
 /obj/effect/overmap/visitable/proc/get_distress_info()
 	return "\[X:[x], Y:[y]\]"
 
-/obj/effect/overmap/visitable/proc/distress_update()
-	var/message = "This is the final message from the distress beacon launched from '[real_name ? real_name : initial(name)]'. I can provide this additional information to rescuers: [get_distress_info()]. \
-	Please render assistance under your obligations per the Interplanetary Convention on Space SAR, or relay this message to a party who can. Thank you for your urgent assistance."
+/obj/effect/overmap/visitable/proc/distress_update() //CHOMPedit start: Making the rescue beacon more generic rather then upstreams
+	var/message = "This is the final message from the distress beacon launched from '[real_name ? real_name : initial(name)]'. Additional information has been provided for rescuers: [get_distress_info()]. \
+	Thank you for your urgent assistance."
+	//CHOMPedit end
 
 	for(var/zlevel in levels_for_distress)
-		priority_announcement.Announce(message, new_title = "Automated Distress Signal", new_sound = 'sound/AI/sos.ogg', zlevel = zlevel)
+		priority_announcement.Announce(message, new_title = "Automated Distress Signal", new_sound = 'sound/AI/sos_ch.ogg', zlevel = zlevel) //CHOMPedit, changed sound
 
 /proc/build_overmap()
 	if(!global.using_map.use_overmap)

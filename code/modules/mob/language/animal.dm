@@ -27,7 +27,7 @@
 	ask_verb = "tilts"
 	exclaim_verb = "roars"
 	key = "i"
-	flags = WHITELISTED
+	//flags = WHITELISTED //ChompEdit: Let the teppi charaters speak teppi
 	machine_understands = 0
 	space_chance = 100
 	syllables = list("gyoh", "snoof", "gyoooooOOOooh", "iuuuuh", "gyuuuuh", "groah", "gyooh", "giouh", "puff", "huff", "ghom", "gyuh", "rrrr", "ghh", "uuah", "groh", "gyaah")
