@@ -64,3 +64,7 @@
   FluffMedic:
   - rscadd: Glow to the the radiation eclipse critter
   - maptweak: Makes the Eclipse POI I forgot to make fancy, fancy
+2023-11-13:
+  Upstream:
+  - rscadd: added a new PDA type
+  - imageadd: added new PDA sprites for the new type
