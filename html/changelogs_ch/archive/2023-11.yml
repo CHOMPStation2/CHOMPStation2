@@ -65,6 +65,8 @@
   - rscadd: Glow to the the radiation eclipse critter
   - maptweak: Makes the Eclipse POI I forgot to make fancy, fancy
 2023-11-13:
+  FluffMedic:
+  - rscadd: New chems to the distiller
   ItsSelis:
   - code_imp: slightly changed GitHub issue templates
   - rscadd: added new way of generating tgui bundles, compiling the game & launching
