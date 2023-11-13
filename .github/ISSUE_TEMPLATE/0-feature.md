@@ -1,5 +1,5 @@
 ---
-name: "title: "✨" New feature"
+name: "✨ New feature"
 about: Suggest an idea for this project
 title: "✨"
 labels: ['Type: Feature / Enhancement', 'Type: Suggestion']
