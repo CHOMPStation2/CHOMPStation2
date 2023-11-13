@@ -145,6 +145,13 @@
 	armor = list(melee = -20, bullet = -20, laser = 85, energy = 85, bomb = 50, bio = 100, rad = 100) //Solar members are nigh immune to burns.
 	armor_soak = list(melee = 0, bullet = 0, laser = 15, energy = 15, bomb = 0, bio = 0, rad = 0)
 
+/mob/living/simple_mob/humanoid/eclipse/solar/bullet_act(obj/item/projectile/P)
+	if(istype(P, /obj/item/projectile/energy) || istype(P, /obj/item/projectile/beam))
+		visible_message("<font color='orange'><B>[P] seems ineffective!.</B></font>")
+		..()
+	else
+		..()
+
 /mob/living/simple_mob/humanoid/eclipse/solar/teslanoodle
 	name = "Solar Eclipse Tesla Serpent"
 	desc = "A naga cladded in strange orange armor, seemingly guarded from lasers and energy based weaponry."
@@ -168,8 +175,8 @@
 /mob/living/simple_mob/humanoid/eclipse/solar/firemoff
 	name = "Solar Eclipse Inferno Moth"
 	desc = "A moth like creature cladded in armor, wisps of flames swirling around it. Protected from lasers and energy."
-	health = 37
-	maxHealth = 37
+	health = 35
+	maxHealth = 35
 	icon_state = "eclipse_moth"
 	icon_living = "eclipse_moth"
 	reload_max = 10
@@ -254,8 +261,13 @@
 	icon_state = "eclipse_rad"
 	icon_living = "eclipse_rad"
 
+	glow_color = "#14ff20"
+	light_color = "#14ff20"
+	glow_range = 5
+	glow_intensity = 3
+
 	projectiletype = /obj/item/projectile/energy/declone/burn
-	var/rads = 25
+	var/rads = 5
 
 /mob/living/simple_mob/humanoid/eclipse/solar/radiation/handle_special()
 	if(stat != DEAD)
@@ -273,6 +285,16 @@
 
 	armor = list(melee = 85, bullet = 85, laser = -20, energy = -20, bomb = 50, bio = 100, rad = 100) //Lunar members are nigh immune to burns.
 	armor_soak = list(melee = 15, bullet = 15, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0) //15 because every melee weapon has dumb amount of AP
+
+/mob/living/simple_mob/humanoid/eclipse/lunar/bullet_act(obj/item/projectile/P)
+	if(istype(P, /obj/item/projectile/bullet))
+		visible_message("<font color='orange'><B>[P] seems ineffective!.</B></font>")
+		..()
+	else
+		..()
+
+/mob/living/simple_mob/humanoid/eclipse/lunar/attackby(var/obj/item/O as obj, var/mob/user as mob)
+	to_chat(user, "<span class='warning'>This weapon is ineffective, it does no damage.</span>")
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle //Bouncing bullet extreme
 	name = "Lunar Eclipse Silver Serpent"
@@ -313,8 +335,8 @@
 /mob/living/simple_mob/humanoid/eclipse/lunar/shotgunner //wuff with shotgun
 	name = "Lunar Eclipse Shotgunner"
 	desc = "A Vulpkanin or the like in a red-purple flashing rigsuit, it defending them from physical damage of close and long ranges."
-	health = 37
-	maxHealth = 37
+	health = 35
+	maxHealth = 35
 	reload_max = 2
 
 	icon_state = "eclipse_shotwuff"
@@ -344,8 +366,8 @@
 /mob/living/simple_mob/humanoid/eclipse/lunar/ravanger //Tanky boi. Very deadly melee
 	name = "Lunar Eclipse Ravanger"
 	desc = "An individual wearing strange armor that seems to be living, and breathing while providing protection from bullets and swords."
-	health = 62
-	maxHealth = 62
+	health = 60
+	maxHealth = 60
 	icon_state = "eclipse_ravanger"
 	icon_living = "eclipse_ravanger"
 
@@ -509,7 +531,7 @@
 /mob/living/simple_mob/humanoid/eclipse/lunar/pummler
 	name = "Lunar Eclipse Pummeler"
 	desc = "A strange creature moving at quick speed, bullets and melee sliding off it's hide."
-	projectiletype = /obj/item/projectile/bola
+	projectiletype = /obj/item/projectile/mobbola
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 	melee_damage_lower = 10
 	melee_damage_upper = 10
@@ -519,12 +541,11 @@
 	icon_living = "eclipse_pummler"
 	reload_max = 5
 	size_multiplier = 1.5
-	var/poison_per_bite = 5
-	var/poison_type = "shredding_nanites"
-	var/poison_chance = 10
-	var/shock_chance = 60
+	melee_attack_delay = 3 SECOND
+	var/shock_chance = 25
 	base_attack_cooldown = 6
 	hovering = TRUE
+	ranged_cooldown_time = 1.5
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/pummler/apply_melee_effects(var/atom/A)
 	if(isliving(A))
@@ -540,17 +561,7 @@
 			s.start()
 			visible_message("<span class='danger'>The pummler releases a powerful shock!</span>")
 		else
-			if(L.reagents)
-				var/target_zone = pick(BP_TORSO,BP_TORSO,BP_TORSO,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_HEAD)
-				if(L.can_inject(src, null, target_zone))
-					inject_poison(L, target_zone)
-
-
-/mob/living/simple_mob/humanoid/eclipse/lunar/pummler/proc/inject_poison(mob/living/L, target_zone)
-	if(prob(poison_chance))
-		to_chat(L, "<span class='warning'>You feel a small shock rushing through your veins.</span>")
-		L.reagents.add_reagent(poison_type, poison_per_bite)
-
+			return
 
 //Freezing winds update
 
@@ -564,6 +575,9 @@
 
 	icon_state = "aeroblaster"
 	icon_living = "aeroblaster"
+
+	reload_max = 1
+	reload_time = 1.5 SECONDS
 
 	ranged_attack_delay = 1.5 SECONDS
 	hovering = TRUE
@@ -634,7 +648,7 @@
 	faction = "eclipse"
 
 /mob/living/simple_mob/humanoid/eclipse/solar/froststalker //teleporting stalker
-	name = "Lunar Eclipse Froststalker"
+	name = "Solar Eclipse Froststalker"
 	health = 50
 	maxHealth = 50
 	desc = "A somewhat see through being wearing a burn resistaint coat."
@@ -696,7 +710,7 @@
 	s2.start()
 
 /mob/living/simple_mob/humanoid/eclipse/solar/cryomancer //Freezing slowdown unit
-	name = "Lunar Eclipse Cryomancer"
+	name = "Solar Eclipse Cryomancer"
 	desc = "A being wearing ice and burn resistaint armor."
 	health = 100
 	maxHealth = 100
@@ -745,7 +759,7 @@
 	only_submunitions = 1
 	range = 0
 	embed_chance = 0
-	submunition_spread_max = 1800
+	submunition_spread_max = 1200
 	submunition_spread_min = 500
 	submunitions = list(/obj/item/projectile/energy/frostsphere = 4)
 

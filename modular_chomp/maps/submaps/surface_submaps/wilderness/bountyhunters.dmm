@@ -78,6 +78,11 @@
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
+"hU" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/concrete,
+/area/submap/BountyHunters)
 "jO" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -857,7 +862,7 @@ qG
 qG
 qG
 qG
-qG
+hU
 oV
 qG
 Yd

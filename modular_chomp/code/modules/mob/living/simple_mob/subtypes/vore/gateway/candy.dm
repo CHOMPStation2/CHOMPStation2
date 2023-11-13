@@ -431,8 +431,8 @@
 	icon_living = "ouroboros"
 	icon_dead = "slainouroboros"
 
-	maxHealth = 300
-	health = 300
+	maxHealth = 200
+	health = 200
 	armor = list(melee = 30, bullet = 30, laser = 30, energy = 30, bomb = 20, bio = 100, rad = 100) //armor cause boss
 	movement_cooldown = 0
 	melee_attack_delay = 1 SECOND
@@ -651,7 +651,7 @@
 		to_chat(user, "<span class='warning'>This weapon is ineffective, it does no damage.</span>")
 		visible_message("<span class='warning'>\The [user] gently taps [src] with \the [O].</span>")
 
-
+/*
 /mob/living/simple_mob/vore/candy/worm
 	name = "hardcandy worm"
 	desc = "A creature made of candy."
@@ -665,10 +665,12 @@
 	maxHealth = 60
 	health = 60
 
+
 /mob/living/simple_mob/vore/candy/worm/death()
 	new /obj/random/mob/candycritter (src.loc)
 	new /obj/random/mob/candycritter (src.loc)
 	new /obj/random/mob/candycritter (src.loc)
+
 
 /mob/living/simple_mob/vore/candy/worm/Login()
 	. = ..()
@@ -694,6 +696,7 @@
 
 	B.emote_lists[DM_DIGEST] = list(
 		"Every clench of the predator's stomach grinds powerful digestive fluids into your body, forcibly churning away your strength!")
+*/
 
 /mob/living/simple_mob/vore/candy/peppermint/Login()
 	. = ..()

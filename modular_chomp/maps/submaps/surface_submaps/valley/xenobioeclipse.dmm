@@ -326,7 +326,7 @@
 /area/submap/xenobioeclipse)
 "Tr" = (
 /obj/effect/floor_decal/corner/red/diagonal,
-/mob/living/simple_mob/slime/xenobio/amber{
+/mob/living/simple_mob/slime/xenobio/silver{
 	faction = "eclipse";
 	unity = 1
 	},
