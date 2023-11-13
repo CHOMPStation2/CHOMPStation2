@@ -4566,6 +4566,7 @@
 #include "maps\southern_cross\loadout\loadout_suit.dm"
 #include "maps\southern_cross\loadout\loadout_uniform.dm"
 #include "maps\southern_cross\loadout\loadout_vr.dm"
+<<<<<<< HEAD
 #include "maps\southern_cross\structures\closets\engineering.dm"
 #include "maps\southern_cross\structures\closets\medical.dm"
 #include "maps\southern_cross\structures\closets\misc.dm"
@@ -4575,6 +4576,19 @@
 #include "maps\southern_cross\turfs\outdoors.dm"
 #include "maps\submaps\_helpers.dm"
 #include "maps\submaps\_readme.dm"
+=======
+#include "maps\stellar_delight\stellar_delight.dm"
+#include "maps\submaps\_helpers.dm"
+#include "maps\submaps\_readme.dm"
+#include "maps\submaps\admin_use_vr\event_autonomous_drone.dm"
+#include "maps\submaps\engine_submaps\engine.dm"
+#include "maps\submaps\engine_submaps\engine_areas.dm"
+#include "maps\submaps\engine_submaps_vr\tether\_engine_submaps.dm"
+#include "maps\submaps\space_submaps\space.dm"
+#include "maps\submaps\space_submaps\debrisfield\debrisfield.dm"
+#include "maps\submaps\surface_submaps\wilderness\wilderness.dm"
+#include "maps\submaps\surface_submaps\wilderness\wilderness_areas.dm"
+>>>>>>> 2ecfe55eaf... Merge pull request #15516 from Very-Soft/fancy
 #include "maps\~map_system\maps.dm"
 #include "modular_chomp\code\coalesce_ch.dm"
 #include "modular_chomp\code\global.dm"
