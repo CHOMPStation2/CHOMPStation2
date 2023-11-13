@@ -67,6 +67,11 @@
 2023-11-13:
   ItsSelis:
   - code_imp: slightly changed GitHub issue templates
+  - rscadd: added new way of generating tgui bundles, compiling the game & launching
+      a server
+  - rscdel: removed the old executables to compile new tgui bundles
+  - bugfix: enforcing text mode and LF line breaks in specific file endings
+  - code_imp: improved .gitignore once more
   Upstream:
   - rscadd: added a new PDA type
   - imageadd: added new PDA sprites for the new type
