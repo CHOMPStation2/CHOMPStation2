@@ -1,23 +1,69 @@
-#ignore misc BYOND files
+###Files and folders specified here will never be tracked.
+
+#ignore misc VOREStation specified files
 vchat.db
 vchat.db*
-*.log
-*.int
-*.rsc
-*.dmb
-*.lk
-*.backup
 *.before
-*.pyc
 *.pid
-cfg/
 
 #Ignore everything in datafolder and subdirectories
 /data/**/*
 /tmp/**/*
 
+#Ignore byond config folder.
+/cfg/**/*
+
+#Ignore IDE files we don't need in the repo.
+/.vs/**/*
+/tgstation/FileContentIndex/**/*
+/FileContentIndex/**/*
+/v17/**/*
+/v18/**/*
+/v19/**/*
+/v20/**/*
+/v21/**/*
+/v22/**/*
+
+# Ignore compiled linux libs in the root folder, e.g. librust_g.so
+/*.so
+
+#Ignore compiled files and other files generated during compilation.
+*.mdme
+*.mdme.*
+*.dmb
+*.rsc
+*.m.dme
+*.test.dme
+*.lk
+*.int
+*.backup
+### https://raw.github.com/github/gitignore/cc542de017c606138a87ee4880e5f06b3a306def/Global/Linux.gitignore
+
+*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
 # Linux trash folder which might appear on any partition or disk
 .Trash-*
+
+
+### https://raw.github.com/github/gitignore/cc542de017c606138a87ee4880e5f06b3a306def/Global/Vim.gitignore
+
+# swap
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+# session
+Session.vim
+# temporary
+.netrwhist
+*~
+# auto-generated tag files
+tags
+
 
 ### https://raw.github.com/github/gitignore/cc542de017c606138a87ee4880e5f06b3a306def/Python.gitignore
 
@@ -44,6 +90,9 @@ pip-*.txt
 # dotenv
 .env
 
+# IntelliJ IDEA / PyCharm (with plugin)
+.idea
+
 ### https://raw.github.com/github/gitignore/cc542de017c606138a87ee4880e5f06b3a306def/Global/Windows.gitignore
 
 # Windows image file caches
@@ -65,6 +114,10 @@ $RECYCLE.BIN/
 .AppleDouble
 .LSOverride
 
+#Sublime
+*.sublime-project
+*.sublime-workspace
+
 #Visual studio stuff
 *.vscode/*
 !/.vscode/launch.json
@@ -72,9 +125,20 @@ $RECYCLE.BIN/
 !/.vscode/settings.json
 !/.vscode/tasks.json
 
+#GitHub Atom
+.atom-build.json
+
+#KDevelop and Kate
+*.kdev4*
+*.kate-swp
+
 temp.dmi
 
-node_modules/
+# JavaScript tools
+**/node_modules
 package-lock.json
+
+# named byond versions config
+/tools/build/dm_versions.json
 
 config/jobwhitelist.txt
