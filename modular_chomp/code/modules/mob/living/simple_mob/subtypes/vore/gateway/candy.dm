@@ -321,7 +321,7 @@
 	icon_living = "green"
 	icon_dead = "green_dead"
 
-	movement_cooldown = -2
+	movement_cooldown = -1
 
 	melee_attack_delay = 1 SECOND
 	melee_damage_lower = 7
@@ -450,15 +450,15 @@
 
 /mob/living/simple_mob/vore/candy/ouroboros/bullet_act(var/obj/item/projectile/Proj)
 		new /obj/random/mob/candycritter (src.loc)
+		...()
 
 /mob/living/simple_mob/vore/candy/ouroboros/do_special_attack(atom/A)
-	switch(a_intent)
-		if(I_GRAB)
-			summon_combo(A)
-		if(I_HURT)
-			barrage_combo(A)
-		if(I_DISARM)
-			debuff_combo(A)
+	if(I_GRAB)
+		summon_combo(A)
+	if(I_HURT)
+		barrage_combo(A)
+	if(I_DISARM)
+		debuff_combo(A)
 
 /mob/living/simple_mob/vore/candy/ouroboros/proc/summon_combo(atom/target)
 	visible_message(span("warning", "\The [src] calls for help!"))
@@ -520,7 +520,7 @@
 
 /mob/living/simple_mob/vore/candy/ouroboros/proc/debuff_combo(atom/target)
 	visible_message(span("warning", "\The [src] prepares to let out a thunderous roar!"))
-	sleep(1.5 SECONDS)
+	sleep(2.5 SECONDS)
 	var/obj/item/weapon/grenade/G = new grenade_type(get_turf(src))
 	if(istype(G))
 		G.throw_at(G.throw_range, G.throw_speed, src)
@@ -556,6 +556,8 @@
 	name = "Random Gummy Candy Critter"
 	desc = "This is a random candy critter."
 	overwrite_hostility = 1
+	mob_hostile = 1
+	mob_retaliate = 1
 
 	mob_faction = "candy"
 
