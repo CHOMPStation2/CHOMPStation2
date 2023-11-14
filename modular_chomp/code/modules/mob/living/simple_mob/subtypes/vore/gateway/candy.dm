@@ -449,16 +449,20 @@
 	special_attack_cooldown = 7 SECONDS
 
 /mob/living/simple_mob/vore/candy/ouroboros/bullet_act(var/obj/item/projectile/Proj)
-	new /obj/random/mob/candycritter (src.loc)
-	return
+	if(prob(50))
+		new /obj/random/mob/candycritter (src.loc)
+		return
+	else
+		return
 
 /mob/living/simple_mob/vore/candy/ouroboros/do_special_attack(atom/A)
-	if(I_GRAB)
-		summon_combo(A)
-	if(I_HURT)
-		barrage_combo(A)
-	if(I_DISARM)
-		debuff_combo(A)
+	switch(a_intent)
+		if(I_GRAB)
+			summon_combo(A)
+		if(I_HURT)
+			barrage_combo(A)
+		if(I_DISARM)
+			debuff_combo(A)
 
 /mob/living/simple_mob/vore/candy/ouroboros/proc/summon_combo(atom/target)
 	visible_message(span("warning", "\The [src] calls for help!"))
