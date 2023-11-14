@@ -450,7 +450,7 @@
 
 /mob/living/simple_mob/vore/candy/ouroboros/bullet_act(var/obj/item/projectile/Proj)
 	new /obj/random/mob/candycritter (src.loc)
-	...()
+	return
 
 /mob/living/simple_mob/vore/candy/ouroboros/do_special_attack(atom/A)
 	if(I_GRAB)
