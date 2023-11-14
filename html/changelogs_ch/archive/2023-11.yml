@@ -77,3 +77,7 @@
   Upstream:
   - rscadd: added a new PDA type
   - imageadd: added new PDA sprites for the new type
+2023-11-14:
+  TheGreatKitsune:
+  - bugfix: Vox engineering suit now properly has modules
+  - imageadd: Added in sprites for wearing vox suits
