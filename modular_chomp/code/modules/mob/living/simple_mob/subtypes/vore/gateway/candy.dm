@@ -449,8 +449,8 @@
 	special_attack_cooldown = 7 SECONDS
 
 /mob/living/simple_mob/vore/candy/ouroboros/bullet_act(var/obj/item/projectile/Proj)
-		new /obj/random/mob/candycritter (src.loc)
-		...()
+	new /obj/random/mob/candycritter (src.loc)
+	...()
 
 /mob/living/simple_mob/vore/candy/ouroboros/do_special_attack(atom/A)
 	if(I_GRAB)
