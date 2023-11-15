@@ -81,3 +81,7 @@
   TheGreatKitsune:
   - bugfix: Vox engineering suit now properly has modules
   - imageadd: Added in sprites for wearing vox suits
+2023-11-15:
+  Drathek:
+  - code_imp: Renamed node/expression/operator to node/expression/op to resolve parsing
+      issues with spacemandmm and strongdmm
