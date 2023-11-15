@@ -39,7 +39,7 @@
 #include "eclipsecargo.dmm"
 #include "raidedpod.dmm"
 #include "paperworks.dmm"
-#include "terraforming.dmm"
+#include "terraformer.dmm"
 #endif
 
 /datum/map_template/surface/valley
