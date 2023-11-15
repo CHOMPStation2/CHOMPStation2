@@ -31,7 +31,7 @@
 /proc/ManifestToHtml()
 	var/html = ""
 	if(data_core)
-		html = data_core.get_manifest(FALSE,TRUE,snowflake = TRUE)
+		html = data_core.get_manifest_html(FALSE,TRUE,snowflake = TRUE) // CHOMPEdit - Crew Manifest
 	else
 		html = "<b>ERROR: NO DATACORE</b>" //Could make the error more fancy later
 	rustg_file_write(html,"[config.nodebot_location]\\html.html")
@@ -113,6 +113,6 @@
 	name = "vore"
 	help_text = "vore"
 	admin_only = FALSE
-	
+
 /datum/tgs_chat_command/vore/Run(datum/tgs_chat_user/sender, params)
 	return "vore"

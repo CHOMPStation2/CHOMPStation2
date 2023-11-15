@@ -162,7 +162,7 @@
 	if(!data_core)
 		to_chat(src, "<span class='notice'>There is no data to form a manifest with. Contact your Nanotrasen administrator.</span>")
 		return
-	dat += data_core.get_manifest(1) //The 1 makes it monochrome.
+	dat += data_core.get_manifest_html(1) //The 1 makes it monochrome. // CHOMPEdit - Crew Manifest
 
 	var/datum/browser/popup = new(src, "Crew Manifest", "Crew Manifest", 370, 420, src)
 	popup.set_content(dat)
