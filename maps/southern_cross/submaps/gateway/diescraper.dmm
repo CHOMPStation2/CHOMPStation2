@@ -14,6 +14,13 @@
 	temperature = 295.15
 	},
 /area/space)
+"dJ" = (
+/obj/effect/map_effect/portal/master/side_a{
+	portal_id = "floor1";
+	dir = 2
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "dT" = (
 /obj/effect/map_effect/portal/master/side_a{
 	portal_id = "floor10"
@@ -57,9 +64,26 @@
 	},
 /turf/simulated/floor/concrete,
 /area/space)
+"me" = (
+/obj/effect/map_effect/portal/line/side_a{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"mj" = (
+/obj/effect/map_effect/portal/master/side_b{
+	portal_id = "floor6";
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "ng" = (
 /obj/structure/prop/machine/comm_tower/starts_on,
 /turf/simulated/floor/reinforced,
+/area/space)
+"nZ" = (
+/obj/effect/map_effect/portal/line/side_b,
+/turf/simulated/floor/plating,
 /area/space)
 "pv" = (
 /obj/structure/railing/grey{
@@ -77,6 +101,24 @@
 "qv" = (
 /obj/structure/railing/grey,
 /turf/simulated/floor/reinforced,
+/area/space)
+"rh" = (
+/obj/effect/map_effect/portal/master/side_b{
+	portal_id = "floor7"
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"rE" = (
+/obj/effect/map_effect/portal/master/side_a{
+	portal_id = "floor5"
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"so" = (
+/obj/effect/map_effect/portal/master/side_a{
+	portal_id = "floor6"
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "tm" = (
 /obj/structure/fence/end{
@@ -108,6 +150,13 @@
 /turf/simulated/floor/concrete{
 	outdoors = 1
 	},
+/area/space)
+"xi" = (
+/obj/effect/map_effect/portal/master/side_b{
+	dir = 1;
+	portal_id = "floor9"
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "ya" = (
 /obj/structure/fence,
@@ -162,6 +211,13 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/space)
+"Ci" = (
+/obj/effect/map_effect/portal/master/side_b{
+	dir = 1;
+	portal_id = "floor6"
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "CT" = (
 /obj/effect/map_effect/portal/line/side_b{
 	dir = 1
@@ -183,6 +239,13 @@
 	pixel_y = 0
 	},
 /turf/simulated/floor/reinforced,
+/area/space)
+"Fl" = (
+/obj/effect/map_effect/portal/master/side_a{
+	portal_id = "floor8";
+	dir = 1
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "Fq" = (
 /obj/structure/fence{
@@ -213,6 +276,12 @@
 /area/space)
 "In" = (
 /turf/simulated/sky/moving/south,
+/area/space)
+"Iw" = (
+/obj/effect/map_effect/portal/master/side_b{
+	portal_id = "floor8"
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "Iz" = (
 /obj/effect/step_trigger/teleporter/deathfall{
@@ -260,6 +329,12 @@
 /area/space)
 "LD" = (
 /turf/unsimulated/wall/seperator,
+/area/space)
+"LS" = (
+/obj/effect/map_effect/portal/line/side_a{
+	dir = 2
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "Mo" = (
 /obj/structure/railing/grey,
@@ -342,6 +417,13 @@
 	movement_cost = 0;
 	temperature = 293.15
 	},
+/area/space)
+"UZ" = (
+/obj/effect/map_effect/portal/master/side_a{
+	portal_id = "floor8";
+	dir = 2
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "Wk" = (
 /obj/effect/floor_decal/corner/white/border/shifted,
@@ -8411,12 +8493,12 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+iE
+iE
 KE
 KE
 KE
@@ -8470,11 +8552,11 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+iE
 KE
 KE
 KE
@@ -8671,10 +8753,10 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
+Fl
+iE
+iE
+iE
 KE
 KE
 KE
@@ -8729,10 +8811,10 @@ KE
 KE
 KE
 KE
+mj
 KE
-KE
-KE
-KE
+iE
+iE
 KE
 KE
 KE
@@ -8787,12 +8869,12 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+iE
+iE
 KE
 KE
 KE
@@ -8842,12 +8924,12 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+iE
+iE
 KE
 KE
 KE
@@ -8929,10 +9011,10 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
+me
+iE
+iE
+iE
 KE
 KE
 KE
@@ -8987,10 +9069,10 @@ KE
 KE
 KE
 KE
+CT
 KE
-KE
-KE
-KE
+iE
+iE
 KE
 KE
 KE
@@ -9045,9 +9127,9 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
+iE
+iE
+UZ
 KE
 KE
 KE
@@ -9100,9 +9182,9 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
+iE
+iE
+dJ
 KE
 KE
 KE
@@ -9185,12 +9267,12 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+iE
+iE
 KE
 KE
 KE
@@ -9244,11 +9326,11 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+iE
 KE
 KE
 KE
@@ -9303,9 +9385,9 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
+iE
+iE
+LS
 KE
 KE
 KE
@@ -9358,9 +9440,9 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
+iE
+iE
+Ud
 KE
 KE
 KE
@@ -9561,12 +9643,12 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+iE
+iE
 KE
 KE
 KE
@@ -9616,12 +9698,12 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+iE
+iE
 KE
 KE
 KE
@@ -10217,12 +10299,12 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+iE
+iE
 KE
 KE
 KE
@@ -10276,11 +10358,11 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+iE
 KE
 KE
 KE
@@ -10475,11 +10557,11 @@ KE
 KE
 KE
 KE
+iE
+iE
+iE
 KE
-KE
-KE
-KE
-KE
+rh
 KE
 KE
 KE
@@ -10534,10 +10616,10 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+rE
 KE
 KE
 KE
@@ -10733,11 +10815,11 @@ KE
 KE
 KE
 KE
+iE
+iE
+iE
 KE
-KE
-KE
-KE
-KE
+nZ
 KE
 KE
 KE
@@ -10792,10 +10874,10 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+Ud
 KE
 KE
 KE
@@ -10991,15 +11073,15 @@ KE
 KE
 KE
 KE
+iE
+iE
+iE
+iE
+iE
+iE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
-KE
-KE
+iE
 iE
 qh
 In
@@ -11050,11 +11132,11 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+iE
 KE
 KE
 KE
@@ -28277,11 +28359,11 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+iE
 KE
 KE
 KE
@@ -28336,11 +28418,11 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+iE
 KE
 KE
 KE
@@ -28395,11 +28477,11 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+iE
 KE
 KE
 KE
@@ -28536,10 +28618,10 @@ KE
 KE
 KE
 KE
+Ci
 KE
-KE
-KE
-KE
+iE
+iE
 KE
 KE
 KE
@@ -28596,9 +28678,9 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
+Fl
+iE
+iE
 KE
 KE
 KE
@@ -28654,10 +28736,10 @@ KE
 KE
 KE
 KE
+mj
 KE
-KE
-KE
-KE
+iE
+iE
 KE
 KE
 KE
@@ -28794,10 +28876,10 @@ KE
 KE
 KE
 KE
+CT
 KE
-KE
-KE
-KE
+iE
+iE
 KE
 KE
 KE
@@ -28854,9 +28936,9 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
+me
+iE
+iE
 KE
 KE
 KE
@@ -28912,10 +28994,10 @@ KE
 KE
 KE
 KE
+CT
 KE
-KE
-KE
-KE
+iE
+iE
 KE
 KE
 KE
@@ -29051,11 +29133,11 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+iE
 KE
 KE
 KE
@@ -29110,11 +29192,11 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+iE
 KE
 KE
 KE
@@ -29169,11 +29251,11 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+iE
 KE
 KE
 KE
@@ -30083,11 +30165,11 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+iE
 KE
 KE
 KE
@@ -30142,11 +30224,11 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+iE
 KE
 KE
 KE
@@ -30201,11 +30283,11 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+iE
 KE
 KE
 KE
@@ -30341,11 +30423,11 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+so
 KE
 KE
 KE
@@ -30400,11 +30482,11 @@ KE
 KE
 KE
 KE
+iE
+iE
+iE
 KE
-KE
-KE
-KE
-KE
+rh
 KE
 KE
 KE
@@ -30459,10 +30541,10 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+rE
 KE
 KE
 KE
@@ -30599,11 +30681,11 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+Ud
 KE
 KE
 KE
@@ -30658,11 +30740,11 @@ KE
 KE
 KE
 KE
+iE
+iE
+iE
 KE
-KE
-KE
-KE
-KE
+nZ
 KE
 KE
 KE
@@ -30717,10 +30799,10 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+Ud
 KE
 KE
 KE
@@ -30857,11 +30939,11 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+iE
 KE
 KE
 KE
@@ -30916,15 +30998,15 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+iE
+iE
+iE
+iE
+iE
 iE
 Ss
 ci
@@ -30975,11 +31057,11 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+iE
 KE
 KE
 KE
@@ -48261,11 +48343,11 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+iE
 KE
 KE
 KE
@@ -48519,11 +48601,11 @@ KE
 KE
 KE
 KE
+iE
+iE
+iE
 KE
-KE
-KE
-KE
-KE
+Iw
 KE
 KE
 KE
@@ -48777,11 +48859,11 @@ KE
 KE
 KE
 KE
+iE
+iE
+iE
 KE
-KE
-KE
-KE
-KE
+nZ
 KE
 KE
 KE
@@ -49035,11 +49117,11 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+iE
 KE
 KE
 KE
@@ -50011,12 +50093,12 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+iE
+iE
 iE
 qh
 In
@@ -50067,11 +50149,11 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+iE
 KE
 KE
 KE
@@ -50179,12 +50261,12 @@ In
 In
 qh
 iE
-ko
-ko
-ko
-ko
-ko
-ko
+iE
+iE
+iE
+iE
+iE
+iE
 KE
 KE
 KE
@@ -50269,12 +50351,12 @@ KE
 KE
 KE
 KE
+xi
 KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
 iE
 qh
 In
@@ -50325,11 +50407,11 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+so
 KE
 KE
 KE
@@ -50437,8 +50519,8 @@ In
 In
 qh
 iE
-ko
-ko
+iE
+iE
 dT
 KE
 KE
@@ -50527,12 +50609,12 @@ KE
 KE
 KE
 KE
+CT
 KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
 iE
 qh
 In
@@ -50583,11 +50665,11 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+Ud
 KE
 KE
 KE
@@ -50695,8 +50777,8 @@ In
 qh
 qh
 iE
-ko
-ko
+iE
+iE
 Ud
 KE
 KE
@@ -50785,12 +50867,12 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+iE
+iE
 iE
 qh
 In
@@ -50841,15 +50923,15 @@ KE
 KE
 KE
 KE
-KE
-KE
-KE
-KE
-KE
-KE
-KE
-KE
-KE
+iE
+iE
+iE
+iE
+iE
+iE
+iE
+iE
+iE
 iE
 qh
 In
@@ -50953,12 +51035,12 @@ In
 qh
 iE
 iE
-ko
-ko
-ko
-ko
-ko
-ko
+iE
+iE
+iE
+iE
+iE
+iE
 KE
 KE
 KE
@@ -51099,7 +51181,7 @@ KE
 KE
 KE
 KE
-KE
+iE
 KE
 KE
 KE
@@ -51216,7 +51298,7 @@ KE
 KE
 KE
 KE
-ko
+iE
 KE
 KE
 KE
@@ -51357,7 +51439,7 @@ KE
 KE
 KE
 KE
-KE
+iE
 KE
 KE
 KE
