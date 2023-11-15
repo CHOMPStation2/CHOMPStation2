@@ -85,6 +85,8 @@
   Drathek:
   - code_imp: Renamed node/expression/operator to node/expression/op to resolve parsing
       issues with spacemandmm and strongdmm
+  ItsSelis:
+  - code_imp: changed the filing cabinet design
   Upstream:
   - rscdel: removed the last _ in emote_subtle
   - bugfix: "changed the timestamp insert regex as it was causing issues with multiline\
