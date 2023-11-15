@@ -85,8 +85,30 @@
   Drathek:
   - code_imp: Renamed node/expression/operator to node/expression/op to resolve parsing
       issues with spacemandmm and strongdmm
+  FluffMedic:
+  - maptweak: Makes MoL look nicer
   ItsSelis:
   - code_imp: changed the filing cabinet design
+  Kashargul:
+  - rscadd: pounce to command and explo borg on emag
+  - rscadd: the chameleon pen to command borgs on emag
+  - rscadd: 'changes: exploration hound now has a dedicated sleeper for items and
+      one person. Limit 4 items or 3+1 Person. It can be upgraded to up to 8 slots.'
+  - rscadd: 'changes: reverted the offset removal for the tall borgs'
+  - rscadd: 'changes: implemented the upstream borgs where possible'
+  - rscadd: 'changes: removed the modular chomp overwrites where no longer needed'
+  - rscadd: 'changes: moved some modular chomp borgs into /ch not to interfere with
+      the upstream borgs'
+  - rscadd: '"fixes #6996"'
+  - bugfix: borgbellies not showing for some borgs
+  - bugfix: borgpanels not showing upon opening the panel on some borgs
+  - bugfix: ERT bogs not showing at all
+  - bugfix: Explorationborg not being selectable
+  - bugfix: ServicehoundV2 - Alt going invisible on missing rest sprites. Only default
+      is now available
+  - bugfix: 'worm eyes/panel, including #7224 from Verkister to prevent conflicts'
+  - bugfix: eyes / lights where available on the chomp tall/wide robot
+  - rscadd: 'removes: deprecated tools from clownborg, exploborg, widerobot standard'
   Upstream:
   - rscdel: removed the last _ in emote_subtle
   - bugfix: "changed the timestamp insert regex as it was causing issues with multiline\
