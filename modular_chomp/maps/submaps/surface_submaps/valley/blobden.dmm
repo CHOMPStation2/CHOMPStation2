@@ -17,7 +17,9 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "aQ" = (
-/obj/structure/blob/core/random_hard,
+/obj/structure/blob/core/random_hard{
+	difficulty_floor = 2
+	},
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "bC" = (

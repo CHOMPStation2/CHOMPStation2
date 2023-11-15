@@ -88,7 +88,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/submap/frozenlab)
 "t" = (
-/obj/machinery/door/airlock/phoron,
+/obj/machinery/door/airlock/silver,
 /turf/simulated/floor/tiled/milspec,
 /area/submap/frozenlab)
 "u" = (
