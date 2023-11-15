@@ -85,3 +85,9 @@
   Drathek:
   - code_imp: Renamed node/expression/operator to node/expression/op to resolve parsing
       issues with spacemandmm and strongdmm
+  Upstream:
+  - rscdel: removed the last _ in emote_subtle
+  - bugfix: "changed the timestamp insert regex as it was causing issues with multiline\
+      \ subtle / emote to also include matches on \n"
+  - qol: small change to the flavor input verb for robots to allow multiline flavor
+      texts to be added or edited for the round directly
