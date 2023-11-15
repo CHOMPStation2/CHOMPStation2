@@ -17,7 +17,7 @@
 	has_taser_sprite = FALSE //ditto
 
 // Tall sprites
-
+/*Upstream implemented
 /datum/robot_sprite/dogborg/tall/security
 	module_type = "Security"
 	sprite_icon = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi'
@@ -32,15 +32,19 @@
 /datum/robot_sprite/dogborg/tall/security/meka
 	sprite_icon_state = "mekasec"
 	has_vore_belly_sprites = TRUE
+	has_sleeper_light_indicator = TRUE
 
 /datum/robot_sprite/dogborg/tall/security/mmeka
 	sprite_icon_state = "mmekasec"
 	has_vore_belly_sprites = TRUE
+	has_sleeper_light_indicator = TRUE
 
 /datum/robot_sprite/dogborg/tall/security/fmeka
 	sprite_icon_state = "fmekasec"
 	has_vore_belly_sprites = TRUE
+	has_sleeper_light_indicator = TRUE
 
 /datum/robot_sprite/dogborg/tall/security/k4t
 	sprite_icon_state = "k4tsec"
 	has_vore_belly_sprites = FALSE
+*/

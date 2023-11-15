@@ -1,23 +1,24 @@
-/datum/robot_sprite/dogborg/tall/combat
+/datum/robot_sprite/dogborg/tall/combat/ch
 	module_type = "Combat"
-	sprite_icon = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi'	
+	sprite_icon = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi'
+	pixel_x = 0
 
-/datum/robot_sprite/dogborg/tall/combat/meka
+/datum/robot_sprite/dogborg/tall/combat/ch/meka
 	name = "MEKA"
 	sprite_icon_state = "mekasyndi"
 	has_vore_belly_sprites = TRUE
 
-/datum/robot_sprite/dogborg/tall/combat/mmeka
+/datum/robot_sprite/dogborg/tall/combat/ch/mmeka
 	name = "NIKO"
 	sprite_icon_state = "mmekasyndi"
 	has_vore_belly_sprites = TRUE
 
-/datum/robot_sprite/dogborg/tall/combat/fmeka
+/datum/robot_sprite/dogborg/tall/combat/ch/fmeka
 	name = "NIKA"
 	sprite_icon_state = "fmekasyndi"
 	has_vore_belly_sprites = TRUE
 
-/datum/robot_sprite/dogborg/tall/combat/k4t
+/datum/robot_sprite/dogborg/tall/combat/ch/k4t
 	name = "K4T"
 	sprite_icon_state = "k4tsyndi"
 	has_vore_belly_sprites = FALSE

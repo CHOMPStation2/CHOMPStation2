@@ -55,8 +55,9 @@
 	src.modules += new /obj/item/weapon/stamp(src)
 	src.modules += new /obj/item/weapon/stamp/denied(src)
 	src.modules += new /obj/item/weapon/taskmanager(src)
-	src.emag = new /obj/item/weapon/stamp/chameleon(src)
-	//src.emag = new /obj/item/weapon/pen/chameleon(src)
+	src.emag += new /obj/item/weapon/stamp/chameleon(src)
+	src.emag += new /obj/item/weapon/pen/chameleon(src)
 
 	src.modules += new /obj/item/device/dogborg/sleeper/command(src)
+	src.emag += new /obj/item/weapon/dogborg/pounce(src)
 	..()
