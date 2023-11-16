@@ -115,3 +115,10 @@
       \ subtle / emote to also include matches on \n"
   - qol: small change to the flavor input verb for robots to allow multiline flavor
       texts to be added or edited for the round directly
+2023-11-16:
+  Darlantanis:
+  - rscadd: Adds casino gear dispensers for mapping
+  - rscadd: Adds casino areas
+  - rscadd: Moves and comments out older casino areas
+  Kashargul:
+  - bugfix: hotfix for the raptorborgs
