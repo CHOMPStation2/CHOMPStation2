@@ -180,12 +180,12 @@
 	has_taser_sprite = TRUE
 
 // Tall sprites
-//CHOMPNote -- many of the lines in this is overriden in modular
+
 /datum/robot_sprite/dogborg/tall/security
 	module_type = "Security"
 	sprite_icon = 'icons/mob/robot/security_large.dmi'
 
-/datum/robot_sprite/dogborg/raptor/security/raptor //CHOMPEdit - changed typepath
+/datum/robot_sprite/dogborg/tall/security/raptor
 	name = "Raptor V-4"
 	sprite_icon_state = "raptor"
 	has_custom_equipment_sprites = TRUE
