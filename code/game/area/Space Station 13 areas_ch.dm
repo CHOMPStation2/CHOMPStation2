@@ -1,31 +1,3 @@
-/area/casino/casino_ship
-	name = "\improper Casino Ship"
-	icon_state = "yellow"
-	requires_power = 0
-	dynamic_lighting = 1
-
-/area/casino/casino_ship/wing_left
-	name = "\improper Casino Ship left wing"
-	icon_state = "yellow"
-
-/area/casino/casino_ship/wing_right
-	name = "\improper Casino Ship right wing"
-	icon_state = "yellow"
-
-/area/casino/casino_ship/dorms
-	name = "\improper Casino Ship dorms"
-	icon_state = "yellow"
-	soundproofed = TRUE
-
-/area/casino/casino_ship/cockpit
-	name = "\improper Casino Ship left wing"
-	icon_state = "yellow"
-
-/area/shuttle/casino/
-	name = "\improper Casino Shuttle"
-	dynamic_lighting = 0
-	icon_state = "shuttlegrn"
-
 /area/surface/outpost/main/dorms
 	name = "\improper Main Outpost Dorms"
 	soundproofed = TRUE
@@ -55,7 +27,6 @@
 	name = "\improper Main Outpost Dorm Six"
 	limit_mob_size = FALSE
 
-//TFF 5/5/20 - make rad protection great again!
 /area/crew_quarters/cafeteria
 	flags = RAD_SHIELDED
 
