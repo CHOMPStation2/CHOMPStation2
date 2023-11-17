@@ -137,3 +137,14 @@
       the "Mob Vorebelly Size Mult" was set to 0.
   - rscadd: added VTEC toggle. (This adds a Verb under Abilities once VTEC has been
       installed to allow robots to turn it off / on on a whim)
+  - code_imp: 'Changed the robot paper dispenser to an actual paperwork printer and
+      added the first set of forms (command, medical, some research and security mostly)
+      [Other contributors to the forms: Guti, Skol, Vee]'
+  - rscadd: 'Added a new module for robohounds: "Robohound Capability Expansion Module",
+      Material 5, Engineering 4. This module allows sleeper bellies to ingest items
+      and doubles their capacity. Due to this, a sleeper belly can in combination
+      with the "Robohound Capacity Expansion Module" (1 x2 x2) have a total of 4 slots.
+      At all times, only one "patient" can be ingested. With the new module though,
+      the space can be used for items. This allows robots to get their paws on some
+      kind of "trash eating" if they want it for scening without simply adding the
+      ability by default towards the sleeper modules.'
