@@ -1250,15 +1250,11 @@
 	maxHealth = species.total_health
 	hunger_rate = species.hunger_factor //VOREStation Add
 
-<<<<<<< HEAD
 	default_pixel_x = initial(pixel_x) + species.pixel_offset_x //CHOMPedit for giving datum/species ways to change 64x64 sprite offsets
 	default_pixel_y = initial(pixel_y) + species.pixel_offset_y
 	pixel_x = default_pixel_x
 	pixel_y = default_pixel_y
-	center_offset = species.center_offset //CHOMPEdit
-=======
 	center_offset = species.center_offset
->>>>>>> 078e488c71... Merge pull request #15519 from KillianKirilenko/kk-mini2
 
 	if(LAZYLEN(descriptors))
 		descriptors = null

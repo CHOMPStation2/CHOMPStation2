@@ -19,14 +19,10 @@
 	verbs |= /mob/living/proc/lick
 	verbs |= /mob/living/proc/smell
 	verbs |= /mob/living/proc/switch_scaling
-<<<<<<< HEAD
+	verbs |= /mob/living/proc/center_offset
 	verbs |= /mob/living/proc/mute_entry //CHOMPEdit
-	verbs |= /mob/living/proc/center_offset //CHOMPEdit
 	verbs |= /mob/living/proc/liquidbelly_visuals //CHOMPEdit
 	verbs |= /mob/living/proc/fix_vore_effects //CHOMPedit
-=======
-	verbs |= /mob/living/proc/center_offset
->>>>>>> 078e488c71... Merge pull request #15519 from KillianKirilenko/kk-mini2
 
 	if(!no_vore)
 		verbs |= /mob/living/proc/vorebelly_printout

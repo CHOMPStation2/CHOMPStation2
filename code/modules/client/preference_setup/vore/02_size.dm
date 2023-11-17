@@ -14,15 +14,9 @@
 	var/weight_gain = 100	// Weight gain rate.
 	var/weight_loss = 50	// Weight loss rate.
 	var/fuzzy = 0			// Preference toggle for sharp/fuzzy icon. Default sharp.
-<<<<<<< HEAD
-	var/offset_override = FALSE //CHOMPEdit
+	var/offset_override = FALSE
 	var/voice_freq = 42500	//CHOMPEdit - Why was the default 0
 	var/voice_sound = "goon speak 1"	//CHOMPEdit - Changed the default voice to one less jarring
-=======
-	var/offset_override = FALSE
-	var/voice_freq = 0
-	var/voice_sound = "beep-boop"
->>>>>>> 078e488c71... Merge pull request #15519 from KillianKirilenko/kk-mini2
 	var/custom_speech_bubble = "default"
 	var/species_sound = "Unset"		// CHOMPEdit: Use default species pain/scream sounds based off icon base if none set, override otherwise
 
@@ -125,14 +119,10 @@
 	. += "<br>"
 	. += "<b>Scale:</b> <a href='?src=\ref[src];size_multiplier=1'>[round(pref.size_multiplier*100)]%</a><br>"
 	. += "<b>Scaled Appearance:</b> <a [pref.fuzzy ? "" : ""] href='?src=\ref[src];toggle_fuzzy=1'><b>[pref.fuzzy ? "Fuzzy" : "Sharp"]</b></a><br>"
-<<<<<<< HEAD
-	. += "<b>Scaling Center:</b> <a [pref.offset_override ? "" : ""] href='?src=\ref[src];toggle_offset_override=1'><b>[pref.offset_override ? "Odd" : "Even"]</b></a><br>" //CHOMPEdit
+	. += "<b>Scaling Center:</b> <a [pref.offset_override ? "" : ""] href='?src=\ref[src];toggle_offset_override=1'><b>[pref.offset_override ? "Odd" : "Even"]</b></a><br>"
 	. += "<br>" // CHOMPEdit: Fancy:tm:
 	. += "<b>Mob Speech/Noise Customization</b>" // CHOMPEdit: Fancy:tm:
 	. += "<br>"  // CHOMPEdit
-=======
-	. += "<b>Scaling Center:</b> <a [pref.offset_override ? "" : ""] href='?src=\ref[src];toggle_offset_override=1'><b>[pref.offset_override ? "Odd" : "Even"]</b></a><br>"
->>>>>>> 078e488c71... Merge pull request #15519 from KillianKirilenko/kk-mini2
 	. += "<b>Voice Frequency:</b> <a href='?src=\ref[src];voice_freq=1'>[pref.voice_freq]</a><br>"
 	. += "<b>Voice Sounds:</b> <a href='?src=\ref[src];voice_sounds_list=1'>[pref.voice_sound]</a><br>"
 	. += "<a href='?src=\ref[src];voice_test=1'><b>Test Selected Voice</b></a><br>"
