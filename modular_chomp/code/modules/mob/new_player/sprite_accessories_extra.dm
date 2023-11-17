@@ -303,3 +303,15 @@
 	icon_state = "xeno_hollywood"
 	body_parts = list(BP_HEAD)
 	hide_body_parts = list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/xenomorph/xeno_headcrest_queen
+	name = "Xenomorph headcrest (queen)"
+	icon_state = "xeno_queen"
+	body_parts = list(BP_HEAD)
+	hide_body_parts = list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/xenomorph/xeno_headcrest_queen_striped
+	name = "Xenomorph headcrest (queen, striped)"
+	icon_state = "xeno_queen_striped"
+	body_parts = list(BP_HEAD)
+	hide_body_parts = list(BP_HEAD)
