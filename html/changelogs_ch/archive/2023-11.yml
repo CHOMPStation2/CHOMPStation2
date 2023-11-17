@@ -126,3 +126,5 @@
   Aroliacue:
   - rscadd: Added in two new marking specific Xenomorph Queen heads and a new Xenomorph
       backplate.
+  Upstream:
+  - rscdel: removed skin element "browserwindow" and "browser"
