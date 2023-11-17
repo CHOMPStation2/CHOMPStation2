@@ -19,7 +19,6 @@
 
 	health_hud_intensity = 3
 
-<<<<<<< HEAD
 	// CHOMPEdit Start: Species Sounds
 	species_sounds = "Teshari"
 	// male_cough_sounds = list('sound/effects/mob_effects/tesharicougha.ogg','sound/effects/mob_effects/tesharicoughb.ogg')
@@ -30,15 +29,8 @@
 	//CHOMPStation Add. Y'know I should probably just put this upstream.
 	// male_scream_sound = 'sound/effects/mob_effects/teshariscream.ogg'
 	// female_scream_sound = 'sound/effects/mob_effects/teshariscream.ogg'
-	center_offset = 0 //CHOMPEdit
 	//CHOMPStation Add End
-=======
-	male_cough_sounds = list('sound/effects/mob_effects/tesharicougha.ogg','sound/effects/mob_effects/tesharicoughb.ogg')
-	female_cough_sounds = list('sound/effects/mob_effects/tesharicougha.ogg','sound/effects/mob_effects/tesharicoughb.ogg')
-	male_sneeze_sound = 'sound/effects/mob_effects/tesharisneeze.ogg'
-	female_sneeze_sound = 'sound/effects/mob_effects/tesharisneeze.ogg'
 	center_offset = 0
->>>>>>> 078e488c71... Merge pull request #15519 from KillianKirilenko/kk-mini2
 
 	blood_color = "#D514F7"
 	flesh_color = "#5F7BB0"

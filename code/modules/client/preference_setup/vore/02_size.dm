@@ -37,11 +37,7 @@
 	S["weight_gain"]		>> pref.weight_gain
 	S["weight_loss"]		>> pref.weight_loss
 	S["fuzzy"]				>> pref.fuzzy
-<<<<<<< HEAD
-	S["offset_override"]	>> pref.offset_override //CHOMPEdit
-=======
 	S["offset_override"]	>> pref.offset_override
->>>>>>> 078e488c71... Merge pull request #15519 from KillianKirilenko/kk-mini2
 	S["voice_freq"]			>> pref.voice_freq
 	S["voice_sound"]		>> pref.voice_sound
 	S["custom_speech_bubble"]		>> pref.custom_speech_bubble
@@ -53,11 +49,7 @@
 	S["weight_gain"]		<< pref.weight_gain
 	S["weight_loss"]		<< pref.weight_loss
 	S["fuzzy"]				<< pref.fuzzy
-<<<<<<< HEAD
-	S["offset_override"]	<< pref.offset_override //CHOMPEdit
-=======
 	S["offset_override"]	<< pref.offset_override
->>>>>>> 078e488c71... Merge pull request #15519 from KillianKirilenko/kk-mini2
 	S["voice_freq"]			<< pref.voice_freq
 	S["voice_sound"]		<< pref.voice_sound
 	S["custom_speech_bubble"]		<< pref.custom_speech_bubble
@@ -69,11 +61,7 @@
 	pref.weight_gain		= sanitize_integer(pref.weight_gain, WEIGHT_CHANGE_MIN, WEIGHT_CHANGE_MAX, initial(pref.weight_gain))
 	pref.weight_loss		= sanitize_integer(pref.weight_loss, WEIGHT_CHANGE_MIN, WEIGHT_CHANGE_MAX, initial(pref.weight_loss))
 	pref.fuzzy				= sanitize_integer(pref.fuzzy, 0, 1, initial(pref.fuzzy))
-<<<<<<< HEAD
-	pref.offset_override	= sanitize_integer(pref.offset_override, 0, 1, initial(pref.offset_override)) //CHOMPEdit
-=======
 	pref.offset_override	= sanitize_integer(pref.offset_override, 0, 1, initial(pref.offset_override))
->>>>>>> 078e488c71... Merge pull request #15519 from KillianKirilenko/kk-mini2
 	if(pref.voice_freq != 0)
 		pref.voice_freq			= sanitize_integer(pref.voice_freq, MIN_VOICE_FREQ, MAX_VOICE_FREQ, initial(pref.voice_freq)) //CHOMPEdit
 	if(pref.size_multiplier == null || pref.size_multiplier < RESIZE_TINY || pref.size_multiplier > RESIZE_HUGE)
@@ -89,11 +77,7 @@
 	character.weight_gain		= pref.weight_gain
 	character.weight_loss		= pref.weight_loss
 	character.fuzzy				= pref.fuzzy
-<<<<<<< HEAD
-	character.offset_override	= pref.offset_override //CHOMPEdit
-=======
 	character.offset_override	= pref.offset_override
->>>>>>> 078e488c71... Merge pull request #15519 from KillianKirilenko/kk-mini2
 	character.voice_freq		= pref.voice_freq
 	character.resize(pref.size_multiplier, animate = FALSE, ignore_prefs = TRUE)
 
@@ -185,11 +169,7 @@
 		pref.fuzzy = pref.fuzzy ? 0 : 1;
 		return TOPIC_REFRESH_UPDATE_PREVIEW
 
-<<<<<<< HEAD
-	else if(href_list["toggle_offset_override"]) //CHOMPEdit
-=======
 	else if(href_list["toggle_offset_override"])
->>>>>>> 078e488c71... Merge pull request #15519 from KillianKirilenko/kk-mini2
 		pref.offset_override = pref.offset_override ? 0 : 1;
 		return TOPIC_REFRESH_UPDATE_PREVIEW
 
