@@ -125,7 +125,11 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	//Do any species specific layering updates, such as when hiding.
 	update_icon_special()
 
+<<<<<<< HEAD
 /mob/living/carbon/human/update_transform(var/instant = FALSE) //CHOMPEdit
+=======
+/mob/living/carbon/human/update_transform(var/instant = FALSE)
+>>>>>>> 078e488c71... Merge pull request #15519 from KillianKirilenko/kk-mini2
 	/* VOREStation Edit START
 	// First, get the correct size.
 	var/desired_scale_x = icon_scale_x
@@ -144,9 +148,15 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	var/desired_scale_y = size_multiplier * icon_scale_y
 	desired_scale_x *= species.icon_scale_x
 	desired_scale_y *= species.icon_scale_y
+<<<<<<< HEAD
 	var/cent_offset = species.center_offset //CHOMPEdit
 	if(fuzzy || offset_override || dir == EAST || dir == WEST) //CHOMPEdit
 		cent_offset = 0 //CHOMPEdit
+=======
+	var/cent_offset = species.center_offset
+	if(fuzzy || offset_override || dir == EAST || dir == WEST)
+		cent_offset = 0
+>>>>>>> 078e488c71... Merge pull request #15519 from KillianKirilenko/kk-mini2
 	vis_height = species.icon_height
 	appearance_flags |= PIXEL_SCALE
 	if(fuzzy)
@@ -178,19 +188,39 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 			else
 				M.Translate((1 / desired_scale_x * 4) - (desired_scale_x * cent_offset), 0)
 				M.Turn(90)
+<<<<<<< HEAD
 		// CHOMPEdit End
 		layer = MOB_LAYER -0.01 // Fix for a byond bug where turf entry order no longer matters
 	else
 		M.Scale(desired_scale_x, desired_scale_y)//VOREStation Edit
 		M.Translate(cent_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1)) //CHOMPEdit
+=======
+			if(species.icon_height == 64)
+				M.Translate(13,-22)
+			else
+				M.Translate(1,-6)
+			M.Scale(desired_scale_y, desired_scale_x)
+		M.Translate(cent_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1))
+		layer = MOB_LAYER -0.01 // Fix for a byond bug where turf entry order no longer matters
+	else
+		M.Scale(desired_scale_x, desired_scale_y)//VOREStation Edit
+		M.Translate(cent_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1))
+>>>>>>> 078e488c71... Merge pull request #15519 from KillianKirilenko/kk-mini2
 		if(tail_style?.can_loaf) // VOREStation Edit: Taur Loafing
 			update_tail_showing() // VOREStation Edit: Taur Loafing
 		layer = MOB_LAYER // Fix for a byond bug where turf entry order no longer matters
 
+<<<<<<< HEAD
 	if(instant) //CHOMPEdit Start
 		transform = M
 	else
 		animate(src, transform = M, time = anim_time) //CHOMPEdit End
+=======
+	if(instant)
+		transform = M
+	else
+		animate(src, transform = M, time = anim_time)
+>>>>>>> 078e488c71... Merge pull request #15519 from KillianKirilenko/kk-mini2
 	update_icon_special() //May contain transform-altering things
 
 //DAMAGE OVERLAYS
