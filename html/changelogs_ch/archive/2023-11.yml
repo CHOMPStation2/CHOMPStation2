@@ -131,3 +131,9 @@
   Upstream:
   - rscdel: removed skin element "browserwindow" and "browser"
   - rscadd: Added a way to make parquet wood flooring using hardwood planks
+  - bugfix: fixed typo in the vorepanel tgui, resulting in "Item Vorebelly Size Mult"
+      not being changeabale
+  - bugfix: fixed a wrong variable use which could lead to broken sprites in case
+      the "Mob Vorebelly Size Mult" was set to 0.
+  - rscadd: added VTEC toggle. (This adds a Verb under Abilities once VTEC has been
+      installed to allow robots to turn it off / on on a whim)
