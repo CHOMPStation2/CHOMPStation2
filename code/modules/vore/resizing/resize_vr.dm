@@ -9,8 +9,6 @@
 /mob/living
 	var/holder_default
 	var/pickup_active = TRUE			// Toggle whether your help intent picks up micros or pets them
-	var/center_offset = 0.5				// Center offset for uneven scaling symmetry. //CHOMPEdit
-	var/offset_override = FALSE			// Pref toggle for center offset. //CHOMPEdit
 
 // Define holder_type on types we want to be scoop-able
 /mob/living/carbon/human
