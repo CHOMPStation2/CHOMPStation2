@@ -7,6 +7,8 @@
 	if(!istype(T))
 		log_debug("[src] failed to find destination turf.")
 		return
+	if(A.hovering)//Flying people dont fall
+		return
 	if(isobserver(A))
 		A.forceMove(T) // Harmlessly move ghosts.
 		return
@@ -22,3 +24,7 @@
 	else
 		message_admins("ERROR: planetary_fall step trigger lacks a planet to fall onto.")
 		return
+
+/obj/effect/step_trigger/teleporter/poi/Initialize() //This is for placing teleporters in gateways, where Z levels can be different and I cant be assed to make fake teleporter stairs
+	. = ..()
+	teleport_z = src.z
