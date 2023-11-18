@@ -148,3 +148,7 @@
       the space can be used for items. This allows robots to get their paws on some
       kind of "trash eating" if they want it for scening without simply adding the
       ability by default towards the sleeper modules.'
+2023-11-18:
+  Kashargul:
+  - rscadd: added ability for borgs to play in the casino by holding chips with the
+      "misc gripper".
