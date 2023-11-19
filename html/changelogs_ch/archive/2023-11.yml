@@ -163,5 +163,8 @@
   - imageadd: Resprited xenomorph body parts to try and give a slightly more glossy
       look.
   - imageadd: Resprited the royal xenomorph headcrest to blend slightly better.
+  Kashargul:
+  - bugfix: raptor - crisis sprite
+  - qol: medical robot overwrite code clean-up
   Upstream:
   - bugfix: fixes the naming of the medraptor sprites to have them show again.
