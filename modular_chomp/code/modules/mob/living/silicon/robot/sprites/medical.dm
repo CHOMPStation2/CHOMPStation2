@@ -33,10 +33,8 @@
 	has_vore_belly_sprites = FALSE
 
 */
-// Surgeon
 
-// Regular sprites
-
+//Medical into Crisis type merge
 /datum/robot_sprite/surgical
 	module_type = "Crisis"
 	sprite_icon = 'icons/mob/robot/surgical.dmi'
@@ -51,16 +49,20 @@
 	module_type = "Crisis"
 	sprite_icon = 'icons/mob/robot/surgical_large.dmi'
 
-/datum/robot_sprite/dogborg/raptor/surgical
-	module_type = "Crisis"
-	sprite_icon = 'icons/mob/robot/surgical_large.dmi'
-
-/datum/robot_sprite/dogborg/raptor/surgical/raptor
+// Tall prite overwrites
+/datum/robot_sprite/dogborg/tall/surgical/raptor
 	name = "Raptor V-4 - Surgical"
 	sprite_icon_state = "raptor"
 	has_custom_equipment_sprites = TRUE
 	rest_sprite_options = list("Default", "Bellyup")
 
+/datum/robot_sprite/dogborg/tall/crisis/raptor
+	name = "Raptor V-4 - Crisis"
+	sprite_icon_state = "raptor"
+	has_custom_equipment_sprites = TRUE
+	rest_sprite_options = list("Default", "Bellyup")
+
+//Added sprites
 /datum/robot_sprite/dogborg/crisis/vale2
 	name = "Mediborg Model V-3"
 	sprite_icon = 'modular_chomp/icons/mob/widerobot_ch.dmi'
@@ -76,16 +78,3 @@
 	has_vore_belly_resting_sprites = TRUE
 	has_eye_light_sprites = TRUE
 	has_sleeper_light_indicator = TRUE
-
-// Tall sprites
-
-/datum/robot_sprite/dogborg/raptor/crisis
-	module_type = "Crisis"
-	sprite_icon = 'icons/mob/robot/crisis_large.dmi'
-
-
-/datum/robot_sprite/dogborg/raptor/crisis/raptor
-	name = "Raptor V-4 - Crisis"
-	sprite_icon_state = "medraptor"
-	has_custom_equipment_sprites = TRUE
-	rest_sprite_options = list("Default", "Bellyup")
