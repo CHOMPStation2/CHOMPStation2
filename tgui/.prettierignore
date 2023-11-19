@@ -10,7 +10,6 @@
 /public
 /packages/tgui-polyfill
 /packages/tgfont/static
-/packages/tgfont/dist
 **/*.json
 **/*.yml
 **/*.md

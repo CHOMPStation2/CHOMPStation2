@@ -644,10 +644,6 @@
 /mob/living/simple_mob/humanoid/merc/ranged/sniper,
 /turf/simulated/floor/plating,
 /area/submap/DoomP)
-"HE" = (
-/obj/effect/map_helper/no_phaseshift/area,
-/turf/simulated/floor/water/deep,
-/area/submap/DoomP)
 "HG" = (
 /obj/effect/floor_decal/borderfloorwhite/corner{
 	dir = 4
@@ -3397,7 +3393,7 @@ nf
 nf
 nf
 nf
-HE
+pa
 pa
 pa
 pa

@@ -73,7 +73,7 @@ h1.alert, h2.alert		{color: #000000;}
 
 /* VOREStation Edit Start */
 .emote					{}
-.emotesubtle			{font-style: italic;}
+.emote_subtle			{font-style: italic;}
 /* VOREStation Edit End */
 
 /* Game Messages */

@@ -23,6 +23,8 @@
 	src.modules += new /obj/item/weapon/storage/bag/serviceborg(src)
 	src.modules += new /obj/item/weapon/robot_harvester(src)
 	src.modules += new /obj/item/device/multitool(src)
+	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
+	src.modules += new /obj/item/device/boop_module(src)
 	src.modules += new /obj/item/weapon/dogborg/pounce(src)
 	src.modules += new /obj/item/weapon/bikehorn(src)
 	src.modules += new /obj/item/weapon/gun/launcher/confetti_cannon/robot(src)
@@ -42,4 +44,5 @@
 
 	var/obj/item/device/dogborg/sleeper/compactor/honkborg/B = new /obj/item/device/dogborg/sleeper/compactor/honkborg(src)
 	src.modules += B
+
 	..()

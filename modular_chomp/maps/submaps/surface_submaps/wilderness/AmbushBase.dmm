@@ -1288,7 +1288,7 @@
 /area/submap/DugOutMercs)
 "Zs" = (
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/map_helper/no_phaseshift/area,
+/obj/effect/map_helper/no_phaseshift,
 /turf/simulated/floor/tiled,
 /area/submap/DugOutMercs)
 "Zt" = (

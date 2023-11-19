@@ -10,7 +10,6 @@
 /datum/robot_sprite/dogborg/tall/clown
 	module_type = "Clown"
 	sprite_icon = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi'
-	pixel_x = 0
 
 /datum/robot_sprite/dogborg/tall/clown/k4t
 	name = "K4T"

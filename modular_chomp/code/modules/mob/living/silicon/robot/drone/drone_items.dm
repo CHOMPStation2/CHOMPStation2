@@ -11,7 +11,5 @@
 		/obj/item/weapon/handcuffs,
 		/obj/item/toy,
 		/obj/item/petrifier,
-		/obj/item/weapon/dice,
-		/obj/item/weapon/casino_platinum_chip,
-		/obj/item/weapon/spacecasinocash
+		/obj/item/weapon/dice
 	)

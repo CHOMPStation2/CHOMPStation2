@@ -86,9 +86,9 @@
 /obj/item/borg/upgrade/vtec/action(var/mob/living/silicon/robot/R)
 	if(..()) return 0
 
-	if(R.speed == -1 || (/mob/living/silicon/robot/proc/toggle_vtec in R.verbs))
+	if(R.speed == -1)
 		return 0
-	R.verbs += /mob/living/silicon/robot/proc/toggle_vtec
+
 	R.speed--
 	return 1
 

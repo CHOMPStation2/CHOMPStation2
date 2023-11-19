@@ -2,29 +2,6 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"type": "process",
-			"command": "tools/build/build",
-			"windows": {
-				"command": ".\\tools\\build\\build.bat"
-			},
-			"options": {
-				"env": {
-					"DM_EXE": "${config:dreammaker.byondPath}"
-				}
-			},
-			"problemMatcher": [
-				"$dreammaker",
-				"$tsc",
-				"$eslint-stylish"
-			],
-			"group": {
-				"kind": "build",
-				"isDefault": true
-			},
-			"dependsOn": "dm: reparse",
-			"label": "Build All"
-		},
-		{
 			"type": "dreammaker",
 			"dme": "vorestation.dme",
 			"problemMatcher": [
@@ -35,9 +12,9 @@
 		},
 		{
 			"type": "shell",
-			"command": "bin/tgui-build",
+			"command": "tgui/bin/tgui",
 			"windows": {
-				"command": ".\\bin\\tgui-build.cmd"
+				"command": ".\\tgui\\bin\\tgui.bat"
 			},
 			"problemMatcher": [
 				"$tsc",
@@ -48,55 +25,27 @@
 		},
 		{
 			"type": "shell",
-			"command": "bin/tgui-dev",
-			"windows": {
-				"command": ".\\bin\\tgui-dev.cmd"
+			"command": "yarn build",
+			"options": {
+				"cwd": "tgui/packages/tgfont/",
 			},
-			"problemMatcher": [
-				"$tsc",
-				"$eslint-stylish"
-			],
 			"group": "build",
-			"label": "tgui: dev server"
+			"problemMatcher": [],
+			"label": "tgui: build tgfont",
+			"detail": "node mkdist.cjs && fantasticon --config config.cjs"
 		},
 		{
 			"type": "shell",
-			"command": "bin/tgui-bench",
+			"command": "tgui/bin/tgui",
 			"windows": {
-				"command": ".\\bin\\tgui-bench.cmd"
+				"command": ".\\tgui\\bin\\tgui-prettybuild.bat"
 			},
 			"problemMatcher": [
 				"$tsc",
 				"$eslint-stylish"
 			],
 			"group": "build",
-			"label": "tgui: bench"
-		},
-		{
-			"type": "shell",
-			"command": "bin/tgui-sonar",
-			"windows": {
-				"command": ".\\bin\\tgui-sonar.cmd"
-			},
-			"problemMatcher": [
-				"$tsc",
-				"$eslint-stylish"
-			],
-			"group": "build",
-			"label": "tgui: sonar"
-		},
-		{
-			"type": "shell",
-			"command": "bin/tgfont",
-			"windows": {
-				"command": ".\\bin\\tgfont.cmd"
-			},
-			"problemMatcher": [
-				"$tsc",
-				"$eslint-stylish"
-			],
-			"group": "build",
-			"label": "tgui: rebuild tgfont"
+			"label": "tgui: prettybuild"
 		}
 	]
 }

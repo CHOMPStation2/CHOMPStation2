@@ -31995,6 +31995,7 @@
 	dir = 4
 	},
 /obj/machinery/alarm{
+	frequency = 1441;
 	pixel_y = 22
 	},
 /obj/structure/flora/pottedplant/stoutbush,

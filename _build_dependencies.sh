@@ -8,8 +8,7 @@ export BYOND_MINOR=1589
 export MACRO_COUNT=4
 
 # node version
-export NODE_VERSION=20
-export NODE_VERSION_PRECISE=20.9.0
+export NODE_VERSION=16
 
 # SpacemanDMM git tag
 export SPACEMAN_DMM_VERSION=suite-1.7
