@@ -31,3 +31,131 @@
       inside of another storage slot. For example, pulling out medkit equipment from
       your bag without holding the medkit.
   - bugfix: Storage reach no longer gives you telekinesis.
+2023-11-10:
+  Missile597:
+  - rscadd: Added storage tanks to deck three Atmos maintenance for waste gasses to
+      scrub to.
+  - rscadd: Connected dorms area scrubbers to the new waste tanks so that these areas
+      can scrub, which should prevent atmos issues on long shifts in this area. Scrubbers
+      are still isolated from the rest of the station for protection from spiderlings.
+  - qol: Added connectors to the air and scrubber loops in deck three atmos maintenance,
+      to allow a pump and scrubber to be filled/emptied here in case of emergency.
+  - bugfix: Fixed various air alarms across deck 3 and Sif outpost, and one on deck
+      one which had the incorrect frequency set for some reason. This should resolve
+      the issue with air alarms being unable to communicate and change settings on
+      vents and scrubbers in the area.
+  - maptweak: Atmos Maintenance on deck three has been made a bit wider, to fit the
+      added tanks and pipework in.
+2023-11-11:
+  FluffMedic:
+  - bugfix: fixes a few non-functional shadekin blockers
+  - rscadd: 'rebalance: Pummeler has been nerfed further, mostly with a nerf I thought
+      I did ages ago. Also did weird bola stuff.'
+  - qol: Eclipse tells you when you're hitting them with the wrong damage type.
+  ItsSelis:
+  - rscadd: added http_request datum to properly use rust-g based http requests (including
+      async ones).
+  - code_imp: byond 515 support defines for rust-g definitions
+  Verkister:
+  - bugfix: Fixed item digestion logs not working on recycled stuff
+  tacoguy7765093:
+  - balance: Heart Damage is no longer debilitating at decimal values.
+2023-11-12:
+  FluffMedic:
+  - rscadd: Glow to the the radiation eclipse critter
+  - maptweak: Makes the Eclipse POI I forgot to make fancy, fancy
+2023-11-13:
+  FluffMedic:
+  - rscadd: New chems to the distiller
+  ItsSelis:
+  - code_imp: slightly changed GitHub issue templates
+  - rscadd: added new way of generating tgui bundles, compiling the game & launching
+      a server
+  - rscdel: removed the old executables to compile new tgui bundles
+  - bugfix: enforcing text mode and LF line breaks in specific file endings
+  - code_imp: improved .gitignore once more
+  Upstream:
+  - rscadd: added a new PDA type
+  - imageadd: added new PDA sprites for the new type
+2023-11-14:
+  TheGreatKitsune:
+  - bugfix: Vox engineering suit now properly has modules
+  - imageadd: Added in sprites for wearing vox suits
+2023-11-15:
+  Drathek:
+  - code_imp: Renamed node/expression/operator to node/expression/op to resolve parsing
+      issues with spacemandmm and strongdmm
+  FluffMedic:
+  - maptweak: Makes MoL look nicer
+  ItsSelis:
+  - code_imp: changed the filing cabinet design
+  Kashargul:
+  - rscadd: pounce to command and explo borg on emag
+  - rscadd: the chameleon pen to command borgs on emag
+  - rscadd: 'changes: exploration hound now has a dedicated sleeper for items and
+      one person. Limit 4 items or 3+1 Person. It can be upgraded to up to 8 slots.'
+  - rscadd: 'changes: reverted the offset removal for the tall borgs'
+  - rscadd: 'changes: implemented the upstream borgs where possible'
+  - rscadd: 'changes: removed the modular chomp overwrites where no longer needed'
+  - rscadd: 'changes: moved some modular chomp borgs into /ch not to interfere with
+      the upstream borgs'
+  - rscadd: '"fixes #6996"'
+  - bugfix: borgbellies not showing for some borgs
+  - bugfix: borgpanels not showing upon opening the panel on some borgs
+  - bugfix: ERT bogs not showing at all
+  - bugfix: Explorationborg not being selectable
+  - bugfix: ServicehoundV2 - Alt going invisible on missing rest sprites. Only default
+      is now available
+  - bugfix: 'worm eyes/panel, including #7224 from Verkister to prevent conflicts'
+  - bugfix: eyes / lights where available on the chomp tall/wide robot
+  - rscadd: 'removes: deprecated tools from clownborg, exploborg, widerobot standard'
+  Upstream:
+  - rscdel: removed the last _ in emote_subtle
+  - bugfix: "changed the timestamp insert regex as it was causing issues with multiline\
+      \ subtle / emote to also include matches on \n"
+  - qol: small change to the flavor input verb for robots to allow multiline flavor
+      texts to be added or edited for the round directly
+2023-11-16:
+  Darlantanis:
+  - rscadd: Adds casino gear dispensers for mapping
+  - rscadd: Adds casino areas
+  - rscadd: Moves and comments out older casino areas
+  Kashargul:
+  - bugfix: hotfix for the raptorborgs
+2023-11-17:
+  Aroliacue:
+  - rscadd: Added in two new marking specific Xenomorph Queen heads and a new Xenomorph
+      backplate.
+  ItsSelis:
+  - code_imp: some more changes in the CI suite
+  Upstream:
+  - rscdel: removed skin element "browserwindow" and "browser"
+  - rscadd: Added a way to make parquet wood flooring using hardwood planks
+  - bugfix: fixed typo in the vorepanel tgui, resulting in "Item Vorebelly Size Mult"
+      not being changeabale
+  - bugfix: fixed a wrong variable use which could lead to broken sprites in case
+      the "Mob Vorebelly Size Mult" was set to 0.
+  - rscadd: added VTEC toggle. (This adds a Verb under Abilities once VTEC has been
+      installed to allow robots to turn it off / on on a whim)
+  - code_imp: 'Changed the robot paper dispenser to an actual paperwork printer and
+      added the first set of forms (command, medical, some research and security mostly)
+      [Other contributors to the forms: Guti, Skol, Vee]'
+  - rscadd: 'Added a new module for robohounds: "Robohound Capability Expansion Module",
+      Material 5, Engineering 4. This module allows sleeper bellies to ingest items
+      and doubles their capacity. Due to this, a sleeper belly can in combination
+      with the "Robohound Capacity Expansion Module" (1 x2 x2) have a total of 4 slots.
+      At all times, only one "patient" can be ingested. With the new module though,
+      the space can be used for items. This allows robots to get their paws on some
+      kind of "trash eating" if they want it for scening without simply adding the
+      ability by default towards the sleeper modules.'
+2023-11-18:
+  CHOMPStation2:
+  - rscadd: Added yet more highly compressed artificial delights from rat world
+  Kashargul:
+  - rscadd: added ability for borgs to play in the casino by holding chips with the
+      "misc gripper".
+2023-11-19:
+  Aroliacue:
+  - qol: Casino Chip Exchanger now tells you the exchange rate on examine.
+  - qol: Casino Chip Exchanger now fully exchanges chips back to thalers instead of
+      deleting 25% of the value.

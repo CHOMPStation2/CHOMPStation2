@@ -109,6 +109,8 @@
 		playsound(src, soundfile, vol = g_sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
 		if(istype(B) && B.recycle(src))
 			g_damage = w_class / 2
+			if(B.item_digest_logs)
+				to_chat(B.owner,"<span class='notice'>[src] was digested inside your [lowertext(B.name)].</span>")
 			qdel(src)
 		else if(istype(src,/obj/item/stack))
 			var/obj/item/stack/S = src

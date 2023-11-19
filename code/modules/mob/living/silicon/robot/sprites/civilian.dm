@@ -257,18 +257,18 @@
 		return 1
 
 // Tall sprites
-//CHOMPNote -- many of the lines in this is overriden in modular
+
 /datum/robot_sprite/dogborg/tall/service
 	module_type = "Service"
 	sprite_icon = 'icons/mob/robot/service_large.dmi'
 
-/datum/robot_sprite/dogborg/raptor/service/raptor //CHOMPEdit - changing typepath
+/datum/robot_sprite/dogborg/tall/service/raptor
 	name = "Raptor V-4"
 	sprite_icon_state = "raptor"
 	has_custom_equipment_sprites = TRUE
 	rest_sprite_options = list("Default", "Bellyup")
 
-/datum/robot_sprite/dogborg/raptor/service/fancyraptor //CHOMPEdit - changing typepath
+/datum/robot_sprite/dogborg/tall/service/fancyraptor
 	name = "Raptor V-4000"
 	sprite_icon_state = "fancyraptor"
 	has_custom_equipment_sprites = TRUE

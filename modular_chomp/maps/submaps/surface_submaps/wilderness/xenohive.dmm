@@ -121,6 +121,12 @@
 	},
 /turf/simulated/floor,
 /area/submap/XenoHive)
+"iX" = (
+/obj/effect/alien/weeds,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/submap/XenoHive)
 "jY" = (
 /mob/living/simple_mob/animal/space/alien/queen/empress,
 /obj/effect/alien/weeds,
@@ -728,7 +734,7 @@ zm
 Gw
 tA
 Vg
-Tb
+iX
 LB
 zU
 LB

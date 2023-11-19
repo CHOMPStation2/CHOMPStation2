@@ -130,7 +130,7 @@
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase2 //Boss uses crowd control.
 	movement_cooldown = -1
-	projectiletype = /obj/item/projectile/bola
+	projectiletype = /obj/item/projectile/mobbola
 	melee_attack_delay = 4 SECOND
 	alpha = 215
 
