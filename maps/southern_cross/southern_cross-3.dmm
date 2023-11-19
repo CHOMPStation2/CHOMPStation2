@@ -120,7 +120,6 @@
 "abm" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /obj/structure/table/standard,
@@ -587,6 +586,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsaft{
 	name = "Third Deck Aft Maintenance"
@@ -1017,6 +1019,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsaft{
 	name = "Third Deck Aft Maintenance"
@@ -1047,6 +1052,9 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsaft{
@@ -1191,6 +1199,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/vistor_room_11)
+"bbq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsatmos)
 "bbV" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/solars/forestarboardsolar)
@@ -1528,7 +1542,10 @@
 /turf/simulated/floor/plating,
 /area/maintenance/solars/forestarboardsolar)
 "bwo" = (
-/obj/machinery/portable_atmospherics/powered/pump/filled,
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 4
+	},
+/obj/machinery/light/small,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsatmos)
 "bwZ" = (
@@ -2099,6 +2116,14 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai)
+"bXC" = (
+/obj/machinery/atmospherics/omni/atmos_filter{
+	tag_south = 6;
+	tag_west = 1;
+	tag_east = 2
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsatmos)
 "bXW" = (
 /obj/structure/catwalk,
 /turf/simulated/floor/airless,
@@ -2704,6 +2729,9 @@
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsaft{
@@ -3879,12 +3907,19 @@
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsatmos)
 "dES" = (
-/obj/machinery/atmospherics/pipe/simple/visible/universal,
-/obj/machinery/meter,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 6
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsatmos)
@@ -4381,6 +4416,11 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
+"dVe" = (
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsatmos)
 "dVg" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -4529,7 +4569,6 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 8;
@@ -4538,6 +4577,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
 "dZQ" = (
@@ -5597,10 +5637,10 @@
 /turf/simulated/floor/reinforced,
 /area/rnd/research/particleaccelerator)
 "eKF" = (
-/obj/machinery/atmospherics/pipe/tank/air{
-	dir = 8;
-	start_pressure = 4559.63
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1
 	},
+/obj/machinery/portable_atmospherics/canister/empty,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsatmos)
 "eLm" = (
@@ -5871,6 +5911,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsaft{
 	name = "Third Deck Aft Maintenance"
@@ -6022,9 +6063,6 @@
 /turf/simulated/floor,
 /area/maintenance/substation/command)
 "fbj" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
-	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 8;
@@ -6041,6 +6079,7 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
 "fbn" = (
@@ -6107,6 +6146,12 @@
 /obj/structure/barricade,
 /obj/item/tape/engineering,
 /turf/simulated/floor/reinforced/airless,
+/area/maintenance/thirddeck/dormsatmos)
+"fcD" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 9
+	},
+/turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsatmos)
 "fdq" = (
 /obj/machinery/door/firedoor/border_only,
@@ -6802,7 +6847,6 @@
 "fCn" = (
 /obj/machinery/alarm{
 	dir = 1;
-	frequency = 1441;
 	pixel_y = -22
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -7210,6 +7254,9 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsaft{
 	name = "Third Deck Aft Maintenance"
@@ -7421,8 +7468,8 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
 "fVO" = (
-/obj/machinery/atmospherics/pipe/tank/air{
-	dir = 4
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsatmos)
@@ -7845,6 +7892,9 @@
 	icon_state = "4-8"
 	},
 /obj/random/trash,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsaft{
 	name = "Third Deck Aft Maintenance"
@@ -8117,6 +8167,14 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/starboard)
+"gzV" = (
+/obj/machinery/atmospherics/omni/atmos_filter{
+	tag_west = 1;
+	tag_east = 2;
+	tag_south = 7
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsatmos)
 "gAn" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/blue/bordercorner,
@@ -8348,6 +8406,13 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/heads/sc/restroom)
+"gPN" = (
+/obj/machinery/atmospherics/valve/shutoff{
+	dir = 4;
+	name = "Dorm Vents automatic shutoff valve"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsatmos)
 "gQa" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/cable/green{
@@ -8435,6 +8500,13 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/sc/hos/quarters)
+"gWP" = (
+/obj/effect/floor_decal/rust,
+/obj/machinery/atmospherics/pipe/manifold/hidden/cyan{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsatmos)
 "gXC" = (
 /obj/structure/railing{
 	dir = 1
@@ -8799,7 +8871,6 @@
 "hoF" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /turf/simulated/floor/wood,
@@ -9630,6 +9701,15 @@
 /obj/item/device/gps/engineering/ce,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/chief/quarters)
+"igE" = (
+/obj/machinery/atmospherics/omni/atmos_filter{
+	tag_east = 2;
+	tag_west = 1;
+	tag_south = 3;
+	tag_north = 5
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsatmos)
 "ihl" = (
 /obj/structure/closet/secure_closet/engineering_chief_wardrobe,
 /obj/machinery/keycard_auth{
@@ -9747,6 +9827,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/central)
+"ipi" = (
+/obj/machinery/atmospherics/pipe/tank/oxygen{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsatmos)
 "ipu" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -10165,12 +10251,10 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/central)
 "iNZ" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 22
-	},
 /obj/effect/floor_decal/rust,
+/obj/machinery/atmospherics/pipe/manifold/hidden/red{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsatmos)
 "iOb" = (
@@ -10279,7 +10363,6 @@
 	icon_state = "2-8"
 	},
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /turf/simulated/floor/wood,
@@ -10360,6 +10443,12 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled,
 /area/bridge)
+"iYR" = (
+/obj/machinery/atmospherics/pipe/tank/phoron{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsatmos)
 "iZh" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -10677,6 +10766,13 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/bridge)
+"jqU" = (
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 5
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsatmos)
 "jra" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -10915,6 +11011,7 @@
 /obj/effect/floor_decal/corner/brown/bordercorner{
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
 "jHD" = (
@@ -10952,6 +11049,12 @@
 /obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/aftport)
+"jJL" = (
+/obj/machinery/atmospherics/pipe/simple/visible/universal{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsatmos)
 "jJR" = (
 /obj/structure/table/steel,
 /obj/random/maintenance/engineering,
@@ -10963,14 +11066,13 @@
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/aftport)
 "jKE" = (
-/obj/machinery/atmospherics/valve/shutoff{
-	dir = 1;
-	name = "Atmospherics to Distro automatic shutoff valve"
-	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/binary/pump{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsatmos)
@@ -11306,7 +11408,6 @@
 /obj/random/maintenance/medical,
 /obj/random/toolbox,
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /turf/simulated/floor/plating,
@@ -11820,6 +11921,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/central)
+"kxT" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/red,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsatmos)
 "kAi" = (
 /obj/structure/reagent_dispensers/cookingoil,
 /turf/simulated/floor/tiled/freezer,
@@ -11895,7 +12001,10 @@
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/aftstarboard)
 "kDx" = (
-/obj/machinery/space_heater,
+/obj/machinery/light/small,
+/obj/machinery/atmospherics/binary/pump{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsatmos)
 "kEc" = (
@@ -12406,8 +12515,8 @@
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/aftport)
 "lhV" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/cyan,
 /obj/effect/floor_decal/rust,
+/obj/machinery/light/small,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsatmos)
 "lib" = (
@@ -12434,6 +12543,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
+"ljQ" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/cyan,
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsatmos)
 "lke" = (
 /obj/machinery/atmospherics/binary/pump/on{
 	dir = 8;
@@ -13412,6 +13525,12 @@
 /obj/item/clothing/suit/storage/toggle/labcoat,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
+"mhm" = (
+/obj/machinery/atmospherics/pipe/tank/nitrous_oxide{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsatmos)
 "mhn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -13550,6 +13669,10 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/vistor_room_12)
+"mkG" = (
+/obj/machinery/atmospherics/pipe/tank/carbon_dioxide,
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsatmos)
 "mlL" = (
 /obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -13877,6 +14000,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/aftstarboard)
+"mzR" = (
+/obj/machinery/atmospherics/binary/pump/on{
+	dir = 4;
+	target_pressure = 301.325;
+	name = "Scrubber to Waste"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsatmos)
 "mAS" = (
 /obj/machinery/atmospherics/valve,
 /obj/effect/floor_decal/industrial/warning{
@@ -13900,11 +14032,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/aftport)
 "mCp" = (
-/obj/machinery/light/small{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 10
 	},
-/obj/effect/floor_decal/industrial/warning,
-/obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsatmos)
 "mCr" = (
@@ -14264,6 +14394,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsatmos)
 "mXj" = (
@@ -15605,6 +15736,9 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsaft{
 	name = "Third Deck Aft Maintenance"
@@ -16072,6 +16206,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/aftport)
+"onQ" = (
+/obj/machinery/atmospherics/binary/pump/on{
+	dir = 4;
+	name = "Air to Supply";
+	target_pressure = 301.325
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsatmos)
 "ooG" = (
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -16694,7 +16836,6 @@
 	dir = 1
 	},
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /turf/simulated/floor/tiled,
@@ -17260,6 +17401,11 @@
 "psu" = (
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/thirddeck/aftstarboardcentral)
+"psW" = (
+/obj/machinery/atmospherics/pipe/tank/nitrogen,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsatmos)
 "ptq" = (
 /obj/structure/grille,
 /turf/space,
@@ -17902,6 +18048,7 @@
 /obj/effect/floor_decal/corner/brown/bordercorner{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
 "qbV" = (
@@ -18017,6 +18164,9 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
 /turf/simulated/floor/plating,
@@ -18145,6 +18295,15 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/research/particleaccelerator)
+"qlY" = (
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 22
+	},
+/obj/random/trash,
+/obj/machinery/space_heater,
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsatmos)
 "qmc" = (
 /obj/structure/table/woodentable,
 /obj/item/device/starcaster_news,
@@ -18597,6 +18756,13 @@
 /obj/machinery/door/firedoor/multi_tile/glass,
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/primary/thirddeck/aftdoorm)
+"qEY" = (
+/obj/effect/floor_decal/rust,
+/obj/machinery/atmospherics/pipe/manifold/hidden/cyan{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsatmos)
 "qFl" = (
 /obj/structure/bed/chair/comfy/black{
 	dir = 8
@@ -18798,7 +18964,6 @@
 	})
 "qQg" = (
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /obj/effect/floor_decal/corner_steel_grid/full,
@@ -18862,6 +19027,7 @@
 /obj/effect/floor_decal/corner/brown/bordercorner{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
 "qSZ" = (
@@ -19558,6 +19724,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/seconddeck/gym)
+"rxc" = (
+/obj/machinery/atmospherics/valve/shutoff{
+	dir = 8;
+	name = "Dorm Scrubbers automatic shutoff valve"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsatmos)
 "rxM" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 6
@@ -19608,6 +19781,9 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsaft{
@@ -19817,6 +19993,14 @@
 "rNN" = (
 /obj/structure/bed/chair/bay/chair/padded/red/smallnest,
 /turf/simulated/floor/wood,
+/area/maintenance/thirddeck/dormsatmos)
+"rNS" = (
+/obj/machinery/atmospherics/omni/atmos_filter{
+	tag_north = 4;
+	tag_east = 1;
+	tag_west = 2
+	},
+/turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsatmos)
 "rOA" = (
 /obj/structure/catwalk,
@@ -20571,6 +20755,10 @@
 "svN" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/substation/dorms)
+"swg" = (
+/obj/machinery/atmospherics/pipe/tank/air/full,
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsatmos)
 "sxg" = (
 /turf/simulated/wall/r_wall,
 /area/crew_quarters/sleep/vistor_room_1)
@@ -21551,6 +21739,12 @@
 /obj/structure/closet/secure_closet/personal/cabinet,
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/vistor_room_2)
+"tlF" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsatmos)
 "tlM" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
@@ -21593,6 +21787,7 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsaft{
 	name = "Third Deck Aft Maintenance"
@@ -22098,6 +22293,13 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/sleep/vistor_room_2)
+"tRw" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 4
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsatmos)
 "tRN" = (
 /obj/machinery/power/terminal,
 /obj/structure/cable{
@@ -22484,6 +22686,13 @@
 "ueN" = (
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/central)
+"ueV" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 10
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsatmos)
 "ugd" = (
 /obj/structure/table/standard,
 /obj/machinery/computer/security/telescreen/entertainment{
@@ -22671,6 +22880,13 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cafeteria)
+"urv" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
+	},
+/obj/machinery/portable_atmospherics/powered/pump/filled,
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsatmos)
 "urA" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -28
@@ -23184,6 +23400,9 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsaft{
 	name = "Third Deck Aft Maintenance"
@@ -23218,7 +23437,6 @@
 "uRz" = (
 /obj/structure/closet/secure_closet/freezer/meat,
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -24343,13 +24561,10 @@
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
 "vHt" = (
-/obj/machinery/atmospherics/binary/pump/on{
-	dir = 1;
-	name = "Air to Supply";
-	target_pressure = 301.325
-	},
-/obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/rust,
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 5
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsatmos)
 "vIb" = (
@@ -25668,12 +25883,12 @@
 	name = "west bump";
 	pixel_x = -24
 	},
-/obj/machinery/portable_atmospherics/powered/scrubber,
 /obj/structure/cable{
 	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/rust,
+/obj/machinery/portable_atmospherics/powered/scrubber,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsatmos)
 "wJY" = (
@@ -26079,6 +26294,7 @@
 /obj/effect/floor_decal/corner/beige/border{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
 "wVH" = (
@@ -26117,6 +26333,10 @@
 /obj/effect/floor_decal/corner/brown/bordercorner,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
+"wYp" = (
+/obj/machinery/portable_atmospherics/canister/air,
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsatmos)
 "wYH" = (
 /obj/structure/table/standard,
 /obj/machinery/computer/security/telescreen/entertainment{
@@ -26636,6 +26856,9 @@
 /obj/effect/floor_decal/corner/beige/border{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
 "xtt" = (
@@ -26999,7 +27222,6 @@
 	},
 /obj/machinery/alarm{
 	dir = 1;
-	frequency = 1441;
 	pixel_y = -22
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -27218,6 +27440,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
+/obj/machinery/space_heater,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsaft{
 	name = "Third Deck Aft Maintenance"
@@ -27600,6 +27823,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/vistor_room_2)
+"yhb" = (
+/obj/machinery/atmospherics/binary/pump{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsatmos)
 "yhv" = (
 /obj/structure/cable/yellow{
 	d1 = 2;
@@ -59264,10 +59493,10 @@ wzA
 aRa
 vTY
 wzA
-apc
-apc
-apc
-apc
+aaa
+aaa
+aaa
+aaa
 apc
 apc
 apc
@@ -59521,11 +59750,11 @@ fKF
 tKY
 nZp
 pVJ
-kMU
-apc
-apc
-apc
-apc
+wzA
+wYp
+hDA
+uxE
+dVe
 apc
 apc
 apc
@@ -59779,11 +60008,11 @@ eXN
 tKY
 aRa
 pob
-kMU
-apc
-apc
-apc
-apc
+wzA
+swg
+jqU
+urv
+dVe
 apc
 apc
 apc
@@ -60038,10 +60267,10 @@ tKY
 cyd
 wzA
 wzA
-apc
-apc
-apc
-apc
+swg
+ljQ
+kDx
+aaa
 apc
 apc
 apc
@@ -60295,11 +60524,11 @@ arb
 tKY
 aOF
 wzA
-apc
-apc
-apc
-apc
-apc
+swg
+qEY
+gWP
+ljQ
+aaa
 apc
 apc
 apc
@@ -60554,10 +60783,10 @@ tKY
 qik
 wzA
 wzA
-apc
-apc
-apc
-apc
+onQ
+hDA
+bbq
+aaa
 apc
 apc
 apc
@@ -60812,9 +61041,9 @@ tKY
 aRa
 ogb
 aaa
+gPN
 aaa
-aaa
-aaa
+yhb
 aaa
 aaa
 aaa
@@ -61069,8 +61298,8 @@ uEX
 eeU
 aRa
 qdZ
-rmj
-bwo
+aaa
+jJL
 wJE
 mCp
 fVO
@@ -61586,8 +61815,8 @@ eeU
 aRa
 iXp
 aaa
-uxE
-kDx
+jJL
+qlY
 iNZ
 eKF
 aaa
@@ -61844,9 +62073,9 @@ eeU
 ava
 xnk
 aaa
+rxc
 aaa
-aaa
-aaa
+yhb
 aaa
 aaa
 aaa
@@ -62102,10 +62331,10 @@ eeU
 cyd
 wzA
 wzA
-apc
-apc
-apc
-apc
+mzR
+psW
+rNS
+aaa
 apc
 apc
 gKC
@@ -62359,11 +62588,11 @@ ooS
 eeU
 aOF
 wzA
-apc
-apc
-apc
-apc
-apc
+mkG
+igE
+ipi
+tlF
+aaa
 apc
 apc
 epg
@@ -62618,10 +62847,10 @@ eeU
 qik
 wzA
 wzA
-aqj
-aqj
-aqj
-aqj
+gzV
+mhm
+bwo
+aaa
 aqj
 gKC
 epg
@@ -62875,11 +63104,11 @@ cim
 eeU
 uQw
 mxa
-kMU
-apc
-apc
-apc
-apc
+wzA
+bXC
+iYR
+tRw
+dVe
 apc
 apc
 epg
@@ -63133,11 +63362,11 @@ oEO
 eeU
 nZp
 kJg
-kMU
-apc
-apc
-apc
-apc
+wzA
+ueV
+kxT
+fcD
+dVe
 apc
 apc
 epg
@@ -63392,10 +63621,10 @@ wzA
 aRa
 uge
 wzA
-apc
-apc
-apc
-apc
+aaa
+aaa
+aaa
+aaa
 apc
 apc
 epg

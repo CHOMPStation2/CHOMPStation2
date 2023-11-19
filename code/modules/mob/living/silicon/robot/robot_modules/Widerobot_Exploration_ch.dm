@@ -30,27 +30,26 @@
 /obj/item/weapon/robot_module/robot/exploration
 	can_be_pushed = 0
 /obj/item/weapon/robot_module/robot/exploration/New(var/mob/living/silicon/robot/R)
-	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
-	src.modules += new /obj/item/device/boop_module(src)
-	src.modules += new /obj/item/device/dogborg/sleeper/K9/exploration(src)
-	src.modules += new /obj/item/device/dogborg/sleeper/command(src)
+	src.modules += new /obj/item/device/dogborg/sleeper/exploration(src)
 	src.modules += new /obj/item/weapon/gun/energy/locked/phasegun/unlocked/mounted/cyborg(src)
 	src.modules += new /obj/item/device/cataloguer(src)
 	src.modules += new /obj/item/roller_holder(src)
 	src.modules += new /obj/item/weapon/gun/energy/taser/mounted/cyborg/flare(src)
 
-	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src)
+	src.emag 	 += new /obj/item/weapon/dogborg/pounce(src)
 
 	..()
 
-/obj/item/device/dogborg/sleeper/K9/exploration //The K9 portabrig
+/obj/item/device/dogborg/sleeper/exploration //No need to inherit from the brig one, we cna direclty make a proper new one
 	name = "Store-Belly"
 	desc = "Equipment for a ExploreHound unit. A mounted portable-storage device that holds supplies/person."
-	icon_state = "sleeperb"
+	icon_state = "sleeperlost"
 	injection_chems = null
+	stabilizer = TRUE
+	compactor = TRUE
+	max_item_count = 4
 	medsensor = FALSE
 	recycles = TRUE
-	max_item_count = 4
 
 /obj/item/weapon/gun/energy/taser/mounted/cyborg/flare
 	name = "flare gun"

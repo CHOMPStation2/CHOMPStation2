@@ -346,8 +346,8 @@
 		blood_volume *= 0.3
 	else if(heart.is_bruised())
 		blood_volume *= 0.7
-	else if(heart.damage > 1)
-		blood_volume *= 0.8
+	else if(heart.damage > 5) //CHOMPedit, so ONE heart damage isnt 20% of blood missing, now its 5
+		blood_volume *= 0.9 //chompedit, 90% instead of 80%
 	return blood_volume < H.species.blood_volume*H.species.blood_level_fatal
 
 /obj/item/weapon/shockpaddles/proc/check_charge(var/charge_amt)

@@ -136,7 +136,7 @@
 	module_type = "Miner"
 	sprite_icon = 'icons/mob/robot/mining_large.dmi'
 
-/datum/robot_sprite/dogborg/raptor/mining/raptor //CHOMPEdit - changed typepath
+/datum/robot_sprite/dogborg/tall/mining/raptor
 	name = "Raptor V-4"
 	sprite_icon_state = "raptor"
 	has_custom_equipment_sprites = TRUE
