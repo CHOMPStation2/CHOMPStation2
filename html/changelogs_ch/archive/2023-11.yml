@@ -159,3 +159,5 @@
   - qol: Casino Chip Exchanger now tells you the exchange rate on examine.
   - qol: Casino Chip Exchanger now fully exchanges chips back to thalers instead of
       deleting 25% of the value.
+  Upstream:
+  - bugfix: fixes the naming of the medraptor sprites to have them show again.
