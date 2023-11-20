@@ -4655,6 +4655,7 @@
 #include "modular_chomp\code\modules\clothing\rings\rings_ch.dm"
 #include "modular_chomp\code\modules\clothing\spacesuits\rig\.behemoth.dm"
 #include "modular_chomp\code\modules\clothing\spacesuits\rig\clockwork_ch.dm"
+#include "modular_chomp\code\modules\clothing\spacesuits\rig\other.dm"
 #include "modular_chomp\code\modules\clothing\spacesuits\rig\precursor.dm"
 #include "modular_chomp\code\modules\clothing\spacesuits\rig\rig.dm"
 #include "modular_chomp\code\modules\clothing\spacesuits\rig\modules\specific\defib.dm"
