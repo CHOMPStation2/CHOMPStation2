@@ -168,3 +168,7 @@
   - qol: medical robot overwrite code clean-up
   Upstream:
   - bugfix: fixes the naming of the medraptor sprites to have them show again.
+2023-11-20:
+  Aroliacue:
+  - soundadd: Added new xenomorph talksounds.
+  - soundadd: Added three new xenomorph emotes - xenogrowl, xenohiss and xenopurr.
