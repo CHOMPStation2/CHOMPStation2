@@ -184,3 +184,7 @@
 			voice_sounds_list = goon_speak_roach_sound
 		if("goon speak skelly")
 			voice_sounds_list = goon_speak_skelly_sound
+//CHOMPedit start.
+		if("xeno speak")
+			voice_sounds_list = xeno_speak_sound
+//CHOMPedit end.
