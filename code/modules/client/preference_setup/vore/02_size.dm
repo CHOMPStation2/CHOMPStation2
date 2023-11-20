@@ -229,7 +229,8 @@
 			"goon speak pug",
 			"goon speak pugg",
 			"goon speak roach",
-			"goon speak skelly")
+			"goon speak skelly",
+			"xeno speak") // CHOMPedit
 		var/choice = tgui_input_list(usr, "Which set of sounds would you like to use for your character's speech sounds?", "Voice Sounds", possible_voice_types)
 		if(!pref.voice_sound)
 			pref.voice_sound = "goon speak 1"	//CHOMPEdit - Defaults voice to a less jarring sound
@@ -277,6 +278,10 @@
 				S = sound(pick(goon_speak_roach_sound))
 			if("goon speak skelly")
 				S = sound(pick(goon_speak_skelly_sound))
+//CHOMPedit start.
+			if("xeno speak")
+				S = sound(pick(xeno_speak_sound))
+//CHOMPedit end.
 		if(S)
 			S.frequency = pick(pref.voice_freq)
 			S.volume = 50
