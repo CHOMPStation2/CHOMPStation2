@@ -512,7 +512,7 @@
 	use_power = 1
 	},
 /turf/simulated/floor/airless,
-/area/submap/DoomP)
+/area/template_noop)
 "Br" = (
 /obj/structure/table/standard,
 /obj/item/weapon/paper,
