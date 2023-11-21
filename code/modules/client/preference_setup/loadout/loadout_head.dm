@@ -235,6 +235,11 @@
 	display_name = "kitty ears"
 	path = /obj/item/clothing/head/kitty
 
+/datum/gear/head/halo
+	display_name = "holographic demonic halo"
+	path = /obj/item/clothing/head/halo
+
+
 /datum/gear/head/rabbit
 	display_name = "rabbit ears"
 	path = /obj/item/clothing/head/rabbitears

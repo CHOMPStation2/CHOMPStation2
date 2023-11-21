@@ -172,3 +172,10 @@
 	icon = 'icons/inventory/head/item_vr.dmi'
 	default_worn_icon = 'icons/inventory/head/mob_vr.dmi'
 	icon_state = "tiny_tophat"
+
+/obj/item/clothing/head/halo
+	name = "holographic demonic halo"
+	desc = "A hologram displaying a demonic halo."
+	icon = 'icons/inventory/head/item_vr.dmi'
+	default_worn_icon = 'icons/inventory/head/mob_vr.dmi'
+	icon_state = "halo"
