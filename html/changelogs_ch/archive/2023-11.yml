@@ -172,3 +172,6 @@
   Aroliacue:
   - soundadd: Added new xenomorph talksounds.
   - soundadd: Added three new xenomorph emotes - xenogrowl, xenohiss and xenopurr.
+2023-11-21:
+  FluffMedic:
+  - bugfix: Janitor Rig is FREE of access
