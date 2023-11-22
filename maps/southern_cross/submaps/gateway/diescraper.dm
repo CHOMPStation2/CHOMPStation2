@@ -31,3 +31,8 @@
 	outdoors = OUTDOORS_YES
 	ambience = AMBIENCE_SIF
 	base_turf = /turf/simulated/floor/outdoors/rocks
+
+/area/awaymission/diescraper/outside/roof
+	icon_state = "green"
+	base_turf = /turf/simulated/floor/plating
+	name = "Away Mission - City Roof"
