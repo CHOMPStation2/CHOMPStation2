@@ -635,7 +635,7 @@
 
 	if(usr.stat || usr.restrained() || usr.incapacitated())
 		return
-	
+
 	//CHOMPEdit begin
 	if(istype(usr, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = usr
