@@ -184,5 +184,8 @@
   Kashargul:
   - balance: changed borg nutrition purge to only reduce nutrition to 1000 instead
       of 0
+  WinterDarkraven:
+  - rscadd: Demonic halos
+  - imageadd: Demonic halo icons
   theXDkidoflol:
   - balance: Size and compliance NIFs drain durability much less.
