@@ -175,3 +175,6 @@
 2023-11-21:
   FluffMedic:
   - bugfix: Janitor Rig is FREE of access
+2023-11-23:
+  FluffMedic:
+  - maptweak: Tweaks two tiles to make a cloner not spawn things
