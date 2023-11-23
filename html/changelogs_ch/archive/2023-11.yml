@@ -178,6 +178,9 @@
 2023-11-23:
   FluffMedic:
   - maptweak: Tweaks two tiles to make a cloner not spawn things
+  ItsSelis:
+  - bugfix: Including 'modular_chomp' in build system to make code changes actually
+      be detected
   Kashargul:
   - balance: changed borg nutrition purge to only reduce nutrition to 1000 instead
       of 0
