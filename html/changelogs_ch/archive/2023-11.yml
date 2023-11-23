@@ -175,3 +175,11 @@
 2023-11-21:
   FluffMedic:
   - bugfix: Janitor Rig is FREE of access
+2023-11-23:
+  FluffMedic:
+  - maptweak: Tweaks two tiles to make a cloner not spawn things
+  Kashargul:
+  - balance: changed borg nutrition purge to only reduce nutrition to 1000 instead
+      of 0
+  theXDkidoflol:
+  - balance: Size and compliance NIFs drain durability much less.
