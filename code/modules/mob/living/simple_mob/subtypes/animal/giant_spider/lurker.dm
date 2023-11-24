@@ -102,7 +102,7 @@
 	if(cloaked)
 		if(isliving(A))
 			var/mob/living/L = A
-			L.Weaken(cloaked_weaken_amount)
+			//L.Weaken(cloaked_weaken_amount) CHOMPEdit: Trying to remove hardstuns
 			to_chat(L, span("danger", "\The [src] ambushes you!"))
 			playsound(src, 'sound/weapons/spiderlunge.ogg', 75, 1)
 	uncloak()

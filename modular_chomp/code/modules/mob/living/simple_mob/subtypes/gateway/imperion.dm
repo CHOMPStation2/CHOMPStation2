@@ -244,6 +244,7 @@
 	special_attack_min_range = 1
 	special_attack_max_range = 9
 	special_attack_cooldown = 12 SECONDS
+	melee_attack_delay = 2 SECOND
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase4/proc/electric_defense(atom/target)
 	set waitfor = FALSE
@@ -386,7 +387,7 @@
 			/obj/item/clothing/suit/armor/tesla/vistor = 60,
 			/obj/item/clothing/suit/armor/tesla/vistor = 60,
 			/obj/item/shield_projector/rectangle/automatic/orange = 10,
-			/obj/item/shield_projector/rectangle/automatic/imperion = 1,
+			/obj/item/shield_projector/rectangle/automatic/imperion = 0.5,
 			/obj/item/clothing/head/vrwizard = 60,
 			/obj/item/clothing/suit/vrwizard = 60,
 			/obj/item/weapon/gun/magic/firestaff/vrwizard/fire = 60,
@@ -404,23 +405,6 @@
 			)
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase5/proc/electric_defense(atom/target)
-	var/turf/T = get_turf(target)
-	visible_message(span("warning", "\The [src] fires an energetic sphere into the air!"))
-	playsound(src, 'sound/weapons/Laser.ogg', 50, 1)
-	face_atom(T)
-	var/obj/item/projectile/arc/microsingulo/sphere = new(loc)
-	sphere.old_style_target(T, src)
-	sphere.fire()
-	var/obj/item/projectile/P = new /obj/item/projectile/bullet/imperionspear(get_turf(src))
-	P.launch_projectile(target, BP_TORSO, src)
-	if(prob(50))
-		var/obj/item/projectile/B = new /obj/item/projectile/bullet/imperionblaster(get_turf(src))
-		B.launch_projectile(target, BP_TORSO, src)
-	else
-		var/obj/item/projectile/A = new /obj/item/projectile/bullet/imperiontesla(get_turf(src))
-		A.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/mechanical/mecha/imperion/phase5/proc/launch_rockets(atom/target)
 	var/obj/item/projectile/P = new /obj/item/projectile/bullet/imperionblaster(get_turf(src))
 	P.launch_projectile(target, BP_TORSO, src)
 	if(prob(50))
@@ -429,6 +413,17 @@
 	else
 		var/obj/item/projectile/A = new /obj/item/projectile/bullet/imperiontesla(get_turf(src))
 		A.launch_projectile(target, BP_TORSO, src)
+
+
+/mob/living/simple_mob/mechanical/mecha/imperion/phase5/proc/launch_rockets(atom/target)
+	var/obj/item/projectile/P = new /obj/item/projectile/bullet/imperionblaster(get_turf(src))
+	P.launch_projectile(target, BP_TORSO, src)
+	sleep(1.5 SECONDS)
+	var/obj/item/projectile/B = new /obj/item/projectile/bullet/imperionspear(get_turf(src))
+	B.launch_projectile(target, BP_TORSO, src)
+	sleep(1.5 SECONDS)
+	var/obj/item/projectile/A = new /obj/item/projectile/bullet/imperiontesla(get_turf(src))
+	A.launch_projectile(target, BP_TORSO, src)
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase5/proc/launch_microsingularity(atom/target)
 	set waitfor = FALSE
@@ -456,9 +451,11 @@
 	var/obj/item/projectile/P = new /obj/item/projectile/bullet/imperiontesla(get_turf(src))
 	P.launch_projectile(target, BP_TORSO, src)
 	if(prob(50))
+		sleep(1.5)
 		var/obj/item/projectile/B = new /obj/item/projectile/bullet/imperionblaster(get_turf(src))
 		B.launch_projectile(target, BP_TORSO, src)
 	else
+		sleep(1.5)
 		var/obj/item/projectile/A = new /obj/item/projectile/bullet/imperionspear(get_turf(src))
 		A.launch_projectile(target, BP_TORSO, src)
 
