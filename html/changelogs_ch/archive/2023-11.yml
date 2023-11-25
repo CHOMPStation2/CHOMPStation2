@@ -202,6 +202,8 @@
   - bugfix: Adds code to sawn-off shot guns that should allow reloading
   - bugfix: Disables staves melee immunity.
   - bugfix: Temp. raising to cryogel's mixing to allow it to be made.
+  ItsSelis:
+  - code_imp: Skips the CI for autochangelogs
   Upstream:
   - rscadd: Added vorebelly sprites to the V2 service hound and V2 dark service hound
   - rscdel: Removed sleep toxin from tofurkey
