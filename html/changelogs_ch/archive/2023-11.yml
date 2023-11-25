@@ -190,6 +190,12 @@
   theXDkidoflol:
   - balance: Size and compliance NIFs drain durability much less.
 2023-11-25:
+  Aroliacue:
+  - rscadd: Xenomorph Queen trait, with experimental buff ability
+  - qol: Xenomorph Hybrids can now clear weeds by harm intent clicking
+  - bugfix: Engineers can now spawn with AR-E Glasses
+  - soundadd: New SFX for entering mechs.
+  - soundadd: mechsteps now use different logic for future additions.
   CHOMPStation2:
   - code_imp: tgchat code (part 1)
   FluffMedic:
