@@ -4599,6 +4599,7 @@
 #include "modular_chomp\code\datums\browser\color_matrix_picker.dm"
 #include "modular_chomp\code\datums\changelog\changelog.dm"
 #include "modular_chomp\code\datums\components\gargoyle.dm"
+#include "modular_chomp\code\datums\components\xenoqueen.dm"
 #include "modular_chomp\code\datums\crafting\recipes.dm"
 #include "modular_chomp\code\datums\interfaces\appearance.dm"
 #include "modular_chomp\code\datums\outfits\jobs\command.dm"

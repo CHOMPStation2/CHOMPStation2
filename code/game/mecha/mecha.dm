@@ -66,7 +66,9 @@
 	var/firstactivation = 0 			//It's simple. If it's 0, no one entered it yet. Otherwise someone entered it at least once.
 
 	var/stomp_sound = 'sound/mecha/mechstep.ogg'
+	var/stomp_sound_2 = 'sound/mecha/mechstep.ogg' // CHOMPedit: Used for 1-2 step patterns instead of random choice.
 	var/swivel_sound = 'sound/mecha/mechturn.ogg'
+	var/reps = 0 // CHOMPedit: Used for 1-2 step patterns.
 
 	//inner atmos
 	var/use_internal_tank = 0
@@ -887,7 +889,8 @@
 	var/result = get_step(src,direction)
 	if(result && Move(result))
 		if(stomp_sound)
-			playsound(src,stomp_sound,40,1)
+			playsound(src, reps ? stomp_sound : stomp_sound_2,50,0) // CHOMPedit: 1-2 step sequence.
+			reps = (reps+1)%2 // CHOMPedit: 1-2 step sequence.
 		handle_equipment_movement()
 	if(strafing)	//Also for strafing
 		set_dir(current_dir)
@@ -898,7 +901,8 @@
 	var/result = get_step_rand(src)
 	if(result && Move(result))
 		if(stomp_sound)
-			playsound(src,stomp_sound,40,1)
+			playsound(src, reps ? stomp_sound : stomp_sound_2,50,0) // CHOMPedit: 1-2 step sequence.
+			reps = (reps+1)%2 // CHOMPedit: 1-2 step sequence.
 		handle_equipment_movement()
 	return result
 

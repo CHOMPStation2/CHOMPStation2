@@ -224,7 +224,27 @@
 		health -= 5
 		healthcheck()
 
-// CHOMPedit start - Smaller-ranged nodes for Xenomorph Hybrids.
+// CHOMPedit start - Smaller-ranged nodes for Xenomorph Hybrids, node/weed deletion.
+/obj/effect/alien/weeds/attack_hand()
+	usr.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+	if (HULK in usr.mutations)
+		visible_message("<span class='warning'>[usr] destroys the [name]!</span>")
+		health = 0
+	else
+
+		// Aliens can get straight through these.
+		if(istype(usr,/mob/living/carbon))
+			var/mob/living/carbon/M = usr
+			if(locate(/obj/item/organ/internal/xenos/hivenode) in M.internal_organs)
+				visible_message ("<span class='warning'>[usr] strokes the [name] and it melts away!</span>", 1)
+				health = 0
+				healthcheck()
+				return
+		visible_message("<span class='warning'>[usr] claws at the [name]!</span>")
+		health -= rand(5,10)
+	healthcheck()
+	return
+
 /obj/effect/alien/weeds/node/weak
 	light_range = 2
 	node_range = 1
