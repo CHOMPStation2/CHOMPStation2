@@ -46,16 +46,11 @@
 	closet_appearance = /decl/closet_appearance/bio/science
 
 	starts_with = list(
-<<<<<<< HEAD
 		/obj/item/clothing/suit/bio_suit/scientist = 2, // CHOMP Block Edit Start
 		/obj/item/clothing/head/bio_hood/scientist = 2,
 		/obj/item/clothing/mask/gas = 2,
-		/obj/item/weapon/tank/oxygen = 2) // CHOMP Block Edit End
-=======
-		/obj/item/clothing/suit/bio_suit/scientist,
-		/obj/item/clothing/head/bio_hood/scientist,
+		/obj/item/weapon/tank/oxygen = 2, // CHOMP Block Edit End
 		/obj/item/weapon/storage/bag/xeno = 1)
->>>>>>> 943bc80475... Merge pull request #15531 from FartMaster69420/Xenobag-Fix
 
 /obj/structure/closet/l3closet/scientist/double
 	starts_with = list(
