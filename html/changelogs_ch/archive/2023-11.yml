@@ -192,6 +192,10 @@
 2023-11-25:
   CHOMPStation2:
   - code_imp: tgchat code (part 1)
+  FluffMedic:
+  - bugfix: Adds code to sawn-off shot guns that should allow reloading
+  - bugfix: Disables staves melee immunity.
+  - bugfix: Temp. raising to cryogel's mixing to allow it to be made.
   Upstream:
   - rscadd: Added vorebelly sprites to the V2 service hound and V2 dark service hound
   - rscdel: Removed sleep toxin from tofurkey
