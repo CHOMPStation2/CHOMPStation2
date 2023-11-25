@@ -178,7 +178,7 @@
 	inhibitors = list("water" = 5)
 	result_amount = 1
 
-	temp_range = list(0, 15)
+	temp_range = list(T0C + 10, T20C + 15) //CHOMPedit: I know this doesn't make sense, and this is a baindaid fix but distiller code refuses to go this low, even with correct variables
 	temp_shift = 20
 
 /decl/chemical_reaction/distilling/cryogel/on_reaction(var/datum/reagents/holder, var/created_volume)
