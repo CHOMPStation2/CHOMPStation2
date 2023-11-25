@@ -270,10 +270,6 @@
 	if(Debug2)
 		WRITE_LOG(diary, "TOPIC: [text]")
 
-/proc/log_href(text)
-	// Configs are checked by caller
-	WRITE_LOG(href_logfile, "HREF: [text]")
-
 /proc/log_unit_test(text)
 	to_world_log("## UNIT_TEST: [text]")
 
@@ -283,6 +279,7 @@
 #define log_reftracker(msg)
 #endif
 
+<<<<<<< HEAD
 /proc/log_tgui(user_or_client, text)
 	if(!text)
 		stack_trace("Pointless log_tgui message")
@@ -299,6 +296,8 @@
 	entry += ":\n[text]"
 	WRITE_LOG(diary, entry)
 
+=======
+>>>>>>> 99f944f240... Merge pull request #15530 from ItsSelis/tgchat-part1
 /proc/log_asset(text)
 	WRITE_LOG(diary, "ASSET: [text]")
 
