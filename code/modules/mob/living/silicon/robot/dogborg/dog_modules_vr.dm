@@ -241,6 +241,8 @@
 	icon_state = "synthtongue"
 	hitsound = 'sound/effects/attackblob.ogg'
 	var/emagged = 0
+	var/datum/matter_synth/water = null //CHOMPAdd readds water
+	var/busy = 0 	//CHOMPAdd prevets abuse
 
 /obj/item/device/robot_tongue/New()
 	..()
@@ -269,16 +271,49 @@
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if(user.client && (target in user.client.screen))
 		to_chat(user, "<span class='warning'>You need to take \the [target.name] off before cleaning it!</span>")
+	//CHOMPADD Start
+	if(busy)
+		to_chat(user, "<span class='warning'>You are already licking something else.</span>")
 		return
+	if(istype(target, /obj/structure/sink) || istype(target, /obj/structure/toilet)) //Dog vibes.
+		if (water.energy == water.max_energy && istype(target, /obj/structure/sink)) return
+		if (water.energy == water.max_energy && istype(target, /obj/structure/toilet))
+			to_chat(user, "<span class='notice'>You refrain from lapping water from the [target.name] with your reserves filled.</span>")
+			return
+		user.visible_message("<span class='filter_notice'>[user] begins to lap up water from [target.name].</span>", "<span class='notice'>You begin to lap up water from [target.name].</span>")
+		busy = 1
+		if(do_after(user, 50))
+			busy = 0
+			water.add_charge(50)
+			to_chat(src, "<span class='filter_notice'>You refill some of your water reserves.</span>")
+	else if(water.energy < 5)
+		to_chat(user, "<span class='notice'>Your mouth feels dry. You should drink up some water .</span>")
+	//CHOMPADD End
+		return
+	//CHOMPADD Start
+	else if(istype(target,/obj/effect/decal/cleanable))
+		user.visible_message("<span class='filter_notice'>[user] begins to lick off \the [target.name].</span>", "<span class='notice'>You begin to lick off \the [target.name]...</span>")
+		busy = 1
+		if(do_after(user, 50))
+			busy = 0
+			to_chat(user, "<span class='notice'>You finish licking off \the [target.name].</span>")
+			water.use_charge(5)
+			qdel(target)
+			var/mob/living/silicon/robot/R = user
+			R.cell.charge += 50
+	//CHOMPADD End
 	else if(istype(target,/obj/item))
 		if(istype(target,/obj/item/trash))
 			user.visible_message("<span class='filter_notice'>[user] nibbles away at \the [target.name].</span>", "<span class='notice'>You begin to nibble away at \the [target.name]...</span>")
+			busy = 1 //CHOMPAdd prevets abuse
 			if(do_after (user, 50))
+				busy = 0 //CHOMPAdd prevets abuse
 				user.visible_message("<span class='filter_notice'>[user] finishes eating \the [target.name].</span>", "<span class='notice'>You finish eating \the [target.name].</span>")
 				to_chat(user, "<span class='notice'>You finish off \the [target.name].</span>")
 				qdel(target)
 				var/mob/living/silicon/robot/R = user
 				R.cell.charge += 250
+				water.use_charge(5)  //CHOMPAdd
 			return
 		if(istype(target,/obj/item/weapon/reagent_containers/food))
 			user.visible_message("[user] nibbles away at \the [target.name].", "<span class='notice'>You begin to nibble away at \the [target.name]...</span>")
@@ -291,14 +326,28 @@
 			return
 		if(istype(target,/obj/item/weapon/cell))
 			user.visible_message("<span class='filter_notice'>[user] begins cramming \the [target.name] down its throat.</span>", "<span class='notice'>You begin cramming \the [target.name] down your throat...</span>")
+			busy = 1 //CHOMPAdd prevets abuse
 			if(do_after (user, 50))
+				busy = 0 //CHOMPAdd prevets abuse
 				user.visible_message("<span class='filter_notice'>[user] finishes gulping down \the [target.name].</span>", "<span class='notice'>You finish swallowing \the [target.name].</span>")
 				to_chat(user, "<span class='notice'>You finish off \the [target.name], and gain some charge!</span>")
 				var/mob/living/silicon/robot/R = user
 				var/obj/item/weapon/cell/C = target
 				R.cell.charge += C.charge / 3
+				water.use_charge(5) //CHOMPAdd
 				qdel(target)
 			return
+		//CHOMPAdd Start
+		user.visible_message("<span class='filter_notice'>[user] begins to lick \the [target.name] clean...</span>", "<span class='notice'>You begin to lick \the [target.name] clean...</span>")
+		busy = 1
+		if(do_after(user, 50, exclusive = TRUE))
+			busy = 0
+			to_chat(user, "<span class='notice'>You clean \the [target.name].</span>")
+			water.use_charge(5)
+			var/obj/effect/decal/cleanable/C = locate() in target
+			qdel(C)
+			target.clean_blood()
+		//CHOMPADD End
 	else if(ishuman(target))
 		if(src.emagged)
 			var/mob/living/silicon/robot/R = user
@@ -315,9 +364,26 @@
 		else
 			user.visible_message("<span class='notice'>\The [user] affectionately licks all over \the [target]'s face!</span>", "<span class='notice'>You affectionately lick all over \the [target]'s face!</span>")
 			playsound(src, 'sound/effects/attackblob.ogg', 50, 1)
+			water.use_charge(5) //CHOMPAdd
 			var/mob/living/carbon/human/H = target
 			if(H.species.lightweight == 1)
 				H.Weaken(3)
+	//CHOMPAdd Start
+	else
+		user.visible_message("<span class='filter_notice'>[user] begins to lick \the [target.name] clean...</span>", "<span class='notice'>You begin to lick \the [target.name] clean...</span>")
+		busy = 1
+		if(do_after(user, 50))
+			busy = 0
+			to_chat(user, "<span class='notice'>You clean \the [target.name].</span>")
+			var/obj/effect/decal/cleanable/C = locate() in target
+			qdel(C)
+			target.clean_blood()
+			water.use_charge(5)
+			if(istype(target, /turf/simulated))
+				var/turf/simulated/T = target
+				T.dirt = 0
+	busy = 0
+	//CHOMPADD End
 	return
 
 /obj/item/pupscrubber
