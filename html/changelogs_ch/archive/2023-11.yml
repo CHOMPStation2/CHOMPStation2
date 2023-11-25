@@ -196,8 +196,6 @@
   - bugfix: Engineers can now spawn with AR-E Glasses
   - soundadd: New SFX for entering mechs.
   - soundadd: mechsteps now use different logic for future additions.
-  CHOMPStation2:
-  - code_imp: tgchat code (part 1)
   FluffMedic:
   - bugfix: Adds code to sawn-off shot guns that should allow reloading
   - bugfix: Disables staves melee immunity.
@@ -210,3 +208,4 @@
   - qol: Devoured are ignored in greater and lesser virus selection
   - qol: Devoured can no longer be event & admin infected
   - rscadd: Added the Xenobiology Bag to the standard Level 3 Science locker
+  - code_imp: tgchat code (part 1)
