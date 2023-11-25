@@ -193,3 +193,5 @@
   Upstream:
   - rscadd: Added vorebelly sprites to the V2 service hound and V2 dark service hound
   - rscdel: Removed sleep toxin from tofurkey
+  - qol: Devoured are ignored in greater and lesser virus selection
+  - qol: Devoured can no longer be event & admin infected
