@@ -242,7 +242,7 @@
 	hitsound = 'sound/effects/attackblob.ogg'
 	var/emagged = 0
 	var/datum/matter_synth/water = null //CHOMPAdd readds water
-	var/busy = 0 	//CHOMPAdd prevets abuse
+	var/busy = 0 	//CHOMPAdd prevents abuse
 
 /obj/item/device/robot_tongue/New()
 	..()
@@ -305,9 +305,9 @@
 	else if(istype(target,/obj/item))
 		if(istype(target,/obj/item/trash))
 			user.visible_message("<span class='filter_notice'>[user] nibbles away at \the [target.name].</span>", "<span class='notice'>You begin to nibble away at \the [target.name]...</span>")
-			busy = 1 //CHOMPAdd prevets abuse
+			busy = 1 //CHOMPAdd prevents abuse
 			if(do_after (user, 50))
-				busy = 0 //CHOMPAdd prevets abuse
+				busy = 0 //CHOMPAdd prevents abuse
 				user.visible_message("<span class='filter_notice'>[user] finishes eating \the [target.name].</span>", "<span class='notice'>You finish eating \the [target.name].</span>")
 				to_chat(user, "<span class='notice'>You finish off \the [target.name].</span>")
 				qdel(target)
@@ -326,9 +326,9 @@
 			return
 		if(istype(target,/obj/item/weapon/cell))
 			user.visible_message("<span class='filter_notice'>[user] begins cramming \the [target.name] down its throat.</span>", "<span class='notice'>You begin cramming \the [target.name] down your throat...</span>")
-			busy = 1 //CHOMPAdd prevets abuse
+			busy = 1 //CHOMPAdd prevents abuse
 			if(do_after (user, 50))
-				busy = 0 //CHOMPAdd prevets abuse
+				busy = 0 //CHOMPAdd prevents abuse
 				user.visible_message("<span class='filter_notice'>[user] finishes gulping down \the [target.name].</span>", "<span class='notice'>You finish swallowing \the [target.name].</span>")
 				to_chat(user, "<span class='notice'>You finish off \the [target.name], and gain some charge!</span>")
 				var/mob/living/silicon/robot/R = user
