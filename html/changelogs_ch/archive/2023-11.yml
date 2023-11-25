@@ -190,6 +190,8 @@
   theXDkidoflol:
   - balance: Size and compliance NIFs drain durability much less.
 2023-11-25:
+  CHOMPStation2:
+  - code_imp: tgchat code (part 1)
   Upstream:
   - rscadd: Added vorebelly sprites to the V2 service hound and V2 dark service hound
   - rscdel: Removed sleep toxin from tofurkey
