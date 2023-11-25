@@ -4,7 +4,7 @@
  * @license MIT
  */
 
-import { createLogger } from 'tgui/logging';
+import { createLogger } from 'tgui_ch/logging'; // CHOMPEdit - tgui_ch
 
 const logger = createLogger('AudioPlayer');
 

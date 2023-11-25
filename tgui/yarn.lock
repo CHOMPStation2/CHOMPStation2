@@ -9470,9 +9470,9 @@ __metadata:
     common: "workspace:*"
     dompurify: ^2.3.1
     inferno: ^7.4.8
-    tgui: "workspace:*"
     tgui-dev-server: "workspace:*"
     tgui-polyfill: "workspace:*"
+    tgui_ch: "workspace:*"
   languageName: unknown
   linkType: soft
 
@@ -9551,7 +9551,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"tgui_ch@workspace:packages/tgui_ch":
+"tgui_ch@workspace:*, tgui_ch@workspace:packages/tgui_ch":
   version: 0.0.0-use.local
   resolution: "tgui_ch@workspace:packages/tgui_ch"
   dependencies:

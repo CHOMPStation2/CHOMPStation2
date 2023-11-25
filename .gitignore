@@ -37,7 +37,7 @@ vchat.db*
 *.lk
 *.int
 *.backup
-<<<<<<< HEAD
+
 ### https://raw.github.com/github/gitignore/cc542de017c606138a87ee4880e5f06b3a306def/Global/Linux.gitignore
 
 *~
@@ -118,12 +118,10 @@ $RECYCLE.BIN/
 #Sublime
 *.sublime-project
 *.sublime-workspace
-=======
 *.before
 *.pyc
 *.pid
 cfg/
->>>>>>> 99f944f240... Merge pull request #15530 from ItsSelis/tgchat-part1
 
 #Ignore everything in datafolder and subdirectories
 /data/**/*

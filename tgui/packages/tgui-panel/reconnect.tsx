@@ -1,4 +1,4 @@
-import { Button } from 'tgui/components';
+import { Button } from 'tgui_ch/components'; // CHOMPEdit - tgui_ch
 
 let url: string | null = null;
 
