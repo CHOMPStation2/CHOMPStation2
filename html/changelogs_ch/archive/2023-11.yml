@@ -189,3 +189,23 @@
   - imageadd: Demonic halo icons
   theXDkidoflol:
   - balance: Size and compliance NIFs drain durability much less.
+2023-11-25:
+  Aroliacue:
+  - rscadd: Xenomorph Queen trait, with experimental buff ability
+  - qol: Xenomorph Hybrids can now clear weeds by harm intent clicking
+  - bugfix: Engineers can now spawn with AR-E Glasses
+  - soundadd: New SFX for entering mechs.
+  - soundadd: mechsteps now use different logic for future additions.
+  FluffMedic:
+  - bugfix: Adds code to sawn-off shot guns that should allow reloading
+  - bugfix: Disables staves melee immunity.
+  - bugfix: Temp. raising to cryogel's mixing to allow it to be made.
+  ItsSelis:
+  - code_imp: Skips the CI for autochangelogs
+  Upstream:
+  - rscadd: Added vorebelly sprites to the V2 service hound and V2 dark service hound
+  - rscdel: Removed sleep toxin from tofurkey
+  - qol: Devoured are ignored in greater and lesser virus selection
+  - qol: Devoured can no longer be event & admin infected
+  - rscadd: Added the Xenobiology Bag to the standard Level 3 Science locker
+  - code_imp: tgchat code (part 1)
