@@ -51,6 +51,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors)
+"dI" = (
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors)
 "eB" = (
 /obj/item/taperoll/police,
 /turf/simulated/floor/wood,
@@ -93,6 +100,20 @@
 /obj/item/clothing/shoes/bhop,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/sky)
+"hq" = (
+/obj/item/stack/cable_coil/random,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/machinery/power/port_gen/pacman/super,
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors)
 "hF" = (
 /turf/simulated/floor/outdoors/sidewalk/slab{
 	icon_state = "slab2"
@@ -116,6 +137,10 @@
 	},
 /turf/simulated/sky/moving/south,
 /area/awaymission/diescraper/sky)
+"jR" = (
+/obj/effect/floor_decal/stairs/dark_stairs,
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors)
 "jW" = (
 /obj/structure/prop/machine/comm_tower/starts_on,
 /turf/simulated/floor/reinforced{
@@ -183,6 +208,12 @@
 /obj/structure/prop/machine/comm_tower/starts_on,
 /turf/simulated/floor/reinforced,
 /area/awaymission/diescraper/indoors)
+"nj" = (
+/obj/effect/floor_decal/stairs/dark_stairs{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors)
 "nx" = (
 /obj/item/tape/police,
 /turf/simulated/floor/tiled/monotile,
@@ -193,6 +224,9 @@
 	teleport_y = 199
 	},
 /turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors)
+"pl" = (
+/turf/simulated/floor/tiled/techfloor,
 /area/awaymission/diescraper/indoors)
 "ps" = (
 /obj/effect/floor_decal/stairs/dark_stairs{
@@ -210,6 +244,9 @@
 	temperature = 225.15
 	},
 /area/awaymission/diescraper/roof)
+"pO" = (
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/awaymission/diescraper/indoors)
 "qh" = (
 /obj/effect/step_trigger/teleporter/deathfall{
 	teleport_x = 55;
@@ -232,6 +269,7 @@
 	teleport_y = 42;
 	pixel_x = -1
 	},
+/obj/effect/floor_decal/stairs/dark_stairs,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors)
 "rm" = (
@@ -279,6 +317,12 @@
 /area/awaymission/diescraper/outside)
 "tr" = (
 /turf/simulated/floor/wood,
+/area/awaymission/diescraper/indoors)
+"tU" = (
+/obj/structure/sign/directions/eva{
+	dir = 5
+	},
+/turf/simulated/wall/r_concrete,
 /area/awaymission/diescraper/indoors)
 "ub" = (
 /obj/effect/step_trigger/teleporter/poi{
@@ -356,6 +400,12 @@
 	temperature = 293.15
 	},
 /area/awaymission/diescraper/outside)
+"yb" = (
+/obj/item/stack/material/uranium{
+	amount = 12
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors)
 "yj" = (
 /turf/simulated/wall/titanium,
 /area/awaymission/diescraper/indoors)
@@ -732,6 +782,18 @@
 	outdoors = 1
 	},
 /area/awaymission/diescraper/outside)
+"RO" = (
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors)
 "RY" = (
 /obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/plating,
@@ -774,6 +836,7 @@
 	teleport_y = 42;
 	pixel_x = -1
 	},
+/obj/effect/floor_decal/stairs/dark_stairs,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors)
 "TF" = (
@@ -814,12 +877,22 @@
 	temperature = 293.15
 	},
 /area/awaymission/diescraper/outside)
+"Vg" = (
+/obj/machinery/door/airlock,
+/turf/simulated/floor/tiled/techfloor,
+/area/awaymission/diescraper/indoors)
 "We" = (
 /obj/effect/step_trigger/teleporter/poi{
 	teleport_x = 94;
 	teleport_y = 80
 	},
 /turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors)
+"Wg" = (
+/turf/simulated/floor/outdoors/sidewalk/slab{
+	icon_state = "slab2";
+	temperature = 293.15
+	},
 /area/awaymission/diescraper/indoors)
 "Wk" = (
 /obj/effect/floor_decal/corner/white/border/shifted,
@@ -890,6 +963,14 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/milspec/raised,
+/area/awaymission/diescraper/indoors)
+"Zp" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors)
 
 (1,1,1) = {"
@@ -48137,12 +48218,12 @@ iE
 Iw
 Iw
 Iw
+iE
 Iw
 Iw
 Iw
-Iw
-Iw
-Iw
+iE
+iE
 Iw
 Iw
 Iw
@@ -48651,9 +48732,9 @@ In
 iL
 iE
 iE
-Iw
-Iw
-Iw
+Wg
+Wg
+jR
 Iw
 Iw
 Iw
@@ -48909,9 +48990,9 @@ In
 iL
 iE
 iE
-Iw
-Iw
-Iw
+Wg
+Wg
+jR
 Iw
 Iw
 Iw
@@ -49167,20 +49248,20 @@ In
 iL
 iE
 iE
-Iw
-Iw
+nj
+nj
+tU
 iE
 iE
 iE
 iE
 iE
+ws
+ws
+Vg
 iE
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
+iE
+iE
 Iw
 Iw
 Iw
@@ -49425,20 +49506,20 @@ In
 iL
 iE
 iE
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
+Wg
+Wg
+jR
+jR
+jR
+Wg
+Wg
 iE
 Iw
 Iw
+pl
 Iw
 Iw
-Iw
-Iw
+iE
 Iw
 Iw
 Iw
@@ -49683,20 +49764,20 @@ In
 iL
 iE
 iE
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
+Wg
+Wg
+jR
+jR
+jR
+Wg
+Wg
 iE
 Iw
 Iw
+pl
 Iw
 Iw
-Iw
-Iw
+ws
 Iw
 Iw
 Iw
@@ -49946,15 +50027,15 @@ iE
 iE
 iE
 iE
-Iw
-Iw
+nj
+nj
 iE
 Iw
 Iw
+pl
 Iw
 Iw
-Iw
-Iw
+ws
 Iw
 Iw
 Iw
@@ -50198,21 +50279,21 @@ In
 In
 iL
 iE
-Iw
-Iw
-Iw
-Iw
-Iw
+iE
+iE
+iE
+iE
+iE
+iE
+nj
+nj
 iE
 Iw
 Iw
+pl
+Iw
+Iw
 iE
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
 Iw
 Iw
 Iw
@@ -50456,21 +50537,21 @@ In
 In
 iL
 iE
-Iw
-Iw
-Iw
-Iw
-Iw
+iE
+iE
+iE
+iE
+iE
+iE
+nj
+nj
 iE
 Iw
 Iw
+pl
+Iw
+Iw
 iE
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
 Iw
 Iw
 Iw
@@ -50720,15 +50801,15 @@ iE
 iE
 iE
 iE
-Iw
-Iw
+nj
+nj
 iE
 Iw
 Iw
+pl
 Iw
 Iw
-Iw
-Iw
+iE
 Iw
 Iw
 Iw
@@ -50975,18 +51056,18 @@ iE
 iE
 iE
 TE
-Iw
-Iw
-Iw
-Iw
-Iw
+jR
+jR
+jR
+Wg
+Wg
 iE
 Iw
 Iw
+pl
 Iw
 Iw
-Iw
-Iw
+iE
 Iw
 Iw
 Iw
@@ -51233,18 +51314,18 @@ iE
 iE
 iE
 ri
-Iw
-Iw
-Iw
-Iw
-Iw
+jR
+jR
+jR
+Wg
+Wg
 iE
 Iw
 Iw
+pl
 Iw
 Iw
-Iw
-Iw
+iE
 Iw
 Iw
 Iw
@@ -51497,12 +51578,12 @@ iE
 iE
 iE
 iE
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
+pO
+pO
+pl
+pO
+pO
+ws
 Iw
 Iw
 Iw
@@ -51746,21 +51827,21 @@ In
 iL
 iE
 iE
-Iw
-Iw
-Iw
-Iw
-Iw
+iE
+iE
+iE
 iE
 Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
+dI
+Zp
+hq
+iE
+pO
+pO
+pl
+pO
+pO
+ws
 Iw
 Iw
 Iw
@@ -52004,21 +52085,21 @@ In
 iL
 iE
 iE
+iE
+iE
+iE
+iE
+yb
 Iw
 Iw
+RO
 Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
+pO
+pO
+pl
+pO
+pO
+iE
 Iw
 Iw
 Iw
@@ -52271,10 +52352,10 @@ iE
 iE
 iE
 iE
-iE
-iE
-iE
-iE
+ws
+ws
+ws
+ws
 iE
 iE
 iE
@@ -53561,10 +53642,10 @@ iE
 iE
 iE
 iE
-iE
-iE
-iE
-iE
+ws
+ws
+ws
+ws
 iE
 iE
 iL

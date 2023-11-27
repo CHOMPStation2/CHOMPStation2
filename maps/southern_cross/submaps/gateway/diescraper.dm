@@ -1,4 +1,10 @@
 
+/obj/machinery/power/rtg/fake_z_wires //A 'reactor' disguised as a multi Z wire coming from godknowswhereium
+	name = "Multi-Floor Wire"
+	desc = "A thick industrial wire connecting power between all of the floors of the buildings."
+	power_gen = 150000
+	icon = 'modular_chomp/icons/obj/power.dmi'
+	icon_state = "rtgfakez"
 
 //Areas
 /area/awaymission/diescraper
