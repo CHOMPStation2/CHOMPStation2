@@ -212,3 +212,7 @@
 2023-11-26:
   Verkister:
   - qol: Buffed flushies glog limits.
+2023-11-28:
+  Upstream:
+  - bugfix: fixed DNA bounds defines that previously broke toggling genetic powers
+      in the admin player planel
