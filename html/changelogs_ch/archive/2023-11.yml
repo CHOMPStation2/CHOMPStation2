@@ -216,3 +216,13 @@
   Upstream:
   - bugfix: fixed DNA bounds defines that previously broke toggling genetic powers
       in the admin player planel
+2023-11-29:
+  Aroliacue:
+  - rscadd: Added Concentrated Radium and Tricordrazine as selectable liquid types
+      for the vore panel. Concentrated Radium builds up radiation damage for themed
+      digestion, and Tricordrazine heals.
+  - qol: Curabitur cannon and macrobattery descriptions improved to provide more information
+      on what they actually do.
+  - balance: Significantly reduced the recharge time of the Curabitur cannon macrobattery
+      cells. Previously regular mediguns were significantly more efficient despite
+      being readily available, whereas the Curabitur is very rare.
