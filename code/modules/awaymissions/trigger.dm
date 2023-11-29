@@ -4,13 +4,14 @@
 
 /obj/effect/step_trigger/message/Trigger(mob/M as mob)
 	if(M.client)
-		to_chat(M, "<span class='info'>[message]</span>")
+		to_chat(M, "[message]")	//CHOMPEdit - removed info span. These are map effects that the mapper edits, you can use your own spans.
 		if(once)
 			qdel(src)
 
 /obj/effect/step_trigger/teleport_fancy
 	var/locationx
 	var/locationy
+	var/locationz	//CHOMPEdit - Why wasn't there a z for this
 	var/uses = 1	//0 for infinite uses
 	var/entersparks = 0
 	var/exitsparks = 0
@@ -18,8 +19,10 @@
 	var/exitsmoke = 0
 
 /obj/effect/step_trigger/teleport_fancy/Trigger(mob/M as mob)
-	var/dest = locate(locationx, locationy, z)
-	M.Move(dest)
+	if(!locationz)
+		locationz = src.z	//CHOMPEdit - Safety net to not break existing teleport triggers
+	var/dest = locate(locationx, locationy, locationz)	//CHOMPEdit - added locationz
+	M.forceMove(dest)	//CHOMPEdit - Teleports should be forceMove, not Move
 
 	if(entersparks)
 		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
