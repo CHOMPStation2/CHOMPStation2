@@ -81,27 +81,26 @@
 //Eclipse mob stuff
 
 /obj/item/projectile/energy/blob/moth
-	damage = 20
-	armor_penetration = 25
+	damage = 15
+	armor_penetration = 15
 	my_chems = list("fuel", "mold")
 	flammability = 0.25
 	modifier_type_to_apply = /datum/modifier/fire
 	modifier_duration = 6 SECONDS
 	color = "#38b9ff"
-	speed = 2.6
+	speed = 3.2
 
 /obj/item/projectile/bullet/pistol/medium/ap/eclipse
-	armor_penetration = 20
 	ricochets = 1
 	ricochets_max = 8
 	ricochet_chance = 100
-	speed = 2.6
+	speed = 3.2
 
 /obj/item/projectile/energy/electrode/eclipse
 	damage = 20
 	damage_type = BURN
 	color = "#38b9ff"
-	speed = 2.6
+	speed = 3.2
 
 /obj/item/projectile/arc/fragmentation/moth
 	name = "solar mortar"
@@ -113,16 +112,24 @@
 	fragment_amount = 3 // Same as a grenade.
 	spread_range = 7
 
-/obj/item/projectile/beam/sniper/eclipse
-	armor_penetration = 50
-	damage = 50
+/obj/item/projectile/energy/mob/heavysniper
+	armor_penetration = 40
+	damage = 40
+	speed = 1.2
+	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE
+	name = "sniper beam"
+	icon_state = "impact_xray"
 
 /obj/item/projectile/energy/declone/burn
 	damage = 15
-	armor_penetration = 10
 	nodamage = 0
-	speed = 2.6
-	irradiate = 60
+	speed = 3.2
+	irradiate = 30
 
-/obj/item/projectile/bullet/shotgun/slow
-	speed = 2.0
+/obj/item/projectile/energy/mob/ionbeam
+	name = "Ion Burst"
+	damage = 10
+	damage_type = ELECTROMAG
+	light_color = "#00CCFF"
+	icon_state = "impact_blue"
+	fire_sound = 'sound/weapons/Laser.ogg'
