@@ -90,7 +90,9 @@
 	"Digestive acid",
 	"Diluted digestive acid",
 	"Lube",
-	"Biomass"
+	"Biomass",
+	"Concentrated Radium",
+	"Tricordrazine"
 	)
 
 	//CHOMP - vore sprites
@@ -340,6 +342,21 @@
 			gen_cost = 10
 			reagentid = "biomass"
 			reagentcolor = "#DF9FBF"
+		if("Concentrated Radium")
+			generated_reagents = list("concentrated_radium" = 1)
+			reagent_name = "concentrated radium"
+			gen_amount = 1
+			gen_cost = 1
+			reagentid = "concentrated_radium"
+			reagentcolor = "#C7C7C7"
+		if("Tricordrazine")
+			generated_reagents = list("tricordrazine" = 1)
+			reagent_name = "tricordrazine"
+			gen_amount = 1
+			gen_cost = 10
+			reagentid = "tricordrazine"
+			reagentcolor = "#8040FF"
+
 
 /////////////////////// FULLNESS MESSAGES //////////////////////
 
