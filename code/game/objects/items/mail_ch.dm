@@ -120,7 +120,7 @@
 			user.put_in_hands(stuff)
 		else
 			stuff.forceMove(drop_location())
-	playsound(loc, 'sound/items/poster_ripped.ogg', 100, TRUE)
+	playsound(loc, 'sound/items/poster_ripped.ogg', 300, TRUE)
 	qdel(src)
 
 /obj/item/mail/proc/initialize_for_recipient(mob/new_recipient)
