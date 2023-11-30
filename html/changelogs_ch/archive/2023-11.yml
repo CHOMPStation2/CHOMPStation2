@@ -226,3 +226,17 @@
   - balance: Significantly reduced the recharge time of the Curabitur cannon macrobattery
       cells. Previously regular mediguns were significantly more efficient despite
       being readily available, whereas the Curabitur is very rare.
+2023-11-30:
+  FluffMedic:
+  - rscadd: Enabled three new things for genetics
+  TheCaramelion:
+  - rscadd: Alternative Cargo Technician title
+  - imageadd: Mailman suit and hat
+  - balance: Less mail per minute
+  - balance: Less junk mail per crate
+  - balance: NT mugs and money chances reduced
+  - bugfix: Junk mail has stamps again
+  - bugfix: Reagents will be added to beakers now
+  - bugfix: Event antags no longer gets mail
+  Upstream:
+  - bugfix: naming of the sleeper sprite of the v2 clerical hound
