@@ -227,5 +227,7 @@
       cells. Previously regular mediguns were significantly more efficient despite
       being readily available, whereas the Curabitur is very rare.
 2023-11-30:
+  FluffMedic:
+  - rscadd: Enabled three new things for genetics
   Upstream:
   - bugfix: naming of the sleeper sprite of the v2 clerical hound
