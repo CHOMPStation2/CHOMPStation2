@@ -1,0 +1,24 @@
+2023-12-01:
+  FluffMedic:
+  - balance: Nerfed Eclipse mob health, made it so their special attacks are used
+      more often.
+  - maptweak: tweaked some outsider pods
+  - bugfix: A few gaps in a previous PR
+  Kashargul:
+  - qol: cleanup of medical borg naming and removal of unnecessary overwrite code.
+  - qol: cleanup of mining borg overwrites.
+  - qol: chompadd W0RM sprites moved to modular_chomp
+  - rscadd: Blade as ERT module
+  - rscadd: Paragon.Corps icon to paperwork for events
+  - rscadd: Trader icon to paperwork for events
+  - bugfix: naming of the casino telemut injector, had been named Telepathy, but is
+      Telekinesis
+  - rscadd: 're-adds: borg water supply'
+  - rscadd: 're-adds: lick cleaning'
+  - rscadd: 're-adds: verb to refill fire extinguisher from water supply'
+  - bugfix: licking exploit which allowed borgs to gain massive charges from a single
+      cell
+  TheCaramelion:
+  - bugfix: Mailman alt title starts with a PDA too
+  Verkister:
+  - bugfix: Fixed bigdragon double vorgan init
