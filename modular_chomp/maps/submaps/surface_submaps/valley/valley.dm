@@ -28,12 +28,18 @@
 #include "teppifarm.dmm"
 #include "vault.dmm"
 #include "xenobio.dmm"
-#include  "xenobioeclipse.dmm"
+#include "xenobioeclipse.dmm"
 #include "warzone.dmm"
 #include "frozenlab.dmm"
 #include "terror.dmm"
 #include "toxiclake.dmm"
 #include "laserpuzzle.dmm"
+#include "alientomb.dmm"
+#include "eclipseblob.dmm"
+#include "eclipsecargo.dmm"
+#include "raidedpod.dmm"
+#include "paperworks.dmm"
+#include "terraformer.dmm"
 #endif
 
 /datum/map_template/surface/valley
@@ -326,4 +332,40 @@
 	name = "Laser Dome"
 	desc = "A strange building with a simple puzzle of sorts."
 	mappath = 'modular_chomp/maps/submaps/surface_submaps/valley/laserpuzzle.dmm'
+	cost = 25
+
+/datum/map_template/surface/valley/wall/alientomb
+	name = "Alien Tomb"
+	desc = "A strange building with a simple puzzle of sorts."
+	mappath = 'modular_chomp/maps/submaps/surface_submaps/valley/alientomb.dmm'
+	cost = 25
+
+/datum/map_template/surface/valley/wall/eclipseblob
+	name = "Eclipse Blob"
+	desc = "Blob escape 2."
+	mappath = 'modular_chomp/maps/submaps/surface_submaps/valley/eclipseblob.dmm'
+	cost = 25
+
+/datum/map_template/surface/valley/inner/eclipsecargo
+	name = "Eclipse Cargo"
+	desc = "A small cargo shuttle of the eclipse."
+	mappath = 'modular_chomp/maps/submaps/surface_submaps/valley/eclipsecargo.dmm'
+	cost = 25
+
+/datum/map_template/surface/valley/wall/paperworks
+	name = "Paper Dome"
+	desc = "A building with some minor paperwork."
+	mappath = 'modular_chomp/maps/submaps/surface_submaps/valley/paperworks.dmm'
+	cost = 25
+
+/datum/map_template/surface/valley/inner/raidedpod
+	name = "Raided Pod"
+	desc = "A crashed escape pod."
+	mappath = 'modular_chomp/maps/submaps/surface_submaps/valley/raidedpod.dmm'
+	cost = 25
+
+/datum/map_template/surface/valley/inner/terraformer
+	name = "Terraformer"
+	desc = "A strange attempt at terraforming."
+	mappath = 'modular_chomp/maps/submaps/surface_submaps/valley/terraformer.dmm'
 	cost = 25
