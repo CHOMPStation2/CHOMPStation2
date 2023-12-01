@@ -4,6 +4,8 @@
       more often.
   - maptweak: tweaked some outsider pods
   - bugfix: A few gaps in a previous PR
+  - maptweak: alters the loot and looks of some valley POIs, alongside adding some
+      more.
   Kashargul:
   - qol: cleanup of medical borg naming and removal of unnecessary overwrite code.
   - qol: cleanup of mining borg overwrites.
