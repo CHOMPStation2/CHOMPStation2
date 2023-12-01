@@ -137,7 +137,10 @@
 /turf/simulated/shuttle/floor/purple,
 /area/submap/eclipsecargo)
 "w" = (
-/obj/structure/table/glass,
+/obj/structure/safe,
+/obj/item/weapon/rig/ch/clockwork,
+/obj/item/weapon/gun/energy/clockwork,
+/obj/item/stack/material/void_opal,
 /turf/simulated/shuttle/floor/red,
 /area/submap/eclipsecargo)
 "x" = (
@@ -252,7 +255,9 @@
 /turf/simulated/shuttle/floor/purple,
 /area/submap/eclipsecargo)
 "O" = (
-/obj/structure/closet/secure_closet/freezer/fridge,
+/obj/structure/bed,
+/obj/item/weapon/bedsheet,
+/obj/structure/curtain/bed,
 /obj/item/weapon/rig/ch/clockwork,
 /turf/simulated/shuttle/floor/purple,
 /area/submap/eclipsecargo)
@@ -520,7 +525,7 @@ h
 K
 y
 B
-O
+v
 b
 b
 D
@@ -570,11 +575,11 @@ g
 K
 y
 B
-O
+v
 b
 b
 D
-e
+D
 B
 a
 o
@@ -598,7 +603,7 @@ B
 i
 b
 X
-D
+O
 D
 B
 a

@@ -160,9 +160,15 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseblob)
 "sE" = (
-/obj/effect/floor_decal/corner/black/diagonal,
-/obj/structure/blob/factory,
-/turf/simulated/floor/tiled/dark,
+/obj/structure/table/steel,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/item/stack/material/void_opal,
+/turf/simulated/floor/tiled/yellow,
 /area/submap/eclipseblob)
 "tF" = (
 /obj/effect/floor_decal/corner/black/diagonal,
@@ -743,11 +749,11 @@ gb
 jt
 In
 tY
-sE
+gb
 Oi
 fm
 Zf
-sE
+gb
 Mx
 In
 cI
@@ -851,7 +857,7 @@ np
 np
 np
 In
-Cy
+sE
 hH
 Cy
 In
@@ -863,11 +869,11 @@ gb
 jt
 In
 tY
-sE
+gb
 po
 fm
 Ph
-sE
+gb
 Mx
 In
 cI
