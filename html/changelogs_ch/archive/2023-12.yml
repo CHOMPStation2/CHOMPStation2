@@ -1,4 +1,7 @@
 2023-12-01:
+  FluffMedic:
+  - balance: Nerfed Eclipse mob health, made it so their special attacks are used
+      more often.
   Kashargul:
   - qol: cleanup of medical borg naming and removal of unnecessary overwrite code.
   - qol: cleanup of mining borg overwrites.
