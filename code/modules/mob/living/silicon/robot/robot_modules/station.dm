@@ -205,9 +205,19 @@ var/global/list/robot_modules = list(
 // Cyborgs (non-drones), default loadout. This will be given to every module.
 /obj/item/weapon/robot_module/robot/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
+	//CHOMPEdit Start
+	var/datum/matter_synth/water = new /datum/matter_synth(500)
+	water.name = "Water reserves"
+	water.recharge_rate = 10
+	water.max_energy = 1000
+	robot.water_res = water
+	synths += water
+	var/obj/item/device/robot_tongue/T = new /obj/item/device/robot_tongue(src)
+	T.water = water
+	src.modules += T
+	//CHOMPEdit End
 	src.modules += new /obj/item/device/gps/robot(src)
 	src.modules += new /obj/item/device/boop_module(src)
-	src.modules += new /obj/item/device/robot_tongue(src)
 	src.modules += new /obj/item/device/flash/robot(src)
 	src.modules += new /obj/item/weapon/extinguisher(src)
 	src.modules += new /obj/item/weapon/gripper/scene(src) //CHOMPEdit - Give all borgs a scene gripper
