@@ -455,8 +455,8 @@ var/list/mining_overlay_cache = list()
 				return
 
 			var/obj/item/weapon/melee/shock_maul/S = W
-			if(!S.wielded || !S.status)	//if we're not wielded OR not powered up, do nothing
-				to_chat(user, "<span class='warning'>\The [src] must be wielded in two hands and powered on to be used for mining!</span>")
+			if(!S.wielded)	//CHOMPEdit - slight maul buff
+				to_chat(user, "<span class='warning'>\The [W] must be wielded in two hands to be used for mining!</span>")	//CHOMPEdit - fixed improper name
 				return
 
 			var/newDepth = excavation_level + S.excavation_amount // Used commonly below

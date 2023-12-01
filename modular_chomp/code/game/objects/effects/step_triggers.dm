@@ -1,4 +1,5 @@
 var/static/list/mapped_autostrips = list()
+var/static/list/mapped_autostrips_mob = list()
 
 //Admin tool to automatically strip a human victim of all their equipment and genetics powers, and store them in a closet.
 //Equips Vox/Zaddat survival gear, and a few basic pieces of clothing
@@ -6,6 +7,7 @@ var/static/list/mapped_autostrips = list()
 	name = "Autostrip trigger. Set the targetid to match the effect/autostriptarget"
 	var/targetid = "Default"
 	var/obj/effect/autostriptarget/target
+	var/obj/effect/autostriptarget/mob/Mtarget
 	var/remove_implants = 0	//Havn't bothered to implement this yet
 	var/remove_mutations = 0
 
@@ -19,7 +21,8 @@ var/static/list/mapped_autostrips = list()
 	if(!target)
 		if(!initMappedLink())
 			return
-	H.forceMove(target.loc)
+	if(Mtarget)
+		H.forceMove(Mtarget.loc)
 	var/obj/locker = new /obj/structure/closet/secure_closet/mind(target.loc, mind_target = H.mind)
 	for(var/obj/item/W in H)
 		if(istype(W, /obj/item/weapon/implant/backup) || istype(W, /obj/item/device/nif))
@@ -62,6 +65,7 @@ var/static/list/mapped_autostrips = list()
 /obj/effect/step_trigger/autostrip/proc/initMappedLink()
 	. = FALSE
 	target = mapped_autostrips[targetid]
+	Mtarget = mapped_autostrips_mob[targetid]
 	if(target)
 		. = TRUE
 
@@ -80,3 +84,10 @@ var/static/list/mapped_autostrips = list()
 	. = ..()
 	if(targetid)
 		mapped_autostrips[targetid] = src
+
+/obj/effect/autostriptarget/mob
+	name = "Autostrip target to send mobs to."
+
+/obj/effect/autostriptarget/mob/Initialize(mapload)
+	if(targetid)
+		mapped_autostrips_mob[targetid] = src

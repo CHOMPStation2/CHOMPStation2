@@ -1,12 +1,18 @@
 /obj/effect/step_trigger/message
 	var/message	//the message to give to the mob
 	var/once = 1
+	var/list/mobs = list()	//CHOMPEdit - mobs we've sent our message to
 
 /obj/effect/step_trigger/message/Trigger(mob/M as mob)
+	//CHOMPEdit start - tweaked message trigger to be more sane
 	if(M.client)
-		to_chat(M, "[message]")	//CHOMPEdit - removed info span. These are map effects that the mapper edits, you can use your own spans.
 		if(once)
-			qdel(src)
+			if(M in mobs)
+				return
+			else
+				mobs += M
+		to_chat(M, "[message]")
+	//CHOMPEdit end
 
 /obj/effect/step_trigger/teleport_fancy
 	var/locationx
