@@ -1,4 +1,8 @@
 2023-12-01:
+  Kashargul:
+  - qol: cleanup of medical borg naming and removal of unnecessary overwrite code.
+  - qol: cleanup of mining borg overwrites.
+  - qol: chompadd W0RM sprites moved to modular_chomp
   TheCaramelion:
   - bugfix: Mailman alt title starts with a PDA too
   Verkister:
