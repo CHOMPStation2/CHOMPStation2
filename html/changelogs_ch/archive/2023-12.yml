@@ -13,6 +13,11 @@
   - rscadd: Trader icon to paperwork for events
   - bugfix: naming of the casino telemut injector, had been named Telepathy, but is
       Telekinesis
+  - rscadd: 're-adds: borg water supply'
+  - rscadd: 're-adds: lick cleaning'
+  - rscadd: 're-adds: verb to refill fire extinguisher from water supply'
+  - bugfix: licking exploit which allowed borgs to gain massive charges from a single
+      cell
   TheCaramelion:
   - bugfix: Mailman alt title starts with a PDA too
   Verkister:
