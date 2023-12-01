@@ -2,6 +2,7 @@
   FluffMedic:
   - balance: Nerfed Eclipse mob health, made it so their special attacks are used
       more often.
+  - maptweak: tweaked some outsider pods
   Kashargul:
   - qol: cleanup of medical borg naming and removal of unnecessary overwrite code.
   - qol: cleanup of mining borg overwrites.
