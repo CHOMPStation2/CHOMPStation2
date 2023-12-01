@@ -3,6 +3,11 @@
   - qol: cleanup of medical borg naming and removal of unnecessary overwrite code.
   - qol: cleanup of mining borg overwrites.
   - qol: chompadd W0RM sprites moved to modular_chomp
+  - rscadd: Blade as ERT module
+  - rscadd: Paragon.Corps icon to paperwork for events
+  - rscadd: Trader icon to paperwork for events
+  - bugfix: naming of the casino telemut injector, had been named Telepathy, but is
+      Telekinesis
   TheCaramelion:
   - bugfix: Mailman alt title starts with a PDA too
   Verkister:
