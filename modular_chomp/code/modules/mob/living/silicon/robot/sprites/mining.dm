@@ -27,44 +27,21 @@
 	rest_sprite_options = list("Default", "Bellyup")
 */
 
-//redefining the upstream modules, using the proper sprites from there to use another name.
+//sprite name overwrites
 /datum/robot_sprite/dogborg/tall/mining/meka
 	name = "MEKA - Mining"
-	sprite_icon_state = "meka"
-	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
-	has_vore_belly_sprites = FALSE
-	rest_sprite_options = list("Default", "Sit")
 
 /datum/robot_sprite/dogborg/tall/mining/mmeka
 	name = "NIKO - Mining"
-	sprite_icon_state = "mmeka"
-	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
-	rest_sprite_options = list("Default", "Sit")
 
 /datum/robot_sprite/dogborg/tall/mining/fmeka
 	name = "NIKA - Mining"
-	sprite_icon_state = "fmeka"
-	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
-	rest_sprite_options = list("Default", "Sit")
 
 /datum/robot_sprite/dogborg/tall/mining/k4t
 	name = "K4T - Mining"
-	sprite_icon_state = "k4t"
-	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
-	has_vore_belly_sprites = FALSE
-	rest_sprite_options = list("Default", "Bellyup")
 
 /datum/robot_sprite/dogborg/tall/mining/k4t_alt1
 	name = "K4Talt - Mining"
-	sprite_icon_state = "k4t_alt1"
-	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
-	has_vore_belly_sprites = FALSE
-	rest_sprite_options = list("Default", "Bellyup")
 
 //Upstream does not have those, if we want them, we should add them on top now
 /datum/robot_sprite/dogborg/tall/mining/ch
