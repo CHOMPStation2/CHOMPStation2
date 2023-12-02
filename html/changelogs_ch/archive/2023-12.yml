@@ -24,3 +24,15 @@
   - bugfix: Mailman alt title starts with a PDA too
   Verkister:
   - bugfix: Fixed bigdragon double vorgan init
+2023-12-02:
+  FluffMedic:
+  - bugfix: Temporary gene fix, maybe metroids being butcherable, and mol maze is
+      less painful
+  Upstream:
+  - rscadd: Added animated sprite for the borg paper printer. Thanks to MAK for the
+      sprite edit!
+  - bugfix: fixed the paper spawn location. It now picks the location after selecting,
+      preventing it from spawning at the original place if one moved meanwhile.
+  tacoguy7765093:
+  - qol: dancefloor is now anchored
+  - maptweak: small map fixes
