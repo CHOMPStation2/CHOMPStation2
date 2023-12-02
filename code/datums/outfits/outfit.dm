@@ -182,8 +182,8 @@ var/list/outfits_decls_by_type_
 		pda.ownjob = assignment
 		pda.ownrank = rank
 		pda.name = "PDA-[H.real_name] ([assignment])"
-		if(H.client.prefs.ttone) // YW Edit
-			pda.ttone = H.client.prefs.ttone
+		if(H.client.prefs.ringtone) // if null we use the job default
+			pda.ttone = H.client.prefs.ringtone
 		return pda
 
 /decl/hierarchy/outfit/dd_SortValue()
