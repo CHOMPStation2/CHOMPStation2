@@ -541,7 +541,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/floor_light,
+/obj/machinery/floor_light{
+	anchored = 1
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cafeteria)
 "ata" = (
@@ -4341,7 +4343,9 @@
 /turf/simulated/floor/carpet/retro_red,
 /area/crew_quarters/cafeteria)
 "dSS" = (
-/obj/machinery/floor_light,
+/obj/machinery/floor_light{
+	anchored = 1
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cafeteria)
 "dSV" = (

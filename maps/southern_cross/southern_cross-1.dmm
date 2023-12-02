@@ -5494,25 +5494,19 @@
 	layer = 4;
 	pixel_y = 32
 	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/fore)
-"aBd" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/machinery/camera/network/first_deck{
 	c_tag = "First Deck - Fore Hallway 2"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/fore)
 "aBe" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+/obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/fore)
 "aBf" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -5996,6 +5990,7 @@
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/fore)
 "aDe" = (
@@ -64108,8 +64103,8 @@ akx
 aoa
 aqL
 avj
-gXl
-aBd
+aBe
+aBa
 aCZ
 aJa
 aLB
@@ -64367,7 +64362,7 @@ anU
 aqD
 oOM
 tdo
-aBe
+aBa
 aDc
 aJa
 aLC
