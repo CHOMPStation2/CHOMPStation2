@@ -75,18 +75,6 @@
 	path = /obj/item/clothing/suit/storage/toggle/fr_jacket
 	allowed_roles = list("Chief Medical Officer","Paramedic","Medical Doctor","Field Medic") //CHOMP keep explo
 
-<<<<<<< HEAD
-//imo-superior 'martian' style jacket with the star-of-life design
-/datum/gear/suit/roles/medical/ems_jacket/alt
-	display_name = "first responder jacket, alt."
-	path = /obj/item/clothing/suit/storage/toggle/fr_jacket/ems
-
-//paramedic vest
-/datum/gear/suit/roles/medical/paramedic_vest
-	display_name = "paramedic vest"
-	path = /obj/item/clothing/suit/storage/toggle/paramedic
-	allowed_roles = list("Chief Medical Officer","Paramedic","Medical Doctor","Field Medic") //CHOMP keep explo
-=======
 /datum/gear/suit/paramedic_coat/New()
 	..()
 	var/list/paramedicCoats = list(
@@ -99,7 +87,6 @@
 		"Dark Blue EMT jacket" = /obj/item/clothing/suit/storage/toggle/labcoat/neo_blueemt
 	)
 	gear_tweaks += new/datum/gear_tweak/path(paramedicCoats)
->>>>>>> 554901c147... Merge pull request #15551 from TheToaster98/QuickLoadoutFix
 
 //greek thing
 /datum/gear/suit/chiton
