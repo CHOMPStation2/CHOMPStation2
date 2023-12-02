@@ -9,10 +9,10 @@
 "d" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
 	frequency = 1380;
-	id_tag = "large_escape_pod_2";
+	id_tag = "raidedpod_large_escape_pod_2";
 	pixel_x = 26;
 	pixel_y = -26;
-	tag_door = "large_escape_pod_2_hatch"
+	tag_door = "raidedpod_large_escape_pod_2_hatch"
 	},
 /obj/structure/loot_pile/surface/bones,
 /turf/simulated/shuttle/floor,
