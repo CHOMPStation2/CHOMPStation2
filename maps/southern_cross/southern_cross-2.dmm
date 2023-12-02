@@ -44579,15 +44579,18 @@
 /turf/simulated/floor,
 /area/engineering/engine_waste)
 "dlt" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/effect/wingrille_spawn/reinforced/polarized{
-	id = "holodeck_tint"
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/light{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/holodeck_control)
+/area/maintenance/chapel)
 "dlx" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
@@ -67670,6 +67673,20 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/dockhallway)
+"pKf" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/random/trash,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/chapel)
 "pLC" = (
 /obj/machinery/door/window/westleft{
 	name = "Shower"
@@ -121028,14 +121045,14 @@ aDc
 bTv
 cFI
 njG
-dlt
-njG
-dgU
 njG
 njG
 dgU
 njG
-dlt
+njG
+dgU
+njG
+njG
 njG
 cFI
 fnp
@@ -121286,14 +121303,14 @@ vSL
 bTw
 cfh
 cfh
-bXg
+pKf
 cfF
 cfF
 cfF
 cfF
 cdk
 cfF
-cfF
+dlt
 cfF
 bXg
 wSa
