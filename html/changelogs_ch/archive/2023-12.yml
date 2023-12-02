@@ -25,6 +25,9 @@
   Verkister:
   - bugfix: Fixed bigdragon double vorgan init
 2023-12-02:
+  FluffMedic:
+  - bugfix: Temporary gene fix, maybe metroids being butcherable, and mol maze is
+      less painful
   Upstream:
   - rscadd: Added animated sprite for the borg paper printer. Thanks to MAK for the
       sprite edit!
