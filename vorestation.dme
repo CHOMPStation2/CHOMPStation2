@@ -4635,6 +4635,7 @@
 #include "modular_chomp\code\game\objects\items\weapons\cigs_lighters.dm"
 #include "modular_chomp\code\game\objects\items\weapons\dna_injector.dm"
 #include "modular_chomp\code\game\objects\items\weapons\RCD.dm"
+#include "modular_chomp\code\game\objects\items\weapons\melee\shock_maul.dm"
 #include "modular_chomp\code\game\objects\items\weapons\storage\backpack.dm"
 #include "modular_chomp\code\game\objects\items\weapons\storage\firstaid.dm"
 #include "modular_chomp\code\game\objects\random\mapping.dm"
