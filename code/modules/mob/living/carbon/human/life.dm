@@ -549,6 +549,9 @@
 	if(status_flags & GODMODE)
 		return
 
+	if(mNobreath in src.mutations) //CHOMPadd
+		return
+
 	if(suiciding)
 		failed_last_breath = 1
 		adjustOxyLoss(2)//If you are suiciding, you should die a little bit faster

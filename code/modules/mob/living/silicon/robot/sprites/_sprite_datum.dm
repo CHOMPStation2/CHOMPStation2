@@ -145,7 +145,7 @@
 	has_dead_sprite_overlay = FALSE
 	has_custom_equipment_sprites = FALSE
 	vis_height = 64
-	pixel_x = 0 //CHOMPEdit - our tallborgs arent wide
+	pixel_x = -16
 
 // Default module sprite
 

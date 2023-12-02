@@ -234,6 +234,11 @@
 /datum/gear/head/kitty
 	display_name = "kitty ears"
 	path = /obj/item/clothing/head/kitty
+// CHOMPEdit Start
+/datum/gear/head/halo // chompedits
+	display_name = "holographic demonic halo"
+	path = /obj/item/clothing/head/halo
+//CHOMPEdit End
 
 /datum/gear/head/rabbit
 	display_name = "rabbit ears"

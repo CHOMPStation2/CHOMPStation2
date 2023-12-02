@@ -1,6 +1,3 @@
-/mob/living/silicon/robot //ChompEDIT
-	var/sleeper_resting = FALSE //CHOMPEdit - Enable resting belly sprites for dogborgs that have the sprites
-
 /mob/living/silicon/robot/verb/robot_nom(var/mob/living/T in living_mobs(1))
 	set name = "Robot Nom"
 	set category = "IC"

@@ -1064,9 +1064,9 @@
 	set desc = "Switch sharp/fuzzy scaling for current mob."
 	appearance_flags ^= PIXEL_SCALE
 	fuzzy = !fuzzy
-	update_transform() //CHOMPEdit
+	update_transform()
 
-/mob/living/proc/center_offset() //CHOMPAdd
+/mob/living/proc/center_offset()
 	set name = "Switch center offset mode"
 	set category = "Preferences"
 	set desc = "Switch sprite center offset to fix even/odd symmetry."

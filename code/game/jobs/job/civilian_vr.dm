@@ -70,11 +70,11 @@
 	spawn_positions = 3
 	pto_type = PTO_CARGO
 	alt_titles = list("Cargo Loader" = /datum/alt_title/cargo_loader, "Cargo Handler" = /datum/alt_title/cargo_handler, "Supply Courier" = /datum/alt_title/supply_courier,
-					"Disposals Sorter" = /datum/alt_title/disposal_sorter)
+					"Disposals Sorter" = /datum/alt_title/disposal_sorter, "Mailman" = /datum/alt_title/mailman) // CHOMPEdit: Adds Mailman title.
 
 /datum/alt_title/supply_courier
 	title = "Supply Courier"
-	title_blurb = "A Supply Courier is usually tasked with devlivering packages or cargo directly to whoever requires it."
+	title_blurb = "A Supply Courier is usually tasked with delivering packages or cargo directly to whoever requires it." // CHOMPEdit: Fixes a typo.
 
 /datum/alt_title/cargo_loader
 	title = "Cargo Loader"
