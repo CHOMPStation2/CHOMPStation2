@@ -159,8 +159,13 @@ var/list/preferences_datums = list()
 	// Communicator identity data
 	var/communicator_visibility = 0
 
+<<<<<<< HEAD
 	// Default ringtone for character; if blank, use job default. YW EDIT
 	var/ttone = null
+=======
+	/// Default ringtone for character; if blank, use job default.
+	var/ringtone = null
+>>>>>>> 1b37c71ed3... Merge pull request #15550 from KillianKirilenko/kk-mini2
 
 	var/datum/category_collection/player_setup_collection/player_setup
 	var/datum/browser/panel
