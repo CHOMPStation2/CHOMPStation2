@@ -36,6 +36,8 @@
   - rscadd: Added more PDA ringtone choices
   - bugfix: fixed the paper spawn location. It now picks the location after selecting,
       preventing it from spawning at the original place if one moved meanwhile.
+  - rscadd: Adds one or seven EMT/medical jackets, coats, vests and others to the
+      loadout, also tries to put them together in a single list.
   tacoguy7765093:
   - qol: dancefloor is now anchored
   - maptweak: small map fixes
