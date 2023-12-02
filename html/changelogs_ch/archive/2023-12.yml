@@ -24,3 +24,7 @@
   - bugfix: Mailman alt title starts with a PDA too
   Verkister:
   - bugfix: Fixed bigdragon double vorgan init
+2023-12-02:
+  tacoguy7765093:
+  - qol: dancefloor is now anchored
+  - maptweak: small map fixes
