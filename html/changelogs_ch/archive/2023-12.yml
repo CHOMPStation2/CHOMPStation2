@@ -25,6 +25,8 @@
   Verkister:
   - bugfix: Fixed bigdragon double vorgan init
 2023-12-02:
+  CHOMPStation2:
+  - rscadd: Added more PDA ringtone choices
   FluffMedic:
   - bugfix: Temporary gene fix, maybe metroids being butcherable, and mol maze is
       less painful
