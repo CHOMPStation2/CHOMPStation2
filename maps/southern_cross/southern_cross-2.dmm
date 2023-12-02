@@ -14432,6 +14432,10 @@
 /area/security/main)
 "aSH" = (
 /obj/structure/table/standard,
+/obj/item/weapon/form_printer{
+	pixel_x = -3;
+	pixel_y = 7
+	},
 /obj/item/weapon/folder/red,
 /obj/item/clothing/glasses/hud/security,
 /obj/structure/cable/green{
@@ -20446,8 +20450,12 @@
 	dir = 4;
 	health = 1e+006
 	},
-/obj/item/weapon/hand_labeler,
 /obj/machinery/door/firedoor/border_only,
+/obj/item/weapon/form_printer{
+	pixel_x = -3;
+	pixel_y = 7
+	},
+/obj/item/weapon/hand_labeler,
 /obj/machinery/door/blast/shutters{
 	dir = 4;
 	id = "Warden_Shutters";
@@ -22358,6 +22366,10 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 4
 	},
+/obj/item/weapon/form_printer{
+	pixel_x = -3;
+	pixel_y = 4
+	},
 /obj/item/device/defib_kit/loaded,
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
@@ -23837,6 +23849,10 @@
 	},
 /obj/effect/floor_decal/corner/brown/bordercorner{
 	dir = 1
+	},
+/obj/item/weapon/form_printer{
+	pixel_x = -3;
+	pixel_y = 7
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
@@ -30982,6 +30998,10 @@
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/red/border,
+/obj/item/weapon/form_printer{
+	pixel_x = -10;
+	pixel_y = 7
+	},
 /turf/simulated/floor/tiled,
 /area/security/lobby)
 "bSI" = (
@@ -34198,6 +34218,10 @@
 /obj/item/weapon/handcuffs,
 /obj/item/weapon/storage/fancy/cigarettes/dromedaryco,
 /obj/item/device/tape/random,
+/obj/item/weapon/form_printer{
+	pixel_x = -3;
+	pixel_y = 7
+	},
 /obj/item/device/taperecorder{
 	pixel_x = -4;
 	pixel_y = 2
@@ -60016,10 +60040,10 @@
 	dir = 6
 	},
 /obj/machinery/button/holosign{
-	pixel_x = -11;
-	pixel_y = -24;
+	id = "chemon";
 	name = "Chemist on duty sign";
-	id = "chemon"
+	pixel_x = -11;
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
@@ -60686,9 +60710,9 @@
 	},
 /obj/structure/cable/green,
 /obj/machinery/button/holosign{
-	pixel_x = -35;
-	name = "Roboticist on duty sign";
 	id = "roboton";
+	name = "Roboticist on duty sign";
+	pixel_x = -35;
 	pixel_y = 9
 	},
 /turf/simulated/floor/tiled/white,
@@ -65648,6 +65672,10 @@
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - R&D Lab Aft";
 	dir = 1
+	},
+/obj/item/weapon/form_printer{
+	pixel_x = -3;
+	pixel_y = 7
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/lab)
