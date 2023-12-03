@@ -699,6 +699,7 @@ const VoreSelectedBellyOptions = (props, context) => {
     belly_item_mult,
     belly_overall_mult,
     vorespawn_blacklist,
+    private_struggle,
   } = belly;
 
   return (
@@ -790,6 +791,16 @@ const VoreSelectedBellyOptions = (props, context) => {
                 act('set_attribute', { attribute: 'b_eating_privacy' })
               }
               content={capitalize(eating_privacy_local)}
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Toggle Struggle Privacy">
+            <Button
+              onClick={() =>
+                act('set_attribute', { attribute: 'b_private_struggle' })
+              }
+              icon={private_struggle ? 'toggle-on' : 'toggle-off'}
+              selected={private_struggle}
+              content={private_struggle ? 'Private' : 'Loud'}
             />
           </LabeledList.Item>
 
