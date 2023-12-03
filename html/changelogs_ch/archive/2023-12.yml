@@ -42,3 +42,8 @@
   tacoguy7765093:
   - qol: dancefloor is now anchored
   - maptweak: small map fixes
+2023-12-03:
+  Upstream:
+  - rscadd: 'Added new redgate map: Laserdome'
+  - rscadd: Added 'redgate_allowed' variable in objs
+  - rscadd: Added entertainment encryption key
