@@ -49,3 +49,9 @@
   - rscadd: Added entertainment encryption key
   - rscadd: 'Added a new machine that makes proteans revivable in-round: Protean Reconstitutor'
   - imageadd: added Protean Reconstitutor sprite
+  - rscadd: Adds the option for admins to quickly add or remove modules, radio channels
+      and components from robots. This should make event handling with borgs much
+      easier.
+  - rscadd: Added two new type of robot cells
+  - bugfix: Minor sprite fix.
+  - qol: Rejuvenate now fully restores borgs
