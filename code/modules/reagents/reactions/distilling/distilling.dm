@@ -54,7 +54,7 @@
 	id = "distill_biomass"
 	result = "biomass"
 	required_reagents = list("blood" = 1, "sugar" = 1, "phoron" = 0.5)
-	result_amount = 1 // 40 units per sheet, requires actually using the machine, and having blood to spare.
+	result_amount = 6 // Buffed to 2400 units per sheet to be in line with the buffed instant reaction. Requires actually using the machine, and having blood to spare so this one should be more phoron-efficient.
 
 	temp_range = list(T20C + 80, T20C + 130)
 	temp_shift = -2
