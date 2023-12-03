@@ -2,14 +2,7 @@
 	desc = "You shouldn't see this."
 	listing_name = "N/A"
 
-<<<<<<< HEAD
 /* //CHOMPedit: commenting out most of these posters as half are virgo staff and many others are not suitable for here.
-/decl/poster/vore_1
-	icon_state = "sbsposter1"
-	name = "Best Girl Pip"
-	desc = "A poster of the official NT Best Girl Mascot, Pip"
-=======
->>>>>>> 22221abc31... Merge pull request #15557 from Heroman3003/poster-remove
 /decl/poster/lewd/vore_2
 	icon_state = "sbsposter2"
 	name = "AroButt"
