@@ -43,6 +43,8 @@
   - qol: dancefloor is now anchored
   - maptweak: small map fixes
 2023-12-03:
+  FluffMedic:
+  - bugfix: A mob spamming admin logs
   Upstream:
   - rscadd: 'Added new redgate map: Laserdome'
   - rscadd: Added 'redgate_allowed' variable in objs
