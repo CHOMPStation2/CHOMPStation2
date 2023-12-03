@@ -42,3 +42,22 @@
   tacoguy7765093:
   - qol: dancefloor is now anchored
   - maptweak: small map fixes
+2023-12-03:
+  Upstream:
+  - rscadd: 'Added new redgate map: Laserdome'
+  - rscadd: Added 'redgate_allowed' variable in objs
+  - rscadd: Added entertainment encryption key
+  - rscadd: 'Added a new machine that makes proteans revivable in-round: Protean Reconstitutor'
+  - imageadd: added Protean Reconstitutor sprite
+  - rscadd: Adds the option for admins to quickly add or remove modules, radio channels
+      and components from robots. This should make event handling with borgs much
+      easier.
+  - rscadd: Added two new type of robot cells
+  - bugfix: Minor sprite fix.
+  - qol: Rejuvenate now fully restores borgs
+  - qol: escape timers have been cut in half
+  - rscadd: 'adds a chance of escaping if absorbed into a belly that is possible to
+      escape from (read PR #7318 for more details)'
+  - qol: minor tweak to the messages when restisting in a belly
+  - qol: different probabilities of absorbtion on gaslamps
+  - bugfix: fixed duplication of NIFs during rejuvenation
