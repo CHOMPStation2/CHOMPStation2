@@ -176,7 +176,7 @@
 	projectiletype = /obj/item/projectile/energy/blob/moth
 
 /mob/living/simple_mob/humanoid/eclipse/solar/firemoff/do_special_attack(atom/A)
-	var/obj/item/projectile/P = new /obj/item/projectile/arc/fragmentation/moth(get_turf(src))
+	var/obj/item/projectile/P = new /obj/item/projectile/arc/spore(get_turf(src))
 	P.launch_projectile(A, BP_TORSO, src)
 
 
