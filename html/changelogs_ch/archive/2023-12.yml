@@ -47,3 +47,5 @@
   - rscadd: 'Added new redgate map: Laserdome'
   - rscadd: Added 'redgate_allowed' variable in objs
   - rscadd: Added entertainment encryption key
+  - rscadd: 'Added a new machine that makes proteans revivable in-round: Protean Reconstitutor'
+  - imageadd: added Protean Reconstitutor sprite
