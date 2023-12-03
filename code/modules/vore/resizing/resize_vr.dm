@@ -319,7 +319,7 @@
 	now_pushing = 0
 	forceMove(tmob.loc)
 	if(a_intent != I_HELP)
-		if(tmob.size_multiplier > 0.75 && nofetish) //So we can stun micros with step mechanics off, but prevent macros from stunning regular heights
+		if(tmob.size_multiplier > 0.50 && nofetish) //So we can stun micros with step mechanics off, but prevent macros from stunning regular heights
 			to_chat(pred, "<span class='danger'>You pass over [tmob.name].</span>")
 			to_chat(prey, "<span class='danger'>[src.name] passes over you.</span>")
 			return FALSE
