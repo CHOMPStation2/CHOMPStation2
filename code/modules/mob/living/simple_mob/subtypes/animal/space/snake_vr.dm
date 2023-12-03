@@ -71,13 +71,20 @@
 	desc = "A big, thick snake."
 	tt_desc = "E Reptilia Pythonidae"
 
+        // CHOMPEdit Start - New sprites & Added vore
+        /*
+        icon_state = "python"
+	icon_living = "python"
+	icon_dead = "python_dead"
+	icon = 'icons/mob/snake_vr.dmi'
+	*/
 	icon_state = "snek"
 	icon_living = "snek"
 	icon_dead = "snek_dead"
 	icon_rest = "snek_rest"
-	icon = 'modular_chomp/icons/mob/animal_ch.dmi' //CHOMPEdit - Newer, cooler sprites??
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 
-	vore_active = 1  //CHOMPEdit - adding vore, about time :p
+	vore_active = 1
 	vore_capacity = 1
 	vore_default_mode = DM_HOLD
 	vore_icons = SA_ICON_LIVING | SA_ICON_REST
@@ -85,6 +92,7 @@
 	swallowTime = 50
 	vore_bump_chance = 10
 	vore_bump_emote = "slithers around and tries to devour"
+	// CHOMPEdit End
 
 /*
  * NOODLE IS HERE! SQUEEEEEEEE~
