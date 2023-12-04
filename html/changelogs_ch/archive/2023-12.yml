@@ -63,3 +63,7 @@
   - qol: minor tweak to the messages when restisting in a belly
   - qol: different probabilities of absorbtion on gaslamps
   - bugfix: fixed duplication of NIFs during rejuvenation
+2023-12-04:
+  Upstream:
+  - bugfix: actually showing a proper list of valid ringtones (secret ones can be
+      still set via 'Other')
