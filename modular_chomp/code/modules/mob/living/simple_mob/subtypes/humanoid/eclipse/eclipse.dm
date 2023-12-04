@@ -283,6 +283,7 @@
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/attackby(var/obj/item/O as obj, var/mob/user as mob)
 	to_chat(user, "<span class='warning'>This weapon is ineffective, it does no damage.</span>")
+	.=..()
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle //Bouncing bullet extreme
 	name = "Lunar Eclipse Silver Serpent"
