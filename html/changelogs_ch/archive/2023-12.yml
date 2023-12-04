@@ -66,6 +66,12 @@
 2023-12-04:
   FluffMedic:
   - bugfix: Fixing an immunity
+  Missile597:
+  - balance: Adjusted the distillery recipe for biomass to be more in line with the
+      buffed instant recipe. Recipe remains the same as before, but now distils 6
+      units instead of 1. This makes the distillery twice as phoron efficient once
+      more, whilst retaining the cost of needing to provide blood as well as using
+      the distillery. (Maybe it'll see some use? Probably not)
   Upstream:
   - bugfix: actually showing a proper list of valid ringtones (secret ones can be
       still set via 'Other')
