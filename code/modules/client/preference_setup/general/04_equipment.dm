@@ -29,10 +29,11 @@ var/global/list/valid_ringtones = list(
 		"honk",
 		"SKREE",
 		"xeno",
+		"dust", // CHOMPEdit - Keeps dust as ringtone
 		"spark",
 		"rad",
 		"servo",
-		"buh-boop",
+		// "buh-boop", // CHOMPEdit - No.
 		"trombone",
 		"whistle",
 		"chirp",
