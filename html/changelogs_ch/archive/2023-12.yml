@@ -71,3 +71,7 @@
       still set via 'Other')
   - bugfix: fixes the RD console crash and allows designs to be transferred from one
       console to another using the disks
+  Verkister:
+  - bugfix: Fixed synths not getting metabolism traits.
+  - bugfix: Fixed VR mob spawner button runtiming on bad spawn paths.
+  - bugfix: Fixed runtimes with uninitialized pakkun mob rest features.
