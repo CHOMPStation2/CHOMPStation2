@@ -63,3 +63,21 @@
   - qol: minor tweak to the messages when restisting in a belly
   - qol: different probabilities of absorbtion on gaslamps
   - bugfix: fixed duplication of NIFs during rejuvenation
+2023-12-04:
+  FluffMedic:
+  - bugfix: Fixing an immunity
+  Missile597:
+  - balance: Adjusted the distillery recipe for biomass to be more in line with the
+      buffed instant recipe. Recipe remains the same as before, but now distils 6
+      units instead of 1. This makes the distillery twice as phoron efficient once
+      more, whilst retaining the cost of needing to provide blood as well as using
+      the distillery. (Maybe it'll see some use? Probably not)
+  Upstream:
+  - bugfix: actually showing a proper list of valid ringtones (secret ones can be
+      still set via 'Other')
+  - bugfix: fixes the RD console crash and allows designs to be transferred from one
+      console to another using the disks
+  Verkister:
+  - bugfix: Fixed synths not getting metabolism traits.
+  - bugfix: Fixed VR mob spawner button runtiming on bad spawn paths.
+  - bugfix: Fixed runtimes with uninitialized pakkun mob rest features.
