@@ -69,3 +69,5 @@
   Upstream:
   - bugfix: actually showing a proper list of valid ringtones (secret ones can be
       still set via 'Other')
+  - bugfix: fixes the RD console crash and allows designs to be transferred from one
+      console to another using the disks
