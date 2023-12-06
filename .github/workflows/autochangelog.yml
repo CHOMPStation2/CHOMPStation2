@@ -29,7 +29,10 @@ jobs:
       - name: Ensure +x on CI directory
         run: |
           chmod -R +x ./tools/ci
+<<<<<<< HEAD
           chmod -R +x ./tools/GenerateChangelog/prbody.txt
+=======
+>>>>>>> 1c29f70b17... Bump actions/setup-python from 4 to 5 (#15568)
       - uses: actions/setup-python@v5
         with:
           python-version: '3.7'
