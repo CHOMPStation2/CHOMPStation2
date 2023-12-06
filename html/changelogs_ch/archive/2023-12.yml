@@ -84,6 +84,9 @@
 2023-12-06:
   Kashargul:
   - bugfix: lickclean will no longer break the synthtongue
+  TheCaramelion:
+  - balance: Various job goodies have been changed, slightly more useful stuff.
+  - bugfix: Liquid goodies spawn in bottles.
   Upstream:
   - rscadd: added hairs from Skyrat and Citadel
   - qol: updated paper mask sprite from Skyrat
