@@ -112,5 +112,6 @@
   - rscadd: ports a bunch of underwear pieces from skyrat
   - imageadd: added new hair, tail, clothing and paper mask sprites from skyrat and
       citadel
+  - qol: tgui subsystem update
   Verkister:
   - rscadd: Added new belly setting to store nutrition instead of absorbing it.
