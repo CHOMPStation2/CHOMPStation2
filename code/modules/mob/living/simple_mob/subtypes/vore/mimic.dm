@@ -20,12 +20,19 @@
 	desc = "A rectangular steel crate. This one looks particularly unstable."
 	var/mimic_chance = 30
 	var/mimic_active = TRUE
+	var/nest = null	//CHOMPAdd
 
 /obj/structure/closet/crate/mimic/open()
 	if(src.opened)
 		return 0
 	if(!src.can_open())
 		return 0
+
+	//CHOMPAdd Start
+	if(istype(nest, /obj/structure/mob_spawner))
+		var/obj/structure/mob_spawner/S = nest
+		S.get_used_report(src)
+	//CHOMPAdd End
 
 	if(mimic_active)
 		mimic_active = FALSE

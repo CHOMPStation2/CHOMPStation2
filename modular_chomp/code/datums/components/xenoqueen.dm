@@ -33,7 +33,7 @@
 	mob_overlay_state = "purple_electricity_constant"
 
 	outgoing_melee_damage_percent = 1.2 // Only affects melee weapons, not fists
-	attack_speed_percent = -1.2 // Increases attack speed by 20%
+	attack_speed_percent = 0.9 // Increases attack speed by 10%
 	evasion = 25 // Only affects ranged attacks missing
 
 /datum/modifier/aura/xenoqueenbuff/check_if_valid()

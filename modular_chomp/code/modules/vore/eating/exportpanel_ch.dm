@@ -177,6 +177,7 @@
 			belly_data["egg_name"] = B.egg_name
 			belly_data["selective_preference"] = B.selective_preference
 			belly_data["recycling"] = B.recycling
+			belly_data["storing_nutrition"] = B.storing_nutrition
 			belly_data["entrance_logs"] = B.entrance_logs
 			belly_data["item_digest_logs"] = B.item_digest_logs
 

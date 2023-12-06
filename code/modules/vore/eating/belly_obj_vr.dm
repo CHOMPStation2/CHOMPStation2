@@ -340,6 +340,7 @@
 	"speedy_mob_processing",
 	"egg_name",
 	"recycling",
+	"storing_nutrition",
 	"is_feedable",
 	"entrance_logs",
 	"noise_freq",
@@ -1468,7 +1469,7 @@
 	if(digested == FALSE) //CHOMPEdit
 		items_preserved |= item
 	else
-		owner.adjust_nutrition((nutrition_percent / 100) * 5 * digested)
+		owner_adjust_nutrition((nutrition_percent / 100) * 5 * digested) //CHOMPEdit
 		// if(isrobot(owner)) //CHOMPEdit: Borgos can now use nutrition too.
 		//	var/mob/living/silicon/robot/R = owner
 		//	R.cell.charge += ((nutrition_percent / 100) * 50 * digested)
@@ -2000,6 +2001,7 @@
 	dupe.sound_volume = sound_volume
 	dupe.egg_name = egg_name
 	dupe.recycling = recycling
+	dupe.storing_nutrition = storing_nutrition
 	dupe.is_feedable = is_feedable
 	dupe.entrance_logs = entrance_logs
 	dupe.noise_freq = noise_freq

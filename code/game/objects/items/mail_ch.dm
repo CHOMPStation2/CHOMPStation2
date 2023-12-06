@@ -17,7 +17,7 @@
 	// Goodies which can be given to anyone.
 	// Weight sum will be 1000
 	var/list/generic_goodies = list(
-		/obj/item/weapon/spacecash/c50 = 150,
+		/obj/item/weapon/spacecash/c50 = 145,
 		/obj/item/weapon/reagent_containers/food/drinks/cans/cola = 130,
 		/obj/item/weapon/reagent_containers/food/snacks/chips = 130,
 		/obj/item/weapon/reagent_containers/food/drinks/coffee = 125,
@@ -27,6 +27,7 @@
 		/obj/item/weapon/spacecash/c200 = 50,
 		/obj/item/weapon/spacecash/c500 = 25,
 		/obj/item/weapon/spacecash/c1000 = 10,
+		/obj/item/weapon/reagent_containers/food/drinks/bluespace_coffee = 5
 	)
 	// Overlays (pure fluff)
 	// Does the letter have the postmark overlay?
@@ -144,14 +145,8 @@
 
 	for(var/iterator in 1 to goodie_count)
 		var/target_good = pickweight(goodies)
-		if(ispath(target_good, /datum/reagent))
-			var/obj/item/weapon/reagent_containers/target_container = new /obj/item/weapon/reagent_containers/glass/beaker(src)
-			target_container.reagents.add_reagent(target_good, target_container.volume)
-			target_container.name = "[target_container.reagents.reagent_list[1].name] bottle"
-			log_game("[key_name(new_recipient)] received reagent container [target_container.name] in the mail ([target_good])")
-		else
-			var/atom/movable/target_atom = new target_good(src)
-			log_game("[key_name(new_recipient)] received [target_atom.name] in the mail ([target_good])")
+		var/atom/movable/target_atom = new target_good(src)
+		log_game("[key_name(new_recipient)] received [target_atom.name] in the mail ([target_good])")
 	update_icon()
 	return TRUE
 

@@ -313,16 +313,18 @@
 				var/mob/living/silicon/robot/R = user
 				R.cell.charge += 250
 				water.use_charge(5)  //CHOMPAdd
-			busy = 0
+			busy = 0 //CHOMPAdd prevents abuse
 			return
 		if(istype(target,/obj/item/weapon/reagent_containers/food))
 			user.visible_message("[user] nibbles away at \the [target.name].", "<span class='notice'>You begin to nibble away at \the [target.name]...</span>")
+			busy = 1 //CHOMPAdd prevents abuse
 			if(do_after (user, 50))
 				user.visible_message("[user] finishes eating \the [target.name].", "<span class='notice'>You finish eating \the [target.name].</span>")
 				user << "<span class='notice'>You finish off \the [target.name].</span>"
 				del(target)
 				var/mob/living/silicon/robot/R = user
 				R.cell.charge = R.cell.charge + 250
+			busy = 0 //CHOMPAdd prevents abuse
 			return
 		if(istype(target,/obj/item/weapon/cell))
 			user.visible_message("<span class='filter_notice'>[user] begins cramming \the [target.name] down its throat.</span>", "<span class='notice'>You begin cramming \the [target.name] down your throat...</span>")
@@ -335,7 +337,7 @@
 				R.cell.charge += C.charge / 3
 				water.use_charge(5) //CHOMPAdd
 				qdel(target)
-			busy = 0
+			busy = 0 //CHOMPAdd prevents abuse
 			return
 		//CHOMPAdd Start
 		user.visible_message("<span class='filter_notice'>[user] begins to lick \the [target.name] clean...</span>", "<span class='notice'>You begin to lick \the [target.name] clean...</span>")
