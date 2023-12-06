@@ -180,15 +180,15 @@
 		/obj/item/weapon/reagent_containers/food/drinks/bottle/champagne = 250,
 		/obj/item/weapon/form_printer = 200,
 		/obj/item/weapon/storage/fancy/cigar/havana = 250,
-		/obj/item/weapon/pen/fountain6 = 50,
+		/obj/item/weapon/pen/fountain6 = 50
 	)
 	mail_color = COMMS_COLOR_COMMAND
 
 /datum/job/hop
 	mail_goodies = list( // Need to check what these could get...
 		/obj/item/weapon/pen/fountain6 = 650,
-		/obj/item/weapon/form_printer = 200
-		/obj/item/toy/figure/corgi = 150,
+		/obj/item/weapon/form_printer = 200,
+		/obj/item/toy/figure/corgi = 150
 	)
 	mail_color = COMMS_COLOR_COMMAND
 
