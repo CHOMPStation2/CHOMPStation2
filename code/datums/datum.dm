@@ -19,7 +19,7 @@
 
 	/// Open uis owned by this datum
 	/// Lazy, since this case is semi rare
-	var/list/open_uis
+	var/list/open_tguis // CHOMPEdit: FIXME: open_uis
 
 	/// Active timers with this datum as the target
 	var/list/active_timers
