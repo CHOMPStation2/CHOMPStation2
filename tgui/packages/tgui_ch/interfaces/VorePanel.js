@@ -897,7 +897,9 @@ const VoreSelectedBellyOptions = (props, context) => {
           </LabeledList.Item>
           <LabeledList.Item label="Storing Nutrition">
             <Button
-              onClick={() => act('set_attribute', { attribute: 'b_storing_nutrition' })}
+              onClick={() =>
+                act('set_attribute', { attribute: 'b_storing_nutrition' })
+              }
               icon={storing_nutrition ? 'toggle-on' : 'toggle-off'}
               selected={storing_nutrition}
               content={storing_nutrition ? 'Storing' : 'Absorbing'}
