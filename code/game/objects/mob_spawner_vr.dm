@@ -29,8 +29,15 @@
 
 /obj/structure/mob_spawner/Destroy()
 	STOP_PROCESSING(SSobj, src)
-	for(var/mob/living/L in spawned_mobs)
-		L.nest = null
+	//CHOMPEdit Start
+	for(var/spawned in spawned_mobs)
+		if(istype(spawned, /mob/living))
+			var/mob/living/L = spawned
+			L.nest = null
+		if(istype(spawned, /obj/structure/closet/crate/mimic))
+			var/obj/structure/closet/crate/mimic/O = spawned
+			O.nest = null
+	//CHOMPEdit End
 	spawned_mobs.Cut()
 	return ..()
 
@@ -56,15 +63,26 @@
 /obj/structure/mob_spawner/proc/do_spawn(var/mob_path)
 	if(!ispath(mob_path))
 		return 0
-	var/mob/living/L = new mob_path(get_turf(src))
-	L.nest = src
-	spawned_mobs.Add(L)
+	//CHOMPEdit Start
+	if(!ispath(mob_path, /mob/living) && !ispath(mob_path, /obj/structure/closet/crate/mimic))
+		return 0
 	last_spawn = world.time
 	if(total_spawns > 0)
 		total_spawns--
-	if(mob_faction)
-		L.faction = mob_faction
-	return L
+	if(ispath(mob_path, /mob/living))
+		var/mob/living/L = new mob_path(get_turf(src))
+		L.nest = src
+		spawned_mobs.Add(L)
+		if(mob_faction)
+			L.faction = mob_faction
+		return L
+	if(ispath(mob_path, /obj/structure/closet/crate/mimic))
+		var/obj/structure/closet/crate/mimic/O = new mob_path(get_turf(src))
+		spawned_mobs.Add(O)
+		O.nest = src
+		return O
+	return 0
+	//CHOMPEdit End
 
 /obj/structure/mob_spawner/proc/get_death_report(var/mob/living/L)
 	if(L in spawned_mobs)
