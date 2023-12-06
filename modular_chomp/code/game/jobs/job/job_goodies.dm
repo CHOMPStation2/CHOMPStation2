@@ -80,32 +80,34 @@
 
 /datum/job/bartender
 	mail_goodies = list(
-		/obj/item/weapon/reagent_containers/food/drinks/metaglass/metapint = 320,
-		"gelatin" = 300,
-		/obj/item/stack/material/uranium = 250,
-		/obj/item/clothing/accessory/bowtie/black = 100,
-		/obj/item/weapon/reagent_containers/chem_disp_cartridge/nothing = 15,
-		/obj/item/weapon/reagent_containers/chem_disp_cartridge/gelatin = 15,
+		/obj/item/weapon/reagent_containers/food/drinks/metaglass/metapint = 300,
+		/obj/item/weapon/reagent_containers/glass/bottle/nothing = 250,
+		/obj/item/weapon/reagent_containers/glass/bottle/gelatin = 250,
+		/obj/item/stack/material/uranium = 150,
+		/obj/item/weapon/reagent_containers/chem_disp_cartridge/nothing = 25,
+		/obj/item/weapon/reagent_containers/chem_disp_cartridge/gelatin = 25,
 	)
 	mail_color = COMMS_COLOR_SERVICE
 
 /datum/job/chef
 	mail_goodies = list(
-		"cakebatter" = 200,
-		"cinnamonpowder" = 200,
-		/obj/item/weapon/reagent_containers/food/condiment/soysauce = 200,
-		/obj/item/weapon/reagent_containers/food/drinks/soymilk = 200,
+		/obj/item/weapon/reagent_containers/food/condiment/soysauce = 250,
+		/obj/item/weapon/reagent_containers/food/drinks/soymilk = 250,
+		/obj/item/weapon/reagent_containers/glass/bottle/cakebatter = 200,
 		/obj/item/weapon/reagent_containers/food/snacks/cuttlefish = 200,
+		/obj/item/weapon/reagent_containers/glass/bottle/cinnamonpowder = 100
 	)
 	mail_color = COMMS_COLOR_SERVICE
 
 /datum/job/hydro
 	mail_goodies = list(
-		"mutagen" = 350,
-		"diethylamine" = 350,
+		/obj/item/weapon/reagent_containers/glass/bottle/eznutrient = 200,
+		/obj/item/weapon/reagent_containers/glass/bottle/left4zed = 200,
+		/obj/item/weapon/reagent_containers/glass/bottle/robustharvest = 200,
 		/obj/item/weapon/reagent_containers/spray/plantbgone = 150,
-		/obj/item/weapon/gun/energy/floragun = 100,
-		/obj/item/weapon/grenade/chem_grenade/antiweed = 50
+		/obj/item/weapon/reagent_containers/glass/bottle/diethylamine = 100,
+		/obj/item/weapon/gun/energy/floragun = 75,
+		/obj/item/weapon/grenade/chem_grenade/antiweed = 75
 	)
 	mail_color = COMMS_COLOR_SERVICE
 
@@ -113,21 +115,23 @@
 	mail_goodies = list(
 		/obj/item/weapon/storage/box/lights/mixed = 200,
 		/obj/item/weapon/reagent_containers/spray/cleaner = 200,
-		/obj/item/weapon/soap = 150,
 		/obj/item/device/lightreplacer = 150,
 		/obj/item/device/lightpainter = 150,
+		/obj/item/weapon/soap = 100,
 		/obj/item/weapon/grenade/chem_grenade/cleaner = 100,
+		/obj/item/weapon/reagent_containers/spray/chemsprayer/hosed = 50,
 		/obj/item/toy/plushie/borgplushie/drake/jani = 50,
 	)
 	mail_color = COMMS_COLOR_SERVICE
 
 /datum/job/librarian
 	mail_goodies = list(
-		/obj/item/weapon/book/manual/wizzoffguide = 150,
-		/obj/item/weapon/book/bundle/custom_library/fiction/ghostship = 150,
-		/obj/item/weapon/book/bundle/custom_library/reference/ThermodynamicReactionsandResearch = 150,
-		/obj/item/weapon/book/bundle/custom_library/nonfiction/riseandfallofpersianempire = 150,
-		/obj/item/weapon/book/bundle/custom_library/nonfiction/skrelliancastesystem = 150,
+		/obj/item/weapon/form_printer = 250,
+		/obj/item/weapon/book/manual/wizzoffguide = 100,
+		/obj/item/weapon/book/bundle/custom_library/fiction/ghostship = 100,
+		/obj/item/weapon/book/bundle/custom_library/reference/ThermodynamicReactionsandResearch = 100,
+		/obj/item/weapon/book/bundle/custom_library/nonfiction/riseandfallofpersianempire = 100,
+		/obj/item/weapon/book/bundle/custom_library/nonfiction/skrelliancastesystem = 100,
 		/obj/item/weapon/book/codex/lore/robutt = 95,
 		/obj/item/weapon/book/codex/lore/news = 95,
 		/obj/item/weapon/pen/fountain3 = 50,
@@ -137,7 +141,8 @@
 
 /datum/job/lawyer
 	mail_goodies = list(
-		/obj/item/weapon/pen/fountain8 = 1000,
+		/obj/item/weapon/pen/fountain8 = 800,
+		/obj/item/weapon/form_printer = 200,
 	)
 	mail_color = COMMS_COLOR_SERVICE
 
@@ -163,7 +168,7 @@
 
 /datum/job/entrepreneur // Same for these guys! What could they get?
 	mail_goodies = list(
-		/obj/item/weapon/reagent_containers/food/drinks/coffee = 100, // For now, they'll get extra on coffee.
+		/obj/item/weapon/reagent_containers/food/drinks/coffee = 1000, // For now, they'll get extra on coffee.
 	)
 	mail_color = COMMS_COLOR_SERVICE
 
@@ -171,27 +176,30 @@
 
 /datum/job/captain
 	mail_goodies = list(
-		/obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey = 350,
-		/obj/item/weapon/reagent_containers/food/drinks/bottle/champagne = 350,
+		/obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey = 250,
+		/obj/item/weapon/reagent_containers/food/drinks/bottle/champagne = 250,
+		/obj/item/weapon/form_printer = 200,
 		/obj/item/weapon/storage/fancy/cigar/havana = 250,
-		/obj/item/weapon/pen/fountain6 = 50,
+		/obj/item/weapon/pen/fountain6 = 50
 	)
 	mail_color = COMMS_COLOR_COMMAND
 
 /datum/job/hop
-	mail_goodies = list( // Currently only 350, less chance for their fance stuff. What could they get?
-		/obj/item/weapon/pen/fountain6 = 250,
-		/obj/item/toy/figure/corgi = 100,
+	mail_goodies = list( // Need to check what these could get...
+		/obj/item/weapon/pen/fountain6 = 650,
+		/obj/item/weapon/form_printer = 200,
+		/obj/item/toy/figure/corgi = 150
 	)
 	mail_color = COMMS_COLOR_COMMAND
 
 /datum/job/secretary
-	mail_goodies = list( // Wish to be command? You can almost be with these figurines. Chain of command weight!
-		/obj/item/toy/figure/cmo = 200,
-		/obj/item/toy/figure/ce = 200,
-		/obj/item/toy/figure/rd = 200,
-		/obj/item/toy/figure/hos = 175,
-		/obj/item/toy/figure/hop = 150,
+	mail_goodies = list(
+		/obj/item/weapon/form_printer = 225,
+		/obj/item/toy/figure/cmo = 175,
+		/obj/item/toy/figure/ce = 175,
+		/obj/item/toy/figure/rd = 175,
+		/obj/item/toy/figure/hos = 150,
+		/obj/item/toy/figure/hop = 125,
 		/obj/item/toy/figure/captain = 50,
 		/obj/item/weapon/pen/fountain6 = 25
 	)
@@ -229,13 +237,6 @@
 	)
 	mail_color = COMMS_COLOR_ENGINEER
 
- // Engineer Alt Titles
-
-/datum/alt_title/electrician
-	mail_goodies = list(
-		/obj/item/stack/xenochitin{amount = 10} = 20000
-	)
-
 /datum/job/atmos
 	mail_goodies = list(
 		/obj/item/stack/material/steel{amount = 10} = 330,
@@ -253,9 +254,10 @@
 
 /datum/job/pathfinder
 	mail_goodies = list(
-		/obj/item/device/binoculars/spyglass = 600,
+		/obj/item/device/binoculars/spyglass = 500,
 		/obj/item/device/cataloguer/advanced = 200,
 		/obj/item/weapon/storage/mre/menu2 = 150,
+		/obj/item/weapon/cell/device/hyper = 100,
 		/obj/item/device/flashlight/slime = 50,
 	)
 	mail_color = "#274d0a"
@@ -263,8 +265,9 @@
 /datum/job/pilot
 	mail_goodies = list(
 		/obj/item/weapon/storage/mre/menu2 = 500,
-		/obj/item/weapon/tank/oxygen = 225,
-		/obj/item/weapon/tank/air = 225,
+		/obj/item/weapon/tank/oxygen = 200,
+		/obj/item/weapon/tank/air = 200,
+		/obj/item/weapon/cell/device/hyper = 50,
 		/obj/item/weapon/storage/firstaid/regular = 10,
 		/obj/item/weapon/storage/firstaid/toxin = 10,
 		/obj/item/weapon/storage/firstaid/o2 = 10,
@@ -275,8 +278,9 @@
 
 /datum/job/explorer
 	mail_goodies = list(
-		/obj/item/weapon/storage/mre/menu2 = 850,
+		/obj/item/weapon/storage/mre/menu2 = 800,
 		/obj/item/device/binoculars/spyglass = 150,
+		/obj/item/weapon/cell/device/hyper = 50,
 	)
 	mail_color = "#274d0a"
 
@@ -327,8 +331,8 @@
 		/obj/item/weapon/reagent_containers/glass/beaker/large = 210,
 		/obj/item/weapon/reagent_containers/pill/hyronalin = 210,
 		/obj/item/weapon/reagent_containers/pill/carthatoline = 210,
-		/obj/item/stack/material/phoron{amount = 5} = 125,
-		/obj/item/weapon/reagent_containers/pill/healing_nanites = 150
+		/obj/item/stack/material/phoron{amount = 5} = 120,
+		/obj/item/weapon/reagent_containers/pill/healing_nanites = 15
 	)
 	mail_color = COMMS_COLOR_MEDICAL
 
@@ -399,9 +403,10 @@
 
 /datum/job/xenobiologist
 	mail_goodies = list(
-		/obj/item/weapon/reagent_containers/food/snacks/monkeycube = 800,
+		/obj/item/weapon/reagent_containers/food/snacks/monkeycube = 780,
 		/obj/item/clothing/head/helmet = 100,
 		/obj/item/weapon/melee/baton/slime = 100,
+		/obj/item/weapon/xenobio/monkey_gun = 20
 	)
 	mail_color = COMMS_COLOR_SCIENCE
 
@@ -429,8 +434,8 @@
 
 /datum/job/xenobotanist
 	mail_goodies = list(
-		"mutagen" = 350,
-		"diethylamine" = 350,
+		/obj/item/weapon/reagent_containers/glass/bottle/mutagen = 350,
+		/obj/item/weapon/reagent_containers/glass/bottle/diethylamine = 350,
 		/obj/item/weapon/reagent_containers/spray/plantbgone = 150,
 		/obj/item/weapon/gun/energy/floragun = 100,
 		/obj/item/weapon/grenade/chem_grenade/antiweed = 50
