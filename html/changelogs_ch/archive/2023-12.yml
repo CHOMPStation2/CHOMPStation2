@@ -82,6 +82,8 @@
   - bugfix: Fixed VR mob spawner button runtiming on bad spawn paths.
   - bugfix: Fixed runtimes with uninitialized pakkun mob rest features.
 2023-12-06:
+  Kashargul:
+  - bugfix: lickclean will no longer break the synthtongue
   Upstream:
   - rscadd: added hairs from Skyrat and Citadel
   - qol: updated paper mask sprite from Skyrat
