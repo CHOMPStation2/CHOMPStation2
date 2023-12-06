@@ -45,6 +45,7 @@
 			var/mob/living/carbon/human/H = C
 			var/chance = 5.0
 			chance -= (chance / 100) * C.getarmor(null, "rad")
+			//CHOMPEdit Start
 			if(C.species.traits.Find(/datum/trait/positive/rad_resistance))
 				chance -= (chance / 100) * 20
 			if(C.species.traits.Find(/datum/trait/positive/rad_resistance_extreme))
@@ -53,6 +54,7 @@
 				chance -= (chance / 100) * 100
 			if(prob(round(chance, 0.01)))
 			if(prob(chance))
+			//CHOMPEdit End
 				if (prob(75))
 					randmutb(H) // Applies bad mutation
 					domutcheck(H,null,MUTCHK_FORCED)

@@ -242,7 +242,7 @@
 	hitsound = 'sound/effects/attackblob.ogg'
 	var/emagged = 0
 	var/datum/matter_synth/water = null //CHOMPAdd readds water
-	var/busy = 0
+	var/busy = 0 	//prevents abuse and runtimes
 
 /obj/item/device/robot_tongue/New()
 	..()
