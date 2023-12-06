@@ -113,5 +113,6 @@
   - imageadd: added new hair, tail, clothing and paper mask sprites from skyrat and
       citadel
   - qol: tgui subsystem update
+  - rscdel: Removed player polls button from lobby UI
   Verkister:
   - rscadd: Added new belly setting to store nutrition instead of absorbing it.
