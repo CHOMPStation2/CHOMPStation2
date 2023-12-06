@@ -21,6 +21,7 @@
 	item_state = "multicannon"
 	slot_flags = SLOT_BACK
 	recoil = FALSE
+	fire_sound = 'modular_chomp/sound/weapons/energy/laser_strong.ogg' // CHOMPedit: New firesound, overwrites the sfx from the macrobatteries.
 
 /obj/item/weapon/gun/projectile/multi_cannon/update_icon()
 	. = ..()

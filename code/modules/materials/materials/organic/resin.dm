@@ -1,7 +1,9 @@
 /datum/material/resin
 	name = "resin"
-	icon_colour = "#353C40" // CHOMPedit: Alternative colour to distinguish from weed floor tiles.
+//	icon_colour = "#353C40" // CHOMPedit: No longer needed
 	icon_base = "resin"
+	integrity = 50 // CHOMPedit: Same as wood.
+	hardness = 15 // CHOMPedit: Same as wood.
 	table_icon_base = "stone"
 	dooropen_noise = 'sound/effects/attackblob.ogg'
 	door_icon_base = "resin"
@@ -38,7 +40,7 @@
 		new /datum/stack_recipe("[display_name] door", /obj/structure/simple_door/resin, 1, one_per_turf = 1, on_floor = 1, supplied_material = "[name]", pass_stack_color = TRUE), // CHOMPedit: Reduced material cost.
 		new /datum/stack_recipe("[display_name] barricade", /obj/structure/alien/wall, 1, time = 5 SECONDS, one_per_turf = 1, on_floor = 1, pass_stack_color = TRUE, recycle_material = "[name]"), // CHOMPedit: Reduced material cost.
 		new /datum/stack_recipe("[display_name] nest", /obj/structure/bed/nest, 1, one_per_turf = 1, on_floor = 1, supplied_material = "[name]", pass_stack_color = TRUE), // CHOMPedit: Reduced material cost.
-		new /datum/stack_recipe("[display_name] wall girders", /obj/structure/girder/resin, 1, time = 5 SECONDS, one_per_turf = 1, on_floor = 1, supplied_material = "[name]", pass_stack_color = TRUE), // CHOMPedit: Reduced material cost.
+//		new /datum/stack_recipe("[display_name] wall girders", /obj/structure/girder/resin, 1, time = 5 SECONDS, one_per_turf = 1, on_floor = 1, supplied_material = "[name]", pass_stack_color = TRUE), // CHOMPedit: Removed, build walls with secrete resin
 		new /datum/stack_recipe("crude [display_name] bandage", /obj/item/stack/medical/crude_pack, 2, time = 2 SECONDS, pass_stack_color = TRUE, recycle_material = "[name]"), // CHOMPedit: Increased material cost.
 		new /datum/stack_recipe("[display_name] net", /obj/item/weapon/material/fishing_net, 2, time = 5 SECONDS, supplied_material = "[name]", pass_stack_color = TRUE), // CHOMPedit: Reduced material cost.
 		new /datum/stack_recipe("[display_name] membrane", /obj/structure/alien/membrane, 1, time = 2 SECONDS, pass_stack_color = TRUE, recycle_material = "[name]"),
