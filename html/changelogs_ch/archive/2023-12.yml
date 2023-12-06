@@ -81,3 +81,13 @@
   - bugfix: Fixed synths not getting metabolism traits.
   - bugfix: Fixed VR mob spawner button runtiming on bad spawn paths.
   - bugfix: Fixed runtimes with uninitialized pakkun mob rest features.
+2023-12-06:
+  Upstream:
+  - rscadd: added hairs from Skyrat and Citadel
+  - qol: updated paper mask sprite from Skyrat
+  - rscadd: ported big snake tail from skyrat
+  - rscadd: ports two dresses from citadel rp and ripped shorts & a half-mask (gaiter)
+      from skyrat
+  - rscadd: ports a bunch of underwear pieces from skyrat
+  - imageadd: added new hair, tail, clothing and paper mask sprites from skyrat and
+      citadel
