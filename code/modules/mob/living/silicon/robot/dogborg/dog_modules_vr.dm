@@ -241,8 +241,12 @@
 	icon_state = "synthtongue"
 	hitsound = 'sound/effects/attackblob.ogg'
 	var/emagged = 0
+<<<<<<< HEAD
 	var/datum/matter_synth/water = null //CHOMPAdd readds water
 	var/busy = 0 	//CHOMPAdd prevents abuse
+=======
+	var/busy = 0 	//prevents abuse and runtimes
+>>>>>>> 6d1d23ed88... Merge pull request #15567 from Kashargul/radStorm&BorgFix
 
 /obj/item/device/robot_tongue/New()
 	..()
@@ -269,6 +273,9 @@
 		return
 
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+	if(busy)
+		to_chat(user, "<span class='warning'>You are already licking something else.</span>")
+		return
 	if(user.client && (target in user.client.screen))
 		to_chat(user, "<span class='warning'>You need to take \the [target.name] off before cleaning it!</span>")
 	//CHOMPADD Start
@@ -305,7 +312,11 @@
 	else if(istype(target,/obj/item))
 		if(istype(target,/obj/item/trash))
 			user.visible_message("<span class='filter_notice'>[user] nibbles away at \the [target.name].</span>", "<span class='notice'>You begin to nibble away at \the [target.name]...</span>")
+<<<<<<< HEAD
 			busy = 1 //CHOMPAdd prevents abuse
+=======
+			busy = 1
+>>>>>>> 6d1d23ed88... Merge pull request #15567 from Kashargul/radStorm&BorgFix
 			if(do_after (user, 50))
 				busy = 0 //CHOMPAdd prevents abuse
 				user.visible_message("<span class='filter_notice'>[user] finishes eating \the [target.name].</span>", "<span class='notice'>You finish eating \the [target.name].</span>")
@@ -313,6 +324,7 @@
 				qdel(target)
 				var/mob/living/silicon/robot/R = user
 				R.cell.charge += 250
+<<<<<<< HEAD
 				water.use_charge(5)  //CHOMPAdd
 			return
 		if(istype(target,/obj/item/weapon/reagent_containers/food))
@@ -327,6 +339,13 @@
 		if(istype(target,/obj/item/weapon/cell))
 			user.visible_message("<span class='filter_notice'>[user] begins cramming \the [target.name] down its throat.</span>", "<span class='notice'>You begin cramming \the [target.name] down your throat...</span>")
 			busy = 1 //CHOMPAdd prevents abuse
+=======
+			busy = 0
+			return
+		if(istype(target,/obj/item/weapon/cell))
+			user.visible_message("<span class='filter_notice'>[user] begins cramming \the [target.name] down its throat.</span>", "<span class='notice'>You begin cramming \the [target.name] down your throat...</span>")
+			busy = 1
+>>>>>>> 6d1d23ed88... Merge pull request #15567 from Kashargul/radStorm&BorgFix
 			if(do_after (user, 50))
 				busy = 0 //CHOMPAdd prevents abuse
 				user.visible_message("<span class='filter_notice'>[user] finishes gulping down \the [target.name].</span>", "<span class='notice'>You finish swallowing \the [target.name].</span>")
@@ -336,6 +355,7 @@
 				R.cell.charge += C.charge / 3
 				water.use_charge(5) //CHOMPAdd
 				qdel(target)
+			busy = 0
 			return
 		//CHOMPAdd Start
 		user.visible_message("<span class='filter_notice'>[user] begins to lick \the [target.name] clean...</span>", "<span class='notice'>You begin to lick \the [target.name] clean...</span>")
@@ -424,7 +444,8 @@
 	icon = 'icons/mob/dogborg_vr.dmi'
 	icon_state = "swordtail"
 	desc = "A glowing dagger. It appears to be extremely sharp."
-	force = 20 //Takes 5 hits to 100-0
+	force = 35 //Takes 3 hits to 100-0
+	armor_penetration = 70
 	sharp = TRUE
 	edge = TRUE
 	throwforce = 0 //This shouldn't be thrown in the first place.

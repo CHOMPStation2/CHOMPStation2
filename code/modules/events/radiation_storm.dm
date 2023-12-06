@@ -34,6 +34,7 @@
 		SSradiation.z_radiate(locate(1, 1, z), radiation_level, 1)
 
 	for(var/mob/living/carbon/C in living_mob_list)
+<<<<<<< HEAD
 		if((C.z in using_map.station_levels) && !C.isSynthetic())	//CHOMPEdit
 			var/area/A = get_area(C)
 			if(!A)
@@ -49,6 +50,26 @@
 					else
 						randmutg(H) // Applies good mutation
 						domutcheck(H,null,MUTCHK_FORCED)
+=======
+		if(!(C.z in using_map.station_levels) || C.isSynthetic() || isbelly(C.loc))
+			continue
+		var/area/A = get_area(C)
+		if(!A)
+			continue
+		if(A.flags & RAD_SHIELDED)
+			continue
+		if(istype(C,/mob/living/carbon/human))
+			var/mob/living/carbon/human/H = C
+			var/chance = 5.0
+			chance -= (chance / 100) * C.getarmor(null, "rad")
+			if(prob(chance))
+				if (prob(75))
+					randmutb(H) // Applies bad mutation
+					domutcheck(H,null,MUTCHK_FORCED)
+				else
+					randmutg(H) // Applies good mutation
+					domutcheck(H,null,MUTCHK_FORCED)
+>>>>>>> 6d1d23ed88... Merge pull request #15567 from Kashargul/radStorm&BorgFix
 
 /datum/event/radiation_storm/end()
 	revoke_maint_all_access()
