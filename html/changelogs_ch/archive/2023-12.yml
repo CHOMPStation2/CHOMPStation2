@@ -84,6 +84,10 @@
 2023-12-06:
   Kashargul:
   - bugfix: lickclean will no longer break the synthtongue
+  - balance: mimic chance on spawner's crates from 30% to 70%
+  - bugfix: runtime error in the mob spawner
+  - bugfix: mimics will spawn again
+  - qol: moved the mob_spawner_ch file to modular chomp
   TheCaramelion:
   - balance: Various job goodies have been changed, slightly more useful stuff.
   - bugfix: Liquid goodies spawn in bottles.
