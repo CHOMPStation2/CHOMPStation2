@@ -242,7 +242,7 @@
 	hitsound = 'sound/effects/attackblob.ogg'
 	var/emagged = 0
 	var/datum/matter_synth/water = null //CHOMPAdd readds water
-	var/busy = 0 	//CHOMPAdd prevents abuse
+	var/busy = 0 	//prevents abuse and runtimes
 
 /obj/item/device/robot_tongue/New()
 	..()
@@ -269,12 +269,12 @@
 		return
 
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
-	if(user.client && (target in user.client.screen))
-		to_chat(user, "<span class='warning'>You need to take \the [target.name] off before cleaning it!</span>")
-	//CHOMPADD Start
 	if(busy)
 		to_chat(user, "<span class='warning'>You are already licking something else.</span>")
 		return
+	if(user.client && (target in user.client.screen))
+		to_chat(user, "<span class='warning'>You need to take \the [target.name] off before cleaning it!</span>")
+	//CHOMPADD Start
 	if(istype(target, /obj/structure/sink) || istype(target, /obj/structure/toilet)) //Dog vibes.
 		if (water.energy == water.max_energy && istype(target, /obj/structure/sink)) return
 		if (water.energy == water.max_energy && istype(target, /obj/structure/toilet))
@@ -305,7 +305,7 @@
 	else if(istype(target,/obj/item))
 		if(istype(target,/obj/item/trash))
 			user.visible_message("<span class='filter_notice'>[user] nibbles away at \the [target.name].</span>", "<span class='notice'>You begin to nibble away at \the [target.name]...</span>")
-			busy = 1 //CHOMPAdd prevents abuse
+			busy = 1
 			if(do_after (user, 50))
 				user.visible_message("<span class='filter_notice'>[user] finishes eating \the [target.name].</span>", "<span class='notice'>You finish eating \the [target.name].</span>")
 				to_chat(user, "<span class='notice'>You finish off \the [target.name].</span>")
@@ -328,7 +328,7 @@
 			return
 		if(istype(target,/obj/item/weapon/cell))
 			user.visible_message("<span class='filter_notice'>[user] begins cramming \the [target.name] down its throat.</span>", "<span class='notice'>You begin cramming \the [target.name] down your throat...</span>")
-			busy = 1 //CHOMPAdd prevents abuse
+			busy = 1
 			if(do_after (user, 50))
 				user.visible_message("<span class='filter_notice'>[user] finishes gulping down \the [target.name].</span>", "<span class='notice'>You finish swallowing \the [target.name].</span>")
 				to_chat(user, "<span class='notice'>You finish off \the [target.name], and gain some charge!</span>")
@@ -425,7 +425,8 @@
 	icon = 'icons/mob/dogborg_vr.dmi'
 	icon_state = "swordtail"
 	desc = "A glowing dagger. It appears to be extremely sharp."
-	force = 20 //Takes 5 hits to 100-0
+	force = 35 //Takes 3 hits to 100-0
+	armor_penetration = 70
 	sharp = TRUE
 	edge = TRUE
 	throwforce = 0 //This shouldn't be thrown in the first place.
