@@ -112,5 +112,20 @@
   - rscadd: ports a bunch of underwear pieces from skyrat
   - imageadd: added new hair, tail, clothing and paper mask sprites from skyrat and
       citadel
+  - qol: tgui subsystem update
+  - rscdel: Removed player polls button from lobby UI
+  - rscadd: 'change: the mutation chance of radiation storms will now only affect
+      livings on station level'
+  - rscadd: 'change: the mutation chance of radiation storm will no longer affect
+      synthetics'
+  - rscadd: 'change: the mutation chance of radiation storms will respect raidation
+      suits'
+  - balance: ERT robot energy sword tail has been buffed to 35 damage, 70  armour
+      pen to be more in line with other melee energy weapons
+  - bugfix: synthtongue lick exploit has been fixed, prevents surreal charge gains
+      from a single cell
+  - rscadd: 'change: the mutation chance of radiation storms will respect radiation
+      traits (Minor: 20% lower chance, Major 60% lower chance, Immunity 100 % lower
+      chance)'
   Verkister:
   - rscadd: Added new belly setting to store nutrition instead of absorbing it.
