@@ -82,6 +82,18 @@
   - bugfix: Fixed VR mob spawner button runtiming on bad spawn paths.
   - bugfix: Fixed runtimes with uninitialized pakkun mob rest features.
 2023-12-06:
+  Aroliacue:
+  - soundadd: New SFX for curabitur cannon.
+  - qol: Macrobatteries for the curabitur now fit in medical belts.
+  - qol: Added several items to the trasheat whitelist.
+  - qol: Xenomorph resin doors can now be destroyed by regular carbon crew by harm
+      intent clicking with an empty hand. Xenomorph Hybrids clearing resin structures
+      must now be on harm intent, to prevent accidental deconstruction. All xeno structures
+      can now be cleared instantly by Xenomorph Hybrids.
+  - balance: All gloves now provide heat and cold protection instead of just the black
+      ones.
+  - bugfix: Xenomorph Queen buff no longer gives infinite attack speed.
+  - imageadd: Xenomorph structures have new icons. Still WIP.
   Kashargul:
   - bugfix: lickclean will no longer break the synthtongue
   - balance: mimic chance on spawner's crates from 30% to 70%
