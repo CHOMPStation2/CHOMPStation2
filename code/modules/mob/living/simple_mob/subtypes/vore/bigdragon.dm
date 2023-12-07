@@ -509,7 +509,7 @@ I think I covered everything.
 ///	My thanks to Raeschen for these descriptions
 
 /mob/living/simple_mob/vore/bigdragon/init_vore()
-	if(!voremob_loaded) //CHOMPEdit
+	if(!voremob_loaded || LAZYLEN(vore_organs)) //CHOMPEdit
 		return
 	var/obj/belly/B = new /obj/belly/dragon/maw(src)
 	B.affects_vore_sprites = FALSE //CHOMPEdit - Added so that the new system handles these not affecting the sprite.
@@ -572,7 +572,7 @@ I think I covered everything.
 	autotransferwait = 150
 	escapable = 1
 	escapechance = 100
-	escapetime = 30
+	escapetime = 15
 	fancy_vore = 1
 	contamination_color = "grey"
 	contamination_flavor = "Wet"

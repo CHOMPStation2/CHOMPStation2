@@ -15,6 +15,9 @@
 	if(faction == "Neutral")
 		neutral = TRUE
 	mobspawned = new mobtype(get_turf(GLOB.button_mob_spawner_landmark[link]))
+	if(!istype(mobspawned))
+		mobspawned = null
+		return
 	mobspawned.voremob_loaded = TRUE
 	mobspawned.init_vore()
 	if(neutral == TRUE)

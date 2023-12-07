@@ -172,6 +172,7 @@ type Belly = {
   egg_name: string;
   selective_preference: string;
   recycling: BooleanLike;
+  storing_nutrition: BooleanLike;
   entrance_logs: BooleanLike;
   item_digest_logs: BooleanLike;
 
@@ -347,6 +348,7 @@ const generateBellyString = (belly: Belly, index: number) => {
     egg_name,
     selective_preference,
     recycling,
+    storing_nutrition,
     entrance_logs,
     item_digest_logs,
 

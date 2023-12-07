@@ -17,16 +17,17 @@
 	// Goodies which can be given to anyone.
 	// Weight sum will be 1000
 	var/list/generic_goodies = list(
-		/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/nt = 130,
-		/obj/item/weapon/spacecash/c50 = 125,
-		/obj/item/weapon/reagent_containers/food/snacks/chips = 105,
-		/obj/item/weapon/reagent_containers/food/drinks/coffee = 105,
-		/obj/item/weapon/reagent_containers/food/drinks/tea = 105,
-		/obj/item/weapon/reagent_containers/food/drinks/cans/cola = 105,
-		/obj/item/weapon/spacecash/c100 = 100,
-		/obj/item/weapon/spacecash/c200 = 75,
-		/obj/item/weapon/spacecash/c500 = 50,
-		/obj/item/weapon/spacecash/c1000 = 20,
+		/obj/item/weapon/spacecash/c50 = 145,
+		/obj/item/weapon/reagent_containers/food/drinks/cans/cola = 130,
+		/obj/item/weapon/reagent_containers/food/snacks/chips = 130,
+		/obj/item/weapon/reagent_containers/food/drinks/coffee = 125,
+		/obj/item/weapon/reagent_containers/food/drinks/tea = 125,
+		/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/nt = 100,
+		/obj/item/weapon/spacecash/c100 = 75,
+		/obj/item/weapon/spacecash/c200 = 50,
+		/obj/item/weapon/spacecash/c500 = 25,
+		/obj/item/weapon/spacecash/c1000 = 10,
+		/obj/item/weapon/reagent_containers/food/drinks/bluespace_coffee = 5
 	)
 	// Overlays (pure fluff)
 	// Does the letter have the postmark overlay?
@@ -144,14 +145,8 @@
 
 	for(var/iterator in 1 to goodie_count)
 		var/target_good = pickweight(goodies)
-		if(ispath(target_good, /datum/reagent))
-			var/obj/item/weapon/reagent_containers/target_container = new /obj/item/weapon/reagent_containers/glass/bottle(src)
-			target_container.reagents.add_reagent(target_good, target_container.volume)
-			target_container.name = "[target_container.reagents.reagent_list[1].name] bottle"
-			log_game("[key_name(new_recipient)] received reagent container [target_container.name] in the mail ([target_good])")
-		else
-			var/atom/movable/target_atom = new target_good(src)
-			log_game("[key_name(new_recipient)] received [target_atom.name] in the mail ([target_good])")
+		var/atom/movable/target_atom = new target_good(src)
+		log_game("[key_name(new_recipient)] received [target_atom.name] in the mail ([target_good])")
 	update_icon()
 	return TRUE
 
@@ -253,6 +248,7 @@
 	name = special_name ? junk_names[junk] : "important [initial(name)]"
 
 	junk = new junk(src)
+	update_icon()
 	return TRUE
 
 /obj/item/weapon/paper/fluff/junkmail_generic/Initialize()
@@ -293,22 +289,3 @@
 /obj/item/weapon/paper/fluff/junkmail_generic
 	name = "important document"
 	icon_state = "paper_words"
-
-/obj/item/weapon/paper/fluff/junkmail_generic/Initialize()
-	. = ..()
-	info = pick(
-		prob(5);"Hello! I am executive at Nanotrasen Nigel Takall. Due to accounting error all of my salary is stored in an account unreachable. In order to withdraw I am required to utilize your account to make a deposit to confirm my reality situation. In exchange for a temporary deposit I will give you a payment 1000 credits. All I need is access to your account. Will you be assistant please?",
-		prob(5);"WE NEED YOUR BLOOD! WE ARE AN ANARCHO-COMMUNIST VAMPIRE COMMUNE. BLOOD ONLY LASTS 42 DAYS BEFORE IT GOES BAD! WE DO NOT HAVE NANOTRASEN STASIS! PLEASE, SEND BLOOD! THANK YOU! OR WE KILL YOU!",
-		prob(5);"Triple deposits are waiting for you at MaxBet Online when you register to play with us. You can qualify for a 200% Welcome Bonus at MaxBet Online when you sign up today. Once you are a player with MaxBet, you will also receive lucrative weekly and monthly promotions. You will be able to enjoy over 450 top-flight casino games at MaxBet.",
-		prob(5);"Hello !, I'm the former HoS of your deerest station accused by the Nanotrasen of being a traitor . I was the best we had to offer but it seems that nanotramsen has turned their back on me. I need 2000 credits to pay for my bail and then we can restore order on space station 14!",
-		prob(5);"Hello, I noticed you riding in a 2555 Ripley and wondered if you'd be interested in selling. Low mileage mechs sell very well in our current market. Please call 223-334-3245 if you're interested",
-		prob(5);"Resign Now. I'm on you now. You are fucking with me now Let's see who you are. Watch your back , bitch. Call me.  Don't be afraid, you piece of shit.  Stand up.  If you don't call, you're just afraid. And later: I already know where you live, I'm on you.  You might as well call me. You will see me. I promise.  Bro.",
-		prob(5);"Clown Planet Is Going To Become Awesome Possum Again! If This Wasn't Sent To A Clown, Disregard. If This Was Sent To A Mime, Blow It Out Your Ass, Space Frenchie! Anyway! We Make Big Progress On Clown Planet After Stupid Mimes BLOW IT ALL TO SAM HELL!!!!! Sorry I Am Mad.. Anyway Come And Visit, Honkles! We Thought You Were Dead Long Time :^()",
-		prob(5);"MONTHPEOPLE ARE REAL, THE NANOTRASEN DEEP STATE DOESN'T WANT YOU TO SEE THIS! I'VE SEEN THEM IN REAL LIFE, THEY HAVE HUGE EYEBALLS AND NO HEAD. THEY'RE SENTIENT CALENDARS. I'M NOT CRAZY. SEARCH THE CALENDAR INCIDENT ON NTNET. USE A PROXY! #BIGTRUTHS #WAKEYWAKEYSPACEMEN #21STOFSEPTEMBER",
-		prob(5);"hello :wave::wave: nanotrasens! fuck :point_left::ok_hand: the syndicate! they :older_woman: got ☄ me :heart_eyes::cold_sweat: questioning my :pregnant_woman: loyalty to nanotraben! so :ok_hand::100: please :tired_face: lets :no_entry::eyes: gather our :camera_with_flash::poop: energy :sunglasses: and :moneybag::symbols: QUICK. :astonished: send this :wastebasket::point_left: to :sweat_drops::pill: 10 :joy::joy: other loyal :100: nanotraysens to :sweat_drops::thinking: show we :dog: dont :person_gesturing_no::no_entry_sign: take :shopping_bags: nothing from :joy: the ✝ syndicate!! bless your :point_right_tone2: heart :heart_eyes::broken_heart:",
-		prob(5);"Hello, my name is Immigration officer Mimi Sashimi from the American-Felinid Homeworld consulate. It appears your current documents are either inaccurate if not entirely fraudulent. This action in it's current state is a federal offense as listed in the United Earth Commission charter section NY-4. Please pay a fine of 300,000 Space credits or $3000 United States Dollars or face deportation",
-		prob(5);"Hi %name%, We are unable to validate your billing information for the next billing cycle of your subscription to HONK Weekly therefore we'll suspend your membership if we do not receive a response from you within 48 hours. Obviously we'd love to have you back, simply mail %address% to update your details and continue to enjoy all the best pranks & gags without interruption.",
-		prob(5);"Loyal customer, DonkCo Customer Service. We appreciate your brand loyalty support. As such, it is our responsibility and pleasure to inform you of the status of your package. Your package for one \"Moth-Fuzz Parka\" has been delayed. Due to local political tensions, an animal rights group has seized and eaten your package. We appreciate the patience, DonkCo",
-		prob(5);"MESSAGE FROM CENTCOMM HIGH COMMAND: DO NOT ACCEPT THE FRIEND REQUEST OF TICKLEBALLS THE CLOWN. HE IS NOT FUNNY AND ON TOP OF THAT HE WILL HACK YOUR NTNET ACCOUNT AND MAKE YOU UNFUNNY TOO. YOU WILL LOSE ALL YOUR SPACECREDITS!!!!! SPREAD THE WORD. ANYONE WHO BECOMES FRIENDS WITH TINKLEBALLS THE CLOWN IS GOING TO LOSE ALL OF THEIR SPACECREDITS AND LOOK LIKE A HUGE IDIOT.",
-		prob(5);"i WAS A NORMAL BOY AND I CAME HOME FROM SCHOOL AND I WANTED TO PLAY SOME ORION TRAIL WHICH IS A VERY FUN GAME BUT WHEN WENT TO ARCADE MACHINE SOMETHING WAS WEIRD TEH LOGO HASD BLOD IN IT AND I BECAME VERY SCARE AND I CHECK OPTIONS AND TEHRES ONLY 1 \"GO BACK\" I CKLICK IT AND I SEE CHAT  SI EMPTY THERE'S ONLY ONE CHARACTER CALLED \"CLOSE TEH GAME  \" AND I GO TO ANOTHER MACHINE AND PLAY THERE BUT WHEN I PLAY GAME IS FULL OF BLOOD AND DEAD BODIES FROM SPACEMAN LOOK CLOSER AND SEE CLOWN AND CLOWN COMES CLOSER AND LOOKS AT ME AND SAYS \"DON'T SAY I DIKDNT' WWARN YOU\" AND CLOWN CLOSEUP APPEARS WITH BLOOD-RED HYPERREALISTIC EYES AND HE TELLS ME \"YOU WILL BE THE NEXT ONE\" AND ARCADE MACHINE POWER SHUT OFF AND THAT NITE CLOWN APPEAR AT MY WINDOW AND KILL ME AT 3 AM AND NOW IM DEAD AND YOU WILL BE TRHNE NEXT OEN UNLESS YOU PASTE THIS STORY TO 10 NTNET FRIENDS",
-		)

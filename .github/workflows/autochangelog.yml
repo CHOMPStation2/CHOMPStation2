@@ -30,7 +30,7 @@ jobs:
         run: |
           chmod -R +x ./tools/ci
           chmod -R +x ./tools/GenerateChangelog/prbody.txt
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.7'
       - name: Write PR body to prbody.txt

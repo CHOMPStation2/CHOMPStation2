@@ -219,6 +219,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"egg_type" = selected.egg_type,
 			"egg_name" = selected.egg_name, //CHOMPAdd
 			"recycling" = selected.recycling, //CHOMPAdd
+			"storing_nutrition" = selected.storing_nutrition, //CHOMPAdd
 			"entrance_logs" = selected.entrance_logs, //CHOMPAdd
 			"nutrition_percent" = selected.nutrition_percent,
 			"digest_brute" = selected.digest_brute,
@@ -312,6 +313,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		selected_list["egg_type"] = selected.egg_type
 		selected_list["egg_name"] = selected.egg_name //CHOMPAdd
 		selected_list["recycling"] = selected.recycling //CHOMPAdd
+		selected_list["storing_nutrition"] = selected.storing_nutrition //CHOMPAdd
 		selected_list["item_digest_logs"] = selected.item_digest_logs //CHOMPAdd
 		selected_list["contaminates"] = selected.contaminates
 		selected_list["contaminate_flavor"] = null
@@ -935,6 +937,13 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						new_belly.recycling = FALSE
 					if(new_recycling == 1)
 						new_belly.recycling = TRUE
+
+				if(isnum(belly_data["storing_nutrition"]))
+					var/new_storing_nutrition = belly_data["storing_nutrition"]
+					if(new_storing_nutrition == 0)
+						new_belly.storing_nutrition = FALSE
+					if(new_storing_nutrition == 1)
+						new_belly.storing_nutrition = TRUE
 
 				if(isnum(belly_data["entrance_logs"]))
 					var/new_entrance_logs = belly_data["entrance_logs"]
@@ -2348,6 +2357,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			. = TRUE
 		if("b_recycling")
 			host.vore_selected.recycling = !host.vore_selected.recycling
+			. = TRUE
+		if("b_storing_nutrition")
+			host.vore_selected.storing_nutrition = !host.vore_selected.storing_nutrition
 			. = TRUE//CHOMPAdd End
 		if("b_desc")
 			var/new_desc = html_encode(tgui_input_text(usr,"Belly Description, '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name. ([BELLIES_DESC_MAX] char limit):","New Description",host.vore_selected.desc, multiline = TRUE, prevent_enter = TRUE))

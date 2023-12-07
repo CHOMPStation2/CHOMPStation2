@@ -178,6 +178,7 @@
 /area/submap/xenobioeclipse
 	name = "Poi Valley - Eclipse Xenobio"
 	ambience = AMBIENCE_RUINS
+	requires_power = FALSE
 
 /area/submap/warzone
 	name = "Poi Valley - Warzone"
@@ -186,7 +187,7 @@
 /area/submap/frozenlab
 	name = "Poi Valley - Frozen Lab"
 	ambience = AMBIENCE_RUINS
-
+	requires_power = FALSE
 
 /area/submap/toxiclake
 	name = "Poi Valley - Toxin Lake"
@@ -195,7 +196,33 @@
 /area/submap/laserpuzzle
 	name = "Poi Valley - Laser Dome"
 	ambience = AMBIENCE_RUINS
+	requires_power = FALSE
 
 /area/submap/terror
 	name = "Poi Valley - Terror"
+	ambience = AMBIENCE_RUINS
+
+/area/submap/alientomb
+	name = "Poi Valley - Alien Tomb"
+	ambience = AMBIENCE_RUINS
+
+/area/submap/eclipseblob
+	name = "Poi Valley - Eclipse Blob"
+	ambience = AMBIENCE_RUINS
+
+/area/submap/eclipsecargo
+	name = "Poi Valley - Eclipse Cargo Shuttle"
+	ambience = AMBIENCE_RUINS
+	requires_power = FALSE
+
+/area/submap/paperworks
+	name = "Poi Valley - Paperworks"
+	ambience = AMBIENCE_RUINS
+
+/area/submap/raidedpod
+	name = "Poi Valley - Raided Escape Pod"
+	ambience = AMBIENCE_RUINS
+
+/area/submap/terraforming
+	name = "Poi Valley - Terraforming"
 	ambience = AMBIENCE_RUINS

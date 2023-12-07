@@ -286,9 +286,9 @@
 /obj/item/clothing/shoes/cult,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/shield_projector/rectangle/automatic/magus,
 /obj/item/device/soulstone,
 /obj/item/weapon/gun/magic/firestaff,
+/obj/item/weapon/spellbook/oneuse/smoke,
 /turf/simulated/floor/gorefloor2,
 /area/submap/CultBar)
 "kY" = (
