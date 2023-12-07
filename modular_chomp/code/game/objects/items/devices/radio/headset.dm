@@ -25,12 +25,12 @@
 	var/item_slowdown_reset = 0	//Vars to copy and reset later
 	var/slowdown_reset = 0
 	light_range = 6
-	light_power = 2				//Set this to 0 if you don't want a light
+	light_power = 0				//Set this to 0 if you don't want a light
 	light_color = "#ffaaaa"
 	var/tele_threshold = 50
 	var/telex = 16
 	var/teley = 16
-	var/telez = 1
+	var/telez = 0	//Set this in-round if you want a return point with fake health
 
 /obj/item/device/radio/headset/event/equipped(var/mob/living/carbon/human/H)
 	if(H && ((H.l_ear == src) || (H.r_ear == src)))

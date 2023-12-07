@@ -351,7 +351,3 @@
 	melee_damage_upper = 15
 	base_attack_cooldown = 10
 	attack_armor_pen = 50
-
-/mob/living/simple_mob/vore/aggressive/mimic
-	maxHealth = 40
-	health = 40	//Temporary nerf for the event exclusively

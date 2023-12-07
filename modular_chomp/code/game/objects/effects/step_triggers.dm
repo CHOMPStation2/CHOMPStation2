@@ -1,6 +1,16 @@
 var/static/list/mapped_autostrips = list()
 var/static/list/mapped_autostrips_mob = list()
 
+/*
+This should actually be refactored if it ever needs to be used again into just being
+an event controller with more graceful solutions.
+Creating lockers was not graceful, in practice, and creates clutter, for example.
+Repurpose this idea into a self contained machine in the future that stores and auto-equips someones gear.
+
+But for now, for what it's been used for, it works.
+
+*/
+
 //Admin tool to automatically strip a human victim of all their equipment and genetics powers, and store them in a closet.
 //Equips Vox/Zaddat survival gear, and a few basic pieces of clothing
 /obj/effect/step_trigger/autostrip
