@@ -583,17 +583,17 @@
 
 /obj/belly/proc/owner_adjust_nutrition(var/amount = 0)
 	if(storing_nutrition && amount > 0)
-		for(var/obj/item/trash/rawnutrition/R in contents)
+		for(var/obj/item/weapon/reagent_containers/food/rawnutrition/R in contents)
 			if(istype(R))
 				R.stored_nutrition += amount
 				return
-		var/obj/item/trash/rawnutrition/NR = new /obj/item/trash/rawnutrition(src)
+		var/obj/item/weapon/reagent_containers/food/rawnutrition/NR = new /obj/item/weapon/reagent_containers/food/rawnutrition(src)
 		NR.stored_nutrition += amount
 		return
 	else
 		owner.adjust_nutrition(amount)
 
-/obj/item/trash/rawnutrition
+/obj/item/weapon/reagent_containers/food/rawnutrition
 	name = "raw nutrition"
 	desc = "A nutritious pile of converted mass ready for consumption."
 	icon = 'icons/obj/recycling.dmi'
@@ -602,7 +602,7 @@
 	w_class = ITEMSIZE_SMALL
 	var/stored_nutrition = 0
 
-/obj/item/trash/rawnutrition/afterattack(atom/target, mob/living/user, proximity)
+/obj/item/weapon/reagent_containers/food/rawnutrition/afterattack(atom/target, mob/living/user, proximity)
 	if(!proximity)
 		return
 	if(isliving(target))
