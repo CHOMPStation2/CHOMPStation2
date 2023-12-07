@@ -134,3 +134,6 @@
   - bugfix: remove unnecessary if
   Upstream:
   - rscadd: Added back the info button to recover from the text button
+  Verkister:
+  - bugfix: Fixed food only mode not digesting raw nutrition piles.
+  - bugfix: Fixed acid reagent digestion not producing raw nutrition in store mode.
