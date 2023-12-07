@@ -79,7 +79,7 @@
 	hitsound = 'sound/weapons/blade1.ogg'
 	attack_verb = list("slashed", "stabbed", "jabbed", "mauled", "sliced")
 	reach = 3
-	projectile_parry_chance = 20.
+	projectile_parry_chance = 15.
 
 /obj/item/weapon/melee/explojaws
 	name = "explo jaws"
@@ -91,7 +91,7 @@
 	throwforce = 0
 	hitsound = 'sound/weapons/bite.ogg'
 	attack_verb = list("chomped", "bit", "ripped", "mauled", "enforced")
-	projectile_parry_chance = 20
+	projectile_parry_chance = 15
 
 /obj/item/weapon/gun/energy/smallmedigun
 	name = "borg directed restoration system"
