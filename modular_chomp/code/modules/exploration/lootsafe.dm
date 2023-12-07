@@ -89,7 +89,7 @@
 		lootvalue += value
 
 /obj/structure/closet/crate/secure/lootsafe/numberlock
-	desc = "A huge chunk of metal with a keybad embedded in it. Fine print above the key pat reads, Guaranteed thermite resistant, explosion resistant, and assistant resistant.\""
+	desc = "A huge chunk of metal with a keypad embedded in it. Fine print above the keypad reads, Guaranteed thermite resistant, explosion resistant, and assistant resistant.\""
 	var/list/code = list()
 	var/list/lastattempt = list()
 	var/attempts = 10
