@@ -22,7 +22,7 @@
 			add_overlay(IM)
 			qdel(I)
 
-obj/structure/closet/secure_closet/mind/allowed(mob/user)
+/obj/structure/closet/secure_closet/mind/allowed(mob/user)
 	if(user.mind == owner)
 		return TRUE
 	else
