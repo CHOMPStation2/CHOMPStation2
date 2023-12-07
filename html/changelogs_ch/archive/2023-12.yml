@@ -129,3 +129,6 @@
       chance)'
   Verkister:
   - rscadd: Added new belly setting to store nutrition instead of absorbing it.
+2023-12-07:
+  Upstream:
+  - rscadd: Added back the info button to recover from the text button
