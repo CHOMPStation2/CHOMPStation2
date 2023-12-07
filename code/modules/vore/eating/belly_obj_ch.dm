@@ -602,9 +602,7 @@
 	w_class = ITEMSIZE_SMALL
 	var/stored_nutrition = 0
 
-/obj/item/weapon/reagent_containers/food/rawnutrition/afterattack(atom/target, mob/living/user, proximity)
-	if(!proximity)
-		return
+/obj/item/weapon/reagent_containers/food/rawnutrition/standard_feed_mob(var/mob/user, var/mob/target)
 	if(isliving(target))
 		var/mob/living/L = target
 		L.nutrition += stored_nutrition
