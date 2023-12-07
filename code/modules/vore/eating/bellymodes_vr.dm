@@ -288,7 +288,7 @@
 		if(IM_HOLD)
 			items_preserved |= I
 		if(IM_DIGEST_FOOD)
-			if(istype(I,/obj/item/weapon/reagent_containers/food) || istype(I, /obj/item/organ))
+			if(istype(I,/obj/item/weapon/reagent_containers/food) || istype(I, /obj/item/organ) || istype(I, /obj/item/trash/rawnutrition)) //CHOMPEdit
 				did_an_item = digest_item(I, touchable_amount) //CHOMPEdit
 			else
 				items_preserved |= I
