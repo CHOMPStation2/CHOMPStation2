@@ -137,7 +137,7 @@
 /turf/simulated/shuttle/floor/purple,
 /area/submap/eclipsecargo)
 "w" = (
-/obj/structure/safe,
+/obj/structure/closet/crate/secure/lootsafe/numberlock,
 /obj/item/weapon/rig/ch/clockwork,
 /obj/item/weapon/gun/energy/clockwork,
 /obj/item/stack/material/void_opal,

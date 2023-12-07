@@ -4692,6 +4692,7 @@
 #include "modular_chomp\code\modules\emotes\definitions\audible_pain.dm"
 #include "modular_chomp\code\modules\event\dangerinfestation.dm"
 #include "modular_chomp\code\modules\event\event_container_ch.dm"
+#include "modular_chomp\code\modules\exploration\lootsafe.dm"
 #include "modular_chomp\code\modules\food\drinkgglass\metaglass.dm"
 #include "modular_chomp\code\modules\food\food\drinks\bottle.dm"
 #include "modular_chomp\code\modules\food\food\snacks\meat.dm"
