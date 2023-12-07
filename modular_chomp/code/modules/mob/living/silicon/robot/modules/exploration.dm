@@ -31,11 +31,11 @@
 	src.modules += new /obj/item/weapon/gun/energy/taser/mounted/cyborg/flare(src)
 	src.modules += new /obj/item/weapon/dogborg/pounce(src)
 	src.modules += new /obj/item/weapon/melee/explotailspear(src)
-	src.modules += new /obj/item/weapon/melee/explojaws(src)
+	src.modules += new /obj/item/weapon/gun/energy/smallmedigun(src)
 	src.modules += new /obj/item/shield_projector/line/exploborg(src)
 	src.modules += new /obj/item/roller_holder(src)
 
-	src.emag 	 += new /obj/item/weapon/gun/energy/smallmedigun(src)
+	src.emag 	 += new /obj/item/weapon/melee/explojaws(src)
 
 	..()
 
@@ -109,8 +109,8 @@
 /obj/item/projectile/beam/medical_cell/borg/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
 		if(target.stat != DEAD)
-			target.adjustBruteLoss(-2)
-			target.adjustFireLoss(-2)
-			target.adjustToxLoss(-2)
+			target.adjustBruteLoss(-0.75)
+			target.adjustFireLoss(-0.75)
+			target.adjustToxLoss(-0.75)
 	else
 		return 1
