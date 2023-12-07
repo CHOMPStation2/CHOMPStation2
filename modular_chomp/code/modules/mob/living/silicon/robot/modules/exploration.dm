@@ -33,6 +33,7 @@
 	src.modules += new /obj/item/weapon/melee/explotailspear(src)
 	src.modules += new /obj/item/weapon/melee/explojaws(src)
 	src.modules += new /obj/item/shield_projector/line/exploborg(src)
+	src.modules += new /obj/item/roller_holder(src)
 
 	src.emag 	 += new /obj/item/weapon/gun/energy/smallmedigun(src)
 
