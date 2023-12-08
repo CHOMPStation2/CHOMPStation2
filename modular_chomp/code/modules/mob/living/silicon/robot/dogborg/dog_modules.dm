@@ -73,7 +73,8 @@
 
 /obj/item/device/self_repair_system/attack_self(mob/user)
 	var/mob/living/silicon/robot/R = user
-	if(!istype(R.components[target_component].wrapped, /obj/item/broken_device))
+	var/datum/robot_component/C = R.components[target_component]
+	if(C && !istype(C.wrapped, /obj/item/broken_device))
 		var/datum/robot_component/C = R.components[target_component]
 		if(C.brute_damage == 0 && C.electronics_damage == 0)
 			to_chat(R, "<span class='warning'>No brute or burn damage detected in [target_component].</span>")
