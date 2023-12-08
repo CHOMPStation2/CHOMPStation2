@@ -37,12 +37,14 @@
 	force = 40
 	armor_penetration = 25 //To try and make it not useless against armored mobs but not fully nullify it
 	projectile_parry_chance = 15
-	reach = 2
+
 /obj/item/weapon/gun/energy/medigun/mounted/smallmedigun
 	name = "borg directed restoration system"
 	desc = "An adapted version of the BL-3 'Phoenix, for expiremental useage in borgs."
 	projectile_type = /obj/item/projectile/beam/medical_cell/borg
-	charge_cost = 300
+	accept_cell_type = /obj/item/weapon/cell/device
+	cell_type = /obj/item/weapon/cell/device/weapon
+	charge_cost = 600
 	fire_delay = 6
 
 /obj/item/projectile/beam/medical_cell/borg
@@ -51,9 +53,8 @@
 /obj/item/projectile/beam/medical_cell/borg/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
 		if(target.stat != DEAD)
-			target.adjustBruteLoss(-0.75)
-			target.adjustFireLoss(-0.75)
-			target.adjustToxLoss(-0.75)
+			target.adjustBruteLoss(-3.75)
+			target.adjustFireLoss(-3.75)
 	else
 		return 1
 
