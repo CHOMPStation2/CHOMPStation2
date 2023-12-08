@@ -110,8 +110,7 @@
 /obj/item/projectile/beam/medical_cell/borg/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
 		if(target.stat != DEAD)
-			target.adjustBruteLoss(-0.75)
-			target.adjustFireLoss(-0.75)
-			target.adjustToxLoss(-0.75)
+			target.adjustBruteLoss(-3.75)
+			target.adjustFireLoss(-3.75)
 	else
 		return 1
