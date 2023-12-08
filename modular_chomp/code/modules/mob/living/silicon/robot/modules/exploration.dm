@@ -76,7 +76,7 @@
 	throwforce = 0 //This shouldn't be thrown in the first place.
 	hitsound = 'sound/weapons/blade1.ogg'
 	attack_verb = list("slashed", "stabbed", "jabbed", "mauled", "sliced")
-	reach = 2
+	reach = 3
 	projectile_parry_chance = 15.
 
 /obj/item/weapon/melee/jaws/big/explojaws
