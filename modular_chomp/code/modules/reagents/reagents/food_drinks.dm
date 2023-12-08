@@ -727,3 +727,10 @@
 	glass_icon_state = "wormblood"
 	glass_center_of_mass = list("x"=16, "y"=8)
 	glass_icon_file = 'icons/obj/drinks_yw.dmi'
+
+/datum/reagent/blondiemix
+	name = "Blondie Mix"
+	id = "blondiemix"
+	description = "A dry mix for making delicious blondies."
+	reagent_state = SOLID
+	color = "#f3b44e"
