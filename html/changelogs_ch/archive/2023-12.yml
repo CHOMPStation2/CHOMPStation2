@@ -137,3 +137,6 @@
   Verkister:
   - bugfix: Fixed food only mode not digesting raw nutrition piles.
   - bugfix: Fixed acid reagent digestion not producing raw nutrition in store mode.
+2023-12-08:
+  FluffMedic:
+  - balance: eclipse are much more killable
