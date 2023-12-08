@@ -140,6 +140,10 @@
 2023-12-08:
   FluffMedic:
   - balance: eclipse are much more killable
+  MeepleMuncher:
+  - rscadd: Adds in blondies, a variant of brownies that don't have the chocolate
+      allergen.
+  - imageadd: added boldie sprites
   TheCaramelion:
   - bugfix: Walking in the same tile as a phased entity doesn't show a message anymore
   Upstream:
