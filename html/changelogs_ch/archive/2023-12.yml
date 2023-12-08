@@ -148,3 +148,6 @@
       as the reach variable was added to weapons. This allows robots to also attack
       on more than 1 field away when a weapon has a higher reach value defined.
   - bugfix: runtime in window.dm
+  - qol: the jaws are now a melee weapon
+  - qol: the combat borgblade is now a melee weapon
+  - qol: the combat shocker is now a melee weapon
