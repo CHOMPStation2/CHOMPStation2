@@ -53,7 +53,6 @@
 			if(C.species.traits.Find(/datum/trait/positive/rad_immune))
 				chance -= (chance / 100) * 100
 			if(prob(round(chance, 0.01)))
-			if(prob(chance))
 			//CHOMPEdit End
 				if (prob(75))
 					randmutb(H) // Applies bad mutation

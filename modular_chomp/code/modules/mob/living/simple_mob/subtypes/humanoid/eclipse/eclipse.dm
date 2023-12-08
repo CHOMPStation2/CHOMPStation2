@@ -104,8 +104,8 @@
 	name = "Solar Eclipse Initiate"
 	desc = "You shouldn't be seeing this. But don't use lasers or energy weapons"
 
-	armor = list(melee = -20, bullet = -20, laser = 85, energy = 85, bomb = 50, bio = 100, rad = 100) //Solar members are nigh immune to burns.
-	armor_soak = list(melee = 0, bullet = 0, laser = 15, energy = 15, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = -50, bullet = -50, laser = 0, energy = 0, bomb = 50, bio = 100, rad = 100) //Solar members are nigh immune to burns.
+	armor_soak = list(melee = 0, bullet = 0, laser = 10, energy = 10, bomb = 0, bio = 0, rad = 0)
 
 /mob/living/simple_mob/humanoid/eclipse/solar/bullet_act(obj/item/projectile/P)
 	if(istype(P, /obj/item/projectile/energy) || istype(P, /obj/item/projectile/beam))
@@ -271,8 +271,8 @@
 	name = "Lunar Eclipse Initiate"
 	desc = "You shouldn't be seeing this, but don't use melee weapons or bullets."
 
-	armor = list(melee = 85, bullet = 85, laser = -20, energy = -20, bomb = 50, bio = 100, rad = 100) //Lunar members are nigh immune to burns.
-	armor_soak = list(melee = 15, bullet = 15, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0) //15 because every melee weapon has dumb amount of AP
+	armor = list(melee = 0, bullet = 0, laser = -50, energy = -50, bomb = 50, bio = 100, rad = 100) //Lunar members are nigh immune to burns.
+	armor_soak = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0) //15 because every melee weapon has dumb amount of AP
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/bullet_act(obj/item/projectile/P)
 	if(istype(P, /obj/item/projectile/bullet))
@@ -612,7 +612,7 @@
 	icon_living = "aeroblaster"
 
 	reload_max = 1
-	reload_time = 1.5 SECONDS
+	reload_time = 5.0 SECONDS
 
 	ranged_attack_delay = 1.5 SECONDS
 	hovering = TRUE
@@ -649,7 +649,7 @@
 
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/aeroblaster/ranged_pre_animation(atom/A)
-	Beam(get_turf(A), icon_state = "sniper_beam", time = 1.5 SECONDS, maxdistance = 5)
+	Beam(get_turf(A), icon_state = "sniper_beam", time = 1.5 SECONDS, maxdistance = 15)
 	. = ..()
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/aeroblaster/shoot_target(atom/A)
@@ -691,7 +691,7 @@
 	health = 30
 	maxHealth = 30
 	projectiletype = /obj/item/projectile/energy/excavate/weak
-	special_attack_cooldown = 50 SECONDS
+	special_attack_cooldown = 60 SECONDS
 	special_attack_min_range = 4
 	special_attack_max_range = 7
 	icon_state = "miner"
@@ -711,11 +711,10 @@
 	health = 30
 	maxHealth = 30
 	desc = "A somewhat see through being wearing a burn resistaint coat."
-	alpha = 180
 	melee_damage_lower = 20
 	melee_damage_upper = 20
 	attack_armor_pen = 30
-	special_attack_cooldown = 5 SECONDS
+	special_attack_cooldown = 25 SECONDS
 	special_attack_min_range = 1
 	special_attack_max_range = 7
 	projectiletype = null
@@ -723,7 +722,7 @@
 	icon_state = "froststalker"
 	icon_living = "froststalker"
 	cold_resist = 1.0
-	melee_attack_delay = 2.0
+	melee_attack_delay = 2.5
 
 /mob/living/simple_mob/humanoid/eclipse/solar/froststalker/do_special_attack(atom/A)
 	// Teleport attack.
@@ -754,7 +753,7 @@
 
 	var/datum/effect/effect/system/spark_spread/s1 = new /datum/effect/effect/system/smoke_spread/frost
 	s1.set_up(5, 1, T)
-	var/datum/effect/effect/system/spark_spread/s2 = new /datum/effect/effect/system/smoke_spread/frost
+	var/datum/effect/effect/system/spark_spread/s2 = new /datum/effect/effect/system/smoke_spread
 	s2.set_up(5, 1, target_turf)
 
 
@@ -788,8 +787,6 @@
 
 	loot_list = list(/obj/item/weapon/gun/energy/freezegun = 100,
 			)
-
-	armor_soak = list(melee = 0, bullet = 0, laser = 20, energy = 20, bomb = 0, bio = 0, rad = 0)
 
 /mob/living/simple_mob/humanoid/eclipse/solar/cryomancer/should_special_attack(atom/A)
 	var/mob_count = 0				// Are there enough mobs to consider grenading?

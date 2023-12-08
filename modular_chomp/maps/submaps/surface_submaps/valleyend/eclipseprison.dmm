@@ -477,7 +477,7 @@
 /turf/simulated/floor/reinforced/n20,
 /area/submap/eclipseprison)
 "Fj" = (
-/obj/structure/safe,
+/obj/structure/closet/crate/secure/lootsafe/numberlock,
 /obj/item/weapon/gun/energy/freezegun,
 /obj/item/stack/material/void_opal,
 /obj/item/weapon/paper{

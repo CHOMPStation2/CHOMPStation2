@@ -129,3 +129,25 @@
       chance)'
   Verkister:
   - rscadd: Added new belly setting to store nutrition instead of absorbing it.
+2023-12-07:
+  Kashargul:
+  - bugfix: remove unnecessary if
+  Upstream:
+  - rscadd: Added back the info button to recover from the text button
+  Verkister:
+  - bugfix: Fixed food only mode not digesting raw nutrition piles.
+  - bugfix: Fixed acid reagent digestion not producing raw nutrition in store mode.
+2023-12-08:
+  FluffMedic:
+  - balance: eclipse are much more killable
+  TheCaramelion:
+  - bugfix: Walking in the same tile as a phased entity doesn't show a message anymore
+  Upstream:
+  - bugfix: No longer running IP checks on insecure http connections
+  - rscadd: Robots can now also use melee range weapons, seems that have been overseen
+      as the reach variable was added to weapons. This allows robots to also attack
+      on more than 1 field away when a weapon has a higher reach value defined.
+  - bugfix: runtime in window.dm
+  - qol: the jaws are now a melee weapon
+  - qol: the combat borgblade is now a melee weapon
+  - qol: the combat shocker is now a melee weapon
