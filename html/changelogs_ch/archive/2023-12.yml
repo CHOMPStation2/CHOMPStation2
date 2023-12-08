@@ -142,3 +142,5 @@
   - balance: eclipse are much more killable
   TheCaramelion:
   - bugfix: Walking in the same tile as a phased entity doesn't show a message anymore
+  Upstream:
+  - bugfix: No longer running IP checks on insecure http connections
