@@ -30,12 +30,12 @@
 	src.modules += new /obj/item/device/cataloguer(src)
 	src.modules += new /obj/item/weapon/gun/energy/taser/mounted/cyborg/flare(src)
 	src.modules += new /obj/item/weapon/dogborg/pounce(src)
-	src.modules += new /obj/item/weapon/melee/explotailspear(src)
-	src.modules += new /obj/item/weapon/gun/energy/smallmedigun(src)
+	src.modules += new /obj/item/weapon/melee/combat_borgblade/explotailspear(src)
+	src.modules += new /obj/item/weapon/gun/energy/smallmedigun/mounted(src)
 	src.modules += new /obj/item/shield_projector/line/exploborg(src)
 	src.modules += new /obj/item/roller_holder(src)
 
-	src.emag 	 += new /obj/item/weapon/melee/explojaws(src)
+	src.emag 	 += new /obj/item/weapon/melee/jaws/big/explojaws(src)
 
 	..()
 
@@ -44,7 +44,6 @@
 	desc = "Equipment for a ExploreHound unit. A mounted portable-storage device that holds supplies/person."
 	icon_state = "sleeperlost"
 	injection_chems = null
-	stabilizer = TRUE
 	compactor = TRUE
 	max_item_count = 4
 	medsensor = FALSE
@@ -67,22 +66,20 @@
 	line_length = 7			// How long the line is.  Recommended to be an odd number.
 	offset_from_center = 2	// How far from the projector will the line's center be.
 
-/obj/item/weapon/melee/explotailspear
+/obj/item/weapon/melee/combat_borgblade/explotailspear
 	name = "energy tail"
 	icon = 'icons/mob/dogborg_vr.dmi'
 	icon_state = "swordtail"
 	desc = "A glowing tail dagger. It appears to be extremely sharp."
 	force = 25
-	armor_penetration = 25 //30 to try and make it not useless against armored mobs but not fully nullify it.
-	sharp = TRUE
-	edge = TRUE
+	armor_penetration = 25 //To try and make it not useless against armored mobs but not fully nullify it
 	throwforce = 0 //This shouldn't be thrown in the first place.
 	hitsound = 'sound/weapons/blade1.ogg'
 	attack_verb = list("slashed", "stabbed", "jabbed", "mauled", "sliced")
-	reach = 3
+	reach = 2
 	projectile_parry_chance = 15.
 
-/obj/item/weapon/melee/explojaws
+/obj/item/weapon/melee/jaws/big/explojaws
 	name = "explo jaws"
 	icon = 'icons/mob/dogborg_vr.dmi'
 	icon_state = "jaws"
@@ -102,6 +99,10 @@
 	icon = 'icons/obj/gun_vr.dmi'
 	projectile_type = /obj/item/projectile/beam/medical_cell/borg
 	charge_cost = 300
+
+/obj/item/weapon/gun/energy/smallmedigun/mounted
+	self_recharge = 1
+	use_external_power = 1
 
 /obj/item/projectile/beam/medical_cell/borg
 	range = 4
