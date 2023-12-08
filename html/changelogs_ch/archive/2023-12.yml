@@ -140,3 +140,5 @@
 2023-12-08:
   FluffMedic:
   - balance: eclipse are much more killable
+  TheCaramelion:
+  - bugfix: Walking in the same tile as a phased entity doesn't show a message anymore
