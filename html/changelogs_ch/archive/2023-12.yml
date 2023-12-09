@@ -155,3 +155,7 @@
   - qol: the jaws are now a melee weapon
   - qol: the combat borgblade is now a melee weapon
   - qol: the combat shocker is now a melee weapon
+2023-12-09:
+  Upstream:
+  - bugfix: No more will slimes, zorren and skrell have their blood reagent overridden
+      by char setup when they havent even touched that.
