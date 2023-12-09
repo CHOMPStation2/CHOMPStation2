@@ -140,6 +140,10 @@
 2023-12-08:
   FluffMedic:
   - balance: eclipse are much more killable
+  MeepleMuncher:
+  - rscadd: Adds in blondies, a variant of brownies that don't have the chocolate
+      allergen.
+  - imageadd: added boldie sprites
   TheCaramelion:
   - bugfix: Walking in the same tile as a phased entity doesn't show a message anymore
   Upstream:
@@ -151,3 +155,14 @@
   - qol: the jaws are now a melee weapon
   - qol: the combat borgblade is now a melee weapon
   - qol: the combat shocker is now a melee weapon
+2023-12-09:
+  Kashargul:
+  - bugfix: tool pathing in mecha_construction_ch
+  Upstream:
+  - bugfix: No more will slimes, zorren and skrell have their blood reagent overridden
+      by char setup when they havent even touched that.
+  - bugfix: fixes jawsoflife not being able to open emergency shutters
+  - rscadd: added tgchat
+  - rscdel: removed vchat
+  - bugfix: most likely fixed some scrolling issues with some of the UIs
+  - qol: improved color contrast for dark mode
