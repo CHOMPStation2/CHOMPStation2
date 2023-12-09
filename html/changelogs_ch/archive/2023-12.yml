@@ -159,3 +159,4 @@
   Upstream:
   - bugfix: No more will slimes, zorren and skrell have their blood reagent overridden
       by char setup when they havent even touched that.
+  - bugfix: fixes jawsoflife not being able to open emergency shutters
