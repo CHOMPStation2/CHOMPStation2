@@ -177,3 +177,4 @@
       hidden beforehand'
   - admin: 'change: admin module removing unequips all active modules'
   - qol: Adds warning for trying to wrap packages and gifts
+  - rscdel: Disables debug messages for APC-less ships in electrical storms
