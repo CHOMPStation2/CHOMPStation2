@@ -158,6 +158,8 @@
 2023-12-09:
   Kashargul:
   - bugfix: tool pathing in mecha_construction_ch
+  MeepleMuncher:
+  - bugfix: fixed blondies
   Upstream:
   - bugfix: No more will slimes, zorren and skrell have their blood reagent overridden
       by char setup when they havent even touched that.
