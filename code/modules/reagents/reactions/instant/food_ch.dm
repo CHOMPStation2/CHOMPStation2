@@ -16,7 +16,7 @@
 
 /decl/chemical_reaction/instant/food/blondiemix
 	name = "Blondie Mix"
-	id = "blondie"
-	result = "blondie"
+	id = "blondiemix"
+	result = "blondiemix"
 	required_reagents = list("flour" = 5, "vanilla" = 5, "sugar" = 5)
 	result_amount = 15
