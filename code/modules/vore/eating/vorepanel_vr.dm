@@ -1328,7 +1328,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					new_belly.escapechance = sanitize_integer(new_escapechance, 0, 100, initial(new_belly.escapechance))
 
 				if(isnum(belly_data["escapechance_absorbed"]))
-					var/new_escapechance = belly_data["escapechance_absorbed"]
+					var/new_escapechance_absorbed = belly_data["escapechance_absorbed"]
 					new_belly.escapechance_absorbed = sanitize_integer(new_escapechance_absorbed, 0, 100, initial(new_belly.escapechance_absorbed))
 
 
