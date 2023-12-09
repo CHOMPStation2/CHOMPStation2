@@ -162,3 +162,7 @@
   - bugfix: No more will slimes, zorren and skrell have their blood reagent overridden
       by char setup when they havent even touched that.
   - bugfix: fixes jawsoflife not being able to open emergency shutters
+  - rscadd: added tgchat
+  - rscdel: removed vchat
+  - bugfix: most likely fixed some scrolling issues with some of the UIs
+  - qol: improved color contrast for dark mode
