@@ -176,3 +176,4 @@
   - qol: 'change: when modules are removed or the entire robot is reset, the hud is
       hidden beforehand'
   - admin: 'change: admin module removing unequips all active modules'
+  - qol: Adds warning for trying to wrap packages and gifts
