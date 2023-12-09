@@ -753,6 +753,131 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					if(new_absorbed_struggle_messages_inside)
 						new_belly.set_messages(new_absorbed_struggle_messages_inside,"asmi")
 
+				if(islist(belly_data["escape_attempt_messages_prey"]))
+					var/new_escape_attempt_messages_prey = sanitize(jointext(belly_data["escape_attempt_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_attempt_messages_prey)
+						new_belly.set_messages(new_escape_attempt_messages_prey,"escao")
+
+				if(islist(belly_data["escape_attempt_messages_owner"]))
+					var/new_escape_attempt_messages_owner = sanitize(jointext(belly_data["escape_attempt_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_attempt_messages_owner)
+						new_belly.set_messages(new_escape_attempt_messages_owner,"escap")
+
+				if(islist(belly_data["escape_messages_prey"]))
+					var/new_escape_messages_prey = sanitize(jointext(belly_data["escape_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_messages_prey)
+						new_belly.set_messages(new_escape_messages_prey,"escp")
+
+				if(islist(belly_data["escape_messages_owner"]))
+					var/new_escape_messages_owner = sanitize(jointext(belly_data["escape_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_messages_owner)
+						new_belly.set_messages(new_escape_messages_owner,"esco")
+
+				if(islist(belly_data["escape_messages_outside"]))
+					var/new_escape_messages_outside = sanitize(jointext(belly_data["escape_messages_outside"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_messages_outside)
+						new_belly.set_messages(new_escape_messages_outside,"escout")
+
+				if(islist(belly_data["escape_item_messages_prey"]))
+					var/new_escape_item_messages_prey = sanitize(jointext(belly_data["escape_item_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_item_messages_prey)
+						new_belly.set_messages(new_escape_item_messages_prey,"escip")
+
+				if(islist(belly_data["escape_item_messages_owner"]))
+					var/new_escape_item_messages_owner = sanitize(jointext(belly_data["escape_item_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_item_messages_owner)
+						new_belly.set_messages(new_escape_item_messages_owner,"escio")
+
+				if(islist(belly_data["escape_item_messages_outside"]))
+					var/new_escape_item_messages_outside = sanitize(jointext(belly_data["escape_item_messages_outside"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_item_messages_outside)
+						new_belly.set_messages(new_escape_item_messages_outside,"esciout")
+
+				if(islist(belly_data["escape_fail_messages_prey"]))
+					var/new_escape_fail_messages_prey = sanitize(jointext(belly_data["escape_fail_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_fail_messages_prey)
+						new_belly.set_messages(new_escape_fail_messages_prey,"escfp")
+
+				if(islist(belly_data["escape_fail_messages_owner"]))
+					var/new_escape_fail_messages_owner = sanitize(jointext(belly_data["escape_fail_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_fail_messages_owner)
+						new_belly.set_messages(new_escape_fail_messages_owner,"escfo")
+
+				if(islist(belly_data["escape_attempt_absorbed_messages_prey"]))
+					var/new_escape_attempt_absorbed_messages_prey = sanitize(jointext(belly_data["escape_attempt_absorbed_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_attempt_absorbed_messages_prey)
+						new_belly.set_messages(new_escape_attempt_absorbed_messages_prey,"aescap")
+
+				if(islist(belly_data["escape_attempt_absorbed_messages_owner"]))
+					var/new_escape_attempt_absorbed_messages_owner = sanitize(jointext(belly_data["escape_attempt_absorbed_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_attempt_absorbed_messages_owner)
+						new_belly.set_messages(new_escape_attempt_absorbed_messages_owner,"aescp")
+
+				if(islist(belly_data["escape_absorbed_messages_prey"]))
+					var/new_escape_absorbed_messages_prey = sanitize(jointext(belly_data["escape_absorbed_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_absorbed_messages_prey)
+						new_belly.set_messages(new_escape_absorbed_messages_prey,"aescao")
+
+				if(islist(belly_data["escape_absorbed_messages_owner"]))
+					var/new_escape_absorbed_messages_owner = sanitize(jointext(belly_data["escape_absorbed_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_absorbed_messages_owner)
+						new_belly.set_messages(new_escape_absorbed_messages_owner,"aesco")
+
+				if(islist(belly_data["escape_absorbed_messages_outside"]))
+					var/new_escape_absorbed_messages_outside = sanitize(jointext(belly_data["escape_absorbed_messages_outside"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_absorbed_messages_outside)
+						new_belly.set_messages(new_escape_absorbed_messages_outside,"aescout")
+
+				if(islist(belly_data["escape_fail_absorbed_messages_prey"]))
+					var/new_escape_fail_absorbed_messages_prey = sanitize(jointext(belly_data["escape_fail_absorbed_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_fail_absorbed_messages_prey)
+						new_belly.set_messages(new_escape_fail_absorbed_messages_prey,"aescfp")
+
+				if(islist(belly_data["escape_fail_absorbed_messages_owner"]))
+					var/new_escape_fail_absorbed_messages_owner = sanitize(jointext(belly_data["escape_fail_absorbed_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_fail_absorbed_messages_owner)
+						new_belly.set_messages(new_escape_fail_absorbed_messages_owner,"aescfo")
+
+				if(islist(belly_data["primary_transfer_messages_prey"]))
+					var/new_primary_transfer_messages_prey = sanitize(jointext(belly_data["primary_transfer_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_primary_transfer_messages_prey)
+						new_belly.set_messages(new_primary_transfer_messages_prey,"trnspp")
+
+				if(islist(belly_data["primary_transfer_messages_owner"]))
+					var/new_primary_transfer_messages_owner = sanitize(jointext(belly_data["primary_transfer_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_primary_transfer_messages_owner)
+						new_belly.set_messages(new_primary_transfer_messages_owner,"trnspo")
+
+				if(islist(belly_data["secondary_transfer_messages_prey"]))
+					var/new_secondary_transfer_messages_prey = sanitize(jointext(belly_data["secondary_transfer_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_secondary_transfer_messages_prey)
+						new_belly.set_messages(new_secondary_transfer_messages_prey,"trnssp")
+
+				if(islist(belly_data["secondary_transfer_messages_owner"]))
+					var/new_secondary_transfer_messages_owner = sanitize(jointext(belly_data["secondary_transfer_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_secondary_transfer_messages_owner)
+						new_belly.set_messages(new_secondary_transfer_messages_owner,"trnsso")
+
+				if(islist(belly_data["digest_chance_messages_prey"]))
+					var/new_digest_chance_messages_prey = sanitize(jointext(belly_data["digest_chance_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_digest_chance_messages_prey)
+						new_belly.set_messages(new_digest_chance_messages_prey,"stmodp")
+
+				if(islist(belly_data["digest_chance_messages_owner"]))
+					var/new_digest_chance_messages_owner = sanitize(jointext(belly_data["digest_chance_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_digest_chance_messages_owner)
+						new_belly.set_messages(new_digest_chance_messages_owner,"stmodo")
+
+				if(islist(belly_data["absorb_chance_messages_prey"]))
+					var/new_absorb_chance_messages_prey = sanitize(jointext(belly_data["absorb_chance_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_absorb_chance_messages_prey)
+						new_belly.set_messages(new_absorb_chance_messages_prey,"stmoap")
+
+				if(islist(belly_data["absorb_chance_messages_owner"]))
+					var/new_absorb_chance_messages_owner = sanitize(jointext(belly_data["absorb_chance_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_absorb_chance_messages_owner)
+						new_belly.set_messages(new_absorb_chance_messages_owner,"stmoao")
+
 				if(islist(belly_data["examine_messages"]))
 					var/new_examine_messages = sanitize(jointext(belly_data["examine_messages"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
 					if(new_examine_messages)
@@ -1201,6 +1326,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				if(isnum(belly_data["escapechance"]))
 					var/new_escapechance = belly_data["escapechance"]
 					new_belly.escapechance = sanitize_integer(new_escapechance, 0, 100, initial(new_belly.escapechance))
+
+				if(isnum(belly_data["escapechance_absorbed"]))
+					var/new_escapechance = belly_data["escapechance_absorbed"]
+					new_belly.escapechance_absorbed = sanitize_integer(new_escapechance_absorbed, 0, 100, initial(new_belly.escapechance_absorbed))
+
 
 				if(isnum(belly_data["escapetime"]))
 					var/new_escapetime = belly_data["escapetime"]
@@ -2664,6 +2794,31 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						host.vore_selected.struggle_messages_inside = initial(host.vore_selected.struggle_messages_inside)
 						host.vore_selected.absorbed_struggle_messages_outside = initial(host.vore_selected.absorbed_struggle_messages_outside)
 						host.vore_selected.absorbed_struggle_messages_inside = initial(host.vore_selected.absorbed_struggle_messages_inside)
+						host.vore_selected.escape_attempt_messages_owner = initial(host.vore_selected.escape_attempt_messages_owner)
+						host.vore_selected.escape_attempt_messages_prey = initial(host.vore_selected.escape_attempt_messages_prey)
+						host.vore_selected.escape_messages_owner = initial(host.vore_selected.escape_messages_owner)
+						host.vore_selected.escape_messages_prey = initial(host.vore_selected.escape_messages_prey)
+						host.vore_selected.escape_messages_outside = initial(host.vore_selected.escape_messages_outside)
+						host.vore_selected.escape_item_messages_owner = initial(host.vore_selected.escape_item_messages_owner)
+						host.vore_selected.escape_item_messages_prey = initial(host.vore_selected.escape_item_messages_prey)
+						host.vore_selected.escape_item_messages_outside = initial(host.vore_selected.escape_item_messages_outside)
+						host.vore_selected.escape_fail_messages_owner = initial(host.vore_selected.escape_fail_messages_owner)
+						host.vore_selected.escape_fail_messages_prey = initial(host.vore_selected.escape_fail_messages_prey)
+						host.vore_selected.escape_attempt_absorbed_messages_owner = initial(host.vore_selected.escape_attempt_absorbed_messages_owner)
+						host.vore_selected.escape_attempt_absorbed_messages_prey = initial(host.vore_selected.escape_attempt_absorbed_messages_prey)
+						host.vore_selected.escape_absorbed_messages_owner = initial(host.vore_selected.escape_absorbed_messages_owner)
+						host.vore_selected.escape_absorbed_messages_prey = initial(host.vore_selected.escape_absorbed_messages_prey)
+						host.vore_selected.escape_absorbed_messages_outside = initial(host.vore_selected.escape_absorbed_messages_outside)
+						host.vore_selected.escape_fail_absorbed_messages_owner = initial(host.vore_selected.escape_fail_absorbed_messages_owner)
+						host.vore_selected.escape_fail_absorbed_messages_prey = initial(host.vore_selected.escape_fail_absorbed_messages_prey)
+						host.vore_selected.primary_transfer_messages_owner = initial(host.vore_selected.primary_transfer_messages_owner)
+						host.vore_selected.primary_transfer_messages_prey = initial(host.vore_selected.primary_transfer_messages_prey)
+						host.vore_selected.secondary_transfer_messages_owner = initial(host.vore_selected.secondary_transfer_messages_owner)
+						host.vore_selected.secondary_transfer_messages_prey = initial(host.vore_selected.secondary_transfer_messages_prey)
+						host.vore_selected.digest_chance_messages_owner = initial(host.vore_selected.digest_chance_messages_owner)
+						host.vore_selected.digest_chance_messages_prey = initial(host.vore_selected.digest_chance_messages_prey)
+						host.vore_selected.absorb_chance_messages_owner = initial(host.vore_selected.absorb_chance_messages_owner)
+						host.vore_selected.absorb_chance_messages_prey = initial(host.vore_selected.absorb_chance_messages_prey)
 						host.vore_selected.examine_messages = initial(host.vore_selected.examine_messages)
 						host.vore_selected.examine_messages_absorbed = initial(host.vore_selected.examine_messages_absorbed)
 						host.vore_selected.emote_lists = initial(host.vore_selected.emote_lists)
