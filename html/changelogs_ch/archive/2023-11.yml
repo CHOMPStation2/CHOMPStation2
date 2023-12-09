@@ -189,3 +189,54 @@
   - imageadd: Demonic halo icons
   theXDkidoflol:
   - balance: Size and compliance NIFs drain durability much less.
+2023-11-25:
+  Aroliacue:
+  - rscadd: Xenomorph Queen trait, with experimental buff ability
+  - qol: Xenomorph Hybrids can now clear weeds by harm intent clicking
+  - bugfix: Engineers can now spawn with AR-E Glasses
+  - soundadd: New SFX for entering mechs.
+  - soundadd: mechsteps now use different logic for future additions.
+  FluffMedic:
+  - bugfix: Adds code to sawn-off shot guns that should allow reloading
+  - bugfix: Disables staves melee immunity.
+  - bugfix: Temp. raising to cryogel's mixing to allow it to be made.
+  ItsSelis:
+  - code_imp: Skips the CI for autochangelogs
+  Upstream:
+  - rscadd: Added vorebelly sprites to the V2 service hound and V2 dark service hound
+  - rscdel: Removed sleep toxin from tofurkey
+  - qol: Devoured are ignored in greater and lesser virus selection
+  - qol: Devoured can no longer be event & admin infected
+  - rscadd: Added the Xenobiology Bag to the standard Level 3 Science locker
+  - code_imp: tgchat code (part 1)
+2023-11-26:
+  Verkister:
+  - qol: Buffed flushies glog limits.
+2023-11-28:
+  Upstream:
+  - bugfix: fixed DNA bounds defines that previously broke toggling genetic powers
+      in the admin player planel
+2023-11-29:
+  Aroliacue:
+  - rscadd: Added Concentrated Radium and Tricordrazine as selectable liquid types
+      for the vore panel. Concentrated Radium builds up radiation damage for themed
+      digestion, and Tricordrazine heals.
+  - qol: Curabitur cannon and macrobattery descriptions improved to provide more information
+      on what they actually do.
+  - balance: Significantly reduced the recharge time of the Curabitur cannon macrobattery
+      cells. Previously regular mediguns were significantly more efficient despite
+      being readily available, whereas the Curabitur is very rare.
+2023-11-30:
+  FluffMedic:
+  - rscadd: Enabled three new things for genetics
+  TheCaramelion:
+  - rscadd: Alternative Cargo Technician title
+  - imageadd: Mailman suit and hat
+  - balance: Less mail per minute
+  - balance: Less junk mail per crate
+  - balance: NT mugs and money chances reduced
+  - bugfix: Junk mail has stamps again
+  - bugfix: Reagents will be added to beakers now
+  - bugfix: Event antags no longer gets mail
+  Upstream:
+  - bugfix: naming of the sleeper sprite of the v2 clerical hound

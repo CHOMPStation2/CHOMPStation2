@@ -87,7 +87,7 @@
 /area/submap/mausarmy)
 "oS" = (
 /obj/effect/floor_decal/corner/blue/diagonal,
-/obj/structure/safe,
+/obj/structure/closet/crate/secure/lootsafe/numberlock,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/mausarmy)
 "pB" = (

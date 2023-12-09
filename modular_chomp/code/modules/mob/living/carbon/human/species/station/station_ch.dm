@@ -272,7 +272,7 @@
 
 	if(O)
 		visible_message("<span class='warning'><B>[src] vomits up a thick purple substance and begins to shape it!</B></span>", "<span class='alium'>You shape a [choice].</span>")
-		O.color = "#321D37"
+//		O.color = "#321D37" // Adding predefined colour icons.
 		playsound(src, 'sound/effects/blobattack.ogg', 40, 1)
 
 	return

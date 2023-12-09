@@ -5494,25 +5494,19 @@
 	layer = 4;
 	pixel_y = 32
 	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/fore)
-"aBd" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/machinery/camera/network/first_deck{
 	c_tag = "First Deck - Fore Hallway 2"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/fore)
 "aBe" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+/obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/fore)
 "aBf" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -5996,6 +5990,7 @@
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/fore)
 "aDe" = (
@@ -6107,12 +6102,12 @@
 	layer = 2.9
 	},
 /obj/item/weapon/circuitboard/scan_consolenew{
-	pixel_y = 11;
-	pixel_x = 2
+	pixel_x = 2;
+	pixel_y = 11
 	},
 /obj/item/weapon/circuitboard/scan_consolenew{
-	pixel_y = 11;
-	pixel_x = 2
+	pixel_x = 2;
+	pixel_y = 11
 	},
 /obj/item/weapon/circuitboard/med_data{
 	pixel_x = 1;
@@ -6129,28 +6124,28 @@
 	pixel_y = 3
 	},
 /obj/item/weapon/circuitboard/clonepod{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/weapon/circuitboard/clonepod{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/weapon/circuitboard/clonescanner{
-	pixel_y = -5;
-	pixel_x = -2
+	pixel_x = -2;
+	pixel_y = -5
 	},
 /obj/item/weapon/circuitboard/clonescanner{
-	pixel_y = -5;
-	pixel_x = -2
+	pixel_x = -2;
+	pixel_y = -5
 	},
 /obj/item/weapon/circuitboard/resleeving_control{
-	pixel_y = -9;
-	pixel_x = -3
+	pixel_x = -3;
+	pixel_y = -9
 	},
 /obj/item/weapon/circuitboard/resleeving_control{
-	pixel_y = -9;
-	pixel_x = -3
+	pixel_x = -3;
+	pixel_y = -9
 	},
 /turf/simulated/floor/plating,
 /area/storage/tech)
@@ -6673,36 +6668,36 @@
 "aGh" = (
 /obj/structure/table/rack/holorack,
 /obj/item/weapon/circuitboard/grounding_rod{
-	pixel_y = 11;
-	pixel_x = 2
+	pixel_x = 2;
+	pixel_y = 11
 	},
 /obj/item/weapon/circuitboard/grounding_rod{
-	pixel_y = 11;
-	pixel_x = 2
+	pixel_x = 2;
+	pixel_y = 11
 	},
 /obj/item/weapon/circuitboard/grounding_rod{
-	pixel_y = 11;
-	pixel_x = 2
+	pixel_x = 2;
+	pixel_y = 11
 	},
 /obj/item/weapon/circuitboard/grounding_rod{
-	pixel_y = 11;
-	pixel_x = 2
+	pixel_x = 2;
+	pixel_y = 11
 	},
 /obj/item/weapon/circuitboard/tesla_coil{
-	pixel_y = 7;
-	pixel_x = 1
+	pixel_x = 1;
+	pixel_y = 7
 	},
 /obj/item/weapon/circuitboard/tesla_coil{
-	pixel_y = 7;
-	pixel_x = 1
+	pixel_x = 1;
+	pixel_y = 7
 	},
 /obj/item/weapon/circuitboard/tesla_coil{
-	pixel_y = 7;
-	pixel_x = 1
+	pixel_x = 1;
+	pixel_y = 7
 	},
 /obj/item/weapon/circuitboard/tesla_coil{
-	pixel_y = 7;
-	pixel_x = 1
+	pixel_x = 1;
+	pixel_y = 7
 	},
 /obj/item/weapon/circuitboard/pacman{
 	pixel_y = 2
@@ -6714,12 +6709,12 @@
 	pixel_y = 2
 	},
 /obj/item/weapon/circuitboard/pacman/mrs{
-	pixel_y = -2;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -2
 	},
 /obj/item/weapon/circuitboard/pacman/super{
-	pixel_y = -6;
-	pixel_x = -2
+	pixel_x = -2;
+	pixel_y = -6
 	},
 /turf/simulated/floor/plating,
 /area/storage/tech)
@@ -7064,12 +7059,12 @@
 	pixel_y = 11
 	},
 /obj/item/weapon/circuitboard/powermonitor{
-	pixel_y = 7;
-	pixel_x = 1
+	pixel_x = 1;
+	pixel_y = 7
 	},
 /obj/item/weapon/circuitboard/powermonitor{
-	pixel_y = 7;
-	pixel_x = 1
+	pixel_x = 1;
+	pixel_y = 7
 	},
 /obj/item/weapon/circuitboard/shutoff_monitor{
 	pixel_y = 3
@@ -7078,28 +7073,28 @@
 	pixel_y = 3
 	},
 /obj/item/weapon/circuitboard/air_management{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/weapon/circuitboard/air_management{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/weapon/circuitboard/atmos_alert{
-	pixel_y = -5;
-	pixel_x = -2
+	pixel_x = -2;
+	pixel_y = -5
 	},
 /obj/item/weapon/circuitboard/atmos_alert{
-	pixel_y = -5;
-	pixel_x = -2
+	pixel_x = -2;
+	pixel_y = -5
 	},
 /obj/item/weapon/circuitboard/skills/pcu{
-	pixel_y = -9;
-	pixel_x = -3
+	pixel_x = -3;
+	pixel_y = -9
 	},
 /obj/item/weapon/circuitboard/skills/pcu{
-	pixel_y = -9;
-	pixel_x = -3
+	pixel_x = -3;
+	pixel_y = -9
 	},
 /turf/simulated/floor/plating,
 /area/storage/tech)
@@ -7266,68 +7261,68 @@
 	pixel_y = 12
 	},
 /obj/item/weapon/stock_parts/matter_bin{
-	pixel_y = -10;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = -10
 	},
 /obj/item/weapon/stock_parts/matter_bin{
-	pixel_y = -10;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = -10
 	},
 /obj/item/weapon/stock_parts/matter_bin{
-	pixel_y = -10;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = -10
 	},
 /obj/item/weapon/stock_parts/matter_bin{
-	pixel_y = -10;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = -10
 	},
 /obj/item/weapon/stock_parts/micro_laser{
-	pixel_y = -10;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = -10
 	},
 /obj/item/weapon/stock_parts/micro_laser{
-	pixel_y = -10;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = -10
 	},
 /obj/item/weapon/stock_parts/micro_laser{
-	pixel_y = -10;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = -10
 	},
 /obj/item/weapon/stock_parts/micro_laser{
-	pixel_y = -10;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = -10
 	},
 /obj/item/weapon/stock_parts/console_screen{
-	pixel_y = 2;
-	pixel_x = 2
+	pixel_x = 2;
+	pixel_y = 2
 	},
 /obj/item/weapon/stock_parts/console_screen{
-	pixel_y = 2;
-	pixel_x = 2
+	pixel_x = 2;
+	pixel_y = 2
 	},
 /obj/item/weapon/stock_parts/console_screen{
-	pixel_y = 2;
-	pixel_x = 2
+	pixel_x = 2;
+	pixel_y = 2
 	},
 /obj/item/weapon/stock_parts/console_screen{
-	pixel_y = 2;
-	pixel_x = 2
+	pixel_x = 2;
+	pixel_y = 2
 	},
 /obj/item/weapon/stock_parts/scanning_module{
-	pixel_y = 0;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = 0
 	},
 /obj/item/weapon/stock_parts/scanning_module{
-	pixel_y = 0;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = 0
 	},
 /obj/item/weapon/stock_parts/scanning_module{
-	pixel_y = 0;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = 0
 	},
 /obj/item/weapon/stock_parts/scanning_module{
-	pixel_y = 0;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = 0
 	},
 /turf/simulated/floor,
 /area/storage/tech)
@@ -10686,20 +10681,20 @@
 	pixel_y = 3
 	},
 /obj/item/weapon/circuitboard/machine/reg_c{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/weapon/circuitboard/machine/reg_c{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/weapon/circuitboard/machine/reg_d{
-	pixel_y = -5;
-	pixel_x = -2
+	pixel_x = -2;
+	pixel_y = -5
 	},
 /obj/item/weapon/circuitboard/machine/reg_d{
-	pixel_y = -5;
-	pixel_x = -2
+	pixel_x = -2;
+	pixel_y = -5
 	},
 /turf/simulated/floor/plating,
 /area/storage/tech)
@@ -10712,28 +10707,28 @@
 "bJH" = (
 /obj/structure/table/rack/holorack,
 /obj/item/weapon/circuitboard/thermoregulator{
-	pixel_y = 11;
-	pixel_x = 2
+	pixel_x = 2;
+	pixel_y = 11
 	},
 /obj/item/weapon/circuitboard/thermoregulator{
-	pixel_y = 11;
-	pixel_x = 2
+	pixel_x = 2;
+	pixel_y = 11
 	},
 /obj/item/weapon/circuitboard/shield_diffuser{
-	pixel_y = 7;
-	pixel_x = 1
+	pixel_x = 1;
+	pixel_y = 7
 	},
 /obj/item/weapon/circuitboard/shield_diffuser{
-	pixel_y = 7;
-	pixel_x = 1
+	pixel_x = 1;
+	pixel_y = 7
 	},
 /obj/item/weapon/circuitboard/shield_diffuser{
-	pixel_y = 7;
-	pixel_x = 1
+	pixel_x = 1;
+	pixel_y = 7
 	},
 /obj/item/weapon/circuitboard/shield_diffuser{
-	pixel_y = 7;
-	pixel_x = 1
+	pixel_x = 1;
+	pixel_y = 7
 	},
 /obj/item/weapon/circuitboard/arf_generator{
 	pixel_y = 3
@@ -10742,28 +10737,28 @@
 	pixel_y = 3
 	},
 /obj/item/weapon/circuitboard/unary_atmos/cooler{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/weapon/circuitboard/unary_atmos/cooler{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/weapon/circuitboard/unary_atmos/heater{
-	pixel_y = -5;
-	pixel_x = -2
+	pixel_x = -2;
+	pixel_y = -5
 	},
 /obj/item/weapon/circuitboard/unary_atmos/heater{
-	pixel_y = -5;
-	pixel_x = -2
+	pixel_x = -2;
+	pixel_y = -5
 	},
 /obj/item/weapon/circuitboard/unary_atmos/engine{
-	pixel_y = -8;
-	pixel_x = -3
+	pixel_x = -3;
+	pixel_y = -8
 	},
 /obj/item/weapon/circuitboard/unary_atmos/engine{
-	pixel_y = -8;
-	pixel_x = -3
+	pixel_x = -3;
+	pixel_y = -8
 	},
 /turf/simulated/floor/plating,
 /area/storage/tech)
@@ -12915,36 +12910,36 @@
 "dTP" = (
 /obj/structure/table/rack/shelf,
 /obj/item/device/t_scanner{
-	pixel_y = 7;
-	pixel_x = 7
+	pixel_x = 7;
+	pixel_y = 7
 	},
 /obj/item/device/t_scanner{
-	pixel_y = 7;
-	pixel_x = 7
+	pixel_x = 7;
+	pixel_y = 7
 	},
 /obj/item/device/analyzer{
-	pixel_y = 3;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = 3
 	},
 /obj/item/device/analyzer{
-	pixel_y = 3;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = 3
 	},
 /obj/item/device/healthanalyzer{
-	pixel_y = -6;
-	pixel_x = 3
+	pixel_x = 3;
+	pixel_y = -6
 	},
 /obj/item/device/healthanalyzer{
-	pixel_y = -6;
-	pixel_x = 3
+	pixel_x = 3;
+	pixel_y = -6
 	},
 /obj/item/device/analyzer/plant_analyzer{
-	pixel_y = -6;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = -6
 	},
 /obj/item/device/analyzer/plant_analyzer{
-	pixel_y = -6;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = -6
 	},
 /turf/simulated/floor,
 /area/storage/tech)
@@ -13049,22 +13044,6 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora_isolation)
-"dVQ" = (
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 5
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 8
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled,
-/area/teleporter/firstdeck)
 "dVT" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -13291,24 +13270,24 @@
 	pixel_y = 3
 	},
 /obj/item/weapon/circuitboard/smes{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/weapon/circuitboard/smes{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/weapon/circuitboard/smes{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/weapon/circuitboard/grid_checker{
-	pixel_y = -5;
-	pixel_x = -2
+	pixel_x = -2;
+	pixel_y = -5
 	},
 /obj/item/weapon/circuitboard/grid_checker{
-	pixel_y = -5;
-	pixel_x = -2
+	pixel_x = -2;
+	pixel_y = -5
 	},
 /turf/simulated/floor/plating,
 /area/storage/tech)
@@ -13318,20 +13297,20 @@
 	layer = 2.9
 	},
 /obj/item/weapon/circuitboard/air_management/injector_control{
-	pixel_y = 11;
-	pixel_x = 2
+	pixel_x = 2;
+	pixel_y = 11
 	},
 /obj/item/weapon/circuitboard/air_management/injector_control{
-	pixel_y = 11;
-	pixel_x = 2
+	pixel_x = 2;
+	pixel_y = 11
 	},
 /obj/item/weapon/circuitboard/air_management/supermatter_core{
-	pixel_y = 7;
-	pixel_x = 1
+	pixel_x = 1;
+	pixel_y = 7
 	},
 /obj/item/weapon/circuitboard/air_management/supermatter_core{
-	pixel_y = 7;
-	pixel_x = 1
+	pixel_x = 1;
+	pixel_y = 7
 	},
 /obj/item/weapon/circuitboard/air_management/tank_control{
 	pixel_y = 3
@@ -13340,28 +13319,28 @@
 	pixel_y = 3
 	},
 /obj/item/weapon/module/power_control{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/weapon/module/power_control{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/weapon/module/power_control{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/weapon/module/power_control{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/weapon/module/power_control{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/weapon/module/power_control{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/weapon/airlock_electronics{
 	pixel_y = -5
@@ -14624,6 +14603,12 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 5
 	},
 /turf/simulated/floor/tiled,
 /area/teleporter/firstdeck)
@@ -16312,16 +16297,16 @@
 	pixel_y = -1
 	},
 /obj/item/weapon/circuitboard/mass_driver{
-	pixel_y = -5;
-	pixel_x = -2
+	pixel_x = -2;
+	pixel_y = -5
 	},
 /obj/item/weapon/circuitboard/mass_driver{
-	pixel_y = -5;
-	pixel_x = -2
+	pixel_x = -2;
+	pixel_y = -5
 	},
 /obj/item/weapon/circuitboard/mass_driver{
-	pixel_y = -5;
-	pixel_x = -2
+	pixel_x = -2;
+	pixel_y = -5
 	},
 /obj/item/weapon/circuitboard/autolathe{
 	pixel_x = -3;
@@ -17057,16 +17042,16 @@
 	pixel_y = 11
 	},
 /obj/item/weapon/circuitboard/security/engineering{
-	pixel_y = 7;
-	pixel_x = 1
+	pixel_x = 1;
+	pixel_y = 7
 	},
 /obj/item/weapon/circuitboard/security/engineering{
-	pixel_y = 7;
-	pixel_x = 1
+	pixel_x = 1;
+	pixel_y = 7
 	},
 /obj/item/weapon/circuitboard/security/engineering{
-	pixel_y = 7;
-	pixel_x = 1
+	pixel_x = 1;
+	pixel_y = 7
 	},
 /obj/item/weapon/circuitboard/security/mining{
 	pixel_y = 3
@@ -17078,16 +17063,16 @@
 	pixel_y = 3
 	},
 /obj/item/weapon/circuitboard/security/xenobio{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/weapon/circuitboard/security/xenobio{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/weapon/circuitboard/security/xenobio{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/weapon/circuitboard/secure_data{
 	pixel_x = -2;
@@ -17102,16 +17087,16 @@
 	pixel_y = -5
 	},
 /obj/item/weapon/circuitboard/security/telescreen/entertainment{
-	pixel_y = -9;
-	pixel_x = -3
+	pixel_x = -3;
+	pixel_y = -9
 	},
 /obj/item/weapon/circuitboard/security/telescreen/entertainment{
-	pixel_y = -9;
-	pixel_x = -3
+	pixel_x = -3;
+	pixel_y = -9
 	},
 /obj/item/weapon/circuitboard/security/telescreen/entertainment{
-	pixel_y = -9;
-	pixel_x = -3
+	pixel_x = -3;
+	pixel_y = -9
 	},
 /turf/simulated/floor/plating,
 /area/storage/tech)
@@ -18015,12 +18000,12 @@
 	pixel_y = 11
 	},
 /obj/item/weapon/circuitboard/telecomms/bus{
-	pixel_y = 7;
-	pixel_x = 1
+	pixel_x = 1;
+	pixel_y = 7
 	},
 /obj/item/weapon/circuitboard/telecomms/bus{
-	pixel_y = 7;
-	pixel_x = 1
+	pixel_x = 1;
+	pixel_y = 7
 	},
 /obj/item/weapon/circuitboard/telecomms/exonet_node{
 	pixel_y = 3
@@ -18029,20 +18014,20 @@
 	pixel_y = 3
 	},
 /obj/item/weapon/circuitboard/telecomms/hub{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/weapon/circuitboard/telecomms/hub{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/weapon/circuitboard/telecomms/pda_multicaster{
-	pixel_y = -5;
-	pixel_x = -2
+	pixel_x = -2;
+	pixel_y = -5
 	},
 /obj/item/weapon/circuitboard/telecomms/pda_multicaster{
-	pixel_y = -5;
-	pixel_x = -2
+	pixel_x = -2;
+	pixel_y = -5
 	},
 /obj/item/weapon/circuitboard/card{
 	pixel_x = -3;
@@ -19820,20 +19805,20 @@
 	pixel_y = 9
 	},
 /obj/item/clothing/gloves/yellow{
-	pixel_y = -1;
-	pixel_x = -2
+	pixel_x = -2;
+	pixel_y = -1
 	},
 /obj/item/clothing/gloves/yellow{
-	pixel_y = -1;
-	pixel_x = -2
+	pixel_x = -2;
+	pixel_y = -1
 	},
 /obj/item/device/multitool{
-	pixel_y = -1;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = -1
 	},
 /obj/item/device/multitool{
-	pixel_y = -1;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = -1
 	},
 /obj/item/clothing/glasses/meson,
 /obj/item/clothing/glasses/meson,
@@ -20466,36 +20451,36 @@
 	pixel_y = 9
 	},
 /obj/item/device/flash{
-	pixel_y = -4;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = -4
 	},
 /obj/item/device/flash{
-	pixel_y = -4;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = -4
 	},
 /obj/item/weapon/stock_parts/gear{
-	pixel_y = 10;
-	pixel_x = -8
+	pixel_x = -8;
+	pixel_y = 10
 	},
 /obj/item/weapon/stock_parts/gear{
-	pixel_y = 10;
-	pixel_x = -8
+	pixel_x = -8;
+	pixel_y = 10
 	},
 /obj/item/weapon/stock_parts/gear{
-	pixel_y = 10;
-	pixel_x = -8
+	pixel_x = -8;
+	pixel_y = 10
 	},
 /obj/item/weapon/stock_parts/motor{
-	pixel_y = 5;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = 5
 	},
 /obj/item/weapon/stock_parts/motor{
-	pixel_y = 5;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = 5
 	},
 /obj/item/weapon/stock_parts/motor{
-	pixel_y = 5;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = 5
 	},
 /obj/item/weapon/stock_parts/spring{
 	pixel_y = -4
@@ -22132,12 +22117,12 @@
 "mhY" = (
 /obj/structure/table/rack/holorack,
 /obj/item/weapon/circuitboard/telecomms/processor{
-	pixel_y = 11;
-	pixel_x = 2
+	pixel_x = 2;
+	pixel_y = 11
 	},
 /obj/item/weapon/circuitboard/telecomms/processor{
-	pixel_y = 11;
-	pixel_x = 2
+	pixel_x = 2;
+	pixel_y = 11
 	},
 /obj/item/weapon/circuitboard/telecomms/receiver{
 	pixel_x = 1;
@@ -22154,20 +22139,20 @@
 	pixel_y = 3
 	},
 /obj/item/weapon/circuitboard/telecomms/server{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/weapon/circuitboard/telecomms/server{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/weapon/circuitboard/communications{
-	pixel_y = -5;
-	pixel_x = -2
+	pixel_x = -2;
+	pixel_y = -5
 	},
 /obj/item/weapon/circuitboard/communications{
-	pixel_y = -5;
-	pixel_x = -2
+	pixel_x = -2;
+	pixel_y = -5
 	},
 /obj/item/weapon/circuitboard/crew{
 	pixel_x = -3;
@@ -23201,20 +23186,20 @@
 	pixel_y = 3
 	},
 /obj/item/weapon/circuitboard/gyrotron{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/weapon/circuitboard/gyrotron{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/weapon/circuitboard/gyrotron_control{
-	pixel_y = -5;
-	pixel_x = -2
+	pixel_x = -2;
+	pixel_y = -5
 	},
 /obj/item/weapon/circuitboard/gyrotron_control{
-	pixel_y = -5;
-	pixel_x = -2
+	pixel_x = -2;
+	pixel_y = -5
 	},
 /turf/simulated/floor/plating,
 /area/storage/tech)
@@ -24151,28 +24136,28 @@
 	pixel_y = 3
 	},
 /obj/item/weapon/circuitboard/fusion_fuel_control{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/weapon/circuitboard/fusion_fuel_control{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/weapon/circuitboard/fusion_injector{
-	pixel_y = -5;
-	pixel_x = -2
+	pixel_x = -2;
+	pixel_y = -5
 	},
 /obj/item/weapon/circuitboard/fusion_injector{
-	pixel_y = -5;
-	pixel_x = -2
+	pixel_x = -2;
+	pixel_y = -5
 	},
 /obj/item/weapon/circuitboard/algae_farm{
-	pixel_y = -9;
-	pixel_x = -3
+	pixel_x = -3;
+	pixel_y = -9
 	},
 /obj/item/weapon/circuitboard/algae_farm{
-	pixel_y = -9;
-	pixel_x = -3
+	pixel_x = -3;
+	pixel_y = -9
 	},
 /turf/simulated/floor/plating,
 /area/storage/tech)
@@ -25909,12 +25894,12 @@
 	pixel_y = 11
 	},
 /obj/item/weapon/circuitboard/microwave{
-	pixel_y = 7;
-	pixel_x = 1
+	pixel_x = 1;
+	pixel_y = 7
 	},
 /obj/item/weapon/circuitboard/microwave{
-	pixel_y = 7;
-	pixel_x = 1
+	pixel_x = 1;
+	pixel_y = 7
 	},
 /obj/item/weapon/circuitboard/oven{
 	pixel_y = 3
@@ -25923,28 +25908,28 @@
 	pixel_y = 3
 	},
 /obj/item/weapon/circuitboard/fryer{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/weapon/circuitboard/fryer{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/weapon/circuitboard/cerealmaker{
-	pixel_y = -5;
-	pixel_x = -2
+	pixel_x = -2;
+	pixel_y = -5
 	},
 /obj/item/weapon/circuitboard/cerealmaker{
-	pixel_y = -5;
-	pixel_x = -2
+	pixel_x = -2;
+	pixel_y = -5
 	},
 /obj/item/weapon/circuitboard/grill{
-	pixel_y = -9;
-	pixel_x = -3
+	pixel_x = -3;
+	pixel_y = -9
 	},
 /obj/item/weapon/circuitboard/grill{
-	pixel_y = -9;
-	pixel_x = -3
+	pixel_x = -3;
+	pixel_y = -9
 	},
 /turf/simulated/floor/plating,
 /area/storage/tech)
@@ -29923,8 +29908,8 @@
 	layer = 2.9
 	},
 /obj/item/weapon/circuitboard/rdconsole{
-	pixel_y = 11;
-	pixel_x = 2
+	pixel_x = 2;
+	pixel_y = 11
 	},
 /obj/item/weapon/circuitboard/rdserver{
 	pixel_x = 1;
@@ -29934,8 +29919,8 @@
 	pixel_y = 3
 	},
 /obj/item/weapon/circuitboard/destructive_analyzer{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /turf/simulated/floor/plating,
 /area/storage/tech)
@@ -57414,7 +57399,7 @@ cIq
 mMT
 lcw
 cSK
-dVQ
+vpN
 dZu
 bBI
 nRa
@@ -64108,8 +64093,8 @@ akx
 aoa
 aqL
 avj
-gXl
-aBd
+aBe
+aBa
 aCZ
 aJa
 aLB
@@ -64367,7 +64352,7 @@ anU
 aqD
 oOM
 tdo
-aBe
+aBa
 aDc
 aJa
 aLC

@@ -27,10 +27,11 @@
 	var/digest_clone = 0					// Clone damage per tick in digestion mode
 	var/immutable = FALSE					// Prevents this belly from being deleted
 	var/escapable = FALSE					// Belly can be resisted out of at any time
-	var/escapetime = 20 SECONDS				// Deciseconds, how long to escape this belly
+	var/escapetime = 10 SECONDS				// Deciseconds, how long to escape this belly
 	var/digestchance = 0					// % Chance of stomach beginning to digest if prey struggles
 	var/absorbchance = 0					// % Chance of stomach beginning to absorb if prey struggles
 	var/escapechance = 0 					// % Chance of prey beginning to escape if prey struggles.
+	var/escapechance_absorbed = 20			// % Chance of absorbed prey finishing an escape. Requires a successful escape roll against the above as well.
 	var/escape_stun = 0						// AI controlled mobs with a number here will be weakened by the provided var when someone escapes, to prevent endless nom loops
 	var/transferchance = 0 					// % Chance of prey being trasnsfered, goes from 0-100%
 	var/transferchance_secondary = 0 		// % Chance of prey being transfered to transferchance_secondary, also goes 0-100%
@@ -339,6 +340,7 @@
 	"speedy_mob_processing",
 	"egg_name",
 	"recycling",
+	"storing_nutrition",
 	"is_feedable",
 	"entrance_logs",
 	"noise_freq",
@@ -1467,7 +1469,7 @@
 	if(digested == FALSE) //CHOMPEdit
 		items_preserved |= item
 	else
-		owner.adjust_nutrition((nutrition_percent / 100) * 5 * digested)
+		owner_adjust_nutrition((nutrition_percent / 100) * 5 * digested) //CHOMPEdit
 		// if(isrobot(owner)) //CHOMPEdit: Borgos can now use nutrition too.
 		//	var/mob/living/silicon/robot/R = owner
 		//	R.cell.charge += ((nutrition_percent / 100) * 50 * digested)
@@ -1545,7 +1547,6 @@
 
 	for(var/mob/M in hearers(4, owner))
 		M.show_message(struggle_outer_message, 2) // hearable
-	to_chat(R, struggle_user_message)
 
 	var/sound/struggle_snuggle
 	var/sound/struggle_rustle = sound(get_sfx("rustle"))
@@ -1645,10 +1646,10 @@
 			return
 
 		else //Nothing interesting happened.
-			to_chat(R, "<span class='warning'>You make no progress in escaping [owner]'s [lowertext(name)].</span>")
+			to_chat(R, struggle_user_message)
 			to_chat(owner, "<span class='warning'>Your prey appears to be unable to make any progress in escaping your [lowertext(name)].</span>")
 			return
-
+	to_chat(R, struggle_user_message)
 
 /obj/belly/proc/relay_absorbed_resist(mob/living/R)
 	if (!(R in contents) || !R.absorbed)
@@ -1679,7 +1680,6 @@
 
 	for(var/mob/M in hearers(4, owner))
 		M.show_message(struggle_outer_message, 2) // hearable
-	to_chat(R, struggle_user_message)
 
 	var/sound/struggle_snuggle
 	var/sound/struggle_rustle = sound(get_sfx("rustle"))
@@ -1692,6 +1692,27 @@
 		playsound(src, struggle_snuggle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
 	else
 		playsound(src, struggle_rustle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
+
+	//absorb resists
+	if(escapable || owner.stat) //If the stomach has escapable enabled or the owner is dead/unconscious
+		if(prob(escapechance) || owner.stat) //Let's have it check to see if the prey's escape attempt starts.
+			to_chat(R, "<span class='warning'>You try to force yourself out of \the [lowertext(name)].</span>")
+			to_chat(owner, "<span class='warning'>Someone is attempting to free themselves from your [lowertext(name)]!</span>")
+			if(do_after(R, escapetime))
+				if((escapable || owner.stat) && (R.loc == src) && prob(escapechance_absorbed)) //Does the escape attempt succeed?
+					release_specific_contents(R)
+					to_chat(R,"<span class='warning'>You manage to free yourself from \the [lowertext(name)].</span>")
+					to_chat(owner,"<span class='warning'>[R] forces themselves free of your [lowertext(name)]!</span>")
+					for(var/mob/M in hearers(4, owner))
+						M.show_message("<span class='warning'>[R] climbs out of [owner]'s [lowertext(name)]!</span>", 2)
+					return
+				else if(!(R.loc == src)) //Aren't even in the belly. Quietly fail.
+					return
+				else //Belly became inescapable or you failed your roll.
+					to_chat(R,"<span class='warning'>Before you manage to reach freedom, you feel yourself getting dragged back into \the [lowertext(name)]!</span>")
+					to_chat(owner,"<span class='notice'>The attempt to escape from your [lowertext(name)] has failed!</span>")
+					return
+	to_chat(R, struggle_user_message)
 
 /obj/belly/proc/get_mobs_and_objs_in_belly()
 	var/list/see = list()
@@ -1980,6 +2001,7 @@
 	dupe.sound_volume = sound_volume
 	dupe.egg_name = egg_name
 	dupe.recycling = recycling
+	dupe.storing_nutrition = storing_nutrition
 	dupe.is_feedable = is_feedable
 	dupe.entrance_logs = entrance_logs
 	dupe.noise_freq = noise_freq

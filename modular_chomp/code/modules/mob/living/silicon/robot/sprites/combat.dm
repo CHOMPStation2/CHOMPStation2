@@ -22,3 +22,48 @@
 	name = "K4T"
 	sprite_icon_state = "k4tsyndi"
 	has_vore_belly_sprites = FALSE
+
+//Using our own category wide here not to interfere with upstream in case they add wide sprites under just dogborg.
+/datum/robot_sprite/dogborg/wide/combat
+	module_type = "Combat"
+	has_custom_equipment_sprites = TRUE
+	var/has_gun_sprite = FALSE
+	var/has_taser_sprite = FALSE
+	var/has_blade_sprite = FALSE
+
+/datum/robot_sprite/dogborg/wide/combat/handle_extra_icon_updates(var/mob/living/silicon/robot/ourborg)
+	if(has_gun_sprite && (istype(ourborg.module_active, /obj/item/weapon/gun/energy/laser/mounted) || istype(ourborg.module_active, /obj/item/weapon/gun/energy/lasercannon/mounted)))
+		ourborg.add_overlay("[sprite_icon_state]-laser")
+	if (has_taser_sprite && (istype(ourborg.module_active, /obj/item/weapon/gun/energy/taser/mounted/cyborg/ertgun)))
+		ourborg.add_overlay("[sprite_icon_state]-taser")
+	if (has_blade_sprite && (istype(ourborg.module_active, /obj/item/weapon/melee/combat_borgblade)))
+		ourborg.add_overlay("[sprite_icon_state]-blade")
+
+/datum/robot_sprite/dogborg/wide/combat/blade/do_equipment_glamour(var/obj/item/weapon/robot_module/module)
+	if(!has_custom_equipment_sprites)
+		return
+
+	..()
+
+	var/obj/item/weapon/melee/combat_borgblade/CBB = locate() in module.modules
+	if(CBB)
+		CBB.name = "combat saw"
+		CBB.desc = "A high frequency blade attached to the end of a cyborg's tail. It appears to be extremely sharp."
+	var/obj/item/weapon/melee/borg_combat_shocker/BCS = locate() in module.modules
+	if(BCS)
+		BCS.name = "combat jaws"
+		BCS.desc = "Shockingly chompy!"
+		BCS.icon_state = "ertjaws"
+		BCS.hitsound = 'sound/weapons/bite.ogg'
+		BCS.attack_verb = list("chomped", "bit", "ripped", "mauled", "enforced")
+		BCS.dogborg = TRUE
+
+/datum/robot_sprite/dogborg/wide/combat/blade
+	sprite_icon = 'modular_chomp/icons/mob/widerobot_ch.dmi'
+	name = "Blade"
+	sprite_icon_state = "blade"
+	sprite_hud_icon_state = "ert"
+	rest_sprite_options = list()
+	has_gun_sprite = TRUE
+	has_taser_sprite = TRUE
+	has_blade_sprite = TRUE

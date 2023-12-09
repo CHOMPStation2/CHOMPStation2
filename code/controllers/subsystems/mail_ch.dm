@@ -6,7 +6,7 @@ SUBSYSTEM_DEF(mail)
 	flags = SS_NO_TICK_CHECK
 
 	var/mail_waiting = 0					// Pending mail
-	var/mail_per_process = 0.75				// Mail to be generated
+	var/mail_per_process = 0.45				// Mail to be generated
 
 /datum/controller/subsystem/mail/fire()
 	mail_waiting += mail_per_process
@@ -14,7 +14,7 @@ SUBSYSTEM_DEF(mail)
 /*	Generates a box of mail. Depending on the time that has passed between shuttles being called, it will send more or less mail and dependant on a small random number to simulate inflation
 	Whenever the cargo shuttle gets sent back to the station, it will add the mail crate if there's any mail to be sent to the station.
 
-	Only alive and active players get mail.
+	Only alive, active and NT employeers should be getting mail.
 */
 
 /datum/controller/subsystem/mail/proc/create_mail()
@@ -23,12 +23,12 @@ SUBSYSTEM_DEF(mail)
 	// Collect recipients
 	var/list/mail_recipients = list()
 	for(var/mob/living/carbon/human/player_human in player_list)
-		if(player_human.stat != DEAD && player_human.client && player_human.client.inactivity <= 10 MINUTES && player_human.job != JOB_OUTSIDER) // Only alive, active and NT employeers should be getting mail.
+		if(player_human.stat != DEAD && player_human.client && player_human.client.inactivity <= 10 MINUTES && player_human.job != JOB_OUTSIDER && !player_is_antag(player_human.mind)) // Only alive, active and NT employeers should be getting mail.
 			mail_recipients += player_human
 
 	// Creates mail for all the mail waiting to arrive, if there's nobody to receive it, it will be a chance of junk mail.
 	for(var/mail_iterator in 1 to mail_waiting)
-		if(!mail_recipients.len && prob(40)) // Oh, no mail for our Employees? Well don't just sent them all the junk.
+		if(!mail_recipients.len && prob(60)) // Oh, no mail for our Employees? Well don't just sent them all the junk.
 			continue
 		var/obj/item/mail/new_mail
 		if(prob(70))

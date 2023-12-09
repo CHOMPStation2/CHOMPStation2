@@ -103,6 +103,8 @@ var/global/list/robot_modules = list(
 /obj/item/weapon/robot_module/Destroy()
 	for(var/module in modules)
 		qdel(module)
+	for(var/emg in emag)
+		qdel(emg)
 	for(var/synth in synths)
 		qdel(synth)
 	modules.Cut()
@@ -205,9 +207,19 @@ var/global/list/robot_modules = list(
 // Cyborgs (non-drones), default loadout. This will be given to every module.
 /obj/item/weapon/robot_module/robot/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
+	//CHOMPEdit Start
+	var/datum/matter_synth/water = new /datum/matter_synth(500)
+	water.name = "Water reserves"
+	water.recharge_rate = 10
+	water.max_energy = 1000
+	robot.water_res = water
+	synths += water
+	var/obj/item/device/robot_tongue/T = new /obj/item/device/robot_tongue(src)
+	T.water = water
+	src.modules += T
+	//CHOMPEdit End
 	src.modules += new /obj/item/device/gps/robot(src)
 	src.modules += new /obj/item/device/boop_module(src)
-	src.modules += new /obj/item/device/robot_tongue(src)
 	src.modules += new /obj/item/device/flash/robot(src)
 	src.modules += new /obj/item/weapon/extinguisher(src)
 	src.modules += new /obj/item/weapon/gripper/scene(src) //CHOMPEdit - Give all borgs a scene gripper
@@ -789,10 +801,10 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/weapon/gun/energy/laser/mounted(src)
 	src.modules += new /obj/item/weapon/gun/energy/taser/mounted/cyborg/ertgun(src)
 	src.modules += new /obj/item/weapon/pickaxe/plasmacutter/borg(src)
-	src.modules += new /obj/item/weapon/combat_borgblade(src)
+	src.modules += new /obj/item/weapon/melee/combat_borgblade(src)
 	src.modules += new /obj/item/borg/combat/shield(src)
 	src.modules += new /obj/item/borg/combat/mobility(src)
-	src.modules += new /obj/item/weapon/borg_combat_shocker(src)
+	src.modules += new /obj/item/weapon/melee/borg_combat_shocker(src)
 	src.modules += new /obj/item/device/ticket_printer(src)
 	src.emag += new /obj/item/weapon/gun/energy/lasercannon/mounted(src)
 

@@ -65,7 +65,11 @@
 /area/submap/cliffmanor)
 "iR" = (
 /obj/structure/simple_door/wood,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cliffmanor)
 "kW" = (
 /turf/simulated/wall/log,
@@ -113,7 +117,11 @@
 "pI" = (
 /mob/living/simple_mob/humanoid/cultist/hunter,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cliffmanor)
 "qo" = (
 /mob/living/simple_mob/vore/alienanimals/space_jellyfish{
@@ -217,6 +225,17 @@
 /area/template_noop)
 "Bl" = (
 /mob/living/simple_mob/humanoid/cultist/human/bloodjaunt/fireball,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
+/area/submap/cliffmanor)
+"Dd" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -855,17 +874,17 @@ aJ
 rT
 rT
 rT
-ml
+aJ
 kW
 vw
 Rm
 bA
-Rm
+SZ
 Rm
 Rm
 dU
 kW
-yW
+xD
 rT
 rT
 rT
@@ -891,7 +910,7 @@ kW
 Oz
 Ra
 Rm
-LZ
+Ja
 bA
 Ra
 GU
@@ -922,7 +941,7 @@ kW
 dU
 Rm
 bA
-bA
+nu
 Rm
 Rm
 dU
@@ -1108,7 +1127,7 @@ kW
 dU
 Rm
 LZ
-LZ
+Ja
 bA
 bA
 dU
@@ -1139,7 +1158,7 @@ kW
 GU
 wg
 Rh
-Rh
+Dd
 LZ
 DZ
 Um
@@ -1165,17 +1184,17 @@ aJ
 rT
 rT
 rT
-AQ
+aJ
 kW
 dU
 Rm
 bA
-bA
+nu
 LZ
 bA
 dU
 kW
-Ry
+xD
 rT
 rT
 rT
@@ -1293,9 +1312,9 @@ SZ
 nu
 nu
 iR
-Rm
+SZ
 pI
-Rm
+SZ
 iR
 SZ
 Ja

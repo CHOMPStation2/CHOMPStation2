@@ -277,6 +277,10 @@
 		if((COLD_RESISTANCE in mutations) || (prob(1)))
 			heal_organ_damage(0,1)
 
+	 if(stat != DEAD) //CHOMPadd: Until I find where nutrion heal code is anyway
+	 	if((mRegen in mutations))
+	 		heal_organ_damage(0.2,0.2)
+
 	// DNA2 - Gene processing.
 	// The HULK stuff that was here is now in the hulk gene.
 	if(!isSynthetic())
@@ -547,6 +551,9 @@
 
 /mob/living/carbon/human/handle_breath(datum/gas_mixture/breath)
 	if(status_flags & GODMODE)
+		return
+
+	if(mNobreath in src.mutations) //CHOMPadd
 		return
 
 	if(suiciding)
