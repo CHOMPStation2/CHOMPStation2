@@ -382,15 +382,10 @@
 		return
 
 	setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
-<<<<<<< HEAD
 	if(tasted == src) //CHOMPEdit Start
-		visible_message("<span class='warning'>[src] licks themself!</span>","<span class='notice'>You lick yourself. You taste rather like [tasted.get_taste_message()].</span>","<b>Slurp!</b>")
+		visible_message("<span class='vwarning'>[src] licks themself!</span>","<span class='notice'>You lick yourself. You taste rather like [tasted.get_taste_message()].</span>","<b>Slurp!</b>")
 	else
-		visible_message("<span class='warning'>[src] licks [tasted]!</span>","<span class='notice'>You lick [tasted]. They taste rather like [tasted.get_taste_message()].</span>","<b>Slurp!</b>") //CHOMPEdit End
-=======
-
-	visible_message("<span class='vwarning'>[src] licks [tasted]!</span>","<span class='vnotice'>You lick [tasted]. They taste rather like [tasted.get_taste_message()].</span>","<b>Slurp!</b>")
->>>>>>> 6c6ad6a4fa... Merge pull request #15559 from Kashargul/vorepanelStruggleCustomization
+		visible_message("<span class='vwarning'>[src] licks [tasted]!</span>","<span class='notice'>You lick [tasted]. They taste rather like [tasted.get_taste_message()].</span>","<b>Slurp!</b>") //CHOMPEdit End
 
 
 /mob/living/proc/get_taste_message(allow_generic = 1)
@@ -429,14 +424,10 @@
 		return
 
 	setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
-<<<<<<< HEAD
 	if(smelled == src) //CHOMPEdit Start
-		visible_message("<span class='warning'>[src] smells themself!</span>","<span class='notice'>You smell yourself. You smell like [smelled.get_smell_message()].</span>","<b>Sniff!</b>")
+		visible_message("<span class='vwarning'>[src] smells themself!</span>","<span class='notice'>You smell yourself. You smell like [smelled.get_smell_message()].</span>","<b>Sniff!</b>")
 	else
-		visible_message("<span class='warning'>[src] smells [smelled]!</span>","<span class='notice'>You smell [smelled]. They smell like [smelled.get_smell_message()].</span>","<b>Sniff!</b>") //CHOMPEdit End
-=======
-	visible_message("<span class='vwarning'>[src] smells [smelled]!</span>","<span class='vnotice'>You smell [smelled]. They smell like [smelled.get_smell_message()].</span>","<b>Sniff!</b>")
->>>>>>> 6c6ad6a4fa... Merge pull request #15559 from Kashargul/vorepanelStruggleCustomization
+		visible_message("<span class='vwarning'>[src] smells [smelled]!</span>","<span class='notice'>You smell [smelled]. They smell like [smelled.get_smell_message()].</span>","<b>Sniff!</b>") //CHOMPEdit End
 
 /mob/living/proc/get_smell_message(allow_generic = 1)
 	if(!vore_smell && !allow_generic)
@@ -1186,7 +1177,6 @@
 	set category = "Preferences"
 	set desc = "Print out your vorebelly messages into chat for copypasting."
 
-	//CHOMPEdit - "Belly HTML Export Earlyport"
 	var/result = tgui_alert(src, "Would you rather open the export panel?", "Selected Belly Export", list("Open Panel", "Print to Chat"))
 	if(result == "Open Panel")
 		var/mob/living/user = usr
@@ -1207,22 +1197,22 @@
 		for(var/belly in vore_organs)
 			if(isbelly(belly))
 				var/obj/belly/B = belly
-				to_chat(src, "<span class='vnotice'><b>Belly name:</b> [B.name]</span>")
-				to_chat(src, "<span class='vnotice'><b>Belly desc:</b> [B.desc]</span>")
-				to_chat(src, "<span class='vnotice'><b>Belly absorbed desc:</b> [B.absorbed_desc]</span>")
-				to_chat(src, "<span class='vnotice'><b>Vore verb:</b> [B.vore_verb]</span>")
-				to_chat(src, "<span class='vnotice'><b>Struggle messages (outside):</b></span>")
+				to_chat(src, "<span class='Vnotice'><b>Belly name:</b> [B.name]</span>")
+				to_chat(src, "<span class='Vnotice'><b>Belly desc:</b> [B.desc]</span>")
+				to_chat(src, "<span class='Vnotice'><b>Belly absorbed desc:</b> [B.absorbed_desc]</span>")
+				to_chat(src, "<span class='Vnotice'><b>Vore verb:</b> [B.vore_verb]</span>")
+				to_chat(src, "<span class='Vnotice'><b>Struggle messages (outside):</b></span>")
 				for(var/msg in B.struggle_messages_outside)
-					to_chat(src, "<span class='vnotice'>[msg]</span>")
+					to_chat(src, "<span class='Vnotice'>[msg]</span>")
 				to_chat(src, "<span class='vnotice'><b>Struggle messages (inside):</b></span>")
 				for(var/msg in B.struggle_messages_inside)
-					to_chat(src, "<span class='vnotice'>[msg]</span>")
+					to_chat(src, "<span class='Vnotice'>[msg]</span>")
 				to_chat(src, "<span class='vnotice'><b>Absorbed struggle messages (outside):</b></span>")
 				for(var/msg in B.absorbed_struggle_messages_outside)
 					to_chat(src, "<span class='vnotice'>[msg]</span>")
 				to_chat(src, "<span class='vnotice'><b>Absorbed struggle messages (inside):</b></span>")
 				for(var/msg in B.absorbed_struggle_messages_inside)
-					to_chat(src, "<span class='vnotice'>[msg]</span>")
+					to_chat(src, "<span class='Vnotice'>[msg]</span>")
 				to_chat(src, "<span class='vnotice'><b>Escape attempt messages (owner):</b></span>")
 				for(var/msg in B.escape_attempt_messages_owner)
 					to_chat(src, "<span class='vnotice'>[msg]</span>")
@@ -1326,12 +1316,7 @@
 				for(var/EL in B.emote_lists)
 					to_chat(src, "<span class='vnotice'><b>[EL]:</b></span>")
 					for(var/msg in B.emote_lists[EL])
-<<<<<<< HEAD
-						to_chat(src, "<span class='notice'>[msg]</span>")
-	//CHOMPEdit End
-=======
 						to_chat(src, "<span class='vnotice'>[msg]</span>")
->>>>>>> 6c6ad6a4fa... Merge pull request #15559 from Kashargul/vorepanelStruggleCustomization
 
 /**
  * Small helper component to manage the vore panel HUD icon

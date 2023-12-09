@@ -364,6 +364,7 @@
 	"belly_fullscreen_color4",
 	"belly_fullscreen_alpha",
 	"colorization_enabled",
+	"show_liquids",
 	"reagentbellymode",
 	"liquid_fullness1_messages",
 	"liquid_fullness2_messages",
@@ -507,7 +508,7 @@
 			formatted_desc = replacetext(desc, "%belly", lowertext(name)) //replace with this belly's name
 			formatted_desc = replacetext(formatted_desc, "%pred", owner) //replace with this belly's owner
 			formatted_desc = replacetext(formatted_desc, "%prey", thing) //replace with whatever mob entered into this belly
-			to_chat(thing, "<span class='notice'><B>[formatted_desc]</B></span>")
+			to_chat(thing, "<span class='vnotice'><B>[formatted_desc]</B></span>")
 		return
 	if(OldLoc in contents)
 		return //Someone dropping something (or being stripdigested)
@@ -516,12 +517,8 @@
 	//CHOMPEdit end
 
 	//Generic entered message
-<<<<<<< HEAD
 	if(!owner.mute_entry && entrance_logs) //CHOMPEdit
-		to_chat(owner,"<span class='notice'>[thing] slides into your [lowertext(name)].</span>")
-=======
-	to_chat(owner,"<span class='vnotice'>[thing] slides into your [lowertext(name)].</span>")
->>>>>>> 6c6ad6a4fa... Merge pull request #15559 from Kashargul/vorepanelStruggleCustomization
+		to_chat(owner,"<span class='vnotice'>[thing] slides into your [lowertext(name)].</span>")
 
 	//Sound w/ antispam flag setting
 	if(vore_sound && !recent_sound)
@@ -559,23 +556,18 @@
 
 		var/taste
 		if(can_taste && (taste = M.get_taste_message(FALSE)))
-<<<<<<< HEAD
-			to_chat(owner, "<span class='notice'>[M] tastes of [taste].</span>")
+			to_chat(owner, "<span class='vnotice'>[M] tastes of [taste].</span>")
 		vore_fx(M, TRUE) //CHOMPEdit: update belleh
 		if(owner.previewing_belly == src) //CHOMPEdit
 			vore_fx(owner, TRUE) //CHOMPEdit: update belleh
 		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
-=======
-			to_chat(owner, "<span class='vnotice'>[M] tastes of [taste].</span>")
-		vore_fx(M)
->>>>>>> 6c6ad6a4fa... Merge pull request #15559 from Kashargul/vorepanelStruggleCustomization
 		//Stop AI processing in bellies
 		if(M.ai_holder)
 			M.ai_holder.go_sleep()
 		if(reagents.total_volume >= 5 && M.digestable) //CHOMPEdit Start
 			if(digest_mode == DM_DIGEST)
 				reagents.trans_to(M, reagents.total_volume * 0.1, 1 / max(LAZYLEN(contents), 1), FALSE)
-			to_chat(M, "<span class='warning'><B>You splash into a pool of [reagent_name]!</B></span>")
+			to_chat(M, "<span class='vwarning'><B>You splash into a pool of [reagent_name]!</B></span>")
 	else if(count_items_for_sprite) //CHOMPEdit - If this is enabled also update fullness for non-living things
 		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 	//if(istype(thing, /obj/item/capture_crystal)) //CHOMPEdit start: Capture crystal occupant gets to see belly text too. Moved to modular_chomp capture_crystal.dm.
@@ -2383,6 +2375,7 @@
 	dupe.belly_fullscreen_color3 = belly_fullscreen_color3
 	dupe.belly_fullscreen_color4 = belly_fullscreen_color4
 	dupe.belly_fullscreen_alpha = belly_fullscreen_alpha
+	dupe.show_liquids = show_liquids
 	dupe.reagentbellymode = reagentbellymode
 	dupe.vorefootsteps_sounds = vorefootsteps_sounds
 	dupe.liquid_fullness1_messages = liquid_fullness1_messages

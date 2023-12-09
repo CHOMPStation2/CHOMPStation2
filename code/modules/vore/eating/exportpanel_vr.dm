@@ -1,3 +1,5 @@
+//CHOMPERemove. We got our own. We don't use this. Only here as a reminder on further PRs.
+/*
 //
 // Belly Export Panel
 //
@@ -303,3 +305,4 @@
 			data["bellies"] += list(belly_data)
 
 	return data
+	*/
