@@ -1107,6 +1107,59 @@
 			raw_messages = absorbed_struggle_messages_outside
 		if("asmi")
 			raw_messages = absorbed_struggle_messages_inside
+<<<<<<< HEAD
+=======
+		if("escao")
+			raw_messages = escape_attempt_messages_owner
+		if("escap")
+			raw_messages = escape_attempt_messages_prey
+		if("esco")
+			raw_messages = escape_messages_owner
+		if("escp")
+			raw_messages = escape_messages_prey
+		if("escout")
+			raw_messages = escape_messages_outside
+		if("escio")
+			raw_messages = escape_item_messages_owner
+		if("escip")
+			raw_messages = escape_item_messages_prey
+		if("esciout")
+			raw_messages = escape_item_messages_outside
+		if("escfo")
+			raw_messages = escape_fail_messages_owner
+		if("escfp")
+			raw_messages = escape_fail_messages_prey
+		if("aescao")
+			raw_messages = escape_attempt_absorbed_messages_owner
+		if("aescap")
+			raw_messages = escape_attempt_absorbed_messages_prey
+		if("aesco")
+			raw_messages = escape_absorbed_messages_owner
+		if("aescp")
+			raw_messages = escape_absorbed_messages_prey
+		if("aescout")
+			raw_messages = escape_absorbed_messages_outside
+		if("aescfo")
+			raw_messages = escape_fail_absorbed_messages_owner
+		if("aescfp")
+			raw_messages = escape_fail_absorbed_messages_prey
+		if("trnspo")
+			raw_messages = primary_transfer_messages_owner
+		if("trnspp")
+			raw_messages = primary_transfer_messages_prey
+		if("trnsso")
+			raw_messages = secondary_transfer_messages_owner
+		if("trnssp")
+			raw_messages = secondary_transfer_messages_prey
+		if("stmodo")
+			raw_messages = digest_chance_messages_owner
+		if("stmodp")
+			raw_messages = digest_chance_messages_prey
+		if("stmoao")
+			raw_messages = absorb_chance_messages_owner
+		if("stmoap")
+			raw_messages = absorb_chance_messages_prey
+>>>>>>> 625b440806... Merge pull request #15585 from VOREStation/selis-statusbar-fix
 		if("dmo")
 			raw_messages = digest_messages_owner
 		if("dmp")
@@ -1187,6 +1240,59 @@
 			absorbed_struggle_messages_outside = raw_list
 		if("asmi")
 			absorbed_struggle_messages_inside = raw_list
+<<<<<<< HEAD
+=======
+		if("escao")
+			escape_attempt_messages_owner = raw_list
+		if("escap")
+			escape_attempt_messages_prey = raw_list
+		if("esco")
+			escape_messages_owner = raw_list
+		if("escp")
+			escape_messages_prey = raw_list
+		if("escout")
+			escape_messages_outside = raw_list
+		if("escio")
+			escape_item_messages_owner = raw_list
+		if("escip")
+			escape_item_messages_prey = raw_list
+		if("esciout")
+			escape_item_messages_outside = raw_list
+		if("escfo")
+			escape_fail_messages_owner = raw_list
+		if("escfp")
+			escape_fail_messages_prey = raw_list
+		if("aescao")
+			escape_attempt_absorbed_messages_owner = raw_list
+		if("aescap")
+			escape_attempt_absorbed_messages_prey = raw_list
+		if("aesco")
+			escape_absorbed_messages_owner = raw_list
+		if("aescp")
+			escape_absorbed_messages_prey = raw_list
+		if("aescout")
+			escape_absorbed_messages_outside = raw_list
+		if("aescfo")
+			escape_fail_absorbed_messages_owner = raw_list
+		if("aescfp")
+			escape_fail_absorbed_messages_prey = raw_list
+		if("trnspo")
+			primary_transfer_messages_owner = raw_list
+		if("trnspp")
+			primary_transfer_messages_prey = raw_list
+		if("trnsso")
+			secondary_transfer_messages_owner = raw_list
+		if("trnssp")
+			secondary_transfer_messages_prey = raw_list
+		if("stmodo")
+			digest_chance_messages_owner = raw_list
+		if("stmodp")
+			digest_chance_messages_prey = raw_list
+		if("stmoao")
+			absorb_chance_messages_owner = raw_list
+		if("stmoap")
+			absorb_chance_messages_prey = raw_list
+>>>>>>> 625b440806... Merge pull request #15585 from VOREStation/selis-statusbar-fix
 		if("dmo")
 			digest_messages_owner = raw_list
 		if("dmp")
