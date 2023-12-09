@@ -192,15 +192,9 @@ SUBSYSTEM_DEF(tgui)
 	if(!LAZYLEN(src_object?.open_tguis))
 		return 0
 	var/count = 0
-<<<<<<< HEAD
 	for(var/datum/tgui/ui in src_object.open_tguis)
-		// Check the UI is valid.
-		if(ui && ui.src_object && ui.user && ui.src_object.tgui_host(ui.user))
-=======
-	for(var/datum/tgui/ui in src_object.open_uis)
 		// Check if UI is valid.
 		if(ui?.src_object && ui.user && ui.src_object.tgui_host(ui.user))
->>>>>>> 097d78a0e0... Merge pull request #14625 from ItsSelis/selis-tgchat
 			INVOKE_ASYNC(ui, TYPE_PROC_REF(/datum/tgui, process), wait * 0.1, TRUE)
 			count++
 	return count
@@ -219,18 +213,11 @@ SUBSYSTEM_DEF(tgui)
 	if(!LAZYLEN(src_object?.open_tguis))
 		return 0
 	var/count = 0
-<<<<<<< HEAD
 	for(var/datum/tgui/ui in src_object.open_tguis)
-		if(ui && ui.src_object && ui.user && ui.src_object.tgui_host(ui.user)) // Check the UI is valid.
-			ui.close() // Close the UI.
-			count++ // Count each UI we close.
-=======
-	for(var/datum/tgui/ui in src_object.open_uis)
 		// Check if UI is valid.
 		if(ui?.src_object && ui.user && ui.src_object.tgui_host(ui.user))
 			ui.close()
 			count++
->>>>>>> 097d78a0e0... Merge pull request #14625 from ItsSelis/selis-tgchat
 	return count
 
 /**

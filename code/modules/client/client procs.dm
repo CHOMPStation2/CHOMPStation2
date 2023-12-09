@@ -180,15 +180,10 @@
 	GLOB.clients += src
 	GLOB.directory[ckey] = src
 
-<<<<<<< HEAD
-	GLOB.tickets.ClientLogin(src) // CHOMPedit - Tickets System
-=======
 	// Instantiate tgui panel
 	tgui_panel = new(src, "browseroutput")
 
-	GLOB.ahelp_tickets.ClientLogin(src)
-	GLOB.mhelp_tickets.ClientLogin(src)
->>>>>>> 097d78a0e0... Merge pull request #14625 from ItsSelis/selis-tgchat
+	GLOB.tickets.ClientLogin(src) // CHOMPedit - Tickets System
 
 	//Admin Authorisation
 	holder = admin_datums[ckey]
@@ -497,32 +492,6 @@
 		return FALSE
 	return ..()
 
-<<<<<<< HEAD
-/client/verb/reload_vchat()
-	set name = "Reload VChat"
-	set category = "OOC"
-
-	//Timing
-	if(src.chatOutputLoadedAt > (world.time - 10 SECONDS))
-		tgui_alert_async(src, "You can only try to reload VChat every 10 seconds at most.")
-		return
-
-	// YW EDIT: disabled until we can fix the lag: verbs -= /client/proc/vchat_export_log
-
-	//Log, disable
-	log_debug("[key_name(src)] reloaded VChat.")
-	winset(src, null, "outputwindow.htmloutput.is-visible=false;outputwindow.oldoutput.is-visible=false;outputwindow.chatloadlabel.is-visible=true")
-
-	//The hard way
-	qdel_null(src.chatOutput)
-	chatOutput = new /datum/chatOutput(src) //veechat
-	chatOutput.send_resources()
-	spawn()
-		chatOutput.start()
-
-
-=======
->>>>>>> 097d78a0e0... Merge pull request #14625 from ItsSelis/selis-tgchat
 //This is for getipintel.net.
 //You're welcome to replace this proc with your own that does your own cool stuff.
 //Just set the client's ip_reputation var and make sure it makes sense with your config settings (higher numbers are worse results)
