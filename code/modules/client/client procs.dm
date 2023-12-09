@@ -135,7 +135,6 @@
 		if("usr")		hsrc = mob
 		if("prefs")		return prefs.process_link(usr,href_list)
 		if("vars")		return view_var_Topic(href,href_list,hsrc)
-		if("chat")		return chatOutput.Topic(href, href_list)
 
 	switch(href_list["action"])
 		if("openLink")
@@ -174,11 +173,6 @@
 		del(src)
 		return
 
-	chatOutput = new /datum/chatOutput(src) //veechat
-	chatOutput.send_resources()
-	spawn()
-		chatOutput.start()
-
 	//Only show this if they are put into a new_player mob. Otherwise, "what title screen?"
 	if(isnewplayer(src.mob))
 		to_chat(src, "<font color='red'>If the title screen is black, resources are still downloading. Please be patient until the title screen appears.</font>")
@@ -186,7 +180,15 @@
 	GLOB.clients += src
 	GLOB.directory[ckey] = src
 
+<<<<<<< HEAD
 	GLOB.tickets.ClientLogin(src) // CHOMPedit - Tickets System
+=======
+	// Instantiate tgui panel
+	tgui_panel = new(src, "browseroutput")
+
+	GLOB.ahelp_tickets.ClientLogin(src)
+	GLOB.mhelp_tickets.ClientLogin(src)
+>>>>>>> 097d78a0e0... Merge pull request #14625 from ItsSelis/selis-tgchat
 
 	//Admin Authorisation
 	holder = admin_datums[ckey]
@@ -213,6 +215,9 @@
 	prefs.sanitize_preferences()
 	if(prefs)
 		prefs.selecting_slots = FALSE
+
+	// Initialize tgui panel
+	tgui_panel.initialize()
 
 	connection_time = world.time
 	connection_realtime = world.realtime
@@ -492,6 +497,7 @@
 		return FALSE
 	return ..()
 
+<<<<<<< HEAD
 /client/verb/reload_vchat()
 	set name = "Reload VChat"
 	set category = "OOC"
@@ -515,6 +521,8 @@
 		chatOutput.start()
 
 
+=======
+>>>>>>> 097d78a0e0... Merge pull request #14625 from ItsSelis/selis-tgchat
 //This is for getipintel.net.
 //You're welcome to replace this proc with your own that does your own cool stuff.
 //Just set the client's ip_reputation var and make sure it makes sense with your config settings (higher numbers are worse results)
