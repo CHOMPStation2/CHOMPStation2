@@ -756,12 +756,12 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				if(islist(belly_data["escape_attempt_messages_prey"]))
 					var/new_escape_attempt_messages_prey = sanitize(jointext(belly_data["escape_attempt_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
 					if(new_escape_attempt_messages_prey)
-						new_belly.set_messages(new_escape_attempt_messages_prey,"escao")
+						new_belly.set_messages(new_escape_attempt_messages_prey,"escap")
 
 				if(islist(belly_data["escape_attempt_messages_owner"]))
 					var/new_escape_attempt_messages_owner = sanitize(jointext(belly_data["escape_attempt_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
 					if(new_escape_attempt_messages_owner)
-						new_belly.set_messages(new_escape_attempt_messages_owner,"escap")
+						new_belly.set_messages(new_escape_attempt_messages_owner,"escao")
 
 				if(islist(belly_data["escape_messages_prey"]))
 					var/new_escape_messages_prey = sanitize(jointext(belly_data["escape_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
@@ -806,12 +806,12 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				if(islist(belly_data["escape_attempt_absorbed_messages_prey"]))
 					var/new_escape_attempt_absorbed_messages_prey = sanitize(jointext(belly_data["escape_attempt_absorbed_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
 					if(new_escape_attempt_absorbed_messages_prey)
-						new_belly.set_messages(new_escape_attempt_absorbed_messages_prey,"aescao")
+						new_belly.set_messages(new_escape_attempt_absorbed_messages_prey,"aescap")
 
 				if(islist(belly_data["escape_attempt_absorbed_messages_owner"]))
 					var/new_escape_attempt_absorbed_messages_owner = sanitize(jointext(belly_data["escape_attempt_absorbed_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
 					if(new_escape_attempt_absorbed_messages_owner)
-						new_belly.set_messages(new_escape_attempt_absorbed_messages_owner,"aescap")
+						new_belly.set_messages(new_escape_attempt_absorbed_messages_owner,"aescao")
 
 				if(islist(belly_data["escape_absorbed_messages_prey"]))
 					var/new_escape_absorbed_messages_prey = sanitize(jointext(belly_data["escape_absorbed_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
@@ -2566,15 +2566,15 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					if(new_message)
 						host.vore_selected.set_messages(new_message,"asmi")
 
-				if("escao")
-					var/new_message = sanitize(tgui_input_text(user,"These are sent to prey when they try to escape from within you. Write them in 2nd person ('you start to X')."+help,"Escape Attempt Message (to prey)",host.vore_selected.get_messages("escao"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
-					if(new_message)
-						host.vore_selected.set_messages(new_message,"escao")
-
 				if("escap")
-					var/new_message = sanitize(tgui_input_text(user,"These are sent to you when prey tries to escape from within you. Write them in 2nd person ('X ... from your Y')."+help,"Escape Attempt Message (to you)",host.vore_selected.get_messages("escap"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to prey when they try to escape from within you. Write them in 2nd person ('you start to X')."+help,"Escape Attempt Message (to prey)",host.vore_selected.get_messages("escap"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
 					if(new_message)
 						host.vore_selected.set_messages(new_message,"escap")
+
+				if("escao")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to you when prey tries to escape from within you. Write them in 2nd person ('X ... from your Y')."+help,"Escape Attempt Message (to you)",host.vore_selected.get_messages("escao"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"escao")
 
 				if("escp")
 					var/new_message = sanitize(tgui_input_text(user,"These are sent to prey when they escape from within you. Write them in 2nd person ('you climb out of Y)."+help,"Escape Message (to prey)",host.vore_selected.get_messages("escp"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
@@ -2616,15 +2616,15 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					if(new_message)
 						host.vore_selected.set_messages(new_message,"escfo")
 
-				if("aescao")
-					var/new_message = sanitize(tgui_input_text(user,"These are sent to absorbed prey when they try to escape from within you. Write them in 2nd person ('you start to X')."+help,"Absorbed Escape Attempt Message (to prey)",host.vore_selected.get_messages("aescao"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
-					if(new_message)
-						host.vore_selected.set_messages(new_message,"aescao")
-
 				if("aescap")
-					var/new_message = sanitize(tgui_input_text(user,"These are sent to you when absorbed prey tries to escape from within you. Write them in 2nd person ('X ... from your Y')."+help,"Absorbed Escape Attempt Message (to you)",host.vore_selected.get_messages("aescap"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to absorbed prey when they try to escape from within you. Write them in 2nd person ('you start to X')."+help,"Absorbed Escape Attempt Message (to prey)",host.vore_selected.get_messages("aescap"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
 					if(new_message)
 						host.vore_selected.set_messages(new_message,"aescap")
+
+				if("aescao")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to you when absorbed prey tries to escape from within you. Write them in 2nd person ('X ... from your Y')."+help,"Absorbed Escape Attempt Message (to you)",host.vore_selected.get_messages("aescao"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"aescao")
 
 				if("aescp")
 					var/new_message = sanitize(tgui_input_text(user,"These are sent to absorbed prey when they escape from within you. Write them in 2nd person ('you escape from Y')."+help,"Absorbed Escape Message (to prey)",host.vore_selected.get_messages("aescp"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
