@@ -168,3 +168,4 @@
   - rscdel: removed vchat
   - bugfix: most likely fixed some scrolling issues with some of the UIs
   - qol: improved color contrast for dark mode
+  - qol: minor styling improvements of tgchat
