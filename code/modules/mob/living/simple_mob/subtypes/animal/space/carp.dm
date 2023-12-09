@@ -66,7 +66,7 @@
 	if(isliving(A))
 		var/mob/living/L = A
 		if(prob(knockdown_chance))
-			L.Weaken(3)
+			L.add_modifier(/datum/modifier/entangled, 4 SECONDS) //CHOMPedit, replacing weaken/slowdown with slow down
 			L.visible_message(span("danger", "\The [src] knocks down \the [L]!"))
 
 // Subtypes.
