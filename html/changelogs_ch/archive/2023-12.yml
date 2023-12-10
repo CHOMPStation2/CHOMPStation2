@@ -178,3 +178,7 @@
   - admin: 'change: admin module removing unequips all active modules'
   - qol: Adds warning for trying to wrap packages and gifts
   - rscdel: Disables debug messages for APC-less ships in electrical storms
+2023-12-10:
+  Upstream:
+  - bugfix: fixes statusbar after tgchat update
+  - rscadd: 'added two new themes to tgchat: vchatlight and vchatdark'
