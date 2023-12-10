@@ -181,6 +181,7 @@
 2023-12-10:
   Kashargul:
   - rscadd: 'change: puddles respect the custom liquid color'
+  - bugfix: overseen merge conflict in skin.dmf
   Upstream:
   - bugfix: fixes statusbar after tgchat update
   - rscadd: 'added two new themes to tgchat: vchatlight and vchatdark'
