@@ -536,8 +536,6 @@ const VoreSelectedBellyDescriptions = (props, context) => {
           content="Absorbed Struggle Message (inside)"
         />
       </LabeledList.Item>
-<<<<<<< HEAD
-=======
       <LabeledList.Item label="Escape Messages">
         <Button
           onClick={() =>
@@ -694,7 +692,6 @@ const VoreSelectedBellyDescriptions = (props, context) => {
           content="Interaction Chance Absorb Message (to you)"
         />
       </LabeledList.Item>
->>>>>>> 625b440806... Merge pull request #15585 from VOREStation/selis-statusbar-fix
       <LabeledList.Item label="Bellymode Messages">
         <Button
           onClick={() =>
@@ -1581,6 +1578,14 @@ const VoreSelectedBellyInteractions = (props, context) => {
               content={interacts.escapechance + '%'}
               onClick={() =>
                 act('set_attribute', { attribute: 'b_escapechance' })
+              }
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Absorbed Escape Chance">
+            <Button
+              content={interacts.escapechance_absorbed + '%'}
+              onClick={() =>
+                act('set_attribute', { attribute: 'b_escapechance_absorbed' })
               }
             />
           </LabeledList.Item>
