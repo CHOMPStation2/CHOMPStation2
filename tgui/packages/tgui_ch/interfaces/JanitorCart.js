@@ -28,7 +28,7 @@ export const JanitorCart = (props, context) => {
           tooltipPosition="bottom-right"
           color={mybag ? "grey" : "transparent"}
           style={{
-            border: mybag ? null : "2px solid grey",,
+            border: mybag ? null : "2px solid grey",
           }}
           onClick={() => act("bag")}>
           <JanicartIcon iconkey="mybag" />
