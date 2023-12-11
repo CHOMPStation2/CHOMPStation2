@@ -192,3 +192,4 @@
   - bugfix: custom admin OOC colours
   - balance: Robots no longer lose their overcharge when stepping into chargers.
   - rscadd: "/\U0001F191"
+  - rscadd: Filter for NPC emotes to TG chat
