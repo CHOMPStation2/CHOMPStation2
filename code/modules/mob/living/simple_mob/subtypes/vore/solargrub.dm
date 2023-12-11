@@ -137,8 +137,8 @@ var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawst
 		if(prob(shock_chance))
 			A.emp_act(4) //The weakest strength of EMP
 			playsound(src, 'sound/weapons/Egloves.ogg', 75, 1)
-			//L.Weaken(4) CHOMPedit: Removal of stun, there is already enough going on here.
-			//L.Stun(4) CHOMPedit: Removal of stun, there is already enough going on here.
+			L.Weaken(4)
+			L.Stun(4)
 			L.stuttering = max(L.stuttering, 4)
 			var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 			s.set_up(5, 1, L)
