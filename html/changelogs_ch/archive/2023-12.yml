@@ -188,3 +188,5 @@
 2023-12-11:
   BlackMajor:
   - qol: Expanded event preference selection to include specific vore options
+  Upstream:
+  - bugfix: custom admin OOC colours
