@@ -59,8 +59,8 @@ export const Batteryrack = (props, context) => {
                 selected={mode === 3}
                 onClick={() => act("enable", { enable: 3 })} />
               {equalise && (
-              {(equalise && (
                 <Button
+                  content="EQ"
                   color={blink_tick ? "red" : "yellow"}
                   onClick={() => act("equaliseoff")} />
               ) || (
