@@ -54,6 +54,8 @@
 		/obj/item/weapon/weldingtool,
 		/obj/item/weapon/tool/wirecutters,
 		/obj/item/weapon/tool/wrench,
+		/obj/item/weapon/tool/transforming/powerdrill,
+		/obj/item/weapon/tool/transforming/jawsoflife,
 		/obj/item/device/multitool,
 		/obj/item/device/flashlight,
 		/obj/item/weapon/cell/device,
@@ -73,6 +75,9 @@
 		/obj/item/weapon/extinguisher/mini,
 		/obj/item/weapon/tape_roll,
 		/obj/item/device/integrated_electronics/wirer,
+		/obj/item/weapon/pipe_dispenser, //CHOMPAdd
+		/obj/item/weapon/holosign_creator/combifan, //CHOMPAdd
+		/obj/item/weapon/rcd, //CHOMPAdd
 		/obj/item/device/integrated_electronics/debugger, //Vorestation edit adding debugger to toolbelt can hold list
 		/obj/item/weapon/shovel/spade, //VOREStation edit. If it can hold minihoes and hatchers, why not the gardening spade?
 		/obj/item/stack/nanopaste, //VOREStation edit. Think of it as a tube of superglue. Belts hold that all the time.
@@ -119,11 +124,15 @@
 	storage_slots = 8	//If they get better everything-else, why not the belt too?
 	can_hold = list(
 		/obj/item/weapon/rcd,	//They've given one from the get-go, it's hard to imagine they wouldn't be given something that can store it neater than a bag
+		/obj/item/weapon/pipe_dispenser, //CHOMPAdd
+		/obj/item/weapon/holosign_creator/combifan, //CHOMPAdd
 		/obj/item/weapon/tool/crowbar,
 		/obj/item/weapon/tool/screwdriver,
 		/obj/item/weapon/weldingtool,
 		/obj/item/weapon/tool/wirecutters,
 		/obj/item/weapon/tool/wrench,
+		/obj/item/weapon/tool/transforming/powerdrill,
+		/obj/item/weapon/tool/transforming/jawsoflife,
 		/obj/item/device/multitool,
 		/obj/item/device/flashlight,
 		/obj/item/weapon/cell/device,
@@ -153,8 +162,8 @@
 
 /obj/item/weapon/storage/belt/utility/chief/full
 	starts_with = list(
-		/obj/item/weapon/tool/screwdriver/power,
-		/obj/item/weapon/tool/crowbar/power,
+		/obj/item/weapon/tool/transforming/powerdrill,
+		/obj/item/weapon/tool/transforming/jawsoflife,
 		/obj/item/weapon/weldingtool/experimental,
 		/obj/item/device/multitool,
 		/obj/item/stack/cable_coil/random_belt,
@@ -169,11 +178,13 @@
 	storage_slots = 14 //twice the amount as a normal belt
 	max_storage_space = ITEMSIZE_COST_NORMAL * 14
 	can_hold = list(
-	/obj/item/weapon/tool/crowbar,
+		/obj/item/weapon/tool/crowbar,
 		/obj/item/weapon/tool/screwdriver,
 		/obj/item/weapon/weldingtool,
 		/obj/item/weapon/tool/wirecutters,
 		/obj/item/weapon/tool/wrench,
+		/obj/item/weapon/tool/transforming/powerdrill,
+		/obj/item/weapon/tool/transforming/jawsoflife,
 		/obj/item/device/multitool,
 		/obj/item/device/flashlight,
 		/obj/item/weapon/cell/device,
@@ -238,7 +249,8 @@
 		/obj/item/device/flashlight,
 		/obj/item/weapon/cell/device,
 		/obj/item/weapon/extinguisher/mini,
-		/obj/item/weapon/storage/quickdraw/syringe_case
+		/obj/item/weapon/storage/quickdraw/syringe_case,
+		/obj/item/ammo_casing/macrobattery // CHOMPedit: Macrobatteries for the Curabitur can fit into medbelts.
 		)
 
 /obj/item/weapon/storage/belt/medical/emt
@@ -479,6 +491,7 @@
 		/obj/item/taperoll,
 		/obj/item/weapon/reagent_containers/spray,
 		/obj/item/weapon/soap,
+		/obj/item/weapon/holosign_creator, //CHOMPAdd
 		/obj/item/device/lightreplacer //VOREStation edit
 		)
 
@@ -507,6 +520,7 @@
 		/obj/item/weapon/anodevice,
 		/obj/item/clothing/glasses,
 		/obj/item/weapon/tool/wrench,
+		/obj/item/weapon/tool/transforming/powerdrill,
 		/obj/item/weapon/storage/excavation,
 		/obj/item/weapon/anobattery,
 		/obj/item/device/ano_scanner,

@@ -72,13 +72,13 @@
 	var/recharging = 0
 	var/phase_power = 75
 
-	projectile_type = /obj/item/projectile/beam/blue
-
-	modifystate = "phaserkill"
+	projectile_type = /obj/item/projectile/beam/phaser
+	//CHOMP Edit: Changed beam type to new phaser beam type.
 	firemodes = list(
-		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/blue, modifystate="phaserkill", charge_cost = 300),
-		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/weaklaser/blue, modifystate="phaserstun", charge_cost = 100),
+		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/phaser, charge_cost = 300),
+		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/phaser/light, charge_cost = 80),
 	)
+	recoil_mode = 0 //CHOMP Addition: Removes recoil for micros.
 
 /obj/item/weapon/gun/energy/locked/frontier/unload_ammo(var/mob/user)
 	if(recharging)
@@ -92,7 +92,7 @@
 			break
 		playsound(src,'sound/items/change_drill.ogg',25,1)
 		user.hud_used.update_ammo_hud(user, src)
-		if(power_supply.give(phase_power) < phase_power)
+		if(power_supply.give(phase_power/8) < phase_power/8) //CHOMP Edit: Nerfed charge time of all phasers by adding /8 in a couple spots to this line
 			break
 
 	recharging = 0
@@ -138,10 +138,11 @@
 	item_icons = list(slot_l_hand_str = 'icons/mob/items/lefthand_guns.dmi', slot_r_hand_str = 'icons/mob/items/righthand_guns.dmi')
 	phase_power = 150
 
-	modifystate = "phcarbinekill"
+	modifystate = "carbinekill"
+	//CHOMP Edit: Changed beam type to new phaser beam type.
 	firemodes = list(
-		list(mode_name="lethal", fire_delay=8, projectile_type=/obj/item/projectile/beam/blue, modifystate="phcarbinekill", charge_cost = 300),
-		list(mode_name="low-power", fire_delay=5, projectile_type=/obj/item/projectile/beam/weaklaser/blue, modifystate="phcarbinestun", charge_cost = 100),
+		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/phaser, modifystate="carbinekill", charge_cost = 300),
+		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/phaser/light, modifystate="carbinestun", charge_cost = 80),
 	)
 
 /obj/item/weapon/gun/energy/locked/frontier/carbine/update_icon()
@@ -183,15 +184,12 @@
 	scoped_accuracy = 40
 	one_handed_penalty = 50 // The weapon itself is heavy, and the long barrel makes it hard to hold steady with just one hand.
 	phase_power = 150 //efficient crank charger
-	fire_sound = null
-	charge_cost = 600
-	fire_delay = 35
-
-	projectile_type = /obj/item/projectile/beam/sniper
-	modifystate = "phrifledmr"
+	projectile_type = /obj/item/projectile/beam/phaser/heavy //CHOMPEdit
+	modifystate = "riflekill"
+	//CHOMP Edit: Changed beam type to new phaser beam type.
 	firemodes = list(
-		list(mode_name="sniper", fire_delay=35, projectile_type=/obj/item/projectile/beam/sniper, modifystate="phrifledmr", charge_cost = 600),
-		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam, modifystate="phriflekill", charge_cost = 200),
+		list(mode_name="sniper", fire_delay=35, projectile_type=/obj/item/projectile/beam/phaser/heavy, modifystate="riflekill", charge_cost = 600),
+		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/phaser, modifystate="riflestun", charge_cost = 200),
 	)
 
 /obj/item/weapon/gun/energy/locked/frontier/rifle/ui_action_click()
@@ -261,8 +259,8 @@
 	charge_cost = 600
 	modifystate = "handbowkill"
 	firemodes = list(
-		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/energy/bow/heavy, modifystate="handbowkill", charge_cost = 600),
-		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/energy/bow, modifystate="handbowstun", charge_cost = 200),
+		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/energy/phase/bolt/heavy, modifystate="handbowkill", charge_cost = 600), //CHOMP Edit
+		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/energy/phase/bolt, modifystate="handbowstun", charge_cost = 200), //CHOMP Edit
 	)
 
 /obj/item/weapon/gun/energy/locked/frontier/handbow/unlocked

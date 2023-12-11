@@ -44,7 +44,7 @@
 
 	//Lighting related
 	set_luminosity(!(dynamic_lighting))
-	
+
 	if(opacity)
 		directional_opacity = ALL_CARDINALS
 
@@ -377,6 +377,7 @@
 	UNSETEMPTY(dangerous_objects) // This nulls the list var if it's empty.
 //	color = "#00FF00"
 
+/* CHOMPEdit - moved this block to modular_chomp\code\game\objects\items\weapons\rcd.dm
 // This is all the way up here since its the common ancestor for things that need to get replaced with a floor when an RCD is used on them.
 // More specialized turfs like walls should instead override this.
 // The code for applying lattices/floor tiles onto lattices could also utilize something similar in the future.
@@ -401,7 +402,7 @@
 		ChangeTurf(/turf/simulated/floor/airless, preserve_outdoors = TRUE)
 		return TRUE
 	return FALSE
-
+*/
 
 // We're about to be the A-side in a turf translation
 /turf/proc/pre_translate_A(var/turf/B)

@@ -70,9 +70,9 @@
 	humanform = null
 	drop_l_hand()
 	drop_r_hand()
-	mob_radio.forceMove(loc)
+	drop_from_inventory(mob_radio, loc)
 	mob_radio = null
-	myid.forceMove(loc)
+	drop_from_inventory(myid, loc)
 	myid = null
 	vore_organs = null
 	vore_selected = null
@@ -81,8 +81,8 @@
 
 /mob/living/carbon/human/Destroy()
 	if(stored_blob)
-		stored_blob.l_hand?.forceMove(loc) // CHHOMPedit - Make sure that stored_blob actually has the hand before trying to forceMove.
-		stored_blob.r_hand?.forceMove(loc) // CHHOMPedit - ^
+		stored_blob.drop_l_hand()
+		stored_blob.drop_r_hand()
 		stored_blob = null
 		qdel(stored_blob)
 	return ..()
@@ -410,6 +410,8 @@
 	blob.transforming = TRUE
 	blob.ckey = ckey
 	blob.ooc_notes = ooc_notes
+	blob.ooc_notes_likes = ooc_notes_likes
+	blob.ooc_notes_dislikes = ooc_notes_dislikes
 	blob.transforming = FALSE
 	blob.name = name
 	blob.real_name = real_name //CHOMPEdit
@@ -497,6 +499,8 @@
 	transforming = TRUE
 	ckey = blob.ckey
 	ooc_notes = blob.ooc_notes // Updating notes incase they change them in blob form.
+	ooc_notes_likes = blob.ooc_notes_likes
+	ooc_notes_dislikes = blob.ooc_notes_dislikes
 	transforming = FALSE
 	blob.name = "Promethean Blob"
 	var/obj/item/hat = blob.hat

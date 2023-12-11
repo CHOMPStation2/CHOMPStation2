@@ -404,7 +404,7 @@
 	ammo_type = /obj/item/ammo_casing/a9mm
 	matter = list(MAT_STEEL = 1200)
 	caliber = "9mm"
-	max_ammo = 20
+	max_ammo = 50 //CHOMPedit
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/m9mmt/empty
@@ -428,6 +428,7 @@
 	matter = list(MAT_STEEL = 1000, MAT_PLASTEEL = 2000)
 
 // P90
+/* CHOMPEDIT Commented out, moved to zz_magazines_ch.dm *
 /obj/item/ammo_magazine/m9mmp90
 	name = "large capacity top mounted magazine (9mm armor-piercing)"
 	icon_state = "p90"
@@ -440,6 +441,7 @@
 
 /obj/item/ammo_magazine/m9mmp90/empty
 	initial_ammo = 0
+* CHOMPEDIT Commented out, moved to zz_magazines_ch.dm */
 
 // Stripper Clip
 /obj/item/ammo_magazine/clip/c9mm
@@ -643,7 +645,7 @@
 	matter = list(MAT_STEEL = 10000)
 	ammo_type = /obj/item/ammo_casing/a545
 	w_class = ITEMSIZE_NORMAL // This should NOT fit in your pocket!!
-	max_ammo = 50
+	max_ammo = 150 //CHOMPedit
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/m545saw/empty
@@ -720,7 +722,7 @@
 	caliber = "7.62mm"
 	matter = list(MAT_STEEL = 2000)
 	ammo_type = /obj/item/ammo_casing/a762
-	max_ammo = 10
+	max_ammo = 25 //CHOMPedit
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/m762/empty
@@ -735,7 +737,7 @@
 	name = "extended magazine (7.62mm)"
 	icon_state = "m762"
 	matter = list(MAT_STEEL = 4000)
-	max_ammo = 20
+	max_ammo = 50 //CHOMPedit
 
 /obj/item/ammo_magazine/m762/ext/empty
 	initial_ammo = 0

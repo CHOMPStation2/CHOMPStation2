@@ -195,7 +195,9 @@
 					prob(4);/obj/item/ammo_magazine/m9mmt,\
 					prob(4);/obj/item/ammo_magazine/m9mmt/rubber,\
 					prob(4);/obj/item/ammo_magazine/m10mm,\
-					prob(4);/obj/item/ammo_magazine/m9mmp90,\
+//CHOMPedit start: new P90 magazine.
+					prob(4);/obj/item/ammo_magazine/a57p90,\
+//CHOMPedit end.
 					prob(4);/obj/item/ammo_magazine/m545/ext,
 					prob(4);/obj/item/ammo_magazine/m762,\
 					prob(4);/obj/item/ammo_magazine/ammo_box/b762/surplus/hunter,\
@@ -257,6 +259,8 @@
 				new /obj/item/weapon/storage/firstaid/combat(C)
 			if(prob(25))
 				new /obj/item/weapon/storage/firstaid/adv(C)
+			if(prob(25))
+				new /obj/item/weapon/storage/firstaid/experimental(C) //CHOMP Add
 		if("snacks")
 			//you're come so far, you must be in need of refreshment
 			var/obj/structure/closet/crate/freezer/C = new(src.loc)

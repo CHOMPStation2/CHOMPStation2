@@ -15,3 +15,14 @@
 	"Tan Plate Carrier" = /obj/item/clothing/suit/armor/pcarrier/tan
 	)
 	gear_tweaks += new/datum/gear_tweak/path(pcarriers)
+
+
+/datum/gear/suit/winterhood
+	display_name = "Winter Hood"
+	path = /obj/item/clothing/head/hood/cloak/winter
+	cost = 0
+
+/datum/gear/suit/martianminer
+	display_name = "Martian Miner Coat"
+	path = /obj/item/clothing/suit/storage/vest/martian_miner/unarmored
+	cost = 1

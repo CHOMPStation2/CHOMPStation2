@@ -17,6 +17,8 @@
 /obj/item/weapon/spacecash/c1000,
 /obj/item/weapon/storage/pill_bottle/healing_nanites,
 /obj/item/weapon/storage/pill_bottle/rezadone,
+/obj/item/weapon/storage/firstaid/experimental,
+/obj/random/firstaid,
 /turf/simulated/floor{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -148,14 +150,12 @@
 /obj/structure/safe,
 /obj/item/weapon/spacecash/c1000,
 /obj/item/weapon/spacecash/c1000,
-/obj/item/weapon/spacecash/c1000,
-/obj/item/weapon/spacecash/c1000,
-/obj/item/weapon/spacecash/c1000,
 /obj/item/clothing/suit/space/void/merc/fire,
-/obj/item/clothing/suit/space/void/altevian_heartbreaker,
 /obj/item/clothing/suit/space/void/altevian_heartbreaker,
 /obj/item/clothing/head/helmet/space/void/merc/fire,
 /obj/item/clothing/head/helmet/space/void/altevian_heartbreaker,
+/obj/item/clothing/suit/space/void/merc,
+/obj/item/clothing/head/helmet/space/void/merc,
 /turf/simulated/floor{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -624,7 +624,7 @@ G
 G
 f
 f
-e
+s
 W
 W
 c
@@ -769,7 +769,7 @@ G
 f
 f
 s
-s
+e
 s
 c
 W
@@ -885,8 +885,8 @@ s
 U
 X
 s
-e
 s
+e
 f
 P
 I
@@ -991,7 +991,7 @@ G
 f
 f
 s
-s
+e
 s
 W
 c
@@ -1030,7 +1030,7 @@ f
 f
 s
 s
-W
+s
 W
 W
 W
@@ -1142,7 +1142,7 @@ G
 G
 f
 f
-e
+s
 W
 W
 c

@@ -1638,18 +1638,18 @@
 /datum/reagent/drink/decaf
 	name = "Decaf Coffee"
 	id = "decaf"
-	description = "Coffee with all the wake-up sucked out."
-	taste_description = "bad coffee"
+	description = "Coffee with at least 97% of its caffeine content removed. All of the flavor, none of the kick!" // CHOMPEdit - In defense of decaf coffee
+	taste_description = "coffee" // CHOMPEdit - In defense of decaf coffee
 	taste_mult = 1.3
 	color = "#482000"
 	adj_temp = 25
 
 	cup_icon_state = "cup_coffee"
 	cup_name = "cup of decaf"
-	cup_desc = "Basically just brown, bitter water."
+	cup_desc = "Just as bitter as regular coffee, but it won't keep you up at night!" // CHOMPEdit - In defense of decaf coffee
 
 	glass_name = "decaf coffee"
-	glass_desc = "Basically just brown, bitter water."
+	glass_desc = "Just as bitter as regular coffee, but it won't keep you up at night!" // CHOMPEdit - In defense of decaf coffee
 	allergen_type = ALLERGEN_COFFEE //Decaf coffee is still coffee, just less stimulating.
 
 /datum/reagent/drink/hot_coco

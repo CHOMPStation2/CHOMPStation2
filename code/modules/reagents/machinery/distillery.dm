@@ -368,3 +368,6 @@
 	desc = "A gas-operated variant of a chemical distillery. Able to reach much higher, and lower, temperatures through the use of treated gas."
 
 	use_atmos = TRUE
+
+	max_temp = T0C + 300 //ChompEDIT
+	min_temp = T0C - 270 //ChompEDIT

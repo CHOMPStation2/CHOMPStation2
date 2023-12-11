@@ -101,6 +101,12 @@
 	cost = 2
 	var_changes = list("radiation_mod" = 0.5, "rad_removal_mod" = 5, "rad_levels" = list("safe" = 40, "danger_1" = 100, "danger_2" = 150, "danger_3" = 250))
 
+/datum/trait/positive/rad_immune
+	name = "Radiation Immunity"
+	desc = "For whatever reason, be it a more dense build or some quirk of your genetic code, your body is completely immune to radiation."
+	cost = 3
+	var_changes = list("radiation_mod" = 0.0, "rad_removal_mod" = 10, "rad_levels" = list("safe" = 300, "danger_1" = 300, "danger_2" = 300, "danger_3" = 300))
+
 /datum/trait/positive/more_blood
 	name = "Blood Volume, High"
 	desc = "You have 50% more blood."
@@ -272,7 +278,7 @@
 	name = "Adrenaline detox"
 	desc = "After an adrenaline rush, one will find themselves suffering from adrenaline detox, which is their body recovering from an intense adrenaline rush."
 	on_created_text = "<span class='danger'>Your body aches and groans, forcing you into a period of rest as it recovers from the intense adrenaline rush.</span>"
-	on_expired_text = "<span class='notice'>You finally recover from your adrenaline rush, your body returning to it's normal state.</span>"
+	on_expired_text = "<span class='notice'>You finally recover from your adrenaline rush, your body returning to its normal state.</span>"
 
 	disable_duration_percent = 1.35
 	outgoing_melee_damage_percent = 0.75
@@ -366,19 +372,12 @@
 	cost = 2
 	var_changes = list("flash_mod" = 0.5)
 
-/datum/trait/positive/speed_fast_minor
-	name = "Haste, Minor"
-	desc = "Allows you to move a little bit faster on average than baseline."
-	cost = 2
-	var_changes = list("slowdown" = -0.25)
-	excludes = list(/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy_plus,/datum/trait/positive/speed_fast)
-
 /datum/trait/positive/hardy_extreme
 	name = "Hardy, Extreme"
 	desc = "Allows you to carry heavy equipment with no slowdown at all."
 	cost = 3
 	var_changes = list("item_slowdown_mod" = 0.0)
-	excludes = list(/datum/trait/positive/speed_fast,/datum/trait/positive/speed_fast_minor,/datum/trait/positive/hardy,/datum/trait/positive/hardy_plus)
+	excludes = list(/datum/trait/positive/speed_fast,/datum/trait/positive/hardy,/datum/trait/positive/hardy_plus)
 
 /datum/trait/positive/bloodsucker_plus
 	name = "Evolved Bloodsucker"

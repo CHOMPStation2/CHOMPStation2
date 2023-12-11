@@ -109,7 +109,9 @@
 				prob(4);/obj/item/ammo_magazine/m45uzi,\
 				prob(4);/obj/item/ammo_magazine/m9mml,\
 				prob(4);/obj/item/ammo_magazine/m9mmt,\
-				prob(4);/obj/item/ammo_magazine/m9mmp90,\
+//CHOMPedit start: new P90 magazine.
+				prob(4);/obj/item/ammo_magazine/a57p90,\
+//CHOMPedit end.
 				prob(4);/obj/item/ammo_magazine/m10mm,\
 				prob(4);/obj/item/ammo_magazine/m545/small,\
 				prob(3);/obj/item/ammo_magazine/clip/c44,\
@@ -265,11 +267,11 @@
 	var/newname = null
 	var/newdesc = null
 
-
+/*//CHOMP Remove Among Us meme
 /obj/random/mob/wildscugs/item_to_spawn()
 	return pick(prob(99); /mob/living/simple_mob/vore/alienanimals/catslug,
 				prob(1); /mob/living/simple_mob/vore/alienanimals/catslug/suslug/color) //A super rare surprise
-
+*/ //CHOMP Remove end
 /obj/random/mob/wildscugs/spawn_item()
 	var/build_path = item_to_spawn()
 

@@ -140,10 +140,10 @@
 		var/mob/living/carbon/human/H = M
 		H.resize(chaos/100)
 		H.show_message("<font color='#6F6FE2'> The beam fires into your body, changing your size!</font>")
-		H.updateicon()
+		H.update_icon()
 	else if (istype(target, /mob/living/))
 		var/mob/living/H = M
 		H.resize(chaos/100)
-		H.updateicon()
+		H.update_icon()
 	else
 		return 1

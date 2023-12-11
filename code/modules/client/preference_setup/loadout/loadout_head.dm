@@ -234,6 +234,11 @@
 /datum/gear/head/kitty
 	display_name = "kitty ears"
 	path = /obj/item/clothing/head/kitty
+// CHOMPEdit Start
+/datum/gear/head/halo // chompedits
+	display_name = "holographic demonic halo"
+	path = /obj/item/clothing/head/halo
+//CHOMPEdit End
 
 /datum/gear/head/rabbit
 	display_name = "rabbit ears"
@@ -406,3 +411,11 @@
 		"virologist's beret"=/obj/item/clothing/head/beret/medical/viro
 	)
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(selector_uniforms))
+
+/datum/gear/head/giantbow	//Public version of Dessa's bow!
+	display_name = "Giant Bow"
+	path = /obj/item/clothing/head/fluff/giantbow
+
+/datum/gear/head/giantbow/New()
+	..()
+	gear_tweaks += gear_tweak_free_color_choice

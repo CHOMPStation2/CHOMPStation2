@@ -1,8 +1,8 @@
 var/list/job_whitelist = list()
 
 /hook/startup/proc/loadJobWhitelist()
-	if(config.use_jobwhitelist)
-		load_jobwhitelist()
+	if(config.use_jobwhitelist) // CHOMPedit
+		load_jobwhitelist() // CHOMPedit
 	return 1
 
 /proc/load_jobwhitelist()
@@ -13,8 +13,8 @@ var/list/job_whitelist = list()
 		job_whitelist = splittext(text, "\n")
 
 /proc/is_job_whitelisted(mob/M, var/rank)
-	if(!config.use_jobwhitelist)
-		return 1
+	if(!config.use_jobwhitelist) // CHOMPedit
+		return 1 // CHOMPedit
 	var/datum/job/job = job_master.GetJob(rank)
 	if(!job.whitelist_only)
 		return 1

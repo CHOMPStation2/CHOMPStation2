@@ -321,11 +321,12 @@
 #define SPECIES_VR_VOX			"Virtual Reality Vox"
 
 // Ayyy IDs.
-#define SPECIES_XENO			"Xenomorph"
-#define SPECIES_XENO_DRONE		"Xenomorph Drone"
-#define SPECIES_XENO_HUNTER		"Xenomorph Hunter"
-#define SPECIES_XENO_SENTINEL	"Xenomorph Sentinel"
-#define SPECIES_XENO_QUEEN		"Xenomorph Queen"
+#define SPECIES_XENO				"Xenomorph"
+#define SPECIES_XENO_DRONE			"Xenomorph Drone"
+#define SPECIES_XENO_HUNTER			"Xenomorph Hunter"
+#define SPECIES_XENO_SENTINEL		"Xenomorph Sentinel"
+#define SPECIES_XENO_QUEEN			"Xenomorph Queen"
+#define SPECIES_XENOMORPH_HYBRID 	"Xenomorph Hybrid" // CHOMPedit: Playable Xeno species.
 
 // Misc species. Mostly unused but might as well be complete.
 #define SPECIES_SHADOW			"Shadow"

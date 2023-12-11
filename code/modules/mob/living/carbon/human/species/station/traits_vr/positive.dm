@@ -6,7 +6,7 @@
 	desc = "Allows you to move faster on average than baseline."
 	cost = 4 //CHOMPEdit
 	var_changes = list("slowdown" = -0.5)
-	excludes = list(/datum/trait/positive/hardy,/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy_plus,/datum/trait/positive/speed_fast_minor)
+	excludes = list(/datum/trait/positive/hardy,/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy_plus)
 
 
 /datum/trait/positive/hardy
@@ -21,7 +21,7 @@
 	desc = "Allows you to carry heavy equipment with almost no slowdown."
 	cost = 2
 	var_changes = list("item_slowdown_mod" = 0.25)
-	excludes = list(/datum/trait/positive/speed_fast,/datum/trait/positive/speed_fast_minor,/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy) // CHOMPEdit: Prevents Haste + Hardy being taken together.
+	excludes = list(/datum/trait/positive/speed_fast,/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy) // CHOMPEdit: Prevents Haste + Hardy being taken together.
 
 
 /datum/trait/positive/endurance_high
@@ -115,6 +115,7 @@
 	name = "Winged Flight"
 	desc = "Allows you to fly by using your wings. Don't forget to bring them!"
 	cost = 0
+	custom_only = FALSE //CHOMPEdit: We have synth wings as an option. Valid for most any species to be able to fly.
 	has_preferences = list("flight_vore" = list(TRAIT_PREF_TYPE_BOOLEAN, "Flight Vore enabled on spawn", TRAIT_VAREDIT_TARGET_MOB, FALSE))
 
 /datum/trait/positive/winged_flight/apply(var/datum/species/S,var/mob/living/carbon/human/H)
@@ -183,6 +184,7 @@
 	name = "Aquatic"
 	desc = "You can breathe under water and can traverse water more efficiently. Additionally, you can eat others in the water."
 	cost = 1
+	custom_only = FALSE //CHOMPEdit: honestly within the bounds of genemods, just hopefully people actually design characters around it
 	var_changes = list("water_breather" = 1, "water_movement" = -4) //Negate shallow water. Half the speed in deep water.
 
 /datum/trait/positive/aquatic/apply(var/datum/species/S,var/mob/living/carbon/human/H)

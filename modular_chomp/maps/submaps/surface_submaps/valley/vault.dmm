@@ -23,6 +23,13 @@
 /obj/structure/loot_pile/surface/alien/security,
 /turf/simulated/shuttle/floor/alienplating/blue,
 /area/submap/vault)
+"j" = (
+/turf/simulated/shuttle/floor/alien{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
+/area/submap/vault)
 "n" = (
 /obj/structure/loot_pile/surface/alien/end,
 /turf/simulated/shuttle/floor/alienplating/blue,
@@ -39,6 +46,12 @@
 	faction = "hivebot"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue,
+/area/submap/vault)
+"t" = (
+/obj/machinery/porta_turret/alien{
+	faction = "hivebot"
+	},
+/turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/vault)
 "v" = (
 /obj/structure/table/alien/blue,
@@ -262,15 +275,15 @@ c
 c
 a
 a
-z
-z
+j
+j
 a
 a
 a
 a
 a
-z
-z
+j
+j
 a
 a
 c
@@ -699,8 +712,8 @@ d
 "}
 (14,1,1) = {"
 d
-a
-a
+x
+x
 c
 c
 a
@@ -734,14 +747,14 @@ a
 a
 c
 c
-a
-a
+x
+x
 d
 "}
 (15,1,1) = {"
 d
-a
-a
+x
+x
 r
 c
 z
@@ -774,15 +787,15 @@ c
 z
 z
 c
-r
-a
-a
+t
+x
+x
 d
 "}
 (16,1,1) = {"
 d
-a
-z
+x
+j
 a
 Y
 a
@@ -815,15 +828,15 @@ O
 a
 a
 Y
-a
-z
-a
+x
+j
+x
 d
 "}
 (17,1,1) = {"
 d
-a
-z
+x
+j
 a
 Y
 a
@@ -856,15 +869,15 @@ O
 a
 a
 Y
-a
-z
-a
+x
+j
+x
 d
 "}
 (18,1,1) = {"
 d
-a
-a
+x
+x
 r
 c
 c
@@ -897,15 +910,15 @@ c
 c
 c
 c
-r
-a
-a
+t
+x
+x
 d
 "}
 (19,1,1) = {"
 d
-a
-a
+x
+x
 c
 c
 c
@@ -939,14 +952,14 @@ c
 c
 c
 c
-a
-a
+x
+x
 d
 "}
 (20,1,1) = {"
 d
-a
-a
+x
+x
 c
 c
 c
@@ -980,14 +993,14 @@ c
 c
 c
 c
-a
-a
+x
+x
 d
 "}
 (21,1,1) = {"
 d
-a
-a
+x
+x
 c
 c
 c
@@ -1021,15 +1034,15 @@ c
 c
 c
 c
-a
-a
+x
+x
 d
 "}
 (22,1,1) = {"
 d
-a
-a
-r
+x
+x
+t
 c
 c
 c
@@ -1061,16 +1074,16 @@ c
 c
 c
 c
-r
-a
-a
+t
+x
+x
 d
 "}
 (23,1,1) = {"
 d
-a
-z
-a
+x
+j
+x
 Y
 a
 a
@@ -1102,16 +1115,16 @@ O
 a
 a
 Y
-a
-z
-a
+x
+j
+x
 d
 "}
 (24,1,1) = {"
 d
-a
-z
-a
+x
+j
+x
 Y
 a
 a
@@ -1143,16 +1156,16 @@ O
 a
 a
 Y
-a
-z
-a
+x
+j
+x
 d
 "}
 (25,1,1) = {"
 d
-a
-a
-r
+x
+x
+t
 c
 z
 z
@@ -1184,15 +1197,15 @@ c
 z
 z
 c
-r
-a
-a
+t
+x
+x
 d
 "}
 (26,1,1) = {"
 d
-a
-a
+x
+x
 c
 c
 a
@@ -1226,8 +1239,8 @@ a
 a
 c
 c
-a
-a
+x
+x
 d
 "}
 (27,1,1) = {"
@@ -1614,17 +1627,17 @@ a
 a
 c
 c
-r
-a
-a
-r
+t
+x
+x
+t
 c
 c
 c
-r
-a
-a
-r
+t
+x
+x
+t
 c
 c
 a
@@ -1654,19 +1667,19 @@ P
 r
 r
 c
-a
-a
-z
-z
-a
-a
-a
-a
-a
-z
-z
-a
-a
+x
+x
+j
+j
+x
+x
+x
+x
+x
+j
+j
+x
+x
 c
 r
 a
@@ -1695,19 +1708,19 @@ c
 c
 c
 c
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
 c
 c
 c

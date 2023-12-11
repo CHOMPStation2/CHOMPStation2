@@ -66,7 +66,9 @@
 	var/firstactivation = 0 			//It's simple. If it's 0, no one entered it yet. Otherwise someone entered it at least once.
 
 	var/stomp_sound = 'sound/mecha/mechstep.ogg'
+	var/stomp_sound_2 = 'sound/mecha/mechstep.ogg' // CHOMPedit: Used for 1-2 step patterns instead of random choice.
 	var/swivel_sound = 'sound/mecha/mechturn.ogg'
+	var/reps = 0 // CHOMPedit: Used for 1-2 step patterns.
 
 	//inner atmos
 	var/use_internal_tank = 0
@@ -887,7 +889,8 @@
 	var/result = get_step(src,direction)
 	if(result && Move(result))
 		if(stomp_sound)
-			playsound(src,stomp_sound,40,1)
+			playsound(src, reps ? stomp_sound : stomp_sound_2,50,0) // CHOMPedit: 1-2 step sequence.
+			reps = (reps+1)%2 // CHOMPedit: 1-2 step sequence.
 		handle_equipment_movement()
 	if(strafing)	//Also for strafing
 		set_dir(current_dir)
@@ -898,7 +901,8 @@
 	var/result = get_step_rand(src)
 	if(result && Move(result))
 		if(stomp_sound)
-			playsound(src,stomp_sound,40,1)
+			playsound(src, reps ? stomp_sound : stomp_sound_2,50,0) // CHOMPedit: 1-2 step sequence.
+			reps = (reps+1)%2 // CHOMPedit: 1-2 step sequence.
 		handle_equipment_movement()
 	return result
 
@@ -1446,7 +1450,7 @@
 				to_chat(user, "<span class='warning'>Invalid ID: Access denied.</span>")
 		else
 			to_chat(user, "<span class='warning'>Maintenance protocols disabled by operator.</span>")
-	else if(W.is_wrench())
+	else if(W.has_tool_quality(TOOL_WRENCH))
 		if(state==MECHA_BOLTS_SECURED)
 			state = MECHA_PANEL_LOOSE
 			to_chat(user, "You undo the securing bolts.")
@@ -1454,7 +1458,7 @@
 			state = MECHA_BOLTS_SECURED
 			to_chat(user, "You tighten the securing bolts.")
 		return
-	else if(W.is_crowbar())
+	else if(W.has_tool_quality(TOOL_CROWBAR))
 		if(state==MECHA_PANEL_LOOSE)
 			state = MECHA_CELL_OPEN
 			to_chat(user, "You open the hatch to the power unit")
@@ -1487,7 +1491,7 @@
 			else
 				to_chat(user, "There's not enough wire to finish the task.")
 		return
-	else if(W.is_screwdriver())
+	else if(W.has_tool_quality(TOOL_SCREWDRIVER))
 		if(hasInternalDamage(MECHA_INT_TEMP_CONTROL))
 			clearInternalDamage(MECHA_INT_TEMP_CONTROL)
 			to_chat(user, "You repair the damaged temperature controller.")
@@ -1526,8 +1530,8 @@
 				to_chat(user, "There's already a powercell installed.")
 		return
 
-	else if(istype(W, /obj/item/weapon/weldingtool) && user.a_intent != I_HURT)
-		var/obj/item/weapon/weldingtool/WT = W
+	else if(W.has_tool_quality(TOOL_WELDER) && user.a_intent != I_HURT)
+		var/obj/item/weapon/weldingtool/WT = W.get_welder()
 		var/obj/item/mecha_parts/component/hull/HC = internal_components[MECH_HULL]
 		var/obj/item/mecha_parts/component/armor/AC = internal_components[MECH_ARMOR]
 		if (WT.remove_fuel(0,user))

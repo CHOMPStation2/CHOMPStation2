@@ -77,7 +77,7 @@
 
 
 /obj/item/weapon/inducer/attackby(obj/item/W, mob/user)
-	if(W.is_screwdriver())
+	if(W.has_tool_quality(TOOL_SCREWDRIVER))
 		playsound(src, W.usesound, 50, 1)
 		if(!opened)
 			to_chat(user, "<span class='notice'>You open the battery compartment.</span>")
@@ -259,9 +259,10 @@
 
 /obj/item/weapon/cell/standin/New(newloc, var/mob/living/carbon/human/H)
 	..()
-	hume = H
-	charge = H.nutrition
-	maxcharge = initial(H.nutrition)
+	if(istype(H, /mob/living/carbon/human))//ChompEDIT - fix a runtime
+		hume = H
+		charge = H.nutrition
+		maxcharge = initial(H.nutrition)
 
 	QDEL_IN(src, 20 SECONDS)
 

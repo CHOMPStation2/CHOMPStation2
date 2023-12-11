@@ -197,9 +197,9 @@
 	item_state = "brittrenchcoat"
 
 //For general use
-/obj/item/clothing/suit/storage/vest/hoscoat/axis_greatcoat
+/obj/item/clothing/suit/storage/vest/hoscoat/ancient_greatcoat
 	name = "Greatcoat"
-	desc = "Perfect attire for kicking down the doors of suspected dissidents; this coat gives off an imposing look, while offering a luxuriously plush fur liner."
+	desc = "This coat gives off an imposing look, while offering a luxuriously plush fur liner."
 
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "greatcoat"
@@ -2644,4 +2644,53 @@ Departamental Swimsuits, for general use
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "grand_purple_cloak_hat"
 	item_state = "grand_purple_cloak_hat_onmob"
+
+//verysoft:Dessa Ton
+/obj/item/clothing/head/fluff/giantbow/dessa
+	desc = "It's a huge bow! So pretty! This one is fitted specially for Dessa's rediculously large ears."
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
+	item_state = "dessabow_mob"
+
+/obj/item/clothing/head/fluff/giantbow/dessa/attack_hand(mob/user)
+
+	if(user.real_name == "Dessa Ton")
+		item_state = "dessabow_mob"
+	else
+		item_state = "giantbow_mob"
+	..()
+
 End CHOMP Removal*/
+
+/obj/item/clothing/head/fluff/giantbow	//Public version
+	name = "Giant Bow"
+	desc = "It's a huge bow! So pretty!"
+	slot_flags = SLOT_HEAD | SLOT_EARS
+
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "dessabow"
+
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
+	item_state = "giantbow_mob"
+
+//Halored: Mercury
+
+/* /obj/item/clothing/gloves/ring/material/void_opal/fluff/mercury //Chomp REMOVE Start
+	name = "Mercury's Mate Ring"
+	desc = "A band of void opal, given to Mercury by Lumen"
+
+//satinisle: Parriz Tavakdavi
+
+/obj/item/clothing/suit/storage/toggle/labcoat/fluff/parrizjacket
+	name = "pink crop bomber"
+	desc = "A pink crop bomber jacket that is just barely able to zip up at the front. It has a small Virgo Orbital Research Establishment patch on each shoulder."
+	icon_state = "parriz_jacket" 
+
+//verysoft: Casey Brown
+/obj/item/clothing/glasses/big_round
+	name = "big round blue glasses"
+	desc = "A set of glasses! They are big, round, and very reflective, catching the light and obscuring the eyes!"
+	icon = 'icons/inventory/eyes/item_vr.dmi'
+	icon_override = 'icons/inventory/eyes/mob_vr.dmi'
+	icon_state = "bigroundglasses"
+	slot_flags = SLOT_EYES | SLOT_EARS
+	glasses_layer_above = TRUE */ //Chomp REMOVE END

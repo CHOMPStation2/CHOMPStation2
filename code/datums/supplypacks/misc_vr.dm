@@ -183,3 +183,12 @@
 	cost = 100
 	containertype = /obj/structure/largecrate/animal/swoopie
 	containername = "SWOOPIE XL CleanBot Starter Kit"
+
+/datum/supply_pack/misc/emergency_beacons
+	name = "emergency locator beacons (x4)"
+	contains = list(
+		/obj/item/device/emergency_beacon = 4
+	)
+	cost = 20
+	containertype = /obj/structure/closet/crate
+	containername = "emergency beacons crate"

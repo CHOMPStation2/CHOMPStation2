@@ -14,6 +14,7 @@
 		"rat",
 		"panther",
 		"teppi",
+		"pai-diredog",
 		"pai-horse_lune",
 		"pai-horse_soleil",
 		"pai-pdragon"

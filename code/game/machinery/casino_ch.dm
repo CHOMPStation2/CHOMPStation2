@@ -665,7 +665,7 @@
 
 /obj/machinery/casino_chip_exchanger
 	name = "Casino Chip Exchanger"
-	desc = "Takes all your cash and gives you chips back! No change and half refund!"
+	desc = "Converts thalers to casino chips at a ratio of 5 thalers to 1 chip! It can also convert chips back to thalers at the same rate."
 	icon = 'icons/obj/casino_ch.dmi'
 	icon_state ="casino_atm"
 	anchored = 1
@@ -690,7 +690,7 @@
 			playsound(loc, 'sound/items/polaroid2.ogg', 50, 1)
 
 		user << "<span class='info'>You insert [I] into [src].</span>"
-		spawn_money(round(I:worth*2.5), src.loc)
+		spawn_money(round(I:worth*5), src.loc)
 		src.attack_hand(user)
 		qdel(I)
 

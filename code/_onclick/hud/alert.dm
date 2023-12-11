@@ -135,10 +135,10 @@ The box in your backpack has an oxygen tank and breath mask in it."
 	desc = "You're not getting enough phoron. Find some good air before you pass out!"
 	icon_state = "not_enough_tox"
 
-/obj/screen/alert/tox_in_air
-	name = "Choking (Phoron)"
-	desc = "There's highly flammable, toxic phoron in the air and you're breathing it in. Find some fresh air. \
-The box in your backpack has an oxygen tank and gas mask in it."
+/obj/screen/alert/tox_in_air											// CHOMP EDIT : Oxygen is toxic to phoron breathers and nitrogen breathers. I'm tired of seeing "You're choking on phoron!" when it's not phoron.
+	name = "Choking (Toxic)"										// CHOMP EDIT
+	desc = "There's a dangerous toxin in the air and you're breathing it in. Find some fresh air. \
+Your emergency supply kit should have an air tank and gas mask in it!"						// CHOMP EDIT
 	icon_state = "too_much_tox"
 
 /obj/screen/alert/not_enough_fuel

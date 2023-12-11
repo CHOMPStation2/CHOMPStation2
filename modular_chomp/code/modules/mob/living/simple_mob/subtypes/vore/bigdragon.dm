@@ -62,3 +62,9 @@
 			catch
 			eyes = input_style_list[12]
 			build_icons()
+
+//Most intresting set of OG melee damages
+/mob/living/simple_mob/vore/bigdragon
+	melee_damage_lower = 12
+	melee_damage_upper = 17
+	maxHealth = 400

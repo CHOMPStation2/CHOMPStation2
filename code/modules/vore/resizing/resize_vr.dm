@@ -1,12 +1,14 @@
 // Adding needed defines to /mob/living
 // Note: Polaris had this on /mob/living/carbon/human We need it higher up for animals and stuff.
-/mob/living
-	var/holder_default
+/mob
 	var/step_mechanics_pref = TRUE		// Allow participation in macro-micro step mechanics
 	var/pickup_pref = TRUE				// Allow participation in macro-micro pickup mechanics
+	var/center_offset = 0.5				// Center offset for uneven scaling symmetry.
+	var/offset_override = FALSE			// Pref toggle for center offset.
+
+/mob/living
+	var/holder_default
 	var/pickup_active = TRUE			// Toggle whether your help intent picks up micros or pets them
-	var/center_offset = 0.5				// Center offset for uneven scaling symmetry. //CHOMPEdit
-	var/offset_override = FALSE			// Pref toggle for center offset. //CHOMPEdit
 
 // Define holder_type on types we want to be scoop-able
 /mob/living/carbon/human
@@ -30,11 +32,12 @@
 /mob/living/update_icons()
 	. = ..()
 	ASSERT(!ishuman(src))
-	if(fuzzy || offset_override) //CHOMPEdit
-		center_offset = 0 //CHOMPEdit
+	var/cent_offset = center_offset
+	if(fuzzy || offset_override || dir == EAST || dir == WEST)
+		cent_offset = 0
 	var/matrix/M = matrix()
 	M.Scale(size_multiplier * icon_scale_x, size_multiplier * icon_scale_y)
-	M.Translate(center_offset * size_multiplier * icon_scale_x, (vis_height/2)*(size_multiplier-1)) //CHOMPEdit
+	M.Translate(cent_offset * size_multiplier * icon_scale_x, (vis_height/2)*(size_multiplier-1))
 	transform = M
 
 /**
@@ -82,7 +85,7 @@
  * * ignore_prefs - CHANGE_ME. Default: FALSE
  * * aura_animation - CHANGE_ME. Default: TRUE
  */
-/mob/living/proc/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = TRUE)
+/mob/living/proc/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = FALSE) //CHOMPEdit - Disable aura_animation. Too expensive for something you can't even see.
 	if(!uncapped)
 		new_size = clamp(new_size, RESIZE_MINIMUM, RESIZE_MAXIMUM)
 		var/datum/component/resize_guard/guard = GetComponent(/datum/component/resize_guard)
@@ -131,7 +134,7 @@
 	else
 		update_transform() //Lame way
 
-/mob/living/carbon/human/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = TRUE)
+/mob/living/carbon/human/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = FALSE) //CHOMPEdit - Disable aura_animation. Too expensive for something you can't even see.
 	if(!resizable && !ignore_prefs)
 		return 1
 	. = ..()
@@ -180,7 +183,7 @@
  * Attempt to scoop up this mob up into H's hands, if the size difference is large enough.
  * @return false if normal code should continue, 1 to prevent normal code.
  */
-/mob/living/proc/attempt_to_scoop(mob/living/M, mob/living/G) //second one is for the Grabber, only exists for animals to self-grab
+/mob/living/proc/attempt_to_scoop(mob/living/M, mob/living/G, ignore_size = FALSE) //second one is for the Grabber, only exists for animals to self-grab
 	if(!(pickup_pref && M.pickup_pref && M.pickup_active))
 		return 0
 	if(!(M.a_intent == I_HELP))
@@ -194,7 +197,7 @@
 		var/mob/living/simple_mob/SA = M
 		if(!SA.has_hands)
 			return 0
-	if(size_diff >= 0.50 || mob_size < MOB_SMALL || size_diff >= get_effective_size())
+	if(size_diff >= 0.50 || mob_size < MOB_SMALL || size_diff >= get_effective_size() || ignore_size)
 		if(buckled)
 			to_chat(usr,"<span class='notice'>You have to unbuckle \the [src] before you pick them up.</span>")
 			return 0
@@ -248,6 +251,8 @@
 				var/datum/sprite_accessory/tail/taur/tail = H.tail_style
 				src_message = tail.msg_prey_stepunder
 				tmob_message = tail.msg_owner_stepunder
+			if(tmob.is_incorporeal())	// CHOMPEdit - Can't run between what's not there
+				return TRUE
 
 		if(src_message)
 			to_chat(src, "<span class='filter_notice'>[STEP_TEXT_OWNER(src_message)]</span>")

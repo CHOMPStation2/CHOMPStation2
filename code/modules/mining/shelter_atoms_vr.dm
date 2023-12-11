@@ -118,7 +118,7 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	template_id = "shelter_epsilon"
 	unique_id = "shelter_5"
 	is_ship = TRUE
-	
+
 /obj/item/device/survivalcapsule/popcabin
 	name = "pop-out cabin shelter capsule"
 	desc = "A cozy cabin; crammed into a survival capsule."
@@ -234,7 +234,7 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	pixel_y = -32
 
 /obj/item/device/gps/computer/attackby(obj/item/I, mob/living/user)
-	if(I.is_wrench())
+	if(I.has_tool_quality(TOOL_WRENCH))
 		user.visible_message("<span class='warning'>[user] disassembles [src].</span>",
 			"<span class='notice'>You start to disassemble [src]...</span>", "You hear clanking and banging noises.")
 		if(do_after(user,4 SECONDS,src))
@@ -295,13 +295,22 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	var/buildstacktype = /obj/item/stack/material/steel
 	var/buildstackamount = 5
 
+//CHOMPAdd start - fans weren't updating atmos when destroyed or placed
+/obj/structure/fans/Destroy()
+	update_nearby_tiles()
+	return ..()
+
+/obj/structure/fans/Initialize(mapload)
+	.=..()
+	update_nearby_tiles()
+//CHOMPAdd end
 /*
 /obj/structure/fans/proc/deconstruct()
 	new buildstacktype(loc,buildstackamount)
 	qdel(src)
 
 /obj/structure/fans/attackby(obj/item/I, mob/living/user)
-	if(I.is_wrench())
+	if(I.has_tool_quality(TOOL_WRENCH))
 		user.visible_message("<span class='warning'>[user] disassembles [src].</span>",
 			"<span class='notice'>You start to disassemble [src]...</span>", "You hear clanking and banging noises.")
 		if(do_after(user,4 SECONDS,src))

@@ -815,6 +815,11 @@
 /obj/item/weapon/storage/box/donut,
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
+"Rd" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/wood/sif,
+/area/submap/DeathDen)
 "Ri" = (
 /obj/structure/simple_door/sifwood,
 /obj/effect/decal/cleanable/dirt,
@@ -1056,7 +1061,7 @@ Th
 Th
 Th
 HZ
-ph
+Rd
 Sg
 HZ
 Th

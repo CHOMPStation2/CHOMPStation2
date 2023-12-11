@@ -339,7 +339,7 @@
 
 /mob/living/simple_mob/protean_blob/verb/prot_hide()
 	set name = "Hide Self"
-	set desc = "Disperses your mass into a thin viel, making a trap to snatch prey with, or simply hide."
+	set desc = "Disperses your mass into a thin veil, making a trap to snatch prey with, or simply hide."
 	set category = "Abilities"
 
 	if(!hiding)
@@ -449,7 +449,7 @@
 	if(!force && !isturf(loc) && !loc == /obj/item/weapon/rig/protean)
 		to_chat(src,"<span class='warning'>You can't change forms while inside something.</span>")
 		return
-	to_chat(src, "<span class='notice'>You rapidly disassociate your form</span>")
+	to_chat(src, "<span class='notice'>You rapidly disassociate your form.</span>")
 	if(force || do_after(src,20,exclusive = TASK_ALL_EXCLUSIVE))
 		handle_grasp() //It's possible to blob out before some key parts of the life loop. This results in things getting dropped at null. TODO: Fix the code so this can be done better.
 		remove_micros(src, src) //Living things don't fare well in roblobs.
@@ -560,7 +560,7 @@
 	if(!force && !isturf(blob.loc))
 		to_chat(blob,"<span class='warning'>You can't change forms while inside something.</span>")
 		return
-	to_chat(src, "<span class='notice'>You rapidly reassemble your form</span>")
+	to_chat(src, "<span class='notice'>You rapidly reassemble your form.</span>")
 	if(force || do_after(blob,20,exclusive = TASK_ALL_EXCLUSIVE))
 		if(buckled)
 			buckled.unbuckle_mob()

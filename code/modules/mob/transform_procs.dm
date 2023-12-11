@@ -50,7 +50,7 @@
 		return
 	for(var/t in organs)
 		qdel(t)
-	
+
 	//VOREStation Edit Start - Hologram examine flavor
 	var/mob/living/silicon/ai/O = ..(move)
 	if(O)
@@ -131,6 +131,10 @@
 			O.add_language(LANGUAGE_ROOTGLOBAL, 1)
 		if(LANGUAGE_ROOTLOCAL in B.alternate_languages)
 			O.add_language(LANGUAGE_ROOTLOCAL, 1)
+// CHOMPedit Start - Hivemind is now available
+		if(LANGUAGE_HIVEMIND in B.alternate_languages)
+			O.add_language(LANGUAGE_HIVEMIND, 1)
+// CHOMPedit End
 
 	O.on_mob_init()
 
@@ -191,11 +195,12 @@
 		var/datum/preferences/B = O.client.prefs
 		for(var/language in B.alternate_languages)
 			O.add_language(language)
-		O.resize(B.size_multiplier, animate = TRUE, ignore_prefs = TRUE)		//VOREStation Addition: add size prefs to borgs
-		O.fuzzy = B.fuzzy								//VOREStation Addition: add size prefs to borgs
+		O.resize(B.size_multiplier, animate = TRUE, ignore_prefs = TRUE)
+		O.fuzzy = B.fuzzy
+		O.custom_speech_bubble = B.custom_speech_bubble
 
 	callHook("borgify", list(O))
-	O.Namepick()
+	O.namepick()
 
 	spawn(0)	// Mobs still instantly del themselves, thus we need to spawn or O will never be returned
 		qdel(src)

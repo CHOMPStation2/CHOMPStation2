@@ -23,12 +23,9 @@
 // Proc: New()
 // Parameters: None
 // Description: Adds components to the machine for deconstruction.
-/obj/machinery/exonet_node/map/Initialize()
+/obj/machinery/exonet_node/Initialize() //CHOMPAdd Start
 	. = ..()
 	default_apply_parts()
-	desc = "This machine is one of many, many nodes inside [using_map.starsys_name]'s section of the Exonet, connecting the [using_map.station_short] to the rest of the system, at least \
-	electronically."
-
 	// CHOMPAdd: Exonet Machinery humming
 	soundloop = new(list(src), FALSE)
 	if(prob(60)) // 60% chance to change the midloop
@@ -41,8 +38,14 @@
 		else
 			soundloop.mid_sounds = list('sound/machines/tcomms/tcomms_04.ogg' = 1)
 			soundloop.mid_length = 30
-	// CHOMPAdd End
 	soundloop.start() // CHOMPStation Edit: This starts on
+	// CHOMPAdd End
+
+/obj/machinery/exonet_node/map/Initialize()
+	. = ..()
+	//default_apply_parts() //CHOMPEdit
+	desc = "This machine is one of many, many nodes inside [using_map.starsys_name]'s section of the Exonet, connecting the [using_map.station_short] to the rest of the system, at least \
+	electronically."
 
 /obj/machinery/exonet_node/Destroy() // CHOMPAdd: Just in case.
 	QDEL_NULL(soundloop) // CHOMPAdd: Exonet noises
@@ -106,9 +109,9 @@
 // Parameters: 2 (I - the item being whacked against the machine, user - the person doing the whacking)
 // Description: Handles deconstruction.
 /obj/machinery/exonet_node/attackby(obj/item/I, mob/user)
-	if(I.is_screwdriver())
+	if(I.has_tool_quality(TOOL_SCREWDRIVER))
 		default_deconstruction_screwdriver(user, I)
-	else if(I.is_crowbar())
+	else if(I.has_tool_quality(TOOL_CROWBAR))
 		default_deconstruction_crowbar(user, I)
 	else
 		..()

@@ -379,6 +379,12 @@
 /area/survivalpod/superpose/PizzaParlor)
 "qk" = (
 /obj/structure/closet/secure_closet/freezer/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
 /turf/simulated/floor/tiled/freezer/cold,
 /area/survivalpod/superpose/PizzaParlor)
 "qz" = (
@@ -812,13 +818,21 @@
 /area/survivalpod/superpose/PizzaParlor)
 "KR" = (
 /obj/structure/closet/crate/freezer,
-/obj/random/meat,
-/obj/random/meat,
-/obj/random/meat,
-/obj/random/meat,
-/obj/random/meat,
-/obj/random/meat,
-/obj/random/meat,
+/obj/fruitspawner/mushrooms,
+/obj/fruitspawner/mushrooms,
+/obj/fruitspawner/mushrooms,
+/obj/fruitspawner/mushrooms,
+/obj/fruitspawner/mushrooms,
+/obj/fruitspawner/mushrooms,
+/obj/fruitspawner/mushrooms,
+/obj/fruitspawner/mushrooms,
+/obj/fruitspawner/mushrooms,
+/obj/fruitspawner/mushrooms,
+/obj/fruitspawner/eggplant,
+/obj/fruitspawner/eggplant,
+/obj/fruitspawner/eggplant,
+/obj/fruitspawner/eggplant,
+/obj/fruitspawner/eggplant,
 /turf/simulated/floor/tiled/freezer/cold,
 /area/survivalpod/superpose/PizzaParlor)
 "Lk" = (
@@ -976,6 +990,27 @@
 	dir = 4;
 	light_color = "#DDFFD3"
 	},
+/obj/structure/closet/crate/freezer,
+/obj/fruitspawner/tomato,
+/obj/fruitspawner/tomato,
+/obj/fruitspawner/tomato,
+/obj/fruitspawner/tomato,
+/obj/fruitspawner/tomato,
+/obj/fruitspawner/tomato,
+/obj/fruitspawner/tomato,
+/obj/fruitspawner/tomato,
+/obj/fruitspawner/tomato,
+/obj/fruitspawner/tomato,
+/obj/fruitspawner/corn,
+/obj/fruitspawner/corn,
+/obj/fruitspawner/corn,
+/obj/fruitspawner/corn,
+/obj/fruitspawner/corn,
+/obj/fruitspawner/carpet,
+/obj/fruitspawner/carpet,
+/obj/fruitspawner/carpet,
+/obj/fruitspawner/carpet,
+/obj/fruitspawner/carpet,
 /turf/simulated/floor/tiled/freezer/cold,
 /area/survivalpod/superpose/PizzaParlor)
 "Te" = (

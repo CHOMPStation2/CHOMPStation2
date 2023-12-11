@@ -87,20 +87,21 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 #define EARS_LAYER				24		//Both ear-slot items (combined image)
 #define EYES_LAYER				25		//Mob's eyes (used for glowing eyes)
 #define FACEMASK_LAYER			26		//Mask-slot item
-#define HEAD_LAYER				27		//Head-slot item
-#define HANDCUFF_LAYER			28		//Handcuffs, if the human is handcuffed, in a secret inv slot
-#define LEGCUFF_LAYER			29		//Same as handcuffs, for legcuffs
-#define L_HAND_LAYER			30		//Left-hand item
-#define R_HAND_LAYER			31		//Right-hand item
-#define WING_LAYER				32		//Wings or protrusions over the suit.
-#define VORE_BELLY_LAYER		33		//CHOMPStation edit - Move this and everything after up if things are added.
-#define VORE_TAIL_LAYER			34		//CHOMPStation edit - Move this and everything after up if things are added.
-#define TAIL_UPPER_LAYER_ALT	35		//Modified tail-sprite layer. Tend to be larger.
-#define MODIFIER_EFFECTS_LAYER	36		//Effects drawn by modifiers
-#define FIRE_LAYER				37		//'Mob on fire' overlay layer
-#define MOB_WATER_LAYER			38		//'Mob submerged' overlay layer
-#define TARGETED_LAYER			39		//'Aimed at' overlay layer
-#define TOTAL_LAYERS			39		//CHOMPStation edit. <---- KEEP THIS UPDATED, should always equal the highest number here, used to initialize a list.
+#define GLASSES_LAYER_ALT		27		//So some glasses can appear on top of hair and things
+#define HEAD_LAYER				28		//Head-slot item
+#define HANDCUFF_LAYER			29		//Handcuffs, if the human is handcuffed, in a secret inv slot
+#define LEGCUFF_LAYER			30		//Same as handcuffs, for legcuffs
+#define L_HAND_LAYER			31		//Left-hand item
+#define R_HAND_LAYER			32		//Right-hand item
+#define WING_LAYER				33		//Wings or protrusions over the suit.
+#define VORE_BELLY_LAYER		34		//CHOMPStation edit - Move this and everything after up if things are added.
+#define VORE_TAIL_LAYER			35		//CHOMPStation edit - Move this and everything after up if things are added.
+#define TAIL_UPPER_LAYER_ALT	36		//Modified tail-sprite layer. Tend to be larger.
+#define MODIFIER_EFFECTS_LAYER	37		//Effects drawn by modifiers
+#define FIRE_LAYER				38		//'Mob on fire' overlay layer
+#define MOB_WATER_LAYER			39		//'Mob submerged' overlay layer
+#define TARGETED_LAYER			40		//'Aimed at' overlay layer
+#define TOTAL_LAYERS			40		//CHOMPStation edit. <---- KEEP THIS UPDATED, should always equal the highest number here, used to initialize a list.
 //////////////////////////////////
 
 //These two are only used for gargoyles currently
@@ -124,7 +125,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	//Do any species specific layering updates, such as when hiding.
 	update_icon_special()
 
-/mob/living/carbon/human/update_transform()
+/mob/living/carbon/human/update_transform(var/instant = FALSE)
 	/* VOREStation Edit START
 	// First, get the correct size.
 	var/desired_scale_x = icon_scale_x
@@ -143,9 +144,9 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	var/desired_scale_y = size_multiplier * icon_scale_y
 	desired_scale_x *= species.icon_scale_x
 	desired_scale_y *= species.icon_scale_y
-	center_offset = species.center_offset //CHOMPEdit
-	if(offset_override) //CHOMPEdit
-		center_offset = 0 //CHOMPEdit
+	var/cent_offset = species.center_offset
+	if(fuzzy || offset_override || dir == EAST || dir == WEST)
+		cent_offset = 0
 	vis_height = species.icon_height
 	appearance_flags |= PIXEL_SCALE
 	if(fuzzy)
@@ -166,28 +167,30 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		if(tail_style?.can_loaf && resting) // Only call these if we're resting?
 			update_tail_showing()
 			M.Scale(desired_scale_x, desired_scale_y)
+			M.Translate(cent_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1)) //CHOMPEdit
 		else
-			var/randn = rand(1, 2)
-			if(randn <= 1) // randomly choose a rotation
+			M.Scale(desired_scale_x, desired_scale_y)
+			if(isnull(resting_dir))
+				resting_dir = pick(FALSE, TRUE)
+			if(resting_dir)
+				M.Translate((1 / desired_scale_x * -4) + (desired_scale_x * cent_offset), 0)
 				M.Turn(-90)
 			else
+				M.Translate((1 / desired_scale_x * 4) - (desired_scale_x * cent_offset), 0)
 				M.Turn(90)
-			if(species.icon_height == 64)
-				M.Translate(13,-22)
-			else
-				M.Translate(1,-6)
-			M.Scale(desired_scale_y, desired_scale_x)
-		M.Translate(center_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1)) //CHOMPEdit
 		// CHOMPEdit End
 		layer = MOB_LAYER -0.01 // Fix for a byond bug where turf entry order no longer matters
 	else
 		M.Scale(desired_scale_x, desired_scale_y)//VOREStation Edit
-		M.Translate(center_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1)) //CHOMPEdit
+		M.Translate(cent_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1))
 		if(tail_style?.can_loaf) // VOREStation Edit: Taur Loafing
 			update_tail_showing() // VOREStation Edit: Taur Loafing
 		layer = MOB_LAYER // Fix for a byond bug where turf entry order no longer matters
 
-	animate(src, transform = M, time = anim_time)
+	if(instant)
+		transform = M
+	else
+		animate(src, transform = M, time = anim_time)
 	update_icon_special() //May contain transform-altering things
 
 //DAMAGE OVERLAYS
@@ -277,7 +280,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 			if (species.selects_bodytype != SELECTS_BODYTYPE_FALSE)
 				var/headtype = GLOB.all_species[species.base_species]?.has_limbs[BP_HEAD]
 				var/obj/item/organ/external/head/headtypepath = headtype["path"]
-				if (headtypepath)
+				if (headtypepath && !head.eye_icon_override)
 					head.eye_icon = initial(headtypepath.eye_icon)
 					head.eye_icon_location = initial(headtypepath.eye_icon_location)
 			icon_key += "[head.eye_icon]"
@@ -304,7 +307,8 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 				icon_key += "#000000"
 
 			for(var/M in part.markings)
-				icon_key += "[M][part.markings[M]["color"]]"
+				if (part.markings[M]["on"])
+					icon_key += "[M][part.markings[M]["color"]]"
 
 			// VOREStation Edit Start
 			if(part.nail_polish)
@@ -327,12 +331,15 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 				if(tail_style.clip_mask) //VOREStation Edit.
 					icon_key += tail_style.clip_mask_state
 
+			if(digitigrade && (part.organ_tag == BP_R_LEG  || part.organ_tag == BP_L_LEG || part.organ_tag == BP_R_FOOT || part.organ_tag == BP_L_FOOT))
+				icon_key += "_digi"
+
 			if(tail_style)
 				pixel_x = tail_style.mob_offset_x
 				pixel_y = tail_style.mob_offset_y
 				default_pixel_x = tail_style.mob_offset_x
 				default_pixel_y = tail_style.mob_offset_y
-			
+
 			//ChompEDIT START
 			//icon_key addition for digitigrade switch
 			if(digitigrade && (part.organ_tag == BP_R_LEG  || part.organ_tag == BP_L_LEG || part.organ_tag == BP_R_FOOT || part.organ_tag == BP_L_FOOT))
@@ -472,7 +479,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 
 	//Bloody feet
 	if(feet_blood_DNA)
-		var/image/bloodsies = image(icon = digitigrade ? 'modular_chomp/icons/mob/human_races/masks/blood_digitigrade.dmi' : species.get_blood_mask(src), icon_state = "shoeblood", layer = BODY_LAYER+BLOOD_LAYER) //CHOMPEdit: digitigrade feeties
+		var/image/bloodsies = image(icon = digitigrade ? 'icons/mob/human_races/masks/blood_digitigrade.dmi' : species.get_blood_mask(src), icon_state = "shoeblood", layer = BODY_LAYER+BLOOD_LAYER) //CHOMPEdit: digitigrade feeties
 		bloodsies.color = feet_blood_color
 		both.add_overlay(bloodsies)
 
@@ -771,13 +778,20 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		return
 
 	remove_layer(GLASSES_LAYER)
+	remove_layer(GLASSES_LAYER_ALT)
 
 	if(!glasses || hide_glasses) // CHOMPEdit - Add "|| hide_glasses" for glasses hiding
 		return //Not wearing glasses, no need to update anything.
 
-	overlays_standing[GLASSES_LAYER] = glasses.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_gloves_str, default_icon = INV_EYES_DEF_ICON, default_layer = GLASSES_LAYER)
+	var/glasses_layer = GLASSES_LAYER
+	if(istype(glasses, /obj/item/clothing/glasses))
+		var/obj/item/clothing/glasses/our_glasses = glasses
+		if(our_glasses.glasses_layer_above)
+			glasses_layer = GLASSES_LAYER_ALT
 
-	apply_layer(GLASSES_LAYER)
+	overlays_standing[glasses_layer] = glasses.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_gloves_str, default_icon = INV_EYES_DEF_ICON, default_layer = glasses_layer)
+
+	apply_layer(glasses_layer)
 
 /mob/living/carbon/human/update_inv_ears()
 	if(QDESTROYING(src))
@@ -838,6 +852,14 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		if(istype(foot) && foot.is_hidden_by_sprite_accessory(clothing_only = TRUE)) //If either foot is hidden by the tail, don't render footwear.
 			return
 
+	var/obj/item/clothing/shoes/shoe = shoes
+	var/shoe_sprite
+
+	if(istype(shoe) && !isnull(shoe.update_icon_define))
+		shoe_sprite = shoe.update_icon_define
+	else
+		shoe_sprite = INV_FEET_DEF_ICON
+
 	//Allow for shoe layer toggle nonsense
 	var/shoe_layer = SHOES_LAYER
 	if(istype(shoes, /obj/item/clothing/shoes))
@@ -846,7 +868,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 			shoe_layer = SHOES_LAYER_ALT
 
 	//NB: the use of a var for the layer on this one
-	overlays_standing[shoe_layer] = shoes.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_shoes_str, default_icon = INV_FEET_DEF_ICON, default_layer = shoe_layer)
+	overlays_standing[shoe_layer] = shoes.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_shoes_str, default_icon = shoe_sprite, default_layer = shoe_layer)
 
 	apply_layer(SHOES_LAYER)
 	apply_layer(SHOES_LAYER_ALT)
@@ -965,9 +987,9 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	if(!back)
 		return //Why do anything
 
-	var/icon/c_mask = tail_style?.clip_mask					//TODO: Figure out why the fuck it doesnt work with backpacks. Leaving this in for now, even though for some reason it does nothing.
+	var/icon/c_mask = tail_style?.clip_mask
 	if(c_mask)
-		if(istype(back, /obj/item/weapon/storage/backpack/saddlebag))
+		if(istype(back, /obj/item/weapon/storage/backpack/saddlebag) || istype(back, /obj/item/weapon/storage/backpack/saddlebag_common))
 			c_mask = null
 
 	overlays_standing[BACK_LAYER] = back.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_back_str, default_icon = INV_BACK_DEF_ICON, default_layer = BACK_LAYER, clip_mask = c_mask)

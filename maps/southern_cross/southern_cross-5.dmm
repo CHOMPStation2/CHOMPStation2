@@ -82,13 +82,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
-"al" = (
-/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
-	dir = 4
-	},
-/obj/effect/overlay/snow/floor,
-/turf/simulated/floor/plating,
-/area/surface/outside/plains/outpost)
 "am" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -174,7 +167,6 @@
 /obj/machinery/cell_charger,
 /obj/random/powercell,
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /obj/machinery/camera/network/engineering_outpost{
@@ -327,7 +319,6 @@
 	dir = 1
 	},
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /obj/structure/reagent_dispensers/fueltank,
@@ -1796,7 +1787,6 @@
 "dB" = (
 /obj/machinery/alarm{
 	dir = 8;
-	frequency = 1441;
 	pixel_x = 22
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -2352,7 +2342,7 @@
 /obj/machinery/conveyor{
 	id = "mining_north"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/surface/outpost/mining_main/exterior)
 "eC" = (
 /obj/effect/floor_decal/borderfloor{
@@ -2450,7 +2440,6 @@
 	dir = 1
 	},
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /turf/simulated/floor/tiled,
@@ -3178,7 +3167,7 @@
 	dir = 1
 	},
 /obj/effect/overlay/snow/floor,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/surface/outside/plains/outpost)
 "gj" = (
 /turf/simulated/wall/r_wall,
@@ -3679,7 +3668,6 @@
 /area/surface/outpost/main/airlock/right_one)
 "hk" = (
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -5359,7 +5347,6 @@
 /area/surface/outpost/main/exploration/containment)
 "kc" = (
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -5416,7 +5403,7 @@
 /area/surface/outpost/security)
 "ki" = (
 /obj/effect/wingrille_spawn/reinforced,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/surface/outpost/mining_main/exterior)
 "kj" = (
 /obj/effect/floor_decal/corner/white{
@@ -5748,7 +5735,6 @@
 /area/surface/outpost/main/exploration)
 "kO" = (
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /obj/effect/floor_decal/borderfloor/corner{
@@ -5922,7 +5908,6 @@
 /obj/structure/table/standard,
 /obj/item/weapon/storage/firstaid/regular,
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -6223,13 +6208,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
-"lJ" = (
-/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
-	dir = 6
-	},
-/obj/effect/overlay/snow/floor,
-/turf/simulated/floor/plating,
-/area/surface/outside/plains/outpost)
 "lK" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -8289,7 +8267,6 @@
 	amount = 25
 	},
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /turf/simulated/floor/plating,
@@ -8400,7 +8377,6 @@
 	dir = 8
 	},
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -8901,13 +8877,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/atmos_room)
-"qz" = (
-/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
-	dir = 9
-	},
-/obj/effect/overlay/snow/floor,
-/turf/simulated/floor/plating,
-/area/surface/outside/plains/outpost)
 "qA" = (
 /obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -8978,7 +8947,6 @@
 /obj/structure/table/glass,
 /obj/item/weapon/inflatable_duck,
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -12206,7 +12174,7 @@
 	dir = 8
 	},
 /obj/effect/overlay/snow/floor,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/surface/outside/plains/outpost)
 "wv" = (
 /obj/machinery/door/firedoor/border_only,
@@ -12337,7 +12305,10 @@
 /area/surface/outside/plains/outpost)
 "wM" = (
 /turf/simulated/floor/plating{
-	icon_state = "asteroidplating2"
+	icon_state = "asteroidplating2";
+	nitrogen = 93.7835;
+	temperature = 243.15;
+	oxygen = 20.7263
 	},
 /area/surface/outpost/mining_main/exterior)
 "wN" = (
@@ -12633,6 +12604,9 @@
 /area/surface/outpost/main/exploration/containment)
 "xq" = (
 /turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15;
 	outdoors = 1
 	},
 /area/surface/outside/path/plains)
@@ -13475,7 +13449,10 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating{
-	icon_state = "asteroidplating2"
+	icon_state = "asteroidplating2";
+	nitrogen = 93.7835;
+	temperature = 243.15;
+	oxygen = 20.7263
 	},
 /area/surface/outpost/mining_main/exterior)
 "yI" = (
@@ -13738,7 +13715,7 @@
 "zk" = (
 /obj/machinery/mineral/unloading_machine,
 /obj/structure/plasticflaps/mining,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/surface/outpost/mining_main/exterior)
 "zl" = (
 /obj/structure/bed/chair{
@@ -14229,7 +14206,10 @@
 /obj/effect/map_effect/portal/line/side_a,
 /obj/effect/map_effect/perma_light/concentrated,
 /turf/simulated/floor/plating{
-	icon_state = "asteroidplating2"
+	icon_state = "asteroidplating2";
+	nitrogen = 93.7835;
+	temperature = 243.15;
+	oxygen = 20.7263
 	},
 /area/surface/outpost/mining_main/exterior)
 "Am" = (
@@ -14353,16 +14333,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/gen_room/smes_right)
-"Ax" = (
-/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
-	dir = 10
-	},
-/obj/effect/overlay/snow/floor,
-/obj/effect/overlay/snow/floor/edges{
-	dir = 5
-	},
-/turf/simulated/floor/plating,
-/area/surface/outside/plains/outpost)
 "Az" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5,
 /obj/effect/floor_decal/steeldecal/steel_decals5{
@@ -15207,7 +15177,6 @@
 "BV" = (
 /obj/machinery/alarm{
 	dir = 8;
-	frequency = 1441;
 	pixel_x = 22
 	},
 /turf/simulated/floor/tiled,
@@ -15708,7 +15677,6 @@
 "CU" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /turf/simulated/floor/tiled,
@@ -16383,7 +16351,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/surface/outpost/mining_main/exterior)
 "Ev" = (
 /obj/effect/floor_decal/borderfloor{
@@ -16832,7 +16800,6 @@
 	dir = 8
 	},
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /obj/machinery/power/apc{
@@ -16871,7 +16838,6 @@
 	dir = 1
 	},
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -17661,13 +17627,6 @@
 /obj/effect/landmark/event_spawn/dronepod_landing,
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
 /area/surface/outside/plains/normal)
-"GS" = (
-/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
-	dir = 10
-	},
-/obj/effect/overlay/snow/floor,
-/turf/simulated/floor/plating,
-/area/surface/outside/plains/outpost)
 "GT" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central1,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -19394,7 +19353,7 @@
 /obj/effect/overlay/snow/floor/edges{
 	dir = 1
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/surface/outside/plains/outpost)
 "JW" = (
 /obj/effect/overlay/snow/floor,
@@ -20665,7 +20624,6 @@
 /obj/item/clothing/shoes/sandal,
 /obj/item/clothing/shoes/sandal,
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /turf/simulated/floor/wood,
@@ -21271,7 +21229,6 @@
 	},
 /obj/machinery/alarm{
 	dir = 8;
-	frequency = 1441;
 	pixel_x = 22
 	},
 /turf/simulated/floor/tiled,
@@ -22078,7 +22035,7 @@
 	dir = 4
 	},
 /obj/effect/overlay/snow/floor,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/surface/outside/plains/outpost)
 "OY" = (
 /turf/simulated/wall/r_wall,
@@ -22688,7 +22645,6 @@
 	dir = 4
 	},
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /turf/simulated/floor/tiled,
@@ -23280,7 +23236,6 @@
 	dir = 4
 	},
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /obj/effect/floor_decal/corner/blue/border{
@@ -23718,7 +23673,7 @@
 	dir = 8
 	},
 /obj/effect/overlay/snow/floor,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/surface/outside/plains/outpost)
 "RV" = (
 /obj/structure/table/glass,
@@ -23962,11 +23917,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/security)
-"Sv" = (
-/obj/machinery/atmospherics/pipe/simple/heat_exchanging,
-/obj/effect/overlay/snow/floor,
-/turf/simulated/floor/plating,
-/area/surface/outside/plains/outpost)
 "Sx" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/green{
 	dir = 4
@@ -24301,7 +24251,6 @@
 	dir = 8
 	},
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /turf/simulated/floor/tiled/dark,
@@ -24349,7 +24298,7 @@
 /obj/effect/overlay/snow/floor/edges{
 	dir = 1
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/surface/outside/plains/outpost)
 "Tt" = (
 /obj/structure/closet/secure_closet/miner,
@@ -24622,7 +24571,10 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating{
-	icon_state = "asteroidplating2"
+	icon_state = "asteroidplating2";
+	nitrogen = 93.7835;
+	temperature = 243.15;
+	oxygen = 20.7263
 	},
 /area/surface/outpost/mining_main/exterior)
 "TT" = (
@@ -24704,13 +24656,6 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled/steel/sif/planetuse,
-/area/surface/outside/plains/outpost)
-"Uc" = (
-/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
-	dir = 5
-	},
-/obj/effect/overlay/snow/floor,
-/turf/simulated/floor/plating,
 /area/surface/outside/plains/outpost)
 "Ud" = (
 /obj/structure/cable/yellow{
@@ -25670,7 +25615,6 @@
 /obj/random/junk,
 /obj/random/action_figure,
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /turf/simulated/floor/plating,
@@ -25846,7 +25790,6 @@
 	dir = 8
 	},
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -27115,7 +27058,6 @@
 	dir = 8
 	},
 /obj/machinery/alarm{
-	frequency = 1441;
 	pixel_y = 22
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -27745,7 +27687,7 @@
 	id = "mining_north"
 	},
 /obj/machinery/mineral/output,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/surface/outpost/mining_main/exterior)
 "ZP" = (
 /obj/random/technology_scanner,
@@ -50346,7 +50288,7 @@ nH
 ha
 ha
 Ts
-Sv
+wy
 gh
 wu
 gL
@@ -50604,8 +50546,8 @@ nH
 ha
 ha
 RT
-lJ
-Uc
+so
+pA
 OX
 QP
 QP
@@ -50862,9 +50804,9 @@ nH
 ha
 ha
 JV
-al
+Vr
 RT
-al
+Vr
 iL
 Pw
 Pw
@@ -51120,9 +51062,9 @@ nH
 ha
 ha
 RT
-al
+Vr
 RT
-al
+Vr
 iL
 Pw
 Pw
@@ -51377,10 +51319,10 @@ ha
 nH
 ha
 ha
-Ax
-qz
-GS
-qz
+of
+UG
+dX
+UG
 iL
 Pw
 Pw

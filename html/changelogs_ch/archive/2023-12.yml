@@ -1,0 +1,184 @@
+2023-12-01:
+  FluffMedic:
+  - balance: Nerfed Eclipse mob health, made it so their special attacks are used
+      more often.
+  - maptweak: tweaked some outsider pods
+  - bugfix: A few gaps in a previous PR
+  - maptweak: alters the loot and looks of some valley POIs, alongside adding some
+      more.
+  Kashargul:
+  - qol: cleanup of medical borg naming and removal of unnecessary overwrite code.
+  - qol: cleanup of mining borg overwrites.
+  - qol: chompadd W0RM sprites moved to modular_chomp
+  - rscadd: Blade as ERT module
+  - rscadd: Paragon.Corps icon to paperwork for events
+  - rscadd: Trader icon to paperwork for events
+  - bugfix: naming of the casino telemut injector, had been named Telepathy, but is
+      Telekinesis
+  - rscadd: 're-adds: borg water supply'
+  - rscadd: 're-adds: lick cleaning'
+  - rscadd: 're-adds: verb to refill fire extinguisher from water supply'
+  - bugfix: licking exploit which allowed borgs to gain massive charges from a single
+      cell
+  TheCaramelion:
+  - bugfix: Mailman alt title starts with a PDA too
+  Verkister:
+  - bugfix: Fixed bigdragon double vorgan init
+2023-12-02:
+  FluffMedic:
+  - bugfix: Temporary gene fix, maybe metroids being butcherable, and mol maze is
+      less painful
+  TheCaramelion:
+  - rscadd: Added paperworks printer in various departments
+  - maptweak: Teleporter bay border control decal moved to the right place
+  Upstream:
+  - rscadd: Added animated sprite for the borg paper printer. Thanks to MAK for the
+      sprite edit!
+  - rscadd: Added more PDA ringtone choices
+  - bugfix: fixed the paper spawn location. It now picks the location after selecting,
+      preventing it from spawning at the original place if one moved meanwhile.
+  - rscadd: Adds one or seven EMT/medical jackets, coats, vests and others to the
+      loadout, also tries to put them together in a single list.
+  tacoguy7765093:
+  - qol: dancefloor is now anchored
+  - maptweak: small map fixes
+2023-12-03:
+  FluffMedic:
+  - bugfix: A mob spamming admin logs
+  Upstream:
+  - rscadd: 'Added new redgate map: Laserdome'
+  - rscadd: Added 'redgate_allowed' variable in objs
+  - rscadd: Added entertainment encryption key
+  - rscadd: 'Added a new machine that makes proteans revivable in-round: Protean Reconstitutor'
+  - imageadd: added Protean Reconstitutor sprite
+  - rscadd: Adds the option for admins to quickly add or remove modules, radio channels
+      and components from robots. This should make event handling with borgs much
+      easier.
+  - rscadd: Added two new type of robot cells
+  - bugfix: Minor sprite fix.
+  - qol: Rejuvenate now fully restores borgs
+  - qol: escape timers have been cut in half
+  - rscadd: 'adds a chance of escaping if absorbed into a belly that is possible to
+      escape from (read PR #7318 for more details)'
+  - qol: minor tweak to the messages when restisting in a belly
+  - qol: different probabilities of absorbtion on gaslamps
+  - bugfix: fixed duplication of NIFs during rejuvenation
+2023-12-04:
+  FluffMedic:
+  - bugfix: Fixing an immunity
+  Missile597:
+  - balance: Adjusted the distillery recipe for biomass to be more in line with the
+      buffed instant recipe. Recipe remains the same as before, but now distils 6
+      units instead of 1. This makes the distillery twice as phoron efficient once
+      more, whilst retaining the cost of needing to provide blood as well as using
+      the distillery. (Maybe it'll see some use? Probably not)
+  Upstream:
+  - bugfix: actually showing a proper list of valid ringtones (secret ones can be
+      still set via 'Other')
+  - bugfix: fixes the RD console crash and allows designs to be transferred from one
+      console to another using the disks
+  Verkister:
+  - bugfix: Fixed synths not getting metabolism traits.
+  - bugfix: Fixed VR mob spawner button runtiming on bad spawn paths.
+  - bugfix: Fixed runtimes with uninitialized pakkun mob rest features.
+2023-12-06:
+  Aroliacue:
+  - soundadd: New SFX for curabitur cannon.
+  - qol: Macrobatteries for the curabitur now fit in medical belts.
+  - qol: Added several items to the trasheat whitelist.
+  - qol: Xenomorph resin doors can now be destroyed by regular carbon crew by harm
+      intent clicking with an empty hand. Xenomorph Hybrids clearing resin structures
+      must now be on harm intent, to prevent accidental deconstruction. All xeno structures
+      can now be cleared instantly by Xenomorph Hybrids.
+  - balance: All gloves now provide heat and cold protection instead of just the black
+      ones.
+  - bugfix: Xenomorph Queen buff no longer gives infinite attack speed.
+  - imageadd: Xenomorph structures have new icons. Still WIP.
+  Kashargul:
+  - bugfix: lickclean will no longer break the synthtongue
+  - balance: mimic chance on spawner's crates from 30% to 70%
+  - bugfix: runtime error in the mob spawner
+  - bugfix: mimics will spawn again
+  - qol: moved the mob_spawner_ch file to modular chomp
+  TheCaramelion:
+  - balance: Various job goodies have been changed, slightly more useful stuff.
+  - bugfix: Liquid goodies spawn in bottles.
+  Upstream:
+  - rscadd: added hairs from Skyrat and Citadel
+  - qol: updated paper mask sprite from Skyrat
+  - rscadd: ported big snake tail from skyrat
+  - rscadd: ports two dresses from citadel rp and ripped shorts & a half-mask (gaiter)
+      from skyrat
+  - rscadd: ports a bunch of underwear pieces from skyrat
+  - imageadd: added new hair, tail, clothing and paper mask sprites from skyrat and
+      citadel
+  - qol: tgui subsystem update
+  - rscdel: Removed player polls button from lobby UI
+  - rscadd: 'change: the mutation chance of radiation storms will now only affect
+      livings on station level'
+  - rscadd: 'change: the mutation chance of radiation storm will no longer affect
+      synthetics'
+  - rscadd: 'change: the mutation chance of radiation storms will respect raidation
+      suits'
+  - balance: ERT robot energy sword tail has been buffed to 35 damage, 70  armour
+      pen to be more in line with other melee energy weapons
+  - bugfix: synthtongue lick exploit has been fixed, prevents surreal charge gains
+      from a single cell
+  - rscadd: 'change: the mutation chance of radiation storms will respect radiation
+      traits (Minor: 20% lower chance, Major 60% lower chance, Immunity 100 % lower
+      chance)'
+  Verkister:
+  - rscadd: Added new belly setting to store nutrition instead of absorbing it.
+2023-12-07:
+  Kashargul:
+  - bugfix: remove unnecessary if
+  Upstream:
+  - rscadd: Added back the info button to recover from the text button
+  Verkister:
+  - bugfix: Fixed food only mode not digesting raw nutrition piles.
+  - bugfix: Fixed acid reagent digestion not producing raw nutrition in store mode.
+2023-12-08:
+  FluffMedic:
+  - balance: eclipse are much more killable
+  MeepleMuncher:
+  - rscadd: Adds in blondies, a variant of brownies that don't have the chocolate
+      allergen.
+  - imageadd: added boldie sprites
+  TheCaramelion:
+  - bugfix: Walking in the same tile as a phased entity doesn't show a message anymore
+  Upstream:
+  - bugfix: No longer running IP checks on insecure http connections
+  - rscadd: Robots can now also use melee range weapons, seems that have been overseen
+      as the reach variable was added to weapons. This allows robots to also attack
+      on more than 1 field away when a weapon has a higher reach value defined.
+  - bugfix: runtime in window.dm
+  - qol: the jaws are now a melee weapon
+  - qol: the combat borgblade is now a melee weapon
+  - qol: the combat shocker is now a melee weapon
+2023-12-09:
+  Kashargul:
+  - bugfix: tool pathing in mecha_construction_ch
+  MeepleMuncher:
+  - bugfix: fixed blondies
+  Upstream:
+  - bugfix: No more will slimes, zorren and skrell have their blood reagent overridden
+      by char setup when they havent even touched that.
+  - bugfix: fixes jawsoflife not being able to open emergency shutters
+  - rscadd: added tgchat
+  - rscdel: removed vchat
+  - bugfix: most likely fixed some scrolling issues with some of the UIs
+  - qol: improved color contrast for dark mode
+  - qol: minor styling improvements of tgchat
+  - bugfix: 'fixes: robot UI modules not showing on change or robot reset'
+  - bugfix: 'fixes: robot tools getting stuck on module reset or admin removal on
+      screen'
+  - qol: 'change: when new modules are added, the UI is refreshed'
+  - qol: 'change: when modules are removed or the entire robot is reset, the hud is
+      hidden beforehand'
+  - admin: 'change: admin module removing unequips all active modules'
+  - qol: Adds warning for trying to wrap packages and gifts
+  - rscdel: Disables debug messages for APC-less ships in electrical storms
+2023-12-10:
+  Upstream:
+  - bugfix: fixes statusbar after tgchat update
+  - rscadd: 'added two new themes to tgchat: vchatlight and vchatdark'

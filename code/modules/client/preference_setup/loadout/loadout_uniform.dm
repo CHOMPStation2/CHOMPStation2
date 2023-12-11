@@ -497,6 +497,10 @@
 	)
 	gear_tweaks += new/datum/gear_tweak/path(cowboy_outfits)
 
+/datum/gear/uniform/hightrousers
+	display_name = "high-waisted trousers"
+	path = /obj/item/clothing/under/dress/hightrousers
+
 /*
  * 80s
  */
@@ -543,6 +547,8 @@
 	"feminine skinsuit"=/obj/item/clothing/under/skinsuit/fem,
 	"gray skinsuit"=/obj/item/clothing/under/skinsuit/gray,
 	"feminine gray skinsuit"=/obj/item/clothing/under/skinsuit/fem/gray,
+	"short gray skinsuit"=/obj/item/clothing/under/skinsuit/gray/short, // CHOMPedit: New skinsuits.
+	"feminine short gray skinsuit"=/obj/item/clothing/under/skinsuit/fem/gray/short, // CHOMPedit: New skinsuits.
 	"leotard skinsuit"=/obj/item/clothing/under/skinsuit/leotard,
 	"feminine leotard skinsuit"=/obj/item/clothing/under/skinsuit/fem/leotard,
 	"gray leotard skinsuit"=/obj/item/clothing/under/skinsuit/leotard/gray,
@@ -586,3 +592,16 @@
 /datum/gear/uniform/fienddress
     display_name = "fiendish dress"
     path = /obj/item/clothing/under/fienddress
+
+//tabard dresses
+/datum/gear/uniform/tabarddress
+	display_name = "tabard-dress selection"
+	path = /obj/item/clothing/under/dress/tabard
+
+/datum/gear/uniform/tabarddress/New()
+	..()
+	var/list/tabarddress = list(
+	"white tabard-dress"=/obj/item/clothing/under/dress/tabard,
+	"black tabard-dress"=/obj/item/clothing/under/dress/tabard/black
+	)
+	gear_tweaks += list(new/datum/gear_tweak/path(tabarddress))

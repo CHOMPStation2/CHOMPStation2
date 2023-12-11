@@ -34,13 +34,13 @@
 
 	while((spawncount >= 1) && vents.len)
 		var/obj/vent = pick(vents)
-	
+
 	//CHOMPEDIT START adding spider EGGS to the possible spawns instead of singular spiderling spawns.
 		if(severity == 3)
 			var/spawn_spiderlings = pickweight(list(
-				/obj/effect/spider/spiderling/broodling = 95,
-				/obj/effect/spider/eggcluster/broodling = 4,
-				/obj/effect/spider/eggcluster/royal/broodling = 1
+				/obj/effect/spider/spiderling/space = 95,
+				/obj/effect/spider/eggcluster/space = 4,
+				/obj/effect/spider/eggcluster/royal/space = 1
 				))
 			new spawn_spiderlings(vent.loc)
 		if(severity < 3) //If the severity is less than 3, only spawn regular spiderlings

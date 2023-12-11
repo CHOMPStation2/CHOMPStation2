@@ -269,6 +269,8 @@
 
 //repurposed proc. Now it combines get_id_name() and get_face_name() to determine a mob's name variable. Made into a seperate proc as it'll be useful elsewhere
 /mob/living/carbon/human/proc/get_visible_name()
+	if(ability_flags & AB_PHASE_SHIFTED)
+		return "Something"	// Something
 	if( wear_mask && (wear_mask.flags_inv&HIDEFACE) )	//Wearing a mask which hides our face, use id-name if possible
 		return get_id_name("Unknown")
 	if( head && (head.flags_inv&HIDEFACE) )
@@ -509,7 +511,7 @@
 						if (R.fields["id"] == E.fields["id"])
 							if(hasHUD(usr,"medical"))
 								var/list/medical_hud_text = list()
-								medical_hud_text += "<b>Name:</b> [R.fields["name"]]	<b>Blood Type:</b> [R.fields["b_type"]]"
+								medical_hud_text += "<b>Name:</b> [R.fields["name"]]	<b>Blood Type:</b> [R.fields["b_type"]]	<b>Blood Basis:</b> [R.fields["blood_reagent"]]"
 								medical_hud_text += "<b>Species:</b> [R.fields["species"]]"
 								medical_hud_text += "<b>DNA:</b> [R.fields["b_dna"]]"
 								medical_hud_text += "<b>Minor Disabilities:</b> [R.fields["mi_dis"]]"
@@ -1252,7 +1254,7 @@
 	default_pixel_y = initial(pixel_y) + species.pixel_offset_y
 	pixel_x = default_pixel_x
 	pixel_y = default_pixel_y
-	center_offset = species.center_offset //CHOMPEdit
+	center_offset = species.center_offset
 
 	if(LAZYLEN(descriptors))
 		descriptors = null
@@ -1270,10 +1272,11 @@
 			vessel.maximum_volume = species.blood_volume
 			vessel.add_reagent("blood", species.blood_volume - vessel.total_volume)
 		else if(vessel.total_volume > species.blood_volume)
-			vessel.remove_reagent("blood", vessel.total_volume - species.blood_volume)
+			vessel.remove_reagent("blood",vessel.total_volume - species.blood_volume) //This one should stay remove_reagent to work even lack of a O_heart
 			vessel.maximum_volume = species.blood_volume
 		fixblood()
 		species.update_attack_types() //VOREStation Edit - Required for any trait that updates unarmed_types in setup.
+		species.update_vore_belly_def_variant() //CHOMPedit - Custom species post spawn logic
 
 	// Rebuild the HUD. If they aren't logged in then login() should reinstantiate it for them.
 	update_hud()
@@ -1740,7 +1743,7 @@
 			if(blood_volume < species?.blood_volume*species?.blood_level_fatal)
 				bloodtrail = 0	//Most of it's gone already, just leave it be
 			else
-				vessel.remove_reagent("blood", 1)
+				remove_blood(1)
 		if(bloodtrail)
 			if(istype(loc, /turf/simulated))
 				var/turf/T = loc

@@ -1,16 +1,5 @@
 /obj/item/clothing
-	var/update_icon_define_orig = null // temp storage for original update_icon_define (if it exists)
-	var/update_icon_define_digi = null
-	var/fit_for_digi = FALSE // flag for if clothing has already been reskinned to digitigrade
-
-/obj/item/clothing/shoes
-	update_icon_define_digi = "modular_chomp/icons/inventory/feet/mob_digi.dmi"
-
-/obj/item/clothing/suit
-	update_icon_define_digi = "modular_chomp/icons/inventory/suit/mob_digi.dmi"
-
-/obj/item/clothing/under
-	update_icon_define_digi = "modular_chomp/icons/inventory/uniform/mob_digi.dmi"
+	matter = list(MAT_FIBERS = 50)
 
 /obj/item/clothing/shoes/MouseDrop_T(mob/living/target, mob/living/user)
 	if(!istype(user)) return ..() // If the user passed in isn't a living mob, exit
@@ -32,57 +21,6 @@
 
 	return ..()
 
-
-/obj/item/clothing/proc/handle_digitigrade(var/mob/user)
-	if(ishuman(user))
-		var/mob/living/carbon/human/H = user
-
-		// if digitigrade-use flag is set
-		if(H.digitigrade)
-
-			// figure out what slot we care about
-			if(!update_icon_define_digi)
-				return
-
-			// Don't reset if already set
-			if(!fit_for_digi)
-				fit_for_digi = TRUE // set flag even if no icon_state exists, so we don't repeat checks
-
-				//if update_icon_define is already set to something, place it in a var to hold it temporarily
-				if(update_icon_define)
-					update_icon_define_orig = update_icon_define
-
-				// only override icon if a corresponding digitigrade replacement icon_state exists
-				// otherwise, keep the old non-digi icon_define (or nothing)
-				if(icon_state && icon_states(update_icon_define_digi).Find(icon_state))
-					update_icon_define = update_icon_define_digi
-
-
-		// if not-digitigrade, only act if the clothing was previously fit for a digitigrade char
-		else
-			if(fit_for_digi)
-				fit_for_digi = FALSE
-
-				//either reset update_icon_define to it's old value
-				// or reset update_icon_define to null
-				if(update_icon_define_orig)
-					update_icon_define = update_icon_define_orig
-					update_icon_define_orig = null
-				else
-					update_icon_define = null
-
-/obj/item/clothing/shoes/equipped(var/mob/user, var/slot)
-	. = ..()
-	handle_digitigrade(user)
-
-/obj/item/clothing/suit/equipped(var/mob/user, var/slot)
-	. = ..()
-	handle_digitigrade(user)
-
-/obj/item/clothing/under/equipped(var/mob/user, var/slot)
-	. = ..()
-	handle_digitigrade(user)
-
 //In shoe steppies!
 /obj/item/clothing/shoes/proc/handle_inshoe_stepping(var/mob/living/carbon/human/pred, var/mob/living/carbon/human/prey)
 	if(!istype(pred)) return //Sorry, inshoe steppies only for carbon/human/ for now. Based on the regular stepping mechanics
@@ -101,7 +39,7 @@
 
 	switch(pred.a_intent)
 		if(I_HELP)
-			if(prob(40)) //Reducing spam exclusively on I_HELP. Still more frequent than old pitiful prob(1)
+			if(prob(10)) //Reducing spam exclusively on I_HELP. Still more frequent than old pitiful prob(1)
 				if(pred.m_intent == "run")
 					message_prey = pick(
 						"You feel weightless for a brief moment as \the [name] move upwards.",
@@ -127,8 +65,8 @@
 				message_pred = "You step on [prey], squishing and pinning them within your [name]!"
 				message_prey = "[pred] steps on you, squishing and pinning you within their [name]!"
 			else
-				message_pred = "You firmly push your foot down on [prey], painfully but harmlessly pinning them to the sole of your [name]!"
-				message_prey = "[pred] firmly pushes their foot down on you, painfully but harmlessly pinning you to the sole of their [name]!"
+				message_pred = "You firmly push your foot down on [prey], painfully but harmlessly pinning them to the insole of your [name]!"
+				message_prey = "[pred] firmly pushes their foot down on you, painfully but harmlessly pinning you to the insole of their [name]!"
 				prey.Weaken(5) // For flavour, only noticed prey if tossed out of shoe
 				add_attack_logs(pred, prey, "Pinned inshoe (walk, weaken(5))")
 
@@ -137,8 +75,8 @@
 				message_pred = "You step down onto [prey], squishing and trapping them inbetween your toes!"
 				message_prey = "[pred] steps down on you, squishing and trapping you inbetween their toes!"
 			else
-				message_pred = "You pin [prey] down against the sole of your [name] with your foot, your toes curling up around their body, tightly trapping them inbetween them!"
-				message_prey = "[pred] pins you down against the sole of their [name] with their foot, their toes curling up around your body, tighly trapping you inbetween them!"
+				message_pred = "You pin [prey] down against the insole of your [name] with your foot, your toes curling up around their body, tightly trapping them inbetween them!"
+				message_prey = "[pred] pins you down against the insole of their [name] with their foot, their toes curling up around your body, tighly trapping you inbetween them!"
 				prey.Weaken(5) // For flavour, only noticed prey if tossed out of shoe
 				add_attack_logs(pred, prey, "Grabbed inshoe (walk, weaken(5))")
 
@@ -154,12 +92,12 @@
 			if(pred.m_intent == "run")
 				message_pred = "You carelessly step down onto [prey], crushing them within your [name]!"
 				message_prey = "[pred] steps carelessly on your body, crushing you within their [name]!"
-				add_attack_logs(pred, prey, "Crushed underfoot (run, about [damage] damage per limb)")
+				add_attack_logs(pred, prey, "Crushed inshoe (run, about [damage] damage per limb)")
 			else
-				message_pred = "You methodically place your foot down upon [prey]'s body, applying pressure, crushing them against the sole of your [name]!"
-				message_prey = "[pred] methodically places their foot upon your body, applying pressure, crushing you against the sole of their [name]!"
+				message_pred = "You methodically place your foot down upon [prey]'s body, applying pressure, crushing them against the insole of your [name]!"
+				message_prey = "[pred] methodically places their foot upon your body, applying pressure, crushing you against the insole of their [name]!"
 				damage *= 3.5 //Walking damage multiplier
-				add_attack_logs(pred, prey, "Crushed underfoot (walk, about [damage] damage per limb)")
+				add_attack_logs(pred, prey, "Crushed inshoe (walk, about [damage] damage per limb)")
 
 			for(var/obj/item/organ/external/I in prey.organs)
 				// Running Total: 1.50 damage min, 28.875 damage max, depending on size & RNG.

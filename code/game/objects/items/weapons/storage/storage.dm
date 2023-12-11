@@ -14,6 +14,7 @@
 		)
 	w_class = ITEMSIZE_NORMAL
 	show_messages = 1
+	matter = list(MAT_FIBERS = 50) //CHOMPAdd
 
 	/// List of objects which this item can store (if set, it can't store anything else)
 	var/list/can_hold
@@ -237,14 +238,11 @@
 
 /obj/item/weapon/storage/proc/open(mob/user as mob)
 	if (use_sound)
-	// Chomp edit
-		if(isbelly(user.loc))
-			var/obj/belly/B = user.loc
-			if(B.mode_flags & DM_FLAG_MUFFLEITEMS)
-				// Do nothing
-			else
-				playsound(src, src.use_sound, 50, 0, -5)
-	// Chomp edit end
+		//CHOMPStation Edit
+		var/obj/belly/B = user.loc
+		if(!isbelly(B) || !(B.mode_flags & DM_FLAG_MUFFLEITEMS))
+			playsound(src, src.use_sound, 50, 0, -5)
+		//CHOMPStation Edit end
 
 	orient2hud(user)
 	if(user.s_active)
@@ -729,13 +727,13 @@
 
 	while (cur_atom && !(cur_atom in container.contents))
 		if (isarea(cur_atom))
-			return -1
+			return INFINITY // CHOMPedit
 		if (istype(cur_atom.loc, /obj/item/weapon/storage))
 			depth++
 		cur_atom = cur_atom.loc
 
 	if (!cur_atom)
-		return -1	//inside something with a null loc.
+		return INFINITY	// CHOMPedit - inside something with a null loc.
 
 	return depth
 
@@ -747,13 +745,13 @@
 
 	while (cur_atom && !isturf(cur_atom))
 		if (isarea(cur_atom))
-			return -1
+			return INFINITY // CHOMPedit
 		if (istype(cur_atom.loc, /obj/item/weapon/storage))
 			depth++
 		cur_atom = cur_atom.loc
 
 	if (!cur_atom)
-		return -1	//inside something with a null loc.
+		return INFINITY	//CHOMPedit - inside something with a null loc.
 
 	return depth
 

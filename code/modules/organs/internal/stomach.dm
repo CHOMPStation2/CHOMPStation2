@@ -58,7 +58,7 @@
 
 	acidtype = "sacid"
 
-	organ_verbs = list(/mob/living/carbon/human/proc/reagent_purge) //VOREStation Add
+	organ_verbs = list(/mob/living/carbon/human/proc/reagent_purge, /mob/living/carbon/human/proc/synth_reag_toggle) //VOREStation Add + CHOMPAdd
 
 /obj/item/organ/internal/stomach/machine/handle_organ_proc_special()
 	..()

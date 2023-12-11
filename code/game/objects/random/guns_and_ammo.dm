@@ -277,7 +277,7 @@
 			),
 			prob(1);list(
 				/obj/item/weapon/gun/projectile/automatic/p90,
-				/obj/item/ammo_magazine/m9mmp90
+				/obj/item/ammo_magazine/a57p90 //CHOMPedit: new P90 magazine.
 			),
 			prob(3);list(
 				/obj/item/weapon/gun/projectile/automatic/combatsmg,

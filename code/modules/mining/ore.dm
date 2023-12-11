@@ -174,10 +174,10 @@
 /obj/item/ore_chunk
 	name = "ore chunk"
 	desc = "A conglomerate of ore."
-	icon = 'icons/obj/mining_ore_vr.dmi'
+	icon = 'icons/obj/xenoarchaeology.dmi' //CHOMPEdit
 	icon_state = "strange"
 	randpixel = 8
-	w_class = ITEMSIZE_SMALL
+	w_class = ITEMSIZE_LARGE //CHOMPEdit
 	var/list/stored_ore = list(
 		"sand" = 0,
 		"hematite" = 0,

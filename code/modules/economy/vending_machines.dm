@@ -803,6 +803,7 @@
 					/obj/item/toy/plushie/nukeplushie = 1,
 					/obj/item/toy/plushie/otter = 1,
 					/obj/item/toy/plushie/vox = 1,
+					/obj/item/toy/plushie/shark = 1,
 					/obj/item/toy/mistletoe = 1,
 					//VOREStation Add End
 					//YawnWider Add Start
@@ -851,6 +852,7 @@
 					/obj/item/toy/plushie/nukeplushie = 50,
 					/obj/item/toy/plushie/otter = 50,
 					/obj/item/toy/plushie/vox = 50,
+					/obj/item/toy/plushie/shark = 50,
 					/obj/item/toy/mistletoe = 50,
 					//VOREStation Add End
 					//YawnWider Add Start
@@ -992,6 +994,7 @@
 					/obj/item/weapon/reagent_containers/food/snacks/oort = 8,
 					/obj/item/weapon/reagent_containers/food/snacks/sun_snax = 8,
 					/obj/item/weapon/reagent_containers/food/snacks/canned/appleberry = 6,
+					/obj/item/weapon/storage/box/jaffacake = 8,
 					/obj/item/weapon/storage/box/gum = 8,
 					/obj/item/weapon/storage/box/admints = 8
 					)
@@ -1005,6 +1008,7 @@
 					/obj/item/weapon/reagent_containers/food/snacks/oort = 5,
 					/obj/item/weapon/reagent_containers/food/snacks/sun_snax = 5,
 					/obj/item/weapon/reagent_containers/food/snacks/canned/appleberry = 8,
+					/obj/item/weapon/storage/box/jaffacake = 5,
 					/obj/item/weapon/storage/box/gum = 2,
 					/obj/item/weapon/storage/box/admints = 2
 					)

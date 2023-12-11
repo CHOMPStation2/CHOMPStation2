@@ -4,8 +4,10 @@
 
 /mob/observer/Destroy()
 	if(body_backup)
+		body_backup.moveToNullspace() //YEET
 		qdel(body_backup)
-	..()
+		body_backup = null
+	return ..()
 
 // Persistence vars not included as we probably don't want losing limbs in the game mean losing limbs in real life. Definitely can't backfire.
 /mob/observer/dead/verb/fake_enter_vr()
@@ -59,7 +61,7 @@
 
 	avatar.regenerate_icons()
 	avatar.update_transform()
-	avatar.species.equip_survival_gear(avatar)
+	job_master.EquipRank(avatar,"Visitor", 1, FALSE)
 	avatar.verbs += /mob/living/carbon/human/proc/fake_exit_vr
 	avatar.verbs += /mob/living/carbon/human/proc/vr_transform_into_mob
 	avatar.verbs |= /mob/living/proc/set_size // Introducing NeosVR

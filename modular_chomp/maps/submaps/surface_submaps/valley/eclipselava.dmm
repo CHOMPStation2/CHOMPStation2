@@ -588,6 +588,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
+"xj" = (
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipselava)
 "xr" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -1321,6 +1325,16 @@
 "VL" = (
 /obj/machinery/porta_turret/ai_defense{
 	faction = "eclipse"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipselava)
+"VR" = (
+/obj/structure/table/steel,
+/obj/random/contraband,
+/obj/random/maintenance/research,
+/obj/item/weapon/paper{
+	info = "The extreme heat of the lava and dragons, along side of the energy of the emitter still are unable to replicate the effects of the solar flare project. The dragons have been gorging themselves on wild life, and bandits seem highly keen for the slime core. Stealth is no longer an option, although our position is heavily fortified. We highly recommend for the Head Admiral to relocate resources and attempts for recreation of the solar project off planet.";
+	name = "Status Report"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
@@ -2813,7 +2827,7 @@ mL
 Cc
 bp
 MO
-MO
+xj
 BQ
 bp
 RI
@@ -3398,7 +3412,7 @@ ZS
 Ad
 bp
 ZK
-Ej
+VR
 Qr
 ZK
 bp

@@ -1,15 +1,19 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
-/mob/living/simple_mob/mechanical/mecha/ripley/blue_flames{
-	faction = "pirate"
+/mob/living/simple_mob/humanoid/eclipse/lunar/pummler,
+/turf/simulated/floor/water{
+	outdoors = 0
 	},
-/turf/simulated/floor/wood,
 /area/submap/cove)
 "aP" = (
 /mob/living/simple_mob/humanoid/cultist/hunter{
 	faction = "pirate"
 	},
 /turf/simulated/floor/wood,
+/area/submap/cove)
+"aR" = (
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/wall/wood,
 /area/submap/cove)
 "br" = (
 /obj/machinery/power/apc{
@@ -34,6 +38,12 @@
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
 	temperature = 243.15
+	},
+/area/submap/cove)
+"cc" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/teslanoodle,
+/turf/simulated/floor/water{
+	outdoors = 0
 	},
 /area/submap/cove)
 "eO" = (
@@ -64,6 +74,14 @@
 /obj/random/maintenance/foodstuff,
 /turf/simulated/floor/wood,
 /area/submap/cove)
+"jw" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/hellhound,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
+/area/submap/cove)
 "kD" = (
 /obj/structure/table/sifwooden_reinforced,
 /obj/machinery/chemical_dispenser/bar_coffee/full{
@@ -86,7 +104,7 @@
 /turf/simulated/floor/water/ocean,
 /area/submap/cove)
 "mh" = (
-/obj/random/mob/merc/all,
+/mob/living/simple_mob/humanoid/eclipse/solar/guardian,
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -99,6 +117,14 @@
 	faction = "pirate"
 	},
 /turf/simulated/floor/wood,
+/area/submap/cove)
+"nF" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/shotgunner,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/cove)
 "nN" = (
 /mob/living/simple_mob/mechanical/mecha/ripley/pirate/manned,
@@ -176,6 +202,10 @@
 "vN" = (
 /obj/structure/table/standard,
 /obj/item/weapon/gun/projectile/revolvershotgun,
+/obj/item/weapon/paper{
+	info = "The Eclipse bastards are really getting in the way of business. Every raid is becoming a battle on two fronts, and they just keep coming. Fortantly I have rainy day money, and got some of my bois backing me up. Narsch is the least offensive, so dead or alive for 100 thosuand thalers. I want to do the deed myself on Virrzzur, so alive for 150 thousand. Not sure what to do about the head admiral dude, since we have no name or face. I think they're made up.";
+	name = "Work in progress bounty"
+	},
 /turf/simulated/floor/wood,
 /area/submap/cove)
 "wD" = (
@@ -190,10 +220,12 @@
 /turf/simulated/floor/wood,
 /area/submap/cove)
 "xo" = (
-/mob/living/simple_mob/mechanical/mecha/ripley/red_flames{
-	faction = "pirate"
+/mob/living/simple_mob/humanoid/eclipse/lunar/ravanger,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
-/turf/simulated/floor/wood,
 /area/submap/cove)
 "xN" = (
 /obj/structure/table/rack,
@@ -353,6 +385,18 @@
 /obj/random/medical/pillbottle,
 /turf/simulated/floor/wood,
 /area/submap/cove)
+"Uz" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
+/turf/simulated/floor/water{
+	outdoors = 0
+	},
+/area/submap/cove)
+"US" = (
+/mob/living/simple_mob/mechanical/mecha/combat/gygax/dark/advanced{
+	faction = "pirate"
+	},
+/turf/simulated/floor/wood,
+/area/submap/cove)
 "Wb" = (
 /obj/structure/railing{
 	dir = 4
@@ -395,6 +439,12 @@
 	dir = 1
 	},
 /turf/simulated/floor/wood,
+/area/submap/cove)
+"Zq" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/froststalker,
+/turf/simulated/floor/water{
+	outdoors = 0
+	},
 /area/submap/cove)
 "Zs" = (
 /obj/structure/railing{
@@ -707,7 +757,7 @@ IP
 oM
 IP
 fq
-fq
+Zq
 fq
 fq
 fq
@@ -738,9 +788,9 @@ fq
 IP
 IP
 IP
+Uz
 fq
-fq
-fq
+aa
 fq
 fq
 fq
@@ -770,9 +820,9 @@ fq
 IP
 IP
 IP
-mh
-mh
 IP
+mh
+xo
 IP
 IP
 ED
@@ -803,9 +853,9 @@ IP
 IP
 IP
 IP
-mh
-mh
 IP
+nF
+jw
 IP
 IP
 qI
@@ -834,9 +884,9 @@ fq
 IP
 IP
 IP
-mh
-mh
 IP
+mh
+xo
 IP
 IP
 ED
@@ -866,9 +916,9 @@ fq
 IP
 IP
 IP
+cc
 fq
-fq
-fq
+aa
 fq
 fq
 fq
@@ -899,7 +949,7 @@ IP
 oM
 IP
 fq
-fq
+Zq
 fq
 fq
 fq
@@ -973,7 +1023,7 @@ qI
 qI
 qI
 qI
-lk
+aR
 Gb
 Gb
 Gb
@@ -1169,7 +1219,7 @@ Tm
 Tm
 lk
 eO
-aa
+Gb
 oh
 Gb
 Gb
@@ -1233,7 +1283,7 @@ Tm
 Tm
 lk
 xN
-Gb
+US
 lk
 lk
 oh
@@ -1297,7 +1347,7 @@ Tm
 Tm
 lk
 Hu
-xo
+Gb
 lk
 Nn
 ps

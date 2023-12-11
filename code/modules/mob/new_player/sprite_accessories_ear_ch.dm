@@ -93,7 +93,7 @@
 /datum/sprite_accessory/ears/una_bighorns
 	name = "Unathi Big Horns"
 	icon = 'icons/mob/Human_face_m.dmi'
-	icon_state = "unathi_bighorn"
+	icon_state = "unathi_bighorn_s"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 

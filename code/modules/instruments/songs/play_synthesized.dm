@@ -74,7 +74,7 @@
 			vol = volume,
 			vary = FALSE,
 			frequency = K.frequency,
-			falloff = null,
+			falloff = FALLOFF_SOUNDS, //CHOMPEdit
 			is_global = null,
 			channel = channel,
 			pressure_affected = null,

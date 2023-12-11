@@ -1,14 +1,12 @@
+//CHOMPNOTE - if upstream edits the sprite lists it will have to be manually copied into our station_vr file, anything else is just read from here
 /* Other, unaffiliated modules */
 
 // The module that borgs on the surface have.  Generally has a lot of useful tools in exchange for questionable loyalty to the crew.
 /obj/item/weapon/robot_module/robot/lost
 	name = "lost robot module"
 	hide_on_manifest = TRUE
-	sprites = list(
-					"Drone" = "drone-lost"
-				)
 
-/obj/item/weapon/robot_module/robot/lost/New(var/mob/living/silicon/robot/R)
+/obj/item/weapon/robot_module/robot/lost/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
 	// Sec
 	src.modules += new /obj/item/weapon/melee/baton/shocker/robot(src)
@@ -17,6 +15,7 @@
 
 	// Med
 	src.modules += new /obj/item/device/healthanalyzer(src)
+	src.modules += new /obj/item/weapon/shockpaddles/robot(src)
 	src.modules += new /obj/item/weapon/reagent_containers/borghypo/lost(src)
 
 	// Engi
@@ -30,7 +29,7 @@
 	src.modules += new /obj/item/device/robotanalyzer(src)
 
 	// Potato
-	src.emag = new /obj/item/weapon/gun/energy/retro/mounted(src)
+	src.emag += new /obj/item/weapon/gun/energy/retro/mounted(src)
 
 	var/datum/matter_synth/wire = new /datum/matter_synth/wire()
 	synths += wire
@@ -39,15 +38,14 @@
 	C.synths = list(wire)
 	src.modules += C
 
+	src.modules += new /obj/item/device/dogborg/sleeper/lost(src)
+	src.modules += new /obj/item/weapon/dogborg/pounce(src)
+
 /obj/item/weapon/robot_module/robot/gravekeeper
 	name = "gravekeeper robot module"
 	hide_on_manifest = TRUE
-	sprites = list(
-					"Drone" = "drone-gravekeeper",
-					"Sleek" = "sleek-gravekeeper"
-				)
 
-/obj/item/weapon/robot_module/robot/gravekeeper/New(var/mob/living/silicon/robot/R)
+/obj/item/weapon/robot_module/robot/gravekeeper/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
 	// For fending off animals and looters
 	src.modules += new /obj/item/weapon/melee/baton/shocker/robot(src)
@@ -70,7 +68,7 @@
 	src.modules += new /obj/item/weapon/gripper/gravekeeper(src)
 
 	// For really persistent looters
-	src.emag = new /obj/item/weapon/gun/energy/retro/mounted(src)
+	src.emag += new /obj/item/weapon/gun/energy/retro/mounted(src)
 
 	var/datum/matter_synth/wood = new /datum/matter_synth/wood(50000) //CHOMPEdit - "Buffing this to 50k on account of broken code not letting us pick up more stacks. Wee."
 	synths += wood
@@ -78,6 +76,10 @@
 	var/obj/item/stack/material/cyborg/wood/W = new (src)
 	W.synths = list(wood)
 	src.modules += W
+	
+	// For uwu
+	src.modules += new /obj/item/device/dogborg/sleeper/compactor/generic(src)
+	src.emag += new /obj/item/weapon/dogborg/pounce(src)
 	
 	//CHOMPEdit - "Giving the gravekeeper drone more modules to allow it to actually do it's job."
 	src.modules += new /obj/item/weapon/tool/wirecutters/cyborg(src) //Gotta clear those pesky landmines somehow. Also allows for deconstruction of things in the way!
@@ -96,11 +98,11 @@
 	src.modules += new /obj/item/weapon/hand_labeler(src)
 	src.modules += new /obj/item/weapon/stamp(src)
 	src.modules += new /obj/item/weapon/stamp/denied(src)
-	
+
 	var/obj/item/weapon/flame/lighter/zippo/L = new /obj/item/weapon/flame/lighter/zippo(src)
 	L.lit = 1
 	src.modules += L
-	
+
 	var/datum/matter_synth/metal = new /datum/matter_synth/metal(50000)
 	var/datum/matter_synth/glass = new /datum/matter_synth/glass(50000)
 	var/datum/matter_synth/plasteel = new /datum/matter_synth/plasteel(20000)
@@ -136,7 +138,7 @@
 	var/obj/item/stack/material/cyborg/plasteel/PS = new (src)
 	PS.synths = list(plasteel)
 	src.modules += PS
-	
+
 	var/obj/item/stack/tile/wood/cyborg/WT = new /obj/item/stack/tile/wood/cyborg(src)
 	WT.synths = list(wood)
 	src.modules += WT

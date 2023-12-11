@@ -232,7 +232,7 @@ Proc for attack log creation, because really why not
 	if(target?.flags & IS_BUSY)
 		to_chat(user, "<span class='warning'>Someone is already doing something with \the [target].</span>")
 		return FALSE
-		
+
 	var/atom/target_loc = null
 	if(target)
 		target_loc = target.loc
@@ -256,7 +256,7 @@ Proc for attack log creation, because really why not
 
 	if(exclusive & TASK_USER_EXCLUSIVE)
 		user.status_flags |= DOING_TASK
-	
+
 	if(target && (exclusive & TASK_TARGET_EXCLUSIVE))
 		target.flags |= IS_BUSY
 
@@ -304,12 +304,17 @@ Proc for attack log creation, because really why not
 	if(progbar)
 		qdel(progbar)
 
-/atom/proc/living_mobs(var/range = world.view)
+/atom/proc/living_mobs(var/range = world.view, var/count_held = FALSE) //CHOMPEdit Start
 	var/list/viewers = oviewers(src,range)
+	if(count_held)
+		viewers = viewers(src,range)
 	var/list/living = list()
 	for(var/mob/living/L in viewers)
 		living += L
-
+		if(count_held)
+			for(var/obj/item/weapon/holder/H in L.contents)
+				if(istype(H.held_mob, /mob/living))
+					living += H.held_mob //CHOMPEdit End
 	return living
 
 /atom/proc/human_mobs(var/range = world.view)
@@ -328,3 +333,9 @@ Proc for attack log creation, because really why not
 	else
 		. = getCompoundIcon(desired)
 		cached_character_icons[cachekey] = .
+
+/proc/not_has_ooc_text(mob/user)
+	if (config.allow_Metadata && (!user.client?.prefs?.metadata || length(user.client.prefs.metadata) < 15))
+		to_chat(user, "<span class='warning'>Please set informative OOC notes related to RP/ERP preferences. Set them using the 'OOC Notes' button on the 'General' tab in character setup.</span>")
+		return TRUE
+	return FALSE

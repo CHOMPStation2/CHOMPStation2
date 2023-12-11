@@ -43,6 +43,29 @@ const ReagentAddonIcon = {
   'Draining Liquids': '',
 };
 
+const AutotransferFlagIcon = {
+  'Creatures': '',
+  'Absorbed': '',
+  'Carbon': '',
+  'Silicon': '',
+  'Mobs': '',
+  'Animals': '',
+  'Mice': '',
+  'Dead': '',
+  'Digestable Creatures': '',
+  'Absorbable Creatures': '',
+  'Full Health': '',
+  'Items': '',
+  'Trash': '',
+  'Eggs': '',
+  'Remains': '',
+  'Indigestible Items': '',
+  'Recyclable Items': '',
+  'Ores': '',
+  'Clothes and Bags': '',
+  'Food': '',
+};
+
 const GetAddons = (addons: string[]) => {
   let result: string[] = [];
 
@@ -78,6 +101,30 @@ const GetLiquidAddons = (addons: string[]) => {
 
   if (result.length === 0) {
     result.push('No Addons Set');
+  }
+
+  return result;
+};
+
+const GetAutotransferFlags = (addons: string[], whitelist: BooleanLike) => {
+  let result: string[] = [];
+
+  addons?.forEach((addon) => {
+    result.push(
+      '<span class="badge text-bg-secondary"><i class="' +
+        AutotransferFlagIcon[addon] +
+        '"></i>' +
+        addon +
+        '</span>'
+    );
+  });
+
+  if (result.length === 0) {
+    if (whitelist) {
+      result.push('Everything');
+    } else {
+      result.push('Nothing');
+    }
   }
 
   return result;
@@ -122,13 +169,43 @@ type Belly = {
   shrink_grow_size: number;
   vorespawn_blacklist: BooleanLike;
   egg_type: string;
+  egg_name: string;
   selective_preference: string;
+  recycling: BooleanLike;
+  storing_nutrition: BooleanLike;
+  entrance_logs: BooleanLike;
+  item_digest_logs: BooleanLike;
 
   // Messages
   struggle_messages_outside: string[];
   struggle_messages_inside: string[];
   absorbed_struggle_messages_outside: string[];
   absorbed_struggle_messages_inside: string[];
+  escape_attempt_messages_owner: string[];
+  escape_attempt_messages_prey: string[];
+  escape_messages_owner: string[];
+  escape_messages_prey: string[];
+  escape_messages_outside: string[];
+  escape_item_messages_owner: string[];
+  escape_item_messages_prey: string[];
+  escape_item_messages_outside: string[];
+  escape_fail_messages_owner: string[];
+  escape_fail_messages_prey: string[];
+  escape_attempt_absorbed_messages_owner: string[];
+  escape_attempt_absorbed_messages_prey: string[];
+  escape_absorbed_messages_owner: string[];
+  escape_absorbed_messages_prey: string[];
+  escape_absorbed_messages_outside: string[];
+  escape_fail_absorbed_messages_owner: string[];
+  escape_fail_absorbed_messages_prey: string[];
+  primary_transfer_messages_owner: string[];
+  primary_transfer_messages_prey: string[];
+  secondary_transfer_messages_owner: string[];
+  secondary_transfer_messages_prey: string[];
+  digest_chance_messages_owner: string[];
+  digest_chance_messages_prey: string[];
+  absorb_chance_messages_owner: string[];
+  absorb_chance_messages_prey: string[];
   digest_messages_owner: string[];
   digest_messages_prey: string[];
   absorb_messages_owner: string[];
@@ -157,6 +234,8 @@ type Belly = {
   fancy_vore: BooleanLike;
   vore_sound: string;
   release_sound: string;
+  sound_volume: number;
+  noise_freq: number;
 
   // Visuals
   affects_vore_sprites: BooleanLike;
@@ -172,7 +251,13 @@ type Belly = {
   belly_sprite_to_affect: string;
 
   // Visuals (Belly Fullscreens Preview and Coloring)
+  belly_fullscreen: string;
   belly_fullscreen_color: string;
+  belly_fullscreen_color2: string;
+  belly_fullscreen_color3: string;
+  belly_fullscreen_color4: string;
+  belly_fullscreen_alpha: number;
+  colorization_enabled: BooleanLike;
 
   // Visuals (Vore FX)
   disable_hud: BooleanLike;
@@ -181,6 +266,7 @@ type Belly = {
   escapable: BooleanLike;
 
   escapechance: number;
+  escapechance_absorbed: number;
   escapetime: number;
 
   transferchance: number;
@@ -201,6 +287,14 @@ type Belly = {
   autotransferlocation_secondary: string;
   autotransfer_min_amount: number;
   autotransfer_max_amount: number;
+  autotransfer_whitelist: string[];
+  autotransfer_blacklist: string[];
+  autotransfer_secondary_whitelist: string[];
+  autotransfer_secondary_blacklist: string[];
+  autotransfer_whitelist_items: string[];
+  autotransfer_blacklist_items: string[];
+  autotransfer_secondary_whitelist_items: string[];
+  autotransfer_secondary_blacklist_items: string[];
 
   // Liquid Options
   show_liquids: BooleanLike;
@@ -212,6 +306,22 @@ type Belly = {
   custom_max_volume: number;
   vorefootsteps_sounds: BooleanLike;
   reagent_mode_flag_list: string[];
+  liquid_overlay: BooleanLike;
+  max_liquid_level: number;
+  reagent_touches: BooleanLike;
+  mush_overlay: BooleanLike;
+  mush_color: string;
+  mush_alpha: number;
+  max_mush: number;
+  min_mush: number;
+  item_mush_val: number;
+  custom_reagentcolor: string;
+  custom_reagentalpha: number;
+  metabolism_overlay: BooleanLike;
+  metabolism_mush_ratio: number;
+  max_ingested: number;
+  custom_ingested_color: string;
+  custom_ingested_alpha: number;
 
   // Liquid Messages
   liquid_fullness1_messages: BooleanLike;
@@ -248,7 +358,7 @@ const generateBellyString = (belly: Belly, index: number) => {
     digest_oxy,
 
     can_taste,
-	is_feedable,
+    is_feedable,
     contaminates,
     contamination_flavor,
     contamination_color,
@@ -261,13 +371,43 @@ const generateBellyString = (belly: Belly, index: number) => {
     shrink_grow_size,
     vorespawn_blacklist,
     egg_type,
+    egg_name,
     selective_preference,
+    recycling,
+    storing_nutrition,
+    entrance_logs,
+    item_digest_logs,
 
     // Messages
     struggle_messages_outside,
     struggle_messages_inside,
     absorbed_struggle_messages_outside,
     absorbed_struggle_messages_inside,
+    escape_attempt_messages_owner,
+    escape_attempt_messages_prey,
+    escape_messages_owner,
+    escape_messages_prey,
+    escape_messages_outside,
+    escape_item_messages_owner,
+    escape_item_messages_prey,
+    escape_item_messages_outside,
+    escape_fail_messages_owner,
+    escape_fail_messages_prey,
+    escape_attempt_absorbed_messages_owner,
+    escape_attempt_absorbed_messages_prey,
+    escape_absorbed_messages_owner,
+    escape_absorbed_messages_prey,
+    escape_absorbed_messages_outside,
+    escape_fail_absorbed_messages_owner,
+    escape_fail_absorbed_messages_prey,
+    primary_transfer_messages_owner,
+    primary_transfer_messages_prey,
+    secondary_transfer_messages_owner,
+    secondary_transfer_messages_prey,
+    digest_chance_messages_owner,
+    digest_chance_messages_prey,
+    absorb_chance_messages_owner,
+    absorb_chance_messages_prey,
     digest_messages_owner,
     digest_messages_prey,
     absorb_messages_owner,
@@ -296,6 +436,8 @@ const generateBellyString = (belly: Belly, index: number) => {
     fancy_vore,
     vore_sound,
     release_sound,
+    sound_volume,
+    noise_freq,
 
     // Visuals
     affects_vore_sprites,
@@ -305,7 +447,13 @@ const generateBellyString = (belly: Belly, index: number) => {
     belly_sprite_to_affect,
 
     // Visuals (Belly Fullscreens Preview and Coloring)
+    belly_fullscreen,
     belly_fullscreen_color,
+    belly_fullscreen_color2,
+    belly_fullscreen_color3,
+    belly_fullscreen_color4,
+    belly_fullscreen_alpha,
+    colorization_enabled,
 
     // Visuals (Vore FX)
     disable_hud,
@@ -314,6 +462,7 @@ const generateBellyString = (belly: Belly, index: number) => {
     escapable,
 
     escapechance,
+    escapechance_absorbed,
     escapetime,
 
     transferchance,
@@ -326,18 +475,26 @@ const generateBellyString = (belly: Belly, index: number) => {
     digestchance,
 
     // Interactions (Auto-Transfer)
-	autotransferwait,
+    autotransferwait,
     autotransferchance,
     autotransferlocation,
-	autotransferchance_secondary,
+    autotransferchance_secondary,
     autotransferlocation_secondary,
     autotransfer_enabled,
     autotransfer_min_amount,
     autotransfer_max_amount,
+    autotransfer_whitelist,
+    autotransfer_blacklist,
+    autotransfer_secondary_whitelist,
+    autotransfer_secondary_blacklist,
+    autotransfer_whitelist_items,
+    autotransfer_blacklist_items,
+    autotransfer_secondary_whitelist_items,
+    autotransfer_secondary_blacklist_items,
 
     // Liquid Options
     show_liquids,
-		reagentbellymode,
+    reagentbellymode,
 		reagent_chosen,
 		reagent_name,
 		reagent_transfer_verb,
@@ -345,6 +502,22 @@ const generateBellyString = (belly: Belly, index: number) => {
 		custom_max_volume,
 		vorefootsteps_sounds,
 		reagent_mode_flag_list,
+    liquid_overlay,
+    max_liquid_level,
+    reagent_touches,
+    mush_overlay,
+    mush_color,
+    mush_alpha,
+    max_mush,
+    min_mush,
+    item_mush_val,
+    custom_reagentcolor,
+    custom_reagentalpha,
+    metabolism_overlay,
+    metabolism_mush_ratio,
+    max_ingested,
+    custom_ingested_color,
+    custom_ingested_alpha,
 
     // Liquid Messages
     liquid_fullness1_messages,
@@ -393,7 +566,32 @@ const generateBellyString = (belly: Belly, index: number) => {
   result += '<div role="messagesTabpanel">'; // Start Div messagesTabpanel
   result += '<div class="row"><div class="col-4">';
   result += '<div class="list-group" id="messagesList" role="messagesTablist">';
-  result += '<a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#struggleMessagesOutside' + index + '" role="tab">Struggle Messages (Outside)</a>';
+  result += '<a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#escapeAttemptMessagesOwner' + index + '" role="tab">Escape Attempt Messages (Owner)</a>';
+  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#escapeAttemptMessagesPrey' + index + '" role="tab">Escape Attempt Messages (Prey)</a>';
+  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#escapeMessagesOwner' + index + '" role="tab">Escape Message (Owner)</a>';
+  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#escapeMessagesPrey' + index + '" role="tab">Escape Message (Prey)</a>';
+  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#escapeMessagesOutside' + index + '" role="tab">Escape Message (Outside)</a>';
+  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#escapeItemMessagesOwner' + index + '" role="tab">Escape Item Messages (Owner)</a>';
+  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#escapeItemMessagesPrey' + index + '" role="tab">Escape Item Messages (Prey)</a>';
+  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#escapeItemMessagesOutside' + index + '" role="tab">Escape Item Messages (Outside)</a>';
+  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#escapeFailMessagesOwner' + index + '" role="tab">Escape Fail Messages (Owner)</a>';
+  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#esccapeFailMessagesPrey' + index + '" role="tab">Escape Fail Messages (Prey)</a>';
+  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#escapeAttemptAbsorbedMessagesOwner' + index + '" role="tab">Escape Attempt Absorbed Messages (Owner)</a>';
+  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#escapeAttemptAbsorbedMessagesPrey' + index + '" role="tab">Escape Attempt Absorbed Messages (Prey)</a>';
+  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#escapeAbsorbedMessagesOwner' + index + '" role="tab">Escape Absorbed Messages (Owner)</a>';
+  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#escapeAbsorbedMessagesPrey' + index + '" role="tab">Escape Absorbed Messages (Prey)</a>';
+  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#escapeAbsorbedMessagesOutside' + index + '" role="tab">Escape Absorbed Messages (Outside)</a>';
+  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#escapeFailAbsorbedMessagesOwner' + index + '" role="tab">Escape Fail Absorbed Messages (Owner)</a>';
+  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#escapeFailAbsorbedMessagesPrey' + index + '" role="tab">Escape Fail Absorbed Messages (Prey)</a>';
+  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#primaryTransferMessagesOwner' + index + '" role="tab">Primary Transfer Messages (Owner)</a>';
+  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#primaryTransferMessagesPrey' + index + '" role="tab">Primary Transfer Messages (Prey)</a>';
+  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#secondaryTransferMessagesOwner' + index + '" role="tab">Secondary Transfer Messages (Owner)</a>';
+  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#secondaryTransferMessagesPrey' + index + '" role="tab">Secondary Transfer Messages (Prey)</a>';
+  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#digestChanceMessagesOwner' + index + '" role="tab">Digest Chance Messages (Owner)</a>';
+  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#digestChanceMessagesPrey' + index + '" role="tab">Digest Chance Messages (Prey)</a>';
+  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#absorbChanceMessagesOwner' + index + '" role="tab">Absorb Chance Messages (Owner)</a>';
+  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#absorbChanceMessagesPrey' + index + '" role="tab">Absorb Chance Messages (Prey)</a>';
+  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#struggleMessagesOutside' + index + '" role="tab">Struggle Messages (Outside)</a>';
   result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#struggleMessagesInside' + index + '" role="tab">Struggle Messages (Inside)</a>';
   result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#absorbedStruggleOutside' + index + '" role="tab">Absorbed Struggle Messages (Outside)</a>';
   result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#absorbedStruggleInside' + index + '" role="tab">Absorbed Struggle Messages (Inside)</a>';
@@ -410,7 +608,157 @@ const generateBellyString = (belly: Belly, index: number) => {
   result += '<div class="col-8">';
   result += '<div class="tab-content">';
 
-  result += '<div class="tab-pane fade show active" id="struggleMessagesOutside' + index + '" role="messagesTabpanel">';
+  result += '<div class="tab-pane fade show active" id="escapeAttemptMessagesOwner' + index + '" role="messagesTabpanel">';
+  escape_attempt_messages_owner?.forEach((msg) => {
+    result += msg + '<br>';
+  });
+  result += '</div>';
+
+  result += '<div class="tab-pane fade" id="escapeAttemptMessagesPrey' + index + '" role="messagesTabpanel">';
+  escape_attempt_messages_prey?.forEach((msg) => {
+    result += msg + '<br>';
+  });
+  result += '</div>';
+
+  result += '<div class="tab-pane fade" id="escapeMessagesOwner' + index + '" role="messagesTabpanel">';
+  escape_messages_owner?.forEach((msg) => {
+    result += msg + '<br>';
+  });
+  result += '</div>';
+
+  result += '<div class="tab-pane fade" id="escapeMessagesPrey' + index + '" role="messagesTabpanel">';
+  escape_messages_prey?.forEach((msg) => {
+    result += msg + '<br>';
+  });
+  result += '</div>';
+
+  result += '<div class="tab-pane fade" id="escapeMessagesOutside' + index + '" role="messagesTabpanel">';
+  escape_messages_outside?.forEach((msg) => {
+    result += msg + '<br>';
+  });
+  result += '</div>';
+
+  result += '<div class="tab-pane fade" id="escapeItemMessagesOwner' + index + '" role="messagesTabpanel">';
+  escape_item_messages_owner?.forEach((msg) => {
+    result += msg + '<br>';
+  });
+  result += '</div>';
+
+  result += '<div class="tab-pane fade" id="escapeItemMessagesPrey' + index + '" role="messagesTabpanel">';
+  escape_item_messages_prey?.forEach((msg) => {
+    result += msg + '<br>';
+  });
+  result += '</div>';
+
+  result += '<div class="tab-pane fade" id="escapeItemMessagesOutside' + index + '" role="messagesTabpanel">';
+  escape_item_messages_outside?.forEach((msg) => {
+    result += msg + '<br>';
+  });
+  result += '</div>';
+
+  result += '<div class="tab-pane fade" id="escapeFailMessagesOwner' + index + '" role="messagesTabpanel">';
+  escape_fail_messages_owner?.forEach((msg) => {
+    result += msg + '<br>';
+  });
+  result += '</div>';
+
+  result += '<div class="tab-pane fade" id="esccapeFailMessagesPrey' + index + '" role="messagesTabpanel">';
+  escape_fail_messages_prey?.forEach((msg) => {
+    result += msg + '<br>';
+  });
+  result += '</div>';
+
+  result += '<div class="tab-pane fade" id="escapeAttemptAbsorbedMessagesOwner' + index + '" role="messagesTabpanel">';
+  escape_attempt_absorbed_messages_owner?.forEach((msg) => {
+    result += msg + '<br>';
+  });
+  result += '</div>';
+
+  result += '<div class="tab-pane fade" id="escapeAttemptAbsorbedMessagesPrey' + index + '" role="messagesTabpanel">';
+  escape_attempt_absorbed_messages_prey?.forEach((msg) => {
+    result += msg + '<br>';
+  });
+  result += '</div>';
+
+  result += '<div class="tab-pane fade" id="escapeAbsorbedMessagesOwner' + index + '" role="messagesTabpanel">';
+  escape_absorbed_messages_owner?.forEach((msg) => {
+    result += msg + '<br>';
+  });
+  result += '</div>';
+
+  result += '<div class="tab-pane fade" id="escapeAbsorbedMessagesPrey' + index + '" role="messagesTabpanel">';
+  escape_absorbed_messages_prey?.forEach((msg) => {
+    result += msg + '<br>';
+  });
+  result += '</div>';
+
+  result += '<div class="tab-pane fade" id="escapeAbsorbedMessagesOutside' + index + '" role="messagesTabpanel">';
+  escape_absorbed_messages_outside?.forEach((msg) => {
+    result += msg + '<br>';
+  });
+  result += '</div>';
+
+  result += '<div class="tab-pane fade" id="escapeFailAbsorbedMessagesOwner' + index + '" role="messagesTabpanel">';
+  escape_fail_absorbed_messages_owner?.forEach((msg) => {
+    result += msg + '<br>';
+  });
+  result += '</div>';
+
+  result += '<div class="tab-pane fade" id="escapeFailAbsorbedMessagesPrey' + index + '" role="messagesTabpanel">';
+  escape_fail_absorbed_messages_prey?.forEach((msg) => {
+    result += msg + '<br>';
+  });
+  result += '</div>';
+
+  result += '<div class="tab-pane fade" id="primaryTransferMessagesOwner' + index + '" role="messagesTabpanel">';
+  primary_transfer_messages_owner?.forEach((msg) => {
+    result += msg + '<br>';
+  });
+  result += '</div>';
+
+  result += '<div class="tab-pane fade" id="primaryTransferMessagesPrey' + index + '" role="messagesTabpanel">';
+  primary_transfer_messages_prey?.forEach((msg) => {
+    result += msg + '<br>';
+  });
+  result += '</div>';
+
+  result += '<div class="tab-pane fade" id="secondaryTransferMessagesOwner' + index + '" role="messagesTabpanel">';
+  secondary_transfer_messages_owner?.forEach((msg) => {
+    result += msg + '<br>';
+  });
+  result += '</div>';
+
+  result += '<div class="tab-pane fade" id="secondaryTransferMessagesPrey' + index + '" role="messagesTabpanel">';
+  secondary_transfer_messages_prey?.forEach((msg) => {
+    result += msg + '<br>';
+  });
+  result += '</div>';
+
+  result += '<div class="tab-pane fade" id="digestChanceMessagesOwner' + index + '" role="messagesTabpanel">';
+  digest_chance_messages_owner?.forEach((msg) => {
+    result += msg + '<br>';
+  });
+  result += '</div>';
+
+  result += '<div class="tab-pane fade" id="digestChanceMessagesPrey' + index + '" role="messagesTabpanel">';
+  digest_chance_messages_prey?.forEach((msg) => {
+    result += msg + '<br>';
+  });
+  result += '</div>';
+
+  result += '<div class="tab-pane fade" id="absorbChanceMessagesOwner' + index + '" role="messagesTabpanel">';
+  absorb_chance_messages_owner?.forEach((msg) => {
+    result += msg + '<br>';
+  });
+  result += '</div>';
+
+  result += '<div class="tab-pane fade" id="absorbChanceMessagesPrey' + index + '" role="messagesTabpanel">';
+  absorb_chance_messages_prey?.forEach((msg) => {
+    result += msg + '<br>';
+  });
+  result += '</div>';
+
+  result += '<div class="tab-pane fade" id="struggleMessagesOutside' + index + '" role="messagesTabpanel">';
   struggle_messages_outside?.forEach((msg) => {
     result += msg + '<br>';
   });
@@ -654,6 +1002,7 @@ const generateBellyString = (belly: Belly, index: number) => {
   '</span>)</b>';
   result += '<ul class="list-group">';
   result += '<li class="list-group-item">Escape Chance: ' + escapechance + '%</li>';
+  result += '<li class="list-group-item">Escape Chance: ' + escapechance_absorbed + '%</li>';
   result += '<li class="list-group-item">Escape Time: ' + escapetime / 10 + 's</li>';
   result += '<li class="list-group-item">Transfer Chance: ' + transferchance + '%</li>';
   result += '<li class="list-group-item">Transfer Location: ' + transferlocation + '</li>';
@@ -674,6 +1023,18 @@ const generateBellyString = (belly: Belly, index: number) => {
   result += '<li class="list-group-item">Auto-Transfer Location: ' + autotransferlocation_secondary + '</li>';
   result += '<li class="list-group-item">Auto-Transfer Min Amount: ' + autotransfer_min_amount + '</li>';
   result += '<li class="list-group-item">Auto-Transfer Max Amount: ' + autotransfer_max_amount + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Primary Chance: ' + autotransferchance + '%</li>';
+  result += '<li class="list-group-item">Auto-Transfer Primary Location: ' + autotransferlocation + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Primary Whitelist (Mobs): ' + GetAutotransferFlags(autotransfer_whitelist, true) + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Primary Whitelist (Items): ' + GetAutotransferFlags(autotransfer_whitelist_items, true) + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Primary Blacklist (Mobs): ' + GetAutotransferFlags(autotransfer_blacklist, false) + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Primary Blacklist (Items): ' + GetAutotransferFlags(autotransfer_blacklist_items, false) + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Secondary Chance: ' + autotransferchance_secondary + '%</li>';
+  result += '<li class="list-group-item">Auto-Transfer Secondary Location: ' + autotransferlocation_secondary + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Secondary Whitelist (Mobs): ' + GetAutotransferFlags(autotransfer_secondary_whitelist, true) + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Secondary Whitelist (Items): ' + GetAutotransferFlags(autotransfer_secondary_whitelist_items, true) + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Secondary Blacklist (Mobs): ' + GetAutotransferFlags(autotransfer_secondary_blacklist, false) + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Secondary Blacklist (Items): ' + GetAutotransferFlags(autotransfer_secondary_blacklist_items, false) + '</li>';
   result += '</ul>';
   result += '</div></div></div>';
 

@@ -50,10 +50,10 @@
 /area/submap/MilitaryCamp1)
 "n" = (
 /obj/random/landmine,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/MilitaryCamp1)
 "o" = (
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/MilitaryCamp1)
 "p" = (
 /obj/item/weapon/material/shard,
@@ -61,58 +61,54 @@
 /area/submap/MilitaryCamp1)
 "q" = (
 /mob/living/simple_mob/mechanical/viscerator,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/MilitaryCamp1)
 "r" = (
 /obj/structure/girder,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/MilitaryCamp1)
 "s" = (
 /obj/machinery/computer/communications,
 /mob/living/simple_mob/mechanical/viscerator,
 /mob/living/simple_mob/mechanical/viscerator,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/MilitaryCamp1)
 "t" = (
 /obj/structure/table/standard,
 /mob/living/simple_mob/mechanical/viscerator,
 /mob/living/simple_mob/mechanical/viscerator,
 /obj/random/energy,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/MilitaryCamp1)
 "u" = (
 /obj/effect/mine,
 /obj/random/landmine,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/MilitaryCamp1)
 "v" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/MilitaryCamp1)
 "w" = (
 /obj/machinery/computer/security,
 /mob/living/simple_mob/mechanical/viscerator,
 /mob/living/simple_mob/mechanical/viscerator,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/MilitaryCamp1)
 "x" = (
 /mob/living/simple_mob/mechanical/viscerator,
 /mob/living/simple_mob/mechanical/viscerator,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/MilitaryCamp1)
 "y" = (
 /obj/item/weapon/material/shard,
 /obj/random/landmine,
 /turf/template_noop,
 /area/submap/MilitaryCamp1)
-"z" = (
-/obj/machinery/door/airlock,
-/turf/simulated/floor,
-/area/submap/MilitaryCamp1)
 "A" = (
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_mob/mechanical/viscerator,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/MilitaryCamp1)
 "B" = (
 /mob/living/simple_mob/mechanical/viscerator,
@@ -121,22 +117,22 @@
 "C" = (
 /obj/structure/table,
 /obj/random/firstaid,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/MilitaryCamp1)
 "D" = (
 /obj/structure/table/standard,
 /obj/random/firstaid,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/MilitaryCamp1)
 "E" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/random/landmine,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/MilitaryCamp1)
 "F" = (
 /obj/machinery/door/airlock,
 /obj/effect/mine,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/MilitaryCamp1)
 "G" = (
 /obj/structure/flora/tree/dead,
@@ -150,17 +146,21 @@
 /obj/structure/table/standard,
 /obj/random/cigarettes,
 /obj/item/weapon/flame/lighter/random,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/MilitaryCamp1)
 "J" = (
 /obj/structure/table/standard,
 /obj/random/toolbox,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/MilitaryCamp1)
 "K" = (
 /obj/effect/decal/cleanable/blood,
 /obj/random/landmine,
 /turf/template_noop,
+/area/submap/MilitaryCamp1)
+"S" = (
+/obj/machinery/door/airlock,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/MilitaryCamp1)
 
 (1,1,1) = {"
@@ -304,10 +304,10 @@ m
 m
 q
 q
-z
+S
 q
 q
-z
+S
 q
 I
 m
@@ -376,7 +376,7 @@ C
 m
 v
 o
-z
+S
 v
 b
 d
@@ -439,7 +439,7 @@ x
 m
 A
 E
-z
+S
 q
 q
 m
@@ -458,10 +458,10 @@ m
 m
 q
 x
-z
+S
 v
 v
-z
+S
 q
 q
 m

@@ -57,6 +57,9 @@
 		to_chat(src,"<span class='warning'>This area is preventing you from phasing!</span>")
 		return FALSE
 
+	if(ability_flags & AB_PHASE_SHIFTING)
+		return FALSE
+
 	var/brightness = T.get_lumcount() //Brightness in 0.0 to 1.0
 	darkness = 1-brightness //Invert
 
@@ -65,7 +68,7 @@
 	for(var/thing in orange(7, src))
 		if(istype(thing, /mob/living/carbon/human))
 			var/mob/living/carbon/human/watchers = thing
-			if(watchers in oviewers(7,src))	// And they can see us...
+			if(watchers in oviewers(7,src) && watchers.species != SPECIES_SHADEKIN)	// And they can see us... //CHOMPEDIT - (And aren't themselves a shadekin)
 				if(!(watchers.stat) && !isbelly(watchers.loc) && !istype(watchers.loc, /obj/item/weapon/holder))	// And they are alive and not being held by someone...
 					watcher++	// They are watching us!
 		else if(istype(thing, /mob/living/silicon/robot))
@@ -143,8 +146,9 @@
 	//Shifting in
 	if(ability_flags & AB_PHASE_SHIFTED)
 		ability_flags &= ~AB_PHASE_SHIFTED
+		ability_flags |= AB_PHASE_SHIFTING
 		mouse_opacity = 1
-		name = real_name
+		name = get_visible_name()
 		for(var/obj/belly/B as anything in vore_organs)
 			B.escapable = initial(B.escapable)
 
@@ -182,6 +186,8 @@
 					target.forceMove(vore_selected)
 					to_chat(target,"<span class='warning'>\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
 
+		ability_flags &= ~AB_PHASE_SHIFTING
+
 		//Affect nearby lights
 		var/destroy_lights = 0
 
@@ -213,9 +219,10 @@
 	//Shifting out
 	else
 		ability_flags |= AB_PHASE_SHIFTED
+		ability_flags |= AB_PHASE_SHIFTING
 		mouse_opacity = 0
 		custom_emote(1,"phases out!")
-		name = "Something"
+		name = get_visible_name()
 
 		//CHOMPEdit begin - Unequipping slots when phasing in, and preventing pulling stuff while phased.
 		if(l_hand)
@@ -250,6 +257,7 @@
 		incorporeal_move = TRUE
 		density = FALSE
 		force_max_speed = TRUE
+		ability_flags &= ~AB_PHASE_SHIFTING
 	SK.doing_phase = FALSE //CHOMPEdit - Prevent bugs when spamming phase button
 
 //CHOMPEdit start - gentle phasing for carbonkin
@@ -270,6 +278,25 @@
 	else
 		to_chat(src, "<span class='notice'>Phasing toggled to Gentle. You won't damage lights, but concentrating on that incurs a short stun.</span>")
 		SK.phase_gentle = 1
+//CHOMPEdit End
+
+//CHOMPEdit Start - Toggle to Nutrition conversion
+/mob/living/carbon/human/proc/nutrition_conversion_toggle()
+	set name = "Toggle Energy <-> Nutrition conversions"
+	set desc = "Toggle dark energy and nutrition being converted into each other when full"
+	set category = "Shadekin"
+
+	var/datum/species/shadekin/SK = species
+	if(!istype(SK))
+		to_chat(src, "<span class='warning'>Only a shadekin can use that!</span>")
+		return FALSE
+
+	if(SK.nutrition_energy_conversion)
+		to_chat(src, "<span class='notice'>Nutrition and dark energy conversions disabled.</span>")
+		SK.nutrition_energy_conversion = 0
+	else
+		to_chat(src, "<span class='notice'>Nutrition and dark energy conversions enabled.</span>")
+		SK.nutrition_energy_conversion = 1
 //CHOMPEdit End
 
 //CHOMPEdit Start - Shadekin probably shouldn't be hit while phasing

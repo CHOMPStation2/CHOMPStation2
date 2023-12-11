@@ -1,4 +1,4 @@
-/obj/item/organ/external/get_icon(var/skeletal)
+/obj/item/organ/external/get_icon(var/skeletal, var/can_apply_transparency = TRUE)
 	var/digitigrade = 0
 
 	// preferentially take digitigrade value from owner if available, THEN DNA.
@@ -9,6 +9,8 @@
 		digitigrade = check_digi && owner.digitigrade
 	else if(dna)
 		digitigrade = check_digi && dna.digitigrade
+
+	var/should_apply_transparency = FALSE
 
 	var/gender = "m"
 	var/skip_forced_icon = skip_robo_icon || (digi_prosthetic && digitigrade)
@@ -39,23 +41,29 @@
 				mob_icon = new /icon('icons/mob/human_races/r_skeleton.dmi', "[icon_name][gender ? "_[gender]" : ""]")
 			else if (robotic >= ORGAN_ROBOT && !skip_forced_icon)
 				mob_icon = new /icon('icons/mob/human_races/robotic.dmi', "[icon_name][gender ? "_[gender]" : ""]")
+				should_apply_transparency = TRUE
 				apply_colouration(mob_icon)
 			else
 				if(is_hidden_by_markings())
 					mob_icon = new /icon('icons/mob/human_races/r_blank.dmi', "[icon_name][gender ? "_[gender]" : ""]")
+					should_apply_transparency = TRUE
 				else
 					//Use digi icon if digitigrade, otherwise use regular icon. Ternary operator is based.
 					mob_icon = new /icon(digitigrade ? species.icodigi : species.get_icobase(owner, (status & ORGAN_MUTATED)), "[icon_name][gender ? "_[gender]" : ""]")
+					should_apply_transparency = TRUE
 					apply_colouration(mob_icon)
 
 	if (model && !skip_forced_icon)
 		icon_cache_key += "_model_[model]"
+		should_apply_transparency = TRUE
 		apply_colouration(mob_icon)
 
 	//Code here is copied from organ_icon.dm line 118 at time of writing (9/20/21), VOREStation edits are left in intentionally, because I think it's worth keeping track of the fact that the code is from Virgo's edits.
 	//Body markings, actually does not include head this time. Done separately above.
 	if((!istype(src,/obj/item/organ/external/head) && !(force_icon && !skip_forced_icon)) || (model && owner && owner.synth_markings))
 		for(var/M in markings)
+			if (!markings[M]["on"])
+				continue
 			var/datum/sprite_accessory/marking/mark_style = markings[M]["datum"]
 			var/isdigitype = mark_style.digitigrade_acceptance
 			if(check_digi)
@@ -82,6 +90,9 @@
 		mob_icon.Blend(I, ICON_OVERLAY)
 		icon_cache_key += "_[nail_polish.icon]_[nail_polish.icon_state]_[nail_polish.color]"
 	// VOREStation edit end
+
+	if (transparent && !istype(src,/obj/item/organ/external/head) && can_apply_transparency && should_apply_transparency) //VORESTATION EDIT: transparent instead of nonsolid
+		mob_icon += rgb(,,,180) //do it here so any markings become transparent as well
 
 	dir = EAST
 	icon = mob_icon

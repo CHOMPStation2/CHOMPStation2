@@ -13,23 +13,39 @@
 var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 														"a_synth_flesh_mono_hole",
 														"a_anim_belly",
-														"multi_layer_test_tummy")
+														"multi_layer_test_tummy",
+														"gematically_angular",
+														"entrance_to_a_tumby",
+														"passage_to_a_tumby",
+														"destination_tumby",
+														"destination_tumby_fluidless",
+														"post_tumby_passage",
+														"post_tumby_passage_fluidless",
+														"not_quite_tumby",
+														"could_it_be_a_tumby")
 */ //Chomp REMOVE End
 
-/mob/living
+/mob
 	var/datum/vore_look/vorePanel
 
-/mob/living/proc/insidePanel()
+/mob/proc/insidePanel()
 	set name = "Vore Panel"
 	set category = "IC"
 
+	if(SSticker.current_state == GAME_STATE_INIT)
+		return
+
+	if(!isliving(src))
+		init_vore()
+
 	if(!vorePanel)
-		log_debug("[src] ([type], \ref[src]) didn't have a vorePanel and tried to use the verb.")
+		if(!isnewplayer(src))
+			log_debug("[src] ([type], \ref[src]) didn't have a vorePanel and tried to use the verb.")
 		vorePanel = new(src)
 
 	vorePanel.tgui_interact(src)
 
-/mob/living/proc/updateVRPanel() //Panel popup update call from belly events.
+/mob/proc/updateVRPanel() //Panel popup update call from belly events.
 	if(vorePanel)
 		SStgui.update_uis(vorePanel)
 
@@ -37,12 +53,12 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 // Callback Handler for the Inside form
 //
 /datum/vore_look
-	var/mob/living/host // Note, we do this in case we ever want to allow people to view others vore panels
+	var/mob/host // Note, we do this in case we ever want to allow people to view others vore panels
 	var/unsaved_changes = FALSE
 	var/show_pictures = TRUE
 	var/max_icon_content = 21 //CHOMPedit: Contents above this disable icon mode. 21 for nice 3 rows to fill the default panel window.
 
-/datum/vore_look/New(mob/living/new_host)
+/datum/vore_look/New(mob/new_host)
 	if(istype(new_host))
 		host = new_host
 	. = ..()
@@ -159,15 +175,14 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		inside["contents"] = inside_contents
 	data["inside"] = inside
 
-	var/is_dogborg = FALSE
+	var/is_cyborg = FALSE
 	var/is_vore_simple_mob = FALSE
 	if(isrobot(host))
-		var/mob/living/silicon/robot/R = host
-		is_dogborg = R.dogborg
+		is_cyborg = TRUE
 	else if(istype(host, /mob/living/simple_mob/vore))	//So far, this does nothing. But, creating this for future belly work
 		is_vore_simple_mob = TRUE
 	data["host_mobtype"] = list(
-		"is_dogborg" = is_dogborg,
+		"is_cyborg" = is_cyborg,
 		"is_vore_simple_mob" = is_vore_simple_mob
 	)
 
@@ -203,6 +218,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"is_feedable" = selected.is_feedable, //CHOMPAdd
 			"egg_type" = selected.egg_type,
 			"egg_name" = selected.egg_name, //CHOMPAdd
+			"recycling" = selected.recycling, //CHOMPAdd
+			"storing_nutrition" = selected.storing_nutrition, //CHOMPAdd
+			"entrance_logs" = selected.entrance_logs, //CHOMPAdd
 			"nutrition_percent" = selected.nutrition_percent,
 			"digest_brute" = selected.digest_brute,
 			"digest_burn" = selected.digest_burn,
@@ -221,10 +239,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"belly_fullscreen" = selected.belly_fullscreen,
 			"eating_privacy_local" = selected.eating_privacy_local,
 			"silicon_belly_overlay_preference"	= selected.silicon_belly_overlay_preference,
-			"visible_belly_minimum_prey"	= selected.visible_belly_minimum_prey,
-			"overlay_min_prey_size"	= selected.overlay_min_prey_size,
-			"override_min_prey_size" = selected.override_min_prey_size,
-			"override_min_prey_num"	= selected.override_min_prey_num,
+			"belly_mob_mult" = selected.belly_mob_mult,
+			"belly_item_mult" = selected.belly_item_mult,
+			"belly_overall_mult" = selected.belly_overall_mult,
 			//CHOMP add: vore sprite options and additional stuff
 			"belly_fullscreen_color" = selected.belly_fullscreen_color,
 			//"belly_fullscreen_color_secondary" = selected.belly_fullscreen_color_secondary, // Chomp REMOVE - use our solution, not upstream's
@@ -235,6 +252,22 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"belly_fullscreen_color4" = selected.belly_fullscreen_color4,
 			"belly_fullscreen_alpha" = selected.belly_fullscreen_alpha,
 			"colorization_enabled" = selected.colorization_enabled,
+			"custom_reagentcolor" = selected.custom_reagentcolor,
+			"custom_reagentalpha" = selected.custom_reagentalpha,
+			"liquid_overlay" = selected.liquid_overlay,
+			"max_liquid_level" = selected.max_liquid_level,
+			"reagent_touches" = selected.reagent_touches,
+			"mush_overlay" = selected.mush_overlay,
+			"mush_color" = selected.mush_color,
+			"mush_alpha" = selected.mush_alpha,
+			"max_mush" = selected.max_mush,
+			"min_mush" = selected.min_mush,
+			"item_mush_val" = selected.item_mush_val,
+			"metabolism_overlay" = selected.metabolism_overlay,
+			"metabolism_mush_ratio" = selected.metabolism_mush_ratio,
+			"max_ingested" = selected.max_ingested,
+			"custom_ingested_color" = selected.custom_ingested_color,
+			"custom_ingested_alpha" = selected.custom_ingested_alpha,
 			"vorespawn_blacklist" = selected.vorespawn_blacklist,
 			"sound_volume" = selected.sound_volume,
 			"affects_voresprite" = selected.affects_vore_sprites,
@@ -256,7 +289,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"tail_to_change_to" = selected.tail_to_change_to,
 			"tail_colouration" = selected.tail_colouration,
 			"tail_extra_overlay" = selected.tail_extra_overlay,
-			"tail_extra_overlay2" = selected.tail_extra_overlay2
+			"tail_extra_overlay2" = selected.tail_extra_overlay2,
+			"noise_freq" = selected.noise_freq,
+			"item_digest_logs" = selected.item_digest_logs,
 			//"marking_to_add" = selected.marking_to_add
 			//CHOMPEdit end
 		)
@@ -277,6 +312,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 		selected_list["egg_type"] = selected.egg_type
 		selected_list["egg_name"] = selected.egg_name //CHOMPAdd
+		selected_list["recycling"] = selected.recycling //CHOMPAdd
+		selected_list["storing_nutrition"] = selected.storing_nutrition //CHOMPAdd
+		selected_list["item_digest_logs"] = selected.item_digest_logs //CHOMPAdd
 		selected_list["contaminates"] = selected.contaminates
 		selected_list["contaminate_flavor"] = null
 		selected_list["contaminate_color"] = null
@@ -288,6 +326,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		selected_list["interacts"] = list()
 		if(selected.escapable)
 			selected_list["interacts"]["escapechance"] = selected.escapechance
+			selected_list["interacts"]["escapechance_absorbed"] = selected.escapechance_absorbed
 			selected_list["interacts"]["escapetime"] = selected.escapetime
 			selected_list["interacts"]["transferchance"] = selected.transferchance
 			selected_list["interacts"]["transferlocation"] = selected.transferlocation
@@ -306,6 +345,48 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			selected_list["autotransfer"]["autotransferlocation_secondary"] = selected.autotransferlocation_secondary	//CHOMPAdd
 			selected_list["autotransfer"]["autotransfer_min_amount"] = selected.autotransfer_min_amount
 			selected_list["autotransfer"]["autotransfer_max_amount"] = selected.autotransfer_max_amount
+			//CHOMPAdd auto-transfer flags
+			var/list/at_whitelist = list()
+			for(var/flag_name in selected.autotransfer_flags_list)
+				if(selected.autotransfer_whitelist & selected.autotransfer_flags_list[flag_name])
+					at_whitelist.Add(flag_name)
+			selected_list["autotransfer"]["autotransfer_whitelist"] = at_whitelist
+			var/list/at_blacklist = list()
+			for(var/flag_name in selected.autotransfer_flags_list)
+				if(selected.autotransfer_blacklist & selected.autotransfer_flags_list[flag_name])
+					at_blacklist.Add(flag_name)
+			selected_list["autotransfer"]["autotransfer_blacklist"] = at_blacklist
+			var/list/at_whitelist_items = list()
+			for(var/flag_name in selected.autotransfer_flags_list_items)
+				if(selected.autotransfer_whitelist_items & selected.autotransfer_flags_list_items[flag_name])
+					at_whitelist_items.Add(flag_name)
+			selected_list["autotransfer"]["autotransfer_whitelist_items"] = at_whitelist_items
+			var/list/at_blacklist_items = list()
+			for(var/flag_name in selected.autotransfer_flags_list_items)
+				if(selected.autotransfer_blacklist_items & selected.autotransfer_flags_list_items[flag_name])
+					at_blacklist_items.Add(flag_name)
+			selected_list["autotransfer"]["autotransfer_blacklist_items"] = at_blacklist_items
+			var/list/at_secondary_whitelist = list()
+			for(var/flag_name in selected.autotransfer_flags_list)
+				if(selected.autotransfer_secondary_whitelist & selected.autotransfer_flags_list[flag_name])
+					at_secondary_whitelist.Add(flag_name)
+			selected_list["autotransfer"]["autotransfer_secondary_whitelist"] = at_secondary_whitelist
+			var/list/at_secondary_blacklist = list()
+			for(var/flag_name in selected.autotransfer_flags_list)
+				if(selected.autotransfer_secondary_blacklist & selected.autotransfer_flags_list[flag_name])
+					at_secondary_blacklist.Add(flag_name)
+			selected_list["autotransfer"]["autotransfer_secondary_blacklist"] = at_secondary_blacklist
+			var/list/at_secondary_whitelist_items = list()
+			for(var/flag_name in selected.autotransfer_flags_list_items)
+				if(selected.autotransfer_secondary_whitelist_items & selected.autotransfer_flags_list_items[flag_name])
+					at_secondary_whitelist_items.Add(flag_name)
+			selected_list["autotransfer"]["autotransfer_secondary_whitelist_items"] = at_secondary_whitelist_items
+			var/list/at_secondary_blacklist_items = list()
+			for(var/flag_name in selected.autotransfer_flags_list_items)
+				if(selected.autotransfer_secondary_blacklist_items & selected.autotransfer_flags_list_items[flag_name])
+					at_secondary_blacklist_items.Add(flag_name)
+			selected_list["autotransfer"]["autotransfer_secondary_blacklist_items"] = at_secondary_blacklist_items
+			//CHOMPAdd END
 
 		selected_list["disable_hud"] = selected.disable_hud
 		selected_list["colorization_enabled"] = selected.colorization_enabled
@@ -367,6 +448,22 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					var/list/selected_list_member = selected_list["liq_interacts"]["liq_reagent_addons"]
 					ASSERT(islist(selected_list_member))
 					selected_list_member.Add(flag_name)
+			selected_list["liq_interacts"]["custom_reagentcolor"] = selected.custom_reagentcolor ? selected.custom_reagentcolor : selected.reagentcolor
+			selected_list["liq_interacts"]["custom_reagentalpha"] = selected.custom_reagentalpha ? selected.custom_reagentalpha : "Default"
+			selected_list["liq_interacts"]["liquid_overlay"] = selected.liquid_overlay
+			selected_list["liq_interacts"]["max_liquid_level"] = selected.max_liquid_level
+			selected_list["liq_interacts"]["reagent_touches"] = selected.reagent_touches
+			selected_list["liq_interacts"]["mush_overlay"] = selected.mush_overlay
+			selected_list["liq_interacts"]["mush_color"] = selected.mush_color
+			selected_list["liq_interacts"]["mush_alpha"] = selected.mush_alpha
+			selected_list["liq_interacts"]["max_mush"] = selected.max_mush
+			selected_list["liq_interacts"]["min_mush"] = selected.min_mush
+			selected_list["liq_interacts"]["item_mush_val"] = selected.item_mush_val
+			selected_list["liq_interacts"]["metabolism_overlay"] = selected.metabolism_overlay
+			selected_list["liq_interacts"]["metabolism_mush_ratio"] = selected.metabolism_mush_ratio
+			selected_list["liq_interacts"]["max_ingested"] = selected.max_ingested
+			selected_list["liq_interacts"]["custom_ingested_color"] = selected.custom_ingested_color ? selected.custom_ingested_color : "#3f6088"
+			selected_list["liq_interacts"]["custom_ingested_alpha"] = selected.custom_ingested_alpha
 
 		selected_list["show_liq_fullness"] = selected.show_fullness_messages
 		selected_list["liq_messages"] = list()
@@ -412,6 +509,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		"slip_vore" = host.slip_vore,
 		"stumble_vore" = host.stumble_vore,
 		"throw_vore" = host.throw_vore,
+		"food_vore" = host.food_vore,
 		"nutrition_message_visible" = host.nutrition_message_visible,
 		"nutrition_messages" = host.nutrition_messages,
 		"weight_message_visible" = host.weight_message_visible,
@@ -655,6 +753,131 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					if(new_absorbed_struggle_messages_inside)
 						new_belly.set_messages(new_absorbed_struggle_messages_inside,"asmi")
 
+				if(islist(belly_data["escape_attempt_messages_prey"]))
+					var/new_escape_attempt_messages_prey = sanitize(jointext(belly_data["escape_attempt_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_attempt_messages_prey)
+						new_belly.set_messages(new_escape_attempt_messages_prey,"escap")
+
+				if(islist(belly_data["escape_attempt_messages_owner"]))
+					var/new_escape_attempt_messages_owner = sanitize(jointext(belly_data["escape_attempt_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_attempt_messages_owner)
+						new_belly.set_messages(new_escape_attempt_messages_owner,"escao")
+
+				if(islist(belly_data["escape_messages_prey"]))
+					var/new_escape_messages_prey = sanitize(jointext(belly_data["escape_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_messages_prey)
+						new_belly.set_messages(new_escape_messages_prey,"escp")
+
+				if(islist(belly_data["escape_messages_owner"]))
+					var/new_escape_messages_owner = sanitize(jointext(belly_data["escape_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_messages_owner)
+						new_belly.set_messages(new_escape_messages_owner,"esco")
+
+				if(islist(belly_data["escape_messages_outside"]))
+					var/new_escape_messages_outside = sanitize(jointext(belly_data["escape_messages_outside"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_messages_outside)
+						new_belly.set_messages(new_escape_messages_outside,"escout")
+
+				if(islist(belly_data["escape_item_messages_prey"]))
+					var/new_escape_item_messages_prey = sanitize(jointext(belly_data["escape_item_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_item_messages_prey)
+						new_belly.set_messages(new_escape_item_messages_prey,"escip")
+
+				if(islist(belly_data["escape_item_messages_owner"]))
+					var/new_escape_item_messages_owner = sanitize(jointext(belly_data["escape_item_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_item_messages_owner)
+						new_belly.set_messages(new_escape_item_messages_owner,"escio")
+
+				if(islist(belly_data["escape_item_messages_outside"]))
+					var/new_escape_item_messages_outside = sanitize(jointext(belly_data["escape_item_messages_outside"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_item_messages_outside)
+						new_belly.set_messages(new_escape_item_messages_outside,"esciout")
+
+				if(islist(belly_data["escape_fail_messages_prey"]))
+					var/new_escape_fail_messages_prey = sanitize(jointext(belly_data["escape_fail_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_fail_messages_prey)
+						new_belly.set_messages(new_escape_fail_messages_prey,"escfp")
+
+				if(islist(belly_data["escape_fail_messages_owner"]))
+					var/new_escape_fail_messages_owner = sanitize(jointext(belly_data["escape_fail_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_fail_messages_owner)
+						new_belly.set_messages(new_escape_fail_messages_owner,"escfo")
+
+				if(islist(belly_data["escape_attempt_absorbed_messages_prey"]))
+					var/new_escape_attempt_absorbed_messages_prey = sanitize(jointext(belly_data["escape_attempt_absorbed_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_attempt_absorbed_messages_prey)
+						new_belly.set_messages(new_escape_attempt_absorbed_messages_prey,"aescap")
+
+				if(islist(belly_data["escape_attempt_absorbed_messages_owner"]))
+					var/new_escape_attempt_absorbed_messages_owner = sanitize(jointext(belly_data["escape_attempt_absorbed_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_attempt_absorbed_messages_owner)
+						new_belly.set_messages(new_escape_attempt_absorbed_messages_owner,"aescao")
+
+				if(islist(belly_data["escape_absorbed_messages_prey"]))
+					var/new_escape_absorbed_messages_prey = sanitize(jointext(belly_data["escape_absorbed_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_absorbed_messages_prey)
+						new_belly.set_messages(new_escape_absorbed_messages_prey,"aescp")
+
+				if(islist(belly_data["escape_absorbed_messages_owner"]))
+					var/new_escape_absorbed_messages_owner = sanitize(jointext(belly_data["escape_absorbed_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_absorbed_messages_owner)
+						new_belly.set_messages(new_escape_absorbed_messages_owner,"aesco")
+
+				if(islist(belly_data["escape_absorbed_messages_outside"]))
+					var/new_escape_absorbed_messages_outside = sanitize(jointext(belly_data["escape_absorbed_messages_outside"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_absorbed_messages_outside)
+						new_belly.set_messages(new_escape_absorbed_messages_outside,"aescout")
+
+				if(islist(belly_data["escape_fail_absorbed_messages_prey"]))
+					var/new_escape_fail_absorbed_messages_prey = sanitize(jointext(belly_data["escape_fail_absorbed_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_fail_absorbed_messages_prey)
+						new_belly.set_messages(new_escape_fail_absorbed_messages_prey,"aescfp")
+
+				if(islist(belly_data["escape_fail_absorbed_messages_owner"]))
+					var/new_escape_fail_absorbed_messages_owner = sanitize(jointext(belly_data["escape_fail_absorbed_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_fail_absorbed_messages_owner)
+						new_belly.set_messages(new_escape_fail_absorbed_messages_owner,"aescfo")
+
+				if(islist(belly_data["primary_transfer_messages_prey"]))
+					var/new_primary_transfer_messages_prey = sanitize(jointext(belly_data["primary_transfer_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_primary_transfer_messages_prey)
+						new_belly.set_messages(new_primary_transfer_messages_prey,"trnspp")
+
+				if(islist(belly_data["primary_transfer_messages_owner"]))
+					var/new_primary_transfer_messages_owner = sanitize(jointext(belly_data["primary_transfer_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_primary_transfer_messages_owner)
+						new_belly.set_messages(new_primary_transfer_messages_owner,"trnspo")
+
+				if(islist(belly_data["secondary_transfer_messages_prey"]))
+					var/new_secondary_transfer_messages_prey = sanitize(jointext(belly_data["secondary_transfer_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_secondary_transfer_messages_prey)
+						new_belly.set_messages(new_secondary_transfer_messages_prey,"trnssp")
+
+				if(islist(belly_data["secondary_transfer_messages_owner"]))
+					var/new_secondary_transfer_messages_owner = sanitize(jointext(belly_data["secondary_transfer_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_secondary_transfer_messages_owner)
+						new_belly.set_messages(new_secondary_transfer_messages_owner,"trnsso")
+
+				if(islist(belly_data["digest_chance_messages_prey"]))
+					var/new_digest_chance_messages_prey = sanitize(jointext(belly_data["digest_chance_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_digest_chance_messages_prey)
+						new_belly.set_messages(new_digest_chance_messages_prey,"stmodp")
+
+				if(islist(belly_data["digest_chance_messages_owner"]))
+					var/new_digest_chance_messages_owner = sanitize(jointext(belly_data["digest_chance_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_digest_chance_messages_owner)
+						new_belly.set_messages(new_digest_chance_messages_owner,"stmodo")
+
+				if(islist(belly_data["absorb_chance_messages_prey"]))
+					var/new_absorb_chance_messages_prey = sanitize(jointext(belly_data["absorb_chance_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_absorb_chance_messages_prey)
+						new_belly.set_messages(new_absorb_chance_messages_prey,"stmoap")
+
+				if(islist(belly_data["absorb_chance_messages_owner"]))
+					var/new_absorb_chance_messages_owner = sanitize(jointext(belly_data["absorb_chance_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_absorb_chance_messages_owner)
+						new_belly.set_messages(new_absorb_chance_messages_owner,"stmoao")
+
 				if(islist(belly_data["examine_messages"]))
 					var/new_examine_messages = sanitize(jointext(belly_data["examine_messages"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
 					if(new_examine_messages)
@@ -827,12 +1050,40 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						if(new_egg_type in global_vore_egg_types)
 							new_belly.egg_type = new_egg_type
 
-				if(istext(belly_data["egg_name"]))
+				if(istext(belly_data["egg_name"])) //CHOMPAdd Start
 					var/new_egg_name = html_encode(belly_data["egg_name"])
 					if(new_egg_name)
 						new_egg_name = readd_quotes(new_egg_name)
 					if(length(new_egg_name) >= BELLIES_NAME_MIN && length(new_egg_name) <= BELLIES_NAME_MAX)
 						new_belly.egg_name = new_egg_name
+
+				if(isnum(belly_data["recycling"]))
+					var/new_recycling = belly_data["recycling"]
+					if(new_recycling == 0)
+						new_belly.recycling = FALSE
+					if(new_recycling == 1)
+						new_belly.recycling = TRUE
+
+				if(isnum(belly_data["storing_nutrition"]))
+					var/new_storing_nutrition = belly_data["storing_nutrition"]
+					if(new_storing_nutrition == 0)
+						new_belly.storing_nutrition = FALSE
+					if(new_storing_nutrition == 1)
+						new_belly.storing_nutrition = TRUE
+
+				if(isnum(belly_data["entrance_logs"]))
+					var/new_entrance_logs = belly_data["entrance_logs"]
+					if(new_entrance_logs == 0)
+						new_belly.entrance_logs = FALSE
+					if(new_entrance_logs == 1)
+						new_belly.entrance_logs = TRUE
+
+				if(isnum(belly_data["item_digest_logs"]))
+					var/new_item_digest_logs = belly_data["item_digest_logs"]
+					if(new_item_digest_logs == 0)
+						new_belly.item_digest_logs = FALSE
+					if(new_item_digest_logs == 1)
+						new_belly.item_digest_logs = TRUE //CHOMPAdd End
 
 				if(istext(belly_data["selective_preference"]))
 					var/new_selective_preference = belly_data["selective_preference"]
@@ -893,6 +1144,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				if(isnum(belly_data["sound_volume"]))
 					var/new_sound_volume = belly_data["sound_volume"]
 					new_belly.sound_volume = sanitize_integer(new_sound_volume, 0, 100, initial(new_belly.sound_volume))
+
+				if(isnum(belly_data["noise_freq"])) //CHOMPAdd Start
+					var/new_noise_freq = belly_data["noise_freq"]
+					new_belly.noise_freq = sanitize_integer(new_noise_freq, MIN_VOICE_FREQ, MAX_VOICE_FREQ, initial(new_belly.noise_freq)) //CHOMPAdd End
 
 				// Visuals
 				if(isnum(belly_data["affects_vore_sprites"]))
@@ -1072,6 +1327,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					var/new_escapechance = belly_data["escapechance"]
 					new_belly.escapechance = sanitize_integer(new_escapechance, 0, 100, initial(new_belly.escapechance))
 
+				if(isnum(belly_data["escapechance_absorbed"]))
+					var/new_escapechance_absorbed = belly_data["escapechance_absorbed"]
+					new_belly.escapechance_absorbed = sanitize_integer(new_escapechance_absorbed, 0, 100, initial(new_belly.escapechance_absorbed))
+
+
 				if(isnum(belly_data["escapetime"]))
 					var/new_escapetime = belly_data["escapetime"]
 					new_belly.escapetime = sanitize_integer(new_escapetime*10, 10, 600, initial(new_belly.escapetime))
@@ -1107,6 +1367,26 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 							new_belly.transferlocation_secondary = new_transferlocation_secondary
 						if(new_transferlocation_secondary == new_belly.name)
 							new_belly.transferlocation_secondary = null
+
+				if(islist(belly_data["autotransfer_whitelist"]))
+					new_belly.autotransfer_whitelist = 0
+					for(var/at_flag in belly_data["autotransfer_whitelist"])
+						new_belly.autotransfer_whitelist += new_belly.autotransfer_flags_list[at_flag]
+
+				if(islist(belly_data["autotransfer_blacklist"]))
+					new_belly.autotransfer_blacklist = 0
+					for(var/at_flag in belly_data["autotransfer_blacklist"])
+						new_belly.autotransfer_blacklist += new_belly.autotransfer_flags_list[at_flag]
+
+				if(islist(belly_data["autotransfer_secondary_whitelist"]))
+					new_belly.autotransfer_secondary_whitelist = 0
+					for(var/at_flag in belly_data["autotransfer_secondary_whitelist"])
+						new_belly.autotransfer_secondary_whitelist += new_belly.autotransfer_flags_list[at_flag]
+
+				if(islist(belly_data["autotransfer_secondary_blacklist"]))
+					new_belly.autotransfer_secondary_blacklist = 0
+					for(var/at_flag in belly_data["autotransfer_secondary_blacklist"])
+						new_belly.autotransfer_secondary_blacklist += new_belly.autotransfer_flags_list[at_flag]
 
 				if(isnum(belly_data["absorbchance"]))
 					var/new_absorbchance = belly_data["absorbchance"]
@@ -1240,6 +1520,55 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					for(var/reagent_flag in belly_data["reagent_mode_flag_list"])
 						new_belly.reagent_mode_flags += new_belly.reagent_mode_flag_list[reagent_flag]
 
+				if(istext(belly_data["custom_reagentcolor"]))
+					var/custom_reagentcolor = sanitize_hexcolor(belly_data["custom_reagentcolor"],new_belly.custom_reagentcolor)
+					new_belly.custom_reagentcolor = custom_reagentcolor
+
+				if(istext(belly_data["mush_color"]))
+					var/mush_color = sanitize_hexcolor(belly_data["mush_color"],new_belly.mush_color)
+					new_belly.mush_color = mush_color
+
+				if(istext(belly_data["mush_alpha"]))
+					var/new_mush_alpha = sanitize_integer(belly_data["mush_alpha"],0,255,initial(new_belly.mush_alpha))
+					new_belly.mush_alpha = new_mush_alpha
+
+				if(isnum(belly_data["max_mush"]))
+					var/max_mush = belly_data["max_mush"]
+					new_belly.max_mush = CLAMP(max_mush, 0, 6000)
+
+				if(isnum(belly_data["min_mush"]))
+					var/min_mush = belly_data["min_mush"]
+					new_belly.min_mush = CLAMP(min_mush, 0, 100)
+
+				if(isnum(belly_data["item_mush_val"]))
+					var/item_mush_val = belly_data["item_mush_val"]
+					new_belly.item_mush_val = CLAMP(item_mush_val, 0, 1000)
+
+				if(isnum(belly_data["liquid_overlay"]))
+					var/new_liquid_overlay = belly_data["liquid_overlay"]
+					if(new_liquid_overlay == 0)
+						new_belly.liquid_overlay = FALSE
+					if(new_liquid_overlay == 1)
+						new_belly.liquid_overlay = TRUE
+
+				if(isnum(belly_data["max_liquid_level"]))
+					var/max_liquid_level = belly_data["max_liquid_level"]
+					new_belly.max_liquid_level = CLAMP(max_liquid_level, 0, 100)
+
+				if(isnum(belly_data["reagent_touches"]))
+					var/new_reagent_touches = belly_data["reagent_touches"]
+					if(new_reagent_touches == 0)
+						new_belly.reagent_touches = FALSE
+					if(new_reagent_touches == 1)
+						new_belly.reagent_touches = TRUE
+
+				if(isnum(belly_data["mush_overlay"]))
+					var/new_mush_overlay = belly_data["mush_overlay"]
+					if(new_mush_overlay == 0)
+						new_belly.mush_overlay = FALSE
+					if(new_mush_overlay == 1)
+						new_belly.mush_overlay = TRUE
+
 				// Liquid Messages
 				if(isnum(belly_data["show_fullness_messages"]))
 					var/new_show_fullness_messages = belly_data["show_fullness_messages"]
@@ -1337,7 +1666,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			return set_attr(usr, params)
 
 		if("saveprefs")
-			if(host.real_name != host.client.prefs.real_name || (!ishuman(host) && !issilicon(host)))
+			if(isnewplayer(host))
+				var/choice = tgui_alert(usr, "Warning: Saving your vore panel while in the lobby will save it to the CURRENTLY LOADED character slot, and potentially overwrite it. Are you SURE you want to overwrite your current slot with these vore bellies?", "WARNING!", list("No, abort!", "Yes, save."))
+				if(choice != "Yes, save.")
+					return TRUE
+			else if(host.real_name != host.client.prefs.real_name || (!ishuman(host) && !issilicon(host)))
 				var/choice = tgui_alert(usr, "Warning: Saving your vore panel while playing what is very-likely not your normal character will overwrite whatever character you have loaded in character setup. Maybe this is your 'playing a simple mob' slot, though. Are you SURE you want to overwrite your current slot with these vore bellies?", "WARNING!", list("No, abort!", "Yes, save."))
 				if(choice != "Yes, save.")
 					return TRUE
@@ -1561,6 +1894,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.throw_vore = !host.throw_vore
 			unsaved_changes = TRUE
 			return TRUE
+		if("toggle_food_vore")
+			host.food_vore = !host.food_vore
+			unsaved_changes = TRUE
+			return TRUE
 		if("switch_selective_mode_pref")
 			host.selective_preference = tgui_input_list(usr, "What would you prefer happen to you with selective bellymode?","Selective Bellymode", list(DM_DEFAULT, DM_DIGEST, DM_ABSORB, DM_DRAIN))
 			if(!(host.selective_preference))
@@ -1710,6 +2047,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 	var/list/available_options = list("Examine", "Eject", "Move", "Transfer")
 	if(ishuman(target))
 		available_options += "Transform"
+		available_options += "Health Check"
 	//CHOMPEdit Begin - Add Reforming
 	if(isobserver(target) || istype(target,/obj/item/device/mmi))
 		available_options += "Reform"
@@ -1718,6 +2056,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		var/mob/living/datarget = target
 		if(datarget.client)
 			available_options += "Process"
+		available_options += "Health"
 	intent = tgui_input_list(user, "What would you like to do with [target]?", "Vore Pick", available_options)
 	switch(intent)
 		if("Examine")
@@ -1946,6 +2285,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 							H.reload_fullscreen()
 					MMI.body_backup = null
 			return TRUE
+		if("Health")
+			var/mob/living/ourtarget = target
+			to_chat(user, "<span class='notice'>Current health reading for \The [ourtarget]: [ourtarget.health] / [ourtarget.maxHealth] </span>")
+			return TRUE
 		//CHOMPEdit End
 		if("Process")
 			var/mob/living/ourtarget = target
@@ -1991,6 +2334,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						l.adjust_nutrition(thismuch)
 					ourtarget.death()		// To make sure all on-death procs get properly called
 					if(ourtarget)
+						if(ourtarget.is_preference_enabled(/datum/client_preference/digestion_noises))
+							if(!b.fancy_vore)
+								SEND_SOUND(ourtarget, sound(get_sfx("classic_death_sounds")))
+							else
+								SEND_SOUND(ourtarget, sound(get_sfx("fancy_death_prey")))
 						b.handle_digestion_death(ourtarget)
 				if("Absorb")
 					if(tgui_alert(ourtarget, "\The [usr] is attempting to instantly absorb you. Is this something you are okay with happening to you?","Instant Absorb", list("No", "Yes")) != "Yes")
@@ -2008,12 +2356,36 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					b.absorb_living(ourtarget)
 				if("Cancel")
 					return
+		if("Health Check")
+			var/mob/living/carbon/human/H = target
+			var/target_health = round((H.health/H.getMaxHealth())*100)
+			var/condition
+			var/condition_consequences
+			to_chat(usr, "<span class= 'warning'>\The [target] is at [target_health]% health.</span>")
+			if(H.blinded)
+				condition += "blinded"
+				condition_consequences += "hear emotes"
+			if(H.paralysis)
+				if(condition)
+					condition += " and "
+					condition_consequences += " or "
+				condition += "paralysed"
+				condition_consequences += "make emotes"
+			if(H.sleeping)
+				if(condition)
+					condition += " and "
+					condition_consequences += " or "
+				condition += "sleeping"
+				condition_consequences += "hear or do anything"
+			if(condition)
+				to_chat(usr, "<span class= 'warning'>\The [target] is currently [condition], they will not be able to [condition_consequences].</span>")
+			return
+
 
 /datum/vore_look/proc/set_attr(mob/user, params)
 	if(!host.vore_selected)
 		tgui_alert_async(usr, "No belly selected to modify.")
 		return FALSE
-
 	var/attr = params["attribute"]
 	switch(attr)
 		if("b_name")
@@ -2113,7 +2485,13 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				tgui_alert_async(usr, "Entered name too long (max [BELLIES_NAME_MAX]).","Error")
 				return FALSE
 			host.vore_selected.egg_name = new_egg_name
-			. = TRUE //CHOMPAdd End
+			. = TRUE
+		if("b_recycling")
+			host.vore_selected.recycling = !host.vore_selected.recycling
+			. = TRUE
+		if("b_storing_nutrition")
+			host.vore_selected.storing_nutrition = !host.vore_selected.storing_nutrition
+			. = TRUE//CHOMPAdd End
 		if("b_desc")
 			var/new_desc = html_encode(tgui_input_text(usr,"Belly Description, '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name. ([BELLIES_DESC_MAX] char limit):","New Description",host.vore_selected.desc, multiline = TRUE, prevent_enter = TRUE))
 
@@ -2187,6 +2565,131 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					var/new_message = sanitize(tgui_input_text(user,"These are sent to absorbed prey when they struggle. Write them in 2nd person ('you feel X'). Avoid using %prey in this type. %count will not work for this type, and %countprey will only count absorbed victims."+help,"Struggle Message (inside)",host.vore_selected.get_messages("asmi"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
 					if(new_message)
 						host.vore_selected.set_messages(new_message,"asmi")
+
+				if("escap")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to prey when they try to escape from within you. Write them in 2nd person ('you start to X')."+help,"Escape Attempt Message (to prey)",host.vore_selected.get_messages("escap"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"escap")
+
+				if("escao")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to you when prey tries to escape from within you. Write them in 2nd person ('X ... from your Y')."+help,"Escape Attempt Message (to you)",host.vore_selected.get_messages("escao"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"escao")
+
+				if("escp")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to prey when they escape from within you. Write them in 2nd person ('you climb out of Y)."+help,"Escape Message (to prey)",host.vore_selected.get_messages("escp"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"escp")
+
+				if("esco")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to you when prey escapes from within you. Write them in 2nd person ('X ... from your Y')."+help,"Escape Message (to you)",host.vore_selected.get_messages("esco"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"esco")
+
+				if("escout")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to those around you when prey escapes from within you. Write them in 3rd person ('X climbs out of Z's Y')."+help,"Escape Message (outside)",host.vore_selected.get_messages("escout"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"escout")
+
+				if("escip")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to prey when they manage to eject an item from within you. Write them in 2nd person ('you manage to O'). Use %item to refer to the ejected item in this type."+help,"Escape Item Message (to prey)",host.vore_selected.get_messages("escip"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"escip")
+
+				if("escio")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to you when prey manages to eject an item from within you. Write them in 2nd person ('O slips from Y'). Use %item to refer to the ejected item in this type."+help,"Escape Item Message (to you)",host.vore_selected.get_messages("escio"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"escio")
+
+				if("esciout")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to those around you when prey manages to eject an item from within you. Write them in 3rd person ('O from Y'). Use %item to refer to the ejected item in this type."+help,"Escape Item Message (outside)",host.vore_selected.get_messages("esciout"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"esciout")
+
+				if("escfp")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to prey when they fail to escape from within you. Write them in 2nd person ('you failed to Y')."+help,"Escape Fail Message (to prey)",host.vore_selected.get_messages("escfp"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"escfp")
+
+				if("escfo")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to you when prey fails to escape from within you. Write them in 2nd person ('X failed ... your Y')."+help,"Escape Fail Message (to you)",host.vore_selected.get_messages("escfo"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"escfo")
+
+				if("aescap")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to absorbed prey when they try to escape from within you. Write them in 2nd person ('you start to X')."+help,"Absorbed Escape Attempt Message (to prey)",host.vore_selected.get_messages("aescap"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"aescap")
+
+				if("aescao")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to you when absorbed prey tries to escape from within you. Write them in 2nd person ('X ... from your Y')."+help,"Absorbed Escape Attempt Message (to you)",host.vore_selected.get_messages("aescao"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"aescao")
+
+				if("aescp")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to absorbed prey when they escape from within you. Write them in 2nd person ('you escape from Y')."+help,"Absorbed Escape Message (to prey)",host.vore_selected.get_messages("aescp"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"aescp")
+
+				if("aesco")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to you when absorbed prey escapes from within you. Write them in 2nd person ('X ... from your Y')."+help,"Absorbed Escape Message (to you)",host.vore_selected.get_messages("aesco"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"aesco")
+
+				if("aescout")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to those around you when absorbed prey escapes from within you. Write them in 3rd person ('X escapes from Z's Y')."+help,"Absorbed Escape Message (outside)",host.vore_selected.get_messages("aescout"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"aescout")
+
+				if("aescfp")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to absorbed prey when they fail to escape from within you. Write them in 2nd person ('you failed to Y')."+help,"Absorbed Escape Fail Message (to prey)",host.vore_selected.get_messages("aescfp"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"aescfp")
+
+				if("aescfo")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to you when absorbed prey fails to escape from within you. Write them in 2nd person ('X failed ... your Y')."+help,"Absorbed Escape Fail Message (to you)",host.vore_selected.get_messages("aescfo"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"aescfo")
+
+				if("trnspp")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to prey when they are automatically transferred into your primary destination. Write them in 2nd person ('you slide into Y'). Use %dest to refer to the target location in this type."+help,"Primary Transfer Message (to prey)",host.vore_selected.get_messages("trnspp"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"trnspp")
+
+				if("trnspo")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to you when prey is automatically transferred into your primary destination. Write them in 2nd person ('X slid into your Y'). Use %dest to refer to the target location in this type."+help,"Primary Transfer Message (to you)",host.vore_selected.get_messages("trnspo"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"trnspo")
+
+				if("trnssp")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to prey when they are automatically transferred into your secondary destination. Write them in 2nd person ('you slide into Y'). Use %dest to refer to the target location in this type."+help,"Secondary Transfer Message (to prey)",host.vore_selected.get_messages("trnssp"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"trnssp")
+
+				if("trnsso")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to you when prey is automatically transferred into your primary destination. Write them in 2nd person ('X slid into your Y'). Use %dest to refer to the target location in this type."+help,"Secondary Transfer Message (to you)",host.vore_selected.get_messages("trnsso"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"trnsso")
+
+				if("stmodp")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to prey when they trigger the interaction digest chance. Write them in 2nd person ('you feel X')."+help,"Stomach Mode Digest Message (to prey)",host.vore_selected.get_messages("stmodp"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"stmodp")
+
+				if("stmodo")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to you when prey triggers the interaction digest chance. Write them in 2nd person ('you feel X')."+help,"Stomach Mode Digest Message (to you)",host.vore_selected.get_messages("stmodo"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"stmodo")
+
+				if("stmoap")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to prey when they trigger the interaction absorb chance. Write them in 2nd person ('you feel X')."+help,"Stomach Mode Digest Message (to prey)",host.vore_selected.get_messages("stmoap"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"stmoap")
+
+				if("stmoao")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to you when prey triggers the interaction absorb chance. Write them in 2nd person ('you feel X')."+help,"Stomach Mode Digest Message (to you)",host.vore_selected.get_messages("stmoao"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"stmoao")
 
 				if("em")
 					var/new_message = sanitize(tgui_input_text(user,"These are sent to people who examine you when this belly has contents. Write them in 3rd person ('Their %belly is bulging')."+help,"Examine Message (when full)",host.vore_selected.get_messages("em"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
@@ -2292,6 +2795,31 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						host.vore_selected.struggle_messages_inside = initial(host.vore_selected.struggle_messages_inside)
 						host.vore_selected.absorbed_struggle_messages_outside = initial(host.vore_selected.absorbed_struggle_messages_outside)
 						host.vore_selected.absorbed_struggle_messages_inside = initial(host.vore_selected.absorbed_struggle_messages_inside)
+						host.vore_selected.escape_attempt_messages_owner = initial(host.vore_selected.escape_attempt_messages_owner)
+						host.vore_selected.escape_attempt_messages_prey = initial(host.vore_selected.escape_attempt_messages_prey)
+						host.vore_selected.escape_messages_owner = initial(host.vore_selected.escape_messages_owner)
+						host.vore_selected.escape_messages_prey = initial(host.vore_selected.escape_messages_prey)
+						host.vore_selected.escape_messages_outside = initial(host.vore_selected.escape_messages_outside)
+						host.vore_selected.escape_item_messages_owner = initial(host.vore_selected.escape_item_messages_owner)
+						host.vore_selected.escape_item_messages_prey = initial(host.vore_selected.escape_item_messages_prey)
+						host.vore_selected.escape_item_messages_outside = initial(host.vore_selected.escape_item_messages_outside)
+						host.vore_selected.escape_fail_messages_owner = initial(host.vore_selected.escape_fail_messages_owner)
+						host.vore_selected.escape_fail_messages_prey = initial(host.vore_selected.escape_fail_messages_prey)
+						host.vore_selected.escape_attempt_absorbed_messages_owner = initial(host.vore_selected.escape_attempt_absorbed_messages_owner)
+						host.vore_selected.escape_attempt_absorbed_messages_prey = initial(host.vore_selected.escape_attempt_absorbed_messages_prey)
+						host.vore_selected.escape_absorbed_messages_owner = initial(host.vore_selected.escape_absorbed_messages_owner)
+						host.vore_selected.escape_absorbed_messages_prey = initial(host.vore_selected.escape_absorbed_messages_prey)
+						host.vore_selected.escape_absorbed_messages_outside = initial(host.vore_selected.escape_absorbed_messages_outside)
+						host.vore_selected.escape_fail_absorbed_messages_owner = initial(host.vore_selected.escape_fail_absorbed_messages_owner)
+						host.vore_selected.escape_fail_absorbed_messages_prey = initial(host.vore_selected.escape_fail_absorbed_messages_prey)
+						host.vore_selected.primary_transfer_messages_owner = initial(host.vore_selected.primary_transfer_messages_owner)
+						host.vore_selected.primary_transfer_messages_prey = initial(host.vore_selected.primary_transfer_messages_prey)
+						host.vore_selected.secondary_transfer_messages_owner = initial(host.vore_selected.secondary_transfer_messages_owner)
+						host.vore_selected.secondary_transfer_messages_prey = initial(host.vore_selected.secondary_transfer_messages_prey)
+						host.vore_selected.digest_chance_messages_owner = initial(host.vore_selected.digest_chance_messages_owner)
+						host.vore_selected.digest_chance_messages_prey = initial(host.vore_selected.digest_chance_messages_prey)
+						host.vore_selected.absorb_chance_messages_owner = initial(host.vore_selected.absorb_chance_messages_owner)
+						host.vore_selected.absorb_chance_messages_prey = initial(host.vore_selected.absorb_chance_messages_prey)
 						host.vore_selected.examine_messages = initial(host.vore_selected.examine_messages)
 						host.vore_selected.examine_messages_absorbed = initial(host.vore_selected.examine_messages_absorbed)
 						host.vore_selected.emote_lists = initial(host.vore_selected.emote_lists)
@@ -2321,49 +2849,40 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.vore_selected.eating_privacy_local = privacy_choice
 			. = TRUE
 		if("b_silicon_belly")
-			var/belly_choice = tgui_alert(usr, "Choose whether you'd like your belly overlay to show from sleepers \
-			or from normal vore bellies. NOTE: This ONLY applies to silicons, not human mobs!", "Belly Overlay Preference",
-			list("Sleeper", "Vorebelly"))
+			var/belly_choice = tgui_alert(usr, "Choose whether you'd like your belly overlay to show from sleepers, \
+			normal vore bellies, or an average of the two. NOTE: This ONLY applies to silicons, not human mobs!", "Belly Overlay \
+			Preference",
+			list("Sleeper", "Vorebelly", "Both"))
 			if(belly_choice == null)
 				return FALSE
 			host.vore_selected.silicon_belly_overlay_preference = belly_choice
-			host.updateicon()
+			host.update_icon()
 			. = TRUE
-		if("b_min_belly_number_flat")
-			var/new_min_belly = tgui_input_number(user, "Choose the amount of prey your belly must contain \
-			at absolute minimum (should be lower or equal to minimum prey override if prey override is ON)",
-			"Set minimum prey amount", host.vore_selected.visible_belly_minimum_prey, max_value = 100, min_value = 1)
-			if(new_min_belly == null)
+		if("b_belly_mob_mult")
+			var/new_prey_mult = tgui_input_number(user, "Choose the multiplier for mobs contributing to belly size, ranging from 0 to 5. Set to 0 to disable mobs contributing to belly size",
+			"Set Prey Multiplier", host.vore_selected.belly_mob_mult, max_value = 5, min_value = 0)
+			if(new_prey_mult == null)
 				return FALSE
-			var/new_new_min_belly = CLAMP(new_min_belly, 1, 100)	//Clamping at 100 rather than infinity. Should be close to infinity tho.
-			host.vore_selected.visible_belly_minimum_prey = new_new_min_belly
-			host.updateicon()
+			host.vore_selected.belly_mob_mult = CLAMP(new_prey_mult, 0, 5) //Max at 5 because in no world will a borg have more than 5 bellies
+			host.update_icon()
 			. = TRUE
-		if("b_min_belly_prey_size")
-			var/new_belly_size = tgui_input_number(user, "Choose the required size prey must be to trigger belly overlay, \
-			ranging from 25% to 200%. Set to 0 to disable size checks", "Set Belly Examine Size.", max_value = 200, min_value = 0)
-			if(new_belly_size == null)
+		if("b_belly_item_mult")
+			var/new_item_mult = tgui_input_number(user, "Choose the multiplier for items contributing to belly size, \
+			ranging from 0 to 10. (Item size affects how much they contribute as well) Set to 0 to disable size checks", "Set Item Multiplier", host.vore_selected.belly_item_mult, max_value = 10, min_value = 0)
+			if(new_item_mult == null)
 				return FALSE
-			else if(new_belly_size == 0)
-				host.vore_selected.overlay_min_prey_size = 0
 			else
-				var/new_new_belly_size = CLAMP(new_belly_size, 25, 200)
-				host.vore_selected.overlay_min_prey_size = (new_new_belly_size/100)
-			host.updateicon()
+				host.vore_selected.belly_item_mult = CLAMP(new_item_mult, 0, 10) //Max at 10 because items contribute less than mobs, in general
+			host.update_icon()
 			. = TRUE
-		if("b_override_min_belly_prey_size")
-			host.vore_selected.override_min_prey_size = !host.vore_selected.override_min_prey_size
-			host.updateicon()
-			. = TRUE
-		if("b_min_belly_number_override")
-			var/new_min_prey = tgui_input_number(user, "Choose the amount of prey your belly must contain to override min prey size \
-			to show belly overlay ignoring prey size requirement. Toggle Prey Override MUST be ON to work",
-			"Set minimum prey amount", host.vore_selected.override_min_prey_num, max_value = 100, min_value = 1)
-			if(new_min_prey == null)
+		if("b_belly_overall_mult")
+			var/new_overall_mult = tgui_input_number(user, "Choose the overall multiplier to be applied to belly contents after specific multipliers, ranging from 0 to 5. Set to 0 to disable showing belly sprites at all.",
+			"Set minimum prey amount", host.vore_selected.belly_overall_mult, max_value = 5, min_value = 0)
+			if(new_overall_mult == null)
 				return FALSE
-			var/new_new_min_prey = CLAMP(new_min_prey, 1, 100)	//Clamping at 100 rather than infinity. Should be close to infinity tho.
-			host.vore_selected.override_min_prey_num = new_new_min_prey
-			host.updateicon()
+			else
+				host.vore_selected.belly_overall_mult = CLAMP(new_overall_mult, 0, 5) // Max at 5 because... no reason to go higher at that point
+			host.update_icon()
 			. = TRUE
 		if("b_fancy_sound")
 			host.vore_selected.fancy_vore = !host.vore_selected.fancy_vore
@@ -2391,6 +2910,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				releasetest = classic_release_sounds[host.vore_selected.release_sound]
 
 			if(releasetest)
+				releasetest = sound(releasetest) //CHOMPAdd
+				releasetest.volume = host.vore_selected.sound_volume //CHOMPAdd
+				releasetest.frequency = host.vore_selected.noise_freq //CHOMPAdd
 				SEND_SOUND(user, releasetest)
 			. = TRUE
 		if("b_sound")
@@ -2412,19 +2934,45 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			else
 				voretest = classic_vore_sounds[host.vore_selected.vore_sound]
 			if(voretest)
+				voretest = sound(voretest) //CHOMPAdd
+				voretest.volume = host.vore_selected.sound_volume //CHOMPAdd
+				voretest.frequency = host.vore_selected.noise_freq //CHOMPAdd
 				SEND_SOUND(user, voretest)
 			. = TRUE
-		if("b_sound_volume") //CHOMPAdd
+		if("b_sound_volume") //CHOMPAdd Start
 			var/sound_volume_input = tgui_input_number(user, "Set belly sound volume percentage.", "Sound Volume", null, 100, 0)
 			if(!isnull(sound_volume_input)) //These have to be 'null' because both cancel and 0 are valid, separate options
 				host.vore_selected.sound_volume = sanitize_integer(sound_volume_input, 0, 100, initial(host.vore_selected.sound_volume))
 			. = TRUE
+		if("b_noise_freq")
+			var/list/preset_noise_freqs = list("high" = MAX_VOICE_FREQ, "middle-high" = 56250, "middle" = 42500, "middle-low"= 28750, "low" = MIN_VOICE_FREQ, "custom" = 1, "random" = 0)
+			var/choice = tgui_input_list(user, "What would you like to set your noise frequency to? ([MIN_VOICE_FREQ] - [MAX_VOICE_FREQ])", "Noise Frequency", preset_noise_freqs)
+			if(!choice)
+				return
+			choice = preset_noise_freqs[choice]
+			if(choice == 0)
+				host.vore_selected.noise_freq = 42500
+				return TOPIC_REFRESH
+			else if(choice == 1)
+				choice = tgui_input_number(user, "Choose your organ's noise frequency, ranging from [MIN_VOICE_FREQ] to [MAX_VOICE_FREQ]", "Custom Noise Frequency", null, MAX_VOICE_FREQ, MIN_VOICE_FREQ, round_value = TRUE)
+			if(choice > MAX_VOICE_FREQ)
+				choice = MAX_VOICE_FREQ
+			else if(choice < MIN_VOICE_FREQ)
+				choice = MIN_VOICE_FREQ
+			host.vore_selected.noise_freq = choice
+			. = TRUE  //CHOMPAdd End
 		if("b_tastes")
 			host.vore_selected.can_taste = !host.vore_selected.can_taste
 			. = TRUE
-		if("b_feedable") //CHOMPAdd
+		if("b_feedable") //CHOMPAdd Start
 			host.vore_selected.is_feedable = !host.vore_selected.is_feedable
 			. = TRUE
+		if("b_entrance_logs")
+			host.vore_selected.entrance_logs = !host.vore_selected.entrance_logs
+			. = TRUE
+		if("b_item_digest_logs")
+			host.vore_selected.item_digest_logs = !host.vore_selected.item_digest_logs
+			. = TRUE //CHOMPAdd End
 		if("b_bulge_size")
 			var/new_bulge = tgui_input_number(user, "Choose the required size prey must be to show up on examine, ranging from 25% to 200% Set this to 0 for no text on examine.", "Set Belly Examine Size.", max_value = 200, min_value = 0)
 			if(new_bulge == null)
@@ -2527,6 +3075,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			if(!isnull(escape_chance_input)) //These have to be 'null' because both cancel and 0 are valid, separate options
 				host.vore_selected.escapechance = sanitize_integer(escape_chance_input, 0, 100, initial(host.vore_selected.escapechance))
 			. = TRUE
+		if("b_escapechance_absorbed")
+			var/escape_absorbed_chance_input = tgui_input_number(user, "Set absorbed prey escape chance on resist (as %)", "Prey Absorbed Escape Chance", null, 100, 0)
+			if(!isnull(escape_absorbed_chance_input)) //These have to be 'null' because both cancel and 0 are valid, separate options
+				host.vore_selected.escapechance_absorbed = sanitize_integer(escape_absorbed_chance_input, 0, 100, initial(host.vore_selected.escapechance_absorbed))
+			. = TRUE
 		if("b_escapetime")
 			var/escape_time_input = tgui_input_number(user, "Set number of seconds for prey to escape on resist (1-60)", "Prey Escape Time", null, 60, 1)
 			if(!isnull(escape_time_input))
@@ -2604,6 +3157,63 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			else
 				host.vore_selected.autotransferlocation_secondary = choice.name
 			. = TRUE
+		if("b_autotransfer_whitelist")
+			var/list/menu_list = host.vore_selected.autotransfer_flags_list.Copy()
+			var/toggle_addon = tgui_input_list(usr, "Toggle Whitelist", "Whitelist Choice", menu_list)
+			if(!toggle_addon)
+				return FALSE
+			host.vore_selected.autotransfer_whitelist ^= host.vore_selected.autotransfer_flags_list[toggle_addon]
+			. = TRUE
+		if("b_autotransfer_blacklist")
+			var/list/menu_list = host.vore_selected.autotransfer_flags_list.Copy()
+			var/toggle_addon = tgui_input_list(usr, "Toggle Blacklist", "Blacklist Choice", menu_list)
+			if(!toggle_addon)
+				return FALSE
+			host.vore_selected.autotransfer_blacklist ^= host.vore_selected.autotransfer_flags_list[toggle_addon]
+			. = TRUE
+		if("b_autotransfer_secondary_whitelist")
+			var/list/menu_list = host.vore_selected.autotransfer_flags_list.Copy()
+			var/toggle_addon = tgui_input_list(usr, "Toggle Whitelist", "Whitelist Choice", menu_list)
+			if(!toggle_addon)
+				return FALSE
+			host.vore_selected.autotransfer_secondary_whitelist ^= host.vore_selected.autotransfer_flags_list[toggle_addon]
+			. = TRUE
+		if("b_autotransfer_secondary_blacklist")
+			var/list/menu_list = host.vore_selected.autotransfer_flags_list.Copy()
+			var/toggle_addon = tgui_input_list(usr, "Toggle Blacklist", "Blacklist Choice", menu_list)
+			if(!toggle_addon)
+				return FALSE
+			host.vore_selected.autotransfer_secondary_blacklist ^= host.vore_selected.autotransfer_flags_list[toggle_addon]
+			. = TRUE
+			. = TRUE
+		if("b_autotransfer_whitelist_items")
+			var/list/menu_list = host.vore_selected.autotransfer_flags_list_items.Copy()
+			var/toggle_addon = tgui_input_list(usr, "Toggle Whitelist", "Whitelist Choice", menu_list)
+			if(!toggle_addon)
+				return FALSE
+			host.vore_selected.autotransfer_whitelist_items ^= host.vore_selected.autotransfer_flags_list_items[toggle_addon]
+			. = TRUE
+		if("b_autotransfer_blacklist_items")
+			var/list/menu_list = host.vore_selected.autotransfer_flags_list_items.Copy()
+			var/toggle_addon = tgui_input_list(usr, "Toggle Blacklist", "Blacklist Choice", menu_list)
+			if(!toggle_addon)
+				return FALSE
+			host.vore_selected.autotransfer_blacklist_items ^= host.vore_selected.autotransfer_flags_list_items[toggle_addon]
+			. = TRUE
+		if("b_autotransfer_secondary_whitelist_items")
+			var/list/menu_list = host.vore_selected.autotransfer_flags_list_items.Copy()
+			var/toggle_addon = tgui_input_list(usr, "Toggle Whitelist", "Whitelist Choice", menu_list)
+			if(!toggle_addon)
+				return FALSE
+			host.vore_selected.autotransfer_secondary_whitelist_items ^= host.vore_selected.autotransfer_flags_list_items[toggle_addon]
+			. = TRUE
+		if("b_autotransfer_secondary_blacklist_items")
+			var/list/menu_list = host.vore_selected.autotransfer_flags_list_items.Copy()
+			var/toggle_addon = tgui_input_list(usr, "Toggle Blacklist", "Blacklist Choice", menu_list)
+			if(!toggle_addon)
+				return FALSE
+			host.vore_selected.autotransfer_secondary_blacklist_items ^= host.vore_selected.autotransfer_flags_list_items[toggle_addon]
+			. = TRUE
 		if("b_autotransfer_min_amount")
 			var/autotransfer_min_amount_input = input(user, "Set the minimum amount of items your belly can belly auto-transfer at once. Set to 0 for no limit.", "Auto-Transfer Min Amount") as num|null
 			if(!isnull(autotransfer_min_amount_input))
@@ -2628,12 +3238,6 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.vore_selected.colorization_enabled = !host.vore_selected.colorization_enabled
 			host.vore_selected.belly_fullscreen = "dark" //This prevents you from selecting a belly that is not meant to be colored and then turning colorization on.
 			. = TRUE
-		/*
-		if("b_multilayered") //Allows for 'multilayered' stomachs. Currently not implemented. Add to TGUI.
-			host.vore_selected.multilayered = !host.vore_selected.multilayered 				//Add to stomach vars.
-			host.vore_selected.belly_fullscreen = "dark"
-			. = TRUE
-		*/
 		if("b_preview_belly")
 			host.vore_selected.vore_preview(host) //Gives them the stomach overlay. It fades away after ~2 seconds as human/life.dm removes the overlay if not in a gut.
 			. = TRUE
@@ -2672,12 +3276,12 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			. = TRUE
 		/* //Chomp REMOVE - use our solution, not upstream's
 		if("b_fullscreen_color_secondary")
-			var/newcolor = input(usr, "Choose a color.", "", host.vore_selected.belly_fullscreen_color) as color|null
+			var/newcolor = input(usr, "Choose a color.", "", host.vore_selected.belly_fullscreen_color_secondary) as color|null
 			if(newcolor)
 				host.vore_selected.belly_fullscreen_color_secondary = newcolor
 			. = TRUE
 		if("b_fullscreen_color_trinary")
-			var/newcolor = input(usr, "Choose a color.", "", host.vore_selected.belly_fullscreen_color) as color|null
+			var/newcolor = input(usr, "Choose a color.", "", host.vore_selected.belly_fullscreen_color_trinary) as color|null
 			if(newcolor)
 				host.vore_selected.belly_fullscreen_color_trinary = newcolor
 			. = TRUE
@@ -2923,6 +3527,130 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			if(!reagent_toggle_addon)
 				return FALSE
 			host.vore_selected.reagent_mode_flags ^= host.vore_selected.reagent_mode_flag_list[reagent_toggle_addon]
+			. = TRUE
+		if("b_liquid_overlay")
+			if(!host.vore_selected.liquid_overlay)
+				host.vore_selected.liquid_overlay = 1
+				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] now has liquid overlay enabled.</span>")
+			else
+				host.vore_selected.liquid_overlay = 0
+				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] no longer has liquid overlay enabled.</span>")
+			. = TRUE
+		if("b_max_liquid_level")
+			var/new_max_liquid_level = input(user, "Set custom maximum liquid level. 0-100%", "Set Custom Max Level.", host.vore_selected.max_liquid_level) as num|null
+			if(new_max_liquid_level == null)
+				return FALSE
+			var/new_new_max_liquid_level = CLAMP(new_max_liquid_level, 0, 100)
+			host.vore_selected.max_liquid_level = new_new_max_liquid_level
+			host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_custom_reagentcolor")
+			var/newcolor = input(usr, "Choose custom color for liquid overlay. Cancel for normal reagent color.", "", host.vore_selected.custom_reagentcolor) as color|null
+			if(newcolor)
+				host.vore_selected.custom_reagentcolor = newcolor
+			else
+				host.vore_selected.custom_reagentcolor = null
+			host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_custom_reagentalpha")
+			var/newalpha = tgui_input_number(usr, "Set alpha transparency between 0-255. Leave blank to use capacity based alpha.", "Custom Liquid Alpha",255,255,0,0,1)
+			if(newalpha != null)
+				host.vore_selected.custom_reagentalpha = newalpha
+			else
+				host.vore_selected.custom_reagentalpha = null
+			host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_reagent_touches")
+			if(!host.vore_selected.reagent_touches)
+				host.vore_selected.reagent_touches = 1
+				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] will now apply reagents to creatures when digesting.</span>")
+			else
+				host.vore_selected.reagent_touches = 0
+				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] will no longer apply reagents to creatures when digesting.</span>")
+			. = TRUE
+		if("b_mush_overlay")
+			if(!host.vore_selected.mush_overlay)
+				host.vore_selected.mush_overlay = 1
+				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] now has fullness overlay enabled.</span>")
+			else
+				host.vore_selected.mush_overlay = 0
+				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] no longer has fullness overlay enabled.</span>")
+			host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_mush_color")
+			var/newcolor = input(usr, "Choose custom color for mush overlay.", "", host.vore_selected.mush_color) as color|null
+			if(newcolor)
+				host.vore_selected.mush_color = newcolor
+				host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_mush_alpha")
+			var/newalpha = tgui_input_number(usr, "Set alpha transparency between 0-255", "Mush Alpha",255,255,0,0,1)
+			if(newalpha != null)
+				host.vore_selected.mush_alpha = newalpha
+				host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_max_mush")
+			var/new_max_mush = input(user, "Choose the amount of nutrition required for full mush overlay. Ranges from 0 to 6000. Default 500.", "Set Fullness Overlay Scaling.", host.vore_selected.max_mush) as num|null
+			if(new_max_mush == null)
+				return FALSE
+			var/new_new_max_mush = CLAMP(new_max_mush, 0, 6000)
+			host.vore_selected.max_mush = new_new_max_mush
+			host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_min_mush")
+			var/new_min_mush = input(user, "Set custom minimum mush level. 0-100%", "Set Custom Minimum.", host.vore_selected.min_mush) as num|null
+			if(new_min_mush == null)
+				return FALSE
+			var/new_new_min_mush = CLAMP(new_min_mush, 0, 100)
+			host.vore_selected.min_mush = new_new_min_mush
+			host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_item_mush_val")
+			var/new_item_mush_val = input(user, "Set how much solid belly contents affect mush level. 0-1000 fullness per item.", "Set Item Mush Value.", host.vore_selected.item_mush_val) as num|null
+			if(new_item_mush_val == null)
+				return FALSE
+			var/new_new_item_mush_val = CLAMP(new_item_mush_val, 0, 1000)
+			host.vore_selected.item_mush_val = new_new_item_mush_val
+			host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_metabolism_overlay")
+			if(!host.vore_selected.metabolism_overlay)
+				host.vore_selected.metabolism_overlay = 1
+				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] now has ingested metabolism overlay enabled.</span>")
+			else
+				host.vore_selected.metabolism_overlay = 0
+				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] no longer has ingested metabolism overlay enabled.</span>")
+			host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_metabolism_mush_ratio")
+			var/new_metabolism_mush_ratio = input(user, "How much should ingested reagents affect fullness overlay compared to nutrition? Nutrition units per reagent unit. Default 15.", "Set Metabolism Mush Ratio.", host.vore_selected.metabolism_mush_ratio) as num|null
+			if(new_metabolism_mush_ratio == null)
+				return FALSE
+			var/new_new_metabolism_mush_ratio = CLAMP(new_metabolism_mush_ratio, 0, 500)
+			host.vore_selected.metabolism_mush_ratio = new_new_metabolism_mush_ratio
+			host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_max_ingested")
+			var/new_max_ingested = input(user, "Choose the amount of reagents within ingested metabolism required for full mush overlay when not using mush overlay option. Ranges from 0 to 6000. Default 500.", "Set Metabolism Overlay Scaling.", host.vore_selected.max_ingested) as num|null
+			if(new_max_ingested == null)
+				return FALSE
+			var/new_new_max_ingested = CLAMP(new_max_ingested, 0, 6000)
+			host.vore_selected.max_ingested = new_new_max_ingested
+			host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_custom_ingested_color")
+			var/newcolor = input(usr, "Choose custom color for ingested metabolism overlay. Cancel for reagent-based dynamic blend.", "", host.vore_selected.custom_ingested_color) as color|null
+			if(newcolor)
+				host.vore_selected.custom_ingested_color = newcolor
+			else
+				host.vore_selected.custom_ingested_color = null
+			host.vore_selected.update_internal_overlay()
+			. = TRUE
+		if("b_custom_ingested_alpha")
+			var/newalpha = tgui_input_number(usr, "Set alpha transparency between 0-255 when not using mush overlay option.", "Custom Ingested Alpha",255,255,0,0,1)
+			if(newalpha != null)
+				host.vore_selected.custom_ingested_alpha = newalpha
+				host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_liq_purge")
 			var/alert = alert("Are you sure you want to delete the liquids in your [lowertext(host.vore_selected.name)]?","Confirmation","Delete","Cancel")

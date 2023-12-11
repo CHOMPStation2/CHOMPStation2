@@ -6,6 +6,7 @@
 	var/totalPlayers = 0		//Player counts for the Lobby tab
 	var/totalPlayersReady = 0
 	var/show_hidden_jobs = 0	//Show jobs that are set to "Never" in preferences
+	var/has_respawned = FALSE	//Determines if we're using RESPAWN_MESSAGE
 	var/datum/browser/panel
 	universal_speak = 1
 
@@ -21,6 +22,7 @@
 
 /mob/new_player/New()
 	mob_list += src
+	verbs |= /mob/proc/insidePanel
 	initialized = TRUE // Explicitly don't use Initialize().  New players join super early and use New()
 
 /mob/new_player/verb/new_player_panel()
@@ -38,16 +40,21 @@
 
 	if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
 		if(ready)
-			output += "<p>\[ <span class='linkOn'><b>Ready</b></span> | <a href='byond://?src=\ref[src];ready=0'>Not Ready</a> \]</p>"
+			output += "<p>\[ <span class='linkOn'><b>Ready</b></span> | <a href='byond://?src=\ref[src];ready=0'>Not Ready</a> \]</p>" //ChompEDIT - fixed height
 		else
-			output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Ready</a> | <span class='linkOn'><b>Not Ready</b></span> \]</p>"
+			output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Ready</a> | <span class='linkOn'><b>Not Ready</b></span> \]</p>" //ChompEDIT - fixed height
+		output += "<p><s>Join Game!</s></p>" //ChompEDIT - fixed height
 
 	else
-		output += "<a href='byond://?src=\ref[src];manifest=1'>View the Crew Manifest</A><br><br>"
+		output += "<p><a href='byond://?src=\ref[src];manifest=1'>View the Crew Manifest</A></p>" //ChompEDIT - fixed height
 		output += "<p><a href='byond://?src=\ref[src];late_join=1'>Join Game!</A></p>"
 
 	output += "<p><a href='byond://?src=\ref[src];observe=1'>Observe</A></p>"
 
+	output += "<hr>" //ChompADD - a line divider between functional and info buttons
+
+	/*
+	//nobody uses this feature
 	if(!IsGuestKey(src.key))
 		establish_db_connection()
 
@@ -63,23 +70,31 @@
 				break
 			qdel(query) //CHOMPEdit TGSQL
 			if(newpoll)
-				output += "<p><b><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A> (NEW!)</b></p>"
+				output += "<p><b><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A><br>(NEW!)</b></p>" //ChompEDIT - fixed height
 			else
-				output += "<p><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A></p>"
+				output += "<p><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A><br><i>No Changes</i></p>" //ChompEDIT - fixed height
+	*/
 
 	if(client.check_for_new_server_news())
-		output += "<p><b><a href='byond://?src=\ref[src];shownews=1'>Show Game Updates</A> (NEW!)</b></p>"
+		output += "<p><b><a href='byond://?src=\ref[src];shownews=1'>Show Server News</A><br>(NEW!)</b></p>" //ChompEDIT 'Game updates' --> 'Server news'
 	else
-		output += "<p><a href='byond://?src=\ref[src];shownews=1'>Show Game Updates</A></p>"
+		output += "<p><a href='byond://?src=\ref[src];shownews=1'>Show Server News</A><br><i>No Changes</i></p>" //ChompEDIT 'Game updates' --> 'Server news'
 
 	if(SSsqlite.can_submit_feedback(client))
 		output += "<p>[href(src, list("give_feedback" = 1), "Give Feedback")]</p>"
 
 	if(GLOB.news_data.station_newspaper)
 		if(client.prefs.lastlorenews == GLOB.news_data.newsindex)
-			output += "<p><a href='byond://?src=\ref[src];open_station_news=1'>Show [using_map.station_name] News</A></p>"
+			output += "<p><a href='byond://?src=\ref[src];open_station_news=1'>Show [using_map.station_name] News<br><i>No Changes</i></A></p>" //ChompEDIT - fixed height
 		else
-			output += "<p><b><a href='byond://?src=\ref[src];open_station_news=1'>Show [using_map.station_name] News (NEW!)</A></b></p>"
+			output += "<p><b><a href='byond://?src=\ref[src];open_station_news=1'>Show [using_map.station_name] News<br>(NEW!)</A></b></p>" //ChompEDIT - fixed height
+
+	//ChompEDIT start: Show Changelog
+	if(client.prefs.lastchangelog == changelog_hash)
+		output += "<p><a href='byond://?src=\ref[src];open_changelog=1'>Show Changelog</A><br><i>No Changes</i></p>"
+	else
+		output += "<p><b><a href='byond://?src=\ref[src];open_changelog=1'>Show Changelog</A><br>(NEW!)</b></p>"
+	//ChompEDIT End
 
 	output += "</div>"
 
@@ -91,7 +106,7 @@
 		client.prefs.lastlorenews = GLOB.news_data.newsindex
 		SScharacter_setup.queue_preferences_save(client.prefs)
 
-	panel = new(src, "Welcome","Welcome", 210, 300, src) // VOREStation Edit
+	panel = new(src, "Welcome","Welcome", 210, 360, src) // VOREStation Edit //ChompEDIT, height 300 -> 360
 	panel.set_window_options("can_close=0")
 	panel.set_content(output)
 	panel.open()
@@ -350,18 +365,33 @@
 		else
 			client.feedback_form = new(client)
 
+	//ChompEDIT START
+	if(href_list["open_changelog"])
+		client.prefs.lastchangelog = changelog_hash
+		SScharacter_setup.queue_preferences_save(client.prefs)
+		client.changes()
+		return
+	//ChompEDIT END
+
 /mob/new_player/proc/handle_server_news()
 	if(!client)
 		return
-	var/savefile/F = get_server_news()
+	var/savefile/F = client.get_server_news()
 	if(F)
-		client.prefs.lastnews = md5(F["body"])
-		SScharacter_setup.queue_preferences_save(client.prefs)
+		//client.prefs.lastnews = md5(F["body"]) //Chomp REMOVE
+		//SScharacter_setup.queue_preferences_save(client.prefs) //Chomp REMOVE
+		//ChompEDIT start - handle reads correctly
+		var/title
+		F["title"] >> title
+		F["title"] >> title //This is done twice on purpose. For some reason BYOND misses the first read, if performed before the world starts
+		var/body
+		F["body"] >> body
+		//ChompEDIT end
 
 		var/dat = "<html><body><center>"
-		dat += "<h1>[F["title"]]</h1>"
+		dat += "<h1>[title]</h1>"
 		dat += "<br>"
-		dat += "[F["body"]]"
+		dat += "[body]"
 		dat += "<br>"
 		dat += "<font size='2'><i>Last written by [F["author"]], on [F["timestamp"]].</i></font>"
 		dat += "</center></body></html>"

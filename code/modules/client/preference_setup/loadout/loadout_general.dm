@@ -111,7 +111,7 @@
 /datum/gear/lunchbox
 	display_name = "lunchbox"
 	description = "A little lunchbox."
-	cost = 2
+	cost = 0	// CHOMP EDIT "NT now supplies their employees with one free, optional lunch."
 	path = /obj/item/weapon/storage/toolbox/lunchbox
 
 /datum/gear/lunchbox/New()

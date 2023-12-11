@@ -78,7 +78,7 @@
 	icon_state = "tacsecvis1"
 	icon = 'icons/inventory/eyes/item_vr.dmi'
 	icon_override = 'icons/inventory/eyes/mob_vr.dmi'
-	enables_planes = list(VIS_CH_ID,VIS_CH_WANTED,VIS_CH_IMPTRACK,VIS_CH_IMPLOYAL,VIS_CH_IMPCHEM)
+	enables_planes = list(VIS_CH_ID,VIS_CH_HEALTH_VR,VIS_CH_WANTED,VIS_CH_IMPTRACK,VIS_CH_IMPLOYAL,VIS_CH_IMPCHEM,VIS_AUGMENTED) // CHOMP EDIT Adding AR to the- well, AR visors. :3
 	flash_protection = FLASH_PROTECTION_MODERATE
 	item_flags = AIRTIGHT
 	body_parts_covered = EYES

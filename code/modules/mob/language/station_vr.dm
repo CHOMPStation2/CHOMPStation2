@@ -98,7 +98,7 @@
 	speech_verb = "mars"
 	ask_verb = "mars"
 	exclaim_verb = "MARS"
-	colour = "changeling"
+	colour = "shadekin"
 	key = "M"
 	machine_understands = FALSE
 	flags = RESTRICTED | HIVEMIND //CHOMPstation Edit: Changining from WHITELISTED to RESTRICTED | Empathy should be shadekin exclusive. This probably breaks carbon shadekins ability to use emptathy, we dont use them and if it does it should be implemented like DIONA root talk. -shark

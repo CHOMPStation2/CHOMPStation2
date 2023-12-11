@@ -14,36 +14,26 @@
 /turf/simulated/floor/outdoors/ice/dark_smooth,
 /area/submap/frostlake)
 "o" = (
-/turf/simulated/floor/snow{
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/outdoors/snow/sif/planetuse,
 /area/submap/frostlake)
 "s" = (
 /turf/simulated/mineral/icey,
 /area/submap/frostlake)
 "v" = (
 /obj/machinery/crystal/ice,
-/turf/simulated/floor/snow{
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/outdoors/snow/sif/planetuse,
 /area/submap/frostlake)
 "A" = (
 /obj/structure/loot_pile/surface/bones,
-/turf/simulated/floor/snow{
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/outdoors/snow/sif/planetuse,
 /area/submap/frostlake)
 "D" = (
 /mob/living/simple_mob/animal/sif/frostfly,
-/turf/simulated/floor/snow{
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/outdoors/snow/sif/planetuse,
 /area/submap/frostlake)
 "J" = (
 /obj/random/gun/random,
-/turf/simulated/floor/snow{
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/outdoors/snow/sif/planetuse,
 /area/submap/frostlake)
 "K" = (
 /obj/effect/map_effect/interval/effect_emitter/smoke/frost,

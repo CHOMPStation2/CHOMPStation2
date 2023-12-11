@@ -69,6 +69,106 @@
 			for(var/msg in B.absorbed_struggle_messages_inside)
 				belly_data["absorbed_struggle_messages_inside"] += msg
 
+			belly_data["escape_attempt_messages_owner"] = list()
+			for(var/msg in B.escape_attempt_messages_owner)
+				belly_data["escape_attempt_messages_owner"] += msg
+
+			belly_data["escape_attempt_messages_prey"] = list()
+			for(var/msg in B.escape_attempt_messages_prey)
+				belly_data["escape_attempt_messages_prey"] += msg
+
+			belly_data["escape_messages_owner"] = list()
+			for(var/msg in B.escape_messages_owner)
+				belly_data["escape_messages_owner"] += msg
+
+			belly_data["escape_messages_prey"] = list()
+			for(var/msg in B.escape_messages_prey)
+				belly_data["escape_messages_prey"] += msg
+
+			belly_data["escape_messages_outside"] = list()
+			for(var/msg in B.escape_messages_outside)
+				belly_data["escape_messages_outside"] += msg
+
+			belly_data["escape_item_messages_owner"] = list()
+			for(var/msg in B.escape_item_messages_owner)
+				belly_data["escape_item_messages_owner"] += msg
+
+			belly_data["escape_item_messages_prey"] = list()
+			for(var/msg in B.escape_item_messages_prey)
+				belly_data["escape_item_messages_prey"] += msg
+
+			belly_data["escape_item_messages_outside"] = list()
+			for(var/msg in B.escape_item_messages_outside)
+				belly_data["escape_item_messages_outside"] += msg
+
+			belly_data["escape_fail_messages_owner"] = list()
+			for(var/msg in B.escape_fail_messages_owner)
+				belly_data["escape_fail_messages_owner"] += msg
+
+			belly_data["escape_fail_messages_prey"] = list()
+			for(var/msg in B.escape_fail_messages_prey)
+				belly_data["escape_fail_messages_prey"] += msg
+
+			belly_data["escape_attempt_absorbed_messages_owner"] = list()
+			for(var/msg in B.escape_attempt_absorbed_messages_owner)
+				belly_data["escape_attempt_absorbed_messages_owner"] += msg
+
+			belly_data["escape_attempt_absorbed_messages_prey"] = list()
+			for(var/msg in B.escape_attempt_absorbed_messages_prey)
+				belly_data["escape_attempt_absorbed_messages_prey"] += msg
+
+			belly_data["escape_absorbed_messages_owner"] = list()
+			for(var/msg in B.escape_absorbed_messages_owner)
+				belly_data["escape_absorbed_messages_owner"] += msg
+
+			belly_data["escape_absorbed_messages_prey"] = list()
+			for(var/msg in B.escape_absorbed_messages_prey)
+				belly_data["escape_absorbed_messages_prey"] += msg
+
+			belly_data["escape_absorbed_messages_outside"] = list()
+			for(var/msg in B.escape_absorbed_messages_outside)
+				belly_data["escape_absorbed_messages_outside"] += msg
+
+			belly_data["escape_fail_absorbed_messages_owner"] = list()
+			for(var/msg in B.escape_fail_absorbed_messages_owner)
+				belly_data["escape_fail_absorbed_messages_owner"] += msg
+
+			belly_data["escape_fail_absorbed_messages_prey"] = list()
+			for(var/msg in B.escape_fail_absorbed_messages_prey)
+				belly_data["escape_fail_absorbed_messages_prey"] += msg
+
+			belly_data["primary_transfer_messages_owner"] = list()
+			for(var/msg in B.primary_transfer_messages_owner)
+				belly_data["primary_transfer_messages_owner"] += msg
+
+			belly_data["primary_transfer_messages_prey"] = list()
+			for(var/msg in B.primary_transfer_messages_prey)
+				belly_data["primary_transfer_messages_prey"] += msg
+
+			belly_data["secondary_transfer_messages_owner"] = list()
+			for(var/msg in B.secondary_transfer_messages_owner)
+				belly_data["secondary_transfer_messages_owner"] += msg
+
+			belly_data["secondary_transfer_messages_prey"] = list()
+			for(var/msg in B.secondary_transfer_messages_prey)
+				belly_data["secondary_transfer_messages_prey"] += msg
+
+			belly_data["digest_chance_messages_owner"] = list()
+			for(var/msg in B.digest_chance_messages_owner)
+				belly_data["digest_chance_messages_owner"] += msg
+
+			belly_data["digest_chance_messages_prey"] = list()
+			for(var/msg in B.digest_chance_messages_prey)
+				belly_data["digest_chance_messages_prey"] += msg
+
+			belly_data["absorb_chance_messages_owner"] = list()
+			for(var/msg in B.absorb_chance_messages_owner)
+				belly_data["absorb_chance_messages_owner"] += msg
+
+			belly_data["absorb_chance_messages_prey"] = list()
+			for(var/msg in B.absorb_chance_messages_prey)
+				belly_data["absorb_chance_messages_prey"] += msg
+
 			belly_data["digest_messages_owner"] = list()
 			for(var/msg in B.digest_messages_owner)
 				belly_data["digest_messages_owner"] += msg
@@ -176,6 +276,10 @@
 			belly_data["egg_type"] = B.egg_type
 			belly_data["egg_name"] = B.egg_name
 			belly_data["selective_preference"] = B.selective_preference
+			belly_data["recycling"] = B.recycling
+			belly_data["storing_nutrition"] = B.storing_nutrition
+			belly_data["entrance_logs"] = B.entrance_logs
+			belly_data["item_digest_logs"] = B.item_digest_logs
 
 			// Sounds
 			belly_data["is_wet"] = B.is_wet
@@ -184,6 +288,7 @@
 			belly_data["vore_sound"] = B.vore_sound
 			belly_data["release_sound"] = B.release_sound
 			belly_data["sound_volume"] = B.sound_volume
+			belly_data["noise_freq"] = B.noise_freq
 
 			// Visuals
 			belly_data["affects_vore_sprites"] = B.affects_vore_sprites
@@ -226,6 +331,7 @@
 			belly_data["escapable"] = B.escapable
 
 			belly_data["escapechance"] = B.escapechance
+			belly_data["escapechance_absorbed"] = B.escapechance_absorbed
 			belly_data["escapetime"] = B.escapetime/10
 
 			belly_data["transferchance"] = B.transferchance
@@ -246,6 +352,46 @@
 			belly_data["autotransferlocation_secondary"] = B.autotransferlocation_secondary
 			belly_data["autotransfer_min_amount"] = B.autotransfer_min_amount
 			belly_data["autotransfer_max_amount"] = B.autotransfer_max_amount
+			var/list/at_whitelist = list()
+			for(var/flag_name in B.autotransfer_flags_list)
+				if(B.autotransfer_whitelist & B.autotransfer_flags_list[flag_name])
+					at_whitelist.Add(flag_name)
+			belly_data["autotransfer_whitelist"] = at_whitelist
+			var/list/at_blacklist = list()
+			for(var/flag_name in B.autotransfer_flags_list)
+				if(B.autotransfer_blacklist & B.autotransfer_flags_list[flag_name])
+					at_blacklist.Add(flag_name)
+			belly_data["autotransfer_blacklist"] = at_blacklist
+			var/list/at_whitelist_items = list()
+			for(var/flag_name in B.autotransfer_flags_list_items)
+				if(B.autotransfer_whitelist_items & B.autotransfer_flags_list_items[flag_name])
+					at_whitelist_items.Add(flag_name)
+			belly_data["autotransfer_whitelist_items"] = at_whitelist_items
+			var/list/at_blacklist_items = list()
+			for(var/flag_name in B.autotransfer_flags_list_items)
+				if(B.autotransfer_blacklist_items & B.autotransfer_flags_list_items[flag_name])
+					at_blacklist_items.Add(flag_name)
+			belly_data["autotransfer_blacklist_items"] = at_blacklist_items
+			var/list/at_secondary_whitelist = list()
+			for(var/flag_name in B.autotransfer_flags_list)
+				if(B.autotransfer_secondary_whitelist & B.autotransfer_flags_list[flag_name])
+					at_secondary_whitelist.Add(flag_name)
+			belly_data["autotransfer_secondary_whitelist"] = at_secondary_whitelist
+			var/list/at_secondary_blacklist = list()
+			for(var/flag_name in B.autotransfer_flags_list)
+				if(B.autotransfer_secondary_blacklist & B.autotransfer_flags_list[flag_name])
+					at_secondary_blacklist.Add(flag_name)
+			belly_data["autotransfer_secondary_blacklist"] = at_secondary_blacklist
+			var/list/at_secondary_whitelist_items = list()
+			for(var/flag_name in B.autotransfer_flags_list_items)
+				if(B.autotransfer_secondary_whitelist_items & B.autotransfer_flags_list_items[flag_name])
+					at_secondary_whitelist_items.Add(flag_name)
+			belly_data["autotransfer_secondary_whitelist_items"] = at_secondary_whitelist_items
+			var/list/at_secondary_blacklist_items = list()
+			for(var/flag_name in B.autotransfer_flags_list_items)
+				if(B.autotransfer_secondary_blacklist_items & B.autotransfer_flags_list_items[flag_name])
+					at_secondary_blacklist_items.Add(flag_name)
+			belly_data["autotransfer_secondary_blacklist_items"] = at_secondary_blacklist_items
 
 			// Liquid Options
 			belly_data["show_liquids"] = B.show_liquids
@@ -256,6 +402,22 @@
 			belly_data["gen_time_display"] = B.gen_time_display
 			belly_data["custom_max_volume"] = B.custom_max_volume
 			belly_data["vorefootsteps_sounds"] = B.vorefootsteps_sounds
+			belly_data["liquid_overlay"] = B.liquid_overlay
+			belly_data["max_liquid_level"] = B.max_liquid_level
+			belly_data["reagent_toches"] = B.reagent_touches
+			belly_data["mush_overlay"] = B.mush_overlay
+			belly_data["mush_color"] = B.mush_color
+			belly_data["mush_alpha"] = B.mush_alpha
+			belly_data["max_mush"] = B.max_mush
+			belly_data["min_mush"] = B.min_mush
+			belly_data["item_mush_val"] = B.item_mush_val
+			belly_data["custom_reagentcolor"] = B.custom_reagentcolor
+			belly_data["custom_reagentalpha"] = B.custom_reagentalpha
+			belly_data["metabolism_overlay"] = B.metabolism_overlay
+			belly_data["metabolism_mush_ratio"] = B.metabolism_mush_ratio
+			belly_data["max_ingested"] = B.max_ingested
+			belly_data["custom_ingested_color"] = B.custom_ingested_color
+			belly_data["custom_ingested_alpha"] = B.custom_ingested_alpha
 
 			var/list/reagent_flags = list()
 			for(var/flag_name in B.reagent_mode_flag_list)

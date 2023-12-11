@@ -169,3 +169,11 @@
 	ani_state = "nightstalker_diamondback_w"
 	extra_overlay = "nightstalker_diamondback_markings"
 	extra_overlay_w = "nightstalker_diamondback_markings_w"
+
+/datum/sprite_accessory/tail/orca_f
+	name = "Orca tail (Female)"
+	icon = 'icons/mob/vore/tails_ch.dmi'
+	icon_state = "orca_tail_f"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "orca_tail_markings"

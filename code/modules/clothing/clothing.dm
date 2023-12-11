@@ -23,6 +23,10 @@
 
 	var/polychromic = FALSE //VOREStation edit
 
+	var/update_icon_define_orig = null	// temp storage for original update_icon_define (if it exists)
+	var/update_icon_define_digi = null	// dmi used for the digi sprites
+	var/fit_for_digi = FALSE // flag for if clothing has already been reskinned to digitigrade
+
 //Updates the icons of the mob wearing the clothing item, if any.
 /obj/item/clothing/proc/update_clothing_icon()
 	return
@@ -144,9 +148,11 @@
 	switch(target_species)
 		//VOREStation Edit Start
 		if(SPECIES_HUMAN, SPECIES_SKRELL)	//humanoid bodytypes
-			species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_RAPALA, SPECIES_VASILISSAN, SPECIES_ALRAUNE, SPECIES_PROMETHEAN, SPECIES_XENOCHIMERA)
+			species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_RAPALA, SPECIES_VASILISSAN, SPECIES_ALRAUNE, SPECIES_PROMETHEAN)
 		if(SPECIES_UNATHI)
 			species_restricted = list(SPECIES_UNATHI, SPECIES_XENOHYBRID)
+		if(SPECIES_TAJARAN)
+			species_restricted = list(SPECIES_TAJARAN, SPECIES_XENOCHIMERA)
 		if(SPECIES_VULPKANIN)
 			species_restricted = list(SPECIES_VULPKANIN, SPECIES_ZORREN_HIGH, SPECIES_FENNEC)
 		if(SPECIES_SERGAL)
@@ -319,6 +325,12 @@
 		)
 	drop_sound = 'sound/items/drop/gloves.ogg'
 	pickup_sound = 'sound/items/pickup/gloves.ogg'
+// CHOMPedit start: All gloves give cold/heat protection.
+	cold_protection = HANDS
+	min_cold_protection_temperature = GLOVES_MIN_COLD_PROTECTION_TEMPERATURE
+	heat_protection = HANDS
+	max_heat_protection_temperature = GLOVES_MAX_HEAT_PROTECTION_TEMPERATURE
+// CHOMPedit end.
 
 /obj/item/clothing/proc/set_clothing_index()
 	return
@@ -340,7 +352,7 @@
 	return 0 // return 1 to cancel attack_hand()
 
 /*/obj/item/clothing/gloves/attackby(obj/item/weapon/W, mob/user)
-	if(W.is_wirecutter() || istype(W, /obj/item/weapon/scalpel))
+	if(W.has_tool_quality(TOOL_WIRECUTTER) || istype(W, /obj/item/weapon/scalpel))
 		if (clipped)
 			to_chat(user, "<span class='notice'>The [src] have already been clipped!</span>")
 			update_icon()
@@ -619,6 +631,8 @@
 	drop_sound = 'sound/items/drop/shoes.ogg'
 	pickup_sound = 'sound/items/pickup/shoes.ogg'
 
+	update_icon_define_digi = "icons/inventory/feet/mob_digi.dmi"
+
 /obj/item/clothing/shoes/proc/draw_knife()
 	set name = "Draw Boot Knife"
 	set desc = "Pull out your boot knife."
@@ -627,7 +641,7 @@
 
 	if(usr.stat || usr.restrained() || usr.incapacitated())
 		return
-	
+
 	//CHOMPEdit begin
 	if(istype(usr, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = usr
@@ -755,6 +769,8 @@
 	valid_accessory_slots = (ACCESSORY_SLOT_OVER | ACCESSORY_SLOT_ARMBAND)
 	restricted_accessory_slots = (ACCESSORY_SLOT_ARMBAND)
 
+	update_icon_define_digi = "icons/inventory/suit/mob_digi.dmi"
+
 /obj/item/clothing/suit/update_clothing_icon()
 	if (ismob(src.loc))
 		var/mob/M = src.loc
@@ -863,6 +879,8 @@
 
 	var/icon/rolled_down_icon = 'icons/inventory/uniform/mob_rolled_down.dmi'
 	var/icon/rolled_down_sleeves_icon = 'icons/inventory/uniform/mob_sleeves_rolled.dmi'
+
+	update_icon_define_digi = "icons/inventory/uniform/mob_digi.dmi"
 
 /obj/item/clothing/under/attack_hand(var/mob/user)
 	if(LAZYLEN(accessories))
@@ -1069,3 +1087,49 @@
 		M.forceMove(get_turf(src))
 	return ..()
 //Vorestation edit end
+
+/obj/item/clothing/proc/handle_digitigrade(var/mob/user)
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+
+		// if digitigrade-use flag is set
+		if(H.digitigrade)
+
+			// Don't reset if already set
+			if(!fit_for_digi)
+				fit_for_digi = TRUE // set flag even if no icon_state exists, so we don't repeat checks
+
+				//if update_icon_define is already set to something, place it in a var to hold it temporarily
+				if(update_icon_define)
+					update_icon_define_orig = update_icon_define
+
+				// only override icon if a corresponding digitigrade replacement icon_state exists
+				// otherwise, keep the old non-digi icon_define (or nothing)
+				if(icon_state && icon_states(update_icon_define_digi).Find(icon_state))
+					update_icon_define = update_icon_define_digi
+
+
+		// if not-digitigrade, only act if the clothing was previously fit for a digitigrade char
+		else
+			if(fit_for_digi)
+				fit_for_digi = FALSE
+
+				//either reset update_icon_define to it's old value
+				// or reset update_icon_define to null
+				if(update_icon_define_orig)
+					update_icon_define = update_icon_define_orig
+					update_icon_define_orig = null
+				else
+					update_icon_define = null
+
+/obj/item/clothing/shoes/equipped(var/mob/user, var/slot)
+	. = ..()
+	handle_digitigrade(user)
+
+/obj/item/clothing/suit/equipped(var/mob/user, var/slot)
+	. = ..()
+	handle_digitigrade(user)
+
+/obj/item/clothing/under/equipped(var/mob/user, var/slot)
+	. = ..()
+	handle_digitigrade(user)

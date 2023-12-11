@@ -250,7 +250,11 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/settlement)
 "lO" = (
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/settlement)
 "lX" = (
 /obj/structure/simple_door/wood,
@@ -480,7 +484,11 @@
 "zz" = (
 /obj/structure/table/standard,
 /obj/random/maintenance/foodstuff,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/settlement)
 "zT" = (
 /mob/living/simple_mob/creature/cult/strong,
@@ -508,7 +516,11 @@
 /area/submap/settlement)
 "Cd" = (
 /obj/item/weapon/stool,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/settlement)
 "Do" = (
 /obj/structure/table/borosilicate,

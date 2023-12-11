@@ -19,11 +19,19 @@
 /obj/machinery/porta_turret/alien{
 	faction = "xeno"
 	},
-/turf/simulated/floor/outdoors/ice,
+/turf/simulated/floor/outdoors/ice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
 /area/submap/cave/crashed_ufo_frigate)
 "ah" = (
 /obj/structure/table/alien,
-/turf/simulated/floor/outdoors/ice,
+/turf/simulated/floor/outdoors/ice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
 /area/submap/cave/crashed_ufo_frigate)
 "ai" = (
 /obj/machinery/artifact,
@@ -41,7 +49,11 @@
 /turf/simulated/shuttle/floor/alienplating,
 /area/submap/cave/crashed_ufo_frigate)
 "al" = (
-/turf/simulated/floor/outdoors/ice,
+/turf/simulated/floor/outdoors/ice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
 /area/submap/cave/crashed_ufo_frigate)
 "an" = (
 /obj/structure/window/phoronreinforced,
@@ -60,7 +72,11 @@
 /area/submap/cave/crashed_ufo_frigate)
 "ar" = (
 /obj/effect/alien/weeds/node,
-/turf/simulated/floor/outdoors/ice,
+/turf/simulated/floor/outdoors/ice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
 /area/submap/cave/crashed_ufo_frigate)
 "as" = (
 /obj/structure/prop/alien/pod/open,
@@ -73,11 +89,19 @@
 /area/submap/cave/crashed_ufo_frigate)
 "au" = (
 /obj/machinery/door/airlock/alien/locked,
-/turf/simulated/floor/outdoors/ice,
+/turf/simulated/floor/outdoors/ice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
 /area/submap/cave/crashed_ufo_frigate)
 "av" = (
 /obj/structure/loot_pile/surface/alien/engineering,
-/turf/simulated/floor/outdoors/ice,
+/turf/simulated/floor/outdoors/ice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
 /area/submap/cave/crashed_ufo_frigate)
 "aw" = (
 /obj/structure/prop/alien/pod/open,
@@ -88,7 +112,11 @@
 /area/template_noop)
 "ay" = (
 /obj/structure/loot_pile/surface/bones,
-/turf/simulated/floor/outdoors/ice,
+/turf/simulated/floor/outdoors/ice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
 /area/submap/cave/crashed_ufo_frigate)
 "az" = (
 /obj/item/prop/alien/junk,
@@ -109,7 +137,11 @@
 "aD" = (
 /obj/structure/table/alien,
 /obj/random/tech_supply/component,
-/turf/simulated/floor/outdoors/ice,
+/turf/simulated/floor/outdoors/ice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
 /area/submap/cave/crashed_ufo_frigate)
 "aE" = (
 /obj/structure/prop/alien/pod/open,
@@ -174,11 +206,19 @@
 "aS" = (
 /obj/structure/table/alien,
 /obj/random/tool/alien,
-/turf/simulated/floor/outdoors/ice,
+/turf/simulated/floor/outdoors/ice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
 /area/submap/cave/crashed_ufo_frigate)
 "aT" = (
 /obj/structure/loot_pile/surface/alien/security,
-/turf/simulated/floor/outdoors/ice,
+/turf/simulated/floor/outdoors/ice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
 /area/submap/cave/crashed_ufo_frigate)
 "aU" = (
 /obj/machinery/replicator,
@@ -220,7 +260,11 @@
 "bb" = (
 /obj/structure/closet/alien,
 /obj/random/unidentified_medicine/nanites,
-/turf/simulated/floor/outdoors/ice,
+/turf/simulated/floor/outdoors/ice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
 /area/submap/cave/crashed_ufo_frigate)
 "bc" = (
 /obj/structure/closet/alien,
@@ -247,12 +291,20 @@
 /area/submap/cave/crashed_ufo_frigate)
 "bg" = (
 /obj/structure/prop/lock/projectile,
-/turf/simulated/floor/outdoors/ice,
+/turf/simulated/floor/outdoors/ice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
 /area/submap/cave/crashed_ufo_frigate)
 "bh" = (
 /obj/structure/closet/alien,
 /obj/random/unidentified_medicine/old_medicine,
-/turf/simulated/floor/outdoors/ice,
+/turf/simulated/floor/outdoors/ice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
 /area/submap/cave/crashed_ufo_frigate)
 "bi" = (
 /obj/structure/prop/alien/dispenser,
@@ -269,7 +321,11 @@
 "bl" = (
 /obj/effect/decal/remains/xeno,
 /obj/item/clothing/under/psysuit,
-/turf/simulated/floor/outdoors/ice,
+/turf/simulated/floor/outdoors/ice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
 /area/submap/cave/crashed_ufo_frigate)
 "bm" = (
 /obj/structure/table/alien,
@@ -465,7 +521,11 @@
 /obj/structure/window/phoronreinforced{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/ice,
+/turf/simulated/floor/outdoors/ice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
 /area/submap/cave/crashed_ufo_frigate)
 "bV" = (
 /obj/structure/table/alien,
@@ -488,11 +548,19 @@
 "bY" = (
 /obj/structure/foamedmetal,
 /obj/machinery/door/airlock/alien/locked,
-/turf/simulated/floor/outdoors/ice,
+/turf/simulated/floor/outdoors/ice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
 /area/submap/cave/crashed_ufo_frigate)
 "bZ" = (
 /obj/structure/foamedmetal,
-/turf/simulated/floor/outdoors/ice,
+/turf/simulated/floor/outdoors/ice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
 /area/submap/cave/crashed_ufo_frigate)
 "ca" = (
 /obj/structure/table/alien,
@@ -500,20 +568,36 @@
 	icon_state = "alienpaper_words";
 	info = "\[i]This tablet has a large collection of symbols that you've never seen before outside this ship. You have no hope of figuring out what any of the mean...\[/i]"
 	},
-/turf/simulated/floor/outdoors/ice,
+/turf/simulated/floor/outdoors/ice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
 /area/submap/cave/crashed_ufo_frigate)
 "cb" = (
 /obj/structure/prop/alien/power,
 /obj/structure/foamedmetal,
-/turf/simulated/floor/outdoors/ice,
+/turf/simulated/floor/outdoors/ice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
 /area/submap/cave/crashed_ufo_frigate)
 "cc" = (
 /obj/structure/loot_pile/surface/alien/end,
-/turf/simulated/floor/outdoors/ice,
+/turf/simulated/floor/outdoors/ice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
 /area/submap/cave/crashed_ufo_frigate)
 "cd" = (
 /obj/item/prop/alien/junk,
-/turf/simulated/floor/outdoors/ice,
+/turf/simulated/floor/outdoors/ice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
 /area/submap/cave/crashed_ufo_frigate)
 "ce" = (
 /obj/random/tech_supply/component,
@@ -521,7 +605,11 @@
 /area/submap/cave/crashed_ufo_frigate)
 "cf" = (
 /obj/random/tech_supply/component,
-/turf/simulated/floor/outdoors/ice,
+/turf/simulated/floor/outdoors/ice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
 /area/submap/cave/crashed_ufo_frigate)
 "cg" = (
 /obj/machinery/door/airlock/alien/public,

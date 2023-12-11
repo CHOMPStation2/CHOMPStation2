@@ -1,27 +1,47 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/turf/simulated/mineral/floor/cave,
+/turf/simulated/mineral/floor/cave{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/leppy)
 "b" = (
 /obj/structure/table/gold,
 /obj/random/energy/highend,
 /obj/random/meat,
 /obj/random/meat,
-/turf/simulated/mineral/floor/cave,
+/turf/simulated/mineral/floor/cave{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/leppy)
 "d" = (
 /mob/living/simple_mob/vore/lamia/random,
-/turf/simulated/mineral/floor/cave,
+/turf/simulated/mineral/floor/cave{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/leppy)
 "r" = (
 /obj/structure/table/gold,
 /obj/random/contraband/nofail,
-/turf/simulated/mineral/floor/cave,
+/turf/simulated/mineral/floor/cave{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/leppy)
 "s" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/item/seeds/random,
-/turf/simulated/mineral/floor/cave,
+/turf/simulated/mineral/floor/cave{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/leppy)
 "t" = (
 /mob/living/simple_mob/vore/leopardmander/exotic,
@@ -38,19 +58,31 @@
 "D" = (
 /obj/structure/table/gold,
 /obj/random/medical/pillbottle,
-/turf/simulated/mineral/floor/cave,
+/turf/simulated/mineral/floor/cave{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/leppy)
 "F" = (
 /obj/structure/table/gold,
 /obj/random/meat,
 /obj/random/meat,
 /obj/random/meat,
-/turf/simulated/mineral/floor/cave,
+/turf/simulated/mineral/floor/cave{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/leppy)
 "J" = (
 /obj/structure/table/gold,
 /obj/random/maintenance/misc,
-/turf/simulated/mineral/floor/cave,
+/turf/simulated/mineral/floor/cave{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/leppy)
 "K" = (
 /turf/simulated/wall/sandstone,
@@ -63,7 +95,11 @@
 "Z" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/item/seeds/ambrosiavulgarisseed,
-/turf/simulated/mineral/floor/cave,
+/turf/simulated/mineral/floor/cave{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/leppy)
 
 (1,1,1) = {"

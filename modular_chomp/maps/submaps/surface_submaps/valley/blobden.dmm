@@ -3,6 +3,7 @@
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 9
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "ak" = (
@@ -12,16 +13,20 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 6
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "aQ" = (
-/obj/structure/blob/core/random_hard,
+/obj/structure/blob/core/random_hard{
+	difficulty_floor = 2
+	},
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "bC" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 9
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "cq" = (
@@ -32,21 +37,25 @@
 /area/submap/blobden)
 "dt" = (
 /obj/effect/floor_decal/corner/blue/border,
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "dS" = (
 /obj/effect/floor_decal/corner/green/border{
 	dir = 8
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "eL" = (
 /obj/effect/floor_decal/corner/red/border,
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "eY" = (
 /obj/structure/table/borosilicate,
 /obj/item/rig_module/rad_shield/advanced,
+/obj/structure/blob/factory,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "fb" = (
@@ -57,27 +66,35 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 4
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "ig" = (
 /obj/structure/table/borosilicate,
 /obj/item/rig_module/mounted/egun,
+/obj/structure/blob/factory,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "iN" = (
 /obj/structure/table/borosilicate,
 /obj/item/weapon/storage/firstaid/bonemed,
 /obj/random/medical,
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
+"jD" = (
+/turf/simulated/mineral,
+/area/template_noop)
 "kY" = (
 /obj/effect/floor_decal/corner/purple/border,
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "ls" = (
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 4
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "lt" = (
@@ -87,6 +104,7 @@
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 4
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "nB" = (
@@ -104,6 +122,7 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "pU" = (
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "qc" = (
@@ -111,52 +130,65 @@
 	name = "Special Operations";
 	req_access = list(103)
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "qz" = (
 /obj/effect/floor_decal/corner/green/border,
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "qW" = (
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 8
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "ry" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "sJ" = (
 /obj/effect/floor_decal/corner/green/border{
 	dir = 10
 	},
+/obj/structure/blob/normal,
+/turf/simulated/floor/tiled/white,
+/area/submap/blobden)
+"sP" = (
+/obj/structure/blob/factory,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "uj" = (
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 4
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "uA" = (
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 5
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "wD" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 5
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "wX" = (
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 6
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "xW" = (
@@ -169,18 +201,21 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 1
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "zE" = (
 /obj/effect/floor_decal/corner/green/border{
 	dir = 1
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "Ac" = (
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 8
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "AJ" = (
@@ -189,18 +224,21 @@
 /obj/item/weapon/cell/device/weapon/recharge,
 /obj/item/weapon/cell/device/weapon/recharge,
 /obj/item/weapon/cell/device/weapon/recharge,
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "Bc" = (
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 10
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "Bw" = (
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 1
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "Db" = (
@@ -208,24 +246,28 @@
 /obj/random/maintenance/security,
 /obj/random/maintenance/security,
 /obj/random/maintenance/security,
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "DR" = (
 /obj/effect/floor_decal/corner/green/border{
 	dir = 6
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "Fe" = (
 /obj/structure/table/borosilicate,
 /obj/item/rig_module/chem_dispenser/combat,
 /obj/random/medical,
+/obj/structure/blob/factory,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "FA" = (
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 9
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "FC" = (
@@ -241,12 +283,14 @@
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 5
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "Gy" = (
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 10
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "Ha" = (
@@ -254,6 +298,7 @@
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "Hs" = (
@@ -261,34 +306,40 @@
 /obj/random/maintenance/engineering,
 /obj/random/maintenance/engineering,
 /obj/random/maintenance/engineering,
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "HQ" = (
 /obj/structure/table/borosilicate,
 /obj/random/energy/sec,
 /obj/item/rig_module/stealth_field,
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "Iv" = (
 /obj/effect/floor_decal/corner/green/border{
 	dir = 5
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "IC" = (
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "Kc" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 6
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "La" = (
 /obj/effect/floor_decal/corner/yellow/border,
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "NS" = (
@@ -296,29 +347,34 @@
 /obj/random/maintenance/medical,
 /obj/random/maintenance/medical,
 /obj/random/maintenance/medical,
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "OA" = (
 /obj/structure/table/borosilicate,
 /obj/random/energy/highend,
 /obj/item/rig_module/voice,
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "PM" = (
 /obj/effect/floor_decal/corner/green/border{
 	dir = 9
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "Qg" = (
 /obj/structure/table/borosilicate,
 /obj/item/rig_module/grenade_launcher/metalfoam,
+/obj/structure/blob/factory,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "Qp" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 4
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "RM" = (
@@ -331,18 +387,21 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 9
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "Tq" = (
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 5
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "TK" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 8
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "Uv" = (
@@ -358,78 +417,84 @@
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 6
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "WE" = (
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 8
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "WG" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 10
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "Yd" = (
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 10
 	},
+/obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 
 (1,1,1) = {"
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
 "}
 (2,1,1) = {"
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
 "}
 (3,1,1) = {"
+jD
+jD
 lt
 lt
 lt
@@ -449,12 +514,12 @@ lt
 lt
 lt
 lt
-lt
-lt
-lt
-lt
+jD
+jD
 "}
 (4,1,1) = {"
+jD
+jD
 lt
 lt
 lt
@@ -474,16 +539,14 @@ lt
 lt
 lt
 lt
-lt
-lt
-lt
-lt
+jD
+jD
 "}
 (5,1,1) = {"
+jD
+jD
 lt
 lt
-lt
-lt
 ak
 ak
 ak
@@ -501,12 +564,12 @@ ak
 ak
 lt
 lt
-lt
-lt
+jD
+jD
 "}
 (6,1,1) = {"
-lt
-lt
+jD
+jD
 lt
 lt
 ak
@@ -526,12 +589,12 @@ Bc
 ak
 lt
 lt
-lt
-lt
+jD
+jD
 "}
 (7,1,1) = {"
-lt
-lt
+jD
+jD
 lt
 lt
 ak
@@ -541,7 +604,7 @@ NS
 dt
 ak
 zE
-pU
+sP
 qz
 ak
 yW
@@ -551,12 +614,12 @@ kY
 ak
 lt
 lt
-lt
-lt
+jD
+jD
 "}
 (8,1,1) = {"
-lt
-lt
+jD
+jD
 lt
 lt
 ak
@@ -576,12 +639,12 @@ kY
 ak
 lt
 lt
-lt
-lt
+jD
+jD
 "}
 (9,1,1) = {"
-lt
-lt
+jD
+jD
 lt
 lt
 ak
@@ -601,12 +664,12 @@ wX
 ak
 lt
 lt
-lt
-lt
+jD
+jD
 "}
 (10,1,1) = {"
-lt
-lt
+jD
+jD
 lt
 lt
 ak
@@ -626,12 +689,12 @@ ak
 ak
 lt
 lt
-lt
-lt
+jD
+jD
 "}
 (11,1,1) = {"
-lt
-lt
+jD
+jD
 lt
 lt
 ak
@@ -651,17 +714,17 @@ sJ
 ak
 lt
 lt
-lt
-lt
+jD
+jD
 "}
 (12,1,1) = {"
-lt
-lt
+jD
+jD
 lt
 lt
 ak
 zE
-pU
+sP
 pU
 pU
 pU
@@ -671,17 +734,17 @@ xW
 pU
 pU
 pU
-pU
+sP
 qz
 ak
 lt
 lt
-lt
-lt
+jD
+jD
 "}
 (13,1,1) = {"
-lt
-lt
+jD
+jD
 lt
 lt
 ak
@@ -701,12 +764,12 @@ DR
 ak
 lt
 lt
-lt
-lt
+jD
+jD
 "}
 (14,1,1) = {"
-lt
-lt
+jD
+jD
 lt
 lt
 ak
@@ -726,12 +789,12 @@ ak
 ak
 lt
 lt
-lt
-lt
+jD
+jD
 "}
 (15,1,1) = {"
-lt
-lt
+jD
+jD
 lt
 lt
 ak
@@ -751,12 +814,12 @@ WG
 ak
 lt
 lt
-lt
-lt
+jD
+jD
 "}
 (16,1,1) = {"
-lt
-lt
+jD
+jD
 lt
 lt
 ak
@@ -776,12 +839,12 @@ eL
 ak
 lt
 lt
-lt
-lt
+jD
+jD
 "}
 (17,1,1) = {"
-lt
-lt
+jD
+jD
 lt
 lt
 ak
@@ -791,7 +854,7 @@ Hs
 La
 ak
 zE
-pU
+sP
 qz
 ak
 ry
@@ -801,12 +864,12 @@ eL
 ak
 lt
 lt
-lt
-lt
+jD
+jD
 "}
 (18,1,1) = {"
-lt
-lt
+jD
+jD
 lt
 lt
 ak
@@ -826,14 +889,14 @@ Kc
 ak
 lt
 lt
-lt
-lt
+jD
+jD
 "}
 (19,1,1) = {"
+jD
+jD
 lt
 lt
-lt
-lt
 ak
 ak
 ak
@@ -851,10 +914,12 @@ ak
 ak
 lt
 lt
-lt
-lt
+jD
+jD
 "}
 (20,1,1) = {"
+jD
+jD
 lt
 lt
 lt
@@ -874,12 +939,12 @@ lt
 lt
 lt
 lt
-lt
-lt
-lt
-lt
+jD
+jD
 "}
 (21,1,1) = {"
+jD
+jD
 lt
 lt
 lt
@@ -899,58 +964,56 @@ lt
 lt
 lt
 lt
-lt
-lt
-lt
-lt
+jD
+jD
 "}
 (22,1,1) = {"
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
 "}
 (23,1,1) = {"
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
-lt
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
+jD
 "}

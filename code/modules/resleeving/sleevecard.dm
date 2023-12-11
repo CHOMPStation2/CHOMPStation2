@@ -51,6 +51,8 @@
 	MR.mind_ref.active = 1 //Well, it's about to be.
 	MR.mind_ref.transfer_to(infomorph) //Does mind+ckey+client.
 	infomorph.ooc_notes = MR.mind_oocnotes
+	infomorph.ooc_notes_likes = MR.mind_ooclikes
+	infomorph.ooc_notes_dislikes = MR.mind_oocdislikes
 	infomorph.apply_vore_prefs() //Cheap hack for now to give them SOME bellies.
 
 	//Don't set 'real_name' because then we get a nice (as sleevecard) thing.

@@ -130,3 +130,12 @@
 						else
 							input += "s"
 	return input
+
+/datum/trait/neutral/slip_reflex
+	name ="Slippery Reflexes"
+	desc = "Your reflexes are quick enough to react to slippery surfaces. You are not immune though."
+	cost = 0
+
+/datum/trait/neutral/slip_reflex/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	H.slip_reflex = TRUE

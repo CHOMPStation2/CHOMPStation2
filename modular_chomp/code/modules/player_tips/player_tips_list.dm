@@ -75,7 +75,7 @@ When editing the list, please try and keep similar probabilities near each other
 		if("lore")
 			var/info = "The following is tip for understanding the lore of CHOMPStation! You can disable them using the periodic tips toggle in the Global tab of character setup! \n"
 			return pick(
-				prob(25); "[info] Our lore is somewhat in line with other servers. But not Virgo's. They wrote themselves out of the timeline, lol. The year is 2564 (current year+541).",
+				prob(25); "[info] Our lore is somewhat in line with other servers. The year is 2564 (current year+541).",
 				prob(75); "[info] You can find a short summary of our setting that everyone should know at https://wiki.chompstation13.net/index.php/Lore",
 				prob(50); "[info] You are currently working in the Vir system on the NLS Southern Cross telecommunications and traffic control station. https://wiki.chompstation13.net/index.php/Vir",
 				prob(50); "[info] The majority of employees live at the Northern Star asteroid colony orbiting a gas giant called Kara. It is also a central hub for visitors, logistics, and mining. This is the place the shuttle takes you at the end of the round. You may visit the mines via the exploration shuttles. https://wiki.chompstation13.net/index.php/NCS_Northern_Star",

@@ -77,6 +77,7 @@ var/list/admin_verbs_admin = list(
 	/client/proc/check_ai_laws,			//shows AI and borg laws,
 	/client/proc/rename_silicon,		//properly renames silicons,
 	/client/proc/manage_silicon_laws,	// Allows viewing and editing silicon laws. ,
+	/client/proc/modify_robot,
 	/client/proc/check_antagonists,
 	/client/proc/admin_memo,			//admin memo system. show/delete/write. +SERVER needed to delete admin memos of others,
 	/client/proc/dsay,					//talk in deadchat using our ckey/fakekey,
@@ -163,7 +164,6 @@ var/list/admin_verbs_fun = list(
 	/datum/admins/proc/call_supply_drop,
 	/datum/admins/proc/call_drop_pod,
 	/client/proc/smite,
-	/client/proc/smite_vr, //VOREStation Add,
 	/client/proc/admin_lightning_strike,
 	/client/proc/resize, //VOREStation Add,
 	/client/proc/cmd_admin_droppod_deploy,
@@ -172,7 +172,8 @@ var/list/admin_verbs_fun = list(
 	/client/proc/remove_mob_for_narration,	//VOREStation Add
 	/client/proc/narrate_mob,	//VOREStation Add
 	/client/proc/narrate_mob_args, //VOREStation Add
-	/client/proc/getPlayerStatus //VORESTation Add
+	/client/proc/getPlayerStatus, //VORESTation Add
+	/client/proc/manage_event_triggers
 
 	)
 

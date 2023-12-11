@@ -86,3 +86,12 @@
 	materials = list(MAT_STEEL = 4000, MAT_GLASS = 1000, MAT_DIAMOND = 2000, MAT_TITANIUM = 4000, MAT_LEAD = 4000, MAT_URANIUM = 5000)
 	build_path = /obj/item/weapon/gun/energy/lasercannon
 	sort_string = "MAAAD"
+
+//Wierd weapon time
+/datum/design/item/weapon/energy/cyrogun
+	desc = "An improperly researched and poorly built weapon, specialized in utlizing frost offensively.."
+	id = "cryogun"
+	req_tech = list(TECH_COMBAT = 7, TECH_MATERIAL = 8, TECH_POWER = 7, TECH_PRECURSOR = 4, TECH_ILLEGAL = 8)
+	materials = list(MAT_GLASS = 3000, MAT_MORPHIUM = 4000, MAT_DURASTEEL = 6000, MAT_LEAD = 6000, MAT_METALHYDROGEN = 3000)
+	build_path = /obj/item/weapon/gun/energy/freezegun
+	sort_string = "MAAAD"

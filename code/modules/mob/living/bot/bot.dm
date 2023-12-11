@@ -124,7 +124,7 @@
 			else
 				to_chat(user, "<span class='warning'>Access denied.</span>")
 		return
-	else if(O.is_screwdriver())
+	else if(O.has_tool_quality(TOOL_SCREWDRIVER))
 		if(!locked)
 			open = !open
 			to_chat(user, "<span class='notice'>Maintenance panel is now [open ? "opened" : "closed"].</span>")
@@ -132,7 +132,7 @@
 		else
 			to_chat(user, "<span class='notice'>You need to unlock the controls first.</span>")
 		return
-	else if(istype(O, /obj/item/weapon/weldingtool))
+	else if(O.has_tool_quality(TOOL_WELDER))
 		if(health < getMaxHealth())
 			if(open)
 				if(getBruteLoss() < 10)
@@ -164,7 +164,7 @@
 			to_chat(user, span_notice("You slot the card into \the [initial(src.name)]."))
 		else
 			to_chat(user, span_notice("You must open the panel first!"))
-	else if(O.is_crowbar())
+	else if(O.has_tool_quality(TOOL_CROWBAR))
 		if(open && paicard)
 			to_chat(user, span_notice("You are attempting to remove the pAI.."))
 			if(do_after(user,10 * O.toolspeed))
@@ -534,6 +534,8 @@
 	src.ckey = AI.ckey
 	name = AI.name
 	ooc_notes = AI.ooc_notes
+	ooc_notes_likes = AI.ooc_notes_likes
+	ooc_notes_dislikes = AI.ooc_notes_dislikes
 	to_chat(src, span_notice("You feel a tingle in your circuits as your systems interface with \the [initial(src.name)]."))
 	if(AI.idcard.access)
 		botcard.access	|= AI.idcard.access
@@ -543,6 +545,8 @@
 		var/mob/living/silicon/pai/AI = paicard.pai
 		AI.ckey = src.ckey
 		AI.ooc_notes = ooc_notes
+		AI.ooc_notes_likes = ooc_notes_likes
+		AI.ooc_notes_dislikes = ooc_notes_dislikes
 		paicard.forceMove(src.loc)
 		paicard = null
 		name = initial(name)
@@ -571,7 +575,7 @@
 /mob/living/bot/Login()
 	no_vore = FALSE // ROBOT VORE
 	init_vore() // ROBOT VORE
-	verbs |= /mob/living/proc/insidePanel
+	verbs |= /mob/proc/insidePanel
 
 	return ..()
 
@@ -579,7 +583,7 @@
 	no_vore = TRUE // ROBOT VORE
 	release_vore_contents()
 	init_vore() // ROBOT VORE
-	verbs -= /mob/living/proc/insidePanel
+	verbs -= /mob/proc/insidePanel
 	no_vore = TRUE
 	devourable = FALSE
 	feeding = FALSE

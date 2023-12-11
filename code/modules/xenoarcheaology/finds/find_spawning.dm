@@ -687,7 +687,7 @@
 
 		if(talkative)
 			new_item.talking_atom = new(new_item)
-			if(new_item.vars["origin_tech"]) //ChompEDIT - fix runtimes with items that don't have this var
+			if("origin_tech" in new_item.vars) //ChompEDIT - fix runtimes with items that don't have this var
 				LAZYINITLIST(new_item.origin_tech)
 				new_item.origin_tech[TECH_ARCANE] += 1
 				new_item.origin_tech[TECH_PRECURSOR] += 1

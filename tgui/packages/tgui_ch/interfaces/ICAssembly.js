@@ -19,10 +19,22 @@ export const ICAssembly = (props, context) => {
     removable_circuits,
   } = data;
 
+  const act_remove_cell = () => act('remove_cell');
+  const act_rename_assembly = () => act('rename');
+
   return (
     <Window width={600} height={380} resizable>
       <Window.Content scrollable>
-        <Section title="Status">
+        <Section
+          title="Status"
+          buttons={[
+            <Button icon="eye" onClick={act_remove_cell}>
+              Remove Battery
+            </Button>,
+            <Button icon="eye" onClick={act_rename_assembly}>
+              Rename
+            </Button>,
+          ]}>
           <LabeledList>
             <LabeledList.Item label="Space in Assembly">
               <ProgressBar

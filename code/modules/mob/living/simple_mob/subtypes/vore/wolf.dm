@@ -152,6 +152,7 @@
 	icon_state = "direwolfs"
 	icon_rest = "direwolfs_rest"
 
+/* //ChompEDIT START - disable unique user-related content
 /mob/living/simple_mob/vore/wolf/direwolf/rykka
 	name = "Rykka"
 	desc = "This big canine looks like a GSD. It has a collar tagged, 'Bitch'"
@@ -197,3 +198,4 @@
 	icon_rest = "andrews_rest"
 
 	mount_offset_y = 17
+*/ //ChompEDIT END

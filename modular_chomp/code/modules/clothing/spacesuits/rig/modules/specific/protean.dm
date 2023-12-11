@@ -161,7 +161,7 @@ These should come standard with the Protean rigsuit, unless you want them to wor
 		if(R.get_stored_material(MAT_STEEL) >= 100)
 			healing = holder.wearer.add_modifier(/datum/modifier/protean/steel, origin = R)
 			to_chat(usr, "<font color='blue'><b>You activate the suit's restorative nanites.</b></font>")
-			to_chat(H, "<span class='warning'>Your suit begins mend your injuries.</span>")
+			to_chat(H, "<span class='warning'>Your suit begins mending your injuries.</span>")
 			active = 1
 			return 1
 	return 0

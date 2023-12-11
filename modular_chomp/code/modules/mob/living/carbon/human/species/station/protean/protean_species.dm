@@ -12,6 +12,7 @@
 
 	selects_bodytype = SELECTS_BODYTYPE_SHAPESHIFTER
 	base_species = SPECIES_HUMAN
+	digi_allowed = TRUE
 
 	blood_color = "#505050" //This is the same as the 80,80,80 below, but in hex
 	flesh_color = "#505050"
@@ -236,7 +237,7 @@
 		temp = H.temporary_form
 	playsound(temp, 'modular_chomp/sound/voice/borg_deathsound.ogg', 50, 1)
 	temp.visible_message("<b>[temp.name]</b> shudders and retreats inwards, coalescing into a single core componant!")
-	to_chat(temp, "<span class='warning'>You've died as a Protean! While dead, you will be locked to your core RIG control module until you can be repaired. Instructions to your revival can be found in the Examine tab when examining your module..</span>")
+	to_chat(temp, "<span class='warning'>You've died as a Protean! While dead, you will be locked to your core RIG control module until you can be repaired. Instructions to your revival can be found in the Examine tab when examining your module.</span>")
 	if(H.temporary_form)
 		if(!istype(H.temporary_form.loc, /obj/item/weapon/rig/protean))
 			H.nano_rig_transform(1)
