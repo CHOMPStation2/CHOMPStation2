@@ -1,22 +1,23 @@
-import { useBackend } from '../backend';
-import { Box, Button, LabeledList, NoticeBox, Section } from '../components';
-import { Window } from '../layouts';
+import { Fragment } from 'inferno';
+import { useBackend } from "../backend";
+import { Box, Button, Collapsible, Icon, Input, LabeledList, NoticeBox, Section, Tabs } from "../components";
+import { Window } from "../layouts";
 import { LoginInfo } from './common/LoginInfo';
 import { LoginScreen } from './common/LoginScreen';
 
 export const Fax = (props, context) => {
   const { data } = useBackend(context);
 
-  const { authenticated, copyItem } = data;
-
-  let variableHeight = 340;
-  if (copyItem) {
-    variableHeight = 358;
-  }
+  const {
+    authenticated,
+  } = data;
 
   if (!authenticated) {
     return (
-      <Window width={600} height={250} resizable>
+      <Window
+        width={600}
+        height={250}
+        resizable>
         <Window.Content>
           <RemoveItem />
           <LoginScreen machineType="Fax" />
@@ -26,7 +27,10 @@ export const Fax = (props, context) => {
   }
 
   return (
-    <Window width={600} height={variableHeight} resizable>
+    <Window
+      width={600}
+      height={250}
+      resizable>
       <Window.Content>
         <RemoveItem />
         <LoginInfo />
@@ -39,8 +43,12 @@ export const Fax = (props, context) => {
 export const FaxContent = (props, context) => {
   const { act, data } = useBackend(context);
 
-  const { bossName, copyItem, cooldown, destination, adminDepartments } = data;
-  const staffRequestDepartment = new Set(adminDepartments);
+  const {
+    bossName,
+    copyItem,
+    cooldown,
+    destination,
+  } = data;
 
   return (
     <Section>
@@ -54,8 +62,7 @@ export const FaxContent = (props, context) => {
           {bossName} Quantum Entanglement Network
         </LabeledList.Item>
       </LabeledList>
-
-      {(copyItem && (
+      {copyItem && (
         <Box mt={1}>
           <LabeledList>
             <LabeledList.Item label="Currently Sending">
@@ -73,19 +80,20 @@ export const FaxContent = (props, context) => {
               <Button
                 icon="map-marker-alt"
                 content={destination}
-                onClick={() => act('dept')}
-              />
+                onClick={() => act("dept")} />
             </LabeledList.Item>
           </LabeledList>
           <Button
             icon="share-square"
             onClick={() => act('send')}
             content="Send"
-            fluid
-          />
+            fluid />
         </Box>
-      )) || <Box mt={1}>Please insert item to transmit.</Box>}
-      <AutomatedStaffRequest />
+      ) || (
+        <Box mt={1}>
+          Please insert item to transmit.
+        </Box>
+      )}
     </Section>
   );
 };
@@ -93,7 +101,9 @@ export const FaxContent = (props, context) => {
 const RemoveItem = (props, context) => {
   const { act, data } = useBackend(context);
 
-  const { copyItem } = data;
+  const {
+    copyItem,
+  } = data;
 
   if (!copyItem) {
     return null;
@@ -104,9 +114,8 @@ const RemoveItem = (props, context) => {
       <Button
         fluid
         icon="eject"
-        onClick={() => act('remove')}
-        content="Remove Item"
-      />
+        onClick={() => act("remove")}
+        content="Remove Item" />
     </Box>
   );
 };
