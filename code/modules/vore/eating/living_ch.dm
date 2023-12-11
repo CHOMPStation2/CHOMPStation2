@@ -114,7 +114,7 @@
 	if(!RTB)
 		return FALSE
 
-	to_chat(src, "<span class='notice'>[RTB] has [RTB.reagents.total_volume] units of liquid.</span>")
+	to_chat(src, "<span class='vnotice'>[RTB] has [RTB.reagents.total_volume] units of liquid.</span>")
 
 /mob/living/proc/vore_transfer_reagents()
 	set name = "Transfer Liquid (Vore)"
@@ -131,7 +131,7 @@
 	if(!TG)
 		return FALSE
 	if(TG.give_reagents == FALSE && user != TG) //User isnt forced to allow giving in prefs if they are the one doing it
-		to_chat(user, "<span class='warning'>This person's prefs dont allow that!</span>")
+		to_chat(user, "<span class='vwarning'>This person's prefs dont allow that!</span>")
 		return FALSE
 
 	var/obj/belly/RTB = input("Choose which vore belly to transfer from") as null|anything in TG.vore_organs //First they choose the belly to transfer from.
@@ -156,20 +156,20 @@
 				if(!Adjacent(TR) || !Adjacent(TG))
 					return //No long distance transfer
 				if(!TR.reagents.get_free_space())
-					to_chat(user, "<span class='notice'>[TB] is full!</span>")
+					to_chat(user, "<span class='vnotice'>[TB] is full!</span>")
 					return FALSE
 
 				if(TG == user)
-					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from their [lowertext(RTB.name)] into their [lowertext(TB.name)].</span>")
+					user.custom_emote_vr(1, "<span class='vnotice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from their [lowertext(RTB.name)] into their [lowertext(TB.name)].</span>")
 				else
-					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from [TG]'s [lowertext(RTB.name)] into their [lowertext(TB.name)].</span>")
+					user.custom_emote_vr(1, "<span class='vnotice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from [TG]'s [lowertext(RTB.name)] into their [lowertext(TB.name)].</span>")
 					add_attack_logs(user,TR,"Transfered [RTB.reagent_name] from [TG]'s [RTB] to [TR]'s [TB]")	//Bonus for staff so they can see if people have abused transfer and done pref breaks
 				RTB.reagents.vore_trans_to_mob(TR, transfer_amount, CHEM_VORE, 1, 0, TB)
 				if(RTB.count_liquid_for_sprite || TB.count_liquid_for_sprite)
 					update_fullness()
 
 			else if(TR.receive_reagents == FALSE)
-				to_chat(user, "<span class='warning'>This person's prefs dont allow that!</span>")
+				to_chat(user, "<span class='vwarning'>This person's prefs dont allow that!</span>")
 				return FALSE
 
 			else
@@ -179,13 +179,13 @@
 				if(!Adjacent(TR) || !Adjacent(TG))
 					return //No long distance transfer
 				if(!TR.reagents.get_free_space())
-					to_chat(user, "<span class='notice'>[TR]'s [lowertext(TB.name)] is full!</span>")
+					to_chat(user, "<span class='vnotice'>[TR]'s [lowertext(TB.name)] is full!</span>")
 					return FALSE
 
 				if(TG == user)
-					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from their [lowertext(RTB.name)] into [TR]'s [lowertext(TB.name)].</span>")
+					user.custom_emote_vr(1, "<span class='vnotice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from their [lowertext(RTB.name)] into [TR]'s [lowertext(TB.name)].</span>")
 				else
-					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from [TG]s [lowertext(RTB.name)] into [TR]'s [lowertext(TB.name)].</span>")
+					user.custom_emote_vr(1, "<span class='vnotice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from [TG]s [lowertext(RTB.name)] into [TR]'s [lowertext(TB.name)].</span>")
 
 				RTB.reagents.vore_trans_to_mob(TR, transfer_amount, CHEM_VORE, 1, 0, TB)
 				add_attack_logs(user,TR,"Transfered reagents from [TG]'s [RTB] to [TR]'s [TB]")	//Bonus for staff so they can see if people have abused transfer and done pref breaks
@@ -203,23 +203,23 @@
 
 			if(TR == user) //Proceed, we dont need to have prefs enabled for transfer within user
 				if(TG == user)
-					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from their [lowertext(RTB.name)] into their stomach.</span>")
+					user.custom_emote_vr(1, "<span class='vnotice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from their [lowertext(RTB.name)] into their stomach.</span>")
 				else
-					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from [TG]'s [lowertext(RTB.name)] into their stomach.</span>")
+					user.custom_emote_vr(1, "<span class='vnotice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from [TG]'s [lowertext(RTB.name)] into their stomach.</span>")
 				RTB.reagents.vore_trans_to_mob(TR, transfer_amount, CHEM_INGEST, 1, 0, null)
 				add_attack_logs(user,TR,"Transfered [RTB.reagent_name] from [TG]'s [RTB] to [TR]'s Stomach")
 				if(RTB.count_liquid_for_sprite)
 					update_fullness()
 
 			else if(TR.receive_reagents == FALSE)
-				to_chat(user, "<span class='warning'>This person's prefs dont allow that!</span>")
+				to_chat(user, "<span class='vwarning'>This person's prefs dont allow that!</span>")
 				return FALSE
 
 			else
 				if(TG == user)
-					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from their [lowertext(RTB.name)] into [TR]'s stomach.</span>")
+					user.custom_emote_vr(1, "<span class='vnotice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from their [lowertext(RTB.name)] into [TR]'s stomach.</span>")
 				else
-					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from [TG]'s [lowertext(RTB.name)] into [TR]'s stomach.</span>")
+					user.custom_emote_vr(1, "<span class='vnotice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from [TG]'s [lowertext(RTB.name)] into [TR]'s stomach.</span>")
 
 				RTB.reagents.vore_trans_to_mob(TR, transfer_amount, CHEM_INGEST, 1, 0, null)
 				add_attack_logs(user,TR,"Transfered [RTB.reagent_name] from [TG]'s [RTB] to [TR]'s Stomach")	//Bonus for staff so they can see if people have abused transfer and done pref breaks
@@ -239,9 +239,9 @@
 				return //No long distance transfer
 
 			if(TG == user)
-				user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from their [lowertext(RTB.name)] into [T].</span>")
+				user.custom_emote_vr(1, "<span class='vnotice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from their [lowertext(RTB.name)] into [T].</span>")
 			else
-				user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from [TG]'s [lowertext(RTB.name)] into [T].</span>")
+				user.custom_emote_vr(1, "<span class='vnotice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from [TG]'s [lowertext(RTB.name)] into [T].</span>")
 
 			RTB.reagents.vore_trans_to_con(T, transfer_amount, 1, 0)
 			add_attack_logs(user, T,"Transfered [RTB.reagent_name] from [TG]'s [RTB] to a [T]")	//Bonus for staff so they can see if people have abused transfer and done pref breaks
@@ -256,15 +256,20 @@
 			var/puddle_amount = round(amount_removed/5)
 
 			if(puddle_amount == 0)
-				to_chat(user,"<span class='notice'>[RTB.reagent_name] dripples from the [lowertext(RTB.name)], not enough to form a puddle.</span> ")
+				to_chat(user,"<span class='vnotice'>[RTB.reagent_name] dripples from the [lowertext(RTB.name)], not enough to form a puddle.</span> ")
 				return
 
 			if(TG == user)
-				user.custom_emote_vr(1, "<span class='notice'>spills [RTB.reagent_name] from their [lowertext(RTB.name)] onto the floor!</span>")
+				user.custom_emote_vr(1, "<span class='vnotice'>spills [RTB.reagent_name] from their [lowertext(RTB.name)] onto the floor!</span>")
 			else
-				user.custom_emote_vr(1, "<span class='notice'>spills [RTB.reagent_name] from [TG]'s [lowertext(RTB.name)] onto the floor!</span>")
+				user.custom_emote_vr(1, "<span class='vnotice'>spills [RTB.reagent_name] from [TG]'s [lowertext(RTB.name)] onto the floor!</span>")
 
-			var/obj/effect/decal/cleanable/blood/reagent/puddle = new /obj/effect/decal/cleanable/blood/reagent(RTB.reagent_name, RTB.reagentcolor, RTB.reagentid, puddle_amount, user.ckey, TG.ckey)
+			var/obj/effect/decal/cleanable/blood/reagent/puddle = null
+			if (RTB.custom_reagentcolor)
+				puddle = new /obj/effect/decal/cleanable/blood/reagent(RTB.reagent_name, RTB.custom_reagentcolor, RTB.reagentid, puddle_amount, user.ckey, TG.ckey)
+			else
+				puddle = new /obj/effect/decal/cleanable/blood/reagent(RTB.reagent_name, RTB.reagentcolor, RTB.reagentid, puddle_amount, user.ckey, TG.ckey)
+
 			puddle.loc = TG.loc
 
 			var/soundfile
@@ -295,7 +300,7 @@
 				custom_emote_vr(1, "gives some rubs over [T]'s [lowertext(B.name)].")
 			B.quick_cycle()
 			return TRUE
-	to_chat(src, "<span class='warning'>There is no suitable belly for rubs.</span>")
+	to_chat(src, "<span class='vwarning'>There is no suitable belly for rubs.</span>")
 	return FALSE
 
 /mob/living/proc/mute_entry()
@@ -303,28 +308,28 @@
 	set category = "Preferences"
 	set desc = "Mute the chatlog messages when something enters a vore belly."
 	mute_entry = !mute_entry
-	to_chat(src, "<span class='warning'>Entrance logs [mute_entry ? "disabled" : "enabled"].</span>")
+	to_chat(src, "<span class='vwarning'>Entrance logs [mute_entry ? "disabled" : "enabled"].</span>")
 
 /mob/living/proc/toggle_trash_catching()
 	set name = "Toggle Trash Catching"
 	set category = "Abilities"
 	set desc = "Toggle Trash Eater throw vore abilities."
 	trash_catching = !trash_catching
-	to_chat(src, "<span class='warning'>Trash catching [trash_catching ? "enabled" : "disabled"].</span>")
+	to_chat(src, "<span class='vwarning'>Trash catching [trash_catching ? "enabled" : "disabled"].</span>")
 
 /mob/living/proc/restrict_trasheater()
 	set name = "Restrict Trash Eater"
 	set category = "Abilities"
 	set desc = "Toggle Trash Eater restriction level."
 	adminbus_trash = !adminbus_trash
-	to_chat(src, "<span class='warning'>Trash Eater restriction level set to [adminbus_trash ? "everything not blacklisted" : "only whitelisted items"].</span>")
+	to_chat(src, "<span class='vwarning'>Trash Eater restriction level set to [adminbus_trash ? "everything not blacklisted" : "only whitelisted items"].</span>")
 
 /mob/living/proc/liquidbelly_visuals()
 	set name = "Toggle Liquidbelly Visuals"
 	set category = "Preferences"
 	set desc = "Toggle liquidbelly fullscreen visual effect."
 	liquidbelly_visuals = !liquidbelly_visuals
-	to_chat(src, "<span class='warning'>Liquidbelly overlays [liquidbelly_visuals ? "enabled" : "disabled"].</span>")
+	to_chat(src, "<span class='vwarning'>Liquidbelly overlays [liquidbelly_visuals ? "enabled" : "disabled"].</span>")
 
 /mob/living/proc/fix_vore_effects()
 	set name = "Fix Vore Effects"
@@ -345,4 +350,4 @@
 	set name = "Check Nutrition"
 	set category = "Abilities"
 	set desc = "Check your current nutrition level."
-	to_chat(src, "<span class='notice'>Current nutrition level: [nutrition].</span>")
+	to_chat(src, "<span class='vnotice'>Current nutrition level: [nutrition].</span>")

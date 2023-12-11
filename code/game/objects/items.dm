@@ -226,11 +226,12 @@
 
 /obj/item/attack_hand(mob/living/user as mob)
 	if (!user) return
+	..()
 	if(anchored) // Start CHOMPStation Edit
 		if(hascall(src, "attack_self"))
 			return src.attack_self(user)
 		else
-			to_chat ("This is anchored and you can't lift it.")
+			to_chat (user, "This is anchored and you can't lift it.")
 		return // End CHOMPStation Edit
 	if (hasorgans(user))
 		var/mob/living/carbon/human/H = user

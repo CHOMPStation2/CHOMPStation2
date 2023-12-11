@@ -455,8 +455,8 @@ var/list/mining_overlay_cache = list()
 				return
 
 			var/obj/item/weapon/melee/shock_maul/S = W
-			if(!S.wielded || !S.status)	//if we're not wielded OR not powered up, do nothing
-				to_chat(user, "<span class='warning'>\The [src] must be wielded in two hands and powered on to be used for mining!</span>")
+			if(!S.wielded)	//CHOMPEdit - slight maul buff
+				to_chat(user, "<span class='warning'>\The [W] must be wielded in two hands to be used for mining!</span>")	//CHOMPEdit - fixed improper name
 				return
 
 			var/newDepth = excavation_level + S.excavation_amount // Used commonly below
@@ -470,6 +470,9 @@ var/list/mining_overlay_cache = list()
 					wreckfinds(S.destroy_artefacts)
 
 			to_chat(user, "<span class='notice'>You smash through \the [src][fail_message].</span>")
+			//CHOMPEdit start - Moved the maul sounds up here and made it not cost energy to mine
+			user.visible_message("<span class='warning'>\The [src] discharges with a thunderous, hair-raising crackle!</span>")
+			playsound(src, 'sound/weapons/resonator_blast.ogg', 100, 1, -1)
 
 			if(newDepth >= 200) // This means the rock is mined out fully
 				if(S.destroy_artefacts)
@@ -488,12 +491,7 @@ var/list/mining_overlay_cache = list()
 				var/obj/item/weapon/ore/O = new(src)
 				geologic_data.UpdateNearbyArtifactInfo(src)
 				O.geologic_data = geologic_data
-
-			user.visible_message("<span class='warning'>\The [src] discharges with a thunderous, hair-raising crackle!</span>")
-			playsound(src, 'sound/weapons/resonator_blast.ogg', 100, 1, -1)
-			S.deductcharge()
-			S.status = 0
-			S.update_held_icon()
+			//CHOMPEdit end
 
 		if (istype(W, /obj/item/weapon/pickaxe))
 			if(!istype(user.loc, /turf))

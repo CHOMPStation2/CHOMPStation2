@@ -217,12 +217,8 @@
 /obj/item/weapon/melee/shock_maul/afterattack(atom/A as mob|obj|turf|area, mob/user as mob, proximity)
 	if(!proximity) return
 	..()
+	//CHOMPEdit start - maul changes
 	if(A && wielded && status)
-		deductcharge()
-		status = 0
-		user.visible_message("<span class='warning'>\The [src] discharges with a thunderous, hair-raising crackle!</span>")
-		playsound(src, 'sound/weapons/resonator_blast.ogg', 100, 1, -1)
-		update_held_icon()
 		if(istype(A,/obj/structure/window))
 			var/obj/structure/window/W = A
 			visible_message("<span class='warning'>\The [W] crumples under the force of the impact!</span>")
@@ -232,7 +228,22 @@
 			B.dismantle()
 		else if(istype(A,/obj/structure/grille))
 			qdel(A)
+		else if(istype(A, /turf/simulated/wall))
+			var/turf/simulated/wall/W = A
+			if(W.density)
+				W.take_damage(force*3)	//One hit for regular walls, 3 hits for r_wall
+		else if(istype(A, /obj/structure/girder))
+			var/obj/structure/girder/G = A
+			G.dismantle()
+		else
+			return ..()	//Don't do anything if we don't resolve anything on our target
+		deductcharge()
+		status = 0
+		user.visible_message("<span class='warning'>\The [src] discharges with a thunderous, hair-raising crackle!</span>")
+		playsound(src, 'sound/weapons/resonator_blast.ogg', 100, 1, -1)
+		update_held_icon()
 		powercheck(hitcost)
+	//CHOMPEdit end
 
 /obj/item/weapon/melee/shock_maul/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
 	. = ..()

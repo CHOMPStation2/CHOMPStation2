@@ -92,9 +92,10 @@
 	icon_state = "clown"
 	slowdown = SHOES_SLOWDOWN+0.5
 	force = 0
-	var/footstep = 1	//used for squeeks whilst walking
+	//CHOMPRemove - removed built in squeak sounds
 	species_restricted = null
 
+/*	CHOMPEdit - Replaced with squeak component
 /obj/item/clothing/shoes/clown_shoes/handle_movement(var/turf/walking, var/running)
 	if(running)
 		if(footstep >= 2)
@@ -104,6 +105,7 @@
 			footstep++
 	else
 		playsound(src, "clownstep", 20, 1)
+*/
 
 /obj/item/clothing/shoes/cult
 	name = "boots"
@@ -248,40 +250,6 @@
 	desc = "A stylish, expensive pair of red sneakers."
 	icon_state = "sneakersred"
 	item_state = "sneakersred"
-
-// CHOMPedit start - Mech boots with hijacked clown shoes code.
-
-/obj/item/clothing/shoes/mech_shoes
-	name = "mech shoes"
-	desc = "Thud thud."
-	icon_state = "nothing"
-	armor = list(melee = 30, bullet = 10, laser = 10, energy = 15, bomb = 20, bio = 0, rad = 0) // Same as loadout jackboots.
-	siemens_coefficient = 0.7 // Same as loadout jackboots.
-	force = 2
-	var/footstep = 1 // Used for thuds while walking.
-	species_restricted = null
-
-/obj/item/clothing/shoes/mech_shoes/handle_movement(var/turf/walking, var/running)
-	if(running)
-		if(footstep >= 2)
-			footstep = 0
-			playsound(src, "mechstep", 15, 1) // Hopefully this won't be too annoying.
-		else
-			footstep++
-
-/obj/item/clothing/shoes/mech_shoes/light
-	name = "light mech shoes"
-	desc = "Thud thud, but quieter."
-
-/obj/item/clothing/shoes/mech_shoes/light/handle_movement(var/turf/walking, var/running)
-	if(running)
-		if(footstep >= 2)
-			footstep = 0
-			playsound(src, "powerloaderstep", 15, 1) // Hopefully this won't be too annoying.
-		else
-			footstep++
-
-// CHOMPedit end.
 
 /obj/item/clothing/shoes/ballet
 	name = "pointe shoes"

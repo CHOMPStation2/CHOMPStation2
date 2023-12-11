@@ -1,4 +1,4 @@
-var/static/icon/ingame_hud_vr = icon('icons/mob/hud_vr.dmi')
+var/static/icon/ingame_hud_vr = icon('modular_chomp/icons/mob/hud_vore.dmi')	//CHOMPEdit - expanded vore huds
 var/static/icon/ingame_hud_med_vr = icon('icons/mob/hud_med_vr.dmi')
 
 /mob/living/carbon/human/make_hud_overlays()
