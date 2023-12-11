@@ -179,6 +179,17 @@
   - qol: Adds warning for trying to wrap packages and gifts
   - rscdel: Disables debug messages for APC-less ships in electrical storms
 2023-12-10:
+  Kashargul:
+  - rscadd: 'change: puddles respect the custom liquid color'
+  - bugfix: overseen merge conflict in skin.dmf
   Upstream:
   - bugfix: fixes statusbar after tgchat update
   - rscadd: 'added two new themes to tgchat: vchatlight and vchatdark'
+2023-12-11:
+  BlackMajor:
+  - qol: Expanded event preference selection to include specific vore options
+  Upstream:
+  - bugfix: custom admin OOC colours
+  - balance: Robots no longer lose their overcharge when stepping into chargers.
+  - rscadd: "/\U0001F191"
+  - rscadd: Filter for NPC emotes to TG chat
