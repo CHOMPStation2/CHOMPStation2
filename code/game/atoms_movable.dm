@@ -238,7 +238,7 @@
 	for (var/datum/light_source/light as anything in light_sources) // Cycle through the light sources on this atom and tell them to update.
 		light.source_atom.update_light()
 
-	SEND_SIGNAL(src, COMSIG_MOVABLE_MOVED, old_loc, direction)
+	//SEND_SIGNAL(src, COMSIG_MOVABLE_MOVED, old_loc, direction) CHOMPEdit - Why was this comsig here twice?
 
 	return TRUE
 

@@ -216,3 +216,14 @@
 	B.digest_brute = 20
 	B.special_entrance_sound = 'sound/machines/blender.ogg'
 	B.recycling = TRUE
+
+/obj/structure/toilet/item/Initialize(mapload)
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/structure/toilet/item/LateInitialize()
+	if(istype(loc, /mob/living)) return
+	var/obj/item/I
+	for(I in loc)
+		if(I.density || I.anchored || I == src) continue
+		I.forceMove(src)
