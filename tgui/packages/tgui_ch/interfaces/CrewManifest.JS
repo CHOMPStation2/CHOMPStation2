@@ -18,7 +18,9 @@ data["manifest"] = PDA_Manifest
 
 export const CrewManifest = (props, context) => {
   return (
-    <Window width={400} height={600}>
+    <Window
+      width={400}
+      height={600}>
       <Window.Content scrollable>
         <CrewManifestContent />
       </Window.Content>
