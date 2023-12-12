@@ -5,16 +5,12 @@
 	name = "guest pass"
 	desc = "Allows temporary access to station areas."
 	icon_state = "guest"
-	initial_sprite_stack = list()
 	light_color = "#0099ff"
 
 	var/temp_access = list() //to prevent agent cards stealing access as permanent
 	var/expiration_time = 0
 	var/expired = 0
 	var/reason = "NOT SPECIFIED"
-
-/obj/item/weapon/card/id/guest/update_icon()
-	return
 
 /obj/item/weapon/card/id/guest/GetAccess()
 	if(world.time > expiration_time)
@@ -49,10 +45,10 @@
 			to_chat(user, "<span class='warning'>This guest pass is already deactivated!</span>")
 			return
 
-		var/confirm = tgui_alert(usr, "Do you really want to deactivate this guest pass? (you can't reactivate it)", "Confirm Deactivation", list("Yes", "No"))
+		var/confirm = alert("Do you really want to deactivate this guest pass? (you can't reactivate it)", "Confirm Deactivation", "Yes", "No")
 		if(confirm == "Yes")
 			//rip guest pass </3
-			user.visible_message("<b>\The [user]</b> deactivates \the [src].")
+			user.visible_message("<span class='notice'>\The [user] deactivates \the [src].</span>")
 			icon_state = "guest-invalid"
 			update_icon()
 			expiration_time = world.time
@@ -86,10 +82,9 @@
 	desc = "Used to print temporary passes for people. Handy!"
 	icon_state = "guest"
 	layer = ABOVE_WINDOW_LAYER
-	vis_flags = VIS_HIDE // They have an emissive that looks bad in openspace due to their wall-mounted nature
 	icon_keyboard = null
 	icon_screen = "pass"
-	density = FALSE
+	density = 0
 	circuit = /obj/item/weapon/circuitboard/guestpass
 
 	var/obj/item/weapon/card/id/giver
@@ -107,13 +102,7 @@
 
 
 /obj/machinery/computer/guestpass/attackby(obj/I, mob/user)
-	if(istype(I, /obj/item/weapon/card/id/guest))
-		to_chat(user, "<span class='warning'>The guest pass terminal denies to accept the guest pass.</span>")
-		return
 	if(istype(I, /obj/item/weapon/card/id))
-		if(stat & NOPOWER) //checking for power in here so crowbar and screwdriver and stuff still works.
-			to_chat(user, SPAN_WARNING("The terminal refuses your I.D as it is unpowered!"))
-			return
 		if(!giver && user.unEquip(I))
 			I.forceMove(src)
 			giver = I
@@ -125,26 +114,6 @@
 
 /obj/machinery/computer/guestpass/attack_ai(var/mob/user as mob)
 	return attack_hand(user)
-
-/obj/machinery/computer/guestpass/verb/eject_id()
-	set category = "Object"
-	set name = "Eject ID Card"
-	set src in oview(1)
-
-	if(!usr || usr.stat || usr.lying)	return
-
-	if(giver)
-		to_chat(usr, SPAN_NOTICE("You remove \the [giver] from \the [src]."))
-		giver.loc = get_turf(src)
-		if(!usr.get_active_hand() && istype(usr,/mob/living/carbon/human))
-			usr.put_in_hands(giver)
-		else
-			giver.loc = src.loc
-		giver = null
-		accesses.Cut()
-	else
-		to_chat(usr, SPAN_WARNING("There is nothing to remove from the console."))
-	return
 
 /obj/machinery/computer/guestpass/attack_hand(var/mob/user as mob)
 	if(..())
@@ -201,9 +170,9 @@
 			if(reas)
 				reason = reas
 		if("duration")
-			var/dur = input("Duration (in minutes) during which pass is valid (up to 120 minutes).", "Duration") as num|null
+			var/dur = input("Duration (in minutes) during which pass is valid (up to 360 minutes).", "Duration") as num|null //VOREStation Edit
 			if(dur)
-				if(dur > 0 && dur <= 120)
+				if(dur > 0 && dur <= 360) //VOREStation Edit
 					duration = dur
 				else
 					to_chat(usr, "<span class='warning'>Invalid duration.</span>")
