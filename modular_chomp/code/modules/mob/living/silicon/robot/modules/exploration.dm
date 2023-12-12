@@ -6,7 +6,7 @@
 //Explo doggos
 /obj/item/weapon/robot_module/robot/exploration
 	name = "exploration robot module"
-	channels = list("Exploration" = 1)
+	channels = list("Explorer" = 1)
 	languages = list(
 					LANGUAGE_SOL_COMMON	= 1,
 					LANGUAGE_UNATHI		= 1,
