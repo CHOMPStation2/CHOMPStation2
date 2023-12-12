@@ -196,3 +196,5 @@
 2023-12-12:
   ItsSelis:
   - code_imp: Custom indexeddb store. Tgui related settings like themes might reset.
+  Verkister:
+  - bugfix: Fixed AI Swoopie vac spam and neck timing.
