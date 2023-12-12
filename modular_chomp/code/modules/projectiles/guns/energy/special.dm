@@ -1,3 +1,8 @@
+/obj/item/weapon/gun/energy/medigun/mounted
+	name = "mounted directed restoration system"
+	self_recharge = 1
+	use_external_power = 1
+
 /obj/item/weapon/gun/energy/taser/disabler/slow
 	name = "plasma snare device"
 	desc = "A modified disabler adjusted to impulse a target with a restrictive slowdown."
