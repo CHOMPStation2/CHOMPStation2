@@ -193,3 +193,8 @@
   - balance: Robots no longer lose their overcharge when stepping into chargers.
   - rscadd: "/\U0001F191"
   - rscadd: Filter for NPC emotes to TG chat
+2023-12-12:
+  ItsSelis:
+  - code_imp: Custom indexeddb store. Tgui related settings like themes might reset.
+  Verkister:
+  - bugfix: Fixed AI Swoopie vac spam and neck timing.
