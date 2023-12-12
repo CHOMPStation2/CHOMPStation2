@@ -15,14 +15,14 @@
 	melee_damage_lower = 22
 	melee_damage_upper = 33
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
-	projectiletype = /obj/item/projectile/energy/electrode/cult
+	projectiletype = /obj/item/projectile/energy/inversion
 	movement_cooldown = 1
 
 	loot_list = list(/obj/item/weapon/rig/ch/aegis = 100)
 
 
 /mob/living/simple_mob/construct/juggernaut/behemoth/unstoppable/bullet_act(var/obj/item/projectile/P)
-	var/reflectchance = 100 - round(P.damage)
+	var/reflectchance = 100 - round(P.damage*2)
 	if(prob(reflectchance))
 		visible_message("<span class='danger'>The [P.name] gets reflected by [src]'s shell!</span>", \
 						"<span class='userdanger'>The [P.name] gets reflected by [src]'s shell!</span>")
