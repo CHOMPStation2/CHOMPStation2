@@ -71,7 +71,7 @@
 
 		// Check the carrier
 		var/datum/gender/TM = gender_datums[M.get_visible_gender()]
-		var/answer = tgui_alert(M, "[P] is requesting a DNA sample from you. Will you allow it to confirm your identity?", "[P] Check DNA", list("Yes", "No"))
+		var/answer = input(M, "[P] is requesting a DNA sample from you. Will you allow it to confirm your identity?", "[P] Check DNA", "No") in list("Yes", "No")
 		if(answer == "Yes")
 			var/turf/T = get_turf(P.loc)
 			for (var/mob/v in viewers(T))
@@ -369,24 +369,34 @@
 
 	return data
 
-/datum/pai_software/pai_hud
-	name = "AR HUD"
-	ram_cost = 30
-	id = "ar_hud"
+/datum/pai_software/sec_hud
+	name = "Security HUD"
+	ram_cost = 20
+	id = "sec_hud"
 
-/datum/pai_software/pai_hud/toggle(mob/living/silicon/pai/user)
-	user.paiHUD = !user.paiHUD
-	user.plane_holder.set_vis(VIS_CH_ID,user.paiHUD)
-	user.plane_holder.set_vis(VIS_CH_WANTED,user.paiHUD)
-	user.plane_holder.set_vis(VIS_CH_IMPTRACK,user.paiHUD)
-	user.plane_holder.set_vis(VIS_CH_IMPCHEM,user.paiHUD)
-	user.plane_holder.set_vis(VIS_CH_STATUS_R,user.paiHUD)
-	user.plane_holder.set_vis(VIS_CH_HEALTH_VR,user.paiHUD)
-	user.plane_holder.set_vis(VIS_CH_BACKUP,user.paiHUD) //backup stuff from silicon_vr is here now
-	user.plane_holder.set_vis(VIS_AUGMENTED,user.paiHUD)
+/datum/pai_software/sec_hud/toggle(mob/living/silicon/pai/user)
+	user.secHUD = !user.secHUD
+	user.plane_holder.set_vis(VIS_CH_ID, user.secHUD)
+	user.plane_holder.set_vis(VIS_CH_WANTED, user.secHUD)
+	user.plane_holder.set_vis(VIS_CH_IMPTRACK, user.secHUD)
+	user.plane_holder.set_vis(VIS_CH_IMPLOYAL, user.secHUD)
+	user.plane_holder.set_vis(VIS_CH_IMPCHEM, user.secHUD)
 
-/datum/pai_software/pai_hud/is_active(mob/living/silicon/pai/user)
-	return user.paiHUD
+/datum/pai_software/sec_hud/is_active(mob/living/silicon/pai/user)
+	return user.secHUD
+
+/datum/pai_software/med_hud
+	name = "Medical HUD"
+	ram_cost = 20
+	id = "med_hud"
+
+/datum/pai_software/med_hud/toggle(mob/living/silicon/pai/user)
+	user.medHUD = !user.medHUD
+	user.plane_holder.set_vis(VIS_CH_STATUS, user.medHUD)
+	user.plane_holder.set_vis(VIS_CH_HEALTH, user.medHUD)
+
+/datum/pai_software/med_hud/is_active(mob/living/silicon/pai/user)
+	return user.medHUD
 
 /datum/pai_software/translator
 	name = "Universal Translator"
@@ -493,7 +503,7 @@
 				spawn(0)
 					R.send_signal("ACTIVATE")
 				for(var/mob/O in hearers(1, R.loc))
-					O.show_message("\icon[R][bicon(R)] *beep* *beep*", 3, "*beep* *beep*", 2)
+					O.show_message("[bicon(R)] *beep* *beep*", 3, "*beep* *beep*", 2)
 			if("freq")
 				var/frequency = unformat_frequency(params["freq"])
 				frequency = sanitize_frequency(frequency, RADIO_LOW_FREQ, RADIO_HIGH_FREQ)

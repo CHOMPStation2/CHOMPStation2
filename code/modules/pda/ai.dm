@@ -26,7 +26,7 @@
 	set name = "Use PDA"
 	set src in usr
 
-	if(!can_use(usr))
+	if(!can_use())
 		return
 	tgui_interact(usr)
 

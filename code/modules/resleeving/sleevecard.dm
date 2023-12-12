@@ -1,4 +1,10 @@
-/obj/item/device/paicard/sleevecard
+/obj/item/device/radio/sleevecard
+	canhear_range = 0
+
+/obj/item/device/radio/sleevecard/tgui_state(mob/user)
+	return GLOB.tgui_always_state
+
+/obj/item/device/sleevecard
 	name = "sleevecard"
 	desc = "This Vey-Med-upgraded pAI module has enough capacity to run a whole mind of human-level intelligence."
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/vey_med,

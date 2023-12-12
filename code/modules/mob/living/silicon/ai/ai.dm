@@ -32,7 +32,8 @@ var/list/ai_verbs_default = list(
 /proc/AutoUpdateAI(obj/subject)
 	var/is_in_use = 0
 	if (subject!=null)
-		for(var/mob/living/silicon/ai/M as anything in ai_list)
+		for(var/A in ai_list)
+			var/mob/living/silicon/ai/M = A
 			if ((M.client && M.machine == subject))
 				is_in_use = 1
 				subject.attack_ai(M)
@@ -43,16 +44,15 @@ var/list/ai_verbs_default = list(
 	name = "AI"
 	icon = 'icons/mob/AI.dmi'//
 	icon_state = "ai"
-	anchored = TRUE // -- TLE
-	density = TRUE
+	anchored = 1 // -- TLE
+	density = 1
 	status_flags = CANSTUN|CANPARALYSE|CANPUSH
 	shouldnt_see = list(/mob/observer/eye, /obj/effect/rune)
 	var/list/network = list(NETWORK_DEFAULT)
 	var/obj/machinery/camera/camera = null
 	var/aiRestorePowerRoutine = 0
 	var/viewalerts = 0
-	var/icon/holo_icon				//Default is assigned when AI is created.
-	var/holo_color = null
+	var/icon/holo_icon//Default is assigned when AI is created.
 	var/list/connected_robots = list()
 	var/obj/item/device/pda/ai/aiPDA = null
 	var/obj/item/device/communicator/aiCommunicator = null
@@ -124,9 +124,9 @@ var/list/ai_verbs_default = list(
 	if(!is_dummy)
 		aiPDA = new/obj/item/device/pda/ai(src)
 	SetName(pickedName)
-	anchored = TRUE
+	anchored = 1
 	canmove = 0
-	density = TRUE
+	density = 1
 	loc = loc
 
 	if(!is_dummy)
@@ -162,6 +162,7 @@ var/list/ai_verbs_default = list(
 	add_language(LANGUAGE_SIIK, 1)
 	add_language(LANGUAGE_AKHANI, 1)
 	add_language(LANGUAGE_SKRELLIAN, 1)
+	add_language(LANGUAGE_SKRELLIANFAR, 0)
 	add_language(LANGUAGE_TRADEBAND, 1)
 	add_language(LANGUAGE_GUTTER, 1)
 	add_language(LANGUAGE_EAL, 1)
@@ -351,7 +352,7 @@ var/list/ai_verbs_default = list(
 		return
 
 	if (!custom_sprite)
-		var/new_sprite = tgui_input_list(usr, "Select an icon!", "AI", ai_icons)
+		var/new_sprite = input("Select an icon!", "AI", selected_sprite) as null|anything in ai_icons
 		if(new_sprite) selected_sprite = new_sprite
 	update_icon()
 
@@ -365,7 +366,7 @@ var/list/ai_verbs_default = list(
 	if(message_cooldown)
 		to_chat(src, "<span class='filter_notice'>Please allow one minute to pass between announcements.</span>")
 		return
-	var/input = tgui_input_text(usr, "Please write a message to announce to the station crew.", "A.I. Announcement")
+	var/input = input(usr, "Please write a message to announce to the station crew.", "A.I. Announcement")
 	if(!input)
 		return
 
@@ -383,7 +384,7 @@ var/list/ai_verbs_default = list(
 	if(check_unable(AI_CHECK_WIRELESS))
 		return
 
-	var/confirm = tgui_alert(usr, "Are you sure you want to call the shuttle?", "Confirm Shuttle Call", list("Yes", "No"))
+	var/confirm = alert("Are you sure you want to call the shuttle?", "Confirm Shuttle Call", "Yes", "No")
 
 	if(check_unable(AI_CHECK_WIRELESS))
 		return
@@ -402,7 +403,7 @@ var/list/ai_verbs_default = list(
 	if(check_unable(AI_CHECK_WIRELESS))
 		return
 
-	var/confirm = tgui_alert(usr, "Are you sure you want to recall the shuttle?", "Confirm Shuttle Recall", list("Yes", "No"))
+	var/confirm = alert("Are you sure you want to recall the shuttle?", "Confirm Shuttle Recall", "Yes", "No")
 	if(check_unable(AI_CHECK_WIRELESS))
 		return
 
@@ -420,7 +421,7 @@ var/list/ai_verbs_default = list(
 	if(emergency_message_cooldown)
 		to_chat(usr, "<span class='warning'>Arrays recycling. Please stand by.</span>")
 		return
-	var/input = sanitize(tgui_input_text(usr, "Please choose a message to transmit to [using_map.boss_short] via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination.  Transmission does not guarantee a response. There is a 30 second delay before you may send another message, be clear, full and concise.", "To abort, send an empty message.", ""))
+	var/input = sanitize(input(usr, "Please choose a message to transmit to [using_map.boss_short] via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination.  Transmission does not guarantee a response. There is a 30 second delay before you may send another message, be clear, full and concise.", "To abort, send an empty message.", ""))
 	if(!input)
 		return
 	CentCom_announce(input, usr)
@@ -598,14 +599,61 @@ var/list/ai_verbs_default = list(
 		return
 
 	var/input
-	var/choice
-
-	choice = alert("Would you like to modify your hologram's model, or color?",,"Model","Color","Cancel")
+	var/choice = alert("Would you like to select a hologram based on a (visible) crew member, switch to unique avatar, or load your character from your character slot?",,"Crew Member","Unique","My Character")
 
 	switch(choice)
-		if("Color")
-			input = input("Choose a color:", "Hologram Color", holo_color) as color|null
+		if("Crew Member") //A seeable crew member (or a dog)
+			var/list/targets = trackable_mobs()
+			if(targets.len)
+				input = input("Select a crew member:") as null|anything in targets //The definition of "crew member" is a little loose...
+				//This is torture, I know. If someone knows a better way...
+				if(!input) return
+				var/new_holo = getHologramIcon(getCompoundIcon(targets[input]))
+				qdel(holo_icon)
+				holo_icon = new_holo
 
+			else
+				alert("No suitable records found. Aborting.")
+
+		if("My Character") //Loaded character slot
+			if(!client || !client.prefs) return
+			var/mob/living/carbon/human/dummy/dummy = new ()
+			//This doesn't include custom_items because that's ... hard.
+			client.prefs.dress_preview_mob(dummy)
+			sleep(1 SECOND) //Strange bug in preview code? Without this, certain things won't show up. Yay race conditions?
+			dummy.regenerate_icons()
+
+			var/new_holo = getHologramIcon(getCompoundIcon(dummy))
+			qdel(holo_icon)
+			qdel(dummy)
+			holo_icon = new_holo
+
+		else //A premade from the dmi
+			var/icon_list[] = list(
+				"default",
+				"floating face",
+				"singularity",
+				"drone",
+				"carp",
+				"spider",
+				"bear",
+				"slime",
+				"ian",
+				"runtime",
+				"poly",
+				"pun pun",
+				"male human",
+				"female human",
+				"male unathi",
+				"female unathi",
+				"male tajaran",
+				"female tajaran",
+				"male tesharii",
+				"female tesharii",
+				"male skrell",
+				"female skrell"
+			)
+			input = input("Please select a hologram:") as null|anything in icon_list
 			if(input)
 				holo_color = input
 
@@ -782,8 +830,8 @@ var/list/ai_verbs_default = list(
 			if(!do_after(user,40 * W.toolspeed))
 				user.visible_message("<span class='notice'>\The [user] decides not to unbolt \the [src].</span>")
 				return
-			user.visible_message("<span class='notice'>\The [user] finishes unfastening \the [src]!</span>")
-			anchored = FALSE
+			user.visible_message("<font color='blue'>\The [user] finishes unfastening \the [src]!</font>")
+			anchored = 0
 			return
 		else
 			playsound(src, W.usesound, 50, 1)
@@ -791,8 +839,8 @@ var/list/ai_verbs_default = list(
 			if(!do_after(user,40 * W.toolspeed))
 				user.visible_message("<span class='notice'>\The [user] decides not to bolt \the [src].</span>")
 				return
-			user.visible_message("<span class='notice'>\The [user] finishes fastening down \the [src]!</span>")
-			anchored = TRUE
+			user.visible_message("<font color='blue'>\The [user] finishes fastening down \the [src]!</font>")
+			anchored = 1
 			return
 	else
 		return ..()
@@ -810,11 +858,9 @@ var/list/ai_verbs_default = list(
 		src.aiRadio.interact(src)
 
 /mob/living/silicon/ai/proc/sensor_mode()
-	set name = "Toggle Sensor Augmentation" //VOREStation Add
+	set name = "Set Sensor Augmentation"
 	set category = "AI Settings"
 	set desc = "Augment visual feed with internal sensor overlays"
-	sensor_type = !sensor_type //VOREStation Add
-	to_chat(usr, "You [sensor_type ? "enable" : "disable"] your sensors.") //VOREStation Add
 	toggle_sensor_mode()
 
 /mob/living/silicon/ai/proc/toggle_hologram_movement()
@@ -877,9 +923,9 @@ var/list/ai_verbs_default = list(
 				A = D
 
 		if(istype(A))
-			switch(tgui_alert(src, "Do you want to open \the [A] for [target]?", "Doorknob_v2a.exe", list("Yes", "No")))
+			switch(alert(src, "Do you want to open \the [A] for [target]?", "Doorknob_v2a.exe", "Yes", "No"))
 				if("Yes")
-					A.AIShiftClick(src)
+					A.AIShiftClick()
 					to_chat(src, "<span class='notice'>You open \the [A] for [target].</span>")
 				else
 					to_chat(src, "<span class='warning'>You deny the request.</span>")
@@ -985,8 +1031,7 @@ var/list/ai_verbs_default = list(
 	return track // Feed variable back to AI
 
 /mob/living/silicon/ai/proc/relay_speech(mob/living/M, list/message_pieces, verb)
-	var/list/combined = combine_message(message_pieces, verb, M)
-	var/message = combined["formatted"]
+	var/message = combine_message(message_pieces, verb, M)
 	var/name_used = M.GetVoice()
 	//This communication is imperfect because the holopad "filters" voices and is only designed to connect to the master only.
 	var/rendered = "<span class='game say'><i>Relayed Speech: <span class='name'>[name_used]</span> [message]</i></span>"
@@ -1003,7 +1048,7 @@ var/list/ai_verbs_default = list(
 	drop_new_multicam()
 
 //Special subtype kept around for global announcements
-/mob/living/silicon/ai/announcer
+/mob/living/silicon/ai/announcer/
 	is_dummy = 1
 
 /mob/living/silicon/ai/announcer/Initialize()

@@ -4,9 +4,12 @@ import { useBackend } from '../backend';
 import { Box, Button, Flex, Input, LabeledList, Section, Table, Tabs } from '../components';
 import { Window } from '../layouts';
 import { decodeHtmlEntities } from 'common/string';
+import { COLORS } from "../constants";
 import { CrewManifestContent } from './CrewManifest';
 
-export const IdentificationComputer = () => {
+export const IdentificationComputer = (props, context) => {
+  const { act, data } = useBackend(context);
+
   return (
     <Window width={600} height={700}>
       <Window.Content resizable>
