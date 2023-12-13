@@ -33,21 +33,9 @@ module.exports = (env = {}, argv) => {
     context: path.resolve(__dirname),
     target: ['web', 'es3', 'browserslist:ie 8'],
     entry: {
-<<<<<<< HEAD
-      'tgui': [
-        './packages/tgui-polyfill',
-        // CHOMPstation Edit - TGUI Modulation
-        // './packages/tgui',
-        './packages/tgui_ch',
-      ],
-      'tgui-panel': [
-        './packages/tgui-polyfill',
-        './packages/tgui-panel',
-      ],
-=======
-      'tgui': ['./packages/tgui-polyfill', './packages/tgui'],
+      // 'tgui': ['./packages/tgui-polyfill', './packages/tgui'], // CHOMPstation Edit - TGUI Modulation
+      'tgui': ['./packages/tgui-polyfill', './packages/tgui_ch'],
       'tgui-panel': ['./packages/tgui-polyfill', './packages/tgui-panel'],
->>>>>>> bdd580a50d... JS to JSX (#15583)
     },
     output: {
       path: argv.useTmpFolder
