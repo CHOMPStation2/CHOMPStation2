@@ -218,3 +218,8 @@
   Upstream:
   - rscadd: Adds knees to chest body marking
   - imageadd: added knees to chest body marking sprite
+  - bugfix: some civilian robot sprites
+  - bugfix: paper printer not showing title
+  - qol: looping admin borg handling until cancelled
+  - rscadd: borg admin upgrade install
+  - rscadd: first service form from Eskra
