@@ -214,3 +214,7 @@
   - code_imp: Custom indexeddb store. Tgui related settings like themes might reset.
   Verkister:
   - bugfix: Fixed AI Swoopie vac spam and neck timing.
+2023-12-13:
+  Upstream:
+  - rscadd: Adds knees to chest body marking
+  - imageadd: added knees to chest body marking sprite
