@@ -223,3 +223,9 @@
   - qol: looping admin borg handling until cancelled
   - rscadd: borg admin upgrade install
   - rscadd: first service form from Eskra
+  - rscadd: adds edited sprites of the frontier overalls and variants that only have
+      the overall piece & adds them to the loadouts
+  - qol: puts overalls in a selection dropdown to avoid over-cluttering
+  - bugfix: fixes the sprites of new turtleneck underwears (they covered mob hands)
+  - imageadd: adds edited sprites of the frontier overalls and variants that only
+      have the overall piece
