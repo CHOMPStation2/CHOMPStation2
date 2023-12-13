@@ -16,6 +16,7 @@
 				  access_xenoarch)
 	one_access = TRUE
 
+<<<<<<< HEAD
 /datum/supply_pack/misc/eva_rig
 	name = "eva hardsuit (empty)"
 	contains = list(
@@ -114,6 +115,8 @@
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "null hardsuit crate"
 
+=======
+>>>>>>> 049fec225a... Merge pull request #15601 from KillianKirilenko/kk-mini1
 /datum/supply_pack/misc/jetpack
 	name = "jetpack (empty)"
 	contains = list(
