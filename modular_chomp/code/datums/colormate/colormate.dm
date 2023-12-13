@@ -1,7 +1,3 @@
-#define COLORMATE_TINT 1
-#define COLORMATE_HSV 2
-#define COLORMATE_MATRIX 3
-
 /datum/ColorMate
 	var/name = "colouring"
 	var/atom/movable/inserted

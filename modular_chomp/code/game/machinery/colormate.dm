@@ -1,7 +1,3 @@
-#define COLORMATE_TINT 1
-#define COLORMATE_HSV 2
-#define COLORMATE_MATRIX 3
-
 /obj/machinery/gear_painter
 	name = "Color Mate"
 	desc = "A machine to give your apparel a fresh new color!"
