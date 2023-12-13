@@ -40,7 +40,7 @@
 	set desc = "Allows to recolour once."
 
 	if(!has_recoloured)
-		var/datum/ColorMate/recolour = new(usr)
+		var/datum/ColorMate/recolour = new /datum/ColorMate(usr)
 		recolour.tgui_interact(usr)
 		return
 	to_chat(usr, "You've already recoloured yourself once. Ask for a module reset for another.")
