@@ -33,6 +33,7 @@ module.exports = (env = {}, argv) => {
     context: path.resolve(__dirname),
     target: ['web', 'es3', 'browserslist:ie 8'],
     entry: {
+<<<<<<< HEAD
       'tgui': [
         './packages/tgui-polyfill',
         // CHOMPstation Edit - TGUI Modulation
@@ -43,6 +44,10 @@ module.exports = (env = {}, argv) => {
         './packages/tgui-polyfill',
         './packages/tgui-panel',
       ],
+=======
+      'tgui': ['./packages/tgui-polyfill', './packages/tgui'],
+      'tgui-panel': ['./packages/tgui-polyfill', './packages/tgui-panel'],
+>>>>>>> bdd580a50d... JS to JSX (#15583)
     },
     output: {
       path: argv.useTmpFolder
@@ -53,13 +58,13 @@ module.exports = (env = {}, argv) => {
       chunkLoadTimeout: 15000,
     },
     resolve: {
-      extensions: ['.tsx', '.ts', '.js'],
+      extensions: ['.tsx', '.ts', '.js', '.jsx'],
       alias: {},
     },
     module: {
       rules: [
         {
-          test: /\.(js|cjs|ts|tsx)$/,
+          test: /\.(js(x)?|cjs|ts(x)?)$/,
           use: [
             {
               loader: require.resolve('babel-loader'),
@@ -134,17 +139,11 @@ module.exports = (env = {}, argv) => {
 
   // Production build specific options
   if (mode === 'production') {
-    const TerserPlugin = require('terser-webpack-plugin');
+    const { EsbuildPlugin } = require('esbuild-loader');
     config.optimization.minimizer = [
-      new TerserPlugin({
-        extractComments: false,
-        terserOptions: {
-          ie8: true,
-          output: {
-            ascii_only: true,
-            comments: false,
-          },
-        },
+      new EsbuildPlugin({
+        target: 'ie8',
+        css: true,
       }),
     ];
   }
