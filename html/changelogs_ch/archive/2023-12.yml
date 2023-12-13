@@ -229,3 +229,5 @@
   - bugfix: fixes the sprites of new turtleneck underwears (they covered mob hands)
   - imageadd: adds edited sprites of the frontier overalls and variants that only
       have the overall piece
+  - qol: changed the minimizer to improve tgui bundle build time
+  - code_imp: renamed all .js interface files to .jsx
