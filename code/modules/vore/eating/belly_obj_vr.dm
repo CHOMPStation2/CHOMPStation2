@@ -468,7 +468,7 @@
 		owner = loc
 		owner.vore_organs |= src
 		if(isliving(loc))
-			if(speedy_mob_processing) //CHOMPEdit Start
+			if(mode_flags & DM_FLAG_TURBOMODE) //CHOMPEdit Start
 				START_PROCESSING(SSobj, src)
 			else
 				START_PROCESSING(SSbellies, src)
@@ -477,7 +477,7 @@
 	flags |= NOREACT		// We dont want bellies to start bubling nonstop due to people mixing when transfering and making different reagents
 
 /obj/belly/Destroy()
-	if(speedy_mob_processing)
+	if(mode_flags & DM_FLAG_TURBOMODE)
 		STOP_PROCESSING(SSobj, src)
 	else
 		STOP_PROCESSING(SSbellies, src)
