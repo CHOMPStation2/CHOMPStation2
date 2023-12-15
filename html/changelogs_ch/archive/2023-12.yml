@@ -235,3 +235,6 @@
   Upstream:
   - rscadd: 'Fix: Vorebelly only option will no longer consider sleeper state for
       sprite calculation.'
+2023-12-15:
+  tacoguy7765093:
+  - bugfix: Adds an invisible wall to prevent getting lost in space.
