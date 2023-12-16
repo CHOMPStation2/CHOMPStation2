@@ -235,3 +235,24 @@
   Upstream:
   - rscadd: 'Fix: Vorebelly only option will no longer consider sleeper state for
       sprite calculation.'
+2023-12-15:
+  tacoguy7765093:
+  - bugfix: Adds an invisible wall to prevent getting lost in space.
+2023-12-16:
+  Aroliacue:
+  - balance: Removed heat protection from all gloves from my last PR, added it to
+      basic coloured variants and insulated gloves instead. This was the original
+      intention, but I was lazy.
+  - balance: Buffed SWAT and Combat Gloves with a tiny amount of damage resistance.
+  - qol: Made Combat Gloves description more descriptive as an insulated gloves/SWAT
+      gloves combo.
+  - imageadd: Updated the Xenomorph Hybrid sprites for the Protean RIGsuit.
+  Kashargul:
+  - rscadd: self recolour verb for simple mobs and robots
+  Upstream:
+  - bugfix: removes a forgotten debug message [I really need to tag them better for
+      myself]
+  - rscadd: 'Fix: Runtime during module selection'
+  - rscadd: 'Fix: Crisis Raptor belly up rest sprite'
+  Verkister:
+  - bugfix: Fixed turbo mode initialization and swoopie neck speed.
