@@ -238,3 +238,7 @@
 2023-12-15:
   tacoguy7765093:
   - bugfix: Adds an invisible wall to prevent getting lost in space.
+2023-12-16:
+  Upstream:
+  - bugfix: removes a forgotten debug message [I really need to tag them better for
+      myself]
