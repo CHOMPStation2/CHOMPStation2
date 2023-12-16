@@ -242,3 +242,5 @@
   Upstream:
   - bugfix: removes a forgotten debug message [I really need to tag them better for
       myself]
+  - rscadd: 'Fix: Runtime during module selection'
+  - rscadd: 'Fix: Crisis Raptor belly up rest sprite'
