@@ -256,3 +256,6 @@
   - rscadd: 'Fix: Crisis Raptor belly up rest sprite'
   Verkister:
   - bugfix: Fixed turbo mode initialization and swoopie neck speed.
+  tacoguy7765093:
+  - bugfix: Fixing a problematic button on the shuttle which is important for ensuring
+      the smooth operation of transportation services.
