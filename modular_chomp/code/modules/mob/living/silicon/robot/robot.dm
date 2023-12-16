@@ -1,6 +1,7 @@
 /mob/living/silicon/robot
 	var/sleeper_resting = FALSE //Enable resting belly sprites for dogborgs that have the sprites
 	var/datum/matter_synth/water_res = null //Enable water for lick clean
+	var/has_recoloured = FALSE
 
 /mob/living/silicon/robot/verb/purge_nutrition()
 	set name = "Purge Nutrition"
@@ -28,3 +29,18 @@
 				to_chat(src, "<span class='filter_notice'>You refill the extinguisher using your water reserves.</span>")
 			else
 				to_chat(src, "<span class='filter_notice'>Insufficient water reserves.</span>")
+
+/mob/living/silicon/robot/module_reset()
+	..()
+	has_recoloured = FALSE
+
+/mob/living/silicon/robot/verb/ColorMate()
+	set name = "Recolour Module"
+	set category = "Robot Commands"
+	set desc = "Allows to recolour once."
+
+	if(!has_recoloured)
+		var/datum/ColorMate/recolour = new /datum/ColorMate(usr)
+		recolour.tgui_interact(usr)
+		return
+	to_chat(usr, "You've already recoloured yourself once. Ask for a module reset for another.")
