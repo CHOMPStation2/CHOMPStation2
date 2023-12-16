@@ -247,6 +247,8 @@
   - qol: Made Combat Gloves description more descriptive as an insulated gloves/SWAT
       gloves combo.
   - imageadd: Updated the Xenomorph Hybrid sprites for the Protean RIGsuit.
+  Kashargul:
+  - rscadd: self recolour verb for simple mobs and robots
   Upstream:
   - bugfix: removes a forgotten debug message [I really need to tag them better for
       myself]
