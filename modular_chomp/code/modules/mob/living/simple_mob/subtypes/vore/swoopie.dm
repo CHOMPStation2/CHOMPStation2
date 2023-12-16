@@ -92,45 +92,6 @@
 	B.count_items_for_sprite = TRUE
 
 	B = new /obj/belly/longneck(src)
-	B.affects_vore_sprites = TRUE
-	B.belly_sprite_to_affect = "neck4"
-	B.name = "vacuum hose 4"
-	B.autotransferlocation = "Churno-Vac"
-	B.desc = "Thank you for your biofuel contribution~"
-	B.fancy_vore = 1
-	B.vore_sound = "Stomach Move"
-	B.sound_volume = 20
-
-	B = new /obj/belly/longneck(src)
-	B.affects_vore_sprites = TRUE
-	B.belly_sprite_to_affect = "neck3"
-	B.name = "vacuum hose 3"
-	B.autotransferlocation = "vacuum hose 4"
-	B.desc = "Looks like it's gonna be all downhill from here..."
-	B.fancy_vore = 1
-	B.vore_sound = "Stomach Move"
-	B.sound_volume = 40
-
-	B = new /obj/belly/longneck(src)
-	B.affects_vore_sprites = TRUE
-	B.belly_sprite_to_affect = "neck2"
-	B.name = "vacuum hose 2"
-	B.autotransferlocation = "vacuum hose 3"
-	B.desc = "It feels very tight in here..."
-	B.fancy_vore = 1
-	B.vore_sound = "Stomach Move"
-	B.sound_volume = 80
-
-	B = new /obj/belly/longneck(src)
-	B.affects_vore_sprites = TRUE
-	B.belly_sprite_to_affect = "neck1"
-	B.name = "vacuum hose"
-	B.autotransferlocation = "vacuum hose 2"
-	B.fancy_vore = 1
-	B.vore_sound = "Stomach Move"
-	B.sound_volume = 100
-
-	B = new /obj/belly/longneck(src)
 	B.affects_vore_sprites = FALSE
 	B.name = "Vac-Beak"
 	B.desc = "SNAP! You have been sucked up into the big synthbird's beak, the powerful vacuum within the bird roaring somewhere beyond the abyssal deep gullet hungrily gaping before you, eagerly sucking you deeper inside towards a long bulgy ride down the bird's vacuum hose of a neck!"
@@ -144,6 +105,45 @@
 	B.belly_fullscreen = "VBO_maw8" //Swoopies have beaks!!
 
 	vore_selected = B
+
+	B = new /obj/belly/longneck(src)
+	B.affects_vore_sprites = TRUE
+	B.belly_sprite_to_affect = "neck1"
+	B.name = "vacuum hose"
+	B.autotransferlocation = "vacuum hose 2"
+	B.fancy_vore = 1
+	B.vore_sound = "Stomach Move"
+	B.sound_volume = 100
+
+	B = new /obj/belly/longneck(src)
+	B.affects_vore_sprites = TRUE
+	B.belly_sprite_to_affect = "neck2"
+	B.name = "vacuum hose 2"
+	B.autotransferlocation = "vacuum hose 3"
+	B.desc = "It feels very tight in here..."
+	B.fancy_vore = 1
+	B.vore_sound = "Stomach Move"
+	B.sound_volume = 80
+
+	B = new /obj/belly/longneck(src)
+	B.affects_vore_sprites = TRUE
+	B.belly_sprite_to_affect = "neck3"
+	B.name = "vacuum hose 3"
+	B.autotransferlocation = "vacuum hose 4"
+	B.desc = "Looks like it's gonna be all downhill from here..."
+	B.fancy_vore = 1
+	B.vore_sound = "Stomach Move"
+	B.sound_volume = 40
+
+	B = new /obj/belly/longneck(src)
+	B.affects_vore_sprites = TRUE
+	B.belly_sprite_to_affect = "neck4"
+	B.name = "vacuum hose 4"
+	B.autotransferlocation = "Churno-Vac"
+	B.desc = "Thank you for your biofuel contribution~"
+	B.fancy_vore = 1
+	B.vore_sound = "Stomach Move"
+	B.sound_volume = 20
 
 /obj/belly/longneck
 	affects_vore_sprites = TRUE
