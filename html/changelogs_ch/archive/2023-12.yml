@@ -252,3 +252,5 @@
       myself]
   - rscadd: 'Fix: Runtime during module selection'
   - rscadd: 'Fix: Crisis Raptor belly up rest sprite'
+  Verkister:
+  - bugfix: Fixed turbo mode initialization and swoopie neck speed.
