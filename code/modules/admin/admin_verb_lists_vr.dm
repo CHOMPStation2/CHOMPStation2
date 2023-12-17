@@ -280,12 +280,9 @@ var/list/admin_verbs_debug = list(
 	/client/proc/admin_give_modifier,
 	/client/proc/simple_DPS,
 	/datum/admins/proc/view_feedback,
-<<<<<<< HEAD
+	/client/proc/stop_sounds,
 	/datum/admins/proc/quick_nif, //CHOMPStation Add,
 	/datum/admins/proc/quick_authentic_nif //CHOMPStation add
-=======
-	/client/proc/stop_sounds
->>>>>>> 7b32daf1d2... Merge pull request #15606 from VOREStation/selis-sound
 	)
 
 var/list/admin_verbs_paranoid_debug = list(
