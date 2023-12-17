@@ -93,7 +93,7 @@ when portals are shortly lived, or when portals are made to be obvious with spec
 		//	pulled.forceMove(get_turf(counterpart))
 			pulled.forceMove(counterpart.get_focused_turf())
 			L.forceMove(counterpart.get_focused_turf())
-			L.start_pulling(pulled)
+			L.continue_pulling(pulled)
 		else
 			L.forceMove(counterpart.get_focused_turf())
 	else
