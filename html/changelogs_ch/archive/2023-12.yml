@@ -259,3 +259,6 @@
   tacoguy7765093:
   - bugfix: Fixing a problematic button on the shuttle which is important for ensuring
       the smooth operation of transportation services.
+2023-12-17:
+  Upstream:
+  - qol: Enables roller beds to cross redgate
