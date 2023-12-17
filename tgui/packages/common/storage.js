@@ -11,7 +11,11 @@ export const IMPL_LOCAL_STORAGE = 1;
 export const IMPL_INDEXED_DB = 2;
 
 const INDEXED_DB_VERSION = 1;
+<<<<<<< HEAD
 const INDEXED_DB_NAME = 'chomp'; // CHOMPEdit - CHOMPStation Localstore
+=======
+const INDEXED_DB_NAME = 'virgo';
+>>>>>>> de3d8d60cc... Custom indexeddb store (#15603)
 const INDEXED_DB_STORE_NAME = 'storage-v1';
 
 const READ_ONLY = 'readonly';
