@@ -262,3 +262,8 @@
 2023-12-17:
   Upstream:
   - qol: Enables roller beds to cross redgate
+  - rscadd: Adds space z level change will respect pulling in the same way as stair
+      cases
+  - rscadd: Adds map edge transits will now allow to continue pulling
+  - bugfix: Fixes map transit portal pulls will now actually continue and no longer
+      break the pulling
