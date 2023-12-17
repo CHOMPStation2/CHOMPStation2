@@ -143,6 +143,7 @@ var/list/admin_verbs_sounds = list(
 	/client/proc/play_local_sound,
 	/client/proc/play_sound,
 	/client/proc/play_server_sound,
+	/client/proc/play_web_sound,
 	/client/proc/play_z_sound
 	)
 
@@ -279,8 +280,12 @@ var/list/admin_verbs_debug = list(
 	/client/proc/admin_give_modifier,
 	/client/proc/simple_DPS,
 	/datum/admins/proc/view_feedback,
+<<<<<<< HEAD
 	/datum/admins/proc/quick_nif, //CHOMPStation Add,
 	/datum/admins/proc/quick_authentic_nif //CHOMPStation add
+=======
+	/client/proc/stop_sounds
+>>>>>>> 7b32daf1d2... Merge pull request #15606 from VOREStation/selis-sound
 	)
 
 var/list/admin_verbs_paranoid_debug = list(
@@ -327,6 +332,7 @@ var/list/admin_verbs_hideable = list(
 	/client/proc/play_local_sound,
 	/client/proc/play_sound,
 	/client/proc/play_server_sound,
+	/client/proc/play_web_sound,
 	/client/proc/object_talk,
 	/datum/admins/proc/cmd_admin_dress,
 	/client/proc/cmd_admin_gib_self,
@@ -376,7 +382,8 @@ var/list/admin_verbs_hideable = list(
 	/proc/possess,
 	/proc/release,
 	/datum/admins/proc/set_uplink, //VOREStation Add,
-	/datum/admins/proc/set_tcrystals
+	/datum/admins/proc/set_tcrystals,
+	/client/proc/stop_sounds
 	)
 var/list/admin_verbs_mod = list(
 	/client/proc/cmd_admin_pm_context,	//right-click adminPM interface,
