@@ -511,8 +511,10 @@
 	pump_direction = 0;
 	use_power = 1
 	},
-/turf/simulated/floor/airless,
-/area/submap/DoomP)
+/turf/simulated/floor/airless{
+	outdoors = 1
+	},
+/area/template_noop)
 "Br" = (
 /obj/structure/table/standard,
 /obj/item/weapon/paper,

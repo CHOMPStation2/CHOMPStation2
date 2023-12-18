@@ -283,3 +283,30 @@
 		if(!iscultist(L) && !istype(L, /mob/living/simple_mob/construct))
 			return
 	..()
+
+// CHOMPedit start: Allows removing resin doors.
+/obj/structure/simple_door/resin/attack_hand(mob/user as mob)
+	usr.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+	if (HULK in usr.mutations)
+		visible_message("<span class='warning'>[usr] destroys the [name]!</span>")
+		hardness = 0
+	else
+
+		// Carbons can get straight through these.
+		if(istype(usr,/mob/living/carbon))
+			if(user.a_intent == I_HURT)
+				var/mob/living/carbon/M = usr
+				if(locate(/obj/item/organ/internal/xenos/hivenode) in M.internal_organs)
+					visible_message ("<span class='warning'>[usr] strokes the [name] and it melts away!</span>", 1)
+					hardness = 0
+					CheckHardness()
+					return
+				else
+					visible_message("<span class='warning'>[usr] tears at the [name]!</span>")
+					hardness -= 2
+					CheckHardness()
+					return
+	CheckHardness()
+	TryToSwitchState(user)
+	return
+// CHOMPedit end.

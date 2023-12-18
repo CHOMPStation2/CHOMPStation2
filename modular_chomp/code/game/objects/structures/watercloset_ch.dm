@@ -8,7 +8,7 @@
 	var/refill_cooldown = 200
 	var/refilling = FALSE
 	var/no_destination = TRUE
-	var/max_w_class = 3 //glogged
+	var/max_w_class = 5 //glogged
 	var/total_w = 0
 	var/panic_mult = 1
 
@@ -22,7 +22,7 @@
 		if(teleplumbed && exit_landmark)
 			desc = "The BS-500, a bluespace rift-rotation-based waste disposal unit for small matter. This one seems remarkably clean."
 			no_destination = FALSE
-			max_w_class = 10
+			max_w_class = 15
 	return ..()
 
 /obj/structure/toilet/attack_hand(mob/living/user as mob)
@@ -52,7 +52,8 @@
 						if(F.loc == loc)
 							if(isitem(F))
 								var/obj/item/I = F
-								total_w += I.w_class
+								if(I.w_class >= ITEMSIZE_NORMAL)
+									total_w += I.w_class
 							if(isliving(F))
 								var/mob/living/L = F
 								total_w += L.size_multiplier * 13
@@ -215,3 +216,14 @@
 	B.digest_brute = 20
 	B.special_entrance_sound = 'sound/machines/blender.ogg'
 	B.recycling = TRUE
+
+/obj/structure/toilet/item/Initialize(mapload)
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/structure/toilet/item/LateInitialize()
+	if(istype(loc, /mob/living)) return
+	var/obj/item/I
+	for(I in loc)
+		if(I.density || I.anchored || I == src) continue
+		I.forceMove(src)

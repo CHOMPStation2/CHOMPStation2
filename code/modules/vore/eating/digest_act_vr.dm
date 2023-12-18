@@ -217,6 +217,18 @@
 			return FALSE
 	. = ..()
 
+/obj/item/weapon/reagent_containers/food/rawnutrition/digest_act(atom/movable/item_storage = null) //CHOMPAdd
+	if(isbelly(item_storage))
+		var/obj/belly/B = item_storage
+		if(istype(B) && B.storing_nutrition)
+			return FALSE
+		else if(isliving(B.owner))
+			B.owner.nutrition += stored_nutrition
+			stored_nutrition = 0
+			qdel(src)
+			return w_class
+	. = ..()
+
 /////////////
 // Some more complicated stuff
 /////////////

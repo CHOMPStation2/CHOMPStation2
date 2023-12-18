@@ -13,3 +13,10 @@
 	for(var/i = 1, i <= created_volume, i++)
 		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/sarucube(location)
 	return
+
+/decl/chemical_reaction/instant/food/blondiemix
+	name = "Blondie Mix"
+	id = "blondiemix"
+	result = "blondiemix"
+	required_reagents = list("flour" = 5, "vanilla" = 5, "sugar" = 5)
+	result_amount = 15

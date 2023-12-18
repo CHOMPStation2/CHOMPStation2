@@ -267,3 +267,40 @@
 /obj/item/weapon/reagent_containers/food/snacks/tastybread/sequel/Initialize()
 	. = ..()
 	bitesize = 4
+
+/obj/item/weapon/reagent_containers/food/snacks/sliceable/blondies
+	name = "blondies"
+	gender = PLURAL
+	desc = "Like a brownie, but instead of chocolate it's vanilla. Dogs love it!"
+	icon = 'icons/obj/food_ch.dmi'
+	icon_state = "blondies"
+	slice_path = /obj/item/weapon/reagent_containers/food/snacks/blondiesslice
+	slices_num = 4
+	trash = /obj/item/trash/brownies
+	filling_color = "#E39C29"
+	nutriment_amt = 8
+	nutriment_desc = list("vanilla" = 8)
+	center_of_mass = list("x"=15, "y"=9)
+	bitesize = 2
+
+/obj/item/weapon/reagent_containers/food/snacks/sliceable/blondies/Initialize()
+	. = ..()
+	reagents.add_reagent("protein", 2)
+
+/obj/item/weapon/reagent_containers/food/snacks/blondiesslice
+	name = "blondie"
+	desc = "a dense, decadent vanilla blondie."
+	icon = 'icons/obj/food_ch.dmi'
+	icon_state = "blondiesslice"
+	trash = /obj/item/trash/plate
+	filling_color = "#F5B951"
+	bitesize = 2
+	nutriment_desc = list("vanilla" = 1)
+	center_of_mass = list("x"=16, "y"=12)
+
+/obj/item/weapon/reagent_containers/food/snacks/blondiesslice/filled
+	nutriment_amt = 1
+
+/obj/item/weapon/reagent_containers/food/snacks/blondiesslice/filled/Initialize()
+	. = ..()
+	reagents.add_reagent("protein", 1)

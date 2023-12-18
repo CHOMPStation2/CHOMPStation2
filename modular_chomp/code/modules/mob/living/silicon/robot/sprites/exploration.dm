@@ -1,6 +1,7 @@
 /datum/robot_sprite/dogborg/explorer
 	module_type = "Exploration"
 	sprite_icon = 'modular_chomp/icons/mob/widerobot_exp_ch.dmi'
+	sprite_hud_icon_state = "platform"
 
 /datum/robot_sprite/dogborg/explorer/vale2
 	name = "Explorationhound V2"

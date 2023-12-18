@@ -155,7 +155,7 @@
 					formatted_message = replacetext(formatted_message, "%prey", M)
 					formatted_message = replacetext(formatted_message, "%countprey", absorbed_count)
 					if(formatted_message)
-						to_chat(M, "<span class='notice'>[formatted_message]</span>")
+						to_chat(M, "<span class='vnotice'>[formatted_message]</span>")
 				else
 					if (digest_mode == DM_SELECT)
 						var/datum/digest_mode/selective/DM_S = GLOB.digest_modes[DM_SELECT]
@@ -171,7 +171,7 @@
 					formatted_message = replacetext(formatted_message, "%countprey", living_count)
 					formatted_message = replacetext(formatted_message, "%count", contents.len)
 					if(formatted_message)
-						to_chat(M, "<span class='notice'>[formatted_message]</span>")
+						to_chat(M, "<span class='vnotice'>[formatted_message]</span>")
 
 	if(to_update)
 		updateVRPanels()
@@ -301,7 +301,7 @@
 		if(!M.digestion_in_progress)
 			M.digestion_in_progress = TRUE
 			if(M.health > -36 || (ishuman(M) && M.health > -136))
-				to_chat(M, "<span class='notice'>(Your predator has enabled gradual body digestion. Stick around for a second round of churning to reach the true finisher.)</span>")
+				to_chat(M, "<span class='vnotice'>(Your predator has enabled gradual body digestion. Stick around for a second round of churning to reach the true finisher.)</span>")
 		if(M.health < M.maxHealth * -1) //Siplemobs etc
 			if(ishuman(M))
 				if(M.health < (M.maxHealth * -1) -100) //Spacemans can go much deeper. Jank but maxHealth*-2 doesn't work with flat standard -100hp death threshold.
@@ -350,8 +350,8 @@
 	digest_alert_prey = replacetext(digest_alert_prey, "%count", contents.len)
 
 	//Send messages
-	to_chat(owner, "<span class='notice'>[digest_alert_owner]</span>")
-	to_chat(M, "<span class='notice'>[digest_alert_prey]</span>")
+	to_chat(owner, "<span class='vnotice'>[digest_alert_owner]</span>")
+	to_chat(M, "<span class='vnotice'>[digest_alert_prey]</span>")
 
 	if(M.ckey)
 		GLOB.prey_digested_roundstat++
@@ -372,20 +372,20 @@
 		else
 			R.cell.charge += (nutrition_percent / 100) * compensation * 25 * personal_nutrition_modifier*/
 	if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMP digestion producing reagents
-		owner.adjust_nutrition((nutrition_percent / 100) * compensation * 3 * personal_nutrition_modifier)
+		owner_adjust_nutrition((nutrition_percent / 100) * compensation * 3 * personal_nutrition_modifier)
 		GenerateBellyReagents_digested()
 	else
-		owner.adjust_nutrition((nutrition_percent / 100) * compensation * 4.5 * personal_nutrition_modifier * pred_digestion_efficiency) //CHOMPedit end
+		owner_adjust_nutrition((nutrition_percent / 100) * compensation * 4.5 * personal_nutrition_modifier * pred_digestion_efficiency) //CHOMPedit end
 
 /obj/belly/proc/steal_nutrition(mob/living/L)
 	if(L.nutrition >= 100)
 		var/oldnutrition = (L.nutrition * 0.05)
 		L.nutrition = (L.nutrition * 0.95)
 		if(reagent_mode_flags & DM_FLAG_REAGENTSDRAIN && reagents.total_volume < reagents.maximum_volume)   //CHOMPedit: draining reagent production //Added to this proc now since it's used for draining
-			owner.adjust_nutrition(oldnutrition * 0.75) //keeping the price static, due to how much nutrition can flunctuate
+			owner_adjust_nutrition(oldnutrition * 0.75) //keeping the price static, due to how much nutrition can flunctuate
 			GenerateBellyReagents_absorbing() //Dont need unique proc so far
 		else
-			owner.adjust_nutrition(oldnutrition) //CHOMPedit end
+			owner_adjust_nutrition(oldnutrition) //CHOMPedit end
 
 /obj/belly/proc/updateVRPanels()
 	for(var/mob/living/M in contents)

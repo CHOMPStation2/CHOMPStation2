@@ -48,3 +48,19 @@
 	if (trait_prefs?["pass_table"] || !trait_prefs)
 		H.pass_flags |= PASSTABLE
 	H.verbs |= /mob/living/proc/toggle_pass_table
+
+/datum/trait/negative/lonely/xenomorph_queen
+	sort = TRAIT_SORT_SPECIES
+	allowed_species = list(SPECIES_XENOMORPH_HYBRID)
+	name = "Xenomorph Hybrid: Queen"
+	desc = "Our body has evolved to take the shape and stature of a mighty Queen. Our \
+			strength is unparalleled, as is our ability to command and inspire others, \
+			but we require the company of other living beings."
+	cost = 0
+	category = 0
+	custom_only = FALSE
+	var_changes = list("stun_mod" = 0.9, "weaken_mod" = 0.9, "item_slowdown_mod" = 0.7, "total_health" = 200, "brute_mod" = 0.8, "trauma_mod" = 0.9, "slowdown" = 0, "burn_mod" = 1.5)
+
+/datum/trait/negative/lonely/xenomorph_queen/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	H.LoadComponent(/datum/component/xenoqueenbuff)

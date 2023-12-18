@@ -318,6 +318,9 @@ var/list/wf_speak_lure_sound = list ('sound/talksounds/wf/lure_1.ogg', 'sound/ta
 var/list/wf_speak_lyst_sound = list ('sound/talksounds/wf/lyst_1.ogg', 'sound/talksounds/wf/lyst_2.ogg', 'sound/talksounds/wf/lyst_3.ogg', 'sound/talksounds/wf/lyst_4.ogg', 'sound/talksounds/wf/lyst_5.ogg', 'sound/talksounds/wf/lyst_6.ogg')
 var/list/wf_speak_void_sound = list ('sound/talksounds/wf/void_1.ogg', 'sound/talksounds/wf/void_2.ogg', 'sound/talksounds/wf/void_3.ogg')
 var/list/wf_speak_vomva_sound = list ('sound/talksounds/wf/vomva_1.ogg', 'sound/talksounds/wf/vomva_2.ogg', 'sound/talksounds/wf/vomva_3.ogg', 'sound/talksounds/wf/vomva_4.ogg')
+//CHOMPedit start: More sounds.
+var/list/xeno_speak_sound = list('modular_chomp/sound/talksounds/xeno/xenotalk.ogg', 'modular_chomp/sound/talksounds/xeno/xenotalk2.ogg', 'modular_chomp/sound/talksounds/xeno/xenotalk3.ogg')
+//CHOMPedit end.
 
 
 // CHOMPEdit Start: Species sounds. This is probably inefficient, but I'm sure someone will yell at me or just do it better later:tm:

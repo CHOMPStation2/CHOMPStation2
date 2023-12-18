@@ -172,3 +172,12 @@
 	icon = 'icons/inventory/head/item_vr.dmi'
 	default_worn_icon = 'icons/inventory/head/mob_vr.dmi'
 	icon_state = "tiny_tophat"
+
+// CHOMPEdit Start
+/obj/item/clothing/head/halo
+	name = "holographic demonic halo"
+	desc = "A hologram displaying a demonic halo."
+	icon = 'modular_chomp/icons/inventory/head/item.dmi'
+	default_worn_icon = 'modular_chomp/icons/inventory/head/mob_halo.dmi'
+	icon_state = "halo"
+// CHOMPEdit End

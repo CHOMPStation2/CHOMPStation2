@@ -40,3 +40,45 @@
 				//absorption reagent production
 				if(B.reagent_mode_flags & DM_FLAG_REAGENTSABSORB && B.reagents.total_volume < B.reagents.maximum_volume)
 					B.GenerateBellyReagents_absorbed()
+
+/datum/reagent/radium/concentrated
+	name = "Concentrated Radium"
+	id = "concentrated_radium"
+	description = "Concentrated Radium is a more potent variant of regular radium, able to pierce and irradiate a subject through their skin."
+	taste_mult = 0	//Apparently radium is tasteless
+	reagent_state = SOLID
+	color = "#C7C7C7"
+
+/datum/reagent/radium/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(issmall(M)) removed *= 2
+	M.apply_effect(10 * removed, IRRADIATE, 0) // Radium may increase your chances to cure a disease
+	if(M.virus2.len)
+		for(var/ID in M.virus2)
+			var/datum/disease2/disease/V = M.virus2[ID]
+			if(prob(5))
+				M.antibodies |= V.antigen
+				if(prob(50))
+					M.apply_effect(50, IRRADIATE, check_protection = 0) // curing it that way may kill you instead
+					var/absorbed = 0
+					var/obj/item/organ/internal/diona/nutrients/rad_organ = locate() in M.internal_organs
+					if(rad_organ && !rad_organ.is_broken())
+						absorbed = 1
+					if(!absorbed)
+						M.adjustToxLoss(100)
+
+/datum/reagent/radium/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
+	if(issmall(M)) removed *= 2
+	M.apply_effect(10 * removed, IRRADIATE, 0) // Radium may increase your chances to cure a disease
+	if(M.virus2.len)
+		for(var/ID in M.virus2)
+			var/datum/disease2/disease/V = M.virus2[ID]
+			if(prob(5))
+				M.antibodies |= V.antigen
+				if(prob(50))
+					M.apply_effect(50, IRRADIATE, check_protection = 0) // curing it that way may kill you instead
+					var/absorbed = 0
+					var/obj/item/organ/internal/diona/nutrients/rad_organ = locate() in M.internal_organs
+					if(rad_organ && !rad_organ.is_broken())
+						absorbed = 1
+					if(!absorbed)
+						M.adjustToxLoss(100)

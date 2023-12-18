@@ -1,0 +1,62 @@
+/**
+ * Copyright (c) 2020 Aleksej Komarov
+ * SPDX-License-Identifier: MIT
+ */
+
+@use 'sass:meta';
+@use 'sass:color';
+
+// CHOMPEdit Start - tgui_ch
+@use '~tgui_ch/styles/colors.scss';
+@use '~tgui_ch/styles/base.scss' with (
+  $color-bg: #202020,
+  $color-bg-section: color.adjust(#202020, $lightness: -5%),
+  $color-bg-grad-spread: 0%,
+);
+
+// Core styles
+@include meta.load-css('~tgui_ch/styles/reset.scss');
+
+// Atomic classes
+@include meta.load-css('~tgui_ch/styles/atomic/candystripe.scss');
+@include meta.load-css('~tgui_ch/styles/atomic/color.scss');
+@include meta.load-css('~tgui_ch/styles/atomic/debug-layout.scss');
+@include meta.load-css('~tgui_ch/styles/atomic/outline.scss');
+@include meta.load-css('~tgui_ch/styles/atomic/text.scss');
+
+// Components
+@include meta.load-css('~tgui_ch/styles/components/BlockQuote.scss');
+@include meta.load-css('~tgui_ch/styles/components/Button.scss');
+@include meta.load-css('~tgui_ch/styles/components/ColorBox.scss');
+@include meta.load-css('~tgui_ch/styles/components/Dimmer.scss');
+@include meta.load-css('~tgui_ch/styles/components/Divider.scss');
+@include meta.load-css('~tgui_ch/styles/components/Dropdown.scss');
+@include meta.load-css('~tgui_ch/styles/components/Flex.scss');
+@include meta.load-css('~tgui_ch/styles/components/Input.scss');
+@include meta.load-css('~tgui_ch/styles/components/Knob.scss');
+@include meta.load-css('~tgui_ch/styles/components/LabeledList.scss');
+@include meta.load-css('~tgui_ch/styles/components/Modal.scss');
+@include meta.load-css('~tgui_ch/styles/components/NoticeBox.scss');
+@include meta.load-css('~tgui_ch/styles/components/NumberInput.scss');
+@include meta.load-css('~tgui_ch/styles/components/ProgressBar.scss');
+@include meta.load-css('~tgui_ch/styles/components/Section.scss');
+@include meta.load-css('~tgui_ch/styles/components/Slider.scss');
+@include meta.load-css('~tgui_ch/styles/components/Stack.scss');
+@include meta.load-css('~tgui_ch/styles/components/Table.scss');
+@include meta.load-css('~tgui_ch/styles/components/Tabs.scss');
+@include meta.load-css('~tgui_ch/styles/components/TextArea.scss');
+@include meta.load-css('~tgui_ch/styles/components/Tooltip.scss');
+
+// Components specific to tgui-panel
+@include meta.load-css('./components/Chat.scss');
+@include meta.load-css('./components/Ping.scss');
+@include meta.load-css('./components/Notifications.scss');
+
+// Layouts
+@include meta.load-css('~tgui_ch/styles/layouts/Layout.scss');
+// @include meta.load-css('~tgui_ch/styles/layouts/TitleBar.scss');
+@include meta.load-css('~tgui_ch/styles/layouts/Window.scss');
+// CHOMPEdit End
+
+// tgchat styles
+@include meta.load-css('./tgchat/chat-dark.scss');

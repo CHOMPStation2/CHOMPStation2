@@ -2,6 +2,8 @@
 //Modular Exploration borg
 //This restructures how borg additions are done to make them sane/modular/maintainable
 //Also makes it easier to make new borgs
+//CHOMPedit: Moving this all to a modular file
+/*
 /hook/startup/proc/Modular_Borg_init_Exploration()
 	robot_modules["Exploration"] = /obj/item/weapon/robot_module/robot/exploration //add to array
 	robot_module_types += "Exploration" //Add to global list
@@ -56,3 +58,4 @@
 	desc = "A flare-gun"
 	projectile_type = /obj/item/projectile/energy/flash/flare
 	fire_sound = 'sound/weapons/tablehit1.ogg'
+*/

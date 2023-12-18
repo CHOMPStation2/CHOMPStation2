@@ -541,7 +541,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/floor_light,
+/obj/machinery/floor_light{
+	anchored = 1
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cafeteria)
 "ata" = (
@@ -2118,9 +2120,9 @@
 /area/ai)
 "bXC" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
+	tag_east = 2;
 	tag_south = 6;
-	tag_west = 1;
-	tag_east = 2
+	tag_west = 1
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsatmos)
@@ -3736,8 +3738,8 @@
 "dyU" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/sign/flag/catpirate/right{
-	name = "Horned skull flag";
-	desc = "Rattle my bones, horned skull cuisuine!"
+	desc = "Rattle my bones, horned skull cuisuine!";
+	name = "Horned skull flag"
 	},
 /turf/simulated/wall/r_wall,
 /area/maintenance/thirddeck/hiddenkitchen)
@@ -4341,7 +4343,9 @@
 /turf/simulated/floor/carpet/retro_red,
 /area/crew_quarters/cafeteria)
 "dSS" = (
-/obj/machinery/floor_light,
+/obj/machinery/floor_light{
+	anchored = 1
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cafeteria)
 "dSV" = (
@@ -8169,9 +8173,9 @@
 /area/hallway/primary/thirddeck/starboard)
 "gzV" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
-	tag_west = 1;
 	tag_east = 2;
-	tag_south = 7
+	tag_south = 7;
+	tag_west = 1
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsatmos)
@@ -9704,9 +9708,9 @@
 "igE" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
 	tag_east = 2;
-	tag_west = 1;
+	tag_north = 5;
 	tag_south = 3;
-	tag_north = 5
+	tag_west = 1
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsatmos)
@@ -11133,6 +11137,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/item/weapon/form_printer{
+	pixel_x = -3;
+	pixel_y = 7
 	},
 /turf/simulated/floor/carpet,
 /area/bridge/meeting_room)
@@ -14003,8 +14011,8 @@
 "mzR" = (
 /obj/machinery/atmospherics/binary/pump/on{
 	dir = 4;
-	target_pressure = 301.325;
-	name = "Scrubber to Waste"
+	name = "Scrubber to Waste";
+	target_pressure = 301.325
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
@@ -14828,7 +14836,7 @@
 /area/bridge/meeting_room)
 "npi" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/paper_bin{
+/obj/item/weapon/form_printer{
 	pixel_x = -3;
 	pixel_y = 7
 	},
@@ -19240,30 +19248,30 @@
 "rdH" = (
 /obj/structure/closet/cabinet,
 /obj/item/weapon/storage/box/capguntoy{
-	pixel_y = -5;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = -5
 	},
 /obj/random/drinkbottle{
-	pixel_y = -1;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = -1
 	},
 /obj/random/drinkbottle{
-	pixel_y = -1;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = -1
 	},
 /obj/random/drinkbottle{
-	pixel_y = -1;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = -1
 	},
 /obj/item/stack/material/plastic{
-	pixel_y = 0;
+	amount = 25;
 	pixel_x = -7;
-	amount = 25
+	pixel_y = 0
 	},
 /obj/item/stack/material/steel{
 	amount = 25;
-	pixel_y = 3;
-	pixel_x = -7
+	pixel_x = -7;
+	pixel_y = 3
 	},
 /obj/item/stack/material/glass{
 	amount = 25;
@@ -19282,9 +19290,9 @@
 	pixel_y = 6
 	},
 /obj/item/stack/material/wood{
-	pixel_y = 0;
+	amount = 20;
 	pixel_x = -10;
-	amount = 20
+	pixel_y = 0
 	},
 /turf/simulated/wall/r_wall,
 /area/maintenance/thirddeck/hiddenkitchen)
@@ -19996,8 +20004,8 @@
 /area/maintenance/thirddeck/dormsatmos)
 "rNS" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
-	tag_north = 4;
 	tag_east = 1;
+	tag_north = 4;
 	tag_west = 2
 	},
 /turf/simulated/floor/plating,
@@ -25097,8 +25105,8 @@
 /area/crew_quarters/sleep/vistor_room_12)
 "wcv" = (
 /obj/machinery/gibber{
-	req_access = null;
-	emagged = 1
+	emagged = 1;
+	req_access = null
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/hiddenkitchen)

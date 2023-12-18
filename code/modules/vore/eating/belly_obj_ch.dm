@@ -90,7 +90,9 @@
 	"Digestive acid",
 	"Diluted digestive acid",
 	"Lube",
-	"Biomass"
+	"Biomass",
+	"Concentrated Radium",
+	"Tricordrazine"
 	)
 
 	//CHOMP - vore sprites
@@ -133,6 +135,7 @@
 	var/entrance_logs = TRUE				// Belly-specific entry message toggle.
 	var/noise_freq = 42500					// Tasty sound prefs.
 	var/item_digest_logs = FALSE			// Chat messages for digested items.
+	var/storing_nutrition = FALSE			// Storing gained nutrition as paste instead of absorbing it.
 
 /obj/belly/proc/GetFullnessFromBelly()
 	if(!affects_vore_sprites)
@@ -230,7 +233,7 @@
 		for(var/reagent in generated_reagents)
 			reagents.add_reagent(reagent, generated_reagents[reagent] * digest_nutri_gain / gen_cost)
 	else
-		owner.adjust_nutrition(digest_nutri_gain * owner.get_digestion_efficiency_modifier())
+		owner_adjust_nutrition(digest_nutri_gain * owner.get_digestion_efficiency_modifier())
 	digest_nutri_gain = 0
 
 /obj/belly/proc/GenerateBellyReagents_digested()
@@ -340,6 +343,21 @@
 			gen_cost = 10
 			reagentid = "biomass"
 			reagentcolor = "#DF9FBF"
+		if("Concentrated Radium")
+			generated_reagents = list("concentrated_radium" = 1)
+			reagent_name = "concentrated radium"
+			gen_amount = 1
+			gen_cost = 1
+			reagentid = "concentrated_radium"
+			reagentcolor = "#C7C7C7"
+		if("Tricordrazine")
+			generated_reagents = list("tricordrazine" = 1)
+			reagent_name = "tricordrazine"
+			gen_amount = 1
+			gen_cost = 10
+			reagentid = "tricordrazine"
+			reagentcolor = "#8040FF"
+
 
 /////////////////////// FULLNESS MESSAGES //////////////////////
 
@@ -562,3 +580,33 @@
 				return TRUE
 		new /obj/item/debris_pack/digested(src, modified_mats)
 	return TRUE
+
+/obj/belly/proc/owner_adjust_nutrition(var/amount = 0)
+	if(storing_nutrition && amount > 0)
+		for(var/obj/item/weapon/reagent_containers/food/rawnutrition/R in contents)
+			if(istype(R))
+				R.stored_nutrition += amount
+				return
+		var/obj/item/weapon/reagent_containers/food/rawnutrition/NR = new /obj/item/weapon/reagent_containers/food/rawnutrition(src)
+		NR.stored_nutrition += amount
+		return
+	else
+		owner.adjust_nutrition(amount)
+
+/obj/item/weapon/reagent_containers/food/rawnutrition
+	name = "raw nutrition"
+	desc = "A nutritious pile of converted mass ready for consumption."
+	icon = 'icons/obj/recycling.dmi'
+	icon_state = "matdust"
+	color = "#664330"
+	w_class = ITEMSIZE_SMALL
+	var/stored_nutrition = 0
+
+/obj/item/weapon/reagent_containers/food/rawnutrition/standard_feed_mob(var/mob/user, var/mob/target)
+	if(isliving(target))
+		var/mob/living/L = target
+		L.nutrition += stored_nutrition
+		stored_nutrition = 0
+		qdel(src)
+		return
+	.=..()

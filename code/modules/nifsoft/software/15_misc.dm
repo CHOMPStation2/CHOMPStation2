@@ -93,7 +93,7 @@
 	desc = "A system that allows one to apply 'laws' to sapient life. Extremely illegal, of course."
 	list_pos = NIF_COMPLIANCE
 	cost = 8200
-	wear = 4
+	wear = 1
 	illegal = TRUE
 	vended = FALSE
 	access = 999 //Prevents anyone from buying it without an emag.
@@ -123,7 +123,7 @@
 	desc = "A system that allows one to change their size, through drastic mass rearrangement. Causes significant wear when installed."
 	list_pos = NIF_SIZECHANGE
 	cost = 375
-	wear = 6
+	wear = 0.5
 
 /datum/nifsoft/sizechange/activate()
 	if((. = ..()))

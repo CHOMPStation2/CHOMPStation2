@@ -37,6 +37,7 @@
 	var/datum/matter_synth/glass = null
 	var/datum/matter_synth/wood = null
 	var/datum/matter_synth/plastic = null
+	var/datum/matter_synth/water = null //CHOMPAdd readd water
 	var/digest_brute = 2
 	var/digest_burn = 3
 	var/digest_multiplier = 1
@@ -583,6 +584,7 @@
 	if(air_master.current_cycle%3==1 && length(touchable_items))
 
 		//Burn all the mobs or add them to the exclusion list
+		var/volume = 0 //CHOMPAdd
 		for(var/mob/living/T in (touchable_items))
 			touchable_items -= T //Exclude mobs from loose item picking.
 			if((T.status_flags & GODMODE) || !T.digestable)
@@ -596,6 +598,10 @@
 				var/actual_burn = T.getFireLoss() - old_burn
 				var/damage_gain = actual_brute + actual_burn
 				hound.nutrition += 2.5 * damage_gain //drain(-25 * damage_gain) //25*total loss as with voreorgan stats.//CHOMPEdit
+				//CHOMPAdd Start
+				if(water)
+					water.add_charge(damage_gain)
+				//CHOMPAdd End
 				if(T.stat == DEAD)
 					if(ishuman(T))
 						log_admin("[key_name(hound)] has digested [key_name(T)] with a cyborg belly. ([hound ? "<a href='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[hound.x];Y=[hound.y];Z=[hound.z]'>JMP</a>" : "null"])")
@@ -629,6 +635,17 @@
 								items_preserved |= brain
 						else
 							T.drop_from_inventory(I, src)
+					//CHOMPAdd Start
+					if(ishuman(T))
+						var/mob/living/carbon/human/Prey = T
+						volume = (Prey.bloodstr.total_volume + Prey.ingested.total_volume + Prey.touching.total_volume + Prey.weight) * Prey.size_multiplier
+					if(water)
+						water.add_charge(volume)
+					if(T.reagents)
+						volume = T.reagents.total_volume
+						if(water)
+							water.add_charge(volume)
+					//CHOMPAdd End
 					if(T.ckey)
 						GLOB.prey_digested_roundstat++
 					if(patient == T)
@@ -644,6 +661,10 @@
 			//Handle the target being anything but a /mob/living
 			var/obj/item/T = target
 			if(istype(T))
+				//CHOMPAdd Start
+				if(T.reagents)
+					volume = T.reagents.total_volume
+				//CHOMPAdd End
 				var/digested = T.digest_act(item_storage = src)
 				if(!digested)
 					items_preserved |= T
@@ -653,6 +674,10 @@
 						for(var/tech in tech_item.origin_tech)
 							files.UpdateTech(tech, tech_item.origin_tech[tech])
 							synced = FALSE
+					//CHOMPAdd Start
+					if(volume && water)
+						water.add_charge(volume)
+					//CHOMPAdd End
 					if(recycles && T.matter)
 						for(var/material in T.matter)
 							var/total_material = T.matter[material]

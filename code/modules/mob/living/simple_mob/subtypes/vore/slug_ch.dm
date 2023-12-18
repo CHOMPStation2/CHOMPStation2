@@ -18,8 +18,8 @@
 	response_disarm = "prods"
 	response_harm = "punches"
 	movement_cooldown = 40 //I guess you could call this a SNAIL'S PACE.
-	maxHealth = 500
-	health = 500
+	maxHealth = 100
+	health = 100
 	attacktext = list("headbutted")
 	minbodytemp = 80
 	ai_holder_type = /datum/ai_holder/simple_mob/passive/slug_ch
@@ -42,7 +42,7 @@
 	var/list/my_slime = list()
 	var/slime_max = 35 //With a slug which moves once every 10 seconds and a 5 minute delete timer, this should never exceed 30.
 	var/mob/living/vore_memory = null
-	
+
 	can_be_drop_prey = FALSE //CHOMP Add
 
 /mob/living/simple_mob/vore/slug //I guess separating the vore variables is a little more organized?
