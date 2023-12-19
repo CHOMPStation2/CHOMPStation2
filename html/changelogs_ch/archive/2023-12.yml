@@ -268,5 +268,7 @@
   - bugfix: Fixes map transit portal pulls will now actually continue and no longer
       break the pulling
 2023-12-19:
+  TheCaramelion:
+  - bugfix: Liquid healer recipe works properly
   Upstream:
   - bugfix: fixed raptor and scel vore capacity
