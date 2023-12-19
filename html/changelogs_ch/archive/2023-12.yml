@@ -279,3 +279,4 @@
   - qol: moved export options of tgchat into its own category
   - rscadd: added tgchat setting to only export a specific amount of lines (-1 to
       make it export everything)
+  - rscadd: Adds a filter option to blacklist message senders for highlighting
