@@ -116,7 +116,7 @@
 	name = "liquidhealer"
 	id = "liquidhealer"
 	result = "liquidhealer"
-	required_reagents = list("bicard" = 1, "kelotane" = 1, "liquidlife" = 1, "carpotoxin" = 1, "quadcord" = 1, "cryptobiolin" = 1)
+	required_reagents = list("bicaridine" = 1, "kelotane" = 1, "liquidlife" = 1, "carpotoxin" = 1, "quadcord" = 1, "cryptobiolin" = 1)
 	result_amount = 6
 
 /decl/chemical_reaction/instant/phoenixbreath
