@@ -292,6 +292,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"tail_extra_overlay2" = selected.tail_extra_overlay2,
 			"noise_freq" = selected.noise_freq,
 			"item_digest_logs" = selected.item_digest_logs,
+			"private_struggle" = selected.private_struggle,
 			//"marking_to_add" = selected.marking_to_add
 			//CHOMPEdit end
 		)
@@ -1091,6 +1092,18 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						new_belly.selective_preference = DM_DIGEST
 					if(new_selective_preference == "Absorb")
 						new_belly.selective_preference = DM_ABSORB
+
+				if(isnum(belly_data["private_struggle"]))
+					var/new_private_struggle = belly_data["private_struggle"]
+					if(new_private_struggle == 0)
+						new_belly.private_struggle = FALSE
+					if(new_private_struggle == 1)
+						new_belly.private_struggle = TRUE
+
+				if(istext(belly_data["eating_privacy_local"]))
+					var/new_eating_privacy_local = html_encode(belly_data["eating_privacy_local"])
+					if(new_eating_privacy_local && (new_eating_privacy_local in list("default","subtle","loud")))
+						new_belly.eating_privacy_local = new_eating_privacy_local
 
 				// Sounds
 				if(isnum(belly_data["is_wet"]))
@@ -3320,6 +3333,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 			qdel(host.vore_selected)
 			host.vore_selected = host.vore_organs[1]
+			. = TRUE
+		if("b_private_struggle") //CHOMP Addition
+			host.vore_selected.private_struggle = !host.vore_selected.private_struggle
 			. = TRUE
 		if("b_vorespawn_blacklist") //CHOMP Addition
 			host.vore_selected.vorespawn_blacklist = !host.vore_selected.vorespawn_blacklist
