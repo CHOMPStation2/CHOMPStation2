@@ -275,3 +275,7 @@
   - bugfix: Liquid healer recipe works properly
   Upstream:
   - bugfix: fixed raptor and scel vore capacity
+  - rscadd: added tgchat setting to enable/disable the red afk/connection lost prompt
+  - qol: moved export options of tgchat into its own category
+  - rscadd: added tgchat setting to only export a specific amount of lines (-1 to
+      make it export everything)
