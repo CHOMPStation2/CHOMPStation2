@@ -267,3 +267,6 @@
   - rscadd: Adds map edge transits will now allow to continue pulling
   - bugfix: Fixes map transit portal pulls will now actually continue and no longer
       break the pulling
+2023-12-19:
+  Upstream:
+  - bugfix: fixed raptor and scel vore capacity
