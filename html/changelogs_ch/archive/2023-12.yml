@@ -259,3 +259,24 @@
   tacoguy7765093:
   - bugfix: Fixing a problematic button on the shuttle which is important for ensuring
       the smooth operation of transportation services.
+2023-12-17:
+  Upstream:
+  - qol: Enables roller beds to cross redgate
+  - rscadd: Adds space z level change will respect pulling in the same way as stair
+      cases
+  - rscadd: Adds map edge transits will now allow to continue pulling
+  - bugfix: Fixes map transit portal pulls will now actually continue and no longer
+      break the pulling
+2023-12-19:
+  Fracshun:
+  - rscadd: Added new belly toggle between Loud and Private struggles
+  - bugfix: Fixed Eating Privacy not being in the Import/Export
+  TheCaramelion:
+  - bugfix: Liquid healer recipe works properly
+  Upstream:
+  - bugfix: fixed raptor and scel vore capacity
+  - rscadd: added tgchat setting to enable/disable the red afk/connection lost prompt
+  - qol: moved export options of tgchat into its own category
+  - rscadd: added tgchat setting to only export a specific amount of lines (-1 to
+      make it export everything)
+  - rscadd: Adds a filter option to blacklist message senders for highlighting
