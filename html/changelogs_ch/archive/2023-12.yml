@@ -268,6 +268,9 @@
   - bugfix: Fixes map transit portal pulls will now actually continue and no longer
       break the pulling
 2023-12-19:
+  Fracshun:
+  - rscadd: Added new belly toggle between Loud and Private struggles
+  - bugfix: Fixed Eating Privacy not being in the Import/Export
   TheCaramelion:
   - bugfix: Liquid healer recipe works properly
   Upstream:
