@@ -280,3 +280,6 @@
   - rscadd: added tgchat setting to only export a specific amount of lines (-1 to
       make it export everything)
   - rscadd: Adds a filter option to blacklist message senders for highlighting
+2023-12-20:
+  Kazzc:
+  - maptweak: tweaked something in a map
