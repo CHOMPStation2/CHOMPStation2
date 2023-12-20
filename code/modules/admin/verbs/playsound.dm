@@ -11,10 +11,6 @@ var/list/sounds_cache = list()
 	if(!check_rights(R_SOUNDS))
 		return
 
-<<<<<<< HEAD
-	var/sound/uploaded_sound = sound(S, volume = 50, repeat = 0, wait = 1, channel = 777)
-	uploaded_sound.priority = 250
-=======
 	var/freq = 1
 	var/vol = tgui_input_number(usr, "What volume would you like the sound to play at?",, 100, 100, 1)
 	if(!vol)
@@ -30,7 +26,6 @@ var/list/sounds_cache = list()
 	admin_sound.repeat = FALSE
 	admin_sound.status = SOUND_STREAM
 	admin_sound.volume = vol
->>>>>>> 7b32daf1d2... Merge pull request #15606 from VOREStation/selis-sound
 
 	sounds_cache += S
 
