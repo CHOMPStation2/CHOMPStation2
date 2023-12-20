@@ -283,3 +283,13 @@
 2023-12-20:
   Kazzc:
   - maptweak: tweaked something in a map
+  Upstream:
+  - bugfix: Fixes wrong variable used in absorb escape chance
+  - bugfix: Fixes examine messages showing under radio instead of info
+  - bugfix: Fixes dominated brain prey dislikes turning into likes in some cases
+  - bugfix: Fixes users being unable to clear their likes / dislikes if they want
+      to hide those fields again
+  - bugfix: '[issue link stripped] TG-Chat custom links in examines'
+  - qol: TG-Chat filters can be stored empty
+  - rscadd: Adds chatprint filter for belly / ooc note to chat prints
+  - rscadd: OOC/LOOC https:// urls are now automatically parsed into links
