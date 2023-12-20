@@ -63,6 +63,8 @@
 		if(holder.rights & R_ADMIN && holder.rights & R_BAN) //Admins
 			ooc_style = "admin"
 
+	msg = GLOB.is_valid_url.Replace(msg,"<span class='linkify'>$1</span>")
+
 	for(var/client/target in GLOB.clients)
 		if(target.is_preference_enabled(/datum/client_preference/show_ooc))
 			if(target.is_key_ignored(key)) // If we're ignored by this person, then do nothing.
@@ -168,6 +170,8 @@
 	for(var/client/admin in GLOB.admins)
 		if(!(admin in receivers) && admin.is_preference_enabled(/datum/client_preference/holder/show_rlooc))
 			r_receivers |= admin
+
+	msg = GLOB.is_valid_url.Replace(msg,"<span class='linkify'>$1</span>")
 
 	// Send a message
 	for(var/client/target in receivers)
