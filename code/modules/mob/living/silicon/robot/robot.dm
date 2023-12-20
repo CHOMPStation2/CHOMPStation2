@@ -996,7 +996,7 @@
 									fullness_to_add = ITEMSIZE_COST_HUGE
 								else
 									fullness_to_add = ITEMSIZE_COST_NO_CONTAINER
-							belly_size += (fullness_to_add / 32) //* vore_selected.overlay_item_multiplier //Enable this later when vorepanel is reworked.
+							belly_size += (fullness_to_add / 32) // vore_selected.overlay_item_multiplier //Enable this later when vorepanel is reworked.
 						else
 							belly_size += 1 //if it's not a person, nor an item... lets just go with 1
 
