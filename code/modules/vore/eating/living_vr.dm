@@ -1212,13 +1212,8 @@
 					to_chat(src, "<span class='chatexport'>[msg]</span>")
 				to_chat(src, "<span class='chatexport'><b>Absorbed struggle messages (inside):</b></span>")
 				for(var/msg in B.absorbed_struggle_messages_inside)
-<<<<<<< HEAD
-					to_chat(src, "<span class='Vnotice'>[msg]</span>")
-				to_chat(src, "<span class='vnotice'><b>Escape attempt messages (owner):</b></span>")
-=======
 					to_chat(src, "<span class='chatexport'>[msg]</span>")
 				to_chat(src, "<span class='chatexport'><b>Escape attempt messages (owner):</b></span>")
->>>>>>> 4ce06ee440... fixes and filters (#15626)
 				for(var/msg in B.escape_attempt_messages_owner)
 					to_chat(src, "<span class='chatexport'>[msg]</span>")
 				to_chat(src, "<span class='chatexport'><b>Escape attempt messages (prey):</b></span>")
@@ -1321,12 +1316,7 @@
 				for(var/EL in B.emote_lists)
 					to_chat(src, "<span class='chatexport'><b>[EL]:</b></span>")
 					for(var/msg in B.emote_lists[EL])
-<<<<<<< HEAD
-						to_chat(src, "<span class='vnotice'>[msg]</span>")
-	//CHOMPEdit End
-=======
 						to_chat(src, "<span class='chatexport'>[msg]</span>")
->>>>>>> 4ce06ee440... fixes and filters (#15626)
 
 /**
  * Small helper component to manage the vore panel HUD icon
