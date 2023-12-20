@@ -1115,52 +1115,39 @@ const VoreSelectedMobTypeBellyButtons = (props, context) => {
   const { belly } = props;
   const {
     silicon_belly_overlay_preference,
+    belly_sprite_option_shown,
+    belly_sprite_to_affect,
     belly_mob_mult,
     belly_item_mult,
     belly_overall_mult,
   } = belly;
 
   if (is_cyborg) {
-    return (
-      <Section title={'Cyborg Controls'} width={'80%'}>
-        <LabeledList>
-          <LabeledList.Item label="Toggle Belly Overlay Mode">
-            <Button
-              onClick={() =>
-                act('set_attribute', { attribute: 'b_silicon_belly' })
-              }
-              content={capitalize(silicon_belly_overlay_preference)}
-            />
-          </LabeledList.Item>
-          <LabeledList.Item label="Mob Vorebelly Size Mult">
-            <Button
-              onClick={() =>
-                act('set_attribute', { attribute: 'b_belly_mob_mult' })
-              }
-              content={belly_mob_mult}
-            />
-          </LabeledList.Item>
-          <LabeledList.Item label="Item Vorebelly Size Mult">
-            <Button
-              onClick={() =>
-                act('set_attribute', { attribute: 'b_belly_item_mult' })
-              }
-              content={belly_item_mult}
-            />
-          </LabeledList.Item>
-          <LabeledList.Item label="Belly Size Multiplier">
-            <Button
-              onClick={() =>
-                act('set_attribute', {
-                  attribute: 'b_belly_overall_mult',
-                })
-              }
-              content={belly_overall_mult}
-            />
-          </LabeledList.Item>
-        </LabeledList>
-      </Section>
-    );
+    if (belly_sprite_option_shown && belly_sprite_to_affect === 'sleeper') {
+      return (
+        <Section title={'Cyborg Controls'} width={'80%'}>
+          <LabeledList>
+            <LabeledList.Item label="Toggle Belly Overlay Mode">
+              <Button
+                onClick={() =>
+                  act('set_attribute', { attribute: 'b_silicon_belly' })
+                }
+                content={capitalize(silicon_belly_overlay_preference)}
+              />
+            </LabeledList.Item>
+          </LabeledList>
+        </Section>
+      );
+    } else {
+      return (
+        <Section title={'Cyborg Controls'} width={'80%'}>
+          <span style={{ color: 'red' }}>
+            Your module does either not support vore sprites or you've selected
+            a belly sprite other than the sleeper within the Visuals section.
+          </span>
+        </Section>
+      );
+    }
   } else if (is_vore_simple_mob) {
     return (
       // For now, we're only returning empty. TODO: Simple mob belly controls
@@ -1438,7 +1425,11 @@ const VoreSelectedBellyVisuals = (props, context) => {
                     />
                   </LabeledList.Item>
                 ) : (
-                  ''
+                  <LabeledList.Item label="Belly Sprite to affect">
+                    <span style={{ color: 'red' }}>
+                      You do not have any bellysprites.
+                    </span>
+                  </LabeledList.Item>
                 )}
                 {tail_option_shown &&
                 vore_sprite_flags.includes('Undergarment addition') ? (
