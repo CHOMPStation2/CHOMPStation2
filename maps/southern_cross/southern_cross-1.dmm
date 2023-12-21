@@ -23505,7 +23505,6 @@
 /obj/structure/disposalpipe/junction/yjunction{
 	dir = 8
 	},
-/obj/structure/disposalpipe/segment,
 /obj/structure/sign/christmas/lights{
 	dir = 8
 	},
