@@ -79,22 +79,14 @@ const getFilteredTickets = (
   return result;
 };
 
-export const TicketsPanel = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const TicketsPanel = (props) => {
+  const { act, data } = useBackend<Data>();
   const { tickets, selected_ticket } = data;
 
-  const [stateFilter, setStateFilter] = useLocalState(
-    context,
-    'stateFilter',
-    'open'
-  );
-  const [levelFilter, setLevelFilter] = useLocalState(
-    context,
-    'levelFilter',
-    2
-  );
+  const [stateFilter, setStateFilter] = useLocalState('stateFilter', 'open');
+  const [levelFilter, setLevelFilter] = useLocalState('levelFilter', 2);
 
-  const [ticketChat, setTicketChat] = useLocalState(context, 'ticketChat', '');
+  const [ticketChat, setTicketChat] = useLocalState('ticketChat', '');
 
   let filtered_tickets = getFilteredTickets(tickets, stateFilter, levelFilter);
   return (

@@ -7,11 +7,11 @@ type Data = {
   selected_window: string;
 };
 
-export const TguiFeedback = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const TguiFeedback = (props) => {
+  const { act, data } = useBackend<Data>();
   const { open_windows, selected_window } = data;
-  const [rating, setRating] = useLocalState(context, 'rating', '');
-  const [comment, setComment] = useLocalState(context, 'comment', '');
+  const [rating, setRating] = useLocalState('rating', '');
+  const [comment, setComment] = useLocalState('comment', '');
   return (
     <Window width={550} height={460}>
       <Flex>

@@ -17,7 +17,7 @@ const initialState = {
 };
 
 export const gameReducer = (state = initialState, action) => {
-  const { type, payload, meta } = action;
+  const { type, meta } = action;
   if (type === 'roundrestart') {
     return {
       ...state,

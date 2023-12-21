@@ -532,11 +532,13 @@ class ChatRenderer {
       if (!message.type) {
         // IE8: Does not support querySelector on elements that
         // are not yet in the document.
-        // prettier-ignore
-        const typeDef = !Byond.IS_LTE_IE8 && MESSAGE_TYPES
-          .find(typeDef => (
-            typeDef.selector && node.querySelector(typeDef.selector)
-          ));
+
+        const typeDef =
+          !Byond.IS_LTE_IE8 &&
+          MESSAGE_TYPES.find(
+            (typeDef) =>
+              typeDef.selector && node.querySelector(typeDef.selector)
+          );
         message.type = typeDef?.type || MESSAGE_TYPE_UNKNOWN;
       }
       updateMessageBadge(message);
@@ -594,10 +596,10 @@ class ChatRenderer {
           message.node = 'pruned';
         }
         // Remove pruned messages from the message array
-        // prettier-ignore
-        this.messages = this.messages.filter(message => (
-          message.node !== 'pruned'
-        ));
+
+        this.messages = this.messages.filter(
+          (message) => message.node !== 'pruned'
+        );
         logger.log(`pruned ${fromIndex} visible messages`);
       }
     }
@@ -674,19 +676,22 @@ class ChatRenderer {
       // }
     }
     // Create a page
-    // prettier-ignore
-    const pageHtml = '<!doctype html>\n'
-      + '<html>\n'
-      + '<head>\n'
-      + '<title>SS13 Chat Log</title>\n'
-      + '<style>\n' + cssText + '</style>\n'
-      + '</head>\n'
-      + '<body>\n'
-      + '<div class="Chat">\n'
-      + messagesHtml
-      + '</div>\n'
-      + '</body>\n'
-      + '</html>\n';
+
+    const pageHtml =
+      '<!doctype html>\n' +
+      '<html>\n' +
+      '<head>\n' +
+      '<title>SS13 Chat Log</title>\n' +
+      '<style>\n' +
+      cssText +
+      '</style>\n' +
+      '</head>\n' +
+      '<body>\n' +
+      '<div class="Chat">\n' +
+      messagesHtml +
+      '</div>\n' +
+      '</body>\n' +
+      '</html>\n';
     // Create and send a nice blob
     const blob = new Blob([pageHtml]);
     const timestamp = new Date()
