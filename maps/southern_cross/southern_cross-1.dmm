@@ -2377,8 +2377,22 @@
 /turf/simulated/floor/airless,
 /area/maintenance/firstdeck/foreport)
 "aiO" = (
-/obj/structure/bed/chair/office/dark{
-	dir = 4
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/brown/border{
+	dir = 1
+	},
+/obj/structure/table/steel_reinforced,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/obj/item/weapon/stamp/cargo{
+	pixel_x = -2
+	},
+/obj/item/weapon/stamp/denied{
+	pixel_x = -5;
+	pixel_y = 3
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
@@ -4128,20 +4142,8 @@
 /turf/simulated/floor/tiled,
 /area/hangar/two)
 "asc" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/weapon/stamp{
-	pixel_x = -3;
-	pixel_y = 3
-	},
-/obj/item/weapon/stamp/cargo,
-/obj/effect/floor_decal/borderfloor{
-	dir = 5
-	},
-/obj/effect/floor_decal/corner/brown/border{
-	dir = 5
-	},
-/obj/structure/sign/christmas/lights{
-	dir = 1
+/obj/structure/bed/chair/office/light{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
@@ -5499,22 +5501,10 @@
 /area/quartermaster/storage)
 "azZ" = (
 /obj/structure/cable/green,
-/obj/machinery/power/apc{
-	name = "south bump";
-	pixel_y = -24
-	},
-/obj/machinery/light_switch{
-	pixel_x = 11;
-	pixel_y = -24
-	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/brown/border,
 /obj/machinery/status_display/supply_display{
 	pixel_x = 32
-	},
-/obj/structure/sign/christmas/lights,
-/obj/structure/sign/christmas/lights{
-	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
@@ -10842,12 +10832,16 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "bvh" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
@@ -13480,10 +13474,21 @@
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/firstdeck/fore)
 "dRb" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
@@ -16961,11 +16966,19 @@
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology/xenoflora_isolation)
 "fbm" = (
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
+/obj/structure/sign/christmas/lights{
+	dir = 4
 	},
+/obj/structure/sign/christmas/lights,
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -24
+	},
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = -24
+	},
+/obj/structure/cable/green,
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "fbC" = (
@@ -22037,15 +22050,11 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/fscenter)
 "kwi" = (
-/obj/machinery/conveyor{
-	dir = 4;
-	id = "PipeDelivery"
-	},
-/obj/structure/railing{
+/obj/machinery/light/spot{
 	dir = 1
 	},
-/turf/simulated/floor/plating,
-/area/quartermaster/delivery)
+/turf/unsimulated/mask,
+/area/quartermaster/storage)
 "kwt" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/firstdeck/centralport)
@@ -23103,9 +23112,8 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/escape/firstdeck/ep_aftport)
 "lSB" = (
-/obj/effect/wingrille_spawn/reinforced,
-/obj/machinery/door/firedoor/border_only,
-/turf/simulated/floor/plating,
+/obj/machinery/light,
+/turf/unsimulated/mask,
 /area/quartermaster/storage)
 "lTi" = (
 /turf/simulated/wall/r_wall,
@@ -26590,13 +26598,10 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftstarboard)
 "pyv" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled,
-/area/quartermaster/storage)
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/aftport)
 "pyJ" = (
 /obj/item/stack/material/wood{
 	amount = 24
@@ -27384,18 +27389,10 @@
 /turf/simulated/floor/tiled/steel_dirty,
 /area/engineering/auxiliary_engineering)
 "qnD" = (
-/obj/item/device/radio/intercom{
-	dir = 4;
-	name = "Station Intercom (General)";
-	pixel_x = 21
-	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
-	},
-/obj/structure/sign/christmas/lights{
-	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
@@ -30763,6 +30760,11 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "tOD" = (
@@ -32510,7 +32512,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/hallway/primary/firstdeck/port)
+/area/quartermaster/delivery)
 "vpX" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
@@ -59088,9 +59090,9 @@ rkY
 cbL
 pEY
 rBN
-bvh
-aDt
-aDt
+rBN
+rBN
+rBN
 tOB
 aDt
 aEU
@@ -59346,10 +59348,10 @@ dWn
 kQv
 aKa
 aKa
-dRb
 aKa
 aKa
-aEI
+aKa
+bvh
 ape
 dWn
 dWn
@@ -59604,10 +59606,10 @@ dWn
 jlp
 aKa
 aKa
-dRb
 aKa
 aKa
-aEI
+aKa
+bvh
 api
 dWn
 eYA
@@ -59858,33 +59860,33 @@ pWA
 aen
 cNP
 vpP
-anM
-ahi
-ahi
-kwi
-lSB
-asc
+dWn
 aiO
+asc
 aKa
+aKa
+aKa
+aKa
+dRb
 fbm
-pyv
+dWn
 qnD
 hmG
 azZ
 dWn
 eYA
-eYA
-eYA
-eYA
-eYA
 dWo
 ddh
-dYJ
+pyv
 aaa
 aaa
 aaa
 aaa
 aaf
+aaa
+aaa
+aaa
+aaa
 ean
 aaa
 aaa
@@ -60127,9 +60129,9 @@ hzU
 aAa
 aBt
 eYA
+kwi
 eYA
-eYA
-eYA
+lSB
 eYA
 dWo
 tcF
