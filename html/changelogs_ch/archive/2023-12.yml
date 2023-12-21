@@ -293,3 +293,13 @@
   - qol: TG-Chat filters can be stored empty
   - rscadd: Adds chatprint filter for belly / ooc note to chat prints
   - rscadd: OOC/LOOC https:// urls are now automatically parsed into links
+2023-12-21:
+  Upstream:
+  - rscadd: 'admins: Admins can now select volume in ''Play Global Sound'''
+  - qol: Updates some of the cooldown code
+  - rscadd: Added ability to play internet sounds (URLs) to players (these do still
+      respect the prefs)
+  - rscadd: Added new proc to interact with the shell() proc more nicely
+  - config: Added invoke_youtubedl config options
+  - rscadd: Added ability to play a sound at the location of a mob
+  - admin: Added 'Stop Sounds' debug verb
