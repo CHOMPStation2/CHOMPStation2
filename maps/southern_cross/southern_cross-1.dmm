@@ -2384,9 +2384,6 @@
 	dir = 1
 	},
 /obj/structure/table/steel_reinforced,
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
 /obj/item/weapon/stamp/cargo{
 	pixel_x = -2
 	},
@@ -5500,11 +5497,8 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "azZ" = (
-/obj/structure/cable/green,
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/brown/border,
-/obj/machinery/status_display/supply_display{
-	pixel_x = 32
+/obj/structure/sign/christmas/lights{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
@@ -13490,6 +13484,10 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals4,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 10
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "dRv" = (
@@ -19128,29 +19126,6 @@
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating,
 /area/storage/emergency_storage/firstdeck/aft_emergency)
-"hmG" = (
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 10
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled,
-/area/quartermaster/storage)
 "hon" = (
 /obj/effect/landmark{
 	name = "maint_pred"
@@ -27061,7 +27036,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology)
 "pWA" = (
-/obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -27070,6 +27044,7 @@
 	name = "Cargo Lockdown";
 	opacity = 0
 	},
+/obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/quartermaster/delivery)
 "pWX" = (
@@ -27388,14 +27363,6 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/engineering/auxiliary_engineering)
-"qnD" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled,
-/area/quartermaster/storage)
 "qnP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/table/bench/steel,
@@ -59860,19 +59827,19 @@ pWA
 aen
 cNP
 vpP
-dWn
+cJx
 aiO
 asc
 aKa
 aKa
 aKa
-aKa
+azZ
 dRb
 fbm
 dWn
-qnD
-hmG
-azZ
+aKa
+aKa
+aKa
 dWn
 eYA
 dWo
