@@ -113,7 +113,8 @@
 									   /datum/power/shadekin/regenerate_other,
 									   /datum/power/shadekin/create_shade,
 									   /datum/power/shadekin/dark_tunneling, //CHOMPEdit Add - Dark Tunneling
-									   /datum/power/shadekin/dark_respite) //CHOMPEdit Add - Dark Respite
+									   /datum/power/shadekin/dark_respite, //CHOMPEdit Add - Dark Respite
+									   /datum/power/shadekin/dark_maw) //CHOMPEdit Add - Dark Maw
 	var/list/shadekin_ability_datums = list()
 	var/kin_type
 	var/energy_light = 0.25
@@ -319,7 +320,7 @@
 		brightness = 0
 	//CHOMPEdit end
 	darkness = 1-brightness //Invert
-	var/is_dark = (darkness >= 0.5)
+	var/is_dark = (darkness >= 0.5) || istype(get_area(H), /area/shadekin) //CHOMPEdit - Dark provides health
 
 	if(H.ability_flags & AB_PHASE_SHIFTED)
 		dark_gains = 0
@@ -356,7 +357,7 @@
 	if(H.ability_flags & AB_DARK_RESPITE || H.has_modifier_of_type(/datum/modifier/dark_respite))
 		return 0
 	//CHOMPEdit - Dark Respite
-	if(shade_organ.dark_energy_infinite)
+	if(shade_organ.dark_energy_infinite || istype(get_area(H), /area/shadekin)) //CHOMPEdit - Dark grants energy
 		return shade_organ.max_dark_energy
 
 	return shade_organ.dark_energy

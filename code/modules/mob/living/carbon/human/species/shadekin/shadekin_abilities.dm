@@ -597,3 +597,158 @@
 	. = ..()
 	blacklisted_turfs = typecacheof(list(/turf/unsimulated))
 	blacklisted_areas = typecacheof(list(/area/centcom, /area/shadekin))
+
+/obj/effect/abstract/dark_maw
+	var/mob/living/owner = null
+	var/obj/belly/target = null
+	icon = 'modular_chomp/icons/obj/shadekin_portal.dmi'
+	icon_state = "dark_maw_waiting"
+
+/obj/effect/abstract/dark_maw/New(loc, var/mob/living/user, var/trigger_now = 0)
+	. = ..()
+	if(istype(user))
+		owner = user
+		target = owner.vore_selected
+
+	if(!isturf(loc))
+		return INITIALIZE_HINT_QDEL
+	var/turf/T = loc
+	if(T.get_lumcount() >= 0.6)
+		visible_message("<span class='notice'>A set of shadowy lines flickers away in the light.</span>")
+		icon_state = "dark_maw_used"
+		qdel(src)
+		return
+
+	var/mob/living/target_user = null
+	for(var/mob/living/L in T)
+		if(L != owner && !L.incorporeal_move)
+			target_user = L
+			break
+	if(istype(target_user))
+		triggered_by(target_user, 1)
+		// to trigger rebuild
+	else if(trigger_now)
+		icon_state = "dark_maw_used"
+		flick("dark_maw_triggered", src)
+		visible_message("<span class='warning'>A shadowy maw suddenly manifests and snaps shut around nothing before vanishing.</span>")
+		spawn(30)
+			qdel(src)
+	else
+		START_PROCESSING(SSobj, src)
+
+/obj/effect/abstract/dark_maw/Destroy()
+	STOP_PROCESSING(SSobj, src)
+
+/obj/effect/abstract/dark_maw/Crossed(O)
+	. = ..()
+	if(!isliving(O))
+		return
+	if(icon_state != "dark_maw_waiting")
+		return
+	if(!owner || O != owner)
+		triggered_by(O)
+
+/obj/effect/abstract/dark_maw/process()
+	var/turf/T = get_turf(src)
+	if(!istype(T) || T.get_lumcount() >= 0.6)
+		if(icon_state == "dark_maw_waiting")
+			visible_message("<span class='notice'>A set of shadowy lines flickers away in the light.</span>")
+		else
+			visible_message("<span class='notice'>The shadowy maw dissipates with the light shone on it.</span>")
+		qdel(src)
+
+/obj/effect/abstract/dark_maw/proc/triggered_by(var/mob/living/L, var/triggered_instantly = 0)
+	STOP_PROCESSING(SSobj, src)
+	icon_state = "dark_maw_used"
+	flick("dark_maw_triggered", src)
+	L.AdjustStunned(10)
+	visible_message("<span class='warning'>A shadowy maw suddenly manifests around [L].</span>")
+	if(owner && !triggered_instantly)
+		to_chat(owner, "<span class='warning'>A dark maw you deployed has triggered!</span>")
+	spawn(10)
+		var/will_vore = 1
+		if(!owner || !(target in owner) || !L.devourable || !L.can_be_drop_prey || !owner.can_be_drop_pred)
+			will_vore = 0
+		if(!src || src.gc_destroyed)
+			//We got deleted probably, do nothing more
+		else if(L.loc != get_turf(src))
+			visible_message("<span class='notice'>The shadowy maw snaps shut around nothing and then dissipates.</span>")
+			qdel(src)
+		else if(will_vore)
+			visible_message("<span class='warning'>The shadowy maw snaps shut around [L] and dissipates, leaving nothing behind.</span>")
+			L.forceMove(target)
+			qdel(src)
+		else
+			var/obj/effect/energy_net/dark/net = new /obj/effect/energy_net/dark(get_turf(src))
+			if(net.buckle_mob(L))
+				visible_message("<span class='warning'>The shadowy maw snaps shut around [L] and traps them in a shadowy net.</span>")
+			else
+				visible_message("<span class='notice'>The shadowy maw snaps shut around [L] and then dissipates, leaving them in place.</span>")
+			qdel(src)
+
+/obj/effect/energy_net/dark
+	name = "dark net"
+	desc = "It's a net made of dark tendrils."
+	icon = 'modular_chomp/icons/obj/shadekin_portal.dmi'
+	icon_state = "dark_net"
+
+	escape_time = 2 MINUTES
+
+/obj/effect/energy_net/dark/user_unbuckle_mob(mob/living/buckled_mob, mob/user)
+	if(istype(user,/mob/living/simple_mob/shadekin))
+		visible_message("<span class='danger'>[user] dissipates \the [src] with a touch!</span>")
+		unbuckle_mob(buckled_mob)
+		return
+	else if(istype(user,/mob/living/carbon/human))
+		var/mob/living/carbon/human/H = user
+		var/datum/species/shadekin/SK = H.species
+		if(istype(SK))
+			visible_message("<span class='danger'>[user] dissipates \the [src] with a touch!</span>")
+			unbuckle_mob(buckled_mob)
+			return
+	. = ..()
+
+/obj/effect/energy_net/dark/process()
+	. = ..()
+	var/turf/T = get_turf(src)
+	if(!istype(T) || T.get_lumcount() >= 0.6)
+		visible_message("<span class='notice'>The tangle of dark tendrils fades away in the light.</span>")
+		qdel(src)
+
+/datum/power/shadekin/dark_maw
+	name = "Dark Maw (20)"
+	desc = "Create a trap to capture others, or steal people from phase"
+	verbpath = /mob/living/carbon/human/proc/dark_maw
+	ability_icon_state = "ling_absorb_dna"
+
+/mob/living/carbon/human/proc/dark_maw()
+	set name = "Dark Maw (20)"
+	set desc = "Create a trap to capture others, or steal people from phase"
+	set category = "Shadekin"
+
+	var/ability_cost = 50
+
+	if(!shadekin_ability_check())
+		return FALSE
+	else if(shadekin_get_energy() < ability_cost)
+		to_chat(src, "<span class='warning'>Not enough energy for that ability!</span>")
+		return FALSE
+	var/turf/T = get_turf(src)
+	if(!istype(T))
+		to_chat(src, "<span class='warning'>You don't seem to be able to set a trap here!</span>")
+		return FALSE
+	else if(T.get_lumcount() >= 0.6)
+		to_chat(src, "<span class='warning'>There is too much light here for your trap to last!</span>")
+		return FALSE
+
+	if(do_after(src, 10))
+		if(ability_flags & AB_PHASE_SHIFTED)
+			new /obj/effect/abstract/dark_maw(loc, src, 1)
+		else
+			new /obj/effect/abstract/dark_maw(loc, src)
+
+
+		shadekin_adjust_energy(-ability_cost)
+		return TRUE
+	else
+		return FALSE
