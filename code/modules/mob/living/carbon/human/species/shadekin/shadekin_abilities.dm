@@ -663,7 +663,7 @@
 	STOP_PROCESSING(SSobj, src)
 	icon_state = "dark_maw_used"
 	flick("dark_maw_triggered", src)
-	L.AdjustStunned(10)
+	L.AdjustStunned(4)
 	visible_message("<span class='warning'>A shadowy maw suddenly manifests around [L].</span>")
 	if(owner && !triggered_instantly)
 		to_chat(owner, "<span class='warning'>A dark maw you deployed has triggered!</span>")
