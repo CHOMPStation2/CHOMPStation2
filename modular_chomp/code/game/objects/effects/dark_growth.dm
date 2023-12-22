@@ -7,6 +7,11 @@
 	var/health = 10
 	var/obj/structure/prop/dark_node/linked_node = null
 
+/obj/effect/dark/Initialize(mapload)
+	. = ..()
+	if(prob(5))
+		add_glow()
+
 /obj/effect/dark/proc/add_glow()
 	var/flip = rand(1,2)
 	var/choice

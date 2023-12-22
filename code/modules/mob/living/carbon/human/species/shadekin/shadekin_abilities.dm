@@ -646,8 +646,9 @@
 		return
 	if(icon_state != "dark_maw_waiting")
 		return
-	if(!O.incorporeal_move && (!owner || O != owner))
-		triggered_by(O)
+	var/mob/living/L = O
+	if(!L.incorporeal_move && (!owner || L != owner))
+		triggered_by(L)
 
 /obj/effect/abstract/dark_maw/process()
 	var/turf/T = get_turf(src)
