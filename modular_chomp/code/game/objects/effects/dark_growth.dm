@@ -26,7 +26,6 @@
 		var/image/ii = image('icons/turf/flooring/weird_vr.dmi', choiceb)
 		add_overlay(ii)
 
-
 /obj/effect/dark/Crossed(O)
 	. = ..()
 	if(!isliving(O))
