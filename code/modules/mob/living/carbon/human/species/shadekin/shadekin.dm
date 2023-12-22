@@ -357,7 +357,7 @@
 	if(H.ability_flags & AB_DARK_RESPITE || H.has_modifier_of_type(/datum/modifier/dark_respite))
 		return 0
 	//CHOMPEdit - Dark Respite
-	if(shade_organ.dark_energy_infinite || istype(get_area(H), /area/shadekin)) //CHOMPEdit - Dark grants energy
+	if(shade_organ.dark_energy_infinite)
 		return shade_organ.max_dark_energy
 
 	return shade_organ.dark_energy

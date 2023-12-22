@@ -728,7 +728,7 @@
 	set desc = "Create a trap to capture others, or steal people from phase"
 	set category = "Shadekin"
 
-	var/ability_cost = 50
+	var/ability_cost = 20
 
 	if(!shadekin_ability_check())
 		return FALSE
