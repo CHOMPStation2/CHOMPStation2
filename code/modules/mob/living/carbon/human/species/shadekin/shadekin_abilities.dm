@@ -748,9 +748,9 @@
 			new /obj/effect/abstract/dark_maw(loc, src, 1)
 		else
 			new /obj/effect/abstract/dark_maw(loc, src)
+			shadekin_adjust_energy(-ability_cost)
 
 
-		shadekin_adjust_energy(-ability_cost)
 		return TRUE
 	else
 		return FALSE
