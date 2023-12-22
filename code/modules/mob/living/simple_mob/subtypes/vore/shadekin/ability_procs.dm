@@ -194,7 +194,7 @@
 	if(!istype(T))
 		to_chat(src, "<span class='warning'>You don't seem to be able to set a trap here!</span>")
 		return FALSE
-	else if(T.get_lumcount() >= 0.6)
+	else if(T.get_lumcount() >= 0.5)
 		to_chat(src, "<span class='warning'>There is too much light here for your trap to last!</span>")
 		return FALSE
 

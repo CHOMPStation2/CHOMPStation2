@@ -613,7 +613,7 @@
 	if(!isturf(loc))
 		return INITIALIZE_HINT_QDEL
 	var/turf/T = loc
-	if(T.get_lumcount() >= 0.6)
+	if(T.get_lumcount() >= 0.5)
 		visible_message("<span class='notice'>A set of shadowy lines flickers away in the light.</span>")
 		icon_state = "dark_maw_used"
 		qdel(src)
@@ -651,7 +651,7 @@
 
 /obj/effect/abstract/dark_maw/process()
 	var/turf/T = get_turf(src)
-	if(!istype(T) || T.get_lumcount() >= 0.6)
+	if(!istype(T) || T.get_lumcount() >= 0.5)
 		if(icon_state == "dark_maw_waiting")
 			visible_message("<span class='notice'>A set of shadowy lines flickers away in the light.</span>")
 		else
@@ -739,7 +739,7 @@
 	if(!istype(T))
 		to_chat(src, "<span class='warning'>You don't seem to be able to set a trap here!</span>")
 		return FALSE
-	else if(T.get_lumcount() >= 0.6)
+	else if(T.get_lumcount() >= 0.5)
 		to_chat(src, "<span class='warning'>There is too much light here for your trap to last!</span>")
 		return FALSE
 
