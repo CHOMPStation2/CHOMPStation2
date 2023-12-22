@@ -638,6 +638,7 @@
 
 /obj/effect/abstract/dark_maw/Destroy()
 	STOP_PROCESSING(SSobj, src)
+	return ..()
 
 /obj/effect/abstract/dark_maw/Crossed(O)
 	. = ..()
@@ -655,6 +656,7 @@
 			visible_message("<span class='notice'>A set of shadowy lines flickers away in the light.</span>")
 		else
 			visible_message("<span class='notice'>The shadowy maw dissipates with the light shone on it.</span>")
+		icon_state = "dark_maw_used"
 		qdel(src)
 
 /obj/effect/abstract/dark_maw/proc/triggered_by(var/mob/living/L, var/triggered_instantly = 0)
