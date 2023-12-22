@@ -646,7 +646,7 @@
 		return
 	if(icon_state != "dark_maw_waiting")
 		return
-	if(!owner || O != owner)
+	if(!O.incorporeal_move && (!owner || O != owner))
 		triggered_by(O)
 
 /obj/effect/abstract/dark_maw/process()
