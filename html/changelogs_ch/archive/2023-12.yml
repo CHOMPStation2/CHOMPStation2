@@ -306,3 +306,7 @@
   - qol: Enables TG-Chat URL Parsing for player tips and motd
   - bugfix: Unicode characters won't break any longer during Say / Whisper
   - qol: Changes graphite to use stone table appearance when used to build tables.
+2023-12-23:
+  Upstream:
+  - qol: URL regex adjusted to ignore trailing punctation marks (:.?)
+  - bugfix: in vorestation wiki links not breaking the url parsing
