@@ -233,6 +233,7 @@
 	return
 
 /obj/item/weapon/cell/proc/get_electrocute_damage()
+<<<<<<< HEAD
 	switch (charge)
 /*		if (9000 to INFINITY)
 			return min(rand(90,150),rand(90,150))
@@ -260,3 +261,19 @@
 			return min(rand(10,20),rand(10,20))
 		else
 			return 0
+=======
+	//1kW = 5
+	//10kW = 24
+	//100kW = 45
+	//250kW = 53
+	//1MW = 66
+	//10MW = 88
+	//100MW = 110
+	//1GW = 132
+	if(charge >= 1000)
+		var/damage = log(1.1,charge)
+		damage = damage - (log(1.1,damage)*1.5)
+		return round(damage)
+	else
+		return 0
+>>>>>>> 8f6cdaba6e... Merge pull request #15634 from BlackMajor/patch-2
