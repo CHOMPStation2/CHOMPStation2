@@ -306,3 +306,28 @@
   - qol: Enables TG-Chat URL Parsing for player tips and motd
   - bugfix: Unicode characters won't break any longer during Say / Whisper
   - qol: Changes graphite to use stone table appearance when used to build tables.
+2023-12-23:
+  Aroliacue:
+  - rscadd: Xenomorph Spacesuit/Voidsuit framework. Actual suits coming soon!
+  - balance: Spacesuit (not voidsuit) slowdown reduced from 1.5 to 1. They're now
+      twice as slow as voidsuits, instead of three times as slow.
+  - balance: Strong claws and strong bite unarmed attacks now deal 10 damage, making
+      them an actual upgrade to regular claws/bite and fists. (Previously 5, which
+      was the same damage as regular fists)
+  - balance: Xenomorph Hybrid bleed speed modifier increased from 0.9 to 1 (bleed
+      at normal speed now, instead of slower)
+  - balance: Xenomorph Hybrid radiation damage modifier 0.7 to 0.9 (takes more rad
+      damage)
+  - balance: Xenomorph Hybrid flash modifier 1.1 to 1.2 (flashes are more effective)
+  - balance: Xenomorph Hybrid unarmed attack damage increased from 5 to 15.
+  - balance: Xenomorph Hybrid cold comfort threshold increased from 263.15 kelvin
+      to 253.15 kelvin (-10 degrees Celsius to -20 Celsius)
+  - balance: Adjusted order of xenomorph weed healing FROM exterior damage -> interior
+      damage -> bones TO interior damage -> exterior damage -> bones. (Should prevent
+      no healing gains due to damaged lungs always ticking oxy damage)
+  Upstream:
+  - qol: URL regex adjusted to ignore trailing punctation marks (:.?)
+  - bugfix: in vorestation wiki links not breaking the url parsing
+  - rscdel: hotkey input background color for borghotkeymode / borgmarco
+  - rscadd: welcome menu now displaying current station time and round duration ("Server
+      Initializing" if round hasn't started yet).
