@@ -329,3 +329,5 @@
   - qol: URL regex adjusted to ignore trailing punctation marks (:.?)
   - bugfix: in vorestation wiki links not breaking the url parsing
   - rscdel: hotkey input background color for borghotkeymode / borgmarco
+  - rscadd: welcome menu now displaying current station time and round duration ("Server
+      Initializing" if round hasn't started yet).
