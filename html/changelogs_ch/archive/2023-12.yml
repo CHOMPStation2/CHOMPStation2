@@ -304,3 +304,5 @@
   - rscadd: Added ability to play a sound at the location of a mob
   - admin: Added 'Stop Sounds' debug verb
   - qol: Enables TG-Chat URL Parsing for player tips and motd
+  - bugfix: Unicode characters won't break any longer during Say / Whisper
+  - qol: Changes graphite to use stone table appearance when used to build tables.
