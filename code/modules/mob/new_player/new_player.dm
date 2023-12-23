@@ -32,12 +32,6 @@
 
 /mob/new_player/proc/new_player_panel_proc()
 	var/output = "<div align='center'>"
-<<<<<<< HEAD
-	/* VOREStation Removal
-	output += "[using_map.get_map_info()]"
-	output +="<hr>"
-	VOREStation Removal End */
-=======
 
 	output += "<b>Map:</b> [using_map.full_name]<br>"
 	output += "<b>Station Time:</b> [stationtime2text()]<br>"
@@ -48,7 +42,6 @@
 		output += "<b>Round Duration:</b> [roundduration2text()]<br>"
 	output += "<hr>"
 
->>>>>>> 9df237cc4d... Merge pull request #15637 from KillianKirilenko/kk-mini2
 	output += "<p><a href='byond://?src=\ref[src];show_preferences=1'>Character Setup</A></p>"
 
 	if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
