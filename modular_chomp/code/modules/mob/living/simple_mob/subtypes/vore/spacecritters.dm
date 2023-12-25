@@ -37,6 +37,7 @@
 	var/evolvekey = "/obj/item/stack/material/tritium"
 	var/copy = "/mob/living/simple_mob/vore/solarray"
 
+
 /mob/living/simple_mob/vore/spacecritter/attackby(var/obj/item/O, var/mob/user)
 	if(istype(O, evolvekey))
 		user.drop_from_inventory(O)
@@ -58,6 +59,7 @@
 	qdel(src)
 
 /mob/living/simple_mob/vore/spacecritter/proc/duplicate()
+	visible_message("<span class='warning'>\The [src] splits into two!</span>")
 	new copy (src.loc)
 
 
@@ -82,6 +84,7 @@
 	feed = "/obj/item/weapon/ore/phoron"
 	evolvekey = "/obj/item/stack/material/tritium"
 	copy = "/mob/living/simple_mob/vore/spacecritter/solarray"
+
 
 /mob/living/simple_mob/vore/spacecritter/solarray/Life()
 	. = ..()
@@ -331,7 +334,17 @@
 	)
 
 	butchery_loot = list(\
-		/obj/item/craftingmaterial/lifewisp = 1\
+		/obj/item/craftingmaterial/lifewisp = 3\
+		)
+
+	harvest_tool = /obj/item/weapon/weldingtool
+	harvest_cooldown = 10 MINUTES
+	harvest_delay = 30 SECONDS
+	harvest_recent = 0
+	harvest_per_hit = 1
+	harvest_verb = "harvested"
+	harvest_results = list(
+		/obj/item/craftingmaterial/lifewisp = 1
 		)
 
 /mob/living/simple_mob/vore/livingice
@@ -343,7 +356,17 @@
 	)
 
 	butchery_loot = list(\
-		/obj/item/craftingmaterial/icescale = 1\
+		/obj/item/craftingmaterial/icescale = 3\
+		)
+
+	harvest_tool = /obj/item/weapon/tool/wirecutters
+	harvest_cooldown = 10 MINUTES
+	harvest_delay = 30 SECONDS
+	harvest_recent = 0
+	harvest_per_hit = 1
+	harvest_verb = "harvested"
+	harvest_results = list(
+		/obj/item/craftingmaterial/icescale = 1
 		)
 
 /mob/living/simple_mob/vore/radcrab
@@ -355,7 +378,17 @@
 	)
 
 	butchery_loot = list(\
-		/obj/item/craftingmaterial/crystalscale = 1\
+		/obj/item/craftingmaterial/crystalscale = 3\
+		)
+
+	harvest_tool = /obj/item/weapon/tool/crowbar
+	harvest_cooldown = 10 MINUTES
+	harvest_delay = 30 SECONDS
+	harvest_recent = 0
+	harvest_per_hit = 1
+	harvest_verb = "harvested"
+	harvest_results = list(
+		/obj/item/craftingmaterial/crystalscale = 1
 		)
 
 /mob/living/simple_mob/vore/dreameel
@@ -367,7 +400,17 @@
 	)
 
 	butchery_loot = list(\
-		/obj/item/craftingmaterial/dreamscale = 1\
+		/obj/item/craftingmaterial/dreamscale = 3\
+		)
+
+	harvest_tool = /obj/item/weapon/tool/wirecutters
+	harvest_cooldown = 10 MINUTES
+	harvest_delay = 30 SECONDS
+	harvest_recent = 0
+	harvest_per_hit = 1
+	harvest_verb = "harvested"
+	harvest_results = list(
+		/obj/item/craftingmaterial/dreamscale = 1
 		)
 
 /mob/living/simple_mob/vore/gravityshell
@@ -379,5 +422,15 @@
 	)
 
 	butchery_loot = list(\
-		/obj/item/craftingmaterial/heftyshellchitin = 1\
+		/obj/item/craftingmaterial/heftyshellchitin = 3\
+		)
+
+	harvest_tool = /obj/item/weapon/tool/crowbar
+	harvest_cooldown = 10 MINUTES
+	harvest_delay = 30 SECONDS
+	harvest_recent = 0
+	harvest_per_hit = 1
+	harvest_verb = "harvested"
+	harvest_results = list(
+		/obj/item/craftingmaterial/heftyshellchitin = 1
 		)
