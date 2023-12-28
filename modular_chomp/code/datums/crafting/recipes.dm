@@ -39,7 +39,7 @@
 	result = /obj/item/clothing/suit/armor/firecloak
 	reqs = list(
 		list(/obj/item/stack/material/cloth = 10),
-		/obj/item/craftingmaterial/lifewisp = 2
+		list(/obj/item/stack/material/wisp = 2)
 	)
 	time = 60
 	category = CAT_CLOTHING
@@ -49,7 +49,7 @@
 	result = /obj/item/clothing/suit/armor/alien/dreamercloak
 	reqs = list(
 		list(/obj/item/stack/material/cloth = 10),
-		/obj/item/craftingmaterial/dreamscale = 2
+		list(/obj/item/stack/material/dreamscale = 2)
 	)
 	time = 60
 	category = CAT_CLOTHING
@@ -59,7 +59,7 @@
 	result = /obj/item/clothing/gloves/toxinregen
 	reqs = list(
 		list(/obj/item/stack/material/cloth = 10),
-		/obj/item/craftingmaterial/crystalscale = 2,
+		list(/obj/item/stack/material/crystalscale = 2),
 		list(/obj/item/stack/material/resin = 8),
 		/obj/item/weapon/stock_parts/capacitor = 1
 	)
@@ -70,7 +70,7 @@
 	name = "frost boots"
 	result = /obj/item/clothing/shoes/boots/frost
 	reqs = list(
-		/obj/item/craftingmaterial/crystalscale = 2,
+		list(/obj/item/stack/material/frostscale = 2),
 		/obj/item/clothing/shoes/boots/winter = 1
 	)
 	time = 60
@@ -83,7 +83,7 @@
 		list(/obj/item/stack/material/steel  = 8),
 		list(/obj/item/stack/material/plastic  = 3),
 		list(/obj/item/weapon/cell/device  = 1),
-		/obj/item/craftingmaterial/crystalscale = 2
+		list(/obj/item/stack/material/frostscale = 2)
 		)
 	time = 60
 	category = CAT_WEAPONRY
@@ -95,7 +95,7 @@
 	reqs = list(
 		list(/obj/item/stack/material/steel  = 15),
 		list(/obj/item/stack/material/leather  = 3),
-		list(/obj/item/craftingmaterial/lifewisp = 2)
+		list(/obj/item/stack/material/wisp = 2)
 		)
 	time = 60
 	category = CAT_WEAPONRY
@@ -106,7 +106,7 @@
 	result = /obj/item/weapon/material/twohanded/sledgehammer/gravity
 	reqs = list(list(/obj/item/stack/material/steel  = 15),
 		list(/obj/item/stack/material/leather  = 3),
-		list(/obj/item/craftingmaterial/lifewisp = 2),
+		list(/obj/item/stack/material/shellchitin = 2),
 		list(/obj/item/weapon/cell/high  = 1)
 		)
 	time = 60
@@ -118,7 +118,7 @@
 	result = /obj/item/weapon/material/twohanded/fireaxe/scythe/harvester
 	reqs = list(list(/obj/item/stack/material/steel  = 15),
 		list(/obj/item/stack/material/leather  = 3),
-		list(/obj/item/craftingmaterial/dreamscale = 2)
+		list(/obj/item/stack/material/dreamscale = 2)
 		)
 	time = 60
 	category = CAT_WEAPONRY

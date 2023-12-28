@@ -1,43 +1,141 @@
-//Soo, this might be jank code and debatable if I should just make this a material but new item subtype thing. Pretty much more mob drops for makeshift
-//crafting without spamming the material defines.
+#define MAT_WISP			"strange wisp"
+#define MAT_FROSCALE			"frost scale"
+#define MAT_CRYSCALE			"crystal scale"
+#define MAT_DREAMSCALE			"furred scale"
+#define MAT_SHELLCHITIN			"shell chitin"
 
-/obj/item/craftingmaterial
-	name = "Null"
-	desc = "Null."
+/datum/material/wisp
+	name = MAT_WISP
+	icon_colour = "#F13C00"
+	stack_type = /obj/item/stack/material/wisp
+	stack_origin_tech = list(TECH_MATERIAL = 3, TECH_BIO = 4)
+	icon_base = "solid"
+	icon_reinf = "reinf_mesh"
+	integrity = 30
+	weight = 10
+	ignition_point = T0C+600
+	melting_point = T0C+800
+	protectiveness = 5
+	conductive = 0
+	opacity = 0.5
+	reflectivity = 30
+	supply_conversion_value = 6
+
+/obj/item/stack/material/wisp
+	name = "Strange Wisp"
+	desc = "The by-product of mob grinding."
 	icon = 'modular_chomp/icons/obj/crafting.dmi'
-	icon_state = "locator"
-	w_class = ITEMSIZE_SMALL
-	throw_speed = 4
-	throw_range = 20
-	origin_tech = list(TECH_MAGNET = 1)
-	matter = list(MAT_STEEL = 400)
-
-/obj/item/craftingmaterial/lifewisp
-	name = "Firey Wisp"
-	desc = "A strange wisp of ever burning harmless flame."
 	icon_state = "wisp"
+	default_type = MAT_WISP
+	no_variants = FALSE
+	pass_color = TRUE
+	strict_color_stacking = TRUE
 
-/obj/item/craftingmaterial/icescale
+
+/datum/material/frostscale
+	name = MAT_FROSCALE
+	icon_colour = "#0000CC"
+	stack_type = /obj/item/stack/material/frostscale
+	stack_origin_tech = list(TECH_MATERIAL = 3, TECH_BIO = 4)
+	icon_base = "solid"
+	icon_reinf = "reinf_mesh"
+	integrity = 250
+	weight = 50
+	ignition_point = T0C+20
+	melting_point = T0C+40
+	protectiveness = 30
+	conductive = 0
+	opacity = 0.5
+	reflectivity = 0
+	supply_conversion_value = 8
+
+/obj/item/stack/material/frostscale
 	name = "Frost Scale"
-	desc = "A strange scale, at first glance appearing to be made of ice, but isn't melting."
+	desc = "The by-product of mob grinding."
+	icon = 'modular_chomp/icons/obj/crafting.dmi'
 	icon_state = "scale"
 	color = "#0000CC"
+	default_type = MAT_FROSCALE
+	no_variants = FALSE
+	pass_color = TRUE
+	strict_color_stacking = TRUE
 
-/obj/item/craftingmaterial/crystalscale
-	name = "Crystal Scale"
-	desc = "A strange scale brimming with energy."
+/datum/material/crystalscale
+	name = MAT_CRYSCALE
+	icon_colour = "#006633"
+	stack_type = /obj/item/stack/material/crystalscale
+	stack_origin_tech = list(TECH_MATERIAL = 3, TECH_BIO = 4)
+	icon_base = "solid"
+	icon_reinf = "reinf_mesh"
+	integrity = 250
+	weight = 10
+	radiation_resistance = 25 //less then lead because it's lighter then lead.
+	protectiveness = 30
+	conductive = 0
+	opacity = 0.25
+	reflectivity = 60
+	supply_conversion_value = 4
+
+/obj/item/stack/material/crystalscale
+	name = "Crystak Scale"
+	desc = "The by-product of mob grinding."
+	icon = 'modular_chomp/icons/obj/crafting.dmi'
 	icon_state = "scale"
 	color = "#006633"
+	default_type = MAT_CRYSCALE
+	no_variants = FALSE
+	pass_color = TRUE
+	strict_color_stacking = TRUE
 
-/obj/item/craftingmaterial/dreamscale
+/datum/material/dreamscale
+	name = MAT_DREAMSCALE
+	icon_colour = "#006633"
+	stack_type = /obj/item/stack/material/dreamscale
+	stack_origin_tech = list(TECH_MATERIAL = 3, TECH_BIO = 4)
+	icon_base = "solid"
+	icon_reinf = "reinf_mesh"
+	integrity = 200
+	weight = 30
+	ignition_point = T0C+200
+	melting_point = T0C+400
+	protectiveness = 60
+	reflectivity = 30
+	supply_conversion_value = 1
+
+/obj/item/stack/material/dreamscale
 	name = "Dream Scale"
-	desc = "A strange scale from a strange creature. Feels oddly soft."
+	desc = "The by-product of mob grinding."
+	icon = 'modular_chomp/icons/obj/crafting.dmi'
 	icon_state = "scale"
+	default_type = MAT_DREAMSCALE
+	no_variants = FALSE
+	pass_color = TRUE
+	strict_color_stacking = TRUE
 
-/obj/item/craftingmaterial/heftyshellchitin
-	name = "Hefty Shell Chitin"
-	desc = "The material of a shell"
+/datum/material/shellchitin
+	name = MAT_SHELLCHITIN
+	icon_colour = "#006633"
+	stack_type = /obj/item/stack/material/dreamscale
+	stack_origin_tech = list(TECH_MATERIAL = 3, TECH_BIO = 4)
+	icon_base = "solid"
+	icon_reinf = "reinf_mesh"
+	integrity = 250
+	weight = 100
+	ignition_point = T0C+300
+	melting_point = T0C+600
+	protectiveness = 50
+	reflectivity = 0
+	supply_conversion_value = 1
+
+/obj/item/stack/material/shellchitin
+	name = "Shell Chitin"
+	desc = "The by-product of mob grinding."
+	icon = 'modular_chomp/icons/obj/crafting.dmi'
 	icon_state = "shell"
+	default_type = MAT_SHELLCHITIN
+	no_variants = FALSE
+	pass_color = TRUE
+	strict_color_stacking = TRUE
 
 //Putting this here for now because in intial PRs, I enjoy making/altering as few files as possible.
 //Solar ray stuff
@@ -70,7 +168,7 @@
 	item_state = "rapier"
 	slot_flags = SLOT_BELT
 	applies_material_colour = 0
-	force_divisor = 0.55
+	force_divisor = 0.50
 	color = "#F13C00"
 
 /obj/item/weapon/material/sword/rapier/solar/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
@@ -109,9 +207,8 @@
 /obj/item/weapon/material/twohanded/sledgehammer/gravity
 	name = "Gravity Sledgehammer"
 	desc = "A sledgehammer in bits of a gravity turtle's shell."
-	force = 20
 	unwielded_force_divisor = 0.25
-	force_divisor = 0.7 //
+	force_divisor = 0.40 //
 	dulled_divisor = 0.80	//Still metal on a stick
 	w_class = ITEMSIZE_LARGE
 	slot_flags = SLOT_BACK
@@ -130,7 +227,8 @@
 /obj/item/weapon/material/twohanded/fireaxe/scythe/harvester
 	name = "Scaled Scythe"
 	desc = "A scythe cladded in dream eel scales, allowing for better defense at the cost of offense."
-	force_wielded = 15
+	force_wielded = 18
+	force_divisor = 0.3 // 18 with hardness 60 (steel)
 	unwielded_force_divisor = 0.10
 	var/defend_chance = 50
 	var/projectile_parry_chance = 50

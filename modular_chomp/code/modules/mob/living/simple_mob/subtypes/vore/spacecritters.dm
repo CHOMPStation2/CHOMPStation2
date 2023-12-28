@@ -334,7 +334,7 @@
 	)
 
 	butchery_loot = list(\
-		/obj/item/craftingmaterial/lifewisp = 3\
+		/obj/item/stack/material/wisp = 3\
 		)
 
 	harvest_tool = /obj/item/weapon/weldingtool
@@ -344,7 +344,7 @@
 	harvest_per_hit = 1
 	harvest_verb = "harvested"
 	harvest_results = list(
-		/obj/item/craftingmaterial/lifewisp = 1
+		/obj/item/stack/material/wisp = 1
 		)
 
 /mob/living/simple_mob/vore/livingice
@@ -356,7 +356,7 @@
 	)
 
 	butchery_loot = list(\
-		/obj/item/craftingmaterial/icescale = 3\
+		/obj/item/stack/material/frostscale = 3\
 		)
 
 	harvest_tool = /obj/item/weapon/tool/wirecutters
@@ -366,7 +366,7 @@
 	harvest_per_hit = 1
 	harvest_verb = "harvested"
 	harvest_results = list(
-		/obj/item/craftingmaterial/icescale = 1
+		/obj/item/stack/material/frostscale = 1
 		)
 
 /mob/living/simple_mob/vore/radcrab
@@ -378,7 +378,7 @@
 	)
 
 	butchery_loot = list(\
-		/obj/item/craftingmaterial/crystalscale = 3\
+		/obj/item/stack/material/crystalscale = 3\
 		)
 
 	harvest_tool = /obj/item/weapon/tool/crowbar
@@ -388,7 +388,7 @@
 	harvest_per_hit = 1
 	harvest_verb = "harvested"
 	harvest_results = list(
-		/obj/item/craftingmaterial/crystalscale = 1
+		/obj/item/stack/material/crystalscale = 1
 		)
 
 /mob/living/simple_mob/vore/dreameel
@@ -400,7 +400,7 @@
 	)
 
 	butchery_loot = list(\
-		/obj/item/craftingmaterial/dreamscale = 3\
+		/obj/item/stack/material/dreamscale = 3\
 		)
 
 	harvest_tool = /obj/item/weapon/tool/wirecutters
@@ -410,7 +410,7 @@
 	harvest_per_hit = 1
 	harvest_verb = "harvested"
 	harvest_results = list(
-		/obj/item/craftingmaterial/dreamscale = 1
+		/obj/item/stack/material/dreamscale = 1
 		)
 
 /mob/living/simple_mob/vore/gravityshell
@@ -422,7 +422,7 @@
 	)
 
 	butchery_loot = list(\
-		/obj/item/craftingmaterial/heftyshellchitin = 3\
+		/obj/item/stack/material/shellchitin = 3\
 		)
 
 	harvest_tool = /obj/item/weapon/tool/crowbar
@@ -432,5 +432,5 @@
 	harvest_per_hit = 1
 	harvest_verb = "harvested"
 	harvest_results = list(
-		/obj/item/craftingmaterial/heftyshellchitin = 1
+		/obj/item/stack/material/shellchitin = 1
 		)
