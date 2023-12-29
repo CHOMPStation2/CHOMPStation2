@@ -7,7 +7,7 @@
 	if(!istype(M))
 		return
 
-	if(M.is_incorporeal) // CHOMPEdit - Don't buckle phased entities.
+	if(M.is_incorporeal()) // CHOMPEdit - Don't buckle phased entities.
 		return
 
 	if(!has_buckled_mobs() && !M.buckled && !M.anchored && (issmall(M) || prob(round(seed.get_trait(TRAIT_POTENCY)/3))))

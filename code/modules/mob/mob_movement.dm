@@ -435,7 +435,7 @@
 		return 0
 
 	//Check to see if we slipped
-	if(prob(Process_Spaceslipping(5)) && !buckled)
+	if(prob(Process_Spaceslipping(5)) && !buckled && !src.is_incorporeal()) // CHOMPEDIT - No slipping while phased.
 		to_chat(src, "<span class='notice'><B>You slipped!</B></span>")
 		inertia_dir = last_move
 		step(src, src.inertia_dir) // Not using Move for smooth glide here because this is a 'slip' so should be sudden.
