@@ -16174,7 +16174,9 @@
 	},
 /area/centcom/bar)
 "otP" = (
-/obj/machinery/vending/loadout/loadout_misc,
+/obj/machinery/vending/loadout/loadout_misc{
+	emagged = 1
+	},
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
 	},
