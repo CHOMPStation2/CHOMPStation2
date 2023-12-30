@@ -332,6 +332,11 @@
   - rscadd: welcome menu now displaying current station time and round duration ("Server
       Initializing" if round hasn't started yet).
 2023-12-30:
+  FluffMedic:
+  - qol: Everyone can be colorblind now, and have auto-hisses.
+  - qol: Removed vox requirement from Double Phoron tank
+  - bugfix: improper pathing on winter coat hood loadout
+  - bugfix: Loot safes not having loot in them.
   MeepleMuncher:
   - rscadd: added vorebellies and bump vore (safe) to pythons
   - imageadd: added new python (Noodle) sprites
