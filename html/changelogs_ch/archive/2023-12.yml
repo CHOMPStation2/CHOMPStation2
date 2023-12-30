@@ -349,6 +349,8 @@
   TheCaramelion:
   - rscadd: Meaty ores event
   - rscadd: Meaty variants of current meteorites
+  TheGreatKitsune:
+  - bugfix: all staff should have job whitelists
   Upstream:
   - bugfix: Fixes the unusable grill recipes by adding the special ingredients to
       the insertable list
