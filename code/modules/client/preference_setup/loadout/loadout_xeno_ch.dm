@@ -19,7 +19,7 @@
 	sort_category = "Xenowear"
 
 /datum/gear/double_tank_phoron
-	display_name = "Pocket sized double phoron tank (Vox, Customs)"
+	display_name = "Pocket sized double phoron tank (Customs)"
 	path = /obj/item/weapon/tank/emergency/phoron/double
-	whitelisted = list(SPECIES_VOX, SPECIES_CUSTOM)
+	whitelisted = SPECIES_CUSTOM //CHOMPedit: voxes don't need phoron here, not full whitelist removal because I am unsure of what use non-customs get
 	sort_category = "Xenowear"

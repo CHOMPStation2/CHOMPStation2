@@ -110,6 +110,8 @@
 		code += pick(digits)
 		digits -= code[code.len]
 
+	generate_loot()
+
 
 /obj/structure/closet/crate/secure/lootsafe/numberlock/togglelock(mob/user as mob)
 	if(!locked)
@@ -208,6 +210,9 @@
 	for(var/i in 1 to codelen)
 		code += pick(digits)
 		digits -= code[code.len]
+
+	generate_loot()
+
 
 
 /obj/structure/closet/crate/secure/lootsafe/devillock/togglelock(mob/user as mob)
