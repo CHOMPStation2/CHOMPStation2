@@ -331,3 +331,7 @@
   - rscdel: hotkey input background color for borghotkeymode / borgmarco
   - rscadd: welcome menu now displaying current station time and round duration ("Server
       Initializing" if round hasn't started yet).
+2023-12-30:
+  MeepleMuncher:
+  - rscadd: added vorebellies and bump vore (safe) to pythons
+  - imageadd: added new python (Noodle) sprites
