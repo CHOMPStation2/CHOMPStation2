@@ -447,9 +447,6 @@
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/alecan/Initialize()
 	. = ..()
-<<<<<<< HEAD
-	reagents.add_reagent("ale", 30)
-=======
 	reagents.add_reagent("ale", 30)
 
 /////////////////////////ENERGY DRINKS/////////////////////////
@@ -552,4 +549,3 @@
 /obj/item/weapon/reagent_containers/food/drinks/cans/nukie_special/Initialize()
 	. = ..()
 	reagents.add_reagent("nukie_special", 60)
->>>>>>> 49a5ad951c... Merge pull request #15622 from SatinIsle/Energy-drinks
