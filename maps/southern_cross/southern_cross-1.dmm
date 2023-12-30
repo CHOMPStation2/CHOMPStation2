@@ -22387,8 +22387,9 @@
 	name = "Cargo Lockdown";
 	opacity = 0
 	},
-/obj/structure/disposalpipe/junction/yjunction{
-	dir = 8
+/obj/structure/disposalpipe/junction{
+	dir = 1;
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/port)
