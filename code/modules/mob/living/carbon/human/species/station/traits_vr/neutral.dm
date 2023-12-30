@@ -55,6 +55,7 @@
 			"x" = list("ks", "kss", "ksss")
 		),
 	autohiss_exempt = list(LANGUAGE_UNATHI))
+	custom_only = FALSE //CHOMPedit: Normal folks of species can't take their autohiss for some reason. Also ascents.
 	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_vassilian, /datum/trait/neutral/autohiss_zaddat) // CHOMPEdit: exclude vassillian hiss
 
 /datum/trait/neutral/autohiss_tajaran
@@ -67,6 +68,7 @@
 		),
 	autohiss_exempt = list(LANGUAGE_SIIK,LANGUAGE_AKHANI,LANGUAGE_ALAI))
 	excludes = list(/datum/trait/neutral/autohiss_unathi, /datum/trait/neutral/autohiss_zaddat, /datum/trait/neutral/autohiss_vassilian) // CHOMPEdit: exclude vassillian hiss
+	custom_only = FALSE //CHOMPedit: Normal folks of species can't take their autohiss for some reason. Also ascents.
 
 /datum/trait/neutral/autohiss_zaddat
 	name = "Autohiss (Zaddat)"
@@ -85,6 +87,7 @@
 		),
 	autohiss_exempt = list(LANGUAGE_ZADDAT,LANGUAGE_VESPINAE))
 	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_unathi)
+	custom_only = FALSE //CHOMPedit: Normal folks of species can't take their autohiss for some reason. Also ascents.
 
 /datum/trait/neutral/bloodsucker
 	name = "Bloodsucker, Obligate"
@@ -530,6 +533,7 @@
 	name = "Colorblindness (Monochromancy)"
 	desc = "You simply can't see colors at all, period. You are 100% colorblind."
 	cost = 0
+	custom_only = FALSE //CHOMPedit: Some of this are named with species, and there is a descent number of reasons to have this.
 
 /datum/trait/neutral/colorblind/mono/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
@@ -539,6 +543,7 @@
 	name = "Colorblindness (Para Vulp)"
 	desc = "You have a severe issue with green colors and have difficulty recognizing them from red colors."
 	cost = 0
+	custom_only = FALSE //CHOMPedit: Some of this are named with species, and there is a descent number of reasons to have this.
 
 /datum/trait/neutral/colorblind/para_vulp/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
@@ -548,6 +553,7 @@
 	name = "Colorblindness (Para Taj)"
 	desc = "You have a minor issue with blue colors and have difficulty recognizing them from red colors."
 	cost = 0
+	custom_only = FALSE //CHOMPedit: Some of this are named with species, and there is a descent number of reasons to have this.
 
 /datum/trait/neutral/colorblind/para_taj/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
