@@ -337,6 +337,8 @@
   - qol: Removed vox requirement from Double Phoron tank
   - bugfix: improper pathing on winter coat hood loadout
   - bugfix: Loot safes not having loot in them.
+  Kashargul:
+  - bugfix: Sprite of the syndicate robot power cell
   MeepleMuncher:
   - rscadd: added vorebellies and bump vore (safe) to pythons
   - imageadd: added new python (Noodle) sprites
