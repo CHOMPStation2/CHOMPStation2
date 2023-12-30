@@ -1475,7 +1475,7 @@
 /area/expoutpost/engstorage)
 "bjP" = (
 /obj/structure/sign/nanotrasen,
-/turf/simulated/wall/thull,
+/turf/simulated/wall/rplastihull,
 /area/shuttle/needle)
 "bjT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1585,7 +1585,7 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/terminal,
-/turf/simulated/floor/tiled/yellow,
+/turf/simulated/floor/tiled/red,
 /area/shuttle/needle)
 "bnN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -4314,7 +4314,7 @@
 "dBB" = (
 /obj/structure/shuttle/engine/heater,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/yellow,
-/turf/simulated/wall/thull,
+/turf/simulated/wall/rplastihull,
 /area/shuttle/needle)
 "dBU" = (
 /obj/effect/floor_decal/techfloor{
@@ -11576,7 +11576,7 @@
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/stationqpad)
 "jlO" = (
-/turf/simulated/wall/thull,
+/turf/simulated/wall/rplastihull,
 /area/shuttle/needle)
 "jmh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -11712,7 +11712,7 @@
 	dir = 6
 	},
 /obj/structure/shuttle/engine/router,
-/turf/simulated/wall/thull,
+/turf/simulated/wall/rplastihull,
 /area/shuttle/needle)
 "jqu" = (
 /obj/effect/floor_decal/borderfloorwhite{
@@ -12958,7 +12958,7 @@
 /obj/machinery/computer/ship/navigation/telescreen{
 	pixel_y = -4
 	},
-/turf/simulated/shuttle/wall/voidcraft/no_join,
+/turf/simulated/wall/rplastihull,
 /area/shuttle/needle)
 "kra" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -14956,7 +14956,7 @@
 	dir = 10
 	},
 /obj/structure/shuttle/engine/router,
-/turf/simulated/wall/thull,
+/turf/simulated/wall/rplastihull,
 /area/shuttle/needle)
 "lRH" = (
 /obj/structure/table/wooden_reinforced,
@@ -16565,7 +16565,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
-/turf/simulated/wall/thull,
+/turf/simulated/wall/rplastihull,
 /area/shuttle/needle)
 "nas" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -21009,7 +21009,7 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
-/turf/simulated/floor/tiled/yellow,
+/turf/simulated/floor/tiled/red,
 /area/shuttle/needle)
 "qtv" = (
 /obj/structure/closet/walllocker_double/hydrant/north,
@@ -24842,7 +24842,7 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/tiled/yellow,
+/turf/simulated/floor/tiled/red,
 /area/shuttle/needle)
 "tis" = (
 /obj/item/weapon/folder/yellow,
