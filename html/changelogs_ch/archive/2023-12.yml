@@ -332,6 +332,10 @@
   - rscadd: welcome menu now displaying current station time and round duration ("Server
       Initializing" if round hasn't started yet).
 2023-12-30:
+  Aroliacue:
+  - qol: Removed transcore automatic notifications for deceased crew. You can still
+      manually ping transcore for a resleeve from the OOC tab or use the autoresleever
+      as needed.
   FluffMedic:
   - qol: Everyone can be colorblind now, and have auto-hisses.
   - qol: Removed vox requirement from Double Phoron tank
