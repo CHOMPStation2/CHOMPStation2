@@ -23,6 +23,7 @@ export const MESSAGE_TYPE_INTERNAL = 'internal';
 // Must match the set of defines in code/__DEFINES/chat.dm
 export const MESSAGE_TYPE_SYSTEM = 'system';
 export const MESSAGE_TYPE_LOCALCHAT = 'localchat';
+export const MESSAGE_TYPE_NPCEMOTE = 'npcemote';
 export const MESSAGE_TYPE_PLOCALCHAT = 'plocalchat';
 export const MESSAGE_TYPE_VORE = 'vore';
 export const MESSAGE_TYPE_RADIO = 'radio';
@@ -35,6 +36,7 @@ export const MESSAGE_TYPE_LOOC = 'looc';
 export const MESSAGE_TYPE_ADMINPM = 'adminpm';
 export const MESSAGE_TYPE_MENTORPM = 'mentorpm';
 export const MESSAGE_TYPE_COMBAT = 'combat';
+export const MESSAGE_TYPE_CHATPRINT = 'chatprint';
 export const MESSAGE_TYPE_ADMINCHAT = 'adminchat';
 export const MESSAGE_TYPE_MODCHAT = 'modchat';
 export const MESSAGE_TYPE_RLOOC = 'rlooc';
@@ -60,6 +62,12 @@ export const MESSAGE_TYPES = [
     name: 'Local',
     description: 'In-character local messages (say, emote, etc)',
     selector: '.say, .emote, .emotesubtle',
+  },
+  {
+    type: MESSAGE_TYPE_NPCEMOTE,
+    name: 'NPC Emotes',
+    description: 'In-character emotes from NPCs',
+    selector: '.npcemote',
   },
   {
     type: MESSAGE_TYPE_PLOCALCHAT,
@@ -136,6 +144,12 @@ export const MESSAGE_TYPES = [
     name: 'Combat Log',
     description: 'Urist McTraitor has stabbed you with a knife!',
     selector: '.danger',
+  },
+  {
+    type: MESSAGE_TYPE_CHATPRINT,
+    name: 'Chat prints',
+    description: 'Chat outputs of ooc notes or vorebelly exports',
+    selector: '.chatexport',
   },
   {
     type: MESSAGE_TYPE_UNKNOWN,

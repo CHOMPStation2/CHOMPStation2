@@ -12327,6 +12327,10 @@
 	pixel_x = 2;
 	pixel_y = 4
 	},
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/main/dorms/dorm_5)
 "wP" = (
@@ -13962,6 +13966,10 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/surface/outpost/engineering/reactor_smes)
+"zK" = (
+/obj/structure/loot_pile/christmas_tree,
+/turf/simulated/floor/outdoors/grass/sif/planetuse,
+/area/surface/outside/plains/outpost)
 "zL" = (
 /obj/structure/table/steel,
 /obj/random/tech_supply,
@@ -18219,6 +18227,9 @@
 	color = "#FF6666";
 	name = "light red towel"
 	},
+/obj/structure/sink{
+	pixel_y = 16
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/main/dorms/dorm_6)
 "HZ" = (
@@ -18374,6 +18385,10 @@
 /obj/item/weapon/towel{
 	color = "#90ee90";
 	name = "green towel"
+	},
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/main/dorms/dorm_3)
@@ -21938,6 +21953,10 @@
 	color = "#FF8C00";
 	name = "orange towel"
 	},
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/main/dorms/dorm_1)
 "OP" = (
@@ -23425,6 +23444,9 @@
 /obj/item/weapon/towel{
 	color = "#b5651d";
 	name = "brown towel"
+	},
+/obj/structure/sink{
+	pixel_y = 16
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/main/dorms/dorm_4)
@@ -26903,6 +26925,9 @@
 /obj/item/weapon/towel{
 	color = "#800080";
 	name = "purple towel"
+	},
+/obj/structure/sink{
+	pixel_y = 16
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/main/dorms/dorm_2)
@@ -63756,8 +63781,8 @@ ha
 ha
 ha
 ha
-ha
-ha
+VL
+VL
 ha
 ha
 ha
@@ -64013,10 +64038,10 @@ ha
 ha
 ha
 ha
-ha
-ha
-ha
-gu
+VL
+VL
+VL
+VL
 ha
 ha
 ha
@@ -64271,14 +64296,14 @@ ha
 ha
 ha
 ha
-ha
-ha
-ha
+VL
+VL
+zK
+VL
+VL
 gu
 ha
-ha
-ha
-ha
+gu
 gx
 gx
 gx
@@ -64529,13 +64554,13 @@ ha
 ha
 ha
 ha
-ha
-ha
-ha
+VL
+VL
+VL
+VL
 gu
-ha
-ha
-ha
+gu
+gu
 gu
 gx
 gx
@@ -64786,11 +64811,11 @@ ha
 ha
 ha
 ha
+VL
 ha
-ha
-ha
-gu
-ha
+VL
+VL
+VL
 ha
 ha
 ha

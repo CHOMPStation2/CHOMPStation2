@@ -325,12 +325,6 @@
 		)
 	drop_sound = 'sound/items/drop/gloves.ogg'
 	pickup_sound = 'sound/items/pickup/gloves.ogg'
-// CHOMPedit start: All gloves give cold/heat protection.
-	cold_protection = HANDS
-	min_cold_protection_temperature = GLOVES_MIN_COLD_PROTECTION_TEMPERATURE
-	heat_protection = HANDS
-	max_heat_protection_temperature = GLOVES_MAX_HEAT_PROTECTION_TEMPERATURE
-// CHOMPedit end.
 
 /obj/item/clothing/proc/set_clothing_index()
 	return
