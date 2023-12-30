@@ -331,3 +331,24 @@
   - rscdel: hotkey input background color for borghotkeymode / borgmarco
   - rscadd: welcome menu now displaying current station time and round duration ("Server
       Initializing" if round hasn't started yet).
+2023-12-30:
+  Aroliacue:
+  - qol: Removed transcore automatic notifications for deceased crew. You can still
+      manually ping transcore for a resleeve from the OOC tab or use the autoresleever
+      as needed.
+  FluffMedic:
+  - qol: Everyone can be colorblind now, and have auto-hisses.
+  - qol: Removed vox requirement from Double Phoron tank
+  - bugfix: improper pathing on winter coat hood loadout
+  - bugfix: Loot safes not having loot in them.
+  Kashargul:
+  - bugfix: Sprite of the syndicate robot power cell
+  MeepleMuncher:
+  - rscadd: added vorebellies and bump vore (safe) to pythons
+  - imageadd: added new python (Noodle) sprites
+  TheCaramelion:
+  - rscadd: Meaty ores event
+  - rscadd: Meaty variants of current meteorites
+  Upstream:
+  - bugfix: Fixes the unusable grill recipes by adding the special ingredients to
+      the insertable list
