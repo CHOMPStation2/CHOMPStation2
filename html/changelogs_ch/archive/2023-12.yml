@@ -340,3 +340,6 @@
   MeepleMuncher:
   - rscadd: added vorebellies and bump vore (safe) to pythons
   - imageadd: added new python (Noodle) sprites
+  Upstream:
+  - bugfix: Fixes the unusable grill recipes by adding the special ingredients to
+      the insertable list
