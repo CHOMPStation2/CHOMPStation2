@@ -1,4 +1,6 @@
 2024-01-01:
+  Kashargul:
+  - bugfix: Explohound repair multiproc
   TheCaramelion:
   - bugfix: Step messages when stepping over a smaller, phased shadekin
   - bugfix: Shadekin catching items when phased
