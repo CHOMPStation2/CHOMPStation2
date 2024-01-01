@@ -50405,9 +50405,6 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/landmark/start{
-	name = "Cargo Technician"
-	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/disposal_sort)
 "gqm" = (
