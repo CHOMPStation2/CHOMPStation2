@@ -1,4 +1,6 @@
 2024-01-01:
+  Upstream:
+  - bugfix: adjusts the spawn location of the paper to get picked after the animation
   tacoguy7765093:
   - maptweak: The shuttle docking systems in the carrier docks are now functional.
   - maptweak: Nerfs shadekin retreat vending machines.
