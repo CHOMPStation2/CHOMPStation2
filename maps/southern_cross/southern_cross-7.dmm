@@ -24495,18 +24495,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/expoutpost/portsternairlock)
-"sWr" = (
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
-	id_tag = "shuttle4_shuttle";
-	pixel_y = 26;
-	tag_airpump = "shuttle4_pump";
-	tag_chamber_sensor = "shuttle4_sensor";
-	tag_exterior_door = "shuttle4_outer";
-	tag_interior_door = "shuttle4_inner"
-	},
-/turf/simulated/wall/r_wall,
-/area/expoutpost/staruppermaint)
 "sWF" = (
 /obj/machinery/door/airlock/glass_centcom{
 	req_one_access = list(67)
@@ -74418,7 +74406,7 @@ cwA
 xEV
 xEV
 xEV
-sWr
+qWQ
 qWQ
 qWQ
 qWQ
