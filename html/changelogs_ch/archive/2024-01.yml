@@ -18,6 +18,9 @@
   - bugfix: Targeting a gun to a shadekin doesn't break when they phase out
   - bugfix: Phased shadekin squishing cockroaches
   - bugfix: Phased shadekin hallucinating if they stare at the SM
+  - maptweak: Previous sorting office has been split.
+  - maptweak: Trash Sorting now replaces the Sorting Office.
+  - maptweak: Delivery Office replaced Construction Zone on Deck 1.
   Upstream:
   - bugfix: adjusts the spawn location of the paper to get picked after the animation
   - bugfix: omni key allowing to listening in to merc channels
