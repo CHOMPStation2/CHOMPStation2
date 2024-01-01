@@ -1091,6 +1091,7 @@
 /area/hallway/primary/firstdeck/auxdockfore)
 "aen" = (
 /obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/quartermaster/delivery)
 "aeo" = (
@@ -15868,10 +15869,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/fscenter)
-"eBG" = (
-/obj/effect/wingrille_spawn/reinforced,
-/turf/simulated/floor/plating,
-/area/quartermaster/storage)
 "eCb" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -58003,7 +58000,7 @@ aen
 maQ
 wig
 kwi
-eBG
+aIH
 asc
 aiO
 aKa
