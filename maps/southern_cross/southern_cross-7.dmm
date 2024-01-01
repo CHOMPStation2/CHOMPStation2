@@ -2521,7 +2521,7 @@
 	layer = 2.5;
 	name = "window blast shield"
 	},
-/turf/simulated/wall/rpshull,
+/turf/simulated/floor,
 /area/shuttle/baby_mammoth)
 "ccE" = (
 /obj/structure/closet/walllocker/emerglocker{
