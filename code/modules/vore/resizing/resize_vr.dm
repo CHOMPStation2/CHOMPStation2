@@ -241,6 +241,8 @@
 				var/datum/sprite_accessory/tail/taur/tail = H.tail_style
 				src_message = tail.msg_owner_help_run
 				tmob_message = tail.msg_prey_help_run
+			if(tmob.is_incorporeal())	// CHOMPEdit - Nothing to step over.
+				return TRUE
 
 		//Smaller person stepping under larger person
 		else if(get_effective_size(TRUE) < tmob.get_effective_size(TRUE) && ishuman(tmob))
