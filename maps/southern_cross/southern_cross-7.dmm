@@ -13548,7 +13548,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
-/turf/simulated/wall/rpshull,
+/turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/uppersternhallway)
 "kSB" = (
 /obj/structure/catwalk,
@@ -30502,7 +30502,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/turf/simulated/wall/rpshull,
+/turf/simulated/floor/tiled/dark,
 /area/expoutpost/uppersternhallway)
 "xsc" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
