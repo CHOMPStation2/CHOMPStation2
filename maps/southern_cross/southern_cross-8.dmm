@@ -1410,7 +1410,7 @@
 	},
 /area/centcom/bar)
 "aQp" = (
-/obj/machinery/vending/event/gadget,
+/obj/machinery/vending/loadout/gadget,
 /obj/effect/floor_decal/techfloor/orange,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -2413,7 +2413,9 @@
 /turf/unsimulated/beach/sand,
 /area/beach)
 "bIF" = (
-/obj/machinery/vending/cart,
+/obj/machinery/vending/cart{
+	req_access = null
+	},
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
 	},
@@ -2673,7 +2675,7 @@
 	},
 /area/centcom/specops)
 "bST" = (
-/obj/machinery/vending/event/clothing,
+/obj/machinery/vending/loadout/clothing,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
 "bTc" = (
@@ -5569,7 +5571,7 @@
 	},
 /area/ninja_dojo/dojo)
 "eAT" = (
-/obj/machinery/vending/event/costume,
+/obj/machinery/vending/loadout/costume,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
 "eBq" = (
@@ -11234,7 +11236,9 @@
 	},
 /area/centcom/specops)
 "jQF" = (
-/obj/machinery/vending/boozeomat,
+/obj/machinery/vending/boozeomat{
+	req_access = null
+	},
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
 	},
@@ -13561,10 +13565,6 @@
 	},
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/holodeck/source_thunderdomecourt)
-"lRW" = (
-/obj/machinery/vending/entertainer,
-/turf/simulated/floor/reinforced,
-/area/shadekin)
 "lSl" = (
 /obj/effect/floor_decal/milspec/color/orange,
 /obj/effect/floor_decal/milspec/hatchmarks,
@@ -15263,7 +15263,9 @@
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/skipjack)
 "nzI" = (
-/obj/machinery/vending/engineering,
+/obj/machinery/vending/engineering{
+	req_access = null
+	},
 /obj/effect/floor_decal/techfloor/orange,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -16172,7 +16174,9 @@
 	},
 /area/centcom/bar)
 "otP" = (
-/obj/machinery/vending/event/loadout_misc,
+/obj/machinery/vending/loadout/loadout_misc{
+	emagged = 1
+	},
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
 	},
@@ -16787,7 +16791,9 @@
 /turf/simulated/shuttle/wall/no_join,
 /area/shuttle/supply)
 "pkK" = (
-/obj/machinery/vending/engivend,
+/obj/machinery/vending/engivend{
+	req_access = null
+	},
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
 	},
@@ -20450,7 +20456,9 @@
 /turf/simulated/shuttle/plating,
 /area/shuttle/skipjack)
 "sPq" = (
-/obj/machinery/vending/blood,
+/obj/machinery/vending/blood{
+	req_access = null
+	},
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
 	},
@@ -20632,7 +20640,7 @@
 	},
 /area/centcom/specops)
 "sYR" = (
-/obj/machinery/vending/event/accessory,
+/obj/machinery/vending/loadout/accessory,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
 "sYX" = (
@@ -22358,7 +22366,7 @@
 /turf/simulated/shuttle/floor/white,
 /area/centcom/main_hall)
 "uEJ" = (
-/obj/machinery/vending/event/overwear,
+/obj/machinery/vending/loadout/overwear,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
 "uFo" = (
@@ -24891,7 +24899,7 @@
 /turf/simulated/floor/bronze,
 /area/shadekin)
 "wZw" = (
-/obj/machinery/vending/event/uniform,
+/obj/machinery/vending/loadout/uniform,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
 "wZL" = (
@@ -62548,7 +62556,7 @@ wKW
 qpy
 wKW
 pkK
-lRW
+eAT
 sYR
 bST
 eAT
