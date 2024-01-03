@@ -274,6 +274,14 @@
 	desc = "A heavy duty radio that can pick up all manor of shortwave and subspace frequencies. It's a bit bulkier than a normal radio thanks to the extra hardware. An engraving on the frame reads: IF FOUND, RETURN TO WILDERNESS SHELTER!";
 	name = "Wilderness Shelter subspace radio"
 	},
+/obj/item/device/spaceflare{
+	pixel_y = -10;
+	pixel_x = 5
+	},
+/obj/item/device/spaceflare{
+	pixel_y = -10;
+	pixel_x = -5
+	},
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
 "bh" = (
@@ -461,8 +469,9 @@
 "dd" = (
 /obj/effect/zone_divider,
 /obj/effect/zone_divider,
+/obj/item/stack/marker_beacon,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
-/area/surface/outside/wilderness/normal)
+/area/surface/outpost/shelter/exterior)
 "dO" = (
 /obj/machinery/light{
 	dir = 8
@@ -558,11 +567,45 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/shelter/utilityroom)
 "hX" = (
-/obj/effect/overmap/visitable/planet/Sif,
-/turf/simulated/mineral/sif,
-/area/surface/outside/wilderness/mountains)
+/obj/effect/zone_divider,
+/obj/item/stack/marker_beacon,
+/turf/simulated/floor/outdoors/grass/sif/planetuse{
+	tree_chance = 0
+	},
+/area/surface/outpost/shelter/exterior)
+"iB" = (
+/turf/simulated/floor/outdoors/grass/sif/planetuse{
+	tree_chance = 0
+	},
+/area/surface/outpost/shelter/exterior)
+"jf" = (
+/obj/effect/shuttle_landmark{
+	landmark_tag = "wilderness_s";
+	name = "Wilderness Shelter";
+	base_area = /area/surface/outpost/shelter/exterior;
+	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse
+	},
+/turf/simulated/floor/outdoors/grass/sif/planetuse{
+	tree_chance = 0
+	},
+/area/surface/outpost/shelter/exterior)
+"ji" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/outdoors/grass/sif/planetuse{
+	tree_chance = 0
+	},
+/area/surface/outpost/shelter/exterior)
 "kh" = (
 /turf/simulated/wall/solidrock,
+/area/surface/outside/wilderness/normal)
+"kU" = (
+/obj/effect/shuttle_landmark{
+	landmark_tag = "wilderness_s";
+	name = "Southeast of Wilderness";
+	base_area = /area/surface/outside/wilderness/normal;
+	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse
+	},
+/turf/simulated/floor/outdoors/grass/sif/planetuse,
 /area/surface/outside/wilderness/normal)
 "kZ" = (
 /obj/effect/zone_divider,
@@ -606,6 +649,10 @@
 "mR" = (
 /obj/structure/railing/grey,
 /turf/simulated/floor/outdoors/grass/sif/planetuse,
+/area/surface/outpost/shelter/exterior)
+"nA" = (
+/obj/item/stack/marker_beacon,
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outpost/shelter/exterior)
 "nN" = (
 /turf/simulated/wall/rsifwood,
@@ -660,6 +707,11 @@
 /obj/structure/railing,
 /turf/simulated/floor/water/deep,
 /area/surface/outside/river/svartan)
+"sR" = (
+/obj/effect/zone_divider,
+/obj/item/stack/marker_beacon,
+/turf/simulated/floor/outdoors/grass/sif/planetuse,
+/area/surface/outpost/shelter/exterior)
 "td" = (
 /obj/structure/curtain/medical{
 	name = "medical curtain"
@@ -719,6 +771,10 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/water,
 /area/surface/outside/ocean)
+"vz" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/outdoors/grass/sif/planetuse,
+/area/surface/outpost/shelter/exterior)
 "wg" = (
 /obj/machinery/light,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
@@ -758,6 +814,12 @@
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/area/surface/outpost/shelter/exterior)
+"yL" = (
+/obj/item/stack/marker_beacon,
+/turf/simulated/floor/outdoors/grass/sif/planetuse{
+	tree_chance = 0
+	},
 /area/surface/outpost/shelter/exterior)
 "zb" = (
 /obj/structure/table/rack,
@@ -846,6 +908,20 @@
 /obj/structure/reagent_dispensers/fueltank/high,
 /turf/simulated/floor/plating,
 /area/surface/outpost/shelter/utilityroom)
+"GG" = (
+/obj/machinery/light,
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1380;
+	id_tag = "om_wilderness";
+	name = "shuttle bay controller";
+	pixel_y = -29
+	},
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/area/surface/outpost/shelter/exterior)
+"Iw" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/area/surface/outpost/shelter/exterior)
 "IA" = (
 /obj/structure/curtain/medical{
 	name = "medical curtain"
@@ -1033,6 +1109,16 @@
 /obj/item/device/radio/off,
 /turf/simulated/floor/plating,
 /area/surface/outpost/shelter/utilityroom)
+"Us" = (
+/obj/effect/zone_divider,
+/obj/effect/shuttle_landmark/automatic/clearing{
+	name = "Northwest Outpost Perimiter";
+	base_area = /area/surface/outside/plains/normal;
+	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse;
+	landmark_tag = "outpost_nw"
+	},
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/area/surface/outside/wilderness/normal)
 "Wo" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -1080,6 +1166,15 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/shelter)
+"WL" = (
+/obj/effect/shuttle_landmark{
+	landmark_tag = "wilderness_w";
+	name = "West of Wilderness";
+	base_area = /area/surface/outside/wilderness/deep;
+	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse
+	},
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/surface/outside/wilderness/deep)
 "Xn" = (
 /obj/structure/table/rack,
 /obj/fiftyspawner/steel,
@@ -1091,6 +1186,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/shelter/utilityroom)
+"Xw" = (
+/obj/item/stack/marker_beacon,
+/turf/simulated/floor/outdoors/grass/sif/planetuse,
+/area/surface/outpost/shelter/exterior)
 "XD" = (
 /turf/simulated/wall/solidrock,
 /area/surface/outside/wilderness/deep)
@@ -1110,6 +1209,15 @@
 /area/surface/outpost/wall/checkpoint)
 "Za" = (
 /turf/simulated/mineral/sif,
+/area/surface/outside/wilderness/deep)
+"Zs" = (
+/obj/effect/shuttle_landmark{
+	landmark_tag = "wilderness_n";
+	name = "North of Wilderness";
+	base_area = /area/surface/outside/wilderness/deep;
+	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse
+	},
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
 /area/surface/outside/wilderness/deep)
 "Zt" = (
 /obj/structure/table/sifwooden_reinforced,
@@ -1144,6 +1252,9 @@
 /obj/effect/zone_divider,
 /turf/simulated/wall/wood,
 /area/surface/outside/path/wilderness)
+"ZU" = (
+/turf/simulated/floor/outdoors/grass/sif/planetuse,
+/area/shuttle/shuttle3/mining)
 
 (1,1,1) = {"
 ab
@@ -1658,7 +1769,7 @@ ac
 ac
 ac
 ac
-hX
+ac
 ab
 "}
 (3,1,1) = {"
@@ -6689,7 +6800,7 @@ ae
 ae
 ae
 ae
-ae
+WL
 ae
 ae
 ag
@@ -31100,7 +31211,7 @@ ae
 ae
 ae
 ae
-ae
+Zs
 ae
 ae
 ae
@@ -40586,7 +40697,7 @@ aG
 aG
 aV
 ap
-St
+Us
 ap
 aV
 aV
@@ -42393,22 +42504,22 @@ aH
 aH
 aH
 dd
-tO
-tO
-tO
-tO
-tO
-tO
-tO
-St
-tO
-tO
-St
-tO
-tO
-tO
-tO
-tO
+ji
+ji
+ji
+ji
+hX
+ji
+ji
+Iw
+ji
+hX
+Iw
+ji
+ji
+ji
+ji
+hX
 tO
 tO
 qr
@@ -42650,23 +42761,23 @@ aG
 aG
 aG
 aG
-tO
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-ap
-ap
-aV
-aV
-aV
-aV
+ji
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+aT
+aT
+iB
+iB
+iB
+iB
 aV
 aV
 aV
@@ -42908,23 +43019,23 @@ aG
 aG
 aG
 aG
-tO
-aV
-aV
-aV
-ap
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
+ji
+iB
+iB
+iB
+aT
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
 aV
 aV
 aW
@@ -43166,23 +43277,23 @@ aG
 aG
 aG
 aG
-tO
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-ap
-ap
-ap
-aV
-aV
-aV
+ji
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+aT
+aT
+aT
+iB
+iB
+iB
 aV
 aV
 aW
@@ -43424,27 +43535,27 @@ aG
 aG
 aG
 aG
-tO
-aV
-aV
-aV
-aV
-aV
-aV
-ap
-ap
-aV
-aV
-ap
-ap
-aV
-aV
-ap
-ap
+ji
+iB
+iB
+iB
+iB
+iB
+iB
+aT
+aT
+iB
+iB
+aT
+aT
+iB
+iB
+aT
+aT
 aV
 aV
 aW
-wg
+GG
 ba
 ba
 Dk
@@ -43682,23 +43793,23 @@ aG
 aG
 aG
 aG
-tO
-aV
-aV
-ap
-aV
-aV
-ap
-ap
-ap
-ap
-aV
-aV
-ap
-aV
-ap
-ap
-aV
+ji
+iB
+iB
+aT
+iB
+iB
+aT
+aT
+aT
+aT
+iB
+iB
+aT
+iB
+aT
+aT
+iB
 aV
 aV
 aW
@@ -43940,23 +44051,23 @@ aG
 aG
 aG
 aG
-tO
-aV
-aV
-ap
-ap
-aV
-aV
-ap
-ap
-ap
-aV
-aV
-aV
-aV
-ap
-aV
-aW
+hX
+iB
+iB
+aT
+aT
+iB
+iB
+aT
+aT
+aT
+iB
+iB
+iB
+iB
+aT
+iB
+nA
 aV
 aV
 aW
@@ -44198,23 +44309,23 @@ aG
 aG
 aG
 aG
-tO
-aV
-aV
-ap
-ap
-ap
-aV
-aV
-ap
-ap
-ap
-aV
-aV
-ap
-ap
-aV
-aV
+ji
+iB
+iB
+aT
+aT
+aT
+iB
+iB
+aT
+aT
+aT
+iB
+iB
+aT
+aT
+iB
+iB
 aW
 aW
 aW
@@ -44456,23 +44567,23 @@ aG
 aG
 aG
 aG
-St
-aV
-aV
-ap
-ap
-aV
-ap
-aV
-ap
-ap
-ap
-aV
-aV
-ap
-ap
-aV
-aV
+Iw
+iB
+iB
+aT
+aT
+iB
+aT
+iB
+aT
+aT
+aT
+iB
+iB
+aT
+aT
+iB
+iB
 aW
 aW
 aW
@@ -44714,23 +44825,23 @@ aG
 aG
 aG
 aG
-tO
-aV
-aV
-ap
-aV
-aV
-ap
-aV
-aV
-ap
-aV
-aV
-aV
-aV
-ap
-ap
-aV
+hX
+iB
+iB
+aT
+iB
+iB
+aT
+iB
+iB
+aT
+iB
+iB
+iB
+iB
+aT
+aT
+yL
 aV
 aW
 aW
@@ -44972,23 +45083,23 @@ aG
 aG
 aG
 aG
-tO
-aV
-aV
-aV
-aV
-ap
-ap
-ap
-aV
-aV
-aV
-ap
-ap
-aV
-aV
-ap
-ap
+ji
+iB
+iB
+iB
+iB
+aT
+aT
+aT
+iB
+iB
+iB
+aT
+aT
+iB
+iB
+aT
+aT
 aV
 aV
 aV
@@ -45230,23 +45341,23 @@ aG
 aG
 aG
 aG
-tO
-aV
-aV
-aV
-aV
-aG
-aG
-aV
-aV
-aV
-aV
-ap
-ap
-ap
-aV
-ap
-ap
+ji
+iB
+iB
+iB
+iB
+bz
+bz
+iB
+iB
+iB
+iB
+aT
+aT
+aT
+iB
+aT
+aT
 aV
 aV
 aV
@@ -45488,23 +45599,23 @@ aG
 aG
 aG
 aG
-aH
-aV
-aV
-aV
-aV
-aG
-aG
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
+vz
+iB
+iB
+iB
+iB
+bz
+bz
+iB
+iB
+iB
+iB
+iB
+iB
+jf
+iB
+iB
+iB
 aV
 aV
 aV
@@ -45746,23 +45857,23 @@ aG
 aG
 aG
 aG
-aH
-aG
-aG
-ap
-aV
-aV
-aV
-ap
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
+vz
+bz
+bz
+aT
+iB
+iB
+iB
+aT
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
 aV
 aV
 aV
@@ -46004,23 +46115,23 @@ aG
 aG
 aG
 aG
-aH
-aG
-aG
-aG
-aV
-aV
-aV
-ap
-ap
-aV
-ap
-aV
-aV
-ap
-aV
-aV
-aV
+vz
+bz
+bz
+bz
+iB
+iB
+iB
+aT
+aT
+iB
+aT
+iB
+iB
+aT
+iB
+iB
+iB
 aV
 aV
 aV
@@ -46262,23 +46373,23 @@ aG
 aG
 aG
 aG
-aH
-aG
-aG
-aG
-aG
-aG
-aG
-aG
-aG
-aV
-ap
-aV
-aV
-aV
-ap
-aV
-aV
+sR
+bz
+bz
+bz
+bz
+Xw
+bz
+bz
+bz
+iB
+nA
+iB
+iB
+iB
+aT
+iB
+yL
 aV
 aV
 aV
@@ -52477,7 +52588,7 @@ aG
 aG
 aW
 aW
-aG
+ZU
 aG
 aG
 aG
@@ -56076,7 +56187,7 @@ aG
 aG
 aG
 aG
-aG
+kU
 aG
 aG
 aG

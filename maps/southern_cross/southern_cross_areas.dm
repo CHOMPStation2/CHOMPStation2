@@ -2193,6 +2193,9 @@ End Chompstation Edit*/
 	icon_state = "storage"
 	ambience = AMBIENCE_RUINS
 
+/area/shuttle/overmap/sif
+	name = "wilderness site"
+	icon_state = "shuttlered"
 
 //Temp Removal TFF 15/2/20
 /*
