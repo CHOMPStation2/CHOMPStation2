@@ -175,7 +175,9 @@
 	icon_state = "Sleep"
 	soundproofed = TRUE
 	limit_mob_size = FALSE
+	block_suit_sensors = TRUE
 	flags = RAD_SHIELDED
+	block_tracking = TRUE
 
 /area/surface/outpost/shelter/exterior
 	name = "Wilderness Shelter Exterior"
