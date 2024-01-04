@@ -557,13 +557,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/shelter/utilityroom)
-"hX" = (
-/obj/effect/overmap/visitable/planet/Sif,
-/turf/simulated/mineral/sif,
-/area/surface/outside/wilderness/mountains)
-"kh" = (
-/turf/simulated/wall/solidrock,
-/area/surface/outside/wilderness/normal)
 "kZ" = (
 /obj/effect/zone_divider,
 /obj/effect/zone_divider,
@@ -656,10 +649,6 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outside/path/wilderness)
-"sC" = (
-/obj/structure/railing,
-/turf/simulated/floor/water/deep,
-/area/surface/outside/river/svartan)
 "td" = (
 /obj/structure/curtain/medical{
 	name = "medical curtain"
@@ -727,17 +716,6 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/dirt,
 /area/surface/outside/path/wilderness)
-"xx" = (
-/obj/effect/map_effect/portal/master/side_a/wilderness_to_valley{
-	dir = 4
-	},
-/turf/simulated/floor/wood{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15;
-	outdoors = 1
-	},
-/area/surface/outside/river/svartan)
 "xA" = (
 /obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/grass/sif/planetuse,
@@ -767,27 +745,10 @@
 /obj/fiftyspawner/rglass,
 /turf/simulated/floor/plating,
 /area/surface/outpost/shelter/utilityroom)
-"As" = (
-/turf/simulated/floor/wood{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15;
-	outdoors = 1
-	},
-/area/surface/outside/river/svartan)
 "AB" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/surface/outside/wilderness/normal)
-"AX" = (
-/obj/effect/map_effect/portal/line/side_a{
-	dir = 4
-	},
-/obj/structure/railing{
-	dir = 1
-	},
-/turf/simulated/floor/water/deep,
-/area/surface/outside/river/svartan)
 "AY" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -810,17 +771,6 @@
 /obj/machinery/atmospheric_field_generator/perma/underdoors,
 /turf/simulated/floor/plating,
 /area/surface/outpost/shelter/utilityroom)
-"BF" = (
-/obj/effect/map_effect/portal/line/side_a{
-	dir = 4
-	},
-/turf/simulated/floor/wood{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15;
-	outdoors = 1
-	},
-/area/surface/outside/river/svartan)
 "Dk" = (
 /obj/structure/sign/department/medbay{
 	name = "FIRST AID"
@@ -858,9 +808,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/shelter)
-"IZ" = (
-/turf/simulated/mineral/sif,
-/area/surface/outside/wilderness/normal)
 "Jk" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -890,19 +837,6 @@
 "Lv" = (
 /obj/effect/zone_divider,
 /obj/effect/zone_divider,
-/turf/simulated/floor/water/deep,
-/area/surface/outside/river/svartan)
-"LI" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/turf/simulated/floor/water,
-/area/surface/outside/river/svartan)
-"Mg" = (
-/obj/effect/map_effect/portal/line/side_a{
-	dir = 4
-	},
-/obj/structure/railing,
 /turf/simulated/floor/water/deep,
 /area/surface/outside/river/svartan)
 "Mk" = (
@@ -938,12 +872,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/shelter)
-"Qz" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/turf/simulated/floor/water/deep,
-/area/surface/outside/river/svartan)
 "Rc" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -1091,9 +1019,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/shelter/utilityroom)
-"XD" = (
-/turf/simulated/wall/solidrock,
-/area/surface/outside/wilderness/deep)
 "Yq" = (
 /obj/machinery/power/thermoregulator/southerncross{
 	pixel_x = 1;
@@ -1108,9 +1033,6 @@
 "YL" = (
 /turf/simulated/mineral/sif,
 /area/surface/outpost/wall/checkpoint)
-"Za" = (
-/turf/simulated/mineral/sif,
-/area/surface/outside/wilderness/deep)
 "Zt" = (
 /obj/structure/table/sifwooden_reinforced,
 /obj/item/weapon/storage/belt/utility,
@@ -1276,16 +1198,16 @@ ab
 ab
 ad
 ab
-XD
-XD
-BF
-BF
-AX
-Mg
-BF
-xx
-kh
-kh
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ab
 ab
 ab
@@ -1534,38 +1456,6 @@ ac
 ac
 ak
 ac
-Za
-Za
-As
-As
-Qz
-sC
-As
-As
-IZ
-IZ
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ak
-ac
 ac
 ac
 ac
@@ -1658,7 +1548,39 @@ ac
 ac
 ac
 ac
-hX
+ac
+ac
+ak
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 ab
 "}
 (3,1,1) = {"
@@ -1794,12 +1716,12 @@ ak
 ah
 ah
 ah
-As
-As
-Qz
-sC
-As
-As
+am
+am
+an
+an
+am
+am
 ap
 ap
 ap
@@ -2052,12 +1974,12 @@ aw
 ah
 ah
 ah
-As
-As
-Qz
-sC
-As
-As
+am
+am
+an
+an
+am
+am
 ap
 ap
 ap
@@ -2310,12 +2232,12 @@ aw
 ah
 ah
 ah
-LI
-LI
+am
+am
 an
 an
-LI
-LI
+am
+am
 am
 ap
 ap
