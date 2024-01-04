@@ -27,3 +27,10 @@
   tacoguy7765093:
   - maptweak: The shuttle docking systems in the carrier docks are now functional.
   - maptweak: Nerfs shadekin retreat vending machines.
+2024-01-04:
+  FluffMedic:
+  - rscadd: New event, and function to some strange mobs
+  TheCaramelion:
+  - bugfix: Makes glacial lettuce obtainable
+  Upstream:
+  - qol: Adds privacy for borgs in dorms
