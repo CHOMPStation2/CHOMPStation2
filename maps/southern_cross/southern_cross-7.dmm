@@ -17238,7 +17238,12 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/wall/rshull,
+/obj/machinery/door/airlock/voidcraft/vertical{
+	frequency = 1380;
+	id_tag = "echidna_inner";
+	name = "External Access"
+	},
+/turf/simulated/floor,
 /area/shuttle/echidna)
 "nuL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -21934,7 +21939,12 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
-/turf/simulated/wall/rshull,
+/obj/machinery/door/airlock/voidcraft/vertical{
+	frequency = 1380;
+	id_tag = "echidna_outer";
+	name = "External Access"
+	},
+/turf/simulated/floor,
 /area/shuttle/echidna)
 "rdq" = (
 /obj/machinery/light/small{
