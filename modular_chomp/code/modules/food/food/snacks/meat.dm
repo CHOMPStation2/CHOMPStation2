@@ -54,3 +54,29 @@
 	. = ..()
 	reagents.add_reagent("protein", 3)
 	reagents.add_reagent("liquidlife", 3)
+
+/obj/item/weapon/reagent_containers/food/snacks/meat/raymeat
+	name = "Solar Ray Meat"
+	desc = "You aren't sure how ediable this is"
+	icon_state = "meat"
+	center_of_mass = list("x"=17, "y"=16)
+	nutriment_amt = 3
+	nutriment_desc = list("protein" = 3, "capsaicin" = 8, "condensedcapsaicin" = 8)
+
+
+/obj/item/weapon/reagent_containers/food/snacks/meat/eelmeat
+	name = "Eel Meat"
+	desc = "A slice from an eel"
+	icon_state = "meat"
+	center_of_mass = list("x"=17, "y"=16)
+	nutriment_amt = 3
+	nutriment_desc = list("protein" = 3, "shockchem" = 1)
+
+
+/obj/item/weapon/reagent_containers/food/snacks/meat/gravityshell
+	name = "Gravity Shell Meat"
+	desc = "A slice from a gravity shell"
+	icon_state = "meat"
+	center_of_mass = list("x"=17, "y"=16)
+	nutriment_amt = 3
+	nutriment_desc = list("protein" = 24)
