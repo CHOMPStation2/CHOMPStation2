@@ -1092,6 +1092,13 @@
 "aen" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/glass,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "crglockdown";
+	name = "Cargo Lockdown";
+	opacity = 0
+	},
 /turf/simulated/floor/plating,
 /area/quartermaster/delivery)
 "aeo" = (
