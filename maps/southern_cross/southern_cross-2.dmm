@@ -68557,6 +68557,7 @@
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 1
 	},
+/obj/machinery/autolathe,
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "qjH" = (
