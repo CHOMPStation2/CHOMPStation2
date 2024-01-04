@@ -30,5 +30,7 @@
 2024-01-04:
   FluffMedic:
   - rscadd: New event, and function to some strange mobs
+  TheCaramelion:
+  - bugfix: Makes glacial lettuce obtainable
   Upstream:
   - qol: Adds privacy for borgs in dorms
