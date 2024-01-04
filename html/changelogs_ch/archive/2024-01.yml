@@ -30,6 +30,11 @@
 2024-01-04:
   FluffMedic:
   - rscadd: New event, and function to some strange mobs
+  Kashargul:
+  - rscadd: The soundproof bool to all our dorms
+  - rscadd: The suit sensor blocking bool to all our dorms
+  - rscadd: The camera blocking bool to all our dorms
+  - rscadd: The radshielded flag to all our dorms
   TheCaramelion:
   - bugfix: Makes glacial lettuce obtainable
   Upstream:
