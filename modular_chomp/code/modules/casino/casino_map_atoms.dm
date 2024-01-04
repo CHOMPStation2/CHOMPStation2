@@ -11,43 +11,83 @@
 // Areas for the actual casino
 /area/casino/dorm1
 	name = "\improper Casino dorm"
+	flags = RAD_SHIELDED
+	soundproofed = TRUE
 	limit_mob_size = FALSE
+	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/casino/dorm2
 	name = "\improper Casino dorm"
+	flags = RAD_SHIELDED
+	soundproofed = TRUE
 	limit_mob_size = FALSE
+	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/casino/dorm3
 	name = "\improper Casino dorm"
+	flags = RAD_SHIELDED
+	soundproofed = TRUE
 	limit_mob_size = FALSE
+	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/casino/dorm4
 	name = "\improper Casino dorm"
+	flags = RAD_SHIELDED
+	soundproofed = TRUE
 	limit_mob_size = FALSE
+	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/casino/dorm5
 	name = "\improper Casino dorm"
+	flags = RAD_SHIELDED
+	soundproofed = TRUE
 	limit_mob_size = FALSE
+	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/casino/dorm6
 	name = "\improper Casino dorm"
+	flags = RAD_SHIELDED
+	soundproofed = TRUE
 	limit_mob_size = FALSE
+	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/casino/dorm7
 	name = "\improper Casino dorm"
+	flags = RAD_SHIELDED
+	soundproofed = TRUE
 	limit_mob_size = FALSE
+	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/casino/dorm8
 	name = "\improper Casino dorm"
+	flags = RAD_SHIELDED
+	soundproofed = TRUE
 	limit_mob_size = FALSE
+	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/casino/dorm9
 	name = "\improper Casino dorm"
+	flags = RAD_SHIELDED
+	soundproofed = TRUE
 	limit_mob_size = FALSE
+	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/casino/dorm10
 	name = "\improper Casino dorm"
+	flags = RAD_SHIELDED
+	soundproofed = TRUE
 	limit_mob_size = FALSE
+	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/casino/helm
 	name = "\improper Casino helm"
