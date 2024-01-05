@@ -111,6 +111,7 @@
 		//Spacedust doesn't work, commenting this out.
 		//new /datum/event_meta(EVENT_LEVEL_MODERATE, "Space Dust",				/datum/event/dust,	 					0,		list(ASSIGNMENT_ENGINEER = 20), 1, 0, 50),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Supply Demand",			/datum/event/supply_demand,				0,		list(ASSIGNMENT_ANY = 5, ASSIGNMENT_SCIENCE = 15, ASSIGNMENT_GARDENER = 10, ASSIGNMENT_ENGINEER = 10, ASSIGNMENT_MEDICAL = 15), 1),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Exotic Infestation",	/datum/event/dangerinfestation, 	-30,	list(ASSIGNMENT_ENGINEER = 20, ASSIGNMENT_SCIENCE = 5, ASSIGNMENT_ANY = 2)),
 		//Check if wormhole code is good and then move to enabled.
 //		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Wormholes",				/datum/event/wormholes,	 				20,		list(ASSIGNMENT_ANY = 5)),
 //		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Lost Spiders",				/datum/event/spider_migration,			0, 		list(ASSIGNMENT_SECURITY = 30), 1), //YW EDIT //CHOMPStation Edit: Moved to disabled. This is a YW feature that spawns spiders on carp spawns.
@@ -130,7 +131,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Space Vines",		/datum/event/spacevine, 		20,		list(ASSIGNMENT_ENGINEER = 15), 1),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Supply Demand",		/datum/event/supply_demand,		0,		list(ASSIGNMENT_ANY = 5, ASSIGNMENT_SCIENCE = 15, ASSIGNMENT_GARDENER = 10, ASSIGNMENT_ENGINEER = 10, ASSIGNMENT_MEDICAL = 15), 1, min_jobs = list(ASSIGNMENT_CARGO = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Viral Infection",	/datum/event/viral_infection,	-50,	list(ASSIGNMENT_MEDICAL = 25), 	1, min_jobs = list(ASSIGNMENT_MEDICAL = 2)),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Excotic Infestation",	/datum/event/dangerinfestation, 	-60,	list(ASSIGNMENT_ENGINEER = 15, ASSIGNMENT_SCIENCE = 5, ASSIGNMENT_ANY = 1)),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Exotic Horde Infestation",	/datum/event/highdangerinfestation, 	-50,	list(ASSIGNMENT_ENGINEER = 20, ASSIGNMENT_SCIENCE = 5, ASSIGNMENT_ANY = 2)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Meaty Ores Wave",		/datum/event/meteor_wave/meatyores,		-90,		list(ASSIGNMENT_ENGINEER = 50, ASSIGNMENT_MEDICAL = 10, ASSIGNMENT_ANY = 1),	1, min_jobs = list(ASSIGNMENT_ENGINEER = 1)),
 	)
 	add_disabled_events(list(
