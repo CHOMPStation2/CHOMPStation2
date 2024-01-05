@@ -16,6 +16,7 @@
 		"outpost_s",
 		"outpost_w",
 		"wilderness_s",
+		"wilderness_se",
 		"wilderness_w",
 		"wilderness_n",
 		"valley_e"
