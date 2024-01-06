@@ -16990,14 +16990,14 @@
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/large_escape_pod2/station)
 "fQn" = (
-/obj/machinery/seed_storage/xenobotany{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 4
 	},
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Xenoflora Starboard";
+	dir = 1
+	},
+/obj/machinery/seed_storage/xenobotany{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
