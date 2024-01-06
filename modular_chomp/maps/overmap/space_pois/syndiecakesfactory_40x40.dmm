@@ -9,7 +9,9 @@
 /obj/item/stack/material/phoron{
 	amount = 10
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "bv" = (
 /obj/machinery/computer{
@@ -18,7 +20,9 @@
 	name = "Broken Computer"
 	},
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "cc" = (
 /obj/item/weapon/reagent_containers/food/snacks/syndicake,
@@ -28,7 +32,9 @@
 /area/submap/syndiecakesfactory)
 "dy" = (
 /mob/living/simple_mob/animal/passive/dog/corgi,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "es" = (
 /obj/structure/cable{
@@ -45,11 +51,15 @@
 /area/submap/syndiecakesfactory)
 "fq" = (
 /obj/machinery/autolathe,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "hc" = (
 /obj/structure/salvageable/autolathe,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "hm" = (
 /obj/structure/cable{
@@ -58,30 +68,40 @@
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "ho" = (
 /obj/effect/decal/cleanable/filth,
 /obj/machinery/conveyor{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "jf" = (
 /obj/random/trash,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "jR" = (
 /obj/structure/table/reinforced,
 /obj/random/cigarettes,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "ke" = (
 /obj/machinery/conveyor{
 	dir = 4
 	},
 /mob/living/simple_mob/animal/passive/dog/corgi,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "kh" = (
 /obj/structure/lattice,
@@ -103,7 +123,9 @@
 	dir = 4
 	},
 /obj/random/junk,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "lK" = (
 /obj/structure/cable{
@@ -113,7 +135,9 @@
 /obj/machinery/power/apc/high{
 	pixel_y = -20
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "mc" = (
 /obj/structure/grille/broken,
@@ -149,11 +173,15 @@
 "nT" = (
 /obj/random/maintenance,
 /obj/random/junk,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "ob" = (
 /obj/effect/landmark/loot_spawn,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "om" = (
 /obj/item/weapon/reagent_containers/food/snacks/syndicake,
@@ -162,7 +190,9 @@
 /obj/item/weapon/reagent_containers/food/snacks/syndicake,
 /obj/item/weapon/reagent_containers/food/snacks/syndicake,
 /obj/item/weapon/reagent_containers/food/snacks/syndicake,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "oJ" = (
 /obj/item/stack/rods,
@@ -181,14 +211,18 @@
 /area/submap/syndiecakesfactory)
 "pp" = (
 /obj/random/junk,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "pR" = (
 /obj/machinery/conveyor{
 	dir = 10;
 	id = "garbage"
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "qx" = (
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
@@ -198,7 +232,9 @@
 	tag_exterior_door = "syndicakes_exterior";
 	tag_interior_door = "syndicakes_interior"
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "qS" = (
 /obj/structure/cable{
@@ -224,14 +260,18 @@
 /area/submap/syndiecakesfactory)
 "rU" = (
 /obj/machinery/space_heater,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "sd" = (
 /turf/simulated/floor/plating,
 /area/submap/syndiecakesfactory)
 "sB" = (
 /obj/effect/decal/cleanable/filth,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "ub" = (
 /obj/item/stack/rods,
@@ -240,12 +280,16 @@
 "uA" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/reagent_containers/food/snacks/syndicake,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "uF" = (
 /obj/machinery/gibber/autogibber,
 /obj/structure/plasticflaps,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "vQ" = (
 /obj/structure/lattice,
@@ -255,7 +299,9 @@
 "wB" = (
 /obj/item/trash/syndi_cakes,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "xT" = (
 /obj/random/junk,
@@ -276,7 +322,9 @@
 	pixel_x = -20
 	},
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "zo" = (
 /turf/simulated/wall,
@@ -293,12 +341,16 @@
 /obj/random/tool,
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "zY" = (
 /obj/structure/table/reinforced,
 /obj/machinery/light,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "AH" = (
 /obj/structure/lattice,
@@ -307,11 +359,15 @@
 /area/submap/syndiecakesfactory)
 "AJ" = (
 /obj/item/trash/syndi_cakes,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "BI" = (
 /obj/structure/reagent_dispensers/fueltank,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "Cp" = (
 /obj/structure/cable{
@@ -340,18 +396,24 @@
 	dir = 4
 	},
 /mob/living/simple_mob/animal/passive/dog/corgi,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "Ej" = (
 /obj/structure/closet/emcloset,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "EJ" = (
 /obj/machinery/light{
 	dir = 8
 	},
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "Fw" = (
 /obj/item/stack/cable_coil/cut,
@@ -359,7 +421,9 @@
 /area/submap/syndiecakesfactory)
 "FO" = (
 /obj/machinery/suit_cycler,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "Gm" = (
 /obj/structure/cable{
@@ -370,11 +434,15 @@
 	},
 /obj/random/maintenance,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "GB" = (
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "Hx" = (
 /obj/effect/decal/cleanable/filth,
@@ -384,7 +452,9 @@
 /mob/living/simple_mob/animal/passive/dog/corgi,
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "Hy" = (
 /turf/template_noop,
@@ -419,11 +489,15 @@
 /obj/structure/bed/chair/bay/chair/padded/black{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "JI" = (
 /obj/effect/landmark/loot_spawn/low,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "Ki" = (
 /obj/structure/cable{
@@ -433,7 +507,9 @@
 	tag = ""
 	},
 /obj/random/junk,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "Kr" = (
 /obj/structure/girder,
@@ -454,7 +530,9 @@
 	},
 /obj/machinery/power/port_gen/pacman,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "Me" = (
 /obj/random/junk,
@@ -468,7 +546,9 @@
 	tag = ""
 	},
 /obj/effect/decal/cleanable/filth,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "MT" = (
 /obj/effect/floor_decal/rust,
@@ -482,7 +562,9 @@
 	icon_state = "0-2"
 	},
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "NQ" = (
 /obj/structure/lattice,
@@ -495,7 +577,9 @@
 	dir = 8;
 	name = "Broken Computer"
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "OK" = (
 /obj/item/weapon/reagent_containers/food/snacks/syndicake,
@@ -507,20 +591,26 @@
 "PZ" = (
 /obj/random/trash,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "Qv" = (
 /obj/machinery/light{
 	dir = 8
 	},
 /obj/item/trash/syndi_cakes,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "QF" = (
 /obj/machinery/conveyor{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "QI" = (
 /obj/structure/cable{
@@ -530,7 +620,9 @@
 	tag = ""
 	},
 /obj/random/maintenance,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "Ra" = (
 /obj/machinery/power/terminal{
@@ -541,7 +633,9 @@
 	icon_state = "0-8"
 	},
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "Rg" = (
 /obj/machinery/door/airlock/maintenance/engi{
@@ -556,13 +650,17 @@
 "RB" = (
 /mob/living/simple_mob/animal/passive/dog/corgi,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "Tj" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/storage/toolbox/syndicate,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "Tt" = (
 /obj/machinery/door/airlock/glass_external{
@@ -584,7 +682,9 @@
 /turf/simulated/shuttle/plating,
 /area/submap/syndiecakesfactory)
 "TM" = (
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "TT" = (
 /obj/structure/cable{
@@ -601,13 +701,17 @@
 	},
 /obj/effect/floor_decal/rust,
 /obj/random/junk,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "UC" = (
 /obj/machinery/telecomms/relay/preset/ruskie{
 	network = "SYNDICAKES-FACTORY"
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "UR" = (
 /obj/item/trash/syndi_cakes,
@@ -619,11 +723,15 @@
 	},
 /mob/living/simple_mob/animal/passive/dog/corgi,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "Vt" = (
 /obj/machinery/conveyor,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "VH" = (
 /obj/structure/lattice,
@@ -637,7 +745,9 @@
 	icon_state = "4-8";
 	tag = ""
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "WL" = (
 /obj/structure/cable{
@@ -655,14 +765,18 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "XZ" = (
 /obj/machinery/light/small{
 	dir = 1
 	},
 /obj/structure/dispenser/oxygen,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "YR" = (
 /obj/machinery/light{
@@ -674,20 +788,26 @@
 "YU" = (
 /obj/random/trash,
 /obj/structure/bed/chair/bay/chair/padded/black,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "Zs" = (
 /obj/machinery/conveyor{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 "Zt" = (
 /obj/effect/decal/cleanable/filth,
 /obj/machinery/conveyor{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/syndiecakesfactory)
 
 (1,1,1) = {"

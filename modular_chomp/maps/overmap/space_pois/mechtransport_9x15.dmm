@@ -1,65 +1,377 @@
-"a" = (/turf/template_noop,/area/template_noop)
-"b" = (/obj/effect/decal/cleanable/blood/oil,/obj/machinery/mech_recharger,/turf/simulated/floor/tiled/techmaint,/area/submap/mechtransportation)
-"c" = (/obj/structure/grille,/obj/structure/shuttle/window,/turf/simulated/floor/airless,/area/submap/mechtransportation)
-"e" = (/obj/machinery/mech_recharger,/obj/mecha/combat/phazon/old,/turf/simulated/floor/tiled/techmaint,/area/submap/mechtransportation)
-"f" = (/obj/structure/closet/crate/secure/loot,/turf/simulated/shuttle/floor,/area/submap/mechtransportation)
-"h" = (/obj/structure/table/standard,/turf/simulated/shuttle/floor,/area/submap/mechtransportation)
-"i" = (/obj/machinery/computer{desc = "A computer long since rendered non-functional due to lack of maintenance. Spitting out error messages."; dir = 8; name = "Broken Computer"},/turf/simulated/shuttle/floor,/area/submap/mechtransportation)
-"j" = (/obj/effect/decal/cleanable/vomit,/turf/simulated/shuttle/floor,/area/submap/mechtransportation)
-"k" = (/obj/effect/decal/remains/human,/turf/simulated/shuttle/floor,/area/submap/mechtransportation)
-"l" = (/turf/simulated/shuttle/floor,/area/submap/mechtransportation)
-"m" = (/obj/structure/bed/chair/bay/chair/padded/red{dir = 1},/turf/simulated/shuttle/floor,/area/submap/mechtransportation)
-"n" = (/obj/machinery/computer/mecha{dir = 8},/turf/simulated/shuttle/floor,/area/submap/mechtransportation)
-"o" = (/turf/simulated/shuttle/wall/hard_corner,/area/submap/mechtransportation)
-"p" = (/obj/machinery/door/airlock/hatch,/turf/simulated/shuttle/floor,/area/submap/mechtransportation)
-"q" = (/obj/item/device/gps/internal/poi{gps_tag = "Mech-Transport EJN-2955"},/turf/simulated/shuttle/wall/hard_corner,/area/submap/mechtransportation)
-"r" = (/obj/machinery/mech_recharger,/turf/simulated/floor/tiled/techmaint,/area/submap/mechtransportation)
-"s" = (/obj/effect/decal/mecha_wreckage/gygax,/obj/machinery/mech_recharger,/turf/simulated/floor/tiled/techmaint,/area/submap/mechtransportation)
-"t" = (/obj/effect/decal/mecha_wreckage/gygax/dark,/obj/machinery/mech_recharger,/turf/simulated/floor/tiled/techmaint,/area/submap/mechtransportation)
-"v" = (/obj/effect/decal/mecha_wreckage/durand,/obj/machinery/mech_recharger,/turf/simulated/floor/tiled/techmaint,/area/submap/mechtransportation)
-"w" = (/obj/effect/decal/cleanable/blood/oil,/turf/simulated/shuttle/floor/white/airless,/area/submap/mechtransportation)
-"x" = (/obj/effect/decal/cleanable/blood/gibs/robot/up,/turf/simulated/shuttle/floor/white/airless,/area/submap/mechtransportation)
-"y" = (/turf/simulated/shuttle/wall,/area/submap/mechtransportation)
-"z" = (/obj/machinery/mech_recharger,/obj/mecha/combat/marauder/old,/turf/simulated/floor/tiled/techmaint,/area/submap/mechtransportation)
-"A" = (/obj/effect/decal/mecha_wreckage/durand,/turf/simulated/shuttle/floor/white/airless,/area/submap/mechtransportation)
-"B" = (/obj/item/stack/tile/floor,/turf/simulated/floor/airless,/area/submap/mechtransportation)
-"C" = (/obj/effect/decal/mecha_wreckage/odysseus,/obj/machinery/mech_recharger,/turf/simulated/floor/tiled/techmaint,/area/submap/mechtransportation)
-"D" = (/obj/structure/lattice,/turf/template_noop,/area/submap/mechtransportation)
-"E" = (/obj/item/stack/rods,/obj/item/stack/tile/floor,/turf/simulated/floor/airless,/area/submap/mechtransportation)
-"F" = (/obj/effect/decal/cleanable/blood/gibs/robot,/obj/item/stack/tile/floor,/turf/simulated/floor/airless,/area/submap/mechtransportation)
-"G" = (/obj/effect/decal/cleanable/blood/gibs/robot,/obj/machinery/mech_recharger,/turf/simulated/floor/tiled/techmaint,/area/submap/mechtransportation)
-"H" = (/obj/machinery/mech_recharger,/obj/mecha/combat/scarab,/turf/simulated/floor/tiled/techmaint,/area/submap/mechtransportation)
-"I" = (/obj/effect/decal/mecha_wreckage/ripley/firefighter,/turf/simulated/shuttle/floor/white/airless,/area/submap/mechtransportation)
-"J" = (/turf/simulated/shuttle/floor/white/airless,/area/submap/mechtransportation)
-"K" = (/obj/item/stack/tile/floor,/turf/template_noop,/area/submap/mechtransportation)
-"L" = (/obj/effect/decal/mecha_wreckage/odysseus,/turf/simulated/shuttle/floor/white/airless,/area/submap/mechtransportation)
-"M" = (/turf/simulated/floor/airless,/area/submap/mechtransportation)
-"N" = (/obj/structure/shuttle/engine/heater,/turf/simulated/shuttle/wall,/area/submap/mechtransportation)
-"O" = (/obj/structure/shuttle/engine/heater,/turf/simulated/shuttle/wall/hard_corner,/area/submap/mechtransportation)
-"P" = (/obj/item/stack/rods,/turf/template_noop,/area/submap/mechtransportation)
-"Q" = (/obj/structure/shuttle/engine/router,/turf/simulated/shuttle/plating,/area/submap/mechtransportation)
-"R" = (/obj/structure/shuttle/engine/propulsion,/turf/simulated/shuttle/plating,/area/submap/mechtransportation)
-"S" = (/turf/template_noop,/area/submap/mechtransportation)
-"U" = (/obj/effect/wingrille_spawn/reinforced,/turf/simulated/shuttle/floor,/area/submap/mechtransportation)
-"V" = (/obj/item/stack/rods,/turf/simulated/floor/airless,/area/submap/mechtransportation)
-"X" = (/obj/machinery/mech_recharger,/obj/mecha/combat/gygax/old,/turf/simulated/floor/tiled/techmaint,/area/submap/mechtransportation)
-"Y" = (/obj/effect/decal/mecha_wreckage/ripley,/obj/machinery/mech_recharger,/turf/simulated/floor/tiled/techmaint,/area/submap/mechtransportation)
-"Z" = (/obj/effect/decal/mecha_wreckage/scarab,/turf/simulated/shuttle/floor/white/airless,/area/submap/mechtransportation)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"b" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/machinery/mech_recharger,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/mechtransportation)
+"c" = (
+/obj/structure/grille,
+/obj/structure/shuttle/window,
+/turf/simulated/floor/airless,
+/area/submap/mechtransportation)
+"e" = (
+/obj/machinery/mech_recharger,
+/obj/mecha/combat/phazon/old,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/mechtransportation)
+"f" = (
+/obj/structure/closet/crate,
+/obj/item/weapon/circuitboard/mecha/phazon/main,
+/obj/item/weapon/circuitboard/mecha/phazon/peripherals,
+/obj/item/weapon/circuitboard/mecha/phazon/targeting,
+/turf/simulated/shuttle/floor,
+/area/submap/mechtransportation)
+"g" = (
+/obj/structure/closet/crate,
+/obj/item/weapon/gun/energy/ionrifle,
+/turf/simulated/shuttle/floor,
+/area/submap/mechtransportation)
+"h" = (
+/obj/structure/table/standard,
+/obj/item/weapon/cell/device/weapon,
+/obj/item/weapon/cell/device/weapon,
+/obj/item/weapon/cell/device/weapon,
+/turf/simulated/shuttle/floor,
+/area/submap/mechtransportation)
+"i" = (
+/obj/machinery/computer{
+	desc = "A computer long since rendered non-functional due to lack of maintenance. Spitting out error messages.";
+	dir = 8;
+	name = "Broken Computer"
+	},
+/turf/simulated/shuttle/floor,
+/area/submap/mechtransportation)
+"j" = (
+/obj/effect/decal/cleanable/vomit,
+/turf/simulated/shuttle/floor,
+/area/submap/mechtransportation)
+"k" = (
+/obj/effect/decal/remains/human,
+/turf/simulated/shuttle/floor,
+/area/submap/mechtransportation)
+"l" = (
+/turf/simulated/shuttle/floor,
+/area/submap/mechtransportation)
+"m" = (
+/obj/structure/bed/chair/bay/chair/padded/red{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor,
+/area/submap/mechtransportation)
+"n" = (
+/obj/machinery/computer/mecha{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor,
+/area/submap/mechtransportation)
+"o" = (
+/turf/simulated/shuttle/wall/hard_corner,
+/area/submap/mechtransportation)
+"p" = (
+/obj/machinery/door/airlock/hatch,
+/turf/simulated/shuttle/floor,
+/area/submap/mechtransportation)
+"q" = (
+/obj/item/device/gps/internal/poi{
+	gps_tag = "Mech-Transport EJN-2955"
+	},
+/turf/simulated/shuttle/wall/hard_corner,
+/area/submap/mechtransportation)
+"r" = (
+/obj/machinery/mech_recharger,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/mechtransportation)
+"s" = (
+/obj/effect/decal/mecha_wreckage/gygax,
+/obj/machinery/mech_recharger,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/mechtransportation)
+"t" = (
+/obj/effect/decal/mecha_wreckage/gygax/dark,
+/obj/machinery/mech_recharger,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/mechtransportation)
+"u" = (
+/obj/structure/table/standard,
+/obj/item/weapon/cell/device/weapon/empproof,
+/turf/simulated/shuttle/floor,
+/area/submap/mechtransportation)
+"v" = (
+/obj/effect/decal/mecha_wreckage/durand,
+/obj/machinery/mech_recharger,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/mechtransportation)
+"w" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/shuttle/floor/white/airless,
+/area/submap/mechtransportation)
+"x" = (
+/obj/effect/decal/cleanable/blood/gibs/robot/up,
+/turf/simulated/shuttle/floor/white/airless,
+/area/submap/mechtransportation)
+"y" = (
+/turf/simulated/shuttle/wall,
+/area/submap/mechtransportation)
+"z" = (
+/obj/machinery/mech_recharger,
+/obj/mecha/combat/marauder/old,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/mechtransportation)
+"A" = (
+/obj/effect/decal/mecha_wreckage/durand,
+/turf/simulated/shuttle/floor/white/airless,
+/area/submap/mechtransportation)
+"B" = (
+/obj/item/stack/tile/floor,
+/turf/simulated/floor/airless,
+/area/submap/mechtransportation)
+"C" = (
+/obj/effect/decal/mecha_wreckage/odysseus,
+/obj/machinery/mech_recharger,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/mechtransportation)
+"D" = (
+/obj/structure/lattice,
+/turf/template_noop,
+/area/submap/mechtransportation)
+"E" = (
+/obj/item/stack/rods,
+/obj/item/stack/tile/floor,
+/turf/simulated/floor/airless,
+/area/submap/mechtransportation)
+"F" = (
+/obj/effect/decal/cleanable/blood/gibs/robot,
+/obj/item/stack/tile/floor,
+/turf/simulated/floor/airless,
+/area/submap/mechtransportation)
+"G" = (
+/obj/effect/decal/cleanable/blood/gibs/robot,
+/obj/machinery/mech_recharger,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/mechtransportation)
+"H" = (
+/obj/machinery/mech_recharger,
+/obj/mecha/combat/scarab,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/mechtransportation)
+"I" = (
+/obj/effect/decal/mecha_wreckage/ripley/firefighter,
+/turf/simulated/shuttle/floor/white/airless,
+/area/submap/mechtransportation)
+"J" = (
+/turf/simulated/shuttle/floor/white/airless,
+/area/submap/mechtransportation)
+"K" = (
+/obj/item/stack/tile/floor,
+/turf/template_noop,
+/area/submap/mechtransportation)
+"L" = (
+/obj/effect/decal/mecha_wreckage/odysseus,
+/turf/simulated/shuttle/floor/white/airless,
+/area/submap/mechtransportation)
+"M" = (
+/turf/simulated/floor/airless,
+/area/submap/mechtransportation)
+"N" = (
+/obj/structure/shuttle/engine/heater,
+/turf/simulated/shuttle/wall,
+/area/submap/mechtransportation)
+"O" = (
+/obj/structure/shuttle/engine/heater,
+/turf/simulated/shuttle/wall/hard_corner,
+/area/submap/mechtransportation)
+"P" = (
+/obj/item/stack/rods,
+/turf/template_noop,
+/area/submap/mechtransportation)
+"Q" = (
+/obj/structure/shuttle/engine/router,
+/turf/simulated/shuttle/plating,
+/area/submap/mechtransportation)
+"R" = (
+/obj/structure/shuttle/engine/propulsion,
+/turf/simulated/shuttle/plating,
+/area/submap/mechtransportation)
+"S" = (
+/turf/template_noop,
+/area/submap/mechtransportation)
+"U" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/turf/simulated/shuttle/floor,
+/area/submap/mechtransportation)
+"V" = (
+/obj/item/stack/rods,
+/turf/simulated/floor/airless,
+/area/submap/mechtransportation)
+"X" = (
+/obj/machinery/mech_recharger,
+/obj/mecha/combat/gygax/old,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/mechtransportation)
+"Y" = (
+/obj/effect/decal/mecha_wreckage/ripley,
+/obj/machinery/mech_recharger,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/mechtransportation)
+"Z" = (
+/obj/effect/decal/mecha_wreckage/scarab,
+/turf/simulated/shuttle/floor/white/airless,
+/area/submap/mechtransportation)
 
 (1,1,1) = {"
-aycccccya
-ayffhhiya
-ayjklmnya
-yopqUUyyy
-yJJJJJJJy
-ystzJYrYy
-ywJxJJIJy
-yGvBJXrHy
-MMJAJJJJy
-DEMJFGeby
-MMBMJLJZy
-KDDMJMCry
-aMDSVMNNO
-aPaKDaQQQ
-aaaaaaRRR
+a
+a
+a
+y
+y
+y
+y
+y
+M
+D
+M
+K
+a
+a
+a
+"}
+(2,1,1) = {"
+y
+y
+y
+o
+J
+s
+w
+G
+M
+E
+M
+D
+M
+P
+a
+"}
+(3,1,1) = {"
+c
+g
+j
+p
+J
+t
+J
+v
+J
+M
+B
+D
+D
+a
+a
+"}
+(4,1,1) = {"
+c
+f
+k
+q
+J
+z
+x
+B
+A
+J
+M
+M
+S
+K
+a
+"}
+(5,1,1) = {"
+c
+h
+l
+U
+J
+J
+J
+J
+J
+F
+J
+J
+V
+D
+a
+"}
+(6,1,1) = {"
+c
+u
+m
+U
+J
+Y
+J
+X
+J
+G
+L
+M
+M
+a
+a
+"}
+(7,1,1) = {"
+c
+i
+n
+y
+J
+r
+I
+r
+J
+e
+J
+C
+N
+Q
+R
+"}
+(8,1,1) = {"
+y
+y
+y
+y
+J
+Y
+J
+H
+J
+b
+Z
+r
+N
+Q
+R
+"}
+(9,1,1) = {"
+a
+a
+a
+y
+y
+y
+y
+y
+y
+y
+y
+y
+O
+Q
+R
 "}
