@@ -30,7 +30,32 @@
 2024-01-04:
   FluffMedic:
   - rscadd: New event, and function to some strange mobs
+  Kashargul:
+  - rscadd: The soundproof bool to all our dorms
+  - rscadd: The suit sensor blocking bool to all our dorms
+  - rscadd: The camera blocking bool to all our dorms
+  - rscadd: The radshielded flag to all our dorms
   TheCaramelion:
   - bugfix: Makes glacial lettuce obtainable
   Upstream:
   - qol: Adds privacy for borgs in dorms
+2024-01-06:
+  Missile597:
+  - rscdel: Removed some excessive pipework causing redundant loops and potential
+      "stuck" trash
+  - bugfix: Fixed some disposals junction's orientations so that the trash flows correctly
+      towards the disposals sorting room
+  - bugfix: Connected a couple of disposals bins to the loop that were previously
+      not connected
+  - maptweak: Added a disposals bin in the gateway prep room, and connected it to
+      the dead end pipework that was heading in that direction
+  - rscadd: Added a recharger station for QoL to allow shadekin to recharge cells
+      at the hideout
+  - maptweak: Added a missing disposal pipe segment to complete the loop.
+  - bugfix: Fixed the Large Alien Ship shelter to be spawnable
+  - bugfix: Fixed the inventories of the Garden and Xenobotany seed storages to have
+      the correct list of seeds at round start (from seed_storage_vr.dm)
+  - maptweak: Added a missing air alarm to Chemistry Distillery
+  tacoguy7765093:
+  - maptweak: Landing zones have been tweaked to allow landing of Overmap Ships
+  - imageadd: Southern Cross's overmap icon has their own sprite now.
