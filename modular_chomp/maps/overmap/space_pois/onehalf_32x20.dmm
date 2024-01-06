@@ -825,6 +825,11 @@
 /obj/item/clothing/mask/gas/syndicate,
 /obj/item/weapon/reagent_containers/food/drinks/bottle/rum,
 /obj/item/weapon/reagent_containers/food/drinks/bottle/rum,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
 /turf/simulated/floor/plating,
 /area/submap/onehalf)
 "cN" = (
