@@ -49,3 +49,6 @@
       not connected
   - maptweak: Added a disposals bin in the gateway prep room, and connected it to
       the dead end pipework that was heading in that direction
+  - rscadd: Added a recharger station for QoL to allow shadekin to recharge cells
+      at the hideout
+  - maptweak: Added a missing disposal pipe segment to complete the loop.
