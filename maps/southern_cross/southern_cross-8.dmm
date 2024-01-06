@@ -6932,6 +6932,12 @@
 	},
 /turf/simulated/floor/carpet/retro,
 /area/shadekin)
+"ggh" = (
+/obj/structure/table/darkglass,
+/obj/effect/floor_decal/milspec/cargo,
+/obj/machinery/recharger,
+/turf/simulated/floor/tiled/techmaint,
+/area/shadekin)
 "ggj" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/holofloor/desert,
@@ -55614,7 +55620,7 @@ ltP
 ltP
 ltP
 ltP
-huK
+ltP
 bgS
 tAp
 ltP
@@ -61275,7 +61281,7 @@ wKW
 bMy
 vpY
 vpY
-mNu
+ggh
 wrf
 rtJ
 luZ
