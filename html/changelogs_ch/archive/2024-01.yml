@@ -52,6 +52,10 @@
   - rscadd: Added a recharger station for QoL to allow shadekin to recharge cells
       at the hideout
   - maptweak: Added a missing disposal pipe segment to complete the loop.
+  - bugfix: Fixed the Large Alien Ship shelter to be spawnable
+  - bugfix: Fixed the inventories of the Garden and Xenobotany seed storages to have
+      the correct list of seeds at round start (from seed_storage_vr.dm)
+  - maptweak: Added a missing air alarm to Chemistry Distillery
   tacoguy7765093:
   - maptweak: Landing zones have been tweaked to allow landing of Overmap Ships
   - imageadd: Southern Cross's overmap icon has their own sprite now.
