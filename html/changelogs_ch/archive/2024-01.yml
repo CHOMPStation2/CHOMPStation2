@@ -52,3 +52,6 @@
   - rscadd: Added a recharger station for QoL to allow shadekin to recharge cells
       at the hideout
   - maptweak: Added a missing disposal pipe segment to complete the loop.
+  tacoguy7765093:
+  - maptweak: Landing zones have been tweaked to allow landing of Overmap Ships
+  - imageadd: Southern Cross's overmap icon has their own sprite now.
