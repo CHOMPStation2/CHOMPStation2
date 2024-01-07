@@ -225,7 +225,7 @@
 	result_amount = 1
 	required = /obj/item/slime_extract/plague
 
-/decl/chemical_reaction/instant/slime/purple_shrink/on_reaction(var/datum/reagents/holder)
+/decl/chemical_reaction/instant/slime/virusdish/on_reaction(var/datum/reagents/holder)
 	new /obj/item/weapon/virusdish(get_turf(holder.my_atom))
 	..()
 
