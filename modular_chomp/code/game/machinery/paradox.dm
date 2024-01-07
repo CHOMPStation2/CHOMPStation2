@@ -3,8 +3,7 @@
 	idle_power_usage = 50000000
 	icon = 'modular_chomp/icons/obj/machines/defense.dmi'
 	icon_state = "paradox"
-	obj/item/weapon/circuitboard/circuit = /obj/item/weapon/circuitboard/paradoxrift
-	var/unstable = 0
+	circuit = /obj/item/weapon/circuitboard/paradoxrift
 	var/build_eff = 1
 	var/loot_eff = 1
 	var/chaos_eff = 1
