@@ -113,7 +113,7 @@
 	result_amount = 1
 	required = /obj/item/slime_extract/redspace
 
-/decl/chemical_reaction/instant/slime/purple_shrink/on_reaction(var/datum/reagents/holder)
+/decl/chemical_reaction/instant/slime/soulstone/on_reaction(var/datum/reagents/holder)
 	new /obj/item/device/soulstone(get_turf(holder.my_atom))
 	..()
 
