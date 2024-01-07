@@ -120,6 +120,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 	data["show_pictures"] = show_pictures
 
 	var/atom/hostloc = host.loc
+	//CHOMPAdd Start - Allow VorePanel to show pred belly details even while indirectly inside
+	if(istype(host, /mob/living))
+		var/mob/living/H = host
+		hostloc = H.surrounding_belly()
+	//CHOMPAdd End of indirect vorefx additions
 	var/list/inside = list()
 	if(isbelly(hostloc))
 		var/obj/belly/inside_belly = hostloc
@@ -1950,11 +1955,14 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		return TRUE // Aren't here anymore, need to update menu
 
 	var/intent = "Examine"
-	if(isliving(target))
-		intent = tgui_alert(usr, "What do you want to do to them?","Query",list("Examine","Help Out","Devour"))
+	//CHOMPEdit Start - Only allow indirect belly viewers to examine
+	if(user in OB)
+		if(isliving(target))
+			intent = tgui_alert(usr, "What do you want to do to them?","Query",list("Examine","Help Out","Devour"))
 
-	else if(istype(target, /obj/item))
-		intent = tgui_alert(usr, "What do you want to do to that?","Query",list("Examine","Use Hand"))
+		else if(istype(target, /obj/item))
+			intent = tgui_alert(usr, "What do you want to do to that?","Query",list("Examine","Use Hand"))
+	//CHOMPEdit End of indirect vorefx changes
 
 	switch(intent)
 		if("Examine") //Examine a mob inside another mob
@@ -2050,6 +2058,8 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 				for(var/atom/movable/target in host.vore_selected)
 					to_chat(target,"<span class='warning'>You're squished from [host]'s [lowertext(host.vore_selected)] to their [lowertext(choice.name)]!</span>")
+					//CHOMPAdd - Send the transfer message to indirect targets as well. Slightly different message because why not.
+					to_chat(host.vore_selected.get_belly_surrounding(target.contents),"<span class='warning'>You're squished along with [target] from [host]'s [lowertext(host.vore_selected)] to their [lowertext(choice.name)]!</span>")
 					host.vore_selected.transfer_contents(target, choice, 1)
 				return TRUE
 		return
@@ -2095,6 +2105,8 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			if(!choice || !(target in host.vore_selected))
 				return TRUE
 			to_chat(target,"<span class='warning'>You're squished from [host]'s [lowertext(host.vore_selected.name)] to their [lowertext(choice.name)]!</span>")
+			//CHOMPAdd - Send the transfer message to indirect targets as well. Slightly different message because why not.
+			to_chat(host.vore_selected.get_belly_surrounding(target.contents),"<span class='warning'>You're squished along with [target] from [host]'s [lowertext(host.vore_selected)] to their [lowertext(choice.name)]!</span>")
 			host.vore_selected.transfer_contents(target, choice)
 
 

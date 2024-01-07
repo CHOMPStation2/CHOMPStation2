@@ -351,3 +351,12 @@
 	set category = "Abilities"
 	set desc = "Check your current nutrition level."
 	to_chat(src, "<span class='vnotice'>Current nutrition level: [nutrition].</span>")
+
+// This proc will either return the first belly the mob is in or return null if they're not in one
+/mob/living/proc/surrounding_belly()
+	var/atom/curloc = src.loc
+	while(curloc && !isbelly(curloc))
+		if(istype(curloc, /turf)) break
+		if(!curloc.loc || curloc == curloc.loc) break
+		curloc = curloc.loc
+	if(isbelly(curloc)) return curloc
