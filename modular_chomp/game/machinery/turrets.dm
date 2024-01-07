@@ -28,7 +28,7 @@
 	catalogue_data = list(/datum/category_item/catalogue/technology/turret)
 	anchored = TRUE
 
-	obj/item/weapon/circuitboard/circuit = /obj/item/weapon/circuitboard/defenseonelisk
+	circuit = /obj/item/weapon/circuitboard/defenseonelisk
 
 	catalogue_data = null
 

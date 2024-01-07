@@ -177,7 +177,6 @@
 /decl/chemical_reaction/instant/slime/dark_liquidfire
 	name = "Slime Secert Guard"
 	id = "m_slime_guardian"
-	result = "healing_nanites"
 	required_reagents = list("liquidfire" = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/dark
