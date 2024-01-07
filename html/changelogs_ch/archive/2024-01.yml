@@ -63,3 +63,8 @@
 2024-01-07:
   TheGreatKitsune:
   - rscadd: A new set of ears
+  Upstream:
+  - qol: Allows to temporarily disable textlimit warnings for the vorepanel belly
+      texts
+  - bugfix: the self resize verb now can be used even if resizing through others is
+      disabled
