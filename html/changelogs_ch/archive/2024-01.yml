@@ -68,3 +68,4 @@
       texts
   - bugfix: the self resize verb now can be used even if resizing through others is
       disabled
+  - qol: Ignore bellied players in the appendicitis events
