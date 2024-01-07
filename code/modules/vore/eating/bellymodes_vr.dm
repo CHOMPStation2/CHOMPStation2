@@ -47,6 +47,7 @@
 		log_debug("Digest mode [digest_mode] didn't exist in the digest_modes list!!")
 		return FALSE
 	if(digest_mode == DM_EGG)
+		prey_loop() //CHOMPAdd - Apparently on Egg mode the sound loop never played before? Just slapping this here to fix that
 		if(DM.handle_atoms(src, contents))
 			updateVRPanels()
 		return
