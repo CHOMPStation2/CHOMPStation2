@@ -230,6 +230,16 @@ Less important
 	mappath = "modular_chomp/maps/overmap/space_pois/spacebar_40x40.dmm"
 	block_size = 40
 
+/datum/map_template/dynamic_overmap/starhuntersarena_70x70
+	name = "Starhunter Challenge"
+	mappath = "modular_chomp/maps/overmap/space_pos/starhuntersarena_70x70.dmm"
+	block_size = 70
+
+/datum/map_template/dynamic_overmap/starhunterstraders_30x30
+	name = "Starhunter Traders"
+	mappath = "modular_chomp/maps/overmap/space_pos/starhunterstraders_30x30.dmm"
+	block_size = 30
+
 /datum/map_template/dynamic_overmap/syndiecakesfactory_40x40
 	name = "Land o' Cakes Factory"
 	mappath = "modular_chomp/maps/overmap/space_pois/syndiecakesfactory_40x40.dmm"
