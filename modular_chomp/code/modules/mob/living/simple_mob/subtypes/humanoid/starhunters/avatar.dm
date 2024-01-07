@@ -1,8 +1,8 @@
 /mob/living/simple_mob/humanoid/starhunter/hunter/clone
 	name = "Avatar Of The Serpent"
 	icon_state = "avatar"
-	health = 20
-	maxHealth = 20
+	health = 15
+	maxHealth = 15
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged/aggressive/starhunter
 	projectiletype = /obj/item/projectile/energy/ninjastar
 
