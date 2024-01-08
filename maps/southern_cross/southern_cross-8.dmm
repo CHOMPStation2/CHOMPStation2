@@ -1795,7 +1795,8 @@
 /area/centcom/bar)
 "bfZ" = (
 /obj/machinery/vending/boozeomat{
-	pixel_y = 16
+	pixel_y = 16;
+	req_log_access = null
 	},
 /obj/effect/floor_decal/milspec/color/silver,
 /turf/simulated/floor/tiled/techmaint,
@@ -2413,9 +2414,7 @@
 /turf/unsimulated/beach/sand,
 /area/beach)
 "bIF" = (
-/obj/machinery/vending/cart{
-	req_access = null
-	},
+/obj/machinery/vending/hydroseeds,
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
 	},
@@ -12599,6 +12598,7 @@
 /obj/random/miniature,
 /obj/random/miniature,
 /obj/random/miniature,
+/obj/item/device/pda,
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
 "kSi" = (
@@ -17367,6 +17367,7 @@
 /obj/random/maintenance/cargo,
 /obj/random/maintenance/cargo,
 /obj/random/maintenance/cargo,
+/obj/item/device/pda,
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
 "pMy" = (
@@ -23202,6 +23203,7 @@
 /obj/effect/floor_decal/milspec/cargo,
 /obj/random/tetheraid,
 /obj/random/tetheraid,
+/obj/item/device/pda,
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
 "vpZ" = (
