@@ -3684,7 +3684,6 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/heads/sc/chief)
 "aiT" = (
-/obj/structure/closet/wardrobe/engineering_yellow,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
@@ -3694,6 +3693,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
+/obj/machinery/vending/wardrobe/engidrobe,
 /turf/simulated/floor/tiled/yellow,
 /area/engineering/locker_room)
 "aiU" = (
@@ -4075,7 +4075,6 @@
 /turf/simulated/floor/tiled,
 /area/engineering/break_room)
 "ajZ" = (
-/obj/structure/closet/wardrobe/atmospherics_yellow,
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
@@ -4083,6 +4082,7 @@
 	layer = 4;
 	pixel_x = -32
 	},
+/obj/machinery/vending/wardrobe/atmosdrobe,
 /turf/simulated/floor/tiled/yellow,
 /area/engineering/locker_room)
 "aka" = (
@@ -5547,6 +5547,21 @@
 	},
 /turf/simulated/floor/tiled,
 /area/ai_monitored/storage/eva)
+"apx" = (
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 1
+	},
+/obj/machinery/vending/wardrobe/chemdrobe,
+/turf/simulated/floor/tiled/white,
+/area/medical/ward)
 "apy" = (
 /obj/machinery/recharge_station,
 /obj/machinery/light/small,
@@ -8733,6 +8748,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/machinery/vending/wardrobe/secdrobe,
 /turf/simulated/floor/tiled,
 /area/security/security_lockerroom)
 "azD" = (
@@ -14520,6 +14536,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
+/obj/machinery/vending/wardrobe/cargodrobe,
 /turf/simulated/floor/tiled,
 /area/quartermaster/lockerroom)
 "aSU" = (
@@ -18760,7 +18777,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/ai_monitored/storage/emergency/eva)
 "bgp" = (
-/obj/structure/dispenser/oxygen,
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_monitored/storage/emergency/eva)
 "bgq" = (
@@ -26409,12 +26427,10 @@
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/kitchen)
 "bCi" = (
-/obj/machinery/vending/coffee{
-	dir = 1
-	},
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/machinery/vending/wardrobe/bardrobe,
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "bCj" = (
@@ -27589,11 +27605,11 @@
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "bFW" = (
-/obj/structure/kitchenspike,
 /obj/machinery/alarm/freezer{
 	dir = 1;
 	pixel_y = -22
 	},
+/obj/machinery/vending/wardrobe/chefdrobe,
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/kitchen)
 "bFX" = (
@@ -29209,12 +29225,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/medbay)
 "bMb" = (
-/obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/medical,
 /obj/machinery/newscaster{
 	pixel_x = -30
 	},
-/obj/structure/curtain/open/privacy,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 9
 	},
@@ -29224,6 +29237,7 @@
 /obj/machinery/status_display{
 	pixel_y = 32
 	},
+/obj/machinery/washing_machine,
 /turf/simulated/floor/tiled/white,
 /area/medical/ward)
 "bMc" = (
@@ -29242,13 +29256,16 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
 "bMf" = (
-/obj/structure/closet/wardrobe/medic_white,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 4
 	},
+/obj/structure/table/glass,
+/obj/item/extraction_pack,
+/obj/item/extraction_pack,
+/obj/item/extraction_pack,
 /turf/simulated/floor/tiled/white,
 /area/medical/ward)
 "bMh" = (
@@ -29613,6 +29630,8 @@
 /obj/effect/floor_decal/corner/paleblue/bordercorner2{
 	dir = 10
 	},
+/obj/structure/table/glass,
+/obj/structure/bedsheetbin,
 /turf/simulated/floor/tiled/white,
 /area/medical/ward)
 "bNM" = (
@@ -29704,7 +29723,8 @@
 /obj/effect/floor_decal/corner/paleblue/bordercorner2{
 	dir = 5
 	},
-/obj/machinery/washing_machine,
+/obj/structure/table/glass,
+/obj/item/fulton_core,
 /turf/simulated/floor/tiled/white,
 /area/medical/ward)
 "bNV" = (
@@ -29994,7 +30014,6 @@
 /turf/simulated/floor/lino,
 /area/security/detectives_office)
 "bOD" = (
-/obj/structure/closet/wardrobe/detective,
 /obj/item/device/radio/intercom/department/security{
 	dir = 4;
 	icon_override = "secintercom";
@@ -30003,6 +30022,7 @@
 /obj/structure/noticeboard{
 	pixel_y = 30
 	},
+/obj/machinery/vending/wardrobe/detdrobe,
 /turf/simulated/floor/lino,
 /area/security/detectives_office)
 "bOE" = (
@@ -45279,6 +45299,7 @@
 	},
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/purple/border,
+/obj/machinery/vending/wardrobe/scidrobe,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research_lockerroom)
 "dEU" = (
@@ -45344,6 +45365,7 @@
 	},
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/purple/border,
+/obj/machinery/vending/wardrobe/robodrobe,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research_lockerroom)
 "dGE" = (
@@ -51995,7 +52017,7 @@
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
 "hiK" = (
-/obj/structure/closet/wardrobe/chaplain_black,
+/obj/machinery/vending/wardrobe/chapdrobe,
 /turf/simulated/floor/lino,
 /area/chapel/office)
 "hjA" = (
@@ -53930,6 +53952,20 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/misc_lab)
+"ihb" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 1
+	},
+/obj/item/device/radio/intercom/department/medbay{
+	dir = 1;
+	pixel_y = 21
+	},
+/obj/machinery/vending/wardrobe/medidrobe,
+/turf/simulated/floor/tiled/white,
+/area/medical/ward)
 "ihl" = (
 /obj/machinery/cryopod{
 	dir = 2
@@ -54901,6 +54937,7 @@
 /obj/structure/window/reinforced,
 /obj/machinery/door/window/eastright,
 /obj/item/clothing/suit/space,
+/obj/item/clothing/shoes/magboots,
 /obj/item/clothing/mask/breath,
 /obj/item/clothing/head/helmet/space,
 /turf/simulated/floor/tiled/techmaint,
@@ -55812,6 +55849,22 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/misc_lab)
+"jgr" = (
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = 32
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 1
+	},
+/obj/machinery/vending/wardrobe/genedrobe,
+/turf/simulated/floor/tiled/white,
+/area/medical/ward)
 "jgt" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -60850,9 +60903,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_a)
 "lUX" = (
-/obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/medical,
-/obj/structure/curtain/open/privacy,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 5
 	},
@@ -60862,6 +60912,7 @@
 /obj/machinery/ai_status_display{
 	pixel_y = 32
 	},
+/obj/machinery/vending/wardrobe/virodrobe,
 /turf/simulated/floor/tiled/white,
 /area/medical/ward)
 "lUZ" = (
@@ -62009,6 +62060,10 @@
 /obj/structure/curtain/black,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/medical/cryo/autoresleeve)
+"mFs" = (
+/obj/machinery/gear_dispenser/suit_fancy/autolok,
+/turf/simulated/floor/tiled/techmaint,
+/area/ai_monitored/storage/emergency/eva)
 "mFN" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -63884,6 +63939,9 @@
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 22
+	},
+/obj/machinery/chemical_dispenser/bar_coffee/full{
+	dir = 8
 	},
 /turf/simulated/floor/lino,
 /area/crew_quarters/bar)
@@ -65796,24 +65854,14 @@
 /area/rnd/research_foyer)
 "oPy" = (
 /obj/structure/closet/crate/medical,
-/obj/item/weapon/surgical/surgicaldrill,
-/obj/item/weapon/surgical/FixOVein,
-/obj/item/weapon/surgical/circular_saw,
-/obj/item/weapon/surgical/scalpel,
-/obj/item/stack/medical/advanced/bruise_pack,
-/obj/item/weapon/surgical/retractor,
-/obj/item/weapon/surgical/hemostat,
-/obj/item/weapon/surgical/cautery,
-/obj/item/weapon/surgical/bonesetter,
-/obj/item/weapon/surgical/bonegel,
-/obj/item/stack/nanopaste,
-/obj/item/weapon/autopsy_scanner,
 /obj/item/weapon/reagent_containers/spray/cleaner{
 	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
 	name = "Surgery Cleaner";
 	pixel_x = 2;
 	pixel_y = 2
 	},
+/obj/item/weapon/storage/firstaid/surgery,
+/obj/item/weapon/storage/firstaid/surgery,
 /turf/simulated/floor/tiled/dark,
 /area/medical/surgery_storage)
 "oPJ" = (
@@ -67716,6 +67764,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/machinery/vending/wardrobe/hydrobe,
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
 "pMu" = (
@@ -71314,6 +71363,15 @@
 	},
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/green/border,
+/obj/structure/table/steel,
+/obj/item/weapon/storage/toolbox/mechanical{
+	pixel_y = 5
+	},
+/obj/item/weapon/storage/toolbox/electrical{
+	pixel_x = 1;
+	pixel_y = -1
+	},
+/obj/item/device/multitool,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/workshop)
 "rQF" = (
@@ -78813,7 +78871,6 @@
 	},
 /obj/item/weapon/tool/crowbar/red,
 /obj/item/weapon/tool/crowbar/red,
-/obj/item/weapon/storage/firstaid/surgery,
 /obj/item/clothing/suit/straight_jacket,
 /obj/item/clothing/suit/straight_jacket,
 /turf/simulated/floor/tiled/dark,
@@ -81002,6 +81059,13 @@
 /obj/structure/sign/warning/airlock,
 /turf/simulated/floor/plating,
 /area/hallway/secondary/entry/D1)
+"xxm" = (
+/obj/structure/table/steel,
+/obj/item/weapon/circuitboard/transhuman_clonepod,
+/obj/item/weapon/circuitboard/transhuman_resleever,
+/obj/item/weapon/circuitboard/resleeving_control,
+/turf/simulated/floor/tiled/dark,
+/area/medical/surgery_storage)
 "xxy" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -81299,6 +81363,7 @@
 	},
 /obj/machinery/door/window/eastleft,
 /obj/item/clothing/suit/space,
+/obj/item/clothing/shoes/magboots,
 /obj/item/clothing/mask/breath,
 /obj/item/clothing/head/helmet/space,
 /turf/simulated/floor/tiled/techmaint,
@@ -108901,7 +108966,7 @@ bzy
 aCo
 bgp
 bzy
-rVs
+mFs
 rVs
 bzy
 nGq
@@ -124139,7 +124204,7 @@ wXZ
 pMH
 bcR
 bKu
-btU
+apx
 bNM
 bCM
 bHC
@@ -124397,8 +124462,8 @@ hHj
 bHo
 oew
 bKu
-btH
-bNY
+jgr
+bNM
 bDd
 jQo
 bSo
@@ -124655,7 +124720,7 @@ bIP
 mOZ
 xaD
 bKu
-bPG
+ihb
 bNX
 bPA
 qvr
@@ -128790,7 +128855,7 @@ rYP
 jyb
 okt
 rSH
-xDM
+xxm
 dPW
 qws
 vNi
