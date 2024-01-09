@@ -5547,21 +5547,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/ai_monitored/storage/eva)
-"apx" = (
-/obj/item/device/radio/intercom{
-	dir = 1;
-	name = "Station Intercom (General)";
-	pixel_y = 21
-	},
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 1
-	},
-/obj/machinery/vending/wardrobe/chemdrobe,
-/turf/simulated/floor/tiled/white,
-/area/medical/ward)
 "apy" = (
 /obj/machinery/recharge_station,
 /obj/machinery/light/small,
@@ -46311,6 +46296,22 @@
 /obj/effect/floor_decal/corner/paleblue/bordercorner,
 /turf/simulated/floor/tiled/white,
 /area/medical/ward)
+"ekr" = (
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = 32
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 1
+	},
+/obj/machinery/vending/wardrobe/genedrobe,
+/turf/simulated/floor/tiled/white,
+/area/medical/ward)
 "ekL" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -51988,6 +51989,20 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_monitored/storage/emergency/eva)
+"hhC" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 1
+	},
+/obj/item/device/radio/intercom/department/medbay{
+	dir = 1;
+	pixel_y = 21
+	},
+/obj/machinery/vending/wardrobe/medidrobe,
+/turf/simulated/floor/tiled/white,
+/area/medical/ward)
 "hhQ" = (
 /obj/machinery/light{
 	dir = 4
@@ -53952,20 +53967,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/misc_lab)
-"ihb" = (
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 1
-	},
-/obj/item/device/radio/intercom/department/medbay{
-	dir = 1;
-	pixel_y = 21
-	},
-/obj/machinery/vending/wardrobe/medidrobe,
-/turf/simulated/floor/tiled/white,
-/area/medical/ward)
 "ihl" = (
 /obj/machinery/cryopod{
 	dir = 2
@@ -55849,22 +55850,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/misc_lab)
-"jgr" = (
-/obj/machinery/computer/security/telescreen/entertainment{
-	pixel_y = 32
-	},
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 1
-	},
-/obj/machinery/vending/wardrobe/genedrobe,
-/turf/simulated/floor/tiled/white,
-/area/medical/ward)
 "jgt" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -60049,6 +60034,13 @@
 	},
 /turf/simulated/floor/airless,
 /area/space)
+"lwg" = (
+/obj/structure/table/steel,
+/obj/item/weapon/circuitboard/transhuman_clonepod,
+/obj/item/weapon/circuitboard/transhuman_resleever,
+/obj/item/weapon/circuitboard/resleeving_control,
+/turf/simulated/floor/tiled/dark,
+/area/medical/surgery_storage)
 "lwA" = (
 /obj/structure/closet/wardrobe/chemistry_white,
 /obj/item/device/radio/headset/headset_med,
@@ -62060,10 +62052,6 @@
 /obj/structure/curtain/black,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/medical/cryo/autoresleeve)
-"mFs" = (
-/obj/machinery/gear_dispenser/suit_fancy/autolok,
-/turf/simulated/floor/tiled/techmaint,
-/area/ai_monitored/storage/emergency/eva)
 "mFN" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -65853,7 +65841,9 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research_foyer)
 "oPy" = (
-/obj/structure/closet/crate/medical,
+/obj/structure/closet/crate/medical{
+	name = "surgery crate"
+	},
 /obj/item/weapon/reagent_containers/spray/cleaner{
 	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
 	name = "Surgery Cleaner";
@@ -77670,6 +77660,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/seconddeck/research_medical)
+"vDt" = (
+/obj/machinery/gear_dispenser/suit_fancy/autolok,
+/turf/simulated/floor/tiled/techmaint,
+/area/ai_monitored/storage/emergency/eva)
 "vDJ" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -81059,13 +81053,6 @@
 /obj/structure/sign/warning/airlock,
 /turf/simulated/floor/plating,
 /area/hallway/secondary/entry/D1)
-"xxm" = (
-/obj/structure/table/steel,
-/obj/item/weapon/circuitboard/transhuman_clonepod,
-/obj/item/weapon/circuitboard/transhuman_resleever,
-/obj/item/weapon/circuitboard/resleeving_control,
-/turf/simulated/floor/tiled/dark,
-/area/medical/surgery_storage)
 "xxy" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -81567,6 +81554,21 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/seconddeck/starboard)
+"xLY" = (
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 1
+	},
+/obj/machinery/vending/wardrobe/chemdrobe,
+/turf/simulated/floor/tiled/white,
+/area/medical/ward)
 "xMr" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -108966,7 +108968,7 @@ bzy
 aCo
 bgp
 bzy
-mFs
+vDt
 rVs
 bzy
 nGq
@@ -124204,7 +124206,7 @@ wXZ
 pMH
 bcR
 bKu
-apx
+xLY
 bNM
 bCM
 bHC
@@ -124462,7 +124464,7 @@ hHj
 bHo
 oew
 bKu
-jgr
+ekr
 bNM
 bDd
 jQo
@@ -124720,7 +124722,7 @@ bIP
 mOZ
 xaD
 bKu
-ihb
+hhC
 bNX
 bPA
 qvr
@@ -128855,7 +128857,7 @@ rYP
 jyb
 okt
 rSH
-xxm
+lwg
 dPW
 qws
 vNi
