@@ -601,7 +601,7 @@
 /obj/effect/abstract/dark_maw
 	var/mob/living/owner = null
 	var/obj/belly/target = null
-	icon = 'modular_chomp/icons/obj/shadekin_portal.dmi'
+	icon = 'modular_chomp/icons/obj/Shadekin_powers_2.dmi'
 	icon_state = "dark_maw_waiting"
 
 /obj/effect/abstract/dark_maw/New(loc, var/mob/living/user, var/trigger_now = 0)
@@ -629,15 +629,25 @@
 		// to trigger rebuild
 	else if(trigger_now)
 		icon_state = "dark_maw_used"
-		flick("dark_maw_triggered", src)
-		visible_message("<span class='warning'>A shadowy maw suddenly manifests and snaps shut around nothing before vanishing.</span>")
+		flick("dark_maw_tr", src)
+		visible_message("<span class='warning'>A set of crystals suddenly springs from the ground and shadowy tendrils wrap around nothing before vanishing.</span>")
 		spawn(30)
 			qdel(src)
 	else
+		flick("dark_maw", src)
 		START_PROCESSING(SSobj, src)
 
 /obj/effect/abstract/dark_maw/Destroy()
 	STOP_PROCESSING(SSobj, src)
+	if(istype(owner))
+		var/mob/living/carbon/human/carbon_owner = owner
+		var/mob/living/simple_mob/shadekin/sm_owner = owner
+		if(istype(carbon_owner))
+			var/datum/species/shadekin/SK = carbon_owner.species
+			if(istype(SK))
+				SK.active_dark_maws ^= src
+		else if(istype(sm_owner))
+			sm_owner.active_dark_maws ^= src
 	return ..()
 
 /obj/effect/abstract/dark_maw/Crossed(O)
@@ -653,19 +663,22 @@
 /obj/effect/abstract/dark_maw/process()
 	var/turf/T = get_turf(src)
 	if(!istype(T) || T.get_lumcount() >= 0.5)
-		if(icon_state == "dark_maw_waiting")
-			visible_message("<span class='notice'>A set of shadowy lines flickers away in the light.</span>")
-		else
-			visible_message("<span class='notice'>The shadowy maw dissipates with the light shone on it.</span>")
-		icon_state = "dark_maw_used"
-		qdel(src)
+		dispel()
+
+/obj/effect/abstract/dark_maw/proc/dispel()
+	if(icon_state == "dark_maw_waiting")
+		visible_message("<span class='notice'>A set of shadowy lines flickers away in the light.</span>")
+	else
+		visible_message("<span class='notice'>The crystals and shadowy tendrils dissipate with the light shone on it.</span>")
+	icon_state = "dark_maw_used"
+	qdel(src)
 
 /obj/effect/abstract/dark_maw/proc/triggered_by(var/mob/living/L, var/triggered_instantly = 0)
 	STOP_PROCESSING(SSobj, src)
 	icon_state = "dark_maw_used"
-	flick("dark_maw_triggered", src)
+	flick("dark_maw_tr", src)
 	L.AdjustStunned(4)
-	visible_message("<span class='warning'>A shadowy maw suddenly manifests around [L].</span>")
+	visible_message("<span class='warning'>A set of crystals spring out of the ground and shadowy tendrils start wrapping around [L].</span>")
 	if(owner && !triggered_instantly)
 		to_chat(owner, "<span class='warning'>A dark maw you deployed has triggered!</span>")
 	spawn(10)
@@ -675,27 +688,27 @@
 		if(!src || src.gc_destroyed)
 			//We got deleted probably, do nothing more
 		else if(L.loc != get_turf(src))
-			visible_message("<span class='notice'>The shadowy maw snaps shut around nothing and then dissipates.</span>")
+			visible_message("<span class='notice'>The shadowy tendrils fail to catch anything and dissipate.</span>")
 			qdel(src)
 		else if(will_vore)
-			visible_message("<span class='warning'>The shadowy maw snaps shut around [L] and dissipates, leaving nothing behind.</span>")
+			visible_message("<span class='warning'>The shadowy tendrils grab around [L] and drag them into the floor, leaving nothing behind.</span>")
 			L.forceMove(target)
 			qdel(src)
 		else
 			var/obj/effect/energy_net/dark/net = new /obj/effect/energy_net/dark(get_turf(src))
 			if(net.buckle_mob(L))
-				visible_message("<span class='warning'>The shadowy maw snaps shut around [L] and traps them in a shadowy net.</span>")
+				visible_message("<span class='warning'>The shadowy tendrils wrap around [L] and traps them in a net of dark energy.</span>")
 			else
-				visible_message("<span class='notice'>The shadowy maw snaps shut around [L] and then dissipates, leaving them in place.</span>")
+				visible_message("<span class='notice'>The shadowy tendrils wrap around [L] and then dissipate, leaving them in place.</span>")
 			qdel(src)
 
 /obj/effect/energy_net/dark
 	name = "dark net"
-	desc = "It's a net made of dark tendrils."
-	icon = 'modular_chomp/icons/obj/shadekin_portal.dmi'
+	desc = "It's a net made of dark energy."
+	icon = 'modular_chomp/icons/obj/Shadekin_powers_2.dmi'
 	icon_state = "dark_net"
 
-	escape_time = 2 MINUTES
+	escape_time = 30 SECONDS
 
 /obj/effect/energy_net/dark/user_unbuckle_mob(mob/living/buckled_mob, mob/user)
 	if(istype(user,/mob/living/simple_mob/shadekin))
@@ -722,7 +735,7 @@
 	name = "Dark Maw (20)"
 	desc = "Create a trap to capture others, or steal people from phase"
 	verbpath = /mob/living/carbon/human/proc/dark_maw
-	ability_icon_state = "ling_absorb_dna"
+	ability_icon_state = "dark_maw_ic"
 
 /mob/living/carbon/human/proc/dark_maw()
 	set name = "Dark Maw (20)"
@@ -755,3 +768,16 @@
 		return TRUE
 	else
 		return FALSE
+
+/mob/living/carbon/human/proc/clear_dark_maws()
+	set name = "Dispel dark maws"
+	set desc = "Dispel any active dark maws in place"
+	set category = "Shadekin"
+
+	var/datum/species/shadekin/SK = species
+	if(!istype(SK))
+		to_chat(src, "<span class='warning'>Only a shadekin can use that!</span>")
+		return FALSE
+
+	for(var/obj/effect/abstract/dark_maw/dm in SK.active_dark_maws)
+		dm.dispel()
