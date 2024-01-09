@@ -921,14 +921,6 @@
 	},
 /turf/simulated/wall/solidrock,
 /area/awaymission/mol/headdorms)
-"gt" = (
-/obj/effect/floor_decal/corner/black/diagonal,
-/obj/machinery/light/small/emergency{
-	dir = 4;
-	id = "FinaleGate2"
-	},
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/entrancetunnel)
 "gy" = (
 /obj/structure/railing,
 /obj/structure/railing{
@@ -2799,14 +2791,6 @@
 /mob/living/simple_mob/vr/frostwiz,
 /turf/simulated/floor/flock,
 /area/awaymission/mol/vr/shattered)
-"rN" = (
-/obj/effect/floor_decal/corner/black/diagonal,
-/obj/machinery/light/small/emergency{
-	dir = 1;
-	id = "FinaleGate2"
-	},
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/entrancetunnel)
 "rO" = (
 /obj/structure/table/steel,
 /turf/simulated/floor,
@@ -3970,18 +3954,6 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/medical)
-"zh" = (
-/obj/item/weapon/material/barbedwire{
-	anchored = 1;
-	icon_state = "barbedwire-out"
-	},
-/obj/effect/floor_decal/corner/black/diagonal,
-/obj/machinery/light/small/emergency{
-	dir = 4;
-	id = "FinaleGate1"
-	},
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/entrancetunnel)
 "zj" = (
 /obj/vehicle/bike/built,
 /obj/machinery/mech_recharger,
@@ -4401,11 +4373,7 @@
 /turf/simulated/floor/carpet/green,
 /area/awaymission/mol/vistortunnel/green)
 "BH" = (
-/obj/effect/floor_decal/corner/black/diagonal,
-/obj/machinery/light/small/emergency{
-	dir = 1;
-	id = "FinaleGate3"
-	},
+/obj/structure/closet/crate/secure/loot,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/entrancetunnel)
 "BI" = (
@@ -4471,14 +4439,6 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vistortunnel)
-"Cn" = (
-/obj/effect/floor_decal/corner/black/diagonal,
-/obj/machinery/light/small/emergency{
-	dir = 4;
-	id = "FinaleGate1"
-	},
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/entrancetunnel)
 "Co" = (
 /obj/structure/table/hardwoodtable,
 /obj/random/maintenance/foodstuff,
@@ -5835,14 +5795,6 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/awaymission/mol/medical)
-"Kr" = (
-/obj/effect/floor_decal/corner/black/diagonal,
-/obj/machinery/light/small/emergency{
-	dir = 8;
-	id = "FinaleGate3"
-	},
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/entrancetunnel)
 "Kz" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/effect/floor_decal/corner/lime/diagonal,
@@ -7231,14 +7183,6 @@
 /obj/machinery/light,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/securitycheckpoint)
-"TB" = (
-/obj/effect/floor_decal/corner/black/diagonal,
-/obj/machinery/light/small/emergency{
-	dir = 1;
-	id = "FinaleGate4"
-	},
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/entrancetunnel)
 "TD" = (
 /turf/simulated/wall/solidrock{
 	blocks_nonghost_incorporeal = 1
@@ -7682,14 +7626,6 @@
 	},
 /turf/simulated/floor,
 /area/awaymission/mol/crumblingmaze)
-"VU" = (
-/obj/effect/floor_decal/corner/black/diagonal,
-/obj/machinery/light/small/emergency{
-	dir = 1;
-	id = "FinaleGate1"
-	},
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/entrancetunnel)
 "VV" = (
 /obj/machinery/light,
 /turf/simulated/floor/tiled/milspec/raised,
@@ -8228,15 +8164,6 @@
 /obj/effect/floor_decal/corner/black/diagonal,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/medical)
-"Zh" = (
-/obj/structure/disposalpipe/segment,
-/obj/effect/floor_decal/corner/black/diagonal,
-/obj/machinery/light/small/emergency{
-	dir = 8;
-	id = "FinaleGate4"
-	},
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/entrancetunnel)
 "Zk" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 10
@@ -36600,9 +36527,9 @@ rt
 rt
 rt
 kL
-Kr
 rt
-Kr
+rt
+rt
 rt
 rt
 rt
@@ -36628,9 +36555,9 @@ EP
 KP
 lo
 lo
-Zh
 lo
-Zh
+lo
+lo
 lo
 lo
 VW
@@ -38890,15 +38817,15 @@ Nh
 Nh
 Nh
 Nh
-Nh
-Nh
+Ae
+Ae
 Ae
 rt
 rt
 rt
 Ae
-Nh
-Nh
+Ae
+Ae
 Nh
 Nh
 Nh
@@ -39148,15 +39075,15 @@ Nh
 Nh
 Nh
 Nh
-Nh
-Nh
 Ae
 BH
+LM
 rt
 rt
+rt
+NN
+BH
 Ae
-Nh
-Nh
 Nh
 Nh
 Nh
@@ -39406,15 +39333,15 @@ Nh
 Nh
 Nh
 Nh
-Nh
-Nh
+Ae
+Ae
 Ae
 oH
 rt
 rt
 Ae
-Nh
-Nh
+Ae
+Ae
 Nh
 Nh
 Nh
@@ -39667,7 +39594,7 @@ Nh
 Nh
 Nh
 Ae
-TB
+rt
 rt
 rt
 Ae
@@ -41215,7 +41142,7 @@ Nh
 Nh
 Nh
 Ae
-rN
+rt
 rt
 rt
 Ae
@@ -41470,15 +41397,15 @@ Nh
 Nh
 Nh
 Nh
-Nh
-Nh
+Ae
+Ae
 Ae
 oH
 rt
 rt
 Ae
-Nh
-Nh
+Ae
+Ae
 Nh
 Nh
 Nh
@@ -41728,15 +41655,15 @@ Nh
 Nh
 Nh
 Nh
-Nh
-Nh
 Ae
-VU
+BH
+kk
 rt
 rt
+rt
+FS
+BH
 Ae
-Nh
-Nh
 Nh
 Nh
 Nh
@@ -41986,15 +41913,15 @@ Nh
 Nh
 Nh
 Nh
-Nh
-Nh
+Ae
+Ae
 Ae
 rt
 rt
 rt
 Ae
-Nh
-Nh
+Ae
+Ae
 Nh
 Nh
 Nh
@@ -44344,9 +44271,9 @@ rt
 rt
 rt
 rt
-gt
+rt
 dH
-gt
+rt
 Ae
 Nh
 Nh
@@ -44368,9 +44295,9 @@ rt
 EP
 rt
 rt
-Cn
+rt
 dH
-zh
+EP
 rt
 rt
 rt
