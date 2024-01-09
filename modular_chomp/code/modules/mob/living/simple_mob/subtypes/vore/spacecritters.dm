@@ -325,7 +325,7 @@
 	vore_default_mode = DM_DIGEST
 
 
-/mob/living/simple_mob/vore/solarray
+/mob/living/simple_mob/vore/spacecritter/solarray
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/raymeat
 	meat_amount = 8
 
@@ -347,7 +347,7 @@
 		/obj/item/stack/material/wisp = 1
 		)
 
-/mob/living/simple_mob/vore/livingice
+/mob/living/simple_mob/vore/spacecritter/livingice
 	meat_type = /obj/item/stack/material/snow
 	meat_amount = 18
 
@@ -369,7 +369,7 @@
 		/obj/item/stack/material/frostscale = 1
 		)
 
-/mob/living/simple_mob/vore/radcrab
+/mob/living/simple_mob/vore/spacecritter/radcrab
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/crabmeat
 	meat_amount = 8
 
@@ -391,7 +391,7 @@
 		/obj/item/stack/material/crystalscale = 1
 		)
 
-/mob/living/simple_mob/vore/dreameel
+/mob/living/simple_mob/vore/spacecritter/dreameel
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/eelmeat
 	meat_amount = 2
 
@@ -413,7 +413,7 @@
 		/obj/item/stack/material/dreamscale = 1
 		)
 
-/mob/living/simple_mob/vore/gravityshell
+/mob/living/simple_mob/vore/spacecritter/gravityshell
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/gravityshell
 	meat_amount = 8
 

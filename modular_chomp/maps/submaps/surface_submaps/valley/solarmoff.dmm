@@ -155,7 +155,7 @@
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/solarmoff)
 "U" = (
-/mob/living/simple_mob/vore/solarmoth,
+/mob/living/simple_mob/vore/spacecritter/solarray/galaxyray,
 /obj/item/rig_module/device/stamp,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/solarmoff)
