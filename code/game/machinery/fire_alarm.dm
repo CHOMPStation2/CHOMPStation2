@@ -67,11 +67,11 @@ FIRE ALARM
 	causality = new(list(src), FALSE) // CHOMPEdit: Create soundloop
 
 /obj/machinery/firealarm/Destroy()
+	reset()		//CHOMPEdit alarm needs to go when destroyed
 	QDEL_NULL(soundloop) // CHOMPEdit: Just clearing the loop here
 	QDEL_NULL(engalarm) // CHOMPEdit: Clearing the loop here too
 	QDEL_NULL(critalarm) // CHOMPEdit: Clearing the loop here too
 	QDEL_NULL(causality) // CHOMPEdit: Clearing the loop here too
-	reset()		//CHOMPEdit alarm needs to go when destroyed
 	return ..()
 
 /obj/machinery/firealarm/proc/offset_alarm()
@@ -183,6 +183,8 @@ FIRE ALARM
 	spawn(rand(0,15))
 		update_icon()
 		// CHOMPEdit Start: Looping Red/Violet/Orange Alarms
+		if(!soundloop)
+			return
 		if(stat & (NOPOWER | BROKEN)) // Are we broken or out of power?
 			soundloop.stop() // Stop the loop once we're out of power
 			engalarm.stop() // Stop these bc we're out of power
