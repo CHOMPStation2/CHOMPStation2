@@ -596,11 +596,9 @@
 	},
 /area/awaymission/mol/mines)
 "dY" = (
-/mob/living/simple_mob/mechanical/mecha/imperion/phase1{
-	size_multiplier = 3
-	},
-/turf/simulated/wall/solidrock,
-/area/awaymission/mol/mines)
+/obj/structure/inflatable,
+/turf/simulated/floor,
+/area/awaymission/mol/crumblingmaze)
 "dZ" = (
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 1
@@ -3945,6 +3943,10 @@
 /mob/living/simple_mob/mechanical/mecha/combat/gygax/dark/advanced,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/mol/audiotorium)
+"zf" = (
+/obj/structure/inflatable,
+/turf/simulated/floor,
+/area/awaymission/mol/mines)
 "zg" = (
 /obj/effect/floor_decal/corner/yellow/border,
 /obj/machinery/sleeper{
@@ -4370,6 +4372,10 @@
 "BG" = (
 /turf/simulated/floor/carpet/green,
 /area/awaymission/mol/vistortunnel/green)
+"BH" = (
+/obj/structure/closet/crate/secure/loot,
+/turf/simulated/floor/bmarble,
+/area/awaymission/mol/entrancetunnel)
 "BI" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -6015,6 +6021,11 @@
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
+"Mb" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/inflatable,
+/turf/simulated/floor,
+/area/awaymission/mol/themaze)
 "Mc" = (
 /turf/simulated/floor/tiled/kafel_full/beige,
 /area/awaymission/mol/kitchen/chamberA)
@@ -6265,6 +6276,10 @@
 	},
 /turf/simulated/wall/solidrock,
 /area/awaymission/mol/mines)
+"NG" = (
+/obj/structure/inflatable,
+/turf/simulated/floor,
+/area/awaymission/mol/themaze)
 "NL" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/structure/disposalpipe/segment{
@@ -13652,7 +13667,7 @@ YX
 Ja
 tG
 nY
-YG
+zf
 nY
 tG
 NB
@@ -13889,19 +13904,19 @@ cQ
 PC
 Jg
 tI
-tI
+dY
 SA
 Bi
 iG
 Um
 XH
-tI
+dY
 hp
 mX
 XN
 Jg
 tI
-tI
+dY
 tI
 mX
 ZW
@@ -15437,7 +15452,7 @@ cQ
 PC
 Jg
 tI
-tI
+dY
 tI
 mX
 vc
@@ -15449,7 +15464,7 @@ VP
 Cr
 Jg
 hp
-tI
+dY
 hp
 mX
 nd
@@ -16985,19 +17000,19 @@ BL
 nd
 Jg
 hp
-tI
+dY
 hp
 mX
 lr
 qC
 tI
-tI
+dY
 hp
 VP
 uE
 Jg
 tI
-tI
+dY
 tI
 mX
 nd
@@ -26007,7 +26022,7 @@ Fg
 Nf
 HH
 HH
-HH
+NG
 hG
 HH
 Xx
@@ -26017,7 +26032,7 @@ dK
 Nf
 HH
 hG
-HH
+NG
 HH
 hG
 Xx
@@ -26027,7 +26042,7 @@ Fg
 Nf
 hG
 hG
-HH
+NG
 HH
 HH
 Xx
@@ -28587,7 +28602,7 @@ dK
 Nf
 HH
 HH
-HH
+NG
 HH
 hG
 Xx
@@ -28597,7 +28612,7 @@ Fg
 Nf
 yx
 sM
-Td
+Mb
 Dm
 HH
 Xx
@@ -28607,7 +28622,7 @@ Rh
 Nf
 HH
 yx
-Td
+Mb
 Dm
 HH
 Xx
@@ -31167,7 +31182,7 @@ Fg
 Nf
 hG
 hG
-HH
+NG
 HH
 HH
 Xx
@@ -31177,7 +31192,7 @@ aj
 Nf
 HH
 HH
-HH
+NG
 hG
 hG
 Xx
@@ -31187,7 +31202,7 @@ Fg
 Nf
 HH
 hG
-HH
+NG
 HH
 hG
 Xx
@@ -33747,7 +33762,7 @@ Fx
 Nf
 HH
 HH
-HH
+NG
 HH
 HH
 Xx
@@ -33757,7 +33772,7 @@ Fg
 Nf
 HH
 HH
-HH
+NG
 hG
 HH
 Xx
@@ -33767,7 +33782,7 @@ Fg
 Nf
 hG
 HH
-HH
+NG
 HH
 HH
 Xx
@@ -38802,15 +38817,15 @@ Nh
 Nh
 Nh
 Nh
-Nh
-Nh
+Ae
+Ae
 Ae
 rt
 rt
 rt
 Ae
-Nh
-Nh
+Ae
+Ae
 Nh
 Nh
 Nh
@@ -39060,15 +39075,15 @@ Nh
 Nh
 Nh
 Nh
-Nh
-Nh
 Ae
+BH
+LM
 rt
 rt
 rt
+NN
+BH
 Ae
-Nh
-Nh
 Nh
 Nh
 Nh
@@ -39318,15 +39333,15 @@ Nh
 Nh
 Nh
 Nh
-Nh
-Nh
+Ae
+Ae
 Ae
 oH
 rt
 rt
 Ae
-Nh
-Nh
+Ae
+Ae
 Nh
 Nh
 Nh
@@ -41382,15 +41397,15 @@ Nh
 Nh
 Nh
 Nh
-Nh
-Nh
+Ae
+Ae
 Ae
 oH
 rt
 rt
 Ae
-Nh
-Nh
+Ae
+Ae
 Nh
 Nh
 Nh
@@ -41640,15 +41655,15 @@ Nh
 Nh
 Nh
 Nh
-Nh
-Nh
 Ae
+BH
+kk
 rt
 rt
 rt
+FS
+BH
 Ae
-Nh
-Nh
 Nh
 Nh
 Nh
@@ -41898,15 +41913,15 @@ Nh
 Nh
 Nh
 Nh
-Nh
-Nh
+Ae
+Ae
 Ae
 rt
 rt
 rt
 Ae
-Nh
-Nh
+Ae
+Ae
 Nh
 Nh
 Nh
@@ -51653,7 +51668,7 @@ Nh
 Nh
 Nh
 Nh
-dY
+Nh
 Nh
 Nh
 Nh
