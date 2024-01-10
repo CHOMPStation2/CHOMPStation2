@@ -78,5 +78,10 @@
 2024-01-10:
   EtheoBoxxman:
   - bugfix: fixes buns/bunbun cooking by fixing chaos cake interference
+  FluffMedic:
+  - bugfix: some mob features should now be on the proper type path
+  - bugfix: solar moths should be less theoretical
+  - bugfix: Re-enables an accidentally disabled event
+  - maptweak: MoL has been altered
   UniquaSa:
   - imageadd: added another new big leggies
