@@ -59,3 +59,24 @@
   tacoguy7765093:
   - maptweak: Landing zones have been tweaked to allow landing of Overmap Ships
   - imageadd: Southern Cross's overmap icon has their own sprite now.
+  - maptweak: Space POIs are more functional now
+2024-01-07:
+  TheGreatKitsune:
+  - rscadd: A new set of ears
+  Upstream:
+  - qol: Allows to temporarily disable textlimit warnings for the vorepanel belly
+      texts
+  - bugfix: the self resize verb now can be used even if resizing through others is
+      disabled
+  - qol: Ignore bellied players in the appendicitis events
+  tacoguy7765093:
+  - imageadd: added large snake tail for teshari
+2024-01-08:
+  tacoguy7765093:
+  - rscdel: Removed spawn of a pulse rifle
+  - maptweak: Minor fixes in The Dark
+2024-01-10:
+  EtheoBoxxman:
+  - bugfix: fixes buns/bunbun cooking by fixing chaos cake interference
+  UniquaSa:
+  - imageadd: added another new big leggies
