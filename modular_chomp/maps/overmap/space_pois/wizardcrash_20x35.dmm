@@ -1,157 +1,1404 @@
-"aa" = (/turf/template_noop,/area/template_noop)
-"ab" = (/turf/simulated/mineral/floor/vacuum,/area/submap/wizardcrash)
-"ac" = (/turf/simulated/mineral,/area/submap/wizardcrash)
-"ad" = (/obj/structure/grille{density = 0; icon_state = "brokengrille"},/obj/item/weapon/material/shard{icon_state = "small"},/turf/simulated/floor/wood/broken,/area/submap/wizardcrash)
-"ah" = (/obj/structure/grille{density = 0; icon_state = "brokengrille"},/obj/item/weapon/material/shard,/turf/simulated/floor/wood/broken,/area/submap/wizardcrash)
-"aj" = (/obj/structure/bed/chair{dir = 1},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood,/area/submap/wizardcrash)
-"ak" = (/obj/item/weapon/material/shard,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood,/area/submap/wizardcrash)
-"al" = (/obj/structure/shuttle/window,/obj/structure/grille,/obj/structure/grille/rustic,/turf/simulated/floor/wood,/area/submap/wizardcrash)
-"am" = (/obj/structure/table/woodentable,/obj/item/weapon/dice/d20,/turf/simulated/floor/wood,/area/submap/wizardcrash)
-"an" = (/obj/item/weapon/material/shard{icon_state = "medium"},/obj/structure/bed/chair{dir = 8},/turf/simulated/floor/wood,/area/submap/wizardcrash)
-"ao" = (/obj/machinery/light{dir = 1; in_use = 1},/obj/item/weapon/flag/advent,/turf/simulated/floor/wood,/area/submap/wizardcrash)
-"ap" = (/obj/effect/decal/cleanable/blood/oil,/turf/simulated/floor/wood,/area/submap/wizardcrash)
-"aq" = (/obj/item/clothing/suit/wizrobe,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood,/area/submap/wizardcrash)
-"ar" = (/obj/machinery/light{dir = 1; in_use = 1},/obj/item/weapon/flag/advent,/turf/simulated/floor/wood/broken,/area/submap/wizardcrash)
-"as" = (/obj/structure/window/reinforced{dir = 8},/turf/simulated/floor/carpet,/area/submap/wizardcrash)
-"at" = (/obj/structure/bed,/obj/item/weapon/bedsheet/cosmos,/turf/simulated/floor/carpet,/area/submap/wizardcrash)
-"au" = (/obj/structure/table/woodentable,/obj/item/weapon/pen,/obj/item/weapon/paper{info = "To the Magnificent Z.A.P.<BR>A small mining base has been created within our territory by wandless scum. Send them a message from the wizard federation they will not forget. I know your kind is rather fragile, but a group of lightly armed miners should not pose any threat to you at all. Just be warned they have a security cyborg for self defence, you might want to tune your spells to that threat. I look forward to hearing of your success.<BR>Grand Magus Abra the Wonderous"; name = "Mission Briefing"},/turf/simulated/floor/wood,/area/submap/wizardcrash)
-"av" = (/obj/structure/bed/chair{dir = 8},/turf/simulated/floor/wood,/area/submap/wizardcrash)
-"aw" = (/obj/item/weapon/material/shard{icon_state = "small"},/turf/simulated/floor/wood,/area/submap/wizardcrash)
-"ay" = (/obj/effect/decal/remains/robot,/obj/item/clothing/head/wizard,/obj/effect/decal/cleanable/blood/oil,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood,/area/submap/wizardcrash)
-"az" = (/obj/item/weapon/spellbook/oneuse/charge,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood,/area/submap/wizardcrash)
-"aA" = (/turf/simulated/floor/wood/broken,/area/submap/whiteship)
-"aB" = (/turf/simulated/floor/carpet,/area/submap/wizardcrash)
-"aC" = (/mob/living/simple_mob/creature/cult/strong,/turf/simulated/floor/wood,/area/submap/wizardcrash)
-"aD" = (/obj/item/weapon/storage/backpack/satchel,/obj/structure/closet/cabinet,/obj/item/weapon/flame/lighter/zippo/royal,/turf/simulated/floor/carpet,/area/submap/wizardcrash)
-"aE" = (/obj/structure/bookcase,/obj/item/weapon/book/manual/hydroponics_pod_people,/turf/simulated/floor/wood,/area/submap/wizardcrash)
-"aF" = (/obj/structure/table/woodentable,/obj/item/weapon/spellbook/oneuse/mindswap,/turf/simulated/floor/wood/broken,/area/submap/wizardcrash)
-"aG" = (/obj/structure/table/fancyblack,/turf/simulated/floor/wood,/area/submap/wizardcrash)
-"aH" = (/obj/structure/bed/chair{dir = 4},/turf/simulated/floor/carpet,/area/submap/wizardcrash)
-"aI" = (/obj/structure/table/woodentable,/obj/item/toy/character/wizard,/turf/simulated/floor/carpet,/area/submap/wizardcrash)
-"aJ" = (/obj/structure/cult/pylon,/turf/simulated/floor/bmarble,/area/submap/wizardcrash)
-"aK" = (/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 1},/obj/machinery/door/window/westleft,/turf/simulated/shuttle/floor/voidcraft,/area/submap/wizardcrash)
-"aL" = (/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 1},/turf/simulated/shuttle/floor/voidcraft,/area/submap/wizardcrash)
-"aM" = (/obj/machinery/door/airlock/external,/turf/simulated/floor/plating,/area/submap/wizardcrash)
-"aN" = (/obj/structure/bookcase,/obj/item/weapon/book/manual/barman_recipes,/obj/item/weapon/book/manual/engineering_hacking,/turf/simulated/floor/wood,/area/submap/wizardcrash)
-"aO" = (/obj/structure/table/woodentable,/obj/item/weapon/spellbook/oneuse/smoke,/turf/simulated/floor/wood,/area/submap/wizardcrash)
-"aP" = (/obj/structure/window/reinforced{dir = 8},/obj/item/weapon/weldingtool/experimental,/obj/random/maintenance/engineering,/obj/random/maintenance/engineering,/obj/random/maintenance/engineering,/obj/random/maintenance/engineering,/obj/random/maintenance/engineering,/obj/random/maintenance/engineering,/obj/random/maintenance/engineering,/obj/structure/table/rack/shelf/steel,/turf/simulated/shuttle/floor/voidcraft,/area/submap/wizardcrash)
-"aQ" = (/obj/machinery/recharge_station,/turf/simulated/shuttle/floor/voidcraft,/area/submap/wizardcrash)
-"aR" = (/obj/machinery/light{dir = 8},/turf/simulated/floor/wood,/area/submap/wizardcrash)
-"aS" = (/turf/simulated/shuttle/floor/voidcraft,/area/submap/wizardcrash)
-"aT" = (/obj/machinery/light{dir = 4},/obj/structure/reagent_dispensers/fueltank/high,/turf/simulated/shuttle/floor/voidcraft,/area/submap/wizardcrash)
-"aV" = (/obj/item/weapon/flag/advent,/turf/simulated/floor/wood,/area/submap/wizardcrash)
-"aX" = (/obj/effect/wingrille_spawn/reinforced,/turf/simulated/floor/plating,/area/submap/wizardcrash)
-"aY" = (/obj/machinery/light{dir = 1},/turf/simulated/shuttle/plating,/area/submap/wizardcrash)
-"aZ" = (/obj/effect/decal/cleanable/blood,/turf/simulated/shuttle/plating,/area/submap/wizardcrash)
-"ba" = (/obj/structure/kitchenspike,/obj/effect/floor_decal/chapel{dir = 1},/turf/simulated/floor/tiled/kafel_full/red,/area/submap/wizardcrash)
-"bb" = (/obj/structure/bed/chair/comfy,/obj/effect/floor_decal/chapel{dir = 4},/turf/simulated/floor/tiled/kafel_full/red,/area/submap/wizardcrash)
-"bc" = (/obj/effect/decal/remains/human,/obj/item/weapon/reagent_containers/food/snacks/meat/monkey,/turf/simulated/shuttle/plating,/area/submap/wizardcrash)
-"bd" = (/obj/structure/showcase,/obj/effect/floor_decal/chapel{dir = 1},/turf/simulated/floor/tiled/kafel_full/red,/area/submap/wizardcrash)
-"be" = (/obj/structure/grille{density = 0; icon_state = "brokengrille"},/obj/effect/decal/cleanable/blood,/turf/simulated/floor/plating,/area/submap/wizardcrash)
-"bf" = (/obj/item/weapon/material/shard{icon_state = "medium"},/obj/effect/decal/cleanable/dirt,/turf/simulated/shuttle/plating,/area/submap/wizardcrash)
-"bg" = (/obj/item/weapon/reagent_containers/food/snacks/meat/monkey,/turf/simulated/shuttle/plating,/area/submap/wizardcrash)
-"bh" = (/obj/machinery/door/window,/obj/random/junk,/turf/simulated/floor/plating,/area/submap/wizardcrash)
-"bi" = (/obj/effect/floor_decal/chapel{dir = 8},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/kafel_full/red,/area/submap/wizardcrash)
-"bj" = (/obj/item/weapon/reagent_containers/food/snacks/meat/human,/obj/effect/decal/cleanable/blood,/obj/effect/floor_decal/chapel,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/kafel_full/red,/area/submap/wizardcrash)
-"bk" = (/obj/effect/floor_decal/chapel,/obj/structure/table/rack/shelf/steel,/turf/simulated/floor/tiled/kafel_full/red,/area/submap/wizardcrash)
-"bl" = (/mob/living/simple_mob/creature/cult/strong,/turf/simulated/shuttle/plating,/area/submap/wizardcrash)
-"bm" = (/obj/item/weapon/material/shard{icon_state = "medium"},/turf/simulated/floor/wood,/area/submap/wizardcrash)
-"bn" = (/obj/effect/floor_decal/chapel{dir = 1},/turf/simulated/floor/tiled/kafel_full/red,/area/submap/wizardcrash)
-"bo" = (/obj/effect/floor_decal/chapel{dir = 4},/turf/simulated/floor/tiled/kafel_full/red,/area/submap/wizardcrash)
-"bp" = (/obj/effect/floor_decal/chapel{dir = 4},/obj/structure/table/rack/shelf/steel,/obj/item/weapon/staff,/turf/simulated/floor/tiled/kafel_full/red,/area/submap/wizardcrash)
-"bq" = (/obj/effect/decal/remains/human,/turf/simulated/shuttle/plating,/area/submap/wizardcrash)
-"bs" = (/obj/effect/floor_decal/chapel,/turf/simulated/floor/tiled/kafel_full/red,/area/submap/wizardcrash)
-"bt" = (/obj/structure/showcase,/obj/effect/floor_decal/chapel{dir = 8},/turf/simulated/floor/tiled/kafel_full/red,/area/submap/wizardcrash)
-"bu" = (/obj/effect/floor_decal/chapel,/obj/item/weapon/staff/broom,/obj/structure/table/rack/shelf/steel,/turf/simulated/floor/tiled/kafel_full/red,/area/submap/wizardcrash)
-"bv" = (/obj/machinery/door/airlock/maintenance_hatch,/turf/simulated/floor/wood,/area/submap/wizardcrash)
-"bw" = (/obj/item/weapon/storage/toolbox/electrical,/obj/structure/table/standard,/turf/simulated/floor/bronze,/area/submap/wizardcrash)
-"bx" = (/turf/simulated/floor/bronze,/area/submap/wizardcrash)
-"by" = (/obj/machinery/light{dir = 1},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/bronze,/area/submap/wizardcrash)
-"bz" = (/obj/effect/landmark/loot_spawn,/turf/simulated/floor/bronze,/area/submap/wizardcrash)
-"bA" = (/obj/structure/table/standard,/obj/item/weapon/tool/wrench,/obj/item/weapon/weldingtool,/turf/simulated/floor/bronze,/area/submap/wizardcrash)
-"bB" = (/obj/machinery/light{dir = 1},/obj/structure/window/reinforced,/turf/simulated/floor/bronze,/area/submap/wizardcrash)
-"bC" = (/obj/effect/decal/cleanable/blood,/obj/machinery/light{dir = 1},/obj/effect/floor_decal/chapel{dir = 4},/obj/structure/table/rack/shelf/steel,/obj/item/weapon/material/knife/ritual,/turf/simulated/floor/tiled/kafel_full/red,/area/submap/wizardcrash)
-"bD" = (/obj/machinery/portable_atmospherics/canister/air,/turf/simulated/floor/bronze,/area/submap/wizardcrash)
-"bE" = (/obj/effect/decal/cleanable/blood/drip,/obj/effect/floor_decal/chapel{dir = 8},/turf/simulated/floor/tiled/kafel_full/red,/area/submap/wizardcrash)
-"bF" = (/obj/structure/shuttle/engine/heater,/obj/structure/window/reinforced{dir = 1; layer = 2.9},/turf/simulated/floor,/area/submap/wizardcrash)
-"bG" = (/turf/simulated/shuttle/plating,/area/submap/wizardcrash)
-"bH" = (/turf/simulated/shuttle/wall,/area/submap/wizardcrash)
-"bI" = (/obj/structure/window/reinforced,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/bronze,/area/submap/wizardcrash)
-"bJ" = (/obj/structure/window/reinforced{dir = 4},/turf/simulated/floor/bronze,/area/submap/wizardcrash)
-"bK" = (/obj/machinery/crystal/lava,/obj/effect/map_effect/beam_point/timer/electric,/turf/simulated/floor/bmarble,/area/submap/wizardcrash)
-"bL" = (/obj/structure/window/reinforced{dir = 8},/turf/simulated/floor/bronze,/area/submap/wizardcrash)
-"bM" = (/obj/structure/window/reinforced{dir = 1; layer = 2.9},/turf/simulated/floor/bronze,/area/submap/wizardcrash)
-"bN" = (/obj/structure/closet/crate,/turf/simulated/floor/bronze,/area/submap/wizardcrash)
-"bO" = (/obj/structure/shuttle/window,/obj/structure/grille,/obj/structure/grille/rustic,/turf/simulated/floor/plating,/area/submap/wizardcrash)
-"bP" = (/obj/structure/table/standard,/obj/item/stack/material/phoron{amount = 10},/obj/item/weapon/book/manual/engineering_singularity_safety,/turf/simulated/floor/bronze,/area/submap/wizardcrash)
-"de" = (/obj/structure/window/reinforced{dir = 1; layer = 2.9},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/bronze,/area/submap/wizardcrash)
-"fD" = (/turf/simulated/shuttle/wall/hard_corner,/area/submap/wizardcrash)
-"hS" = (/obj/effect/floor_decal/chapel{dir = 1},/mob/living/simple_mob/construct/shade,/turf/simulated/floor/tiled/kafel_full/red,/area/submap/wizardcrash)
-"jO" = (/mob/living/simple_mob/creature/cult/strong,/turf/simulated/shuttle/floor/voidcraft,/area/submap/wizardcrash)
-"lE" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/shuttle/floor/voidcraft,/area/submap/wizardcrash)
-"mK" = (/obj/effect/decal/cleanable/dirt,/obj/random/junk,/turf/simulated/shuttle/floor/voidcraft,/area/submap/wizardcrash)
-"mL" = (/obj/machinery/atmospherics/unary/engine/biggest,/turf/template_noop,/area/submap/wizardcrash)
-"oi" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood/broken,/area/submap/wizardcrash)
-"oM" = (/turf/simulated/floor/wood/broken,/area/submap/wizardcrash)
-"qp" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/carpet,/area/submap/wizardcrash)
-"rW" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood,/area/submap/wizardcrash)
-"uq" = (/obj/random/junk,/turf/simulated/floor/wood,/area/submap/wizardcrash)
-"vm" = (/obj/structure/window/reinforced{dir = 8},/obj/effect/decal/cleanable/dirt,/obj/random/junk,/turf/simulated/floor/carpet,/area/submap/wizardcrash)
-"wl" = (/mob/living/simple_mob/construct/proteon,/turf/simulated/floor/wood,/area/submap/wizardcrash)
-"yn" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/shuttle/floor/voidcraft,/area/submap/wizardcrash)
-"zA" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/bronze,/area/submap/wizardcrash)
-"zC" = (/obj/effect/floor_decal/chapel{dir = 8},/obj/structure/closet/medical,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/obj/random/firstaid,/obj/random/firstaid,/obj/random/firstaid,/turf/simulated/floor/tiled/kafel_full/red,/area/submap/wizardcrash)
-"Az" = (/obj/machinery/crystal,/obj/effect/map_effect/beam_point/timer/electric,/turf/simulated/floor/bmarble,/area/submap/wizardcrash)
-"AU" = (/turf/simulated/floor/wood,/area/submap/wizardcrash)
-"Co" = (/obj/effect/decal/cleanable/blood,/obj/effect/decal/cleanable/dirt,/turf/simulated/shuttle/plating,/area/submap/wizardcrash)
-"Dl" = (/turf/template_noop,/area/submap/wizardcrash)
-"DN" = (/obj/structure/window/reinforced{dir = 8},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/bronze,/area/submap/wizardcrash)
-"IO" = (/mob/living/simple_mob/construct/shade,/turf/simulated/floor/bronze,/area/submap/wizardcrash)
-"Jc" = (/mob/living/simple_mob/construct/shade,/turf/simulated/floor/wood,/area/submap/wizardcrash)
-"Os" = (/obj/machinery/crystal/ice,/obj/effect/map_effect/beam_point/timer/electric,/turf/simulated/floor/bmarble,/area/submap/wizardcrash)
-"Qm" = (/obj/item/weapon/storage/toolbox/syndicate/powertools,/obj/effect/decal/cleanable/dirt,/mob/living/simple_mob/construct/proteon,/turf/simulated/floor/wood,/area/submap/wizardcrash)
-"Tk" = (/obj/structure/window/reinforced{dir = 4},/obj/random/junk,/turf/simulated/floor/bronze,/area/submap/wizardcrash)
-"Ue" = (/obj/structure/bookcase/bookcart,/turf/simulated/floor/wood,/area/submap/wizardcrash)
-"UX" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/mob/living/simple_mob/construct/shade,/turf/simulated/floor/wood,/area/submap/wizardcrash)
-"VQ" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/shuttle/plating,/area/submap/wizardcrash)
-"Wz" = (/mob/living/simple_mob/construct/wraith,/turf/simulated/floor/bronze,/area/submap/wizardcrash)
-"XC" = (/mob/living/simple_mob/construct/harvester/greater,/turf/simulated/floor/wood/broken,/area/submap/wizardcrash)
-"Yk" = (/obj/item/weapon/flag/advent,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood,/area/submap/wizardcrash)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/turf/template_noop,
+/area/template_noop)
+"ab" = (
+/turf/simulated/mineral/floor/vacuum,
+/area/submap/wizardcrash)
+"ac" = (
+/turf/simulated/mineral,
+/area/submap/wizardcrash)
+"ad" = (
+/obj/structure/grille{
+	density = 0;
+	icon_state = "brokengrille"
+	},
+/obj/item/weapon/material/shard{
+	icon_state = "small"
+	},
+/turf/simulated/floor/wood/broken,
+/area/submap/wizardcrash)
+"ah" = (
+/obj/structure/grille{
+	density = 0;
+	icon_state = "brokengrille"
+	},
+/obj/item/weapon/material/shard,
+/turf/simulated/floor/wood/broken,
+/area/submap/wizardcrash)
+"aj" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/submap/wizardcrash)
+"ak" = (
+/obj/item/weapon/material/shard,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/submap/wizardcrash)
+"al" = (
+/obj/structure/shuttle/window,
+/obj/structure/grille,
+/obj/structure/grille/rustic,
+/turf/simulated/floor/wood,
+/area/submap/wizardcrash)
+"am" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/dice/d20,
+/turf/simulated/floor/wood,
+/area/submap/wizardcrash)
+"an" = (
+/obj/item/weapon/material/shard{
+	icon_state = "medium"
+	},
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/submap/wizardcrash)
+"ao" = (
+/obj/machinery/light{
+	dir = 1;
+	in_use = 1
+	},
+/obj/item/weapon/flag/advent,
+/turf/simulated/floor/wood,
+/area/submap/wizardcrash)
+"ap" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/floor/wood,
+/area/submap/wizardcrash)
+"aq" = (
+/obj/item/clothing/suit/wizrobe,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/submap/wizardcrash)
+"ar" = (
+/obj/machinery/light{
+	dir = 1;
+	in_use = 1
+	},
+/obj/item/weapon/flag/advent,
+/turf/simulated/floor/wood/broken,
+/area/submap/wizardcrash)
+"as" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/carpet,
+/area/submap/wizardcrash)
+"at" = (
+/obj/structure/bed,
+/obj/item/weapon/bedsheet/cosmos,
+/turf/simulated/floor/carpet,
+/area/submap/wizardcrash)
+"au" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/pen,
+/obj/item/weapon/paper{
+	info = "To the Magnificent Z.A.P.<BR>A small mining base has been created within our territory by wandless scum. Send them a message from the wizard federation they will not forget. I know your kind is rather fragile, but a group of lightly armed miners should not pose any threat to you at all. Just be warned they have a security cyborg for self defence, you might want to tune your spells to that threat. I look forward to hearing of your success.<BR>Grand Magus Abra the Wonderous";
+	name = "Mission Briefing"
+	},
+/turf/simulated/floor/wood,
+/area/submap/wizardcrash)
+"av" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/submap/wizardcrash)
+"aw" = (
+/obj/item/weapon/material/shard{
+	icon_state = "small"
+	},
+/turf/simulated/floor/wood,
+/area/submap/wizardcrash)
+"ay" = (
+/obj/effect/decal/remains/robot,
+/obj/item/clothing/head/wizard,
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/submap/wizardcrash)
+"az" = (
+/obj/item/weapon/spellbook/oneuse/charge,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/submap/wizardcrash)
+"aA" = (
+/turf/simulated/floor/wood/broken,
+/area/submap/whiteship)
+"aB" = (
+/turf/simulated/floor/carpet,
+/area/submap/wizardcrash)
+"aC" = (
+/mob/living/simple_mob/creature/cult/strong,
+/turf/simulated/floor/wood,
+/area/submap/wizardcrash)
+"aD" = (
+/obj/item/weapon/storage/backpack/satchel,
+/obj/structure/closet/cabinet,
+/obj/item/weapon/flame/lighter/zippo/royal,
+/turf/simulated/floor/carpet,
+/area/submap/wizardcrash)
+"aE" = (
+/obj/structure/bookcase,
+/obj/item/weapon/book/manual/hydroponics_pod_people,
+/turf/simulated/floor/wood,
+/area/submap/wizardcrash)
+"aF" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/spellbook/oneuse/mindswap,
+/turf/simulated/floor/wood/broken,
+/area/submap/wizardcrash)
+"aG" = (
+/obj/structure/table/fancyblack,
+/turf/simulated/floor/wood,
+/area/submap/wizardcrash)
+"aH" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/turf/simulated/floor/carpet,
+/area/submap/wizardcrash)
+"aI" = (
+/obj/structure/table/woodentable,
+/obj/item/toy/character/wizard,
+/turf/simulated/floor/carpet,
+/area/submap/wizardcrash)
+"aJ" = (
+/obj/structure/cult/pylon,
+/turf/simulated/floor/bmarble,
+/area/submap/wizardcrash)
+"aK" = (
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/window/westleft,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/submap/wizardcrash)
+"aL" = (
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/submap/wizardcrash)
+"aM" = (
+/obj/machinery/door/airlock/external,
+/turf/simulated/floor/plating,
+/area/submap/wizardcrash)
+"aN" = (
+/obj/structure/bookcase,
+/obj/item/weapon/book/manual/barman_recipes,
+/obj/item/weapon/book/manual/engineering_hacking,
+/turf/simulated/floor/wood,
+/area/submap/wizardcrash)
+"aO" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/spellbook/oneuse/smoke,
+/turf/simulated/floor/wood,
+/area/submap/wizardcrash)
+"aP" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/item/weapon/weldingtool/experimental,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+/obj/structure/table/rack/shelf/steel,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/submap/wizardcrash)
+"aQ" = (
+/obj/machinery/recharge_station,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/submap/wizardcrash)
+"aR" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/submap/wizardcrash)
+"aS" = (
+/turf/simulated/shuttle/floor/voidcraft,
+/area/submap/wizardcrash)
+"aT" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/reagent_dispensers/fueltank/high,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/submap/wizardcrash)
+"aV" = (
+/obj/item/weapon/flag/advent,
+/turf/simulated/floor/wood,
+/area/submap/wizardcrash)
+"aX" = (
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/floor/plating,
+/area/submap/wizardcrash)
+"aY" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/shuttle/plating,
+/area/submap/wizardcrash)
+"aZ" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/shuttle/plating,
+/area/submap/wizardcrash)
+"ba" = (
+/obj/structure/kitchenspike,
+/obj/effect/floor_decal/chapel{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full/red,
+/area/submap/wizardcrash)
+"bb" = (
+/obj/structure/bed/chair/comfy,
+/obj/effect/floor_decal/chapel{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/kafel_full/red,
+/area/submap/wizardcrash)
+"bc" = (
+/obj/effect/decal/remains/human,
+/obj/item/weapon/reagent_containers/food/snacks/meat/monkey,
+/turf/simulated/shuttle/plating,
+/area/submap/wizardcrash)
+"bd" = (
+/obj/structure/showcase,
+/obj/effect/floor_decal/chapel{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full/red,
+/area/submap/wizardcrash)
+"be" = (
+/obj/structure/grille{
+	density = 0;
+	icon_state = "brokengrille"
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/plating,
+/area/submap/wizardcrash)
+"bf" = (
+/obj/item/weapon/material/shard{
+	icon_state = "medium"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/shuttle/plating,
+/area/submap/wizardcrash)
+"bg" = (
+/obj/item/weapon/reagent_containers/food/snacks/meat/monkey,
+/turf/simulated/shuttle/plating,
+/area/submap/wizardcrash)
+"bh" = (
+/obj/machinery/door/window,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/submap/wizardcrash)
+"bi" = (
+/obj/effect/floor_decal/chapel{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/kafel_full/red,
+/area/submap/wizardcrash)
+"bj" = (
+/obj/item/weapon/reagent_containers/food/snacks/meat/human,
+/obj/effect/decal/cleanable/blood,
+/obj/effect/floor_decal/chapel,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/kafel_full/red,
+/area/submap/wizardcrash)
+"bk" = (
+/obj/effect/floor_decal/chapel,
+/obj/structure/table/rack/shelf/steel,
+/turf/simulated/floor/tiled/kafel_full/red,
+/area/submap/wizardcrash)
+"bl" = (
+/mob/living/simple_mob/creature/cult/strong,
+/turf/simulated/shuttle/plating,
+/area/submap/wizardcrash)
+"bm" = (
+/obj/item/weapon/material/shard{
+	icon_state = "medium"
+	},
+/turf/simulated/floor/wood,
+/area/submap/wizardcrash)
+"bn" = (
+/obj/effect/floor_decal/chapel{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full/red,
+/area/submap/wizardcrash)
+"bo" = (
+/obj/effect/floor_decal/chapel{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/kafel_full/red,
+/area/submap/wizardcrash)
+"bp" = (
+/obj/effect/floor_decal/chapel{
+	dir = 4
+	},
+/obj/structure/table/rack/shelf/steel,
+/obj/item/weapon/staff,
+/turf/simulated/floor/tiled/kafel_full/red,
+/area/submap/wizardcrash)
+"bq" = (
+/obj/effect/decal/remains/human,
+/turf/simulated/shuttle/plating,
+/area/submap/wizardcrash)
+"bs" = (
+/obj/effect/floor_decal/chapel,
+/turf/simulated/floor/tiled/kafel_full/red,
+/area/submap/wizardcrash)
+"bt" = (
+/obj/structure/showcase,
+/obj/effect/floor_decal/chapel{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/kafel_full/red,
+/area/submap/wizardcrash)
+"bu" = (
+/obj/effect/floor_decal/chapel,
+/obj/item/weapon/staff/broom,
+/obj/structure/table/rack/shelf/steel,
+/turf/simulated/floor/tiled/kafel_full/red,
+/area/submap/wizardcrash)
+"bv" = (
+/obj/machinery/door/airlock/maintenance_hatch,
+/turf/simulated/floor/wood,
+/area/submap/wizardcrash)
+"bw" = (
+/obj/item/weapon/storage/toolbox/electrical,
+/obj/structure/table/standard,
+/turf/simulated/floor/bronze,
+/area/submap/wizardcrash)
+"bx" = (
+/turf/simulated/floor/bronze,
+/area/submap/wizardcrash)
+"by" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/bronze,
+/area/submap/wizardcrash)
+"bz" = (
+/obj/effect/landmark/loot_spawn,
+/turf/simulated/floor/bronze,
+/area/submap/wizardcrash)
+"bA" = (
+/obj/structure/table/standard,
+/obj/item/weapon/tool/wrench,
+/obj/item/weapon/weldingtool,
+/turf/simulated/floor/bronze,
+/area/submap/wizardcrash)
+"bB" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/bronze,
+/area/submap/wizardcrash)
+"bC" = (
+/obj/effect/decal/cleanable/blood,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/chapel{
+	dir = 4
+	},
+/obj/structure/table/rack/shelf/steel,
+/obj/item/weapon/material/knife/ritual,
+/turf/simulated/floor/tiled/kafel_full/red,
+/area/submap/wizardcrash)
+"bD" = (
+/obj/machinery/portable_atmospherics/canister/air,
+/turf/simulated/floor/bronze,
+/area/submap/wizardcrash)
+"bE" = (
+/obj/effect/decal/cleanable/blood/drip,
+/obj/effect/floor_decal/chapel{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/kafel_full/red,
+/area/submap/wizardcrash)
+"bF" = (
+/obj/structure/shuttle/engine/heater,
+/obj/structure/window/reinforced{
+	dir = 1;
+	layer = 2.9
+	},
+/turf/simulated/floor,
+/area/submap/wizardcrash)
+"bG" = (
+/turf/simulated/shuttle/plating,
+/area/submap/wizardcrash)
+"bH" = (
+/turf/simulated/shuttle/wall,
+/area/submap/wizardcrash)
+"bI" = (
+/obj/structure/window/reinforced,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/bronze,
+/area/submap/wizardcrash)
+"bJ" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/bronze,
+/area/submap/wizardcrash)
+"bK" = (
+/obj/machinery/crystal/lava,
+/obj/effect/map_effect/beam_point/timer/electric,
+/turf/simulated/floor/bmarble,
+/area/submap/wizardcrash)
+"bL" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/bronze,
+/area/submap/wizardcrash)
+"bM" = (
+/obj/structure/window/reinforced{
+	dir = 1;
+	layer = 2.9
+	},
+/turf/simulated/floor/bronze,
+/area/submap/wizardcrash)
+"bN" = (
+/obj/structure/closet/crate,
+/turf/simulated/floor/bronze,
+/area/submap/wizardcrash)
+"bO" = (
+/obj/structure/shuttle/window,
+/obj/structure/grille,
+/obj/structure/grille/rustic,
+/turf/simulated/floor/plating,
+/area/submap/wizardcrash)
+"bP" = (
+/obj/structure/table/standard,
+/obj/item/stack/material/phoron{
+	amount = 10
+	},
+/obj/item/weapon/book/manual/engineering_singularity_safety,
+/turf/simulated/floor/bronze,
+/area/submap/wizardcrash)
+"de" = (
+/obj/structure/window/reinforced{
+	dir = 1;
+	layer = 2.9
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/bronze,
+/area/submap/wizardcrash)
+"fD" = (
+/turf/simulated/shuttle/wall/hard_corner,
+/area/submap/wizardcrash)
+"hS" = (
+/obj/effect/floor_decal/chapel{
+	dir = 1
+	},
+/mob/living/simple_mob/construct/shade,
+/turf/simulated/floor/tiled/kafel_full/red,
+/area/submap/wizardcrash)
+"jO" = (
+/mob/living/simple_mob/creature/cult/strong,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/submap/wizardcrash)
+"lE" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/submap/wizardcrash)
+"mK" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/random/junk,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/submap/wizardcrash)
+"mL" = (
+/obj/machinery/atmospherics/unary/engine/biggest,
+/turf/template_noop,
+/area/submap/wizardcrash)
+"oi" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/broken,
+/area/submap/wizardcrash)
+"oM" = (
+/turf/simulated/floor/wood/broken,
+/area/submap/wizardcrash)
+"qp" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet,
+/area/submap/wizardcrash)
+"rW" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/submap/wizardcrash)
+"uq" = (
+/obj/random/junk,
+/turf/simulated/floor/wood,
+/area/submap/wizardcrash)
+"vm" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/random/junk,
+/turf/simulated/floor/carpet,
+/area/submap/wizardcrash)
+"wl" = (
+/mob/living/simple_mob/construct/proteon,
+/turf/simulated/floor/wood,
+/area/submap/wizardcrash)
+"yn" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/submap/wizardcrash)
+"zA" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/bronze,
+/area/submap/wizardcrash)
+"zC" = (
+/obj/effect/floor_decal/chapel{
+	dir = 8
+	},
+/obj/structure/closet/medical,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/firstaid,
+/obj/random/firstaid,
+/obj/random/firstaid,
+/turf/simulated/floor/tiled/kafel_full/red,
+/area/submap/wizardcrash)
+"Az" = (
+/obj/machinery/crystal,
+/obj/effect/map_effect/beam_point/timer/electric,
+/turf/simulated/floor/bmarble,
+/area/submap/wizardcrash)
+"AU" = (
+/turf/simulated/floor/wood,
+/area/submap/wizardcrash)
+"Co" = (
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/shuttle/plating,
+/area/submap/wizardcrash)
+"Dl" = (
+/turf/template_noop,
+/area/submap/wizardcrash)
+"DN" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/bronze,
+/area/submap/wizardcrash)
+"IO" = (
+/mob/living/simple_mob/construct/shade,
+/turf/simulated/floor/bronze,
+/area/submap/wizardcrash)
+"Jc" = (
+/mob/living/simple_mob/construct/shade,
+/turf/simulated/floor/wood,
+/area/submap/wizardcrash)
+"Os" = (
+/obj/machinery/crystal/ice,
+/obj/effect/map_effect/beam_point/timer/electric,
+/turf/simulated/floor/bmarble,
+/area/submap/wizardcrash)
+"Qm" = (
+/obj/item/weapon/storage/toolbox/syndicate/powertools,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/construct/proteon,
+/turf/simulated/floor/wood,
+/area/submap/wizardcrash)
+"Tk" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/random/junk,
+/turf/simulated/floor/bronze,
+/area/submap/wizardcrash)
+"Ue" = (
+/obj/structure/bookcase/bookcart,
+/turf/simulated/floor/wood,
+/area/submap/wizardcrash)
+"UX" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/construct/shade,
+/turf/simulated/floor/wood,
+/area/submap/wizardcrash)
+"VQ" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/shuttle/plating,
+/area/submap/wizardcrash)
+"Wz" = (
+/mob/living/simple_mob/construct/wraith,
+/turf/simulated/floor/bronze,
+/area/submap/wizardcrash)
+"XC" = (
+/mob/living/simple_mob/construct/harvester/greater,
+/turf/simulated/floor/wood/broken,
+/area/submap/wizardcrash)
+"Yk" = (
+/obj/item/weapon/flag/advent,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/submap/wizardcrash)
 
 (1,1,1) = {"
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaababacacacacacaaaaaaaaaaaaaa
-aaaaaaaaacacacacacacacacacabaaaaaaaaaaaa
-aaaaaaaaacacacacacacacacacababacaaaaaaaa
-aaaaaaacacacacacacacacacacacacacacaaaaaa
-aaaaabacacacacacacacacacacacacacacaaaaaa
-aaaaabacacacacacacacacacacacacacacaaaaaa
-aaaaacacacacacacacadbHacacacacacaaaaaaaa
-aaaaacacacacacbHaCaAoMbHacacacaaaaaaaaaa
-aaaaaaacfDbHahfDoMajakfDalbHbHaaaaaaaaaa
-aaaaaaaabHamanaoapaqQmarasatbHaaaaaaaaaa
-aaaaaaaabOauavawXCayazoMvmaBbOaaaaaaaaaa
-aaaaaaaabHAUwlrWAUrWAUJcqpaDbHaaaaaaaaaa
-aaaaaaaabHaEaFrWAUaGAUuqaHaIbHaaaaaaaaaa
-aaaaaaaabOUeJcrWaGaJaGrWaKaLaMaaaaaaaaaa
-aaaaaaaabHaNaOuqrWaGAUrWaPaQbHaaaaaaaaaa
-aaaaaabHbHaRoMAUoiAUoMAUaSaTbHbHaaaaaaaa
-aaaabHfDfDaXaXaXaVrWYkaXaXaXfDfDbHaaaaaa
-aaaabHaYbcaZaZaXrWUXrWaXbabbbdbCbHaaaaaa
-aaaabHbGVQVQbfbeoirWAUbhbibjbEbkbHaaaaaa
-aaaabHblVQCobGaXbmAUAUaXbnbohSbpbHaaaaaa
-aaaafDbqbgbGbGaXAUAUAUaXzCbsbtbufDaaaaaa
-aaaabHfDbHbHbHbHbHbvbHbHbHbHbHfDbHaaaaaa
-aaaafDbwbxbBIOlEbybIbymKzAbBbxbzfDaaaaaa
-aaaabHbAbJbKbLynTkOsbLjObJAzDNbPbHaaaaaa
-aaaafDbDbxbMWzaSbxdezAaSWzbMbxbNfDaaaaaa
-aaaabHfDbFbFbFbHbFbFbFbHbFbFbFfDbHaaaaaa
-aaaaaabHbGbGbGbHbGbGbGbHbGbGbGbHaaaaaaaa
-aaaaaaaamLDlDlaamLDlDlaamLDlDlaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(2,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(3,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+ab
+ab
+ac
+ac
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+bH
+bH
+bH
+bH
+fD
+bH
+fD
+bH
+fD
+bH
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(4,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+ac
+ac
+ac
+ac
+ac
+ac
+aa
+aa
+aa
+aa
+aa
+aa
+bH
+fD
+aY
+bG
+bl
+bq
+fD
+bw
+bA
+bD
+fD
+bH
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(5,1,1) = {"
+aa
+aa
+aa
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+fD
+bH
+bO
+bH
+bH
+bO
+bH
+bH
+fD
+bc
+VQ
+VQ
+bg
+bH
+bx
+bJ
+bx
+bF
+bG
+mL
+aa
+aa
+aa
+aa
+aa
+"}
+(6,1,1) = {"
+aa
+aa
+aa
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+bH
+am
+au
+AU
+aE
+Ue
+aN
+aR
+aX
+aZ
+VQ
+Co
+bG
+bH
+bB
+bK
+bM
+bF
+bG
+Dl
+aa
+aa
+aa
+aa
+aa
+"}
+(7,1,1) = {"
+aa
+aa
+ab
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ah
+an
+av
+wl
+aF
+Jc
+aO
+oM
+aX
+aZ
+bf
+bG
+bG
+bH
+IO
+bL
+Wz
+bF
+bG
+Dl
+aa
+aa
+aa
+aa
+aa
+"}
+(8,1,1) = {"
+aa
+aa
+ab
+ac
+ac
+ac
+ac
+ac
+ac
+bH
+fD
+ao
+aw
+rW
+rW
+rW
+uq
+AU
+aX
+aX
+be
+aX
+aX
+bH
+lE
+yn
+aS
+bH
+bH
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(9,1,1) = {"
+aa
+aa
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+aC
+oM
+ap
+XC
+AU
+AU
+aG
+rW
+oi
+aV
+rW
+oi
+bm
+AU
+bH
+by
+Tk
+bx
+bF
+bG
+mL
+aa
+aa
+aa
+aa
+aa
+"}
+(10,1,1) = {"
+aa
+aa
+ac
+ac
+ac
+ac
+ac
+ac
+ad
+aA
+aj
+aq
+ay
+rW
+aG
+aJ
+aG
+AU
+rW
+UX
+rW
+AU
+AU
+bv
+bI
+Os
+de
+bF
+bG
+Dl
+aa
+aa
+aa
+aa
+aa
+"}
+(11,1,1) = {"
+aa
+aa
+ac
+ac
+ac
+ac
+ac
+ac
+bH
+oM
+ak
+Qm
+az
+AU
+AU
+aG
+AU
+oM
+Yk
+rW
+AU
+AU
+AU
+bH
+by
+bL
+zA
+bF
+bG
+Dl
+aa
+aa
+aa
+aa
+aa
+"}
+(12,1,1) = {"
+aa
+aa
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+bH
+fD
+ar
+oM
+Jc
+uq
+rW
+rW
+AU
+aX
+aX
+bh
+aX
+aX
+bH
+mK
+jO
+aS
+bH
+bH
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(13,1,1) = {"
+aa
+aa
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+al
+as
+vm
+qp
+aH
+aK
+aP
+aS
+aX
+ba
+bi
+bn
+zC
+bH
+zA
+bJ
+Wz
+bF
+bG
+mL
+aa
+aa
+aa
+aa
+aa
+"}
+(14,1,1) = {"
+aa
+aa
+aa
+ab
+ab
+ac
+ac
+ac
+ac
+ac
+bH
+at
+aB
+aD
+aI
+aL
+aQ
+aT
+aX
+bb
+bj
+bo
+bs
+bH
+bB
+Az
+bM
+bF
+bG
+Dl
+aa
+aa
+aa
+aa
+aa
+"}
+(15,1,1) = {"
+aa
+aa
+aa
+aa
+ab
+ac
+ac
+ac
+ac
+ac
+bH
+bH
+bO
+bH
+bH
+aM
+bH
+bH
+fD
+bd
+bE
+hS
+bt
+bH
+bx
+DN
+bx
+bF
+bG
+Dl
+aa
+aa
+aa
+aa
+aa
+"}
+(16,1,1) = {"
+aa
+aa
+aa
+aa
+ac
+ac
+ac
+ac
+ac
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+bH
+fD
+bC
+bk
+bp
+bu
+fD
+bz
+bP
+bN
+fD
+bH
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(17,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+ac
+ac
+ac
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+bH
+bH
+bH
+bH
+fD
+bH
+fD
+bH
+fD
+bH
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(18,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(19,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(20,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 "}

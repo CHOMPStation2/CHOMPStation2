@@ -1,166 +1,2419 @@
-"aa" = (/turf/template_noop,/area/template_noop)
-"ae" = (/obj/machinery/atmospherics/pipe/simple/hidden,/obj/effect/floor_decal/rust,/turf/simulated/floor/plating,/area/submap/spacebar)
-"ag" = (/turf/simulated/mineral/floor/ignore_mapgen/cave,/area/submap/spacebar)
-"ai" = (/turf/simulated/mineral,/area/submap/spacebar)
-"ak" = (/obj/structure/shuttle/window,/obj/structure/grille/rustic,/turf/simulated/floor/plating,/area/submap/spacebar)
-"al" = (/turf/simulated/shuttle/wall,/turf/space,/area/submap/spacebar)
-"am" = (/turf/simulated/wall,/area/submap/spacebar)
-"an" = (/turf/simulated/shuttle/wall,/area/submap/spacebar)
-"ao" = (/obj/structure/bed/chair/bay/comfy/blue{dir = 1},/turf/simulated/shuttle/floor,/area/submap/spacebar)
-"ap" = (/obj/structure/table/standard,/obj/structure/reagent_dispensers/beerkeg,/turf/simulated/floor/wood,/area/submap/spacebar)
-"aq" = (/obj/structure/table/standard,/turf/simulated/floor/wood,/area/submap/spacebar)
-"ar" = (/obj/machinery/light/small{dir = 1},/obj/machinery/vending/deluxe_boozeomat{req_access = null; req_log_access = null},/turf/simulated/floor/wood,/area/submap/spacebar)
-"at" = (/obj/structure/table/standard,/obj/item/toy/figure/bartender,/turf/simulated/floor/wood,/area/submap/spacebar)
-"au" = (/obj/structure/table/standard,/obj/item/weapon/reagent_containers/food/drinks/shaker,/turf/simulated/floor/wood,/area/submap/spacebar)
-"av" = (/obj/effect/decal/remains/human,/turf/simulated/floor/wood,/area/submap/spacebar)
-"aw" = (/obj/structure/reagent_dispensers/beerkeg,/turf/simulated/floor/wood,/area/submap/spacebar)
-"ax" = (/turf/simulated/shuttle/floor,/area/submap/spacebar)
-"ay" = (/obj/machinery/door/airlock{name = "Bar Storage"},/turf/simulated/floor/wood,/area/submap/spacebar)
-"az" = (/obj/structure/table/standard,/obj/machinery/reagentgrinder,/turf/simulated/floor/wood,/area/submap/spacebar)
-"aB" = (/obj/machinery/door/airlock/glass_external{autoclose = 0; frequency = 1379; icon_state = "door_locked"; id_tag = "spacebar_exterior"; locked = 1; name = "Bar Airlock"},/turf/simulated/shuttle/floor,/area/submap/spacebar)
-"aD" = (/turf/simulated/floor/wood,/area/submap/spacebar)
-"aE" = (/obj/machinery/vending/boozeomat,/turf/simulated/floor/wood,/area/submap/spacebar)
-"aF" = (/obj/structure/closet/secure_closet/freezer/kitchen,/turf/simulated/floor/wood/broken,/area/submap/spacebar)
-"aG" = (/obj/machinery/light/small,/obj/structure/table/standard,/turf/simulated/floor/wood,/area/submap/spacebar)
-"aH" = (/obj/structure/closet/secure_closet/freezer/fridge,/turf/simulated/floor/wood,/area/submap/spacebar)
-"aI" = (/obj/structure/table/standard,/obj/item/stack/material/steel{amount = 10},/turf/simulated/floor/wood,/area/submap/spacebar)
-"aJ" = (/obj/effect/wingrille_spawn/reinforced/crescent,/turf/simulated/floor/plating,/area/submap/spacebar)
-"aK" = (/obj/structure/table/marble,/turf/simulated/floor/wood,/area/submap/spacebar)
-"aL" = (/obj/item/weapon/reagent_containers/glass/rag,/obj/structure/table/marble,/turf/simulated/floor/wood,/area/submap/spacebar)
-"aM" = (/obj/machinery/door/airlock{name = "Bar Storage"},/turf/simulated/floor/tiled/asteroid_steel{icon_state = "wood"},/area/submap/spacebar)
-"aP" = (/obj/machinery/light{dir = 1},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/spacebar)
-"aQ" = (/obj/effect/wingrille_spawn/reinforced,/turf/simulated/floor/plating,/area/submap/spacebar)
-"aR" = (/obj/effect/wingrille_spawn/reinforced,/turf/simulated/wall,/area/submap/spacebar)
-"aU" = (/obj/structure/bed/chair{dir = 4; icon_state = "chair"; tag = "icon-chair (EAST)"},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/spacebar)
-"aV" = (/obj/structure/table/woodentable,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/spacebar)
-"aW" = (/obj/structure/bed/chair{dir = 8; icon_state = "chair"; tag = "icon-chair (WEST)"},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/spacebar)
-"aX" = (/obj/machinery/light{dir = 8},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/spacebar)
-"aY" = (/obj/structure/bed/chair,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/spacebar)
-"aZ" = (/turf/simulated/floor/tiled/asteroid_steel,/area/submap/spacebar)
-"ba" = (/obj/machinery/vending/cola,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/spacebar)
-"bb" = (/obj/machinery/vending/cigarette,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/spacebar)
-"bc" = (/obj/machinery/vending/coffee,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/spacebar)
-"bd" = (/obj/machinery/vending/snack,/obj/machinery/light,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/spacebar)
-"be" = (/obj/structure/bed/chair{dir = 1},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/spacebar)
-"bf" = (/obj/machinery/door/airlock{name = "Unisex Bathroom"},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/spacebar)
-"bg" = (/obj/structure/urinal{dir = 4; pixel_y = 0; pixel_x = -31},/turf/simulated/floor/tiled/old_tile/white,/area/submap/spacebar)
-"bh" = (/obj/structure/sink{dir = 4; pixel_x = 11},/obj/structure/mirror{pixel_x = 28},/turf/simulated/floor/tiled/old_tile/white,/area/submap/spacebar)
-"bi" = (/obj/machinery/light{dir = 4},/obj/structure/table/woodentable,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/spacebar)
-"bj" = (/obj/machinery/light/small{dir = 8},/turf/simulated/floor/tiled/old_tile/white,/area/submap/spacebar)
-"bk" = (/obj/structure/toilet{dir = 4},/obj/machinery/light/small{dir = 8},/turf/simulated/floor/tiled/old_tile/white,/area/submap/spacebar)
-"bl" = (/obj/machinery/door/airlock{name = "Toilet"},/turf/simulated/floor/tiled/old_tile/white,/area/submap/spacebar)
-"bm" = (/turf/simulated/floor/tiled/old_tile/white,/area/submap/spacebar)
-"bn" = (/obj/machinery/door/airlock/glass_external{autoclose = 0; frequency = 1379; icon_state = "door_locked"; id_tag = "spacebar_exterior"; locked = 1; name = "Bar Airlock"},/obj/machinery/access_button{command = "cycle_exterior"; frequency = 1379; master_tag = "spacebar_control"; name = "External Access Button"; pixel_y = -26},/turf/simulated/floor/plating,/area/submap/spacebar)
-"bo" = (/turf/simulated/floor/plating,/area/submap/spacebar)
-"bq" = (/obj/machinery/door/blast/regular{density = 0; dir = 8; icon_state = "pdoor0"; id = "spacebar_pod"; opacity = 0},/obj/structure/fans/hardlight,/turf/simulated/floor/plating,/area/submap/spacebar)
-"br" = (/obj/machinery/door/blast/regular{dir = 8; id = "spacebar_pod"},/turf/simulated/floor/plating,/area/submap/spacebar)
-"bs" = (/obj/structure/shuttle/engine/propulsion/burst,/turf/simulated/floor/plating,/turf/space,/area/submap/spacebar)
-"bt" = (/obj/effect/floor_decal/industrial/warning,/turf/simulated/floor/plating,/area/submap/spacebar)
-"bw" = (/obj/effect/floor_decal/rust,/obj/item/weapon/stool/padded{dir = 8},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/spacebar)
-"cb" = (/obj/random/junk,/turf/simulated/mineral/floor/ignore_mapgen/cave,/area/submap/spacebar)
-"dP" = (/obj/effect/floor_decal/industrial/warning,/obj/effect/floor_decal/industrial/warning,/obj/random/junk,/turf/simulated/floor/plating,/area/submap/spacebar)
-"dZ" = (/obj/random/trash,/turf/simulated/floor/wood,/area/submap/spacebar)
-"fB" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 5},/turf/simulated/wall/r_wall,/area/submap/spacebar)
-"go" = (/obj/random/trash,/obj/effect/floor_decal/rust,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/spacebar)
-"gT" = (/obj/machinery/door/airlock/external{frequency = 1379; icon_state = "door_locked"; id_tag = "spacebar_outer"; locked = 1; name = "External Airlock Access"; req_access = null},/turf/simulated/floor/plating,/area/submap/spacebar)
-"hV" = (/obj/effect/floor_decal/rust,/turf/simulated/floor/plating,/area/submap/spacebar)
-"hW" = (/obj/machinery/access_button{command = "cycle_exterior"; frequency = 1379; master_tag = "spacebar_airlock"; name = "exterior access button"; pixel_x = 25},/turf/simulated/floor/plating/external,/area/submap/spacebar)
-"hX" = (/obj/machinery/door/airlock/glass_external{frequency = 1379; icon_state = "door_locked"; id_tag = "spacebar_inner"; locked = 1; name = "Internal Airlock Access"; req_access = null},/turf/simulated/floor/plating,/area/submap/spacebar)
-"jw" = (/obj/random/trash,/turf/simulated/shuttle/floor,/area/submap/spacebar)
-"jJ" = (/obj/machinery/atmospherics/portables_connector{dir = 4},/obj/machinery/portable_atmospherics/canister/air/airlock,/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor/plating,/area/submap/spacebar)
-"jK" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 10},/obj/machinery/access_button{command = "cycle_interior"; frequency = 1379; master_tag = "spacebar_airlock"; name = "interior access button"; pixel_x = -25},/turf/simulated/floor/plating,/area/submap/spacebar)
-"jM" = (/obj/structure/table/woodentable,/obj/structure/table/woodentable,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/spacebar)
-"jQ" = (/obj/effect/floor_decal/rust,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/spacebar)
-"kx" = (/obj/effect/floor_decal/industrial/warning,/obj/effect/floor_decal/rust,/turf/simulated/floor/plating,/area/submap/spacebar)
-"ln" = (/obj/random/trash,/turf/simulated/floor/plating,/area/submap/spacebar)
-"mw" = (/obj/machinery/atmospherics/unary/vent_pump/high_volume{frequency = 1380; id_tag = "spacebar_pump"},/obj/effect/floor_decal/rust,/turf/simulated/floor/plating,/area/submap/spacebar)
-"mR" = (/obj/effect/floor_decal/rust,/obj/effect/floor_decal/rust,/turf/simulated/floor/tiled/old_tile/white,/area/submap/spacebar)
-"nN" = (/obj/random/junk,/turf/simulated/floor/wood/broken,/area/submap/spacebar)
-"nU" = (/obj/structure/closet/crate,/obj/item/weapon/reagent_containers/food/snacks/sliceable/supremoburrito,/turf/simulated/mineral/floor/ignore_mapgen/cave,/area/submap/spacebar)
-"pa" = (/obj/random/junk,/turf/simulated/floor/tiled/old_tile/white,/area/submap/spacebar)
-"pD" = (/obj/effect/floor_decal/rust,/obj/machinery/embedded_controller/radio/airlock/access_controller{id_tag = "spacebar_control"; pixel_x = -26; pixel_y = -26; tag_exterior_door = "spacebar_exterior"; tag_interior_door = "spacebar_interior"},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/spacebar)
-"qn" = (/obj/machinery/atmospherics/pipe/simple/hidden,/obj/machinery/meter,/obj/effect/floor_decal/industrial/warning,/turf/simulated/floor/plating,/area/submap/spacebar)
-"rl" = (/obj/machinery/light/small{dir = 4},/turf/simulated/floor/plating/external,/area/submap/spacebar)
-"rP" = (/turf/simulated/floor/wood/broken,/area/submap/spacebar)
-"so" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/turf/simulated/wall/r_wall,/area/submap/spacebar)
-"sV" = (/obj/structure/table/marble,/obj/random/junk,/turf/simulated/floor/wood,/area/submap/spacebar)
-"tj" = (/obj/structure/bed/chair{dir = 8; icon_state = "chair"; tag = "icon-chair (WEST)"},/obj/random/trash,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/spacebar)
-"wa" = (/obj/structure/fans/hardlight,/obj/machinery/door/blast/regular{density = 0; dir = 8; icon_state = "pdoor0"; id = "spacebar_pod"; opacity = 0},/turf/simulated/floor/plating,/area/submap/spacebar)
-"xa" = (/obj/random/junk,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/spacebar)
-"xi" = (/obj/random/trash,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/spacebar)
-"xN" = (/obj/item/weapon/stool/padded,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/spacebar)
-"yJ" = (/obj/machinery/button{id = "spacebar_pod"; pixel_x = -26},/turf/simulated/floor/wood/broken,/area/submap/spacebar)
-"zm" = (/obj/structure/closet/grave,/obj/structure/gravemarker{pixel_y = 13},/turf/simulated/mineral/floor/ignore_mapgen/cave,/area/submap/spacebar)
-"zP" = (/obj/machinery/vending/deluxe_dinner{req_access = null; req_log_access = null},/turf/simulated/floor/wood,/area/submap/spacebar)
-"Af" = (/obj/effect/floor_decal/industrial/warning{dir = 1},/turf/simulated/floor/plating,/area/submap/spacebar)
-"AD" = (/obj/item/device/gps/internal/poi{gps_tag = "RockingCore Bar"},/turf/simulated/wall,/area/submap/spacebar)
-"Bn" = (/obj/random/trash,/turf/simulated/mineral/floor/ignore_mapgen/cave,/area/submap/spacebar)
-"Bv" = (/turf/simulated/mineral/floor/vacuum,/area/submap/spacebar)
-"Fl" = (/obj/effect/floor_decal/industrial/warning/corner{dir = 8},/turf/simulated/floor/plating,/area/submap/spacebar)
-"GS" = (/obj/machinery/light/small{dir = 4},/turf/simulated/mineral/floor/ignore_mapgen/cave,/area/submap/spacebar)
-"Ha" = (/obj/effect/floor_decal/rust,/obj/item/weapon/stool/padded{dir = 1},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/spacebar)
-"IF" = (/obj/effect/floor_decal/rust,/turf/simulated/floor/tiled/old_tile/white,/area/submap/spacebar)
-"IJ" = (/obj/effect/wingrille_spawn/reinforced,/turf/simulated/mineral/floor/ignore_mapgen/cave,/area/submap/spacebar)
-"LH" = (/obj/machinery/atmospherics/pipe/manifold/hidden{dir = 4},/turf/simulated/floor/plating,/area/submap/spacebar)
-"Mr" = (/obj/effect/floor_decal/rust,/obj/structure/urinal{dir = 4; pixel_y = 0; pixel_x = -31},/turf/simulated/floor/tiled/old_tile/white,/area/submap/spacebar)
-"NI" = (/obj/machinery/atmospherics/unary/vent_pump/high_volume{dir = 1; frequency = 1380; id_tag = "spacebar_pump"},/obj/machinery/embedded_controller/radio/airlock/airlock_controller{id_tag = "spacebar_airlock"; pixel_y = 25; tag_airpump = "spacebar_pump"; tag_chamber_sensor = "spacebar_sensor"; tag_exterior_door = "spacebar_outer"; tag_interior_door = "spacebar_inner"},/turf/simulated/floor/plating,/area/submap/spacebar)
-"OJ" = (/obj/machinery/atmospherics/pipe/manifold/hidden{dir = 1},/turf/simulated/wall/r_wall,/area/submap/spacebar)
-"PC" = (/obj/effect/decal/cleanable/greenglow,/turf/simulated/floor/tiled/old_tile/white,/area/submap/spacebar)
-"Qo" = (/obj/effect/floor_decal/rust,/turf/simulated/floor/plating/external,/area/submap/spacebar)
-"Rh" = (/obj/structure/closet/crate/miningcar,/turf/simulated/mineral/floor/ignore_mapgen/cave,/area/submap/spacebar)
-"Rz" = (/obj/structure/fans/hardlight,/obj/machinery/door/airlock/glass_external{autoclose = 0; frequency = 1379; icon_state = "door_locked"; id_tag = "spacebar_interior"; locked = 1; name = "Bar Airlock"},/obj/machinery/access_button{command = "cycle_interior"; frequency = 1379; master_tag = "spacebar_control"; name = "Internal Access Button"; pixel_x = -6; pixel_y = -26},/turf/simulated/floor/plating,/area/submap/spacebar)
-"RE" = (/turf/simulated/floor/plating/external,/area/submap/spacebar)
-"RQ" = (/obj/machinery/atmospherics/pipe/manifold/hidden,/turf/simulated/wall/r_wall,/area/submap/spacebar)
-"RV" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 6},/turf/simulated/wall/r_wall,/area/submap/spacebar)
-"SA" = (/obj/structure/sink{dir = 4; pixel_x = 11},/obj/structure/mirror{pixel_x = 28},/obj/effect/floor_decal/rust,/turf/simulated/floor/tiled/old_tile/white,/area/submap/spacebar)
-"UI" = (/obj/random/junk,/obj/effect/floor_decal/rust,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/spacebar)
-"UR" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 9},/turf/simulated/floor/plating,/area/submap/spacebar)
-"Vp" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 9},/obj/machinery/light/small{dir = 8},/turf/simulated/floor/plating,/area/submap/spacebar)
-"Wa" = (/obj/effect/floor_decal/industrial/warning,/obj/effect/floor_decal/industrial/warning,/turf/simulated/floor/plating,/area/submap/spacebar)
-"Xe" = (/obj/machinery/atmospherics/unary/vent_pump/high_volume{frequency = 1380; id_tag = "spacebar_pump"},/turf/simulated/floor/plating,/area/submap/spacebar)
-"XF" = (/obj/effect/floor_decal/industrial/warning,/obj/effect/floor_decal/industrial/warning,/obj/effect/floor_decal/industrial/warning,/turf/simulated/floor/plating,/area/submap/spacebar)
-"XV" = (/turf/simulated/wall/r_wall,/area/submap/spacebar)
-"Yx" = (/obj/machinery/atmospherics/unary/vent_pump/high_volume{dir = 1; frequency = 1380; id_tag = "spacebar_pump"},/obj/machinery/airlock_sensor{id_tag = "spacebar_sensor"; pixel_y = 25},/turf/simulated/floor/plating,/area/submap/spacebar)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/turf/template_noop,
+/area/template_noop)
+"ae" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/spacebar)
+"ag" = (
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/submap/spacebar)
+"ai" = (
+/turf/simulated/mineral,
+/area/submap/spacebar)
+"ak" = (
+/obj/structure/shuttle/window,
+/obj/structure/grille/rustic,
+/turf/simulated/floor/plating,
+/area/submap/spacebar)
+"al" = (
+/turf/simulated/shuttle/wall,
+/turf/space,
+/area/submap/spacebar)
+"am" = (
+/turf/simulated/wall,
+/area/submap/spacebar)
+"an" = (
+/turf/simulated/shuttle/wall,
+/area/submap/spacebar)
+"ao" = (
+/obj/structure/bed/chair/bay/comfy/blue{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor,
+/area/submap/spacebar)
+"ap" = (
+/obj/structure/table/standard,
+/obj/structure/reagent_dispensers/beerkeg,
+/turf/simulated/floor/wood,
+/area/submap/spacebar)
+"aq" = (
+/obj/structure/table/standard,
+/turf/simulated/floor/wood,
+/area/submap/spacebar)
+"ar" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/vending/deluxe_boozeomat{
+	req_access = null;
+	req_log_access = null
+	},
+/turf/simulated/floor/wood,
+/area/submap/spacebar)
+"at" = (
+/obj/structure/table/standard,
+/obj/item/toy/figure/bartender,
+/turf/simulated/floor/wood,
+/area/submap/spacebar)
+"au" = (
+/obj/structure/table/standard,
+/obj/item/weapon/reagent_containers/food/drinks/shaker,
+/obj/item/weapon/gun/projectile/shotgun/doublebarrel,
+/turf/simulated/floor/wood,
+/area/submap/spacebar)
+"av" = (
+/obj/effect/decal/remains/human,
+/turf/simulated/floor/wood,
+/area/submap/spacebar)
+"aw" = (
+/obj/structure/reagent_dispensers/beerkeg,
+/turf/simulated/floor/wood,
+/area/submap/spacebar)
+"ax" = (
+/turf/simulated/shuttle/floor,
+/area/submap/spacebar)
+"ay" = (
+/obj/machinery/door/airlock{
+	name = "Bar Storage"
+	},
+/turf/simulated/floor/wood,
+/area/submap/spacebar)
+"az" = (
+/obj/structure/table/standard,
+/obj/machinery/reagentgrinder,
+/turf/simulated/floor/wood,
+/area/submap/spacebar)
+"aB" = (
+/obj/machinery/door/airlock/glass_external{
+	autoclose = 0;
+	frequency = 1379;
+	icon_state = "door_locked";
+	id_tag = "spacebar_exterior";
+	locked = 1;
+	name = "Bar Airlock"
+	},
+/turf/simulated/shuttle/floor,
+/area/submap/spacebar)
+"aD" = (
+/turf/simulated/floor/wood,
+/area/submap/spacebar)
+"aE" = (
+/obj/machinery/vending/boozeomat,
+/turf/simulated/floor/wood,
+/area/submap/spacebar)
+"aF" = (
+/obj/structure/closet/secure_closet/freezer/kitchen,
+/turf/simulated/floor/wood/broken,
+/area/submap/spacebar)
+"aG" = (
+/obj/machinery/light/small,
+/obj/structure/table/standard,
+/turf/simulated/floor/wood,
+/area/submap/spacebar)
+"aH" = (
+/obj/structure/closet/secure_closet/freezer/fridge,
+/turf/simulated/floor/wood,
+/area/submap/spacebar)
+"aI" = (
+/obj/structure/table/standard,
+/obj/item/stack/material/steel{
+	amount = 10
+	},
+/turf/simulated/floor/wood,
+/area/submap/spacebar)
+"aJ" = (
+/obj/structure/window/reinforced/full,
+/obj/structure/grille,
+/turf/simulated/floor/plating,
+/area/submap/spacebar)
+"aK" = (
+/obj/structure/table/marble,
+/turf/simulated/floor/wood,
+/area/submap/spacebar)
+"aL" = (
+/obj/item/weapon/reagent_containers/glass/rag,
+/obj/structure/table/marble,
+/turf/simulated/floor/wood,
+/area/submap/spacebar)
+"aM" = (
+/obj/machinery/door/airlock{
+	name = "Bar Storage"
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	icon_state = "wood"
+	},
+/area/submap/spacebar)
+"aP" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/spacebar)
+"aR" = (
+/obj/structure/window/reinforced/full,
+/obj/structure/grille,
+/turf/simulated/wall,
+/area/submap/spacebar)
+"aU" = (
+/obj/structure/bed/chair{
+	dir = 4;
+	icon_state = "chair";
+	tag = "icon-chair (EAST)"
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/spacebar)
+"aV" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/spacebar)
+"aW" = (
+/obj/structure/bed/chair{
+	dir = 8;
+	icon_state = "chair";
+	tag = "icon-chair (WEST)"
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/spacebar)
+"aX" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/spacebar)
+"aY" = (
+/obj/structure/bed/chair,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/spacebar)
+"aZ" = (
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/spacebar)
+"ba" = (
+/obj/machinery/vending/cola,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/spacebar)
+"bb" = (
+/obj/machinery/vending/cigarette,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/spacebar)
+"bc" = (
+/obj/machinery/vending/coffee,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/spacebar)
+"bd" = (
+/obj/machinery/vending/snack,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/spacebar)
+"be" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/spacebar)
+"bf" = (
+/obj/machinery/door/airlock{
+	name = "Unisex Bathroom"
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/spacebar)
+"bg" = (
+/obj/structure/urinal{
+	dir = 4;
+	pixel_y = 0;
+	pixel_x = -31
+	},
+/turf/simulated/floor/tiled/old_tile/white,
+/area/submap/spacebar)
+"bh" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/obj/structure/mirror{
+	pixel_x = 28
+	},
+/turf/simulated/floor/tiled/old_tile/white,
+/area/submap/spacebar)
+"bi" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/table/woodentable,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/spacebar)
+"bj" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_tile/white,
+/area/submap/spacebar)
+"bk" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_tile/white,
+/area/submap/spacebar)
+"bl" = (
+/obj/machinery/door/airlock{
+	name = "Toilet"
+	},
+/turf/simulated/floor/tiled/old_tile/white,
+/area/submap/spacebar)
+"bm" = (
+/turf/simulated/floor/tiled/old_tile/white,
+/area/submap/spacebar)
+"bn" = (
+/obj/machinery/door/airlock/glass_external{
+	autoclose = 0;
+	frequency = 1379;
+	icon_state = "door_locked";
+	id_tag = "spacebar_exterior";
+	locked = 1;
+	name = "Bar Airlock"
+	},
+/obj/machinery/access_button{
+	command = "cycle_exterior";
+	frequency = 1379;
+	master_tag = "spacebar_control";
+	name = "External Access Button";
+	pixel_y = -26
+	},
+/turf/simulated/floor/plating,
+/area/submap/spacebar)
+"bo" = (
+/turf/simulated/floor/plating,
+/area/submap/spacebar)
+"bq" = (
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 8;
+	icon_state = "pdoor0";
+	id = "spacebar_pod";
+	opacity = 0
+	},
+/obj/structure/fans/hardlight,
+/turf/simulated/floor/plating,
+/area/submap/spacebar)
+"br" = (
+/obj/machinery/door/blast/regular{
+	dir = 8;
+	id = "spacebar_pod"
+	},
+/turf/simulated/floor/plating,
+/area/submap/spacebar)
+"bs" = (
+/obj/structure/shuttle/engine/propulsion/burst,
+/turf/simulated/floor/plating,
+/turf/space,
+/area/submap/spacebar)
+"bt" = (
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/plating,
+/area/submap/spacebar)
+"bw" = (
+/obj/effect/floor_decal/rust,
+/obj/item/weapon/stool/padded{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/spacebar)
+"cb" = (
+/obj/random/junk,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/submap/spacebar)
+"dP" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/submap/spacebar)
+"dZ" = (
+/obj/random/trash,
+/turf/simulated/floor/wood,
+/area/submap/spacebar)
+"fB" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/turf/simulated/wall/r_wall,
+/area/submap/spacebar)
+"go" = (
+/obj/random/trash,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/spacebar)
+"gT" = (
+/obj/machinery/door/airlock/external{
+	frequency = 1379;
+	icon_state = "door_locked";
+	id_tag = "spacebar_outer";
+	locked = 1;
+	name = "External Airlock Access";
+	req_access = null
+	},
+/turf/simulated/floor/plating,
+/area/submap/spacebar)
+"hV" = (
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/spacebar)
+"hW" = (
+/obj/machinery/access_button{
+	command = "cycle_exterior";
+	frequency = 1379;
+	master_tag = "spacebar_airlock";
+	name = "exterior access button";
+	pixel_x = 25
+	},
+/turf/simulated/floor/plating/external,
+/area/submap/spacebar)
+"hX" = (
+/obj/machinery/door/airlock/glass_external{
+	frequency = 1379;
+	icon_state = "door_locked";
+	id_tag = "spacebar_inner";
+	locked = 1;
+	name = "Internal Airlock Access";
+	req_access = null
+	},
+/turf/simulated/floor/plating,
+/area/submap/spacebar)
+"jw" = (
+/obj/random/trash,
+/turf/simulated/shuttle/floor,
+/area/submap/spacebar)
+"jJ" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
+	},
+/obj/machinery/portable_atmospherics/canister/air/airlock,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/plating,
+/area/submap/spacebar)
+"jK" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 10
+	},
+/obj/machinery/access_button{
+	command = "cycle_interior";
+	frequency = 1379;
+	master_tag = "spacebar_airlock";
+	name = "interior access button";
+	pixel_x = -25
+	},
+/turf/simulated/floor/plating,
+/area/submap/spacebar)
+"jM" = (
+/obj/structure/table/woodentable,
+/obj/structure/table/woodentable,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/spacebar)
+"jQ" = (
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/spacebar)
+"kx" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/spacebar)
+"ln" = (
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/submap/spacebar)
+"mw" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1380;
+	id_tag = "spacebar_pump"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/spacebar)
+"mR" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/old_tile/white,
+/area/submap/spacebar)
+"nN" = (
+/obj/random/junk,
+/turf/simulated/floor/wood/broken,
+/area/submap/spacebar)
+"nU" = (
+/obj/structure/closet/crate,
+/obj/item/weapon/reagent_containers/food/snacks/sliceable/supremoburrito,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/submap/spacebar)
+"pa" = (
+/obj/random/junk,
+/turf/simulated/floor/tiled/old_tile/white,
+/area/submap/spacebar)
+"pD" = (
+/obj/effect/floor_decal/rust,
+/obj/machinery/embedded_controller/radio/airlock/access_controller{
+	id_tag = "spacebar_control";
+	pixel_x = -26;
+	pixel_y = -26;
+	tag_exterior_door = "spacebar_exterior";
+	tag_interior_door = "spacebar_interior"
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/spacebar)
+"qn" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/meter,
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/plating,
+/area/submap/spacebar)
+"rl" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plating/external,
+/area/submap/spacebar)
+"rP" = (
+/turf/simulated/floor/wood/broken,
+/area/submap/spacebar)
+"so" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/wall/r_wall,
+/area/submap/spacebar)
+"sV" = (
+/obj/structure/table/marble,
+/obj/random/junk,
+/turf/simulated/floor/wood,
+/area/submap/spacebar)
+"tj" = (
+/obj/structure/bed/chair{
+	dir = 8;
+	icon_state = "chair";
+	tag = "icon-chair (WEST)"
+	},
+/obj/random/trash,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/spacebar)
+"wa" = (
+/obj/structure/fans/hardlight,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 8;
+	icon_state = "pdoor0";
+	id = "spacebar_pod";
+	opacity = 0
+	},
+/turf/simulated/floor/plating,
+/area/submap/spacebar)
+"xa" = (
+/obj/random/junk,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/spacebar)
+"xi" = (
+/obj/random/trash,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/spacebar)
+"xN" = (
+/obj/item/weapon/stool/padded,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/spacebar)
+"yJ" = (
+/obj/machinery/button{
+	id = "spacebar_pod";
+	pixel_x = -26
+	},
+/turf/simulated/floor/wood/broken,
+/area/submap/spacebar)
+"zm" = (
+/obj/structure/closet/grave,
+/obj/structure/gravemarker{
+	pixel_y = 13
+	},
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/submap/spacebar)
+"zP" = (
+/obj/machinery/vending/deluxe_dinner{
+	req_access = null;
+	req_log_access = null
+	},
+/turf/simulated/floor/wood,
+/area/submap/spacebar)
+"Af" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/submap/spacebar)
+"AD" = (
+/obj/item/device/gps/internal/poi{
+	gps_tag = "RockingCore Bar"
+	},
+/turf/simulated/wall,
+/area/submap/spacebar)
+"Bn" = (
+/obj/random/trash,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/submap/spacebar)
+"Bv" = (
+/turf/simulated/mineral/floor/vacuum,
+/area/submap/spacebar)
+"Fl" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/submap/spacebar)
+"GS" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/submap/spacebar)
+"Ha" = (
+/obj/effect/floor_decal/rust,
+/obj/item/weapon/stool/padded{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/spacebar)
+"IF" = (
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/old_tile/white,
+/area/submap/spacebar)
+"IJ" = (
+/obj/structure/window/reinforced/full,
+/obj/structure/grille,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/submap/spacebar)
+"LH" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/submap/spacebar)
+"Mr" = (
+/obj/effect/floor_decal/rust,
+/obj/structure/urinal{
+	dir = 4;
+	pixel_y = 0;
+	pixel_x = -31
+	},
+/turf/simulated/floor/tiled/old_tile/white,
+/area/submap/spacebar)
+"NI" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1;
+	frequency = 1380;
+	id_tag = "spacebar_pump"
+	},
+/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
+	id_tag = "spacebar_airlock";
+	pixel_y = 25;
+	tag_airpump = "spacebar_pump";
+	tag_chamber_sensor = "spacebar_sensor";
+	tag_exterior_door = "spacebar_outer";
+	tag_interior_door = "spacebar_inner"
+	},
+/turf/simulated/floor/plating,
+/area/submap/spacebar)
+"OJ" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 1
+	},
+/turf/simulated/wall/r_wall,
+/area/submap/spacebar)
+"PC" = (
+/obj/effect/decal/cleanable/greenglow,
+/turf/simulated/floor/tiled/old_tile/white,
+/area/submap/spacebar)
+"Qo" = (
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/external,
+/area/submap/spacebar)
+"Rh" = (
+/obj/structure/closet/crate/miningcar,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/submap/spacebar)
+"Rz" = (
+/obj/structure/fans/hardlight,
+/obj/machinery/door/airlock/glass_external{
+	autoclose = 0;
+	frequency = 1379;
+	icon_state = "door_locked";
+	id_tag = "spacebar_interior";
+	locked = 1;
+	name = "Bar Airlock"
+	},
+/obj/machinery/access_button{
+	command = "cycle_interior";
+	frequency = 1379;
+	master_tag = "spacebar_control";
+	name = "Internal Access Button";
+	pixel_x = -6;
+	pixel_y = -26
+	},
+/turf/simulated/floor/plating,
+/area/submap/spacebar)
+"RE" = (
+/turf/simulated/floor/plating/external,
+/area/submap/spacebar)
+"RQ" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden,
+/turf/simulated/wall/r_wall,
+/area/submap/spacebar)
+"RV" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 6
+	},
+/turf/simulated/wall/r_wall,
+/area/submap/spacebar)
+"SA" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/obj/structure/mirror{
+	pixel_x = 28
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/old_tile/white,
+/area/submap/spacebar)
+"UI" = (
+/obj/random/junk,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/spacebar)
+"UR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/turf/simulated/floor/plating,
+/area/submap/spacebar)
+"Vp" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/submap/spacebar)
+"Wa" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/plating,
+/area/submap/spacebar)
+"Xe" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1380;
+	id_tag = "spacebar_pump"
+	},
+/turf/simulated/floor/plating,
+/area/submap/spacebar)
+"XF" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/plating,
+/area/submap/spacebar)
+"XV" = (
+/turf/simulated/wall/r_wall,
+/area/submap/spacebar)
+"Yx" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1;
+	frequency = 1380;
+	id_tag = "spacebar_pump"
+	},
+/obj/machinery/airlock_sensor{
+	id_tag = "spacebar_sensor";
+	pixel_y = 25
+	},
+/turf/simulated/floor/plating,
+/area/submap/spacebar)
 
 (1,1,1) = {"
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaagagagagagaiaiaiaiBvBvBvBvBvBvaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaBvBvBvagagagagagagaiaiBvBvBvBvBvBvBvBvaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaBvBvBvBvBvagagagagagagagagagagagagagBvBvBvBvBvaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaBvBvXVaJaJaJaJaJaJaJaJXVaJaJaJaJaJaJaJaJXVBvBvBvBvBvaaaaaaaa
-aaaaaaaaaaaaaaaaaaBvBvaJaJagagagagagagagagagagcbagagagagagagaJaJBvBvBvBvaaaaaaaa
-aaaaaaaaaaaaaaaaBvBvaJaJagagagagagagaiaiagagagagagagagagagagagaJaJBvBvBvBvaaaaaa
-aaaaaaaaaaaaaaBvBvaJaJagagagagagagaiaiaiaiagagagagagagagagagagagaJaJBvBvBvaaaaaa
-aaaaaaaaaaBvBvBvaJaJagalakalagagaiaiaiamamamamamamamamamamamamagagaJaJBvBvaaaaaa
-aaaaaaaaaaBvBvaJaJagaganaoanagagaiaiaiamapaqarzPamatauavrPawamagagagaJXVBvaaaaaa
-aaaaaaaaBvBvXVaJagagaganaxanagagaiaiaiamyJaDrPaDayaDaDnNaDazamagagagagaJBvaaaaaa
-aaaaaaaiaiBvaJagagagagbsaBbsagagagaiaiamaDrPdZaDaEaFaGaHrPaIamagagagagaJBvaaaaaa
-aaaaaaaaaiBvaJagagagagagBnagagagagcbagamaKsVaLsVADamamamaMamamzmagagagaJBvaaaaaa
-aaaaaaaaaiBvaJagagagagagagagagagagagagamHaaZHajQaZaZaPaZaZjQamagagagagaJBvaiaaaa
-aaaaaaaaBvBvaJagagagagagagagcbGSamaQaRamjQxijQjQbwjQaZjQjQjQaQagcbagagaJBvaiaiaa
-aaaaaaaaaaBvaJagagagagcbagBnagagbnhVlnRzpDxNaZaZaZxaaUaVtjaZaQagagagagaJBvaiaiaa
-aaaaaaaaaaBvXVagagagagagagagagagamaQaQamaXxiaUjMaWaZaZxaaZaZaQagagagagaJBvaaaaaa
-aaaaaaaaBvBvaJagagagagagBnagagagagagagamaYaZjQgoaZjQjQjQjQaZaQagagagagaJBvaaaaaa
-aaaaaaaaaiBvaJagagagagagagagagagagagagamjMjQjQaZbabbbcbdaZxiamagagagaJXVBvaaaaaa
-aaaaaaaiaiBvaJagagagagagagagagagagagagambejQUIaZamamamamambfamaiagagaJBvBvBvaaaa
-aaaaaaaaaiBvaJagcbagagagagagagalakalagamaZgojQaZamMrIFIFbmbmamaiagagaJBvBvaiaaaa
-aaaaaaaaBvrlXVRVOJsojKagagagaganaoanagaQaZaZjQaYambgpapaIFSAamaiaiagaJBvBvaiaaaa
-aaaaaaaaBvQogTNIYxhXaeagagagaganjwanagIJaQaZaZbiamamambjmRbhamaiaiagaJBvBvaiaaaa
-aaaaaaaaaaREgTXemwhXaeagcbagagbsaBbsagagIJaQaZbeambkblIFPCIFamaiaiagXVBvBvBvaaaa
-aaaaaaaaaahWXVfBRQOJVpagagagagagagagagagRhIJaQamamamamamamamamaiaiagaJBvBvBvaaaa
-aaaaaaaaaaaaBvaJboaeboagagagagagagagagagaiaiagagagaiaiaiaiaiainUaiagaJBvBvBvaaaa
-aaaaaaaaaaaaBvaJkxqnFlagagcbagagagagagaiaiaiagagagagagaiaiaiaiaiaiagaJBvBvaaaaaa
-aaaaaaaaaaaaBvXVjJLHXVbtWaXFdPWaWaXVagagaiagagagagagagagagaiaiaiagagaJBvaaaaaaaa
-aaaaaaaaaaaaBvXVjJURXVbqwawawawawaXVagagagagagagagagagagagagagagagagaJaiaaaaaaaa
-aaaaaaaaaaaaaiXVXVXVXVAfAfAfAfAfAfXVXVXVXVaJaJaJaJaJaJXVaJaJaJaJaJaJXVBvaaaaaaaa
-aaaaaaaaaaaaaiaiaiaiXVboboboboboboXVBvBvBvBvBvBvBvBvBvBvBvBvBvBvBvBvBvaaaaaaaaaa
-aaaaaaaaaaaaaaaaaiaiXVboboboboboboXVBvBvBvBvBvBvBvBvaiBvBvBvBvBvBvaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaXVbtbtbtbtbtbtXVBvBvBvBvaaaaaaBvBvBvaiaiaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaXVbrbrbrbrbrbrXVBvBvaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaXVAfAfAfAfAfAfXVaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(2,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(3,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(4,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ai
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ai
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(5,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+Bv
+ai
+ai
+ai
+Bv
+aa
+aa
+Bv
+ai
+ai
+ai
+Bv
+Bv
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(6,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+rl
+Qo
+RE
+hW
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(7,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+Bv
+Bv
+XV
+aJ
+aJ
+aJ
+aJ
+aJ
+XV
+aJ
+aJ
+aJ
+aJ
+XV
+gT
+gT
+XV
+Bv
+Bv
+Bv
+Bv
+ai
+ai
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(8,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+Bv
+Bv
+aJ
+aJ
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+RV
+NI
+Xe
+fB
+aJ
+aJ
+XV
+XV
+XV
+ai
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(9,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+Bv
+Bv
+aJ
+aJ
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+cb
+OJ
+Yx
+mw
+RQ
+bo
+kx
+jJ
+jJ
+XV
+ai
+ai
+aa
+aa
+aa
+aa
+aa
+"}
+(10,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+Bv
+Bv
+aJ
+aJ
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+so
+hX
+hX
+OJ
+ae
+qn
+LH
+UR
+XV
+ai
+ai
+aa
+aa
+aa
+aa
+aa
+"}
+(11,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+Bv
+Bv
+aJ
+aJ
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+jK
+ae
+ae
+Vp
+bo
+Fl
+XV
+XV
+XV
+XV
+XV
+XV
+XV
+XV
+aa
+aa
+"}
+(12,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+Bv
+Bv
+aJ
+aJ
+ag
+al
+an
+an
+bs
+ag
+ag
+ag
+cb
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+bt
+bq
+Af
+bo
+bo
+bt
+br
+Af
+aa
+aa
+"}
+(13,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+Bv
+XV
+aJ
+ag
+ag
+ak
+ao
+ax
+aB
+Bn
+ag
+ag
+ag
+ag
+Bn
+ag
+ag
+ag
+ag
+ag
+cb
+ag
+ag
+ag
+Wa
+wa
+Af
+bo
+bo
+bt
+br
+Af
+aa
+aa
+"}
+(14,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+Bv
+Bv
+aJ
+ag
+ag
+ag
+al
+an
+an
+bs
+ag
+ag
+ag
+Bn
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+cb
+XF
+wa
+Af
+bo
+bo
+bt
+br
+Af
+aa
+aa
+"}
+(15,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+Bv
+Bv
+aJ
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+cb
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+dP
+wa
+Af
+bo
+bo
+bt
+br
+Af
+aa
+aa
+"}
+(16,1,1) = {"
+aa
+aa
+aa
+aa
+ag
+Bv
+Bv
+aJ
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+GS
+ag
+ag
+ag
+ag
+ag
+al
+an
+an
+bs
+ag
+ag
+ag
+Wa
+wa
+Af
+bo
+bo
+bt
+br
+Af
+aa
+aa
+"}
+(17,1,1) = {"
+aa
+aa
+aa
+aa
+ag
+ag
+ag
+aJ
+ag
+ag
+ag
+ai
+ai
+ai
+ag
+ag
+ag
+am
+bn
+am
+ag
+ag
+ag
+ak
+ao
+jw
+aB
+ag
+ag
+ag
+Wa
+wa
+Af
+bo
+bo
+bt
+br
+Af
+aa
+aa
+"}
+(18,1,1) = {"
+aa
+aa
+aa
+aa
+ag
+ag
+ag
+aJ
+ag
+ag
+ai
+ai
+ai
+ai
+ai
+cb
+ag
+aJ
+hV
+aJ
+ag
+ag
+ag
+al
+an
+an
+bs
+ag
+ag
+ag
+XV
+XV
+XV
+XV
+XV
+XV
+XV
+XV
+aa
+aa
+"}
+(19,1,1) = {"
+aa
+aa
+aa
+aa
+ag
+ag
+ag
+aJ
+ag
+ai
+ai
+ai
+ai
+ai
+ai
+ag
+ag
+aR
+ln
+aJ
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+XV
+Bv
+Bv
+Bv
+Bv
+aa
+aa
+aa
+"}
+(20,1,1) = {"
+aa
+aa
+aa
+ai
+ag
+ag
+ag
+aJ
+ag
+ai
+ai
+am
+am
+am
+am
+am
+am
+am
+Rz
+am
+am
+am
+am
+am
+aJ
+IJ
+ag
+ag
+ag
+ai
+ag
+ag
+XV
+Bv
+Bv
+Bv
+Bv
+aa
+aa
+aa
+"}
+(21,1,1) = {"
+aa
+aa
+aa
+ai
+ai
+ag
+ag
+aJ
+ag
+ag
+ai
+am
+ap
+yJ
+aD
+aK
+Ha
+jQ
+pD
+aX
+aY
+jM
+be
+aZ
+aZ
+aJ
+IJ
+Rh
+ai
+ai
+ai
+ag
+XV
+Bv
+Bv
+Bv
+aa
+aa
+aa
+aa
+"}
+(22,1,1) = {"
+aa
+aa
+aa
+ai
+ai
+ag
+ag
+XV
+ag
+ag
+ag
+am
+aq
+aD
+rP
+sV
+aZ
+xi
+xN
+xi
+aZ
+jQ
+jQ
+go
+aZ
+aZ
+aJ
+IJ
+ai
+ai
+ag
+ag
+aJ
+Bv
+Bv
+Bv
+aa
+aa
+aa
+aa
+"}
+(23,1,1) = {"
+aa
+aa
+aa
+aa
+ai
+ai
+ag
+aJ
+ag
+ag
+ag
+am
+ar
+rP
+dZ
+aL
+Ha
+jQ
+aZ
+aU
+jQ
+jQ
+UI
+jQ
+jQ
+aZ
+aZ
+aJ
+ag
+ag
+ag
+ag
+aJ
+Bv
+Bv
+aa
+aa
+aa
+aa
+aa
+"}
+(24,1,1) = {"
+aa
+aa
+aa
+aa
+ai
+ai
+ag
+aJ
+cb
+ag
+ag
+am
+zP
+aD
+aD
+sV
+jQ
+jQ
+aZ
+jM
+go
+aZ
+aZ
+aZ
+aY
+bi
+be
+am
+ag
+ag
+ag
+ag
+aJ
+Bv
+Bv
+aa
+aa
+aa
+aa
+aa
+"}
+(25,1,1) = {"
+aa
+aa
+aa
+aa
+Bv
+Bv
+ag
+aJ
+ag
+ag
+ag
+am
+am
+ay
+aE
+AD
+aZ
+bw
+aZ
+aW
+aZ
+ba
+am
+am
+am
+am
+am
+am
+ag
+ag
+ag
+ag
+aJ
+Bv
+Bv
+aa
+aa
+aa
+aa
+aa
+"}
+(26,1,1) = {"
+aa
+aa
+aa
+aa
+Bv
+Bv
+ag
+aJ
+ag
+ag
+ag
+am
+at
+aD
+aF
+am
+aZ
+jQ
+xa
+aZ
+jQ
+bb
+am
+Mr
+bg
+am
+bk
+am
+ai
+ag
+ag
+ag
+aJ
+Bv
+Bv
+Bv
+aa
+aa
+aa
+aa
+"}
+(27,1,1) = {"
+aa
+aa
+aa
+aa
+Bv
+Bv
+ag
+aJ
+ag
+ag
+ag
+am
+au
+aD
+aG
+am
+aP
+aZ
+aU
+aZ
+jQ
+bc
+am
+IF
+pa
+am
+bl
+am
+ai
+ag
+ag
+ag
+aJ
+Bv
+ai
+Bv
+aa
+aa
+aa
+aa
+"}
+(28,1,1) = {"
+aa
+aa
+aa
+aa
+Bv
+Bv
+ag
+aJ
+ag
+ag
+ag
+am
+av
+nN
+aH
+am
+aZ
+jQ
+aV
+xa
+jQ
+bd
+am
+IF
+pa
+bj
+IF
+am
+ai
+ai
+ag
+ag
+XV
+Bv
+Bv
+Bv
+aa
+aa
+aa
+aa
+"}
+(29,1,1) = {"
+aa
+aa
+aa
+aa
+Bv
+Bv
+ag
+aJ
+ag
+ag
+ag
+am
+rP
+aD
+rP
+aM
+aZ
+jQ
+tj
+aZ
+jQ
+aZ
+am
+bm
+IF
+mR
+PC
+am
+ai
+ai
+ag
+ag
+aJ
+Bv
+Bv
+ai
+aa
+aa
+aa
+aa
+"}
+(30,1,1) = {"
+aa
+aa
+aa
+aa
+Bv
+Bv
+Bv
+aJ
+ag
+ag
+ag
+am
+aw
+az
+aI
+am
+jQ
+jQ
+aZ
+aZ
+aZ
+xi
+bf
+bm
+SA
+bh
+IF
+am
+ai
+ai
+ai
+ag
+aJ
+Bv
+Bv
+ai
+aa
+aa
+aa
+aa
+"}
+(31,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+Bv
+Bv
+XV
+aJ
+ag
+ag
+am
+am
+am
+am
+am
+am
+aJ
+aJ
+aJ
+aJ
+am
+am
+am
+am
+am
+am
+am
+ai
+ai
+ai
+ag
+aJ
+Bv
+Bv
+aa
+aa
+aa
+aa
+aa
+"}
+(32,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+Bv
+Bv
+Bv
+aJ
+aJ
+ag
+ag
+ag
+ag
+ag
+zm
+ag
+ag
+ag
+ag
+ag
+ag
+ai
+ai
+ai
+ai
+ai
+ai
+nU
+ai
+ai
+ag
+aJ
+Bv
+Bv
+aa
+aa
+aa
+aa
+aa
+"}
+(33,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+Bv
+Bv
+Bv
+aJ
+aJ
+ag
+ag
+ag
+ag
+ag
+ag
+cb
+ag
+ag
+ag
+ag
+ag
+ag
+ai
+ai
+ai
+ai
+ai
+ai
+ag
+ag
+aJ
+Bv
+Bv
+aa
+aa
+aa
+aa
+aa
+"}
+(34,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+Bv
+Bv
+Bv
+Bv
+aJ
+aJ
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+aJ
+Bv
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(35,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+Bv
+Bv
+Bv
+Bv
+aJ
+aJ
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+ag
+aJ
+aJ
+aJ
+aJ
+aJ
+XV
+aJ
+aJ
+aJ
+aJ
+aJ
+XV
+Bv
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(36,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+Bv
+Bv
+Bv
+Bv
+Bv
+XV
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+XV
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+ai
+Bv
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(37,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(38,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ai
+ai
+ai
+aa
+aa
+aa
+Bv
+ai
+ai
+ai
+Bv
+Bv
+Bv
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(39,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ai
+ai
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(40,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 "}

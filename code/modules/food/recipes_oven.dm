@@ -180,6 +180,7 @@
 
 /datum/recipe/bun
 	appliance = OVEN
+	reagents = list("sodiumchloride" = 1)
 	items = list(
 		/obj/item/weapon/reagent_containers/food/snacks/dough
 	)

@@ -9559,10 +9559,10 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/ascenter)
 "aCw" = (
-/obj/machinery/seed_storage/garden,
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
 	},
+/obj/machinery/seed_storage/garden,
 /turf/simulated/floor/tiled/hydro,
 /area/hallway/primary/seconddeck/ascenter)
 "aCx" = (
@@ -72866,6 +72866,10 @@
 	},
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 8
+	},
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -22
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/distillery)

@@ -935,10 +935,6 @@
 /obj/structure/flora/smallbould,
 /turf/simulated/floor/water,
 /area/surface/outside/wilderness/skylands)
-"vo" = (
-/obj/effect/overmap/visitable/planet/Sif,
-/turf/simulated/mineral/sif,
-/area/surface/outside/wilderness/skylands)
 "vp" = (
 /obj/structure/outcrop,
 /turf/simulated/floor/outdoors/dirt,
@@ -2803,7 +2799,7 @@ bj
 bj
 bj
 bj
-vo
+bj
 aE
 "}
 (3,1,1) = {"
