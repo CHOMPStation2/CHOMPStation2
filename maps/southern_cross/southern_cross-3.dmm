@@ -5566,6 +5566,7 @@
 	id = "hopquarters";
 	name = "Bolt Control";
 	pixel_y = -30;
+	req_access = list(57);
 	specialfunctions = 4
 	},
 /turf/simulated/floor/carpet,
@@ -5756,6 +5757,7 @@
 	id = "cmoquarters";
 	name = "Bolt Control";
 	pixel_y = -30;
+	req_access = list(40);
 	specialfunctions = 4
 	},
 /turf/simulated/floor/carpet/blue,
@@ -5771,6 +5773,7 @@
 	id = "rdquarters";
 	name = "Bolt Control";
 	pixel_y = -30;
+	req_access = list(30);
 	specialfunctions = 4
 	},
 /turf/simulated/floor/carpet,
@@ -8892,6 +8895,7 @@
 	id = "cequarters";
 	name = "Bolt Control";
 	pixel_y = 30;
+	req_access = list(56);
 	specialfunctions = 4
 	},
 /turf/simulated/floor/carpet,
@@ -9077,6 +9081,7 @@
 	id = "hosquarters";
 	name = "Bolt Control";
 	pixel_y = 30;
+	req_access = list(58);
 	specialfunctions = 4
 	},
 /turf/simulated/floor/carpet,
@@ -9092,6 +9097,7 @@
 	id = "comsecquarters";
 	name = "Bolt Control";
 	pixel_y = 30;
+	req_access = list(19);
 	specialfunctions = 4
 	},
 /turf/simulated/floor/carpet/blue,
@@ -12901,14 +12907,16 @@
 	id = "sbridgedoor";
 	name = "Starboard Bridge Door Control";
 	pixel_x = 30;
-	pixel_y = -6
+	pixel_y = -6;
+	req_access = list(20)
 	},
 /obj/machinery/button/remote/airlock{
 	desc = "A remote control switch for the captain's office.";
 	id = "captaindoor";
 	name = "Office Door Control";
 	pixel_x = 30;
-	pixel_y = 6
+	pixel_y = 6;
+	req_access = list(20)
 	},
 /obj/effect/landmark/start/captain,
 /turf/simulated/floor/wood,
@@ -14380,7 +14388,8 @@
 /obj/machinery/button/remote/blast_door{
 	id = "csblast";
 	name = "Blastdoors";
-	pixel_y = -24
+	pixel_y = -24;
+	req_access = list(19)
 	},
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
@@ -14625,12 +14634,14 @@
 /obj/machinery/button/remote/blast_door{
 	id = "bridge blast";
 	name = "Bridge Blastdoors";
-	pixel_y = -36
+	pixel_y = -36;
+	req_access = list(19)
 	},
 /obj/machinery/button/windowtint{
 	id = "bridge_center";
 	pixel_x = -11;
-	pixel_y = -24
+	pixel_y = -24;
+	req_access = null
 	},
 /obj/machinery/keycard_auth{
 	pixel_y = -24
@@ -15093,7 +15104,8 @@
 /obj/machinery/button/remote/blast_door{
 	id = "directorblast";
 	name = "Security Shutters";
-	pixel_x = -26
+	pixel_x = -26;
+	req_access = list(20)
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/sc/sd)
@@ -18121,7 +18133,8 @@
 /obj/machinery/button/remote/blast_door{
 	id = "heads_meeting";
 	name = "Security Shutters";
-	pixel_x = -26
+	pixel_x = -26;
+	req_access = list(19)
 	},
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
