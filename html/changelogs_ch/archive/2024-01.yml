@@ -101,3 +101,5 @@
   Kashargul:
   - rscadd: robot multibelly support
   - bugfix: tgui bundle building skipping jsx files
+  - balance: increased SM delam explosion range by 50 % (MIN 8 -> 12. MAX 16 -> 24)
+  - bugfix: fixed a runtime in the alarm system.
