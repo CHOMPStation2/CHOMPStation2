@@ -2870,7 +2870,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			list("Sleeper", "Vorebelly", "Both"))
 			if(belly_choice == null)
 				return FALSE
-			host.vore_selected.silicon_belly_overlay_preference = belly_choice
+			//CHOMPEdit Start, changed to sync the setting among all sleepers for multibelly support
+			for (var/belly in host.vore_organs)
+				var/obj/belly/B = belly
+				B.silicon_belly_overlay_preference = belly_choice
+			//CHOMPEdit End
 			host.update_icon()
 			. = TRUE
 		if("b_belly_mob_mult")
