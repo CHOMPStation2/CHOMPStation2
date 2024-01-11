@@ -4719,7 +4719,7 @@
 #include "modular_chomp\code\modules\event\dangerinfestation.dm"
 #include "modular_chomp\code\modules\event\event_container_ch.dm"
 #include "modular_chomp\code\modules\event\heavydangerinfestation.dm"
-#include "modular_chomp\code\modules\events\meatyores.dm"
+#include "modular_chomp\code\modules\event\meatyores.dm"
 #include "modular_chomp\code\modules\exploration\lootsafe.dm"
 #include "modular_chomp\code\modules\food\drinkgglass\metaglass.dm"
 #include "modular_chomp\code\modules\food\food\drinks\bottle.dm"
