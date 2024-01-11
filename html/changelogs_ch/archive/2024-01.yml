@@ -98,3 +98,6 @@
   - rscadd: A hidden area with traders
   - rscadd: Some new mobs
   - rscadd: Some strange content for engi and xenobio, obtained from the traders
+  Kashargul:
+  - rscadd: robot multibelly support
+  - bugfix: tgui bundle building skipping jsx files
