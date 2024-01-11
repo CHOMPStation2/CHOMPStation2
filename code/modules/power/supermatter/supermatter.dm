@@ -85,8 +85,8 @@
 	var/pull_radius = 14
 	// Time in ticks between delamination ('exploding') and exploding (as in the actual boom)
 	var/pull_time = 100
-	var/min_explosion_power = 8
-	var/max_explosion_power = 16
+	var/min_explosion_power = 12 // CHOMPEdit some more damage was 8
+	var/max_explosion_power = 24 // CHOMPEdit some more damage was 16
 
 	var/emergency_issued = 0
 
