@@ -72,7 +72,6 @@
 	..()
 	if(gib)
 		new /obj/effect/gibspawner/human
-	empulse(src, rand(1, 3), rand(2, 4), rand(3, 7), rand(5, 10))
 
 /obj/effect/meteor/emp/meatyore/get_shield_damage()
 	return ..() * rand(2,4)
@@ -91,5 +90,4 @@
 	..()
 	new /obj/effect/decal/cleanable/blood/splatter(get_turf(src))
 	if(prob(20))
-		explosion(src.loc,2,4,6,8)
 		new /obj/effect/decal/cleanable/blood/gibs(get_turf(src))
