@@ -2013,6 +2013,7 @@
 /area/maintenance/thirddeck/foreport)
 "bRW" = (
 /obj/item/weapon/stool/padded,
+/obj/item/weapon/storage/toolbox/mechanical,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "bSv" = (
@@ -7603,7 +7604,8 @@
 /turf/simulated/floor/plating,
 /area/crew_quarters/cafeteria)
 "fZP" = (
-/obj/structure/loot_pile/maint/technical,
+/obj/effect/decal/cleanable/greenglow,
+/obj/item/weapon/implant/dud,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "fZT" = (
@@ -12635,6 +12637,8 @@
 /area/bridge)
 "lrr" = (
 /obj/machinery/clonepod,
+/obj/item/weapon/reagent_containers/glass/bottle/biomass,
+/obj/item/weapon/reagent_containers/glass/bottle/biomass,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "lsm" = (
@@ -13524,13 +13528,7 @@
 /turf/simulated/floor/tiled,
 /area/bridge)
 "mhi" = (
-/obj/item/weapon/implant/dud,
-/obj/structure/table/steel,
-/obj/item/weapon/implant/sizecontrol,
-/obj/item/weapon/implant/dud,
-/obj/item/clothing/under/rank/geneticist,
-/obj/item/weapon/handcuffs/cable/white,
-/obj/item/clothing/suit/storage/toggle/labcoat,
+/obj/machinery/transhuman/resleever,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "mhm" = (
@@ -20844,7 +20842,8 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
 "sDu" = (
-/obj/random/obstruction,
+/obj/random/junk,
+/obj/random/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "sEf" = (
@@ -23133,6 +23132,12 @@
 /obj/item/device/flashlight/lamp/green,
 /turf/simulated/floor/carpet/bcarpet,
 /area/crew_quarters/sleep/vistor_room_9)
+"uDZ" = (
+/obj/structure/loot_pile/maint/technical,
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsaft{
+	name = "Third Deck Aft Maintenance"
+	})
 "uEb" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -26693,10 +26698,9 @@
 	name = "Third Deck Aft Maintenance"
 	})
 "xnt" = (
-/obj/effect/decal/cleanable/generic,
-/obj/item/weapon/implanter,
-/obj/structure/table/steel,
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/machinery/computer/transhuman{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "xob" = (
@@ -27757,6 +27761,7 @@
 /area/crew_quarters/cafeteria)
 "ydk" = (
 /obj/effect/decal/cleanable/greenglow,
+/obj/item/weapon/implant/sizecontrol,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "ydV" = (
@@ -27799,6 +27804,7 @@
 /obj/item/weapon/photo,
 /obj/item/weapon/photo,
 /obj/item/weapon/disk/nifsoft/compliance,
+/obj/item/weapon/implanter,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "yfh" = (
@@ -66968,7 +66974,7 @@ shV
 qaU
 qaU
 xRu
-ydk
+fZP
 sVv
 sDu
 xnt
@@ -66977,7 +66983,7 @@ qRF
 sIj
 miC
 eyp
-uge
+uDZ
 wzA
 xfF
 iHm
@@ -67486,7 +67492,7 @@ qaU
 tfU
 yeL
 fFk
-fZP
+rQK
 lrr
 wzA
 gqL
