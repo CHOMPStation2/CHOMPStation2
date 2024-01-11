@@ -145,6 +145,10 @@
 	name = "Tunnels"
 	icon_state = "explored"
 
+/area/surface/cave/explored/trader
+	name = "Trader Hideout"
+	icon_state = "hideaway"
+
 /area/surface/cave/unexplored/normal
 	name = "Tunnels"
 	icon_state = "unexplored"
