@@ -32,6 +32,7 @@
 	icon_state = "1-2"
 	},
 /obj/effect/landmark/event_spawn/morphspawn,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "aae" = (
@@ -539,6 +540,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "acq" = (
@@ -742,6 +744,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "acN" = (
@@ -854,6 +859,10 @@
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "adm" = (
@@ -1648,6 +1657,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "agD" = (
@@ -1934,6 +1944,7 @@
 	},
 /obj/random/mob/mouse,
 /obj/structure/catwalk,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "ahK" = (
@@ -2132,6 +2143,7 @@
 	icon_state = "1-2"
 	},
 /obj/random/trash,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "ais" = (
@@ -2242,6 +2254,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "aiK" = (
@@ -2352,6 +2365,7 @@
 	icon_state = "1-2"
 	},
 /obj/random/junk,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "ajb" = (
@@ -2430,6 +2444,10 @@
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
@@ -13959,6 +13977,7 @@
 /obj/effect/landmark{
 	name = "maint_pred"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "dXV" = (
@@ -14729,6 +14748,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "dZH" = (
@@ -15519,6 +15539,9 @@
 "elz" = (
 /obj/structure/sink{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/teleporter/firstdeck)
@@ -16990,14 +17013,14 @@
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/large_escape_pod2/station)
 "fQn" = (
+/obj/machinery/seed_storage/xenobotany{
+	dir = 1
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 4
 	},
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Xenoflora Starboard";
-	dir = 1
-	},
-/obj/machinery/seed_storage/xenobotany{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
@@ -17376,6 +17399,12 @@
 /obj/structure/shuttle/window,
 /turf/simulated/shuttle/plating,
 /area/shuttle/large_escape_pod1/station)
+"ghY" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/wall/r_wall,
+/area/teleporter/firstdeck)
 "gia" = (
 /obj/structure/bed/chair,
 /turf/simulated/shuttle/floor/white,
@@ -19938,6 +19967,10 @@
 /obj/item/clothing/glasses/meson,
 /turf/simulated/floor/plating,
 /area/storage/tech)
+"jty" = (
+/obj/structure/disposalpipe/up,
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/foreport)
 "jtM" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external{
@@ -20508,6 +20541,9 @@
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -24
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/teleporter/firstdeck)
@@ -24537,6 +24573,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "oET" = (
@@ -24931,6 +24970,20 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tcomm/computer)
+"pia" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/foreport)
 "pil" = (
 /obj/item/device/radio/intercom{
 	dir = 4;
@@ -25299,6 +25352,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/teleporter/firstdeck)
 "pAY" = (
@@ -29064,6 +29120,22 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/escape/firstdeck/ep_starboard)
+"tGQ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/maintenance{
+	req_access = null;
+	req_one_access = null
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/foreport)
 "tHc" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
@@ -31979,6 +32051,14 @@
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -22
+	},
+/obj/machinery/disposal/wall/cleaner{
+	name = "Resleeving lost & found bin";
+	pixel_y = -35;
+	dir = 1
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/teleporter/firstdeck)
@@ -60846,7 +60926,7 @@ aiY
 aiY
 aiY
 aiY
-ajn
+jty
 ajM
 adm
 aFf
@@ -61347,7 +61427,7 @@ aiY
 aiY
 aiY
 aiY
-aiY
+ghY
 aiY
 aiY
 aiY
@@ -61605,8 +61685,8 @@ aaa
 aCl
 aau
 aWv
-aiI
-ciy
+pia
+tGQ
 aiI
 aiI
 aiI
