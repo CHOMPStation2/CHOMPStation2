@@ -57,8 +57,6 @@
 	..()
 	if(gib)
 		new /obj/effect/gibspawner/human(get_turf(src))
-	new /obj/effect/decal/cleanable/greenglow(get_turf(src))
-	SSradiation.radiate(src, 50)
 
 /obj/effect/meteor/emp/meatyore
 	name = "conducting meaty ore"
@@ -73,9 +71,6 @@
 	if(gib)
 		new /obj/effect/gibspawner/human
 
-/obj/effect/meteor/emp/meatyore/get_shield_damage()
-	return ..() * rand(2,4)
-
 /obj/effect/meteor/tunguska/meatyore
 	name = "tunguska meatyore"
 	meteordrop = /obj/item/weapon/reagent_containers/food/snacks/phorondragonmeat
@@ -83,7 +78,6 @@
 /obj/effect/meteor/tunguska/meatyore/meteor_effect(var/gib)
 	..()
 	if(gib)
-		explosion(src.loc, 3, 6, 9, 20, 0)
 		new /obj/effect/gibspawner/human(get_turf(src))
 
 /obj/effect/meteor/tunguska/meatyore/Bump()
