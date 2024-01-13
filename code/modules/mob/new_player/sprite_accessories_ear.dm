@@ -539,6 +539,7 @@
 /datum/sprite_accessory/ears/kittybug
 	name = "kitty, with antennae"
 	desc = ""
+	icon = 'icons/mob/human_races/sprite_accessories/ears.dmi'
 	icon_state = "antennae_alt"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY

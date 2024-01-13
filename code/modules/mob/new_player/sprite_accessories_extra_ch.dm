@@ -585,7 +585,7 @@
 
 /datum/sprite_accessory/marking/ch/chitinbelly_fem
 	name = "Chitinous Scutes (Female)"
-	icon_state = "chitin_belly_fem"
+	icon_state = "chitinbelly_fem"
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_TORSO, BP_GROIN)
 

@@ -158,11 +158,3 @@
 	icon_state = "mantisarms_s"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/wing/cloakwings
-	name = "Cloaking Moth Wings with Eyes (Colorable)"
-	desc = ""
-	icon_state = "cloakmoth"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "cloakmoth_eyes"
