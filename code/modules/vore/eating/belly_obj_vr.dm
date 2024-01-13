@@ -372,6 +372,11 @@
 	create_reagents(300)	//CHOMP So we can have some liquids in bellies
 	flags |= NOREACT		// We dont want bellies to start bubling nonstop due to people mixing when transfering and making different reagents
 
+	/* //CHOMPAdd: Spawn junk in belly when initalized.
+	if(starting_item_amount > 0 && starting_item_spawn_table != null) //Maybe this should just be a guard clause.
+		spawn_belly_junk(starting_item_amount)
+	*/ //CHOMPAdd end
+
 /obj/belly/Destroy()
 	if(speedy_mob_processing)
 		STOP_PROCESSING(SSobj, src)

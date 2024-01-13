@@ -36,9 +36,12 @@
 			if(vac_owner && user != vac_owner)
 				to_chat(user, "<span class='warning'>Only designated owner can change this setting.</span>")
 				return
-			var/set_output = tgui_input_list(user, "Set your vacuum attachment's connection port", "Vac Settings", list("Vore Belly", "Borg Belly", "Trash Bag"))
-			if(set_output)
-				if(set_output == "Borg Belly")
+			var/vac_options = list("Vore Belly", "Trash Bag") //Dont show option for borg belly if the user isnt even a borg. QOL!
+			if(isrobot(user))
+				vac_options = list("Vore Belly", "Borg Belly", "Trash Bag")
+			var/set_output = tgui_input_list(user, "Set your vacuum attachment's connection port", "Vac Settings", vac_options)
+			switch(set_output)
+				if("Borg Belly")
 					if(isrobot(user))
 						var/mob/living/silicon/robot/R = user
 						var/obj/item/weapon/robot_module/M = R.module
@@ -47,7 +50,7 @@
 								output_dest = S
 								return
 					to_chat(user, "<span class='warning'>Borg belly not found.</span>")
-				if(set_output == "Trash Bag")
+				if("Trash Bag")
 					if(isrobot(user))
 						var/mob/living/silicon/robot/R = user
 						var/obj/item/weapon/robot_module/M = R.module
@@ -60,7 +63,7 @@
 							output_dest = T
 							return
 					to_chat(user, "<span class='warning'>Trash bag not found.</span>")
-				if(set_output == "Vore Belly")
+				if("Vore Belly")
 					if(user.vore_selected)
 						output_dest = user.vore_selected
 			return

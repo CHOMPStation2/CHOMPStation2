@@ -133,6 +133,8 @@
 	var/entrance_logs = TRUE				// Belly-specific entry message toggle.
 	var/noise_freq = 42500					// Tasty sound prefs.
 	var/item_digest_logs = FALSE			// Chat messages for digested items.
+	var/starting_item_spawn_table = null	// Loot table for items to start inside of gut when initalized. Should be a datum/belly_loot
+	var/starting_item_amount = 0			// How many items to spawn. this being 0 or the table being null means no items will spawn.
 
 /obj/belly/proc/GetFullnessFromBelly()
 	if(!affects_vore_sprites)

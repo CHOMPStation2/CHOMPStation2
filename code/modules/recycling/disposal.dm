@@ -528,14 +528,22 @@
 
 /obj/machinery/disposal/hitby(atom/movable/AM)
 	. = ..()
-	if(istype(AM, /obj/item) && !istype(AM, /obj/item/projectile))
+	//CHOMPEdit: disposal dunking and autoflushes with mobs~ - Reo
+	if((istype(AM, /obj/item) || istype(AM, /mob/living)) && !istype(AM, /obj/item/projectile))
 		if(prob(75))
-			if(istype(AM, /obj/item/weapon/holder/micro))
-				log_and_message_admins("[AM] was thrown into \the [src]")
 			AM.forceMove(src)
-			visible_message("\The [AM] lands in \the [src].")
+			if(istype(AM, /obj/item/weapon/holder/micro) || istype(AM, /mob/living))
+				log_and_message_admins("[AM] was thrown into \the [src]")
+				visible_message("\The [AM] lands in \the [src] and triggers the flush system!")
+				flush() //Away they go!
+			else
+				visible_message("\The [AM] lands in \the [src].")
+			update_icon() //Yogs did this, so it probably doesnt hurt..
 		else
 			visible_message("\The [AM] bounces off of \the [src]'s rim!")
+			return ..() //...Yogs also did this! it's probably good to stop it from flying after clonking the thing.
+	return ..()
+	//CHOMPEdit End.
 
 /obj/machinery/disposal/CanPass(atom/movable/mover, turf/target)
 	if(istype(mover, /obj/item/projectile))
@@ -734,12 +742,15 @@
 		return
 
 	var/mob/living/U = user
-
+	/* CHOMPEdit: Clong, clong baby.
 	if (U.stat || U.last_special <= world.time)
 		return
 
 	U.last_special = world.time+100
-
+	*/
+	if(U.stat)
+		return
+	//CHOMPEdit End.
 	if (src.loc)
 		for (var/mob/M in hearers(src.loc.loc))
 			to_chat(M, "<FONT size=[max(0, 5 - get_dist(src, M))]>CLONG, clong!</FONT>")
