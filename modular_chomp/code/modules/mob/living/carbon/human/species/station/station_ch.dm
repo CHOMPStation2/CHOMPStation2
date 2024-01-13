@@ -57,21 +57,21 @@
 	deform = 'icons/mob/human_races/r_xenomorph_hybrid.dmi'
 	tail = "tail"
 	icobase_tail = 1
-	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp) // Innate claws and bite.
+	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws/strong/xeno, /datum/unarmed_attack/bite/strong/xeno) // Innate claws and bite.
 	darksight = 8 // Same as Tajarans.
 	ambiguous_genders = TRUE
 	slowdown = -0.2 // Slightly faster than average.
 	total_health = 150 // Takes a lot of effort to take a Xenomorph down.
-	brute_mod = 0.90 // Physical damage doesn't phase them as much.
-	burn_mod = 1.40 // They do NOT like fire.
-	toxins_mod = 0.90 // Slightly resistant to toxins.
-	radiation_mod = 0.7 // Quite resistant to radiation exposure.
-	flash_mod = 1.1 // Flashes are slightly more effective.
+	brute_mod = 0.9 // Physical damage doesn't phase them as much.
+	burn_mod = 1.4 // They do NOT like fire.
+	toxins_mod = 0.9 // Slightly resistant to toxins.
+	radiation_mod = 0.9 // Somewhat resistant to radiation exposure.
+	flash_mod = 1.2 // Flashes are more effective.
 	metabolic_rate = 1.2 // Very physically active species, thus requiring more nutritional intake.
-	item_slowdown_mod = 0.90 // They carry heavy things slightly better.
+	item_slowdown_mod = 0.9 // They carry heavy things slightly better.
 	mob_size = MOB_MEDIUM // Technically doesn't even need this but still adding the override just in case.
 	blood_volume = 640 // More blood to compound their high health.
-	bloodloss_rate = 0.90 // Bleed slightly slower.
+	bloodloss_rate = 1 // Bleed normally.
 	num_alternate_languages = 3
 	name_language = LANGUAGE_XENOLINGUA
 	species_language = LANGUAGE_XENOLINGUA
@@ -80,7 +80,7 @@
 	color_mult = 1
 	health_hud_intensity = 1.5
 	chem_strength_alcohol = 1.2 // They don't handle their drinks very well.
-	throwforce_absorb_threshold = 10 // Heavy.
+	throwforce_absorb_threshold = 10 // Thrown objects don't do as much.
 
 	economic_modifier = 5 // While they aren't true Xenomorphs, they still draw a lot of social stigma, and are generally mistreated and underpaid as a result.
 	rarity_value = 4 // Very rare to find these guys on human stations.
@@ -98,7 +98,7 @@
 	demeanour and innate xenomorph-inherited abilities are enough to draw widespread ire and distrust."
 
 	min_age = 18
-	max_age = 300 // Big number lol
+	max_age = 150
 
 	move_trail = /obj/effect/decal/cleanable/blood/tracks/claw
 	digi_allowed = TRUE
@@ -123,18 +123,18 @@
 
 	// Some Xeno parts included.
 	has_organ = list(
-		O_HEART =    	/obj/item/organ/internal/heart,
-		O_LUNGS =    	/obj/item/organ/internal/lungs,
-		O_LIVER =    	/obj/item/organ/internal/liver,
-		O_BRAIN =   	/obj/item/organ/internal/brain,
-		O_EYES =     	/obj/item/organ/internal/eyes,
-		O_KIDNEYS =		/obj/item/organ/internal/kidneys,
-		O_APPENDIX = 	/obj/item/organ/internal/appendix,
+		O_HEART =    	/obj/item/organ/internal/heart/grey/colormatch,
+		O_LUNGS =    	/obj/item/organ/internal/lungs/grey/colormatch,
+		O_LIVER =    	/obj/item/organ/internal/liver/grey/colormatch,
+		O_BRAIN =   	/obj/item/organ/internal/brain/grey/colormatch,
+		O_EYES =     	/obj/item/organ/internal/eyes/grey/colormatch,
+		O_KIDNEYS =		/obj/item/organ/internal/kidneys/grey/colormatch,
 		O_STOMACH =		/obj/item/organ/internal/stomach,
 		O_INTESTINE =	/obj/item/organ/internal/intestine,
 		O_PLASMA =   	/obj/item/organ/internal/xenos/plasmavessel/weak, // Less plasma capacity.
 		O_HIVE =     	/obj/item/organ/internal/xenos/hivenode, // Lets them speak Hivemind and open resin doors.
-		O_RESIN =		/obj/item/organ/internal/xenos/resinspinner/weak // Weaker weed nodes with less spread range.
+		O_RESIN =		/obj/item/organ/internal/xenos/resinspinner/weak, // Weaker weed nodes with less spread range.
+		O_EGG =         /obj/item/organ/internal/xenos/eggsac // Fluff organ.
 		)
 
 
@@ -143,7 +143,7 @@
 		"Our carapace bristles in the heat."
 		)
 
-	cold_discomfort_level = 263.15 // -10 Celsius, comfortable in below freezing temperatures.
+	cold_discomfort_level = 253.15 // -20 Celsius, very comfortable in below freezing temperatures.
 	cold_discomfort_strings = list(
 		"The cold bites through our carapace."
 		)
@@ -172,7 +172,15 @@
 		heal_rate = 0 // No passive health regen without resting.
 		mend_prob = 0 // No passive health regen without resting.
 
-	//first heal damages
+	// First, heal internal organs.
+	for(var/obj/item/organ/I in H.internal_organs)
+		if(I.damage > 0)
+			I.damage = max(I.damage - heal_rate, 0)
+			if (prob(5))
+				to_chat(H, "<span class='alien'>We feel a soothing sensation within our [I.parent_organ]...</span>")
+			return 1
+
+	// Next, heal external damage.
 	if (H.getBruteLoss() || H.getFireLoss() || H.getOxyLoss() || H.getToxLoss())
 		H.adjustBruteLoss(-heal_rate)
 		H.adjustFireLoss(-heal_rate)
@@ -182,15 +190,7 @@
 			to_chat(H, "<span class='alien'>A soothing sensation falls over us...</span>")
 		return 1
 
-	//next internal organs
-	for(var/obj/item/organ/I in H.internal_organs)
-		if(I.damage > 0)
-			I.damage = max(I.damage - heal_rate, 0)
-			if (prob(5))
-				to_chat(H, "<span class='alien'>We feel a soothing sensation within our [I.parent_organ]...</span>")
-			return 1
-
-	//next mend broken bones. May remove this if it's abused.
+	// Lastly, mend broken bones. May remove this if it's abused.
 	for(var/obj/item/organ/external/E in H.bad_external_organs)
 		if (E.status & ORGAN_BROKEN)
 			if (prob(mend_prob))
@@ -280,7 +280,7 @@
 // ORGANS //
 
 /obj/item/organ/internal/xenos/resinspinner/weak
-	name = "resin spinner"
+	name = "hybrid resin spinner"
 	parent_organ = BP_HEAD
 	icon_state = "xenode"
 	organ_tag = O_RESIN

@@ -155,7 +155,7 @@
 
 	H.shadekin_set_energy(0)
 	H.ability_flags |= AB_DARK_RESPITE
-	H.invisibility = INVISIBILITY_LEVEL_TWO
+	H.invisibility = INVISIBILITY_SHADEKIN
 
 	H.adjustFireLoss(-(H.getFireLoss() * 0.75))
 	H.adjustBruteLoss(-(H.getBruteLoss() * 0.75))
@@ -166,7 +166,7 @@
 		bp.bandage()
 		bp.disinfect()
 	H.nutrition = 0
-	H.invisibility = INVISIBILITY_LEVEL_TWO
+	H.invisibility = INVISIBILITY_SHADEKIN
 	BITRESET(H.hud_updateflag, HEALTH_HUD)
 	BITRESET(H.hud_updateflag, STATUS_HUD)
 	BITRESET(H.hud_updateflag, LIFE_HUD)

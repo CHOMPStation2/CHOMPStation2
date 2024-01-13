@@ -276,3 +276,11 @@
 	can_loaf = FALSE //Soon
 	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
 	loaf_offset = 6
+
+/datum/sprite_accessory/tail/taur/ch/bigleggy/AlienSlug
+	name = "Big Leggies (Alien Slug Tail)"
+	icon_state = "bigleggy_full_alienslug"
+	extra_overlay = "bigleggy_alienslug"
+	extra_overlay_w = "bigleggy_alienslug"
+	extra_overlay2 = "bigleggy_alienslug_m"
+	extra_overlay2_w = "bigleggy_alienslug_m"

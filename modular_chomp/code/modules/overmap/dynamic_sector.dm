@@ -16,7 +16,7 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 	known = FALSE
 	scannable = FALSE
 	invisibility = 101
-	in_space = TRUE
+	in_space = FALSE //This prevents you from walking off the edge and getting soft-locked into the infinispace layer
 	scanner_desc = "You should not see this."
 	var/generated_z = FALSE
 	var/base_area = /area/space

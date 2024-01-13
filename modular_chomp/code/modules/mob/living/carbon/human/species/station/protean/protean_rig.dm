@@ -162,7 +162,7 @@
 		SPECIES_TESHARI 		 = 'modular_chomp/icons/mob/species/teshari/hands_ch.dmi',
 		SPECIES_VASILISSAN		 = 'modular_chomp/icons/mob/hands_ch.dmi',
 		SPECIES_VOX				 = 'modular_chomp/icons/mob/species/vox/gloves_ch.dmi',
-		SPECIES_XENOMORPH_HYBRID = 'modular_chomp/icons/mob/hands_ch.dmi'
+		SPECIES_XENOMORPH_HYBRID = 'modular_chomp/icons/mob/species/xenomorph_hybrid/gloves_ch.dmi'
 		)
 
 	sprite_sheets_obj = list(
@@ -191,8 +191,9 @@
 	desc = "Boot-shaped clusters of nanomachines."
 	species_restricted = list(SPECIES_PROTEAN, SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJ, SPECIES_UNATHI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_PROMETHEAN, SPECIES_XENOHYBRID, SPECIES_VOX, SPECIES_TESHARI, SPECIES_VASILISSAN, SPECIES_XENOMORPH_HYBRID)
 	sprite_sheets = list(
-		SPECIES_TESHARI 		= 'modular_chomp/icons/mob/species/teshari/feet_ch.dmi',
-		SPECIES_VOX				= 'modular_chomp/icons/mob/species/vox/shoes_ch.dmi'
+		SPECIES_TESHARI 		 = 'modular_chomp/icons/mob/species/teshari/feet_ch.dmi',
+		SPECIES_VOX				 = 'modular_chomp/icons/mob/species/vox/shoes_ch.dmi',
+		SPECIES_XENOMORPH_HYBRID = 'modular_chomp/icons/mob/species/xenomorph_hybrid/shoes_ch.dmi'
 		)
 	sprite_sheets_obj = list()
 	icon = 'modular_chomp/icons/mob/feet_ch.dmi'
@@ -212,8 +213,9 @@
 		/obj/item/weapon/storage/backpack,
 		)
 	sprite_sheets = list(
-		SPECIES_TESHARI 		= 'modular_chomp/icons/mob/species/teshari/suit_ch.dmi',
-		SPECIES_VOX				= 'modular_chomp/icons/mob/species/vox/suit_ch.dmi'
+		SPECIES_TESHARI 		 = 'modular_chomp/icons/mob/species/teshari/suit_ch.dmi',
+		SPECIES_VOX				 = 'modular_chomp/icons/mob/species/vox/suit_ch.dmi',
+		SPECIES_XENOMORPH_HYBRID = 'modular_chomp/icons/mob/species/xenomorph_hybrid/suit_ch.dmi'
 		)
 
 	sprite_sheets_obj = list()

@@ -1,128 +1,1190 @@
-"aa" = (/turf/template_noop,/area/template_noop)
-"ab" = (/obj/machinery/shieldwallgen{active = 2; anchored = 1; power = 1},/obj/structure/cable{d2 = 4; icon_state = "0-4"},/turf/simulated/floor/plating,/area/submap/abandonedzoo)
-"ac" = (/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/effect/wingrille_spawn/reinforced,/obj/machinery/door/firedoor/glass,/turf/simulated/floor/plating,/area/submap/abandonedzoo)
-"ad" = (/obj/machinery/shieldwallgen{active = 2; anchored = 1; power = 1},/obj/structure/cable{d2 = 2; icon_state = "0-2"},/obj/structure/cable{d1 = 2; d2 = 8; icon_state = "2-8"},/turf/simulated/floor/plating,/area/submap/abandonedzoo)
-"ae" = (/obj/machinery/shieldwallgen{active = 2; anchored = 1; power = 1},/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"; tag = ""},/obj/structure/cable{d2 = 2; icon_state = "0-2"},/turf/simulated/floor/plating,/area/submap/abandonedzoo)
-"af" = (/obj/machinery/shieldwallgen{active = 2; anchored = 1; power = 1},/obj/structure/cable{d2 = 8; icon_state = "0-8"},/turf/simulated/floor/plating,/area/submap/abandonedzoo)
-"ag" = (/obj/effect/wingrille_spawn/reinforced,/obj/machinery/door/firedoor/glass,/turf/simulated/floor/plating,/area/submap/abandonedzoo)
-"ah" = (/turf/simulated/mineral,/area/submap/abandonedzoo)
-"aj" = (/mob/living/simple_mob/vore/solargrub,/turf/simulated/mineral/floor/ignore_mapgen/cave,/area/submap/abandonedzoo)
-"ak" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/effect/wingrille_spawn/reinforced,/obj/machinery/door/firedoor/glass,/turf/simulated/floor/plating,/area/submap/abandonedzoo)
-"al" = (/obj/structure/flora/ausbushes/genericbush,/turf/simulated/floor/grass2,/area/submap/abandonedzoo)
-"am" = (/mob/living/simple_mob/metroid/juvenile/baby,/turf/simulated/floor/grass2,/area/submap/abandonedzoo)
-"an" = (/turf/simulated/floor/grass2,/area/submap/abandonedzoo)
-"ao" = (/obj/structure/flora/ausbushes/lavendergrass,/turf/simulated/floor/grass2,/area/submap/abandonedzoo)
-"ap" = (/mob/living/simple_mob/vore/oregrub,/turf/simulated/mineral/floor/ignore_mapgen/cave,/area/submap/abandonedzoo)
-"aq" = (/obj/structure/flora/ausbushes/grassybush,/turf/simulated/floor/grass2,/area/submap/abandonedzoo)
-"as" = (/turf/simulated/mineral/floor/ignore_mapgen/cave,/area/submap/abandonedzoo)
-"au" = (/obj/structure/flora/ausbushes/leafybush,/turf/simulated/floor/grass2,/area/submap/abandonedzoo)
-"av" = (/obj/structure/flora/ausbushes/brflowers,/mob/living/simple_mob/metroid/juvenile/baby,/turf/simulated/floor/grass2,/area/submap/abandonedzoo)
-"aw" = (/obj/machinery/light,/turf/simulated/mineral/floor/ignore_mapgen/cave,/area/submap/abandonedzoo)
-"ax" = (/obj/structure/table/reinforced,/obj/item/clothing/mask/surgical,/obj/machinery/light{dir = 8},/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"ay" = (/turf/simulated/floor/tiled/asteroid_steel,/area/submap/abandonedzoo)
-"az" = (/obj/structure/table/reinforced,/obj/machinery/light{dir = 4},/obj/random/maintenance,/obj/random/maintenance,/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"aA" = (/obj/structure/flora/ausbushes/ywflowers,/turf/simulated/floor/grass2,/area/submap/abandonedzoo)
-"aB" = (/obj/machinery/light,/turf/simulated/floor/grass2,/area/submap/abandonedzoo)
-"aC" = (/obj/structure/flora/ausbushes/ppflowers,/turf/simulated/floor/grass2,/area/submap/abandonedzoo)
-"aD" = (/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/machinery/door/airlock/highsecurity{name = "Bio Containment"},/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"aE" = (/obj/machinery/shieldwallgen{active = 2; anchored = 1; power = 1},/obj/structure/cable{d2 = 2; icon_state = "0-2"},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/structure/cable{d1 = 2; d2 = 8; icon_state = "2-8"},/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"; tag = ""},/turf/simulated/floor/plating,/area/submap/abandonedzoo)
-"aF" = (/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/wall/r_wall,/area/submap/abandonedzoo)
-"aG" = (/obj/structure/table/reinforced,/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/item/weapon/gun/energy/floragun,/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"aH" = (/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/abandonedzoo)
-"aI" = (/obj/structure/table/reinforced,/obj/machinery/computer/med_data/laptop,/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"aJ" = (/obj/machinery/shieldwallgen{active = 2; anchored = 1; power = 1},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"; tag = ""},/obj/structure/cable{d2 = 8; icon_state = "0-8"},/turf/simulated/floor/plating,/area/submap/abandonedzoo)
-"aK" = (/obj/structure/window/reinforced{dir = 4},/turf/template_noop,/area/template_noop)
-"aL" = (/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"aM" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/wall/r_wall,/area/submap/abandonedzoo)
-"aN" = (/obj/structure/table/reinforced,/obj/item/weapon/folder/white_rd,/obj/item/weapon/pen/blade,/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"aO" = (/obj/structure/bed/chair/bay/comfy/beige{dir = 8},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/abandonedzoo)
-"aP" = (/obj/structure/table/reinforced,/obj/item/slimepotion/enhancer,/obj/item/weapon/reagent_containers/dropper/industrial,/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"aQ" = (/obj/structure/window/reinforced{dir = 8},/turf/template_noop,/area/template_noop)
-"aR" = (/obj/machinery/light/small{dir = 4},/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"aS" = (/obj/structure/cable{d2 = 4; icon_state = "0-4"},/obj/machinery/power/apc{dir = 8; name = "west bump"; pixel_x = -24},/obj/structure/table/rack/shelf/steel,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"aT" = (/obj/structure/cable{d1 = 2; d2 = 8; icon_state = "2-8"},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/structure/table/rack/shelf/steel,/obj/item/clothing/suit/space/rig/military,/obj/item/weapon/tank/emergency/oxygen/double,/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"aU" = (/obj/machinery/light{dir = 1},/obj/structure/table/rack/shelf/steel,/obj/item/weapon/shield/riot,/obj/item/weapon/tool/crowbar/hybrid,/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"aV" = (/obj/machinery/smartfridge/chemistry,/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"aW" = (/obj/structure/table/reinforced,/obj/item/mecha_parts/mecha_equipment/tool/syringe_gun,/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"aX" = (/obj/structure/table/reinforced,/obj/machinery/light{dir = 1},/obj/item/weapon/grenade/chem_grenade{pixel_x = 3; pixel_y = 5},/obj/item/weapon/grenade/chem_grenade{pixel_x = -4; pixel_y = 5},/obj/item/weapon/grenade/chem_grenade,/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"aY" = (/obj/structure/table/reinforced,/obj/machinery/firealarm{pixel_y = 24},/obj/item/weapon/gun/energy/temperature,/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"aZ" = (/obj/structure/table/reinforced,/obj/item/weapon/shovel,/obj/item/weapon/material/minihoe,/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"ba" = (/obj/machinery/light/small{dir = 8},/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"bb" = (/obj/machinery/door/airlock/hatch{name = "Bio-Research Station"},/obj/machinery/door/firedoor/glass,/turf/simulated/floor/plating/external,/area/submap/abandonedzoo)
-"bc" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/abandonedzoo)
-"bd" = (/obj/machinery/power/terminal,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/asteroid_steel,/area/submap/abandonedzoo)
-"be" = (/obj/structure/reagent_dispensers/fueltank,/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"bf" = (/obj/structure/cable,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/power/smes/buildable/hybrid,/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"bg" = (/obj/structure/reagent_dispensers/watertank,/obj/machinery/light,/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"bh" = (/obj/machinery/disposal,/obj/structure/disposalpipe/trunk,/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"bi" = (/obj/structure/table/reinforced,/obj/item/weapon/reagent_containers/glass/bottle/mutagen,/obj/item/weapon/reagent_containers/dropper/industrial,/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"bj" = (/obj/structure/table/reinforced,/obj/machinery/light,/obj/item/weapon/surgical/circular_saw{pixel_y = 8},/obj/item/weapon/surgical/scalpel,/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"bk" = (/obj/machinery/optable,/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"bl" = (/obj/machinery/computer/operating,/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"bm" = (/obj/structure/disposalpipe/segment,/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"bn" = (/obj/structure/table/reinforced,/obj/item/weapon/reagent_containers/food/snacks/slice/bigbeanburrito,/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"bo" = (/obj/machinery/shieldwallgen{active = 2; anchored = 1; power = 1},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"; tag = ""},/obj/structure/cable,/obj/structure/cable{d1 = 1; d2 = 4; icon_state = "1-4"},/turf/simulated/floor/plating,/area/submap/abandonedzoo)
-"bp" = (/obj/structure/bed,/obj/structure/disposalpipe/segment,/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"bq" = (/obj/item/stack/cable_coil/cut,/obj/item/weapon/tool/wirecutters/hybrid,/turf/simulated/floor/plating,/area/submap/abandonedzoo)
-"br" = (/obj/structure/table/reinforced,/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/machinery/microwave,/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"bs" = (/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/structure/cable{d1 = 2; d2 = 8; icon_state = "2-8"},/obj/structure/cable{d2 = 8; icon_state = "0-8"},/obj/machinery/shieldwallgen,/turf/simulated/floor/plating,/area/submap/abandonedzoo)
-"bt" = (/obj/structure/cable{d2 = 8; icon_state = "0-8"},/obj/machinery/shieldwallgen,/turf/simulated/floor/plating,/area/submap/abandonedzoo)
-"bu" = (/obj/structure/flora/ausbushes/sunnybush,/turf/simulated/floor/grass,/area/submap/abandonedzoo)
-"bv" = (/mob/living/simple_mob/animal/space/carp,/turf/simulated/floor/grass,/area/submap/abandonedzoo)
-"bw" = (/obj/machinery/light{dir = 1},/turf/simulated/floor/grass,/area/submap/abandonedzoo)
-"bx" = (/obj/structure/flora/ausbushes/palebush,/turf/simulated/floor/grass,/area/submap/abandonedzoo)
-"by" = (/obj/structure/disposalpipe/segment{dir = 4; icon_state = "pipe-c"},/turf/simulated/wall/r_wall,/area/submap/abandonedzoo)
-"bz" = (/obj/machinery/space_heater,/obj/structure/disposalpipe/segment{dir = 8; icon_state = "pipe-c"},/obj/machinery/light{dir = 8},/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"bA" = (/obj/structure/table/reinforced,/obj/machinery/reagentgrinder,/turf/simulated/floor/tiled/dark,/area/submap/abandonedzoo)
-"bB" = (/obj/effect/alien/weeds,/turf/simulated/floor/plating,/area/submap/abandonedzoo)
-"bC" = (/obj/machinery/light{dir = 1},/obj/effect/alien/weeds/node,/turf/simulated/floor/plating,/area/submap/abandonedzoo)
-"bD" = (/obj/effect/alien/weeds,/turf/simulated/floor/plating,/area/submap/abandonedzoo)
-"bE" = (/obj/structure/flora/ausbushes/sparsegrass,/turf/simulated/floor/grass,/area/submap/abandonedzoo)
-"bF" = (/obj/structure/disposalpipe/segment,/turf/simulated/wall/r_wall,/area/submap/abandonedzoo)
-"bG" = (/obj/machinery/door/airlock/external,/obj/machinery/door/firedoor/glass,/turf/simulated/floor/plating/external,/area/submap/abandonedzoo)
-"bH" = (/turf/simulated/floor/plating,/area/submap/abandonedzoo)
-"bI" = (/obj/structure/flora/ausbushes/reedbush,/turf/simulated/floor/grass,/area/submap/abandonedzoo)
-"bJ" = (/turf/simulated/floor/grass,/area/submap/abandonedzoo)
-"bK" = (/obj/structure/disposalpipe/segment,/turf/simulated/floor/plating,/area/submap/abandonedzoo)
-"bL" = (/obj/machinery/light/small{dir = 8},/turf/simulated/floor/plating/external,/area/submap/abandonedzoo)
-"bM" = (/obj/machinery/light/small{dir = 4},/turf/simulated/floor/plating/external,/area/submap/abandonedzoo)
-"bN" = (/obj/structure/grille/broken,/obj/item/weapon/material/shard,/obj/machinery/door/firedoor/glass,/turf/simulated/floor/plating,/area/submap/abandonedzoo)
-"bO" = (/obj/item/weapon/material/shard{icon_state = "medium"},/turf/simulated/floor/plating,/area/submap/abandonedzoo)
-"bP" = (/obj/structure/lattice,/turf/template_noop,/area/submap/abandonedzoo)
-"bQ" = (/obj/machinery/shieldwallgen{active = 2; anchored = 1; power = 1},/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"; tag = ""},/obj/structure/cable,/turf/simulated/floor/plating,/area/submap/abandonedzoo)
-"bR" = (/obj/structure/disposalpipe/trunk{dir = 1},/obj/structure/disposaloutlet,/turf/simulated/floor/plating,/area/submap/abandonedzoo)
-"bS" = (/obj/structure/cable{d1 = 1; d2 = 4; icon_state = "1-4"},/obj/structure/cable,/obj/machinery/shieldwallgen,/turf/simulated/floor/plating,/area/submap/abandonedzoo)
-"bT" = (/obj/item/weapon/material/shard{icon_state = "medium"},/obj/machinery/door/firedoor/glass,/turf/simulated/floor/plating,/area/submap/abandonedzoo)
-"bU" = (/obj/structure/grille/broken,/obj/machinery/door/firedoor/glass,/turf/simulated/floor/plating,/area/submap/abandonedzoo)
-"bV" = (/obj/machinery/shieldwallgen,/turf/template_noop,/area/template_noop)
-"bW" = (/obj/random/outcrop,/turf/simulated/mineral/floor/ignore_mapgen/cave,/area/submap/abandonedzoo)
-"hU" = (/turf/template_noop,/area/submap/abandonedzoo)
-"oC" = (/mob/living/simple_mob/animal/passive/crab,/turf/simulated/floor/grass,/area/submap/abandonedzoo)
-"qZ" = (/obj/machinery/door/firedoor/glass,/obj/effect/wingrille_spawn/reinforced,/turf/simulated/floor/plating,/area/submap/abandonedzoo)
-"Ed" = (/obj/item/weapon/material/shard,/turf/simulated/floor/plating,/area/submap/abandonedzoo)
-"Hv" = (/turf/simulated/wall/r_wall,/area/submap/abandonedzoo)
-"Nd" = (/obj/effect/alien/weeds/node,/turf/simulated/floor/plating,/area/submap/abandonedzoo)
-"XG" = (/mob/living/simple_mob/vore/oregrub/lava,/turf/simulated/mineral/floor/ignore_mapgen/cave,/area/submap/abandonedzoo)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/turf/template_noop,
+/area/template_noop)
+"ab" = (
+/obj/machinery/shieldwallgen{
+	active = 2;
+	anchored = 1;
+	power = 1
+	},
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"ac" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"ad" = (
+/obj/machinery/shieldwallgen{
+	active = 2;
+	anchored = 1;
+	power = 1
+	},
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"ae" = (
+/obj/machinery/shieldwallgen{
+	active = 2;
+	anchored = 1;
+	power = 1
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4";
+	tag = ""
+	},
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"af" = (
+/obj/machinery/shieldwallgen{
+	active = 2;
+	anchored = 1;
+	power = 1
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"ag" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"ah" = (
+/turf/simulated/mineral,
+/area/submap/abandonedzoo)
+"aj" = (
+/mob/living/simple_mob/vore/solargrub,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/submap/abandonedzoo)
+"ak" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"al" = (
+/obj/structure/flora/ausbushes/genericbush,
+/turf/simulated/floor/grass2,
+/area/submap/abandonedzoo)
+"am" = (
+/mob/living/simple_mob/metroid/juvenile/baby,
+/turf/simulated/floor/grass2,
+/area/submap/abandonedzoo)
+"an" = (
+/turf/simulated/floor/grass2,
+/area/submap/abandonedzoo)
+"ao" = (
+/obj/structure/flora/ausbushes/lavendergrass,
+/turf/simulated/floor/grass2,
+/area/submap/abandonedzoo)
+"ap" = (
+/mob/living/simple_mob/vore/oregrub,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/submap/abandonedzoo)
+"aq" = (
+/obj/structure/flora/ausbushes/grassybush,
+/turf/simulated/floor/grass2,
+/area/submap/abandonedzoo)
+"as" = (
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/submap/abandonedzoo)
+"au" = (
+/obj/structure/flora/ausbushes/leafybush,
+/turf/simulated/floor/grass2,
+/area/submap/abandonedzoo)
+"av" = (
+/obj/structure/flora/ausbushes/brflowers,
+/mob/living/simple_mob/metroid/juvenile/baby,
+/turf/simulated/floor/grass2,
+/area/submap/abandonedzoo)
+"aw" = (
+/obj/machinery/light,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/submap/abandonedzoo)
+"ax" = (
+/obj/structure/table/reinforced,
+/obj/item/clothing/mask/surgical,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"ay" = (
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/abandonedzoo)
+"az" = (
+/obj/structure/table/reinforced,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/random/maintenance,
+/obj/random/maintenance,
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"aA" = (
+/obj/structure/flora/ausbushes/ywflowers,
+/turf/simulated/floor/grass2,
+/area/submap/abandonedzoo)
+"aB" = (
+/obj/machinery/light,
+/turf/simulated/floor/grass2,
+/area/submap/abandonedzoo)
+"aC" = (
+/obj/structure/flora/ausbushes/ppflowers,
+/turf/simulated/floor/grass2,
+/area/submap/abandonedzoo)
+"aD" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/highsecurity{
+	name = "Bio Containment"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"aE" = (
+/obj/machinery/shieldwallgen{
+	active = 2;
+	anchored = 1;
+	power = 1
+	},
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4";
+	tag = ""
+	},
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"aF" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/wall/r_wall,
+/area/submap/abandonedzoo)
+"aG" = (
+/obj/structure/table/reinforced,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/item/weapon/gun/energy/floragun,
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"aH" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/abandonedzoo)
+"aI" = (
+/obj/structure/table/reinforced,
+/obj/machinery/computer/med_data/laptop,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"aJ" = (
+/obj/machinery/shieldwallgen{
+	active = 2;
+	anchored = 1;
+	power = 1
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8";
+	tag = ""
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"aK" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/template_noop,
+/area/template_noop)
+"aL" = (
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"aM" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/wall/r_wall,
+/area/submap/abandonedzoo)
+"aN" = (
+/obj/structure/table/reinforced,
+/obj/item/weapon/folder/white_rd,
+/obj/item/weapon/pen/blade,
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"aO" = (
+/obj/structure/bed/chair/bay/comfy/beige{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/abandonedzoo)
+"aP" = (
+/obj/structure/table/reinforced,
+/obj/item/slimepotion/enhancer,
+/obj/item/weapon/reagent_containers/dropper/industrial,
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"aQ" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/template_noop,
+/area/template_noop)
+"aR" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"aS" = (
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/table/rack/shelf/steel,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"aT" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/table/rack/shelf/steel,
+/obj/item/clothing/suit/space/rig/military,
+/obj/item/weapon/tank/emergency/oxygen/double,
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"aU" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/table/rack/shelf/steel,
+/obj/item/weapon/shield/riot,
+/obj/item/weapon/tool/crowbar/hybrid,
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"aV" = (
+/obj/machinery/smartfridge/chemistry,
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"aW" = (
+/obj/structure/table/reinforced,
+/obj/item/mecha_parts/mecha_equipment/tool/syringe_gun,
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"aX" = (
+/obj/structure/table/reinforced,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/weapon/grenade/chem_grenade{
+	pixel_x = 3;
+	pixel_y = 5
+	},
+/obj/item/weapon/grenade/chem_grenade{
+	pixel_x = -4;
+	pixel_y = 5
+	},
+/obj/item/weapon/grenade/chem_grenade,
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"aY" = (
+/obj/structure/table/reinforced,
+/obj/machinery/firealarm{
+	pixel_y = 24
+	},
+/obj/item/weapon/gun/energy/temperature,
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"aZ" = (
+/obj/structure/table/reinforced,
+/obj/item/weapon/shovel,
+/obj/item/weapon/material/minihoe,
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"ba" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"bb" = (
+/obj/machinery/door/airlock/hatch{
+	name = "Bio-Research Station"
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating/external,
+/area/submap/abandonedzoo)
+"bc" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/abandonedzoo)
+"bd" = (
+/obj/machinery/power/terminal,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/abandonedzoo)
+"be" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"bf" = (
+/obj/structure/cable,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/power/smes/buildable/hybrid,
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"bg" = (
+/obj/structure/reagent_dispensers/watertank,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"bh" = (
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk,
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"bi" = (
+/obj/structure/table/reinforced,
+/obj/item/weapon/reagent_containers/glass/bottle/mutagen,
+/obj/item/weapon/reagent_containers/dropper/industrial,
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"bj" = (
+/obj/structure/table/reinforced,
+/obj/machinery/light,
+/obj/item/weapon/surgical/circular_saw{
+	pixel_y = 8
+	},
+/obj/item/weapon/surgical/scalpel,
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"bk" = (
+/obj/machinery/optable,
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"bl" = (
+/obj/machinery/computer/operating,
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"bm" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"bn" = (
+/obj/structure/table/reinforced,
+/obj/item/weapon/reagent_containers/food/snacks/slice/bigbeanburrito,
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"bo" = (
+/obj/machinery/shieldwallgen{
+	active = 2;
+	anchored = 1;
+	power = 1
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8";
+	tag = ""
+	},
+/obj/structure/cable,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"bp" = (
+/obj/structure/bed,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"bq" = (
+/obj/item/stack/cable_coil/cut,
+/obj/item/weapon/tool/wirecutters/hybrid,
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"br" = (
+/obj/structure/table/reinforced,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/microwave,
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"bs" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/machinery/shieldwallgen,
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"bt" = (
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/machinery/shieldwallgen,
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"bu" = (
+/obj/structure/flora/ausbushes/sunnybush,
+/turf/simulated/floor/grass,
+/area/submap/abandonedzoo)
+"bv" = (
+/mob/living/simple_mob/animal/space/carp,
+/turf/simulated/floor/grass,
+/area/submap/abandonedzoo)
+"bw" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/grass,
+/area/submap/abandonedzoo)
+"bx" = (
+/obj/structure/flora/ausbushes/palebush,
+/turf/simulated/floor/grass,
+/area/submap/abandonedzoo)
+"by" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/wall/r_wall,
+/area/submap/abandonedzoo)
+"bz" = (
+/obj/machinery/space_heater,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"bA" = (
+/obj/structure/table/reinforced,
+/obj/machinery/reagentgrinder,
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"bB" = (
+/obj/effect/alien/weeds,
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"bC" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/alien/weeds/node,
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"bD" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"bE" = (
+/obj/structure/flora/ausbushes/sparsegrass,
+/turf/simulated/floor/grass,
+/area/submap/abandonedzoo)
+"bF" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/wall/r_wall,
+/area/submap/abandonedzoo)
+"bG" = (
+/obj/machinery/door/airlock/external,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating/external,
+/area/submap/abandonedzoo)
+"bH" = (
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"bI" = (
+/obj/structure/flora/ausbushes/reedbush,
+/turf/simulated/floor/grass,
+/area/submap/abandonedzoo)
+"bJ" = (
+/turf/simulated/floor/grass,
+/area/submap/abandonedzoo)
+"bK" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"bL" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/plating/external,
+/area/submap/abandonedzoo)
+"bM" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plating/external,
+/area/submap/abandonedzoo)
+"bN" = (
+/obj/structure/grille/broken,
+/obj/item/weapon/material/shard,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"bO" = (
+/obj/item/weapon/material/shard{
+	icon_state = "medium"
+	},
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"bP" = (
+/obj/structure/lattice,
+/turf/template_noop,
+/area/submap/abandonedzoo)
+"bQ" = (
+/obj/machinery/shieldwallgen{
+	active = 2;
+	anchored = 1;
+	power = 1
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8";
+	tag = ""
+	},
+/obj/structure/cable,
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"bR" = (
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/structure/disposaloutlet,
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"bS" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable,
+/obj/machinery/shieldwallgen,
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"bT" = (
+/obj/item/weapon/material/shard{
+	icon_state = "medium"
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"bU" = (
+/obj/structure/grille/broken,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"bV" = (
+/obj/machinery/shieldwallgen,
+/turf/template_noop,
+/area/template_noop)
+"bW" = (
+/obj/random/outcrop,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/submap/abandonedzoo)
+"hU" = (
+/turf/template_noop,
+/area/submap/abandonedzoo)
+"oC" = (
+/mob/living/simple_mob/animal/passive/crab,
+/turf/simulated/floor/grass,
+/area/submap/abandonedzoo)
+"qZ" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"Ed" = (
+/obj/item/weapon/material/shard,
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"Hv" = (
+/turf/simulated/wall/r_wall,
+/area/submap/abandonedzoo)
+"Nd" = (
+/obj/effect/alien/weeds/node,
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"XG" = (
+/mob/living/simple_mob/vore/oregrub/lava,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/submap/abandonedzoo)
 
 (1,1,1) = {"
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaabacacacacadaaaaaaaaaaaaaeacacacacafaa
-aaagahahasajakaaaaaaaaaaaaakalamanaoakaa
-aaagbWapahasakaaaaaaaaaaaaakananaqanakaa
-aaagasasasasakHvqZqZqZqZHvakamaoauavakaa
-aaagahXGawbWakHvaxayayazHvakaAaBanaCakaa
-aaabacaDacacaEaFaGaHaHaIaFaJacacaDacafaa
-aaaaaKaLHvHvaMHvaNaOayaPHvHvHvHvaLaQaaaa
-aaaaaKaRHvaSaTaUaVayayaWaXaYaZHvbaaQaaaa
-aaaaaKaLbbaybcayayayayayayayaybbaLaQaaaa
-aaaaaKaLbbaybdayayayayayayayaybbaLaQaaaa
-aaaaaKaRHvbebfbgbhayaybibjbkblHvbaaQaaaa
-aaaaaKaLHvHvaMHvbmayaybnHvHvHvHvaLaQaaaa
-aaabacaDacacboaFbpaHbqbraFbsacacaDacbtaa
-aaagbubvbwbxakbybzayaybAHvakbBbCbDbDagaa
-aaagbJoCbJbEakbFHvbGbGHvHvakbDbHbDbBagaa
-aaagbIbJbJbvakbKHvbLbMHvaaakNdbHEdbHbNaa
-aaagbJbJoCbJakbKHvbGbGHvaaakbHbHbObObPaa
-aaabacacacacbQbRaaaaaaaaaabSacbTbUbPhUbV
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(2,1,1) = {"
+aa
+ab
+ag
+ag
+ag
+ag
+ab
+aa
+aa
+aa
+aa
+aa
+aa
+ab
+qZ
+ag
+ag
+ag
+ab
+aa
+"}
+(3,1,1) = {"
+aa
+ac
+ah
+bW
+as
+ah
+ac
+aK
+aK
+aK
+aK
+aK
+aK
+bD
+bu
+bJ
+bI
+bJ
+ac
+aa
+"}
+(4,1,1) = {"
+aa
+ac
+ah
+ap
+as
+XG
+aD
+aL
+aR
+aL
+aL
+aR
+aL
+aD
+bv
+oC
+bJ
+bJ
+ac
+aa
+"}
+(5,1,1) = {"
+aa
+ac
+as
+ah
+as
+aw
+ac
+Hv
+Hv
+bb
+bb
+Hv
+Hv
+bD
+bw
+bJ
+bJ
+oC
+ac
+aa
+"}
+(6,1,1) = {"
+aa
+ac
+aj
+as
+as
+bW
+ac
+Hv
+aS
+ay
+ay
+be
+Hv
+bD
+bx
+bE
+bv
+bJ
+ac
+aa
+"}
+(7,1,1) = {"
+aa
+ad
+ak
+ak
+ak
+ak
+aE
+aM
+aT
+bc
+bd
+bf
+aM
+bo
+ak
+ak
+ak
+ak
+bQ
+aa
+"}
+(8,1,1) = {"
+aa
+aa
+aa
+aa
+Hv
+Hv
+aF
+Hv
+aU
+ay
+ay
+bg
+Hv
+aF
+by
+bF
+bK
+bK
+bR
+aa
+"}
+(9,1,1) = {"
+aa
+aa
+aa
+aa
+qZ
+ax
+aG
+aN
+aV
+ay
+ay
+bh
+bm
+bp
+bz
+Hv
+Hv
+Hv
+aa
+aa
+"}
+(10,1,1) = {"
+aa
+aa
+aa
+aa
+qZ
+ay
+aH
+aO
+ay
+ay
+ay
+ay
+ay
+aH
+ay
+bG
+bL
+bG
+aa
+aa
+"}
+(11,1,1) = {"
+aa
+aa
+aa
+aa
+qZ
+ay
+aH
+ay
+ay
+ay
+ay
+ay
+ay
+bq
+ay
+bG
+bM
+bG
+aa
+aa
+"}
+(12,1,1) = {"
+aa
+aa
+aa
+aa
+qZ
+az
+aI
+aP
+aW
+ay
+ay
+bi
+bn
+br
+bA
+Hv
+Hv
+Hv
+aa
+aa
+"}
+(13,1,1) = {"
+aa
+aa
+aa
+aa
+Hv
+Hv
+aF
+Hv
+aX
+ay
+ay
+bj
+Hv
+aF
+Hv
+Hv
+aa
+aa
+aa
+aa
+"}
+(14,1,1) = {"
+aa
+ae
+ak
+ak
+ak
+ak
+aJ
+Hv
+aY
+ay
+ay
+bk
+Hv
+bs
+ak
+ak
+ak
+ak
+bS
+aa
+"}
+(15,1,1) = {"
+aa
+ac
+al
+an
+am
+aA
+ac
+Hv
+aZ
+ay
+ay
+bl
+Hv
+ac
+bB
+bB
+Nd
+bH
+ac
+aa
+"}
+(16,1,1) = {"
+aa
+ac
+am
+an
+ao
+aB
+ac
+Hv
+Hv
+bb
+bb
+Hv
+Hv
+ac
+bC
+bH
+bH
+bH
+bT
+aa
+"}
+(17,1,1) = {"
+aa
+ac
+an
+aq
+au
+an
+aD
+aL
+ba
+aL
+aL
+ba
+aL
+aD
+bB
+bB
+Ed
+bO
+bU
+aa
+"}
+(18,1,1) = {"
+aa
+ac
+ao
+an
+av
+aC
+ac
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+ac
+bB
+bB
+bH
+bO
+bP
+aa
+"}
+(19,1,1) = {"
+aa
+af
+ak
+ak
+ak
+ak
+af
+aa
+aa
+aa
+aa
+aa
+aa
+bt
+ag
+ag
+bN
+bP
+hU
+aa
+"}
+(20,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+bV
+aa
 "}

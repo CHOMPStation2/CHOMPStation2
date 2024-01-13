@@ -19,7 +19,7 @@
 
 /datum/gear/suit/winterhood
 	display_name = "Winter Hood"
-	path = /obj/item/clothing/head/hood/cloak/winter
+	path = /obj/item/clothing/head/hood/winter
 	cost = 0
 
 /datum/gear/suit/martianminer

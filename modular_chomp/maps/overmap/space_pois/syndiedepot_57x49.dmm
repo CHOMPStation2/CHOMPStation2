@@ -5,25 +5,29 @@
 "ae" = (
 /obj/structure/simple_door/iron,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotoutter)
 "ag" = (
 /obj/effect/decal/cleanable/cobweb,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotoutter)
 "ai" = (
 /obj/effect/decal/cleanable/spiderling_remains,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotoutter)
 "am" = (
 /obj/structure/fans/tiny,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotoutter)
 "ao" = (
@@ -36,7 +40,8 @@
 "as" = (
 /obj/effect/decal/cleanable/cobweb2,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotoutter)
 "au" = (
@@ -48,27 +53,31 @@
 "aw" = (
 /obj/structure/bed,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "ay" = (
 /obj/item/weapon/reagent_containers/food/drinks/flask/barflask,
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "az" = (
 /obj/structure/reagent_dispensers/beerkeg,
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "aG" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "aH" = (
@@ -88,7 +97,8 @@
 	layer = 4.1
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "aP" = (
@@ -100,7 +110,8 @@
 	layer = 4.1
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "aV" = (
@@ -114,7 +125,8 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "bk" = (
@@ -124,7 +136,8 @@
 	},
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotoutter)
 "bo" = (
@@ -132,7 +145,8 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "br" = (
@@ -145,26 +159,30 @@
 "bu" = (
 /obj/structure/dispenser,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotoutter)
 "bw" = (
 /obj/item/weapon/storage/box/donkpockets,
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "bz" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "bF" = (
 /obj/structure/bed/chair,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "bH" = (
@@ -184,7 +202,8 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "bM" = (
@@ -197,14 +216,16 @@
 	pixel_x = 20
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "bO" = (
 /obj/item/weapon/reagent_containers/food/snacks/syndicake,
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "bR" = (
@@ -213,13 +234,15 @@
 	},
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "bU" = (
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotoutter)
 "bV" = (
@@ -227,7 +250,8 @@
 /obj/item/weapon/pen,
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "bW" = (
@@ -239,7 +263,8 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "ca" = (
@@ -269,7 +294,8 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "cm" = (
@@ -277,7 +303,8 @@
 /obj/structure/table/standard,
 /obj/machinery/microwave/advanced,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "cn" = (
@@ -286,7 +313,8 @@
 	on = 1
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "co" = (
@@ -318,7 +346,8 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "cw" = (
@@ -336,7 +365,8 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "cA" = (
@@ -352,7 +382,8 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "cC" = (
@@ -382,7 +413,8 @@
 "cH" = (
 /obj/machinery/light,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "cI" = (
@@ -392,13 +424,15 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "cJ" = (
 /obj/structure/cable,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "cM" = (
@@ -427,7 +461,8 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "cU" = (
@@ -437,13 +472,15 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "cV" = (
 /obj/machinery/recharge_station,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "cW" = (
@@ -451,7 +488,8 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "cY" = (
@@ -459,12 +497,14 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "cZ" = (
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotoutter)
 "db" = (
@@ -481,7 +521,8 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "de" = (
@@ -504,7 +545,8 @@
 	},
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "ea" = (
@@ -548,13 +590,15 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "kB" = (
 /obj/structure/closet/syndicate/suit,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "kJ" = (
@@ -563,7 +607,8 @@
 "mt" = (
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "oM" = (
@@ -579,7 +624,8 @@
 	},
 /obj/structure/closet/syndicate/suit,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "qt" = (
@@ -589,13 +635,15 @@
 "rd" = (
 /obj/machinery/power/emitter,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "rw" = (
 /obj/random/multiple/large_corp_crate,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "sg" = (
@@ -611,7 +659,8 @@
 "tF" = (
 /mob/living/simple_mob/humanoid/merc/ranged/rifle/mag/poi,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "uK" = (
@@ -622,7 +671,8 @@
 /obj/structure/table/standard,
 /obj/item/weapon/storage/box/syndicate,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "vH" = (
@@ -632,7 +682,8 @@
 "wv" = (
 /obj/item/weapon/inducer/syndicate,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "xv" = (
@@ -644,13 +695,15 @@
 /obj/machinery/light,
 /obj/random/multiple/large_corp_crate,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "ya" = (
 /mob/living/simple_mob/humanoid/merc/ranged/technician/poi,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "yi" = (
@@ -660,7 +713,8 @@
 	},
 /obj/machinery/power/emitter,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "ym" = (
@@ -684,7 +738,8 @@
 "Cc" = (
 /obj/structure/closet/syndicate,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "Cy" = (
@@ -701,7 +756,8 @@
 	},
 /obj/structure/closet/syndicate/personal,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "DC" = (
@@ -713,7 +769,8 @@
 "Fl" = (
 /mob/living/simple_mob/humanoid/merc/melee/sword/poi,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "Hc" = (
@@ -726,13 +783,15 @@
 /obj/item/weapon/card/id/syndicate,
 /obj/item/weapon/card/id/syndicate,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "Ia" = (
 /mob/living/simple_mob/humanoid/merc/ranged/smg,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "Jh" = (
@@ -741,7 +800,8 @@
 	},
 /mob/living/simple_mob/humanoid/merc/ranged/smg,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "Jl" = (
@@ -752,12 +812,14 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "KN" = (
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "Ll" = (
@@ -775,7 +837,8 @@
 	},
 /obj/structure/closet/syndicate/resources,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "NM" = (
@@ -791,7 +854,8 @@
 	locked = 1
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "NS" = (
@@ -808,7 +872,8 @@
 "Oq" = (
 /obj/item/toy/syndicateballoon,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "OD" = (
@@ -820,25 +885,29 @@
 "Rr" = (
 /obj/structure/closet/syndicate/nuclear,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "RQ" = (
 /obj/structure/closet/syndicate/resources/everything,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "Sf" = (
 /obj/structure/closet/syndicate/resources,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "Sn" = (
 /obj/structure/dispenser,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "SF" = (
@@ -855,13 +924,15 @@
 "Te" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "TQ" = (
 /obj/machinery/vending/emergencyfood/filled,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "TX" = (
@@ -870,7 +941,8 @@
 	locked = 1
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "UA" = (
@@ -882,7 +954,8 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "UV" = (
@@ -894,13 +967,15 @@
 "VZ" = (
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "WI" = (
 /obj/machinery/suit_cycler/syndicate,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "Xz" = (
@@ -913,7 +988,8 @@
 "Yj" = (
 /mob/living/simple_mob/humanoid/merc/ranged/ionrifle,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "YU" = (
@@ -923,7 +999,8 @@
 	},
 /mob/living/simple_mob/humanoid/merc/melee/sword/poi,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "Zh" = (
@@ -944,7 +1021,8 @@
 "ZC" = (
 /obj/random/multiple/corp_crate,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
+	icon_state = "dark";
+	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 

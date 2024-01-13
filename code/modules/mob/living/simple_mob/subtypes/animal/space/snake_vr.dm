@@ -71,10 +71,28 @@
 	desc = "A big, thick snake."
 	tt_desc = "E Reptilia Pythonidae"
 
-	icon_state = "python"
+        // CHOMPEdit Start - New sprites & Added vore
+        /*
+        icon_state = "python"
 	icon_living = "python"
 	icon_dead = "python_dead"
 	icon = 'icons/mob/snake_vr.dmi'
+	*/
+	icon_state = "snek"
+	icon_living = "snek"
+	icon_dead = "snek_dead"
+	icon_rest = "snek_rest"
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
+
+	vore_active = 1
+	vore_capacity = 1
+	vore_default_mode = DM_HOLD
+	vore_icons = SA_ICON_LIVING | SA_ICON_REST
+	vore_escape_chance = 25
+	swallowTime = 50
+	vore_bump_chance = 10
+	vore_bump_emote = "slithers around and tries to devour"
+	// CHOMPEdit End
 
 /*
  * NOODLE IS HERE! SQUEEEEEEEE~
@@ -90,6 +108,25 @@
 
 	var/turns_since_scan = 0
 	var/obj/movement_target
+// CHOMPEdit Start
+/mob/living/simple_mob/animal/passive/snake/init_vore()
+	if(!voremob_loaded)
+		return
+	.=..()
+	var/obj/belly/B = vore_selected
+	B.name = "stomach"
+	B.desc = "The snake coils its tail around you, pushing you to the ground and pinning you with its weight. It flicks its tongue at you, before pouncing onto your head, engulfing the upper half of your body with ease as it unhinges its jaw. With greedy swallows, it pulls you deeper, and deeper. The tight walls undulate rhythmically as the danger noodle rumbles contentedly at this new meal. The snake sends the last of you down with a deep swallow, hissing softly and closing its eyes as it enjoys its new meal, tucked away nicely under those beautiful, green scales."
+	B.digest_mode = DM_HOLD
+	B.item_digest_mode = IM_HOLD
+	B.mode_flags = DM_FLAG_THICKBELLY
+	B.digest_brute = 2
+	B.digest_burn = 2
+	B.digest_oxy = 1
+	B.digestchance = 0
+	B.absorbchance = 0
+	B.escapechance = 25
+	B.escape_stun = 5
+// CHOMPEdit End
 
 /mob/living/simple_mob/animal/passive/snake/python/noodle/Life()
 	..()
