@@ -986,6 +986,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/maintDorm2
 	name = "\improper Construction Dorm 2"
@@ -994,6 +995,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/maintDorm3
 	name = "\improper Construction Dorm 3"
@@ -1002,6 +1004,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/maintDorm4
 	name = "\improper Construction Dorm 4"
@@ -1010,138 +1013,161 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_1
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_2
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_3
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_4
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_5
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_6
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_7
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_8
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_9
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_10
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_11
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_12
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/Dorm_1
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/Dorm_2
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/Dorm_3
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/Dorm_4
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/Dorm_5
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/Dorm_6
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/Dorm_7
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/Dorm_8
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/Dorm_9
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/Dorm_10
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/Dorm_1/holo
 	name = "\improper Dorm 1 Holodeck"
@@ -1167,6 +1193,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/spacedorm2
 	name = "\improper Visitor Lodging 2"
@@ -1176,6 +1203,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/spacedorm3
 	name = "\improper Visitor Lodging 3"
@@ -1185,6 +1213,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/spacedorm4
 	name = "\improper Visitor Lodging 4"
@@ -1194,6 +1223,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/holodeck/holodorm/source_basic
 	name = "\improper Holodeck Source"
@@ -1201,6 +1231,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/holodeck/holodorm/source_desert
 	name = "\improper Holodeck Source"
@@ -1208,6 +1239,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/holodeck/holodorm/source_seating
 	name = "\improper Holodeck Source"
@@ -1215,6 +1247,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/holodeck/holodorm/source_beach
 	name = "\improper Holodeck Source"
@@ -1222,6 +1255,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/holodeck/holodorm/source_garden
 	name = "\improper Holodeck Source"
@@ -1229,6 +1263,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/holodeck/holodorm/source_boxing
 	name = "\improper Holodeck Source"
@@ -1236,6 +1271,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/holodeck/holodorm/source_snow
 	name = "\improper Holodeck Source"
@@ -1243,6 +1279,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/holodeck/holodorm/source_space
 	name = "\improper Holodeck Source"
@@ -1250,6 +1287,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/holodeck/holodorm/source_off
 	name = "\improper Holodeck Source"
@@ -1257,6 +1295,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/ai_core_foyer
 	name = "\improper AI Core Access"

@@ -4,6 +4,7 @@
 	seed_name = "lettuce"
 	display_name = "lettuce"
 	kitchen_tag = "lettuce"
+	mutants = list("siflettuce") // ChompEDIT - Makes the glacial lettuce obtainable
 	chems = list("nutriment" = list(1,15))
 
 /datum/seed/lettuce/New()

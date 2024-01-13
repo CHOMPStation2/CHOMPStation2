@@ -1,53 +1,447 @@
-"a" = (/turf/template_noop,/area/template_noop)
-"b" = (/turf/simulated/mineral,/area/submap/druglab)
-"c" = (/obj/machinery/floodlight{in_use = 1},/turf/simulated/floor/plating,/area/submap/druglab)
-"d" = (/obj/structure/closet/crate,/turf/simulated/floor/plating,/area/submap/druglab)
-"e" = (/obj/structure/closet,/obj/item/clothing/head/bio_hood,/obj/item/clothing/suit/bio_suit,/obj/item/clothing/gloves/combat,/turf/simulated/floor/plating,/area/submap/druglab)
-"f" = (/obj/effect/decal/cleanable/blood/drip,/obj/random/junk,/obj/random/trash,/turf/simulated/floor/plating,/area/submap/druglab)
-"g" = (/obj/effect/decal/cleanable/blood,/obj/effect/floor_decal/rust,/turf/simulated/floor/plating,/area/submap/druglab)
-"h" = (/obj/machinery/door/airlock/external{name = "Crackden Airlock"},/turf/simulated/floor/plating,/area/submap/druglab)
-"j" = (/turf/simulated/floor/plating,/area/submap/druglab)
-"k" = (/obj/machinery/door/airlock/external{name = "Plain Airlock"},/turf/simulated/floor/plating,/area/submap/druglab)
-"l" = (/obj/item/weapon/reagent_containers/food/snacks/chips,/obj/structure/table/steel,/turf/simulated/floor/plating,/area/submap/druglab)
-"m" = (/obj/item/ammo_casing{pixel_y = 3},/obj/random/maintenance/security,/obj/effect/floor_decal/rust,/turf/simulated/floor/plating,/area/submap/druglab)
-"n" = (/obj/effect/decal/cleanable/blood/oil,/obj/item/ammo_casing{pixel_x = -4; pixel_y = -6},/obj/item/weapon/grenade/chem_grenade/metalfoam,/turf/simulated/floor/plating,/area/submap/druglab)
-"o" = (/obj/structure/table/steel,/obj/item/weapon/evidencebag,/turf/simulated/floor/plating,/area/submap/druglab)
-"p" = (/obj/structure/cable{d2 = 2; icon_state = "0-2"; pixel_y = 1},/obj/machinery/power/apc{dir = 4; layer = 5; name = "east bump"; pixel_x = 24},/turf/simulated/floor/plating,/area/submap/druglab)
-"q" = (/obj/machinery/floodlight,/turf/simulated/floor/plating,/area/submap/druglab)
-"r" = (/obj/machinery/chem_master,/turf/simulated/floor/plating,/area/submap/druglab)
-"s" = (/obj/effect/decal/cleanable/blood/oil,/turf/simulated/floor/plating,/area/submap/druglab)
-"t" = (/obj/machinery/power/port_gen/pacman,/obj/structure/cable,/turf/simulated/floor/plating,/area/submap/druglab)
-"u" = (/obj/machinery/chemical_dispenser/full{pixel_y = 7},/obj/structure/table/steel,/turf/simulated/floor/plating,/area/submap/druglab)
-"v" = (/obj/item/weapon/grenade/chem_grenade/incendiary,/obj/random/trash,/turf/simulated/floor/plating,/area/submap/druglab)
-"w" = (/obj/machinery/space_heater,/turf/simulated/floor/plating,/area/submap/druglab)
-"x" = (/obj/machinery/portable_atmospherics/canister/air,/turf/simulated/floor/plating,/area/submap/druglab)
-"y" = (/obj/structure/table/steel,/obj/machinery/microwave,/obj/item/weapon/storage/box/donkpockets/spicy{pixel_y = 12},/turf/simulated/floor/plating,/area/submap/druglab)
-"z" = (/obj/item/weapon/grenade/chem_grenade/metalfoam,/turf/simulated/floor/plating,/area/submap/druglab)
-"A" = (/obj/item/weapon/grenade/chem_grenade/large,/turf/simulated/floor/plating,/area/submap/druglab)
-"B" = (/obj/random/maintenance/security,/obj/effect/floor_decal/rust,/turf/simulated/floor/plating,/area/submap/druglab)
-"D" = (/obj/machinery/portable_atmospherics/canister/air,/obj/effect/floor_decal/rust,/turf/simulated/floor/plating,/area/submap/druglab)
-"E" = (/obj/effect/floor_decal/rust,/turf/simulated/floor/plating,/area/submap/druglab)
-"F" = (/obj/item/weapon/grenade/chem_grenade/teargas,/obj/item/weapon/grenade/chem_grenade/teargas,/turf/simulated/floor/plating,/area/submap/druglab)
-"M" = (/obj/random/trash,/turf/simulated/floor/plating,/area/submap/druglab)
-"S" = (/obj/effect/decal/cleanable/blood/drip,/obj/random/maintenance/security,/turf/simulated/floor/plating,/area/submap/druglab)
-"T" = (/obj/random/junk,/turf/simulated/floor/plating,/area/submap/druglab)
-"V" = (/turf/simulated/mineral/floor/vacuum,/area/submap/druglab)
-"X" = (/obj/item/weapon/grenade/chem_grenade/teargas,/obj/random/junk,/obj/effect/floor_decal/rust,/turf/simulated/floor/plating,/area/submap/druglab)
-"Z" = (/obj/random/junk,/obj/effect/floor_decal/rust,/turf/simulated/floor/plating,/area/submap/druglab)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"b" = (
+/turf/simulated/mineral,
+/area/submap/druglab)
+"c" = (
+/obj/machinery/floodlight{
+	in_use = 1
+	},
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"d" = (
+/obj/structure/closet/crate,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"e" = (
+/obj/structure/closet,
+/obj/item/clothing/head/bio_hood,
+/obj/item/clothing/suit/bio_suit,
+/obj/item/clothing/gloves/combat,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"f" = (
+/obj/effect/decal/cleanable/blood/drip,
+/obj/random/junk,
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"g" = (
+/obj/effect/decal/cleanable/blood,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"h" = (
+/obj/machinery/door/airlock/external{
+	name = "Crackden Airlock"
+	},
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"j" = (
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"k" = (
+/obj/machinery/door/airlock/external{
+	name = "Plain Airlock"
+	},
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"l" = (
+/obj/item/weapon/reagent_containers/food/snacks/chips,
+/obj/structure/table/steel,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"m" = (
+/obj/item/ammo_casing{
+	pixel_y = 3
+	},
+/obj/random/maintenance/security,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"n" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/item/ammo_casing{
+	pixel_x = -4;
+	pixel_y = -6
+	},
+/obj/item/weapon/grenade/chem_grenade/metalfoam,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"o" = (
+/obj/structure/table/steel,
+/obj/item/weapon/evidencebag,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"p" = (
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2";
+	pixel_y = 1
+	},
+/obj/machinery/power/apc{
+	dir = 4;
+	layer = 5;
+	name = "east bump";
+	pixel_x = 24
+	},
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"q" = (
+/obj/machinery/floodlight,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"r" = (
+/obj/machinery/chem_master,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"s" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"t" = (
+/obj/machinery/power/port_gen/pacman,
+/obj/structure/cable,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"u" = (
+/obj/machinery/chemical_dispenser/full{
+	pixel_y = 7
+	},
+/obj/structure/table/steel,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"v" = (
+/obj/item/weapon/grenade/chem_grenade/incendiary,
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"w" = (
+/obj/machinery/space_heater,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"x" = (
+/obj/machinery/portable_atmospherics/canister/air,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"y" = (
+/obj/structure/table/steel,
+/obj/machinery/microwave,
+/obj/item/weapon/storage/box/donkpockets/spicy{
+	pixel_y = 12
+	},
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"z" = (
+/obj/item/weapon/grenade/chem_grenade/metalfoam,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"A" = (
+/obj/item/weapon/grenade/chem_grenade/large,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"B" = (
+/obj/random/maintenance/security,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"D" = (
+/obj/machinery/portable_atmospherics/canister/air,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"E" = (
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"F" = (
+/obj/item/weapon/grenade/chem_grenade/teargas,
+/obj/item/weapon/grenade/chem_grenade/teargas,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"M" = (
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"S" = (
+/obj/effect/decal/cleanable/blood/drip,
+/obj/random/maintenance/security,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"T" = (
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"V" = (
+/turf/simulated/mineral/floor/vacuum,
+/area/submap/druglab)
+"X" = (
+/obj/item/weapon/grenade/chem_grenade/teargas,
+/obj/random/junk,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"Z" = (
+/obj/random/junk,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
 
 (1,1,1) = {"
-aaaaaaaabbaaaaaa
-aaaaaaabbbaabbaa
-aaaaabbbbbbbbbba
-aabbbbbbbbbbbbbb
-abbbcdefSghjkVbb
-abblFXEmnjbbbVVb
-bbboBApbMjqbbVVb
-bbbrEstbZzbbbVaa
-bbbuvjbbjBbbbaab
-bbbwETbbxDbVVVbb
-aabbbybbbbbaVVbb
-aaaabbbaaaaaaaaa
-aaaabbbaaaaaaaaa
-aaaabbaaaaaaaaaa
+a
+a
+a
+a
+a
+a
+b
+b
+b
+b
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+a
+a
+a
+b
+b
+b
+b
+b
+b
+a
+a
+a
+a
+"}
+(3,1,1) = {"
+a
+a
+a
+b
+b
+b
+b
+b
+b
+b
+b
+a
+a
+a
+"}
+(4,1,1) = {"
+a
+a
+a
+b
+b
+l
+o
+r
+u
+w
+b
+a
+a
+a
+"}
+(5,1,1) = {"
+a
+a
+a
+b
+c
+F
+B
+E
+v
+E
+b
+b
+b
+b
+"}
+(6,1,1) = {"
+a
+a
+b
+b
+d
+X
+A
+s
+j
+T
+y
+b
+b
+b
+"}
+(7,1,1) = {"
+a
+a
+b
+b
+e
+E
+p
+t
+b
+b
+b
+b
+b
+a
+"}
+(8,1,1) = {"
+a
+b
+b
+b
+f
+m
+b
+b
+b
+b
+b
+a
+a
+a
+"}
+(9,1,1) = {"
+b
+b
+b
+b
+S
+n
+M
+Z
+j
+x
+b
+a
+a
+a
+"}
+(10,1,1) = {"
+b
+b
+b
+b
+g
+j
+j
+z
+B
+D
+b
+a
+a
+a
+"}
+(11,1,1) = {"
+a
+a
+b
+b
+h
+b
+q
+b
+b
+b
+b
+a
+a
+a
+"}
+(12,1,1) = {"
+a
+a
+b
+b
+j
+b
+b
+b
+b
+V
+a
+a
+a
+a
+"}
+(13,1,1) = {"
+a
+b
+b
+b
+k
+b
+b
+b
+b
+V
+V
+a
+a
+a
+"}
+(14,1,1) = {"
+a
+b
+b
+b
+V
+V
+V
+V
+a
+V
+V
+a
+a
+a
+"}
+(15,1,1) = {"
+a
+a
+b
+b
+b
+V
+V
+a
+a
+b
+b
+a
+a
+a
+"}
+(16,1,1) = {"
+a
+a
+a
+b
+b
+b
+b
+a
+b
+b
+b
+a
+a
+a
 "}

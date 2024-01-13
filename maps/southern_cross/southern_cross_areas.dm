@@ -145,6 +145,10 @@
 	name = "Tunnels"
 	icon_state = "explored"
 
+/area/surface/cave/explored/trader
+	name = "Trader Hideout"
+	icon_state = "hideaway"
+
 /area/surface/cave/unexplored/normal
 	name = "Tunnels"
 	icon_state = "unexplored"
@@ -175,7 +179,9 @@
 	icon_state = "Sleep"
 	soundproofed = TRUE
 	limit_mob_size = FALSE
+	block_suit_sensors = TRUE
 	flags = RAD_SHIELDED
+	block_tracking = TRUE
 
 /area/surface/outpost/shelter/exterior
 	name = "Wilderness Shelter Exterior"
@@ -2193,6 +2199,9 @@ End Chompstation Edit*/
 	icon_state = "storage"
 	ambience = AMBIENCE_RUINS
 
+/area/shuttle/overmap/sif
+	name = "wilderness site"
+	icon_state = "shuttlered"
 
 //Temp Removal TFF 15/2/20
 /*

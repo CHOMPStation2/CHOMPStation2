@@ -4189,6 +4189,20 @@
 	},
 /turf/simulated/wall/solidrock,
 /area/surface/cave/unexplored/normal)
+"jK" = (
+/obj/structure/table/marble,
+/obj/item/weapon/book/manual/anomaly_testing,
+/turf/simulated/floor/concrete,
+/area/surface/cave/explored/trader)
+"jU" = (
+/obj/structure/table/marble,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey,
+/turf/simulated/floor/concrete,
+/area/surface/cave/explored/trader)
+"kx" = (
+/obj/structure/table/marble,
+/turf/simulated/floor/concrete,
+/area/surface/cave/explored/trader)
 "ky" = (
 /turf/simulated/shuttle/floor/voidcraft/external,
 /area/surface/cave/explored/deep)
@@ -4220,6 +4234,9 @@
 "md" = (
 /turf/simulated/wall/solidrock,
 /area/surface/cave/unexplored/normal)
+"nr" = (
+/turf/simulated/mineral/sif,
+/area/surface/cave/explored/trader)
 "nx" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -4247,6 +4264,10 @@
 /obj/effect/zone_divider,
 /turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/surface/cave/explored/deep)
+"oO" = (
+/obj/item/weapon/stool,
+/turf/simulated/floor/concrete,
+/area/surface/cave/explored/trader)
 "pQ" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/water{
@@ -4282,6 +4303,11 @@
 	outdoors = 0
 	},
 /area/surface/outpost/wall/checkpoint)
+"rc" = (
+/obj/structure/simple_door/sandstone,
+/obj/structure/simple_door/sandstone,
+/turf/simulated/floor/concrete,
+/area/surface/cave/explored/trader)
 "rd" = (
 /obj/effect/map_effect/portal/line/side_a,
 /turf/simulated/wall/solidrock,
@@ -4290,6 +4316,16 @@
 /obj/effect/map_effect/portal/master/side_a/caves_to_wilderness,
 /turf/simulated/wall/solidrock,
 /area/surface/outpost/wall)
+"st" = (
+/obj/effect/map_effect/portal/line/side_b{
+	dir = 1
+	},
+/turf/simulated/wall/solidrock,
+/area/surface/cave/explored/trader)
+"sH" = (
+/obj/structure/simple_door/sandstone,
+/turf/simulated/floor/concrete,
+/area/surface/cave/explored/trader)
 "tf" = (
 /obj/effect/zone_divider,
 /turf/simulated/mineral/floor/ignore_mapgen/sif,
@@ -4320,6 +4356,11 @@
 	temperature = 243.15
 	},
 /area/surface/outpost/mining_main/cave)
+"xS" = (
+/obj/structure/table/marble,
+/obj/item/weapon/reagent_containers/food/drinks/cans/nukie_lemon,
+/turf/simulated/floor/concrete,
+/area/surface/cave/explored/trader)
 "zJ" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -4358,6 +4399,11 @@
 	temperature = 243.15
 	},
 /area/surface/outpost/mining_main/cave)
+"Cv" = (
+/obj/structure/bed,
+/obj/item/weapon/bedsheet/cosmos,
+/turf/simulated/floor/concrete,
+/area/surface/cave/explored/trader)
 "Cx" = (
 /obj/effect/map_effect/portal/line/side_b{
 	dir = 1
@@ -4409,10 +4455,23 @@
 	},
 /turf/simulated/wall/solidrock,
 /area/surface/cave/unexplored/normal)
+"HL" = (
+/obj/structure/table/marble,
+/obj/item/weapon/reagent_containers/food/snacks/breakfast_wrap,
+/turf/simulated/floor/concrete,
+/area/surface/cave/explored/trader)
+"In" = (
+/obj/item/weapon/stool,
+/mob/living/simple_mob/humanoid/starhunter/trader/farmer,
+/turf/simulated/floor/concrete,
+/area/surface/cave/explored/trader)
 "Jk" = (
 /obj/effect/map_effect/portal/line/side_a,
 /turf/simulated/wall/solidrock,
 /area/surface/outpost/wall/checkpoint)
+"LO" = (
+/turf/simulated/wall/solidrock,
+/area/surface/cave/explored/trader)
 "Nm" = (
 /obj/effect/map_effect/portal/line/side_b{
 	dir = 1
@@ -4457,6 +4516,16 @@
 	temperature = 243.15
 	},
 /area/surface/outpost/research/xenoarcheology/exterior)
+"Qd" = (
+/obj/item/weapon/stool,
+/mob/living/simple_mob/humanoid/starhunter/trader/miner,
+/turf/simulated/floor/concrete,
+/area/surface/cave/explored/trader)
+"Qs" = (
+/obj/structure/table/marble,
+/obj/item/weapon/book/manual/engineering_singularity_safety,
+/turf/simulated/floor/concrete,
+/area/surface/cave/explored/trader)
 "Qy" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/plating{
@@ -4466,6 +4535,9 @@
 	temperature = 243.15
 	},
 /area/surface/outpost/research/xenoarcheology/exterior)
+"RM" = (
+/turf/simulated/wall/sandstone,
+/area/surface/cave/explored/trader)
 "RX" = (
 /obj/structure/cable/ender{
 	icon_state = "1-2";
@@ -4481,6 +4553,11 @@
 	temperature = 243.15
 	},
 /area/surface/outpost/mining_main/cave)
+"SI" = (
+/obj/structure/table/marble,
+/obj/item/weapon/reagent_containers/food/snacks/bacon_and_eggs,
+/turf/simulated/floor/concrete,
+/area/surface/cave/explored/trader)
 "Ug" = (
 /obj/effect/map_effect/portal/master/side_a/caves_to_wilderness/river,
 /turf/simulated/wall/solidrock,
@@ -4504,6 +4581,9 @@
 	outdoors = 0
 	},
 /area/surface/cave/explored/normal)
+"YU" = (
+/turf/simulated/floor/concrete,
+/area/surface/cave/explored/trader)
 "YY" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -68231,20 +68311,20 @@ ae
 ae
 ae
 ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-md
-Cx
+RM
+RM
+RM
+RM
+RM
+RM
+RM
+RM
+RM
+RM
+rc
+RM
+LO
+st
 aa
 "}
 (248,1,1) = {"
@@ -68489,20 +68569,20 @@ ae
 ae
 ae
 ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-md
-Cx
+RM
+YU
+YU
+YU
+sH
+YU
+YU
+YU
+YU
+YU
+YU
+RM
+LO
+st
 aa
 "}
 (249,1,1) = {"
@@ -68747,20 +68827,20 @@ ae
 ae
 ae
 ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-md
-Cx
+RM
+YU
+YU
+YU
+RM
+YU
+YU
+YU
+YU
+YU
+YU
+RM
+LO
+st
 aa
 "}
 (250,1,1) = {"
@@ -69005,20 +69085,20 @@ ae
 ae
 ae
 ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-md
-md
+RM
+Cv
+Qs
+kx
+RM
+YU
+oO
+xS
+SI
+Qd
+YU
+RM
+LO
+LO
 aa
 "}
 (251,1,1) = {"
@@ -69263,20 +69343,20 @@ ae
 ae
 ae
 ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
+RM
+RM
+RM
+RM
+RM
+YU
+YU
+kx
+kx
+YU
+YU
+RM
+nr
+nr
 aa
 "}
 (252,1,1) = {"
@@ -69521,20 +69601,20 @@ ae
 ae
 ae
 ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
+RM
+Cv
+jK
+kx
+RM
+YU
+In
+HL
+jU
+oO
+YU
+RM
+nr
+nr
 aa
 "}
 (253,1,1) = {"
@@ -69779,20 +69859,20 @@ ae
 ae
 ae
 ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
+RM
+YU
+YU
+YU
+RM
+YU
+YU
+YU
+YU
+YU
+YU
+RM
+nr
+nr
 aa
 "}
 (254,1,1) = {"
@@ -70037,20 +70117,20 @@ ae
 ae
 ae
 ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
+RM
+YU
+YU
+YU
+sH
+YU
+YU
+YU
+YU
+YU
+YU
+RM
+nr
+nr
 aa
 "}
 (255,1,1) = {"
@@ -70295,20 +70375,20 @@ ae
 ae
 ae
 ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
+RM
+RM
+RM
+RM
+RM
+RM
+RM
+RM
+RM
+RM
+RM
+RM
+nr
+nr
 aa
 "}
 (256,1,1) = {"

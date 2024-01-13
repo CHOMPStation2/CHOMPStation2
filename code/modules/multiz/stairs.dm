@@ -220,7 +220,7 @@
 		if(L.pulling && !L.pulling.anchored)
 			var/atom/movable/P = L.pulling
 			P.forceMove(get_turf(top))
-			L.start_pulling(P)
+			L.continue_pulling(P)
 
 		for(var/obj/item/weapon/grab/G in list(L.l_hand, L.r_hand))
 			G.affecting.forceMove(get_turf(top))
@@ -475,7 +475,7 @@
 		if(L.pulling && !L.pulling.anchored)
 			var/atom/movable/P = L.pulling
 			P.forceMove(get_turf(bottom))
-			L.start_pulling(P)
+			L.continue_pulling(P)
 
 		for(var/obj/item/weapon/grab/G in list(L.l_hand, L.r_hand))
 			G.affecting.forceMove(get_turf(bottom))

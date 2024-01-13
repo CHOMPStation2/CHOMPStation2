@@ -157,6 +157,14 @@
 	name = "POI - Space bar"
 	ambience = AMBIENCE_ARRIVALS
 
+/area/submap/starhunterarena
+	name = "POI - Starhunter Arena"
+	ambience = AMBIENCE_OTHERWORLDLY
+
+/area/submap/starhuntertraders
+	name = "POI - Starhunter Traders"
+	ambience = AMBIENCE_OTHERWORLDLY
+
 /area/submap/syndiecakesfactory
 	name = "POI - Syndiecakes factory"
 	ambience = AMBIENCE_OTHERWORLDLY

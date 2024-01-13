@@ -66,12 +66,15 @@
 	var/disabled_icon = "armor"
 	var/active_icon = "armor_broken"
 	var/target_component = "armour"
+	var/repairing = FALSE
 
 /obj/item/device/self_repair_system/New()
 	..()
 	flags |= NOBLUDGEON
 
 /obj/item/device/self_repair_system/attack_self(mob/user)
+	if(repairing)
+		return
 	var/mob/living/silicon/robot/R = user
 	var/datum/robot_component/C = R.components[target_component]
 	if(C && !istype(C.wrapped, /obj/item/broken_device))
@@ -81,7 +84,9 @@
 		to_chat(R, "<span class='notice'>Repair system initializated. Repairing plating and wiring.</span>")
 		icon_state = active_icon
 		update_icon()
+		repairing = TRUE
 		src.self_repair(R, C, 25, 2.5)
+		repairing = FALSE
 		icon_state = disabled_icon
 		update_icon()
 	else

@@ -57,18 +57,18 @@
 	danger = rand(0,2)
 	switch(danger)
 		if(DANGER_CRAB)
-			spawn_types = list(/mob/living/simple_mob/vore/radcrab)
+			spawn_types = list(/mob/living/simple_mob/vore/spacecritter/radcrab)
 			min_number = 1
 			max_number = 4
 			dangerstring = "crystaline crabs"
 		if(DANGER_ICE)
-			spawn_types = list(/mob/living/simple_mob/vore/livingice)
+			spawn_types = list(/mob/living/simple_mob/vore/spacecritter/livingice)
 			min_number = 1
 			max_number = 4
 			dangerstring = "strange entities"
 
 		if(DANGER_RAY)
-			spawn_types = list(/mob/living/simple_mob/vore/solarray)
+			spawn_types = list(/mob/living/simple_mob/vore/spacecritter/solarray)
 			min_number = 1
 			max_number = 4
 			dangerstring = "solar rays"

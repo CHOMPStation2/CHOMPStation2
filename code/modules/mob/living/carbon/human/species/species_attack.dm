@@ -59,7 +59,7 @@
 /datum/unarmed_attack/claws/strong
 	attack_name = "strong claws"
 	attack_verb = list("slashed")
-	damage = 5
+	damage = 10 // CHOMPedit: 5 to 10, makes them actually strong.
 	shredding = 1
 
 /datum/unarmed_attack/claws/strong/xeno
@@ -73,7 +73,7 @@
 /datum/unarmed_attack/bite/strong
 	attack_name = "strong bite"
 	attack_verb = list("mauled")
-	damage = 8
+	damage = 10 // CHOMPedit: 8 to 10, makes them actually strong.
 	shredding = 1
 
 /datum/unarmed_attack/bite/strong/xeno

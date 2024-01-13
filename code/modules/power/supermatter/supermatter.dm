@@ -85,8 +85,8 @@
 	var/pull_radius = 14
 	// Time in ticks between delamination ('exploding') and exploding (as in the actual boom)
 	var/pull_time = 100
-	var/min_explosion_power = 8
-	var/max_explosion_power = 16
+	var/min_explosion_power = 12 // CHOMPEdit some more damage was 8
+	var/max_explosion_power = 24 // CHOMPEdit some more damage was 16
 
 	var/emergency_issued = 0
 
@@ -429,7 +429,7 @@
 		env.merge(removed)
 
 	for(var/mob/living/carbon/human/l in view(src, min(7, round(sqrt(power/6))))) // If they can see it without mesons on.  Bad on them.
-		if(!istype(l.glasses, /obj/item/clothing/glasses/meson)) // VOREStation Edit - Only mesons can protect you!
+		if(!istype(l.glasses, /obj/item/clothing/glasses/meson) || l.is_incorporeal()) // VOREStation Edit - Only mesons can protect you! - CHOMPEdit - OR if they're not in the same plane of existence
 			l.hallucination = max(0, min(200, l.hallucination + power * config_hallucination_power * sqrt( 1 / max(1,get_dist(l, src)) ) ) )
 
 	SSradiation.radiate(src, max(power * 1.5, 50) ) //Better close those shutters!

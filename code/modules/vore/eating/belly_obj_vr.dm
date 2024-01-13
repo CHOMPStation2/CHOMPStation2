@@ -63,6 +63,7 @@
 	var/belly_mob_mult = 1		//Multiplier for how filling mob types are in borg bellies
 	var/belly_item_mult = 1 	//Multiplier for how filling items are in borg borg bellies. Items are also weighted on item size
 	var/belly_overall_mult = 1	//Multiplier applied ontop of any other specific multipliers
+	var/private_struggle = FALSE			// If struggles are made public or not //CHOMPAdd
 
 	// Generally just used by AI
 	var/autotransferchance = 0 				// % Chance of prey being autotransferred to transfer location
@@ -446,6 +447,7 @@
 	"is_feedable",
 	"entrance_logs",
 	"noise_freq",
+	"private_struggle",
 	"item_digest_logs", //CHOMP end of variables from CHOMP
 	"egg_type",
 	"save_digest_mode",
@@ -468,7 +470,7 @@
 		owner = loc
 		owner.vore_organs |= src
 		if(isliving(loc))
-			if(speedy_mob_processing) //CHOMPEdit Start
+			if(mode_flags & DM_FLAG_TURBOMODE) //CHOMPEdit Start
 				START_PROCESSING(SSobj, src)
 			else
 				START_PROCESSING(SSbellies, src)
@@ -477,7 +479,7 @@
 	flags |= NOREACT		// We dont want bellies to start bubling nonstop due to people mixing when transfering and making different reagents
 
 /obj/belly/Destroy()
-	if(speedy_mob_processing)
+	if(mode_flags & DM_FLAG_TURBOMODE)
 		STOP_PROCESSING(SSobj, src)
 	else
 		STOP_PROCESSING(SSbellies, src)
@@ -1782,25 +1784,33 @@
 	struggle_outer_message = "<span class='valert'>[struggle_outer_message]</span>"
 	struggle_user_message = "<span class='valert'>[struggle_user_message]</span>"
 
-	for(var/mob/M in hearers(4, owner))
-		M.show_message(struggle_outer_message, 2) // hearable
+	//CHOMPEdit Start
+	if(private_struggle)
+		to_chat(owner, struggle_outer_message)
+	else
+		for(var/mob/M in hearers(4, owner))
+			M.show_message(struggle_outer_message, 2) // hearable
+	//CHOMPEdit End
 
 	var/sound/struggle_snuggle
 	var/sound/struggle_rustle = sound(get_sfx("rustle"))
 
 	//CHOMPEdit Start - vore sprites struggle animation
-	if((vore_sprite_flags & DM_FLAG_VORESPRITE_BELLY) && (owner.vore_capacity_ex[belly_sprite_to_affect] >= 1))
+	if((vore_sprite_flags & DM_FLAG_VORESPRITE_BELLY) && (owner.vore_capacity_ex[belly_sprite_to_affect] >= 1) && !private_struggle)
 		owner.vs_animate(belly_sprite_to_affect)
 	//CHOMPEdit End
 
-	if(is_wet)
-		if(!fancy_vore)
-			struggle_snuggle = sound(get_sfx("classic_struggle_sounds"))
+	//CHOMPEdit Start
+	if(!private_struggle)
+		if(is_wet)
+			if(!fancy_vore)
+				struggle_snuggle = sound(get_sfx("classic_struggle_sounds"))
+			else
+				struggle_snuggle = sound(get_sfx("fancy_prey_struggle"))
+			playsound(src, struggle_snuggle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
 		else
-			struggle_snuggle = sound(get_sfx("fancy_prey_struggle"))
-		playsound(src, struggle_snuggle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
-	else
-		playsound(src, struggle_rustle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
+			playsound(src, struggle_rustle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
+	//CHOMPEdit End
 
 	if(escapable) //If the stomach has escapable enabled.
 		if(prob(escapechance)) //Let's have it check to see if the prey escapes first.
@@ -1840,8 +1850,11 @@
 					release_specific_contents(C)
 					to_chat(R, escape_item_prey_message)
 					to_chat(owner, escape_item_owner_message)
-					for(var/mob/M in hearers(4, owner))
-						M.show_message(escape_item_outside_message, 2)
+					//CHOMPEdit Start
+					if(!private_struggle)
+						for(var/mob/M in hearers(4, owner))
+							M.show_message(escape_item_outside_message, 2)
+					//CHOMPEdit End
 					return
 				if(escapable && (R.loc == src) && !R.absorbed) //Does the owner still have escapable enabled?
 					var/escape_owner_message = pick(escape_messages_owner)
@@ -1872,8 +1885,11 @@
 					release_specific_contents(R)
 					to_chat(R, escape_prey_message)
 					to_chat(owner, escape_owner_message)
-					for(var/mob/M in hearers(4, owner))
-						M.show_message(escape_outside_message, 2)
+					//CHOMPEdit Start
+					if(!private_struggle)
+						for(var/mob/M in hearers(4, owner))
+							M.show_message(escape_outside_message, 2)
+					//CHOMPEdit End
 					return
 				else if(!(R.loc == src)) //Aren't even in the belly. Quietly fail.
 					return
@@ -2044,24 +2060,32 @@
 	struggle_outer_message = "<span class='valert'>[struggle_outer_message]</span>"
 	struggle_user_message = "<span class='valert'>[struggle_user_message]</span>"
 
-	for(var/mob/M in hearers(4, owner))
-		M.show_message(struggle_outer_message, 2) // hearable
+	//CHOMPEdit Start
+	if(private_struggle)
+		to_chat(owner, struggle_outer_message)
+	else
+		for(var/mob/M in hearers(4, owner))
+			M.show_message(struggle_outer_message, 2) // hearable
+	//CHOMPEdit End
 
 	var/sound/struggle_snuggle
 	var/sound/struggle_rustle = sound(get_sfx("rustle"))
 
-	if(is_wet)
-		if(!fancy_vore)
-			struggle_snuggle = sound(get_sfx("classic_struggle_sounds"))
+	//CHOMPEdit Start
+	if(!private_struggle)
+		if(is_wet)
+			if(!fancy_vore)
+				struggle_snuggle = sound(get_sfx("classic_struggle_sounds"))
+			else
+				struggle_snuggle = sound(get_sfx("fancy_prey_struggle"))
+			playsound(src, struggle_snuggle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
 		else
-			struggle_snuggle = sound(get_sfx("fancy_prey_struggle"))
-		playsound(src, struggle_snuggle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
-	else
-		playsound(src, struggle_rustle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
+			playsound(src, struggle_rustle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
+	//CHOMPEdit End
 
 	//absorb resists
 	if(escapable || owner.stat) //If the stomach has escapable enabled or the owner is dead/unconscious
-		if(prob(escapechance) || owner.stat) //Let's have it check to see if the prey's escape attempt starts.
+		if(prob(escapechance_absorbed) || owner.stat) //Let's have it check to see if the prey's escape attempt starts.
 
 
 			var/living_count = 0
@@ -2119,8 +2143,11 @@
 					release_specific_contents(R)
 					to_chat(R, escape_absorbed_prey_message)
 					to_chat(owner, escape_absorbed_owner_message)
-					for(var/mob/M in hearers(4, owner))
-						M.show_message(escape_absorbed_outside_message, 2)
+					//CHOMPEdit Start
+					if(!private_struggle)
+						for(var/mob/M in hearers(4, owner))
+							M.show_message(escape_absorbed_outside_message, 2)
+					//CHOMPEdit End
 					return
 				else if(!(R.loc == src)) //Aren't even in the belly. Quietly fail.
 					return
