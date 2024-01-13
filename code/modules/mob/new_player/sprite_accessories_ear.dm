@@ -99,6 +99,13 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
+/datum/sprite_accessory/ears/antennae_alt
+	name = "thin antennae, colorable"
+	desc = ""
+	icon_state = "antennae_alt"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
 /datum/sprite_accessory/ears/curly_bug
 	name = "curly antennae, colorable"
 	desc = ""
@@ -528,3 +535,12 @@
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "zorgoia_inner"
 	extra_overlay2 = "zorgoia_tips"
+
+/datum/sprite_accessory/ears/kittybug
+	name = "kitty, with antennae"
+	desc = ""
+	icon_state = "antennae_alt"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "kitty"
+	extra_overlay2 = "kittyinner"
