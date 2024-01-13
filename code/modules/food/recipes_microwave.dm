@@ -522,6 +522,7 @@ I said no!
 	result = /obj/item/weapon/reagent_containers/food/snacks/soup/onion
 
 /datum/recipe/microwavebun
+	reagents = list("sodiumchloride" = 1)
 	items = list(
 		/obj/item/weapon/reagent_containers/food/snacks/dough
 	)

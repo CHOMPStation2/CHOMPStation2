@@ -7,6 +7,11 @@
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
+"aF" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/concrete,
+/area/submap/BountyHunters)
 "be" = (
 /mob/living/simple_mob/humanoid/merc/ranged/space/suppressor/elite{
 	name = "elite bounty hunter"
@@ -876,7 +881,7 @@ rC
 rC
 rC
 be
-rC
+aF
 rC
 rC
 eY

@@ -67,7 +67,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "bT" = (
-/obj/structure/safe,
+/obj/structure/closet/crate/secure/lootsafe/numberlock,
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
 	},
@@ -714,6 +714,13 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
 	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/DogBase)
+"Pm" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/obj/effect/map_helper/no_phaseshift/area,
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "PB" = (
@@ -1366,7 +1373,7 @@ LP
 Yr
 VG
 Ok
-wI
+Pm
 re
 lX
 Bk

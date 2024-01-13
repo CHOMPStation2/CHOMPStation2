@@ -511,8 +511,10 @@
 	pump_direction = 0;
 	use_power = 1
 	},
-/turf/simulated/floor/airless,
-/area/submap/DoomP)
+/turf/simulated/floor/airless{
+	outdoors = 1
+	},
+/area/template_noop)
 "Br" = (
 /obj/structure/table/standard,
 /obj/item/weapon/paper,
@@ -643,6 +645,10 @@
 "Hw" = (
 /mob/living/simple_mob/humanoid/merc/ranged/sniper,
 /turf/simulated/floor/plating,
+/area/submap/DoomP)
+"HE" = (
+/obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/water/deep,
 /area/submap/DoomP)
 "HG" = (
 /obj/effect/floor_decal/borderfloorwhite/corner{
@@ -3393,7 +3399,7 @@ nf
 nf
 nf
 nf
-pa
+HE
 pa
 pa
 pa

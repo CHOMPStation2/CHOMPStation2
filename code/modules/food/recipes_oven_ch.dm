@@ -21,3 +21,9 @@
 	reagents = list("cinnamonpowder" = 5, "sugar" = 10, "cornoil" = 10)
 	result = /obj/item/weapon/reagent_containers/food/snacks/spicy_boys
 	result_quantity = 6
+
+/datum/recipe/blondies
+	appliance = OVEN
+	reagents = list("blondiemix" = 10, "egg" = 3)
+	reagent_mix = RECIPE_REAGENT_REPLACE //No egg or mix in final recipe
+	result = /obj/item/weapon/reagent_containers/food/snacks/sliceable/blondies

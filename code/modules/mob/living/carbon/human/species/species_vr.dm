@@ -38,7 +38,7 @@
 	var/micro_size_mod = 0		// How different is our size for interactions that involve us being small?
 	var/macro_size_mod = 0		// How different is our size for interactions that involve us being big?
 	var/digestion_nutrition_modifier = 1
-	var/center_offset = 0.5 //CHOMPEdit
+	var/center_offset = 0.5
 	var/can_climb = FALSE
 	var/climbing_delay = 1.5	// We climb with a quarter delay
 
@@ -51,16 +51,17 @@
 
 /datum/species/create_organs(var/mob/living/carbon/human/H)
 	if(H.nif)
-		var/type = H.nif.type
+		/*var/type = H.nif.type
 		var/durability = H.nif.durability
 		var/list/nifsofts = H.nif.nifsofts
-		var/list/nif_savedata = H.nif.save_data.Copy()
+		var/list/nif_savedata = H.nif.save_data.Copy()*/
 		..()
-
-		var/obj/item/device/nif/nif = new type(H,durability,nif_savedata)
-		nif.nifsofts = nifsofts
+		H.nif = null //A previous call during the rejuvenation path deleted it, so we no longer should have it here
+		/*var/obj/item/device/nif/nif = new type(H,durability,nif_savedata)
+		nif.nifsofts = nifsofts*/
 	else
 		..()
+
 /datum/species/proc/produceCopy(var/list/traits, var/mob/living/carbon/human/H, var/custom_base)
 	ASSERT(src)
 	ASSERT(istype(H))

@@ -1,0 +1,767 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/shuttle/floor/black,
+/area/submap/eclipsecargo)
+"b" = (
+/turf/simulated/shuttle/floor/purple,
+/area/submap/eclipsecargo)
+"c" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/pummler,
+/turf/simulated/shuttle/floor/black,
+/area/submap/eclipsecargo)
+"d" = (
+/obj/machinery/door/airlock/sandstone,
+/turf/simulated/shuttle/floor/red,
+/area/submap/eclipsecargo)
+"e" = (
+/obj/structure/bed,
+/obj/item/weapon/bedsheet,
+/obj/structure/curtain/bed,
+/obj/item/weapon/gun/energy/clockwork,
+/turf/simulated/shuttle/floor/purple,
+/area/submap/eclipsecargo)
+"g" = (
+/obj/structure/bed/chair/bay/comfy/teal{
+	dir = 1
+	},
+/mob/living/simple_mob/humanoid/eclipse/solar/hellhound,
+/turf/simulated/shuttle/floor/red,
+/area/submap/eclipsecargo)
+"h" = (
+/obj/structure/bed/chair/bay/comfy/teal{
+	dir = 1
+	},
+/mob/living/simple_mob/humanoid/eclipse/lunar/shotgunner,
+/turf/simulated/shuttle/floor/red,
+/area/submap/eclipsecargo)
+"i" = (
+/obj/structure/closet/secure_closet/freezer/money,
+/turf/simulated/shuttle/floor/purple,
+/area/submap/eclipsecargo)
+"j" = (
+/obj/structure/closet/crate,
+/obj/item/mecha_parts/mecha_equipment/cloak,
+/obj/random/contraband/nofail,
+/obj/random/ammo,
+/obj/random/ammo,
+/obj/random/ammo,
+/obj/random/material,
+/obj/random/material/precious,
+/turf/simulated/shuttle/floor/black,
+/area/submap/eclipsecargo)
+"k" = (
+/obj/structure/grille/rustic{
+	health = 25;
+	name = "reinforced grille"
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/plastitanium/full,
+/turf/simulated/shuttle/plating,
+/area/submap/eclipsecargo)
+"l" = (
+/obj/structure/closet/crate,
+/obj/item/clothing/under/yw/blueshield2,
+/obj/random/contraband/nofail,
+/obj/random/ammo,
+/obj/random/ammo,
+/obj/random/ammo,
+/obj/random/material,
+/obj/random/material/precious,
+/turf/simulated/shuttle/floor/black,
+/area/submap/eclipsecargo)
+"m" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/ravanger,
+/turf/simulated/shuttle/floor/black,
+/area/submap/eclipsecargo)
+"n" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/guardian,
+/turf/simulated/shuttle/floor/black,
+/area/submap/eclipsecargo)
+"o" = (
+/obj/structure/closet/crate,
+/obj/random/contraband/nofail,
+/obj/random/ammo,
+/obj/random/ammo,
+/obj/random/ammo,
+/obj/random/material,
+/obj/random/material/precious,
+/turf/simulated/shuttle/floor/black,
+/area/submap/eclipsecargo)
+"p" = (
+/obj/structure/grille/rustic{
+	health = 25;
+	name = "reinforced grille"
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/plastitanium/full,
+/turf/simulated/shuttle/plating,
+/area/submap/eclipsecargo)
+"r" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/radiation,
+/turf/simulated/shuttle/floor/black,
+/area/submap/eclipsecargo)
+"s" = (
+/obj/structure/table/glass,
+/obj/item/weapon/paper{
+	info = "We have started to alter our shipping schedules. Attacks from pirates, mercs, and raiders have begun to increase at a rapid rate. Many more armored then some of our elite.";
+	name = "Shipping"
+	},
+/turf/simulated/shuttle/floor/red,
+/area/submap/eclipsecargo)
+"t" = (
+/obj/machinery/door/airlock/multi_tile/metal/mait,
+/turf/simulated/shuttle/floor/black,
+/area/submap/eclipsecargo)
+"u" = (
+/obj/structure/closet/crate,
+/obj/item/organ/internal/immunehub/replicant,
+/obj/random/contraband/nofail,
+/obj/random/ammo,
+/obj/random/ammo,
+/obj/random/ammo,
+/obj/random/material,
+/obj/random/material/precious,
+/turf/simulated/shuttle/floor/black,
+/area/submap/eclipsecargo)
+"v" = (
+/obj/structure/closet/secure_closet/freezer/fridge,
+/turf/simulated/shuttle/floor/purple,
+/area/submap/eclipsecargo)
+"w" = (
+/obj/structure/closet/crate/secure/lootsafe/numberlock,
+/obj/item/weapon/rig/ch/clockwork,
+/obj/item/weapon/gun/energy/clockwork,
+/obj/item/stack/material/void_opal,
+/turf/simulated/shuttle/floor/red,
+/area/submap/eclipsecargo)
+"x" = (
+/obj/structure/grille/rustic{
+	health = 25;
+	name = "reinforced grille"
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/plastitanium/full,
+/turf/simulated/shuttle/plating,
+/area/submap/eclipsecargo)
+"y" = (
+/obj/structure/table/glass,
+/obj/item/prop/alien/junk,
+/turf/simulated/shuttle/floor/red,
+/area/submap/eclipsecargo)
+"z" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/froststalker,
+/turf/simulated/shuttle/floor/black,
+/area/submap/eclipsecargo)
+"B" = (
+/turf/simulated/shuttle/wall/voidcraft/orange,
+/area/submap/eclipsecargo)
+"C" = (
+/obj/machinery/atmospherics/unary/engine{
+	dir = 1
+	},
+/turf/template_noop,
+/area/submap/eclipsecargo)
+"D" = (
+/obj/structure/bed,
+/obj/item/weapon/bedsheet,
+/obj/structure/curtain/bed,
+/turf/simulated/shuttle/floor/purple,
+/area/submap/eclipsecargo)
+"E" = (
+/obj/structure/window/plastitanium/full,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/grille/rustic{
+	health = 25;
+	name = "reinforced grille"
+	},
+/turf/simulated/shuttle/plating,
+/area/submap/eclipsecargo)
+"F" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/miner,
+/turf/simulated/shuttle/floor/black,
+/area/submap/eclipsecargo)
+"G" = (
+/obj/structure/window/plastitanium/full,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/grille/rustic{
+	health = 25;
+	name = "reinforced grille"
+	},
+/turf/simulated/shuttle/plating,
+/area/submap/eclipsecargo)
+"H" = (
+/obj/structure/closet/crate,
+/obj/item/mecha_parts/mecha_equipment/weapon/honker,
+/obj/random/contraband/nofail,
+/obj/random/ammo,
+/obj/random/ammo,
+/obj/random/ammo,
+/obj/random/material,
+/obj/random/material/precious,
+/turf/simulated/shuttle/floor/black,
+/area/submap/eclipsecargo)
+"I" = (
+/obj/structure/window/plastitanium/full,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/grille/rustic{
+	health = 25;
+	name = "reinforced grille"
+	},
+/turf/simulated/shuttle/plating,
+/area/submap/eclipsecargo)
+"J" = (
+/obj/item/modular_computer/console/preset/civilian,
+/turf/simulated/shuttle/floor/red,
+/area/submap/eclipsecargo)
+"K" = (
+/turf/simulated/shuttle/floor/red,
+/area/submap/eclipsecargo)
+"M" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
+/turf/simulated/shuttle/floor/purple,
+/area/submap/eclipsecargo)
+"O" = (
+/obj/structure/bed,
+/obj/item/weapon/bedsheet,
+/obj/structure/curtain/bed,
+/obj/item/weapon/rig/ch/clockwork,
+/turf/simulated/shuttle/floor/purple,
+/area/submap/eclipsecargo)
+"P" = (
+/turf/template_noop,
+/area/submap/eclipsecargo)
+"Q" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm,
+/turf/simulated/shuttle/floor/black,
+/area/submap/eclipsecargo)
+"R" = (
+/obj/structure/shuttle/engine/heater,
+/turf/simulated/shuttle/wall/voidcraft/orange,
+/area/submap/eclipsecargo)
+"S" = (
+/obj/structure/closet/crate,
+/obj/item/organ/internal/fruitgland,
+/obj/random/contraband/nofail,
+/obj/random/ammo,
+/obj/random/ammo,
+/obj/random/ammo,
+/obj/random/material,
+/obj/random/material/precious,
+/turf/simulated/shuttle/floor/black,
+/area/submap/eclipsecargo)
+"T" = (
+/obj/structure/closet/crate,
+/obj/item/organ/internal/augment/armmounted/dartbow,
+/obj/random/contraband/nofail,
+/obj/random/ammo,
+/obj/random/ammo,
+/obj/random/ammo,
+/obj/random/material,
+/obj/random/material/precious,
+/turf/simulated/shuttle/floor/black,
+/area/submap/eclipsecargo)
+"U" = (
+/obj/structure/closet/crate,
+/obj/random/contraband/nofail,
+/obj/random/ammo,
+/obj/random/ammo,
+/obj/random/ammo,
+/obj/random/firstaid,
+/obj/random/material,
+/obj/random/material/precious,
+/turf/simulated/shuttle/floor/black,
+/area/submap/eclipsecargo)
+"V" = (
+/obj/machinery/door/airlock/sandstone,
+/turf/simulated/shuttle/floor/purple,
+/area/submap/eclipsecargo)
+"W" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/firemoff,
+/turf/simulated/shuttle/floor/black,
+/area/submap/eclipsecargo)
+"X" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/teslanoodle,
+/turf/simulated/shuttle/floor/purple,
+/area/submap/eclipsecargo)
+"Y" = (
+/obj/structure/closet/crate,
+/obj/item/clothing/under/yw/blueshield,
+/obj/random/contraband/nofail,
+/obj/random/ammo,
+/obj/random/ammo,
+/obj/random/ammo,
+/obj/random/material,
+/obj/random/material/precious,
+/turf/simulated/shuttle/floor/black,
+/area/submap/eclipsecargo)
+"Z" = (
+/obj/structure/closet/crate,
+/obj/item/organ/internal/lungs/replicant/mending,
+/obj/random/contraband/nofail,
+/obj/random/ammo,
+/obj/random/ammo,
+/obj/random/ammo,
+/obj/random/material,
+/obj/random/material/precious,
+/turf/simulated/shuttle/floor/black,
+/area/submap/eclipsecargo)
+
+(1,1,1) = {"
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+"}
+(2,1,1) = {"
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+"}
+(3,1,1) = {"
+P
+P
+P
+P
+P
+B
+B
+E
+G
+I
+B
+B
+B
+B
+B
+B
+E
+G
+I
+B
+B
+B
+P
+"}
+(4,1,1) = {"
+P
+P
+P
+P
+B
+B
+a
+a
+a
+a
+a
+a
+a
+F
+a
+a
+a
+a
+a
+a
+R
+C
+P
+"}
+(5,1,1) = {"
+P
+P
+P
+B
+B
+B
+a
+c
+a
+a
+a
+a
+a
+a
+a
+a
+a
+Q
+a
+a
+R
+C
+P
+"}
+(6,1,1) = {"
+P
+P
+P
+B
+B
+B
+d
+B
+B
+B
+B
+V
+B
+B
+B
+a
+j
+a
+u
+a
+t
+P
+P
+"}
+(7,1,1) = {"
+P
+P
+P
+k
+J
+K
+K
+w
+B
+i
+b
+M
+e
+D
+B
+a
+o
+a
+l
+m
+a
+P
+P
+"}
+(8,1,1) = {"
+P
+P
+P
+p
+J
+h
+K
+y
+B
+v
+b
+b
+D
+D
+B
+a
+S
+a
+o
+a
+R
+C
+P
+"}
+(9,1,1) = {"
+P
+P
+P
+p
+J
+K
+K
+s
+B
+v
+b
+b
+D
+D
+B
+a
+T
+a
+o
+a
+R
+C
+P
+"}
+(10,1,1) = {"
+P
+P
+P
+p
+J
+g
+K
+y
+B
+v
+b
+b
+D
+D
+B
+a
+o
+a
+H
+a
+R
+C
+P
+"}
+(11,1,1) = {"
+P
+P
+P
+x
+J
+K
+K
+w
+B
+i
+b
+X
+O
+D
+B
+a
+Y
+a
+U
+z
+t
+P
+P
+"}
+(12,1,1) = {"
+P
+P
+P
+B
+B
+B
+d
+B
+B
+B
+B
+V
+B
+B
+B
+a
+o
+a
+Z
+a
+a
+P
+P
+"}
+(13,1,1) = {"
+P
+P
+P
+B
+B
+B
+a
+W
+a
+a
+a
+a
+a
+a
+a
+a
+a
+r
+a
+a
+R
+C
+P
+"}
+(14,1,1) = {"
+P
+P
+P
+P
+B
+B
+a
+a
+a
+a
+a
+a
+a
+n
+a
+a
+a
+a
+a
+a
+R
+C
+P
+"}
+(15,1,1) = {"
+P
+P
+P
+P
+P
+B
+B
+E
+G
+I
+B
+B
+B
+B
+B
+B
+E
+G
+I
+B
+B
+B
+P
+"}
+(16,1,1) = {"
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+"}
+(17,1,1) = {"
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+"}

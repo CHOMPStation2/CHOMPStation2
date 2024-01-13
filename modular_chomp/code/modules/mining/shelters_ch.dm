@@ -70,7 +70,7 @@
 
 /datum/map_template/shelter/superpose/LargeAlienShip
 	shelter_id = "LargeAlienShip"
-	mappath = "modular_chomp/maps/submaps/shelters/LargeAlienShip-57x25"
+	mappath = "modular_chomp/maps/submaps/shelters/LargeAlienShip-57x25.dmm"
 	name = "Large alien ship."
 	description = "A large alien ship filled with various alien machines and items."
 

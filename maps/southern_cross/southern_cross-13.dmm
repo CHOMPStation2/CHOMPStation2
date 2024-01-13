@@ -4,10 +4,6 @@
 /obj/effect/zone_divider,
 /turf/simulated/mineral/sif,
 /area/surface/outside/valley/walls)
-"aL" = (
-/obj/effect/overmap/visitable/planet/Sif,
-/turf/simulated/mineral/sif,
-/area/surface/outside/valley/edge)
 "bH" = (
 /obj/structure/railing,
 /turf/simulated/floor/water/deep,
@@ -251,6 +247,15 @@
 /area/surface/outside/valley/river)
 "WT" = (
 /turf/simulated/wall/wood,
+/area/surface/outside/valley/inner)
+"Xj" = (
+/obj/effect/shuttle_landmark{
+	landmark_tag = "valley_e";
+	name = "Valley Entrance";
+	base_area = /area/surface/outside/valley/inner;
+	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse
+	},
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
 /area/surface/outside/valley/inner)
 "Yl" = (
 /turf/simulated/mineral/sif,
@@ -776,7 +781,7 @@ FG
 FG
 FG
 FG
-aL
+FG
 RW
 "}
 (3,1,1) = {"
@@ -62811,7 +62816,7 @@ Rk
 Rk
 Rk
 Rk
-Rk
+Xj
 Rk
 Rk
 Rk

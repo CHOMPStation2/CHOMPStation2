@@ -109,6 +109,8 @@
 		playsound(src, soundfile, vol = g_sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
 		if(istype(B) && B.recycle(src))
 			g_damage = w_class / 2
+			if(B.item_digest_logs)
+				to_chat(B.owner,"<span class='notice'>[src] was digested inside your [lowertext(B.name)].</span>")
 			qdel(src)
 		else if(istype(src,/obj/item/stack))
 			var/obj/item/stack/S = src
@@ -213,6 +215,18 @@
 		var/obj/belly/B = item_storage
 		if(istype(B) && B.recycling)
 			return FALSE
+	. = ..()
+
+/obj/item/weapon/reagent_containers/food/rawnutrition/digest_act(atom/movable/item_storage = null) //CHOMPAdd
+	if(isbelly(item_storage))
+		var/obj/belly/B = item_storage
+		if(istype(B) && B.storing_nutrition)
+			return FALSE
+		else if(isliving(B.owner))
+			B.owner.nutrition += stored_nutrition
+			stored_nutrition = 0
+			qdel(src)
+			return w_class
 	. = ..()
 
 /////////////

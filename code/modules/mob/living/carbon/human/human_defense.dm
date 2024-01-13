@@ -240,7 +240,7 @@ emp_act
 	return null
 
 /mob/living/carbon/human/proc/check_shields(var/damage = 0, var/atom/damage_source = null, var/mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
-	for(var/obj/item/shield in list(l_hand, r_hand, wear_suit))
+	for(var/obj/item/shield in list(l_hand, r_hand, wear_suit, l_ear, r_ear))	//CHOMPEdit - included ears for the headset/event item
 		if(!shield) continue
 		. = shield.handle_shield(src, damage, damage_source, attacker, def_zone, attack_text)
 		if(.) return
@@ -431,13 +431,16 @@ emp_act
 				I.forceMove(vore_selected)
 				return //CHOMPADD End
 		if(in_throw_mode && speed <= THROWFORCE_SPEED_DIVISOR)	//empty active hand and we're in throw mode
-			if(canmove && !restrained())
+			if(canmove && !restrained() && !src.is_incorporeal()) // CHOMPADD - No hands for the phased ones.
 				if(isturf(O.loc))
 					if(can_catch(O))
 						put_in_active_hand(O)
 						visible_message("<span class='warning'>[src] catches [O]!</span>")
 						throw_mode_off()
 						return
+
+		if(src.is_incorporeal()) // CHOMPADD - Don't hit what's not there.
+			return
 
 		var/dtype = O.damtype
 		var/throw_damage = O.throwforce*(speed/THROWFORCE_SPEED_DIVISOR)

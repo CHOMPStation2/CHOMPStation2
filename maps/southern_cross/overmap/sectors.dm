@@ -11,6 +11,17 @@
 
 	map_z = list(Z_LEVEL_SURFACE, Z_LEVEL_SURFACE_MINE, Z_LEVEL_SURFACE_WILD, Z_LEVEL_SURFACE_SKYLANDS, Z_LEVEL_SURFACE_VALLEY)
 
+	initial_generic_waypoints = list(
+		"outpost_nw",
+		"outpost_s",
+		"outpost_w",
+		"wilderness_s",
+		"wilderness_se",
+		"wilderness_w",
+		"wilderness_n",
+		"valley_e"
+		)
+
 	in_space = 0
 	start_x  = 10
 	start_y  = 10
@@ -41,7 +52,8 @@
 
 /obj/effect/overmap/visitable/sector/Southern_Cross
 	name = "Southern Cross"
-	icon_state = "object"
+	icon = 'modular_chomp/icons/obj/overmap.dmi'
+	icon_state = "southerncross"
 	desc = "Southern Cross station, orbiting Sif."
 	scanner_desc = @{"[i]Registration[/i]: NLS Southern Cross
 [i]Class[/i]: Installation

@@ -96,7 +96,7 @@
 	if (istype(A,/mob/living))
 		var/dirtslip = FALSE	//CHOMPEdit
 		var/mob/living/M = A
-		if(M.lying || M.flying) //VOREStation Edit
+		if(M.lying || M.flying || M.is_incorporeal()) //VOREStation Edit - CHOMPADD - Don't forget the phased ones.
 			return ..()
 
 		if(M.dirties_floor())

@@ -88,7 +88,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/submap/frozenlab)
 "t" = (
-/obj/machinery/door/airlock/phoron,
+/obj/machinery/door/airlock/silver,
 /turf/simulated/floor/tiled/milspec,
 /area/submap/frozenlab)
 "u" = (
@@ -129,6 +129,14 @@
 /mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
 /turf/simulated/floor/tiled/milspec,
 /area/submap/frozenlab)
+"H" = (
+/obj/random/material/refined,
+/obj/random/material/precious,
+/obj/random/material,
+/obj/structure/closet,
+/obj/item/stack/material/void_opal,
+/turf/simulated/floor/snow,
+/area/template_noop)
 "L" = (
 /obj/machinery/atmospherics/unary/freezer,
 /turf/simulated/floor/outdoors/shelfice{
@@ -657,7 +665,7 @@ a
 a
 c
 c
-q
+H
 q
 p
 c

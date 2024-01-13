@@ -161,12 +161,12 @@
 	sprite_icon_state = "drake"
 
 // Tall sprites
-//CHOMPNote -- many of the lines in this is overriden in modular
+
 /datum/robot_sprite/dogborg/tall/engineering
 	module_type = "Engineering"
 	sprite_icon = 'icons/mob/robot/engineering_large.dmi'
 
-/datum/robot_sprite/dogborg/raptor/engineering/raptor //CHOMPEdit - Changed Typepath
+/datum/robot_sprite/dogborg/tall/engineering/raptor
 	name = "Raptor V-4"
 	sprite_icon_state = "raptor"
 	has_custom_equipment_sprites = TRUE

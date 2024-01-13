@@ -1,79 +1,1619 @@
-"a" = (/turf/simulated/gore,/area/survivalpod/superpose/DemonPoolV2)
-"b" = (/obj/structure/cult/talisman,/turf/simulated/floor/wood/alt{color = "red"},/area/survivalpod/superpose/DemonPoolV2)
-"c" = (/turf/simulated/floor/gorefloor,/area/survivalpod/superpose/DemonPoolV2)
-"d" = (/obj/structure/closet/crate,/obj/fiftyspawner/glass,/obj/fiftyspawner/glass,/obj/fiftyspawner/glass,/obj/fiftyspawner/glass,/obj/fiftyspawner/glass,/obj/fiftyspawner/steel,/obj/fiftyspawner/steel,/obj/fiftyspawner/steel,/obj/fiftyspawner/steel,/obj/fiftyspawner/steel,/obj/fiftyspawner/plastic,/obj/fiftyspawner/plastic,/obj/fiftyspawner/plastic,/obj/fiftyspawner/plastic,/obj/fiftyspawner/plastic,/turf/simulated/floor/cult,/area/survivalpod/superpose/DemonPoolV2)
-"e" = (/obj/structure/simple_door/cult,/turf/simulated/floor/cult,/area/survivalpod/superpose/DemonPoolV2)
-"f" = (/obj/effect/rune,/turf/simulated/floor/wood/alt{color = "red"},/area/survivalpod/superpose/DemonPoolV2)
-"g" = (/obj/structure/closet/crate,/obj/fiftyspawner/wood,/obj/fiftyspawner/wood,/obj/fiftyspawner/wood/sif,/obj/fiftyspawner/wood/sif,/obj/fiftyspawner/turcarpet,/obj/fiftyspawner/tealcarpet,/obj/fiftyspawner/sblucarpet,/obj/fiftyspawner/purcarpet,/obj/fiftyspawner/oracarpet,/obj/fiftyspawner/blucarpet,/obj/fiftyspawner/marble,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/obj/fiftyspawner/cardboard,/obj/fiftyspawner/cardboard,/turf/simulated/floor/cult,/area/survivalpod/superpose/DemonPoolV2)
-"h" = (/turf/simulated/floor/cult,/area/survivalpod/superpose/DemonPoolV2)
-"i" = (/obj/structure/cult/tome,/turf/simulated/floor/wood/alt{color = "red"},/area/survivalpod/superpose/DemonPoolV2)
-"j" = (/obj/structure/table/fancyblack,/obj/item/trash/plate,/obj/item/organ/internal/heart,/obj/machinery/light/floortube/flicker{dir = 8; pixel_x = 5},/turf/simulated/floor/wood/alt{color = "red"},/area/survivalpod/superpose/DemonPoolV2)
-"k" = (/obj/structure/cult/pylon,/turf/simulated/floor/cult,/area/survivalpod/superpose/DemonPoolV2)
-"l" = (/obj/item/weapon/bone/ribs,/turf/simulated/floor/lava,/area/survivalpod/superpose/DemonPoolV2)
-"m" = (/obj/structure/loot_pile/surface/bones,/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/DemonPoolV2)
-"n" = (/obj/structure/cult/pylon,/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/DemonPoolV2)
-"o" = (/turf/template_noop,/area/survivalpod/superpose/DemonPoolV2)
-"p" = (/obj/structure/constructshell/cult,/turf/simulated/floor/cult,/area/survivalpod/superpose/DemonPoolV2)
-"q" = (/obj/structure/cult/pylon,/turf/simulated/floor/wood/alt{color = "red"},/area/survivalpod/superpose/DemonPoolV2)
-"r" = (/obj/structure/grille/broken/cult,/turf/simulated/floor/gorefloor,/area/survivalpod/superpose/DemonPoolV2)
-"t" = (/obj/structure/bed/chair/comfy/black{dir = 8},/turf/simulated/floor/wood/alt{color = "red"},/area/survivalpod/superpose/DemonPoolV2)
-"v" = (/obj/effect/map_effect/interval/sound_emitter/punching,/obj/effect/map_effect/interval/effect_emitter/smoke/fire,/turf/simulated/floor/lava,/area/survivalpod/superpose/DemonPoolV2)
-"w" = (/turf/simulated/wall/solidrock,/area/survivalpod/superpose/DemonPoolV2)
-"x" = (/obj/structure/bed/double/padded,/obj/item/weapon/bedsheet/browndouble,/turf/simulated/floor/carpet/gaycarpet,/area/survivalpod/superpose/DemonPoolV2)
-"y" = (/obj/structure/girder/cult,/turf/simulated/floor/gorefloor,/area/survivalpod/superpose/DemonPoolV2)
-"z" = (/obj/structure/girder/cult,/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/DemonPoolV2)
-"A" = (/obj/effect/map_effect/interval/effect_emitter/smoke/fire,/turf/simulated/floor/lava,/area/survivalpod/superpose/DemonPoolV2)
-"B" = (/obj/structure/grille/cult,/turf/simulated/floor/cult,/area/survivalpod/superpose/DemonPoolV2)
-"C" = (/obj/machinery/crystal/lava,/turf/simulated/floor/lava,/area/survivalpod/superpose/DemonPoolV2)
-"D" = (/obj/structure/table/hardwoodtable,/obj/item/weapon/flame/candle/candelabra/everburn{pixel_y = 9},/turf/simulated/floor/wood/alt{color = "red"},/area/survivalpod/superpose/DemonPoolV2)
-"E" = (/turf/simulated/wall/cult,/area/survivalpod/superpose/DemonPoolV2)
-"F" = (/obj/structure/bed/chair/comfy/black{dir = 4},/turf/simulated/floor/wood/alt{color = "red"},/area/survivalpod/superpose/DemonPoolV2)
-"G" = (/obj/structure/closet/crate,/obj/fiftyspawner/plasteel,/obj/fiftyspawner/plasteel,/obj/fiftyspawner/phoronrglass,/obj/fiftyspawner/phoronrglass,/obj/item/stack/material/lead{amount = 50},/obj/item/stack/material/lead{amount = 50},/obj/fiftyspawner/gold,/obj/fiftyspawner/phoron,/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/DemonPoolV2)
-"I" = (/turf/simulated/goreeyes,/area/survivalpod/superpose/DemonPoolV2)
-"J" = (/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/DemonPoolV2)
-"K" = (/obj/item/clothing/shoes/cult,/obj/item/clothing/suit/cultrobes/alt,/obj/item/clothing/head/helmet/space/cult,/obj/item/clothing/shoes/cult,/obj/item/clothing/suit/cultrobes/alt,/obj/item/clothing/head/helmet/space/cult,/obj/item/weapon/storage/backpack/cultpack,/obj/item/weapon/storage/backpack/cultpack,/obj/structure/closet/cabinet,/turf/simulated/floor/wood/alt{color = "red"},/area/survivalpod/superpose/DemonPoolV2)
-"M" = (/obj/structure/grille/broken/cult,/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/DemonPoolV2)
-"N" = (/obj/structure/bed/double/padded,/obj/item/weapon/bedsheet/purpledouble,/turf/simulated/floor/carpet/gaycarpet,/area/survivalpod/superpose/DemonPoolV2)
-"O" = (/obj/item/weapon/storage/backpack/messenger,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,/obj/item/weapon/material/knife/tacknife/survival,/obj/item/weapon/reagent_containers/food/snacks/sosjerky,/obj/item/weapon/cell/device/hyper,/obj/item/weapon/reagent_containers/hypospray/autoinjector/trauma,/obj/item/weapon/reagent_containers/hypospray/autoinjector/oxy,/obj/item/weapon/flame/lighter/random,/obj/item/weapon/storage/box/survival/space,/obj/item/device/radio,/obj/item/clothing/accessory/storage/black_drop_pouches,/obj/item/weapon/reagent_containers/pill/dylovene,/obj/item/weapon/reagent_containers/pill/dylovene,/obj/item/device/flashlight/maglight,/obj/item/device/flashlight/flare,/obj/item/device/flashlight/flare,/obj/random/soap,/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,/obj/item/device/fbp_backup_cell,/obj/item/device/pda,/obj/item/weapon/storage/mre/menu11,/obj/item/weapon/storage/mre/menu11,/obj/item/device/starcaster_news,/obj/effect/floor_decal/spline/fancy/wood{dir = 4},/obj/item/device/suit_cooling_unit/emergency,/obj/item/device/gps,/obj/structure/closet{name = "Survival closet"},/turf/simulated/floor/cult,/area/survivalpod/superpose/DemonPoolV2)
-"P" = (/turf/simulated/floor/carpet/gaycarpet,/area/survivalpod/superpose/DemonPoolV2)
-"Q" = (/turf/simulated/floor/flesh/colour{color = red},/area/survivalpod/superpose/DemonPoolV2)
-"R" = (/obj/effect/decal/remains/deer,/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/DemonPoolV2)
-"S" = (/obj/structure/simple_door/cult,/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/DemonPoolV2)
-"T" = (/obj/random/pottedplant,/obj/structure/window/reinforced/survival_pod{dir = 1; opacity = 1},/obj/structure/curtain/black,/turf/simulated/floor/cult,/area/survivalpod/superpose/DemonPoolV2)
-"U" = (/obj/structure/grille/cult,/turf/simulated/floor/lava,/area/survivalpod/superpose/DemonPoolV2)
-"V" = (/obj/effect/gibspawner/human,/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/DemonPoolV2)
-"W" = (/turf/simulated/floor/wood/alt{color = "red"},/area/survivalpod/superpose/DemonPoolV2)
-"X" = (/obj/structure/closet/cabinet,/obj/random/curseditem,/obj/random/curseditem,/obj/item/weapon/melee/cursedblade,/obj/item/weapon/melee/cultblade,/obj/item/weapon/beartrap/hunting,/obj/item/weapon/beartrap/hunting,/obj/item/stack/material/phoron{amount = 25},/obj/item/stack/material/phoron{amount = 25},/obj/item/device/soulstone,/obj/item/device/soulstone,/obj/item/weapon/storage/belt/soulstone/full,/turf/simulated/floor/wood/alt{color = "red"},/area/survivalpod/superpose/DemonPoolV2)
-"Y" = (/turf/simulated/floor/lava,/area/survivalpod/superpose/DemonPoolV2)
-"Z" = (/obj/effect/rune,/obj/item/weapon/cat_box/black,/turf/simulated/floor/cult,/area/survivalpod/superpose/DemonPoolV2)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/gore,
+/area/survivalpod/superpose/DemonPoolV2)
+"b" = (
+/obj/structure/cult/talisman,
+/turf/simulated/floor/wood/alt{
+	color = "red"
+	},
+/area/survivalpod/superpose/DemonPoolV2)
+"c" = (
+/turf/simulated/floor/gorefloor,
+/area/survivalpod/superpose/DemonPoolV2)
+"d" = (
+/obj/structure/closet/crate,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/DemonPoolV2)
+"e" = (
+/obj/structure/simple_door/sandstone{
+	color = "#D35400"
+	},
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/DemonPoolV2)
+"f" = (
+/obj/effect/rune,
+/turf/simulated/floor/wood/alt{
+	color = "red"
+	},
+/area/survivalpod/superpose/DemonPoolV2)
+"g" = (
+/obj/structure/closet/crate,
+/obj/fiftyspawner/wood,
+/obj/fiftyspawner/wood,
+/obj/fiftyspawner/wood/sif,
+/obj/fiftyspawner/wood/sif,
+/obj/fiftyspawner/turcarpet,
+/obj/fiftyspawner/tealcarpet,
+/obj/fiftyspawner/sblucarpet,
+/obj/fiftyspawner/purcarpet,
+/obj/fiftyspawner/oracarpet,
+/obj/fiftyspawner/blucarpet,
+/obj/fiftyspawner/marble,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/fiftyspawner/cardboard,
+/obj/fiftyspawner/cardboard,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/DemonPoolV2)
+"h" = (
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/DemonPoolV2)
+"i" = (
+/obj/structure/cult/tome,
+/turf/simulated/floor/wood/alt{
+	color = "red"
+	},
+/area/survivalpod/superpose/DemonPoolV2)
+"j" = (
+/obj/structure/table/fancyblack,
+/obj/item/trash/plate,
+/obj/item/organ/internal/heart,
+/obj/machinery/light/floortube/flicker{
+	dir = 8;
+	pixel_x = 5
+	},
+/turf/simulated/floor/wood/alt{
+	color = "red"
+	},
+/area/survivalpod/superpose/DemonPoolV2)
+"k" = (
+/obj/structure/cult/pylon,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/DemonPoolV2)
+"l" = (
+/obj/item/weapon/bone/ribs,
+/turf/simulated/floor/lava,
+/area/survivalpod/superpose/DemonPoolV2)
+"m" = (
+/obj/structure/loot_pile/surface/bones,
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/DemonPoolV2)
+"n" = (
+/obj/structure/cult/pylon,
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/DemonPoolV2)
+"o" = (
+/turf/template_noop,
+/area/survivalpod/superpose/DemonPoolV2)
+"p" = (
+/obj/structure/constructshell/cult,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/DemonPoolV2)
+"q" = (
+/obj/structure/cult/pylon,
+/turf/simulated/floor/wood/alt{
+	color = "red"
+	},
+/area/survivalpod/superpose/DemonPoolV2)
+"r" = (
+/obj/structure/grille/broken/cult,
+/turf/simulated/floor/gorefloor,
+/area/survivalpod/superpose/DemonPoolV2)
+"t" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 8
+	},
+/turf/simulated/floor/wood/alt{
+	color = "red"
+	},
+/area/survivalpod/superpose/DemonPoolV2)
+"v" = (
+/obj/effect/map_effect/interval/sound_emitter/punching,
+/obj/effect/map_effect/interval/effect_emitter/smoke/fire,
+/turf/simulated/floor/lava,
+/area/survivalpod/superpose/DemonPoolV2)
+"w" = (
+/turf/simulated/wall/solidrock,
+/area/survivalpod/superpose/DemonPoolV2)
+"x" = (
+/obj/structure/bed/double/padded,
+/obj/item/weapon/bedsheet/browndouble,
+/turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/DemonPoolV2)
+"y" = (
+/obj/structure/girder/cult,
+/turf/simulated/floor/gorefloor,
+/area/survivalpod/superpose/DemonPoolV2)
+"z" = (
+/obj/structure/girder/cult,
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/DemonPoolV2)
+"A" = (
+/obj/effect/map_effect/interval/effect_emitter/smoke/fire,
+/turf/simulated/floor/lava,
+/area/survivalpod/superpose/DemonPoolV2)
+"B" = (
+/obj/structure/grille/cult,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/DemonPoolV2)
+"C" = (
+/obj/machinery/crystal/lava,
+/turf/simulated/floor/lava,
+/area/survivalpod/superpose/DemonPoolV2)
+"D" = (
+/obj/structure/table/hardwoodtable,
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	pixel_y = 9
+	},
+/turf/simulated/floor/wood/alt{
+	color = "red"
+	},
+/area/survivalpod/superpose/DemonPoolV2)
+"E" = (
+/turf/simulated/wall/cult,
+/area/survivalpod/superpose/DemonPoolV2)
+"F" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 4
+	},
+/turf/simulated/floor/wood/alt{
+	color = "red"
+	},
+/area/survivalpod/superpose/DemonPoolV2)
+"G" = (
+/obj/structure/closet/crate,
+/obj/fiftyspawner/plasteel,
+/obj/fiftyspawner/plasteel,
+/obj/fiftyspawner/phoronrglass,
+/obj/fiftyspawner/phoronrglass,
+/obj/item/stack/material/lead{
+	amount = 50
+	},
+/obj/item/stack/material/lead{
+	amount = 50
+	},
+/obj/fiftyspawner/gold,
+/obj/fiftyspawner/phoron,
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/DemonPoolV2)
+"I" = (
+/turf/simulated/goreeyes,
+/area/survivalpod/superpose/DemonPoolV2)
+"J" = (
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/DemonPoolV2)
+"K" = (
+/obj/item/clothing/shoes/cult,
+/obj/item/clothing/suit/cultrobes/alt,
+/obj/item/clothing/head/helmet/space/cult,
+/obj/item/clothing/shoes/cult,
+/obj/item/clothing/suit/cultrobes/alt,
+/obj/item/clothing/head/helmet/space/cult,
+/obj/item/weapon/storage/backpack/cultpack,
+/obj/item/weapon/storage/backpack/cultpack,
+/obj/structure/closet/cabinet,
+/turf/simulated/floor/wood/alt{
+	color = "red"
+	},
+/area/survivalpod/superpose/DemonPoolV2)
+"M" = (
+/obj/structure/grille/broken/cult,
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/DemonPoolV2)
+"N" = (
+/obj/structure/bed/double/padded,
+/obj/item/weapon/bedsheet/purpledouble,
+/turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/DemonPoolV2)
+"O" = (
+/obj/item/weapon/storage/backpack/messenger,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/trauma,
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/oxy,
+/obj/item/weapon/flame/lighter/random,
+/obj/item/weapon/storage/box/survival/space,
+/obj/item/device/radio,
+/obj/item/clothing/accessory/storage/black_drop_pouches,
+/obj/item/weapon/reagent_containers/pill/dylovene,
+/obj/item/weapon/reagent_containers/pill/dylovene,
+/obj/item/device/flashlight/maglight,
+/obj/item/device/flashlight/flare,
+/obj/item/device/flashlight/flare,
+/obj/random/soap,
+/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/pda,
+/obj/item/weapon/storage/mre/menu11,
+/obj/item/weapon/storage/mre/menu11,
+/obj/item/device/starcaster_news,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/device/gps,
+/obj/structure/closet{
+	name = "Survival closet"
+	},
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/DemonPoolV2)
+"P" = (
+/turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/DemonPoolV2)
+"Q" = (
+/turf/simulated/floor/flesh/colour{
+	color = red
+	},
+/area/survivalpod/superpose/DemonPoolV2)
+"R" = (
+/obj/effect/decal/remains/deer,
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/DemonPoolV2)
+"S" = (
+/obj/structure/simple_door/sandstone{
+	color = "#D35400"
+	},
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/DemonPoolV2)
+"T" = (
+/obj/random/pottedplant,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1;
+	opacity = 1
+	},
+/obj/structure/curtain/black,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/DemonPoolV2)
+"U" = (
+/obj/structure/grille/cult,
+/turf/simulated/floor/lava,
+/area/survivalpod/superpose/DemonPoolV2)
+"V" = (
+/obj/effect/gibspawner/human,
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/DemonPoolV2)
+"W" = (
+/turf/simulated/floor/wood/alt{
+	color = "red"
+	},
+/area/survivalpod/superpose/DemonPoolV2)
+"X" = (
+/obj/structure/closet/cabinet,
+/obj/random/curseditem,
+/obj/random/curseditem,
+/obj/item/weapon/melee/cursedblade,
+/obj/item/weapon/melee/cultblade,
+/obj/item/weapon/beartrap/hunting,
+/obj/item/weapon/beartrap/hunting,
+/obj/item/stack/material/phoron{
+	amount = 25
+	},
+/obj/item/stack/material/phoron{
+	amount = 25
+	},
+/obj/item/device/soulstone,
+/obj/item/device/soulstone,
+/obj/item/weapon/storage/belt/soulstone/full,
+/turf/simulated/floor/wood/alt{
+	color = "red"
+	},
+/area/survivalpod/superpose/DemonPoolV2)
+"Y" = (
+/turf/simulated/floor/lava,
+/area/survivalpod/superpose/DemonPoolV2)
+"Z" = (
+/obj/effect/rune,
+/obj/item/weapon/cat_box/black,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/DemonPoolV2)
 
 (1,1,1) = {"
-owwwoowowowwwwwwwoowoowowwwowwwoowwwwooowoo
-wwwawwawawaaaaaaawwawwEwaaawaaawwaaaawwwawo
-owaaaaaaaaaaYYJJaaaaaaaaaEaaaaaaaUUaYaaaaaw
-wwaaJJJJJaaaYJJnJJJaaaaInJJJJJJccccUYYYCEaw
-wwaaJJYYJJJaJJJJJJJJaaJJJJpcpcpcpcpcykyYAaw
-wwaaJYYYYJJIJJcccJJJVaJcchhhhhhhhhhhhZkYaaw
-owwaYYvlYJJJyQQQQcRJJIccQcpJpJpcpcpcykyYawo
-owwaYYYYYJJcQQccQQcJJJcQcJJJmJJJcccUYYYCaaw
-wwwaJYYYVJMcQcJJyQcJJJcccJVIaIIIUUUUYYYYaaw
-owwaJJJJJRcQQcJVJQQcJccQJJJJJJJIIaIaaYYYawo
-owwaJJJJJJcQccJJJcQcccQQcccccccccJJGaaYYaaw
-oowaaaaIJcQQcJJIJcQzcQcJQQQccQQcQJJJJYYYYaw
-oowaaaaJJcQczJJrJcQQQccJcccccJcJQQcJJJAYaaw
-owaaaaJJJQQcJJJIJccQQcEEEBEEeEBEEQcQJJYYawo
-wwaaaJJJzQccJJmaJJcQccEOhhEhhKDKEEJQcJJJawo
-wwaaJJJccQccJJaaJJcQccEhhhEhhWWWiEcczJJJawo
-wwaJJJJETeTEJaaaJJyQQcEEhhehkfqWbBcQccJJawo
-owaJJJJEhhhEEEaaJJJQQccEhhEhhWWWiEJQQcRJawo
-owaJEEEEWWWPNEaaJJJcQQcEEBEEBEEBEEJQQcJaaaw
-owaJEdgEDWWPxEaaJJRJcQQQcJccccJJcJcQQcJaaaw
-owwaEhheWWWWWEaaJJJJVJcyQQQQQQQycQQQccJJaaw
-owwaEhhEXFjjtEaaaaaIJJJJcJQQccQQQQcJJJJJaaw
-oowaEEEEEEEEEEaaaaaaaJJJJJEccJccccJJJJJaawo
-oowwaaaaaaaaaaaaaaaawJJJJaaJEJJJMEJJJIaaawo
-ooowaaaaaaaaaaaaawwwwSSwaaaaaaaaaaaaaaaaawo
-oooowwwwwwwwwwwwwwwwooowwwwaaawwwaawwwwwawo
-ooooowwoooowwwwwwowwoooowwwwwwwowwwwoooowoo
-oooooooooooowwooooowooooowooooooooooooooooo
+o
+w
+o
+w
+w
+w
+o
+o
+w
+o
+o
+o
+o
+o
+w
+w
+w
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+"}
+(2,1,1) = {"
+w
+w
+w
+w
+w
+w
+w
+w
+w
+w
+w
+o
+o
+w
+w
+w
+w
+w
+w
+w
+w
+w
+o
+o
+o
+o
+o
+o
+"}
+(3,1,1) = {"
+w
+w
+a
+a
+a
+a
+w
+w
+w
+w
+w
+w
+w
+a
+a
+a
+a
+a
+a
+a
+w
+w
+w
+w
+o
+o
+o
+o
+"}
+(4,1,1) = {"
+w
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+J
+J
+J
+J
+a
+a
+a
+w
+w
+o
+o
+o
+"}
+(5,1,1) = {"
+o
+w
+a
+J
+J
+J
+Y
+Y
+J
+J
+J
+a
+a
+a
+a
+J
+J
+J
+E
+E
+E
+E
+E
+a
+a
+w
+o
+o
+"}
+(6,1,1) = {"
+o
+w
+a
+J
+J
+Y
+Y
+Y
+Y
+J
+J
+a
+a
+a
+J
+J
+J
+J
+E
+d
+h
+h
+E
+a
+a
+w
+w
+o
+"}
+(7,1,1) = {"
+w
+a
+a
+J
+Y
+Y
+v
+Y
+Y
+J
+J
+a
+a
+J
+J
+J
+J
+J
+E
+g
+h
+h
+E
+a
+a
+w
+w
+o
+"}
+(8,1,1) = {"
+o
+w
+a
+J
+Y
+Y
+l
+Y
+Y
+J
+J
+I
+J
+J
+J
+c
+E
+E
+E
+E
+e
+E
+E
+a
+a
+w
+o
+o
+"}
+(9,1,1) = {"
+w
+a
+a
+J
+J
+Y
+Y
+Y
+V
+J
+J
+J
+J
+J
+z
+c
+T
+h
+W
+D
+W
+X
+E
+a
+a
+w
+o
+o
+"}
+(10,1,1) = {"
+o
+w
+a
+a
+J
+J
+J
+J
+J
+R
+J
+c
+c
+Q
+Q
+Q
+e
+h
+W
+W
+W
+F
+E
+a
+a
+w
+o
+o
+"}
+(11,1,1) = {"
+w
+a
+a
+a
+J
+J
+J
+J
+M
+c
+c
+Q
+Q
+Q
+c
+c
+T
+h
+W
+W
+W
+j
+E
+a
+a
+w
+o
+o
+"}
+(12,1,1) = {"
+w
+a
+a
+a
+a
+I
+J
+c
+c
+Q
+Q
+Q
+c
+c
+c
+c
+E
+E
+P
+P
+W
+j
+E
+a
+a
+w
+w
+o
+"}
+(13,1,1) = {"
+w
+a
+Y
+Y
+J
+J
+y
+Q
+Q
+Q
+c
+c
+z
+J
+J
+J
+J
+E
+N
+x
+W
+t
+E
+a
+a
+w
+w
+w
+"}
+(14,1,1) = {"
+w
+a
+Y
+J
+J
+J
+Q
+Q
+c
+c
+c
+J
+J
+J
+J
+J
+a
+E
+E
+E
+E
+E
+E
+a
+a
+w
+w
+w
+"}
+(15,1,1) = {"
+w
+a
+J
+J
+J
+c
+Q
+c
+J
+J
+J
+J
+J
+J
+m
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+w
+w
+o
+"}
+(16,1,1) = {"
+w
+a
+J
+n
+J
+c
+Q
+c
+J
+V
+J
+I
+r
+I
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+w
+w
+o
+"}
+(17,1,1) = {"
+w
+a
+a
+J
+J
+c
+Q
+Q
+y
+J
+J
+J
+J
+J
+J
+J
+J
+J
+J
+J
+J
+a
+a
+a
+a
+w
+w
+o
+"}
+(18,1,1) = {"
+o
+w
+a
+J
+J
+J
+c
+Q
+Q
+Q
+c
+c
+c
+c
+J
+J
+J
+J
+J
+J
+J
+a
+a
+a
+w
+w
+o
+o
+"}
+(19,1,1) = {"
+o
+w
+a
+J
+J
+J
+R
+c
+c
+Q
+Q
+Q
+Q
+c
+c
+c
+y
+J
+J
+R
+J
+a
+a
+a
+w
+w
+w
+o
+"}
+(20,1,1) = {"
+w
+a
+a
+a
+J
+J
+J
+J
+J
+c
+c
+z
+Q
+Q
+Q
+Q
+Q
+Q
+c
+J
+J
+I
+a
+a
+w
+w
+w
+w
+"}
+(21,1,1) = {"
+o
+w
+a
+a
+a
+V
+J
+J
+J
+J
+c
+c
+Q
+Q
+c
+c
+Q
+Q
+Q
+c
+V
+J
+a
+w
+w
+o
+o
+o
+"}
+(22,1,1) = {"
+o
+w
+a
+a
+a
+a
+I
+J
+J
+c
+c
+Q
+c
+c
+c
+c
+c
+c
+Q
+Q
+J
+J
+J
+J
+S
+o
+o
+o
+"}
+(23,1,1) = {"
+w
+E
+a
+a
+J
+J
+c
+c
+c
+c
+Q
+c
+c
+E
+E
+E
+E
+c
+c
+Q
+c
+J
+J
+J
+S
+o
+o
+o
+"}
+(24,1,1) = {"
+o
+w
+a
+I
+J
+c
+c
+Q
+c
+Q
+Q
+J
+J
+E
+O
+h
+E
+E
+E
+Q
+y
+J
+J
+J
+w
+w
+o
+o
+"}
+(25,1,1) = {"
+w
+a
+a
+n
+J
+c
+Q
+c
+c
+J
+c
+Q
+c
+E
+h
+h
+h
+h
+E
+c
+Q
+c
+J
+J
+a
+w
+w
+o
+"}
+(26,1,1) = {"
+w
+a
+E
+J
+J
+h
+c
+J
+J
+J
+c
+Q
+c
+B
+h
+h
+h
+h
+B
+J
+Q
+J
+J
+a
+a
+w
+w
+w
+"}
+(27,1,1) = {"
+w
+a
+a
+J
+p
+h
+p
+J
+V
+J
+c
+Q
+c
+E
+E
+E
+e
+E
+E
+c
+Q
+Q
+E
+a
+a
+w
+w
+o
+"}
+(28,1,1) = {"
+o
+w
+a
+J
+c
+h
+J
+J
+I
+J
+c
+c
+c
+E
+h
+h
+h
+h
+E
+c
+Q
+Q
+c
+J
+a
+a
+w
+o
+"}
+(29,1,1) = {"
+w
+a
+a
+J
+p
+h
+p
+m
+a
+J
+c
+c
+c
+e
+h
+h
+k
+h
+B
+c
+Q
+c
+c
+E
+a
+a
+w
+o
+"}
+(30,1,1) = {"
+w
+a
+a
+J
+c
+h
+J
+J
+I
+J
+c
+Q
+J
+E
+K
+W
+f
+W
+E
+c
+Q
+c
+J
+J
+a
+a
+w
+o
+"}
+(31,1,1) = {"
+w
+a
+a
+J
+p
+h
+p
+J
+I
+J
+c
+Q
+c
+B
+D
+W
+q
+W
+E
+J
+Q
+Q
+c
+J
+a
+w
+w
+o
+"}
+(32,1,1) = {"
+o
+w
+a
+c
+c
+h
+c
+J
+I
+I
+c
+c
+J
+E
+K
+W
+W
+W
+B
+J
+y
+Q
+c
+J
+a
+w
+o
+o
+"}
+(33,1,1) = {"
+o
+w
+a
+c
+p
+h
+p
+c
+U
+I
+c
+Q
+Q
+E
+E
+i
+b
+i
+E
+c
+c
+Q
+c
+M
+a
+w
+w
+o
+"}
+(34,1,1) = {"
+w
+a
+U
+c
+c
+h
+c
+c
+U
+a
+J
+J
+Q
+Q
+E
+E
+B
+E
+E
+J
+Q
+Q
+c
+E
+a
+a
+w
+o
+"}
+(35,1,1) = {"
+w
+a
+U
+c
+p
+h
+p
+c
+U
+I
+J
+J
+c
+c
+J
+c
+c
+J
+J
+c
+Q
+c
+J
+J
+a
+a
+w
+o
+"}
+(36,1,1) = {"
+w
+a
+a
+U
+c
+h
+c
+U
+U
+a
+G
+J
+J
+Q
+Q
+c
+Q
+Q
+Q
+Q
+Q
+J
+J
+J
+a
+w
+w
+o
+"}
+(37,1,1) = {"
+w
+a
+Y
+Y
+y
+h
+y
+Y
+Y
+a
+a
+J
+J
+J
+c
+z
+c
+Q
+Q
+Q
+c
+J
+J
+J
+a
+w
+o
+o
+"}
+(38,1,1) = {"
+o
+w
+a
+Y
+k
+Z
+k
+Y
+Y
+Y
+a
+Y
+J
+J
+J
+J
+c
+c
+c
+c
+c
+J
+J
+I
+a
+w
+o
+o
+"}
+(39,1,1) = {"
+o
+w
+a
+Y
+y
+k
+y
+Y
+Y
+Y
+Y
+Y
+A
+Y
+J
+J
+J
+R
+J
+J
+J
+J
+J
+a
+a
+w
+o
+o
+"}
+(40,1,1) = {"
+o
+w
+a
+C
+Y
+Y
+Y
+C
+Y
+Y
+Y
+Y
+Y
+Y
+J
+J
+J
+J
+a
+a
+J
+J
+a
+a
+a
+w
+o
+o
+"}
+(41,1,1) = {"
+w
+a
+a
+E
+A
+a
+a
+a
+a
+a
+a
+Y
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+w
+o
+"}
+(42,1,1) = {"
+o
+w
+a
+a
+a
+a
+w
+a
+a
+w
+a
+a
+a
+w
+w
+w
+w
+w
+a
+a
+a
+a
+w
+w
+w
+w
+o
+o
+"}
+(43,1,1) = {"
+o
+o
+w
+w
+w
+w
+o
+w
+w
+o
+w
+w
+w
+o
+o
+o
+o
+o
+w
+w
+w
+w
+o
+o
+o
+o
+o
+o
 "}

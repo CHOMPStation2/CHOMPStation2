@@ -397,6 +397,12 @@
 	var/obj/item/I = O
 	if(!I || !istype(I,/obj/item)) return
 
+	//CHOMPAdd Start
+	if(istype(I, /obj/item/device/robot_tongue) && isrobot(user))
+		var/obj/item/device/robot_tongue/J = I
+		if(J.water.energy < J.water.max_energy) return
+	//CHOMPAdd End
+
 	to_chat(usr, "<span class='notice'>You start washing \the [I].</span>")
 
 	busy = 1

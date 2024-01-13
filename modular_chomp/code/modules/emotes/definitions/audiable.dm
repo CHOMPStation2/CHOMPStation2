@@ -33,3 +33,27 @@
 	emote_message_1p_target = "You mgeow at TARGET."
 	emote_message_3p_target = "mgeow at TARGET."
 	emote_sound = 'modular_chomp/sound/voice/mgeow.ogg'
+
+/decl/emote/audible/xenogrowl
+	key = "xenogrowl"
+	emote_message_1p = "You growl unnervingly."
+	emote_message_3p = "growls unnervingly."
+	emote_message_1p_target = "You growl unnervingly at TARGET."
+	emote_message_3p_target = "growls unnervingly at TARGET."
+	emote_sound = 'modular_chomp/sound/voice/emotes/xenogrowl.ogg'
+
+/decl/emote/audible/xenohiss
+	key = "xenohiss"
+	emote_message_1p = "You hiss unnervingly."
+	emote_message_3p = "hisses unnervingly."
+	emote_message_1p_target = "You hiss unnervingly at TARGET."
+	emote_message_3p_target = "hisses unnervingly at TARGET."
+	emote_sound = 'modular_chomp/sound/voice/emotes/xenohiss.ogg'
+
+/decl/emote/audible/xenopurr
+	key = "xenopurr"
+	emote_message_1p = "You purr unnervingly."
+	emote_message_3p = "purrs unnervingly."
+	emote_message_1p_target = "You purr unnervingly at TARGET."
+	emote_message_3p_target = "purrs unnervingly at TARGET."
+	emote_sound = 'modular_chomp/sound/voice/emotes/xenopurr.ogg'

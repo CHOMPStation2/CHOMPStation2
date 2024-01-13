@@ -34,21 +34,32 @@
 		SSradiation.z_radiate(locate(1, 1, z), radiation_level, 1)
 
 	for(var/mob/living/carbon/C in living_mob_list)
-		if((C.z in using_map.station_levels) && !C.isSynthetic())	//CHOMPEdit
-			var/area/A = get_area(C)
-			if(!A)
-				continue
-			if(A.flags & RAD_SHIELDED)
-				continue
-			if(istype(C,/mob/living/carbon/human))
-				var/mob/living/carbon/human/H = C
-				if(prob(5))
-					if (prob(75))
-						randmutb(H) // Applies bad mutation
-						domutcheck(H,null,MUTCHK_FORCED)
-					else
-						randmutg(H) // Applies good mutation
-						domutcheck(H,null,MUTCHK_FORCED)
+		if(!(C.z in using_map.station_levels) || C.isSynthetic() || isbelly(C.loc))
+			continue
+		var/area/A = get_area(C)
+		if(!A)
+			continue
+		if(A.flags & RAD_SHIELDED)
+			continue
+		if(istype(C,/mob/living/carbon/human))
+			var/mob/living/carbon/human/H = C
+			var/chance = 5.0
+			chance -= (chance / 100) * C.getarmor(null, "rad")
+			//CHOMPEdit Start
+			if(C.species.traits.Find(/datum/trait/positive/rad_resistance))
+				chance -= (chance / 100) * 20
+			if(C.species.traits.Find(/datum/trait/positive/rad_resistance_extreme))
+				chance -= (chance / 100) * 60
+			if(C.species.traits.Find(/datum/trait/positive/rad_immune))
+				chance -= (chance / 100) * 100
+			if(prob(round(chance, 0.01)))
+			//CHOMPEdit End
+				if (prob(75))
+					randmutb(H) // Applies bad mutation
+					domutcheck(H,null,MUTCHK_FORCED)
+				else
+					randmutg(H) // Applies good mutation
+					domutcheck(H,null,MUTCHK_FORCED)
 
 /datum/event/radiation_storm/end()
 	revoke_maint_all_access()

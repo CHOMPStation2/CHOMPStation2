@@ -20,7 +20,7 @@ var/list/job_whitelist = list()
 		return 1
 	if(rank == USELESS_JOB) //VOREStation Edit - Visitor not Assistant
 		return 1
-	if(check_rights(R_ADMIN, 0))
+	if(check_rights(R_ADMIN, 0) || check_rights(R_DEBUG, 0) || check_rights(R_EVENT, 0)) // CHOMPedit
 		return 1
 	if(!job_whitelist)
 		return 0

@@ -37,18 +37,11 @@
 /obj/structure/loot_pile/surface/bones,
 /obj/item/weapon/ratvarian_spear,
 /obj/item/clothing/suit/storage/hooded/wintercoat/ratvar,
+/obj/item/weapon/storage/toolbox/brass,
 /turf/simulated/floor/bronze,
 /area/submap/clockwork)
 "u" = (
 /turf/simulated/floor/outdoors/rocks/sif,
-/area/submap/clockwork)
-"y" = (
-/obj/structure/closet/coffin,
-/obj/item/instrument/trombone/spectral,
-/obj/structure/loot_pile/surface/bones,
-/obj/item/weapon/ratvarian_spear,
-/obj/item/clothing/suit/storage/hooded/wintercoat/ratvar,
-/turf/simulated/floor/bronze,
 /area/submap/clockwork)
 "z" = (
 /mob/living/simple_mob/mechanical/wahlem{
@@ -78,13 +71,6 @@
 "I" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/guardian,
 /turf/simulated/floor/outdoors/rocks/sif,
-/area/submap/clockwork)
-"J" = (
-/obj/structure/closet/coffin,
-/obj/item/weapon/rig/ch/clockwork,
-/obj/item/weapon/gun/energy/clockwork,
-/obj/structure/loot_pile/surface/bones,
-/turf/simulated/floor/bronze,
 /area/submap/clockwork)
 "N" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/teslanoodle,
@@ -337,13 +323,13 @@ u
 d
 a
 a
-J
+t
 a
 a
 t
 a
 a
-h
+t
 a
 G
 d
@@ -362,11 +348,11 @@ u
 d
 a
 a
-z
+a
+a
 a
 a
 z
-a
 a
 a
 n
@@ -412,11 +398,11 @@ u
 d
 a
 a
-z
+a
+a
 a
 a
 z
-a
 a
 a
 n
@@ -437,13 +423,13 @@ u
 d
 a
 a
-J
+t
 a
 a
 h
 a
 a
-y
+t
 a
 G
 d

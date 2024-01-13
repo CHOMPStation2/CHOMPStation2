@@ -1,170 +1,1962 @@
-"ak" = (/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/structure/window/reinforced/survival_pod{dir = 8},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/MechStorageFab)
-"av" = (/obj/structure/salvageable/computer,/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"ax" = (/obj/structure/table/rack/shelf/steel,/obj/item/mecha_parts/mecha_equipment/cloak,/obj/item/mecha_parts/mecha_equipment/tool/jetpack,/obj/item/mecha_parts/mecha_equipment/tool/passenger,/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"aI" = (/obj/machinery/portable_atmospherics/canister/air,/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"ba" = (/obj/machinery/power/port_gen/pacman,/obj/structure/cable,/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"bE" = (/turf/simulated/floor/tiled/techfloor/grid,/area/survivalpod/superpose/MechStorageFab)
-"bQ" = (/obj/random/maintenance,/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"ca" = (/obj/structure/table/rack/shelf/steel,/obj/item/mecha_parts/mecha_equipment/anticcw_armor_booster,/obj/item/mecha_parts/mecha_equipment/repair_droid,/obj/item/mecha_parts/mecha_equipment/tool/passenger,/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/grenade/clusterbang,/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"cS" = (/obj/structure/window/reinforced/survival_pod,/obj/machinery/field_generator{anchored = 1; state = 1},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/MechStorageFab)
-"df" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/turf/simulated/floor/tiled/steel_dirty,/area/survivalpod/superpose/MechStorageFab)
-"dt" = (/obj/structure/bed/double/padded,/turf/simulated/floor/wood/sif/broken,/area/survivalpod/superpose/MechStorageFab)
-"dA" = (/obj/machinery/icecream_vat,/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"dG" = (/turf/template_noop,/area/template_noop)
-"dH" = (/obj/random/maintenance,/obj/random/maintenance/engineering,/turf/simulated/floor/tiled/steel_dirty,/area/survivalpod/superpose/MechStorageFab)
-"ea" = (/obj/structure/table/reinforced,/turf/simulated/floor/tiled/steel_dirty,/area/survivalpod/superpose/MechStorageFab)
-"ez" = (/obj/structure/curtain/black{icon_state = "open"; layer = 2; name = "privacy curtain"; opacity = 0},/turf/simulated/floor/wood/sif,/area/survivalpod/superpose/MechStorageFab)
-"fq" = (/obj/structure/window/reinforced/survival_pod,/obj/structure/window/reinforced/survival_pod{dir = 8},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/MechStorageFab)
-"gG" = (/obj/machinery/fusion_fuel_compressor,/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"gT" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 6},/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"ho" = (/obj/structure/reagent_dispensers/fueltank/high,/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"hr" = (/obj/structure/table/reinforced,/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"hK" = (/obj/structure/reagent_dispensers/watertank/high,/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"ij" = (/obj/structure/cable/green{d2 = 4; icon_state = "0-4"},/obj/machinery/power/apc/alarms_hidden{dir = 8; pixel_x = -24},/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"in" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/obj/machinery/door/airlock/maintenance/common,/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"iH" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/obj/machinery/alarm/alarms_hidden{dir = 1; pixel_y = -22},/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"jq" = (/obj/mecha/working/hoverpod/shuttlecraft{dir = 8},/turf/template_noop,/area/template_noop)
-"ju" = (/obj/structure/salvageable/bliss,/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"kd" = (/obj/machinery/atmospherics/unary/vent_pump/on,/turf/simulated/floor/tiled/techfloor/grid,/area/survivalpod/superpose/MechStorageFab)
-"lc" = (/obj/random/maintenance/engineering,/obj/structure/bed/chair{dir = 8},/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"lk" = (/obj/structure/table/rack/shelf/steel,/obj/item/mecha_parts/component/hull/lightweight,/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/scattershot,/obj/item/mecha_parts/mecha_equipment/weapon/phoron_bore,/obj/item/mecha_parts/mecha_equipment/weapon/energy/taser/rigged,/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"ly" = (/obj/machinery/atmospherics/pipe/simple/hidden,/turf/simulated/floor/tiled/steel_dirty,/area/survivalpod/superpose/MechStorageFab)
-"lA" = (/obj/random/maintenance/engineering,/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"lX" = (/obj/structure/window/reinforced/survival_pod,/obj/structure/window/reinforced/survival_pod{dir = 4},/obj/machinery/ion_engine,/turf/simulated/floor/tiled/techfloor/grid,/area/survivalpod/superpose/MechStorageFab)
-"mB" = (/obj/structure/table/steel_reinforced,/obj/item/weapon/storage/briefcase/inflatable{pixel_y = 3},/obj/item/weapon/storage/toolbox/syndicate/powertools,/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"nc" = (/obj/structure/bed/double/padded,/obj/item/weapon/bedsheet/rainbowdouble,/obj/machinery/partyalarm{pixel_y = -18},/turf/simulated/floor/wood/sif,/area/survivalpod/superpose/MechStorageFab)
-"nh" = (/obj/structure/table/rack/shelf/steel,/obj/item/mecha_parts/component/armor/alien,/obj/item/mecha_parts/mecha_equipment/crisis_drone/rad,/obj/item/mecha_parts/mecha_equipment/tool/passenger,/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg/rigged,/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/heavy/rigged,/obj/item/mecha_parts/mecha_equipment/weapon/energy/medigun,/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"ns" = (/obj/machinery/vending/tool{emagged = 1},/turf/simulated/floor/tiled/steel_dirty,/area/survivalpod/superpose/MechStorageFab)
-"nz" = (/obj/machinery/atmospherics/unary/vent_pump/on,/turf/simulated/floor/tiled/steel_dirty,/area/survivalpod/superpose/MechStorageFab)
-"nH" = (/obj/machinery/atmospherics/pipe/manifold/hidden,/obj/random/junk,/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"nJ" = (/obj/machinery/atmospherics/unary/vent_pump/on,/obj/machinery/alarm/alarms_hidden{dir = 4; pixel_x = -22},/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"nZ" = (/obj/machinery/atmospherics/pipe/manifold/hidden,/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"oh" = (/obj/machinery/door/airlock/maintenance/int,/obj/structure/fans/hardlight,/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"oW" = (/obj/machinery/sleeper{dir = 4},/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"pw" = (/obj/random/junk,/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"pA" = (/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"qa" = (/obj/machinery/mech_recharger,/obj/effect/floor_decal/industrial/outline/yellow,/obj/structure/loot_pile/mecha/marauder/mauler,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/MechStorageFab)
-"qb" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 1},/turf/simulated/floor/tiled/techfloor/grid,/area/survivalpod/superpose/MechStorageFab)
-"qf" = (/obj/machinery/atmospherics/unary/vent_pump/on,/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"qp" = (/obj/structure/curtain/black{icon_state = "open"; layer = 2; name = "privacy curtain"; opacity = 0},/turf/simulated/floor/wood/sif/broken,/area/survivalpod/superpose/MechStorageFab)
-"qy" = (/obj/structure/cable/green{d1 = 1; d2 = 4; icon_state = "1-4"},/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"qE" = (/obj/machinery/autolathe{hacked = 1; name = "hacked autolathe"},/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"qY" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"rj" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 1},/obj/machinery/alarm/alarms_hidden{dir = 4; pixel_x = -22},/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"rl" = (/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"rp" = (/obj/random/maintenance,/turf/simulated/floor/tiled/steel_dirty,/area/survivalpod/superpose/MechStorageFab)
-"rM" = (/obj/machinery/door/airlock/maintenance/common,/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"sd" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 9},/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"sk" = (/obj/random/junk,/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"sK" = (/obj/vehicle/boat{dir = 8},/obj/structure/lattice,/turf/template_noop,/area/survivalpod/superpose/MechStorageFab)
-"tl" = (/obj/machinery/floorlayer,/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"to" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 9},/obj/machinery/gear_dispenser/suit_old,/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"tw" = (/turf/simulated/floor/plating/external,/area/template_noop)
-"tH" = (/obj/machinery/atmospherics/pipe/manifold/hidden{dir = 8},/turf/simulated/floor/tiled/steel_dirty,/area/survivalpod/superpose/MechStorageFab)
-"tK" = (/obj/effect/wingrille_spawn/reinforced,/obj/structure/fans/hardlight,/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"tO" = (/obj/structure/table/rack/shelf/steel,/obj/item/mecha_parts/mecha_equipment/generator/nuclear,/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/explosive/rigged,/obj/item/mecha_parts/mecha_equipment/weapon/energy/ion/rigged,/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"tV" = (/obj/structure/table/rack/shelf/steel,/obj/item/mecha_parts/component/gas/reinforced,/obj/item/mecha_parts/mecha_equipment/hardpoint_actuator,/obj/item/mecha_parts/mecha_equipment/tesla_energy_relay,/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/cannon,/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/grenade/rigged,/obj/item/mecha_parts/mecha_equipment/wormhole_generator,/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"tW" = (/obj/structure/closet/walllocker_double/kitchen/north{dir = 8; name = "Ration Cabinet"; pixel_x = -32; pixel_y = 0},/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/device/radio{pixel_x = -5; pixel_y = 5},/obj/item/device/radio{pixel_x = 5; pixel_y = 5},/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"us" = (/obj/machinery/artifact_scanpad,/obj/effect/simple_portal/linked,/obj/effect/map_effect/interval/effect_emitter/sparks,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/MechStorageFab)
-"uJ" = (/obj/effect/floor_decal/industrial/outline/blue,/obj/structure/closet/jcloset,/obj/item/weapon/mop,/obj/structure/mopbucket,/obj/item/weapon/reagent_containers/glass/bucket,/obj/item/weapon/reagent_containers/spray/cleaner,/obj/item/weapon/reagent_containers/spray/cleaner,/turf/simulated/floor/tiled/steel_dirty,/area/survivalpod/superpose/MechStorageFab)
-"vG" = (/obj/machinery/mech_recharger,/obj/effect/floor_decal/industrial/outline/yellow,/obj/structure/loot_pile/mecha/odysseus/murdysseus,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/MechStorageFab)
-"wg" = (/obj/random/junk,/obj/random/maintenance,/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"wU" = (/obj/structure/salvageable/server,/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"yc" = (/obj/machinery/feeder,/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"yF" = (/obj/structure/lattice,/turf/template_noop,/area/template_noop)
-"yH" = (/obj/machinery/door/airlock/maintenance/engi{req_one_access = null},/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"zb" = (/obj/structure/salvageable/autolathe,/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"Ah" = (/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/structure/window/reinforced/survival_pod{dir = 4},/obj/structure/cryofeed{dir = 1},/turf/simulated/floor/tiled/techfloor/grid,/area/survivalpod/superpose/MechStorageFab)
-"Ao" = (/turf/simulated/wall/skipjack,/area/survivalpod/superpose/MechStorageFab)
-"Ar" = (/obj/structure/cable{d1 = 2; d2 = 8; icon_state = "2-8"},/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"Au" = (/obj/machinery/mech_recharger,/obj/effect/floor_decal/industrial/outline/yellow,/obj/structure/loot_pile/mecha/gygax/dark/adv,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/MechStorageFab)
-"AD" = (/obj/effect/wingrille_spawn/reinforced,/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"BC" = (/obj/machinery/portable_atmospherics/canister/air,/obj/machinery/atmospherics/portables_connector,/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"CN" = (/obj/structure/cryofeed{dir = 1},/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/structure/window/reinforced/survival_pod{dir = 4},/turf/simulated/floor/tiled/techfloor/grid,/area/survivalpod/superpose/MechStorageFab)
-"Df" = (/obj/machinery/alarm/alarms_hidden{dir = 4; pixel_x = -22},/obj/item/pizzavoucher,/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"Dr" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/obj/machinery/alarm/alarms_hidden{pixel_y = 22},/obj/random/maintenance,/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"DV" = (/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"EE" = (/obj/machinery/mech_recharger,/obj/effect/floor_decal/industrial/outline/yellow,/obj/mecha/combat/gygax/old,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/MechStorageFab)
-"EY" = (/obj/machinery/mech_recharger,/obj/effect/floor_decal/industrial/outline/yellow,/obj/structure/loot_pile/mecha/gygax/medgax,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/MechStorageFab)
-"Ga" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 5},/obj/random/maintenance/engineering,/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"Go" = (/obj/machinery/power/smes/buildable/hybrid,/obj/structure/cable/green{d2 = 8; icon_state = "0-8"},/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"GI" = (/obj/structure/table/rack/shelf/steel,/obj/item/mecha_parts/mecha_equipment/combat_shield,/obj/item/mecha_parts/mecha_equipment/repair_droid,/obj/item/mecha_parts/mecha_equipment/tool/sleeper,/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/mortar,/obj/item/mecha_parts/mecha_equipment/weapon/energy/flamer/rigged,/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"GX" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 4},/obj/random/maintenance,/turf/simulated/floor/tiled/steel_dirty,/area/survivalpod/superpose/MechStorageFab)
-"Ib" = (/obj/machinery/atmospherics/pipe/manifold/hidden{dir = 4},/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"IE" = (/obj/machinery/mech_recharger,/obj/effect/floor_decal/industrial/outline/yellow,/obj/mecha/combat/marauder/old,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/MechStorageFab)
-"IN" = (/obj/item/weapon/bedsheet/piratedouble,/obj/structure/curtain/black{icon_state = "open"; layer = 2; name = "privacy curtain"; opacity = 0},/turf/simulated/floor/wood/sif,/area/survivalpod/superpose/MechStorageFab)
-"IS" = (/obj/machinery/atmospherics/pipe/simple/hidden,/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"IX" = (/obj/machinery/power/terminal,/obj/structure/cable{d2 = 4; icon_state = "0-4"},/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"Jh" = (/obj/structure/closet/secure_closet/engineering_electrical{req_access = null},/obj/random/maintenance,/obj/random/maintenance,/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"Jo" = (/obj/machinery/atmospherics/valve{dir = 8},/obj/structure/dispenser{phorontanks = 0},/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"JE" = (/obj/machinery/atmospherics/binary/passive_gate{dir = 8; regulate_mode = 0; unlocked = 1},/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"JR" = (/obj/machinery/mech_recharger,/obj/effect/floor_decal/industrial/outline/yellow,/obj/mecha/combat/phazon/old,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/MechStorageFab)
-"JT" = (/obj/machinery/mech_recharger,/obj/effect/floor_decal/industrial/outline/yellow,/obj/structure/loot_pile/mecha/durand,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/MechStorageFab)
-"JV" = (/obj/structure/closet/walllocker_double/north,/obj/item/device/gps,/obj/item/sticky_pad/random,/obj/item/device/starcaster_news,/obj/item/weapon/pen/blue,/obj/item/device/pda,/obj/item/weapon/card/id/external,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,/obj/item/weapon/reagent_containers/food/snacks/sosjerky,/obj/item/weapon/reagent_containers/food/snacks/sosjerky,/obj/item/weapon/gun/energy/locked/phasegun/pistol,/obj/item/weapon/material/knife/tacknife/survival,/obj/item/clothing/accessory/permit/gun,/obj/item/device/camera,/obj/item/device/binoculars,/obj/item/device/threadneedle,/obj/random/soap,/obj/item/weapon/towel/random,/obj/item/bodybag/cryobag,/obj/item/device/flashlight/flare,/obj/item/device/flashlight/flare,/obj/item/device/flashlight/color/yellow,/obj/item/device/radio,/obj/item/device/radio,/obj/item/weapon/flame/lighter/random,/obj/item/weapon/cell/device/hyper,/obj/item/weapon/cell/device/hyper,/obj/item/weapon/extinguisher/mini,/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,/obj/item/weapon/reagent_containers/pill/spaceacillin,/obj/item/weapon/reagent_containers/pill/spaceacillin,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/device/suit_cooling_unit/emergency,/obj/item/stack/nanopaste,/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,/obj/item/weapon/storage/backpack/messenger,/obj/item/clothing/accessory/storage/black_drop_pouches,/obj/item/clothing/accessory/poncho/thermal,/obj/item/weapon/storage/box/survival/comp,/obj/item/weapon/storage/toolbox/brass,/obj/item/weapon/storage/box/khcrystal,/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"Ke" = (/obj/machinery/robotic_fabricator,/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"Kt" = (/obj/machinery/alarm/alarms_hidden{dir = 8; pixel_x = 22},/obj/machinery/holoplant,/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"KE" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 9},/obj/random/maintenance,/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"KN" = (/obj/machinery/sleep_console{dir = 4},/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"Lh" = (/obj/structure/closet/crate,/obj/item/stack/material/plastic{amount = 50},/obj/item/stack/material/plastic{amount = 50},/obj/item/stack/material/plastic{amount = 50},/obj/item/stack/material/plastic{amount = 50},/obj/item/stack/material/steel{amount = 50},/obj/item/stack/material/steel{amount = 50},/obj/item/stack/material/steel{amount = 50},/obj/item/stack/material/steel{amount = 50},/obj/item/stack/material/glass{amount = 50},/obj/item/stack/material/glass{amount = 50},/obj/item/stack/material/glass{amount = 50},/obj/item/stack/material/glass{amount = 50},/obj/item/stack/rods{amount = 50},/obj/item/stack/rods{amount = 50},/obj/item/stack/rods{amount = 50},/obj/item/stack/rods{amount = 50},/obj/item/stack/cable_coil{pixel_x = 3; pixel_y = 3},/obj/item/stack/cable_coil{pixel_x = 3; pixel_y = 3},/obj/item/stack/cable_coil/green,/obj/item/stack/cable_coil/blue,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/turf/simulated/floor/plating,/area/survivalpod/superpose/MechStorageFab)
-"Lp" = (/obj/structure/table/reinforced,/obj/machinery/cell_charger,/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"Ls" = (/obj/random/maintenance/engineering,/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"Ma" = (/obj/structure/closet/walllocker_double/kitchen/north{dir = 8; name = "Ration Cabinet"; pixel_x = -32; pixel_y = 0},/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/device/radio{pixel_x = -5; pixel_y = 5},/obj/item/device/radio{pixel_x = 5; pixel_y = 5},/obj/machinery/atmospherics/pipe/simple/hidden,/turf/simulated/floor/tiled/steel_dirty,/area/survivalpod/superpose/MechStorageFab)
-"Ml" = (/obj/structure/table/rack/shelf/steel,/obj/item/mecha_parts/component/armor/military,/obj/item/mecha_parts/component/gas/reinforced,/obj/item/mecha_parts/mecha_equipment/omni_shield,/obj/item/mecha_parts/mecha_equipment/tool/jetpack,/obj/item/mecha_parts/mecha_equipment/tool/passenger,/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/cannon,/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"Mx" = (/obj/structure/closet/walllocker_double/kitchen/north{dir = 8; name = "Ration Cabinet"; pixel_x = -32; pixel_y = 0},/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/device/radio{pixel_x = -5; pixel_y = 5},/obj/item/device/radio{pixel_x = 5; pixel_y = 5},/turf/simulated/floor/tiled/steel_dirty,/area/survivalpod/superpose/MechStorageFab)
-"MA" = (/obj/machinery/atmospherics/pipe/manifold/hidden{dir = 1},/obj/random/junk,/turf/simulated/floor/tiled/steel_dirty,/area/survivalpod/superpose/MechStorageFab)
-"MB" = (/obj/structure/closet/crate,/obj/item/stack/material/cardboard{amount = 50},/obj/item/stack/material/cardboard{amount = 50},/obj/item/stack/material/cardboard{amount = 50},/obj/item/stack/material/cardboard{amount = 50},/obj/fiftyspawner/blucarpet,/obj/fiftyspawner/oracarpet,/obj/fiftyspawner/purcarpet,/obj/fiftyspawner/sblucarpet,/obj/fiftyspawner/tealcarpet,/obj/fiftyspawner/turcarpet,/obj/item/stack/material/wood{amount = 50; color = "#824B28"},/obj/item/stack/material/wood{amount = 50; color = "#824B28"},/obj/item/stack/material/wood/hard{amount = 50},/obj/item/stack/material/wood/hard{amount = 50},/obj/item/stack/material/wood/sif{amount = 50},/obj/item/stack/material/wood/sif{amount = 50},/obj/item/stack/material/marble{amount = 50},/obj/item/stack/material/marble{amount = 50},/obj/item/stack/material/marble{amount = 50},/obj/item/stack/material/cloth{amount = 50},/obj/item/stack/material/cloth{amount = 50},/obj/item/stack/material/algae{amount = 50},/obj/item/stack/material/sandstone,/obj/item/stack/material/sandstone,/obj/item/stack/material/sandstone,/obj/item/stack/material/lead{amount = 30},/obj/item/stack/material/plasteel{amount = 30; pixel_y = 5},/obj/item/stack/material/resin{amount = 50},/obj/item/stack/material/smolebricks{amount = 50},/obj/item/stack/material/smolebricks{amount = 50},/obj/structure/cable/green{d1 = 2; d2 = 8; icon_state = "2-8"},/turf/simulated/floor/plating,/area/survivalpod/superpose/MechStorageFab)
-"Ni" = (/turf/template_noop,/area/survivalpod/superpose/MechStorageFab)
-"Oc" = (/obj/structure/window/reinforced/survival_pod{dir = 4},/obj/machinery/atmospherics/binary/circulator{anchored = 1},/turf/simulated/floor/tiled/techfloor/grid,/area/survivalpod/superpose/MechStorageFab)
-"Of" = (/obj/structure/salvageable/console_os{dir = 4},/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"Os" = (/obj/machinery/vending/engivend{emagged = 1},/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"OF" = (/obj/mecha/combat/fighter/gunpod/recon{dir = 8},/turf/template_noop,/area/template_noop)
-"Pt" = (/obj/machinery/atmospherics/pipe/simple/hidden,/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"Qo" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"RS" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 6},/obj/item/weapon/tank/emergency/oxygen/double,/obj/item/weapon/tank/emergency/oxygen/double,/obj/item/weapon/tank/emergency/oxygen/double,/obj/item/weapon/tank/emergency/oxygen/double,/obj/item/weapon/tank/emergency/oxygen/double{pixel_y = 6},/obj/item/weapon/tank/emergency/oxygen/double{pixel_y = 6},/obj/item/weapon/tank/emergency/oxygen/double{pixel_y = 6},/obj/item/weapon/tank/emergency/oxygen/double{pixel_y = 6},/obj/item/weapon/tank/emergency/oxygen/double{pixel_y = 6},/obj/structure/table/rack/shelf/steel,/turf/simulated/floor/tiled/steel_dirty,/area/survivalpod/superpose/MechStorageFab)
-"Sw" = (/obj/machinery/door/window/survival_pod{dir = 8},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/MechStorageFab)
-"Sz" = (/obj/vehicle/boat/dragon/sifwood{dir = 8},/obj/structure/lattice,/turf/template_noop,/area/template_noop)
-"SM" = (/obj/structure/table/reinforced,/obj/machinery/alarm/alarms_hidden{pixel_y = 22},/obj/machinery/cell_charger,/turf/simulated/floor/tiled/steel_dirty,/area/survivalpod/superpose/MechStorageFab)
-"TK" = (/turf/simulated/floor/tiled/steel_dirty,/area/survivalpod/superpose/MechStorageFab)
-"Ut" = (/obj/structure/closet/secure_closet/engineering_welding{req_access = null},/obj/random/maintenance,/turf/simulated/floor/tiled/steel_dirty,/area/survivalpod/superpose/MechStorageFab)
-"Vb" = (/obj/machinery/atmospherics/pipe/tank/air,/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"Vu" = (/obj/machinery/power/shield_generator/charged,/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"Vx" = (/obj/structure/table/steel_reinforced,/obj/item/weapon/storage/briefcase/inflatable{pixel_y = 3},/obj/item/weapon/storage/toolbox/electrical,/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"VT" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 1},/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"We" = (/obj/random/maintenance/engineering,/turf/simulated/floor/tiled/techfloor/grid,/area/survivalpod/superpose/MechStorageFab)
-"Wo" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 10},/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
-"XH" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/obj/machinery/door/airlock/maintenance/rnd{req_one_access = null},/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"XX" = (/obj/machinery/atmospherics/pipe/simple/hidden,/obj/machinery/door/airlock/maintenance/engi{req_one_access = null},/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"Yd" = (/obj/machinery/portable_atmospherics/canister/phoron,/turf/simulated/floor/plating/external,/area/survivalpod/superpose/MechStorageFab)
-"Yl" = (/obj/machinery/mech_recharger,/obj/effect/floor_decal/industrial/outline/yellow,/obj/structure/loot_pile/mecha/phazon,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/MechStorageFab)
-"YB" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 5},/obj/structure/table/steel_reinforced,/obj/item/weapon/storage/briefcase/inflatable{pixel_y = 3},/obj/item/weapon/storage/toolbox/mechanical,/obj/item/pizzavoucher,/turf/simulated/floor/tiled/steel_dirty,/area/survivalpod/superpose/MechStorageFab)
-"YI" = (/obj/structure/salvageable/console_os{dir = 4},/turf/simulated/floor/tiled/steel_dirty,/area/survivalpod/superpose/MechStorageFab)
-"Zj" = (/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/machinery/field_generator{anchored = 1; state = 1},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/MechStorageFab)
-"ZA" = (/obj/random/maintenance/security,/obj/structure/table/reinforced,/turf/simulated/floor/tiled/steel_dirty,/area/survivalpod/superpose/MechStorageFab)
-"ZG" = (/obj/machinery/fitness/heavy/lifter,/turf/simulated/floor/tiled/asteroid_steel,/area/survivalpod/superpose/MechStorageFab)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ak" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/MechStorageFab)
+"av" = (
+/obj/structure/salvageable/computer,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"ax" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/mecha_parts/mecha_equipment/cloak,
+/obj/item/mecha_parts/mecha_equipment/tool/jetpack,
+/obj/item/mecha_parts/mecha_equipment/tool/passenger,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"aI" = (
+/obj/machinery/portable_atmospherics/canister/air,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"ba" = (
+/obj/machinery/power/port_gen/pacman,
+/obj/structure/cable,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"bE" = (
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/survivalpod/superpose/MechStorageFab)
+"bQ" = (
+/obj/random/maintenance,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"ca" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/mecha_parts/mecha_equipment/anticcw_armor_booster,
+/obj/item/mecha_parts/mecha_equipment/repair_droid,
+/obj/item/mecha_parts/mecha_equipment/tool/passenger,
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/grenade/clusterbang,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"cS" = (
+/obj/structure/window/reinforced/survival_pod,
+/obj/machinery/field_generator{
+	anchored = 1;
+	state = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/MechStorageFab)
+"df" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MechStorageFab)
+"dt" = (
+/obj/structure/bed/double/padded,
+/turf/simulated/floor/wood/sif/broken,
+/area/survivalpod/superpose/MechStorageFab)
+"dA" = (
+/obj/machinery/icecream_vat,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"dG" = (
+/turf/template_noop,
+/area/template_noop)
+"dH" = (
+/obj/random/maintenance,
+/obj/random/maintenance/engineering,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MechStorageFab)
+"ea" = (
+/obj/structure/table/reinforced,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MechStorageFab)
+"ez" = (
+/obj/structure/curtain/black{
+	icon_state = "open";
+	layer = 2;
+	name = "privacy curtain";
+	opacity = 0
+	},
+/turf/simulated/floor/wood/sif,
+/area/survivalpod/superpose/MechStorageFab)
+"fq" = (
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/MechStorageFab)
+"gG" = (
+/obj/machinery/fusion_fuel_compressor,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"gT" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 6
+	},
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"ho" = (
+/obj/structure/reagent_dispensers/fueltank/high,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"hr" = (
+/obj/structure/table/reinforced,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"hK" = (
+/obj/structure/reagent_dispensers/watertank/high,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"ij" = (
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"in" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"iH" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/alarm/alarms_hidden{
+	dir = 1;
+	pixel_y = -22
+	},
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"jq" = (
+/obj/mecha/working/hoverpod/shuttlecraft{
+	dir = 8
+	},
+/turf/template_noop,
+/area/template_noop)
+"ju" = (
+/obj/structure/salvageable/bliss,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"kd" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/survivalpod/superpose/MechStorageFab)
+"lc" = (
+/obj/random/maintenance/engineering,
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"lk" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/mecha_parts/component/hull/lightweight,
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/scattershot,
+/obj/item/mecha_parts/mecha_equipment/weapon/phoron_bore,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/taser/rigged,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"ly" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MechStorageFab)
+"lA" = (
+/obj/random/maintenance/engineering,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"lX" = (
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/machinery/ion_engine,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/survivalpod/superpose/MechStorageFab)
+"mB" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/storage/briefcase/inflatable{
+	pixel_y = 3
+	},
+/obj/item/weapon/storage/toolbox/syndicate/powertools,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"nc" = (
+/obj/structure/bed/double/padded,
+/obj/item/weapon/bedsheet/rainbowdouble,
+/obj/machinery/partyalarm{
+	pixel_y = -18
+	},
+/turf/simulated/floor/wood/sif,
+/area/survivalpod/superpose/MechStorageFab)
+"nh" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/mecha_parts/component/armor/alien,
+/obj/item/mecha_parts/mecha_equipment/crisis_drone/rad,
+/obj/item/mecha_parts/mecha_equipment/tool/passenger,
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg/rigged,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/heavy/rigged,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/medigun,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"ns" = (
+/obj/machinery/vending/tool{
+	emagged = 1
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MechStorageFab)
+"nz" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MechStorageFab)
+"nH" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden,
+/obj/random/junk,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"nJ" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/machinery/alarm/alarms_hidden{
+	dir = 4;
+	pixel_x = -22
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"nZ" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"oh" = (
+/obj/machinery/door/airlock/maintenance/int,
+/obj/structure/fans/hardlight,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"oW" = (
+/obj/machinery/sleeper{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"pw" = (
+/obj/random/junk,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"pA" = (
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"qa" = (
+/obj/machinery/mech_recharger,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/loot_pile/mecha/marauder/mauler,
+/turf/simulated/floor/tiled/techmaint,
+/area/survivalpod/superpose/MechStorageFab)
+"qb" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/survivalpod/superpose/MechStorageFab)
+"qf" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"qp" = (
+/obj/structure/curtain/black{
+	icon_state = "open";
+	layer = 2;
+	name = "privacy curtain";
+	opacity = 0
+	},
+/turf/simulated/floor/wood/sif/broken,
+/area/survivalpod/superpose/MechStorageFab)
+"qy" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"qE" = (
+/obj/machinery/autolathe{
+	hacked = 1;
+	name = "hacked autolathe"
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"qY" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"rj" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/machinery/alarm/alarms_hidden{
+	dir = 4;
+	pixel_x = -22
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"rl" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"rp" = (
+/obj/random/maintenance,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MechStorageFab)
+"rM" = (
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"sd" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"sk" = (
+/obj/random/junk,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"sK" = (
+/obj/vehicle/boat{
+	dir = 8
+	},
+/obj/structure/lattice,
+/turf/template_noop,
+/area/survivalpod/superpose/MechStorageFab)
+"tl" = (
+/obj/machinery/floorlayer,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"to" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/obj/machinery/gear_dispenser/suit_old,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"tw" = (
+/turf/simulated/floor/plating/external,
+/area/template_noop)
+"tH" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MechStorageFab)
+"tK" = (
+/obj/effect/wingrille_spawn/reinforced,
+/obj/structure/fans/hardlight,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"tO" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/mecha_parts/mecha_equipment/generator/nuclear,
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/explosive/rigged,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/ion/rigged,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"tV" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/mecha_parts/component/gas/reinforced,
+/obj/item/mecha_parts/mecha_equipment/hardpoint_actuator,
+/obj/item/mecha_parts/mecha_equipment/tesla_energy_relay,
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/cannon,
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/grenade/rigged,
+/obj/item/mecha_parts/mecha_equipment/wormhole_generator,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"tW" = (
+/obj/structure/closet/walllocker_double/kitchen/north{
+	dir = 8;
+	name = "Ration Cabinet";
+	pixel_x = -32;
+	pixel_y = 0
+	},
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/device/radio{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/device/radio{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"us" = (
+/obj/machinery/artifact_scanpad,
+/obj/effect/simple_portal/linked,
+/obj/effect/map_effect/interval/effect_emitter/sparks,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/MechStorageFab)
+"uJ" = (
+/obj/effect/floor_decal/industrial/outline/blue,
+/obj/structure/closet/jcloset,
+/obj/item/weapon/mop,
+/obj/structure/mopbucket,
+/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/weapon/reagent_containers/spray/cleaner,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MechStorageFab)
+"vG" = (
+/obj/machinery/mech_recharger,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/loot_pile/mecha/odysseus/murdysseus,
+/turf/simulated/floor/tiled/techmaint,
+/area/survivalpod/superpose/MechStorageFab)
+"wg" = (
+/obj/random/junk,
+/obj/random/maintenance,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"wU" = (
+/obj/structure/salvageable/server,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"yc" = (
+/obj/machinery/feeder,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"yF" = (
+/obj/structure/lattice,
+/turf/template_noop,
+/area/template_noop)
+"yH" = (
+/obj/machinery/door/airlock/maintenance/engi{
+	req_one_access = null
+	},
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"zb" = (
+/obj/structure/salvageable/autolathe,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"Ah" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/cryofeed{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/survivalpod/superpose/MechStorageFab)
+"Ao" = (
+/turf/simulated/wall/skipjack,
+/area/survivalpod/superpose/MechStorageFab)
+"Ar" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"Au" = (
+/obj/machinery/mech_recharger,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/loot_pile/mecha/gygax/dark/adv,
+/turf/simulated/floor/tiled/techmaint,
+/area/survivalpod/superpose/MechStorageFab)
+"AD" = (
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"BC" = (
+/obj/machinery/portable_atmospherics/canister/air,
+/obj/machinery/atmospherics/portables_connector,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"CN" = (
+/obj/structure/cryofeed{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/survivalpod/superpose/MechStorageFab)
+"Df" = (
+/obj/machinery/alarm/alarms_hidden{
+	dir = 4;
+	pixel_x = -22
+	},
+/obj/item/pizzavoucher,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"Dr" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/alarm/alarms_hidden{
+	pixel_y = 22
+	},
+/obj/random/maintenance,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"DV" = (
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"EE" = (
+/obj/machinery/mech_recharger,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/mecha/combat/gygax/old,
+/turf/simulated/floor/tiled/techmaint,
+/area/survivalpod/superpose/MechStorageFab)
+"EY" = (
+/obj/machinery/mech_recharger,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/loot_pile/mecha/gygax/medgax,
+/turf/simulated/floor/tiled/techmaint,
+/area/survivalpod/superpose/MechStorageFab)
+"Ga" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/obj/random/maintenance/engineering,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"Go" = (
+/obj/machinery/power/smes/buildable/hybrid,
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"GI" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/mecha_parts/mecha_equipment/combat_shield,
+/obj/item/mecha_parts/mecha_equipment/repair_droid,
+/obj/item/mecha_parts/mecha_equipment/tool/sleeper,
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/mortar,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/flamer/rigged,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"GX" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/random/maintenance,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MechStorageFab)
+"Ib" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 4
+	},
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"IE" = (
+/obj/machinery/mech_recharger,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/loot_pile/mecha/marauder,
+/turf/simulated/floor/tiled/techmaint,
+/area/survivalpod/superpose/MechStorageFab)
+"IN" = (
+/obj/item/weapon/bedsheet/piratedouble,
+/obj/structure/curtain/black{
+	icon_state = "open";
+	layer = 2;
+	name = "privacy curtain";
+	opacity = 0
+	},
+/turf/simulated/floor/wood/sif,
+/area/survivalpod/superpose/MechStorageFab)
+"IS" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"IX" = (
+/obj/machinery/power/terminal,
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"Jh" = (
+/obj/structure/closet/secure_closet/engineering_electrical{
+	req_access = null
+	},
+/obj/random/maintenance,
+/obj/random/maintenance,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"Jo" = (
+/obj/machinery/atmospherics/valve{
+	dir = 8
+	},
+/obj/structure/dispenser{
+	phorontanks = 0
+	},
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"JE" = (
+/obj/machinery/atmospherics/binary/passive_gate{
+	dir = 8;
+	regulate_mode = 0;
+	unlocked = 1
+	},
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"JT" = (
+/obj/machinery/mech_recharger,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/loot_pile/mecha/durand,
+/turf/simulated/floor/tiled/techmaint,
+/area/survivalpod/superpose/MechStorageFab)
+"JV" = (
+/obj/structure/closet/walllocker_double/north,
+/obj/item/device/gps,
+/obj/item/sticky_pad/random,
+/obj/item/device/starcaster_news,
+/obj/item/weapon/pen/blue,
+/obj/item/device/pda,
+/obj/item/weapon/card/id/external,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
+/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
+/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/clothing/accessory/permit/gun,
+/obj/item/device/camera,
+/obj/item/device/binoculars,
+/obj/item/device/threadneedle,
+/obj/random/soap,
+/obj/item/weapon/towel/random,
+/obj/item/bodybag/cryobag,
+/obj/item/device/flashlight/flare,
+/obj/item/device/flashlight/flare,
+/obj/item/device/flashlight/color/yellow,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/weapon/flame/lighter/random,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/extinguisher/mini,
+/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/weapon/reagent_containers/pill/spaceacillin,
+/obj/item/weapon/reagent_containers/pill/spaceacillin,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/stack/nanopaste,
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/weapon/storage/backpack/messenger,
+/obj/item/clothing/accessory/storage/black_drop_pouches,
+/obj/item/clothing/accessory/poncho/thermal,
+/obj/item/weapon/storage/box/survival/comp,
+/obj/item/weapon/storage/toolbox/brass,
+/obj/item/weapon/storage/box/khcrystal,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"Ke" = (
+/obj/machinery/robotic_fabricator,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"Kt" = (
+/obj/machinery/alarm/alarms_hidden{
+	dir = 8;
+	pixel_x = 22
+	},
+/obj/machinery/holoplant,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"KE" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/obj/random/maintenance,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"KN" = (
+/obj/machinery/sleep_console{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"Lh" = (
+/obj/structure/closet/crate,
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/cable_coil/green,
+/obj/item/stack/cable_coil/blue,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/MechStorageFab)
+"Lp" = (
+/obj/structure/table/reinforced,
+/obj/machinery/cell_charger,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"Ls" = (
+/obj/random/maintenance/engineering,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"Ma" = (
+/obj/structure/closet/walllocker_double/kitchen/north{
+	dir = 8;
+	name = "Ration Cabinet";
+	pixel_x = -32;
+	pixel_y = 0
+	},
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/device/radio{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/device/radio{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MechStorageFab)
+"Ml" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/mecha_parts/component/armor/military,
+/obj/item/mecha_parts/component/gas/reinforced,
+/obj/item/mecha_parts/mecha_equipment/omni_shield,
+/obj/item/mecha_parts/mecha_equipment/tool/jetpack,
+/obj/item/mecha_parts/mecha_equipment/tool/passenger,
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/cannon,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"Mx" = (
+/obj/structure/closet/walllocker_double/kitchen/north{
+	dir = 8;
+	name = "Ration Cabinet";
+	pixel_x = -32;
+	pixel_y = 0
+	},
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/device/radio{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/device/radio{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MechStorageFab)
+"MA" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 1
+	},
+/obj/random/junk,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MechStorageFab)
+"MB" = (
+/obj/structure/closet/crate,
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/fiftyspawner/blucarpet,
+/obj/fiftyspawner/oracarpet,
+/obj/fiftyspawner/purcarpet,
+/obj/fiftyspawner/sblucarpet,
+/obj/fiftyspawner/tealcarpet,
+/obj/fiftyspawner/turcarpet,
+/obj/item/stack/material/wood{
+	amount = 50;
+	color = "#824B28"
+	},
+/obj/item/stack/material/wood{
+	amount = 50;
+	color = "#824B28"
+	},
+/obj/item/stack/material/wood/hard{
+	amount = 50
+	},
+/obj/item/stack/material/wood/hard{
+	amount = 50
+	},
+/obj/item/stack/material/wood/sif{
+	amount = 50
+	},
+/obj/item/stack/material/wood/sif{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/cloth{
+	amount = 50
+	},
+/obj/item/stack/material/cloth{
+	amount = 50
+	},
+/obj/item/stack/material/algae{
+	amount = 50
+	},
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/lead{
+	amount = 30
+	},
+/obj/item/stack/material/plasteel{
+	amount = 30;
+	pixel_y = 5
+	},
+/obj/item/stack/material/resin{
+	amount = 50
+	},
+/obj/item/stack/material/smolebricks{
+	amount = 50
+	},
+/obj/item/stack/material/smolebricks{
+	amount = 50
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/MechStorageFab)
+"Ni" = (
+/turf/template_noop,
+/area/survivalpod/superpose/MechStorageFab)
+"Oc" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/machinery/atmospherics/binary/circulator{
+	anchored = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/survivalpod/superpose/MechStorageFab)
+"Of" = (
+/obj/structure/salvageable/console_os{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"Os" = (
+/obj/machinery/vending/engivend{
+	emagged = 1
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"OF" = (
+/obj/mecha/combat/fighter/gunpod/recon{
+	dir = 8
+	},
+/turf/template_noop,
+/area/template_noop)
+"Pt" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"Qo" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"RS" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 6
+	},
+/obj/item/weapon/tank/emergency/oxygen/double,
+/obj/item/weapon/tank/emergency/oxygen/double,
+/obj/item/weapon/tank/emergency/oxygen/double,
+/obj/item/weapon/tank/emergency/oxygen/double,
+/obj/item/weapon/tank/emergency/oxygen/double{
+	pixel_y = 6
+	},
+/obj/item/weapon/tank/emergency/oxygen/double{
+	pixel_y = 6
+	},
+/obj/item/weapon/tank/emergency/oxygen/double{
+	pixel_y = 6
+	},
+/obj/item/weapon/tank/emergency/oxygen/double{
+	pixel_y = 6
+	},
+/obj/item/weapon/tank/emergency/oxygen/double{
+	pixel_y = 6
+	},
+/obj/structure/table/rack/shelf/steel,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MechStorageFab)
+"Sw" = (
+/obj/machinery/door/window/survival_pod{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/MechStorageFab)
+"Sz" = (
+/obj/vehicle/boat/dragon/sifwood{
+	dir = 8
+	},
+/obj/structure/lattice,
+/turf/template_noop,
+/area/template_noop)
+"SM" = (
+/obj/structure/table/reinforced,
+/obj/machinery/alarm/alarms_hidden{
+	pixel_y = 22
+	},
+/obj/machinery/cell_charger,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MechStorageFab)
+"TK" = (
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MechStorageFab)
+"Ut" = (
+/obj/structure/closet/secure_closet/engineering_welding{
+	req_access = null
+	},
+/obj/random/maintenance,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MechStorageFab)
+"Vb" = (
+/obj/machinery/atmospherics/pipe/tank/air,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"Vu" = (
+/obj/machinery/power/shield_generator/charged,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"Vx" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/storage/briefcase/inflatable{
+	pixel_y = 3
+	},
+/obj/item/weapon/storage/toolbox/electrical,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"VT" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"We" = (
+/obj/random/maintenance/engineering,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/survivalpod/superpose/MechStorageFab)
+"Wo" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"XH" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/rnd{
+	req_one_access = null
+	},
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"XX" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/door/airlock/maintenance/engi{
+	req_one_access = null
+	},
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"Yd" = (
+/obj/machinery/portable_atmospherics/canister/phoron,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"Yl" = (
+/obj/machinery/mech_recharger,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/loot_pile/mecha/phazon,
+/turf/simulated/floor/tiled/techmaint,
+/area/survivalpod/superpose/MechStorageFab)
+"YB" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/storage/briefcase/inflatable{
+	pixel_y = 3
+	},
+/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/pizzavoucher,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MechStorageFab)
+"YI" = (
+/obj/structure/salvageable/console_os{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MechStorageFab)
+"Zj" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/machinery/field_generator{
+	anchored = 1;
+	state = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/MechStorageFab)
+"ZA" = (
+/obj/random/maintenance/security,
+/obj/structure/table/reinforced,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MechStorageFab)
+"ZG" = (
+/obj/machinery/fitness/heavy/lifter,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
 
 (1,1,1) = {"
-dGdGdGdGdGdGdGdGdGdGdGdGyFdGyFdGtwtwtwdGdGdGdGdGdGdGtwtwdGdGdGdG
-yFyFdGdGyFyFyFyFyFyFyFdGdGdGdGdGtwtwtwdGdGdGyFtwtwtwyFyFyFyFyFyF
-dGAoAoAoAoAoAoAoAoAoAoAoAoAodGdGtwdGdGdGyFdGdGtwtwtwdGtwtwtwdGdG
-dGsKDVDVDVDVDVDVDVnhGIMllkAoAotKAoAoAotKtKtKAoAoAoAoAoAoAoAodGyF
-dGdGdGdGdGdGdGdGDVDVDVDVDVAoJTDVYlDVAoYdaIBCVbAoUtpAakZjAhAotwyF
-dGdGdGdGdGdGjqdGDVAoAoAoAoAoJRDVEYDVAoYdDVGaIbAoJhpASwusOcAotwyF
-dGdGdGyFyFyFyFyFDVAobEkdbEAoAuDVvGlAAogTJEJotoAoMxpAfqcSlXAodGyF
-dGdGdGdGdGdGdGdGDVohbEbEWeohTKTKqfLsAoXXADADADAonJskDVTKTKAoyFyF
-dGdGdGdGdGdGdGdGDVAoAoADAoAoVxmBYBdfDrnHQodfMAXHKETKTKycdAAotwyF
-dGdGdGyFyFyFyFyFDVAoavjuzbAoAoADADAoAoAoAoAoPtAoAoADAoAoAoAotwyF
-dGdGdGdGdGdGdGdGDVtKeapATKADKNoWrpSMLpqEJVAoISAopApApAbQtlAotwdG
-dGdGdGdGdGdGdGdGDVtKOflcskrMpADVlAbQLsGXQoinIbADnzTKakZjCNAoyFdG
-dGdGdGyFyFyFyFyFDVtKwUTKpAADDVpwpwpwpwTKpAAoPtAoMaDVSwusOcAoyFdG
-dGdGdGdGdGdGdGdGDVtKYIdHKtAoezAoqpAoezAoINAotHXHsdpwfqcSlXAodGyF
-dGdGdGdGdGdGdGdGDVtKZALspAAodtAoncAodtAodtAoPtAoDfpApApAgGAotwyF
-dGdGdGyFyFyFyFyFDVAohrTKKeAoAoAoAoAoAoAoAoAolyAoAoADAoAoAoAotwyF
-dGdGdGdGdGdGdGdGDVAoAoADAoAoOsnsRSqYiHdfqYdfnZXHWopAZGpAZGAotwyF
-dGdGdGdGdGdGOFdGDVohbEbEbEohTKTKVTpAAoADADADyHAorjwgpArpDVAodGyF
-dGdGdGyFyFyFyFyFDVAobEqbbEAoqaDVAuDVAoijMBLhDVAotWpAakZjCNAotwyF
-dGdGdGdGdGdGdGyFDVAoAoAoAoAoIElAvGDVAohKrlIXArAoVuDVSwusOcAotwyF
-dGdGSzyFyFyFyFyFDVtVaxtOcaAoYlDVEEDVAohoqyGobaAouJTKfqcSlXAotwdG
-dGNiDVDVDVDVDVDVDVDVDVDVDVAoAotKAoAoAotKtKtKAoAoAoAoAoAoAoAotwdG
-dGAoAoAoAoAoAoAoAoAoAoAoAoAotwtwtwtwtwtwtwtwyFtwtwtwtwdGtwtwdGdG
-yFyFyFyFdGdGyFyFyFdGdGyFdGdGtwdGtwtwtwdGtwtwyFtwtwtwtwyFtwtwyFyF
+dG
+yF
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+yF
+"}
+(2,1,1) = {"
+dG
+yF
+Ao
+sK
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+Ni
+Ao
+yF
+"}
+(3,1,1) = {"
+dG
+dG
+Ao
+DV
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+dG
+Sz
+DV
+Ao
+yF
+"}
+(4,1,1) = {"
+dG
+dG
+Ao
+DV
+dG
+dG
+yF
+dG
+dG
+yF
+dG
+dG
+yF
+dG
+dG
+yF
+dG
+dG
+yF
+dG
+yF
+DV
+Ao
+yF
+"}
+(5,1,1) = {"
+dG
+yF
+Ao
+DV
+dG
+dG
+yF
+dG
+dG
+yF
+dG
+dG
+yF
+dG
+dG
+yF
+dG
+dG
+yF
+dG
+yF
+DV
+Ao
+dG
+"}
+(6,1,1) = {"
+dG
+yF
+Ao
+DV
+dG
+dG
+yF
+dG
+dG
+yF
+dG
+dG
+yF
+dG
+dG
+yF
+dG
+dG
+yF
+dG
+yF
+DV
+Ao
+dG
+"}
+(7,1,1) = {"
+dG
+yF
+Ao
+DV
+dG
+jq
+yF
+dG
+dG
+yF
+dG
+dG
+yF
+dG
+dG
+yF
+dG
+OF
+yF
+dG
+yF
+DV
+Ao
+yF
+"}
+(8,1,1) = {"
+dG
+yF
+Ao
+DV
+dG
+dG
+yF
+dG
+dG
+yF
+dG
+dG
+yF
+dG
+dG
+yF
+dG
+dG
+yF
+yF
+yF
+DV
+Ao
+yF
+"}
+(9,1,1) = {"
+dG
+yF
+Ao
+DV
+DV
+DV
+DV
+DV
+DV
+DV
+DV
+DV
+DV
+DV
+DV
+DV
+DV
+DV
+DV
+DV
+DV
+DV
+Ao
+yF
+"}
+(10,1,1) = {"
+dG
+yF
+Ao
+nh
+DV
+Ao
+Ao
+oh
+Ao
+Ao
+tK
+tK
+tK
+tK
+tK
+Ao
+Ao
+oh
+Ao
+Ao
+tV
+DV
+Ao
+dG
+"}
+(11,1,1) = {"
+dG
+yF
+Ao
+GI
+DV
+Ao
+bE
+bE
+Ao
+av
+ea
+Of
+wU
+YI
+ZA
+hr
+Ao
+bE
+bE
+Ao
+ax
+DV
+Ao
+dG
+"}
+(12,1,1) = {"
+dG
+dG
+Ao
+Ml
+DV
+Ao
+kd
+bE
+AD
+ju
+pA
+lc
+TK
+dH
+Ls
+TK
+AD
+bE
+qb
+Ao
+tO
+DV
+Ao
+yF
+"}
+(13,1,1) = {"
+yF
+dG
+Ao
+lk
+DV
+Ao
+bE
+We
+Ao
+zb
+TK
+sk
+pA
+Kt
+pA
+Ke
+Ao
+bE
+bE
+Ao
+ca
+DV
+Ao
+dG
+"}
+(14,1,1) = {"
+dG
+dG
+Ao
+Ao
+Ao
+Ao
+Ao
+oh
+Ao
+Ao
+AD
+rM
+AD
+Ao
+Ao
+Ao
+Ao
+oh
+Ao
+Ao
+Ao
+Ao
+Ao
+dG
+"}
+(15,1,1) = {"
+yF
+dG
+dG
+Ao
+JT
+Yl
+Au
+TK
+Vx
+Ao
+KN
+pA
+DV
+ez
+dt
+Ao
+Os
+TK
+qa
+IE
+Yl
+Ao
+tw
+tw
+"}
+(16,1,1) = {"
+dG
+dG
+dG
+tK
+DV
+DV
+DV
+TK
+mB
+AD
+oW
+DV
+pw
+Ao
+Ao
+Ao
+ns
+TK
+DV
+lA
+DV
+tK
+tw
+dG
+"}
+(17,1,1) = {"
+tw
+tw
+tw
+Ao
+Yl
+EY
+vG
+qf
+YB
+AD
+rp
+lA
+pw
+qp
+nc
+Ao
+RS
+VT
+Au
+vG
+EE
+Ao
+tw
+tw
+"}
+(18,1,1) = {"
+tw
+tw
+dG
+Ao
+DV
+DV
+lA
+Ls
+df
+Ao
+SM
+bQ
+pw
+Ao
+Ao
+Ao
+qY
+pA
+DV
+DV
+DV
+Ao
+tw
+tw
+"}
+(19,1,1) = {"
+tw
+tw
+dG
+Ao
+Ao
+Ao
+Ao
+Ao
+Dr
+Ao
+Lp
+Ls
+pw
+ez
+dt
+Ao
+iH
+Ao
+Ao
+Ao
+Ao
+Ao
+tw
+tw
+"}
+(20,1,1) = {"
+dG
+dG
+dG
+tK
+Yd
+Yd
+gT
+XX
+nH
+Ao
+qE
+GX
+TK
+Ao
+Ao
+Ao
+df
+AD
+ij
+hK
+ho
+tK
+tw
+dG
+"}
+(21,1,1) = {"
+dG
+dG
+yF
+tK
+aI
+DV
+JE
+AD
+Qo
+Ao
+JV
+Qo
+pA
+IN
+dt
+Ao
+qY
+AD
+MB
+rl
+qy
+tK
+tw
+tw
+"}
+(22,1,1) = {"
+dG
+dG
+dG
+tK
+BC
+Ga
+Jo
+AD
+df
+Ao
+Ao
+in
+Ao
+Ao
+Ao
+Ao
+df
+AD
+Lh
+IX
+Go
+tK
+tw
+tw
+"}
+(23,1,1) = {"
+dG
+yF
+dG
+Ao
+Vb
+Ib
+to
+AD
+MA
+Pt
+IS
+Ib
+Pt
+tH
+Pt
+ly
+nZ
+yH
+DV
+Ar
+ba
+Ao
+yF
+yF
+"}
+(24,1,1) = {"
+dG
+tw
+tw
+Ao
+Ao
+Ao
+Ao
+Ao
+XH
+Ao
+Ao
+AD
+Ao
+XH
+Ao
+Ao
+XH
+Ao
+Ao
+Ao
+Ao
+Ao
+tw
+tw
+"}
+(25,1,1) = {"
+dG
+tw
+tw
+Ao
+Ut
+Jh
+Mx
+nJ
+KE
+Ao
+pA
+nz
+Ma
+sd
+Df
+Ao
+Wo
+rj
+tW
+Vu
+uJ
+Ao
+tw
+tw
+"}
+(26,1,1) = {"
+dG
+tw
+tw
+Ao
+pA
+pA
+pA
+sk
+TK
+AD
+pA
+TK
+DV
+pw
+pA
+AD
+pA
+wg
+pA
+DV
+TK
+Ao
+tw
+tw
+"}
+(27,1,1) = {"
+tw
+yF
+dG
+Ao
+ak
+Sw
+fq
+DV
+TK
+Ao
+pA
+ak
+Sw
+fq
+pA
+Ao
+ZG
+pA
+ak
+Sw
+fq
+Ao
+tw
+tw
+"}
+(28,1,1) = {"
+tw
+yF
+tw
+Ao
+Zj
+us
+cS
+TK
+yc
+Ao
+bQ
+Zj
+us
+cS
+pA
+Ao
+pA
+rp
+Zj
+us
+cS
+Ao
+dG
+yF
+"}
+(29,1,1) = {"
+dG
+yF
+tw
+Ao
+Ah
+Oc
+lX
+TK
+dA
+Ao
+tl
+CN
+Oc
+lX
+gG
+Ao
+ZG
+DV
+CN
+Oc
+lX
+Ao
+tw
+tw
+"}
+(30,1,1) = {"
+dG
+yF
+tw
+Ao
+Ao
+Ao
+Ao
+Ao
+Ao
+Ao
+Ao
+Ao
+Ao
+Ao
+Ao
+Ao
+Ao
+Ao
+Ao
+Ao
+Ao
+Ao
+tw
+tw
+"}
+(31,1,1) = {"
+dG
+yF
+dG
+dG
+tw
+tw
+dG
+yF
+tw
+tw
+tw
+yF
+yF
+dG
+tw
+tw
+tw
+dG
+tw
+tw
+tw
+tw
+dG
+yF
+"}
+(32,1,1) = {"
+dG
+yF
+dG
+yF
+yF
+yF
+yF
+yF
+yF
+yF
+dG
+dG
+dG
+yF
+yF
+yF
+yF
+yF
+yF
+yF
+dG
+dG
+dG
+yF
 "}

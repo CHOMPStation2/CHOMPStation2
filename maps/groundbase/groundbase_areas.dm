@@ -441,6 +441,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 	forbid_events = TRUE
 	forbid_singulo = TRUE
 

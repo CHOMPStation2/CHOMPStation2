@@ -11,7 +11,9 @@
 	pixel_x = 3
 	},
 /obj/structure/table/woodentable,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/turretedoutpost)
 "ck" = (
 /obj/machinery/door/blast/regular{
@@ -43,6 +45,16 @@
 	},
 /turf/simulated/floor/plating,
 /area/submap/turretedoutpost)
+"dL" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/area/submap/turretedoutpost)
 "eb" = (
 /obj/structure/grille,
 /turf/simulated/floor/plating,
@@ -70,12 +82,26 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/area/submap/turretedoutpost)
+"gL" = (
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/machinery/power/smes/buildable/point_of_interest,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/turretedoutpost)
 "gQ" = (
 /obj/structure/bed,
 /obj/item/weapon/bedsheet/orange,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/turretedoutpost)
 "hG" = (
 /obj/structure/largecrate/animal/fennec,
@@ -120,7 +146,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/turretedoutpost)
 "ll" = (
 /obj/machinery/door/airlock/glass_external{
@@ -158,7 +186,9 @@
 /area/submap/turretedoutpost)
 "mo" = (
 /obj/structure/salvageable/computer,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/turretedoutpost)
 "mH" = (
 /obj/structure/dispenser/oxygen,
@@ -183,18 +213,24 @@
 /area/submap/turretedoutpost)
 "pQ" = (
 /obj/structure/filingcabinet,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/turretedoutpost)
 "qq" = (
 /obj/machinery/light,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/turretedoutpost)
 "qE" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/turretedoutpost)
 "rp" = (
 /obj/structure/table/reinforced,
@@ -214,14 +250,18 @@
 /turf/simulated/floor/plating,
 /area/submap/turretedoutpost)
 "sb" = (
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/turretedoutpost)
 "sG" = (
 /obj/machinery/light{
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/turretedoutpost)
 "tm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -234,7 +274,33 @@
 	dir = 4
 	},
 /mob/living/simple_mob/humanoid/merc/melee/sword/space,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/area/submap/turretedoutpost)
+"up" = (
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/area/submap/turretedoutpost)
+"wu" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/turretedoutpost)
 "wx" = (
 /obj/item/weapon/grenade/chem_grenade/teargas,
@@ -266,7 +332,7 @@
 "xx" = (
 /obj/structure/table/reinforced,
 /obj/machinery/light,
-/obj/item/weapon/camera_bug,
+/obj/item/weapon/storage/box/syndie_kit/spy,
 /turf/simulated/floor/tiled/asteroid_steel{
 	icon_state = "dark"
 	},
@@ -278,7 +344,9 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/turretedoutpost)
 "Bl" = (
 /turf/simulated/floor/airless,
@@ -290,7 +358,9 @@
 "DU" = (
 /obj/structure/bed/chair,
 /mob/living/simple_mob/humanoid/merc/ranged/technician/poi,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/turretedoutpost)
 "Ef" = (
 /obj/structure/lattice,
@@ -306,7 +376,9 @@
 	tag = "icon-chair (WEST)"
 	},
 /mob/living/simple_mob/humanoid/merc/ranged/space/heavy,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/turretedoutpost)
 "Ey" = (
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -327,7 +399,9 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/turretedoutpost)
 "Gf" = (
 /obj/structure/table/rack/shelf/steel,
@@ -338,13 +412,26 @@
 /obj/item/weapon/gun/energy/lasershotgun,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/turretedoutpost)
+"GJ" = (
+/obj/machinery/door/airlock,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/airless,
+/area/submap/turretedoutpost)
 "IG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/turretedoutpost)
 "IR" = (
 /obj/structure/table/reinforced,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/turretedoutpost)
 "Kr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -354,7 +441,9 @@
 /area/submap/turretedoutpost)
 "Lc" = (
 /mob/living/simple_mob/humanoid/merc/melee/sword/space,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/turretedoutpost)
 "Lf" = (
 /obj/machinery/access_button{
@@ -374,15 +463,19 @@
 /area/submap/turretedoutpost)
 "MR" = (
 /obj/structure/salvageable/machine,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/turretedoutpost)
 "Ne" = (
-/obj/item/weapon/reagent_containers/food/snacks/rawcutlet,
+/obj/item/weapon/reagent_containers/food/snacks/beetsoup,
 /obj/machinery/light{
 	dir = 8
 	},
 /obj/structure/table/woodentable,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/turretedoutpost)
 "OZ" = (
 /turf/simulated/floor/plating,
@@ -399,7 +492,19 @@
 /area/submap/turretedoutpost)
 "Qt" = (
 /obj/structure/salvageable/server,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/area/submap/turretedoutpost)
+"QG" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/turretedoutpost)
 "Rj" = (
 /obj/machinery/light,
@@ -432,11 +537,15 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/turretedoutpost)
 "Wq" = (
 /mob/living/simple_mob/humanoid/merc/ranged/technician/poi,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/turretedoutpost)
 "WR" = (
 /obj/structure/table/reinforced,
@@ -448,6 +557,16 @@
 "WY" = (
 /obj/structure/largecrate/animal/corgi,
 /turf/simulated/floor/tiled/techfloor,
+/area/submap/turretedoutpost)
+"Yg" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/turretedoutpost)
 "Yo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -468,7 +587,9 @@
 /obj/structure/table/reinforced,
 /obj/item/weapon/folder,
 /obj/item/device/radio,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
 /area/submap/turretedoutpost)
 
 (1,1,1) = {"
@@ -793,12 +914,12 @@ id
 id
 eb
 Em
-sb
-sb
-sb
-mf
-sb
-sb
+up
+dL
+dL
+GJ
+dL
+Yg
 tS
 bT
 Ne
@@ -819,10 +940,10 @@ IG
 gq
 iG
 jX
-sb
-sb
-sb
-sb
+QG
+dL
+dL
+Yg
 Em
 eb
 id
@@ -843,7 +964,7 @@ zz
 sb
 Lc
 sb
-sb
+wu
 Em
 eb
 id
@@ -864,7 +985,7 @@ qE
 Ff
 gQ
 gQ
-gQ
+gL
 Em
 eb
 id

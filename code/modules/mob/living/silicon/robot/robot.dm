@@ -108,6 +108,7 @@
 		/mob/living/silicon/robot/proc/sensor_mode,
 		/mob/living/silicon/robot/proc/robot_checklaws,
 		/mob/living/silicon/robot/proc/robot_mount,
+		/mob/living/silicon/robot/proc/ex_reserve_refill, //CHOMPEdit re-adds the extinquisher refill from water
 		/mob/living/proc/toggle_rider_reins,
 		/mob/living/proc/shred_limb
 	)
@@ -150,9 +151,7 @@
 		C.wrapped = new C.external_type
 
 	if(!cell)
-		cell = new /obj/item/weapon/cell(src)
-		cell.maxcharge = 7500
-		cell.charge = 7500
+		cell = new /obj/item/weapon/cell/robot_station(src)
 	else if(ispath(cell))
 		cell = new cell(src)
 
@@ -178,6 +177,44 @@
 /mob/living/silicon/robot/LateInitialize()
 	. = ..()
 	update_icon()
+
+/mob/living/silicon/robot/rejuvenate()
+	for (var/V in components)
+		var/datum/robot_component/C = components[V]
+		if(istype(C.wrapped, /obj/item/broken_device))
+			qdel(C.wrapped)
+			C.wrapped = null
+		if(!C.wrapped)
+			switch(V)
+				if("actuator")
+					C.wrapped = new /obj/item/robot_parts/robot_component/actuator(src)
+				if("radio")
+					C.wrapped = new /obj/item/robot_parts/robot_component/radio(src)
+				if("power cell")
+					var/list/recommended_cells = list(/obj/item/weapon/cell/robot_station, /obj/item/weapon/cell/high, /obj/item/weapon/cell/super, /obj/item/weapon/cell/robot_syndi, /obj/item/weapon/cell/hyper,
+						/obj/item/weapon/cell/infinite, /obj/item/weapon/cell/potato, /obj/item/weapon/cell/slime)
+					var/list/cell_names = list()
+					for(var/cell_type in recommended_cells)
+						var/obj/item/weapon/cell/single_cell = cell_type
+						cell_names[capitalize(initial(single_cell.name))] = cell_type
+					var/selected_cell = tgui_input_list(usr, "What kind of cell do you want to install? Cancel installs a default robot cell.", "Cells", cell_names)
+					if(!selected_cell || selected_cell == "Cancel")
+						selected_cell = "A standard robot power cell"
+					var/new_power_cell = cell_names[capitalize(selected_cell)]
+					cell = new new_power_cell(src)
+					C.wrapped = cell
+				if("diagnosis unit")
+					C.wrapped = new /obj/item/robot_parts/robot_component/diagnosis_unit(src)
+				if("camera")
+					C.wrapped = new /obj/item/robot_parts/robot_component/camera(src)
+				if("comms")
+					C.wrapped = new /obj/item/robot_parts/robot_component/binary_communication_device(src)
+				if("armour")
+					C.wrapped = new /obj/item/robot_parts/robot_component/armour(src)
+			C.installed = 1
+			C.install()
+	cell.charge = cell.maxcharge
+	..()
 
 /mob/living/silicon/robot/proc/init()
 	aiCamera = new/obj/item/device/camera/siliconcam/robot_camera(src)
@@ -312,6 +349,7 @@
 	hands.icon_state = get_hud_module_icon()
 	feedback_inc("cyborg_[lowertext(modtype)]",1)
 	updatename()
+	hud_used.update_robot_modules_display()
 	notify_ai(ROBOT_NOTIFICATION_NEW_MODULE, module.name)
 
 /mob/living/silicon/robot/proc/update_braintype()
@@ -483,6 +521,16 @@
 	else
 		stat(null, text("No Cell Inserted!"))
 
+// function to toggle VTEC once installed
+/mob/living/silicon/robot/proc/toggle_vtec()
+    set name = "Toggle VTEC"
+    set category = "Abilities"
+    if(speed == -1)
+        to_chat(src, "<span class='filter_notice'>VTEC module disabled.</span>")
+        speed = 0
+    else
+        to_chat(src, "<span class='filter_notice'>VTEC module enabled.</span>")
+        speed = -1
 
 // update the status screen display
 /mob/living/silicon/robot/Stat()
@@ -728,6 +776,7 @@
 				to_chat(usr, "<span class='filter_notice'>You apply the upgrade to [src]!</span>")
 				usr.drop_item()
 				U.loc = src
+				hud_used.update_robot_modules_display()
 			else
 				to_chat(usr, "<span class='filter_notice'>Upgrade error!</span>")
 
@@ -765,12 +814,13 @@
 /mob/living/silicon/robot/proc/module_reset()
 	transform_with_anim() //VOREStation edit: sprite animation
 	uneq_all()
+	hud_used.update_robot_modules_display(TRUE)
 	modtype = initial(modtype)
 	hands.icon_state = get_hud_module_icon()
 
 	notify_ai(ROBOT_NOTIFICATION_MODULE_RESET, module.name)
 	module.Reset(src)
-	qdel(module)
+	module.Destroy()
 	module = null
 	updatename("Default")
 
@@ -891,18 +941,40 @@
 		old_x = sprite_datum.pixel_x
 
 	if(stat == CONSCIOUS)
+		//CHOMPAdd Start
+		// Let us handle the bellies with our own system
+		update_fullness()
+		for(var/belly_class in vore_fullness_ex)
+			reset_belly_lights(belly_class)
+			var/vs_fullness = vore_fullness_ex[belly_class]
+			if(belly_class == "sleeper" && sleeper_state == 0 && vore_selected.silicon_belly_overlay_preference == "Sleeper") continue
+			if(belly_class == "sleeper" && sleeper_state != 0 && !(vs_fullness + 1 > vore_capacity_ex[belly_class]))
+				if(vore_selected.silicon_belly_overlay_preference == "Sleeper")
+					vs_fullness = vore_capacity_ex[belly_class]
+				else if(vore_selected.silicon_belly_overlay_preference == "Both")
+					vs_fullness += 1
+			if(!vs_fullness > 0) continue
+			if(resting)
+				if(!sprite_datum.has_vore_belly_resting_sprites)
+					continue
+				add_overlay(sprite_datum.get_belly_resting_overlay(src, vs_fullness, belly_class))
+			else
+				update_belly_lights(belly_class)
+				add_overlay(sprite_datum.get_belly_overlay(src, vs_fullness, belly_class))
+		//CHOMPAdd End
+		/*CHOMPRemove Start
 		var/belly_size = 0
 		if(sprite_datum.has_vore_belly_sprites && vore_selected.belly_overall_mult != 0)
 			if(vore_selected.silicon_belly_overlay_preference == "Sleeper")
 				if(sleeper_state)
 					belly_size = sprite_datum.max_belly_size
 			else if(vore_selected.silicon_belly_overlay_preference == "Vorebelly" || vore_selected.silicon_belly_overlay_preference == "Both")
-				if(sleeper_state)
+				if(sleeper_state && vore_selected.silicon_belly_overlay_preference == "Both")
 					belly_size += 1
 				if(LAZYLEN(vore_selected.contents) > 0)
 					for(var/borgfood in vore_selected.contents) //"inspired" (kinda copied) from Chompstation's belly fullness system's procs
 						if(istype(borgfood, /mob/living))
-							if(vore_selected.belly_item_mult <= 0) //If mobs dont contribute, dont calculate further
+							if(vore_selected.belly_mob_mult <= 0) //If mobs dont contribute, dont calculate further
 								continue
 							var/mob/living/prey = borgfood //typecast to living
 							belly_size += (prey.size_multiplier / size_multiplier) / vore_selected.belly_mob_mult //Smaller prey are less filling to larger bellies
@@ -924,7 +996,7 @@
 									fullness_to_add = ITEMSIZE_COST_HUGE
 								else
 									fullness_to_add = ITEMSIZE_COST_NO_CONTAINER
-							belly_size += (fullness_to_add / 32) //* vore_selected.overlay_item_multiplier //Enable this later when vorepanel is reworked.
+							belly_size += (fullness_to_add / 32) // vore_selected.overlay_item_multiplier //Enable this later when vorepanel is reworked.
 						else
 							belly_size += 1 //if it's not a person, nor an item... lets just go with 1
 
@@ -937,6 +1009,7 @@
 				add_overlay(sprite_datum.get_belly_resting_overlay(src, belly_size))
 			else if(!resting)
 				add_overlay(sprite_datum.get_belly_overlay(src, belly_size))
+		*///CHOMPRemove End
 
 		sprite_datum.handle_extra_icon_updates(src)			// Various equipment-based sprites go here.
 
@@ -1153,6 +1226,30 @@
 	else
 		var/selection = tgui_input_list(src, "Select an icon! [triesleft ? "You have [triesleft] more chance\s." : "This is your last try."]", "Robot Icon", module_sprites)
 		sprite_datum = selection
+		if(selection)
+			sprite_datum = selection
+		else
+			sprite_datum = module_sprites[1]
+		//CHOMPEdit Start, allow multi bellies
+		vore_icon_bellies = list() //Clear any belly options that may not exist now
+		vore_capacity_ex = list()
+		vore_fullness_ex = list()
+		if(sprite_datum.belly_capacity_list.len)
+			for(var/belly in sprite_datum.belly_capacity_list) //vore icons list only contains a list of names with no associated data
+				vore_capacity_ex[belly] = sprite_datum.belly_capacity_list[belly] //I dont know why but this wasnt working when I just
+				vore_fullness_ex[belly] = 0 //set the lists equal to the old lists
+				vore_icon_bellies += belly
+			for(var/belly in sprite_datum.belly_light_list)
+				vore_light_states[belly] = 0
+		else if(sprite_datum.has_vore_belly_sprites)
+			vore_capacity_ex = list("sleeper" = 1)
+			vore_fullness_ex = list("sleeper" = 0)
+			vore_icon_bellies = list("sleeper")
+			if(sprite_datum.has_sleeper_light_indicator)
+				vore_light_states = list("sleeepr" = 0)
+				sprite_datum.belly_light_list = list("sleeper")
+		update_fullness() //Set how full the newly defined bellies are, if they're already full
+		//CHOMPEdit End
 		if(!istype(src,/mob/living/silicon/robot/drone))
 			robot_species = sprite_datum.name
 		if(notransform)
@@ -1336,6 +1433,7 @@
 				laws.show_laws(src)
 				to_chat(src, "<span class='danger'>ALERT: [user.real_name] is your new master. Obey your new laws and [TU.his] commands.</span>")
 				update_icon()
+				hud_used.update_robot_modules_display()
 		else
 			to_chat(user, "<span class='filter_warning'>You fail to hack [src]'s interface.</span>")
 			to_chat(src, "<span class='filter_warning'>Hack attempt detected.</span>")
@@ -1371,8 +1469,8 @@
 	return cell
 
 /mob/living/silicon/robot/lay_down()
-	 . = ..()
-	 update_icon()
+	. = ..()
+	update_icon()
 
 /mob/living/silicon/robot/verb/rest_style()
 	set name = "Switch Rest Style"

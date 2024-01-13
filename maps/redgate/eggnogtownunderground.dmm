@@ -83,16 +83,10 @@
 	},
 /area/redgate/eggnogtown/underground)
 "ak" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/simulated/mineral/floor/ignore_cavegen/cave{
-	temperature = 303.15
-	},
-/area/redgate/eggnogtown/hotsprings)
-"al" = (
-/obj/machinery/light/small{
-	dir = 4
+/obj/machinery/light/small/torch{
+	desc = "A small lighting fixture designed to look like a torch held in a wall sconce.";
+	dir = 8;
+	name = "wall torch fixture"
 	},
 /turf/simulated/mineral/floor/ignore_cavegen/cave{
 	temperature = 303.15
@@ -184,6 +178,21 @@
 	temperature = 258.15
 	},
 /area/redgate/eggnogtown/vibeout)
+"br" = (
+/obj/structure/stairs/spawner/east,
+/obj/structure/railing,
+/turf/simulated/floor/bmarble{
+	temperature = 303.15
+	},
+/area/redgate/eggnogtown/hotsprings)
+"bL" = (
+/obj/random/vendordrink{
+	dir = 1
+	},
+/turf/simulated/floor/bmarble{
+	temperature = 303.15
+	},
+/area/redgate/eggnogtown/hotsprings)
 "bX" = (
 /obj/structure/railing,
 /obj/structure/railing{
@@ -209,8 +218,16 @@
 	dir = 1;
 	pixel_y = -26
 	},
-/obj/item/clothing/under/swimsuit/fluff/science,
 /obj/random/awayloot,
+/obj/item/weapon/towel/random,
+/obj/item/weapon/towel/random,
+/obj/item/clothing/under/swimsuit/fluff/science,
+/turf/simulated/floor/bmarble{
+	temperature = 303.15
+	},
+/area/redgate/eggnogtown/hotsprings)
+"di" = (
+/obj/structure/railing,
 /turf/simulated/floor/bmarble{
 	temperature = 303.15
 	},
@@ -253,11 +270,23 @@
 	temperature = 258.15
 	},
 /area/redgate/eggnogtown/vibeout)
+"fk" = (
+/obj/machinery/light/small/torch{
+	desc = "A small lighting fixture designed to look like a torch held in a wall sconce.";
+	dir = 1;
+	name = "wall torch fixture"
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/cave{
+	temperature = 303.15
+	},
+/area/redgate/eggnogtown/hotsprings)
 "fV" = (
 /obj/structure/closet/walllocker{
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/item/weapon/towel/random,
+/obj/item/weapon/towel/random,
 /obj/item/clothing/under/swimsuit/fluff/engineering,
 /turf/simulated/floor/bmarble{
 	temperature = 303.15
@@ -272,9 +301,11 @@
 	},
 /area/redgate/eggnogtown/vibeout)
 "gA" = (
-/turf/simulated/floor/beach/water{
-	name = "hot spring";
-	temperature = 303.15
+/obj/effect/mist,
+/obj/effect/map_effect/interval/effect_emitter/smoke/mist,
+/turf/simulated/floor/water{
+	name = "hotspring";
+	temperature = 310
 	},
 /area/redgate/eggnogtown/underground)
 "gE" = (
@@ -328,6 +359,17 @@
 /area/redgate/eggnogtown/vibeout)
 "iB" = (
 /obj/structure/stairs/spawner/east,
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/bmarble{
+	temperature = 303.15
+	},
+/area/redgate/eggnogtown/hotsprings)
+"iE" = (
+/obj/structure/railing{
+	dir = 1
+	},
 /turf/simulated/floor/bmarble{
 	temperature = 303.15
 	},
@@ -336,6 +378,8 @@
 /obj/structure/closet/walllocker{
 	pixel_y = 26
 	},
+/obj/item/weapon/towel/random,
+/obj/item/weapon/towel/random,
 /obj/item/clothing/under/swimsuit/earth,
 /turf/simulated/floor/bmarble{
 	temperature = 303.15
@@ -350,7 +394,19 @@
 /area/gateway/eggnogtown/underground)
 =======
 /area/redgate/eggnogtown/hotsprings)
+<<<<<<< HEAD
 >>>>>>> dd881251ef... Merge pull request #15167 from Very-Soft/stardog:maps/redgate/eggnogtownunderground.dmm
+=======
+"jD" = (
+/obj/structure/bed/chair/sofa/bench,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/bmarble{
+	temperature = 303.15
+	},
+/area/redgate/eggnogtown/hotsprings)
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 "kA" = (
 /turf/simulated/wall/iron,
 /area/redgate/eggnogtown/underground)
@@ -359,17 +415,21 @@
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/item/weapon/towel/random,
+/obj/item/weapon/towel/random,
 /obj/item/clothing/under/swimsuit/fluff/medical,
 /turf/simulated/floor/bmarble{
 	temperature = 303.15
 	},
 /area/redgate/eggnogtown/hotsprings)
 "kK" = (
-/obj/structure/fans/tiny,
-/obj/machinery/door/airlock/freezer{
-	name = "Automatic Door"
+/obj/machinery/light/small/torch{
+	desc = "A small lighting fixture designed to look like a torch held in a wall sconce.";
+	name = "wall torch fixture"
 	},
-/turf/simulated/floor/tiled/steel_ridged,
+/turf/simulated/mineral/floor/ignore_cavegen/cave{
+	temperature = 303.15
+	},
 /area/redgate/eggnogtown/hotsprings)
 "kS" = (
 /obj/structure/bed/chair/sofa/black/right,
@@ -414,12 +474,14 @@
 	},
 /area/redgate/eggnogtown/vibeout)
 "ma" = (
-/obj/machinery/light/small{
-	dir = 8
+/obj/machinery/light/small/torch{
+	desc = "A small lighting fixture designed to look like a torch held in a wall sconce.";
+	dir = 8;
+	name = "wall torch fixture"
 	},
-/turf/simulated/floor/beach/water{
-	name = "hot spring";
-	temperature = 303.15
+/turf/simulated/floor/water{
+	name = "hotspring";
+	temperature = 310
 	},
 /area/redgate/eggnogtown/hotsprings)
 "mf" = (
@@ -435,7 +497,20 @@
 /area/gateway/eggnogtown/underground)
 =======
 /area/redgate/eggnogtown/hotspring)
+<<<<<<< HEAD
 >>>>>>> dd881251ef... Merge pull request #15167 from Very-Soft/stardog:maps/redgate/eggnogtownunderground.dmm
+=======
+"mQ" = (
+/obj/structure/bonfire/permanent,
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/cave{
+	temperature = 303.15
+	},
+/area/redgate/eggnogtown/underground)
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 "nh" = (
 /obj/structure/bed/chair/sofa/black/corner,
 /turf/simulated/floor/plating/eris/under{
@@ -493,6 +568,14 @@
 	temperature = 258.15
 	},
 /area/redgate/eggnogtown/vibeout)
+"rX" = (
+/obj/structure/bed/chair/sofa/bench/left{
+	dir = 1
+	},
+/turf/simulated/floor/bmarble{
+	temperature = 303.15
+	},
+/area/redgate/eggnogtown/hotsprings)
 "rZ" = (
 /obj/structure/bed/chair/bay/comfy/red{
 	dir = 4
@@ -502,10 +585,10 @@
 	},
 /area/redgate/eggnogtown/vibeout)
 "sc" = (
-/obj/random/mob/semirandom_mob_spawner/vore/passive,
-/turf/simulated/floor/beach/water{
-	name = "hot spring";
-	temperature = 303.15
+/mob/living/simple_mob/vore/catgirl,
+/turf/simulated/floor/water{
+	name = "hotspring";
+	temperature = 310
 	},
 /area/redgate/eggnogtown/underground)
 "sj" = (
@@ -576,6 +659,12 @@
 	temperature = 258.15
 	},
 /area/redgate/eggnogtown/hotspring)
+"vc" = (
+/turf/simulated/floor/water/deep{
+	name = "deep hotspring";
+	temperature = 310
+	},
+/area/redgate/eggnogtown/underground)
 "vg" = (
 /turf/simulated/floor/tiled{
 	temperature = 258.15
@@ -673,7 +762,21 @@
 /area/gateway/eggnogtown/vibeout)
 =======
 /area/redgate/eggnogtown/hotspring)
+<<<<<<< HEAD
 >>>>>>> dd881251ef... Merge pull request #15167 from Very-Soft/stardog:maps/redgate/eggnogtownunderground.dmm
+=======
+"yK" = (
+/obj/machinery/light/small/torch{
+	desc = "A small lighting fixture designed to look like a torch held in a wall sconce.";
+	dir = 1;
+	name = "wall torch fixture"
+	},
+/turf/simulated/floor/water{
+	name = "hotspring";
+	temperature = 310
+	},
+/area/redgate/eggnogtown/hotsprings)
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 "yM" = (
 /obj/structure/table/bench/wooden,
 /turf/simulated/floor/wood{
@@ -699,6 +802,12 @@
 	temperature = 258.15
 	},
 /area/redgate/eggnogtown/vibeout)
+"Ba" = (
+/turf/simulated/floor/water{
+	name = "hotspring";
+	temperature = 310
+	},
+/area/redgate/eggnogtown/underground)
 "Ce" = (
 /turf/simulated/wall/iron,
 <<<<<<< HEAD:maps/gateway_vr/eggnogtownunderground.dmm
@@ -715,7 +824,25 @@
 /obj/structure/closet/walllocker{
 	pixel_y = 26
 	},
+/obj/item/weapon/towel/random,
+/obj/item/weapon/towel/random,
 /obj/item/clothing/under/swimsuit/blue,
+/turf/simulated/floor/bmarble{
+	temperature = 303.15
+	},
+/area/redgate/eggnogtown/hotsprings)
+"DP" = (
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/bonfire/permanent,
 /turf/simulated/floor/bmarble{
 	temperature = 303.15
 	},
@@ -729,8 +856,17 @@
 	temperature = 258.15
 	},
 /area/redgate/eggnogtown/vibeout)
+"Eu" = (
+/obj/structure/bonfire/permanent,
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/cave{
+	temperature = 303.15
+	},
+/area/redgate/eggnogtown/underground)
 "FJ" = (
-/obj/random/vendordrink,
+/obj/machinery/vending/fitness,
 /turf/simulated/floor/bmarble{
 	temperature = 303.15
 	},
@@ -778,6 +914,16 @@
 	temperature = 258.15
 	},
 /area/redgate/eggnogtown/vibeout)
+"HU" = (
+/obj/machinery/light/small/torch{
+	desc = "A small lighting fixture designed to look like a torch held in a wall sconce.";
+	dir = 4;
+	name = "wall torch fixture"
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/cave{
+	temperature = 303.15
+	},
+/area/redgate/eggnogtown/hotsprings)
 "HV" = (
 /obj/structure/fans/tiny,
 /obj/machinery/door/airlock/freezer{
@@ -785,6 +931,19 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/redgate/eggnogtown/hotspring)
+"It" = (
+/obj/structure/fans/tiny,
+/obj/machinery/door/airlock/freezer{
+	name = "Automatic Door"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/redgate/eggnogtown/hotsprings)
+"IP" = (
+/obj/structure/bed/chair/sofa/bench/left,
+/turf/simulated/floor/bmarble{
+	temperature = 303.15
+	},
+/area/redgate/eggnogtown/hotsprings)
 "Jv" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/weapon/material/ashtray,
@@ -827,15 +986,44 @@
 	temperature = 258.15
 	},
 /area/redgate/eggnogtown/houserhomestead/basement)
+"Mm" = (
+/obj/machinery/vending/altevian,
+/obj/random/vendorfood,
+/turf/simulated/floor/bmarble{
+	temperature = 303.15
+	},
+/area/redgate/eggnogtown/hotsprings)
 "MG" = (
 /obj/move_trader_landmark{
 	dir = 8;
 	trader_type = /obj/trader/general
 	},
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/mineral/floor/ignore_cavegen/cave{
 	temperature = 303.15
 	},
 /area/redgate/eggnogtown/underground)
+"MI" = (
+/obj/machinery/light/small/torch{
+	desc = "A small lighting fixture designed to look like a torch held in a wall sconce.";
+	name = "wall torch fixture"
+	},
+/turf/simulated/floor/water{
+	name = "hotspring";
+	temperature = 310
+	},
+/area/redgate/eggnogtown/hotsprings)
+"MO" = (
+/obj/structure/bed/chair/sofa/bench{
+	dir = 1
+	},
+/obj/machinery/light/small,
+/turf/simulated/floor/bmarble{
+	temperature = 303.15
+	},
+/area/redgate/eggnogtown/hotsprings)
 "Oa" = (
 /obj/structure/bed/chair/bay/comfy/black{
 	dir = 4
@@ -887,7 +1075,7 @@
 	},
 /area/redgate/eggnogtown/vibeout)
 "Pc" = (
-/obj/structure/table/bench/steel,
+/obj/structure/bed/chair/sofa/bench/right,
 /turf/simulated/floor/bmarble{
 	temperature = 303.15
 	},
@@ -901,12 +1089,28 @@
 /area/gateway/eggnogtown/underground)
 =======
 /area/redgate/eggnogtown/hotsprings)
+<<<<<<< HEAD
 >>>>>>> dd881251ef... Merge pull request #15167 from Very-Soft/stardog:maps/redgate/eggnogtownunderground.dmm
 "QL" = (
 /obj/effect/map_effect/interval/effect_emitter/steam,
 /turf/simulated/floor/beach/water{
 	name = "hot spring";
+=======
+"Pd" = (
+/obj/structure/bed/chair/sofa/bench/right{
+	dir = 1
+	},
+/turf/simulated/floor/bmarble{
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 	temperature = 303.15
+	},
+/area/redgate/eggnogtown/hotsprings)
+"QL" = (
+/obj/effect/mist,
+/obj/effect/map_effect/interval/effect_emitter/smoke/mist,
+/turf/simulated/floor/water/deep{
+	name = "deep hotspring";
+	temperature = 310
 	},
 /area/redgate/eggnogtown/underground)
 "Rv" = (
@@ -940,6 +1144,14 @@
 	temperature = 258.15
 	},
 /area/redgate/eggnogtown/vibeout)
+"Uo" = (
+/obj/effect/map_effect/interval/effect_emitter/smoke/mist,
+/obj/effect/mist,
+/turf/simulated/floor/water{
+	name = "hotspring";
+	temperature = 310
+	},
+/area/redgate/eggnogtown/underground)
 "UJ" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -963,6 +1175,14 @@
 	temperature = 258.15
 	},
 /area/redgate/eggnogtown/houserhomestead/basement)
+"Wc" = (
+/obj/effect/map_effect/interval/effect_emitter/smoke/mist,
+/obj/effect/mist,
+/turf/simulated/floor/water/deep{
+	name = "deep hotspring";
+	temperature = 310
+	},
+/area/redgate/eggnogtown/underground)
 "We" = (
 /obj/structure/table/woodentable,
 /turf/simulated/floor/wood{
@@ -1058,8 +1278,10 @@
 /obj/structure/closet/walllocker{
 	pixel_y = 26
 	},
-/obj/item/clothing/under/swimsuit/black,
 /obj/random/awayloot,
+/obj/item/weapon/towel/random,
+/obj/item/weapon/towel/random,
+/obj/item/clothing/under/swimsuit/black,
 /turf/simulated/floor/bmarble{
 	temperature = 303.15
 	},
@@ -1429,7 +1651,11 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
+=======
+Eu
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 kA
@@ -1567,6 +1793,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 ab
 Da
 Da
@@ -1575,6 +1802,16 @@ Da
 Da
 Da
 kV
+=======
+kA
+fk
+af
+af
+af
+af
+af
+ak
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -1693,6 +1930,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 Da
 gA
@@ -1701,14 +1939,25 @@ gA
 Da
 Da
 ab
+=======
+mQ
+af
+Ba
+Ba
+Ba
+af
+kK
+kA
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
-gA
-gA
-gA
-gA
+Ba
+Ba
+Uo
+Ba
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 Da
 gA
@@ -1717,6 +1966,16 @@ gA
 gA
 gA
 Da
+=======
+ak
+af
+Ba
+Ba
+Ba
+Ba
+Ba
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -1834,6 +2093,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 Da
 gA
@@ -1843,13 +2103,25 @@ gA
 gA
 Da
 Da
+=======
+af
+af
+Ba
+Ba
+Ba
+Ba
+Ba
+af
+ak
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
-gA
-gA
+Ba
+Ba
 sc
-gA
-gA
+Ba
+Ba
 ab
+<<<<<<< HEAD
 Da
 Da
 gA
@@ -1862,6 +2134,20 @@ gA
 gA
 Da
 Da
+=======
+af
+af
+Ba
+Ba
+vc
+vc
+vc
+Ba
+Ba
+Ba
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -1976,6 +2262,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 Da
 gA
@@ -2005,6 +2292,37 @@ gA
 gA
 Da
 Da
+=======
+af
+af
+Ba
+vc
+Wc
+vc
+Ba
+Ba
+af
+ab
+Ba
+Ba
+Ba
+Ba
+Ba
+Ba
+af
+af
+Ba
+vc
+vc
+Wc
+vc
+vc
+vc
+Ba
+Ba
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -2118,6 +2436,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 gA
 gA
@@ -2147,6 +2466,37 @@ gA
 gA
 Da
 Da
+=======
+af
+Ba
+Ba
+vc
+vc
+vc
+vc
+Ba
+af
+af
+Ba
+Ba
+Ba
+Ba
+Ba
+Ba
+af
+af
+Ba
+vc
+vc
+vc
+vc
+vc
+vc
+vc
+Ba
+Ba
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -2260,6 +2610,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 gA
 gA
@@ -2289,6 +2640,37 @@ gA
 gA
 gA
 Da
+=======
+HU
+gA
+vc
+vc
+vc
+vc
+vc
+Ba
+Ba
+af
+ab
+af
+Ba
+Ba
+Ba
+af
+af
+af
+Ba
+vc
+vc
+vc
+vc
+vc
+vc
+QL
+vc
+Ba
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -2402,6 +2784,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 gA
 gA
@@ -2432,6 +2815,38 @@ gA
 gA
 Da
 ab
+=======
+kA
+yK
+vc
+vc
+vc
+vc
+vc
+Ba
+Ba
+af
+af
+af
+af
+af
+af
+af
+af
+af
+Ba
+Ba
+vc
+vc
+vc
+vc
+vc
+vc
+vc
+Ba
+MI
+kA
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -2545,6 +2960,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 gA
 gA
 gA
@@ -2554,13 +2970,25 @@ gA
 gA
 Da
 Da
+=======
+Ba
+Ba
+vc
+vc
+vc
+Ba
+Ba
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 cb
 cb
 cb
+DP
 cb
 cb
 cb
-cb
+<<<<<<< HEAD
 Da
 Da
 gA
@@ -2573,6 +3001,20 @@ gA
 gA
 Da
 Da
+=======
+af
+af
+Ba
+Ba
+vc
+Wc
+vc
+vc
+vc
+Ba
+Ba
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -2687,6 +3129,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 gA
 gA
@@ -2698,6 +3141,14 @@ Da
 Da
 Da
 =======
+=======
+af
+Ba
+vc
+Wc
+Ba
+Ba
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 af
 af
 MG
@@ -2717,6 +3168,7 @@ Da
 MG
 af
 af
+<<<<<<< HEAD
 >>>>>>> 0f8b721e894... Merge pull request #12331 from Very-Soft/liddolawaytweaks
 gA
 gA
@@ -2726,6 +3178,16 @@ gA
 gA
 gA
 Da
+=======
+Ba
+Ba
+Ba
+vc
+vc
+Ba
+Ba
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -2841,6 +3303,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 gA
 gA
@@ -2849,6 +3312,16 @@ gA
 Da
 Da
 Da
+=======
+af
+Ba
+Ba
+Ba
+Ba
+af
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 Kk
 iV
 cb
@@ -2860,6 +3333,7 @@ de
 Kk
 ab
 ab
+<<<<<<< HEAD
 Da
 Da
 gA
@@ -2868,6 +3342,16 @@ gA
 gA
 Da
 Da
+=======
+af
+af
+Ba
+Ba
+Ba
+Ba
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -2983,6 +3467,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 Da
 Da
@@ -2990,6 +3475,15 @@ gA
 Da
 Da
 Da
+=======
+af
+af
+af
+Ba
+af
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 Kk
 Ds
@@ -3127,9 +3621,15 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 vs
 Da
+=======
+af
+HU
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -3146,9 +3646,15 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 vs
 Da
+=======
+af
+HU
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -3278,11 +3784,11 @@ ab
 Kk
 Pc
 cb
-cb
+iE
 Kk
+di
 cb
-cb
-Pc
+rX
 Kk
 ab
 ab
@@ -3418,13 +3924,13 @@ ab
 ab
 ab
 Kk
-Pc
+jD
 cb
 iB
 Kk
-iB
+br
 cb
-Pc
+MO
 Kk
 ab
 ab
@@ -3560,13 +4066,13 @@ ab
 ab
 ab
 Kk
-Pc
+IP
 cb
 Kk
 Kk
 Kk
 cb
-Pc
+Pd
 Kk
 ab
 ab
@@ -3704,9 +4210,9 @@ ab
 Kk
 FJ
 cb
-Kk
-Kk
-Kk
+cb
+cb
+cb
 cb
 hh
 Kk
@@ -3844,13 +4350,13 @@ ab
 ab
 ab
 Kk
-Kk
-kK
-Kk
-Kk
-Kk
-Kk
-Kk
+Mm
+cb
+cb
+qb
+cb
+cb
+bL
 Kk
 ab
 ab
@@ -3984,6 +4490,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 ab
 ab
 ab
@@ -3994,6 +4501,17 @@ ab
 ab
 ab
 ab
+=======
+Kk
+Kk
+It
+Kk
+Kk
+Kk
+It
+Kk
+Kk
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -4271,6 +4789,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 ab
 ab
 ad
@@ -4279,6 +4798,16 @@ ad
 ad
 ad
 ad
+=======
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -4415,12 +4944,21 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 ab
 ab
 ad
 ad
 ad
 ad
+=======
+aa
+aa
+aa
+aa
+aa
+aa
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -4553,16 +5091,28 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 ad
 ad
 ad
+=======
+aa
+aa
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
 ab
+<<<<<<< HEAD
 ad
 ad
 ad
+=======
+aa
+aa
+aa
+aa
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -4694,6 +5244,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 ad
 ad
 ad
@@ -4705,6 +5256,19 @@ ab
 ab
 ad
 ad
+=======
+aa
+aa
+aa
+aa
+ab
+ab
+ab
+ab
+aa
+aa
+aa
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -4837,6 +5401,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 ad
 GM
 ad
@@ -4848,6 +5413,19 @@ ad
 ad
 ad
 ad
+=======
+aa
+ag
+aa
+aa
+aa
+aa
+ab
+ab
+aa
+aa
+aa
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -4979,6 +5557,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 ad
 ad
 ad
@@ -4989,6 +5568,18 @@ ad
 ad
 ad
 ad
+=======
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -11642,6 +12233,7 @@ xH
 xH
 xA
 Ou
+<<<<<<< HEAD
 Da
 Da
 gA
@@ -11651,6 +12243,17 @@ gA
 Da
 Da
 Da
+=======
+af
+af
+Ba
+Ba
+Ba
+Ba
+af
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -11784,6 +12387,7 @@ xH
 xH
 Oy
 vJ
+<<<<<<< HEAD
 Da
 Da
 gA
@@ -11793,6 +12397,17 @@ gA
 gA
 Da
 Da
+=======
+af
+af
+Ba
+Ba
+Ba
+Ba
+Ba
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -11926,6 +12541,7 @@ xH
 xH
 We
 vJ
+<<<<<<< HEAD
 Da
 Da
 gA
@@ -11937,6 +12553,19 @@ Da
 Da
 Da
 Da
+=======
+af
+af
+Ba
+Ba
+Ba
+Ba
+Ba
+af
+af
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -12068,6 +12697,7 @@ xH
 xH
 OL
 TN
+<<<<<<< HEAD
 Da
 Da
 gA
@@ -12080,6 +12710,22 @@ Da
 Da
 Da
 Da
+=======
+af
+af
+Ba
+Ba
+Ba
+Ba
+Ba
+Ba
+af
+af
+af
+af
+ab
+ab
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -12118,6 +12764,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 ab
 ab
 ab
@@ -12129,6 +12776,16 @@ gA
 gA
 Da
 Da
+=======
+af
+af
+af
+af
+vc
+vc
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -12210,6 +12867,7 @@ uh
 uh
 uh
 uh
+<<<<<<< HEAD
 Da
 Da
 gA
@@ -12223,6 +12881,21 @@ Da
 Da
 Da
 Da
+=======
+af
+af
+Ba
+Ba
+Uo
+Ba
+Ba
+Ba
+ai
+af
+af
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -12263,6 +12936,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 Da
 Da
@@ -12272,6 +12946,17 @@ gA
 gA
 Da
 Da
+=======
+af
+af
+af
+vc
+vc
+vc
+vc
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -12352,6 +13037,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 Da
 gA
@@ -12366,6 +13052,22 @@ Da
 Da
 Da
 Da
+=======
+af
+af
+Ba
+Ba
+Ba
+Ba
+Ba
+Ba
+Ba
+af
+af
+af
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -12403,6 +13105,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 Da
 Da
@@ -12414,6 +13117,19 @@ gA
 gA
 Da
 Da
+=======
+af
+af
+af
+ap
+vc
+vc
+vc
+vc
+vc
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -12493,6 +13209,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 Da
 Da
@@ -12510,6 +13227,25 @@ Da
 Da
 Da
 Da
+=======
+af
+af
+af
+Ba
+Ba
+Ba
+Ba
+Ba
+Ba
+Ba
+Ba
+af
+af
+af
+af
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -12545,6 +13281,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 Da
 Da
@@ -12556,6 +13293,19 @@ gA
 gA
 Da
 Da
+=======
+af
+af
+af
+vc
+vc
+vc
+vc
+vc
+vc
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -12635,6 +13385,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 Da
 Da
@@ -12652,6 +13403,25 @@ Da
 Da
 Da
 Da
+=======
+af
+af
+af
+af
+Ba
+Ba
+Ba
+Ba
+Ba
+Ba
+Ba
+Ba
+af
+af
+af
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -12686,6 +13456,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 Da
 Da
@@ -12698,6 +13469,20 @@ gA
 gA
 Da
 Da
+=======
+af
+af
+af
+vc
+vc
+vc
+QL
+vc
+vc
+vc
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -12776,6 +13561,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 Da
 Da
@@ -12795,6 +13581,27 @@ Da
 Da
 Da
 Da
+=======
+af
+af
+af
+af
+af
+af
+ah
+af
+Ba
+Ba
+Uo
+Ba
+Ba
+Ba
+af
+af
+af
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -12828,6 +13635,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 Da
 Da
@@ -12840,6 +13648,20 @@ gA
 Da
 Da
 Da
+=======
+af
+af
+af
+vc
+vc
+vc
+vc
+vc
+vc
+af
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -12918,6 +13740,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 Da
 Da
@@ -12937,6 +13760,27 @@ Da
 Da
 Da
 Da
+=======
+af
+af
+af
+af
+af
+af
+af
+Ba
+Ba
+Ba
+Ba
+Ba
+Ba
+Ba
+Ba
+af
+af
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -12970,6 +13814,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 Da
 Da
@@ -12982,6 +13827,20 @@ gA
 Da
 Da
 Da
+=======
+af
+af
+af
+vc
+vc
+vc
+vc
+vc
+vc
+af
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -13059,6 +13918,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 Da
 Da
@@ -13079,6 +13939,28 @@ Da
 Da
 Da
 Da
+=======
+af
+af
+af
+vc
+vc
+vc
+vc
+vc
+Ba
+Ba
+Ba
+Ba
+Ba
+af
+af
+af
+af
+af
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -13111,6 +13993,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 Da
 Da
@@ -13121,6 +14004,18 @@ gA
 gA
 gA
 Da
+=======
+af
+af
+af
+af
+af
+af
+vc
+vc
+vc
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 Da
@@ -13200,6 +14095,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 Da
 Da
@@ -13220,6 +14116,28 @@ Da
 Da
 Da
 Da
+=======
+af
+af
+af
+af
+vc
+vc
+vc
+vc
+vc
+Ba
+Ba
+Ba
+Ba
+Ba
+af
+af
+af
+af
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -13342,6 +14260,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 Da
 Da
@@ -13361,6 +14280,27 @@ Da
 Da
 Da
 Da
+=======
+af
+af
+af
+vc
+vc
+vc
+vc
+vc
+vc
+vc
+Ba
+Ba
+Ba
+af
+aj
+af
+af
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -13484,6 +14424,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 Da
 gA
@@ -13501,6 +14442,25 @@ Da
 Da
 Da
 Da
+=======
+af
+af
+vc
+vc
+vc
+vc
+vc
+Wc
+vc
+vc
+Ba
+Ba
+Ba
+af
+af
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -13625,6 +14585,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 Da
 Da
@@ -13641,6 +14602,24 @@ Da
 Da
 Da
 Da
+=======
+af
+af
+af
+vc
+vc
+vc
+vc
+vc
+vc
+vc
+vc
+vc
+af
+af
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -13766,6 +14745,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 Da
 Da
@@ -13780,6 +14760,22 @@ gA
 Da
 Da
 Da
+=======
+af
+af
+af
+af
+vc
+vc
+vc
+Wc
+vc
+vc
+vc
+af
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -13908,6 +14904,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 Da
 Da
@@ -13920,6 +14917,20 @@ gA
 gA
 gA
 Da
+=======
+af
+af
+af
+af
+vc
+vc
+vc
+vc
+vc
+vc
+vc
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -14051,6 +15062,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 Da
 Da
@@ -14062,6 +15074,19 @@ gA
 gA
 Da
 Da
+=======
+af
+af
+af
+vc
+vc
+vc
+vc
+vc
+vc
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -14194,6 +15219,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 Da
 gA
@@ -14204,6 +15230,18 @@ gA
 gA
 Da
 Da
+=======
+af
+af
+vc
+vc
+vc
+vc
+vc
+vc
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -14337,6 +15375,7 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 Da
 gA
@@ -14346,6 +15385,17 @@ gA
 Da
 Da
 Da
+=======
+af
+af
+vc
+vc
+vc
+vc
+af
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 ab
 ab
@@ -14479,12 +15529,24 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 Da
 Da
 Da
 gA
 gA
 Da
+=======
+af
+af
+af
+vc
+vc
+af
+ab
+af
+af
+>>>>>>> 46f5717705... Merge pull request #15645 from Rick4242/map-stuff
 ab
 Da
 Da

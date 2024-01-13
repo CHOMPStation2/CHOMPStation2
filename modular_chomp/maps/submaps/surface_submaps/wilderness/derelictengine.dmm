@@ -4033,6 +4033,7 @@
 	},
 /area/submap/DerelictEngine)
 "VQ" = (
+/obj/effect/map_helper/no_phaseshift/area,
 /turf/simulated/floor/plating{
 	oxygen = 20.7263;
 	temperature = 243.15;
