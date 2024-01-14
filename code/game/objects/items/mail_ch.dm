@@ -189,9 +189,11 @@
 	icon_state = "mailbag"
 	slot_flags = SLOT_BELT | SLOT_POCKET
 	w_class = ITEMSIZE_NORMAL
-	storage_slots = 21
+	storage_slots = 28
 	max_storage_space = 50
 	max_w_class = ITEMSIZE_NORMAL
+	use_to_pickup = TRUE
+	allow_quick_gather = TRUE
 	can_hold = list(
 		/obj/item/mail,
 		/obj/item/smallDelivery,
