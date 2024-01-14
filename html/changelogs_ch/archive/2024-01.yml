@@ -120,6 +120,7 @@
   TheCaramelion:
   - balance: Mailbag capacity changed from 21 to 28
   - bugfix: Mailbag can now pick up envelopes off the tile
+  - bugfix: Spamming click on an envelope won't trigger opening it multiple times
   Upstream:
   - bugfix: nurse spiders no longer spawning unexpectetly (to prevent snowballing)
       from random sources
