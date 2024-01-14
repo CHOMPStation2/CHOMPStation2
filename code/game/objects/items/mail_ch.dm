@@ -136,7 +136,7 @@
 		var/image/envelope = image(icon, icon_state)
 		envelope.color = this_job.get_mail_color()
 		add_overlay(envelope)
-		var/list/job_goodies = this_job.get_mail_goodies()
+		var/list/job_goodies = this_job.get_mail_goodies(new_recipient, current_title)
 		if(LAZYLEN(job_goodies))
 			if(this_job.exclusive_mail_goodies)
 				goodies = job_goodies

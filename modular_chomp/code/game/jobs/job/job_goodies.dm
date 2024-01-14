@@ -6,11 +6,19 @@
 
 /datum/alt_title/
 	var/list/mail_goodies = list()
-	var/exclusive_mail_goodies = FALSE
 
 // Get mail goodies
-/datum/job/proc/get_mail_goodies(mob/recipient)
-	return mail_goodies
+/datum/job/proc/get_mail_goodies(mob/recipient, var/alt_title)
+	var/list/goodies = list()
+	goodies |= mail_goodies
+
+	if(alt_titles && alt_titles)
+		var/typepath = alt_titles[alt_title]
+		if(typepath)
+			var/datum/alt_title/A = new typepath()
+			if(A.mail_goodies)
+				goodies |= A.mail_goodies
+	return goodies
 
 // Get mail colour
 /datum/job/proc/get_mail_color(mob/recipient)
@@ -31,6 +39,88 @@
 	)
 	mail_color = COMMS_COLOR_ENTERTAIN
 
+/datum/alt_title/intern_eng
+	mail_goodies = list(
+		/obj/item/weapon/cell/device = 200,
+		/obj/item/weapon/cell = 175,
+		/obj/item/weapon/storage/belt/utility = 150,
+		/obj/item/weapon/cell/high = 125,
+		/obj/item/weapon/tool/wrench = 125,
+		/obj/item/weapon/tool/screwdriver = 125,
+		/obj/item/device/geiger = 100
+	)
+
+/datum/alt_title/intern_med
+	mail_goodies = list(
+		/obj/item/weapon/reagent_containers/hypospray/autoinjector/burn = 200,
+		/obj/item/weapon/reagent_containers/hypospray/autoinjector/trauma = 200,
+		/obj/item/weapon/reagent_containers/hypospray/autoinjector/detox = 200,
+		/obj/item/stack/medical/ointment = 100,
+		/obj/item/stack/medical/bruise_pack = 100
+		/obj/item/weapon/storage/pill_bottle/paracetamol = 100,
+		/obj/item/weapon/storage/pill_bottle/blood_regen = 50,
+		/obj/item/weapon/storage/pill_bottle/assorted = 50,
+	)
+
+/datum/alt_title/intern_sci
+	mail_goodies = list(
+		/obj/item/weapon/cell/device = 200,
+		/obj/item/weapon/cell = 175,
+		/obj/item/weapon/storage/belt/utility = 150,
+		/obj/item/weapon/cell/high = 125,
+		/obj/item/weapon/tool/wrench = 125,
+		/obj/item/weapon/tool/screwdriver = 125,
+		/obj/item/weapon/cell/device/hyper = 50,
+		/obj/item/weapon/cell/hyper = 50,
+	)
+
+/datum/alt_title/intern_sec
+	mail_goodies = list(
+		/obj/item/weapon/reagent_containers/food/snacks/donut/plain = 200,
+		/obj/item/poster/custom = 200,
+		/obj/item/device/ticket_printer = 200,
+		/obj/item/device/holowarrant = 200,
+		/obj/item/device/retail_scanner/security = 100,
+		/obj/item/taperoll/police = 100
+	)
+
+/datum/alt_title/intern_crg
+	mail_goodies = list(
+		/obj/item/weapon/wrapping_paper = 200,
+		/obj/item/weapon/form_printer = 200,
+		/obj/item/poster/custom = 200,
+		/obj/item/stack/material/wood{amount = 10} = 100,
+		/obj/item/stack/material/steel{amount = 10} = 100,
+		/obj/item/weapon/pickaxe = 100,
+		/obj/item/stack/marker_beacon = 100,
+	)
+
+/datum/alt_title/intern_exp
+	mail_goodies = list(
+		/obj/item/weapon/storage/mre/menu2 = 800,
+		/obj/item/device/binoculars/spyglass = 150,
+		/obj/item/weapon/cell/device/hyper = 50,
+	)
+
+/datum/alt_title/server
+	mail_goodies = list(
+		/obj/item/weapon/tray = 200,
+		/obj/item/weapon/material/kitchen/utensil/fork = 200,
+		/obj/item/weapon/material/knife/plastic = 200,
+		/obj/item/weapon/reagent_containers/food/snacks/tofu = 200,
+		/obj/item/weapon/reagent_containers/food/snacks/candy_corn = 200,
+	)
+
+/datum/alt_title/assistant
+
+// Visitor
+
+/datum/job/assistant
+
+/datum/alt_title/guest
+
+/datum/alt_title/traveler
+
 // Cargo
 
 /datum/job/qm
@@ -50,7 +140,7 @@
 
 /datum/job/cargo_tech
 	mail_goodies = list(
-		/obj/item/poster = 200,
+		/obj/item/poster/custom = 200,
 		/obj/item/stack/material/steel{amount = 10} = 150,
 		/obj/item/stack/material/glass{amount = 10} = 150,
 		/obj/item/stack/material/wood{amount = 10} = 150,
@@ -62,6 +152,17 @@
 		/obj/item/weapon/coin/silver = 50,
 	)
 	mail_color = COMMS_COLOR_SUPPLY
+
+/datum/alt_title/disposal_sorter
+	mail_goodies = list(
+		/obj/item/clothing/gloves/black = 300,
+		/obj/item/weapon/reagent_containers/spray/sterilizine = 300,
+		/obj/item/weapon/storage/bag/trash = 300,
+		/obj/item/weapon/coin/silver = 80,
+		/obj/item/weapon/storage/bag/trash/holding = 20
+	)
+
+/datum/alt_title/mailman
 
 /datum/job/mining
 	mail_goodies = list(
@@ -75,6 +176,8 @@
 		/obj/item/weapon/storage/bag/ore/holding = 100
 	)
 	mail_color = COMMS_COLOR_SUPPLY
+
+/datum/alt_title/drill_tech
 
 // Civilian
 
@@ -120,9 +223,12 @@
 		/obj/item/weapon/soap = 100,
 		/obj/item/weapon/grenade/chem_grenade/cleaner = 100,
 		/obj/item/weapon/reagent_containers/spray/chemsprayer/hosed = 50,
-		/obj/item/toy/plushie/borgplushie/drake/jani = 50,
+		/obj/item/weapon/storage/bag/trash/holding = 25,
+		/obj/item/toy/plushie/borgplushie/drake/jani = 25,
 	)
 	mail_color = COMMS_COLOR_SERVICE
+
+/datum/alt_title/maid
 
 /datum/job/librarian
 	mail_goodies = list(
@@ -157,20 +263,41 @@
 /datum/job/entertainer
 		// Still need to separate the goodies for each title, mimes and clows shouldn't get the same thing.
 	mail_goodies = list(
-		/obj/fruitspawner/banana = 200,	// Perfect for clowns.
-		/obj/item/weapon/reagent_containers/food/snacks/baguette = 175,	// Of course, MIMES. They're FRENCH.
-		/obj/item/weapon/reagent_containers/food/drinks/bottle/wine = 175,
-		/obj/item/weapon/reagent_containers/food/drinks/bottle/bottleofnothing = 175,
 		/obj/random/instrument = 175,
 		/obj/item/weapon/storage/pill_bottle/dice_nerd = 100,
 	)
 	mail_color = COMMS_COLOR_SERVICE
 
+/datum/alt_title/clown
+	mail_goodies = list(
+		/obj/fruitspawner/banana = 200,
+		/obj/item/weapon/pen/crayon/rainbow = 200,
+		/obj/item/weapon/bikehorn = 200,
+		/obj/item/weapon/soap/rainbow_soap = 100,
+		/obj/item/weapon/reagent_containers/spray/waterflower = 100,
+		/obj/item/weapon/reagent_containers/glass/bottle/lube = 100,
+		/obj/item/weapon/reagent_containers/food/snacks/pie = 100
+	)
+
+/datum/alt_title/mime
+	mail_goodies = list(
+		/obj/item/weapon/reagent_containers/food/drinks/bottle/wine = 250,
+		/obj/item/weapon/reagent_containers/glass/bottle/nothing = 250,
+		/obj/item/weapon/reagent_containers/food/snacks/baguette = 200,
+		/obj/item/weapon/pen/crayon/mime = 200
+	)
 /datum/job/entrepreneur // Same for these guys! What could they get?
 	mail_goodies = list(
 		/obj/item/weapon/reagent_containers/food/drinks/coffee = 1000, // For now, they'll get extra on coffee.
 	)
 	mail_color = COMMS_COLOR_SERVICE
+
+/datum/alt_title/paranormal_investigator
+	mail_goodies = list(
+		/obj/item/weapon/storage/fancy/candle_box = 340,
+		/obj/item/weapon/storage/fancy/whitecandle_box = 330,
+		/obj/item/weapon/storage/fancy/blackcandle_box = 330
+	)
 
 // Command
 
@@ -222,13 +349,10 @@
 
 /datum/job/engineer
 	mail_goodies = list(
-		/obj/item/stack/material/steel{amount = 10} = 135,
-		/obj/item/stack/material/lead{amount = 10} = 135,
-		/obj/item/stack/material/glass/reinforced{amount = 10} = 135,
-		/obj/item/weapon/storage/box/lights/mixed = 125,
-		/obj/item/device/lightreplacer = 120,
-		/obj/item/stack/cable_coil = 110,
-		/obj/item/weapon/rcd_ammo = 110,
+		/obj/item/stack/material/steel{amount = 10} = 235,
+		/obj/item/stack/material/lead{amount = 10} = 235,
+		/obj/item/stack/material/glass/reinforced{amount = 10} = 235,
+		/obj/item/weapon/rcd_ammo = 155,
 		/obj/item/stack/material/plasteel{amount = 10} = 100,
 		/obj/item/weapon/tool/screwdriver/power = 10,
 		/obj/item/weapon/tool/wirecutters/power = 10,
@@ -236,6 +360,18 @@
 		/obj/item/weapon/tool/wrench/power = 10,
 	)
 	mail_color = COMMS_COLOR_ENGINEER
+
+/datum/alt_title/electrician
+	mail_goodies = list(
+		/obj/item/weapon/storage/box/lights/mixed = 250,
+		/obj/item/stack/cable_coil = 250,
+		/obj/item/clothing/gloves/yellow = 200,
+		/obj/item/stack/cable_coil/heavyduty = 210,
+		/obj/item/weapon/tool/screwdriver/power = 10,
+		/obj/item/weapon/tool/wirecutters/power = 10,
+		/obj/item/weapon/weldingtool/electric = 10,
+		/obj/item/weapon/tool/wrench/power = 10,
+	)
 
 /datum/job/atmos
 	mail_goodies = list(
