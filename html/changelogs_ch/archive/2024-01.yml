@@ -111,6 +111,7 @@
   - bugfix: Added water as a catalyst to the "nutriment from sap" reaction as a workaround
       to prevent black sapbeans from losing their reagents on harvest. Recipe now
       requires 5u water before the three saps react.
+  - rscdel: Buggy camera in the shadekin hideout deleted
   Upstream:
   - bugfix: nurse spiders no longer spawning unexpectetly (to prevent snowballing)
       from random sources
