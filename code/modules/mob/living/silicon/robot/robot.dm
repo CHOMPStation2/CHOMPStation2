@@ -941,6 +941,28 @@
 		old_x = sprite_datum.pixel_x
 
 	if(stat == CONSCIOUS)
+		//CHOMPAdd Start
+		// Let us handle the bellies with our own system
+		update_fullness()
+		for(var/belly_class in vore_fullness_ex)
+			reset_belly_lights(belly_class)
+			var/vs_fullness = vore_fullness_ex[belly_class]
+			if(belly_class == "sleeper" && sleeper_state == 0 && vore_selected.silicon_belly_overlay_preference == "Sleeper") continue
+			if(belly_class == "sleeper" && sleeper_state != 0 && !(vs_fullness + 1 > vore_capacity_ex[belly_class]))
+				if(vore_selected.silicon_belly_overlay_preference == "Sleeper")
+					vs_fullness = vore_capacity_ex[belly_class]
+				else if(vore_selected.silicon_belly_overlay_preference == "Both")
+					vs_fullness += 1
+			if(!vs_fullness > 0) continue
+			if(resting)
+				if(!sprite_datum.has_vore_belly_resting_sprites)
+					continue
+				add_overlay(sprite_datum.get_belly_resting_overlay(src, vs_fullness, belly_class))
+			else
+				update_belly_lights(belly_class)
+				add_overlay(sprite_datum.get_belly_overlay(src, vs_fullness, belly_class))
+		//CHOMPAdd End
+		/*CHOMPRemove Start
 		var/belly_size = 0
 		if(sprite_datum.has_vore_belly_sprites && vore_selected.belly_overall_mult != 0)
 			if(vore_selected.silicon_belly_overlay_preference == "Sleeper")
@@ -974,7 +996,7 @@
 									fullness_to_add = ITEMSIZE_COST_HUGE
 								else
 									fullness_to_add = ITEMSIZE_COST_NO_CONTAINER
-							belly_size += (fullness_to_add / 32) //* vore_selected.overlay_item_multiplier //Enable this later when vorepanel is reworked.
+							belly_size += (fullness_to_add / 32) // vore_selected.overlay_item_multiplier //Enable this later when vorepanel is reworked.
 						else
 							belly_size += 1 //if it's not a person, nor an item... lets just go with 1
 
@@ -987,6 +1009,7 @@
 				add_overlay(sprite_datum.get_belly_resting_overlay(src, belly_size))
 			else if(!resting)
 				add_overlay(sprite_datum.get_belly_overlay(src, belly_size))
+		*///CHOMPRemove End
 
 		sprite_datum.handle_extra_icon_updates(src)			// Various equipment-based sprites go here.
 
@@ -1202,10 +1225,31 @@
 			sprite_datum = module_sprites[1]
 	else
 		var/selection = tgui_input_list(src, "Select an icon! [triesleft ? "You have [triesleft] more chance\s." : "This is your last try."]", "Robot Icon", module_sprites)
+		sprite_datum = selection
 		if(selection)
 			sprite_datum = selection
 		else
 			sprite_datum = module_sprites[1]
+		//CHOMPEdit Start, allow multi bellies
+		vore_icon_bellies = list() //Clear any belly options that may not exist now
+		vore_capacity_ex = list()
+		vore_fullness_ex = list()
+		if(sprite_datum.belly_capacity_list.len)
+			for(var/belly in sprite_datum.belly_capacity_list) //vore icons list only contains a list of names with no associated data
+				vore_capacity_ex[belly] = sprite_datum.belly_capacity_list[belly] //I dont know why but this wasnt working when I just
+				vore_fullness_ex[belly] = 0 //set the lists equal to the old lists
+				vore_icon_bellies += belly
+			for(var/belly in sprite_datum.belly_light_list)
+				vore_light_states[belly] = 0
+		else if(sprite_datum.has_vore_belly_sprites)
+			vore_capacity_ex = list("sleeper" = 1)
+			vore_fullness_ex = list("sleeper" = 0)
+			vore_icon_bellies = list("sleeper")
+			if(sprite_datum.has_sleeper_light_indicator)
+				vore_light_states = list("sleeepr" = 0)
+				sprite_datum.belly_light_list = list("sleeper")
+		update_fullness() //Set how full the newly defined bellies are, if they're already full
+		//CHOMPEdit End
 		if(!istype(src,/mob/living/silicon/robot/drone))
 			robot_species = sprite_datum.name
 		if(notransform)
@@ -1425,8 +1469,8 @@
 	return cell
 
 /mob/living/silicon/robot/lay_down()
-	 . = ..()
-	 update_icon()
+	. = ..()
+	update_icon()
 
 /mob/living/silicon/robot/verb/rest_style()
 	set name = "Switch Rest Style"

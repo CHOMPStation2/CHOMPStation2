@@ -42,6 +42,7 @@
 	var/stamp_offset_x = 0
 	// Physical offset of stamps on the object. Y direction.
 	var/stamp_offset_y = 2
+	var/opening = FALSE
 
 /obj/item/mail/envelope
 	name = "envelope"
@@ -110,7 +111,13 @@
 		to_chat(user, "<span class='notice'>You can't open somebody's mail! That's <em>illegal</em></span>")
 		return FALSE
 
+	if(opening)
+		to_chat(user, "<span class='notice'>You are already opening that!</span>")
+		return FALSE
+
+	opening = TRUE
 	if(!do_after(user, 1.5 SECONDS, target = user))
+		opening = FALSE
 		return FALSE
 	return TRUE
 
@@ -189,9 +196,11 @@
 	icon_state = "mailbag"
 	slot_flags = SLOT_BELT | SLOT_POCKET
 	w_class = ITEMSIZE_NORMAL
-	storage_slots = 21
+	storage_slots = 28
 	max_storage_space = 50
 	max_w_class = ITEMSIZE_NORMAL
+	use_to_pickup = TRUE
+	allow_quick_gather = TRUE
 	can_hold = list(
 		/obj/item/mail,
 		/obj/item/smallDelivery,

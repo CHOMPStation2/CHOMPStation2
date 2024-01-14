@@ -2,6 +2,11 @@
 	var/sleeper_resting = FALSE //Enable resting belly sprites for dogborgs that have the sprites
 	var/datum/matter_synth/water_res = null //Enable water for lick clean
 	var/has_recoloured = FALSE
+	//Multibelly support. We do not want to apply it to any module not supporting it in it's sprites
+	var/list/vore_light_states = list() //Robot exclusive
+	vore_capacity_ex = list()
+	vore_fullness_ex = list()
+	vore_icon_bellies = list()
 
 /mob/living/silicon/robot/verb/purge_nutrition()
 	set name = "Purge Nutrition"
@@ -30,9 +35,30 @@
 			else
 				to_chat(src, "<span class='filter_notice'>Insufficient water reserves.</span>")
 
+/mob/living/silicon/robot/proc/reset_belly_lights(var/b_class)
+	if(sprite_datum.belly_light_list.len && sprite_datum.belly_light_list.Find(b_class))
+		vore_light_states[b_class] = 0
+
+/mob/living/silicon/robot/proc/update_belly_lights(var/b_class)
+	if(sprite_datum.belly_light_list.len && sprite_datum.belly_light_list.Find(b_class))
+		vore_light_states[b_class] = 2
+		for (var/belly in vore_organs)
+			var/obj/belly/B = belly
+			if(b_class == "sleeper" && (B.silicon_belly_overlay_preference == "Vorebelly" || B.silicon_belly_overlay_preference == "Both") || b_class != "sleeper")
+				if(B.digest_mode != DM_DIGEST || B.belly_sprite_to_affect != b_class || !B.contents.len)
+					continue
+				for(var/contents in B.contents)
+					if(istype(contents, /mob/living))
+						vore_light_states[b_class] = 1
+						return
+
 /mob/living/silicon/robot/module_reset()
 	..()
 	has_recoloured = FALSE
+	// We only use the chomp system when the sprite supports it. Else we go through the fallback
+	vore_capacity_ex = list()
+	vore_fullness_ex = list()
+	vore_light_states = list()
 
 /mob/living/silicon/robot/verb/ColorMate()
 	set name = "Recolour Module"

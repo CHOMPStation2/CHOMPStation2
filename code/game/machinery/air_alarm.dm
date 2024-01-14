@@ -845,6 +845,8 @@
 	spawn(rand(0,15))
 		update_icon()
 		// CHOMPEdit Start: Looping Alarms
+		if(!soundloop)
+			return
 		if(stat & (NOPOWER | BROKEN))
 			soundloop.stop()
 		else if(atmoswarn)

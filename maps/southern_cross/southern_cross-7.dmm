@@ -16747,10 +16747,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
-"nfK" = (
-/obj/effect/catwalk_plated/dark,
-/turf/space,
-/area/space)
 "ngg" = (
 /obj/machinery/portable_atmospherics/canister/air/airlock,
 /obj/machinery/atmospherics/portables_connector{
@@ -82211,7 +82207,7 @@ cwA
 cwA
 cwA
 cwA
-nfK
+cwA
 cwA
 cwA
 cwA

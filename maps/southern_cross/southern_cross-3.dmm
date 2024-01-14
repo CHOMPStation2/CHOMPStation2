@@ -2013,6 +2013,7 @@
 /area/maintenance/thirddeck/foreport)
 "bRW" = (
 /obj/item/weapon/stool/padded,
+/obj/item/weapon/storage/toolbox/mechanical,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "bSv" = (
@@ -5565,6 +5566,7 @@
 	id = "hopquarters";
 	name = "Bolt Control";
 	pixel_y = -30;
+	req_access = list(57);
 	specialfunctions = 4
 	},
 /turf/simulated/floor/carpet,
@@ -5755,6 +5757,7 @@
 	id = "cmoquarters";
 	name = "Bolt Control";
 	pixel_y = -30;
+	req_access = list(40);
 	specialfunctions = 4
 	},
 /turf/simulated/floor/carpet/blue,
@@ -5770,6 +5773,7 @@
 	id = "rdquarters";
 	name = "Bolt Control";
 	pixel_y = -30;
+	req_access = list(30);
 	specialfunctions = 4
 	},
 /turf/simulated/floor/carpet,
@@ -7603,7 +7607,8 @@
 /turf/simulated/floor/plating,
 /area/crew_quarters/cafeteria)
 "fZP" = (
-/obj/structure/loot_pile/maint/technical,
+/obj/effect/decal/cleanable/greenglow,
+/obj/item/weapon/implant/dud,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "fZT" = (
@@ -8890,6 +8895,7 @@
 	id = "cequarters";
 	name = "Bolt Control";
 	pixel_y = 30;
+	req_access = list(56);
 	specialfunctions = 4
 	},
 /turf/simulated/floor/carpet,
@@ -9075,6 +9081,7 @@
 	id = "hosquarters";
 	name = "Bolt Control";
 	pixel_y = 30;
+	req_access = list(58);
 	specialfunctions = 4
 	},
 /turf/simulated/floor/carpet,
@@ -9090,6 +9097,7 @@
 	id = "comsecquarters";
 	name = "Bolt Control";
 	pixel_y = 30;
+	req_access = list(19);
 	specialfunctions = 4
 	},
 /turf/simulated/floor/carpet/blue,
@@ -12635,6 +12643,8 @@
 /area/bridge)
 "lrr" = (
 /obj/machinery/clonepod,
+/obj/item/weapon/reagent_containers/glass/bottle/biomass,
+/obj/item/weapon/reagent_containers/glass/bottle/biomass,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "lsm" = (
@@ -12897,14 +12907,16 @@
 	id = "sbridgedoor";
 	name = "Starboard Bridge Door Control";
 	pixel_x = 30;
-	pixel_y = -6
+	pixel_y = -6;
+	req_access = list(20)
 	},
 /obj/machinery/button/remote/airlock{
 	desc = "A remote control switch for the captain's office.";
 	id = "captaindoor";
 	name = "Office Door Control";
 	pixel_x = 30;
-	pixel_y = 6
+	pixel_y = 6;
+	req_access = list(20)
 	},
 /obj/effect/landmark/start/captain,
 /turf/simulated/floor/wood,
@@ -13524,13 +13536,7 @@
 /turf/simulated/floor/tiled,
 /area/bridge)
 "mhi" = (
-/obj/item/weapon/implant/dud,
-/obj/structure/table/steel,
-/obj/item/weapon/implant/sizecontrol,
-/obj/item/weapon/implant/dud,
-/obj/item/clothing/under/rank/geneticist,
-/obj/item/weapon/handcuffs/cable/white,
-/obj/item/clothing/suit/storage/toggle/labcoat,
+/obj/machinery/transhuman/resleever,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "mhm" = (
@@ -14382,7 +14388,8 @@
 /obj/machinery/button/remote/blast_door{
 	id = "csblast";
 	name = "Blastdoors";
-	pixel_y = -24
+	pixel_y = -24;
+	req_access = list(19)
 	},
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
@@ -14627,12 +14634,14 @@
 /obj/machinery/button/remote/blast_door{
 	id = "bridge blast";
 	name = "Bridge Blastdoors";
-	pixel_y = -36
+	pixel_y = -36;
+	req_access = list(19)
 	},
 /obj/machinery/button/windowtint{
 	id = "bridge_center";
 	pixel_x = -11;
-	pixel_y = -24
+	pixel_y = -24;
+	req_access = null
 	},
 /obj/machinery/keycard_auth{
 	pixel_y = -24
@@ -15095,7 +15104,8 @@
 /obj/machinery/button/remote/blast_door{
 	id = "directorblast";
 	name = "Security Shutters";
-	pixel_x = -26
+	pixel_x = -26;
+	req_access = list(20)
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/sc/sd)
@@ -18123,7 +18133,8 @@
 /obj/machinery/button/remote/blast_door{
 	id = "heads_meeting";
 	name = "Security Shutters";
-	pixel_x = -26
+	pixel_x = -26;
+	req_access = list(19)
 	},
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
@@ -20844,7 +20855,8 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
 "sDu" = (
-/obj/random/obstruction,
+/obj/random/junk,
+/obj/random/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "sEf" = (
@@ -23133,6 +23145,12 @@
 /obj/item/device/flashlight/lamp/green,
 /turf/simulated/floor/carpet/bcarpet,
 /area/crew_quarters/sleep/vistor_room_9)
+"uDZ" = (
+/obj/structure/loot_pile/maint/technical,
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsaft{
+	name = "Third Deck Aft Maintenance"
+	})
 "uEb" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -26693,10 +26711,9 @@
 	name = "Third Deck Aft Maintenance"
 	})
 "xnt" = (
-/obj/effect/decal/cleanable/generic,
-/obj/item/weapon/implanter,
-/obj/structure/table/steel,
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/machinery/computer/transhuman{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "xob" = (
@@ -27757,6 +27774,7 @@
 /area/crew_quarters/cafeteria)
 "ydk" = (
 /obj/effect/decal/cleanable/greenglow,
+/obj/item/weapon/implant/sizecontrol,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "ydV" = (
@@ -27799,6 +27817,7 @@
 /obj/item/weapon/photo,
 /obj/item/weapon/photo,
 /obj/item/weapon/disk/nifsoft/compliance,
+/obj/item/weapon/implanter,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "yfh" = (
@@ -66968,7 +66987,7 @@ shV
 qaU
 qaU
 xRu
-ydk
+fZP
 sVv
 sDu
 xnt
@@ -66977,7 +66996,7 @@ qRF
 sIj
 miC
 eyp
-uge
+uDZ
 wzA
 xfF
 iHm
@@ -67486,7 +67505,7 @@ qaU
 tfU
 yeL
 fFk
-fZP
+rQK
 lrr
 wzA
 gqL

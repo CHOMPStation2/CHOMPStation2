@@ -59,3 +59,59 @@
   tacoguy7765093:
   - maptweak: Landing zones have been tweaked to allow landing of Overmap Ships
   - imageadd: Southern Cross's overmap icon has their own sprite now.
+  - maptweak: Space POIs are more functional now
+2024-01-07:
+  TheGreatKitsune:
+  - rscadd: A new set of ears
+  Upstream:
+  - qol: Allows to temporarily disable textlimit warnings for the vorepanel belly
+      texts
+  - bugfix: the self resize verb now can be used even if resizing through others is
+      disabled
+  - qol: Ignore bellied players in the appendicitis events
+  tacoguy7765093:
+  - imageadd: added large snake tail for teshari
+2024-01-08:
+  tacoguy7765093:
+  - rscdel: Removed spawn of a pulse rifle
+  - maptweak: Minor fixes in The Dark
+2024-01-10:
+  EtheoBoxxman:
+  - bugfix: fixes buns/bunbun cooking by fixing chaos cake interference
+  FluffMedic:
+  - bugfix: some mob features should now be on the proper type path
+  - bugfix: solar moths should be less theoretical
+  - bugfix: Re-enables an accidentally disabled event
+  - maptweak: MoL has been altered
+  UniquaSa:
+  - imageadd: added another new big leggies
+2024-01-11:
+  Aroliacue:
+  - maptweak: All major departments now have clothing vendors.
+  - maptweak: Added roundstart fultons to medical.
+  - maptweak: Added an extra surgery kit and some resleever circuit boards to the
+      medical storage room.
+  - maptweak: Added tools to the science circuit workshop.
+  - maptweak: Added a prebuilt hidden resleever setup to deck three.
+  FluffMedic:
+  - rscadd: Two new OM POIs
+  - rscadd: A hidden area with traders
+  - rscadd: Some new mobs
+  - rscadd: Some strange content for engi and xenobio, obtained from the traders
+  - rscadd: New type of netgun added to cargo
+  Kashargul:
+  - rscadd: robot multibelly support
+  - bugfix: tgui bundle building skipping jsx files
+  - balance: increased SM delam explosion range by 50 % (MIN 8 -> 12. MAX 16 -> 24)
+  - bugfix: fixed a runtime in the alarm system.
+  TheCaramelion:
+  - maptweak: Bridge blast doors require Command access now
+2024-01-14:
+  Missile597:
+  - bugfix: Added water as a catalyst to the "nutriment from sap" reaction as a workaround
+      to prevent black sapbeans from losing their reagents on harvest. Recipe now
+      requires 5u water before the three saps react.
+  Upstream:
+  - bugfix: nurse spiders no longer spawning unexpectetly (to prevent snowballing)
+      from random sources
+  - rscadd: Added emag functionality on SleeveMate
