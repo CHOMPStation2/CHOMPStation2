@@ -110,3 +110,4 @@
   Upstream:
   - bugfix: nurse spiders no longer spawning unexpectetly (to prevent snowballing)
       from random sources
+  - rscadd: Added emag functionality on SleeveMate
