@@ -107,6 +107,10 @@
   TheCaramelion:
   - maptweak: Bridge blast doors require Command access now
 2024-01-14:
+  Missile597:
+  - bugfix: Added water as a catalyst to the "nutriment from sap" reaction as a workaround
+      to prevent black sapbeans from losing their reagents on harvest. Recipe now
+      requires 5u water before the three saps react.
   Upstream:
   - bugfix: nurse spiders no longer spawning unexpectetly (to prevent snowballing)
       from random sources
