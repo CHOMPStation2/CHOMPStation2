@@ -107,6 +107,9 @@
   TheCaramelion:
   - maptweak: Bridge blast doors require Command access now
 2024-01-14:
+  FluffMedic:
+  - bugfix: starhunter trader code should function now
+  - bugfix: starhunter's desc isn't default and have names.
   Missile597:
   - bugfix: Added water as a catalyst to the "nutriment from sap" reaction as a workaround
       to prevent black sapbeans from losing their reagents on harvest. Recipe now
