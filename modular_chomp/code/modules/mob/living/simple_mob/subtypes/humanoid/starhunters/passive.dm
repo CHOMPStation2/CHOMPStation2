@@ -1,5 +1,7 @@
 /mob/living/simple_mob/humanoid/starhunter/trader/weaponsmith
+	name = "Starhunter Weapon Smith"
 	icon_state = "sunetrader"
+	icon_living = "sunetrader"
 	products	= list(/obj/item/weapon/gun/energy/sickshot = 5,
 		/obj/item/weapon/material/twohanded/fireaxe/scythe = 3,
 		/obj/item/weapon/material/twohanded/spear/lance = 3,
@@ -21,7 +23,9 @@
 		)
 
 /mob/living/simple_mob/humanoid/starhunter/trader/reliccollecter
+	name = "Starhunter Relic Collector"
 	icon_state = "snektrader"
+	icon_living = "snektrader"
 	products	= list(/obj/item/clothing/head/helmet/combat/crusader = 3,
 		/obj/item/clothing/suit/armor/combat/crusader = 3,
 		/obj/item/clothing/head/culthood = 3,
@@ -50,7 +54,9 @@
 		)
 
 /mob/living/simple_mob/humanoid/starhunter/trader/miner
+	name = "Starhunter Miner"
 	icon_state = "snektrader"
+	icon_living = "snektrader"
 	products	= list(/obj/item/weapon/kinetic_crusher/glaive = 5,
 		/obj/item/weapon/kinetic_crusher = 3,
 		/obj/item/weapon/gun/energy/mininglaser = 3,
@@ -79,7 +85,9 @@
 		)
 
 /mob/living/simple_mob/humanoid/starhunter/trader/farmer
+	name = "Starhunter Farmer"
 	icon_state = "sunetrader"
+	icon_living = "sunetrader"
 	products	= list(/obj/item/slime_extract/sepia =3,
 		/obj/item/slime_extract/ruby = 3,
 		/obj/item/slime_extract/bluespace = 3,

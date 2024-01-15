@@ -23,6 +23,9 @@
 	// Enables refilling with appropriate cartridges
 	var/refillable = TRUE
 	var/obj/item/weapon/coin/coin
+	var/list/log = list()
+	var/has_logs = 0
+	var/list/product_records = list()
 
 
 /mob/living/simple_mob/humanoid/starhunter/trader/Initialize()
@@ -75,6 +78,13 @@
 		to_chat(user, "<span class='notice'>You insert \the [W] into \the [src].</span>")
 		SStgui.update_uis(src)
 		return
+	else
+
+		for(var/datum/stored_item/vending_product/R in product_records)
+			if(istype(W, R.item_path) && (W.name == R.item_name))
+				stock(W, R, user)
+				return
+		..()
 
 
 /mob/living/simple_mob/humanoid/starhunter/trader/proc/pay_with_cash(var/obj/item/weapon/spacecash/cashmoney, mob/user)
@@ -160,3 +170,223 @@
 				data["guestNotice"] = "Unlinked ID detected. Present cash to pay.";
 
 	return data
+
+
+
+/mob/living/simple_mob/humanoid/starhunter/trader/tgui_act(action, params)
+	if(usr.stat || usr.restrained())
+		return
+	if(..())
+		return TRUE
+
+	. = TRUE
+	switch(action)
+		if("remove_coin")
+			if(issilicon(usr))
+				return FALSE
+
+			if(!coin)
+				to_chat(usr, "<span class='filter_notice'>There is no coin in this machine.</span>")
+				return
+
+			coin.forceMove(src.loc)
+			if(!usr.get_active_hand())
+				usr.put_in_hands(coin)
+
+			to_chat(usr, "<span class='notice'>You remove \the [coin] from \the [src].</span>")
+			coin = null
+			categories &= ~CAT_COIN
+			return TRUE
+		if("vend")
+			if(!vend_ready)
+				to_chat(usr, "<span class='warning'>[src] is busy!</span>")
+				return
+
+			var/key = text2num(params["vend"])
+			var/datum/stored_item/vending_product/R = product_records[key]
+
+			// This should not happen unless the request from NanoUI was bad
+			if(!(R.category & categories))
+				return
+
+			if(!can_buy(R, usr))
+				return
+
+			if(R.price <= 0)
+				vend(R, usr)
+				add_fingerprint(usr)
+				return TRUE
+
+			if(issilicon(usr)) //If the item is not free, provide feedback if a synth is trying to buy something.
+				to_chat(usr, "<span class='danger'>Lawed unit recognized.  Lawed units cannot complete this transaction.  Purchase canceled.</span>")
+				return
+			if(!ishuman(usr))
+				return
+
+			vend_ready = FALSE // From this point onwards, vendor is locked to performing this transaction only, until it is resolved.
+
+			var/mob/living/carbon/human/H = usr
+			var/obj/item/weapon/card/id/C = H.GetIdCard()
+
+			if(!vendor_account || vendor_account.suspended)
+				to_chat(usr, "<span class='filter_notice'>Vendor account offline. Unable to process transaction.</span>")
+				flick("[icon_state]-deny",src)
+				vend_ready = TRUE
+				return
+
+			currently_vending = R
+
+			var/paid = FALSE
+
+			if(istype(usr.get_active_hand(), /obj/item/weapon/spacecash))
+				var/obj/item/weapon/spacecash/cash = usr.get_active_hand()
+				paid = pay_with_cash(cash, usr)
+			else if(istype(usr.get_active_hand(), /obj/item/weapon/spacecash/ewallet))
+				var/obj/item/weapon/spacecash/ewallet/wallet = usr.get_active_hand()
+				paid = pay_with_ewallet(wallet)
+			else if(istype(C, /obj/item/weapon/card))
+				paid = pay_with_card(C, usr)
+			/*else if(usr.can_advanced_admin_interact())
+				to_chat(usr, "<span class='notice'>Vending object due to admin interaction.</span>")
+				paid = TRUE*/
+			else
+				to_chat(usr, "<span class='warning'>Payment failure: you have no ID or other method of payment.</span>")
+				vend_ready = TRUE
+				flick("[icon_state]-deny",src)
+				return TRUE // we set this because they shouldn't even be able to get this far, and we want the UI to update.
+			if(paid)
+				vend(currently_vending, usr) // vend will handle vend_ready
+				. = TRUE
+			else
+				to_chat(usr, "<span class='warning'>Payment failure: unable to process payment.</span>")
+				vend_ready = TRUE
+
+/mob/living/simple_mob/humanoid/starhunter/trader/proc/vend(datum/stored_item/vending_product/R, mob/user)
+	if(!can_buy(R, user))
+		return
+
+	if(!R.amount)
+		to_chat(user, "<span class='warning'>[src] has ran out of that product.</span>")
+		vend_ready = TRUE
+		return
+
+	vend_ready = FALSE //One thing at a time!!
+	SStgui.update_uis(src)
+
+	if(R.category & CAT_COIN)
+		if(!coin)
+			to_chat(user, "<span class='notice'>You need to insert a coin to get this item.</span>")
+			return
+		else
+			qdel(coin)
+			coin = null
+			categories &= ~CAT_COIN
+
+	flick("[icon_state]-vend",src)
+	addtimer(CALLBACK(src, PROC_REF(delayed_vend), R, user), vend_delay)
+
+/mob/living/simple_mob/humanoid/starhunter/trader/proc/delayed_vend(datum/stored_item/vending_product/R, mob/user)
+	R.get_product(get_turf(src))
+
+	playsound(src, "sound/[vending_sound]", 100, 1, 1)
+
+	GLOB.items_sold_shift_roundstat++
+
+	vend_ready = 1
+	currently_vending = null
+	SStgui.update_uis(src)
+
+/mob/living/simple_mob/humanoid/starhunter/trader/proc/stock(obj/item/weapon/W, var/datum/stored_item/vending_product/R, var/mob/user)
+	if(!user.unEquip(W))
+		return
+
+	to_chat(user, "<span class='notice'>You insert \the [W] in the product receptor.</span>")
+	R.add_product(W)
+	if(has_logs)
+		do_logging(R, user)
+
+	SStgui.update_uis(src)
+
+/mob/living/simple_mob/humanoid/starhunter/trader/proc/pay_with_ewallet(var/obj/item/weapon/spacecash/ewallet/wallet)
+	visible_message("<span class='info'>\The [usr] swipes \the [wallet] through \the [src].</span>")
+	playsound(src, 'sound/machines/id_swipe.ogg', 50, 1)
+	if(currently_vending.price > wallet.worth)
+		to_chat(usr, "<span class='warning'>Insufficient funds on chargecard.</span>")
+		return 0
+	else
+		wallet.worth -= currently_vending.price
+		credit_purchase("[wallet.owner_name] (chargecard)")
+		return 1
+
+/**
+ * Scan a card and attempt to transfer payment from associated account.
+ *
+ * Takes payment for whatever is the currently_vending item. Returns 1 if
+ * successful, 0 if failed
+ */
+/mob/living/simple_mob/humanoid/starhunter/trader/proc/pay_with_card(obj/item/weapon/card/id/I, mob/M)
+	visible_message("<span class='info'>[M] swipes a card through [src].</span>")
+	playsound(src, 'sound/machines/id_swipe.ogg', 50, 1)
+
+	var/datum/money_account/customer_account = get_account(I.associated_account_number)
+	if(!customer_account)
+		to_chat(M, "<span class='warning'>Error: Unable to access account. Please contact technical support if problem persists.</span>")
+		return FALSE
+
+	if(customer_account.suspended)
+		to_chat(M, "<span class='warning'>Unable to access account: account suspended.</span>")
+		return FALSE
+
+	// Have the customer punch in the PIN before checking if there's enough money. Prevents people from figuring out acct is
+	// empty at high security levels
+	if(customer_account.security_level != 0) //If card requires pin authentication (ie seclevel 1 or 2)
+		var/attempt_pin = tgui_input_number(usr, "Enter pin code", "Vendor transaction")
+		customer_account = attempt_account_access(I.associated_account_number, attempt_pin, 2)
+
+		if(!customer_account)
+			to_chat(M, "<span class='warning'>Unable to access account: incorrect credentials.</span>")
+			return FALSE
+
+	if(currently_vending.price > customer_account.money)
+		to_chat(M, "<span class='warning'>Insufficient funds in account.</span>")
+		return FALSE
+
+	// Okay to move the money at this point
+
+	// debit money from the purchaser's account
+	customer_account.money -= currently_vending.price
+
+	// create entry in the purchaser's account log
+	var/datum/transaction/T = new()
+	T.target_name = "[vendor_account.owner_name] (via [name])"
+	T.purpose = "Purchase of [currently_vending.item_name]"
+	if(currently_vending.price > 0)
+		T.amount = "([currently_vending.price])"
+	else
+		T.amount = "[currently_vending.price]"
+	T.source_terminal = name
+	T.date = current_date_string
+	T.time = stationtime2text()
+	customer_account.transaction_log.Add(T)
+
+	// Give the vendor the money. We use the account owner name, which means
+	// that purchases made with stolen/borrowed card will look like the card
+	// owner made them
+	credit_purchase(customer_account.owner_name)
+	return 1
+
+/mob/living/simple_mob/humanoid/starhunter/trader/proc/do_logging(datum/stored_item/vending_product/R, mob/user, var/vending = 0)
+	if(user.GetIdCard())
+		var/obj/item/weapon/card/id/tempid = user.GetIdCard()
+		var/list/list_item = list()
+		if(vending)
+			list_item += "vend"
+		else
+			list_item += "stock"
+		list_item += tempid.registered_name
+		list_item += stationtime2text()
+		list_item += R.item_name
+		log[++log.len] = list_item
+
+/mob/living/simple_mob/humanoid/starhunter/trader/proc/can_buy(datum/stored_item/vending_product/R, mob/user)
+	return TRUE

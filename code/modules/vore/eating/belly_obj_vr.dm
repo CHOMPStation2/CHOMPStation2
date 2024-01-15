@@ -31,7 +31,7 @@
 	var/digestchance = 0					// % Chance of stomach beginning to digest if prey struggles
 	var/absorbchance = 0					// % Chance of stomach beginning to absorb if prey struggles
 	var/escapechance = 0 					// % Chance of prey beginning to escape if prey struggles.
-	var/escapechance_absorbed = 20			// % Chance of absorbed prey finishing an escape. Requires a successful escape roll against the above as well.
+	var/escapechance_absorbed = 0			// % Chance of absorbed prey finishing an escape. Requires a successful escape roll against the above as well.
 	var/escape_stun = 0						// AI controlled mobs with a number here will be weakened by the provided var when someone escapes, to prevent endless nom loops
 	var/transferchance = 0 					// % Chance of prey being trasnsfered, goes from 0-100%
 	var/transferchance_secondary = 0 		// % Chance of prey being transfered to transferchance_secondary, also goes 0-100%
@@ -1494,6 +1494,8 @@
 			Prey.ingested.trans_to_holder(Pred.ingested, Prey.ingested.total_volume, 0.5, TRUE) // Therefore don't bother spending cpu
 			Prey.touching.del_reagent("stomacid") //Don't need this stuff in our bloodstream.
 			Prey.touching.del_reagent("diet_stomacid") //Don't need this stuff in our bloodstream.
+			Prey.touching.del_reagent("pacid") //Don't need this stuff in our bloodstream.
+			Prey.touching.del_reagent("sacid") //Don't need this stuff in our bloodstream.
 			Prey.touching.del_reagent("cleaner") //Don't need this stuff in our bloodstream.
 			Prey.touching.trans_to_holder(Pred.ingested, Prey.touching.total_volume, 0.5, TRUE) // On updating the prey's reagents
 		else if(M.reagents)
@@ -1585,6 +1587,8 @@
 		Prey.ingested.trans_to_holder(Pred.ingested, Prey.ingested.total_volume, copy = TRUE)
 		Prey.touching.del_reagent("stomacid") //CHOMPEdit Don't need this stuff in our bloodstream.
 		Prey.touching.del_reagent("diet_stomacid") //CHOMPEdit Don't need this stuff in our bloodstream.
+		Prey.touching.del_reagent("pacid") //Don't need this stuff in our bloodstream.
+		Prey.touching.del_reagent("sacid") //Don't need this stuff in our bloodstream.
 		Prey.touching.del_reagent("cleaner") //CHOMPEdit Don't need this stuff in our bloodstream.
 		Prey.touching.trans_to_holder(Pred.ingested, Prey.touching.total_volume, copy = TRUE)
 		// TODO - Find a way to make the absorbed prey share the effects with the pred.
@@ -2085,7 +2089,7 @@
 
 	//absorb resists
 	if(escapable || owner.stat) //If the stomach has escapable enabled or the owner is dead/unconscious
-		if(prob(escapechance_absorbed) || owner.stat) //Let's have it check to see if the prey's escape attempt starts.
+		if(prob(escapechance) || owner.stat) //Let's have it check to see if the prey's escape attempt starts.
 
 
 			var/living_count = 0
