@@ -141,3 +141,5 @@
   - bugfix: No more fatal heartburn to organic crew with stronger acids.
   zeskorion:
   - rscadd: adds new bodymarkings, "ears", and wings.
+  null:
+  - bugfix: no more multiproccs on butchering
