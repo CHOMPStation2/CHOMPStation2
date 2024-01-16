@@ -702,7 +702,13 @@ var/global/datum/controller/occupations/job_master
 				log_admin("[key_name(C)] has requested to vore spawn into [key_name(pred)]")
 				message_admins("[key_name(C)] has requested to vore spawn into [key_name(pred)]")
 
-				var/confirm = alert(pred, "[C.prefs.real_name] is attempting to spawn into your [vore_spawn_gut]. Let them?", "Confirm", "No", "Yes")
+				var/confirm
+				if(pred.no_latejoin_vore_warning)
+					confirm = tgui_alert(pred, "[C.prefs.real_name] is attempting to spawn into your [vore_spawn_gut]. Let them?", "Confirm", list("No", "Yes"), 10 SECONDS)
+					if(!confirm)
+						confirm = "Yes"
+				else
+					confirm = alert(pred, "[C.prefs.real_name] is attempting to spawn into your [vore_spawn_gut]. Let them?", "Confirm", "No", "Yes")
 				if(confirm != "Yes")
 					to_chat(C, "<span class='warning'>[pred] has declined your spawn request.</span>")
 					var/message = sanitizeSafe(input(pred,"Do you want to leave them a message?")as text|null)
@@ -763,7 +769,13 @@ var/global/datum/controller/occupations/job_master
 				log_admin("[key_name(C)] has requested to pred spawn onto [key_name(prey)]")
 				message_admins("[key_name(C)] has requested to pred spawn onto [key_name(prey)]")
 
-				var/confirm = alert(prey, "[C.prefs.real_name] is attempting to televore you into their [vore_spawn_gut]. Let them?", "Confirm", "No", "Yes")
+				var/confirm
+				if(prey.no_latejoin_prey_warning)
+					confirm = tgui_alert(prey, "[C.prefs.real_name] is attempting to televore you into their [vore_spawn_gut]. Let them?", "Confirm", list("No", "Yes"), 10 SECONDS)
+					if(!confirm)
+						confirm = "Yes"
+				else
+					confirm = alert(prey, "[C.prefs.real_name] is attempting to televore you into their [vore_spawn_gut]. Let them?", "Confirm", "No", "Yes")
 				if(confirm != "Yes")
 					to_chat(C, "<span class='warning'>[prey] has declined your spawn request.</span>")
 					var/message = sanitizeSafe(input(prey,"Do you want to leave them a message?")as text|null)
