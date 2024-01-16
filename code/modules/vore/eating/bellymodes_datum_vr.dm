@@ -182,7 +182,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 
 /datum/digest_mode/heal/process_mob(obj/belly/B, mob/living/L)
 	var/oldstat = L.stat
-	if(L.stat == DEAD)
+	if(L.stat == DEAD || !L.permit_healbelly) //CHOMPEdit healpref check
 		return null // Can't heal the dead with healbelly
 	var/mob/living/carbon/human/H = L
 	if(B.owner.nutrition > 90 && H.isSynthetic())

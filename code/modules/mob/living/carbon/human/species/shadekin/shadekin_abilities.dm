@@ -182,9 +182,18 @@
 			var/list/potentials = living_mobs(0)
 			if(potentials.len)
 				var/mob/living/target = pick(potentials)
-				if(istype(target) && target.devourable && target.can_be_drop_prey && vore_selected)
+				if(istype(target) && target.devourable && target.can_be_drop_prey && target.phase_vore && vore_selected && phase_vore)
 					target.forceMove(vore_selected)
-					to_chat(target,"<span class='warning'>\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
+					to_chat(target,"<span class='vwarning'>\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
+		//Potential phase-in prey
+		else if(can_be_drop_prey) //Toggleable in vore panel
+			var/list/potentials = living_mobs(0)
+			if(potentials.len)
+				var/mob/living/target = pick(potentials)
+				if(istype(target) && devourable && target.can_be_drop_pred && target.phase_vore && target.vore_selected && phase_vore)
+					forceMove(target.vore_selected)
+					to_chat(target,"<span class='vwarning'>\The [src] phases into you, [target.vore_selected.vore_verb]ing them into your [target.vore_selected.name]!</span>")
+					to_chat(usr,"<span class='vwarning>You phase into [target], ending up being [target.vore_selected.vore_verb]ed into their [target.vore_selected.name]!</span>")
 
 		ability_flags &= ~AB_PHASE_SHIFTING
 

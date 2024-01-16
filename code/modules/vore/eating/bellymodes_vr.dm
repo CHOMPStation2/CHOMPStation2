@@ -228,7 +228,7 @@
 							touchable_atoms |= I
 
 				//Stripping flag
-				if(mode_flags & DM_FLAG_STRIPPING)
+				if((mode_flags & DM_FLAG_STRIPPING) && H.strip_pref) //CHOMPEdit Stripping pref check
 					for(var/slot in slots)
 						var/obj/item/I = H.get_equipped_item(slot = slot)
 						if(I && H.unEquip(I, force = FALSE))

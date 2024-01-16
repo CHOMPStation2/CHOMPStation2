@@ -259,7 +259,6 @@
 	new_mob.feeding = feeding
 	new_mob.can_be_drop_prey = can_be_drop_prey
 	new_mob.can_be_drop_pred = can_be_drop_pred
-	new_mob.latejoin_vore = latejoin_vore
 	new_mob.digest_leave_remains = digest_leave_remains
 	new_mob.allowmobvore = allowmobvore
 	new_mob.permit_healbelly = permit_healbelly
@@ -282,6 +281,21 @@
 	new_mob.allow_spontaneous_tf = allow_spontaneous_tf
 	new_mob.eating_privacy_global = eating_privacy_global
 	new_mob.text_warnings = text_warnings
+
+	//CHOMP stuff Start
+	new_mob.phase_vore = phase_vore
+	new_mob.latejoin_vore = latejoin_vore
+	new_mob.latejoin_prey = latejoin_prey
+	new_mob.receive_reagents = receive_reagents
+	new_mob.give_reagents = give_reagents
+	new_mob.autotransferable = autotransferable
+	new_mob.strip_pref = strip_pref
+	new_mob.vore_sprite_color = vore_sprite_color
+	new_mob.vore_sprite_multiply = vore_sprite_multiply
+	new_mob.noisy_full = noisy_full
+	new_mob.no_latejoin_vore_warning = no_latejoin_vore_warning
+	new_mob.no_latejoin_prey_warning = no_latejoin_prey_warning
+	//CHOMP stuff End
 
 /////SUBTYPES/////
 

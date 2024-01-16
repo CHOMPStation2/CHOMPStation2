@@ -69,14 +69,19 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/pickup_pref = TRUE
 
 	//CHOMP stuff
+	var/phase_vore = TRUE
+	var/noisy_full = FALSE
 	var/receive_reagents = FALSE
 	var/give_reagents = FALSE
 	var/latejoin_vore = FALSE
 	var/latejoin_prey = FALSE
 	var/autotransferable = TRUE
+	var/strip_pref = FALSE
 	var/vore_sprite_multiply = list("stomach" = FALSE, "taur belly" = FALSE)
 	var/vore_sprite_color = list("stomach" = "#000", "taur belly" = "#000")
-  //CHOMP stuff end
+	var/no_latejoin_vore_warning = FALSE // Do not save!
+	var/no_latejoin_prey_warning = FALSE // Do not save!
+	//CHOMP stuff end
 
 	var/list/belly_prefs = list()
 	var/vore_taste = "nothing in particular"
@@ -207,14 +212,18 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	eating_privacy_global = json_from_file["eating_privacy_global"]
 
 
-	//CHOMP stuff
+	//CHOMP stuff Start
+	phase_vore = json_from_file["phase_vore"]
 	latejoin_vore = json_from_file["latejoin_vore"]
 	latejoin_prey = json_from_file["latejoin_prey"]
 	receive_reagents = json_from_file["receive_reagents"]
+	noisy_full = json_from_file["noisy_full"]
 	give_reagents = json_from_file["give_reagents"]
 	autotransferable = json_from_file["autotransferable"]
 	vore_sprite_color = json_from_file["vore_sprite_color"]
 	vore_sprite_multiply = json_from_file["vore_sprite_multiply"]
+	strip_pref = json_from_file["strip_mechanics_pref"]
+	//CHOMP stuff End
 
 
 	//Quick sanitize
@@ -299,7 +308,9 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		while(weight_messages.len < 10)
 			weight_messages.Add("")
 
-	//CHOMP stuff
+	//CHOMP stuff Start
+	if(isnull(phase_vore))
+		phase_vore = TRUE
 	if(isnull(latejoin_vore))
 		latejoin_vore = FALSE
 	if(isnull(latejoin_prey))
@@ -308,12 +319,17 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		receive_reagents = FALSE
 	if(isnull(give_reagents))
 		give_reagents = FALSE
+	if(isnull(noisy_full))
+		noisy_full = TRUE
 	if(isnull(autotransferable))
 		autotransferable = TRUE
 	if(isnull(vore_sprite_color))
 		vore_sprite_color = list("stomach" = "#000", "taur belly" = "#000")
 	if(isnull(vore_sprite_multiply))
 		vore_sprite_multiply = list("stomach" = FALSE, "taur belly" = FALSE)
+	if(isnull(strip_pref))
+		strip_pref = TRUE
+	//CHOMP stuff End
 
 	return TRUE
 
@@ -335,23 +351,25 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"vore_smell"			= vore_smell,
 			"permit_healbelly"		= permit_healbelly,
 			"noisy" 				= noisy,
+			"noisy_full" 			= noisy_full, //CHOMPedit
 			"selective_preference"	= selective_preference,
 			"show_vore_fx"			= show_vore_fx,
 			"can_be_drop_prey"		= can_be_drop_prey,
 			"can_be_drop_pred"		= can_be_drop_pred,
 			"latejoin_vore"			= latejoin_vore, //CHOMPedit
-			"latejoin_prey"			= latejoin_prey,
+			"latejoin_prey"			= latejoin_prey, //CHOMPedit
 			"allow_spontaneous_tf"	= allow_spontaneous_tf,
 			"step_mechanics_pref"	= step_mechanics_pref,
 			"pickup_pref"			= pickup_pref,
 			"belly_prefs"			= belly_prefs,
-			"receive_reagents"		= receive_reagents,
-			"give_reagents"			= give_reagents,
+			"receive_reagents"		= receive_reagents, //CHOMPedit
+			"give_reagents"			= give_reagents, //CHOMPedit
 			"autotransferable"		= autotransferable,
 			"drop_vore"				= drop_vore,
 			"slip_vore"				= slip_vore,
 			"stumble_vore"			= stumble_vore,
 			"throw_vore" 			= throw_vore,
+			"phase_vore" 			= phase_vore, //CHOMPedit
 			"food_vore" 			= food_vore,
 			"nutrition_message_visible"	= nutrition_message_visible,
 			"nutrition_messages"		= nutrition_messages,
