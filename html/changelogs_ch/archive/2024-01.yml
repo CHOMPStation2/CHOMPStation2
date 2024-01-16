@@ -144,5 +144,9 @@
   null:
   - bugfix: no more multiproccs on butchering
 2024-01-16:
+  Aroliacue:
+  - maptweak: Made some fixes/improvements to the 'Survival Luxury Home' superpose
+      capsule, including better lighting, labeled doors, openable curtains, a light
+      switch and proper floor tiles in spots it was missing.
   Raeschen:
   - bugfix: Increase default welcome window height to remove scrollbar
