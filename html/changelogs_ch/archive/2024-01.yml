@@ -143,3 +143,6 @@
   - rscadd: adds new bodymarkings, "ears", and wings.
   null:
   - bugfix: no more multiproccs on butchering
+2024-01-16:
+  Raeschen:
+  - bugfix: Increase default welcome window height to remove scrollbar
