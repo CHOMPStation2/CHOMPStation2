@@ -244,7 +244,7 @@
 	P.weight_message_visible = src.weight_message_visible
 	P.weight_messages = src.weight_messages
 
-	//CHOMP stuff
+	//CHOMP stuff Start
 	P.phase_vore = src.phase_vore
 	P.noisy_full = src.noisy_full
 	P.latejoin_vore = src.latejoin_vore
@@ -257,6 +257,7 @@
 	P.vore_sprite_multiply = src.vore_sprite_multiply
 	P.no_latejoin_vore_warning = src.no_latejoin_vore_warning
 	P.no_latejoin_prey_warning = src.no_latejoin_prey_warning
+	//CHOMP Stuff End
 
 	var/list/serialized = list()
 	for(var/obj/belly/B as anything in src.vore_organs)
