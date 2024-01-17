@@ -107,11 +107,42 @@
   TheCaramelion:
   - maptweak: Bridge blast doors require Command access now
 2024-01-14:
+  FluffMedic:
+  - bugfix: starhunter trader code should function now
+  - bugfix: starhunter's desc isn't default and have names.
+  Fracshun:
+  - rscadd: Added the Metamorphosis Ray to science's protolathe designs
   Missile597:
   - bugfix: Added water as a catalyst to the "nutriment from sap" reaction as a workaround
       to prevent black sapbeans from losing their reagents on harvest. Recipe now
       requires 5u water before the three saps react.
+  - rscdel: Buggy camera in the shadekin hideout deleted
+  TheCaramelion:
+  - balance: Mailbag capacity changed from 21 to 28
+  - bugfix: Mailbag can now pick up envelopes off the tile
+  - bugfix: Spamming click on an envelope won't trigger opening it multiple times
   Upstream:
   - bugfix: nurse spiders no longer spawning unexpectetly (to prevent snowballing)
       from random sources
   - rscadd: Added emag functionality on SleeveMate
+2024-01-15:
+  Missile597:
+  - rscadd: New lost and found bins added to dorms bathrooms, the bathroom near the
+      qpad, the bathroom near the bar and the bathroom near the gym, to allow for
+      easier and more discreet item returns. These connect to the lost and found loop
+      and also clean prey items.
+  - rscdel: Removed the junk on the shelves in Autoresleeving so you don't have to
+      go digging through random junk to get your stuff. Removed one shelf to make
+      room for chute.
+  - maptweak: Moved the lost and found exit out of the wall, so any players summarily
+      "tossed" into a bin don't get wall-stuck. Aimed the chute at a wall so that
+      there's no risk of any window breaking if hit excessively.
+  tacoguy7765093:
+  - bugfix: No more fatal heartburn to organic crew with stronger acids.
+  zeskorion:
+  - rscadd: adds new bodymarkings, "ears", and wings.
+  null:
+  - bugfix: no more multiproccs on butchering
+2024-01-16:
+  Raeschen:
+  - bugfix: Increase default welcome window height to remove scrollbar
