@@ -9,4 +9,7 @@
 		if(L.has_modifier_of_type(/datum/modifier/rednet))
 			to_chat(user,"<span class='warning'>Your gun refuses to fire!</span>")
 			return 0
+		if(L.has_modifier_of_type(/datum/modifier/trait/thickdigits))
+			to_chat(user,"<span class='warning'>Your hands can't pull the trigger!!</span>")
+			return 0
 	return ..()
