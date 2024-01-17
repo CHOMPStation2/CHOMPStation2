@@ -510,6 +510,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		"liq_giv" = host.give_reagents,
 		"autotransferable" = host.autotransferable,
 		"noisy_full" = host.noisy_full, //Belching while full
+		"selective_active" = host.selective_preference, //Reveal active selective mode in prefs
 		//CHOMPedit end
 		"drop_vore" = host.drop_vore,
 		"slip_vore" = host.slip_vore,

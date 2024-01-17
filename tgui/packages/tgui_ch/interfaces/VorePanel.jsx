@@ -8,6 +8,7 @@ import { classes } from 'common/react';
 const stats = [null, 'average', 'bad'];
 
 const digestModeToColor = {
+  'Default': null,
   'Hold': null,
   'Digest': 'red',
   'Absorb': 'purple',
@@ -1142,8 +1143,9 @@ const VoreSelectedMobTypeBellyButtons = (props, context) => {
       return (
         <Section title={'Cyborg Controls'} width={'80%'}>
           <span style={{ color: 'red' }}>
-            Your module does either not support vore sprites or you've selected
-            a belly sprite other than the sleeper within the Visuals section.
+            Your module does either not support vore sprites or you&apos;ve
+            selected a belly sprite other than the sleeper within the Visuals
+            section.
           </span>
         </Section>
       );
@@ -2508,6 +2510,7 @@ const VoreUserPreferences = (props, context) => {
     no_spawnprey_warning,
     nutrition_message_visible,
     weight_message_visible,
+    selective_active,
   } = data.prefs;
 
   const { show_pictures } = data;
@@ -3112,7 +3115,10 @@ const VoreUserPreferences = (props, context) => {
             <Flex.Item basis="33%">
               <Button
                 fluid
-                content="Selective Mode Preference"
+                content={
+                  'Selective Mode Preference: ' + capitalize(selective_active)
+                }
+                backgroundColor={digestModeToColor[selective_active]}
                 tooltip="Allows to set the personal belly mode preference for selective bellies."
                 onClick={() => act('switch_selective_mode_pref')}
               />
@@ -3309,7 +3315,7 @@ const VoreUserPreferences = (props, context) => {
       <Divider />
       <Section>
         <Flex spacing={1}>
-          <Flex.Item basis="49%">
+          <Flex.Item basis="50%">
             <Button
               fluid
               content="Save Prefs"
@@ -3317,7 +3323,7 @@ const VoreUserPreferences = (props, context) => {
               onClick={() => act('saveprefs')}
             />
           </Flex.Item>
-          <Flex.Item basis="49%" grow={1}>
+          <Flex.Item basis="50%" grow={1}>
             <Button
               fluid
               content="Reload Prefs"
