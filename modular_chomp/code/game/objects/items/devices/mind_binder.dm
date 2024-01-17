@@ -88,8 +88,9 @@
 	usr.visible_message("<span class='warning'>[usr] presses [src] against [target]. The device beginning to let out a series of beeps!</span>","<span class='notice'>You begin to bind someone's mind into [target]!</span>")
 	if(do_after(usr,5 SECONDS,target))
 		if(possessed_voice.len == 1 && !target.ckey)
-			possessed_voice[1].mind.transfer_to(target)
-			possessed_voice[1].Destroy()
+			var/mob/living/voice/V = possessed_voice[1]
+			V.mind.transfer_to(target)
+			V.Destroy()
 			possessed_voice = list()
 			to_chat(usr,"<span class='notice'>Mind bound to [target].</span>")
 
@@ -121,8 +122,9 @@
 	usr.visible_message("<span class='warning'>[usr] presses [src] against [item]. The device beginning to let out a series of beeps!</span>","<span class='notice'>You begin to bind someone's mind into [item]!</span>")
 	if(do_after(usr,5 SECONDS,item))
 		if(possessed_voice.len == 1)
-			item.inhabit_item(possessed_voice[1], null, possessed_voice[1].tf_mob_holder)
-			possessed_voice[1].Destroy()
+			var/mob/living/voice/V = possessed_voice[1]
+			item.inhabit_item(V, null, V.tf_mob_holder)
+			V.Destroy()
 			possessed_voice = list()
 			to_chat(usr,"<span class='notice'>Mind bound to [item].</span>")
 
