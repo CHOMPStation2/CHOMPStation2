@@ -44,8 +44,8 @@
 /datum/trait/negative/nodefib
 	name = "Unreviveable"
 	desc = "For whatever strange genetic reason, defibs cannot restart your heart."
-	cost = -2
-	custom_only = TRUE
+	cost = 0
+	custom_only = FALSE
 	var_changes = list("flags" = NO_DEFIB)
 	can_take = ORGANICS //Mostly because I think synth code bypasses the no defib thing. Or maybe that is just vox
 	excludes = list(/datum/trait/negative/noresleeve) //No, just, no
