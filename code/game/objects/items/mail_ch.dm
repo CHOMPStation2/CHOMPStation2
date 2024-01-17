@@ -195,7 +195,8 @@
 	can_hold = list(
 		/obj/item/mail,
 		/obj/item/smallDelivery,
-		/obj/item/weapon/paper
+		/obj/item/weapon/paper,
+		/obj/item/stolenpackage
 	)
 
 // JUNK MAIL STUFF
@@ -225,7 +226,8 @@
 			/obj/item/weapon/reagent_containers/food/snacks/donkpocket/pizza,
 			/obj/item/weapon/reagent_containers/food/snacks/donkpocket/spicy,
 			/obj/item/weapon/reagent_containers/food/snacks/donkpocket/teriyaki,
-			/obj/item/toy/figure
+			/obj/item/toy/figure,
+			/obj/item/stolenpackage
 		))
 
 	var/list/junk_names = list(
@@ -242,7 +244,8 @@
 		/obj/item/weapon/reagent_containers/food/snacks/donkpocket/pizza = "[initial(name)] with NEW PIZZA-POCKET.",
 		/obj/item/weapon/reagent_containers/food/snacks/donkpocket/spicy = "[initial(name)] with NEW SPICY-POCKET.",
 		/obj/item/weapon/reagent_containers/food/snacks/donkpocket/teriyaki = "[initial(name)] with NEW TERIYAKI-POCKET.",
-		/obj/item/toy/figure = "[initial(name)] from DoN**K*oC"
+		/obj/item/toy/figure = "[initial(name)] from DoN**K*oC",
+		/obj/item/stolenpackage = "[pick("oddly shaped", "strangely wrapped", "weird", "bulging")] [initial(name)]"
 	)
 
 	name = special_name ? junk_names[junk] : "important [initial(name)]"
