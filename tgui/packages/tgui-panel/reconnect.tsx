@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 import { Button } from 'tgui_ch/components'; // CHOMPEdit - tgui_ch
-=======
-import { Button } from 'tgui/components';
 import { useDispatch } from 'common/redux';
 import { dismissWarning } from './game/actions';
->>>>>>> 94ade300d3... TG-Chat visual limits and fixes (#15659)
 
 let url: string | null = null;
 

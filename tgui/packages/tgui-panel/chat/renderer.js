@@ -6,13 +6,8 @@
 
 import { EventEmitter } from 'common/events';
 import { classes } from 'common/react';
-<<<<<<< HEAD:tgui/packages/tgui-panel/chat/renderer.js
 import { createLogger } from 'tgui_ch/logging'; // CHOMPEdit - tgui_ch
-import { COMBINE_MAX_MESSAGES, COMBINE_MAX_TIME_WINDOW, IMAGE_RETRY_DELAY, IMAGE_RETRY_LIMIT, IMAGE_RETRY_MESSAGE_AGE, MAX_PERSISTED_MESSAGES, MAX_VISIBLE_MESSAGES, MESSAGE_PRUNE_INTERVAL, MESSAGE_TYPES, MESSAGE_TYPE_INTERNAL, MESSAGE_TYPE_UNKNOWN } from './constants';
-=======
-import { createLogger } from 'tgui/logging';
 import { IMAGE_RETRY_DELAY, IMAGE_RETRY_LIMIT, IMAGE_RETRY_MESSAGE_AGE, MESSAGE_PRUNE_INTERVAL, MESSAGE_TYPES, MESSAGE_TYPE_INTERNAL, MESSAGE_TYPE_UNKNOWN } from './constants';
->>>>>>> 94ade300d3... TG-Chat visual limits and fixes (#15659):tgui/packages/tgui-panel/chat/renderer.jsx
 import { render } from 'inferno';
 import { canPageAcceptType, createMessage, isSameMessage, serializeMessage } from './model';
 import { highlightNode, linkifyNode } from './replaceInTextNode';
@@ -381,19 +376,14 @@ class ChatRenderer {
     const to = Math.max(0, len - this.combineMessageLimit);
     for (let i = from; i >= to; i--) {
       const message = this.visibleMessages[i];
-      // prettier-ignore
-      const matches = (
+
+      const matches =
         // Is not an internal message
-        !message.type.startsWith(MESSAGE_TYPE_INTERNAL)
+        !message.type.startsWith(MESSAGE_TYPE_INTERNAL) &&
         // Text payload must fully match
-        && isSameMessage(message, predicate)
+        isSameMessage(message, predicate) &&
         // Must land within the specified time window
-<<<<<<< HEAD:tgui/packages/tgui-panel/chat/renderer.js
-        && now < message.createdAt + COMBINE_MAX_TIME_WINDOW
-      );
-=======
         now < message.createdAt + this.combineIntervalLimit * 1000;
->>>>>>> 94ade300d3... TG-Chat visual limits and fixes (#15659):tgui/packages/tgui-panel/chat/renderer.jsx
       if (matches) {
         return message;
       }

@@ -5,13 +5,8 @@
  */
 
 import { useDispatch, useSelector } from 'common/redux';
-<<<<<<< HEAD
 import { Button, Collapsible, Divider, Input, Section, Stack } from 'tgui_ch/components'; // CHOMPEdit - tgui_ch
-import { removeChatPage, toggleAcceptedType, updateChatPage } from './actions';
-=======
-import { Button, Collapsible, Divider, Input, Section, Stack } from 'tgui/components';
 import { moveChatPageLeft, moveChatPageRight, removeChatPage, toggleAcceptedType, updateChatPage } from './actions';
->>>>>>> 94ade300d3... TG-Chat visual limits and fixes (#15659)
 import { MESSAGE_TYPES } from './constants';
 import { selectCurrentChatPage } from './selectors';
 
