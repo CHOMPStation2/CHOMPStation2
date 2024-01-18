@@ -158,6 +158,8 @@
       held by someone or in a item inside a belly.
   Kashargul:
   - bugfix: donksoft cyborg blaster not working
+  TheCaramelion:
+  - rscadd: Quiet portal and airlock that won't announce leaving over Common.
   Upstream:
   - code_imp: Custom indexeddb store. Tgui related settings like themes might reset.
   - bugfix: '"Hotkey Toggle" button now respecting the set theme.'
