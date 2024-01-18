@@ -150,3 +150,6 @@
       switch and proper floor tiles in spots it was missing.
   Raeschen:
   - bugfix: Increase default welcome window height to remove scrollbar
+2024-01-18:
+  Kashargul:
+  - bugfix: donksoft cyborg blaster not working
