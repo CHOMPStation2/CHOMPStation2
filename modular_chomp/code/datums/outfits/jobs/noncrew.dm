@@ -26,7 +26,7 @@
 	uniform = /obj/item/clothing/under/primitive
 	shoes = /obj/item/clothing/shoes/primitive
 	r_pocket = /obj/item/weapon/spacecash/ewallet
-	l_pocket = /obj/item/device/survivalcapsule/superpose
+	l_pocket = /obj/item/device/survivalcapsule/superpose //Kind of want this removed, but I don't have the energy for this plus other kin change discussion
 
 	id_slot = slot_wear_id
 	id_type = /obj/item/weapon/card/id/external // No access, allows activating PDA's.
