@@ -221,6 +221,7 @@
 	icon = 'icons/obj/gun_toy.dmi'
 	icon_state = "smg"
 	caliber = "foam"
+	manual_chamber = FALSE //CHOMPEdit, borgs can't manually chamber...
 	load_method = SINGLE_CASING
 	max_shells = 15
 	var/cleanup = 0
