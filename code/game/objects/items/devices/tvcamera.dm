@@ -155,7 +155,7 @@
 
 /obj/item/clothing/accessory/bodycam
 	name = "Body Camera"
-	desc = "A small body camera for security personnel."
+	desc = "A small body camera for security personnel. It can be attached to your uniform! Use in hand to configure."
 	icon_state = "eshield"
 	item_state = "eshield"
 	w_class = ITEMSIZE_COST_TINY
