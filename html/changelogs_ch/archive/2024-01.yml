@@ -151,6 +151,8 @@
   Raeschen:
   - bugfix: Increase default welcome window height to remove scrollbar
 2024-01-18:
+  FluffMedic:
+  - bugfix: slime horde requires dead explorers
   Fracshun:
   - rscadd: VoreFX now applies to those indirectly in a belly. Such as those being
       held by someone or in a item inside a belly.
