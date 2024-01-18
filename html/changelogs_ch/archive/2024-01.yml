@@ -156,3 +156,6 @@
       held by someone or in a item inside a belly.
   Kashargul:
   - bugfix: donksoft cyborg blaster not working
+  Upstream:
+  - code_imp: Custom indexeddb store. Tgui related settings like themes might reset.
+  - bugfix: '"Hotkey Toggle" button now respecting the set theme.'
