@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 import { Button } from 'tgui_ch/components'; // CHOMPEdit - tgui_ch
+=======
+import { Button } from 'tgui/components';
+import { useDispatch } from 'common/redux';
+import { dismissWarning } from './game/actions';
+>>>>>>> 94ade300d3... TG-Chat visual limits and fixes (#15659)
 
 let url: string | null = null;
 
@@ -11,10 +17,11 @@ setInterval(() => {
   });
 }, 5000);
 
-export const ReconnectButton = () => {
+export const ReconnectButton = (props, context) => {
   if (!url) {
     return null;
   }
+  const dispatch = useDispatch(context);
   return (
     <>
       <Button
@@ -31,6 +38,13 @@ export const ReconnectButton = () => {
           Byond.command('.quit');
         }}>
         Relaunch game
+      </Button>
+      <Button
+        color="white"
+        onClick={() => {
+          dispatch(dismissWarning());
+        }}>
+        Dismiss
       </Button>
     </>
   );
