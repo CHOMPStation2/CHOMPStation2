@@ -152,6 +152,11 @@
 	icon_state = "dark"
 	},
 /area/submap/ussp_tele)
+"D" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/airless,
+/area/submap/ussp_tele)
 "N" = (
 /obj/structure/salvageable/server_os,
 /turf/simulated/floor/airless,
@@ -221,9 +226,9 @@ a
 b
 b
 g
-h
-h
-h
+D
+D
+D
 g
 a
 "}

@@ -120,6 +120,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 	data["show_pictures"] = show_pictures
 
 	var/atom/hostloc = host.loc
+	//CHOMPAdd Start - Allow VorePanel to show pred belly details even while indirectly inside
+	if(istype(host, /mob/living))
+		var/mob/living/H = host
+		hostloc = H.surrounding_belly()
+	//CHOMPAdd End of indirect vorefx additions
 	var/list/inside = list()
 	if(isbelly(hostloc))
 		var/obj/belly/inside_belly = hostloc
@@ -292,6 +297,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"tail_extra_overlay2" = selected.tail_extra_overlay2,
 			"noise_freq" = selected.noise_freq,
 			"item_digest_logs" = selected.item_digest_logs,
+			"private_struggle" = selected.private_struggle,
 			//"marking_to_add" = selected.marking_to_add
 			//CHOMPEdit end
 		)
@@ -1091,6 +1097,18 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						new_belly.selective_preference = DM_DIGEST
 					if(new_selective_preference == "Absorb")
 						new_belly.selective_preference = DM_ABSORB
+
+				if(isnum(belly_data["private_struggle"]))
+					var/new_private_struggle = belly_data["private_struggle"]
+					if(new_private_struggle == 0)
+						new_belly.private_struggle = FALSE
+					if(new_private_struggle == 1)
+						new_belly.private_struggle = TRUE
+
+				if(istext(belly_data["eating_privacy_local"]))
+					var/new_eating_privacy_local = html_encode(belly_data["eating_privacy_local"])
+					if(new_eating_privacy_local && (new_eating_privacy_local in list("default","subtle","loud")))
+						new_belly.eating_privacy_local = new_eating_privacy_local
 
 				// Sounds
 				if(isnum(belly_data["is_wet"]))
@@ -1937,11 +1955,14 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		return TRUE // Aren't here anymore, need to update menu
 
 	var/intent = "Examine"
-	if(isliving(target))
-		intent = tgui_alert(usr, "What do you want to do to them?","Query",list("Examine","Help Out","Devour"))
+	//CHOMPEdit Start - Only allow indirect belly viewers to examine
+	if(user in OB)
+		if(isliving(target))
+			intent = tgui_alert(usr, "What do you want to do to them?","Query",list("Examine","Help Out","Devour"))
 
-	else if(istype(target, /obj/item))
-		intent = tgui_alert(usr, "What do you want to do to that?","Query",list("Examine","Use Hand"))
+		else if(istype(target, /obj/item))
+			intent = tgui_alert(usr, "What do you want to do to that?","Query",list("Examine","Use Hand"))
+	//CHOMPEdit End of indirect vorefx changes
 
 	switch(intent)
 		if("Examine") //Examine a mob inside another mob
@@ -2037,6 +2058,8 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 				for(var/atom/movable/target in host.vore_selected)
 					to_chat(target,"<span class='warning'>You're squished from [host]'s [lowertext(host.vore_selected)] to their [lowertext(choice.name)]!</span>")
+					//CHOMPAdd - Send the transfer message to indirect targets as well. Slightly different message because why not.
+					to_chat(host.vore_selected.get_belly_surrounding(target.contents),"<span class='warning'>You're squished along with [target] from [host]'s [lowertext(host.vore_selected)] to their [lowertext(choice.name)]!</span>")
 					host.vore_selected.transfer_contents(target, choice, 1)
 				return TRUE
 		return
@@ -2082,6 +2105,8 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			if(!choice || !(target in host.vore_selected))
 				return TRUE
 			to_chat(target,"<span class='warning'>You're squished from [host]'s [lowertext(host.vore_selected.name)] to their [lowertext(choice.name)]!</span>")
+			//CHOMPAdd - Send the transfer message to indirect targets as well. Slightly different message because why not.
+			to_chat(host.vore_selected.get_belly_surrounding(target.contents),"<span class='warning'>You're squished along with [target] from [host]'s [lowertext(host.vore_selected)] to their [lowertext(choice.name)]!</span>")
 			host.vore_selected.transfer_contents(target, choice)
 
 
@@ -2513,7 +2538,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.absorbed_desc = new_desc
 				. = TRUE
 		if("b_msgs")
-			tgui_alert(user,"Setting abusive or deceptive messages will result in a ban. Consider this your warning. Max 150 characters per message (250 for examines, 500 for idle messages), max 10 messages per topic.","Really, don't.") // Should remain tgui_alert() (blocking)
+			if(user.text_warnings)
+				if(tgui_alert(user,"Setting abusive or deceptive messages will result in a ban. Consider this your warning. Max 150 characters per message (250 for examines, 500 for idle messages), max 10 messages per topic.","Really, don't.",list("OK", "Disable Warnings")) == "Disable Warnings") // Should remain tgui_alert() (blocking)
+					user.text_warnings = FALSE
 			var/help = " Press enter twice to separate messages. '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name. '%count' will be replaced with the number of anything in your belly. '%countprey' will be replaced with the number of living prey in your belly."
 			switch(params["msgtype"])
 				if("dmp")
@@ -2855,7 +2882,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			list("Sleeper", "Vorebelly", "Both"))
 			if(belly_choice == null)
 				return FALSE
-			host.vore_selected.silicon_belly_overlay_preference = belly_choice
+			//CHOMPEdit Start, changed to sync the setting among all sleepers for multibelly support
+			for (var/belly in host.vore_organs)
+				var/obj/belly/B = belly
+				B.silicon_belly_overlay_preference = belly_choice
+			//CHOMPEdit End
 			host.update_icon()
 			. = TRUE
 		if("b_belly_mob_mult")
@@ -3320,6 +3351,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 			qdel(host.vore_selected)
 			host.vore_selected = host.vore_organs[1]
+			. = TRUE
+		if("b_private_struggle") //CHOMP Addition
+			host.vore_selected.private_struggle = !host.vore_selected.private_struggle
 			. = TRUE
 		if("b_vorespawn_blacklist") //CHOMP Addition
 			host.vore_selected.vorespawn_blacklist = !host.vore_selected.vorespawn_blacklist

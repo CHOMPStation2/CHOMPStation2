@@ -137,6 +137,8 @@
 	var/item_digest_logs = FALSE			// Chat messages for digested items.
 	var/storing_nutrition = FALSE			// Storing gained nutrition as paste instead of absorbing it.
 
+	var/list/belly_surrounding = list()		// A list of living mobs surrounded by this belly, including inside containers, food, on mobs, etc. Exclusing inside other bellies.
+
 /obj/belly/proc/GetFullnessFromBelly()
 	if(!affects_vore_sprites)
 		return 0
@@ -521,9 +523,9 @@
 /////////////////////////// CHOMP PCL END ///////////////////////////
 
 /obj/belly/proc/update_internal_overlay()
-	if(LAZYLEN(contents))
+	if(LAZYLEN(belly_surrounding))
 		SEND_SIGNAL(src, COMSIG_BELLY_UPDATE_VORE_FX, TRUE) // Signals vore_fx() to listening atoms. Atoms must handle appropriate isliving() checks.
-	for(var/A in contents)
+	for(var/A in belly_surrounding)
 		if(isliving(A))
 			vore_fx(A,1)
 	if(owner.previewing_belly == src)
@@ -610,3 +612,24 @@
 		qdel(src)
 		return
 	.=..()
+
+// Updates the belly_surrounding list variable. Called in bellymodes_vr.dm
+/obj/belly/proc/update_belly_surrounding()
+	if(!contents.len)
+		belly_surrounding = list()
+		return
+	belly_surrounding = get_belly_surrounding(contents)
+
+// Recursive proc that returns all living mobs directly and indirectly inside a belly
+// This can also be called more generically to get all living mobs not in bellies within any contents list
+/obj/belly/proc/get_belly_surrounding(var/list/C)
+	var/list/surrounding = list()
+	for(var/thing in C)
+		if(istype(thing,/mob/living))
+			var/mob/living/L = thing
+			surrounding.Add(L)
+			surrounding.Add(get_belly_surrounding(L.contents))
+		if(istype(thing,/obj/item))
+			var/obj/item/I = thing
+			surrounding.Add(get_belly_surrounding(I.contents))
+	return surrounding

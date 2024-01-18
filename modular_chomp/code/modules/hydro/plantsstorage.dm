@@ -12,7 +12,6 @@
 		/obj/item/seeds/cherryseed = 3,
 		/obj/item/seeds/chiliseed = 3,
 		/obj/item/seeds/cocoapodseed = 3,
-		/obj/item/seeds/cinnamon = 3,
 		/obj/item/seeds/cornseed = 3,
 		/obj/item/seeds/durian = 3,
 		/obj/item/seeds/eggplantseed = 3,
@@ -27,6 +26,7 @@
 		/obj/item/seeds/orangeseed = 3,
 		/obj/item/seeds/onionseed = 3,
 		/obj/item/seeds/peanutseed = 3,
+		/obj/item/seeds/peppercornseed = 2,
 		/obj/item/seeds/plumpmycelium = 3,
 		/obj/item/seeds/poppyseed = 3,
 		/obj/item/seeds/potatoseed = 3,
@@ -39,6 +39,7 @@
 		/obj/item/seeds/sugarcaneseed = 3,
 		/obj/item/seeds/sunflowerseed = 3,
 		/obj/item/seeds/shandseed = 2,
+		/obj/item/seeds/teaseed = 3,
 		/obj/item/seeds/tobaccoseed = 3,
 		/obj/item/seeds/tomatoseed = 3,
 		/obj/item/seeds/towermycelium = 3,
@@ -47,8 +48,10 @@
 		/obj/item/seeds/watermelonseed = 3,
 		/obj/item/seeds/wheatseed = 3,
 		/obj/item/seeds/whitebeetseed = 3,
-		/obj/item/seeds/wurmwoad = 3
-		)
+		/obj/item/seeds/wurmwoad = 3,
+		/obj/item/seeds/shrinkshroom = 3,
+		/obj/item/seeds/megashroom = 3
+		) //CHOMPEdit - Seed list altered to include extra seeds available in seed_storage_vr.dm
 
 /obj/machinery/seed_storage/xenobotany
 	name = "Xenobotany seed storage"
@@ -67,7 +70,6 @@
 		/obj/item/seeds/cherryseed = 3,
 		/obj/item/seeds/chiliseed = 3,
 		/obj/item/seeds/cocoapodseed = 3,
-		/obj/item/seeds/cinnamon = 3,
 		/obj/item/seeds/cornseed = 3,
 		/obj/item/seeds/durian = 3,
 		/obj/item/seeds/replicapod = 3,
@@ -84,6 +86,7 @@
 		/obj/item/seeds/nettleseed = 2,
 		/obj/item/seeds/orangeseed = 3,
 		/obj/item/seeds/peanutseed = 3,
+		/obj/item/seeds/peppercornseed = 2,
 		/obj/item/seeds/plastiseed = 3,
 		/obj/item/seeds/plumpmycelium = 3,
 		/obj/item/seeds/poppyseed = 3,
@@ -98,6 +101,7 @@
 		/obj/item/seeds/sugarcaneseed = 3,
 		/obj/item/seeds/sunflowerseed = 3,
 		/obj/item/seeds/shandseed = 2,
+		/obj/item/seeds/teaseed = 3,
 		/obj/item/seeds/tobaccoseed = 3,
 		/obj/item/seeds/tomatoseed = 3,
 		/obj/item/seeds/towermycelium = 3,
@@ -106,5 +110,9 @@
 		/obj/item/seeds/watermelonseed = 3,
 		/obj/item/seeds/wheatseed = 3,
 		/obj/item/seeds/whitebeetseed = 3,
-		/obj/item/seeds/wurmwoad = 3
-		)
+		/obj/item/seeds/wurmwoad = 3,
+		/obj/item/seeds/shrinkshroom = 3,
+		/obj/item/seeds/megashroom = 3,
+		/obj/item/seeds/lustflower = 2,
+		/obj/item/seeds/pitcherseed = 3
+		) //CHOMPEdit - Seed list altered to include extra seeds available in seed_storage_vr.dm

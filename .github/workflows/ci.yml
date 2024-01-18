@@ -21,26 +21,26 @@ jobs:
         run: |
           chmod -R +x ./tools/ci
       - name: Restore SpacemanDMM cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/SpacemanDMM
           key: ${{ runner.os }}-spacemandmm
       - name: Restore Yarn cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: tgui/.yarn/cache
           key: ${{ runner.os }}-yarn-${{ hashFiles('tgui/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
       - name: Restore Node cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.nvm
           key: ${{ runner.os }}-node-${{ hashFiles('_dependencies.sh') }}
           restore-keys: |
             ${{ runner.os }}-node-
       - name: Restore Bootstrap cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: tools/bootstrap/.cache
           key: ${{ runner.os }}-bootstrap-${{ hashFiles('tools/requirements.txt') }}
@@ -70,7 +70,7 @@ jobs:
         run: |
           chmod -R +x ./tools/ci
       - name: Setup Cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: $HOME/BYOND
           key: ${{ runner.os }}-byond
