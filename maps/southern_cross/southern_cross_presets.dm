@@ -115,7 +115,7 @@ var/const/NETWORK_CARRIER  = "Exploration Carrier" //CHOMPedit: Exploration outp
 	)
 
 /obj/machinery/telecomms/receiver/preset_right/southerncross
-	freq_listening = list(AI_FREQ, SCI_FREQ, MED_FREQ, SUP_FREQ, SRV_FREQ, COMM_FREQ, ENG_FREQ, SEC_FREQ, ENT_FREQ, EXP_FREQ)
+	freq_listening = list(AI_FREQ, SCI_FREQ, MED_FREQ, SUP_FREQ, SRV_FREQ, COMM_FREQ, ENG_FREQ, SEC_FREQ, ENT_FREQ, BDCM_FREQ, EXP_FREQ)
 
 /obj/machinery/telecomms/bus/preset_two/southerncross
 	freq_listening = list(SUP_FREQ, SRV_FREQ, EXP_FREQ)
@@ -134,6 +134,7 @@ var/const/NETWORK_CARRIER  = "Exploration Carrier" //CHOMPedit: Exploration outp
 		num2text(ENG_FREQ) = list(access_engine_equip, access_atmospherics),
 		num2text(MED_FREQ) = list(access_medical_equip),
 		num2text(MED_I_FREQ)=list(access_medical_equip),
+		num2text(BDCM_FREQ) =list(access_security),
 		num2text(SEC_FREQ) = list(access_security),
 		num2text(SEC_I_FREQ)=list(access_security),
 		num2text(SCI_FREQ) = list(access_tox,access_robotics,access_xenobiology),
