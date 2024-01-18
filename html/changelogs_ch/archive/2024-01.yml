@@ -166,3 +166,18 @@
   - code_imp: Custom indexeddb store. Tgui related settings like themes might reset.
   - bugfix: '"Hotkey Toggle" button now respecting the set theme.'
   - bugfix: Typo in sprite_accessories.dm
+  - qol: Adds adjustable visual limits for displayed messages
+  - qol: Adds the option to modify the combining time and skipped messages in between
+  - qol: Adds the currently stored message count to the export tab
+  - qol: Heavily optimized message logging. This should lessen a lot of strain and
+      delay the OOMs until Selis gets to implementing a maximum round retention setting.
+  - qol: Allows to reorder chat tabs
+  - qol: Chat Export will now respect the actively selected tab filters
+  - qol: Disconnect banner can now be dismissed directly until the next disconnect
+      / lag
+  - rscadd: Export verb for the chatlogs
+  - bugfix: Main tab can no longer be deleted (requires the deletion of all tabs once
+      for existing chat tabs)
+  - bugfix: Purge message archive not working in some cases
+  - bugfix: emotesubtle colour in vchat themes
+  - bugfix: fixes interference with vore filter on examine
