@@ -162,6 +162,7 @@
   TheCaramelion:
   - rscadd: Quiet portal and airlock that won't announce leaving over Common.
   - maptweak: Photocopier changed to paper shredder in the mail room
+  - rscadd: Added modern labcoat to the labcoat selection
   Upstream:
   - code_imp: Custom indexeddb store. Tgui related settings like themes might reset.
   - bugfix: '"Hotkey Toggle" button now respecting the set theme.'
