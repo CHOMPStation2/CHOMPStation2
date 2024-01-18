@@ -546,3 +546,51 @@
 	icon_state = "organs_ribs"
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_TORSO)
+
+/datum/sprite_accessory/marking/ch/chestfluff_big
+	name = "Chest Fluff, Big"
+	icon_state = "chestfluff_big"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_TORSO)
+
+/datum/sprite_accessory/marking/ch/softbelly
+	name = "Belly Fur, Soft"
+	icon_state = "softbelly"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_TORSO, BP_GROIN)
+
+/datum/sprite_accessory/marking/ch/softbelly_navel
+	name = "Belly Fur, Soft With Navel"
+	icon_state = "softbelly_navel"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_TORSO, BP_GROIN)
+
+/datum/sprite_accessory/marking/ch/softbelly_fem
+	name = "Belly Fur, Soft (Female)"
+	icon_state = "softbelly_fem"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_TORSO, BP_GROIN)
+
+/datum/sprite_accessory/marking/ch/softbelly_fem_navel
+	name = "Belly Fur, Soft With Navel (Female)"
+	icon_state = "softbelly_fem_navel"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_TORSO, BP_GROIN)
+
+/datum/sprite_accessory/marking/ch/chitinbelly
+	name = "Chitinous Scutes"
+	icon_state = "chitin_belly"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_TORSO, BP_GROIN)
+
+/datum/sprite_accessory/marking/ch/chitinbelly_fem
+	name = "Chitinous Scutes (Female)"
+	icon_state = "chitinbelly_fem"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_TORSO, BP_GROIN)
+
+/datum/sprite_accessory/marking/ch/extraeyes
+	name = "Extra Eyes"
+	icon_state = "extra_eyes"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_HEAD)

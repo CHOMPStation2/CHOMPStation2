@@ -538,8 +538,17 @@
 	if(reagents.total_volume >= 5 && !isliving(thing) && (item_digest_mode == IM_DIGEST || item_digest_mode == IM_DIGEST_PARALLEL)) //CHOMPAdd
 		reagents.trans_to(thing, reagents.total_volume * 0.1, 1 / max(LAZYLEN(contents), 1), FALSE) //CHOMPAdd
 	//Messages if it's a mob
+	//CHOMPEdit Start - Include indirect viewers in seeing vorefx
+	var/list/startfx = list()
 	if(isliving(thing))
-		var/mob/living/M = thing
+		var/mob/living/L = thing
+		startfx.Add(L)
+		startfx.Add(get_belly_surrounding(L.contents))
+	if(istype(thing,/obj/item))
+		var/obj/item/I = thing
+		startfx.Add(get_belly_surrounding(I.contents))
+
+	for(var/mob/living/M in startfx) //CHOMPEdit End of indirect vorefx changes
 		M.updateVRPanel()
 		var/raw_desc //Let's use this to avoid needing to write the reformat code twice
 		if(absorbed_desc && M.absorbed)
@@ -570,7 +579,7 @@
 			if(digest_mode == DM_DIGEST)
 				reagents.trans_to(M, reagents.total_volume * 0.1, 1 / max(LAZYLEN(contents), 1), FALSE)
 			to_chat(M, "<span class='vwarning'><B>You splash into a pool of [reagent_name]!</B></span>")
-	else if(count_items_for_sprite) //CHOMPEdit - If this is enabled also update fullness for non-living things
+	if(!isliving(thing) && count_items_for_sprite) //CHOMPEdit - If this is enabled also update fullness for non-living things
 		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 	//if(istype(thing, /obj/item/capture_crystal)) //CHOMPEdit start: Capture crystal occupant gets to see belly text too. Moved to modular_chomp capture_crystal.dm.
 		//var/obj/item/capture_crystal/CC = thing
@@ -596,18 +605,31 @@
 		if(count_items_for_sprite && !NB.count_items_for_sprite)
 			owner.update_fullness()
 		return //CHOMPEdit End
-	if(isliving(thing) && !isbelly(thing.loc))
-		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
+
+	//CHOMPEdit Start - Remove vorefx from all those indirectly viewing as well
+	var/list/endfx = list()
+	if(isliving(thing))
 		var/mob/living/L = thing
-		L.clear_fullscreen("belly")
-		//L.clear_fullscreen("belly2") // CHOMP Disable - using our implementation, not upstream's
-		//L.clear_fullscreen("belly3") // CHOMP Disable - using our implementation, not upstream's
-		//L.clear_fullscreen("belly4") // CHOMP Disable - using our implementation, not upstream's
-		if(L.hud_used)
-			if(!L.hud_used.hud_shown)
-				L.toggle_hud_vis()
-		if((L.stat != DEAD) && L.ai_holder)
-			L.ai_holder.go_wake()
+		endfx.Add(L)
+		endfx.Add(get_belly_surrounding(L.contents))
+	if(istype(thing,/obj/item))
+		var/obj/item/I = thing
+		endfx.Add(get_belly_surrounding(I.contents))
+	if(!isbelly(thing.loc))
+		for(var/mob/living/L in endfx) //CHOMPEdit End
+			if(L.surrounding_belly()) continue
+			owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
+			L.clear_fullscreen("belly")
+			//L.clear_fullscreen("belly2") // CHOMP Disable - using our implementation, not upstream's
+			//L.clear_fullscreen("belly3") // CHOMP Disable - using our implementation, not upstream's
+			//L.clear_fullscreen("belly4") // CHOMP Disable - using our implementation, not upstream's
+			if(L.hud_used)
+				if(!L.hud_used.hud_shown)
+					L.toggle_hud_vis()
+			if((L.stat != DEAD) && L.ai_holder)
+				L.ai_holder.go_wake()
+			L.stop_sound_channel(CHANNEL_PREYLOOP) //CHOMPAdd - This was on release_specific_contents proc, why is it not here on belly exit?
+	//CHOMPEdit End of indirect vorefx changes
 	if(isitem(thing) && !isbelly(thing.loc)) //CHOMPEdit: Digest stage effects. Don't bother adding overlays to stuff that won't make it back out.
 		if(count_items_for_sprite) //CHOMPEdit - If this is enabled also update fullness for non-living things
 			owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
@@ -1494,6 +1516,8 @@
 			Prey.ingested.trans_to_holder(Pred.ingested, Prey.ingested.total_volume, 0.5, TRUE) // Therefore don't bother spending cpu
 			Prey.touching.del_reagent("stomacid") //Don't need this stuff in our bloodstream.
 			Prey.touching.del_reagent("diet_stomacid") //Don't need this stuff in our bloodstream.
+			Prey.touching.del_reagent("pacid") //Don't need this stuff in our bloodstream.
+			Prey.touching.del_reagent("sacid") //Don't need this stuff in our bloodstream.
 			Prey.touching.del_reagent("cleaner") //Don't need this stuff in our bloodstream.
 			Prey.touching.trans_to_holder(Pred.ingested, Prey.touching.total_volume, 0.5, TRUE) // On updating the prey's reagents
 		else if(M.reagents)
@@ -1585,6 +1609,8 @@
 		Prey.ingested.trans_to_holder(Pred.ingested, Prey.ingested.total_volume, copy = TRUE)
 		Prey.touching.del_reagent("stomacid") //CHOMPEdit Don't need this stuff in our bloodstream.
 		Prey.touching.del_reagent("diet_stomacid") //CHOMPEdit Don't need this stuff in our bloodstream.
+		Prey.touching.del_reagent("pacid") //Don't need this stuff in our bloodstream.
+		Prey.touching.del_reagent("sacid") //Don't need this stuff in our bloodstream.
 		Prey.touching.del_reagent("cleaner") //CHOMPEdit Don't need this stuff in our bloodstream.
 		Prey.touching.trans_to_holder(Pred.ingested, Prey.touching.total_volume, copy = TRUE)
 		// TODO - Find a way to make the absorbed prey share the effects with the pred.

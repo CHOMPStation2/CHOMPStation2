@@ -219,6 +219,7 @@
 	var/last_no_computer_message = 0
 	var/applies_stasis = 0	//VOREStation Edit: allow people to change their mind
 
+	var/quiet = FALSE // CHOMPEdit - No announcement.
 /obj/machinery/cryopod/robot
 	name = "robotic storage unit"
 	desc = "A storage unit for robots."
@@ -533,6 +534,9 @@
 
 
 	if(istype(to_despawn, /mob/living/dominated_brain))
+		depart_announce = FALSE
+
+	if(src.quiet) // CHOMPEdit - No announcement.
 		depart_announce = FALSE
 
 	if(depart_announce)
