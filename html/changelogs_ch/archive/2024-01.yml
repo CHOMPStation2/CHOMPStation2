@@ -187,3 +187,4 @@
   - bugfix: fixes runtimes in the laundry basket which led to duplication of the off-hand
   - rscadd: "/\U0001F191"
   - rscadd: '[issue link stripped]'
+  - rscadd: Added tanktop and yellow jacket to loadout
