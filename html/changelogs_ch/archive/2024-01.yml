@@ -188,3 +188,20 @@
   - rscadd: "/\U0001F191"
   - rscadd: '[issue link stripped]'
   - rscadd: Added tanktop and yellow jacket to loadout
+  - qol: Microwaves are now OOC escapable
+  - balance: Nerfs foam durasteel greatsword
+  - bugfix: Fixes memory leak with codexes
+  - bugfix: Fixes bug which bricks codex "go back" button
+  - bugfix: Reimplements footstep sounds for rock turfs
+  - bugfix: Fixes edge-case which sometimes repeatedly spawned POI's on top of each
+      other
+  - rscadd: Adds more PDA notes, adds copy and print function to PDA note app
+  - bugfix: Zombie powder makes hearts appear stopped again
+  - bugfix: Highlander mode no longer crashes the server, and also doesn't delete
+      your organs anymore
+  - bugfix: Conveyor belts no longer move flashlight light cones
+  - bugfix: Particle accelerator properly applies radiation to bumped mobs again
+  - rscadd: Adds missing surgery names
+  - bugfix: Healthy tesh no longer appear hurt on photographs and dogborg sleepers
+  - bugfix: Organs no longer get stuck to the HUD
+  - bugfix: Organ butchering works again
