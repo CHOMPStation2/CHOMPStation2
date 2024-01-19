@@ -6,3 +6,12 @@
 	cost = 25
 	containertype = /obj/structure/closet/crate/zenghu
 	containername = "Glucose Hypo Crate"
+
+/datum/supply_pack/med/surgerykit
+	name = "Surgery Kit Bag"
+	contains = list(
+			/obj/item/weapon/storage/firstaid/surgery
+			)
+	cost = 50
+	containertype = /obj/structure/closet/crate/secure/veymed
+	containername = "Surgery Kit Bag crate"
