@@ -214,7 +214,7 @@ var/list/OFFMAP_FREQS = list(TALON_FREQ, CSN_FREQ) //VOREStation Add
 	// department radio formatting (poorly optimized, ugh)
 	if(frequency == SEC_FREQ)
 		return "secradio"
-	if(frequency == BDCM_FREQ)
+	if(frequency == BDCM_FREQ) // CHOMPEdit
 		return "bdcmradio"
 	if (frequency == ENG_FREQ)
 		return "engradio"
