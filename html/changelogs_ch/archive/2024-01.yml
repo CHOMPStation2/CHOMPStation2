@@ -183,6 +183,8 @@
   - bugfix: emotesubtle colour in vchat themes
   - bugfix: fixes interference with vore filter on examine
 2024-01-19:
+  HatArchAzel:
+  - rscadd: Adds new aeromorph wings to character setup.
   Upstream:
   - bugfix: fixes runtimes in the laundry basket which led to duplication of the off-hand
   - rscadd: "/\U0001F191"
