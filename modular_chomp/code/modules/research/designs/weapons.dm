@@ -7,6 +7,14 @@
 	build_path = /obj/item/weapon/gun/launcher/confetti_cannon
 	sort_string = "MAAVD"
 
+/datum/design/item/weapon/energy/metamorphosisray
+	name = "metamorphosis ray"
+	id = "metamorphosisray"
+	req_tech = list(TECH_MATERIAL = 3, TECH_ENGINEERING = 3, TECH_POWER = 4, TECH_BIO = 5, TECH_BLUESPACE = 4, TECH_ILLEGAL = 5)
+	materials = list(MAT_STEEL = 1000, MAT_GLASS = 2000, MAT_URANIUM = 500, MAT_PHORON = 1500)
+	build_path = /obj/item/weapon/gun/energy/mouseray/metamorphosis
+	sort_string = "MAAVE"
+
 //Phase weapon with lock safeties.
 /datum/design/item/weapon/phase/phase_pistol
 	id = "phasepistol"

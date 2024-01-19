@@ -639,11 +639,15 @@
 	name = "white tabard-dress"
 	desc = "A gold-trimmed white tabard-dress with a large V-shaped boob window. For when you want to show off your hips and look classy at the same time."
 	icon_state = "white_tabard"
+	icon = 'icons/inventory/uniform/mob_ch.dmi' //CHOMPedit
+	icon_override = 'icons/inventory/uniform/mob_ch.dmi' //CHOMPedit
 
 /obj/item/clothing/under/dress/tabard/black
 	name = "black tabard-dress"
 	desc = "A gold-trimmed black tabard-dress with a large circular boob window. For when you want to show off your hips and look classy at the same time."
 	icon_state = "black_tabard"
+	icon = 'icons/inventory/uniform/mob_ch.dmi' //CHOMPedit
+	icon_override = 'icons/inventory/uniform/mob_ch.dmi' //CHOMPedit
 
 /*
  * Wedding Stuff
@@ -982,6 +986,11 @@
 	name = "halter top"
 	desc = "Jean shorts and a black halter top. Perfect for casual Fridays!"
 	icon_state = "haltertop"
+
+/obj/item/clothing/under/tanktop
+	name = "tank top"
+	desc = "The most versatile top ever created."
+	icon_state = "tanktop"
 
 /obj/item/clothing/under/rippedpunk
 	name = "ripped punk jeans"
