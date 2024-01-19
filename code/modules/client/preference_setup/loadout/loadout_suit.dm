@@ -138,7 +138,8 @@
 	"Purple labcoat" = /obj/item/clothing/suit/storage/toggle/labcoat/purple,
 	"Pink labcoat" = /obj/item/clothing/suit/storage/toggle/labcoat/pink,
 	"Red labcoat" = /obj/item/clothing/suit/storage/toggle/labcoat/red,
-	"Yellow labcoat" = /obj/item/clothing/suit/storage/toggle/labcoat/yellow
+	"Yellow labcoat" = /obj/item/clothing/suit/storage/toggle/labcoat/yellow,
+	"Modern labcoat" = /obj/item/clothing/suit/storage/toggle/labcoat/modern // CHOMPEdit - Adds modern labcoat
 	)
 	gear_tweaks += new/datum/gear_tweak/path(labcoats)
 
@@ -506,6 +507,10 @@
 	display_name = "winter coat, cosmic"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/cosmic
 // winter coats end here
+
+/datum/gear/suit/runner
+	display_name = "runner jacket"
+	path = /obj/item/clothing/suit/runner
 
 /datum/gear/suit/varsity
 	display_name = "varsity jacket selection"

@@ -58,6 +58,16 @@
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "dragon_2_mark"
 
+/datum/sprite_accessory/wing/cloakwings
+	name = "Cloaking Moth Wings with Eyes (Colorable)"
+	desc = ""
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
+	icon_state = "cloakmoth"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "cloakmoth_eyes"
+
+
 /// XENO BACKPLATES ///
 
 /datum/sprite_accessory/wing/xeno_standard_backplate

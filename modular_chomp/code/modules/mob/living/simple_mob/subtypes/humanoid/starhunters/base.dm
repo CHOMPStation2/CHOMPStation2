@@ -1,7 +1,6 @@
 /mob/living/simple_mob/humanoid/starhunter
 	name = "Starhunter Initiate"
-	tt_desc = "E Homo sapiens"
-	desc = "You shouldn't be seeing this."
+	desc = "A strange critter cladded in strange armor."
 	icon = 'modular_chomp/icons/mob/starhunters.dmi'
 	icon_state = "sun"
 	icon_living = "sun"

@@ -354,6 +354,7 @@
 	touch_met = 50 // It's acid!
 	var/power = 5
 	var/meltdose = 10 // How much is needed to melt
+	affects_robots = TRUE //CHOMPedit, it's acid! Still eats metal!
 
 /datum/reagent/acid/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_GREY) //ywedit

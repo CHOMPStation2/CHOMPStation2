@@ -42,8 +42,8 @@
 	if(!(stat & NOPOWER))
 		return
 	else
-		if(prob(3*build_eff))
-			if(prob(6*loot_eff))
+		if(prob(0.5*build_eff))
+			if(prob(3*loot_eff))
 				new /obj/random/greaterportalloot (src.loc)
 				if(prob(30/chaos_eff))
 					new /obj/random/mob/interspace (src.loc)
@@ -94,9 +94,9 @@
 				prob(6);/obj/item/weapon/rcd,
 				prob(6);/obj/item/weapon/rcd/shipwright,
 				prob(6);/obj/item/weapon/rcd/advanced,
-				prob(6);/obj/vehicle/bike/random,
-				prob(6);/obj/vehicle/train/engine/quadbike/random,
-				prob(6);/obj/vehicle/bike/random,
+				prob(1);/obj/vehicle/bike/random,
+				prob(1);/obj/vehicle/train/engine/quadbike/random,
+				prob(1);/obj/vehicle/bike/random,
 				prob(6);/obj/structure/closet/crate/secure/lootsafe/numberlock,
 				prob(6);/obj/structure/closet/crate/secure/loot
 
