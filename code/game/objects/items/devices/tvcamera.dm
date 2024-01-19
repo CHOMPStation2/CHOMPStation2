@@ -118,6 +118,7 @@
 
 /obj/item/device/tvcamera/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
 	. = ..()
+	// CHOMPEdit
 	if(!camera)
 		return
 	if(camera.status && !isturf(target))
