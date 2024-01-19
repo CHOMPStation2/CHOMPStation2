@@ -11,7 +11,10 @@
 
 	var/static/list/codex_tree_keys = list() // CHOMPedit: static list linking codexes to the correct codex_tree.
 
+	var/static/list/codex_tree_keys = list() // static list linking codexes to the correct codex_tree.
+
 /obj/item/weapon/book/codex/Initialize()
+<<<<<<< HEAD
 	tree = codex_tree_keys["[root_type]"] // CHOMPedit start
 	if(!tree)
 		tree = new(src, root_type)
@@ -24,6 +27,20 @@
 		if(!tree)
 			tree = new(src, root_type)
 			codex_tree_keys["[root_type]"] = tree // CHOMPedit end
+=======
+	tree = codex_tree_keys["[root_type]"]
+	if(!tree)
+		tree = new(src, root_type)
+		codex_tree_keys["[root_type]"] = tree
+	. = ..()
+
+/obj/item/weapon/book/codex/attack_self(mob/user)
+	if(!tree)
+		tree = codex_tree_keys["[root_type]"]
+		if(!tree)
+			tree = new(src, root_type)
+			codex_tree_keys["[root_type]"] = tree
+>>>>>>> cd6823c7e0... Merge pull request #15689 from Darlantanis/krakenmynemesis
 	icon_state = "[initial(icon_state)]-open"
 	tree.display(user)
 

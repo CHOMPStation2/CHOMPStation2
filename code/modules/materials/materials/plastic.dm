@@ -109,3 +109,7 @@
 	weight = 1
 	protectiveness = 0 // 0%
 	conductive = 0
+<<<<<<< HEAD
+=======
+	can_sharpen = FALSE
+>>>>>>> cd6823c7e0... Merge pull request #15689 from Darlantanis/krakenmynemesis
