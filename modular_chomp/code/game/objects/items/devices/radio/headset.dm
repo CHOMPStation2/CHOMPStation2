@@ -93,9 +93,11 @@
 	icon_state = "exp_headset"
 	adhoc_fallback = TRUE
 
-	ks1type = /obj/item/device/encryptionkey/syndicate //might be a horrid idea, but I can't find the frequency code.
+	ks1type = /obj/item/device/encryptionkey/headset_outsider
 
 
 /obj/item/device/encryptionkey/headset_outsider
 	name = "outsider radio encryption key"
 	icon_state = "sec_cypherkey"
+
+	channels = list("Outsider" = 1)
