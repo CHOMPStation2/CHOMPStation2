@@ -42,6 +42,7 @@
 	..()
 	network = NETWORK_THUNDER
 
+// CHOMPEdit Begin - Bodycam
 /obj/item/weapon/circuitboard/security/telescreen/bodycamera
 	name = T_BOARD("security bodycamera monitor")
 	build_path = /obj/machinery/computer/security/telescreen/bodycamera
@@ -51,6 +52,7 @@
 /obj/item/weapon/circuitboard/security/telescreen/bodycamera/New()
 	..()
 	network = NETWORK_BODYCAM
+// CHOMPEdit End
 
 /obj/item/weapon/circuitboard/security/construct(var/obj/machinery/computer/security/C)
 	if (..(C))
