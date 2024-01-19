@@ -23,3 +23,28 @@
 	name = "SWOOPIE XL CleanBot Starter Kit"
 	desc = "WARNING: HAZARDOUS CONTENTS. HANDLE WITH CAUTION. Consult spiritual observer intervention to avoid rogue units. (That means ghosts. Ominous.)"
 	starts_with = list(/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie)
+
+/obj/structure/largecrate/animal/solarray
+	name = "Exotic crate"
+	desc = "WARNING: HAZARDOUS CONTENTS. HANDLE WITH CAUTION"
+	starts_with = list(/mob/living/simple_mob/vore/spacecritter/solarray)
+
+/obj/structure/largecrate/animal/livingice
+	name = "Exotic crate"
+	desc = "WARNING: HAZARDOUS CONTENTS. HANDLE WITH CAUTION"
+	starts_with = list(/mob/living/simple_mob/vore/spacecritter/livingice)
+
+/obj/structure/largecrate/animal/radcrab
+	name = "Exotic crate"
+	desc = "WARNING: HAZARDOUS CONTENTS. HANDLE WITH CAUTION"
+	starts_with = list(/mob/living/simple_mob/vore/spacecritter/radcrab)
+
+/obj/structure/largecrate/animal/dreameel
+	name = "Exotic crate"
+	desc = "WARNING: HAZARDOUS CONTENTS. HANDLE WITH CAUTION"
+	starts_with = list(/mob/living/simple_mob/vore/spacecritter/dreameel)
+
+/obj/structure/largecrate/animal/gravityshell
+	name = "Exotic crate"
+	desc = "WARNING: HAZARDOUS CONTENTS. HANDLE WITH CAUTION"
+	starts_with = list(/mob/living/simple_mob/vore/spacecritter/gravityshell)

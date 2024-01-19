@@ -1410,7 +1410,7 @@
 	},
 /area/centcom/bar)
 "aQp" = (
-/obj/machinery/vending/event/gadget,
+/obj/machinery/vending/loadout/gadget,
 /obj/effect/floor_decal/techfloor/orange,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -1795,7 +1795,8 @@
 /area/centcom/bar)
 "bfZ" = (
 /obj/machinery/vending/boozeomat{
-	pixel_y = 16
+	pixel_y = 16;
+	req_log_access = null
 	},
 /obj/effect/floor_decal/milspec/color/silver,
 /turf/simulated/floor/tiled/techmaint,
@@ -2413,7 +2414,7 @@
 /turf/unsimulated/beach/sand,
 /area/beach)
 "bIF" = (
-/obj/machinery/vending/cart,
+/obj/machinery/vending/hydroseeds,
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
 	},
@@ -2673,7 +2674,7 @@
 	},
 /area/centcom/specops)
 "bST" = (
-/obj/machinery/vending/event/clothing,
+/obj/machinery/vending/loadout/clothing,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
 "bTc" = (
@@ -3959,10 +3960,6 @@
 /turf/simulated/shuttle/plating,
 /area/centcom/evac)
 "dbz" = (
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Kitchen Cold Room";
-	dir = 1
-	},
 /obj/structure/closet/chefcloset,
 /obj/item/glass_jar,
 /obj/item/device/retail_scanner/civilian,
@@ -5569,7 +5566,7 @@
 	},
 /area/ninja_dojo/dojo)
 "eAT" = (
-/obj/machinery/vending/event/costume,
+/obj/machinery/vending/loadout/costume,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
 "eBq" = (
@@ -6929,6 +6926,12 @@
 	name = "large shadekin nest"
 	},
 /turf/simulated/floor/carpet/retro,
+/area/shadekin)
+"ggh" = (
+/obj/structure/table/darkglass,
+/obj/effect/floor_decal/milspec/cargo,
+/obj/machinery/recharger,
+/turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
 "ggj" = (
 /obj/structure/flora/ausbushes/sparsegrass,
@@ -11234,7 +11237,9 @@
 	},
 /area/centcom/specops)
 "jQF" = (
-/obj/machinery/vending/boozeomat,
+/obj/machinery/vending/boozeomat{
+	req_access = null
+	},
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
 	},
@@ -12589,6 +12594,7 @@
 /obj/random/miniature,
 /obj/random/miniature,
 /obj/random/miniature,
+/obj/item/device/pda,
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
 "kSi" = (
@@ -13561,10 +13567,6 @@
 	},
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/holodeck/source_thunderdomecourt)
-"lRW" = (
-/obj/machinery/vending/entertainer,
-/turf/simulated/floor/reinforced,
-/area/shadekin)
 "lSl" = (
 /obj/effect/floor_decal/milspec/color/orange,
 /obj/effect/floor_decal/milspec/hatchmarks,
@@ -15263,7 +15265,9 @@
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/skipjack)
 "nzI" = (
-/obj/machinery/vending/engineering,
+/obj/machinery/vending/engineering{
+	req_access = null
+	},
 /obj/effect/floor_decal/techfloor/orange,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -16172,7 +16176,9 @@
 	},
 /area/centcom/bar)
 "otP" = (
-/obj/machinery/vending/event/loadout_misc,
+/obj/machinery/vending/loadout/loadout_misc{
+	emagged = 1
+	},
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
 	},
@@ -16787,7 +16793,9 @@
 /turf/simulated/shuttle/wall/no_join,
 /area/shuttle/supply)
 "pkK" = (
-/obj/machinery/vending/engivend,
+/obj/machinery/vending/engivend{
+	req_access = null
+	},
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
 	},
@@ -17355,6 +17363,7 @@
 /obj/random/maintenance/cargo,
 /obj/random/maintenance/cargo,
 /obj/random/maintenance/cargo,
+/obj/item/device/pda,
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
 "pMy" = (
@@ -20450,7 +20459,9 @@
 /turf/simulated/shuttle/plating,
 /area/shuttle/skipjack)
 "sPq" = (
-/obj/machinery/vending/blood,
+/obj/machinery/vending/blood{
+	req_access = null
+	},
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
 	},
@@ -20632,7 +20643,7 @@
 	},
 /area/centcom/specops)
 "sYR" = (
-/obj/machinery/vending/event/accessory,
+/obj/machinery/vending/loadout/accessory,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
 "sYX" = (
@@ -22358,7 +22369,7 @@
 /turf/simulated/shuttle/floor/white,
 /area/centcom/main_hall)
 "uEJ" = (
-/obj/machinery/vending/event/overwear,
+/obj/machinery/vending/loadout/overwear,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
 "uFo" = (
@@ -23188,6 +23199,7 @@
 /obj/effect/floor_decal/milspec/cargo,
 /obj/random/tetheraid,
 /obj/random/tetheraid,
+/obj/item/device/pda,
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
 "vpZ" = (
@@ -24891,7 +24903,7 @@
 /turf/simulated/floor/bronze,
 /area/shadekin)
 "wZw" = (
-/obj/machinery/vending/event/uniform,
+/obj/machinery/vending/loadout/uniform,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
 "wZL" = (
@@ -55606,7 +55618,7 @@ ltP
 ltP
 ltP
 ltP
-huK
+ltP
 bgS
 tAp
 ltP
@@ -61267,7 +61279,7 @@ wKW
 bMy
 vpY
 vpY
-mNu
+ggh
 wrf
 rtJ
 luZ
@@ -62548,7 +62560,7 @@ wKW
 qpy
 wKW
 pkK
-lRW
+eAT
 sYR
 bST
 eAT

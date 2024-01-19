@@ -1596,7 +1596,8 @@
 		else
 			clear_alert("high")
 
-		if(!isbelly(loc) && !previewing_belly) //VOREStation Add - Belly fullscreens safety //CHOMPEdit
+		//CHOMPEdit - surrounding_belly() used instead of isbelly(loc) to not clear indirect vorefx
+		if(!surrounding_belly() && !previewing_belly) //VOREStation Add - Belly fullscreens safety //CHOMPEdit
 			clear_fullscreen("belly")
 			//clear_fullscreen("belly2") //Chomp disable, using our own implementation
 			//clear_fullscreen("belly3") //Chomp disable, using our own implementation

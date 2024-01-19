@@ -7,7 +7,7 @@
 import { EventEmitter } from 'common/events';
 import { classes } from 'common/react';
 import { createLogger } from 'tgui_ch/logging'; // CHOMPEdit - tgui_ch
-import { COMBINE_MAX_MESSAGES, COMBINE_MAX_TIME_WINDOW, IMAGE_RETRY_DELAY, IMAGE_RETRY_LIMIT, IMAGE_RETRY_MESSAGE_AGE, MAX_PERSISTED_MESSAGES, MAX_VISIBLE_MESSAGES, MESSAGE_PRUNE_INTERVAL, MESSAGE_TYPES, MESSAGE_TYPE_INTERNAL, MESSAGE_TYPE_UNKNOWN } from './constants';
+import { IMAGE_RETRY_DELAY, IMAGE_RETRY_LIMIT, IMAGE_RETRY_MESSAGE_AGE, MESSAGE_PRUNE_INTERVAL, MESSAGE_TYPES, MESSAGE_TYPE_INTERNAL, MESSAGE_TYPE_UNKNOWN } from './constants';
 import { render } from 'inferno';
 import { canPageAcceptType, createMessage, isSameMessage, serializeMessage } from './model';
 import { highlightNode, linkifyNode } from './replaceInTextNode';
@@ -115,6 +115,11 @@ class ChatRenderer {
     this.visibleMessages = [];
     this.page = null;
     this.events = new EventEmitter();
+    // Adjustables
+    this.visibleMessageLimit = 2500;
+    this.combineMessageLimit = 5;
+    this.combineIntervalLimit = 5;
+    this.exportLimit = -1;
     // Scroll handler
     /** @type {HTMLElement} */
     this.scrollNode = null;
@@ -160,7 +165,7 @@ class ChatRenderer {
       this.scrollToBottom();
     });
     // Flush the queue
-    this.tryFlushQueue();
+    this.tryFlushQueue(true);
   }
 
   onStateLoaded() {
@@ -168,9 +173,9 @@ class ChatRenderer {
     this.tryFlushQueue();
   }
 
-  tryFlushQueue() {
+  tryFlushQueue(doArchive = false) {
     if (this.isReady() && this.queue.length > 0) {
-      this.processBatch(this.queue);
+      this.processBatch(this.queue, { doArchive: doArchive });
       this.queue = [];
     }
   }
@@ -352,22 +357,33 @@ class ChatRenderer {
     }
   }
 
+  setVisualChatLimits(
+    visibleMessageLimit,
+    combineMessageLimit,
+    combineIntervalLimit,
+    exportLimit
+  ) {
+    this.visibleMessageLimit = visibleMessageLimit;
+    this.combineMessageLimit = combineMessageLimit;
+    this.combineIntervalLimit = combineIntervalLimit;
+    this.exportLimit = exportLimit;
+  }
+
   getCombinableMessage(predicate) {
     const now = Date.now();
     const len = this.visibleMessages.length;
     const from = len - 1;
-    const to = Math.max(0, len - COMBINE_MAX_MESSAGES);
+    const to = Math.max(0, len - this.combineMessageLimit);
     for (let i = from; i >= to; i--) {
       const message = this.visibleMessages[i];
-      // prettier-ignore
-      const matches = (
+
+      const matches =
         // Is not an internal message
-        !message.type.startsWith(MESSAGE_TYPE_INTERNAL)
+        !message.type.startsWith(MESSAGE_TYPE_INTERNAL) &&
         // Text payload must fully match
-        && isSameMessage(message, predicate)
+        isSameMessage(message, predicate) &&
         // Must land within the specified time window
-        && now < message.createdAt + COMBINE_MAX_TIME_WINDOW
-      );
+        now < message.createdAt + this.combineIntervalLimit * 1000;
       if (matches) {
         return message;
       }
@@ -376,7 +392,7 @@ class ChatRenderer {
   }
 
   processBatch(batch, options = {}) {
-    const { prepend, notifyListeners = true, noArchive = false } = options;
+    const { prepend, notifyListeners = true, doArchive = false } = options;
     const now = Date.now();
     // Queue up messages until chat is ready
     if (!this.isReady()) {
@@ -420,6 +436,15 @@ class ChatRenderer {
           node.innerHTML = message.html;
         } else {
           logger.error('Error: message is missing text payload', message);
+        }
+        // Get our commands we might want to send to chat
+        const commands = node.querySelectorAll('[data-command]');
+        if (commands.length) {
+          const command = commands[0].getAttribute('data-command');
+          if (command === '$do_export') {
+            this.saveToDisk(this.exportLimit);
+          }
+          return; // We do not want those logged or shown!
         }
         // Get all nodes in this message that want to be rendered like jsx
         const nodes = node.querySelectorAll('[data-component]');
@@ -521,7 +546,7 @@ class ChatRenderer {
       countByType[message.type] += 1;
       // TODO: Detect duplicates
       this.messages.push(message);
-      if (!noArchive) {
+      if (doArchive) {
         this.archivedMessages.push(serializeMessage(message, true)); // TODO: Actually having a better message archiving maybe for exports?
       }
       if (canPageAcceptType(this.page, message.type)) {
@@ -559,7 +584,7 @@ class ChatRenderer {
     // Visible messages
     {
       const messages = this.visibleMessages;
-      const fromIndex = Math.max(0, messages.length - MAX_VISIBLE_MESSAGES);
+      const fromIndex = Math.max(0, messages.length - this.visibleMessageLimit);
       if (fromIndex > 0) {
         this.visibleMessages = messages.slice(fromIndex);
         for (let i = 0; i < fromIndex; i++) {
@@ -580,7 +605,7 @@ class ChatRenderer {
     {
       const fromIndex = Math.max(
         0,
-        this.messages.length - MAX_PERSISTED_MESSAGES
+        this.messages.length - this.persistentMessageLimit
       );
       if (fromIndex > 0) {
         this.messages = this.messages.slice(fromIndex);
@@ -589,15 +614,12 @@ class ChatRenderer {
     }
   }
 
-  rebuildChat() {
+  rebuildChat(rebuildLimit) {
     if (!this.isReady()) {
       return;
     }
     // Make a copy of messages
-    const fromIndex = Math.max(
-      0,
-      this.messages.length - MAX_PERSISTED_MESSAGES
-    );
+    const fromIndex = Math.max(0, this.messages.length - rebuildLimit);
     const messages = this.messages.slice(fromIndex);
     // Remove existing nodes
     for (let message of messages) {
@@ -643,10 +665,13 @@ class ChatRenderer {
 
     // for (let message of this.visibleMessages) { // TODO: Actually having a better message archiving maybe for exports?
     for (let message of tmpMsgArray) {
+      // Filter messages according to active tab for export
+      if (canPageAcceptType(this.page, message.type)) {
+        messagesHtml += message.html + '\n';
+      }
       // if (message.node) {
       //  messagesHtml += message.node.outerHTML + '\n';
       // }
-      messagesHtml += message.html + '\n';
     }
     // Create a page
     // prettier-ignore
@@ -674,6 +699,10 @@ class ChatRenderer {
 
   purgeMessageArchive() {
     this.archivedMessages = [];
+  }
+
+  getStoredMessages() {
+    return this.archivedMessages.length;
   }
 }
 

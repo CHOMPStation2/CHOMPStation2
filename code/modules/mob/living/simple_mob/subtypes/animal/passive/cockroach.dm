@@ -53,6 +53,8 @@
 	if(ismob(AM))
 		if(isliving(AM))
 			var/mob/living/A = AM
+			if(A.is_incorporeal()) // CHOMPADD - Bad kin, no squishing the roach
+				return
 			if(A.mob_size > MOB_SMALL)
 				if(prob(squish_chance))
 					A.visible_message("<span class='notice'>[A] squashed [src].</span>", "<span class='notice'>You squashed [src].</span>")

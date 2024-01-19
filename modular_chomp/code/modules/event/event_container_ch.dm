@@ -102,6 +102,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Xenobiology Breach",		/datum/event/prison_break/xenobiology,	0,		list(ASSIGNMENT_SCIENCE = 100), 1, min_jobs = list(ASSIGNMENT_SCIENTIST = 1), min_jobs = list(ASSIGNMENT_SCIENTIST = 1, ASSIGNMENT_SECURITY =1)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Jellyfish School",			/datum/event/jellyfish_migration,		5,		list(ASSIGNMENT_ANY = 1, ASSIGNMENT_SECURITY = 5, ASSIGNMENT_MEDICAL = 3), 1),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Meaty Ore Shower",			/datum/event/meteor_wave/meatyores,		-50,	list(ASSIGNMENT_ENGINEER = 45), 1, min_jobs = list(ASSIGNMENT_ENGINEER = 2)),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Exotic Infestation",	/datum/event/dangerinfestation, 	-30,	list(ASSIGNMENT_ENGINEER = 20, ASSIGNMENT_SCIENCE = 5, ASSIGNMENT_ANY = 2)),
 	)
 	add_disabled_events(list(
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Meteor Shower",			/datum/event/meteor_wave,				30,		list(ASSIGNMENT_ENGINEER = 20), min_jobs = list(ASSIGNMENT_ENGINEER = 3)),
@@ -130,7 +131,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Space Vines",		/datum/event/spacevine, 		20,		list(ASSIGNMENT_ENGINEER = 15), 1),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Supply Demand",		/datum/event/supply_demand,		0,		list(ASSIGNMENT_ANY = 5, ASSIGNMENT_SCIENCE = 15, ASSIGNMENT_GARDENER = 10, ASSIGNMENT_ENGINEER = 10, ASSIGNMENT_MEDICAL = 15), 1, min_jobs = list(ASSIGNMENT_CARGO = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Viral Infection",	/datum/event/viral_infection,	-50,	list(ASSIGNMENT_MEDICAL = 25), 	1, min_jobs = list(ASSIGNMENT_MEDICAL = 2)),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Excotic Infestation",	/datum/event/dangerinfestation, 	-60,	list(ASSIGNMENT_ENGINEER = 15, ASSIGNMENT_SCIENCE = 5, ASSIGNMENT_ANY = 1)),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Exotic Horde Infestation",	/datum/event/highdangerinfestation, 	-50,	list(ASSIGNMENT_ENGINEER = 20, ASSIGNMENT_SCIENCE = 5, ASSIGNMENT_ANY = 2)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Meaty Ores Wave",		/datum/event/meteor_wave/meatyores,		-90,		list(ASSIGNMENT_ENGINEER = 50, ASSIGNMENT_MEDICAL = 10, ASSIGNMENT_ANY = 1),	1, min_jobs = list(ASSIGNMENT_ENGINEER = 1)),
 	)
 	add_disabled_events(list(

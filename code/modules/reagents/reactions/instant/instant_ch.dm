@@ -91,6 +91,7 @@
 	id = "nutriment"
 	result = "nutriment"
 	required_reagents = list("purplesap" = 1, "orangesap" = 1, "bluesap" = 1)
+	catalysts = list("water" = 5) //CHOMPedit: Catalyst added to prevent conflict with reagents reacting and nixxing each other in black sapbeans
 	result_amount = 3
 
 /////SERAZINE RECIPES//////
