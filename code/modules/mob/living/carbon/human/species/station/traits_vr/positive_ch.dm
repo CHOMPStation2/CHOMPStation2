@@ -410,7 +410,7 @@
 
 /datum/trait/positive/nobreathe
 	name = "Breathless"
-	desc = "You do not need to breathe!"
+	desc = "You or your species have adapted to no longer require lungs, and as such no longer need to breathe!"
 
 	can_take = ORGANICS
 
