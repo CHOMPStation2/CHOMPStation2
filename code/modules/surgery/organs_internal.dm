@@ -191,12 +191,8 @@
 ///////////////////////////////////////////////////////////////
 
 /datum/surgery_step/internal/detatch_organ/
-<<<<<<< HEAD
-	surgery_name = "Detach Organ"	//CHOMPEdit
-=======
 	surgery_name = "Detatch Organ"
 
->>>>>>> cd6823c7e0... Merge pull request #15689 from Darlantanis/krakenmynemesis
 	allowed_tools = list(
 	/obj/item/weapon/surgical/scalpel = 100,		\
 	/obj/item/weapon/material/knife = 75,	\
@@ -418,11 +414,7 @@
 ///////////////////////////////////////////////////////////////
 
 /datum/surgery_step/internal/attach_organ
-<<<<<<< HEAD
-	surgery_name = "Attach Organ"	//CHOMPEdit
-=======
 	surgery_name = "Attach Organ"
->>>>>>> cd6823c7e0... Merge pull request #15689 from Darlantanis/krakenmynemesis
 	allowed_tools = list(
 	/obj/item/weapon/surgical/FixOVein = 100, \
 	/obj/item/stack/cable_coil = 75
