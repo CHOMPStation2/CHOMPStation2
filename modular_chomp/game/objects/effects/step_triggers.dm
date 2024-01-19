@@ -12,6 +12,8 @@
 	if(isobserver(A))
 		A.forceMove(T) // Harmlessly move ghosts.
 		return
+	if(A.throwing)
+		return
 	if(!(A.can_fall())) //test
 		return // Phased shifted kin should not fall
 
