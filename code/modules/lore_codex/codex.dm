@@ -9,8 +9,6 @@
 	var/datum/codex_tree/tree = null
 	var/root_type = /datum/lore/codex/category/main_borealis_lore	//YW EDIT
 
-	var/static/list/codex_tree_keys = list() // CHOMPedit: static list linking codexes to the correct codex_tree.
-
 	var/static/list/codex_tree_keys = list() // static list linking codexes to the correct codex_tree.
 
 /obj/item/weapon/book/codex/Initialize()
