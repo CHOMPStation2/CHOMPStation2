@@ -114,9 +114,9 @@
 		/obj/item/clothing/shoes/boots/winter/security,
 		/obj/item/device/flashlight/maglight,
 		/obj/item/clothing/mask/gas/half,
-		/obj/item/clothing/mask/gas/sechailer/swat/hos,
-		/obj/item/clothing/accessory/bodycam
-)
+		/obj/item/clothing/mask/gas/sechailer/swat/hos, // CHOMPEdit
+		/obj/item/clothing/accessory/bodycam) // CHOMPEdit
+
 
 /obj/structure/closet/secure_closet/hos/Initialize()
 	if(prob(50))
