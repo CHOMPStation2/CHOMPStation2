@@ -207,3 +207,9 @@
   - bugfix: Healthy tesh no longer appear hurt on photographs and dogborg sleepers
   - bugfix: Organs no longer get stuck to the HUD
   - bugfix: Organ butchering works again
+  - qol: added GPS into Triangulating device design names, so that people find it
+      when only searching for GPS
+  - qol: changed the wording on the organ treatment, from dress to treat. Fixed a
+      typo in Detach.
+  - rscadd: 'Downstream: Needs manual changes as we somehow never took over the naming
+      on those steps. DO NOT MERGE right away!'
