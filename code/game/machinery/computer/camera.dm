@@ -173,6 +173,7 @@ GLOBAL_LIST_EMPTY(bodycamera_screens)
 	else if(enabled)
 		radio?.on = TRUE
 
+// CHOMPEdit Start - Bodycams
 /obj/machinery/computer/security/telescreen/bodycamera
 	name = "bodycamera monitor"
 	desc = "Damn, why do they never have anything interesting on these things? (Alt-click to toggle the display)"
@@ -298,6 +299,7 @@ GLOBAL_LIST_EMPTY(bodycamera_screens)
 		stop_showing()
 	else if(enabled)
 		bradio?.on = TRUE
+// CHOMPEdit End
 
 /obj/machinery/computer/security/wooden_tv
 	name = "security camera monitor"

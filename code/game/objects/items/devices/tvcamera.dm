@@ -151,6 +151,7 @@
 		H.update_inv_l_hand()
 		H.update_inv_belt()
 
+// CHOMPEdit Start - Bodycam
 // Security Bodycam
 
 /obj/item/clothing/accessory/bodycam
@@ -312,6 +313,7 @@
 		H.update_inv_r_hand()
 		H.update_inv_l_hand()
 		H.update_inv_belt()
+// CHOMPEdit End
 
 //Assembly by roboticist
 

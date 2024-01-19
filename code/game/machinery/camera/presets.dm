@@ -120,10 +120,12 @@ var/global/list/engineering_networks = list(
 	invuln = 1
 	always_visible = TRUE
 
+// CHOMPEdit Begin - Bodycams
 /obj/machinery/camera/network/bodycamera
 	network = list(NETWORK_BODYCAM)
 	invuln = 1
 	always_visible = TRUE
+// CHOMPEdit End
 
 // EMP
 
