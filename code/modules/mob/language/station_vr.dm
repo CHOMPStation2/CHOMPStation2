@@ -103,7 +103,7 @@
 	machine_understands = FALSE
 	flags = RESTRICTED | HIVEMIND //CHOMPstation Edit: Changining from WHITELISTED to RESTRICTED | Empathy should be shadekin exclusive. This probably breaks carbon shadekins ability to use emptathy, we dont use them and if it does it should be implemented like DIONA root talk. -shark
 
-/datum/language/marish
+/datum/language/marish // CHOMPedit
 	name = LANGUAGE_MARISH
 	desc = "Where shadekin have a language rooted in empathy, there are still subtle tones and syllables that are as delicate as the emotions that shadekin normally communicate with."
 	speech_verb = "mars"

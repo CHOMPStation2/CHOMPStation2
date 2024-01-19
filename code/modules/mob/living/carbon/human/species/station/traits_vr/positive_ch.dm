@@ -408,7 +408,7 @@
 	..()
 	H.toxin_gut = TRUE
 
-/datum/trait/positive/nobreathe
+/datum/trait/positive/nobreathe // CHOMPedit
 	name = "Breathless"
 	desc = "You or your species have adapted to no longer require lungs, and as such no longer need to breathe!"
 
