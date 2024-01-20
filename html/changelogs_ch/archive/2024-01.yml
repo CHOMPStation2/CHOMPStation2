@@ -183,8 +183,33 @@
   - bugfix: emotesubtle colour in vchat themes
   - bugfix: fixes interference with vore filter on examine
 2024-01-19:
+  HatArchAzel:
+  - rscadd: Adds new aeromorph wings to character setup.
   Upstream:
   - bugfix: fixes runtimes in the laundry basket which led to duplication of the off-hand
   - rscadd: "/\U0001F191"
   - rscadd: '[issue link stripped]'
   - rscadd: Added tanktop and yellow jacket to loadout
+  - qol: Microwaves are now OOC escapable
+  - balance: Nerfs foam durasteel greatsword
+  - bugfix: Fixes memory leak with codexes
+  - bugfix: Fixes bug which bricks codex "go back" button
+  - bugfix: Reimplements footstep sounds for rock turfs
+  - bugfix: Fixes edge-case which sometimes repeatedly spawned POI's on top of each
+      other
+  - rscadd: Adds more PDA notes, adds copy and print function to PDA note app
+  - bugfix: Zombie powder makes hearts appear stopped again
+  - bugfix: Highlander mode no longer crashes the server, and also doesn't delete
+      your organs anymore
+  - bugfix: Conveyor belts no longer move flashlight light cones
+  - bugfix: Particle accelerator properly applies radiation to bumped mobs again
+  - rscadd: Adds missing surgery names
+  - bugfix: Healthy tesh no longer appear hurt on photographs and dogborg sleepers
+  - bugfix: Organs no longer get stuck to the HUD
+  - bugfix: Organ butchering works again
+  - qol: added GPS into Triangulating device design names, so that people find it
+      when only searching for GPS
+  - qol: changed the wording on the organ treatment, from dress to treat. Fixed a
+      typo in Detach.
+  - rscadd: 'Downstream: Needs manual changes as we somehow never took over the naming
+      on those steps. DO NOT MERGE right away!'
