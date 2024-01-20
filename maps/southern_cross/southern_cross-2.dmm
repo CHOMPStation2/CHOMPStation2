@@ -23414,11 +23414,6 @@
 	},
 /turf/simulated/open,
 /area/quartermaster/lockerroom)
-"bup" = (
-/obj/machinery/door/firedoor,
-/obj/effect/wingrille_spawn/reinforced,
-/turf/simulated/floor/plating,
-/area/medical/patient_b)
 "buq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -34259,11 +34254,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/barrestroom)
-"cda" = (
-/obj/machinery/door/firedoor,
-/obj/effect/wingrille_spawn/reinforced,
-/turf/simulated/floor/plating,
-/area/medical/patient_a)
 "cde" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -69613,7 +69603,9 @@
 /area/medical/cryo)
 "qAJ" = (
 /obj/machinery/door/firedoor/glass,
-/obj/effect/wingrille_spawn/reinforced,
+/obj/effect/wingrille_spawn/reinforced/polarized{
+	id = "pr1_window_tint"
+	},
 /turf/simulated/floor/plating,
 /area/medical/patient_a)
 "qAW" = (
@@ -78177,7 +78169,9 @@
 /area/maintenance/bar)
 "vGS" = (
 /obj/machinery/door/firedoor/glass,
-/obj/effect/wingrille_spawn/reinforced,
+/obj/effect/wingrille_spawn/reinforced/polarized{
+	id = "pr2_window_tint"
+	},
 /turf/simulated/floor/plating,
 /area/medical/patient_b)
 "vHd" = (
@@ -130302,7 +130296,7 @@ drJ
 wls
 lUA
 vda
-cda
+drJ
 aaa
 aaa
 aaa
@@ -130818,7 +130812,7 @@ drJ
 wUp
 ojP
 qtn
-cda
+drJ
 aaa
 aaa
 aaa
@@ -131334,7 +131328,7 @@ rEb
 pOQ
 vxF
 rKn
-bup
+rEb
 aaa
 aaa
 aaa
@@ -131850,7 +131844,7 @@ rEb
 mre
 kzs
 sUz
-bup
+rEb
 aaa
 aaa
 aaa
