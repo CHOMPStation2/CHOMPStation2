@@ -141,8 +141,8 @@ var/global/list/total_extraction_beacons = list()
 /obj/item/fulton_core
 	name = "bluespace extraction beacon signaller"
 	desc = "Emits a signal which bluespace Fulton recovery devices can lock onto. Activate in hand to create a beacon."
-	icon = 'icons/obj/stock_parts.dmi'
-	icon_state = "fultonbeacon_off"
+	icon = 'icons/obj/fulton.dmi'
+	icon_state = "extraction_pointoff"
 
 /obj/item/fulton_core/attack_self(mob/user)
 	if(do_after(user,15,target = user) && !QDELETED(src))
@@ -153,7 +153,7 @@ var/global/list/total_extraction_beacons = list()
 	name = "fulton recovery beacon"
 	desc = "A beacon for the bluespace Fulton recovery system. Activate a pack in your hand to link it to a beacon."
 	icon = 'icons/obj/fulton.dmi'
-	icon_state = "fultonbeacon_on"
+	icon_state = "extraction_point"
 	anchored = TRUE
 	density = FALSE
 	var/beacon_network = "station"
