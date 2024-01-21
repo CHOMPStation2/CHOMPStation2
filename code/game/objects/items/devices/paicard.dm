@@ -117,6 +117,7 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/device/paicard)
 				actual_pai_name = sanitize_name(pai_name, ,1)
 				if(isnull(actual_pai_name))
 					return ..()
+			qdel(src)
 		else
 			var/obj/item/device/paicard/card = new(location)
 			var/mob/living/silicon/pai/new_pai = new(card)
@@ -128,8 +129,9 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/device/paicard)
 				actual_pai_name = sanitize_name(pai_name, ,1)
 				if(isnull(actual_pai_name))
 					return ..()
+			qdel(src)
 
-	qdel(src)
+	// qdel(src) CHOMPEdit - Clicking X twice would delete them. Very funny if you're a ghost.
 	return ..()
 
 // VOREStation Edit End
