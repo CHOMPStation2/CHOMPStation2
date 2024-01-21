@@ -213,3 +213,13 @@
       typo in Detach.
   - rscadd: 'Downstream: Needs manual changes as we somehow never took over the naming
       on those steps. DO NOT MERGE right away!'
+2024-01-21:
+  Aroliacue:
+  - rscadd: Fultons can now be used anywhere, making them suitable for medical extraction
+      and sending objects back to the station. Using them on a living creature will
+      stun them for a significant amount of time, and combined with their limited
+      uses and cost, this should discourage using them as an alternative to teleportation.
+  - rscadd: Added bluespace fultons to the 'Misc' tab and added the Surgical Kit to
+      the 'medical' tab in cargo.
+  - soundadd: Increased the volume of bonebreaks.
+  - imageadd: Added new icons for the bluespace fulton beacon.
