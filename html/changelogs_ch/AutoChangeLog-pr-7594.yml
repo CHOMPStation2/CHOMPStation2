@@ -1,0 +1,4 @@
+author: "Upstream"
+delete-after: True
+changes:
+  - rscadd: "Added new trait (Bad Swimmer)"
