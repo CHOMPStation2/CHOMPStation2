@@ -165,6 +165,7 @@
 	var/water_breather = FALSE
 	var/suit_inhale_sound = 'sound/effects/mob_effects/suit_breathe_in.ogg'
 	var/suit_exhale_sound = 'sound/effects/mob_effects/suit_breathe_out.ogg'
+	var/bad_swimmer = FALSE
 
 	var/body_temperature = 310.15							// Species will try to stabilize at this temperature. (also affects temperature processing)
 
@@ -547,6 +548,10 @@
 // Called when lying down on a water tile.
 /datum/species/proc/can_breathe_water()
 	return water_breather
+
+// Called when standing on a water tile.
+/datum/species/proc/is_bad_swimmer()
+	return bad_swimmer
 
 // Impliments different trails for species depending on if they're wearing shoes.
 /datum/species/proc/get_move_trail(var/mob/living/carbon/human/H)
