@@ -223,3 +223,5 @@
       the 'medical' tab in cargo.
   - soundadd: Increased the volume of bonebreaks.
   - imageadd: Added new icons for the bluespace fulton beacon.
+  ItsSelis:
+  - bugfix: fixed changelog path
