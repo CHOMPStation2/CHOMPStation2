@@ -168,9 +168,7 @@
 	var_changes = list("gun_accuracy_mod" = -35)
 	custom_only = FALSE
 	varchange_type = TRAIT_VARCHANGE_MORE_BETTER
-<<<<<<< HEAD
 */
-=======
 
 /datum/trait/negative/bad_swimmer
 	name = "Bad Swimmer"
@@ -178,4 +176,3 @@
 	cost = -1
 	custom_only = FALSE
 	var_changes = list("bad_swimmer" = 1, "water_movement" = 4)
->>>>>>> f0de08713f... Merge pull request #15678 from SatinIsle/bad-swimmer
