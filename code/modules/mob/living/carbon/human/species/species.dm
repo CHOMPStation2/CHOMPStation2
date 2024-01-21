@@ -163,12 +163,9 @@
 	var/poison_type = "phoron"								// Poisonous air.
 	var/exhale_type = "carbon_dioxide"						// Exhaled gas type.
 	var/water_breather = FALSE
-<<<<<<< HEAD
 	var/suit_inhale_sound = 'sound/effects/mob_effects/suit_breathe_in.ogg'
 	var/suit_exhale_sound = 'sound/effects/mob_effects/suit_breathe_out.ogg'
-=======
 	var/bad_swimmer = FALSE
->>>>>>> f0de08713f... Merge pull request #15678 from SatinIsle/bad-swimmer
 
 	var/body_temperature = 310.15							// Species will try to stabilize at this temperature. (also affects temperature processing)
 
