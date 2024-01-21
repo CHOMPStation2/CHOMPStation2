@@ -2724,7 +2724,7 @@ const VoreUserPreferences = (props, context) => {
       test: latejoin_vore,
       fluid: false,
       tooltip: {
-        main: 'Toggle late join vore spawnpoint.',
+        main: 'Toggle latejoin vore spawnpoint.',
         enable: 'Click here to turn on vorish spawnpoint.',
         disable: 'Click here to turn off vorish spawnpoint.',
       },
