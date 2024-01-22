@@ -15,7 +15,7 @@ del: Removed old things
 qol: made something easier to use
 balance: rebalanced something
 fix: fixed a few things
-remap: tweaked something in a map
+maptweak: tweaked something in a map
 sound: added/modified/removed audio or sound effects
 image: added/modified/removed some icons or images
 spellcheck: fixed a few typos
