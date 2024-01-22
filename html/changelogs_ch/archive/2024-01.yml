@@ -225,3 +225,30 @@
   - imageadd: Added new icons for the bluespace fulton beacon.
   ItsSelis:
   - bugfix: fixed changelog path
+2024-01-22:
+  EtheoBoxxman:
+  - rscadd: Bodycams, configurable in hand and attachable to suits
+  - rscadd: Added a unique monitor for bodycams, constructable like entertainment
+      monitors.
+  - rscadd: Adds a bodycam to security lockers, and to SecTech vendors.
+  - maptweak: 'Adds bodycam monitors to sec desk, hos office, warden office, and security
+      briefing room.
+
+      :cl:
+
+      <!-- Both :cl:''s are required for the changelog to work! You can put your name
+      to the right of the first :cl: if you want to overwrite your GitHub username
+      as author ingame. -->
+
+      <!-- You can use multiple of the same prefix (they''re only used for the icon
+      ingame) and delete the unneeded ones. Despite some of the tags, changelogs should
+      generally represent how a player might be affected by the changes rather than
+      a summary of the PR''s contents. -->'
+  Missile597:
+  - maptweak: Isolation ward exterior windows made electrochromatic
+  Raeschen:
+  - qol: Allows carpets to be painted
+  TheCaramelion:
+  - bugfix: Ghosts won't delete pAIs if they close the tgui pop-ups anymore
+  Upstream:
+  - rscadd: Added new trait (Bad Swimmer)

@@ -1,4 +1,0 @@
-author: "TheCaramelion"
-delete-after: True
-changes:
-  - bugfix: "Ghosts won't delete pAIs if they close the tgui pop-ups anymore"
