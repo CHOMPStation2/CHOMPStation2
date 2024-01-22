@@ -7,6 +7,8 @@ var/global/list/radio_channels_by_freq = list(
 	num2text(ENG_FREQ) = "Engineering",
 	num2text(MED_FREQ) = "Medical",
 	num2text(MED_I_FREQ)="Medical(I)",
+	num2text(BDCM_FREQ) ="Bodycam", // CHOMPEdit
+
 	num2text(SEC_FREQ) = "Security",
 	num2text(SEC_I_FREQ)="Security(I)",
 	num2text(SCI_FREQ) = "Science",

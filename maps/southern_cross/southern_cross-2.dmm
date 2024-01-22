@@ -12496,6 +12496,9 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 9
 	},
+/obj/machinery/computer/security/telescreen/bodycamera{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled,
 /area/security/main)
 "aMs" = (
@@ -15113,7 +15116,11 @@
 /obj/item/device/radio/intercom{
 	dir = 1;
 	name = "Station Intercom (General)";
-	pixel_y = 21
+	pixel_y = 5;
+	pixel_x = -31
+	},
+/obj/machinery/computer/security/telescreen/bodycamera{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
@@ -28755,6 +28762,9 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1
 	},
+/obj/machinery/computer/security/telescreen/bodycamera{
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled,
 /area/security/lobby)
 "bJA" = (
@@ -34394,6 +34404,9 @@
 /obj/effect/floor_decal/corner/blue/border,
 /obj/machinery/computer/secure_data{
 	dir = 1
+	},
+/obj/machinery/computer/security/telescreen/bodycamera{
+	pixel_y = -34
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/sc/hos)
@@ -72782,6 +72795,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/fpcenter)
+"swo" = (
+/obj/machinery/computer/security/telescreen/bodycamera,
+/turf/simulated/wall,
+/area/security/aid_station)
 "sxa" = (
 /obj/structure/sign/warning/hot_exhaust,
 /turf/simulated/wall/r_wall,
@@ -119902,7 +119919,7 @@ aPD
 aTc
 aPz
 bbU
-biE
+swo
 biE
 biE
 bva
