@@ -20,7 +20,7 @@ jobs:
       #    echo "ACTIONS_ENABLED=$SECRET_EXISTS" >> $GITHUB_OUTPUT
       - name: "Setup python"
         #if: steps.value_holder.outputs.ACTIONS_ENABLED
-        uses: actions/setup-python@v1
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
       - name: "Install deps"
