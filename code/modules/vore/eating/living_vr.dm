@@ -1166,7 +1166,7 @@
 	dispvoreprefs += "<b>Spontaneous vore prey:</b> [can_be_drop_prey ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
 	dispvoreprefs += "<b>Spontaneous vore pred:</b> [can_be_drop_pred ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
 	if(can_be_drop_prey || can_be_drop_pred)
-		dispvoreprefs += "<b>Drop Vore:</b> [drop_vore ? "<font color='green'>Enabled</font>" : "<font color='red'>Disable</font>d"]<br>"
+		dispvoreprefs += "<b>Drop Vore:</b> [drop_vore ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
 		dispvoreprefs += "<b>Slip Vore:</b> [slip_vore ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
 		dispvoreprefs += "<b>Stumble Vore:</b> [stumble_vore ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
 		dispvoreprefs += "<b>Throw vore:</b> [throw_vore ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
@@ -1180,10 +1180,10 @@
 	dispvoreprefs += "<b>Giving liquids:</b> [give_reagents ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
 	dispvoreprefs += "<b>Late join spawn point belly:</b> [latejoin_vore ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
 	if(latejoin_vore)
-		dispvoreprefs += "<b>Can be late join prey:</b> [no_latejoin_vore_warning ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
-	dispvoreprefs += "<b>Late join spawn auto accept:</b> [latejoin_prey ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
+		dispvoreprefs += "<b>Late join spawn auto accept:</b> [no_latejoin_vore_warning ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
+	dispvoreprefs += "<b>Can be late join prey:</b> [latejoin_prey ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
 	if(latejoin_prey)
-		dispvoreprefs += "<b>Join prey auto accept:</b> [no_latejoin_prey_warning ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
+		dispvoreprefs += "<b>Late join prey auto accept:</b> [no_latejoin_prey_warning ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
 	dispvoreprefs += "<b>Global Vore Privacy is:</b> [eating_privacy_global ? "<font color='green'>Subtle</font>" : "<font color='red'>Loud</font>"]<br>"
 	dispvoreprefs += "<b>Current active belly:</b> [vore_selected ? vore_selected.name : "None"]<br>"
 	//CHOMPEdit End
