@@ -12496,6 +12496,9 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 9
 	},
+/obj/machinery/computer/security/telescreen/bodycamera{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled,
 /area/security/main)
 "aMs" = (
@@ -15113,7 +15116,11 @@
 /obj/item/device/radio/intercom{
 	dir = 1;
 	name = "Station Intercom (General)";
-	pixel_y = 21
+	pixel_y = 5;
+	pixel_x = -31
+	},
+/obj/machinery/computer/security/telescreen/bodycamera{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
@@ -23414,11 +23421,6 @@
 	},
 /turf/simulated/open,
 /area/quartermaster/lockerroom)
-"bup" = (
-/obj/machinery/door/firedoor,
-/obj/effect/wingrille_spawn/reinforced,
-/turf/simulated/floor/plating,
-/area/medical/patient_b)
 "buq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -28759,6 +28761,9 @@
 	},
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1
+	},
+/obj/machinery/computer/security/telescreen/bodycamera{
+	pixel_x = 32
 	},
 /turf/simulated/floor/tiled,
 /area/security/lobby)
@@ -34259,11 +34264,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/barrestroom)
-"cda" = (
-/obj/machinery/door/firedoor,
-/obj/effect/wingrille_spawn/reinforced,
-/turf/simulated/floor/plating,
-/area/medical/patient_a)
 "cde" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -34404,6 +34404,9 @@
 /obj/effect/floor_decal/corner/blue/border,
 /obj/machinery/computer/secure_data{
 	dir = 1
+	},
+/obj/machinery/computer/security/telescreen/bodycamera{
+	pixel_y = -34
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/sc/hos)
@@ -69613,7 +69616,9 @@
 /area/medical/cryo)
 "qAJ" = (
 /obj/machinery/door/firedoor/glass,
-/obj/effect/wingrille_spawn/reinforced,
+/obj/effect/wingrille_spawn/reinforced/polarized{
+	id = "pr1_window_tint"
+	},
 /turf/simulated/floor/plating,
 /area/medical/patient_a)
 "qAW" = (
@@ -72790,6 +72795,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/fpcenter)
+"swo" = (
+/obj/machinery/computer/security/telescreen/bodycamera,
+/turf/simulated/wall,
+/area/security/aid_station)
 "sxa" = (
 /obj/structure/sign/warning/hot_exhaust,
 /turf/simulated/wall/r_wall,
@@ -78177,7 +78186,9 @@
 /area/maintenance/bar)
 "vGS" = (
 /obj/machinery/door/firedoor/glass,
-/obj/effect/wingrille_spawn/reinforced,
+/obj/effect/wingrille_spawn/reinforced/polarized{
+	id = "pr2_window_tint"
+	},
 /turf/simulated/floor/plating,
 /area/medical/patient_b)
 "vHd" = (
@@ -119908,7 +119919,7 @@ aPD
 aTc
 aPz
 bbU
-biE
+swo
 biE
 biE
 bva
@@ -130302,7 +130313,7 @@ drJ
 wls
 lUA
 vda
-cda
+drJ
 aaa
 aaa
 aaa
@@ -130818,7 +130829,7 @@ drJ
 wUp
 ojP
 qtn
-cda
+drJ
 aaa
 aaa
 aaa
@@ -131334,7 +131345,7 @@ rEb
 pOQ
 vxF
 rKn
-bup
+rEb
 aaa
 aaa
 aaa
@@ -131850,7 +131861,7 @@ rEb
 mre
 kzs
 sUz
-bup
+rEb
 aaa
 aaa
 aaa

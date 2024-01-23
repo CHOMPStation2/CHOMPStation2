@@ -56,7 +56,7 @@ SUBSYSTEM_DEF(machines)
 
 /datum/controller/subsystem/machines/proc/setup_atmos_machinery(list/atmos_machines)
 	var/list/actual_atmos_machines = list()
-	
+
 	for(var/obj/machinery/atmospherics/machine in atmos_machines)
 		machine.atmos_init()
 		actual_atmos_machines += machine

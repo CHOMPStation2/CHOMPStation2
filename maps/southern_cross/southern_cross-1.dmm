@@ -28171,7 +28171,6 @@
 "sIP" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/brown/bordercorner,
-/obj/machinery/photocopier,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
@@ -28179,6 +28178,7 @@
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
+/obj/machinery/papershredder,
 /turf/simulated/floor/tiled,
 /area/quartermaster/delivery)
 "sJC" = (
@@ -32053,9 +32053,9 @@
 	pixel_x = -22
 	},
 /obj/machinery/disposal/wall/cleaner{
+	dir = 1;
 	name = "Resleeving lost & found bin";
-	pixel_y = -35;
-	dir = 1
+	pixel_y = -35
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 4
