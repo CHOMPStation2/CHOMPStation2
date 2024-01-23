@@ -4644,6 +4644,7 @@
 #include "modular_chomp\code\game\machinery\paradox.dm"
 #include "modular_chomp\code\game\machinery\petrification.dm"
 #include "modular_chomp\code\game\machinery\portable_turret.dm"
+#include "modular_chomp\code\game\machinery\vending.dm"
 #include "modular_chomp\code\game\machinery\virtual_reality\vr_console.dm"
 #include "modular_chomp\code\game\objects\items.dm"
 #include "modular_chomp\code\game\objects\mob_spawner.dm"
