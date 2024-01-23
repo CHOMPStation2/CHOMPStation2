@@ -12,10 +12,16 @@
 	if(isobserver(A))
 		A.forceMove(T) // Harmlessly move ghosts.
 		return
-	if(A.throwing)
+	if(A.throwing) //jumpboots
 		return
 	if(!(A.can_fall())) //test
 		return // Phased shifted kin should not fall
+
+	var/mob/living/L
+	if(isliving(A))
+		L = A
+		if(L.is_floating)
+			return //Flyers/nograv can ignore it
 
 	A.forceMove(T)
 	// Living things should probably be logged when they fall...
