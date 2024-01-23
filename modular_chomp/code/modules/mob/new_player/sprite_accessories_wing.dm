@@ -67,6 +67,16 @@
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "cloakmoth_eyes"
 
+/datum/sprite_accessory/wing/jet_wing
+	name = "Aeromorph Jet Wings (Colorable)"
+	desc = ""
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
+	icon_state = "jet_wing"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "jet_wing_1"
+	extra_overlay2 = "jet_wing_2"
+
 
 /// XENO BACKPLATES ///
 

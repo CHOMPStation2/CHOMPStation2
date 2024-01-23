@@ -11,6 +11,7 @@
 			return
 
 	HandleBellyReagents()	//CHOMP reagent belly stuff, here to jam it into subsystems and avoid too much cpu usage
+	update_belly_surrounding() //CHOMPAdd - Updates belly_surrounding list for indirect vore usage
 	// VERY early exit
 	if(!contents.len)
 		return
@@ -46,10 +47,11 @@
 		log_debug("Digest mode [digest_mode] didn't exist in the digest_modes list!!")
 		return FALSE
 	if(digest_mode == DM_EGG)
+		prey_loop() //CHOMPAdd - Apparently on Egg mode the sound loop never played before? Just slapping this here to fix that
 		if(DM.handle_atoms(src, contents))
 			updateVRPanels()
 		return
-	if(!length(touchable_atoms))
+	if(!length(touchable_atoms) && !belly_surrounding.len) //CHOMPEdit - Needed to not exit early for indirect vorefx
 		return
 
 /////////////////////////// Sound Selections ///////////////////////////
@@ -93,7 +95,7 @@
 				SEND_SOUND(M, prey_digest)
 		play_sound = pred_digest
 
-	if(!LAZYLEN(touchable_mobs))
+	if(!LAZYLEN(belly_surrounding)) //CHOMPEdit - Changed to belly_surrounding from touchable_mobs so indirect vore viewers get this too
 		if(to_update)
 			updateVRPanels()
 		if(play_sound)
@@ -263,7 +265,7 @@
 	return list("to_update" = to_update, "touchable_mobs" = touchable_mobs, "digestion_noise_chance" = digestion_noise_chance)
 
 /obj/belly/proc/prey_loop()
-	for(var/mob/living/M in contents)
+	for(var/mob/living/M in belly_surrounding) //CHOMPEdit - contents changed to belly_surrounding to loop sound for indirect viewers too
 		//We don't bother executing any other code if the prey doesn't want to hear the noises.
 		if(!M.is_preference_enabled(/datum/client_preference/digestion_noises))
 			M.stop_sound_channel(CHANNEL_PREYLOOP) // sanity just in case, because byond is whack and you can't trust it
@@ -272,7 +274,7 @@
 		// We don't want the sounds to overlap, but we do want them to steadily replay.
 		// We also don't want the sounds to play if the pred hasn't marked this belly as fleshy, or doesn't
 		// have the right sounds to play.
-		if(isbelly(M.loc) && is_wet && wet_loop && (world.time > M.next_preyloop))
+		if(is_wet && wet_loop && (world.time > M.next_preyloop)) //CHOMPEdit - Removed isbelly(M.loc) as some viewers might be indirectly in the belly
 			M.stop_sound_channel(CHANNEL_PREYLOOP)
 			var/sound/preyloop = sound('sound/vore/sunesound/prey/loop.ogg')
 			M.playsound_local(get_turf(src), preyloop, 80, 0, channel = CHANNEL_PREYLOOP, frequency = noise_freq) //CHOMPEdit
@@ -388,7 +390,7 @@
 			owner_adjust_nutrition(oldnutrition) //CHOMPedit end
 
 /obj/belly/proc/updateVRPanels()
-	for(var/mob/living/M in contents)
+	for(var/mob/living/M in belly_surrounding) //CHOMPEdit - Changed to belly_surrounding from contents so updates happen for indirect viewers too
 		if(M.client)
 			M.updateVRPanel()
 	if(owner.client)
