@@ -9,21 +9,21 @@
 	var/datum/codex_tree/tree = null
 	var/root_type = /datum/lore/codex/category/main_borealis_lore	//YW EDIT
 
-	var/static/list/codex_tree_keys = list() // CHOMPedit: static list linking codexes to the correct codex_tree.
+	var/static/list/codex_tree_keys = list() // static list linking codexes to the correct codex_tree.
 
 /obj/item/weapon/book/codex/Initialize()
-	tree = codex_tree_keys["[root_type]"] // CHOMPedit start
+	tree = codex_tree_keys["[root_type]"]
 	if(!tree)
 		tree = new(src, root_type)
-		codex_tree_keys["[root_type]"] = tree // CHOMPedit end
+		codex_tree_keys["[root_type]"] = tree
 	. = ..()
 
 /obj/item/weapon/book/codex/attack_self(mob/user)
-	if(!tree) // CHOMPedit start
+	if(!tree)
 		tree = codex_tree_keys["[root_type]"]
 		if(!tree)
 			tree = new(src, root_type)
-			codex_tree_keys["[root_type]"] = tree // CHOMPedit end
+			codex_tree_keys["[root_type]"] = tree
 	icon_state = "[initial(icon_state)]-open"
 	tree.display(user)
 

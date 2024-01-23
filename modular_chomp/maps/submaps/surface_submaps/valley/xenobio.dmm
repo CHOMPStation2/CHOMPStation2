@@ -56,15 +56,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/submap/xenobio)
-"dT" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/mob/living/carbon/human/monkey,
-/turf/simulated/floor/tiled,
-/area/submap/xenobio)
 "ee" = (
 /obj/structure/table/standard,
 /obj/machinery/chemical_dispenser/full{
@@ -480,13 +471,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/submap/xenobio)
-"NN" = (
-/obj/machinery/light/poi{
-	dir = 8
-	},
-/mob/living/carbon/human/monkey,
-/turf/simulated/floor/tiled,
-/area/submap/xenobio)
 "OW" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -513,13 +497,6 @@
 	pixel_y = 2
 	},
 /obj/item/weapon/mop/advanced,
-/turf/simulated/floor/tiled,
-/area/submap/xenobio)
-"Sc" = (
-/obj/machinery/light/poi{
-	dir = 4
-	},
-/mob/living/carbon/human/monkey,
 /turf/simulated/floor/tiled,
 /area/submap/xenobio)
 "SD" = (
@@ -821,11 +798,11 @@ ee
 zo
 JZ
 zo
-NN
+fZ
 PM
 zo
 SE
-NN
+fZ
 zo
 JZ
 zo
@@ -842,7 +819,7 @@ zo
 AO
 Af
 Af
-dT
+Af
 JP
 Af
 Af
@@ -861,11 +838,11 @@ nt
 zo
 zo
 zo
-Sc
+pa
 PM
 zo
 SE
-Sc
+pa
 zo
 zo
 zo
