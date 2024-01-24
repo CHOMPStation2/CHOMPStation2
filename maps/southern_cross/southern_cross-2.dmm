@@ -10233,8 +10233,7 @@
 "aET" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance{
-	name = "Central Maintenance Access";
-	req_one_access = list(12,19)
+	name = "Central Maintenance Access"
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -16686,8 +16685,7 @@
 "aZF" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance{
-	name = "Central Maintenance Access";
-	req_one_access = list(12,19)
+	name = "Central Maintenance Access"
 	},
 /obj/structure/cable{
 	d1 = 4;
@@ -24510,8 +24508,7 @@
 "bxg" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance{
-	name = "Disposal Access";
-	req_access = list(12)
+	name = "Disposal Access"
 	},
 /obj/structure/cable{
 	d1 = 4;
@@ -62311,8 +62308,7 @@
 "mEJ" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance{
-	name = "Central Maintenance Access";
-	req_one_access = list(12,19)
+	name = "Central Maintenance Access"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/central)
