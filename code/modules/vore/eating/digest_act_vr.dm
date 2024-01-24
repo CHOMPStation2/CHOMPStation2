@@ -77,6 +77,10 @@
 			var/obj/item/device/pda/P = src
 			if(P.id)
 				P.id = null
+		/* CHOMPEdit Start - This is handled lower down now
+		for(var/mob/living/voice/V in possessed_voice) // Delete voices.
+			V.Destroy() //Destroy the voice.
+		CHOMPEdit End */
 		for(var/mob/living/M in contents)//Drop mobs from objects(shoes) before deletion
 			if(item_storage)
 				M.forceMove(item_storage)
