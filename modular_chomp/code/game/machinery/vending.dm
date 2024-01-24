@@ -73,7 +73,6 @@
 				/obj/item/device/geiger = 10,
 				/obj/item/device/gps/explorer = 10,
 				/obj/item/device/flashlight = 10,
-				/obj/item/stack/marker_beacon/thirty = 10,
 				/obj/item/weapon/storage/backpack/parachute = 5,
 				/obj/item/weapon/storage/box/flare = 5,
 				/obj/item/weapon/storage/box/cdeathalarm_kit = 1,
