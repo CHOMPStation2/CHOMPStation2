@@ -644,24 +644,6 @@
 	icon_state = "pipe-s"
 	},
 /turf/simulated/floor/tiled/eris/steel,
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/central_hallway)
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/central_hallway)
-"bG" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/catwalk,
-/obj/machinery/alarm/talon{
-	dir = 8;
-	pixel_x = 22
-	},
-/turf/simulated/floor/plating/eris/under,
-/area/talon/maintenance/decktwo_port)
-=======
 /area/space)
 "bG" = (
 /obj/structure/cable/green{
@@ -676,7 +658,6 @@
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/space)
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 "bH" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -707,24 +688,6 @@
 /obj/item/weapon/paper_bin,
 /obj/item/weapon/pen,
 /turf/simulated/floor/carpet/blucarpet,
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/cap_room)
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/cap_room)
-"bL" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/catwalk,
-/obj/machinery/alarm/talon{
-	dir = 4;
-	pixel_x = -24
-	},
-/turf/simulated/floor/plating/eris/under,
-/area/talon/maintenance/decktwo_starboard)
-=======
 /area/space)
 "bL" = (
 /obj/structure/cable/green{
@@ -739,36 +702,9 @@
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/space)
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 "bM" = (
 /obj/item/modular_computer/console/preset/talon,
 /turf/simulated/floor/carpet/blucarpet,
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/cap_room)
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/cap_room)
-"bN" = (
-/obj/structure/catwalk,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/alarm/talon{
-	dir = 8;
-	pixel_x = 22
-	},
-/turf/simulated/floor/plating/eris/under,
-/area/talon/maintenance/decktwo_port)
-"bO" = (
-/obj/structure/catwalk,
-/obj/machinery/alarm/talon{
-	dir = 4;
-	pixel_x = -24
-	},
-/turf/simulated/floor/plating/eris/under,
-/area/talon/maintenance/decktwo_starboard)
-=======
 /area/space)
 "bN" = (
 /obj/structure/catwalk,
@@ -791,7 +727,6 @@
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/space)
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 "bP" = (
 /obj/structure/extinguisher_cabinet{
 	dir = 8;
@@ -809,20 +744,6 @@
 	dir = 1
 	},
 /turf/simulated/floor/carpet/blucarpet,
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/cap_room)
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/cap_room)
-"bS" = (
-/obj/structure/catwalk,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/plating/eris/under,
-/area/talon/maintenance/decktwo_port)
-=======
 /area/space)
 "bS" = (
 /obj/structure/catwalk,
@@ -833,7 +754,6 @@
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/space)
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 "bT" = (
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
 	dir = 10;
@@ -841,25 +761,6 @@
 	},
 /obj/structure/catwalk,
 /obj/machinery/light/small{
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-	dir = 4;
-	pixel_y = 0
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-	dir = 4
-	},
-/turf/simulated/floor/plating/eris/under,
-/area/talon/maintenance/decktwo_aft)
-"bU" = (
-/obj/machinery/atmospherics/pipe/simple/visible/supply{
-	dir = 4
-	},
-/obj/structure/catwalk,
-/obj/machinery/atmospherics/pipe/simple/visible/aux{
-	dir = 6
-	},
-/obj/machinery/alarm/talon{
-	pixel_y = 22
-=======
 	dir = 4
 	},
 /turf/simulated/floor/plating/eris/under,
@@ -874,7 +775,6 @@
 	},
 /obj/machinery/alarm/talon{
 	pixel_y = 22
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/space)
@@ -909,39 +809,6 @@
 	pixel_y = -30
 	},
 /turf/simulated/floor/wood,
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/bar)
-"cb" = (
-/turf/simulated/wall/rshull,
-/area/talon/maintenance/decktwo_port)
-"cc" = (
-/turf/simulated/wall,
-/area/talon/decktwo/central_hallway)
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/bar)
-"bX" = (
-/obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/catwalk,
-/obj/structure/window/reinforced,
-/obj/machinery/alarm/talon{
-	pixel_y = 22
-	},
-/turf/simulated/floor/plating/eris/under,
-/area/talon/maintenance/decktwo_aft)
-"cb" = (
-/turf/simulated/wall/rshull,
-/area/talon/maintenance/decktwo_port)
-"cc" = (
-/turf/simulated/wall,
-/area/talon/decktwo/central_hallway)
-=======
 /area/space)
 "bX" = (
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
@@ -959,7 +826,6 @@
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/space)
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 "cd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -1055,36 +921,7 @@
 /obj/structure/railing,
 /obj/structure/lattice,
 /turf/simulated/open,
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/central_hallway)
-"cz" = (
-/obj/structure/railing,
-/turf/simulated/open,
-/area/talon/decktwo/central_hallway)
-"cA" = (
-/obj/structure/railing,
-/obj/structure/railing{
-	dir = 4;
-	icon_state = "railing0"
-	},
-/turf/simulated/open,
-/area/talon/decktwo/central_hallway)
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/central_hallway)
-"cz" = (
-/obj/structure/railing,
-/turf/simulated/open,
-/area/talon/decktwo/central_hallway)
-"cA" = (
-/obj/structure/railing,
-/obj/structure/railing{
-	dir = 4
-	},
-/turf/simulated/open,
-/area/talon/decktwo/central_hallway)
-=======
 /area/space)
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 "cB" = (
 /obj/structure/sign/deck2{
 	pixel_y = 28
@@ -1158,48 +995,7 @@
 /obj/structure/table/woodentable,
 /obj/item/modular_computer/laptop/preset/custom_loadout/standard/talon/pilot,
 /turf/simulated/floor/carpet,
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/pilot_room)
-"dL" = (
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
-/obj/machinery/power/apc/talon{
-	cell_type = /obj/item/weapon/cell/apc;
-	dir = 8;
-	name = "west bump";
-	pixel_x = -28
-	},
-/obj/structure/bed/chair/office/light{
-	dir = 1
-	},
-/turf/simulated/floor/carpet,
-/area/talon/decktwo/eng_room)
-"dM" = (
-/turf/simulated/floor/carpet,
-/area/talon/decktwo/eng_room)
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/pilot_room)
-"dL" = (
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
-/obj/machinery/power/apc/talon{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -28
-	},
-/obj/structure/bed/chair/office/light{
-	dir = 1
-	},
-/turf/simulated/floor/carpet,
-/area/talon/decktwo/eng_room)
-"dM" = (
-/turf/simulated/floor/carpet,
-/area/talon/decktwo/eng_room)
-=======
 /area/space)
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 "dQ" = (
 /obj/structure/table/steel,
 /obj/machinery/button/remote/blast_door{
@@ -1607,21 +1403,7 @@
 "gT" = (
 /obj/structure/railing,
 /turf/simulated/open,
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/area/talon/maintenance/decktwo_aft)
-"gU" = (
-/obj/structure/railing,
-/obj/structure/railing{
-	dir = 4;
-	icon_state = "railing0"
-	},
-/turf/simulated/open,
-/area/talon/maintenance/decktwo_aft)
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/area/talon/maintenance/decktwo_aft)
-=======
 /area/space)
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 "gV" = (
 /obj/structure/railing,
 /obj/structure/railing{
@@ -2652,28 +2434,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/cafe,
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/bar)
-"ws" = (
-/obj/machinery/alarm/talon{
-	dir = 4;
-	icon_state = "alarm0";
-	pixel_x = -22;
-	pixel_y = 0
-	},
-/obj/structure/catwalk,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/plating/eris/under,
-/area/talon/maintenance/decktwo_port)
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/bar)
-=======
 /area/space)
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 "wE" = (
 /obj/structure/cable/green{
 	dir = 1;
@@ -2714,17 +2475,6 @@
 /turf/simulated/floor/hull/airless,
 /area/space)
 "xi" = (
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/obj/machinery/computer/shuttle_control/explore/talon_lifeboat{
-	dir = 4;
-	icon_state = "computer"
-	},
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/obj/machinery/computer/shuttle_control/explore/talon_lifeboat{
-	dir = 4
-	},
-=======
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "xn" = (
@@ -2772,27 +2522,7 @@
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/hull/airless,
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/area/talon/maintenance/decktwo_solars)
-"yd" = (
-/obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/catwalk,
-/obj/structure/window/reinforced,
-/turf/simulated/floor/plating/eris/under,
-/area/talon/maintenance/decktwo_aft)
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/area/talon/maintenance/decktwo_solars)
-=======
 /area/space)
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 "ym" = (
 /obj/machinery/light_switch{
 	dir = 1;
@@ -3545,22 +3275,7 @@
 	pixel_y = -24
 	},
 /turf/simulated/floor/plating/eris/under,
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/area/talon/maintenance/decktwo_aft)
-"Jw" = (
-/obj/machinery/alarm/talon{
-	dir = 8;
-	pixel_x = 22;
-	pixel_y = 0
-	},
-/obj/structure/catwalk,
-/turf/simulated/floor/plating/eris/under,
-/area/talon/maintenance/decktwo_starboard)
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/area/talon/maintenance/decktwo_aft)
-=======
 /area/space)
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 "JF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9;
@@ -3905,40 +3620,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/hull/airless,
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/area/talon/maintenance/decktwo_solars)
-"OY" = (
-/obj/structure/catwalk,
-/obj/structure/cable/green{
-	d2 = 8;
-	dir = 2;
-	icon_state = "0-8"
-	},
-/obj/machinery/power/apc/talon{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
-	},
-/turf/simulated/floor/plating/eris/under,
-/area/talon/maintenance/decktwo_starboard)
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/area/talon/maintenance/decktwo_solars)
-"OY" = (
-/obj/structure/catwalk,
-/obj/structure/cable/green{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/machinery/power/apc/talon{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
-	},
-/turf/simulated/floor/plating/eris/under,
-/area/talon/maintenance/decktwo_starboard)
-=======
 /area/space)
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 "Pb" = (
 /obj/structure/cable/green{
 	icon_state = "2-8"
@@ -4084,24 +3766,7 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/hull/airless,
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/area/talon/maintenance/decktwo_solars)
-"RD" = (
-/obj/machinery/atmospherics/pipe/simple/visible/supply{
-	dir = 4
-	},
-/obj/structure/catwalk,
-/obj/machinery/atmospherics/pipe/simple/visible/aux{
-	dir = 6;
-	icon_state = "intact-aux"
-	},
-/turf/simulated/floor/plating/eris/under,
-/area/talon/maintenance/decktwo_aft)
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/area/talon/maintenance/decktwo_solars)
-=======
 /area/space)
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 "RH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/railing{
@@ -4151,28 +3816,7 @@
 	name = "Talon Captain"
 	},
 /turf/simulated/floor/carpet/blucarpet,
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/cap_room)
-"SV" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/alarm/talon{
-	dir = 4;
-	icon_state = "alarm0";
-	pixel_x = -22;
-	pixel_y = 0
-	},
-/obj/structure/catwalk,
-/turf/simulated/floor/plating/eris/under,
-/area/talon/maintenance/decktwo_port)
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/cap_room)
-=======
 /area/space)
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 "Tg" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -4586,27 +4230,7 @@
 	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/tiled/eris/steel,
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/central_hallway)
-"Yz" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/alarm/talon{
-	dir = 8;
-	pixel_x = 22;
-	pixel_y = 0
-	},
-/obj/structure/catwalk,
-/turf/simulated/floor/plating/eris/under,
-/area/talon/maintenance/decktwo_starboard)
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/central_hallway)
-=======
 /area/space)
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 "YA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -13003,28 +12627,12 @@ ht
 ch
 MV
 kS
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-dm
-dm
-dm
-SV
-dm
-dm
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-dm
-dm
-dm
-bG
-dm
-dm
-=======
 fx
 fx
 fx
 bG
 fx
 fx
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 fh
 fx
 FG
@@ -13037,19 +12645,9 @@ lx
 aI
 lx
 lx
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-lx
-ws
-Lo
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-bN
-bS
-Lo
-=======
 bN
 bS
 QA
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 hu
 Hs
 hE
@@ -14751,16 +14349,8 @@ Jh
 gD
 gL
 go
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-gU
-mm
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-hX
-mm
-=======
 hX
 QA
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 gC
 gT
 Mk
@@ -16180,14 +15770,7 @@ AX
 QA
 QA
 QA
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-Jw
-OY
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-OY
-=======
 Qi
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 hu
 NX
 hF

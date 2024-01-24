@@ -82,11 +82,7 @@
 /turf/simulated/floor/wmarble,
 /area/submap/groundbase/poi/wildvillage/square/square10)
 "B" = (
-<<<<<<< HEAD
-/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees,
-=======
 /turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
->>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/submap/groundbase/poi/wildvillage/square/square10)
 "G" = (
 /turf/simulated/floor/wood,

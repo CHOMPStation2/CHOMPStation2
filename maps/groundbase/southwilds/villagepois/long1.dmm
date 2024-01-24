@@ -16,11 +16,7 @@
 /turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
 /area/submap/groundbase/poi/wildvillage/long/long1)
 "m" = (
-<<<<<<< HEAD
-/turf/simulated/floor/outdoors/grass/seasonal/dark,
-=======
 /turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
->>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/submap/groundbase/poi/wildvillage/long/long1)
 "t" = (
 /turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,

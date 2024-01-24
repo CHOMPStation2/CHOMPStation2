@@ -373,11 +373,7 @@
 /area/template_noop)
 "qc" = (
 /obj/structure/prop/rock/crystal,
-<<<<<<< HEAD
-/turf/simulated/floor/outdoors/grass/seasonal/dark,
-=======
 /turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
->>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/template_noop)
 "qh" = (
 /obj/structure/flora/tree/bigtree,
@@ -425,11 +421,7 @@
 /turf/template_noop,
 /area/template_noop)
 "tA" = (
-<<<<<<< HEAD
-/turf/simulated/floor/outdoors/grass/seasonal/dark,
-=======
 /turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
->>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/template_noop)
 "tI" = (
 /obj/item/stack/cable_coil/random,

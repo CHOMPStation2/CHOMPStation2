@@ -251,11 +251,7 @@
 /turf/simulated/floor/wood,
 /area/submap/groundbase/poi/wildvillage/wide/wide2)
 "W" = (
-<<<<<<< HEAD
-/turf/simulated/floor/outdoors/grass/seasonal/dark,
-=======
 /turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
->>>>>>> 47369cec9e... Merge pull request #14312 from Very-Soft/moreRPedits
 /area/submap/groundbase/poi/wildvillage/wide/wide2)
 "X" = (
 /turf/simulated/wall,

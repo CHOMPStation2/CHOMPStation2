@@ -1308,11 +1308,7 @@
 /turf/simulated/floor/outdoors/grass/forest,
 /area/redgate/eggnogtown/greenhouse)
 "kG" = (
-<<<<<<< HEAD:maps/gateway_vr/eggnogtown.dmm
-/obj/machinery/telecomms/relay/preset/tether,
-=======
 /obj/structure/redgate/away,
->>>>>>> dd881251ef... Merge pull request #15167 from Very-Soft/stardog:maps/redgate/eggnogtown.dmm
 /turf/simulated/floor/reinforced,
 /area/redgate/eggnogtown/bar)
 "kI" = (
