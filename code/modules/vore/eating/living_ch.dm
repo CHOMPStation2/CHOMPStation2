@@ -234,7 +234,7 @@
 				choices += rc
 			var/obj/item/weapon/reagent_containers/T = input(user,"Choose what to transfer to","Select Target") as null|anything in choices
 			if(!T)
-			 return FALSE
+				return FALSE
 			if(!Adjacent(T) || !Adjacent(TG))
 				return //No long distance transfer
 

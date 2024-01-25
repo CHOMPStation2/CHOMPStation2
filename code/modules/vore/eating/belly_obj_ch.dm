@@ -31,6 +31,7 @@
 	var/custom_ingested_alpha = 255					//Custom alpha for ingested reagent layer if not using normal mush layer.
 
 	var/nutri_reagent_gen = FALSE					//if belly produces reagent over time using nutrition, needs to be optimized to use subsystem - Jack
+	var/is_beneficial = FALSE							//Sets a reagent as a beneficial one / healing reagents
 	var/list/generated_reagents = list("water" = 1) //Any number of reagents, the associated value is how many units are generated per process()
 	var/reagent_name = "water" 						//What is shown when reagents are removed, doesn't need to be an actual reagent
 	var/reagentid = "water"							//Selected reagent's id, for use in puddle system currently
@@ -205,8 +206,15 @@
 				affecting_amt = 5
 			if(affecting_amt >= 1)
 				for(var/mob/living/L in touchable_atoms)
-					if(L.digestable && digest_mode == DM_DIGEST)
+					if(!L.apply_reagents)
+						continue
+					if((L.digestable && digest_mode == DM_DIGEST))
+						if(!L.permit_healbelly && is_beneficial) // Healing reagents turned off in preferences!
+							continue
 						if(reagents.total_volume)
+							reagents.trans_to(L, affecting_amt, 1, FALSE)
+					if(L.permit_healbelly && digest_mode == DM_HEAL)
+						if(is_beneficial && reagents.total_volume)
 							reagents.trans_to(L, affecting_amt, 1, FALSE)
 				for(var/obj/item/I in touchable_atoms)
 					if(reagents.total_volume)
@@ -359,6 +367,7 @@
 			gen_cost = 10
 			reagentid = "tricordrazine"
 			reagentcolor = "#8040FF"
+			is_beneficial = TRUE
 
 
 /////////////////////// FULLNESS MESSAGES //////////////////////

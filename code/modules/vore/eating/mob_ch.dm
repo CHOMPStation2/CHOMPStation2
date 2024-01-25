@@ -1,6 +1,7 @@
 /mob
 	var/receive_reagents = FALSE			//Pref for people to avoid others transfering reagents into them.
 	var/give_reagents = FALSE				//Pref for people to avoid others taking reagents from them.
+	var/apply_reagents = FALSE				//Pref for people to avoid having stomach reagents applied to them
 	var/latejoin_vore = FALSE				//If enabled, latejoiners can spawn into this, assuming they have a client
 	var/latejoin_prey = FALSE				//If enabled, latejoiners can spawn ontop of and instantly eat the victim
 	var/noisy_full = FALSE					//Enables belching when a mob has overeaten

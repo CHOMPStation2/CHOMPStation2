@@ -52,6 +52,7 @@
 	latejoin_prey = client.prefs_vr.latejoin_prey
 	receive_reagents = client.prefs_vr.receive_reagents
 	give_reagents = client.prefs_vr.give_reagents
+	apply_reagents = client.prefs_vr.apply_reagents
 	autotransferable = client.prefs_vr.autotransferable
 	noisy_full = client.prefs_vr.noisy_full
 	strip_pref = client.prefs_vr.strip_pref

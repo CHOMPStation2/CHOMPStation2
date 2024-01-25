@@ -22,6 +22,20 @@ const digestModeToColor = {
   'Encase In Egg': 'blue',
 };
 
+const reagentTpColor = {
+  'Water': null,
+  'Milk': null,
+  'Cream': null,
+  'Honey': null,
+  'Cherry Jelly': null,
+  'Digestive acid': 'red',
+  'Diluted digestive acid': 'red',
+  'Lube': null,
+  'Biomass': null,
+  'Concentrated Radium': 'red',
+  'Tricordrazine': 'green',
+};
+
 const digestModeToPreyMode = {
   'Hold': 'being held.',
   'Digest': 'being digested.',
@@ -2089,6 +2103,7 @@ const VoreSelectedBellyLiquidOptions = (props, context) => {
                 })
               }
               icon="pen"
+              color={reagentTpColor[liq_interacts.liq_reagent_type]}
               content={liq_interacts.liq_reagent_type}
             />
           </LabeledList.Item>
@@ -2506,6 +2521,7 @@ const VoreUserPreferences = (props, context) => {
     autotransferable,
     liq_rec,
     liq_giv,
+    liq_apply,
     no_spawnpred_warning,
     no_spawnprey_warning,
     nutrition_message_visible,
@@ -2967,6 +2983,19 @@ const VoreUserPreferences = (props, context) => {
         disabled: 'Do Not Allow Taking Liquids',
       },
     },
+    liquid_apply: {
+      action: 'toggle_liq_apply',
+      test: liq_apply,
+      tooltip: {
+        main: 'This button is for allowing or preventing vorgans from applying liquids to you.',
+        enable: 'Click here to allow the application of liquids.',
+        disable: 'Click here to prevent the application of liquids.',
+      },
+      content: {
+        enabled: 'Applying Liquids Allowed',
+        disabled: 'Do Not Allow Applying Liquids',
+      },
+    },
     no_spawnpred_warning: {
       action: 'toggle_no_latejoin_vore_warning',
       test: no_spawnpred_warning,
@@ -3153,7 +3182,13 @@ const VoreUserPreferences = (props, context) => {
                 tooltipPosition="left"
               />
             </Flex.Item>
-            <Flex.Item basis="34%">
+            <Flex.Item basis="33%">
+              <VoreUserPreferenceItem
+                spec={preferences.liquid_apply}
+                tooltipPosition="right"
+              />
+            </Flex.Item>
+            <Flex.Item basis="33%">
               <VoreUserPreferenceItem
                 spec={preferences.remains}
                 tooltipPosition="top"

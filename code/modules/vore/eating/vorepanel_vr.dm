@@ -513,6 +513,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		//CHOMPedit start, liquid belly prefs
 		"liq_rec" = host.receive_reagents,
 		"liq_giv" = host.give_reagents,
+		"liq_apply" = host.apply_reagents,
 		"autotransferable" = host.autotransferable,
 		"noisy_full" = host.noisy_full, //Belching while full
 		"selective_active" = host.selective_preference, //Reveal active selective mode in prefs
@@ -1899,6 +1900,12 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.give_reagents = !host.give_reagents
 			if(host.client.prefs_vr)
 				host.client.prefs_vr.give_reagents = host.give_reagents
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_liq_apply")
+			host.apply_reagents = !host.apply_reagents
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.apply_reagents = host.apply_reagents
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_autotransferable")

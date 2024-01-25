@@ -73,6 +73,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/noisy_full = FALSE
 	var/receive_reagents = FALSE
 	var/give_reagents = FALSE
+	var/apply_reagents = FALSE
 	var/latejoin_vore = FALSE
 	var/latejoin_prey = FALSE
 	var/autotransferable = TRUE
@@ -219,6 +220,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	receive_reagents = json_from_file["receive_reagents"]
 	noisy_full = json_from_file["noisy_full"]
 	give_reagents = json_from_file["give_reagents"]
+	apply_reagents = json_from_file["apply_reagents"]
 	autotransferable = json_from_file["autotransferable"]
 	vore_sprite_color = json_from_file["vore_sprite_color"]
 	vore_sprite_multiply = json_from_file["vore_sprite_multiply"]
@@ -319,8 +321,10 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		receive_reagents = FALSE
 	if(isnull(give_reagents))
 		give_reagents = FALSE
+	if(isnull(apply_reagents))
+		apply_reagents = FALSE
 	if(isnull(noisy_full))
-		noisy_full = TRUE
+		noisy_full = FALSE
 	if(isnull(autotransferable))
 		autotransferable = TRUE
 	if(isnull(vore_sprite_color))
@@ -364,6 +368,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"belly_prefs"			= belly_prefs,
 			"receive_reagents"		= receive_reagents, //CHOMPedit
 			"give_reagents"			= give_reagents, //CHOMPedit
+			"apply_reagents"		= apply_reagents, //CHOMPedit
 			"autotransferable"		= autotransferable,
 			"drop_vore"				= drop_vore,
 			"slip_vore"				= slip_vore,

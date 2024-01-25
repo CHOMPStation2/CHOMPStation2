@@ -288,6 +288,7 @@
 	new_mob.latejoin_prey = latejoin_prey
 	new_mob.receive_reagents = receive_reagents
 	new_mob.give_reagents = give_reagents
+	new_mob.apply_reagents = apply_reagents
 	new_mob.autotransferable = autotransferable
 	new_mob.strip_pref = strip_pref
 	new_mob.vore_sprite_color = vore_sprite_color
