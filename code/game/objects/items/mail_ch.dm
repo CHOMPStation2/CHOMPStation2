@@ -227,7 +227,7 @@
 			/obj/item/weapon/reagent_containers/food/snacks/donkpocket/spicy,
 			/obj/item/weapon/reagent_containers/food/snacks/donkpocket/teriyaki,
 			/obj/item/toy/figure,
-			/obj/item/stolenpackage
+			/obj/item/contraband
 		))
 
 	var/list/junk_names = list(
@@ -245,7 +245,7 @@
 		/obj/item/weapon/reagent_containers/food/snacks/donkpocket/spicy = "[initial(name)] with NEW SPICY-POCKET.",
 		/obj/item/weapon/reagent_containers/food/snacks/donkpocket/teriyaki = "[initial(name)] with NEW TERIYAKI-POCKET.",
 		/obj/item/toy/figure = "[initial(name)] from DoN**K*oC",
-		/obj/item/stolenpackage = "[pick("oddly shaped", "strangely wrapped", "weird", "bulging")] [initial(name)]"
+		/obj/item/contraband = "[pick("oddly shaped", "strangely wrapped", "weird", "bulging")] [initial(name)]"
 	)
 
 	name = special_name ? junk_names[junk] : "important [initial(name)]"
