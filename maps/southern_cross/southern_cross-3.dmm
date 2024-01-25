@@ -12903,9 +12903,7 @@
 /turf/simulated/floor/tiled,
 /area/bridge)
 "lrr" = (
-/obj/machinery/clonepod,
-/obj/item/weapon/reagent_containers/glass/bottle/biomass,
-/obj/item/weapon/reagent_containers/glass/bottle/biomass,
+/obj/machinery/clonepod/transhuman/full,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "lsm" = (
@@ -27275,7 +27273,7 @@
 	name = "Third Deck Aft Maintenance"
 	})
 "xnt" = (
-/obj/machinery/computer/transhuman{
+/obj/machinery/computer/transhuman/resleeving{
 	dir = 1
 	},
 /turf/simulated/floor/plating,
