@@ -156,12 +156,6 @@
 	mappath = 'maps/submaps/surface_submaps/plains/kururak.dmm'
 	cost = 10
 
-/datum/map_template/surface/plains/lonehome
-	name = "Lone Home"
-	desc = "A quite inoffensive looking home, damaged but still holding up."
-	mappath = 'maps/submaps/surface_submaps/plains/lonehome.dmm'
-	cost = 15
-
 /datum/map_template/surface/plains/mechpit
 	name = "Mechpit"
 	desc = "A illmade Mech brawling ring."

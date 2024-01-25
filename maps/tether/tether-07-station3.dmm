@@ -2204,23 +2204,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/hallwayaux)
-"aes" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/random/junk,
-/turf/simulated/floor,
-/area/maintenance/cargo)
-"aet" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
-	dir = 1;
-	icon_state = "map-fuel"
-	},
-/turf/simulated/floor/tiled/asteroid_steel/airless,
-/turf/simulated/shuttle/plating/airless/carry,
-/area/shuttle/mining_outpost/shuttle)
 "aet" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 8
@@ -3373,13 +3356,6 @@
 "agg" = (
 /turf/simulated/floor/airless,
 /area/space)
-"agh" = (
-/obj/structure/shuttle/engine/propulsion{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/asteroid_steel/airless,
-/turf/simulated/shuttle/plating/airless/carry,
-/area/shuttle/mining_outpost/shuttle)
 "agi" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 8;
@@ -39585,9 +39561,9 @@ avt
 adD
 aZS
 agf
-agh
-agh
-agh
+aet
+aet
+aet
 agi
 baB
 adD

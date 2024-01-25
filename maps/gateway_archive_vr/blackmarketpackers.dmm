@@ -500,6 +500,7 @@
 	},
 /obj/structure/cable{
 	icon_state = "0-4";
+	
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/BMPship1)
@@ -833,6 +834,7 @@
 "cA" = (
 /obj/structure/cable{
 	icon_state = "0-2";
+	
 	},
 /obj/machinery/power/apc{
 	dir = 1;
@@ -1174,6 +1176,7 @@
 /obj/structure/cable{
 	icon_state = "0-2";
 	pixel_y = 1;
+	
 	},
 /turf/simulated/floor{
 	 icon_state = "barber"
@@ -1204,6 +1207,7 @@
 /obj/structure/cable{
 	icon_state = "0-2";
 	pixel_y = 1;
+	
 	},
 /turf/simulated/floor{
 	icon_state = "showroomfloor"
@@ -1250,6 +1254,7 @@
 /obj/structure/cable{
 	icon_state = "0-2";
 	pixel_y = 1;
+	
 	},
 /obj/machinery/power/apc{
 	dir = 1;
@@ -1651,6 +1656,7 @@
 /obj/machinery/shieldwallgen,
 /obj/structure/cable{
 	icon_state = "0-4";
+	
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/BMPship2)
@@ -1668,6 +1674,7 @@
 "eG" = (
 /obj/structure/cable{
 	icon_state = "0-2";
+	
 	},
 /obj/machinery/power/apc{
 	dir = 1;
@@ -1792,6 +1799,7 @@
 	},
 /obj/structure/cable{
 	icon_state = "0-4";
+	
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/BMPship1)
@@ -2969,6 +2977,7 @@
 "ii" = (
 /obj/structure/cable{
 	icon_state = "0-4";
+	
 	},
 /turf/simulated/floor/plating/airless,
 /area/awaymission)
