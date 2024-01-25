@@ -12902,12 +12902,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/bridge)
-"lrr" = (
-/obj/machinery/clonepod,
-/obj/item/weapon/reagent_containers/glass/bottle/biomass,
-/obj/item/weapon/reagent_containers/glass/bottle/biomass,
-/turf/simulated/floor/plating,
-/area/maintenance/thirddeck/dormsstarboard)
 "lsm" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/industrial/warning{
@@ -16892,6 +16886,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/hallway/primary/thirddeck/stationgateway)
+"oLd" = (
+/obj/machinery/computer/transhuman/resleeving{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsstarboard)
 "oLr" = (
 /obj/structure/bed/double/padded,
 /obj/item/weapon/bedsheet/orangedouble,
@@ -25794,6 +25794,10 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/sleep/vistor_room_4)
+"whm" = (
+/obj/machinery/clonepod/transhuman/full,
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsstarboard)
 "whE" = (
 /obj/machinery/button/remote/airlock{
 	id = "Dorms4";
@@ -27274,12 +27278,6 @@
 /area/maintenance/thirddeck/dormsaft{
 	name = "Third Deck Aft Maintenance"
 	})
-"xnt" = (
-/obj/machinery/computer/transhuman{
-	dir = 1
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/thirddeck/dormsstarboard)
 "xob" = (
 /obj/machinery/door/airlock{
 	name = "Unisex Restrooms"
@@ -67641,7 +67639,7 @@ xRu
 fZP
 sVv
 sDu
-xnt
+oLd
 wzA
 qRF
 sIj
@@ -68157,7 +68155,7 @@ tfU
 yeL
 fFk
 rQK
-lrr
+whm
 wzA
 gqL
 uge
