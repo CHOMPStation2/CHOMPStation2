@@ -1,0 +1,6 @@
+author: "Darlantanis"
+delete-after: True
+changes:
+  - qol: "Adjust turf edges priority"
+  - qol: "Tweaks windgrille spawner layer"
+  - bugfix: "Makes wingrille spawners work after roundstart"
