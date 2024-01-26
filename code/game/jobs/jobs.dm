@@ -55,6 +55,7 @@ var/const/ENTREPRENEUR		=(1<<15)
 
 var/const/OTHER				=(1<<10) //CHOMPStation Add
 var/const/NONCREW			=(1<<0) //CHOMPStation Add
+var/const/ANOMALY			=(1<<0) //CHOMPstation Add
 /* // CHOMPedit: Comment out Talon positions, we don't have that here.
 //VOREStation Add
 var/const/TALON				=(1<<3)

@@ -80,6 +80,7 @@
 	var/check_timer = 0
 
 	var/respite_activating = FALSE //CHOMPEdit - Dark Respite
+	var/list/active_dark_maws = list()
 
 /mob/living/simple_mob/shadekin/Initialize()
 	//You spawned the prototype, and want a totally random one.

@@ -39,7 +39,7 @@ var/list/grass_types = list(
 	name = "growth"
 	icon_state = "grass_sif0"
 	initial_flooring = /decl/flooring/grass/sif
-	edge_blending_priority = 2
+	edge_blending_priority = 3 // CHOMPedit
 	grass_chance = 5
 	var/tree_chance = 0.7 //CHOMPedit
 

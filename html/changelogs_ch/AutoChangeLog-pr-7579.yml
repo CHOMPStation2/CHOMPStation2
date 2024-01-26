@@ -1,0 +1,6 @@
+author: "FluffMedic"
+delete-after: True
+changes:
+  - rscadd: "Added Anomaly role, aka new shadekin role"
+  - rscadd: "Added an outsider radio"
+  - qol: "Shadekin and outsiders are now separate"

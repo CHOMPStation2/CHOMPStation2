@@ -1,0 +1,5 @@
+author: "TheCaramelion"
+delete-after: True
+changes:
+  - bugfix: "Solar grubs can now evolve"
+  - remap: "Solar moth re-added to the valley"
