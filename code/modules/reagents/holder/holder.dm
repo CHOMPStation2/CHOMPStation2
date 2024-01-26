@@ -268,9 +268,13 @@
 //If for some reason touch effects are bypassed (e.g. injecting stuff directly into a reagent container or person),
 //call the appropriate trans_to_*() proc.
 /datum/reagents/proc/trans_to(var/atom/target, var/amount = 1, var/multiplier = 1, var/copy = 0)
-	if(ismob(target))  //CHOMPEdit
-		return splash_mob(target, amount * multiplier, copy) //Touch effects handled by splash_mob
+	//CHOMPEdit Start, we only can do the splashing first on carbon (Runtime reasons)
+	if(iscarbon(target))
+		return splash_mob(target, amount * multiplier, copy)
+	//CHOMPEdit End
 	touch(target, amount * multiplier) //First, handle mere touch effects
+	if(ismob(target))
+		return splash_mob(target, amount * multiplier, copy) //Touch effects handled by splash_mob
 	if(isturf(target))
 		return trans_to_turf(target, amount, multiplier, copy)
 	if(isobj(target) && target.is_open_container() && !isbelly(target.loc)) //CHOMPEdit
