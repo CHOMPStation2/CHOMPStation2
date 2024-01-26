@@ -113,8 +113,10 @@
 									   /datum/power/shadekin/regenerate_other,
 									   /datum/power/shadekin/create_shade,
 									   /datum/power/shadekin/dark_tunneling, //CHOMPEdit Add - Dark Tunneling
-									   /datum/power/shadekin/dark_respite) //CHOMPEdit Add - Dark Respite
+									   /datum/power/shadekin/dark_respite, //CHOMPEdit Add - Dark Respite
+									   /datum/power/shadekin/dark_maw) //CHOMPEdit Add - Dark Maw
 	var/list/shadekin_ability_datums = list()
+	var/list/active_dark_maws = list() //CHOMPEdit - Add dark maws
 	var/kin_type
 	var/energy_light = 0.25
 	var/energy_dark = 0.75
@@ -133,6 +135,7 @@
 
 //CHOMPEdit Begin - Actually phase to the Dark on death
 /datum/species/shadekin/handle_death(var/mob/living/carbon/human/H)
+	H.clear_dark_maws() //CHOMPEdit - clear dark maws on death or similar
 	if(respite_activating)
 		return TRUE
 	var/area/current_area = get_area(H)
@@ -295,6 +298,7 @@
 					)
 	H.verbs += /mob/living/carbon/human/proc/phase_strength_toggle //CHOMPEdit - Add gentle phasing
 	H.verbs += /mob/living/carbon/human/proc/nutrition_conversion_toggle //CHOMPEdit - Add nutrition conversion toggle
+	H.verbs += /mob/living/carbon/human/proc/clear_dark_maws //CHOMPEdit - Add Dark maw clearing
 
 /datum/species/shadekin/proc/handle_shade(var/mob/living/carbon/human/H)
 	//CHOMPEdit begin - No energy during dark respite
@@ -319,7 +323,7 @@
 		brightness = 0
 	//CHOMPEdit end
 	darkness = 1-brightness //Invert
-	var/is_dark = (darkness >= 0.5)
+	var/is_dark = (darkness >= 0.5) || istype(get_area(H), /area/shadekin) //CHOMPEdit - Dark provides health
 
 	if(H.ability_flags & AB_PHASE_SHIFTED)
 		dark_gains = 0
@@ -367,7 +371,7 @@
 	if(!istype(shade_organ))
 		return 0
 
-	return shade_organ.max_dark_energy
+	return shade_organ.max_dark_energy - (LAZYLEN(active_dark_maws) * 5)
 
 /datum/species/shadekin/proc/set_energy(var/mob/living/carbon/human/H, var/new_energy)
 	var/obj/item/organ/internal/brain/shadekin/shade_organ = H.internal_organs_by_name[O_BRAIN]
