@@ -252,3 +252,32 @@
   - bugfix: Ghosts won't delete pAIs if they close the tgui pop-ups anymore
   Upstream:
   - rscadd: Added new trait (Bad Swimmer)
+2024-01-26:
+  Darlantanis:
+  - qol: Adjust turf edges priority
+  - qol: Tweaks windgrille spawner layer
+  - bugfix: Makes wingrille spawners work after roundstart
+  EtheoBoxxman:
+  - rscadd: Adds breathless trait
+  - rscadd: Adds shadekin bodytype for custom species
+  - rscadd: Adds marish language
+  FluffMedic:
+  - rscadd: Added Anomaly role, aka new shadekin role
+  - rscadd: Added an outsider radio
+  - qol: Shadekin and outsiders are now separate
+  - bugfix: Anomaly getting mail, and should be announcing
+  - bugfix: fixed a spawnpoint
+  Kashargul:
+  - bugfix: runtime during belly acid reagent applications on robot robot noms
+  - bugfix: runtime during acid reagent application on destructible objects
+  Missile597:
+  - maptweak: Replaced the secret console with a working resleever console
+  - maptweak: Replaced the secret cloning pod with a sleeve growing pod
+  Raeschen:
+  - rscdel: Removes stripping from jelly blob vore
+  TheCaramelion:
+  - bugfix: Solar grubs can now evolve
+  - maptweak: Solar moth re-added to the valley
+  - bugfix: Only shadekin can pick the Anomaly role
+  TheGreatKitsune:
+  - rscadd: New ability for shadekin

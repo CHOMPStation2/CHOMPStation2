@@ -1,5 +1,0 @@
-author: "Kashargul"
-delete-after: True
-changes:
-  - bugfix: "runtime during belly acid reagent applications on robot robot noms"
-  - bugfix: "runtime during acid reagent application on destructible objects"

@@ -1,6 +1,0 @@
-author: "EtheoBoxxman"
-delete-after: True
-changes:
-  - rscadd: "Adds breathless trait"
-  - rscadd: "Adds shadekin bodytype for custom species"
-  - rscadd: "Adds marish language"
