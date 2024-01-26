@@ -140,16 +140,12 @@
 
 /datum/job/cargo_tech
 	mail_goodies = list(
+		/obj/item/pizzavoucher = 375,
 		/obj/item/poster/custom = 200,
 		/obj/item/stack/material/steel{amount = 10} = 150,
 		/obj/item/stack/material/glass{amount = 10} = 150,
 		/obj/item/stack/material/wood{amount = 10} = 150,
-		/obj/item/pizzabox/margherita = 75,
-		/obj/item/pizzabox/mushroom = 75,
-		/obj/item/pizzabox/meat = 75,
-		/obj/item/pizzabox/vegetable = 75,
-		/obj/item/pizzabox/pineapple = 75,
-		/obj/item/weapon/coin/silver = 50,
+		/obj/item/weapon/coin/silver = 50
 	)
 	mail_color = COMMS_COLOR_SUPPLY
 
@@ -164,8 +160,9 @@
 
 /datum/alt_title/mailman
 	mail_goodies = list(
-		/obj/item/weapon/wrapping_paper = 200,
-		/obj/item/pizzavoucher = 200,
+		/obj/item/poster/custom = 300,
+		/obj/item/weapon/wrapping_paper = 300,
+		/obj/item/pizzavoucher = 300,
 		/obj/item/weapon/coin/silver = 100,
 	)
 
@@ -289,10 +286,10 @@
 	mail_color = COMMS_COLOR_SERVICE
 
 /datum/job/entertainer
-		// Still need to separate the goodies for each title, mimes and clows shouldn't get the same thing.
+		// These need new goodes...
 	mail_goodies = list(
-		/obj/random/instrument = 175,
-		/obj/item/weapon/storage/pill_bottle/dice_nerd = 100,
+		/obj/random/instrument = 600,
+		/obj/item/weapon/storage/pill_bottle/dice_nerd = 400,
 	)
 	mail_color = COMMS_COLOR_SERVICE
 
@@ -603,7 +600,7 @@
 		/obj/item/weapon/stock_parts/capacitor/adv = 45,
 		/obj/item/weapon/stock_parts/scanning_module/adv = 45,
 		/obj/item/weapon/stock_parts/micro_laser/high = 45,
-		/obj/item/stack/nanopaste = 30,
+		/obj/item/stack/nanopaste/advanced = 30,
 		/obj/item/weapon/stock_parts/matter_bin/super = 5,
 		/obj/item/weapon/stock_parts/manipulator/pico = 5,
 		/obj/item/weapon/stock_parts/capacitor/super = 5,
@@ -626,19 +623,19 @@
 		/obj/item/trash/rkibble = 200,
 		/obj/item/stack/material/steel{amount = 10} = 150,
 		/obj/item/device/robotanalyzer = 125,
-		/obj/item/device/kit/paint/ripley = 75,
-		/obj/item/device/kit/paint/gygax = 75,
-		/obj/item/device/kit/paint/durand = 75,
-		/obj/item/device/kit/paint/ripley/death = 60,
-		/obj/item/device/kit/paint/durand/seraph = 55,
-		/obj/item/device/kit/paint/durand/phazon = 55,
-		/obj/item/device/kit/paint/gygax/darkgygax = 25,
-		/obj/item/device/kit/paint/ripley/flames_red = 25,
-		/obj/item/device/kit/paint/gygax/recitence = 20,
-		/obj/item/device/kit/paint/ripley/flames_blue = 20,
+		/obj/item/stack/nanopaste/advanced = 85,
+		/obj/item/device/kit/paint/ripley = 55,
+		/obj/item/device/kit/paint/gygax = 55,
+		/obj/item/device/kit/paint/durand = 55,
+		/obj/item/device/kit/paint/ripley/death = 45,
+		/obj/item/device/kit/paint/durand/seraph = 45,
+		/obj/item/device/kit/paint/durand/phazon = 45,
+		/obj/item/device/kit/paint/gygax/darkgygax = 30,
+		/obj/item/device/kit/paint/ripley/flames_red = 30,
+		/obj/item/device/kit/paint/gygax/recitence = 25,
+		/obj/item/device/kit/paint/ripley/flames_blue = 25,
 		/obj/item/weapon/tool/screwdriver/power = 10,
 		/obj/item/weapon/tool/wirecutters/power = 10,
-		/obj/item/weapon/weldingtool/electric = 10,
 		/obj/item/weapon/weldingtool/experimental = 10,
 	)
 	mail_color = COMMS_COLOR_SCIENCE

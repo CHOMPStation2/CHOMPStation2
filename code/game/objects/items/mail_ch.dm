@@ -196,7 +196,8 @@
 		/obj/item/mail,
 		/obj/item/smallDelivery,
 		/obj/item/weapon/paper,
-		/obj/item/stolenpackage
+		/obj/item/stolenpackage,
+		/obj/item/contraband
 	)
 
 // JUNK MAIL STUFF

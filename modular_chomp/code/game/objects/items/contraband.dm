@@ -1,7 +1,7 @@
 /obj/item/contraband
 	name = "contrabanad"
 	desc = "A tightly sealed package. Dare to look inside?"
-	icon = 'icons/obj/stoage.dm'
+	icon = 'icons/obj/storage.dmi'
 	icon_state = "deliverycrate5"
 	item_state = "table_parts"
 	w_class = ITEMSIZE_HUGE
