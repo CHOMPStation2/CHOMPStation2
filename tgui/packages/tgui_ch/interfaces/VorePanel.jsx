@@ -22,17 +22,18 @@ const digestModeToColor = {
   'Encase In Egg': 'blue',
 };
 
-const reagentTpColor = {
+const reagentToColor = {
   'Water': null,
   'Milk': null,
   'Cream': null,
-  'Honey': null,
-  'Cherry Jelly': null,
+  'Honey': 'teal',
+  'Cherry Jelly': 'teal',
   'Digestive acid': 'red',
   'Diluted digestive acid': 'red',
+  'Space cleaner': null,
   'Lube': null,
-  'Biomass': null,
-  'Concentrated Radium': 'red',
+  'Biomass': 'teal',
+  'Concentrated Radium': 'orange',
   'Tricordrazine': 'green',
 };
 
@@ -244,8 +245,18 @@ export const VorePanel = (props, context) => {
 const VoreInsidePanel = (props, context) => {
   const { act, data } = useBackend(context);
 
-  const { absorbed, belly_name, belly_mode, desc, pred, contents, ref } =
-    data.inside;
+  const {
+    absorbed,
+    belly_name,
+    belly_mode,
+    desc,
+    pred,
+    contents,
+    ref,
+    liq_lvl,
+    liq_reagent_type,
+    liuq_name,
+  } = data.inside;
 
   if (!belly_name) {
     return <Section title="Inside">You aren&apos;t inside anyone.</Section>;
@@ -264,6 +275,20 @@ const VoreInsidePanel = (props, context) => {
       <Box color="red" inline>
         {belly_name}
       </Box>
+      {liq_lvl > 0 ? (
+        <>
+          ,&nbsp;
+          <Box color="yellow" inline>
+            bathing in a pool of
+          </Box>
+          &nbsp;
+          <Box color={reagentToColor[liq_reagent_type]} inline>
+            {liuq_name}
+          </Box>
+        </>
+      ) : (
+        ''
+      )}
       &nbsp;
       <Box color="yellow" inline>
         and you are
@@ -2103,7 +2128,7 @@ const VoreSelectedBellyLiquidOptions = (props, context) => {
                 })
               }
               icon="pen"
-              color={reagentTpColor[liq_interacts.liq_reagent_type]}
+              color={reagentToColor[liq_interacts.liq_reagent_type]}
               content={liq_interacts.liq_reagent_type}
             />
           </LabeledList.Item>
@@ -2529,7 +2554,7 @@ const VoreUserPreferences = (props, context) => {
     selective_active,
   } = data.prefs;
 
-  const { show_pictures } = data;
+  const { show_pictures, overflow } = data;
 
   const [tabIndex, setTabIndex] = useLocalState(context, 'tabIndex', 0);
 
@@ -3048,8 +3073,12 @@ const VoreUserPreferences = (props, context) => {
               'Allows to toggle if belly contents are shown as icons or in list format. ' +
               (show_pictures
                 ? 'Contents shown as pictures.'
-                : 'Contents shown as lists.')
+                : 'Contents shown as lists.') +
+              (show_pictures && overflow
+                ? 'Temporarily disabled. Stomach contents above limits.'
+                : '')
             }
+            backgroundColor={show_pictures && overflow ? 'orange' : ''}
             onClick={() => act('show_pictures')}>
             Contents Preference: {show_pictures ? 'Show Pictures' : 'Show List'}
           </Button>

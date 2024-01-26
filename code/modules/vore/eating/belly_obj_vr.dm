@@ -575,8 +575,8 @@
 		//Stop AI processing in bellies
 		if(M.ai_holder)
 			M.ai_holder.go_sleep()
-		if(reagents.total_volume >= 5 && M.digestable) //CHOMPEdit Start
-			if(digest_mode == DM_DIGEST)
+		if(reagents.total_volume >= 5) //CHOMPEdit Start
+			if(digest_mode == DM_DIGEST && M.digestable)
 				reagents.trans_to(M, reagents.total_volume * 0.1, 1 / max(LAZYLEN(contents), 1), FALSE)
 			to_chat(M, "<span class='vwarning'><B>You splash into a pool of [reagent_name]!</B></span>")
 	if(!isliving(thing) && count_items_for_sprite) //CHOMPEdit - If this is enabled also update fullness for non-living things

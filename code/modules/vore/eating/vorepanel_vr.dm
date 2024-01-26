@@ -56,6 +56,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 	var/mob/host // Note, we do this in case we ever want to allow people to view others vore panels
 	var/unsaved_changes = FALSE
 	var/show_pictures = TRUE
+	var/icon_overflow = FALSE
 	var/max_icon_content = 21 //CHOMPedit: Contents above this disable icon mode. 21 for nice 3 rows to fill the default panel window.
 
 /datum/vore_look/New(mob/new_host)
@@ -118,6 +119,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 	data["unsaved_changes"] = unsaved_changes
 	data["show_pictures"] = show_pictures
+	data["overflow"] = icon_overflow
 
 	var/atom/hostloc = host.loc
 	//CHOMPAdd Start - Allow VorePanel to show pred belly details even while indirectly inside
@@ -152,6 +154,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"desc" = inside_desc,
 			"pred" = pred,
 			"ref" = "\ref[inside_belly]",
+			//CHOMPEdit Start
+			"liq_lvl" = inside_belly.reagents.total_volume,
+			"liq_reagent_type" = inside_belly.reagent_chosen,
+			"liuq_name" = inside_belly.reagent_name,
+			//CHOMPEdit End
 		)
 
 		var/list/inside_contents = list()
@@ -166,11 +173,13 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				"ref" = "\ref[O]",
 				"outside" = FALSE,
 			)
-			if(show_pictures) //CHOMPedit: disables icon mode
+			if(show_pictures) //CHOMPedit Start: disables icon mode
 				if(inside_belly.contents.len <= max_icon_content)
+					icon_overflow = FALSE
 					info["icon"] = cached_nom_icon(O)
 				else
-					show_pictures = !show_pictures
+					icon_overflow = TRUE
+				//CHOMPEdit End
 			if(isliving(O))
 				var/mob/living/M = O
 				info["stat"] = M.stat
@@ -425,11 +434,13 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				"ref" = "\ref[O]",
 				"outside" = TRUE,
 			)
-			if(show_pictures) //CHOMPedit: disables icon mode
+			if(show_pictures) //CHOMPedit Start: disables icon mode
 				if(selected.contents.len <= max_icon_content)
+					icon_overflow = FALSE
 					info["icon"] = cached_nom_icon(O)
 				else
-					show_pictures = !show_pictures
+					icon_overflow = TRUE
+				//CHOMPEdit End
 			if(isliving(O))
 				var/mob/living/M = O
 				info["stat"] = M.stat

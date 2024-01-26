@@ -688,7 +688,7 @@
 		to_chat(owner, "<span class='warning'>A dark maw you deployed has triggered!</span>")
 	spawn(10)
 		var/will_vore = 1
-		if(!owner || !(target in owner) || !L.devourable || !L.can_be_drop_prey || !owner.can_be_drop_pred)
+		if(!owner || !(target in owner) || !L.devourable || !L.can_be_drop_prey || !owner.can_be_drop_pred || !L.phase_vore)
 			will_vore = 0
 		if(!src || src.gc_destroyed)
 			//We got deleted probably, do nothing more

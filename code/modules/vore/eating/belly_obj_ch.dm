@@ -90,6 +90,7 @@
 	"Cherry Jelly",
 	"Digestive acid",
 	"Diluted digestive acid",
+	"Space cleaner",
 	"Lube",
 	"Biomass",
 	"Concentrated Radium",
@@ -285,84 +286,96 @@
 	switch(reagent_chosen)
 		if("Water")
 			generated_reagents = list("water" = 1)
-			reagent_name = "water"
+			if(capitalize(reagent_name) in reagent_choices)
+				reagent_name = "water"
 			gen_amount = 1
 			gen_cost = 1
 			reagentid = "water"
 			reagentcolor = "#0064C877"
 		if("Milk")
 			generated_reagents = list("milk" = 1)
-			reagent_name = "milk"
+			if(capitalize(reagent_name) in reagent_choices)
+				reagent_name = "milk"
 			gen_amount = 1
 			gen_cost = 5
 			reagentid = "milk"
 			reagentcolor = "#DFDFDF"
 		if("Cream")
 			generated_reagents = list("cream" = 1)
-			reagent_name = "cream"
+			if(capitalize(reagent_name) in reagent_choices)
+				reagent_name = "cream"
 			gen_amount = 1
 			gen_cost = 5
 			reagentid = "cream"
 			reagentcolor = "#DFD7AF"
 		if("Honey")
 			generated_reagents = list("honey" = 1)
-			reagent_name = "honey"
+			if(capitalize(reagent_name) in reagent_choices)
+				reagent_name = "honey"
 			gen_amount = 1
 			gen_cost = 10
 			reagentid = "honey"
 			reagentcolor = "#FFFF00"
 		if("Cherry Jelly")	//Kinda WIP, allows slime like folks something to stuff others with, should make a generic jelly in future
 			generated_reagents = list("cherryjelly" = 1)
-			reagent_name = "cherry jelly"
+			if(capitalize(reagent_name) in reagent_choices)
+				reagent_name = "cherry jelly"
 			gen_amount = 1
 			gen_cost = 10
 			reagentid = "cherryjelly"
 			reagentcolor = "#801E28"
 		if("Digestive acid")
 			generated_reagents = list("stomacid" = 1)
-			reagent_name = "digestive acid"
+			if(capitalize(reagent_name) in reagent_choices)
+				reagent_name = "digestive acid"
 			gen_amount = 1
 			gen_cost = 1
 			reagentid = "stomacid"
 			reagentcolor = "#664330"
 		if("Diluted digestive acid")
 			generated_reagents = list("diet_stomacid" = 1)
-			reagent_name = "diluted digestive acid"
+			if(capitalize(reagent_name) in reagent_choices)
+				reagent_name = "diluted digestive acid"
 			gen_amount = 1
 			gen_cost = 1
 			reagentid = "diet_stomacid"
 			reagentcolor = "#664330"
 		if("Space cleaner")
 			generated_reagents = list("cleaner" = 1)
-			reagent_name = "space cleaner"
+			if(capitalize(reagent_name) in reagent_choices)
+				reagent_name = "space cleaner"
 			gen_amount = 1
 			gen_cost = 10
 			reagentid = "cleaner"
 			reagentcolor = "#A5F0EE"
 		if("Lube")
 			generated_reagents = list("lube" = 1)
-			reagent_name = "lube"
+			if(capitalize(reagent_name) in reagent_choices)
+				reagent_name = "lube"
 			gen_amount = 1
 			gen_cost = 10
 			reagentid = "lube"
 			reagentcolor = "#009CA8"
 		if("Biomass")
 			generated_reagents = list("biomass" = 1)
-			reagent_name = "biomass"
+			if(capitalize(reagent_name) in reagent_choices)
+				reagent_name = "biomass"
 			gen_amount = 1
 			gen_cost = 10
 			reagentid = "biomass"
 			reagentcolor = "#DF9FBF"
 		if("Concentrated Radium")
 			generated_reagents = list("concentrated_radium" = 1)
-			reagent_name = "concentrated radium"
+			if(capitalize(reagent_name) in reagent_choices)
+				reagent_name = "concentrated radium"
 			gen_amount = 1
 			gen_cost = 1
 			reagentid = "concentrated_radium"
 			reagentcolor = "#C7C7C7"
 		if("Tricordrazine")
 			generated_reagents = list("tricordrazine" = 1)
-			reagent_name = "tricordrazine"
+			if(capitalize(reagent_name) in reagent_choices)
+				reagent_name = "tricordrazine"
 			gen_amount = 1
 			gen_cost = 10
 			reagentid = "tricordrazine"
@@ -383,7 +396,7 @@
 		formatted_message = replacetext(raw_message,"%belly",lowertext(name))
 		formatted_message = replacetext(formatted_message,"%pred",owner)
 
-		return("<span class='warning'>[formatted_message]</span><BR>")
+		return(span_red("[formatted_message]<BR>"))
 
 /obj/belly/proc/get_reagent_examine_msg2()
 	if(fullness1_messages.len)
@@ -393,7 +406,7 @@
 		formatted_message = replacetext(raw_message,"%belly",lowertext(name))
 		formatted_message = replacetext(formatted_message,"%pred",owner)
 
-		return("<span class='warning'>[formatted_message]</span><BR>")
+		return(span_red("[formatted_message]<BR>"))
 
 /obj/belly/proc/get_reagent_examine_msg3()
 	if(fullness1_messages.len)
@@ -403,7 +416,7 @@
 		formatted_message = replacetext(raw_message,"%belly",lowertext(name))
 		formatted_message = replacetext(formatted_message,"%pred",owner)
 
-		return("<span class='warning'>[formatted_message]</span><BR>")
+		return(span_red("[formatted_message]<BR>"))
 
 /obj/belly/proc/get_reagent_examine_msg4()
 	if(fullness1_messages.len)
@@ -413,7 +426,7 @@
 		formatted_message = replacetext(raw_message,"%belly",lowertext(name))
 		formatted_message = replacetext(formatted_message,"%pred",owner)
 
-		return("<span class='warning'>[formatted_message]</span><BR>")
+		return(span_red("[formatted_message]<BR>"))
 
 /obj/belly/proc/get_reagent_examine_msg5()
 	if(fullness1_messages.len)
@@ -423,7 +436,7 @@
 		formatted_message = replacetext(raw_message,"%belly",lowertext(name))
 		formatted_message = replacetext(formatted_message,"%pred",owner)
 
-		return("<span class='warning'>[formatted_message]</span><BR>")
+		return(span_red("[formatted_message]<BR>"))
 
 
 // The next function gets the messages set on the belly, in human-readable format.
