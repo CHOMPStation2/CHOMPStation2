@@ -343,7 +343,7 @@
 
 //Custom Swoopie AI to make it swoop up trash when asked to
 /datum/ai_holder/simple_mob/retaliate/swoopie //TODO: make a general item-seeking AI type and use it for other stuff (Teppi seeking food automatically?)
-	hostile = FALSE			// Doesnt start hunting down stuff unless asked. Still swoops stuff that end up under it, however.
+	hostile = TRUE			// Hostile, but it wont actually attack stuff unless it's allowed to. Maybe also in retaliation.
 	var/swoop_pests = FALSE // Do we go after living pests?
 	var/swoop_trash = FALSE	// Do we go after trash and junk?
 	var/original_power = 0  // What the swoopie's last vaccum strength was before we went to go vaccum stuff up actively.
