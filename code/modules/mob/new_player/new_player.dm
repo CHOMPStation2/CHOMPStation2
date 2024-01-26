@@ -549,7 +549,7 @@
 		log_and_message_admins("has joined the round as non-crew. (<A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[T.x];Y=[T.y];Z=[T.z]'>JMP</a>)",character)
 		if(!(J.mob_type & JOB_SILICON))
 			ticker.minds += character.mind
-	if(rank == JOB_ANOMALY)
+	else if(rank == JOB_ANOMALY)
 		log_and_message_admins("has joined the round as anomaly. (<A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[T.x];Y=[T.y];Z=[T.z]'>JMP</a>)",character)
 		if(!(J.mob_type & JOB_SILICON))
 			ticker.minds += character.mind
