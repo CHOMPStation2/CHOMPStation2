@@ -26,13 +26,35 @@ jobs:
           path: ~/SpacemanDMM
           key: ${{ runner.os }}-spacemandmm
       - name: Restore Yarn cache
+<<<<<<< HEAD
+=======
+        if: "${{ contains(github.event.pull_request.labels.*.name, 'Type: TGUI Bundle') }}"
+>>>>>>> 1463060fa8... Merge pull request #15681 from VOREStation/dependabot/github_actions/actions/cache-4
         uses: actions/cache@v4
         with:
           path: tgui/.yarn/cache
           key: ${{ runner.os }}-yarn-${{ hashFiles('tgui/yarn.lock') }}
           restore-keys: |
+<<<<<<< HEAD
             ${{ runner.os }}-yarn-
       - name: Restore Node cache
+=======
+            ${{ runner.os }}-build-${{ secrets.CACHE_PURGE_KEY }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+      - name: Run Tests
+        run: |
+          tools/ci/validate_files.sh
+          tools/ci/build_tgui.sh
+
+  dreamchecker:
+    name: DreamChecker
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Cache SpacemanDMM
+>>>>>>> 1463060fa8... Merge pull request #15681 from VOREStation/dependabot/github_actions/actions/cache-4
         uses: actions/cache@v4
         with:
           path: ~/.nvm
