@@ -17,8 +17,8 @@
 	can_infect = 1
 	blood_level = 1
 
-	min_duration = 70
-	max_duration = 90
+	min_duration = 50 //CHOMPedit
+	max_duration = 50 //CHOMPedit
 
 /datum/surgery_step/fix_vein/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(!hasorgans(target))
@@ -73,8 +73,8 @@
 	can_infect = 1
 	blood_level = 1
 
-	min_duration = 110
-	max_duration = 160
+	min_duration = 50 //CHOMPedit
+	max_duration = 50 //CHOMPedit
 
 /datum/surgery_step/fix_dead_tissue/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(!hasorgans(target))
@@ -125,8 +125,8 @@
 	can_infect = 0
 	blood_level = 0
 
-	min_duration = 50
-	max_duration = 60
+	min_duration = 40 //CHOMPedit
+	max_duration = 40 //CHOMPedit
 
 /datum/surgery_step/treat_necrosis/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if (!istype(tool, /obj/item/weapon/reagent_containers))
@@ -265,8 +265,8 @@
 	allowed_tools = list(
 		/obj/item/weapon/surgical/bioregen = 100
 	)
-	min_duration = 90
-	max_duration = 120
+	min_duration = 60 //CHOMPedit
+	max_duration = 60 //CHOMPedit
 
 /datum/surgery_step/dehusk/structinitial/can_use(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	return ..() && target.op_stage.dehusk == 0
@@ -297,8 +297,8 @@
 		/obj/item/stack/cable_coil = 75, 	\
 		/obj/item/device/assembly/mousetrap = 20
 	)
-	min_duration = 90
-	max_duration = 120
+	min_duration = 60 //CHOMPedit
+	max_duration = 60 //CHOMPedit
 
 /datum/surgery_step/dehusk/relocateflesh/can_use(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	return ..() && target.op_stage.dehusk == 1
@@ -328,8 +328,8 @@
 		/obj/item/weapon/surgical/bioregen = 100, \
 		/obj/item/weapon/surgical/FixOVein = 30
 	)
-	min_duration = 90
-	max_duration = 120
+	min_duration = 60 //CHOMPedit
+	max_duration = 60 //CHOMPedit
 
 /datum/surgery_step/dehusk/structfinish/can_use(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	return ..() && target.op_stage.dehusk == 2
@@ -368,8 +368,8 @@
 	surgery_name = "Detoxify"
 	blood_level = 1
 	allowed_tools = list(/obj/item/weapon/surgical/bioregen=100)
-	min_duration = 90
-	max_duration = 120
+	min_duration = 40 //CHOMPedit
+	max_duration = 40 //CHOMPedit
 
 /datum/surgery_step/internal/detoxify/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	return ..() && target_zone == BP_TORSO && (target.toxloss > 25 || target.oxyloss > 25)
