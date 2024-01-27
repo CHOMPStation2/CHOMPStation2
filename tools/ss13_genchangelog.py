@@ -1,6 +1,6 @@
 '''
 Usage:
-    $ python ss13_genchangelog.py html/changelogs_ch/
+    $ python ss13_genchangelog.py html/changelogs/
 
 ss13_genchangelog.py - Generate changelog from YAML.
 
@@ -27,7 +27,7 @@ THE SOFTWARE.
 
 from __future__ import print_function
 import yaml, os, glob, sys, re, time, argparse
-from datetime import datetime, date
+from datetime import datetime, date, timedelta
 from time import time
 
 today = date.today()
@@ -61,7 +61,9 @@ validPrefixes = [
     'refactor',
     'config',
     'admin',
-    'server'
+    'server',
+    'sound',
+    'image',
 ]
 
 def dictToTuples(inp):
@@ -69,7 +71,6 @@ def dictToTuples(inp):
 
 old_changelog_cache = os.path.join(args.ymlDir, '.all_changelog.yml')
 
-failed_cache_read = True
 if os.path.isfile(old_changelog_cache):
     try:
         print('Reading old changelog cache...')
@@ -103,7 +104,6 @@ if os.path.isfile(old_changelog_cache):
         print("Failed to read old changelog cache:")
         print(e, file=sys.stderr)
 
-errors = False
 print('Reading changelogs...')
 for fileName in glob.glob(os.path.join(args.ymlDir, "*.yml")):
     name, ext = os.path.splitext(os.path.basename(fileName))
@@ -111,12 +111,10 @@ for fileName in glob.glob(os.path.join(args.ymlDir, "*.yml")):
     if name == 'example': continue
     fileName = os.path.abspath(fileName)
     formattedDate = today.strftime(fileDateFormat)
-    if not os.path.exists(archiveDir):
-        os.makedirs(archiveDir)
     monthFile = os.path.join(archiveDir, formattedDate + '.yml')
     print(' Reading {}...'.format(fileName))
     cl = {}
-    with open(fileName, 'r') as f:
+    with open(fileName, 'r',encoding='utf-8') as f:
         cl = yaml.load(f, Loader=yaml.SafeLoader)
     currentEntries = {}
     if os.path.exists(monthFile):
@@ -131,8 +129,8 @@ for fileName in glob.glob(os.path.join(args.ymlDir, "*.yml")):
             if change not in author_entries:
                 (change_type, _) = dictToTuples(change)[0]
                 if change_type not in validPrefixes:
-                    errors = True
                     print('  {0}: Invalid prefix {1}'.format(fileName, change_type), file=sys.stderr)
+                    sys.exit(1)
                 author_entries += [change]
                 new += 1
         currentEntries[today][cl['author']] = author_entries
@@ -144,8 +142,6 @@ for fileName in glob.glob(os.path.join(args.ymlDir, "*.yml")):
             print('  Deleting {0} (delete-after set)...'.format(fileName))
             os.remove(fileName)
 
-    with open(monthFile, 'w+', encoding='utf-8') as f:
-        yaml.dump(currentEntries, f, default_flow_style=False)
+    with open(monthFile, 'w', encoding='utf-8') as f:
 
-if errors:
-    sys.exit(1)
+        yaml.dump(currentEntries, f, default_flow_style=False)

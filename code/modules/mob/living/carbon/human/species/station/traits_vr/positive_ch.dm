@@ -407,3 +407,26 @@
 /datum/trait/positive/toxin_gut/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	H.toxin_gut = TRUE
+
+/datum/trait/positive/nobreathe // CHOMPedit
+	name = "Breathless"
+	desc = "You or your species have adapted to no longer require lungs, and as such no longer need to breathe!"
+
+	can_take = ORGANICS
+
+	var_changes = list("breath_type" = "null", "poison_type" = "null", "exhale_type" = "null", "water_breather" = "TRUE")
+	excludes = list(/datum/trait/negative/breathes/phoron,
+					/datum/trait/negative/breathes/nitrogen,
+					/datum/trait/positive/light_breather,
+					/datum/trait/negative/deep_breather
+)
+	cost = 6
+
+/datum/trait/positive/nobreathe/apply(var/datum/species/S, var/mob/living/carbon/human/H)
+	..()
+	H.does_not_breathe = 1
+	var/obj/item/organ/internal/breathy = H.internal_organs_by_name[O_LUNGS]
+	if(!breathy)
+		return
+	H.internal_organs -= breathy
+	qdel(breathy)

@@ -16,7 +16,7 @@ List of things solar grubs should be able to do:
 	value = CATALOGUER_REWARD_EASY
 
 #define SINK_POWER 1
-var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawstamp*
+var/global/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawstamp*
 
 /mob/living/simple_mob/vore/solargrub
 	name = "juvenile solargrub"
@@ -103,11 +103,12 @@ var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawst
 			PN = null
 
 		// CHOMPEDIT Start, Rykka waz here. *pawstamp*
-		if(prob(1) && charge >= 32000 && can_evolve == 1 && moth_amount <= 1) //it's reading from the moth_amount global list to determine if it can evolve. There should only ever be a maxcap of 1 existing solar moth alive at any time. TODO: make the code decrease the list after 1 has spawned this shift.
+		if(prob(1) && charge >= 32000 && can_evolve == 1 && moth_amount < 1) //it's reading from the moth_amount global list to determine if it can evolve. There should only ever be a maxcap of 1 existing solar moth alive at any time. TODO: make the code decrease the list after 1 has spawned this shift.
 			anchored = 0
 			PN = attached.powernet
 			release_vore_contents()
-			prey_excludes.Cut()
+			if(prey_excludes)
+				prey_excludes.Cut()
 			moth_amount = moth_amount + 1
 			death_star()
 

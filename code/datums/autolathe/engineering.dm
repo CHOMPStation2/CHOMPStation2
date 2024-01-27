@@ -46,6 +46,11 @@
 	name = "entertainment camera electronics"
 	path =/obj/item/weapon/circuitboard/security/telescreen/entertainment
 
+// CHOMPEdit Begin - Bodycams
+/datum/category_item/autolathe/engineering/entertainment/bodycamera
+	name = "bodycamera monitor electronics"
+	path =/obj/item/weapon/circuitboard/security/telescreen/bodycamera
+// CHOMPEdit End
 /datum/category_item/autolathe/engineering/keycard
 	name = "keycard authenticator electronics"
 	path =/obj/item/weapon/circuitboard/keycard_auth
@@ -115,5 +120,4 @@
 /datum/category_item/autolathe/engineering/rpd
 	name = "rapid piping device"
 	path =/obj/item/weapon/pipe_dispenser
-//YW Addtion End	
-
+//YW Addtion End

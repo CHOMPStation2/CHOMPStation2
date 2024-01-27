@@ -210,6 +210,17 @@ var/list/flooring_types
 		'sound/effects/footstep/mud3.ogg',
 		'sound/effects/footstep/mud4.ogg'))
 
+/decl/flooring/rock
+	name = "rocks"
+	desc = "Hard as a rock."
+	icon = 'icons/turf/outdoors.dmi'
+	icon_base = "rock"
+	footstep_sounds = list("human" = list(
+		'sound/effects/footstep/LightStone1.ogg',
+		'sound/effects/footstep/LightStone2.ogg',
+		'sound/effects/footstep/LightStone3.ogg',
+		'sound/effects/footstep/LightStone4.ogg'))
+
 /decl/flooring/asteroid
 	name = "coarse sand"
 	desc = "You got a pebble in your shoe just looking at it."
@@ -291,6 +302,7 @@ var/list/flooring_types
 	icon = 'icons/turf/flooring/carpet.dmi'
 	icon_base = "carpet"
 	build_type = /obj/item/stack/tile/carpet
+	can_paint = TRUE //ChompEDIT, allow painting carpets
 	damage_temperature = T0C+200
 	flags = TURF_HAS_EDGES | TURF_HAS_CORNERS | TURF_REMOVE_CROWBAR | TURF_CAN_BURN
 	footstep_sounds = list("human" = list(
