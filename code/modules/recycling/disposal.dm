@@ -535,7 +535,8 @@
 			if(istype(AM, /obj/item/weapon/holder/micro) || istype(AM, /mob/living))
 				log_and_message_admins("[AM] was thrown into \the [src]")
 				visible_message("\The [AM] lands in \the [src] and triggers the flush system!")
-				flush() //Away they go!
+				//flush() //Away they go! //Uncomment this for proper autoflush. Compromising with autopull to avoid possible disposal dunking abuse
+				flush = 1
 			else
 				visible_message("\The [AM] lands in \the [src].")
 			update_icon() //Yogs did this, so it probably doesnt hurt..
