@@ -281,3 +281,6 @@
   - bugfix: Only shadekin can pick the Anomaly role
   TheGreatKitsune:
   - rscadd: New ability for shadekin
+2024-01-27:
+  FluffMedic:
+  - bugfix: Outsiders should be silent again
