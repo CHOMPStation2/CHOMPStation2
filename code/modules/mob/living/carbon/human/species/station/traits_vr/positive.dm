@@ -35,16 +35,22 @@
 	H.setMaxHealth(S.total_health)
 
 /datum/trait/positive/nonconductive
-	name = "Non-Conductive"
+	name = "Non-Conductive, Minor"
 	desc = "Decreases your susceptibility to electric shocks by 25%." //CHOMP Edit - GRAMMAR PLS.
 	cost = 2 //This effects tasers!
 	var_changes = list("siemens_coefficient" = 0.75) //CHOMP Edit
 
 /datum/trait/positive/nonconductive_plus
-	name = "Non-Conductive, Major"
+	name = "Non-Conductive"
 	desc = "Decreases your susceptibility to electric shocks by 50%." //CHOMP Edit - GRAMMAR PLS.
 	cost = 3 //Let us not forget this effects tasers!
 	var_changes = list("siemens_coefficient" = 0.5) //CHOMP Edit
+
+/datum/trait/positive/nonconductive_plus_plus
+	name = "Non-Conductive, Major"
+	desc = "Decreases your susceptibility to electric shocks by 100%." //CHOMP Edit
+	cost = 6
+	var_changes = list("siemens_coefficient" = 0) //CHOMP Edit
 
 /*   //Chompedit, moving to Positive_ch.dm so it wont be messed with from upstream
 /datum/trait/positive/darksight
