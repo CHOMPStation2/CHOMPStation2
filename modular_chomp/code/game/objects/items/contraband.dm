@@ -1,5 +1,5 @@
 /obj/item/contraband
-	name = "contrabanad"
+	name = "contraband"
 	desc = "A tightly sealed package. Dare to look inside?"
 	icon = 'icons/obj/storage.dmi'
 	icon_state = "deliverycrate5"
