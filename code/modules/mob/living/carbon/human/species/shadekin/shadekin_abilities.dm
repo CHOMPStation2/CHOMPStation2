@@ -204,6 +204,7 @@
 				if(L.z != z || get_dist(src,L) > 4)
 					continue
 				L.flicker(1)
+			src.Stun(1)
 		else
 			//CHOMPEdit end
 			for(var/obj/machinery/light/L in machines)
