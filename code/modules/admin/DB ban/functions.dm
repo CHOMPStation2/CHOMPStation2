@@ -85,7 +85,7 @@
 	
 	var/DBQuery/query_insert = SSdbcore.NewQuery(sql,sqlargs) //CHOMPEdit TGSQL
 	query_insert.Execute()
-	to_chat(usr, "<span class='filter_adminlog'><font color='blue'>Ban saved to database.</font></span>")
+	to_chat(usr, "<span class='filter_adminlog'>[span_blue("Ban saved to database.")]</span>")
 	message_admins("[key_name_admin(usr)] has added a [bantype_str] for [ckey] [(job)?"([job])":""] [(duration > 0)?"([duration] minutes)":""] with the reason: \"[reason]\" to the ban database.",1)
 	qdel(query_insert) //CHOMPEdit TGSQL
 
@@ -139,17 +139,17 @@
 		ban_number++;
 	qdel(query) //CHOMPEdit TGSQL
 	if(ban_number == 0)
-		to_chat(usr, "<span class='filter_adminlog'><font color='red'>Database update failed due to no bans fitting the search criteria. If this is not a legacy ban you should contact the database admin.</font></span>")
+		to_chat(usr, "<span class='filter_adminlog'>[span_red("Database update failed due to no bans fitting the search criteria. If this is not a legacy ban you should contact the database admin.")]</span>")
 		return
 
 	if(ban_number > 1)
-		to_chat(usr, "<span class='filter_adminlog'><font color='red'>Database update failed due to multiple bans fitting the search criteria. Note down the ckey, job and current time and contact the database admin.</font></span>")
+		to_chat(usr, "<span class='filter_adminlog'>[span_red("Database update failed due to multiple bans fitting the search criteria. Note down the ckey, job and current time and contact the database admin.")]</span>")
 		return
 
 	if(istext(ban_id))
 		ban_id = text2num(ban_id)
 	if(!isnum(ban_id))
-		to_chat(usr, "<span class='filter_adminlog'><font color='red'>Database update failed due to a ban ID mismatch. Contact the database admin.</font></span>")
+		to_chat(usr, "<span class='filter_adminlog'>[span_red("Database update failed due to a ban ID mismatch. Contact the database admin.")]</span>")
 		return
 
 	DB_ban_unban_by_id(ban_id)
@@ -232,11 +232,11 @@
 		ban_number++;
 	qdel(query) //CHOMPEdit TGSQL
 	if(ban_number == 0)
-		to_chat(usr, "<span class='filter_adminlog'><font color='red'>Database update failed due to a ban id not being present in the database.</font></span>")
+		to_chat(usr, "<span class='filter_adminlog'>[span_red("Database update failed due to a ban id not being present in the database.")]</span>")
 		return
 
 	if(ban_number > 1)
-		to_chat(usr, "<span class='filter_adminlog'><font color='red'>Database update failed due to multiple bans having the same ID. Contact the database admin.</font></span>")
+		to_chat(usr, "<span class='filter_adminlog'>[span_red("Database update failed due to multiple bans having the same ID. Contact the database admin.")]</span>")
 		return
 
 	if(!src.owner || !istype(src.owner, /client))
@@ -271,8 +271,13 @@
 	if(!check_rights(R_BAN))	return
 
 	establish_db_connection()
+<<<<<<< HEAD
 	if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 		to_chat(usr, "<span class='filter_adminlog'><font color='red'>Failed to establish database connection</font></span>")
+=======
+	if(!dbcon.IsConnected())
+		to_chat(usr, "<span class='filter_adminlog'>[span_red("Failed to establish database connection")]</span>")
+>>>>>>> 6d1acf98db... Merge pull request #15695 from Kashargul/endOfStaticCol
 		return
 
 	var/output = "<div align='center'><table width='90%'><tr>"
