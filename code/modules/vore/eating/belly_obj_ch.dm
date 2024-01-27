@@ -187,7 +187,7 @@
 	if(reagentbellymode && reagent_mode_flags & DM_FLAG_REAGENTSNUTRI && reagents.total_volume < custom_max_volume && !isnewplayer(owner)) //Removed if(reagentbellymode == TRUE) since that's less optimized
 		if(isrobot(owner))
 			var/mob/living/silicon/robot/R = owner
-			if(R.cell.charge >= gen_cost*10 && gen_interval >= gen_time)
+			if(R.cell && R.cell.charge >= gen_cost*10 && gen_interval >= gen_time)
 				GenerateBellyReagents()
 				gen_interval = 0
 			else
