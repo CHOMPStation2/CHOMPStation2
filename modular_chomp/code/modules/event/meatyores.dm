@@ -27,9 +27,9 @@
 	if(!victim)
 		switch(severity)
 			if(EVENT_LEVEL_MAJOR)
-				command_announcement.Announce("Meaty ores have been detected on collision course with \the [location_name()].", "Meteor Alert", new_sound = 'sound/AI/meteors.ogg')
+				command_announcement.Announce("Meatyores have been detected on collision course with \the [location_name()].", "Meteor Alert", new_sound = 'sound/AI/meteors.ogg')
 			else
-				command_announcement.Announce("\The [location_name()] is now in a meaty ore shower.", "Meteor Alert")
+				command_announcement.Announce("\The [location_name()] is now in a meatyore shower.", "Meteor Alert")
 
 /datum/event/meteor_wave/meatyores/proc/get_meatyores()
 	switch(severity)
