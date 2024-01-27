@@ -156,7 +156,7 @@
 	if(has_taser_sprite && istype(ourborg.module_active, /obj/item/weapon/gun/energy/taser/xeno/robot))
 		ourborg.add_overlay("[sprite_icon_state]-taser")
 
-/datum/robot_sprite/dogborg/tall/science/do_equipment_glamour(var/obj/item/weapon/robot_module/module) //CHOMPEdit - changed typepath
+/datum/robot_sprite/dogborg/tall/science/do_equipment_glamour(var/obj/item/weapon/robot_module/module)
 	if(!has_custom_equipment_sprites)
 		return
 	..()
