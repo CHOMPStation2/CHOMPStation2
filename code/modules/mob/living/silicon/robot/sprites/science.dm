@@ -150,18 +150,13 @@
 /datum/robot_sprite/dogborg/tall/science
 	module_type = "Research"
 	sprite_icon = 'icons/mob/robot/science_large.dmi'
-
-<<<<<<< HEAD
-/datum/robot_sprite/dogborg/raptor/science/do_equipment_glamour(var/obj/item/weapon/robot_module/module) //CHOMPEdit - changed typepath
-=======
 	var/has_taser_sprite = FALSE
 
 /datum/robot_sprite/dogborg/tall/science/handle_extra_icon_updates(var/mob/living/silicon/robot/ourborg)
 	if(has_taser_sprite && istype(ourborg.module_active, /obj/item/weapon/gun/energy/taser/xeno/robot))
 		ourborg.add_overlay("[sprite_icon_state]-taser")
 
-/datum/robot_sprite/dogborg/tall/science/do_equipment_glamour(var/obj/item/weapon/robot_module/module)
->>>>>>> 5eee3f98e3... Merge pull request #15701 from SpaceMan-Jim/Raptoradditions
+/datum/robot_sprite/dogborg/raptor/science/do_equipment_glamour(var/obj/item/weapon/robot_module/module) //CHOMPEdit - changed typepath
 	if(!has_custom_equipment_sprites)
 		return
 
