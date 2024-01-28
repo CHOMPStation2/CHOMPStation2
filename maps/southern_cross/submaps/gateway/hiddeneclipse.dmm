@@ -701,7 +701,7 @@
 /area/awaymission/hiddeneclipse/precursortemple)
 "um" = (
 /obj/effect/simple_portal/linked{
-	portal_id = GatewayPuzzle
+	portal_id = "GatewayPuzzle"
 	},
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/hiddeneclipse/miningzoneb)
@@ -1220,7 +1220,7 @@
 /area/awaymission/hiddeneclipse/miningzonea)
 "ER" = (
 /obj/effect/simple_portal/linked{
-	portal_id = GatewayPuzzle
+	portal_id = "GatewayPuzzle"
 	},
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/hiddeneclipse/miningzonea)
