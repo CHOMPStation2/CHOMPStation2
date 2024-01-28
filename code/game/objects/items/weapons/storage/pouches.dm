@@ -16,7 +16,7 @@
 	pocketable = TRUE
 
 	var/insert_delay = 0 SECONDS
-	var/remove_delay = 2 SECONDS
+	var/remove_delay = 0 SECONDS // CHOMPedit: Faster, QOL.
 
 /obj/item/weapon/storage/pouch/stall_insertion(obj/item/W, mob/user)
 	// No delay if you have the pouch in your hands
@@ -49,14 +49,14 @@
 	desc = "This storage pouch can be used to provide a good amount of additional storage for quick access."
 	icon_state = "large_generic"
 	max_storage_space = ITEMSIZE_COST_SMALL*6
-	remove_delay = 3 SECONDS //VOREStation Add: Slightly more cumbersome
+	remove_delay = 1 SECONDS // CHOMPedit: Faster.
 
 /obj/item/weapon/storage/pouch/small
 	name = "storage pouch (small)"
 	desc = "This storage pouch can be used to provide a small amount of additional storage for quick access."
 	icon_state = "small_generic"
 	max_storage_space = ITEMSIZE_COST_SMALL*2
-	remove_delay = 1 SECOND //VOREStation Add: Slightly less cumbersome
+//	remove_delay = 1 SECOND // Chompedit: Faster.
 
 /obj/item/weapon/storage/pouch/ammo
 	name = "storage pouch (ammo)"
@@ -167,12 +167,13 @@
 	name = "storage pouch (flares)"
 	desc = "This storage pouch can be used to provide some additional storage for quick access. Can only hold flares and glowsticks."
 	icon_state = "flare"
-	storage_slots = 5
+	storage_slots = 14 // CHOMPedit: Full box of flares.
+	remove_delay = 0 // CHOMPedit: Quick access to light sources.
 	can_hold = list(/obj/item/device/flashlight/flare, /obj/item/device/flashlight/glowstick)
 /obj/item/weapon/storage/pouch/flares/full_flare
-	starts_with = list(/obj/item/device/flashlight/flare = 5)
+	starts_with = list(/obj/item/device/flashlight/flare = 14) // CHOMPedit: Full box of flares.
 /obj/item/weapon/storage/pouch/flares/full_glow
-	starts_with = list(/obj/item/device/flashlight/glowstick = 5)
+	starts_with = list(/obj/item/device/flashlight/glowstick = 14) // CHOMPedit: Full box of glowsticks.
 
 /obj/item/weapon/storage/pouch/flares/update_icon()
 	cut_overlays()
