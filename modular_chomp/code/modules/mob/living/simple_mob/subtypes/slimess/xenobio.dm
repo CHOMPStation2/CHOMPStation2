@@ -187,9 +187,63 @@
 		L.add_modifier(/datum/modifier/feysight, 10 MINUTES, src)
 	..()
 
+/decl/chemical_reaction/instant/slime/dark_deathblood
+	name = "Slime Secert Painite"
+	id = "m_slime_painite"
+	required_reagents = list("deathblood" = 5)
+	result_amount = 1
+	required = /obj/item/slime_extract/dark
+
+/decl/chemical_reaction/instant/slime/dark_deathblood/on_reaction(var/datum/reagents/holder)
+	new /obj/item/stack/material/painite(get_turf(holder.my_atom))
+	..()
+
+/decl/chemical_reaction/instant/slime/dark_liquidlife
+	name = "Slime Secert Overcharge"
+	id = "m_slime_guardian"
+	required_reagents = list("liquidlife" = 5)
+	result_amount = 1
+	required = /obj/item/slime_extract/dark
+
+/decl/chemical_reaction/instant/slime/dark_liquidfire/on_reaction(var/datum/reagents/holder)
+	for(var/mob/living/L in range(49, holder.my_atom))
+		L.add_modifier(/datum/modifier/sprinting, 5 MINUTES, src)
+	..()
+
+/* I have plans but scope creep
+/decl/chemical_reaction/instant/slime/dark_carpotoxin
+	name = "Slime Secert "
+	id = "m_slime_guardian"
+	required_reagents = list("carpotoxin" = 5)
+	result_amount = 1
+	required = /obj/item/slime_extract/dark
+*/
+
+/decl/chemical_reaction/instant/slime/dark_spidertoxin
+	name = "Slime Secert Dark Spooder"
+	id = "m_slime_guardian"
+	required_reagents = list("spidertoxin" = 5)
+	result_amount = 1
+	required = /obj/item/slime_extract/dark
+
+/decl/chemical_reaction/instant/slime/dark_deathblood/on_reaction(var/datum/reagents/holder)
+	new /obj/effect/spider/eggcluster/royal/space(get_turf(holder.my_atom))
+	..()
+
+/decl/chemical_reaction/instant/slime/dark_blood
+	name = "Slime Secert Void Opal"
+	id = "m_slime_guardian"
+	required_reagents = list("blood" = 5)
+	result_amount = 1
+	required = /obj/item/slime_extract/dark
+
+/decl/chemical_reaction/instant/slime/dark_blood/on_reaction(var/datum/reagents/holder)
+	new /obj/item/stack/material/void_opal(get_turf(holder.my_atom))
+	..()
+
 /mob/living/simple_mob/slime/xenobio/plague
 	desc = "This slime is rather unknown and strange."
-	color = "#A50021"
+	color = "#336600"
 	slime_color = "plague"
 	coretype = /obj/item/slime_extract/plague
 
