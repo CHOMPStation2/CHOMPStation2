@@ -143,7 +143,7 @@
 		var/image/envelope = image(icon, icon_state)
 		envelope.color = this_job.get_mail_color()
 		add_overlay(envelope)
-		var/list/job_goodies = this_job.get_mail_goodies()
+		var/list/job_goodies = this_job.get_mail_goodies(new_recipient, current_title)
 		if(LAZYLEN(job_goodies))
 			if(this_job.exclusive_mail_goodies)
 				goodies = job_goodies
@@ -204,7 +204,9 @@
 	can_hold = list(
 		/obj/item/mail,
 		/obj/item/smallDelivery,
-		/obj/item/weapon/paper
+		/obj/item/weapon/paper,
+		/obj/item/stolenpackage,
+		/obj/item/contraband
 	)
 
 // JUNK MAIL STUFF
@@ -234,7 +236,8 @@
 			/obj/item/weapon/reagent_containers/food/snacks/donkpocket/pizza,
 			/obj/item/weapon/reagent_containers/food/snacks/donkpocket/spicy,
 			/obj/item/weapon/reagent_containers/food/snacks/donkpocket/teriyaki,
-			/obj/item/toy/figure
+			/obj/item/toy/figure,
+			/obj/item/contraband
 		))
 
 	var/list/junk_names = list(
@@ -251,7 +254,8 @@
 		/obj/item/weapon/reagent_containers/food/snacks/donkpocket/pizza = "[initial(name)] with NEW PIZZA-POCKET.",
 		/obj/item/weapon/reagent_containers/food/snacks/donkpocket/spicy = "[initial(name)] with NEW SPICY-POCKET.",
 		/obj/item/weapon/reagent_containers/food/snacks/donkpocket/teriyaki = "[initial(name)] with NEW TERIYAKI-POCKET.",
-		/obj/item/toy/figure = "[initial(name)] from DoN**K*oC"
+		/obj/item/toy/figure = "[initial(name)] from DoN**K*oC",
+		/obj/item/contraband = "[pick("oddly shaped", "strangely wrapped", "weird", "bulging")] [initial(name)]"
 	)
 
 	name = special_name ? junk_names[junk] : "important [initial(name)]"
