@@ -129,9 +129,6 @@
 			var/datum/job/refJob = null
 			for(var/mob/new_player/player in player_list)
 				refJob = player.client.prefs.get_highest_job()
-<<<<<<< HEAD
-				stat("Player", (player.ready)?("(Playing as: [(refJob)?(refJob.title):("Unknown")])"):(null)) //CHOMPEDIT: Anonymizing [player.key]
-=======
 				if(player.client.prefs.obfuscate_key && player.client.prefs.obfuscate_job)
 					stat("Anonymous User", (player.ready)?("Ready!"):(null))
 				else if(player.client.prefs.obfuscate_key)
@@ -140,7 +137,6 @@
 					stat("[player.key]", (player.ready)?("Ready!"):(null))
 				else
 					stat("[player.key]", (player.ready)?("(Playing as: [(refJob)?(refJob.title):("Unknown")])"):(null))
->>>>>>> aca2ba9ccf... Merge pull request #15521 from KillianKirilenko/kk-mini3
 				totalPlayers++
 				if(player.ready)totalPlayersReady++
 
