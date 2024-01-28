@@ -138,7 +138,14 @@
 			var/datum/job/refJob = null
 			for(var/mob/new_player/player in player_list)
 				refJob = player.client.prefs.get_highest_job()
-				stat("Player", (player.ready)?("(Playing as: [(refJob)?(refJob.title):("Unknown")])"):(null)) //CHOMPEDIT: Anonymizing [player.key]
+				if(player.client.prefs.obfuscate_key && player.client.prefs.obfuscate_job)
+					stat("Anonymous User", (player.ready)?("Ready!"):(null))
+				else if(player.client.prefs.obfuscate_key)
+					stat("Anonymous User", (player.ready)?("(Playing as: [(refJob)?(refJob.title):("Unknown")])"):(null))
+				else if(player.client.prefs.obfuscate_job)
+					stat("[player.key]", (player.ready)?("Ready!"):(null))
+				else
+					stat("[player.key]", (player.ready)?("(Playing as: [(refJob)?(refJob.title):("Unknown")])"):(null))
 				totalPlayers++
 				if(player.ready)totalPlayersReady++
 
