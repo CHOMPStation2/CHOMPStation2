@@ -1,0 +1,13 @@
+author: "Aroliacue"
+delete-after: True
+changes:
+  - rscadd: "Added new standalone exploration vendors for each of the roles with standardized equipment. Not mapped in as of this update, but available for gamemasters to use."
+  - rscadd: "Added tinyfans to the 25x25 'Diner' shelter."
+  - qol: "Significantly reduced use delays on all pouches."
+  - balance: "Fultons per pack have been reduced from 5 uses to 3 uses."
+  - balance: "Mech shoes can now hold knives."
+  - balance: "Flares and glowsticks are now one size smaller. Flare boxes now contain 14 flares instead of 4."
+  - balance: "Flare pouches can now hold 14 flares."
+  - balance: "Removed guaranteed stun and weaken statuses from the 'magnetic' weapon parent type."
+  - balance: "Regular synthetics are now immune to welders."
+  - bugfix: "Fixed missing icon for mech shoes."
