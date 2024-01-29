@@ -326,7 +326,7 @@
 /obj/item/projectile/beam/medical_cell/shrink/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
 		target.resize(0.5)
-		target.show_message("<font color='blue'>The beam fires into your body, changing your size!</font>")
+		target.show_message(span_blue("The beam fires into your body, changing your size!"))
 		target.update_icon()
 	else
 		return 1
@@ -340,7 +340,7 @@
 /obj/item/projectile/beam/medical_cell/grow/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
 		target.resize(2.0)
-		target.show_message("<font color='blue'>The beam fires into your body, changing your size!</font>")
+		target.show_message(span_blue("The beam fires into your body, changing your size!"))
 		target.update_icon()
 	else
 		return 1
@@ -354,7 +354,7 @@
 /obj/item/projectile/beam/medical_cell/normalsize/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
 		target.resize(1)
-		target.show_message("<font color='blue'>The beam fires into your body, changing your size!</font>")
+		target.show_message(span_blue("The beam fires into your body, changing your size!"))
 		target.update_icon()
 	else
 		return 1
