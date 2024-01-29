@@ -549,4 +549,4 @@
 		return
 	src.master = null
 	src.master_dna = null
-	to_chat(src, "<font color=green>You feel unbound.</font>")
+	to_chat(src, span_green("You feel unbound."))

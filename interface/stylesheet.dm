@@ -165,6 +165,9 @@ BIG IMG.icon 			{width: 32px; height: 32px;}
 .maroon					{color: #800000;}
 .crimson				{color: #DC143C;}
 .brown					{color: #8D4925;}
+.lightpurple			{color: #AD5AAD;}
+.darkpink				{color: #E3209B;}
+.white					{color: #FFFFFF;}
 
 .pnarrate				{color: #009AB2;}
 
