@@ -506,10 +506,10 @@
 			user.drop_item()
 			I.loc = src
 			rockets += I
-			to_chat(user, "<font color='blue'>You put the rocket in [src].</font>")
-			to_chat(user, "<font color='blue'>[rockets.len] / [max_rockets] rockets.</font>")
+			to_chat(user, span_blue("You put the rocket in [src]."))
+			to_chat(user, span_blue("[rockets.len] / [max_rockets] rockets."))
 		else
-			to_chat(usr, "<font color='red'>[src] cannot hold more rockets.</font>")
+			to_chat(usr, span_red("[src] cannot hold more rockets."))
 
 /obj/item/weapon/gun/launcher/scopedrocket/consume_next_projectile()
 	if(rockets.len)

@@ -149,6 +149,8 @@ BIG IMG.icon 			{width: 32px; height: 32px;}
 .debug_debug					{color:#0000FF;}
 .debug_trace					{color:#888888;}
 
+.interface				{color: #330033;}
+
 .black					{color: #000000;}
 .darkgray				{color: #808080;}
 .gray					{color: #A9A9A9;}
@@ -156,6 +158,16 @@ BIG IMG.icon 			{width: 32px; height: 32px;}
 .orange					{color: #FF8C00;}
 .blue					{color: #0000FF;}
 .green					{color: #00DD00;}
+.purple					{color: #800080;}
+.yellow					{color: #ffcc00;}
+.pink					{color: #ffc0cb;}
+.cyan					{color: #00ffff;}
+.maroon					{color: #800000;}
+.crimson				{color: #DC143C;}
+.brown					{color: #8D4925;}
+.lightpurple			{color: #AD5AAD;}
+.darkpink				{color: #E3209B;}
+.white					{color: #FFFFFF;}
 
 .pnarrate				{color: #009AB2;}
 
