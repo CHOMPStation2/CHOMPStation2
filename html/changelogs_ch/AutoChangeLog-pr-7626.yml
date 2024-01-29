@@ -1,6 +1,0 @@
-author: "Raeschen"
-delete-after: True
-changes:
-  - refactor: "Gentle phasing flicker duration from 3s to 1s"
-  - refactor: "Gentle phasing defaults on."
-  - refactor: "Gentle phasing stun reduced from 3s to 1s"
