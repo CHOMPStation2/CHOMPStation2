@@ -21,3 +21,9 @@
 	desc = "A bottle full of gelatin."
 	icon_state = "bottle-1"
 	prefill = list("gelatin" = 60)
+
+/obj/item/weapon/reagent_containers/glass/bottle/lube
+	name = "lube bottle"
+	desc = "A bottle full of lube."
+	icon_state = "bottle-1"
+	prefill = list("lube" = 60)

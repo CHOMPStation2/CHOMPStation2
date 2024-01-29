@@ -224,8 +224,8 @@
 
 /obj/item/weapon/storage/box/flare
 	name = "box of flares"
-	desc = "A box containing 4 flares."
-	starts_with = list(/obj/item/device/flashlight/flare = 4)
+	desc = "A box containing 14 flares." // CHOMPedit: More flares.
+	starts_with = list(/obj/item/device/flashlight/flare = 14) // CHOMPedit: More flares.
 
 /obj/item/weapon/storage/box/trackimp
 	name = "boxed tracking implant kit"
@@ -335,7 +335,7 @@
 
 /obj/item/weapon/storage/box/mousetraps
 	name = "box of Pest-B-Gon mousetraps"
-	desc = "<B><FONT color='red'>WARNING:</FONT></B> <I>Keep out of reach of children</I>."
+	desc = span_red("<B>WARNING:</B>") + " <I>Keep out of reach of children</I>."
 	icon_state = "mousetraps"
 	starts_with = list(/obj/item/device/assembly/mousetrap = 7)
 

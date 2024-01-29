@@ -325,9 +325,10 @@ var/list/mob_hat_cache = list()
 		return
 	..()
 
-//DRONE MOVEMENT.
+/* DRONE MOVEMENT. // CHOMPedit: Nuking slipping.
 /mob/living/silicon/robot/drone/Process_Spaceslipping(var/prob_slip)
 	return 0
+*/// CHOMPedit end.
 
 //CONSOLE PROCS
 /mob/living/silicon/robot/drone/proc/law_resync()
