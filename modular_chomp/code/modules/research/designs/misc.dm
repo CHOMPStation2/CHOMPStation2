@@ -6,3 +6,11 @@
 	materials = list(MAT_STEEL = 5000)
 	build_path = /obj/item/trash/rkibble
 	sort_string = "KIBBB"
+
+/datum/design/item/general/mindbinder
+	name = "Mind Binder"
+	id = "mindbinder"
+	req_tech = list(TECH_MAGNET = 3, TECH_BIO = 3, TECH_ILLEGAL = 2)
+	materials = list(MAT_STEEL = 4000, MAT_GLASS = 4000, MAT_URANIUM = 2000)
+	build_path = /obj/item/device/mindbinder
+	sort_string = "TBVAB"

@@ -59,5 +59,7 @@
 		-----Notice: The outsider role is relatively new; if you encounter bugs, please notify a staff member and avoid using exploits."}
 
 /datum/job/shadekin/is_species_banned(species_name, brain_type)
-    // Any species can join as non-crew, including shadekin.
-    return FALSE
+	if(species_name != SPECIES_SHADEKIN)
+		return TRUE
+	else
+		return FALSE

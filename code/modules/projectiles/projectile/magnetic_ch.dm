@@ -2,8 +2,8 @@
 	name = "rapid flechette"
 	icon_state = "flechette"
 	fire_sound = 'sound/weapons/rapidslice.ogg'
-	damage = 10
-	armor_penetration = 35
+	damage = 15
+	armor_penetration = 60 // Now that stun's gone from the parent type, we can boost this back up.
 	hud_state = "alloy_spike"
 
 /obj/item/projectile/bullet/magnetic/fuelrod/blitz

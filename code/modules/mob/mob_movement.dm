@@ -433,7 +433,10 @@
 
 	if(restrained()) //Check to see if we can do things
 		return 0
+	inertia_dir = 0
+	return 1
 
+/* CHOMPedit: Nuking slipping.
 	//Check to see if we slipped
 	if(prob(Process_Spaceslipping(5)) && !buckled)
 		to_chat(src, "<span class='notice'><B>You slipped!</B></span>")
@@ -441,8 +444,7 @@
 		step(src, src.inertia_dir) // Not using Move for smooth glide here because this is a 'slip' so should be sudden.
 		return 0
 	//If not then we can reset inertia and move
-	inertia_dir = 0
-	return 1
+*/// CHOMPedit end.
 
 /mob/proc/Check_Dense_Object() //checks for anything to push off in the vicinity. also handles magboots on gravity-less floors tiles
 
@@ -485,6 +487,7 @@
 /mob/proc/Check_Shoegrip()
 	return 0
 
+/* CHOMPedit: Nuking slipping.
 /mob/proc/Process_Spaceslipping(var/prob_slip = 5)
 	//Setup slipage
 	//If knocked out we might just hit it and stop.  This makes it possible to get dead bodies and such.
@@ -493,6 +496,7 @@
 
 	prob_slip = round(prob_slip)
 	return(prob_slip)
+*/// CHOMPedit end.
 
 /mob/proc/mob_has_gravity(turf/T)
 	return has_gravity(src, T)

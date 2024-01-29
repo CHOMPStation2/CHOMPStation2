@@ -579,8 +579,22 @@
 					D.matter[mat] += modified_mats[mat]
 				if(O.w_class > D.w_class)
 					D.w_class = O.w_class
+				//CHOMPAdd Start
+				if(O.possessed_voice && O.possessed_voice.len)
+					for(var/mob/living/voice/V in O.possessed_voice)
+						D.inhabit_item(V, null, V.tf_mob_holder)
+						V.Destroy()
+					O.possessed_voice = list()
+				//CHOMPAdd End
 				return TRUE
-		new /obj/item/debris_pack/digested(src, modified_mats)
+		var/obj/item/debris_pack/digested/D = new /obj/item/debris_pack/digested(src, modified_mats) //CHOMPEdit
+		//CHOMPAdd Start
+		if(O.possessed_voice && O.possessed_voice.len)
+			for(var/mob/living/voice/V in O.possessed_voice)
+				D.inhabit_item(V, null, V.tf_mob_holder)
+				V.Destroy()
+			O.possessed_voice = list()
+		//CHOMPAdd End
 	return TRUE
 
 /obj/belly/proc/owner_adjust_nutrition(var/amount = 0)
