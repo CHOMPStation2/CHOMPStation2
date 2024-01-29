@@ -224,8 +224,8 @@
 
 /obj/item/weapon/storage/box/flare
 	name = "box of flares"
-	desc = "A box containing 4 flares."
-	starts_with = list(/obj/item/device/flashlight/flare = 4)
+	desc = "A box containing 14 flares." // CHOMPedit: More flares.
+	starts_with = list(/obj/item/device/flashlight/flare = 14) // CHOMPedit: More flares.
 
 /obj/item/weapon/storage/box/trackimp
 	name = "boxed tracking implant kit"

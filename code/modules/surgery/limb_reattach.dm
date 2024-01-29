@@ -27,7 +27,7 @@
 	allowed_tools = list(/obj/item/organ/external = 100)
 
 	min_duration = 50
-	max_duration = 70
+	max_duration = 50 //CHOMPedit
 
 /datum/surgery_step/limb/attach/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(!istype(tool))
@@ -91,8 +91,8 @@
 	)
 	can_infect = 1
 
-	min_duration = 100
-	max_duration = 120
+	min_duration = 70 //CHOMPedit Keeping this one on the longer side
+	max_duration = 70 //CHOMPedit
 
 /datum/surgery_step/limb/connect/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/E = target.get_organ(target_zone)
