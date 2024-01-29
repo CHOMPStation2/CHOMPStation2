@@ -3928,6 +3928,11 @@
 /obj/item/tape/engineering,
 /turf/simulated/floor/tiled/steel_grid,
 /area/hangar/two)
+"arL" = (
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor,
+/area/hallway/primary/firstdeck/auxdockaft)
 "arM" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -26635,6 +26640,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/firstdeck/hallway)
+"qTV" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/space,
+/area/space)
 "qUq" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -66390,7 +66401,7 @@ oma
 jYF
 bZz
 xes
-rmj
+arL
 aaa
 aaa
 aaa
@@ -66648,7 +66659,7 @@ shl
 vMx
 hIE
 lEZ
-rmj
+arL
 aaa
 aaa
 aaa
@@ -66906,7 +66917,7 @@ iGC
 vpm
 eIS
 sPE
-rmj
+arL
 aaa
 aaa
 aaa
@@ -67164,7 +67175,7 @@ mwy
 duw
 btl
 unn
-rmj
+arL
 aaa
 aaa
 aaa
@@ -67422,7 +67433,7 @@ wQD
 jYF
 jyk
 xes
-rmj
+arL
 aaa
 aaa
 aaa
@@ -75663,7 +75674,7 @@ jUC
 jUC
 dWL
 aaa
-aaa
+qTV
 aaa
 vYi
 aaa
