@@ -422,7 +422,7 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 	if(initiator)
 		initiator.current_ticket = src
 
-	AddInteraction("<font color='purple'>Reopened by [key_name_admin(usr)]")
+	AddInteraction("<font color='purple'>Reopened by [key_name_admin(usr)]</font>")
 	if(initiator)
 		to_chat(initiator, "<span class='filter_adminlog'>[span_purple("Ticket [TicketHref("#[id]")] was reopened by [key_name(usr,FALSE,FALSE)].")]</span>")
 	var/msg = "<span class='adminhelp'>Ticket [TicketHref("#[id]")] reopened by [key_name_admin(usr)].</span>"
@@ -538,7 +538,7 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 	if(state != AHELP_ACTIVE)
 		return
 
-	var/msg = "<span class='filter_pm'>[span_red("<font size='4'><b>- AdminHelp marked as IC issue! -</b>")]<br>"
+	var/msg = "<span class='filter_pm'>[span_red("<font size='4'><b>- AdminHelp marked as IC issue! -</b></font>")]<br>"
 	msg += "[span_red("<b>This is something that can be solved ICly, and does not currently require staff intervention.</b>")]<br>"
 	msg += "[span_red("Your AdminHelp may also be unanswerable due to ongoing events.")]</span>"
 
