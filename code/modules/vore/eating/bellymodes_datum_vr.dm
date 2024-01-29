@@ -62,7 +62,11 @@ GLOBAL_LIST_INIT(digest_modes, list())
  		//CHOMPedit end
 
 	// Deal digestion damage (and feed the pred)
+<<<<<<< HEAD
 	var/old_health = L.health; //CHOMPEdit - Store old health for the hard crit calculation
+=======
+	var/old_health = L.health
+>>>>>>> b81fa4cfc4... Merge pull request #15712 from Kashargul/RSPort
 	var/old_brute = L.getBruteLoss()
 	var/old_burn = L.getFireLoss()
 	var/old_oxy = L.getOxyLoss()
@@ -87,6 +91,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 		damage_gain = damage_gain * 0.5
 	var/offset = (1 + ((L.weight - 137) / 137)) // 130 pounds = .95 140 pounds = 1.02
 	var/difference = B.owner.size_multiplier / L.size_multiplier
+<<<<<<< HEAD
 	if(B.health_impacts_size) //CHOMPEdit - Health probably changed so...
 		B.owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 	/*if(isrobot(B.owner)) //CHOMPEdit: Borgos can now use nutrition too
@@ -105,6 +110,16 @@ GLOBAL_LIST_INIT(digest_modes, list())
 			B.GenerateBellyReagents_digesting()
 		else
 			B.owner_adjust_nutrition(offset * (4.5 * damage_gain / difference) * L.get_digestion_nutrition_modifier() * B.owner.get_digestion_efficiency_modifier()) //4.5 nutrition points per health point. Normal same size 100+100 health prey with average weight would give 900 points if the digestion was instant. With all the size/weight offset taxes plus over time oxyloss+hunger taxes deducted with non-instant digestion, this should be enough to not leave the pred starved.
+=======
+
+	consider_healthbar(L, old_health, B.owner)
+
+	if(isrobot(B.owner))
+		var/mob/living/silicon/robot/R = B.owner
+		R.cell.charge += 25 * damage_gain
+	if(offset) // If any different than default weight, multiply the % of offset.
+		B.owner.adjust_nutrition(offset*(4.5 * (damage_gain) / difference)*L.get_digestion_nutrition_modifier()*B.owner.get_digestion_efficiency_modifier()) //4.5 nutrition points per health point. Normal same size 100+100 health prey with average weight would give 900 points if the digestion was instant. With all the size/weight offset taxes plus over time oxyloss+hunger taxes deducted with non-instant digestion, this should be enough to not leave the pred starved.
+>>>>>>> b81fa4cfc4... Merge pull request #15712 from Kashargul/RSPort
 	else
 		B.owner_adjust_nutrition(offset * (4.5 * damage_gain / difference) * L.get_digestion_nutrition_modifier() * B.owner.get_digestion_efficiency_modifier()) //CHOMPEdit End
 	if(L.stat != oldstat)
@@ -117,12 +132,20 @@ GLOBAL_LIST_INIT(digest_modes, list())
 /datum/digest_mode/absorb/process_mob(obj/belly/B, mob/living/L)
 	if(!L.absorbable || L.absorbed)
 		return null
+
+	var/old_nutrition = L.nutrition
 	B.steal_nutrition(L)
 	if(L.nutrition < 100)
 		B.absorb_living(L)
+<<<<<<< HEAD
 		if(B.reagent_mode_flags & DM_FLAG_REAGENTSABSORB && B.reagents.total_volume < B.reagents.maximum_volume) //CHOMPedit: absorption reagent production
 			B.GenerateBellyReagents_absorbed() //CHOMPedit end: A bonus for pred, I know for a fact prey is usually at zero nutrition when absorption finally happens
+=======
+		consider_healthbar(L, old_nutrition, B.owner)
+>>>>>>> b81fa4cfc4... Merge pull request #15712 from Kashargul/RSPort
 		return list("to_update" = TRUE)
+	else
+		consider_healthbar(L, old_nutrition, B.owner)
 
 /datum/digest_mode/unabsorb
 	id = DM_UNABSORB
@@ -138,7 +161,9 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	noise_chance = 10
 
 /datum/digest_mode/drain/process_mob(obj/belly/B, mob/living/L)
+	var/old_nutrition = L.nutrition
 	B.steal_nutrition(L)
+	consider_healthbar(L, old_nutrition, B.owner)
 
 /datum/digest_mode/drain/shrink
 	id = DM_SHRINK
@@ -377,3 +402,109 @@ GLOBAL_LIST_INIT(digest_modes, list())
 					else
 						tempmode = DM_DRAIN			// Otherwise drain.
 	return tempmode
+<<<<<<< HEAD
+=======
+
+/datum/digest_mode/proc/consider_healthbar()
+	return
+
+/datum/digest_mode/digest/consider_healthbar(mob/living/L, old_health, mob/living/reciever)
+
+	if(old_health <= L.health)
+		return
+
+	var/old_percent
+	var/new_percent
+
+	if(ishuman(L))
+		old_percent = ((old_health + 50) / (L.maxHealth + 50)) * 100
+		new_percent = ((L.health + 50) / (L.maxHealth + 50)) * 100
+	else
+		old_percent = (old_health / L.maxHealth) * 100
+		new_percent = (L.health / L.maxHealth) * 100
+
+	var/lets_announce = FALSE
+	if(new_percent <= 75 && old_percent > 75)
+		lets_announce = TRUE
+	else if(new_percent <= 50 && old_percent > 50)
+		lets_announce = TRUE
+	else if(new_percent <= 25 && old_percent > 25)
+		lets_announce = TRUE
+	else if(new_percent <= 5 && old_percent > 5)
+		lets_announce = TRUE
+
+	if(lets_announce)
+		L.chat_healthbar(reciever)
+		L.chat_healthbar(L)
+
+/datum/digest_mode/heal/consider_healthbar(mob/living/L, old_health, mob/living/reciever)
+
+	if(old_health >= L.health)
+		return
+
+	var/old_percent
+	var/new_percent
+
+	if(ishuman(L))
+		old_percent = ((old_health + 50) / (L.maxHealth + 50)) * 100
+		new_percent = ((L.health + 50) / (L.maxHealth + 50)) * 100
+	else
+		old_percent = (old_health / L.maxHealth) * 100
+		new_percent = (L.health / L.maxHealth) * 100
+
+	var/lets_announce = FALSE
+	if(new_percent >= 75 && old_percent < 75)
+		lets_announce = TRUE
+	else if(new_percent >= 50 && old_percent < 50)
+		lets_announce = TRUE
+	else if(new_percent >= 25 && old_percent < 25)
+		lets_announce = TRUE
+	else if(new_percent >= 5 && old_percent < 5)
+		lets_announce = TRUE
+
+	if(lets_announce)
+		L.chat_healthbar(reciever)
+		L.chat_healthbar(L)
+
+/datum/digest_mode/absorb/consider_healthbar(mob/living/L, old_nutrition, mob/living/reciever)
+	if(old_nutrition <= L.nutrition)
+		return
+
+	var/old_percent = ((old_nutrition - 100) / 500) * 100
+	var/new_percent = ((L.nutrition - 100) / 500) * 100
+	var/lets_announce = FALSE
+	if(new_percent <= 75 && old_percent > 75)
+		lets_announce = TRUE
+	else if(new_percent <= 50 && old_percent > 50)
+		lets_announce = TRUE
+	else if(new_percent <= 25 && old_percent > 25)
+		lets_announce = TRUE
+	else if(new_percent <= 0 && old_percent > 0)
+		lets_announce = TRUE
+
+	if(lets_announce)
+		L.chat_healthbar(reciever)
+		L.chat_healthbar(L)
+
+/datum/digest_mode/drain/consider_healthbar(mob/living/L, old_nutrition, mob/living/reciever)
+
+	if(old_nutrition <= L.nutrition)
+		return
+
+	var/old_percent = ((old_nutrition - 100) / 500) * 100
+	var/new_percent = ((L.nutrition - 100) / 500) * 100
+
+	var/lets_announce = FALSE
+	if(new_percent <= 75 && old_percent > 75)
+		lets_announce = TRUE
+	else if(new_percent <= 50 && old_percent > 50)
+		lets_announce = TRUE
+	else if(new_percent <= 25 && old_percent > 25)
+		lets_announce = TRUE
+	else if(new_percent <= 0 && old_percent > 0)
+		lets_announce = TRUE
+
+	if(lets_announce)
+		L.chat_healthbar(reciever)
+		L.chat_healthbar(L)
+>>>>>>> b81fa4cfc4... Merge pull request #15712 from Kashargul/RSPort
