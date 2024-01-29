@@ -1,5 +1,0 @@
-author: "Aroliacue"
-delete-after: True
-changes:
-  - balance: "Removed the random EVA 'slipping' chance. This contributed nothing besides making spacewalks without magboots incredibly annoying."
-  - balance: "The 'thunk' proc (walking onto a gravity tile from zero gravity) now only stuns you for 1 tick (around one second or less) and no longer weakens you. This'll cause you to drop what you're holding but otherwise it's only a brief, mild disruption for not using magboots or walk intenting onto a tile with gravity."

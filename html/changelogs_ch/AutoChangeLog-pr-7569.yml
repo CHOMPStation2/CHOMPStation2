@@ -1,5 +1,0 @@
-author: "Fracshun"
-delete-after: True
-changes:
-  - rscadd: "Added new illegal item for handheld Item TF: Mind Binder"
-  - rscadd: "Sentient items digested in a belly with recycling now become the recycled matter"
