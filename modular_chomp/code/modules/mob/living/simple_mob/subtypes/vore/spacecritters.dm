@@ -45,7 +45,7 @@
 		user.drop_from_inventory(O)
 		qdel(O)
 		evolve()
-	if(istype(O, feed))
+	else if(istype(O, feed))
 		user.drop_from_inventory(O)
 		qdel(O)
 		duplicate()

@@ -34,6 +34,8 @@
 	item_state = "flamegun"
 	wielded_item_state = "flame-wielded"
 
+	w_class = ITEMSIZE_LARGE
+
 	accept_cell_type = /obj/item/weapon/cell/device
 	cell_type = /obj/item/weapon/cell/device/weapon
 	projectile_type = /obj/item/projectile/energy/flamecrystal
@@ -82,7 +84,27 @@
 		list(mode_name="frost", burst=3, fire_delay=15, projectile_type=/obj/item/projectile/energy/frostsphere, charge_cost = 240),
 		list(mode_name="acid", fire_delay=1, projectile_type=/obj/item/projectile/energy/muckblob, charge_cost = 10),
 		)
+/obj/item/weapon/gun/energy/elementalray/emag_act(var/remaining_charges, var/mob/user)
+	..()
+	to_chat(user, "<span class='notice'>You short circuit the internal locking mechanisms of \the [src]!</span>")
+	firemodes = list(
+		list(mode_name="fire", fire_delay=15, projectile_type=/obj/item/projectile/bullet/flamegun, charge_cost = 160),
+		list(mode_name="lighting", fire_delay=20, projectile_type=/obj/item/projectile/beam/lightingsurge, charge_cost = 480),
+		list(mode_name="frost", burst=3, fire_delay=15, projectile_type=/obj/item/projectile/energy/frostsphere, charge_cost = 240),
+		list(mode_name="acid", fire_delay=1, projectile_type=/obj/item/projectile/energy/muckblob, charge_cost = 10),
+		list(mode_name="error", fire_delay=30, projectile_type=/obj/item/projectile/bullet/errorelement, charge_cost = 1040)
+		)
+	return 1
 
+/obj/item/projectile/bullet/errorelement //You are the bullet hell
+	use_submunitions = 1
+	only_submunitions = 1
+	range = 0
+	embed_chance = 0
+	submunition_spread_max = 3600
+	submunition_spread_min = 500
+	submunitions = list(/obj/item/projectile/energy/flamecrystal = 2, /obj/item/projectile/energy/frostsphere = 2, /obj/item/projectile/beam/lightingsurge = 1, /obj/item/projectile/energy/muckblob = 5)
+	hud_state = "laser_heat"
 
 /obj/item/projectile/beam/lightingsurge //Anti-synth laser
 	damage = 60
