@@ -26,6 +26,12 @@
 	new_voice.verbs -= /mob/living/voice/verb/change_name //No changing your name! Bad!
 	new_voice.verbs -= /mob/living/voice/verb/hang_up //Also you can't hang up. You are the item!
 	src.item_tf_spawnpoint_used() //CHOMPEdit - Item TF spawnpoints
+	//CHOMPEdit Start - Let the inhabitor know what happened to them
+	if(istype(src, /obj/item/device/mindbinder))
+		to_chat(new_voice,"<span class='notice'>Your mind has been stored in [src]!</span>")
+	else
+		to_chat(new_voice,"<span class='notice'>You have become [src]!</span>")
+	//CHOMPEdit End
 
 // Chomp edit
 /obj/item/proc/muffled_by_belly(var/mob/user)

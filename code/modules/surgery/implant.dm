@@ -55,7 +55,7 @@
 	)
 
 	min_duration = 60
-	max_duration = 80
+	max_duration = 60  //CHOMPedit
 
 /datum/surgery_step/cavity/make_space/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(..())
@@ -89,8 +89,8 @@
 		/obj/item/weapon/weldingtool = 25
 	)
 
-	min_duration = 60
-	max_duration = 80
+	min_duration = 30 //CHOMPedit
+	max_duration = 30 //CHOMPedit
 
 /datum/surgery_step/cavity/close_space/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(..())
@@ -120,7 +120,7 @@
 	allowed_tools = list(/obj/item = 100)
 
 	min_duration = 80
-	max_duration = 100
+	max_duration = 80 //CHOMPedit
 
 /datum/surgery_step/cavity/place_item/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(!istype(tool))
@@ -187,8 +187,8 @@
 
 	allowed_procs = list(IS_WIRECUTTER = 75)
 
-	min_duration = 80
-	max_duration = 100
+	min_duration = 50 //CHOMPedit
+	max_duration = 50 //CHOMPedit
 
 /datum/surgery_step/cavity/implant_removal/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)

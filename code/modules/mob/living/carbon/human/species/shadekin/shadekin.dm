@@ -121,7 +121,7 @@
 	var/energy_light = 0.25
 	var/energy_dark = 0.75
 	var/nutrition_conversion_scaling = 0.5 //CHOMPEdit - Add nutrition <-> dark energy conversion
-	var/phase_gentle = FALSE //CHOMPEdit - Add gentle phasing
+	var/phase_gentle = TRUE //CHOMPEdit - Add gentle phasing, defaults to on.
 	var/doing_phase = FALSE //CHOMPEdit - Prevent bugs when spamming phase button
 	var/manual_respite = FALSE //CHOMPEdit - Dark Respite
 	var/respite_activating = FALSE //CHOMPEdit - Dark Respite
