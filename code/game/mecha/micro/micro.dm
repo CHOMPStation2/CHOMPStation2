@@ -157,7 +157,3 @@
 /obj/effect/decal/mecha_wreckage/micro
 <<<<<<< HEAD
 	icon = 'icons/mecha/micro.dmi' */
-
-=======
-	icon = 'icons/mecha/micro.dmi'
->>>>>>> 6d1acf98db... Merge pull request #15695 from Kashargul/endOfStaticCol

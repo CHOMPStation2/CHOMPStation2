@@ -543,7 +543,7 @@
 		return 1
 
 /obj/item/clothing/suit/armor/pcarrier/explorer
-	name = "explorer suit"
+	name = "explorer plate carrier" // CHOMPedit: Clarity for vendors.
 	desc = "A lightweight explorer plate carrier. It can be equipped with armor plates, but only protects from the cold on it's own."
 	icon_state = "explorer"
 	flags = THICKMATERIAL

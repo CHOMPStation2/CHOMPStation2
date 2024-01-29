@@ -1232,15 +1232,9 @@
 			return
 		if(target.buckled) //how are you buckled in the water?!
 			target.buckled.unbuckle_mob()
-<<<<<<< HEAD
-		target.visible_message("<span class='warning'>\The [target] suddenly disappears, being dragged into the water!</span>",\
-			"<span class='danger'>You are dragged below the water and feel yourself slipping directly into \the [src]'s [lowertext(vore_selected)]!</span>")
-		to_chat(src, "<span class='notice'>You successfully drag \the [target] into the water, slipping them into your [lowertext(vore_selected)].</span>")
-=======
 		target.visible_message("<span class='vwarning'>\The [target] suddenly disappears, being dragged into the water!</span>",\
-			"<span class='vdanger'>You are dragged below the water and feel yourself slipping directly into \the [src]'s [vore_selected]!</span>")
-		to_chat(src, "<span class='vnotice'>You successfully drag \the [target] into the water, slipping them into your [vore_selected].</span>")
->>>>>>> 6d1acf98db... Merge pull request #15695 from Kashargul/endOfStaticCol
+			"<span class='vdanger'>You are dragged below the water and feel yourself slipping directly into \the [src]'s [lowertext(vore_selected)]!</span>")
+		to_chat(src, "<span class='vnotice'>You successfully drag \the [target] into the water, slipping them into your [lowertext(vore_selected)].</span>")
 		target.forceMove(src.vore_selected)
 
 /mob/living/carbon/human/proc/toggle_pain_module()

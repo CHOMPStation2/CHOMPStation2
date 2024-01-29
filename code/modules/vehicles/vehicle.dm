@@ -239,12 +239,8 @@
 		return TRUE
 
 /obj/vehicle/proc/explode()
-<<<<<<< HEAD
-	src.visible_message("<font color='red'><B>[src] blows apart!</B></font>", 1)
-	playsound(src, 'modular_chomp/sound/effects/explosions/vehicleexplosion.ogg', 100, 8, 3) //CHOMPedit: New sound effects.
-=======
 	src.visible_message(span_red("<B>[src] blows apart!</B>"), 1)
->>>>>>> 6d1acf98db... Merge pull request #15695 from Kashargul/endOfStaticCol
+	playsound(src, 'modular_chomp/sound/effects/explosions/vehicleexplosion.ogg', 100, 8, 3) //CHOMPedit: New sound effects.
 	var/turf/Tsec = get_turf(src)
 
 	//stuns people who are thrown off a train that has been blown up

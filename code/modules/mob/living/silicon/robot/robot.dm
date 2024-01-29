@@ -322,7 +322,7 @@
 		modules.Remove(shell_module_blacklist)
 		//CHOMPedit Add
 		if(crisis || security_level == SEC_LEVEL_RED || crisis_override)
-			to_chat(src, "<font color='red'>Crisis mode active. Combat module available.</font>")
+			to_chat(src, span_red("Crisis mode active. Combat module available."))
 			modules+="Combat"
 			modules+="ERT"
 			//CHOMPedit end

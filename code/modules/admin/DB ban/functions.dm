@@ -82,7 +82,7 @@
 	reason = sql_sanitize_text(reason)
 	var/list/sqlargs = list("t_bantype" = bantype_str, "t_reason" = reason, "t_job" = job, "t_ckey" = ckey, "t_a_ckey" = a_ckey, "t_who" = who, "t_adminwho" = adminwho) //CHOMPEdit TGSQL
 	var/sql = "INSERT INTO erro_ban (`id`,`bantime`,`serverip`,`bantype`,`reason`,`job`,`duration`,`rounds`,`expiration_time`,`ckey`,`computerid`,`ip`,`a_ckey`,`a_computerid`,`a_ip`,`who`,`adminwho`,`edits`,`unbanned`,`unbanned_datetime`,`unbanned_ckey`,`unbanned_computerid`,`unbanned_ip`) VALUES (null, Now(), '[serverip]', :t_bantype, :t_reason, :t_job, [(duration)?"[duration]":"0"], [(rounds)?"[rounds]":"0"], Now() + INTERVAL [(duration>0) ? duration : 0] MINUTE, :t_ckey, '[computerid]', '[ip]', :t_a_ckey, '[a_computerid]', '[a_ip]', :t_who, :t_adminwho, '', null, null, null, null, null)" //CHOMPEdit TGSQL
-	
+
 	var/DBQuery/query_insert = SSdbcore.NewQuery(sql,sqlargs) //CHOMPEdit TGSQL
 	query_insert.Execute()
 	to_chat(usr, "<span class='filter_adminlog'>[span_blue("Ban saved to database.")]</span>")
@@ -271,13 +271,8 @@
 	if(!check_rights(R_BAN))	return
 
 	establish_db_connection()
-<<<<<<< HEAD
 	if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
-		to_chat(usr, "<span class='filter_adminlog'><font color='red'>Failed to establish database connection</font></span>")
-=======
-	if(!dbcon.IsConnected())
 		to_chat(usr, "<span class='filter_adminlog'>[span_red("Failed to establish database connection")]</span>")
->>>>>>> 6d1acf98db... Merge pull request #15695 from Kashargul/endOfStaticCol
 		return
 
 	var/output = "<div align='center'><table width='90%'><tr>"
@@ -375,7 +370,7 @@
 			var/cidsearch = ""
 			var/bantypesearch = ""
 			//CHOMPEdit Begin
-			var/list/sqlargs = list() 
+			var/list/sqlargs = list()
 			if(!match)
 				if(adminckey)
 					adminsearch = "AND a_ckey = :t_adminckey "

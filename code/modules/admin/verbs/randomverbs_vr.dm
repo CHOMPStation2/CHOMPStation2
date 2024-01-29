@@ -112,10 +112,5 @@
 		target.vantag_hud = TRUE
 		target.recalculate_vis()
 		to_chat(src, "You gave the event HUD to [key_name(target)].")
-<<<<<<< HEAD
-		to_chat(target, "You now have the event HUD.  Icons will appear next to characters indicating if they prefer to be killed(red crosshairs), devoured(belly), or kidnapped(blue crosshairs) by event characters.")	
-	feedback_add_details("admin_verb","GREHud") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
-=======
 		to_chat(target, "You now have the event HUD.  Icons will appear next to characters indicating if they prefer to be killed(red crosshairs), devoured(belly), or kidnapped(blue crosshairs) by event characters.")
 	feedback_add_details("admin_verb","GREHud") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
->>>>>>> 6d1acf98db... Merge pull request #15695 from Kashargul/endOfStaticCol

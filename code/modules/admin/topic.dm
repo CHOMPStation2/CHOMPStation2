@@ -937,18 +937,11 @@
 				else
 					to_chat(M, "<span class='filter_system warning'>No ban appeals URL has been set.</span>")
 				log_admin("[usr.client.ckey] has banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes.")
-<<<<<<< HEAD
-				message_admins("<font color='blue'>[usr.client.ckey] has banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes.</font>")
+				message_admins(span_blue("[usr.client.ckey] has banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes."))
 				// CHOMPedit Start - Tickets System
 				var/datum/ticket/T = M.client ? M.client.current_ticket : null
 				if(T)
 					T.Resolve()
-=======
-				message_admins(span_blue("[usr.client.ckey] has banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes."))
-				var/datum/admin_help/AH = M.client ? M.client.current_ticket : null
-				if(AH)
-					AH.Resolve()
->>>>>>> 6d1acf98db... Merge pull request #15695 from Kashargul/endOfStaticCol
 				qdel(M.client)
 				// CHOMPedit End
 				//qdel(M)	// See no reason why to delete mob. Important stuff can be lost. And ban can be lifted before round ends.

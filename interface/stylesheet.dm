@@ -133,11 +133,8 @@ h1.alert, h2.alert		{color: #000000;}
 .say_quote				{font-family: Georgia, Verdana, sans-serif;}
 .say_quote_italics		{font-style: italic; font-family: Georgia, Verdana, sans-serif;}
 .terminus				{font-family: "Times New Roman", Times, serif, sans-serif}
-<<<<<<< HEAD
 .interface				{color: #330033;}
 .psionic                {color: #993399;}    /*YWedit*/
-=======
->>>>>>> 6d1acf98db... Merge pull request #15695 from Kashargul/endOfStaticCol
 .spacer					{color: #9c660b;} /* VOREStation Add */
 .blob					{color: #ff950d; font-weight: bold; font-style: italic;}
 .teppi					{color: #816540; word-spacing:4pt; font-family: "Segoe Script Bold","Segoe Script",sans-serif,Verdana;}
@@ -168,6 +165,9 @@ BIG IMG.icon 			{width: 32px; height: 32px;}
 .maroon					{color: #800000;}
 .crimson				{color: #DC143C;}
 .brown					{color: #8D4925;}
+.lightpurple			{color: #AD5AAD;}
+.darkpink				{color: #E3209B;}
+.white					{color: #FFFFFF;}
 
 .pnarrate				{color: #009AB2;}
 

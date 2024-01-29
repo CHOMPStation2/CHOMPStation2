@@ -25,7 +25,7 @@ These should come standard with the Protean rigsuit, unless you want them to wor
 
 	var/mob/living/carbon/human/H = holder.wearer
 	if(H)
-		to_chat(usr, "<font color='blue'><b>You activate the suit's energy syphon.</b></font>")
+		to_chat(usr, span_blue("<b>You activate the suit's energy syphon.</b>"))
 		to_chat(H, "<span class='warning'>Your suit begins to sap at your own energy stores.</span>")
 		active = 1
 	else
@@ -39,7 +39,7 @@ These should come standard with the Protean rigsuit, unless you want them to wor
 		return
 	var/mob/living/carbon/human/H = holder.wearer
 	if(H)
-		to_chat(usr, "<font color='blue'><b>You deactivate the suit's energy syphon.</b></font>")
+		to_chat(usr, span_blue("<b>You deactivate the suit's energy syphon.</b>"))
 		to_chat(H, "<span class='warning'>Your suit ceases from sapping your own energy.</span>")
 		active = 0
 	else
@@ -87,7 +87,7 @@ These should come standard with the Protean rigsuit, unless you want them to wor
 
 /obj/item/rig_module/protean/armor/activate()
 	if(holder?:assimilated_rig)
-		to_chat(usr, "<font color='red'><b>Armor module non-functional while a RIG is assimilated.</b></font>")
+		to_chat(usr, span_red("<b>Armor module non-functional while a RIG is assimilated.</b>"))
 		return
 	if(!..(1))
 		return 0
@@ -96,7 +96,7 @@ These should come standard with the Protean rigsuit, unless you want them to wor
 	if(H)
 		var/list/temparmor = list("bio" = 100, "rad" = 100)
 		temparmor = armor_settings + temparmor
-		to_chat(usr, "<font color='blue'><b>You signal the suit to harden.</b></font>")
+		to_chat(usr, span_blue("<b>You signal the suit to harden.</b>"))
 		to_chat(H, "<span class='notice'>Your suit hardens in response to physical trauma.</span>")
 		holder.armor = temparmor.Copy()
 		for(var/obj/item/piece in list(holder.gloves,holder.helmet,holder.boots,holder.chest))
@@ -118,7 +118,7 @@ These should come standard with the Protean rigsuit, unless you want them to wor
 		return
 	var/mob/living/carbon/human/H = holder.wearer
 	if(H)
-		to_chat(usr, "<font color='blue'><b>You signal the suit to relax.</b></font>")
+		to_chat(usr, span_blue("<b>You signal the suit to relax.</b>"))
 		to_chat(H, "<span class='warning'>Your suit softens.</span>")
 		holder.armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 100, "rad" = 100)
 		for(var/obj/item/piece in list(holder.gloves,holder.helmet,holder.boots,holder.chest))
@@ -160,7 +160,7 @@ These should come standard with the Protean rigsuit, unless you want them to wor
 		var/obj/item/organ/internal/nano/refactory/R = P.nano_get_refactory()
 		if(R.get_stored_material(MAT_STEEL) >= 100)
 			healing = holder.wearer.add_modifier(/datum/modifier/protean/steel, origin = R)
-			to_chat(usr, "<font color='blue'><b>You activate the suit's restorative nanites.</b></font>")
+			to_chat(usr, span_blue("<b>You activate the suit's restorative nanites.</b>"))
 			to_chat(H, "<span class='warning'>Your suit begins mending your injuries.</span>")
 			active = 1
 			return 1
@@ -171,7 +171,7 @@ These should come standard with the Protean rigsuit, unless you want them to wor
 		return 0
 	var/mob/living/carbon/human/H = holder.wearer
 	if(H)
-		to_chat(usr, "<font color='blue'><b>You deactivate the suit's restorative nanites.</b></font>")
+		to_chat(usr, span_blue("<b>You deactivate the suit's restorative nanites.</b>"))
 		to_chat(H, "<span class='warning'>Your suit is no longer mending your injuries.</span>")
 		active = 0
 		if(healing)
@@ -204,6 +204,6 @@ These should come standard with the Protean rigsuit, unless you want them to wor
 	var/obj/item/organ/internal/nano/refactory/R = P?.nano_get_refactory()
 
 	if(R?.add_stored_material(S.material.name,1*S.perunit) && S.use(1))
-		to_chat(user, "<font color='blue'><b>You directly feed some steel to the [holder].</b></font>")
+		to_chat(user, span_blue("<b>You directly feed some steel to the [holder].</b>"))
 		return 1
 	return 0

@@ -2057,13 +2057,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					return FALSE
 
 				for(var/atom/movable/target in host.vore_selected)
-<<<<<<< HEAD
-					to_chat(target,"<span class='warning'>You're squished from [host]'s [lowertext(host.vore_selected)] to their [lowertext(choice.name)]!</span>")
+					to_chat(target,"<span class='vwarning'>You're squished from [host]'s [lowertext(host.vore_selected)] to their [lowertext(choice.name)]!</span>")
 					//CHOMPAdd - Send the transfer message to indirect targets as well. Slightly different message because why not.
 					to_chat(host.vore_selected.get_belly_surrounding(target.contents),"<span class='warning'>You're squished along with [target] from [host]'s [lowertext(host.vore_selected)] to their [lowertext(choice.name)]!</span>")
-=======
-					to_chat(target,"<span class='vwarning'>You're squished from [host]'s [lowertext(host.vore_selected)] to their [lowertext(choice.name)]!</span>")
->>>>>>> 6d1acf98db... Merge pull request #15695 from Kashargul/endOfStaticCol
 					host.vore_selected.transfer_contents(target, choice, 1)
 				return TRUE
 		return
@@ -2108,13 +2104,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			var/obj/belly/choice = tgui_input_list(usr, "Move [target] where?","Select Belly", host.vore_organs)
 			if(!choice || !(target in host.vore_selected))
 				return TRUE
-<<<<<<< HEAD
-			to_chat(target,"<span class='warning'>You're squished from [host]'s [lowertext(host.vore_selected.name)] to their [lowertext(choice.name)]!</span>")
+			to_chat(target,"<span class='vwarning'>You're squished from [host]'s [lowertext(host.vore_selected.name)] to their [lowertext(choice.name)]!</span>")
 			//CHOMPAdd - Send the transfer message to indirect targets as well. Slightly different message because why not.
 			to_chat(host.vore_selected.get_belly_surrounding(target.contents),"<span class='warning'>You're squished along with [target] from [host]'s [lowertext(host.vore_selected)] to their [lowertext(choice.name)]!</span>")
-=======
-			to_chat(target,"<span class='vwarning'>You're squished from [host]'s [lowertext(host.vore_selected.name)] to their [lowertext(choice.name)]!</span>")
->>>>>>> 6d1acf98db... Merge pull request #15695 from Kashargul/endOfStaticCol
 			host.vore_selected.transfer_contents(target, choice)
 
 

@@ -274,15 +274,9 @@
 
 		if (prob(miss_chance))
 			visible_message("<span class='notice'>\The [O] misses [src] narrowly!</span>")
-<<<<<<< HEAD
 			return*/
 		//CHOMPEDIT - removing baymiss
-		src.visible_message("<span class='filter_warning'><font color='red'>[src] has been hit by [O].</font></span>")
-=======
-			return
-
 		src.visible_message("<span class='filter_warning'>[span_red("[src] has been hit by [O].")]</span>")
->>>>>>> 6d1acf98db... Merge pull request #15695 from Kashargul/endOfStaticCol
 		var/armor = run_armor_check(null, "melee")
 		var/soaked = get_armor_soak(null, "melee")
 
@@ -350,13 +344,9 @@
 		// PERSON BEING HIT: CAN BE DROP PREY, ALLOWS THROW VORE, AND IS DEVOURABLE.
 		// PERSON BEING THROWN: CAN BE DROP PRED, ALLOWS THROW VORE.
 		else if((can_be_drop_prey && throw_vore && devourable) && (thrown_mob.can_be_drop_pred && thrown_mob.throw_vore)) //Pred thrown into prey.
-<<<<<<< HEAD
 			if(!allowmobvore && isanimal(thrown_mob)) //Does the person being hit not allow mob vore and the perrson being thrown a simple_mob?
 				return
-			visible_message("<span class='warning'>[src] suddenly slips inside of [thrown_mob]'s [lowertext(thrown_mob.vore_selected.name)] as [thrown_mob] flies into them!</span>")
-=======
 			visible_message("<span class='vwarning'>[src] suddenly slips inside of [thrown_mob]'s [lowertext(thrown_mob.vore_selected.name)] as [thrown_mob] flies into them!</span>")
->>>>>>> 6d1acf98db... Merge pull request #15695 from Kashargul/endOfStaticCol
 			thrown_mob.vore_selected.nom_mob(src) //Eat them!!!
 			if(src.loc != thrown_mob.vore_selected)
 				src.forceMove(thrown_mob.vore_selected) //Double check. Should never happen but...Weirder things have happened!

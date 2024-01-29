@@ -81,6 +81,7 @@
 #define span_debug_debug(str) ("<span class='debug_debug'>" + str + "</span>")
 #define span_debug_trace(str) ("<span class='debug_trace'>" + str + "</span>")
 
+#define span_white(str) ("<span class='white'>" + str + "</span>")
 #define span_black(str) ("<span class='black'>" + str + "</span>")
 #define span_darkgray(str) ("<span class='darkgray'>" + str + "</span>")
 #define span_gray(str) ("<span class='gray'>" + str + "</span>")
@@ -95,3 +96,5 @@
 #define span_crimson(str) ("<span class='crimson'>" + str + "</span>")
 #define span_maroon(str) ("<span class='maroon'>" + str + "</span>")
 #define span_brown(str) ("<span class='brown'>" + str + "</span>")
+#define span_lightpurple(str) ("<span class='lightpurple'>" + str + "</span>")
+#define span_darkpink(str) ("<span class='lightpurple'>" + str + "</span>")

@@ -402,12 +402,8 @@
 		var/DBQuery/insert_query = SSdbcore.NewQuery("INSERT INTO erro_poll_vote (id ,datetime ,pollid ,optionid ,ckey ,ip ,adminrank) VALUES (null, Now(), [pollid], [optionid], :t_ckey, '[usr.client.address]', '[adminrank]')", list("t_ckey" = usr.ckey)) //CHOMPEdit TGSQL
 		insert_query.Execute()
 
-<<<<<<< HEAD
-		to_chat(usr, "<font color='blue'>Vote successful.</font>")
-		qdel(insert_query) //CHOMPEdit TGSQL
-=======
 		to_chat(usr, span_blue("Vote successful."))
->>>>>>> 6d1acf98db... Merge pull request #15695 from Kashargul/endOfStaticCol
+		qdel(insert_query) //CHOMPEdit TGSQL
 		usr << browse(null,"window=playerpoll")
 
 
@@ -465,12 +461,8 @@
 		var/DBQuery/insert_query = SSdbcore.NewQuery("INSERT INTO erro_poll_textreply (id ,datetime ,pollid ,ckey ,ip ,replytext ,adminrank) VALUES (null, Now(), [pollid], :t_ckey, '[usr.client.address]', :t_reply, '[adminrank]')", list("t_ckey" = usr.ckey, "t_reply" = replytext)) //CHOMPEdit TGSQL
 		insert_query.Execute()
 
-<<<<<<< HEAD
-		to_chat(usr, "<font color='blue'>Feedback logging successful.</font>")
-		qdel(insert_query) //CHOMPEdit TGSQL
-=======
 		to_chat(usr, span_blue("Feedback logging successful."))
->>>>>>> 6d1acf98db... Merge pull request #15695 from Kashargul/endOfStaticCol
+		qdel(insert_query) //CHOMPEdit TGSQL
 		usr << browse(null,"window=playerpoll")
 
 
@@ -532,11 +524,6 @@
 		var/DBQuery/insert_query = SSdbcore.NewQuery("INSERT INTO erro_poll_vote (id ,datetime ,pollid ,optionid ,ckey ,ip ,adminrank, rating) VALUES (null, Now(), [pollid], [optionid], '[usr.ckey]', '[usr.client.address]', '[adminrank]', :t_rating)", list("t_ckey" = usr.ckey, "t_rating" = rating)) //CHOMPEdit TGSQL
 		insert_query.Execute()
 
-<<<<<<< HEAD
-		to_chat(usr, "<font color='blue'>Vote successful.</font>")
+		to_chat(usr, span_blue("Vote successful."))
 		qdel(insert_query) //CHOMPEdit TGSQL
 		usr << browse(null,"window=playerpoll")
-=======
-		to_chat(usr, span_blue("Vote successful."))
-		usr << browse(null,"window=playerpoll")
->>>>>>> 6d1acf98db... Merge pull request #15695 from Kashargul/endOfStaticCol
