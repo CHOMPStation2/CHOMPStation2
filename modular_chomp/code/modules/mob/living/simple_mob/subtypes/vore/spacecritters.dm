@@ -18,7 +18,9 @@
 	max_co2 = 0
 	min_n2 = 0
 	max_n2 = 0
-	unsuitable_atoms_damage = 2
+
+	unsuitable_atoms_damage = 0
+	heat_damage_per_tick = 0
 
 	melee_damage_lower = 12
 	melee_damage_upper = 12

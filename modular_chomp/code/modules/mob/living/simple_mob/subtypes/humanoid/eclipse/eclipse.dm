@@ -58,6 +58,9 @@
 	reload_max = 7		// Not the best default, but it fits the pistol
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/eclipse/ranged
 
+	loot_list = list(/obj/item/slime_extract/sepia  = 0.1,
+			)
+
 	special_attack_cooldown = 15 SECONDS
 	special_attack_min_range = 2
 	special_attack_max_range = 7
@@ -847,6 +850,8 @@
 	submunition_spread_min = 500
 	submunitions = list(/obj/item/projectile/energy/frostsphere = 4)
 
+	hud_state = "plasma_sphere"
+
 /obj/item/projectile/bullet/frostshotgun/on_range()
 	qdel(src)
 
@@ -858,7 +863,8 @@
 	modifier_type_to_apply = /datum/modifier/cryogelled
 	modifier_duration = 0.25 MINUTE
 	speed = 2.5
-	range = 8
+	range = 12
+	hud_state = "water"
 
 /datum/ai_holder/simple_mob/merc/eclipse/ranged/cyro
 	can_flee = TRUE					// If they're even allowed to flee.
