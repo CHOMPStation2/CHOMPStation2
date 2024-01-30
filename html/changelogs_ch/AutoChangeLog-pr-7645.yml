@@ -1,4 +1,0 @@
-author: "Missile597"
-delete-after: True
-changes:
-  - bugfix: "Old laser4 moved to modular_chomp to prevent conflict issues, and references to this sound file altered accordingly"
