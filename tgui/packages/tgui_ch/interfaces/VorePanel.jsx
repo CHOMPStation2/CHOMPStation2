@@ -3138,6 +3138,18 @@ const VoreUserPreferences = (props, context) => {
               tooltipPosition="left"
             />
           </Flex.Item>
+          <Flex.Item basis="33%">
+            <VoreUserPreferenceItem
+              spec={preferences.vore_fx}
+              tooltipPosition="right"
+            />
+          </Flex.Item>
+          <Flex.Item basis="33%">
+            <VoreUserPreferenceItem
+              spec={preferences.spontaneous_tf}
+              tooltipPosition="top"
+            />
+          </Flex.Item>
         </Flex>
       </Section>
       <Section
@@ -3178,6 +3190,7 @@ const VoreUserPreferences = (props, context) => {
                 }
                 backgroundColor={digestModeToColor[selective_active]}
                 tooltip="Allows to set the personal belly mode preference for selective bellies."
+                tooltipPosition="right"
                 onClick={() => act('switch_selective_mode_pref')}
               />
             </Flex.Item>
@@ -3189,38 +3202,26 @@ const VoreUserPreferences = (props, context) => {
             </Flex.Item>
             <Flex.Item basis="33%">
               <VoreUserPreferenceItem
-                spec={preferences.vore_fx}
-                tooltipPosition="left"
-              />
-            </Flex.Item>
-            <Flex.Item basis="33%">
-              <VoreUserPreferenceItem
                 spec={preferences.autotransferable}
-                tooltipPosition="right"
-              />
-            </Flex.Item>
-            <Flex.Item basis="33%" grow={1}>
-              <VoreUserPreferenceItem
-                spec={preferences.spontaneous_tf}
-                tooltipPosition="top"
+                tooltipPosition="left"
               />
             </Flex.Item>
             <Flex.Item basis="33%">
               <VoreUserPreferenceItem
                 spec={preferences.strippref}
-                tooltipPosition="left"
+                tooltipPosition="right"
               />
             </Flex.Item>
-            <Flex.Item basis="33%">
+            <Flex.Item basis="33%" grow={1}>
               <VoreUserPreferenceItem
                 spec={preferences.liquid_apply}
-                tooltipPosition="right"
+                tooltipPosition="top"
               />
             </Flex.Item>
             <Flex.Item basis="33%">
               <VoreUserPreferenceItem
                 spec={preferences.remains}
-                tooltipPosition="top"
+                tooltipPosition="left"
               />
             </Flex.Item>
           </Flex>
