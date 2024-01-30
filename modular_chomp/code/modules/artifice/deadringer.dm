@@ -7,9 +7,9 @@
 				deathprevent()
 				activated = 0
 				if(watchowner.isSynthetic())
-					to_chat(watchowner, "<font color='blue'>You fade into nothingness! [src]'s screen blinks, being unable to copy your synthetic body!</font>")
+					to_chat(watchowner, span_blue("You fade into nothingness! [src]'s screen blinks, being unable to copy your synthetic body!"))
 				else
-					to_chat(watchowner, "<font color='blue'>You fade into nothingness, leaving behind a fake body!</font>")
+					to_chat(watchowner, span_blue("You fade into nothingness, leaving behind a fake body!"))
 				icon_state = "deadringer_cd"
 				timer = 5
 				return

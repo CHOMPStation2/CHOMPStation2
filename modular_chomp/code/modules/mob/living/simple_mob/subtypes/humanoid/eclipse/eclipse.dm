@@ -109,7 +109,7 @@
 
 /mob/living/simple_mob/humanoid/eclipse/solar/bullet_act(obj/item/projectile/P)
 	if(istype(P, /obj/item/projectile/energy) || istype(P, /obj/item/projectile/beam))
-		visible_message("<font color='orange'><B>[P] seems ineffective!.</B></font>")
+		visible_message(span_orange("<B>[P] seems ineffective!.</B>"))
 		..()
 	else
 		..()
@@ -276,7 +276,7 @@
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/bullet_act(obj/item/projectile/P)
 	if(istype(P, /obj/item/projectile/bullet))
-		visible_message("<font color='orange'><B>[P] seems ineffective!.</B></font>")
+		visible_message(span_orange("<B>[P] seems ineffective!.</B>"))
 		..()
 	else
 		..()

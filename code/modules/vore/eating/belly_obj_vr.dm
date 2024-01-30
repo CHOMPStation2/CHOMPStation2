@@ -201,13 +201,13 @@
 		"You feel your %belly beginning to become active!")
 
 	var/list/digest_chance_messages_prey = list(
-		"In response to your struggling, %owner's %belly begins to get more active...")
+		"In response to your struggling, %pred's %belly begins to get more active...")
 
 	var/list/absorb_chance_messages_owner = list(
 		"You feel your %belly start to cling onto its contents...")
 
 	var/list/absorb_chance_messages_prey = list(
-		"In response to your struggling, %owner's %belly begins to cling more tightly...")
+		"In response to your struggling, %pred's %belly begins to cling more tightly...")
 
 	var/list/digest_messages_owner = list(
 		"You feel %prey's body succumb to your digestive system, which breaks it apart into soft slurry.",
@@ -1037,7 +1037,7 @@
 
 	//Print notifications/sound if necessary
 	if(!silent && count)
-		owner.visible_message("<span class='vnotice'><font color='green'><b>[owner] [release_verb] everything from their [lowertext(name)]!</b></font></span>", range = privacy_range)
+		owner.visible_message("<span class='vnotice'>[span_green("<b>[owner] [release_verb] everything from their [lowertext(name)]!</b>")]</span>", range = privacy_range)
 		var/soundfile
 		if(!fancy_vore)
 			soundfile = classic_release_sounds[release_sound]
@@ -1119,7 +1119,7 @@
 	if(istype(M, /mob/observer)) //CHOMPEdit
 		silent = TRUE
 	if(!silent)
-		owner.visible_message("<span class='vnotice'><font color='green'><b>[owner] [release_verb] [M] from their [lowertext(name)]!</b></font></span>",range = privacy_range)
+		owner.visible_message("<span class='vnotice'>[span_green("<b>[owner] [release_verb] [M] from their [lowertext(name)]!</b>")]</span>",range = privacy_range)
 		var/soundfile
 		if(!fancy_vore)
 			soundfile = classic_release_sounds[release_sound]
@@ -1191,7 +1191,7 @@
 	formatted_message = replacetext(formatted_message, "%countprey", living_count)
 	formatted_message = replacetext(formatted_message, "%count", contents.len)
 
-	return("<i><font color='red'>[formatted_message]</font></i>")
+	return(span_red("<i>[formatted_message]</i>"))
 
 /obj/belly/proc/get_examine_msg_absorbed()
 	if(!(contents.len) || !(examine_messages_absorbed.len) || !display_absorbed_examine)
@@ -1215,7 +1215,7 @@
 	formatted_message = replacetext(formatted_message, "%prey", english_list(absorbed_victims))
 	formatted_message = replacetext(formatted_message, "%countprey", absorbed_count)
 
-	return("<i><font color='red'>[formatted_message]</font></i>")
+	return(span_red("<i>[formatted_message]</i>"))
 
 // The next function gets the messages set on the belly, in human-readable format.
 // This is useful in customization boxes and such. The delimiter right now is \n\n so
