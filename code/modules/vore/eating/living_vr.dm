@@ -258,6 +258,10 @@
 	P.vore_sprite_multiply = src.vore_sprite_multiply
 	P.no_latejoin_vore_warning = src.no_latejoin_vore_warning
 	P.no_latejoin_prey_warning = src.no_latejoin_prey_warning
+	P.no_latejoin_vore_warning_time = src.no_latejoin_vore_warning_time
+	P.no_latejoin_prey_warning_time = src.no_latejoin_prey_warning_time
+	P.no_latejoin_vore_warning_persists = src.no_latejoin_vore_warning_persists
+	P.no_latejoin_prey_warning_persists = src.no_latejoin_prey_warning_persists
 	//CHOMP Stuff End
 
 	var/list/serialized = list()
@@ -323,6 +327,10 @@
 	vore_sprite_multiply = P.vore_sprite_multiply
 	no_latejoin_vore_warning = P.no_latejoin_vore_warning
 	no_latejoin_prey_warning = P.no_latejoin_prey_warning
+	no_latejoin_vore_warning_time = P.no_latejoin_vore_warning_time
+	no_latejoin_prey_warning_time = P.no_latejoin_prey_warning_time
+	no_latejoin_vore_warning_persists = P.no_latejoin_vore_warning_persists
+	no_latejoin_prey_warning_persists = P.no_latejoin_prey_warning_persists
 
 	if(bellies)
 		if(isliving(src))

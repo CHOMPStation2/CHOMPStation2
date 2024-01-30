@@ -704,7 +704,8 @@ var/global/datum/controller/occupations/job_master
 
 				var/confirm
 				if(pred.no_latejoin_vore_warning)
-					confirm = tgui_alert(pred, "[C.prefs.real_name] is attempting to spawn into your [vore_spawn_gut]. Let them?", "Confirm", list("No", "Yes"), 10 SECONDS)
+					if(pred.no_latejoin_vore_warning_time > 0)
+						confirm = tgui_alert(pred, "[C.prefs.real_name] is attempting to spawn into your [vore_spawn_gut]. Let them?", "Confirm", list("No", "Yes"), pred.no_latejoin_vore_warning_time SECONDS)
 					if(!confirm)
 						confirm = "Yes"
 				else
@@ -771,7 +772,8 @@ var/global/datum/controller/occupations/job_master
 
 				var/confirm
 				if(prey.no_latejoin_prey_warning)
-					confirm = tgui_alert(prey, "[C.prefs.real_name] is attempting to televore you into their [vore_spawn_gut]. Let them?", "Confirm", list("No", "Yes"), 10 SECONDS)
+					if(prey.no_latejoin_prey_warning_time > 0)
+						confirm = tgui_alert(prey, "[C.prefs.real_name] is attempting to televore you into their [vore_spawn_gut]. Let them?", "Confirm", list("No", "Yes"), prey.no_latejoin_prey_warning_time SECONDS)
 					if(!confirm)
 						confirm = "Yes"
 				else

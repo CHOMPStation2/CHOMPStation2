@@ -515,6 +515,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		"latejoin_prey" = host.latejoin_prey,
 		"no_spawnpred_warning" = host.no_latejoin_vore_warning,
 		"no_spawnprey_warning" = host.no_latejoin_prey_warning,
+		"no_spawnpred_warning_time" = host.no_latejoin_vore_warning_time,
+		"no_spawnprey_warning_time" = host.no_latejoin_prey_warning_time,
+		"no_spawnpred_warning_save" = host.no_latejoin_vore_warning_persists,
+		"no_spawnprey_warning_save" = host.no_latejoin_prey_warning_persists,
 		//CHOMPedit End
 		"allow_spontaneous_tf" = host.allow_spontaneous_tf,
 		"step_mechanics_active" = host.step_mechanics_pref,
@@ -2012,11 +2016,41 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.no_latejoin_vore_warning = !host.no_latejoin_vore_warning
 			if(host.client.prefs_vr)
 				host.client.prefs_vr.no_latejoin_vore_warning = host.no_latejoin_vore_warning
+			if(host.no_latejoin_vore_warning_persists)
+				unsaved_changes = TRUE
 			return TRUE
 		if("toggle_no_latejoin_prey_warning")
 			host.no_latejoin_prey_warning = !host.no_latejoin_prey_warning
 			if(host.client.prefs_vr)
 				host.client.prefs_vr.no_latejoin_prey_warning = host.no_latejoin_prey_warning
+			if(host.no_latejoin_prey_warning_persists)
+				unsaved_changes = TRUE
+			return TRUE
+		if("adjust_no_latejoin_vore_warning_time")
+			host.no_latejoin_vore_warning_time = text2num(params["new_pred_time"])
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.no_latejoin_vore_warning_time = host.no_latejoin_vore_warning_time
+			if(host.no_latejoin_vore_warning_persists)
+				unsaved_changes = TRUE
+			return TRUE
+		if("adjust_no_latejoin_prey_warning_time")
+			host.no_latejoin_prey_warning_time = text2num(params["new_prey_time"])
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.no_latejoin_prey_warning_time = host.no_latejoin_prey_warning_time
+			if(host.no_latejoin_prey_warning_persists)
+				unsaved_changes = TRUE
+			return TRUE
+		if("toggle_no_latejoin_vore_warning_persists")
+			host.no_latejoin_vore_warning_persists = !host.no_latejoin_vore_warning_persists
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.no_latejoin_vore_warning_persists = host.no_latejoin_vore_warning_persists
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_no_latejoin_prey_warning_persists")
+			host.no_latejoin_prey_warning_persists = !host.no_latejoin_prey_warning_persists
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.no_latejoin_prey_warning_persists = host.no_latejoin_prey_warning_persists
+			unsaved_changes = TRUE
 			return TRUE
 		//CHOMPEdit end
 

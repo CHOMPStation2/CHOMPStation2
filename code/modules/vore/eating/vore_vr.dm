@@ -80,8 +80,12 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/strip_pref = FALSE
 	var/vore_sprite_multiply = list("stomach" = FALSE, "taur belly" = FALSE)
 	var/vore_sprite_color = list("stomach" = "#000", "taur belly" = "#000")
-	var/no_latejoin_vore_warning = FALSE // Do not save!
-	var/no_latejoin_prey_warning = FALSE // Do not save!
+	var/no_latejoin_vore_warning = FALSE // Only load, when... no_latejoin_vore_warning_persists
+	var/no_latejoin_prey_warning = FALSE // Only load, when... no_latejoin_vore_warning_persists
+	var/no_latejoin_vore_warning_time = 15 // Only load, when... no_latejoin_vore_warning_persists
+	var/no_latejoin_prey_warning_time = 15 // Only load, when... no_latejoin_vore_warning_persists
+	var/no_latejoin_vore_warning_persists = FALSE
+	var/no_latejoin_prey_warning_persists = FALSE
 	//CHOMP stuff end
 
 	var/list/belly_prefs = list()
@@ -225,6 +229,15 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	vore_sprite_color = json_from_file["vore_sprite_color"]
 	vore_sprite_multiply = json_from_file["vore_sprite_multiply"]
 	strip_pref = json_from_file["strip_mechanics_pref"]
+
+	no_latejoin_vore_warning_persists = json_from_file["no_latejoin_vore_warning_persists"]
+	if(no_latejoin_vore_warning_persists)
+		no_latejoin_vore_warning = json_from_file["no_latejoin_vore_warning"]
+		no_latejoin_vore_warning_time = json_from_file["no_latejoin_vore_warning_time"]
+	no_latejoin_prey_warning_persists = json_from_file["no_latejoin_prey_warning_persists"]
+	if(no_latejoin_prey_warning_persists)
+		no_latejoin_prey_warning = json_from_file["no_latejoin_prey_warning"]
+		no_latejoin_prey_warning_time = json_from_file["no_latejoin_prey_warning_time"]
 	//CHOMP stuff End
 
 
@@ -333,6 +346,18 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		vore_sprite_multiply = list("stomach" = FALSE, "taur belly" = FALSE)
 	if(isnull(strip_pref))
 		strip_pref = TRUE
+	if(isnull(no_latejoin_vore_warning))
+		no_latejoin_vore_warning = FALSE
+	if(isnull(no_latejoin_prey_warning))
+		no_latejoin_prey_warning = FALSE
+	if(isnull(no_latejoin_vore_warning_time))
+		no_latejoin_vore_warning_time = 30
+	if(isnull(no_latejoin_prey_warning_time))
+		no_latejoin_prey_warning_time = 30
+	if(isnull(no_latejoin_vore_warning_persists))
+		no_latejoin_vore_warning_persists = FALSE
+	if(isnull(no_latejoin_prey_warning_persists))
+		no_latejoin_prey_warning_persists = FALSE
 	//CHOMP stuff End
 
 	return TRUE
@@ -383,6 +408,12 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"eating_privacy_global"		= eating_privacy_global,
 			"vore_sprite_color"			= vore_sprite_color, //CHOMPEdit
 			"vore_sprite_multiply"		= vore_sprite_multiply, //CHOMPEdit
+			"no_latejoin_vore_warning"		= no_latejoin_vore_warning, //CHOMPEdit
+			"no_latejoin_prey_warning"		= no_latejoin_prey_warning, //CHOMPEdit
+			"no_latejoin_vore_warning_time"		= no_latejoin_vore_warning_time, //CHOMPEdit
+			"no_latejoin_prey_warning_time"		= no_latejoin_prey_warning_time, //CHOMPEdit
+			"no_latejoin_vore_warning_persists"		= no_latejoin_vore_warning_persists, //CHOMPEdit
+			"no_latejoin_prey_warning_persists"		= no_latejoin_prey_warning_persists, //CHOMPEdit
 		)
 
 	//List to JSON

@@ -4,6 +4,7 @@ import { useBackend, useLocalState } from '../backend';
 import { Box, Button, Flex, Collapsible, Icon, LabeledList, NoticeBox, Section, Tabs, Divider, Stack } from '../components';
 import { Window } from '../layouts';
 import { classes } from 'common/react';
+import { NumberInput } from '../../tgui/components';
 
 const stats = [null, 'average', 'bad'];
 
@@ -2549,6 +2550,10 @@ const VoreUserPreferences = (props, context) => {
     liq_apply,
     no_spawnpred_warning,
     no_spawnprey_warning,
+    no_spawnpred_warning_time,
+    no_spawnprey_warning_time,
+    no_spawnpred_warning_save,
+    no_spawnprey_warning_save,
     nutrition_message_visible,
     weight_message_visible,
     selective_active,
@@ -3025,14 +3030,22 @@ const VoreUserPreferences = (props, context) => {
       action: 'toggle_no_latejoin_vore_warning',
       test: no_spawnpred_warning,
       tooltip: {
-        main: 'This button is to temporarily disable the vore spawnpoint confirmations (no round persistence).',
+        main:
+          'This button is to disable the vore spawnpoint confirmations ' +
+          (no_spawnpred_warning_save
+            ? '(round persistent).'
+            : '(no round persistence).'),
         enable:
-          'Click here to auto accept spawnpoint confirmations after 10 seconds.',
+          'Click here to auto accept spawnpoint confirmations after ' +
+          String(no_spawnpred_warning_time) +
+          ' seconds.',
         disable:
-          'Click here to no longer auto accept spawnpoint confirmations.',
+          'Click here to no longer auto accept spawnpoint confirmations after ' +
+          String(no_spawnpred_warning_time) +
+          ' seconds.',
       },
       back_color: {
-        enabled: '#8B8000',
+        enabled: no_spawnpred_warning_save ? 'green' : '#8B8000',
         disabled: '',
       },
       content: {
@@ -3044,14 +3057,22 @@ const VoreUserPreferences = (props, context) => {
       action: 'toggle_no_latejoin_prey_warning',
       test: no_spawnprey_warning,
       tooltip: {
-        main: 'This button is to temporarily disable the pred spawning on you confirmations (no round persistence).',
+        main:
+          'This button is to disable the pred spawning on you confirmations ' +
+          (no_spawnprey_warning_save
+            ? '(round persistent).'
+            : '(no round persistence).'),
         enable:
-          'Click here to auto accept pred spawn confirmations after 10 seconds.',
+          'Click here to auto accept pred spawn confirmations after ' +
+          String(no_spawnprey_warning_time) +
+          ' seconds.',
         disable:
-          'Click here to no longer auto accept pred spawn confirmations.',
+          'Click here to no longer auto accept pred spawn confirmations after ' +
+          String(no_spawnprey_warning_time) +
+          ' seconds.',
       },
       back_color: {
-        enabled: '#8B8000',
+        enabled: no_spawnprey_warning_save ? 'green' : '#8B8000',
         disabled: '',
       },
       content: {
@@ -3301,24 +3322,85 @@ const VoreUserPreferences = (props, context) => {
           </Box>
         }>
         <Flex spacing={1} wrap="wrap" justify="center">
-          {' '}
           {latejoin_vore ? (
-            <Flex.Item basis="33">
-              <VoreUserPreferenceItem
-                spec={preferences.no_spawnpred_warning}
-                tooltipPosition="top"
-              />
-            </Flex.Item>
+            <>
+              <Flex.Item basis="33%">
+                <VoreUserPreferenceItem
+                  spec={preferences.no_spawnpred_warning}
+                  tooltipPosition="top"
+                />
+              </Flex.Item>
+              <Flex.Item basis="12%">
+                <NumberInput
+                  fluid
+                  value={no_spawnpred_warning_time}
+                  minValue={0}
+                  maxValue={30}
+                  unit="s"
+                  step={5}
+                  stepPixelSize={20}
+                  onChange={(e, value) =>
+                    act('adjust_no_latejoin_vore_warning_time', {
+                      new_pred_time: value,
+                    })
+                  }>
+                  T
+                </NumberInput>
+              </Flex.Item>
+              <Flex.Item basis="5%">
+                <Button
+                  fluid
+                  content={'P'}
+                  backgroundColor={no_spawnpred_warning_save ? 'green' : ''}
+                  tooltip="Toggles vore spawnpoint auto accept persistency."
+                  tooltipPosition="top"
+                  onClick={() =>
+                    act('toggle_no_latejoin_vore_warning_persists')
+                  }
+                />
+              </Flex.Item>
+            </>
           ) : (
             ''
           )}
           {latejoin_prey ? (
-            <Flex.Item basis="33%">
-              <VoreUserPreferenceItem
-                spec={preferences.no_spawnprey_warning}
-                tooltipPosition="top"
-              />
-            </Flex.Item>
+            <>
+              <Flex.Item basis="33%">
+                <VoreUserPreferenceItem
+                  spec={preferences.no_spawnprey_warning}
+                  tooltipPosition="top"
+                />
+              </Flex.Item>
+              <Flex.Item basis="12%">
+                <NumberInput
+                  fluid
+                  value={no_spawnprey_warning_time}
+                  minValue={0}
+                  maxValue={30}
+                  unit="s"
+                  step={5}
+                  stepPixelSize={20}
+                  onChange={(e, value) =>
+                    act('adjust_no_latejoin_prey_warning_time', {
+                      new_prey_time: value,
+                    })
+                  }>
+                  T
+                </NumberInput>
+              </Flex.Item>
+              <Flex.Item basis="5%">
+                <Button
+                  fluid
+                  content={'P'}
+                  backgroundColor={no_spawnprey_warning_save ? 'green' : ''}
+                  tooltip="Toggles preyspawn auto accept persistency."
+                  tooltipPosition="top"
+                  onClick={() =>
+                    act('toggle_no_latejoin_prey_warning_persists')
+                  }
+                />
+              </Flex.Item>
+            </>
           ) : (
             ''
           )}

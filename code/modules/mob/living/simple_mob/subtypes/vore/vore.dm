@@ -60,6 +60,10 @@
 	vore_sprite_multiply = client.prefs_vr.vore_sprite_multiply
 	no_latejoin_vore_warning = client.prefs_vr.no_latejoin_vore_warning
 	no_latejoin_prey_warning = client.prefs_vr.no_latejoin_prey_warning
+	no_latejoin_vore_warning_time = client.prefs_vr.no_latejoin_vore_warning_time
+	no_latejoin_prey_warning_time = client.prefs_vr.no_latejoin_prey_warning_time
+	no_latejoin_vore_warning_persists = client.prefs_vr.no_latejoin_vore_warning_persists
+	no_latejoin_prey_warning_persists = client.prefs_vr.no_latejoin_prey_warning_persists
 	//CHOMP Stuff End
 
 /mob/living/simple_mob/proc/set_name()

@@ -296,6 +296,10 @@
 	new_mob.noisy_full = noisy_full
 	new_mob.no_latejoin_vore_warning = no_latejoin_vore_warning
 	new_mob.no_latejoin_prey_warning = no_latejoin_prey_warning
+	new_mob.no_latejoin_vore_warning_time = no_latejoin_vore_warning_time
+	new_mob.no_latejoin_prey_warning_time = no_latejoin_prey_warning_time
+	new_mob.no_latejoin_vore_warning_persists = no_latejoin_vore_warning_persists
+	new_mob.no_latejoin_prey_warning_persists = no_latejoin_prey_warning_persists
 	//CHOMP stuff End
 
 /////SUBTYPES/////

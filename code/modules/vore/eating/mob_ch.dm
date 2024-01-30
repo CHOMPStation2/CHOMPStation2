@@ -7,8 +7,12 @@
 	var/noisy_full = FALSE					//Enables belching when a mob has overeaten
 	var/phase_vore = TRUE					//Enabled by default since you have to enable drop pred/prey to do this anyway
 	var/strip_pref = TRUE					//Enables the ability for worn items to be stripped
-	var/no_latejoin_vore_warning = FALSE	//Temporary auto accepts pred spwan notifications (roundbased)
-	var/no_latejoin_prey_warning = FALSE	//Temporary auto accepts prey spawn notifications (roundbased)
+	var/no_latejoin_vore_warning = FALSE	//Auto accepts pred spwan notifications (roundbased / saveable)
+	var/no_latejoin_prey_warning = FALSE	//Auto accepts prey spawn notifications (roundbased / saveable)
+	var/no_latejoin_vore_warning_time = 15	//Time until accepting prey
+	var/no_latejoin_prey_warning_time = 15	//Time until accepting pred
+	var/no_latejoin_vore_warning_persists = FALSE	//Do we save it?
+	var/no_latejoin_prey_warning_persists = FALSE	//Do we save it?
 
 	// CHOMP vore icons refactor (Now on mob)
 	var/vore_capacity = 0				// Maximum capacity, -1 for unlimited
