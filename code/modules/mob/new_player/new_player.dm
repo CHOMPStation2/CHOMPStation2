@@ -68,7 +68,7 @@
 			var/isadmin = 0
 			if(src.client && src.client.holder)
 				isadmin = 1
-			var/DBQuery/query = SSdbcore.NewQuery("SELECT id FROM erro_poll_question WHERE [(isadmin ? "" : "adminonly = false AND")] Now() BETWEEN starttime AND endtime AND id NOT IN (SELECT pollid FROM erro_poll_vote WHERE ckey = :t_ckey) AND id NOT IN (SELECT pollid FROM erro_poll_textreply WHERE ckey = :t_ckey)",list("t_ckey" = ckey)) //CHOMPEdit TGSQL
+			var/datum/db_query/query = SSdbcore.NewQuery("SELECT id FROM erro_poll_question WHERE [(isadmin ? "" : "adminonly = false AND")] Now() BETWEEN starttime AND endtime AND id NOT IN (SELECT pollid FROM erro_poll_vote WHERE ckey = :t_ckey) AND id NOT IN (SELECT pollid FROM erro_poll_textreply WHERE ckey = :t_ckey)",list("t_ckey" = ckey)) //CHOMPEdit TGSQL
 			query.Execute()
 			var/newpoll = 0
 			while(query.NextRow())
@@ -267,7 +267,7 @@
 		var/voted = 0
 
 		//First check if the person has not voted yet.
-		var/DBQuery/query = SSdbcore.NewQuery("SELECT * FROM erro_privacy WHERE ckey=:t_ckey", list("t_ckey" = src.ckey)) //CHOMPEdit TGSQL
+		var/datum/db_query/query = SSdbcore.NewQuery("SELECT * FROM erro_privacy WHERE ckey=:t_ckey", list("t_ckey" = src.ckey)) //CHOMPEdit TGSQL
 		query.Execute()
 		while(query.NextRow())
 			voted = 1
@@ -294,7 +294,7 @@
 		if(!voted)
 			var/list/sqlargs = list("t_ckey" = src.ckey, "t_option" = "[option]") //CHOMPEdit TGSQL
 			var/sql = "INSERT INTO erro_privacy VALUES (null, Now(), :t_ckey, :t_option)" //CHOMPEdit TGSQL
-			var/DBQuery/query_insert = SSdbcore.NewQuery(sql,sqlargs) //CHOMPEdit TGSQL
+			var/datum/db_query/query_insert = SSdbcore.NewQuery(sql,sqlargs) //CHOMPEdit TGSQL
 			query_insert.Execute()
 			to_chat(usr, "<b>Thank you for your vote!</b>")
 			qdel(query_insert)
