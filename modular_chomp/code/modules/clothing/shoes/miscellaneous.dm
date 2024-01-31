@@ -1,7 +1,6 @@
 /obj/item/clothing/shoes/mech_shoes
 	name = "mech shoes"
 	desc = "Thud thud."
-	icon_state = "jackboots"
 	armor = list(melee = 30, bullet = 10, laser = 10, energy = 15, bomb = 20, bio = 0, rad = 0) // Same as loadout jackboots.
 	siemens_coefficient = 0.7 // Same as loadout jackboots.
 	can_hold_knife = 1
