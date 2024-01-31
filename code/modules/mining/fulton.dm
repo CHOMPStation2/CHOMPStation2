@@ -8,7 +8,7 @@ var/global/list/total_extraction_beacons = list()
 	w_class = ITEMSIZE_NORMAL
 	var/obj/structure/extraction_point/beacon
 	var/list/beacon_networks = list("station")
-	var/uses_left = 5 // CHOMPedit: More uses.
+	var/uses_left = 3
 	var/can_use_indoors = TRUE // CHOMPedit: Can be used anywhere.
 	var/safe_for_living_creatures = 1
 
@@ -140,7 +140,7 @@ var/global/list/total_extraction_beacons = list()
 
 /obj/item/fulton_core
 	name = "bluespace extraction beacon signaller"
-	desc = "Emits a signal which bluespace Fulton recovery devices can lock onto. Activate in hand to create a beacon."
+	desc = "Emits a signal which bluespace Fulton recovery devices can lock onto. Activate in hand to create a beacon. Cannot be moved after placing!"
 	icon = 'icons/obj/fulton.dmi'
 	icon_state = "extraction_pointoff"
 

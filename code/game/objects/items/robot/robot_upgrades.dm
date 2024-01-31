@@ -191,6 +191,10 @@
 	R.add_language(LANGUAGE_MOUSE, 			1)
 	R.add_language(LANGUAGE_ANIMAL, 		1)
 	R.add_language(LANGUAGE_TEPPI, 			1)
+	//CHOMPEdit Start
+	R.add_language(LANGUAGE_SLAVIC, 		1)
+	R.add_language(LANGUAGE_MARISH, 		1)
+	//CHOMPEdit End
 	/* Admin Stuff
 	R.add_language(LANGUAGE_CULT, 			1)
 	R.add_language(LANGUAGE_SWARMBOT, 		1)

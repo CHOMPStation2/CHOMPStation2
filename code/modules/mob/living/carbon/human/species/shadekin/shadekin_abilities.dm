@@ -184,7 +184,7 @@
 				var/mob/living/target = pick(potentials)
 				if(istype(target) && target.devourable && target.can_be_drop_prey && vore_selected)
 					target.forceMove(vore_selected)
-					to_chat(target,"<span class='warning'>\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
+					to_chat(target,"<span class='vwarning'>\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
 
 		ability_flags &= ~AB_PHASE_SHIFTING
 
@@ -199,12 +199,12 @@
 		//CHOMPEdit end
 
 		//CHOMPEdit start - Add gentle phasing
-		if(SK.phase_gentle) // gentle case: No light destruction. Flicker in 4 tile radius for 3s. Weaken for 3sec after
+		if(SK.phase_gentle) // gentle case: No light destruction. Flicker in 4 tile radius once.
 			for(var/obj/machinery/light/L in machines)
 				if(L.z != z || get_dist(src,L) > 4)
 					continue
-				L.flicker(3)
-			src.Stun(3)
+				L.flicker(1)
+			src.Stun(1)
 		else
 			//CHOMPEdit end
 			for(var/obj/machinery/light/L in machines)

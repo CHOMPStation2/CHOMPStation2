@@ -509,7 +509,7 @@
 /mob/living/simple_mob/humanoid/cultist/elite/bullet_act(var/obj/item/projectile/Proj)
 	if(!Proj)	return
 	if(prob(50))
-		visible_message("<font color='red'><B>[Proj] disappears into the mirror world as it hits the shield.</B></font>")
+		visible_message(span_red("<B>[Proj] disappears into the mirror world as it hits the shield.</B>"))
 		if(Proj.firer)
 			ai_holder.react_to_attack(Proj.firer)
 		return

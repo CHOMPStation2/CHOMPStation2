@@ -6,6 +6,7 @@
 /mob/living/silicon/robot/Check_Shoegrip()
 	return module && module.no_slip
 
+/* CHOMPedit: Nuking slipping.
 /mob/living/silicon/robot/Process_Spaceslipping(var/prob_slip)
 	var/obj/item/weapon/tank/jetpack/thrust = get_jetpack()
 	if(thrust?.can_thrust(0.01))
@@ -24,6 +25,7 @@
 		return 1
 
 	return 0
+*/// CHOMPedit end.
 
  //No longer needed, but I'll leave it here incase we plan to re-use it.
 /mob/living/silicon/robot/movement_delay()
