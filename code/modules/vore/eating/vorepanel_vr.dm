@@ -1970,6 +1970,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			if(!results || !results.len)
 				results = list("You were unable to examine that. Tell a developer!")
 			to_chat(user, jointext(results, "<br>"))
+			if(isliving(target))
+				var/mob/living/ourtarget = target
+				ourtarget.chat_healthbar(user)
 			return TRUE
 
 		if("Use Hand")
@@ -2087,6 +2090,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			if(!results || !results.len)
 				results = list("You were unable to examine that. Tell a developer!")
 			to_chat(user, jointext(results, "<br>"))
+			if(isliving(target))
+				var/mob/living/ourtarget = target
+				ourtarget.chat_healthbar(user)
 			return TRUE
 
 		if("Eject")
