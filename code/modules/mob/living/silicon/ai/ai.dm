@@ -214,6 +214,11 @@ var/list/ai_verbs_default = list(
 			ooc_notes = meta_info
 			ooc_notes_likes = client.prefs.metadata_likes
 			ooc_notes_dislikes = client.prefs.metadata_dislikes
+			//CHOMPEdit Start
+			ooc_notes_favs = client.prefs.metadata_favs
+			ooc_notes_maybes = client.prefs.metadata_maybes
+			ooc_notes_style = client.prefs.matadata_ooc_style
+			//CHOMPEdit End
 
 	if (malf && !(mind in malf.current_antagonists))
 		show_laws()
