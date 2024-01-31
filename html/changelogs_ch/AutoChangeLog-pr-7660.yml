@@ -1,0 +1,4 @@
+author: "Aroliacue"
+delete-after: True
+changes:
+  - bugfix: "Corrected a misplaced chompedit that removed code necessary for cyborgs to navigate in space."
