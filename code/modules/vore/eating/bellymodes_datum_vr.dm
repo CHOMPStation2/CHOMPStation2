@@ -377,8 +377,6 @@ GLOBAL_LIST_INIT(digest_modes, list())
 					else
 						tempmode = DM_DRAIN			// Otherwise drain.
 	return tempmode
-<<<<<<< HEAD
-=======
 
 /datum/digest_mode/proc/consider_healthbar()
 	return
@@ -490,4 +488,3 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	if(lets_announce)
 		L.chat_healthbar(reciever)
 		L.chat_healthbar(L)
->>>>>>> f1403bad03... Merge pull request #15713 from Kashargul/followUp
