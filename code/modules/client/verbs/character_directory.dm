@@ -94,8 +94,16 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			name = strangername
 			species = "[H.custom_species ? H.custom_species : H.species.name]"
 			ooc_notes = H.ooc_notes
+			//CHOMPEdit Start
+			if(H.ooc_notes_favs)
+				ooc_notes += "\n\nFAVS\n\n[H.ooc_notes_favs]"
+			//CHOMPEdit End
 			if(H.ooc_notes_likes)
 				ooc_notes += "\n\nLIKES\n\n[H.ooc_notes_likes]"
+			//CHOMPEdit Start
+			if(H.ooc_notes_maybes)
+				ooc_notes += "\n\nMAYBES\n\n[H.ooc_notes_maybes]"
+			//CHOMPEdit End
 			if(H.ooc_notes_dislikes)
 				ooc_notes += "\n\nDISLIKES\n\n[H.ooc_notes_dislikes]"
 			if(LAZYLEN(H.flavor_texts)) //ChompEDIT
@@ -106,8 +114,16 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			name = A.name
 			species = "Artificial Intelligence"
 			ooc_notes = A.ooc_notes
+			//CHOMPEdit Start
+			if(A.ooc_notes_favs)
+				ooc_notes += "\n\nFAVS\n\n[A.ooc_notes_favs]"
+			//CHOMPEdit End
 			if(A.ooc_notes_likes)
 				ooc_notes += "\n\nLIKES\n\n[A.ooc_notes_likes]"
+			//CHOMPEdit Start
+			if(A.ooc_notes_maybes)
+				ooc_notes += "\n\nMAYBES\n\n[A.ooc_notes_maybes]"
+			//CHOMPEdit End
 			if(A.ooc_notes_dislikes)
 				ooc_notes += "\n\nDISLIKES\n\n[A.ooc_notes_dislikes]"
 
@@ -120,8 +136,16 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			name = R.name
 			species = "[R.modtype] [R.braintype]"
 			ooc_notes = R.ooc_notes
+			//CHOMPEdit Start
+			if(R.ooc_notes_favs)
+				ooc_notes += "\n\nFAVS\n\n[R.ooc_notes_favs]"
+			//CHOMPEdit End
 			if(R.ooc_notes_likes)
 				ooc_notes += "\n\nLIKES\n\n[R.ooc_notes_likes]"
+			//CHOMPEdit Start
+			if(R.ooc_notes_maybes)
+				ooc_notes += "\n\nMAYBES\n\n[R.ooc_notes_maybes]"
+			//CHOMPEdit End
 			if(R.ooc_notes_dislikes)
 				ooc_notes += "\n\nDISLIKES\n\n[R.ooc_notes_dislikes]"
 

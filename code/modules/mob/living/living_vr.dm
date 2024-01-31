@@ -38,6 +38,11 @@
 		ooc_notes_window(usr)
 		set_metainfo_likes(FALSE)
 		set_metainfo_dislikes(FALSE)
+		//CHOMPEdit Start
+		set_metainfo_favs(FALSE)
+		set_metainfo_maybes(FALSE)
+		set_metainfo_ooc_style(FALSE)
+		//CHOMPEdit End
 
 /mob/living/proc/set_metainfo_panel()
 	if(usr != src)
@@ -87,11 +92,17 @@
 	if(!ooc_notes)
 		return
 	var/msg = ooc_notes
+	//CHOMPEdit Start
+	if(ooc_notes_favs)
+		msg += "<br><br><b>FAVS</b><br>[ooc_notes_favs]"
 	if(ooc_notes_likes)
-		msg += "<br><br><b>LIKES</b><br><br>[ooc_notes_likes]"
+		msg += "<br><br><b>LIKES</b><br>[ooc_notes_likes]"
+	if(ooc_notes_maybes)
+		msg += "<br><br><b>MAYBES</b><br>[ooc_notes_maybes]"
 	if(ooc_notes_dislikes)
-		msg += "<br><br><b>DISLIKES</b><br><br>[ooc_notes_dislikes]"
-	to_chat(usr, "<span class='chatexport'>[src]'s Metainfo:<br>[msg]</span>")
+		msg += "<br><br><b>DISLIKES</b><br>[ooc_notes_dislikes]"
+	to_chat(usr, "<span class='chatexport'><b>[src]'s Metainfo:</b><br>[msg]</span>")
+	//CHOMPEdit End
 
 /mob/living/verb/set_custom_link()
 	set name = "Set Custom Link"

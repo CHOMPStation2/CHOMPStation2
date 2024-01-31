@@ -383,6 +383,11 @@ var/global/list/disallowed_protean_accessories = list(
 	blob.ooc_notes = ooc_notes
 	blob.ooc_notes_likes = ooc_notes_likes
 	blob.ooc_notes_dislikes = ooc_notes_dislikes
+	//CHOMPEdit Start
+	blob.ooc_notes_favs = ooc_notes_favs
+	blob.ooc_notes_maybes = ooc_notes_maybes
+	blob.ooc_notes_style = ooc_notes_style
+	//CHOMPEdit End
 	temporary_form = blob
 
 	//Mail them to nullspace
@@ -467,6 +472,11 @@ var/global/list/disallowed_protean_accessories = list(
 	ooc_notes = blob.ooc_notes // Lets give the protean any updated notes from blob form.
 	ooc_notes_likes = blob.ooc_notes_likes
 	ooc_notes_dislikes = blob.ooc_notes_dislikes
+	//CHOMPEdit Start
+	ooc_notes_favs = blob.ooc_notes_favs
+	ooc_notes_maybes = blob.ooc_notes_maybes
+	ooc_notes_style = blob.ooc_notes_style
+	//CHOMPEdit End
 	temporary_form = null
 
 	//Transfer vore organs
