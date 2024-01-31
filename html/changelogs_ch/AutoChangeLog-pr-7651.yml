@@ -1,0 +1,6 @@
+author: "FluffMedic"
+delete-after: True
+changes:
+  - rscadd: "A New gateway"
+  - rscadd: "Strange random bits to xenobio"
+  - bugfix: "teshari rigsuits sprites work for the precursor, and aegis rigsuits"
