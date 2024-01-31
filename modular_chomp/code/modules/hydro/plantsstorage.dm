@@ -116,5 +116,4 @@
 		/obj/item/seeds/megashroom = 3,
 		/obj/item/seeds/lustflower = 2,
 		/obj/item/seeds/pitcherseed = 3,
-		/obj/item/seeds/cinnamon = 3
-		) //CHOMPEdit - Seed list altered to include extra seeds available in seed_storage_vr.dm. Added cinnamon.
+		/obj/item/seeds/cinamon = 3
