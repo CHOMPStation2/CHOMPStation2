@@ -133,9 +133,8 @@ h1.alert, h2.alert		{color: #000000;}
 .say_quote				{font-family: Georgia, Verdana, sans-serif;}
 .say_quote_italics		{font-style: italic; font-family: Georgia, Verdana, sans-serif;}
 .terminus				{font-family: "Times New Roman", Times, serif, sans-serif}
-.interface				{color: #330033;}
-.psionic                {color: #993399;}    /*YWedit*/
-.spacer					{color: #9c660b;} /* VOREStation Add */
+.psionic                {color: #993399;}
+.spacer					{color: #9c660b;}
 .blob					{color: #ff950d; font-weight: bold; font-style: italic;}
 .teppi					{color: #816540; word-spacing:4pt; font-family: "Segoe Script Bold","Segoe Script",sans-serif,Verdana;}
 .shadekin				{color: #be3cc5; font-size: 150%; font-weight: bold; font-family: "Gabriola", cursive, sans-serif;}
