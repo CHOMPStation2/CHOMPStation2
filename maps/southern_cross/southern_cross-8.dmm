@@ -7018,6 +7018,12 @@
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/effect/map_helper/airlock/button/ext_button,
+/obj/machinery/access_button{
+	dir = 8;
+	name = "exterior access button";
+	pixel_x = -7;
+	pixel_y = -26
+	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/shuttle/ninja)
 "gjv" = (
@@ -8299,21 +8305,6 @@
 /obj/effect/floor_decal/spline/fancy,
 /turf/simulated/floor/grass2,
 /area/shadekin)
-"hlP" = (
-/obj/machinery/access_button{
-	dir = 8;
-	name = "exterior access button";
-	pixel_x = 25;
-	pixel_y = 6
-	},
-/obj/machinery/door/airlock{
-	icon = 'icons/obj/doors/Dooruranium.dmi'
-	},
-/turf/unsimulated/floor{
-	icon_state = "plating";
-	name = "plating"
-	},
-/area/ninja_dojo/dojo)
 "hmc" = (
 /obj/structure/bed/chair,
 /turf/simulated/shuttle/floor{
@@ -23655,9 +23646,6 @@
 	icon_state = "steel"
 	},
 /area/centcom/bar)
-"vRr" = (
-/turf/simulated/floor/outdoors/grass/heavy,
-/area/shadekin)
 "vRu" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
@@ -31042,7 +31030,7 @@ auX
 aaa
 aaa
 gbB
-hlP
+gbB
 aaa
 auX
 auX
@@ -48596,20 +48584,20 @@ rUx
 bAY
 kyg
 oTO
-vRr
-vRr
-vRr
+vXr
+vXr
+vXr
 uOk
-vRr
-vRr
-vRr
+vXr
+vXr
+vXr
 uXG
 slw
-vRr
+vXr
 slw
-vRr
+vXr
 slw
-vRr
+vXr
 oTO
 mas
 bAY
@@ -48860,14 +48848,14 @@ jmT
 uOk
 hGu
 uOk
-vRr
-vRr
+vXr
+vXr
 slw
 ehg
 rTt
 hUC
 ivs
-vRr
+vXr
 oTO
 mas
 bAY
@@ -49112,7 +49100,7 @@ uOw
 bAY
 kyg
 ivs
-vRr
+vXr
 uOk
 omo
 uOk
@@ -49120,11 +49108,11 @@ ivs
 uOk
 hGu
 slw
-vRr
+vXr
 rTt
 hUC
 hVi
-vRr
+vXr
 slw
 ivs
 mas
@@ -49372,18 +49360,18 @@ kyg
 oTO
 hGu
 uOk
-vRr
+vXr
 uOk
 ivs
 uOk
-vRr
-vRr
+vXr
+vXr
 kXp
 hUC
 rTt
 rTt
-vRr
-vRr
+vXr
+vXr
 ivs
 mas
 bAY
@@ -49628,20 +49616,20 @@ pDb
 bAY
 kyg
 oTO
-vRr
+vXr
 uOk
 hGu
 uOk
 jmT
 uOk
-vRr
-vRr
+vXr
+vXr
 hVi
 ivs
 slw
-vRr
+vXr
 slw
-vRr
+vXr
 oTO
 mas
 bAY
@@ -49886,20 +49874,20 @@ bMy
 xls
 kyg
 ivs
-vRr
-vRr
-vRr
+vXr
+vXr
+vXr
 uOk
 slw
 rdD
-vRr
+vXr
 ivs
 ivs
 slw
-vRr
+vXr
 uXG
 slw
-vRr
+vXr
 ivs
 mas
 rSl
@@ -50144,20 +50132,20 @@ sta
 bAY
 kyg
 oTO
-vRr
-vRr
-vRr
+vXr
+vXr
+vXr
 ivs
-vRr
-vRr
-vRr
-vRr
-vRr
-vRr
-vRr
-vRr
-vRr
-vRr
+vXr
+vXr
+vXr
+vXr
+vXr
+vXr
+vXr
+vXr
+vXr
+vXr
 ivs
 mas
 bAY
@@ -50402,20 +50390,20 @@ kiH
 bAY
 kyg
 oTO
-vRr
-vRr
+vXr
+vXr
 sZX
 cus
 ivs
-vRr
+vXr
 nOe
 bbP
-vRr
-vRr
-vRr
-vRr
-vRr
-vRr
+vXr
+vXr
+vXr
+vXr
+vXr
+vXr
 oTO
 gcg
 fKz
@@ -50660,20 +50648,20 @@ bMy
 xls
 kyg
 oTO
-vRr
-vRr
+vXr
+vXr
 ivs
 hEP
 kwM
 ivs
-vRr
+vXr
 uXG
-vRr
-vRr
+vXr
+vXr
 uOk
-vRr
+vXr
 edw
-vRr
+vXr
 oTO
 mas
 rSl
@@ -50918,20 +50906,20 @@ nJz
 bAY
 kyg
 oTO
-vRr
+vXr
 vVd
 hEP
 hEP
 hEP
 hEP
 ivs
-vRr
+vXr
 uOk
 jmT
 uOk
 hGu
 uOk
-vRr
+vXr
 ivs
 mas
 bAY
@@ -51176,7 +51164,7 @@ hah
 bAY
 kyg
 oTO
-vRr
+vXr
 ivs
 rmy
 nId
@@ -51187,9 +51175,9 @@ hGu
 sBo
 ivs
 uOk
-vRr
+vXr
 uOk
-vRr
+vXr
 ivs
 mas
 bAY
@@ -51434,16 +51422,16 @@ uaj
 bAY
 kyg
 ivs
-vRr
+vXr
 aOJ
 hEP
 hEP
 hEP
 ivs
-vRr
+vXr
 nOe
 uOk
-vRr
+vXr
 uOk
 ivs
 uOk
@@ -51692,20 +51680,20 @@ qXP
 bAY
 kyg
 ivs
-vRr
-vRr
+vXr
+vXr
 ivs
 hEP
 ivs
 xJn
-vRr
-vRr
+vXr
+vXr
 fuU
 hGu
 uOk
 jmT
 uOk
-vRr
+vXr
 ivs
 mas
 bAY
@@ -51950,20 +51938,20 @@ pcm
 bAY
 kyg
 oTO
-vRr
+vXr
 ehg
 vXr
 ivs
-vRr
-vRr
-vRr
-vRr
+vXr
+vXr
+vXr
+vXr
 ehg
-vRr
+vXr
 uOk
-vRr
+vXr
 jNr
-vRr
+vXr
 oTO
 mas
 bAY
