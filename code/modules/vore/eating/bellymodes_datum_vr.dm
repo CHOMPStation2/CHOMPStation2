@@ -62,7 +62,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
  		//CHOMPedit end
 
 	// Deal digestion damage (and feed the pred)
-	var/old_health = L.health; //CHOMPEdit - Store old health for the hard crit calculation
+	var/old_health = L.health
 	var/old_brute = L.getBruteLoss()
 	var/old_burn = L.getFireLoss()
 	var/old_oxy = L.getOxyLoss()
@@ -87,6 +87,8 @@ GLOBAL_LIST_INIT(digest_modes, list())
 		damage_gain = damage_gain * 0.5
 	var/offset = (1 + ((L.weight - 137) / 137)) // 130 pounds = .95 140 pounds = 1.02
 	var/difference = B.owner.size_multiplier / L.size_multiplier
+
+	consider_healthbar(L, old_health, B.owner)
 	if(B.health_impacts_size) //CHOMPEdit - Health probably changed so...
 		B.owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 	/*if(isrobot(B.owner)) //CHOMPEdit: Borgos can now use nutrition too
@@ -117,12 +119,17 @@ GLOBAL_LIST_INIT(digest_modes, list())
 /datum/digest_mode/absorb/process_mob(obj/belly/B, mob/living/L)
 	if(!L.absorbable || L.absorbed)
 		return null
+
+	var/old_nutrition = L.nutrition
 	B.steal_nutrition(L)
 	if(L.nutrition < 100)
 		B.absorb_living(L)
 		if(B.reagent_mode_flags & DM_FLAG_REAGENTSABSORB && B.reagents.total_volume < B.reagents.maximum_volume) //CHOMPedit: absorption reagent production
 			B.GenerateBellyReagents_absorbed() //CHOMPedit end: A bonus for pred, I know for a fact prey is usually at zero nutrition when absorption finally happens
+		consider_healthbar(L, old_nutrition, B.owner)
 		return list("to_update" = TRUE)
+	else
+		consider_healthbar(L, old_nutrition, B.owner)
 
 /datum/digest_mode/unabsorb
 	id = DM_UNABSORB
@@ -138,7 +145,9 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	noise_chance = 10
 
 /datum/digest_mode/drain/process_mob(obj/belly/B, mob/living/L)
+	var/old_nutrition = L.nutrition
 	B.steal_nutrition(L)
+	consider_healthbar(L, old_nutrition, B.owner)
 
 /datum/digest_mode/drain/shrink
 	id = DM_SHRINK
