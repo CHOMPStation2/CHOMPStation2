@@ -10,7 +10,7 @@
 
 #define span_comradio(str) ("<span class='comradio'>" + str + "</span>")
 #define span_syndradio(str) ("<span class='syndradio'>" + str + "</span>")
-#define span_centradio(str) ("<span class='centradio'>" + str + "</span>"
+#define span_centradio(str) ("<span class='centradio'>" + str + "</span>")
 #define span_airadio(str) ("<span class='airadio'>" + str + "</span>")
 #define span_entradio(str) ("<span class='entradio'>" + str + "</span>")
 
@@ -18,7 +18,7 @@
 #define span_engradio(str) ("<span class='engradio'>" + str + "</span>")
 #define span_medradio(str) ("<span class='medradio'>" + str + "</span>")
 #define span_sciradio(str) ("<span class='sciradio'>" + str + "</span>")
-#define span_supradio(str) ("<span class='supradio'>" + str + "</span>"
+#define span_supradio(str) ("<span class='supradio'>" + str + "</span>")
 #define span_srvradio(str) ("<span class='srvradio'>" + str + "</span>")
 #define span_expradio(str) ("<span class='expradio'>" + str + "</span>")
 

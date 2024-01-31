@@ -1,0 +1,8 @@
+author: "Missile597"
+delete-after: True
+changes:
+  - rscadd: "Cinnamon seeds added to the seed storages in garden and xenobotany"
+  - rscadd: "Added emergency shutters that were missing on the south part of deck 1"
+  - rscdel: "Removed two shutter doors in the dorms corridor that were cutting off certain areas from a scrubber or a pump when closed due to an alarm"
+  - qol: "Moved a space heater that was blocking a trash pile"
+  - bugfix: "Fixed the airlock on the Ninja shuttle so the airlock helper doesn't panic when loading up the round. Also moved the button so that it doesn't get left behind when the shuttle jumps (not that it gets used)"
