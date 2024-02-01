@@ -32,6 +32,10 @@
 	var_changes = list("emp_dmg_mod" = 1.3)
 	excludes = list(/datum/trait/negative/poorconstruction, /datum/trait/positive/emp_resist, /datum/trait/positive/emp_resist_major)
 
+/datum/trait/negative/faultwires/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	H.add_modifier(/datum/modifier/trait/empweakness)
+
 /datum/trait/negative/poorconstruction
 	name = "Poor Construction"
 	desc = "Due to poor construction, you have an hefty weakness to EMPs."
@@ -40,6 +44,10 @@
 	can_take = SYNTHETICS
 	var_changes = list("emp_dmg_mod" = 1.6)
 	excludes = list(/datum/trait/negative/faultwires, /datum/trait/positive/emp_resist, /datum/trait/positive/emp_resist_major)
+
+/datum/trait/negative/poorconstruction/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	H.add_modifier(/datum/modifier/trait/majorempweakness)
 
 /datum/trait/negative/nodefib
 	name = "Unreviveable"
