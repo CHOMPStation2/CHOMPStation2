@@ -36,6 +36,10 @@
 	var_changes = list("emp_dmg_mod" = 0.7)
 	excludes = list(/datum/trait/negative/faultwires, /datum/trait/negative/poorconstruction, /datum/trait/positive/emp_resist_major)
 
+/datum/trait/positive/emp_resist/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	H.add_modifier(/datum/modifier/trait/empresist)
+
 /datum/trait/positive/emp_resist_major
 	name = "Major EMP Resistance"
 	desc = "You are very resistant to EMPs"
@@ -45,3 +49,7 @@
 	custom_only = FALSE
 	var_changes = list("emp_dmg_mod" = 0.5)
 	excludes = list(/datum/trait/negative/faultwires, /datum/trait/negative/poorconstruction, /datum/trait/positive/emp_resist)
+
+/datum/trait/positive/emp_resist_major/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	H.add_modifier(/datum/modifier/trait/empresistb)
