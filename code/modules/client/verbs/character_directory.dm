@@ -60,8 +60,8 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 		// The approach differs based on the mob the client is controlling
 		var/name = null
 		var/species = null
-		//CHOMPEdit Start
 		var/ooc_notes = null
+		//CHOMPEdit Start
 		var/ooc_notes_favs = null
 		var/ooc_notes_likes = null
 		var/ooc_notes_maybes = null
@@ -79,25 +79,28 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			tag = C.mob.mind.directory_tag || "Unset"
 			erptag = C.mob.mind.directory_erptag || "Unset"
 			character_ad = C.mob.mind.directory_ad
+			//CHOMPEdit Start
 			gendertag = C.mob.mind.directory_gendertag || "Unset"
 			sexualitytag = C.mob.mind.directory_sexualitytag || "Unset"
 			eventtag = vantag_choices_list[C.mob.mind.vantag_preference]
+			//CHOMPEdit End
 		else
 			tag = C.prefs.directory_tag || "Unset"
 			erptag = C.prefs.directory_erptag || "Unset"
 			character_ad = C.prefs.directory_ad
+			//CHOMPEdit Start
 			gendertag = C.prefs.directory_gendertag || "Unset"
 			sexualitytag = C.prefs.directory_sexualitytag || "Unset"
 			eventtag = vantag_choices_list[C.prefs.vantag_preference]
+			//CHOMPEdit End
 
-		//CHOMPEdit Start
 		if(ishuman(C.mob))
 			var/mob/living/carbon/human/H = C.mob
-			var/strangername = H.real_name
+			var/strangername = H.real_name //CHOMPEdit
 			if(data_core && data_core.general)
 				if(!find_general_record("name", H.real_name))
-					if(!find_record("name", H.real_name, data_core.hidden_general))
-						strangername = "unknown"
+					if(!find_record("name", H.real_name, data_core.hidden_general)) //CHOMPEdit
+						strangername = "unknown" //CHOMPEdit
 			name = strangername
 			species = "[H.custom_species ? H.custom_species : H.species.name]"
 			ooc_notes = H.ooc_notes
@@ -182,6 +185,22 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			name = P.name
 			species = "pAI"
 			ooc_notes = P.ooc_notes
+			if(P.ooc_notes_style && (P.ooc_notes_favs || P.ooc_notes_likes || P.ooc_notes_maybes || P.ooc_notes_dislikes))
+				ooc_notes = P.ooc_notes + "\n\n"
+				ooc_notes_favs = P.ooc_notes_favs
+				ooc_notes_likes = P.ooc_notes_likes
+				ooc_notes_maybes = P.ooc_notes_maybes
+				ooc_notes_dislikes = P.ooc_notes_dislikes
+				ooc_notes_style = P.ooc_notes_style
+			else
+				if(P.ooc_notes_favs)
+					ooc_notes += "\n\nFAVOURITES\n\n[P.ooc_notes_favs]"
+				if(P.ooc_notes_likes)
+					ooc_notes += "\n\nLIKES\n\n[P.ooc_notes_likes]"
+				if(P.ooc_notes_maybes)
+					ooc_notes += "\n\nMAYBES\n\n[P.ooc_notes_maybes]"
+				if(P.ooc_notes_dislikes)
+					ooc_notes += "\n\nDISLIKES\n\n[P.ooc_notes_dislikes]"
 			flavor_text = P.flavor_text
 
 		if(istype(C.mob, /mob/living/simple_mob))
@@ -189,6 +208,22 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			name = S.name
 			species = S.character_directory_species()
 			ooc_notes = S.ooc_notes
+			if(S.ooc_notes_style && (S.ooc_notes_favs || S.ooc_notes_likes || S.ooc_notes_maybes || S.ooc_notes_dislikes))
+				ooc_notes = S.ooc_notes + "\n\n"
+				ooc_notes_favs = S.ooc_notes_favs
+				ooc_notes_likes = S.ooc_notes_likes
+				ooc_notes_maybes = S.ooc_notes_maybes
+				ooc_notes_dislikes = S.ooc_notes_dislikes
+				ooc_notes_style = S.ooc_notes_style
+			else
+				if(S.ooc_notes_favs)
+					ooc_notes += "\n\nFAVOURITES\n\n[S.ooc_notes_favs]"
+				if(S.ooc_notes_likes)
+					ooc_notes += "\n\nLIKES\n\n[S.ooc_notes_likes]"
+				if(S.ooc_notes_maybes)
+					ooc_notes += "\n\nMAYBES\n\n[S.ooc_notes_maybes]"
+				if(S.ooc_notes_dislikes)
+					ooc_notes += "\n\nDISLIKES\n\n[S.ooc_notes_dislikes]"
 			flavor_text = S.desc
 		//CHOMPEdit End
 
@@ -253,8 +288,7 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			if(!new_tag)
 				return
 			return set_for_mind_or_prefs(user, action, new_tag, can_set_prefs, can_set_mind)
-		// CHOMPStation Edit End: Directory Update
-		if("setErpTag")
+		if ("setErpTag")
 			var/list/new_erptag = tgui_input_list(usr, "Pick a new ERP tag for the character directory", "Character ERP Tag", GLOB.char_directory_erptags)
 			if(!new_erptag)
 				return
@@ -325,6 +359,7 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			if (can_set_mind)
 				user.mind.directory_ad = new_value
 			return TRUE
+		//CHOMPEdit Start
 		if ("setEventTag")
 			if (can_set_prefs)
 				user.client.prefs.vantag_preference = new_value
@@ -340,3 +375,4 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 				user.client.prefs.directory_sexualitytag = new_value
 			if (can_set_mind)
 				user.mind.directory_sexualitytag = new_value
+		//CHOMPEdit End

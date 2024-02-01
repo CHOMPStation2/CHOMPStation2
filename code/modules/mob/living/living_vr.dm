@@ -97,13 +97,13 @@
 		msg += "<br><br>"
 		msg += "<table><tr>"
 		if(ooc_notes_favs)
-			msg += "<th><b>\tFAVOURITES</b></th>"
+			msg += "<th><b>\t[span_blue("FAVOURITES")]</b></th>"
 		if(ooc_notes_likes)
-			msg += "<th><b>\tLIKES</b></th>"
+			msg += "<th><b>\t[span_green("LIKES")]</b></th>"
 		if(ooc_notes_maybes)
-			msg += "<th><b>\tMAYBES</b></th>"
+			msg += "<th><b>\t[span_yellow("MAYBES")]</b></th>"
 		if(ooc_notes_dislikes)
-			msg += "<th><b>\tDISLIKES</b></th>"
+			msg += "<th><b>\t[span_red("DISLIKES")]</b></th>"
 		msg += "</tr><tr>"
 		if(ooc_notes_favs)
 			msg += "<td>"
@@ -128,13 +128,13 @@
 		msg += "</tr></table>"
 	else
 		if(ooc_notes_favs)
-			msg += "<br><br><b>FAVOURITES</b><br>[ooc_notes_favs]"
+			msg += "<br><br><b>[span_blue("FAVOURITES")]</b><br>[ooc_notes_favs]"
 		if(ooc_notes_likes)
-			msg += "<br><br><b>LIKES</b><br>[ooc_notes_likes]"
+			msg += "<br><br><b>[span_green("LIKES")]</b><br>[ooc_notes_likes]"
 		if(ooc_notes_maybes)
-			msg += "<br><br><b>MAYBES</b><br>[ooc_notes_maybes]"
+			msg += "<br><br><b>[span_yellow("MAYBES")]</b><br>[ooc_notes_maybes]"
 		if(ooc_notes_dislikes)
-			msg += "<br><br><b>DISLIKES</b><br>[ooc_notes_dislikes]"
+			msg += "<br><br><b>[span_red("DISLIKES")]</b><br>[ooc_notes_dislikes]"
 	to_chat(usr, "<span class='chatexport'><b>[src]'s Metainfo:</b><br>[msg]</span>")
 	//CHOMPEdit End
 
