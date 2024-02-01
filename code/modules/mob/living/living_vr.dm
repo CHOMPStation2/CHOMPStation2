@@ -93,14 +93,48 @@
 		return
 	var/msg = ooc_notes
 	//CHOMPEdit Start
-	if(ooc_notes_favs)
-		msg += "<br><br><b>FAVS</b><br>[ooc_notes_favs]"
-	if(ooc_notes_likes)
-		msg += "<br><br><b>LIKES</b><br>[ooc_notes_likes]"
-	if(ooc_notes_maybes)
-		msg += "<br><br><b>MAYBES</b><br>[ooc_notes_maybes]"
-	if(ooc_notes_dislikes)
-		msg += "<br><br><b>DISLIKES</b><br>[ooc_notes_dislikes]"
+	if(ooc_notes_style && (ooc_notes_favs || ooc_notes_likes || ooc_notes_maybes || ooc_notes_dislikes))
+		msg += "<br><br>"
+		msg += "<table><tr>"
+		if(ooc_notes_favs)
+			msg += "<th><b>\tFAVOURITES</b></th>"
+		if(ooc_notes_likes)
+			msg += "<th><b>\tLIKES</b></th>"
+		if(ooc_notes_maybes)
+			msg += "<th><b>\tMAYBES</b></th>"
+		if(ooc_notes_dislikes)
+			msg += "<th><b>\tDISLIKES</b></th>"
+		msg += "</tr><tr>"
+		if(ooc_notes_favs)
+			msg += "<td>"
+			for(var/line in splittext(ooc_notes_favs, "\n"))
+				msg += "\t[line]\n"
+			msg += "</td>"
+		if(ooc_notes_likes)
+			msg += "<td>"
+			for(var/line in splittext(ooc_notes_likes, "\n"))
+				msg += "\t[line]\n"
+			msg += "</td>"
+		if(ooc_notes_maybes)
+			msg += "<td>"
+			for(var/line in splittext(ooc_notes_maybes, "\n"))
+				msg += "\t[line]\n"
+			msg += "</td>"
+		if(ooc_notes_dislikes)
+			msg += "<td>"
+			for(var/line in splittext(ooc_notes_dislikes, "\n"))
+				msg += "\t[line]\n"
+			msg += "</td>"
+		msg += "</tr></table>"
+	else
+		if(ooc_notes_favs)
+			msg += "<br><br><b>FAVOURITES</b><br>[ooc_notes_favs]"
+		if(ooc_notes_likes)
+			msg += "<br><br><b>LIKES</b><br>[ooc_notes_likes]"
+		if(ooc_notes_maybes)
+			msg += "<br><br><b>MAYBES</b><br>[ooc_notes_maybes]"
+		if(ooc_notes_dislikes)
+			msg += "<br><br><b>DISLIKES</b><br>[ooc_notes_dislikes]"
 	to_chat(usr, "<span class='chatexport'><b>[src]'s Metainfo:</b><br>[msg]</span>")
 	//CHOMPEdit End
 
