@@ -93,7 +93,7 @@
 		return
 	var/msg = ooc_notes
 	//CHOMPEdit Start
-	if(ooc_notes_style && (ooc_notes_favs || ooc_notes_likes || ooc_notes_maybes || ooc_notes_dislikes))
+	if(ooc_notes_style && (ooc_notes_favs || ooc_notes_likes || ooc_notes_maybes || ooc_notes_dislikes) && usr.client.is_preference_enabled(/datum/client_preference/vchat_enable)) // Oldchat hates proper formatting
 		msg += "<br><br>"
 		msg += "<table><tr>"
 		if(ooc_notes_favs)

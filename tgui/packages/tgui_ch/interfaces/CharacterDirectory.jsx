@@ -1,6 +1,6 @@
 import { Fragment } from 'inferno';
 import { useBackend, useLocalState } from '../backend';
-import { Box, Button, Flex, Icon, LabeledList, Section, Table } from '../components';
+import { Box, Button, Icon, LabeledList, Section, Table } from '../components';
 import { Window } from '../layouts';
 
 const getTagColor = (tag) => {
@@ -218,7 +218,7 @@ const ViewCharacter = (props, context) => {
                   <Table.Cell>{overlay.ooc_notes_likes}</Table.Cell>
                 ) : (
                   ''
-                )}{' '}
+                )}
                 {overlay.ooc_notes_maybes ? (
                   <Table.Cell>{overlay.ooc_notes_maybes}</Table.Cell>
                 ) : (
