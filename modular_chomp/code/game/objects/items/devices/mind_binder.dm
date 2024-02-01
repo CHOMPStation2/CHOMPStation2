@@ -35,6 +35,9 @@
 	update_icon()
 
 /obj/item/device/mindbinder/pre_attack(atom/A)
+	if(istype(A, /obj/structure/gargoyle))
+		var/obj/structure/gargoyle/G = A
+		A = G.gargoyle
 	if(istype(A, /mob/living))
 		var/mob/living/M = A
 		if(usr == M)
