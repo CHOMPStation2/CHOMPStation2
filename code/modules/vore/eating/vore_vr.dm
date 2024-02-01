@@ -73,7 +73,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/noisy_full = FALSE
 	var/receive_reagents = FALSE
 	var/give_reagents = FALSE
-	var/apply_reagents = FALSE
+	var/apply_reagents = TRUE
 	var/latejoin_vore = FALSE
 	var/latejoin_prey = FALSE
 	var/autotransferable = TRUE
@@ -335,7 +335,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	if(isnull(give_reagents))
 		give_reagents = FALSE
 	if(isnull(apply_reagents))
-		apply_reagents = FALSE
+		apply_reagents = TRUE
 	if(isnull(noisy_full))
 		noisy_full = FALSE
 	if(isnull(autotransferable))

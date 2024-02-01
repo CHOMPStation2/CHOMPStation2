@@ -15,8 +15,6 @@
 	//no stripping of simplemobs
 	strip_pref = FALSE
 
-	apply_reagents = TRUE
-
 /mob/living/simple_mob/RangedAttack(var/atom/A)
 	if(!isnull(spit_projectile) && spitting)
 		Spit(A)
