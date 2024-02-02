@@ -18,3 +18,8 @@
   - bugfix: Fixed the airlock on the Ninja shuttle so the airlock helper doesn't panic
       when loading up the round. Also moved the button so that it doesn't get left
       behind when the shuttle jumps (not that it gets used)
+2024-02-02:
+  FluffMedic:
+  - bugfix: adds a missing wire
+  Upstream:
+  - rscadd: Added Vertical Nom, submit to prey and dominate prey verbs to borgs
