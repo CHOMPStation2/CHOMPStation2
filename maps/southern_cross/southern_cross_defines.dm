@@ -128,7 +128,8 @@ but they don't actually change anything about the load order
 	lateload_gateway = list(
 		list("Snow Field"),
 		list("Maddness Lab"),
-		list("Abandoned City")
+		list("Abandoned City"),
+		list("Distant Mining Facility")
 		) //CHOMPedit: Gateway maps. For now nothing fancy, just some already existing maps while we make our own.
 
 	lateload_gateway = null

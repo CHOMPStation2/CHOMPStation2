@@ -1,0 +1,4 @@
+author: "Upstream"
+delete-after: True
+changes:
+  - rscadd: "Added Vertical Nom, submit to prey and dominate prey verbs to borgs"
