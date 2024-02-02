@@ -135,7 +135,7 @@
 	hitsound = 'sound/weapons/bite.ogg'
 	attack_verb = list("nibbled", "bit", "gnawed", "chomped", "nommed")
 	w_class = ITEMSIZE_NORMAL
-	var/emagged = 0
+	emagged = 0
 
 /obj/item/weapon/melee/dogborg/jaws/small/attack_self(mob/user)
 	var/mob/living/silicon/robot/R = user
