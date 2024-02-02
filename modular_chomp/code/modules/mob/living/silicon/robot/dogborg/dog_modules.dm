@@ -109,3 +109,60 @@
 		R.updatehealth()
 		R.cell.use(50)
 		src.self_repair(R, C, tick_delay, heal_per_tick)
+
+/obj/item/weapon/melee/dogborg/jaws/big
+	name = "combat jaws"
+	icon = 'icons/mob/dogborg_vr.dmi'
+	icon_state = "jaws"
+	desc = "The jaws of the law."
+	force = 25
+	armor_penetration = 25 //30 to try and make it not useless against armored mobs but not fully nullify it.
+	defend_chance = 15
+	throwforce = 0
+	hitsound = 'sound/weapons/bite.ogg'
+	attack_verb = list("chomped", "bit", "ripped", "mauled", "enforced")
+	w_class = ITEMSIZE_NORMAL
+
+/obj/item/weapon/melee/dogborg/jaws/small
+	name = "puppy jaws"
+	icon = 'icons/mob/dogborg_vr.dmi'
+	icon_state = "smalljaws"
+	desc = "The jaws of a small dog."
+	force = 10
+	armor_penetration = 0 //30 to try and make it not useless against armored mobs but not fully nullify it.
+	defend_chance = 5
+	throwforce = 0
+	hitsound = 'sound/weapons/bite.ogg'
+	attack_verb = list("nibbled", "bit", "gnawed", "chomped", "nommed")
+	w_class = ITEMSIZE_NORMAL
+	var/emagged = 0
+
+/obj/item/weapon/melee/dogborg/jaws/small/attack_self(mob/user)
+	var/mob/living/silicon/robot/R = user
+	if(R.emagged || R.emag_items)
+		emagged = !emagged
+		if(emagged)
+			name = "combat jaws"
+			icon = 'icons/mob/dogborg_vr.dmi'
+			icon_state = "jaws"
+			desc = "The jaws of the law."
+			force = 25
+			armor_penetration = 25 //30 to try and make it not useless against armored mobs but not fully nullify it.
+			defend_chance = 15
+			throwforce = 0
+			hitsound = 'sound/weapons/bite.ogg'
+			attack_verb = list("chomped", "bit", "ripped", "mauled", "enforced")
+			w_class = ITEMSIZE_NORMAL
+		else
+			name = "puppy jaws"
+			icon = 'icons/mob/dogborg_vr.dmi'
+			icon_state = "smalljaws"
+			desc = "The jaws of a small dog."
+			force = 10
+			armor_penetration = 0 //30 to try and make it not useless against armored mobs but not fully nullify it.
+			defend_chance = 5
+			throwforce = 0
+			hitsound = 'sound/weapons/bite.ogg'
+			attack_verb = list("nibbled", "bit", "gnawed", "chomped", "nommed")
+			w_class = ITEMSIZE_NORMAL
+		update_icon()
