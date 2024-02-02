@@ -25,7 +25,7 @@ echo "Deploying rust-g..."
 git "checkout" "%RUST_G_VERSION%"
 set PKG_CONFIG_ALLOW_CROSS=1
 cargo build --release --target=i686-pc-windows-msvc
-mv "target\i686-pc-windows-msvc\release\librust_g.so" "%~1/librust_g.so"
+move "%CD%\target\i686-pc-windows-msvc\release\rust_g.dll" "%~1/rust_g.dll"
 cd ".."
 echo "Compiling tgui..."
 cd "%~1"
