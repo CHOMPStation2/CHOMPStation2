@@ -1,15 +1,34 @@
 @echo off
-cd /D "%~dp0"
-set TG_BOOTSTRAP_CACHE=%cd%
-IF NOT %1 == "" (
-	rem TGS4+: we are passed the game directory on the command line
-	cd %1
-) ELSE IF EXIST "..\Game\B\tgstation.dmb" (
-	rem TGS3: Game/B/tgstation.dmb exists, so build in Game/A
-	cd ..\Game\A
-) ELSE (
-	rem TGS3: Otherwise build in Game/B
-	cd ..\Game\B
+
+FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoLogo -ExecutionPolicy Bypass -File "get_dependencies.ps1"`) DO (
+SET RUST_G_VERSION=%%F
 )
-set CBT_BUILD_MODE=TGS
-tools\build\build
+
+SET "original_dir=%CD%"
+cd "%~1"
+
+::set "RUST_G_VERSION=3.1.0"
+
+cd "%original_dir%"
+IF NOT exist "rust-g"\ (
+  echo "Cloning rust-g..."
+  git "clone" "https://github.com/tgstation/rust-g"
+  cd "rust-g"
+  rustup "target" "add" "i686-pc-windows-msvc"
+) ELSE (
+  echo "Fetching rust-g..."
+  cd "rust-g"
+  git "fetch"
+  rustup "target" "add" "i686-pc-windows-msvc"
+)
+echo "Deploying rust-g..."
+git "checkout" "%RUST_G_VERSION%"
+set PKG_CONFIG_ALLOW_CROSS=1
+cargo build --release --target=i686-pc-windows-msvc
+mv "target\i686-pc-windows-msvc\release\librust_g.so" "%~1/librust_g.so"
+cd ".."
+echo "Compiling tgui..."
+cd "%~1"
+set TG_BOOTSTRAP_CACHE=%original_dir%
+set "CBT_BUILD_MODE=TGS"
+tools/bootstrap/node.bat tools/build/build.js
