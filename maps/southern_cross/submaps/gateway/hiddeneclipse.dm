@@ -62,5 +62,5 @@
 	requires_power = 0
 
 /area/awaymission/hiddeneclipse/theabyss
-	name = "???"
+	name = "Strange Void"
 	requires_power = 0
