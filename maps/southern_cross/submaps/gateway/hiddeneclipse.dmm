@@ -164,6 +164,15 @@
 	},
 /turf/simulated/shuttle/floor/alienplating/blue,
 /area/awaymission/hiddeneclipse)
+"dv" = (
+/obj/effect/floor_decal/corner/yellow/diagonal,
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1";
+	pixel_x = 0
+	},
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/awaymission/hiddeneclipse/eclipsecarrier/engine)
 "dx" = (
 /obj/structure/grille,
 /obj/structure/window/titanium,
@@ -251,6 +260,17 @@
 "fr" = (
 /turf/simulated/floor/outdoors/ice/dark_smooth,
 /area/awaymission/hiddeneclipse/theabyss)
+"fO" = (
+/obj/effect/floor_decal/corner/pink/diagonal,
+/obj/item/modular_computer/console{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/awaymission/hiddeneclipse/eclipsecarrier/helm)
 "gk" = (
 /obj/effect/simple_portal/coords{
 	tele_x = 199;
@@ -311,6 +331,7 @@
 "hl" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/green/diagonal,
+/obj/random/maintenance/foodstuff,
 /turf/simulated/floor/tiled/old_tile/green,
 /area/awaymission/hiddeneclipse/eclipsecarrier/kitchen)
 "ho" = (
@@ -496,7 +517,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/hiddeneclipse/miningzonea)
 "mD" = (
-/turf/simulated/floor/outdoors/lavaland/ashrock,
+/turf/simulated/mineral/light,
 /area/awaymission/hiddeneclipse/miningzonea)
 "mI" = (
 /obj/machinery/crystal/lava,
@@ -563,11 +584,29 @@
 /obj/structure/fans/hardlight/colorable,
 /turf/simulated/floor/water/deep,
 /area/awaymission/hiddeneclipse/theabyss)
+"nN" = (
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1";
+	pixel_x = 0
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/awaymission/hiddeneclipse/eclipsecarrier/vipchamber)
 "nS" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled/old_tile/purple,
 /area/awaymission/hiddeneclipse/eclipsecarrier/science)
+"nU" = (
+/obj/effect/floor_decal/corner/yellow/diagonal,
+/obj/structure/table/gold,
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1";
+	pixel_x = 0
+	},
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/awaymission/hiddeneclipse/eclipsecarrier/enginemonitoring)
 "ol" = (
 /obj/item/weapon/stool,
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
@@ -628,6 +667,13 @@
 /mob/living/simple_mob/humanoid/eclipse/lunar/miner,
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/awaymission/hiddeneclipse/eclipsecarrier/enginemonitoring)
+"pA" = (
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1"
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/awaymission/hiddeneclipse/eclipsecarrier/vipchamber)
 "pE" = (
 /turf/simulated/shuttle/wall/alien/blue,
 /area/awaymission/hiddeneclipse/precursortemple)
@@ -696,6 +742,15 @@
 	temperature = 293.15
 	},
 /area/awaymission/hiddeneclipse/miningzonea)
+"qL" = (
+/obj/effect/floor_decal/corner/yellow/diagonal,
+/obj/structure/table/gold,
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1"
+	},
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/awaymission/hiddeneclipse/eclipsecarrier/enginemonitoring)
 "qQ" = (
 /obj/effect/forcefield/mime,
 /turf/simulated/floor/cult,
@@ -791,6 +846,14 @@
 	},
 /turf/simulated/shuttle/floor/alien/blue,
 /area/awaymission/hiddeneclipse/precursortemple)
+"ua" = (
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/effect/floor_decal/corner/mauve/border{
+	dir = 3
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled/old_tile/purple,
+/area/awaymission/hiddeneclipse/eclipsecarrier/science)
 "um" = (
 /obj/effect/simple_portal/linked{
 	portal_id = "GatewayPuzzle"
@@ -943,6 +1006,10 @@
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /obj/structure/table/gold,
 /obj/structure/table/gold,
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1"
+	},
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/awaymission/hiddeneclipse/eclipsecarrier/enginemonitoring)
 "xw" = (
@@ -1022,6 +1089,18 @@
 "yA" = (
 /turf/simulated/wall/plastihull,
 /area/awaymission/hiddeneclipse/eclipsecarrier)
+"yD" = (
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/effect/floor_decal/corner/mauve/border{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1";
+	pixel_x = 0
+	},
+/turf/simulated/floor/tiled/old_tile/purple,
+/area/awaymission/hiddeneclipse/eclipsecarrier/science)
 "yJ" = (
 /turf/simulated/floor/grass,
 /area/awaymission/hiddeneclipse/theabyss)
@@ -1235,6 +1314,15 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/awaymission/hiddeneclipse/eclipsecarrier/helm)
+"Cl" = (
+/obj/effect/floor_decal/corner/lightorange/diagonal,
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1";
+	pixel_x = 0
+	},
+/turf/simulated/floor/tiled/red,
+/area/awaymission/hiddeneclipse/eclipsecarrier)
 "Co" = (
 /obj/item/rig_module/vision/mining,
 /turf/simulated/mineral/floor{
@@ -1255,8 +1343,18 @@
 /turf/simulated/floor/tiled/red,
 /area/awaymission/hiddeneclipse/eclipsecarrier)
 "CF" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/awaymission/hiddeneclipse/eclipsecarrier/enginemonitoring)
+"CG" = (
+/obj/effect/floor_decal/corner/lightorange/diagonal,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/red,
+/area/awaymission/hiddeneclipse/eclipsecarrier/dorms)
 "CT" = (
 /obj/structure/fans/hardlight/colorable,
 /turf/simulated/floor/lava/harmless,
@@ -1264,6 +1362,10 @@
 "CX" = (
 /turf/simulated/shuttle/wall/alien,
 /area/awaymission/hiddeneclipse/theabyss)
+"Db" = (
+/obj/machinery/light,
+/turf/simulated/floor/carpet/purcarpet,
+/area/awaymission/hiddeneclipse/eclipsecarrier/vipchamber)
 "De" = (
 /obj/machinery/mining/drill,
 /turf/simulated/floor/tiled/steel,
@@ -1634,6 +1736,17 @@
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/hiddeneclipse/eclipsecarrier/prison)
+"Jl" = (
+/obj/machinery/porta_turret/poi{
+	faction = "eclipse"
+	},
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1";
+	pixel_x = 0
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/awaymission/hiddeneclipse/eclipsecarrier/vipdefense)
 "Jn" = (
 /obj/effect/simple_portal/coords{
 	tele_x = 187;
@@ -1648,6 +1761,14 @@
 	},
 /turf/simulated/shuttle/floor/alien/blue,
 /area/awaymission/hiddeneclipse/precursortemple)
+"JI" = (
+/obj/effect/floor_decal/corner/lightorange/diagonal,
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1"
+	},
+/turf/simulated/floor/tiled/red,
+/area/awaymission/hiddeneclipse/eclipsecarrier)
 "JJ" = (
 /obj/effect/floor_decal/corner/pink/diagonal,
 /obj/item/modular_computer/console{
@@ -1688,12 +1809,46 @@
 	temperature = 293.15
 	},
 /area/awaymission/hiddeneclipse)
+"KU" = (
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/effect/floor_decal/corner/mauve/border{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1"
+	},
+/turf/simulated/floor/tiled/old_tile/purple,
+/area/awaymission/hiddeneclipse/eclipsecarrier/science)
+"KV" = (
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/structure/table/steel,
+/obj/effect/floor_decal/corner/mauve/border{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1";
+	pixel_x = 0
+	},
+/turf/simulated/floor/tiled/old_tile/purple,
+/area/awaymission/hiddeneclipse/eclipsecarrier/science)
 "Li" = (
 /obj/structure/closet/crate/secure/loot,
 /turf/simulated/mineral/floor{
 	temperature = 293.15
 	},
 /area/awaymission/hiddeneclipse)
+"Lp" = (
+/obj/machinery/porta_turret/poi{
+	faction = "eclipse"
+	},
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1"
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/awaymission/hiddeneclipse/eclipsecarrier/vipdefense)
 "Lr" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
 /mob/living/simple_mob/humanoid/eclipse/solar/hellhound,
@@ -1712,6 +1867,18 @@
 	temperature = 293.15
 	},
 /area/awaymission/hiddeneclipse)
+"LF" = (
+/obj/effect/floor_decal/corner/pink/diagonal,
+/obj/item/modular_computer/console{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1";
+	pixel_x = 0
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/awaymission/hiddeneclipse/eclipsecarrier/helm)
 "LQ" = (
 /obj/structure/fans/hardlight/colorable,
 /turf/unsimulated/floor/dark,
@@ -1838,18 +2005,13 @@
 /turf/simulated/floor/wood,
 /area/awaymission/hiddeneclipse/miningzonea)
 "OD" = (
-/obj/structure/window/titanium,
-/obj/structure/window/titanium{
-	dir = 4
+/obj/effect/floor_decal/corner/yellow/diagonal,
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1"
 	},
-/obj/structure/window/titanium{
-	dir = 8
-	},
-/obj/structure/window/titanium{
-	dir = 1
-	},
-/turf/simulated/floor/plating,
-/area/awaymission/hiddeneclipse/eclipsecarrier)
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/awaymission/hiddeneclipse/eclipsecarrier/engine)
 "OF" = (
 /turf/simulated/floor/carpet/blue,
 /area/awaymission/hiddeneclipse/theabyss)
@@ -2120,6 +2282,19 @@
 /mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/awaymission/hiddeneclipse/eclipsecarrier/enginemonitoring)
+"Ul" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/structure/table/steel,
+/obj/effect/floor_decal/corner/red{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightorange,
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1"
+	},
+/turf/simulated/floor/tiled/old_tile/red,
+/area/awaymission/hiddeneclipse/eclipsecarrier/prison)
 "Up" = (
 /obj/effect/spider/stickyweb/dark,
 /mob/living/simple_mob/animal/giant_spider/lurker,
@@ -2127,6 +2302,13 @@
 	temperature = 293.15
 	},
 /area/awaymission/hiddeneclipse)
+"Ut" = (
+/obj/effect/floor_decal/corner/lightorange/diagonal,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/red,
+/area/awaymission/hiddeneclipse/eclipsecarrier)
 "UC" = (
 /turf/simulated/wall,
 /area/awaymission/hiddeneclipse/miningzonea/depature)
@@ -2386,6 +2568,23 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/hiddeneclipse/miningzonea/depature)
+"Zn" = (
+/obj/effect/floor_decal/corner/yellow/diagonal,
+/obj/machinery/door/airlock/sandstone,
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/awaymission/hiddeneclipse/eclipsecarrier/engine)
+"Zs" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/effect/floor_decal/corner/red{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightorange,
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1"
+	},
+/turf/simulated/floor/tiled/old_tile/red,
+/area/awaymission/hiddeneclipse/eclipsecarrier/prison)
 "Zu" = (
 /obj/structure/table/rack,
 /obj/item/weapon/circuitboard/paradoxrift,
@@ -53397,7 +53596,7 @@ ez
 om
 qd
 Ra
-Ra
+Ul
 Ra
 qd
 om
@@ -53958,7 +54157,7 @@ yA
 yA
 dD
 dD
-dD
+CG
 eA
 eA
 eA
@@ -54679,7 +54878,7 @@ rn
 rn
 rn
 rn
-rn
+Zs
 rn
 rn
 rn
@@ -54695,7 +54894,7 @@ rn
 Pb
 rn
 rn
-rn
+Zs
 rn
 rn
 rn
@@ -54990,7 +55189,7 @@ yA
 yA
 dD
 dD
-dD
+CG
 eA
 eA
 eA
@@ -56552,12 +56751,12 @@ cK
 cK
 Og
 Og
-Pt
+Zn
 Og
 Og
 Og
 Og
-Pt
+Zn
 Og
 Og
 Og
@@ -56767,7 +56966,7 @@ MY
 MY
 MY
 MY
-MY
+JI
 MY
 MY
 MY
@@ -57288,6 +57487,7 @@ MY
 MY
 MY
 MY
+Cl
 MY
 MY
 MY
@@ -57299,12 +57499,11 @@ MY
 MY
 MY
 MY
+Cl
 MY
 MY
 MY
-MY
-MY
-MY
+Cl
 MY
 MY
 MY
@@ -57798,7 +57997,7 @@ yA
 yA
 yA
 yA
-MY
+Ut
 MY
 MY
 yA
@@ -57843,7 +58042,7 @@ cK
 Og
 Pt
 Pt
-Pt
+dv
 Pt
 FD
 VM
@@ -58044,12 +58243,12 @@ mN
 mN
 IS
 IS
+fO
 IS
 IS
 IS
 IS
-IS
-IS
+fO
 IS
 IS
 mN
@@ -58077,7 +58276,7 @@ Fz
 Fz
 XV
 XV
-XV
+pA
 XV
 XV
 Fz
@@ -58356,7 +58555,7 @@ xq
 Of
 MU
 MU
-MU
+qL
 Of
 sg
 bz
@@ -58582,7 +58781,7 @@ kk
 TS
 kk
 kk
-TS
+Lp
 kk
 TS
 kk
@@ -59088,7 +59287,7 @@ GI
 GI
 mN
 mN
-MY
+Ut
 ZX
 MY
 bM
@@ -59113,7 +59312,7 @@ Vp
 XV
 XV
 XV
-XV
+Db
 yA
 yA
 TH
@@ -59614,7 +59813,7 @@ kk
 TS
 kk
 kk
-TS
+Jl
 kk
 TS
 kk
@@ -59900,11 +60099,11 @@ yA
 yA
 bz
 MU
-MU
+nU
 Of
 MU
 MU
-MU
+nU
 Of
 sg
 bz
@@ -60108,12 +60307,12 @@ mN
 mN
 ks
 ks
+LF
 ks
 ks
 ks
 ks
-ks
-ks
+LF
 ks
 ks
 mN
@@ -60141,7 +60340,7 @@ Fz
 Fz
 XV
 XV
-XV
+nN
 XV
 XV
 Fz
@@ -60378,7 +60577,7 @@ yA
 yA
 yA
 yA
-MY
+Ut
 MY
 MY
 yA
@@ -60423,7 +60622,7 @@ cK
 Og
 Pt
 Pt
-Pt
+OD
 Pt
 pT
 VM
@@ -60879,6 +61078,7 @@ MY
 MY
 MY
 MY
+JI
 MY
 MY
 MY
@@ -60901,21 +61101,20 @@ MY
 MY
 MY
 MY
+JI
+MY
+MY
+MY
+JI
 MY
 MY
 MY
 MY
+JI
 MY
 MY
 MY
-MY
-MY
-MY
-MY
-MY
-MY
-MY
-MY
+JI
 MY
 MY
 MY
@@ -61411,7 +61610,7 @@ MY
 MY
 MY
 MY
-MY
+Cl
 MY
 MY
 MY
@@ -61653,7 +61852,7 @@ yA
 yA
 yA
 YB
-OD
+Av
 YB
 yA
 yA
@@ -61712,12 +61911,12 @@ cK
 cK
 Og
 Og
-Pt
+Zn
 Og
 Og
 Og
 Og
-Pt
+Zn
 Og
 Og
 Og
@@ -62162,7 +62361,7 @@ gI
 EE
 EE
 EE
-EE
+KU
 EE
 EE
 dg
@@ -63246,7 +63445,7 @@ yA
 yA
 dD
 dD
-dD
+CG
 eA
 eA
 eA
@@ -63455,7 +63654,7 @@ QV
 oT
 Al
 oT
-ho
+ua
 Oa
 Nu
 FB
@@ -63470,7 +63669,7 @@ TQ
 FB
 FB
 FB
-FB
+yD
 FB
 FB
 TQ
@@ -64278,7 +64477,7 @@ yA
 yA
 dD
 dD
-dD
+CG
 eA
 eA
 eA
@@ -64742,7 +64941,7 @@ VZ
 FB
 FB
 FB
-FB
+yD
 FB
 FB
 BU
@@ -64763,7 +64962,7 @@ cd
 Oa
 uz
 ha
-ha
+KV
 Hn
 hi
 Oa
