@@ -1,8 +1,0 @@
-author: "Fracshun"
-delete-after: True
-changes:
-  - rscadd: "Mind Binder can now target gargoyles in their stone form"
-  - rscadd: "Renaming a plushie also updates the name of the one turned into it"
-  - bugfix: "Auto resleever can now properly be used after being destroyed as an item"
-  - bugfix: "Using the Mind Binder on a scooped mob now targets the mob in the holder, not the holder item"
-  - qol: "Digesting as an item now lets you use the belly digested respawn timer"

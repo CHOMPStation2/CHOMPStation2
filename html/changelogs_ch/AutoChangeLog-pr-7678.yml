@@ -1,6 +1,0 @@
-author: "FluffMedic"
-delete-after: True
-changes:
-  - bugfix: "walls in a gateway being the wrong type"
-  - bugfix: "Missing sprites for a mob"
-  - bugfix: "Adds a default set of sprites for a gun"
