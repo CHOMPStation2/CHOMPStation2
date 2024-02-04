@@ -230,7 +230,7 @@
 							touchable_atoms |= I
 
 				//Stripping flag
-				if(mode_flags & DM_FLAG_STRIPPING)
+				if((mode_flags & DM_FLAG_STRIPPING) && H.strip_pref) //CHOMPEdit Stripping pref check
 					for(var/slot in slots)
 						var/obj/item/I = H.get_equipped_item(slot = slot)
 						if(I && H.unEquip(I, force = FALSE))
@@ -373,7 +373,7 @@
 			GenerateBellyReagents_digested()
 		else
 			R.cell.charge += (nutrition_percent / 100) * compensation * 25 * personal_nutrition_modifier*/
-	if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMP digestion producing reagents
+	if(show_liquids && reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMP digestion producing reagents
 		owner_adjust_nutrition((nutrition_percent / 100) * compensation * 3 * personal_nutrition_modifier)
 		GenerateBellyReagents_digested()
 	else
@@ -383,7 +383,7 @@
 	if(L.nutrition >= 100)
 		var/oldnutrition = (L.nutrition * 0.05)
 		L.nutrition = (L.nutrition * 0.95)
-		if(reagent_mode_flags & DM_FLAG_REAGENTSDRAIN && reagents.total_volume < reagents.maximum_volume)   //CHOMPedit: draining reagent production //Added to this proc now since it's used for draining
+		if(show_liquids && reagent_mode_flags & DM_FLAG_REAGENTSDRAIN && reagents.total_volume < reagents.maximum_volume)   //CHOMPedit: draining reagent production //Added to this proc now since it's used for draining
 			owner_adjust_nutrition(oldnutrition * 0.75) //keeping the price static, due to how much nutrition can flunctuate
 			GenerateBellyReagents_absorbing() //Dont need unique proc so far
 		else

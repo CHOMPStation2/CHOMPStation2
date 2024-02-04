@@ -1,0 +1,39 @@
+2024-02-01:
+  Aroliacue:
+  - bugfix: Corrected a misplaced chompedit that removed code necessary for cyborgs
+      to navigate in space.
+  FluffMedic:
+  - rscadd: A New gateway
+  - rscadd: Strange random bits to xenobio
+  - bugfix: teshari rigsuits sprites work for the precursor, and aegis rigsuits
+  - rscadd: New vault and maintence
+  Kashargul:
+  - bugfix: '"Transfer to Shell" AI verb'
+  Missile597:
+  - rscadd: Cinnamon seeds added to the seed storages in garden and xenobotany
+  - rscadd: Added emergency shutters that were missing on the south part of deck 1
+  - rscdel: Removed two shutter doors in the dorms corridor that were cutting off
+      certain areas from a scrubber or a pump when closed due to an alarm
+  - qol: Moved a space heater that was blocking a trash pile
+  - bugfix: Fixed the airlock on the Ninja shuttle so the airlock helper doesn't panic
+      when loading up the round. Also moved the button so that it doesn't get left
+      behind when the shuttle jumps (not that it gets used)
+2024-02-02:
+  FluffMedic:
+  - bugfix: adds a missing wire
+  Upstream:
+  - rscadd: Added Vertical Nom, submit to prey and dominate prey verbs to borgs
+2024-02-03:
+  FluffMedic:
+  - bugfix: walls in a gateway being the wrong type
+  - bugfix: Missing sprites for a mob
+  - bugfix: Adds a default set of sprites for a gun
+  Fracshun:
+  - rscadd: Mind Binder can now target gargoyles in their stone form
+  - rscadd: Renaming a plushie also updates the name of the one turned into it
+  - bugfix: Auto resleever can now properly be used after being destroyed as an item
+  - bugfix: Using the Mind Binder on a scooped mob now targets the mob in the holder,
+      not the holder item
+  - qol: Digesting as an item now lets you use the belly digested respawn timer
+  Kashargul:
+  - qol: girders now refund a stack of 2 steel sheets
