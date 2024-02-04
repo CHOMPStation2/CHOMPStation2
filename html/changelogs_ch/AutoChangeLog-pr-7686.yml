@@ -1,0 +1,4 @@
+author: "TheCaramelion"
+delete-after: True
+changes:
+  - bugfix: "Virus event will no longer pick immune species"
