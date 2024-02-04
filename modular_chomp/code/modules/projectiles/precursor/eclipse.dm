@@ -20,11 +20,12 @@
 
 	reload_time = 10
 
+	move_delay = 0
+
 	firemodes = list(
 		list(mode_name="normal", fire_delay=5, projectile_type=/obj/item/projectile/energy/frostsphere, charge_cost = 80),
 		list(mode_name="shotgun", fire_delay=15, projectile_type=/obj/item/projectile/bullet/frostshotgun, charge_cost = 240),
 		)
-
 
 /obj/item/weapon/gun/energy/flamegun
 	name = "Flame Crystal Projector"
@@ -45,6 +46,8 @@
 
 	recoil_mode = 0
 	charge_meter = 1
+
+	move_delay = 0
 
 	charge_cost = 80
 
@@ -74,25 +77,28 @@
 	recoil_mode = 0
 	charge_meter = 1
 
+	move_delay = 0
+
 	charge_cost = 160
 
 	reload_time = 20
 
 	firemodes = list(
-		list(mode_name="fire", fire_delay=15, projectile_type=/obj/item/projectile/bullet/flamegun, charge_cost = 160),
-		list(mode_name="lighting", fire_delay=20, projectile_type=/obj/item/projectile/beam/lightingsurge, charge_cost = 480),
-		list(mode_name="frost", burst=3, fire_delay=15, projectile_type=/obj/item/projectile/energy/frostsphere, charge_cost = 240),
-		list(mode_name="acid", fire_delay=1, projectile_type=/obj/item/projectile/energy/muckblob, charge_cost = 10),
+		list(mode_name="fire", burst=1, fire_delay=15, projectile_type=/obj/item/projectile/bullet/flamegun, charge_cost = 160, modifystate="avatarfire"),
+		list(mode_name="lighting", burst=1, fire_delay=20, projectile_type=/obj/item/projectile/beam/lightingsurge, charge_cost = 480, modifystate="avatarlighting"),
+		list(mode_name="frost", burst=3, fire_delay=15, projectile_type=/obj/item/projectile/energy/frostsphere, charge_cost = 260, modifystate="avatarfrost"),
+		list(mode_name="acid", burst=1, fire_delay=0.5, projectile_type=/obj/item/projectile/energy/muckblob, charge_cost = 10, modifystate="avataracid"),
 		)
+
 /obj/item/weapon/gun/energy/elementalray/emag_act(var/remaining_charges, var/mob/user)
 	..()
 	to_chat(user, "<span class='notice'>You short circuit the internal locking mechanisms of \the [src]!</span>")
 	firemodes = list(
-		list(mode_name="fire", fire_delay=15, projectile_type=/obj/item/projectile/bullet/flamegun, charge_cost = 160),
-		list(mode_name="lighting", fire_delay=20, projectile_type=/obj/item/projectile/beam/lightingsurge, charge_cost = 480),
-		list(mode_name="frost", burst=3, fire_delay=15, projectile_type=/obj/item/projectile/energy/frostsphere, charge_cost = 240),
-		list(mode_name="acid", fire_delay=1, projectile_type=/obj/item/projectile/energy/muckblob, charge_cost = 10),
-		list(mode_name="error", fire_delay=30, projectile_type=/obj/item/projectile/bullet/errorelement, charge_cost = 1040)
+		list(mode_name="fire", burst=1, fire_delay=15, projectile_type=/obj/item/projectile/bullet/flamegun, charge_cost = 160),
+		list(mode_name="lighting", burst=1, fire_delay=20, projectile_type=/obj/item/projectile/beam/lightingsurge, charge_cost = 480),
+		list(mode_name="frost", burst=3, fire_delay=15, projectile_type=/obj/item/projectile/energy/frostsphere, charge_cost = 160),
+		list(mode_name="acid", burst=1, fire_delay=0.5, projectile_type=/obj/item/projectile/energy/muckblob, charge_cost = 10),
+		list(mode_name="error", burst=1, fire_delay=30, projectile_type=/obj/item/projectile/bullet/errorelement, charge_cost = 1040),
 		)
 	return 1
 
@@ -130,7 +136,7 @@
 	on_expired_text = "<span class='notice'>You are no longer covered in muck.</span>"
 	stacks = MODIFIER_STACK_ALLOWED
 
-	slowdown = 0.5
+	slowdown = 0.2
 
 
 /obj/item/weapon/gun/energy/pulseglove
