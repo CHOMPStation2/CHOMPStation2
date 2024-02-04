@@ -101,7 +101,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 			var/mob/living/silicon/robot/R = B.owner
 			R.cell.charge += 25*damage_gain */
 	if(offset && damage_gain > 0) // If any different than default weight, multiply the % of offset.
-		if(B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.reagents.maximum_volume) //digestion producing reagents
+		if(B.show_liquids && B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.reagents.maximum_volume) //digestion producing reagents
 			B.owner_adjust_nutrition(offset * (3 * damage_gain / difference) * L.get_digestion_nutrition_modifier() * B.owner.get_digestion_efficiency_modifier()) //Uncertain if balanced fairly, can adjust by multiplier for the cost of reagent, dont go below 1 or else it will result in more nutrition than normal - Jack
 			B.digest_nutri_gain += offset * (1.5 * damage_gain / difference) * L.get_digestion_nutrition_modifier() * B.owner.get_digestion_efficiency_modifier() //for transfering nutrition value over to GenerateBellyReagents_digesting()
 			B.GenerateBellyReagents_digesting()
@@ -124,7 +124,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	B.steal_nutrition(L)
 	if(L.nutrition < 100)
 		B.absorb_living(L)
-		if(B.reagent_mode_flags & DM_FLAG_REAGENTSABSORB && B.reagents.total_volume < B.reagents.maximum_volume) //CHOMPedit: absorption reagent production
+		if(B.show_liquids && B.reagent_mode_flags & DM_FLAG_REAGENTSABSORB && B.reagents.total_volume < B.reagents.maximum_volume) //CHOMPedit: absorption reagent production
 			B.GenerateBellyReagents_absorbed() //CHOMPedit end: A bonus for pred, I know for a fact prey is usually at zero nutrition when absorption finally happens
 		consider_healthbar(L, old_nutrition, B.owner)
 		return list("to_update" = TRUE)
@@ -191,7 +191,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 
 /datum/digest_mode/heal/process_mob(obj/belly/B, mob/living/L)
 	var/oldstat = L.stat
-	if(L.stat == DEAD)
+	if(L.stat == DEAD || !L.permit_healbelly) //CHOMPEdit healpref check
 		return null // Can't heal the dead with healbelly
 	var/mob/living/carbon/human/H = L
 	if(B.owner.nutrition > 90 && H.isSynthetic())
