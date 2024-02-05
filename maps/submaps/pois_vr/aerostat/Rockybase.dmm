@@ -671,6 +671,7 @@
 "cq" = (
 /obj/structure/cable{
 	icon_state = "0-4";
+	
 	},
 /obj/machinery/light{
 	dir = 8

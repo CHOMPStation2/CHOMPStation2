@@ -21523,19 +21523,6 @@
 /obj/structure/sign/warning/caution,
 /turf/simulated/wall/r_wall,
 /area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
-"lEF" = (
-/obj/structure/table/reinforced,
-/obj/machinery/door/blast/regular/open{
-	dir = 4;
-	id = "vld_exterior"
-	},
-/obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/window/brigdoor/southright{
-	req_access = null;
-	req_one_access = list(1,19)
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/vaultcheckpoint)
 "lEZ" = (
 /obj/structure/table/bench/standard,
 /obj/effect/floor_decal/borderfloor{
@@ -26309,6 +26296,19 @@
 /obj/machinery/light,
 /turf/simulated/floor/wood,
 /area/construction/firstdeck/construction4)
+"qLa" = (
+/obj/structure/table/reinforced,
+/obj/machinery/door/blast/regular/open{
+	dir = 4;
+	id = "vld_exterior"
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/window/brigdoor/southright{
+	req_access = null;
+	req_one_access = list(1,19)
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/firstdeck/vaultcheckpoint)
 "qMs" = (
 /obj/item/weapon/coin/gold,
 /obj/item/weapon/coin/gold,
@@ -27754,6 +27754,10 @@
 /obj/effect/floor_decal/borderfloor/shifted,
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology)
+"syL" = (
+/obj/random/vendorsnack,
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/forestarboard)
 "sza" = (
 /obj/structure/table/standard,
 /obj/structure/window/reinforced{
@@ -29363,10 +29367,6 @@
 /obj/random/mob/mouse,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport)
-"ufz" = (
-/obj/random/vendorsnack,
-/turf/simulated/floor/plating,
-/area/maintenance/firstdeck/forestarboard)
 "ugL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -68716,7 +68716,7 @@ nHc
 bMw
 gLe
 asn
-lEF
+qLa
 nOq
 ayG
 amk
@@ -70015,7 +70015,7 @@ awy
 qQM
 aOi
 aCd
-ufz
+syL
 bnt
 iau
 abT
