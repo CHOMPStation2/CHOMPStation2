@@ -70,7 +70,7 @@
 		var/total_volume = B.reagents.total_volume
 		vore_organs_reagents += total_volume
 
-		if(B.vorefootsteps_sounds == TRUE && highest_vol < total_volume)
+		if(B.show_liquids && B.vorefootsteps_sounds && highest_vol < total_volume)
 			highest_vol = total_volume
 
 	if(highest_vol < 20)	//For now the volume will be off if less than 20 units of reagent are in vorebellies
@@ -234,7 +234,7 @@
 				choices += rc
 			var/obj/item/weapon/reagent_containers/T = input(user,"Choose what to transfer to","Select Target") as null|anything in choices
 			if(!T)
-			 return FALSE
+				return FALSE
 			if(!Adjacent(T) || !Adjacent(TG))
 				return //No long distance transfer
 

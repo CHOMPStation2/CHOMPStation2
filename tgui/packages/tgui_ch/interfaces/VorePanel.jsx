@@ -4,10 +4,12 @@ import { useBackend, useLocalState } from '../backend';
 import { Box, Button, Flex, Collapsible, Icon, LabeledList, NoticeBox, Section, Tabs, Divider, Stack } from '../components';
 import { Window } from '../layouts';
 import { classes } from 'common/react';
+import { NumberInput } from '../../tgui/components';
 
 const stats = [null, 'average', 'bad'];
 
 const digestModeToColor = {
+  'Default': null,
   'Hold': null,
   'Digest': 'red',
   'Absorb': 'purple',
@@ -19,6 +21,21 @@ const digestModeToColor = {
   'Size Steal': 'teal',
   'Heal': 'green',
   'Encase In Egg': 'blue',
+};
+
+const reagentToColor = {
+  'Water': null,
+  'Milk': null,
+  'Cream': null,
+  'Honey': 'teal',
+  'Cherry Jelly': 'teal',
+  'Digestive acid': 'red',
+  'Diluted digestive acid': 'red',
+  'Space cleaner': null,
+  'Lube': null,
+  'Biomass': 'teal',
+  'Concentrated Radium': 'orange',
+  'Tricordrazine': 'green',
 };
 
 const digestModeToPreyMode = {
@@ -229,8 +246,18 @@ export const VorePanel = (props, context) => {
 const VoreInsidePanel = (props, context) => {
   const { act, data } = useBackend(context);
 
-  const { absorbed, belly_name, belly_mode, desc, pred, contents, ref } =
-    data.inside;
+  const {
+    absorbed,
+    belly_name,
+    belly_mode,
+    desc,
+    pred,
+    contents,
+    ref,
+    liq_lvl,
+    liq_reagent_type,
+    liuq_name,
+  } = data.inside;
 
   if (!belly_name) {
     return <Section title="Inside">You aren&apos;t inside anyone.</Section>;
@@ -249,6 +276,20 @@ const VoreInsidePanel = (props, context) => {
       <Box color="red" inline>
         {belly_name}
       </Box>
+      {liq_lvl > 0 ? (
+        <>
+          ,&nbsp;
+          <Box color="yellow" inline>
+            bathing in a pool of
+          </Box>
+          &nbsp;
+          <Box color={reagentToColor[liq_reagent_type]} inline>
+            {liuq_name}
+          </Box>
+        </>
+      ) : (
+        ''
+      )}
       &nbsp;
       <Box color="yellow" inline>
         and you are
@@ -1142,8 +1183,9 @@ const VoreSelectedMobTypeBellyButtons = (props, context) => {
       return (
         <Section title={'Cyborg Controls'} width={'80%'}>
           <span style={{ color: 'red' }}>
-            Your module does either not support vore sprites or you've selected
-            a belly sprite other than the sleeper within the Visuals section.
+            Your module does either not support vore sprites or you&apos;ve
+            selected a belly sprite other than the sleeper within the Visuals
+            section.
           </span>
         </Section>
       );
@@ -2087,6 +2129,7 @@ const VoreSelectedBellyLiquidOptions = (props, context) => {
                 })
               }
               icon="pen"
+              color={reagentToColor[liq_interacts.liq_reagent_type]}
               content={liq_interacts.liq_reagent_type}
             />
           </LabeledList.Item>
@@ -2476,37 +2519,47 @@ const VoreUserPreferences = (props, context) => {
 
   const {
     digestable,
-    devourable,
-    resizable,
-    feeding,
     absorbable,
-    digest_leave_remains,
+    devourable,
     allowmobvore,
+    feeding,
     permit_healbelly,
-    show_vore_fx,
     can_be_drop_prey,
     can_be_drop_pred,
+    drop_vore,
+    slip_vore,
+    stumble_vore,
+    throw_vore,
+    phase_vore,
+    food_vore,
     latejoin_vore,
     latejoin_prey,
-    allow_spontaneous_tf,
-    step_mechanics_active,
-    pickup_mechanics_active,
     noisy,
     noisy_full,
+    resizable,
+    step_mechanics_active,
+    show_vore_fx,
+    digest_leave_remains,
+    pickup_mechanics_active,
+    allow_spontaneous_tf,
+    eating_privacy_global,
+    strip_mechanics_active,
+    autotransferable,
     liq_rec,
     liq_giv,
-    autotransferable,
-    drop_vore,
-    stumble_vore,
-    slip_vore,
-    throw_vore,
-    food_vore,
+    liq_apply,
+    no_spawnpred_warning,
+    no_spawnprey_warning,
+    no_spawnpred_warning_time,
+    no_spawnprey_warning_time,
+    no_spawnpred_warning_save,
+    no_spawnprey_warning_save,
     nutrition_message_visible,
     weight_message_visible,
-    eating_privacy_global,
+    selective_active,
   } = data.prefs;
 
-  const { show_pictures } = data;
+  const { show_pictures, overflow } = data;
 
   const [tabIndex, setTabIndex] = useLocalState(context, 'tabIndex', 0);
 
@@ -2540,6 +2593,7 @@ const VoreUserPreferences = (props, context) => {
     devour: {
       action: 'toggle_devour',
       test: devourable,
+      fluid: false,
       tooltip: {
         main: 'This button is to toggle your ability to be devoured by others.',
         enable: 'Click here to allow being devoured.',
@@ -2580,9 +2634,7 @@ const VoreUserPreferences = (props, context) => {
       action: 'toggle_healbelly',
       test: permit_healbelly,
       tooltip: {
-        main:
-          "This button is for those who don't like healbelly used on them as a mechanic." +
-          ' It does not affect anything, but is displayed under mechanical prefs for ease of quick checks.',
+        main: "This button is for those who don't like healbelly used on them as a mechanic.",
         enable: 'Click here to allow being heal-bellied.',
         disable: 'Click here to prevent being heal-bellied.',
       },
@@ -2594,6 +2646,7 @@ const VoreUserPreferences = (props, context) => {
     dropnom_prey: {
       action: 'toggle_dropnom_prey',
       test: can_be_drop_prey,
+      fluid: false,
       tooltip: {
         main:
           'This toggle is for spontaneous, environment related vore' +
@@ -2609,6 +2662,7 @@ const VoreUserPreferences = (props, context) => {
     dropnom_pred: {
       action: 'toggle_dropnom_pred',
       test: can_be_drop_pred,
+      fluid: false,
       tooltip: {
         main:
           'This toggle is for spontaneous, environment related vore' +
@@ -2681,6 +2735,21 @@ const VoreUserPreferences = (props, context) => {
         disabled: 'Throw Vore Disabled',
       },
     },
+    toggle_phase_vore: {
+      action: 'toggle_phase_vore',
+      test: phase_vore,
+      tooltip: {
+        main:
+          'Allows for phasing related spontaneous vore to occur. ' +
+          ' Note, you still need spontaneous vore pred and/or prey enabled.',
+        enable: 'Click here to allow for phase vore.',
+        disable: 'Click here to disable phase vore.',
+      },
+      content: {
+        enabled: 'Phase Vore Enabled',
+        disabled: 'Phase Vore Disabled',
+      },
+    },
     toggle_food_vore: {
       action: 'toggle_food_vore',
       test: food_vore,
@@ -2699,6 +2768,7 @@ const VoreUserPreferences = (props, context) => {
     spawnbelly: {
       action: 'toggle_latejoin_vore',
       test: latejoin_vore,
+      fluid: false,
       tooltip: {
         main: 'Toggle late join vore spawnpoint.',
         enable: 'Click here to turn on vorish spawnpoint.',
@@ -2712,6 +2782,7 @@ const VoreUserPreferences = (props, context) => {
     spawnprey: {
       action: 'toggle_latejoin_prey',
       test: latejoin_prey,
+      fluid: false,
       tooltip: {
         main: 'Toggle late join preds spawning on you.',
         enable: 'Click here to turn on preds spawning around you.',
@@ -2870,6 +2941,23 @@ const VoreUserPreferences = (props, context) => {
         disabled: 'Examine Weight Messages Inactive',
       },
     },
+    strippref: {
+      action: 'toggle_strippref',
+      test: strip_mechanics_active,
+      tooltip: {
+        main: '',
+        enable:
+          'Regardless of Predator Setting, you will not be stripped inside their bellies.' +
+          ' Click this to allow stripping.',
+        disable:
+          'Your Predator must have this setting enabled in their belly modes to allow stripping your gear,' +
+          ' if they do not, they will not strip your gear, even with this on. Click to disable stripping.',
+      },
+      content: {
+        enabled: 'Allow Worn Item Stripping',
+        disabled: 'Do Not Allow Worn Item Stripping',
+      },
+    },
     eating_privacy_global: {
       action: 'toggle_global_privacy',
       test: eating_privacy_global,
@@ -2884,6 +2972,19 @@ const VoreUserPreferences = (props, context) => {
       content: {
         enabled: 'Global Vore Privacy: Subtle',
         disabled: 'Global Vore Privacy: Loud',
+      },
+    },
+    autotransferable: {
+      action: 'toggle_autotransferable',
+      test: autotransferable,
+      tooltip: {
+        main: 'This button is for allowing or preventing belly auto-transfer mechanics from moving you.',
+        enable: 'Click here to allow autotransfer.',
+        disable: 'Click here to prevent autotransfer.',
+      },
+      content: {
+        enabled: 'Auto-Transfer Allowed',
+        disabled: 'Do Not Allow Auto-Transfer',
       },
     },
     liquid_receive: {
@@ -2912,143 +3013,399 @@ const VoreUserPreferences = (props, context) => {
         disabled: 'Do Not Allow Taking Liquids',
       },
     },
-    autotransferable: {
-      action: 'toggle_autotransferable',
-      test: autotransferable,
+    liquid_apply: {
+      action: 'toggle_liq_apply',
+      test: liq_apply,
       tooltip: {
-        main: 'This button is for allowing or preventing belly auto-transfer mechanics from moving you.',
-        enable: 'Click here to allow autotransfer.',
-        disable: 'Click here to prevent autotransfer.',
+        main: 'This button is for allowing or preventing vorgans from applying liquids to you.',
+        enable: 'Click here to allow the application of liquids.',
+        disable: 'Click here to prevent the application of liquids.',
       },
       content: {
-        enabled: 'Auto-Transfer Allowed',
-        disabled: 'Do Not Allow Auto-Transfer',
+        enabled: 'Applying Liquids Allowed',
+        disabled: 'Do Not Allow Applying Liquids',
+      },
+    },
+    no_spawnpred_warning: {
+      action: 'toggle_no_latejoin_vore_warning',
+      test: no_spawnpred_warning,
+      tooltip: {
+        main:
+          'This button is to disable the vore spawnpoint confirmations ' +
+          (no_spawnpred_warning_save
+            ? '(round persistent).'
+            : '(no round persistence).'),
+        enable:
+          'Click here to auto accept spawnpoint confirmations after ' +
+          String(no_spawnpred_warning_time) +
+          ' seconds.',
+        disable:
+          'Click here to no longer auto accept spawnpoint confirmations after ' +
+          String(no_spawnpred_warning_time) +
+          ' seconds.',
+      },
+      back_color: {
+        enabled: no_spawnpred_warning_save ? 'green' : '#8B8000',
+        disabled: '',
+      },
+      content: {
+        enabled: 'Vore Spawn Pred Auto Accept Enabled',
+        disabled: 'Vore Spawn Pred Auto Accept Disabled',
+      },
+    },
+    no_spawnprey_warning: {
+      action: 'toggle_no_latejoin_prey_warning',
+      test: no_spawnprey_warning,
+      tooltip: {
+        main:
+          'This button is to disable the pred spawning on you confirmations ' +
+          (no_spawnprey_warning_save
+            ? '(round persistent).'
+            : '(no round persistence).'),
+        enable:
+          'Click here to auto accept pred spawn confirmations after ' +
+          String(no_spawnprey_warning_time) +
+          ' seconds.',
+        disable:
+          'Click here to no longer auto accept pred spawn confirmations after ' +
+          String(no_spawnprey_warning_time) +
+          ' seconds.',
+      },
+      back_color: {
+        enabled: no_spawnprey_warning_save ? 'green' : '#8B8000',
+        disabled: '',
+      },
+      content: {
+        enabled: 'Vore Spawn Prey Auto Accept Enabled',
+        disabled: 'Vore Spawn Prey Auto Accept Disabled',
       },
     },
   };
 
   return (
-    <Section
-      title="Mechanical Preferences"
-      buttons={
-        <Button
-          icon="eye"
-          selected={show_pictures}
-          onClick={() => act('show_pictures')}>
-          Contents Preference: {show_pictures ? 'Show Pictures' : 'Show List'}
-        </Button>
-      }>
-      <Flex spacing={1} wrap="wrap" justify="center">
-        <Flex.Item basis="32%">
-          <VoreUserPreferenceItem spec={preferences.digestion} />
-        </Flex.Item>
-        <Flex.Item basis="32%" grow={1}>
-          <VoreUserPreferenceItem spec={preferences.absorbable} />
-        </Flex.Item>
-        <Flex.Item basis="32%">
-          <VoreUserPreferenceItem spec={preferences.devour} />
-        </Flex.Item>
-        <Flex.Item basis="32%">
-          <VoreUserPreferenceItem spec={preferences.mobvore} />
-        </Flex.Item>
-        <Flex.Item basis="32%" grow={1}>
-          <VoreUserPreferenceItem spec={preferences.feed} />
-        </Flex.Item>
-        <Flex.Item basis="32%">
-          <VoreUserPreferenceItem
-            spec={preferences.healbelly}
-            tooltipPosition="top"
-          />
-        </Flex.Item>
-        <Flex.Item basis="32%">
-          <VoreUserPreferenceItem spec={preferences.dropnom_prey} />
-        </Flex.Item>
-        <Flex.Item basis="32%" grow={1}>
-          <VoreUserPreferenceItem spec={preferences.dropnom_pred} />
-        </Flex.Item>
-        <Flex.Item basis="32%">
-          <VoreUserPreferenceItem spec={preferences.toggle_drop_vore} />
-        </Flex.Item>
-        <Flex.Item basis="32%">
-          <VoreUserPreferenceItem spec={preferences.toggle_slip_vore} />
-        </Flex.Item>
-        <Flex.Item basis="32%" grow={1}>
-          <VoreUserPreferenceItem spec={preferences.toggle_stumble_vore} />
-        </Flex.Item>
-        <Flex.Item basis="32%">
-          <VoreUserPreferenceItem spec={preferences.toggle_throw_vore} />
-        </Flex.Item>
-        <Flex.Item basis="32%">
-          <VoreUserPreferenceItem spec={preferences.toggle_food_vore} />
-        </Flex.Item>
-        <Flex.Item basis="32%" grow={1}>
-          <VoreUserPreferenceItem spec={preferences.spawnbelly} />
-        </Flex.Item>
-        <Flex.Item basis="32%" grow={1}>
-          <VoreUserPreferenceItem spec={preferences.spawnprey} />
-        </Flex.Item>
-        <Flex.Item basis="32%">
-          <VoreUserPreferenceItem spec={preferences.noisy} />
-        </Flex.Item>
-        <Flex.Item basis="32%">
-          <VoreUserPreferenceItem spec={preferences.noisy_full} />
-        </Flex.Item>
-        <Flex.Item basis="32%">
-          <VoreUserPreferenceItem spec={preferences.resize} />
-        </Flex.Item>
-        <Flex.Item basis="32%" grow={1}>
-          <VoreUserPreferenceItem
-            spec={preferences.steppref}
-            tooltipPosition="top"
-          />
-        </Flex.Item>
-        <Flex.Item basis="32%">
-          <VoreUserPreferenceItem
-            spec={preferences.vore_fx}
-            tooltipPosition="top"
-          />
-        </Flex.Item>
-        <Flex.Item basis="32%">
-          <VoreUserPreferenceItem
-            spec={preferences.remains}
-            tooltipPosition="top"
-          />
-        </Flex.Item>
-        <Flex.Item basis="32%" grow={1}>
-          <VoreUserPreferenceItem
-            spec={preferences.pickuppref}
-            tooltipPosition="top"
-          />
-        </Flex.Item>
-        <Flex.Item basis="32%">
-          <VoreUserPreferenceItem spec={preferences.spontaneous_tf} />
-        </Flex.Item>
-        <Flex.Item basis="32%">
+    <Box nowrap>
+      <Section
+        title="Mechanical Preferences"
+        buttons={
           <Button
-            fluid
-            content="Selective Mode Preference"
-            onClick={() => act('switch_selective_mode_pref')}
-          />
-        </Flex.Item>
-        <Flex.Item basis="32%">
-          <VoreUserPreferenceItem spec={preferences.eating_privacy_global} />
-        </Flex.Item>
-        <Flex.Item basis="32%" grow={1}>
-          <VoreUserPreferenceItem spec={preferences.autotransferable} />
-        </Flex.Item>
-        <Flex.Item basis="32%">
-          <VoreUserPreferenceItem
-            spec={preferences.liquid_receive}
-            tooltipPosition="top"
-          />
-        </Flex.Item>
-        <Flex.Item basis="32%">
-          <VoreUserPreferenceItem
-            spec={preferences.liquid_give}
-            tooltipPosition="top"
-          />
-        </Flex.Item>
-      </Flex>
+            icon="eye"
+            selected={show_pictures}
+            tooltip={
+              'Allows to toggle if belly contents are shown as icons or in list format. ' +
+              (show_pictures
+                ? 'Contents shown as pictures.'
+                : 'Contents shown as lists.') +
+              (show_pictures && overflow
+                ? 'Temporarily disabled. Stomach contents above limits.'
+                : '')
+            }
+            backgroundColor={show_pictures && overflow ? 'orange' : ''}
+            onClick={() => act('show_pictures')}>
+            Contents Preference: {show_pictures ? 'Show Pictures' : 'Show List'}
+          </Button>
+        }>
+        <Flex spacing={1} wrap="wrap" justify="center">
+          <Flex.Item basis="33%">
+            <VoreUserPreferenceItem
+              spec={preferences.steppref}
+              tooltipPosition="right"
+            />
+          </Flex.Item>
+          <Flex.Item basis="33%" grow={1}>
+            <VoreUserPreferenceItem
+              spec={preferences.pickuppref}
+              tooltipPosition="top"
+            />
+          </Flex.Item>
+          <Flex.Item basis="33%">
+            <VoreUserPreferenceItem
+              spec={preferences.resize}
+              tooltipPosition="left"
+            />
+          </Flex.Item>
+          <Flex.Item basis="33%">
+            <VoreUserPreferenceItem
+              spec={preferences.feed}
+              tooltipPosition="right"
+            />
+          </Flex.Item>
+          <Flex.Item basis="33%" grow={1}>
+            <VoreUserPreferenceItem
+              spec={preferences.liquid_receive}
+              tooltipPosition="top"
+            />
+          </Flex.Item>
+          <Flex.Item basis="33%">
+            <VoreUserPreferenceItem
+              spec={preferences.liquid_give}
+              tooltipPosition="left"
+            />
+          </Flex.Item>
+          <Flex.Item basis="33%">
+            <VoreUserPreferenceItem
+              spec={preferences.noisy}
+              tooltipPosition="right"
+            />
+          </Flex.Item>
+          <Flex.Item basis="33%" grow={1}>
+            <VoreUserPreferenceItem
+              spec={preferences.noisy_full}
+              tooltipPosition="top"
+            />
+          </Flex.Item>
+          <Flex.Item basis="33%">
+            <VoreUserPreferenceItem
+              spec={preferences.eating_privacy_global}
+              tooltipPosition="left"
+            />
+          </Flex.Item>
+          <Flex.Item basis="33%">
+            <VoreUserPreferenceItem
+              spec={preferences.vore_fx}
+              tooltipPosition="right"
+            />
+          </Flex.Item>
+          <Flex.Item basis="33%">
+            <VoreUserPreferenceItem
+              spec={preferences.spontaneous_tf}
+              tooltipPosition="top"
+            />
+          </Flex.Item>
+        </Flex>
+      </Section>
+      <Section
+        title="Devouring Preferences"
+        buttons={
+          <Box nowrap>
+            <VoreUserPreferenceItem
+              spec={preferences.devour}
+              tooltipPosition="top"
+            />
+          </Box>
+        }>
+        {devourable ? (
+          <Flex spacing={1} wrap="wrap" justify="center">
+            <Flex.Item basis="33%">
+              <VoreUserPreferenceItem
+                spec={preferences.healbelly}
+                tooltipPosition="right"
+              />
+            </Flex.Item>
+            <Flex.Item basis="33%" grow={1}>
+              <VoreUserPreferenceItem
+                spec={preferences.digestion}
+                tooltipPosition="top"
+              />
+            </Flex.Item>
+            <Flex.Item basis="33%">
+              <VoreUserPreferenceItem
+                spec={preferences.absorbable}
+                tooltipPosition="left"
+              />
+            </Flex.Item>
+            <Flex.Item basis="33%">
+              <Button
+                fluid
+                content={
+                  'Selective Mode Preference: ' + capitalize(selective_active)
+                }
+                backgroundColor={digestModeToColor[selective_active]}
+                tooltip="Allows to set the personal belly mode preference for selective bellies."
+                tooltipPosition="right"
+                onClick={() => act('switch_selective_mode_pref')}
+              />
+            </Flex.Item>
+            <Flex.Item basis="33%" grow={1}>
+              <VoreUserPreferenceItem
+                spec={preferences.mobvore}
+                tooltipPosition="top"
+              />
+            </Flex.Item>
+            <Flex.Item basis="33%">
+              <VoreUserPreferenceItem
+                spec={preferences.autotransferable}
+                tooltipPosition="left"
+              />
+            </Flex.Item>
+            <Flex.Item basis="33%">
+              <VoreUserPreferenceItem
+                spec={preferences.strippref}
+                tooltipPosition="right"
+              />
+            </Flex.Item>
+            <Flex.Item basis="33%" grow={1}>
+              <VoreUserPreferenceItem
+                spec={preferences.liquid_apply}
+                tooltipPosition="top"
+              />
+            </Flex.Item>
+            <Flex.Item basis="33%">
+              <VoreUserPreferenceItem
+                spec={preferences.remains}
+                tooltipPosition="left"
+              />
+            </Flex.Item>
+          </Flex>
+        ) : (
+          ''
+        )}
+      </Section>
+      <Section
+        title="Spontaneous Preferences"
+        buttons={
+          <Box nowrap>
+            <VoreUserPreferenceItem
+              spec={preferences.dropnom_prey}
+              tooltipPosition="top"
+            />
+            <VoreUserPreferenceItem
+              spec={preferences.dropnom_pred}
+              tooltipPosition="top"
+            />
+          </Box>
+        }>
+        {can_be_drop_prey || can_be_drop_pred ? (
+          <Flex spacing={1} wrap="wrap" justify="center">
+            <Flex.Item basis="33%">
+              <VoreUserPreferenceItem
+                spec={preferences.toggle_drop_vore}
+                tooltipPosition="right"
+              />
+            </Flex.Item>
+            <Flex.Item basis="33%" grow={1}>
+              <VoreUserPreferenceItem
+                spec={preferences.toggle_slip_vore}
+                tooltipPosition="top"
+              />
+            </Flex.Item>
+            <Flex.Item basis="33%">
+              <VoreUserPreferenceItem
+                spec={preferences.toggle_stumble_vore}
+                tooltipPosition="left"
+              />
+            </Flex.Item>
+            <Flex.Item basis="33%">
+              <VoreUserPreferenceItem
+                spec={preferences.toggle_throw_vore}
+                tooltipPosition="right"
+              />
+            </Flex.Item>
+            <Flex.Item basis="33%" grow={1}>
+              <VoreUserPreferenceItem
+                spec={preferences.toggle_food_vore}
+                tooltipPosition="top"
+              />
+            </Flex.Item>
+            <Flex.Item basis="33%">
+              <VoreUserPreferenceItem
+                spec={preferences.toggle_phase_vore}
+                tooltipPosition="left"
+              />
+            </Flex.Item>
+          </Flex>
+        ) : (
+          ''
+        )}
+      </Section>
+      <Section
+        title="Spawn Preferences"
+        buttons={
+          <Box nowrap>
+            <VoreUserPreferenceItem
+              spec={preferences.spawnbelly}
+              tooltipPosition="top"
+            />
+            <VoreUserPreferenceItem
+              spec={preferences.spawnprey}
+              tooltipPosition="top"
+            />
+          </Box>
+        }>
+        <Flex spacing={1} wrap="wrap" justify="center">
+          {latejoin_vore ? (
+            <>
+              <Flex.Item basis="33%">
+                <VoreUserPreferenceItem
+                  spec={preferences.no_spawnpred_warning}
+                  tooltipPosition="top"
+                />
+              </Flex.Item>
+              <Flex.Item basis="12%">
+                <NumberInput
+                  fluid
+                  value={no_spawnpred_warning_time}
+                  minValue={0}
+                  maxValue={30}
+                  unit="s"
+                  step={5}
+                  stepPixelSize={20}
+                  onChange={(e, value) =>
+                    act('adjust_no_latejoin_vore_warning_time', {
+                      new_pred_time: value,
+                    })
+                  }>
+                  T
+                </NumberInput>
+              </Flex.Item>
+              <Flex.Item basis="5%">
+                <Button
+                  fluid
+                  content={'P'}
+                  backgroundColor={no_spawnpred_warning_save ? 'green' : ''}
+                  tooltip="Toggles vore spawnpoint auto accept persistency."
+                  tooltipPosition="top"
+                  onClick={() =>
+                    act('toggle_no_latejoin_vore_warning_persists')
+                  }
+                />
+              </Flex.Item>
+            </>
+          ) : (
+            ''
+          )}
+          {latejoin_prey ? (
+            <>
+              <Flex.Item basis="33%">
+                <VoreUserPreferenceItem
+                  spec={preferences.no_spawnprey_warning}
+                  tooltipPosition="top"
+                />
+              </Flex.Item>
+              <Flex.Item basis="12%">
+                <NumberInput
+                  fluid
+                  value={no_spawnprey_warning_time}
+                  minValue={0}
+                  maxValue={30}
+                  unit="s"
+                  step={5}
+                  stepPixelSize={20}
+                  onChange={(e, value) =>
+                    act('adjust_no_latejoin_prey_warning_time', {
+                      new_prey_time: value,
+                    })
+                  }>
+                  T
+                </NumberInput>
+              </Flex.Item>
+              <Flex.Item basis="5%">
+                <Button
+                  fluid
+                  content={'P'}
+                  backgroundColor={no_spawnprey_warning_save ? 'green' : ''}
+                  tooltip="Toggles preyspawn auto accept persistency."
+                  tooltipPosition="top"
+                  onClick={() =>
+                    act('toggle_no_latejoin_prey_warning_persists')
+                  }
+                />
+              </Flex.Item>
+            </>
+          ) : (
+            ''
+          )}
+        </Flex>
+      </Section>
       <Section title="Aesthetic Preferences">
         <Flex spacing={1} wrap="wrap" justify="center">
           <Flex.Item basis="50%" grow={1}>
@@ -3105,7 +3462,7 @@ const VoreUserPreferences = (props, context) => {
       <Divider />
       <Section>
         <Flex spacing={1}>
-          <Flex.Item basis="49%">
+          <Flex.Item basis="50%">
             <Button
               fluid
               content="Save Prefs"
@@ -3113,7 +3470,7 @@ const VoreUserPreferences = (props, context) => {
               onClick={() => act('saveprefs')}
             />
           </Flex.Item>
-          <Flex.Item basis="49%" grow={1}>
+          <Flex.Item basis="50%" grow={1}>
             <Button
               fluid
               content="Reload Prefs"
@@ -3123,7 +3480,7 @@ const VoreUserPreferences = (props, context) => {
           </Flex.Item>
         </Flex>
       </Section>
-    </Section>
+    </Box>
   );
 };
 
@@ -3131,14 +3488,17 @@ const VoreUserPreferenceItem = (props, context) => {
   const { act } = useBackend(context);
 
   const { spec, ...rest } = props;
-  const { action, test, tooltip, content } = spec;
+  const { action, test, tooltip, content, fluid = true, back_color } = spec;
 
   return (
     <Button
       onClick={() => act(action)}
       icon={test ? 'toggle-on' : 'toggle-off'}
       selected={test}
-      fluid
+      fluid={fluid}
+      backgroundColor={
+        back_color ? (test ? back_color.enabled : back_color.disabled) : ''
+      }
       tooltip={tooltip.main + ' ' + (test ? tooltip.disable : tooltip.enable)}
       content={test ? content.enabled : content.disabled}
       {...rest}

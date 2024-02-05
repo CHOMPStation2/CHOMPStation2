@@ -38,7 +38,7 @@
 			else if(prob(10))
 				B.absorb_living(P)
 				//absorption reagent production
-				if(B.reagent_mode_flags & DM_FLAG_REAGENTSABSORB && B.reagents.total_volume < B.reagents.maximum_volume)
+				if(B.show_liquids && B.reagent_mode_flags & DM_FLAG_REAGENTSABSORB && B.reagents.total_volume < B.reagents.maximum_volume)
 					B.GenerateBellyReagents_absorbed()
 
 /datum/reagent/radium/concentrated

@@ -412,7 +412,7 @@
 			remove_self(volume)
 			return
 		if(B.owner)
-			if(B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.custom_max_volume)
+			if(B.show_liquids && B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.custom_max_volume)
 				B.owner_adjust_nutrition(removed * (B.nutrition_percent / 100) * power)
 				B.digest_nutri_gain += removed * (B.nutrition_percent / 100) + 0.5
 				B.GenerateBellyReagents_digesting()
@@ -466,7 +466,7 @@
 			remove_self(volume)
 			return
 		if(B.owner)
-			if(B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.custom_max_volume)
+			if(B.show_liquids && B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.custom_max_volume)
 				B.owner_adjust_nutrition(volume * (B.nutrition_percent / 100) * power)
 				B.digest_nutri_gain += volume * (B.nutrition_percent / 100) + 0.5
 				B.GenerateBellyReagents_digesting()
