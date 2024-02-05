@@ -1,7 +1,0 @@
-author: "FluffMedic"
-delete-after: True
-changes:
-  - bugfix: "Eclipse foes should all have some form of remains now"
-  - bugfix: "The hades mecha should now be buildable in it's gateway"
-  - bugfix: "the elemental gun should properly swap sprites and have the intended burst for each mode"
-  - bugfix: "The crystal rigsuit should be using the proper sprites"
