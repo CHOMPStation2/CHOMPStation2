@@ -578,7 +578,7 @@
 /turf/simulated/floor/wood,
 /area/redgate/eggnogtown/kitchihome/den)
 "bU" = (
-/obj/structure/bed/chair/sofa/beige/right{
+/obj/structure/bed/chair/sofa/right/beige{
 	dir = 8
 	},
 /turf/simulated/floor/wood{
@@ -602,7 +602,7 @@
 /turf/simulated/floor/bmarble,
 /area/redgate/eggnogtown/hall/north)
 "ca" = (
-/obj/structure/bed/chair/sofa/beige/corner{
+/obj/structure/bed/chair/sofa/corner/beige{
 	dir = 1
 	},
 /turf/simulated/floor/wmarble,
@@ -611,7 +611,7 @@
 /turf/simulated/wall/wood,
 /area/redgate/eggnogtown/cavehome/office)
 "cn" = (
-/obj/structure/bed/chair/sofa/black/right{
+/obj/structure/bed/chair/sofa/right/black{
 	dir = 4
 	},
 /turf/simulated/floor/wood,
@@ -723,7 +723,7 @@
 /turf/simulated/open,
 /area/redgate/eggnogtown/storage)
 "do" = (
-/obj/structure/bed/chair/sofa/black/right{
+/obj/structure/bed/chair/sofa/right/black{
 	dir = 8
 	},
 /turf/simulated/floor/wood{
@@ -786,7 +786,7 @@
 /turf/simulated/floor/outdoors/grass/forest,
 /area/redgate/eggnogtown/greenhouse)
 "dM" = (
-/obj/structure/bed/chair/sofa/beige/left{
+/obj/structure/bed/chair/sofa/left/beige{
 	dir = 8
 	},
 /turf/simulated/floor/wood{
@@ -863,7 +863,7 @@
 /turf/simulated/floor/wood,
 /area/redgate/eggnogtown/kitchihome)
 "ez" = (
-/obj/structure/bed/chair/sofa/beige/left{
+/obj/structure/bed/chair/sofa/left/beige{
 	dir = 8
 	},
 /turf/simulated/floor/wood{
@@ -892,7 +892,7 @@
 	},
 /area/redgate/eggnogtown/cavehome)
 "eO" = (
-/obj/structure/bed/chair/sofa/beige/right{
+/obj/structure/bed/chair/sofa/right/beige{
 	dir = 8
 	},
 /turf/simulated/floor/wood{
@@ -1308,11 +1308,7 @@
 /turf/simulated/floor/outdoors/grass/forest,
 /area/redgate/eggnogtown/greenhouse)
 "kG" = (
-<<<<<<< HEAD:maps/gateway_vr/eggnogtown.dmm
-/obj/machinery/telecomms/relay/preset/tether,
-=======
 /obj/structure/redgate/away,
->>>>>>> dd881251ef... Merge pull request #15167 from Very-Soft/stardog:maps/redgate/eggnogtown.dmm
 /turf/simulated/floor/reinforced,
 /area/redgate/eggnogtown/bar)
 "kI" = (
@@ -1402,7 +1398,7 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/redgate/eggnogtown/dining)
 "lS" = (
-/obj/structure/bed/chair/sofa/black/right{
+/obj/structure/bed/chair/sofa/right/black{
 	dir = 1
 	},
 /turf/simulated/floor/wood,
@@ -1447,7 +1443,7 @@
 	},
 /area/redgate/eggnogtown/stokeswashere)
 "mv" = (
-/obj/structure/bed/chair/sofa/black/corner,
+/obj/structure/bed/chair/sofa/corner/black,
 /turf/simulated/floor/wood,
 /area/redgate/eggnogtown/hall/south)
 "mw" = (
@@ -1865,7 +1861,7 @@
 /turf/simulated/wall/iron,
 /area/redgate/eggnogtown/alipad/bedroom)
 "sE" = (
-/obj/structure/bed/chair/sofa/black/left{
+/obj/structure/bed/chair/sofa/left/black{
 	dir = 8
 	},
 /turf/simulated/floor/wood{
@@ -1873,7 +1869,7 @@
 	},
 /area/redgate/eggnogtown/eastcaveland)
 "sF" = (
-/obj/structure/bed/chair/sofa/black/right{
+/obj/structure/bed/chair/sofa/right/black{
 	dir = 1
 	},
 /turf/simulated/floor/wood{
@@ -2203,7 +2199,7 @@
 /turf/simulated/floor/wood,
 /area/redgate/eggnogtown/hall/south)
 "wR" = (
-/obj/structure/bed/chair/sofa/black/right{
+/obj/structure/bed/chair/sofa/right/black{
 	dir = 4
 	},
 /turf/simulated/floor/wood{
@@ -2229,7 +2225,7 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/redgate/eggnogtown/loniabode)
 "xq" = (
-/obj/structure/bed/chair/sofa/beige/corner{
+/obj/structure/bed/chair/sofa/corner/beige{
 	dir = 8
 	},
 /turf/simulated/floor/wmarble,
@@ -2281,7 +2277,7 @@
 /turf/simulated/floor/wood,
 /area/redgate/eggnogtown/bar)
 "ys" = (
-/obj/structure/bed/chair/sofa/beige/corner,
+/obj/structure/bed/chair/sofa/corner/beige,
 /turf/simulated/floor/wmarble,
 /area/redgate/eggnogtown/arturoswolfden)
 "yt" = (
@@ -2339,7 +2335,7 @@
 	},
 /area/redgate/eggnogtown/sigloo)
 "zr" = (
-/obj/structure/bed/chair/sofa/black/right,
+/obj/structure/bed/chair/sofa/right/black,
 /turf/simulated/floor/wood{
 	temperature = 258.15
 	},
@@ -2375,7 +2371,7 @@
 /turf/simulated/floor/wood,
 /area/redgate/eggnogtown/visitorlounge)
 "zU" = (
-/obj/structure/bed/chair/sofa/black/left{
+/obj/structure/bed/chair/sofa/left/black{
 	dir = 4
 	},
 /turf/simulated/floor/carpet/bcarpet,
@@ -2609,7 +2605,7 @@
 /turf/simulated/floor/wood,
 /area/redgate/eggnogtown/kitchihome/bedroom)
 "CP" = (
-/obj/structure/bed/chair/sofa/black/left{
+/obj/structure/bed/chair/sofa/left/black{
 	dir = 1
 	},
 /turf/simulated/floor/wood,
@@ -2661,7 +2657,7 @@
 /turf/simulated/floor/wood,
 /area/redgate/eggnogtown/visitorlounge/room2)
 "DR" = (
-/obj/structure/bed/chair/sofa/black/left{
+/obj/structure/bed/chair/sofa/left/black{
 	dir = 8
 	},
 /turf/simulated/floor/wood,
@@ -2718,7 +2714,7 @@
 /turf/simulated/floor/reinforced,
 /area/redgate/eggnogtown/hall)
 "ES" = (
-/obj/structure/bed/chair/sofa/black/left,
+/obj/structure/bed/chair/sofa/left/black,
 /turf/simulated/floor/wood{
 	temperature = 258.15
 	},
@@ -2790,7 +2786,7 @@
 	},
 /area/redgate/eggnogtown/stokeswashere)
 "FL" = (
-/obj/structure/bed/chair/sofa/black/left{
+/obj/structure/bed/chair/sofa/left/black{
 	dir = 4
 	},
 /turf/simulated/floor/wood{
@@ -3015,7 +3011,7 @@
 /turf/simulated/floor/wood,
 /area/redgate/eggnogtown/arturoswolfden)
 "IW" = (
-/obj/structure/bed/chair/sofa/black/left,
+/obj/structure/bed/chair/sofa/left/black,
 /turf/simulated/floor/wood,
 /area/redgate/eggnogtown/hall/south)
 "Jc" = (
@@ -3140,7 +3136,7 @@
 /turf/simulated/floor/wood,
 /area/redgate/eggnogtown/hall/south)
 "KI" = (
-/obj/structure/bed/chair/sofa/black/left{
+/obj/structure/bed/chair/sofa/left/black{
 	dir = 1
 	},
 /obj/item/weapon/card/id{
@@ -3307,7 +3303,7 @@
 /turf/simulated/floor/wood,
 /area/redgate/eggnogtown/kitchihome/diningroom)
 "MI" = (
-/obj/structure/bed/chair/sofa/black/right,
+/obj/structure/bed/chair/sofa/right/black,
 /turf/simulated/floor/wood,
 /area/redgate/eggnogtown/hall/south)
 "MN" = (
@@ -3406,7 +3402,7 @@
 /turf/simulated/floor/wood,
 /area/redgate/eggnogtown/kitchihome)
 "Oq" = (
-/obj/structure/bed/chair/sofa/black/right{
+/obj/structure/bed/chair/sofa/right/black{
 	dir = 4
 	},
 /turf/simulated/floor/carpet/bcarpet,
@@ -3804,7 +3800,7 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/redgate/eggnogtown/loniabode)
 "TH" = (
-/obj/structure/bed/chair/sofa/black/right,
+/obj/structure/bed/chair/sofa/right/black,
 /turf/simulated/floor/wood{
 	temperature = 258.15
 	},
@@ -4036,7 +4032,7 @@
 /turf/simulated/wall/wood,
 /area/redgate/eggnogtown/loniabode)
 "Xm" = (
-/obj/structure/bed/chair/sofa/black/left,
+/obj/structure/bed/chair/sofa/left/black,
 /turf/simulated/floor/wood{
 	temperature = 258.15
 	},
@@ -4160,7 +4156,7 @@
 	},
 /area/redgate/eggnogtown/cavehome)
 "YD" = (
-/obj/structure/bed/chair/sofa/black/corner{
+/obj/structure/bed/chair/sofa/corner/black{
 	dir = 1
 	},
 /turf/simulated/floor/wood,
@@ -4178,7 +4174,7 @@
 /turf/simulated/floor/reinforced,
 /area/redgate/eggnogtown)
 "YP" = (
-/obj/structure/bed/chair/sofa/beige/corner{
+/obj/structure/bed/chair/sofa/corner/beige{
 	dir = 4
 	},
 /turf/simulated/floor/wmarble,

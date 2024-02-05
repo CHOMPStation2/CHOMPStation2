@@ -46,6 +46,7 @@
 /obj/structure/cable{
 	icon_state = "0-2";
 	pixel_y = 1;
+	
 	},
 /obj/machinery/power/apc{
 	dir = 1;
@@ -582,6 +583,7 @@
 /obj/structure/cable{
 	icon_state = "0-2";
 	pixel_y = 1;
+	
 	},
 /turf/simulated/floor,
 /area/awaymission/academy/classrooms)
@@ -1031,6 +1033,7 @@
 /obj/structure/cable{
 	icon_state = "0-2";
 	pixel_y = 1;
+	
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/academy/classrooms)
@@ -1042,6 +1045,7 @@
 /obj/structure/cable{
 	icon_state = "0-2";
 	pixel_y = 1;
+	
 	},
 /turf/simulated/floor/greengrid,
 /area/awaymission/academy/classrooms)
@@ -1349,6 +1353,7 @@
 "eh" = (
 /obj/structure/cable{
 	icon_state = "0-2";
+	
 	},
 /obj/machinery/power/apc{
 	dir = 1;
@@ -2007,6 +2012,7 @@
 /obj/structure/cable{
 	icon_state = "0-2";
 	pixel_y = 1;
+	
 	},
 /turf/simulated/floor{
 	 icon_state = "vault"
@@ -2497,6 +2503,7 @@
 "he" = (
 /obj/structure/cable{
 	icon_state = "0-2";
+	
 	},
 /obj/machinery/power/apc{
 	dir = 1;
@@ -2512,6 +2519,7 @@
 /obj/structure/cable{
 	icon_state = "0-2";
 	pixel_y = 1;
+	
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/academy/academyaft)
@@ -2597,6 +2605,7 @@
 	},
 /obj/structure/cable{
 	icon_state = "0-4";
+	
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/academy/academyaft)
@@ -3616,6 +3625,7 @@
 	},
 /obj/structure/cable{
 	icon_state = "0-2";
+	
 	},
 /turf/simulated/floor/carpet,
 /area/awaymission/academy/academygate)
@@ -3627,6 +3637,7 @@
 /obj/structure/cable{
 	icon_state = "0-2";
 	pixel_y = 1;
+	
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/academy/academygate)
