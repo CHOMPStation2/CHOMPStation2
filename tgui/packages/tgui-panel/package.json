@@ -6,8 +6,8 @@
     "common": "workspace:*",
     "dompurify": "^2.3.1",
     "inferno": "^7.4.8",
+    "tgui": "workspace:*",
     "tgui-dev-server": "workspace:*",
-    "tgui-polyfill": "workspace:*",
-    "tgui_ch": "workspace:*"
+    "tgui-polyfill": "workspace:*"
   }
 }

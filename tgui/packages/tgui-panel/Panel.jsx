@@ -4,8 +4,8 @@
  * @license MIT
  */
 
-import { Button, Section, Stack } from 'tgui_ch/components'; // CHOMPEdit - tgui_ch
-import { Pane } from 'tgui_ch/layouts'; // CHOMPEdit - tgui_ch
+import { Button, Section, Stack } from 'tgui/components';
+import { Pane } from 'tgui/layouts';
 import { NowPlayingWidget, useAudio } from './audio';
 import { ChatPanel, ChatTabs } from './chat';
 import { useGame } from './game';
@@ -23,7 +23,7 @@ export const Panel = (props, context) => {
   const settings = useSettings(context);
   const game = useGame(context);
   if (process.env.NODE_ENV !== 'production') {
-    const { useDebug, KitchenSink } = require('tgui_ch/debug'); // CHOMPEdit - tgui_ch
+    const { useDebug, KitchenSink } = require('tgui/debug');
     const debug = useDebug(context);
     if (debug.kitchenSink) {
       return <KitchenSink panel />;

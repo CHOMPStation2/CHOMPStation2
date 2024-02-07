@@ -5,8 +5,8 @@
 
 @use 'sass:color';
 @use 'sass:math';
-@use '~tgui_ch/styles/base.scss'; // CHOMPEdit - tgui_ch
-@use '~tgui_ch/styles/colors.scss'; // CHOMPEdit - tgui_ch
+@use '~tgui/styles/base.scss';
+@use '~tgui/styles/colors.scss';
 
 $text-color: #abc6ec !default;
 $color-bg-section: base.$color-bg-section !default;

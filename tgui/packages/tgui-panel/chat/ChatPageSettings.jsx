@@ -5,7 +5,7 @@
  */
 
 import { useDispatch, useSelector } from 'common/redux';
-import { Button, Collapsible, Divider, Input, Section, Stack } from 'tgui_ch/components'; // CHOMPEdit - tgui_ch
+import { Button, Collapsible, Divider, Input, Section, Stack } from 'tgui/components';
 import { moveChatPageLeft, moveChatPageRight, removeChatPage, toggleAcceptedType, updateChatPage } from './actions';
 import { MESSAGE_TYPES } from './constants';
 import { selectCurrentChatPage } from './selectors';

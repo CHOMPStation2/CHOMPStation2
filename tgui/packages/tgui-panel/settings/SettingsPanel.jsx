@@ -5,9 +5,9 @@
  */
 
 import { toFixed } from 'common/math';
-import { useLocalState } from 'tgui_ch/backend'; // CHOMPEdit - tgui_ch
+import { useLocalState } from 'tgui/backend';
 import { useDispatch, useSelector } from 'common/redux';
-import { Box, Button, ColorBox, Divider, Dropdown, Flex, Input, LabeledList, NumberInput, Section, Stack, Tabs, TextArea } from 'tgui_ch/components'; // CHOMPEdit - tgui_ch
+import { Box, Button, ColorBox, Divider, Dropdown, Flex, Input, LabeledList, NumberInput, Section, Stack, Tabs, TextArea } from 'tgui/components';
 import { ChatPageSettings } from '../chat';
 import { rebuildChat, saveChatToDisk, purgeChatMessageArchive } from '../chat/actions';
 import { THEMES } from '../themes';

@@ -1,4 +1,4 @@
-import { Button } from 'tgui_ch/components'; // CHOMPEdit - tgui_ch
+import { Button } from 'tgui/components';
 import { useDispatch } from 'common/redux';
 import { dismissWarning } from './game/actions';
 
