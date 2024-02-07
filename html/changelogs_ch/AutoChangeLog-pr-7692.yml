@@ -1,4 +1,0 @@
-author: "Raeschen"
-delete-after: True
-changes:
-  - balance: "global projectile speed increased from 3.0 to 1.5 (Lower is faster)"
