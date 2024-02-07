@@ -73,3 +73,6 @@
   - rscadd: '''Hide'' neutral trait.'
   TheCaramelion:
   - bugfix: Virus event will no longer pick immune species
+2024-02-07:
+  Raeschen:
+  - balance: global projectile speed increased from 3.0 to 1.5 (Lower is faster)
