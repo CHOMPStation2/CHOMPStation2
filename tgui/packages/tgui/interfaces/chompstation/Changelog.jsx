@@ -1,9 +1,9 @@
 import { classes } from 'common/react';
-import { useBackend } from '../backend';
+import { useBackend } from '../../backend';
 import { Component, Fragment } from 'inferno';
-import { Box, Button, Dropdown, Icon, Section, Stack, Table } from '../components';
-import { Window } from '../layouts';
-import { resolveAsset } from '../assets';
+import { Box, Button, Dropdown, Icon, Section, Stack, Table } from '../../components';
+import { Window } from '../../layouts';
+import { resolveAsset } from '../../assets';
 import dateformat from 'dateformat';
 import yaml from 'js-yaml';
 

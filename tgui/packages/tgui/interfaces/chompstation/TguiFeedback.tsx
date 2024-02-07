@@ -1,6 +1,6 @@
-import { useBackend, useLocalState } from '../backend';
-import { Box, Button, Flex, Input, Section, Tabs, TextArea } from '../components';
-import { Window } from '../layouts';
+import { useBackend, useLocalState } from '../../backend';
+import { Box, Button, Flex, Input, Section, Tabs, TextArea } from '../../components';
+import { Window } from '../../layouts';
 
 type Data = {
   open_windows: string[];

@@ -1,10 +1,10 @@
 import { capitalize } from 'common/string';
 import { Fragment } from 'inferno';
-import { useBackend, useLocalState } from '../backend';
-import { Box, Button, Flex, Collapsible, Icon, LabeledList, NoticeBox, Section, Tabs, Divider, Stack } from '../components';
-import { Window } from '../layouts';
+import { useBackend, useLocalState } from '../../backend';
+import { Box, Button, Flex, Collapsible, Icon, LabeledList, NoticeBox, Section, Tabs, Divider, Stack } from '../../components';
+import { Window } from '../../layouts';
 import { classes } from 'common/react';
-import { NumberInput } from '../../tgui/components';
+import { NumberInput } from '../../components';
 
 const stats = [null, 'average', 'bad'];
 

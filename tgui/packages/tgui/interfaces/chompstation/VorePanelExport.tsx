@@ -1,6 +1,6 @@
-import { useBackend } from '../backend';
-import { Window } from '../layouts';
-import { Button, Section } from '../components';
+import { useBackend } from '../../backend';
+import { Window } from '../../layouts';
+import { Button, Section } from '../../components';
 import { BooleanLike } from 'common/react';
 
 const ModeSpan = {

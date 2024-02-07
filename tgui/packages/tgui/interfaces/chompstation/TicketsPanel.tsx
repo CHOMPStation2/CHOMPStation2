@@ -1,9 +1,9 @@
 /* eslint react/no-danger: "off" */
-import { KEY_ENTER } from '../../common/keycodes';
-import { BooleanLike } from '../../common/react';
-import { useBackend, useLocalState } from '../backend';
-import { Box, Button, Divider, Dropdown, Flex, Icon, Input, LabeledList, Section, Tabs } from '../components';
-import { Window } from '../layouts';
+import { KEY_ENTER } from '../../../common/keycodes';
+import { BooleanLike } from '../../../common/react';
+import { useBackend, useLocalState } from '../../backend';
+import { Box, Button, Divider, Dropdown, Flex, Icon, Input, LabeledList, Section, Tabs } from '../../components';
+import { Window } from '../../layouts';
 
 const Level = {
   0: 'Admin',
