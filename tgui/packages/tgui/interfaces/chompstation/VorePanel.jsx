@@ -175,7 +175,7 @@ const digestModeToPreyMode = {
  *           </Section>
  *         </Section>
  *
- * LINE 900 - const [tabIndex, setTabIndex] = useLocalState(context, 'tabIndex', 0);
+ * LINE 900 - const [tabIndex, setTabIndex] = useLocalState('tabIndex', 0);
  *
  * return tabIndex===4 ? null : (
  *
@@ -185,10 +185,10 @@ const digestModeToPreyMode = {
  * That's everything so far.
  *
  */
-export const VorePanel = (props, context) => {
-  const { act, data } = useBackend(context);
+export const VorePanel = (props) => {
+  const { act, data } = useBackend();
 
-  const [tabIndex, setTabIndex] = useLocalState(context, 'panelTabIndex', 0);
+  const [tabIndex, setTabIndex] = useLocalState('panelTabIndex', 0);
 
   const tabs = [];
 
@@ -243,8 +243,8 @@ export const VorePanel = (props, context) => {
   );
 };
 
-const VoreInsidePanel = (props, context) => {
-  const { act, data } = useBackend(context);
+const VoreInsidePanel = (props) => {
+  const { act, data } = useBackend();
 
   const {
     absorbed,
@@ -310,8 +310,8 @@ const VoreInsidePanel = (props, context) => {
   );
 };
 
-const VoreBellySelectionAndCustomization = (props, context) => {
-  const { act, data } = useBackend(context);
+const VoreBellySelectionAndCustomization = (props) => {
+  const { act, data } = useBackend();
 
   const { our_bellies, selected } = data;
 
@@ -366,13 +366,13 @@ const VoreBellySelectionAndCustomization = (props, context) => {
 /**
  * Subtemplate of VoreBellySelectionAndCustomization
  */
-const VoreSelectedBelly = (props, context) => {
-  const { act } = useBackend(context);
+const VoreSelectedBelly = (props) => {
+  const { act } = useBackend();
 
   const { belly } = props;
   const { contents } = belly;
 
-  const [tabIndex, setTabIndex] = useLocalState(context, 'bellyTabIndex', 0);
+  const [tabIndex, setTabIndex] = useLocalState('bellyTabIndex', 0);
 
   const tabs = [];
 
@@ -430,8 +430,8 @@ const VoreSelectedBelly = (props, context) => {
   );
 };
 
-const VoreSelectedBellyControls = (props, context) => {
-  const { act } = useBackend(context);
+const VoreSelectedBellyControls = (props) => {
+  const { act } = useBackend();
 
   const { belly } = props;
   const { belly_name, mode, item_mode, addons } = belly;
@@ -497,8 +497,8 @@ const VoreSelectedBellyControls = (props, context) => {
   );
 };
 
-const VoreSelectedBellyDescriptions = (props, context) => {
-  const { act } = useBackend(context);
+const VoreSelectedBellyDescriptions = (props) => {
+  const { act } = useBackend();
 
   const { belly } = props;
   const { verb, release_verb, desc, absorbed_desc } = belly;
@@ -860,8 +860,8 @@ const VoreSelectedBellyDescriptions = (props, context) => {
   );
 };
 
-const VoreSelectedBellyOptions = (props, context) => {
-  const { act, data } = useBackend(context);
+const VoreSelectedBellyOptions = (props) => {
+  const { act, data } = useBackend();
 
   const { host_mobtype } = data;
   const { is_cyborg, is_vore_simple_mob } = host_mobtype;
@@ -1149,8 +1149,8 @@ const VoreSelectedBellyOptions = (props, context) => {
   );
 };
 
-const VoreSelectedMobTypeBellyButtons = (props, context) => {
-  const { act, data } = useBackend(context);
+const VoreSelectedMobTypeBellyButtons = (props) => {
+  const { act, data } = useBackend();
   const { host_mobtype } = data;
   const { is_cyborg, is_vore_simple_mob } = host_mobtype;
   const { belly } = props;
@@ -1207,8 +1207,8 @@ const VoreSelectedMobTypeBellyButtons = (props, context) => {
   }
 };
 
-const VoreSelectedBellySounds = (props, context) => {
-  const { act } = useBackend(context);
+const VoreSelectedBellySounds = (props) => {
+  const { act } = useBackend();
 
   const { belly } = props;
   const {
@@ -1295,8 +1295,8 @@ const VoreSelectedBellySounds = (props, context) => {
   );
 };
 
-const VoreSelectedBellyVisuals = (props, context) => {
-  const { act } = useBackend(context);
+const VoreSelectedBellyVisuals = (props) => {
+  const { act } = useBackend();
 
   const { belly } = props;
   const {
@@ -1638,8 +1638,8 @@ const VoreSelectedBellyVisuals = (props, context) => {
   );
 };
 
-const VoreSelectedBellyInteractions = (props, context) => {
-  const { act } = useBackend(context);
+const VoreSelectedBellyInteractions = (props) => {
+  const { act } = useBackend();
 
   const { belly } = props;
   const {
@@ -1972,8 +1972,8 @@ const VoreSelectedBellyInteractions = (props, context) => {
   );
 };
 
-const VoreContentsPanel = (props, context) => {
-  const { act, data } = useBackend(context);
+const VoreContentsPanel = (props) => {
+  const { act, data } = useBackend();
   const { show_pictures } = data;
   const { contents, belly, outside = false } = props;
 
@@ -2052,8 +2052,8 @@ const VoreContentsPanel = (props, context) => {
   );
 };
 
-const VoreSelectedBellyLiquidOptions = (props, context) => {
-  const { act } = useBackend(context);
+const VoreSelectedBellyLiquidOptions = (props) => {
+  const { act } = useBackend();
 
   const { belly } = props;
   const {
@@ -2379,8 +2379,8 @@ const VoreSelectedBellyLiquidOptions = (props, context) => {
   );
 };
 
-const VoreSelectedBellyLiquidMessages = (props, context) => {
-  const { act } = useBackend(context);
+const VoreSelectedBellyLiquidMessages = (props) => {
+  const { act } = useBackend();
 
   const { belly } = props;
   const {
@@ -2514,8 +2514,8 @@ const VoreSelectedBellyLiquidMessages = (props, context) => {
   );
 };
 
-const VoreUserPreferences = (props, context) => {
-  const { act, data } = useBackend(context);
+const VoreUserPreferences = (props) => {
+  const { act, data } = useBackend();
 
   const {
     digestable,
@@ -2561,7 +2561,7 @@ const VoreUserPreferences = (props, context) => {
 
   const { show_pictures, overflow } = data;
 
-  const [tabIndex, setTabIndex] = useLocalState(context, 'tabIndex', 0);
+  const [tabIndex, setTabIndex] = useLocalState('tabIndex', 0);
 
   const preferences = {
     digestion: {
@@ -3484,8 +3484,8 @@ const VoreUserPreferences = (props, context) => {
   );
 };
 
-const VoreUserPreferenceItem = (props, context) => {
-  const { act } = useBackend(context);
+const VoreUserPreferenceItem = (props) => {
+  const { act } = useBackend();
 
   const { spec, ...rest } = props;
   const { action, test, tooltip, content, fluid = true, back_color } = spec;
@@ -3506,8 +3506,8 @@ const VoreUserPreferenceItem = (props, context) => {
   );
 };
 
-const FeatureColorInput = (props, context) => {
-  const { act } = useBackend(context);
+const FeatureColorInput = (props) => {
+  const { act } = useBackend();
   const { action_name, value_of, back_color, name_of } = props;
   return (
     <Button
@@ -3534,8 +3534,8 @@ const FeatureColorInput = (props, context) => {
   );
 };
 
-const LiquidColorInput = (props, context) => {
-  const { act } = useBackend(context);
+const LiquidColorInput = (props) => {
+  const { act } = useBackend();
   const { action_name, value_of, back_color, name_of } = props;
   return (
     <Button
