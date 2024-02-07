@@ -1,0 +1,6 @@
+author: "Upstream"
+delete-after: True
+changes:
+  - rscadd: "Added new 18th century outfit as requested by eldzen"
+  - rscadd: "ports fox ears from skyrat"
+  - bugfix: "fixes bonnie alt and bonnie alt long (i forgot to upload all their sprites when i ported them oops)"
