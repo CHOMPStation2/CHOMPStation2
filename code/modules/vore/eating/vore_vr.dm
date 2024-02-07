@@ -228,7 +228,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	autotransferable = json_from_file["autotransferable"]
 	vore_sprite_color = json_from_file["vore_sprite_color"]
 	vore_sprite_multiply = json_from_file["vore_sprite_multiply"]
-	strip_pref = json_from_file["strip_mechanics_pref"]
+	strip_pref = json_from_file["strip_pref"]
 
 	no_latejoin_vore_warning_persists = json_from_file["no_latejoin_vore_warning_persists"]
 	if(no_latejoin_vore_warning_persists)
@@ -408,6 +408,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"eating_privacy_global"		= eating_privacy_global,
 			"vore_sprite_color"			= vore_sprite_color, //CHOMPEdit
 			"vore_sprite_multiply"		= vore_sprite_multiply, //CHOMPEdit
+			"strip_pref" 			= strip_pref, //CHOMPEdit
 			"no_latejoin_vore_warning"		= no_latejoin_vore_warning, //CHOMPEdit
 			"no_latejoin_prey_warning"		= no_latejoin_prey_warning, //CHOMPEdit
 			"no_latejoin_vore_warning_time"		= no_latejoin_vore_warning_time, //CHOMPEdit
