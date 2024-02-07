@@ -56,6 +56,7 @@
 	All personnel must contain the outbreak.", "Biohazard Alert", new_sound = 'sound/AI/outbreak7.ogg')
 
 /datum/event/infectedroom/start()
+	var/obj/effect/decal/cleanable/mucus/mapped/M
 	for(var/i in 1 to infected_tiles)
-		var/obj/effect/decal/cleanable/mucus/mapped/M = new(pick_n_take(target_turfs))
+		M = new(pick_n_take(target_turfs))
 		M.virus2[1] = virus.getcopy()
