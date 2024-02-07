@@ -2185,10 +2185,6 @@
 	icon_state = "monotile"
 	},
 /area/holodeck/source_gym)
-"PL" = (
-/turf/space,
-/turf/space,
-/area/space)
 "PM" = (
 /turf/simulated/floor/smole/megablocks,
 /area/holodeck/source_smoleworld)
@@ -16034,11 +16030,11 @@ ap
 ap
 ap
 ap
-PL
+dD
 ap
 ap
 ap
-PL
+dD
 ap
 xp
 ap
@@ -16460,11 +16456,11 @@ ap
 ap
 ap
 ap
-PL
+dD
 ap
 ap
 ap
-PL
+dD
 ap
 xp
 ap
