@@ -12,10 +12,10 @@ import './styles/themes/vchatdark.scss';
 import { perf } from 'common/perf';
 import { combineReducers } from 'common/redux';
 import { setupHotReloading } from 'tgui-dev-server/link/client.cjs';
-import { setupGlobalEvents } from 'tgui_ch/events'; // CHOMPEdit - tgui_ch
-import { captureExternalLinks } from 'tgui_ch/links'; // CHOMPEdit - tgui_ch
-import { createRenderer } from 'tgui_ch/renderer'; // CHOMPEdit - tgui_ch
-import { configureStore, StoreProvider } from 'tgui_ch/store'; // CHOMPEdit - tgui_ch
+import { setupGlobalEvents } from 'tgui/events';
+import { captureExternalLinks } from 'tgui/links';
+import { createRenderer } from 'tgui/renderer';
+import { configureStore, StoreProvider } from 'tgui/store';
 import { audioMiddleware, audioReducer } from './audio';
 import { chatMiddleware, chatReducer } from './chat';
 import { gameMiddleware, gameReducer } from './game';

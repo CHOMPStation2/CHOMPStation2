@@ -6,8 +6,7 @@
 @use 'sass:color';
 @use 'sass:meta';
 
-// CHOMPEdit Start - tgui_ch
-@use '~tgui_ch/styles/colors.scss' with (
+@use '~tgui/styles/colors.scss' with (
   $primary: #ffffff,
   $bg-lightness: -25%,
   $fg-lightness: -10%,
@@ -19,7 +18,7 @@
   // $fg-map-keys: (),
   // $bg-map-keys: (),
 );
-@use '~tgui_ch/styles/base.scss' with (
+@use '~tgui/styles/base.scss' with (
   $color-fg: #000000,
   $color-bg: #eeeeee,
   $color-bg-section: #ffffff,
@@ -30,16 +29,16 @@
 // It was made almost purely for the nuke ui, and requires a good amount of manual hacks to get it working as intended.
 .theme-light {
   // Atomic classes
-  @include meta.load-css('~tgui_ch/styles/atomic/color.scss');
+  @include meta.load-css('~tgui/styles/atomic/color.scss');
 
   // Components
   @include meta.load-css(
-    '~tgui_ch/styles/components/Tabs.scss',
+    '~tgui/styles/components/Tabs.scss',
     $with: ('text-color': rgba(0, 0, 0, 0.5), 'color-default': rgba(0, 0, 0, 1))
   );
-  @include meta.load-css('~tgui_ch/styles/components/Section.scss');
+  @include meta.load-css('~tgui/styles/components/Section.scss');
   @include meta.load-css(
-    '~tgui_ch/styles/components/Button.scss',
+    '~tgui/styles/components/Button.scss',
     $with: (
       'color-default': #bbbbbb,
       'color-disabled': #363636,
@@ -50,17 +49,17 @@
     )
   );
   @include meta.load-css(
-    '~tgui_ch/styles/components/Input.scss',
+    '~tgui/styles/components/Input.scss',
     $with: (
       'border-color': colors.fg(colors.$label),
       'background-color': #ffffff
     )
   );
-  @include meta.load-css('~tgui_ch/styles/components/NumberInput.scss');
-  @include meta.load-css('~tgui_ch/styles/components/TextArea.scss');
-  @include meta.load-css('~tgui_ch/styles/components/Knob.scss');
-  @include meta.load-css('~tgui_ch/styles/components/Slider.scss');
-  @include meta.load-css('~tgui_ch/styles/components/ProgressBar.scss');
+  @include meta.load-css('~tgui/styles/components/NumberInput.scss');
+  @include meta.load-css('~tgui/styles/components/TextArea.scss');
+  @include meta.load-css('~tgui/styles/components/Knob.scss');
+  @include meta.load-css('~tgui/styles/components/Slider.scss');
+  @include meta.load-css('~tgui/styles/components/ProgressBar.scss');
 
   // Components specific to tgui-panel
   @include meta.load-css(
@@ -70,19 +69,18 @@
 
   // Layouts
   @include meta.load-css(
-    '~tgui_ch/styles/layouts/Layout.scss',
+    '~tgui/styles/layouts/Layout.scss',
     $with: ('scrollbar-color-multiplier': -1)
   );
-  @include meta.load-css('~tgui_ch/styles/layouts/Window.scss');
+  @include meta.load-css('~tgui/styles/layouts/Window.scss');
   @include meta.load-css(
-    '~tgui_ch/styles/layouts/TitleBar.scss',
+    '~tgui/styles/layouts/TitleBar.scss',
     $with: (
       'text-color': rgba(0, 0, 0, 0.75),
       'background-color': base.$color-bg,
       'shadow-color-core': rgba(0, 0, 0, 0.25)
     )
   );
-  // CHOMPEdit End
 
   // tgchat styles
   @include meta.load-css('../tgchat/chat-light.scss');

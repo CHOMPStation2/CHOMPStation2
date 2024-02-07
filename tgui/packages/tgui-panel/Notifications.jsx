@@ -4,7 +4,7 @@
  * @license MIT
  */
 
-import { Flex } from 'tgui_ch/components'; // CHOMPEdit - tgui_ch
+import { Flex } from 'tgui/components';
 
 export const Notifications = (props) => {
   const { children } = props;

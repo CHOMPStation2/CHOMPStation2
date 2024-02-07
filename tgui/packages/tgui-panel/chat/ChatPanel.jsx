@@ -6,7 +6,7 @@
 
 import { shallowDiffers } from 'common/react';
 import { Component, createRef } from 'inferno';
-import { Button } from 'tgui_ch/components'; // CHOMPEdit - tgui_ch
+import { Button } from 'tgui/components';
 import { chatRenderer } from './renderer';
 
 export class ChatPanel extends Component {

@@ -79,6 +79,13 @@ export const getRoutedComponent = (store: Store) => {
   }
   const name = config?.interface;
   const interfacePathBuilders = [
+    // CHOMPEdit Begin - tgui modularization
+    // interfaces_ch will be routed first, virgo interfaces are fetched when nothing matches
+    (name: string) => `../interfaces_ch/${name}.tsx`,
+    (name: string) => `../interfaces_ch/${name}.jsx`,
+    (name: string) => `../interfaces_ch/${name}/index.tsx`,
+    (name: string) => `../interfaces_ch/${name}/index.jsx`,
+    // CHOMPEdit End
     (name: string) => `./${name}.tsx`,
     (name: string) => `./${name}.jsx`,
     (name: string) => `./${name}/index.tsx`,
