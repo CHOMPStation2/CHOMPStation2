@@ -1318,7 +1318,7 @@
 	name = "unlocked rifle cabinet"
 	},
 /obj/item/weapon/storage/box/scattershot/large,
-/obj/item/weapon/storage/box/shotgunammo/large,
+/obj/item/ammo_magazine/ammo_box/b12g,
 /obj/item/weapon/material/knife/tacknife/combatknife,
 /obj/item/weapon/material/knife/tacknife/combatknife,
 /turf/unsimulated/floor/steel,
@@ -2391,7 +2391,7 @@
 	name = "unlocked rifle cabinet"
 	},
 /obj/item/weapon/storage/box/scattershot/large,
-/obj/item/weapon/storage/box/shotgunammo/large,
+/obj/item/ammo_magazine/ammo_box/b12g,
 /obj/item/weapon/material/knife/tacknife/combatknife,
 /obj/item/weapon/material/knife/tacknife/combatknife,
 /obj/machinery/light/small,

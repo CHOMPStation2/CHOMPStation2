@@ -20,6 +20,7 @@
 	special_attack_min_range = 1
 	special_attack_max_range = 8
 	loot_list = list(/obj/item/weapon/gun/energy/flamegun = 100,
+		/obj/item/weapon/bone/skull = 100
 			)
 
 
@@ -132,6 +133,7 @@
 	loot_list = list(/obj/item/weapon/circuitboard/mecha/hades/targeting = 100,
 		/obj/item/weapon/circuitboard/mecha/hades/peripherals = 100,
 		/obj/item/weapon/circuitboard/mecha/hades/main = 100,
+		/obj/item/weapon/bone/skull = 100
 			)
 
 	var/obj/item/shield_projector/shield1 = null
@@ -208,7 +210,8 @@
 			/obj/item/weapon/cell/device/weapon/recharge/alien = 60,
 			/obj/item/weapon/bluespace_harpoon = 60,
 			/obj/item/weapon/flame/lighter/supermatter/syndismzippo = 60,
-			/obj/item/weapon/gun/energy/medigun = 60
+			/obj/item/weapon/gun/energy/medigun = 60,
+			/obj/item/weapon/bone/skull = 100
 			)
 
 	var/obj/item/shield_projector/shield1 = null
