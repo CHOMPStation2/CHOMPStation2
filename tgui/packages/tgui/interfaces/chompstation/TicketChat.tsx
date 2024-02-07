@@ -34,9 +34,9 @@ type Data = {
   log: string[];
 };
 
-export const TicketChat = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
-  const [ticketChat, setTicketChat] = useLocalState(context, 'ticketChat', '');
+export const TicketChat = (props) => {
+  const { act, data } = useBackend<Data>();
+  const [ticketChat, setTicketChat] = useLocalState('ticketChat', '');
   const { id, level, handler, log } = data;
   return (
     <Window width={900} height={600}>
