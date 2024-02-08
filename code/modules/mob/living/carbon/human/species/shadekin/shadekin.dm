@@ -395,6 +395,7 @@
 	if(H.shadekin_display)
 		var/l_icon = 0
 		var/e_icon = 0
+		var/energy_normalised = round((get_energy(H) / get_max_energy(H))*100)
 
 		H.shadekin_display.invisibility = 0
 		if(T)
@@ -412,7 +413,7 @@
 				if(0.00 to 0.20)
 					l_icon = 4
 
-		switch(get_energy(H))
+		switch(energy_normalised)
 			if(0 to 24)
 				e_icon = 0
 			if(25 to 49)
