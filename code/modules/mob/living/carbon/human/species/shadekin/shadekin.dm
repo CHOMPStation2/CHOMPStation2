@@ -339,10 +339,10 @@
 		else
 			dark_gains = energy_light
 		//CHOMPEdit begin - Darkness --> Nutrition
-		if(nutrition_energy_conversion && get_energy(H) == get_energy_max(H) && dark_gains > 0 && nutrition_conversion_scaling > 0)
+		if(nutrition_energy_conversion && get_energy(H) == get_max_energy(H) && dark_gains > 0 && nutrition_conversion_scaling > 0)
 			H.nutrition = min(300, H.nutrition + (dark_gains * 5 * nutrition_conversion_scaling)) // Nutrition gain via darkness is capped at 300. 
 		//The lower part allows nutrition to go back into energy if you have above 500. This is commented out for now.
-		//else if(nutrition_energy_conversion && get_energy(H) < 50 && H.nutrition > 500 && nutrition_conversion_scaling > 0)
+		//else if(nutrition_energy_conversion && get_energy(H) < (get_max_energy(H)/2) && H.nutrition > 500 && nutrition_conversion_scaling > 0)
 		//	H.nutrition -= nutrition_conversion_scaling * 50
 		//	dark_gains += nutrition_conversion_scaling
 		//CHOMPEdit end
@@ -477,37 +477,37 @@
 			total_health = 75 
 			energy_light = 0.5
 			energy_dark = 0.5
-			H.shadekin_set_max_energy(125)
+			set_max_energy(H, 125)
 			nutrition_conversion_scaling = 1 //CHOMPEdit - Darkness --> Nutrition
 		if(RED_EYES)
 			total_health = 150
 			energy_light = 0
 			energy_dark = 0.5
-			H.shadekin_set_max_energy(150)
+			set_max_energy(H, 150)
 			nutrition_conversion_scaling = 1 //CHOMPEdit - Darkness --> Nutrition
 		if(PURPLE_EYES)
 			total_health = 100
 			energy_light = 0
 			energy_dark = 2
-			H.shadekin_set_max_energy(100)
+			set_max_energy(H, 100)
 			nutrition_conversion_scaling = 1 //CHOMPEdit - Darkness --> Nutrition
 		if(YELLOW_EYES)
 			total_health = 50
 			energy_light = 0
 			energy_dark = 3
-			H.shadekin_set_max_energy(150)
+			set_max_energy(H, 150)
 			nutrition_conversion_scaling = 1 //CHOMPEdit - Darkness --> Nutrition
 		if(GREEN_EYES)
 			total_health = 100
 			energy_light = 0.125
 			energy_dark = 1
-			H.shadekin_set_max_energy(125)
+			set_max_energy(H, 125)
 			nutrition_conversion_scaling = 1 //CHOMPEdit - Darkness --> Nutrition
 		if(ORANGE_EYES)
 			total_health = 125
 			energy_light = 0
 			energy_dark = 0.25
-			H.shadekin_set_max_energy(175)
+			set_max_energy(H, 175)
 			nutrition_conversion_scaling = 1 //CHOMPEdit - Darkness --> Nutrition
 
 	//ChompEDIT END - Shadekin rebalance
