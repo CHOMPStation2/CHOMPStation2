@@ -22,13 +22,9 @@ const ItemModeSpan = {
   Hold: '<span class="badge text-bg-secondary">Item: Hold</span>',
   'Digest (Food Only)':
     '<span class="badge text-bg-danger">Item: Digest (Food Only)</span>',
-<<<<<<< HEAD
-  'Digest': '<span class="badge text-bg-danger">Item: Digest</span>',
+  Digest: '<span class="badge text-bg-danger">Item: Digest</span>',
   'Digest (Dispersed Damage)':
     '<span class="badge text-bg-danger">Item: Digest (Dispersed Damage)</span>',
-=======
-  Digest: '<span class="badge text-bg-danger">Item: Digest</span>',
->>>>>>> 93f076a120... TGUI 5.0 Patch 2 ✨ (#15737)
 };
 
 const AddonIcon = {
@@ -77,7 +73,7 @@ const GetLiquidAddons = (addons: string[]) => {
         ReagentAddonIcon[addon] +
         '"></i>' +
         addon +
-        '</span>'
+        '</span>',
     );
   });
 

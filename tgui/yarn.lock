@@ -3149,9 +3149,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.648":
-  version: 1.4.661
-  resolution: "electron-to-chromium@npm:1.4.661"
-  checksum: 7d89d8e60496ee2b713b79e266ec71972a0c0c2adc8e4c3a3753e24faf5ece173c89a7063d5a438e8a83532c2461f1c1e35b0b7897f471ea8c2f99590aa14672
+  version: 1.4.662
+  resolution: "electron-to-chromium@npm:1.4.662"
+  checksum: dceacdd7aa7ebf4802d5d44389d8bf098dcba3973219484a1900905a835ef9e262f121b6856c5f2151ccaa42209fb4ff67d3faa658e710e19069bd65936b859e
   languageName: node
   linkType: hard
 
@@ -6059,27 +6059,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-<<<<<<< HEAD
-"map-age-cleaner@npm:^0.1.3":
-  version: 0.1.3
-  resolution: "map-age-cleaner@npm:0.1.3"
-  dependencies:
-    p-defer: ^1.0.0
-  checksum: cb2804a5bcb3cbdfe4b59066ea6d19f5e7c8c196cd55795ea4c28f792b192e4c442426ae52524e5e1acbccf393d3bddacefc3d41f803e66453f6c4eda3650bc1
-  languageName: node
-  linkType: hard
-
-"markdown-escapes@npm:^1.0.0":
-  version: 1.0.4
-  resolution: "markdown-escapes@npm:1.0.4"
-  checksum: 6833a93d72d3f70a500658872312c6fa8015c20cc835a85ae6901fa232683fbc6ed7118ebe920fea7c80039a560f339c026597d96eee0e9de602a36921804997
-  languageName: node
-  linkType: hard
-
 "marked@npm:^4.0.16, marked@npm:^4.2.12":
-=======
-"marked@npm:^4.2.12":
->>>>>>> 93f076a120... TGUI 5.0 Patch 2 ✨ (#15737)
   version: 4.3.0
   resolution: "marked@npm:4.3.0"
   bin:

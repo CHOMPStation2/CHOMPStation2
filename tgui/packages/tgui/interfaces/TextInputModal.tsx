@@ -66,13 +66,9 @@ export const TextInputModal = (props) => {
           if (keyCode === KEY_ESCAPE) {
             act('cancel');
           }
-<<<<<<< HEAD
-        }}>
-        {/* CHOMPedit End */}
-=======
         }}
       >
->>>>>>> 93f076a120... TGUI 5.0 Patch 2 ✨ (#15737)
+        {/* CHOMPedit End */}
         <Section fill>
           <Stack fill vertical>
             <Stack.Item>

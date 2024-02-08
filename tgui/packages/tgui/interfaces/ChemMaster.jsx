@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+
 import { useBackend } from '../backend';
 import { Box, Button, Flex, Icon, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
@@ -451,11 +452,11 @@ const ChemMasterCustomization = (props) => {
         content={
           data.loaded_pill_bottle
             ? data.loaded_pill_bottle_name +
-            ' (' +
-            data.loaded_pill_bottle_contents_len +
-            '/' +
-            data.loaded_pill_bottle_storage_slots +
-            ')'
+              ' (' +
+              data.loaded_pill_bottle_contents_len +
+              '/' +
+              data.loaded_pill_bottle_storage_slots +
+              ')'
             : 'None loaded'
         }
         mb="0.5rem"

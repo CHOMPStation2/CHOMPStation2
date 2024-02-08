@@ -1,23 +1,21 @@
+import { classes } from 'common/react';
 import { capitalize } from 'common/string';
+
 import { useBackend, useLocalState } from '../backend';
-<<<<<<< HEAD
-import { Box, Button, Flex, Collapsible, Icon, LabeledList, NoticeBox, Section, Tabs, Divider, Stack } from '../components';
-=======
 import {
   Box,
   Button,
-  Flex,
   Collapsible,
+  Divider,
+  Flex,
   Icon,
   LabeledList,
   NoticeBox,
   Section,
+  Stack,
   Tabs,
-  Divider,
 } from '../components';
->>>>>>> 93f076a120... TGUI 5.0 Patch 2 ✨ (#15737)
 import { Window } from '../layouts';
-import { classes } from 'common/react';
 
 const stats = [null, 'average', 'bad'];
 
@@ -1580,7 +1578,8 @@ const VoreSelectedBellyInteractions = (props) => {
                 : 'Auto-Transfer Disabled'
             }
           />
-        }>
+        }
+      >
         {autotransfer_enabled ? (
           <LabeledList>
             <LabeledList.Item label="Auto-Transfer Time">
@@ -2431,7 +2430,8 @@ const FeatureColorInput = (props, context) => {
     <Button
       onClick={() => {
         act('set_attribute', { attribute: action_name, val: value_of });
-      }}>
+      }}
+    >
       <Stack align="center" fill>
         <Stack.Item>
           <Box

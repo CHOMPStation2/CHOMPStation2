@@ -1,15 +1,7 @@
 @font-face {
-<<<<<<< HEAD
     font-family: "tgfont";
     src: url("./tgfont.woff2?958b912b123580c55529f68c4e2261bd") format("woff2"),
 url("./tgfont.eot?958b912b123580c55529f68c4e2261bd#iefix") format("embedded-opentype");
-=======
-  font-family: 'tgfont';
-  src:
-    url('./tgfont.woff2?958b912b123580c55529f68c4e2261bd') format('woff2'),
-    url('./tgfont.eot?958b912b123580c55529f68c4e2261bd#iefix')
-      format('embedded-opentype');
->>>>>>> 93f076a120... TGUI 5.0 Patch 2 ✨ (#15737)
 }
 
 i[class^="tg-"]:before, i[class*=" tg-"]:before {

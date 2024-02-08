@@ -1,7 +1,8 @@
 import { decodeHtmlEntities } from 'common/string';
 import { Fragment } from 'react';
+
 import { useBackend, useSharedState } from '../backend';
-import { Box, Button, LabeledList, Input, Section } from '../components';
+import { Box, Button, Input, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
 import { TemporaryNotice } from './common/TemporaryNotice';
 
@@ -221,14 +222,15 @@ const NewscasterNewStory = (props) => {
         <Button icon="undo" onClick={() => setScreen(NEWSCASTER_SCREEN_MAIN)}>
           Back
         </Button>
-<<<<<<< HEAD
-      }>
+      }
+    >
       <table
         style={{
           width: 'calc(100% + 0.5em)',
           margin: '-0.25em -0.25em 0 -0.25em',
           padding: 0,
-        }}>
+        }}
+      >
         <tr>
           <td style={label_style}>Receiving Channel:</td>
           <td colspan={2}>
@@ -278,61 +280,6 @@ const NewscasterNewStory = (props) => {
           </td>
         </tr>
       </table>
-=======
-      }
-    >
-      <LabeledList>
-        <LabeledList.Item label="Receiving Channel">
-          <Button fluid onClick={() => act('set_channel_receiving')}>
-            {channel_name || 'Unset'}
-          </Button>
-        </LabeledList.Item>
-        <LabeledList.Item label="Message Author" color="good">
-          {user}
-        </LabeledList.Item>
-        <LabeledList.Item label="Message Title" verticalAlign="top">
-          <Flex>
-            <Flex.Item grow={1}>
-              <Section width="99%" inline>
-                {title || '(no title yet)'}
-              </Section>
-            </Flex.Item>
-            <Flex.Item>
-              <Button
-                verticalAlign="top"
-                onClick={() => act('set_new_title')}
-                icon="pen"
-                tooltip="Edit Title"
-                tooltipPosition="left"
-              />
-            </Flex.Item>
-          </Flex>
-        </LabeledList.Item>
-        <LabeledList.Item label="Message Body" verticalAlign="top">
-          <Flex>
-            <Flex.Item grow={1}>
-              <Section width="99%" inline>
-                {msg || '(no message yet)'}
-              </Section>
-            </Flex.Item>
-            <Flex.Item>
-              <Button
-                verticalAlign="top"
-                onClick={() => act('set_new_message')}
-                icon="pen"
-                tooltip="Edit Message"
-                tooltipPosition="left"
-              />
-            </Flex.Item>
-          </Flex>
-        </LabeledList.Item>
-        <LabeledList.Item label="Attach Photo">
-          <Button fluid icon="image" onClick={() => act('set_attachment')}>
-            {photo_data ? 'Photo Attached' : 'No Photo'}
-          </Button>
-        </LabeledList.Item>
-      </LabeledList>
->>>>>>> 93f076a120... TGUI 5.0 Patch 2 ✨ (#15737)
       <Button
         fluid
         color="good"

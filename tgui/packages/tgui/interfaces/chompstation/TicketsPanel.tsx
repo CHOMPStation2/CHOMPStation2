@@ -2,7 +2,18 @@
 import { KEY_ENTER } from '../../../common/keycodes';
 import { BooleanLike } from '../../../common/react';
 import { useBackend, useLocalState } from '../../backend';
-import { Box, Button, Divider, Dropdown, Flex, Icon, Input, LabeledList, Section, Tabs } from '../../components';
+import {
+  Box,
+  Button,
+  Divider,
+  Dropdown,
+  Flex,
+  Icon,
+  Input,
+  LabeledList,
+  Section,
+  Tabs,
+} from '../../components';
 import { Window } from '../../layouts';
 
 const Level = {
@@ -18,22 +29,22 @@ const LevelColor = {
 };
 
 const Tag = {
-  'example': 'Example',
+  example: 'Example',
 };
 
 const State = {
-  'open': 'Open',
-  'resolved': 'Resolved',
-  'closed': 'Closed',
-  'unknown': 'Unknown',
-  'all': 'All States',
+  open: 'Open',
+  resolved: 'Resolved',
+  closed: 'Closed',
+  unknown: 'Unknown',
+  all: 'All States',
 };
 
 const StateColor = {
-  'open': 'white',
-  'resolved': 'green',
-  'closed': 'grey',
-  'unknown': 'orange',
+  open: 'white',
+  resolved: 'green',
+  closed: 'grey',
+  unknown: 'orange',
 };
 
 type Data = {
@@ -63,7 +74,7 @@ type Ticket = {
 const getFilteredTickets = (
   tickets: Ticket[],
   state: string,
-  level: number
+  level: number,
 ): Ticket[] => {
   let result: Ticket[] = [];
 
@@ -102,7 +113,7 @@ export const TicketsPanel = (props) => {
                 selected={State[stateFilter]}
                 onSelected={(val) =>
                   setStateFilter(
-                    Object.keys(State)[Object.values(State).indexOf(val)]
+                    Object.keys(State)[Object.values(State).indexOf(val)],
                   )
                 }
               />
@@ -128,9 +139,8 @@ export const TicketsPanel = (props) => {
                   <Tabs.Tab
                     key={ticket.id}
                     selected={ticket.id === selected_ticket?.id}
-                    onClick={() =>
-                      act('pick_ticket', { ticket_id: ticket.id })
-                    }>
+                    onClick={() => act('pick_ticket', { ticket_id: ticket.id })}
+                  >
                     <Box inline>
                       <Box>
                         <Button
@@ -171,7 +181,8 @@ export const TicketsPanel = (props) => {
                       color={LevelColor[selected_ticket.level]}
                     />
                   </Box>
-                }>
+                }
+              >
                 <LabeledList>
                   <LabeledList.Item label="Ticket ID">
                     #{selected_ticket.id}:{' '}
@@ -282,7 +293,8 @@ export const TicketsPanel = (props) => {
                     />{' '}
                     <Button content="Legacy UI" onClick={() => act('legacy')} />
                   </Box>
-                }>
+                }
+              >
                 Please select a ticket on the left to view its details.
               </Section>
             )}
