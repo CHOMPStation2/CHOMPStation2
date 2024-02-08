@@ -1,4 +1,0 @@
-author: "HatArchAzel"
-delete-after: True
-changes:
-  - rscadd: "Two new markings, though they're just variants of each other to have support for both plantigrade and digitigrade characters in case a plantigrade character is using the model's torso/groin."

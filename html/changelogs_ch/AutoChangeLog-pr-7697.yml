@@ -1,4 +1,0 @@
-author: "Kashargul"
-delete-after: True
-changes:
-  - bugfix: "strip preference should now save properly"

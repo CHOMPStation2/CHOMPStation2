@@ -76,3 +76,15 @@
 2024-02-07:
   Raeschen:
   - balance: global projectile speed increased from 3.0 to 1.5 (Lower is faster)
+2024-02-08:
+  HatArchAzel:
+  - rscadd: Two new markings, though they're just variants of each other to have support
+      for both plantigrade and digitigrade characters in case a plantigrade character
+      is using the model's torso/groin.
+  Kashargul:
+  - bugfix: strip preference should now save properly
+  Upstream:
+  - rscadd: Added new 18th century outfit as requested by eldzen
+  - rscadd: ports fox ears from skyrat
+  - bugfix: fixes bonnie alt and bonnie alt long (i forgot to upload all their sprites
+      when i ported them oops)
