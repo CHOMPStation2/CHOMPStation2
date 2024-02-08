@@ -57,8 +57,8 @@ export const TicketChat = (props) => {
             <Flex.Item>
               {Object.keys(log)
                 .slice(0)
-                .map((L) => (
-                  <div dangerouslySetInnerHTML={{ __html: log[L] }} />
+                .map((L, i) => (
+                  <div key={i} dangerouslySetInnerHTML={{ __html: log[L] }} />
                 ))}
             </Flex.Item>
             <Divider />

@@ -219,8 +219,9 @@ export const TicketsPanel = (props) => {
                   <Flex.Item maxWidth={'500px'}>
                     {Object.keys(selected_ticket.log)
                       .slice(0)
-                      .map((L) => (
+                      .map((L, i) => (
                         <div
+                          key={i}
                           dangerouslySetInnerHTML={{
                             __html: selected_ticket.log[L],
                           }}
