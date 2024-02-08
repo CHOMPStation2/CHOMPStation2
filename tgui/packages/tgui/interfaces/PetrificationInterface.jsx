@@ -28,7 +28,7 @@ export const PetrificationInterface = (props, context) => {
                 content={'Change Identifier: "' + identifier + '"'}
                 tooltip="The identifier for the petrification. ie. 'A statue of (target)'"
                 tooltipPosition="top"
-                onClick={() => act('set_option', { 'option': 'identifier' })}
+                onClick={() => act('set_option', { option: 'identifier' })}
               />
             </LabeledList.Item>
             <LabeledList.Item label="Material">
@@ -41,7 +41,7 @@ export const PetrificationInterface = (props, context) => {
                   's skin rapidly (adjective) as they turn to (material)!"'
                 }
                 tooltipPosition="top"
-                onClick={() => act('set_option', { 'option': 'material' })}
+                onClick={() => act('set_option', { option: 'material' })}
               />
             </LabeledList.Item>
             <LabeledList.Item label="Adjective">
@@ -54,7 +54,7 @@ export const PetrificationInterface = (props, context) => {
                   's skin rapidly (adjective) as they turn to (material)!"'
                 }
                 tooltipPosition="top"
-                onClick={() => act('set_option', { 'option': 'adjective' })}
+                onClick={() => act('set_option', { option: 'adjective' })}
               />
             </LabeledList.Item>
             <LabeledList.Item label="Color">
@@ -65,7 +65,7 @@ export const PetrificationInterface = (props, context) => {
                 textColor={t ? '#000000' : '#ffffff'}
                 tooltip="The color of the statue. Pure white is direct greyscale."
                 tooltipPosition="top"
-                onClick={() => act('set_option', { 'option': 'tint' })}
+                onClick={() => act('set_option', { option: 'tint' })}
               />
             </LabeledList.Item>
             <LabeledList.Item label="Can Unpetrify">
@@ -76,7 +76,7 @@ export const PetrificationInterface = (props, context) => {
                 tooltip="Whether or not the statue can be unpetrified. If yes, they will get a verb letting them turn back- if not, even if they're a gargoyle, it will be taken away. OOC Escape is always an option though."
                 tooltipPosition="top"
                 onClick={() =>
-                  act('set_option', { 'option': 'able_to_unpetrify' })
+                  act('set_option', { option: 'able_to_unpetrify' })
                 }
               />
             </LabeledList.Item>
@@ -87,16 +87,14 @@ export const PetrificationInterface = (props, context) => {
                 selected={discard_clothes}
                 tooltip="Whether the target's clothing falls off before the petrification happens. (Clothes do not change color when petrified, and cannot be removed while being a statue)"
                 tooltipPosition="top"
-                onClick={() =>
-                  act('set_option', { 'option': 'discard_clothes' })
-                }
+                onClick={() => act('set_option', { option: 'discard_clothes' })}
               />
             </LabeledList.Item>
             <LabeledList.Item label="Target">
               <Button
                 fluid
                 content={target}
-                onClick={() => act('set_option', { 'option': 'target' })}
+                onClick={() => act('set_option', { option: 'target' })}
               />
             </LabeledList.Item>
           </LabeledList>

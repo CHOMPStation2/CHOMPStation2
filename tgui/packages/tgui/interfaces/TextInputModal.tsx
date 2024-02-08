@@ -66,7 +66,8 @@ export const TextInputModal = (props) => {
           if (keyCode === KEY_ESCAPE) {
             act('cancel');
           }
-        }}>
+        }}
+      >
         {/* CHOMPedit End */}
         <Section fill>
           <Stack fill vertical>

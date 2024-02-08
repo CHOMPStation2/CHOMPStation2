@@ -1,9 +1,14 @@
 import { Fragment } from 'react';
+
 import { useBackend } from '../backend';
 import { Box, Button, Flex, Icon, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
 import { BeakerContents } from './common/BeakerContents';
-import { ComplexModal, modalOpen, modalRegisterBodyOverride } from './common/ComplexModal';
+import {
+  ComplexModal,
+  modalOpen,
+  modalRegisterBodyOverride,
+} from './common/ComplexModal';
 
 const transferAmounts = [1, 5, 10, 30, 60];
 const bottleStyles = [
@@ -22,7 +27,8 @@ const analyzeModalBodyOverride = (modal) => {
       level={2}
       m="-1rem"
       pb="1rem"
-      title={data.condi ? 'Condiment Analysis' : 'Reagent Analysis'}>
+      title={data.condi ? 'Condiment Analysis' : 'Reagent Analysis'}
+    >
       <Box mx="0.5rem">
         <LabeledList>
           <LabeledList.Item label="Name">{result.name}</LabeledList.Item>
@@ -36,7 +42,8 @@ const analyzeModalBodyOverride = (modal) => {
               </LabeledList.Item>
               <LabeledList.Item
                 label="Blood DNA"
-                className="LabeledList__breakContents">
+                className="LabeledList__breakContents"
+              >
                 {result.blood_dna}
               </LabeledList.Item>
             </>
@@ -188,7 +195,8 @@ const ChemMasterBuffer = (props) => {
             onClick={() => act('toggle')}
           />
         </Box>
-      }>
+      }
+    >
       {bufferReagents.length > 0 ? (
         <BeakerContents
           beakerLoaded
@@ -261,17 +269,18 @@ const ChemMasterProduction = (props) => {
             content={
               data.loaded_pill_bottle
                 ? data.loaded_pill_bottle_name +
-                ' (' +
-                data.loaded_pill_bottle_contents_len +
-                '/' +
-                data.loaded_pill_bottle_storage_slots +
-                ')'
+                  ' (' +
+                  data.loaded_pill_bottle_contents_len +
+                  '/' +
+                  data.loaded_pill_bottle_storage_slots +
+                  ')'
                 : 'No pill bottle loaded'
             }
             mb="0.5rem"
             onClick={() => act('ejectp')}
           />
-        }>
+        }
+      >
         <Flex height="100%">
           <Flex.Item grow="1" align="center" textAlign="center" color="label">
             <Icon name="tint-slash" mt="0.5rem" mb="0.5rem" size="5" />
@@ -294,17 +303,18 @@ const ChemMasterProduction = (props) => {
           content={
             data.loaded_pill_bottle
               ? data.loaded_pill_bottle_name +
-              ' (' +
-              data.loaded_pill_bottle_contents_len +
-              '/' +
-              data.loaded_pill_bottle_storage_slots +
-              ')'
+                ' (' +
+                data.loaded_pill_bottle_contents_len +
+                '/' +
+                data.loaded_pill_bottle_storage_slots +
+                ')'
               : 'No pill bottle loaded'
           }
           mb="0.5rem"
           onClick={() => act('ejectp')}
         />
-      }>
+      }
+    >
       {!props.isCondiment ? (
         <ChemMasterProductionChemical />
       ) : (
@@ -442,11 +452,11 @@ const ChemMasterCustomization = (props) => {
         content={
           data.loaded_pill_bottle
             ? data.loaded_pill_bottle_name +
-            ' (' +
-            data.loaded_pill_bottle_contents_len +
-            '/' +
-            data.loaded_pill_bottle_storage_slots +
-            ')'
+              ' (' +
+              data.loaded_pill_bottle_contents_len +
+              '/' +
+              data.loaded_pill_bottle_storage_slots +
+              ')'
             : 'None loaded'
         }
         mb="0.5rem"

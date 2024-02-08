@@ -1,5 +1,13 @@
 import { useBackend, useLocalState } from '../../backend';
-import { Box, Button, Flex, Input, Section, Tabs, TextArea } from '../../components';
+import {
+  Box,
+  Button,
+  Flex,
+  Input,
+  Section,
+  Tabs,
+  TextArea,
+} from '../../components';
 import { Window } from '../../layouts';
 
 type Data = {
@@ -22,7 +30,8 @@ export const TguiFeedback = (props) => {
                 <Tabs.Tab
                   key={window}
                   selected={window === selected_window}
-                  onClick={() => act('pick_window', { win: window })}>
+                  onClick={() => act('pick_window', { win: window })}
+                >
                   <Box inline>{window}</Box>
                 </Tabs.Tab>
               ))}
