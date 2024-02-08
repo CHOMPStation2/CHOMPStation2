@@ -1,4 +1,4 @@
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend, useLocalState } from '../backend';
 import { Box, Button, Icon, LabeledList, Section, Table } from '../components';
 import { Window } from '../layouts';
@@ -45,11 +45,11 @@ export const CharacterDirectory = (props) => {
     <Window width={816} height={722} resizeable>
       <Window.Content scrollable>
         {(overlay && <ViewCharacter />) || (
-          <Fragment>
+          <>
             <Section
               title="Settings and Preferences"
               buttons={
-                <Fragment>
+                <>
                   <Box color="label" inline>
                     Save to current preferences slot:&nbsp;
                   </Box>
@@ -59,7 +59,7 @@ export const CharacterDirectory = (props) => {
                     content={overwritePrefs ? 'On' : 'Off'}
                     onClick={() => setOverwritePrefs(!overwritePrefs)}
                   />
-                </Fragment>
+                </>
               }>
               <LabeledList>
                 <LabeledList.Item label="Visibility">
@@ -130,7 +130,7 @@ export const CharacterDirectory = (props) => {
               </LabeledList>
             </Section>
             <CharacterDirectoryList />
-          </Fragment>
+          </>
         )}
       </Window.Content>
     </Window>

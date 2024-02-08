@@ -3,4 +3,6 @@
 /**/*.bundle.*
 /**/*.chunk.*
 /**/*.hot-update.*
-/packages/inferno/**
+
+# CHOMPEdit - Until removed
+/packages/tgui_ch/**

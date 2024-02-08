@@ -1,4 +1,3 @@
-import { Fragment } from 'inferno';
 import { useBackend } from '../backend';
 import { Box, Button, Dimmer, Flex, Icon, Knob, LabeledList, ProgressBar, Section, Tabs } from '../components';
 import { Window } from '../layouts';
@@ -32,7 +31,7 @@ export const DNAModifier = (props) => {
     radiatingModal = <DNAModifierIrradiating duration={irradiating} />;
   }
   return (
-    <Window width={660} height={700} resizable>
+    <Window width={660} height={700}>
       <ComplexModal />
       {radiatingModal}
       <Window.Content className="Layout__content--flexColumn">
@@ -50,7 +49,7 @@ const DNAModifierOccupant = (props) => {
     <Section
       title="Occupant"
       buttons={
-        <Fragment>
+        <>
           <Box color="label" inline mr="0.5rem">
             Door Lock:
           </Box>
@@ -67,10 +66,10 @@ const DNAModifierOccupant = (props) => {
             content="Eject"
             onClick={() => act('ejectOccupant')}
           />
-        </Fragment>
+        </>
       }>
       {hasOccupant ? (
-        <Fragment>
+        <>
           <Box>
             <LabeledList>
               <LabeledList.Item label="Name">{occupant.name}</LabeledList.Item>
@@ -120,7 +119,7 @@ const DNAModifierOccupant = (props) => {
               </LabeledList.Item>
             </LabeledList>
           )}
-        </Fragment>
+        </>
       ) : (
         <Box color="label">Cell unoccupied.</Box>
       )}
@@ -159,17 +158,17 @@ const DNAModifierMain = (props) => {
   let body;
   if (selectedMenuKey === 'ui') {
     body = (
-      <Fragment>
+      <>
         <DNAModifierMainUI />
         <DNAModifierMainRadiationEmitter />
-      </Fragment>
+      </>
     );
   } else if (selectedMenuKey === 'se') {
     body = (
-      <Fragment>
+      <>
         <DNAModifierMainSE />
         <DNAModifierMainRadiationEmitter />
-      </Fragment>
+      </>
     );
   } else if (selectedMenuKey === 'buffer') {
     body = <DNAModifierMainBuffers />;
@@ -305,12 +304,12 @@ const DNAModifierMainBuffers = (props) => {
     />
   ));
   return (
-    <Fragment>
+    <>
       <Section title="Buffers" level="2">
         {bufferElements}
       </Section>
       <DNAModifierMainBuffersDisk />
-    </Fragment>
+    </>
   );
 };
 
@@ -327,7 +326,7 @@ const DNAModifierMainBuffersElement = (props) => {
         mx="0"
         lineHeight="18px"
         buttons={
-          <Fragment>
+          <>
             <Button.Confirm
               disabled={!buffer.data}
               icon="trash"
@@ -363,7 +362,7 @@ const DNAModifierMainBuffersElement = (props) => {
                 })
               }
             />
-          </Fragment>
+          </>
         }>
         <LabeledList>
           <LabeledList.Item label="Write">
@@ -413,8 +412,8 @@ const DNAModifierMainBuffersElement = (props) => {
               }
             />
           </LabeledList.Item>
-          {buffer.data ? (
-            <Fragment>
+          {!!buffer.data && (
+            <>
               <LabeledList.Item label="Subject">
                 {buffer.owner || <Box color="average">Unknown</Box>}
               </LabeledList.Item>
@@ -464,8 +463,8 @@ const DNAModifierMainBuffersElement = (props) => {
                   }
                 />
               </LabeledList.Item>
-            </Fragment>
-          ) : null}
+            </>
+          )}
         </LabeledList>
         {!buffer.data && (
           <Box color="label" mt="0.5rem">
@@ -485,7 +484,7 @@ const DNAModifierMainBuffersDisk = (props) => {
       title="Data Disk"
       level="2"
       buttons={
-        <Fragment>
+        <>
           <Button.Confirm
             disabled={!hasDisk || !disk.data}
             icon="trash"
@@ -498,7 +497,7 @@ const DNAModifierMainBuffersDisk = (props) => {
             content="Eject"
             onClick={() => act('ejectDisk')}
           />
-        </Fragment>
+        </>
       }>
       {hasDisk ? (
         disk.data ? (
