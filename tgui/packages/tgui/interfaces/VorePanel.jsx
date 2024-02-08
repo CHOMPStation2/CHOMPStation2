@@ -1,5 +1,5 @@
 import { capitalize } from 'common/string';
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend, useLocalState } from '../backend';
 import { Box, Button, Flex, Collapsible, Icon, LabeledList, NoticeBox, Section, Tabs, Divider, Stack } from '../components';
 import { Window } from '../layouts';
@@ -53,7 +53,7 @@ export const VorePanel = (props) => {
   tabs[1] = <VoreUserPreferences />;
 
   return (
-    <Window width={890} height={660} theme="abstract" resizable>
+    <Window width={890} height={660} theme="abstract">
       <Window.Content scrollable>
         {(data.unsaved_changes && (
           <NoticeBox danger>
@@ -227,7 +227,7 @@ const VoreSelectedBelly = (props) => {
   tabs[8] = <VoreSelectedBellyLiquidMessages belly={belly} />;
 
   return (
-    <Fragment>
+    <>
       <Tabs>
         <Tabs.Tab selected={tabIndex === 0} onClick={() => setTabIndex(0)}>
           Controls
@@ -258,7 +258,7 @@ const VoreSelectedBelly = (props) => {
         </Tabs.Tab>
       </Tabs>
       {tabs[tabIndex] || 'Error'}
-    </Fragment>
+    </>
   );
 };
 
@@ -273,7 +273,7 @@ const VoreSelectedBellyControls = (props) => {
       <LabeledList.Item
         label="Name"
         buttons={
-          <Fragment>
+          <>
             <Button
               icon="arrow-up"
               tooltipPosition="left"
@@ -286,7 +286,7 @@ const VoreSelectedBellyControls = (props) => {
               tooltip="Move this belly tab down."
               onClick={() => act('move_belly', { dir: 1 })}
             />
-          </Fragment>
+          </>
         }>
         <Button
           onClick={() => act('set_attribute', { attribute: 'b_name' })}
@@ -758,7 +758,7 @@ const VoreSelectedBellyOptions = (props) => {
             />
           </LabeledList.Item>
           {(contaminates && (
-            <Fragment>
+            <>
               <LabeledList.Item label="Contamination Flavor">
                 <Button
                   onClick={() =>
@@ -779,7 +779,7 @@ const VoreSelectedBellyOptions = (props) => {
                   content={capitalize(contaminate_color)}
                 />
               </LabeledList.Item>
-            </Fragment>
+            </>
           )) ||
             null}
           <LabeledList.Item label="Nutritional Gain">
@@ -1107,6 +1107,7 @@ const VoreSelectedBellyVisuals = (props) => {
   } = belly;
 
   return (
+<<<<<<< HEAD
     <Fragment>
       <Section title="Vore Sprites">
         <Flex direction="row">
@@ -1297,6 +1298,9 @@ const VoreSelectedBellyVisuals = (props) => {
           </LabeledList>
         </Flex>
       </Section>
+=======
+    <>
+>>>>>>> 23a3b53ca5... TGUI 5.0 (#15635)
       <Section title="Belly Fullscreens Preview and Coloring">
         <Flex direction="row">
           <FeatureColorInput
@@ -1419,7 +1423,7 @@ const VoreSelectedBellyVisuals = (props) => {
           ))}
         </Section>
       </Section>
-    </Fragment>
+    </>
   );
 };
 
@@ -1645,7 +1649,7 @@ const VoreContentsPanel = (props) => {
   const { contents, belly, outside = false } = props;
 
   return (
-    <Fragment>
+    <>
       {(outside && (
         <Button
           textAlign="center"
@@ -1715,7 +1719,7 @@ const VoreContentsPanel = (props) => {
           ))}
         </LabeledList>
       )}
-    </Fragment>
+    </>
   );
 };
 
