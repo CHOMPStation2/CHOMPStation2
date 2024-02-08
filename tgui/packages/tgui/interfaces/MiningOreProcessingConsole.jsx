@@ -1,17 +1,17 @@
 import { toTitleCase } from 'common/string';
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend } from '../backend';
 import { Box, Button, Dropdown, Section, LabeledList, AnimatedNumber } from '../components';
 import { Window } from '../layouts';
 import { MiningUser } from './common/Mining';
 
-export const MiningOreProcessingConsole = (props, context) => {
-  const { act, data } = useBackend(context);
+export const MiningOreProcessingConsole = (props) => {
+  const { act, data } = useBackend();
 
   const { unclaimedPoints, ores, showAllOres, power, speed } = data;
 
   return (
-    <Window width={400} height={500} resizable>
+    <Window width={400} height={500}>
       <Window.Content>
         <MiningUser
           insertIdText={
@@ -26,7 +26,7 @@ export const MiningOreProcessingConsole = (props, context) => {
         <Section
           title="Status"
           buttons={
-            <Fragment>
+            <>
               <Button
                 icon="bolt"
                 selected={speed}
@@ -39,7 +39,7 @@ export const MiningOreProcessingConsole = (props, context) => {
                 onClick={() => act('power')}>
                 {power ? 'Smelting' : 'Not Smelting'}
               </Button>
-            </Fragment>
+            </>
           }>
           <LabeledList>
             <LabeledList.Item
@@ -100,8 +100,8 @@ const oreSorter = (a, b) => {
   return oreOrder.indexOf(b.ore) - oreOrder.indexOf(a.ore);
 };
 
-const MOPCOres = (props, context) => {
-  const { act, data } = useBackend(context);
+const MOPCOres = (props) => {
+  const { act, data } = useBackend();
   const { ores, showAllOres, power } = data;
   return (
     <Section

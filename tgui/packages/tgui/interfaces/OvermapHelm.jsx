@@ -1,12 +1,12 @@
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend } from '../backend';
 import { Box, Button, Flex, LabeledList, Section, Table } from '../components';
 import { Window } from '../layouts';
 import { OvermapFlightData, OvermapPanControls } from './common/Overmap';
 
-export const OvermapHelm = (props, context) => {
+export const OvermapHelm = (props) => {
   return (
-    <Window width={565} height={545} resizable>
+    <Window width={565} height={545}>
       <Window.Content>
         <OvermapHelmContent />
       </Window.Content>
@@ -14,9 +14,9 @@ export const OvermapHelm = (props, context) => {
   );
 };
 
-export const OvermapHelmContent = (props, context) => {
+export const OvermapHelmContent = (props) => {
   return (
-    <Fragment>
+    <>
       <Flex>
         <Flex.Item basis="40%" height="180px">
           <OvermapFlightDataWrap />
@@ -29,12 +29,12 @@ export const OvermapHelmContent = (props, context) => {
         </Flex.Item>
       </Flex>
       <OvermapNavComputer />
-    </Fragment>
+    </>
   );
 };
 
-export const OvermapFlightDataWrap = (props, context) => {
-  const { act, data } = useBackend(context);
+export const OvermapFlightDataWrap = (props) => {
+  const { act, data } = useBackend();
 
   // While, yes, this is a strange choice to use fieldset over Section
   // just look at how pretty the legend is, sticking partially through the border ;///;
@@ -48,8 +48,8 @@ export const OvermapFlightDataWrap = (props, context) => {
   );
 };
 
-const OvermapManualControl = (props, context) => {
-  const { act, data } = useBackend(context);
+const OvermapManualControl = (props) => {
+  const { act, data } = useBackend();
 
   const { canburn, manual_control } = data;
 
@@ -78,8 +78,8 @@ const OvermapManualControl = (props, context) => {
   );
 };
 
-const OvermapAutopilot = (props, context) => {
-  const { act, data } = useBackend(context);
+const OvermapAutopilot = (props) => {
+  const { act, data } = useBackend();
   const { dest, d_x, d_y, speedlimit, autopilot, autopilot_disabled } = data;
 
   if (autopilot_disabled) {
@@ -119,14 +119,14 @@ const OvermapAutopilot = (props, context) => {
       <LabeledList>
         <LabeledList.Item label="Target">
           {(dest && (
-            <Fragment>
+            <>
               <Button onClick={() => act('setcoord', { setx: true })}>
                 {d_x}
               </Button>
               <Button onClick={() => act('setcoord', { sety: true })}>
                 {d_y}
               </Button>
-            </Fragment>
+            </>
           )) || (
             <Button
               icon="pen"
@@ -161,8 +161,8 @@ const OvermapAutopilot = (props, context) => {
   );
 };
 
-const OvermapNavComputer = (props, context) => {
-  const { act, data } = useBackend(context);
+const OvermapNavComputer = (props) => {
+  const { act, data } = useBackend();
 
   const { sector, s_x, s_y, sector_info, landed, locations } = data;
 

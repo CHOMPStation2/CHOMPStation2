@@ -1,15 +1,15 @@
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend } from '../backend';
 import { Box, Button, NoticeBox, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
 
-export const TelecommsMachineBrowser = (props, context) => {
-  const { act, data } = useBackend(context);
+export const TelecommsMachineBrowser = (props) => {
+  const { act, data } = useBackend();
 
   const { network, temp, machinelist, selectedMachine } = data;
 
   return (
-    <Window width={575} height={450} resizable>
+    <Window width={575} height={450}>
       <Window.Content scrollable>
         {temp ? (
           <NoticeBox
@@ -31,7 +31,7 @@ export const TelecommsMachineBrowser = (props, context) => {
             <LabeledList.Item
               label="Current Network"
               buttons={
-                <Fragment>
+                <>
                   <Button
                     icon="search"
                     content="Probe Network"
@@ -44,7 +44,7 @@ export const TelecommsMachineBrowser = (props, context) => {
                     disabled={machinelist.length === 0}
                     onClick={() => act('release')}
                   />
-                </Fragment>
+                </>
               }>
               <Button
                 content={network}
@@ -78,8 +78,8 @@ export const TelecommsMachineBrowser = (props, context) => {
   );
 };
 
-const TelecommsBrowser = (props, context) => {
-  const { act, data } = useBackend(context);
+const TelecommsBrowser = (props) => {
+  const { act, data } = useBackend();
 
   const { list, title, showBack } = props;
 

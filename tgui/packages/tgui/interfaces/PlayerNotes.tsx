@@ -9,8 +9,8 @@ type Data = {
   ckeys: { name: string; desc: string }[];
 };
 
-export const PlayerNotes = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const PlayerNotes = (props) => {
+  const { act, data } = useBackend<Data>();
   const { device_theme, filter, pages, ckeys } = data;
 
   const runCallback = (cb) => {
@@ -22,8 +22,7 @@ export const PlayerNotes = (props, context) => {
       title={'Player Notes'}
       theme={device_theme}
       width={400}
-      height={500}
-      resizable>
+      height={500}>
       <Window.Content scrollable>
         <Section title="Player notes">
           <Button icon="filter" onClick={() => act('filter_player_notes')}>

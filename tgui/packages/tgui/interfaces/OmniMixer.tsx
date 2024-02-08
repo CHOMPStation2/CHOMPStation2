@@ -1,8 +1,9 @@
+import { BooleanLike } from 'common/react';
+import { Fragment } from 'react';
+
 import { useBackend } from '../backend';
-import { Fragment } from 'inferno';
 import { Box, Button, LabeledList, Section, Table } from '../components';
 import { Window } from '../layouts';
-import { BooleanLike } from 'common/react';
 
 const getStatusText = (port) => {
   if (port.input) {
@@ -32,18 +33,18 @@ type Data = {
   last_flow_rate: number;
 };
 
-export const OmniMixer = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const OmniMixer = (props) => {
+  const { act, data } = useBackend<Data>();
 
   const { power, config, ports, set_flow_rate, last_flow_rate } = data;
 
   return (
-    <Window width={390} height={330} resizable>
+    <Window width={390} height={330}>
       <Window.Content>
         <Section
           title={config ? 'Configuration' : 'Status'}
           buttons={
-            <Fragment>
+            <>
               <Button
                 icon="power-off"
                 content={power ? 'On' : 'Off'}
@@ -56,16 +57,16 @@ export const OmniMixer = (props, context) => {
                 selected={config}
                 onClick={() => act('configure')}
               />
-            </Fragment>
+            </>
           }>
           <Table>
             <Table.Row header>
               <Table.Cell textAlign="center">Port</Table.Cell>
               {config ? (
-                <Fragment>
+                <>
                   <Table.Cell textAlign="center">Input</Table.Cell>
                   <Table.Cell textAlign="center">Output</Table.Cell>
-                </Fragment>
+                </>
               ) : (
                 <Table.Cell textAlign="center">Mode</Table.Cell>
               )}
@@ -104,8 +105,8 @@ export const OmniMixer = (props, context) => {
   );
 };
 
-const PortRow = (props, context) => {
-  const { act } = useBackend(context);
+const PortRow = (props) => {
+  const { act } = useBackend();
   const { port, config } = props;
 
   return (
@@ -147,7 +148,7 @@ const PortRow = (props, context) => {
         )}
       </Table.Cell>
       {config ? (
-        <Fragment>
+        <>
           <Table.Cell textAlign="center" width="20%">
             <Button
               width="100%"
@@ -174,7 +175,7 @@ const PortRow = (props, context) => {
               }
             />
           </Table.Cell>
-        </Fragment>
+        </>
       ) : null}
     </Table.Row>
   );

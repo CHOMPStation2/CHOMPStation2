@@ -4,14 +4,14 @@ import { useBackend } from '../backend';
 import { Box, Button, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
 
-export const GuestPass = (props, context) => {
-  const { act, data } = useBackend(context);
+export const GuestPass = (props) => {
+  const { act, data } = useBackend();
 
   const { access, area, giver, giveName, reason, duration, mode, log, uid } =
     data;
 
   return (
-    <Window width={500} height={520} resizable>
+    <Window width={500} height={520}>
       <Window.Content scrollable>
         {(mode === 1 && (
           <Section

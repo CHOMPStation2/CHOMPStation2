@@ -5,9 +5,10 @@
  */
 
 import { classes } from 'common/react';
-import { Component, createRef, InfernoNode, RefObject } from 'inferno';
-import { Box } from './Box';
+import { Component, createRef, ReactNode, RefObject } from 'react';
+
 import { logger } from '../logging';
+import { Box } from './Box';
 import { Icon } from './Icon';
 
 type MenuProps = {
@@ -105,8 +106,8 @@ class MenuBarButton extends Component<MenuBarDropdownProps> {
             className,
           ])}
           {...rest}
-          onClick={disabled ? undefined : onClick}
-          onmouseover={onMouseOver}>
+          onClick={disabled ? () => null : onClick}
+          onMouseOver={onMouseOver}>
           <span className="MenuBar__MenuBarButton-text">{display}</span>
         </Box>
         {open && (
@@ -126,7 +127,7 @@ type MenuBarItemProps = {
   entry: string;
   children: any;
   openWidth: string;
-  display: InfernoNode;
+  display: ReactNode;
   setOpenMenuBar: (entry: string | null) => void;
   openMenuBar: string | null;
   setOpenOnHover: (flag: boolean) => void;

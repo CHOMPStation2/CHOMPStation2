@@ -844,12 +844,12 @@
 /area/centcom/security)
 "dL" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/box/flashshells,
-/obj/item/weapon/storage/box/flashshells,
-/obj/item/weapon/storage/box/stunshells,
-/obj/item/weapon/storage/box/stunshells,
-/obj/item/weapon/storage/box/beanbags,
-/obj/item/weapon/storage/box/beanbags,
+/obj/item/ammo_magazine/ammo_box/b12g/flash,
+/obj/item/ammo_magazine/ammo_box/b12g/flash,
+/obj/item/ammo_magazine/ammo_box/b12g/stunshell,
+/obj/item/ammo_magazine/ammo_box/b12g/stunshell,
+/obj/item/ammo_magazine/ammo_box/b12g/beanbag,
+/obj/item/ammo_magazine/ammo_box/b12g/beanbag,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -4170,7 +4170,7 @@
 /turf/simulated/shuttle/floor/yellow,
 /area/centcom/evac)
 "tN" = (
-/obj/machinery/smartfridge/chemistry/virology,
+/obj/machinery/smartfridge/virology,
 /obj/effect/floor_decal/corner/green{
 	dir = 9
 	},

@@ -1,9 +1,9 @@
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend } from '../../backend';
 import { Box, Button, LabeledList } from '../../components';
 
-export const OvermapFlightData = (props, context) => {
-  const { act, data } = useBackend(context);
+export const OvermapFlightData = (props) => {
+  const { act, data } = useBackend();
 
   const { disableLimiterControls } = props;
 
@@ -29,13 +29,13 @@ export const OvermapFlightData = (props, context) => {
   );
 };
 
-export const OvermapPanControls = (props, context) => {
-  const { act } = useBackend(context);
+export const OvermapPanControls = (props) => {
+  const { act } = useBackend();
 
   const { disabled, actToDo, selected = (val) => false } = props;
 
   return (
-    <Fragment>
+    <>
       <Box>
         <Button
           disabled={disabled}
@@ -100,6 +100,6 @@ export const OvermapPanControls = (props, context) => {
           iconRotation={-45}
         />
       </Box>
-    </Fragment>
+    </>
   );
 };

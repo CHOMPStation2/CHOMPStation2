@@ -1,4 +1,4 @@
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend } from '../backend';
 import { Button, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
@@ -18,8 +18,8 @@ const dangerMap = {
   },
 };
 
-export const AiAirlock = (props, context) => {
-  const { act, data } = useBackend(context);
+export const AiAirlock = (props) => {
+  const { act, data } = useBackend();
   const statusMain = dangerMap[data.power.main] || dangerMap[0];
   const statusBackup = dangerMap[data.power.backup] || dangerMap[0];
   const statusElectrify = dangerMap[data.shock] || dangerMap[0];
@@ -66,7 +66,7 @@ export const AiAirlock = (props, context) => {
               label="Electrify"
               color={statusElectrify.color}
               buttons={
-                <Fragment>
+                <>
                   <Button
                     icon="wrench"
                     disabled={!(data.wires.shock && data.shock === 0)}
@@ -85,7 +85,7 @@ export const AiAirlock = (props, context) => {
                     content="Permanent"
                     onClick={() => act('shock-perm')}
                   />
-                </Fragment>
+                </>
               }>
               {data.shock === 2 ? 'Safe' : 'Electrified'}{' '}
               {(!data.wires.shock && '[Wires have been cut!]') ||

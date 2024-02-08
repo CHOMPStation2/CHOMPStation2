@@ -2,13 +2,13 @@ import { useBackend } from '../backend';
 import { Box, Button, Flex, LabeledList, Section } from '../components';
 import { NtosWindow } from '../layouts';
 
-export const NtosUAV = (props, context) => {
-  const { act, data } = useBackend(context);
+export const NtosUAV = (props) => {
+  const { act, data } = useBackend();
 
   const { current_uav, signal_strength, in_use, paired_uavs } = data;
 
   return (
-    <NtosWindow width={600} height={500} resizable>
+    <NtosWindow width={600} height={500}>
       <NtosWindow.Content>
         <Section title="Selected UAV">
           <LabeledList>

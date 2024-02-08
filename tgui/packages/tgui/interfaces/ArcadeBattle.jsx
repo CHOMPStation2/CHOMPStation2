@@ -2,8 +2,8 @@ import { useBackend } from '../backend';
 import { Box, Button, Flex, LabeledList, ProgressBar, Section } from '../components';
 import { Window } from '../layouts';
 
-export const ArcadeBattle = (props, context) => {
-  const { act, data } = useBackend(context);
+export const ArcadeBattle = (props) => {
+  const { act, data } = useBackend();
 
   const {
     name,
@@ -18,7 +18,7 @@ export const ArcadeBattle = (props, context) => {
   } = data;
 
   return (
-    <Window width={400} height={240} resizable>
+    <Window width={400} height={240}>
       <Window.Content>
         <Section title={enemyName} textAlign="center">
           <Section color="label">

@@ -1,12 +1,12 @@
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend } from '../backend';
 import { Box, Button, Flex, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
 import { decodeHtmlEntities } from 'common/string';
 import { formatPower } from '../format';
 
-export const ICCircuit = (props, context) => {
-  const { act, data } = useBackend(context);
+export const ICCircuit = (props) => {
+  const { act, data } = useBackend();
 
   const {
     name,
@@ -28,11 +28,11 @@ export const ICCircuit = (props, context) => {
         <Section
           title="Stats"
           buttons={
-            <Fragment>
+            <>
               <Button onClick={() => act('rename')}>Rename</Button>
               <Button onClick={() => act('scan')}>Scan with Device</Button>
               <Button onClick={() => act('remove')}>Remove</Button>
-            </Fragment>
+            </>
           }>
           <LabeledList>
             <LabeledList.Item label="Complexity">{complexity}</LabeledList.Item>
@@ -98,8 +98,8 @@ export const ICCircuit = (props, context) => {
   );
 };
 
-const ICIODisplay = (props, context) => {
-  const { act } = useBackend(context);
+const ICIODisplay = (props) => {
+  const { act } = useBackend();
 
   const { list } = props;
 
@@ -116,8 +116,8 @@ const ICIODisplay = (props, context) => {
   ));
 };
 
-const ICLinkDisplay = (props, context) => {
-  const { act } = useBackend(context);
+const ICLinkDisplay = (props) => {
+  const { act } = useBackend();
 
   const { pin } = props;
 

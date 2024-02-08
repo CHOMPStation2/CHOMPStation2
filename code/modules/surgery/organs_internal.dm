@@ -20,15 +20,15 @@
 //				CHEST INTERNAL ORGAN SURGERY					//
 //////////////////////////////////////////////////////////////////
 /datum/surgery_step/internal/fix_organ
-	surgery_name = "Dress Organ"
+	surgery_name = "Treat Organ"
 
 	allowed_tools = list(
 	/obj/item/stack/medical/advanced/bruise_pack= 100,		\
 	/obj/item/stack/medical/bruise_pack = 20
 	)
 
-	min_duration = 70
-	max_duration = 90
+	min_duration = 60 //CHOMPedit
+	max_duration = 60 //CHOMPedit
 
 /datum/surgery_step/internal/fix_organ/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if (!hasorgans(target))
@@ -125,8 +125,8 @@
 	/obj/item/weapon/storage/toolbox = 10 	//Percussive Maintenance
 	)
 
-	min_duration = 70
-	max_duration = 90
+	min_duration = 60 //CHOMPedit
+	max_duration = 60 //CHOMPedit
 
 /datum/surgery_step/fix_organic_organ_robotic/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if (!hasorgans(target))
@@ -191,7 +191,7 @@
 ///////////////////////////////////////////////////////////////
 
 /datum/surgery_step/internal/detatch_organ/
-	surgery_name = "Detatch Organ"
+	surgery_name = "Detach Organ"
 
 	allowed_tools = list(
 	/obj/item/weapon/surgical/scalpel = 100,		\
@@ -199,8 +199,8 @@
 	/obj/item/weapon/material/shard = 50, 		\
 	)
 
-	min_duration = 90
-	max_duration = 110
+	min_duration = 60 //CHOMPedit
+	max_duration = 60 //CHOMPedit
 
 /datum/surgery_step/internal/detatch_organ/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if (!..())
@@ -267,7 +267,7 @@
 	allowed_procs = list(IS_WIRECUTTER = 100) //FBP code also uses this, so let's be nice. Roboticists won't know to use hemostats.
 
 	min_duration = 60
-	max_duration = 80
+	max_duration = 60 //CHOMPedit
 
 /datum/surgery_step/internal/remove_organ/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if (!..())
@@ -339,8 +339,8 @@
 	/obj/item/organ = 100
 	)
 
-	min_duration = 60
-	max_duration = 80
+	min_duration = 40 //CHOMPedit
+	max_duration = 40 //CHOMPedit
 
 /datum/surgery_step/internal/replace_organ/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/internal/O = tool
@@ -363,14 +363,15 @@
 		to_chat(user, "<span class='danger'>You have no idea what species this person is. Report this on the bug tracker.</span>")
 		return SURGERY_FAILURE
 
-	var/o_is = (O.gender == PLURAL) ? "are" : "is"
+	//var/o_is = (O.gender == PLURAL) ? "are" : "is"
 	var/o_a =  (O.gender == PLURAL) ? "" : "a "
 	var/o_do = (O.gender == PLURAL) ? "don't" : "doesn't"
 
+/* CHOMPedit begin, allow rotten/damaged organs to be inserted again to allow for organ repair in the case of worst-case-scenerio gib situation. Also to make a funny if lets say, a doctor didnt examine a damaged organ and inserted it anyway.
 	if(O.damage > (O.max_damage * 0.75))
 		to_chat(user, "<span class='warning'>\The [O.organ_tag] [o_is] in no state to be transplanted.</span>")
 		return SURGERY_FAILURE
-
+*/
 	if(!target.internal_organs_by_name[O.organ_tag])
 		organ_missing = 1
 	else
@@ -420,8 +421,8 @@
 	/obj/item/stack/cable_coil = 75
 	)
 
-	min_duration = 100
-	max_duration = 120
+	min_duration = 40 //CHOMPedit
+	max_duration = 40 //CHOMPedit
 
 /datum/surgery_step/internal/attach_organ/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if (!..())

@@ -1,15 +1,15 @@
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend, useSharedState } from '../backend';
 import { Button, LabeledList, Section, Tabs, NoticeBox, Table, Input } from '../components';
 import { Window } from '../layouts';
 
-export const LawManager = (props, context) => {
-  const { act, data } = useBackend(context);
+export const LawManager = (props) => {
+  const { act, data } = useBackend();
 
   const { isSlaved } = data;
 
   return (
-    <Window width={800} height={600} resizable>
+    <Window width={800} height={600}>
       <Window.Content scrollable>
         {(isSlaved && <NoticeBox info>Law-synced to {isSlaved}</NoticeBox>) ||
           null}
@@ -19,11 +19,11 @@ export const LawManager = (props, context) => {
   );
 };
 
-const LawManagerContent = (props, context) => {
-  const [tabIndex, setTabIndex] = useSharedState(context, 'lawsTabIndex', 0);
+const LawManagerContent = (props) => {
+  const [tabIndex, setTabIndex] = useSharedState('lawsTabIndex', 0);
 
   return (
-    <Fragment>
+    <>
       <Tabs>
         <Tabs.Tab selected={tabIndex === 0} onClick={() => setTabIndex(0)}>
           Law Management
@@ -34,12 +34,12 @@ const LawManagerContent = (props, context) => {
       </Tabs>
       {(tabIndex === 0 && <LawManagerLaws />) || null}
       {(tabIndex === 1 && <LawManagerLawSets />) || null}
-    </Fragment>
+    </>
   );
 };
 
-const LawManagerLaws = (props, context) => {
-  const { act, data } = useBackend(context);
+const LawManagerLaws = (props) => {
+  const { act, data } = useBackend();
 
   const {
     ion_law_nr,
@@ -209,8 +209,8 @@ const LawManagerLaws = (props, context) => {
   );
 };
 
-const LawsTable = (props, context) => {
-  const { act, data } = useBackend(context);
+const LawsTable = (props) => {
+  const { act, data } = useBackend();
 
   const { isMalf, isAdmin } = data;
 
@@ -224,10 +224,10 @@ const LawsTable = (props, context) => {
           <Table.Cell>Law</Table.Cell>
           {(!noButtons && <Table.Cell collapsing>State</Table.Cell>) || null}
           {(isMalf && !noButtons && (
-            <Fragment>
+            <>
               <Table.Cell collapsing>Edit</Table.Cell>
               <Table.Cell collapsing>Delete</Table.Cell>
-            </Fragment>
+            </>
           )) ||
             null}
         </Table.Row>
@@ -250,7 +250,7 @@ const LawsTable = (props, context) => {
             )) ||
               null}
             {(isMalf && !noButtons && (
-              <Fragment>
+              <>
                 <Table.Cell collapsing>
                   <Button
                     disabled={law.zero && !isAdmin}
@@ -268,7 +268,7 @@ const LawsTable = (props, context) => {
                     Delete
                   </Button>
                 </Table.Cell>
-              </Fragment>
+              </>
             )) ||
               null}
           </Table.Row>
@@ -278,13 +278,13 @@ const LawsTable = (props, context) => {
   );
 };
 
-const LawManagerLawSets = (props, context) => {
-  const { act, data } = useBackend(context);
+const LawManagerLawSets = (props) => {
+  const { act, data } = useBackend();
 
   const { isMalf, law_sets } = data;
 
   return (
-    <Fragment>
+    <>
       <NoticeBox>
         Remember: Stating laws other than those currently loaded may be grounds
         for decommissioning! - NanoTrasen
@@ -295,7 +295,7 @@ const LawManagerLawSets = (props, context) => {
             key={laws.name}
             title={laws.name}
             buttons={
-              <Fragment>
+              <>
                 <Button
                   disabled={!isMalf}
                   icon="sync"
@@ -311,7 +311,7 @@ const LawManagerLawSets = (props, context) => {
                   }>
                   State Laws
                 </Button>
-              </Fragment>
+              </>
             }>
             {(laws.laws.has_ion_laws && (
               <LawsTable
@@ -340,6 +340,6 @@ const LawManagerLawSets = (props, context) => {
           </Section>
         ))) ||
         null}
-    </Fragment>
+    </>
   );
 };

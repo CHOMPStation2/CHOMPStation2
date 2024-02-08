@@ -1,11 +1,11 @@
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend } from '../backend';
 import { Box, Button, LabeledList, ProgressBar, Section, AnimatedNumber } from '../components';
 import { Window } from '../layouts';
 
-export const OvermapShieldGenerator = (props, context) => {
+export const OvermapShieldGenerator = (props) => {
   return (
-    <Window width={500} height={760} resizable>
+    <Window width={500} height={760}>
       <Window.Content scrollable>
         <OvermapShieldGeneratorContent />
       </Window.Content>
@@ -13,8 +13,8 @@ export const OvermapShieldGenerator = (props, context) => {
   );
 };
 
-const OvermapShieldGeneratorContent = (props, context) => {
-  const { act, data } = useBackend(context);
+const OvermapShieldGeneratorContent = (props) => {
+  const { act, data } = useBackend();
   const { modes, offline_for } = data;
 
   if (offline_for) {
@@ -28,7 +28,7 @@ const OvermapShieldGeneratorContent = (props, context) => {
   }
 
   return (
-    <Fragment>
+    <>
       <OvermapShieldGeneratorStatus />
       <OvermapShieldGeneratorControls />
       <Section title="Field Calibration">
@@ -50,12 +50,12 @@ const OvermapShieldGeneratorContent = (props, context) => {
           </Section>
         ))}
       </Section>
-    </Fragment>
+    </>
   );
 };
 
-const OvermapShieldGeneratorStatus = (props, context) => {
-  const { act, data } = useBackend(context);
+const OvermapShieldGeneratorStatus = (props) => {
+  const { act, data } = useBackend();
   const {
     running,
     overloaded,
@@ -136,15 +136,15 @@ const OvermapShieldGeneratorStatus = (props, context) => {
   );
 };
 
-const OvermapShieldGeneratorControls = (props, context) => {
-  const { act, data } = useBackend(context);
+const OvermapShieldGeneratorControls = (props) => {
+  const { act, data } = useBackend();
   const { running, hacked, idle_multiplier, idle_valid_values } = data;
 
   return (
     <Section
       title="Controls"
       buttons={
-        <Fragment>
+        <>
           {(running >= 2 && (
             <Box>
               <Button
@@ -182,7 +182,7 @@ const OvermapShieldGeneratorControls = (props, context) => {
             </Button>
           )) ||
             null}
-        </Fragment>
+        </>
       }>
       <Button icon="expand-arrows-alt" onClick={() => act('set_range')}>
         Set Field Range

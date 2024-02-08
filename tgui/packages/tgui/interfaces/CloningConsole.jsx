@@ -1,13 +1,13 @@
 import { round } from 'common/math';
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend } from '../backend';
 import { Box, Button, Flex, Icon, LabeledList, NoticeBox, ProgressBar, Section, Tabs } from '../components';
 import { COLORS } from '../constants';
 import { ComplexModal, modalRegisterBodyOverride } from '../interfaces/common/ComplexModal';
 import { Window } from '../layouts';
 
-const viewRecordModalBodyOverride = (modal, context) => {
-  const { act, data } = useBackend(context);
+const viewRecordModalBodyOverride = (modal) => {
+  const { act, data } = useBackend();
   const { activerecord, realname, health, unidentity, strucenzymes } =
     modal.args;
   const damages = health.split(' - ');
@@ -17,7 +17,7 @@ const viewRecordModalBodyOverride = (modal, context) => {
         <LabeledList.Item label="Name">{realname}</LabeledList.Item>
         <LabeledList.Item label="Damage">
           {damages.length > 1 ? (
-            <Fragment>
+            <>
               <Box color={COLORS.damageType.oxy} inline>
                 {damages[0]}
               </Box>
@@ -33,7 +33,7 @@ const viewRecordModalBodyOverride = (modal, context) => {
               <Box color={COLORS.damageType.burn} inline>
                 {damages[1]}
               </Box>
-            </Fragment>
+            </>
           ) : (
             <Box color="bad">Unknown</Box>
           )}
@@ -111,12 +111,12 @@ const viewRecordModalBodyOverride = (modal, context) => {
   );
 };
 
-export const CloningConsole = (props, context) => {
-  const { act, data } = useBackend(context);
+export const CloningConsole = (props) => {
+  const { act, data } = useBackend();
   const { menu } = data;
   modalRegisterBodyOverride('view_rec', viewRecordModalBodyOverride);
   return (
-    <Window resizable>
+    <Window>
       <ComplexModal maxWidth="75%" maxHeight="75%" />
       <Window.Content className="Layout__content--flexColumn">
         <CloningConsoleTemp />
@@ -130,8 +130,8 @@ export const CloningConsole = (props, context) => {
   );
 };
 
-const CloningConsoleNavigation = (props, context) => {
-  const { act, data } = useBackend(context);
+const CloningConsoleNavigation = (props) => {
+  const { act, data } = useBackend();
   const { menu } = data;
   return (
     <Tabs>
@@ -159,8 +159,8 @@ const CloningConsoleNavigation = (props, context) => {
   );
 };
 
-const CloningConsoleBody = (props, context) => {
-  const { data } = useBackend(context);
+const CloningConsoleBody = (props) => {
+  const { data } = useBackend();
   const { menu } = data;
   let body;
   if (menu === 1) {
@@ -171,8 +171,8 @@ const CloningConsoleBody = (props, context) => {
   return body;
 };
 
-const CloningConsoleMain = (props, context) => {
-  const { act, data } = useBackend(context);
+const CloningConsoleMain = (props) => {
+  const { act, data } = useBackend();
   const {
     loading,
     scantemp,
@@ -186,12 +186,12 @@ const CloningConsoleMain = (props, context) => {
   } = data;
   const isLocked = locked && !!occupant;
   return (
-    <Fragment>
+    <>
       <Section
         title="Scanner"
         level="2"
         buttons={
-          <Fragment>
+          <>
             <Box inline color="label">
               Scanner Lock:&nbsp;
             </Box>
@@ -208,7 +208,7 @@ const CloningConsoleMain = (props, context) => {
               content="Eject Occupant"
               onClick={() => act('eject')}
             />
-          </Fragment>
+          </>
         }>
         <LabeledList>
           <LabeledList.Item label="Status">
@@ -309,12 +309,12 @@ const CloningConsoleMain = (props, context) => {
           <Box color="bad">No pods detected. Unable to clone.</Box>
         )}
       </Section>
-    </Fragment>
+    </>
   );
 };
 
-const CloningConsoleRecords = (props, context) => {
-  const { act, data } = useBackend(context);
+const CloningConsoleRecords = (props) => {
+  const { act, data } = useBackend();
   const { records } = data;
   if (!records.length) {
     return (
@@ -346,8 +346,8 @@ const CloningConsoleRecords = (props, context) => {
   );
 };
 
-const CloningConsoleTemp = (props, context) => {
-  const { act, data } = useBackend(context);
+const CloningConsoleTemp = (props) => {
+  const { act, data } = useBackend();
   const { temp } = data;
   if (!temp || !temp.text || temp.text.length <= 0) {
     return;
@@ -369,16 +369,16 @@ const CloningConsoleTemp = (props, context) => {
   );
 };
 
-const CloningConsoleStatus = (props, context) => {
-  const { act, data } = useBackend(context);
+const CloningConsoleStatus = (props) => {
+  const { act, data } = useBackend();
   const { scanner, numberofpods, autoallowed, autoprocess, disk } = data;
   return (
     <Section
       title="Status"
       buttons={
-        <Fragment>
+        <>
           {!!autoallowed && (
-            <Fragment>
+            <>
               <Box inline color="label">
                 Auto-processing:&nbsp;
               </Box>
@@ -392,7 +392,7 @@ const CloningConsoleStatus = (props, context) => {
                   })
                 }
               />
-            </Fragment>
+            </>
           )}
           <Button
             disabled={!disk}
@@ -404,7 +404,7 @@ const CloningConsoleStatus = (props, context) => {
               })
             }
           />
-        </Fragment>
+        </>
       }>
       <LabeledList>
         <LabeledList.Item label="Scanner">

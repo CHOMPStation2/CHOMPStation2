@@ -4,10 +4,10 @@
  * @license MIT
  */
 
+import { storage } from 'common/storage';
 import { vecAdd, vecMultiply, vecScale, vecSubtract } from 'common/vector';
 
 import { createLogger } from './logging';
-import { storage } from 'common/storage';
 
 const logger = createLogger('drag');
 const pixelRatio = window.devicePixelRatio ?? 1;
@@ -203,7 +203,7 @@ const constraintPosition = (
 };
 
 // Start dragging the window
-export const dragStartHandler = (event: MouseEvent) => {
+export const dragStartHandler = (event) => {
   logger.log('drag start');
   dragging = true;
   dragPointOffset = vecSubtract(
@@ -218,7 +218,7 @@ export const dragStartHandler = (event: MouseEvent) => {
 };
 
 // End dragging the window
-const dragEndHandler = (event: MouseEvent) => {
+const dragEndHandler = (event) => {
   logger.log('drag end');
   dragMoveHandler(event);
   document.removeEventListener('mousemove', dragMoveHandler);

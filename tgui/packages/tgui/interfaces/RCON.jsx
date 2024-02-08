@@ -1,6 +1,6 @@
 import { round } from 'common/math';
 import { formatPower } from '../format';
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend, useLocalState } from '../backend';
 import { Box, Button, Icon, LabeledList, ProgressBar, Stack, Section, Tabs, Slider } from '../components';
 import { Window } from '../layouts';
@@ -9,9 +9,9 @@ import { capitalize } from 'common/string';
 // Common power multiplier
 const POWER_MUL = 1e3;
 
-export const RCON = (props, context) => {
+export const RCON = (props) => {
   return (
-    <Window width={630} height={540} resizable>
+    <Window width={630} height={540}>
       <Window.Content scrollable>
         <RCONContent />
       </Window.Content>
@@ -19,8 +19,8 @@ export const RCON = (props, context) => {
   );
 };
 
-export const RCONContent = (props, context) => {
-  const [tabIndex, setTabIndex] = useLocalState(context, 'tabIndex', 0);
+export const RCONContent = (props) => {
+  const [tabIndex, setTabIndex] = useLocalState('tabIndex', 0);
 
   let body;
   if (tabIndex === 0) {
@@ -30,7 +30,7 @@ export const RCONContent = (props, context) => {
   }
 
   return (
-    <Fragment>
+    <>
       <Tabs>
         <Tabs.Tab
           key="SMESs"
@@ -46,12 +46,12 @@ export const RCONContent = (props, context) => {
         </Tabs.Tab>
       </Tabs>
       <Box m={2}>{body}</Box>
-    </Fragment>
+    </>
   );
 };
 
-const RCONSmesList = (props, context) => {
-  const { act, data } = useBackend(context);
+const RCONSmesList = (props) => {
+  const { act, data } = useBackend();
 
   const { smes_info, pages, current_page } = data;
 
@@ -92,8 +92,8 @@ const RCONSmesList = (props, context) => {
   );
 };
 
-const SMESItem = (props, context) => {
-  const { act } = useBackend(context);
+const SMESItem = (props) => {
+  const { act } = useBackend();
   const {
     capacityPercent,
     capacity,
@@ -143,8 +143,8 @@ const SMESItem = (props, context) => {
   );
 };
 
-const SMESControls = (props, context) => {
-  const { act } = useBackend(context);
+const SMESControls = (props) => {
+  const { act } = useBackend();
   const { way, smes } = props;
   const {
     capacityPercent,
@@ -294,8 +294,8 @@ const SMESControls = (props, context) => {
   );
 };
 
-const RCONBreakerList = (props, context) => {
-  const { act, data } = useBackend(context);
+const RCONBreakerList = (props) => {
+  const { act, data } = useBackend();
 
   const { breaker_info } = data;
 

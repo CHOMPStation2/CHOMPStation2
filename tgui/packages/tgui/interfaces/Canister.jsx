@@ -4,8 +4,8 @@ import { AnimatedNumber, Box, Button, Icon, Knob, LabeledControls, LabeledList, 
 import { formatSiUnit } from '../format';
 import { Window } from '../layouts';
 
-export const Canister = (props, context) => {
-  const { act, data } = useBackend(context);
+export const Canister = (props) => {
+  const { act, data } = useBackend();
   const {
     connected,
     can_relabel,
@@ -18,7 +18,7 @@ export const Canister = (props, context) => {
     holding,
   } = data;
   return (
-    <Window width={360} height={242} resizable>
+    <Window width={360} height={242}>
       <Window.Content>
         <Section
           title="Canister"

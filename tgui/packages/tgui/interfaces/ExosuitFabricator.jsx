@@ -2,7 +2,8 @@ import { classes } from 'common/react';
 import { uniqBy } from 'common/collections';
 import { useBackend, useSharedState } from '../backend';
 import { formatSiUnit, formatMoney } from '../format';
-import { Flex, Section, Tabs, Box, Button, Fragment, ProgressBar, NumberInput, Icon, Input, Tooltip } from '../components';
+import { Flex, Section, Tabs, Box, Button, ProgressBar, NumberInput, Icon, Input, Tooltip } from '../components';
+import { Fragment } from 'react';
 import { Window } from '../layouts';
 import { createSearch, toTitleCase } from 'common/string';
 import { toFixed } from 'common/math';
@@ -134,8 +135,8 @@ const searchFilter = (search, allparts) => {
   return searchResults;
 };
 
-export const ExosuitFabricator = (props, context) => {
-  const { act, data } = useBackend(context);
+export const ExosuitFabricator = (props) => {
+  const { act, data } = useBackend();
 
   const queue = data.queue || [];
   const materialAsObj = materialArrayToObj(data.materials || []);
@@ -146,13 +147,11 @@ export const ExosuitFabricator = (props, context) => {
   );
 
   const [displayMatCost, setDisplayMatCost] = useSharedState(
-    context,
     'display_mats',
     false
   );
 
   const [displayAllMat, setDisplayAllMat] = useSharedState(
-    context,
     'display_all_mats',
     false
   );
@@ -239,15 +238,14 @@ export const ExosuitFabricator = (props, context) => {
   );
 };
 
-const EjectMaterial = (props, context) => {
-  const { act } = useBackend(context);
+const EjectMaterial = (props) => {
+  const { act } = useBackend();
 
   const { material } = props;
 
   const { name, removable, sheets } = material;
 
   const [removeMaterials, setRemoveMaterials] = useSharedState(
-    context,
     'remove_mats_' + name,
     1
   );
@@ -257,7 +255,7 @@ const EjectMaterial = (props, context) => {
   }
 
   return (
-    <Fragment>
+    <>
       <NumberInput
         width="30px"
         animated
@@ -282,12 +280,12 @@ const EjectMaterial = (props, context) => {
           })
         }
       />
-    </Fragment>
+    </>
   );
 };
 
-export const Materials = (props, context) => {
-  const { data } = useBackend(context);
+export const Materials = (props) => {
+  const { data } = useBackend();
 
   const { displayAllMat, disableEject = false } = props;
 
@@ -330,7 +328,7 @@ export const Materials = (props, context) => {
   );
 };
 
-const MaterialAmount = (props, context) => {
+const MaterialAmount = (props) => {
   const { name, amount, formatsi, formatmoney, color, style } = props;
 
   let amountDisplay = '0';
@@ -364,14 +362,13 @@ const MaterialAmount = (props, context) => {
   );
 };
 
-const PartSets = (props, context) => {
-  const { data } = useBackend(context);
+const PartSets = (props) => {
+  const { data } = useBackend();
 
   const partSets = data.partSets || [];
   const buildableParts = data.buildableParts || {};
 
   const [selectedPartTab, setSelectedPartTab] = useSharedState(
-    context,
     'part_tab',
     partSets.length ? buildableParts[0] : ''
   );
@@ -394,8 +391,8 @@ const PartSets = (props, context) => {
   );
 };
 
-const PartLists = (props, context) => {
-  const { data } = useBackend(context);
+const PartLists = (props) => {
+  const { data } = useBackend();
 
   const getFirstValidPartSet = (sets) => {
     for (let set of sets) {
@@ -412,16 +409,11 @@ const PartLists = (props, context) => {
   const { queueMaterials, materials } = props;
 
   const [selectedPartTab, setSelectedPartTab] = useSharedState(
-    context,
     'part_tab',
     getFirstValidPartSet(partSets)
   );
 
-  const [searchText, setSearchText] = useSharedState(
-    context,
-    'search_text',
-    ''
-  );
+  const [searchText, setSearchText] = useSharedState('search_text', '');
 
   if (!selectedPartTab || !buildableParts[selectedPartTab]) {
     const validSet = getFirstValidPartSet(partSets);
@@ -456,7 +448,7 @@ const PartLists = (props, context) => {
   }
 
   return (
-    <Fragment>
+    <>
       <Section>
         <Flex>
           <Flex.Item mr={1}>
@@ -486,18 +478,18 @@ const PartLists = (props, context) => {
             parts={partsList[category]}
           />
         ))}
-    </Fragment>
+    </>
   );
 };
 
-const PartCategory = (props, context) => {
-  const { act, data } = useBackend(context);
+const PartCategory = (props) => {
+  const { act, data } = useBackend();
 
   const { buildingPart } = data;
 
   const { parts, name, forceShow, placeholder } = props;
 
-  const [displayMatCost] = useSharedState(context, 'display_mats', false);
+  const [displayMatCost] = useSharedState('display_mats', false);
 
   return (
     (!!parts.length || forceShow) && (
@@ -583,8 +575,8 @@ const PartCategory = (props, context) => {
   );
 };
 
-const Queue = (props, context) => {
-  const { act, data } = useBackend(context);
+const Queue = (props) => {
+  const { act, data } = useBackend();
 
   const { isProcessingQueue } = data;
 
@@ -600,7 +592,7 @@ const Queue = (props, context) => {
           title="Queue"
           overflowY="auto"
           buttons={
-            <Fragment>
+            <>
               <Button.Confirm
                 disabled={!queue.length}
                 color="bad"
@@ -623,7 +615,7 @@ const Queue = (props, context) => {
                   onClick={() => act('build_queue')}
                 />
               )}
-            </Fragment>
+            </>
           }>
           <Flex direction="column" height="100%">
             <Flex.Item>
@@ -649,7 +641,7 @@ const Queue = (props, context) => {
   );
 };
 
-const QueueMaterials = (props, context) => {
+const QueueMaterials = (props) => {
   const { queueMaterials, missingMaterials } = props;
 
   return (
@@ -672,15 +664,15 @@ const QueueMaterials = (props, context) => {
   );
 };
 
-const QueueList = (props, context) => {
-  const { act, data } = useBackend(context);
+const QueueList = (props) => {
+  const { act, data } = useBackend();
 
   const { textColors } = props;
 
   const queue = data.queue || [];
 
   if (!queue.length) {
-    return <Fragment>No parts in queue.</Fragment>;
+    return <>No parts in queue.</>;
   }
 
   return queue.map((part, index) => (
@@ -711,8 +703,8 @@ const QueueList = (props, context) => {
   ));
 };
 
-const BeingBuilt = (props, context) => {
-  const { data } = useBackend(context);
+const BeingBuilt = (props) => {
+  const { data } = useBackend();
 
   const { buildingPart, storedPart } = data;
 

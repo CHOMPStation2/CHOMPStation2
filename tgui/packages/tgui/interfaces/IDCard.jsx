@@ -3,8 +3,8 @@ import { useBackend } from '../backend';
 import { Window } from '../layouts';
 import { RankIcon } from './common/RankIcon';
 
-export const IDCard = (props, context) => {
-  const { data } = useBackend(context);
+export const IDCard = (props) => {
+  const { data } = useBackend();
 
   const {
     registered_name,
@@ -28,7 +28,7 @@ export const IDCard = (props, context) => {
   ];
 
   return (
-    <Window width={470} height={250} resizable>
+    <Window width={470} height={250}>
       <Window.Content>
         <Section>
           <Flex>

@@ -1,12 +1,12 @@
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend } from '../backend';
 import { Box, Button, LabeledList, ProgressBar, Section, NoticeBox } from '../components';
 import { Window } from '../layouts';
 import { toTitleCase } from 'common/string';
 import { Materials } from './ExosuitFabricator';
 
-export const PartsLathe = (props, context) => {
-  const { act, data } = useBackend(context);
+export const PartsLathe = (props) => {
+  const { act, data } = useBackend();
   const {
     panelOpen,
     copyBoard,
@@ -18,7 +18,7 @@ export const PartsLathe = (props, context) => {
     recipies,
   } = data;
   return (
-    <Window width={500} height={500} resizable>
+    <Window width={500} height={500}>
       <Window.Content scrollable>
         {(error && <NoticeBox danger>Missing Materials: {error}</NoticeBox>) ||
           null}
@@ -52,7 +52,7 @@ export const PartsLathe = (props, context) => {
               </LabeledList.Item>
             </LabeledList>
             {(copyBoardReqComponents && copyBoardReqComponents.length && (
-              <Fragment>
+              <>
                 {copyBoardReqComponents.map((comp) => (
                   <Box key={comp.name}>
                     {comp.qty} x {toTitleCase(comp.name)}
@@ -61,7 +61,7 @@ export const PartsLathe = (props, context) => {
                 <Button icon="wrench" onClick={() => act('queueBoard')}>
                   Build All
                 </Button>
-              </Fragment>
+              </>
             )) || <Box>Board has no required components.</Box>}
           </Section>
         )}

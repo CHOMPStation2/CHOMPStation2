@@ -46,6 +46,7 @@
 						/obj/item/weapon/circuitboard/mecha/phazon/peripherals,
 						/obj/item/weapon/circuitboard/mecha/phazon/main,
 						/obj/item/device/bodysnatcher,
+						/obj/item/device/mindbinder,	//CHOMPAdd
 						/obj/item/weapon/bluespace_harpoon,
 						/obj/item/clothing/accessory/permit/gun,
 						/obj/item/device/perfect_tele,

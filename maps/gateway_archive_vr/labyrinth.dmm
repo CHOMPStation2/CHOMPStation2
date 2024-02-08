@@ -1252,13 +1252,13 @@
 	},
 /area/awaymission/labyrinth/arrival)
 "dd" = (
+/obj/item/device/measuring_tape,
 /turf/unsimulated/floor{
 	dir = 8;
 	icon_state = "asteroid";
 	name = "dirt";
 	
 	},
-/obj/item/device/measuring_tape,
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_n";
@@ -1796,6 +1796,10 @@
 	},
 /area/awaymission/labyrinth/boss)
 "eb" = (
+/obj/structure/ladder{
+	icon_state = "ladderup";
+	pixel_y = -4
+	},
 /turf/unsimulated/wall{
 	density = 0;
 	icon_state = "0";
@@ -1813,10 +1817,6 @@
 	icon_state = "rock_side_e";
 	name = "solid rock";
 	
-	},
-/obj/structure/ladder{
-	icon_state = "ladderup";
-	pixel_y = -4
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;

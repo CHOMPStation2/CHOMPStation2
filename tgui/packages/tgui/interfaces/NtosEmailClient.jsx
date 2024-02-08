@@ -1,12 +1,12 @@
 /* eslint react/no-danger: "off" */
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend } from '../backend';
 import { Button, Box, Section, Table, LabeledList, Input, Tabs, Flex, AnimatedNumber, ProgressBar } from '../components';
 import { NtosWindow } from '../layouts';
 import { round } from 'common/math';
 
-export const NtosEmailClient = (props, context) => {
-  const { act, data } = useBackend(context);
+export const NtosEmailClient = (props) => {
+  const { act, data } = useBackend();
 
   const { PC_device_theme, error, downloading, current_account } = data;
 
@@ -27,8 +27,8 @@ export const NtosEmailClient = (props, context) => {
   );
 };
 
-const NtosEmailClientDownloading = (props, context) => {
-  const { act, data } = useBackend(context);
+const NtosEmailClientDownloading = (props) => {
+  const { act, data } = useBackend();
 
   const { down_filename, down_progress, down_size, down_speed } = data;
 
@@ -52,8 +52,8 @@ const NtosEmailClientDownloading = (props, context) => {
   );
 };
 
-const NtosEmailClientContent = (props, context) => {
-  const { act, data } = useBackend(context);
+const NtosEmailClientContent = (props) => {
+  const { act, data } = useBackend();
 
   const { current_account, addressbook, new_message, cur_title } = data;
 
@@ -71,7 +71,7 @@ const NtosEmailClientContent = (props, context) => {
     <Section
       title={'Logged in as: ' + current_account}
       buttons={
-        <Fragment>
+        <>
           <Button
             icon="plus"
             tooltip="New Message"
@@ -90,15 +90,15 @@ const NtosEmailClientContent = (props, context) => {
             tooltipPosition="left"
             onClick={() => act('logout')}
           />
-        </Fragment>
+        </>
       }>
       {content}
     </Section>
   );
 };
 
-const NtosEmailClientInbox = (props, context) => {
-  const { act, data } = useBackend(context);
+const NtosEmailClientInbox = (props) => {
+  const { act, data } = useBackend();
 
   const { current_account, folder, messagecount, messages } = data;
 
@@ -162,8 +162,8 @@ const NtosEmailClientInbox = (props, context) => {
   );
 };
 
-export const NtosEmailClientViewMessage = (props, context) => {
-  const { act, data } = useBackend(context);
+export const NtosEmailClientViewMessage = (props) => {
+  const { act, data } = useBackend();
 
   // This is used to let NtosEmailAdministration use the same code for spying on emails
   // Administrators don't have access to attachments or the message UID, so we need to avoid
@@ -188,7 +188,7 @@ export const NtosEmailClientViewMessage = (props, context) => {
         administrator ? (
           <Button icon="times" onClick={() => act('back')} />
         ) : (
-          <Fragment>
+          <>
             <Button
               icon="share"
               tooltip="Reply"
@@ -223,7 +223,7 @@ export const NtosEmailClientViewMessage = (props, context) => {
               tooltipPosition="left"
               onClick={() => act('cancel', { cancel: cur_uid })}
             />
-          </Fragment>
+          </>
         )
       }>
       <LabeledList>
@@ -248,8 +248,8 @@ export const NtosEmailClientViewMessage = (props, context) => {
   );
 };
 
-const NtosEmailClientAddressBook = (props, context) => {
-  const { act, data } = useBackend(context);
+const NtosEmailClientAddressBook = (props) => {
+  const { act, data } = useBackend();
 
   const { accounts } = data;
 
@@ -276,8 +276,8 @@ const NtosEmailClientAddressBook = (props, context) => {
   );
 };
 
-const NtosEmailClientNewMessage = (props, context) => {
-  const { act, data } = useBackend(context);
+const NtosEmailClientNewMessage = (props) => {
+  const { act, data } = useBackend();
 
   const {
     current_account,
@@ -294,12 +294,12 @@ const NtosEmailClientNewMessage = (props, context) => {
       title="New Message"
       level={2}
       buttons={
-        <Fragment>
+        <>
           <Button icon="share" onClick={() => act('send')}>
             Send Message
           </Button>
           <Button color="bad" icon="times" onClick={() => act('cancel')} />
-        </Fragment>
+        </>
       }>
       <LabeledList>
         <LabeledList.Item label="Title">
@@ -374,8 +374,8 @@ const NtosEmailClientNewMessage = (props, context) => {
   );
 };
 
-const NtosEmailClientError = (props, context) => {
-  const { act } = useBackend(context);
+const NtosEmailClientError = (props) => {
+  const { act } = useBackend();
   const { error } = props;
   return (
     <Section
@@ -392,8 +392,8 @@ const NtosEmailClientError = (props, context) => {
   );
 };
 
-const NtosEmailClientLogin = (props, context) => {
-  const { act, data } = useBackend(context);
+const NtosEmailClientLogin = (props) => {
+  const { act, data } = useBackend();
 
   const { stored_login, stored_password } = data;
 

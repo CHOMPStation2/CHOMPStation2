@@ -2,13 +2,13 @@ import { useBackend } from '../backend';
 import { Button, Flex, Section } from '../components';
 import { Window } from '../layouts';
 
-export const DestinationTagger = (props, context) => {
-  const { act, data } = useBackend(context);
+export const DestinationTagger = (props) => {
+  const { act, data } = useBackend();
 
   const { currTag, taggerLocs } = data;
 
   return (
-    <Window width={450} height={310} resizable>
+    <Window width={450} height={310}>
       <Window.Content>
         <Section title="Tagger Locations">
           <Flex wrap="wrap" spacing={1} justify="center">

@@ -1,7 +1,8 @@
-import { useBackend } from '../backend';
-import { Window } from '../layouts';
-import { Button, Section } from '../components';
 import { BooleanLike } from 'common/react';
+
+import { useBackend } from '../backend';
+import { Button, Section } from '../components';
+import { Window } from '../layouts';
 
 const ModeSpan = {
   'Hold': '<span class="badge text-bg-secondary">Hold</span>',
@@ -1035,8 +1036,8 @@ const getCurrentTimestamp = (): string => {
   );
 };
 
-const downloadPrefs = (context, extension: string) => {
-  const { act, data } = useBackend<Data>(context);
+const downloadPrefs = (extension: string) => {
+  const { act, data } = useBackend<Data>();
 
   const { db_version, db_repo, mob_name, bellies } = data;
 
@@ -1098,7 +1099,7 @@ const downloadPrefs = (context, extension: string) => {
 
 export const VorePanelExport = () => {
   return (
-    <Window width={790} height={560} theme="abstract" resizeable>
+    <Window width={790} height={560} theme="abstract">
       <Window.Content>
         <VorePanelExportContent />
       </Window.Content>
@@ -1106,24 +1107,18 @@ export const VorePanelExport = () => {
   );
 };
 
-const VorePanelExportContent = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+const VorePanelExportContent = (props) => {
+  const { act, data } = useBackend<Data>();
 
   const { bellies } = data;
 
   return (
     <Section title="Vore Export Panel">
       <Section title="Export">
-        <Button
-          fluid
-          icon="file-alt"
-          onClick={() => downloadPrefs(context, '.html')}>
+        <Button fluid icon="file-alt" onClick={() => downloadPrefs('.html')}>
           Export (HTML)
         </Button>
-        <Button
-          fluid
-          icon="file-alt"
-          onClick={() => downloadPrefs(context, '.vrdb')}>
+        <Button fluid icon="file-alt" onClick={() => downloadPrefs('.vrdb')}>
           Export (VRDB)
         </Button>
       </Section>

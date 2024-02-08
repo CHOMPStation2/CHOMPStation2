@@ -1,12 +1,12 @@
 import { toFixed } from 'common/math';
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend } from '../backend';
 import { Box, Button, Flex, LabeledList, Section, NoticeBox } from '../components';
 import { Window } from '../layouts';
 import { RankIcon } from './common/RankIcon';
 
-export const TimeClock = (props, context) => {
-  const { act, data } = useBackend(context);
+export const TimeClock = (props) => {
+  const { act, data } = useBackend();
 
   const {
     department_hours,
@@ -19,7 +19,7 @@ export const TimeClock = (props, context) => {
   } = data;
 
   return (
-    <Window width={500} height={520} resizable>
+    <Window width={500} height={520}>
       <Window.Content scrollable>
         <Section title="OOC">
           <NoticeBox>
@@ -54,7 +54,7 @@ export const TimeClock = (props, context) => {
               </Button>
             </LabeledList.Item>
             {!!job_datum && (
-              <Fragment>
+              <>
                 <LabeledList.Item label="Rank">
                   <Box backgroundColor={job_datum.selection_color} p={0.8}>
                     <Flex justify="space-between" align="center">
@@ -85,7 +85,7 @@ export const TimeClock = (props, context) => {
                       <Box>Requires PTO - {job_datum.pto_department}</Box>
                     )) || <Box>Neutral</Box>}
                 </LabeledList.Item>
-              </Fragment>
+              </>
             )}
           </LabeledList>
         </Section>

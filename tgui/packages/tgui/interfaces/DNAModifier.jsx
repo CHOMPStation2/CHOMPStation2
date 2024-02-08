@@ -1,4 +1,3 @@
-import { Fragment } from 'inferno';
 import { useBackend } from '../backend';
 import { Box, Button, Dimmer, Flex, Icon, Knob, LabeledList, ProgressBar, Section, Tabs } from '../components';
 import { Window } from '../layouts';
@@ -19,8 +18,8 @@ const operations = [
 
 const rejuvenatorsDoses = [5, 10, 20, 30, 50];
 
-export const DNAModifier = (props, context) => {
-  const { act, data } = useBackend(context);
+export const DNAModifier = (props) => {
+  const { act, data } = useBackend();
   const { irradiating, dnaBlockSize, occupant } = data;
   context.dnaBlockSize = dnaBlockSize;
   context.isDNAInvalid =
@@ -32,7 +31,7 @@ export const DNAModifier = (props, context) => {
     radiatingModal = <DNAModifierIrradiating duration={irradiating} />;
   }
   return (
-    <Window width={660} height={700} resizable>
+    <Window width={660} height={700}>
       <ComplexModal />
       {radiatingModal}
       <Window.Content className="Layout__content--flexColumn">
@@ -43,14 +42,14 @@ export const DNAModifier = (props, context) => {
   );
 };
 
-const DNAModifierOccupant = (props, context) => {
-  const { act, data } = useBackend(context);
+const DNAModifierOccupant = (props) => {
+  const { act, data } = useBackend();
   const { locked, hasOccupant, occupant } = data;
   return (
     <Section
       title="Occupant"
       buttons={
-        <Fragment>
+        <>
           <Box color="label" inline mr="0.5rem">
             Door Lock:
           </Box>
@@ -67,10 +66,10 @@ const DNAModifierOccupant = (props, context) => {
             content="Eject"
             onClick={() => act('ejectOccupant')}
           />
-        </Fragment>
+        </>
       }>
       {hasOccupant ? (
-        <Fragment>
+        <>
           <Box>
             <LabeledList>
               <LabeledList.Item label="Name">{occupant.name}</LabeledList.Item>
@@ -120,7 +119,7 @@ const DNAModifierOccupant = (props, context) => {
               </LabeledList.Item>
             </LabeledList>
           )}
-        </Fragment>
+        </>
       ) : (
         <Box color="label">Cell unoccupied.</Box>
       )}
@@ -128,8 +127,8 @@ const DNAModifierOccupant = (props, context) => {
   );
 };
 
-const DNAModifierMain = (props, context) => {
-  const { act, data } = useBackend(context);
+const DNAModifierMain = (props) => {
+  const { act, data } = useBackend();
   const { selectedMenuKey, hasOccupant, occupant } = data;
   if (!hasOccupant) {
     return (
@@ -159,17 +158,17 @@ const DNAModifierMain = (props, context) => {
   let body;
   if (selectedMenuKey === 'ui') {
     body = (
-      <Fragment>
+      <>
         <DNAModifierMainUI />
         <DNAModifierMainRadiationEmitter />
-      </Fragment>
+      </>
     );
   } else if (selectedMenuKey === 'se') {
     body = (
-      <Fragment>
+      <>
         <DNAModifierMainSE />
         <DNAModifierMainRadiationEmitter />
-      </Fragment>
+      </>
     );
   } else if (selectedMenuKey === 'buffer') {
     body = <DNAModifierMainBuffers />;
@@ -194,8 +193,8 @@ const DNAModifierMain = (props, context) => {
   );
 };
 
-const DNAModifierMainUI = (props, context) => {
-  const { act, data } = useBackend(context);
+const DNAModifierMainUI = (props) => {
+  const { act, data } = useBackend();
   const { selectedUIBlock, selectedUISubBlock, selectedUITarget, occupant } =
     data;
   return (
@@ -230,8 +229,8 @@ const DNAModifierMainUI = (props, context) => {
   );
 };
 
-const DNAModifierMainSE = (props, context) => {
-  const { act, data } = useBackend(context);
+const DNAModifierMainSE = (props) => {
+  const { act, data } = useBackend();
   const { selectedSEBlock, selectedSESubBlock, occupant } = data;
   return (
     <Section title="Modify Structural Enzymes" level="2">
@@ -251,8 +250,8 @@ const DNAModifierMainSE = (props, context) => {
   );
 };
 
-const DNAModifierMainRadiationEmitter = (props, context) => {
-  const { act, data } = useBackend(context);
+const DNAModifierMainRadiationEmitter = (props) => {
+  const { act, data } = useBackend();
   const { radiationIntensity, radiationDuration } = data;
   return (
     <Section title="Radiation Emitter" level="2">
@@ -293,8 +292,8 @@ const DNAModifierMainRadiationEmitter = (props, context) => {
   );
 };
 
-const DNAModifierMainBuffers = (props, context) => {
-  const { act, data } = useBackend(context);
+const DNAModifierMainBuffers = (props) => {
+  const { act, data } = useBackend();
   const { buffers } = data;
   let bufferElements = buffers.map((buffer, i) => (
     <DNAModifierMainBuffersElement
@@ -305,17 +304,17 @@ const DNAModifierMainBuffers = (props, context) => {
     />
   ));
   return (
-    <Fragment>
+    <>
       <Section title="Buffers" level="2">
         {bufferElements}
       </Section>
       <DNAModifierMainBuffersDisk />
-    </Fragment>
+    </>
   );
 };
 
-const DNAModifierMainBuffersElement = (props, context) => {
-  const { act, data } = useBackend(context);
+const DNAModifierMainBuffersElement = (props) => {
+  const { act, data } = useBackend();
   const { id, name, buffer } = props;
   const isInjectorReady = data.isInjectorReady;
   const realName = name + (buffer.data ? ' - ' + buffer.label : '');
@@ -327,7 +326,7 @@ const DNAModifierMainBuffersElement = (props, context) => {
         mx="0"
         lineHeight="18px"
         buttons={
-          <Fragment>
+          <>
             <Button.Confirm
               disabled={!buffer.data}
               icon="trash"
@@ -363,7 +362,7 @@ const DNAModifierMainBuffersElement = (props, context) => {
                 })
               }
             />
-          </Fragment>
+          </>
         }>
         <LabeledList>
           <LabeledList.Item label="Write">
@@ -413,8 +412,8 @@ const DNAModifierMainBuffersElement = (props, context) => {
               }
             />
           </LabeledList.Item>
-          {buffer.data ? (
-            <Fragment>
+          {!!buffer.data && (
+            <>
               <LabeledList.Item label="Subject">
                 {buffer.owner || <Box color="average">Unknown</Box>}
               </LabeledList.Item>
@@ -464,8 +463,8 @@ const DNAModifierMainBuffersElement = (props, context) => {
                   }
                 />
               </LabeledList.Item>
-            </Fragment>
-          ) : null}
+            </>
+          )}
         </LabeledList>
         {!buffer.data && (
           <Box color="label" mt="0.5rem">
@@ -477,15 +476,15 @@ const DNAModifierMainBuffersElement = (props, context) => {
   );
 };
 
-const DNAModifierMainBuffersDisk = (props, context) => {
-  const { act, data } = useBackend(context);
+const DNAModifierMainBuffersDisk = (props) => {
+  const { act, data } = useBackend();
   const { hasDisk, disk } = data;
   return (
     <Section
       title="Data Disk"
       level="2"
       buttons={
-        <Fragment>
+        <>
           <Button.Confirm
             disabled={!hasDisk || !disk.data}
             icon="trash"
@@ -498,7 +497,7 @@ const DNAModifierMainBuffersDisk = (props, context) => {
             content="Eject"
             onClick={() => act('ejectDisk')}
           />
-        </Fragment>
+        </>
       }>
       {hasDisk ? (
         disk.data ? (
@@ -528,8 +527,8 @@ const DNAModifierMainBuffersDisk = (props, context) => {
   );
 };
 
-const DNAModifierMainRejuvenators = (props, context) => {
-  const { act, data } = useBackend(context);
+const DNAModifierMainRejuvenators = (props) => {
+  const { act, data } = useBackend();
   const { isBeakerLoaded, beakerVolume, beakerLabel } = data;
   return (
     <Section
@@ -592,7 +591,7 @@ const DNAModifierMainRejuvenators = (props, context) => {
   );
 };
 
-const DNAModifierIrradiating = (props, context) => {
+const DNAModifierIrradiating = (props) => {
   return (
     <Dimmer textAlign="center">
       <Icon name="spinner" size="5" spin />
@@ -613,8 +612,8 @@ const DNAModifierIrradiating = (props, context) => {
   );
 };
 
-const DNAModifierBlocks = (props, context) => {
-  const { act, data } = useBackend(context);
+const DNAModifierBlocks = (props) => {
+  const { act, data } = useBackend();
   const { dnaString, selectedBlock, selectedSubblock, blockSize, action } =
     props;
 

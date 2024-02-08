@@ -59,7 +59,7 @@
 	minbodytemp = 0
 	heat_damage_per_tick = 0 //Even if the atmos stuff doesn't work, at least it won't take any damage.
 
-	armor = list(			
+	armor = list(
 				"melee" = 0,
 				"bullet" = 90,
 				"laser" = 100,
@@ -67,12 +67,12 @@
 				"bomb" = 100,
 				"bio" = 100,
 				"rad" = 100)
-				
+
 	can_be_drop_prey = FALSE //CHOMP Add
 
 /datum/say_list/solarmoth
 	emote_see = list("flutters")
-	
+
 /mob/living/simple_mob/vore/solarmoth/apply_melee_effects(var/atom/A)
 	if(isliving(A))
 		var/mob/living/L = A
@@ -110,17 +110,17 @@
 			if(heat_transfer > 0 && env.temperature < T0C + 200)	//This should start heating the room at a moderate pace up to 200 degrees celsius.
 				heat_transfer = min(heat_transfer , heating_power) //limit by the power rating of the heater
 				removed.add_thermal_energy(heat_transfer)
-			
+
 			else if(heat_transfer > 0 && env.temperature < set_temperature) //Set temperature is 10,000 degrees celsius. So this thing will start cooking crazy hot between the temperatures of 200C and 10,000C.
 				heating_power = original_temp*100 //Changed to work variable -shark //FLAME ON! This will make the moth heat up the room at an incredible rate.
 				heat_transfer = min(heat_transfer , heating_power) //limit by the power rating of the heater. Except it's hot, so yeah.
 				removed.add_thermal_energy(heat_transfer)
-			
+
 			else
 				return
 
 			env.merge(removed)
-		
+
 
 
 	//Since I'm changing hyper mode to be variable we need to store old power
@@ -129,6 +129,7 @@
 /mob/living/simple_mob/vore/solarmoth/proc/explode()
 	src.anchored = 0
 	set_light(0)
+	moth_amount = clamp(moth_amount - 1, 0, 1)
 	if(empulse(src, emp_heavy, emp_med, emp_light, emp_long))
 		qdel(src)
 	return
@@ -136,11 +137,11 @@
 /mob/living/simple_mob/vore/solarmoth/death()
 	explode()
 	..()
-	
+
 /mob/living/simple_mob/vore/solarmoth/gib() //This baby will explode no matter what you do to it.
 	explode()
 	..()
-	
+
 
 
 /mob/living/simple_mob/vore/solarmoth/handle_light()
@@ -161,9 +162,9 @@
 /mob/living/simple_mob/vore/solarmoth/lunarmoth
 	name = "lunarmoth"
 	desc = "A majestic sparkling lunarmoth. Also a slight engineering hazard."
-	
+
 	var/nospampls = 0
-	
+
 	cold_damage_per_tick = 0
 	//ATMOS
 	set_temperature = T0C - 10000
@@ -176,7 +177,7 @@
 	if(prob(25))
 		for(var/obj/machinery/light/light in range(5, src))
 			if(prob(50))
-				light.broken() 
+				light.broken()
 	if(prob(10))
 		for(var/obj/structure/window/window in range(5, src))
 			if(prob(50))
@@ -187,7 +188,7 @@
 				visible_message("<span class='danger'>Emergency Shutter malfunction!</span>")
 				door.blocked = 0
 				door.open(1)
-	
+
 	spawn(100)
 		nospampls = 0
 
@@ -195,4 +196,3 @@
 	..()
 	if(!nospampls)
 		chilltheglass() //shatter and broken calls for glass and lights. Also some special thing.
-	

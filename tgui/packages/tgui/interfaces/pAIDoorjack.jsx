@@ -2,13 +2,13 @@ import { useBackend } from '../backend';
 import { AnimatedNumber, Box, Button, LabeledList, ProgressBar, Section } from '../components';
 import { Window } from '../layouts';
 
-export const pAIDoorjack = (props, context) => {
-  const { act, data } = useBackend(context);
+export const pAIDoorjack = (props) => {
+  const { act, data } = useBackend();
 
   const { cable, machine, inprogress, progress_a, progress_b, aborted } = data;
 
   return (
-    <Window width={300} height={150} resizable>
+    <Window width={300} height={150}>
       <Window.Content scrollable>
         <Section>
           <LabeledList>

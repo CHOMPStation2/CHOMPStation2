@@ -1,4 +1,5 @@
 import { BooleanLike } from 'common/react';
+
 import { useBackend } from '../backend';
 import { Box, Button, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
@@ -15,8 +16,8 @@ type Data = {
   }[];
 };
 
-export const PointDefenseControl = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const PointDefenseControl = (props) => {
+  const { act, data } = useBackend<Data>();
   const { id, turrets } = data;
   return (
     <Window width={400} height={600}>

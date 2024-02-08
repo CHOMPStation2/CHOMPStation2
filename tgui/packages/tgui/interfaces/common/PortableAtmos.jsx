@@ -1,9 +1,9 @@
 import { useBackend } from '../../backend';
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { Box, Section, LabeledList, Button, AnimatedNumber, ProgressBar } from '../../components';
 
-export const PortableBasicInfo = (props, context) => {
-  const { act, data } = useBackend(context);
+export const PortableBasicInfo = (props) => {
+  const { act, data } = useBackend();
 
   const {
     connected,
@@ -16,7 +16,7 @@ export const PortableBasicInfo = (props, context) => {
   } = data;
 
   return (
-    <Fragment>
+    <>
       <Section
         title="Status"
         buttons={
@@ -74,6 +74,6 @@ export const PortableBasicInfo = (props, context) => {
           <Box color="average">No holding tank</Box>
         )}
       </Section>
-    </Fragment>
+    </>
   );
 };

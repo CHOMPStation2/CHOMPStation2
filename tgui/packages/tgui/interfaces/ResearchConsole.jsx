@@ -1,11 +1,11 @@
 import { toTitleCase } from 'common/string';
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend, useLocalState, useSharedState } from '../backend';
 import { Box, Button, Flex, Icon, LabeledList, ProgressBar, Section, Tabs, Input, NumberInput, Table, Divider } from '../components';
 import { Window } from '../layouts';
 
-const ResearchConsoleViewResearch = (props, context) => {
-  const { act, data } = useBackend(context);
+const ResearchConsoleViewResearch = (props) => {
+  const { act, data } = useBackend();
 
   const { tech } = data;
 
@@ -34,8 +34,8 @@ const ResearchConsoleViewResearch = (props, context) => {
   );
 };
 
-const PaginationTitle = (props, context) => {
-  const { data } = useBackend(context);
+const PaginationTitle = (props) => {
+  const { data } = useBackend();
 
   const { title, target } = props;
 
@@ -47,13 +47,13 @@ const PaginationTitle = (props, context) => {
   return title;
 };
 
-const PaginationChevrons = (props, context) => {
-  const { act } = useBackend(context);
+const PaginationChevrons = (props) => {
+  const { act } = useBackend();
 
   const { target } = props;
 
   return (
-    <Fragment>
+    <>
       <Button icon="undo" onClick={() => act(target, { reset: true })} />
       <Button
         icon="chevron-left"
@@ -63,12 +63,12 @@ const PaginationChevrons = (props, context) => {
         icon="chevron-right"
         onClick={() => act(target, { reverse: 1 })}
       />
-    </Fragment>
+    </>
   );
 };
 
-const ResearchConsoleViewDesigns = (props, context) => {
-  const { act, data } = useBackend(context);
+const ResearchConsoleViewDesigns = (props) => {
+  const { act, data } = useBackend();
 
   const { designs } = data;
 
@@ -81,12 +81,12 @@ const ResearchConsoleViewDesigns = (props, context) => {
         />
       }
       buttons={
-        <Fragment>
+        <>
           <Button icon="print" onClick={() => act('print', { print: 2 })}>
             Print This Page
           </Button>
           {<PaginationChevrons target={'design_page'} /> || null}
-        </Fragment>
+        </>
       }>
       <Input
         fluid
@@ -108,8 +108,8 @@ const ResearchConsoleViewDesigns = (props, context) => {
   );
 };
 
-const TechDisk = (props, context) => {
-  const { act, data } = useBackend(context);
+const TechDisk = (props) => {
+  const { act, data } = useBackend();
 
   const { tech } = data;
 
@@ -119,11 +119,7 @@ const TechDisk = (props, context) => {
     return null;
   }
 
-  const [saveDialog, setSaveDialog] = useSharedState(
-    context,
-    'saveDialogTech',
-    false
-  );
+  const [saveDialog, setSaveDialog] = useSharedState('saveDialogTech', false);
 
   if (saveDialog) {
     return (
@@ -193,8 +189,8 @@ const TechDisk = (props, context) => {
   );
 };
 
-const DataDisk = (props, context) => {
-  const { act, data } = useBackend(context);
+const DataDisk = (props) => {
+  const { act, data } = useBackend();
 
   const { designs } = data;
 
@@ -204,11 +200,7 @@ const DataDisk = (props, context) => {
     return null;
   }
 
-  const [saveDialog, setSaveDialog] = useSharedState(
-    context,
-    'saveDialogData',
-    false
-  );
+  const [saveDialog, setSaveDialog] = useSharedState('saveDialogData', false);
 
   if (saveDialog) {
     return (
@@ -217,14 +209,14 @@ const DataDisk = (props, context) => {
           <PaginationTitle title="Load Design to Disk" target="design_page" />
         }
         buttons={
-          <Fragment>
+          <>
             <Button
               icon="arrow-left"
               content="Back"
               onClick={() => setSaveDialog(false)}
             />
             {<PaginationChevrons target={'design_page'} /> || null}
-          </Fragment>
+          </>
         }>
         <Input
           fluid
@@ -297,8 +289,8 @@ const DataDisk = (props, context) => {
   );
 };
 
-const ResearchConsoleDisk = (props, context) => {
-  const { act, data } = useBackend(context);
+const ResearchConsoleDisk = (props) => {
+  const { act, data } = useBackend();
 
   const { d_disk, t_disk } = data.info;
 
@@ -314,8 +306,8 @@ const ResearchConsoleDisk = (props, context) => {
   );
 };
 
-const ResearchConsoleDestructiveAnalyzer = (props, context) => {
-  const { act, data } = useBackend(context);
+const ResearchConsoleDestructiveAnalyzer = (props) => {
+  const { act, data } = useBackend();
 
   const { linked_destroy } = data.info;
 
@@ -367,8 +359,8 @@ const ResearchConsoleDestructiveAnalyzer = (props, context) => {
   );
 };
 
-const ResearchConsoleBuildMenu = (props, context) => {
-  const { act, data } = useBackend(context);
+const ResearchConsoleBuildMenu = (props) => {
+  const { act, data } = useBackend();
 
   const { target, designs, buildName, buildFiveName } = props;
 
@@ -438,8 +430,8 @@ const ResearchConsoleBuildMenu = (props, context) => {
 };
 
 /* Lathe + Circuit Imprinter all in one */
-const ResearchConsoleConstructor = (props, context) => {
-  const { act, data } = useBackend(context);
+const ResearchConsoleConstructor = (props) => {
+  const { act, data } = useBackend();
 
   const { name } = props;
 
@@ -469,7 +461,7 @@ const ResearchConsoleConstructor = (props, context) => {
     queue,
   } = linked;
 
-  const [protoTab, setProtoTab] = useSharedState(context, 'protoTab', 0);
+  const [protoTab, setProtoTab] = useSharedState('protoTab', 0);
 
   let queueColor = 'transparent';
   let queueSpin = false;
@@ -591,7 +583,6 @@ const ResearchConsoleConstructor = (props, context) => {
           <LabeledList>
             {mats.map((mat) => {
               const [ejectAmt, setEjectAmt] = useLocalState(
-                context,
                 'ejectAmt' + mat.name,
                 0
               );
@@ -600,7 +591,7 @@ const ResearchConsoleConstructor = (props, context) => {
                   label={toTitleCase(mat.name)}
                   key={mat.name}
                   buttons={
-                    <Fragment>
+                    <>
                       <NumberInput
                         minValue={0}
                         width="100px"
@@ -631,7 +622,7 @@ const ResearchConsoleConstructor = (props, context) => {
                         }>
                         All
                       </Button>
-                    </Fragment>
+                    </>
                   }>
                   {mat.amount} cm&sup3;
                 </LabeledList.Item>
@@ -670,16 +661,12 @@ const ResearchConsoleConstructor = (props, context) => {
   );
 };
 
-const ResearchConsoleSettings = (props, context) => {
-  const { act, data } = useBackend(context);
+const ResearchConsoleSettings = (props) => {
+  const { act, data } = useBackend();
 
   const { sync, linked_destroy, linked_imprinter, linked_lathe } = data.info;
 
-  const [settingsTab, setSettingsTab] = useSharedState(
-    context,
-    'settingsTab',
-    0
-  );
+  const [settingsTab, setSettingsTab] = useSharedState('settingsTab', 0);
 
   return (
     <Section title="Settings">
@@ -700,14 +687,14 @@ const ResearchConsoleSettings = (props, context) => {
       {(settingsTab === 0 && (
         <Box>
           {(sync && (
-            <Fragment>
+            <>
               <Button fluid icon="sync" onClick={() => act('sync')}>
                 Sync Database with Network
               </Button>
               <Button fluid icon="unlink" onClick={() => act('togglesync')}>
                 Disconnect from Research Network
               </Button>
-            </Fragment>
+            </>
           )) || (
             <Button fluid icon="link" onClick={() => act('togglesync')}>
               Connect to Research Network
@@ -798,12 +785,12 @@ const menus = [
   { name: 'Disk Operations', icon: 'save', template: <ResearchConsoleDisk /> },
 ];
 
-export const ResearchConsole = (props, context) => {
-  const { act, data } = useBackend(context);
+export const ResearchConsole = (props) => {
+  const { act, data } = useBackend();
 
   const { busy_msg, locked } = data;
 
-  const [menu, setMenu] = useSharedState(context, 'rdmenu', 0);
+  const [menu, setMenu] = useSharedState('rdmenu', 0);
 
   let allTabsDisabled = false;
   if (busy_msg || locked) {

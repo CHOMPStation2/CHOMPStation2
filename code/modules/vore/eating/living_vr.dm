@@ -244,14 +244,25 @@
 	P.weight_message_visible = src.weight_message_visible
 	P.weight_messages = src.weight_messages
 
-	//CHOMP stuff
+	//CHOMP stuff Start
+	P.phase_vore = src.phase_vore
+	P.noisy_full = src.noisy_full
 	P.latejoin_vore = src.latejoin_vore
 	P.latejoin_prey = src.latejoin_prey
 	P.receive_reagents = src.receive_reagents
 	P.give_reagents = src.give_reagents
+	P.apply_reagents = src.apply_reagents
 	P.autotransferable = src.autotransferable
+	P.strip_pref = src.strip_pref
 	P.vore_sprite_color = src.vore_sprite_color
 	P.vore_sprite_multiply = src.vore_sprite_multiply
+	P.no_latejoin_vore_warning = src.no_latejoin_vore_warning
+	P.no_latejoin_prey_warning = src.no_latejoin_prey_warning
+	P.no_latejoin_vore_warning_time = src.no_latejoin_vore_warning_time
+	P.no_latejoin_prey_warning_time = src.no_latejoin_prey_warning_time
+	P.no_latejoin_vore_warning_persists = src.no_latejoin_vore_warning_persists
+	P.no_latejoin_prey_warning_persists = src.no_latejoin_prey_warning_persists
+	//CHOMP Stuff End
 
 	var/list/serialized = list()
 	for(var/obj/belly/B as anything in src.vore_organs)
@@ -303,13 +314,23 @@
 	weight_messages = P.weight_messages
 
 	//CHOMP stuff
+	phase_vore = P.phase_vore
+	noisy_full = P.noisy_full
 	latejoin_vore = P.latejoin_vore
 	latejoin_prey = P.latejoin_prey
 	receive_reagents = P.receive_reagents
 	give_reagents = P.give_reagents
+	apply_reagents = P.apply_reagents
 	autotransferable = P.autotransferable
+	strip_pref = P.strip_pref
 	vore_sprite_color = P.vore_sprite_color
 	vore_sprite_multiply = P.vore_sprite_multiply
+	no_latejoin_vore_warning = P.no_latejoin_vore_warning
+	no_latejoin_prey_warning = P.no_latejoin_prey_warning
+	no_latejoin_vore_warning_time = P.no_latejoin_vore_warning_time
+	no_latejoin_prey_warning_time = P.no_latejoin_prey_warning_time
+	no_latejoin_vore_warning_persists = P.no_latejoin_vore_warning_persists
+	no_latejoin_prey_warning_persists = P.no_latejoin_prey_warning_persists
 
 	if(bellies)
 		if(isliving(src))
@@ -796,11 +817,11 @@
 		to_chat(src, "<span class='notice'>You are not holding anything.</span>")
 		return
 
-	if(is_type_in_list(I,item_vore_blacklist))
+	if(is_type_in_list(I,item_vore_blacklist) && !adminbus_trash) //If someone has adminbus, they can eat whatever they want.
 		to_chat(src, "<span class='warning'>You are not allowed to eat this.</span>")
 		return
 
-	if(!I.trash_eatable)
+	if(!I.trash_eatable) //OOC pref. This /IS/ respected, even if adminbus_trash is enabled
 		to_chat(src, "<span class='warning'>You can't eat that so casually!</span>")
 		return
 
@@ -886,16 +907,11 @@
 				to_chat(src, "<span class='notice'>You can taste the flavor of pain. This can't possibly be healthy for your guts.</span>")
 			else
 				to_chat(src, "<span class='notice'>You can taste the flavor of really bad ideas.</span>")
-		else if(istype(I,/obj/item/toy))
-			visible_message("<span class='warning'>[src] demonstrates the voracious capabilities of their [lowertext(vore_selected.name)] by making [I] disappear!</span>") //CHOMPEdit
 		else if(istype(I,/obj/item/weapon/bikehorn/tinytether))
 			to_chat(src, "<span class='notice'>You feel a rush of power swallowing such a large, err, tiny structure.</span>")
-			visible_message("<span class='warning'>[src] demonstrates the voracious capabilities of their [lowertext(vore_selected.name)] by making [I] disappear!</span>") //CHOMPEdit
 		else if(istype(I,/obj/item/device/mmi/digital/posibrain) || istype(I,/obj/item/device/aicard))
-			visible_message("<span class='warning'>[src] demonstrates the voracious capabilities of their [lowertext(vore_selected.name)] by making [I] disappear!</span>") //CHOMPEdit
 			to_chat(src, "<span class='notice'>You can taste the sweet flavor of digital friendship. Or maybe it is something else.</span>")
 		else if(istype(I,/obj/item/device/paicard))
-			visible_message("<span class='warning'>[src] demonstrates the voracious capabilities of their [lowertext(vore_selected.name)] by making [I] disappear!</span>") //CHOMPEdit
 			to_chat(src, "<span class='notice'>You can taste the sweet flavor of digital friendship.</span>")
 			var/obj/item/device/paicard/ourcard = I
 			if(ourcard.pai && ourcard.pai.client && isbelly(ourcard.loc))
@@ -908,7 +924,6 @@
 			else
 				to_chat(src, "<span class='notice'>You can taste the flavor of gluttonous waste of food.</span>")
 		else if (istype(I,/obj/item/clothing/accessory/collar))
-			visible_message("<span class='warning'>[src] demonstrates the voracious capabilities of their [lowertext(vore_selected.name)] by making [I] disappear!</span>") //CHOMPEdit
 			to_chat(src, "<span class='notice'>You can taste the submissiveness in the wearer of [I]!</span>")
 		else if(iscapturecrystal(I))
 			var/obj/item/capture_crystal/C = I
@@ -947,6 +962,7 @@
 
 		else
 			to_chat(src, "<span class='notice'>You can taste the flavor of garbage. Delicious.</span>")
+		visible_message("<span class='warning'>[src] demonstrates their voracious capabilities by swallowing [I] whole!</span>")
 		return
 	to_chat(src, "<span class='notice'>This snack is too powerful to go down that easily.</span>") //CHOMPEdit
 	return
@@ -1140,31 +1156,43 @@
 			dispvoreprefs += "<font color='red'><b>OOC DISABLED</b></font><br>"
 		if("CHAT_LOOC" in client.prefs.preferences_disabled)
 			dispvoreprefs += "<font color='red'><b>LOOC DISABLED</b></font><br>"
-	dispvoreprefs += "<b>Digestable:</b> [digestable ? "Enabled" : "Disabled"]<br>"
-	dispvoreprefs += "<b>Devourable:</b> [devourable ? "Enabled" : "Disabled"]<br>"
-	dispvoreprefs += "<b>Feedable:</b> [feeding ? "Enabled" : "Disabled"]<br>"
-	dispvoreprefs += "<b>Autotransferable:</b> [autotransferable ? "Enabled" : "Disabled"]<br>" //CHOMPstation edit
-	dispvoreprefs += "<b>Absorption Permission:</b> [absorbable ? "Allowed" : "Disallowed"]<br>"
-	dispvoreprefs += "<b>Leaves Remains:</b> [digest_leave_remains ? "Enabled" : "Disabled"]<br>"
-	dispvoreprefs += "<b>Mob Vore:</b> [allowmobvore ? "Enabled" : "Disabled"]<br>"
-	dispvoreprefs += "<b>Healbelly permission:</b> [permit_healbelly ? "Allowed" : "Disallowed"]<br>"
-	dispvoreprefs += "<b>Selective Mode Pref:</b> [src.selective_preference]<br>"
-	dispvoreprefs += "<b>Spontaneous vore prey:</b> [can_be_drop_prey ? "Enabled" : "Disabled"]<br>"
-	dispvoreprefs += "<b>Spontaneous vore pred:</b> [can_be_drop_pred ? "Enabled" : "Disabled"]<br>"
-	dispvoreprefs += "<b>Late join spawn point belly:</b> [latejoin_vore ? "Enabled" : "Disabled"]<br>" //CHOMPstation edit
-	dispvoreprefs += "<b>Can be late join prey:</b> [latejoin_prey ? "Enabled" : "Disabled"]<br>" //CHOMPstation edit
-	dispvoreprefs += "<b>Receiving liquids:</b> [receive_reagents ? "Enabled" : "Disabled"]<br>" //CHOMPstation edit
-	dispvoreprefs += "<b>Giving liquids:</b> [give_reagents ? "Enabled" : "Disabled"]<br>"	//CHOMPstation edit
-	dispvoreprefs += "<b>Drop Vore:</b> [drop_vore ? "Enabled" : "Disabled"]<br>"
-	dispvoreprefs += "<b>Slip Vore:</b> [slip_vore ? "Enabled" : "Disabled"]<br>"
-	dispvoreprefs += "<b>Throw vore:</b> [throw_vore ? "Enabled" : "Disabled"]<br>"
-	dispvoreprefs += "<b>Stumble Vore:</b> [stumble_vore ? "Enabled" : "Disabled"]<br>"
-	dispvoreprefs += "<b>Food Vore:</b> [food_vore ? "Enabled" : "Disabled"]<br>"
-	dispvoreprefs += "<b>Spontaneous transformation:</b> [allow_spontaneous_tf ? "Enabled" : "Disabled"]<br>"
-	dispvoreprefs += "<b>Can be stepped on/over:</b> [step_mechanics_pref ? "Allowed" : "Disallowed"]<br>"
-	dispvoreprefs += "<b>Can be picked up:</b> [pickup_pref ? "Allowed" : "Disallowed"]<br>"
-	dispvoreprefs += "<b>Global Vore Privacy is:</b> [eating_privacy_global ? "Subtle" : "Loud"]<br>"
+	//CHOMPEdit Start
+	dispvoreprefs += "<b>Devourable:</b> [devourable ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
+	if(devourable)
+		dispvoreprefs += "<b>Healbelly permission:</b> [permit_healbelly ? "<font color='green'>Allowed</font>" : "<font color='red'>Disallowed</font>"]<br>"
+		dispvoreprefs += "<b>Digestable:</b> [digestable ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
+		dispvoreprefs += "<b>Absorption Permission:</b> [absorbable ? "<font color='green'>Allowed</font>" : "<font color='red'>Disallowed</font>"]<br>"
+		dispvoreprefs += "<b>Selective Mode Pref:</b> [src.selective_preference]<br>"
+		dispvoreprefs += "<b>Mob Vore:</b> [allowmobvore ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
+		dispvoreprefs += "<b>Autotransferable:</b> [autotransferable ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
+		dispvoreprefs += "<b>Can be stripped:</b> [strip_pref ? "<font color='green'>Allowed</font>" : "<font color='red'>Disallowed</font>"]<br>"
+		dispvoreprefs += "<b>Applying reagents:</b> [apply_reagents ? "<font color='green'>Allowed</font>" : "<font color='red'>Disallowed</font>"]<br>"
+		dispvoreprefs += "<b>Leaves Remains:</b> [digest_leave_remains ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
+	dispvoreprefs += "<b>Spontaneous vore prey:</b> [can_be_drop_prey ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
+	dispvoreprefs += "<b>Spontaneous vore pred:</b> [can_be_drop_pred ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
+	if(can_be_drop_prey || can_be_drop_pred)
+		dispvoreprefs += "<b>Drop Vore:</b> [drop_vore ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
+		dispvoreprefs += "<b>Slip Vore:</b> [slip_vore ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
+		dispvoreprefs += "<b>Stumble Vore:</b> [stumble_vore ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
+		dispvoreprefs += "<b>Throw vore:</b> [throw_vore ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
+		dispvoreprefs += "<b>Food Vore:</b> [food_vore ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
+		dispvoreprefs += "<b>Phase Vore:</b> [phase_vore ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
+	dispvoreprefs += "<b>Can be stepped on/over:</b> [step_mechanics_pref ? "<font color='green'>Allowed</font>" : "<font color='red'>Disallowed</font>"]<br>"
+	dispvoreprefs += "<b>Can be picked up:</b> [pickup_pref ? "<font color='green'>Allowed</font>" : "<font color='red'>Disallowed</font>"]<br>"
+	dispvoreprefs += "<b>Can be resized:</b> [resizable ? "<font color='green'>Allowed</font>" : "<font color='red'>Disallowed</font>"]<br>"
+	dispvoreprefs += "<b>Spontaneous transformation:</b> [allow_spontaneous_tf ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
+	dispvoreprefs += "<b>Feedable:</b> [feeding ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
+	dispvoreprefs += "<b>Receiving liquids:</b> [receive_reagents ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
+	dispvoreprefs += "<b>Giving liquids:</b> [give_reagents ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
+	dispvoreprefs += "<b>Late join spawn point belly:</b> [latejoin_vore ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
+	if(latejoin_vore)
+		dispvoreprefs += "<b>Late join spawn auto accept:</b> [no_latejoin_vore_warning ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
+	dispvoreprefs += "<b>Can be late join prey:</b> [latejoin_prey ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
+	if(latejoin_prey)
+		dispvoreprefs += "<b>Late join prey auto accept:</b> [no_latejoin_prey_warning ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
+	dispvoreprefs += "<b>Global Vore Privacy is:</b> [eating_privacy_global ? "<font color='green'>Subtle</font>" : "<font color='red'>Loud</font>"]<br>"
 	dispvoreprefs += "<b>Current active belly:</b> [vore_selected ? vore_selected.name : "None"]<br>"
+	//CHOMPEdit End
 	user << browse("<html><head><title>Vore prefs: [src]</title></head><body><center>[dispvoreprefs]</center></body></html>", "window=[name]mvp;size=300x400;can_resize=1;can_minimize=0")
 	onclose(user, "[name]")
 	return

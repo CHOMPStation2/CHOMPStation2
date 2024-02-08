@@ -1,5 +1,5 @@
 import { round } from 'common/math';
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend } from '../backend';
 import { AnimatedNumber, Box, Button, Flex, Icon, LabeledList, ProgressBar, Section, Table, Tooltip } from '../components';
 import { Window } from '../layouts';
@@ -81,10 +81,10 @@ const reduceOrganStatus = (A) => {
       a === null ? (
         s
       ) : (
-        <Fragment>
+        <>
           {a}
           {!!s && <Box>{s}</Box>}
-        </Fragment>
+        </>
       )
     )
     : null;
@@ -118,8 +118,8 @@ const germStatus = (i) => {
   return '';
 };
 
-export const BodyScanner = (props, context) => {
-  const { data } = useBackend(context);
+export const BodyScanner = (props) => {
+  const { data } = useBackend();
   const { occupied, occupant = {} } = data;
   const body = occupied ? (
     <BodyScannerMain occupant={occupant} />
@@ -127,7 +127,7 @@ export const BodyScanner = (props, context) => {
     <BodyScannerEmpty />
   );
   return (
-    <Window width={690} height={600} resizable>
+    <Window width={690} height={600}>
       <Window.Content scrollable className="Layout__content--flexColumn">
         {body}
       </Window.Content>
@@ -149,21 +149,21 @@ const BodyScannerMain = (props) => {
   );
 };
 
-const BodyScannerMainOccupant = (props, context) => {
-  const { act, data } = useBackend(context);
+const BodyScannerMainOccupant = (props) => {
+  const { act, data } = useBackend();
   const { occupant } = data;
   return (
     <Section
       title="Occupant"
       buttons={
-        <Fragment>
+        <>
           <Button icon="user-slash" onClick={() => act('ejectify')}>
             Eject
           </Button>
           <Button icon="print" onClick={() => act('print_p')}>
             Print Report
           </Button>
-        </Fragment>
+        </>
       }>
       <LabeledList>
         <LabeledList.Item label="Name">{occupant.name}</LabeledList.Item>
@@ -211,7 +211,7 @@ const BodyScannerMainReagents = (props) => {
   const { occupant } = props;
 
   return (
-    <Fragment>
+    <>
       <Section title="Blood Reagents">
         {occupant.reagents ? (
           <Table>
@@ -254,7 +254,7 @@ const BodyScannerMainReagents = (props) => {
           <Box color="good">No Stomach Reagents Detected</Box>
         )}
       </Section>
-    </Fragment>
+    </>
   );
 };
 
@@ -305,7 +305,7 @@ const BodyScannerMainDamage = (props) => {
     <Section title="Damage">
       <Table>
         {mapTwoByTwo(damages, (d1, d2, i) => (
-          <Fragment>
+          <>
             <Table.Row color="label">
               <Table.Cell>{d1[0]}:</Table.Cell>
               <Table.Cell>{!!d2 && d2[0] + ':'}</Table.Cell>
@@ -321,7 +321,7 @@ const BodyScannerMainDamage = (props) => {
                 {!!d2 && <BodyScannerMainDamageBar value={occupant[d2[1]]} />}
               </Table.Cell>
             </Table.Row>
-          </Fragment>
+          </>
         ))}
       </Table>
     </Section>

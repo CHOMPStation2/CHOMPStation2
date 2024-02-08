@@ -1,13 +1,13 @@
 import { decodeHtmlEntities } from 'common/string';
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend, useLocalState } from '../backend';
 import { Box, Button, Dropdown, Flex, Icon, Input, LabeledList, Section, Tabs } from '../components';
 import { Window } from '../layouts';
 import { TemporaryNotice } from './common/TemporaryNotice';
 import { FullscreenNotice } from './common/FullscreenNotice';
 
-export const MessageMonitor = (props, context) => {
-  const { act, data } = useBackend(context);
+export const MessageMonitor = (props) => {
+  const { act, data } = useBackend();
 
   const { auth, linkedServer, message, hacking, emag } = data;
 
@@ -23,7 +23,7 @@ export const MessageMonitor = (props, context) => {
   }
 
   return (
-    <Window width={670} height={450} resizable>
+    <Window width={670} height={450}>
       <Window.Content scrollable>
         <TemporaryNotice />
         {body}
@@ -32,8 +32,8 @@ export const MessageMonitor = (props, context) => {
   );
 };
 
-const MessageMonitorHack = (props, context) => {
-  const { act, data } = useBackend(context);
+const MessageMonitorHack = (props) => {
+  const { act, data } = useBackend();
 
   const { isMalfAI } = data;
 
@@ -121,8 +121,8 @@ const MessageMonitorHack = (props, context) => {
   );
 };
 
-const MessageMonitorLogin = (props, context) => {
-  const { act, data } = useBackend(context);
+const MessageMonitorLogin = (props) => {
+  const { act, data } = useBackend();
 
   const { isMalfAI } = data;
 
@@ -155,12 +155,12 @@ const MessageMonitorLogin = (props, context) => {
   );
 };
 
-const MessageMonitorContent = (props, context) => {
-  const { act, data } = useBackend(context);
+const MessageMonitorContent = (props) => {
+  const { act, data } = useBackend();
 
   const { linkedServer } = data;
 
-  const [tabIndex, setTabIndex] = useLocalState(context, 'tabIndex', 0);
+  const [tabIndex, setTabIndex] = useLocalState('tabIndex', 0);
 
   let body;
   if (tabIndex === 0) {
@@ -176,7 +176,7 @@ const MessageMonitorContent = (props, context) => {
   }
 
   return (
-    <Fragment>
+    <>
       <Tabs>
         <Tabs.Tab
           key="Main"
@@ -213,12 +213,12 @@ const MessageMonitorContent = (props, context) => {
         </Tabs.Tab>
       </Tabs>
       <Box m={2}>{body}</Box>
-    </Fragment>
+    </>
   );
 };
 
-const MessageMonitorMain = (props, context) => {
-  const { act, data } = useBackend(context);
+const MessageMonitorMain = (props) => {
+  const { act, data } = useBackend();
 
   const { linkedServer } = data;
 
@@ -226,7 +226,7 @@ const MessageMonitorMain = (props, context) => {
     <Section
       title="Main Menu"
       buttons={
-        <Fragment>
+        <>
           <Button
             icon="link"
             content="Server Link"
@@ -238,7 +238,7 @@ const MessageMonitorMain = (props, context) => {
             selected={linkedServer.active}
             onClick={() => act('active')}
           />
-        </Fragment>
+        </>
       }>
       <LabeledList>
         <LabeledList.Item label="Server Status">
@@ -267,8 +267,8 @@ const MessageMonitorMain = (props, context) => {
   );
 };
 
-const MessageMonitorLogs = (props, context) => {
-  const { act, data } = useBackend(context);
+const MessageMonitorLogs = (props) => {
+  const { act, data } = useBackend();
 
   const { logs, pda, rc } = props;
 
@@ -326,8 +326,8 @@ const MessageMonitorLogs = (props, context) => {
   );
 };
 
-const MessageMonitorAdmin = (props, context) => {
-  const { act, data } = useBackend(context);
+const MessageMonitorAdmin = (props) => {
+  const { act, data } = useBackend();
 
   const {
     possibleRecipients,
@@ -388,8 +388,8 @@ const MessageMonitorAdmin = (props, context) => {
   );
 };
 
-const MessageMonitorSpamFilter = (props, context) => {
-  const { act, data } = useBackend(context);
+const MessageMonitorSpamFilter = (props) => {
+  const { act, data } = useBackend();
 
   const { linkedServer } = data;
 

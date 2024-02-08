@@ -183,8 +183,151 @@
   - bugfix: emotesubtle colour in vchat themes
   - bugfix: fixes interference with vore filter on examine
 2024-01-19:
+  HatArchAzel:
+  - rscadd: Adds new aeromorph wings to character setup.
   Upstream:
   - bugfix: fixes runtimes in the laundry basket which led to duplication of the off-hand
   - rscadd: "/\U0001F191"
   - rscadd: '[issue link stripped]'
   - rscadd: Added tanktop and yellow jacket to loadout
+  - qol: Microwaves are now OOC escapable
+  - balance: Nerfs foam durasteel greatsword
+  - bugfix: Fixes memory leak with codexes
+  - bugfix: Fixes bug which bricks codex "go back" button
+  - bugfix: Reimplements footstep sounds for rock turfs
+  - bugfix: Fixes edge-case which sometimes repeatedly spawned POI's on top of each
+      other
+  - rscadd: Adds more PDA notes, adds copy and print function to PDA note app
+  - bugfix: Zombie powder makes hearts appear stopped again
+  - bugfix: Highlander mode no longer crashes the server, and also doesn't delete
+      your organs anymore
+  - bugfix: Conveyor belts no longer move flashlight light cones
+  - bugfix: Particle accelerator properly applies radiation to bumped mobs again
+  - rscadd: Adds missing surgery names
+  - bugfix: Healthy tesh no longer appear hurt on photographs and dogborg sleepers
+  - bugfix: Organs no longer get stuck to the HUD
+  - bugfix: Organ butchering works again
+  - qol: added GPS into Triangulating device design names, so that people find it
+      when only searching for GPS
+  - qol: changed the wording on the organ treatment, from dress to treat. Fixed a
+      typo in Detach.
+  - rscadd: 'Downstream: Needs manual changes as we somehow never took over the naming
+      on those steps. DO NOT MERGE right away!'
+2024-01-21:
+  Aroliacue:
+  - rscadd: Fultons can now be used anywhere, making them suitable for medical extraction
+      and sending objects back to the station. Using them on a living creature will
+      stun them for a significant amount of time, and combined with their limited
+      uses and cost, this should discourage using them as an alternative to teleportation.
+  - rscadd: Added bluespace fultons to the 'Misc' tab and added the Surgical Kit to
+      the 'medical' tab in cargo.
+  - soundadd: Increased the volume of bonebreaks.
+  - imageadd: Added new icons for the bluespace fulton beacon.
+  ItsSelis:
+  - bugfix: fixed changelog path
+2024-01-22:
+  EtheoBoxxman:
+  - rscadd: Bodycams, configurable in hand and attachable to suits
+  - rscadd: Added a unique monitor for bodycams, constructable like entertainment
+      monitors.
+  - rscadd: Adds a bodycam to security lockers, and to SecTech vendors.
+  - maptweak: 'Adds bodycam monitors to sec desk, hos office, warden office, and security
+      briefing room.
+
+      :cl:
+
+      <!-- Both :cl:''s are required for the changelog to work! You can put your name
+      to the right of the first :cl: if you want to overwrite your GitHub username
+      as author ingame. -->
+
+      <!-- You can use multiple of the same prefix (they''re only used for the icon
+      ingame) and delete the unneeded ones. Despite some of the tags, changelogs should
+      generally represent how a player might be affected by the changes rather than
+      a summary of the PR''s contents. -->'
+  Missile597:
+  - maptweak: Isolation ward exterior windows made electrochromatic
+  Raeschen:
+  - qol: Allows carpets to be painted
+  TheCaramelion:
+  - bugfix: Ghosts won't delete pAIs if they close the tgui pop-ups anymore
+  Upstream:
+  - rscadd: Added new trait (Bad Swimmer)
+2024-01-26:
+  Darlantanis:
+  - qol: Adjust turf edges priority
+  - qol: Tweaks windgrille spawner layer
+  - bugfix: Makes wingrille spawners work after roundstart
+  EtheoBoxxman:
+  - rscadd: Adds breathless trait
+  - rscadd: Adds shadekin bodytype for custom species
+  - rscadd: Adds marish language
+  FluffMedic:
+  - rscadd: Added Anomaly role, aka new shadekin role
+  - rscadd: Added an outsider radio
+  - qol: Shadekin and outsiders are now separate
+  - bugfix: Anomaly getting mail, and should be announcing
+  - bugfix: fixed a spawnpoint
+  Kashargul:
+  - bugfix: runtime during belly acid reagent applications on robot robot noms
+  - bugfix: runtime during acid reagent application on destructible objects
+  Missile597:
+  - maptweak: Replaced the secret console with a working resleever console
+  - maptweak: Replaced the secret cloning pod with a sleeve growing pod
+  Raeschen:
+  - rscdel: Removes stripping from jelly blob vore
+  TheCaramelion:
+  - bugfix: Solar grubs can now evolve
+  - maptweak: Solar moth re-added to the valley
+  - bugfix: Only shadekin can pick the Anomaly role
+  TheGreatKitsune:
+  - rscadd: New ability for shadekin
+2024-01-27:
+  FluffMedic:
+  - bugfix: Outsiders should be silent again
+2024-01-28:
+  TheCaramelion:
+  - rscadd: Icons for meatyores
+2024-01-29:
+  Aroliacue:
+  - rscadd: Added new standalone exploration vendors for each of the roles with standardized
+      equipment. Not mapped in as of this update, but available for gamemasters to
+      use.
+  - rscadd: Added tinyfans to the 25x25 'Diner' shelter.
+  - qol: Significantly reduced use delays on all pouches.
+  - balance: Fultons per pack have been reduced from 5 uses to 3 uses.
+  - balance: Mech shoes can now hold knives.
+  - balance: Flares and glowsticks are now one size smaller. Flare boxes now contain
+      14 flares instead of 4.
+  - balance: Flare pouches can now hold 14 flares.
+  - balance: Removed guaranteed stun and weaken statuses from the 'magnetic' weapon
+      parent type.
+  - balance: Regular synthetics are now immune to welders.
+  - bugfix: Fixed missing icon for mech shoes.
+  - balance: Removed the random EVA 'slipping' chance. This contributed nothing besides
+      making spacewalks without magboots incredibly annoying.
+  - balance: The 'thunk' proc (walking onto a gravity tile from zero gravity) now
+      only stuns you for 1 tick (around one second or less) and no longer weakens
+      you. This'll cause you to drop what you're holding but otherwise it's only a
+      brief, mild disruption for not using magboots or walk intenting onto a tile
+      with gravity.
+  Fracshun:
+  - rscadd: 'Added new illegal item for handheld Item TF: Mind Binder'
+  - rscadd: Sentient items digested in a belly with recycling now become the recycled
+      matter
+  Raeschen:
+  - refactor: Gentle phasing flicker duration from 3s to 1s
+  - refactor: Gentle phasing defaults on.
+  - refactor: Gentle phasing stun reduced from 3s to 1s
+  TheCaramelion:
+  - rscadd: Goodies for alternative titles
+  - balance: Rebalanced some of the goodie lists
+  tacoguy7765093:
+  - balance: Surgery speed has been massively buffed.
+2024-01-30:
+  Darlantanis:
+  - bugfix: fucky filename fix maybe finally
+  Missile597:
+  - bugfix: Old laser4 moved to modular_chomp to prevent conflict issues, and references
+      to this sound file altered accordingly
+  TheGreatKitsune:
+  - bugfix: removed a sound file for a quick fix

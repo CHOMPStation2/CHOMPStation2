@@ -1,14 +1,14 @@
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend } from '../backend';
 import { Box, Button, Modal, LabeledList, ProgressBar, Section, NoticeBox } from '../components';
 import { Window } from '../layouts';
 import { toTitleCase, decodeHtmlEntities } from 'common/string';
 
-export const MechaControlConsole = (props, context) => {
-  const { act, data } = useBackend(context);
+export const MechaControlConsole = (props) => {
+  const { act, data } = useBackend();
   const { beacons, stored_data } = data;
   return (
-    <Window width={600} height={600} resizable>
+    <Window width={600} height={600}>
       <Window.Content scrollable>
         {(stored_data.length && (
           <Modal>
@@ -37,7 +37,7 @@ export const MechaControlConsole = (props, context) => {
               key={beacon.name}
               title={beacon.name}
               buttons={
-                <Fragment>
+                <>
                   <Button
                     icon="comment"
                     onClick={() => act('send_message', { mt: beacon.ref })}>
@@ -54,7 +54,7 @@ export const MechaControlConsole = (props, context) => {
                     icon="bomb"
                     onClick={() => act('shock', { mt: beacon.ref })}
                   />
-                </Fragment>
+                </>
               }>
               <LabeledList>
                 <LabeledList.Item label="Health">

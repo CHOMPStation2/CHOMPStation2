@@ -1,11 +1,11 @@
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { formatCommaNumber } from '../format';
 import { useBackend } from '../backend';
 import { Box, Button, Flex, LabeledList, ProgressBar, Section } from '../components';
 import { Window } from '../layouts';
 
-export const DishIncubator = (props, context) => {
-  const { act, data } = useBackend(context);
+export const DishIncubator = (props) => {
+  const { act, data } = useBackend();
 
   const {
     on,
@@ -100,7 +100,7 @@ export const DishIncubator = (props, context) => {
         <Section
           title={can_breed_virus ? 'Vial' : 'Chemicals'}
           buttons={
-            <Fragment>
+            <>
               <Button
                 icon="eject"
                 content={'Eject ' + (can_breed_virus ? 'Vial' : 'Chemicals')}
@@ -113,7 +113,7 @@ export const DishIncubator = (props, context) => {
                 disabled={!can_breed_virus}
                 onClick={() => act('virus')}
               />
-            </Fragment>
+            </>
           }>
           {(chemicals_inserted && (
             <Box>

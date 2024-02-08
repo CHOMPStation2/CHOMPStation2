@@ -1,8 +1,9 @@
+import { decodeHtmlEntities } from 'common/string';
+
 import { useBackend } from '../backend';
 import { Box, Section, Table } from '../components';
-import { Window } from '../layouts';
 import { COLORS } from '../constants';
-import { decodeHtmlEntities } from 'common/string';
+import { Window } from '../layouts';
 
 /*
  * Shared by the following templates (and used individually too)
@@ -34,8 +35,8 @@ type Data = {
   }[];
 };
 
-export const CrewManifestContent = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const CrewManifestContent = (props) => {
+  const { act, data } = useBackend<Data>();
 
   const { manifest } = data;
 

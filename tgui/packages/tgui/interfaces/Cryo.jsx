@@ -1,4 +1,4 @@
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend } from '../backend';
 import { AnimatedNumber, Box, Button, Flex, Icon, LabeledList, ProgressBar, Section } from '../components';
 import { Window } from '../layouts';
@@ -28,7 +28,7 @@ const statNames = [
   ['bad', 'DEAD'],
 ];
 
-export const Cryo = (props, context) => {
+export const Cryo = (props) => {
   return (
     <Window width={520} height={470} resizeable>
       <Window.Content className="Layout__content--flexColumn">
@@ -38,8 +38,8 @@ export const Cryo = (props, context) => {
   );
 };
 
-const CryoContent = (props, context) => {
-  const { act, data } = useBackend(context);
+const CryoContent = (props) => {
+  const { act, data } = useBackend();
   const {
     isOperating,
     hasOccupant,
@@ -49,7 +49,7 @@ const CryoContent = (props, context) => {
     isBeakerLoaded,
   } = data;
   return (
-    <Fragment>
+    <>
       <Section
         title="Occupant"
         flexGrow="1"
@@ -134,16 +134,16 @@ const CryoContent = (props, context) => {
           </LabeledList.Item>
         </LabeledList>
       </Section>
-    </Fragment>
+    </>
   );
 };
 
-const CryoBeaker = (props, context) => {
-  const { act, data } = useBackend(context);
+const CryoBeaker = (props) => {
+  const { act, data } = useBackend();
   const { isBeakerLoaded, beakerLabel, beakerVolume } = data;
   if (isBeakerLoaded) {
     return (
-      <Fragment>
+      <>
         {beakerLabel ? beakerLabel : <Box color="average">No label</Box>}
         <Box color={!beakerVolume && 'bad'}>
           {beakerVolume ? (
@@ -155,7 +155,7 @@ const CryoBeaker = (props, context) => {
             'Beaker is empty'
           )}
         </Box>
-      </Fragment>
+      </>
     );
   } else {
     return <Box color="average">No beaker loaded</Box>;

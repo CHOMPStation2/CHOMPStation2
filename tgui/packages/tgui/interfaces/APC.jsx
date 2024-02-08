@@ -1,12 +1,12 @@
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend } from '../backend';
 import { Box, Button, Dimmer, Icon, LabeledList, ProgressBar, Section } from '../components';
 import { Window } from '../layouts';
 import { InterfaceLockNoticeBox } from './common/InterfaceLockNoticeBox';
 import { FullscreenNotice } from './common/FullscreenNotice';
 
-export const APC = (props, context) => {
-  const { act, data } = useBackend(context);
+export const APC = (props) => {
+  const { act, data } = useBackend();
 
   let body = <ApcContent />;
 
@@ -17,7 +17,7 @@ export const APC = (props, context) => {
   }
 
   return (
-    <Window width={450} height={475} resizable>
+    <Window width={450} height={475}>
       <Window.Content scrollable>{body}</Window.Content>
     </Window>
   );
@@ -64,8 +64,8 @@ const malfMap = {
   // },
 };
 
-const ApcContent = (props, context) => {
-  const { act, data } = useBackend(context);
+const ApcContent = (props) => {
+  const { act, data } = useBackend();
   const locked = data.locked && !data.siliconUser;
   const normallyLocked = data.normallyLocked;
   const externalPowerStatus =
@@ -77,16 +77,16 @@ const ApcContent = (props, context) => {
   const adjustedCellChange = data.powerCellStatus / 100;
 
   return (
-    <Fragment>
+    <>
       <InterfaceLockNoticeBox
         deny={data.emagged}
         denialMessage={
-          <Fragment>
+          <>
             <Box color="bad" fontSize="1.5rem">
               Fault in ID authenticator.
             </Box>
             <Box color="bad">Please contact maintenance for service.</Box>
-          </Fragment>
+          </>
         }
       />
       <Section title="Power Status">
@@ -134,7 +134,7 @@ const ApcContent = (props, context) => {
                 key={channel.title}
                 label={channel.title}
                 buttons={
-                  <Fragment>
+                  <>
                     <Box
                       inline
                       mx={2}
@@ -165,7 +165,7 @@ const ApcContent = (props, context) => {
                       disabled={locked}
                       onClick={() => act('channel', topicParams.off)}
                     />
-                  </Fragment>
+                  </>
                 }>
                 {channel.powerLoad} W
               </LabeledList.Item>
@@ -209,7 +209,7 @@ const ApcContent = (props, context) => {
           <LabeledList.Item
             label="Night Shift Lighting"
             buttons={
-              <Fragment>
+              <>
                 <Button
                   icon="lightbulb-o"
                   content="Disabled"
@@ -240,7 +240,7 @@ const ApcContent = (props, context) => {
                     })
                   }
                 />
-              </Fragment>
+              </>
             }
           />
           <LabeledList.Item
@@ -256,11 +256,11 @@ const ApcContent = (props, context) => {
           />
         </LabeledList>
       </Section>
-    </Fragment>
+    </>
   );
 };
 
-const GridCheck = (props, context) => {
+const GridCheck = (props) => {
   return (
     <FullscreenNotice title="System Failure">
       <Box fontSize="1.5rem" bold>
@@ -278,8 +278,8 @@ const GridCheck = (props, context) => {
   );
 };
 
-const ApcFailure = (props, context) => {
-  const { data, act } = useBackend(context);
+const ApcFailure = (props) => {
+  const { data, act } = useBackend();
 
   let rebootOptions = (
     <Button

@@ -17,13 +17,13 @@ const getItemColor = (value, min2, min1, max1, max2) => {
   return 'good';
 };
 
-export const pAIAtmos = (props, context) => {
-  const { act, data } = useBackend(context);
+export const pAIAtmos = (props) => {
+  const { act, data } = useBackend();
 
   const { aircontents } = data;
 
   return (
-    <Window width={450} height={600} resizable>
+    <Window width={450} height={600}>
       <Window.Content scrollable>
         <Section>
           <LabeledList>

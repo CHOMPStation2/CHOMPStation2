@@ -2,8 +2,8 @@ import { useBackend } from '../backend';
 import { Button, Flex, LabeledList, ProgressBar, Section, AnimatedNumber } from '../components';
 import { Window } from '../layouts';
 
-export const CookingAppliance = (props, context) => {
-  const { act, data } = useBackend(context);
+export const CookingAppliance = (props) => {
+  const { act, data } = useBackend();
 
   const {
     temperature,
@@ -15,7 +15,7 @@ export const CookingAppliance = (props, context) => {
   } = data;
 
   return (
-    <Window width={600} height={600} resizable>
+    <Window width={600} height={600}>
       <Window.Content scrollable>
         <Section title="Status">
           <LabeledList>

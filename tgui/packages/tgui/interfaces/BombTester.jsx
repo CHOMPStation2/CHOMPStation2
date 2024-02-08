@@ -1,10 +1,10 @@
-import { Component } from 'inferno';
+import { Component } from 'react';
 import { useBackend } from '../backend';
 import { Box, Button, Icon, LabeledList, Section, Slider } from '../components';
 import { Window } from '../layouts';
 
-export const BombTester = (props, context) => {
-  const { act, data } = useBackend(context);
+export const BombTester = (props) => {
+  const { act, data } = useBackend();
 
   const {
     simulating,

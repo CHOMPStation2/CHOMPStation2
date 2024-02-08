@@ -1668,6 +1668,9 @@
 "bBg" = (
 /turf/simulated/wall,
 /area/crew_quarters/thirddeck/vrroom)
+"bCC" = (
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsstarboard)
 "bCO" = (
 /obj/structure/table/sifwoodentable,
 /obj/item/toy/figure/chef,
@@ -12903,9 +12906,7 @@
 /turf/simulated/floor/tiled,
 /area/bridge)
 "lrr" = (
-/obj/machinery/clonepod,
-/obj/item/weapon/reagent_containers/glass/bottle/biomass,
-/obj/item/weapon/reagent_containers/glass/bottle/biomass,
+/obj/machinery/clonepod/transhuman/full,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "lsm" = (
@@ -14835,6 +14836,11 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/thirddeck/vrroom)
+"naP" = (
+/obj/structure/catwalk,
+/obj/machinery/space_heater,
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsstarboard)
 "naW" = (
 /obj/structure/table/standard,
 /obj/machinery/power/apc{
@@ -16819,6 +16825,23 @@
 /obj/effect/floor_decal/corner/white/border,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftportcentral)
+"oHc" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/beige/border{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/thirddeck/aftdoorm)
 "oHo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -19088,24 +19111,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
-"qEC" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/beige/border{
-	dir = 8
-	},
-/obj/machinery/door/firedoor/multi_tile/glass,
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled/steel_grid,
-/area/hallway/primary/thirddeck/aftdoorm)
 "qEY" = (
 /obj/effect/floor_decal/rust,
 /obj/machinery/atmospherics/pipe/manifold/hidden/cyan{
@@ -19557,12 +19562,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/seconddeck/gym)
-"rcR" = (
-/obj/effect/floor_decal/borderfloor/corner,
-/obj/effect/floor_decal/corner/brown/bordercorner,
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled/steel_grid,
-/area/hallway/primary/thirddeck/aftdoorm)
 "rcT" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/borderfloor,
@@ -24211,6 +24210,16 @@
 "vcl" = (
 /turf/simulated/wall/r_wall,
 /area/hallway/primary/thirddeck/aftportcentral)
+"vcK" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/brown/bordercorner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/thirddeck/aftdoorm)
 "vdi" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -27275,7 +27284,7 @@
 	name = "Third Deck Aft Maintenance"
 	})
 "xnt" = (
-/obj/machinery/computer/transhuman{
+/obj/machinery/computer/transhuman/resleeving{
 	dir = 1
 	},
 /turf/simulated/floor/plating,
@@ -59901,7 +59910,7 @@ xld
 xTz
 vti
 jDJ
-qEC
+oHc
 fkN
 aHf
 sCH
@@ -60159,7 +60168,7 @@ xlk
 xUy
 ykL
 xPx
-obF
+vcK
 wRo
 wXo
 uRE
@@ -64287,7 +64296,7 @@ qAM
 xZM
 ylL
 kgP
-vXl
+uYL
 wuI
 dFh
 nQU
@@ -64545,7 +64554,7 @@ rpi
 yaQ
 gig
 wKP
-rcR
+off
 rpi
 rZr
 wKP
@@ -67370,7 +67379,7 @@ ukQ
 uIt
 uOo
 tBw
-qwl
+naP
 vAp
 vTE
 vYr
@@ -67631,7 +67640,7 @@ qaU
 vhe
 aQw
 rQK
-qTC
+bCC
 qaU
 shV
 shV

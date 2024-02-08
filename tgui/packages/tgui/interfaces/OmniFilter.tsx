@@ -1,8 +1,9 @@
+import { BooleanLike } from 'common/react';
+import { Fragment } from 'react';
+
 import { useBackend } from '../backend';
-import { Fragment } from 'inferno';
 import { Box, Button, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
-import { BooleanLike } from 'common/react';
 
 const getStatusText = (port) => {
   if (port.input) {
@@ -25,18 +26,18 @@ type Data = {
   last_flow_rate: number;
 };
 
-export const OmniFilter = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const OmniFilter = (props) => {
+  const { act, data } = useBackend<Data>();
 
   const { power, config, ports, set_flow_rate, last_flow_rate } = data;
 
   return (
-    <Window width={360} height={330} resizable>
+    <Window width={360} height={330}>
       <Window.Content>
         <Section
           title={config ? 'Configuration' : 'Status'}
           buttons={
-            <Fragment>
+            <>
               <Button
                 icon="power-off"
                 content={power ? 'On' : 'Off'}
@@ -49,14 +50,14 @@ export const OmniFilter = (props, context) => {
                 selected={config}
                 onClick={() => act('configure')}
               />
-            </Fragment>
+            </>
           }>
           <LabeledList>
             {ports ? (
               ports.map((port) => (
                 <LabeledList.Item key={port.dir} label={port.dir + ' Port'}>
                   {config ? (
-                    <Fragment>
+                    <>
                       <Button
                         content="IN"
                         selected={port.input}
@@ -90,7 +91,7 @@ export const OmniFilter = (props, context) => {
                           })
                         }
                       />
-                    </Fragment>
+                    </>
                   ) : (
                     getStatusText(port)
                   )}

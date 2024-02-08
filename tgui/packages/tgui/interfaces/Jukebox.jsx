@@ -3,8 +3,8 @@ import { useBackend } from '../backend';
 import { Box, Button, Collapsible, LabeledList, ProgressBar, Section, Slider } from '../components';
 import { Window } from '../layouts';
 
-export const Jukebox = (props, context) => {
-  const { act, data } = useBackend(context);
+export const Jukebox = (props) => {
+  const { act, data } = useBackend();
 
   const {
     playing,
@@ -31,7 +31,7 @@ export const Jukebox = (props, context) => {
   let true_genre = playing && (current_genre || 'Uncategorized');
 
   return (
-    <Window width={450} height={600} resizable>
+    <Window width={450} height={600}>
       <Window.Content scrollable>
         <Section title="Currently Playing">
           <LabeledList>

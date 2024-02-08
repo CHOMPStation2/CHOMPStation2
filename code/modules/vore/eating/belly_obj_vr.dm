@@ -201,13 +201,13 @@
 		"You feel your %belly beginning to become active!")
 
 	var/list/digest_chance_messages_prey = list(
-		"In response to your struggling, %owner's %belly begins to get more active...")
+		"In response to your struggling, %pred's %belly begins to get more active...")
 
 	var/list/absorb_chance_messages_owner = list(
 		"You feel your %belly start to cling onto its contents...")
 
 	var/list/absorb_chance_messages_prey = list(
-		"In response to your struggling, %owner's %belly begins to cling more tightly...")
+		"In response to your struggling, %pred's %belly begins to cling more tightly...")
 
 	var/list/digest_messages_owner = list(
 		"You feel %prey's body succumb to your digestive system, which breaks it apart into soft slurry.",
@@ -575,8 +575,8 @@
 		//Stop AI processing in bellies
 		if(M.ai_holder)
 			M.ai_holder.go_sleep()
-		if(reagents.total_volume >= 5 && M.digestable) //CHOMPEdit Start
-			if(digest_mode == DM_DIGEST)
+		if(reagents.total_volume >= 5) //CHOMPEdit Start
+			if(digest_mode == DM_DIGEST && M.digestable)
 				reagents.trans_to(M, reagents.total_volume * 0.1, 1 / max(LAZYLEN(contents), 1), FALSE)
 			to_chat(M, "<span class='vwarning'><B>You splash into a pool of [reagent_name]!</B></span>")
 	if(!isliving(thing) && count_items_for_sprite) //CHOMPEdit - If this is enabled also update fullness for non-living things
@@ -727,7 +727,7 @@
 					I.alpha = custom_ingested_alpha
 					I.pixel_y = -450 + ((450 / max(max_ingested, 1)) * min(max_ingested, ingested.total_volume))
 					F.add_overlay(I)
-			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0 || (LAZYLEN(contents) * item_mush_val) > 0))
+			if(show_liquids && L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0 || (LAZYLEN(contents) * item_mush_val) > 0))
 				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
 				I.color = mush_color
 				I.alpha = mush_alpha
@@ -743,7 +743,7 @@
 					I.alpha = min(mush_alpha, (extra_mush / max(total_mush_content, 1)) * mush_alpha)
 					I.pixel_y = stored_y
 					F.add_overlay(I)
-			if(L.liquidbelly_visuals && liquid_overlay && reagents.total_volume)
+			if(show_liquids && L.liquidbelly_visuals && liquid_overlay && reagents.total_volume)
 				if(digest_mode == DM_HOLD && item_digest_mode == IM_HOLD)
 					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "calm")
 				else
@@ -785,7 +785,7 @@
 					I.alpha = custom_ingested_alpha
 					I.pixel_y = -450 + (450 / max(max_ingested, 1) * max(min(max_ingested, ingested.total_volume), 1))
 					F.add_overlay(I)
-			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0 || (LAZYLEN(contents) * item_mush_val) > 0))
+			if(show_liquids && L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0 || (LAZYLEN(contents) * item_mush_val) > 0))
 				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
 				I.color = mush_color
 				I.alpha = mush_alpha
@@ -801,7 +801,7 @@
 					I.alpha = min(mush_alpha, (extra_mush / max(total_mush_content, 1)) * mush_alpha)
 					I.pixel_y = stored_y
 					F.add_overlay(I)
-			if(L.liquidbelly_visuals && liquid_overlay && reagents.total_volume)
+			if(show_liquids && L.liquidbelly_visuals && liquid_overlay && reagents.total_volume)
 				if(digest_mode == DM_HOLD && item_digest_mode == IM_HOLD)
 					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "calm")
 				else
@@ -1037,7 +1037,7 @@
 
 	//Print notifications/sound if necessary
 	if(!silent && count)
-		owner.visible_message("<span class='vnotice'><font color='green'><b>[owner] [release_verb] everything from their [lowertext(name)]!</b></font></span>", range = privacy_range)
+		owner.visible_message("<span class='vnotice'>[span_green("<b>[owner] [release_verb] everything from their [lowertext(name)]!</b>")]</span>", range = privacy_range)
 		var/soundfile
 		if(!fancy_vore)
 			soundfile = classic_release_sounds[release_sound]
@@ -1119,7 +1119,7 @@
 	if(istype(M, /mob/observer)) //CHOMPEdit
 		silent = TRUE
 	if(!silent)
-		owner.visible_message("<span class='vnotice'><font color='green'><b>[owner] [release_verb] [M] from their [lowertext(name)]!</b></font></span>",range = privacy_range)
+		owner.visible_message("<span class='vnotice'>[span_green("<b>[owner] [release_verb] [M] from their [lowertext(name)]!</b>")]</span>",range = privacy_range)
 		var/soundfile
 		if(!fancy_vore)
 			soundfile = classic_release_sounds[release_sound]
@@ -1191,7 +1191,7 @@
 	formatted_message = replacetext(formatted_message, "%countprey", living_count)
 	formatted_message = replacetext(formatted_message, "%count", contents.len)
 
-	return("<i><font color='red'>[formatted_message]</font></i>")
+	return(span_red("<i>[formatted_message]</i>"))
 
 /obj/belly/proc/get_examine_msg_absorbed()
 	if(!(contents.len) || !(examine_messages_absorbed.len) || !display_absorbed_examine)
@@ -1215,7 +1215,7 @@
 	formatted_message = replacetext(formatted_message, "%prey", english_list(absorbed_victims))
 	formatted_message = replacetext(formatted_message, "%countprey", absorbed_count)
 
-	return("<i><font color='red'>[formatted_message]</font></i>")
+	return(span_red("<i>[formatted_message]</i>"))
 
 // The next function gets the messages set on the belly, in human-readable format.
 // This is useful in customization boxes and such. The delimiter right now is \n\n so

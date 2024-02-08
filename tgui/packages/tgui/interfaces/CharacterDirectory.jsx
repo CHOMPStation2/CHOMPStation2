@@ -1,4 +1,4 @@
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend, useLocalState } from '../backend';
 import { Box, Button, Icon, LabeledList, Section, Table } from '../components';
 import { Window } from '../layouts';
@@ -22,8 +22,8 @@ const getTagColor = (tag) => {
   }
 };
 
-export const CharacterDirectory = (props, context) => {
-  const { act, data } = useBackend(context);
+export const CharacterDirectory = (props) => {
+  const { act, data } = useBackend();
 
   const {
     personalVisibility,
@@ -34,10 +34,9 @@ export const CharacterDirectory = (props, context) => {
     personalEventTag,
   } = data;
 
-  const [overlay, setOverlay] = useLocalState(context, 'overlay', null);
+  const [overlay, setOverlay] = useLocalState('overlay', null);
 
   const [overwritePrefs, setOverwritePrefs] = useLocalState(
-    context,
     'overwritePrefs',
     false
   );
@@ -46,11 +45,11 @@ export const CharacterDirectory = (props, context) => {
     <Window width={816} height={722} resizeable>
       <Window.Content scrollable>
         {(overlay && <ViewCharacter />) || (
-          <Fragment>
+          <>
             <Section
               title="Settings and Preferences"
               buttons={
-                <Fragment>
+                <>
                   <Box color="label" inline>
                     Save to current preferences slot:&nbsp;
                   </Box>
@@ -60,7 +59,7 @@ export const CharacterDirectory = (props, context) => {
                     content={overwritePrefs ? 'On' : 'Off'}
                     onClick={() => setOverwritePrefs(!overwritePrefs)}
                   />
-                </Fragment>
+                </>
               }>
               <LabeledList>
                 <LabeledList.Item label="Visibility">
@@ -131,15 +130,15 @@ export const CharacterDirectory = (props, context) => {
               </LabeledList>
             </Section>
             <CharacterDirectoryList />
-          </Fragment>
+          </>
         )}
       </Window.Content>
     </Window>
   );
 };
 
-const ViewCharacter = (props, context) => {
-  const [overlay, setOverlay] = useLocalState(context, 'overlay', null);
+const ViewCharacter = (props) => {
+  const [overlay, setOverlay] = useLocalState('overlay', null);
 
   return (
     <Section
@@ -190,18 +189,14 @@ const ViewCharacter = (props, context) => {
   );
 };
 
-const CharacterDirectoryList = (props, context) => {
-  const { act, data } = useBackend(context);
+const CharacterDirectoryList = (props) => {
+  const { act, data } = useBackend();
 
   const { directory } = data;
 
-  const [sortId, _setSortId] = useLocalState(context, 'sortId', 'name');
-  const [sortOrder, _setSortOrder] = useLocalState(
-    context,
-    'sortOrder',
-    'name'
-  );
-  const [overlay, setOverlay] = useLocalState(context, 'overlay', null);
+  const [sortId, _setSortId] = useLocalState('sortId', 'name');
+  const [sortOrder, _setSortOrder] = useLocalState('sortOrder', 'name');
+  const [overlay, setOverlay] = useLocalState('overlay', null);
 
   return (
     <Section
@@ -252,14 +247,14 @@ const CharacterDirectoryList = (props, context) => {
   );
 };
 
-const SortButton = (props, context) => {
-  const { act, data } = useBackend(context);
+const SortButton = (props) => {
+  const { act, data } = useBackend();
 
   const { id, children } = props;
 
   // Hey, same keys mean same data~
-  const [sortId, setSortId] = useLocalState(context, 'sortId', 'name');
-  const [sortOrder, setSortOrder] = useLocalState(context, 'sortOrder', 'name');
+  const [sortId, setSortId] = useLocalState('sortId', 'name');
+  const [sortOrder, setSortOrder] = useLocalState('sortOrder', 'name');
 
   return (
     <Table.Cell collapsing>

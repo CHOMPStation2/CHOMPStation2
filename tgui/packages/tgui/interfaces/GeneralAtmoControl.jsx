@@ -1,10 +1,10 @@
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend } from '../backend';
 import { Box, Button, Flex, LabeledList, Slider, Section } from '../components';
 import { Window } from '../layouts';
 
-export const GeneralAtmoControl = (props, context) => {
-  const { act, data } = useBackend(context);
+export const GeneralAtmoControl = (props) => {
+  const { act, data } = useBackend();
 
   // While many of these variables are unused, it's helpful to have a consistent
   // list of all possible parameters in the core component of this UI.
@@ -30,7 +30,7 @@ export const GeneralAtmoControl = (props, context) => {
   } = data;
 
   return (
-    <Window width={600} height={600} resizable>
+    <Window width={600} height={600}>
       <Window.Content>
         <AtmoControlSensors sensors={sensors} />
         {(core || tanks) && <AtmoControlTankCore />}
@@ -40,8 +40,8 @@ export const GeneralAtmoControl = (props, context) => {
   );
 };
 
-const AtmoControlSensors = (props, context) => {
-  const { act } = useBackend(context);
+const AtmoControlSensors = (props) => {
+  const { act } = useBackend();
 
   const { sensors } = props;
 
@@ -64,7 +64,7 @@ const AtmoControlSensors = (props, context) => {
   }
 };
 
-const AtmoSensor = (props, context) => {
+const AtmoSensor = (props) => {
   const { sensor } = props;
 
   if (!sensor.sensor_data) {
@@ -105,8 +105,8 @@ const AtmoSensor = (props, context) => {
   return <LabeledList>{labeledListContents.map((item) => item)}</LabeledList>;
 };
 
-const AtmoControlTankCore = (props, context) => {
-  const { act, data } = useBackend(context);
+const AtmoControlTankCore = (props) => {
+  const { act, data } = useBackend();
 
   const {
     // Tanks /obj/machinery/computer/general_air_control
@@ -172,7 +172,7 @@ const AtmoControlTankCore = (props, context) => {
   );
 };
 
-const AtmoControlTankCoreControl = (props, context) => {
+const AtmoControlTankCoreControl = (props) => {
   const {
     info,
     maxSliderValue,
@@ -188,7 +188,7 @@ const AtmoControlTankCoreControl = (props, context) => {
     <Section
       title={name}
       buttons={
-        <Fragment>
+        <>
           <Button
             content="Refresh"
             icon="sync"
@@ -202,7 +202,7 @@ const AtmoControlTankCoreControl = (props, context) => {
             disabled={!info}
             onClick={() => actions.power()}
           />
-        </Fragment>
+        </>
       }>
       <LabeledList>
         {(info && (
@@ -246,15 +246,15 @@ const AtmoControlTankCoreControl = (props, context) => {
   );
 };
 
-const AtmoControlFuel = (props, context) => {
-  const { act, data } = useBackend(context);
+const AtmoControlFuel = (props) => {
+  const { act, data } = useBackend();
 
   const { fuel, automation, device_info } = data;
   return (
     <Section
       title="Fuel Injection System"
       buttons={
-        <Fragment>
+        <>
           <Button
             icon="syringe"
             content="Inject"
@@ -273,7 +273,7 @@ const AtmoControlFuel = (props, context) => {
             selected={device_info ? device_info.power : false}
             disabled={automation || !device_info}
           />
-        </Fragment>
+        </>
       }>
       {device_info ? (
         <LabeledList>
@@ -293,14 +293,14 @@ const AtmoControlFuel = (props, context) => {
           </LabeledList.Item>
         </LabeledList>
       ) : (
-        <Fragment>
+        <>
           <Box color="bad">ERROR: Cannot Find Device</Box>
           <Button
             icon="search"
             content="Search"
             onClick={() => act('refresh_status')}
           />
-        </Fragment>
+        </>
       )}
     </Section>
   );

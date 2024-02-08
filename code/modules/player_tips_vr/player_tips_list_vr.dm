@@ -86,10 +86,6 @@ When editing the list, please try and keep similar probabilities near each other
 				prob(50); "[info] Unlike other servers, Tajara and Unathi were not uplifted by humanity and are instead their own cultures and can generally find themselves being treated as legal equals in human controlled space. https://wiki.vore-station.net/Backstory#Catalogued_Species",
 				prob(50); "[info] You are currently working in the Virgo-Erigone system. It is part of the Coreward Periphery, and quite isolated thanks to being a long distance away from any major faction. https://wiki.vore-station.net/File:Virgo_map.png",
 				prob(50); "[info] The majority of employees live at the colony of Al'Qasbah. Most people live underground, with only the wealthiest living out in the habitation bubble. This is the place the tram/shuttle takes you at the end of the round. https://wiki.vore-station.net/Al%27Qasbah",
-<<<<<<< HEAD
-				prob(10); "[info] Thaler is a universal currency. Its value is set to 1 second of FTL 'bluespace' travel. While ubiquitous in frontier worlds, it has an unfavourable exchange rate with most currencies used by well-settled regions, limiting immigration to places such as Earth. https://wiki.vore-station.net/Thaler"
-			)
-=======
 				prob(25); "[info] The Virgo-Erigone system is natively inhabited by the Zorren, a traditionalist, interstellar-capable fox-like alien species. https://wiki.vore-station.net/Zorren",
 				prob(10); "[info] Earth is very far from Virgo-Eirogne, taking months of travel through stutter drives or use of expensive Bluespace Gates to cut the time down to a few weeks. https://wiki.vore-station.net/Infrastructure#Bluespace_Gate",
 				prob(10); "[info] Thaler is a universal currency. Its value is set to 1 second of FTL 'bluespace' travel. While ubiquitous in frontier worlds, it has an unfavourable exchange rate with most currencies used by well-settled regions, limiting immigration to places such as Earth. https://wiki.vore-station.net/Thaler",
@@ -99,4 +95,3 @@ When editing the list, please try and keep similar probabilities near each other
 				prob(5); "[info] Drones are much like our A.I in real life at their lower levels. At higher sophistication, they become like classic sci-fi robots. Drones' personalities can be overwritten by a skilled coder, memories tampered with.",
 				prob(5); "[info] Cyborgs are organic brains in a jar. While historically, wiping their minds to use as a wetware processor had been a thing - today, this only happens where Commonwealth law does not reach."
 			)
->>>>>>> f13f494dbf... Merge pull request #14512 from Runa-Dacino/more_tips

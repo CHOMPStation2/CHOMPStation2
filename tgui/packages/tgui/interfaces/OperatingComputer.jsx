@@ -1,5 +1,5 @@
 import { round } from 'common/math';
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend } from '../backend';
 import { Window } from '../layouts';
 import { Box, Button, Flex, Icon, Knob, LabeledList, Section, Tabs, ProgressBar } from '../components';
@@ -32,8 +32,8 @@ const tempColors = [
   'bad',
 ];
 
-export const OperatingComputer = (props, context) => {
-  const { act, data } = useBackend(context);
+export const OperatingComputer = (props) => {
+  const { act, data } = useBackend();
   const { hasOccupant, choice } = data;
   let body;
   if (!choice) {
@@ -46,7 +46,7 @@ export const OperatingComputer = (props, context) => {
     body = <OperatingComputerOptions />;
   }
   return (
-    <Window width={650} height={455} resizable>
+    <Window width={650} height={455}>
       <Window.Content>
         <Tabs>
           <Tabs.Tab
@@ -68,11 +68,11 @@ export const OperatingComputer = (props, context) => {
   );
 };
 
-const OperatingComputerPatient = (props, context) => {
-  const { data } = useBackend(context);
+const OperatingComputerPatient = (props) => {
+  const { data } = useBackend();
   const { occupant } = data;
   return (
-    <Fragment>
+    <>
       <Section title="Patient" level="2">
         <LabeledList>
           <LabeledList.Item label="Name">{occupant.name}</LabeledList.Item>
@@ -113,7 +113,7 @@ const OperatingComputerPatient = (props, context) => {
             </ProgressBar>
           </LabeledList.Item>
           {!!occupant.hasBlood && (
-            <Fragment>
+            <>
               <LabeledList.Item label="Blood Level">
                 <ProgressBar
                   min="0"
@@ -130,7 +130,7 @@ const OperatingComputerPatient = (props, context) => {
               <LabeledList.Item label="Pulse">
                 {occupant.pulse} BPM
               </LabeledList.Item>
-            </Fragment>
+            </>
           )}
         </LabeledList>
       </Section>
@@ -156,7 +156,7 @@ const OperatingComputerPatient = (props, context) => {
           <Box color="label">No procedure ongoing.</Box>
         )}
       </Section>
-    </Fragment>
+    </>
   );
 };
 
@@ -172,8 +172,8 @@ const OperatingComputerUnoccupied = () => {
   );
 };
 
-const OperatingComputerOptions = (props, context) => {
-  const { act, data } = useBackend(context);
+const OperatingComputerOptions = (props) => {
+  const { act, data } = useBackend();
   const { verbose, health, healthAlarm, oxy, oxyAlarm, crit } = data;
   return (
     <LabeledList>

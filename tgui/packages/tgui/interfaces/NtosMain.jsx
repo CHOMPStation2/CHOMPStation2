@@ -20,8 +20,8 @@ const PROGRAM_ICONS = {
   shipping: 'tags',
 };
 
-export const NtosMain = (props, context) => {
-  const { act, data } = useBackend(context);
+export const NtosMain = (props) => {
+  const { act, data } = useBackend();
   const {
     device_theme,
     programs = [],
@@ -38,8 +38,7 @@ export const NtosMain = (props, context) => {
       }
       theme={device_theme}
       width={400}
-      height={500}
-      resizable>
+      height={500}>
       <NtosWindow.Content scrollable>
         {!!has_light && (
           <Section>

@@ -9,16 +9,15 @@ type Data = {
   entries: { author: string; date: string; comment: string }[];
 };
 
-export const PlayerNotesInfo = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const PlayerNotesInfo = (props) => {
+  const { act, data } = useBackend<Data>();
   const { device_theme, age, ckey, entries } = data;
   return (
     <Window
       title={`Info on ${ckey}`}
       theme={device_theme}
       width={400}
-      height={500}
-      resizable>
+      height={500}>
       <Window.Content scrollable>
         <Section title={`Player age: ${age}`}>
           <Table>

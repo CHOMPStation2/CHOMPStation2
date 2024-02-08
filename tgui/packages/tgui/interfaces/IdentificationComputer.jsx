@@ -1,5 +1,5 @@
 import { sortBy } from 'common/collections';
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend } from '../backend';
 import { Box, Button, Flex, Input, LabeledList, Section, Table, Tabs } from '../components';
 import { Window } from '../layouts';
@@ -9,15 +9,15 @@ import { CrewManifestContent } from './CrewManifest';
 export const IdentificationComputer = () => {
   return (
     <Window width={600} height={700}>
-      <Window.Content resizable>
+      <Window.Content>
         <IdentificationComputerContent />
       </Window.Content>
     </Window>
   );
 };
 
-export const IdentificationComputerContent = (props, context) => {
-  const { act, data } = useBackend(context);
+export const IdentificationComputerContent = (props) => {
+  const { act, data } = useBackend();
 
   const { ntos } = props;
 
@@ -33,7 +33,7 @@ export const IdentificationComputerContent = (props, context) => {
   }
 
   return (
-    <Fragment>
+    <>
       <Tabs>
         {(!ntos || !!data.have_id_slot) && (
           <Tabs.Tab
@@ -62,16 +62,16 @@ export const IdentificationComputerContent = (props, context) => {
           ))}
       </Tabs>
       {body}
-    </Fragment>
+    </>
   );
 };
 
-export const IdentificationComputerPrinting = (props, context) => {
+export const IdentificationComputerPrinting = (props) => {
   return <Section title="Printing">Please wait...</Section>;
 };
 
-export const IdentificationComputerAccessModification = (props, context) => {
-  const { act, data } = useBackend(context);
+export const IdentificationComputerAccessModification = (props) => {
+  const { act, data } = useBackend();
 
   const { ntos } = props;
 
@@ -118,7 +118,7 @@ export const IdentificationComputerAccessModification = (props, context) => {
         )}
       </LabeledList>
       {!!authenticated && !!has_modify && (
-        <Fragment>
+        <>
           <Section title="Details" level={2}>
             <LabeledList>
               <LabeledList.Item label="Registered Name">
@@ -213,14 +213,14 @@ export const IdentificationComputerAccessModification = (props, context) => {
               <IdentificationComputerRegions actName="access" />
             </Section>
           )}
-        </Fragment>
+        </>
       )}
     </Section>
   );
 };
 
-export const IdentificationComputerRegions = (props, context) => {
-  const { act, data } = useBackend(context);
+export const IdentificationComputerRegions = (props) => {
+  const { act, data } = useBackend();
 
   const { actName } = props;
 

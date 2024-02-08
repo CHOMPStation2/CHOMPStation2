@@ -1,11 +1,11 @@
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend } from '../backend';
 import { Box, Button, Flex, LabeledList, ProgressBar, Section } from '../components';
 import { Window } from '../layouts';
 import { capitalize, toTitleCase } from 'common/string';
 
-export const RIGSuit = (props, context) => {
-  const { act, data } = useBackend(context);
+export const RIGSuit = (props) => {
+  const { act, data } = useBackend();
 
   const { interfacelock, malf, aicontrol, ai } = data;
 
@@ -21,22 +21,22 @@ export const RIGSuit = (props, context) => {
   }
 
   return (
-    <Window height={480} width={550} resizable>
+    <Window height={480} width={550}>
       <Window.Content scrollable>
         {override || (
-          <Fragment>
+          <>
             <RIGSuitStatus />
             <RIGSuitHardware />
             <RIGSuitModules />
-          </Fragment>
+          </>
         )}
       </Window.Content>
     </Window>
   );
 };
 
-const RIGSuitStatus = (props, context) => {
-  const { act, data } = useBackend(context);
+const RIGSuitStatus = (props) => {
+  const { act, data } = useBackend();
 
   const {
     // Power Bar
@@ -91,11 +91,11 @@ const RIGSuitStatus = (props, context) => {
     <Section
       title="Status"
       buttons={
-        <Fragment>
+        <>
           {SealButton}
           {AIButton}
           {CoolingButton}
-        </Fragment>
+        </>
       }>
       <LabeledList>
         <LabeledList.Item label="Power Supply">
@@ -127,8 +127,8 @@ const RIGSuitStatus = (props, context) => {
   );
 };
 
-const RIGSuitHardware = (props, context) => {
-  const { act, data } = useBackend(context);
+const RIGSuitHardware = (props) => {
+  const { act, data } = useBackend();
 
   const {
     // Disables buttons while the suit is busy
@@ -204,8 +204,8 @@ const RIGSuitHardware = (props, context) => {
   );
 };
 
-const RIGSuitModules = (props, context) => {
-  const { act, data } = useBackend(context);
+const RIGSuitModules = (props) => {
+  const { act, data } = useBackend();
 
   const {
     // Seals disable Modules
@@ -239,7 +239,7 @@ const RIGSuitModules = (props, context) => {
               toTitleCase(module.name) + (module.damage ? ' (damaged)' : '')
             }
             buttons={
-              <Fragment>
+              <>
                 {module.can_select ? (
                   <Button
                     selected={module.name === primarysystem}
@@ -284,7 +284,7 @@ const RIGSuitModules = (props, context) => {
                     }
                   />
                 ) : null}
-              </Fragment>
+              </>
             }>
             {module.damage >= 2 ? (
               <Box color="bad">-- MODULE DESTROYED --</Box>

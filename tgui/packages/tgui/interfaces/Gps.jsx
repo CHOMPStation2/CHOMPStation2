@@ -2,15 +2,15 @@ import { map, sortBy } from 'common/collections';
 import { flow } from 'common/fp';
 import { clamp } from 'common/math';
 import { vecLength, vecSubtract } from 'common/vector';
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend } from '../backend';
 import { Box, Button, Icon, LabeledList, Section, Table } from '../components';
 import { Window } from '../layouts';
 
 const coordsToVec = (coords) => map(parseFloat)(coords.split(', '));
 
-export const Gps = (props, context) => {
-  const { act, data } = useBackend(context);
+export const Gps = (props) => {
+  const { act, data } = useBackend();
   const {
     currentArea,
     currentCoords,
@@ -37,11 +37,7 @@ export const Gps = (props, context) => {
     ),
   ])(data.signals || []);
   return (
-    <Window
-      title="Global Positioning System"
-      width={470}
-      height={700}
-      resizable>
+    <Window title="Global Positioning System" width={470} height={700}>
       <Window.Content scrollable>
         <Section
           title="Control"
@@ -80,7 +76,7 @@ export const Gps = (props, context) => {
           </LabeledList>
         </Section>
         {!!power && (
-          <Fragment>
+          <>
             <Section title="Current Location">
               <Box fontSize="18px">
                 {currentArea} ({currentCoordsText})
@@ -121,7 +117,7 @@ export const Gps = (props, context) => {
                 ))}
               </Table>
             </Section>
-          </Fragment>
+          </>
         )}
       </Window.Content>
     </Window>

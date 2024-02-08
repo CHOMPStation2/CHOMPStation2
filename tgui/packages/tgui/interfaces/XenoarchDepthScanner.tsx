@@ -15,13 +15,13 @@ type Data = {
   positive_locations: { index: string; time: string; coords: string }[];
 };
 
-export const XenoarchDepthScanner = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const XenoarchDepthScanner = (props) => {
+  const { act, data } = useBackend<Data>();
 
   const { current, positive_locations } = data;
 
   return (
-    <Window width={300} height={500} resizable>
+    <Window width={300} height={500}>
       <Window.Content scrollable>
         {(Object.keys(current).length && (
           <Section

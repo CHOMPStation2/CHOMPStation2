@@ -3,19 +3,16 @@ import { Box, Button, Section, Tabs } from '../components';
 import { Window } from '../layouts';
 import { ICON_BY_CATEGORY_NAME } from './RapidPipeDispenser';
 
-export const PipeDispenser = (props, context) => {
-  const { act, data } = useBackend(context);
+export const PipeDispenser = (props) => {
+  const { act, data } = useBackend();
   const { disposals, p_layer, pipe_layers, categories = [] } = data;
 
-  const [categoryName, setCategoryName] = useLocalState(
-    context,
-    'categoryName'
-  );
+  const [categoryName, setCategoryName] = useLocalState('categoryName');
   const shownCategory =
     categories.find((category) => category.cat_name === categoryName) ||
     categories[0];
   return (
-    <Window width={425} height={515} resizable>
+    <Window width={425} height={515}>
       <Window.Content scrollable>
         {!disposals && (
           <Section title="Layer">

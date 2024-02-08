@@ -1,5 +1,5 @@
 import { round } from 'common/math';
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend } from '../backend';
 import { Box, Button, Flex, Icon, LabeledList, ProgressBar, Section } from '../components';
 import { Window } from '../layouts';
@@ -32,12 +32,12 @@ const tempColors = [
   'bad',
 ];
 
-export const Sleeper = (props, context) => {
-  const { act, data } = useBackend(context);
+export const Sleeper = (props) => {
+  const { act, data } = useBackend();
   const { hasOccupant } = data;
   const body = hasOccupant ? <SleeperMain /> : <SleeperEmpty />;
   return (
-    <Window width={550} height={760} resizable>
+    <Window width={550} height={760}>
       <Window.Content className="Layout__content--flexColumn">
         {body}
       </Window.Content>
@@ -45,11 +45,11 @@ export const Sleeper = (props, context) => {
   );
 };
 
-const SleeperMain = (props, context) => {
-  const { act, data } = useBackend(context);
+const SleeperMain = (props) => {
+  const { act, data } = useBackend();
   const { occupant, dialysis, stomachpumping } = data;
   return (
-    <Fragment>
+    <>
       <SleeperOccupant />
       <SleeperDamage />
       <SleeperDialysisPump
@@ -63,18 +63,18 @@ const SleeperMain = (props, context) => {
         actToDo="togglepump"
       />
       <SleeperChemicals />
-    </Fragment>
+    </>
   );
 };
 
-const SleeperOccupant = (props, context) => {
-  const { act, data } = useBackend(context);
+const SleeperOccupant = (props) => {
+  const { act, data } = useBackend();
   const { occupant, auto_eject_dead, stasis } = data;
   return (
     <Section
       title="Occupant"
       buttons={
-        <Fragment>
+        <>
           <Box color="label" inline>
             Auto-eject if dead:&nbsp;
           </Box>
@@ -92,7 +92,7 @@ const SleeperOccupant = (props, context) => {
             onClick={() => act('ejectify')}
           />
           <Button content={stasis} onClick={() => act('changestasis')} />
-        </Fragment>
+        </>
       }>
       <LabeledList>
         <LabeledList.Item label="Name">{occupant.name}</LabeledList.Item>
@@ -123,7 +123,7 @@ const SleeperOccupant = (props, context) => {
           </ProgressBar>
         </LabeledList.Item>
         {!!occupant.hasBlood && (
-          <Fragment>
+          <>
             <LabeledList.Item label="Blood Level">
               <ProgressBar
                 min="0"
@@ -140,15 +140,15 @@ const SleeperOccupant = (props, context) => {
             <LabeledList.Item label="Pulse" verticalAlign="middle">
               {occupant.pulse} BPM
             </LabeledList.Item>
-          </Fragment>
+          </>
         )}
       </LabeledList>
     </Section>
   );
 };
 
-const SleeperDamage = (props, context) => {
-  const { data } = useBackend(context);
+const SleeperDamage = (props) => {
+  const { data } = useBackend();
   const { occupant } = data;
   return (
     <Section title="Damage">
@@ -170,8 +170,8 @@ const SleeperDamage = (props, context) => {
   );
 };
 
-const SleeperDialysisPump = (props, context) => {
-  const { act, data } = useBackend(context);
+const SleeperDialysisPump = (props) => {
+  const { act, data } = useBackend();
   const { isBeakerLoaded, beakerMaxSpace, beakerFreeSpace } = data;
   const { active, actToDo, title } = props;
   const canDialysis = active && beakerFreeSpace > 0;
@@ -179,7 +179,7 @@ const SleeperDialysisPump = (props, context) => {
     <Section
       title={title}
       buttons={
-        <Fragment>
+        <>
           <Button
             disabled={!isBeakerLoaded || beakerFreeSpace <= 0}
             selected={canDialysis}
@@ -193,7 +193,7 @@ const SleeperDialysisPump = (props, context) => {
             content="Eject"
             onClick={() => act('removebeaker')}
           />
-        </Fragment>
+        </>
       }>
       {isBeakerLoaded ? (
         <LabeledList>
@@ -218,8 +218,8 @@ const SleeperDialysisPump = (props, context) => {
   );
 };
 
-const SleeperChemicals = (props, context) => {
-  const { act, data } = useBackend(context);
+const SleeperChemicals = (props) => {
+  const { act, data } = useBackend();
   const { occupant, chemicals, maxchem, amounts } = data;
   return (
     <Section title="Chemicals" flexGrow="1">
@@ -289,8 +289,8 @@ const SleeperChemicals = (props, context) => {
   );
 };
 
-const SleeperEmpty = (props, context) => {
-  const { act, data } = useBackend(context);
+const SleeperEmpty = (props) => {
+  const { act, data } = useBackend();
   const { isBeakerLoaded } = data;
   return (
     <Section textAlign="center" flexGrow="1">

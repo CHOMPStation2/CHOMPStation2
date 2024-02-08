@@ -1,5 +1,6 @@
 import { BooleanLike } from 'common/react';
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
+
 import { useBackend } from '../backend';
 import { Box, Button, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
@@ -16,8 +17,8 @@ type Data = {
   safety: BooleanLike;
 };
 
-export const MuleBot = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const MuleBot = (props) => {
+  const { act, data } = useBackend<Data>();
   const { suffix, load, hatch } = data;
   return (
     <Window width={350} height={500}>
@@ -45,8 +46,8 @@ export const MuleBot = (props, context) => {
   );
 };
 
-const MuleBotClosed = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+const MuleBotClosed = (props) => {
+  const { act, data } = useBackend<Data>();
   const { power, locked, issilicon, auto_return, crates_only } = data;
 
   return (
@@ -64,7 +65,7 @@ const MuleBotClosed = (props, context) => {
       {locked && !issilicon ? (
         <Box color="bad">This interface is currently locked.</Box>
       ) : (
-        <Fragment>
+        <>
           <Button
             fluid
             icon="stop"
@@ -113,14 +114,14 @@ const MuleBotClosed = (props, context) => {
             }
             onClick={() => act('cargotypes')}
           />
-        </Fragment>
+        </>
       )}
     </Section>
   );
 };
 
-const MuleBotOpen = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+const MuleBotOpen = (props) => {
+  const { act, data } = useBackend<Data>();
   const { safety } = data;
 
   return (

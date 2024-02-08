@@ -1,0 +1,90 @@
+2024-02-01:
+  Aroliacue:
+  - bugfix: Corrected a misplaced chompedit that removed code necessary for cyborgs
+      to navigate in space.
+  FluffMedic:
+  - rscadd: A New gateway
+  - rscadd: Strange random bits to xenobio
+  - bugfix: teshari rigsuits sprites work for the precursor, and aegis rigsuits
+  - rscadd: New vault and maintence
+  Kashargul:
+  - bugfix: '"Transfer to Shell" AI verb'
+  Missile597:
+  - rscadd: Cinnamon seeds added to the seed storages in garden and xenobotany
+  - rscadd: Added emergency shutters that were missing on the south part of deck 1
+  - rscdel: Removed two shutter doors in the dorms corridor that were cutting off
+      certain areas from a scrubber or a pump when closed due to an alarm
+  - qol: Moved a space heater that was blocking a trash pile
+  - bugfix: Fixed the airlock on the Ninja shuttle so the airlock helper doesn't panic
+      when loading up the round. Also moved the button so that it doesn't get left
+      behind when the shuttle jumps (not that it gets used)
+2024-02-02:
+  FluffMedic:
+  - bugfix: adds a missing wire
+  Upstream:
+  - rscadd: Added Vertical Nom, submit to prey and dominate prey verbs to borgs
+2024-02-03:
+  FluffMedic:
+  - bugfix: walls in a gateway being the wrong type
+  - bugfix: Missing sprites for a mob
+  - bugfix: Adds a default set of sprites for a gun
+  Fracshun:
+  - rscadd: Mind Binder can now target gargoyles in their stone form
+  - rscadd: Renaming a plushie also updates the name of the one turned into it
+  - bugfix: Auto resleever can now properly be used after being destroyed as an item
+  - bugfix: Using the Mind Binder on a scooped mob now targets the mob in the holder,
+      not the holder item
+  - qol: Digesting as an item now lets you use the belly digested respawn timer
+  Kashargul:
+  - qol: girders now refund a stack of 2 steel sheets
+2024-02-05:
+  FluffMedic:
+  - bugfix: Eclipse foes should all have some form of remains now
+  - bugfix: The hades mecha should now be buildable in it's gateway
+  - bugfix: the elemental gun should properly swap sprites and have the intended burst
+      for each mode
+  - bugfix: The crystal rigsuit should be using the proper sprites
+  Kashargul:
+  - rscadd: phasing vore pref
+  - rscadd: stripping pref for prey
+  - rscadd: apply liquids pref for prey
+  - rscadd: temporary/saving auto accept for pred / prey spwan, 0-30 seconds until
+      accept (requires tgui input framework enabled)
+  - rscadd: shadekin spont prey, phase into preds if prefs align
+  - qol: reworked the vorepanel settings page into categories
+  - qol: reworked the examine mechanical prefs to hide unapplyable subprefs
+  - qol: selective mode now shows current selection and is colour coded
+  - qol: reagents are now colour coded, neutral (blue), feedable (teal), beneficial
+      (green), acids (red), damaging to some livings (orange)
+  - qol: liquid splash message shows now always when liquids are inside the belly
+  - qol: liquid settings only apply when the main toggle is on now
+  - bugfix: heal belly pref will now prevent healing from healing bellies (and beneficial
+      reagents)
+  - bugfix: save prefs not showing on belly liquid changes
+  - bugfix: some prefs in examine mechanical prefs not updating without saving the
+      preferences
+  - bugfix: some prefs not saving / transferring properly
+  - bugfix: spawn as mob with vorebellies proc locking until a belly is selected
+  - bugfix: space cleaner reagent missing in selection
+  - bugfix: a runtime on robot liquid generation if no powercell is installed
+  - balance: simple mobs are no longer vore belly stripable
+  - balance: adds inaprovaline to the explohound sleeper
+  Raeschen:
+  - rscadd: '''Hide'' neutral trait.'
+  TheCaramelion:
+  - bugfix: Virus event will no longer pick immune species
+2024-02-07:
+  Raeschen:
+  - balance: global projectile speed increased from 3.0 to 1.5 (Lower is faster)
+2024-02-08:
+  HatArchAzel:
+  - rscadd: Two new markings, though they're just variants of each other to have support
+      for both plantigrade and digitigrade characters in case a plantigrade character
+      is using the model's torso/groin.
+  Kashargul:
+  - bugfix: strip preference should now save properly
+  Upstream:
+  - rscadd: Added new 18th century outfit as requested by eldzen
+  - rscadd: ports fox ears from skyrat
+  - bugfix: fixes bonnie alt and bonnie alt long (i forgot to upload all their sprites
+      when i ported them oops)

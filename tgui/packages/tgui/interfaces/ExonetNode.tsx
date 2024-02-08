@@ -1,6 +1,7 @@
 import { BooleanLike } from 'common/react';
+
 import { useBackend } from '../backend';
-import { Button, Box, Flex, LabeledList, Section } from '../components';
+import { Box, Button, Flex, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
 
 type Data = {
@@ -11,13 +12,13 @@ type Data = {
   logs: string[];
 };
 
-export const ExonetNode = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const ExonetNode = (props) => {
+  const { act, data } = useBackend<Data>();
 
   const { on, allowPDAs, allowCommunicators, allowNewscasters, logs } = data;
 
   return (
-    <Window width={400} height={400} resizable>
+    <Window width={400} height={400}>
       <Window.Content scrollable>
         <Section
           title="Status"

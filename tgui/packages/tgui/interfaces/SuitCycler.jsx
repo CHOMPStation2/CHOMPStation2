@@ -1,10 +1,10 @@
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend } from '../backend';
 import { Box, Button, Dropdown, NumberInput, LabeledList, NoticeBox, Section } from '../components';
 import { Window } from '../layouts';
 
-export const SuitCycler = (props, context) => {
-  const { act, data } = useBackend(context);
+export const SuitCycler = (props) => {
+  const { act, data } = useBackend();
   const { active, locked, uv_active } = data;
 
   let subTemplate = <SuitCyclerContent />;
@@ -18,14 +18,14 @@ export const SuitCycler = (props, context) => {
   }
 
   return (
-    <Window width={320} height={400} resizable>
+    <Window width={320} height={400}>
       <Window.Content>{subTemplate}</Window.Content>
     </Window>
   );
 };
 
-const SuitCyclerContent = (props, context) => {
-  const { act, data } = useBackend(context);
+const SuitCyclerContent = (props) => {
+  const { act, data } = useBackend();
   const {
     safeties,
     occupied,
@@ -40,7 +40,7 @@ const SuitCyclerContent = (props, context) => {
   } = data;
 
   return (
-    <Fragment>
+    <>
       <Section
         title="Storage"
         buttons={
@@ -147,11 +147,11 @@ const SuitCyclerContent = (props, context) => {
           </LabeledList.Item>
         </LabeledList>
       </Section>
-    </Fragment>
+    </>
   );
 };
 
-const SuitCyclerUV = (props, context) => {
+const SuitCyclerUV = (props) => {
   return (
     <NoticeBox>
       Contents are currently being decontaminated. Please wait.
@@ -159,8 +159,8 @@ const SuitCyclerUV = (props, context) => {
   );
 };
 
-const SuitCyclerLocked = (props, context) => {
-  const { act, data } = useBackend(context);
+const SuitCyclerLocked = (props) => {
+  const { act, data } = useBackend();
 
   const { model_text, userHasAccess } = data;
 
@@ -182,7 +182,7 @@ const SuitCyclerLocked = (props, context) => {
   );
 };
 
-const SuitCyclerActive = (props, context) => {
+const SuitCyclerActive = (props) => {
   return (
     <NoticeBox>Contents are currently being painted. Please wait.</NoticeBox>
   );

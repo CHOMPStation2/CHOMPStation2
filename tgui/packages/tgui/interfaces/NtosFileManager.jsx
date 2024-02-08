@@ -1,11 +1,11 @@
 /* eslint react/no-danger: "off" */
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend } from '../backend';
 import { Button, Section, Table, Flex } from '../components';
 import { NtosWindow } from '../layouts';
 
-export const NtosFileManager = (props, context) => {
-  const { act, data } = useBackend(context);
+export const NtosFileManager = (props) => {
+  const { act, data } = useBackend();
   const {
     PC_device_theme,
     usbconnected,
@@ -22,7 +22,7 @@ export const NtosFileManager = (props, context) => {
           <Section
             title={'Viewing File ' + filename}
             buttons={
-              <Fragment>
+              <>
                 <Button
                   icon="pen"
                   content="Edit"
@@ -38,7 +38,7 @@ export const NtosFileManager = (props, context) => {
                   content="Close"
                   onClick={() => act('PRG_closefile')}
                 />
-              </Fragment>
+              </>
             }>
             {/* This dangerouslySetInnerHTML is only ever passed data that has passed through pencode2html
              * It should be safe enough to support pencode in this way.
@@ -46,7 +46,7 @@ export const NtosFileManager = (props, context) => {
             {filedata && <div dangerouslySetInnerHTML={{ __html: filedata }} />}
           </Section>
         )) || (
-          <Fragment>
+          <>
             <Section>
               <FileTable
                 files={files}
@@ -88,7 +88,7 @@ export const NtosFileManager = (props, context) => {
                 New Text File
               </Button>
             </Section>
-          </Fragment>
+          </>
         )}
         {error && (
           <Flex wrap="wrap" position="fixed" bottom="5px">
@@ -133,7 +133,7 @@ const FileTable = (props) => {
         <Table.Row key={file.name} className="candystripe">
           <Table.Cell>
             {!file.undeletable ? (
-              <Fragment>
+              <>
                 <Button.Input
                   width="80%"
                   content={file.name}
@@ -142,7 +142,7 @@ const FileTable = (props) => {
                   onCommit={(e, value) => onRename(file.uid, value)}
                 />
                 <Button content="Open" onClick={() => onOpen(file.uid)} />
-              </Fragment>
+              </>
             ) : (
               file.name
             )}
@@ -151,7 +151,7 @@ const FileTable = (props) => {
           <Table.Cell>{file.size}</Table.Cell>
           <Table.Cell collapsing>
             {!file.undeletable && (
-              <Fragment>
+              <>
                 <Button.Confirm
                   icon="trash"
                   confirmIcon="times"
@@ -173,7 +173,7 @@ const FileTable = (props) => {
                       onClick={() => onUpload(file.uid)}
                     />
                   ))}
-              </Fragment>
+              </>
             )}
           </Table.Cell>
         </Table.Row>

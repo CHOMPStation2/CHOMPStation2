@@ -1,11 +1,11 @@
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend } from '../backend';
 import { Box, Button, LabeledList, Section, NumberInput } from '../components';
 import { TemporaryNotice } from './common/TemporaryNotice';
 import { Window } from '../layouts';
 
-export const TelecommsMultitoolMenu = (props, context) => {
-  const { act, data } = useBackend(context);
+export const TelecommsMultitoolMenu = (props) => {
+  const { act, data } = useBackend();
 
   const {
     // All
@@ -23,7 +23,7 @@ export const TelecommsMultitoolMenu = (props, context) => {
   } = data;
 
   return (
-    <Window width={520} height={540} resizable>
+    <Window width={520} height={540}>
       <Window.Content scrollable>
         <TemporaryNotice />
         <TelecommsMultitoolMenuStatus />
@@ -33,8 +33,8 @@ export const TelecommsMultitoolMenu = (props, context) => {
   );
 };
 
-const TelecommsMultitoolMenuStatus = (props, context) => {
-  const { act, data } = useBackend(context);
+const TelecommsMultitoolMenuStatus = (props) => {
+  const { act, data } = useBackend();
 
   const {
     // All
@@ -78,9 +78,9 @@ const TelecommsMultitoolMenuStatus = (props, context) => {
         {multitool ? (
           <LabeledList.Item label="Multitool Buffer">
             {multitool_buffer ? (
-              <Fragment>
+              <>
                 {multitool_buffer.name} ({multitool_buffer.id})
-              </Fragment>
+              </>
             ) : null}
             <Button
               color={multitool_buffer ? 'green' : null}
@@ -141,8 +141,8 @@ const TelecommsMultitoolMenuStatus = (props, context) => {
   );
 };
 
-const TelecommsMultitoolMenuPolymorphicOptions = (props, context) => {
-  const { act, data } = useBackend(context);
+const TelecommsMultitoolMenuPolymorphicOptions = (props) => {
+  const { act, data } = useBackend();
 
   const {
     // Relay

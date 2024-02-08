@@ -1,11 +1,11 @@
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend } from '../backend';
 import { Button, LabeledList, Box, Section } from '../components';
 import { Window } from '../layouts';
 
-export const CommunicationsConsole = (props, context) => {
+export const CommunicationsConsole = (props) => {
   return (
-    <Window width={400} height={600} resizable>
+    <Window width={400} height={600}>
       <Window.Content scrollable>
         <CommunicationsConsoleContent />
       </Window.Content>
@@ -13,8 +13,8 @@ export const CommunicationsConsole = (props, context) => {
   );
 };
 
-export const CommunicationsConsoleContent = (props, context) => {
-  const { act, data } = useBackend(context);
+export const CommunicationsConsoleContent = (props) => {
+  const { act, data } = useBackend();
 
   const { menu_state } = data;
 
@@ -37,15 +37,15 @@ export const CommunicationsConsoleContent = (props, context) => {
   }
 
   return (
-    <Fragment>
+    <>
       <CommunicationsConsoleAuth />
       {mainTemplate}
-    </Fragment>
+    </>
   );
 };
 
-const CommunicationsConsoleMain = (props, context) => {
-  const { act, data } = useBackend(context);
+const CommunicationsConsoleMain = (props) => {
+  const { act, data } = useBackend();
 
   const {
     messages,
@@ -87,7 +87,7 @@ const CommunicationsConsoleMain = (props, context) => {
   });
 
   return (
-    <Fragment>
+    <>
       <Section title="Site Manager-Only Actions">
         <LabeledList>
           <LabeledList.Item label="Announcement">
@@ -161,12 +161,12 @@ const CommunicationsConsoleMain = (props, context) => {
           </LabeledList.Item>
         </LabeledList>
       </Section>
-    </Fragment>
+    </>
   );
 };
 
-const CommunicationsConsoleAuth = (props, context) => {
-  const { act, data } = useBackend(context);
+const CommunicationsConsoleAuth = (props) => {
+  const { act, data } = useBackend();
 
   const { authenticated, is_ai, esc_status, esc_callable, esc_recallable } =
     data;
@@ -185,7 +185,7 @@ const CommunicationsConsoleAuth = (props, context) => {
   }
 
   return (
-    <Fragment>
+    <>
       <Section title="Authentication">
         <LabeledList>
           {(is_ai && (
@@ -231,12 +231,12 @@ const CommunicationsConsoleAuth = (props, context) => {
           )}
         </LabeledList>
       </Section>
-    </Fragment>
+    </>
   );
 };
 
-const CommunicationsConsoleMessage = (props, context) => {
-  const { act, data } = useBackend(context);
+const CommunicationsConsoleMessage = (props) => {
+  const { act, data } = useBackend();
 
   const { message_current, message_deletion_allowed, authenticated, messages } =
     data;
@@ -301,8 +301,8 @@ const CommunicationsConsoleMessage = (props, context) => {
   );
 };
 
-const CommunicationsConsoleStatusDisplay = (props, context) => {
-  const { act, data } = useBackend(context);
+const CommunicationsConsoleStatusDisplay = (props) => {
+  const { act, data } = useBackend();
 
   const { stat_display, authenticated } = data;
 

@@ -1,5 +1,5 @@
 import { createSearch } from 'common/string';
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend, useLocalState } from '../backend';
 import { Box, Button, Collapsible, Dropdown, Flex, Input, Section } from '../components';
 import { Window } from '../layouts';
@@ -10,17 +10,17 @@ const sortTypes = {
   'By price': (a, b) => a.price - b.price,
 };
 
-export const Biogenerator = (props, context) => {
-  const { act, data } = useBackend(context);
+export const Biogenerator = (props) => {
+  const { act, data } = useBackend();
   return (
-    <Window width={400} height={450} resizable>
+    <Window width={400} height={450}>
       <Window.Content className="Layout__content--flexColumn" scrollable>
         {(data.processing && (
           <Section title="Processing">
             The biogenerator is processing reagents!
           </Section>
         )) || (
-          <Fragment>
+          <>
             <Section>
               {data.points} points available.
               <Button ml={1} icon="blender" onClick={() => act('activate')}>
@@ -36,28 +36,20 @@ export const Biogenerator = (props, context) => {
             </Section>
             <BiogeneratorSearch />
             <BiogeneratorItems />
-          </Fragment>
+          </>
         )}
       </Window.Content>
     </Window>
   );
 };
 
-const BiogeneratorItems = (props, context) => {
-  const { act, data } = useBackend(context);
+const BiogeneratorItems = (props) => {
+  const { act, data } = useBackend();
   const { points, items } = data;
   // Search thingies
-  const [searchText, _setSearchText] = useLocalState(context, 'search', '');
-  const [sortOrder, _setSortOrder] = useLocalState(
-    context,
-    'sort',
-    'Alphabetical'
-  );
-  const [descending, _setDescending] = useLocalState(
-    context,
-    'descending',
-    false
-  );
+  const [searchText, _setSearchText] = useLocalState('search', '');
+  const [sortOrder, _setSortOrder] = useLocalState('sort', 'Alphabetical');
+  const [descending, _setDescending] = useLocalState('descending', false);
   const searcher = createSearch(searchText, (item) => {
     return item[0];
   });
@@ -100,14 +92,10 @@ const BiogeneratorItems = (props, context) => {
   );
 };
 
-const BiogeneratorSearch = (props, context) => {
-  const [_searchText, setSearchText] = useLocalState(context, 'search', '');
-  const [_sortOrder, setSortOrder] = useLocalState(context, 'sort', '');
-  const [descending, setDescending] = useLocalState(
-    context,
-    'descending',
-    false
-  );
+const BiogeneratorSearch = (props) => {
+  const [_searchText, setSearchText] = useLocalState('search', '');
+  const [_sortOrder, setSortOrder] = useLocalState('sort', '');
+  const [descending, setDescending] = useLocalState('descending', false);
   return (
     <Box mb="0.5rem">
       <Flex width="100%">
@@ -152,8 +140,8 @@ const canBuyItem = (item, data) => {
   return true;
 };
 
-const BiogeneratorItemsCategory = (properties, context) => {
-  const { act, data } = useBackend(context);
+const BiogeneratorItemsCategory = (properties) => {
+  const { act, data } = useBackend();
   const { title, items, ...rest } = properties;
   return (
     <Collapsible open title={title} {...rest}>

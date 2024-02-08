@@ -1,8 +1,9 @@
-import { T0C } from '../constants';
-import { useBackend } from '../backend';
-import { Button, Knob, Section, LabeledControls, LabeledList } from '../components';
-import { Window } from '../layouts';
 import { BooleanLike } from 'common/react';
+
+import { useBackend } from '../backend';
+import { Button, Knob, LabeledControls, LabeledList, Section } from '../components';
+import { T0C } from '../constants';
+import { Window } from '../layouts';
 
 type Data = {
   temp: number;
@@ -12,13 +13,13 @@ type Data = {
   power: BooleanLike;
 };
 
-export const SpaceHeater = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const SpaceHeater = (props) => {
+  const { act, data } = useBackend<Data>();
 
   const { temp, minTemp, maxTemp, cell, power } = data;
 
   return (
-    <Window width={300} height={250} resizable>
+    <Window width={300} height={250}>
       <Window.Content>
         <Section title="Status">
           <LabeledList>

@@ -139,7 +139,7 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 
 	var/obj/item/organ/internal/brain/B = src
 	if(istype(B) && owner)
-		if(istype(owner, /mob/living/carbon))
+		if(istype(owner, /mob/living/carbon) && owner.ckey) //CHOMPEdit - Make sure owner's mind isn't elsewhere otherwise on brain removal brings them back
 			B.transfer_identity(owner)
 
 	..()

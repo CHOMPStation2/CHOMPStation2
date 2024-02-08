@@ -1,11 +1,11 @@
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend, useLocalState } from '../backend';
 import { ComplexModal, modalRegisterBodyOverride } from '../interfaces/common/ComplexModal';
 import { Box, Button, Flex, NoticeBox, LabeledList, Section, Tabs } from '../components';
 import { Window } from '../layouts';
 
-const virusModalBodyOverride = (modal, context) => {
-  const { act, data } = useBackend(context);
+const virusModalBodyOverride = (modal) => {
+  const { act, data } = useBackend();
   const { can_print } = data;
   const virus = modal.args;
   return (
@@ -14,7 +14,7 @@ const virusModalBodyOverride = (modal, context) => {
       m="-1rem"
       title={virus.name || 'Virus'}
       buttons={
-        <Fragment>
+        <>
           <Button
             disabled={!can_print}
             icon="print"
@@ -24,7 +24,7 @@ const virusModalBodyOverride = (modal, context) => {
             }
           />
           <Button icon="times" color="red" onClick={() => act('modal_close')} />
-        </Fragment>
+        </>
       }>
       <Box mx="0.5rem">
         <LabeledList>
@@ -69,12 +69,12 @@ const virusModalBodyOverride = (modal, context) => {
   );
 };
 
-export const PathogenicIsolator = (props, context) => {
-  const { act, data } = useBackend(context);
+export const PathogenicIsolator = (props) => {
+  const { act, data } = useBackend();
 
   const { isolating } = data;
 
-  const [tabIndex, setTabIndex] = useLocalState(context, 'tabIndex', 0);
+  const [tabIndex, setTabIndex] = useLocalState('tabIndex', 0);
 
   let tab = null;
   if (tabIndex === 0) {
@@ -85,7 +85,7 @@ export const PathogenicIsolator = (props, context) => {
 
   modalRegisterBodyOverride('virus', virusModalBodyOverride);
   return (
-    <Window height={500} width={520} resizable>
+    <Window height={500} width={520}>
       <ComplexModal maxHeight="100%" maxWidth="95%" />
       <Window.Content scrollable>
         {(isolating && (
@@ -106,14 +106,14 @@ export const PathogenicIsolator = (props, context) => {
   );
 };
 
-const PathogenicIsolatorTabHome = (props, context) => {
-  const { act, data } = useBackend(context);
+const PathogenicIsolatorTabHome = (props) => {
+  const { act, data } = useBackend();
   const { syringe_inserted, pathogen_pool, can_print } = data;
   return (
     <Section
       title="Pathogens"
       buttons={
-        <Fragment>
+        <>
           <Button
             icon="print"
             content="Print"
@@ -126,7 +126,7 @@ const PathogenicIsolatorTabHome = (props, context) => {
             disabled={!syringe_inserted}
             onClick={() => act('eject')}
           />
-        </Fragment>
+        </>
       }>
       {(pathogen_pool.length &&
         pathogen_pool.map((pathogen) => (
@@ -171,8 +171,8 @@ const PathogenicIsolatorTabHome = (props, context) => {
   );
 };
 
-const PathogenicIsolatorTabDatabase = (props, context) => {
-  const { act, data } = useBackend(context);
+const PathogenicIsolatorTabDatabase = (props) => {
+  const { act, data } = useBackend();
   const { database, can_print } = data;
   return (
     <Section

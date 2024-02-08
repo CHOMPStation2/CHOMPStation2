@@ -1,10 +1,10 @@
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend } from '../backend';
 import { Box, Button, LabeledList, ProgressBar, Section } from '../components';
 import { Window } from '../layouts';
 
-export const DiseaseSplicer = (props, context) => {
-  const { act, data } = useBackend(context);
+export const DiseaseSplicer = (props) => {
+  const { act, data } = useBackend();
 
   const { busy } = data;
 
@@ -18,18 +18,18 @@ export const DiseaseSplicer = (props, context) => {
             </center>
           </Section>
         ) : (
-          <Fragment>
+          <>
             <DiseaseSplicerVirusDish />
             <DiseaseSplicerStorage />
-          </Fragment>
+          </>
         )}
       </Window.Content>
     </Window>
   );
 };
 
-const DiseaseSplicerVirusDish = (props, context) => {
-  const { act, data } = useBackend(context);
+const DiseaseSplicerVirusDish = (props) => {
+  const { act, data } = useBackend();
 
   const { dish_inserted, effects, info, growth, affected_species } = data;
 
@@ -63,7 +63,7 @@ const DiseaseSplicerVirusDish = (props, context) => {
           <Box color="bad">{info}</Box>
         </Section>
       ) : (
-        <Fragment>
+        <>
           <Section level={2} title="Symptoms">
             {(effects &&
               effects.map((effect) => (
@@ -95,14 +95,14 @@ const DiseaseSplicerVirusDish = (props, context) => {
               onClick={() => act('affected_species')}
             />
           </Section>
-        </Fragment>
+        </>
       )}
     </Section>
   );
 };
 
-const DiseaseSplicerStorage = (props, context) => {
-  const { act, data } = useBackend(context);
+const DiseaseSplicerStorage = (props) => {
+  const { act, data } = useBackend();
 
   const {
     dish_inserted,

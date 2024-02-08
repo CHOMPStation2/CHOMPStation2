@@ -3,15 +3,15 @@ import { Box, Button, LabeledList, NoticeBox, ProgressBar, Section } from '../co
 import { Window } from '../layouts';
 import { round } from 'common/math';
 
-export const PortableGenerator = (props, context) => {
-  const { act, data } = useBackend(context);
+export const PortableGenerator = (props) => {
+  const { act, data } = useBackend();
   const stack_percent = data.fuel_stored / data.fuel_capacity;
   const stackPercentState =
     (stack_percent >= 0.5 && 'good') ||
     (stack_percent > 0.15 && 'average') ||
     'bad';
   return (
-    <Window width={450} height={340} resizable>
+    <Window width={450} height={340}>
       <Window.Content scrollable>
         {!data.anchored && <NoticeBox>Generator not anchored.</NoticeBox>}
         <Section title="Status">

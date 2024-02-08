@@ -1,5 +1,4 @@
 import { capitalize } from 'common/string';
-import { Fragment } from 'inferno';
 import { useBackend, useLocalState } from '../backend';
 import { Box, Button, Flex, Collapsible, Icon, LabeledList, NoticeBox, Section, Tabs, Divider, Stack } from '../components';
 import { Window } from '../layouts';
@@ -41,135 +40,10 @@ const digestModeToPreyMode = {
  *  - The Belly Selection Panel, where you can select what belly people will go into and customize the active one.
  *  - User Preferences, where you can adjust all of your vore preferences on the fly.
  */
+export const VorePanel = (props) => {
+  const { act, data } = useBackend();
 
-/**
- * CHOMPedits specified here. Read ALL of this if conflicts happen, I can't find a way to add comments line by line.
- *
- * Under VoreSelectedBelly the following strings have been added to const{}:
- *   show_liq, liq_interacts, liq_reagent_gen, liq_reagent_type, liq_reagent_name,
- *   liq_reagent_transfer_verb, liq_reagent_nutri_rate, liq_reagent_capacity, liq_sloshing, liq_reagent_addons,
- *   show_liq_fullness, liq_messages, liq_msg_toggle1, liq_msg_toggle2, liq_msg_toggle3, liq_msg_toggle4,
- *   liq_msg_toggle5, liq_msg1, liq_msg2, liq_msg3, liq_msg4, liq_msg5, sound_volume, egg_name,
- *
- * To the tabs section of VoreSelectedBelly return
- *       <Tabs.Tab selected={tabIndex === 5} onClick={() => setTabIndex(5)}>
- *        Liquid Options
- *      </Tabs.Tab>
- *      <Tabs.Tab selected={tabIndex === 6} onClick={() => setTabIndex(6)}>
- *        Liquid Messages
- *      </Tabs.Tab>
- *
- * All of the content for tabIndex === 5 and tabIndex === 6
- *
- * Under VoreUserPreferences the following strings have been added to const{}:
- *   liq_rec, liq_giv,
- *
- * To VoreUserPreferences return
- *         <Flex.Item basis="49%">
- *        <Button
- *          onClick={() => act("toggle_liq_rec")}
- *          icon={liq_rec ? "toggle-on" : "toggle-off"}
- *          selected={liq_rec}
- *          fluid
- *          tooltipPosition="top"
- *          tooltip={"This button is for allowing or preventing others from giving you liquids from their vore organs."
- *          + (liq_rec ? " Click here to prevent receiving liquids." : " Click here to allow receiving liquids.")}
- *          content={liq_rec ? "Receiving Liquids Allowed" : "Do Not Allow Receiving Liquids"} />
- *      </Flex.Item>
- *      <Flex.Item basis="49%">
- *        <Button
- *          onClick={() => act("toggle_liq_giv")}
- *          icon={liq_giv ? "toggle-on" : "toggle-off"}
- *          selected={liq_giv}
- *          fluid
- *          tooltipPosition="top"
- *           tooltip={"This button is for allowing or preventing others from taking liquids from your vore organs."
- *          + (liq_giv ? " Click here to prevent taking liquids." : " Click here to allow taking liquids.")}
- *          content={liq_giv ? "Taking Liquids Allowed" : "Do Not Allow Taking Liquids"} />
- *      </Flex.Item>
- *
- * NEW EDITS 2/25/21: COLORED BELLY OVERLAYS
- * LINE 5:
- *import { Box, Button, ByondUi, Flex, Collapsible, Icon, LabeledList, NoticeBox, Section, Tabs } from "../components";
- *
- * LINE 172 - <Window width={700} height={800} resizable>
- *
- * LINE 301 - belly_fullscreen_color,
- * mapRef,
- *
- * LINE 604 - <Section title="Belly Fullscreens Preview and Coloring">
- *           <Flex direction="row">
- *             <Box backgroundColor={belly_fullscreen_color} width="20px" height="20px" />
- *             <Button
- *               icon="eye-dropper"
- *               onClick={() => act("set_attribute", { attribute: "b_fullscreen_color", val: null })}>
- *               Select Color
- *             </Button>
- *           </Flex>
- *           <ByondUi
- *             style={{
- *               width: '200px',
- *               height: '200px',
- *             }}
- *             params={{
- *               id: mapRef,
- *               type: 'map',
- *             }} />
- *         </Section>
- *         <Section height="260px" style={{ overflow: "auto" }}>
- *           <Section title="Vore FX">
- *             <LabeledList>
- *               <LabeledList.Item label="Disable Prey HUD">
- *                 <Button
- *                   onClick={() => act("set_attribute", { attribute: "b_disable_hud" })}
- *                   icon={disable_hud ? "toggle-on" : "toggle-off"}
- *                   selected={disable_hud}
- *                   content={disable_hud ? "Yes" : "No"} />
- *               </LabeledList.Item>
- *             </LabeledList>
- *           </Section>
- *           <Section title="Belly Fullscreens Styles">
- *             Belly styles:
- *             <Button
- *               fluid
- *               selected={belly_fullscreen === "" || belly_fullscreen === null}
- *               onClick={() => act("set_attribute", { attribute: "b_fullscreen", val: null })}>
- *               Disabled
- *             </Button>
- *             {Object.keys(possible_fullscreens).map(key => (
- *               <Button
- *                 key={key}
- *                 width="256px"
- *                 height="256px"
- *                 selected={key === belly_fullscreen}
- *                 onClick={() => act("set_attribute", { attribute: "b_fullscreen", val: key })}>
- *                 <Box
- *                   className={classes([
- *                     'vore240x240',
- *                     key,
- *                   ])}
- *                   style={{
- *                     transform: 'translate(0%, 4%)',
- *                   }} />
- *               </Button>
- *             ))}
- *           </Section>
- *         </Section>
- *
- * LINE 900 - const [tabIndex, setTabIndex] = useLocalState(context, 'tabIndex', 0);
- *
- * return tabIndex===4 ? null : (
- *
- * New preference added, noisy_full
- * noisy_full enables belching when nutrition exceeds 500, very similar to the noisy preference.
- *
- * That's everything so far.
- *
- */
-export const VorePanel = (props, context) => {
-  const { act, data } = useBackend(context);
-
-  const [tabIndex, setTabIndex] = useLocalState(context, 'panelTabIndex', 0);
+  const [tabIndex, setTabIndex] = useLocalState('panelTabIndex', 0);
 
   const tabs = [];
 
@@ -178,7 +52,7 @@ export const VorePanel = (props, context) => {
   tabs[1] = <VoreUserPreferences />;
 
   return (
-    <Window width={890} height={660} theme="abstract" resizable>
+    <Window width={890} height={660} theme="abstract">
       <Window.Content scrollable>
         {(data.unsaved_changes && (
           <NoticeBox danger>
@@ -224,8 +98,8 @@ export const VorePanel = (props, context) => {
   );
 };
 
-const VoreInsidePanel = (props, context) => {
-  const { act, data } = useBackend(context);
+const VoreInsidePanel = (props) => {
+  const { act, data } = useBackend();
 
   const { absorbed, belly_name, belly_mode, desc, pred, contents, ref } =
     data.inside;
@@ -267,8 +141,8 @@ const VoreInsidePanel = (props, context) => {
   );
 };
 
-const VoreBellySelectionAndCustomization = (props, context) => {
-  const { act, data } = useBackend(context);
+const VoreBellySelectionAndCustomization = (props) => {
+  const { act, data } = useBackend();
 
   const { our_bellies, selected } = data;
 
@@ -323,13 +197,13 @@ const VoreBellySelectionAndCustomization = (props, context) => {
 /**
  * Subtemplate of VoreBellySelectionAndCustomization
  */
-const VoreSelectedBelly = (props, context) => {
-  const { act } = useBackend(context);
+const VoreSelectedBelly = (props) => {
+  const { act } = useBackend();
 
   const { belly } = props;
   const { contents } = belly;
 
-  const [tabIndex, setTabIndex] = useLocalState(context, 'bellyTabIndex', 0);
+  const [tabIndex, setTabIndex] = useLocalState('bellyTabIndex', 0);
 
   const tabs = [];
 
@@ -352,7 +226,7 @@ const VoreSelectedBelly = (props, context) => {
   tabs[8] = <VoreSelectedBellyLiquidMessages belly={belly} />;
 
   return (
-    <Fragment>
+    <>
       <Tabs>
         <Tabs.Tab selected={tabIndex === 0} onClick={() => setTabIndex(0)}>
           Controls
@@ -383,12 +257,12 @@ const VoreSelectedBelly = (props, context) => {
         </Tabs.Tab>
       </Tabs>
       {tabs[tabIndex] || 'Error'}
-    </Fragment>
+    </>
   );
 };
 
-const VoreSelectedBellyControls = (props, context) => {
-  const { act } = useBackend(context);
+const VoreSelectedBellyControls = (props) => {
+  const { act } = useBackend();
 
   const { belly } = props;
   const { belly_name, mode, item_mode, addons } = belly;
@@ -398,7 +272,7 @@ const VoreSelectedBellyControls = (props, context) => {
       <LabeledList.Item
         label="Name"
         buttons={
-          <Fragment>
+          <>
             <Button
               icon="arrow-up"
               tooltipPosition="left"
@@ -411,7 +285,7 @@ const VoreSelectedBellyControls = (props, context) => {
               tooltip="Move this belly tab down."
               onClick={() => act('move_belly', { dir: 1 })}
             />
-          </Fragment>
+          </>
         }>
         <Button
           onClick={() => act('set_attribute', { attribute: 'b_name' })}
@@ -454,8 +328,8 @@ const VoreSelectedBellyControls = (props, context) => {
   );
 };
 
-const VoreSelectedBellyDescriptions = (props, context) => {
-  const { act } = useBackend(context);
+const VoreSelectedBellyDescriptions = (props) => {
+  const { act } = useBackend();
 
   const { belly } = props;
   const { verb, release_verb, desc, absorbed_desc } = belly;
@@ -817,8 +691,8 @@ const VoreSelectedBellyDescriptions = (props, context) => {
   );
 };
 
-const VoreSelectedBellyOptions = (props, context) => {
-  const { act, data } = useBackend(context);
+const VoreSelectedBellyOptions = (props) => {
+  const { act, data } = useBackend();
 
   const { host_mobtype } = data;
   const { is_cyborg, is_vore_simple_mob } = host_mobtype;
@@ -883,7 +757,7 @@ const VoreSelectedBellyOptions = (props, context) => {
             />
           </LabeledList.Item>
           {(contaminates && (
-            <Fragment>
+            <>
               <LabeledList.Item label="Contamination Flavor">
                 <Button
                   onClick={() =>
@@ -904,7 +778,7 @@ const VoreSelectedBellyOptions = (props, context) => {
                   content={capitalize(contaminate_color)}
                 />
               </LabeledList.Item>
-            </Fragment>
+            </>
           )) ||
             null}
           <LabeledList.Item label="Nutritional Gain">
@@ -1053,8 +927,8 @@ const VoreSelectedBellyOptions = (props, context) => {
   );
 };
 
-const VoreSelectedMobTypeBellyButtons = (props, context) => {
-  const { act, data } = useBackend(context);
+const VoreSelectedMobTypeBellyButtons = (props) => {
+  const { act, data } = useBackend();
   const { host_mobtype } = data;
   const { is_cyborg, is_vore_simple_mob } = host_mobtype;
   const { belly } = props;
@@ -1123,8 +997,8 @@ const VoreSelectedMobTypeBellyButtons = (props, context) => {
   }
 };
 
-const VoreSelectedBellySounds = (props, context) => {
-  const { act } = useBackend(context);
+const VoreSelectedBellySounds = (props) => {
+  const { act } = useBackend();
 
   const { belly } = props;
   const { is_wet, wet_loop, fancy, sound, release_sound, sound_volume } = belly;
@@ -1195,8 +1069,8 @@ const VoreSelectedBellySounds = (props, context) => {
   );
 };
 
-const VoreSelectedBellyVisuals = (props, context) => {
-  const { act } = useBackend(context);
+const VoreSelectedBellyVisuals = (props) => {
+  const { act } = useBackend();
 
   const { belly } = props;
   const {
@@ -1232,7 +1106,7 @@ const VoreSelectedBellyVisuals = (props, context) => {
   } = belly;
 
   return (
-    <Fragment>
+    <>
       <Section title="Vore Sprites">
         <Flex direction="row">
           <LabeledList>
@@ -1544,12 +1418,12 @@ const VoreSelectedBellyVisuals = (props, context) => {
           ))}
         </Section>
       </Section>
-    </Fragment>
+    </>
   );
 };
 
-const VoreSelectedBellyInteractions = (props, context) => {
-  const { act } = useBackend(context);
+const VoreSelectedBellyInteractions = (props) => {
+  const { act } = useBackend();
 
   const { belly } = props;
   const {
@@ -1764,13 +1638,13 @@ const VoreSelectedBellyInteractions = (props, context) => {
   );
 };
 
-const VoreContentsPanel = (props, context) => {
-  const { act, data } = useBackend(context);
+const VoreContentsPanel = (props) => {
+  const { act, data } = useBackend();
   const { show_pictures } = data;
   const { contents, belly, outside = false } = props;
 
   return (
-    <Fragment>
+    <>
       {(outside && (
         <Button
           textAlign="center"
@@ -1840,296 +1714,12 @@ const VoreContentsPanel = (props, context) => {
           ))}
         </LabeledList>
       )}
-    </Fragment>
+    </>
   );
 };
 
-const VoreSelectedBellyLiquidOptions = (props, context) => {
-  const { act } = useBackend(context);
-
-  const { belly } = props;
-  const {
-    show_liq,
-    liq_interacts,
-    liq_reagent_gen,
-    liq_reagent_type,
-    liq_reagent_name,
-    liq_reagent_transfer_verb,
-    liq_reagent_nutri_rate,
-    liq_reagent_capacity,
-    liq_sloshing,
-    liq_reagent_addons,
-    show_liq_fullness,
-    liq_messages,
-    liq_msg1,
-    liq_msg2,
-    liq_msg3,
-    liq_msg4,
-    liq_msg5,
-  } = belly;
-
-  return (
-    <Section
-      title="Liquid Options"
-      buttons={
-        <Button
-          onClick={() =>
-            act('liq_set_attribute', { liq_attribute: 'b_show_liq' })
-          }
-          icon={show_liq ? 'toggle-on' : 'toggle-off'}
-          selected={show_liq}
-          tooltipPosition="left"
-          tooltip={
-            'These are the settings for liquid bellies, every belly has a liquid storage.'
-          }
-          content={show_liq ? 'Liquids On' : 'Liquids Off'}
-        />
-      }>
-      {show_liq ? (
-        <LabeledList>
-          <LabeledList.Item label="Generate Liquids">
-            <Button
-              onClick={() =>
-                act('liq_set_attribute', { liq_attribute: 'b_liq_reagent_gen' })
-              }
-              icon={liq_interacts.liq_reagent_gen ? 'toggle-on' : 'toggle-off'}
-              selected={liq_interacts.liq_reagent_gen}
-              content={liq_interacts.liq_reagent_gen ? 'On' : 'Off'}
-            />
-          </LabeledList.Item>
-          <LabeledList.Item label="Liquid Type">
-            <Button
-              onClick={() =>
-                act('liq_set_attribute', {
-                  liq_attribute: 'b_liq_reagent_type',
-                })
-              }
-              icon="pen"
-              content={liq_interacts.liq_reagent_type}
-            />
-          </LabeledList.Item>
-          <LabeledList.Item label="Liquid Name">
-            <Button
-              onClick={() =>
-                act('liq_set_attribute', {
-                  liq_attribute: 'b_liq_reagent_name',
-                })
-              }
-              content={liq_interacts.liq_reagent_name}
-            />
-          </LabeledList.Item>
-          <LabeledList.Item label="Transfer Verb">
-            <Button
-              onClick={() =>
-                act('liq_set_attribute', {
-                  liq_attribute: 'b_liq_reagent_transfer_verb',
-                })
-              }
-              content={liq_interacts.liq_reagent_transfer_verb}
-            />
-          </LabeledList.Item>
-          <LabeledList.Item label="Generation Time">
-            <Button
-              onClick={() =>
-                act('liq_set_attribute', {
-                  liq_attribute: 'b_liq_reagent_nutri_rate',
-                })
-              }
-              icon="clock"
-              content={
-                ((liq_interacts.liq_reagent_nutri_rate + 1) * 10) / 60 +
-                ' Hours'
-              }
-            />
-          </LabeledList.Item>
-          <LabeledList.Item label="Liquid Capacity">
-            <Button
-              onClick={() =>
-                act('liq_set_attribute', {
-                  liq_attribute: 'b_liq_reagent_capacity',
-                })
-              }
-              content={liq_interacts.liq_reagent_capacity}
-            />
-          </LabeledList.Item>
-          <LabeledList.Item label="Slosh Sounds">
-            <Button
-              onClick={() =>
-                act('liq_set_attribute', { liq_attribute: 'b_liq_sloshing' })
-              }
-              icon={liq_interacts.liq_sloshing ? 'toggle-on' : 'toggle-off'}
-              selected={liq_interacts.liq_sloshing}
-              content={liq_interacts.liq_sloshing ? 'On' : 'Off'}
-            />
-          </LabeledList.Item>
-          <LabeledList.Item label="Liquid Addons">
-            {(liq_interacts.liq_reagent_addons.length &&
-              liq_interacts.liq_reagent_addons.join(', ')) ||
-              'None'}
-            <Button
-              onClick={() =>
-                act('liq_set_attribute', {
-                  liq_attribute: 'b_liq_reagent_addons',
-                })
-              }
-              ml={1}
-              icon="plus"
-            />
-          </LabeledList.Item>
-          <LabeledList.Item label="Purge Liquids">
-            <Button
-              color="red"
-              onClick={() =>
-                act('liq_set_attribute', { liq_attribute: 'b_liq_purge' })
-              }
-              content="Purge Liquids"
-            />
-          </LabeledList.Item>
-        </LabeledList>
-      ) : (
-        'These options only display while liquid settings are turned on.'
-      )}
-    </Section>
-  );
-};
-
-const VoreSelectedBellyLiquidMessages = (props, context) => {
-  const { act } = useBackend(context);
-
-  const { belly } = props;
-  const {
-    liq_interacts,
-    liq_reagent_gen,
-    liq_reagent_type,
-    liq_reagent_name,
-    liq_reagent_transfer_verb,
-    liq_reagent_nutri_rate,
-    liq_reagent_capacity,
-    liq_sloshing,
-    liq_reagent_addons,
-    show_liq_fullness,
-    liq_messages,
-    liq_msg_toggle1,
-    liq_msg_toggle2,
-    liq_msg_toggle3,
-    liq_msg_toggle4,
-    liq_msg_toggle5,
-    liq_msg1,
-    liq_msg2,
-    liq_msg3,
-    liq_msg4,
-    liq_msg5,
-  } = belly;
-
-  return (
-    <Section
-      title="Liquid Messages"
-      buttons={
-        <Button
-          onClick={() =>
-            act('liq_set_messages', { liq_messages: 'b_show_liq_fullness' })
-          }
-          icon={show_liq_fullness ? 'toggle-on' : 'toggle-off'}
-          selected={show_liq_fullness}
-          tooltipPosition="left"
-          tooltip={
-            'These are the settings for belly visibility when involving liquids fullness.'
-          }
-          content={show_liq_fullness ? 'Messages On' : 'Messages Off'}
-        />
-      }>
-      {show_liq_fullness ? (
-        <LabeledList>
-          <LabeledList.Item label="0 to 20%">
-            <Button
-              onClick={() =>
-                act('liq_set_messages', { liq_messages: 'b_liq_msg_toggle1' })
-              }
-              icon={liq_messages.liq_msg_toggle1 ? 'toggle-on' : 'toggle-off'}
-              selected={liq_messages.liq_msg_toggle1}
-              content={liq_messages.liq_msg_toggle1 ? 'On' : 'Off'}
-            />
-            <Button
-              onClick={() =>
-                act('liq_set_messages', { liq_messages: 'b_liq_msg1' })
-              }
-              content="Examine Message (0 to 20%)"
-            />
-          </LabeledList.Item>
-          <LabeledList.Item label="20 to 40%">
-            <Button
-              onClick={() =>
-                act('liq_set_messages', { liq_messages: 'b_liq_msg_toggle2' })
-              }
-              icon={liq_messages.liq_msg_toggle2 ? 'toggle-on' : 'toggle-off'}
-              selected={liq_messages.liq_msg_toggle2}
-              content={liq_messages.liq_msg_toggle2 ? 'On' : 'Off'}
-            />
-            <Button
-              onClick={() =>
-                act('liq_set_messages', { liq_messages: 'b_liq_msg2' })
-              }
-              content="Examine Message (20 to 40%)"
-            />
-          </LabeledList.Item>
-          <LabeledList.Item label="40 to 60%">
-            <Button
-              onClick={() =>
-                act('liq_set_messages', { liq_messages: 'b_liq_msg_toggle3' })
-              }
-              icon={liq_messages.liq_msg_toggle3 ? 'toggle-on' : 'toggle-off'}
-              selected={liq_messages.liq_msg_toggle3}
-              content={liq_messages.liq_msg_toggle3 ? 'On' : 'Off'}
-            />
-            <Button
-              onClick={() =>
-                act('liq_set_messages', { liq_messages: 'b_liq_msg3' })
-              }
-              content="Examine Message (40 to 60%)"
-            />
-          </LabeledList.Item>
-          <LabeledList.Item label="60 to 80%">
-            <Button
-              onClick={() =>
-                act('liq_set_messages', { liq_messages: 'b_liq_msg_toggle4' })
-              }
-              icon={liq_messages.liq_msg_toggle4 ? 'toggle-on' : 'toggle-off'}
-              selected={liq_messages.liq_msg_toggle4}
-              content={liq_messages.liq_msg_toggle4 ? 'On' : 'Off'}
-            />
-            <Button
-              onClick={() =>
-                act('liq_set_messages', { liq_messages: 'b_liq_msg4' })
-              }
-              content="Examine Message (60 to 80%)"
-            />
-          </LabeledList.Item>
-          <LabeledList.Item label="80 to 100%">
-            <Button
-              onClick={() =>
-                act('liq_set_messages', { liq_messages: 'b_liq_msg_toggle5' })
-              }
-              icon={liq_messages.liq_msg_toggle5 ? 'toggle-on' : 'toggle-off'}
-              selected={liq_messages.liq_msg_toggle5}
-              content={liq_messages.liq_msg_toggle5 ? 'On' : 'Off'}
-            />
-            <Button
-              onClick={() =>
-                act('liq_set_messages', { liq_messages: 'b_liq_msg5' })
-              }
-              content="Examine Message (80 to 100%)"
-            />
-          </LabeledList.Item>
-        </LabeledList>
-      ) : (
-        'These options only display while liquid examination settings are turned on.'
-      )}
-    </Section>
-  );
-};
-
-const VoreUserPreferences = (props, context) => {
-  const { act, data } = useBackend(context);
+const VoreUserPreferences = (props) => {
+  const { act, data } = useBackend();
 
   const {
     digestable,
@@ -2784,8 +2374,8 @@ const VoreUserPreferences = (props, context) => {
   );
 };
 
-const VoreUserPreferenceItem = (props, context) => {
-  const { act } = useBackend(context);
+const VoreUserPreferenceItem = (props) => {
+  const { act } = useBackend();
 
   const { spec, ...rest } = props;
   const { action, test, tooltip, content } = spec;

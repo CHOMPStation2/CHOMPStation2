@@ -2,8 +2,8 @@ import { useBackend } from '../backend';
 import { Box, Button, LabeledList, ProgressBar, Section } from '../components';
 import { Window } from '../layouts';
 
-export const RogueZones = (props, context) => {
-  const { act, data } = useBackend(context);
+export const RogueZones = (props) => {
+  const { act, data } = useBackend();
   const {
     timeout_percent,
     diffstep,
@@ -18,7 +18,7 @@ export const RogueZones = (props, context) => {
     can_recall_shuttle,
   } = data;
   return (
-    <Window width={360} height={250} resizable>
+    <Window width={360} height={250}>
       <Window.Content>
         <Section title="Current Area">
           <LabeledList>

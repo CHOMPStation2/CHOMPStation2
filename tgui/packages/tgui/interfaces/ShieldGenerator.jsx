@@ -1,18 +1,18 @@
 import { useBackend } from '../backend';
 import { Window } from '../layouts';
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { Button, Box, Section, LabeledList, NumberInput, Icon } from '../components';
 import { round } from 'common/math';
 import { formatSiUnit, formatPower } from '../format';
 import { FullscreenNotice } from './common/FullscreenNotice';
 
-export const ShieldGenerator = (props, context) => {
-  const { act, data } = useBackend(context);
+export const ShieldGenerator = (props) => {
+  const { act, data } = useBackend();
 
   const { locked } = data;
 
   return (
-    <Window width={500} height={400} resizable>
+    <Window width={500} height={400}>
       <Window.Content>
         {locked ? <ShieldGeneratorLocked /> : <ShieldGeneratorContent />}
       </Window.Content>
@@ -20,7 +20,7 @@ export const ShieldGenerator = (props, context) => {
   );
 };
 
-const ShieldGeneratorLocked = (props, context) => (
+const ShieldGeneratorLocked = (props) => (
   <FullscreenNotice title="Locked">
     <Box fontSize="1.5rem" bold>
       <Icon
@@ -36,8 +36,8 @@ const ShieldGeneratorLocked = (props, context) => (
   </FullscreenNotice>
 );
 
-const ShieldGeneratorContent = (props, context) => {
-  const { act, data } = useBackend(context);
+const ShieldGeneratorContent = (props) => {
+  const { act, data } = useBackend();
 
   const {
     capacitors,
@@ -59,7 +59,7 @@ const ShieldGeneratorContent = (props, context) => {
 
   const capacitorLen = (capacitors || []).length;
   return (
-    <Fragment>
+    <>
       <Section title="Status">
         <LabeledList>
           <LabeledList.Item label="Field Status">
@@ -182,6 +182,6 @@ const ShieldGeneratorContent = (props, context) => {
           </LabeledList.Item>
         </LabeledList>
       </Section>
-    </Fragment>
+    </>
   );
 };

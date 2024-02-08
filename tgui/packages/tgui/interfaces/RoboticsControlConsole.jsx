@@ -1,13 +1,13 @@
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend } from '../backend';
 import { Box, Button, LabeledList, ProgressBar, NoticeBox, Section } from '../components';
 import { Window } from '../layouts';
 
-export const RoboticsControlConsole = (props, context) => {
-  const { act, data } = useBackend(context);
+export const RoboticsControlConsole = (props) => {
+  const { act, data } = useBackend();
   const { can_hack, safety, show_detonate_all, cyborgs = [] } = data;
   return (
-    <Window width={500} height={460} resizable>
+    <Window width={500} height={460}>
       <Window.Content scrollable>
         {!!show_detonate_all && (
           <Section title="Emergency Self Destruct">
@@ -32,9 +32,9 @@ export const RoboticsControlConsole = (props, context) => {
   );
 };
 
-const Cyborgs = (props, context) => {
+const Cyborgs = (props) => {
   const { cyborgs, can_hack } = props;
-  const { act, data } = useBackend(context);
+  const { act, data } = useBackend();
   if (!cyborgs.length) {
     return (
       <NoticeBox>No cyborg units detected within access parameters.</NoticeBox>
@@ -46,7 +46,7 @@ const Cyborgs = (props, context) => {
         key={cyborg.ref}
         title={cyborg.name}
         buttons={
-          <Fragment>
+          <>
             {!!cyborg.hackable && !cyborg.emagged && (
               <Button
                 icon="terminal"
@@ -81,7 +81,7 @@ const Cyborgs = (props, context) => {
                 })
               }
             />
-          </Fragment>
+          </>
         }>
         <LabeledList>
           <LabeledList.Item label="Status">
@@ -106,7 +106,7 @@ const Cyborgs = (props, context) => {
             />
           </LabeledList.Item>
           {(typeof cyborg.charge === 'number' && (
-            <Fragment>
+            <>
               <LabeledList.Item label="Cell Charge">
                 <ProgressBar
                   color={cyborg.charge > 30 ? 'good' : 'bad'}
@@ -118,7 +118,7 @@ const Cyborgs = (props, context) => {
                   {cyborg.cell_capacity}
                 </Box>
               </LabeledList.Item>
-            </Fragment>
+            </>
           )) || (
             <LabeledList.Item label="Cell">
               <Box color="bad">No Power Cell</Box>

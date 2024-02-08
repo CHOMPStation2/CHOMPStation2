@@ -13,6 +13,9 @@
 				P.id = null
 
 		for(var/mob/living/voice/V in possessed_voice) // Delete voices.
+			V.ghostize(0) //CHOMPAdd - Prevent Reenter Corpse sending observers to the shadow realm
+			V.stat = DEAD //CHOMPAdd - Helps with autosleeving
+			if(V.mind) V.mind.vore_death = 1 //CHOMPAdd - Digested item TFs get vore_death timer
 			V.Destroy() //Destroy the voice.
 		for(var/mob/living/M in contents)//Drop mobs from objects(shoes) before deletion
 			M.forceMove(item_storage)
@@ -76,8 +79,10 @@
 			var/obj/item/device/pda/P = src
 			if(P.id)
 				P.id = null
+		/* CHOMPEdit Start - This is handled lower down now
 		for(var/mob/living/voice/V in possessed_voice) // Delete voices.
 			V.Destroy() //Destroy the voice.
+		CHOMPEdit End */
 		for(var/mob/living/M in contents)//Drop mobs from objects(shoes) before deletion
 			if(item_storage)
 				M.forceMove(item_storage)
@@ -107,7 +112,16 @@
 		else
 			soundfile = pick('sound/vore/shortgurgles/gurgle_S1.ogg', 'sound/vore/shortgurgles/gurgle_S2.ogg', 'sound/vore/shortgurgles/gurgle_S3.ogg')
 		playsound(src, soundfile, vol = g_sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
-		if(istype(B) && B.recycle(src))
+		//CHOMPEdit Start - Allow those turned into items to become the recycled item
+		var/recycled = B.recycle(src)
+		if(!recycled)
+			for(var/mob/living/voice/V in possessed_voice) // Delete voices.
+				V.ghostize(0) //CHOMPAdd - Prevent Reenter Corpse sending observers to the shadow realm
+				V.stat = DEAD //CHOMPAdd - Helps with autosleeving
+				if(V.mind) V.mind.vore_death = 1 //CHOMPAdd - Digested item TFs get vore_death timer
+				V.Destroy() //Destroy the voice.
+		if(istype(B) && recycled)
+		//CHOMPEdit End
 			g_damage = w_class / 2
 			if(B.item_digest_logs)
 				to_chat(B.owner,"<span class='notice'>[src] was digested inside your [lowertext(B.name)].</span>")

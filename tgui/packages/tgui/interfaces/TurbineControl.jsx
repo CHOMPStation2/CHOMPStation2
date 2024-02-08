@@ -3,8 +3,8 @@ import { useBackend } from '../backend';
 import { AnimatedNumber, Box, Button, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
 
-export const TurbineControl = (props, context) => {
-  const { act, data } = useBackend(context);
+export const TurbineControl = (props) => {
+  const { act, data } = useBackend();
 
   const {
     connected,
@@ -19,7 +19,7 @@ export const TurbineControl = (props, context) => {
   } = data;
 
   return (
-    <Window width={520} height={440} resizable>
+    <Window width={520} height={440}>
       <Window.Content scrollable>
         <Section title="Turbine Controller">
           <LabeledList>

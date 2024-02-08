@@ -5,6 +5,7 @@
  */
 
 import { storage } from 'common/storage';
+
 import { Button, LabeledList, NoticeBox, Section } from '../components';
 import { formatSiUnit } from '../format';
 
@@ -13,7 +14,7 @@ export const meta = {
   render: () => <Story />,
 };
 
-const Story = (props, context) => {
+const Story = (props) => {
   if (!window.localStorage) {
     return <NoticeBox>Local storage is not available.</NoticeBox>;
   }

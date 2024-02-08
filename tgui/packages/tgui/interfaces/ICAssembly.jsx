@@ -4,8 +4,8 @@ import { Box, Button, LabeledList, ProgressBar, Section, AnimatedNumber } from '
 import { Window } from '../layouts';
 import { formatPower } from '../format';
 
-export const ICAssembly = (props, context) => {
-  const { act, data } = useBackend(context);
+export const ICAssembly = (props) => {
+  const { act, data } = useBackend();
 
   const {
     total_parts,
@@ -20,7 +20,7 @@ export const ICAssembly = (props, context) => {
   } = data;
 
   return (
-    <Window width={600} height={380} resizable>
+    <Window width={600} height={380}>
       <Window.Content scrollable>
         <Section title="Status">
           <LabeledList>
@@ -94,8 +94,8 @@ export const ICAssembly = (props, context) => {
   );
 };
 
-const ICAssemblyCircuits = (props, context) => {
-  const { act } = useBackend(context);
+const ICAssemblyCircuits = (props) => {
+  const { act } = useBackend();
 
   const { title, circuits } = props;
 

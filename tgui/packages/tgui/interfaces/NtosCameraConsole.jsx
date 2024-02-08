@@ -40,8 +40,8 @@ export const selectCameras = (cameras, searchText = '', networkFilter = '') => {
   ])(cameras);
 };
 
-export const NtosCameraConsole = (props, context) => {
-  const { act, data } = useBackend(context);
+export const NtosCameraConsole = (props) => {
+  const { act, data } = useBackend();
   const { mapRef, activeCamera } = data;
   const cameras = selectCameras(data.cameras);
   const [prevCameraName, nextCameraName] = prevNextCamera(
@@ -49,7 +49,7 @@ export const NtosCameraConsole = (props, context) => {
     activeCamera
   );
   return (
-    <NtosWindow width={870} height={708} resizable>
+    <NtosWindow width={870} height={708}>
       <NtosWindow.Content>
         <div className="CameraConsole__left">
           <CameraConsoleContent />

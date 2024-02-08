@@ -2,13 +2,13 @@ import { useBackend } from '../backend';
 import { Box, Button, LabeledList, ProgressBar, Section } from '../components';
 import { Window } from '../layouts';
 
-export const XenoarchArtifactHarvester = (props, context) => {
-  const { act, data } = useBackend(context);
+export const XenoarchArtifactHarvester = (props) => {
+  const { act, data } = useBackend();
 
   const { no_scanner, harvesting, inserted_battery } = data.info;
 
   return (
-    <Window width={450} height={200} resizable>
+    <Window width={450} height={200}>
       <Window.Content>
         {(no_scanner && (
           <Box color="bad">Warning: No scanner detected.</Box>
@@ -79,8 +79,8 @@ export const XenoarchArtifactHarvester = (props, context) => {
   );
 };
 
-const ArtHarvestBatteryProgress = (props, context) => {
-  const { act, data } = useBackend(context);
+const ArtHarvestBatteryProgress = (props) => {
+  const { act, data } = useBackend();
 
   const { inserted_battery } = data.info;
 

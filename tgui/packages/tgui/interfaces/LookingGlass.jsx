@@ -2,15 +2,15 @@ import { useBackend } from '../backend';
 import { Button, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
 
-export const LookingGlass = (props, context) => {
-  const { act, data } = useBackend(context);
+export const LookingGlass = (props) => {
+  const { act, data } = useBackend();
 
   const { supportedPrograms, currentProgram, immersion, gravity } = data;
 
   let height = Math.min(180 + supportedPrograms.length * 23, 600);
 
   return (
-    <Window width={300} height={height} resizable>
+    <Window width={300} height={height}>
       <Window.Content scrollable>
         <Section title="Programs">
           {supportedPrograms.map((program) => (

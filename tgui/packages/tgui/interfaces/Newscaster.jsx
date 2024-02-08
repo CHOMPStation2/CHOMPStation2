@@ -1,5 +1,5 @@
 import { decodeHtmlEntities } from 'common/string';
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend, useSharedState } from '../backend';
 import { Box, Button, LabeledList, Input, Section } from '../components';
 import { Window } from '../layouts';
@@ -14,13 +14,13 @@ const NEWSCASTER_SCREEN_NEWWANTED = 'New Wanted';
 const NEWSCASTER_SCREEN_VIEWWANTED = 'View Wanted';
 const NEWSCASTER_SCREEN_SELECTEDCHANNEL = 'View Selected Channel';
 
-export const Newscaster = (props, context) => {
-  const { act, data } = useBackend(context);
+export const Newscaster = (props) => {
+  const { act, data } = useBackend();
 
   const { screen, user } = data;
 
   return (
-    <Window width={600} height={600} resizable>
+    <Window width={600} height={600}>
       <Window.Content scrollable>
         <TemporaryNotice decode />
         <NewscasterContent />
@@ -29,16 +29,12 @@ export const Newscaster = (props, context) => {
   );
 };
 
-const NewscasterContent = (props, context) => {
-  const { act, data } = useBackend(context);
+const NewscasterContent = (props) => {
+  const { act, data } = useBackend();
 
   const { user } = data;
 
-  const [screen, setScreen] = useSharedState(
-    context,
-    'screen',
-    NEWSCASTER_SCREEN_MAIN
-  );
+  const [screen, setScreen] = useSharedState('screen', NEWSCASTER_SCREEN_MAIN);
   let Template = screenToTemplate[screen];
 
   return (
@@ -48,15 +44,15 @@ const NewscasterContent = (props, context) => {
   );
 };
 
-const NewscasterMainMenu = (props, context) => {
-  const { act, data } = useBackend(context);
+const NewscasterMainMenu = (props) => {
+  const { act, data } = useBackend();
 
   const { securityCaster, wanted_issue } = data;
 
   const { setScreen } = props;
 
   return (
-    <Fragment>
+    <>
       <Section title="Main Menu">
         {wanted_issue && (
           <Button
@@ -102,12 +98,12 @@ const NewscasterMainMenu = (props, context) => {
           </Button>
         </Section>
       )}
-    </Fragment>
+    </>
   );
 };
 
-const NewscasterNewChannel = (props, context) => {
-  const { act, data } = useBackend(context);
+const NewscasterNewChannel = (props) => {
+  const { act, data } = useBackend();
 
   const { channel_name, c_locked, user } = data;
 
@@ -159,8 +155,8 @@ const NewscasterNewChannel = (props, context) => {
   );
 };
 
-const NewscasterViewList = (props, context) => {
-  const { act, data } = useBackend(context);
+const NewscasterViewList = (props) => {
+  const { act, data } = useBackend();
 
   const { channels } = data;
 
@@ -191,8 +187,8 @@ const NewscasterViewList = (props, context) => {
   );
 };
 
-const NewscasterNewStory = (props, context) => {
-  const { act, data } = useBackend(context);
+const NewscasterNewStory = (props) => {
+  const { act, data } = useBackend();
 
   const { channel_name, user, title, msg, photo_data } = data;
 
@@ -287,8 +283,8 @@ const NewscasterNewStory = (props, context) => {
   );
 };
 
-const NewscasterPrint = (props, context) => {
-  const { act, data } = useBackend(context);
+const NewscasterPrint = (props) => {
+  const { act, data } = useBackend();
 
   const { total_num, active_num, message_num, paper_remaining } = data;
 
@@ -331,8 +327,8 @@ const NewscasterPrint = (props, context) => {
   );
 };
 
-const NewscasterNewWanted = (props, context) => {
-  const { act, data } = useBackend(context);
+const NewscasterNewWanted = (props) => {
+  const { act, data } = useBackend();
 
   const { channel_name, msg, photo_data, user, wanted_issue } = data;
 
@@ -404,8 +400,8 @@ const NewscasterNewWanted = (props, context) => {
   );
 };
 
-const NewscasterViewWanted = (props, context) => {
-  const { act, data } = useBackend(context);
+const NewscasterViewWanted = (props) => {
+  const { act, data } = useBackend();
 
   const { wanted_issue } = data;
 
@@ -455,8 +451,8 @@ const NewscasterViewWanted = (props, context) => {
   );
 };
 
-const NewscasterViewSelected = (props, context) => {
-  const { act, data } = useBackend(context);
+const NewscasterViewSelected = (props) => {
+  const { act, data } = useBackend();
 
   const { viewing_channel, securityCaster, company } = data;
 
@@ -482,7 +478,7 @@ const NewscasterViewSelected = (props, context) => {
     <Section
       title={decodeHtmlEntities(viewing_channel.name)}
       buttons={
-        <Fragment>
+        <>
           {!!securityCaster && (
             <Button.Confirm
               color="bad"
@@ -499,7 +495,7 @@ const NewscasterViewSelected = (props, context) => {
             onClick={() => setScreen(NEWSCASTER_SCREEN_VIEWLIST)}>
             Back
           </Button>
-        </Fragment>
+        </>
       }>
       <LabeledList>
         <LabeledList.Item label="Channel Created By">
@@ -540,7 +536,7 @@ const NewscasterViewSelected = (props, context) => {
               {message.timestamp}]
             </Box>
             {!!securityCaster && (
-              <Fragment>
+              <>
                 <Button.Confirm
                   mt={1}
                   color="bad"
@@ -560,7 +556,7 @@ const NewscasterViewSelected = (props, context) => {
                     act('censor_channel_story_author', { ref: message.ref })
                   }
                 />
-              </Fragment>
+              </>
             )}
           </Section>
         ))) ||

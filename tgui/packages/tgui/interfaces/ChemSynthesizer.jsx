@@ -1,4 +1,3 @@
-import { Fragment } from 'inferno';
 import { useBackend } from '../backend';
 import { Box, Button, Flex, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
@@ -44,7 +43,7 @@ const ChemSynthesizerQueueRecipes = (props, context) => {
           title="Queue"
           overflowY="scroll"
           buttons={
-            <Fragment>
+            <>
               <Button
                 disabled={!!busy}
                 color={use_catalyst ? 'green' : 'bad'}
@@ -68,7 +67,7 @@ const ChemSynthesizerQueueRecipes = (props, context) => {
                   onClick={() => act('start_queue')}
                 />
               )}
-            </Fragment>
+            </>
           }>
           <LabeledList>
             {(queue.length &&

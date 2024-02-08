@@ -1,4 +1,5 @@
 import { BooleanLike } from 'common/react';
+
 import { useBackend } from '../backend';
 import { Button, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
@@ -11,13 +12,13 @@ type Data = {
   current_emotion: string;
 };
 
-export const pAIInterface = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const pAIInterface = (props) => {
+  const { act, data } = useBackend<Data>();
 
   const { bought, not_bought, available_ram, emotions, current_emotion } = data;
 
   return (
-    <Window width={450} height={600} resizable>
+    <Window width={450} height={600}>
       <Window.Content scrollable>
         <Section title="Emotion">
           {emotions.map((emote) => (

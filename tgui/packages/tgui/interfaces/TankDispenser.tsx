@@ -7,11 +7,11 @@ type Data = {
   oxygen;
 };
 
-export const TankDispenser = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const TankDispenser = (props) => {
+  const { act, data } = useBackend<Data>();
   const { plasma, oxygen } = data;
   return (
-    <Window width={275} height={103} resizable>
+    <Window width={275} height={103}>
       <Window.Content>
         <Section>
           <LabeledList>

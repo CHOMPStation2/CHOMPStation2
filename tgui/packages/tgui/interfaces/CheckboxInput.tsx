@@ -1,11 +1,11 @@
+import { createSearch, decodeHtmlEntities } from 'common/string';
+
+import { useBackend, useLocalState } from '../backend';
 import { Button, Icon, Input, NoticeBox, Section, Stack, Table, Tooltip } from '../components';
 import { TableCell, TableRow } from '../components/Table';
-import { createSearch, decodeHtmlEntities } from 'common/string';
-import { useBackend, useLocalState } from '../backend';
-
+import { Window } from '../layouts';
 import { InputButtons } from './common/InputButtons';
 import { Loader } from './common/Loader';
-import { Window } from '../layouts';
 
 type Data = {
   items: string[];
@@ -17,8 +17,8 @@ type Data = {
 };
 
 /** Renders a list of checkboxes per items for input. */
-export const CheckboxInput = (props, context) => {
-  const { data } = useBackend<Data>(context);
+export const CheckboxInput = (props) => {
+  const { data } = useBackend<Data>();
   const {
     items = [],
     min_checked,
@@ -28,14 +28,9 @@ export const CheckboxInput = (props, context) => {
     title,
   } = data;
 
-  const [selections, setSelections] = useLocalState<string[]>(
-    context,
-    'selections',
-    []
-  );
+  const [selections, setSelections] = useLocalState<string[]>('selections', []);
 
   const [searchQuery, setSearchQuery] = useLocalState<string>(
-    context,
     'searchQuery',
     ''
   );

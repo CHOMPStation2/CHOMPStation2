@@ -1,16 +1,16 @@
 import { round } from 'common/math';
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend } from '../backend';
 import { Box, Button, Flex, NoticeBox, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
 
-export const TelecommsLogBrowser = (props, context) => {
-  const { act, data } = useBackend(context);
+export const TelecommsLogBrowser = (props) => {
+  const { act, data } = useBackend();
 
   const { universal_translate, network, temp, servers, selectedServer } = data;
 
   return (
-    <Window width={575} height={450} resizable>
+    <Window width={575} height={450}>
       <Window.Content scrollable>
         {temp ? (
           <NoticeBox
@@ -32,7 +32,7 @@ export const TelecommsLogBrowser = (props, context) => {
             <LabeledList.Item
               label="Current Network"
               buttons={
-                <Fragment>
+                <>
                   <Button
                     icon="search"
                     content="Refresh"
@@ -45,7 +45,7 @@ export const TelecommsLogBrowser = (props, context) => {
                     disabled={servers.length === 0}
                     onClick={() => act('release')}
                   />
-                </Fragment>
+                </>
               }>
               <Button
                 content={network}
@@ -69,8 +69,8 @@ export const TelecommsLogBrowser = (props, context) => {
   );
 };
 
-const TelecommsServerSelection = (props, context) => {
-  const { act, data } = useBackend(context);
+const TelecommsServerSelection = (props) => {
+  const { act, data } = useBackend();
   const { network, servers } = props;
 
   if (!servers || !servers.length) {
@@ -106,8 +106,8 @@ const TelecommsServerSelection = (props, context) => {
   );
 };
 
-const TelecommsSelectedServer = (props, context) => {
-  const { act, data } = useBackend(context);
+const TelecommsSelectedServer = (props) => {
+  const { act, data } = useBackend();
   const { network, server, universal_translate } = props;
 
   return (
@@ -178,8 +178,8 @@ const TelecommsSelectedServer = (props, context) => {
   );
 };
 
-const TelecommsLog = (props, context) => {
-  const { act, data } = useBackend(context);
+const TelecommsLog = (props) => {
+  const { act, data } = useBackend();
   const { log, error } = props;
 
   const { timecode, name, race, job, message } = (log && log.parameters) || {

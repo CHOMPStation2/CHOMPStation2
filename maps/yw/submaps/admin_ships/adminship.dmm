@@ -708,7 +708,7 @@
 /turf/simulated/floor/tiled/white,
 /area/ship/adminships/kitchen_dining)
 "lf" = (
-/obj/machinery/power/pointdefense,
+/obj/machinery/pointdefense,
 /obj/effect/forcefield,
 /turf/simulated/floor/airless,
 /area/ship/adminships/bridge)

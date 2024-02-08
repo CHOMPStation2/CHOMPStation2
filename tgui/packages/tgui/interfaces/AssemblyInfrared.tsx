@@ -1,4 +1,5 @@
 import { BooleanLike } from 'common/react';
+
 import { useBackend } from '../backend';
 import { Button, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
@@ -8,8 +9,8 @@ type Data = {
   visible: BooleanLike;
 };
 
-export const AssemblyInfrared = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const AssemblyInfrared = (props) => {
+  const { act, data } = useBackend<Data>();
   const { on, visible } = data;
   return (
     <Window>
