@@ -4,18 +4,10 @@
   "version": "5.0.0",
   "type": "module",
   "dependencies": {
-<<<<<<< HEAD
-    "axios": "^1.6.0",
-    "glob": "^7.1.7",
-    "source-map": "^0.7.3",
-    "stacktrace-parser": "^0.1.10",
-    "ws": "^7.5.3"
-=======
     "axios": "^1.6.2",
     "glob": "^7.2.0",
     "source-map": "^0.7.4",
     "stacktrace-parser": "^0.1.10",
     "ws": "^8.14.2"
->>>>>>> 23a3b53ca5... TGUI 5.0 (#15635)
   }
 }

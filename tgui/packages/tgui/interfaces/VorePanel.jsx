@@ -1,5 +1,4 @@
 import { capitalize } from 'common/string';
-import { Fragment } from 'react';
 import { useBackend, useLocalState } from '../backend';
 import { Box, Button, Flex, Collapsible, Icon, LabeledList, NoticeBox, Section, Tabs, Divider, Stack } from '../components';
 import { Window } from '../layouts';
@@ -1107,8 +1106,7 @@ const VoreSelectedBellyVisuals = (props) => {
   } = belly;
 
   return (
-<<<<<<< HEAD
-    <Fragment>
+    <>
       <Section title="Vore Sprites">
         <Flex direction="row">
           <LabeledList>
@@ -1298,9 +1296,6 @@ const VoreSelectedBellyVisuals = (props) => {
           </LabeledList>
         </Flex>
       </Section>
-=======
-    <>
->>>>>>> 23a3b53ca5... TGUI 5.0 (#15635)
       <Section title="Belly Fullscreens Preview and Coloring">
         <Flex direction="row">
           <FeatureColorInput

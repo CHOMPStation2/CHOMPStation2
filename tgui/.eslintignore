@@ -3,3 +3,6 @@
 /**/*.bundle.*
 /**/*.chunk.*
 /**/*.hot-update.*
+
+# CHOMPEdit - Until removed
+/packages/tgui_ch/**

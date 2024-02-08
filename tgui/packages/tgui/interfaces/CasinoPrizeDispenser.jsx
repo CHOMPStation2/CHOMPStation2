@@ -1,5 +1,4 @@
 import { createSearch } from 'common/string';
-import { Fragment } from 'react';
 import { useBackend, useLocalState } from '../backend';
 import { Box, Button, Collapsible, Dropdown, Flex, Input, Section } from '../components';
 import { Window } from '../layouts';
@@ -14,17 +13,10 @@ export const CasinoPrizeDispenserCh = () => {
   return (
     <Window width={400} height={450}>
       <Window.Content className="Layout__content--flexColumn" scrollable>
-<<<<<<< HEAD
-        <Fragment>
+        <>
           <CasinoPrizeDispenserChSearch />
           <CasinoPrizeDispenserChItems />
-        </Fragment>
-=======
-        <>
-          <CasinoPrizeDispenserSearch />
-          <CasinoPrizeDispenserItems />
         </>
->>>>>>> 23a3b53ca5... TGUI 5.0 (#15635)
       </Window.Content>
     </Window>
   );

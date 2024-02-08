@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import { useBackend } from '../backend';
 import { Box, Button, Dimmer, Flex, Icon, Knob, LabeledList, ProgressBar, Section, Tabs } from '../components';
 import { Window } from '../layouts';
@@ -413,13 +412,8 @@ const DNAModifierMainBuffersElement = (props) => {
               }
             />
           </LabeledList.Item>
-<<<<<<< HEAD
-          {buffer.data ? (
-            <Fragment>
-=======
           {!!buffer.data && (
             <>
->>>>>>> 23a3b53ca5... TGUI 5.0 (#15635)
               <LabeledList.Item label="Subject">
                 {buffer.owner || <Box color="average">Unknown</Box>}
               </LabeledList.Item>
@@ -469,13 +463,8 @@ const DNAModifierMainBuffersElement = (props) => {
                   }
                 />
               </LabeledList.Item>
-<<<<<<< HEAD
-            </Fragment>
-          ) : null}
-=======
             </>
           )}
->>>>>>> 23a3b53ca5... TGUI 5.0 (#15635)
         </LabeledList>
         {!buffer.data && (
           <Box color="label" mt="0.5rem">

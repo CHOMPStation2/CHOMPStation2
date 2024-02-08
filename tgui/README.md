@@ -16,16 +16,9 @@ If you are completely new to frontend and prefer to **learn by doing**, start wi
 
 ### Guides
 
-<<<<<<< HEAD
-This project uses **Inferno** - a very fast UI rendering engine with a similar API to React. Take your time to read these guides:
-
-- [React guide](https://reactjs.org/docs/hello-world.html)
-- [Inferno documentation](https://infernojs.org/docs/guides/components) - highlights differences with React.
-=======
 This project uses React. Take your time to read the guide:
 
 - [React guide](https://react.dev/learn)
->>>>>>> 23a3b53ca5... TGUI 5.0 (#15635)
 
 If you were already familiar with an older, Ractive-based tgui, and want to translate concepts between old and new tgui, read this [interface conversion guide](docs/converting-old-tgui-interfaces.md).
 
