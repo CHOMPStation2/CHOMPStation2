@@ -20,7 +20,7 @@
 		virus.makerandom(rand(2,3))
 		infected_tiles = rand(4, 8)
 	else if(severity == EVENT_LEVEL_MODERATE)
-		virus.makerandom(rand(2))
+		virus.makerandom(2)
 		infected_tiles = rand(3, 6)
 	else
 		virus.makerandom(1)
