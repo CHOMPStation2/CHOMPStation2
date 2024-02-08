@@ -491,7 +491,7 @@
 			H.shadekin_set_max_energy(100)
 			nutrition_conversion_scaling = 1 //CHOMPEdit - Add nutrition <-> dark energy conversion
 		if(YELLOW_EYES)
-			total_health = 75
+			total_health = 50
 			energy_light = 0
 			energy_dark = 3
 			H.shadekin_set_max_energy(150)
