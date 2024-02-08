@@ -287,8 +287,8 @@
 
 //CHOMPEdit Start - Toggle to Nutrition conversion
 /mob/living/carbon/human/proc/nutrition_conversion_toggle()
-	set name = "Toggle Energy <-> Nutrition conversions"
-	set desc = "Toggle dark energy and nutrition being converted into each other when full"
+	set name = "Toggle Darkness Feeding"
+	set desc = "Toggle darkness being used to nourish if energy is completely filled."
 	set category = "Shadekin"
 
 	var/datum/species/shadekin/SK = species
@@ -297,10 +297,10 @@
 		return FALSE
 
 	if(SK.nutrition_energy_conversion)
-		to_chat(src, "<span class='notice'>Nutrition and dark energy conversions disabled.</span>")
+		to_chat(src, "<span class='notice'>Darkness-feeding disabled.</span>")
 		SK.nutrition_energy_conversion = 0
 	else
-		to_chat(src, "<span class='notice'>Nutrition and dark energy conversions enabled.</span>")
+		to_chat(src, "<span class='notice'>Darkness-feeding enabled.</span>")
 		SK.nutrition_energy_conversion = 1
 //CHOMPEdit End
 
