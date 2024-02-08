@@ -125,7 +125,7 @@
 	var/doing_phase = FALSE //CHOMPEdit - Prevent bugs when spamming phase button
 	var/manual_respite = FALSE //CHOMPEdit - Dark Respite
 	var/respite_activating = FALSE //CHOMPEdit - Dark Respite
-	var/nutrition_energy_conversion = TRUE //CHOMPEdit - Add toggle to nutrition and energy conversions
+	var/nutrition_energy_conversion = FALSE //CHOMPEdit - Add toggle to nutrition and energy conversions. FALSE for now for rebalance
 
 /datum/species/shadekin/New()
 	..()
@@ -470,37 +470,46 @@
 
 	var/eyecolor_type = get_shadekin_eyecolor(H)
 
+	//ChompEDIT START - Shadekin rebalance
 	switch(eyecolor_type)
 		if(BLUE_EYES)
-			total_health = 100
+			total_health = 75 
 			energy_light = 0.5
 			energy_dark = 0.5
+			shadekin_set_max_energy(H, 125)
 			nutrition_conversion_scaling = 0.5 //CHOMPEdit - Add nutrition <-> dark energy conversion
 		if(RED_EYES)
-			total_health = 200
-			energy_light = -1
-			energy_dark = 0.1
+			total_health = 150
+			energy_light = 0
+			energy_dark = 0.5
+			shadekin_set_max_energy(H, 150)
 			nutrition_conversion_scaling = 2 //CHOMPEdit - Add nutrition <-> dark energy conversion
 		if(PURPLE_EYES)
-			total_health = 150
-			energy_light = -0.5
-			energy_dark = 1
+			total_health = 100
+			energy_light = 0
+			energy_dark = 2
+			shadekin_set_max_energy(H, 100)
 			nutrition_conversion_scaling = 1 //CHOMPEdit - Add nutrition <-> dark energy conversion
 		if(YELLOW_EYES)
-			total_health = 100
-			energy_light = -2
+			total_health = 75
+			energy_light = 0
 			energy_dark = 3
+			shadekin_set_max_energy(H, 150)
 			nutrition_conversion_scaling = 0.5 //CHOMPEdit - Add nutrition <-> dark energy conversion
 		if(GREEN_EYES)
 			total_health = 100
 			energy_light = 0.125
-			energy_dark = 2
+			energy_dark = 1
+			shadekin_set_max_energy(H, 125)
 			nutrition_conversion_scaling = 0.5 //CHOMPEdit - Add nutrition <-> dark energy conversion
 		if(ORANGE_EYES)
-			total_health = 175
-			energy_light = -0.5
+			total_health = 125
+			energy_light = 0
 			energy_dark = 0.25
+			shadekin_set_max_energy(H, 175)
 			nutrition_conversion_scaling = 1.5 //CHOMPEdit - Add nutrition <-> dark energy conversion
+
+	//ChompEDIT END - Shadekin rebalance
 
 	H.maxHealth = total_health
 
