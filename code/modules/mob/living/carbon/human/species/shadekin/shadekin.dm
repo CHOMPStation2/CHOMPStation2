@@ -476,37 +476,37 @@
 			total_health = 75 
 			energy_light = 0.5
 			energy_dark = 0.5
-			shadekin_set_max_energy(H, 125)
+			H.shadekin_set_max_energy(125)
 			nutrition_conversion_scaling = 0.5 //CHOMPEdit - Add nutrition <-> dark energy conversion
 		if(RED_EYES)
 			total_health = 150
 			energy_light = 0
 			energy_dark = 0.5
-			shadekin_set_max_energy(H, 150)
+			H.shadekin_set_max_energy(150)
 			nutrition_conversion_scaling = 2 //CHOMPEdit - Add nutrition <-> dark energy conversion
 		if(PURPLE_EYES)
 			total_health = 100
 			energy_light = 0
 			energy_dark = 2
-			shadekin_set_max_energy(H, 100)
+			H.shadekin_set_max_energy(100)
 			nutrition_conversion_scaling = 1 //CHOMPEdit - Add nutrition <-> dark energy conversion
 		if(YELLOW_EYES)
 			total_health = 75
 			energy_light = 0
 			energy_dark = 3
-			shadekin_set_max_energy(H, 150)
+			H.shadekin_set_max_energy(150)
 			nutrition_conversion_scaling = 0.5 //CHOMPEdit - Add nutrition <-> dark energy conversion
 		if(GREEN_EYES)
 			total_health = 100
 			energy_light = 0.125
 			energy_dark = 1
-			shadekin_set_max_energy(H, 125)
+			H.shadekin_set_max_energy(125)
 			nutrition_conversion_scaling = 0.5 //CHOMPEdit - Add nutrition <-> dark energy conversion
 		if(ORANGE_EYES)
 			total_health = 125
 			energy_light = 0
 			energy_dark = 0.25
-			shadekin_set_max_energy(H, 175)
+			H.shadekin_set_max_energy(175)
 			nutrition_conversion_scaling = 1.5 //CHOMPEdit - Add nutrition <-> dark energy conversion
 
 	//ChompEDIT END - Shadekin rebalance
