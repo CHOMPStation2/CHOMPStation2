@@ -338,9 +338,9 @@
 			dark_gains = energy_dark
 		else
 			dark_gains = energy_light
-		//CHOMPEdit begin - Darkness --> Nutrition
-		if(nutrition_energy_conversion && get_energy(H) == get_max_energy(H) && dark_gains > 0 && nutrition_conversion_scaling > 0)
-			H.nutrition = min(300, H.nutrition + (dark_gains * 5 * nutrition_conversion_scaling)) // Nutrition gain via darkness is capped at 300. 
+		//CHOMPEdit begin - Darkness --> Nutrition, but capped at 300. Eat normally to go above.
+		if(nutrition_energy_conversion && get_energy(H) >= get_max_energy(H) && dark_gains > 0 && nutrition_conversion_scaling > 0 && H.nutrition < 300)
+			H.nutrition += dark_gains * 5 * nutrition_conversion_scaling
 		//The lower part allows nutrition to go back into energy if you have above 500. This is commented out for now.
 		//else if(nutrition_energy_conversion && get_energy(H) < (get_max_energy(H)/2) && H.nutrition > 500 && nutrition_conversion_scaling > 0)
 		//	H.nutrition -= nutrition_conversion_scaling * 50
