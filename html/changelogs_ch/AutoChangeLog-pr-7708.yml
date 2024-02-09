@@ -1,0 +1,6 @@
+author: "ItsSelis"
+delete-after: True
+changes:
+  - qol: "maps now also properly compile on change with the tool"
+  - rscadd: "added icon_cutter tool from tg"
+  - bugfix: "fixed some unicode encoding for some descriptions"
