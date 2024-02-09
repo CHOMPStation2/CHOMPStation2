@@ -1,13 +1,11 @@
 * text=auto
 
-## Enforce CRLF mode for DME (BYOND wants this.)
-*.dme text eol=crlf
-
 ## Enforce text mode and LF line breaks
 *.bat text eol=lf
 *.cjs text eol=lf
 *.css text eol=lf
 *.dm text eol=lf
+*.dme text eol=lf
 *.dmf text eol=lf
 *.htm text eol=lf
 *.html text eol=lf
