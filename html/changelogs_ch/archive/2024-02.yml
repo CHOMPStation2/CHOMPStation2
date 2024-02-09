@@ -88,3 +88,8 @@
   - rscadd: ports fox ears from skyrat
   - bugfix: fixes bonnie alt and bonnie alt long (i forgot to upload all their sprites
       when i ported them oops)
+2024-02-09:
+  Upstream:
+  - qol: Updated prettier version
+  - rscdel: Removed Internet Explorer 8 support
+  - qol: tgui 5.0 update

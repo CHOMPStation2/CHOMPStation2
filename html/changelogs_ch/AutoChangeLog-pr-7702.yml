@@ -1,4 +1,0 @@
-author: "Upstream"
-delete-after: True
-changes:
-  - qol: "Updated prettier version"
