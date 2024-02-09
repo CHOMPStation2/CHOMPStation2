@@ -41,6 +41,7 @@
 	verbpath = /mob/living/carbon/human/proc/phase_shift
 	ability_icon_state = "tech_passwall"
 
+/* //ChompEDIT - Moved to modular_chomp
 /mob/living/carbon/human/proc/phase_shift()
 	set name = "Phase Shift (100)"
 	set desc = "Shift yourself out of alignment with realspace to travel quickly to different areas."
@@ -264,26 +265,7 @@
 		force_max_speed = TRUE
 		ability_flags &= ~AB_PHASE_SHIFTING
 	SK.doing_phase = FALSE //CHOMPEdit - Prevent bugs when spamming phase button
-
-//CHOMPEdit start - gentle phasing for carbonkin
-//toggle proc for toggling gentle/normal phasing
-/mob/living/carbon/human/proc/phase_strength_toggle()
-	set name = "Toggle Phase Strength"
-	set desc = "Toggle strength of phase. Gentle but slower, or faster but destructive to lights."
-	set category = "Shadekin"
-
-	var/datum/species/shadekin/SK = species
-	if(!istype(SK))
-		to_chat(src, "<span class='warning'>Only a shadekin can use that!</span>")
-		return FALSE
-
-	if(SK.phase_gentle)
-		to_chat(src, "<span class='notice'>Phasing toggled to Normal. You may damage lights.</span>")
-		SK.phase_gentle = 0
-	else
-		to_chat(src, "<span class='notice'>Phasing toggled to Gentle. You won't damage lights, but concentrating on that incurs a short stun.</span>")
-		SK.phase_gentle = 1
-//CHOMPEdit End
+*/ //ChompEDIT END - moved to modular_chomp
 
 //CHOMPEdit Start - Toggle to Nutrition conversion
 /mob/living/carbon/human/proc/nutrition_conversion_toggle()

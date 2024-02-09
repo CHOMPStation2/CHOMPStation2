@@ -472,32 +472,32 @@
 
 	switch(eyecolor_type)
 		if(BLUE_EYES)
-			total_health = 100
+			total_health = 75 //ChompEDIT - balance tweaks
 			energy_light = 0.5
 			energy_dark = 0.5
 			nutrition_conversion_scaling = 0.5 //CHOMPEdit - Add nutrition <-> dark energy conversion
 		if(RED_EYES)
-			total_health = 200
+			total_health = 150 //ChompEDIT - balance tweaks
 			energy_light = -1
 			energy_dark = 0.1
 			nutrition_conversion_scaling = 2 //CHOMPEdit - Add nutrition <-> dark energy conversion
 		if(PURPLE_EYES)
-			total_health = 150
+			total_health = 100 //ChompEDIT - balance tweaks
 			energy_light = -0.5
 			energy_dark = 1
 			nutrition_conversion_scaling = 1 //CHOMPEdit - Add nutrition <-> dark energy conversion
 		if(YELLOW_EYES)
-			total_health = 100
+			total_health = 50 //ChompEDIT - balance tweaks
 			energy_light = -2
 			energy_dark = 3
 			nutrition_conversion_scaling = 0.5 //CHOMPEdit - Add nutrition <-> dark energy conversion
 		if(GREEN_EYES)
-			total_health = 100
+			total_health = 100 //ChompEDIT - balance tweaks
 			energy_light = 0.125
 			energy_dark = 2
 			nutrition_conversion_scaling = 0.5 //CHOMPEdit - Add nutrition <-> dark energy conversion
 		if(ORANGE_EYES)
-			total_health = 175
+			total_health = 125 //ChompEDIT - balance tweaks
 			energy_light = -0.5
 			energy_dark = 0.25
 			nutrition_conversion_scaling = 1.5 //CHOMPEdit - Add nutrition <-> dark energy conversion
