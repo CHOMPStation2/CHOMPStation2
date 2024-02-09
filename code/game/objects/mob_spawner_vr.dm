@@ -69,17 +69,28 @@
 	last_spawn = world.time
 	if(total_spawns > 0)
 		total_spawns--
+	//how about we find a suitable location first
+	var/attempts = 0
+	var/turf/spawn_turf = null
+
+	while((!spawn_turf || spawn_turf.density) && attempts < 15)
+		var/xcoord = rand(-5,5)
+		var/ycoord = rand(-5,5)
+		spawn_turf = locate(x + xcoord, y + ycoord, z)
+		attempts++
+
+	//and then we spawn them
 	if(ispath(mob_path, /mob/living))
-		var/mob/living/L = new mob_path(get_turf(src))
-		L.nest = src
+		var/mob/living/L = new mob_path(get_turf(spawn_turf))
+		L.nest = spawn_turf
 		spawned_mobs.Add(L)
 		if(mob_faction)
 			L.faction = mob_faction
 		return L
 	if(ispath(mob_path, /obj/structure/closet/crate/mimic))
-		var/obj/structure/closet/crate/mimic/O = new mob_path(get_turf(src))
+		var/obj/structure/closet/crate/mimic/O = new mob_path(get_turf(spawn_turf))
 		spawned_mobs.Add(O)
-		O.nest = src
+		O.nest = spawn_turf
 		return O
 	return 0
 	//CHOMPEdit End
@@ -132,17 +143,37 @@ It also makes it so a ghost wont know where all the goodies/mobs are.
 /obj/structure/mob_spawner/scanner
 	name ="Lazy Mob Spawner"
 	var/range = 10 //range in tiles from the spawner to detect moving stuff
+//CHOMPEdit Begin
+	var/datum/proximity_monitor/mobspawner/prox
+	var/list/mobs_in_range = list()
+
+/obj/structure/mob_spawner/scanner/New()
+	..()
+	prox = new(src, range)
+
+/obj/structure/mob_spawner/scanner/proc/NewProximity(atom/movable/AM)
+	if(istype(AM,/mob/living) && !(AM in mobs_in_range))
+		mobs_in_range += AM
+
+
+/obj/structure/mob_spawner/scanner/proc/CheckProximity(atom/movable/AM,turf/new_loc)
+	if(AM in mobs_in_range && (!AM || get_dist(src,new_loc) > range))
+		mobs_in_range -= AM
+
+//CHOMPEdit End
 
 /obj/structure/mob_spawner/scanner/process()
 	if(!can_spawn())
 		return
+	//CHOMPEdit Begin
 	if(world.time > last_spawn + spawn_delay)
-		var/turf/mainloc = get_turf(src)
-		for(var/mob/living/A in range(range,mainloc))
-			if ((A.faction != mob_faction) && (A.move_speed < 12))
+		for(var/mob/living/A in mobs_in_range) //No more calling fucking range(10) every goddamn processing tick, christ.
+			if ((A.faction != mob_faction) && A.ckey)
 				var/chosen_mob = choose_spawn()
 				if(chosen_mob)
 					do_spawn(chosen_mob)
+					break //ALSO NO SPAWNING MULTIPLE MOBS
+	//CHOMPEdit End
 
 //////////////
 // Spawners //
