@@ -1,6 +1,6 @@
-import { Fragment } from "react";
+import { Fragment } from 'react';
 
-import { useBackend, useLocalState } from "../../backend";
+import { useBackend, useLocalState } from '../../backend';
 import {
   Box,
   Button,
@@ -8,25 +8,25 @@ import {
   LabeledList,
   Section,
   Table,
-} from "../../components";
-import { Window } from "../../layouts";
+} from '../../components';
+import { Window } from '../../layouts';
 
 const getTagColor = (tag) => {
   switch (tag) {
-    case "Unset":
-      return "label";
-    case "Pred":
-      return "red";
-    case "Pred-Pref":
-      return "orange";
-    case "Prey":
-      return "blue";
-    case "Prey-Pref":
-      return "green";
-    case "Switch":
-      return "yellow";
-    case "Non-Vore":
-      return "black";
+    case 'Unset':
+      return 'label';
+    case 'Pred':
+      return 'red';
+    case 'Pred-Pref':
+      return 'orange';
+    case 'Prey':
+      return 'blue';
+    case 'Prey-Pref':
+      return 'green';
+    case 'Switch':
+      return 'yellow';
+    case 'Non-Vore':
+      return 'black';
   }
 };
 
@@ -42,12 +42,12 @@ export const CharacterDirectory = (props, context) => {
     personalEventTag,
   } = data;
 
-  const [overlay, setOverlay] = useLocalState(context, "overlay", null);
+  const [overlay, setOverlay] = useLocalState(context, 'overlay', null);
 
   const [overwritePrefs, setOverwritePrefs] = useLocalState(
     context,
-    "overwritePrefs",
-    false
+    'overwritePrefs',
+    false,
   );
 
   return (
@@ -63,9 +63,9 @@ export const CharacterDirectory = (props, context) => {
                     Save to current preferences slot:&nbsp;
                   </Box>
                   <Button
-                    icon={overwritePrefs ? "toggle-on" : "toggle-off"}
+                    icon={overwritePrefs ? 'toggle-on' : 'toggle-off'}
                     selected={overwritePrefs}
-                    content={overwritePrefs ? "On" : "Off"}
+                    content={overwritePrefs ? 'On' : 'Off'}
                     onClick={() => setOverwritePrefs(!overwritePrefs)}
                   />
                 </>
@@ -75,9 +75,9 @@ export const CharacterDirectory = (props, context) => {
                 <LabeledList.Item label="Visibility">
                   <Button
                     fluid
-                    content={personalVisibility ? "Shown" : "Not Shown"}
+                    content={personalVisibility ? 'Shown' : 'Not Shown'}
                     onClick={() =>
-                      act("setVisible", { overwrite_prefs: overwritePrefs })
+                      act('setVisible', { overwrite_prefs: overwritePrefs })
                     }
                   />
                 </LabeledList.Item>
@@ -86,7 +86,7 @@ export const CharacterDirectory = (props, context) => {
                     fluid
                     content={personalTag}
                     onClick={() =>
-                      act("setTag", { overwrite_prefs: overwritePrefs })
+                      act('setTag', { overwrite_prefs: overwritePrefs })
                     }
                   />
                 </LabeledList.Item>
@@ -95,7 +95,7 @@ export const CharacterDirectory = (props, context) => {
                     fluid
                     content={personalGenderTag}
                     onClick={() =>
-                      act("setGenderTag", { overwrite_prefs: overwritePrefs })
+                      act('setGenderTag', { overwrite_prefs: overwritePrefs })
                     }
                   />
                 </LabeledList.Item>
@@ -104,7 +104,7 @@ export const CharacterDirectory = (props, context) => {
                     fluid
                     content={personalSexualityTag}
                     onClick={() =>
-                      act("setSexualityTag", {
+                      act('setSexualityTag', {
                         overwrite_prefs: overwritePrefs,
                       })
                     }
@@ -115,7 +115,7 @@ export const CharacterDirectory = (props, context) => {
                     fluid
                     content={personalErpTag}
                     onClick={() =>
-                      act("setErpTag", { overwrite_prefs: overwritePrefs })
+                      act('setErpTag', { overwrite_prefs: overwritePrefs })
                     }
                   />
                 </LabeledList.Item>
@@ -124,7 +124,7 @@ export const CharacterDirectory = (props, context) => {
                     fluid
                     content={personalEventTag}
                     onClick={() =>
-                      act("setEventTag", { overwrite_prefs: overwritePrefs })
+                      act('setEventTag', { overwrite_prefs: overwritePrefs })
                     }
                   />
                 </LabeledList.Item>
@@ -133,7 +133,7 @@ export const CharacterDirectory = (props, context) => {
                     fluid
                     content="Edit Ad"
                     onClick={() =>
-                      act("editAd", { overwrite_prefs: overwritePrefs })
+                      act('editAd', { overwrite_prefs: overwritePrefs })
                     }
                   />
                 </LabeledList.Item>
@@ -148,7 +148,7 @@ export const CharacterDirectory = (props, context) => {
 };
 
 const ViewCharacter = (props, context) => {
-  const [overlay, setOverlay] = useLocalState(context, "overlay", null);
+  const [overlay, setOverlay] = useLocalState(context, 'overlay', null);
 
   return (
     <Section
@@ -182,13 +182,13 @@ const ViewCharacter = (props, context) => {
         <Box>{overlay.eventtag}</Box>
       </Section>
       <Section level={2} title="Character Ad">
-        <Box style={{ "word-break": "break-all" }} preserveWhitespace>
-          {overlay.character_ad || "Unset."}
+        <Box style={{ 'word-break': 'break-all' }} preserveWhitespace>
+          {overlay.character_ad || 'Unset.'}
         </Box>
       </Section>
       <Section level={2} title="OOC Notes">
-        <Box style={{ "word-break": "break-all" }} preserveWhitespace>
-          {overlay.ooc_notes || "Unset."}
+        <Box style={{ 'word-break': 'break-all' }} preserveWhitespace>
+          {overlay.ooc_notes || 'Unset.'}
           {overlay.ooc_notes_style &&
           (overlay.ooc_notes_favs ||
             overlay.ooc_notes_likes ||
@@ -199,18 +199,18 @@ const ViewCharacter = (props, context) => {
                 {overlay.ooc_notes_favs ? (
                   <Table.Cell>FAVOURITES</Table.Cell>
                 ) : (
-                  ""
+                  ''
                 )}
-                {overlay.ooc_notes_likes ? <Table.Cell>LIKES</Table.Cell> : ""}
+                {overlay.ooc_notes_likes ? <Table.Cell>LIKES</Table.Cell> : ''}
                 {overlay.ooc_notes_maybes ? (
                   <Table.Cell>MAYBES</Table.Cell>
                 ) : (
-                  ""
+                  ''
                 )}
                 {overlay.ooc_notes_dislikes ? (
                   <Table.Cell>DISLIKES</Table.Cell>
                 ) : (
-                  ""
+                  ''
                 )}
               </Table.Row>
               <Table.Row>
@@ -222,33 +222,33 @@ const ViewCharacter = (props, context) => {
                 {overlay.ooc_notes_favs ? (
                   <Table.Cell>{overlay.ooc_notes_favs}</Table.Cell>
                 ) : (
-                  ""
+                  ''
                 )}
                 {overlay.ooc_notes_likes ? (
                   <Table.Cell>{overlay.ooc_notes_likes}</Table.Cell>
                 ) : (
-                  ""
+                  ''
                 )}
                 {overlay.ooc_notes_maybes ? (
                   <Table.Cell>{overlay.ooc_notes_maybes}</Table.Cell>
                 ) : (
-                  ""
+                  ''
                 )}
                 {overlay.ooc_notes_dislikes ? (
                   <Table.Cell>{overlay.ooc_notes_dislikes}</Table.Cell>
                 ) : (
-                  ""
+                  ''
                 )}
               </Table.Row>
             </Table>
           ) : (
-            ""
+            ''
           )}
         </Box>
       </Section>
       <Section level={2} title="Flavor Text">
-        <Box style={{ "word-break": "break-all" }} preserveWhitespace>
-          {overlay.flavor_text || "Unset."}
+        <Box style={{ 'word-break': 'break-all' }} preserveWhitespace>
+          {overlay.flavor_text || 'Unset.'}
         </Box>
       </Section>
     </Section>
@@ -260,19 +260,19 @@ const CharacterDirectoryList = (props, context) => {
 
   const { directory } = data;
 
-  const [sortId, _setSortId] = useLocalState(context, "sortId", "name");
+  const [sortId, _setSortId] = useLocalState(context, 'sortId', 'name');
   const [sortOrder, _setSortOrder] = useLocalState(
     context,
-    "sortOrder",
-    "name"
+    'sortOrder',
+    'name',
   );
-  const [overlay, setOverlay] = useLocalState(context, "overlay", null);
+  const [overlay, setOverlay] = useLocalState(context, 'overlay', null);
 
   return (
     <Section
       title="Directory"
       buttons={
-        <Button icon="sync" content="Refresh" onClick={() => act("refresh")} />
+        <Button icon="sync" content="Refresh" onClick={() => act('refresh')} />
       }
     >
       <Table>
@@ -324,14 +324,14 @@ const SortButton = (props, context) => {
   const { id, children } = props;
 
   // Hey, same keys mean same data~
-  const [sortId, setSortId] = useLocalState(context, "sortId", "name");
-  const [sortOrder, setSortOrder] = useLocalState(context, "sortOrder", "name");
+  const [sortId, setSortId] = useLocalState(context, 'sortId', 'name');
+  const [sortOrder, setSortOrder] = useLocalState(context, 'sortOrder', 'name');
 
   return (
     <Table.Cell collapsing>
       <Button
         width="100%"
-        color={sortId !== id && "transparent"}
+        color={sortId !== id && 'transparent'}
         onClick={() => {
           if (sortId === id) {
             setSortOrder(!sortOrder);
@@ -343,7 +343,7 @@ const SortButton = (props, context) => {
       >
         {children}
         {sortId === id && (
-          <Icon name={sortOrder ? "sort-up" : "sort-down"} ml="0.25rem;" />
+          <Icon name={sortOrder ? 'sort-up' : 'sort-down'} ml="0.25rem;" />
         )}
       </Button>
     </Table.Cell>
