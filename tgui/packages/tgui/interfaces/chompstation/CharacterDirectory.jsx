@@ -198,18 +198,18 @@ const ViewCharacter = (props) => {
                 {overlay.ooc_notes_favs ? (
                   <Table.Cell>FAVOURITES</Table.Cell>
                 ) : (
-                  ""
+                  ''
                 )}
-                {overlay.ooc_notes_likes ? <Table.Cell>LIKES</Table.Cell> : ""}
+                {overlay.ooc_notes_likes ? <Table.Cell>LIKES</Table.Cell> : ''}
                 {overlay.ooc_notes_maybes ? (
                   <Table.Cell>MAYBES</Table.Cell>
                 ) : (
-                  ""
+                  ''
                 )}
                 {overlay.ooc_notes_dislikes ? (
                   <Table.Cell>DISLIKES</Table.Cell>
                 ) : (
-                  ""
+                  ''
                 )}
               </Table.Row>
               <Table.Row>
@@ -221,27 +221,27 @@ const ViewCharacter = (props) => {
                 {overlay.ooc_notes_favs ? (
                   <Table.Cell>{overlay.ooc_notes_favs}</Table.Cell>
                 ) : (
-                  ""
+                  ''
                 )}
                 {overlay.ooc_notes_likes ? (
                   <Table.Cell>{overlay.ooc_notes_likes}</Table.Cell>
                 ) : (
-                  ""
+                  ''
                 )}
                 {overlay.ooc_notes_maybes ? (
                   <Table.Cell>{overlay.ooc_notes_maybes}</Table.Cell>
                 ) : (
-                  ""
+                  ''
                 )}
                 {overlay.ooc_notes_dislikes ? (
                   <Table.Cell>{overlay.ooc_notes_dislikes}</Table.Cell>
                 ) : (
-                  ""
+                  ''
                 )}
               </Table.Row>
             </Table>
           ) : (
-            ""
+            ''
           )}
         </Box>
       </Section>
