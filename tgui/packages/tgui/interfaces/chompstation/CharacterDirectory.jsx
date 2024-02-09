@@ -1,7 +1,15 @@
-import { Fragment } from "inferno";
-import { useBackend, useLocalState } from "../backend";
-import { Box, Button, Icon, LabeledList, Section, Table } from "../components";
-import { Window } from "../layouts";
+import { Fragment } from "react";
+
+import { useBackend, useLocalState } from "../../backend";
+import {
+  Box,
+  Button,
+  Icon,
+  LabeledList,
+  Section,
+  Table,
+} from "../../components";
+import { Window } from "../../layouts";
 
 const getTagColor = (tag) => {
   switch (tag) {
@@ -46,11 +54,11 @@ export const CharacterDirectory = (props, context) => {
     <Window width={816} height={722} resizeable>
       <Window.Content scrollable>
         {(overlay && <ViewCharacter />) || (
-          <Fragment>
+          <>
             <Section
               title="Settings and Preferences"
               buttons={
-                <Fragment>
+                <>
                   <Box color="label" inline>
                     Save to current preferences slot:&nbsp;
                   </Box>
@@ -60,7 +68,7 @@ export const CharacterDirectory = (props, context) => {
                     content={overwritePrefs ? "On" : "Off"}
                     onClick={() => setOverwritePrefs(!overwritePrefs)}
                   />
-                </Fragment>
+                </>
               }
             >
               <LabeledList>
@@ -132,7 +140,7 @@ export const CharacterDirectory = (props, context) => {
               </LabeledList>
             </Section>
             <CharacterDirectoryList />
-          </Fragment>
+          </>
         )}
       </Window.Content>
     </Window>
