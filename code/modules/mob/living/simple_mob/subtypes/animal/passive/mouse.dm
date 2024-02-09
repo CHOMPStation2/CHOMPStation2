@@ -50,6 +50,16 @@
 	pain_emote_1p = list("squeak", "squik") // CHOMP Addition: Pain/etc sounds
 	pain_emote_1p = list("squeaks", "squiks") // CHOMP Addition: Pain/etc sounds
 
+/mob/living/simple_mob/animal/passive/mouse/Initialize()
+	. = ..()
+	ghostjoin = 1
+	ghostjoin_icon()
+	active_ghost_pods |= src
+
+/mob/living/simple_mob/animal/passive/mouse/Destroy()
+	active_ghost_pods -= src
+	return ..()
+
 /mob/living/simple_mob/animal/passive/mouse/New()
 	..()
 
