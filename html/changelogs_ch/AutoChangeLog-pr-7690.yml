@@ -1,0 +1,7 @@
+author: "TheCaramelion"
+delete-after: True
+changes:
+  - rscdel: "Removed \"Viral Infection\" from the rotation."
+  - rscadd: "Added \"Infected Room\" to the rotation."
+  - code_imp: "event_manager.ch should be easier to read now."
+  - bugfix: "Blood, vomit and mucus containing viruses will now spread it."
