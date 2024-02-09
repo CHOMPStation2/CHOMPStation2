@@ -1145,6 +1145,16 @@
 			save_ooc_panel()
 	if(href_list["print_ooc_notes_to_chat"])
 		print_ooc_notes_to_chat()
+	//CHOMPEdit Start
+	if(href_list["edit_ooc_note_favs"])
+		if(usr == src)
+			set_metainfo_favs()
+	if(href_list["edit_ooc_note_maybes"])
+		if(usr == src)
+			set_metainfo_maybes()
+	if(href_list["set_metainfo_ooc_style"])
+		set_metainfo_ooc_style()
+	//CHOMPEdit End
 	return ..()
 
 /mob/living/proc/display_voreprefs(mob/user)	//Called by Topic() calls on instances of /mob/living (and subtypes) containing vore_prefs as an argument

@@ -106,6 +106,11 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 			brainmob.ooc_notes = H.ooc_notes //VOREStation Edit
 			brainmob.ooc_notes_likes = H.ooc_notes_likes
 			brainmob.ooc_notes_dislikes = H.ooc_notes_dislikes
+			//CHOMPEdit Start
+			brainmob.ooc_notes_favs = H.ooc_notes_favs
+			brainmob.ooc_notes_maybes = H.ooc_notes_maybes
+			brainmob.ooc_notes_style = H.ooc_notes_style
+			//CHOMPEdit End
 
 		// Copy modifiers.
 		for(var/datum/modifier/M in H.modifiers)
@@ -258,6 +263,11 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 	H.ooc_notes = brainmob.ooc_notes // VOREStation Edit
 	H.ooc_notes_likes = brainmob.ooc_notes_likes
 	H.ooc_notes_dislikes = brainmob.ooc_notes_dislikes
+	//CHOMPEdit Start
+	H.ooc_notes_favs = brainmob.ooc_notes_favs
+	H.ooc_notes_maybes = brainmob.ooc_notes_maybes
+	H.ooc_notes_style = brainmob.ooc_notes_style
+	//CHOMPEdit End
 
 	H.nutrition = 260 //Enough to try to regenerate ONCE.
 	H.adjustBruteLoss(40)
