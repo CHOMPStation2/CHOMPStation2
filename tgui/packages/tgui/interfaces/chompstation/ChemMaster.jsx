@@ -1,14 +1,21 @@
 import { Fragment } from 'react';
 
-import { useBackend } from '../backend';
-import { Box, Button, Flex, Icon, LabeledList, Section } from '../components';
-import { Window } from '../layouts';
-import { BeakerContents } from './common/BeakerContents';
+import { useBackend } from '../../backend';
+import {
+  Box,
+  Button,
+  Flex,
+  Icon,
+  LabeledList,
+  Section,
+} from '../../components';
+import { Window } from '../../layouts';
+import { BeakerContents } from '.././common/BeakerContents';
 import {
   ComplexModal,
   modalOpen,
   modalRegisterBodyOverride,
-} from './common/ComplexModal';
+} from '.././common/ComplexModal';
 
 const transferAmounts = [1, 5, 10, 30, 60];
 const bottleStyles = [

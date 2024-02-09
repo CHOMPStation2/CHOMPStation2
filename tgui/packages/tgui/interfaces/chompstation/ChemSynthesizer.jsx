@@ -1,8 +1,8 @@
-import { useBackend } from '../backend';
-import { Box, Button, Flex, LabeledList, Section } from '../components';
-import { Window } from '../layouts';
-import { BeakerContents } from './common/BeakerContents';
-import { ComplexModal, modalOpen } from './common/ComplexModal';
+import { useBackend } from '../../backend';
+import { Box, Button, Flex, LabeledList, Section } from '../../components';
+import { Window } from '../../layouts';
+import { BeakerContents } from '.././common/BeakerContents';
+import { ComplexModal, modalOpen } from '.././common/ComplexModal';
 
 export const ChemSynthesizer = (props, context) => {
   return (
