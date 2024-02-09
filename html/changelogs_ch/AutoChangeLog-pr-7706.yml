@@ -1,0 +1,4 @@
+author: "cadyn"
+delete-after: True
+changes:
+  - bugfix: "fixed horrible awful code for mob spawners"
