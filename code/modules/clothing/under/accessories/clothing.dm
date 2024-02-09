@@ -541,9 +541,6 @@
 
 /obj/item/clothing/accessory/cowboy_vest/grey
 	name = "grey cowboy vest"
-<<<<<<< HEAD
-	icon_state = "cowboyvest_grey"
-=======
 	icon_state = "cowboyvest_grey"
 
 //Replikant Vests
@@ -581,4 +578,3 @@
 	name = "security-technician replikant chestplate"
 	desc = "A sloped titanium-composite chest plate with a matte black finish, fitted for use by 2nd generation biosynthetics. Comes with red adjustable straps."
 	icon_state = "star"
->>>>>>> 82812ea2e6... Merge pull request #15733 from BonniePandora/Replikant

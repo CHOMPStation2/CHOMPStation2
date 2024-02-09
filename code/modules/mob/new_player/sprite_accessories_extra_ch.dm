@@ -505,6 +505,19 @@
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_HEAD)
 
+//Hellscout abdomen markings
+/datum/sprite_accessory/marking/digi/hellscout_abdomen
+	name = "Erebus - Hellscout FBP Abdomen (Digitigrade)"
+	icon_state = "hellscout_r"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_L_LEG,BP_R_LEG,BP_GROIN,BP_TORSO)
+
+/datum/sprite_accessory/marking/ch/hellscout_abdomen_p
+	name = "Erebus - Hellscout FBP Abdomen (Plantigrade)"
+	icon_state = "hellscout_r"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_GROIN,BP_TORSO)
+
 /datum/sprite_accessory/marking/ch/spectre_panels
 	name = "RACS Spectre FBP Panels"
 	icon_state = "spectre"

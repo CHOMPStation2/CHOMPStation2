@@ -2,8 +2,8 @@ import { useBackend } from '../backend';
 import { Box, Button, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
 
-export const Holodeck = (props, context) => {
-  const { act, data } = useBackend(context);
+export const Holodeck = (props) => {
+  const { act, data } = useBackend();
 
   const {
     supportedPrograms,
@@ -22,7 +22,7 @@ export const Holodeck = (props, context) => {
   }
 
   return (
-    <Window width={400} height={610} resizable>
+    <Window width={400} height={610}>
       <Window.Content scrollable>
         <Section title="Programs">
           {programsToShow.map((prog) => (
@@ -44,7 +44,8 @@ export const Holodeck = (props, context) => {
               fluid
               disabled={emagged}
               color={safetyDisabled ? 'good' : 'bad'}
-              onClick={() => act('AIoverride')}>
+              onClick={() => act('AIoverride')}
+            >
               {!!emagged && 'Error, unable to control. '}
               {safetyDisabled ? 'Enable Safeties' : 'Disable Safeties'}
             </Button>
@@ -63,7 +64,8 @@ export const Holodeck = (props, context) => {
               <Button
                 icon="user-astronaut"
                 selected={gravity}
-                onClick={() => act('gravity')}>
+                onClick={() => act('gravity')}
+              >
                 {gravity ? 'Enabled' : 'Disabled'}
               </Button>
             </LabeledList.Item>

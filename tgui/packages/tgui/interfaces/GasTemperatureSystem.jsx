@@ -1,10 +1,18 @@
 import { round } from 'common/math';
 import { useBackend } from '../backend';
-import { Button, LabeledList, Section, Knob, Slider, LabeledControls, AnimatedNumber } from '../components';
+import {
+  Button,
+  LabeledList,
+  Section,
+  Knob,
+  Slider,
+  LabeledControls,
+  AnimatedNumber,
+} from '../components';
 import { Window } from '../layouts';
 
-export const GasTemperatureSystem = (props, context) => {
-  const { act, data } = useBackend(context);
+export const GasTemperatureSystem = (props) => {
+  const { act, data } = useBackend();
 
   const {
     on,
@@ -29,7 +37,8 @@ export const GasTemperatureSystem = (props, context) => {
               selected={on}
               onClick={() => act('toggleStatus')}
             />
-          }>
+          }
+        >
           <LabeledControls>
             <LabeledControls.Item label="Power Level">
               <Knob

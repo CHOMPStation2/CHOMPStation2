@@ -24,8 +24,8 @@ const getPdaApp = (name) => {
   return Component;
 };
 
-export const Pda = (props, context) => {
-  const { act, data } = useBackend(context);
+export const Pda = (props) => {
+  const { act, data } = useBackend();
 
   const { app, owner, useRetro } = data;
 
@@ -43,18 +43,10 @@ export const Pda = (props, context) => {
 
   let App = getPdaApp(app.template);
 
-  const [settingsMode, setSettingsMode] = useLocalState(
-    context,
-    'settingsMode',
-    false
-  );
+  const [settingsMode, setSettingsMode] = useLocalState('settingsMode', false);
 
   return (
-    <Window
-      width={580}
-      height={670}
-      theme={useRetro ? 'pda-retro' : null}
-      resizable>
+    <Window width={580} height={670} theme={useRetro ? 'pda-retro' : null}>
       <Window.Content scrollable>
         <PDAHeader
           settingsMode={settingsMode}
@@ -68,7 +60,8 @@ export const Pda = (props, context) => {
                 {app.name}
               </Box>
             }
-            p={1}>
+            p={1}
+          >
             <App />
           </Section>
         )}
@@ -79,8 +72,8 @@ export const Pda = (props, context) => {
   );
 };
 
-const PDAHeader = (props, context) => {
-  const { act, data } = useBackend(context);
+const PDAHeader = (props) => {
+  const { act, data } = useBackend();
 
   const { settingsMode, setSettingsMode } = props;
 
@@ -115,8 +108,8 @@ const PDAHeader = (props, context) => {
   );
 };
 
-const PDASettings = (props, context) => {
-  const { act, data } = useBackend(context);
+const PDASettings = (props) => {
+  const { act, data } = useBackend();
 
   const { idInserted, idLink, cartridge_name, touch_silent } = data;
 
@@ -161,8 +154,8 @@ const PDASettings = (props, context) => {
   );
 };
 
-const PDAFooter = (props, context) => {
-  const { act, data } = useBackend(context);
+const PDAFooter = (props) => {
+  const { act, data } = useBackend();
 
   const { setSettingsMode } = props;
 
@@ -174,7 +167,8 @@ const PDAFooter = (props, context) => {
       bottom="0%"
       left="0%"
       right="0%"
-      backgroundColor={useRetro ? '#6f7961' : '#1b1b1b'}>
+      backgroundColor={useRetro ? '#6f7961' : '#1b1b1b'}
+    >
       <Flex>
         <Flex.Item basis="33%">
           <Button
