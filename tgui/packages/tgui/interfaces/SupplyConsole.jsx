@@ -1,14 +1,25 @@
 import { filter, sortBy } from 'common/collections';
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { formatTime } from '../format';
 import { useBackend, useLocalState } from '../backend';
-import { Box, Button, LabeledList, Section, Tabs, AnimatedNumber, Stack } from '../components';
-import { ComplexModal, modalRegisterBodyOverride } from '../interfaces/common/ComplexModal';
+import {
+  Box,
+  Button,
+  LabeledList,
+  Section,
+  Tabs,
+  AnimatedNumber,
+  Stack,
+} from '../components';
+import {
+  ComplexModal,
+  modalRegisterBodyOverride,
+} from '../interfaces/common/ComplexModal';
 import { Window } from '../layouts';
 import { flow } from 'common/fp';
 
-const viewCrateContents = (modal, context) => {
-  const { act, data } = useBackend(context);
+const viewCrateContents = (modal) => {
+  const { act, data } = useBackend();
   const { supply_points } = data;
   const { name, cost, manifest, ref, random } = modal.args;
   return (
@@ -25,11 +36,13 @@ const viewCrateContents = (modal, context) => {
           disabled={cost > supply_points}
           onClick={() => act('request_crate', { ref: ref })}
         />
-      }>
+      }
+    >
       <Section
         title={'Contains' + (random ? ' any ' + random + ' of:' : '')}
         scrollable
-        height="200px">
+        height="200px"
+      >
         {manifest.map((m) => (
           <Box key={m}>{m}</Box>
         ))}
@@ -38,8 +51,8 @@ const viewCrateContents = (modal, context) => {
   );
 };
 
-export const SupplyConsole = (props, context) => {
-  const { act, data } = useBackend(context);
+export const SupplyConsole = (props) => {
+  const { act, data } = useBackend();
   modalRegisterBodyOverride('view_crate', viewCrateContents);
   return (
     <Window width={700} height={620}>
@@ -54,8 +67,8 @@ export const SupplyConsole = (props, context) => {
   );
 };
 
-const SupplyConsoleShuttleStatus = (props, context) => {
-  const { act, data } = useBackend(context);
+const SupplyConsoleShuttleStatus = (props) => {
+  const { act, data } = useBackend();
 
   const { supply_points, shuttle, shuttle_auth } = data;
 
@@ -108,7 +121,7 @@ const SupplyConsoleShuttleStatus = (props, context) => {
           <LabeledList.Item
             label="Location"
             buttons={
-              <Fragment>
+              <>
                 {shuttle_buttons}
                 {showShuttleForce ? (
                   <Button
@@ -119,8 +132,9 @@ const SupplyConsoleShuttleStatus = (props, context) => {
                     }
                   />
                 ) : null}
-              </Fragment>
-            }>
+              </>
+            }
+          >
             {shuttle.location}
           </LabeledList.Item>
           <LabeledList.Item label="Engine">{shuttle.engine}</LabeledList.Item>
@@ -135,12 +149,12 @@ const SupplyConsoleShuttleStatus = (props, context) => {
   );
 };
 
-const SupplyConsoleMenu = (props, context) => {
-  const { act, data } = useBackend(context);
+const SupplyConsoleMenu = (props) => {
+  const { act, data } = useBackend();
 
   const { order_auth } = data;
 
-  const [tabIndex, setTabIndex] = useLocalState(context, 'tabIndex', 0);
+  const [tabIndex, setTabIndex] = useLocalState('tabIndex', 0);
 
   return (
     <Section title="Menu">
@@ -148,31 +162,36 @@ const SupplyConsoleMenu = (props, context) => {
         <Tabs.Tab
           icon="box"
           selected={tabIndex === 0}
-          onClick={() => setTabIndex(0)}>
+          onClick={() => setTabIndex(0)}
+        >
           Request
         </Tabs.Tab>
         <Tabs.Tab
           icon="check-circle-o"
           selected={tabIndex === 1}
-          onClick={() => setTabIndex(1)}>
+          onClick={() => setTabIndex(1)}
+        >
           Accepted
         </Tabs.Tab>
         <Tabs.Tab
           icon="circle-o"
           selected={tabIndex === 2}
-          onClick={() => setTabIndex(2)}>
+          onClick={() => setTabIndex(2)}
+        >
           Requests
         </Tabs.Tab>
         <Tabs.Tab
           icon="book"
           selected={tabIndex === 3}
-          onClick={() => setTabIndex(3)}>
+          onClick={() => setTabIndex(3)}
+        >
           Order history
         </Tabs.Tab>
         <Tabs.Tab
           icon="book"
           selected={tabIndex === 4}
-          onClick={() => setTabIndex(4)}>
+          onClick={() => setTabIndex(4)}
+        >
           Export history
         </Tabs.Tab>
       </Tabs>
@@ -185,15 +204,14 @@ const SupplyConsoleMenu = (props, context) => {
   );
 };
 
-const SupplyConsoleMenuOrder = (props, context) => {
-  const { act, data } = useBackend(context);
+const SupplyConsoleMenuOrder = (props) => {
+  const { act, data } = useBackend();
 
   const { categories, supply_packs, contraband, supply_points } = data;
 
   const [activeCategory, setActiveCategory] = useLocalState(
-    context,
     'activeCategory',
-    null
+    null,
   );
 
   const viewingPacks = flow([
@@ -279,13 +297,13 @@ const SupplyConsoleMenuOrder = (props, context) => {
   );
 };
 
-const SupplyConsoleMenuOrderList = (props, context) => {
-  const { act, data } = useBackend(context);
+const SupplyConsoleMenuOrderList = (props) => {
+  const { act, data } = useBackend();
   const { mode } = props;
   const { orders, order_auth, supply_points } = data;
 
   const displayedOrders = orders.filter(
-    (val) => val.status === mode || mode === 'All'
+    (val) => val.status === mode || mode === 'All',
   );
 
   if (!displayedOrders.length) {
@@ -318,7 +336,8 @@ const SupplyConsoleMenuOrderList = (props, context) => {
                 onClick={() => act('delete_order', { ref: order.ref })}
               />
             ) : null
-          }>
+          }
+        >
           <LabeledList>
             {order.entries.map((field) =>
               field.entry ? (
@@ -338,17 +357,18 @@ const SupplyConsoleMenuOrderList = (props, context) => {
                         }}
                       />
                     ) : null
-                  }>
+                  }
+                >
                   {field.entry}
                 </LabeledList.Item>
-              ) : null
+              ) : null,
             )}
             {mode === 'All' ? (
               <LabeledList.Item label="Status">{order.status}</LabeledList.Item>
             ) : null}
           </LabeledList>
           {order_auth && mode === 'Requested' ? (
-            <Fragment>
+            <>
               <Button
                 icon="check"
                 content="Approve"
@@ -360,7 +380,7 @@ const SupplyConsoleMenuOrderList = (props, context) => {
                 content="Deny"
                 onClick={() => act('deny_order', { ref: order.ref })}
               />
-            </Fragment>
+            </>
           ) : null}
         </Section>
       ))}
@@ -368,8 +388,8 @@ const SupplyConsoleMenuOrderList = (props, context) => {
   );
 };
 
-const SupplyConsoleMenuHistoryExport = (props, context) => {
-  const { act, data } = useBackend(context);
+const SupplyConsoleMenuHistoryExport = (props) => {
+  const { act, data } = useBackend();
   const { receipts, order_auth } = data;
 
   if (!receipts.length) {
@@ -399,7 +419,8 @@ const SupplyConsoleMenuHistoryExport = (props, context) => {
                       }
                     />
                   ) : null
-                }>
+                }
+              >
                 {title.entry}
               </LabeledList.Item>
             ))}
@@ -414,7 +435,7 @@ const SupplyConsoleMenuHistoryExport = (props, context) => {
                   key={i}
                   buttons={
                     order_auth ? (
-                      <Fragment>
+                      <>
                         <Button
                           icon="pen"
                           content="Edit"
@@ -438,16 +459,17 @@ const SupplyConsoleMenuHistoryExport = (props, context) => {
                             })
                           }
                         />
-                      </Fragment>
+                      </>
                     ) : null
-                  }>
+                  }
+                >
                   {item.quantity}x -&gt; {item.value} points
                 </LabeledList.Item>
               ))
             )}
           </LabeledList>
           {order_auth ? (
-            <Fragment>
+            <>
               <Button
                 mt={1}
                 icon="plus"
@@ -459,7 +481,7 @@ const SupplyConsoleMenuHistoryExport = (props, context) => {
                 content="Delete Record"
                 onClick={() => act('export_delete', { ref: r.ref })}
               />
-            </Fragment>
+            </>
           ) : null}
         </Section>
       ))}

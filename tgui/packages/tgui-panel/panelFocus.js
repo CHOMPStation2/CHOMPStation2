@@ -8,8 +8,8 @@
  */
 
 import { vecLength, vecSubtract } from 'common/vector';
-import { canStealFocus, globalEvents } from 'tgui_ch/events'; // CHOMPEdit - tgui_ch
-import { focusMap } from 'tgui_ch/focus'; // CHOMPEdit - tgui_ch
+import { canStealFocus, globalEvents } from 'tgui/events';
+import { focusMap } from 'tgui/focus';
 
 // Empyrically determined number for the smallest possible
 // text you can select with the mouse.

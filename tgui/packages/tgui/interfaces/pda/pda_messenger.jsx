@@ -3,8 +3,8 @@ import { filter } from 'common/collections';
 import { useBackend, useLocalState } from '../../backend';
 import { Box, Button, LabeledList, Section } from '../../components';
 
-export const pda_messenger = (props, context) => {
-  const { act, data } = useBackend(context);
+export const pda_messenger = (props) => {
+  const { act, data } = useBackend();
 
   const { auto_scroll, convo_name, convo_job, messages, active_conversation } =
     data;
@@ -31,8 +31,8 @@ const findClassMessage = (im, lastIndex, filterArray) => {
   return im.sent ? 'TinderMessage_First_Sent' : 'TinderMessage_First_Received';
 };
 
-const ActiveConversation = (props, context) => {
-  const { act, data } = useBackend(context);
+const ActiveConversation = (props) => {
+  const { act, data } = useBackend();
 
   const {
     auto_scroll,
@@ -44,9 +44,8 @@ const ActiveConversation = (props, context) => {
   } = data;
 
   const [clipboardMode, setClipboardMode] = useLocalState(
-    context,
     'clipboardMode',
-    false
+    false,
   );
 
   let body = (
@@ -63,33 +62,36 @@ const ActiveConversation = (props, context) => {
         />
       }
       height="450px"
-      stretchContents>
+      stretchContents
+    >
       <Button
         icon="comment"
-        onClick={() => act('Message', { 'target': active_conversation })}
+        onClick={() => act('Message', { target: active_conversation })}
         content="Reply"
       />
       <Section
         style={{
-          'height': '97%',
+          height: '97%',
           'overflow-y': 'auto',
-        }}>
+        }}
+      >
         {filter((im) => im.target === active_conversation)(messages).map(
           (im, i, filterArr) => (
             <Box textAlign={im.sent ? 'right' : 'left'} mb={1} key={i}>
               <Box
                 maxWidth="75%"
                 className={findClassMessage(im, i - 1, filterArr)}
-                inline>
+                inline
+              >
                 {decodeHtmlEntities(im.message)}
               </Box>
             </Box>
-          )
+          ),
         )}
       </Section>
       <Button
         icon="comment"
-        onClick={() => act('Message', { 'target': active_conversation })}
+        onClick={() => act('Message', { target: active_conversation })}
         content="Reply"
       />
     </Section>
@@ -110,32 +112,35 @@ const ActiveConversation = (props, context) => {
           />
         }
         height="450px"
-        stretchContents>
+        stretchContents
+      >
         <Button
           icon="comment"
-          onClick={() => act('Message', { 'target': active_conversation })}
+          onClick={() => act('Message', { target: active_conversation })}
           content="Reply"
         />
         <Section
           style={{
-            'height': '97%',
+            height: '97%',
             'overflow-y': 'auto',
-          }}>
+          }}
+        >
           {filter((im) => im.target === active_conversation)(messages).map(
             (im, i) => (
               <Box
                 key={i}
                 className={
                   im.sent ? 'ClassicMessage_Sent' : 'ClassicMessage_Received'
-                }>
+                }
+              >
                 {im.sent ? 'You:' : 'Them:'} {decodeHtmlEntities(im.message)}
               </Box>
-            )
+            ),
           )}
         </Section>
         <Button
           icon="comment"
-          onClick={() => act('Message', { 'target': active_conversation })}
+          onClick={() => act('Message', { target: active_conversation })}
           content="Reply"
         />
       </Section>
@@ -149,7 +154,8 @@ const ActiveConversation = (props, context) => {
           <Button
             icon="trash"
             color="bad"
-            onClick={() => act('Clear', { option: 'Convo' })}>
+            onClick={() => act('Clear', { option: 'Convo' })}
+          >
             Delete Conversations
           </Button>
         </LabeledList.Item>
@@ -159,8 +165,8 @@ const ActiveConversation = (props, context) => {
   );
 };
 
-const MessengerList = (props, context) => {
-  const { act, data } = useBackend(context);
+const MessengerList = (props) => {
+  const { act, data } = useBackend();
 
   const { auto_scroll, convopdas, pdas, charges, plugins, silent, toff } = data;
 
@@ -171,13 +177,15 @@ const MessengerList = (props, context) => {
           <Button
             selected={!silent}
             icon={silent ? 'volume-mute' : 'volume-up'}
-            onClick={() => act('Toggle Ringer')}>
+            onClick={() => act('Toggle Ringer')}
+          >
             Ringer: {silent ? 'Off' : 'On'}
           </Button>
           <Button
             color={toff ? 'bad' : 'green'}
             icon="power-off"
-            onClick={() => act('Toggle Messenger')}>
+            onClick={() => act('Toggle Messenger')}
+          >
             Messenger: {toff ? 'Off' : 'On'}
           </Button>
           <Button icon="bell" onClick={() => act('Ringtone')}>
@@ -186,7 +194,8 @@ const MessengerList = (props, context) => {
           <Button
             icon="trash"
             color="bad"
-            onClick={() => act('Clear', { option: 'All' })}>
+            onClick={() => act('Clear', { option: 'All' })}
+          >
             Delete All Conversations
           </Button>
         </LabeledList.Item>
@@ -216,8 +225,8 @@ const MessengerList = (props, context) => {
   );
 };
 
-const PDAList = (props, context) => {
-  const { act, data } = useBackend(context);
+const PDAList = (props) => {
+  const { act, data } = useBackend();
 
   const { pdas, title, msgAct } = props;
 

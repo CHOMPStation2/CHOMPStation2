@@ -1,5 +1,6 @@
 import { BooleanLike } from 'common/react';
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
+
 import { useBackend } from '../backend';
 import { Box, Button, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
@@ -13,8 +14,8 @@ type Data = {
   }[];
 };
 
-export const NoticeBoard = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const NoticeBoard = (props) => {
+  const { act, data } = useBackend<Data>();
 
   const { notices } = data;
 
@@ -34,7 +35,7 @@ export const NoticeBoard = (props, context) => {
                     />
                   )) ||
                     (notice.ispaper && (
-                      <Fragment>
+                      <>
                         <Button
                           icon="sticky-note"
                           content="Read"
@@ -45,7 +46,7 @@ export const NoticeBoard = (props, context) => {
                           content="Write"
                           onClick={() => act('write', { ref: notice.ref })}
                         />
-                      </Fragment>
+                      </>
                     )) ||
                     'Unknown Entity'}
                   <Button

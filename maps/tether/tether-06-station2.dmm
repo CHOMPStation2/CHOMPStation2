@@ -7509,14 +7509,6 @@
 /turf/simulated/floor,
 /area/storage/tech)
 "ly" = (
-/obj/machinery/status_display{
-	layer = 4;
-	pixel_x = -32
-	},
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor,
-/area/storage/tech)
-"ly" = (
 /obj/structure/table/rack{
 	dir = 8;
 	layer = 2.9
@@ -7817,24 +7809,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/station/starboard)
-<<<<<<< HEAD
-||||||| parent of f19bc87ece... Merge pull request #10230 from TheFurryFeline/TFF-Brig_Flashes
-"lU" = (
-/obj/structure/shuttle/engine/propulsion{
-	dir = 8;
-	icon_state = "propulsion_l"
-	},
-/turf/space,
-/turf/simulated/shuttle/plating/airless/carry,
-/area/shuttle/large_escape_pod1)
-"lV" = (
-/obj/structure/shuttle/engine/propulsion{
-	dir = 8
-	},
-/turf/space,
-/turf/simulated/shuttle/plating/airless/carry,
-/area/shuttle/large_escape_pod1)
-=======
 "lU" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/pipe/simple/hidden/green,
@@ -7868,7 +7842,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/security_cell_hallway)
->>>>>>> f19bc87ece... Merge pull request #10230 from TheFurryFeline/TFF-Brig_Flashes
 "lW" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -9636,17 +9609,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/station/starboard)
-<<<<<<< HEAD
-||||||| parent of f19bc87ece... Merge pull request #10230 from TheFurryFeline/TFF-Brig_Flashes
-"oB" = (
-/obj/structure/shuttle/engine/propulsion{
-	dir = 8;
-	icon_state = "propulsion_r"
-	},
-/turf/space,
-/turf/simulated/shuttle/plating/airless/carry,
-/area/shuttle/large_escape_pod1)
-=======
 "oB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -9672,7 +9634,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/brig)
->>>>>>> f19bc87ece... Merge pull request #10230 from TheFurryFeline/TFF-Brig_Flashes
 "oC" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -9695,36 +9656,9 @@
 /turf/simulated/floor/tiled,
 /area/hallway/station/starboard)
 "oD" = (
-<<<<<<< HEAD
 /obj/structure/shuttle/engine/propulsion{
 	dir = 8;
 	icon_state = "propulsion_l"
-||||||| parent of f19bc87ece... Merge pull request #10230 from TheFurryFeline/TFF-Brig_Flashes
-/obj/structure/stairs/spawner/west,
-/turf/simulated/sky/virgo3b/west,
-/turf/simulated/floor/tiled/white,
-/area/medical/biostorage)
-"oE" = (
-/obj/structure/toilet{
-	pixel_y = 6
-	},
-/obj/machinery/light/small{
-	dir = 1
-=======
-/obj/structure/shuttle/engine/propulsion{
-	dir = 8;
-	icon_state = "propulsion_l"
-	},
-/turf/space,
-/turf/simulated/shuttle/plating/airless/carry,
-/area/shuttle/large_escape_pod1)
-"oE" = (
-/obj/structure/toilet{
-	pixel_y = 6
-	},
-/obj/machinery/light/small{
-	dir = 1
->>>>>>> f19bc87ece... Merge pull request #10230 from TheFurryFeline/TFF-Brig_Flashes
 	},
 /turf/space,
 /turf/simulated/shuttle/plating/airless/carry,
@@ -9744,46 +9678,11 @@
 /turf/space,
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/large_escape_pod1)
-<<<<<<< HEAD
-||||||| parent of 1030f26c08... Merge pull request #9904 from Heroman3003/la-coppera
-"oH" = (
-/obj/structure/stairs/spawner/west,
-/turf/simulated/sky/virgo3b/west,
-/turf/simulated/floor/tiled/white,
-<<<<<<< HEAD
-/area/medical/biostorage)
-=======
-"oG" = (
-/obj/structure/stairs/spawner/west,
-/turf/simulated/sky/virgo3b/west,
-/turf/simulated/floor/tiled/white,
-/area/medical/biostorage)
->>>>>>> 1030f26c08... Merge pull request #9904 from Heroman3003/la-coppera
-||||||| parent of f19bc87ece... Merge pull request #10230 from TheFurryFeline/TFF-Brig_Flashes
-/area/medical/recoveryrestroom)
-=======
-/area/medical/recoveryrestroom)
-"oG" = (
-/obj/structure/shuttle/engine/propulsion{
-	dir = 8
-	},
-/turf/space,
-/turf/simulated/shuttle/plating/airless/carry,
-/area/shuttle/large_escape_pod1)
-"oH" = (
-/obj/structure/shuttle/engine/propulsion{
-	dir = 8;
-	icon_state = "propulsion_r"
-	},
-/turf/space,
-/turf/simulated/shuttle/plating/airless/carry,
-/area/shuttle/large_escape_pod1)
 "oI" = (
 /obj/structure/stairs/spawner/west,
 /turf/simulated/sky/virgo3b/west,
 /turf/simulated/floor/tiled/white,
 /area/medical/biostorage)
->>>>>>> f19bc87ece... Merge pull request #10230 from TheFurryFeline/TFF-Brig_Flashes
 "oM" = (
 /turf/simulated/open,
 /area/engineering/foyer_mezzenine)
@@ -14027,10 +13926,6 @@
 /obj/effect/floor_decal/corner/paleblue/bordercorner2{
 	dir = 9
 	},
-/turf/simulated/floor/tiled/white,
-/area/medical/biostorage)
-"xQ" = (
-/turf/simulated/sky/virgo3b/west,
 /turf/simulated/floor/tiled/white,
 /area/medical/biostorage)
 "xR" = (
@@ -28647,13 +28542,7 @@ vE
 wm
 ws
 xj
-<<<<<<< HEAD
-oG
-||||||| parent of f19bc87ece... Merge pull request #10230 from TheFurryFeline/TFF-Brig_Flashes
-oD
-=======
 oI
->>>>>>> f19bc87ece... Merge pull request #10230 from TheFurryFeline/TFF-Brig_Flashes
 vT
 aP
 aP
@@ -35592,25 +35481,11 @@ hl
 DI
 RX
 DL
-<<<<<<< HEAD
 oD
 oE
 oE
 oE
 oF
-||||||| parent of f19bc87ece... Merge pull request #10230 from TheFurryFeline/TFF-Brig_Flashes
-lU
-lV
-lV
-lV
-oB
-=======
-oD
-oG
-oG
-oG
-oH
->>>>>>> f19bc87ece... Merge pull request #10230 from TheFurryFeline/TFF-Brig_Flashes
 oY
 sW
 ef

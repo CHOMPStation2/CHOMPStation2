@@ -181,3 +181,12 @@
 	default_worn_icon = 'modular_chomp/icons/inventory/head/mob_halo.dmi'
 	icon_state = "halo"
 // CHOMPEdit End
+
+//Replikant Hat
+
+/obj/item/clothing/head/eulrhat
+	name = "sleek side cap"
+	desc = "A simple wedge cap with red accents, popular with biosynthetic personnel."
+	icon = 'icons/inventory/head/item_vr.dmi'
+	icon_override = 'icons/inventory/head/mob_vr.dmi'
+	icon_state = "eulrhat"

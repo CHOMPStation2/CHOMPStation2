@@ -1,10 +1,10 @@
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend } from '../backend';
 import { Box, Button, Flex, LabeledList, Slider, Section } from '../components';
 import { Window } from '../layouts';
 
-export const GeneralAtmoControl = (props, context) => {
-  const { act, data } = useBackend(context);
+export const GeneralAtmoControl = (props) => {
+  const { act, data } = useBackend();
 
   // While many of these variables are unused, it's helpful to have a consistent
   // list of all possible parameters in the core component of this UI.
@@ -30,7 +30,7 @@ export const GeneralAtmoControl = (props, context) => {
   } = data;
 
   return (
-    <Window width={600} height={600} resizable>
+    <Window width={600} height={600}>
       <Window.Content>
         <AtmoControlSensors sensors={sensors} />
         {(core || tanks) && <AtmoControlTankCore />}
@@ -40,8 +40,8 @@ export const GeneralAtmoControl = (props, context) => {
   );
 };
 
-const AtmoControlSensors = (props, context) => {
-  const { act } = useBackend(context);
+const AtmoControlSensors = (props) => {
+  const { act } = useBackend();
 
   const { sensors } = props;
 
@@ -64,7 +64,7 @@ const AtmoControlSensors = (props, context) => {
   }
 };
 
-const AtmoSensor = (props, context) => {
+const AtmoSensor = (props) => {
   const { sensor } = props;
 
   if (!sensor.sensor_data) {
@@ -77,13 +77,13 @@ const AtmoSensor = (props, context) => {
   let labeledListContents = [];
   if (pressure) {
     labeledListContents.push(
-      <LabeledList.Item label="Pressure">{pressure} kPa</LabeledList.Item>
+      <LabeledList.Item label="Pressure">{pressure} kPa</LabeledList.Item>,
     );
   }
 
   if (temperature) {
     labeledListContents.push(
-      <LabeledList.Item label="Temperature">{temperature} K</LabeledList.Item>
+      <LabeledList.Item label="Temperature">{temperature} K</LabeledList.Item>,
     );
   }
 
@@ -98,15 +98,15 @@ const AtmoSensor = (props, context) => {
           ) : null}
           {phoron ? <Flex.Item>({phoron}% TX)</Flex.Item> : null}
         </Flex>
-      </LabeledList.Item>
+      </LabeledList.Item>,
     );
   }
 
   return <LabeledList>{labeledListContents.map((item) => item)}</LabeledList>;
 };
 
-const AtmoControlTankCore = (props, context) => {
-  const { act, data } = useBackend(context);
+const AtmoControlTankCore = (props) => {
+  const { act, data } = useBackend();
 
   const {
     // Tanks /obj/machinery/computer/general_air_control
@@ -130,20 +130,20 @@ const AtmoControlTankCore = (props, context) => {
   }
 
   const inputActions = {
-    'power': () => act('in_toggle_injector'),
-    'apply': () => act('in_set_flowrate'),
-    'refresh': () => act('in_refresh_status'),
-    'slider': (e, val) =>
+    power: () => act('in_toggle_injector'),
+    apply: () => act('in_set_flowrate'),
+    refresh: () => act('in_refresh_status'),
+    slider: (e, val) =>
       act('adj_input_flow_rate', {
-        'adj_input_flow_rate': val,
+        adj_input_flow_rate: val,
       }),
   };
 
   const outputActions = {
-    'power': () => act('out_toggle_power'),
-    'apply': () => act('out_set_pressure'),
-    'refresh': () => act('out_refresh_status'),
-    'slider': (e, val) => act('adj_pressure', { 'adj_pressure': val }),
+    power: () => act('out_toggle_power'),
+    apply: () => act('out_set_pressure'),
+    refresh: () => act('out_refresh_status'),
+    slider: (e, val) => act('adj_pressure', { adj_pressure: val }),
   };
 
   return (
@@ -172,7 +172,7 @@ const AtmoControlTankCore = (props, context) => {
   );
 };
 
-const AtmoControlTankCoreControl = (props, context) => {
+const AtmoControlTankCoreControl = (props) => {
   const {
     info,
     maxSliderValue,
@@ -188,7 +188,7 @@ const AtmoControlTankCoreControl = (props, context) => {
     <Section
       title={name}
       buttons={
-        <Fragment>
+        <>
           <Button
             content="Refresh"
             icon="sync"
@@ -202,8 +202,9 @@ const AtmoControlTankCoreControl = (props, context) => {
             disabled={!info}
             onClick={() => actions.power()}
           />
-        </Fragment>
-      }>
+        </>
+      }
+    >
       <LabeledList>
         {(info && (
           <LabeledList.Item label={name}>
@@ -228,7 +229,8 @@ const AtmoControlTankCoreControl = (props, context) => {
               disabled={!info}
               onClick={() => actions.apply()}
             />
-          }>
+          }
+        >
           <Slider
             mt="0.4em"
             animated
@@ -237,7 +239,8 @@ const AtmoControlTankCoreControl = (props, context) => {
             stepPixelSize={1 / (maxSliderValue / 500)}
             value={sliderControl}
             fillValue={sliderFill ? sliderFill : 0}
-            onChange={(e, val) => actions.slider(e, val)}>
+            onChange={(e, val) => actions.slider(e, val)}
+          >
             {sliderFill ? sliderFill : 'UNK'} {unit} / {sliderControl} {unit}
           </Slider>
         </LabeledList.Item>
@@ -246,15 +249,15 @@ const AtmoControlTankCoreControl = (props, context) => {
   );
 };
 
-const AtmoControlFuel = (props, context) => {
-  const { act, data } = useBackend(context);
+const AtmoControlFuel = (props) => {
+  const { act, data } = useBackend();
 
   const { fuel, automation, device_info } = data;
   return (
     <Section
       title="Fuel Injection System"
       buttons={
-        <Fragment>
+        <>
           <Button
             icon="syringe"
             content="Inject"
@@ -273,8 +276,9 @@ const AtmoControlFuel = (props, context) => {
             selected={device_info ? device_info.power : false}
             disabled={automation || !device_info}
           />
-        </Fragment>
-      }>
+        </>
+      }
+    >
       {device_info ? (
         <LabeledList>
           <LabeledList.Item label="Status">
@@ -293,14 +297,14 @@ const AtmoControlFuel = (props, context) => {
           </LabeledList.Item>
         </LabeledList>
       ) : (
-        <Fragment>
+        <>
           <Box color="bad">ERROR: Cannot Find Device</Box>
           <Button
             icon="search"
             content="Search"
             onClick={() => act('refresh_status')}
           />
-        </Fragment>
+        </>
       )}
     </Section>
   );

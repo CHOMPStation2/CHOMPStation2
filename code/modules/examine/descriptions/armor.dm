@@ -24,7 +24,9 @@
 	switch(slowdown)
 		if(-INFINITY to -0.1)
 			return "It looks like it might actually make you faster!"
-		if(0 || null)
+		if(null)
+			return "It doesn't look like it'll impede your mobility."
+		if(0)
 			return "It doesn't look like it'll impede your mobility."
 		if(0.5)
 			return "It might slow you down a little bit."

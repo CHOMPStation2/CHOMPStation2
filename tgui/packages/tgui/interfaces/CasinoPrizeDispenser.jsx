@@ -1,36 +1,39 @@
 import { createSearch } from 'common/string';
-import { Fragment } from 'inferno';
 import { useBackend, useLocalState } from '../backend';
-import { Box, Button, Collapsible, Dropdown, Flex, Input, Section } from '../components';
+import {
+  Box,
+  Button,
+  Collapsible,
+  Dropdown,
+  Flex,
+  Input,
+  Section,
+} from '../components';
 import { Window } from '../layouts';
 
 const sortTypes = {
-  'Alphabetical': (a, b) => a - b,
+  Alphabetical: (a, b) => a - b,
   'By availability': (a, b) => -(a.affordable - b.affordable),
   'By price': (a, b) => a.price - b.price,
 };
 
 export const CasinoPrizeDispenserCh = () => {
   return (
-    <Window width={400} height={450} resizable>
+    <Window width={400} height={450}>
       <Window.Content className="Layout__content--flexColumn" scrollable>
-        <Fragment>
+        <>
           <CasinoPrizeDispenserChSearch />
           <CasinoPrizeDispenserChItems />
-        </Fragment>
+        </>
       </Window.Content>
     </Window>
   );
 };
 
-const CasinoPrizeDispenserChSearch = (props, context) => {
-  const [_searchText, setSearchText] = useLocalState(context, 'search', '');
-  const [_sortOrder, setSortOrder] = useLocalState(context, 'sort', '');
-  const [descending, setDescending] = useLocalState(
-    context,
-    'descending',
-    false
-  );
+const CasinoPrizeDispenserChSearch = (props) => {
+  const [_searchText, setSearchText] = useLocalState('search', '');
+  const [_sortOrder, setSortOrder] = useLocalState('sort', '');
+  const [descending, setDescending] = useLocalState('descending', false);
   return (
     <Box mb="0.5rem">
       <Flex width="100%">
@@ -65,21 +68,13 @@ const CasinoPrizeDispenserChSearch = (props, context) => {
   );
 };
 
-const CasinoPrizeDispenserChItems = (props, context) => {
-  const { act, data } = useBackend(context);
+const CasinoPrizeDispenserChItems = (props) => {
+  const { act, data } = useBackend();
   const { points, items } = data;
   // Search thingies
-  const [searchText, _setSearchText] = useLocalState(context, 'search', '');
-  const [sortOrder, _setSortOrder] = useLocalState(
-    context,
-    'sort',
-    'Alphabetical'
-  );
-  const [descending, _setDescending] = useLocalState(
-    context,
-    'descending',
-    false
-  );
+  const [searchText, _setSearchText] = useLocalState('search', '');
+  const [sortOrder, _setSortOrder] = useLocalState('sort', 'Alphabetical');
+  const [descending, _setDescending] = useLocalState('descending', false);
   const searcher = createSearch(searchText, (item) => {
     return item[0];
   });
@@ -122,8 +117,8 @@ const CasinoPrizeDispenserChItems = (props, context) => {
   );
 };
 
-const CasinoPrizeDispenserChItemsCategory = (properties, context) => {
-  const { act, data } = useBackend(context);
+const CasinoPrizeDispenserChItemsCategory = (properties) => {
+  const { act, data } = useBackend();
   const { title, items, ...rest } = properties;
   return (
     <Collapsible open title={title} {...rest}>
@@ -135,7 +130,8 @@ const CasinoPrizeDispenserChItemsCategory = (properties, context) => {
             lineHeight="20px"
             style={{
               float: 'left',
-            }}>
+            }}
+          >
             {item.name}
           </Box>
           <Button

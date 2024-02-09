@@ -2,13 +2,13 @@ import { useBackend } from '../backend';
 import { Button } from '../components';
 import { Window } from '../layouts';
 
-export const XenoarchReplicator_clothing_vr = (props, context) => {
-  const { act, data } = useBackend(context);
+export const XenoarchReplicator_clothing_vr = (props) => {
+  const { act, data } = useBackend();
 
   const { tgui_construction } = data;
 
   return (
-    <Window theme="abductor" width={400} height={400} resizable>
+    <Window theme="abductor" width={400} height={400}>
       <Window.Content scrollable>
         {tgui_construction.map((button, i) => (
           <Button

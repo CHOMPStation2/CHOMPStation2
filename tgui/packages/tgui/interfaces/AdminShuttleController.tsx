@@ -1,4 +1,5 @@
 import { sortBy } from 'common/collections';
+
 import { useBackend } from '../backend';
 import { Button, Section, Table } from '../components';
 import { Window } from '../layouts';
@@ -22,7 +23,7 @@ type OvermapShip = {
 
 export const AdminShuttleController = () => {
   return (
-    <Window width={600} height={600} resizable>
+    <Window width={600} height={600}>
       <Window.Content scrollable>
         <ShuttleList />
       </Window.Content>
@@ -30,8 +31,8 @@ export const AdminShuttleController = () => {
   );
 };
 
-export const ShuttleList = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const ShuttleList = (props) => {
+  const { act, data } = useBackend<Data>();
 
   const { shuttles, overmap_ships } = data;
 
@@ -65,7 +66,7 @@ export const ShuttleList = (props, context) => {
       <Section title="Overmap Ships">
         <Table>
           {sortBy((f: OvermapShip) => f.name?.toLowerCase() || f.name || f.ref)(
-            overmap_ships
+            overmap_ships,
           ).map((ship) => (
             <Table.Row key={ship.ref}>
               <Table.Cell collapsing>

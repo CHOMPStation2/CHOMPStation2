@@ -380,23 +380,161 @@
 	var/mob/living/caller = src
 	if(temporary_form)
 		caller = temporary_form
-	var/blobstyle = input(caller, "Which blob style would you like?") in list("Red and Blue Stars", "Blue Star", "Plain", "Catslug", "Pai Cat")
+	var/list/icon_choices = list(
+			"Primary" = image(icon = 'modular_chomp/icons/mob/species/protean/protean.dmi', icon_state = "primary"),
+			"Highlight" = image(icon = 'modular_chomp/icons/mob/species/protean/protean.dmi', icon_state = "highlight"),
+			"puddle1" = image(icon = 'modular_chomp/icons/mob/species/protean/protean_powers.dmi', icon_state = "blob"),
+			"puddle0" = image(icon = 'modular_chomp/icons/mob/species/protean/protean.dmi', icon_state = "puddle"),
+			"catslug" = image(icon = 'modular_chomp/icons/mob/species/protean/protean.dmi', icon_state = "catslug"),
+			"cat" = image(icon = 'modular_chomp/icons/mob/species/protean/protean.dmi', icon_state = "cat"),
+			"mouse" = image(icon = 'modular_chomp/icons/mob/species/protean/protean.dmi', icon_state = "mouse"),
+			"rabbit" = image(icon = 'modular_chomp/icons/mob/species/protean/protean.dmi', icon_state = "rabbit"),
+			"bear" = image(icon = 'modular_chomp/icons/mob/species/protean/protean.dmi', icon_state = "bear"),
+			"fen" = image(icon = 'modular_chomp/icons/mob/species/protean/protean.dmi', icon_state = "fen"),
+			"fox" = image(icon = 'modular_chomp/icons/mob/species/protean/protean.dmi', icon_state = "fox"),
+			"raptor" = image(icon = 'modular_chomp/icons/mob/species/protean/protean.dmi', icon_state = "raptor"),
+			"rat" = image(icon = 'modular_chomp/icons/mob/species/protean/protean64x32.dmi', icon_state = "rat", pixel_x = -16),
+			"lizard" = image(icon = 'modular_chomp/icons/mob/species/protean/protean64x32.dmi', icon_state = "lizard", pixel_x = -16),
+			"wolf" = image(icon = 'modular_chomp/icons/mob/species/protean/protean64x32.dmi', icon_state = "wolf", pixel_x = -16),
+			//"drake" = image(icon = 'modular_chomp/icons/mob/species/protean/protean64x64.dmi', icon_state = "drake", pixel_x = -16),
+			"teppi" = image(icon = 'modular_chomp/icons/mob/species/protean/protean64x64.dmi', icon_state = "teppi", pixel_x = -16),
+			"panther" = image(icon = 'modular_chomp/icons/mob/species/protean/protean64x64.dmi', icon_state = "panther", pixel_x = -16),
+			"robodrgn" = image(icon = 'modular_chomp/icons/mob/species/protean/protean128x64.dmi', icon_state = "robodrgn", pixel_x = -48),
+			"Dragon" = image(icon = 'icons/mob/bigdragon_small.dmi', icon_state = "dragon_small")
+			)
+	var/blobstyle = show_radial_menu(caller, caller, icon_choices, require_near = TRUE, tooltips = FALSE)
+	if(!blobstyle || QDELETED(caller) || caller.incapacitated())
+		return FALSE
 	switch(blobstyle)
-		if("Red and Blue Stars")
-			S.blob_appearance = "puddle2"
-		if("Blue Star")
-			S.blob_appearance = "puddle1"
-		if("Plain")
-			S.blob_appearance = "puddle0"
-		if("Catslug")
-			S.blob_appearance = "catslug"
-		if("Pai Cat")
-			S.blob_appearance = "pai-cat"
+		if("Dragon")	//Fuck it, we ball
+			var/list/options = list("Underbelly","Body","Ears","Mane","Horns","Eyes")
+			for(var/option in options)
+				LAZYSET(options, option, image('icons/effects/bigdragon_labels.dmi', option))
+			var/choice = show_radial_menu(caller, caller, options, radius = 60)
+			if(!choice || QDELETED(caller) || caller.incapacitated())
+				return FALSE
+			. = TRUE
+			var/list/underbelly_styles = list(
+				"dragon_underSmooth",
+				"dragon_underPlated"
+			)
+			var/list/body_styles = list(
+				"dragon_bodySmooth",
+				"dragon_bodyScaled"
+			)
+			var/list/ear_styles = list(
+				"dragon_earsNormal"
+			)
+			var/list/mane_styles = list(
+				"dragon_maneNone",
+				"dragon_maneShaggy",
+				"dragon_maneDorsalfin"
+			)
+			var/list/horn_styles = list(
+				"dragon_hornsPointy",
+				"dragon_hornsCurved",
+				"dragon_hornsCurved2",
+				"dragon_hornsJagged",
+				"dragon_hornsCrown",
+				"dragon_hornsSkull"
+			)
+			var/list/eye_styles = list(
+				"dragon_eyesNormal"
+			)
+			switch(choice)
+				if("Underbelly")
+					options = underbelly_styles
+					for(var/option in options)
+						var/image/I = image('icons/mob/vore128x64.dmi', option, dir = 4, pixel_x = -48)
+						LAZYSET(options, option, I)
+					choice = show_radial_menu(caller, caller, options, radius = 90)
+					if(!choice || QDELETED(caller) || caller.incapacitated())
+						return 0
+					var/new_color = input("Pick underbelly color:","Underbelly Color", S.dragon_overlays[1]) as null|color
+					if(!new_color)
+						return 0
+					S.dragon_overlays[1] = choice
+					S.dragon_overlays[S.dragon_overlays[1]] = new_color
+				if("Body")
+					options = body_styles
+					for(var/option in options)
+						var/image/I = image('icons/mob/vore128x64.dmi', option, dir = 4, pixel_x = -48)
+						LAZYSET(options, option, I)
+					choice = show_radial_menu(caller, caller, options, radius = 90)
+					if(!choice || QDELETED(caller) || caller.incapacitated())
+						return 0
+					var/new_color = input("Pick body color:","Body Color", S.dragon_overlays[2]) as null|color
+					if(!new_color)
+						return 0
+					S.dragon_overlays[2] = choice
+					S.dragon_overlays[S.dragon_overlays[2]] = new_color
+				if("Ears")
+					options = ear_styles
+					for(var/option in options)
+						var/image/I = image('icons/mob/vore128x64.dmi', option, dir = 4, pixel_x = -76, pixel_y = -50)
+						LAZYSET(options, option, I)
+					choice = show_radial_menu(caller, caller, options, radius = 90)
+					if(!choice || QDELETED(caller) || caller.incapacitated())
+						return 0
+					var/new_color = input("Pick ear color:","Ear Color", S.dragon_overlays[3]) as null|color
+					if(!new_color)
+						return 0
+					S.dragon_overlays[3] = choice
+					S.dragon_overlays[S.dragon_overlays[3]] = new_color
+				if("Mane")
+					options = mane_styles
+					for(var/option in options)
+						var/image/I = image('icons/mob/vore128x64.dmi', option, dir = 4, pixel_x = -76, pixel_y = -50)
+						LAZYSET(options, option, I)
+					choice = show_radial_menu(caller, caller, options, radius = 90)
+					if(!choice || QDELETED(caller) || caller.incapacitated())
+						return 0
+					var/new_color = input("Pick mane color:","Mane Color", S.dragon_overlays[4]) as null|color
+					if(!new_color)
+						return 0
+					S.dragon_overlays[4] = choice
+					S.dragon_overlays[S.dragon_overlays[4]] = new_color
+				if("Horns")
+					options = horn_styles
+					for(var/option in options)
+						var/image/I = image('icons/mob/vore128x64.dmi', option, dir = 4, pixel_x = -86, pixel_y = -50)
+						LAZYSET(options, option, I)
+					choice = show_radial_menu(caller, caller, options, radius = 90)
+					if(!choice || QDELETED(caller) || caller.incapacitated())
+						return 0
+					var/new_color = input("Pick horn color:","Horn Color", S.dragon_overlays[5]) as null|color
+					if(!new_color)
+						return 0
+					S.dragon_overlays[5] = choice
+					S.dragon_overlays[S.dragon_overlays[5]] = new_color
+				if("Eyes")
+					options = eye_styles
+					for(var/option in options)
+						var/image/I = image('icons/mob/vore128x64.dmi', option, dir = 2, pixel_x = -48, pixel_y = -50)
+						LAZYSET(options, option, I)
+					choice = show_radial_menu(caller, caller, options, radius = 90)
+					if(!choice || QDELETED(caller) || caller.incapacitated())
+						return 0
+					var/new_color = input("Pick eye color:","Eye Color", S.dragon_overlays[6]) as null|color
+					if(!new_color)
+						return 0
+					S.dragon_overlays[6] = choice
+					S.dragon_overlays[S.dragon_overlays[6]] = new_color
+			S.blob_appearance = "dragon"
+		if("Primary")
+			var/new_color = input("Pick primary color:","Protean Primary", "#FF0000") as null|color
+			if(!new_color)
+				return
+			S.blob_color_1 = new_color
+		if("Highlight")
+			var/new_color = input("Pick highlight color:","Protean Highlight", "#FF0000") as null|color
+			if(!new_color)
+				return
+			S.blob_color_2 = new_color
+		else
+			S.blob_appearance = blobstyle
 	if(temporary_form)
 		if(blobstyle)
-			temporary_form.icon_living = S.blob_appearance
-			temporary_form.item_state = S.blob_appearance
-			temporary_form.icon_rest = S.blob_appearance + "_rest"
 			temporary_form.update_icon()
 			if(istype(temporary_form.loc, /obj/item/weapon/holder/protoblob))
 				var/obj/item/weapon/holder/protoblob/PB = temporary_form.loc

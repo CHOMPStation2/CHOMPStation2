@@ -9,13 +9,13 @@ type Data = {
   supplemental: string;
 };
 
-export const pAIDirectives = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const pAIDirectives = (props) => {
+  const { act, data } = useBackend<Data>();
 
   const { master, dna, prime, supplemental } = data;
 
   return (
-    <Window width={450} height={600} resizable>
+    <Window width={450} height={600}>
       <Window.Content scrollable>
         <Section title="Master">
           <LabeledList>

@@ -46,6 +46,7 @@
 			for(var/mob/living/voice/V in I.possessed_voice)
 				if(!V.tf_mob_holder)
 					V.ghostize(0)
+					V.stat = DEAD //CHOMPAdd - Helps with autosleeving
 					V.Destroy()
 	//CHOMPAdd End
 
