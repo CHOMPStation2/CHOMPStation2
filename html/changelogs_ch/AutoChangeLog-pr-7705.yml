@@ -1,0 +1,6 @@
+author: "Raeschen"
+delete-after: True
+changes:
+  - balance: "Shadekin HP nerfs (Per eye color)"
+  - balance: "Bluespace crystals dephase shadekin that step on them"
+  - balance: "Bluespace crystals will dephase shadekin in a 3 tile radius when thrown."
