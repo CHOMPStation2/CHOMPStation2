@@ -1,8 +1,8 @@
 /* eslint react/no-danger: "off" */
+import { resolveAsset } from '../assets';
 import { useBackend } from '../backend';
 import { Button, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
-import { resolveAsset } from '../assets';
 
 export const StarcasterCh = (props, context) => {
   const { act, data } = useBackend(context);
@@ -40,7 +40,8 @@ const SelectedArticle = (props, context) => {
         <Button icon="times" onClick={() => act('PRG_reset')}>
           Close
         </Button>
-      }>
+      }
+    >
       {!!cover && <img src={resolveAsset(cover)} />}
       {/* News articles are written in premade .html files and cannot be edited by players, so it should be
        * safe enough to use dangerouslySetInnerHTML here.
@@ -61,10 +62,12 @@ const ViewArticles = (props, context) => {
       buttons={
         <Button.Checkbox
           onClick={() => act('PRG_toggle_archived')}
-          checked={showing_archived}>
+          checked={showing_archived}
+        >
           Show Archived
         </Button.Checkbox>
-      }>
+      }
+    >
       <LabeledList>
         {(all_articles.length &&
           all_articles.map((article) => (

@@ -1,7 +1,15 @@
 /* eslint react/no-danger: "off" */
 import { KEY_ENTER } from '../../../common/keycodes';
 import { useBackend, useLocalState } from '../../backend';
-import { Box, Button, Divider, Flex, Input, LabeledList, Section } from '../../components';
+import {
+  Box,
+  Button,
+  Divider,
+  Flex,
+  Input,
+  LabeledList,
+  Section,
+} from '../../components';
 import { Window } from '../../layouts';
 
 const Level = {
@@ -17,14 +25,14 @@ const LevelColor = {
 };
 
 const Tag = {
-  'example': 'Example',
+  example: 'Example',
 };
 
 const State = {
-  'open': 'Open',
-  'resolved': 'Resolved',
-  'closed': 'Closed',
-  'unknown': 'Unknown',
+  open: 'Open',
+  resolved: 'Resolved',
+  closed: 'Closed',
+  unknown: 'Unknown',
 };
 
 type Data = {
@@ -47,7 +55,8 @@ export const TicketChat = (props) => {
             <Box nowrap>
               <Button content={Level[level]} color={LevelColor[level]} />
             </Box>
-          }>
+          }
+        >
           <LabeledList>
             <LabeledList.Item label="Assignee">{handler}</LabeledList.Item>
             <LabeledList.Item label="Log" />

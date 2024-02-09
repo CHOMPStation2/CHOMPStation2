@@ -144,6 +144,10 @@ cfg/
 *.kdev4*
 *.kate-swp
 
+#extra map stuff
+/_maps/**/backup/
+/_maps/templates.dm
+
 temp.dmi
 
 # JavaScript tools
