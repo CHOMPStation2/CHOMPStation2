@@ -251,7 +251,7 @@
 		ability_flags &= ~AB_PHASE_SHIFTING
 
 //CHOMPEdit start - force dephase proc, to be called by other procs to dephase the shadekin. T is the target to force dephase them to.
-/mob/living/carbon/human/proc/attack_dephase(var/turf/T = null)
+/mob/living/carbon/human/proc/attack_dephase(var/turf/T = null, atom/dephaser)
 	var/datum/species/shadekin/SK = species
 
 	// no assigned dephase-target, just use our own
@@ -263,8 +263,8 @@
 		return FALSE
 
 
-	log_admin("[key_name_admin(src)] was stunned out of phase at [T.x],[T.y],[T.z].")
-	message_admins("[key_name_admin(src)] was stunned out of phase at [T.x],[T.y],[T.z]. (<A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[T.x];Y=[T.y];Z=[T.z]'>JMP</a>)", 1)
+	log_admin("[key_name_admin(src)] was stunned out of phase at [T.x],[T.y],[T.z] by [dephaser.name], last touched by [dephaser.fingerprintslast].")
+	message_admins("[key_name_admin(src)] was stunned out of phase at [T.x],[T.y],[T.z] by [dephaser.name], last touched by [dephaser.fingerprintslast]. (<A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[T.x];Y=[T.y];Z=[T.z]'>JMP</a>)", 1)
 	// start the dephase
 	phase_in(T)
 	shadekin_adjust_energy(-20) // loss of energy for the interception

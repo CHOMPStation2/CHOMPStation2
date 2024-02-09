@@ -10,7 +10,7 @@
 			var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
 			s.set_up(5, 1, T)
 			s.start()
-			H.attack_dephase(T)
+			H.attack_dephase(T, src)
 			qdel(src)
 
 
@@ -21,4 +21,4 @@
 		if(istype(thing, /mob/living/carbon/human))
 			var/mob/living/carbon/human/H = thing
 			if(H.get_species() == SPECIES_SHADEKIN && (H.ability_flags & AB_PHASE_SHIFTED))
-				H.attack_dephase()
+				H.attack_dephase(null, src)
