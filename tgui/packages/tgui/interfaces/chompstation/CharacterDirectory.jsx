@@ -188,6 +188,61 @@ const ViewCharacter = (props) => {
       <Section level={2} title="OOC Notes">
         <Box style={{ 'word-break': 'break-all' }} preserveWhitespace>
           {props.overlay.ooc_notes || 'Unset.'}
+          {overlay.ooc_notes_style &&
+          (overlay.ooc_notes_favs ||
+            overlay.ooc_notes_likes ||
+            overlay.ooc_notes_maybes ||
+            overlay.ooc_notes_dislikes) ? (
+            <Table>
+              <Table.Row bold>
+                {overlay.ooc_notes_favs ? (
+                  <Table.Cell>FAVOURITES</Table.Cell>
+                ) : (
+                  ""
+                )}
+                {overlay.ooc_notes_likes ? <Table.Cell>LIKES</Table.Cell> : ""}
+                {overlay.ooc_notes_maybes ? (
+                  <Table.Cell>MAYBES</Table.Cell>
+                ) : (
+                  ""
+                )}
+                {overlay.ooc_notes_dislikes ? (
+                  <Table.Cell>DISLIKES</Table.Cell>
+                ) : (
+                  ""
+                )}
+              </Table.Row>
+              <Table.Row>
+                <Table.Cell>
+                  <br />
+                </Table.Cell>
+              </Table.Row>
+              <Table.Row>
+                {overlay.ooc_notes_favs ? (
+                  <Table.Cell>{overlay.ooc_notes_favs}</Table.Cell>
+                ) : (
+                  ""
+                )}
+                {overlay.ooc_notes_likes ? (
+                  <Table.Cell>{overlay.ooc_notes_likes}</Table.Cell>
+                ) : (
+                  ""
+                )}
+                {overlay.ooc_notes_maybes ? (
+                  <Table.Cell>{overlay.ooc_notes_maybes}</Table.Cell>
+                ) : (
+                  ""
+                )}
+                {overlay.ooc_notes_dislikes ? (
+                  <Table.Cell>{overlay.ooc_notes_dislikes}</Table.Cell>
+                ) : (
+                  ""
+                )}
+              </Table.Row>
+            </Table>
+          ) : (
+            ""
+          )}
         </Box>
       </Section>
       <Section level={2} title="Flavor Text">

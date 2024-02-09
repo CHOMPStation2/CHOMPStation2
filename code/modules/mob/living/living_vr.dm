@@ -38,6 +38,11 @@
 		ooc_notes_window(usr)
 		set_metainfo_likes(FALSE)
 		set_metainfo_dislikes(FALSE)
+		//CHOMPEdit Start
+		set_metainfo_favs(FALSE)
+		set_metainfo_maybes(FALSE)
+		set_metainfo_ooc_style(FALSE)
+		//CHOMPEdit End
 
 /mob/living/proc/set_metainfo_panel()
 	if(usr != src)
@@ -87,11 +92,51 @@
 	if(!ooc_notes)
 		return
 	var/msg = ooc_notes
-	if(ooc_notes_likes)
-		msg += "<br><br><b>LIKES</b><br><br>[ooc_notes_likes]"
-	if(ooc_notes_dislikes)
-		msg += "<br><br><b>DISLIKES</b><br><br>[ooc_notes_dislikes]"
-	to_chat(usr, "<span class='chatexport'>[src]'s Metainfo:<br>[msg]</span>")
+	//CHOMPEdit Start
+	if(ooc_notes_style && (ooc_notes_favs || ooc_notes_likes || ooc_notes_maybes || ooc_notes_dislikes) && usr.client.is_preference_enabled(/datum/client_preference/vchat_enable)) // Oldchat hates proper formatting
+		msg += "<br><br>"
+		msg += "<table><tr>"
+		if(ooc_notes_favs)
+			msg += "<th><b>\t[span_blue("FAVOURITES")]</b></th>"
+		if(ooc_notes_likes)
+			msg += "<th><b>\t[span_green("LIKES")]</b></th>"
+		if(ooc_notes_maybes)
+			msg += "<th><b>\t[span_yellow("MAYBES")]</b></th>"
+		if(ooc_notes_dislikes)
+			msg += "<th><b>\t[span_red("DISLIKES")]</b></th>"
+		msg += "</tr><tr>"
+		if(ooc_notes_favs)
+			msg += "<td>"
+			for(var/line in splittext(ooc_notes_favs, "\n"))
+				msg += "\t[line]\n"
+			msg += "</td>"
+		if(ooc_notes_likes)
+			msg += "<td>"
+			for(var/line in splittext(ooc_notes_likes, "\n"))
+				msg += "\t[line]\n"
+			msg += "</td>"
+		if(ooc_notes_maybes)
+			msg += "<td>"
+			for(var/line in splittext(ooc_notes_maybes, "\n"))
+				msg += "\t[line]\n"
+			msg += "</td>"
+		if(ooc_notes_dislikes)
+			msg += "<td>"
+			for(var/line in splittext(ooc_notes_dislikes, "\n"))
+				msg += "\t[line]\n"
+			msg += "</td>"
+		msg += "</tr></table>"
+	else
+		if(ooc_notes_favs)
+			msg += "<br><br><b>[span_blue("FAVOURITES")]</b><br>[ooc_notes_favs]"
+		if(ooc_notes_likes)
+			msg += "<br><br><b>[span_green("LIKES")]</b><br>[ooc_notes_likes]"
+		if(ooc_notes_maybes)
+			msg += "<br><br><b>[span_yellow("MAYBES")]</b><br>[ooc_notes_maybes]"
+		if(ooc_notes_dislikes)
+			msg += "<br><br><b>[span_red("DISLIKES")]</b><br>[ooc_notes_dislikes]"
+	to_chat(usr, "<span class='chatexport'><b>[src]'s Metainfo:</b><br>[msg]</span>")
+	//CHOMPEdit End
 
 /mob/living/verb/set_custom_link()
 	set name = "Set Custom Link"
