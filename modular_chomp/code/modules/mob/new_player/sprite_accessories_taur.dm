@@ -266,6 +266,17 @@
 	extra_overlay_w = "bigleggy_m_bird_stanced"
 	extra_overlay2_w = "bigleggy_bird"
 
+/datum/sprite_accessory/tail/taur/drake/extended //Sub-pathing drake taur so we can steal their cloaks
+	name = "Fat Drake Extended (Taur)"
+	icon = 'icons/mob/vore/taurs_ch.dmi'
+	icon_state = "extended_fatdrake"
+	extra_overlay = "extended_fatdrake_markings"
+	extra_overlay2 = "extended_fatdrake_markings2"
+
+	can_loaf = FALSE //Soon
+	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
+	loaf_offset = 6
+
 /datum/sprite_accessory/tail/taur/ch/bigleggy/AlienSlug
 	name = "Big Leggies (Alien Slug Tail)"
 	icon_state = "bigleggy_full_alienslug"

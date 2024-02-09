@@ -125,3 +125,12 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	wing_offset = 16
+
+/datum/sprite_accessory/wing/taurdragon
+	name = "Taur wings (Draconian)"
+	desc = ""
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings64.dmi'
+	icon_state = "taurdrake_wing"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	wing_offset = 16

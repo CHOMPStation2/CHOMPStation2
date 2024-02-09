@@ -4682,6 +4682,7 @@
 #include "modular_chomp\code\game\turfs\simulated\outdoors\lava_land.dm"
 #include "modular_chomp\code\matrices\color_matrix.dm"
 #include "modular_chomp\code\modules\admin\functions\modify_traits.dm"
+#include "modular_chomp\code\modules\admin\verbs\randomverbs.dm"
 #include "modular_chomp\code\modules\artifice\deadringer.dm"
 #include "modular_chomp\code\modules\asset_cache\asset_list.dm"
 #include "modular_chomp\code\modules\casino\casino_map_atoms.dm"
