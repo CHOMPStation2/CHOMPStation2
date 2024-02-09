@@ -173,7 +173,6 @@
 	default_worn_icon = 'icons/inventory/head/mob_vr.dmi'
 	icon_state = "tiny_tophat"
 
-<<<<<<< HEAD
 // CHOMPEdit Start
 /obj/item/clothing/head/halo
 	name = "holographic demonic halo"
@@ -182,7 +181,7 @@
 	default_worn_icon = 'modular_chomp/icons/inventory/head/mob_halo.dmi'
 	icon_state = "halo"
 // CHOMPEdit End
-=======
+
 //Replikant Hat
 
 /obj/item/clothing/head/eulrhat
@@ -191,4 +190,3 @@
 	icon = 'icons/inventory/head/item_vr.dmi'
 	icon_override = 'icons/inventory/head/mob_vr.dmi'
 	icon_state = "eulrhat"
->>>>>>> 82812ea2e6... Merge pull request #15733 from BonniePandora/Replikant
