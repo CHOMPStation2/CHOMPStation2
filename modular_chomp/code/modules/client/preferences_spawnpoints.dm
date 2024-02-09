@@ -27,7 +27,7 @@
 /datum/spawnpoint/plainspath
 	display_name = "Sif plains"
 	msg = "has checked in at the plains gate"
-	restrict_job = list(JOB_OUTSIDER)
+	restrict_job = list(JOB_OUTSIDER, JOB_ANOMALY)
 
 /datum/spawnpoint/plainspath/New()
 	..()

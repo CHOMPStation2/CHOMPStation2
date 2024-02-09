@@ -3,8 +3,8 @@ import { Box, Button, LabeledList, Section, Table } from '../components';
 import { NtosWindow } from '../layouts';
 import { NtosEmailClientViewMessage } from './NtosEmailClient';
 
-export const NtosEmailAdministration = (props, context) => {
-  const { act, data } = useBackend(context);
+export const NtosEmailAdministration = (props) => {
+  const { act, data } = useBackend();
 
   const { error, cur_title, current_account } = data;
 
@@ -19,14 +19,14 @@ export const NtosEmailAdministration = (props, context) => {
   }
 
   return (
-    <NtosWindow width={600} height={450} resizable>
+    <NtosWindow width={600} height={450}>
       <NtosWindow.Content scrollable>{body}</NtosWindow.Content>
     </NtosWindow>
   );
 };
 
-const MainMenu = (props, context) => {
-  const { act, data } = useBackend(context);
+const MainMenu = (props) => {
+  const { act, data } = useBackend();
   const { accounts } = data;
   return (
     <Section title="Welcome to the NTNet Email Administration System">
@@ -44,7 +44,8 @@ const MainMenu = (props, context) => {
           fluid
           icon="eye"
           key={account.uid}
-          onClick={() => act('viewaccount', { viewaccount: account.uid })}>
+          onClick={() => act('viewaccount', { viewaccount: account.uid })}
+        >
           {account.login}
         </Button>
       ))}
@@ -52,8 +53,8 @@ const MainMenu = (props, context) => {
   );
 };
 
-const EmailError = (props, context) => {
-  const { act, data } = useBackend(context);
+const EmailError = (props) => {
+  const { act, data } = useBackend();
   const { error } = data;
   return (
     <Section
@@ -62,14 +63,15 @@ const EmailError = (props, context) => {
         <Button icon="undo" onClick={() => act('back')}>
           Back
         </Button>
-      }>
+      }
+    >
       {error}
     </Section>
   );
 };
 
-const ViewEmail = (props, context) => {
-  const { act, data } = useBackend(context);
+const ViewEmail = (props) => {
+  const { act, data } = useBackend();
   return (
     <Section>
       <NtosEmailClientViewMessage administrator />
@@ -77,8 +79,8 @@ const ViewEmail = (props, context) => {
   );
 };
 
-const ViewAccount = (props, context) => {
-  const { act, data } = useBackend(context);
+const ViewAccount = (props) => {
+  const { act, data } = useBackend();
   const {
     error,
     msg_title,
@@ -97,14 +99,16 @@ const ViewAccount = (props, context) => {
         <Button icon="undo" onClick={() => act('back')}>
           Back
         </Button>
-      }>
+      }
+    >
       <LabeledList>
         <LabeledList.Item label="Account Status">
           <Button
             color={cur_suspended ? 'bad' : ''}
             icon="ban"
             tooltip={(cur_suspended ? 'Uns' : 'S') + 'uspend Account?'}
-            onClick={() => act('ban')}>
+            onClick={() => act('ban')}
+          >
             {cur_suspended ? 'Suspended' : 'Normal'}
           </Button>
         </LabeledList.Item>
@@ -131,7 +135,8 @@ const ViewAccount = (props, context) => {
                 <Table.Cell>
                   <Button
                     icon="eye"
-                    onClick={() => act('viewmail', { viewmail: message.uid })}>
+                    onClick={() => act('viewmail', { viewmail: message.uid })}
+                  >
                     View
                   </Button>
                 </Table.Cell>

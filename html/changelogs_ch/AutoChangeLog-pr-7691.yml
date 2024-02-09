@@ -1,0 +1,5 @@
+author: "Missile597"
+delete-after: True
+changes:
+  - bugfix: "Removed access levels from buttons and doors on SurvivalSecurity shelter, allowing outsiders to access their own capsule"
+  - bugfix: "Fixed the starting atmos on the skipjack plating parts of the SurvivalSecurity shelter so that it's breathable and not just Nitrogen."

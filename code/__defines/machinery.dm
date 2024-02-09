@@ -73,6 +73,7 @@ var/global/defer_powernet_rebuild = 0      // True if net rebuild will be called
 #define NETWORK_EXPLORATION "Exploration"
 #define NETWORK_XENOBIO "Xenobiology"
 #define NETWORK_THUNDER "Entertainment"		//VOREStation Edit: broader definition
+#define NETWORK_BODYCAM "Body Cameras" // CHOMPStation Edit
 #define NETWORK_COMMUNICATORS "Communicators"
 #define NETWORK_ALARM_ATMOS "Atmosphere Alarms"
 #define NETWORK_ALARM_POWER "Power Alarms"

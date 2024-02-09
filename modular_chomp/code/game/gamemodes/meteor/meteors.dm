@@ -1,5 +1,7 @@
 /obj/effect/meteor/dust/meatyore
 	name = "space blood"
+	icon = 'modular_chomp/icons/obj/meteor.dmi'
+	icon_state = "meaty_dust"
 	meteordrop = /obj/item/weapon/reagent_containers/food/snacks/bacon
 
 /obj/effect/meteor/dust/meatyore/Bump()
@@ -8,6 +10,8 @@
 
 /obj/effect/meteor/medium/meatyore
 	name = "meatyore"
+	icon = 'modular_chomp/icons/obj/meteor.dmi'
+	icon_state = "meaty_medium"
 	meteordrop = /obj/random/organ
 
 /obj/effect/meteor/medium/meatyore/Bump()
@@ -21,6 +25,8 @@
 
 /obj/effect/meteor/big/meatyore
 	name = "large meatyore"
+	icon = 'modular_chomp/icons/obj/meteor.dmi'
+	icon_state = "meaty_big"
 	meteordrop = /obj/random/organ
 
 /obj/effect/meteor/big/meatyore/Bump()
@@ -32,8 +38,10 @@
 	if(gib)
 		new /obj/effect/gibspawner/human(get_turf(src))
 
-/obj/effect/meteor/flaming/meatyore
+/obj/effect/meteor/flaming/
 	name = "flaming meatyore"
+	icon = 'modular_chomp/icons/obj/meteor.dmi'
+	icon_state = "meaty_flaming"
 	meteordrop = /obj/item/weapon/reagent_containers/food/snacks/meatsteak
 
 /obj/effect/meteor/flaming/meatyore/Bump()
@@ -47,6 +55,8 @@
 
 /obj/effect/meteor/irradiated/meatyore
 	name = "glowing meaty ore"
+	icon = 'icons/obj/meteor.dmi'
+	icon_state = "glowing"
 	meteordrop = /obj/item/weapon/reagent_containers/food/snacks/deathclawmeat
 
 /obj/effect/meteor/irradiated/meatyore/Bump()
@@ -57,11 +67,11 @@
 	..()
 	if(gib)
 		new /obj/effect/gibspawner/human(get_turf(src))
-	new /obj/effect/decal/cleanable/greenglow(get_turf(src))
-	SSradiation.radiate(src, 50)
 
 /obj/effect/meteor/emp/meatyore
 	name = "conducting meaty ore"
+	icon = 'modular_chomp/icons/obj/meteor.dmi'
+	icon_state = "meaty_glowing"
 	meteordrop = /obj/item/weapon/reagent_containers/food/snacks/meat/grubmeat
 
 /obj/effect/meteor/emp/meatyore/Bump()
@@ -72,24 +82,20 @@
 	..()
 	if(gib)
 		new /obj/effect/gibspawner/human
-	empulse(src, rand(1, 3), rand(2, 4), rand(3, 7), rand(5, 10))
-
-/obj/effect/meteor/emp/meatyore/get_shield_damage()
-	return ..() * rand(2,4)
 
 /obj/effect/meteor/tunguska/meatyore
 	name = "tunguska meatyore"
+	icon = 'modular_chomp/icons/obj/meteor.dmi'
+	icon_state = "meaty_flaming"
 	meteordrop = /obj/item/weapon/reagent_containers/food/snacks/phorondragonmeat
 
 /obj/effect/meteor/tunguska/meatyore/meteor_effect(var/gib)
 	..()
 	if(gib)
-		explosion(src.loc, 3, 6, 9, 20, 0)
 		new /obj/effect/gibspawner/human(get_turf(src))
 
 /obj/effect/meteor/tunguska/meatyore/Bump()
 	..()
 	new /obj/effect/decal/cleanable/blood/splatter(get_turf(src))
 	if(prob(20))
-		explosion(src.loc,2,4,6,8)
 		new /obj/effect/decal/cleanable/blood/gibs(get_turf(src))

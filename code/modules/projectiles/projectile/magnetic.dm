@@ -5,8 +5,8 @@
 	icon_state = "rod"
 	fire_sound = 'sound/weapons/railgun.ogg'
 	damage = 65
-	stun = 1
-	weaken = 1
+	stun = 0 // CHOMPedit: Guaranteed stuns from a gun bad.
+	weaken = 0 // CHOMPedit: Guaranteed stuns from a gun bad.
 	penetrating = 5
 	armor_penetration = 70
 	hud_state = "alloy_spike"

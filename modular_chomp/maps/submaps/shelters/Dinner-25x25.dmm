@@ -606,6 +606,11 @@
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/survivalpod/superpose/Dinner)
+"da" = (
+/obj/structure/simple_door/wood,
+/obj/structure/fans/tiny,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/Dinner)
 "dQ" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 4
@@ -685,6 +690,11 @@
 "Ql" = (
 /obj/structure/kitchenspike,
 /turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/Dinner)
+"Rx" = (
+/obj/structure/simple_door/wood,
+/obj/structure/fans/tiny,
+/turf/simulated/floor/tiled,
 /area/survivalpod/superpose/Dinner)
 "WB" = (
 /obj/structure/table/woodentable,
@@ -943,8 +953,8 @@ ab
 ab
 ab
 ad
-az
-az
+da
+da
 ad
 ab
 ab
@@ -1404,7 +1414,7 @@ ad
 ad
 ad
 ad
-aA
+Rx
 ad
 ad
 ad

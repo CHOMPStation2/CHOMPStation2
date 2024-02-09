@@ -1,4 +1,5 @@
 import { BooleanLike } from 'common/react';
+
 import { useBackend } from '../backend';
 import { Box, Button, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
@@ -9,8 +10,8 @@ type Data = {
   strength: number;
 };
 
-export const ParticleAccelerator = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const ParticleAccelerator = (props) => {
+  const { act, data } = useBackend<Data>();
   const { assembled, power, strength } = data;
   return (
     <Window width={350} height={185}>
@@ -25,7 +26,8 @@ export const ParticleAccelerator = (props, context) => {
                   content={'Run Scan'}
                   onClick={() => act('scan')}
                 />
-              }>
+              }
+            >
               <Box color={assembled ? 'good' : 'bad'}>
                 {assembled
                   ? 'Ready - All parts in place'

@@ -1,4 +1,3 @@
-import { Fragment } from 'inferno';
 import { useBackend } from '../backend';
 import { Box, Button, Flex, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
@@ -44,7 +43,7 @@ const ChemSynthesizerQueueRecipes = (props, context) => {
           title="Queue"
           overflowY="scroll"
           buttons={
-            <Fragment>
+            <>
               <Button
                 disabled={!!busy}
                 color={use_catalyst ? 'green' : 'bad'}
@@ -68,8 +67,9 @@ const ChemSynthesizerQueueRecipes = (props, context) => {
                   onClick={() => act('start_queue')}
                 />
               )}
-            </Fragment>
-          }>
+            </>
+          }
+        >
           <LabeledList>
             {(queue.length &&
               queue.map((item) => {
@@ -94,7 +94,8 @@ const ChemSynthesizerQueueRecipes = (props, context) => {
                         act('rem_queue', {
                           q_index: item.index,
                         })
-                      }>
+                      }
+                    >
                       Delete
                     </Button>
                   </LabeledList.Item>
@@ -114,7 +115,8 @@ const ChemSynthesizerQueueRecipes = (props, context) => {
               tooltip={production_mode ? 'Import Recipe' : 'Generate Recipe'}
               onClick={() => act('add_recipe')}
             />
-          }>
+          }
+        >
           <LabeledList>
             {(recipes.length &&
               recipes.map((item) => {
@@ -221,7 +223,8 @@ const ChemSynthesizerChemicals = (props, context) => {
               onClick={() => act('eject_catalyst')}
             />
           </Box>
-        }>
+        }
+      >
         <BeakerContents
           beakerLoaded={catalyst}
           beakerContents={catalyst_reagents}

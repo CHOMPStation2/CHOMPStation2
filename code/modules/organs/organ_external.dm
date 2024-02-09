@@ -1086,7 +1086,7 @@ Note that amputating the affected organ does in fact remove the infection from t
 			owner.emote("scream")
 		jostle_bone()	//VOREStation Edit End
 
-	playsound(src, "fracture", 10, 1, -2)
+	playsound(src, "fracture", 90, 1, -2) // CHOMPedit: Much more audible bonebreaks.
 	status |= ORGAN_BROKEN
 	broken_description = pick("broken","fracture","hairline fracture")
 

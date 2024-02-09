@@ -58,6 +58,10 @@
 	reload_max = 7		// Not the best default, but it fits the pistol
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/eclipse/ranged
 
+	loot_list = list(/obj/item/slime_extract/sepia  = 1,
+		/obj/item/weapon/bone/skull = 100
+			)
+
 	special_attack_cooldown = 15 SECONDS
 	special_attack_min_range = 2
 	special_attack_max_range = 7
@@ -109,7 +113,7 @@
 
 /mob/living/simple_mob/humanoid/eclipse/solar/bullet_act(obj/item/projectile/P)
 	if(istype(P, /obj/item/projectile/energy) || istype(P, /obj/item/projectile/beam))
-		visible_message("<font color='orange'><B>[P] seems ineffective!.</B></font>")
+		visible_message(span_orange("<B>[P] seems ineffective!.</B>"))
 		..()
 	else
 		..()
@@ -254,6 +258,10 @@
 	glow_range = 5
 	glow_intensity = 3
 
+	loot_list = list(/obj/item/slime_extract/sepia  = 1,
+		/obj/item/weapon/bone/skull/unathi = 100
+			)
+
 	projectiletype = /obj/item/projectile/energy/declone/burn
 	var/rads = 5
 
@@ -276,7 +284,7 @@
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/bullet_act(obj/item/projectile/P)
 	if(istype(P, /obj/item/projectile/bullet))
-		visible_message("<font color='orange'><B>[P] seems ineffective!.</B></font>")
+		visible_message(span_orange("<B>[P] seems ineffective!.</B>"))
 		..()
 	else
 		..()
@@ -554,6 +562,10 @@
 	icon_living = "eclipse_guardian"
 	reload_max = 10
 
+	loot_list = list(/obj/item/slime_extract/sepia  = 1,
+		/obj/item/slime_extract/grey = 100
+			)
+
 /mob/living/simple_mob/humanoid/eclipse/solar/guardian/handle_special()
 	if(stat != DEAD)
 		heal_aura()
@@ -616,6 +628,10 @@
 
 	ranged_attack_delay = 1.5 SECONDS
 	hovering = TRUE
+
+	loot_list = list(/obj/item/slime_extract/sepia  = 1,
+		/obj/item/slime_extract/grey = 100
+			)
 
 	var/exploded = FALSE
 	var/explosion_dev_range		= 0
@@ -696,6 +712,10 @@
 	special_attack_max_range = 7
 	icon_state = "miner"
 	icon_living = "miner"
+
+	loot_list = list(/obj/item/slime_extract/sepia  = 1,
+		/obj/item/slime_extract/grey = 100
+			)
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/miner/do_special_attack(atom/A)
 	new /mob/living/simple_mob/mechanical/mining_drone/scavenger/eclipse (src.loc)
@@ -847,6 +867,8 @@
 	submunition_spread_min = 500
 	submunitions = list(/obj/item/projectile/energy/frostsphere = 4)
 
+	hud_state = "plasma_sphere"
+
 /obj/item/projectile/bullet/frostshotgun/on_range()
 	qdel(src)
 
@@ -858,7 +880,8 @@
 	modifier_type_to_apply = /datum/modifier/cryogelled
 	modifier_duration = 0.25 MINUTE
 	speed = 2.5
-	range = 8
+	range = 12
+	hud_state = "water"
 
 /datum/ai_holder/simple_mob/merc/eclipse/ranged/cyro
 	can_flee = TRUE					// If they're even allowed to flee.

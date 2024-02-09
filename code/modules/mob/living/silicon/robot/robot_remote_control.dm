@@ -109,13 +109,13 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 		if(mainframe.laws)
 			mainframe.laws.show_laws(mainframe) //Always remind the AI when switching
 		mainframe = null
-		soul_link(/datum/soul_link/shared_body, src, target)
+		soul_link(/datum/soul_link/shared_body, AI, target)
 		AI.deployed_shell = target
 		target.deploy_init(AI)
 		if(src.client) //CHOMPADDITION: Resize shell based on our preffered size
 			target.resize(src.client.prefs.size_multiplier) //CHOMPADDITION: Resize shell based on our preffered size
 		mind.transfer_to(target)
-		teleop = target // So the AI 'hears' messages near its core.
+		AI.teleop = target // So the AI 'hears' messages near its core.
 		target.post_deploy()
 //CHOMPADDITION END
 

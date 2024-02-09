@@ -208,7 +208,7 @@ so stay sharp eh?<br>\
 	info = {"to whoever's stuck at the helm of this farce of an operation,<br>\
 good news! you may have noticed the entire ship was replaced pretty much overnight.<br>\
 that or it changed shape or something? whatever, not important.<br>\
-it is essential that I tell you that there is most definitely not a new smuggling compartment hidden under your end table<br>\
+it is essential that I tell you that there is most definitely not a new smuggling compartment hidden under the carpet at the foot of your bed<br>\
 unfortunately I couldn't possibly tell you the fictional combination for a hypothetical compartment that doesn't exist<br>\
 have fun!<br>\
 <br>\
@@ -224,18 +224,11 @@ what is important is that the shuttle has been replaced. it is now capable of fu
 but the rear airlock is a bit fussy. be sure to use the manual switches on each side of the airlock if you're matching another airlock and one side is exposed to vacuum or a hostile atmosphere!<br>\
 also be sure that it's locked down before you take off, the automatic switch is a bit stupid sometimes!<br>\
 <br>\
-<<<<<<< HEAD
-||||||| parent of 6f0e8e5ffb... Merge pull request #10350 from KillianKirilenko/kk-ships
-finally, make sure you check the shuttle's APC power level before you head out! it can be fussy about (re)charging off the main ship grid sometimes. despite having someone in to look at the cables, we couldn't figure out why.<br>\
-I recommend packing a spare battery (there should be a few in engineering you can borrow and charge up) to be safe. don't wanna get stranded!<br>\
-<br>\
-=======
 finally, make sure you check the shuttle's APC power level before you head out! it used to be fussy, so we had a pro come in to double-check our setup and he yanked some weird gubbin I'd never seen before out of a wall panel, nodded to himself, and then walked off without saying anything else. weird but now it seems to behave.<br>\
 I recommend packing a spare battery (there should be a few in engineering you can borrow and charge up) to be safe. don't wanna get stranded!<br>\
 <br>\
 speaking of, if some dumbass does take it and fly off solo then get themselves killed, you can use the remote console in the little spot north of the hangar to initiate basic remote maneuvers. it can't do long-range flight, but the shuttle has some basic autopilot routines for stable orbit and docking that you can ping. this won't help if the shuttle's grounded <b>and</b> out of battery, but better than nothing, right?<br>\
 <br>\
->>>>>>> 6f0e8e5ffb... Merge pull request #10350 from KillianKirilenko/kk-ships
 <i>Harry Townes</i>"}
 
 /obj/item/weapon/paper/talon_cannon
@@ -274,6 +267,7 @@ personally I recommend using the ship's boat if you need to evacuate, but if you
 	name = "somewhat glitchy drone fabricator"
 	desc = "Obtained from a derelict, it seems to work sometimes, not work sometimes, and work TOO good sometimes. Didn't come with a control console either..."
 	drone_type = /mob/living/silicon/robot/drone/talon
+	fabricator_tag = "Talon"
 
 /mob/living/silicon/robot/drone/talon
 	foreign_droid = TRUE
@@ -666,7 +660,7 @@ personally I recommend using the ship's boat if you need to evacuate, but if you
 /obj/effect/shuttle_landmark/premade/talon_v2_wing_star
 	name = "ITV Talon (Starboard Wingtip)"
 	landmark_tag = "talon_v2_wing_star"
-	
+
 /obj/random/multiple/corp_crate/talon_cargo
 	name = "random corporate crate (talon)"
 	desc = "A random corporate crate with thematic contents. No weapons, no SAARE cashbox, 50% chance to not appear."
@@ -679,7 +673,6 @@ personally I recommend using the ship's boat if you need to evacuate, but if you
 	desc = "A pile of random ores. High chance of a larger pile of common ores, lower chances of small piles of rarer ores. No verdantium, reduced item counts vs normal ore craes."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "ore_clown"
-
 
 /obj/random/multiple/ore_pile/talon/item_to_spawn()
 	return pick(

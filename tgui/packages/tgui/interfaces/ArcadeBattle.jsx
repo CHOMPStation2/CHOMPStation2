@@ -1,9 +1,16 @@
 import { useBackend } from '../backend';
-import { Box, Button, Flex, LabeledList, ProgressBar, Section } from '../components';
+import {
+  Box,
+  Button,
+  Flex,
+  LabeledList,
+  ProgressBar,
+  Section,
+} from '../components';
 import { Window } from '../layouts';
 
-export const ArcadeBattle = (props, context) => {
-  const { act, data } = useBackend(context);
+export const ArcadeBattle = (props) => {
+  const { act, data } = useBackend();
 
   const {
     name,
@@ -18,7 +25,7 @@ export const ArcadeBattle = (props, context) => {
   } = data;
 
   return (
-    <Window width={400} height={240} resizable>
+    <Window width={400} height={240}>
       <Window.Content>
         <Section title={enemyName} textAlign="center">
           <Section color="label">
@@ -38,7 +45,8 @@ export const ArcadeBattle = (props, context) => {
                       good: [20, 31],
                       average: [10, 20],
                       bad: [-Infinity, 10],
-                    }}>
+                    }}
+                  >
                     {playerHP}HP
                   </ProgressBar>
                 </LabeledList.Item>
@@ -51,7 +59,8 @@ export const ArcadeBattle = (props, context) => {
                       purple: [11, Infinity],
                       violet: [3, 11],
                       bad: [-Infinity, 3],
-                    }}>
+                    }}
+                  >
                     {playerMP}MP
                   </ProgressBar>
                 </LabeledList.Item>
@@ -69,7 +78,8 @@ export const ArcadeBattle = (props, context) => {
                       good: [20, 31],
                       average: [10, 20],
                       bad: [-Infinity, 10],
-                    }}>
+                    }}
+                  >
                     {enemyHP}HP
                   </ProgressBar>
                 </LabeledList.Item>

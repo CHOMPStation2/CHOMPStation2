@@ -114,7 +114,7 @@ var/list/turf_edge_cache = list()
 /turf/simulated/floor/outdoors/mud
 	name = "mud"
 	icon_state = "mud_dark"
-	edge_blending_priority = 3
+	edge_blending_priority = 4 // CHOMPedit
 	initial_flooring = /decl/flooring/mud
 	can_dig = TRUE
 
@@ -123,6 +123,7 @@ var/list/turf_edge_cache = list()
 	desc = "Hard as a rock."
 	icon_state = "rock"
 	edge_blending_priority = 1
+	initial_flooring = /decl/flooring/rock
 
 /turf/simulated/floor/outdoors/rocks/caves
 	outdoors = OUTDOORS_NO

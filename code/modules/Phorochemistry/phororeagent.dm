@@ -130,14 +130,14 @@ var/induromol_code = rand(1, 50)
 						love_name = H.name
 
 				if(love_name)
-					to_chat(M, "<font color='#e3209b'>You see [love_name]...</font>")
+					to_chat(M, span_darkpink("You see [love_name]..."))
 					spawn(0)
 						sleep(10)
-						to_chat(M, "<font color='#e3209b'>They are beautiful</font>")
+						to_chat(M, span_darkpink("They are beautiful"))
 
 						if(M.mind) //give protect objective
 							var/datum/objective/protection = new/datum/objective()
-							protection.explanation_text = "<font color='#e3209b'>Protect [love_name] at all costs</font>"
+							protection.explanation_text = span_darkpink("Protect [love_name] at all costs")
 							M.mind.objectives.Add(protection)
 							var/obj_count = 1
 							to_chat(M, "<span class='notice'>Your current objectives:</span>")
@@ -155,10 +155,10 @@ var/induromol_code = rand(1, 50)
 						"[love_name] seems to be the essence of perfection",
 						"[love_name] can never be allowed to leave your side")
 
-						to_chat(M, "<font color='#e3209b'>[pick(love_messages)]</font>")
+						to_chat(M, span_darkpink("[pick(love_messages)]"))
 
 					else
-						to_chat(M, "<font color='#e3209b'>You begin to build a trouser tent</font>")
+						to_chat(M, span_darkpink("You begin to build a trouser tent"))
 	return ..()
 
 /datum/reagent/phororeagent/love_potion/on_remove(var/atom/A)

@@ -1,11 +1,24 @@
 import { toTitleCase } from 'common/string';
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend, useLocalState, useSharedState } from '../backend';
-import { Box, Button, Flex, Icon, LabeledList, ProgressBar, Section, Tabs, Input, NumberInput, Table, Divider } from '../components';
+import {
+  Box,
+  Button,
+  Flex,
+  Icon,
+  LabeledList,
+  ProgressBar,
+  Section,
+  Tabs,
+  Input,
+  NumberInput,
+  Table,
+  Divider,
+} from '../components';
 import { Window } from '../layouts';
 
-const ResearchConsoleViewResearch = (props, context) => {
-  const { act, data } = useBackend(context);
+const ResearchConsoleViewResearch = (props) => {
+  const { act, data } = useBackend();
 
   const { tech } = data;
 
@@ -16,7 +29,8 @@ const ResearchConsoleViewResearch = (props, context) => {
         <Button icon="print" onClick={() => act('print', { print: 1 })}>
           Print This Page
         </Button>
-      }>
+      }
+    >
       <Table>
         {tech.map((thing) => (
           <Table.Row key={thing.name}>
@@ -34,8 +48,8 @@ const ResearchConsoleViewResearch = (props, context) => {
   );
 };
 
-const PaginationTitle = (props, context) => {
-  const { data } = useBackend(context);
+const PaginationTitle = (props) => {
+  const { data } = useBackend();
 
   const { title, target } = props;
 
@@ -47,13 +61,13 @@ const PaginationTitle = (props, context) => {
   return title;
 };
 
-const PaginationChevrons = (props, context) => {
-  const { act } = useBackend(context);
+const PaginationChevrons = (props) => {
+  const { act } = useBackend();
 
   const { target } = props;
 
   return (
-    <Fragment>
+    <>
       <Button icon="undo" onClick={() => act(target, { reset: true })} />
       <Button
         icon="chevron-left"
@@ -63,12 +77,12 @@ const PaginationChevrons = (props, context) => {
         icon="chevron-right"
         onClick={() => act(target, { reverse: 1 })}
       />
-    </Fragment>
+    </>
   );
 };
 
-const ResearchConsoleViewDesigns = (props, context) => {
-  const { act, data } = useBackend(context);
+const ResearchConsoleViewDesigns = (props) => {
+  const { act, data } = useBackend();
 
   const { designs } = data;
 
@@ -81,13 +95,14 @@ const ResearchConsoleViewDesigns = (props, context) => {
         />
       }
       buttons={
-        <Fragment>
+        <>
           <Button icon="print" onClick={() => act('print', { print: 2 })}>
             Print This Page
           </Button>
           {<PaginationChevrons target={'design_page'} /> || null}
-        </Fragment>
-      }>
+        </>
+      }
+    >
       <Input
         fluid
         placeholder="Search for..."
@@ -108,8 +123,8 @@ const ResearchConsoleViewDesigns = (props, context) => {
   );
 };
 
-const TechDisk = (props, context) => {
-  const { act, data } = useBackend(context);
+const TechDisk = (props) => {
+  const { act, data } = useBackend();
 
   const { tech } = data;
 
@@ -119,11 +134,7 @@ const TechDisk = (props, context) => {
     return null;
   }
 
-  const [saveDialog, setSaveDialog] = useSharedState(
-    context,
-    'saveDialogTech',
-    false
-  );
+  const [saveDialog, setSaveDialog] = useSharedState('saveDialogTech', false);
 
   if (saveDialog) {
     return (
@@ -135,7 +146,8 @@ const TechDisk = (props, context) => {
             content="Back"
             onClick={() => setSaveDialog(false)}
           />
-        }>
+        }
+      >
         <LabeledList>
           {tech.map((level) => (
             <LabeledList.Item label={level.name} key={level.name}>
@@ -144,7 +156,8 @@ const TechDisk = (props, context) => {
                 onClick={() => {
                   setSaveDialog(false);
                   act('copy_tech', { copy_tech_ID: level.id });
-                }}>
+                }}
+              >
                 Copy To Disk
               </Button>
             </LabeledList.Item>
@@ -193,8 +206,8 @@ const TechDisk = (props, context) => {
   );
 };
 
-const DataDisk = (props, context) => {
-  const { act, data } = useBackend(context);
+const DataDisk = (props) => {
+  const { act, data } = useBackend();
 
   const { designs } = data;
 
@@ -204,11 +217,7 @@ const DataDisk = (props, context) => {
     return null;
   }
 
-  const [saveDialog, setSaveDialog] = useSharedState(
-    context,
-    'saveDialogData',
-    false
-  );
+  const [saveDialog, setSaveDialog] = useSharedState('saveDialogData', false);
 
   if (saveDialog) {
     return (
@@ -217,15 +226,16 @@ const DataDisk = (props, context) => {
           <PaginationTitle title="Load Design to Disk" target="design_page" />
         }
         buttons={
-          <Fragment>
+          <>
             <Button
               icon="arrow-left"
               content="Back"
               onClick={() => setSaveDialog(false)}
             />
             {<PaginationChevrons target={'design_page'} /> || null}
-          </Fragment>
-        }>
+          </>
+        }
+      >
         <Input
           fluid
           placeholder="Search for..."
@@ -242,7 +252,8 @@ const DataDisk = (props, context) => {
                   onClick={() => {
                     setSaveDialog(false);
                     act('copy_design', { copy_design_ID: item.id });
-                  }}>
+                  }}
+                >
                   Copy To Disk
                 </Button>
               </LabeledList.Item>
@@ -297,8 +308,8 @@ const DataDisk = (props, context) => {
   );
 };
 
-const ResearchConsoleDisk = (props, context) => {
-  const { act, data } = useBackend(context);
+const ResearchConsoleDisk = (props) => {
+  const { act, data } = useBackend();
 
   const { d_disk, t_disk } = data.info;
 
@@ -314,8 +325,8 @@ const ResearchConsoleDisk = (props, context) => {
   );
 };
 
-const ResearchConsoleDestructiveAnalyzer = (props, context) => {
-  const { act, data } = useBackend(context);
+const ResearchConsoleDestructiveAnalyzer = (props) => {
+  const { act, data } = useBackend();
 
   const { linked_destroy } = data.info;
 
@@ -355,7 +366,8 @@ const ResearchConsoleDestructiveAnalyzer = (props, context) => {
             mt={1}
             color="red"
             icon="eraser"
-            onClick={() => act('deconstruct')}>
+            onClick={() => act('deconstruct')}
+          >
             Deconstruct Item
           </Button>
           <Button icon="eject" onClick={() => act('eject_item')}>
@@ -367,8 +379,8 @@ const ResearchConsoleDestructiveAnalyzer = (props, context) => {
   );
 };
 
-const ResearchConsoleBuildMenu = (props, context) => {
-  const { act, data } = useBackend(context);
+const ResearchConsoleBuildMenu = (props) => {
+  const { act, data } = useBackend();
 
   const { target, designs, buildName, buildFiveName } = props;
 
@@ -379,7 +391,8 @@ const ResearchConsoleBuildMenu = (props, context) => {
   return (
     <Section
       title={<PaginationTitle target="builder_page" title="Designs" />}
-      buttons={<PaginationChevrons target={'builder_page'} />}>
+      buttons={<PaginationChevrons target={'builder_page'} />}
+    >
       <Input
         fluid
         placeholder="Search for..."
@@ -400,7 +413,8 @@ const ResearchConsoleBuildMenu = (props, context) => {
                   icon="wrench"
                   onClick={() =>
                     act(buildName, { build: design.id, imprint: design.id })
-                  }>
+                  }
+                >
                   Build
                 </Button>
                 {buildFiveName && (
@@ -411,7 +425,8 @@ const ResearchConsoleBuildMenu = (props, context) => {
                         build: design.id,
                         imprint: design.id,
                       })
-                    }>
+                    }
+                  >
                     x5
                   </Button>
                 )}
@@ -438,8 +453,8 @@ const ResearchConsoleBuildMenu = (props, context) => {
 };
 
 /* Lathe + Circuit Imprinter all in one */
-const ResearchConsoleConstructor = (props, context) => {
-  const { act, data } = useBackend(context);
+const ResearchConsoleConstructor = (props) => {
+  const { act, data } = useBackend();
 
   const { name } = props;
 
@@ -469,7 +484,7 @@ const ResearchConsoleConstructor = (props, context) => {
     queue,
   } = linked;
 
-  const [protoTab, setProtoTab] = useSharedState(context, 'protoTab', 0);
+  const [protoTab, setProtoTab] = useSharedState('protoTab', 0);
 
   let queueColor = 'transparent';
   let queueSpin = false;
@@ -510,7 +525,8 @@ const ResearchConsoleConstructor = (props, context) => {
         <Tabs.Tab
           icon="wrench"
           selected={protoTab === 0}
-          onClick={() => setProtoTab(0)}>
+          onClick={() => setProtoTab(0)}
+        >
           Build
         </Tabs.Tab>
         <Tabs.Tab
@@ -518,19 +534,22 @@ const ResearchConsoleConstructor = (props, context) => {
           iconSpin={queueSpin}
           color={queueColor}
           selected={protoTab === 1}
-          onClick={() => setProtoTab(1)}>
+          onClick={() => setProtoTab(1)}
+        >
           Queue
         </Tabs.Tab>
         <Tabs.Tab
           icon="cookie-bite"
           selected={protoTab === 2}
-          onClick={() => setProtoTab(2)}>
+          onClick={() => setProtoTab(2)}
+        >
           Mat Storage
         </Tabs.Tab>
         <Tabs.Tab
           icon="flask"
           selected={protoTab === 3}
-          onClick={() => setProtoTab(3)}>
+          onClick={() => setProtoTab(3)}
+        >
           Chem Storage
         </Tabs.Tab>
       </Tabs>
@@ -559,7 +578,8 @@ const ResearchConsoleConstructor = (props, context) => {
                               act(removeQueueAction, {
                                 [removeQueueAction]: item.index,
                               })
-                            }>
+                            }
+                          >
                             Remove
                           </Button>
                         </Box>
@@ -579,7 +599,8 @@ const ResearchConsoleConstructor = (props, context) => {
                         act(removeQueueAction, {
                           [removeQueueAction]: item.index,
                         })
-                      }>
+                      }
+                    >
                       Remove
                     </Button>
                   </LabeledList.Item>
@@ -591,16 +612,15 @@ const ResearchConsoleConstructor = (props, context) => {
           <LabeledList>
             {mats.map((mat) => {
               const [ejectAmt, setEjectAmt] = useLocalState(
-                context,
                 'ejectAmt' + mat.name,
-                0
+                0,
               );
               return (
                 <LabeledList.Item
                   label={toTitleCase(mat.name)}
                   key={mat.name}
                   buttons={
-                    <Fragment>
+                    <>
                       <NumberInput
                         minValue={0}
                         width="100px"
@@ -617,7 +637,8 @@ const ResearchConsoleConstructor = (props, context) => {
                             [ejectSheetAction]: mat.name,
                             amount: ejectAmt,
                           });
-                        }}>
+                        }}
+                      >
                         Num
                       </Button>
                       <Button
@@ -628,11 +649,13 @@ const ResearchConsoleConstructor = (props, context) => {
                             [ejectSheetAction]: mat.name,
                             amount: 50,
                           })
-                        }>
+                        }
+                      >
                         All
                       </Button>
-                    </Fragment>
-                  }>
+                    </>
+                  }
+                >
                   {mat.amount} cm&sup3;
                 </LabeledList.Item>
               );
@@ -649,9 +672,8 @@ const ResearchConsoleConstructor = (props, context) => {
                     <Button
                       ml={1}
                       icon="eject"
-                      onClick={() =>
-                        act(ejectChemAction, { dispose: chem.id })
-                      }>
+                      onClick={() => act(ejectChemAction, { dispose: chem.id })}
+                    >
                       Purge
                     </Button>
                   </LabeledList.Item>
@@ -670,16 +692,12 @@ const ResearchConsoleConstructor = (props, context) => {
   );
 };
 
-const ResearchConsoleSettings = (props, context) => {
-  const { act, data } = useBackend(context);
+const ResearchConsoleSettings = (props) => {
+  const { act, data } = useBackend();
 
   const { sync, linked_destroy, linked_imprinter, linked_lathe } = data.info;
 
-  const [settingsTab, setSettingsTab] = useSharedState(
-    context,
-    'settingsTab',
-    0
-  );
+  const [settingsTab, setSettingsTab] = useSharedState('settingsTab', 0);
 
   return (
     <Section title="Settings">
@@ -687,27 +705,29 @@ const ResearchConsoleSettings = (props, context) => {
         <Tabs.Tab
           icon="cogs"
           onClick={() => setSettingsTab(0)}
-          selected={settingsTab === 0}>
+          selected={settingsTab === 0}
+        >
           General
         </Tabs.Tab>
         <Tabs.Tab
           icon="link"
           onClick={() => setSettingsTab(1)}
-          selected={settingsTab === 1}>
+          selected={settingsTab === 1}
+        >
           Device Linkages
         </Tabs.Tab>
       </Tabs>
       {(settingsTab === 0 && (
         <Box>
           {(sync && (
-            <Fragment>
+            <>
               <Button fluid icon="sync" onClick={() => act('sync')}>
                 Sync Database with Network
               </Button>
               <Button fluid icon="unlink" onClick={() => act('togglesync')}>
                 Disconnect from Research Network
               </Button>
-            </Fragment>
+            </>
           )) || (
             <Button fluid icon="link" onClick={() => act('togglesync')}>
               Connect to Research Network
@@ -731,9 +751,8 @@ const ResearchConsoleSettings = (props, context) => {
                 <LabeledList.Item label="Destructive Analyzer">
                   <Button
                     icon="unlink"
-                    onClick={() =>
-                      act('disconnect', { disconnect: 'destroy' })
-                    }>
+                    onClick={() => act('disconnect', { disconnect: 'destroy' })}
+                  >
                     Disconnect
                   </Button>
                 </LabeledList.Item>
@@ -743,7 +762,8 @@ const ResearchConsoleSettings = (props, context) => {
                 <LabeledList.Item label="Protolathe">
                   <Button
                     icon="unlink"
-                    onClick={() => act('disconnect', { disconnect: 'lathe' })}>
+                    onClick={() => act('disconnect', { disconnect: 'lathe' })}
+                  >
                     Disconnect
                   </Button>
                 </LabeledList.Item>
@@ -755,7 +775,8 @@ const ResearchConsoleSettings = (props, context) => {
                     icon="unlink"
                     onClick={() =>
                       act('disconnect', { disconnect: 'imprinter' })
-                    }>
+                    }
+                  >
                     Disconnect
                   </Button>
                 </LabeledList.Item>
@@ -798,12 +819,12 @@ const menus = [
   { name: 'Disk Operations', icon: 'save', template: <ResearchConsoleDisk /> },
 ];
 
-export const ResearchConsole = (props, context) => {
-  const { act, data } = useBackend(context);
+export const ResearchConsole = (props) => {
+  const { act, data } = useBackend();
 
   const { busy_msg, locked } = data;
 
-  const [menu, setMenu] = useSharedState(context, 'rdmenu', 0);
+  const [menu, setMenu] = useSharedState('rdmenu', 0);
 
   let allTabsDisabled = false;
   if (busy_msg || locked) {
@@ -820,7 +841,8 @@ export const ResearchConsole = (props, context) => {
               icon={obj.icon}
               selected={menu === i}
               disabled={allTabsDisabled}
-              onClick={() => setMenu(i)}>
+              onClick={() => setMenu(i)}
+            >
               {obj.name}
             </Tabs.Tab>
           ))}

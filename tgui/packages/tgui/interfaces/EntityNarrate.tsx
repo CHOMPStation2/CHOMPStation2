@@ -1,6 +1,15 @@
 import { BooleanLike } from 'common/react';
+
 import { useBackend, useLocalState } from '../backend';
-import { Flex, Tabs, Section, Button, Box, TextArea, Divider } from '../components';
+import {
+  Box,
+  Button,
+  Divider,
+  Flex,
+  Section,
+  Tabs,
+  TextArea,
+} from '../components';
 import { Window } from '../layouts';
 
 type data = {
@@ -15,10 +24,10 @@ type data = {
   multi_id_selection: string[]; // To be used to highlight selection, and multi-use narrate
 };
 
-export const EntityNarrate = (props, context) => {
-  const { act, data } = useBackend<data>(context);
+export const EntityNarrate = (props) => {
+  const { act, data } = useBackend<data>();
   return (
-    <Window width={800} height={470} theme="abstract" resizable>
+    <Window width={800} height={470} theme="abstract">
       <Window.Content scrollable>
         <Section>
           <Flex>
@@ -58,8 +67,8 @@ export const EntityNarrate = (props, context) => {
 
 // Selects entity from a vertical list, with mode to allow multiple selections.
 // Clicking the tab again removes it
-export const EntitySelection = (props, context) => {
-  const { act, data } = useBackend<data>(context);
+export const EntitySelection = (props) => {
+  const { act, data } = useBackend<data>();
   const { selection_mode, multi_id_selection, entity_names } = data;
   return (
     <Flex direction="column" grow>
@@ -73,13 +82,15 @@ export const EntitySelection = (props, context) => {
               content="Multi-Selection"
               onClick={() => act('change_mode_multi')}
             />
-          }>
+          }
+        >
           <Tabs vertical>
             {entity_names.map((name) => (
               <Tabs.Tab
                 key={name}
                 selected={multi_id_selection.includes(name)}
-                onClick={() => act('select_entity', { id_selected: name })}>
+                onClick={() => act('select_entity', { id_selected: name })}
+              >
                 <Box inline>{name}</Box>
               </Tabs.Tab>
             ))}
@@ -90,8 +101,8 @@ export const EntitySelection = (props, context) => {
   );
 };
 
-export const DisplayDetails = (props, context) => {
-  const { act, data } = useBackend<data>(context);
+export const DisplayDetails = (props) => {
+  const { act, data } = useBackend<data>();
   const {
     selection_mode,
     number_mob_selected,
@@ -116,8 +127,8 @@ export const DisplayDetails = (props, context) => {
   }
 };
 
-export const ModeSelector = (props, context) => {
-  const { act, data } = useBackend<data>(context);
+export const ModeSelector = (props) => {
+  const { act, data } = useBackend<data>();
   const { privacy_select, mode_select } = data;
 
   return (
@@ -156,9 +167,9 @@ export const ModeSelector = (props, context) => {
   );
 };
 
-export const NarrationInput = (props, context) => {
-  const { act, data } = useBackend<data>(context);
-  const [narration, setNarration] = useLocalState(context, 'narration', '');
+export const NarrationInput = (props) => {
+  const { act, data } = useBackend<data>();
+  const [narration, setNarration] = useLocalState('narration', '');
   return (
     <Section
       title="Narration Text"
@@ -167,7 +178,8 @@ export const NarrationInput = (props, context) => {
           onClick={() => act('narrate', { message: narration })}
           content="Send Narration"
         />
-      }>
+      }
+    >
       <Flex>
         <Flex.Item width="85%">
           <TextArea

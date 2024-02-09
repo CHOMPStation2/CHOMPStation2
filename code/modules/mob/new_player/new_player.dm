@@ -138,7 +138,14 @@
 			var/datum/job/refJob = null
 			for(var/mob/new_player/player in player_list)
 				refJob = player.client.prefs.get_highest_job()
-				stat("Player", (player.ready)?("(Playing as: [(refJob)?(refJob.title):("Unknown")])"):(null)) //CHOMPEDIT: Anonymizing [player.key]
+				if(player.client.prefs.obfuscate_key && player.client.prefs.obfuscate_job)
+					stat("Anonymous User", (player.ready)?("Ready!"):(null))
+				else if(player.client.prefs.obfuscate_key)
+					stat("Anonymous User", (player.ready)?("(Playing as: [(refJob)?(refJob.title):("Unknown")])"):(null))
+				else if(player.client.prefs.obfuscate_job)
+					stat("[player.key]", (player.ready)?("Ready!"):(null))
+				else
+					stat("[player.key]", (player.ready)?("(Playing as: [(refJob)?(refJob.title):("Unknown")])"):(null))
 				totalPlayers++
 				if(player.ready)totalPlayersReady++
 
@@ -201,7 +208,7 @@
 	if(href_list["late_join"])
 
 		if(!ticker || ticker.current_state != GAME_STATE_PLAYING)
-			to_chat(usr, "<font color='red'>The round is either not ready, or has already finished...</font>")
+			to_chat(usr, span_red("The round is either not ready, or has already finished..."))
 			return
 
 		var/time_till_respawn = time_till_respawn()
@@ -448,7 +455,7 @@
 	if (src != usr)
 		return 0
 	if(!ticker || ticker.current_state != GAME_STATE_PLAYING)
-		to_chat(usr, "<font color='red'>The round is either not ready, or has already finished...</font>")
+		to_chat(usr, span_red("The round is either not ready, or has already finished..."))
 		return 0
 	if(!config.enter_allowed)
 		to_chat(usr, "<span class='notice'>There is an administrative lock on entering the game!</span>")
@@ -547,6 +554,10 @@
 	//CHOMPEdit Begin - non-crew join don't get a message
 	if(rank == JOB_OUTSIDER)
 		log_and_message_admins("has joined the round as non-crew. (<A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[T.x];Y=[T.y];Z=[T.z]'>JMP</a>)",character)
+		if(!(J.mob_type & JOB_SILICON))
+			ticker.minds += character.mind
+	else if(rank == JOB_ANOMALY)
+		log_and_message_admins("has joined the round as anomaly. (<A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[T.x];Y=[T.y];Z=[T.z]'>JMP</a>)",character)
 		if(!(J.mob_type & JOB_SILICON))
 			ticker.minds += character.mind
 	//CHOMPEdit End

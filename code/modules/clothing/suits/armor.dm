@@ -198,10 +198,10 @@
 /obj/item/clothing/suit/armor/reactive/attack_self(mob/user as mob)
 	active = !( active )
 	if (active)
-		to_chat(user, "<font color='blue'>The reactive armor is now active.</font>")
+		to_chat(user, span_blue("The reactive armor is now active."))
 		icon_state = "reactive"
 	else
-		to_chat(user, "<font color='blue'>The reactive armor is now inactive.</font>")
+		to_chat(user, span_blue("The reactive armor is now inactive."))
 		icon_state = "reactiveoff"
 		add_fingerprint(user)
 	return
@@ -543,7 +543,7 @@
 		return 1
 
 /obj/item/clothing/suit/armor/pcarrier/explorer
-	name = "explorer suit"
+	name = "explorer plate carrier" // CHOMPedit: Clarity for vendors.
 	desc = "A lightweight explorer plate carrier. It can be equipped with armor plates, but only protects from the cold on it's own."
 	icon_state = "explorer"
 	flags = THICKMATERIAL

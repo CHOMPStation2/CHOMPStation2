@@ -12,6 +12,9 @@
 	var/spitting = 0
 	var/spit_projectile = null // what our spit projectile is. Can be anything
 
+	//no stripping of simplemobs
+	strip_pref = FALSE
+
 /mob/living/simple_mob/RangedAttack(var/atom/A)
 	if(!isnull(spit_projectile) && spitting)
 		Spit(A)

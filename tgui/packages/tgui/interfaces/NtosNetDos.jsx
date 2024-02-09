@@ -1,4 +1,4 @@
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend } from '../backend';
 import { Box, Button, LabeledList, NoticeBox, Section } from '../components';
 import { NtosWindow } from '../layouts';
@@ -13,14 +13,14 @@ export const NtosNetDos = () => {
   );
 };
 
-export const NtosNetDosContent = (props, context) => {
-  const { act, data } = useBackend(context);
+export const NtosNetDosContent = (props) => {
+  const { act, data } = useBackend();
 
   const { relays = [], focus, target, speed, overload, capacity, error } = data;
 
   if (error) {
     return (
-      <Fragment>
+      <>
         <NoticeBox>{error}</NoticeBox>
         <Button
           fluid
@@ -28,7 +28,7 @@ export const NtosNetDosContent = (props, context) => {
           textAlign="center"
           onClick={() => act('PRG_reset')}
         />
-      </Fragment>
+      </>
     );
   }
 

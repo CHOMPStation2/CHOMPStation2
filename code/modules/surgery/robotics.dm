@@ -199,7 +199,7 @@
 	)
 
 	min_duration = 50
-	max_duration = 60
+	max_duration = 50 //CHOMPedit
 
 /datum/surgery_step/robotics/repair_burn/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(..())
@@ -251,7 +251,7 @@
 	allowed_procs = list(IS_SCREWDRIVER = 100)
 
 	min_duration = 70
-	max_duration = 90
+	max_duration = 70 //CHOMPedit
 
 /datum/surgery_step/robotics/fix_organ_robotic/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if (!hasorgans(target))

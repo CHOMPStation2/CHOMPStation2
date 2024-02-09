@@ -2,13 +2,13 @@ import { useBackend } from '../backend';
 import { Box, Button, LabeledList, ProgressBar, Section } from '../components';
 import { Window } from '../layouts';
 
-export const XenoarchArtifactHarvester = (props, context) => {
-  const { act, data } = useBackend(context);
+export const XenoarchArtifactHarvester = (props) => {
+  const { act, data } = useBackend();
 
   const { no_scanner, harvesting, inserted_battery } = data.info;
 
   return (
-    <Window width={450} height={200} resizable>
+    <Window width={450} height={200}>
       <Window.Content>
         {(no_scanner && (
           <Box color="bad">Warning: No scanner detected.</Box>
@@ -24,7 +24,8 @@ export const XenoarchArtifactHarvester = (props, context) => {
                   mt={1}
                   fluid
                   icon="stop"
-                  onClick={() => act('stopharvest')}>
+                  onClick={() => act('stopharvest')}
+                >
                   Stop Early
                 </Button>
               </Box>
@@ -39,7 +40,8 @@ export const XenoarchArtifactHarvester = (props, context) => {
                     mt={1}
                     fluid
                     icon="stop"
-                    onClick={() => act('stopharvest')}>
+                    onClick={() => act('stopharvest')}
+                  >
                     Stop Early
                   </Button>
                 </Box>
@@ -61,7 +63,8 @@ export const XenoarchArtifactHarvester = (props, context) => {
                     mt={1}
                     fluid
                     icon="eject"
-                    onClick={() => act('ejectbattery')}>
+                    onClick={() => act('ejectbattery')}
+                  >
                     Eject Battery
                   </Button>
                   <Button fluid icon="bolt" onClick={() => act('drainbattery')}>
@@ -79,8 +82,8 @@ export const XenoarchArtifactHarvester = (props, context) => {
   );
 };
 
-const ArtHarvestBatteryProgress = (props, context) => {
-  const { act, data } = useBackend(context);
+const ArtHarvestBatteryProgress = (props) => {
+  const { act, data } = useBackend();
 
   const { inserted_battery } = data.info;
 

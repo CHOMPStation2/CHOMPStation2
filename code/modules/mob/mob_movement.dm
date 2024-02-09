@@ -45,7 +45,7 @@
 				var/mob/living/carbon/C = usr
 				C.toggle_throw_mode()
 			else
-				to_chat(usr, "<font color='red'>This mob type cannot throw items.</font>")
+				to_chat(usr, span_red("This mob type cannot throw items."))
 			return
 		if(NORTHWEST)
 			if(isliving(usr))
@@ -54,11 +54,11 @@
 					if(C.pulling)
 						C.stop_pulling()
 						return
-					to_chat(usr, "<font color='red'>You have nothing to drop in your hand.</font>")
+					to_chat(usr, span_red("You have nothing to drop in your hand."))
 					return
 				drop_item()
 			else
-				to_chat(usr, "<font color='red'>This mob type cannot drop items.</font>")
+				to_chat(usr, span_red("This mob type cannot drop items."))
 			return
 
 //This gets called when you press the delete button.
@@ -66,7 +66,7 @@
 	set hidden = 1
 
 	if(!usr.pulling)
-		to_chat(usr, "<font color='blue'>You are not pulling anything.</font>")
+		to_chat(usr, span_blue("You are not pulling anything."))
 		return
 	usr.stop_pulling()
 
@@ -225,13 +225,13 @@
 		for(var/mob/M in range(my_mob, 1))
 			if(M.pulling == my_mob)
 				if(!M.restrained() && M.stat == 0 && M.canmove && my_mob.Adjacent(M))
-					to_chat(src, "<font color='blue'>You're restrained! You can't move!</font>")
+					to_chat(src, span_blue("You're restrained! You can't move!"))
 					return 0
 				else
 					M.stop_pulling()
 
 	if(my_mob.pinned.len)
-		to_chat(src, "<font color='blue'>You're pinned to a wall by [my_mob.pinned[1]]!</font>")
+		to_chat(src, span_blue("You're pinned to a wall by [my_mob.pinned[1]]!"))
 		return 0
 
 	if(istype(my_mob.buckled, /obj/vehicle) || ismob(my_mob.buckled))
@@ -433,7 +433,10 @@
 
 	if(restrained()) //Check to see if we can do things
 		return 0
+	inertia_dir = 0
+	return 1
 
+/* CHOMPedit: Nuking slipping.
 	//Check to see if we slipped
 	if(prob(Process_Spaceslipping(5)) && !buckled)
 		to_chat(src, "<span class='notice'><B>You slipped!</B></span>")
@@ -441,8 +444,7 @@
 		step(src, src.inertia_dir) // Not using Move for smooth glide here because this is a 'slip' so should be sudden.
 		return 0
 	//If not then we can reset inertia and move
-	inertia_dir = 0
-	return 1
+*/// CHOMPedit end.
 
 /mob/proc/Check_Dense_Object() //checks for anything to push off in the vicinity. also handles magboots on gravity-less floors tiles
 
@@ -485,6 +487,7 @@
 /mob/proc/Check_Shoegrip()
 	return 0
 
+/* CHOMPedit: Nuking slipping.
 /mob/proc/Process_Spaceslipping(var/prob_slip = 5)
 	//Setup slipage
 	//If knocked out we might just hit it and stop.  This makes it possible to get dead bodies and such.
@@ -493,6 +496,7 @@
 
 	prob_slip = round(prob_slip)
 	return(prob_slip)
+*/// CHOMPedit end.
 
 /mob/proc/mob_has_gravity(turf/T)
 	return has_gravity(src, T)

@@ -490,7 +490,8 @@
 					/obj/item/device/flash = 5,
 					/obj/item/weapon/reagent_containers/food/snacks/donut/plain = 6,
 					/obj/item/weapon/reagent_containers/food/snacks/donut/plain/jelly = 6,
-					/obj/item/weapon/storage/box/evidence = 6)
+					/obj/item/weapon/storage/box/evidence = 6, // CHOMPEdit
+					/obj/item/clothing/accessory/bodycam = 10) // CHOMPEdit
 	contraband = list(/obj/item/clothing/glasses/sunglasses = 2,
 					/obj/item/weapon/storage/box/donut = 2)
 	req_log_access = access_armory
