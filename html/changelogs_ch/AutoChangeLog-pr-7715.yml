@@ -1,0 +1,4 @@
+author: "Kashargul"
+delete-after: True
+changes:
+  - bugfix: "chemMaster / ChemSynthesizer, color mate interface and some vorePanel code style"
