@@ -1,8 +1,8 @@
-import { useBackend } from '../backend';
-import { Box, Button, Flex, LabeledList, Section } from '../components';
-import { Window } from '../layouts';
-import { BeakerContents } from './common/BeakerContents';
-import { ComplexModal, modalOpen } from './common/ComplexModal';
+import { useBackend } from '../../backend';
+import { Box, Button, Flex, LabeledList, Section } from '../../components';
+import { Window } from '../../layouts';
+import { BeakerContents } from '.././common/BeakerContents';
+import { ComplexModal, modalOpen } from '.././common/ComplexModal';
 
 export const ChemSynthesizer = (props, context) => {
   return (
@@ -75,7 +75,7 @@ const ChemSynthesizerQueueRecipes = (props, context) => {
               queue.map((item) => {
                 if (item.index === 1 && !!busy) {
                   return (
-                    <LabeledList.Item label={item.name} labelColor="bad">
+                    <LabeledList.Item key="" label={item.name} labelColor="bad">
                       {
                         <Box>
                           <Button disabled icon="trash">
@@ -87,7 +87,7 @@ const ChemSynthesizerQueueRecipes = (props, context) => {
                   );
                 }
                 return (
-                  <LabeledList.Item label={item.name}>
+                  <LabeledList.Item key="" label={item.name}>
                     <Button
                       icon="trash"
                       onClick={() =>
@@ -121,7 +121,7 @@ const ChemSynthesizerQueueRecipes = (props, context) => {
             {(recipes.length &&
               recipes.map((item) => {
                 return (
-                  <LabeledList.Item label={item.name}>
+                  <LabeledList.Item key="" label={item.name}>
                     <Button
                       icon="plus"
                       tooltip="Add to Queue"
@@ -310,17 +310,15 @@ const ChemSynthesizerSettings = (props, context) => {
               />
               <Button onClick={() => modalOpen(context, 'change_bottle_style')}>
                 <div
-                  style={
-                    'display: inline-block;' +
-                    'width: 16px;' +
-                    'height: 16px;' +
-                    'vertical-align: middle;' +
-                    'background: url(bottle-' +
-                    data.bottle_icon +
-                    '.png);' +
-                    'background-size: 200%;' +
-                    'background-position: left -10px bottom -6px;'
-                  }
+                  style={{
+                    display: 'inline-block',
+                    width: '16px',
+                    height: '16px',
+                    verticalAlign: 'middle',
+                    background: 'url(bottle-' + data.bottle_icon + '.png)',
+                    backgroundSize: '200%',
+                    backgroundPosition: 'left -10px bottom -6px',
+                  }}
                 />
                 Style
               </Button>
@@ -335,17 +333,15 @@ const ChemSynthesizerSettings = (props, context) => {
               />
               <Button onClick={() => modalOpen(context, 'change_pill_style')}>
                 <div
-                  style={
-                    'display: inline-block;' +
-                    'width: 16px;' +
-                    'height: 16px;' +
-                    'vertical-align: middle;' +
-                    'background: url(pill' +
-                    data.pill_icon +
-                    '.png);' +
-                    'background-size: 200%;' +
-                    'background-position: left -10px bottom -6px;'
-                  }
+                  style={{
+                    display: 'inline-block',
+                    width: '16px',
+                    height: '16px',
+                    verticalAlign: 'middle',
+                    background: 'url(pill' + data.pill_icon + '.png)',
+                    backgroundSize: '200%',
+                    backgroundPosition: 'left -10px bottom -6px',
+                  }}
                 />
                 Style
               </Button>
@@ -360,17 +356,15 @@ const ChemSynthesizerSettings = (props, context) => {
               />
               <Button onClick={() => modalOpen(context, 'change_patch_style')}>
                 <div
-                  style={
-                    'display: inline-block;' +
-                    'width: 16px;' +
-                    'height: 16px;' +
-                    'vertical-align: middle;' +
-                    'background: url(patch' +
-                    data.patch_icon +
-                    '.png);' +
-                    'background-size: 200%;' +
-                    'background-position: left -10px bottom -6px;'
-                  }
+                  style={{
+                    display: 'inline-block',
+                    width: '16px',
+                    height: '16px',
+                    verticalAlign: 'middle',
+                    background: 'url(patch' + data.patch_icon + '.png)',
+                    backgroundSize: '200%',
+                    backgroundPosition: 'left -10px bottom -6px',
+                  }}
                 />
                 Style
               </Button>
