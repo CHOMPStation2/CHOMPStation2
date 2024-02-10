@@ -63,10 +63,15 @@
 	new_mob.key = picked_client.key //Finally put them in the mob
 	if(organs)
 		new_mob.copy_from_prefs_vr()
+<<<<<<< HEAD
 		// CHOMPEdit Start
 		if(LAZYLEN(new_mob.vore_organs))
 			new_mob.vore_selected = new_mob.vore_organs[1]
 		// CHOMPEdit End
+=======
+		if(LAZYLEN(new_mob.vore_organs))
+			new_mob.vore_selected = new_mob.vore_organs[1]
+>>>>>>> 3234f82ef6... TG-Chat log limits (#15731)
 
 	log_admin("[key_name_admin(src)] has spawned [new_mob.key] as mob [new_mob.type].")
 	message_admins("[key_name_admin(src)] has spawned [new_mob.key] as mob [new_mob.type].", 1)
