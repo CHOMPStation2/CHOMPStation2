@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-import { KEY_ENTER, KEY_ESCAPE } from '../../common/keycodes'; // CHOMPedit
-import { useBackend, useLocalState } from '../backend';
-=======
 import { useState } from 'react';
 
+import { KEY_ENTER, KEY_ESCAPE } from '../../common/keycodes'; // CHOMPedit
 import { useBackend } from '../backend';
->>>>>>> 96ba92c6cb... Some Inferno state deprecation (#15743)
 import { Box, Section, Stack, TextArea } from '../components';
 import { Window } from '../layouts';
 import { InputButtons } from './common/InputButtons';
