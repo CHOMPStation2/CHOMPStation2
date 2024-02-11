@@ -1,0 +1,6 @@
+author: "Upstream"
+delete-after: True
+changes:
+  - rscadd: "Added a new variant of the size collar (Created by using wrench to break crystal => Prevents user from changing the size manually and triggering the collar with signal flips the wearer back and forth between a random size and their original size)"
+  - rscadd: "Added a new verb \"Spin Size Dial\" to size guns (random size)"
+  - rscadd: "Added alt-click effect to gradual size guns (toggling size-trading mode)"
