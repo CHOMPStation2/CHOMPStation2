@@ -118,3 +118,9 @@
   - rscadd: Mice are now ghostpods
   cadyn:
   - bugfix: fixed horrible awful code for mob spawners
+2024-02-11:
+  Kashargul:
+  - bugfix: chemMaster / ChemSynthesizer, color mate interface and some vorePanel
+      code style
+  cadyn:
+  - bugfix: mouse spawners
