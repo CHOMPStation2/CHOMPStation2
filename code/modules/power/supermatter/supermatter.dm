@@ -1,4 +1,3 @@
-
 #define NITROGEN_RETARDATION_FACTOR 0.15	//Higher == N2 slows reaction more
 #define THERMAL_RELEASE_MODIFIER 10000		//Higher == more heat released during reaction
 #define PHORON_RELEASE_MODIFIER 1500		//Higher == less phoron released by reaction
@@ -642,6 +641,7 @@
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
+<<<<<<< HEAD
 // CHOMP Edit Start
 /obj/machinery/power/supermatter/station
 	stationcrystal = TRUE
@@ -662,3 +662,27 @@
 			critwarn = 0
 			causalitywarn = 0
 // CHOMPEdit End
+=======
+#undef NITROGEN_RETARDATION_FACTOR
+#undef THERMAL_RELEASE_MODIFIER
+#undef PHORON_RELEASE_MODIFIER
+#undef OXYGEN_RELEASE_MODIFIER
+#undef REACTION_POWER_MODIFIER
+
+#undef DETONATION_RADS
+#undef DETONATION_MOB_CONCUSSION
+
+#undef DETONATION_APC_OVERLOAD_PROB
+#undef DETONATION_SHUTDOWN_APC
+#undef DETONATION_SHUTDOWN_CRITAPC
+#undef DETONATION_SHUTDOWN_SMES
+#undef DETONATION_SHUTDOWN_RNG_FACTOR
+#undef DETONATION_SOLAR_BREAK_CHANCE
+
+#undef DETONATION_EXPLODE_MIN_POWER
+#undef DETONATION_EXPLODE_MAX_POWER
+
+#undef WARNING_DELAY
+
+#undef SUPERMATTER_ACCENT_SOUND_COOLDOWN
+>>>>>>> cc7bf56ae5... Merge pull request #15744 from VOREStation/cleaned-defines

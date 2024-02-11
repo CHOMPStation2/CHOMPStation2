@@ -2,6 +2,7 @@
 // Vore management panel for players
 //
 
+<<<<<<< HEAD
 #define BELLIES_MAX 40
 #define BELLIES_NAME_MIN 2
 #define BELLIES_NAME_MAX 40
@@ -9,6 +10,8 @@
 #define FLAVOR_MAX 400
 
 /* //Chomp REMOVE - Use our solution, not upstream's
+=======
+>>>>>>> cc7bf56ae5... Merge pull request #15744 from VOREStation/cleaned-defines
 //INSERT COLORIZE-ONLY STOMACHS HERE
 var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 														"a_synth_flesh_mono_hole",
