@@ -11,7 +11,7 @@
 	siemens_coefficient= 1
 	slowdown = 0
 	offline_slowdown = 0
-	seal_delay = 1
+	seal_delay = 0
 	var/mob/living/myprotean
 	initial_modules = list(/obj/item/rig_module/protean/syphon, /obj/item/rig_module/protean/armor, /obj/item/rig_module/protean/healing)
 

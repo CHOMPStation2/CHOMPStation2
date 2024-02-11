@@ -119,7 +119,17 @@
 
 	var/monochromatic = FALSE //IGNORE ME
 
-	var/blob_appearance = "puddle2"
+	var/blob_appearance = "puddle1"
+	var/blob_color_1 = "#363636"
+	var/blob_color_2 = "#ba3636"
+	var/list/dragon_overlays = list(
+		"dragon_underSmooth" = "#FFFFFF",
+		"dragon_bodySmooth" = "#FFFFFF",
+		"dragon_earsNormal" = "#FFFFFF",
+		"dragon_maneShaggy" = "#FFFFFF",
+		"dragon_hornsPointy" = "#FFFFFF",
+		"dragon_eyesNormal" = "#FFFFFF"
+	)
 
 	var/pseudodead = 0
 

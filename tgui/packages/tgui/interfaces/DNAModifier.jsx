@@ -1,5 +1,16 @@
 import { useBackend } from '../backend';
-import { Box, Button, Dimmer, Flex, Icon, Knob, LabeledList, ProgressBar, Section, Tabs } from '../components';
+import {
+  Box,
+  Button,
+  Dimmer,
+  Flex,
+  Icon,
+  Knob,
+  LabeledList,
+  ProgressBar,
+  Section,
+  Tabs,
+} from '../components';
 import { Window } from '../layouts';
 import { ComplexModal } from './common/ComplexModal';
 
@@ -67,7 +78,8 @@ const DNAModifierOccupant = (props) => {
             onClick={() => act('ejectOccupant')}
           />
         </>
-      }>
+      }
+    >
       {hasOccupant ? (
         <>
           <Box>
@@ -182,7 +194,8 @@ const DNAModifierMain = (props) => {
           <Tabs.Tab
             key={i}
             selected={selectedMenuKey === op[0]}
-            onClick={() => act('selectMenuKey', { key: op[0] })}>
+            onClick={() => act('selectMenuKey', { key: op[0] })}
+          >
             <Icon name={op[2]} />
             {op[1]}
           </Tabs.Tab>
@@ -363,7 +376,8 @@ const DNAModifierMainBuffersElement = (props) => {
               }
             />
           </>
-        }>
+        }
+      >
         <LabeledList>
           <LabeledList.Item label="Write">
             <Button
@@ -498,7 +512,8 @@ const DNAModifierMainBuffersDisk = (props) => {
             onClick={() => act('ejectDisk')}
           />
         </>
-      }>
+      }
+    >
       {hasDisk ? (
         disk.data ? (
           <LabeledList>
@@ -541,7 +556,8 @@ const DNAModifierMainRejuvenators = (props) => {
           content="Eject"
           onClick={() => act('ejectBeaker')}
         />
-      }>
+      }
+    >
       {isBeakerLoaded ? (
         <LabeledList>
           <LabeledList.Item label="Inject">
@@ -638,7 +654,7 @@ const DNAModifierBlocks = (props) => {
               subblock: realSubblock,
             })
           }
-        />
+        />,
       );
     }
     dnaBlocks.push(
@@ -651,11 +667,12 @@ const DNAModifierBlocks = (props) => {
           lineHeight="20px"
           backgroundColor="rgba(0, 0, 0, 0.33)"
           fontFamily="monospace"
-          textAlign="center">
+          textAlign="center"
+        >
           {realBlock}
         </Box>
         {subBlocks}
-      </Flex.Item>
+      </Flex.Item>,
     );
   }
   return <Flex wrap="wrap">{dnaBlocks}</Flex>;

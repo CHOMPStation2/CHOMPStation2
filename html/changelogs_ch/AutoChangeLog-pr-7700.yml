@@ -1,5 +1,0 @@
-author: "Upstream"
-delete-after: True
-changes:
-  - rscdel: "Removed Internet Explorer 8 support"
-  - qol: "tgui 5.0 update"

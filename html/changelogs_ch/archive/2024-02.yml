@@ -88,3 +88,39 @@
   - rscadd: ports fox ears from skyrat
   - bugfix: fixes bonnie alt and bonnie alt long (i forgot to upload all their sprites
       when i ported them oops)
+2024-02-09:
+  Upstream:
+  - qol: Updated prettier version
+  - rscdel: Removed Internet Explorer 8 support
+  - qol: tgui 5.0 update
+2024-02-10:
+  FluffMedic:
+  - rscadd: The hidden slimes should be useable and benefical
+  ItsSelis:
+  - qol: maps now also properly compile on change with the tool
+  - rscadd: added icon_cutter tool from tg
+  - bugfix: fixed some unicode encoding for some descriptions
+  Missile597:
+  - bugfix: Removed access levels from buttons and doors on SurvivalSecurity shelter,
+      allowing outsiders to access their own capsule
+  - bugfix: Fixed the starting atmos on the skipjack plating parts of the SurvivalSecurity
+      shelter so that it's breathable and not just Nitrogen.
+  Raeschen:
+  - balance: Shadekin HP nerfs (Per eye color)
+  - balance: Bluespace crystals dephase shadekin that step on them
+  - balance: Bluespace crystals will dephase shadekin in a 3 tile radius when thrown.
+  TheCaramelion:
+  - rscdel: Removed "Viral Infection" from the rotation.
+  - rscadd: Added "Infected Room" to the rotation.
+  - code_imp: event_manager.ch should be easier to read now.
+  - bugfix: Blood, vomit and mucus containing viruses will now spread it.
+  WolvesAndOwls:
+  - rscadd: Mice are now ghostpods
+  cadyn:
+  - bugfix: fixed horrible awful code for mob spawners
+2024-02-11:
+  Kashargul:
+  - bugfix: chemMaster / ChemSynthesizer, color mate interface and some vorePanel
+      code style
+  cadyn:
+  - bugfix: mouse spawners
