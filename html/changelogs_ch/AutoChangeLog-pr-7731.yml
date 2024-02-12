@@ -1,0 +1,4 @@
+author: "Raeschen"
+delete-after: True
+changes:
+  - admin: "PDA identities 'Eventkit' --> 'fun', tab clutter"
