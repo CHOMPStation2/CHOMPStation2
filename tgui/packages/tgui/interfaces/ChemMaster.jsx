@@ -440,7 +440,7 @@ const ChemMasterCustomization = (props) => {
       <Button
         disabled={!data.loaded_pill_bottle}
         content="Customize Bottle Color"
-        onClick={() => modalOpen(context, 'change_pill_bottle_style')}
+        onClick={() => modalOpen('change_pill_bottle_style')}
       />
       <Button
         disabled={!data.loaded_pill_bottle}
