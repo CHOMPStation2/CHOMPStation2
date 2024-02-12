@@ -1,14 +1,7 @@
 import { decodeHtmlEntities } from 'common/string';
-<<<<<<< HEAD
-import { Fragment } from 'react';
 
 import { useBackend, useSharedState } from '../backend';
 import { Box, Button, Input, LabeledList, Section } from '../components';
-=======
-
-import { useBackend, useSharedState } from '../backend';
-import { Box, Button, Flex, Input, LabeledList, Section } from '../components';
->>>>>>> fc91ae0f0b... formatting tgui files (#15754)
 import { Window } from '../layouts';
 import { TemporaryNotice } from './common/TemporaryNotice';
 

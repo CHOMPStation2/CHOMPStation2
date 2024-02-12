@@ -1,8 +1,5 @@
 import { createSearch } from 'common/string';
-<<<<<<< HEAD
-=======
 
->>>>>>> fc91ae0f0b... formatting tgui files (#15754)
 import { useBackend, useLocalState } from '../backend';
 import {
   Box,
