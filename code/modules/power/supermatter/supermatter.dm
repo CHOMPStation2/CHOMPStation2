@@ -641,7 +641,6 @@
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
-<<<<<<< HEAD
 // CHOMP Edit Start
 /obj/machinery/power/supermatter/station
 	stationcrystal = TRUE
@@ -662,7 +661,7 @@
 			critwarn = 0
 			causalitywarn = 0
 // CHOMPEdit End
-=======
+
 #undef NITROGEN_RETARDATION_FACTOR
 #undef THERMAL_RELEASE_MODIFIER
 #undef PHORON_RELEASE_MODIFIER
@@ -685,4 +684,3 @@
 #undef WARNING_DELAY
 
 #undef SUPERMATTER_ACCENT_SOUND_COOLDOWN
->>>>>>> cc7bf56ae5... Merge pull request #15744 from VOREStation/cleaned-defines

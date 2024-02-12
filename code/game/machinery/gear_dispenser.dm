@@ -946,12 +946,9 @@ var/list/dispenser_presets = list()
 		/datum/gear_disp/adventure_box/light,
 		/datum/gear_disp/adventure_box/weapon
 		)
-<<<<<<< HEAD
-=======
 
 #undef GD_BUSY
 #undef GD_ONEITEM
 #undef GD_NOGREED
 #undef GD_UNLIMITED
 #undef GD_UNIQUE
->>>>>>> cc7bf56ae5... Merge pull request #15744 from VOREStation/cleaned-defines
