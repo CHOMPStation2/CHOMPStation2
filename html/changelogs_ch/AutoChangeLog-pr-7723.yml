@@ -1,4 +1,0 @@
-author: "Upstream"
-delete-after: True
-changes:
-  - admin: "added \"Short Stacker\" admin item"

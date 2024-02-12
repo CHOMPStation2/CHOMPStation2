@@ -1,4 +1,0 @@
-author: "Upstream"
-delete-after: True
-changes:
-  - admin: "new eventkit verb that allows eventmanagers/admins to create fake PDA conversations (or props for them) without actually having to spawn a PDA/PDA Server (including PDA Identities)"
