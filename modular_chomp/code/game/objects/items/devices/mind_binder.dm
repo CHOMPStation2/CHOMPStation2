@@ -53,13 +53,6 @@
 		return
 	if(istype(A, /obj/item))
 		var/obj/item/I = A
-		if(istype(I, /obj/item/weapon/holder/micro))
-			var/obj/item/weapon/holder/micro/H = I
-			if(possessed_voice.len == 1 || self_bind)
-				bind_mob(H.held_mob)
-			else
-				store_mob(H.held_mob)
-			return
 		if(possessed_voice.len == 1 || self_bind)
 			bind_item(I)
 		else
