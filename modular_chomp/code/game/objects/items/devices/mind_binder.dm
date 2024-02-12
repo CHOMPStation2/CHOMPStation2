@@ -11,6 +11,44 @@
 	origin_tech = list(TECH_MAGNET = 2, TECH_BIO = 2, TECH_ILLEGAL = 1)
 	possessed_voice = list()
 	var/self_bind = FALSE
+	var/list/whitelisted = list(
+		/mob/living/simple_mob/animal/sif,
+		/mob/living/simple_mob/animal/passive,
+		/mob/living/simple_mob/slime,
+		/mob/living/bot,
+		/mob/living/simple_mob/vore/horse,
+		/mob/living/simple_mob/vore/wolf,
+		/mob/living/simple_mob/animal/giant_spider,
+		/mob/living/simple_mob/vore/pakkun,
+		/mob/living/simple_mob/vore/otie,
+		/mob/living/simple_mob/vore/scel,
+		/mob/living/simple_mob/vore/aggressive/corrupthound,
+		/mob/living/simple_mob/vore/rabbit,
+		/mob/living/simple_mob/vore/redpanda,
+		/mob/living/simple_mob/vore/fennec,
+		/mob/living/simple_mob/vore/fennix,
+		/mob/living/simple_mob/vore/bee,
+		/mob/living/simple_mob/animal/space/bear,
+		/mob/living/simple_mob/vore/aggressive/dino,
+		/mob/living/simple_mob/vore/aggressive/lizardman,
+		/mob/living/simple_mob/vore/aggressive/frog,
+		/mob/living/simple_mob/vore/aggressive/rat,
+		/mob/living/simple_mob/vore/jelly,
+		/mob/living/simple_mob/animal/hyena,
+		/mob/living/simple_mob/vore/solargrub,
+		/mob/living/simple_mob/vore/sect_queen,
+		/mob/living/simple_mob/vore/sect_drone,
+		/mob/living/simple_mob/vore/xeno_defanged,
+		/mob/living/simple_mob/vore/aggressive/panther,
+		/mob/living/simple_mob/vore/aggressive/giant_snake,
+		/mob/living/simple_mob/vore/aggressive/deathclaw,
+		/mob/living/simple_mob/vore/weretiger,
+		/mob/living/simple_mob/vore/bigdragon/friendly/maintpred,
+		/mob/living/simple_mob/vore/alienanimals/catslug,
+		/mob/living/simple_mob/vore/squirrel/big,
+		/mob/living/simple_mob/vore/raptor,
+		/mob/living/simple_mob/vore/bat,
+		) // Limit to safe types
 
 /obj/item/device/mindbinder/New()
 	..()
@@ -70,6 +108,10 @@
 		to_chat(usr,"<span class='warning'>The device beeps a warning that the target is already sentient!</span>")
 		return
 
+	if(!is_type_in_list(target, whitelisted))
+		to_chat(usr,"<span class='danger'>The target's own mind is too strong to be affected!</span>")
+		return
+
 	if(self_bind)
 		var/choice = tgui_alert(usr,"This will bind YOUR mind to the target! You may not be able to go back without help. Continue?","Confirmation",list("Continue","Cancel"))
 		if(choice == "Cancel") return
@@ -88,7 +130,7 @@
 	usr.visible_message("<span class='warning'>[usr] presses [src] against [target]. The device beginning to let out a series of beeps!</span>","<span class='notice'>You begin to bind someone's mind into [target]!</span>")
 	log_and_message_admins("attempted to bind [key_name(src.possessed_voice[1])] to \an [target] with a Mind Binder.")
 	var/doTime = 30 SECONDS
-	if(ishuman(target) || issilicon(target))
+	if(ishuman(target) || issilicon(target) || isanimal(target))
 		doTime = 5 SECONDS
 	if(do_after(usr,doTime,target))
 		if(possessed_voice.len == 1 && !target.ckey)
@@ -108,6 +150,10 @@
 
 	if(item.possessed_voice && item.possessed_voice.len)
 		to_chat(usr,"<span class='warning'>The device beeps a warning that the target is already sentient!</span>")
+		return
+
+	if(is_type_in_list(item, item_vore_blacklist))
+		to_chat(usr,"<span class='danger'>The item resists your transfer attempt!</span>")
 		return
 
 	if(self_bind)
