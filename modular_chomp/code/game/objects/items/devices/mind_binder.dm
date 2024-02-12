@@ -76,6 +76,7 @@
 		choice = tgui_alert(usr,"No really. You cannot OOC Escape this. Are you sure?","Confirmation",list("Yes I'm sure","Cancel"))
 		if(choice == "Yes I'm sure" && usr.get_active_hand() == src && usr.Adjacent(target))
 			usr.visible_message("<span class='warning'>[usr] presses [src] against [target]. The device beginning to let out a series of beeps!</span>","<span class='notice'>You begin to bind yourself into [target]!</span>")
+			log_and_message_admins("attempted to bind themselves to \an [target] with a Mind Binder.")
 			if(do_after(usr,30 SECONDS,target))
 				if(!target.ckey)
 					usr.mind.transfer_to(target)
@@ -85,7 +86,11 @@
 		return
 
 	usr.visible_message("<span class='warning'>[usr] presses [src] against [target]. The device beginning to let out a series of beeps!</span>","<span class='notice'>You begin to bind someone's mind into [target]!</span>")
-	if(do_after(usr,5 SECONDS,target))
+	log_and_message_admins("attempted to bind [key_name(src.possessed_voice[1])] to \an [target] with a Mind Binder.")
+	var/doTime = 30 SECONDS
+	if(ishuman(target) || issilicon(target))
+		doTime = 5 SECONDS
+	if(do_after(usr,doTime,target))
 		if(possessed_voice.len == 1 && !target.ckey)
 			var/mob/living/voice/V = possessed_voice[1]
 			V.mind.transfer_to(target)
@@ -110,6 +115,7 @@
 		if(choice == "Cancel") return
 		choice = tgui_alert(usr,"No really. You cannot OOC Escape this. Are you sure?","Confirmation",list("Yes I'm sure","Cancel"))
 		if(choice == "Yes I'm sure" && usr.get_active_hand() == src && usr.Adjacent(item))
+			log_and_message_admins("attempted to bind themselves to \an [item] with a Mind Binder.")
 			usr.visible_message("<span class='warning'>[usr] presses [src] against [item]. The device beginning to let out a series of beeps!</span>","<span class='notice'>You begin to bind yourself into [item]!</span>")
 			if(do_after(usr,30 SECONDS,item))
 				item.inhabit_item(usr, null, null)
@@ -118,6 +124,7 @@
 				to_chat(usr,"<span class='notice'>Your mind as been bound to [item].</span>")
 		return
 
+	log_and_message_admins("attempted to bind [key_name(src.possessed_voice[1])] to \an [item] with a Mind Binder.")
 	usr.visible_message("<span class='warning'>[usr] presses [src] against [item]. The device beginning to let out a series of beeps!</span>","<span class='notice'>You begin to bind someone's mind into [item]!</span>")
 	if(do_after(usr,5 SECONDS,item))
 		if(possessed_voice.len == 1)
@@ -141,6 +148,10 @@
 
 	var/choice = tgui_alert(usr,"This will download the target's mind into the device. Once their mind is loaded you can then bind it into an item. This will result in the target being stuck until you put them back in their original body. Please make sure OOC prefs align! Continue?","Confirmation",list("Continue","Cancel"))
 	if(choice == "Continue" && usr.get_active_hand() == src && usr.Adjacent(target))
+		if(target.ckey && !target.client)
+			log_and_message_admins("attempted to take [key_name(target)]'s mind with a Mind Binder while they were SSD!")
+		else
+			log_and_message_admins("attempted to take [key_name(target)]'s mind with a Mind Binder.")
 		usr.visible_message("<span class='warning'>[usr] presses [src] against [target]'s head. The device beginning to let out a series of beeps!</span>","<span class='notice'>You begin to download [target]'s mind!</span>")
 		if(do_after(usr,30 SECONDS,target))
 			if(possessed_voice.len == 0 && target.mind)
@@ -160,6 +171,7 @@
 
 	var/mob/living/voice/target = item.possessed_voice[1]
 
+	log_and_message_admins("attempted to take [key_name(target)]'s mind out of \an [item] with a Mind Binder.")
 	usr.visible_message("<span class='warning'>[usr] presses [src] against [item]. The device beginning to let out a series of beeps!</span>","<span class='notice'>You begin to download someone's mind from [item]!</span>")
 	if(do_after(usr,5 SECONDS,item))
 		if(possessed_voice.len == 0 && item.possessed_voice.Find(target))
