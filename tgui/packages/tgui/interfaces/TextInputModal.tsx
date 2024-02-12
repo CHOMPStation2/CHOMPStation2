@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { KEY } from 'common/keys';
+import { KeyboardEvent, useState } from 'react';
 
 import { KEY_ENTER, KEY_ESCAPE } from '../../common/keycodes'; // CHOMPedit
 import { useBackend } from '../backend';
@@ -37,6 +38,7 @@ export const TextInputModal = (props) => {
     timeout,
     title,
   } = data;
+
   const [input, setInput] = useState(placeholder || '');
   const onType = (value: string) => {
     if (value === input) {
@@ -119,6 +121,7 @@ const InputArea = (props: {
         act('submit', { entry: input });
         // CHOMPedit End
       }}
+      onChange={(_, value) => onType(value)}
       onInput={(_, value) => onType(value)}
       placeholder="Type something..."
       value={input}
