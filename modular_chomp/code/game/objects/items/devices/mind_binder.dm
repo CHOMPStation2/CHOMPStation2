@@ -12,6 +12,8 @@
 	possessed_voice = list()
 	var/self_bind = FALSE
 	var/list/whitelisted = list(
+		/mob/living/carbon,
+		/mob/living/silicon,
 		/mob/living/simple_mob/animal/sif,
 		/mob/living/simple_mob/animal/passive,
 		/mob/living/simple_mob/slime,
@@ -45,6 +47,7 @@
 		/mob/living/simple_mob/vore/weretiger,
 		/mob/living/simple_mob/vore/bigdragon/friendly/maintpred,
 		/mob/living/simple_mob/vore/alienanimals/catslug,
+		/mob/living/simple_mob/vore/alienanimals/teppi,
 		/mob/living/simple_mob/vore/squirrel/big,
 		/mob/living/simple_mob/vore/raptor,
 		/mob/living/simple_mob/vore/bat,
@@ -81,6 +84,9 @@
 		A = H.held_mob
 	if(istype(A, /mob/living))
 		var/mob/living/M = A
+		if(!is_type_in_list(A, whitelisted))
+			to_chat(usr,"<span class='danger'>The target's mind is too complex to be affected!</span>")
+			return
 		if(usr == M)
 			toggle_self_bind()
 			return
@@ -106,10 +112,6 @@
 
 	if(target.ckey)
 		to_chat(usr,"<span class='warning'>The device beeps a warning that the target is already sentient!</span>")
-		return
-
-	if(!is_type_in_list(target, whitelisted))
-		to_chat(usr,"<span class='danger'>The target's own mind is too strong to be affected!</span>")
 		return
 
 	if(self_bind)
