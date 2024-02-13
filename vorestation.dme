@@ -4931,6 +4931,7 @@
 #include "modular_chomp\code\modules\tickets\tickets.dm"
 #include "modular_chomp\code\modules\tickets\tickets_player_ui.dm"
 #include "modular_chomp\code\modules\tickets\tickets_ui.dm"
+#include "modular_chomp\code\modules\virus2\disease2.dm"
 #include "modular_chomp\code\modules\virus2\effect.dm"
 #include "modular_chomp\code\modules\vore\eating\exportpanel_ch.dm"
 #include "modular_chomp\code\modules\vore\resizing\resize.dm"
