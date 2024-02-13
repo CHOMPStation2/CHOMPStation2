@@ -8,19 +8,56 @@
 		/area/shuttle,
 		/area/crew_quarters,
 		/area/holodeck,
-		/area/engineering/engine_room
+		/area/engineering/engine_room)
+
+	var/commondisease = list(
+		"Friday Fever" = list(
+			/datum/disease2/effect/choreomania,
+			/datum/disease2/effect/spin,
+			/datum/disease2/effect/flip,
+			/datum/disease2/effect/scream),
+		"Common Cold" = list(
+			/datum/disease2/effect/sneeze,
+			/datum/disease2/effect/cough,
+			/datum/disease2/effect/fridge,
+			/datum/disease2/effect/drowsness),
+		"Brain Bloat" = list(
+			/datum/disease2/effect/invisible,
+			/datum/disease2/effect/headache,
+			/datum/disease2/effect/telepathic,
+			/datum/disease2/effect/nothing
+		),
+		"Glutton's Gut" = list(
+			/datum/disease2/effect/drool,
+			/datum/disease2/effect/hungry,
+			/datum/disease2/effect/pica,
+			/datum/disease2/effect/nothing
+		),
+		"Motor System Impairment" = list(
+			/datum/disease2/effect/twitch,
+			/datum/disease2/effect/jellylegs,
+			/datum/disease2/effect/spin,
+			/datum/disease2/effect/groan
+		)
 	)
 
 /datum/event/infectedroom/setup()
 	announceWhen = rand(0, 3000)
 	endWhen = announceWhen + 1
 	var/list/area/affected_area = get_station_areas(excluded)
+	var/chosenvirus = pick(commondisease)
 
 	if(severity == EVENT_LEVEL_MAJOR)
-		virus.makerandom(rand(2,3))
+		if(prob(75))
+			virus.makerandom(rand(2,3))
+		else
+			virus.makedisease(commondisease[chosenvirus], rand(2,3), chosenvirus)
 		infected_tiles = rand(4, 8)
 	else if(severity == EVENT_LEVEL_MODERATE)
-		virus.makerandom(2)
+		if(prob(50))
+			virus.makerandom(2)
+		else
+			virus.makedisease(commondisease[chosenvirus], 2, chosenvirus)
 		infected_tiles = rand(3, 6)
 	else
 		virus.makerandom(1)
