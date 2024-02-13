@@ -9,6 +9,101 @@ const DEFAULT_MIN = 0;
 const DEFAULT_MAX = 10000;
 
 /**
+ * Sanitize a number without interfering with writing, numbers.
+ * Ideas:
+ *  Handle copy pasting by stripping away all but the first dot
+ * @param value {String}
+ * @param minValue {Number}
+ * @param maxValue {Number}
+ * @param allowFloats {Boolean}
+ * @returns {String}
+ */
+const softSanitizeNumber = (value, minValue, maxValue, allowFloats) => {
+  const minimum = minValue || DEFAULT_MIN;
+  const maximum = maxValue || maxValue === 0 ? maxValue : DEFAULT_MAX;
+
+  let sanitizedString = allowFloats
+    ? value.replace(/[^\-\d.]/g, '')
+    : value.replace(/[^\-\d]/g, '');
+
+  if (allowFloats) {
+    sanitizedString = keepOnlyFirstOccurrence('.', sanitizedString);
+    sanitizedString = maybeLeadWithZero(sanitizedString);
+  }
+  sanitizedString = keepOnlyFirstOccurrence('-', sanitizedString);
+  sanitizedString = maybeMoveMinusSign(sanitizedString);
+
+  return clampGuessedNumber(sanitizedString, minimum, maximum, allowFloats);
+};
+
+/**
+ * @param softSanitizedNumber {String}
+ * @param allowFloats {Boolean}
+ * @returns {String}
+ */
+const clampGuessedNumber = (
+  softSanitizedNumber,
+  minValue,
+  maxValue,
+  allowFloats,
+) => {
+  let parsed = allowFloats
+    ? parseFloat(softSanitizedNumber)
+    : parseInt(softSanitizedNumber, 10);
+  if (!isNaN(parsed)) {
+    let clamped = clamp(parsed, minValue, maxValue);
+    if (parsed !== clamped) {
+      return String(clamped);
+    }
+  }
+  return softSanitizedNumber;
+};
+
+/**
+ * Translate 1- to -1 or 100-100 to -100100
+ * @param string {String}
+ */
+const maybeMoveMinusSign = (string) => {
+  let retString = string;
+  // if minus sign is present but not first
+  let minusIdx = string.indexOf('-');
+  if (minusIdx > 0) {
+    string = string.replace('-', '');
+    retString = '-'.concat(string);
+  }
+  return retString;
+};
+
+/**
+ * Translate . to 0. or .1 to 0.1
+ * @param string {String}
+ */
+const maybeLeadWithZero = (string) => {
+  let retString = string;
+  if (string.indexOf('.') === 0) {
+    retString = '0'.concat(string);
+  }
+  return retString;
+};
+
+/**
+ * Keep only the first occurrence of a string in another string.
+ * @param needle {String}
+ * @param haystack {String}
+ */
+const keepOnlyFirstOccurrence = (needle, haystack) => {
+  const idx = haystack.indexOf(needle);
+  const len = haystack.length;
+  let newHaystack = haystack;
+  if (idx !== -1 && idx < len - 1) {
+    let trailingString = haystack.slice(idx + 1, len);
+    trailingString = trailingString.replaceAll(needle, '');
+    newHaystack = haystack.slice(0, idx + 1).concat(trailingString);
+  }
+  return newHaystack;
+};
+
+/**
  * Takes a string input and parses integers or floats from it.
  * If none: Minimum is set.
  * Else: Clamps it to the given range.
@@ -44,7 +139,7 @@ export class RestrictedInput extends Component {
     };
     this.handleChange = (e) => {
       const { maxValue, minValue, onChange, allowFloats } = this.props;
-      e.target.value = getClampedNumber(
+      e.target.value = softSanitizeNumber(
         e.target.value,
         minValue,
         maxValue,
@@ -170,7 +265,7 @@ export class RestrictedInput extends Component {
           onBlur={this.handleBlur}
           onKeyDown={this.handleKeyDown}
           ref={this.inputRef}
-          type="number"
+          type="number | string"
         />
       </Box>
     );
