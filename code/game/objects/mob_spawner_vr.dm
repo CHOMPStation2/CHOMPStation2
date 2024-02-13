@@ -69,28 +69,17 @@
 	last_spawn = world.time
 	if(total_spawns > 0)
 		total_spawns--
-	//how about we find a suitable location first
-	var/attempts = 0
-	var/turf/spawn_turf = null
-
-	while((!spawn_turf || spawn_turf.density) && attempts < 15)
-		var/xcoord = rand(-5,5)
-		var/ycoord = rand(-5,5)
-		spawn_turf = locate(x + xcoord, y + ycoord, z)
-		attempts++
-
-	//and then we spawn them
 	if(ispath(mob_path, /mob/living))
-		var/mob/living/L = new mob_path(get_turf(spawn_turf))
-		L.nest = spawn_turf
+		var/mob/living/L = new mob_path(get_turf(src))
+		L.nest = src
 		spawned_mobs.Add(L)
 		if(mob_faction)
 			L.faction = mob_faction
 		return L
 	if(ispath(mob_path, /obj/structure/closet/crate/mimic))
-		var/obj/structure/closet/crate/mimic/O = new mob_path(get_turf(spawn_turf))
+		var/obj/structure/closet/crate/mimic/O = new mob_path(get_turf(src))
 		spawned_mobs.Add(O)
-		O.nest = spawn_turf
+		O.nest = src
 		return O
 	return 0
 	//CHOMPEdit End
@@ -150,6 +139,41 @@ It also makes it so a ghost wont know where all the goodies/mobs are.
 /obj/structure/mob_spawner/scanner/New()
 	..()
 	prox = new(src, range)
+
+//CHOMPEdit Start
+/obj/structure/mob_spawner/scanner/do_spawn(var/mob_path)
+	if(!ispath(mob_path))
+		return 0
+	if(!ispath(mob_path, /mob/living) && !ispath(mob_path, /obj/structure/closet/crate/mimic))
+		return 0
+	last_spawn = world.time
+	if(total_spawns > 0)
+		total_spawns--
+	//how about we find a suitable location first
+	var/attempts = 0
+	var/turf/spawn_turf = null
+
+	while((!spawn_turf || spawn_turf.density) && attempts < 15)
+		var/xcoord = rand(-5,5)
+		var/ycoord = rand(-5,5)
+		spawn_turf = locate(x + xcoord, y + ycoord, z)
+		attempts++
+
+	//and then we spawn them
+	if(ispath(mob_path, /mob/living))
+		var/mob/living/L = new mob_path(get_turf(spawn_turf))
+		L.nest = spawn_turf
+		spawned_mobs.Add(L)
+		if(mob_faction)
+			L.faction = mob_faction
+		return L
+	if(ispath(mob_path, /obj/structure/closet/crate/mimic))
+		var/obj/structure/closet/crate/mimic/O = new mob_path(get_turf(spawn_turf))
+		spawned_mobs.Add(O)
+		O.nest = spawn_turf
+		return O
+	return 0
+//CHOMPEdit End
 
 /obj/structure/mob_spawner/scanner/proc/NewProximity(atom/movable/AM)
 	if(istype(AM,/mob/living) && !(AM in mobs_in_range))

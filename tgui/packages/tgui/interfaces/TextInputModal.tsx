@@ -1,5 +1,7 @@
+import { useState } from 'react';
+
 import { KEY_ENTER, KEY_ESCAPE } from '../../common/keycodes'; // CHOMPedit
-import { useBackend, useLocalState } from '../backend';
+import { useBackend } from '../backend';
 import { Box, Section, Stack, TextArea } from '../components';
 import { Window } from '../layouts';
 import { InputButtons } from './common/InputButtons';
@@ -31,11 +33,11 @@ export const TextInputModal = (props) => {
     max_length,
     message = '',
     multiline,
-    placeholder,
+    placeholder = '',
     timeout,
     title,
   } = data;
-  const [input, setInput] = useLocalState<string>('input', placeholder || '');
+  const [input, setInput] = useState(placeholder || '');
   const onType = (value: string) => {
     if (value === input) {
       return;
@@ -91,7 +93,10 @@ export const TextInputModal = (props) => {
 };
 
 /** Gets the user input and invalidates if there's a constraint. */
-const InputArea = (props) => {
+const InputArea = (props: {
+  input: string;
+  onType: (value: string) => void;
+}) => {
   const { act, data } = useBackend<TextInputData>();
   const { max_length, multiline } = data; // CHOMPedit
   const { input, onType } = props;
