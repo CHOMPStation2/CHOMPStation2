@@ -138,3 +138,10 @@
   - admin: new eventkit verb that allows eventmanagers/admins to create fake PDA conversations
       (or props for them) without actually having to spawn a PDA/PDA Server (including
       PDA Identities)
+2024-02-13:
+  Raeschen:
+  - admin: PDA identities 'Eventkit' --> 'fun', tab clutter
+  Upstream:
+  - bugfix: fixed the user interface for the CharacterDirectory.
+  tacoguy7765093:
+  - qol: Makes more neutral traits be able to be taken by non-custom species.

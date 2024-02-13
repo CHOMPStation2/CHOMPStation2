@@ -1,4 +1,0 @@
-author: "Upstream"
-delete-after: True
-changes:
-  - bugfix: "fixed the user interface for the CharacterDirectory."
