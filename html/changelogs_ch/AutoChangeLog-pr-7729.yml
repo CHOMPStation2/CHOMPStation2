@@ -1,7 +1,0 @@
-author: "Fracshun"
-delete-after: True
-changes:
-  - qol: "Enabled logging on interactions with the Mind Binder and Body Snatcher"
-  - balance: "Increased the time to bind minds into mobs up to 30 seconds"
-  - balance: "whitelists only specific mobs"
-  - balance: "blacklists key items"

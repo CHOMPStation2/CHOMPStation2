@@ -145,3 +145,11 @@
   - bugfix: fixed the user interface for the CharacterDirectory.
   tacoguy7765093:
   - qol: Makes more neutral traits be able to be taken by non-custom species.
+2024-02-14:
+  Fracshun:
+  - qol: Enabled logging on interactions with the Mind Binder and Body Snatcher
+  - balance: Increased the time to bind minds into mobs up to 30 seconds
+  - balance: whitelists only specific mobs
+  - balance: blacklists key items
+  Raeschen:
+  - rscadd: Guidelines for shadekin and outsider, linked on spawn.
