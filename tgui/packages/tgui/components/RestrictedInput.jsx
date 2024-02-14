@@ -9,7 +9,7 @@ const DEFAULT_MIN = 0;
 const DEFAULT_MAX = 10000;
 
 /**
- * Sanitize a number without interfering with writing, numbers.
+ * Sanitize a number without interfering with writing negative or floating point numbers.
  * Handling dots and minuses in a user friendly way
  * @param value {String}
  * @param minValue {Number}
@@ -49,7 +49,7 @@ const clampGuessedNumber = (
   let parsed = allowFloats
     ? parseFloat(softSanitizedNumber)
     : parseInt(softSanitizedNumber, 10);
-  if (!isNaN(parsed)) {
+  if (!isNaN(parsed) && !softSanitizedNumber.slice(-1) === '.') {
     let clamped = clamp(parsed, minValue, maxValue);
     if (parsed !== clamped) {
       return String(clamped);
