@@ -37,21 +37,23 @@
 /obj/item/stack/material/phoron{
 	amount = 10
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/blowntcommsat)
 "an" = (
-/obj/machinery/power/apc{
-	cell_type = 2500;
-	dir = 1;
-	name = "Worn-out APC";
-	pixel_x = 1;
-	pixel_y = 26
-	},
 /obj/structure/cable{
 	d2 = 4;
 	icon_state = "0-4"
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/blowntcommsat)
 "ao" = (
 /obj/machinery/light/small{
@@ -62,11 +64,15 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/blowntcommsat)
 "aq" = (
 /obj/machinery/portable_atmospherics/canister/air,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/blowntcommsat)
 "as" = (
 /obj/structure/bed,
@@ -91,17 +97,23 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/blowntcommsat)
 "ax" = (
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/blowntcommsat)
 "ay" = (
 /obj/structure/window/reinforced{
 	dir = 4
 	},
 /obj/machinery/portable_atmospherics/canister/air,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/blowntcommsat)
 "az" = (
 /obj/structure/lattice,
@@ -122,6 +134,7 @@
 	dir = 1
 	},
 /obj/structure/table/steel,
+/obj/item/stolenpackage,
 /turf/simulated/floor/tiled,
 /area/submap/blowntcommsat)
 "aC" = (
@@ -145,17 +158,23 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/blowntcommsat)
 "aI" = (
 /obj/structure/window/reinforced,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/blowntcommsat)
 "aJ" = (
 /obj/item/stack/cable_coil/cut{
-	amount = 1
+	amount = 2
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/blowntcommsat)
 "aK" = (
 /obj/structure/window/reinforced,
@@ -163,7 +182,16 @@
 	dir = 4
 	},
 /obj/structure/closet,
-/turf/simulated/floor/tiled/asteroid_steel,
+/obj/item/stack/cable_coil/random,
+/obj/item/stack/cable_coil/random,
+/obj/item/stack/cable_coil/random,
+/obj/item/weapon/storage/belt/utility/full/multitool,
+/obj/item/weapon/storage/belt/utility/full/multitool,
+/obj/item/weapon/storage/belt/utility/full/multitool,
+/obj/item/clothing/head/welding,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/blowntcommsat)
 "aL" = (
 /obj/structure/window/reinforced{
@@ -202,7 +230,9 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/blowntcommsat)
 "aS" = (
 /obj/structure/window/reinforced,
@@ -242,6 +272,7 @@
 /obj/structure/bed/chair{
 	dir = 4
 	},
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/basic,
 /turf/simulated/floor/tiled/airless,
 /area/submap/blowntcommsat)
 "aZ" = (
@@ -261,14 +292,23 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/blowntcommsat)
 "bc" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/blowntcommsat)
 "bd" = (
 /obj/structure/window/reinforced,
@@ -276,7 +316,9 @@
 	dir = 1
 	},
 /obj/item/weapon/airlock_electronics,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/blowntcommsat)
 "be" = (
 /obj/structure/door_assembly/door_assembly_hatch,
@@ -381,7 +423,9 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/blowntcommsat)
 "by" = (
 /obj/structure/grille,
@@ -431,7 +475,9 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/blowntcommsat)
 "bE" = (
 /obj/structure/window/reinforced{
@@ -448,7 +494,9 @@
 	dir = 8
 	},
 /obj/item/stack/rods,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/blowntcommsat)
 "bG" = (
 /obj/item/stack/rods,
@@ -470,7 +518,9 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/blowntcommsat)
 "bL" = (
 /obj/item/weapon/circuitboard/teleporter,
@@ -478,7 +528,7 @@
 /turf/simulated/floor/tiled,
 /area/submap/blowntcommsat)
 "bM" = (
-/obj/machinery/telecomms/relay/preset,
+/obj/machinery/telecomms/relay/preset/ruskie,
 /turf/simulated/floor/bluegrid{
 	name = "Server Base";
 	nitrogen = 500;
@@ -516,7 +566,9 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/blowntcommsat)
 "bR" = (
 /obj/structure/door_assembly/door_assembly_mhatch,
@@ -526,6 +578,10 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/structure/table/rack/shelf/steel,
+/obj/item/weapon/circuitboard/protolathe,
+/obj/item/weapon/circuitboard/destructive_analyzer,
+/obj/item/weapon/circuitboard/circuit_imprinter,
 /turf/simulated/floor/tiled,
 /area/submap/blowntcommsat)
 "bT" = (
@@ -541,6 +597,9 @@
 /obj/structure/table/steel,
 /obj/item/ammo_casing/microbattery/combat/lethal,
 /obj/item/weapon/reagent_containers/syringe/drugs,
+/obj/item/weapon/reagent_containers/syringe/ld50_syringe/choral{
+	pixel_y = 8
+	},
 /turf/simulated/floor/bluegrid{
 	name = "Server Base";
 	nitrogen = 500;
@@ -591,7 +650,9 @@
 	dir = 4
 	},
 /obj/item/stack/rods,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/blowntcommsat)
 "ca" = (
 /obj/structure/window/reinforced{
@@ -609,7 +670,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/airless,
 /area/submap/blowntcommsat)
 "ce" = (
 /turf/simulated/floor/tiled,
@@ -619,7 +680,7 @@
 	dir = 5
 	},
 /obj/effect/landmark/loot_spawn/low,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/airless,
 /area/submap/blowntcommsat)
 "cg" = (
 /obj/structure/window/reinforced{
@@ -632,30 +693,32 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/airless,
 /area/submap/blowntcommsat)
 "ci" = (
 /obj/item/stack/rods,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/airless,
 /area/submap/blowntcommsat)
 "cj" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/airless,
 /area/submap/blowntcommsat)
 "ck" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/blowntcommsat)
 "cl" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/airless,
 /area/submap/blowntcommsat)
 "cm" = (
 /obj/machinery/light/small,
@@ -666,7 +729,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/airless,
 /area/submap/blowntcommsat)
 "co" = (
 /turf/template_noop,
@@ -723,6 +786,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/item/stolenpackage,
 /turf/simulated/floor/tiled/dark{
 	nitrogen = 500;
 	oxygen = 0;
@@ -837,8 +901,14 @@
 /area/submap/blowntcommsat)
 "eA" = (
 /obj/structure/table/reinforced,
+/obj/item/weapon/inducer/syndicate,
+/obj/item/weapon/inducer/syndicate,
 /turf/simulated/floor/tiled,
 /area/submap/blowntcommsat)
+"eI" = (
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/laser,
+/turf/template_noop,
+/area/template_noop)
 "gT" = (
 /obj/structure/loot_pile/surface/bones,
 /turf/simulated/floor/tiled/dark{
@@ -847,6 +917,10 @@
 	temperature = 80
 	},
 /area/submap/blowntcommsat)
+"ih" = (
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/basic,
+/turf/template_noop,
+/area/template_noop)
 "jO" = (
 /obj/structure/loot_pile/maint/boxfort,
 /turf/simulated/floor/airless,
@@ -854,6 +928,34 @@
 "kW" = (
 /obj/random/trash,
 /turf/simulated/floor/tiled/airless,
+/area/submap/blowntcommsat)
+"kY" = (
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/rapid,
+/turf/simulated/floor/tiled/dark{
+	nitrogen = 500;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/submap/blowntcommsat)
+"mr" = (
+/obj/structure/table/reinforced,
+/obj/random/powercell,
+/obj/random/powercell,
+/obj/random/powercell,
+/obj/random/powercell,
+/turf/simulated/floor/tiled,
+/area/submap/blowntcommsat)
+"na" = (
+/obj/structure/table/reinforced,
+/obj/item/stack/material/steel{
+	amount = 50;
+	pixel_x = -6;
+	pixel_y = -8
+	},
+/obj/item/stack/material/glass/reinforced{
+	amount = 50
+	},
+/turf/simulated/floor/tiled,
 /area/submap/blowntcommsat)
 "nv" = (
 /obj/random/trash,
@@ -868,17 +970,75 @@
 /obj/random/trash,
 /turf/simulated/floor/tiled,
 /area/submap/blowntcommsat)
+"pr" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
+/area/submap/blowntcommsat)
 "rU" = (
 /obj/structure/frame,
 /turf/simulated/floor/airless,
+/area/submap/blowntcommsat)
+"vA" = (
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	tag = ""
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/blowntcommsat)
 "zO" = (
 /obj/structure/loot_pile/maint/boxfort,
 /turf/simulated/floor/tiled,
 /area/submap/blowntcommsat)
+"Bk" = (
+/obj/structure/window/reinforced,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
+/area/submap/blowntcommsat)
 "Ca" = (
 /obj/structure/girder,
 /turf/simulated/floor/tiled,
+/area/submap/blowntcommsat)
+"Dj" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/mob/living/simple_mob/mechanical/hivebot/tank/armored/anti_laser,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
+/area/submap/blowntcommsat)
+"Eh" = (
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/laser,
+/turf/simulated/floor/airless,
 /area/submap/blowntcommsat)
 "EO" = (
 /obj/random/trash,
@@ -886,6 +1046,7 @@
 /area/submap/blowntcommsat)
 "EX" = (
 /obj/item/device/radio/off,
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/rapid,
 /turf/simulated/floor/airless,
 /area/submap/blowntcommsat)
 "Ho" = (
@@ -900,9 +1061,7 @@
 /turf/simulated/floor/tiled/airless,
 /area/submap/blowntcommsat)
 "Ig" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
+/obj/item/stolenpackage,
 /turf/simulated/floor/tiled,
 /area/submap/blowntcommsat)
 "Kx" = (
@@ -939,6 +1098,10 @@
 	temperature = 80
 	},
 /area/submap/blowntcommsat)
+"Oo" = (
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/basic,
+/turf/simulated/floor/tiled/airless,
+/area/submap/blowntcommsat)
 "Oz" = (
 /obj/structure/grille,
 /turf/space,
@@ -955,6 +1118,26 @@
 /obj/effect/landmark/loot_spawn,
 /turf/simulated/floor/airless,
 /area/submap/blowntcommsat)
+"Rk" = (
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/fragmentation,
+/turf/simulated/floor/tiled/dark{
+	nitrogen = 500;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/submap/blowntcommsat)
+"RM" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/mob/living/simple_mob/mechanical/hivebot/tank/armored/anti_bullet,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
+/area/submap/blowntcommsat)
 "Uc" = (
 /obj/structure/loot_pile/surface/drone,
 /turf/simulated/floor/tiled/dark{
@@ -963,8 +1146,20 @@
 	temperature = 80
 	},
 /area/submap/blowntcommsat)
+"Ud" = (
+/obj/item/stolenpackage,
+/turf/simulated/floor/tiled/airless,
+/area/submap/blowntcommsat)
 "Vm" = (
 /obj/machinery/power/port_gen/pacman,
+/turf/simulated/floor/tiled,
+/area/submap/blowntcommsat)
+"WE" = (
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/basic,
+/turf/simulated/floor/airless,
+/area/submap/blowntcommsat)
+"Xh" = (
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/basic,
 /turf/simulated/floor/tiled,
 /area/submap/blowntcommsat)
 
@@ -1453,14 +1648,14 @@ aa
 aa
 ab
 aa
-cG
+Eh
 cG
 ab
 aa
 aa
 aa
 ab
-cG
+Eh
 ab
 aa
 ab
@@ -1631,7 +1826,7 @@ ab
 cG
 cG
 cG
-cG
+Eh
 cG
 cG
 cG
@@ -2016,8 +2211,8 @@ aa
 aa
 aa
 aa
-aa
-aa
+eI
+eI
 aa
 aa
 aa
@@ -2151,7 +2346,7 @@ aR
 bx
 bF
 bx
-aR
+Dj
 bD
 aR
 aR
@@ -2204,7 +2399,7 @@ an
 ax
 aI
 aQ
-bc
+vA
 bp
 az
 bE
@@ -2261,8 +2456,8 @@ cQ
 ao
 aw
 aJ
-aR
-aI
+pr
+Bk
 bq
 cQ
 cQ
@@ -2499,7 +2694,7 @@ cQ
 cQ
 cx
 cx
-cx
+kY
 cx
 cG
 cG
@@ -2565,12 +2760,12 @@ Oc
 Oc
 cG
 cQ
-ce
-ce
+Ib
+Ib
 cm
 cQ
 cQ
-ce
+Ib
 cQ
 cQ
 cQ
@@ -2615,7 +2810,7 @@ bs
 bz
 bG
 cG
-cG
+WE
 cG
 bN
 cG
@@ -2623,11 +2818,11 @@ NI
 Kx
 cx
 cQ
-ce
-ce
-ce
+Ib
+Ib
+Ib
 cQ
-ce
+Ib
 cG
 cQ
 ct
@@ -2673,7 +2868,7 @@ bt
 bA
 Lv
 Lv
-cx
+Rk
 Lv
 bO
 cx
@@ -2681,12 +2876,12 @@ bW
 cx
 gT
 cQ
-ce
+Ib
 EO
-nv
+kW
 ce
-ce
-ce
+Ib
+Ib
 cs
 cu
 cx
@@ -2726,7 +2921,7 @@ cQ
 aB
 ce
 oy
-ce
+Xh
 nv
 bA
 cx
@@ -2739,12 +2934,12 @@ bX
 Kx
 cx
 cQ
-ce
+Ib
 cG
-ce
+Ud
 Ca
-ce
-ce
+Ib
+Ib
 cQ
 cG
 cG
@@ -2797,12 +2992,12 @@ bY
 Kx
 cx
 cQ
-ce
+Ib
 ci
-ce
+Ib
 cQ
 cQ
-Ig
+at
 cQ
 cQ
 cQ
@@ -2866,7 +3061,7 @@ cQ
 cQ
 cQ
 cD
-ce
+Ig
 cD
 cQ
 cQ
@@ -3187,7 +3382,7 @@ ad
 cQ
 aj
 cG
-Ib
+Oo
 kW
 Ib
 kW
@@ -3196,7 +3391,7 @@ bD
 bD
 bK
 bK
-bD
+RM
 bx
 bD
 bD
@@ -3296,7 +3491,7 @@ aa
 aa
 aa
 aa
-aa
+ih
 aa
 aa
 aa
@@ -3414,7 +3609,7 @@ aa
 aa
 aa
 aa
-aa
+ih
 aa
 ab
 ab
@@ -3486,10 +3681,10 @@ cQ
 cQ
 cQ
 bL
-eA
+na
 bS
 eA
-eA
+mr
 cQ
 cQ
 cQ
@@ -3646,7 +3841,7 @@ aa
 aa
 aa
 aa
-aa
+ih
 aa
 aa
 aa

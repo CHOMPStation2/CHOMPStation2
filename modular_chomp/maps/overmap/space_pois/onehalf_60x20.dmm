@@ -179,6 +179,10 @@
 /obj/machinery/door/blast/regular,
 /turf/simulated/floor/plating,
 /area/submap/onehalf)
+"aP" = (
+/obj/structure/lattice,
+/turf/template_noop,
+/area/template_noop)
 "aQ" = (
 /turf/simulated/wall,
 /area/submap/onehalf)
@@ -1047,6 +1051,27 @@
 	},
 /turf/template_noop,
 /area/submap/onehalf)
+"ey" = (
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/onehalf)
+"fd" = (
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/floor/plating,
+/area/submap/onehalf)
+"fj" = (
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1;
+	layer = 2.9
+	},
+/obj/structure/flora/ausbushes/lavendergrass,
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/submap/onehalf)
 "fE" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -1054,12 +1079,77 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/onehalf)
+"gJ" = (
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1;
+	layer = 2.9
+	},
+/obj/structure/flora/ausbushes/lavendergrass,
+/obj/structure/flora/ausbushes/sunnybush,
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/submap/onehalf)
+"hI" = (
+/mob/living/simple_mob/animal/space/carp,
+/turf/template_noop,
+/area/template_noop)
+"iE" = (
+/obj/structure/disposalpipe/broken{
+	dir = 8;
+	tag = "icon-pipe-b (WEST)"
+	},
+/turf/simulated/floor/plating,
+/area/submap/onehalf)
+"jp" = (
+/mob/living/simple_mob/animal/space/carp/large/roguemines,
+/turf/template_noop,
+/area/template_noop)
+"js" = (
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/area/submap/onehalf)
+"kp" = (
+/obj/machinery/door/airlock/external/bolted,
+/turf/simulated/floor/plating,
+/area/submap/onehalf)
+"kP" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/onehalf)
+"lc" = (
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1;
+	layer = 2.9
+	},
+/obj/structure/flora/ausbushes/leafybush,
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/submap/onehalf)
+"lp" = (
+/obj/machinery/light{
+	dir = 1;
+	on = 1
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/onehalf)
+"mt" = (
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/floor/plating,
+/area/template_noop)
 "nc" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/onehalf)
+"os" = (
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/onehalf)
 "oC" = (
 /obj/effect/floor_decal/rust,
@@ -1084,6 +1174,14 @@
 	},
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/onehalf)
+"ve" = (
+/obj/machinery/door/airlock/angled_bay/double/glass/common{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/area/submap/onehalf)
 "vw" = (
 /obj/structure/disposalpipe/junction{
 	dir = 8
@@ -1094,6 +1192,16 @@
 "xF" = (
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/onehalf)
+"AY" = (
+/obj/structure/girder,
+/turf/simulated/floor/plating/external,
+/area/submap/onehalf)
+"BM" = (
+/obj/random/vendorfood{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/onehalf)
 "Dl" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -1108,6 +1216,74 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/onehalf)
+"Ej" = (
+/obj/random/vendordrink{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/onehalf)
+"Er" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	tag = ""
+	},
+/mob/living/simple_mob/animal/space/carp,
+/turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/onehalf)
+"FS" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	tag = ""
+	},
+/obj/machinery/vending/sovietvend,
+/turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/onehalf)
+"Gv" = (
+/obj/structure/table/bench/steel,
+/obj/structure/window/reinforced{
+	dir = 1;
+	layer = 2.9
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/onehalf)
+"Hd" = (
+/turf/simulated/wall,
+/area/template_noop)
+"HG" = (
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1;
+	layer = 2.9
+	},
+/obj/structure/flora/ausbushes/ywflowers,
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/submap/onehalf)
+"HH" = (
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1;
+	layer = 2.9
+	},
+/obj/structure/flora/ausbushes/ppflowers,
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/submap/onehalf)
+"HI" = (
+/mob/living/simple_mob/animal/space/carp,
+/turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/onehalf)
+"If" = (
+/turf/simulated/floor/plating,
+/area/template_noop)
 "MS" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -1115,6 +1291,38 @@
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/onehalf)
+"NM" = (
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	dir = 1;
+	layer = 2.9
+	},
+/obj/structure/flora/ausbushes/grassybush,
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/submap/onehalf)
+"Pd" = (
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/onehalf)
+"QP" = (
+/obj/structure/window/reinforced{
+	dir = 1;
+	layer = 2.9
+	},
+/obj/structure/table/bench/steel,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/onehalf)
+"Rn" = (
+/obj/effect/floor_decal/rust,
+/obj/machinery/light{
+	dir = 8;
+	layer = 3
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/onehalf)
 "RL" = (
 /obj/structure/disposalpipe/segment{
@@ -1137,6 +1345,109 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/onehalf)
+"Sp" = (
+/obj/structure/disposalpipe/broken{
+	dir = 8;
+	tag = "icon-pipe-b (WEST)"
+	},
+/turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/onehalf)
+"Sv" = (
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1;
+	layer = 2.9
+	},
+/obj/structure/flora/ausbushes/brflowers,
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/submap/onehalf)
+"SP" = (
+/obj/structure/table/bench/steel,
+/obj/structure/window/reinforced,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/onehalf)
+"TV" = (
+/obj/effect/wingrille_spawn/reinforced,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/area/submap/onehalf)
+"Vg" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/mob/living/simple_mob/animal/space/carp,
+/turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/onehalf)
+"Vm" = (
+/obj/structure/largecrate/donksoftvendor,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/onehalf)
+"VE" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/onehalf)
+"WK" = (
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1;
+	layer = 2.9
+	},
+/obj/structure/flora/ausbushes/lavendergrass,
+/obj/structure/flora/ausbushes/brflowers,
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/submap/onehalf)
+"WV" = (
+/obj/machinery/light{
+	dir = 1;
+	on = 1
+	},
+/turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/onehalf)
+"Xm" = (
+/obj/structure/table/bench/steel,
+/obj/structure/window/reinforced,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/onehalf)
+"XP" = (
+/mob/living/simple_mob/animal/space/carp,
+/turf/simulated/floor/plating,
+/area/template_noop)
+"YQ" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/submap/onehalf)
+"Zd" = (
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/area/submap/onehalf)
+"Zs" = (
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	dir = 1;
+	layer = 2.9
+	},
+/obj/structure/flora/ausbushes/ppflowers,
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/submap/onehalf)
+"ZE" = (
+/turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/template_noop)
 
 (1,1,1) = {"
 aa
@@ -1187,10 +1498,10 @@ aa
 aa
 aa
 aa
-ax
 aa
-ax
-ax
+aa
+aa
+aa
 aa
 aa
 aa
@@ -1208,13 +1519,13 @@ aa
 aa
 aa
 aa
-cN
-ax
-cv
-cN
-aU
-bi
-bJ
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -1229,15 +1540,15 @@ aa
 (5,1,1) = {"
 aa
 aa
-cO
-aQ
-ax
-cN
-ax
-be
-bu
-cN
-bU
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -1249,6 +1560,622 @@ aa
 aa
 "}
 (6,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(7,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(8,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(9,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aP
+aa
+aa
+aa
+aa
+aa
+"}
+(10,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aP
+aa
+aa
+aa
+aa
+aa
+"}
+(11,1,1) = {"
+aa
+aa
+aa
+fd
+kp
+fd
+fd
+kp
+fd
+aP
+aP
+aa
+aa
+aa
+aP
+aa
+aa
+aa
+aa
+aa
+"}
+(12,1,1) = {"
+aa
+aa
+aa
+fd
+cl
+fd
+fd
+cl
+fd
+aa
+aa
+aa
+aa
+aa
+aP
+aa
+aa
+aa
+aa
+aa
+"}
+(13,1,1) = {"
+aa
+aa
+aa
+fd
+kp
+fd
+fd
+kp
+fd
+fd
+fd
+aQ
+fd
+fd
+aQ
+aQ
+aa
+aa
+aa
+aa
+"}
+(14,1,1) = {"
+aa
+aa
+aa
+aQ
+Pd
+Pd
+Pd
+os
+Pd
+Pd
+os
+Rn
+os
+Pd
+Pd
+aQ
+aa
+aa
+aa
+aa
+"}
+(15,1,1) = {"
+aP
+aP
+aP
+aQ
+Pd
+Pd
+os
+os
+Pd
+Pd
+Pd
+Pd
+os
+Pd
+Pd
+aQ
+aP
+aP
+aP
+aa
+"}
+(16,1,1) = {"
+aa
+aP
+aa
+aQ
+Pd
+Pd
+os
+SP
+fj
+QP
+Pd
+os
+Xm
+fj
+Gv
+aQ
+aa
+aP
+aa
+aa
+"}
+(17,1,1) = {"
+aa
+aP
+aa
+aQ
+Pd
+os
+os
+SP
+WK
+QP
+Pd
+os
+SP
+gJ
+Gv
+aQ
+aa
+aP
+aa
+aa
+"}
+(18,1,1) = {"
+aa
+aP
+aa
+aQ
+lp
+os
+os
+SP
+HG
+QP
+Pd
+os
+SP
+Sv
+Gv
+aQ
+aa
+aP
+aa
+aa
+"}
+(19,1,1) = {"
+aa
+aP
+aa
+aQ
+Pd
+os
+os
+SP
+Sv
+QP
+os
+os
+SP
+lc
+Gv
+aQ
+aa
+aP
+aa
+aa
+"}
+(20,1,1) = {"
+aa
+aP
+aa
+aQ
+Pd
+os
+os
+SP
+HG
+QP
+os
+Pd
+SP
+HH
+Gv
+aQ
+aP
+aP
+aP
+aP
+"}
+(21,1,1) = {"
+aa
+aP
+aP
+aQ
+Pd
+os
+Pd
+SP
+NM
+QP
+os
+Pd
+SP
+Zs
+Gv
+aQ
+aa
+aa
+aa
+aa
+"}
+(22,1,1) = {"
+aP
+aP
+aa
+aQ
+ey
+YQ
+YQ
+VE
+Pd
+Pd
+Pd
+Pd
+Pd
+Pd
+Pd
+aQ
+aa
+aa
+aa
+aa
+"}
+(23,1,1) = {"
+aa
+aP
+aa
+aQ
+Pd
+Pd
+Pd
+kP
+Pd
+Vm
+Ej
+BM
+Pd
+Pd
+Pd
+aQ
+aa
+aa
+aa
+aa
+"}
+(24,1,1) = {"
+aa
+aP
+aa
+aQ
+js
+Zd
+ve
+TV
+aQ
+fd
+fd
+aQ
+fd
+fd
+aQ
+aQ
+aa
+aa
+aa
+aa
+"}
+(25,1,1) = {"
+aa
+aP
+aa
+aQ
+cN
+xF
+xF
+bw
+AY
+aa
+aa
+aP
+aa
+aa
+aa
+aP
+aa
+aa
+aa
+aa
+"}
+(26,1,1) = {"
+aa
+aa
+aa
+aQ
+WV
+xF
+xF
+bw
+AY
+aa
+aa
+aP
+aa
+aa
+aa
+aP
+aa
+aa
+aa
+aa
+"}
+(27,1,1) = {"
+aa
+aa
+aa
+aQ
+ax
+HI
+cN
+bw
+aQ
+aa
+aa
+Hd
+aa
+aa
+aa
+aP
+aa
+aa
+aa
+aa
+"}
+(28,1,1) = {"
+aa
+aa
+aa
+cN
+cN
+ax
+ax
+Sp
+bu
+Hd
+mt
+Hd
+mt
+mt
+Hd
+aP
+aa
+aa
+aa
+aa
+"}
+(29,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+ax
+aa
+ax
+iE
+Hd
+ZE
+ZE
+ZE
+ZE
+Hd
+aa
+aa
+aa
+aa
+aa
+"}
+(30,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+jp
+aa
+aa
+aa
+hI
+If
+If
+If
+ZE
+Hd
+aa
+aa
+aa
+aa
+aa
+"}
+(31,1,1) = {"
+aa
+aa
+aa
+aa
+ax
+aa
+ax
+ax
+aa
+aa
+aa
+aa
+aa
+XP
+ZE
+aa
+aa
+aa
+aa
+aa
+"}
+(32,1,1) = {"
+aa
+aa
+aa
+cN
+ax
+cv
+cN
+aU
+bi
+bJ
+aa
+aa
+aa
+aa
+If
+aa
+aa
+aa
+aa
+aa
+"}
+(33,1,1) = {"
+aa
+aa
+cO
+aQ
+ax
+cN
+ax
+be
+bu
+cN
+bU
+aa
+jp
+aa
+aa
+hI
+aa
+aa
+aa
+aa
+"}
+(34,1,1) = {"
 aa
 aa
 ac
@@ -1270,7 +2197,7 @@ aa
 aa
 aa
 "}
-(7,1,1) = {"
+(35,1,1) = {"
 aa
 ab
 af
@@ -1292,7 +2219,7 @@ aa
 aa
 aa
 "}
-(8,1,1) = {"
+(36,1,1) = {"
 aa
 ac
 aQ
@@ -1314,7 +2241,7 @@ aa
 aa
 aa
 "}
-(9,1,1) = {"
+(37,1,1) = {"
 aa
 ac
 aQ
@@ -1323,7 +2250,7 @@ aA
 aJ
 aQ
 bh
-bw
+Vg
 bL
 ck
 ck
@@ -1336,7 +2263,7 @@ aa
 aa
 aa
 "}
-(10,1,1) = {"
+(38,1,1) = {"
 aa
 ac
 aQ
@@ -1358,7 +2285,7 @@ dg
 aa
 aa
 "}
-(11,1,1) = {"
+(39,1,1) = {"
 aa
 ac
 aQ
@@ -1380,7 +2307,7 @@ ax
 aa
 aa
 "}
-(12,1,1) = {"
+(40,1,1) = {"
 aa
 ac
 aQ
@@ -1388,7 +2315,7 @@ aQ
 aQ
 aQ
 aQ
-bh
+FS
 bw
 ck
 ax
@@ -1402,7 +2329,7 @@ cl
 cx
 aa
 "}
-(13,1,1) = {"
+(41,1,1) = {"
 aa
 ac
 aQ
@@ -1424,7 +2351,7 @@ ck
 do
 aa
 "}
-(14,1,1) = {"
+(42,1,1) = {"
 aa
 ac
 cU
@@ -1432,7 +2359,7 @@ ap
 ap
 ap
 aW
-bh
+Er
 bw
 cN
 cl
@@ -1446,7 +2373,7 @@ cz
 dp
 aa
 "}
-(15,1,1) = {"
+(43,1,1) = {"
 aa
 ac
 aQ
@@ -1468,7 +2395,7 @@ dj
 ac
 aa
 "}
-(16,1,1) = {"
+(44,1,1) = {"
 aa
 ac
 aQ
@@ -1490,7 +2417,7 @@ bX
 ac
 aa
 "}
-(17,1,1) = {"
+(45,1,1) = {"
 aa
 cG
 cS
@@ -1512,7 +2439,7 @@ bX
 ac
 aa
 "}
-(18,1,1) = {"
+(46,1,1) = {"
 aa
 aa
 aa
@@ -1534,7 +2461,7 @@ bX
 ac
 aa
 "}
-(19,1,1) = {"
+(47,1,1) = {"
 aa
 aa
 aa
@@ -1556,7 +2483,7 @@ bX
 ac
 aa
 "}
-(20,1,1) = {"
+(48,1,1) = {"
 aa
 aa
 aa
@@ -1578,7 +2505,7 @@ dk
 dq
 aa
 "}
-(21,1,1) = {"
+(49,1,1) = {"
 aa
 aa
 aa
@@ -1600,7 +2527,7 @@ dl
 ac
 aa
 "}
-(22,1,1) = {"
+(50,1,1) = {"
 aa
 aa
 aa
@@ -1622,7 +2549,7 @@ dm
 ac
 aa
 "}
-(23,1,1) = {"
+(51,1,1) = {"
 aa
 aa
 aa
@@ -1644,7 +2571,7 @@ dl
 ac
 aa
 "}
-(24,1,1) = {"
+(52,1,1) = {"
 aa
 aa
 aa
@@ -1666,7 +2593,7 @@ dn
 dq
 aa
 "}
-(25,1,1) = {"
+(53,1,1) = {"
 aa
 aa
 aa
@@ -1688,7 +2615,7 @@ bX
 ac
 aa
 "}
-(26,1,1) = {"
+(54,1,1) = {"
 aa
 aa
 aa
@@ -1710,7 +2637,7 @@ bX
 ac
 aa
 "}
-(27,1,1) = {"
+(55,1,1) = {"
 aa
 aa
 aa
@@ -1732,7 +2659,7 @@ cS
 af
 aa
 "}
-(28,1,1) = {"
+(56,1,1) = {"
 aa
 aa
 aa
@@ -1754,7 +2681,7 @@ aa
 aa
 aa
 "}
-(29,1,1) = {"
+(57,1,1) = {"
 aa
 aa
 aa
@@ -1776,7 +2703,7 @@ aa
 aa
 aa
 "}
-(30,1,1) = {"
+(58,1,1) = {"
 aa
 aa
 aa
@@ -1798,7 +2725,7 @@ aa
 aa
 aa
 "}
-(31,1,1) = {"
+(59,1,1) = {"
 aa
 aa
 aa
@@ -1820,7 +2747,7 @@ aa
 aa
 aa
 "}
-(32,1,1) = {"
+(60,1,1) = {"
 aa
 aa
 aa

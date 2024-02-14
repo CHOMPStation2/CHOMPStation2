@@ -1,0 +1,1809 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aJ" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/bed,
+/obj/effect/decal/remains/human,
+/turf/simulated/floor/tiled/yellow,
+/area/submap/gasthelizards)
+"bx" = (
+/obj/effect/decal/cleanable/blood,
+/obj/effect/floor_decal/rust,
+/obj/fruitspawner/corn,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"bN" = (
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2";
+	pixel_y = 1
+	},
+/obj/machinery/power/apc{
+	dir = 4;
+	layer = 5;
+	name = "east bump";
+	pixel_x = 24
+	},
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"bP" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/mob/living/simple_mob/animal/passive/lizard/event,
+/turf/simulated/floor/tiled/yellow,
+/area/submap/gasthelizards)
+"cn" = (
+/obj/item/weapon/grenade/chem_grenade/incendiary,
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"dU" = (
+/obj/machinery/power/port_gen/pacman,
+/obj/structure/cable,
+/obj/fruitspawner/corn,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"fe" = (
+/obj/random/junk,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"fk" = (
+/obj/structure/window/reinforced{
+	dir = 1;
+	layer = 2.9
+	},
+/obj/machinery/power/apc/high{
+	dir = 8;
+	pixel_x = -20
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/gasthelizards)
+"fr" = (
+/obj/item/weapon/pen/red,
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/area/submap/gasthelizards)
+"fR" = (
+/turf/simulated/floor/plating,
+/area/submap/gasthelizards)
+"fX" = (
+/obj/random/junk,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"gx" = (
+/obj/item/weapon/grenade/chem_grenade/teargas,
+/obj/random/junk,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"gL" = (
+/obj/structure/window/reinforced{
+	dir = 1;
+	layer = 2.9
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/gasthelizards)
+"gW" = (
+/obj/item/stack/rods,
+/obj/effect/landmark/loot_spawn/low,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"ir" = (
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"iM" = (
+/turf/simulated/floor/tiled/yellow,
+/area/submap/gasthelizards)
+"jl" = (
+/obj/structure/closet/crate/freezer,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/turf/simulated/floor/tiled/asteroid_steel{
+	icon_state = "dark"
+	},
+/area/submap/gasthelizards)
+"jv" = (
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/area/submap/gasthelizards)
+"jR" = (
+/turf/simulated/mineral,
+/area/submap/druglab)
+"kf" = (
+/obj/effect/floor_decal/rust,
+/obj/fruitspawner/corn,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"kA" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/light,
+/obj/structure/table/standard,
+/obj/item/toy/plushie/lizardplushie,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/area/submap/gasthelizards)
+"lh" = (
+/turf/simulated/floor/tiled/asteroid_steel{
+	icon_state = "dark"
+	},
+/area/submap/gasthelizards)
+"lq" = (
+/obj/machinery/door/airlock/external,
+/turf/simulated/floor/plating,
+/area/submap/gasthelizards)
+"lJ" = (
+/obj/structure/closet,
+/obj/item/clothing/head/bio_hood,
+/obj/item/clothing/suit/bio_suit,
+/obj/item/clothing/gloves/combat,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"mE" = (
+/obj/effect/landmark/loot_spawn/low,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"mO" = (
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"mR" = (
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"mT" = (
+/turf/simulated/mineral/floor/vacuum,
+/area/submap/druglab)
+"no" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/bed,
+/obj/effect/decal/remains/human,
+/turf/simulated/floor/tiled/yellow,
+/area/submap/gasthelizards)
+"np" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/submap/gasthelizards)
+"nr" = (
+/mob/living/simple_mob/animal/passive/lizard/event,
+/turf/simulated/floor/tiled/yellow,
+/area/submap/gasthelizards)
+"nG" = (
+/obj/item/weapon/reagent_containers/food/snacks/chips,
+/obj/structure/table/steel,
+/obj/item/weapon/storage/box/beakers,
+/obj/item/weapon/reagent_containers/glass/beaker/bluespace,
+/obj/item/weapon/reagent_containers/glass/beaker/bluespace,
+/obj/fruitspawner/corn,
+/obj/fruitspawner/corn,
+/obj/fruitspawner/corn,
+/obj/fruitspawner/corn,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"nP" = (
+/turf/template_noop,
+/area/template_noop)
+"nV" = (
+/turf/simulated/floor/plating,
+/area/template_noop)
+"oI" = (
+/obj/structure/lattice,
+/obj/structure/lattice,
+/turf/template_noop,
+/area/template_noop)
+"oO" = (
+/mob/living/simple_mob/humanoid/merc/ranged/space/tommylas,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/area/submap/gasthelizards)
+"oW" = (
+/obj/random/maintenance/security,
+/obj/effect/floor_decal/rust,
+/obj/fruitspawner/corn,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"pa" = (
+/obj/structure/table/reinforced,
+/obj/machinery/light,
+/obj/item/weapon/surgical/circular_saw{
+	pixel_y = 8
+	},
+/obj/item/weapon/surgical/scalpel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	icon_state = "dark"
+	},
+/area/submap/gasthelizards)
+"pj" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/random/trash,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/area/submap/gasthelizards)
+"pq" = (
+/obj/machinery/floodlight,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"pO" = (
+/obj/structure/table/steel,
+/obj/item/weapon/reagent_containers/food/condiment/cornoil{
+	pixel_y = 0;
+	pixel_x = -7
+	},
+/obj/item/weapon/reagent_containers/food/condiment/cornoil{
+	pixel_y = 0;
+	pixel_x = 9
+	},
+/obj/item/weapon/reagent_containers/food/condiment/cornoil{
+	pixel_y = 0;
+	pixel_x = 5
+	},
+/obj/item/weapon/reagent_containers/food/condiment/cornoil{
+	pixel_y = 0;
+	pixel_x = 1
+	},
+/obj/item/weapon/reagent_containers/food/condiment/cornoil{
+	pixel_y = 0;
+	pixel_x = -3
+	},
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"qk" = (
+/mob/living/simple_mob/humanoid/merc/ranged/technician,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/area/submap/gasthelizards)
+"qu" = (
+/obj/item/stack/rods,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"st" = (
+/obj/item/stack/rods,
+/turf/template_noop,
+/area/template_noop)
+"sH" = (
+/obj/item/weapon/grenade/chem_grenade/large,
+/mob/living/simple_mob/humanoid/merc,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"sM" = (
+/obj/item/ammo_casing{
+	pixel_y = 3
+	},
+/obj/random/maintenance/security,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"sO" = (
+/turf/simulated/wall,
+/area/submap/gasthelizards)
+"sP" = (
+/obj/item/stack/rods,
+/obj/effect/landmark/loot_spawn,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"th" = (
+/obj/machinery/door/airlock/external,
+/obj/structure/fans/tiny,
+/turf/simulated/floor/plating,
+/area/submap/gasthelizards)
+"tt" = (
+/obj/fruitspawner/corn,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"vi" = (
+/turf/simulated/wall/r_wall,
+/area/submap/emptyshell)
+"vr" = (
+/obj/machinery/light,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/area/submap/gasthelizards)
+"vu" = (
+/obj/item/weapon/paper_bin,
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/area/submap/gasthelizards)
+"vB" = (
+/obj/machinery/chemical_dispenser/full{
+	pixel_y = 7
+	},
+/obj/structure/table/steel,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"vV" = (
+/obj/machinery/atmospherics/unary/outlet_injector,
+/turf/simulated/floor/tiled/yellow,
+/area/submap/gasthelizards)
+"wR" = (
+/obj/random/junk,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/area/submap/gasthelizards)
+"xD" = (
+/obj/structure/loot_pile/maint/boxfort,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"xF" = (
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"xV" = (
+/obj/item/weapon/melee/baton/cattleprod,
+/obj/structure/table/rack/shelf/steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/area/submap/gasthelizards)
+"yf" = (
+/obj/effect/decal/cleanable/blood/drip,
+/obj/random/junk,
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"ys" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/area/submap/gasthelizards)
+"yW" = (
+/obj/item/stack/cable_coil,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"zA" = (
+/obj/effect/decal/cleanable/blood/drip,
+/obj/random/maintenance/security,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"zN" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/bed,
+/turf/simulated/floor/tiled/yellow,
+/area/submap/gasthelizards)
+"Br" = (
+/obj/machinery/gibber,
+/turf/simulated/floor/tiled/asteroid_steel{
+	icon_state = "dark"
+	},
+/area/submap/gasthelizards)
+"BQ" = (
+/obj/structure/table/steel,
+/obj/machinery/microwave,
+/obj/item/weapon/storage/box/donkpockets/spicy{
+	pixel_y = 12
+	},
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"Ce" = (
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel{
+	icon_state = "dark"
+	},
+/area/submap/gasthelizards)
+"Dd" = (
+/obj/structure/lattice,
+/turf/template_noop,
+/area/template_noop)
+"Ek" = (
+/obj/structure/closet/crate/freezer,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/turf/simulated/floor/tiled/asteroid_steel{
+	icon_state = "dark"
+	},
+/area/submap/gasthelizards)
+"Eq" = (
+/obj/machinery/suit_cycler,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/area/submap/gasthelizards)
+"Fy" = (
+/obj/structure/closet/crate,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"FG" = (
+/obj/random/trash,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/area/submap/gasthelizards)
+"FP" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/outlet_injector,
+/turf/simulated/floor/tiled/yellow,
+/area/submap/gasthelizards)
+"FR" = (
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/area/submap/gasthelizards)
+"GR" = (
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"HN" = (
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"HY" = (
+/obj/structure/loot_pile/surface/drone,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"If" = (
+/obj/effect/landmark/loot_spawn/low,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"Ip" = (
+/obj/machinery/door/airlock/external{
+	name = "Plain Airlock"
+	},
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"Iu" = (
+/obj/structure/table/reinforced,
+/obj/item/weapon/reagent_containers/spray/pepper,
+/obj/random/junk,
+/obj/item/weapon/material/knife/butch,
+/obj/item/weapon/handcuffs,
+/obj/item/stolenpackage,
+/turf/simulated/floor/tiled/asteroid_steel{
+	icon_state = "dark"
+	},
+/area/submap/gasthelizards)
+"Jq" = (
+/obj/machinery/space_heater,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"Ls" = (
+/obj/structure/kitchenspike,
+/turf/simulated/floor/tiled/asteroid_steel{
+	icon_state = "dark"
+	},
+/area/submap/gasthelizards)
+"LW" = (
+/obj/random/trash,
+/turf/simulated/floor/tiled/asteroid_steel{
+	icon_state = "dark"
+	},
+/area/submap/gasthelizards)
+"Mb" = (
+/obj/machinery/door/airlock/security,
+/turf/simulated/floor/tiled/asteroid_steel{
+	icon_state = "dark"
+	},
+/area/submap/gasthelizards)
+"MZ" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/fruitspawner/corn,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"Nt" = (
+/obj/item/weapon/grenade/chem_grenade/teargas,
+/obj/item/weapon/grenade/chem_grenade/teargas,
+/obj/fruitspawner/corn,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"OH" = (
+/obj/machinery/door/airlock/external{
+	name = "Crackden Airlock"
+	},
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"OI" = (
+/turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/emptyshell)
+"Pm" = (
+/obj/machinery/door/window/brigdoor/northleft,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/gasthelizards)
+"PO" = (
+/obj/structure/loot_pile/surface/bones,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"Qe" = (
+/obj/machinery/floodlight{
+	in_use = 1
+	},
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"Qi" = (
+/obj/item/weapon/reagent_containers/glass/bottle/toxin{
+	pixel_x = 6;
+	pixel_y = 8
+	},
+/obj/structure/table/reinforced,
+/obj/item/weapon/reagent_containers/glass/bottle/stoxin,
+/obj/item/weapon/reagent_containers/glass/bottle/tramadol{
+	pixel_x = -3;
+	pixel_y = 6
+	},
+/obj/item/weapon/reagent_containers/glass/bottle/peridaxon{
+	pixel_x = 7;
+	pixel_y = -3
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	icon_state = "dark"
+	},
+/area/submap/gasthelizards)
+"QE" = (
+/obj/random/maintenance/security,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"RD" = (
+/obj/structure/table/steel,
+/obj/item/weapon/evidencebag,
+/obj/fruitspawner/corn,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"Sv" = (
+/obj/structure/table/reinforced,
+/obj/item/weapon/reagent_containers/syringe,
+/obj/item/weapon/reagent_containers/dropper,
+/obj/item/weapon/reagent_containers/glass/bottle/mutagen,
+/obj/item/weapon/reagent_containers/glass/bottle/mutagen,
+/obj/item/weapon/surgical/cautery,
+/obj/item/weapon/surgical/hemostat,
+/turf/simulated/floor/tiled/asteroid_steel{
+	icon_state = "dark"
+	},
+/area/submap/gasthelizards)
+"SG" = (
+/obj/structure/closet/crate/freezer,
+/obj/item/stack/animalhide/lizard{
+	amount = 25
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	icon_state = "dark"
+	},
+/area/submap/gasthelizards)
+"Tx" = (
+/obj/effect/decal/cleanable/blood/gibs,
+/turf/simulated/floor/tiled/asteroid_steel{
+	icon_state = "dark"
+	},
+/area/submap/gasthelizards)
+"Ty" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/item/ammo_casing{
+	pixel_x = -4;
+	pixel_y = -6
+	},
+/obj/item/weapon/grenade/chem_grenade/metalfoam,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"TS" = (
+/obj/structure/table/standard,
+/obj/random/junk,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/area/submap/gasthelizards)
+"UD" = (
+/obj/machinery/door/airlock,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"UN" = (
+/obj/machinery/portable_atmospherics/canister/empty/nitrogen,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/area/submap/gasthelizards)
+"UQ" = (
+/obj/item/stack/rods{
+	amount = 5
+	},
+/turf/template_noop,
+/area/template_noop)
+"Va" = (
+/obj/item/weapon/grenade/chem_grenade/metalfoam,
+/obj/fruitspawner/corn,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"Vn" = (
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"Vp" = (
+/obj/machinery/chem_master,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"VP" = (
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/area/submap/gasthelizards)
+"Wo" = (
+/obj/machinery/portable_atmospherics/powered/scrubber,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/area/submap/gasthelizards)
+"Wy" = (
+/obj/machinery/portable_atmospherics/canister/air,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"Xs" = (
+/obj/effect/landmark/loot_spawn,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"XN" = (
+/mob/living/simple_mob/humanoid/merc/ranged/space,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"Yd" = (
+/obj/structure/table/reinforced,
+/obj/item/clothing/suit/straight_jacket,
+/turf/simulated/floor/tiled/asteroid_steel{
+	icon_state = "dark"
+	},
+/area/submap/gasthelizards)
+"YH" = (
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"Ze" = (
+/obj/machinery/portable_atmospherics/canister/air,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/druglab)
+"Zx" = (
+/obj/fruitspawner/corn,
+/turf/simulated/mineral/floor/vacuum,
+/area/submap/druglab)
+"ZQ" = (
+/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/area/submap/gasthelizards)
+
+(1,1,1) = {"
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+jR
+jR
+jR
+jR
+nP
+nP
+nP
+nP
+nP
+nP
+"}
+(2,1,1) = {"
+nP
+nP
+nP
+nP
+Dd
+Dd
+Dd
+Dd
+nP
+Dd
+Dd
+Dd
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+jR
+jR
+jR
+jR
+jR
+jR
+nP
+nP
+nP
+nP
+nP
+nP
+"}
+(3,1,1) = {"
+nP
+st
+nP
+nP
+Dd
+Dd
+sO
+sO
+sO
+sO
+sO
+sO
+sO
+Dd
+nP
+nP
+nP
+nP
+nP
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+nP
+nP
+nP
+nP
+nP
+"}
+(4,1,1) = {"
+nP
+nP
+Dd
+Dd
+Dd
+Dd
+sO
+FR
+ZQ
+UN
+xV
+Eq
+sO
+Dd
+Dd
+nP
+nP
+nP
+nP
+jR
+jR
+nG
+RD
+Vp
+vB
+pO
+jR
+nP
+nP
+nP
+nP
+nP
+"}
+(5,1,1) = {"
+nP
+Dd
+nP
+sO
+sO
+sO
+sO
+pj
+VP
+VP
+jv
+vr
+sO
+sO
+sO
+nP
+nP
+nP
+nP
+jR
+Qe
+Nt
+QE
+mR
+cn
+mR
+jR
+jR
+jR
+jR
+nP
+nP
+"}
+(6,1,1) = {"
+nP
+nP
+Dd
+sO
+aJ
+iM
+fk
+VP
+jv
+VP
+jv
+VP
+lq
+fR
+th
+Dd
+nP
+nP
+jR
+jR
+Fy
+gx
+sH
+MZ
+xF
+ir
+BQ
+jR
+jR
+jR
+nP
+nP
+"}
+(7,1,1) = {"
+nP
+Dd
+Dd
+sO
+bP
+FP
+Pm
+jv
+oO
+VP
+VP
+FR
+sO
+sO
+sO
+Dd
+nP
+nP
+jR
+jR
+lJ
+kf
+bN
+dU
+Jq
+jR
+jR
+jR
+jR
+nP
+nP
+nP
+"}
+(8,1,1) = {"
+nP
+nP
+Dd
+sO
+no
+np
+gL
+qk
+VP
+FG
+fr
+sO
+sO
+Dd
+Dd
+Dd
+nP
+jR
+jR
+jR
+yf
+sM
+jR
+jR
+jR
+jR
+jR
+nP
+nP
+nP
+nP
+nP
+"}
+(9,1,1) = {"
+nP
+Dd
+Dd
+sO
+bP
+FP
+Pm
+VP
+jv
+VP
+vu
+sO
+Dd
+Dd
+nP
+Dd
+jR
+jR
+jR
+jR
+zA
+Ty
+mO
+fX
+tt
+Wy
+jR
+nP
+nP
+nP
+nP
+nP
+"}
+(10,1,1) = {"
+nP
+nP
+nP
+sO
+zN
+np
+gL
+VP
+jv
+VP
+TS
+sO
+Dd
+st
+nP
+Dd
+jR
+jR
+jR
+jR
+bx
+xF
+xF
+Va
+oW
+Ze
+jR
+nP
+nP
+nP
+nP
+nP
+"}
+(11,1,1) = {"
+nP
+Dd
+Dd
+sO
+bP
+FP
+Pm
+qk
+wR
+VP
+kA
+sO
+Dd
+nP
+nP
+Dd
+nP
+nP
+jR
+jR
+OH
+jR
+pq
+jR
+jR
+jR
+jR
+nP
+nP
+nP
+nP
+nP
+"}
+(12,1,1) = {"
+nP
+Dd
+nP
+sO
+no
+np
+gL
+VP
+jv
+VP
+Wo
+sO
+Dd
+nP
+nP
+Dd
+nP
+nP
+jR
+jR
+xF
+jR
+jR
+jR
+jR
+mT
+nP
+nP
+nP
+nP
+nP
+nP
+"}
+(13,1,1) = {"
+nP
+nP
+Dd
+sO
+nr
+vV
+Pm
+ys
+VP
+VP
+Wo
+sO
+Dd
+nP
+nP
+Dd
+nP
+jR
+jR
+jR
+Ip
+jR
+jR
+jR
+jR
+mT
+mT
+nP
+nP
+nP
+nP
+nP
+"}
+(14,1,1) = {"
+nP
+nP
+Dd
+sO
+sO
+sO
+sO
+sO
+sO
+Mb
+sO
+sO
+Dd
+nP
+nP
+Dd
+nP
+mT
+mT
+mT
+Zx
+mT
+mT
+mT
+mT
+mT
+mT
+nP
+nP
+nP
+nP
+nP
+"}
+(15,1,1) = {"
+nP
+nP
+Dd
+Dd
+sO
+SG
+Ce
+Ls
+Br
+lh
+pa
+sO
+nP
+st
+nP
+Dd
+nP
+nP
+mT
+mT
+mT
+mT
+mT
+mT
+mT
+mT
+jR
+nP
+nP
+nP
+nP
+nP
+"}
+(16,1,1) = {"
+nP
+nP
+Dd
+Dd
+sO
+Ek
+LW
+lh
+Ce
+lh
+Tx
+sO
+Dd
+Dd
+Dd
+oI
+Dd
+Dd
+Dd
+jR
+jR
+jR
+jR
+jR
+jR
+jR
+Dd
+Dd
+Dd
+Dd
+nP
+nP
+"}
+(17,1,1) = {"
+nP
+nP
+nP
+Dd
+sO
+jl
+lh
+Iu
+Yd
+Qi
+Sv
+sO
+Dd
+Dd
+nP
+Dd
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+"}
+(18,1,1) = {"
+nP
+nP
+nP
+Dd
+sO
+sO
+sO
+sO
+sO
+sO
+sO
+sO
+Dd
+Dd
+nV
+nV
+nV
+Dd
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+"}
+(19,1,1) = {"
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+Dd
+YH
+YH
+YH
+Dd
+nP
+nP
+UQ
+Dd
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+"}
+(20,1,1) = {"
+nP
+nP
+st
+nP
+nP
+Dd
+Dd
+nP
+nP
+Dd
+vi
+vi
+vi
+YH
+OI
+OI
+OI
+YH
+vi
+vi
+vi
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+"}
+(21,1,1) = {"
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+Dd
+vi
+vi
+vi
+vi
+vi
+UD
+UD
+vi
+vi
+vi
+vi
+vi
+Dd
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+"}
+(22,1,1) = {"
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+vi
+vi
+vi
+YH
+Vn
+YH
+YH
+GR
+yW
+vi
+vi
+vi
+Dd
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+"}
+(23,1,1) = {"
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+vi
+vi
+HY
+YH
+sP
+HN
+YH
+If
+YH
+PO
+vi
+vi
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+"}
+(24,1,1) = {"
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+vi
+vi
+xD
+YH
+mE
+qu
+Vn
+YH
+GR
+YH
+vi
+vi
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+"}
+(25,1,1) = {"
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+Dd
+vi
+vi
+YH
+Vn
+GR
+GR
+YH
+If
+GR
+xD
+vi
+vi
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+"}
+(26,1,1) = {"
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+vi
+vi
+GR
+fe
+Xs
+XN
+HN
+YH
+YH
+Vn
+vi
+vi
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+"}
+(27,1,1) = {"
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+Dd
+vi
+vi
+YH
+HN
+If
+YH
+PO
+If
+HN
+YH
+vi
+vi
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+"}
+(28,1,1) = {"
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+vi
+vi
+PO
+Vn
+If
+GR
+YH
+gW
+YH
+HY
+vi
+vi
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+"}
+(29,1,1) = {"
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+vi
+vi
+vi
+YH
+YH
+Vn
+HN
+YH
+xD
+vi
+vi
+vi
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+"}
+(30,1,1) = {"
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+Dd
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+"}
+(31,1,1) = {"
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+UQ
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+vi
+nP
+UQ
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+"}
+(32,1,1) = {"
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+UQ
+Dd
+nP
+Dd
+Dd
+Dd
+nP
+Dd
+Dd
+Dd
+UQ
+Dd
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+nP
+"}

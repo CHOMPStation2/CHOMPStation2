@@ -82,10 +82,7 @@
 /area/submap/syndiedepotinner)
 "aH" = (
 /obj/effect/decal/cleanable/blood,
-/obj/machinery/door/airlock/phoron{
-	icon_state = "door_locked";
-	locked = 1
-	},
+/obj/machinery/door/airlock/phoron,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/syndiedepotinner)
 "aN" = (
@@ -570,10 +567,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/syndiedepotinner)
 "eM" = (
-/obj/machinery/door/airlock/phoron{
-	icon_state = "door_locked";
-	locked = 1
-	},
+/obj/machinery/door/airlock/phoron,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/syndiedepotinner)
 "fz" = (
@@ -766,6 +760,11 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/syndiedepotinner)
+"DX" = (
+/turf/simulated/wall{
+	can_open = 1
+	},
+/area/submap/syndiedepotoutter)
 "Fl" = (
 /mob/living/simple_mob/humanoid/merc/melee/sword/poi,
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -936,10 +935,7 @@
 	},
 /area/submap/syndiedepotinner)
 "TX" = (
-/obj/machinery/door/airlock/phoron{
-	icon_state = "door_locked";
-	locked = 1
-	},
+/obj/machinery/door/airlock/phoron,
 /turf/simulated/floor/tiled/asteroid_steel{
 	icon_state = "dark";
 	temperature = 293.15
@@ -1652,7 +1648,7 @@ QR
 ag
 cZ
 cZ
-ao
+DX
 am
 aH
 KN
@@ -1703,7 +1699,7 @@ QR
 cZ
 cZ
 cZ
-ao
+DX
 am
 eM
 KN
@@ -1955,7 +1951,7 @@ QR
 QR
 OD
 QR
-as
+cZ
 cZ
 bU
 ao
@@ -2057,7 +2053,7 @@ OD
 QR
 QR
 QR
-cZ
+as
 cZ
 as
 ao
