@@ -29,8 +29,12 @@ const softSanitizeNumber = (value, minValue, maxValue, allowFloats) => {
     sanitizedString = keepOnlyFirstOccurrence('.', sanitizedString);
     sanitizedString = maybeLeadWithZero(sanitizedString);
   }
-  sanitizedString = maybeMoveMinusSign(sanitizedString);
-  sanitizedString = keepOnlyFirstOccurrence('-', sanitizedString);
+  if (minValue < 0) {
+    sanitizedString = maybeMoveMinusSign(sanitizedString);
+    sanitizedString = keepOnlyFirstOccurrence('-', sanitizedString);
+  } else {
+    sanitizedString = sanitizedString.replaceAll('-', '');
+  }
 
   return clampGuessedNumber(sanitizedString, minimum, maximum, allowFloats);
 };
