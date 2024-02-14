@@ -10,8 +10,7 @@ const DEFAULT_MAX = 10000;
 
 /**
  * Sanitize a number without interfering with writing, numbers.
- * Ideas:
- *  Handle copy pasting by stripping away all but the first dot
+ * Handling dots and minuses in a user friendly way
  * @param value {String}
  * @param minValue {Number}
  * @param maxValue {Number}
@@ -30,8 +29,8 @@ const softSanitizeNumber = (value, minValue, maxValue, allowFloats) => {
     sanitizedString = keepOnlyFirstOccurrence('.', sanitizedString);
     sanitizedString = maybeLeadWithZero(sanitizedString);
   }
-  // sanitizedString = keepOnlyFirstOccurrence('-', sanitizedString);
   sanitizedString = maybeMoveMinusSign(sanitizedString);
+  sanitizedString = keepOnlyFirstOccurrence('-', sanitizedString);
 
   return clampGuessedNumber(sanitizedString, minimum, maximum, allowFloats);
 };
@@ -39,7 +38,7 @@ const softSanitizeNumber = (value, minValue, maxValue, allowFloats) => {
 /**
  * @param softSanitizedNumber {String}
  * @param allowFloats {Boolean}
- * @returns {String}
+ * @returns {string}
  */
 const clampGuessedNumber = (
   softSanitizedNumber,
@@ -60,26 +59,27 @@ const clampGuessedNumber = (
 };
 
 /**
- * Translate 1- to -1 or 100-100 to -100100
+ * Translate x- to -x and -x- to x
  * @param string {String}
+ * @returns {string}
  */
 const maybeMoveMinusSign = (string) => {
   let retString = string;
   // if minus sign is present but not first
   let minusIdx = string.indexOf('-');
   if (minusIdx > 0) {
-    string = string.replaceAll('-', '');
+    string = string.replace('-', '');
     retString = '-'.concat(string);
   } else if (minusIdx === 0) {
-    if (string.indexOf('-', minusIdx + 1) >= 0) {
-      string = string.replaceAll('-', '');
+    if (string.indexOf('-', minusIdx + 1) > 0) {
+      retString = string.replaceAll('-', '');
     }
   }
   return retString;
 };
 
 /**
- * Translate . to 0. or .1 to 0.1
+ * Translate . to 0. or .x to 0.x
  * @param string {String}
  */
 const maybeLeadWithZero = (string) => {
@@ -94,6 +94,7 @@ const maybeLeadWithZero = (string) => {
  * Keep only the first occurrence of a string in another string.
  * @param needle {String}
  * @param haystack {String}
+ * @returns {string}
  */
 const keepOnlyFirstOccurrence = (needle, haystack) => {
   const idx = haystack.indexOf(needle);
