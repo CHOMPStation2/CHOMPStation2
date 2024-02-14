@@ -126,6 +126,7 @@
 #include "code\__defines\dcs\signals_ch.dm"
 #include "code\_global_vars\_regexes.dm"
 #include "code\_global_vars\bitfields.dm"
+#include "code\_global_vars\logging_ch.dm"
 #include "code\_global_vars\misc.dm"
 #include "code\_global_vars\mobs.dm"
 #include "code\_global_vars\sensitive.dm"
