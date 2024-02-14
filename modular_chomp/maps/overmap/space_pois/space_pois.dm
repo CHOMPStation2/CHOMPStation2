@@ -25,7 +25,7 @@ Less important
 // When adding a new PoI, please add it to this list.
 #if MAP_TEST
 //#include "abandonedtele_13x12.dmm"
-#include "abandonedzoo_20x20.dmm"
+#include "abandonedzoo_50x50.dmm"
 #include "asteroid1_60x60.dmm"
 #include "asteroid2_60x60.dmm"
 #include "asteroid3_60x60.dmm"
@@ -87,7 +87,7 @@ Less important
 	mappath = "modular_chomp/maps/overmap/space_pois/abandonedtele_13x12.dmm"
 	block_size = 13
 */
-/datum/map_template/dynamic_overmap/abandonedzoo_20x20
+/datum/map_template/dynamic_overmap/abandonedzoo_50x50
 	name = "Abandoned Zoo"
 	mappath = "modular_chomp/maps/overmap/space_pois/abandonedzoo_50x50.dmm"
 	scanner_desc = "Bio-Experiment labratory of unknown use, last response time ^@# years ago."
