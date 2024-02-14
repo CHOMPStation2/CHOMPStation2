@@ -79,13 +79,15 @@ const maybeMoveMinusSign = (string) => {
 };
 
 /**
- * Translate . to 0. or .x to 0.x
+ * Translate . to 0. or .x to 0.x or -. to -0.
  * @param string {String}
  */
 const maybeLeadWithZero = (string) => {
   let retString = string;
   if (string.indexOf('.') === 0) {
     retString = '0'.concat(string);
+  } else if (string.indexOf('-') === 0 && string.indexOf('.') === 1) {
+    retString = '-0.'.concat(slice(string, 1));
   }
   return retString;
 };
@@ -137,9 +139,19 @@ export class RestrictedInput extends Component {
       editing: false,
     };
     this.handleBlur = (e) => {
+      const { maxValue, minValue, onBlur, allowFloats } = this.props;
       const { editing } = this.state;
       if (editing) {
         this.setEditing(false);
+      }
+      const safeNum = getClampedNumber(
+        e.target.value,
+        minValue,
+        maxValue,
+        allowFloats,
+      );
+      if (onBlur) {
+        onBlur(e, +safeNum);
       }
     };
     this.handleChange = (e) => {
@@ -249,7 +261,7 @@ export class RestrictedInput extends Component {
 
   render() {
     const { props } = this;
-    const { onChange, onEnter, onInput, value, ...boxProps } = props;
+    const { onChange, onEnter, onInput, onBlur, value, ...boxProps } = props;
     const { className, fluid, monospace, ...rest } = boxProps;
     return (
       <Box
