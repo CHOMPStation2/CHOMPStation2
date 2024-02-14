@@ -26,8 +26,8 @@ const softSanitizeNumber = (value, minValue, maxValue, allowFloats) => {
     : value.replace(/[^\-\d]/g, '');
 
   if (allowFloats) {
+    sanitizedString = maybeLeadWithZero(sanitizedString, minimum);
     sanitizedString = keepOnlyFirstOccurrence('.', sanitizedString);
-    sanitizedString = maybeLeadWithZero(sanitizedString);
   }
   if (minValue < 0) {
     sanitizedString = maybeMoveMinusSign(sanitizedString);
@@ -53,7 +53,10 @@ const clampGuessedNumber = (
   let parsed = allowFloats
     ? parseFloat(softSanitizedNumber)
     : parseInt(softSanitizedNumber, 10);
-  if (!isNaN(parsed) && softSanitizedNumber.slice(-1) !== '.') {
+  if (
+    !isNaN(parsed) &&
+    (softSanitizedNumber.slice(-1) !== '.' || parsed < Math.floor(minValue))
+  ) {
     let clamped = clamp(parsed, minValue, maxValue);
     if (parsed !== clamped) {
       return String(clamped);
@@ -86,10 +89,10 @@ const maybeMoveMinusSign = (string) => {
  * Translate . to 0. or .x to 0.x or -. to -0.
  * @param string {String}
  */
-const maybeLeadWithZero = (string) => {
+const maybeLeadWithZero = (string, min) => {
   let retString = string;
   if (string.indexOf('.') === 0) {
-    retString = '0'.concat(string);
+    retString = String(Math.floor(min)).concat(string);
   } else if (string.indexOf('-') === 0 && string.indexOf('.') === 1) {
     retString = '-0.'.concat(slice(string, 1));
   }
