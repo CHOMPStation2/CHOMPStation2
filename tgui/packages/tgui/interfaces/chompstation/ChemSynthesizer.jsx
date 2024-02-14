@@ -1,10 +1,10 @@
-import { useBackend } from '../backend';
-import { Box, Button, Flex, LabeledList, Section } from '../components';
-import { Window } from '../layouts';
-import { BeakerContents } from './common/BeakerContents';
-import { ComplexModal, modalOpen } from './common/ComplexModal';
+import { useBackend } from '../../backend';
+import { Box, Button, Flex, LabeledList, Section } from '../../components';
+import { Window } from '../../layouts';
+import { BeakerContents } from '.././common/BeakerContents';
+import { ComplexModal, modalOpen } from '.././common/ComplexModal';
 
-export const ChemSynthesizer = (props, context) => {
+export const ChemSynthesizer = (props) => {
   return (
     <Window width={1100} height={640} resizable>
       <ComplexModal />
@@ -25,8 +25,8 @@ export const ChemSynthesizer = (props, context) => {
   );
 };
 
-const ChemSynthesizerQueueRecipes = (props, context) => {
-  const { act, data } = useBackend(context);
+const ChemSynthesizerQueueRecipes = (props) => {
+  const { act, data } = useBackend();
   const {
     busy,
     use_catalyst,
@@ -75,7 +75,7 @@ const ChemSynthesizerQueueRecipes = (props, context) => {
               queue.map((item) => {
                 if (item.index === 1 && !!busy) {
                   return (
-                    <LabeledList.Item label={item.name} labelColor="bad">
+                    <LabeledList.Item key="" label={item.name} labelColor="bad">
                       {
                         <Box>
                           <Button disabled icon="trash">
@@ -87,7 +87,7 @@ const ChemSynthesizerQueueRecipes = (props, context) => {
                   );
                 }
                 return (
-                  <LabeledList.Item label={item.name}>
+                  <LabeledList.Item key="" label={item.name}>
                     <Button
                       icon="trash"
                       onClick={() =>
@@ -121,7 +121,7 @@ const ChemSynthesizerQueueRecipes = (props, context) => {
             {(recipes.length &&
               recipes.map((item) => {
                 return (
-                  <LabeledList.Item label={item.name}>
+                  <LabeledList.Item key="" label={item.name}>
                     <Button
                       icon="plus"
                       tooltip="Add to Queue"
@@ -161,8 +161,8 @@ const ChemSynthesizerQueueRecipes = (props, context) => {
   );
 };
 
-const ChemSynthesizerChemicals = (props, context) => {
-  const { act, data } = useBackend(context);
+const ChemSynthesizerChemicals = (props) => {
+  const { act, data } = useBackend();
   const {
     busy,
     chemicals = [],
@@ -234,8 +234,8 @@ const ChemSynthesizerChemicals = (props, context) => {
   );
 };
 
-const ChemSynthesizerSettings = (props, context) => {
-  const { act, data } = useBackend(context);
+const ChemSynthesizerSettings = (props) => {
+  const { act, data } = useBackend();
   const {
     busy,
     production_mode,
@@ -308,19 +308,17 @@ const ChemSynthesizerSettings = (props, context) => {
                 mr="0.5rem"
                 onClick={() => act('drug_form', { drug_index: 1 })}
               />
-              <Button onClick={() => modalOpen(context, 'change_bottle_style')}>
+              <Button onClick={() => modalOpen('change_bottle_style')}>
                 <div
-                  style={
-                    'display: inline-block;' +
-                    'width: 16px;' +
-                    'height: 16px;' +
-                    'vertical-align: middle;' +
-                    'background: url(bottle-' +
-                    data.bottle_icon +
-                    '.png);' +
-                    'background-size: 200%;' +
-                    'background-position: left -10px bottom -6px;'
-                  }
+                  style={{
+                    display: 'inline-block',
+                    width: '16px',
+                    height: '16px',
+                    verticalAlign: 'middle',
+                    background: 'url(bottle-' + data.bottle_icon + '.png)',
+                    backgroundSize: '200%',
+                    backgroundPosition: 'left -10px bottom -6px',
+                  }}
                 />
                 Style
               </Button>
@@ -333,19 +331,17 @@ const ChemSynthesizerSettings = (props, context) => {
                 mr="0.5rem"
                 onClick={() => act('drug_form', { drug_index: 2 })}
               />
-              <Button onClick={() => modalOpen(context, 'change_pill_style')}>
+              <Button onClick={() => modalOpen('change_pill_style')}>
                 <div
-                  style={
-                    'display: inline-block;' +
-                    'width: 16px;' +
-                    'height: 16px;' +
-                    'vertical-align: middle;' +
-                    'background: url(pill' +
-                    data.pill_icon +
-                    '.png);' +
-                    'background-size: 200%;' +
-                    'background-position: left -10px bottom -6px;'
-                  }
+                  style={{
+                    display: 'inline-block',
+                    width: '16px',
+                    height: '16px',
+                    verticalAlign: 'middle',
+                    background: 'url(pill' + data.pill_icon + '.png)',
+                    backgroundSize: '200%',
+                    backgroundPosition: 'left -10px bottom -6px',
+                  }}
                 />
                 Style
               </Button>
@@ -358,19 +354,17 @@ const ChemSynthesizerSettings = (props, context) => {
                 mr="0.5rem"
                 onClick={() => act('drug_form', { drug_index: 3 })}
               />
-              <Button onClick={() => modalOpen(context, 'change_patch_style')}>
+              <Button onClick={() => modalOpen('change_patch_style')}>
                 <div
-                  style={
-                    'display: inline-block;' +
-                    'width: 16px;' +
-                    'height: 16px;' +
-                    'vertical-align: middle;' +
-                    'background: url(patch' +
-                    data.patch_icon +
-                    '.png);' +
-                    'background-size: 200%;' +
-                    'background-position: left -10px bottom -6px;'
-                  }
+                  style={{
+                    display: 'inline-block',
+                    width: '16px',
+                    height: '16px',
+                    verticalAlign: 'middle',
+                    background: 'url(patch' + data.patch_icon + '.png)',
+                    backgroundSize: '200%',
+                    backgroundPosition: 'left -10px bottom -6px',
+                  }}
                 />
                 Style
               </Button>

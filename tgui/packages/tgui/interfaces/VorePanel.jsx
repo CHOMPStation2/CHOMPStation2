@@ -1419,8 +1419,8 @@ const VoreSelectedBellyVisuals = (props) => {
           >
             Disabled
           </Button>
-          {Object.keys(possible_fullscreens).map((key) => (
-            <span style={{ width: '256px' }}>
+          {Object.keys(possible_fullscreens).map((key, index) => (
+            <span key={index} style={{ width: '256px' }}>
               <Button
                 key={key}
                 width="256px"
