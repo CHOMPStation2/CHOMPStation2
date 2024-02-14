@@ -21,9 +21,7 @@ const DEFAULT_MAX = 10000;
 const softSanitizeNumber = (value, minValue, maxValue, allowFloats) => {
   const minimum = minValue || DEFAULT_MIN;
   const maximum = maxValue || maxValue === 0 ? maxValue : DEFAULT_MAX;
-  if (!value || value.length) {
-    return String(minimum);
-  }
+
   let sanitizedString = allowFloats
     ? value.replace(/[^\-\d.]/g, '')
     : value.replace(/[^\-\d]/g, '');
