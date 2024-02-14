@@ -49,7 +49,7 @@ const clampGuessedNumber = (
   let parsed = allowFloats
     ? parseFloat(softSanitizedNumber)
     : parseInt(softSanitizedNumber, 10);
-  if (!isNaN(parsed) && !softSanitizedNumber.slice(-1) === '.') {
+  if (!isNaN(parsed) && softSanitizedNumber.slice(-1) !== '.') {
     let clamped = clamp(parsed, minValue, maxValue);
     if (parsed !== clamped) {
       return String(clamped);
