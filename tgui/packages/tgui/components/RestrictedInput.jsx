@@ -26,7 +26,7 @@ const softSanitizeNumber = (value, minValue, maxValue, allowFloats) => {
     : value.replace(/[^\-\d]/g, '');
 
   if (allowFloats) {
-    sanitizedString = maybeLeadWithZero(sanitizedString, minimum);
+    sanitizedString = maybeLeadWithMin(sanitizedString, minimum);
     sanitizedString = keepOnlyFirstOccurrence('.', sanitizedString);
   }
   if (minValue < 0) {
@@ -86,15 +86,15 @@ const maybeMoveMinusSign = (string) => {
 };
 
 /**
- * Translate . to y. or .x to y.x or -. to -y.
+ * Translate . to min. or .x to mim.x or -. to -min.
  * @param string {String}
  */
-const maybeLeadWithZero = (string, min) => {
+const maybeLeadWithMin = (string, min) => {
   let retString = string;
   if (string.indexOf('.') === 0) {
     retString = String(Math.floor(min)).concat(string);
   } else if (string.indexOf('-') === 0 && string.indexOf('.') === 1) {
-    retString = '-0.'.concat(slice(string, 1));
+    retString = '-' + min + '.'.concat(string.slice(2));
   }
   return retString;
 };
