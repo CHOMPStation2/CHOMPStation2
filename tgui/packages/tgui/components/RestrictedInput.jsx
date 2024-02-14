@@ -86,7 +86,7 @@ const maybeMoveMinusSign = (string) => {
 };
 
 /**
- * Translate . to 0. or .x to 0.x or -. to -0.
+ * Translate . to y. or .x to y.x or -. to -y.
  * @param string {String}
  */
 const maybeLeadWithZero = (string, min) => {
