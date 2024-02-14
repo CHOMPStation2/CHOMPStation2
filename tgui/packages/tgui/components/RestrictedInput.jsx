@@ -94,7 +94,7 @@ const maybeLeadWithMin = (string, min) => {
   if (string.indexOf('.') === 0) {
     retString = String(Math.floor(min)).concat(string);
   } else if (string.indexOf('-') === 0 && string.indexOf('.') === 1) {
-    retString = '-' + min + '.'.concat(string.slice(2));
+    retString = min + '.'.concat(string.slice(2));
   }
   return retString;
 };
