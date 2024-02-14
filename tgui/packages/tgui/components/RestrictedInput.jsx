@@ -21,7 +21,9 @@ const DEFAULT_MAX = 10000;
 const softSanitizeNumber = (value, minValue, maxValue, allowFloats) => {
   const minimum = minValue || DEFAULT_MIN;
   const maximum = maxValue || maxValue === 0 ? maxValue : DEFAULT_MAX;
-
+  if (!value || value.length) {
+    return String(minimum);
+  }
   let sanitizedString = allowFloats
     ? value.replace(/[^\-\d.]/g, '')
     : value.replace(/[^\-\d]/g, '');
@@ -30,7 +32,7 @@ const softSanitizeNumber = (value, minValue, maxValue, allowFloats) => {
     sanitizedString = keepOnlyFirstOccurrence('.', sanitizedString);
     sanitizedString = maybeLeadWithZero(sanitizedString);
   }
-  sanitizedString = keepOnlyFirstOccurrence('-', sanitizedString);
+  // sanitizedString = keepOnlyFirstOccurrence('-', sanitizedString);
   sanitizedString = maybeMoveMinusSign(sanitizedString);
 
   return clampGuessedNumber(sanitizedString, minimum, maximum, allowFloats);
@@ -68,8 +70,12 @@ const maybeMoveMinusSign = (string) => {
   // if minus sign is present but not first
   let minusIdx = string.indexOf('-');
   if (minusIdx > 0) {
-    string = string.replace('-', '');
+    string = string.replaceAll('-', '');
     retString = '-'.concat(string);
+  } else if (minusIdx === 0) {
+    if (string.indexOf('-', minusIdx + 1) >= 0) {
+      string = string.replaceAll('-', '');
+    }
   }
   return retString;
 };
