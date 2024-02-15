@@ -150,13 +150,13 @@ SUBSYSTEM_DEF(dbcore)
 			UNTIL(query.process())
 			queries_active -= query
 
-		/*var/datum/db_query/query_round_shutdown = SSdbcore.NewQuery(
+		var/datum/db_query/query_round_shutdown = SSdbcore.NewQuery(
 			"UPDATE [format_table_name("round")] SET shutdown_datetime = Now(), end_state = :end_state WHERE id = :round_id",
 			list("end_state" = SSticker.end_state, "round_id" = GLOB.round_id),
 			TRUE
-		)*/
-		//query_round_shutdown.Execute(FALSE)
-		//qdel(query_round_shutdown)
+		)
+		query_round_shutdown.Execute(FALSE)
+		qdel(query_round_shutdown)
 
 	log_debug("Done clearing DB queries standby:[length(queries_standby)] active: [length(queries_active)] all: [length(all_queries)]")
 	if(IsConnected())
@@ -252,7 +252,7 @@ SUBSYSTEM_DEF(dbcore)
 		list("internet_address" = world.internet_address || "0", "port" = "[world.port]")
 	)
 	query_round_initialize.Execute(async = FALSE)
-	//GLOB.round_id = "[query_round_initialize.last_insert_id]"
+	GLOB.round_id = "[query_round_initialize.last_insert_id]"
 	qdel(query_round_initialize)
 
 /datum/controller/subsystem/dbcore/proc/SetRoundStart()
