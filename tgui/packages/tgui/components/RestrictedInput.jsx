@@ -35,17 +35,18 @@ const softSanitizeNumber = (value, minValue, maxValue, allowFloats) => {
   } else {
     sanitizedString = sanitizedString.replaceAll('-', '');
   }
-
-  return sanitizedString; // clampGuessedNumber(sanitizedString, minimum, maximum, allowFloats);
+  if (minimum <= 1 && maximum >= 0) {
+    return clampGuessedNumber(sanitizedString, minimum, maximum, allowFloats);
+  }
+  return sanitizedString;
 };
 
 /**
- * Clamping the input to the restricted range
+ * Clamping the input to the restricted range, making the Input smart for min <= 1 and max >= 0
  * @param softSanitizedNumber {String}
  * @param allowFloats {Boolean}
  * @returns {string}
  */
-/** Limiting here causes issues in some field types, e.g. 20 to 200, -20 to -10
 const clampGuessedNumber = (
   softSanitizedNumber,
   minValue,
@@ -66,7 +67,6 @@ const clampGuessedNumber = (
   }
   return softSanitizedNumber;
 };
-*/
 
 /**
  * Translate x- to -x and -x- to x
@@ -94,10 +94,11 @@ const maybeMoveMinusSign = (string) => {
  */
 const maybeLeadWithMin = (string, min) => {
   let retString = string;
+  let cuttedVal = Math.sign(min) * Math.floor(Math.abs(min));
   if (string.indexOf('.') === 0) {
-    retString = String(Math.floor(min)).concat(string);
+    retString = String(cuttedVal).concat(string);
   } else if (string.indexOf('-') === 0 && string.indexOf('.') === 1) {
-    retString = Math.floor(min) + '.'.concat(string.slice(2));
+    retString = cuttedVal + '.'.concat(string.slice(2));
   }
   return retString;
 };
