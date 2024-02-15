@@ -78,7 +78,7 @@
 
 
 /obj/machinery/photocopier/faxmachine/message_chat_admins(var/mob/sender, var/faxname, var/obj/item/sent, var/faxid, font_colour="#006100")
-	fax_discord_message("A fax; '[faxname]' was sent.\nSender: [sender.name]\nFax name:\n[sent.name]\nFax ID: **[faxid]**")
+	fax_discord_message("A fax; '[faxname]' was sent.\nSender: [sender.name]\nFax name: [sent.name]\nFax ID: **[faxid]**")
 
 
 /obj/machinery/photocopier/faxmachine/message_chat_rolerequest(var/font_colour="#006100", var/role_to_ping, var/reason, var/jobname)
