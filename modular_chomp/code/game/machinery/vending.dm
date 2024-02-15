@@ -124,3 +124,78 @@
 					/obj/item/extraction_pack = 1,
 					/obj/item/fulton_core = 1
 				)
+
+
+
+//Temp Starhunter Fix
+/obj/machinery/vending/starhunter_farmer
+	name = "Starhunter Trade Vendor: Farming"
+	desc = "A large vending machine stocked with strange farming goods."
+	vend_delay = 1
+	icon_state = "sec" // Placeholder
+	products	= list(/obj/item/slime_extract/sepia =3,
+		/obj/item/slime_extract/ruby = 3,
+		/obj/item/slime_extract/bluespace = 3,
+		/obj/item/slime_extract/oil = 3,
+		/obj/item/slime_extract/sapphire = 3,
+		/obj/item/slime_extract/emerald = 3,
+		/obj/item/seeds/shrinkshroom = 12,
+		/obj/item/seeds/megashroom = 12,
+		/obj/item/seeds/pitcherseed = 6,
+		/obj/item/seeds/deathberryseed = 6,
+		/obj/item/seeds/ambrosiainfernusseed = 6,
+		/obj/item/seeds/thaadra = 6,
+		/obj/item/seeds/icepepperseed = 6,
+		/obj/item/seeds/jurlmah = 6,
+		/obj/item/seeds/amauri = 6,
+		/obj/item/seeds/gelthi = 6,
+		/obj/item/seeds/vale = 6
+		) // For each, use the following pattern:
+
+	premium 	= list() // No specified amount = only one in stock
+
+	prices     = list(/obj/item/slime_extract/sepia = 2250,
+		/obj/item/slime_extract/ruby = 3250,
+		/obj/item/slime_extract/bluespace = 3250,
+		/obj/item/slime_extract/oil = 3250,
+		/obj/item/slime_extract/sapphire = 3250,
+		/obj/item/slime_extract/emerald = 3250,
+		/obj/item/seeds/shrinkshroom = 50,
+		/obj/item/seeds/megashroom = 50,
+		/obj/item/seeds/pitcherseed = 125,
+		/obj/item/seeds/deathberryseed = 125,
+		/obj/item/seeds/ambrosiainfernusseed = 125,
+		/obj/item/seeds/thaadra = 125,
+		/obj/item/seeds/icepepperseed = 125,
+		/obj/item/seeds/jurlmah = 125,
+		/obj/item/seeds/amauri = 125,
+		/obj/item/seeds/gelthi = 125,
+		/obj/item/seeds/vale = 125)
+
+/obj/machinery/vending/starhunter_miner
+	name = "Starhunter Trade Vendor: Miner"
+	desc = "A large vending machine stocked with strange mining goods."
+	vend_delay = 1
+	icon_state = "sec" // Placeholder
+	products	= list(/obj/item/weapon/kinetic_crusher/glaive = 3,
+		/obj/item/weapon/kinetic_crusher = 3,
+		/obj/item/weapon/gun/energy/mininglaser = 3,
+		/obj/item/stack/material/phoron = 50,
+		/obj/item/stack/material/uranium = 50,
+		/obj/item/stack/material/tritium = 50,
+		/obj/item/stack/material/deuterium = 50,
+		/obj/item/stack/material/bronze = 50,
+		) // For each, use the following pattern:
+
+	premium 	= list(/obj/item/weapon/circuitboard/defenseonelisk) // No specified amount = only one in stock
+
+	prices     = list(/obj/item/weapon/kinetic_crusher/glaive = 1200,
+		/obj/item/weapon/kinetic_crusher = 1200,
+		/obj/item/weapon/gun/energy/mininglaser = 1800,
+		/obj/item/stack/material/phoron = 12,
+		/obj/item/stack/material/uranium = 12,
+		/obj/item/stack/material/tritium = 12,
+		/obj/item/stack/material/deuterium = 12,
+		/obj/item/stack/material/bronze = 12,
+		/obj/item/weapon/circuitboard/defenseonelisk = 5000
+		)
