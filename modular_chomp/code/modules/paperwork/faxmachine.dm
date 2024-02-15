@@ -79,7 +79,7 @@
 
 /obj/machinery/photocopier/faxmachine/message_chat_admins(var/mob/sender, var/faxname, var/obj/item/sent, var/faxid, font_colour="#006100")
 	var/faxmsg
-	if(faxid || fexists("[config.fax_export_dir]/fax_[faxid].html"))
+	if(faxid && fexists("[config.fax_export_dir]/fax_[faxid].html"))
 		faxmsg = return_file_text("[config.fax_export_dir]/fax_[faxid].html")
 
 	if(faxmsg)
