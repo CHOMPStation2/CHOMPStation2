@@ -4402,6 +4402,7 @@
 "Cv" = (
 /obj/structure/bed,
 /obj/item/weapon/bedsheet/cosmos,
+/mob/living/simple_mob/humanoid/starhunter/trader/miner,
 /turf/simulated/floor/concrete,
 /area/surface/cave/explored/trader)
 "Cx" = (
@@ -4461,7 +4462,8 @@
 /turf/simulated/floor/concrete,
 /area/surface/cave/explored/trader)
 "In" = (
-/obj/item/weapon/stool,
+/obj/structure/bed,
+/obj/item/weapon/bedsheet/cosmos,
 /mob/living/simple_mob/humanoid/starhunter/trader/farmer,
 /turf/simulated/floor/concrete,
 /area/surface/cave/explored/trader)
@@ -4517,8 +4519,7 @@
 	},
 /area/surface/outpost/research/xenoarcheology/exterior)
 "Qd" = (
-/obj/item/weapon/stool,
-/mob/living/simple_mob/humanoid/starhunter/trader/miner,
+/obj/machinery/vending/starhunter_farmer,
 /turf/simulated/floor/concrete,
 /area/surface/cave/explored/trader)
 "Qs" = (
@@ -4553,6 +4554,10 @@
 	temperature = 243.15
 	},
 /area/surface/outpost/mining_main/cave)
+"St" = (
+/obj/machinery/vending/starhunter_miner,
+/turf/simulated/floor/concrete,
+/area/surface/cave/explored/trader)
 "SI" = (
 /obj/structure/table/marble,
 /obj/item/weapon/reagent_containers/food/snacks/bacon_and_eggs,
@@ -69090,11 +69095,11 @@ Cv
 Qs
 kx
 RM
-YU
+Qd
 oO
 xS
 SI
-Qd
+oO
 YU
 RM
 LO
@@ -69602,12 +69607,12 @@ ae
 ae
 ae
 RM
-Cv
+In
 jK
 kx
 RM
-YU
-In
+St
+oO
 HL
 jU
 oO
