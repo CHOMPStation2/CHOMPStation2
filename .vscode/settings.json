@@ -14,7 +14,7 @@
     "editor.codeActionsOnSave": {
 		"source.fixAll.eslint": "explicit"
 	},
-    "files.eol": "\n",
+    "files.eol": "auto",
     "files.encoding": "utf8",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
@@ -27,7 +27,7 @@
     ],
     "tgstationTestExplorer.project.resultsType": "json",
     "[dm]": {
-        "files.eol": "\r\n",
+        "files.eol": "\n",
         "editor.detectIndentation": false,
         "editor.insertSpaces": false
     },
