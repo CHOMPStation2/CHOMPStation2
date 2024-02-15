@@ -67,7 +67,7 @@ var/list/mentor_verbs_default = list(
 	// CHOMPedit Start - Adding to DB Logic
 	var/result = tgui_alert(src, "Do you want to add this person into the mentor database? This will allow them to be a mentor in future rounds too.", "Add to Database", list("Yes", "No"))
 	if(result == "Yes")
-		var/DBQuery/query = SSdbcore.NewQuery("INSERT INTO erro_mentor (ckey, mentor) VALUES (:ckey, :mentor)", list("ckey" = C.ckey, "mentor" = 1))
+		var/datum/db_query/query = SSdbcore.NewQuery("INSERT INTO erro_mentor (ckey, mentor) VALUES (:ckey, :mentor)", list("ckey" = C.ckey, "mentor" = 1))
 		query.Execute()
 		qdel(query)
 	// CHOMPedit End
@@ -91,7 +91,7 @@ var/list/mentor_verbs_default = list(
 	log_admin("[key_name(src)] revoked [key_name(C)]'s mentorship.")
 	feedback_add_details("admin_verb","Unmake Mentor") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	// CHOMPedit Start - Removing from DB Logic
-	var/DBQuery/query = SSdbcore.NewQuery("DELETE FROM erro_mentor WHERE ckey = :ckey", list("ckey" = C.ckey))
+	var/datum/db_query/query = SSdbcore.NewQuery("DELETE FROM erro_mentor WHERE ckey = :ckey", list("ckey" = C.ckey))
 	query.Execute()
 	qdel(query)
 	// CHOMPedit End
