@@ -57,7 +57,7 @@ var/global/datum/book_manager/book_mgr = new()
 		if(!SSdbcore.IsConnected()) //CHOMP Edit
 			dat += "<font color=red><b>ERROR</b>: Unable to contact External Archive. Please contact your system administrator for assistance.</font>"
 		else
-			var/DBQuery/query = dbcon.NewQuery("DELETE FROM library WHERE id=[isbn]")
+			var/datum/db_query/query = dbcon.NewQuery("DELETE FROM library WHERE id=[isbn]")
 			if(!query.Execute())
 				to_chat(usr,query.ErrorMsg())
 			dbcon.Disconnect()
