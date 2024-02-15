@@ -153,3 +153,6 @@
   - balance: blacklists key items
   Raeschen:
   - rscadd: Guidelines for shadekin and outsider, linked on spawn.
+2024-02-15:
+  ItsSelis:
+  - rscadd: Added round_id
