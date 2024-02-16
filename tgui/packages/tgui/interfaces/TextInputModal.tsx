@@ -1,7 +1,6 @@
 import { KEY } from 'common/keys';
 import { KeyboardEvent, useState } from 'react';
 
-import { KEY_ENTER, KEY_ESCAPE } from '../../common/keycodes'; // CHOMPedit
 import { useBackend } from '../backend';
 import { Box, Section, Stack, TextArea } from '../components';
 import { Window } from '../layouts';
@@ -16,10 +15,6 @@ type TextInputData = {
   placeholder: string;
   timeout: number;
   title: string;
-<<<<<<< HEAD
-  // CHOMPedit Start
-=======
->>>>>>> dff69cbb17... Merge pull request #15759 from VOREStation/tgui_fix_2
 };
 
 export const sanitizeMultiline = (toSanitize: string) => {
@@ -66,13 +61,6 @@ export const TextInputModal = (props) => {
       {timeout && <Loader value={timeout} />}
       <Window.Content
         onKeyDown={(event) => {
-<<<<<<< HEAD
-          const keyCode = window.event ? event.which : event.keyCode;
-          if (keyCode === KEY_ENTER && (!visualMultiline || !event.shiftKey)) {
-            act('submit', { entry: input });
-          }
-          if (keyCode === KEY_ESCAPE) {
-=======
           if (
             event.key === KEY.Enter &&
             (!visualMultiline || !event.shiftKey)
@@ -80,12 +68,10 @@ export const TextInputModal = (props) => {
             act('submit', { entry: input });
           }
           if (event.key === KEY.Escape) {
->>>>>>> dff69cbb17... Merge pull request #15759 from VOREStation/tgui_fix_2
             act('cancel');
           }
         }}
       >
-        {/* CHOMPedit End */}
         <Section fill>
           <Stack fill vertical>
             <Stack.Item>
@@ -113,17 +99,10 @@ const InputArea = (props: {
   onType: (value: string) => void;
 }) => {
   const { act, data } = useBackend<TextInputData>();
-<<<<<<< HEAD
-  const { max_length, multiline } = data; // CHOMPedit
-  const { input, onType } = props;
-
-  const visualMultiline = multiline || input.length >= 30; // CHOMPedit
-=======
   const { max_length, multiline } = data;
   const { input, onType } = props;
 
   const visualMultiline = multiline || input.length >= 30;
->>>>>>> dff69cbb17... Merge pull request #15759 from VOREStation/tgui_fix_2
 
   return (
     <TextArea
@@ -132,21 +111,12 @@ const InputArea = (props: {
       height={multiline || input.length >= 30 ? '100%' : '1.8rem'}
       maxLength={max_length}
       onEscape={() => act('cancel')}
-<<<<<<< HEAD
-      onEnter={(event) => {
-        // CHOMPedit Start
-=======
       onEnter={(event: KeyboardEvent<HTMLTextAreaElement>) => {
->>>>>>> dff69cbb17... Merge pull request #15759 from VOREStation/tgui_fix_2
         if (visualMultiline && event.shiftKey) {
           return;
         }
         event.preventDefault();
         act('submit', { entry: input });
-<<<<<<< HEAD
-        // CHOMPedit End
-=======
->>>>>>> dff69cbb17... Merge pull request #15759 from VOREStation/tgui_fix_2
       }}
       onChange={(_, value) => onType(value)}
       onInput={(_, value) => onType(value)}
