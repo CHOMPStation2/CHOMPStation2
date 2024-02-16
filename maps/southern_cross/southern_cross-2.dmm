@@ -46853,7 +46853,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4
 	},
-/obj/machinery/door/firedoor/border_only,
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/hallway/secondary/entry/D1)
@@ -48060,7 +48059,6 @@
 /turf/simulated/floor/plating,
 /area/engineering/drone_fabrication)
 "eZp" = (
-/obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 8
 	},
@@ -52500,6 +52498,7 @@
 "hpn" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/atmospherics/pipe/manifold/hidden,
+/obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/hallway/secondary/entry/D3)
 "hpA" = (
@@ -55251,6 +55250,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
+/obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/hallway/secondary/entry/D3)
 "iLA" = (
@@ -60570,6 +60570,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
 	},
+/obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/hallway/secondary/entry/D3)
 "lFN" = (
@@ -73872,6 +73873,14 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
+"teR" = (
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 6
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/plating,
+/area/hallway/secondary/entry/D2)
 "tfb" = (
 /obj/structure/table/standard,
 /obj/random/tech_supply,
@@ -77984,7 +77993,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/aft)
 "vCn" = (
-/obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4
 	},
@@ -78074,7 +78082,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/border_only,
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/hallway/secondary/entry/D1)
@@ -115666,7 +115673,7 @@ jqz
 ogN
 tDT
 jqz
-tDT
+hax
 hax
 mLP
 xka
@@ -116698,7 +116705,7 @@ jqz
 ogN
 tDT
 jqz
-tDT
+hax
 hax
 jqz
 xka
@@ -116941,7 +116948,7 @@ aaa
 aaa
 aaa
 aaa
-uOF
+teR
 gUd
 aSp
 tDT
@@ -116951,7 +116958,7 @@ jqz
 tDT
 kZG
 hCW
-uOF
+teR
 aaa
 aaa
 aaa
