@@ -48,7 +48,7 @@
 				var/mob/living/target = pick(potentials)
 				if(istype(target) && target.devourable && target.can_be_drop_prey && vore_selected)
 					target.forceMove(vore_selected)
-					to_chat(target,"<span class='warning'>\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
+					to_chat(target,"<span class='vwarning'>\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
 
 		// Do this after the potential vore, so we get the belly
 		update_icon()
@@ -183,6 +183,27 @@
 		template.load(deploy_location, centered = TRUE)
 		template.update_lighting(deploy_location)
 		ability_flags &= AB_DARK_TUNNEL
+		return TRUE
+	else
+		return FALSE
+//CHOMPEdit End
+
+//CHOMPEdit Begin - Add Dark Maw
+/mob/living/simple_mob/shadekin/proc/dark_maw()
+	var/turf/T = get_turf(src)
+	if(!istype(T))
+		to_chat(src, "<span class='warning'>You don't seem to be able to set a trap here!</span>")
+		return FALSE
+	else if(T.get_lumcount() >= 0.5)
+		to_chat(src, "<span class='warning'>There is too much light here for your trap to last!</span>")
+		return FALSE
+
+	if(do_after(src, 10))
+		if(ability_flags & AB_PHASE_SHIFTED)
+			new /obj/effect/abstract/dark_maw(loc, src, 1)
+		else
+			new /obj/effect/abstract/dark_maw(loc, src)
+
 		return TRUE
 	else
 		return FALSE

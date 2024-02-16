@@ -199,7 +199,7 @@
 
 	if (disabilities & EPILEPSY)
 		if ((prob(1) && paralysis < 1))
-			to_chat(src, "<font color='red'>You have a seizure!</font>")
+			to_chat(src, span_red("You have a seizure!"))
 			for(var/mob/O in viewers(src, null))
 				if(O == src)
 					continue
@@ -439,7 +439,7 @@
 				if(prob(50) && prob(100 * RADIATION_SPEED_COEFFICIENT))
 					spawn vomit()
 				if(!paralysis && prob(30) && prob(100 * RADIATION_SPEED_COEFFICIENT)) //CNS is shutting down.
-					to_chat(src, "<font color='Critical'>You have a seizure!</font>")
+					to_chat(src, "<span class='critical'>You have a seizure!</span>")
 					Paralyse(10)
 					make_jittery(1000)
 					if(!lying)
@@ -499,7 +499,7 @@
 					drop_item()
 			if(accumulated_rads > 700) // (12Gy)
 				if(!paralysis && prob(1) && prob(100 * RADIATION_SPEED_COEFFICIENT)) //1 in 1000 chance per tick.
-					to_chat(src, "<font color='Critical'>You have a seizure!</font>")
+					to_chat(src, "<span class='critical'>You have a seizure!</span>")
 					Paralyse(10)
 					make_jittery(1000)
 					if(!lying)
@@ -1596,7 +1596,8 @@
 		else
 			clear_alert("high")
 
-		if(!isbelly(loc) && !previewing_belly) //VOREStation Add - Belly fullscreens safety //CHOMPEdit
+		//CHOMPEdit - surrounding_belly() used instead of isbelly(loc) to not clear indirect vorefx
+		if(!surrounding_belly() && !previewing_belly) //VOREStation Add - Belly fullscreens safety //CHOMPEdit
 			clear_fullscreen("belly")
 			//clear_fullscreen("belly2") //Chomp disable, using our own implementation
 			//clear_fullscreen("belly3") //Chomp disable, using our own implementation

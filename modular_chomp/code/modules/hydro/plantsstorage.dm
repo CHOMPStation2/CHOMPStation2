@@ -50,8 +50,9 @@
 		/obj/item/seeds/whitebeetseed = 3,
 		/obj/item/seeds/wurmwoad = 3,
 		/obj/item/seeds/shrinkshroom = 3,
-		/obj/item/seeds/megashroom = 3
-		) //CHOMPEdit - Seed list altered to include extra seeds available in seed_storage_vr.dm
+		/obj/item/seeds/megashroom = 3,
+		/obj/item/seeds/cinnamon = 3
+		) //CHOMPEdit - Seed list altered to include extra seeds available in seed_storage_vr.dm. Added cinnamon
 
 /obj/machinery/seed_storage/xenobotany
 	name = "Xenobotany seed storage"
@@ -114,5 +115,6 @@
 		/obj/item/seeds/shrinkshroom = 3,
 		/obj/item/seeds/megashroom = 3,
 		/obj/item/seeds/lustflower = 2,
-		/obj/item/seeds/pitcherseed = 3
-		) //CHOMPEdit - Seed list altered to include extra seeds available in seed_storage_vr.dm
+		/obj/item/seeds/pitcherseed = 3,
+		/obj/item/seeds/cinnamon = 3
+		) //CHOMPEdit - Seed list altered to include extra seeds available in seed_storage_vr.dm. Added cinnamon.

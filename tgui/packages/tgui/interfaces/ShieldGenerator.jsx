@@ -1,18 +1,25 @@
-import { useBackend } from '../backend';
-import { Window } from '../layouts';
-import { Fragment } from 'inferno';
-import { Button, Box, Section, LabeledList, NumberInput, Icon } from '../components';
 import { round } from 'common/math';
-import { formatSiUnit, formatPower } from '../format';
+
+import { useBackend } from '../backend';
+import {
+  Box,
+  Button,
+  Icon,
+  LabeledList,
+  NumberInput,
+  Section,
+} from '../components';
+import { formatPower, formatSiUnit } from '../format';
+import { Window } from '../layouts';
 import { FullscreenNotice } from './common/FullscreenNotice';
 
-export const ShieldGenerator = (props, context) => {
-  const { act, data } = useBackend(context);
+export const ShieldGenerator = (props) => {
+  const { act, data } = useBackend();
 
   const { locked } = data;
 
   return (
-    <Window width={500} height={400} resizable>
+    <Window width={500} height={400}>
       <Window.Content>
         {locked ? <ShieldGeneratorLocked /> : <ShieldGeneratorContent />}
       </Window.Content>
@@ -20,7 +27,7 @@ export const ShieldGenerator = (props, context) => {
   );
 };
 
-const ShieldGeneratorLocked = (props, context) => (
+const ShieldGeneratorLocked = (props) => (
   <FullscreenNotice title="Locked">
     <Box fontSize="1.5rem" bold>
       <Icon
@@ -36,8 +43,8 @@ const ShieldGeneratorLocked = (props, context) => (
   </FullscreenNotice>
 );
 
-const ShieldGeneratorContent = (props, context) => {
-  const { act, data } = useBackend(context);
+const ShieldGeneratorContent = (props) => {
+  const { act, data } = useBackend();
 
   const {
     capacitors,
@@ -59,7 +66,7 @@ const ShieldGeneratorContent = (props, context) => {
 
   const capacitorLen = (capacitors || []).length;
   return (
-    <Fragment>
+    <>
       <Section title="Status">
         <LabeledList>
           <LabeledList.Item label="Field Status">
@@ -74,7 +81,7 @@ const ShieldGeneratorContent = (props, context) => {
             {(target_field_strength &&
               round(
                 (100 * average_field_strength) / target_field_strength,
-                1
+                1,
               )) ||
               'NA'}
             %)
@@ -132,7 +139,8 @@ const ShieldGeneratorContent = (props, context) => {
             selected={active}
             onClick={() => act('toggle')}
           />
-        }>
+        }
+      >
         <LabeledList>
           <LabeledList.Item label="Coverage Radius">
             <NumberInput
@@ -182,6 +190,6 @@ const ShieldGeneratorContent = (props, context) => {
           </LabeledList.Item>
         </LabeledList>
       </Section>
-    </Fragment>
+    </>
   );
 };

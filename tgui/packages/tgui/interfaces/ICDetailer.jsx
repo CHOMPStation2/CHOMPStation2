@@ -1,10 +1,11 @@
+import { toTitleCase } from 'common/string';
+
 import { useBackend } from '../backend';
 import { Button, Section } from '../components';
 import { Window } from '../layouts';
-import { toTitleCase } from 'common/string';
 
-export const ICDetailer = (props, context) => {
-  const { act, data } = useBackend(context);
+export const ICDetailer = (props) => {
+  const { act, data } = useBackend();
 
   const { detail_color, color_list } = data;
 
@@ -27,12 +28,12 @@ export const ICDetailer = (props, context) => {
               style={
                 color_list[key] === detail_color
                   ? {
-                    border: '4px solid black',
-                    'border-radius': 0,
-                  }
+                      border: '4px solid black',
+                      'border-radius': 0,
+                    }
                   : {
-                    'border-radius': 0,
-                  }
+                      'border-radius': 0,
+                    }
               }
               backgroundColor={color_list[key]}
             />

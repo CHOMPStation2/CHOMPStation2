@@ -1,6 +1,18 @@
-import { Fragment } from 'inferno';
-import { useBackend, useLocalState } from '../backend';
-import { Box, Button, LabeledList, ProgressBar, Modal, Section, Dropdown, AnimatedNumber, NoticeBox, Table } from '../components';
+import { useState } from 'react';
+
+import { useBackend } from '../backend';
+import {
+  AnimatedNumber,
+  Box,
+  Button,
+  Dropdown,
+  LabeledList,
+  Modal,
+  NoticeBox,
+  ProgressBar,
+  Section,
+  Table,
+} from '../components';
 import { Window } from '../layouts';
 
 const NIF_WORKING = 0;
@@ -20,24 +32,16 @@ const validThemes = [
   'syndicate',
 ];
 
-export const NIF = (props, context) => {
-  const { act, config, data } = useBackend(context);
+export const NIF = (props) => {
+  const { act, config, data } = useBackend();
 
   const { theme, last_notification } = data;
 
-  const [settingsOpen, setSettingsOpen] = useLocalState(
-    context,
-    'settingsOpen',
-    false
-  );
-  const [viewingModule, setViewing] = useLocalState(
-    context,
-    'viewingModule',
-    null
-  );
+  const [settingsOpen, setSettingsOpen] = useState(false);
+  const [viewingModule, setViewing] = useState(null);
 
   return (
-    <Window theme={theme} width={500} height={400} resizable>
+    <Window theme={theme} width={500} height={400}>
       <Window.Content scrollable>
         {!!last_notification && (
           <NoticeBox info>
@@ -65,7 +69,7 @@ export const NIF = (props, context) => {
               m={0}
               title={viewingModule.name}
               buttons={
-                <Fragment>
+                <>
                   <Button.Confirm
                     icon="ban"
                     color="bad"
@@ -81,8 +85,9 @@ export const NIF = (props, context) => {
                     icon="window-close"
                     onClick={() => setViewing(null)}
                   />
-                </Fragment>
-              }>
+                </>
+              }
+            >
               <Box>{viewingModule.desc}</Box>
               <Box>
                 It consumes{' '}
@@ -125,7 +130,8 @@ export const NIF = (props, context) => {
               selected={settingsOpen}
               onClick={() => setSettingsOpen(!settingsOpen)}
             />
-          }>
+          }
+        >
           {(settingsOpen && <NIFSettings />) || (
             <NIFMain setViewing={setViewing} />
           )}
@@ -175,8 +181,8 @@ const getNutritionText = (nutrition, isSynthetic) => {
   return 'Power failure imminent.';
 };
 
-const NIFMain = (props, context) => {
-  const { act, config, data } = useBackend(context);
+const NIFMain = (props) => {
+  const { act, config, data } = useBackend();
 
   const {
     nif_percent,
@@ -201,7 +207,8 @@ const NIFMain = (props, context) => {
               good: [50, Infinity],
               average: [25, 50],
               bad: [-Infinity, 0],
-            }}>
+            }}
+          >
             {getNifCondition(nif_stat, nif_percent)} (
             <AnimatedNumber value={nif_percent} />
             %)
@@ -216,7 +223,8 @@ const NIFMain = (props, context) => {
               good: [250, Infinity],
               average: [150, 250],
               bad: [0, 150],
-            }}>
+            }}
+          >
             {getNutritionText(nutrition, isSynthetic)}
           </ProgressBar>
         </LabeledList.Item>
@@ -228,7 +236,7 @@ const NIFMain = (props, context) => {
               label={module.name}
               key={module.ref}
               buttons={
-                <Fragment>
+                <>
                   <Button.Confirm
                     icon="trash"
                     color="bad"
@@ -244,8 +252,9 @@ const NIFMain = (props, context) => {
                     tooltip="View Information"
                     tooltipPosition="left"
                   />
-                </Fragment>
-              }>
+                </>
+              }
+            >
               {(module.activates && (
                 <Button
                   fluid
@@ -262,8 +271,8 @@ const NIFMain = (props, context) => {
   );
 };
 
-const NIFSettings = (props, context) => {
-  const { act, data } = useBackend(context);
+const NIFSettings = (props) => {
+  const { act, data } = useBackend();
 
   const { theme } = data;
 

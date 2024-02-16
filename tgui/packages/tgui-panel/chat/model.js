@@ -5,10 +5,13 @@
  */
 
 import { createUuid } from 'common/uuid';
-import { MESSAGE_TYPES, MESSAGE_TYPE_INTERNAL } from './constants';
+
+import { MESSAGE_TYPE_INTERNAL, MESSAGE_TYPES } from './constants';
 
 export const canPageAcceptType = (page, type) =>
   type.startsWith(MESSAGE_TYPE_INTERNAL) || page.acceptedTypes[type];
+
+export const canStoreType = (storedTypes, type) => storedTypes[type];
 
 export const createPage = (obj) => {
   let acceptedTypes = {};
@@ -18,10 +21,12 @@ export const createPage = (obj) => {
   }
 
   return {
+    isMain: false,
     id: createUuid(),
     name: 'New Tab',
     acceptedTypes: acceptedTypes,
     unreadCount: 0,
+    hideUnreadCount: false,
     createdAt: Date.now(),
     ...obj,
   };
@@ -33,6 +38,7 @@ export const createMainPage = () => {
     acceptedTypes[typeDef.type] = true;
   }
   return createPage({
+    isMain: true,
     name: 'Main',
     acceptedTypes,
   });
@@ -40,6 +46,7 @@ export const createMainPage = () => {
 
 export const createMessage = (payload) => ({
   createdAt: Date.now(),
+  roundId: null,
   ...payload,
 });
 
@@ -49,6 +56,7 @@ export const serializeMessage = (message, archive = false) => ({
   html: archive ? message.node.outerHTML : message.html,
   times: message.times,
   createdAt: message.createdAt,
+  roundId: message.roundId,
 });
 
 export const isSameMessage = (a, b) =>

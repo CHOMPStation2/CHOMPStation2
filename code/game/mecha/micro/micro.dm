@@ -82,7 +82,7 @@
 						return
 				M.updatehealth()
 			src.occupant_message("You hit [target].")
-			src.visible_message("<font color='red'><b>[src.name] hits [target].</b></font>")
+			src.visible_message(span_red("<b>[src.name] hits [target].</b>"))
 		else
 			step_away(M,src)
 			src.occupant_message("You push [target] out of the way.")
@@ -98,7 +98,7 @@
 			for(var/target_type in src.destroyable_obj)
 				if(istype(target, target_type) && hascall(target, "attackby"))
 					src.occupant_message("You hit [target].")
-					src.visible_message("<font color='red'><b>[src.name] hits [target]</b></font>")
+					src.visible_message(span_red("<b>[src.name] hits [target].</b>"))
 					if(!istype(target, /turf/simulated/wall))
 						target:attackby(src,src.occupant)
 					else
@@ -155,5 +155,5 @@
 	return result
 
 /obj/effect/decal/mecha_wreckage/micro
+<<<<<<< HEAD
 	icon = 'icons/mecha/micro.dmi' */
-

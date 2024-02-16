@@ -1,4 +1,5 @@
-import { Component, createRef } from 'inferno';
+import { Component, createRef } from 'react';
+
 import { useBackend } from '../backend';
 import { Box, Button } from '../components';
 import { Window } from '../layouts';
@@ -65,7 +66,8 @@ class PaintCanvas extends Component {
         width={width * dotsize || 300}
         height={height * dotsize || 300}
         {...rest}
-        onClick={(e) => this.clickwrapper(e)}>
+        onClick={(e) => this.clickwrapper(e)}
+      >
         Canvas failed to render.
       </canvas>
     );
@@ -78,14 +80,15 @@ const getImageSize = (value) => {
   return [width, height];
 };
 
-export const Canvas = (props, context) => {
-  const { act, data } = useBackend(context);
+export const Canvas = (props) => {
+  const { act, data } = useBackend();
   const dotsize = PX_PER_UNIT;
   const [width, height] = getImageSize(data.grid);
   return (
     <Window
       width={Math.min(700, width * dotsize + 72)}
-      height={Math.min(700, height * dotsize + 72)}>
+      height={Math.min(700, height * dotsize + 72)}
+    >
       <Window.Content>
         <Box textAlign="center">
           <PaintCanvas

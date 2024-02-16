@@ -2,13 +2,13 @@ import { useBackend } from '../backend';
 import { Box, Button, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
 
-export const pAISecrecords = (props, context) => {
-  const { act, data } = useBackend(context);
+export const pAISecrecords = (props) => {
+  const { act, data } = useBackend();
 
   const { records, general, security, could_not_find } = data;
 
   return (
-    <Window width={450} height={600} resizable>
+    <Window width={450} height={600}>
       <Window.Content scrollable>
         <Section>
           {records.map((record) => (

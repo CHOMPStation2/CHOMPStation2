@@ -66,7 +66,7 @@
 	if(!length(key_to_find))
 		return "[sender.friendly_name], you need to provide a Byond username at the end of the command. It can be in 'key' format (with spaces and characters) or 'ckey' format (without spaces or special characters)."
 
-	var/DBQuery/query = SSdbcore.NewQuery("SELECT discord_id FROM erro_player WHERE ckey = :t_ckey",list("t_ckey" = key_to_find))
+	var/datum/db_query/query = SSdbcore.NewQuery("SELECT discord_id FROM erro_player WHERE ckey = :t_ckey",list("t_ckey" = key_to_find))
 	query.Execute()
 
 	if(!query.NextRow())
@@ -89,7 +89,7 @@
 	if(!params)
 		return "[sender.friendly_name], you need to provide a Discord ID at the end of the command. To obtain someone's Discord ID, you need to enable developer mode on discord, and then right click on their name and click Copy ID."
 
-	var/DBQuery/query = SSdbcore.NewQuery("SELECT ckey FROM erro_player WHERE discord_id = :t_discord", list("t_discord"=params))
+	var/datum/db_query/query = SSdbcore.NewQuery("SELECT ckey FROM erro_player WHERE discord_id = :t_discord", list("t_discord"=params))
 	query.Execute()
 
 	if(!query.NextRow())
@@ -113,6 +113,6 @@
 	name = "vore"
 	help_text = "vore"
 	admin_only = FALSE
-	
+
 /datum/tgs_chat_command/vore/Run(datum/tgs_chat_user/sender, params)
 	return "vore"

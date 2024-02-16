@@ -1,6 +1,3 @@
-#define VORE_SOUND_FALLOFF 0.1
-#define VORE_SOUND_RANGE 3
-
 //
 //  Belly system 2.0, now using objects instead of datums because EH at datums.
 //	How many times have I rewritten bellies and vore now? -Aro
@@ -201,13 +198,13 @@
 		"You feel your %belly beginning to become active!")
 
 	var/list/digest_chance_messages_prey = list(
-		"In response to your struggling, %owner's %belly begins to get more active...")
+		"In response to your struggling, %pred's %belly begins to get more active...")
 
 	var/list/absorb_chance_messages_owner = list(
 		"You feel your %belly start to cling onto its contents...")
 
 	var/list/absorb_chance_messages_prey = list(
-		"In response to your struggling, %owner's %belly begins to cling more tightly...")
+		"In response to your struggling, %pred's %belly begins to cling more tightly...")
 
 	var/list/digest_messages_owner = list(
 		"You feel %prey's body succumb to your digestive system, which breaks it apart into soft slurry.",
@@ -538,8 +535,17 @@
 	if(reagents.total_volume >= 5 && !isliving(thing) && (item_digest_mode == IM_DIGEST || item_digest_mode == IM_DIGEST_PARALLEL)) //CHOMPAdd
 		reagents.trans_to(thing, reagents.total_volume * 0.1, 1 / max(LAZYLEN(contents), 1), FALSE) //CHOMPAdd
 	//Messages if it's a mob
+	//CHOMPEdit Start - Include indirect viewers in seeing vorefx
+	var/list/startfx = list()
 	if(isliving(thing))
-		var/mob/living/M = thing
+		var/mob/living/L = thing
+		startfx.Add(L)
+		startfx.Add(get_belly_surrounding(L.contents))
+	if(istype(thing,/obj/item))
+		var/obj/item/I = thing
+		startfx.Add(get_belly_surrounding(I.contents))
+
+	for(var/mob/living/M in startfx) //CHOMPEdit End of indirect vorefx changes
 		M.updateVRPanel()
 		var/raw_desc //Let's use this to avoid needing to write the reformat code twice
 		if(absorbed_desc && M.absorbed)
@@ -566,11 +572,11 @@
 		//Stop AI processing in bellies
 		if(M.ai_holder)
 			M.ai_holder.go_sleep()
-		if(reagents.total_volume >= 5 && M.digestable) //CHOMPEdit Start
-			if(digest_mode == DM_DIGEST)
+		if(reagents.total_volume >= 5) //CHOMPEdit Start
+			if(digest_mode == DM_DIGEST && M.digestable)
 				reagents.trans_to(M, reagents.total_volume * 0.1, 1 / max(LAZYLEN(contents), 1), FALSE)
 			to_chat(M, "<span class='vwarning'><B>You splash into a pool of [reagent_name]!</B></span>")
-	else if(count_items_for_sprite) //CHOMPEdit - If this is enabled also update fullness for non-living things
+	if(!isliving(thing) && count_items_for_sprite) //CHOMPEdit - If this is enabled also update fullness for non-living things
 		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 	//if(istype(thing, /obj/item/capture_crystal)) //CHOMPEdit start: Capture crystal occupant gets to see belly text too. Moved to modular_chomp capture_crystal.dm.
 		//var/obj/item/capture_crystal/CC = thing
@@ -596,18 +602,31 @@
 		if(count_items_for_sprite && !NB.count_items_for_sprite)
 			owner.update_fullness()
 		return //CHOMPEdit End
-	if(isliving(thing) && !isbelly(thing.loc))
-		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
+
+	//CHOMPEdit Start - Remove vorefx from all those indirectly viewing as well
+	var/list/endfx = list()
+	if(isliving(thing))
 		var/mob/living/L = thing
-		L.clear_fullscreen("belly")
-		//L.clear_fullscreen("belly2") // CHOMP Disable - using our implementation, not upstream's
-		//L.clear_fullscreen("belly3") // CHOMP Disable - using our implementation, not upstream's
-		//L.clear_fullscreen("belly4") // CHOMP Disable - using our implementation, not upstream's
-		if(L.hud_used)
-			if(!L.hud_used.hud_shown)
-				L.toggle_hud_vis()
-		if((L.stat != DEAD) && L.ai_holder)
-			L.ai_holder.go_wake()
+		endfx.Add(L)
+		endfx.Add(get_belly_surrounding(L.contents))
+	if(istype(thing,/obj/item))
+		var/obj/item/I = thing
+		endfx.Add(get_belly_surrounding(I.contents))
+	if(!isbelly(thing.loc))
+		for(var/mob/living/L in endfx) //CHOMPEdit End
+			if(L.surrounding_belly()) continue
+			owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
+			L.clear_fullscreen("belly")
+			//L.clear_fullscreen("belly2") // CHOMP Disable - using our implementation, not upstream's
+			//L.clear_fullscreen("belly3") // CHOMP Disable - using our implementation, not upstream's
+			//L.clear_fullscreen("belly4") // CHOMP Disable - using our implementation, not upstream's
+			if(L.hud_used)
+				if(!L.hud_used.hud_shown)
+					L.toggle_hud_vis()
+			if((L.stat != DEAD) && L.ai_holder)
+				L.ai_holder.go_wake()
+			L.stop_sound_channel(CHANNEL_PREYLOOP) //CHOMPAdd - This was on release_specific_contents proc, why is it not here on belly exit?
+	//CHOMPEdit End of indirect vorefx changes
 	if(isitem(thing) && !isbelly(thing.loc)) //CHOMPEdit: Digest stage effects. Don't bother adding overlays to stuff that won't make it back out.
 		if(count_items_for_sprite) //CHOMPEdit - If this is enabled also update fullness for non-living things
 			owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
@@ -705,7 +724,7 @@
 					I.alpha = custom_ingested_alpha
 					I.pixel_y = -450 + ((450 / max(max_ingested, 1)) * min(max_ingested, ingested.total_volume))
 					F.add_overlay(I)
-			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0 || (LAZYLEN(contents) * item_mush_val) > 0))
+			if(show_liquids && L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0 || (LAZYLEN(contents) * item_mush_val) > 0))
 				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
 				I.color = mush_color
 				I.alpha = mush_alpha
@@ -721,7 +740,7 @@
 					I.alpha = min(mush_alpha, (extra_mush / max(total_mush_content, 1)) * mush_alpha)
 					I.pixel_y = stored_y
 					F.add_overlay(I)
-			if(L.liquidbelly_visuals && liquid_overlay && reagents.total_volume)
+			if(show_liquids && L.liquidbelly_visuals && liquid_overlay && reagents.total_volume)
 				if(digest_mode == DM_HOLD && item_digest_mode == IM_HOLD)
 					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "calm")
 				else
@@ -763,7 +782,7 @@
 					I.alpha = custom_ingested_alpha
 					I.pixel_y = -450 + (450 / max(max_ingested, 1) * max(min(max_ingested, ingested.total_volume), 1))
 					F.add_overlay(I)
-			if(L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0 || (LAZYLEN(contents) * item_mush_val) > 0))
+			if(show_liquids && L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0 || (LAZYLEN(contents) * item_mush_val) > 0))
 				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
 				I.color = mush_color
 				I.alpha = mush_alpha
@@ -779,7 +798,7 @@
 					I.alpha = min(mush_alpha, (extra_mush / max(total_mush_content, 1)) * mush_alpha)
 					I.pixel_y = stored_y
 					F.add_overlay(I)
-			if(L.liquidbelly_visuals && liquid_overlay && reagents.total_volume)
+			if(show_liquids && L.liquidbelly_visuals && liquid_overlay && reagents.total_volume)
 				if(digest_mode == DM_HOLD && item_digest_mode == IM_HOLD)
 					I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "calm")
 				else
@@ -1015,7 +1034,7 @@
 
 	//Print notifications/sound if necessary
 	if(!silent && count)
-		owner.visible_message("<font color='green'><b>[owner] [release_verb] everything from their [lowertext(name)]!</b></font>", range = privacy_range)
+		owner.visible_message("<span class='vnotice'>[span_green("<b>[owner] [release_verb] everything from their [lowertext(name)]!</b>")]</span>", range = privacy_range)
 		var/soundfile
 		if(!fancy_vore)
 			soundfile = classic_release_sounds[release_sound]
@@ -1097,7 +1116,7 @@
 	if(istype(M, /mob/observer)) //CHOMPEdit
 		silent = TRUE
 	if(!silent)
-		owner.visible_message("<font color='green'><b>[owner] [release_verb] [M] from their [lowertext(name)]!</b></font>",range = privacy_range)
+		owner.visible_message("<span class='vnotice'>[span_green("<b>[owner] [release_verb] [M] from their [lowertext(name)]!</b>")]</span>",range = privacy_range)
 		var/soundfile
 		if(!fancy_vore)
 			soundfile = classic_release_sounds[release_sound]
@@ -1169,7 +1188,7 @@
 	formatted_message = replacetext(formatted_message, "%countprey", living_count)
 	formatted_message = replacetext(formatted_message, "%count", contents.len)
 
-	return("<span class='vwarning'>[formatted_message]</span>")
+	return(span_red("<i>[formatted_message]</i>"))
 
 /obj/belly/proc/get_examine_msg_absorbed()
 	if(!(contents.len) || !(examine_messages_absorbed.len) || !display_absorbed_examine)
@@ -1193,7 +1212,7 @@
 	formatted_message = replacetext(formatted_message, "%prey", english_list(absorbed_victims))
 	formatted_message = replacetext(formatted_message, "%countprey", absorbed_count)
 
-	return("<span class='vwarning'>[formatted_message]</span>")
+	return(span_red("<i>[formatted_message]</i>"))
 
 // The next function gets the messages set on the belly, in human-readable format.
 // This is useful in customization boxes and such. The delimiter right now is \n\n so

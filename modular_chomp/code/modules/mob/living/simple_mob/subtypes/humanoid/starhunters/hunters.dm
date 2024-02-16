@@ -18,7 +18,7 @@
 
 /mob/living/simple_mob/humanoid/starhunter/hunter/bullet_act(obj/item/projectile/P)
 	if(istype(P, /obj/item/projectile/energy/lightpillar))
-		visible_message("<font color='orange'><B>[P] seems ineffective!.</B></font>") //immune to their own attack
+		visible_message(span_orange("<B>[P] seems ineffective!.</B>")) //immune to their own attack
 	else
 		..()
 

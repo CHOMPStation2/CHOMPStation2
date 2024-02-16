@@ -31,6 +31,7 @@
 	var/custom_ingested_alpha = 255					//Custom alpha for ingested reagent layer if not using normal mush layer.
 
 	var/nutri_reagent_gen = FALSE					//if belly produces reagent over time using nutrition, needs to be optimized to use subsystem - Jack
+	var/is_beneficial = FALSE							//Sets a reagent as a beneficial one / healing reagents
 	var/list/generated_reagents = list("water" = 1) //Any number of reagents, the associated value is how many units are generated per process()
 	var/reagent_name = "water" 						//What is shown when reagents are removed, doesn't need to be an actual reagent
 	var/reagentid = "water"							//Selected reagent's id, for use in puddle system currently
@@ -89,6 +90,7 @@
 	"Cherry Jelly",
 	"Digestive acid",
 	"Diluted digestive acid",
+	"Space cleaner",
 	"Lube",
 	"Biomass",
 	"Concentrated Radium",
@@ -137,6 +139,8 @@
 	var/item_digest_logs = FALSE			// Chat messages for digested items.
 	var/storing_nutrition = FALSE			// Storing gained nutrition as paste instead of absorbing it.
 
+	var/list/belly_surrounding = list()		// A list of living mobs surrounded by this belly, including inside containers, food, on mobs, etc. Exclusing inside other bellies.
+
 /obj/belly/proc/GetFullnessFromBelly()
 	if(!affects_vore_sprites)
 		return 0
@@ -180,10 +184,10 @@
 ///////////////////// NUTRITION REAGENT PRODUCTION /////////////////
 
 /obj/belly/proc/HandleBellyReagents()
-	if(reagentbellymode && reagent_mode_flags & DM_FLAG_REAGENTSNUTRI && reagents.total_volume < custom_max_volume && !isnewplayer(owner)) //Removed if(reagentbellymode == TRUE) since that's less optimized
+	if(show_liquids && reagentbellymode && reagent_mode_flags & DM_FLAG_REAGENTSNUTRI && reagents.total_volume < custom_max_volume && !isnewplayer(owner)) //Removed if(reagentbellymode == TRUE) since that's less optimized
 		if(isrobot(owner))
 			var/mob/living/silicon/robot/R = owner
-			if(R.cell.charge >= gen_cost*10 && gen_interval >= gen_time)
+			if(R.cell && R.cell.charge >= gen_cost*10 && gen_interval >= gen_time)
 				GenerateBellyReagents()
 				gen_interval = 0
 			else
@@ -197,14 +201,21 @@
 
 /obj/belly/proc/HandleBellyReagentEffects(var/list/touchable_atoms)
 	if(LAZYLEN(contents))
-		if(reagent_touches && reagents.total_volume >= 5)
+		if(show_liquids && reagent_touches && reagents.total_volume >= 5)
 			var/affecting_amt = reagents.total_volume / max(LAZYLEN(touchable_atoms), 1)
 			if(affecting_amt > 5)
 				affecting_amt = 5
 			if(affecting_amt >= 1)
 				for(var/mob/living/L in touchable_atoms)
-					if(L.digestable && digest_mode == DM_DIGEST)
+					if(!L.apply_reagents)
+						continue
+					if((L.digestable && digest_mode == DM_DIGEST))
+						if(!L.permit_healbelly && is_beneficial) // Healing reagents turned off in preferences!
+							continue
 						if(reagents.total_volume)
+							reagents.trans_to(L, affecting_amt, 1, FALSE)
+					if(L.permit_healbelly && digest_mode == DM_HEAL)
+						if(is_beneficial && reagents.total_volume)
 							reagents.trans_to(L, affecting_amt, 1, FALSE)
 				for(var/obj/item/I in touchable_atoms)
 					if(reagents.total_volume)
@@ -275,88 +286,101 @@
 	switch(reagent_chosen)
 		if("Water")
 			generated_reagents = list("water" = 1)
-			reagent_name = "water"
+			if(capitalize(reagent_name) in reagent_choices)
+				reagent_name = "water"
 			gen_amount = 1
 			gen_cost = 1
 			reagentid = "water"
 			reagentcolor = "#0064C877"
 		if("Milk")
 			generated_reagents = list("milk" = 1)
-			reagent_name = "milk"
+			if(capitalize(reagent_name) in reagent_choices)
+				reagent_name = "milk"
 			gen_amount = 1
 			gen_cost = 5
 			reagentid = "milk"
 			reagentcolor = "#DFDFDF"
 		if("Cream")
 			generated_reagents = list("cream" = 1)
-			reagent_name = "cream"
+			if(capitalize(reagent_name) in reagent_choices)
+				reagent_name = "cream"
 			gen_amount = 1
 			gen_cost = 5
 			reagentid = "cream"
 			reagentcolor = "#DFD7AF"
 		if("Honey")
 			generated_reagents = list("honey" = 1)
-			reagent_name = "honey"
+			if(capitalize(reagent_name) in reagent_choices)
+				reagent_name = "honey"
 			gen_amount = 1
 			gen_cost = 10
 			reagentid = "honey"
 			reagentcolor = "#FFFF00"
 		if("Cherry Jelly")	//Kinda WIP, allows slime like folks something to stuff others with, should make a generic jelly in future
 			generated_reagents = list("cherryjelly" = 1)
-			reagent_name = "cherry jelly"
+			if(capitalize(reagent_name) in reagent_choices)
+				reagent_name = "cherry jelly"
 			gen_amount = 1
 			gen_cost = 10
 			reagentid = "cherryjelly"
 			reagentcolor = "#801E28"
 		if("Digestive acid")
 			generated_reagents = list("stomacid" = 1)
-			reagent_name = "digestive acid"
+			if(capitalize(reagent_name) in reagent_choices)
+				reagent_name = "digestive acid"
 			gen_amount = 1
 			gen_cost = 1
 			reagentid = "stomacid"
 			reagentcolor = "#664330"
 		if("Diluted digestive acid")
 			generated_reagents = list("diet_stomacid" = 1)
-			reagent_name = "diluted digestive acid"
+			if(capitalize(reagent_name) in reagent_choices)
+				reagent_name = "diluted digestive acid"
 			gen_amount = 1
 			gen_cost = 1
 			reagentid = "diet_stomacid"
 			reagentcolor = "#664330"
 		if("Space cleaner")
 			generated_reagents = list("cleaner" = 1)
-			reagent_name = "space cleaner"
+			if(capitalize(reagent_name) in reagent_choices)
+				reagent_name = "space cleaner"
 			gen_amount = 1
 			gen_cost = 10
 			reagentid = "cleaner"
 			reagentcolor = "#A5F0EE"
 		if("Lube")
 			generated_reagents = list("lube" = 1)
-			reagent_name = "lube"
+			if(capitalize(reagent_name) in reagent_choices)
+				reagent_name = "lube"
 			gen_amount = 1
 			gen_cost = 10
 			reagentid = "lube"
 			reagentcolor = "#009CA8"
 		if("Biomass")
 			generated_reagents = list("biomass" = 1)
-			reagent_name = "biomass"
+			if(capitalize(reagent_name) in reagent_choices)
+				reagent_name = "biomass"
 			gen_amount = 1
 			gen_cost = 10
 			reagentid = "biomass"
 			reagentcolor = "#DF9FBF"
 		if("Concentrated Radium")
 			generated_reagents = list("concentrated_radium" = 1)
-			reagent_name = "concentrated radium"
+			if(capitalize(reagent_name) in reagent_choices)
+				reagent_name = "concentrated radium"
 			gen_amount = 1
 			gen_cost = 1
 			reagentid = "concentrated_radium"
 			reagentcolor = "#C7C7C7"
 		if("Tricordrazine")
 			generated_reagents = list("tricordrazine" = 1)
-			reagent_name = "tricordrazine"
+			if(capitalize(reagent_name) in reagent_choices)
+				reagent_name = "tricordrazine"
 			gen_amount = 1
 			gen_cost = 10
 			reagentid = "tricordrazine"
 			reagentcolor = "#8040FF"
+			is_beneficial = TRUE
 
 
 /////////////////////// FULLNESS MESSAGES //////////////////////
@@ -372,7 +396,7 @@
 		formatted_message = replacetext(raw_message,"%belly",lowertext(name))
 		formatted_message = replacetext(formatted_message,"%pred",owner)
 
-		return("<span class='warning'>[formatted_message]</span><BR>")
+		return(span_red("[formatted_message]<BR>"))
 
 /obj/belly/proc/get_reagent_examine_msg2()
 	if(fullness1_messages.len)
@@ -382,7 +406,7 @@
 		formatted_message = replacetext(raw_message,"%belly",lowertext(name))
 		formatted_message = replacetext(formatted_message,"%pred",owner)
 
-		return("<span class='warning'>[formatted_message]</span><BR>")
+		return(span_red("[formatted_message]<BR>"))
 
 /obj/belly/proc/get_reagent_examine_msg3()
 	if(fullness1_messages.len)
@@ -392,7 +416,7 @@
 		formatted_message = replacetext(raw_message,"%belly",lowertext(name))
 		formatted_message = replacetext(formatted_message,"%pred",owner)
 
-		return("<span class='warning'>[formatted_message]</span><BR>")
+		return(span_red("[formatted_message]<BR>"))
 
 /obj/belly/proc/get_reagent_examine_msg4()
 	if(fullness1_messages.len)
@@ -402,7 +426,7 @@
 		formatted_message = replacetext(raw_message,"%belly",lowertext(name))
 		formatted_message = replacetext(formatted_message,"%pred",owner)
 
-		return("<span class='warning'>[formatted_message]</span><BR>")
+		return(span_red("[formatted_message]<BR>"))
 
 /obj/belly/proc/get_reagent_examine_msg5()
 	if(fullness1_messages.len)
@@ -412,7 +436,7 @@
 		formatted_message = replacetext(raw_message,"%belly",lowertext(name))
 		formatted_message = replacetext(formatted_message,"%pred",owner)
 
-		return("<span class='warning'>[formatted_message]</span><BR>")
+		return(span_red("[formatted_message]<BR>"))
 
 
 // The next function gets the messages set on the belly, in human-readable format.
@@ -521,9 +545,9 @@
 /////////////////////////// CHOMP PCL END ///////////////////////////
 
 /obj/belly/proc/update_internal_overlay()
-	if(LAZYLEN(contents))
+	if(LAZYLEN(belly_surrounding))
 		SEND_SIGNAL(src, COMSIG_BELLY_UPDATE_VORE_FX, TRUE) // Signals vore_fx() to listening atoms. Atoms must handle appropriate isliving() checks.
-	for(var/A in contents)
+	for(var/A in belly_surrounding)
 		if(isliving(A))
 			vore_fx(A,1)
 	if(owner.previewing_belly == src)
@@ -577,8 +601,22 @@
 					D.matter[mat] += modified_mats[mat]
 				if(O.w_class > D.w_class)
 					D.w_class = O.w_class
+				//CHOMPAdd Start
+				if(O.possessed_voice && O.possessed_voice.len)
+					for(var/mob/living/voice/V in O.possessed_voice)
+						D.inhabit_item(V, null, V.tf_mob_holder)
+						V.Destroy()
+					O.possessed_voice = list()
+				//CHOMPAdd End
 				return TRUE
-		new /obj/item/debris_pack/digested(src, modified_mats)
+		var/obj/item/debris_pack/digested/D = new /obj/item/debris_pack/digested(src, modified_mats) //CHOMPEdit
+		//CHOMPAdd Start
+		if(O.possessed_voice && O.possessed_voice.len)
+			for(var/mob/living/voice/V in O.possessed_voice)
+				D.inhabit_item(V, null, V.tf_mob_holder)
+				V.Destroy()
+			O.possessed_voice = list()
+		//CHOMPAdd End
 	return TRUE
 
 /obj/belly/proc/owner_adjust_nutrition(var/amount = 0)
@@ -610,3 +648,24 @@
 		qdel(src)
 		return
 	.=..()
+
+// Updates the belly_surrounding list variable. Called in bellymodes_vr.dm
+/obj/belly/proc/update_belly_surrounding()
+	if(!contents.len)
+		belly_surrounding = list()
+		return
+	belly_surrounding = get_belly_surrounding(contents)
+
+// Recursive proc that returns all living mobs directly and indirectly inside a belly
+// This can also be called more generically to get all living mobs not in bellies within any contents list
+/obj/belly/proc/get_belly_surrounding(var/list/C)
+	var/list/surrounding = list()
+	for(var/thing in C)
+		if(istype(thing,/mob/living))
+			var/mob/living/L = thing
+			surrounding.Add(L)
+			surrounding.Add(get_belly_surrounding(L.contents))
+		if(istype(thing,/obj/item))
+			var/obj/item/I = thing
+			surrounding.Add(get_belly_surrounding(I.contents))
+	return surrounding

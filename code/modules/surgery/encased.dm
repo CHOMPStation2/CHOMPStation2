@@ -28,8 +28,8 @@
 		/obj/item/weapon/material/knife/machete/hatchet = 75
 	)
 
-	min_duration = 50
-	max_duration = 70
+	min_duration = 50 //CHOMPedit
+	max_duration = 50 //CHOMPedit
 
 /datum/surgery_step/open_encased/saw/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if (!hasorgans(target))
@@ -79,8 +79,8 @@
 
 	allowed_procs = list(IS_CROWBAR = 75)
 
-	min_duration = 30
-	max_duration = 40
+	min_duration = 30 //CHOMPedit
+	max_duration = 30 //CHOMPedit
 
 /datum/surgery_step/open_encased/retract/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if (!hasorgans(target))
@@ -134,7 +134,7 @@
 	allowed_procs = list(IS_CROWBAR = 75)
 
 	min_duration = 20
-	max_duration = 40
+	max_duration = 30 //CHOMPedit
 
 /datum/surgery_step/open_encased/close/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if (!hasorgans(target))
@@ -193,7 +193,7 @@
 	allowed_procs = list(IS_SCREWDRIVER = 75)
 
 	min_duration = 20
-	max_duration = 40
+	max_duration = 20 //CHOMPedit
 
 /datum/surgery_step/open_encased/mend/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if (!hasorgans(target))
@@ -234,8 +234,8 @@
 
 	priority = 3
 
-	min_duration = 60
-	max_duration = 90
+	min_duration = 30 //CHOMPedit
+	max_duration = 35 //CHOMPedit
 	excludes_steps = list(/datum/surgery_step/open_encased/saw)
 
 /datum/surgery_step/open_encased/advancedsaw_open/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
@@ -285,8 +285,8 @@
 
 	priority = 3
 
-	min_duration = 30
-	max_duration = 60
+	min_duration = 30 //CHOMPedit
+	max_duration = 30 //CHOMPedit
 
 /datum/surgery_step/open_encased/advancedsaw_mend/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if (!hasorgans(target))

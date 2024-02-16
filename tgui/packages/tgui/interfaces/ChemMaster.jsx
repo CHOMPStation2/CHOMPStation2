@@ -1,9 +1,12 @@
-import { Fragment } from 'inferno';
 import { useBackend } from '../backend';
 import { Box, Button, Flex, Icon, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
 import { BeakerContents } from './common/BeakerContents';
-import { ComplexModal, modalOpen, modalRegisterBodyOverride } from './common/ComplexModal';
+import {
+  ComplexModal,
+  modalOpen,
+  modalRegisterBodyOverride,
+} from './common/ComplexModal';
 
 const transferAmounts = [1, 5, 10, 30, 60];
 const bottleStyles = [
@@ -14,15 +17,16 @@ const bottleStyles = [
   'reagent_bottle.png',
 ];
 
-const analyzeModalBodyOverride = (modal, context) => {
-  const { act, data } = useBackend(context);
+const analyzeModalBodyOverride = (modal) => {
+  const { act, data } = useBackend();
   const result = modal.args.analysis;
   return (
     <Section
       level={2}
       m="-1rem"
       pb="1rem"
-      title={data.condi ? 'Condiment Analysis' : 'Reagent Analysis'}>
+      title={data.condi ? 'Condiment Analysis' : 'Reagent Analysis'}
+    >
       <Box mx="0.5rem">
         <LabeledList>
           <LabeledList.Item label="Name">{result.name}</LabeledList.Item>
@@ -30,16 +34,17 @@ const analyzeModalBodyOverride = (modal, context) => {
             {(result.desc || '').length > 0 ? result.desc : 'N/A'}
           </LabeledList.Item>
           {result.blood_type && (
-            <Fragment>
+            <>
               <LabeledList.Item label="Blood type">
                 {result.blood_type}
               </LabeledList.Item>
               <LabeledList.Item
                 label="Blood DNA"
-                className="LabeledList__breakContents">
+                className="LabeledList__breakContents"
+              >
                 {result.blood_dna}
               </LabeledList.Item>
-            </Fragment>
+            </>
           )}
           {!data.condi && (
             <Button
@@ -62,8 +67,8 @@ const analyzeModalBodyOverride = (modal, context) => {
   );
 };
 
-export const ChemMaster = (props, context) => {
-  const { data } = useBackend(context);
+export const ChemMaster = (props) => {
+  const { data } = useBackend();
   const {
     condi,
     beaker,
@@ -72,7 +77,7 @@ export const ChemMaster = (props, context) => {
     mode,
   } = data;
   return (
-    <Window width={575} height={500} resizable>
+    <Window width={575} height={500}>
       <ComplexModal />
       <Window.Content scrollable className="Layout__content--flexColumn">
         <ChemMasterBeaker
@@ -92,8 +97,8 @@ export const ChemMaster = (props, context) => {
   );
 };
 
-const ChemMasterBeaker = (props, context) => {
-  const { act, data } = useBackend(context);
+const ChemMasterBeaker = (props) => {
+  const { act, data } = useBackend();
   const { beaker, beakerReagents, bufferNonEmpty } = props;
 
   let headerButton = bufferNonEmpty ? (
@@ -124,7 +129,7 @@ const ChemMasterBeaker = (props, context) => {
                 content="Analyze"
                 mb="0"
                 onClick={() =>
-                  modalOpen(context, 'analyze', {
+                  modalOpen('analyze', {
                     idx: i + 1,
                     beaker: 1,
                   })
@@ -157,7 +162,7 @@ const ChemMasterBeaker = (props, context) => {
                 content="Custom.."
                 mb="0"
                 onClick={() =>
-                  modalOpen(context, 'addcustom', {
+                  modalOpen('addcustom', {
                     id: chemical.id,
                   })
                 }
@@ -172,8 +177,8 @@ const ChemMasterBeaker = (props, context) => {
   );
 };
 
-const ChemMasterBuffer = (props, context) => {
-  const { act } = useBackend(context);
+const ChemMasterBuffer = (props) => {
+  const { act } = useBackend();
   const { mode, bufferReagents = [] } = props;
   return (
     <Section
@@ -188,7 +193,8 @@ const ChemMasterBuffer = (props, context) => {
             onClick={() => act('toggle')}
           />
         </Box>
-      }>
+      }
+    >
       {bufferReagents.length > 0 ? (
         <BeakerContents
           beakerLoaded
@@ -199,7 +205,7 @@ const ChemMasterBuffer = (props, context) => {
                 content="Analyze"
                 mb="0"
                 onClick={() =>
-                  modalOpen(context, 'analyze', {
+                  modalOpen('analyze', {
                     idx: i + 1,
                     beaker: 0,
                   })
@@ -232,7 +238,7 @@ const ChemMasterBuffer = (props, context) => {
                 content="Custom.."
                 mb="0"
                 onClick={() =>
-                  modalOpen(context, 'removecustom', {
+                  modalOpen('removecustom', {
                     id: chemical.id,
                   })
                 }
@@ -247,8 +253,8 @@ const ChemMasterBuffer = (props, context) => {
   );
 };
 
-const ChemMasterProduction = (props, context) => {
-  const { act, data } = useBackend(context);
+const ChemMasterProduction = (props) => {
+  const { act, data } = useBackend();
   if (!props.bufferNonEmpty) {
     return (
       <Section
@@ -261,17 +267,18 @@ const ChemMasterProduction = (props, context) => {
             content={
               data.loaded_pill_bottle
                 ? data.loaded_pill_bottle_name +
-                ' (' +
-                data.loaded_pill_bottle_contents_len +
-                '/' +
-                data.loaded_pill_bottle_storage_slots +
-                ')'
+                  ' (' +
+                  data.loaded_pill_bottle_contents_len +
+                  '/' +
+                  data.loaded_pill_bottle_storage_slots +
+                  ')'
                 : 'No pill bottle loaded'
             }
             mb="0.5rem"
             onClick={() => act('ejectp')}
           />
-        }>
+        }
+      >
         <Flex height="100%">
           <Flex.Item grow="1" align="center" textAlign="center" color="label">
             <Icon name="tint-slash" mt="0.5rem" mb="0.5rem" size="5" />
@@ -294,17 +301,18 @@ const ChemMasterProduction = (props, context) => {
           content={
             data.loaded_pill_bottle
               ? data.loaded_pill_bottle_name +
-              ' (' +
-              data.loaded_pill_bottle_contents_len +
-              '/' +
-              data.loaded_pill_bottle_storage_slots +
-              ')'
+                ' (' +
+                data.loaded_pill_bottle_contents_len +
+                '/' +
+                data.loaded_pill_bottle_storage_slots +
+                ')'
               : 'No pill bottle loaded'
           }
           mb="0.5rem"
           onClick={() => act('ejectp')}
         />
-      }>
+      }
+    >
       {!props.isCondiment ? (
         <ChemMasterProductionChemical />
       ) : (
@@ -314,8 +322,8 @@ const ChemMasterProduction = (props, context) => {
   );
 };
 
-const ChemMasterProductionChemical = (props, context) => {
-  const { act, data } = useBackend(context);
+const ChemMasterProductionChemical = (props) => {
+  const { act, data } = useBackend();
   return (
     <LabeledList>
       <LabeledList.Item label="Pills">
@@ -323,28 +331,26 @@ const ChemMasterProductionChemical = (props, context) => {
           icon="circle"
           content="One (60u max)"
           mr="0.5rem"
-          onClick={() => modalOpen(context, 'create_pill')}
+          onClick={() => modalOpen('create_pill')}
         />
         <Button
           icon="plus-circle"
           content="Multiple"
           mb="0.5rem"
-          onClick={() => modalOpen(context, 'create_pill_multiple')}
+          onClick={() => modalOpen('create_pill_multiple')}
         />
         <br />
-        <Button onClick={() => modalOpen(context, 'change_pill_style')}>
+        <Button onClick={() => modalOpen('change_pill_style')}>
           <div
-            style={
-              'display: inline-block;' +
-              'width: 16px;' +
-              'height: 16px;' +
-              'vertical-align: middle;' +
-              'background: url(pill' +
-              data.pillsprite +
-              '.png);' +
-              'background-size: 200%;' +
-              'background-position: left -10px bottom -6px;'
-            }
+            style={{
+              display: 'inline-block',
+              width: '16px;',
+              height: '16px',
+              verticalAlign: 'middle;',
+              background: 'url(pill' + data.pillsprite + '.png)',
+              backgroundSize: '200%',
+              backgroundPosition: 'left -10px bottom -6px',
+            }}
           />
           Style
         </Button>
@@ -354,12 +360,12 @@ const ChemMasterProductionChemical = (props, context) => {
           icon="square"
           content="One (60u max)"
           mr="0.5rem"
-          onClick={() => modalOpen(context, 'create_patch')}
+          onClick={() => modalOpen('create_patch')}
         />
         <Button
           icon="plus-square"
           content="Multiple"
-          onClick={() => modalOpen(context, 'create_patch_multiple')}
+          onClick={() => modalOpen('create_patch_multiple')}
         />
       </LabeledList.Item>
       <LabeledList.Item label="Bottle">
@@ -368,29 +374,25 @@ const ChemMasterProductionChemical = (props, context) => {
           content="Create bottle (60u max)"
           mr="0.5rem"
           mb="0.5rem"
-          onClick={() => modalOpen(context, 'create_bottle')}
+          onClick={() => modalOpen('create_bottle')}
         />
         <Button
           icon="plus-square"
           content="Multiple"
-          onClick={() => modalOpen(context, 'create_bottle_multiple')}
+          onClick={() => modalOpen('create_bottle_multiple')}
         />
         <br />
-        <Button
-          mb="0.5rem"
-          onClick={() => modalOpen(context, 'change_bottle_style')}>
+        <Button mb="0.5rem" onClick={() => modalOpen('change_bottle_style')}>
           <div
-            style={
-              'display: inline-block;' +
-              'width: 16px;' +
-              'height: 16px;' +
-              'vertical-align: middle;' +
-              'background: url(bottle-' +
-              data.bottlesprite +
-              '.png);' +
-              'background-size: 200%;' +
-              'background-position: left -10px bottom -6px;'
-            }
+            style={{
+              display: 'inline-block',
+              width: '16px',
+              height: '16px',
+              verticalAlign: 'middle',
+              background: 'url(bottle-' + data.bottlesprite + '.png)',
+              backgroundSize: '200%',
+              backgroundPosition: 'left -10px bottom -6px',
+            }}
           />
           Style
         </Button>
@@ -399,15 +401,15 @@ const ChemMasterProductionChemical = (props, context) => {
   );
 };
 
-const ChemMasterProductionCondiment = (props, context) => {
-  const { act } = useBackend(context);
+const ChemMasterProductionCondiment = (props) => {
+  const { act } = useBackend();
   return (
-    <Fragment>
+    <>
       <Button
         icon="box"
         content="Create condiment pack (10u max)"
         mb="0.5rem"
-        onClick={() => modalOpen(context, 'create_condi_pack')}
+        onClick={() => modalOpen('create_condi_pack')}
       />
       <br />
       <Button
@@ -416,13 +418,13 @@ const ChemMasterProductionCondiment = (props, context) => {
         mb="0"
         onClick={() => act('create_condi_bottle')}
       />
-    </Fragment>
+    </>
   );
 };
 
 // CHOMPEdit Start - Enable customizing pill bottle type
-const ChemMasterCustomization = (props, context) => {
-  const { act, data } = useBackend(context);
+const ChemMasterCustomization = (props) => {
+  const { act, data } = useBackend();
   if (!data.loaded_pill_bottle) {
     return (
       <Section title="Pill Bottle Customization">
@@ -436,7 +438,7 @@ const ChemMasterCustomization = (props, context) => {
       <Button
         disabled={!data.loaded_pill_bottle}
         content="Customize Bottle Color"
-        onClick={() => modalOpen(context, 'change_pill_bottle_style')}
+        onClick={() => modalOpen('change_pill_bottle_style')}
       />
       <Button
         disabled={!data.loaded_pill_bottle}
@@ -444,11 +446,11 @@ const ChemMasterCustomization = (props, context) => {
         content={
           data.loaded_pill_bottle
             ? data.loaded_pill_bottle_name +
-            ' (' +
-            data.loaded_pill_bottle_contents_len +
-            '/' +
-            data.loaded_pill_bottle_storage_slots +
-            ')'
+              ' (' +
+              data.loaded_pill_bottle_contents_len +
+              '/' +
+              data.loaded_pill_bottle_storage_slots +
+              ')'
             : 'None loaded'
         }
         mb="0.5rem"

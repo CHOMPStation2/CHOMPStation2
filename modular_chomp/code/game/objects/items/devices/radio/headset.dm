@@ -83,3 +83,21 @@
 		do_teleport(user, locate(telex,teley,telez), local = 0, bohsafe = 1)
 		tele_threshold = initial(tele_threshold)
 	return TRUE
+
+
+
+
+/obj/item/device/radio/headset/outsider
+	name = "Generic headset"
+	desc = "Headset used by those upon the planet, or in other words, outsiders."
+	icon_state = "exp_headset"
+	adhoc_fallback = TRUE
+
+	ks1type = /obj/item/device/encryptionkey/headset_outsider
+
+
+/obj/item/device/encryptionkey/headset_outsider
+	name = "outsider radio encryption key"
+	icon_state = "sec_cypherkey"
+
+	channels = list("Outsider" = 1)

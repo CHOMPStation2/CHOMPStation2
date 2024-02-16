@@ -9,13 +9,13 @@
 		log_say("(GreyTP to [key_name(M)]) [msg]", src)
 		if(ishuman(M))
 			if(H.species.name == src.species.name)
-				to_chat(M, "<font color='purple'>you hear [src.name]'s voice: <i>[msg]</i></font>")
-				to_chat(src, "<font color='purple'>you said: \"[msg]\" to [M]</font>")
+				to_chat(M, span_purple("you hear [src.name]'s voice: <i>[msg]</i>"))
+				to_chat(src, span_purple("you said: \"[msg]\" to [M]"))
 			else
-				to_chat(M, "<font color='purple'>you hear a voice echo in your head... <i>[msg]</i></font>")
-				to_chat(src, "<font color='purple'>you said: \"[msg]\" to [M]</font>")
+				to_chat(M, span_purple("you hear a voice echo in your head... <i>[msg]</i>"))
+				to_chat(src, span_purple("you said: \"[msg]\" to [M]"))
 		else
-			to_chat(M, "<font color='purple'>you hear a voice echo in your head... <i>[msg]</i></font>")
-			to_chat(src, "<font color='purple'>you said: \"[msg]\" to [M]</font>")
+			to_chat(M, span_purple("you hear a voice echo in your head... <i>[msg]</i>"))
+			to_chat(src, span_purple("you said: \"[msg]\" to [M]"))
 
 	return

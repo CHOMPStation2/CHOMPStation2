@@ -1,20 +1,20 @@
-import { Fragment } from 'inferno';
 import { useBackend } from '../backend';
-import { Box, Button, NoticeBox, LabeledList, Section } from '../components';
+import { Box, Button, LabeledList, NoticeBox, Section } from '../components';
 import { Window } from '../layouts';
 
-export const TelecommsMachineBrowser = (props, context) => {
-  const { act, data } = useBackend(context);
+export const TelecommsMachineBrowser = (props) => {
+  const { act, data } = useBackend();
 
   const { network, temp, machinelist, selectedMachine } = data;
 
   return (
-    <Window width={575} height={450} resizable>
+    <Window width={575} height={450}>
       <Window.Content scrollable>
         {temp ? (
           <NoticeBox
             danger={temp.color === 'bad'}
-            warning={temp.color !== 'bad'}>
+            warning={temp.color !== 'bad'}
+          >
             <Box display="inline-box" verticalAlign="middle">
               {temp.text}
             </Box>
@@ -31,7 +31,7 @@ export const TelecommsMachineBrowser = (props, context) => {
             <LabeledList.Item
               label="Current Network"
               buttons={
-                <Fragment>
+                <>
                   <Button
                     icon="search"
                     content="Probe Network"
@@ -44,8 +44,9 @@ export const TelecommsMachineBrowser = (props, context) => {
                     disabled={machinelist.length === 0}
                     onClick={() => act('release')}
                   />
-                </Fragment>
-              }>
+                </>
+              }
+            >
               <Button
                 content={network}
                 icon="pen"
@@ -78,8 +79,8 @@ export const TelecommsMachineBrowser = (props, context) => {
   );
 };
 
-const TelecommsBrowser = (props, context) => {
-  const { act, data } = useBackend(context);
+const TelecommsBrowser = (props) => {
+  const { act, data } = useBackend();
 
   const { list, title, showBack } = props;
 
@@ -94,7 +95,8 @@ const TelecommsBrowser = (props, context) => {
             onClick={() => act('mainmenu')}
           />
         )
-      }>
+      }
+    >
       <Box color="label">
         <u>Linked entities</u>
       </Box>
@@ -103,7 +105,8 @@ const TelecommsBrowser = (props, context) => {
           list.map((machine) => (
             <LabeledList.Item
               key={machine.id}
-              label={machine.name + ' (' + machine.id + ')'}>
+              label={machine.name + ' (' + machine.id + ')'}
+            >
               <Button
                 content="View"
                 icon="eye"

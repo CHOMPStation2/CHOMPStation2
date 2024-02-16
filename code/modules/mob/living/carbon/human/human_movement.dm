@@ -225,6 +225,7 @@
 	return FALSE
 
 
+/* CHOMPedit: Nuking slipping.
 /mob/living/carbon/human/Process_Spaceslipping(var/prob_slip = 5)
 	//If knocked out we might just hit it and stop.  This makes it possible to get dead bodies and such.
 
@@ -253,6 +254,7 @@
 
 	prob_slip = round(prob_slip)
 	return(prob_slip)
+*/// CHOMPedit end.
 
 // Handle footstep sounds
 /mob/living/carbon/human/handle_footstep(var/turf/T)

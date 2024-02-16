@@ -18,8 +18,8 @@
 	can_infect = 1
 	blood_level = 1
 
-	min_duration = 50
-	max_duration = 60
+	min_duration = 30 //CHOMPedit
+	max_duration = 40 //CHOMPedit
 
 /datum/surgery_step/glue_bone/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if (!hasorgans(target))
@@ -60,8 +60,8 @@
 
 	allowed_procs = list(IS_WRENCH = 75)
 
-	min_duration = 60
-	max_duration = 70
+	min_duration = 30 //CHOMPedit
+	max_duration = 45 //CHOMPedit
 
 /datum/surgery_step/set_bone/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if (!hasorgans(target))
@@ -107,8 +107,8 @@
 
 	allowed_procs = list(IS_WRENCH = 75)
 
-	min_duration = 60
-	max_duration = 70
+	min_duration = 40 //CHOMPedit
+	max_duration = 50 //CHOMPedit
 
 /datum/surgery_step/mend_skull/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if (!hasorgans(target))
@@ -152,8 +152,8 @@
 	can_infect = 1
 	blood_level = 1
 
-	min_duration = 50
-	max_duration = 60
+	min_duration = 30 //CHOMPedit
+	max_duration = 30 //CHOMPedit
 
 /datum/surgery_step/finish_bone/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if (!hasorgans(target))
@@ -194,8 +194,8 @@
 	can_infect = 1
 	blood_level = 1
 
-	min_duration = 70
-	max_duration = 90
+	min_duration = 45 //CHOMPedit
+	max_duration = 55 //CHOMPedit
 
 /datum/surgery_step/clamp_bone/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if (!hasorgans(target))

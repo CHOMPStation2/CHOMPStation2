@@ -1,5 +1,12 @@
 import { useBackend } from '../backend';
-import { Button, LabeledList, Section, ColorBox, NoticeBox, Box } from '../components';
+import {
+  Box,
+  Button,
+  ColorBox,
+  LabeledList,
+  NoticeBox,
+  Section,
+} from '../components';
 import { Window } from '../layouts';
 
 export const PrecisionEditor = (props, context) => {

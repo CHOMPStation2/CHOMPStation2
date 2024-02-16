@@ -31,8 +31,8 @@
 	/obj/item/weapon/material/shard = 50, 		\
 	)
 
-	min_duration = 90
-	max_duration = 110
+	min_duration = 50 //CHOMPedit
+	max_duration = 50 //CHOMPedit
 
 /datum/surgery_step/generic/cut_face/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	return ..() && target_zone == O_MOUTH && target.op_stage.face == 0
@@ -66,8 +66,8 @@
 	/obj/item/device/assembly/mousetrap = 10	//I don't know. Don't ask me. But I'm leaving it because hilarity.
 	)
 
-	min_duration = 70
-	max_duration = 90
+	min_duration = 50 //CHOMPedit
+	max_duration = 50 //CHOMPedit
 
 /datum/surgery_step/face/mend_vocal/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	return ..() && target.op_stage.face == 1
@@ -100,8 +100,8 @@
 
 	allowed_procs = list(IS_CROWBAR = 55)
 
-	min_duration = 80
-	max_duration = 100
+	min_duration = 50 //CHOMPedit
+	max_duration = 50 //CHOMPedit
 
 /datum/surgery_step/face/fix_face/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	return ..() && target.op_stage.face == 2
@@ -135,8 +135,8 @@
 	/obj/item/weapon/weldingtool = 25
 	)
 
-	min_duration = 70
-	max_duration = 100
+	min_duration = 50 //CHOMPedit
+	max_duration = 50 //CHOMPedit
 
 /datum/surgery_step/face/cauterize/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	return ..() && target.op_stage.face > 0

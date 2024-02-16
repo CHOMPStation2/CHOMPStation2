@@ -1,17 +1,24 @@
 import { toTitleCase } from 'common/string';
-import { Fragment } from 'inferno';
+
 import { useBackend } from '../backend';
-import { Box, Button, Dropdown, Section, LabeledList, AnimatedNumber } from '../components';
+import {
+  AnimatedNumber,
+  Box,
+  Button,
+  Dropdown,
+  LabeledList,
+  Section,
+} from '../components';
 import { Window } from '../layouts';
 import { MiningUser } from './common/Mining';
 
-export const MiningOreProcessingConsole = (props, context) => {
-  const { act, data } = useBackend(context);
+export const MiningOreProcessingConsole = (props) => {
+  const { act, data } = useBackend();
 
   const { unclaimedPoints, ores, showAllOres, power, speed } = data;
 
   return (
-    <Window width={400} height={500} resizable>
+    <Window width={400} height={500}>
       <Window.Content>
         <MiningUser
           insertIdText={
@@ -26,21 +33,24 @@ export const MiningOreProcessingConsole = (props, context) => {
         <Section
           title="Status"
           buttons={
-            <Fragment>
+            <>
               <Button
                 icon="bolt"
                 selected={speed}
-                onClick={() => act('speed_toggle')}>
+                onClick={() => act('speed_toggle')}
+              >
                 {speed ? 'High-Speed Active' : 'High-Speed Inactive'}
               </Button>
               <Button
                 icon="power-off"
                 selected={power}
-                onClick={() => act('power')}>
+                onClick={() => act('power')}
+              >
                 {power ? 'Smelting' : 'Not Smelting'}
               </Button>
-            </Fragment>
-          }>
+            </>
+          }
+        >
           <LabeledList>
             <LabeledList.Item
               label="Current unclaimed points"
@@ -48,10 +58,12 @@ export const MiningOreProcessingConsole = (props, context) => {
                 <Button
                   disabled={unclaimedPoints < 1}
                   icon="download"
-                  onClick={() => act('claim')}>
+                  onClick={() => act('claim')}
+                >
                   Claim
                 </Button>
-              }>
+              }
+            >
               <AnimatedNumber value={unclaimedPoints} />
             </LabeledList.Item>
           </LabeledList>
@@ -100,8 +112,8 @@ const oreSorter = (a, b) => {
   return oreOrder.indexOf(b.ore) - oreOrder.indexOf(a.ore);
 };
 
-const MOPCOres = (props, context) => {
-  const { act, data } = useBackend(context);
+const MOPCOres = (props) => {
+  const { act, data } = useBackend();
   const { ores, showAllOres, power } = data;
   return (
     <Section
@@ -110,10 +122,12 @@ const MOPCOres = (props, context) => {
         <Button
           icon={showAllOres ? 'toggle-on' : 'toggle-off'}
           selected={showAllOres}
-          onClick={() => act('showAllOres')}>
+          onClick={() => act('showAllOres')}
+        >
           {showAllOres ? 'All Ores' : 'Ores in Machine'}
         </Button>
-      }>
+      }
+    >
       <LabeledList>
         {(ores.length &&
           ores.sort(oreSorter).map((ore) => (
@@ -138,7 +152,8 @@ const MOPCOres = (props, context) => {
                     })
                   }
                 />
-              }>
+              }
+            >
               <Box inline>
                 <AnimatedNumber value={ore.amount} />
               </Box>

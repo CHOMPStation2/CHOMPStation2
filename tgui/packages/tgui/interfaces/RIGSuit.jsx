@@ -1,11 +1,18 @@
-import { Fragment } from 'inferno';
-import { useBackend } from '../backend';
-import { Box, Button, Flex, LabeledList, ProgressBar, Section } from '../components';
-import { Window } from '../layouts';
 import { capitalize, toTitleCase } from 'common/string';
 
-export const RIGSuit = (props, context) => {
-  const { act, data } = useBackend(context);
+import { useBackend } from '../backend';
+import {
+  Box,
+  Button,
+  Flex,
+  LabeledList,
+  ProgressBar,
+  Section,
+} from '../components';
+import { Window } from '../layouts';
+
+export const RIGSuit = (props) => {
+  const { act, data } = useBackend();
 
   const { interfacelock, malf, aicontrol, ai } = data;
 
@@ -21,22 +28,22 @@ export const RIGSuit = (props, context) => {
   }
 
   return (
-    <Window height={480} width={550} resizable>
+    <Window height={480} width={550}>
       <Window.Content scrollable>
         {override || (
-          <Fragment>
+          <>
             <RIGSuitStatus />
             <RIGSuitHardware />
             <RIGSuitModules />
-          </Fragment>
+          </>
         )}
       </Window.Content>
     </Window>
   );
 };
 
-const RIGSuitStatus = (props, context) => {
-  const { act, data } = useBackend(context);
+const RIGSuitStatus = (props) => {
+  const { act, data } = useBackend();
 
   const {
     // Power Bar
@@ -91,12 +98,13 @@ const RIGSuitStatus = (props, context) => {
     <Section
       title="Status"
       buttons={
-        <Fragment>
+        <>
           {SealButton}
           {AIButton}
           {CoolingButton}
-        </Fragment>
-      }>
+        </>
+      }
+    >
       <LabeledList>
         <LabeledList.Item label="Power Supply">
           <ProgressBar
@@ -107,7 +115,8 @@ const RIGSuitStatus = (props, context) => {
               good: [35, Infinity],
               average: [15, 35],
               bad: [-Infinity, 15],
-            }}>
+            }}
+          >
             {charge} / {maxcharge}
           </ProgressBar>
         </LabeledList.Item>
@@ -127,8 +136,8 @@ const RIGSuitStatus = (props, context) => {
   );
 };
 
-const RIGSuitHardware = (props, context) => {
-  const { act, data } = useBackend(context);
+const RIGSuitHardware = (props) => {
+  const { act, data } = useBackend();
 
   const {
     // Disables buttons while the suit is busy
@@ -157,7 +166,8 @@ const RIGSuitHardware = (props, context) => {
               selected={helmetDeployed}
               onClick={() => act('toggle_piece', { piece: 'helmet' })}
             />
-          }>
+          }
+        >
           {helmet ? capitalize(helmet) : 'ERROR'}
         </LabeledList.Item>
         <LabeledList.Item
@@ -170,7 +180,8 @@ const RIGSuitHardware = (props, context) => {
               selected={gauntletsDeployed}
               onClick={() => act('toggle_piece', { piece: 'gauntlets' })}
             />
-          }>
+          }
+        >
           {gauntlets ? capitalize(gauntlets) : 'ERROR'}
         </LabeledList.Item>
         <LabeledList.Item
@@ -183,7 +194,8 @@ const RIGSuitHardware = (props, context) => {
               selected={bootsDeployed}
               onClick={() => act('toggle_piece', { piece: 'boots' })}
             />
-          }>
+          }
+        >
           {boots ? capitalize(boots) : 'ERROR'}
         </LabeledList.Item>
         <LabeledList.Item
@@ -196,7 +208,8 @@ const RIGSuitHardware = (props, context) => {
               selected={chestDeployed}
               onClick={() => act('toggle_piece', { piece: 'chest' })}
             />
-          }>
+          }
+        >
           {chest ? capitalize(chest) : 'ERROR'}
         </LabeledList.Item>
       </LabeledList>
@@ -204,8 +217,8 @@ const RIGSuitHardware = (props, context) => {
   );
 };
 
-const RIGSuitModules = (props, context) => {
-  const { act, data } = useBackend(context);
+const RIGSuitModules = (props) => {
+  const { act, data } = useBackend();
 
   const {
     // Seals disable Modules
@@ -239,7 +252,7 @@ const RIGSuitModules = (props, context) => {
               toTitleCase(module.name) + (module.damage ? ' (damaged)' : '')
             }
             buttons={
-              <Fragment>
+              <>
                 {module.can_select ? (
                   <Button
                     selected={module.name === primarysystem}
@@ -249,8 +262,8 @@ const RIGSuitModules = (props, context) => {
                     icon="arrow-circle-right"
                     onClick={() =>
                       act('interact_module', {
-                        'module': module.index,
-                        'module_mode': 'select',
+                        module: module.index,
+                        module_mode: 'select',
                       })
                     }
                   />
@@ -261,8 +274,8 @@ const RIGSuitModules = (props, context) => {
                     icon="arrow-circle-down"
                     onClick={() =>
                       act('interact_module', {
-                        'module': module.index,
-                        'module_mode': 'engage',
+                        module: module.index,
+                        module_mode: 'engage',
                       })
                     }
                   />
@@ -278,14 +291,15 @@ const RIGSuitModules = (props, context) => {
                     icon="arrow-circle-down"
                     onClick={() =>
                       act('interact_module', {
-                        'module': module.index,
-                        'module_mode': 'toggle',
+                        module: module.index,
+                        module_mode: 'toggle',
                       })
                     }
                   />
                 ) : null}
-              </Fragment>
-            }>
+              </>
+            }
+          >
             {module.damage >= 2 ? (
               <Box color="bad">-- MODULE DESTROYED --</Box>
             ) : (
@@ -308,15 +322,16 @@ const RIGSuitModules = (props, context) => {
                     {module.charges.map((charge, i) => (
                       <LabeledList.Item
                         key={charge.caption}
-                        label={capitalize(charge.caption)}>
+                        label={capitalize(charge.caption)}
+                      >
                         <Button
                           selected={module.realchargetype === charge.index}
                           icon="arrow-right"
                           onClick={() =>
                             act('interact_module', {
-                              'module': module.index,
-                              'module_mode': 'select_charge_type',
-                              'charge_type': charge.index,
+                              module: module.index,
+                              module_mode: 'select_charge_type',
+                              charge_type: charge.index,
                             })
                           }
                         />

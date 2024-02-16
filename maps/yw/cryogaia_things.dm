@@ -22,7 +22,7 @@
 /obj/item/blueprints
 	SPACE_OUTSIDE_TYPES = list(
 		/area/borealis2/outdoors/exterior,
-        /area/borealis2/outdoors/grounds 
+        /area/borealis2/outdoors/grounds
 	)
 
 
@@ -543,9 +543,9 @@ var/global/list/latejoin_tram   = list()
 		anchored = !anchored
 		playsound(src.loc, 'sound/items/Deconstruct.ogg', 50, 1)
 		if(anchored)
-			to_chat(user, "<font color='blue'>You secure \the [src].</font>")
+			to_chat(user, span_blue("You secure \the [src]."))
 		else
-			to_chat(user, "<font color='blue'>You unsecure \the [src].</font>")
+			to_chat(user, span_blue("You unsecure \the [src]."))
 //
 // ### Wall Machines On Full Windows ###
 // To make sure wall-mounted machines placed on full-tile windows are clickable they must be above the window

@@ -1,21 +1,29 @@
 import { round } from 'common/math';
-import { Fragment } from 'inferno';
+
 import { useBackend } from '../backend';
-import { Box, Button, Flex, NoticeBox, LabeledList, Section } from '../components';
+import {
+  Box,
+  Button,
+  Flex,
+  LabeledList,
+  NoticeBox,
+  Section,
+} from '../components';
 import { Window } from '../layouts';
 
-export const TelecommsLogBrowser = (props, context) => {
-  const { act, data } = useBackend(context);
+export const TelecommsLogBrowser = (props) => {
+  const { act, data } = useBackend();
 
   const { universal_translate, network, temp, servers, selectedServer } = data;
 
   return (
-    <Window width={575} height={450} resizable>
+    <Window width={575} height={450}>
       <Window.Content scrollable>
         {temp ? (
           <NoticeBox
             danger={temp.color === 'bad'}
-            warning={temp.color !== 'bad'}>
+            warning={temp.color !== 'bad'}
+          >
             <Box display="inline-box" verticalAlign="middle">
               {temp.text}
             </Box>
@@ -32,7 +40,7 @@ export const TelecommsLogBrowser = (props, context) => {
             <LabeledList.Item
               label="Current Network"
               buttons={
-                <Fragment>
+                <>
                   <Button
                     icon="search"
                     content="Refresh"
@@ -45,8 +53,9 @@ export const TelecommsLogBrowser = (props, context) => {
                     disabled={servers.length === 0}
                     onClick={() => act('release')}
                   />
-                </Fragment>
-              }>
+                </>
+              }
+            >
               <Button
                 content={network}
                 icon="pen"
@@ -69,8 +78,8 @@ export const TelecommsLogBrowser = (props, context) => {
   );
 };
 
-const TelecommsServerSelection = (props, context) => {
-  const { act, data } = useBackend(context);
+const TelecommsServerSelection = (props) => {
+  const { act, data } = useBackend();
   const { network, servers } = props;
 
   if (!servers || !servers.length) {
@@ -93,7 +102,8 @@ const TelecommsServerSelection = (props, context) => {
         {servers.map((server) => (
           <LabeledList.Item
             key={server.id}
-            label={server.name + ' (' + server.id + ')'}>
+            label={server.name + ' (' + server.id + ')'}
+          >
             <Button
               content="View"
               icon="eye"
@@ -106,8 +116,8 @@ const TelecommsServerSelection = (props, context) => {
   );
 };
 
-const TelecommsSelectedServer = (props, context) => {
-  const { act, data } = useBackend(context);
+const TelecommsSelectedServer = (props) => {
+  const { act, data } = useBackend();
   const { network, server, universal_translate } = props;
 
   return (
@@ -115,7 +125,8 @@ const TelecommsSelectedServer = (props, context) => {
       title={'Server (' + server.id + ')'}
       buttons={
         <Button content="Return" icon="undo" onClick={() => act('mainmenu')} />
-      }>
+      }
+    >
       <LabeledList>
         <LabeledList.Item label="Total Recorded Traffic">
           {server.totalTraffic >= 1024
@@ -128,62 +139,63 @@ const TelecommsSelectedServer = (props, context) => {
           {!server.logs || !server.logs.length
             ? 'No Logs Detected.'
             : server.logs.map((log) => (
-              <Flex.Item m="2px" key={log.id} basis="49%" grow={log.id % 2}>
-                <Section
-                  title={
-                    universal_translate ||
-                    log.parameters['uspeech'] ||
-                    log.parameters['intelligible'] ||
-                    log.input_type === 'Execution Error'
-                      ? log.input_type
-                      : 'Audio File'
-                  }
-                  buttons={
-                    <Button.Confirm
-                      confirmContent="Delete Log?"
-                      color="bad"
-                      icon="trash"
-                      confirmIcon="trash"
-                      onClick={() => act('delete', { id: log.id })}
-                    />
-                  }>
-                  {log.input_type === 'Execution Error' ? (
-                    <LabeledList>
-                      <LabeledList.Item label="Data type">
-                        Error
-                      </LabeledList.Item>
-                      <LabeledList.Item label="Output">
-                        {log.parameters['message']}
-                      </LabeledList.Item>
-                      <LabeledList.Item label="Delete">
-                        <Button
-                          icon="trash"
-                          onClick={() => act('delete', { id: log.id })}
-                        />
-                      </LabeledList.Item>
-                    </LabeledList>
-                  ) : universal_translate ||
-                    log.parameters['uspeech'] ||
-                    log.parameters['intelligible'] ? (
-                    <TelecommsLog log={log} />
-                  ) : (
-                    <TelecommsLog error />
-                  )}
-                </Section>
-              </Flex.Item>
-            ))}
+                <Flex.Item m="2px" key={log.id} basis="49%" grow={log.id % 2}>
+                  <Section
+                    title={
+                      universal_translate ||
+                      log.parameters['uspeech'] ||
+                      log.parameters['intelligible'] ||
+                      log.input_type === 'Execution Error'
+                        ? log.input_type
+                        : 'Audio File'
+                    }
+                    buttons={
+                      <Button.Confirm
+                        confirmContent="Delete Log?"
+                        color="bad"
+                        icon="trash"
+                        confirmIcon="trash"
+                        onClick={() => act('delete', { id: log.id })}
+                      />
+                    }
+                  >
+                    {log.input_type === 'Execution Error' ? (
+                      <LabeledList>
+                        <LabeledList.Item label="Data type">
+                          Error
+                        </LabeledList.Item>
+                        <LabeledList.Item label="Output">
+                          {log.parameters['message']}
+                        </LabeledList.Item>
+                        <LabeledList.Item label="Delete">
+                          <Button
+                            icon="trash"
+                            onClick={() => act('delete', { id: log.id })}
+                          />
+                        </LabeledList.Item>
+                      </LabeledList>
+                    ) : universal_translate ||
+                      log.parameters['uspeech'] ||
+                      log.parameters['intelligible'] ? (
+                      <TelecommsLog log={log} />
+                    ) : (
+                      <TelecommsLog error />
+                    )}
+                  </Section>
+                </Flex.Item>
+              ))}
         </Flex>
       </Section>
     </Section>
   );
 };
 
-const TelecommsLog = (props, context) => {
-  const { act, data } = useBackend(context);
+const TelecommsLog = (props) => {
+  const { act, data } = useBackend();
   const { log, error } = props;
 
   const { timecode, name, race, job, message } = (log && log.parameters) || {
-    'none': 'none',
+    none: 'none',
   };
 
   if (error) {

@@ -1,10 +1,9 @@
-import { Fragment } from 'inferno';
 import { useBackend } from '../backend';
 import { Box, Button, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
 
-export const PlantAnalyzer = (props, context) => {
-  const { data } = useBackend(context);
+export const PlantAnalyzer = (props) => {
+  const { data } = useBackend();
 
   let calculatedHeight = 250;
   if (data.seed) {
@@ -17,7 +16,7 @@ export const PlantAnalyzer = (props, context) => {
 
   // Resizable just in case the calculatedHeight fails
   return (
-    <Window width={400} height={calculatedHeight} resizable>
+    <Window width={400} height={calculatedHeight}>
       <Window.Content scrollable>
         <PlantAnalyzerContent />
       </Window.Content>
@@ -25,8 +24,8 @@ export const PlantAnalyzer = (props, context) => {
   );
 };
 
-const PlantAnalyzerContent = (props, context) => {
-  const { act, data } = useBackend(context);
+const PlantAnalyzerContent = (props) => {
+  const { act, data } = useBackend();
 
   const { no_seed, seed, reagents } = data;
 
@@ -42,7 +41,7 @@ const PlantAnalyzerContent = (props, context) => {
     <Section
       title="Plant Information"
       buttons={
-        <Fragment>
+        <>
           <Button icon="print" onClick={() => act('print')}>
             Print Report
           </Button>
@@ -51,8 +50,9 @@ const PlantAnalyzerContent = (props, context) => {
             color="red"
             onClick={() => act('close')}
           />
-        </Fragment>
-      }>
+        </>
+      }
+    >
       <LabeledList>
         <LabeledList.Item label="Plant Name">
           {seed.name}#{seed.uid}

@@ -1,6 +1,19 @@
+import { useState } from 'react';
+
 import { BooleanLike } from '../../common/react';
-import { useBackend, useLocalState } from '../backend';
-import { Button, Divider, Flex, Input, Knob, LabeledList, NumberInput, Section, Tabs, TextArea } from '../components';
+import { useBackend } from '../backend';
+import {
+  Button,
+  Divider,
+  Flex,
+  Input,
+  Knob,
+  LabeledList,
+  NumberInput,
+  Section,
+  Tabs,
+  TextArea,
+} from '../components';
 import { Window } from '../layouts';
 
 type Data = {
@@ -32,10 +45,10 @@ type Data = {
   initial_z: number;
 };
 
-export const MobSpawner = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const MobSpawner = (props) => {
+  const { act, data } = useBackend<Data>();
 
-  const [tabIndex, setTabIndex] = useLocalState(context, 'panelTabIndex', 0);
+  const [tabIndex, setTabIndex] = useState(0);
 
   const tabs: any = [];
 
@@ -43,7 +56,7 @@ export const MobSpawner = (props, context) => {
   tabs[1] = <VoreMobSettings />;
 
   return (
-    <Window width={890} height={660} theme="abstract" resizable>
+    <Window width={890} height={660} theme="abstract">
       <Window.Content scrollable>
         <Tabs>
           <Tabs.Tab selected={tabIndex === 0} onClick={() => setTabIndex(0)}>
@@ -59,57 +72,33 @@ export const MobSpawner = (props, context) => {
   );
 };
 
-const GeneralMobSettings = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+const GeneralMobSettings = (props) => {
+  const { act, data } = useBackend<Data>();
 
-  const [amount, setAmount] = useLocalState(context, 'amount', 1);
-  const [name, setName] = useLocalState(
-    context,
-    'name',
-    data.default_path_name
+  const [amount, setAmount] = useState(1);
+  const [name, setName] = useState(data.default_path_name);
+  const [ai_type] = useState(data.ai_type);
+  const [use_custom_ai] = useState(data.use_custom_ai);
+  const [faction] = useState(data.faction);
+  const [intent] = useState(data.intent);
+  const [maxHealth, setMaxHealth] = useState(data.max_health);
+  const [health, setHealth] = useState(data.health);
+  const [meleeDamageLower, setMeleeDamageLower] = useState(
+    data.melee_damage_lower,
   );
-  const [ai_type] = useLocalState(context, 'aiType', data.ai_type);
-  const [use_custom_ai] = useLocalState(
-    context,
-    'toggleCustomAi',
-    data.use_custom_ai
+  const [meleeDamageUpper, setMeleeDamageUpper] = useState(
+    data.melee_damage_upper,
   );
-  const [faction] = useLocalState(context, 'setMobFaction', data.faction);
-  const [intent] = useLocalState(context, 'setIntent', data.intent);
-  const [maxHealth, setMaxHealth] = useLocalState(
-    context,
-    'maxHealth',
-    data.max_health
-  );
-  const [health, setHealth] = useLocalState(context, 'health', data.health);
-  const [meleeDamageLower, setMeleeDamageLower] = useLocalState(
-    context,
-    'meleeDamageLower',
-    data.melee_damage_lower
-  );
-  const [meleeDamageUpper, setMeleeDamageUpper] = useLocalState(
-    context,
-    'meleeDamageUpper',
-    data.melee_damage_upper
-  );
-  const [desc, setDesc] = useLocalState(context, 'desc', data.default_desc);
-  const [flavorText, setFlavorText] = useLocalState(
-    context,
-    'flavorText',
-    data.default_flavor_text
-  );
+  const [desc, setDesc] = useState(data.default_desc);
+  const [flavorText, setFlavorText] = useState(data.default_flavor_text);
 
-  const [sizeMultiplier, setSizeMultiplier] = useLocalState(
-    context,
-    'sizeMultiplier',
-    100
-  );
+  const [sizeMultiplier, setSizeMultiplier] = useState(100);
 
-  const [x, setX] = useLocalState(context, 'x', data.initial_x);
-  const [y, setY] = useLocalState(context, 'y', data.initial_y);
-  const [z, setZ] = useLocalState(context, 'z', data.initial_z);
+  const [x, setX] = useState(data.initial_x);
+  const [y, setY] = useState(data.initial_y);
+  const [z, setZ] = useState(data.initial_z);
 
-  const [radius, setRadius] = useLocalState(context, 'radius', 0);
+  const [radius, setRadius] = useState(0);
 
   return (
     <>
@@ -203,7 +192,8 @@ const GeneralMobSettings = (props, context) => {
                   content="Use Custom AI"
                   onClick={() => act('toggle_custom_ai')}
                 />
-              }>
+              }
+            >
               <LabeledList>
                 <LabeledList.Item>
                   <Button
@@ -310,15 +300,16 @@ const GeneralMobSettings = (props, context) => {
             z: data.loc_lock ? data.loc_z : z,
             radius: radius,
           })
-        }>
+        }
+      >
         Spawn
       </Button>
     </>
   );
 };
 
-const VoreMobSettings = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+const VoreMobSettings = (props) => {
+  const { act, data } = useBackend<Data>();
 
   return (
     <Section title="WIP">

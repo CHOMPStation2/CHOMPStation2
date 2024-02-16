@@ -1,10 +1,18 @@
-import { Fragment } from 'inferno';
 import { useBackend } from '../backend';
-import { Box, Button, Icon, LabeledList, Knob, NoticeBox, Section, Flex } from '../components';
+import {
+  Box,
+  Button,
+  Flex,
+  Icon,
+  Knob,
+  LabeledList,
+  NoticeBox,
+  Section,
+} from '../components';
 import { Window } from '../layouts';
 
-export const SuitStorageUnit = (props, context) => {
-  const { act, data } = useBackend(context);
+export const SuitStorageUnit = (props) => {
+  const { act, data } = useBackend();
   const { panelopen, uv_active, broken } = data;
 
   let subTemplate = <SuitStorageUnitContent />;
@@ -18,14 +26,14 @@ export const SuitStorageUnit = (props, context) => {
   }
 
   return (
-    <Window width={400} height={365} resizable>
+    <Window width={400} height={365}>
       <Window.Content>{subTemplate}</Window.Content>
     </Window>
   );
 };
 
-const SuitStorageUnitContent = (props, context) => {
-  const { act, data } = useBackend(context);
+const SuitStorageUnitContent = (props) => {
+  const { act, data } = useBackend();
   const { locked, open, safeties, occupied, suit, helmet, mask } = data;
 
   return (
@@ -33,7 +41,7 @@ const SuitStorageUnitContent = (props, context) => {
       title="Storage"
       minHeight="260px"
       buttons={
-        <Fragment>
+        <>
           {!open && (
             <Button
               icon={locked ? 'unlock' : 'lock'}
@@ -48,8 +56,9 @@ const SuitStorageUnitContent = (props, context) => {
               onClick={() => act('door')}
             />
           )}
-        </Fragment>
-      }>
+        </>
+      }
+    >
       {!!(occupied && safeties) && (
         <NoticeBox>
           Biological entity detected in suit chamber. Please remove before
@@ -122,8 +131,8 @@ const SuitStorageUnitContent = (props, context) => {
   );
 };
 
-const SuitStorageUnitPanel = (props, context) => {
-  const { act, data } = useBackend(context);
+const SuitStorageUnitPanel = (props) => {
+  const { act, data } = useBackend();
   const { safeties, uv_super } = data;
 
   return (
@@ -175,7 +184,7 @@ const SuitStorageUnitPanel = (props, context) => {
               inline
               icon="caret-square-right"
               style={{
-                'border': '4px solid #777',
+                border: '4px solid #777',
                 'border-style': 'outset',
               }}
               onClick={() => act('togglesafeties')}
@@ -191,7 +200,7 @@ const SuitStorageUnitPanel = (props, context) => {
   );
 };
 
-const SuitStorageUnitUV = (props, context) => {
+const SuitStorageUnitUV = (props) => {
   return (
     <NoticeBox>
       Contents are currently being decontaminated. Please wait.
@@ -199,7 +208,7 @@ const SuitStorageUnitUV = (props, context) => {
   );
 };
 
-const SuitStorageUnitBroken = (props, context) => {
+const SuitStorageUnitBroken = (props) => {
   return (
     <NoticeBox danger>
       Unit chamber is too contaminated to continue usage. Please call for a

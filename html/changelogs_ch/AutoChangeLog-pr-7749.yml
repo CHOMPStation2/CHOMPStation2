@@ -1,0 +1,4 @@
+author: "Aroliacue"
+delete-after: True
+changes:
+  - rscadd: "Reenabled doorbells on airlocks and knocking on regular doors. This can be done by leftalt-clicking on a door."

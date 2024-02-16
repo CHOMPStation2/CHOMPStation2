@@ -1,9 +1,20 @@
 import { filter } from 'common/collections';
 import { BooleanLike } from 'common/react';
 import { decodeHtmlEntities, toTitleCase } from 'common/string';
-import { Fragment } from 'inferno';
-import { useBackend, useLocalState } from '../backend';
-import { Box, ByondUi, Button, Flex, Icon, LabeledList, Input, Section, Table } from '../components';
+import { useState } from 'react';
+
+import { useBackend } from '../backend';
+import {
+  Box,
+  Button,
+  ByondUi,
+  Flex,
+  Icon,
+  Input,
+  LabeledList,
+  Section,
+  Table,
+} from '../components';
 import { Window } from '../layouts';
 import { CrewManifestContent } from './CrewManifest';
 
@@ -42,8 +53,8 @@ type Data = {
   invitesSent: [];
 };
 
-export const Communicator = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const Communicator = (props) => {
+  const { act, data } = useBackend<Data>();
 
   const { currentTab, video_comm, mapRef } = data;
 
@@ -51,14 +62,10 @@ export const Communicator = (props, context) => {
    * 1: Popup Video
    * 2: Minimized Video
    */
-  const [videoSetting, setVideoSetting] = useLocalState(
-    context,
-    'videoSetting',
-    0
-  );
+  const [videoSetting, setVideoSetting] = useState(0);
 
   return (
-    <Window width={475} height={700} resizable>
+    <Window width={475} height={700}>
       <Window.Content>
         {video_comm && (
           <VideoComm
@@ -67,29 +74,30 @@ export const Communicator = (props, context) => {
           />
         )}
         {(!video_comm || videoSetting !== 0) && (
-          <Fragment>
+          <>
             <CommunicatorHeader />
             <Box
               height="88%"
               mb={1}
               style={{
                 'overflow-y': 'auto',
-              }}>
+              }}
+            >
               {TabToTemplate[currentTab] || <TemplateError />}
             </Box>
             <CommunicatorFooter
               videoSetting={videoSetting}
               setVideoSetting={setVideoSetting}
             />
-          </Fragment>
+          </>
         )}
       </Window.Content>
     </Window>
   );
 };
 
-const VideoComm = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+const VideoComm = (props) => {
+  const { act, data } = useBackend<Data>();
 
   const { video_comm, mapRef } = data;
 
@@ -143,11 +151,12 @@ const VideoComm = (props, context) => {
     return (
       <Box
         style={{
-          'position': 'absolute',
-          'right': '5px',
-          'bottom': '50px',
+          position: 'absolute',
+          right: '5px',
+          bottom: '50px',
           'z-index': 1,
-        }}>
+        }}
+      >
         <Section p={0} m={0}>
           <Flex justify="space-between" spacing={1}>
             <Flex.Item grow={1}>
@@ -204,8 +213,8 @@ const VideoComm = (props, context) => {
   return null;
 };
 
-const TemplateError = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+const TemplateError = (props) => {
+  const { act, data } = useBackend<Data>();
 
   const { currentTab } = data;
 
@@ -216,8 +225,8 @@ const TemplateError = (props, context) => {
   );
 };
 
-const CommunicatorHeader = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+const CommunicatorHeader = (props) => {
+  const { act, data } = useBackend<Data>();
 
   const { time, connectionStatus, owner, occupation } = data;
 
@@ -238,8 +247,8 @@ const CommunicatorHeader = (props, context) => {
   );
 };
 
-const CommunicatorFooter = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+const CommunicatorFooter = (props) => {
+  const { act, data } = useBackend<Data>();
 
   const { flashlight } = data;
 
@@ -289,8 +298,8 @@ const CommunicatorFooter = (props, context) => {
 };
 
 /* Helper for notifications (yes this is a mess, but whatever, it works) */
-const hasNotifications = (app, context) => {
-  const { data } = useBackend<Data>(context);
+const hasNotifications = (app) => {
+  const { data } = useBackend<Data>();
 
   const {
     /* Phone Notifications */
@@ -323,8 +332,8 @@ type HomeTabData = {
 };
 
 /* Home tab, provides access to all other tabs. */
-const HomeTab = (props, context) => {
-  const { act, data } = useBackend<HomeTabData>(context);
+const HomeTab = (props) => {
+  const { act, data } = useBackend<HomeTabData>();
 
   const { homeScreen } = data;
 
@@ -335,15 +344,16 @@ const HomeTab = (props, context) => {
           <Button
             style={{
               'border-radius': '10%',
-              'border': '1px solid #000',
+              border: '1px solid #000',
             }}
             width="64px"
             height="64px"
             position="relative"
-            onClick={() => act('switch_tab', { switch_tab: app.number })}>
+            onClick={() => act('switch_tab', { switch_tab: app.number })}
+          >
             <Icon
-              spin={hasNotifications(app.module, context)}
-              color={hasNotifications(app.module, context) ? 'bad' : null}
+              spin={hasNotifications(app.module)}
+              color={hasNotifications(app.module) ? 'bad' : null}
               name={app.icon}
               position="absolute"
               size={3}
@@ -376,8 +386,8 @@ type PhoneTabData = {
 };
 
 /* Phone tab, provides a phone interface! */
-const PhoneTab = (props, context) => {
-  const { act, data } = useBackend<PhoneTabData>(context);
+const PhoneTab = (props) => {
+  const { act, data } = useBackend<PhoneTabData>();
 
   const {
     targetAddress,
@@ -429,7 +439,8 @@ const PhoneTab = (props, context) => {
               {voice_mobs.map((mob) => (
                 <LabeledList.Item
                   label={decodeHtmlEntities(mob.name)}
-                  key={mob.ref}>
+                  key={mob.ref}
+                >
                   <Button
                     icon="times"
                     color="bad"
@@ -491,7 +502,8 @@ const PhoneTab = (props, context) => {
               {requestsReceived.map((request) => (
                 <LabeledList.Item
                   label={decodeHtmlEntities(request.name)}
-                  key={request.address}>
+                  key={request.address}
+                >
                   <Box>{decodeHtmlEntities(request.address)}</Box>
                   <Box>
                     <Button
@@ -516,13 +528,14 @@ const PhoneTab = (props, context) => {
               {invitesSent.map((invite) => (
                 <LabeledList.Item
                   label={decodeHtmlEntities(invite.name)}
-                  key={invite.address}>
+                  key={invite.address}
+                >
                   <Box>{decodeHtmlEntities(invite.address)}</Box>
                   <Box>
                     <Button
                       icon="pen"
                       onClick={() => {
-                        act('copy', { 'copy': invite.address });
+                        act('copy', { copy: invite.address });
                       }}
                       content="Copy"
                     />
@@ -538,8 +551,8 @@ const PhoneTab = (props, context) => {
 };
 
 // Subtemplate
-const NumberPad = (props, context) => {
-  const { act, data } = useBackend<PhoneTabData>(context);
+const NumberPad = (props) => {
+  const { act, data } = useBackend<PhoneTabData>();
 
   const { targetAddress } = data;
 
@@ -581,7 +594,7 @@ const NumberPad = (props, context) => {
         <Table.Cell>{buttonArray[i + 1]}</Table.Cell>
         <Table.Cell>{buttonArray[i + 2]}</Table.Cell>
         <Table.Cell>{buttonArray[i + 3]}</Table.Cell>
-      </Table.Row>
+      </Table.Row>,
     );
   }
 
@@ -596,7 +609,8 @@ const NumberPad = (props, context) => {
               width="100%"
               height="64px"
               position="relative"
-              onClick={() => act('dial', { dial: targetAddress })}>
+              onClick={() => act('dial', { dial: targetAddress })}
+            >
               <Icon
                 name="phone"
                 position="absolute"
@@ -616,7 +630,8 @@ const NumberPad = (props, context) => {
               onClick={() => {
                 act('message', { message: targetAddress });
                 act('switch_tab', { switch_tab: MESSTAB });
-              }}>
+              }}
+            >
               <Icon
                 name="comment-alt"
                 position="absolute"
@@ -633,7 +648,8 @@ const NumberPad = (props, context) => {
               width="100%"
               height="64px"
               position="relative"
-              onClick={() => act('hang_up')}>
+              onClick={() => act('hang_up')}
+            >
               <Icon
                 name="times"
                 position="absolute"
@@ -657,8 +673,8 @@ type ContactsTabData = {
 };
 
 /* Contacts */
-const ContactsTab = (props, context) => {
-  const { act, data } = useBackend<ContactsTabData>(context);
+const ContactsTab = (props) => {
+  const { act, data } = useBackend<ContactsTabData>();
 
   const { knownDevices } = data;
 
@@ -672,7 +688,8 @@ const ContactsTab = (props, context) => {
                 color="label"
                 style={{
                   'word-break': 'break-all',
-                }}>
+                }}
+              >
                 {decodeHtmlEntities(device.name)}
               </Table.Cell>
               <Table.Cell>
@@ -681,7 +698,7 @@ const ContactsTab = (props, context) => {
                   <Button
                     icon="pen"
                     onClick={() => {
-                      act('copy', { 'copy': device.address });
+                      act('copy', { copy: device.address });
                       act('switch_tab', { switch_tab: PHONTAB });
                     }}
                     content="Copy"
@@ -689,8 +706,8 @@ const ContactsTab = (props, context) => {
                   <Button
                     icon="phone"
                     onClick={() => {
-                      act('dial', { 'dial': device.address });
-                      act('copy', { 'copy': device.address });
+                      act('dial', { dial: device.address });
+                      act('copy', { copy: device.address });
                       act('switch_tab', { switch_tab: PHONTAB });
                     }}
                     content="Call"
@@ -698,8 +715,8 @@ const ContactsTab = (props, context) => {
                   <Button
                     icon="comment-alt"
                     onClick={() => {
-                      act('copy', { 'copy': device.address });
-                      act('copy_name', { 'copy_name': device.name });
+                      act('copy', { copy: device.address });
+                      act('copy_name', { copy_name: device.name });
                       act('switch_tab', { switch_tab: MESSSUBTAB });
                     }}
                     content="Msg"
@@ -727,8 +744,8 @@ type MessagingTabData = {
 };
 
 /* Messaging */
-const MessagingTab = (props, context) => {
-  const { act, data } = useBackend<MessagingTabData>(context);
+const MessagingTab = (props) => {
+  const { act, data } = useBackend<MessagingTabData>();
 
   const { imContacts } = data;
 
@@ -742,7 +759,8 @@ const MessagingTab = (props, context) => {
                 color="label"
                 style={{
                   'word-break': 'break-all',
-                }}>
+                }}
+              >
                 {decodeHtmlEntities(device.name)}:
               </Table.Cell>
               <Table.Cell>
@@ -811,16 +829,12 @@ const findClassMessage = (im, targetAddress, lastIndex, filterArray) => {
   return thisSent ? 'TinderMessage_First_Sent' : 'TinderMessage_First_Received';
 };
 
-const MessagingThreadTab = (props, context) => {
-  const { act, data } = useBackend<MessagingTabData>(context);
+const MessagingThreadTab = (props) => {
+  const { act, data } = useBackend<MessagingTabData>();
 
   const { targetAddressName, targetAddress, imList } = data;
 
-  const [clipboardMode, setClipboardMode] = useLocalState(
-    context,
-    'clipboardMode',
-    false
-  );
+  const [clipboardMode, setClipboardMode] = useState(false);
 
   if (clipboardMode) {
     return (
@@ -832,11 +846,12 @@ const MessagingThreadTab = (props, context) => {
               'white-space': 'nowrap',
               'overflow-x': 'hidden',
             }}
-            width="90%">
+            width="90%"
+          >
             {enforceLengthLimit(
               'Conversation with ',
               decodeHtmlEntities(targetAddressName),
-              30
+              30,
             )}
           </Box>
         }
@@ -850,12 +865,14 @@ const MessagingThreadTab = (props, context) => {
           />
         }
         height="100%"
-        stretchContents>
+        stretchContents
+      >
         <Section
           style={{
-            'height': '95%',
+            height: '95%',
             'overflow-y': 'auto',
-          }}>
+          }}
+        >
           {imList.map(
             (im, i) =>
               (im.to_address === targetAddress ||
@@ -866,15 +883,16 @@ const MessagingThreadTab = (props, context) => {
                     IsIMOurs(im, targetAddress)
                       ? 'ClassicMessage_Sent'
                       : 'ClassicMessage_Received'
-                  }>
+                  }
+                >
                   {IsIMOurs(im, targetAddress) ? 'You' : 'Them'}: {im.im}
                 </Box>
-              )
+              ),
           )}
         </Section>
         <Button
           icon="comment"
-          onClick={() => act('message', { 'message': targetAddress })}
+          onClick={() => act('message', { message: targetAddress })}
           content="Message"
         />
       </Section>
@@ -890,11 +908,12 @@ const MessagingThreadTab = (props, context) => {
             'white-space': 'nowrap',
             'overflow-x': 'hidden',
           }}
-          width="100%">
+          width="100%"
+        >
           {enforceLengthLimit(
             'Conversation with ',
             decodeHtmlEntities(targetAddressName),
-            30
+            30,
           )}
         </Box>
       }
@@ -908,12 +927,14 @@ const MessagingThreadTab = (props, context) => {
         />
       }
       height="100%"
-      stretchContents>
+      stretchContents
+    >
       <Section
         style={{
-          'height': '95%',
+          height: '95%',
           'overflow-y': 'auto',
-        }}>
+        }}
+      >
         {imList.map(
           (im, i, filterArr) =>
             (im.to_address === targetAddress ||
@@ -921,25 +942,27 @@ const MessagingThreadTab = (props, context) => {
               <Box
                 textAlign={IsIMOurs(im, targetAddress) ? 'right' : 'left'}
                 mb={1}
-                key={i}>
+                key={i}
+              >
                 <Box
                   maxWidth="75%"
                   className={findClassMessage(
                     im,
                     targetAddress,
                     i - 1,
-                    filterArr
+                    filterArr,
                   )}
-                  inline>
+                  inline
+                >
                   {decodeHtmlEntities(im.im)}
                 </Box>
               </Box>
-            )
+            ),
         )}
       </Section>
       <Button
         icon="comment"
-        onClick={() => act('message', { 'message': targetAddress })}
+        onClick={() => act('message', { message: targetAddress })}
         content="Message"
       />
     </Section>
@@ -968,8 +991,8 @@ type NewsMessage = {
 };
 
 /* News */
-const NewsTab = (props, context) => {
-  const { act, data } = useBackend<NewsTabData>(context);
+const NewsTab = (props) => {
+  const { act, data } = useBackend<NewsTabData>();
 
   const { feeds, target_feed } = data;
 
@@ -985,8 +1008,8 @@ const NewsTab = (props, context) => {
   );
 };
 
-const NewsTargetFeed = (props, context) => {
-  const { act, data } = useBackend<NewsTabData>(context);
+const NewsTargetFeed = (props) => {
+  const { act, data } = useBackend<NewsTabData>();
 
   const { target_feed } = data;
 
@@ -1003,7 +1026,8 @@ const NewsTargetFeed = (props, context) => {
           icon="chevron-up"
           onClick={() => act('newsfeed', { newsfeed: null })}
         />
-      }>
+      }
+    >
       {target_feed.messages.map((message) => (
         <Section key={message.ref}>
           - {decodeHtmlEntities(message.body)}
@@ -1023,13 +1047,13 @@ const NewsTargetFeed = (props, context) => {
   );
 };
 
-const NewsFeed = (props, context) => {
-  const { act, data } = useBackend<NewsTabData>(context);
+const NewsFeed = (props) => {
+  const { act, data } = useBackend<NewsTabData>();
 
   const { feeds, latest_news } = data;
 
   return (
-    <Fragment>
+    <>
       <Section title="Recent News">
         <Section>
           {latest_news.map((news) => (
@@ -1072,7 +1096,7 @@ const NewsFeed = (props, context) => {
           />
         ))}
       </Section>
-    </Fragment>
+    </>
   );
 };
 
@@ -1083,8 +1107,8 @@ type NoteTabData = {
 };
 
 /* Note Keeper */
-const NoteTab = (props, context) => {
-  const { act, data } = useBackend<NoteTabData>(context);
+const NoteTab = (props) => {
+  const { act, data } = useBackend<NoteTabData>();
 
   const { note } = data;
 
@@ -1095,7 +1119,8 @@ const NoteTab = (props, context) => {
       stretchContents
       buttons={
         <Button icon="pen" onClick={() => act('edit')} content="Edit Notes" />
-      }>
+      }
+    >
       <Section
         color="average"
         width="100%"
@@ -1103,7 +1128,8 @@ const NoteTab = (props, context) => {
         style={{
           'word-break': 'break-all',
           'overflow-y': 'auto',
-        }}>
+        }}
+      >
         {note}
       </Section>
     </Section>
@@ -1153,8 +1179,8 @@ type Weather = {
   Forecast: string;
 };
 
-const WeatherTab = (props, context) => {
-  const { act, data } = useBackend<WeatherTabData>(context);
+const WeatherTab = (props) => {
+  const { act, data } = useBackend<WeatherTabData>();
 
   const { aircontents, weather } = data;
 
@@ -1168,7 +1194,7 @@ const WeatherTab = (props, context) => {
             (i: AirContent) =>
               i.val !== '0' ||
               i.entry === 'Pressure' ||
-              i.entry === 'Temperature'
+              i.entry === 'Temperature',
           )(aircontents).map((item: AirContent) => (
             <LabeledList.Item
               key={item.entry}
@@ -1178,8 +1204,9 @@ const WeatherTab = (props, context) => {
                 item.bad_low,
                 item.poor_low,
                 item.poor_high,
-                item.bad_high
-              )}>
+                item.bad_high,
+              )}
+            >
               {item.val}
               {decodeHtmlEntities(item.units)}
             </LabeledList.Item>
@@ -1240,8 +1267,8 @@ type SettingsTabData = {
 };
 
 /* Settings */
-const SettingsTab = (props, context) => {
-  const { act, data } = useBackend<SettingsTabData>(context);
+const SettingsTab = (props) => {
+  const { act, data } = useBackend<SettingsTabData>();
 
   const {
     owner,

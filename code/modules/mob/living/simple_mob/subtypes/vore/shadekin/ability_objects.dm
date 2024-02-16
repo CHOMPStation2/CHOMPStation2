@@ -191,3 +191,18 @@
 	else
 		my_kin.energy += 10 //Refund enough to open the dark portal
 //CHOMPEdit End
+
+//CHOMPEdit start - Add Dark Maw ability
+/obj/effect/shadekin_ability/dark_maw
+	ability_name = "Dark Maw"
+	desc = "Create a trap to capture others, or steal people from phase"
+	icon_state = "ling_absorb_dna"
+	cost = 20
+	shift_mode = SHIFTED_OR_NOT
+	ab_sound = 'sound/effects/stealthoff.ogg'
+/obj/effect/shadekin_ability/dark_maw/do_ability()
+	if(!..())
+		return
+	if(!my_kin.dark_maw())
+		my_kin.energy += cost //Refund due to abort
+//CHOMPEdit End

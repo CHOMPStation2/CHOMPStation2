@@ -1,9 +1,9 @@
 import { sortBy } from 'common/collections';
 import { flow } from 'common/fp';
+
 import { useBackend, useLocalState } from '../backend';
+import { Box, Button, Icon, NanoMap, Table, Tabs } from '../components';
 import { Window } from '../layouts';
-import { NanoMap, Box, Table, Button, Tabs, Icon } from '../components';
-import { Fragment } from 'inferno';
 
 const getStatText = (cm) => {
   if (cm.dead) {
@@ -29,7 +29,7 @@ const getStatColor = (cm) => {
 
 export const CrewMonitor = () => {
   return (
-    <Window width={800} height={600} resizable>
+    <Window width={800} height={600}>
       <Window.Content>
         <CrewMonitorContent />
       </Window.Content>
@@ -37,9 +37,9 @@ export const CrewMonitor = () => {
   );
 };
 
-export const CrewMonitorContent = (props, context) => {
-  const { act, data, config } = useBackend(context);
-  const [tabIndex, setTabIndex] = useLocalState(context, 'tabIndex', 0);
+export const CrewMonitorContent = (props) => {
+  const { act, data, config } = useBackend();
+  const [tabIndex, setTabIndex] = useLocalState('tabIndex', 0);
 
   const crew = flow([
     sortBy((cm) => cm.name),
@@ -48,7 +48,7 @@ export const CrewMonitorContent = (props, context) => {
     sortBy((cm) => cm?.realZ),
   ])(data.crewmembers || []);
 
-  const [zoom, setZoom] = useLocalState(context, 'zoom', 1);
+  const [zoom, setZoom] = useLocalState('zoom', 1);
 
   let body;
   // Data view
@@ -125,35 +125,37 @@ export const CrewMonitorContent = (props, context) => {
   }
 
   return (
-    <Fragment>
+    <>
       <Tabs>
         <Tabs.Tab
           key="DataView"
           selected={0 === tabIndex}
-          onClick={() => setTabIndex(0)}>
+          onClick={() => setTabIndex(0)}
+        >
           <Icon name="table" /> Data View
         </Tabs.Tab>
         <Tabs.Tab
           key="MapView"
           selected={1 === tabIndex}
-          onClick={() => setTabIndex(1)}>
+          onClick={() => setTabIndex(1)}
+        >
           <Icon name="map-marked-alt" /> Map View
         </Tabs.Tab>
       </Tabs>
       <Box m={2}>{body}</Box>
-    </Fragment>
+    </>
   );
 };
 
-const CrewMonitorMapView = (props, context) => {
-  const { act, config, data } = useBackend(context);
-  const [zoom, setZoom] = useLocalState(context, 'zoom', 1);
+const CrewMonitorMapView = (props) => {
+  const { act, config, data } = useBackend();
+  const [zoom, setZoom] = useLocalState('zoom', 1);
   return (
     <Box height="526px" mb="0.5rem" overflow="hidden">
       <NanoMap onZoom={(v) => setZoom(v)}>
         {data.crewmembers
           .filter(
-            (x) => x.sensor_type === 3 && ~~x.realZ === ~~config.mapZLevel
+            (x) => x.sensor_type === 3 && ~~x.realZ === ~~config.mapZLevel,
           )
           .map((cm) => (
             <NanoMap.Marker

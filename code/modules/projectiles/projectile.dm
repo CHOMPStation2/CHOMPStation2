@@ -706,7 +706,7 @@
 	//admin logs
 	if(!no_attack_log)
 		if(istype(firer, /mob) && istype(target_mob))
-			add_attack_logs(firer,target_mob,"Shot with \a [src.type] projectile",use_async=FALSE) //CHOMPEdit
+			add_attack_logs(firer,target_mob,"Shot with \a [src.type] projectile") //CHOMPEdit
 
 	//sometimes bullet_act() will want the projectile to continue flying
 	if (result == PROJECTILE_CONTINUE)

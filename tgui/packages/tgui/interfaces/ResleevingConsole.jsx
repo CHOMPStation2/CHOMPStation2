@@ -1,16 +1,30 @@
 import { round } from 'common/math';
-import { Fragment } from 'inferno';
+
 import { useBackend } from '../backend';
-import { Box, Button, Dimmer, Flex, Icon, LabeledList, NoticeBox, ProgressBar, Section, Tabs } from '../components';
-import { ComplexModal, modalRegisterBodyOverride } from '../interfaces/common/ComplexModal';
+import {
+  Box,
+  Button,
+  Dimmer,
+  Flex,
+  Icon,
+  LabeledList,
+  NoticeBox,
+  ProgressBar,
+  Section,
+  Tabs,
+} from '../components';
+import {
+  ComplexModal,
+  modalRegisterBodyOverride,
+} from '../interfaces/common/ComplexModal';
 import { Window } from '../layouts';
 
 const MENU_MAIN = 1;
 const MENU_BODY = 2;
 const MENU_MIND = 3;
 
-const viewMindRecordModalBodyOverride = (modal, context) => {
-  const { act, data } = useBackend(context);
+const viewMindRecordModalBodyOverride = (modal) => {
+  const { act, data } = useBackend();
   const {
     activerecord,
     realname,
@@ -26,7 +40,8 @@ const viewMindRecordModalBodyOverride = (modal, context) => {
       title={'Mind Record (' + realname + ')'}
       buttons={
         <Button icon="times" color="red" onClick={() => act('modal_close')} />
-      }>
+      }
+    >
       <LabeledList>
         <LabeledList.Item label="Name">{realname}</LabeledList.Item>
         <LabeledList.Item label="Status">{obviously_dead}</LabeledList.Item>
@@ -55,8 +70,9 @@ const viewMindRecordModalBodyOverride = (modal, context) => {
         </LabeledList.Item>
         <LabeledList.Item label="OOC Notes">
           <Section
-            style={{ 'word-break': 'break-all', 'height': '100px' }}
-            scrollable>
+            style={{ 'word-break': 'break-all', height: '100px' }}
+            scrollable
+          >
             {oocnotes}
           </Section>
         </LabeledList.Item>
@@ -65,8 +81,8 @@ const viewMindRecordModalBodyOverride = (modal, context) => {
   );
 };
 
-const viewBodyRecordModalBodyOverride = (modal, context) => {
-  const { act, data } = useBackend(context);
+const viewBodyRecordModalBodyOverride = (modal) => {
+  const { act, data } = useBackend();
   const {
     activerecord,
     realname,
@@ -85,7 +101,8 @@ const viewBodyRecordModalBodyOverride = (modal, context) => {
       title={'Body Record (' + realname + ')'}
       buttons={
         <Button icon="times" color="red" onClick={() => act('modal_close')} />
-      }>
+      }
+    >
       <LabeledList>
         <LabeledList.Item label="Name">{realname}</LabeledList.Item>
         <LabeledList.Item label="Species">{species}</LabeledList.Item>
@@ -96,8 +113,9 @@ const viewBodyRecordModalBodyOverride = (modal, context) => {
         </LabeledList.Item>
         <LabeledList.Item label="OOC Notes">
           <Section
-            style={{ 'word-break': 'break-all', 'height': '100px' }}
-            scrollable>
+            style={{ 'word-break': 'break-all', height: '100px' }}
+            scrollable
+          >
             {oocnotes}
           </Section>
         </LabeledList.Item>
@@ -118,18 +136,18 @@ const viewBodyRecordModalBodyOverride = (modal, context) => {
   );
 };
 
-export const ResleevingConsole = (props, context) => {
-  const { act, data } = useBackend(context);
+export const ResleevingConsole = (props) => {
+  const { act, data } = useBackend();
   const { menu, coredumped, emergency } = data;
   let body = (
-    <Fragment>
+    <>
       <ResleevingConsoleTemp />
       <ResleevingConsoleStatus />
       <ResleevingConsoleNavigation />
       <Section noTopPadding flexGrow="1">
         <ResleevingConsoleBody />
       </Section>
-    </Fragment>
+    </>
   );
   if (coredumped) {
     body = <ResleevingConsoleCoreDump />;
@@ -140,7 +158,7 @@ export const ResleevingConsole = (props, context) => {
   modalRegisterBodyOverride('view_b_rec', viewBodyRecordModalBodyOverride);
   modalRegisterBodyOverride('view_m_rec', viewMindRecordModalBodyOverride);
   return (
-    <Window width={640} height={520} resizable>
+    <Window width={640} height={520}>
       <ComplexModal maxWidth="75%" maxHeight="75%" />
       <Window.Content className="Layout__content--flexColumn">
         {body}
@@ -149,8 +167,8 @@ export const ResleevingConsole = (props, context) => {
   );
 };
 
-const ResleevingConsoleNavigation = (props, context) => {
-  const { act, data } = useBackend(context);
+const ResleevingConsoleNavigation = (props) => {
+  const { act, data } = useBackend();
   const { menu } = data;
   return (
     <Tabs>
@@ -161,7 +179,8 @@ const ResleevingConsoleNavigation = (props, context) => {
           act('menu', {
             num: MENU_MAIN,
           })
-        }>
+        }
+      >
         Main
       </Tabs.Tab>
       <Tabs.Tab
@@ -171,7 +190,8 @@ const ResleevingConsoleNavigation = (props, context) => {
           act('menu', {
             num: MENU_BODY,
           })
-        }>
+        }
+      >
         Body Records
       </Tabs.Tab>
       <Tabs.Tab
@@ -181,15 +201,16 @@ const ResleevingConsoleNavigation = (props, context) => {
           act('menu', {
             num: MENU_MIND,
           })
-        }>
+        }
+      >
         Mind Records
       </Tabs.Tab>
     </Tabs>
   );
 };
 
-const ResleevingConsoleBody = (props, context) => {
-  const { data } = useBackend(context);
+const ResleevingConsoleBody = (props) => {
+  const { data } = useBackend();
   const { menu, bodyrecords, mindrecords } = data;
   let body;
   if (menu === MENU_MAIN) {
@@ -206,7 +227,7 @@ const ResleevingConsoleBody = (props, context) => {
   return body;
 };
 
-const ResleevingConsoleCoreDump = (props, context) => {
+const ResleevingConsoleCoreDump = (props) => {
   return (
     <Dimmer>
       <Flex direction="column" justify="space-evenly" align="center">
@@ -221,8 +242,8 @@ const ResleevingConsoleCoreDump = (props, context) => {
   );
 };
 
-const ResleevingConsoleDiskPrep = (props, context) => {
-  const { act } = useBackend(context);
+const ResleevingConsoleDiskPrep = (props) => {
+  const { act } = useBackend();
   return (
     <Dimmer textAlign="center">
       <Box color="bad">
@@ -258,8 +279,8 @@ const ResleevingConsoleDiskPrep = (props, context) => {
   );
 };
 
-const ResleevingConsoleMain = (props, context) => {
-  const { act, data } = useBackend(context);
+const ResleevingConsoleMain = (props) => {
+  const { act, data } = useBackend();
   const {
     loading,
     scantemp,
@@ -280,8 +301,8 @@ const ResleevingConsoleMain = (props, context) => {
   );
 };
 
-const ResleevingConsolePodGrowers = (props, context) => {
-  const { act, data } = useBackend(context);
+const ResleevingConsolePodGrowers = (props) => {
+  const { act, data } = useBackend();
   const { pods, spods, selected_pod } = data;
 
   if (pods && pods.length) {
@@ -298,7 +319,8 @@ const ResleevingConsolePodGrowers = (props, context) => {
               average: [0.25, 0.75],
               bad: [-Infinity, 0.25],
             }}
-            mt="0.5rem">
+            mt="0.5rem"
+          >
             <Box textAlign="center">{round(pod.progress, 0) + '%'}</Box>
           </ProgressBar>
         );
@@ -330,7 +352,8 @@ const ResleevingConsolePodGrowers = (props, context) => {
           width="64px"
           textAlign="center"
           display="inline-block"
-          mr="0.5rem">
+          mr="0.5rem"
+        >
           <img
             src={'pod_' + pod.status + '.gif'}
             style={{
@@ -353,8 +376,8 @@ const ResleevingConsolePodGrowers = (props, context) => {
   return null;
 };
 
-const ResleevingConsolePodSleevers = (props, context) => {
-  const { act, data } = useBackend(context);
+const ResleevingConsolePodSleevers = (props) => {
+  const { act, data } = useBackend();
   const { sleevers, spods, selected_sleever } = data;
 
   if (sleevers && sleevers.length) {
@@ -365,7 +388,8 @@ const ResleevingConsolePodSleevers = (props, context) => {
           width="64px"
           textAlign="center"
           display="inline-block"
-          mr="0.5rem">
+          mr="0.5rem"
+        >
           <img
             src={'sleeve_' + (pod.occupied ? 'occupied' : 'empty') + '.gif'}
             style={{
@@ -393,8 +417,8 @@ const ResleevingConsolePodSleevers = (props, context) => {
   return null;
 };
 
-const ResleevingConsolePodSpods = (props, context) => {
-  const { act, data } = useBackend(context);
+const ResleevingConsolePodSpods = (props) => {
+  const { act, data } = useBackend();
   const { spods, selected_printer } = data;
 
   if (spods && spods.length) {
@@ -411,7 +435,8 @@ const ResleevingConsolePodSpods = (props, context) => {
               average: [0.25, 0.75],
               bad: [-Infinity, 0.25],
             }}
-            mt="0.5rem">
+            mt="0.5rem"
+          >
             <Box textAlign="center">{round(pod.progress, 0) + '%'}</Box>
           </ProgressBar>
         );
@@ -443,7 +468,8 @@ const ResleevingConsolePodSpods = (props, context) => {
           width="64px"
           textAlign="center"
           display="inline-block"
-          mr="0.5rem">
+          mr="0.5rem"
+        >
           <img
             src={'synthprinter' + (pod.busy ? '_working' : '') + '.gif'}
             style={{
@@ -471,8 +497,8 @@ const ResleevingConsolePodSpods = (props, context) => {
   return null;
 };
 
-const ResleevingConsoleRecords = (props, context) => {
-  const { act } = useBackend(context);
+const ResleevingConsoleRecords = (props) => {
+  const { act } = useBackend();
   const { records, actToDo } = props;
   if (!records.length) {
     return (
@@ -504,8 +530,8 @@ const ResleevingConsoleRecords = (props, context) => {
   );
 };
 
-const ResleevingConsoleTemp = (props, context) => {
-  const { act, data } = useBackend(context);
+const ResleevingConsoleTemp = (props) => {
+  const { act, data } = useBackend();
   const { temp } = data;
   if (!temp || !temp.text || temp.text.length <= 0) {
     return;
@@ -527,8 +553,8 @@ const ResleevingConsoleTemp = (props, context) => {
   );
 };
 
-const ResleevingConsoleStatus = (props, context) => {
-  const { act, data } = useBackend(context);
+const ResleevingConsoleStatus = (props) => {
+  const { act, data } = useBackend();
   const { pods, spods, sleevers, autoallowed, autoprocess, disk } = data;
   return (
     <Section title="Status">
