@@ -441,6 +441,28 @@ ITEMS_SURVIVE_DIGESTION
 # The secret API key to authenticate to the webhook.
 #CHAT_WEBHOOK_KEY some_password_here
 
+# Nodebot settings
+#NODEBOT_ENABLED
+#NODEBOT_LOCATION /nodebot/
+
+# TGS Discord bot settings and tags
+#DISCORD_FAXES_AUTOPRINT
+#DISCORD_AHELPS_ALL
+#AHELP_CHANNEL_TAG ahelps
+#FAX_CHANNEL_TAG fax
+#ROLE_REQUEST_CHANNEL_TAG rolerequest
+
+# The discord role IDs for pinging roles using the role request function of the TGS chatbot
+#ROLE_REQUEST_ID_COMMAND
+#ROLE_REQUEST_ID_SECURITY
+#ROLE_REQUEST_ID_ENGINEERING
+#ROLE_REQUEST_ID_MEDICAL
+#ROLE_REQUEST_ID_RESEARCH
+#ROLE_REQUEST_ID_SUPPLY
+#ROLE_REQUEST_ID_SERVICE
+#ROLE_REQUEST_ID_EXPEDITION
+#ROLE_REQUEST_ID_SILICON
+
 # Path to the folder that BYOND should export faxes into so they are readable on the web.
 #FAX_EXPORT_DIR data/faxes
 

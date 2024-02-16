@@ -77,10 +77,10 @@ var/DB_PORT = 3306 // This is the port your MySQL server is running on (3306 is 
 	if(IsConnected()) Disconnect()
 	//return Connect("[dbi?"[dbi]":"dbi:mysql:[database_name]:[DB_SERVER]:[DB_PORT]"]",user,password)
 	return Connect("[dbi?"[dbi]":"dbi:mysql:[database_name]:[sqladdress]:[sqlport]"]",user,password)
-/DBConnection/proc/NewQuery(sql_query,cursor_handler=src.default_cursor) return new/DBQuery(sql_query,src,cursor_handler)
+/DBConnection/proc/NewQuery(sql_query,cursor_handler=src.default_cursor) return new/datum/db_query(sql_query,src,cursor_handler)
 
 
-/DBQuery/New(sql_query,DBConnection/connection_handler,cursor_handler)
+/datum/db_query/New(sql_query,DBConnection/connection_handler,cursor_handler)
 	if(sql_query) src.sql = sql_query
 	if(connection_handler) src.db_connection = connection_handler
 	if(cursor_handler) src.default_cursor = cursor_handler
@@ -88,7 +88,7 @@ var/DB_PORT = 3306 // This is the port your MySQL server is running on (3306 is 
 	return ..()
 
 
-/DBQuery
+/datum/db_query
 	var/sql // The sql query being executed.
 	var/default_cursor
 	var/list/columns //list of DB Columns populated by Columns()
@@ -98,26 +98,26 @@ var/DB_PORT = 3306 // This is the port your MySQL server is running on (3306 is 
 	var/DBConnection/db_connection
 	var/_db_query
 
-/DBQuery/proc/Connect(DBConnection/connection_handler) src.db_connection = connection_handler
+/datum/db_query/proc/Connect(DBConnection/connection_handler) src.db_connection = connection_handler
 
-/DBQuery/proc/Execute(sql_query=src.sql,cursor_handler=default_cursor)
+/datum/db_query/proc/Execute(sql_query=src.sql,cursor_handler=default_cursor)
 	Close()
 	return _dm_db_execute(_db_query,sql_query,db_connection._db_con,cursor_handler,null)
 
-/DBQuery/proc/NextRow() return _dm_db_next_row(_db_query,item,conversions)
+/datum/db_query/proc/NextRow() return _dm_db_next_row(_db_query,item,conversions)
 
-/DBQuery/proc/RowsAffected() return _dm_db_rows_affected(_db_query)
+/datum/db_query/proc/RowsAffected() return _dm_db_rows_affected(_db_query)
 
-/DBQuery/proc/RowCount() return _dm_db_row_count(_db_query)
+/datum/db_query/proc/RowCount() return _dm_db_row_count(_db_query)
 
-/DBQuery/proc/ErrorMsg() return _dm_db_error_msg(_db_query)
+/datum/db_query/proc/ErrorMsg() return _dm_db_error_msg(_db_query)
 
-/DBQuery/proc/Columns()
+/datum/db_query/proc/Columns()
 	if(!columns)
 		columns = _dm_db_columns(_db_query,/DBColumn)
 	return columns
 
-/DBQuery/proc/GetRowData()
+/datum/db_query/proc/GetRowData()
 	var/list/columns = Columns()
 	var/list/results
 	if(columns.len)
@@ -128,16 +128,16 @@ var/DB_PORT = 3306 // This is the port your MySQL server is running on (3306 is 
 			results[C] = src.item[(cur_col.position+1)]
 	return results
 
-/DBQuery/proc/Close()
+/datum/db_query/proc/Close()
 	item.len = 0
 	columns = null
 	conversions = null
 	return _dm_db_close(_db_query)
 
-/DBQuery/proc/Quote(str)
+/datum/db_query/proc/Quote(str)
 	return db_connection.Quote(str)
 
-/DBQuery/proc/SetConversion(column,conversion)
+/datum/db_query/proc/SetConversion(column,conversion)
 	if(istext(column)) column = columns.Find(column)
 	if(!conversions) conversions = new/list(column)
 	else if(conversions.len < column) conversions.len = column
