@@ -1,6 +1,0 @@
-author: "Sharkmare"
-delete-after: True
-changes:
-  - rscadd: "Recorder into loadout"
-  - rscadd: "Saxophone into loadout"
-  - bugfix: "loadout names for Trombone"

@@ -1,4 +1,0 @@
-author: "Raeschen"
-delete-after: True
-changes:
-  - rscadd: "Faxes to discord via TGS discord chatbot config"
