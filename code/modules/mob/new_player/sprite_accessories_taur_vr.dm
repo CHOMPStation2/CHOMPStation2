@@ -744,7 +744,7 @@
 	msg_prey_grab_fail = "%owner steps down and squishes you with their paw, forcing you down to the ground!"
 
 // Special snowflake tails/taurhalves
-
+/* //ChompREMOVE No ckey locked items on Chomp
 //spoopylizz: Roiz Lizden
 /datum/sprite_accessory/tail/taur/roiz_long_lizard // Not ACTUALLY a taur, but it uses 32x64 so it wouldn't fit in tails.dmi, and having it as a tail bugs up the sprite.
 	name = "Long Lizard Tail (Roiz Lizden)"
@@ -754,6 +754,14 @@
 	hide_body_parts = null
 	clip_mask_icon = null
 	clip_mask_state = null
+
+//grallstonefist: Ranihrönn Skrolk
+/datum/sprite_accessory/tail/taur/altmermaid/orcamermaid
+	name = "Mermaid Orca (Taur)"
+	icon_state = "orcamermaid_s"
+	can_ride = 1
+	do_colouration = 0
+	ckeys_allowed = list("grallstonefist")
 
 //wickedtemp: Chakat Tempest
 /datum/sprite_accessory/tail/taur/feline/tempest
@@ -822,6 +830,7 @@
 
 	msg_owner_grab_fail = "You step down onto %prey with one of your vines, forcing them onto the ground!"
 	msg_prey_grab_fail = "%owner steps down onto you with one of their vines, squishing you and forcing you onto the ground!"
+*/ //ChompREMOVE End
 
 /datum/sprite_accessory/tail/taur/rat
 	name = "Rat (Taur)"
