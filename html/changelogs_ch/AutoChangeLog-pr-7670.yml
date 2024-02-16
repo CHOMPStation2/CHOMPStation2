@@ -1,7 +1,0 @@
-author: "cadyn"
-delete-after: True
-changes:
-  - bugfix: "Fix floating bullets"
-  - refactor: "DBCore updated to match TGStation"
-  - server: "TGS DMAPI Updated"
-  - server: "RUST-G Updated alongwith its DMAPI"
