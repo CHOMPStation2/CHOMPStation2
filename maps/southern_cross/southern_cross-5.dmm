@@ -4570,7 +4570,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/surface/outside/plains/normal)
+/area/surface/outpost/wall)
 "iQ" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 4
@@ -6521,7 +6521,7 @@
 /obj/effect/floor_decal/techfloor/orange,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor,
-/area/surface/outside/plains/normal)
+/area/surface/outpost/wall)
 "mq" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
@@ -14078,7 +14078,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor,
-/area/surface/outside/plains/normal)
+/area/surface/outpost/wall)
 "zV" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/window/reinforced/full,
@@ -15715,7 +15715,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor,
-/area/surface/outside/plains/normal)
+/area/surface/outpost/wall)
 "CT" = (
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/main/airlock/right_one)
@@ -16383,7 +16383,7 @@
 	},
 /obj/effect/decal/cleanable/cobweb,
 /turf/simulated/floor/tiled/techfloor,
-/area/surface/outside/plains/normal)
+/area/surface/outpost/wall)
 "Er" = (
 /obj/machinery/telecomms/relay/preset/southerncross/wild,
 /obj/machinery/light/small{
@@ -23057,7 +23057,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/surface/outside/plains/normal)
+/area/surface/outpost/wall)
 "QL" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 4
@@ -23719,7 +23719,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/surface/outside/plains/normal)
+/area/surface/outpost/wall)
 "RS" = (
 /obj/structure/table/rack/shelf,
 /obj/item/weapon/storage/backpack/parachute{
@@ -24574,7 +24574,7 @@
 "TK" = (
 /obj/structure/simple_door/sifwood,
 /turf/simulated/floor/outdoors/grass/sif/planetuse,
-/area/surface/outside/plains/normal)
+/area/surface/outpost/wall)
 "TL" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -25488,7 +25488,7 @@
 /area/surface/outpost/main/corridor/right_upper)
 "Vw" = (
 /turf/simulated/wall/sifwood,
-/area/surface/outside/plains/normal)
+/area/surface/outpost/wall)
 "Vy" = (
 /obj/structure/cable/cyan{
 	d1 = 1;
@@ -27140,7 +27140,7 @@
 "Yx" = (
 /obj/machinery/cryopod/robot/door/gateway/quiet,
 /turf/simulated/floor/tiled/techfloor,
-/area/surface/outside/plains/normal)
+/area/surface/outpost/wall)
 "Yy" = (
 /obj/effect/decal/remains/ribcage,
 /obj/effect/decal/cleanable/dirt,
@@ -27589,7 +27589,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor,
-/area/surface/outside/plains/normal)
+/area/surface/outpost/wall)
 "Zt" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/white/border,
