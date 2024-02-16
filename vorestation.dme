@@ -4788,6 +4788,7 @@
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\station\traits\negative.dm"
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\station\traits\neutral.dm"
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\station\traits\positive.dm"
+#include "modular_chomp\code\modules\mob\living\carbon\human\species\station\traits\trait_mods.dm"
 #include "modular_chomp\code\modules\mob\living\carbon\human\species\station\traits\xenomorph_hybrid_trait.dm"
 #include "modular_chomp\code\modules\mob\living\silicon\robot\robot.dm"
 #include "modular_chomp\code\modules\mob\living\silicon\robot\robot_movement.dm"
