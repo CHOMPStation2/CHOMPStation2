@@ -691,7 +691,6 @@
 	var/datum/looping_sound/ambulance/soundloop
 	var/ambulance_state = FALSE
 	var/ambulance_last_switch = 0
-*/ //ChompREMOVE End
 
 /obj/item/weapon/storage/backpack/saddlebag/tempest/Initialize()
 	soundloop = new(list(src), FALSE)
@@ -736,6 +735,7 @@
 			M.update_inv_back()
 		set_light(2, 1, newlight)
 		ambulance_last_switch = world.time
+*/ //ChompREMOVE End
 
 /datum/looping_sound/ambulance
 	mid_sounds = list('sound/items/amulanceweeoo.ogg'=1)
