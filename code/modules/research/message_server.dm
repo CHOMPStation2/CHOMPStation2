@@ -374,7 +374,7 @@ var/obj/machinery/blackbox_recorder/blackbox
 	if(!SSdbcore.IsConnected()) return //CHOMPEdit TGSQL
 	var/round_id
 
-	var/DBQuery/query = SSdbcore.NewQuery("SELECT MAX(round_id) AS round_id FROM erro_feedback") //CHOMPEdit TGSQL
+	var/datum/db_query/query = SSdbcore.NewQuery("SELECT MAX(round_id) AS round_id FROM erro_feedback") //CHOMPEdit TGSQL
 	query.Execute()
 	while(query.NextRow())
 		round_id = query.item[1]
@@ -386,7 +386,7 @@ var/obj/machinery/blackbox_recorder/blackbox
 	for(var/datum/feedback_variable/FV in feedback)
 		var/list/sqlargs = list("t_roundid" = round_id, "t_variable" = "[FV.get_variable()]", "t_value" = "[FV.get_value()]", "t_details" = "[FV.get_details()]") //CHOMPEdit TGSQL
 		var/sql = "INSERT INTO erro_feedback VALUES (null, Now(), :t_roundid, :t_variable, :t_value, :t_details)" //CHOMPEdit TGSQL
-		var/DBQuery/query_insert = SSdbcore.NewQuery(sql, sqlargs) //CHOMPEdit TGSQL
+		var/datum/db_query/query_insert = SSdbcore.NewQuery(sql, sqlargs) //CHOMPEdit TGSQL
 		query_insert.Execute()
 		qdel(query_insert) //CHOMPEdit TGSQL
 

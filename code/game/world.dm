@@ -553,7 +553,7 @@ var/world_topic_spam_protect_time = world.timeofday
 			log_misc("Failed to connect to database in load_mentors().")
 			return
 
-		var/DBQuery/query = SSdbcore.NewQuery("SELECT ckey, mentor FROM erro_mentor") //CHOMPEdit TGSQL
+		var/datum/db_query/query = SSdbcore.NewQuery("SELECT ckey, mentor FROM erro_mentor") //CHOMPEdit TGSQL
 		query.Execute()
 		while(query.NextRow())
 			var/ckey = query.item[1]
@@ -632,7 +632,7 @@ var/failed_old_db_connections = 0
 		to_world_log("SQL connection disabled in config.")
 	else if(establish_db_connection())//CHOMPEdit Begin
 		to_world_log("Feedback database connection established.")
-		var/DBQuery/query_truncate = SSdbcore.NewQuery("TRUNCATE erro_dialog")
+		var/datum/db_query/query_truncate = SSdbcore.NewQuery("TRUNCATE erro_dialog")
 		var/num_tries = 0
 		while(!query_truncate.Execute() && num_tries<5)
 			num_tries++
@@ -640,7 +640,7 @@ var/failed_old_db_connections = 0
 		if(num_tries==5)
 			log_admin("ERROR TRYING TO CLEAR erro_dialog")
 		qdel(query_truncate)
-		var/DBQuery/query_truncate2 = SSdbcore.NewQuery("TRUNCATE erro_attacklog")
+		var/datum/db_query/query_truncate2 = SSdbcore.NewQuery("TRUNCATE erro_attacklog")
 		num_tries = 0
 		while(!query_truncate2.Execute() && num_tries<5)
 			num_tries++
@@ -671,7 +671,7 @@ var/failed_old_db_connections = 0
 	if ( . )
 		failed_db_connections = 0	//If this connection succeeded, reset the failed connections counter.
 		//CHOMPEdit Begin
-		var/DBQuery/query_truncate = dbcon.NewQuery("TRUNCATE erro_dialog")
+		var/datum/db_query/query_truncate = dbcon.NewQuery("TRUNCATE erro_dialog")
 		var/num_tries = 0
 		while(!query_truncate.Execute() && num_tries<5)
 			num_tries++

@@ -2,6 +2,9 @@
 
 # This file has all the information on what versions of libraries are thrown into the code
 
+#rust_g git tag
+export RUST_G_VERSION=3.1.0
+
 # byond version
 export BYOND_MAJOR=514
 export BYOND_MINOR=1589

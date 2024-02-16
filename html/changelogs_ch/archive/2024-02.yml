@@ -145,3 +145,35 @@
   - bugfix: fixed the user interface for the CharacterDirectory.
   tacoguy7765093:
   - qol: Makes more neutral traits be able to be taken by non-custom species.
+2024-02-14:
+  Fracshun:
+  - qol: Enabled logging on interactions with the Mind Binder and Body Snatcher
+  - balance: Increased the time to bind minds into mobs up to 30 seconds
+  - balance: whitelists only specific mobs
+  - balance: blacklists key items
+  Raeschen:
+  - rscadd: Guidelines for shadekin and outsider, linked on spawn.
+2024-02-15:
+  ItsSelis:
+  - rscadd: Added round_id
+2024-02-16:
+  FluffMedic:
+  - rscadd: Vending machines in the hidden mountain area
+  Raeschen:
+  - rscadd: configurable role-request/fax to discord settings.
+  - rscadd: role request will ping if configured
+  - admin: Adminsent faxes include the body (if any)
+  - rscadd: Faxes to discord via TGS discord chatbot config
+  Sharkmare:
+  - rscadd: Recorder into loadout
+  - rscadd: Saxophone into loadout
+  - bugfix: loadout names for Trombone
+  TheCaramelion:
+  - rscadd: Common diseases for the Infected Room event
+  - balance: Infected Room is now slightly more common
+  - code_imp: Added makedisease proc, to build custom viruses.
+  cadyn:
+  - bugfix: Fix floating bullets
+  - refactor: DBCore updated to match TGStation
+  - server: TGS DMAPI Updated
+  - server: RUST-G Updated alongwith its DMAPI
