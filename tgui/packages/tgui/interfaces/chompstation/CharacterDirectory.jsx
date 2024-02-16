@@ -188,6 +188,65 @@ const ViewCharacter = (props) => {
       <Section level={2} title="OOC Notes">
         <Box style={{ 'word-break': 'break-all' }} preserveWhitespace>
           {props.overlay.ooc_notes || 'Unset.'}
+          {props.overlay.ooc_notes_style &&
+          (props.overlay.ooc_notes_favs ||
+            props.overlay.ooc_notes_likes ||
+            props.overlay.ooc_notes_maybes ||
+            props.overlay.ooc_notes_dislikes) ? (
+            <Table>
+              <Table.Row bold>
+                {props.overlay.ooc_notes_favs ? (
+                  <Table.Cell>FAVOURITES</Table.Cell>
+                ) : (
+                  ''
+                )}
+                {props.overlay.ooc_notes_likes ? (
+                  <Table.Cell>LIKES</Table.Cell>
+                ) : (
+                  ''
+                )}
+                {props.overlay.ooc_notes_maybes ? (
+                  <Table.Cell>MAYBES</Table.Cell>
+                ) : (
+                  ''
+                )}
+                {props.overlay.ooc_notes_dislikes ? (
+                  <Table.Cell>DISLIKES</Table.Cell>
+                ) : (
+                  ''
+                )}
+              </Table.Row>
+              <Table.Row>
+                <Table.Cell>
+                  <br />
+                </Table.Cell>
+              </Table.Row>
+              <Table.Row>
+                {props.overlay.ooc_notes_favs ? (
+                  <Table.Cell>{props.overlay.ooc_notes_favs}</Table.Cell>
+                ) : (
+                  ''
+                )}
+                {props.overlay.ooc_notes_likes ? (
+                  <Table.Cell>{props.overlay.ooc_notes_likes}</Table.Cell>
+                ) : (
+                  ''
+                )}
+                {props.overlay.ooc_notes_maybes ? (
+                  <Table.Cell>{props.overlay.ooc_notes_maybes}</Table.Cell>
+                ) : (
+                  ''
+                )}
+                {overlay.ooc_notes_dislikes ? (
+                  <Table.Cell>{props.overlay.ooc_notes_dislikes}</Table.Cell>
+                ) : (
+                  ''
+                )}
+              </Table.Row>
+            </Table>
+          ) : (
+            ''
+          )}
         </Box>
       </Section>
       <Section level={2} title="Flavor Text">
