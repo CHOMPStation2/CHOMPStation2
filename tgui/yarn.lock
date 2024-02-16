@@ -3148,17 +3148,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-<<<<<<< HEAD
-"electron-to-chromium@npm:^1.4.648":
-  version: 1.4.662
-  resolution: "electron-to-chromium@npm:1.4.662"
-  checksum: dceacdd7aa7ebf4802d5d44389d8bf098dcba3973219484a1900905a835ef9e262f121b6856c5f2151ccaa42209fb4ff67d3faa658e710e19069bd65936b859e
-=======
 "electron-to-chromium@npm:^1.4.668":
   version: 1.4.672
   resolution: "electron-to-chromium@npm:1.4.672"
   checksum: 32dc4f781ca7ea7cd548979a2609451adeee187b368ea5ce151018424359ce89bbbdcb6aea36b4b6d9c13fb82181e0e580800548b8ee22ae4d6fa6f0b3ef56f5
->>>>>>> 76622ea3a3... yarn.lock update (#15769)
   languageName: node
   linkType: hard
 
