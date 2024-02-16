@@ -3725,7 +3725,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_mush_alpha")
-			var/newalpha = tgui_input_number(usr, "Set alpha transparency between 0-255", "Mush Alpha",255,255,0,0,1)
+			var/newalpha = tgui_input_number(usr, "Set alpha transparency between 0-255", "Mush Alpha",255,255)
 			if(newalpha != null)
 				host.vore_selected.mush_alpha = newalpha
 				host.vore_selected.update_internal_overlay()
@@ -3788,7 +3788,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_custom_ingested_alpha")
-			var/newalpha = tgui_input_number(usr, "Set alpha transparency between 0-255 when not using mush overlay option.", "Custom Ingested Alpha",255,255,0,0,1)
+			var/newalpha = tgui_input_number(usr, "Set alpha transparency between 0-255 when not using mush overlay option.", "Custom Ingested Alpha",255,255)
 			if(newalpha != null)
 				host.vore_selected.custom_ingested_alpha = newalpha
 				host.vore_selected.update_internal_overlay()

@@ -204,11 +204,7 @@
 				OutputBeaker = null
 
 		if("adjust temp")
-<<<<<<< HEAD
-			target_temp = tgui_input_number(usr, "Choose a target temperature.", "Temperature.", T20C)
-=======
 			target_temp = tgui_input_number(usr, "Choose a target temperature.", "Temperature.", T20C, max_temp, min_temp, round_value = FALSE)
->>>>>>> 59d751a9f9... Round value adjustments for react (#15764)
 			target_temp = CLAMP(target_temp, min_temp, max_temp)
 
 	update_icon()

@@ -438,11 +438,7 @@
 		/* END ENGINES */
 		/* SENSORS */
 		if("range")
-<<<<<<< HEAD
-			var/nrange = tgui_input_number(usr, "Set new sensors range", "Sensor range", sensors.range)
-=======
 			var/nrange = tgui_input_number(usr, "Set new sensors range", "Sensor range", sensors.range, world.view, round_value = FALSE)
->>>>>>> 59d751a9f9... Round value adjustments for react (#15764)
 			if(nrange)
 				sensors.set_range(CLAMP(nrange, 1, world.view))
 			. = TRUE

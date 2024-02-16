@@ -155,5 +155,4 @@
 	return result
 
 /obj/effect/decal/mecha_wreckage/micro
-<<<<<<< HEAD
 	icon = 'icons/mecha/micro.dmi' */
