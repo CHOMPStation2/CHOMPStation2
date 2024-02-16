@@ -242,6 +242,11 @@
 		brainmob.ooc_notes = H.ooc_notes
 		brainmob.ooc_notes_likes = H.ooc_notes_likes
 		brainmob.ooc_notes_dislikes = H.ooc_notes_dislikes
+		//CHOMPEdit Start
+		brainmob.ooc_notes_favs = H.ooc_notes_favs
+		brainmob.ooc_notes_maybes = H.ooc_notes_maybes
+		brainmob.ooc_notes_style = H.ooc_notes_style
+		//CHOMPEdit End
 		brainmob.timeofhostdeath = H.timeofdeath
 		SStranscore.m_backup(brainmob.mind,0) //It does ONE, so medical will hear about it.
 

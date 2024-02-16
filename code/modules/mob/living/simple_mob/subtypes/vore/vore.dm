@@ -21,6 +21,11 @@
 	ooc_notes = client.prefs.metadata
 	ooc_notes_likes = client.prefs.metadata_likes
 	ooc_notes_dislikes = client.prefs.metadata_dislikes
+	//CHOMPEdit Start
+	ooc_notes_favs = client.prefs.metadata_favs
+	ooc_notes_maybes = client.prefs.metadata_maybes
+	ooc_notes_style = client.prefs.matadata_ooc_style
+	//CHOMPEdit End
 	digestable = client.prefs_vr.digestable
 	devourable = client.prefs_vr.devourable
 	absorbable = client.prefs_vr.absorbable
