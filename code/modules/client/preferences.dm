@@ -27,6 +27,7 @@ var/list/preferences_datums = list()
 	var/ambience_chance = 35			// What's the % chance we'll play ambience (in conjunction with the above frequency)
 
 	var/tgui_fancy = TRUE
+	var/tgui_lock = FALSE
 	var/tgui_input_mode = FALSE			// All the Input Boxes (Text,Number,List,Alert)
 	var/tgui_large_buttons = TRUE
 	var/tgui_swapped_buttons = FALSE
