@@ -673,6 +673,7 @@
 	item_state = "temphypo"
 	icon_state = "temphypo"
 
+/* //ChompREMOVE - disabled CKEY locked items
 //WickedTempest: Chakat Tempest
 /obj/item/weapon/storage/backpack/saddlebag/tempest
 	name = "Tempest's Saddlebags"
@@ -690,6 +691,7 @@
 	var/datum/looping_sound/ambulance/soundloop
 	var/ambulance_state = FALSE
 	var/ambulance_last_switch = 0
+*/ //ChompREMOVE End
 
 /obj/item/weapon/storage/backpack/saddlebag/tempest/Initialize()
 	soundloop = new(list(src), FALSE)
