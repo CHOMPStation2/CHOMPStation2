@@ -188,14 +188,14 @@ const ViewCharacter = (props) => {
       <Section level={2} title="OOC Notes">
         <Box style={{ 'word-break': 'break-all' }} preserveWhitespace>
           {props.overlay.ooc_notes || 'Unset.'}
-          {overlay.ooc_notes_style &&
-          (overlay.ooc_notes_favs ||
-            overlay.ooc_notes_likes ||
-            overlay.ooc_notes_maybes ||
-            overlay.ooc_notes_dislikes) ? (
+          {props.overlay.ooc_notes_style &&
+          (props.overlay.ooc_notes_favs ||
+            props.overlay.ooc_notes_likes ||
+            props.overlay.ooc_notes_maybes ||
+            props.overlay.ooc_notes_dislikes) ? (
             <Table>
               <Table.Row bold>
-                {overlay.ooc_notes_favs ? (
+                {props.overlay.ooc_notes_favs ? (
                   <Table.Cell>FAVOURITES</Table.Cell>
                 ) : (
                   ''
@@ -210,7 +210,7 @@ const ViewCharacter = (props) => {
                 ) : (
                   ''
                 )}
-                {overlay.ooc_notes_dislikes ? (
+                {props.overlay.ooc_notes_dislikes ? (
                   <Table.Cell>DISLIKES</Table.Cell>
                 ) : (
                   ''
@@ -222,23 +222,23 @@ const ViewCharacter = (props) => {
                 </Table.Cell>
               </Table.Row>
               <Table.Row>
-                {overlay.ooc_notes_favs ? (
-                  <Table.Cell>{overlay.ooc_notes_favs}</Table.Cell>
+                {props.overlay.ooc_notes_favs ? (
+                  <Table.Cell>{props.overlay.ooc_notes_favs}</Table.Cell>
                 ) : (
                   ''
                 )}
-                {overlay.ooc_notes_likes ? (
-                  <Table.Cell>{overlay.ooc_notes_likes}</Table.Cell>
+                {props.overlay.ooc_notes_likes ? (
+                  <Table.Cell>{props.overlay.ooc_notes_likes}</Table.Cell>
                 ) : (
                   ''
                 )}
-                {overlay.ooc_notes_maybes ? (
-                  <Table.Cell>{overlay.ooc_notes_maybes}</Table.Cell>
+                {props.overlay.ooc_notes_maybes ? (
+                  <Table.Cell>{props.overlay.ooc_notes_maybes}</Table.Cell>
                 ) : (
                   ''
                 )}
                 {overlay.ooc_notes_dislikes ? (
-                  <Table.Cell>{overlay.ooc_notes_dislikes}</Table.Cell>
+                  <Table.Cell>{props.overlay.ooc_notes_dislikes}</Table.Cell>
                 ) : (
                   ''
                 )}
