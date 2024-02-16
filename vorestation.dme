@@ -3141,6 +3141,7 @@
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\traits_tutorial.dm"
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\weaver_objs.dm"
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\weaver_recipies.dm"
+#include "code\modules\mob\living\carbon\human\species\station\traits_vr\components\absorbent_component_ch.dm"
 #include "code\modules\mob\living\carbon\human\species\virtual_reality\avatar.dm"
 #include "code\modules\mob\living\carbon\human\species\virtual_reality\opaque_form.dm"
 #include "code\modules\mob\living\carbon\human\species\xenomorphs\alien_powers.dm"
