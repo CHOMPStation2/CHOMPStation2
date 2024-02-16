@@ -59,7 +59,16 @@ export const NumberInputModal = (props) => {
               <Box color="label">{message}</Box>
             </Stack.Item>
             <Stack.Item>
+<<<<<<< HEAD
               <InputArea input={input} onClick={onClick} onChange={onChange} />
+=======
+              <InputArea
+                input={input}
+                onClick={setValue}
+                onChange={setValue}
+                onBlur={setValue}
+              />
+>>>>>>> bb1343e63d... restrictedInput fix (#15768)
             </Stack.Item>
             <Stack.Item>
               <InputButtons input={input} />
@@ -74,8 +83,13 @@ export const NumberInputModal = (props) => {
 /** Gets the user input and invalidates if there's a constraint. */
 const InputArea = (props) => {
   const { act, data } = useBackend<NumberInputData>();
+<<<<<<< HEAD
   const { min_value, max_value, init_value } = data;
   const { input, onClick, onChange } = props;
+=======
+  const { min_value, max_value, init_value, round_value } = data;
+  const { input, onClick, onChange, onBlur } = props;
+>>>>>>> bb1343e63d... restrictedInput fix (#15768)
 
   return (
     <Stack fill>
@@ -96,6 +110,7 @@ const InputArea = (props) => {
           minValue={min_value}
           maxValue={max_value}
           onChange={(_, value) => onChange(value)}
+          onBlur={(_, value) => onBlur(value)}
           onEnter={(_, value) => act('submit', { entry: value })}
           value={input}
         />
