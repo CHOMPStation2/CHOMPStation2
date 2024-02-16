@@ -1,0 +1,1300 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/turf/simulated/shuttle/floor/purple,
+/area/submap/intactemptyship)
+"aY" = (
+/obj/effect/decal/mecha_wreckage/ripley,
+/obj/machinery/mech_recharger,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/intactemptyship)
+"bl" = (
+/obj/structure/shuttle/engine/router,
+/turf/simulated/shuttle/plating,
+/area/submap/intactemptyship)
+"bU" = (
+/obj/item/weapon/paper,
+/obj/item/weapon/pen,
+/obj/structure/table/standard,
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"ct" = (
+/obj/item/stack/tile/floor,
+/obj/structure/lattice,
+/turf/template_noop,
+/area/submap/intactemptyship)
+"dj" = (
+/obj/machinery/computer/mecha{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"dR" = (
+/turf/simulated/floor/airless,
+/area/submap/intactemptyship)
+"dS" = (
+/obj/item/stack/rods,
+/obj/item/stack/tile/floor,
+/turf/simulated/floor/airless,
+/area/submap/intactemptyship)
+"eg" = (
+/obj/structure/bookcase{
+	name = "bookcase (Non-Fiction)"
+	},
+/obj/item/weapon/book/codex/lore/vir,
+/obj/item/weapon/book/manual/atmospipes,
+/obj/item/weapon/book/manual/chemistry_guide,
+/obj/item/weapon/book/manual/evaguide,
+/obj/item/weapon/book/manual/tesla_engine,
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"fh" = (
+/obj/item/device/gps/internal/poi{
+	gps_tag = "Mech-Transport EJN-2955"
+	},
+/turf/simulated/shuttle/wall/hard_corner,
+/area/submap/intactemptyship)
+"fT" = (
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"gA" = (
+/obj/structure/shuttle/engine/heater,
+/turf/template_noop,
+/area/submap/intactemptyship)
+"gT" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/shuttle/engine/heater{
+	dir = 8;
+	tag = "icon-heater (WEST)"
+	},
+/turf/simulated/shuttle/plating,
+/area/submap/intactemptyship)
+"hu" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"hF" = (
+/obj/item/stack/tile/floor,
+/turf/template_noop,
+/area/submap/intactemptyship)
+"jc" = (
+/obj/structure/lattice,
+/mob/living/simple_mob/animal/space/carp,
+/turf/template_noop,
+/area/submap/intactemptyship)
+"jv" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/bookcase{
+	name = "bookcase (Reference)"
+	},
+/obj/item/weapon/book/tome/imbued,
+/obj/item/weapon/book/manual/anomaly_testing,
+/obj/item/weapon/book/manual/cook_guide,
+/obj/item/weapon/book/manual/resleeving,
+/obj/item/weapon/book/manual/virology,
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"jY" = (
+/obj/machinery/door/airlock/external,
+/turf/simulated/shuttle/floor/purple,
+/area/submap/intactemptyship)
+"kD" = (
+/obj/structure/bed/chair/comfy/black,
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"kE" = (
+/obj/structure/closet/emcloset,
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"kJ" = (
+/obj/effect/decal/mecha_wreckage/gygax,
+/obj/machinery/mech_recharger,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/intactemptyship)
+"lk" = (
+/obj/structure/shuttle/engine/router,
+/turf/template_noop,
+/area/submap/intactemptyship)
+"mw" = (
+/obj/structure/grille,
+/obj/structure/shuttle/window,
+/turf/simulated/floor/airless,
+/area/submap/intactemptyship)
+"nW" = (
+/mob/living/simple_mob/humanoid/possessed/merc/feral,
+/turf/simulated/shuttle/floor/purple,
+/area/submap/intactemptyship)
+"oc" = (
+/obj/structure/salvageable/data{
+	pixel_x = -10
+	},
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"oR" = (
+/obj/structure/lattice,
+/turf/template_noop,
+/area/submap/intactemptyship)
+"oZ" = (
+/obj/machinery/mech_recharger,
+/obj/mecha/combat/phazon/old,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/intactemptyship)
+"pc" = (
+/obj/item/stack/rods,
+/turf/template_noop,
+/area/submap/intactemptyship)
+"pn" = (
+/obj/structure/grille,
+/obj/structure/shuttle/window,
+/turf/simulated/shuttle/floor/white,
+/area/submap/intactemptyship)
+"pp" = (
+/obj/item/stack/tile/floor,
+/turf/simulated/floor/airless,
+/area/submap/intactemptyship)
+"pQ" = (
+/obj/machinery/mech_recharger,
+/obj/mecha/combat/scarab,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/intactemptyship)
+"pV" = (
+/obj/machinery/mech_recharger,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/intactemptyship)
+"qg" = (
+/obj/structure/grille,
+/obj/structure/shuttle/window,
+/turf/simulated/shuttle/floor/purple,
+/area/submap/intactemptyship)
+"qC" = (
+/obj/item/clothing/shoes/sandal,
+/obj/structure/table/woodentable,
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"qE" = (
+/obj/effect/decal/remains/human,
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"sa" = (
+/obj/structure/shuttle/engine/heater,
+/turf/simulated/shuttle/wall,
+/area/submap/intactemptyship)
+"tb" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"tx" = (
+/obj/effect/landmark/loot_spawn/low,
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"ue" = (
+/obj/machinery/mech_recharger,
+/obj/mecha/combat/marauder/old,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/intactemptyship)
+"uO" = (
+/obj/effect/decal/cleanable/vomit,
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"uW" = (
+/obj/effect/decal/mecha_wreckage/ripley/firefighter,
+/turf/simulated/shuttle/floor/white/airless,
+/area/submap/intactemptyship)
+"vx" = (
+/mob/living/simple_mob/animal/space/carp/large/huge,
+/turf/template_noop,
+/area/submap/intactemptyship)
+"wc" = (
+/mob/living/simple_mob/animal/space/carp,
+/turf/template_noop,
+/area/submap/intactemptyship)
+"ws" = (
+/obj/structure/table/woodentable,
+/turf/simulated/shuttle/floor/purple,
+/area/submap/intactemptyship)
+"xl" = (
+/obj/structure/closet/crate,
+/obj/item/weapon/gun/energy/ionrifle,
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"xG" = (
+/obj/effect/decal/cleanable/blood/gibs/robot,
+/obj/item/stack/tile/floor,
+/turf/simulated/floor/airless,
+/area/submap/intactemptyship)
+"xJ" = (
+/obj/structure/closet,
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"yI" = (
+/obj/structure/salvageable/console_os,
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"zK" = (
+/obj/item/clothing/under/shorts/black,
+/obj/structure/table/woodentable,
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"zR" = (
+/obj/effect/decal/mecha_wreckage/scarab,
+/turf/simulated/shuttle/floor/white/airless,
+/area/submap/intactemptyship)
+"zW" = (
+/mob/living/simple_mob/animal/space/carp/large,
+/turf/template_noop,
+/area/submap/intactemptyship)
+"Am" = (
+/obj/structure/shuttle/engine/propulsion,
+/turf/simulated/shuttle/plating,
+/area/submap/intactemptyship)
+"Aw" = (
+/turf/simulated/shuttle/wall/hard_corner,
+/area/submap/intactemptyship)
+"Bg" = (
+/obj/item/stack/rods,
+/turf/simulated/floor/airless,
+/area/submap/intactemptyship)
+"BP" = (
+/obj/effect/decal/cleanable/blood/gibs/robot/up,
+/turf/simulated/shuttle/floor/white/airless,
+/area/submap/intactemptyship)
+"BQ" = (
+/obj/effect/decal/mecha_wreckage/gygax/dark,
+/obj/machinery/mech_recharger,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/intactemptyship)
+"BS" = (
+/obj/machinery/light,
+/turf/simulated/shuttle/floor/purple,
+/area/submap/intactemptyship)
+"Cy" = (
+/obj/structure/closet/toolcloset,
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"DD" = (
+/turf/simulated/shuttle/floor/white/airless,
+/area/submap/intactemptyship)
+"EX" = (
+/obj/machinery/computer{
+	desc = "A computer long since rendered non-functional due to lack of maintenance. Spitting out error messages.";
+	dir = 8;
+	name = "Broken Computer"
+	},
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"Fc" = (
+/mob/living/bot/medbot/mysterious,
+/turf/simulated/shuttle/floor/purple,
+/area/submap/intactemptyship)
+"FK" = (
+/obj/machinery/mech_recharger,
+/obj/mecha/combat/gygax/old,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/intactemptyship)
+"Gp" = (
+/turf/simulated/shuttle/wall,
+/area/submap/intactemptyship)
+"GJ" = (
+/obj/structure/bed,
+/obj/item/weapon/bedsheet/hos,
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"HS" = (
+/obj/structure/closet/crate,
+/obj/item/weapon/circuitboard/mecha/phazon/main,
+/obj/item/weapon/circuitboard/mecha/phazon/peripherals,
+/obj/item/weapon/circuitboard/mecha/phazon/targeting,
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"HY" = (
+/mob/living/simple_mob/humanoid/possessed,
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"IS" = (
+/turf/template_noop,
+/area/submap/intactemptyship)
+"Jt" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/machinery/mech_recharger,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/intactemptyship)
+"JR" = (
+/obj/machinery/button/remote/blast_door{
+	id = "library_ship"
+	},
+/turf/simulated/shuttle/wall,
+/area/submap/intactemptyship)
+"KL" = (
+/turf/simulated/shuttle/wall,
+/turf/space,
+/area/submap/intactemptyship)
+"KM" = (
+/obj/effect/decal/mecha_wreckage/durand,
+/obj/machinery/mech_recharger,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/intactemptyship)
+"LI" = (
+/obj/structure/shuttle/engine/heater,
+/turf/simulated/shuttle/wall/hard_corner,
+/area/submap/intactemptyship)
+"LV" = (
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen,
+/obj/structure/table/standard,
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"MK" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 8;
+	tag = "icon-propulsion (EAST)"
+	},
+/turf/simulated/shuttle/plating,
+/area/submap/intactemptyship)
+"Ng" = (
+/obj/effect/decal/mecha_wreckage/odysseus,
+/obj/machinery/mech_recharger,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/intactemptyship)
+"NL" = (
+/obj/item/weapon/stool/padded,
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"OA" = (
+/obj/effect/decal/mecha_wreckage/odysseus,
+/turf/simulated/shuttle/floor/white/airless,
+/area/submap/intactemptyship)
+"OY" = (
+/obj/machinery/door/airlock/hatch,
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"Rc" = (
+/obj/structure/bookcase{
+	name = "bookcase (Fiction)"
+	},
+/obj/item/weapon/book/tome/imbued,
+/obj/item/weapon/book/manual/bar_guide,
+/obj/item/weapon/book/manual/engineering_construction,
+/obj/item/weapon/book/manual/synthetic_life,
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"RA" = (
+/obj/structure/closet/medical,
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"Sv" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/book/manual/wizzoffguide,
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"Tj" = (
+/mob/living/simple_mob/humanoid/possessed/industrial,
+/turf/simulated/shuttle/floor/purple,
+/area/submap/intactemptyship)
+"To" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/table/standard,
+/obj/structure/salvageable/personal,
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"TE" = (
+/turf/template_noop,
+/area/template_noop)
+"TW" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/shuttle/floor/white/airless,
+/area/submap/intactemptyship)
+"UL" = (
+/obj/structure/table/woodentable,
+/obj/machinery/librarypubliccomp,
+/turf/simulated/shuttle/floor/purple,
+/area/submap/intactemptyship)
+"UW" = (
+/obj/structure/table/standard,
+/obj/item/weapon/cell/device/weapon,
+/obj/item/weapon/cell/device/weapon,
+/obj/item/weapon/cell/device/weapon,
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"Vr" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/bookcase{
+	name = "bookcase (Religious)"
+	},
+/obj/item/weapon/book/codex/lore/robutt,
+/obj/item/weapon/book/manual/anomaly_spectroscopy,
+/obj/item/weapon/book/manual/barman_recipes,
+/obj/item/weapon/book/manual/engineering_guide,
+/obj/item/weapon/book/manual/rotary_electric_generator,
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"VD" = (
+/obj/structure/table/woodentable,
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"VX" = (
+/obj/machinery/door/airlock/glass{
+	name = "Central Access"
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/submap/intactemptyship)
+"VY" = (
+/obj/machinery/door/blast/regular{
+	dir = 4;
+	id = "library_ship"
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/submap/intactemptyship)
+"WF" = (
+/obj/effect/decal/cleanable/blood/gibs/robot,
+/obj/machinery/mech_recharger,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/intactemptyship)
+"Xc" = (
+/obj/structure/table/standard,
+/obj/item/weapon/cell/device/weapon/empproof,
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"Xh" = (
+/obj/structure/shuttle/engine/propulsion,
+/turf/template_noop,
+/area/submap/intactemptyship)
+"Xj" = (
+/obj/structure/bed/chair/bay/chair/padded/red{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"Xt" = (
+/obj/machinery/vending/assist,
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"XL" = (
+/obj/machinery/light,
+/obj/effect/landmark/loot_spawn,
+/turf/simulated/shuttle/floor,
+/area/submap/intactemptyship)
+"XV" = (
+/obj/effect/decal/mecha_wreckage/durand,
+/turf/simulated/shuttle/floor/white/airless,
+/area/submap/intactemptyship)
+
+(1,1,1) = {"
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+"}
+(2,1,1) = {"
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+gA
+IS
+IS
+IS
+Xh
+IS
+IS
+"}
+(3,1,1) = {"
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+wc
+IS
+IS
+IS
+IS
+IS
+lk
+IS
+pc
+IS
+IS
+IS
+"}
+(4,1,1) = {"
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+hF
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+"}
+(5,1,1) = {"
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+"}
+(6,1,1) = {"
+IS
+IS
+IS
+IS
+Gp
+Gp
+Gp
+Gp
+Gp
+dR
+oR
+dR
+hF
+IS
+IS
+wc
+IS
+pc
+IS
+IS
+hF
+IS
+IS
+IS
+IS
+"}
+(7,1,1) = {"
+IS
+Gp
+Gp
+Gp
+Aw
+DD
+kJ
+TW
+WF
+dR
+dS
+dR
+oR
+dR
+pc
+IS
+IS
+IS
+jc
+IS
+IS
+IS
+IS
+IS
+IS
+"}
+(8,1,1) = {"
+IS
+mw
+xl
+uO
+OY
+DD
+BQ
+DD
+KM
+DD
+dR
+pp
+oR
+oR
+IS
+IS
+IS
+zW
+ct
+IS
+IS
+IS
+IS
+IS
+IS
+"}
+(9,1,1) = {"
+IS
+mw
+HS
+qE
+fh
+DD
+ue
+BP
+pp
+XV
+DD
+dR
+dR
+IS
+hF
+IS
+IS
+IS
+IS
+IS
+IS
+wc
+pc
+IS
+IS
+"}
+(10,1,1) = {"
+IS
+mw
+UW
+fT
+tb
+DD
+DD
+DD
+DD
+DD
+xG
+DD
+DD
+Bg
+oR
+IS
+vx
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+"}
+(11,1,1) = {"
+IS
+mw
+Xc
+Xj
+tb
+DD
+aY
+DD
+FK
+DD
+WF
+OA
+dR
+dR
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+"}
+(12,1,1) = {"
+IS
+mw
+EX
+dj
+Gp
+DD
+pV
+uW
+pV
+DD
+oZ
+DD
+Ng
+sa
+bl
+Am
+IS
+IS
+IS
+pc
+hF
+IS
+IS
+IS
+IS
+"}
+(13,1,1) = {"
+IS
+Gp
+Gp
+Gp
+Gp
+DD
+aY
+DD
+pQ
+DD
+Jt
+zR
+pV
+sa
+bl
+Am
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+"}
+(14,1,1) = {"
+IS
+IS
+IS
+IS
+Gp
+Gp
+Gp
+Gp
+Gp
+Gp
+Gp
+Gp
+Gp
+LI
+bl
+Am
+IS
+wc
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+"}
+(15,1,1) = {"
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+"}
+(16,1,1) = {"
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+oR
+oR
+IS
+IS
+IS
+IS
+"}
+(17,1,1) = {"
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+"}
+(18,1,1) = {"
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+TE
+TE
+TE
+KL
+Gp
+VY
+JR
+KL
+TE
+TE
+TE
+"}
+(19,1,1) = {"
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+TE
+MK
+MK
+Gp
+ws
+aa
+Tj
+Gp
+MK
+MK
+TE
+"}
+(20,1,1) = {"
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+KL
+gT
+gT
+Aw
+UL
+aa
+BS
+Aw
+gT
+gT
+KL
+"}
+(21,1,1) = {"
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+Gp
+zK
+qC
+Aw
+qg
+jY
+qg
+Aw
+kD
+Sv
+Gp
+"}
+(22,1,1) = {"
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+Gp
+tx
+fT
+Aw
+aa
+aa
+Fc
+Aw
+fT
+VD
+Gp
+"}
+(23,1,1) = {"
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+Gp
+To
+NL
+Vr
+nW
+aa
+nW
+jv
+fT
+XL
+Gp
+"}
+(24,1,1) = {"
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+Gp
+kE
+HY
+fT
+aa
+aa
+aa
+fT
+HY
+fT
+Gp
+"}
+(25,1,1) = {"
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+Gp
+Xt
+fT
+Rc
+aa
+aa
+aa
+eg
+fT
+kE
+Gp
+"}
+(26,1,1) = {"
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+KL
+Gp
+Gp
+Aw
+qg
+VX
+qg
+Aw
+Gp
+Gp
+KL
+"}
+(27,1,1) = {"
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+TE
+Gp
+yI
+hu
+aa
+aa
+aa
+hu
+xJ
+Gp
+TE
+"}
+(28,1,1) = {"
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+TE
+Gp
+oc
+fT
+Tj
+aa
+Tj
+fT
+GJ
+Gp
+TE
+"}
+(29,1,1) = {"
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+TE
+Gp
+Gp
+Cy
+LV
+bU
+VD
+RA
+Gp
+Gp
+TE
+"}
+(30,1,1) = {"
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+IS
+TE
+TE
+KL
+Gp
+pn
+pn
+pn
+Gp
+KL
+TE
+TE
+"}
