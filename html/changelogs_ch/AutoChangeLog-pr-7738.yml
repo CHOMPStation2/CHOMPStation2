@@ -1,6 +1,0 @@
-author: "TheCaramelion"
-delete-after: True
-changes:
-  - rscadd: "Common diseases for the Infected Room event"
-  - balance: "Infected Room is now slightly more common"
-  - code_imp: "Added makedisease proc, to build custom viruses."

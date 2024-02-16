@@ -1,4 +1,0 @@
-author: "Raeschen"
-delete-after: True
-changes:
-  - admin: "Adminsent faxes include the body (if any)"

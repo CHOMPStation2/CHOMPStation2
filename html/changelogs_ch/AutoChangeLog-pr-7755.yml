@@ -1,5 +1,0 @@
-author: "Raeschen"
-delete-after: True
-changes:
-  - rscadd: "configurable role-request/fax to discord settings."
-  - rscadd: "role request will ping if configured"
