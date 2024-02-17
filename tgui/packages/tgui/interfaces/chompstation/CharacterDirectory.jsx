@@ -237,7 +237,7 @@ const ViewCharacter = (props) => {
                 ) : (
                   ''
                 )}
-                {overlay.ooc_notes_dislikes ? (
+                {props.overlay.ooc_notes_dislikes ? (
                   <Table.Cell>{props.overlay.ooc_notes_dislikes}</Table.Cell>
                 ) : (
                   ''
