@@ -45,7 +45,7 @@
 /turf/template_noop,
 /area/space)
 "ap" = (
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/titanium,
 /area/derelict/bridge)
 "as" = (
 /obj/structure/shuttle/window,
@@ -550,7 +550,7 @@
 /area/derelict/crew_quarters)
 "cM" = (
 /obj/structure/sign/securearea,
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/titanium,
 /area/derelict/arrival)
 "cN" = (
 /obj/machinery/door/airlock/hatch{
@@ -833,8 +833,8 @@
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/derelict/crew_quarters)
 "dO" = (
-/turf/simulated/shuttle/wall,
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/titanium,
+/turf/simulated/wall/titanium,
 /area/derelict/arrival)
 "dP" = (
 /obj/effect/decal/cleanable/dirt,
@@ -876,7 +876,7 @@
 /area/derelict/arrival)
 "dX" = (
 /obj/structure/sign/securearea,
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/titanium,
 /area/derelict/eva{
 	name = "Derelict Annex"
 	})
@@ -1003,7 +1003,7 @@
 	})
 "et" = (
 /obj/structure/sign/science,
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/titanium,
 /area/derelict/eva{
 	name = "Derelict Annex"
 	})
@@ -1060,7 +1060,7 @@
 	})
 "ez" = (
 /obj/structure/noticeboard,
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/titanium,
 /area/derelict/eva{
 	name = "Derelict Annex"
 	})
@@ -1096,7 +1096,7 @@
 "eI" = (
 /obj/structure/sign/securearea,
 /obj/effect/decal/cleanable/blood/splatter,
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/titanium,
 /area/derelict/arrival)
 "eJ" = (
 /obj/machinery/door/airlock/multi_tile/glass{
@@ -1450,7 +1450,7 @@
 	})
 "fL" = (
 /obj/structure/sign/nosmoking_1,
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/titanium,
 /area/derelict/eva{
 	name = "Derelict Annex"
 	})
@@ -1871,7 +1871,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/titanium,
 /turf/space,
 /area/derelict/eva{
 	name = "Derelict Annex"
@@ -1960,7 +1960,7 @@
 	dir = 1;
 	pixel_y = 7
 	},
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/titanium,
 /area/derelict/arrival)
 "hu" = (
 /obj/machinery/door/airlock{
@@ -2321,12 +2321,16 @@
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/crew_quarters)
 "iO" = (
-/turf/simulated/shuttle/wall{
-	base_state = "dark";
-	icon = 'icons/turf/shuttle_dark.dmi';
-	icon_state = "dark"
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/area/derelict/arrival)
+/mob/living/simple_mob/humanoid/merc/ranged/space/shotgun,
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva{
+	name = "Derelict Annex"
+	})
 "iQ" = (
 /obj/effect/decal/remains/human{
 	desc = "This guy seemed to have died in terrible way! Half his remains are dust.";
@@ -2456,6 +2460,7 @@
 	info = "Fuck. Fuckfuckfuck. I knew this mission was a mistake, that idiot Thomas got himself killed by some angry Russian security bot in the armoury, and the Lt. ran into the annex like a moron and got himself trapped. Now I'm just sitting on my god damn hands because this shuttle won't bloody move. Stupid USSP piece of shit docking arm must be jammed and I don't have the kit to go out and fix it.<br><br>Who the hell attacks a space station without EVA gear anyways? It's not like you can just bloody well waltz out into space with a hot coffee and shrug it off.";
 	name = "unknown report"
 	},
+/mob/living/simple_mob/humanoid/merc/ranged/space/shotgun/auto,
 /turf/simulated/shuttle/floor/black,
 /area/derelict/arrival)
 "jk" = (
@@ -2529,7 +2534,7 @@
 	name = "Derelict Annex"
 	})
 "jB" = (
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/titanium,
 /turf/space,
 /area/derelict/eva{
 	name = "Derelict Annex"
@@ -3054,7 +3059,7 @@
 /area/derelict/crew_quarters)
 "kG" = (
 /obj/structure/sign/vacuum,
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/titanium,
 /area/derelict/crew_quarters)
 "kH" = (
 /obj/structure/cable{
@@ -3161,7 +3166,7 @@
 	name = "Derelict Annex"
 	})
 "lc" = (
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/titanium,
 /area/derelict/eva{
 	name = "Derelict Annex"
 	})
@@ -3345,7 +3350,7 @@
 /area/derelict/arrival)
 "lz" = (
 /obj/structure/sign/botany,
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/titanium,
 /area/derelict/eva{
 	name = "Derelict Annex"
 	})
@@ -3584,12 +3589,7 @@
 	name = "Derelict Annex"
 	})
 "mm" = (
-/turf/simulated/shuttle/wall{
-	base_state = "dark";
-	icon = 'icons/turf/shuttle_dark.dmi';
-	icon_state = "dark"
-	},
-/turf/space,
+/turf/simulated/wall/thull,
 /area/derelict/arrival)
 "mn" = (
 /obj/effect/decal/cleanable/dirt,
@@ -3701,7 +3701,7 @@
 /area/derelict/crew_quarters)
 "mI" = (
 /obj/structure/sign/greencross,
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/titanium,
 /area/derelict/arrival)
 "mJ" = (
 /obj/structure/cable{
@@ -3717,7 +3717,7 @@
 /area/derelict/arrival)
 "mK" = (
 /obj/structure/sign/directions/medical,
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/titanium,
 /area/derelict/arrival)
 "mN" = (
 /obj/structure/cable{
@@ -3971,7 +3971,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/titanium,
 /turf/space,
 /area/derelict/eva{
 	name = "Derelict Annex"
@@ -4025,7 +4025,7 @@
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/arrival)
 "nL" = (
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/titanium,
 /turf/space,
 /area/space)
 "nO" = (
@@ -4091,7 +4091,7 @@
 	name = "Derelict Annex"
 	})
 "nU" = (
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/titanium,
 /turf/space,
 /area/derelict/crew_quarters)
 "nV" = (
@@ -4322,7 +4322,7 @@
 /area/derelict/arrival)
 "oG" = (
 /turf/space,
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/titanium,
 /area/derelict/arrival)
 "oH" = (
 /obj/structure/lattice,
@@ -4387,7 +4387,7 @@
 	})
 "oQ" = (
 /turf/space,
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/titanium,
 /area/derelict/eva{
 	name = "Derelict Annex"
 	})
@@ -4524,7 +4524,7 @@
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/crew_quarters)
 "pk" = (
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/titanium,
 /area/space)
 "pl" = (
 /obj/structure/cable{
@@ -4541,7 +4541,7 @@
 	name = "Derelict Annex"
 	})
 "pm" = (
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/titanium,
 /area/derelict/crew_quarters)
 "pp" = (
 /turf/simulated/floor/airless,
@@ -4636,7 +4636,7 @@
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/crew_quarters)
 "pG" = (
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/titanium,
 /turf/space,
 /area/derelict/arrival)
 "pI" = (
@@ -4791,7 +4791,7 @@
 /area/derelict/arrival)
 "qh" = (
 /obj/structure/sign/examroom,
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/titanium,
 /area/derelict/arrival)
 "qi" = (
 /obj/machinery/computer/arcade,
@@ -4823,11 +4823,12 @@
 /turf/simulated/floor/tiled/neutral,
 /area/derelict/crew_quarters)
 "qp" = (
-/turf/simulated/shuttle/wall,
+/mob/living/simple_mob/humanoid/merc/ranged/space,
+/turf/simulated/floor/tiled/old_tile/green,
 /area/derelict/arrival)
 "qq" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/titanium,
 /area/derelict/arrival)
 "qr" = (
 /obj/item/stack/material/glass{
@@ -4839,7 +4840,7 @@
 /area/derelict/bridge)
 "qs" = (
 /obj/structure/sign/nosmoking_2,
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/titanium,
 /area/derelict/arrival)
 "qx" = (
 /obj/structure/cable{
@@ -5098,10 +5099,10 @@
 /area/derelict/crew_quarters)
 "rn" = (
 /obj/structure/closet/medical_wall,
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/titanium,
 /area/derelict/arrival)
 "ro" = (
-/turf/simulated/shuttle/wall/no_join,
+/turf/simulated/wall/titanium,
 /area/derelict/arrival)
 "rp" = (
 /obj/structure/table/standard,
@@ -5386,7 +5387,7 @@
 /area/derelict/arrival)
 "rZ" = (
 /obj/structure/sign/vacuum,
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/titanium,
 /area/derelict/arrival)
 "sa" = (
 /obj/machinery/door/airlock/external{
@@ -5747,6 +5748,10 @@
 /area/derelict/eva{
 	name = "Derelict Annex"
 	})
+"BI" = (
+/mob/living/simple_mob/humanoid/merc/ranged/laser,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/arrival)
 "BZ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/crate/einstein,
@@ -5850,8 +5855,8 @@
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/crew_quarters)
 "Ol" = (
-/turf/simulated/shuttle/wall,
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/titanium,
+/turf/simulated/wall/titanium,
 /area/derelict/crew_quarters)
 "OW" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
@@ -5886,6 +5891,7 @@
 	dir = 4;
 	name = "Broken Computer"
 	},
+/mob/living/simple_mob/humanoid/merc/ranged/space/shotgun/auto,
 /turf/simulated/shuttle/floor/black,
 /area/derelict/arrival)
 "Ql" = (
@@ -5926,7 +5932,7 @@
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/crew_quarters)
 "TA" = (
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/titanium,
 /area/template_noop)
 "Ud" = (
 /mob/living/simple_mob/animal/space/carp/large,
@@ -5948,6 +5954,15 @@
 /area/derelict/eva{
 	name = "Derelict Annex"
 	})
+"Wd" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/mob/living/simple_mob/humanoid/merc/ranged/space,
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/arrival)
 "WC" = (
 /mob/living/simple_mob/animal/giant_spider/hunter,
 /turf/simulated/floor/tiled/old_tile,
@@ -6022,12 +6037,12 @@ ac
 ac
 ac
 mm
-iO
-iO
-iO
-iO
-iO
-iO
+mm
+mm
+mm
+mm
+mm
+mm
 mm
 ac
 ac
@@ -6390,12 +6405,12 @@ ac
 ac
 ac
 mm
-iO
+mm
 jl
-iO
-iO
+mm
+mm
 jl
-iO
+mm
 mm
 ac
 ac
@@ -6481,14 +6496,14 @@ ac
 ac
 ac
 ac
-qp
+ro
 ro
 jm
 ro
 ro
 lu
 ro
-qp
+ro
 ac
 ac
 ac
@@ -6573,14 +6588,14 @@ ac
 ac
 ac
 ac
-qp
+ro
 iS
 jn
 mf
 mf
 mf
 lK
-qp
+ro
 ac
 ac
 ac
@@ -6662,19 +6677,19 @@ ac
 ac
 ac
 ac
-qp
-qp
-qp
-qp
+ro
+ro
+ro
+ro
 iT
 mf
 mf
 mf
 lv
 uf
-qp
-qp
-qp
+ro
+ro
+ro
 ac
 ac
 ac
@@ -6750,11 +6765,11 @@ ac
 ac
 ac
 ac
-qp
-qp
-qp
-qp
-qp
+ro
+ro
+ro
+ro
+ro
 JE
 mv
 mx
@@ -6766,11 +6781,11 @@ mf
 mx
 me
 mu
-qp
-qp
-qp
-qp
-qp
+ro
+ro
+ro
+ro
+ro
 ac
 ac
 ac
@@ -6839,10 +6854,10 @@ ac
 ac
 ac
 ac
-qp
-qp
-qp
-qp
+ro
+ro
+ro
+ro
 gK
 gK
 ha
@@ -6858,13 +6873,13 @@ mf
 mf
 mf
 mv
-qp
+ro
 mR
 ni
 nw
-qp
-qp
-qp
+ro
+ro
+ro
 oG
 ac
 ai
@@ -6930,8 +6945,8 @@ ac
 ac
 ac
 ac
-qp
-qp
+ro
+ro
 ff
 fF
 ha
@@ -6946,7 +6961,7 @@ mf
 mf
 mf
 mf
-mf
+BI
 mf
 mf
 Cw
@@ -7020,21 +7035,21 @@ ac
 ac
 ac
 ac
-qp
-qp
-qp
-qp
+ro
+ro
+ro
+ro
 fF
 gM
 gM
 gM
 gM
 hb
-qp
+ro
 mx
 mf
 ix
-mf
+BI
 mf
 mf
 mf
@@ -7111,7 +7126,7 @@ ac
 ac
 ac
 ac
-qp
+ro
 pG
 ed
 ha
@@ -7202,7 +7217,7 @@ ac
 ac
 ac
 ac
-qp
+ro
 dO
 Oe
 gM
@@ -7214,7 +7229,7 @@ gM
 gM
 gM
 hc
-qp
+ro
 BZ
 mv
 iz
@@ -7293,8 +7308,8 @@ ag
 ac
 ac
 ac
-qp
-qp
+ro
+ro
 dP
 dV
 dV
@@ -7306,19 +7321,19 @@ fY
 gM
 ha
 hd
-qp
-qp
-qp
-qp
-qp
+ro
+ro
+ro
+ro
+ro
 mx
 ka
 mv
 ly
-qp
-qp
-qp
-qp
+ro
+ro
+ro
+ro
 mV
 nm
 qS
@@ -7383,10 +7398,10 @@ ac
 ac
 ac
 ac
-qp
-qp
-qp
-qp
+ro
+ro
+ro
+ro
 dQ
 gM
 gM
@@ -7397,22 +7412,22 @@ fE
 fZ
 gs
 dO
-qp
-qp
+ro
+ro
 ac
 ac
 ac
-qp
-qp
+ro
+ro
 kb
-qp
-qp
-qp
+ro
+ro
+ro
 ac
 ac
-qp
-qp
-qp
+ro
+ro
+ro
 ny
 qS
 qS
@@ -7474,8 +7489,8 @@ ac
 ac
 ac
 ac
-qp
-qp
+ro
+ro
 dm
 gs
 ha
@@ -7483,12 +7498,12 @@ gM
 gM
 gM
 fF
-qp
+ro
 fF
 fF
-qp
+ro
 fG
-qp
+ro
 ac
 ac
 ac
@@ -7504,7 +7519,7 @@ ac
 ac
 ac
 ac
-qp
+ro
 fG
 oc
 oc
@@ -7565,8 +7580,8 @@ ac
 ac
 ac
 ac
-qp
-qp
+ro
+ro
 fF
 dn
 gM
@@ -7575,10 +7590,10 @@ gM
 gM
 ee
 ep
-qp
-qp
+ro
+ro
 fG
-qp
+ro
 ac
 ac
 ac
@@ -7656,9 +7671,9 @@ ac
 ac
 ac
 ac
-qp
-qp
-qp
+ro
+ro
+ro
 fF
 gM
 gM
@@ -7667,8 +7682,8 @@ gM
 gM
 ef
 eq
-qp
-qp
+ro
+ro
 ac
 ac
 ac
@@ -7703,7 +7718,7 @@ qS
 pR
 oc
 qZ
-qp
+ro
 ac
 ac
 ac
@@ -7747,10 +7762,10 @@ ac
 ac
 ac
 ac
-qp
-qp
-qp
-qp
+ro
+ro
+ro
+ro
 df
 dp
 dB
@@ -7759,7 +7774,7 @@ gM
 ha
 oG
 fG
-qp
+ro
 ac
 ac
 ac
@@ -7796,7 +7811,7 @@ oc
 qS
 qg
 qq
-qp
+ro
 ac
 ac
 ac
@@ -7839,17 +7854,17 @@ ac
 iY
 ac
 ac
-qp
+ro
 cl
 cz
-qp
+ro
 fF
 dq
 dC
 gM
 ha
 oG
-qp
+ro
 ac
 ac
 ac
@@ -7888,8 +7903,8 @@ rY
 qS
 qS
 qZ
-qp
-qp
+ro
+ro
 ac
 ac
 ac
@@ -7930,7 +7945,7 @@ ac
 ac
 ac
 ac
-qp
+ro
 pG
 ha
 ha
@@ -7940,7 +7955,7 @@ ha
 dD
 dM
 oG
-qp
+ro
 ac
 ac
 ac
@@ -7981,8 +7996,8 @@ CH
 qS
 qS
 qB
-qp
-qp
+ro
+ro
 ac
 ac
 ac
@@ -8021,7 +8036,7 @@ ac
 ac
 ac
 ac
-qp
+ro
 pG
 ha
 cn
@@ -8030,8 +8045,8 @@ cN
 ha
 dr
 dE
-qp
-qp
+ro
+ro
 ac
 ac
 ac
@@ -8066,7 +8081,7 @@ ac
 ai
 ac
 pG
-qp
+ro
 pI
 qS
 qS
@@ -8074,8 +8089,8 @@ qS
 qS
 rf
 mU
-qp
-qp
+ro
+ro
 ac
 ac
 ac
@@ -8113,7 +8128,7 @@ ac
 ac
 ac
 ac
-qp
+ro
 bF
 fF
 fF
@@ -8121,8 +8136,8 @@ ha
 cM
 dg
 ds
-qp
-qp
+ro
+ro
 ac
 ac
 ac
@@ -8158,8 +8173,8 @@ ac
 ac
 ac
 ac
-qp
-qp
+ro
+ro
 pS
 qa
 qS
@@ -8167,7 +8182,7 @@ qS
 rf
 Uk
 qZ
-qp
+ro
 ac
 ac
 ac
@@ -8204,13 +8219,13 @@ ac
 ac
 ac
 ac
-qp
-qp
+ro
+ro
 bG
 fF
 ha
 ha
-qp
+ro
 dh
 dt
 fG
@@ -8251,7 +8266,7 @@ ac
 ac
 ac
 ag
-qp
+ro
 pT
 mU
 mU
@@ -8260,7 +8275,7 @@ Xi
 qZ
 qZ
 rn
-qp
+ro
 ac
 ac
 ac
@@ -8343,17 +8358,17 @@ At
 aj
 ac
 ag
-qp
-qp
-qp
+ro
+ro
+ro
 qh
 qs
 qD
 qL
-qp
+ro
 mI
-qp
-qp
+ro
+ro
 ac
 ac
 ac
@@ -8412,7 +8427,7 @@ gO
 he
 hk
 hk
-hk
+iO
 pd
 iX
 oN
@@ -8436,8 +8451,8 @@ ac
 ag
 ag
 ag
-qp
-qp
+ro
+ro
 qi
 rF
 rh
@@ -8445,7 +8460,7 @@ rF
 ra
 rF
 rF
-qp
+ro
 ac
 ac
 ac
@@ -8538,7 +8553,7 @@ rb
 rB
 rF
 dO
-qp
+ro
 ac
 ac
 ac
@@ -8621,7 +8636,7 @@ ac
 ac
 ac
 ac
-qp
+ro
 pG
 rT
 qS
@@ -8806,7 +8821,7 @@ ac
 ac
 ac
 ac
-qp
+ro
 pG
 rF
 qS
@@ -8814,8 +8829,8 @@ re
 rB
 qS
 rT
-qp
-qp
+ro
+ro
 ac
 ac
 ac
@@ -8907,7 +8922,7 @@ qS
 qS
 qS
 rJ
-qp
+ro
 ac
 ac
 ac
@@ -8991,8 +9006,8 @@ ac
 ac
 ac
 ac
-qp
-qp
+ro
+ro
 qN
 rf
 qS
@@ -9275,7 +9290,7 @@ qS
 qS
 qS
 rN
-qp
+ro
 ac
 ac
 ac
@@ -9359,17 +9374,17 @@ ac
 ac
 ac
 ac
-qp
-qp
+ro
+ro
 rF
 rf
-rF
+qp
 rF
 qS
 rO
 rZ
-qp
-qp
+ro
+ro
 ac
 ac
 jO
@@ -9451,7 +9466,7 @@ cS
 cS
 cS
 cS
-qp
+ro
 rF
 qS
 ri
@@ -9545,15 +9560,15 @@ qb
 cT
 qx
 qH
-rE
+Wd
 rj
 rs
 rz
 qS
 rQ
-qp
-qp
-qp
+ro
+ro
+ro
 sh
 aY
 kJ
@@ -9635,7 +9650,7 @@ cS
 cS
 cS
 cS
-qp
+ro
 rT
 qS
 rF
@@ -9727,17 +9742,17 @@ ac
 ac
 ac
 ac
-qp
-qp
+ro
+ro
 rT
 qS
-rF
+qp
 rF
 qS
 rS
 rZ
-qp
-qp
+ro
+ro
 ac
 ac
 jO
@@ -9827,7 +9842,7 @@ qS
 qS
 qS
 rT
-qp
+ro
 ac
 ac
 ac
@@ -10095,8 +10110,8 @@ ac
 ac
 ac
 ac
-qp
-qp
+ro
+ro
 qN
 qS
 qS
@@ -10195,7 +10210,7 @@ qS
 qS
 qS
 rX
-qp
+ro
 ac
 ac
 ac
@@ -10278,7 +10293,7 @@ ac
 ac
 ac
 ac
-qp
+ro
 oG
 rF
 qS
@@ -10286,8 +10301,8 @@ qS
 qS
 qS
 rG
-qp
-qp
+ro
+ro
 ac
 ac
 ac
@@ -10461,7 +10476,7 @@ ag
 ac
 ac
 ac
-qp
+ro
 pG
 rF
 qS
@@ -10562,7 +10577,7 @@ qS
 qS
 rT
 dO
-qp
+ro
 ac
 ac
 ac
@@ -10644,8 +10659,8 @@ ac
 ac
 ag
 ag
-qp
-qp
+ro
+ro
 qm
 qz
 rT
@@ -10653,7 +10668,7 @@ rF
 rl
 rv
 rX
-qp
+ro
 ac
 ac
 ac

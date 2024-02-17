@@ -15,6 +15,14 @@
 	var/pred_ooc_notes
 	var/pred_ooc_likes
 	var/pred_ooc_dislikes
+	//CHOMPEdit Start
+	var/pred_ooc_favs
+	var/pred_ooc_maybes
+	var/pred_ooc_style
+	var/prey_ooc_favs
+	var/prey_ooc_maybes
+	var/prey_ooc_style
+	//CHOMPEdit End
 	var/prey_ooc_notes
 	var/prey_ooc_likes
 	var/prey_ooc_dislikes
@@ -114,6 +122,11 @@
 		prey_goes_here.ooc_notes = prey_ooc_notes
 		prey_goes_here.ooc_notes_likes = prey_ooc_likes
 		prey_goes_here.ooc_notes_dislikes = prey_ooc_dislikes
+		//CHOMPEdit Start
+		prey_goes_here.ooc_notes_favs = prey_ooc_favs
+		prey_goes_here.ooc_notes_maybes = prey_ooc_maybes
+		prey_goes_here.ooc_notes_style = prey_ooc_style
+		//CHOMPEdit End
 		prey_goes_here.verbs |= /mob/living/dominated_brain/proc/cease_this_foolishness
 
 
@@ -130,6 +143,11 @@
 		prey_goes_here.ooc_notes = prey_ooc_notes
 		prey_goes_here.ooc_notes_likes = prey_ooc_likes
 		prey_goes_here.ooc_notes_dislikes = prey_ooc_dislikes
+		//CHOMPEdit Start
+		prey_goes_here.ooc_notes_favs = prey_ooc_favs
+		prey_goes_here.ooc_notes_maybes = prey_ooc_maybes
+		prey_goes_here.ooc_notes_style = prey_ooc_style
+		//CHOMPEdit End
 
 	///////////////////
 
@@ -142,6 +160,11 @@
 	pred_body.ooc_notes = pred_ooc_notes
 	pred_body.ooc_notes_likes = pred_ooc_likes
 	pred_body.ooc_notes_dislikes = pred_ooc_dislikes
+	//CHOMPEdit Start
+	pred_body.ooc_notes_favs = pred_ooc_favs
+	pred_body.ooc_notes_maybes = pred_ooc_maybes
+	pred_body.ooc_notes_style = pred_ooc_style
+	//CHOMPEdit End
 	log_and_message_admins("[pred_body] is now controlled by [pred_body.ckey]. They were restored to control through prey domination, and had been controlled by [prey_ckey].")
 	pred_body.absorb_langs()
 	pred_body.prey_controlled = FALSE
@@ -244,6 +267,14 @@
 	pred_brain.prey_ooc_notes = prey.ooc_notes
 	pred_brain.prey_ooc_likes = prey.ooc_notes_likes
 	pred_brain.prey_ooc_dislikes = prey.ooc_notes_dislikes
+	//CHOMPEdit Start
+	pred_brain.prey_ooc_favs = prey.ooc_notes_favs
+	pred_brain.prey_ooc_maybes = prey.ooc_notes_maybes
+	pred_brain.prey_ooc_style = prey.ooc_notes_style
+	pred_brain.pred_ooc_favs = pred.ooc_notes_favs
+	pred_brain.pred_ooc_maybes = pred.ooc_notes_maybes
+	pred_brain.pred_ooc_style = pred.ooc_notes_style
+	//CHOMPEdit End
 	pred_brain.pred_ooc_notes = pred.ooc_notes
 	pred_brain.pred_ooc_likes = pred.ooc_notes_likes
 	pred_brain.pred_ooc_dislikes = pred.ooc_notes_dislikes
@@ -259,6 +290,11 @@
 	pred.ooc_notes = pred_brain.prey_ooc_notes
 	pred.ooc_notes_likes = pred_brain.prey_ooc_likes
 	pred.ooc_notes_dislikes = pred_brain.prey_ooc_dislikes
+	//CHOMPEdit Start
+	pred.ooc_notes_favs = pred_brain.prey_ooc_favs
+	pred.ooc_notes_maybes = pred_brain.prey_ooc_maybes
+	pred.ooc_notes_style = pred_brain.prey_ooc_style
+	//CHOMPEdit End
 
 	pred.verbs |= /mob/proc/release_predator
 
@@ -383,6 +419,14 @@
 	db.ooc_notes = M.ooc_notes
 	db.ooc_notes_likes = M.ooc_notes_likes
 	db.ooc_notes_dislikes = M.ooc_notes_dislikes
+	//CHOMPEdit Start
+	db.ooc_notes_favs = M.ooc_notes_favs
+	db.ooc_notes_maybes = M.ooc_notes_maybes
+	db.ooc_notes_style = M.ooc_notes_style
+	db.prey_ooc_favs = M.ooc_notes_favs
+	db.prey_ooc_maybes = M.ooc_notes_maybes
+	db.prey_ooc_style = M.ooc_notes_style
+	//CHOMPEdit End
 	db.prey_ooc_likes = M.ooc_notes_likes
 	db.prey_ooc_dislikes = M.ooc_notes_dislikes
 	db.verbs |= /mob/living/dominated_brain/proc/cease_this_foolishness
@@ -495,6 +539,14 @@
 	pred_brain.prey_ooc_notes = prey.ooc_notes
 	pred_brain.prey_ooc_likes = prey.ooc_notes_likes
 	pred_brain.prey_ooc_dislikes = prey.ooc_notes_dislikes
+	//CHOMPEdit Start
+	pred_brain.prey_ooc_favs = prey.ooc_notes_favs
+	pred_brain.prey_ooc_maybes = prey.ooc_notes_maybes
+	pred_brain.prey_ooc_style = prey.ooc_notes_style
+	pred_brain.pred_ooc_favs = pred.ooc_notes_favs
+	pred_brain.pred_ooc_maybes = pred.ooc_notes_maybes
+	pred_brain.pred_ooc_style = pred.ooc_notes_style
+	//CHOMPEdit End
 	pred_brain.pred_ooc_notes = pred.ooc_notes
 	pred_brain.pred_ooc_likes = pred.ooc_notes_likes
 	pred_brain.pred_ooc_dislikes = pred.ooc_notes_dislikes
@@ -509,6 +561,11 @@
 	pred.ooc_notes = pred_brain.prey_ooc_notes
 	pred.ooc_notes_likes = pred_brain.prey_ooc_likes
 	pred.ooc_notes_dislikes = pred_brain.prey_ooc_dislikes
+	//CHOMPEdit Start
+	pred.ooc_notes_favs = pred_brain.prey_ooc_favs
+	pred.ooc_notes_maybes = pred_brain.prey_ooc_maybes
+	pred.ooc_notes_style = pred_brain.prey_ooc_style
+	//CHOMPEdit End
 
 	pred.verbs |= /mob/proc/release_predator
 

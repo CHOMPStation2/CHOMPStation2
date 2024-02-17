@@ -1298,6 +1298,10 @@
 /obj/structure/sign/poster/nanotrasen{
 	dir = 8
 	},
+/obj/machinery/computer/ship/navigation/telescreen{
+	pixel_x = -32;
+	pixel_y = -4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/needle)
 "bbO" = (
@@ -7477,6 +7481,12 @@
 	},
 /turf/simulated/floor/grass2,
 /area/expoutpost/slingcarrierdock)
+"fZO" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 9
+	},
+/turf/simulated/wall/rplastihull,
+/area/shuttle/needle)
 "gaf" = (
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/secureaccess)
@@ -12261,6 +12271,14 @@
 	},
 /turf/simulated/floor/wood,
 /area/expoutpost/bar)
+"jJO" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4;
+	name = "Fuel Into Main"
+	},
+/obj/machinery/portable_atmospherics/canister/phoron,
+/turf/simulated/floor,
+/area/shuttle/needle)
 "jKa" = (
 /obj/structure/curtain/open/shower,
 /obj/machinery/shower{
@@ -12635,9 +12653,6 @@
 /obj/machinery/door/window/survival_pod{
 	dir = 2
 	},
-/obj/machinery/light{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/needle)
 "kbl" = (
@@ -12955,10 +12970,8 @@
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "kqU" = (
-/obj/machinery/computer/ship/navigation/telescreen{
-	pixel_y = -4
-	},
-/turf/simulated/wall/rplastihull,
+/obj/machinery/light/floortube,
+/turf/simulated/floor/tiled/milspec,
 /area/shuttle/needle)
 "kra" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -13820,7 +13833,6 @@
 	dir = 4;
 	name = "Fuel Into Main"
 	},
-/obj/machinery/light,
 /turf/simulated/floor,
 /area/shuttle/needle)
 "ldk" = (
@@ -16939,7 +16951,7 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
-/turf/simulated/floor/tiled/yellow,
+/turf/simulated/floor/tiled/red,
 /area/shuttle/needle)
 "nlT" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
@@ -21018,20 +21030,13 @@
 /obj/machinery/atmospherics/binary/pump{
 	dir = 4
 	},
-/obj/machinery/power/apc/hyper{
-	coverlocked = 0;
-	environ = 1;
-	equipment = 1;
-	lighting = 1;
-	locked = 0;
-	pixel_y = -24
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
 /obj/structure/cable/green{
+	d1 = 2;
 	d2 = 4;
-	icon_state = "0-4"
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/red,
 /area/shuttle/needle)
@@ -23125,24 +23130,10 @@
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "rOE" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/closet/crate/engineering,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/glass,
-/obj/item/weapon/tank/phoron,
-/obj/item/weapon/tank/phoron,
-/obj/item/weapon/storage/toolbox/mechanical,
-/obj/item/weapon/storage/toolbox/electrical,
-/obj/item/device/multitool,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/device/geiger,
-/obj/item/clothing/glasses/goggles,
-/obj/item/clothing/glasses/goggles,
-/obj/item/device/t_scanner,
-/obj/item/clothing/glasses/welding,
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 9
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 4
 	},
+/obj/machinery/light,
 /turf/simulated/floor,
 /area/shuttle/needle)
 "rOJ" = (
@@ -27692,7 +27683,7 @@
 /area/expoutpost/hangarfive)
 "vmL" = (
 /obj/effect/catwalk_plated/dark,
-/obj/machinery/shipsensors/weak,
+/obj/machinery/shipsensors,
 /turf/simulated/floor,
 /area/shuttle/needle)
 "vmY" = (
@@ -29834,6 +29825,34 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/medicalbay)
+"wQf" = (
+/obj/effect/floor_decal/industrial/warning/cee,
+/obj/machinery/power/apc/hyper{
+	coverlocked = 0;
+	environ = 1;
+	equipment = 1;
+	lighting = 1;
+	locked = 0;
+	pixel_y = -24
+	},
+/obj/structure/cable/green,
+/obj/structure/closet/crate/engineering,
+/obj/item/device/t_scanner,
+/obj/item/clothing/glasses/welding,
+/obj/item/device/geiger,
+/obj/item/clothing/glasses/goggles,
+/obj/item/clothing/glasses/goggles,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/device/multitool,
+/obj/item/weapon/storage/toolbox/electrical,
+/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/weapon/tank/phoron,
+/obj/item/weapon/tank/phoron,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/steel,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/red,
+/area/shuttle/needle)
 "wQA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/effect/floor_decal/borderfloorwhite/corner{
@@ -60498,7 +60517,7 @@ xwl
 jlO
 ljI
 lcN
-jlO
+jJO
 jlO
 xwl
 xwl
@@ -60756,7 +60775,7 @@ jlO
 jlO
 ccE
 rOE
-jlO
+fZO
 vmL
 xwl
 xwl
@@ -61013,7 +61032,7 @@ bbp
 rsg
 hlp
 qse
-jlO
+wQf
 jqf
 oGk
 oGk

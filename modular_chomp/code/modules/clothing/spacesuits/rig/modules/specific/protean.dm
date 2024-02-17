@@ -75,7 +75,7 @@ These should come standard with the Protean rigsuit, unless you want them to wor
 /obj/item/rig_module/protean/armor/engage()
 	var/armor_chosen = input(usr, "Which armor to adjust?", "Protean Armor") as null|anything in armor_settings
 	if(armor_chosen)
-		var/armorvalue = tgui_input_number(usr, "Set armour reduction value (Max of 60%)", "Protean Armor",0,60,0,0,1)
+		var/armorvalue = tgui_input_number(usr, "Set armour reduction value (Max of 60%)", "Protean Armor",0,60)
 		if(isnum(armorvalue))
 			armor_settings[armor_chosen] = armorvalue
 			interface_desc = initial(interface_desc)

@@ -241,7 +241,7 @@
 		to_chat(caller,"<span class='warning'>You can't process [substance]!</span>")
 		return
 
-	var/howmuch = tgui_input_number(caller,"How much do you want to store? (0-[matstack.get_amount()])","Select amount",null,matstack.get_amount(),0)
+	var/howmuch = tgui_input_number(caller,"How much do you want to store? (0-[matstack.get_amount()])","Select amount",null,matstack.get_amount())
 	if(!howmuch || matstack != caller.get_active_hand() || howmuch > matstack.get_amount())
 		return //Quietly fail
 

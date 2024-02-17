@@ -86,9 +86,10 @@
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
 "cC" = (
-/obj/machinery/atmospherics/pipe/simple/visible{
-	dir = 10
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8
 	},
+/obj/machinery/portable_atmospherics/canister/air/airlock,
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
 "cM" = (
@@ -303,9 +304,11 @@
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
 "kd" = (
-/obj/machinery/atmospherics/pipe/simple/visible,
 /obj/machinery/meter,
 /obj/structure/largecrate/animal/cat,
+/obj/machinery/atmospherics/binary/pump/on{
+	target_pressure = 200
+	},
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
 "kw" = (
@@ -350,7 +353,8 @@
 	master_tag = null;
 	pixel_x = 27;
 	pixel_y = -7;
-	req_one_access = null
+	req_one_access = null;
+	frequency = 1331
 	},
 /obj/machinery/door/airlock/external{
 	frequency = null;
@@ -361,6 +365,8 @@
 	req_access = null
 	},
 /obj/structure/fans/hardlight,
+/obj/effect/map_helper/airlock/door/ext_door,
+/obj/effect/map_helper/airlock/button/ext_button,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/TradingShip)
 "kV" = (
@@ -558,6 +564,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/visible,
 /obj/structure/fans/hardlight,
+/obj/effect/map_helper/airlock/door/int_door,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/TradingShip)
 "nC" = (
@@ -1002,9 +1009,12 @@
 	master_tag = null;
 	pixel_x = -27;
 	pixel_y = 7;
-	req_one_access = null
+	req_one_access = null;
+	frequency = 1331
 	},
 /obj/structure/fans/hardlight,
+/obj/effect/map_helper/airlock/door/int_door,
+/obj/effect/map_helper/airlock/button/int_button,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/TradingShip)
 "wT" = (
@@ -1185,20 +1195,22 @@
 /turf/simulated/shuttle/plating/airless/carry,
 /area/survivalpod/superpose/TradingShip)
 "AL" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 1;
-	id_tag = null
-	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	dir = 4;
 	frequency = 1331;
 	id_tag = "trade2_control";
 	pixel_x = -25;
-	req_access = list(150);
+	req_access = list(160);
 	tag_airpump = null;
 	tag_chamber_sensor = null;
 	tag_exterior_door = null;
 	tag_interior_door = null
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1;
+	frequency = 1331;
+	id_tag = "d1fore_port2_pump"
 	},
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
@@ -1361,6 +1373,7 @@
 	req_access = null
 	},
 /obj/structure/fans/hardlight,
+/obj/effect/map_helper/airlock/door/ext_door,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/TradingShip)
 "Gb" = (
@@ -1381,9 +1394,12 @@
 	id_tag = null;
 	pixel_x = 27
 	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	id_tag = null
+	frequency = 1331;
+	id_tag = "d1fore_port2_pump"
 	},
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
@@ -1908,7 +1924,9 @@
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
 "VY" = (
-/obj/machinery/suit_cycler/syndicate,
+/obj/machinery/suit_cycler/syndicate{
+	req_access = list(160)
+	},
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
 "Wy" = (
@@ -2731,7 +2749,7 @@ rf
 Sp
 CV
 CV
-cC
+dy
 nh
 GN
 kU
@@ -2755,7 +2773,7 @@ SE
 HP
 Sp
 Sp
-Sp
+cC
 SE
 MT
 SE
