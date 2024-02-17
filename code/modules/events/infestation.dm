@@ -136,7 +136,7 @@
 // Spawn a single vermin at given location.
 /datum/event/infestation/proc/spawn_one_vermin(var/loc)
 	var/mob/living/simple_mob/animal/M = new spawn_types(loc)
-	GLOB.destroyed_event.register(M, src, PROC_REF(on_vermin_destruction))
+	RegisterSignal(M, COMSIG_OBSERVER_DESTROYED, PROC_REF(on_vermin_destruction))
 	spawned_vermin.Add(M)
 	return M
 
