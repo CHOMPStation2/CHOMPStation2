@@ -81,6 +81,7 @@
 /obj/machinery/Destroy()
 	if(ismovable(loc))
 		UnregisterSignal(loc, COMSIG_OBSERVER_MOVED) // Unregister just in case
+		UnregisterSignal(loc, COMSIG_OBSERVER_MOVED) // Unregister just in case
 	var/power = POWER_CONSUMPTION
 	REPORT_POWER_CONSUMPTION_CHANGE(power, 0)
 	. = ..()

@@ -87,28 +87,28 @@
 			min_number = 2 //CHOMP Add
 			max_number = 6
 			vermstring = "lizards"
-		
+
 		// ChompEDIT Begin
 		if(VERM_SPIDERS)
 			spawn_types = list(/obj/effect/spider/spiderling)
 			min_number = 4 //CHOMP Add
 			max_number = 8 //CHOMP edit
 			vermstring = "spiders"
-		
+
 	/* //Chomp REMOVE - in upstream file, not used here
 	// Check if any landmarks exist!
 	for(var/obj/effect/landmark/C in landmarks_list)
 		if(C.name == "verminstart")
 			spawn_locations.Add(C.loc)
 	*/ //Chomp REMOVE END
-	
+
 	spawn(0)
 		var/num = rand(min_number,max_number)
 		while(turfs.len > 0 && num > 0)
 			var/turf/simulated/floor/T = pick(turfs)
 			turfs.Remove(T)
 			num--
-			
+
 			if(vermin == VERM_SPIDERS)
 				var/obj/effect/spider/spiderling/S = new(T)
 				S.amount_grown = -1
@@ -150,8 +150,9 @@
 // If vermin is kill, remove it from the list.
 /datum/event/infestation/proc/on_vermin_destruction(var/mob/M)
 	spawned_vermin -= M
-	GLOB.destroyed_event.unregister(M, src, PROC_REF(on_vermin_destruction))
-*/ // CHOMPedit End
+	UnregisterSignal(M, COMSIG_OBSERVER_DESTROYED)
+
+
 
 /datum/event/infestation/announce()
 	command_announcement.Announce("Bioscans indicate that [vermstring] have been breeding in [locstring]. Clear them out, before this starts to affect productivity.", "Vermin infestation")
