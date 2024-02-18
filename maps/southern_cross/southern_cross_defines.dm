@@ -124,24 +124,6 @@ but they don't actually change anything about the load order
 			list("Kara - Z1 Northern Star")
 			)
 
-	/obj/effect/overmap/visitable/sector/Southern_Cross/proc/announce_atc(var/atom/movable/AM, var/going = FALSE)
-	if(istype(AM, /obj/effect/overmap/visitable/ship/simplemob))
-		if(world.time < mob_announce_cooldown)
-			return
-		else
-			mob_announce_cooldown = world.time + 5 MINUTES
-	var/message = "Sensor contact for vessel '[AM.name]' has [going ? "left" : "entered"] ATC control area."
-	//For landables, we need to see if their shuttle is cloaked
-	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))
-		var/obj/effect/overmap/visitable/ship/landable/SL = AM //Phew
-		var/datum/shuttle/autodock/multi/shuttle = SSshuttles.shuttles[SL.shuttle]
-		if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
-			atc.msg(message)
-
-	//For ships, it's safe to assume they're big enough to not be sneaky
-	else if(istype(AM, /obj/effect/overmap/visitable/ship))
-		atc.msg(message)
-
 	//CHOMPStation Addition End
 	lateload_gateway = list(
 		list("Snow Field"),
