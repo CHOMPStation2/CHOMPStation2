@@ -182,6 +182,8 @@ var/list/_human_default_emotes = list(
 	/decl/emote/audible/xenogrowl,
 	/decl/emote/audible/xenohiss,
 	/decl/emote/audible/xenopurr
+	/decl/emote/audible/gwah
+	/decl/emote/audible/wawa
 	//CHOMP Add end
 )
 
