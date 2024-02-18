@@ -218,6 +218,8 @@
 						if(is_beneficial && reagents.total_volume)
 							reagents.trans_to(L, affecting_amt, 1, FALSE)
 				for(var/obj/item/I in touchable_atoms)
+					if(is_type_in_list(I, item_digestion_blacklist))
+						continue
 					if(reagents.total_volume)
 						reagents.trans_to(I, affecting_amt, 1, FALSE)
 		SEND_SIGNAL(src, COMSIG_BELLY_UPDATE_VORE_FX, FALSE, reagents.total_volume) // Signals vore_fx() reagents updates.
