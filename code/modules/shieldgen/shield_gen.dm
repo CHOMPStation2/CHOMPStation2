@@ -256,7 +256,7 @@
 			qdel(D)
 
 		for(var/mob/M in view(5,src))
-			to_chat(M, "\icon[src][bicon(src)] You hear heavy droning fade out.")
+			to_chat(M, "[icon2html(src, M.client)] You hear heavy droning fade out.")
 		shield_hum.stop()
 
 /obj/machinery/shield_gen/update_icon()
