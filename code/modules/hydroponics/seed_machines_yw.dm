@@ -27,7 +27,7 @@
 		)
 
 	var/list/datum/reagent/allowed_reagents = list() //compile the list of reagents we're allowed to splice in
-  
+
 
 /obj/machinery/botany/precisioneditor/Initialize()
   for(var/R in SSchemistry.chemical_reagents)
@@ -108,7 +108,7 @@
         seed.seed.name = "[seed.seed.uid]"
         SSplants.seeds[seed.seed.name] = seed.seed
       seed.update_seed()
-      visible_message("[bicon(src)] [src] beeps and spits out [seed].")
+      visible_message("[icon2html(src,viewers(src))] [src] beeps and spits out [seed].")
 
       seed = null
       screen_state = "main"
@@ -117,7 +117,7 @@
       if(!loaded_beaker)
         return
       loaded_beaker.loc = get_turf(src)
-      visible_message("[bicon(src)] [src] beeps and politely sets out [loaded_beaker].")
+      visible_message("[icon2html(src,viewers(src))] [src] beeps and politely sets out [loaded_beaker].")
       loaded_beaker = null
       . = TRUE
 
@@ -128,7 +128,7 @@
 
     //Remove the chosen chem from the plant's product
     //TODO: this will be a cheaper operation the fewer chems the plant already
-    //produces 
+    //produces
     if("prune")
       if(!isnull(SSplants.seeds[seed.seed.name]))
         seed.seed = seed.seed.diverge(1)
@@ -141,7 +141,7 @@
     //TODO: additionally allow for changing the plant's glow color, if applicable
     if("change_color")
       var/newcolor = uppertext(input(usr, "Choose the desired color for the plant in hex:", "Color preference", rgb(128,128,128)))
-      if(is_valid_hex(newcolor)) 
+      if(is_valid_hex(newcolor))
         if(!isnull(SSplants.seeds[seed.seed.name]))
           seed.seed = seed.seed.diverge(1)
           seed.seed_type = seed.seed.name
@@ -153,7 +153,7 @@
             seed.seed.traits["[TRAIT_PRODUCT_COLOUR]"] = newcolor
           else
       else
-        visible_message("[bicon(src)] Error: Invalid input detected.")
+        visible_message("[icon2html(src,viewers(src))] Error: Invalid input detected.")
       . = TRUE
     if("add_chem")
       add_chem_to_seed(params["target_chem"])
@@ -170,7 +170,7 @@
   var/safety_check = 1
   if(!(length(input) == 7))
     return FALSE       //input is either too short or too long
-  
+
   var/char = copytext(input, 1, 2)
   if(char != "#")
     return FALSE       //ensure that the first character is a #
@@ -180,18 +180,18 @@
     if(!(char in list("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F")))
       return FALSE
     safety_check++
-  
+
   return TRUE
-    
+
 /obj/machinery/botany/precisioneditor/proc/add_chem_to_seed(var/chem_name)
   if(!loaded_beaker)
     return
   var/chem_amount = loaded_beaker.reagents.get_reagent_amount(chem_name)
   if(!(chem_name in allowed_reagents))
-    visible_message("[bicon(src)] Error: The chosen compound is too complex to synthesize biologically.")
+    visible_message("[icon2html(src,viewers(src))] Error: The chosen compound is too complex to synthesize biologically.")
     return
   if(chem_amount < 100)
-    visible_message("[bicon(src)] Error: A minimum of 100 [SSchemistry.chemical_reagents[chem_name]] is required to perform this action.")
+    visible_message("[icon2html(src,viewers(src))] Error: A minimum of 100 [SSchemistry.chemical_reagents[chem_name]] is required to perform this action.")
     return
   else
     if(!isnull(SSplants.seeds[seed.seed.name])) //diverge the seed into a new species
@@ -204,7 +204,7 @@
     seed.modified += rand(15,25)
     if(prob(seed.modified))
       seed.modified = 101
-      visible_message("[bicon(src)] [src] pings unhappily, flashing a red warning light.")
+      visible_message("[icon2html(src,viewers(src))] [src] pings unhappily, flashing a red warning light.")
     loaded_beaker.reagents.remove_reagent(chem_name, chem_amount) //remove ALL of the reagent from the beaker
-    visible_message("[bicon(src)] The [src] beeps, indicating genetic synthesis was successful.")
+    visible_message("[icon2html(src,viewers(src))] The [src] beeps, indicating genetic synthesis was successful.")
   return
