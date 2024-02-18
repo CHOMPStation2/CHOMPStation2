@@ -29,7 +29,7 @@ GLOBAL_LIST_EMPTY(all_waypoints)
 	var/speedlimit = 1/(20 SECONDS) //top speed for autopilot, 5
 	var/accellimit = 0.001 //manual limiter for acceleration
 	req_one_access = list(access_pilot) //VOREStation Edit
-	ai_control = TRUE	//VOREStation Edit - AI/Borgs shouldn't really be flying off in ships without crew help // Chompstation Edit - Not an issue on this server, use of shuttles is extremely rare also .
+	ai_control = FALSE	//VOREStation Edit - AI/Borgs shouldn't really be flying off in ships without crew help // Chompstation Edit - Not an issue on this server, use of shuttles is extremely rare also . //Chompeditedit - No
 
 // fancy sprite
 /obj/machinery/computer/ship/helm/adv
