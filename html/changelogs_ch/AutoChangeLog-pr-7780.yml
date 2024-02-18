@@ -1,0 +1,6 @@
+author: "KotetsuRedwood"
+delete-after: True
+changes:
+  - rscadd: "Added Welder's Originals as a cookable food."
+  - rscadd: "Added Hot Butter Ice Cream as a cookable food."
+  - spellcheck: "Removed description of cream topping from the butterscotch pie."
