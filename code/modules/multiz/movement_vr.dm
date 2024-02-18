@@ -294,10 +294,10 @@
 			climb_time += 10 SECONDS
 		if(climbing_delay_min > 1.0)
 			climb_time += 2.5 SECONDS
-	if(L.nutrition >= 100 && L.nutrition <= 200)
+	if(nutrition >= 100 && nutrition <= 200)
 		to_chat(src, SPAN_NOTICE("Climbing while [isSynthetic() ? "low on power" : "hungry"] slows you down"))
 		climb_time += 1 SECONDS
-	else if(L.nutrition >= nutrition_cost && L.nutrition < 100)
+	else if(nutrition >= nutrition_cost && nutrition < 100)
 		to_chat(src, SPAN_DANGER("You [isSynthetic() ? "lack enough power" : "are too hungry"] to climb safely!"))
 		climb_time +=3 SECONDS
 		if(fall_chance < 30)
