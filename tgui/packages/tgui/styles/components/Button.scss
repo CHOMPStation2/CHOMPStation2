@@ -75,12 +75,6 @@ $bg-map: colors.$bg-map !default;
   }
 }
 
-.Button--dropdown {
-  line-height: base.em(16px);
-  height: base.em(22px);
-  padding: 0.2rem 0.5rem;
-}
-
 .Button--hasContent {
   // Add a margin to the icon to keep it separate from the text
   .fa,
@@ -100,8 +94,8 @@ $bg-map: colors.$bg-map !default;
 }
 
 .Button--ellipsis {
-  text-overflow: ellipsis;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .Button--fluid {
@@ -175,8 +169,4 @@ $bg-map: colors.$bg-map !default;
 .Button__content {
   display: block;
   align-self: stretch;
-}
-
-.Button__textMargin {
-  margin-left: 0.4rem;
 }

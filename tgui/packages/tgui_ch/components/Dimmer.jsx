@@ -5,15 +5,13 @@
  */
 
 import { classes } from 'common/react';
+import { Box } from './Box';
 
-import { Box, BoxProps } from './Box';
-
-export function Dimmer(props: BoxProps) {
+export const Dimmer = (props) => {
   const { className, children, ...rest } = props;
-
   return (
-    <Box className={classes(['Dimmer', className])} {...rest}>
+    <Box className={classes(['Dimmer', ...className])} {...rest}>
       <div className="Dimmer__inner">{children}</div>
     </Box>
   );
-}
+};

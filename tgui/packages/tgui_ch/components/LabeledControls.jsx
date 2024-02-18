@@ -4,11 +4,10 @@
  * @license MIT
  */
 
-import { Flex, FlexProps } from './Flex';
+import { Flex } from './Flex';
 
-export function LabeledControls(props: FlexProps) {
+export const LabeledControls = (props) => {
   const { children, wrap, ...rest } = props;
-
   return (
     <Flex
       mx={-0.5}
@@ -19,15 +18,10 @@ export function LabeledControls(props: FlexProps) {
       {children}
     </Flex>
   );
-}
+};
 
-type ItemProps = {
-  label: string;
-} & FlexProps;
-
-function LabeledControlsItem(props: ItemProps) {
+const LabeledControlsItem = (props) => {
   const { label, children, mx = 1, ...rest } = props;
-
   return (
     <Flex.Item mx={mx}>
       <Flex
@@ -43,6 +37,6 @@ function LabeledControlsItem(props: ItemProps) {
       </Flex>
     </Flex.Item>
   );
-}
+};
 
 LabeledControls.Item = LabeledControlsItem;

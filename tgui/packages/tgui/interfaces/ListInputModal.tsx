@@ -9,7 +9,7 @@ import {
   KEY_Z,
 } from '../../common/keycodes';
 import { useBackend } from '../backend';
-import { Autofocus, Button, Input, Section, Stack } from '../components';
+import { Button, Input, Section, Stack } from '../components';
 import { Window } from '../layouts';
 import { InputButtons } from './common/InputButtons';
 import { Loader } from './common/Loader';
@@ -188,16 +188,16 @@ const ListDisplay = (props) => {
     props;
 
   return (
-    <Section fill scrollable>
-      <Autofocus />
+    <Section fill scrollable tabIndex={0}>
       {filteredItems.map((item, index) => {
         return (
           <Button
             color="transparent"
             fluid
+            id={index}
             key={index}
             onClick={() => onClick(index)}
-            onDoubleClick={(event) => {
+            onDblClick={(event) => {
               event.preventDefault();
               act('submit', { entry: filteredItems[selected] });
             }}
