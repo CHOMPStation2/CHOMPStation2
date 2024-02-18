@@ -151,7 +151,7 @@
 /datum/event/infestation/proc/on_vermin_destruction(var/mob/M)
 	spawned_vermin -= M
 	UnregisterSignal(M, COMSIG_OBSERVER_DESTROYED)
-
+*/
 
 
 /datum/event/infestation/announce()
