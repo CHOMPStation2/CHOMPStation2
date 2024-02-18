@@ -6,4 +6,4 @@
 		else
 			if(mind && mind.assigned_role) //CHOMPEdit
 				return //CHOMPEdit
-			cleanup_timer = QDEL_IN(src, 10 MINUTES)
+			cleanup_timer = QDEL_IN_STOPPABLE(src, 10 MINUTES)
