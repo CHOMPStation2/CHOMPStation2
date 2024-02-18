@@ -15,6 +15,7 @@
 	vessel_mass = 3000
 	vessel_size = SHIP_SIZE_SMALL
 	shuttle = "Stargazer"
+	known = TRUE
 
 /obj/machinery/computer/shuttle_control/explore/stargazer
 	name = "short jump console"
@@ -37,6 +38,7 @@
 	vessel_mass = 6000
 	vessel_size = SHIP_SIZE_SMALL
 	shuttle = "Baby_mammoth"
+	known = TRUE
 
 /obj/machinery/computer/shuttle_control/explore/baby_mammoth
 	name = "short jump console"
@@ -59,6 +61,7 @@
 	vessel_mass = 3500
 	vessel_size = SHIP_SIZE_SMALL
 	shuttle = "Ursula"
+	known = TRUE
 
 /obj/machinery/computer/shuttle_control/explore/ursula
 	name = "short jump console"
@@ -81,6 +84,7 @@
 	vessel_mass = 1500
 	vessel_size = SHIP_SIZE_SMALL
 	shuttle = "Needle"
+	known = TRUE
 
 /obj/machinery/computer/shuttle_control/explore/needle
 	name = "short jump console"
@@ -103,6 +107,7 @@
 	vessel_mass = 5500
 	vessel_size = SHIP_SIZE_SMALL
 	shuttle = "Echidna"
+	known = TRUE
 
 /obj/machinery/computer/shuttle_control/explore/echidna
 	name = "short jump console"
@@ -125,6 +130,7 @@
 	vessel_mass = 5500
 	vessel_size = SHIP_SIZE_SMALL
 	shuttle = "Space Bus"
+	known = TRUE
 
 /obj/machinery/computer/shuttle_control/explore/spacebus
 	name = "short jump console"

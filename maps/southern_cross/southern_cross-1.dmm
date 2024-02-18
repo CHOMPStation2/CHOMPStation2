@@ -7335,17 +7335,8 @@
 /obj/effect/floor_decal/industrial/arrows/blue{
 	dir = 1
 	},
-/obj/machinery/button/remote/airlock{
-	name = "Rear Hatch Control";
-	pixel_x = -26;
-	specialfunctions = 4;
-	dir = 4
-	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospheric_field_generator/perma/underdoors,
-/obj/machinery/door/airlock/glass_external{
-	id_tag = "spacebus_outer"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 4
 	},
@@ -7353,6 +7344,11 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/multi_tile/glass{
+	id_tag = "spacebus_outer";
+	locked = 1;
+	icon_state = "door_locked"
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/spacebus)
@@ -12081,10 +12077,11 @@
 /area/teleporter/firstdeck)
 "diS" = (
 /obj/effect/shuttle_landmark{
-	base_area = /area/expoutpost/hangarfive;
+	base_area = /area/hangar/two;
 	base_turf = /turf/simulated/floor/reinforced;
 	landmark_tag = "hangar_2";
-	name = "Hangar 2"
+	name = "Hangar 2";
+	docking_controller = "spacebus"
 	},
 /obj/structure/cable/blue{
 	d1 = 2;
@@ -12626,14 +12623,18 @@
 /turf/simulated/floor/tiled,
 /area/hangar/two)
 "dPg" = (
-/obj/effect/catwalk_plated/dark,
 /obj/structure/cable/blue{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/plating,
-/area/shuttle/spacebus)
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/reinforced,
+/area/hangar/two)
 "dPz" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -16388,10 +16389,6 @@
 /obj/machinery/reagentgrinder,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
-"fuz" = (
-/obj/effect/catwalk_plated/dark,
-/turf/simulated/floor/plating,
-/area/shuttle/spacebus)
 "fvM" = (
 /obj/structure/table/glass,
 /obj/item/weapon/storage/box/gloves{
@@ -22562,10 +22559,6 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/xenobiology)
-"mxL" = (
-/obj/structure/sign/nanotrasen,
-/turf/simulated/wall/rthull,
-/area/shuttle/spacebus)
 "myr" = (
 /obj/machinery/computer/operating{
 	name = "Xenobiology Operating Computer"
@@ -26167,9 +26160,6 @@
 	dir = 1
 	},
 /obj/machinery/atmospheric_field_generator/perma/underdoors,
-/obj/machinery/door/airlock/glass_external{
-	id_tag = "spacebus_outer"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 4
 	},
@@ -27166,11 +27156,11 @@
 /turf/simulated/wall,
 /area/medical/first_aid_station/firstdeck)
 "rvl" = (
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
 	frequency = 1380;
 	id_tag = "spacebus";
-	pixel_y = -26;
-	tag_exterior_door = "spacebus_outer"
+	pixel_y = -25;
+	tag_door = "spacebus_outer"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/spacebus)
@@ -33555,11 +33545,9 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology)
 "yiE" = (
-/obj/structure/sign/nanotrasen{
-	pixel_x = 32
-	},
-/turf/simulated/floor/reinforced,
-/area/hangar/two)
+/obj/structure/sign/nanotrasen,
+/turf/simulated/wall/rthull,
+/area/shuttle/spacebus)
 "yiP" = (
 /obj/machinery/door/window/brigdoor/westleft{
 	name = "Containment Pen";
@@ -73817,7 +73805,7 @@ arE
 asE
 atJ
 xhd
-yiE
+xhd
 xhd
 xhd
 xhd
@@ -74075,7 +74063,7 @@ arE
 asE
 atJ
 xhd
-nHZ
+yiE
 nHZ
 nHZ
 nHZ
@@ -75118,7 +75106,7 @@ oJM
 aGB
 aGB
 qps
-fuz
+xhd
 xhd
 dOZ
 dWL
@@ -76139,7 +76127,7 @@ dWL
 pSW
 atJ
 xhd
-mxL
+yiE
 nHZ
 nHZ
 nHZ
