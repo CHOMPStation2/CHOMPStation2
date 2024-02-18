@@ -64,6 +64,7 @@
 	emote_message_3p = "gwahs."
 	emote_message_1p_target = "You gwah at TARGET."
 	emote_message_3p_target = "gwahs at TARGET."
+	emote_sound = 'modular_chomp/sound/voice/emotes/gwah.ogg'
 
 /decl/emote/audible/wawa
 	key = "wawa"
@@ -71,3 +72,4 @@
 	emote_message_3p = "wawas."
 	emote_message_1p_target = "You wawa at TARGET."
 	emote_message_3p_target = "wawas at TARGET."
+	emote_sound = 'modular_chomp/sound/voice/emotes/wawa.ogg'
