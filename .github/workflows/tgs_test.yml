@@ -6,7 +6,7 @@ on:
     paths:
     - '.tgs.yml'
     - '.github/workflows/tgs_test.yml'
-    - 'dependencies.sh'
+    - '_build_dependencies.sh'
     - 'code/__DEFINES/tgs.config.dm'
     - 'code/__DEFINES/tgs.dm'
     - 'code/game/world.dm'
@@ -19,7 +19,7 @@ on:
     paths:
     - '.tgs.yml'
     - '.github/workflows/tgs_test.yml'
-    - 'dependencies.sh'
+    - '_build_dependencies.sh'
     - 'code/__DEFINES/tgs.config.dm'
     - 'code/__DEFINES/tgs.dm'
     - 'code/game/world.dm'
@@ -61,4 +61,4 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Test TGS Integration
-        run: dotnet run -c Release --project tools/tgs_test ${{ github.repository }} /tgs_instances/tgstation ${{ env.TGS_API_PORT }} ${{ github.event.pull_request.head.sha || github.sha }} ${{ secrets.GITHUB_TOKEN }} ${{ env.PR_NUMBER }}
+        run: dotnet run -c Release --project tools/tgs_test ${{ github.repository }} /tgs_instances/chompstation ${{ env.TGS_API_PORT }} ${{ github.event.pull_request.head.sha || github.sha }} ${{ secrets.GITHUB_TOKEN }} ${{ env.PR_NUMBER }}
