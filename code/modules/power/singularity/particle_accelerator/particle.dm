@@ -101,4 +101,4 @@
 	else
 		//sleep(lag) //ChompEDIT
 		//move(lag) //ChompEDIT
-		addtimer(CALLBACK(src, PROC_REF(move), lag), lag)
+		addtimer(CALLBACK(src, PROC_REF(move), lag), lag) //ChompEDIT
