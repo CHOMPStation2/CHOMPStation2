@@ -268,8 +268,8 @@
 //If for some reason touch effects are bypassed (e.g. injecting stuff directly into a reagent container or person),
 //call the appropriate trans_to_*() proc.
 /datum/reagents/proc/trans_to(var/atom/target, var/amount = 1, var/multiplier = 1, var/copy = 0)
-	//CHOMPEdit Start, we only can do the splashing first on carbon (Runtime reasons)
-	if(iscarbon(target))
+	//CHOMPEdit Start, do not splash brains!
+	if(ismob(target) && !isbrain(target))
 		return splash_mob(target, amount * multiplier, copy)
 	//CHOMPEdit End
 	touch(target, amount * multiplier) //First, handle mere touch effects
