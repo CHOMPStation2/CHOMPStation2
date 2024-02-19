@@ -25,6 +25,7 @@
 /turf/simulated/proc/wet_floor(var/wet_val = 1)
 	if(wet > 2)	//Can't mop up ice
 		return
+	/* //ChompEDIT START - huge CPU usage
 	spawn(0)
 		wet = wet_val
 		if(wet_overlay)
@@ -38,6 +39,23 @@
 		if(wet_overlay)
 			cut_overlay(wet_overlay)
 			wet_overlay = null
+	*/ //ChompEDIT CONTINUE
+	wet = wet_val
+	if(wet_overlay)
+		cut_overlay(wet_overlay)
+	wet_overlay = image('icons/effects/water.dmi', icon_state = "wet_floor")
+	add_overlay(wet_overlay)
+	if(wet == 2)
+		addtimer(CALLBACK(src, PROC_REF(wet_floor_finish)), 160 SECONDS)
+	else
+		addtimer(CALLBACK(src, PROC_REF(wet_floor_finish)), 40 SECONDS)
+
+/turf/simulated/proc/wet_floor_finish()
+	wet = 0
+	if(wet_overlay)
+		cut_overlay(wet_overlay)
+		wet_overlay = null
+//ChompEDIT END
 
 /turf/simulated/proc/freeze_floor()
 	if(!wet) // Water is required for it to freeze.
