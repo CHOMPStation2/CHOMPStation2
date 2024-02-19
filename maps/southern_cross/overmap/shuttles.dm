@@ -127,7 +127,7 @@
 /obj/effect/overmap/visitable/ship/landable/spacebus
 	name = "Space Bus"
 	desc = "Southern Cross' civilian transport vessel"
-	vessel_mass = 5500
+	vessel_mass = 2000
 	vessel_size = SHIP_SIZE_SMALL
 	shuttle = "Space Bus"
 	known = TRUE

@@ -3,7 +3,7 @@
 /turf/simulated/floor/airless{
 	icon_state = "solarpanel"
 	},
-/area/space)
+/area/template_noop)
 "ac" = (
 /turf/template_noop,
 /area/template_noop)
@@ -12,38 +12,38 @@
 	amount = 2
 	},
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "ae" = (
 /obj/machinery/power/solar/fake,
 /turf/simulated/floor/airless{
 	icon_state = "solarpanel"
 	},
-/area/space)
+/area/template_noop)
 "ag" = (
 /obj/structure/lattice,
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "ah" = (
 /obj/item/stack/cable_coil/cut{
 	amount = 1
 	},
 /obj/effect/catwalk_plated/white,
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "ai" = (
 /obj/item/weapon/material/shard{
 	icon_state = "medium"
 	},
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "aj" = (
 /obj/item/weapon/material/shard,
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "ak" = (
 /obj/item/stack/rods,
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "ap" = (
 /turf/simulated/wall/titanium,
 /area/derelict/bridge)
@@ -581,7 +581,7 @@
 	icon_state = "small"
 	},
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "cS" = (
 /obj/structure/shuttle/window,
 /obj/structure/grille/rustic,
@@ -1072,7 +1072,7 @@
 	use_power = 1
 	},
 /turf/simulated/floor/airless,
-/area/space)
+/area/template_noop)
 "eE" = (
 /obj/structure/bed/chair/sofa/right,
 /turf/simulated/floor/wood,
@@ -1872,7 +1872,6 @@
 	dir = 1
 	},
 /turf/simulated/wall/titanium,
-/turf/space,
 /area/derelict/eva{
 	name = "Derelict Annex"
 	})
@@ -2209,9 +2208,6 @@
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/crew_quarters)
-"iq" = (
-/turf/template_noop,
-/area/space)
 "it" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
@@ -2305,7 +2301,7 @@
 	amount = 1
 	},
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "iM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/chapel{
@@ -2380,7 +2376,7 @@
 	})
 "iY" = (
 /turf/simulated/floor/airless,
-/area/space)
+/area/template_noop)
 "iZ" = (
 /obj/effect/decal/remains/human{
 	desc = "This guy seemed to have died in terrible way! Half his remains are dust.";
@@ -2467,22 +2463,12 @@
 /turf/simulated/shuttle/floor/black,
 /area/derelict/arrival)
 "jl" = (
-/obj/machinery/door/airlock/external{
-	id_tag = "s_docking_airlock";
-	locked = 1;
-	name = "Shuttle Airlock"
-	},
 /turf/simulated/shuttle/floor{
 	icon_state = "floor4"
 	},
 /area/derelict/arrival)
 "jm" = (
-/obj/machinery/door/airlock/external{
-	name = "Docking Port"
-	},
-/turf/simulated/floor{
-	icon_state = "brown"
-	},
+/turf/simulated/floor,
 /area/derelict/arrival)
 "jn" = (
 /obj/effect/decal/cleanable/dirt,
@@ -2530,12 +2516,6 @@
 /obj/machinery/power/singularity_beacon/syndicate,
 /mob/living/simple_mob/animal/space/carp,
 /turf/simulated/floor/reinforced/airless,
-/area/derelict/eva{
-	name = "Derelict Annex"
-	})
-"jB" = (
-/turf/simulated/wall/titanium,
-/turf/space,
 /area/derelict/eva{
 	name = "Derelict Annex"
 	})
@@ -3325,12 +3305,6 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/derelict/arrival)
-"lu" = (
-/obj/machinery/door/airlock/external{
-	name = "Docking Port"
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/arrival)
 "lv" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /obj/effect/decal/remains/human{
@@ -3790,7 +3764,7 @@
 	icon_state = "medium"
 	},
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "mZ" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -3972,7 +3946,6 @@
 	dir = 8
 	},
 /turf/simulated/wall/titanium,
-/turf/space,
 /area/derelict/eva{
 	name = "Derelict Annex"
 	})
@@ -4024,10 +3997,6 @@
 	},
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/arrival)
-"nL" = (
-/turf/simulated/wall/titanium,
-/turf/space,
-/area/space)
 "nO" = (
 /obj/item/clothing/under/pants/track,
 /obj/item/clothing/shoes/black,
@@ -4090,10 +4059,6 @@
 /area/derelict/eva{
 	name = "Derelict Annex"
 	})
-"nU" = (
-/turf/simulated/wall/titanium,
-/turf/space,
-/area/derelict/crew_quarters)
 "nV" = (
 /obj/effect/floor_decal/corner/green/full{
 	dir = 8
@@ -4122,7 +4087,7 @@
 "od" = (
 /obj/structure/grille/broken,
 /turf/simulated/floor/airless,
-/area/space)
+/area/template_noop)
 "oe" = (
 /mob/living/simple_mob/animal/space/carp,
 /turf/template_noop,
@@ -4321,8 +4286,7 @@
 /turf/template_noop,
 /area/derelict/arrival)
 "oG" = (
-/turf/space,
-/turf/simulated/wall/titanium,
+/turf/simulated/shuttle/floor,
 /area/derelict/arrival)
 "oH" = (
 /obj/structure/lattice,
@@ -4382,12 +4346,6 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva{
-	name = "Derelict Annex"
-	})
-"oQ" = (
-/turf/space,
-/turf/simulated/wall/titanium,
 /area/derelict/eva{
 	name = "Derelict Annex"
 	})
@@ -4520,12 +4478,8 @@
 /obj/effect/floor_decal/corner/green/full{
 	dir = 4
 	},
-/turf/space,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/crew_quarters)
-"pk" = (
-/turf/simulated/wall/titanium,
-/area/space)
 "pl" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -4635,10 +4589,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/crew_quarters)
-"pG" = (
-/turf/simulated/wall/titanium,
-/turf/space,
-/area/derelict/arrival)
 "pI" = (
 /obj/machinery/light/small{
 	dir = 4;
@@ -4684,7 +4634,7 @@
 "pQ" = (
 /obj/item/stack/material/steel,
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "pR" = (
 /obj/item/weapon/material/shard,
 /turf/template_noop,
@@ -5492,7 +5442,7 @@
 	amount = 1
 	},
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "sh" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -5700,7 +5650,7 @@
 "xS" = (
 /mob/living/simple_mob/animal/space/carp/large,
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "ya" = (
 /obj/structure/closet/crate/heph,
 /turf/simulated/floor/tiled/old_tile/yellow,
@@ -5730,7 +5680,7 @@
 /mob/living/simple_mob/animal/space/carp,
 /obj/machinery/power/smes,
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "AR" = (
 /mob/living/simple_mob/animal/space/carp/large,
 /turf/simulated/floor/tiled/old_tile,
@@ -5781,10 +5731,6 @@
 /area/derelict/eva{
 	name = "Derelict Annex"
 	})
-"IX" = (
-/obj/effect/catwalk_plated/white,
-/turf/template_noop,
-/area/space)
 "JE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/crate/cooper,
@@ -5908,7 +5854,7 @@
 "RE" = (
 /mob/living/simple_mob/animal/space/carp,
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "Sp" = (
 /obj/machinery/shower{
 	dir = 8;
@@ -6236,7 +6182,7 @@ ac
 ac
 ac
 ac
-iq
+ac
 ac
 ac
 ac
@@ -6406,7 +6352,7 @@ ac
 ac
 mm
 mm
-jl
+oG
 mm
 mm
 jl
@@ -6501,7 +6447,7 @@ ro
 jm
 ro
 ro
-lu
+mf
 ro
 ro
 ac
@@ -6511,7 +6457,7 @@ ac
 ac
 ac
 ac
-iq
+ac
 ac
 ac
 ac
@@ -6880,7 +6826,7 @@ nw
 ro
 ro
 ro
-oG
+ro
 ac
 ai
 ac
@@ -7127,7 +7073,7 @@ ac
 ac
 ac
 ro
-pG
+ro
 ed
 ha
 eI
@@ -7257,7 +7203,7 @@ oc
 ac
 ac
 ac
-iq
+ac
 ac
 ac
 ac
@@ -7612,7 +7558,7 @@ ac
 ac
 ac
 ac
-nL
+TA
 oc
 oc
 oc
@@ -7626,10 +7572,10 @@ oc
 oc
 oc
 qf
-oG
+ro
 ac
 ac
-iq
+ac
 cR
 ac
 ac
@@ -7772,7 +7718,7 @@ dB
 gM
 gM
 ha
-oG
+ro
 fG
 ro
 ac
@@ -7863,7 +7809,7 @@ dq
 dC
 gM
 ha
-oG
+ro
 ro
 ac
 ac
@@ -7889,7 +7835,7 @@ ac
 ac
 ac
 ac
-iq
+ac
 ac
 ac
 oc
@@ -7946,7 +7892,7 @@ ac
 ac
 ac
 ro
-pG
+ro
 ha
 ha
 cM
@@ -7954,7 +7900,7 @@ wn
 ha
 dD
 dM
-oG
+ro
 ro
 ac
 ac
@@ -8037,7 +7983,7 @@ ac
 ac
 ac
 ro
-pG
+ro
 ha
 cn
 ha
@@ -8074,13 +8020,13 @@ ac
 ac
 ac
 RE
-iq
+ac
 xS
 ac
 ac
 ai
 ac
-pG
+ro
 ro
 pI
 qS
@@ -8261,7 +8207,7 @@ ag
 ac
 ac
 ac
-iq
+ac
 ac
 ac
 ac
@@ -8332,7 +8278,7 @@ ac
 ac
 lc
 eL
-jB
+lc
 hN
 hN
 mi
@@ -8513,7 +8459,7 @@ ac
 ac
 ac
 lc
-jB
+lc
 gt
 gP
 fk
@@ -8604,7 +8550,7 @@ ak
 ac
 ag
 lc
-jB
+lc
 ga
 gu
 gQ
@@ -8637,7 +8583,7 @@ ac
 ac
 ac
 ro
-pG
+ro
 rT
 qS
 rB
@@ -8719,8 +8665,8 @@ ii
 ii
 ja
 or
-oQ
-oQ
+lc
+lc
 ac
 ac
 ac
@@ -8794,7 +8740,7 @@ fj
 fJ
 fR
 hx
-jB
+lc
 eL
 lc
 ac
@@ -8802,7 +8748,7 @@ jy
 km
 lb
 ac
-oQ
+lc
 nn
 ii
 ii
@@ -8822,7 +8768,7 @@ ac
 ac
 ac
 ro
-pG
+ro
 rF
 qS
 re
@@ -8853,11 +8799,11 @@ ac
 ah
 aY
 ab
-iq
+ac
 ab
 ac
 ae
-iq
+ac
 ab
 ac
 ac
@@ -8878,7 +8824,7 @@ ac
 ac
 ac
 lc
-jB
+lc
 gw
 mi
 fj
@@ -8940,12 +8886,12 @@ ac
 "}
 (33,1,1) = {"
 ac
-iq
 ac
 ac
 ac
 ac
-iq
+ac
+ac
 ab
 ac
 ac
@@ -9067,7 +9013,7 @@ fj
 fJ
 mi
 gw
-jB
+lc
 eL
 lc
 ag
@@ -9145,7 +9091,7 @@ cD
 bX
 as
 ac
-iq
+ac
 ac
 ac
 ac
@@ -9258,7 +9204,7 @@ ag
 ac
 lc
 lc
-jB
+lc
 lD
 ii
 ii
@@ -9349,7 +9295,7 @@ ac
 ag
 lc
 lc
-jB
+lc
 lD
 lD
 uz
@@ -9357,7 +9303,7 @@ XW
 ii
 ii
 ac
-iq
+ac
 ac
 ac
 lc
@@ -9401,9 +9347,9 @@ ac
 (38,1,1) = {"
 ac
 ae
-iq
 ac
-iq
+ac
+ac
 aY
 aY
 ac
@@ -9440,7 +9386,7 @@ ac
 ac
 ac
 lc
-jB
+lc
 lD
 lD
 ii
@@ -9493,13 +9439,13 @@ lH
 (39,1,1) = {"
 ac
 ac
-iq
 ac
 ac
 ac
-iq
 ac
-iq
+ac
+ac
+ac
 ac
 ac
 ac
@@ -9586,7 +9532,7 @@ st
 ac
 ac
 ac
-iq
+ac
 ac
 ac
 ac
@@ -9630,7 +9576,7 @@ jA
 ii
 lD
 lD
-jB
+lc
 lc
 ac
 ac
@@ -9714,14 +9660,14 @@ lc
 ac
 ac
 ac
-iq
+ac
 uz
 ii
 ii
 lD
 lD
 lD
-jB
+lc
 lc
 lc
 ac
@@ -9807,12 +9753,12 @@ lc
 ac
 ai
 ac
-iq
+ac
 ja
 iZ
-jB
+lc
 kq
-jB
+lc
 lc
 lc
 ac
@@ -9901,7 +9847,7 @@ ac
 ac
 ak
 ac
-oQ
+lc
 lc
 kr
 lc
@@ -9987,7 +9933,7 @@ fs
 fQ
 mi
 hP
-oQ
+lc
 eL
 lc
 ac
@@ -10145,7 +10091,7 @@ ac
 ac
 ac
 ab
-iq
+ac
 ac
 ac
 ac
@@ -10166,7 +10112,7 @@ ac
 ac
 ag
 lc
-jB
+lc
 ft
 mi
 fs
@@ -10266,7 +10212,7 @@ gB
 fQ
 mi
 hB
-jB
+lc
 eL
 lc
 ac
@@ -10294,7 +10240,7 @@ ac
 ac
 ac
 ro
-oG
+ro
 rF
 qS
 qS
@@ -10351,7 +10297,7 @@ ag
 ag
 ag
 lc
-jB
+lc
 hB
 gj
 fJ
@@ -10403,7 +10349,7 @@ ac
 ac
 ac
 ac
-IX
+aY
 ac
 ac
 ac
@@ -10477,7 +10423,7 @@ ac
 ac
 ac
 ro
-pG
+ro
 rF
 qS
 qS
@@ -10630,7 +10576,7 @@ ac
 ac
 ac
 lc
-jB
+lc
 gU
 hP
 hC
@@ -10724,7 +10670,7 @@ ac
 ac
 lc
 eL
-jB
+lc
 hP
 hR
 mi
@@ -11569,7 +11515,7 @@ ac
 ac
 pm
 dH
-nU
+pm
 qA
 qA
 qA
@@ -12126,7 +12072,7 @@ om
 oC
 Ol
 pm
-pk
+TA
 TA
 ac
 ac

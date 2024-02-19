@@ -4111,8 +4111,7 @@
 	frequency = 1380;
 	id_tag = "hangar_2";
 	name = "shuttle bay controller";
-	pixel_y = 26;
-	tag_door = "hangar_2_door"
+	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hangar/two)
@@ -7336,7 +7335,9 @@
 	dir = 1
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/atmospheric_field_generator/perma/underdoors,
+/obj/machinery/door/airlock/multi_tile/glass{
+	id_tag = "spacebus_south"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 4
 	},
@@ -7345,11 +7346,8 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/multi_tile/glass{
-	id_tag = "spacebus_outer";
-	locked = 1;
-	icon_state = "door_locked"
-	},
+/obj/effect/map_helper/airlock/door/simple,
+/obj/machinery/atmospheric_field_generator/perma/underdoors,
 /turf/simulated/shuttle/plating,
 /area/shuttle/spacebus)
 "aKH" = (
@@ -12081,7 +12079,7 @@
 	base_turf = /turf/simulated/floor/reinforced;
 	landmark_tag = "hangar_2";
 	name = "Hangar 2";
-	docking_controller = "spacebus"
+	docking_controller = "hangar_2"
 	},
 /obj/structure/cable/blue{
 	d1 = 2;
@@ -27159,8 +27157,7 @@
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	frequency = 1380;
 	id_tag = "spacebus";
-	pixel_y = -25;
-	tag_door = "spacebus_outer"
+	pixel_y = -25
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/spacebus)
@@ -27389,7 +27386,6 @@
 /turf/simulated/wall,
 /area/hallway/primary/firstdeck/starboard)
 "rJG" = (
-/obj/structure/table/darkglass,
 /obj/structure/table/darkglass,
 /obj/machinery/light{
 	dir = 8;
@@ -28415,6 +28411,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled,
 /area/hangar/lockerroomtwo)
 "sPE" = (
