@@ -1,0 +1,5 @@
+author: "KotetsuRedwood"
+delete-after: True
+changes:
+  - bugfix: "Changed the recipe for hot butter ice cream to use ice instead of milk."
+  - bugfix: "Gives Butterscotch and Hot Butter Ice Cream trash items when eaten. You have to eat the bowls deliberately now."
