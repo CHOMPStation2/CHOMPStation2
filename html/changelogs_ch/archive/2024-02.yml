@@ -209,3 +209,15 @@
 2024-02-18:
   Kashargul:
   - bugfix: fixes the character Directory
+2024-02-19:
+  Kashargul:
+  - rscadd: the item digest blacklist to belly reagents
+  - rscadd: the drone board to the list to prevent round removing of lost drones in
+      vore encounters
+  - bugfix: fixes the runtime in the liquid system hopefully fully this time
+  KotetsuRedwood:
+  - rscadd: Added Welder's Originals as a cookable food.
+  - rscadd: Added Hot Butter Ice Cream as a cookable food.
+  - spellcheck: Removed description of cream topping from the butterscotch pie.
+  - rscadd: Added *gwah and *wawa as sound emotes.
+  - sound: Added sounds for *gwah and *wawa emotes.
