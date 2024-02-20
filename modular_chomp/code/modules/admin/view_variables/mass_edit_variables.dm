@@ -5,6 +5,9 @@
 
 	var/method = 0	//0 means strict type detection while 1 means this type and all subtypes (IE: /obj/item with this set to 1 will set it to ALL items)
 
+	if(tgui_alert(usr, "Are you sure you'd like to mass-modify every instance of the [var_name] variable? This can break everything if you do not know what you are doing.", "Slow down, chief!", list("Yes", "No"), 60 SECONDS) != "Yes")
+		return
+
 	if(!check_rights(R_VAREDIT))
 		return
 
@@ -197,15 +200,15 @@
 	log_admin("[key_name(src)] mass modified [original_name]'s [variable] to [O.vars[variable]] ([accepted] objects modified)")
 	message_admins("[key_name_admin(src)] mass modified [original_name]'s [variable] to [O.vars[variable]] ([accepted] objects modified)")
 
-
-/proc/get_all_of_type(var/T, subtypes = TRUE)
+//not using global lists as vv is a debug function and debug functions should rely on as less things as possible.
+/proc/get_all_of_type(T, subtypes = TRUE)
 	var/list/typecache = list()
 	typecache[T] = 1
 	if (subtypes)
 		typecache = typecacheof(typecache)
 	. = list()
 	if (ispath(T, /mob))
-		for(var/mob/thing in mob_list)
+		for(var/mob/thing in world)
 			if (typecache[thing.type])
 				. += thing
 			CHECK_TICK
@@ -217,7 +220,13 @@
 			CHECK_TICK
 
 	else if (ispath(T, /obj/machinery))
-		for(var/obj/machinery/thing in machines)
+		for(var/obj/machinery/thing in world)
+			if (typecache[thing.type])
+				. += thing
+			CHECK_TICK
+
+	else if (ispath(T, /obj/item))
+		for(var/obj/item/thing in world)
 			if (typecache[thing.type])
 				. += thing
 			CHECK_TICK

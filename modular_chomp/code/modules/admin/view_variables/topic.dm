@@ -1,5 +1,5 @@
 //DO NOT ADD MORE TO THIS FILE.
-//Use vv_do_topic()!
+//Use vv_do_topic() for datums!
 /client/proc/view_var_Topic(href, href_list, hsrc)
 	if((usr.client != src) || !src.holder)
 		return
@@ -589,7 +589,8 @@
 		to_chat(C, "[holder.fakekey ? "an Administrator" : "[usr.client.key]"] has granted you access to view a View Variables window")
 		C.debug_variables(thing)
 
+	//Finally, refresh if something modified the list.
 	if(href_list["datumrefresh"])
 		var/datum/DAT = locate(href_list["datumrefresh"])
-		if(istype(DAT, /datum) || istype(DAT, /client) || islist(DAT))
+		if(isdatum(DAT) || istype(DAT, /client) || islist(DAT))
 			debug_variables(DAT)
