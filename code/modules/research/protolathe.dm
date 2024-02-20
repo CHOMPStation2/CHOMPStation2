@@ -14,7 +14,11 @@
 
 	var/mat_efficiency = 1
 	var/speed = 1
+<<<<<<< HEAD
 	var/list/LockedDesigns = list() //CHOMPADDITION: FOR VR mainly.
+=======
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	//VOREStation Edit - Broke this into lines
 	materials = list(
 		MAT_STEEL = 0,
@@ -123,7 +127,11 @@
 	if(busy)
 		to_chat(user, "<span class='notice'>\The [src] is busy. Please wait for completion of previous operation.</span>")
 		return 1
+<<<<<<< HEAD
 	if(!LAZYLEN(LockedDesigns) && default_deconstruction_screwdriver(user, O))//CHOMPADDITION Locked lathes are hard coded 
+=======
+	if(default_deconstruction_screwdriver(user, O))
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		if(linked_console)
 			linked_console.linked_lathe = null
 			linked_console = null
@@ -191,11 +199,14 @@
 	return
 
 /obj/machinery/r_n_d/protolathe/proc/canBuild(var/datum/design/D)
+<<<<<<< HEAD
 	//CHOMPADDITION: LOCKED designs
 	for(var/datum/design/X in LockedDesigns)
 		if(X == D)
 			return 0
 	//CHOMPADDITION: LOCKED designs
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	for(var/M in D.materials)
 		if(materials[M] < (D.materials[M] * mat_efficiency))
 			return 0

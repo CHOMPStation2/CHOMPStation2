@@ -224,8 +224,13 @@
 
 /obj/item/weapon/storage/box/flare
 	name = "box of flares"
+<<<<<<< HEAD
 	desc = "A box containing 14 flares." // CHOMPedit: More flares.
 	starts_with = list(/obj/item/device/flashlight/flare = 14) // CHOMPedit: More flares.
+=======
+	desc = "A box containing 4 flares."
+	starts_with = list(/obj/item/device/flashlight/flare = 4)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/item/weapon/storage/box/trackimp
 	name = "boxed tracking implant kit"

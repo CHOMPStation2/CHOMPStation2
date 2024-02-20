@@ -92,7 +92,11 @@
 		if(user)
 			to_chat(user, "<span class='notice'>The connected wire doesn't have enough current.</span>")
 		return
+<<<<<<< HEAD
 	for(var/obj/singularity/singulo in GLOB.all_singularities)
+=======
+	for(var/obj/singularity/singulo in all_singularities)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		if(singulo.z == z)
 			singulo.target = src
 	icon_state = "[icontype]1"
@@ -102,7 +106,11 @@
 		to_chat(user, "<span class='notice'>You activate the beacon.</span>")
 
 /obj/machinery/power/singularity_beacon/proc/Deactivate(mob/user = null)
+<<<<<<< HEAD
 	for(var/obj/singularity/singulo in GLOB.all_singularities)
+=======
+	for(var/obj/singularity/singulo in all_singularities)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		if(singulo.target == src)
 			singulo.target = null
 	icon_state = "[icontype]0"

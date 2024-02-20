@@ -117,4 +117,8 @@
 	if(istype(user,/mob/observer))
 		return
 
+<<<<<<< HEAD
 	qdel(user)
+=======
+	qdel(user)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

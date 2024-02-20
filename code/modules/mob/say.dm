@@ -108,6 +108,7 @@
 	if(speaking.flags & NONVERBAL)
 		if(sdisabilities & BLIND || blinded)
 			return FALSE
+<<<<<<< HEAD
 		if(!other) //CHOMPEdit - Fixes seeing non-verbal languages while being held
 			return FALSE
 		//CHOMPEdit Start - Fixes seeing non-verbal languages while being held
@@ -123,6 +124,10 @@
 		else if((!other) in view(src))
 			return FALSE
 		//CHOMPEdit End
+=======
+		if(!other || !(other in view(src)))
+			return FALSE
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	//Language check.
 	for(var/datum/language/L in languages)

@@ -202,7 +202,11 @@
 
 /obj/item/clothing/head/rabbitears
 	name = "rabbit ears"
+<<<<<<< HEAD
 	desc = "A pair of rabbit ears!" //CHOMPEDIT:weird description bgone
+=======
+	desc = "Wearing these makes you looks useless, and only good for your sex appeal."
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	icon_state = "bunny"
 	body_parts_covered = 0
 

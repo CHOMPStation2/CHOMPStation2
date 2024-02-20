@@ -44,6 +44,7 @@
 			var/index = 0
 			for(var/datum/feed_message/FM in channel.messages)
 				index++
+<<<<<<< HEAD
 				if(FM.img)
 					usr << browse_rsc(FM.img, "pda_news_tmp_photo_[feeds["channel"]]_[index].png")
 				// News stories are HTML-stripped but require newline replacement to be properly displayed in NanoUI
@@ -57,6 +58,20 @@
 						"caption" = FM.caption,
 						"index" = index
 					)
+=======
+				var/list/msgdata = list(
+					"author" = FM.author,
+					"body" = FM.body,
+					"img" = null,
+					"message_type" = FM.message_type,
+					"time_stamp" = FM.time_stamp,
+					"caption" = FM.caption,
+					"index" = index
+				)
+				if(FM.img)
+					msgdata["img"] = icon2base64(FM.img)
+				messages[++messages.len] = msgdata
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 		feeds[++feeds.len] = list(
 					"name" = channel.channel_name,
@@ -96,6 +111,7 @@
 		news.Swap(1, 3) // List is sorted in ascending order of timestamp, we want descending
 
 	return news
+<<<<<<< HEAD
 
 
 
@@ -541,3 +557,5 @@
 			target_doors += B
 
 	return target_doors
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

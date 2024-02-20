@@ -668,7 +668,11 @@ var/global/list/all_objectives = list()
 		//if (!target.current.restrained())
 		//	return 0 // They're loose. Close but no cigar.
 
+<<<<<<< HEAD
 		var/area/shuttle/skipjack/A = locate() // CHOMPEdit: Shuttle consensing
+=======
+		var/area/skipjack_station/start/A = locate()
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		for(var/mob/living/carbon/human/M in A)
 			if(target.current == M)
 				return 1 //They're restrained on the shuttle. Success.
@@ -717,7 +721,11 @@ var/global/list/all_objectives = list()
 /datum/objective/heist/loot/check_completion()
 	var/total_amount = 0
 
+<<<<<<< HEAD
 	for(var/obj/O in locate(/area/shuttle/skipjack)) // CHOMPEdit: Shuttle area pathname
+=======
+	for(var/obj/O in locate(/area/skipjack_station/start))
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		if(istype(O,target)) total_amount++
 		for(var/obj/I in O.contents)
 			if(istype(I,target)) total_amount++
@@ -764,7 +772,11 @@ var/global/list/all_objectives = list()
 
 	var/total_amount = 0
 
+<<<<<<< HEAD
 	for(var/obj/item/O in locate(/area/shuttle/skipjack)) //CHOMP Edit: Skipjack area pathname
+=======
+	for(var/obj/item/O in locate(/area/skipjack_station/start))
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 		var/obj/item/stack/material/S
 		if(istype(O,/obj/item/stack/material))
@@ -903,3 +915,7 @@ var/global/list/all_objectives = list()
 			rval = 2
 		return 0
 	return rval
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

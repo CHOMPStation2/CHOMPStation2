@@ -92,10 +92,16 @@
 	icon_state = "clown"
 	slowdown = SHOES_SLOWDOWN+0.5
 	force = 0
+<<<<<<< HEAD
 	//CHOMPRemove - removed built in squeak sounds
 	species_restricted = null
 
 /*	CHOMPEdit - Replaced with squeak component
+=======
+	var/footstep = 1	//used for squeeks whilst walking
+	species_restricted = null
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/item/clothing/shoes/clown_shoes/handle_movement(var/turf/walking, var/running)
 	if(running)
 		if(footstep >= 2)
@@ -105,7 +111,10 @@
 			footstep++
 	else
 		playsound(src, "clownstep", 20, 1)
+<<<<<<< HEAD
 */
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/item/clothing/shoes/cult
 	name = "boots"

@@ -60,13 +60,20 @@
 
 	var/knockdown_chance = 15
 
+<<<<<<< HEAD
 	can_be_drop_prey = FALSE //CHOMP Add
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /mob/living/simple_mob/animal/space/carp/apply_melee_effects(var/atom/A)
 	if(isliving(A))
 		var/mob/living/L = A
 		if(prob(knockdown_chance))
+<<<<<<< HEAD
 			L.add_modifier(/datum/modifier/entangled, 4 SECONDS) //CHOMPedit, replacing weaken/slowdown with slow down
+=======
+			L.Weaken(3)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			L.visible_message(span("danger", "\The [src] knocks down \the [L]!"))
 
 // Subtypes.
@@ -147,14 +154,22 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/vore
 
 /mob/living/simple_mob/animal/space/carp/large/huge/vorny/init_vore()
+<<<<<<< HEAD
 	if(!voremob_loaded) //CHOMPAdd
 		return //CHOMPAdd
 	.=..() //CHOMPEdit
+=======
+	..()
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "You've been swallowed whole and alive by a massive white carp! The stomach around you is oppressively tight, squeezing and grinding wrinkled walls across your body, making it hard to make any movement at all. The chamber is flooded with fluids that completely overwhelm you."
 	B.mode_flags = DM_FLAG_THICKBELLY
+<<<<<<< HEAD
 //	B.belly_fullscreen = "yet_another_tumby" //Chompedit - Belly Fullscreen change
+=======
+	B.belly_fullscreen = "yet_another_tumby"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	B.digest_brute = 2
 	B.digest_burn = 2
 	B.digest_oxy = 1

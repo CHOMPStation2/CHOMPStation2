@@ -17,6 +17,11 @@
 	hitsound = 'sound/weapons/sear.ogg'
 	hitsound_wall = 'sound/weapons/effects/searwall.ogg'
 
+<<<<<<< HEAD
+=======
+	excavation_amount = 50
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	muzzle_type = /obj/effect/projectile/muzzle/laser
 	tracer_type = /obj/effect/projectile/tracer/laser
 	impact_type = /obj/effect/projectile/impact/laser
@@ -160,7 +165,11 @@
 	name = "gamma beam"
 	icon_state = "xray"
 	fire_sound = 'sound/weapons/eluger.ogg'
+<<<<<<< HEAD
 	damage = 12 //CHOMPedit
+=======
+	damage = 10
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	armor_penetration = 90
 	irradiate = 20
 	light_color = "#00CC33"
@@ -216,8 +225,13 @@
 /obj/item/projectile/beam/lasertag
 	name = "lasertag beam"
 	damage = 0
+<<<<<<< HEAD
 	excavation_amount = 0
 	eyeblur = 0
+=======
+	eyeblur = 0
+	excavation_amount = 0
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	no_attack_log = 1
 	damage_type = BURN
 	check_armour = "laser"
@@ -412,6 +426,7 @@
 	damage = 5
 	agony = 10
 
+<<<<<<< HEAD
 
 //
 // Projectile Beam Definitions
@@ -459,6 +474,8 @@
 	hud_state = "plasma_rifle"
 	damage = 48
 	armor_penetration = 10
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/item/projectile/beam/eluger
 	name = "laser beam"
 	icon_state = "xray"
@@ -554,4 +571,8 @@
 			M.adjustFireLoss(-15)
 			M.adjustToxLoss(-5)
 			M.adjustOxyLoss(-5)
+<<<<<<< HEAD
 	return 1
+=======
+	return 1
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

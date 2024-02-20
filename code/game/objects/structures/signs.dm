@@ -274,6 +274,7 @@
 	desc = "Next to the extremely long list of names and job titles. Beneath the image, someone has scratched the word \"PACKETS\""
 	icon_state = "kiddieplaque"
 
+<<<<<<< HEAD
 //CHOMP Add start
 /obj/structure/sign/kiddieplaque/poi1
 	name = "expeditionary corps frame"
@@ -296,6 +297,8 @@
 	icon_state = "explorerplaque4"
 //CHOMP Add end
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/structure/sign/atmosplaque
 	name = "\improper FEA atmospherics division plaque"
 	desc = "This plaque commemorates the fall of the Atmos FEA division. For all the charred, dizzy, and brittle men who have died in its hands."

@@ -3,7 +3,11 @@
 	if(silent)
 		return
 
+<<<<<<< HEAD
 	//message = sanitize(message) //CHOMPEdit: This causes.... so many more problems then it fixes. Also should just be handled in the super function
+=======
+	message = sanitize(message)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	if(!(container && container.can_speak))
 		return //Certain objects can speak, like MMIs. Most others cannot. -Q

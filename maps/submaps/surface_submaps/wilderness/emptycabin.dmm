@@ -35,7 +35,11 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/EmptyCabin)
 "i" = (
+<<<<<<< HEAD
 /obj/structure/bed/chair/sofa/right/blue{
+=======
+/obj/structure/bed/chair/sofa/left/blue{
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	dir = 1
 	},
 /turf/simulated/floor/wood/sif,
@@ -44,7 +48,11 @@
 /obj/structure/railing/grey{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/structure/bed/chair/oldsofa/right{
+=======
+/obj/structure/bed/chair/sofa/left{
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	dir = 8
 	},
 /turf/simulated/floor/wood/sif,
@@ -53,7 +61,11 @@
 /obj/structure/railing/grey{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/structure/bed/chair/oldsofa{
+=======
+/obj/structure/bed/chair/sofa{
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	dir = 8
 	},
 /turf/simulated/floor/wood/sif,
@@ -102,9 +114,12 @@
 /turf/simulated/floor/tiled/eris/steel/techfloor,
 /area/submap/EmptyCabin)
 "B" = (
+<<<<<<< HEAD
 /obj/effect/floor_decal/stairs/dark_stairs{
 	dir = 1
 	},
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /turf/template_noop,
 /area/submap/EmptyCabin)
 "C" = (
@@ -119,7 +134,13 @@
 "F" = (
 /mob/living/simple_mob/vore/otie/friendly/chubby{
 	desc = "The classic bioengineered longdog. This one still probably won't tolerate you. What an absolute unit";
+<<<<<<< HEAD
 	faction = "spiders"
+=======
+	faction = "spiders";
+	max_co2 = 0;
+	max_tox = 0
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	},
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/wood/sif,
@@ -136,7 +157,11 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/EmptyCabin)
 "J" = (
+<<<<<<< HEAD
 /obj/structure/bed/chair/sofa/left/blue{
+=======
+/obj/structure/bed/chair/sofa/right/blue{
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	dir = 1
 	},
 /turf/simulated/floor/wood/sif,
@@ -154,7 +179,11 @@
 /obj/structure/railing/grey{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/structure/bed/chair/oldsofa/left{
+=======
+/obj/structure/bed/chair/sofa/right{
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	dir = 8
 	},
 /turf/simulated/floor/wood/sif,
@@ -174,7 +203,11 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/EmptyCabin)
 "R" = (
+<<<<<<< HEAD
 /obj/structure/loot_pile/maint/trash,
+=======
+/obj/structure/loot_pile/surface,
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /turf/template_noop,
 /area/template_noop)
 "T" = (

@@ -19,7 +19,10 @@
 	var/can_defib = 1					//Horrible damage (like beheadings) will prevent defibbing organics.
 	var/active_regen = FALSE //Used for the regenerate proc in human_powers.dm
 	var/active_regen_delay = 300
+<<<<<<< HEAD
 	var/last_breath_sound				// Feels weird doing this, but allows us to store the value across proc calls per-mob.
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /mob/living/carbon/human/Initialize(mapload, var/new_species = null)
 	if(!dna)
@@ -143,7 +146,10 @@
 			if (!get_ear_protection() >= 2)
 				ear_damage += 30
 				ear_deaf += 120
+<<<<<<< HEAD
 				deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			if (prob(70) && !shielded)
 				Paralyse(10)
 
@@ -154,7 +160,10 @@
 			if (!get_ear_protection() >= 2)
 				ear_damage += 15
 				ear_deaf += 60
+<<<<<<< HEAD
 				deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			if (prob(50) && !shielded)
 				Paralyse(10)
 
@@ -996,7 +1005,11 @@
 	restore_all_organs()       // Reapply robotics/amputated status from preferences.
 
 	if(!client || !key) //Don't boot out anyone already in the mob.
+<<<<<<< HEAD
 		for (var/obj/item/organ/internal/brain/H in GLOB.all_brain_organs)
+=======
+		for (var/obj/item/organ/internal/brain/H in all_brain_organs)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			if(H.brainmob)
 				if(H.brainmob.real_name == src.real_name)
 					if(H.brainmob.mind)
@@ -1250,10 +1263,13 @@
 	maxHealth = species.total_health
 	hunger_rate = species.hunger_factor //VOREStation Add
 
+<<<<<<< HEAD
 	default_pixel_x = initial(pixel_x) + species.pixel_offset_x //CHOMPedit for giving datum/species ways to change 64x64 sprite offsets
 	default_pixel_y = initial(pixel_y) + species.pixel_offset_y
 	pixel_x = default_pixel_x
 	pixel_y = default_pixel_y
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	center_offset = species.center_offset
 
 	if(LAZYLEN(descriptors))
@@ -1276,7 +1292,10 @@
 			vessel.maximum_volume = species.blood_volume
 		fixblood()
 		species.update_attack_types() //VOREStation Edit - Required for any trait that updates unarmed_types in setup.
+<<<<<<< HEAD
 		species.update_vore_belly_def_variant() //CHOMPedit - Custom species post spawn logic
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	// Rebuild the HUD. If they aren't logged in then login() should reinstantiate it for them.
 	update_hud()

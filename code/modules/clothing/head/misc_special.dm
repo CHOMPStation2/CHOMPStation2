@@ -137,7 +137,11 @@
 	var/turf/location = src.loc
 	if(istype(location, /mob/))
 		var/mob/living/carbon/human/M = location
+<<<<<<< HEAD
 		if(istype(M) && M.item_is_in_hands(src) || M.head == src) //CHOMPEdit
+=======
+		if(M.item_is_in_hands(src) || M.head == src)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			location = M.loc
 
 	if (istype(location, /turf))

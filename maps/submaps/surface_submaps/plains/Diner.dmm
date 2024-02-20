@@ -4,6 +4,7 @@
 /area/template_noop)
 "ab" = (
 /turf/template_noop,
+<<<<<<< HEAD
 /area/submap/diner)
 "ac" = (
 /turf/simulated/floor/outdoors/dirt,
@@ -19,21 +20,50 @@
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/submap/diner)
+=======
+/area/submap/Diner)
+"ac" = (
+/turf/simulated/floor/outdoors/dirt,
+/area/submap/Diner)
+"ad" = (
+/turf/simulated/wall/concrete,
+/area/submap/Diner)
+"ae" = (
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/tiled/white,
+/area/submap/Diner)
+"af" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/tiled/white,
+/area/submap/Diner)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "ag" = (
 /obj/structure/table/standard,
 /obj/machinery/microwave,
 /turf/simulated/floor/tiled/white,
+<<<<<<< HEAD
 /area/submap/diner)
 "ah" = (
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/white,
 /area/submap/diner)
+=======
+/area/submap/Diner)
+"ah" = (
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/white,
+/area/submap/Diner)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "ai" = (
 /obj/structure/table/standard,
 /obj/item/weapon/reagent_containers/food/condiment/enzyme,
 /obj/item/weapon/reagent_containers/glass/beaker,
 /turf/simulated/floor/tiled/white,
+<<<<<<< HEAD
 /area/submap/diner)
+=======
+/area/submap/Diner)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "aj" = (
 /obj/structure/table/standard,
 /obj/machinery/light{
@@ -41,6 +71,7 @@
 	},
 /obj/item/weapon/material/knife/butch,
 /turf/simulated/floor/tiled/white,
+<<<<<<< HEAD
 /area/submap/diner)
 "ak" = (
 /obj/machinery/vending/hotfood,
@@ -66,25 +97,63 @@
 "ap" = (
 /turf/simulated/floor/tiled/white,
 /area/submap/diner)
+=======
+/area/submap/Diner)
+"ak" = (
+/obj/machinery/vending/hotfood,
+/turf/simulated/floor/tiled/white,
+/area/submap/Diner)
+"al" = (
+/obj/machinery/vending/dinnerware,
+/turf/simulated/floor/tiled/white,
+/area/submap/Diner)
+"am" = (
+/obj/structure/sink/kitchen,
+/turf/simulated/wall/concrete,
+/area/submap/Diner)
+"an" = (
+/obj/structure/flora/tree/sif,
+/turf/template_noop,
+/area/submap/Diner)
+"ao" = (
+/obj/structure/bed/chair/wood{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/tiled/white,
+/area/submap/Diner)
+"ap" = (
+/turf/simulated/floor/tiled/white,
+/area/submap/Diner)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "aq" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
+<<<<<<< HEAD
 /area/submap/diner)
+=======
+/area/submap/Diner)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "ar" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/table/standard,
 /obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
 /obj/item/weapon/material/kitchen/utensil/fork,
 /turf/simulated/floor/tiled/white,
+<<<<<<< HEAD
 /area/submap/diner)
+=======
+/area/submap/Diner)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "as" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/table/standard,
 /obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
 /obj/machinery/light{
+<<<<<<< HEAD
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -95,15 +164,35 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/diner)
+=======
+	icon_state = "tube1";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/Diner)
+"at" = (
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1";
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/Diner)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "au" = (
 /obj/structure/table/standard,
 /obj/item/weapon/book/manual/chef_recipes,
 /turf/simulated/floor/tiled/white,
+<<<<<<< HEAD
 /area/submap/diner)
+=======
+/area/submap/Diner)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "av" = (
 /obj/structure/table/standard,
 /obj/item/weapon/material/kitchen/rollingpin,
 /turf/simulated/floor/tiled/white,
+<<<<<<< HEAD
 /area/submap/diner)
 "aw" = (
 /obj/machinery/appliance/mixer/cereal,
@@ -119,6 +208,22 @@
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/submap/diner)
+=======
+/area/submap/Diner)
+"aw" = (
+/obj/machinery/appliance/mixer/cereal,
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1"
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/Diner)
+"ax" = (
+/obj/structure/bed/chair/wood,
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/tiled/white,
+/area/submap/Diner)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "ay" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/item/weapon/storage/fancy/egg_box,
@@ -132,6 +237,7 @@
 /obj/item/weapon/reagent_containers/food/drinks/bottle/cream,
 /obj/item/weapon/reagent_containers/food/condiment/carton/sugar,
 /turf/simulated/floor/tiled/white,
+<<<<<<< HEAD
 /area/submap/diner)
 "az" = (
 /obj/structure/simple_door/wood,
@@ -145,28 +251,56 @@
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/diner)
+=======
+/area/submap/Diner)
+"az" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/tiled/white,
+/area/submap/Diner)
+"aA" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/tiled,
+/area/submap/Diner)
+"aB" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/tiled/freezer,
+/area/submap/Diner)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "aC" = (
 /obj/structure/table/standard,
 /obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/item/weapon/material/kitchen/utensil/fork,
 /turf/simulated/floor/tiled/white,
+<<<<<<< HEAD
 /area/submap/diner)
+=======
+/area/submap/Diner)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "aD" = (
 /obj/structure/table/standard,
 /obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/white,
+<<<<<<< HEAD
 /area/submap/diner)
+=======
+/area/submap/Diner)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "aE" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/item/weapon/stool/padded,
 /turf/simulated/floor/tiled/white,
+<<<<<<< HEAD
 /area/submap/diner)
+=======
+/area/submap/Diner)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "aF" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/white,
+<<<<<<< HEAD
 /area/submap/diner)
 "aG" = (
 /turf/simulated/floor/tiled,
@@ -174,6 +308,15 @@
 "aH" = (
 /turf/simulated/floor/tiled/freezer,
 /area/submap/diner)
+=======
+/area/submap/Diner)
+"aG" = (
+/turf/simulated/floor/tiled,
+/area/submap/Diner)
+"aH" = (
+/turf/simulated/floor/tiled/freezer,
+/area/submap/Diner)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "aI" = (
 /obj/structure/closet/crate/freezer,
 /obj/random/meat,
@@ -184,12 +327,17 @@
 /obj/random/meat,
 /obj/random/meat,
 /turf/simulated/floor/tiled/freezer,
+<<<<<<< HEAD
 /area/submap/diner)
+=======
+/area/submap/Diner)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "aJ" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
 /turf/simulated/floor/tiled/white,
+<<<<<<< HEAD
 /area/submap/diner)
 "aK" = (
 /obj/effect/floor_decal/corner/red/diagonal,
@@ -198,6 +346,17 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/diner)
+=======
+/area/submap/Diner)
+"aK" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1"
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/Diner)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "aL" = (
 /obj/machinery/light/small{
 	brightness_color = "#DA0205";
@@ -206,7 +365,11 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
+<<<<<<< HEAD
 /area/submap/diner)
+=======
+/area/submap/Diner)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "aM" = (
 /obj/machinery/light/small{
 	brightness_color = "#DA0205";
@@ -215,7 +378,11 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/freezer,
+<<<<<<< HEAD
 /area/submap/diner)
+=======
+/area/submap/Diner)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "aN" = (
 /obj/structure/closet/crate/freezer,
 /obj/machinery/light/small{
@@ -230,19 +397,31 @@
 /obj/item/weapon/reagent_containers/food/snacks/meat,
 /obj/item/weapon/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/tiled/freezer,
+<<<<<<< HEAD
 /area/submap/diner)
+=======
+/area/submap/Diner)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "aO" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
 /turf/simulated/floor/tiled/white,
+<<<<<<< HEAD
 /area/submap/diner)
+=======
+/area/submap/Diner)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "aP" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/table/standard,
 /obj/machinery/microwave,
 /turf/simulated/floor/tiled/white,
+<<<<<<< HEAD
 /area/submap/diner)
+=======
+/area/submap/Diner)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "aQ" = (
 /obj/structure/closet/crate/freezer,
 /obj/item/weapon/reagent_containers/food/condiment/carton/flour,
@@ -253,6 +432,7 @@
 /obj/item/weapon/reagent_containers/food/condiment/carton/flour,
 /obj/item/weapon/reagent_containers/food/condiment/carton/flour,
 /turf/simulated/floor/tiled/freezer,
+<<<<<<< HEAD
 /area/submap/diner)
 "aR" = (
 /obj/machinery/gibber,
@@ -286,10 +466,41 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/diner)
 "aZ" = (
+=======
+/area/submap/Diner)
+"aR" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/coatrack,
+/turf/simulated/floor/tiled/white,
+/area/submap/Diner)
+"aS" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/white,
+/area/submap/Diner)
+"aT" = (
+/obj/structure/closet/crate/freezer,
+/turf/simulated/floor/tiled/freezer,
+/area/submap/Diner)
+"aU" = (
+/obj/machinery/gibber,
+/turf/simulated/floor/tiled/freezer,
+/area/submap/Diner)
+"aV" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/tiled/white,
+/area/submap/Diner)
+"aW" = (
+/obj/machinery/appliance/cooker/fryer,
+/turf/simulated/floor/tiled/white,
+/area/submap/Diner)
+"aX" = (
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/machinery/light/small{
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/dirt,
+<<<<<<< HEAD
 /area/submap/diner)
 "ba" = (
 /obj/effect/floor_decal/corner/red/diagonal,
@@ -308,10 +519,33 @@
 /turf/simulated/floor/tiled,
 /area/submap/diner)
 "bd" = (
+=======
+/area/submap/Diner)
+"aY" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1";
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/Diner)
+"aZ" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/machinery/appliance/cooker/grill,
+/turf/simulated/floor/tiled/white,
+/area/submap/Diner)
+"ba" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/submap/Diner)
+"bb" = (
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/machinery/light/small{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
+<<<<<<< HEAD
 /area/submap/diner)
 "be" = (
 /obj/machinery/light{
@@ -324,6 +558,17 @@
 /turf/simulated/floor/tiled,
 /area/submap/diner)
 "bg" = (
+=======
+/area/submap/Diner)
+"bc" = (
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1"
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/Diner)
+"bd" = (
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/item/weapon/storage/fancy/egg_box,
@@ -340,6 +585,7 @@
 /obj/item/weapon/reagent_containers/food/drinks/bottle/cream,
 /obj/item/weapon/reagent_containers/food/drinks/bottle/cream,
 /turf/simulated/floor/tiled/white,
+<<<<<<< HEAD
 /area/submap/diner)
 "bh" = (
 /obj/structure/table/standard,
@@ -363,10 +609,41 @@
 /turf/simulated/floor/lino,
 /area/submap/diner)
 "bm" = (
+=======
+/area/submap/Diner)
+"be" = (
+/obj/structure/table/standard,
+/obj/machinery/chemical_dispenser/bar_coffee,
+/turf/simulated/floor/tiled/white,
+/area/submap/Diner)
+"bf" = (
+/obj/item/frame/apc,
+/turf/simulated/floor/lino,
+/area/submap/Diner)
+"bg" = (
+/obj/structure/table/woodentable,
+/obj/item/device/flashlight/lamp,
+/turf/simulated/floor/lino,
+/area/submap/Diner)
+"bh" = (
+/obj/structure/bed/chair/office/light,
+/turf/simulated/floor/lino,
+/area/submap/Diner)
+"bi" = (
+/turf/simulated/floor/lino,
+/area/submap/Diner)
+"bj" = (
+/obj/structure/table/standard,
+/obj/random/mug,
+/turf/simulated/floor/tiled/white,
+/area/submap/Diner)
+"bk" = (
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/machinery/light/small{
 	dir = 8
 	},
 /turf/simulated/floor/lino,
+<<<<<<< HEAD
 /area/submap/diner)
 "bn" = (
 /obj/structure/table/woodentable,
@@ -379,10 +656,25 @@
 /turf/simulated/floor/lino,
 /area/submap/diner)
 "bp" = (
+=======
+/area/submap/Diner)
+"bl" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/cell/high,
+/turf/simulated/floor/lino,
+/area/submap/Diner)
+"bm" = (
+/obj/structure/table/woodentable,
+/obj/random/mug,
+/turf/simulated/floor/lino,
+/area/submap/Diner)
+"bn" = (
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/machinery/light/small{
 	dir = 4
 	},
 /turf/simulated/floor/lino,
+<<<<<<< HEAD
 /area/submap/diner)
 "bq" = (
 /obj/structure/simple_door/wood,
@@ -400,12 +692,37 @@
 /turf/simulated/floor/lino,
 /area/submap/diner)
 "bt" = (
+=======
+/area/submap/Diner)
+"bo" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/lino,
+/area/submap/Diner)
+"bp" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/windoor_assembly{
+	dir = 2;
+	icon_state = "l_windoor_assembly01"
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/Diner)
+"bq" = (
+/obj/structure/bookcase,
+/turf/simulated/floor/lino,
+/area/submap/Diner)
+"br" = (
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/space_heater,
 /obj/machinery/light,
 /turf/simulated/floor/tiled/white,
+<<<<<<< HEAD
 /area/submap/diner)
 "bu" = (
+=======
+/area/submap/Diner)
+"bs" = (
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/structure/sink{
 	dir = 8;
 	icon_state = "sink";
@@ -413,6 +730,7 @@
 	pixel_y = 2
 	},
 /turf/simulated/floor/tiled/hydro,
+<<<<<<< HEAD
 /area/submap/diner)
 "bv" = (
 /turf/simulated/floor/tiled/hydro,
@@ -422,18 +740,35 @@
 /turf/simulated/floor/tiled/hydro,
 /area/submap/diner)
 "bx" = (
+=======
+/area/submap/Diner)
+"bt" = (
+/turf/simulated/floor/tiled/hydro,
+/area/submap/Diner)
+"bu" = (
+/obj/structure/toilet,
+/turf/simulated/floor/tiled/hydro,
+/area/submap/Diner)
+"bv" = (
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/structure/bed/chair/wood{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/white,
+<<<<<<< HEAD
 /area/submap/diner)
 "by" = (
+=======
+/area/submap/Diner)
+"bw" = (
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/structure/bed/chair/wood{
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/white,
+<<<<<<< HEAD
 /area/submap/diner)
 "bz" = (
 /obj/structure/simple_door/wood,
@@ -470,6 +805,30 @@
 /obj/item/device/flashlight/lamp,
 /turf/simulated/floor/tiled/white,
 /area/submap/diner)
+=======
+/area/submap/Diner)
+"bx" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/tiled/hydro,
+/area/submap/Diner)
+"by" = (
+/obj/structure/mirror{
+	dir = 4;
+	pixel_x = -32;
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/submap/Diner)
+"bz" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/tiled/hydro,
+/area/submap/Diner)
+"bA" = (
+/obj/structure/table/standard,
+/obj/random/soap/anom,
+/turf/simulated/floor/tiled/hydro,
+/area/submap/Diner)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 (1,1,1) = {"
 aa
@@ -562,14 +921,22 @@ ac
 ac
 ac
 ac
+<<<<<<< HEAD
 ab
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 ac
 ac
 ac
 ac
 ac
 ac
+<<<<<<< HEAD
 ab
+=======
+ac
+ac
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 ac
 ac
 ac
@@ -583,6 +950,7 @@ aa
 aa
 ac
 ac
+<<<<<<< HEAD
 ab
 ac
 ac
@@ -590,6 +958,12 @@ ab
 ac
 ac
 ab
+=======
+ac
+ac
+ac
+ac
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 ac
 ac
 ac
@@ -597,10 +971,20 @@ ac
 ac
 ac
 ac
+<<<<<<< HEAD
 ab
 ac
 ac
 ab
+=======
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 ac
 ab
 ab
@@ -609,7 +993,10 @@ aa
 (6,1,1) = {"
 aa
 ab
+<<<<<<< HEAD
 ab
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 ac
 ac
 ac
@@ -619,7 +1006,12 @@ ac
 ac
 ac
 ac
+<<<<<<< HEAD
 aZ
+=======
+ac
+ac
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 ac
 ac
 ac
@@ -643,10 +1035,17 @@ ab
 ab
 ab
 ab
+<<<<<<< HEAD
 ad
 ad
 az
 ad
+=======
+ab
+ac
+ac
+aX
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 ab
 ab
 ab
@@ -671,8 +1070,13 @@ ae
 ae
 ae
 ad
+<<<<<<< HEAD
 ap
 ap
+=======
+ad
+az
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 ad
 ae
 ae
@@ -694,6 +1098,7 @@ ab
 ad
 ad
 af
+<<<<<<< HEAD
 ao
 aC
 ax
@@ -707,6 +1112,21 @@ ax
 ao
 aC
 ax
+=======
+ax
+aC
+ao
+af
+ad
+aV
+ad
+ax
+aC
+ao
+ax
+aC
+ao
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 af
 ad
 ad
@@ -721,6 +1141,7 @@ ad
 ad
 aq
 af
+<<<<<<< HEAD
 ao
 aD
 ax
@@ -736,6 +1157,23 @@ aD
 ax
 af
 bt
+=======
+ax
+aD
+ao
+af
+ad
+az
+ad
+ax
+aD
+ao
+ax
+aD
+ao
+af
+br
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 ad
 ad
 ab
@@ -752,9 +1190,15 @@ af
 af
 af
 af
+<<<<<<< HEAD
 aT
 af
 ba
+=======
+aR
+af
+aY
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 af
 af
 af
@@ -772,9 +1216,15 @@ aa
 aa
 ae
 af
+<<<<<<< HEAD
 ao
 ar
 ax
+=======
+ax
+ar
+ao
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 af
 af
 af
@@ -799,10 +1249,17 @@ aa
 aa
 ae
 af
+<<<<<<< HEAD
 ao
 as
 ax
 lT
+=======
+ax
+as
+ao
+af
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 aE
 aE
 aE
@@ -817,8 +1274,13 @@ aE
 aE
 af
 af
+<<<<<<< HEAD
 bx
 bx
+=======
+bv
+bv
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 ae
 aa
 "}
@@ -871,15 +1333,24 @@ af
 ah
 af
 af
+<<<<<<< HEAD
 by
 by
+=======
+bw
+bw
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 ae
 aa
 "}
 (16,1,1) = {"
 aa
 ad
+<<<<<<< HEAD
 Km
+=======
+bj
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 ap
 ap
 ap
@@ -887,6 +1358,7 @@ az
 af
 aK
 aP
+<<<<<<< HEAD
 aU
 aX
 bb
@@ -896,6 +1368,17 @@ bh
 aS
 aK
 br
+=======
+aS
+aW
+aZ
+bc
+bd
+be
+ah
+aK
+bp
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 af
 af
 af
@@ -925,7 +1408,11 @@ ad
 ad
 ad
 ad
+<<<<<<< HEAD
 bz
+=======
+bx
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 ad
 ad
 aa
@@ -944,16 +1431,27 @@ aG
 aG
 aG
 aG
+<<<<<<< HEAD
 bc
 bc
+=======
+ba
+ba
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 aG
 aG
 aL
 aG
 ad
+<<<<<<< HEAD
 bu
 bv
 bA
+=======
+bs
+bt
+by
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 ad
 aa
 "}
@@ -970,6 +1468,7 @@ ad
 ad
 ad
 ad
+<<<<<<< HEAD
 bc
 gw
 ad
@@ -981,6 +1480,19 @@ ad
 bv
 bv
 bB
+=======
+ba
+ba
+ad
+ad
+ad
+bo
+ad
+ad
+bt
+bt
+bz
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 ad
 aa
 "}
@@ -995,6 +1507,7 @@ ad
 aH
 aM
 aQ
+<<<<<<< HEAD
 aV
 ad
 bd
@@ -1008,6 +1521,21 @@ ad
 bw
 bv
 bC
+=======
+aT
+ad
+bb
+ba
+ad
+bf
+bk
+bi
+bi
+ad
+bu
+bt
+bA
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 ad
 aa
 "}
@@ -1022,6 +1550,7 @@ aB
 aH
 aH
 aH
+<<<<<<< HEAD
 ad
 ad
 aA
@@ -1031,6 +1560,17 @@ bj
 bn
 bl
 bl
+=======
+aH
+ad
+aG
+ba
+ad
+bg
+bl
+bi
+bi
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 ad
 ad
 ad
@@ -1049,6 +1589,7 @@ ad
 aH
 aH
 aH
+<<<<<<< HEAD
 ad
 aG
 aG
@@ -1058,6 +1599,17 @@ bk
 bo
 bl
 bs
+=======
+aH
+ad
+aA
+aA
+ad
+bh
+bm
+bi
+bq
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 ad
 ad
 ad
@@ -1075,6 +1627,7 @@ ay
 ad
 aI
 aN
+<<<<<<< HEAD
 aR
 ad
 aG
@@ -1085,6 +1638,18 @@ bl
 bp
 bl
 bs
+=======
+aH
+aU
+ad
+bb
+aG
+ad
+bi
+bn
+bi
+bq
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 ad
 ad
 ad

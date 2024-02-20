@@ -492,4 +492,8 @@
 	max_storage_space = ITEMSIZE_COST_NORMAL * 15
 	max_w_class = ITEMSIZE_NORMAL
 	w_class = ITEMSIZE_SMALL
+<<<<<<< HEAD
 	can_hold = list(/obj/item/weapon/forensics/swab,/obj/item/weapon/sample/print,/obj/item/weapon/sample/fibers,/obj/item/weapon/evidencebag)
+=======
+	can_hold = list(/obj/item/weapon/forensics/swab,/obj/item/weapon/sample/print,/obj/item/weapon/sample/fibers,/obj/item/weapon/evidencebag)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

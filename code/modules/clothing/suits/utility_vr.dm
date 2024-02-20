@@ -18,14 +18,22 @@
 
 /obj/item/clothing/head/radiation
 	sprite_sheets = list(
+<<<<<<< HEAD
 		SPECIES_TESHARI = 'icons/inventory/head/mob_ch_teshari.dmi', //CHOMPstation edit, using our overwrite icons
+=======
+		SPECIES_TESHARI = 'icons/inventory/head/mob_vr_teshari.dmi',
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		SPECIES_VOX = 'icons/inventory/head/mob_vox.dmi',
 		SPECIES_WEREBEAST = 'icons/inventory/head/mob_vr_werebeast.dmi'
 		)
 
 /obj/item/clothing/suit/radiation
 	sprite_sheets = list(
+<<<<<<< HEAD
 		SPECIES_TESHARI = 'icons/inventory/suit/mob_ch_teshari.dmi', //CHOMPstation edit, using our overwrite icons
+=======
+		SPECIES_TESHARI = 'icons/inventory/suit/mob_vr_teshari.dmi',
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		SPECIES_VOX = 'icons/inventory/suit/mob_vox.dmi',
 		SPECIES_WEREBEAST = 'icons/inventory/suit/mob_vr_werebeast.dmi'
 		)

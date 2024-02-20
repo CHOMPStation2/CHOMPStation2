@@ -12,7 +12,11 @@
 	S["backbag"]	>> pref.backbag
 	S["pdachoice"]	>> pref.pdachoice
 	S["communicator_visibility"]	>> pref.communicator_visibility
+<<<<<<< HEAD
 	S["ttone"]	>> pref.ringtone // CHOMPEdit - We use ttone in the pref so that it doesnt get reset
+=======
+	S["ringtone"]	>> pref.ringtone
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /datum/category_item/player_setup_item/general/equipment/save_character(var/savefile/S)
 	S["all_underwear"] << pref.all_underwear
@@ -20,7 +24,11 @@
 	S["backbag"]	<< pref.backbag
 	S["pdachoice"]	<< pref.pdachoice
 	S["communicator_visibility"]	<< pref.communicator_visibility
+<<<<<<< HEAD
 	S["ttone"]	<< pref.ringtone  // CHOMPEdit - We use ttone in the pref so that it doesnt get reset
+=======
+	S["ringtone"]	<< pref.ringtone
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 var/global/list/valid_ringtones = list(
 		"beep",
@@ -29,11 +37,18 @@ var/global/list/valid_ringtones = list(
 		"honk",
 		"SKREE",
 		"xeno",
+<<<<<<< HEAD
 		"dust", // CHOMPEdit - Keeps dust as ringtone
 		"spark",
 		"rad",
 		"servo",
 		// "buh-boop", // CHOMPEdit - No.
+=======
+		"spark",
+		"rad",
+		"servo",
+		"buh-boop",
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		"trombone",
 		"whistle",
 		"chirp",

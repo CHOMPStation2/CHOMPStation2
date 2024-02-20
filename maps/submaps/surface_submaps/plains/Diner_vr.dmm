@@ -6,7 +6,11 @@
 /turf/template_noop,
 /area/submap/Diner)
 "ac" = (
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/dirt,
+=======
+/turf/simulated/floor/outdoors/dirt/virgo3b,
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /area/submap/Diner)
 "ad" = (
 /turf/simulated/wall,
@@ -259,8 +263,12 @@
 /turf/simulated/floor/tiled/freezer,
 /area/submap/Diner)
 "aS" = (
+<<<<<<< HEAD
 /obj/structure/table/standard,
 /obj/item/weapon/module/power_control,
+=======
+/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary/tram,
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /turf/simulated/floor/tiled/white,
 /area/submap/Diner)
 "aT" = (
@@ -285,11 +293,22 @@
 /obj/machinery/appliance/cooker/fryer,
 /turf/simulated/floor/tiled/white,
 /area/submap/Diner)
+<<<<<<< HEAD
+=======
+"aY" = (
+/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary/tram,
+/turf/simulated/floor/tiled,
+/area/submap/Diner)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "aZ" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/dirt,
+=======
+/turf/simulated/floor/outdoors/dirt/virgo3b,
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /area/submap/Diner)
 "ba" = (
 /obj/effect/floor_decal/corner/red/diagonal,
@@ -450,7 +469,10 @@
 /area/submap/Diner)
 "bC" = (
 /obj/structure/table/standard,
+<<<<<<< HEAD
 /obj/item/stack/cable_coil,
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /turf/simulated/floor/tiled/hydro,
 /area/submap/Diner)
 "gw" = (
@@ -555,14 +577,22 @@ ac
 ac
 ac
 ac
+<<<<<<< HEAD
 ab
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 ac
 ac
 ac
 ac
 ac
 ac
+<<<<<<< HEAD
 ab
+=======
+ac
+ac
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 ac
 ac
 ac
@@ -576,6 +606,7 @@ aa
 aa
 ac
 ac
+<<<<<<< HEAD
 ab
 ac
 ac
@@ -583,6 +614,12 @@ ab
 ac
 ac
 ab
+=======
+ac
+ac
+ac
+ac
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 ac
 ac
 ac
@@ -590,10 +627,20 @@ ac
 ac
 ac
 ac
+<<<<<<< HEAD
 ab
 ac
 ac
 ab
+=======
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 ac
 ab
 ab
@@ -602,7 +649,11 @@ aa
 (6,1,1) = {"
 aa
 ab
+<<<<<<< HEAD
 ab
+=======
+ac
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 ac
 ac
 ac
@@ -664,7 +715,11 @@ ae
 ae
 ae
 ad
+<<<<<<< HEAD
 ap
+=======
+aS
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 ap
 ad
 ae
@@ -691,7 +746,11 @@ ao
 aC
 ax
 ad
+<<<<<<< HEAD
 ap
+=======
+aS
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 aW
 ad
 ao
@@ -886,7 +945,11 @@ bb
 be
 bg
 bh
+<<<<<<< HEAD
 aS
+=======
+ah
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 aK
 br
 af
@@ -1043,7 +1106,11 @@ aH
 aH
 aH
 ad
+<<<<<<< HEAD
 aG
+=======
+aY
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 aG
 aG
 ad
@@ -1070,7 +1137,11 @@ aI
 aN
 aR
 ad
+<<<<<<< HEAD
 aG
+=======
+aY
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 aG
 bf
 ad

@@ -69,8 +69,11 @@
 	circuit = null
 
 GLOBAL_LIST_EMPTY(entertainment_screens)
+<<<<<<< HEAD
 GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/machinery/computer/security/telescreen/entertainment
 	name = "entertainment monitor"
 	desc = "Damn, why do they never have anything interesting on these things? (Alt-click to toggle the display)"
@@ -136,6 +139,7 @@ GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
 		if(isliving(usr) && Adjacent(usr) && !usr.incapacitated())
 			toggle()
 			visible_message("<b>[usr]</b> toggles [src] [enabled ? "on" : "off"].","You toggle [src] [enabled ? "on" : "off"].", runemessage = "click")
+<<<<<<< HEAD
 	//CHOMPEdit start - Changing click to only come into play when shift or alt clicking. These things are ANNOYING.
 			return
 	if(modifiers["shift"])
@@ -143,6 +147,10 @@ GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
 		return
 	..()
 	//CHOMPEdit end
+=======
+	else
+		attack_hand(usr)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/machinery/computer/security/telescreen/entertainment/update_icon()
 	return // NUH
@@ -174,6 +182,7 @@ GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
 	else if(enabled)
 		radio?.on = TRUE
 
+<<<<<<< HEAD
 // CHOMPEdit Start - Bodycams
 /obj/machinery/computer/security/telescreen/bodycamera
 	name = "bodycamera monitor"
@@ -302,6 +311,8 @@ GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
 		bradio?.on = TRUE
 // CHOMPEdit End
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/machinery/computer/security/wooden_tv
 	name = "security camera monitor"
 	desc = "An old TV hooked into the station's camera network."

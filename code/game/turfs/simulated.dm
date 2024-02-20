@@ -25,7 +25,10 @@
 /turf/simulated/proc/wet_floor(var/wet_val = 1)
 	if(wet > 2)	//Can't mop up ice
 		return
+<<<<<<< HEAD
 	/* //ChompEDIT START - huge CPU usage
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	spawn(0)
 		wet = wet_val
 		if(wet_overlay)
@@ -39,6 +42,7 @@
 		if(wet_overlay)
 			cut_overlay(wet_overlay)
 			wet_overlay = null
+<<<<<<< HEAD
 	*/ //ChompEDIT CONTINUE
 	wet = wet_val
 	if(wet_overlay)
@@ -56,6 +60,8 @@
 		cut_overlay(wet_overlay)
 		wet_overlay = null
 //ChompEDIT END
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /turf/simulated/proc/freeze_floor()
 	if(!wet) // Water is required for it to freeze.
@@ -112,9 +118,14 @@
 		return
 
 	if (istype(A,/mob/living))
+<<<<<<< HEAD
 		var/dirtslip = FALSE	//CHOMPEdit
 		var/mob/living/M = A
 		if(M.lying || M.flying || M.is_incorporeal()) //VOREStation Edit - CHOMPADD - Don't forget the phased ones.
+=======
+		var/mob/living/M = A
+		if(M.lying || M.flying) //VOREStation Edit
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			return ..()
 
 		if(M.dirties_floor())
@@ -123,19 +134,26 @@
 
 		if(istype(M, /mob/living/carbon/human))
 			var/mob/living/carbon/human/H = M
+<<<<<<< HEAD
 			//CHOMPEdit Begin
 			dirtslip = H.species.dirtslip
 			if(H.species.mudking)
 				dirt = min(dirt+2, 101)
 				update_dirt()
 			//CHOMPEdit End
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			// Tracking blood
 			var/list/bloodDNA = null
 			var/bloodcolor=""
 			if(H.shoes)
 				var/obj/item/clothing/shoes/S = H.shoes
 				if(istype(S))
+<<<<<<< HEAD
 					S.handle_movement(src,(H.m_intent == "run" ? 1 : 0), H) // CHOMPEdit handle_movement now needs to know who is moving, for inshoe steppies
+=======
+					S.handle_movement(src,(H.m_intent == "run" ? 1 : 0))
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 					if(S.track_blood && S.blood_DNA)
 						bloodDNA = S.blood_DNA
 						bloodcolor=S.blood_color
@@ -154,7 +172,11 @@
 
 				bloodDNA = null
 
+<<<<<<< HEAD
 		if(src.wet || (dirtslip && (dirt > 50 || outdoors == 1)))	//CHOMPEdit
+=======
+		if(src.wet)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 			if(M.buckled || (src.wet == 1 && M.m_intent == "walk"))
 				return
@@ -162,6 +184,7 @@
 			var/slip_dist = 1
 			var/slip_stun = 6
 			var/floor_type = "wet"
+<<<<<<< HEAD
 			//CHOMPEdit Begin
 			if(dirtslip)
 				slip_stun = 10
@@ -172,6 +195,9 @@
 				if(src.wet == 0 && M.m_intent == "walk")
 					return
 			//CHOMPEdit End
+=======
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			switch(src.wet)
 				if(2) // Lube
 					floor_type = "slippery"

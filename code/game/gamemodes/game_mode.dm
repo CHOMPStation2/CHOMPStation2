@@ -218,7 +218,10 @@ var/global/list/additional_antag_types = list()
 		emergency_shuttle.auto_recall = 1
 
 	feedback_set_details("round_start","[time2text(world.realtime)]")
+<<<<<<< HEAD
 	INVOKE_ASYNC(SSdbcore, TYPE_PROC_REF(/datum/controller/subsystem/dbcore,SetRoundStart)) // CHOMPEdit
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(ticker && ticker.mode)
 		feedback_set_details("game_mode","[ticker.mode]")
 	feedback_set_details("server_ip","[world.internet_address]:[world.port]")
@@ -303,6 +306,7 @@ var/global/list/additional_antag_types = list()
 	var/escaped_on_pod_1 = 0
 	var/escaped_on_pod_2 = 0
 	var/escaped_on_pod_3 = 0
+<<<<<<< HEAD
 	var/escaped_on_pod_4 = 0 //CHOMP Add
 	var/escaped_on_pod_5 = 0
 	var/escaped_on_pod_6 = 0 //CHOMP Add
@@ -313,6 +317,12 @@ var/global/list/additional_antag_types = list()
 
 	var/list/area/escape_locations = list(/area/shuttle/escape/centcom, /area/shuttle/cryo/centcom, /area/shuttle/escape_pod1/centcom, /area/shuttle/escape_pod2/centcom, /area/shuttle/escape_pod3/centcom, /area/shuttle/escape_pod5/centcom, /area/shuttle/escape_pod6/centcom, /area/shuttle/large_escape_pod1/centcom
 , /area/shuttle/large_escape_pod2/centcom) //CHOMP Edit: Appended /centcom to the escape shuttle again to fix transfer message. Added some escape pods to the list.
+=======
+	var/escaped_on_pod_5 = 0
+	var/escaped_on_shuttle = 0
+
+	var/list/area/escape_locations = list(/area/shuttle/escape, /area/shuttle/escape_pod1/centcom, /area/shuttle/escape_pod2/centcom, /area/shuttle/escape_pod3/centcom, /area/shuttle/escape_pod5/centcom) //VOREStation Edit
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	for(var/mob/M in player_list)
 		if(M.client)
@@ -337,6 +347,7 @@ var/global/list/additional_antag_types = list()
 					escaped_on_pod_2++
 				if(M_area_type == /area/shuttle/escape_pod3/centcom)
 					escaped_on_pod_3++
+<<<<<<< HEAD
 				if(M_area_type == /area/shuttle/escape_pod4/centcom) //CHOMP Add
 					escaped_on_pod_4++
 				if(M_area_type == /area/shuttle/escape_pod5/centcom)
@@ -351,6 +362,10 @@ var/global/list/additional_antag_types = list()
 					escaped_on_cryopod++
 
 
+=======
+				if(M_area_type == /area/shuttle/escape_pod5/centcom)
+					escaped_on_pod_5++
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 			if(isobserver(M))
 				ghosts++
@@ -383,6 +398,7 @@ var/global/list/additional_antag_types = list()
 		feedback_set("escaped_on_pod_2",escaped_on_pod_2)
 	if(escaped_on_pod_3 > 0)
 		feedback_set("escaped_on_pod_3",escaped_on_pod_3)
+<<<<<<< HEAD
 	if(escaped_on_pod_4 > 0) //CHOMP Add
 		feedback_set("escaped_on_pod_4",escaped_on_pod_4)
 	if(escaped_on_pod_5 > 0)
@@ -395,6 +411,10 @@ var/global/list/additional_antag_types = list()
 		feedback_set("escaped_on_pod_large_2",escaped_on_pod_large_2)
 	if(escaped_on_cryopod > 0) //CHOMP Add
 		feedback_set("escaped_on_cryopod",escaped_on_cryopod)
+=======
+	if(escaped_on_pod_5 > 0)
+		feedback_set("escaped_on_pod_5",escaped_on_pod_5)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	send2mainirc("A round of [src.name] has ended - [surviving_total] survivors, [ghosts] ghosts.")
 	SSwebhooks.send(
@@ -544,8 +564,11 @@ var/global/list/additional_antag_types = list()
 						msg += "<b>[L.name]</b> ([ckey(D.mind.key)]), the [L.job] ([span_red("<b>Ghosted</b>")])\n"
 						continue //Ghosted while alive
 
+<<<<<<< HEAD
 			continue // CHOMPEdit: Escape infinite loop in case there's nobody connected. Shouldn't happen ever, but.
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	msg += "</span>" // close the span from right at the top
 
 	for(var/mob/M in mob_list)

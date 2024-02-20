@@ -1,6 +1,10 @@
 /client/proc/cmd_admin_say(msg as text)
 	set category = "Special Verbs"
+<<<<<<< HEAD
 	set name = "Asay" //Gave this shit a shorter name so you only have to time out "asay" rather than "admin say" to use it --NeoFite 
+=======
+	set name = "Asay" //Gave this shit a shorter name so you only have to time out "asay" rather than "admin say" to use it --NeoFite
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	set hidden = 1
 	if(!check_rights(R_ADMIN)) //VOREStation Edit
 		return
@@ -22,7 +26,11 @@
 	set name = "Msay"
 	set hidden = 1
 
+<<<<<<< HEAD
 	if(!check_rights(R_ADMIN|R_MOD|R_EVENT)) //VOREStation Edit //CHOMP Removal: Removed R_SERVER because it wasn't necessary.
+=======
+	if(!check_rights(R_ADMIN|R_MOD|R_SERVER)) //VOREStation Edit
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		return
 
 	msg = sanitize(msg)
@@ -45,7 +53,11 @@
 	set name = "Esay"
 	set hidden = 1
 
+<<<<<<< HEAD
 	if(!check_rights(R_ADMIN|R_MOD|R_EVENT|R_EVENT)) //CHOMP Removal: Removed R_SERVER because it wasn't necessary.
+=======
+	if(!check_rights(R_ADMIN|R_MOD|R_EVENT|R_SERVER)) //VOREStation Edit
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		return
 
 	msg = sanitize(msg)

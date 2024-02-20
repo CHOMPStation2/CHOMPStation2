@@ -218,6 +218,7 @@
 
 	return hear
 
+<<<<<<< HEAD
 //CHOMPEdit - entire proc changed basically to use recursive listening
 /proc/get_mobs_in_radio_ranges(var/list/obj/item/device/radio/radios)
 
@@ -236,6 +237,29 @@
 			. -= M
 	for (var/mob/observer/O in player_list)
 		. |= O
+=======
+
+/proc/get_mobs_in_radio_ranges(var/list/obj/item/device/radio/radios)
+
+	set background = 1
+
+	. = list()
+	// Returns a list of mobs who can hear any of the radios given in @radios
+	var/list/speaker_coverage = list()
+	for(var/obj/item/device/radio/R as anything in radios)
+		var/turf/speaker = get_turf(R)
+		if(speaker)
+			for(var/turf/T in hear(R.canhear_range,speaker))
+				speaker_coverage[T] = R
+
+
+	// Try to find all the players who can hear the message
+	for(var/i = 1; i <= player_list.len; i++)
+		var/mob/M = player_list[i]
+		if(M.can_hear_radio(speaker_coverage))
+			. += M
+	return .
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /mob/proc/can_hear_radio(var/list/hearturfs)
 	return FALSE

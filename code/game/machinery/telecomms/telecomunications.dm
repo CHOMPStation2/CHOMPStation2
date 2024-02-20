@@ -37,8 +37,11 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 	var/hide = 0				// Is it a hidden machine?
 	var/listening_level = 0	// 0 = auto set in New() - this is the z level that the machine is listening to.
 
+<<<<<<< HEAD
 	var/datum/looping_sound/tcomms/soundloop // CHOMPStation Add: Hummy noises
 	var/noisy = TRUE // CHOMPStation Add: Hummy noises, this starts on
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/machinery/telecomms/proc/relay_information(datum/signal/signal, filter, copysig, amount = 20)
 	// relay signal to all linked machinery that are of type [filter]. If signal has been sent [amount] times, stop sending
@@ -134,6 +137,7 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 		else
 			for(var/obj/machinery/telecomms/T in telecomms_list)
 				add_link(T)
+<<<<<<< HEAD
 	// CHOMPAdd: TComms humming
 	soundloop = new(list(src), FALSE)
 	if(prob(60)) // 60% chance to change the midloop
@@ -148,6 +152,8 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 			soundloop.mid_length = 30
 	soundloop.start()
 	// CHOMPAdd End
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	. = ..()
 
 /obj/machinery/telecomms/Destroy()
@@ -155,7 +161,10 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 	for(var/obj/machinery/telecomms/comm in telecomms_list)
 		comm.links -= src
 	links = list()
+<<<<<<< HEAD
 	QDEL_NULL(soundloop) // CHOMPAdd: Tcomms noises
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	..()
 
 // Used in auto linking
@@ -179,17 +188,23 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 	if(toggled)
 		if(stat & (BROKEN|NOPOWER|EMPED) || integrity <= 0) // if powered, on. if not powered, off. if too damaged, off
 			on = 0
+<<<<<<< HEAD
 			soundloop.stop() // CHOMPAdd: Tcomms noises
 			noisy = FALSE
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		else
 			on = 1
 	else
 		on = 0
+<<<<<<< HEAD
 		soundloop.stop() // CHOMPAdd: Tcomms noises
 		noisy = FALSE
 	if(!noisy) // CHOMPAdd: Tcomms noises
 		soundloop.start() // CHOMPAdd: Tcomms noises
 		noisy = TRUE
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/machinery/telecomms/process()
 	update_power()
@@ -207,7 +222,10 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 	if(prob(100/severity))
 		if(!(stat & EMPED))
 			stat |= EMPED
+<<<<<<< HEAD
 			playsound(src, 'sound/machines/tcomms/tcomms_pulse.ogg', 70, 1, 30) // CHOMPAdd: Tcomms noises
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			var/duration = (300 * 10)/severity
 			spawn(rand(duration - 20, duration + 20)) // Takes a long time for the machines to reboot.
 				stat &= ~EMPED

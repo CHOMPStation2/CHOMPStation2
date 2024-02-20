@@ -5,7 +5,10 @@
 	name = "\improper LP1 Locust Rifle"
 	desc = "The Bishamonten LP1 is a weapon that uses advanced pulse-based beam generation technology to emit powerful laser blasts. \
 	Because of its complexity and cost, it is rarely seen in use except by specialists."
+<<<<<<< HEAD
 	icon = 'icons/obj/gun.dmi' // CHOMPEdit: Gun Sprites
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	icon_state = "pulse"
 	item_state = null	//so the human update icon uses the icon_state instead.
 	slot_flags = SLOT_BELT|SLOT_BACK
@@ -14,7 +17,10 @@
 	charge_cost = 120
 	fire_delay = 8
 	sel_mode = 2
+<<<<<<< HEAD
 	w_class = ITEMSIZE_HUGE //CHOMP Edit.
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	firemodes = list(
 		list(mode_name="stun", projectile_type=/obj/item/projectile/beam/stun, fire_delay=null, charge_cost = 120),
@@ -71,7 +77,10 @@
 	slot_flags = SLOT_BELT|SLOT_HOLSTER
 	icon_state = "pulsepistol"
 	charge_cost = 480
+<<<<<<< HEAD
 	w_class = ITEMSIZE_NORMAL //CHOMP Edit.
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/item/weapon/gun/energy/pulse_rifle/compact/admin
 	name = "\improper LP4 Mantis Deluxe"

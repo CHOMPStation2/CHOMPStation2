@@ -54,7 +54,11 @@ GLOBAL_LIST_BOILERPLATE(all_debugging_effects, /obj/effect/debugging)
 
 
 
+<<<<<<< HEAD
 	for(var/obj/effect/debugging/camera_range/C in GLOB.all_debugging_effects)
+=======
+	for(var/obj/effect/debugging/camera_range/C in all_debugging_effects)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		qdel(C)
 
 	if(camera_range_display_status)
@@ -113,7 +117,11 @@ GLOBAL_LIST_BOILERPLATE(all_debugging_effects, /obj/effect/debugging)
 	else
 		intercom_range_display_status = 1
 
+<<<<<<< HEAD
 	for(var/obj/effect/debugging/marker/M in GLOB.all_debugging_effects)
+=======
+	for(var/obj/effect/debugging/marker/M in all_debugging_effects)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		qdel(M)
 
 	if(intercom_range_display_status)

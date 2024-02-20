@@ -5,7 +5,11 @@
 	icon = 'icons/effects/effects.dmi'
 	anchored = TRUE
 	density = FALSE
+<<<<<<< HEAD
 	var/health = 10
+=======
+	var/health = 15
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 //similar to weeds, but only barfed out by nurses manually
 /obj/effect/spider/ex_act(severity)
@@ -132,15 +136,24 @@
 		qdel(src)
 
 /obj/effect/spider/eggcluster/small
+<<<<<<< HEAD
 	spiders_min = 2 //CHOMP Edit
 	spiders_max = 6 //CHOMP Edit
+=======
+	spiders_min = 1
+	spiders_max = 3
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/effect/spider/eggcluster/small/frost
 	spider_type = /obj/effect/spider/spiderling/frost
 
 /obj/effect/spider/eggcluster/royal
 	spiders_min = 2
+<<<<<<< HEAD
 	spiders_max = 6 //CHOMP Edit
+=======
+	spiders_max = 5
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	spider_type = /obj/effect/spider/spiderling/varied
 
 /obj/effect/spider/spiderling
@@ -170,7 +183,10 @@
 			/mob/living/simple_mob/animal/giant_spider/ion)
 
 /obj/effect/spider/spiderling/New(var/location, var/atom/parent)
+<<<<<<< HEAD
 	..()
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	pixel_x = rand(6,-6)
 	pixel_y = rand(6,-6)
 	START_PROCESSING(SSobj, src)
@@ -178,10 +194,18 @@
 	if(amount_grown != -1 && prob(50))
 		amount_grown = 1
 	get_light_and_color(parent)
+<<<<<<< HEAD
 
 /obj/effect/spider/spiderling/Destroy()
 	walk(src, 0) // Because we might have called walk_to, we must stop the walk loop or BYOND keeps an internal reference to us forever.
 	STOP_PROCESSING(SSobj, src)
+=======
+	..()
+
+/obj/effect/spider/spiderling/Destroy()
+	STOP_PROCESSING(SSobj, src)
+	walk(src, 0) // Because we might have called walk_to, we must stop the walk loop or BYOND keeps an internal reference to us forever.
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	return ..()
 
 /obj/effect/spider/spiderling/Bump(atom/user)
@@ -312,7 +336,11 @@
 	name = "cocoon"
 	desc = "Something wrapped in silky spider web"
 	icon_state = "cocoon1"
+<<<<<<< HEAD
 	health = 15
+=======
+	health = 60
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/effect/spider/cocoon/New()
 		icon_state = pick("cocoon1","cocoon2","cocoon3")

@@ -34,10 +34,16 @@
 	min_cold_protection_temperature = GLOVES_MIN_COLD_PROTECTION_TEMPERATURE
 	heat_protection = HANDS
 	max_heat_protection_temperature = GLOVES_MAX_HEAT_PROTECTION_TEMPERATURE
+<<<<<<< HEAD
 	armor = list(melee = 15, bullet = 10, laser = 10, energy = 10, bomb = 5, bio = 0, rad = 0) // CHOMPedit: Now protective.
 
 /obj/item/clothing/gloves/combat //CHOMPedit: Combined effect of SWAT gloves and insulated gloves, with better protective stats.
 	desc = "These military-grade tactical gloves protect the user from electrical shocks, fire, high-velocity impacts and varying temperatures." // CHOMPedit: Updated description.
+=======
+
+/obj/item/clothing/gloves/combat //Combined effect of SWAT gloves and insulated gloves
+	desc = "These tactical gloves are somewhat fire and impact resistant."
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	name = "combat gloves"
 	icon_state = "swat"
 	item_state = "swat"
@@ -47,7 +53,10 @@
 	min_cold_protection_temperature = GLOVES_MIN_COLD_PROTECTION_TEMPERATURE
 	heat_protection = HANDS
 	max_heat_protection_temperature = GLOVES_MAX_HEAT_PROTECTION_TEMPERATURE
+<<<<<<< HEAD
 	armor = list(melee = 20, bullet = 15, laser = 15, energy = 15, bomb = 10, bio = 0, rad = 0) // CHOMPedit: Now protective.
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/item/clothing/gloves/sterile
 	name = "sterile gloves"
@@ -94,12 +103,16 @@
 	icon_state = "work"
 	item_state = "wgloves"
 	armor = list(melee = 10, bullet = 10, laser = 10, energy = 5, bomb = 0, bio = 0, rad = 0)
+<<<<<<< HEAD
 // CHOMPEdit Start - If they resist lasers and energy they should help inulate against heat and cold.
 	cold_protection = HANDS
 	min_cold_protection_temperature = GLOVES_MIN_COLD_PROTECTION_TEMPERATURE
 	heat_protection = HANDS
 	max_heat_protection_temperature = GLOVES_MAX_HEAT_PROTECTION_TEMPERATURE
 // CHOMPEdit End
+=======
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/item/clothing/gloves/tactical
 	desc = "These brown tactical gloves are made from a durable synthetic, and have hardened knuckles."
 	name = "tactical gloves"
@@ -122,7 +135,10 @@
 	species_restricted = list("Vox")
 	drop_sound = 'sound/items/drop/metalboots.ogg'
 	pickup_sound = 'sound/items/pickup/toolbox.ogg'
+<<<<<<< HEAD
 	armor = list (melee = 20, bullet = 15, laser = 10, energy = 10, bomb =5, bio = 30, rad = 30) //gently bumped up Heavy engineering gloves value for protection //ChompEdit
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	cold_protection = HANDS
 	min_cold_protection_temperature = GLOVES_MIN_COLD_PROTECTION_TEMPERATURE

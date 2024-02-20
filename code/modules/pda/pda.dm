@@ -34,11 +34,18 @@ var/global/list/obj/item/device/pda/PDAs = list()
 								"honk" = 'sound/items/bikehorn.ogg',
 								"SKREE" = 'sound/voice/shriek1.ogg',
 								"xeno" = 'sound/voice/hiss1.ogg',
+<<<<<<< HEAD
 								"dust" = 'sound/effects/supermatter.ogg', // CHOMPEdit - Keeps dust as ringtone
 								"spark" = 'sound/effects/sparks4.ogg',
 								"rad" = 'sound/items/geiger/high1.ogg',
 								"servo" = 'sound/machines/rig/rigservo.ogg',
 								// "buh-boop" = 'sound/misc/buh-boop.ogg', // CHOMPEdit - No.
+=======
+								"spark" = 'sound/effects/sparks4.ogg',
+								"rad" = 'sound/items/geiger/high1.ogg',
+								"servo" = 'sound/machines/rig/rigservo.ogg',
+								"buh-boop" = 'sound/misc/buh-boop.ogg',
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 								"trombone" = 'sound/misc/sadtrombone.ogg',
 								"whistle" = 'sound/misc/boatswain.ogg',
 								"chirp" = 'sound/misc/nymphchirp.ogg',
@@ -141,6 +148,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	new /obj/item/weapon/pen(src)
 	pdachoice = isnull(H) ? 1 : (ishuman(H) ? H.pdachoice : 1)
 	switch(pdachoice)
+<<<<<<< HEAD
 		if(1) icon = 'icons/obj/pda_vr.dmi'			//VOREStation edit
 		if(2) icon = 'icons/obj/pda_slim.dmi'
 		if(3) icon = 'icons/obj/pda_old.dmi'
@@ -148,6 +156,26 @@ var/global/list/obj/item/device/pda/PDAs = list()
 		if(5) icon = 'icons/obj/pda_holo.dmi'
 		if(6)
 			icon = 'icons/obj/pda_wrist.dmi'
+=======
+		if(1)
+			icon = 'icons/obj/pda_vr.dmi'			//VOREStation edit
+			model_name = "Thinktronic 5230 Personal Data Assistant"
+		if(2)
+			icon = 'icons/obj/pda_slim.dmi'
+			model_name = "Ward-Takahashi SlimFit™ Personal Data Assistant"
+		if(3)
+			icon = 'icons/obj/pda_old.dmi'
+			model_name = "Thinktronic 5120 Personal Data Assistant"
+		if(4)
+			icon = 'icons/obj/pda_rugged.dmi'
+			model_name = "Hephaestus WARDEN Personal Data Assistant"
+		if(5)
+			icon = 'icons/obj/pda_holo.dmi'
+			model_name = "LunaCorp Holo-PDAssistant"
+		if(6)
+			icon = 'icons/obj/pda_wrist.dmi'
+			model_name = "Omnitech K100 Personal Data Assistant"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			item_state = icon_state
 			item_icons = list(
 				slot_belt_str = 'icons/mob/pda_wrist.dmi',
@@ -160,9 +188,18 @@ var/global/list/obj/item/device/pda/PDAs = list()
 				SPECIES_TESHARI = 'icons/mob/species/teshari/pda_wrist.dmi',
 				SPECIES_VR_TESHARI = 'icons/mob/species/teshari/pda_wrist.dmi',
 			)
+<<<<<<< HEAD
 		if(7) icon = 'icons/obj/pda_slider.dmi'			//VOREStation edit
 		if(8)
 			icon = 'icons/obj/pda_vintage.dmi'
+=======
+		if(7)
+			icon = 'icons/obj/pda_slider.dmi'			//VOREStation edit
+			model_name = "Slider® Personal Data Assistant"
+		if(8)
+			icon = 'icons/obj/pda_vintage.dmi'
+			model_name = "\[ERR:INVALID_MANUFACTURER_ID\] Personal Data Assistant"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			desc = "A vintage communication device. This device has been refitted for compatibility with modern messaging systems, ROM cartridges and ID cards. Despite its heavy modifications it does not feature voice communication."
 
 		else
@@ -481,7 +518,11 @@ var/global/list/obj/item/device/pda/PDAs = list()
 
 /obj/item/device/pda/Destroy()
 	PDAs -= src
+<<<<<<< HEAD
 	if (src.id && !delete_id && src.id.loc == src) //CHOMPEdit
+=======
+	if (src.id && prob(100) && !delete_id) //IDs are kept in 90% of the cases //VOREStation Edit - 100% of the cases, excpet when specified otherwise
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		src.id.forceMove(get_turf(src.loc))
 	else
 		QDEL_NULL(src.id)

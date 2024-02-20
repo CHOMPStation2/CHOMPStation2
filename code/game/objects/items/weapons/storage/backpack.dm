@@ -22,6 +22,7 @@
 
 /obj/item/weapon/storage/backpack/equipped(var/mob/user, var/slot)
 	if (slot == slot_back && src.use_sound)
+<<<<<<< HEAD
 // Chomp edit
 		if(isbelly(user.loc))
 			var/obj/belly/B = user.loc
@@ -31,6 +32,9 @@
 // Chomp edit end
 			playsound(src, src.use_sound, 50, 1, -5)
 
+=======
+		playsound(src, src.use_sound, 50, 1, -5)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	..(user, slot)
 
 /*
@@ -557,4 +561,8 @@
 	desc = "A satchel designed for the Go Go ERT Rangers series to allow for slightly bigger carry capacity for the ERT-Rangers.\
 	 Unlike the show claims, it is not a phoron-enhanced satchel of holding with plot-relevant content."
 	icon = 'icons/obj/clothing/ranger.dmi'
+<<<<<<< HEAD
 	icon_state = "ranger_satchel"
+=======
+	icon_state = "ranger_satchel"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

@@ -9,14 +9,21 @@ var/global/list/default_internal_channels = list(
 	num2text(ENG_FREQ) = list(access_engine_equip, access_atmospherics),
 	num2text(MED_FREQ) = list(access_medical_equip),
 	num2text(MED_I_FREQ)=list(access_medical_equip),
+<<<<<<< HEAD
 	num2text(BDCM_FREQ) =list(access_security), // CHOMPEdit
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	num2text(SEC_FREQ) = list(access_security),
 	num2text(SEC_I_FREQ)=list(access_security),
 	num2text(SCI_FREQ) = list(access_tox, access_robotics, access_xenobiology),
 	num2text(SUP_FREQ) = list(access_cargo, access_mining_station),
 	num2text(SRV_FREQ) = list(access_janitor, access_library, access_hydroponics, access_bar, access_kitchen),
+<<<<<<< HEAD
 	num2text(EXP_FREQ) = list(access_explorer, access_pilot) //CHOMP explo keep
+=======
+	num2text(EXP_FREQ) = list(access_explorer)	//VOREStation Edit
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 )
 
 var/global/list/default_medbay_channels = list(

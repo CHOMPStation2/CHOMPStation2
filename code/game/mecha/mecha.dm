@@ -66,9 +66,13 @@
 	var/firstactivation = 0 			//It's simple. If it's 0, no one entered it yet. Otherwise someone entered it at least once.
 
 	var/stomp_sound = 'sound/mecha/mechstep.ogg'
+<<<<<<< HEAD
 	var/stomp_sound_2 = 'sound/mecha/mechstep.ogg' // CHOMPedit: Used for 1-2 step patterns instead of random choice.
 	var/swivel_sound = 'sound/mecha/mechturn.ogg'
 	var/reps = 0 // CHOMPedit: Used for 1-2 step patterns.
+=======
+	var/swivel_sound = 'sound/mecha/mechturn.ogg'
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	//inner atmos
 	var/use_internal_tank = 0
@@ -889,8 +893,12 @@
 	var/result = get_step(src,direction)
 	if(result && Move(result))
 		if(stomp_sound)
+<<<<<<< HEAD
 			playsound(src, reps ? stomp_sound : stomp_sound_2,50,0) // CHOMPedit: 1-2 step sequence.
 			reps = (reps+1)%2 // CHOMPedit: 1-2 step sequence.
+=======
+			playsound(src,stomp_sound,40,1)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		handle_equipment_movement()
 	if(strafing)	//Also for strafing
 		set_dir(current_dir)
@@ -901,8 +909,12 @@
 	var/result = get_step_rand(src)
 	if(result && Move(result))
 		if(stomp_sound)
+<<<<<<< HEAD
 			playsound(src, reps ? stomp_sound : stomp_sound_2,50,0) // CHOMPedit: 1-2 step sequence.
 			reps = (reps+1)%2 // CHOMPedit: 1-2 step sequence.
+=======
+			playsound(src,stomp_sound,40,1)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		handle_equipment_movement()
 	return result
 
@@ -2341,7 +2353,11 @@
 			output += "Universal Module: [W.name] <a href='?src=\ref[W];detach=1'>Detach</a><br>"
 		for(var/obj/item/mecha_parts/mecha_equipment/W in special_equipment)
 			output += "Special Module: [W.name] <a href='?src=\ref[W];detach=1'>Detach</a><br>"
+<<<<<<< HEAD
 		/*for(var/obj/item/mecha_parts/mecha_equipment/W in micro_utility_equipment)//CHOMPstation Edit -  Adds micro equipent to the menu
+=======
+		for(var/obj/item/mecha_parts/mecha_equipment/W in micro_utility_equipment) // VOREstation Edit -  Adds micro equipent to the menu
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			output += "Micro Utility Module: [W.name] <a href='?src=\ref[W];detach=1'>Detach</a><br>"
 		for(var/obj/item/mecha_parts/mecha_equipment/W in micro_weapon_equipment)
 			output += "Micro Weapon Module: [W.name] <a href='?src=\ref[W];detach=1'>Detach</a><br>"
@@ -2353,7 +2369,11 @@
 	 <b>Available universal slots:</b> [max_universal_equip-universal_equipment.len]<br>
 	 <b>Available special slots:</b> [max_special_equip-special_equipment.len]<br>
 	 </div></div>
+<<<<<<< HEAD
 	 "} */ //CHOMPedit commented micromech stuff, because fuck this trash
+=======
+	 "}
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	return output
 
 /obj/mecha/proc/get_equipment_list() //outputs mecha equipment list in html

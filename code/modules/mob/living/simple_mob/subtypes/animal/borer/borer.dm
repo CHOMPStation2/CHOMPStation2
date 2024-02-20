@@ -42,8 +42,11 @@
 
 	var/has_reproduced = FALSE
 	var/used_dominate							// world.time when the dominate power was last used.
+<<<<<<< HEAD
 	
 	can_be_drop_prey = FALSE //CHOMP Add
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /mob/living/simple_mob/animal/borer/roundstart
 	roundstart = TRUE

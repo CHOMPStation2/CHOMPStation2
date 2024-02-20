@@ -1,5 +1,8 @@
 /obj/item/device/radio/intercom
+<<<<<<< HEAD
 	listening = 0 //CHOMP Edit: Temporary bandaid fix for comms lag.
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	name = "station intercom (General)"
 	desc = "Talk through this."
 	icon = 'icons/obj/radio_vr.dmi' //VOREStation Edit - New Icon
@@ -38,12 +41,15 @@
 /obj/item/device/radio/intercom/interrogation
 	name = "station intercom (Interrogation)"
 	frequency  = 1449
+<<<<<<< HEAD
 	broadcasting = 1 //yw edit starts
 	listening = 0
 
 /obj/item/device/radio/intercom/interrogation/observation
 	listening = 1
 	broadcasting = 0 //yw edit ends
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/item/device/radio/intercom/private
 	name = "station intercom (Private)"

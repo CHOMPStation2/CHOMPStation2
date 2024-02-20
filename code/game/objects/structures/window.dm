@@ -686,7 +686,10 @@
 		return TRUE
 	. = ..()
 
+<<<<<<< HEAD
 /* CHOMPEdit - moved this block to modular_chomp\code\game\objects\items\weapons\rcd.dm
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/structure/window/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
 		if(RCD_DECONSTRUCT)
@@ -703,4 +706,7 @@
 			qdel(src)
 			return TRUE
 	return FALSE
+<<<<<<< HEAD
 */
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

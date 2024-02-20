@@ -124,8 +124,13 @@
 		message_data[1] = ""
 		. = 1
 
+<<<<<<< HEAD
 	else if(istype(wear_mask, /obj/item/clothing/mask/muzzle)) //YWedit start, fixes masks removing speech problems.
 		var/obj/item/clothing/mask/muzzle/M = wear_mask // YWedit End.
+=======
+	else if(istype(wear_mask, /obj/item/clothing/mask))
+		var/obj/item/clothing/mask/M = wear_mask
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		if(M.voicechange)
 			message_data[1] = pick(M.say_messages)
 			message_data[2] = pick(M.say_verbs)
@@ -195,7 +200,11 @@
 
 /mob/living/carbon/human/handle_speech_sound()
 	var/list/returns[2]
+<<<<<<< HEAD
 	if(speech_sound_enabled && species.speech_sounds && species.speech_sounds.len && prob(species.speech_chance))		//VOREStation Edit: Sanity Check //CHOMPStation Edit: add ability to disable speech sounds with a verb
+=======
+	if(species.speech_sounds && species.speech_sounds.len && prob(species.speech_chance))		//VOREStation Edit: Sanity Check
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		returns[1] = sound(pick(species.speech_sounds))
 		returns[2] = 50
 	return returns

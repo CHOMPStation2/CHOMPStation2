@@ -1,7 +1,11 @@
 /obj/structure/grille
 	name = "grille"
 	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor."
+<<<<<<< HEAD
 	icon = 'modular_chomp/icons/obj/structures.dmi' //CHOMPEdit
+=======
+	icon = 'icons/obj/structures_vr.dmi' // VOREStation Edit - New icons
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	icon_state = "grille"
 	density = TRUE
 	anchored = TRUE
@@ -248,7 +252,11 @@
 /obj/structure/grille/broken/rustic
 	icon_state = "grillerustic-b"
 
+<<<<<<< HEAD
 /* CHOMPEdit - moved this block to modular_chomp\code\game\objects\items\weapons\rcd.dm
+=======
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/structure/grille/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
 		if(RCD_WINDOWGRILLE)
@@ -281,7 +289,10 @@
 			WD.anchored = TRUE
 			return TRUE
 	return FALSE
+<<<<<<< HEAD
 */
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/structure/grille/take_damage(var/damage)
 	health -= damage

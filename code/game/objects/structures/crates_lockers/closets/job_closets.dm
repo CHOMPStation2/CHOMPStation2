@@ -80,8 +80,11 @@
 		/obj/item/device/lightreplacer,
 		/obj/item/weapon/storage/bag/trash,
 		/obj/item/weapon/storage/belt/janitor,
+<<<<<<< HEAD
 		/obj/item/device/vac_attachment, //CHOMPAdd
 		/obj/item/weapon/holosign_creator, //CHOMPAdd
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		/obj/item/clothing/shoes/galoshes
 		)
 

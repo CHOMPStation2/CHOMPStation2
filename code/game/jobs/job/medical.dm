@@ -16,10 +16,17 @@
 	req_admin_notify = 1
 	economic_modifier = 10
 	access = list(access_medical, access_medical_equip, access_morgue, access_genetics, access_heads,
+<<<<<<< HEAD
 			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce, access_teleporter,
 			access_keycard_auth, access_sec_doors, access_psychiatrist, access_eva, access_external_airlocks, access_maint_tunnels)
 	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_genetics, access_heads,
 			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce, access_teleporter,
+=======
+			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce,
+			access_keycard_auth, access_sec_doors, access_psychiatrist, access_eva, access_external_airlocks, access_maint_tunnels)
+	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_genetics, access_heads,
+			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce,
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			access_keycard_auth, access_sec_doors, access_psychiatrist, access_eva, access_external_airlocks, access_maint_tunnels)
 
 	minimum_character_age = 25
@@ -120,6 +127,10 @@
 	title = "Pharmacist"
 	title_blurb = "A Pharmacist focuses on the chemical needs of the Medical Department, and often offers to fill crew prescriptions at their discretion."
 
+<<<<<<< HEAD
+=======
+/* I'm commenting out Geneticist so you can't actually see it in the job menu, given that you can't play as one - Jon.
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 //////////////////////////////////
 //			Geneticist
 //////////////////////////////////
@@ -129,8 +140,13 @@
 	departments = list(DEPARTMENT_MEDICAL, DEPARTMENT_RESEARCH)
 	department_flag = MEDSCI
 	faction = "Station"
+<<<<<<< HEAD
 	total_positions = 2
 	spawn_positions = 2
+=======
+	total_positions = 0
+	spawn_positions = 0
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	supervisors = "the Chief Medical Officer and Research Director"
 	selection_color = "#013D3B"
 	economic_modifier = 7
@@ -140,6 +156,10 @@
 	outfit_type = /decl/hierarchy/outfit/job/medical/geneticist
 	job_description = "A Geneticist operates genetic manipulation equipment to repair any genetic defects encountered in crew, from cloning or radiation as examples. \
 						When required, geneticists have the skills to clone, and are the superior choice when available for doing so."
+<<<<<<< HEAD
+=======
+*/
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 //////////////////////////////////
 //			Psychiatrist
@@ -183,7 +203,11 @@
 	spawn_positions = 2
 	supervisors = "the Chief Medical Officer"
 	selection_color = "#013D3B"
+<<<<<<< HEAD
 	economic_modifier = 5	//CHOMPstation edit - "Makes Parameds make as much as offduty medical."
+=======
+	economic_modifier = 4
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	access = list(access_medical, access_medical_equip, access_morgue, access_surgery, access_chemistry, access_virology, access_eva, access_maint_tunnels, access_external_airlocks, access_psychiatrist)
 	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_eva, access_maint_tunnels, access_external_airlocks)
 	outfit_type = /decl/hierarchy/outfit/job/medical/paramedic
@@ -199,4 +223,8 @@
 	title = "Emergency Medical Technician"
 	title_blurb = "An Emergency Medical Technician is primarily concerned with the recovery of patients who are unable to make it to the Medical Department on their \
 					own. They are capable of keeping a patient stabilized until they reach the hands of someone with more training."
+<<<<<<< HEAD
 	title_outfit = /decl/hierarchy/outfit/job/medical/paramedic/emt
+=======
+	title_outfit = /decl/hierarchy/outfit/job/medical/paramedic/emt
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

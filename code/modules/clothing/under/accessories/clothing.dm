@@ -177,6 +177,7 @@
 		SPECIES_TESHARI = 'icons/inventory/suit/mob_teshari.dmi'
 	)
 
+<<<<<<< HEAD
 //YWEdit Start, Makes ponchos use teshari sprite
 /obj/item/clothing/accessory/poncho/get_worn_icon_file(var/body_type,var/slot_name,var/default_icon,var/inhands)
 	if(body_type == SPECIES_TESHARI)
@@ -186,6 +187,8 @@
 		return ..()
 //YWEdit end
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/item/clothing/accessory/poncho/equipped() //Solution for race-specific sprites for an accessory which is also a suit. Suit icons break if you don't use icon override which then also overrides race-specific sprites.
 	..()
 	var/mob/living/carbon/human/H = loc
@@ -523,7 +526,11 @@
 
 /obj/item/clothing/accessory/asymovercoat
 	name = "orange asymmetrical overcoat"
+<<<<<<< HEAD
 	desc = "An asymmetrical orange overcoat in a 2560's fashion."
+=======
+	desc = "An asymmetrical orange overcoat in a 2320's fashion."
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	icon_state = "asymovercoat"
 
 /*
@@ -577,4 +584,8 @@
 /obj/item/clothing/accessory/replika/star
 	name = "security-technician replikant chestplate"
 	desc = "A sloped titanium-composite chest plate with a matte black finish, fitted for use by 2nd generation biosynthetics. Comes with red adjustable straps."
+<<<<<<< HEAD
 	icon_state = "star"
+=======
+	icon_state = "star"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

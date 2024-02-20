@@ -15,9 +15,12 @@
 		to_chat(src, "<span class='warning'>You have deadchat muted.</span>")
 		return
 
+<<<<<<< HEAD
 	if (src.handle_spam_prevention(msg,MUTE_DEADCHAT))
 		return
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	var/stafftype = uppertext(holder.rank)
 
 	msg = sanitize(msg)

@@ -257,8 +257,11 @@
 	explosion_resistance = 5
 	opacity = 0
 	glass = 1
+<<<<<<< HEAD
 	open_sound_powered = 'sound/machines/hall1o.ogg' //CHOMPEdit
 	close_sound_powered = 'sound/machines/hall1c.ogg' //CHOMPEdit
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/machinery/door/airlock/centcom
 	name = "Centcom Airlock"
@@ -1004,7 +1007,11 @@ About the new airlock wires panel:
 	return
 
 /obj/machinery/door/airlock/AltClick(mob/user as mob)
+<<<<<<< HEAD
 
+=======
+	. = ..()
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if(!Adjacent(user))
 		return
@@ -1014,13 +1021,21 @@ About the new airlock wires panel:
 		if(icon_state == "door_closed" && arePowerSystemsOn())
 			flick("door_deny", src)
 		playsound(src, knock_hammer_sound, 50, 0, 3)
+<<<<<<< HEAD
 	else if(arePowerSystemsOn()) //ChompEDIT - removed intent check
+=======
+	else if(arePowerSystemsOn() && user.a_intent == I_HELP)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		src.visible_message("[user] presses the door bell on \the [src].", "\The [src]'s bell rings.")
 		src.add_fingerprint(user)
 		if(icon_state == "door_closed")
 			flick("door_deny", src)
 		playsound(src, knock_sound, 50, 0, 3)
+<<<<<<< HEAD
 	else //ChompEDIT - removed intent check
+=======
+	else if(user.a_intent == I_HELP)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		src.visible_message("[user] knocks on \the [src].", "Someone knocks on \the [src].")
 		src.add_fingerprint(user)
 		playsound(src, knock_unpowered_sound, 50, 0, 3)
@@ -1562,7 +1577,11 @@ About the new airlock wires panel:
 		src.lock()
 	return
 
+<<<<<<< HEAD
 /* CHOMPEdit - moved this block to modular_chomp\code\game\objects\items\weapons\rcd.dm
+=======
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/machinery/door/airlock/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
 		if(RCD_DECONSTRUCT)
@@ -1582,4 +1601,7 @@ About the new airlock wires panel:
 			qdel(src)
 			return TRUE
 	return FALSE
+<<<<<<< HEAD
 */
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

@@ -242,8 +242,13 @@ GLOBAL_LIST_BOILERPLATE(all_crematoriums, /obj/structure/morgue/crematorium)
 				A.forceMove(src.connected.loc)
 			src.connected.icon_state = "cremat"
 		else
+<<<<<<< HEAD
 			qdel(src.connected)
 			src.connected = null //CHOMPEdit - Fix morgues breaking for a while with something solid in front of door.
+=======
+			//src.connected = null
+			qdel(src.connected)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	src.add_fingerprint(user)
 	update()
 
@@ -345,7 +350,11 @@ GLOBAL_LIST_BOILERPLATE(all_crematoriums, /obj/structure/morgue/crematorium)
 	if(..())
 		return
 	if(src.allowed(user))
+<<<<<<< HEAD
 		for (var/obj/structure/morgue/crematorium/C in GLOB.all_crematoriums)
+=======
+		for (var/obj/structure/morgue/crematorium/C in all_crematoriums)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			if (C.id == id)
 				if (!C.cremating)
 					C.cremate(user)

@@ -39,6 +39,7 @@
 			m.visible_message("<span class = 'notice'>\The [m] tumbles out of \the [src]!</span>")
 	//VOREStation Add End
 
+<<<<<<< HEAD
 	//CHOMPAdd Start possessed item cleanup
 	if(istype(src, /obj/item))
 		var/obj/item/I = src
@@ -50,6 +51,8 @@
 					V.Destroy()
 	//CHOMPAdd End
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	return ..()
 
 /obj/Topic(href, href_list, var/datum/tgui_state/state = GLOB.tgui_default_state)

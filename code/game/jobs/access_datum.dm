@@ -472,4 +472,8 @@
 /datum/access/alien
 	id = access_alien
 	desc = "#%_^&*@!"
+<<<<<<< HEAD
 	access_type = ACCESS_TYPE_PRIVATE
+=======
+	access_type = ACCESS_TYPE_PRIVATE
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

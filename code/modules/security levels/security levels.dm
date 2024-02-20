@@ -86,7 +86,11 @@
 			atc.reroute_traffic(yes = 0)
 
 		spawn()
+<<<<<<< HEAD
 			//SSnightshift.check_nightshift() //CHOMPedit: disabling this for now as we do not use the nightshift currently.
+=======
+			SSnightshift.check_nightshift()
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 		admin_chat_message(message = "Security level is now: [uppertext(get_security_level())]", color = "#CC2222") //VOREStation Add
 

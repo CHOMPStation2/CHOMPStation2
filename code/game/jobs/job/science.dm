@@ -18,12 +18,20 @@
 	access = list(access_rd, access_heads, access_tox, access_genetics, access_morgue,
 			            access_tox_storage, access_teleporter, access_sec_doors,
 			            access_research, access_robotics, access_xenobiology, access_ai_upload, access_tech_storage,
+<<<<<<< HEAD
 			            access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_network, access_maint_tunnels) //Yawn added "access_maint_tunnels"
 	minimal_access = list(access_rd, access_heads, access_tox, access_genetics, access_morgue,
 			            access_tox_storage, access_teleporter, access_sec_doors,
 			            access_research, access_robotics, access_xenobiology, access_ai_upload, access_tech_storage,
 			            access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_network, access_maint_tunnels)
 	alt_titles = list("Research Supervisor")
+=======
+			            access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_network)
+	minimal_access = list(access_rd, access_heads, access_tox, access_genetics, access_morgue,
+			            access_tox_storage, access_teleporter, access_sec_doors,
+			            access_research, access_robotics, access_xenobiology, access_ai_upload, access_tech_storage,
+			            access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_network)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	minimum_character_age = 25
 	minimal_player_age = 14
@@ -63,7 +71,11 @@
 	min_age_by_species = list(SPECIES_PROMETHEAN = 2)
 	banned_job_species = list("digital")
 
+<<<<<<< HEAD
 	minimal_player_age = 3
+=======
+	minimal_player_age = 14
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	outfit_type = /decl/hierarchy/outfit/job/science/scientist
 	job_description = "A Scientist is a generalist working in the Research department, with general knowledge of the scientific process, as well as \

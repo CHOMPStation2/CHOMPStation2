@@ -30,7 +30,11 @@
 	Proc: Precedence
 	Compares two operators, decides which is higher in the order of operations, and returns <SHIFT> or <REDUCE>.
 */
+<<<<<<< HEAD
 /n_Parser/nS_Parser/proc/Precedence(node/expression/op/top, node/expression/op/input)
+=======
+/n_Parser/nS_Parser/proc/Precedence(node/expression/operator/top, node/expression/operator/input)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(istype(top))
 		top=top.precedence
 	if(istype(input))
@@ -88,7 +92,11 @@ See Also:
 - <GetBinaryOperator()>
 - <GetUnaryOperator()>
 */
+<<<<<<< HEAD
 /n_Parser/nS_Parser/proc/GetOperator(O, type=/node/expression/op, L[])
+=======
+/n_Parser/nS_Parser/proc/GetOperator(O, type=/node/expression/operator, L[])
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(istype(O, type)) return O		//O is already the desired type
 	if(istype(O, /token)) O=O:value //sets O to text
 	if(istext(O))										//sets O to path
@@ -108,7 +116,11 @@ See Also:
 - <GetUnaryOperator()>
 */
 /n_Parser/nS_Parser/proc/GetBinaryOperator(O)
+<<<<<<< HEAD
 	return GetOperator(O, /node/expression/op/binary, options.binary_operators)
+=======
+	return GetOperator(O, /node/expression/operator/binary, options.binary_operators)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /*
 Proc: GetUnaryOperator
@@ -120,7 +132,11 @@ See Also:
 - <GetBinaryOperator()>
 */
 /n_Parser/nS_Parser/proc/GetUnaryOperator(O)
+<<<<<<< HEAD
 	return GetOperator(O, /node/expression/op/unary,  options.unary_operators)
+=======
+	return GetOperator(O, /node/expression/operator/unary,  options.unary_operators)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /*
 Proc: Reduce
@@ -128,15 +144,24 @@ Takes the operator on top of the opr stack and assigns its operand(s). Then this
 of the val stack.
 */
 /n_Parser/nS_Parser/proc/Reduce(stack/opr, stack/val)
+<<<<<<< HEAD
 	var/node/expression/op/O=opr.Pop()
+=======
+	var/node/expression/operator/O=opr.Pop()
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(!O) return
 	if(!istype(O))
 		errors+=new/scriptError("Error reducing expression - invalid operator.")
 		return
 	//Take O and assign its operands, popping one or two values from the val stack
 	//depending on whether O is a binary or unary operator.
+<<<<<<< HEAD
 	if(istype(O, /node/expression/op/binary))
 		var/node/expression/op/binary/B=O
+=======
+	if(istype(O, /node/expression/operator/binary))
+		var/node/expression/operator/binary/B=O
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		B.exp2=val.Pop()
 		B.exp =val.Pop()
 		val.Push(B)
@@ -203,7 +228,11 @@ See Also:
 				continue
 			val.Push(ParseParenExpression())
 		else if(istype(curToken, /token/symbol))												//Operator found.
+<<<<<<< HEAD
 			var/node/expression/op/curOperator											//Figure out whether it is unary or binary and get a new instance.
+=======
+			var/node/expression/operator/curOperator											//Figure out whether it is unary or binary and get a new instance.
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			if(src.expecting==OPERATOR)
 				curOperator=GetBinaryOperator(curToken)
 				if(!curOperator)
@@ -297,7 +326,11 @@ See Also:
 /n_Parser/nS_Parser/proc/ParseParenExpression()
 	if(!CheckToken("(", /token/symbol))
 		return
+<<<<<<< HEAD
 	return new/node/expression/op/unary/group(ParseExpression(list(")")))
+=======
+	return new/node/expression/operator/unary/group(ParseExpression(list(")")))
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /*
 Proc: ParseParamExpression
@@ -307,4 +340,8 @@ See Also:
 - <ParseExpression()>
 */
 /n_Parser/nS_Parser/proc/ParseParamExpression()
+<<<<<<< HEAD
 	return ParseExpression(list(",", ")"))
+=======
+	return ParseExpression(list(",", ")"))
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

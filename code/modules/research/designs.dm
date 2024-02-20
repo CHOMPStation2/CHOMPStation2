@@ -31,7 +31,12 @@ other types of metals and chemistry for reagents).
 	var/time = 10					//How many ticks it requires to build
 	var/list/category = list() 			//Primarily used for Mech Fabricators, but can be used for anything.
 	var/sort_string = "ZZZZZ"		//Sorting order
+<<<<<<< HEAD
 	var/search_metadata 			// Optional string that interfaces can use as part of search filters. See- item/borg/upgrade/ai and the Exosuit Fabs.
+=======
+	/// Optional string that interfaces can use as part of search filters. See- item/borg/upgrade/ai and the Exosuit Fabs.
+	var/search_metadata
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /datum/design/New()
 	..()

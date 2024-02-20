@@ -1,6 +1,9 @@
 #define CYBORG_POWER_USAGE_MULTIPLIER 2 // Multiplier for amount of power cyborgs use.
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /mob/living/silicon/robot
 	name = "Cyborg"
 	real_name = "Cyborg"
@@ -8,7 +11,10 @@
 	icon_state = "robot"
 	maxHealth = 200
 	health = 200
+<<<<<<< HEAD
 	nutrition = 0 //CHOMPEdit
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	mob_bump_flag = ROBOT
 	mob_swap_flags = ~HEAVY
@@ -108,7 +114,10 @@
 		/mob/living/silicon/robot/proc/sensor_mode,
 		/mob/living/silicon/robot/proc/robot_checklaws,
 		/mob/living/silicon/robot/proc/robot_mount,
+<<<<<<< HEAD
 		/mob/living/silicon/robot/proc/ex_reserve_refill, //CHOMPEdit re-adds the extinquisher refill from water
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		/mob/living/proc/toggle_rider_reins,
 		/mob/living/proc/vertical_nom,
 		/mob/living/proc/shred_limb,
@@ -319,6 +328,7 @@
 	if(module)
 		return
 	var/list/modules = list()
+<<<<<<< HEAD
 	//VOREStatation Edit Start: shell restrictions //CHOMPstaton change to blacklist
 	if(shell)
 		modules.Add(robot_module_types)
@@ -329,6 +339,11 @@
 			modules+="Combat"
 			modules+="ERT"
 			//CHOMPedit end
+=======
+	//VOREStatation Edit Start: shell restrictions
+	if(shell)
+		modules.Add(shell_module_types)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	else
 		modules.Add(robot_module_types)
 		if(crisis || security_level == SEC_LEVEL_RED || crisis_override)
@@ -344,6 +359,11 @@
 		return
 	if(!(modtype in robot_modules))
 		return
+<<<<<<< HEAD
+=======
+	if(!is_borg_whitelisted(src, modtype))
+		return
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	var/module_type = robot_modules[modtype]
 	transform_with_anim()	//VOREStation edit: sprite animation
@@ -394,7 +414,11 @@
 	//Flavour text.
 	if(client)
 		var/module_flavour = client.prefs.flavour_texts_robot[modtype]
+<<<<<<< HEAD
 		if(module_flavour && (module_flavour != " " || module_flavour != ".")) //CHOMPEDIT: Skip module flavor if " " or "."
+=======
+		if(module_flavour)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			flavor_text = module_flavour
 		else
 			flavor_text = client.prefs.flavour_texts_robot["Default"]
@@ -404,11 +428,14 @@
 			ooc_notes = meta_info
 			ooc_notes_likes = client.prefs.metadata_likes
 			ooc_notes_dislikes = client.prefs.metadata_dislikes
+<<<<<<< HEAD
 			//CHOMPEdit Start
 			ooc_notes_favs = client.prefs.metadata_favs
 			ooc_notes_maybes = client.prefs.metadata_maybes
 			ooc_notes_style = client.prefs.matadata_ooc_style
 			//CHOMPEdit End
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		custom_link = client.prefs.custom_link
 
 /mob/living/silicon/robot/verb/namepick()
@@ -825,7 +852,10 @@
 	hud_used.update_robot_modules_display(TRUE)
 	modtype = initial(modtype)
 	hands.icon_state = get_hud_module_icon()
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(notify)
 		notify_ai(ROBOT_NOTIFICATION_MODULE_RESET, module.name)
 	module.Reset(src)
@@ -950,6 +980,7 @@
 		old_x = sprite_datum.pixel_x
 
 	if(stat == CONSCIOUS)
+<<<<<<< HEAD
 		//CHOMPAdd Start
 		// Let us handle the bellies with our own system
 		update_fullness()
@@ -972,6 +1003,8 @@
 				add_overlay(sprite_datum.get_belly_overlay(src, vs_fullness, belly_class))
 		//CHOMPAdd End
 		/*CHOMPRemove Start
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		var/belly_size = 0
 		if(sprite_datum.has_vore_belly_sprites && vore_selected.belly_overall_mult != 0)
 			if(vore_selected.silicon_belly_overlay_preference == "Sleeper")
@@ -1005,7 +1038,11 @@
 									fullness_to_add = ITEMSIZE_COST_HUGE
 								else
 									fullness_to_add = ITEMSIZE_COST_NO_CONTAINER
+<<<<<<< HEAD
 							belly_size += (fullness_to_add / 32) // vore_selected.overlay_item_multiplier //Enable this later when vorepanel is reworked.
+=======
+							belly_size += (fullness_to_add / 32) //* vore_selected.overlay_item_multiplier //Enable this later when vorepanel is reworked.
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 						else
 							belly_size += 1 //if it's not a person, nor an item... lets just go with 1
 
@@ -1018,7 +1055,10 @@
 				add_overlay(sprite_datum.get_belly_resting_overlay(src, belly_size))
 			else if(!resting)
 				add_overlay(sprite_datum.get_belly_overlay(src, belly_size))
+<<<<<<< HEAD
 		*///CHOMPRemove End
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 		sprite_datum.handle_extra_icon_updates(src)			// Various equipment-based sprites go here.
 
@@ -1234,11 +1274,15 @@
 			sprite_datum = module_sprites[1]
 	else
 		var/selection = tgui_input_list(src, "Select an icon! [triesleft ? "You have [triesleft] more chance\s." : "This is your last try."]", "Robot Icon", module_sprites)
+<<<<<<< HEAD
 		sprite_datum = selection
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		if(selection)
 			sprite_datum = selection
 		else
 			sprite_datum = module_sprites[1]
+<<<<<<< HEAD
 		//CHOMPEdit Start, allow multi bellies
 		vore_icon_bellies = list() //Clear any belly options that may not exist now
 		vore_capacity_ex = list()
@@ -1259,6 +1303,8 @@
 				sprite_datum.belly_light_list = list("sleeper")
 		update_fullness() //Set how full the newly defined bellies are, if they're already full
 		//CHOMPEdit End
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		if(!istype(src,/mob/living/silicon/robot/drone))
 			robot_species = sprite_datum.name
 		if(notransform)
@@ -1284,7 +1330,10 @@
 			choose_icon(icon_selection_tries)
 			return
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	icon_selected = 1
 	icon_selection_tries = 0
 	sprite_type = robot_species

@@ -175,6 +175,10 @@
 				assailant.visible_message("<span class='warning'>[assailant] covers [affecting]'s eyes!</span>")
 			if(affecting.eye_blind < 3)
 				affecting.Blind(3)
+<<<<<<< HEAD
+=======
+		//VOREStation Edit
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		if(BP_HEAD)
 			if(force_down)
 				if(user.a_intent == I_HELP)
@@ -387,6 +391,7 @@
 
 	//It's easier to break out of a grab by a smaller mob
 	break_strength += max(size_difference(affecting, assailant), 0)
+<<<<<<< HEAD
 	//CHOMPEdit Begin
 	var/prob_mult = 1
 	var/mob/living/carbon/human/grabbee = affecting
@@ -400,6 +405,10 @@
 
 	var/break_chance = CLAMP(prob_mult*break_chance_table[CLAMP(break_strength, 1, break_chance_table.len)],0,100)
 	//CHOMPEdit End
+=======
+
+	var/break_chance = break_chance_table[CLAMP(break_strength, 1, break_chance_table.len)]
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(prob(break_chance))
 		if(state == GRAB_KILL)
 			reset_kill_state()

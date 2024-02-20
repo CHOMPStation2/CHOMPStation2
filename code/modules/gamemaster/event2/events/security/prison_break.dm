@@ -126,7 +126,11 @@
 	var/list/areas_to_break = list()
 	var/list/area_types_to_break = null // Area types to include.
 	var/list/area_types_to_ignore = null // Area types to exclude, usually due to undesired inclusion from inheritence.
+<<<<<<< HEAD
 	var/ignore_blast_doors = TRUE //CHOMP Edit
+=======
+	var/ignore_blast_doors = FALSE
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /datum/event2/event/prison_break/brig
 	area_display_name = "Brig"

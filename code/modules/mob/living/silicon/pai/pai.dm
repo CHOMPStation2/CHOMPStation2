@@ -26,7 +26,11 @@
 	var/obj/item/device/communicator/integrated/communicator	// Our integrated communicator.
 
 	var/chassis = "pai-repairbot"   // A record of your chosen chassis.
+<<<<<<< HEAD
 	var/list/possible_chassis = list( //CHOMPEDIT: This doesnt need to be /Global/ and actually makes us unable to make unique children
+=======
+	var/global/list/possible_chassis = list(
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		"Drone" = "pai-repairbot",
 		"Cat" = "pai-cat",
 		"Mouse" = "pai-mouse",
@@ -61,7 +65,11 @@
 		//VOREStation Addition End
 		)
 
+<<<<<<< HEAD
 	var/list/possible_say_verbs = list( //CHOMPEDIT: This doesnt need to be /Global/ and actually makes us unable to make unique children
+=======
+	var/global/list/possible_say_verbs = list(
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		"Robotic" = list("states","declares","queries"),
 		"Natural" = list("says","yells","asks"),
 		"Beep" = list("beeps","beeps loudly","boops"),
@@ -151,11 +159,14 @@
 		ooc_notes = client.prefs.metadata
 		ooc_notes_likes = client.prefs.metadata_likes
 		ooc_notes_dislikes = client.prefs.metadata_dislikes
+<<<<<<< HEAD
 		//CHOMPEdit Start
 		ooc_notes_favs = client.prefs.metadata_favs
 		ooc_notes_maybes = client.prefs.metadata_maybes
 		ooc_notes_style = client.prefs.matadata_ooc_style
 		//CHOMPEdit End
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	src << sound('sound/effects/pai_login.ogg', volume = 75)	//VOREStation Add
 
@@ -332,6 +343,7 @@
 /mob/living/silicon/pai/proc/choose_chassis()
 	set category = "pAI Commands"
 	set name = "Choose Chassis"
+<<<<<<< HEAD
 	var/choice
 	var/finalized = "No"
 	while(finalized == "No" && src.client)
@@ -339,6 +351,19 @@
 		if(!choice) return
 		icon_state = possible_chassis[choice]
 		finalized = tgui_alert(usr, "Look at your sprite. Is this what you wish to use?","Choose Chassis",list("No","Yes"))
+=======
+
+	var/choice
+	var/finalized = "No"
+	while(finalized == "No" && src.client)
+
+		choice = tgui_input_list(usr,"What would you like to use for your mobile chassis icon?","Chassis Choice", possible_chassis)
+		if(!choice) return
+
+		icon_state = possible_chassis[choice]
+		finalized = tgui_alert(usr, "Look at your sprite. Is this what you wish to use?","Choose Chassis",list("No","Yes"))
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	chassis = possible_chassis[choice]
 	verbs |= /mob/living/proc/hide
 //VOREStation Removal End
@@ -380,15 +405,31 @@
 
 /*
 /mob/living/silicon/pai/update_transform()
+<<<<<<< HEAD
 	var/desired_scale_x = size_multiplier * icon_scale_x
 	var/desired_scale_y = size_multiplier * icon_scale_y
+=======
+
+	var/desired_scale_x = size_multiplier * icon_scale_x
+	var/desired_scale_y = size_multiplier * icon_scale_y
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	// Now for the regular stuff.
 	var/matrix/M = matrix()
 	M.Scale(desired_scale_x, desired_scale_y)
 	M.Translate(0, (vis_height/2)*(desired_scale_y-1))
+<<<<<<< HEAD
 	if(chassis != "13")
 		appearance_flags |= PIXEL_SCALE
 		var/anim_time = 3
+=======
+
+	if(chassis != "13")
+		appearance_flags |= PIXEL_SCALE
+
+		var/anim_time = 3
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		if(resting)
 			M.Turn(90)
 			M.Scale(desired_scale_y, desired_scale_x)
@@ -512,7 +553,11 @@
 				if("Cancel")
 					return
 		else if (istype(W, /obj/item/weapon/card/id) && idaccessible == 0)
+<<<<<<< HEAD
 			to_chat(user, "<span class='notice'>[src] is not accepting access modifications at this time.</span>")		// CHOMPEDIT : purdev (spelling fix)
+=======
+			to_chat(user, "<span class='notice'>[src] is not accepting access modifcations at this time.</span>")
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			return
 
 /mob/living/silicon/pai/verb/allowmodification()
@@ -541,6 +586,7 @@
 	visible_message("<span class='filter_notice'><b>[src]</b> fades away from the screen, the pAI device goes silent.</span>")
 	card.removePersonality()
 	clear_client()
+<<<<<<< HEAD
 
 //CHOMP ADDITION:below this point, because theres completely vald reasons to do this, be it OOC incompatibility or mastr allowing it.
 /mob/living/silicon/pai/verb/unbind_master()
@@ -555,3 +601,5 @@
 	src.master = null
 	src.master_dna = null
 	to_chat(src, span_green("You feel unbound."))
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

@@ -980,7 +980,11 @@ var/list/possible_cable_coil_colours = list(
 
 /obj/item/stack/cable_coil/alien/attack_hand(mob/user as mob)
 	if (user.get_inactive_hand() == src)
+<<<<<<< HEAD
 		var/N = tgui_input_number(usr, "How many units of wire do you want to take from [src]?  You can only take up to [amount] at a time.", "Split stacks", 1, amount)
+=======
+		var/N = tgui_input_number(usr, "How many units of wire do you want to take from [src]? You can only take up to [amount] at a time.", "Split stacks", 1, amount)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		if(N && N <= amount)
 			var/obj/item/stack/cable_coil/CC = new/obj/item/stack/cable_coil(user.loc)
 			CC.amount = N

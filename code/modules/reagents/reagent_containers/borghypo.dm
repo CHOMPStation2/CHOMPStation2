@@ -9,12 +9,20 @@
 	possible_transfer_amounts = null
 
 	var/mode = 1
+<<<<<<< HEAD
 	var/charge_cost = 325
+=======
+	var/charge_cost = 50
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	var/charge_tick = 0
 	var/recharge_time = 5 //Time it takes for shots to recharge (in seconds)
 	var/bypass_protection = FALSE // If true, can inject through things like spacesuits and armor.
 
+<<<<<<< HEAD
 	var/list/reagent_ids = list("tricordrazine", "inaprovaline", "bicaridine", "anti_toxin", "kelotane", "tramadol", "dexalin" ,"spaceacillin")
+=======
+	var/list/reagent_ids = list("tricordrazine", "inaprovaline", "anti_toxin", "tramadol", "dexalin" ,"spaceacillin")
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	var/list/reagent_volumes = list()
 	var/list/reagent_names = list()
 
@@ -22,7 +30,11 @@
 	reagent_ids = list("inaprovaline", "dexalin", "tricordrazine", "spaceacillin", "oxycodone")
 
 /obj/item/weapon/reagent_containers/borghypo/crisis
+<<<<<<< HEAD
 	reagent_ids = list("inaprovaline", "tricordrazine", "dexalin", "bicaridine", "kelotane", "anti_toxin", "spaceacillin", "tramadol", "adranol") // CHOMPedit: Unifying chems with dogborg equivalent.
+=======
+	reagent_ids = list("inaprovaline", "bicaridine", "kelotane", "anti_toxin", "dexalin", "tricordrazine", "spaceacillin", "tramadol")
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/item/weapon/reagent_containers/borghypo/lost
 	reagent_ids = list("tricordrazine", "bicaridine", "dexalin", "anti_toxin", "tramadol", "spaceacillin")
@@ -58,11 +70,16 @@
 		if(R && R.cell)
 			for(var/T in reagent_ids)
 				if(reagent_volumes[T] < volume)
+<<<<<<< HEAD
 					if(R.cell.charge - charge_cost < 800) //This is so borgs don't kill themselves with it.
 						return 0
 					else
 						R.cell.use(charge_cost)
 						reagent_volumes[T] = min(reagent_volumes[T] + 5, volume)
+=======
+					R.cell.use(charge_cost)
+					reagent_volumes[T] = min(reagent_volumes[T] + 5, volume)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	return 1
 
 /obj/item/weapon/reagent_containers/borghypo/attack(var/mob/living/M, var/mob/user)
@@ -136,7 +153,10 @@
 	volume = 60
 	possible_transfer_amounts = list(5, 10, 20, 30)
 	reagent_ids = list("ale",
+<<<<<<< HEAD
 		"applejuice", //CHOMPADD it has literally every other type of juice..
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		"beer",
 		"berryjuice",
 		"bitters",

@@ -57,11 +57,14 @@ GLOBAL_LIST_EMPTY(smeses)
 	var/should_be_mapped = 0 // If this is set to 0 it will send out warning on New()
 	var/grid_check = FALSE // If true, suspends all I/O.
 
+<<<<<<< HEAD
 	// CHOMPAdd: More humming noises
 	var/datum/looping_sound/generator/soundloop
 	var/noisy = FALSE
 	// CHOMPAdd End
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/machinery/power/smes/drain_power(var/drain_check, var/surge, var/amount = 0)
 
 	if(drain_check)
@@ -75,9 +78,12 @@ GLOBAL_LIST_EMPTY(smeses)
 	. = ..()
 	GLOB.smeses += src
 	add_nearby_terminals()
+<<<<<<< HEAD
 	soundloop = new(list(src), FALSE) // CHOMPEdit: hmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 	soundloop.extra_range = -6 // CHOMPEdit: Doing this here bc we're reusing the generator hum, and can't directly edit that one
 	soundloop.falloff = 0.2 // CHOMPEdit: Harsher falloff.
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(!check_terminals())
 		stat |= BROKEN
 		return
@@ -92,7 +98,10 @@ GLOBAL_LIST_EMPTY(smeses)
 		T.master = null
 	terminals = null
 	GLOB.smeses -= src
+<<<<<<< HEAD
 	QDEL_NULL(soundloop)
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	return ..()
 
 /obj/machinery/power/smes/proc/add_nearby_terminals()
@@ -163,10 +172,14 @@ GLOBAL_LIST_EMPTY(smeses)
 	charge -= amount*SMESRATE
 
 /obj/machinery/power/smes/process()
+<<<<<<< HEAD
 	if(stat & BROKEN)
 		soundloop.stop()
 		noisy = FALSE
 		return
+=======
+	if(stat & BROKEN)	return
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	// only update icon if state changed
 	if(last_disp != chargedisplay() || last_chrg != inputting || last_onln != outputting)
@@ -203,6 +216,7 @@ GLOBAL_LIST_EMPTY(smeses)
 	else
 		output_used = 0
 
+<<<<<<< HEAD
 	if(!noisy && outputting) // Are we actually outputting power?
 		soundloop.start()
 		noisy = TRUE
@@ -214,6 +228,8 @@ GLOBAL_LIST_EMPTY(smeses)
 		soundloop.stop()
 		noisy = FALSE
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 // called after all power processes are finished
 // restores charge level to smes if there was excess this ptick
 /obj/machinery/power/smes/proc/restore(var/percent_load)
@@ -534,4 +550,8 @@ GLOBAL_LIST_EMPTY(smeses)
 // Description: Sets output setting on this SMES. Trims it if limits are exceeded.
 /obj/machinery/power/smes/proc/set_output(var/new_output = 0)
 	output_level = between(0, new_output, output_level_max)
+<<<<<<< HEAD
 	update_icon()
+=======
+	update_icon()
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

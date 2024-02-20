@@ -69,13 +69,19 @@
 			togglebuildmode(body)
 			ghost = body.ghostize(1)
 			ghost.admin_ghosted = 1
+<<<<<<< HEAD
 			log_and_message_admins("[key_name(src)] admin-ghosted.") // CHOMPEdit - Add logging.
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			if(build_mode == "Yes")
 				togglebuildmode(ghost)
 		else
 			ghost = body.ghostize(1)
 			ghost.admin_ghosted = 1
+<<<<<<< HEAD
 			log_and_message_admins("[key_name(src)] admin-ghosted.") // CHOMPEdit - Add logging.
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		if(body)
 			body.teleop = ghost
 			if(!body.key)

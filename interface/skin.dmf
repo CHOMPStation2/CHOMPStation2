@@ -1153,10 +1153,17 @@ window "mainwindow"
 		anchor2 = -1,-1
 		is-default = true
 		saved-params = "pos;size;is-minimized;is-maximized"
+<<<<<<< HEAD
 		title = "CHOMPStation" // CHOMP Edit
 		is-maximized = true
 		statusbar = false
 		icon = 'icons/ss13_64.png' // CHOMP Edit
+=======
+		title = "VOREStation"
+		is-maximized = true
+		statusbar = false
+		icon = 'icons\\virgoicon.png'
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		macro = "macro"
 		menu = "menu"
 	elem "asset_cache_browser"
@@ -1471,7 +1478,11 @@ window "ooc_notes"
 	elem "ooc_notes"
 		type = MAIN
 		pos = 25,25
+<<<<<<< HEAD
 		size = 700x600 // CHOMP Edit
+=======
+		size = 500x600
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		anchor1 = -1,-1
 		anchor2 = -1,-1
 		is-visible = false
@@ -1480,7 +1491,11 @@ window "ooc_notes"
 	elem "ooc_notes_panel"
 		type = BROWSER
 		pos = 0,0
+<<<<<<< HEAD
 		size = 700x600 // CHOMP Edit
+=======
+		size = 500x600
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		anchor1 = 0,0
 		anchor2 = 80,100
 		saved-params = ""

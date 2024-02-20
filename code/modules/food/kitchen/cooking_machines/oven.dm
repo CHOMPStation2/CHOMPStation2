@@ -153,6 +153,7 @@
 		return
 	else
 		..()
+<<<<<<< HEAD
 
 
 /obj/machinery/appliance/cooker/oven/attackby(var/obj/item/O as obj, var/mob/user as mob)
@@ -163,3 +164,5 @@
 	if(default_part_replacement(user, O))
 		return
 	..()
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

@@ -32,7 +32,11 @@ var/global/list/stool_cache = list() //haha stool
 	update_icon()
 
 /obj/item/weapon/stool/padded/New(var/newloc, var/new_material)
+<<<<<<< HEAD
 	..(newloc,"steel",MAT_CARPET) //CHOMPstation edit: New tile material system
+=======
+	..(newloc, "steel", "carpet")
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/item/weapon/stool/update_icon()
 	// Prep icon.
@@ -123,6 +127,7 @@ var/global/list/stool_cache = list() //haha stool
 			user.drop_from_inventory(C)
 			qdel(C)
 			return
+<<<<<<< HEAD
 		var/padding_type
 		 //CHOMPstation Start: making carpets different and not just the boring basic red no matter carpet type, consider merging material variables at stack level in future - Jack
 		if(istype(W,/obj/item/stack/tile/carpet))
@@ -130,6 +135,11 @@ var/global/list/stool_cache = list() //haha stool
 			if(M.material && (M.material.flags & MATERIAL_PADDING))
 				padding_type = "[M.material.name]"
 		//CHOMPstation END
+=======
+		var/padding_type //This is awful but it needs to be like this until tiles are given a material var.
+		if(istype(W,/obj/item/stack/tile/carpet))
+			padding_type = "carpet"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		else if(istype(W,/obj/item/stack/material))
 			var/obj/item/stack/material/M = W
 			if(M.material && (M.material.flags & MATERIAL_PADDING))

@@ -2,6 +2,7 @@
 	name = "ion rifle"
 	desc = "The RayZar Mk60 EW Halicon is a man portable anti-armor weapon designed to disable mechanical threats, produced by NT. Not the best of its type."
 	description_fluff = "RayZar is Ward-Takahashi’s main consumer weapons brand, known for producing and licensing a wide variety of specialist energy weapons of various types and quality primarily for the civilian market."
+<<<<<<< HEAD
 	icon = 'icons/obj/64x32guns_ch.dmi' // CHOMPEdit: Gun Sprites
 	icon_state = "ionrifle"
 	item_state = "ionrifle"
@@ -9,6 +10,13 @@
 	wielded_item_state = "ionrifle-wielded"
 	origin_tech = list(TECH_COMBAT = 2, TECH_MAGNET = 4)
 	w_class = ITEMSIZE_HUGE //CHOMP Edit.
+=======
+	icon_state = "ionrifle"
+	item_state = "ionrifle"
+	wielded_item_state = "ionrifle-wielded"
+	origin_tech = list(TECH_COMBAT = 2, TECH_MAGNET = 4)
+	w_class = ITEMSIZE_LARGE
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	force = 10
 	slot_flags = SLOT_BACK
 	projectile_type = /obj/item/projectile/ion
@@ -22,7 +30,10 @@
 /obj/item/weapon/gun/energy/ionrifle/pistol
 	name = "ion pistol"
 	desc = "The RayZar Mk63 EW Pan is a man portable anti-armor weapon designed to disable mechanical threats, produced by NT. This model sacrifices capacity for portability."
+<<<<<<< HEAD
 	icon = 'icons/obj/gun.dmi' // CHOMPEdit: Gun Sprites
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	icon_state = "ionpistol"
 	item_state = null
 	w_class = ITEMSIZE_NORMAL
@@ -30,7 +41,10 @@
 	slot_flags = SLOT_BELT|SLOT_HOLSTER
 	charge_cost = 480
 	projectile_type = /obj/item/projectile/ion/pistol
+<<<<<<< HEAD
 	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/item/weapon/gun/energy/decloner
 	name = "biological demolecularisor"
@@ -44,7 +58,10 @@
 	name = "floral somatoray"
 	desc = "A tool that discharges controlled radiation which induces mutation in plant cells."
 	description_fluff = "The floral somatoray is a relatively recent invention of the NanoTrasen corporation, turning a process that once involved transferring plants to massive mutating racks, into a remote interface. Do not look directly into the transmission end."
+<<<<<<< HEAD
 	icon = 'icons/obj/gun.dmi' //CHOMPedit
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	icon_state = "floramut100"
 	item_state = "floramut"
 	projectile_type = /obj/item/projectile/energy/floramut
@@ -54,7 +71,10 @@
 	battery_lock = 1
 
 	var/decl/plantgene/gene = null
+<<<<<<< HEAD
 	recoil_mode = 0 //CHOMP Addition
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	var/obj/item/weapon/stock_parts/micro_laser/emitter
 
 	firemodes = list(
@@ -141,7 +161,11 @@
 	icon_state = "riotgun"
 	item_state = "c20r"
 	slot_flags = SLOT_BELT|SLOT_BACK
+<<<<<<< HEAD
 	w_class = ITEMSIZE_HUGE //CHOMP Edit.
+=======
+	w_class = ITEMSIZE_LARGE
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	projectile_type = /obj/item/projectile/meteor
 	cell_type = /obj/item/weapon/cell/potato
 	charge_cost = 100
@@ -164,7 +188,10 @@
 	desc = "A custom-built weapon of some kind."
 	icon_state = "xray"
 	projectile_type = /obj/item/projectile/beam/mindflayer
+<<<<<<< HEAD
 	w_class = ITEMSIZE_HUGE //CHOMP Edit.
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/item/weapon/gun/energy/toxgun
 	name = "phoron pistol"

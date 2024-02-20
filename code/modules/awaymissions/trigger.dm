@@ -1,6 +1,7 @@
 /obj/effect/step_trigger/message
 	var/message	//the message to give to the mob
 	var/once = 1
+<<<<<<< HEAD
 	var/list/mobs = list()	//CHOMPEdit - mobs we've sent our message to
 
 /obj/effect/step_trigger/message/Trigger(mob/M as mob)
@@ -13,11 +14,22 @@
 				mobs += M
 		to_chat(M, "[message]")
 	//CHOMPEdit end
+=======
+
+/obj/effect/step_trigger/message/Trigger(mob/M as mob)
+	if(M.client)
+		to_chat(M, "<span class='info'>[message]</span>")
+		if(once)
+			qdel(src)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/effect/step_trigger/teleport_fancy
 	var/locationx
 	var/locationy
+<<<<<<< HEAD
 	var/locationz	//CHOMPEdit - Why wasn't there a z for this
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	var/uses = 1	//0 for infinite uses
 	var/entersparks = 0
 	var/exitsparks = 0
@@ -25,10 +37,15 @@
 	var/exitsmoke = 0
 
 /obj/effect/step_trigger/teleport_fancy/Trigger(mob/M as mob)
+<<<<<<< HEAD
 	if(!locationz)
 		locationz = src.z	//CHOMPEdit - Safety net to not break existing teleport triggers
 	var/dest = locate(locationx, locationy, locationz)	//CHOMPEdit - added locationz
 	M.forceMove(dest)	//CHOMPEdit - Teleports should be forceMove, not Move
+=======
+	var/dest = locate(locationx, locationy, z)
+	M.Move(dest)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	if(entersparks)
 		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread

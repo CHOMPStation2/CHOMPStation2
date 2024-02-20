@@ -52,7 +52,11 @@
 /mob/living/carbon/alien/get_default_language()
 	if(default_language)
 		return default_language
+<<<<<<< HEAD
 	return GLOB.all_languages["Xenolingua"] //CHOMPedit
+=======
+	return GLOB.all_languages["Xenomorph"]
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /mob/living/carbon/alien/say_quote(var/message, var/datum/language/speaking = null)
 	var/verb = "hisses"

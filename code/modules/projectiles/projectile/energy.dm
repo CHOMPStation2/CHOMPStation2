@@ -195,7 +195,11 @@
 	icon_state = "neurotoxin"
 	damage = 0
 	damage_type = BIOACID
+<<<<<<< HEAD
 	agony = 60 //CHOMPedit lowered agony damage
+=======
+	agony = 80
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	check_armour = "bio"
 	armor_penetration = 25	// It's acid-based
 	hitsound_wall = 'sound/weapons/effects/alien_spit_wall.ogg'
@@ -256,13 +260,19 @@
 		M.Weaken(2)
 		M.ear_damage += rand(1, 10)
 		M.ear_deaf = max(M.ear_deaf,15)
+<<<<<<< HEAD
 		M.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if (M.ear_damage >= 15)
 		to_chat(M, "<span class='danger'>Your ears start to ring badly!</span>")
 		if (prob(M.ear_damage - 5))
 			to_chat(M, "<span class='danger'>You can't hear anything!</span>")
 			M.sdisabilities |= DEAF
+<<<<<<< HEAD
 			M.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	else
 		if (M.ear_damage >= 5)
 			to_chat(M, "<span class='danger'>Your ears start to ring!</span>")
@@ -288,6 +298,7 @@
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/monochrome_laser
 	hud_state = "plasma_sphere"
 
+<<<<<<< HEAD
 /* ChompEdit, moving over to energy_ch.dm
 /obj/item/projectile/energy/phase
 	name = "phase wave"
@@ -300,20 +311,44 @@
 
 /obj/item/projectile/energy/phase/light
 	range = 11 //Chompedit This range was absolutely pathetic
+=======
+/obj/item/projectile/energy/phase
+	name = "phase wave"
+	icon_state = "phase"
+	range = 6
+	damage = 5
+	SA_bonus_damage = 45	// 50 total on animals
+	SA_vulnerability = SA_ANIMAL
+	hud_state = "laser_heat"
+
+/obj/item/projectile/energy/phase/light
+	range = 4
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	SA_bonus_damage = 35	// 40 total on animals
 	hud_state = "laser_heat"
 
 /obj/item/projectile/energy/phase/heavy
+<<<<<<< HEAD
 	range = 16 //Chompedit This range was not great
+=======
+	range = 8
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	SA_bonus_damage = 55	// 60 total on animals
 	hud_state = "laser_heat"
 
 /obj/item/projectile/energy/phase/heavy/cannon
+<<<<<<< HEAD
 	range = 20 //Chompedit This range was mediocre, but not worth a cannon.
 	damage = 15
 	SA_bonus_damage = 60	// 75 total on animals
 	hud_state = "laser_heat"
 */
+=======
+	range = 10
+	damage = 15
+	SA_bonus_damage = 60	// 75 total on animals
+	hud_state = "laser_heat"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/item/projectile/energy/electrode/strong
 	agony = 70

@@ -1,14 +1,23 @@
 /obj/item/weapon/gun/energy/ionrifle/pistol
 	projectile_type = /obj/item/projectile/ion/pistol // still packs a punch but no AoE
+<<<<<<< HEAD
 	w_class = ITEMSIZE_NORMAL //CHOMP Edit.
 	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/item/weapon/gun/energy/ionrifle/weak
 	projectile_type = /obj/item/projectile/ion/small
 
+<<<<<<< HEAD
 /obj/item/weapon/gun/energy/medigun //Adminspawn/ERT etc // CH edit - Changes ML3M  to NERD
 	name = "directed restoration system"
 	desc = "The BL-3 'Phoenix' is an adaptation on the NERD 'Medbeam' design that channels the power of the beam into a single healing laser. It is highly energy-inefficient, but its medical power cannot be denied."
+=======
+/obj/item/weapon/gun/energy/medigun //Adminspawn/ERT etc
+	name = "directed restoration system"
+	desc = "The BL-3 'Phoenix' is an adaptation on the ML-3 'Medbeam' design that channels the power of the beam into a single healing laser. It is highly energy-inefficient, but its medical power cannot be denied."
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	force = 5
 	icon_state = "medbeam"
 	item_state = "medbeam"
@@ -101,4 +110,8 @@
 		for(var/target in victims)
 			var/obj/item/projectile/P = new zaptype(src.loc)
 			P.launch_projectile_from_turf(target = target, target_zone = null, user = firer, params = null, angle_override = null, forced_spread = 0)
+<<<<<<< HEAD
 	..()
+=======
+	..()
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

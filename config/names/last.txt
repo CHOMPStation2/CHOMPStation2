@@ -491,7 +491,10 @@ Stamos
 Sagan
 Hawking
 Dawkins
+<<<<<<< HEAD
 Goebbles
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 McShain
 McDonohugh
 Power

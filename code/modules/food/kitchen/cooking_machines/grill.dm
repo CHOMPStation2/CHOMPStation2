@@ -47,6 +47,7 @@
 		icon_state = off_icon
 		if(grill_loop)
 			grill_loop.stop(src)
+<<<<<<< HEAD
 
 /obj/machinery/appliance/cooker/grill/attackby(var/obj/item/O as obj, var/mob/user as mob)
 	if(default_deconstruction_screwdriver(user, O)) //CHOMPedit - Allows for deconstruction
@@ -56,3 +57,5 @@
 	if(default_part_replacement(user, O))
 		return
 	..()
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

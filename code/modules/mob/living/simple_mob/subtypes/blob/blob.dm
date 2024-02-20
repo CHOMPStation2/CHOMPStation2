@@ -30,9 +30,12 @@
 	mob_class = MOB_CLASS_SLIME
 	ai_holder_type = /datum/ai_holder/simple_mob/melee
 
+<<<<<<< HEAD
 	can_be_drop_prey = FALSE //CHOMP Add
 	can_pain_emote = FALSE // CHOMPEdit: Can't feel pain
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /mob/living/simple_mob/blob/speech_bubble_appearance()
 	return "slime"
 
@@ -89,4 +92,8 @@
 	return ally
 
 /decl/mob_organ_names/blob
+<<<<<<< HEAD
 	hit_zones = list("mass")
+=======
+	hit_zones = list("mass")
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

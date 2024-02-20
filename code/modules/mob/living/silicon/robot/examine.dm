@@ -29,8 +29,12 @@
 				. += "It appears to be in stand-by mode." //afk
 		if(UNCONSCIOUS)		. += "<span class='warning'>It doesn't seem to be responding.</span>"
 		if(DEAD)			. += "<span class='deadsay'>It looks completely unsalvageable.</span>"
+<<<<<<< HEAD
 	. += attempt_vr(src,"examine_reagent_bellies",args) //CHOMP reagent bellies
 	
+=======
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	// VOREStation Edit: Start
 	. += attempt_vr(src,"examine_bellies_borg",args) //VOREStation Edit
 	// VOREStation Edit: End

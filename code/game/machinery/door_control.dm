@@ -149,6 +149,7 @@
 					M.close()
 					return
 
+<<<<<<< HEAD
 //CHOMP Add start
 /obj/machinery/button/remote/blast_door/bear
 	name = "stuffed bear"
@@ -184,6 +185,8 @@
 		icon_state = "stuffedbear"
 //CHOMP Add end
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /*
 	Emitter remote control
 */

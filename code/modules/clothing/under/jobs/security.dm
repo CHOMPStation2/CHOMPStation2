@@ -79,8 +79,12 @@
 	item_state_slots = list(slot_r_hand_str = "green", slot_l_hand_str = "green")
 	armor = list(melee = 10, bullet = 5, laser = 5,energy = 0, bomb = 0, bio = 0, rad = 0)
 	siemens_coefficient = 0.9
+<<<<<<< HEAD
 	rolled_sleeves = 0 //CHOMPEdit
 	rolled_down = 0 //CHOMPEdit
+=======
+	rolled_sleeves = -1
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /*
  * Detective

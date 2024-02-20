@@ -249,7 +249,12 @@
 
 /obj/item/weapon/pen/reagent/sleepy/New()
 	..()
+<<<<<<< HEAD
 	reagents.add_reagent("chloralhydrate", 22)	//Used to be 100 sleep toxin//30 Chloral seems to be fatal, reducing it to 22./N
+=======
+	reagents.add_reagent("chloralhydrate", 1)	//VOREStation Edit
+	reagents.add_reagent("stoxin", 14)	//VOREStation Add
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 
 /*

@@ -1,8 +1,12 @@
 /obj/item/weapon/gun/energy
 	name = "energy gun"
 	desc = "A basic energy-based gun."
+<<<<<<< HEAD
 	icon = 'icons/obj/gun_ch.dmi' // CHOMPEdit: Gun Sprites
 	icon_state = "energystun" // CHOMPEdit: Gun Sprites
+=======
+	icon_state = "energy"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	fire_sound_text = "laser blast"
 
 	var/obj/item/weapon/cell/power_supply //What type of power cell this uses
@@ -31,9 +35,12 @@
 
 /obj/item/weapon/gun/energy/New()
 	..()
+<<<<<<< HEAD
 	var/static/list/gun_icons = icon_states('icons/obj/gun_ch.dmi')
 	if (icon == 'icons/obj/gun_ch.dmi' && !(icon_state in gun_icons))
 		icon = 'icons/obj/gun.dmi'
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(self_recharge)
 		power_supply = new /obj/item/weapon/cell/device/weapon(src)
 		START_PROCESSING(SSobj, src)
@@ -267,4 +274,8 @@
 	if(!power_supply)
 		return 0
 	else
+<<<<<<< HEAD
 		return FLOOR(power_supply.charge / max(charge_cost, 1), 1)
+=======
+		return FLOOR(power_supply.charge / max(charge_cost, 1), 1)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

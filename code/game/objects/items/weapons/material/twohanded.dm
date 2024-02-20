@@ -17,7 +17,11 @@
  * Twohanded
  */
 /obj/item/weapon/material/twohanded
+<<<<<<< HEAD
 	w_class = ITEMSIZE_HUGE //CHOMP Edit
+=======
+	w_class = ITEMSIZE_LARGE
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	var/wielded = 0
 	var/force_wielded = 0
 	var/force_unwielded
@@ -146,7 +150,11 @@
 	name = "spear"
 	desc = "A haphazardly-constructed yet still deadly weapon of ancient design."
 	force = 10
+<<<<<<< HEAD
 	w_class = ITEMSIZE_HUGE //CHOMP Edit
+=======
+	w_class = ITEMSIZE_LARGE
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	slot_flags = SLOT_BACK
 	force_divisor = 0.5 			// 15 when wielded with hardness 30 (glass)
 	unwielded_force_divisor = 0.375
@@ -190,4 +198,8 @@
 	attack_verb = list("cropped","spanked","swatted","smacked","peppered")
 
 /obj/item/weapon/material/twohanded/spear/flint
+<<<<<<< HEAD
 	default_material = MAT_FLINT 
+=======
+	default_material = MAT_FLINT
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

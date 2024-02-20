@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 
 CHOMPedit - This file has been excluded from the compilation.
@@ -27,6 +28,11 @@ Reason: Replaced with "Tickets System". Main logic has been moved to: modular_ch
 	else
 		world.TgsTargetedChatBroadcast(message,TRUE)
 //CHOMPEdit End
+=======
+/client/var/datum/admin_help/current_ticket	//the current ticket the (usually) not-admin client is dealing with
+
+//
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 //TICKET MANAGER
 //
 
@@ -208,6 +214,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 		log_admin("Ticket #[id]: [key_name(initiator)]: [name] - heard by [admin_number_present] non-AFK admins who have +BAN.")
 		if(admin_number_present <= 0)
 			to_chat(C, "<span class='pm notice'>No active admins are online, your adminhelp was sent to the admin discord.</span>")		//VOREStation Edit
+<<<<<<< HEAD
 	send2adminchat() //VOREStation Add
 	//YW EDIT START
 	var/list/adm = get_admin_counts()
@@ -218,6 +225,8 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	else
 		ahelp_discord_message("ADMINHELP: FROM: [initiator_ckey]/[initiator_key_name] - MSG: **[msg]** - Heard by [activeMins] NON-AFK staff members.") //CHOMPEdit
 	//YW EDIT END
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 		// Also send it to discord since that's the hip cool thing now.
 		SSwebhooks.send(
@@ -238,10 +247,14 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	return ..()
 
 /datum/admin_help/proc/AddInteraction(formatted_message)
+<<<<<<< HEAD
 	var/curinteraction = "[gameTimestamp()]: [formatted_message]"
 	if(config.discord_ahelps_all)	//CHOMPEdit
 		ahelp_discord_message("ADMINHELP: TICKETID:[id] [strip_html_properly(curinteraction)]") //CHOMPEdit
 	_interactions += curinteraction
+=======
+	_interactions += "[gameTimestamp()]: [formatted_message]"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 //private
 /datum/admin_help/proc/FullMonty(ref_src)
@@ -286,8 +299,13 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	//send this msg to all admins
 
 	for(var/client/X in GLOB.admins)
+<<<<<<< HEAD
 //		if(!check_rights(R_ADMIN, 0, X)) //CHOMP Remove let everyone hear the ahelp
 //			continue //CHOMP Remove let everyone hear the ahelp
+=======
+		if(!check_rights(R_ADMIN, 0, X))
+			continue
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		if(X.is_preference_enabled(/datum/client_preference/holder/play_adminhelp_ping))
 			X << 'sound/effects/adminhelp.ogg'
 		window_flash(X)

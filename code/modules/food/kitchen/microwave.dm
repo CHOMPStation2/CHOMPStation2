@@ -363,6 +363,10 @@
 					dat += {"<B>[capitalize(O)]:</B> [N] [items_measures[O]]<BR>"}
 				else
 					dat += {"<B>[capitalize(O)]:</B> [N] [items_measures_p[O]]<BR>"}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		for (var/datum/reagent/R in reagents.reagent_list)
 			var/display_name = R.name
 			if (R.id == "capsaicin")
@@ -370,6 +374,10 @@
 			if (R.id == "frostoil")
 				display_name = "Coldsauce"
 			dat += {"<B>[display_name]:</B> [R.volume] unit\s<BR>"}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		if (items_counts.len==0 && reagents.reagent_list.len==0)
 			dat = {"<B>The microwave is empty</B><BR>"}
 		else
@@ -378,6 +386,10 @@
 <A href='?src=\ref[src];action=cook'>Turn on!<BR>\
 <A href='?src=\ref[src];action=dispose'>Eject ingredients!<BR>\
 "}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	user << browse("<HEAD><TITLE>Microwave Controls</TITLE></HEAD><TT>[dat]</TT>", "window=microwave")
 	onclose(user, "microwave")
 	return

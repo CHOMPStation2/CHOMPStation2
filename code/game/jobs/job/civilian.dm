@@ -239,9 +239,17 @@
 						handle complaints against crew members, and can have issues brought to the attention of Central Command, \
 						assuming their paperwork is in order."
 
+<<<<<<< HEAD
 //YW UNCOMMENTINGSTART: REINSTATE LOYALTY IMPLANT
+=======
+/*
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /datum/job/lawyer/equip(var/mob/living/carbon/human/H)
 	. = ..()
 	if(.)
 		H.implant_loyalty(H)
+<<<<<<< HEAD
 //YW UNCOMMENTING END
+=======
+*/
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

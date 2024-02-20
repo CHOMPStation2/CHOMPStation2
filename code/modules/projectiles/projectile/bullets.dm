@@ -1,6 +1,9 @@
 /obj/item/projectile/bullet
 	name = "bullet"
+<<<<<<< HEAD
 	icon = 'icons/obj/projectiles_yw.dmi' //YWEdit, uses our bullet sprites
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	icon_state = "bullet"
 	fire_sound = 'sound/weapons/Gunshot4.ogg'
 	damage = 60
@@ -11,6 +14,10 @@
 	sharp = TRUE
 	hitsound_wall = "ricochet"
 	impact_effect_type = /obj/effect/temp_visual/impact_effect
+<<<<<<< HEAD
+=======
+	excavation_amount  = 20
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	var/mob_passthrough_check = 0
 	hud_state = "pistol_lightap"
 	hud_state_empty = "pistol_empty"  // Just in case we somehow have no hud_state_empty defined
@@ -18,9 +25,15 @@
 	muzzle_type = /obj/effect/projectile/muzzle/bullet
 
 /obj/item/projectile/bullet/on_hit(var/atom/target, var/blocked = 0)
+<<<<<<< HEAD
 	..(target, blocked)
 		//var/mob/living/L = target
 		//shake_camera(L, 3, 2) CHOMPEDIT - "Muh realism". The screenshake is obnoxious for gameplay. TODO: Replace with blood splatter indicator.
+=======
+	if (..(target, blocked))
+		var/mob/living/L = target
+		shake_camera(L, 3, 2)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/item/projectile/bullet/attack_mob(var/mob/living/target_mob, var/distance, var/miss_modifier)
 	if(penetrating > 0 && damage > 20 && prob(damage))
@@ -58,10 +71,13 @@
 		if(D.glass) chance *= 2
 	else if(istype(A, /obj/structure/girder))
 		chance = 100
+<<<<<<< HEAD
 	else if(istype(A, /obj/machinery/door/airlock/voidcraft)) //CHOMPEDIT Begin, lets the code see shuttlecraft structures and not treat them as air.
 		chance = 0
 	else if(istype(A, /turf/simulated/shuttle/wall))
 		chance = 0 //CHOMPEDIT End. Yeah, shuttlecraft can handle small arms fire just fine.
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	if(prob(chance))
 		if(A.opacity)
@@ -132,7 +148,10 @@
 
 /obj/item/projectile/bullet/shotgun
 	name = "slug"
+<<<<<<< HEAD
 	icon_state = "bullet_chonk" //Ywedit
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	fire_sound = 'sound/weapons/Gunshot_shotgun.ogg'
 	damage = 50
 	armor_penetration = 20
@@ -189,7 +208,11 @@
 /obj/item/projectile/bullet/rifle
 	fire_sound = 'sound/weapons/Gunshot_generic_rifle.ogg'
 	armor_penetration = 15
+<<<<<<< HEAD
 	//penetrating = 1 CHOMPedit: This is the only thing I see that could cause stun and unsure what can be pierced with a penetrating of 1.
+=======
+	penetrating = 1
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	hud_state = "rifle"
 	hud_state_empty = "rifle_empty"
 

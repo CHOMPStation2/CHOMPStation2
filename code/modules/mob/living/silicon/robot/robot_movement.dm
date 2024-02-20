@@ -6,7 +6,10 @@
 /mob/living/silicon/robot/Check_Shoegrip()
 	return module && module.no_slip
 
+<<<<<<< HEAD
 /* CHOMPedit: Nuking slipping.
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /mob/living/silicon/robot/Process_Spaceslipping(var/prob_slip)
 	var/obj/item/weapon/tank/jetpack/thrust = get_jetpack()
 	if(thrust?.can_thrust(0.01))
@@ -14,7 +17,10 @@
 	if(module && module.no_slip)
 		return 0
 	..(prob_slip)
+<<<<<<< HEAD
 */// CHOMPedit end.
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /mob/living/silicon/robot/Process_Spacemove(var/check_drift = 0)
 	if(..())//Can move due to other reasons, don't use jetpack fuel
@@ -36,8 +42,11 @@
 
 	if(get_restraining_bolt())	// Borgs with Restraining Bolts move slower.
 		. += 1
+<<<<<<< HEAD
 	if(nutrition > 1000) //CHOMPAdd
 		. += nutrition / 2000 //CHOMPAdd
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	. += config.robot_delay
 

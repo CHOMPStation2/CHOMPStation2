@@ -8,6 +8,7 @@
 #
 # Valid Prefixes:
 #   bugfix
+<<<<<<< HEAD
 #     - (fixes bugs)
 #   wip
 #     - (work in progress)
@@ -46,6 +47,23 @@
 
 # Your name.
 author: "
+=======
+#   wip (For works in progress)
+#   tweak
+#   soundadd
+#   sounddel
+#   rscadd (general adding of nice things)
+#   rscdel (general deleting of nice things)
+#   imageadd
+#   imagedel
+#   maptweak
+#   spellcheck (typo fixes)
+#   experiment
+#################################
+
+# Your name.
+author: N3X15
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 # Optional: Remove this file after generating master changelog.  Useful for PR changelogs that won't get used again.
 delete-after: True

@@ -46,6 +46,7 @@
 
 	if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
 		if(ready)
+<<<<<<< HEAD
 			output += "<p>\[ <span class='linkOn'><b>Ready</b></span> | <a href='byond://?src=\ref[src];ready=0'>Not Ready</a> \]</p>" //ChompEDIT - fixed height
 		else
 			output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Ready</a> | <span class='linkOn'><b>Not Ready</b></span> \]</p>" //ChompEDIT - fixed height
@@ -53,27 +54,47 @@
 
 	else
 		output += "<p><a href='byond://?src=\ref[src];manifest=1'>View the Crew Manifest</A></p>" //ChompEDIT - fixed height
+=======
+			output += "<p>\[ <span class='linkOn'><b>Ready</b></span> | <a href='byond://?src=\ref[src];ready=0'>Not Ready</a> \]</p>"
+		else
+			output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Ready</a> | <span class='linkOn'><b>Not Ready</b></span> \]</p>"
+
+	else
+		output += "<a href='byond://?src=\ref[src];manifest=1'>View the Crew Manifest</A><br><br>"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		output += "<p><a href='byond://?src=\ref[src];late_join=1'>Join Game!</A></p>"
 
 	output += "<p><a href='byond://?src=\ref[src];observe=1'>Observe</A></p>"
 
+<<<<<<< HEAD
 	output += "<hr>" //ChompADD - a line divider between functional and info buttons
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	/*
 	//nobody uses this feature
 	if(!IsGuestKey(src.key))
 		establish_db_connection()
 
+<<<<<<< HEAD
 		if(SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 			var/isadmin = 0
 			if(src.client && src.client.holder)
 				isadmin = 1
 			var/datum/db_query/query = SSdbcore.NewQuery("SELECT id FROM erro_poll_question WHERE [(isadmin ? "" : "adminonly = false AND")] Now() BETWEEN starttime AND endtime AND id NOT IN (SELECT pollid FROM erro_poll_vote WHERE ckey = :t_ckey) AND id NOT IN (SELECT pollid FROM erro_poll_textreply WHERE ckey = :t_ckey)",list("t_ckey" = ckey)) //CHOMPEdit TGSQL
+=======
+		if(dbcon.IsConnected())
+			var/isadmin = 0
+			if(src.client && src.client.holder)
+				isadmin = 1
+			var/DBQuery/query = dbcon.NewQuery("SELECT id FROM erro_poll_question WHERE [(isadmin ? "" : "adminonly = false AND")] Now() BETWEEN starttime AND endtime AND id NOT IN (SELECT pollid FROM erro_poll_vote WHERE ckey = \"[ckey]\") AND id NOT IN (SELECT pollid FROM erro_poll_textreply WHERE ckey = \"[ckey]\")")
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			query.Execute()
 			var/newpoll = 0
 			while(query.NextRow())
 				newpoll = 1
 				break
+<<<<<<< HEAD
 			qdel(query) //CHOMPEdit TGSQL
 			if(newpoll)
 				output += "<p><b><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A><br>(NEW!)</b></p>" //ChompEDIT - fixed height
@@ -85,12 +106,23 @@
 		output += "<p><b><a href='byond://?src=\ref[src];shownews=1'>Show Server News</A><br>(NEW!)</b></p>" //ChompEDIT 'Game updates' --> 'Server news'
 	else
 		output += "<p><a href='byond://?src=\ref[src];shownews=1'>Show Server News</A><br><i>No Changes</i></p>" //ChompEDIT 'Game updates' --> 'Server news'
+=======
+
+			if(newpoll)
+				output += "<p><b><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A> (NEW!)</b></p>"
+			else
+				output += "<p><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A></p>"
+	*/
+
+	output += "<p><a href='byond://?src=\ref[src];open_changelog=1'>View Changelog</A></p>"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	if(SSsqlite.can_submit_feedback(client))
 		output += "<p>[href(src, list("give_feedback" = 1), "Give Feedback")]</p>"
 
 	if(GLOB.news_data.station_newspaper)
 		if(client.prefs.lastlorenews == GLOB.news_data.newsindex)
+<<<<<<< HEAD
 			output += "<p><a href='byond://?src=\ref[src];open_station_news=1'>Show [using_map.station_name] News<br><i>No Changes</i></A></p>" //ChompEDIT - fixed height
 		else
 			output += "<p><b><a href='byond://?src=\ref[src];open_station_news=1'>Show [using_map.station_name] News<br>(NEW!)</A></b></p>" //ChompEDIT - fixed height
@@ -101,6 +133,11 @@
 	else
 		output += "<p><b><a href='byond://?src=\ref[src];open_changelog=1'>Show Changelog</A><br>(NEW!)</b></p>"
 	//ChompEDIT End
+=======
+			output += "<p><a href='byond://?src=\ref[src];open_station_news=1'>Show [using_map.station_name] News</A></p>"
+		else
+			output += "<p><b><a href='byond://?src=\ref[src];open_station_news=1'>Show [using_map.station_name] News (NEW!)</A></b></p>"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	output += "</div>"
 
@@ -112,7 +149,11 @@
 		client.prefs.lastlorenews = GLOB.news_data.newsindex
 		SScharacter_setup.queue_preferences_save(client.prefs)
 
+<<<<<<< HEAD
 	panel = new(src, "Welcome","Welcome", 210, 400, src) // VOREStation Edit //ChompEDIT, height 300 -> 400
+=======
+	panel = new(src, "Welcome","Welcome", 210, 300, src) // VOREStation Edit
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	panel.set_window_options("can_close=0")
 	panel.set_content(output)
 	panel.open()
@@ -262,17 +303,29 @@
 
 	if(href_list["privacy_poll"])
 		establish_db_connection()
+<<<<<<< HEAD
 		if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+=======
+		if(!dbcon.IsConnected())
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			return
 		var/voted = 0
 
 		//First check if the person has not voted yet.
+<<<<<<< HEAD
 		var/datum/db_query/query = SSdbcore.NewQuery("SELECT * FROM erro_privacy WHERE ckey=:t_ckey", list("t_ckey" = src.ckey)) //CHOMPEdit TGSQL
+=======
+		var/DBQuery/query = dbcon.NewQuery("SELECT * FROM erro_privacy WHERE ckey='[src.ckey]'")
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		query.Execute()
 		while(query.NextRow())
 			voted = 1
 			break
+<<<<<<< HEAD
 		qdel(query) //CHOMPEdit TGSQL
+=======
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		//This is a safety switch, so only valid options pass through
 		var/option = "UNKNOWN"
 		switch(href_list["privacy_poll"])
@@ -292,12 +345,19 @@
 			return
 
 		if(!voted)
+<<<<<<< HEAD
 			var/list/sqlargs = list("t_ckey" = src.ckey, "t_option" = "[option]") //CHOMPEdit TGSQL
 			var/sql = "INSERT INTO erro_privacy VALUES (null, Now(), :t_ckey, :t_option)" //CHOMPEdit TGSQL
 			var/datum/db_query/query_insert = SSdbcore.NewQuery(sql,sqlargs) //CHOMPEdit TGSQL
 			query_insert.Execute()
 			to_chat(usr, "<b>Thank you for your vote!</b>")
 			qdel(query_insert)
+=======
+			var/sql = "INSERT INTO erro_privacy VALUES (null, Now(), '[src.ckey]', '[option]')"
+			var/DBQuery/query_insert = dbcon.NewQuery(sql)
+			query_insert.Execute()
+			to_chat(usr, "<b>Thank you for your vote!</b>")
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			usr << browse(null,"window=privacypoll")
 
 	if(!ready && href_list["preference"])
@@ -378,6 +438,7 @@
 		else
 			client.feedback_form = new(client)
 
+<<<<<<< HEAD
 	//ChompEDIT START
 	if(href_list["open_changelog"])
 		client.prefs.lastchangelog = changelog_hash
@@ -385,10 +446,15 @@
 		client.changes()
 		return
 	//ChompEDIT END
+=======
+	if(href_list["open_changelog"])
+		src << link("https://wiki.vore-station.net/Changelog")
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /mob/new_player/proc/handle_server_news()
 	if(!client)
 		return
+<<<<<<< HEAD
 	var/savefile/F = client.get_server_news()
 	if(F)
 		//client.prefs.lastnews = md5(F["body"]) //Chomp REMOVE
@@ -405,6 +471,17 @@
 		dat += "<h1>[title]</h1>"
 		dat += "<br>"
 		dat += "[body]"
+=======
+	var/savefile/F = get_server_news()
+	if(F)
+		client.prefs.lastnews = md5(F["body"])
+		SScharacter_setup.queue_preferences_save(client.prefs)
+
+		var/dat = "<html><body><center>"
+		dat += "<h1>[F["title"]]</h1>"
+		dat += "<br>"
+		dat += "[F["body"]]"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		dat += "<br>"
 		dat += "<font size='2'><i>Last written by [F["author"]], on [F["timestamp"]].</i></font>"
 		dat += "</center></body></html>"
@@ -483,6 +560,7 @@
 	spawning = 1
 	close_spawn_windows()
 
+<<<<<<< HEAD
 	//CHOMPEdit start - join as mob in crystal...
 	var/obj/item/itemtf = join_props["itemtf"]
 	if(itemtf && istype(itemtf, /obj/item/capture_crystal))
@@ -509,6 +587,8 @@
 			return
 	//CHOMPEdit end
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	job_master.AssignRole(src, rank, 1)
 
 	var/mob/living/character = create_character(T)	//creates the human and transfers vars and mind
@@ -540,7 +620,11 @@
 		return
 
 	// Equip our custom items only AFTER deploying to spawn points eh?
+<<<<<<< HEAD
 	equip_custom_items(character)	//CHOMPEdit readded to enable custom_item.txt
+=======
+	//equip_custom_items(character)	//VOREStation Removal
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	//character.apply_traits() //VOREStation Removal
 
@@ -551,6 +635,7 @@
 
 	ticker.mode.latespawn(character)
 
+<<<<<<< HEAD
 	//CHOMPEdit Begin - non-crew join don't get a message
 	if(rank == JOB_OUTSIDER)
 		log_and_message_admins("has joined the round as non-crew. (<A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[T.x];Y=[T.y];Z=[T.z]'>JMP</a>)",character)
@@ -562,6 +647,9 @@
 			ticker.minds += character.mind
 	//CHOMPEdit End
 	else if(J.mob_type & JOB_SILICON)
+=======
+	if(J.mob_type & JOB_SILICON)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		AnnounceCyborg(character, rank, join_message, announce_channel, character.z)
 	else
 		AnnounceArrival(character, rank, join_message, announce_channel, character.z)
@@ -573,6 +661,7 @@
 
 			if(imp.handle_implant(character,character.zone_sel.selecting))
 				imp.post_implant(character)
+<<<<<<< HEAD
 	var/gut = join_props["voreny"]
 	var/mob/living/prey = join_props["prey"]
 	//CHOMPEdit Start - Item TF
@@ -604,6 +693,8 @@
 	else
 		if(gut)
 			character.forceMove(gut)
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	qdel(src) // Delete new_player mob
 
@@ -640,10 +731,13 @@
 			// Checks for jobs with minimum age requirements
 			if((job.minimum_character_age || job.min_age_by_species) && (client.prefs.age < job.get_min_age(client.prefs.species, client.prefs.organ_data["brain"])))
 				continue
+<<<<<<< HEAD
 			//CHOMPEdit Begin - Check species job bans... (Only used for shadekin)
 			if(job.is_species_banned(client.prefs.species, client.prefs.organ_data["brain"]))
 				continue
 			//CHOMPEdit End
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			// Checks for jobs set to "Never" in preferences	//TODO: Figure out a better way to check for this
 			if(!(client.prefs.GetJobDepartment(job, 1) & job.flag))
 				if(!(client.prefs.GetJobDepartment(job, 2) & job.flag))

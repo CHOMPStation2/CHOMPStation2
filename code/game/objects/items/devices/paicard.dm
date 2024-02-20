@@ -7,14 +7,21 @@ var/global/list/radio_channels_by_freq = list(
 	num2text(ENG_FREQ) = "Engineering",
 	num2text(MED_FREQ) = "Medical",
 	num2text(MED_I_FREQ)="Medical(I)",
+<<<<<<< HEAD
 	num2text(BDCM_FREQ) ="Bodycam", // CHOMPEdit
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	num2text(SEC_FREQ) = "Security",
 	num2text(SEC_I_FREQ)="Security(I)",
 	num2text(SCI_FREQ) = "Science",
 	num2text(SUP_FREQ) = "Supply",
 	num2text(SRV_FREQ) = "Service",
+<<<<<<< HEAD
 	num2text(EXP_FREQ) = "Explorer" //CHOMP explo keep
+=======
+	num2text(EXP_FREQ) = "Away Team"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	)
 
 GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/device/paicard)
@@ -119,7 +126,10 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/device/paicard)
 				actual_pai_name = sanitize_name(pai_name, ,1)
 				if(isnull(actual_pai_name))
 					return ..()
+<<<<<<< HEAD
 			qdel(src)
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		else
 			var/obj/item/device/paicard/card = new(location)
 			var/mob/living/silicon/pai/new_pai = new(card)
@@ -131,9 +141,14 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/device/paicard)
 				actual_pai_name = sanitize_name(pai_name, ,1)
 				if(isnull(actual_pai_name))
 					return ..()
+<<<<<<< HEAD
 			qdel(src)
 
 	// qdel(src) CHOMPEdit - Clicking X twice would delete them. Very funny if you're a ghost.
+=======
+
+	qdel(src)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	return ..()
 
 // VOREStation Edit End

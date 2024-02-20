@@ -68,6 +68,7 @@
 		)
 	autohiss_exempt = list(LANGUAGE_ZADDAT,LANGUAGE_VESPINAE)
 
+<<<<<<< HEAD
 /datum/species/zaddat
 	autohiss_basic_map = list(
 			"f" = list("v","vh"),
@@ -93,6 +94,8 @@
 		)
 //YW edit over.
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /datum/species/proc/handle_autohiss(message, datum/language/lang, mode)
 	if(!autohiss_basic_map)
 		return message

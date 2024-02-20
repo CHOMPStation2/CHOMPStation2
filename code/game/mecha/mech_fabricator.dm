@@ -60,7 +60,10 @@
 	var/list/part_sets = list(
 								"Cyborg",
 								"Ripley",
+<<<<<<< HEAD
 								"Scarab", //CHOMPedit adds Scarab Light Combat Mech to TGui fabricator.
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 								"Odysseus",
 								"Gygax",
 								"Durand",
@@ -68,9 +71,15 @@
 								"Vehicle",
 								"Rigsuit",
 								"Phazon",
+<<<<<<< HEAD
 								//"Gopher", // VOREStation Add //CHOMPedit commented micromech stuff, because fuck this trash
 								//"Polecat", // VOREStation Add //CHOMPedit commented micromech stuff, because fuck this trash
 								//"Weasel", // VOREStation Add //CHOMPedit commented micromech stuff, because fuck this trash
+=======
+								"Gopher", // VOREStation Add
+								"Polecat", // VOREStation Add
+								"Weasel", // VOREStation Add
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 								"Exosuit Equipment",
 								"Exosuit Internals",
 								"Exosuit Ammunition",

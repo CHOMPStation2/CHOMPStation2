@@ -254,7 +254,11 @@
 /obj/item/device/kit/paint/ripley
 	name = "\"Classic\" APLU customisation kit"
 	new_name = "APLU \"Classic\""
+<<<<<<< HEAD
 	new_desc = "A very retro APLU unit; didn't they retire these back in 2543?"
+=======
+	new_desc = "A very retro APLU unit; didn't they retire these back in 2303?"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	new_icon = "ripley-old"
 	allowed_types = list("ripley")
 	var/showpilot = TRUE
@@ -322,11 +326,19 @@
 /obj/item/device/kit/paint/gygax/darkgygax
 	name = "\"Silhouette\" Gygax customisation kit"
 	new_name = "Gygax \"Silhouette\""
+<<<<<<< HEAD
 	new_desc = "An ominous Gygax exosuit modelled after the fictional corporate 'death squads' that were popular in pulp action-thrillers back in 2554."
+=======
+	new_desc = "An ominous Gygax exosuit modelled after the fictional corporate 'death squads' that were popular in pulp action-thrillers back in 2314."
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	new_icon = "darkgygax"
 
 /obj/item/device/kit/paint/gygax/recitence
 	name = "\"Gaoler\" Gygax customisation kit"
 	new_name = "Durand \"Gaoler\""
 	new_desc = "A bulky silver Gygax exosuit. The extra armour appears to be painted on, but it's very shiny."
+<<<<<<< HEAD
 	new_icon = "recitence"
+=======
+	new_icon = "recitence"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

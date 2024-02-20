@@ -240,7 +240,11 @@ emp_act
 	return null
 
 /mob/living/carbon/human/proc/check_shields(var/damage = 0, var/atom/damage_source = null, var/mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
+<<<<<<< HEAD
 	for(var/obj/item/shield in list(l_hand, r_hand, wear_suit, l_ear, r_ear))	//CHOMPEdit - included ears for the headset/event item
+=======
+	for(var/obj/item/shield in list(l_hand, r_hand, wear_suit))
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		if(!shield) continue
 		. = shield.handle_shield(src, damage, damage_source, attacker, def_zone, attack_text)
 		if(.) return
@@ -423,6 +427,7 @@ emp_act
 
 	if(istype(AM,/obj/))
 		var/obj/O = AM
+<<<<<<< HEAD
 		if(stat != DEAD && istype(O,/obj/item) && trash_catching && vore_selected) //CHOMPADD Start
 			var/obj/item/I = O
 			if(adminbus_trash || is_type_in_list(I,edible_trash) && I.trash_eatable && !is_type_in_list(I,item_vore_blacklist))
@@ -432,6 +437,10 @@ emp_act
 				return //CHOMPADD End
 		if(in_throw_mode && speed <= THROWFORCE_SPEED_DIVISOR)	//empty active hand and we're in throw mode
 			if(canmove && !restrained() && !src.is_incorporeal()) // CHOMPADD - No hands for the phased ones.
+=======
+		if(in_throw_mode && speed <= THROWFORCE_SPEED_DIVISOR)	//empty active hand and we're in throw mode
+			if(canmove && !restrained())
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 				if(isturf(O.loc))
 					if(can_catch(O))
 						put_in_active_hand(O)
@@ -439,9 +448,12 @@ emp_act
 						throw_mode_off()
 						return
 
+<<<<<<< HEAD
 		if(src.is_incorporeal()) // CHOMPADD - Don't hit what's not there.
 			return
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		var/dtype = O.damtype
 		var/throw_damage = O.throwforce*(speed/THROWFORCE_SPEED_DIVISOR)
 
@@ -457,15 +469,22 @@ emp_act
 			zone = ran_zone(BP_TORSO,75)	//Hits a random part of the body, geared towards the chest
 
 		//check if we hit
+<<<<<<< HEAD
 		/*
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		var/miss_chance = 15
 		if (O.throw_source)
 			var/distance = get_dist(O.throw_source, loc)
 			miss_chance = max(15*(distance-2), 0)
+<<<<<<< HEAD
 
 		zone = get_zone_with_miss_chance(zone, src, miss_chance, ranged_attack=1)
 		*/
 		//CHOMPEDIT - removing baymiss
+=======
+		zone = get_zone_with_miss_chance(zone, src, miss_chance, ranged_attack=1)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 		if(zone && O.thrower != src)
 			var/shield_check = check_shields(throw_damage, O, thrower, zone, "[O]")

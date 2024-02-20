@@ -19,12 +19,21 @@
 
 /obj/machinery/appliance/mixer/candy/Initialize()
 	. = ..()
+<<<<<<< HEAD
 
 	candymaker_loop = new(list(src), FALSE)
 
 /obj/machinery/appliance/mixer/candy/Destroy()
 	. = ..()
 
+=======
+	
+	candymaker_loop = new(list(src), FALSE)
+	
+/obj/machinery/appliance/mixer/candy/Destroy()
+	. = ..()
+	
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	QDEL_NULL(candymaker_loop)
 
 /obj/machinery/appliance/mixer/candy/update_icon()
@@ -42,6 +51,7 @@
 /obj/machinery/appliance/mixer/candy/change_product_appearance(var/obj/item/weapon/reagent_containers/food/snacks/product)
 	food_color = get_random_colour(1)
 	. = ..()
+<<<<<<< HEAD
 
 
 /obj/machinery/appliance/mixer/candy/attackby(var/obj/item/O as obj, var/mob/user as mob)
@@ -52,3 +62,5 @@
 	if(default_part_replacement(user, O))
 		return
 	..()
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

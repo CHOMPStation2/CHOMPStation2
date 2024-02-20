@@ -151,8 +151,11 @@
 	desc = "A rapid and safe way to administer small amounts of drugs by untrained or trained personnel."
 	icon_state = "blue"
 	item_state = "blue"
+<<<<<<< HEAD
 	w_class = ITEMSIZE_TINY
 	slot_flags = SLOT_EARS
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	amount_per_transfer_from_this = 5
 	volume = 5
 	filled = 1

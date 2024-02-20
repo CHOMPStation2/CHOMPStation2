@@ -19,7 +19,10 @@
 /*
  * Advanced SMG
  */
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/item/weapon/gun/projectile/automatic/advanced_smg
 	name = "advanced SMG"
 	desc = "An advanced submachine gun with a reflective laser optic that makes burst fire less inaccurate than other SMGs. Uses 9mm rounds."
@@ -51,6 +54,7 @@
 /*
  * C-20r
  */
+<<<<<<< HEAD
 
  /* CHOMPedit remove: Moved to automatic_ch.dm. *
 
@@ -60,6 +64,12 @@
 	description_fluff = "The C-20r is produced by Scarborough Arms, a specialist high-end weapons manufacturer based out of Titan, Sol. Scarborough has resisted numerous efforts by Trans-Stellars to acquire the brand since its founding in 2511, and has gained a dedicated following among a certain flavor of private operative."
 	icon = 'icons/obj/64x32guns_ch.dmi' //Chomp Edit
 	icon_expected_width = 64 //Chomp EDIT
+=======
+/obj/item/weapon/gun/projectile/automatic/c20r
+	name = "submachine gun"
+	desc = "The C-20r is a lightweight and rapid firing SMG, for when you REALLY need someone dead. It has 'Scarborough Arms - Per falcis, per pravitas', inscribed on the stock. Uses 10mm rounds."
+	description_fluff = "The C-20r is produced by Scarborough Arms, a specialist high-end weapons manufacturer based out of Titan, Sol. Scarborough has resisted numerous efforts by Trans-Stellars to acquire the brand since its founding in 2271, and has gained a dedicated following among a certain flavor of private operative."
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	icon_state = "c20r"
 	item_state = "c20r"
 	w_class = ITEMSIZE_NORMAL
@@ -88,8 +98,11 @@
 		icon_state = "c20r"
 	return
 
+<<<<<<< HEAD
  * CHOMPedit remove: Moved to automatic_ch.dm. */
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /*
  * Assault Carbine (STS-35)
  */
@@ -104,7 +117,11 @@
 	item_state = "arifle"
 	wielded_item_state = "arifle-wielded"
 	item_state = null
+<<<<<<< HEAD
 	w_class = ITEMSIZE_HUGE //CHOMP Edit.
+=======
+	w_class = ITEMSIZE_LARGE
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	force = 10
 	caliber = "5.45mm"
 	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 1, TECH_ILLEGAL = 4)
@@ -165,8 +182,11 @@
 /obj/item/weapon/gun/projectile/automatic/wt550
 	name = "machine pistol"
 	desc = "The WT550 Saber is a cheap self-defense weapon mass-produced by Ward-Takahashi for paramilitary and private use. Uses 9mm rounds."
+<<<<<<< HEAD
 	icon = 'icons/obj/64x32guns_ch.dmi' //Chomp EDIT
 	icon_expected_width = 64 //Chomp EDIT
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	icon_state = "wt550"
 	item_state = "wt550"
 	w_class = ITEMSIZE_NORMAL
@@ -178,7 +198,10 @@
 	magazine_type = /obj/item/ammo_magazine/m9mmt/rubber
 	allowed_magazines = list(/obj/item/ammo_magazine/m9mmt)
 	projectile_type = /obj/item/projectile/bullet/pistol/medium
+<<<<<<< HEAD
 	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/item/weapon/gun/projectile/automatic/wt550/update_icon()
 	..()
@@ -195,6 +218,7 @@
 	name = "battle rifle"
 	desc = "The Z8 Bulldog is an older model battle rifle, made by the now defunct Zendai Foundries. Makes you feel like an old-school badass when you hold it, \
 	even though it can only hold 10 round magazines. Uses 7.62mm rounds and has an under barrel grenade launcher."
+<<<<<<< HEAD
 	description_fluff = "Zendai Foundries was a well-respected mid-sized arms company that operated until 2508, when it was acquired by Hephaestus Industries. \
 	Plans to integrate the brand into wider corporate operations were brought to an abrupt halt by the SolGov-Hegemony war, and the company was left by the wayside. \
 	Hephaestus still produces replacement parts for many of Zendai's most popular weapons, including the Z8 Bulldog, and a great detail remain in service."
@@ -204,6 +228,15 @@
 	item_state = "z8carbine"
 	wielded_item_state = "z8bulldog-wielded"
 	w_class = ITEMSIZE_HUGE //CHOMP Edit.
+=======
+	description_fluff = "Zendai Foundries was a well-respected mid-sized arms company that operated until 2187, when it was acquired by Hephaestus Industries. \
+	Plans to integrate the brand into wider corporate operations were brought to an abrupt halt by the Commonwealth-Hegemony war, and the company was left by the wayside. \
+	Hephaestus still produces replacement parts for many of Zendai's most popular weapons, including the Z8 Bulldog, and a great detail remain in service."
+	icon_state = "carbine" // This isn't a carbine. :T
+	item_state = "z8carbine"
+	wielded_item_state = "z8bulldog-wielded"
+	w_class = ITEMSIZE_LARGE
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	force = 10
 	caliber = "7.62mm"
 	origin_tech = list(TECH_COMBAT = 8, TECH_MATERIAL = 3)
@@ -254,7 +287,11 @@
 /obj/item/weapon/gun/projectile/automatic/z8/update_icon(var/ignore_inhands)
 	..()
 	if(ammo_magazine)
+<<<<<<< HEAD
 		icon_state = "carbine-[round(ammo_magazine.stored_ammo.len, 5)]" //CHOMPedit
+=======
+		icon_state = "carbine-[round(ammo_magazine.stored_ammo.len,2)]"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	else
 		icon_state = "carbine"
 	if(!ignore_inhands) update_held_icon()
@@ -277,12 +314,19 @@
 	name = "light machine gun"
 	desc = "A rather sturdily made L6 SAW with a reassuringly ergonomic pistol grip. 'Hephaestus Industries' is engraved on the receiver. Uses 5.45mm rounds. It's also compatible with magazines from STS-35 assault rifles."
 	description_fluff = "The leading arms producer in the SCG, Hephaestus typically only uses its 'top level' branding for its military-grade equipment used by professional armed forces across human space."
+<<<<<<< HEAD
 	icon = 'icons/obj/64x32guns_ch.dmi' //Chomp EDIT
 	icon_expected_width = 64 //Chomp EDIT
 	icon_state = "l6closed150" //chompEDIT
 	item_state = "l6closed"
 	wielded_item_state = "genericLMG-wielded"
 	w_class = ITEMSIZE_HUGE //CHOMP Edit.
+=======
+	icon_state = "l6closed100"
+	item_state = "l6closed"
+	wielded_item_state = "genericLMG-wielded"
+	w_class = ITEMSIZE_LARGE
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	force = 10
 	slot_flags = 0
 	max_shells = 50
@@ -333,7 +377,11 @@
 		icon_state = "l6[cover_open ? "open" : "closed"]mag"
 		item_state = icon_state
 	else
+<<<<<<< HEAD
 		icon_state = "l6[cover_open ? "open" : "closed"][ammo_magazine ? round(ammo_magazine.stored_ammo.len, 50) : "-empty"]" //CHOMPedit
+=======
+		icon_state = "l6[cover_open ? "open" : "closed"][ammo_magazine ? round(ammo_magazine.stored_ammo.len, 25) : "-empty"]"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		item_state = "l6[cover_open ? "open" : "closed"][ammo_magazine ? "" : "-empty"]"
 	update_held_icon()
 
@@ -361,7 +409,11 @@
 	icon_state = "ashot"
 	item_state = "ashot"
 	wielded_item_state = "ashot-wielded"
+<<<<<<< HEAD
 	w_class = ITEMSIZE_HUGE //CHOMP Edit.
+=======
+	w_class = ITEMSIZE_LARGE
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	force = 10
 	caliber = "12g"
 	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 1, TECH_ILLEGAL = 4)
@@ -395,18 +447,25 @@
 	description_fluff = "Budget-grade weapons for the budget-grade consumer! Hephaestus’ low-end brand of cheaply made, low-maintenance personal defense weapons for those who just need a handgun with absolutely no frills. \
 	Early ProTek weapons were notoriously unsafe and unreliable, though more recent designs have improved somewhat - they still aren’t very good. \
 	Though sold for a pittance, the profit margin is too irresistible for Hephaestus to discontinue the brand."
+<<<<<<< HEAD
 	icon = 'icons/obj/64x32guns_ch.dmi' //Chomp EDIT
 	icon_expected_width = 64 //Chomp EDIT
 	icon_state = "mini-uzi" //Chomp EDIT - uzi --> mini-uzi
+=======
+	icon_state = "uzi"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	w_class = ITEMSIZE_NORMAL
 	load_method = MAGAZINE
 	caliber = ".45"
 	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2, TECH_ILLEGAL = 5)
 	magazine_type = /obj/item/ammo_magazine/m45uzi
 	allowed_magazines = list(/obj/item/ammo_magazine/m45uzi)
+<<<<<<< HEAD
 	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 	var/is64x32 = TRUE
 	var/is_picked_up = FALSE
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	firemodes = list(
 		list(mode_name="semiauto", burst=1, fire_delay=0),
@@ -416,6 +475,7 @@
 /obj/item/weapon/gun/projectile/automatic/mini_uzi/update_icon()
 	..()
 	if(ammo_magazine)
+<<<<<<< HEAD
 		icon_state = "mini-uzi"
 	else
 		icon_state = "mini-uzi-empty"
@@ -450,6 +510,15 @@
 // CHOMPEdit end: Uzi tilting
 
 /* CHOMPEDIT Commented out, moved to automatic_ch.dm *
+=======
+		icon_state = "uzi"
+	else
+		icon_state = "uzi-e"
+
+/*
+ * P90 (H90K)
+ */
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/item/weapon/gun/projectile/automatic/p90
 	name = "personal defense weapon"
 	desc = "The H90K is a compact, large capacity submachine gun produced by MarsTech. Despite its fierce reputation, it still manages to feel like a toy. Uses 9mm rounds."
@@ -471,7 +540,10 @@
 
 /obj/item/weapon/gun/projectile/automatic/p90/update_icon()
 	icon_state = "p90smg-[ammo_magazine ? round(ammo_magazine.stored_ammo.len, 6) : "empty"]"
+<<<<<<< HEAD
 * CHOMPEDIT Commented out, moved to automatic_ch.dm */
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /*
  * Tommy Gun

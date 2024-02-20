@@ -173,7 +173,11 @@
 	desc = "This variant appears to be much more rugged."
 	req_one_access = list(access_heads)
 	icon_state = "turret_cover_industrial"
+<<<<<<< HEAD
 	installation = /obj/item/weapon/gun/energy/locked/phasegun/unlocked
+=======
+	installation = /obj/item/weapon/gun/energy/phasegun
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	health = 200
 	maxhealth = 200
 	turret_type = "industrial"
@@ -355,7 +359,11 @@
 			lethal_shot_sound = 'sound/weapons/Laser.ogg'
 			shot_delay = 1 SECOND
 
+<<<<<<< HEAD
 		if(/obj/item/weapon/gun/energy/locked/phasegun/unlocked)
+=======
+		if(/obj/item/weapon/gun/energy/phasegun)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			icon_color = "orange"
 			lethal_icon_color = "orange"
 			lethal_projectile = /obj/item/projectile/energy/phase/heavy
@@ -378,11 +386,18 @@
 			lethal_shot_sound = 'sound/weapons/eluger.ogg'
 			shot_sound = 'sound/weapons/Taser.ogg'
 
+<<<<<<< HEAD
 /obj/machinery/porta_turret/proc/HasController()
 	var/area/A = get_area(src)
 	return A && A.turret_controls.len > 0
 
 /obj/machinery/porta_turret/proc/isLocked(mob/user)
+=======
+/obj/machinery/porta_turret/proc/isLocked(mob/user)
+	if(locked && !issilicon(user))
+		to_chat(user, "<span class='notice'>Controls locked.</span>")
+		return 1
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(HasController())
 		return TRUE
 	if(isrobot(user) || isAI(user))
@@ -410,6 +425,13 @@
 /obj/machinery/porta_turret/attack_hand(mob/user)
 	tgui_interact(user)
 
+<<<<<<< HEAD
+=======
+/obj/machinery/porta_turret/proc/HasController()
+	var/area/A = get_area(src)
+	return A && A.turret_controls.len > 0
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/machinery/porta_turret/tgui_interact(mob/user, datum/tgui/ui = null)
 	if(HasController())
 		to_chat(user, "<span class='notice'>[src] can only be controlled using the assigned turret controller.</span>")
@@ -675,12 +697,16 @@
 	var/list/targets = list()			//list of primary targets
 	var/list/secondarytargets = list()	//targets that are least important
 
+<<<<<<< HEAD
 	/* CHOMPEdit Start
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	var/list/seenturfs = list()
 	for(var/turf/T in oview(world.view, src))
 		seenturfs += T
 
 	for(var/mob/M as anything in living_mob_list)
+<<<<<<< HEAD
 		if(M.z != z) //Skip
 			continue
 		if(get_turf(M) in seenturfs)
@@ -697,11 +723,33 @@
 			if(timeout <= 0)
 				spawn()
 					popDown() // no valid targets, close the cover
+=======
+		if(M.z != z || !(get_turf(M) in seenturfs)) // Skip
+			continue
+		switch(assess_living(M))
+			if(TURRET_PRIORITY_TARGET)
+				targets += M
+			if(TURRET_SECONDARY_TARGET)
+				secondarytargets += M
+
+	for(var/obj/mecha/M as anything in mechas_list)
+		if(M.z != z || !(get_turf(M) in seenturfs)) // Skip
+			continue
+		switch(assess_mecha(M))
+			if(TURRET_PRIORITY_TARGET)
+				targets += M
+			if(TURRET_SECONDARY_TARGET)
+				secondarytargets += M
+
+	if(!tryToShootAt(targets) && !tryToShootAt(secondarytargets) && --timeout <= 0)
+		popDown() // no valid targets, close the cover
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	if(auto_repair && (health < maxhealth))
 		use_power(20000)
 		health = min(health+1, maxhealth) // 1HP for 20kJ
 
+<<<<<<< HEAD
 /obj/machinery/porta_turret/proc/assess_and_assign(var/mob/living/L, var/list/targets, var/list/secondarytargets)
 	switch(assess_living(L))
 		if(TURRET_PRIORITY_TARGET)
@@ -709,6 +757,8 @@
 		if(TURRET_SECONDARY_TARGET)
 			secondarytargets += L
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/machinery/porta_turret/proc/assess_living(var/mob/living/L)
 	if(!istype(L))
 		return TURRET_NOT_TARGET
@@ -716,9 +766,12 @@
 	if(L.invisibility >= INVISIBILITY_LEVEL_ONE) // Cannot see him. see_invisible is a mob-var
 		return TURRET_NOT_TARGET
 
+<<<<<<< HEAD
 	if(!L)
 		return TURRET_NOT_TARGET
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(faction && L.faction == faction)
 		return TURRET_NOT_TARGET
 
@@ -763,6 +816,18 @@
 
 	return TURRET_PRIORITY_TARGET	//if the perp has passed all previous tests, congrats, it is now a "shoot-me!" nominee
 
+<<<<<<< HEAD
+=======
+/obj/machinery/porta_turret/proc/assess_mecha(var/obj/mecha/M)
+	if(!istype(M))
+		return TURRET_NOT_TARGET
+
+	if(!M.occupant)
+		return check_all ? TURRET_SECONDARY_TARGET : TURRET_NOT_TARGET
+
+	return assess_living(M.occupant)
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/machinery/porta_turret/proc/assess_perp(var/mob/living/carbon/human/H)
 	if(!H || !istype(H))
 		return 0
@@ -784,6 +849,10 @@
 
 
 /obj/machinery/porta_turret/proc/popUp()	//pops the turret up
+<<<<<<< HEAD
+=======
+	set waitfor = FALSE
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(disabled)
 		return
 	if(raising || raised)
@@ -805,6 +874,10 @@
 	timeout = 10
 
 /obj/machinery/porta_turret/proc/popDown()	//pops the turret down
+<<<<<<< HEAD
+=======
+	set waitfor = FALSE
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	last_target = null
 	if(disabled)
 		return
@@ -833,17 +906,29 @@
 
 /obj/machinery/porta_turret/proc/target(var/mob/living/target)
 	if(disabled)
+<<<<<<< HEAD
 		return
 	if(target)
 		last_target = target
 		spawn()
 			popUp()				//pop the turret up if it's not already up.
+=======
+		return FALSE
+	if(target)
+		last_target = target
+		popUp()				//pop the turret up if it's not already up.
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		set_dir(get_dir(src, target))	//even if you can't shoot, follow the target
 		playsound(src, 'sound/machines/turrets/turret_rotate.ogg', 100, 1) // Play rotating sound
 		spawn()
 			shootAt(target)
+<<<<<<< HEAD
 		return 1
 	return
+=======
+		return TRUE
+	return FALSE
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/machinery/porta_turret/proc/shootAt(var/mob/living/target)
 	//any emagged turrets will shoot extremely fast! This not only is deadly, but drains a lot power!
@@ -855,9 +940,13 @@
 			sleep(shot_delay)
 			last_fired = FALSE
 
+<<<<<<< HEAD
 	var/turf/T = get_turf(src)
 	var/turf/U = get_turf(target)
 	if(!istype(T) || !istype(U))
+=======
+	if(!isturf(get_turf(src)) || !isturf(get_turf(target)))
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		return
 
 	if(!raised) //the turret has to be raised in order to fire - makes sense, right?
@@ -872,9 +961,18 @@
 		A = new projectile(loc)
 		playsound(src, shot_sound, 75, 1)
 
+<<<<<<< HEAD
 	// Lethal/emagged turrets use twice the power due to higher energy beams
 	// Emagged turrets again use twice as much power due to higher firing rates
 	use_power(reqpower * (2 * (emagged || lethal)) * (2 * emagged))
+=======
+	var/power_mult = 1
+	if(emagged)
+		power_mult = 4 // Lethal beams + higher rate of fire
+	else if(lethal)
+		power_mult = 2 // Lethal beams
+	use_power(reqpower * power_mult)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	//Turrets aim for the center of mass by default.
 	//If the target is grabbing someone then the turret smartly aims for extremities

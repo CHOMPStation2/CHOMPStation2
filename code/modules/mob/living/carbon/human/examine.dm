@@ -271,7 +271,10 @@
 	var/list/vorestrings = list()
 	vorestrings += examine_weight()
 	vorestrings += examine_nutrition()
+<<<<<<< HEAD
 	vorestrings += examine_reagent_bellies() //CHOMP reagent bellies
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	vorestrings += examine_bellies()
 	vorestrings += examine_pickup_size()
 	vorestrings += examine_step_size()

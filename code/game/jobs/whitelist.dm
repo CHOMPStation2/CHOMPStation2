@@ -12,8 +12,11 @@ var/list/whitelist = list()
 	if(!whitelist.len)	whitelist = null
 
 /proc/check_whitelist(mob/M /*, var/rank*/)
+<<<<<<< HEAD
 	if(!config.usewhitelist) //CHOMPedit: I guess this is an override for the blanket whitelist system.
 		return 1 //CHOMPedit
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(!whitelist)
 		return 0
 	return ("[M.ckey]" in whitelist)

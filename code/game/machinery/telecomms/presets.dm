@@ -39,8 +39,13 @@
 	id = "Hub"
 	network = "tcommsat"
 	autolinkers = list("hub", "relay", "c_relay", "s_relay", "m_relay", "r_relay", "science", "medical",
+<<<<<<< HEAD
 	"supply", "service", "common", "command", "engineering", "security", "unused", "hb_relay", "casino_relay",
 	"receiverA", "broadcasterA") //VOREStation Edit - Added "hb_relay" || CHOMPStation Edit - Added "casino_relay"
+=======
+	"supply", "service", "common", "command", "engineering", "security", "unused", "hb_relay",
+	"receiverA", "broadcasterA") //VOREStation Edit - Added "hb_relay"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/machinery/telecomms/hub/preset_cent
 	id = "CentCom Hub"
@@ -55,8 +60,12 @@
 	id = "Receiver A"
 	network = "tcommsat"
 	autolinkers = list("receiverA") // link to relay
+<<<<<<< HEAD
 	freq_listening = list(AI_FREQ, SCI_FREQ, MED_FREQ, SUP_FREQ, SRV_FREQ, COMM_FREQ, ENG_FREQ, SEC_FREQ, BDCM_FREQ, ENT_FREQ) // CHOMPEdit
 
+=======
+	freq_listening = list(AI_FREQ, SCI_FREQ, MED_FREQ, SUP_FREQ, SRV_FREQ, COMM_FREQ, ENG_FREQ, SEC_FREQ, ENT_FREQ)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	//Common and other radio frequencies for people to freely use
 /obj/machinery/telecomms/receiver/preset_right/New()
@@ -102,8 +111,12 @@
 /obj/machinery/telecomms/bus/preset_four
 	id = "Bus 4"
 	network = "tcommsat"
+<<<<<<< HEAD
 	freq_listening = list(ENG_FREQ, AI_FREQ, PUB_FREQ, ENT_FREQ, BDCM_FREQ) // CHOMPEdit
 
+=======
+	freq_listening = list(ENG_FREQ, AI_FREQ, PUB_FREQ, ENT_FREQ)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	autolinkers = list("processor4", "engineering", "common")
 
 /obj/machinery/telecomms/bus/preset_cent
@@ -169,8 +182,12 @@
 
 /obj/machinery/telecomms/server/presets/common
 	id = "Common Server"
+<<<<<<< HEAD
 	freq_listening = list(PUB_FREQ, AI_FREQ, ENT_FREQ, BDCM_FREQ) // AI Private and Common // CHOMPEdit
 
+=======
+	freq_listening = list(PUB_FREQ, AI_FREQ, ENT_FREQ) // AI Private and Common
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	autolinkers = list("common")
 
 // "Unused" channels, AKA all others.
@@ -221,4 +238,8 @@
 	id = "CentCom Broadcaster"
 	network = "tcommsat"
 	produces_heat = 0
+<<<<<<< HEAD
 	autolinkers = list("broadcasterCent")
+=======
+	autolinkers = list("broadcasterCent")
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

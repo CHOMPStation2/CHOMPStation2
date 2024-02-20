@@ -96,7 +96,12 @@
 		explode(M)
 
 	if(istype(M, /mob/living/))
+<<<<<<< HEAD
 		if(!M.hovering) //CHOMPedit: let's not make wings ignore mines because we use those here.
+=======
+		var/mob/living/mob = M
+		if(!mob.hovering || !mob.flying)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			explode(M)
 
 /obj/effect/mine/attackby(obj/item/W as obj, mob/living/user as mob)
@@ -398,6 +403,10 @@
 
 // This tells AI mobs to not be dumb and step on mines willingly.
 /obj/item/weapon/mine/is_safe_to_step(mob/living/L)
+<<<<<<< HEAD
 	if(!L.hovering) //CHOMPedit: Let's not trivialize mines.
+=======
+	if(!L.hovering || !L.flying)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		return FALSE
 	return ..()

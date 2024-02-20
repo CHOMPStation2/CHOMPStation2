@@ -9,10 +9,13 @@
 			if(M == src)	continue
 			if( M.key && (M.key != key) )
 				var/matches
+<<<<<<< HEAD
 				//CHOMPEDIT - IP exemptions for those who are known to live together
 				if (config.ip_whitelist[key] && config.ip_whitelist[key] == config.ip_whitelist[M.key])
 					continue
 				//CHOMPEDIT end
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 				if( (M.lastKnownIP == client.address) )
 					matches += "IP ([client.address])"
 				if( (client.connection != "web") && (M.computer_id == client.computer_id) )

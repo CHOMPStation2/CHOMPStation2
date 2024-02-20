@@ -14,7 +14,10 @@
 		)
 	w_class = ITEMSIZE_NORMAL
 	show_messages = 1
+<<<<<<< HEAD
 	matter = list(MAT_FIBERS = 50) //CHOMPAdd
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	/// List of objects which this item can store (if set, it can't store anything else)
 	var/list/can_hold
@@ -238,11 +241,15 @@
 
 /obj/item/weapon/storage/proc/open(mob/user as mob)
 	if (use_sound)
+<<<<<<< HEAD
 		//CHOMPStation Edit
 		var/obj/belly/B = user.loc
 		if(!isbelly(B) || !(B.mode_flags & DM_FLAG_MUFFLEITEMS))
 			playsound(src, src.use_sound, 50, 0, -5)
 		//CHOMPStation Edit end
+=======
+		playsound(src, src.use_sound, 50, 0, -5)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	orient2hud(user)
 	if(user.s_active)
@@ -481,11 +488,14 @@
 		if(!stop_messages)
 			to_chat(usr, "<span class='notice'>[src] cannot hold [W] as it's a storage item of the same size.</span>")
 		return 0 //To prevent the stacking of same sized storage items.
+<<<<<<< HEAD
 	//CHOMPEdit - Getting around to proper object flags
 	if(HAS_TRAIT(W, TRAIT_NODROP)) //SHOULD be handled in unEquip, but better safe than sorry.
 		if(!stop_messages)
 			to_chat(usr, "<span class='warning'>\the [W] is stuck to your hand, you can't put it in \the [src]!</span>")
 		return FALSE
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	return 1
 
@@ -727,13 +737,21 @@
 
 	while (cur_atom && !(cur_atom in container.contents))
 		if (isarea(cur_atom))
+<<<<<<< HEAD
 			return INFINITY // CHOMPedit
+=======
+			return -1
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		if (istype(cur_atom.loc, /obj/item/weapon/storage))
 			depth++
 		cur_atom = cur_atom.loc
 
 	if (!cur_atom)
+<<<<<<< HEAD
 		return INFINITY	// CHOMPedit - inside something with a null loc.
+=======
+		return -1	//inside something with a null loc.
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	return depth
 
@@ -745,13 +763,21 @@
 
 	while (cur_atom && !isturf(cur_atom))
 		if (isarea(cur_atom))
+<<<<<<< HEAD
 			return INFINITY // CHOMPedit
+=======
+			return -1
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		if (istype(cur_atom.loc, /obj/item/weapon/storage))
 			depth++
 		cur_atom = cur_atom.loc
 
 	if (!cur_atom)
+<<<<<<< HEAD
 		return INFINITY	//CHOMPedit - inside something with a null loc.
+=======
+		return -1	//inside something with a null loc.
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	return depth
 

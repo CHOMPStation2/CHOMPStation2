@@ -31,6 +31,7 @@
 	storage_capacity = (MOB_MEDIUM * 2) - 1
 	var/contains_body = 0
 
+<<<<<<< HEAD
 //Yawn add
 /obj/item/bodybag/large
 	name = "mass grave body bag"
@@ -51,6 +52,8 @@
 	item_path = /obj/item/bodybag/large
 //End of Yawn add
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/structure/closet/body_bag/attackby(var/obj/item/W as obj, mob/user as mob)
 	if (istype(W, /obj/item/weapon/pen))
 		var/t = tgui_input_text(user, "What would you like the label to be?", text("[]", src.name), null, MAX_NAME_LEN	)
@@ -128,7 +131,11 @@
 /obj/item/bodybag/cryobag
 	name = "stasis bag"
 	desc = "A non-reusable plastic bag designed to slow down bodily functions such as circulation and breathing, \
+<<<<<<< HEAD
 	especially useful if short on time or in a hostile environment."		// CHOMPEDIT : purdev (spelling fix)
+=======
+	especially useful if short on time or in a hostile enviroment."
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	icon = 'icons/obj/closets/cryobag.dmi'
 	icon_state = "bodybag_folded"
 	item_state = "bodybag_cryo_folded"

@@ -154,8 +154,13 @@
 	icon_state = "setup_drone"
 	desc = "It's a case, for building mobile electronics with."
 	w_class = ITEMSIZE_NORMAL
+<<<<<<< HEAD
 	max_components = IC_COMPONENTS_BASE * 3 //CHOMP Edit ;Changing this to be 3 instead because as it stands its worthless
 	max_complexity = IC_COMPLEXITY_BASE * 3 //CHOMP Edit ;Changing this to be 3 instead because as it stands its worthless
+=======
+	max_components = IC_COMPONENTS_BASE * 1.5
+	max_complexity = IC_COMPLEXITY_BASE * 1.5
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	can_anchor = FALSE
 
 /obj/item/device/electronic_assembly/drone/can_move()
@@ -260,4 +265,8 @@
 	to allow it to stick to walls."
 	w_class = ITEMSIZE_TINY
 	max_components = IC_COMPONENTS_BASE / 2
+<<<<<<< HEAD
 	max_complexity = IC_COMPLEXITY_BASE / 2
+=======
+	max_complexity = IC_COMPLEXITY_BASE / 2
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

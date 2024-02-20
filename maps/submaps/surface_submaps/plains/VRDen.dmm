@@ -4,22 +4,37 @@
 /area/template_noop)
 "b" = (
 /turf/template_noop,
+<<<<<<< HEAD
 /area/submap/vrden)
 "c" = (
 /turf/simulated/wall,
 /area/submap/vrden)
+=======
+/area/submap/VRDen)
+"c" = (
+/turf/simulated/wall,
+/area/submap/VRDen)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "d" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 28
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/steel,
 /area/submap/vrden)
+=======
+/turf/simulated/floor/tiled/virgo3b,
+/area/submap/VRDen)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "e" = (
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
 	operating = 0;
+<<<<<<< HEAD
 	pixel_x = 0;
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	pixel_y = 24
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -27,8 +42,13 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
+<<<<<<< HEAD
 /turf/simulated/floor,
 /area/submap/vrden)
+=======
+/turf/simulated/floor/tiled/virgo3b,
+/area/submap/VRDen)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "f" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/green{
@@ -37,17 +57,25 @@
 	icon_state = "2-4"
 	},
 /obj/machinery/light{
+<<<<<<< HEAD
 	dir = 1;
 	icon_state = "tube1"
 	},
 /turf/simulated/floor/tiled/steel,
 /area/submap/vrden)
+=======
+	dir = 1
+	},
+/turf/simulated/floor/tiled/virgo3b,
+/area/submap/VRDen)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "g" = (
 /obj/machinery/power/port_gen/pacman,
 /obj/structure/cable/green{
 	d2 = 8;
 	icon_state = "0-8"
 	},
+<<<<<<< HEAD
 /turf/simulated/floor,
 /area/submap/vrden)
 "h" = (
@@ -55,6 +83,15 @@
 /obj/fiftyspawner/phoron,
 /turf/simulated/floor,
 /area/submap/vrden)
+=======
+/turf/simulated/floor/tiled/virgo3b,
+/area/submap/VRDen)
+"h" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/fiftyspawner/phoron,
+/turf/simulated/floor/tiled/virgo3b,
+/area/submap/VRDen)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "i" = (
 /obj/structure/table/standard{
 	name = "plastic table frame"
@@ -64,11 +101,16 @@
 	info = "To: Whoever reads it\[br]From: Simulant\[br]Went away to grab some spare parts, won't return for couple weeks. Can't support larger scale sims without machines I lost yesterday. Please don't touch my stuff, while I'm gone.";
 	name = "note"
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/steel,
 /area/submap/vrden)
 "j" = (
 /turf/simulated/floor,
 /area/submap/vrden)
+=======
+/turf/simulated/floor/tiled/virgo3b,
+/area/submap/VRDen)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "k" = (
 /obj/effect/decal/cleanable/blood/oil,
 /obj/structure/cable/green{
@@ -76,8 +118,13 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/steel,
 /area/submap/vrden)
+=======
+/turf/simulated/floor/tiled/virgo3b,
+/area/submap/VRDen)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "l" = (
 /obj/structure/cable/green{
 	d2 = 8;
@@ -92,14 +139,20 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/vrden)
+=======
+/turf/simulated/floor/tiled/virgo3b,
+/area/submap/VRDen)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "m" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
 /obj/structure/cable/green{
 	d2 = 8;
 	icon_state = "0-8"
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/vrden)
 "n" = (
@@ -114,6 +167,22 @@
 /obj/structure/cryofeed,
 /turf/simulated/floor/greengrid,
 /area/submap/vrden)
+=======
+/turf/simulated/floor/tiled/virgo3b,
+/area/submap/VRDen)
+"n" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/floor/greengrid/virgo3b,
+/area/submap/VRDen)
+"o" = (
+/obj/machinery/vr_sleeper,
+/turf/simulated/floor/greengrid/virgo3b,
+/area/submap/VRDen)
+"p" = (
+/obj/structure/cryofeed,
+/turf/simulated/floor/greengrid/virgo3b,
+/area/submap/VRDen)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "q" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/bed/chair{
@@ -125,8 +194,13 @@
 	brightness_range = 5;
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/steel,
 /area/submap/vrden)
+=======
+/turf/simulated/floor/tiled/virgo3b,
+/area/submap/VRDen)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "r" = (
 /obj/structure/table/standard{
 	name = "plastic table frame"
@@ -135,6 +209,7 @@
 	info = "your maps suck";
 	name = "dissatisfied letter"
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/vrden)
 "s" = (
@@ -164,11 +239,34 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/vrden)
+=======
+/turf/simulated/floor/tiled/virgo3b,
+/area/submap/VRDen)
+"s" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/integrated_circuit/logic/binary,
+/turf/simulated/floor/tiled/virgo3b,
+/area/submap/VRDen)
+"t" = (
+/turf/simulated/floor/tiled/steel,
+/area/submap/VRDen)
+"u" = (
+/turf/simulated/floor/tiled/virgo3b,
+/area/submap/VRDen)
+"w" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/greengrid/virgo3b,
+/area/submap/VRDen)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "y" = (
 /obj/structure/table/standard{
 	name = "plastic table frame"
 	},
 /obj/item/broken_device/random,
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/steel,
 /area/submap/vrden)
 "z" = (
@@ -186,18 +284,43 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/submap/vrden)
+=======
+/turf/simulated/floor/tiled/virgo3b,
+/area/submap/VRDen)
+"z" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/steel,
+/area/submap/VRDen)
+"A" = (
+/turf/simulated/floor/greengrid/virgo3b,
+/area/submap/VRDen)
+"B" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/greengrid/virgo3b,
+/area/submap/VRDen)
+"C" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/virgo3b,
+/area/submap/VRDen)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "D" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/frame,
 /obj/item/integrated_circuit/logic/unary/not,
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/steel,
 /area/submap/vrden)
+=======
+/turf/simulated/floor/tiled/virgo3b,
+/area/submap/VRDen)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "E" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/telecomms/server{
 	name = "Server"
 	},
 /obj/item/device/gps/internal/poi,
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/steel,
 /area/submap/vrden)
 "F" = (
@@ -220,6 +343,30 @@
 /obj/machinery/door/airlock/glass,
 /turf/simulated/floor/tiled/steel,
 /area/submap/vrden)
+=======
+/turf/simulated/floor/tiled/virgo3b,
+/area/submap/VRDen)
+"F" = (
+/obj/item/integrated_circuit/logic/binary,
+/turf/simulated/floor/tiled/virgo3b,
+/area/submap/VRDen)
+"G" = (
+/obj/machinery/light/small/flicker,
+/turf/simulated/floor/tiled/virgo3b,
+/area/submap/VRDen)
+"H" = (
+/obj/machinery/telecomms/processor,
+/turf/simulated/floor/tiled/virgo3b,
+/area/submap/VRDen)
+"I" = (
+/obj/effect/decal/cleanable/blood/oil/streak,
+/turf/simulated/floor/tiled/virgo3b,
+/area/submap/VRDen)
+"J" = (
+/obj/machinery/door/airlock/glass,
+/turf/simulated/floor/tiled/steel,
+/area/submap/VRDen)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "K" = (
 /obj/effect/decal/remains/posi,
 /obj/item/weapon/paper{
@@ -227,6 +374,7 @@
 	name = "satisfied letter"
 	},
 /obj/machinery/light/small,
+<<<<<<< HEAD
 /turf/simulated/floor,
 /area/submap/vrden)
 "L" = (
@@ -264,12 +412,47 @@
 /obj/machinery/door/airlock,
 /turf/simulated/floor,
 /area/submap/vrden)
+=======
+/turf/simulated/floor/tiled/virgo3b,
+/area/submap/VRDen)
+"L" = (
+/obj/structure/closet/toolcloset,
+/turf/simulated/floor/tiled/virgo3b,
+/area/submap/VRDen)
+"M" = (
+/obj/item/integrated_circuit/smart/basic_pathfinder,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/submap/VRDen)
+"N" = (
+/obj/structure/girder/displaced,
+/turf/simulated/floor/tiled/virgo3b,
+/area/submap/VRDen)
+"O" = (
+/obj/structure/loot_pile/maint/technical,
+/turf/simulated/floor/tiled/virgo3b,
+/area/submap/VRDen)
+"P" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/floor/tiled/virgo3b,
+/area/submap/VRDen)
+"Q" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/virgo3b,
+/area/submap/VRDen)
+"R" = (
+/obj/structure/loot_pile/maint/junk,
+/turf/template_noop,
+/area/submap/VRDen)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 "T" = (
 /obj/structure/toilet{
 	dir = 8
 	},
 /obj/item/device/integrated_electronics/debugger,
 /obj/machinery/light{
+<<<<<<< HEAD
 	dir = 1;
 	icon_state = "tube1"
 	},
@@ -290,6 +473,26 @@
 	},
 /turf/template_noop,
 /area/submap/vrden)
+=======
+	dir = 1
+	},
+/turf/simulated/floor/tiled/virgo3b,
+/area/submap/VRDen)
+"U" = (
+/obj/machinery/door/airlock,
+/turf/simulated/floor/tiled/virgo3b,
+/area/submap/VRDen)
+"V" = (
+/obj/effect/decal/remains/robot,
+/turf/template_noop,
+/area/submap/VRDen)
+"W" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/template_noop,
+/area/submap/VRDen)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 (1,1,1) = {"
 a
@@ -409,10 +612,17 @@ b
 c
 h
 q
+<<<<<<< HEAD
 x
 z
 C
 j
+=======
+C
+C
+C
+u
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 I
 K
 c
@@ -432,7 +642,11 @@ c
 i
 r
 y
+<<<<<<< HEAD
 x
+=======
+C
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 u
 F
 c
@@ -451,12 +665,21 @@ b
 b
 c
 d
+<<<<<<< HEAD
 j
 s
 z
 t
 D
 t
+=======
+u
+s
+C
+u
+D
+u
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 c
 L
 O
@@ -474,15 +697,25 @@ b
 c
 e
 k
+<<<<<<< HEAD
 t
+=======
+u
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 u
 u
 u
 G
 c
+<<<<<<< HEAD
 t
 P
 j
+=======
+u
+P
+u
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 c
 W
 b
@@ -497,12 +730,21 @@ c
 f
 l
 u
+<<<<<<< HEAD
 t
 x
 u
 u
 J
 t
+=======
+u
+C
+u
+u
+J
+u
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 Q
 C
 U
@@ -518,15 +760,25 @@ b
 c
 g
 m
+<<<<<<< HEAD
 v
 u
 t
+=======
+O
+u
+u
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 E
 H
 c
 M
 c
+<<<<<<< HEAD
 S
+=======
+U
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 c
 W
 b

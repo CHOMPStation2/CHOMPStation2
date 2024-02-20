@@ -16,8 +16,13 @@ var/list/department_radio_keys = list(
 	":u" = "Supply",		".u" = "Supply",
 	":v" = "Service",		".v" = "Service",
 	":p" = "AI Private",	".p" = "AI Private",
+<<<<<<< HEAD
 	":y" = "Explorer",	".y" = "Explorer",	//VOREStation Edit //CHOMP keep explo
 	":a" = "Talon",		".a" = "Talon", //VOREStation Add, //CHOMP keep explo
+=======
+	":a" = "Away Team",	".a" = "Away Team",	//VOREStation Edit
+	":y" = "Talon",		".y" = "Talon", //VOREStation Add,
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	":g" = "Casino",	".g" = "Casino",
 
 	":R" = "right ear",	".R" = "right ear",
@@ -36,8 +41,13 @@ var/list/department_radio_keys = list(
 	":U" = "Supply",		".U" = "Supply",
 	":V" = "Service",		".V" = "Service",
 	":P" = "AI Private",	".P" = "AI Private",
+<<<<<<< HEAD
 	":Y" = "Explorer",	".Y" = "Explorer", //CHOMP keep explo
 	":A" = "Talon",		".A" = "Talon", //VOREStation Add, //CHOMP keep explo
+=======
+	":A" = "Away Team",	".A" = "Away Team",
+	":Y" = "Talon",		".Y" = "Talon", //VOREStation Add,
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	":G" = "Casino",	".G" = "Casino",
 
 	// Cyrillic characters on the same keys on the Russian QWERTY (phonetic) layout
@@ -58,8 +68,13 @@ var/list/department_radio_keys = list(
 	":г" = "Supply",        ".г" = "Supply",
 	":м" = "Service",        ".м" = "Service",
 	":з" = "AI Private",    ".з" = "AI Private",
+<<<<<<< HEAD
 	":н" = "Explorer",    ".н" = "Explorer", //CHOMP keep explo
 	":ф" = "Talon",        ".ф" = "Talon", //VOREStation Add //CHOMP keep explo
+=======
+	":ф" = "Away Team",    ".ф" = "Away Team",
+	":н" = "Talon",        ".н" = "Talon", //VOREStation Add
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	":п" = "Casino",	".п" = "Casino",
 )
 
@@ -119,11 +134,14 @@ var/list/channel_to_radio_key = new
 			whispering = 1
 			. = 1
 		//VOREStation Edit End
+<<<<<<< HEAD
 		//YW Edit start
 		if(wingdings)
 			S.message = span("wingdings",(S.message))
 			. = 1
 		//YW Edit End
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	message_data[1] = message_pieces
 	message_data[2] = verb
@@ -369,7 +387,11 @@ var/list/channel_to_radio_key = new
 			if(M && src) //If we still exist, when the spawn processes
 				//VOREStation Add - Ghosts don't hear whispers
 				if(whispering && isobserver(M) && (!M.is_preference_enabled(/datum/client_preference/ghost_see_whisubtle) || \
+<<<<<<< HEAD
 				(!(is_preference_enabled(/datum/client_preference/whisubtle_vis) || (isbelly(M.loc) && src == M.loc:owner))  && !M.client?.holder))) // CHOMPedit
+=======
+				(!is_preference_enabled(/datum/client_preference/whisubtle_vis)  && !M.client?.holder)))
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 					M.show_message("<span class='game say'><span class='name'>[src.name]</span> [w_not_heard].</span>", 2)
 					return
 				//VOREStation Add End
@@ -410,29 +432,47 @@ var/list/channel_to_radio_key = new
 					C.images -= I
 			qdel(I)
 
+<<<<<<< HEAD
 	/*	CHOMPEdit - Not needed if you set your defaults right
 	var/ourfreq = null
 	if(voice_freq > 0 )
 		ourfreq = voice_freq
 	*/
+=======
+	var/ourfreq = null
+	if(voice_freq > 0 )
+		ourfreq = voice_freq
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	//Log the message to file
 	if(message_mode)
 		message = "([message_mode == "headset" ? "Common" : capitalize(message_mode)]) [message]" //Adds radio keys used if available
 	if(whispering)
 		if(do_sound && message)
+<<<<<<< HEAD
 			playsound(T, pick(voice_sounds_list), 25, TRUE, extrarange = -6, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = FALSE, preference = /datum/client_preference/say_sounds)	//CHOMPEdit - Use say sound prefs
+=======
+			playsound(T, pick(voice_sounds_list), 25, TRUE, extrarange = -6, falloff = 1 , is_global = TRUE, frequency = ourfreq, ignore_walls = FALSE, preference = /datum/client_preference/whisper_sounds)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 		log_whisper(message, src)
 	else
 		if(do_sound && message)
+<<<<<<< HEAD
 			playsound(T, pick(voice_sounds_list), 75, TRUE, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = FALSE, preference = /datum/client_preference/say_sounds)	//CHOMPEdit - tiny fix
+=======
+			playsound(T, pick(voice_sounds_list), 75, TRUE, falloff = 1 , is_global = TRUE, frequency = ourfreq, ignore_walls = FALSE, preference = /datum/client_preference/say_sounds)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		log_say(message, src)
 	return 1
 
 /mob/living/proc/say_signlang(var/message, var/verb="gestures", var/verb_understood="gestures", var/datum/language/language, var/type = 1)
 	var/turf/T = get_turf(src)
 	//We're in something, gesture to people inside the same thing
+<<<<<<< HEAD
 	if(loc != T && !istype(loc, /obj/item/weapon/holder)) //CHOMPEdit - Partially fixes sign language while being held.
+=======
+	if(loc != T)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		for(var/mob/M in loc)
 			M.hear_signlang(message, verb, verb_understood, language, src, type)
 

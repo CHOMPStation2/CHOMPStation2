@@ -15,6 +15,7 @@
 
 // Run all strings to be used in an SQL query through this proc first to properly escape out injection attempts.
 /proc/sanitizeSQL(var/t as text)
+<<<<<<< HEAD
 	//var/sqltext = dbcon.Quote(t); //CHOMPEdit Begin
 	//return copytext(sqltext, 2, length(sqltext));//Quote() adds quotes around input, we already do that
 	return t
@@ -24,6 +25,10 @@
 /proc/format_table_name(table as text)
 	//return CONFIG_GET(string/feedback_tableprefix) + table
 	return table // We don't implement tableprefix
+=======
+	var/sqltext = dbcon.Quote(t);
+	return copytext(sqltext, 2, length(sqltext));//Quote() adds quotes around input, we already do that
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /*
  * Text sanitization
@@ -422,9 +427,15 @@
 	t = replacetext(t, "\[/grid\]", "</td></tr></table>")
 	t = replacetext(t, "\[row\]", "</td><tr>")
 	t = replacetext(t, "\[cell\]", "<td>")
+<<<<<<< HEAD
 	t = replacetext(t, "\[logo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/ntlogo.png>") //CHOMPEdit
 	t = replacetext(t, "\[redlogo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/redntlogo.png>") //CHOMPEdit
 	t = replacetext(t, "\[sglogo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/sglogo.png>") //CHOMPEdit
+=======
+	t = replacetext(t, "\[logo\]", "<img src = ntlogo.png>")
+	t = replacetext(t, "\[redlogo\]", "<img src = redntlogo.png>")
+	t = replacetext(t, "\[sglogo\]", "<img src = sglogo.png>")
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	t = replacetext(t, "\[editorbr\]", "")
 	return t
 

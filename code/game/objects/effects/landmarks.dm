@@ -27,6 +27,7 @@
 			simulated = TRUE
 		//	delete_me = 1
 			return
+<<<<<<< HEAD
 		//VOREStation Add end
 		if("Observer-Start") // Ghosts are the only thing that use the latejoin list afaik and it complains if there's nothing in the list. 
 			latejoin += src
@@ -47,6 +48,13 @@
 			delete_me = 1
 			return
 		//CHOMPEdit End
+=======
+		if("JoinLateGateway")
+			latejoin_gateway += loc
+			latejoin += src				//VOREStation Addition
+			delete_me = 1
+			return
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		if("JoinLateElevator")
 			latejoin_elevator += loc
 			delete_me = 1

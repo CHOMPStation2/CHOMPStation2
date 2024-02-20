@@ -85,10 +85,17 @@
 /proc/is_admin(var/mob/user)
 	return check_rights(R_ADMIN|R_EVENT, 0, user) != 0
 
+<<<<<<< HEAD
 /*	CHOMPEdit - See modular_chomp/code/_HELPERS/type2type/color.dm
 /proc/hsl2rgb(h, s, l)
 	return //TODO: Implement
 */
+=======
+
+/proc/hsl2rgb(h, s, l)
+	return //TODO: Implement
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /*
 	Miss Chance
 */
@@ -152,12 +159,19 @@
 		miss_chance = base_miss_chance[zone]
 	if (zone == "eyes" || zone == "mouth")
 		miss_chance = base_miss_chance["head"]
+<<<<<<< HEAD
 	// miss_chance = max(miss_chance + miss_chance_mod, 0) CHOMPEDIT - removing baymiss
 	if(prob(miss_chance_mod)) //CHOMPADD - removing baymiss. Checking the miss chance for legacy. This should only be affected by special cases and evasion.
 		return null
 	if(prob(miss_chance))
 		//if(prob(70))
 		//	return null	CHOMPEDIT - removing baymiss
+=======
+	miss_chance = max(miss_chance + miss_chance_mod, 0)
+	if(prob(miss_chance))
+		if(prob(70))
+			return null
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		return pick(base_miss_chance)
 	return zone
 
@@ -482,6 +496,7 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 		if(!name)
 			name = (C.holder && C.holder.fakekey) ? C.holder.fakekey : C.key
 		if(joined_ghosts)
+<<<<<<< HEAD
 			//say_dead_direct("The ghost of <span class='name'>[name]</span> now [pick("skulks","lurks","prowls","creeps","stalks")] among the dead. [message]") //ChompEDIT - Removed for ghost privacy
 			log_and_message_admins("<span class='name'>[name]</span> entered ghost/observe mode. [message]") //ChompEDIT
 
@@ -489,6 +504,11 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 			//say_dead_direct("<span class='name'>[name]</span> no longer [pick("skulks","lurks","prowls","creeps","stalks")] in the realm of the dead. [message]") //ChompEDIT - Removed for ghost privacy
 			log_and_message_admins("<span class='name'>[name]</span> left ghost/observe mode. [message]") //ChompEDIT
 
+=======
+			say_dead_direct("The ghost of <span class='name'>[name]</span> now [pick("skulks","lurks","prowls","creeps","stalks")] among the dead. [message]")
+		else
+			say_dead_direct("<span class='name'>[name]</span> no longer [pick("skulks","lurks","prowls","creeps","stalks")] in the realm of the dead. [message]")
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /mob/proc/switch_to_camera(var/obj/machinery/camera/C)
 	if (!C.can_use() || stat || (get_dist(C, src) > 1 || machine != src || blinded || !canmove))
@@ -543,7 +563,11 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 		threatcount += 4
 
 	if(auth_weapons && !access_obj.allowed(src))
+<<<<<<< HEAD
 		if(istype(l_hand, /obj/item/weapon/gun) || istype(l_hand, /obj/item/weapon/melee) && !istype(l_hand, /obj/item/weapon/gun/energy/floragun) && !istype(l_hand, /obj/item/weapon/gun/energy/sizegun) && !istype(l_hand, /obj/item/weapon/gun/launcher/confetti_cannon) && !istype(l_hand, /obj/item/weapon/gun/energy/lasertag)) //CHOMP Edit: Specific guns to the exclusion list.
+=======
+		if(istype(l_hand, /obj/item/weapon/gun) || istype(l_hand, /obj/item/weapon/melee))
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			threatcount += 4
 
 		if(istype(r_hand, /obj/item/weapon/gun) || istype(r_hand, /obj/item/weapon/melee))

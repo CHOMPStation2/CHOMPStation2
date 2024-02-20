@@ -44,6 +44,7 @@
 /datum/alt_title/sec_chief
 	title = "Chief of Security"
 
+<<<<<<< HEAD
 //YW ADDITION START: LOYALTY IMPLANT FOR HOS
 /datum/job/hos/equip(var/mob/living/carbon/human/H)
 	. = ..()
@@ -51,6 +52,11 @@
 		H.implant_loyalty(src)
 //YW ADDITION END
 
+=======
+//////////////////////////////////
+//			Warden
+//////////////////////////////////
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /datum/job/warden
 	title = "Warden"
 	flag = WARDEN
@@ -117,7 +123,11 @@
 	spawn_positions = 4
 	supervisors = "the Head of Security"
 	selection_color = "#601C1C"
+<<<<<<< HEAD
 	economic_modifier = 5	//CHOMPstation edit - "Offduty officers make more than working, and this brings it in line with the rest of the jobs in sec barring HOS"
+=======
+	economic_modifier = 4
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_morgue, access_external_airlocks)
 	minimal_access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_external_airlocks)
 	minimal_player_age = 3
@@ -136,4 +146,8 @@
 	title = "Junior Officer"
 	title_blurb = "A Junior Officer is an inexperienced Security Officer. They likely have training, but not experience, and are frequently \
 					paired off with a more senior co-worker. Junior Officers may also be expected to take over the boring duties of other Officers \
+<<<<<<< HEAD
 					including patrolling the station or maintaining specific posts."
+=======
+					including patrolling the station or maintaining specific posts."
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

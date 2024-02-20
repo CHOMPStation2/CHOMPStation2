@@ -14,13 +14,25 @@
 	if (!user)
 		user = usr
 	if(!length(items))
+<<<<<<< HEAD
 		return
+=======
+		return null
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if (!istype(user))
 		if (istype(user, /client))
 			var/client/client = user
 			user = client.mob
 		else
+<<<<<<< HEAD
 			return
+=======
+			return null
+
+	if(isnull(user.client))
+		return null
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(!user.client.prefs.tgui_input_mode)
 		return input(user, message, title) as null|anything in items
 	var/datum/tgui_checkbox_input/input = new(user, message, title, items, min_checked, max_checked, timeout, ui_state)
@@ -66,7 +78,11 @@
 		start_time = world.time
 		QDEL_IN(src, timeout)
 
+<<<<<<< HEAD
 /datum/tgui_checkbox_input/Destroy(force, ...)
+=======
+/datum/tgui_checkbox_input/Destroy(force)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	SStgui.close_uis(src)
 	state = null
 	QDEL_NULL(items)

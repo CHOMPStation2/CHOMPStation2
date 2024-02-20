@@ -6,10 +6,13 @@
 	var/list/spawned_carp = list()
 
 /datum/event/carp_migration/setup()
+<<<<<<< HEAD
 	if(prob(50))
 		log_debug("Carp migration failed successfully.")
 		kill()
 		return
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	announceWhen = rand(30, 60) // 1 to 2 minutes
 	endWhen += severity * 25
 	carp_cap = 2 + 3 ** severity // No more than this many at once regardless of waves. (5, 11, 29)

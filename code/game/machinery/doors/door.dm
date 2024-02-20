@@ -163,7 +163,10 @@
 	return !density // Block airflow unless density = FALSE
 
 /obj/machinery/door/proc/bumpopen(mob/user as mob)
+<<<<<<< HEAD
 	if(!user)	return // CHOMPedit - Check if the mob is even valid before proceeding
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(operating)	return
 	if(user.last_airflow > world.time - vsc.airflow_delay) //Fakkit
 		return

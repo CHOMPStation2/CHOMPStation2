@@ -636,11 +636,14 @@
 		if(istype(AM, /mob/living/silicon/robot/drone))
 			var/mob/living/silicon/robot/drone/drone = AM
 			src.destinationTag = drone.mail_destination
+<<<<<<< HEAD
 		// CHOMPEdit Start -- Envelopes can be sent through as well!
 		if(istype(AM, /obj/item/mail) && !hasmob)
 			var/obj/item/mail/T = AM
 			src.destinationTag = T.sortTag
 		// CHOMPEdit End
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 
 // start the movement process
@@ -664,12 +667,20 @@
 	while(active)
 		sleep(1)		// was 1
 		if(!loc) return // check if we got GC'd
+<<<<<<< HEAD
 		/*CHOMPREMOVAL: why, this makes no sense to be a randomized 3% chance damage apply
+=======
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		if(hasmob && prob(3))
 			for(var/mob/living/H in src)
 				if(!istype(H,/mob/living/silicon/robot/drone)) //Drones use the mailing code to move through the disposal system,
 					H.take_overall_damage(20, 0, "Blunt Trauma")//horribly maim any living creature jumping down disposals.  c'est la vie
+<<<<<<< HEAD
 		*/
+=======
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		var/obj/structure/disposalpipe/curr = loc
 		last = curr
 		curr = curr.transfer(src)
@@ -1540,7 +1551,10 @@
 	var/active = 0
 	var/turf/target	// this will be where the output objects are 'thrown' to.
 	var/mode = 0
+<<<<<<< HEAD
 	var/launch_dist = 3 //CHOMPEdit
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/structure/disposaloutlet/Initialize()
 	. = ..()
@@ -1572,7 +1586,11 @@
 			AM.pipe_eject(dir)
 			if(!istype(AM,/mob/living/silicon/robot/drone)) //Drones keep smashing windows from being fired out of chutes. Bad for the station. ~Z
 				spawn(5)
+<<<<<<< HEAD
 					AM.throw_at(target, launch_dist, 1) //CHOMPEdit
+=======
+					AM.throw_at(target, 3, 1)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		H.vent_gas(src.loc)
 		qdel(H)
 

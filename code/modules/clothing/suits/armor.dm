@@ -1,5 +1,9 @@
 /obj/item/clothing/suit/armor
+<<<<<<< HEAD
 	allowed = list(/obj/item/weapon/gun/energy,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs,/obj/item/device/flashlight/maglight,/obj/item/clothing/head/helmet,/obj/item/weapon/tank) //CHOMP Add tank
+=======
+	allowed = list(/obj/item/weapon/gun/energy,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs,/obj/item/device/flashlight/maglight,/obj/item/clothing/head/helmet)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 	item_flags = THICKMATERIAL
 
@@ -513,17 +517,25 @@
 		|ACCESSORY_SLOT_ARMOR_A\
 		|ACCESSORY_SLOT_ARMOR_L\
 		|ACCESSORY_SLOT_ARMOR_S\
+<<<<<<< HEAD
 		|ACCESSORY_SLOT_ARMOR_M\
 		|ACCESSORY_SLOT_OVER\
 		|ACCESSORY_SLOT_ARMBAND)	//CHOMPEdit - let pcarriers have fashion
+=======
+		|ACCESSORY_SLOT_ARMOR_M)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	restricted_accessory_slots = (\
 		ACCESSORY_SLOT_INSIGNIA\
 		|ACCESSORY_SLOT_ARMOR_C\
 		|ACCESSORY_SLOT_ARMOR_A\
 		|ACCESSORY_SLOT_ARMOR_L\
 		|ACCESSORY_SLOT_ARMOR_S\
+<<<<<<< HEAD
 		|ACCESSORY_SLOT_ARMOR_M\
 		|ACCESSORY_SLOT_ARMBAND)	//CHOMPEdit - let pcarriers have fashion
+=======
+		|ACCESSORY_SLOT_ARMOR_M)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	blood_overlay_type = "armor"
 
 /obj/item/clothing/suit/armor/pcarrier/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = FALSE)
@@ -543,7 +555,11 @@
 		return 1
 
 /obj/item/clothing/suit/armor/pcarrier/explorer
+<<<<<<< HEAD
 	name = "explorer plate carrier" // CHOMPedit: Clarity for vendors.
+=======
+	name = "explorer suit"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	desc = "A lightweight explorer plate carrier. It can be equipped with armor plates, but only protects from the cold on it's own."
 	icon_state = "explorer"
 	flags = THICKMATERIAL

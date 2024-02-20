@@ -21,7 +21,10 @@
 	var/datum/reagents/metabolism/bloodstream/bloodstr = null
 	var/datum/reagents/metabolism/ingested/ingested = null
 	var/datum/reagents/metabolism/touch/touching = null
+<<<<<<< HEAD
 	var/toxin_gut = FALSE //CHOMPAdd
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	var/pulse = PULSE_NORM	//current pulse level
 

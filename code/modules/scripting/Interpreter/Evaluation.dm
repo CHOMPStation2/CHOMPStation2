@@ -4,7 +4,11 @@
 /n_Interpreter/proc/Eval(node/expression/exp)
 	if(istype(exp, /node/expression/FunctionCall))
 		return RunFunction(exp)
+<<<<<<< HEAD
 	else if(istype(exp, /node/expression/op))
+=======
+	else if(istype(exp, /node/expression/operator))
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		return EvalOperator(exp)
 	else if(istype(exp, /node/expression/value/literal))
 		var/node/expression/value/literal/lit=exp
@@ -34,6 +38,7 @@
 	else
 		return exp
 
+<<<<<<< HEAD
 /n_Interpreter/proc/EvalOperator(node/expression/op/exp)
 	if(istype(exp, /node/expression/op/binary))
 		var/node/expression/op/binary/bin=exp
@@ -73,11 +78,53 @@
 			if(/node/expression/op/binary/Power)
 				return Power(Eval(bin.exp), Eval(bin.exp2))
 			if(/node/expression/op/binary/Modulo)
+=======
+/n_Interpreter/proc/EvalOperator(node/expression/operator/exp)
+	if(istype(exp, /node/expression/operator/binary))
+		var/node/expression/operator/binary/bin=exp
+		switch(bin.type)
+			if(/node/expression/operator/binary/Equal)
+				return Equal(Eval(bin.exp), Eval(bin.exp2))
+			if(/node/expression/operator/binary/NotEqual)
+				return NotEqual(Eval(bin.exp), Eval(bin.exp2))
+			if(/node/expression/operator/binary/Greater)
+				return Greater(Eval(bin.exp), Eval(bin.exp2))
+			if(/node/expression/operator/binary/Less)
+				return Less(Eval(bin.exp), Eval(bin.exp2))
+			if(/node/expression/operator/binary/GreaterOrEqual)
+				return GreaterOrEqual(Eval(bin.exp), Eval(bin.exp2))
+			if(/node/expression/operator/binary/LessOrEqual)
+				return LessOrEqual(Eval(bin.exp), Eval(bin.exp2))
+			if(/node/expression/operator/binary/LogicalAnd)
+				return LogicalAnd(Eval(bin.exp), Eval(bin.exp2))
+			if(/node/expression/operator/binary/LogicalOr)
+				return LogicalOr(Eval(bin.exp), Eval(bin.exp2))
+			if(/node/expression/operator/binary/LogicalXor)
+				return LogicalXor(Eval(bin.exp), Eval(bin.exp2))
+			if(/node/expression/operator/binary/BitwiseAnd)
+				return BitwiseAnd(Eval(bin.exp), Eval(bin.exp2))
+			if(/node/expression/operator/binary/BitwiseOr)
+				return BitwiseOr(Eval(bin.exp), Eval(bin.exp2))
+			if(/node/expression/operator/binary/BitwiseXor)
+				return BitwiseXor(Eval(bin.exp), Eval(bin.exp2))
+			if(/node/expression/operator/binary/Add)
+				return Add(Eval(bin.exp), Eval(bin.exp2))
+			if(/node/expression/operator/binary/Subtract)
+				return Subtract(Eval(bin.exp), Eval(bin.exp2))
+			if(/node/expression/operator/binary/Multiply)
+				return Multiply(Eval(bin.exp), Eval(bin.exp2))
+			if(/node/expression/operator/binary/Divide)
+				return Divide(Eval(bin.exp), Eval(bin.exp2))
+			if(/node/expression/operator/binary/Power)
+				return Power(Eval(bin.exp), Eval(bin.exp2))
+			if(/node/expression/operator/binary/Modulo)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 				return Modulo(Eval(bin.exp), Eval(bin.exp2))
 			else
 				RaiseError(new/runtimeError/UnknownInstruction())
 		return
 	switch(exp.type)
+<<<<<<< HEAD
 		if(/node/expression/op/unary/Minus)
 			return Minus(Eval(exp.exp))
 		if(/node/expression/op/unary/LogicalNot)
@@ -85,6 +132,15 @@
 		if(/node/expression/op/unary/BitwiseNot)
 			return BitwiseNot(Eval(exp.exp))
 		if(/node/expression/op/unary/group)
+=======
+		if(/node/expression/operator/unary/Minus)
+			return Minus(Eval(exp.exp))
+		if(/node/expression/operator/unary/LogicalNot)
+			return LogicalNot(Eval(exp.exp))
+		if(/node/expression/operator/unary/BitwiseNot)
+			return BitwiseNot(Eval(exp.exp))
+		if(/node/expression/operator/unary/group)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			return Eval(exp.exp)
 		else
 			RaiseError(new/runtimeError/UnknownInstruction())
@@ -164,4 +220,8 @@
 //Unary//
 /n_Interpreter/proc/Minus(a)				return -a
 /n_Interpreter/proc/LogicalNot(a)			return !a
+<<<<<<< HEAD
 /n_Interpreter/proc/BitwiseNot(a)			return ~a
+=======
+/n_Interpreter/proc/BitwiseNot(a)			return ~a
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

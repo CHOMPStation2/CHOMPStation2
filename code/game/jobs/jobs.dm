@@ -32,7 +32,10 @@ var/const/PATHFINDER 		=(1<<11)
 var/const/EXPLORER 			=(1<<12)
 var/const/SAR 				=(1<<13)
 var/const/XENOBOTANIST		=(1<<14)
+<<<<<<< HEAD
 var/const/PILOT 			=(1<<15) //ChompEDIT - ours is with the other explo jobs.
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 var/const/CIVILIAN			=(1<<2)
 
@@ -49,6 +52,7 @@ var/const/LAWYER			=(1<<9)
 var/const/CHAPLAIN			=(1<<10)
 var/const/ASSISTANT			=(1<<11)
 var/const/BRIDGE			=(1<<12)
+<<<<<<< HEAD
 //var/const/PILOT 			=(1<<13) //ChompEDIT - ours is with the other explo jobs.
 var/const/ENTERTAINER		=(1<<14)
 var/const/ENTREPRENEUR		=(1<<15)
@@ -57,6 +61,12 @@ var/const/OTHER				=(1<<10) //CHOMPStation Add
 var/const/NONCREW			=(1<<0) //CHOMPStation Add
 var/const/ANOMALY			=(1<<0) //CHOMPstation Add
 /* // CHOMPedit: Comment out Talon positions, we don't have that here.
+=======
+var/const/PILOT 			=(1<<13)
+var/const/ENTERTAINER		=(1<<14)
+var/const/ENTREPRENEUR		=(1<<15)
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 //VOREStation Add
 var/const/TALON				=(1<<3)
 
@@ -67,6 +77,7 @@ var/const/TALSEC			=(1<<3)
 var/const/TALENG			=(1<<4)
 var/const/TALMIN			=(1<<5)
 //VOREStation Add End
+<<<<<<< HEAD
 */
 
 //CHOMPedit start: next chunk doesn't exist upstream, not sure what it's actually used for.
@@ -167,6 +178,11 @@ var/list/whitelisted_positions = list(
 
 /proc/guest_jobbans(var/job)
 	return // ((job in whitelisted_positions)) // CHOMPedit: spaghetti that is our whitelist system means this prevents use of config/jobswhitelist.txt
+=======
+
+/proc/guest_jobbans(var/job)
+	return ( (job in SSjob.get_job_titles_in_department(DEPARTMENT_COMMAND)) || (job in SSjob.get_job_titles_in_department(DEPARTMENT_SYNTHETIC)) || (job in SSjob.get_job_titles_in_department(DEPARTMENT_SECURITY)) )
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /proc/get_job_datums()
 	var/list/occupations = list()

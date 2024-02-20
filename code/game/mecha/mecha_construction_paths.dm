@@ -811,7 +811,10 @@
 		if(3)
 			if(diff==FORWARD)
 				user.visible_message("[user] installs the external armor layer to [holder].", "You install the external armor layer to [holder].")
+<<<<<<< HEAD
 				//CHOMPedit. Prevents Sereniy from eating entire stacks of plasteel.
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 				holder.icon_state = "gygax18"
 			else
 				user.visible_message("[user] cuts internal armor layer from [holder].", "You cut the internal armor layer from [holder].")
@@ -1609,6 +1612,7 @@
 					//6
 					list("key"=/obj/item/stack/material/steel,
 							"backkey"=IS_SCREWDRIVER,
+<<<<<<< HEAD
 							"desc"="Translocator is secured"),  //Chompedit, change hand tele to translocator
 					//7
 					list("key"=IS_SCREWDRIVER,
@@ -1616,6 +1620,15 @@
 							"desc"="Translocator is installed"),  //Chompedit, change hand tele to translocator
 					//8
 					list("key"=/obj/item/device/perfect_tele,  //Chompedit, change hand tele to translocator
+=======
+							"desc"="Hand teleporter is secured"),
+					//7
+					list("key"=IS_SCREWDRIVER,
+							"backkey"=IS_CROWBAR,
+							"desc"="Hand teleporter is installed"),
+					//8
+					list("key"=/obj/item/weapon/hand_tele,
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 							"backkey"=IS_SCREWDRIVER,
 							"desc"="SMES coil is secured"),
 					//9

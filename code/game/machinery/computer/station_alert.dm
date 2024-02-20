@@ -49,8 +49,13 @@
 		var/list/alarms = alarm_monitor ? alarm_monitor.major_alarms() : list()
 		if(alarms.len)
 			icon_screen = "alert:2"
+<<<<<<< HEAD
 			playsound(src, 'modular_chomp/sound/effects/comp_alert_major.ogg', 70, 1) // CHOMPEdit: Alarm notifications
 		else
 			icon_screen = initial(icon_screen)
 			playsound(src, 'modular_chomp/sound/effects/comp_alert_clear.ogg', 50, 1)  // CHOMPEdit: Alarm notifications
+=======
+		else
+			icon_screen = initial(icon_screen)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	..()

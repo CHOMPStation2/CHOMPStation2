@@ -74,8 +74,11 @@
 
 	handle_tf_holder()	//VOREStation Addition
 
+<<<<<<< HEAD
 	handle_vr_derez() // CHOMPedit
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /mob/living/proc/handle_breathing()
 	return
 

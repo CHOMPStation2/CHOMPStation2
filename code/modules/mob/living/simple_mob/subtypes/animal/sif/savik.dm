@@ -30,10 +30,16 @@
 
 	maxHealth = 125
 	health = 125
+<<<<<<< HEAD
 	minbodytemp = 175 //yw edit, Makes mobs survive cryogaia temps
 	movement_cooldown = -1
 	heat_resist = -0.50
 	cold_resist = 0.75
+=======
+
+	movement_cooldown = -1
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	melee_damage_lower = 15
 	melee_damage_upper = 35
 	attack_armor_pen = 15
@@ -55,7 +61,10 @@
 
 	say_list_type = /datum/say_list/savik
 	ai_holder_type = /datum/ai_holder/simple_mob/savik
+<<<<<<< HEAD
 	
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /datum/say_list/savik
 	speak = list("Hruuugh!","Hrunnph")

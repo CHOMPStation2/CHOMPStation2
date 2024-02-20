@@ -43,7 +43,10 @@
 		set_flooring(get_flooring_data(floortype), TRUE)
 		. = INITIALIZE_HINT_LATELOAD // We'll update our icons after everyone is ready
 	else
+<<<<<<< HEAD
 		vorefootstep_sounds = base_vorefootstep_sounds //CHOMPstation edit
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		footstep_sounds = base_footstep_sounds
 	if(can_dirty && can_start_dirty)
 		if(prob(dirty_prob))
@@ -64,7 +67,10 @@
 	if(is_plating() && !initializing) // Plating -> Flooring
 		swap_decals()
 	flooring = newflooring
+<<<<<<< HEAD
 	vorefootstep_sounds = newflooring.vorefootstep_sounds //CHOMPstation edit
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	footstep_sounds = newflooring.footstep_sounds
 	if(!initializing)
 		update_icon(1)
@@ -82,7 +88,10 @@
 	desc = base_desc
 	icon = base_icon
 	icon_state = base_icon_state
+<<<<<<< HEAD
 	vorefootstep_sounds = base_vorefootstep_sounds	 //CHOMPstation edit
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	footstep_sounds = base_footstep_sounds
 
 	if(!is_plating()) // Flooring -> Plating
@@ -112,7 +121,10 @@
 /turf/simulated/floor/can_engrave()
 	return (!flooring || flooring.can_engrave)
 
+<<<<<<< HEAD
 /* CHOMPEdit - moved this block to modular_chomp\code\game\objects\items\weapons\rcd.dm
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /turf/simulated/floor/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
 		if(RCD_FLOORWALL)
@@ -180,10 +192,18 @@
 			to_chat(user, span("notice", "You deconstruct \the [src]."))
 			ChangeTurf(get_base_turf_by_area(src), preserve_outdoors = TRUE)
 			return TRUE
+<<<<<<< HEAD
 */
+=======
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /turf/simulated/floor/AltClick(mob/user)
 	if(isliving(user))
 		var/mob/living/livingUser = user
 		if(try_graffiti(livingUser, livingUser.get_active_hand()))
 			return
+<<<<<<< HEAD
 	. = ..()
+=======
+	. = ..()
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

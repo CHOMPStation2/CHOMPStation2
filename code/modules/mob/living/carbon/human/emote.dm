@@ -172,6 +172,7 @@ var/list/_human_default_emotes = list(
 	/decl/emote/audible/lwarble,
 	/decl/emote/audible/croak_skrell,
 	/decl/emote/audible/roarbark,
+<<<<<<< HEAD
 	/decl/emote/audible/dook,
 	//VOREStation Add End
 	//CHOMP Add start
@@ -185,6 +186,11 @@ var/list/_human_default_emotes = list(
 	/decl/emote/audible/gwah,
 	/decl/emote/audible/wawa
 	//CHOMP Add end
+=======
+	/decl/emote/audible/dook
+
+	//VOREStation Add End
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 )
 
 	//VOREStation Add Start
@@ -325,6 +331,7 @@ var/list/_simple_mob_default_emotes = list(
 	/decl/emote/audible/vox_shriek,
 	/decl/emote/audible/purr,
 	/decl/emote/audible/purrlong,
+<<<<<<< HEAD
 	/decl/emote/audible/dook,
 	//CHOMP Add start
 	/decl/emote/audible/prbt2,
@@ -334,6 +341,10 @@ var/list/_simple_mob_default_emotes = list(
 	/decl/emote/audible/xenohiss,
 	/decl/emote/audible/xenopurr
 	//CHOMP Add end
+=======
+	/decl/emote/audible/dook
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	)
 	//VOREStation Add End
 

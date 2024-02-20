@@ -90,8 +90,12 @@
 	icon_state = "boots-vox"
 	flags = PHORONGUARD
 	species_restricted = list(SPECIES_VOX)
+<<<<<<< HEAD
 	armor = list (melee = 40, bullet = 10, laser = 10, energy = 20, bomb = 20, bio = 10, rad = 20) //values of workboots and heavy duty engineering gloves, it's the only option that will ever be taken so may as well give the turkeys some protection //ChompEdit
 	
+=======
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	action_button_name = "Toggle the magclaws"
 
 /obj/item/clothing/shoes/magboots/vox/attack_self(mob/user)
@@ -127,4 +131,8 @@
 /obj/item/clothing/shoes/magboots/vox/examine(mob/user)
 	. = ..()
 	if(magpulse)
+<<<<<<< HEAD
 		. += "It would be hard to take these off without relaxing your grip first." // Theoretically this message should only be seen by the wearer when the claws are equipped.
+=======
+		. += "It would be hard to take these off without relaxing your grip first." // Theoretically this message should only be seen by the wearer when the claws are equipped.
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

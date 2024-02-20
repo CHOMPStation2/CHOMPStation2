@@ -14,22 +14,32 @@
 	name = "tile"
 	singular_name = "tile"
 	desc = "A non-descript floor tile"
+<<<<<<< HEAD
 	icon = 'icons/obj/stacks.dmi' //CHOMPedit - parent obj/item/stack got edited, this puts icon back for carpets.
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	randpixel = 7
 	w_class = ITEMSIZE_NORMAL
 	max_amount = 60
 	drop_sound = 'sound/items/drop/axe.ogg'
 	pickup_sound = 'sound/items/pickup/axe.ogg'
 
+<<<<<<< HEAD
 	//crafting / welding vars
+=======
+//crafting / welding vars
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	var/datum/material/material //*sigh* i guess this is how we're doing this.
 	var/craftable = FALSE //set to TRUE for tiles you can craft stuff from directly, like grass
 	var/can_weld = FALSE //set to TRUE for tiles you can reforge into their components via welding, like metal
 	var/welds_into = /obj/item/stack/material/steel //what you get from the welding. defaults to steel.
 	var/default_type = DEFAULT_WALL_MATERIAL
 
+<<<<<<< HEAD
 	var/perunit = SHEET_MATERIAL_AMOUNT //ChompEDIT
 	var/apply_colour //ChompEDIT
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 
 /obj/item/stack/tile/Initialize()
@@ -88,6 +98,7 @@
 	pickup_sound = 'sound/items/pickup/herb.ogg'
 	craftable = TRUE
 
+<<<<<<< HEAD
 /obj/item/stack/tile/grass/sif
 	name = "sivian grass tile"
 	singular_name = "sivian grass floor tile"
@@ -103,6 +114,8 @@
 	singular_name = "sivian overgrowth floor tile"
 	desc = "A patch of dark overgrowth like those that decorate the plains of Sif."
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /*
  * Wood
  */
@@ -154,6 +167,14 @@
 	stacktype = /obj/item/stack/tile/wood
 	build_type = /obj/item/stack/tile/wood
 
+<<<<<<< HEAD
+=======
+
+
+/*
+ * Carpets
+ */
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/item/stack/tile/carpet
 	name = "carpet"
 	singular_name = "carpet"

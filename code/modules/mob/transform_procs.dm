@@ -131,10 +131,13 @@
 			O.add_language(LANGUAGE_ROOTGLOBAL, 1)
 		if(LANGUAGE_ROOTLOCAL in B.alternate_languages)
 			O.add_language(LANGUAGE_ROOTLOCAL, 1)
+<<<<<<< HEAD
 // CHOMPedit Start - Hivemind is now available
 		if(LANGUAGE_HIVEMIND in B.alternate_languages)
 			O.add_language(LANGUAGE_HIVEMIND, 1)
 // CHOMPedit End
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	O.on_mob_init()
 

@@ -194,7 +194,11 @@
 	qdel(src)
 
 /client/proc/eventkit_open_mob_spawner()
+<<<<<<< HEAD
 	set category = "Fun" //ChompEDIT - "EventKit" --> "Fun", less tab spam
+=======
+	set category = "EventKit"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	set name = "Open Mob Spawner"
 	set desc = "Opens an advanced version of the mob spawner."
 

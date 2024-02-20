@@ -180,7 +180,10 @@
 
 /datum/recipe/bun
 	appliance = OVEN
+<<<<<<< HEAD
 	reagents = list("sodiumchloride" = 1)
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	items = list(
 		/obj/item/weapon/reagent_containers/food/snacks/dough
 	)
@@ -700,4 +703,8 @@
 	)
 	reagent_mix = RECIPE_REAGENT_REPLACE //Get that water outta here
 	result = /obj/item/weapon/reagent_containers/food/snacks/veggiemomo
+<<<<<<< HEAD
 	result_quantity = 2
+=======
+	result_quantity = 2
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

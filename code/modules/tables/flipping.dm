@@ -115,4 +115,8 @@
 	update_connections(1)
 	update_icon()
 
+<<<<<<< HEAD
 	return 1
+=======
+	return 1
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

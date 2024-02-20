@@ -44,7 +44,11 @@
 
 /datum/event2/event/virus/set_up()
 	for(var/mob/living/carbon/human/H in player_list)
+<<<<<<< HEAD
 		if(H.client && !H.isSynthetic() && H.stat != DEAD && !player_is_antag(H.mind) && !isbelly(H.loc) && !H.species.get_virus_immune(H)) // CHOMPEdit - Make sure they're not immune
+=======
+		if(H.client && !H.isSynthetic() && H.stat != DEAD && !player_is_antag(H.mind) && !isbelly(H.loc))
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			candidates += H
 	candidates = shuffle(candidates)
 

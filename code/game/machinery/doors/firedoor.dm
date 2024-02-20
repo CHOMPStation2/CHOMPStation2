@@ -48,8 +48,11 @@
 		"hot",
 		"cold"
 	)
+<<<<<<< HEAD
 	var/open_sound = 'sound/machines/firelockopen.ogg' //CHOMPEdit firedoor sound variable.
 	var/close_sound = 'sound/machines/firelockclose.ogg' //CHOMPEdit firedoor sound variable.
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/machinery/door/firedoor/Initialize()
 	. = ..()
@@ -437,9 +440,15 @@
 	switch(animation)
 		if("opening")
 			flick("door_opening", src)
+<<<<<<< HEAD
 			playsound(src, open_sound, 37, 1) //CHOMPEdit var
 		if("closing")
 			playsound(src, close_sound, 37, 1) //CHOMPEdit var
+=======
+			playsound(src, 'sound/machines/firelockopen.ogg', 37, 1)
+		if("closing")
+			playsound(src, 'sound/machines/firelockclose.ogg', 37, 1)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			flick("door_closing", src)
 	return
 
@@ -513,8 +522,11 @@
 /obj/machinery/door/firedoor/multi_tile
 	icon = 'icons/obj/doors/DoorHazard2x1.dmi'
 	width = 2
+<<<<<<< HEAD
 	open_sound = 'sound/machines/firewide1o.ogg' //CHOMPEdit
 	close_sound = 'sound/machines/firewide1c.ogg' //CHOMPEdit
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/machinery/door/firedoor/glass
 	name = "\improper Emergency Glass Shutter"

@@ -355,7 +355,11 @@ var/global/datum/controller/occupations/job_master
 	return 1
 
 
+<<<<<<< HEAD
 /datum/controller/occupations/proc/EquipRank(var/mob/living/carbon/human/H, var/rank, var/joined_late = 0, var/announce = TRUE)
+=======
+/datum/controller/occupations/proc/EquipRank(var/mob/living/carbon/human/H, var/rank, var/joined_late = 0)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(!H)	return null
 
 	var/datum/job/job = GetJob(rank)
@@ -495,7 +499,11 @@ var/global/datum/controller/occupations/job_master
 			return H
 
 		// TWEET PEEP
+<<<<<<< HEAD
 		if(rank == "Site Manager" && announce)
+=======
+		if(rank == "Site Manager")
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			var/sound/announce_sound = (ticker.current_state <= GAME_STATE_SETTING_UP) ? null : sound('sound/misc/boatswain.ogg', volume=20)
 			captain_announcement.Announce("All hands, [alt_title ? alt_title : "Site Manager"] [H.real_name] on deck!", new_sound = announce_sound, zlevel = H.z)
 
@@ -655,6 +663,7 @@ var/global/datum/controller/occupations/job_master
 
 	var/datum/spawnpoint/spawnpos
 	var/fail_deadly = FALSE
+<<<<<<< HEAD
 	var/obj/belly/vore_spawn_gut
 	var/mob/living/prey_to_nomph
 	var/obj/item/item_to_be //CHOMPEdit - Item TF spawning
@@ -922,14 +931,38 @@ var/global/datum/controller/occupations/job_master
 		.["vorgans"] = vorgans
 		.["itemtf"] = item_to_be
 	//CHOMPEdit End
+=======
+
+	var/datum/job/J = SSjob.get_job(rank)
+	fail_deadly = J?.offmap_spawn
+
+	//Spawn them at their preferred one
+	if(C && C.prefs.spawnpoint)
+		if(!(C.prefs.spawnpoint in using_map.allowed_spawns))
+			if(fail_deadly)
+				to_chat(C, "<span class='warning'>Your chosen spawnpoint is unavailable for this map and your job requires a specific spawnpoint. Please correct your spawn point choice.</span>")
+				return
+			else
+				to_chat(C, "<span class='warning'>Your chosen spawnpoint ([C.prefs.spawnpoint]) is unavailable for the current map. Spawning you at one of the enabled spawn points instead.</span>")
+				spawnpos = null
+		else
+			spawnpos = spawntypes[C.prefs.spawnpoint]
+
+	//We will return a list key'd by "turf" and "msg"
+	. = list("turf","msg")
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(spawnpos && istype(spawnpos) && spawnpos.turfs.len)
 		if(spawnpos.check_job_spawning(rank))
 			.["turf"] = spawnpos.get_spawn_position()
 			.["msg"] = spawnpos.msg
 			.["channel"] = spawnpos.announce_channel
 		else
+<<<<<<< HEAD
 			var/datum/job/J = SSjob.get_job(rank)
 			if(fail_deadly || J?.offmap_spawn)
+=======
+			if(fail_deadly)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 				to_chat(C, "<span class='warning'>Your chosen spawnpoint ([spawnpos.display_name]) is unavailable for your chosen job. Please correct your spawn point choice.</span>")
 				return
 			to_chat(C, "<span class='filter_warning'>Your chosen spawnpoint ([spawnpos.display_name]) is unavailable for your chosen job. Spawning you at the Arrivals shuttle instead.</span>")
@@ -940,9 +973,12 @@ var/global/datum/controller/occupations/job_master
 		var/spawning = pick(latejoin)
 		.["turf"] = get_turf(spawning)
 		.["msg"] = "has arrived on the station"
+<<<<<<< HEAD
 
 /datum/controller/occupations/proc/m_backup_client(var/client/C)	//Same as m_backup, but takes a client entry. Used for vore late joining.
 	if(!ishuman(C.mob))
 		return
 	var/mob/living/carbon/human/CM = C.mob
 	SStranscore.m_backup(CM.mind, CM.nif, TRUE)
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

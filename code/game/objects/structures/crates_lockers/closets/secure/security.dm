@@ -76,7 +76,11 @@
 /obj/structure/closet/secure_closet/hos
 	name = "head of security's locker"
 	req_access = list(access_hos)
+<<<<<<< HEAD
 	storage_capacity = 2.5 * MOB_MEDIUM
+=======
+	storage_capacity = 2.6 * MOB_MEDIUM
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	closet_appearance = /decl/closet_appearance/secure_closet/security/hos
 
 	starts_with = list(
@@ -114,9 +118,13 @@
 		/obj/item/clothing/shoes/boots/winter/security,
 		/obj/item/device/flashlight/maglight,
 		/obj/item/clothing/mask/gas/half,
+<<<<<<< HEAD
 		/obj/item/clothing/mask/gas/sechailer/swat/hos, // CHOMPEdit
 		/obj/item/clothing/accessory/bodycam) // CHOMPEdit
 
+=======
+		/obj/item/clothing/mask/gas/sechailer/swat/hos)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/structure/closet/secure_closet/hos/Initialize()
 	if(prob(50))
@@ -169,6 +177,7 @@
 		/obj/item/clothing/shoes/boots/winter/security,
 		/obj/item/device/flashlight/maglight,
 		/obj/item/device/megaphone,
+<<<<<<< HEAD
 		/obj/item/clothing/mask/gas/sechailer/swat/warden, //CHOMP Edit
 		/obj/item/weapon/gun/projectile/revolvershotgun,
 		/obj/item/ammo_magazine/m12gdrumjack/beanbag,
@@ -178,6 +187,10 @@
 		/obj/item/clothing/accessory/bodycam // CHOMPEdit
 
 		)
+=======
+		/obj/item/clothing/mask/gas/half,
+		/obj/item/clothing/mask/gas/sechailer/swat/warden)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/structure/closet/secure_closet/warden/Initialize()
 	if(prob(50))
@@ -196,7 +209,10 @@
 	starts_with = list(
 		/obj/item/clothing/suit/storage/vest/officer,
 		/obj/item/clothing/head/helmet,
+<<<<<<< HEAD
 		/obj/item/clothing/mask/gas/sechailer/swat/officer, //CHOMP ADD
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		/obj/item/weapon/cartridge/security,
 		/obj/item/device/radio/headset/headset_sec,
 		/obj/item/device/radio/headset/headset_sec/alt,
@@ -212,11 +228,16 @@
 		/obj/item/clothing/accessory/storage/black_vest,
 		/obj/item/clothing/head/soft/sec/corp,
 		/obj/item/clothing/under/rank/security/corp,
+<<<<<<< HEAD
 		/obj/item/ammo_magazine/m45/rubber, //VOREStation Removal, //CHOMP Edit it has been restored
+=======
+		///obj/item/ammo_magazine/m45/rubber, //VOREStation Removal,
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		/obj/item/weapon/gun/energy/taser,
 		/obj/item/weapon/cell/device/weapon,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/security,
 		/obj/item/clothing/shoes/boots/winter/security,
+<<<<<<< HEAD
 		/obj/item/device/flashlight/maglight,
 		/obj/item/device/holowarrant,				//CHOMPStation addition
 		/obj/item/device/retail_scanner/security,	//CHOMPStation addition
@@ -225,6 +246,9 @@
 		/obj/item/clothing/accessory/bodycam // CHOMPEdit
 
 		)
+=======
+		/obj/item/device/flashlight/maglight)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/structure/closet/secure_closet/security/Initialize()
 	if(prob(50))
@@ -268,8 +292,13 @@
 
 	starts_with = list(
 		/obj/item/clothing/accessory/badge/holo/detective,
+<<<<<<< HEAD
 		/obj/item/clothing/gloves/forensic, //CHOMP Edit replaces black gloves
 		/obj/item/gunbox, //CHOMP Edit undoes vorestation removal and adds back gunbox
+=======
+		/obj/item/clothing/gloves/black,
+		///obj/item/gunbox, // VOREStation Removal
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		/obj/item/gunbox/stun,
 		/obj/item/weapon/storage/belt/detective,
 		/obj/item/weapon/storage/box/evidence,
@@ -283,10 +312,14 @@
 		/obj/item/weapon/storage/briefcase/crimekit,
 		/obj/item/device/taperecorder,
 		/obj/item/weapon/storage/bag/detective,
+<<<<<<< HEAD
 		/obj/item/device/tape/random = 3,
 		/obj/item/device/retail_scanner/security,	//CHOMPStation addition
 		/obj/item/clothing/glasses/hud/security		//CHOMPStation addition
 		)
+=======
+		/obj/item/device/tape/random = 3)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/structure/closet/secure_closet/injection
 	name = "lethal injections locker"

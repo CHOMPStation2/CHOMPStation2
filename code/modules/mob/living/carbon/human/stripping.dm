@@ -59,12 +59,15 @@
 	var/obj/item/held = user.get_active_hand()
 	if(!istype(held) || is_robot_module(held))
 		stripping = TRUE
+<<<<<<< HEAD
 		//CHOMPEdit Start - Let borg grippers put stuff on.
 		if(is_robot_module(held) && istype(held, /obj/item/weapon/gripper))
 			var/obj/item/weapon/gripper/G = held
 			if(istype(G.wrapped))
 				stripping = FALSE
 		//CHOMPEdit End
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	else
 		var/obj/item/weapon/holder/holder = held
 		if(istype(holder) && src == holder.held_mob)
@@ -73,7 +76,11 @@
 			var/obj/item/weapon/grab/grab = held
 			if(istype(grab) && grab.affecting == src)
 				stripping = TRUE
+<<<<<<< HEAD
 
+=======
+		
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(stripping)
 		if(!istype(target_slot))  // They aren't holding anything valid and there's nothing to remove, why are we even here?
 			return
@@ -81,11 +88,16 @@
 			to_chat(user, "<span class='warning'>You cannot remove \the [src]'s [target_slot.name].</span>")
 			return
 		visible_message("<span class='danger'>\The [user] is trying to remove \the [src]'s [target_slot.name]!</span>")
+<<<<<<< HEAD
 	else if(!istype(held, /obj/item/weapon/gripper)) //CHOMPEdit - Let borg grippers put stuff on.
+=======
+	else
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		if(slot_to_strip == slot_wear_mask && istype(held, /obj/item/weapon/grenade))
 			visible_message("<span class='danger'>\The [user] is trying to put \a [held] in \the [src]'s mouth!</span>")
 		else
 			visible_message("<span class='danger'>\The [user] is trying to put \a [held] on \the [src]!</span>")
+<<<<<<< HEAD
 	//CHOMPEdit Start - Let borg grippers put stuff on.
 	else
 		var/obj/item/weapon/gripper/G = held
@@ -94,6 +106,8 @@
 		else
 			visible_message("<span class='danger'>\The [user] is trying to put \a [G.wrapped] on \the [src]!</span>")
 	//CHOMPEdit End
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	if(!do_after(user,HUMAN_STRIP_DELAY,src))
 		return
@@ -106,6 +120,7 @@
 			to_chat(user, "<span class='warning'>You can't put someone on themselves! Stop trying to break reality!</span>")
 			return
 
+<<<<<<< HEAD
 	if(stripping)
 		add_attack_logs(user,src,"Removed equipment from slot [target_slot]")
 		unEquip(target_slot)
@@ -117,6 +132,12 @@
 			G.drop_item_nm()
 			equip_to_slot_if_possible(wrapped, text2num(slot_to_strip), 0, 1, 1)
 	//CHOMPEdit End
+=======
+
+	if(stripping)
+		add_attack_logs(user,src,"Removed equipment from slot [target_slot]")
+		unEquip(target_slot)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	else if(user.unEquip(held))
 		equip_to_slot_if_possible(held, text2num(slot_to_strip), 0, 1, 1)
 		if(held.loc != src)

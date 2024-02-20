@@ -6,8 +6,13 @@
 	step_in = 1
 	dir_in = 1 //Facing North.
 	step_energy_drain = 3
+<<<<<<< HEAD
 	health = 250		//God this is low  //Chompedit, increased it a bit.
 	maxhealth = 250		//Don't forget to update the /old variant if  you change this number.  //Chompedit, increased health.
+=======
+	health = 200		//God this is low
+	maxhealth = 200		//Don't forget to update the /old variant if  you change this number.
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	deflect_chance = 30
 	max_temperature = 25000
 	infra_luminosity = 3
@@ -18,6 +23,7 @@
 	force = 15
 	max_equip = 4
 
+<<<<<<< HEAD
 //Chompedit start
 	max_hull_equip = 2  
 	max_weapon_equip = 2
@@ -29,13 +35,29 @@
 
 	starting_components = list(
 		/obj/item/mecha_parts/component/hull,  //Chompedit, normal hull
+=======
+	max_hull_equip = 3
+	max_weapon_equip = 3
+	max_utility_equip = 3
+	max_universal_equip = 3
+	max_special_equip = 4
+
+	encumbrance_gap = 2
+
+	starting_components = list(
+		/obj/item/mecha_parts/component/hull/durable,
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		/obj/item/mecha_parts/component/actuator,
 		/obj/item/mecha_parts/component/armor/alien,
 		/obj/item/mecha_parts/component/gas,
 		/obj/item/mecha_parts/component/electrical
 		)
 
+<<<<<<< HEAD
 	cloak_possible = FALSE  //Chompedit Cloaking is too much for something like this, and is moderately useless anyway.
+=======
+	cloak_possible = TRUE
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	phasing_possible = TRUE
 	switch_dmg_type_possible = TRUE
 	var/list/inherent_damage_absorption = list("brute"=0.7,"fire"=0.7,"bullet"=0.7,"laser"=0.7,"energy"=0.7,"bomb"=0.7)
@@ -100,6 +122,7 @@
 	internal_damage_threshold = 25
 	force = 20
 	phasing_energy_drain = 300
+<<<<<<< HEAD
 //Chompedit start
 	max_hull_equip = 2
 	max_weapon_equip = 3
@@ -110,6 +133,18 @@
 	phasing_possible = TRUE
 	switch_dmg_type_possible = TRUE
 	cloak_possible = TRUE  //Chompedit Allows Janus to cloak.
+=======
+
+	max_hull_equip = 2
+	max_weapon_equip = 1
+	max_utility_equip = 2
+	max_universal_equip = 2
+	max_special_equip = 2
+
+	phasing_possible = TRUE
+	switch_dmg_type_possible = TRUE
+	cloak_possible = FALSE
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/mecha/combat/phazon/janus/take_damage(amount, type="brute")
 	..()

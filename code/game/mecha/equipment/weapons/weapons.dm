@@ -65,9 +65,12 @@
 		projectiles = projectiles_per_shot
 //	set_ready_state(FALSE)
 
+<<<<<<< HEAD
 //CHOMPedit, redundant code removed. Fixes weapon lock on mob kill.
 	add_attack_logs(chassis.occupant,target, "Fired exosuit weapon [src.name] (MANUAL)")
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	do_after_cooldown()
 
 	return
@@ -100,4 +103,8 @@
 		var/mob/living/carbon/human/H = user
 		if(H.species)
 			P.accuracy += H.species.gun_accuracy_mod
+<<<<<<< HEAD
 			P.dispersion = max(P.dispersion + H.species.gun_accuracy_dispersion_mod, 0)
+=======
+			P.dispersion = max(P.dispersion + H.species.gun_accuracy_dispersion_mod, 0)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

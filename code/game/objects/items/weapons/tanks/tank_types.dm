@@ -53,7 +53,11 @@
  */
 /obj/item/weapon/tank/air
 	name = "air tank"
+<<<<<<< HEAD
 	desc = "Mixed. Shaken, not stirred."		// CHOMP EDIT Haha funny? idk I like this description. 
+=======
+	desc = "Mixed anyone?"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	icon_state = "oxygen"
 
 /obj/item/weapon/tank/air/examine(mob/user)
@@ -96,7 +100,11 @@
 	name = "phoron tank"
 	desc = "Contains dangerous phoron. Do not inhale. Warning: extremely flammable."
 	icon_state = "phoron_vox"
+<<<<<<< HEAD
 	gauge_icon = "indicator_bigtank"		// CHOMP EDIT fixes indicator to ensure there's never a buggy outcome 
+=======
+	gauge_icon = null
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	distribute_pressure = ONE_ATMOSPHERE*O2STANDARD
 	slot_flags = SLOT_BACK	//these ones have straps!
 
@@ -121,7 +129,11 @@
 /obj/item/weapon/tank/emergency
 	name = "emergency tank"
 	icon_state = "emergency"
+<<<<<<< HEAD
 	gauge_icon = "indicator_smalltank"		// CHOMP EDIT fixes indicator to ensure there's never a buggy outcome
+=======
+	gauge_icon = "indicator_emergency"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	gauge_cap = 4
 	slot_flags = SLOT_BELT
 	w_class = ITEMSIZE_SMALL
@@ -133,7 +145,11 @@
 	name = "emergency oxygen tank"
 	desc = "Used for emergencies. Contains very little oxygen, so try to conserve it until you actually need it."
 	icon_state = "emergency"
+<<<<<<< HEAD
 	gauge_icon = "indicator_smalltank"		// CHOMP EDIT fixes indicator to ensure there's never a buggy outcome
+=======
+	gauge_icon = "indicator_emergency"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/item/weapon/tank/emergency/oxygen/Initialize()
 	. = ..()
@@ -153,15 +169,25 @@
 /obj/item/weapon/tank/emergency/oxygen/double
 	name = "double emergency oxygen tank"
 	icon_state = "emergency_double"
+<<<<<<< HEAD
 	gauge_icon = "indicator_double"			// CHOMP EDIT proper gauge icon
 	volume = 12 					// CHOMP EDIT Double Expanded
+=======
+	gauge_icon = "indicator_emergency_double"
+	volume = 10
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/item/weapon/tank/stasis/oxygen // Stasis bags need to have initial pressure within safe bounds for human atmospheric pressure (NOT breath pressure)
 	name = "stasis oxygen tank"
 	desc = "Oxygen tank included in most stasis bag designs."
+<<<<<<< HEAD
 	icon = 'icons/obj/tank_ch.dmi'			// CHOMP ADD Adds a unique icon to the oxygen tank in stasis bags.
 	icon_state = "stasis_oxygen"			// CHOMP ADD
 	gauge_icon = "indicator_stasis"			// CHOMP ADD
+=======
+	icon_state = "emergency_double"
+	gauge_icon = "indicator_emergency_double"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	volume = 10
 
 /obj/item/weapon/tank/stasis/oxygen/Initialize()
@@ -170,9 +196,15 @@
 
 /obj/item/weapon/tank/emergency/nitrogen
 	name = "emergency nitrogen tank"
+<<<<<<< HEAD
 	desc = "An emergency nitrogen tank."			// CHOMP EDIT They get their own :)
 	icon_state = "emergency_nitrogen"				// :)
 	gauge_icon = "indicator_smalltank"				// :)
+=======
+	desc = "An emergency air tank hastily painted red."
+	icon_state = "emergency_nitro"
+	gauge_icon = "indicator_emergency"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/item/weapon/tank/emergency/nitrogen/Initialize()
 	. = ..()
@@ -180,6 +212,7 @@
 
 /obj/item/weapon/tank/emergency/nitrogen/double
 	name = "double emergency nitrogen tank"
+<<<<<<< HEAD
 	icon_state = "emergency_double_vox_old"			// CHOMP EDIT Nitrogen double gets its OWN sprite >:3c
 	gauge_icon = "indicator_double"					// <3
 	volume = 12			// CHOMP EDIT Double Expanded
@@ -189,6 +222,17 @@
 	desc = "An emergency phoron tank."  			// CHOMP EDIT You get a unique sprite!
 	icon_state = "emergency_phoron_vox"				// And you get a unique sprite!
 	gauge_icon = "indicator_smalltank"				// Look under your chairs! You all get unique sprites!
+=======
+	icon_state = "emergency_double_nitrogen"
+	gauge_icon = "indicator_emergency_double"
+	volume = 10
+
+/obj/item/weapon/tank/emergency/phoron
+	name = "emergency phoron tank"
+	desc = "An emergency air tank hastily painted red."
+	icon_state = "emergency_nitro"
+	gauge_icon = "indicator_emergency"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/item/weapon/tank/emergency/phoron/Initialize()
 	. = ..()
@@ -196,8 +240,13 @@
 
 /obj/item/weapon/tank/emergency/phoron/double
 	name = "double emergency phoron tank"
+<<<<<<< HEAD
 	icon_state = "emergency_double_vox"				// CHOMP EDIT Unique sprites. :)
 	gauge_icon = "indicator_double"					// Ensuring unique sprite stuff ig.
+=======
+	icon_state = "emergency_double_nitro"
+	gauge_icon = "indicator_emergency_double"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	volume = 10
 
 /*
@@ -211,7 +260,11 @@
 
 /obj/item/weapon/tank/nitrogen/Initialize()
 	. = ..()
+<<<<<<< HEAD
 	src.air_contents.adjust_gas("nitrogen", (10*ONE_ATMOSPHERE)*volume/(R_IDEAL_GAS_EQUATION*T20C)) //CHOMPedit
+=======
+	src.air_contents.adjust_gas("nitrogen", (3*ONE_ATMOSPHERE)*70/(R_IDEAL_GAS_EQUATION*T20C))
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/item/weapon/tank/nitrogen/examine(mob/user)
 	. = ..()
@@ -222,9 +275,14 @@
 /obj/item/weapon/tank/stasis/nitro_cryo // Synthmorph bags need to have initial pressure within safe bounds for human atmospheric pressure, but low temperature to stop unwanted degredation.
 	name = "stasis cryogenic nitrogen tank"
 	desc = "Cryogenic Nitrogen tank included in most synthmorph bag designs."
+<<<<<<< HEAD
 	icon = 'icons/obj/tank_ch.dmi'		// CHOMP ADD Adds a stasis sprite unique to this icon.
 	icon_state = "stasis_nitrogen"		// CHOMP ADD
 	gauge_icon = "indicator_stasis"		// CHOMP ADD
+=======
+	icon_state = "emergency_double_nitro"
+	gauge_icon = "indicator_emergency_double"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	volume = 10
 
 /obj/item/weapon/tank/stasis/nitro_cryo/Initialize()

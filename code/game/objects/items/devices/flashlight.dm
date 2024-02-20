@@ -347,7 +347,11 @@
 /obj/item/device/flashlight/flare
 	name = "flare"
 	desc = "A red standard-issue flare. There are instructions on the side reading 'pull cord, make light'."
+<<<<<<< HEAD
 	w_class = ITEMSIZE_TINY // CHOMPedit: These can fit in more places.
+=======
+	w_class = ITEMSIZE_SMALL
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	light_range = 8 // Pretty bright.
 	light_power = 0.8
 	light_color = LIGHT_COLOR_FLARE
@@ -415,7 +419,11 @@
 /obj/item/device/flashlight/glowstick
 	name = "green glowstick"
 	desc = "A green military-grade chemical light."
+<<<<<<< HEAD
 	w_class = ITEMSIZE_TINY // CHOMPedit: These can fit in more places.
+=======
+	w_class = ITEMSIZE_SMALL
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	light_system = MOVABLE_LIGHT
 	light_range = 4
 	light_power = 0.9

@@ -38,9 +38,12 @@
 				// If inside the blast radius + world.view - 2
 				if(dist <= round(max_range + world.view - 2, 1))
 					M.playsound_local(epicenter, get_sfx("explosion"), 100, 1, frequency, falloff = 5) // get_sfx() is so that everyone gets the same sound
+<<<<<<< HEAD
 					var/mob/living/mL = M // CHOMPStation Edit: Ear Ringing/Deaf
 					if(isliving(mL)) // CHOMPStation Edit: Fix
 						mL.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 				else if(dist <= far_dist)
 					var/far_volume = CLAMP(far_dist, 30, 50) // Volume is based on explosion size and dist
 					far_volume += (dist <= far_dist * 0.5 ? 50 : 0) // add 50 volume if the mob is pretty close to the explosion
@@ -81,6 +84,7 @@
 			for(var/turf/T in trange(max_range, epicenter))
 				var/dist = sqrt((T.x - x0)**2 + (T.y - y0)**2)
 
+<<<<<<< HEAD
 				if(dist < devastation_range)
 					dist = 1
 				else if(dist < heavy_impact_range)
@@ -89,13 +93,23 @@
 					dist = 3
 				else
 					continue
+=======
+				if(dist < devastation_range)		dist = 1
+				else if(dist < heavy_impact_range)	dist = 2
+				else if(dist < light_impact_range)	dist = 3
+				else								continue
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 				if(!T)
 					T = locate(x0,y0,z0)
 				for(var/atom_movable in T.contents)	//bypass type checking since only atom/movable can be contained by turfs anyway
 					var/atom/movable/AM = atom_movable
+<<<<<<< HEAD
 					if(AM && AM.simulated)
 						AM.ex_act(dist)
+=======
+					if(AM && AM.simulated)	AM.ex_act(dist)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 				T.ex_act(dist)
 

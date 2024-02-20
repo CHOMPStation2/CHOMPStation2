@@ -9,7 +9,10 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 
 // Premade AI shell, for roundstart shells.
 /mob/living/silicon/robot/ai_shell/Initialize()
+<<<<<<< HEAD
 	src.verbs |= /mob/living/silicon/robot/proc/transfer_shell_act //CHOMPEDIT: add sideloader
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	mmi = new /obj/item/device/mmi/inert/ai_remote(src)
 	post_mmi_setup()
 	return ..()
@@ -24,7 +27,10 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 	return
 
 /mob/living/silicon/robot/proc/make_shell()
+<<<<<<< HEAD
 	src.verbs |= /mob/living/silicon/robot/proc/transfer_shell_act //CHOMPEDIT: add sideloader
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	shell = TRUE
 	braintype = "AI Shell"
 	SetName("[modtype] AI Shell [num2text(ident)]")
@@ -36,6 +42,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 	notify_ai(ROBOT_NOTIFICATION_AI_SHELL)
 	update_icon()
 
+<<<<<<< HEAD
 //CHOMPADDITION: Ai shell sideloading
 /mob/living/silicon/robot/proc/transfer_shell_act()
 	set category = "Robot Commands"
@@ -123,6 +130,11 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 	if(!shell)
 		return
 	src.verbs -= /mob/living/silicon/robot/proc/transfer_shell_act //CHOMPEDIT: remove sideloader
+=======
+/mob/living/silicon/robot/proc/revert_shell()
+	if(!shell)
+		return
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	undeploy()
 	shell = FALSE
 	GLOB.available_ai_shells -= src

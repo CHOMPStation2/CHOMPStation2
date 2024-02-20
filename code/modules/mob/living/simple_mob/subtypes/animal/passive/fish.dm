@@ -11,7 +11,11 @@
 	icon = 'icons/mob/fish.dmi'
 	item_state = "fish"
 
+<<<<<<< HEAD
 	catalogue_data = list(/datum/category_item/catalogue/fauna/invasive_fish)
+=======
+	//catalogue_data = list(/datum/category_item/catalogue/fauna/invasive_fish)		 //TODO: write non-sif lore
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	mob_size = MOB_SMALL
 	// So fish are actually underwater.
@@ -325,4 +329,8 @@
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/carpmeat/sif/murkfish
 
 /decl/mob_organ_names/fish
+<<<<<<< HEAD
 	hit_zones = list("head", "body", "dorsal fin", "left pectoral fin", "right pectoral fin", "tail fin")
+=======
+	hit_zones = list("head", "body", "dorsal fin", "left pectoral fin", "right pectoral fin", "tail fin")
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

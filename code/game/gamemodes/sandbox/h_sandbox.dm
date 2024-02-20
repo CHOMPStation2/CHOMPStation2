@@ -87,10 +87,19 @@ mob
 					P.back.hud_layerise()
 					P.internal = P.back
 				if("hsbmetal")
+<<<<<<< HEAD
 					var/obj/fiftyspawner/iron/hsb = new/obj/fiftyspawner/iron
 					hsb.loc = usr.loc
 				if("hsbglass")
 					var/obj/fiftyspawner/glass/hsb = new/obj/fiftyspawner/glass
+=======
+					var/obj/item/stack/sheet/hsb = new/obj/item/stack/sheet/metal
+					hsb.amount = 50
+					hsb.loc = usr.loc
+				if("hsbglass")
+					var/obj/item/stack/sheet/hsb = new/obj/item/stack/sheet/glass
+					hsb.amount = 50
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 					hsb.loc = usr.loc
 				if("hsbairlock")
 					var/obj/machinery/door/hsb = new/obj/machinery/door/airlock

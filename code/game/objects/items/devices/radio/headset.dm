@@ -61,15 +61,24 @@
 	return ..()
 
 /obj/item/device/radio/headset/receive_range(freq, level, aiOverride = 0)
+<<<<<<< HEAD
 	if(!ishuman(src.loc))				//CHOMP Addition, this IF block.
 		return ..(freq, level)		//CHOMP Addition end
 	if (aiOverride)
 		playsound(loc, 'sound/effects/radio_common.ogg', 20, 1, 1, preference = /datum/client_preference/radio_sounds)
+=======
+	if (aiOverride)
+		//playsound(loc, 'sound/effects/radio_common.ogg', 20, 1, 1, preference = /datum/client_preference/radio_sounds)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		return ..(freq, level)
 	if(ishuman(src.loc))
 		var/mob/living/carbon/human/H = src.loc
 		if(H.l_ear == src || H.r_ear == src)
+<<<<<<< HEAD
 			playsound(loc, 'sound/effects/radio_common.ogg', 20, 1, 1, preference = /datum/client_preference/radio_sounds)
+=======
+			//playsound(loc, 'sound/effects/radio_common.ogg', 20, 1, 1, preference = /datum/client_preference/radio_sounds)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			return ..(freq, level)
 	return -1
 

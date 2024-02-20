@@ -52,7 +52,10 @@
 	drop_sound = 'sound/items/drop/gun.ogg'
 	pickup_sound = 'sound/items/pickup/gun.ogg'
 
+<<<<<<< HEAD
 	var/recoil_mode = 1 //0 = no micro recoil, 1 = regular, anything higher than 1 is a multiplier //YAWN Addition, ported from CHOMP
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	var/automatic = 0
 	var/burst = 1
 	var/fire_delay = 6 	//delay after shooting before the gun can be used again
@@ -311,6 +314,7 @@
 	if(!canremove)
 		return
 
+<<<<<<< HEAD
 	//CHOMPEdit start - move these around so that nonhumans can actually click-drag guns at all
 	if (istype(usr.loc,/obj/mecha)) // stops inventory actions in a mech. why?
 		return
@@ -320,6 +324,15 @@
 
 	if (ishuman(usr) || issmall(usr)) //so monkeys can take off their backpacks -- Urist
 	//CHOMPEdit End
+=======
+	if (ishuman(usr) || issmall(usr)) //so monkeys can take off their backpacks -- Urist
+
+		if (istype(usr.loc,/obj/mecha)) // stops inventory actions in a mech. why?
+			return
+
+		if (!( istype(over_object, /obj/screen) ))
+			return ..()
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 		//makes sure that the thing is equipped, so that we can't drag it into our hand from miles away.
 		//there's got to be a better way of doing this.
@@ -440,6 +453,7 @@
 		else
 			set_light(0)
 		//VOREStation Edit End
+<<<<<<< HEAD
 
 	//YAWNEDIT: Recoil knockdown for micros, ported from CHOMPStation
 	if(recoil_mode && iscarbon(user))
@@ -456,6 +470,8 @@
 
 	//YAWNEDIT: Knockdown code end
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	user.hud_used.update_ammo_hud(user, src)
 
 // Similar to the above proc, but does not require a user, which is ideal for things like turrets.
@@ -787,7 +803,11 @@
 	var/datum/firemode/new_mode = firemodes[sel_mode]
 	new_mode.apply_to(src)
 	to_chat(user, "<span class='notice'>\The [src] is now set to [new_mode.name].</span>")
+<<<<<<< HEAD
 	user.hud_used.update_ammo_hud(user, src)
+=======
+	user.hud_used.update_ammo_hud(user, src) // TGMC Ammo HUD
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	return new_mode
 

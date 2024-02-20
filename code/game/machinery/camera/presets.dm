@@ -24,7 +24,10 @@ var/global/list/station_networks = list(
 */
 var/global/list/engineering_networks = list(
 										NETWORK_ENGINE,
+<<<<<<< HEAD
 										NETWORK_SUBSTATIONS, //YAWN ADD: new substations subnet
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 										NETWORK_ENGINEERING,
 										//NETWORK_ENGINEERING_OUTPOST,	//VOREStation Edit: Tether has no Engineering Outpost,
 										NETWORK_ALARM_ATMOS,
@@ -82,9 +85,12 @@ var/global/list/engineering_networks = list(
 /obj/machinery/camera/network/northern_star
 	network = list(NETWORK_NORTHERN_STAR)
 
+<<<<<<< HEAD
 /obj/machinery/camera/network/outside
 	network = list(NETWORK_OUTSIDE)
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/machinery/camera/network/prison
 	network = list(NETWORK_PRISON)
 
@@ -94,20 +100,28 @@ var/global/list/engineering_networks = list(
 /obj/machinery/camera/network/research
 	network = list(NETWORK_RESEARCH)
 
+<<<<<<< HEAD
 /obj/machinery/camera/network/exploration //yw edit
 	network = list(NETWORK_EXPLORATION)
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/machinery/camera/network/research_outpost
 	network = list(NETWORK_RESEARCH_OUTPOST)
 
 /obj/machinery/camera/network/security
 	network = list(NETWORK_SECURITY)
 
+<<<<<<< HEAD
 /obj/machinery/camera/network/substations
 	network = list(NETWORK_SUBSTATIONS)
 
 /obj/machinery/camera/network/telecom
 	network = list(NETWORK_TCOMMS) //yw edit
+=======
+/obj/machinery/camera/network/telecom
+	network = list(NETWORK_TELECOM)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/machinery/camera/network/exploration
 	network = list(NETWORK_EXPLORATION)
@@ -120,6 +134,7 @@ var/global/list/engineering_networks = list(
 	invuln = 1
 	always_visible = TRUE
 
+<<<<<<< HEAD
 // CHOMPEdit Begin - Bodycams
 /obj/machinery/camera/network/bodycamera
 	network = list(NETWORK_BODYCAM)
@@ -127,6 +142,8 @@ var/global/list/engineering_networks = list(
 	always_visible = TRUE
 // CHOMPEdit End
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 // EMP
 
 /obj/machinery/camera/emp_proof/New()
@@ -166,12 +183,15 @@ var/global/list/engineering_networks = list(
 /obj/machinery/camera/motion/security
 	network = list(NETWORK_SECURITY)
 
+<<<<<<< HEAD
 /obj/machinery/camera/motion/command
 	network = list(NETWORK_COMMAND)
 
 /obj/machinery/camera/motion/telecom
 	network = list(NETWORK_TCOMMS) //yw edit
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 // ALL UPGRADES
 
 

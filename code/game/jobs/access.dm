@@ -106,7 +106,11 @@
 	if(!priv_all_access)
 		priv_all_access = get_access_ids()
 
+<<<<<<< HEAD
 	return priv_all_access.Copy()
+=======
+	return priv_all_access
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /var/list/priv_station_access
 /proc/get_all_station_access()
@@ -114,7 +118,11 @@
 	if(!priv_station_access)
 		priv_station_access = get_access_ids(ACCESS_TYPE_STATION)
 
+<<<<<<< HEAD
 	return priv_station_access.Copy()
+=======
+	return priv_station_access
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /var/list/priv_centcom_access
 /proc/get_all_centcom_access()
@@ -122,7 +130,11 @@
 	if(!priv_centcom_access)
 		priv_centcom_access = get_access_ids(ACCESS_TYPE_CENTCOM)
 
+<<<<<<< HEAD
 	return priv_centcom_access.Copy()
+=======
+	return priv_centcom_access
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /var/list/priv_syndicate_access
 /proc/get_all_syndicate_access()
@@ -130,7 +142,11 @@
 	if(!priv_syndicate_access)
 		priv_syndicate_access = get_access_ids(ACCESS_TYPE_SYNDICATE)
 
+<<<<<<< HEAD
 	return priv_syndicate_access.Copy()
+=======
+	return priv_syndicate_access
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /var/list/priv_private_access
 /proc/get_all_private_access()
@@ -138,7 +154,11 @@
 	if(!priv_private_access)
 		priv_private_access = get_access_ids(ACCESS_TYPE_PRIVATE)
 
+<<<<<<< HEAD
 	return priv_syndicate_access.Copy()
+=======
+	return priv_syndicate_access
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /var/list/priv_region_access
 /proc/get_region_accesses(var/code)
@@ -152,8 +172,12 @@
 				priv_region_access["[A.region]"] = list()
 			priv_region_access["[A.region]"] += A.id
 
+<<<<<<< HEAD
 	var/list/L = priv_region_access["[code]"]
 	return L.Copy()
+=======
+	return priv_region_access["[code]"]
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /proc/get_region_accesses_name(var/code)
 	switch(code)

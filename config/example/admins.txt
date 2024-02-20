@@ -5,4 +5,8 @@
 # Ranks can be anything defined in admin_ranks.txt           ~Carn   #
 ######################################################################
 
+<<<<<<< HEAD
 # not_a_user - Admin
+=======
+# not_a_user - Admin
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

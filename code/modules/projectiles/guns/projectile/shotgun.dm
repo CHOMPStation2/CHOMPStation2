@@ -4,6 +4,7 @@
 
 /obj/item/weapon/gun/projectile/shotgun/pump
 	name = "shotgun"
+<<<<<<< HEAD
 //	desc = "The mass-produced MarsTech Meteor 29 shotgun is a favourite of police and security forces on many worlds. Uses 12g rounds." //CHOMP Disable
 	desc = "I used the shotgun. You know why? Cause the shotgun doesn't miss, and unlike the shitty hybrid taser it stops \
 	a criminal in their tracks in two hits. Bang, bang, and they're fucking done. I use four shots just to make damn sure. \
@@ -13,12 +14,19 @@
 	with the disabler shots, which take half a clip just to bring someone down, or with the tazer bolts which are slow as balls, \
 	impossible to aim and do about next to jack shit, fuck all. The shotgun is the superior law enforcement weapon. Because it stops crime. \
 	And it stops crime by reducing the number of criminals roaming the fucking halls." //CHOMP Add
+=======
+	desc = "The mass-produced MarsTech Meteor 29 shotgun is a favourite of police and security forces on many worlds. Uses 12g rounds."
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	description_fluff = "The leading civilian-sector high-quality small arms brand of Hephaestus Industries, \
 	MarsTech has been the provider of choice for law enforcement and security forces for over 300 years."
 	icon_state = "shotgun"
 	item_state = "shotgun"
 	max_shells = 4
+<<<<<<< HEAD
 	w_class = ITEMSIZE_HUGE //CHOMP Edit.
+=======
+	w_class = ITEMSIZE_LARGE
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	force = 10
 	slot_flags = SLOT_BACK
 	caliber = "12g"
@@ -121,7 +129,11 @@
 	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 1)
 	ammo_type = /obj/item/ammo_casing/a12g/beanbag
 
+<<<<<<< HEAD
 //	var/unique_reskin CHOMP Remove
+=======
+	var/unique_reskin
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	var/sawn_off = FALSE
 
 	burst_delay = 0
@@ -140,7 +152,11 @@
 
 /obj/item/weapon/gun/projectile/shotgun/doublebarrel/unload_ammo(user, allow_dump)
 	..(user, allow_dump=1)
+<<<<<<< HEAD
 /*CHOMP Remove start
+=======
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/item/weapon/gun/projectile/shotgun/doublebarrel/verb/rename_gun()
 	set name = "Name Gun"
 	set category = "Object"
@@ -178,11 +194,17 @@
 		unique_reskin = options[choice]
 		to_chat(M, "Your gun is now sprited as [choice]. Say hello to your new friend.")
 		return 1
+<<<<<<< HEAD
 */ //CHOMP Remove end
 //this is largely hacky and bad :(	-Pete //less hacky and bad now :) -Ghost
 /obj/item/weapon/gun/projectile/shotgun/doublebarrel/attackby(var/obj/item/A as obj, mob/user as mob)
 	if(istype(A, /obj/item/ammo_casing/a12g) || istype(A, /obj/item/ammo_magazine)) //CHOMPEdit: Trying to make sawn offs reload able
 		..()
+=======
+
+//this is largely hacky and bad :(	-Pete //less hacky and bad now :) -Ghost
+/obj/item/weapon/gun/projectile/shotgun/doublebarrel/attackby(var/obj/item/A as obj, mob/user as mob)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(sawn_off)
 		to_chat(user, "<span class='warning'>The [src] is already shortened!</span>")
 		return
@@ -199,10 +221,17 @@
 		if(do_after(user, 30)) // SHIT IS STEALTHY EYYYYY
 			if(sawn_off)
 				return
+<<<<<<< HEAD
 //			if(unique_reskin) //CHOMP Remove
 //				icon_state = "[unique_reskin]_sawn" //CHOMP Remove
 //			else //CHOMP Remove
 //				icon_state = "dshotgun_sawn" //CHOMP Remove
+=======
+			if(unique_reskin)
+				icon_state = "[unique_reskin]_sawn"
+			else
+				icon_state = "dshotgun_sawn"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			item_state = "sawnshotgun"
 			w_class = ITEMSIZE_NORMAL
 			force = 5

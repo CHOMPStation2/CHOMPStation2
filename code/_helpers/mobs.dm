@@ -110,7 +110,11 @@ Proc for attack log creation, because really why not
 6 is additional information, anything that needs to be added
 */
 
+<<<<<<< HEAD
 /proc/add_attack_logs(mob/user, mob/target, what_done, var/admin_notify = TRUE, var/use_async = TRUE) //CHOMPEdit
+=======
+/proc/add_attack_logs(mob/user, mob/target, what_done, var/admin_notify = TRUE)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(islist(target)) //Multi-victim adding
 		var/list/targets = target
 		for(var/mob/M in targets)
@@ -120,6 +124,7 @@ Proc for attack log creation, because really why not
 	var/user_str = key_name(user)
 	var/target_str = key_name(target)
 
+<<<<<<< HEAD
 	if(ismob(user)) //CHOMPEdit Begin
 		if(SSdbcore.Connect())
 			user.attack_log += text("\[[time_stamp()]\] [span_red("Attacked [target_str]: [what_done]")]")
@@ -139,6 +144,12 @@ Proc for attack log creation, because really why not
 		//if(SSdbcore.Connect())
 		//	rustg_sql_query_async(SSdbcore.connection, "INSERT INTO erro_attacklog (id, time, ckey, mob, message) VALUES (null, NOW(), :t_ckey, :t_mob, :t_content)", json_encode(list("t_ckey" = target.ckey, "t_mob" = target.real_name, "t_content" = "<font color='orange'>Attacked by [user_str]: [what_done]</font>")))
 	//CHOMPEdit End
+=======
+	if(ismob(user))
+		user.attack_log += text("\[[time_stamp()]\] [span_red("Attacked [target_str]: [what_done]")]")
+	if(ismob(target))
+		target.attack_log += text("\[[time_stamp()]\] [span_orange("Attacked by [user_str]: [what_done]")]")
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	log_attack(user_str,target_str,what_done)
 	if(admin_notify)
 		msg_admin_attack("[key_name_admin(user)] vs [target_str]: [what_done]")
@@ -306,6 +317,7 @@ Proc for attack log creation, because really why not
 	if(progbar)
 		qdel(progbar)
 
+<<<<<<< HEAD
 /atom/proc/living_mobs(var/range = world.view, var/count_held = FALSE) //CHOMPEdit Start
 	var/list/viewers = oviewers(src,range)
 	if(count_held)
@@ -317,6 +329,14 @@ Proc for attack log creation, because really why not
 			for(var/obj/item/weapon/holder/H in L.contents)
 				if(istype(H.held_mob, /mob/living))
 					living += H.held_mob //CHOMPEdit End
+=======
+/atom/proc/living_mobs(var/range = world.view)
+	var/list/viewers = oviewers(src,range)
+	var/list/living = list()
+	for(var/mob/living/L in viewers)
+		living += L
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	return living
 
 /atom/proc/human_mobs(var/range = world.view)

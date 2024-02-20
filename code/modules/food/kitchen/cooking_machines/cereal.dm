@@ -16,12 +16,21 @@
 
 /obj/machinery/appliance/mixer/cereal/Initialize()
 	. = ..()
+<<<<<<< HEAD
 
 	cerealmaker_loop = new(list(src), FALSE)
 
 /obj/machinery/appliance/mixer/cereal/Destroy()
 	. = ..()
 
+=======
+	
+	cerealmaker_loop = new(list(src), FALSE)
+	
+/obj/machinery/appliance/mixer/cereal/Destroy()
+	. = ..()
+	
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	QDEL_NULL(cerealmaker_loop)
 
 /*
@@ -83,6 +92,7 @@
 
 	result.color = result.filling_color
 	for (var/i in images)
+<<<<<<< HEAD
 		result.overlays += images[i]
 
 
@@ -94,3 +104,6 @@
 	if(default_part_replacement(user, O))
 		return
 	..()
+=======
+		result.add_overlay(images[i])
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

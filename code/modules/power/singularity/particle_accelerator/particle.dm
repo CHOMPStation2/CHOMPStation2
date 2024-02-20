@@ -99,6 +99,11 @@
 	if(movement_range <= 0)
 		qdel(src)
 	else
+<<<<<<< HEAD
 		//sleep(lag) //ChompEDIT
 		//move(lag) //ChompEDIT
 		addtimer(CALLBACK(src, PROC_REF(move), lag), lag) //ChompEDIT
+=======
+		sleep(lag)
+		move(lag)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

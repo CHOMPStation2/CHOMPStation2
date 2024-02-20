@@ -37,9 +37,24 @@
 *.zip binary
 
 ## Merger hooks, run tools/hooks/install.bat or install.sh to set up
+<<<<<<< HEAD
 *.dmm text eol=lf merge=dmm
 *.dmi binary merge=dmi
 
 ## Force tab indents on dm files
 *.dm whitespace=indent-with-non-tab
 
+=======
+#*.dmm text eol=lf merge=dmm
+#*.dmi binary merge=dmi
+
+# old dmi icon merger hook
+# needs additional setup, see tools/dmitool/merging.txt
+*.dmi merge=merge-dmi
+
+## Force tab indents on dm files
+*.dm whitespace=indent-with-non-tab
+
+# force changelog merging to use union
+html/changelog.html merge=union
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

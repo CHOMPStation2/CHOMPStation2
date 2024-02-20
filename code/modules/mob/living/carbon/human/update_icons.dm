@@ -59,6 +59,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 
 // These are used as the layers for the icons, as well as indexes in a list that holds onto them.
 // Technically the layers used are all -100+layer to make them FLOAT_LAYER overlays.
+<<<<<<< HEAD
 //CHOMPEDIT: edit the file human/update_icons.dm in the modular_chomp folder as well, if you update these (and clothing/clothing.dm line 789, the hardcoded layer there in /obj/item/clothing/suit/make_worn_icon)
 //Human Overlays Indexes/////////
 #define MUTATIONS_LAYER			1		//Mutations like fat, and lasereyes
@@ -108,6 +109,49 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 #define HUMAN_BODY_LAYERS list(MUTATIONS_LAYER, TAIL_LOWER_LAYER, WING_LOWER_LAYER, BODYPARTS_LAYER, SKIN_LAYER, BLOOD_LAYER, MOB_DAM_LAYER, TAIL_UPPER_LAYER, HAIR_LAYER, HAIR_ACCESSORY_LAYER, EYES_LAYER, WING_LAYER, VORE_BELLY_LAYER, VORE_TAIL_LAYER, TAIL_UPPER_LAYER_ALT)
 #define HUMAN_OTHER_LAYERS list(MODIFIER_EFFECTS_LAYER, FIRE_LAYER, MOB_WATER_LAYER, TARGETED_LAYER)
 
+=======
+//Human Overlays Indexes/////////
+#define MUTATIONS_LAYER			1		//Mutations like fat, and lasereyes
+#define SKIN_LAYER				2		//Skin things added by a call on species
+#define BLOOD_LAYER				3		//Bloodied hands/feet/anything else
+#define MOB_DAM_LAYER			4		//Injury overlay sprites like open wounds
+#define SURGERY_LAYER			5		//Overlays for open surgical sites
+#define UNDERWEAR_LAYER  		6		//Underwear/bras/etc
+#define TAIL_LOWER_LAYER		7		//Tail as viewed from the south
+#define WING_LOWER_LAYER		8		//Wings as viewed from the south
+#define SHOES_LAYER_ALT			9		//Shoe-slot item (when set to be under uniform via verb)
+#define UNIFORM_LAYER			10		//Uniform-slot item
+#define ID_LAYER				11		//ID-slot item
+#define SHOES_LAYER				12		//Shoe-slot item
+#define GLOVES_LAYER			13		//Glove-slot item
+#define BELT_LAYER				14		//Belt-slot item
+#define SUIT_LAYER				15		//Suit-slot item
+#define TAIL_UPPER_LAYER		16		//Some species have tails to render (As viewed from the N, E, or W)
+#define GLASSES_LAYER			17		//Eye-slot item
+#define BELT_LAYER_ALT			18		//Belt-slot item (when set to be above suit via verb)
+#define SUIT_STORE_LAYER		19		//Suit storage-slot item
+#define BACK_LAYER				20		//Back-slot item
+#define HAIR_LAYER				21		//The human's hair
+#define HAIR_ACCESSORY_LAYER	22		//VOREStation edit. Simply move this up a number if things are added.
+#define EARS_LAYER				23		//Both ear-slot items (combined image)
+#define EYES_LAYER				24		//Mob's eyes (used for glowing eyes)
+#define FACEMASK_LAYER			25		//Mask-slot item
+#define GLASSES_LAYER_ALT		26		//So some glasses can appear on top of hair and things
+#define HEAD_LAYER				27		//Head-slot item
+#define HANDCUFF_LAYER			28		//Handcuffs, if the human is handcuffed, in a secret inv slot
+#define LEGCUFF_LAYER			29		//Same as handcuffs, for legcuffs
+#define L_HAND_LAYER			30		//Left-hand item
+#define R_HAND_LAYER			31		//Right-hand item
+#define WING_LAYER				32		//Wings or protrusions over the suit.
+#define TAIL_UPPER_LAYER_ALT	33		//Modified tail-sprite layer. Tend to be larger.
+#define MODIFIER_EFFECTS_LAYER	34		//Effects drawn by modifiers
+#define FIRE_LAYER				35		//'Mob on fire' overlay layer
+#define MOB_WATER_LAYER			36		//'Mob submerged' overlay layer
+#define TARGETED_LAYER			37		//'Aimed at' overlay layer
+#define TOTAL_LAYERS			37		//VOREStation edit. <---- KEEP THIS UPDATED, should always equal the highest number here, used to initialize a list.
+//////////////////////////////////
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /mob/living/carbon/human
 	var/list/overlays_standing[TOTAL_LAYERS]
 	var/previous_damage_appearance // store what the body last looked like, so we only have to update it if something changed
@@ -151,7 +195,10 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	appearance_flags |= PIXEL_SCALE
 	if(fuzzy)
 		appearance_flags &= ~PIXEL_SCALE
+<<<<<<< HEAD
 		center_offset = 0 //CHOMPEdit
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	//VOREStation Edit End
 
 	// Regular stuff again.
@@ -163,6 +210,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		anim_time = 1 //Thud
 
 	if(lying && !species.prone_icon) //Only rotate them if we're not drawing a specific icon for being prone.
+<<<<<<< HEAD
 		// CHOMPEdit Start Loafy Time
 		if(tail_style?.can_loaf && resting) // Only call these if we're resting?
 			update_tail_showing()
@@ -179,6 +227,23 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 				M.Translate((1 / desired_scale_x * 4) - (desired_scale_x * cent_offset), 0)
 				M.Turn(90)
 		// CHOMPEdit End
+=======
+		if(tail_style?.can_loaf && resting) // Only call these if we're resting?
+			update_tail_showing()
+			M.Scale(desired_scale_x, desired_scale_y)
+		else
+			var/randn = rand(1, 2)
+			if(randn <= 1) // randomly choose a rotation
+				M.Turn(-90)
+			else
+				M.Turn(90)
+			if(species.icon_height == 64)
+				M.Translate(13,-22)
+			else
+				M.Translate(1,-6)
+			M.Scale(desired_scale_y, desired_scale_x)
+		M.Translate(cent_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1))
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		layer = MOB_LAYER -0.01 // Fix for a byond bug where turf entry order no longer matters
 	else
 		M.Scale(desired_scale_x, desired_scale_y)//VOREStation Edit
@@ -244,8 +309,11 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	if(QDESTROYING(src))
 		return
 
+<<<<<<< HEAD
 	remove_layer(BODYPARTS_LAYER)
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	var/husk_color_mod = rgb(96,88,80)
 	var/hulk_color_mod = rgb(48,224,40)
 
@@ -340,12 +408,15 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 				default_pixel_x = tail_style.mob_offset_x
 				default_pixel_y = tail_style.mob_offset_y
 
+<<<<<<< HEAD
 			//ChompEDIT START
 			//icon_key addition for digitigrade switch
 			if(digitigrade && (part.organ_tag == BP_R_LEG  || part.organ_tag == BP_L_LEG || part.organ_tag == BP_R_FOOT || part.organ_tag == BP_L_FOOT))
 				icon_key += "_digi"
 			//ChompEDIT END
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	icon_key = "[icon_key][husk ? 1 : 0][fat ? 1 : 0][hulk ? 1 : 0][skeleton ? 1 : 0]"
 	var/icon/base_icon
 	if(human_icon_cache[icon_key])
@@ -434,6 +505,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 
 	//END CACHED ICON GENERATION.
 	stand_icon.Blend(base_icon,ICON_OVERLAY)
+<<<<<<< HEAD
 
 	var/image/body = image(stand_icon)
 	if (body)
@@ -441,13 +513,18 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		overlays_standing[BODYPARTS_LAYER] = body
 		apply_layer(BODYPARTS_LAYER)
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	icon = stand_icon
 
 	//tail
 	update_tail_showing()
 	update_wing_showing()
+<<<<<<< HEAD
 	update_vore_belly_sprite()
 	update_vore_tail_sprite()
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /mob/living/carbon/human/proc/update_skin()
 	if(QDESTROYING(src))
@@ -479,7 +556,11 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 
 	//Bloody feet
 	if(feet_blood_DNA)
+<<<<<<< HEAD
 		var/image/bloodsies = image(icon = digitigrade ? 'icons/mob/human_races/masks/blood_digitigrade.dmi' : species.get_blood_mask(src), icon_state = "shoeblood", layer = BODY_LAYER+BLOOD_LAYER) //CHOMPEdit: digitigrade feeties
+=======
+		var/image/bloodsies = image(icon = species.get_blood_mask(src), icon_state = "shoeblood", layer = BODY_LAYER+BLOOD_LAYER)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		bloodsies.color = feet_blood_color
 		both.add_overlay(bloodsies)
 
@@ -500,7 +581,11 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 			if(hide_underwear[category])
 				continue
 			var/datum/category_item/underwear/UWI = all_underwear[category]
+<<<<<<< HEAD
 			var/image/wear = UWI.generate_image(all_underwear_metadata[category], layer = BODY_LAYER+UNDERWEAR_LAYER, digitigrade = digitigrade) //CHOMPEdit
+=======
+			var/image/wear = UWI.generate_image(all_underwear_metadata[category], layer = BODY_LAYER+UNDERWEAR_LAYER)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			overlays_standing[UNDERWEAR_LAYER] += wear
 
 		apply_layer(UNDERWEAR_LAYER)
@@ -780,7 +865,11 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	remove_layer(GLASSES_LAYER)
 	remove_layer(GLASSES_LAYER_ALT)
 
+<<<<<<< HEAD
 	if(!glasses || hide_glasses) // CHOMPEdit - Add "|| hide_glasses" for glasses hiding
+=======
+	if(!glasses)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		return //Not wearing glasses, no need to update anything.
 
 	var/glasses_layer = GLASSES_LAYER
@@ -805,6 +894,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	if(!l_ear && !r_ear)
 		return //Why bother, if no ear sprites
 
+<<<<<<< HEAD
 	if(hide_headset) //CHOMPEdit Start
 		if(l_ear && istype(l_ear, /obj/item/device/radio/headset)) //No need to generate blank images if only headsets are present.
 			if(!r_ear || istype(r_ear, /obj/item/device/radio/headset))
@@ -813,10 +903,13 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 			if(!l_ear || istype(l_ear, /obj/item/device/radio/headset))
 				return
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	// Blank image upon which to layer left & right overlays.
 	var/image/both = image(icon = 'icons/effects/effects.dmi', icon_state = "nothing", layer = BODY_LAYER+EARS_LAYER)
 
 	if(l_ear)
+<<<<<<< HEAD
 		if(istype(l_ear, /obj/item/device/radio/headset))
 			if(!hide_headset)
 				var/image/standing = l_ear.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_l_ear_str, default_icon = INV_EARS_DEF_ICON, default_layer = EARS_LAYER)
@@ -833,6 +926,14 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		else
 			var/image/standing = r_ear.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_r_ear_str, default_icon = INV_EARS_DEF_ICON, default_layer = EARS_LAYER)
 			both.add_overlay(standing) //CHOMPEdit End
+=======
+		var/image/standing = l_ear.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_l_ear_str, default_icon = INV_EARS_DEF_ICON, default_layer = EARS_LAYER)
+		both.add_overlay(standing)
+
+	if(r_ear)
+		var/image/standing = r_ear.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_r_ear_str, default_icon = INV_EARS_DEF_ICON, default_layer = EARS_LAYER)
+		both.add_overlay(standing)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	overlays_standing[EARS_LAYER] = both
 	apply_layer(EARS_LAYER)
@@ -1072,7 +1173,11 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	apply_layer(L_HAND_LAYER)
 
 /mob/living/carbon/human/proc/get_tail_layer()
+<<<<<<< HEAD
 	var/list/lower_layer_dirs = list(SOUTH, EAST, WEST) //ChompEDIT - Tail below clothing on side views too.
+=======
+	var/list/lower_layer_dirs = list(SOUTH)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(tail_style)
 		lower_layer_dirs = tail_style.lower_layer_dirs.Copy()
 
@@ -1439,7 +1544,10 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		update_wing_showing()
 
 //Human Overlays Indexes/////////
+<<<<<<< HEAD
 /* CHOMPEdit - why are these undefined??
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 #undef MUTATIONS_LAYER
 #undef SKIN_LAYER
 #undef MOB_DAM_LAYER
@@ -1467,10 +1575,16 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 #undef LEGCUFF_LAYER
 #undef L_HAND_LAYER
 #undef R_HAND_LAYER
+<<<<<<< HEAD
 #undef VORE_BELLY_LAYER
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 #undef MODIFIER_EFFECTS_LAYER
 #undef FIRE_LAYER
 #undef WATER_LAYER
 #undef TARGETED_LAYER
 #undef TOTAL_LAYERS
+<<<<<<< HEAD
 */
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

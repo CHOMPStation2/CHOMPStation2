@@ -264,7 +264,11 @@
 	active_force = 30
 	active_armourpen = 50
 	active_throwforce = 20
+<<<<<<< HEAD
 	active_w_class = ITEMSIZE_HUGE //CHOMP Edit
+=======
+	active_w_class = ITEMSIZE_LARGE
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	force = 3
 	throwforce = 5
 	throw_speed = 1
@@ -428,7 +432,11 @@
 	throwforce = 1  //Throwing or dropping the item deletes it.
 	throw_speed = 1
 	throw_range = 1
+<<<<<<< HEAD
 	w_class = ITEMSIZE_HUGE//So you can't hide it in your pocket or some such. //CHOMP Edit
+=======
+	w_class = ITEMSIZE_LARGE//So you can't hide it in your pocket or some such.
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	flags = NOBLOODY
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 	var/mob/living/creator

@@ -115,6 +115,7 @@
 	mid_length = 6
 	end_sound = 'sound/machines/vehicle/engine_end.ogg'
 	volume = 20
+<<<<<<< HEAD
 
 // CHOMPAdd: Fridges!
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -150,3 +151,5 @@
 	volume_chan = VOLUME_CHANNEL_MACHINERY
 	exclusive = TRUE
 	extra_range = 10
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

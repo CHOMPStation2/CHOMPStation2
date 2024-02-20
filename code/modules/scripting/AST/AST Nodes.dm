@@ -64,16 +64,28 @@ var
 	Class: operator
 	See <Binary Operators> and <Unary Operators> for subtypes.
 */
+<<<<<<< HEAD
 /node/expression/op
+=======
+/node/expression/operator
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	var/node/expression/exp
 	var/tmp/name
 	var/tmp/precedence
 
+<<<<<<< HEAD
 /node/expression/op/New()
 	.=..()
 	if(!src.name) src.name="[src.type]"
 
 /node/expression/op/ToString()
+=======
+/node/expression/operator/New()
+	.=..()
+	if(!src.name) src.name="[src.type]"
+
+/node/expression/operator/ToString()
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	return "operator: [name]"
 
 /*
@@ -125,4 +137,8 @@ var
 	src.value=value
 
 /node/expression/value/reference/ToString()
+<<<<<<< HEAD
 	return "ref: [src.value] ([src.value.type])"
+=======
+	return "ref: [src.value] ([src.value.type])"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

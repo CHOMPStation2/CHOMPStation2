@@ -51,7 +51,11 @@
 		if(F.id == id)
 			LAZYADD(targets,F)
 
+<<<<<<< HEAD
 	for(var/obj/structure/closet/secure_closet/brig/C in GLOB.all_brig_closets)
+=======
+	for(var/obj/structure/closet/secure_closet/brig/C in all_brig_closets)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		if(C.id == id)
 			LAZYADD(targets,C)
 

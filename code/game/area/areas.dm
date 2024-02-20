@@ -455,6 +455,7 @@ var/list/mob/living/forced_ambiance_list = new
 			return
 
 		if(H.m_intent == "run")
+<<<<<<< HEAD
 			H.AdjustStunned(1) // CHOMPedit: No longer a supermassive long stun.
 //			H.AdjustWeakened(6) // CHOMPedit: No longer weakens.
 		else
@@ -464,6 +465,17 @@ var/list/mob/living/forced_ambiance_list = new
 		playsound(mob, "bodyfall", 50, 1)
 
 /area/proc/prison_break(break_lights = TRUE, open_doors = TRUE, open_blast_doors = FALSE) //CHOMP Edit set blast doors to FALSE
+=======
+			H.AdjustStunned(6)
+			H.AdjustWeakened(6)
+		else
+			H.AdjustStunned(3)
+			H.AdjustWeakened(3)
+		to_chat(mob, "<span class='notice'>The sudden appearance of gravity makes you fall to the floor!</span>")
+		playsound(mob, "bodyfall", 50, 1)
+
+/area/proc/prison_break(break_lights = TRUE, open_doors = TRUE, open_blast_doors = TRUE)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	var/obj/machinery/power/apc/theAPC = get_apc()
 	if(theAPC && theAPC.operating)
 		if(break_lights)
@@ -553,4 +565,8 @@ GLOBAL_DATUM(spoiler_obfuscation_image, /image)
 	if(should_obfuscate)
 		add_overlay(GLOB.spoiler_obfuscation_image)
 	else
+<<<<<<< HEAD
 		cut_overlay(GLOB.spoiler_obfuscation_image)
+=======
+		cut_overlay(GLOB.spoiler_obfuscation_image)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

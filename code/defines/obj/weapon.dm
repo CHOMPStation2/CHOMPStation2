@@ -382,7 +382,10 @@
 	desc = "A special mechanical module made to store, sort, and apply standard machine parts."
 	icon = 'icons/obj/storage_vr.dmi'
 	icon_state = "RPED"
+<<<<<<< HEAD
 	item_icons = list(slot_l_hand_str = 'icons/vore/custom_items_left_hand_yw.dmi', slot_r_hand_str = 'icons/vore/custom_items_right_hand_yw.dmi') //YW add - RPED sprite
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	item_state = "RPED"
 	w_class = ITEMSIZE_HUGE
 	can_hold = list(/obj/item/weapon/stock_parts)

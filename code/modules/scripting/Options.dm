@@ -70,6 +70,7 @@ associated values are <nS_Keyword> types of which the <n_Keyword.Parse()> proc w
 	)
 
 	var/list/unary_operators =list(
+<<<<<<< HEAD
 		"!"  = /node/expression/op/unary/LogicalNot,
 		"~"  = /node/expression/op/unary/BitwiseNot,
 		"-"  = /node/expression/op/unary/Minus
@@ -93,8 +94,37 @@ associated values are <nS_Keyword> types of which the <n_Keyword.Parse()> proc w
 		"/"		= /node/expression/op/binary/Divide,
 		"^"		= /node/expression/op/binary/Power,
 		"%"		= /node/expression/op/binary/Modulo)
+=======
+		"!"  = /node/expression/operator/unary/LogicalNot,
+		"~"  = /node/expression/operator/unary/BitwiseNot,
+		"-"  = /node/expression/operator/unary/Minus
+	)
+
+	var/list/binary_operators=list(
+		"=="	= /node/expression/operator/binary/Equal,
+		"!="	= /node/expression/operator/binary/NotEqual,
+		">"		= /node/expression/operator/binary/Greater,
+		"<"		= /node/expression/operator/binary/Less,
+		">="	= /node/expression/operator/binary/GreaterOrEqual,
+		"<="	= /node/expression/operator/binary/LessOrEqual,
+		"&&"	= /node/expression/operator/binary/LogicalAnd,
+		"||"		= /node/expression/operator/binary/LogicalOr,
+		"&"		= /node/expression/operator/binary/BitwiseAnd,
+		"|"		= /node/expression/operator/binary/BitwiseOr,
+		"`"		= /node/expression/operator/binary/BitwiseXor,
+		"+"		= /node/expression/operator/binary/Add,
+		"-"		= /node/expression/operator/binary/Subtract,
+		"*"		= /node/expression/operator/binary/Multiply,
+		"/"		= /node/expression/operator/binary/Divide,
+		"^"		= /node/expression/operator/binary/Power,
+		"%"		= /node/expression/operator/binary/Modulo)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /n_scriptOptions/nS_Options/New()
 	.=..()
 	for(var/O in assign_operators+binary_operators+unary_operators)
+<<<<<<< HEAD
 		if(!symbols.Find(O)) symbols+=O
+=======
+		if(!symbols.Find(O)) symbols+=O
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

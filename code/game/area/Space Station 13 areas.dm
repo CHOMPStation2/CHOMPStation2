@@ -29,7 +29,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	power_light = 0
 	power_equip = 0
 	power_environ = 0
+<<<<<<< HEAD
 	ambience = list('sound/ambience/ambispace.ogg','sound/music/title2.ogg','sound/music/space.ogg','sound/music/main.ogg','sound/music/traitor.ogg','sound/ambience/space/space_serithi.ogg','sound/music/freefallin.mid')
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	base_turf = /turf/space
 	ambience = AMBIENCE_SPACE
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
@@ -184,6 +187,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "red"
 	dynamic_lighting = 0
 
+<<<<<<< HEAD
 /area/shuttle/trade/centcom
 	name = "\improper Trade Shuttle CentCom"
 	icon_state = "shuttlered"
@@ -192,6 +196,8 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Cryogaia Commerce Pad"
 	icon_state = "shuttlered"
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /area/shuttle/thunderdome
 	name = "honk"
 
@@ -368,7 +374,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 //ENEMY
 
 //names are used
+<<<<<<< HEAD
 // CHOMPEdit start: Shuttle condensing
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /area/syndicate_station
 	name = "\improper Independent Station"
 	icon_state = "yellow"
@@ -378,6 +387,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	ambience = AMBIENCE_HIGHSEC
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
+<<<<<<< HEAD
 /area/shuttle/syndicate
 	name = "\improper Mercenary Shuttle"
 	icon_state = "yellow"
@@ -387,6 +397,55 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	ambience = AMBIENCE_HIGHSEC
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 // CHOMPEdit End: Shuttle condensing
+=======
+/area/syndicate_station/start
+	name = "\improper Mercenary Forward Operating Base"
+	icon_state = "yellow"
+
+/area/syndicate_station/southwest
+	name = "\improper south-west of SS13"
+	icon_state = "southwest"
+
+/area/syndicate_station/northwest
+	name = "\improper north-west of SS13"
+	icon_state = "northwest"
+
+/area/syndicate_station/northeast
+	name = "\improper north-east of SS13"
+	icon_state = "northeast"
+
+/area/syndicate_station/southeast
+	name = "\improper south-east of SS13"
+	icon_state = "southeast"
+
+/area/syndicate_station/north
+	name = "\improper north of SS13"
+	icon_state = "north"
+
+/area/syndicate_station/south
+	name = "\improper south of SS13"
+	icon_state = "south"
+
+/area/syndicate_station/commssat
+	name = "\improper south of the communication satellite"
+	icon_state = "south"
+
+/area/syndicate_station/mining
+	name = "\improper northeast of the mining station"
+	icon_state = "north"
+
+/area/syndicate_station/arrivals_dock
+	name = "\improper docked with station"
+	icon_state = "shuttle"
+
+/area/syndicate_station/maint_dock
+	name = "\improper docked with station"
+	icon_state = "shuttle"
+
+/area/syndicate_station/transit
+	name = "\improper hyperspace"
+	icon_state = "shuttle"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /area/wizard_station
 	name = "\improper Wizard's Den"
@@ -396,6 +455,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	ambience = AMBIENCE_OTHERWORLDLY
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
+<<<<<<< HEAD
 // CHOMPEdit Start: Shuttle condensing
 /area/skipjack_station
 	name = "Raider Outpost"
@@ -406,13 +466,47 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	ambience = AMBIENCE_HIGHSEC
 
 /area/shuttle/skipjack
+=======
+/area/skipjack_station
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	name = "\improper Skipjack"
 	icon_state = "yellow"
 	requires_power = 0
 	base_turf = /turf/space
 	ambience = AMBIENCE_HIGHSEC
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
+<<<<<<< HEAD
 // CHOMPEdit End: Shuttle condensing
+=======
+
+/area/skipjack_station/start
+	name = "\improper Skipjack"
+	icon_state = "yellow"
+
+/area/skipjack_station/transit
+	name = "\improper hyperspace"
+	icon_state = "shuttle"
+
+/area/skipjack_station/southwest_solars
+	name = "\improper aft port solars"
+	icon_state = "southwest"
+
+/area/skipjack_station/northwest_solars
+	name = "\improper fore port solars"
+	icon_state = "northwest"
+
+/area/skipjack_station/northeast_solars
+	name = "\improper fore starboard solars"
+	icon_state = "northeast"
+
+/area/skipjack_station/southeast_solars
+	name = "\improper aft starboard solars"
+	icon_state = "southeast"
+
+/area/skipjack_station/mining
+	name = "\improper south of mining station"
+	icon_state = "north"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 //PRISON
 /area/prison
@@ -806,13 +900,19 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Shuttle Dock Hallway - Dock One"
 	icon_state = "entry_D1"
 	base_turf = /turf/space
+<<<<<<< HEAD
 	forbid_events = TRUE
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /area/hallway/secondary/entry/D2
 	name = "\improper Shuttle Dock Hallway - Dock Two"
 	icon_state = "entry_D2"
 	base_turf = /turf/space
+<<<<<<< HEAD
 	forbid_events = TRUE
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /area/hallway/secondary/entry/D2/arrivals
 	name = "\improper Shuttle Dock Hallway - Dock Two"
@@ -824,7 +924,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Shuttle Dock Hallway - Dock Three"
 	icon_state = "entry_D3"
 	base_turf = /turf/space
+<<<<<<< HEAD
 	forbid_events = TRUE
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /area/hallway/secondary/entry/D4
 	name = "\improper Shuttle Dock Hallway - Dock Four"
@@ -964,6 +1067,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/crew_quarters
 	name = "\improper Dormitories"
 	icon_state = "Sleep"
+<<<<<<< HEAD
+=======
+	flags = RAD_SHIELDED
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	ambience = AMBIENCE_GENERIC
 	forbid_events = TRUE
 	forbid_singulo = TRUE
@@ -976,7 +1083,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/crew_quarters/sleep
 	name = "\improper Dormitories"
 	icon_state = "Sleep"
+<<<<<<< HEAD
 	flags = RAD_SHIELDED
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /area/crew_quarters/sleep/Apartment_A1
 	name = "\improper Apartment A1"
@@ -1110,6 +1220,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Visitor Room 12"
 	icon_state = "Sleep"
 
+<<<<<<< HEAD
 //CHOMPStation Edit Start TFF 6/2/20 - Added two new dorms
 
 /area/crew_quarters/sleep/vistor_room_13
@@ -1122,6 +1233,8 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 
 //CHOMPStation Edit End
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /area/crew_quarters/sleep/engi_wash
 	name = "\improper Engineering Washroom"
 	icon_state = "toilet"
@@ -1359,10 +1472,17 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	ambience = AMBIENCE_ENGINEERING
 
 /area/engineering/atmos
+<<<<<<< HEAD
 	name = "\improper Atmospherics"
 	icon_state = "atmos"
 	sound_env = LARGE_ENCLOSED
 	ambience = AMBIENCE_ATMOS
+=======
+ 	name = "\improper Atmospherics"
+ 	icon_state = "atmos"
+ 	sound_env = LARGE_ENCLOSED
+	 ambience = AMBIENCE_ATMOS
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /area/engineering/atmos/monitoring
 	name = "\improper Atmospherics Monitoring Room"
@@ -1518,7 +1638,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Teleporter"
 	icon_state = "teleporter"
 	music = "signal"
+<<<<<<< HEAD
 	flags = RAD_SHIELDED
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /area/gateway
 	name = "\improper Gateway"
@@ -1699,6 +1822,11 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Port First-Aid Station"
 	icon_state = "medbay2"
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 //Security
 
 /area/security/main
@@ -1761,7 +1889,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/security/riot_control
 	name = "\improper Security - Riot Control"
 	icon_state = "riot_control"
+<<<<<<< HEAD
 	flags = RAD_SHIELDED //CHOMP Add
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /area/security/detectives_office
 	name = "\improper Security - Forensic Office"
@@ -1955,6 +2086,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Xenobiology Lab"
 	icon_state = "xeno_lab"
 
+<<<<<<< HEAD
 /area/rnd/xenobiology/hallway
 	name = "\improper Xenobiology hallway"
 	icon_state = "xeno_lab"
@@ -1963,6 +2095,8 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Xenobiology storage"
 	icon_state = "xeno_lab"
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /area/rnd/xenobiology/xenoflora_storage
 	name = "\improper Xenoflora Storage"
 	icon_state = "xeno_f_store"
@@ -1995,7 +2129,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Server Room"
 	icon_state = "server"
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 //Storage
 
 /area/storage/tools
@@ -2611,6 +2748,7 @@ var/list/the_station_areas = list (
 	icon_state = "yellow"
 	luminosity = 1
 	dynamic_lighting = 0
+<<<<<<< HEAD
 	requires_power = 0
 
 
@@ -2669,3 +2807,6 @@ var/list/the_station_areas = list (
 	name = "\improper Baby_mammoth"
 	icon_state = "shuttlered"
 	requires_power = 1
+=======
+	requires_power = 0
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

@@ -50,8 +50,11 @@ SUBSYSTEM_DEF(game_master)
 	if(GM.ignore_time_restrictions || next_event < world.time)
 		if(prob(staleness) && pre_event_checks())
 			do_event_decision()
+<<<<<<< HEAD
 	if(REALTIMEOFDAY >= 386000 && REALTIMEOFDAY < 387000) //CHOMPEdit
 		to_world("<b>Automated router restart warning! Connection will be temporarily lost in a moment. Recommended to save any unfinished posts and avoid time-sensitive situations until router is back online.</b>") //CHOMPEdit
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 
 /datum/controller/subsystem/game_master/proc/do_event_decision()

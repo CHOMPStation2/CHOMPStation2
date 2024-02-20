@@ -46,7 +46,11 @@ GLOBAL_DATUM(revdata, /datum/getrev)
 	if(header)
 		. += "The following pull requests are currently test merged:"
 	for(var/datum/tgs_revision_information/test_merge/tm as anything in testmerge)
+<<<<<<< HEAD
 		var/cm = tm.head_commit		//CHOMPStation Edit TGS4
+=======
+		var/cm = tm.pull_request_commit
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		var/details = ": '" + html_encode(tm.title) + "' by " + html_encode(tm.author) + " at commit " + html_encode(copytext_char(cm, 1, 11))
 		if(details && findtext(details, "\[s\]") && (!usr || !usr.client.holder))
 			continue

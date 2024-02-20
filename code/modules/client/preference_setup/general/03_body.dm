@@ -95,9 +95,12 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	S["hair_red"]			>> pref.r_hair
 	S["hair_green"]			>> pref.g_hair
 	S["hair_blue"]			>> pref.b_hair
+<<<<<<< HEAD
 	S["grad_red"]			>> pref.r_grad
 	S["grad_green"]			>> pref.g_grad
 	S["grad_blue"]			>> pref.b_grad
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	S["facial_red"]			>> pref.r_facial
 	S["grad_red"]			>> pref.r_grad
 	S["grad_green"]			>> pref.g_grad
@@ -109,7 +112,10 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	S["skin_green"]			>> pref.g_skin
 	S["skin_blue"]			>> pref.b_skin
 	S["hair_style_name"]	>> pref.h_style
+<<<<<<< HEAD
 	S["grad_style_name"]	>> pref.grad_style
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	S["facial_style_name"]	>> pref.f_style
 	S["grad_style_name"]	>> pref.grad_style
 	S["eyes_red"]			>> pref.r_eyes
@@ -127,11 +133,14 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	S["synth_markings"]		>> pref.synth_markings
 	S["bgstate"]			>> pref.bgstate
 	S["body_descriptors"]	>> pref.body_descriptors
+<<<<<<< HEAD
 	S["Wingdings"]			>> pref.wingdings //YWadd start
 	S["colorblind_mono"]	>> pref.colorblind_mono
 	S["colorblind_vulp"]	>> pref.colorblind_vulp
 	S["colorblind_taj"] 	>> pref.colorblind_taj
 	S["haemophilia"]        >> pref.haemophilia //YWadd end
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	S["ear_style"]		>> pref.ear_style
 	S["r_ears"]			>> pref.r_ears
 	S["g_ears"]			>> pref.g_ears
@@ -180,7 +189,10 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	S["skin_green"]			<< pref.g_skin
 	S["skin_blue"]			<< pref.b_skin
 	S["hair_style_name"]	<< pref.h_style
+<<<<<<< HEAD
 	S["grad_style_name"]	<< pref.grad_style
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	S["facial_style_name"]	<< pref.f_style
 	S["grad_style_name"]	<< pref.grad_style
 	S["eyes_red"]			<< pref.r_eyes
@@ -198,11 +210,14 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	S["synth_markings"]		<< pref.synth_markings
 	S["bgstate"]			<< pref.bgstate
 	S["body_descriptors"]	<< pref.body_descriptors
+<<<<<<< HEAD
 	S["Wingdings"]          << pref.wingdings //YWadd start
 	S["colorblind_mono"]	<< pref.colorblind_mono
 	S["colorblind_vulp"]	<< pref.colorblind_vulp
 	S["colorblind_taj"] 	<< pref.colorblind_taj
 	S["haemophilia"]        << pref.haemophilia //YWadd end
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	S["ear_style"]		<< pref.ear_style
 	S["r_ears"]			<< pref.r_ears
 	S["g_ears"]			<< pref.g_ears
@@ -252,7 +267,10 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	pref.g_skin			= sanitize_integer(pref.g_skin, 0, 255, initial(pref.g_skin))
 	pref.b_skin			= sanitize_integer(pref.b_skin, 0, 255, initial(pref.b_skin))
 	pref.h_style		= sanitize_inlist(pref.h_style, hair_styles_list, initial(pref.h_style))
+<<<<<<< HEAD
 	pref.grad_style		= sanitize_inlist(pref.grad_style, GLOB.hair_gradients, initial(pref.grad_style))
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	pref.f_style		= sanitize_inlist(pref.f_style, facial_hair_styles_list, initial(pref.f_style))
 	pref.grad_style		= sanitize_inlist(pref.grad_style, GLOB.hair_gradients, initial(pref.grad_style))
 	pref.r_eyes			= sanitize_integer(pref.r_eyes, 0, 255, initial(pref.r_eyes))
@@ -325,7 +343,10 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	character.b_skin	= pref.b_skin
 	character.s_tone	= pref.s_tone
 	character.h_style	= pref.h_style
+<<<<<<< HEAD
 	character.grad_style= pref.grad_style
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	character.f_style	= pref.f_style
 	character.grad_style= pref.grad_style
 	character.b_type	= pref.b_type
@@ -382,6 +403,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 	character.set_gender(pref.biological_gender)
 
+<<<<<<< HEAD
 	if(pref.species == "Grey")//YWadd START
 		character.wingdings = pref.wingdings
 
@@ -398,6 +420,8 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		character.add_modifier(/datum/modifier/trait/haemophilia)
 	//YWadd END
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	// Destroy/cyborgize organs and limbs.
 	//VOREStation Edit
 	character.synthetic = pref.species == "Protean" ? all_robolimbs["protean"] : null //Clear the existing var. (unless protean, then switch it to the normal protean limb)
@@ -481,10 +505,17 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	. += "Blood Type: <a href='?src=\ref[src];blood_type=1'>[pref.b_type]</a><br>"
 	if(has_flag(mob_species, HAS_SKIN_TONE))
 		. += "Skin Tone: <a href='?src=\ref[src];skin_tone=1'>[-pref.s_tone + 35]/220</a><br>"
+<<<<<<< HEAD
 	. += "<b>Disabilities</b><br> <a href='?src=\ref[src];disabilities_yw=1'>Adjust</a><br>" // YWadd
 	//YWcommented moved onto disabilities. += "Needs Glasses: <a href='?src=\ref[src];disabilities=[NEARSIGHTED]'><b>[pref.disabilities & NEARSIGHTED ? "Yes" : "No"]</b></a><br>"
 	. += "Limbs: <a href='?src=\ref[src];limbs=1'>Adjust</a> <a href='?src=\ref[src];reset_limbs=1'>Reset</a><br>"
 	. += "Internal Organs: <a href='?src=\ref[src];organs=1'>Adjust</a><br>"
+=======
+	. += "Needs Glasses: <a href='?src=\ref[src];disabilities=[NEARSIGHTED]'><b>[pref.disabilities & NEARSIGHTED ? "Yes" : "No"]</b></a><br>"
+	. += "Limbs: <a href='?src=\ref[src];limbs=1'>Adjust</a> <a href='?src=\ref[src];reset_limbs=1'>Reset</a><br>"
+	. += "Internal Organs: <a href='?src=\ref[src];organs=1'>Adjust</a><br>"
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	//display limbs below
 	var/ind = 0
 	for(var/name in pref.organ_data)
@@ -718,9 +749,12 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		pref.alternate_languages.Cut() // Reset their alternate languages. Todo: attempt to just fix it instead?
 		return TOPIC_HANDLED
 
+<<<<<<< HEAD
 	else if(href_list["disabilities_yw"])
 		Disabilities_YW(usr)
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	else if(href_list["set_species"])
 		user << browse(null, "window=species")
 		if(!pref.species_preview || !(pref.species_preview in GLOB.all_species))
@@ -797,6 +831,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			pref.b_grad = hex2num(copytext(new_grad, 6, 8))
 			return TOPIC_REFRESH_UPDATE_PREVIEW
 
+<<<<<<< HEAD
 	else if(href_list["grad_color"])
 		if(!has_flag(mob_species, HAS_HAIR_COLOR))
 			return TOPIC_NOACTION
@@ -807,6 +842,8 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			pref.b_grad = hex2num(copytext(new_grad, 6, 8))
 			return TOPIC_REFRESH_UPDATE_PREVIEW
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	else if(href_list["hair_style"])
 		var/list/valid_hairstyles = pref.get_valid_hairstyles()
 
@@ -818,6 +855,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	else if(href_list["grad_style"])
 		var/list/valid_gradients = GLOB.hair_gradients
 
+<<<<<<< HEAD
 		var/new_grad_style = input(user, "Choose a color pattern for your hair:", "Character Preference", pref.grad_style)  as null|anything in valid_gradients
 		if(new_grad_style && CanUseTopic(user))
 			pref.grad_style = new_grad_style
@@ -826,6 +864,8 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	else if(href_list["grad_style"])
 		var/list/valid_gradients = GLOB.hair_gradients
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		var/new_grad_style = tgui_input_list(user, "Choose a color pattern for your hair:", "Character Preference", valid_gradients, pref.grad_style)
 		if(new_grad_style && CanUseTopic(user))
 			pref.grad_style = new_grad_style
@@ -1236,7 +1276,11 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	else if(href_list["disabilities"])
 		var/disability_flag = text2num(href_list["disabilities"])
 		pref.disabilities ^= disability_flag
+<<<<<<< HEAD
 		Disabilities_YW(usr) //YW Edit
+=======
+		return TOPIC_REFRESH_UPDATE_PREVIEW
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	else if(href_list["toggle_preview_value"])
 		pref.equip_preview_mob ^= text2num(href_list["toggle_preview_value"])
@@ -1266,6 +1310,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		pref.bgstate = next_in_list(pref.bgstate, pref.bgstate_options)
 		return TOPIC_REFRESH_UPDATE_PREVIEW
 
+<<<<<<< HEAD
 	//YW Add Start
 
 	else if(href_list["wingdings"])
@@ -1298,6 +1343,8 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 	//YW Add End
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	else if(href_list["ear_style"])
 		var/new_ear_style = tgui_input_list(user, "Select an ear style for this character:", "Character Preference", pref.get_available_styles(global.ear_styles_list), pref.ear_style)
 		if(new_ear_style)
@@ -1398,6 +1445,10 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			pref.g_wing3 = hex2num(copytext(new_wingc3, 4, 6))
 			pref.b_wing3 = hex2num(copytext(new_wingc3, 6, 8))
 			return TOPIC_REFRESH_UPDATE_PREVIEW
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	return ..()
 
 /datum/category_item/player_setup_item/general/body/proc/reset_limbs()

@@ -12,7 +12,10 @@
 	caliber = ".45"
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
 	load_method = MAGAZINE
+<<<<<<< HEAD
 	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/item/weapon/gun/projectile/colt/update_icon()
 	if(ammo_magazine)
@@ -81,19 +84,27 @@
 	desc = "The MT Mk58 is a cheap, ubiquitous sidearm, produced by MarsTech. Found pretty much everywhere humans are. Uses .45 rounds."
 	description_fluff = "The leading civilian-sector high-quality small arms brand of Hephaestus Industries, \
 	MarsTech has been the provider of choice for law enforcement and security forces for over 300 years."
+<<<<<<< HEAD
 	icon = 'icons/obj/gun_ch.dmi'
 	icon_state = "secguncomp"
+=======
+	icon_state = "secgun"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	magazine_type = /obj/item/ammo_magazine/m45/rubber
 	allowed_magazines = list(/obj/item/ammo_magazine/m45)
 	projectile_type = /obj/item/projectile/bullet/pistol/medium
 	caliber = ".45"
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
 	load_method = MAGAZINE
+<<<<<<< HEAD
 	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/item/weapon/gun/projectile/sec/update_icon()
 	..()
 	if(ammo_magazine)
+<<<<<<< HEAD
 		icon_state = "secguncomp"
 	else
 		icon_state = "secguncomp-e"
@@ -101,18 +112,36 @@
 /obj/item/weapon/gun/projectile/sec/flash
 	magazine_type = /obj/item/ammo_magazine/m45/flash
 	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
+=======
+		icon_state = "secgun"
+	else
+		icon_state = "secgun-e"
+
+/obj/item/weapon/gun/projectile/sec/flash
+	magazine_type = /obj/item/ammo_magazine/m45/flash
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/item/weapon/gun/projectile/sec/wood
 	name = "custom .45 pistol"
 	desc = "The MT Mk58 is a cheap, ubiquitous sidearm, produced by MarsTech. This one has a sweet wooden grip. Uses .45 rounds."
+<<<<<<< HEAD
 	icon_state = "secgundark"
+=======
+	icon_state = "secgunb"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/item/weapon/gun/projectile/sec/wood/update_icon()
 	..()
 	if(ammo_magazine)
+<<<<<<< HEAD
 		icon_state = "secgundark"
 	else
 		icon_state = "secgundark-e"
+=======
+		icon_state = "secgunb"
+	else
+		icon_state = "secgunb-e"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /*
  * Silenced Pistol
@@ -125,7 +154,10 @@
 	caliber = ".45"
 	silenced = 1
 	fire_delay = 1
+<<<<<<< HEAD
 	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	recoil = 0
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2, TECH_ILLEGAL = 8)
 	load_method = MAGAZINE
@@ -195,7 +227,10 @@
 	allowed_magazines = list(/obj/item/ammo_magazine/m75)
 	auto_eject = 1
 	auto_eject_sound = 'sound/weapons/smg_empty_alarm.ogg'
+<<<<<<< HEAD
 	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/item/weapon/gun/projectile/gyropistol/update_icon()
 	..()
@@ -230,7 +265,10 @@
 	magazine_type = /obj/item/ammo_magazine/m9mm/compact
 	allowed_magazines = list(/obj/item/ammo_magazine/m9mm/compact)
 	projectile_type = /obj/item/projectile/bullet/pistol
+<<<<<<< HEAD
 	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/item/weapon/gun/projectile/pistol/flash
 	magazine_type = /obj/item/ammo_magazine/m9mm/compact/flash
@@ -428,7 +466,10 @@
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/m9mm
 	allowed_magazines = list(/obj/item/ammo_magazine/m9mm) // Can accept illegal large capacity magazines, or compact magazines.
+<<<<<<< HEAD
 	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/item/weapon/gun/projectile/p92x/update_icon()
 	..()
@@ -606,7 +647,10 @@
 	auto_eject = 1
 	auto_eject_sound = 'sound/weapons/smg_empty_alarm.ogg'
 	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 4)
+<<<<<<< HEAD
 	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/item/weapon/gun/projectile/lamia/update_icon()
 	cut_overlays()
@@ -614,4 +658,8 @@
 		return
 	var/ratio = ammo_magazine.stored_ammo.len * 100 / ammo_magazine.max_ammo
 	ratio = round(ratio, 33)
+<<<<<<< HEAD
 	add_overlay("lamia_[ratio]")
+=======
+	add_overlay("lamia_[ratio]")
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

@@ -75,9 +75,12 @@
 		/obj/item/weapon/extinguisher/mini,
 		/obj/item/weapon/tape_roll,
 		/obj/item/device/integrated_electronics/wirer,
+<<<<<<< HEAD
 		/obj/item/weapon/pipe_dispenser, //CHOMPAdd
 		/obj/item/weapon/holosign_creator/combifan, //CHOMPAdd
 		/obj/item/weapon/rcd, //CHOMPAdd
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		/obj/item/device/integrated_electronics/debugger, //Vorestation edit adding debugger to toolbelt can hold list
 		/obj/item/weapon/shovel/spade, //VOREStation edit. If it can hold minihoes and hatchers, why not the gardening spade?
 		/obj/item/stack/nanopaste, //VOREStation edit. Think of it as a tube of superglue. Belts hold that all the time.
@@ -124,8 +127,11 @@
 	storage_slots = 8	//If they get better everything-else, why not the belt too?
 	can_hold = list(
 		/obj/item/weapon/rcd,	//They've given one from the get-go, it's hard to imagine they wouldn't be given something that can store it neater than a bag
+<<<<<<< HEAD
 		/obj/item/weapon/pipe_dispenser, //CHOMPAdd
 		/obj/item/weapon/holosign_creator/combifan, //CHOMPAdd
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		/obj/item/weapon/tool/crowbar,
 		/obj/item/weapon/tool/screwdriver,
 		/obj/item/weapon/weldingtool,
@@ -249,8 +255,12 @@
 		/obj/item/device/flashlight,
 		/obj/item/weapon/cell/device,
 		/obj/item/weapon/extinguisher/mini,
+<<<<<<< HEAD
 		/obj/item/weapon/storage/quickdraw/syringe_case,
 		/obj/item/ammo_casing/macrobattery // CHOMPedit: Macrobatteries for the Curabitur can fit into medbelts.
+=======
+		/obj/item/weapon/storage/quickdraw/syringe_case
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		)
 
 /obj/item/weapon/storage/belt/medical/emt
@@ -491,7 +501,10 @@
 		/obj/item/taperoll,
 		/obj/item/weapon/reagent_containers/spray,
 		/obj/item/weapon/soap,
+<<<<<<< HEAD
 		/obj/item/weapon/holosign_creator, //CHOMPAdd
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		/obj/item/device/lightreplacer //VOREStation edit
 		)
 

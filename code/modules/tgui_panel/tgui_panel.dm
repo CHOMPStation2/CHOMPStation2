@@ -79,10 +79,13 @@
 					"address" = client.address,
 					"computer_id" = client.computer_id,
 				),
+<<<<<<< HEAD
 				// CHOMPEdit - "server" section
 				"server" = list(
 					"round_id" = GLOB.round_id,
 				),
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 				"window" = list(
 					"fancy" = FALSE,
 					"locked" = FALSE,

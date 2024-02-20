@@ -26,7 +26,10 @@
 	var/default_material = MAT_STEEL
 	var/datum/material/material
 	var/drops_debris = 1
+<<<<<<< HEAD
 	var/named_from_material = 1 //YW EDIT, Does it prepend the material's name to it's name?
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/item/weapon/material/New(var/newloc, var/material_key)
 	..(newloc)
@@ -66,8 +69,12 @@
 	if(!material)
 		qdel(src)
 	else
+<<<<<<< HEAD
 		if(named_from_material) //YW EDIT
 			name = "[material.display_name] [initial(name)]"
+=======
+		name = "[material.display_name] [initial(name)]"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		health = round(material.integrity/10)
 		if(applies_material_colour)
 			color = material.icon_colour

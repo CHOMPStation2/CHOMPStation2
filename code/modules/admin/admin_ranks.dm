@@ -68,12 +68,18 @@ var/list/admin_ranks = list()								//list of all ranks with associated rights
 		C.remove_admin_verbs()
 		C.holder = null
 	GLOB.admins.Cut()
+<<<<<<< HEAD
 	load_admin_ranks() //CHOMP Edit: moved this from "f(config.admin_legacy_system)" and put it here instead, literally just moved it 3 lines.
 
 	if(config.admin_legacy_system)
 		//Clear profile access
 		for(var/A in world.GetConfig("admin"))
 			world.SetConfig("APP/admin", A, null)
+=======
+
+	if(config.admin_legacy_system)
+		load_admin_ranks()
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 		//load text from file
 		var/list/Lines = file2list("config/admins.txt")
@@ -102,9 +108,12 @@ var/list/admin_ranks = list()								//list of all ranks with associated rights
 			//create the admin datum and store it for later use
 			var/datum/admins/D = new /datum/admins(rank, rights, ckey)
 
+<<<<<<< HEAD
 			if(D.rights & R_DEBUG) //grant profile access
 				world.SetConfig("APP/admin", ckey, "role=admin")
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			//find the client for a ckey if they are connected and associate them with the new admin datum
 			D.associate(GLOB.directory[ckey])
 
@@ -112,14 +121,22 @@ var/list/admin_ranks = list()								//list of all ranks with associated rights
 		//The current admin system uses SQL
 
 		establish_db_connection()
+<<<<<<< HEAD
 		if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+=======
+		if(!dbcon.IsConnected())
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			error("Failed to connect to database in load_admins(). Reverting to legacy system.")
 			log_misc("Failed to connect to database in load_admins(). Reverting to legacy system.")
 			config.admin_legacy_system = 1
 			load_admins()
 			return
 
+<<<<<<< HEAD
 		var/datum/db_query/query = SSdbcore.NewQuery("SELECT ckey, rank, level, flags FROM erro_admin") //CHOMPEdit TGSQL
+=======
+		var/DBQuery/query = dbcon.NewQuery("SELECT ckey, rank, level, flags FROM erro_admin")
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		query.Execute()
 		while(query.NextRow())
 			var/ckey = query.item[1]
@@ -130,12 +147,17 @@ var/list/admin_ranks = list()								//list of all ranks with associated rights
 			if(istext(rights))	rights = text2num(rights)
 			var/datum/admins/D = new /datum/admins(rank, rights, ckey)
 
+<<<<<<< HEAD
 			if(D.rights & R_DEBUG) //grant profile access
 				world.SetConfig("APP/admin", ckey, "role=admin")
 
 			//find the client for a ckey if they are connected and associate them with the new admin datum
 			D.associate(GLOB.directory[ckey])
 		qdel(query) //CHOMPEdit TGSQL
+=======
+			//find the client for a ckey if they are connected and associate them with the new admin datum
+			D.associate(GLOB.directory[ckey])
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		if(!admin_datums)
 			error("The database query in load_admins() resulted in no admins being added to the list. Reverting to legacy system.")
 			log_misc("The database query in load_admins() resulted in no admins being added to the list. Reverting to legacy system.")

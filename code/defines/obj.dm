@@ -80,6 +80,7 @@
 	icon_state = "wilderness1"
 	desc = "This appears to be a sign warning people that the other side is dangerous. It also says that NanoTrasen cannot guarantee your safety beyond this point."
 
+<<<<<<< HEAD
 /obj/structure/showcase/sign/nt //yw edit
 	name = "Welcome: Nanotrasen"
 	icon = 'icons/obj/structures_yw.dmi'
@@ -110,6 +111,8 @@
 	desc = "A plaque commerating the building efforts of the sleepiest outpost in the sector, Yawn Wider."
 	density = 0
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/item/mouse_drag_pointer = MOUSE_ACTIVE_POINTER
 
 /obj/item/weapon/beach_ball

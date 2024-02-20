@@ -46,7 +46,10 @@
 	var/cell_type =  /obj/item/weapon/cell/high
 	var/air_type =   /obj/item/weapon/tank/oxygen
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	//Component/device holders.
 	var/obj/item/weapon/tank/air_supply                       // Air tank, if any.
 	var/obj/item/clothing/shoes/boots = null                  // Deployable boots, if any.
@@ -536,8 +539,12 @@
 			offline = 0
 			if(istype(wearer) && !wearer.wearing_rig)
 				wearer.wearing_rig = src
+<<<<<<< HEAD
 			if(!istype(src,/obj/item/weapon/rig/protean))	//CHOMPEdit - Stupid snowflake protean special check for rig assimilation code
 				slowdown = initial(slowdown)
+=======
+			slowdown = initial(slowdown)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	if(offline)
 		if(offline == 1)
@@ -912,12 +919,17 @@
 	wearer.lay_down()
 	to_chat(user, "<span class='notice'>\The [wearer] is now [wearer.resting ? "resting" : "getting up"].</span>")
 
+<<<<<<< HEAD
 /obj/item/weapon/rig/proc/forced_move(var/direction, var/mob/user, var/ai_moving = TRUE)
+=======
+/obj/item/weapon/rig/proc/forced_move(var/direction, var/mob/user)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	// Why is all this shit in client/Move()? Who knows?
 	if(world.time < wearer_move_delay)
 		return
 
+<<<<<<< HEAD
 	if(!wearer || !wearer.loc) //CHOMP Edit - Removed some stuff for protean living hardsuit
 		return
 
@@ -930,6 +942,11 @@
 		//CHOMPEdit - Moved this to where it's relevant
 		wearer_move_delay = world.time + ai_controlled_move_delay
 
+=======
+	if(!wearer || !wearer.loc || !ai_can_move_suit(user, check_user_module = 1))
+		return
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	//This is sota the goto stop mobs from moving var
 	if(wearer.transforming || !wearer.canmove)
 		return
@@ -960,6 +977,12 @@
 		to_chat(src, "<span class='notice'>Your host is pinned to a wall by [wearer.pinned[1]]</span>!")
 		return 0
 
+<<<<<<< HEAD
+=======
+	// AIs are a bit slower than regular and ignore move intent.
+	wearer_move_delay = world.time + ai_controlled_move_delay
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(istype(wearer.buckled, /obj/vehicle))
 		//manually set move_delay for vehicles so we don't inherit any mob movement penalties
 		//specific vehicle move delays are set in code\modules\vehicles\vehicle.dm
@@ -984,10 +1007,14 @@
 			wearer_move_delay += 2
 			return wearer.buckled.relaymove(wearer,direction)
 
+<<<<<<< HEAD
 	var/power_cost = 200
 	if(!ai_moving)
 		power_cost = 20
 	cell.use(power_cost) //Arbitrary, TODO
+=======
+	cell.use(200) //Arbitrary, TODO
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	wearer.Move(get_step(get_turf(wearer),direction),direction)
 
 // This returns the rig if you are contained inside one, but not if you are wearing it

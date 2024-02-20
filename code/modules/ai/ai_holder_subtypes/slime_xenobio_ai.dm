@@ -206,7 +206,11 @@
 			holder.a_intent = I_HELP
 			return FALSE // We're a good slime.
 
+<<<<<<< HEAD
 /datum/ai_holder/simple_mob/xenobio_slime/react_to_attack(atom/movable/attacker)
+=======
+/datum/ai_holder/simple_mob/xenobio_slime/react_to_attack(atom/movable/attacker, ignore_timers = FALSE)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	. = ..(attacker)
 
 	if(ishuman(attacker))

@@ -300,11 +300,15 @@
 
 	// If we ended up moving diagonally, increase delay.
 	if((direct & (direct - 1)) && mob.loc == n)
+<<<<<<< HEAD
 		my_mob.setMoveCooldown(total_delay * SQRT_2) //CHOMPEDIT
 
 	if(!isliving(my_mob)) //CHOMPAdd
 		moving = 0
 		return
+=======
+		my_mob.setMoveCooldown(total_delay * 2)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	// If we have a grab
 	var/list/grablist = my_mob.ret_grab()
@@ -359,10 +363,13 @@
 			if(mob.check_holy(T))
 				to_chat(mob, "<span class='warning'>You cannot get past holy grounds while you are in this plane of existence!</span>")
 				return
+<<<<<<< HEAD
 			//CHOMPEdit start - add ability to block incorporeal movement for nonghosts
 			else if(!istype(mob, /mob/observer/dead) && T.blocks_nonghost_incorporeal)
 				return
 			//CHOMPEdit end
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			else
 				mob.forceMove(get_step(mob, direct))
 				mob.dir = direct
@@ -433,10 +440,14 @@
 
 	if(restrained()) //Check to see if we can do things
 		return 0
+<<<<<<< HEAD
 	inertia_dir = 0
 	return 1
 
 /* CHOMPedit: Nuking slipping.
+=======
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	//Check to see if we slipped
 	if(prob(Process_Spaceslipping(5)) && !buckled)
 		to_chat(src, "<span class='notice'><B>You slipped!</B></span>")
@@ -444,7 +455,12 @@
 		step(src, src.inertia_dir) // Not using Move for smooth glide here because this is a 'slip' so should be sudden.
 		return 0
 	//If not then we can reset inertia and move
+<<<<<<< HEAD
 */// CHOMPedit end.
+=======
+	inertia_dir = 0
+	return 1
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /mob/proc/Check_Dense_Object() //checks for anything to push off in the vicinity. also handles magboots on gravity-less floors tiles
 
@@ -487,7 +503,10 @@
 /mob/proc/Check_Shoegrip()
 	return 0
 
+<<<<<<< HEAD
 /* CHOMPedit: Nuking slipping.
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /mob/proc/Process_Spaceslipping(var/prob_slip = 5)
 	//Setup slipage
 	//If knocked out we might just hit it and stop.  This makes it possible to get dead bodies and such.
@@ -496,7 +515,10 @@
 
 	prob_slip = round(prob_slip)
 	return(prob_slip)
+<<<<<<< HEAD
 */// CHOMPedit end.
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /mob/proc/mob_has_gravity(turf/T)
 	return has_gravity(src, T)

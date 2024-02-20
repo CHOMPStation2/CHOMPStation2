@@ -30,8 +30,11 @@
 	var/can_infest = FALSE
 	var/is_infesting = FALSE
 
+<<<<<<< HEAD
 	can_pain_emote = FALSE // CHOMPEdit: Can't feel pain
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /datum/say_list/spore
 	emote_see = list("sways", "inflates briefly")
 

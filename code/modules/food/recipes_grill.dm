@@ -96,7 +96,10 @@
 
 /datum/recipe/bunbun
 	appliance = GRILL
+<<<<<<< HEAD
 	reagents = list("sodiumchloride" = 1)
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	items = list(
 		/obj/item/weapon/reagent_containers/food/snacks/bun,
 		/obj/item/weapon/reagent_containers/food/snacks/bun

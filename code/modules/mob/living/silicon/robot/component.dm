@@ -273,4 +273,8 @@
 	name = "radio"
 	desc = "A modular, multi-frequency radio used by robots and exosuits to enable communication systems. Comes with built-in subspace receivers."
 	icon_state = "radio"
+<<<<<<< HEAD
 	icon_state_broken = "radio_broken"
+=======
+	icon_state_broken = "radio_broken"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

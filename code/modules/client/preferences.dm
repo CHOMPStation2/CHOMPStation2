@@ -291,7 +291,11 @@ var/list/preferences_datums = list()
 	popup.open(FALSE) // Skip registring onclose on the browser pane
 	onclose(user, "preferences_window", src) // We want to register on the window itself
 
+<<<<<<< HEAD
 /*datum/preferences/proc/update_character_previews(mutable_appearance/MA) //CHOMPEdit _ch override.
+=======
+/datum/preferences/proc/update_character_previews(mutable_appearance/MA)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(!client)
 		return
 
@@ -322,7 +326,11 @@ var/list/preferences_datums = list()
 			client.screen |= O
 		O.appearance = MA
 		O.dir = D
+<<<<<<< HEAD
 		O.screen_loc = preview_screen_locs["[D]"]*/
+=======
+		O.screen_loc = preview_screen_locs["[D]"]
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /datum/preferences/proc/show_character_previews()
 	if(!client || !char_render_holders)

@@ -30,8 +30,11 @@
 	default_pixel_x = -16
 
 	has_hands = 1
+<<<<<<< HEAD
 	
 	can_be_drop_prey = FALSE //CHOMP Add
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 // Nomnomn
 /mob/living/simple_mob/vore/weretiger

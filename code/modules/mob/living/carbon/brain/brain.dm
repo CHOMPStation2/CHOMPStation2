@@ -9,8 +9,11 @@
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "brain1"
 	no_vore = TRUE //VOREStation Edit - PLEASE. lol.
+<<<<<<< HEAD
 	can_pain_emote = FALSE // CHOMPEdit: Sanity/safety
 	low_priority = TRUE //CHOMPEdit
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /mob/living/carbon/brain/Initialize()
 	. = ..()

@@ -87,7 +87,13 @@
 		death()
 
 	if (src.stat != 2) //Alive.
+<<<<<<< HEAD
 		if (src.paralysis || src.stunned || src.weakened || !src.has_power) //Stunned etc.
+=======
+		if (src.weakened > 0)	// Do not fullstun on weaken
+			AdjustWeakened(-1)
+		if (src.paralysis || src.stunned || !src.has_power) //Stunned etc.
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			src.set_stat(UNCONSCIOUS)
 			if (src.stunned > 0)
 				AdjustStunned(-1)
@@ -113,15 +119,22 @@
 		src.AdjustBlinded(-1)
 		src.blinded = 1
 
+<<<<<<< HEAD
 	if (src.ear_deaf > 0)
 		src.ear_deaf--
+=======
+	if (src.ear_deaf > 0) src.ear_deaf--
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if (src.ear_damage < 25)
 		src.ear_damage -= 0.05
 		src.ear_damage = max(src.ear_damage, 0)
 
+<<<<<<< HEAD
 	if(src.ear_deaf <= 0) // CHOMPStation Add: Ear Ringing/Deafness - Not sure if we need this, but, safety.
 		deaf_loop.stop() // CHOMPStation Add: Ear Ringing/Deafness - Not sure if we need this, but, safety.
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	src.density = !( src.lying )
 
 	if (src.sdisabilities & BLIND)

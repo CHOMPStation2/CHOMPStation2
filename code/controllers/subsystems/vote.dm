@@ -45,8 +45,13 @@ SUBSYSTEM_DEF(vote)
 		break
 
 	if(!players_are_in_round)
+<<<<<<< HEAD
 		log_debug("The crew transfer shuttle would have been called at vote time due to no players being present.") //YW Edit
 //		init_shift_change(null, 1)  //YW Edit
+=======
+		log_debug("The crew transfer shuttle was automatically called at vote time due to no players being present.")
+		init_shift_change(null, 1)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		return
 
 	initiate_vote(VOTE_CREW_TRANSFER, "the server", 1)
@@ -71,6 +76,7 @@ SUBSYSTEM_DEF(vote)
 /datum/controller/subsystem/vote/proc/get_result() // Get the highest number of votes
 	var/greatest_votes = 0
 	var/total_votes = 0
+<<<<<<< HEAD
 	//CHOMPEdit Begin
 	if(mode == VOTE_CREW_TRANSFER)
 		var/transfer_votes = choices["Initiate Crew Transfer"]
@@ -89,6 +95,15 @@ SUBSYSTEM_DEF(vote)
 			if(votes > greatest_votes)
 				greatest_votes = votes
 	//CHOMPEdit End
+=======
+
+	for(var/option in choices)
+		var/votes = choices[option]
+		total_votes += votes
+		if(votes > greatest_votes)
+			greatest_votes = votes
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(!config.vote_no_default && choices.len) // Default-vote for everyone who didn't vote
 		var/non_voters = (GLOB.clients.len - total_votes)
 		if(non_voters > 0)
@@ -117,6 +132,7 @@ SUBSYSTEM_DEF(vote)
 				choices["Initiate Crew Transfer"] = round(choices["Initiate Crew Transfer"] * factor)
 				to_world(span_purple("Crew Transfer Factor: [factor]"))
 				greatest_votes = max(choices["Initiate Crew Transfer"], choices["Extend the Shift"]) //VOREStation Edit
+<<<<<<< HEAD
 	//CHOMPEdit Begin
 	if(!(mode == VOTE_CREW_TRANSFER))
 		. = list() // Get all options with that many votes and return them in a list
@@ -125,6 +141,14 @@ SUBSYSTEM_DEF(vote)
 				if(choices[option] == greatest_votes)
 					. += option
 	//CHOMPEdit End
+=======
+
+	. = list() // Get all options with that many votes and return them in a list
+	if(greatest_votes)
+		for(var/option in choices)
+			if(choices[option] == greatest_votes)
+				. += option
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /datum/controller/subsystem/vote/proc/announce_result()
 	var/list/winners = get_result()
@@ -233,7 +257,11 @@ SUBSYSTEM_DEF(vote)
 					if(ticker.current_state <= GAME_STATE_SETTING_UP)
 						to_chat(initiator_key, "The crew transfer button has been disabled!")
 						return 0
+<<<<<<< HEAD
 				question = "Your PDA beeps with a message from Central. Would you like an additional hour to finish ongoing projects? (OOC Notice: Transfer votes must have a majority (70%) of all votes to initiate transfer.)"  //Yawn Wider Edit //CHOMP EDIT: Changed to 'one' hour. Add notice stating transfer must contain 70% of total vote.
+=======
+				question = "Your PDA beeps with a message from Central. Would you like an additional hour to finish ongoing projects?" //VOREStation Edit
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 				choices.Add("Initiate Crew Transfer", "Extend the Shift")  //VOREStation Edit
 			if(VOTE_ADD_ANTAGONIST)
 				if(!config.allow_extra_antags || ticker.current_state >= GAME_STATE_SETTING_UP)
@@ -267,7 +295,11 @@ SUBSYSTEM_DEF(vote)
 
 		to_world(span_purple("<b>[text]</b>\nType <b>vote</b> or click <a href='?src=\ref[src]'>here</a> to place your votes.\nYou have [config.vote_period / 10] seconds to vote."))
 		if(vote_type == VOTE_CREW_TRANSFER || vote_type == VOTE_GAMEMODE || vote_type == VOTE_CUSTOM)
+<<<<<<< HEAD
 			world << sound('sound/ambience/alarm4.ogg', repeat = 0, wait = 0, volume = 50, channel = 3) //CHOMPStation Edit TFF 10/5/20 - revert to old soundtrack contrary to YW
+=======
+			world << sound('sound/ambience/alarm4.ogg', repeat = 0, wait = 0, volume = 50, channel = 3)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 		if(mode == VOTE_GAMEMODE && round_progressing)
 			gamemode_vote_called = TRUE
@@ -375,7 +407,16 @@ SUBSYSTEM_DEF(vote)
 
 		if(VOTE_RESTART)
 			if(config.allow_vote_restart || usr.client.holder)
+<<<<<<< HEAD
 				initiate_vote(VOTE_RESTART, usr.key)
+=======
+				var/admin_number_present = send2irc_adminless_only(usr.ckey, usr)
+				if(admin_number_present <= 0 || usr.client.holder)
+					if(tgui_alert(usr, "Are you sure you want to start a RESTART VOTE? You should only do this if the server is dying and no staff are around to investigate.", "RESTART VOTE", list("No", "Yes I want to start a RESTART VOTE")) == "Yes I want to start a RESTART VOTE")
+						initiate_vote(VOTE_RESTART, usr.key)
+				else
+					to_chat(usr, "<span class = 'warning'>You can't start a RESTART VOTE while there are staff around. If you are having an issue with the round, please ahelp it.</span>")
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		if(VOTE_GAMEMODE)
 			if(config.allow_vote_mode || usr.client.holder)
 				initiate_vote(VOTE_GAMEMODE, usr.key)

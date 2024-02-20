@@ -80,8 +80,13 @@
 	Blend(M, ICON_ADD)
 
 /proc/BlendRGB(rgb1, rgb2, amount)
+<<<<<<< HEAD
 	var/list/RGB1 = ReadRGB(rgb1)	//CHOMPEdit - Better rgb blend
 	var/list/RGB2 = ReadRGB(rgb2)
+=======
+	var/list/RGB1 = rgb2num(rgb1)
+	var/list/RGB2 = rgb2num(rgb2)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	// add missing alpha if needed
 	if(RGB1.len < RGB2.len) RGB1 += 255
@@ -224,7 +229,12 @@
 		// Dimensions of overlay being added
 		var/list/add_size[4]
 
+<<<<<<< HEAD
 		for(var/image/I as anything in layers)
+=======
+		for(var/V in layers)
+			var/image/I = V
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			if(I.alpha == 0)
 				continue
 
@@ -358,7 +368,12 @@
 //For photo camera.
 /proc/build_composite_icon(atom/A)
 	var/icon/composite = icon(A.icon, A.icon_state, A.dir, 1)
+<<<<<<< HEAD
 	for(var/image/I as anything in A.overlays)
+=======
+	for(var/O in A.overlays)
+		var/image/I = O
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		composite.Blend(icon(I.icon, I.icon_state, I.dir, 1), ICON_OVERLAY)
 	return composite
 

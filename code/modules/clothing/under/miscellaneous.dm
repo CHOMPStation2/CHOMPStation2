@@ -266,14 +266,20 @@
 	icon_state = "pirate"
 	item_state_slots = list(slot_r_hand_str = "sl_suit", slot_l_hand_str = "sl_suit")
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS
+<<<<<<< HEAD
 	has_sensor = 0 // CHOMPEdit: Fixes sensors issue
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/item/clothing/under/soviet
 	name = "soviet uniform"
 	desc = "For the Motherland!"
 	icon_state = "soviet"
 	item_state_slots = list(slot_r_hand_str = "grey", slot_l_hand_str = "grey")
+<<<<<<< HEAD
 	has_sensor = 0 // CHOMPEdit: Fixes sensors issue
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/item/clothing/under/redcoat
 	name = "redcoat uniform"
@@ -639,15 +645,21 @@
 	name = "white tabard-dress"
 	desc = "A gold-trimmed white tabard-dress with a large V-shaped boob window. For when you want to show off your hips and look classy at the same time."
 	icon_state = "white_tabard"
+<<<<<<< HEAD
 	icon = 'icons/inventory/uniform/mob_ch.dmi' //CHOMPedit
 	icon_override = 'icons/inventory/uniform/mob_ch.dmi' //CHOMPedit
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/item/clothing/under/dress/tabard/black
 	name = "black tabard-dress"
 	desc = "A gold-trimmed black tabard-dress with a large circular boob window. For when you want to show off your hips and look classy at the same time."
 	icon_state = "black_tabard"
+<<<<<<< HEAD
 	icon = 'icons/inventory/uniform/mob_ch.dmi' //CHOMPedit
 	icon_override = 'icons/inventory/uniform/mob_ch.dmi' //CHOMPedit
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /*
  * Wedding Stuff
@@ -1188,7 +1200,11 @@
 
 /obj/item/clothing/under/explorer
 	desc = "A green uniform for operating in hazardous environments."
+<<<<<<< HEAD
 	name = "explorer's jumpsuit" //CHOMP keep explo
+=======
+	name = "away team's jumpsuit"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	icon_state = "explorer"
 
 /obj/item/clothing/under/explorer/armored

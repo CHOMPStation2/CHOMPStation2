@@ -10,8 +10,13 @@
 		/obj/item/weapon/reagent_containers/food/condiment/spacespice = 2
 		)
 
+<<<<<<< HEAD
 	open_sound = 'sound/machines/kitchen/fridge/open_fridge.ogg' // CHOMPEdit: Fridge sounds~
 	close_sound = 'sound/machines/kitchen/fridge/close_fridge.ogg' // CHOMPEdit: Fridge sounds~
+=======
+	open_sound = 'sound/machines/click.ogg'
+	close_sound = 'sound/machines/click.ogg'
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/structure/closet/secure_closet/freezer/kitchen/mining
 	req_access = list()
@@ -22,9 +27,12 @@
 	icon = 'icons/obj/closets/fridge.dmi'
 	closet_appearance = null
 
+<<<<<<< HEAD
 	open_sound = 'sound/machines/kitchen/fridge/open_fridge.ogg' // CHOMPEdit: Fridge sounds~
 	close_sound = 'sound/machines/kitchen/fridge/close_fridge.ogg' // CHOMPEdit: Fridge sounds~
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	starts_with = list(
 		/obj/item/weapon/reagent_containers/food/snacks/meat/monkey = 10)
 
@@ -34,9 +42,12 @@
 	icon = 'icons/obj/closets/fridge.dmi'
 	closet_appearance = null
 
+<<<<<<< HEAD
 	open_sound = 'sound/machines/kitchen/fridge/open_fridge.ogg' // CHOMPEdit: Fridge sounds~
 	close_sound = 'sound/machines/kitchen/fridge/close_fridge.ogg' // CHOMPEdit: Fridge sounds~
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	starts_with = list(
 		/obj/item/weapon/reagent_containers/food/drinks/milk = 6,
 		/obj/item/weapon/reagent_containers/food/drinks/soymilk = 4,

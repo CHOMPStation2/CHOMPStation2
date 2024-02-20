@@ -10,11 +10,16 @@
 	var/total_burn  = 0
 	var/total_brute = 0
 	for(var/obj/item/organ/external/O in organs)	//hardcoded to streamline things a bit
+<<<<<<< HEAD
 		if((O.robotic >= ORGAN_ROBOT) && !O.vital && !(O.robotic ==ORGAN_NANOFORM))	//CHOMPEdit - Protean changes
+=======
+		if((O.robotic >= ORGAN_ROBOT) && !O.vital)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			continue //*non-vital* robot limbs don't count towards shock and crit
 		total_brute += O.brute_dam
 		total_burn  += O.burn_dam
 
+<<<<<<< HEAD
 	// CHOMPEdit Start: Pain/etc calculations, but more efficient:tm: - this should work for literally anything that applies to health. Far better than slapping emote("pain") everywhere like scream does.
 	var/initialhealth = health // CHOMPEdit: Getting our health before this check
 	health = getMaxHealth() - getOxyLoss() - getToxLoss() - getCloneLoss() - total_burn - total_brute
@@ -39,6 +44,9 @@
 					if(prob(pain_noise * 3)  && !isbelly(loc)) // More likely, most severe damage. No pain noises inside bellies.
 						emote("pain")
 	// CHOMPEdit End: Pain
+=======
+	health = getMaxHealth() - getOxyLoss() - getToxLoss() - getCloneLoss() - total_burn - total_brute
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	//TODO: fix husking
 	if( ((getMaxHealth() - total_burn) < config.health_threshold_dead * huskmodifier) && stat == DEAD)
@@ -91,7 +99,11 @@
 /mob/living/carbon/human/getBruteLoss()
 	var/amount = 0
 	for(var/obj/item/organ/external/O in organs)
+<<<<<<< HEAD
 		if(O.robotic >= ORGAN_ROBOT && !O.vital && !(O.robotic ==ORGAN_NANOFORM))	//CHOMPEdit - Protean changes
+=======
+		if(O.robotic >= ORGAN_ROBOT && !O.vital)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			continue //*non-vital*robot limbs don't count towards death, or show up when scanned
 		amount += O.brute_dam
 	return amount
@@ -113,7 +125,11 @@
 /mob/living/carbon/human/getFireLoss()
 	var/amount = 0
 	for(var/obj/item/organ/external/O in organs)
+<<<<<<< HEAD
 		if(O.robotic >= ORGAN_ROBOT && !O.vital && !(O.robotic ==ORGAN_NANOFORM))	//CHOMPEdit - Protean changes
+=======
+		if(O.robotic >= ORGAN_ROBOT && !O.vital)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			continue //*non-vital*robot limbs don't count towards death, or show up when scanned
 		amount += O.burn_dam
 	return amount
@@ -342,6 +358,7 @@
 	else
 		..()
 
+<<<<<<< HEAD
 /mob/living/carbon/human/Stun(var/amount)
 	if(amount > 0)	//only multiply it by the mod if it's positive, or else it takes longer to fade too!
 		amount = amount*species.stun_mod
@@ -368,6 +385,8 @@
 		amount = amount*species.weaken_mod
 	..(amount)
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /mob/living/carbon/human/getToxLoss()
 	if(species.flags & NO_POISON)
 		toxloss = 0
@@ -637,6 +656,7 @@ This function restores all organs.
 			if(organ.take_damage(0, damage, sharp, edge, used_weapon))
 				UpdateDamageIcon()
 
+<<<<<<< HEAD
 	// CHOMPEdit: Pain Emotes!
 	var/pain_noise = (damage * species.pain_mod) // Halve the incoming, then multiply it by our mod. 50 damage becomes 25 x 0.6 on highest strength, meaning prob 15. 50 x 1.4 means prob 35, etc.
 	switch(damage)
@@ -651,6 +671,8 @@ This function restores all organs.
 				emote("pain")
 	// CHOMPEdit End
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	// Will set our damageoverlay icon to the next level, which will then be set back to the normal level the next mob.Life().
 	updatehealth()
 	BITSET(hud_updateflag, HEALTH_HUD)

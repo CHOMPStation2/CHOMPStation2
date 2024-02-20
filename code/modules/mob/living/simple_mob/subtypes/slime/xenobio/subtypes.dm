@@ -417,8 +417,11 @@
 			L.throw_at(get_edge_target_turf(L, throwdir), 3, 1, src)
 		else
 			to_chat(L, span("warning", "\The [src] hits you with incredible force, but you remain in place."))
+<<<<<<< HEAD
 			visible_message(span("danger", "\The [src] hits \the [L] with incredible force, to no visible effect!")) // CHOMPEdit: Visible/audible feedback for *resisting* the slam.
 			playsound(src, "punch", 50, 1) // CHOMPEdit: Visible/audible feedback for *resisting* the slam.
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 
 /mob/living/simple_mob/slime/xenobio/amber
@@ -788,6 +791,7 @@
 /mob/living/simple_mob/slime/xenobio/rainbow/kendrick/Initialize()
 	pacify() // So the physical mob also gets made harmless.
 	return ..()
+<<<<<<< HEAD
 
 //ChompAdd Begins
 // A pacified pink slime for either Admin-spawning or putting in a casino reward or capture crystal.
@@ -801,3 +805,5 @@
 	pacify() // So the physical mob also gets made harmless.
 	return ..()
 //ChompAdd End
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

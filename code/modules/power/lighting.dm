@@ -319,11 +319,14 @@ var/global/list/light_type_cache = list()
 	light_type = /obj/item/weapon/light/tube/large
 	shows_alerts = FALSE	//VOREStation Edit
 
+<<<<<<< HEAD
 //YW ADDITION START
 /obj/machinery/light/spot/no_nightshift
 	nightshift_allowed = FALSE
 //YW ADDITION END
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/machinery/light/spot/flicker
 	auto_flicker = TRUE
 
@@ -336,8 +339,11 @@ var/global/list/light_type_cache = list()
 /obj/machinery/light/Initialize(mapload, obj/machinery/light_construct/construct = null)
 	. =..()
 
+<<<<<<< HEAD
 	if(start_with_cell && !no_emergency)
 		cell = new/obj/item/weapon/cell/emergency_light(src)
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(construct)
 		start_with_cell = FALSE
 		status = LIGHT_EMPTY
@@ -451,6 +457,7 @@ var/global/list/light_type_cache = list()
 	update()
 
 //VOREstation Edit End
+<<<<<<< HEAD
 
 //CHOMPStation Edit Start
 /obj/machinery/light/proc/set_alert_engineering()
@@ -463,6 +470,8 @@ var/global/list/light_type_cache = list()
 
 // CHOMPStation Edit End
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 // update lighting
 /obj/machinery/light/proc/update(var/trigger = 1)
 	update_icon()

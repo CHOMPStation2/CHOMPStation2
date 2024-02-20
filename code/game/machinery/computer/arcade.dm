@@ -40,7 +40,11 @@
 		var/atom/movable/AM = pick_n_take(special_prizes)
 		AM.forceMove(get_turf(src))
 		special_prizes -= AM
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	else if(LAZYLEN(prizes))
 		var/prizeselect = pickweight(prizes)
 		new prizeselect(src.loc)
@@ -1322,7 +1326,11 @@
 		gameStatus = "CLAWMACHINE_NEW"
 		emagged = 1
 		return 1
+<<<<<<< HEAD
 		
+=======
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/machinery/computer/arcade/attackby(obj/item/O, mob/user, params)
 	..()
 	if(istype(O, /obj/item/stack/arcadeticket))

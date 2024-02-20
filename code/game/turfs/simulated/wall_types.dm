@@ -100,10 +100,14 @@
 
 /turf/simulated/wall/durasteel/Initialize(mapload)
 	. = ..(mapload, "durasteel", "durasteel")
+<<<<<<< HEAD
 /turf/simulated/wall/durasteel/blueserg/New(var/newloc)
 	..(newloc,"durasteel", "durasteel")
 /turf/simulated/wall/durasteel/blueserg/attackby(obj/item/I, mob/user)
 	return
+=======
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /turf/simulated/wall/wood/Initialize(mapload)
 	. = ..(mapload,  MAT_WOOD)
 
@@ -113,17 +117,21 @@
 /turf/simulated/wall/sifwood/Initialize(mapload)
 	. = ..(mapload,  MAT_SIFWOOD)
 
+<<<<<<< HEAD
 // CHOMPEdit Start
 /turf/simulated/wall/rsifwood/Initialize(mapload)
 	. = ..(mapload,  MAT_SIFWOOD, MAT_SIFWOOD, MAT_SIFWOOD)
 // CHOMPEdit End
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /turf/simulated/wall/log/Initialize(mapload)
 	. = ..(mapload,  MAT_LOG)
 
 /turf/simulated/wall/log_sif/Initialize(mapload)
 	. = ..(mapload,  MAT_SIFLOG)
 
+<<<<<<< HEAD
 /turf/unsimulated/wall/ice
 	name = "Ice wall"
 	desc = "Frigid Ice that seems to be stronger then most manmade structures"
@@ -137,6 +145,8 @@
 	icon_state = "clockwork_wall"
 
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 // Shuttle Walls
 /turf/simulated/shuttle/wall
 	name = "autojoin wall"
@@ -279,6 +289,7 @@
 	icon_state = "void-hc"
 	hard_corner = 1
 
+<<<<<<< HEAD
 /turf/simulated/shuttle/wall/voidcraft/hard_corner/blue
 	name = "hardcorner wall"
 	icon_state = "void-hc"
@@ -302,6 +313,8 @@
 	icon_state = "void-hc"
 	stripe_color = "#FF0000"
 	hard_corner = 1
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /turf/simulated/shuttle/wall/voidcraft/no_join
 	name = "nojoin wall"
 	icon_state = "void-nj"
@@ -313,12 +326,15 @@
 /turf/simulated/shuttle/wall/voidcraft/blue
 	stripe_color = "#0000FF"
 
+<<<<<<< HEAD
 /turf/simulated/shuttle/wall/voidcraft/lightblue
 	stripe_color = "#33ccff"
 
 /turf/simulated/shuttle/wall/voidcraft/orange
 	stripe_color = "#cc3300"
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /turf/simulated/shuttle/wall/voidcraft/green
 	stripe_color = "#00FF00"
 
@@ -356,10 +372,18 @@
 
 /obj/structure/hull_corner/proc/update_look()
 	cut_overlays()
+<<<<<<< HEAD
 	var/turf/simulated/wall/T
 	for(var/direction in get_dirs_to_test())
 		T = get_step(src, direction)
 		if(!istype(T))
+=======
+
+	var/turf/simulated/wall/T
+	for(var/direction in get_dirs_to_test())
+		T = get_step(src, direction)
+		if(!istype(T) || T.material?.icon_base != "hull")
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			continue
 
 		name = T.name

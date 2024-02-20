@@ -21,7 +21,11 @@
 		</head>
 
 		<body>
+<<<<<<< HEAD
 		<iframe width='100%' height='97%' src="[config.wikiurl]Guide_to_Construction&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
+=======
+		<iframe width='100%' height='97%' src="[config.wikiurl]Guide_to_construction&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		</body>
 
 		</html>
@@ -84,7 +88,11 @@
 	title = "Supermatter Engine Operating Manual"
 
 /obj/item/weapon/book/manual/supermatter_engine/New()
+<<<<<<< HEAD
 	..()			//CHOMPEdit Start - Updated Supermatter Engine Manual
+=======
+	..()
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	dat = {"<html>
 				<head>
 				<style>
@@ -153,12 +161,21 @@
 				<h2>EJECTION PROCEDURE</h2>
 				<ol>
 				<li>Ensure the engine room has power. The blast doors and ejection platform are unresponsive without power.</li>
+<<<<<<< HEAD
 				<li>Press Engine Ventilatory Control button to open engine core blast door to space. (In CE Office and next to the reactor shroud)</li>
 				<li>Press Emergency Core Eject button to eject supermatter crystal. (In CE Office, only) NOTE: Attempting crystal ejection while engine core vent is closed will result in ejection failure.</li>
 				<li>In event of ejection failure, <i>good luck.</i></li>
 				</ol>
 				</body>
 			</html>"}			//CHOMPEdit End - Updated Supermatter Engine Manual
+=======
+				<li>Press Engine Ventilatory Control button to open engine core blast door to space.</li>
+				<li>Press Emergency Core Eject button to eject supermatter crystal. NOTE: Attempting crystal ejection while engine core vent is closed will result in ejection failure.</li>
+				<li>In event of ejection failure, <i>pending</i></li>
+				</ol>
+				</body>
+			</html>"}
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 // TESLA Engine
 
@@ -232,6 +249,7 @@
 			</html>"}
 
 //R-UST port
+<<<<<<< HEAD
 /obj/item/weapon/book/manual/rust_engine	// CHOMPedit START : Updating the R-UST manual
 	name = "R-UST Operating Manual"
 	icon = 'icons/obj/library_ch.dmi'
@@ -241,6 +259,15 @@
 	title = "R-UST Operating Manual"
 
 //R-UST guide Re-Writen by Gozulio to reflect how the R-UST actually operates. (CHOMPedit, re-written again :3 By Foxglove)
+=======
+/obj/item/weapon/book/manual/rust_engine
+	name = "R-UST Operating Manual"
+	icon_state = "bookSupermatter"
+	item_state = "book15"
+	author = "Cindy Crawfish"
+	title = "R-UST Operating Manual"
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/item/weapon/book/manual/rust_engine/New()
 	..()
 	dat = {"<html>
@@ -255,6 +282,7 @@
 				</style>
 				</head>
 				<body>
+<<<<<<< HEAD
 				<h1>OPERATING MANUAL FOR R-UST MK 8 FUSION CORE 'TOKAMAK'</h1>
 				<br>
 				<h2>OPERATING PRINCIPLES</h2>
@@ -318,6 +346,27 @@
 				</ol>
 				</body>
 			</html>"}			// CHOMPedit END : Updating the R-UST manual
+=======
+				<br><br>
+				<ol>
+				<li>Put uranium in the portable generator near the gyrotron and turn it to full. This is to provide initial power to the core.</li>
+				<li>Enable and max output on the SMES in the engine room. This is to power the gyrotron.</li>
+				<li>Go into the control room, interact with the fusion core control console. Turn the field on and raise size to 501. Any bigger and it will start EMPing the doors. Any smaller and the fuel pellets might miss.</li>
+				<li>Interact with the gyrotron control computer, set power as high as the SMES can support, usually around 4, and turn it on. This will start increasing the plasma temperature to the point where reactions can occur.</li>
+				<li>Go into the engine room and insert a deuterium fuel assembly and a tritium fuel assembly into two of the fuel injectors. You can make deuterium rods in the fuel compressor if you want to play it safe.</li>
+				<li>Go back to the control room and turn the fuel injectors on. This will start firing pellets into the field.</li>
+				<li>Wait for reactions to start (plasma temperature will spike and fuel amounts will drop). Turn the gyrotron power down until it's keeping up with field instability. This will prevent cumulative instability from the deuterium-tritium reaction fucking up the field. If you're using straight deuterium instability isn't a problem and you can turn the gyrotron off.</li>
+				<li>Configure the SMES, turn the PACMAN off before it explodes.</li>
+				</ol>
+				<br>
+				<b>NOTES FOR NEWBIES</b>
+				<br>
+				Anything touching the field will mess with its stability and eventually cause it to rupture. Rupturing is bad. Use the gyrotron to keep instability down if you're running the engine on unstable fuel.
+				<br><br>
+				Likewise, no matter how sad the core seems, don't fucking hug it, you'll blow the field out and set the engine room on fire.
+				</body>
+			</html>"}
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/item/weapon/book/manual/engineering_hacking
 	name = "Hacking"
@@ -435,11 +484,19 @@
 
 
 /obj/item/weapon/book/manual/medical_cloning
+<<<<<<< HEAD
 	name = "Cloning Techniques of the 26th Century"
 	icon_state ="bookCloning"
 	item_state = "book9"
 	author = "Medical Journal, volume 3"		 // Who wrote the thing, can be changed by pen or PC. It is not automatically assigned
 	title = "Cloning Techniques of the 26th Century"
+=======
+	name = "Cloning Techniques of the 24th Century"
+	icon_state ="bookCloning"
+	item_state = "book9"
+	author = "Medical Journal, volume 3"		 // Who wrote the thing, can be changed by pen or PC. It is not automatically assigned
+	title = "Cloning Techniques of the 24th Century"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	dat = {"<html>
 				<head>
@@ -1019,9 +1076,12 @@
 				<h1>Food for Dummies</h1>
 				Here is a guide on basic food recipes and also how to not poison your customers accidentally.
 
+<<<<<<< HEAD
 				<h2>((OOC link for updated working recipes here))</h2>
 				vore-station.net/infodump/recipes_food.html
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 				<h3>Basics:</h3>
 				Knead an egg and some flour to make dough. Bake that to make a bun or flatten and cut it.
 

@@ -70,13 +70,17 @@ var/global/list/obj/machinery/message_server/message_servers = list()
 			//Messages having theese tokens will be rejected by server. Case sensitive
 	var/spamfilter_limit = MESSAGE_SERVER_DEFAULT_SPAM_LIMIT	//Maximal amount of tokens
 
+<<<<<<< HEAD
 	var/datum/looping_sound/tcomms/soundloop // CHOMPStation Add: Hummy noises
 	var/noisy = FALSE  // CHOMPStation Add: Hummy noises
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/machinery/message_server/New()
 	message_servers += src
 	decryptkey = GenerateKey()
 	send_pda_message("System Administrator", "system", "This is an automated message. The messaging system is functioning correctly.")
+<<<<<<< HEAD
 
 	// CHOMPAdd: PDA Messaging Server humming
 	soundloop = new(list(src), FALSE)
@@ -91,12 +95,17 @@ var/global/list/obj/machinery/message_server/message_servers = list()
 			soundloop.mid_sounds = list('sound/machines/tcomms/tcomms_04.ogg' = 1)
 			soundloop.mid_length = 30
 	// CHOMPAdd End
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	..()
 	return
 
 /obj/machinery/message_server/Destroy()
 	message_servers -= src
+<<<<<<< HEAD
 	QDEL_NULL(soundloop) // CHOMPStation Add: Hummy noises
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	..()
 	return
 
@@ -117,12 +126,16 @@ var/global/list/obj/machinery/message_server/message_servers = list()
 	//	decryptkey = generateKey()
 	if(active && (stat & (BROKEN|NOPOWER)))
 		active = 0
+<<<<<<< HEAD
 		soundloop.stop() // CHOMPStation Add: Hummy noises
 		noisy = FALSE // CHOMPStation Add: Hummy noises
 		return
 	if(!noisy && active) // CHOMPStation Add: Hummy noises
 		soundloop.start() // CHOMPStation Add: Hummy noises
 		noisy = TRUE // CHOMPStation Add: Hummy noises
+=======
+		return
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	update_icon()
 	return
 
@@ -371,6 +384,7 @@ var/obj/machinery/blackbox_recorder/blackbox
 
 	round_end_data_gathering() //round_end time logging and some other data processing
 	establish_db_connection()
+<<<<<<< HEAD
 	if(!SSdbcore.IsConnected()) return //CHOMPEdit TGSQL
 	var/round_id
 
@@ -379,11 +393,22 @@ var/obj/machinery/blackbox_recorder/blackbox
 	while(query.NextRow())
 		round_id = query.item[1]
 	qdel(query) //CHOMPEdit TGSQL
+=======
+	if(!dbcon.IsConnected()) return
+	var/round_id
+
+	var/DBQuery/query = dbcon.NewQuery("SELECT MAX(round_id) AS round_id FROM erro_feedback")
+	query.Execute()
+	while(query.NextRow())
+		round_id = query.item[1]
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(!isnum(round_id))
 		round_id = text2num(round_id)
 	round_id++
 
 	for(var/datum/feedback_variable/FV in feedback)
+<<<<<<< HEAD
 		var/list/sqlargs = list("t_roundid" = round_id, "t_variable" = "[FV.get_variable()]", "t_value" = "[FV.get_value()]", "t_details" = "[FV.get_details()]") //CHOMPEdit TGSQL
 		var/sql = "INSERT INTO erro_feedback VALUES (null, Now(), :t_roundid, :t_variable, :t_value, :t_details)" //CHOMPEdit TGSQL
 		var/datum/db_query/query_insert = SSdbcore.NewQuery(sql, sqlargs) //CHOMPEdit TGSQL
@@ -391,6 +416,13 @@ var/obj/machinery/blackbox_recorder/blackbox
 		qdel(query_insert) //CHOMPEdit TGSQL
 
 // Sanitize inputs to avoid SQL injection attacks //CHOMPEdit NOTE: This is not secure. Basic filters like this are pretty easy to bypass. Use the format for arguments used in the above.
+=======
+		var/sql = "INSERT INTO erro_feedback VALUES (null, Now(), [round_id], \"[FV.get_variable()]\", [FV.get_value()], \"[FV.get_details()]\")"
+		var/DBQuery/query_insert = dbcon.NewQuery(sql)
+		query_insert.Execute()
+
+// Sanitize inputs to avoid SQL injection attacks
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /proc/sql_sanitize_text(var/text)
 	text = replacetext(text, "'", "''")
 	text = replacetext(text, ";", "")

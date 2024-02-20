@@ -23,7 +23,11 @@ ORGAN_HEALTH_MULTIPLIER 100
 
 ## multiplier which influences how fast organs regenerate naturally
 ## 100 means normal, 50 means half
+<<<<<<< HEAD
 ORGAN_REGENERATION_MULTIPLIER 75
+=======
+ORGAN_REGENERATION_MULTIPLIER 50
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 ### REVIVAL ###
 
@@ -46,8 +50,13 @@ REVIVAL_BRAIN_LIFE -1
 
 
 ## These modify the run/walk speed of all mobs before the mob-specific modifiers are applied. 
+<<<<<<< HEAD
 RUN_SPEED 2
 WALK_SPEED 4
+=======
+RUN_SPEED 3
+WALK_SPEED 9
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 
 ## The variables below affect the movement of specific mob types.
@@ -59,7 +68,11 @@ METROID_DELAY 0
 ANIMAL_DELAY 0
 
 ## Volume of footstep sound effects. Range: 1-100, Set to 0 to disable footstep sounds.
+<<<<<<< HEAD
 FOOTSTEP_VOLUME 45
+=======
+FOOTSTEP_VOLUME 65
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 ### Miscellaneous ###
 

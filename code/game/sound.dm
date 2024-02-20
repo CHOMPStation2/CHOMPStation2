@@ -51,7 +51,11 @@
 	vol *= client.get_preference_volume_channel(VOLUME_CHANNEL_MASTER)
 	S.volume = vol
 
+<<<<<<< HEAD
 	if(vary || frequency) //CHOMPEdit
+=======
+	if(vary)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		if(frequency)
 			S.frequency = frequency
 		else
@@ -287,6 +291,7 @@
 					'sound/items/pickup/generic1.ogg',
 					'sound/items/pickup/generic2.ogg',
 					'sound/items/pickup/generic3.ogg')
+<<<<<<< HEAD
 			// CHOMPedit start - Sounds for mech footsteps.
 			if ("powerloaderstep")
 				soundin = pick(
@@ -296,11 +301,21 @@
 	return soundin
 
 //Are these even used? //Yes
+=======
+	return soundin
+
+//Are these even used?	//Yes
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 var/list/keyboard_sound = list ('sound/effects/keyboard/keyboard1.ogg','sound/effects/keyboard/keyboard2.ogg','sound/effects/keyboard/keyboard3.ogg', 'sound/effects/keyboard/keyboard4.ogg')
 var/list/bodyfall_sound = list('sound/effects/bodyfall1.ogg','sound/effects/bodyfall2.ogg','sound/effects/bodyfall3.ogg','sound/effects/bodyfall4.ogg')
 var/list/teppi_sound = list('sound/voice/teppi/gyooh1.ogg', 'sound/voice/teppi/gyooh2.ogg', 'sound/voice/teppi/gyooh3.ogg',  'sound/voice/teppi/gyooh4.ogg', 'sound/voice/teppi/gyooh5.ogg', 'sound/voice/teppi/gyooh6.ogg', 'sound/voice/teppi/snoot1.ogg', 'sound/voice/teppi/snoot2.ogg')
 var/list/talk_sound = list('sound/talksounds/a.ogg','sound/talksounds/b.ogg','sound/talksounds/c.ogg','sound/talksounds/d.ogg','sound/talksounds/e.ogg','sound/talksounds/f.ogg','sound/talksounds/g.ogg','sound/talksounds/h.ogg')
 var/list/emote_sound = list('sound/talksounds/me_a.ogg','sound/talksounds/me_b.ogg','sound/talksounds/me_c.ogg','sound/talksounds/me_d.ogg','sound/talksounds/me_e.ogg','sound/talksounds/me_f.ogg')
+<<<<<<< HEAD
+=======
+
+//Goon sounds
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 var/list/goon_speak_one_sound = list('sound/talksounds/goon/speak_1.ogg', 'sound/talksounds/goon/speak_1_ask.ogg', 'sound/talksounds/goon/speak_1_exclaim.ogg')
 var/list/goon_speak_two_sound = list('sound/talksounds/goon/speak_2.ogg', 'sound/talksounds/goon/speak_2_ask.ogg', 'sound/talksounds/goon/speak_2_exclaim.ogg')
 var/list/goon_speak_three_sound = list('sound/talksounds/goon/speak_3.ogg', 'sound/talksounds/goon/speak_3_ask.ogg', 'sound/talksounds/goon/speak_3_exclaim.ogg')
@@ -314,6 +329,7 @@ var/list/goon_speak_pug_sound = list('sound/talksounds/goon/pug.ogg', 'sound/tal
 var/list/goon_speak_pugg_sound = list('sound/talksounds/goon/pugg.ogg', 'sound/talksounds/goon/pugg_ask.ogg', 'sound/talksounds/goon/pugg_exclaim.ogg')
 var/list/goon_speak_roach_sound = list('sound/talksounds/goon/roach.ogg', 'sound/talksounds/goon/roach_ask.ogg', 'sound/talksounds/goon/roach_exclaim.ogg')
 var/list/goon_speak_skelly_sound = list('sound/talksounds/goon/skelly.ogg', 'sound/talksounds/goon/skelly_ask.ogg', 'sound/talksounds/goon/skelly_exclaim.ogg')
+<<<<<<< HEAD
 var/list/wf_speak_lure_sound = list ('sound/talksounds/wf/lure_1.ogg', 'sound/talksounds/wf/lure_2.ogg', 'sound/talksounds/wf/lure_3.ogg', 'sound/talksounds/wf/lure_4.ogg', 'sound/talksounds/wf/lure_5.ogg')
 var/list/wf_speak_lyst_sound = list ('sound/talksounds/wf/lyst_1.ogg', 'sound/talksounds/wf/lyst_2.ogg', 'sound/talksounds/wf/lyst_3.ogg', 'sound/talksounds/wf/lyst_4.ogg', 'sound/talksounds/wf/lyst_5.ogg', 'sound/talksounds/wf/lyst_6.ogg')
 var/list/wf_speak_void_sound = list ('sound/talksounds/wf/void_1.ogg', 'sound/talksounds/wf/void_2.ogg', 'sound/talksounds/wf/void_3.ogg')
@@ -457,3 +473,5 @@ var/list/species_sound_map = list(
 
 
 // CHOMPEdit End
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

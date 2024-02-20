@@ -561,8 +561,13 @@ the implant may become unstable and either pre-maturely inject the subject or si
 	if (malfunction)		//so I'm just going to add a meltdown chance here
 		return
 	malfunction = MALFUNCTION_TEMPORARY
+<<<<<<< HEAD
 	if(prob(40)) //CHOMPEDIT: Make the malfunction a probability because annoying
 		activate("emp")	//let's shout that this dude is dead
+=======
+
+	activate("emp")	//let's shout that this dude is dead
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(severity == 1)
 		if(prob(40))	//small chance of obvious meltdown
 			meltdown()

@@ -75,7 +75,10 @@
 /obj/structure/simple_door/attack_hand(mob/user as mob)
 	return TryToSwitchState(user)
 
+<<<<<<< HEAD
 /* // CHOMPEDIT: disabling becaue alt-clicking to view a turf is pretty important.
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/structure/simple_door/AltClick(mob/user as mob)
 	. = ..()
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
@@ -90,7 +93,10 @@
 		src.add_fingerprint(user)
 		playsound(src, knock_sound, 50, 0, 3)
 	return
+<<<<<<< HEAD
 */
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/structure/simple_door/CanPass(atom/movable/mover, turf/target)
 	if(istype(mover, /obj/effect/beam))
@@ -283,6 +289,7 @@
 		if(!iscultist(L) && !istype(L, /mob/living/simple_mob/construct))
 			return
 	..()
+<<<<<<< HEAD
 
 // CHOMPedit start: Allows removing resin doors.
 /obj/structure/simple_door/resin/attack_hand(mob/user as mob)
@@ -310,3 +317,5 @@
 	TryToSwitchState(user)
 	return
 // CHOMPedit end.
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

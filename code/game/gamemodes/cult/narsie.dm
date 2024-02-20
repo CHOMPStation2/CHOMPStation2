@@ -44,7 +44,11 @@ var/global/list/narsie_list = list()
 	..()
 	if(announce)
 		to_world("<font size='15' color='red'><b>[uppertext(name)] HAS RISEN</b></font>")
+<<<<<<< HEAD
 		world << sound('sound/effects/weather/old_wind/wind_5_1.ogg')
+=======
+		world << sound('sound/effects/weather/wind/wind_5_1.ogg')
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	narsie_spawn_animation()
 

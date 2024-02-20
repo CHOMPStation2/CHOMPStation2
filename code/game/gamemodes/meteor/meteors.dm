@@ -342,4 +342,8 @@
 /obj/effect/meteor/tunguska/Bump()
 	..()
 	if(prob(20))
+<<<<<<< HEAD
 		explosion(src.loc,2,4,6,8)
+=======
+		explosion(src.loc,2,4,6,8)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

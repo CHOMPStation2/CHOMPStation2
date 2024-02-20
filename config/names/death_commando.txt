@@ -66,5 +66,9 @@ Duke Killington
 AMERICA
 Toolboxl Rose
 Zombie Gandhi
+<<<<<<< HEAD
 A whole bunch of spiders in a SWAT suit
 THAT DAMN FAGGOT TRAITOR GEORGE MELONS
+=======
+A whole bunch of spiders in a SWAT suit
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

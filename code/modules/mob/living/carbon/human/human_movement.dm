@@ -135,9 +135,12 @@
 	// Loop through some slots, and add up their slowdowns.
 	// Includes slots which can provide armor, the back slot, and suit storage.
 	for(var/obj/item/I in list(wear_suit, w_uniform, back, gloves, head, s_store))
+<<<<<<< HEAD
 		if(istype(I,/obj/item/weapon/rig)) //CHOMPAdd
 			for(var/obj/item/II in I.contents)
 				. += II.slowdown
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		. += I.slowdown
 
 	// Hands are also included, to make the 'take off your armor instantly and carry it with you to go faster' trick no longer viable.
@@ -155,7 +158,11 @@
 		if(istype(T, /turf/simulated/floor/water))
 			if(species.water_movement)
 				turf_move_cost = CLAMP(turf_move_cost + species.water_movement, HUMAN_LOWEST_SLOWDOWN, 15)
+<<<<<<< HEAD
 			if(istype(shoes, /obj/item/clothing/shoes))	//CHOMPEdit - Fixes runtime
+=======
+			if(shoes)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 				var/obj/item/clothing/shoes/feet = shoes
 				if(istype(feet) && feet.water_speed)
 					turf_move_cost = CLAMP(turf_move_cost + feet.water_speed, HUMAN_LOWEST_SLOWDOWN, 15)
@@ -163,7 +170,11 @@
 		else if(istype(T, /turf/simulated/floor/outdoors/snow))
 			if(species.snow_movement)
 				turf_move_cost = CLAMP(turf_move_cost + species.snow_movement, HUMAN_LOWEST_SLOWDOWN, 15)
+<<<<<<< HEAD
 			if(istype(shoes, /obj/item/clothing/shoes))	//CHOMPEdit - Fixes runtime
+=======
+			if(shoes)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 				var/obj/item/clothing/shoes/feet = shoes
 				if(istype(feet) && feet.snow_speed)
 					turf_move_cost = CLAMP(turf_move_cost + feet.snow_speed, HUMAN_LOWEST_SLOWDOWN, 15)
@@ -225,7 +236,10 @@
 	return FALSE
 
 
+<<<<<<< HEAD
 /* CHOMPedit: Nuking slipping.
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /mob/living/carbon/human/Process_Spaceslipping(var/prob_slip = 5)
 	//If knocked out we might just hit it and stop.  This makes it possible to get dead bodies and such.
 
@@ -254,22 +268,39 @@
 
 	prob_slip = round(prob_slip)
 	return(prob_slip)
+<<<<<<< HEAD
 */// CHOMPedit end.
 
 // Handle footstep sounds
 /mob/living/carbon/human/handle_footstep(var/turf/T)
 	if(!istype(T) || is_incorporeal() || !config.footstep_volume || !T.footstep_sounds || !T.footstep_sounds.len)
 		return	//CHOMPEdit - Condensed some return checks
+=======
+
+// Handle footstep sounds
+/mob/living/carbon/human/handle_footstep(var/turf/T)
+	if(!istype(T))
+		return
+	if(is_incorporeal())
+		return
+	if(!config.footstep_volume || !T.footstep_sounds || !T.footstep_sounds.len)
+		return
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	// Future Upgrades - Multi species support
 	var/list/footstep_sounds = T.footstep_sounds["human"]
 	if(!footstep_sounds)
 		return
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	var/S = pick(footstep_sounds)
 	GLOB.step_taken_shift_roundstat++
 	if(!S) return
 
 	// Play every 20 steps while walking, for the sneak
 	if(m_intent == "walk" && step_count++ % 20 != 0)
+<<<<<<< HEAD
 		check_vorefootstep(m_intent, T) //CHOMPstation edit: sloshing reagent belly walk system
 	// Play every other step while running
 	if(m_intent == "run" && step_count++ % 2 != 0)
@@ -278,6 +309,12 @@
 		if(SEND_SIGNAL(shoes, COMSIG_SHOES_STEP_ACTION, m_intent))	//CHOMPEdit - Shoe step comsig
 			return
 	if(step_count % 2 == 0)	//CHOMPAdd, since I removed the returns up above, need this to track each odd step.
+=======
+		return
+
+	// Play every other step while running
+	if(m_intent == "run" && step_count++ % 2 != 0)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		return
 
 	var/volume = config.footstep_volume
@@ -305,4 +342,8 @@
 /mob/living/carbon/human/set_dir(var/new_dir)
 	. = ..()
 	if(. && (species.tail || tail_style))
+<<<<<<< HEAD
 		update_tail_showing()
+=======
+		update_tail_showing()
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

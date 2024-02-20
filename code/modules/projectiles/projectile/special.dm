@@ -48,7 +48,11 @@
 	hud_state = "rocket_fire"
 
 /obj/item/projectile/bullet/gyro/on_hit(var/atom/target, var/blocked = 0)
+<<<<<<< HEAD
 	explosion(target, -1, 0, 2, 0, 0) //CHOMPEdit - Don't spam admins
+=======
+	explosion(target, -1, 0, 2)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	..()
 
 /obj/item/projectile/temp

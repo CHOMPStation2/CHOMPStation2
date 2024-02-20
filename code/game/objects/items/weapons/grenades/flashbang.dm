@@ -64,20 +64,29 @@
 			else
 				M.ear_damage += rand(0, 5)
 				M.ear_deaf = max(M.ear_deaf,15)
+<<<<<<< HEAD
 				M.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	else if(get_dist(M, T) <= round(max_range * 0.5 * bang_effectiveness))
 		if(!ear_safety)
 			M.Confuse(8)
 			M.ear_damage += rand(0, 3)
 			M.ear_deaf = max(M.ear_deaf,10)
+<<<<<<< HEAD
 			M.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	else if(!ear_safety && get_dist(M, T) <= (max_range * 0.7 * bang_effectiveness))
 		M.Confuse(4)
 		M.ear_damage += rand(0, 1)
 		M.ear_deaf = max(M.ear_deaf,5)
+<<<<<<< HEAD
 		M.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	//This really should be in mob not every check
 	if(ishuman(M))
@@ -165,4 +174,8 @@
 
 	var/dettime = rand(15,60)
 	spawn(dettime)
+<<<<<<< HEAD
 		detonate()
+=======
+		detonate()
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

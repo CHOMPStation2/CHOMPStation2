@@ -31,7 +31,10 @@
 	var/category = "Any"
 	var/author
 	var/SQLquery
+<<<<<<< HEAD
 	var/list/SQLargs //CHOMPEdit TGSQL
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/machinery/librarypubliccomp/attack_hand(var/mob/user as mob)
 	usr.set_machine(src)
@@ -45,7 +48,11 @@
 			<A href='?src=\ref[src];search=1'>\[Start Search\]</A><BR>"}
 		if(1)
 			establish_old_db_connection()
+<<<<<<< HEAD
 			if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+=======
+			if(!dbcon_old.IsConnected())
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 				dat += "<font color=red><b>ERROR</b>: Unable to contact External Archive. Please contact your system administrator for assistance.</font><BR>"
 			else if(!SQLquery)
 				dat += "<font color=red><b>ERROR</b>: Malformed search request. Please contact your system administrator for assistance.</font><BR>"
@@ -53,7 +60,11 @@
 				dat += {"<table>
 				<tr><td>AUTHOR</td><td>TITLE</td><td>CATEGORY</td><td>SS<sup>13</sup>BN</td></tr>"}
 
+<<<<<<< HEAD
 				var/datum/db_query/query = SSdbcore.NewQuery(SQLquery, SQLargs) //CHOMPEdit TGSQL
+=======
+				var/DBQuery/query = dbcon_old.NewQuery(SQLquery)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 				query.Execute()
 
 				while(query.NextRow())
@@ -62,7 +73,10 @@
 					var/category = query.item[3]
 					var/id = query.item[4]
 					dat += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td>[id]</td></tr>"
+<<<<<<< HEAD
 				qdel(query)
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 				dat += "</table><BR>"
 			dat += "<A href='?src=\ref[src];back=1'>\[Go Back\]</A><BR>"
 	user << browse(dat, "window=publiclibrary")
@@ -97,6 +111,7 @@
 		author = sanitizeSQL(author)
 	if(href_list["search"])
 		SQLquery = "SELECT author, title, category, id FROM library WHERE "
+<<<<<<< HEAD
 		SQLargs = list() //CHOMPEdit begin
 		if(category == "Any")
 			SQLquery += "author LIKE '%:t_author%' AND title LIKE '%:t_title%'"
@@ -107,6 +122,12 @@
 			SQLargs["t_author"] = author
 			SQLargs["t_title"] = title
 			SQLargs["t_category"] = category //CHOMPEdit End
+=======
+		if(category == "Any")
+			SQLquery += "author LIKE '%[author]%' AND title LIKE '%[title]%'"
+		else
+			SQLquery += "author LIKE '%[author]%' AND title LIKE '%[title]%' AND category='[category]'"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		screenstate = 1
 
 	if(href_list["back"])
@@ -285,22 +306,41 @@
 
 			//dat += "<h3><font color=red>Warning: System Administrator has slated this archive for removal. Personal uploads should be taken to the NT board of internal literature.</font></h3>" //VOREStation Removal
 
+<<<<<<< HEAD
 			if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+=======
+			if(!dbcon_old.IsConnected())
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 				dat += "<font color=red><b>ERROR</b>: Unable to contact External Archive. Please contact your system administrator for assistance.</font>"
 			else
 				dat += {"<A href='?src=\ref[src];orderbyid=1'>(Order book by SS<sup>13</sup>BN)</A><BR><BR>
 				<table>
 				<tr><td><A href='?src=\ref[src];sort=author>AUTHOR</A></td><td><A href='?src=\ref[src];sort=title>TITLE</A></td><td><A href='?src=\ref[src];sort=category>CATEGORY</A></td><td></td></tr>"}
+<<<<<<< HEAD
 				var/datum/db_query/query = SSdbcore.NewQuery("SELECT id, author, title, category FROM library ORDER BY :t_sortby", list("t_sortby" = sortby)) //CHOMPEdit TGSQL
 				query.Execute()
 
+=======
+				var/DBQuery/query = dbcon_old.NewQuery("SELECT id, author, title, category FROM library ORDER BY [sortby]")
+				query.Execute()
+
+				var/show_admin_options = check_rights(R_ADMIN, show_msg = FALSE)
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 				while(query.NextRow())
 					var/id = query.item[1]
 					var/author = query.item[2]
 					var/title = query.item[3]
 					var/category = query.item[4]
+<<<<<<< HEAD
 					dat += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td><A href='?src=\ref[src];targetid=[id]'>\[Order\]</A></td></tr>"
 				qdel(query) //CHOMPEdit TGSQL
+=======
+					dat += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td><A href='?src=\ref[src];targetid=[id]'>\[Order\]</A>"
+					if(show_admin_options) // This isn't the only check, since you can just href-spoof press this button. Just to tidy things up.
+						dat += "<A href='?src=\ref[src];delid=[id]'>\[Del\]</A>"
+					dat += "</td></tr>"
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 				dat += "</table>"
 			dat += "<BR><A href='?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
 
@@ -322,13 +362,21 @@
 		dat += "<h3>ADMINISTRATIVE MANAGEMENT</h3>"
 		establish_old_db_connection()
 
+<<<<<<< HEAD
 		if(!SSdbcore.IsConnected())
+=======
+		if(!dbcon_old.IsConnected())
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			dat += "<font color=red><b>ERROR</b>: Unable to contact External Archive. Please contact your system administrator for assistance.</font>"
 		else
 			dat += {"<A href='?src=\ref[src];orderbyid=1'>(Order book by SS<sup>13</sup>BN)</A><BR><BR>
 			<table>
 			<tr><td><A href='?src=\ref[src];sort=author>AUTHOR</A></td><td><A href='?src=\ref[src];sort=title>TITLE</A></td><td><A href='?src=\ref[src];sort=category>CATEGORY</A></td><td></td></tr>"}
+<<<<<<< HEAD
 			var/datum/db_query/query = SSdbcore.NewQuery("SELECT id, author, title, category FROM library ORDER BY [sortby]")
+=======
+			var/DBQuery/query = dbcon_old.NewQuery("SELECT id, author, title, category FROM library ORDER BY [sortby]")
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			query.Execute()
 
 			while(query.NextRow())
@@ -441,7 +489,11 @@
 						tgui_alert_async(usr, "This book has been rejected from the database. Aborting!")
 					else
 						establish_old_db_connection()
+<<<<<<< HEAD
 						if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+=======
+						if(!dbcon_old.IsConnected())
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 							tgui_alert_async(usr, "Connection to Archive has been severed. Aborting.")
 						else
 							/*
@@ -450,24 +502,39 @@
 							var/sqlcontent = dbcon.Quote(scanner.cache.dat)
 							var/sqlcategory = dbcon.Quote(upload_category)
 							*/
+<<<<<<< HEAD
 							var/list/sql_args = list("t_title" = scanner.cache.name, "t_author" = scanner.cache.author, "t_content" = scanner.cache.dat, "t_category" = upload_category) //CHOMPEdit TGSQL
 							/*var/sqltitle = sanitizeSQL(scanner.cache.name) CHOMPEdit TGSQL
 							var/sqlauthor = sanitizeSQL(scanner.cache.author)
 							var/sqlcontent = sanitizeSQL(scanner.cache.dat)
 							var/sqlcategory = sanitizeSQL(upload_category)*/
 							var/datum/db_query/query = SSdbcore.NewQuery("INSERT INTO library (author, title, content, category) VALUES (:t_author, :t_title, :t_content, :t_category)", sql_args) //CHOMPEdit TGSQL
+=======
+							var/sqltitle = sanitizeSQL(scanner.cache.name)
+							var/sqlauthor = sanitizeSQL(scanner.cache.author)
+							var/sqlcontent = sanitizeSQL(scanner.cache.dat)
+							var/sqlcategory = sanitizeSQL(upload_category)
+							var/DBQuery/query = dbcon_old.NewQuery("INSERT INTO library (author, title, content, category) VALUES ('[sqlauthor]', '[sqltitle]', '[sqlcontent]', '[sqlcategory]')")
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 							if(!query.Execute())
 								to_chat(usr,query.ErrorMsg())
 							else
 								log_game("[usr.name]/[usr.key] has uploaded the book titled [scanner.cache.name], [length(scanner.cache.dat)] signs")
 								tgui_alert_async(usr, "Upload Complete.")
+<<<<<<< HEAD
 							qdel(query) //CHOMPEdit TGSQL
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	//VOREStation Edit End
 
 	if(href_list["targetid"])
 		var/sqlid = sanitizeSQL(href_list["targetid"])
 		establish_old_db_connection()
+<<<<<<< HEAD
 		if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+=======
+		if(!dbcon_old.IsConnected())
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			tgui_alert_async(usr, "Connection to Archive has been severed. Aborting.")
 		if(bibledelay)
 			for (var/mob/V in hearers(src))
@@ -476,7 +543,11 @@
 			bibledelay = 1
 			spawn(6)
 				bibledelay = 0
+<<<<<<< HEAD
 			var/datum/db_query/query = SSdbcore.NewQuery("SELECT * FROM library WHERE id=[sqlid]") //CHOMPEdit TGSQL
+=======
+			var/DBQuery/query = dbcon_old.NewQuery("SELECT * FROM library WHERE id=[sqlid]")
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			query.Execute()
 
 			while(query.NextRow())
@@ -492,7 +563,22 @@
 				B.item_state = B.icon_state
 				src.visible_message("[src]'s printer hums as it produces a completely bound book. How did it do that?")
 				break
+<<<<<<< HEAD
 			qdel(query) //CHOMPEdit TGSQL
+=======
+
+	if(href_list["delid"])
+		if(!check_rights(R_ADMIN))
+			return
+		var/sqlid = sanitizeSQL(href_list["delid"])
+		establish_old_db_connection()
+		if(!dbcon_old.IsConnected())
+			tgui_alert_async(usr, "Connection to Archive has been severed. Aborting.")
+		else
+			var/DBQuery/query = dbcon_old.NewQuery("DELETE FROM library WHERE id=[sqlid]")
+			query.Execute()
+			log_admin("[usr.key] has deleted the book [sqlid]")	//VOREStation Addition
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	if(href_list["orderbyid"])
 		var/orderid = tgui_input_number(usr, "Enter your order:")

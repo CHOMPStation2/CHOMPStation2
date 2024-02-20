@@ -10,7 +10,10 @@
 	var/large = 1
 	wall_mounted = 0 //never solid (You can always pass over it)
 	health = 200
+<<<<<<< HEAD
 	anchored = 1 //CHOMPADD - Making them properly IMMOBILE. Like the Desc says? Yeah...
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	closet_appearance = /decl/closet_appearance/secure_closet
 

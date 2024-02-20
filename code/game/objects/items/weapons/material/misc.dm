@@ -215,7 +215,10 @@
 	user.visible_message("<span class='warning'>\The [user] cracks \the [src]!</span>")
 	playsound(src, 'sound/effects/snap.ogg', 50, 1)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/item/weapon/material/knife/machete/hatchet/stone
 	name = "hatchet"
 	desc = "A very sharp axe blade upon a short fibremetal handle. It has a long history of chopping things, but now it is used for chopping wood."

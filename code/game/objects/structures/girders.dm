@@ -3,7 +3,11 @@
 	icon_state = "girder"
 	anchored = TRUE
 	density = TRUE
+<<<<<<< HEAD
 	layer = TABLE_LAYER //CHOMPEdit - moved so that they render above catwalks.
+=======
+	plane = PLATING_PLANE
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	w_class = ITEMSIZE_HUGE
 	var/state = 0
 	var/health = 200
@@ -291,7 +295,11 @@
 	reinforcing = 0
 
 /obj/structure/girder/proc/dismantle()
+<<<<<<< HEAD
 	girder_material.place_dismantled_product(get_turf(src), 2) // CHOMPEdit
+=======
+	girder_material.place_dismantled_product(get_turf(src))
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	qdel(src)
 
 /obj/structure/girder/attack_hand(mob/user as mob)
@@ -365,7 +373,10 @@
 	cover = 60
 	girder_material = "resin"
 
+<<<<<<< HEAD
 /* CHOMPEdit - moved this block to modular_chomp\code\game\objects\items\weapons\rcd.dm
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /obj/structure/girder/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
 	var/turf/simulated/T = get_turf(src)
 	if(!istype(T) || T.density)
@@ -414,7 +425,10 @@
 			to_chat(user, span("notice", "You deconstruct \the [src]."))
 			qdel(src)
 			return TRUE
+<<<<<<< HEAD
 */
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/structure/girder/bay
 	wall_type = /turf/simulated/wall/bay

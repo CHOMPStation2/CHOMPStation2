@@ -7,8 +7,13 @@
 
 */
 
+<<<<<<< HEAD
 #define STATION_Z 2
 #define TELECOMM_Z 4
+=======
+#define STATION_Z 1
+#define TELECOMM_Z 3
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/machinery/telecomms
 	var/list/temp = null // output message

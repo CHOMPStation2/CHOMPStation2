@@ -7,30 +7,48 @@
 	closet_appearance = /decl/closet_appearance/bio
 
 	starts_with = list(
+<<<<<<< HEAD
 		/obj/item/clothing/suit/bio_suit/general = 2, // CHOMP Block Edit Start
 		/obj/item/clothing/head/bio_hood/general = 2,
 		/obj/item/weapon/tank/oxygen = 2,
 		/obj/item/clothing/mask/gas = 2) // CHOMP Block Edit End
+=======
+		/obj/item/clothing/suit/bio_suit/general,
+		/obj/item/clothing/head/bio_hood/general)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 
 /obj/structure/closet/l3closet/virology
 	closet_appearance = /decl/closet_appearance/bio/virology
 
 	starts_with = list(
+<<<<<<< HEAD
 		/obj/item/clothing/suit/bio_suit/virology = 2, // CHOMP Block Edit Start
 		/obj/item/clothing/head/bio_hood/virology = 2,
 		/obj/item/clothing/mask/gas = 2,
 		/obj/item/weapon/tank/oxygen = 2) // CHOMP Block Edit End
+=======
+		/obj/item/clothing/suit/bio_suit/virology,
+		/obj/item/clothing/head/bio_hood/virology,
+		/obj/item/clothing/mask/gas,
+		/obj/item/weapon/tank/oxygen)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 
 /obj/structure/closet/l3closet/security
 	closet_appearance = /decl/closet_appearance/bio/security
 
 	starts_with = list(
+<<<<<<< HEAD
 		/obj/item/clothing/suit/bio_suit/security = 2, // CHOMP Block Edit Start
 		/obj/item/clothing/head/bio_hood/security = 2,
 		/obj/item/clothing/mask/gas = 2,
 		/obj/item/weapon/tank/oxygen = 2) // CHOMP Block Edit End
+=======
+		/obj/item/clothing/suit/bio_suit/security,
+		/obj/item/clothing/head/bio_hood/security)
+		///obj/item/weapon/gun/energy/taser/xeno/sec) //VOREStation Removal
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/structure/closet/l3closet/janitor
 	closet_appearance = /decl/closet_appearance/bio/janitor
@@ -46,20 +64,31 @@
 	closet_appearance = /decl/closet_appearance/bio/science
 
 	starts_with = list(
+<<<<<<< HEAD
 		/obj/item/clothing/suit/bio_suit/scientist = 2, // CHOMP Block Edit Start
 		/obj/item/clothing/head/bio_hood/scientist = 2,
 		/obj/item/clothing/mask/gas = 2,
 		/obj/item/weapon/tank/oxygen = 2, // CHOMP Block Edit End
+=======
+		/obj/item/clothing/suit/bio_suit/scientist,
+		/obj/item/clothing/head/bio_hood/scientist,
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		/obj/item/weapon/storage/bag/xeno = 1)
 
 /obj/structure/closet/l3closet/scientist/double
 	starts_with = list(
+<<<<<<< HEAD
 		/obj/item/clothing/suit/bio_suit/scientist = 2, // CHOMP Block Edit Start
 		/obj/item/clothing/head/bio_hood/scientist = 2,
 		/obj/item/weapon/storage/bag/xeno = 2,
 		/obj/item/clothing/mask/gas = 2,
 		/obj/item/weapon/tank/oxygen = 2,
 		/obj/item/weapon/storage/bag/xeno = 2) // CHOMP Block Edit End
+=======
+		/obj/item/clothing/suit/bio_suit/scientist = 2,
+		/obj/item/clothing/head/bio_hood/scientist = 2,
+		/obj/item/weapon/storage/bag/xeno = 2) // VOREEdit, adding the xenobag to xenobio.
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 
 /obj/structure/closet/l3closet/medical
@@ -68,5 +97,9 @@
 	starts_with = list(
 		/obj/item/clothing/suit/bio_suit/general = 3,
 		/obj/item/clothing/head/bio_hood/general = 3,
+<<<<<<< HEAD
 		/obj/item/clothing/mask/gas = 3, // CHOMP Block Edit Start
 		/obj/item/weapon/tank/oxygen = 3) // CHOMP Block Edit End
+=======
+		/obj/item/clothing/mask/gas = 3)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

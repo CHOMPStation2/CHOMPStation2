@@ -424,7 +424,10 @@ var/global/list/semirandom_mob_spawner_decisions = list()
 			) = 5,
 		list(/mob/living/simple_mob/animal/sif/siffet) = 5,
 		list(/mob/living/simple_mob/animal/sif/tymisian) = 5,
+<<<<<<< HEAD
 		list(/mob/living/simple_mob/vore/alienanimals/teppi) = 10,
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		list(/mob/living/simple_mob/vore/alienanimals/dustjumper) = 5,
 		list(/mob/living/simple_mob/vore/alienanimals/space_jellyfish) = 5,
 		list(/mob/living/simple_mob/vore/alienanimals/space_ghost) = 5,
@@ -531,7 +534,10 @@ var/global/list/semirandom_mob_spawner_decisions = list()
 			/mob/living/simple_mob/vore/oregrub = 5,
 			/mob/living/simple_mob/vore/oregrub/lava = 1
 			) = 15,
+<<<<<<< HEAD
 		list(/mob/living/simple_mob/vore/alienanimals/teppi) = 15, //CHOMP explo keep
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		list(/mob/living/simple_mob/vore/alienanimals/space_jellyfish) = 5,
 		list(/mob/living/simple_mob/vore/alienanimals/space_ghost) = 5,
 		list(
@@ -793,8 +799,12 @@ var/global/list/semirandom_mob_spawner_decisions = list()
 			/mob/living/simple_mob/vore/sect_queen = 1
 			) = 50,
 		list(/mob/living/simple_mob/vore/solargrub) = 100,
+<<<<<<< HEAD
 		list(/mob/living/simple_mob/vore/woof) = 1,
 		list(/mob/living/simple_mob/vore/alienanimals/teppi) = 25
+=======
+		list(/mob/living/simple_mob/vore/woof) = 1
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		)
 
 /obj/random/mob/semirandom_mob_spawner/sus

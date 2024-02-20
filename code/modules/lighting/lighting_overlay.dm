@@ -93,12 +93,20 @@
 		affected_turf.underlays -= current_underlay
 		current_underlay.icon_state = "transparent"
 		current_underlay.color = null
+<<<<<<< HEAD
 		affected_turf.underlays |= current_underlay
+=======
+		affected_turf.underlays += current_underlay
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	else if(!set_luminosity)
 		affected_turf.underlays -= current_underlay
 		current_underlay.icon_state = "dark"
 		current_underlay.color = null
+<<<<<<< HEAD
 		affected_turf.underlays |= current_underlay
+=======
+		affected_turf.underlays += current_underlay
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	else
 		affected_turf.underlays -= current_underlay
 		current_underlay.icon_state = "gradient"
@@ -110,7 +118,11 @@
 			00, 00, 00, 01
 		)
 
+<<<<<<< HEAD
 		affected_turf.underlays |= current_underlay
+=======
+		affected_turf.underlays += current_underlay
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	affected_turf.set_luminosity(set_luminosity)
 
@@ -118,4 +130,8 @@
 	affected_turf.underlays -= current_underlay
 
 /datum/lighting_object/proc/addtoturf()
+<<<<<<< HEAD
 	affected_turf.underlays |= current_underlay
+=======
+	affected_turf.underlays += current_underlay
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)

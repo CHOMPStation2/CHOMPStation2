@@ -590,6 +590,7 @@
 		if(check_penetrate(A))
 			passthrough = TRUE
 		penetrating--
+<<<<<<< HEAD
 	/* //CHOMPEdit Begin
 	var/obj/item/projectile/bullet/this = src
 	if(istype(this))
@@ -598,6 +599,8 @@
 			penetrating = 0
 	//CHOMPEdit End
 	*/
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	if(passthrough)
 		trajectory_ignore_forcemove = TRUE
@@ -641,7 +644,11 @@
 
 /obj/item/projectile/proc/get_structure_damage()
 	if(damage_type == BRUTE || damage_type == BURN)
+<<<<<<< HEAD
 		return damage + SA_bonus_damage //CHOMP Edit: Added SA_bonus_damage to the returned value so that phaser can do damage against shields.
+=======
+		return damage
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	return 0
 
 //return 1 if the projectile should be allowed to pass through after all, 0 if not.
@@ -663,7 +670,11 @@
 		return
 
 	//roll to-hit
+<<<<<<< HEAD
 	miss_modifier = max(miss_modifier + target_mob.get_evasion(), -100) //CHOMPEDIT - removing baymiss
+=======
+	miss_modifier = max(15*(distance-2) - accuracy + miss_modifier + target_mob.get_evasion(), -100)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	var/hit_zone = get_zone_with_miss_chance(def_zone, target_mob, miss_modifier, ranged_attack=(distance > 1 || original != target_mob), force_hit = !can_miss) //if the projectile hits a target we weren't originally aiming at then retain the chance to miss
 
 	var/result = PROJECTILE_FORCE_MISS
@@ -706,7 +717,11 @@
 	//admin logs
 	if(!no_attack_log)
 		if(istype(firer, /mob) && istype(target_mob))
+<<<<<<< HEAD
 			add_attack_logs(firer,target_mob,"Shot with \a [src.type] projectile") //CHOMPEdit
+=======
+			add_attack_logs(firer,target_mob,"Shot with \a [src.type] projectile")
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	//sometimes bullet_act() will want the projectile to continue flying
 	if (result == PROJECTILE_CONTINUE)

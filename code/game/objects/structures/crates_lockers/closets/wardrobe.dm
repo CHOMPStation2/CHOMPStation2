@@ -59,8 +59,12 @@
 		/obj/item/clothing/suit/storage/det_trench = 2,
 		/obj/item/clothing/suit/storage/det_trench/grey = 2,
 		/obj/item/clothing/suit/storage/forensics/blue = 2,
+<<<<<<< HEAD
 		/obj/item/clothing/suit/storage/forensics/red = 2,
 		/obj/item/clothing/gloves/forensic = 2) //CHOMP Addition
+=======
+		/obj/item/clothing/suit/storage/forensics/red = 2)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/structure/closet/wardrobe/pink
 	name = "pink wardrobe"
@@ -104,6 +108,7 @@
 		/obj/item/godfig = 2,
 		/obj/item/weapon/deck/tarot)
 
+<<<<<<< HEAD
 /obj/structure/closet/wardrobe/monastary
 	name = "Monastary wardrobe"
 	desc = "It's a storage unit for approved religious attire."
@@ -117,6 +122,8 @@
 		/obj/item/clothing/shoes/boots/winter = 2,
 		/obj/item/clothing/suit/storage/hooded/wintercoat = 2)
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /obj/structure/closet/wardrobe/green
 	name = "green wardrobe"

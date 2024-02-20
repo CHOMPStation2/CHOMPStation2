@@ -43,7 +43,11 @@ var/next_station_date_change = 1 DAY
 		next_station_date_change += 1 DAY
 		update_time = TRUE
 	if(!station_date || update_time)
+<<<<<<< HEAD
 		station_date = num2text((text2num(time2text(REALTIMEOFDAY, "YYYY"))+544)) + "-" + time2text(REALTIMEOFDAY, "MM-DD") //CHOMP EDIT
+=======
+		station_date = num2text((text2num(time2text(REALTIMEOFDAY, "YYYY"))+300)) + "-" + time2text(REALTIMEOFDAY, "MM-DD") //VOREStation Edit
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	return station_date
 
 //ISO 8601
@@ -116,7 +120,11 @@ GLOBAL_VAR_INIT(round_start_time, 0)
 			warning("Time rollover error: world.timeofday decreased from previous check, but the day or last rollover is less than 12 hours old. System clock?")
 	rollovercheck_last_timeofday = world.timeofday
 	return midnight_rollovers
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 //Increases delay as the server gets more overloaded,
 //as sleeps aren't cheap and sleeping only to wake up and sleep again is wasteful
 #define DELTA_CALC max(((max(TICK_USAGE, world.cpu) / 100) * max(Master.sleep_delta-1,1)), 1)

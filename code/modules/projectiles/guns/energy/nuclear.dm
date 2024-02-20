@@ -7,7 +7,10 @@
 	capacity projectile settings. In other words: Stun or Kill."
 	description_fluff = "Lawson Arms is Hephaestus Industries’ main personal-energy-weapon branding, often sold alongside MarsTech projectile \
 	weapons to security and law enforcement agencies."
+<<<<<<< HEAD
 	icon = 'icons/obj/gun.dmi' // CHOMPEdit: Gun Sprites
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	icon_state = "egunstun"
 	item_state = null //so the human update icon uses the icon_state instead.
 	fire_delay = 8
@@ -55,8 +58,12 @@
 	icon_state = "energystun"
 	item_state = null //so the human update icon uses the icon_state instead.
 	force = 8
+<<<<<<< HEAD
 	w_class = ITEMSIZE_HUGE		//Probably gonna make it a rifle sooner or later //CHOMP Edit, and so I did.
 	slot_flags = SLOT_BELT|SLOT_BACK //CHOMP Edit. Let's make it so that if it doesn't fit in a backpack, it doesn't fit in a holster either.
+=======
+	w_class = ITEMSIZE_LARGE
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	fire_delay = 6
 
 	projectile_type = /obj/item/projectile/beam/stun/weak
@@ -86,7 +93,10 @@
 	force = 8
 	w_class = ITEMSIZE_LARGE
 	fire_delay = 7
+<<<<<<< HEAD
 	charge_meter = 0 //ChompEDIT - tommylaser doesn't have charge sprites.
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	projectile_type = /obj/item/projectile/beam/burstlaser
 	origin_tech = list(TECH_COMBAT = 5, TECH_MAGNET = 3, TECH_ILLEGAL = 4)
@@ -157,7 +167,11 @@
 	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 5, TECH_POWER = 3)
 	slot_flags = SLOT_BELT
 	force = 8 //looks heavier than a pistol
+<<<<<<< HEAD
 	w_class = ITEMSIZE_HUGE	//Looks bigger than a pistol, too. //CHOMP Edit: Looks like a cannon, lol.
+=======
+	w_class = ITEMSIZE_LARGE	//Looks bigger than a pistol, too.
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	fire_delay = 6	//This one's not a handgun, it should have the same fire delay as everything else
 	cell_type = /obj/item/weapon/cell/device/weapon/recharge
 	battery_lock = 1

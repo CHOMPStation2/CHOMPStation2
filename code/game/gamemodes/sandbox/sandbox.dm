@@ -11,12 +11,15 @@
 		M.CanBuild()
 	return 1
 
+<<<<<<< HEAD
 /datum/game_mode/sandbox/process()
 	for(var/mob/M in player_list)
 		if(M.sandbox == null)
 			M.CanBuild()
 	return 1
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /datum/game_mode/sandbox/post_setup()
 	..()
 	if(emergency_shuttle)

@@ -77,7 +77,11 @@ DEBUG
 			return
 
 		//Job permabans
+<<<<<<< HEAD
 		var/datum/db_query/query = SSdbcore.NewQuery("SELECT ckey, job FROM erro_ban WHERE bantype = 'JOB_PERMABAN' AND isnull(unbanned)") //CHOMPEdit TGSQL
+=======
+		var/DBQuery/query = dbcon.NewQuery("SELECT ckey, job FROM erro_ban WHERE bantype = 'JOB_PERMABAN' AND isnull(unbanned)")
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		query.Execute()
 
 		while(query.NextRow())
@@ -85,9 +89,15 @@ DEBUG
 			var/job = query.item[2]
 
 			jobban_keylist.Add("[ckey] - [job]")
+<<<<<<< HEAD
 		qdel(query) //CHOMPEdit TGSQL
 		//Job tempbans
 		var/datum/db_query/query1 = SSdbcore.NewQuery("SELECT ckey, job FROM erro_ban WHERE bantype = 'JOB_TEMPBAN' AND isnull(unbanned) AND expiration_time > Now()") //CHOMPEdit TGSQL
+=======
+
+		//Job tempbans
+		var/DBQuery/query1 = dbcon.NewQuery("SELECT ckey, job FROM erro_ban WHERE bantype = 'JOB_TEMPBAN' AND isnull(unbanned) AND expiration_time > Now()")
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		query1.Execute()
 
 		while(query1.NextRow())
@@ -95,7 +105,10 @@ DEBUG
 			var/job = query1.item[2]
 
 			jobban_keylist.Add("[ckey] - [job]")
+<<<<<<< HEAD
 		qdel(query1) //CHOMPEdit TGSQL
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 /proc/jobban_savebanfile()
 	var/savefile/S=new("data/job_full.ban")

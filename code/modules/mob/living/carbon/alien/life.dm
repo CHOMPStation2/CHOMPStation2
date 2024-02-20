@@ -41,14 +41,20 @@
 	if(stat == DEAD)
 		blinded = 1
 		silent = 0
+<<<<<<< HEAD
 		deaf_loop.stop() // CHOMPStation Add: Ear Ringing/Deafness - Not sure if we need this, but, safety.
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	else
 		updatehealth()
 		if(health <= 0)
 			death()
 			blinded = 1
 			silent = 0
+<<<<<<< HEAD
 			deaf_loop.stop() // CHOMPStation Add: Ear Ringing/Deafness - Not sure if we need this, but, safety.
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			return 1
 
 		if(paralysis && paralysis > 0)

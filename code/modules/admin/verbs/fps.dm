@@ -8,7 +8,11 @@
 	if(!check_rights(R_DEBUG))
 		return
 
+<<<<<<< HEAD
 	var/new_fps = round(tgui_input_number(usr, "Sets game frames-per-second. Can potentially break the game (default: [config.fps])", "FPS", world.fps, round(config.fps * 1.5)))
+=======
+	var/new_fps = round(tgui_input_number(usr, "Sets game frames-per-second. Can potentially break the game (default: [config.fps])", "FPS", world.fps), round(config.fps * 1.5))
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(new_fps <= 0)
 		to_chat(src, "<span class='danger'>Error: set_server_fps(): Invalid world.fps value. No changes made.</span>")
 		return

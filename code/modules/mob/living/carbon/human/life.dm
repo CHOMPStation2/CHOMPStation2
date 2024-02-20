@@ -277,10 +277,13 @@
 		if((COLD_RESISTANCE in mutations) || (prob(1)))
 			heal_organ_damage(0,1)
 
+<<<<<<< HEAD
 	 if(stat != DEAD) //CHOMPadd: Until I find where nutrion heal code is anyway
 	 	if((mRegen in mutations))
 	 		heal_organ_damage(0.2,0.2)
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	// DNA2 - Gene processing.
 	// The HULK stuff that was here is now in the hulk gene.
 	if(!isSynthetic())
@@ -553,9 +556,12 @@
 	if(status_flags & GODMODE)
 		return
 
+<<<<<<< HEAD
 	if(mNobreath in src.mutations) //CHOMPadd
 		return
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(suiciding)
 		failed_last_breath = 1
 		adjustOxyLoss(2)//If you are suiciding, you should die a little bit faster
@@ -743,6 +749,7 @@
 		failed_last_breath = 0
 		adjustOxyLoss(-5)
 
+<<<<<<< HEAD
 	if(!does_not_breathe && client) // If we breathe, and have an active client, check if we have synthetic lungs.
 		var/obj/item/organ/internal/lungs/L = internal_organs_by_name[O_LUNGS]
 		var/turf = get_turf(src)
@@ -753,6 +760,8 @@
 				play_inhale(M, exhale)
 				last_breath_sound = world.time
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	// Hot air hurts :(
 	if((breath.temperature <= species.cold_discomfort_level || breath.temperature >= species.heat_discomfort_level) && !(COLD_RESISTANCE in mutations))
@@ -819,6 +828,7 @@
 	breath.update_values()
 	return 1
 
+<<<<<<< HEAD
 /mob/living/carbon/human/proc/play_inhale(var/mob/living/M, var/exhale)
 	var/suit_inhale_sound
 	if(species.suit_inhale_sound)
@@ -839,6 +849,8 @@
 
 	playsound_local(get_turf(src), suit_exhale_sound, 100, pressure_affected = FALSE, volume_channel = VOLUME_CHANNEL_AMBIENCE)
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 /mob/living/carbon/human/proc/handle_allergens()
 	if(chem_effects[CE_ALLERGEN])
 		//first, multiply the basic species-level value by our allergen effect rating, so consuming multiple seperate allergen typess simultaneously hurts more
@@ -1202,6 +1214,7 @@
 			take_overall_damage(1,1)
 		else //heal in the dark
 			heal_overall_damage(1,1)
+<<<<<<< HEAD
 	//CHOMPEdit Begin
 	if(species.photosynthesizing && nutrition < 1000)
 		var/light_amount = 0
@@ -1214,11 +1227,17 @@
 		nutrition = 0.1
 	//CHOMPEdit End
 	if(nutrition > 0 && stat != DEAD)
+=======
+
+	// nutrition decrease
+	if (nutrition > 0 && stat != DEAD)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		var/nutrition_reduction = species.hunger_factor
 
 		for(var/datum/modifier/mod in modifiers)
 			if(!isnull(mod.metabolism_percent))
 				nutrition_reduction *= mod.metabolism_percent
+<<<<<<< HEAD
 		//CHOMPEdit Begin
 		if(nutrition > 1000 && species.grows && size_multiplier < RESIZE_HUGE)
 			nutrition_reduction *= 5
@@ -1227,6 +1246,8 @@
 			nutrition_reduction *= 0.3
 			resize(max(size_multiplier-0.004,RESIZE_TINY), animate = FALSE)
 		//CHOMPEdit End
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		adjust_nutrition(-nutrition_reduction)
 
 	if(noisy == TRUE && nutrition < 250 && prob(10)) //VOREStation edit for hunger noises.
@@ -1234,6 +1255,7 @@
 		var/growlmultiplier = 100 - (nutrition / 250 * 100)
 		playsound(src, growlsound, vol = growlmultiplier, vary = 1, falloff = 0.1, ignore_walls = TRUE, preference = /datum/client_preference/digestion_noises)
 	// VOREStation Edit End
+<<<<<<< HEAD
 	//CHOMPEdit Begin
 	if(nutrition > 500 && noisy_full == TRUE)
 		var/belch_prob = 5 //Maximum belch prob.
@@ -1242,6 +1264,8 @@
 		if(prob(belch_prob))
 			src.emote("belch")
 	//CHOMPEdit End
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	// TODO: stomach and bloodstream organ.
 	if(!isSynthetic())
@@ -1264,7 +1288,10 @@
 	if(stat == DEAD)	//DEAD. BROWN BREAD. SWIMMING WITH THE SPESS CARP
 		blinded = 1
 		silent = 0
+<<<<<<< HEAD
 		deaf_loop.stop() // CHOMPStation Add: Ear Ringing/Deafness - Not sure if we need this, but, safety.
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	else				//ALIVE. LIGHTS ARE ON
 		updatehealth()	//TODO
 
@@ -1272,11 +1299,18 @@
 			death()
 			blinded = 1
 			silent = 0
+<<<<<<< HEAD
 			deaf_loop.stop() // CHOMPStation Add: Ear Ringing/Deafness - Not sure if we need this, but, safety.
 			return 1
 
 		//UNCONSCIOUS. NO-ONE IS HOME
 		if((getOxyLoss() > (species.total_health/2)) || (health <= (config.health_threshold_crit * species.crit_mod)))
+=======
+			return 1
+
+		//UNCONSCIOUS. NO-ONE IS HOME
+		if((getOxyLoss() > (species.total_health/2)) || (health <= config.health_threshold_crit))
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			Paralyse(3)
 
 		if(hallucination)
@@ -1320,7 +1354,11 @@
 				if (mind)
 					//Are they SSD? If so we'll keep them asleep but work off some of that sleep var in case of stoxin or similar.
 					if(client || sleeping > 3)
+<<<<<<< HEAD
 						AdjustSleeping(-1 * species.waking_speed)	//CHOMPEdit
+=======
+						AdjustSleeping(-1)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 						throw_alert("asleep", /obj/screen/alert/asleep)
 				if( prob(2) && health && !hal_crit && client )
 					spawn(0)
@@ -1388,7 +1426,10 @@
 		//Ears
 		if(sdisabilities & DEAF)	//disabled-deaf, doesn't get better on its own
 			ear_deaf = max(ear_deaf, 1)
+<<<<<<< HEAD
 			deaf_loop.start(skip_start_sound = TRUE) // CHOMPStation Add: Ear Ringing/Deafness
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		else if(ear_deaf)			//deafness, heals slowly over time
 			ear_deaf = max(ear_deaf-1, 0)
 		else if(get_ear_protection() >= 2)	//resting your ears with earmuffs heals ear damage faster
@@ -1397,11 +1438,14 @@
 		else if(ear_damage < 25)	//ear damage heals slowly under this threshold. otherwise you'll need earmuffs
 			ear_damage = max(ear_damage-0.05, 0)
 
+<<<<<<< HEAD
 		// CHOMPAdd: Handle Ear ringing, standalone safety check.
 		if(ear_deaf <= 0)
 			deaf_loop.stop() // CHOMPStation Add: Ear Ringing/Deafness
 		// CHOMPAdd End
 
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		//Resting
 		if(resting)
 			dizziness = max(0, dizziness - 15)
@@ -1596,12 +1640,20 @@
 		else
 			clear_alert("high")
 
+<<<<<<< HEAD
 		//CHOMPEdit - surrounding_belly() used instead of isbelly(loc) to not clear indirect vorefx
 		if(!surrounding_belly() && !previewing_belly) //VOREStation Add - Belly fullscreens safety //CHOMPEdit
 			clear_fullscreen("belly")
 			//clear_fullscreen("belly2") //Chomp disable, using our own implementation
 			//clear_fullscreen("belly3") //Chomp disable, using our own implementation
 			//clear_fullscreen("belly4") //Chomp disable, using our own implementation
+=======
+		if(!isbelly(loc)) //VOREStation Add - Belly fullscreens safety
+			clear_fullscreen("belly")
+			clear_fullscreen("belly2")
+			clear_fullscreen("belly3")
+			clear_fullscreen("belly4")
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 		if(config.welder_vision)
 			var/found_welder
@@ -1852,6 +1904,7 @@
 /mob/living/carbon/human/handle_shock()
 	..()
 	if(status_flags & GODMODE)	return 0	//godmode
+<<<<<<< HEAD
 	//CHOMPEdit - couple of fixes here. Fixes synths being stuck in permenant shock.
 	if(traumatic_shock >= 80 && can_feel_pain())
 		shock_stage += 1
@@ -1863,6 +1916,21 @@
 	if(health < (config.health_threshold_softcrit * species.crit_mod)) //CHOMPEdit - fixes
 		shock_stage = max(shock_stage, 61)
 	//CHOMPEdit end
+=======
+	if(!can_feel_pain()) return
+
+	if(health < config.health_threshold_softcrit)// health 0 makes you immediately collapse
+		shock_stage = max(shock_stage, 61)
+
+	if(traumatic_shock >= 80)
+		shock_stage += 1
+	else if(health < config.health_threshold_softcrit)
+		shock_stage = max(shock_stage, 61)
+	else
+		shock_stage = min(shock_stage, 160)
+		shock_stage = max(shock_stage-1, 0)
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(stat)
 		return 0
 
@@ -1894,27 +1962,36 @@
 		if (prob(5))
 			if(traumatic_shock >= 80)
 				to_chat(src, "<span class='danger'>[pick("The pain is excruciating", "Please&#44; just end the pain", "Your whole body is going numb")]!</span>")
+<<<<<<< HEAD
 				// CHOMPEdit: Pain
 				if(prob(20) && !isbelly(loc)) // Hopefully not spammy, only 20% of the time will we groan in pain + sanity for in-belly
 					emote("pain")
 				// CHOMPEdit End
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			Weaken(20)
 
 	if(shock_stage >= 120)
 		if (prob(2))
 			if(traumatic_shock >= 80)
 				to_chat(src, "<span class='danger'>[pick("You black out", "You feel like you could die any moment now", "You are about to lose consciousness")]!</span>")
+<<<<<<< HEAD
 				// CHOMPEdit: Pain
 				if(prob(40) && !isbelly(loc)) // Hopefully not spammy, only 40% of the time will we groan in pain + sanity for in-belly
 					emote("pain")
 				// CHOMPEdit End
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 			Paralyse(5)
 
 	if(shock_stage == 150)
 		if(!isbelly(loc)) //VOREStation Edit
 			custom_emote(VISIBLE_MESSAGE, "can no longer stand, collapsing!")
+<<<<<<< HEAD
 			if(prob(60)) // Hopefully not spammy, only 60% of the time will we groan in pain
 				emote("pain")
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		Weaken(20)
 
 	if(shock_stage >= 150)
@@ -2071,7 +2148,10 @@
 			holder2.icon_state = "huddead"
 		else if(foundVirus)
 			holder.icon_state = "hudill"
+<<<<<<< HEAD
 /* Start Chomp edit
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		else if(has_brain_worms())
 			var/mob/living/simple_mob/animal/borer/B = has_brain_worms()
 			if(B.controlling)
@@ -2079,13 +2159,20 @@
 			else
 				holder.icon_state = "hudhealthy"
 			holder2.icon_state = "hudbrainworm"
+<<<<<<< HEAD
 End Chomp edit */
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		else
 			holder.icon_state = "hudhealthy"
 			if(virus2.len)
 				holder2.icon_state = "hudill"
 			else
 				holder2.icon_state = "hudhealthy"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		apply_hud(STATUS_HUD, holder)
 		apply_hud(STATUS_HUD_OOC, holder2)
 

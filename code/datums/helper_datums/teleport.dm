@@ -6,7 +6,11 @@ var/bluespace_item_types = newlist(/obj/item/weapon/storage/backpack/holding,
 )
 
 //wrapper
+<<<<<<< HEAD
 /proc/do_teleport(ateleatom, adestination, aprecision=0, afteleport=1, aeffectin=null, aeffectout=null, asoundin=null, asoundout=null, local=TRUE, bohsafe=FALSE) //CHOMPStation Edit
+=======
+/proc/do_teleport(ateleatom, adestination, aprecision=0, afteleport=1, aeffectin=null, aeffectout=null, asoundin=null, asoundout=null, local=TRUE) //VOREStation Edit
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	new /datum/teleport/instant/science(arglist(args))
 	return
 
@@ -20,21 +24,34 @@ var/bluespace_item_types = newlist(/obj/item/weapon/storage/backpack/holding,
 	var/soundout //soundfile to play after teleportation
 	var/force_teleport = 1 //if false, teleport will use Move() proc (dense objects will prevent teleportation)
 	var/local = TRUE //VOREStation Add - If false, can teleport from/to any z-level
+<<<<<<< HEAD
 	var/bohsafe = FALSE //CHOMP Add - if true, can teleport safely with a BoH
 
 
 /datum/teleport/New(ateleatom, adestination, aprecision=0, afteleport=1, aeffectin=null, aeffectout=null, asoundin=null, asoundout=null, local=TRUE, bohsafe=FALSE) //CHOMPStation Edit
+=======
+
+
+/datum/teleport/New(ateleatom, adestination, aprecision=0, afteleport=1, aeffectin=null, aeffectout=null, asoundin=null, asoundout=null, local=TRUE) //VOREStation Edit
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	..()
 	if(!initTeleport(arglist(args)))
 		return 0
 	return 1
 
+<<<<<<< HEAD
 /datum/teleport/proc/initTeleport(ateleatom,adestination,aprecision,afteleport,aeffectin,aeffectout,asoundin,asoundout,local,bohsafe) //CHOMPStation Edit
+=======
+/datum/teleport/proc/initTeleport(ateleatom,adestination,aprecision,afteleport,aeffectin,aeffectout,asoundin,asoundout,local) //VOREStation Edit
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(!setTeleatom(ateleatom))
 		return 0
 	if(!setDestination(adestination))
 		return 0
+<<<<<<< HEAD
 	src.bohsafe = bohsafe
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(!setPrecision(aprecision))
 		return 0
 	setEffects(aeffectin,aeffectout)
@@ -142,7 +159,11 @@ var/bluespace_item_types = newlist(/obj/item/weapon/storage/backpack/holding,
 
 /datum/teleport/instant //teleports when datum is created
 
+<<<<<<< HEAD
 /datum/teleport/instant/New(ateleatom, adestination, aprecision=0, afteleport=1, bohsafe=0, aeffectin=null, aeffectout=null, asoundin=null, asoundout=null) //CHOMP edit
+=======
+/datum/teleport/instant/New(ateleatom, adestination, aprecision=0, afteleport=1, aeffectin=null, aeffectout=null, asoundin=null, asoundout=null)
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 	if(..())
 		teleport()
 	return
@@ -152,20 +173,28 @@ var/bluespace_item_types = newlist(/obj/item/weapon/storage/backpack/holding,
 	if(!aeffectin || !aeffectout)
 		var/datum/effect/effect/system/spark_spread/aeffect = new
 		aeffect.set_up(5, 1, teleatom)
+<<<<<<< HEAD
 		//CHOMP add start
 		var/datum/effect/effect/system/spark_spread/aeffect2 = new
 		aeffect2.set_up(5, 1, teleatom)		//This  looks stupid, but it doesn't work unless I do
 		//CHOMP add end
 		effectin = effectin || aeffect
 		effectout = effectout || aeffect2 //CHOMP edit
+=======
+		effectin = effectin || aeffect
+		effectout = effectout || aeffect
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 		return 1
 	else
 		return ..()
 
 /datum/teleport/instant/science/setPrecision(aprecision)
 	..()
+<<<<<<< HEAD
 	if(bohsafe) //CHOMPedit
 		return 1 //CHOMPedit
+=======
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
 
 	var/list/bluespace_things = newlist()
 
@@ -239,4 +268,8 @@ var/bluespace_item_types = newlist(/obj/item/weapon/storage/backpack/holding,
 		return 0
 	else
 		return 1
+<<<<<<< HEAD
 	//VOREStation Edit End
+=======
+	//VOREStation Edit End
+>>>>>>> 7c8bb85de3... Whitespace Standardization [MDB IGNORE] (#15748)
