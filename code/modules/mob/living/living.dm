@@ -55,7 +55,9 @@
 		tf_mob_holder = null
 	//VOREStation Addition End
 
-	qdel(selected_image)
+	//qdel(selected_image) //ChompEDIT - no qdelling /image vars
+	QDEL_NULL(selected_image) //ChompEDIT - no qdelling /image vars
+	QDEL_NULL(hud_list) //ChompEDIT - no qdelling /image vars
 	QDEL_NULL(vorePanel) //VOREStation Add
 	QDEL_LIST_NULL(vore_organs) //VOREStation Add
 	temp_language_sources = null //VOREStation Add
