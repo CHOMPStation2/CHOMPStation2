@@ -250,7 +250,7 @@
 			return
 		if(tgui_alert(pred, "Are you sure? If you should decide to revoke this, you will have the ability to do so in your 'Abilities' tab.", "Allow Prey Domination",list("No","Yes")) != "Yes")
 			return
-	else if(!pred.client && "original_player" in pred.vars) //check if the body belonged to a player and give proper log about it while preparing it
+	else if(!pred.client && ("original_player" in pred.vars)) //check if the body belonged to a player and give proper log about it while preparing it
 		log_and_message_admins("[key_name_admin(prey)] is taking control over [pred] while they are out of their body.")
 		pred.ckey="DOMPLY[rand(100000,999999)]"
 		is_mob=1
