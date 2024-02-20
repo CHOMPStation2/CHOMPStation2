@@ -26,7 +26,7 @@
 	var/prey_ooc_notes
 	var/prey_ooc_likes
 	var/prey_ooc_dislikes
-	var/was_mob=0					//tracks if the dominated being was a mob
+	var/was_mob=0 //CHOMPAdd - tracks if the dominated being was a mob
 
 /mob/living/dominated_brain/New(loc, var/mob/living/pred, preyname, var/mob/living/prey)
 	. = ..()
@@ -199,7 +199,7 @@
 	set category = "Abilities"
 	set name = "Dominate Predator"
 	set desc = "Connect to and dominate the brain of your predator."
-	var/is_mob=0 //is character a non player mob
+	var/is_mob=0 ////CHOMPAdd - tracks if character is a non player mob
 
 	var/mob/living/pred
 	var/mob/living/prey = src
@@ -214,6 +214,11 @@
 	else
 		to_chat(prey, "<span class='notice'>You are not inside anyone.</span>")
 		return
+
+//CHOMPRemove - this check is handled in "CHOMPEdit start - Ability to use dominate pred trait against whitelisted mobs"
+//	if(!pred.ckey)
+//		to_chat(prey, "<span class='notice'>\The [pred] isn't able to be dominated.</span>")
+//		return
 
 	if(prey.stat == DEAD)
 		to_chat(prey, "<span class='warning'>You cannot do that in your current state.</span>")
