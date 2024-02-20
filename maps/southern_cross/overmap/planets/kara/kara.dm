@@ -30,7 +30,7 @@
 [i]Transponder[/i]: Transmitting (CIV), Vir IFF
 [b]Notice[/b]: CONDEMNED! NO ENTRY! -Vir System Authority"}
 
-	//map_z = list(Z_LEVEL_AEROSTAT) // Using the aerostat as the map as it is the only z-level in the atmosphere. Located in /maps/southern_cross/overmap/planets/kara/aerostat/
+	map_z = list(Z_LEVEL_AEROSTAT) // Using the aerostat as the map as it is the only z-level in the atmosphere. Located in /maps/southern_cross/overmap/planets/kara/aerostat/ //NOT USED, Kara Z layers removed.
 	initial_generic_waypoints = list("northern_star_mine_dock", "northern_star_mine_echidna_dock") //northern_star.dm landmarks
 	start_x  = 14
 	start_y  = 14
