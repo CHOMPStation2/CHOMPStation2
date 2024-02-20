@@ -221,3 +221,6 @@
   - spellcheck: Removed description of cream topping from the butterscotch pie.
   - rscadd: Added *gwah and *wawa as sound emotes.
   - sound: Added sounds for *gwah and *wawa emotes.
+2024-02-20:
+  tacoguy7765093:
+  - bugfix: Fixed a corrupted overmap POI map crashing.
