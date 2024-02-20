@@ -1,4 +1,0 @@
-author: "ItsSelis"
-delete-after: True
-changes:
-  - qol: "developers no longer have to generate a javascript bundle when changing the user interface"

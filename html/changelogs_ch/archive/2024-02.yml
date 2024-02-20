@@ -221,3 +221,22 @@
   - spellcheck: Removed description of cream topping from the butterscotch pie.
   - rscadd: Added *gwah and *wawa as sound emotes.
   - sound: Added sounds for *gwah and *wawa emotes.
+2024-02-20:
+  ItsSelis:
+  - qol: developers no longer have to generate a javascript bundle when changing the
+      user interface
+  - rscadd: Added CI workflow to test out TGS based changes.
+  Kashargul:
+  - bugfix: the character directory sorting table for react
+  KotetsuRedwood:
+  - bugfix: Changed the recipe for hot butter ice cream to use ice instead of milk.
+  - bugfix: Gives Butterscotch and Hot Butter Ice Cream trash items when eaten. You
+      have to eat the bowls deliberately now.
+  Raeschen:
+  - bugfix: optimisation on particle accelerator
+  - bugfix: outdated callback syntax
+  - bugfix: fixed high CPU usage in turf/simulated/wet_floor
+  - code_imp: stop qdelling progressbars
+  - bugfix: Bigdragon noms didn't autotransfer
+  tacoguy7765093:
+  - bugfix: Fixed a corrupted overmap POI map crashing.

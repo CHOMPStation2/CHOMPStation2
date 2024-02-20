@@ -1,4 +1,0 @@
-author: "Raeschen"
-delete-after: True
-changes:
-  - bugfix: "fixed high CPU usage in turf/simulated/wet_floor"

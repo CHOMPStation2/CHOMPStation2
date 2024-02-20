@@ -1,5 +1,0 @@
-author: "Raeschen"
-delete-after: True
-changes:
-  - bugfix: "optimisation on particle accelerator"
-  - bugfix: "outdated callback syntax"
