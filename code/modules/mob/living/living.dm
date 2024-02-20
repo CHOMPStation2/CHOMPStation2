@@ -54,10 +54,16 @@
 	if(tf_mob_holder)
 		tf_mob_holder = null
 	//VOREStation Addition End
+	//ChompEDIT START
+	if(selected_image) // prune out images
+		selected_image = null
+	if(hud_list) //prune out images in hud_list
+		for(var/item in hud_list)
+			if(item)
+				item = null
+	//ChompEDIT END
 
-	//qdel(selected_image) //ChompEDIT - no qdelling /image vars
-	QDEL_NULL(selected_image) //ChompEDIT - no qdelling /image vars
-	QDEL_LIST_NULL(hud_list) //ChompEDIT - no qdelling /image vars
+	qdel(selected_image)
 	QDEL_NULL(vorePanel) //VOREStation Add
 	QDEL_LIST_NULL(vore_organs) //VOREStation Add
 	temp_language_sources = null //VOREStation Add
