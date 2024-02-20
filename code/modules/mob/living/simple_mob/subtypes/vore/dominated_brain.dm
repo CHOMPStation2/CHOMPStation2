@@ -26,6 +26,7 @@
 	var/prey_ooc_notes
 	var/prey_ooc_likes
 	var/prey_ooc_dislikes
+	var/was_mob=0					//tracks if the dominated being was a mob
 
 /mob/living/dominated_brain/New(loc, var/mob/living/pred, preyname, var/mob/living/prey)
 	. = ..()
@@ -198,6 +199,7 @@
 	set category = "Abilities"
 	set name = "Dominate Predator"
 	set desc = "Connect to and dominate the brain of your predator."
+	var/is_mob=0 //is character a non player mob
 
 	var/mob/living/pred
 	var/mob/living/prey = src
@@ -217,9 +219,6 @@
 		to_chat(prey, "<span class='warning'>You cannot do that in your current state.</span>")
 		return
 
-	if(!pred.ckey)
-		to_chat(prey, "<span class='notice'>\The [pred] isn't able to be dominated.</span>")
-		return
 	if(isrobot(pred) && jobban_isbanned(prey, "Cyborg"))
 		to_chat(prey, "<span class='warning'>Forces beyond your comprehension forbid you from taking control of [pred].</span>")
 		return
@@ -238,11 +237,22 @@
 		return
 	to_chat(prey, "<span class='notice'>You attempt to exert your control over \the [pred]...</span>")
 	log_admin("[key_name_admin(prey)] attempted to take over [pred].")
-	if(tgui_alert(pred, "\The [prey] has elected to attempt to take control of you. Is this something you will allow to happen?", "Allow Prey Domination",list("No","Yes")) != "Yes")
-		to_chat(prey, "<span class='warning'>\The [pred] declined your request for control.</span>")
+
+	if(pred.ckey) //check if body is assigned to another player currently
+		if(tgui_alert(pred, "\The [prey] has elected to attempt to take control of you. Is this something you will allow to happen?", "Allow Prey Domination",list("No","Yes")) != "Yes")
+			to_chat(prey, "<span class='warning'>\The [pred] declined your request for control.</span>")
+			return
+		if(tgui_alert(pred, "Are you sure? If you should decide to revoke this, you will have the ability to do so in your 'Abilities' tab.", "Allow Prey Domination",list("No","Yes")) != "Yes")
+			return
+	else if("original_player" in pred.vars) //check if the body has a original player aka isn't a player that ghosted out of body
+		to_chat(prey, "<span class='warning'>[pred] is unable to be dominated.</span>")
 		return
-	if(tgui_alert(pred, "Are you sure? If you should decide to revoke this, you will have the ability to do so in your 'Abilities' tab.", "Allow Prey Domination",list("No","Yes")) != "Yes")
-		return
+	else //at this point we end up with a mob without a player assigned to them (ckey) and one that wasn't originally controlled by a plater (original_player)
+		pred.ckey="DOM-MOB-[rand(100000,999999)]" //this is cursed, but it does work
+		is_mob=1
+
+
+
 	to_chat(pred, "<span class='warning'>You can feel the will of another overwriting your own, control of your body being sapped away from you...</span>")
 	to_chat(prey, "<span class='warning'>You can feel the will of your host diminishing as you exert your will over them!</span>")
 	if(!do_after(prey, 10 SECONDS, exclusive = TRUE))
@@ -307,6 +317,10 @@
 	if(delete_source)
 		qdel(prey)
 
+	if(is_mob == 1)
+		pred_brain.was_mob=1
+
+
 /mob/proc/release_predator()
 	set category = "Abilities"
 	set name = "Restore Control"
@@ -318,7 +332,12 @@
 			if(db.ckey == db.pred_ckey)
 				to_chat(src, "<span class='notice'>You ease off of your control, releasing \the [db].</span>")
 				to_chat(db, "<span class='notice'>You feel the alien presence fade, and restore control of your body to you of their own will...</span>")
-				db.restore_control()
+				if(db.was_mob==1)//if the dominated being was a mob reset their ckey to null
+					db.pred_ckey=null
+					db.ckey=null
+					db.restore_control()
+				else
+					db.restore_control()
 				return
 			else
 				continue
