@@ -67,13 +67,6 @@
 	var/mob_announce_cooldown = 0
 	extra_z_levels = list(Z_LEVEL_TRANSIT, Z_LEVEL_MISC,Z_LEVEL_SURFACE, Z_LEVEL_SURFACE_MINE, Z_LEVEL_SURFACE_WILD, Z_LEVEL_SURFACE_SKYLANDS, Z_LEVEL_SURFACE_VALLEY) //This should allow for comms to reach people from the station. Basically this defines all the areas of Southern Cross and the Sif local system on the overmap.
 
-/obj/effect/overmap/visitable/sector/Southern_Cross/Crossed(var/atom/movable/AM)
-	. = ..()
-	announce_atc(AM,going = FALSE)
-
-/obj/effect/overmap/visitable/sector/Southern_Cross/Uncrossed(var/atom/movable/AM)
-	. = ..()
-	announce_atc(AM,going = TRUE)
 
 	initial_generic_waypoints = list(
 		"d1_aux_a",
@@ -110,6 +103,14 @@
 			Z_LEVEL_STATION_TWO,
 			Z_LEVEL_STATION_THREE,
 			Z_LEVEL_MISC)
+
+/obj/effect/overmap/visitable/sector/Southern_Cross/Crossed(var/atom/movable/AM)
+	. = ..()
+	announce_atc(AM,going = FALSE)
+
+/obj/effect/overmap/visitable/sector/Southern_Cross/Uncrossed(var/atom/movable/AM)
+	. = ..()
+	announce_atc(AM,going = TRUE)
 
 /obj/effect/overmap/visitable/sector/Southern_Cross/proc/announce_atc(var/atom/movable/AM, var/going = FALSE)
 	if(istype(AM, /obj/effect/overmap/visitable/ship/simplemob))

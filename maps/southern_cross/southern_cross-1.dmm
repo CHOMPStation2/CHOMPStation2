@@ -29123,6 +29123,12 @@
 /obj/effect/floor_decal/steeldecal/steel_decals5,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/elevator)
+"tzZ" = (
+/obj/structure/lattice,
+/obj/structure/grille,
+/obj/effect/shuttle_landmark/ship,
+/turf/space,
+/area/space)
 "tAT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
@@ -74060,8 +74066,8 @@ arE
 asE
 atJ
 xhd
-yiE
-nHZ
+xhd
+xhd
 nHZ
 nHZ
 ggF
@@ -74318,7 +74324,7 @@ arE
 asE
 atJ
 nHZ
-nHZ
+yiE
 nHZ
 nHZ
 emP
@@ -75866,7 +75872,7 @@ dWL
 asK
 atJ
 nHZ
-nHZ
+yiE
 nHZ
 nHZ
 emw
@@ -76124,8 +76130,8 @@ dWL
 pSW
 atJ
 xhd
-yiE
-nHZ
+xhd
+xhd
 nHZ
 nHZ
 ggF
@@ -78968,7 +78974,7 @@ moQ
 aaa
 aaa
 aaa
-vYi
+tzZ
 vYi
 aaa
 aaa
