@@ -198,6 +198,7 @@
 	desc = "A sweet, golden-brown liquid, usually used as part of confectionary. Just a spoonful wouldn't hurt, right?"
 	icon = 'icons/obj/food_ch.dmi'
 	icon_state = "butterscotch" //Sprite by Dinnel
+	trash = /obj/item/trash/snack_bowl
 	nutriment_amt = 1
 	nutriment_desc = list("sickly sweet deliciousness" = 1)
 
@@ -262,6 +263,7 @@
 	desc = "A bowl of ice cream and hot butter mixed together into an ominous, frothy concoction."
 	icon = 'icons/obj/food_ch.dmi'
 	icon_state = "hotbuttericecream" //Sprite by Dinnel
+	trash = /obj/item/trash/snack_bowl
 	nutriment_amt = 4
 	nutriment_desc = list ("hot butter" = 2, "ice cream" = 2)
 

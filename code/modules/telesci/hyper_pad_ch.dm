@@ -109,10 +109,10 @@
 		return
 	playsound(get_turf(src), 'sound/weapons/flash.ogg', 25, 1)
 	teleporting = 1
-	addtimer(CALLBACK(src, .proc/doteleport, user), teleport_speed)
+	addtimer(CALLBACK(src, PROC_REF(doteleport), user), teleport_speed)
 	var/speed = teleport_speed/8
 	for(var/obj/machinery/hyperpad/P in linked)
-		addtimer(CALLBACK(src, .proc/animate_discharge, P), speed)
+		addtimer(CALLBACK(src, PROC_REF(animate_discharge), P), speed)
 		speed += teleport_speed/8
 
 /obj/machinery/hyperpad/centre/proc/animate_discharge(var/obj/machinery/hyperpad/Pad)
@@ -171,7 +171,7 @@
 	color_overlay.color = newcolor
 	var/timer = teleport_cooldown/8
 	for(var/obj/machinery/hyperpad/P in linked)
-		addtimer(CALLBACK(src, .proc/animate_charge, P, color_overlay), timer)
+		addtimer(CALLBACK(src, PROC_REF(animate_charge), P, color_overlay), timer)
 		timer += teleport_cooldown/8
 
 /obj/machinery/hyperpad/centre/proc/animate_charge(var/obj/machinery/hyperpad/Pad, var/mutable_appearance/color)
