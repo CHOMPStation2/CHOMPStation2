@@ -63,7 +63,7 @@
 	#include "overmap/shuttles.dm"
 	//SIF - Planet
 	#include "overmap/sectors.dm" //This is actually the sector for Sif. This also includes places like the main station and the surface
-	/* Disabled due to low usage. These are heavy mini-station-like Z layers too.
+	/* //Disabled due to low usage. These are heavy mini-station-like Z layers too.
 	//KARA - Planet
 	#include "overmap/planets/kara/kara.dm" //And this is the sector for Kara. I have decided to better organize future planets and maps for them
 	//KARA Z layers
