@@ -238,20 +238,24 @@
 	to_chat(prey, "<span class='notice'>You attempt to exert your control over \the [pred]...</span>")
 	log_admin("[key_name_admin(prey)] attempted to take over [pred].")
 
+//CHOMPEdit start - Ability to use dominate pred trait against whitelisted mobs
 	if(pred.ckey) //check if body is assigned to another player currently
 		if(tgui_alert(pred, "\The [prey] has elected to attempt to take control of you. Is this something you will allow to happen?", "Allow Prey Domination",list("No","Yes")) != "Yes")
 			to_chat(prey, "<span class='warning'>\The [pred] declined your request for control.</span>")
 			return
 		if(tgui_alert(pred, "Are you sure? If you should decide to revoke this, you will have the ability to do so in your 'Abilities' tab.", "Allow Prey Domination",list("No","Yes")) != "Yes")
 			return
-	else if("original_player" in pred.vars) //check if the body has a original player aka isn't a player that ghosted out of body
+	else if(!pred.client && "original_player" in pred.vars) //check if the body belonged to a player and give proper log about it while preparing it
+		log_and_message_admins("[key_name_admin(prey)] is taking control over [pred] while they are out of their body.")
+		pred.ckey="DOMPLY[rand(100000,999999)]"
+		is_mob=1
+	else if(!is_type_in_list(pred, mob_takeover_whitelist)) //check if the dominated mob is not on the whitelist
 		to_chat(prey, "<span class='warning'>[pred] is unable to be dominated.</span>")
 		return
-	else //at this point we end up with a mob without a player assigned to them (ckey) and one that wasn't originally controlled by a plater (original_player)
-		pred.ckey="DOM-MOB-[rand(100000,999999)]" //this is cursed, but it does work
+	else //at this point we end up with a mob
+		pred.ckey="DOMMOB[rand(100000,999999)]" //this is cursed, but it does work and is cleaned up after
 		is_mob=1
-
-
+//CHOMPEdit end
 
 	to_chat(pred, "<span class='warning'>You can feel the will of another overwriting your own, control of your body being sapped away from you...</span>")
 	to_chat(prey, "<span class='warning'>You can feel the will of your host diminishing as you exert your will over them!</span>")
@@ -317,9 +321,10 @@
 	if(delete_source)
 		qdel(prey)
 
+//CHOMPEdit start - extra variable for mobs that assist cleanup
 	if(is_mob == 1)
 		pred_brain.was_mob=1
-
+//CHOMPEdit End
 
 /mob/proc/release_predator()
 	set category = "Abilities"
@@ -332,13 +337,13 @@
 			if(db.ckey == db.pred_ckey)
 				to_chat(src, "<span class='notice'>You ease off of your control, releasing \the [db].</span>")
 				to_chat(db, "<span class='notice'>You feel the alien presence fade, and restore control of your body to you of their own will...</span>")
-				if(db.was_mob==1)//if the dominated being was a mob reset their ckey to null
+				if(db.was_mob==1) //CHOMPEdit start - clean up if the dominated body was a playerless mob
 					db.pred_ckey=null
 					db.ckey=null
 					db.restore_control()
 				else
 					db.restore_control()
-				return
+				return //CHOMPEdit end
 			else
 				continue
 	to_chat(src, "<span class='danger'>You haven't been taken over, and shouldn't have this verb. I'll clean that up for you. Report this on the github, it is a bug.</span>")
