@@ -217,6 +217,7 @@ Gunshots/explosions/opening doors/less rare audio (done)
 			return 1
 	return 0*/
 
+/* //ChompREMOVE fake_attacker - EXTREME image qdel usage. Look at the attack_loop and updateimage procs and weep.
 /obj/effect/fake_attacker
 	icon = null
 	icon_state = null
@@ -414,3 +415,4 @@ var/list/non_fakeattack_weapons = list(/obj/item/weapon/gun/projectile, /obj/ite
 	*/
 
 	F.updateimage()
+*/ //ChompREMOVE End
