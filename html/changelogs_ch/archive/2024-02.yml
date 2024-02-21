@@ -240,3 +240,10 @@
   - bugfix: Bigdragon noms didn't autotransfer
   tacoguy7765093:
   - bugfix: Fixed a corrupted overmap POI map crashing.
+2024-02-21:
+  Raeschen:
+  - rscadd: Emergency closet shelter in the tcomms supplies room
+  - bugfix: No qdelling hud element and selected_image /images
+  - rscdel: Remove hallucination 'fake_attacker'
+  cadyn:
+  - bugfix: fix VV number inputs

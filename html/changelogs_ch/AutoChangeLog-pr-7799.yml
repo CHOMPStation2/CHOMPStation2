@@ -1,4 +1,0 @@
-author: "Raeschen"
-delete-after: True
-changes:
-  - rscdel: "Remove hallucination 'fake_attacker'"
