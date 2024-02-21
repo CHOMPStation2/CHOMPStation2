@@ -124,7 +124,18 @@
 		total_filterable_moles += source.gas[g]
 
 	if (total_filterable_moles < MINIMUM_MOLES_TO_FILTER) //if we cant transfer enough gas just stop to avoid further processing
+		//ChompEDIT START - make sure scrubbing finishes. This just kills the remnant gasses for free
+		if(total_filterable_moles > 0)
+			for (var/g in filtering)
+				var/srcgas = source.gas[g]
+				if (srcgas < 0)
+					source.adjust_gas(g, -srcgas, update=0)
+					sink.adjust_gas_temp(g, srcgas, source.temperature, update=0)
+			sink.update_values()
+			source.update_values()
+		//ChompEDIT END
 		return -1
+
 
 	//now that we know the total amount of filterable gas, we can calculate the amount of power needed to scrub one mole of gas
 	var/total_specific_power = 0		//the power required to remove one mole of filterable gas
@@ -439,7 +450,7 @@
 		var/sink_heat_capacity = sink.heat_capacity()
 		var/transfer_heat_capacity = source.heat_capacity()*estimate_moles/source_total_moles
 		air_temperature = (sink.temperature*sink_heat_capacity  + source.temperature*transfer_heat_capacity) / (sink_heat_capacity + transfer_heat_capacity)
-	
+
 	//get the number of moles that would have to be transfered to bring sink to the target pressure
 	return pressure_delta*output_volume/(air_temperature * R_IDEAL_GAS_EQUATION)
 
