@@ -1,0 +1,4 @@
+author: "Raeschen"
+delete-after: True
+changes:
+  - rscdel: "Removed 2x Kara Z layers (Aerostat, Mines)"
