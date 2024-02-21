@@ -119,8 +119,8 @@
 		if (source.gas[g] < MINIMUM_MOLES_TO_FILTER)
 			//ChompEDIT Start - scrub the remainding trace
 			if (source.gas[g] > 0.0)
-				source.gas[g] = 0
-				sink.adjust_gas(g, source.gas[g], update=1)
+				sink.adjust_gas(g, source.gas[g], update=0)
+				source.gas -= g
 			//ChompEDIT End
 			continue
 
