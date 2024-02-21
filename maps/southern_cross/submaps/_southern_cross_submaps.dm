@@ -12,8 +12,8 @@
 // This is for integration tests only.
 // Always add any new away missions/gateways/lateloaded maps that are not PoIs here.
 #if AWAY_MISSION_TEST
-#include "../overmap/planets/kara/aerostat/aerostat.dmm"
-#include "../overmap/planets/kara/northern_star/northern_star_mine.dmm"
+//#include "../overmap/planets/kara/aerostat/aerostat.dmm" //Disabled due to low usage
+//#include "../overmap/planets/kara/northern_star/northern_star_mine.dmm" //Disabled due to low usage
 #include "../overmap/space/fueldepot.dmm"
 #include "gateway/BaseBlep.dmm"
 #include "gateway/maddnesslab.dmm"

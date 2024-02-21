@@ -20,9 +20,10 @@ but they don't actually change anything about the load order
 #define Z_LEVEL_SURFACE_VALLEY 			11
 #define Z_LEVEL_VR_REALM                12
 #define Z_LEVEL_FUELDEPOT				13
-#define Z_LEVEL_AEROSTAT				14
-#define Z_LEVEL_NS_MINE					15
-#define Z_LEVEL_GATEWAY					16
+#define Z_LEVEL_GATEWAY					14
+
+//#define Z_LEVEL_AEROSTAT				15 //Disabled due to lack of use
+//#define Z_LEVEL_NS_MINE				16 //Disabled due to lack of use
 
 //#define Z_LEVEL_SURFACE_CASINO			xx	//CHOMPedit - KSC = So there is weather on the casino. //Raz - When you do casino again, launch it in a test server, note what z-level it is on, and then replace xx with that z-level you noted. Revert back to xx and comment out when done.
 //#define Z_LEVEL_EMPTY_SPACE				xx //CHOMPedit: Disabling empty space as now the overmap generates empty space on demand.
@@ -119,9 +120,9 @@ but they don't actually change anything about the load order
 	// Framework for porting Tether's lateload Z-Level system //Stock lateload maps
 	lateload_z_levels = list(
 			list("VR World"),
-			list("Fuel Depot - Z1 Space"),
-			list("Kara Aerostat - Z1 Aerostat"),
-			list("Kara - Z1 Northern Star")
+			list("Fuel Depot - Z1 Space")
+			//list("Kara Aerostat - Z1 Aerostat"), //Remove Kara Z layers
+			//list("Kara - Z1 Northern Star") //Remove Kara Z layers
 			)
 
 	//CHOMPStation Addition End
