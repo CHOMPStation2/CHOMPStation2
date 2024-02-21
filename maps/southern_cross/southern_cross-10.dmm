@@ -550,6 +550,7 @@
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter/dorms)
 "fY" = (
+/obj/effect/zone_divider,
 /obj/machinery/button/remote/blast_door{
 	dir = 1;
 	id = "wilderness_shelter_1st_floor";
@@ -557,7 +558,6 @@
 	pixel_y = -26;
 	req_one_access = list(1,5,10,12,13,18,31,43,47,48,50)
 	},
-/obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outpost/shelter/exterior)
 "gi" = (
@@ -599,6 +599,11 @@
 	d1 = 2;
 	d2 = 4;
 	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/shelter/utilityroom)
@@ -948,6 +953,15 @@
 /obj/effect/floor_decal/corner/paleblue/border,
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/shelter)
+"tx" = (
+/obj/structure/cable,
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/turf/simulated/floor/wood/sif,
+/area/surface/outpost/shelter/exterior)
 "tB" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -978,7 +992,12 @@
 	pixel_x = 24;
 	req_one_access = list(1,5,10,12,13,18,31,43,47,48,50)
 	},
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter/exterior)
 "tO" = (
 /obj/effect/zone_divider,
@@ -1205,6 +1224,12 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/shelter/utilityroom)
 "AZ" = (
+/obj/machinery/atmospheric_field_generator/perma/underdoors,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /obj/structure/simple_door/sifwood,
 /obj/machinery/door/blast/shutters{
 	dir = 2;
@@ -1212,7 +1237,6 @@
 	layer = 3;
 	name = "Wilderness Shelter Shutters"
 	},
-/obj/machinery/atmospheric_field_generator/perma/underdoors,
 /turf/simulated/floor/plating,
 /area/surface/outpost/shelter/utilityroom)
 "Ba" = (
@@ -1685,6 +1709,14 @@
 	},
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter/utilityroom)
+"VK" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/wood/sif,
+/area/surface/outpost/shelter/exterior)
 "Wo" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -42378,9 +42410,9 @@ aT
 aT
 aT
 KX
-aT
+VK
 tK
-bz
+tx
 ac
 ab
 "}
@@ -45983,7 +46015,7 @@ aT
 aV
 aV
 aW
-aW
+aT
 ba
 yZ
 bv
@@ -46241,7 +46273,7 @@ iB
 aV
 aV
 aW
-aW
+aT
 ba
 xj
 rv
@@ -46499,7 +46531,7 @@ iB
 aV
 aV
 aW
-aG
+bz
 ba
 sJ
 bv
@@ -46757,7 +46789,7 @@ iB
 aV
 aV
 aW
-aW
+aT
 cr
 EB
 Px
@@ -47015,7 +47047,7 @@ yL
 aV
 aV
 aW
-aW
+aT
 ba
 ba
 ba
@@ -47273,7 +47305,7 @@ ap
 aV
 aW
 aW
-aW
+aT
 bz
 Ge
 mP
@@ -49338,7 +49370,7 @@ aG
 aG
 aG
 aW
-aW
+aT
 bz
 bz
 bz
