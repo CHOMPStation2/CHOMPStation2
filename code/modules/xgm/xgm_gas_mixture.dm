@@ -191,11 +191,11 @@
 
 #undef SPECIFIC_ENTROPY_VACUUM
 
-//Updates the total_moles count and trims any empty gases. //ChompEDIT Also trims gases below the minimum filter threshold
+//Updates the total_moles count and trims any empty gases.
 /datum/gas_mixture/proc/update_values()
 	total_moles = 0
 	for(var/g in gas)
-		if(gas[g] <= MINIMUM_MOLES_TO_FILTER) //chompEDIT MINIMUM_MOLES_TO_FILTER instead of 0, prevents stuck gases
+		if(gas[g] <= 0)
 			gas -= g
 		else
 			total_moles += gas[g]
