@@ -1,7 +1,9 @@
 /* eslint react/no-danger: "off" */
+import { useState } from 'react';
+
 import { KEY_ENTER } from '../../../common/keycodes';
 import { BooleanLike } from '../../../common/react';
-import { useBackend, useLocalState } from '../../backend';
+import { useBackend } from '../../backend';
 import {
   Box,
   Button,
@@ -94,10 +96,10 @@ export const TicketsPanel = (props) => {
   const { act, data } = useBackend<Data>();
   const { tickets, selected_ticket } = data;
 
-  const [stateFilter, setStateFilter] = useLocalState('stateFilter', 'open');
-  const [levelFilter, setLevelFilter] = useLocalState('levelFilter', 2);
+  const [stateFilter, setStateFilter] = useState('open');
+  const [levelFilter, setLevelFilter] = useState(2);
 
-  const [ticketChat, setTicketChat] = useLocalState('ticketChat', '');
+  const [ticketChat, setTicketChat] = useState('');
 
   let filtered_tickets = getFilteredTickets(tickets, stateFilter, levelFilter);
   return (
