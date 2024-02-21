@@ -19,7 +19,7 @@
 // Overmap object for Kara, hanging in the void of space
 /obj/effect/overmap/visitable/planet/kara
 	name = "Kara"
-	desc = "Uninhabitable gas giant. Derelict installations present in the upper atmosphere."
+	desc = "Uninhabitable gas giant."
 	scanner_desc = @{"[i]Stellar Body[/i]: Kara
 [i]Registration[/i]: Vir System Authority
 [i]Class[/i]: Installation
@@ -56,3 +56,9 @@
 	. = ..()
 
 	docking_codes = null
+
+/obj/effect/overmap/visitable/planet/kara/find_z_levels()
+	return
+
+/obj/effect/overmap/visitable/planet/kara/register_z_levels()
+	return
