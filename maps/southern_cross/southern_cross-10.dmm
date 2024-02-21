@@ -239,8 +239,6 @@
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
 "be" = (
-/obj/structure/ladder/up,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -30
 	},
