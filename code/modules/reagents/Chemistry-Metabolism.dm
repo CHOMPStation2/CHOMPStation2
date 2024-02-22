@@ -11,6 +11,13 @@
 	if(istype(parent_mob))
 		parent = parent_mob
 
+//ChompEDIT - qdel refs
+/datum/reagents/metabolism/Destroy()
+	if(parent)
+		parent = null
+	. = ..()
+//ChompEDIT End
+
 /datum/reagents/metabolism/proc/metabolize()
 
 	var/metabolism_type = 0 //non-human mobs

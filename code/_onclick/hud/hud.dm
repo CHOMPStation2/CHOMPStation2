@@ -228,6 +228,13 @@ var/list/global_huds = list(
 		remove_ammo_hud(mymob, x)
 	ammo_hud_list = null
 	mymob = null
+	//ChompEDIT START - qdel refs
+	if(hide_actions_toggle)
+		QDEL_NULL(hide_actions_toggle)
+	//ChompEDIT END
+
+
+
 
 /datum/hud/proc/hidden_inventory_update()
 	if(!mymob) return

@@ -463,6 +463,13 @@ so as to remain in compliance with the most up-to-date laws."
 /mob
 	var/list/alerts = list() // contains /obj/screen/alert only // On /mob so clientless mobs will throw alerts properly
 
+//ChompEDIT - qdel refs
+/mob/Destroy()
+	if(alerts)
+		QDEL_LIST_NULL(alerts)
+	. = ..()
+//ChompEDIT END
+
 /obj/screen/alert/Click(location, control, params)
 	if(!usr || !usr.client)
 		return

@@ -43,6 +43,10 @@
 	QDEL_NULL(deaf_loop)
 	QDEL_NULL(firesoundloop)
 	// QDEL_NULL(stunnedloop)
+	//ChompEDIT - qdel refs
+	if(tf_form)
+		tf_form = null
+	//ChompEDIT End
 
 /mob/living/proc/vs_animate(var/belly_to_animate)
   return

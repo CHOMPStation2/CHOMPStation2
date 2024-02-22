@@ -19,6 +19,13 @@
 	volume = vol
 	gas = list()
 
+//ChompEDIT - qdel refs
+/datum/gas_mixture/Destroy()
+	if(graphic)
+		QDEL_NULL_LIST(graphic)
+	. = ..()
+//ChompEDIT End
+
 //Takes a gas string and the amount of moles to adjust by.  Calls update_values() if update isn't 0.
 /datum/gas_mixture/proc/adjust_gas(gasid, moles, update = 1)
 	if(moles == 0)

@@ -15,6 +15,13 @@
 	// Associative list of paths and their chances. path = straws in the lot
 	var/list/harvest_results
 
+//ChompEDIT - qdel refs
+/mob/living/Destroy()
+	if(harvest_tool)
+		QDEL_NULL(harvest_tool)
+	. = ..()
+//ChompEDIT END
+
 /mob/living/simple_mob/examine(mob/user)
 	. = ..()
 	if(stat != DEAD && user && harvest_tool && (get_dist(user, src) <= 3))

@@ -26,6 +26,13 @@ var/obj/effect/lobby_image = new /obj/effect/lobby_image
 /mob/new_player
 	var/client/my_client // Need to keep track of this ourselves, since by the time Logout() is called the client has already been nulled
 
+//ChompEDIT - qdel refs
+/mob/new_player/Destroy()
+	if(my_client)
+		my_client = null
+	. = ..()
+//ChompEDIT End
+
 /mob/new_player/Login()
 	update_Login_details()	//handles setting lastKnownIP and computer_id for use by the ban systems as well as checking for multikeying
 	if(join_motd)

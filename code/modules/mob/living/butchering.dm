@@ -11,6 +11,13 @@
 
 	var/being_butchered = FALSE 		// No multiproccing
 
+// ChompEDIT START - qdel refs
+/mob/living/Destroy()
+	if(meat_type)
+		QDEL_NULL(meat_type)
+	. = ..()
+// ChompEDIT End
+
 // Harvest an animal's delicious byproducts
 /mob/living/proc/harvest(var/mob/user, var/obj/item/I)
 	if(meat_type && meat_amount>0 && (stat == DEAD) && !being_butchered)

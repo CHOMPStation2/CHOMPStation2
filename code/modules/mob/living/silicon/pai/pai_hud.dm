@@ -76,6 +76,13 @@
 /datum/hud
 	var/list/hud_elements = list()
 
+//ChompEDIT - qdel refs
+/datum/hud/Destroy()
+	if(hud_elements)
+		QDEL_NULL_LIST(hud_elements)
+	. = ..()
+//ChompEDIT End
+
 /mob/living/silicon/pai/create_mob_hud(datum/hud/HUD)
 	..()
 

@@ -11,6 +11,17 @@
 	var/accumulated_rads = 0 	// For radiation stuff.
 	var/faction_bump_vore = FALSE	// Don't bump nom mobs of the same faction
 
+//ChompEDIT - qdel refs
+/mob/Destroy()
+	if(temporary_form)
+		QDEL_NULL(temporary_form)
+	if(shadekin_display)
+		QDEL_NULL(shadekin_display)
+	if(xenochimera_danger_display)
+		QDEL_NULL(xenochimera_danger_display)
+	. = ..()
+//ChompEDIT End
+
 /mob/drop_location()
 	if(temporary_form)
 		return temporary_form.drop_location()

@@ -6,6 +6,13 @@
 	var/track_blood_type
 	var/feet_blood_color
 
+//ChompEDIT - qdel refs
+/mob/Destroy()
+	if(bloody_hands_mob)
+		bloody_hands_mob = null
+	. = ..()
+//ChompEDIT End
+
 /obj/item/clothing/gloves
 	var/transfer_blood = 0
 	var/mob/living/carbon/human/bloody_hands_mob

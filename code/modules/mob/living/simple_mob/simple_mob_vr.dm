@@ -70,6 +70,10 @@
 /mob/living/simple_mob/Destroy()
 	release_vore_contents()
 	LAZYCLEARLIST(prey_excludes)
+	//ChompEDIT - qdel refs
+	if(mob_radio)
+		QDEL_NULL(mob_radio)
+	//ChompEDIT END
 	return ..()
 
 //For all those ID-having mobs

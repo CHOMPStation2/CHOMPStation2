@@ -6,6 +6,21 @@
 	var/obj/item/weapon/tank/internal = null//Human/Monkey
 	var/obj/item/clothing/mask/wear_mask = null//Carbon
 
+//ChompEDIT - qdel refs
+/mob/living/Destroy()
+	if(l_hand)
+		QDEL_NULL(l_hand)
+	if(r_hand)
+		QDEL_NULL(r_hand)
+	if(back)
+		QDEL_NULL(back)
+	if(internal)
+		QDEL_NULL(internal)
+	if(wear_mask)
+		QDEL_NULL(wear_mask)
+	. = ..()
+//ChompEDIT End
+
 /mob/living/equip_to_storage(obj/item/newitem, user_initiated = FALSE)
 	// Try put it in their backpack
 	if(istype(src.back,/obj/item/weapon/storage))

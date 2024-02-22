@@ -196,6 +196,13 @@
 /mob/living
 	var/mob/living/tf_mob_holder = null
 
+//ChompEDIT - qdel refs
+/mob/living/Destroy()
+	if(tf_mob_holder)
+		QDEL_NULL(tf_mob_holder)
+	. = ..()
+//ChompEDIT End
+
 /mob/living/proc/revert_mob_tf()
 	if(!tf_mob_holder)
 		return

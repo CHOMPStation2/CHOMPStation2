@@ -753,6 +753,12 @@
 
 /obj/structure/disposalholder/Destroy()
 	qdel(gas)
+	//ChompEDIT - qdel refs
+	if(destinationTag)
+		destinationTag = null
+	if(partialTag)
+		partialTag = null
+	//ChompEDIT End
 	active = 0
 	return ..()
 

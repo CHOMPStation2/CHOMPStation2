@@ -1,6 +1,12 @@
 /mob
 	var/list/screens = list()
 
+//ChompEDIT - qdel refs
+/mob/Destroy()
+	clear_fullscreens()
+	. = ..()
+//ChompEDIT END
+
 /mob/proc/set_fullscreen(condition, screen_name, screen_type, arg)
 	condition ? overlay_fullscreen(screen_name, screen_type, arg) : clear_fullscreen(screen_name)
 
@@ -132,7 +138,7 @@
 	layer = FULLSCREEN_LAYER
 
 /obj/screen/fullscreen/fishbed
-	icon_state = "fishbed" 
+	icon_state = "fishbed"
 
 /obj/screen/fullscreen/lighting_backdrop
 	icon = 'icons/mob/screen_gen.dmi'

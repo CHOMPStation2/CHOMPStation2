@@ -3,6 +3,15 @@
 	var/image/narsimage = null
 	var/image/narglow = null
 
+//ChompEDIT - qdel refs
+/mob/Destroy()
+	if(narsimage)
+		narsimage = null
+	if(narglow)
+		narglow = null
+	. = ..()
+//ChompEDIT END
+
 /mob/proc/cultify()
 	return
 

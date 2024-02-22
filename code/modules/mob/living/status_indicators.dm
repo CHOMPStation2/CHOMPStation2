@@ -10,6 +10,13 @@
 /mob/living
 	var/list/status_indicators = null // Will become a list as needed.
 
+//ChompEDIT - qdel refs
+/mob/living/Destroy()
+	if(status_indicators)
+		QDEL_NULL_list(status_indicators)
+	. = ..()
+//ChompEDIT End
+
 // Adds an icon_state, or image overlay, to the list of indicators to be managed automatically.
 // Also initializes the list if one doesn't exist.
 /mob/living/proc/add_status_indicator(image/thing)

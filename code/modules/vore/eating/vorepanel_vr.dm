@@ -22,6 +22,13 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 /mob
 	var/datum/vore_look/vorePanel
 
+//ChompEDIT - qdel refs
+/mob/Destroy()
+	if(vorePanel)
+		QDEL_NULL(vorePanel)
+	. = ..()
+//ChompEDIT End
+
 /mob/proc/insidePanel()
 	set name = "Vore Panel"
 	set category = "IC"

@@ -54,13 +54,21 @@
 	if(tf_mob_holder)
 		tf_mob_holder = null
 	//VOREStation Addition End
-	//ChompEDIT START
+	//ChompEDIT START - qdel refs
 	if(selected_image) // prune out images
 		selected_image = null
 	if(hud_list) //prune out images in hud_list
 		for(var/item in hud_list)
 			if(item)
 				item = null
+	if(cameraFollow)
+		cameraFollow = null
+	if(actions)
+		for(var/item in actions)
+			if(item)
+				item = null
+	if(inventory_panel)
+		QDEL_NULL(inventory_panel)
 	//ChompEDIT END
 
 	qdel(selected_image)

@@ -1,6 +1,13 @@
 /mob/living
 	var/datum/language/default_language
 
+// ChompEDIT START - qdel refs
+/mob/living/Destroy()
+	if(default_language)
+		default_language = null
+	. = ..()
+// ChompEDIT End
+
 /mob/living/verb/set_default_language(language as null|anything in languages)
 	set name = "Set Default Language"
 	set category = "IC"

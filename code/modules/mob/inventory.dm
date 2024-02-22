@@ -21,6 +21,13 @@ var/list/slot_equipment_priority = list( \
 /mob
 	var/obj/item/weapon/storage/s_active = null // Even ghosts can/should be able to peek into boxes on the ground
 
+//ChompEDIT - qdel refs
+/mob/Destroy()
+	if(s_active)
+		s_active = null
+	. = ..()
+//ChompEDIT End
+
 //This proc is called whenever someone clicks an inventory ui slot.
 /mob/proc/attack_ui(var/slot)
 	var/obj/item/W = get_active_hand()

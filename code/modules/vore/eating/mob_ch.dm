@@ -26,3 +26,8 @@
 	var/list/vore_icon_bellies = list("stomach")
 	var/updating_fullness = FALSE
 	var/obj/belly/previewing_belly
+
+/mob/Destroy()
+	if(previewing_belly)
+		previewing_belly = null
+	. = ..()
