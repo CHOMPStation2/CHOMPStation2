@@ -10,6 +10,9 @@
 #define TEMPERATURE_SIF 243.15 // Roughly -30C / -22F
 #define TEMPERATURE_ALTSIF 225.15
 
+//Thor planetside stuff
+#define TEMPERATURE_THOR 313 //Roughly 40C
+
 /turf/simulated/floor/outdoors/mud/sif/planetuse
 	oxygen		= MOLES_O2SIF
 	nitrogen	= MOLES_N2SIF
@@ -142,7 +145,6 @@
 	oxygen		= MOLES_O2SIF
 	nitrogen	= MOLES_N2SIF
 	temperature	= TEMPERATURE_ALTSIF
-	
 /turf/simulated/floor/tiled/asteroid_steel //CHOMP Edit now I'm adding shit here now too. Abandoned temple.
 	oxygen		= MOLES_O2SIF
 	nitrogen	= MOLES_N2SIF
@@ -220,3 +222,103 @@
 		user.put_in_hands(S)
 		visible_message("[user] scoops up a pile of snow.", "You scoop up a pile of snow.")
 	return
+
+// THOR
+//...Why is the parent outdoors all sif stuff?
+
+/turf/simulated/mineral/thor
+	oxygen		= MOLES_O2STANDARD
+	nitrogen	= MOLES_N2STANDARD
+	temperature	= TEMPERATURE_THOR
+/turf/simulated/floor/outdoors/thor
+	oxygen		= MOLES_O2STANDARD
+	nitrogen	= MOLES_N2STANDARD
+	temperature	= TEMPERATURE_THOR
+
+/turf/simulated/floor/outdoors/thor
+	oxygen		= MOLES_O2STANDARD
+	nitrogen	= MOLES_N2STANDARD
+	temperature	= TEMPERATURE_THOR
+
+/turf/simulated/floor/water/thor
+	oxygen		= MOLES_O2STANDARD
+	nitrogen	= MOLES_N2STANDARD
+	temperature	= TEMPERATURE_THOR
+
+/turf/simulated/shuttle/floor/alienplating/external/thor
+	oxygen		= MOLES_O2STANDARD
+	nitrogen	= MOLES_N2STANDARD
+	temperature	= TEMPERATURE_THOR
+
+/turf/simulated/shuttle/floor/voidcraft/external/thor
+	oxygen		= MOLES_O2STANDARD
+	nitrogen	= MOLES_N2STANDARD
+	temperature	= TEMPERATURE_THOR
+
+/turf/simulated/shuttle/floor/voidcraft/external/dark/thor
+	oxygen		= MOLES_O2STANDARD
+	nitrogen	= MOLES_N2STANDARD
+	temperature	= TEMPERATURE_THOR
+
+/turf/simulated/shuttle/floor/voidcraft/external/light/thor
+	oxygen		= MOLES_O2STANDARD
+	nitrogen	= MOLES_N2STANDARD
+	temperature	= TEMPERATURE_THOR
+
+/turf/simulated/floor/plating/external/thor
+	oxygen		= MOLES_O2STANDARD
+	nitrogen	= MOLES_N2STANDARD
+	temperature	= TEMPERATURE_THOR
+
+/turf/simulated/floor/tiled/external/thor
+	oxygen		= MOLES_O2STANDARD
+	nitrogen	= MOLES_N2STANDARD
+	temperature	= TEMPERATURE_THOR
+
+/turf/simulated/floor/outdoors/mud/thor/planetuse
+	oxygen		= MOLES_O2STANDARD
+	nitrogen	= MOLES_N2STANDARD
+	temperature	= TEMPERATURE_THOR
+
+/turf/simulated/floor/outdoors/rocks/thor/planetuse
+	oxygen		= MOLES_O2STANDARD
+	nitrogen	= MOLES_N2STANDARD
+	temperature	= TEMPERATURE_THOR
+
+/turf/simulated/floor/tiled/thor/planetuse
+	oxygen		= MOLES_O2STANDARD
+	nitrogen	= MOLES_N2STANDARD
+	temperature	= TEMPERATURE_THOR
+	outdoors = OUTDOORS_YES
+
+/turf/simulated/floor/tiled/steel/thor/planetuse
+	oxygen		= MOLES_O2STANDARD
+	nitrogen	= MOLES_N2STANDARD
+	temperature	= TEMPERATURE_THOR
+	outdoors = OUTDOORS_YES
+
+/turf/simulated/floor/plating/thor/planetuse
+	oxygen		= MOLES_O2STANDARD
+	nitrogen	= MOLES_N2STANDARD
+	temperature	= TEMPERATURE_THOR
+	outdoors = OUTDOORS_YES
+
+/turf/simulated/floor/outdoors/grass/thor
+	oxygen		= MOLES_O2STANDARD
+	nitrogen	= MOLES_N2STANDARD
+	temperature	= TEMPERATURE_THOR
+
+/turf/simulated/floor/outdoors/grass/heavy/thor
+	oxygen		= MOLES_O2STANDARD
+	nitrogen	= MOLES_N2STANDARD
+	temperature	= TEMPERATURE_THOR
+
+/turf/simulated/floor/outdoors/grass/forest/thor
+	oxygen		= MOLES_O2STANDARD
+	nitrogen	= MOLES_N2STANDARD
+	temperature	= TEMPERATURE_THOR
+
+/turf/simulated/floor/outdoors/dirt/thor/planetuse
+	oxygen		= MOLES_O2STANDARD
+	nitrogen	= MOLES_N2STANDARD
+	temperature	= TEMPERATURE_THOR

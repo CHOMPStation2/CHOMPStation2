@@ -20,6 +20,7 @@ but they don't actually change anything about the load order
 #define Z_LEVEL_VR_REALM                	11
 #define Z_LEVEL_FUELDEPOT				12
 #define Z_LEVEL_GATEWAY					13
+#define Z_LEVEL_JUNGLE					14
 
 //#define Z_LEVEL_SURFACE_SKYLANDS		//Sky islands removal due to lack of use
 //#define Z_LEVEL_AEROSTAT			//Disabled due to lack of use
@@ -107,7 +108,7 @@ but they don't actually change anything about the load order
 	unit_test_exempt_areas = list(/area/ninja_dojo, /area/shuttle/ninja)
 	unit_test_exempt_from_atmos = list(/area/tcomm/chamber)
 
-	planet_datums_to_make = list(/datum/planet/sif) //This must be added to load maps at round start otherwise they will have weather or sun.
+	planet_datums_to_make = list(/datum/planet/sif,/datum/planet/thor) //This must be added to load maps at round start otherwise they will have weather or sun.
 
 	map_levels = list(
 			Z_LEVEL_STATION_ONE,
@@ -285,6 +286,13 @@ but they don't actually change anything about the load order
 	name = "Transit"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_SEALED|MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT
 
+//Thor Z-Level
+/datum/map_z_level/southern_cross/thor
+	z = Z_LEVEL_JUNGLE
+	name = "Thor Surface"
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED
+	base_turf = /turf/simulated/floor/outdoors/rocks
+
 /*
  KSC 9/29/20 = No longer relevant code as we have nonencludian portals to jump between outpost,caves and wilderness
 //Teleport to Mine
@@ -325,6 +333,10 @@ but they don't actually change anything about the load order
 		Z_LEVEL_SURFACE_VALLEY
 	)
 //Z_LEVEL_SURFACE_CASINO //CHOMPedit - KSC = So there is weather on the Casino. //Move this into /datum/planet/sif and remember to add a coma for the new entry, for when you need the casino again
+/datum/planet/thor
+	expected_z_levels = list(
+		Z_LEVEL_JUNGLE
+	)
 
 /obj/effect/step_trigger/teleporter/bridge/east_to_west/Initialize()
 	teleport_x = src.x - 4
