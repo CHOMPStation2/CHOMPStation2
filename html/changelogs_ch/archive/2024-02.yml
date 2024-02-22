@@ -247,3 +247,13 @@
   - rscdel: Remove hallucination 'fake_attacker'
   cadyn:
   - bugfix: fix VV number inputs
+2024-02-22:
+  FluffMedic:
+  - bugfix: Several odd materials use the proper numbers
+  Kashargul:
+  - code_imp: editing the chomp specific UIs to be react compliant
+  - rscadd: miasma for the chem grenade that some mobs spawn on loading
+  Raeschen:
+  - rscadd: Wilderness shelter now flattened, thank you Bib bob
+  - rscdel: sky islands removed
+  - rscdel: Removed 2x Kara Z layers (Aerostat, Mines)

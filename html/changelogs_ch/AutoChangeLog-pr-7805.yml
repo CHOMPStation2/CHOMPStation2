@@ -1,5 +1,0 @@
-author: "Raeschen"
-delete-after: True
-changes:
-  - rscadd: "Wilderness shelter now flattened, thank you Bib bob"
-  - rscdel: "sky islands removed"
