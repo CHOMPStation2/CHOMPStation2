@@ -76,12 +76,6 @@
 		stop_orbit()
 	QDEL_NULL(riding_datum) //VOREStation Add
 
-	//ChompADD qdel null images
-	for(var/image/I in vars)
-		if(I)
-			QDEL_NULL(I)
-	//ChompADD End
-
 /atom/movable/vv_edit_var(var_name, var_value)
 	if(var_name in GLOB.VVpixelmovement)			//Pixel movement is not yet implemented, changing this will break everything irreversibly.
 		return FALSE
