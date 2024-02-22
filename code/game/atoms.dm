@@ -94,6 +94,8 @@
 		QDEL_NULL(reagents)
 	if(light)
 		QDEL_NULL(light)
+	if(transform)
+		QDEL_NULL(transform)
 	return ..()
 
 // Called after all object's normal initialize() if initialize() returns INITIALIZE_HINT_LATELOAD
