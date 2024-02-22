@@ -18,10 +18,10 @@
 		germ_level++
 
 /mob/living/carbon/Destroy()
-	QDEL_NULL(ingested) //ChompEDIT start - fix hard qdels
-	QDEL_NULL(touching) //ChompEDIT start - fix hard qdels
+	QDEL_NULL(ingested) //ChompEDIT - fix hard qdels
+	QDEL_NULL(touching) //ChompEDIT - fix hard qdels
 	// We don't qdel(bloodstr) because it's the same as qdel(reagents) //ChompEDIT We still need to null the reference though!
-	bloodstr = null //ChompEDIT start - fix hard qdels - Free the bloodstr reference to reagents, then atom/Destroy QDEL_NULLs the reagents datum
+	bloodstr = null //ChompEDIT - fix hard qdels - Free the bloodstr reference to reagents, then atom/Destroy QDEL_NULLs the reagents datum
 	for(var/guts in internal_organs)
 		qdel(guts)
 	for(var/food in stomach_contents)

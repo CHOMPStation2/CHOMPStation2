@@ -752,7 +752,7 @@
 	return
 
 /obj/structure/disposalholder/Destroy()
-	QDEL_NULL(gas) //ChompEDIT start - fix hard qdels
+	//QDEL_NULL(gas) //ChompEDIT datum/gas_mixture doesn't refback, so no need to qdel
 	//ChompEDIT - safetycheck for stuck atom/movables
 	var/turf/qdelloc = get_turf(src)
 	if(qdelloc)
