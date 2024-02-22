@@ -22,10 +22,8 @@
 	QDEL_NULL(touching) //ChompEDIT - fix hard qdels
 	// We don't qdel(bloodstr) because it's the same as qdel(reagents) //ChompEDIT We still need to null the reference though!
 	bloodstr = null //ChompEDIT - fix hard qdels - Free the bloodstr reference to reagents, then atom/Destroy QDEL_NULLs the reagents datum
-	for(var/guts in internal_organs)
-		qdel(guts)
-	for(var/food in stomach_contents)
-		qdel(food)
+	QDEL_NULL_LIST(internal_organs) //ChompEDIT - fix hard qdels
+	QDEL_NULL_LIST(stomach_contents) //ChompEDIT - fix hard qdels
 	return ..()
 
 /mob/living/carbon/rejuvenate()

@@ -58,8 +58,7 @@
 
 /mob/living/carbon/human/Destroy()
 	human_mob_list -= src
-	for(var/organ in organs)
-		qdel(organ)
+	QDEL_NULL_LIST(organs) //ChompEDIT - fix hard qdels
 	QDEL_NULL(nif)	//VOREStation Add
 	worn_clothing.Cut()
 	return ..()
