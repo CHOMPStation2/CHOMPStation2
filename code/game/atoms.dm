@@ -94,8 +94,10 @@
 		QDEL_NULL(reagents)
 	if(light)
 		QDEL_NULL(light)
+	//ChompEDIT Start - transform
 	if(transform)
 		QDEL_NULL(transform)
+	//ChompEDIT End
 	return ..()
 
 // Called after all object's normal initialize() if initialize() returns INITIALIZE_HINT_LATELOAD
