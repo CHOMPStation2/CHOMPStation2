@@ -754,10 +754,10 @@
 /obj/structure/disposalholder/Destroy()
 	QDEL_NULL(gas) //ChompEDIT start - fix hard qdels
 	//ChompEDIT - safetycheck for stuck atom/movables
-	var/turf/qdelloc = get_turf(src.loc)
+	var/turf/qdelloc = get_turf(src)
 	if(qdelloc)
 		if(contents)
-			log_and_message_admins("A disposal holder was deleted with contents at [qdelloc.x],[qdelloc.y],[deatqdellochloc.z]")
+			log_and_message_admins("A disposal holder was deleted with contents at [qdelloc.x],[qdelloc.y],[qdelloc.z]")
 			for(var/atom/movable/AM in contents)
 				AM.loc = qdelloc
 	else
