@@ -116,14 +116,14 @@ var/datum/planet/thor/planet_thor = null
 		WEATHER_CONFETTI		= new /datum/weather/thor/confetti()
 		)
 	roundstart_weather_chances = list(
-		WEATHER_CLEAR		= 50,
+		WEATHER_CLEAR		= 20,
 		WEATHER_OVERCAST	= 10,
-		WEATHER_RAIN		= 1
+		WEATHER_RAIN		= 50
 		)
 
 /datum/weather/thor
 	name = "thor"
-	temp_high = 303.15 // 30c
+	temp_high = 313.15 // 40c
 	temp_low = 298.15  // 25c
 
 /datum/weather/thor/clear
@@ -146,9 +146,9 @@ var/datum/planet/thor/planet_thor = null
 	temp_low = 	288.15 // 15c
 	light_modifier = 0.8
 	transition_chances = list(
-		WEATHER_CLEAR = 25,
+		WEATHER_CLEAR = 5,
 		WEATHER_OVERCAST = 50,
-		WEATHER_RAIN = 5
+		WEATHER_RAIN = 25
 		)
 	observed_message = "It is overcast, all you can see are clouds."
 	transition_messages = list(

@@ -1,23 +1,32 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
 /turf/simulated/floor/outdoors/dirt/thor/planetuse,
-/area/space)
+/area/surface/outside/thor/outpost)
 "m" = (
 /obj/effect/shuttle_landmark{
 	landmark_tag = "thor_nw";
 	name = "Thor Outpost - Northwest";
-	base_area = /area/surface/outside/wilderness/deep;
-	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse
+	base_area = /area/surface/outside/thor/outpost;
+	base_turf = /turf/simulated/floor/outdoors/dirt/thor/planetuse
 	},
 /turf/simulated/floor/outdoors/dirt/thor/planetuse,
-/area/space)
+/area/surface/outside/thor/outpost)
 "D" = (
 /turf/unsimulated/wall/planetary/normal/thor,
-/area/space)
+/area/surface/outside/thor/outpost)
 "Q" = (
 /obj/effect/overmap/visitable/planet/thor,
 /turf/unsimulated/wall/planetary/normal/thor,
-/area/space)
+/area/surface/outside/thor/outpost)
+"Z" = (
+/obj/effect/shuttle_landmark{
+	landmark_tag = "thor_s";
+	name = "Thor Outpost - South";
+	base_area = /area/surface/outside/thor/outpost;
+	base_turf = /turf/simulated/floor/outdoors/dirt/thor/planetuse
+	},
+/turf/simulated/floor/outdoors/dirt/thor/planetuse,
+/area/surface/outside/thor/outpost)
 
 (1,1,1) = {"
 D
@@ -33531,7 +33540,7 @@ a
 a
 a
 a
-a
+Z
 a
 a
 a

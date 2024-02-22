@@ -30,13 +30,13 @@
 [b]Notice[/b]: The Vir government welcomes you to this world."}
 
 	map_z = list(Z_LEVEL_JUNGLE)
-	initial_generic_waypoints = list("thor_nw")
+	initial_generic_waypoints = list("thor_nw","thor_s")
 	start_x  = 11
 	start_y  = 17
 	skybox_offset_x = 128
 	skybox_offset_y = 128
 	surface_color = "#176422"
-	mountain_color = "#7cdfda"
+	mountain_color = "#093314"
 	water_color = "#086dcc"
 	ice_color = "#f5ffff"
 	atmosphere_color = "#54c0ce"

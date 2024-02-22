@@ -109,6 +109,12 @@
 	luminosity = 1
 */
 
+//This is for the second planet, Thor
+
+/area/surface/outside/thor/outpost
+	name = "Jungle Outpost Perimeter"
+	icon_state = "green"
+
 /area/surface/outside/path/wilderness
 
 // Water
