@@ -13663,10 +13663,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/gen_room/smes_right)
-"ze" = (
-/obj/machinery/telecomms/relay/preset/southerncross/skylands,
-/turf/simulated/floor/tiled/techmaint,
-/area/surface/outpost/main/tcomm)
 "zf" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -70536,7 +70532,7 @@ uh
 BB
 xI
 nw
-ze
+nw
 Er
 AW
 ha

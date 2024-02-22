@@ -36,6 +36,7 @@ var/global/list/item_digestion_blacklist = list(
 		/obj/item/device/perfect_tele_beacon,
 		/obj/item/organ/internal/brain/slime,
 		/obj/item/device/mmi/digital/posibrain,
+		/obj/item/device/mmi/digital/robot,
 		/obj/item/weapon/rig/protean)
 
 // Options for transforming into a different mob in virtual reality.

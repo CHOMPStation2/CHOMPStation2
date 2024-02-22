@@ -1,6 +1,8 @@
 /* eslint react/no-danger: "off" */
+import { useState } from 'react';
+
 import { KEY_ENTER } from '../../../common/keycodes';
-import { useBackend, useLocalState } from '../../backend';
+import { useBackend } from '../../backend';
 import {
   Box,
   Button,
@@ -53,7 +55,7 @@ type Data = {
 
 export const Ticket = (props) => {
   const { act, data } = useBackend<Data>();
-  const [ticketChat, setTicketChat] = useLocalState('ticketChat', '');
+  const [ticketChat, setTicketChat] = useState('');
   const {
     id,
     title,

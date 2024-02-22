@@ -16,13 +16,15 @@ but they don't actually change anything about the load order
 #define Z_LEVEL_CENTCOM					7
 #define Z_LEVEL_TRANSIT					8
 #define Z_LEVEL_SURFACE_WILD			9
-#define Z_LEVEL_SURFACE_SKYLANDS		10
-#define Z_LEVEL_SURFACE_VALLEY 			11
-#define Z_LEVEL_VR_REALM                12
-#define Z_LEVEL_FUELDEPOT				13
-#define Z_LEVEL_AEROSTAT				14
-#define Z_LEVEL_NS_MINE					15
-#define Z_LEVEL_GATEWAY					16
+#define Z_LEVEL_SURFACE_VALLEY 			10
+#define Z_LEVEL_VR_REALM                	11
+#define Z_LEVEL_FUELDEPOT				12
+#define Z_LEVEL_GATEWAY					13
+
+//#define Z_LEVEL_SURFACE_SKYLANDS		//Sky islands removal due to lack of use
+//#define Z_LEVEL_AEROSTAT			//Disabled due to lack of use
+//#define Z_LEVEL_NS_MINE				//Disabled due to lack of use
+
 
 //#define Z_LEVEL_SURFACE_CASINO			xx	//CHOMPedit - KSC = So there is weather on the casino. //Raz - When you do casino again, launch it in a test server, note what z-level it is on, and then replace xx with that z-level you noted. Revert back to xx and comment out when done.
 //#define Z_LEVEL_EMPTY_SPACE				xx //CHOMPedit: Disabling empty space as now the overmap generates empty space on demand.
@@ -119,9 +121,9 @@ but they don't actually change anything about the load order
 	// Framework for porting Tether's lateload Z-Level system //Stock lateload maps
 	lateload_z_levels = list(
 			list("VR World"),
-			list("Fuel Depot - Z1 Space"),
-			list("Kara Aerostat - Z1 Aerostat"),
-			list("Kara - Z1 Northern Star")
+			list("Fuel Depot - Z1 Space")
+			//list("Kara Aerostat - Z1 Aerostat"), //Remove Kara Z layers
+			//list("Kara - Z1 Northern Star") //Remove Kara Z layers
 			)
 
 	//CHOMPStation Addition End
@@ -246,11 +248,13 @@ but they don't actually change anything about the load order
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES
 	base_turf = /turf/simulated/floor/outdoors/rocks
 
+/* //Sky islands removal due to lack of use
 /datum/map_z_level/southern_cross/surface_skylands
 	z = Z_LEVEL_SURFACE_SKYLANDS
 	name = "Floating Islands"
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES
 	base_turf = /turf/simulated/open
+*/
 
 /datum/map_z_level/southern_cross/surface_valley
 	z = Z_LEVEL_SURFACE_VALLEY
@@ -317,7 +321,7 @@ but they don't actually change anything about the load order
 		Z_LEVEL_SURFACE,
 		Z_LEVEL_SURFACE_MINE,
 		Z_LEVEL_SURFACE_WILD,
-		Z_LEVEL_SURFACE_SKYLANDS,
+		//Z_LEVEL_SURFACE_SKYLANDS, //Sky islands removal due to lack of use
 		Z_LEVEL_SURFACE_VALLEY
 	)
 //Z_LEVEL_SURFACE_CASINO //CHOMPedit - KSC = So there is weather on the Casino. //Move this into /datum/planet/sif and remember to add a coma for the new entry, for when you need the casino again

@@ -14313,6 +14313,10 @@
 "ltw" = (
 /turf/simulated/wall/r_wall,
 /area/expoutpost/reactorroom)
+"ltL" = (
+/obj/effect/overmap/visitable/planet/kara,
+/turf/space,
+/area/space)
 "lvx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -64865,7 +64869,7 @@ cwA
 cwA
 cwA
 cwA
-cwA
+ltL
 cwA
 cwA
 xEV

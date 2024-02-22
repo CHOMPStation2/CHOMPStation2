@@ -63,7 +63,8 @@
 	spawn(5)
 		if(client)
 			client.images -= bar
-		qdel(bar)
+		//qdel(bar) //ChompEDIT - try not qdelling progressbars.
+		bar = null //ChompEDIT - null instead of qdel
 	. = ..()
 
 #undef PROGRESSBAR_HEIGHT
