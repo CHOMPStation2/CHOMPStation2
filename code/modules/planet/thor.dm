@@ -4,8 +4,8 @@ var/datum/planet/thor/planet_thor = null
 	seconds_in_day = 24 HOURS
 
 /datum/planet/thor
-	name = "Virgo-4"
-	desc = "Zorren homeworld. Mostly dry and desolate, but ocean and fresh water are present, with scattered vegitation." //rewrite me
+	name = "Thor"
+	desc = "Sif's moon, heavy in flora and fauna." //rewrite me
 	current_time = new /datum/time/thor()
 //	expected_z_levels = list(1) // This is defined elsewhere.
 	planetary_wall_type = /turf/unsimulated/wall/planetary/normal/thor
