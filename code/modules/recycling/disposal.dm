@@ -757,13 +757,13 @@
 	var/turf/qdelloc = get_turf(src.loc)
 	if(qdelloc)
 		if(contents)
-				log_and_message_admins("A disposal holder was deleted with contents at [qdelloc.x],[qdelloc.y],[deatqdellochloc.z]")
-				for(var/atom/movable/AM in contents)
-					AM.loc = qdelloc
-		src.loc.contents -= src
+			log_and_message_admins("A disposal holder was deleted with contents at [qdelloc.x],[qdelloc.y],[deatqdellochloc.z]")
+			for(var/atom/movable/AM in contents)
+				AM.loc = qdelloc
 	else
 		if(contents)
 			log_and_message_admins("A disposal holder was deleted with contents in nullspace")
+	//ChompEDIT END
 	active = 0
 	return ..()
 

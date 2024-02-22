@@ -1214,16 +1214,15 @@
 		var/exploitmsg = html_decode("\n" + "Has " + I.name + ".")
 		exploit_record += exploitmsg
 
-//ChompEDIT END - fix hard qdels - qdelling exploitable objects need to wipe their reference if they are deleted
+//ChompEDIT START - fix hard qdels - qdelling exploitable objects need to wipe their reference if they are deleted
 /obj/Destroy()
 	if(istype(src.loc, /mob))
 		var/mob/holder = src.loc
 		if(src in holder.exploit_addons)
 			holder.exploit_addons -= src
 	. = ..()
-
-
 //ChompEDIT END
+
 /client/proc/check_has_body_select()
 	return mob && mob.hud_used && istype(mob.zone_sel, /obj/screen/zone_sel)
 
