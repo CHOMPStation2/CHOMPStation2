@@ -39,7 +39,7 @@
 	else
 		fail("Human mob is not taking oxygen damage in space. (Before: [startOxyloss]; after: [endOxyloss])")
 
-	qdel(H)
+	QDEL_NULL(H) //ChompEDIT START - fix hard qdels
 	return 1
 
 
@@ -73,7 +73,7 @@
 		fail("[issues] issues were found.")
 	else
 		pass("No issues found.")
-	qdel(subject)
+	QDEL_NULL(subject) //ChompEDIT START - fix hard qdels
 	return TRUE
 
 // Override for subtypes.
