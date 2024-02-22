@@ -38,14 +38,13 @@
 				firesoundloop.end_sound = 'sound/effects/mob_effects/on_fire/fire_extinguish4.ogg'
 
 /mob/living/Destroy()
-	. = ..()
-
 	QDEL_NULL(deaf_loop)
 	QDEL_NULL(firesoundloop)
 	// QDEL_NULL(stunnedloop)
+	. = ..()
 
 /mob/living/proc/vs_animate(var/belly_to_animate)
-  return
+	return
 
 /*
 Maybe later, gotta figure out a way to click yourself when in a locker etc.

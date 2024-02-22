@@ -14,6 +14,10 @@
 		spellremove(src)
 	if(!istype(src,/mob/observer)) //CHOMPEdit
 		ghostize() //CHOMPEdit
+	//ChompEDIT start - fix hard qdels
+	if(focus)
+		focus = null
+	 //ChompEDIT end
 	QDEL_NULL(plane_holder)
 	..()
 	return QDEL_HINT_HARDDEL_NOW
@@ -1210,6 +1214,16 @@
 		var/exploitmsg = html_decode("\n" + "Has " + I.name + ".")
 		exploit_record += exploitmsg
 
+//ChompEDIT END - fix hard qdels - qdelling exploitable objects need to wipe their reference if they are deleted
+/obj/Destroy()
+	if(istype(src.loc, /mob))
+		var/mob/holder = src.loc
+		if(src in holder.exploit_addons)
+			holder.exploit_addons -= src
+	. = ..()
+
+
+//ChompEDIT END
 /client/proc/check_has_body_select()
 	return mob && mob.hud_used && istype(mob.zone_sel, /obj/screen/zone_sel)
 

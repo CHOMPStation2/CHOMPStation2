@@ -15,6 +15,13 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 /mob/living/carbon/human/var/datum/reagents/vessel // Container for blood and BLOOD ONLY. Do not transfer other chems here.
 /mob/living/carbon/human/var/var/pale = 0          // Should affect how mob sprite is drawn, but currently doesn't.
 
+//ChompEDIT start - fix hard qdels
+/mob/living/carbon/human/Destroy()
+	if(vessel)
+		QDEL_NULL(vessel)
+	. = ..()
+//ChompEDIT END
+
 /***Initializes blood vessels
  * Called code/modules/mob/living/carbon/human/human.dm#L1259 set_species procedure with 0 args
  * Also called by inject_blood as fallback with amt = injected_amount

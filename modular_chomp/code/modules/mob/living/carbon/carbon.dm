@@ -9,6 +9,5 @@
 	cozyloop = new(list(src), FALSE)
 
 /mob/living/carbon/Destroy()
-	. = ..()
-
 	QDEL_NULL(cozyloop)
+	. = ..()
