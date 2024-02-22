@@ -53,7 +53,6 @@ Pipelines + Other Objects -> Pipe network
 /obj/machinery/atmospherics/Destroy()
 	disconnectall()
 	. = ..()
-
 //ChompEDIT End
 
 /obj/machinery/atmospherics/examine_icon()
@@ -243,18 +242,18 @@ Pipelines + Other Objects -> Pipe network
 /obj/machinery/atmospherics/proc/disconnectall()
 	if(node1)
 		var/obj/machinery/atmospherics/node1thing = node1
-		if(node1thing.node1 = src)
+		if(node1thing.node1 == src)
 			node1thing.node1 = null
-		if(node1thing.node2 = src)
+		if(node1thing.node2 == src)
 			node1thing.node2 = null
 		node1 = null
 		node1thing.atmos_init()
 		node1thing.build_network()
 	if(node2)
 		var/obj/machinery/atmospherics/node2thing = node2
-		if(node2thing.node1 = src)
+		if(node2thing.node1 == src)
 			node2thing.node1 = null
-		if(node2thing.node2 = src)
+		if(node2thing.node2 == src)
 			node2thing.node2 = null
 		node2 = null
 		node2thing.atmos_init()
