@@ -13,7 +13,7 @@
 //ChompEDIT - qdel refs
 /mob/living/Destroy()
 	if(status_indicators)
-		QDEL_NULL_list(status_indicators)
+		QDEL_NULL_LIST(status_indicators)
 	. = ..()
 //ChompEDIT End
 

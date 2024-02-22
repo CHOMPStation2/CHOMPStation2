@@ -16,7 +16,7 @@
 	var/list/harvest_results
 
 //ChompEDIT - qdel refs
-/mob/living/Destroy()
+/mob/living/simple_mob/Destroy()
 	if(harvest_tool)
 		QDEL_NULL(harvest_tool)
 	. = ..()
