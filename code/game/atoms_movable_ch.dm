@@ -6,6 +6,13 @@
 	var/recursive_listeners
 	var/listening_recursive = NON_LISTENING_ATOM
 
+/atom/movable/Destroy()
+	if(recursive_listeners)
+		for(var/item in recursive_listeners)
+			if(item)
+				item = null
+	. = ..()
+
 /atom/movable/New()
 	. = ..()
 	if (listening_recursive)
