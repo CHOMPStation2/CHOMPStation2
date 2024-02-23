@@ -116,7 +116,7 @@
 			qdel(parent)
 		node2 = null
 
-	return null
+	. = ..() //ChompEDIT - qdel refs
 /////////////////////////
 // the elusive up pipe //
 /////////////////////////

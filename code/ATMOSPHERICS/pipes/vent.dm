@@ -75,7 +75,7 @@
 
 	update_icon()
 
-	return null
+	. = ..() //ChompEDIT - qdel refs
 
 /obj/machinery/atmospherics/pipe/vent/hide(var/i) //to make the little pipe section invisible, the icon changes.
 	if(node1)

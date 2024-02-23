@@ -191,7 +191,7 @@
 
 	update_underlays()
 
-	return null
+	. = ..() //ChompEDIT - qdel refs
 
 // Trinary init_dir() logic in a separate proc so it can be referenced from "trinary-ish" places like T-Valves
 // TODO - Someday refactor those places under atmospherics/trinary

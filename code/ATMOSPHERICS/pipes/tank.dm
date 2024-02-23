@@ -64,7 +64,7 @@
 
 	update_underlays()
 
-	return null
+	. = ..() //ChompEDIT - qdel refs
 
 /obj/machinery/atmospherics/pipe/tank/attackby(var/obj/item/W as obj, var/mob/user as mob)
 	if(istype(W, /obj/item/device/pipe_painter))

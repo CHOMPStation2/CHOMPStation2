@@ -215,7 +215,7 @@
 
 	update_underlays()
 
-	return null
+	. = ..() //ChompEDIT - qdel refs
 
 /obj/machinery/atmospherics/valve/digital		// can be controlled by AI
 	name = "digital valve"

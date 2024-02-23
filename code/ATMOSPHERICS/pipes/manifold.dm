@@ -70,7 +70,7 @@
 	update_icon()
 	handle_leaking()
 
-	..()
+	. = ..() //ChompEDIT - qdel refs
 
 /obj/machinery/atmospherics/pipe/manifold/handle_leaking()
 	if(node1 && node2 && node3)

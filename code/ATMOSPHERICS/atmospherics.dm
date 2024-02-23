@@ -159,6 +159,18 @@ Pipelines + Other Objects -> Pipe network
 	// Is permitted to return null
 
 /obj/machinery/atmospherics/proc/disconnect(obj/machinery/atmospherics/reference)
+	//ChompEDIT START - qdel refs
+	if(reference.node1 == src)
+		reference.node1 = null
+	if(reference.node2 == src)
+		reference.node2 = null
+	if(node1 == reference)
+		node1 = null
+	if(node2 == reference)
+		node2 = null
+	reference.atmos_init()
+	reference.build_network()
+	//ChompEDIT END
 
 /obj/machinery/atmospherics/update_icon()
 	return null
@@ -241,21 +253,7 @@ Pipelines + Other Objects -> Pipe network
 // Check currently assigned nodes for referencing us. If they do, deref ourselves, force them to rebuild and then deref them
 /obj/machinery/atmospherics/proc/disconnectall()
 	if(node1)
-		var/obj/machinery/atmospherics/node1thing = node1
-		if(node1thing.node1 == src)
-			node1thing.node1 = null
-		if(node1thing.node2 == src)
-			node1thing.node2 = null
-		node1 = null
-		node1thing.atmos_init()
-		node1thing.build_network()
+		disconnect(node1)
 	if(node2)
-		var/obj/machinery/atmospherics/node2thing = node2
-		if(node2thing.node1 == src)
-			node2thing.node1 = null
-		if(node2thing.node2 == src)
-			node2thing.node2 = null
-		node2 = null
-		node2thing.atmos_init()
-		node2thing.build_network()
+		disconnect(node2)
 //ChompEDIT End

@@ -221,7 +221,7 @@
 		qdel(network2)
 		node2 = null
 
-	return null
+	. = ..() //ChompEDIT - qdel refs
 
 
 /obj/machinery/power/turbinemotor

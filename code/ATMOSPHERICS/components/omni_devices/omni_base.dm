@@ -299,4 +299,4 @@
 
 	update_ports()
 
-	return null
+	. = ..() //ChompEDIT - qdel refs

@@ -171,7 +171,7 @@
 	update_icon()
 	handle_leaking()
 
-	return null
+	. = ..() //ChompEDIT - remove hard dels
 
 /obj/machinery/atmospherics/pipe/simple/handle_leaking()
 	if(node1 && node2)

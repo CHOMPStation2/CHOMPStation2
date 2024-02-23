@@ -143,7 +143,7 @@
 
 	update_underlays()
 
-	return null
+	. = ..() //ChompEDIT - qdel refs
 
 
 /obj/machinery/atmospherics/portables_connector/attackby(var/obj/item/weapon/W as obj, var/mob/user as mob)

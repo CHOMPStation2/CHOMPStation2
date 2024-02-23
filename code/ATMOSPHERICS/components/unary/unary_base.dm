@@ -97,7 +97,7 @@
 	update_icon()
 	update_underlays()
 
-	return null
+	. = ..() //ChompEDIT - qdel refs
 
 // Check if there are any other atmos machines in the same turf that will block this machine from initializing.
 // Intended for use when a frame-constructable machine (i.e. not made from pipe fittings) wants to wrench down and connect.
