@@ -17,10 +17,16 @@
 
 	if(air && air.volume)
 		temporarily_store_air()
+	//Chompedit START - qdel refs
 	for(var/obj/machinery/atmospherics/pipe/P in members)
 		P.parent = null
+		P.refby -= src
 	members = null
+	for(var/obj/machinery/atmospherics/pipe/P in edges)
+		P.refby -= src
 	edges = null
+	//ChompEDIT END
+
 	leaks = null
 	. = ..()
 
@@ -76,6 +82,7 @@
 
 					if(!members.Find(item))
 						members += item
+						item.refby += src //ChompEDIT - qdel refs
 						possible_expansions += item
 
 						volume += item.volume
@@ -93,6 +100,7 @@
 
 			if(edge_check>0)
 				edges += borderline
+				borderline.refby += src //ChompEDIT - qdel refs
 
 			possible_expansions -= borderline
 

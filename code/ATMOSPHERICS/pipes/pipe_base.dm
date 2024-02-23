@@ -21,6 +21,8 @@
 	buckle_require_restraints = 1
 	buckle_lying = -1
 
+	var/list/datum/pipeline/refby = null //ChompEDIT store a list of datums that ref itself
+
 /obj/machinery/atmospherics/pipe/drain_power()
 	return -1
 
@@ -107,6 +109,7 @@
 			var/obj/item/pipe_meter/PM = new /obj/item/pipe_meter(loc)
 			meter.transfer_fingerprints_to(PM)
 			qdel(meter)
+
 	. = ..()
 
 //ChompEDIT - qdel refs - handle disconnect parent-datum operations of src and target here
@@ -122,6 +125,12 @@
 			QDEL_NULL(parent)
 			var/obj/machinery/atmospherics/pipe/P = node2
 			QDEL_NULL(P.parent)
+
+	//A sort of final check, clean out the refby list incase we're being tracked by weird phantom datums
+	if(refby)
+		for(var/item in refby)
+			if(istype(item, /datum/pipeline))
+				QDEL_NULL(item)
 
 	. = ..() //ChompEDIT - remove hard dels. Blanking of the src and neighbour nodes is done in /obj/machinery/atmospherics
 
