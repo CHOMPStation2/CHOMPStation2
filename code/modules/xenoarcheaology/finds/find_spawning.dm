@@ -715,5 +715,7 @@
 	if(src.is_anomalous())
 		var/datum/component/artifact_master/arti_mstr = GetComponent(/datum/component/artifact_master)
 		arti_mstr.RemoveComponent()
+		if(!QDELETED(arti_mstr))
+			qdel(arti_mstr)
 	. = ..()
 //ChompEDIT END
