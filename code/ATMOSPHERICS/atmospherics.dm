@@ -168,8 +168,13 @@ Pipelines + Other Objects -> Pipe network
 		node1 = null
 	if(node2 == reference)
 		node2 = null
-	reference.atmos_init()
-	reference.build_network()
+
+	//callback timer to hopefully rebuild the disconnected side after disconnect() and it's caller finishes
+	addtimer(CALLBACK(reference, PROC_REF(init_and_rebuild)), 5)
+
+/obj/machinery/atmospherics/proc/init_and_rebuild()
+	atmos_init()
+	build_network()
 	//ChompEDIT END
 
 /obj/machinery/atmospherics/update_icon()
