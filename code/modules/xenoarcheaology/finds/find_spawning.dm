@@ -709,3 +709,11 @@
 
 	if(become_anomalous)
 		become_anomalous()
+
+//ChompEDIT START - qdel refs
+/obj/item/weapon/archaeological_find/Destroy()
+	var/datum/component/artifact_master/arti_mstr = is_anomalous()
+		if(arti_mstr)
+			QDEL_NULL(arti_mstr)
+	. = ..()
+//ChompEDIT END

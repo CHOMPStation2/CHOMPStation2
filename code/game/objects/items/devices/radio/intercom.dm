@@ -28,6 +28,8 @@
 	var/area/A = get_area(src)
 	if(A)
 		GLOB.apc_event.unregister(A, src, /atom/proc/update_icon)
+	if(circuit) //ChompEDIT START - qdel refs
+		QDEL_NULL(circuit) //ChompEDIT START - qdel refs
 	return ..()
 
 /obj/item/device/radio/intercom/custom

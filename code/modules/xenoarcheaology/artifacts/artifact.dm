@@ -12,6 +12,13 @@
 
 	var/being_used = 0
 
+//ChompEDIT START - qdel refs
+/obj/machinery/artifact/Destroy()
+	if(artifact_master)
+		QDEL_NULL(artifact_master)
+	. = ..()
+//ChompEDIT END
+
 /obj/machinery/artifact/New()
 	..()
 
