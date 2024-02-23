@@ -55,10 +55,12 @@
 	//VOREStation Addition End
 	//ChompEDIT START
 	if(hud_list) //prune out images in hud_list
-		QDEL_LIST_NULL(hud_list)
+		for(var/item in hud_list)
+			if(item)
+				item = null
 	//ChompEDIT END
-	if(selected_image) //ChompEDIT - fix hard qdels
-		QDEL_NULL(selected_image) //ChompEDIT - fix hard qdels
+	if(selected_image) //ChompEDIT - /image
+		selected_image = null //ChompEDIT - /image
 	//QDEL_NULL(vorePanel) //VOREStation Add //ChompEDIT - move to /mob
 	//QDEL_LIST_NULL(vore_organs) //VOREStation Add //ChompEDIT - move to /mob
 	temp_language_sources = null //VOREStation Add
