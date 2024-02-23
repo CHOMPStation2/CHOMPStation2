@@ -1,9 +1,11 @@
+import { BooleanLike } from 'common/react';
+
 import { useBackend } from '../../../backend';
 import { Button, Flex, LabeledList } from '../../../components';
 import { stats } from './constants';
 
 export const VoreContentsPanel = (props) => {
-  const { act, data } = useBackend();
+  const { act, data } = useBackend<{ show_pictures: BooleanLike }>();
   const { show_pictures } = data;
   const { contents, belly, outside = false } = props;
 
@@ -47,8 +49,9 @@ export const VoreContentsPanel = (props) => {
                   width="64px"
                   height="64px"
                   style={{
-                    '-ms-interpolation-mode': 'nearest-neighbor',
-                    'margin-left': '-5px',
+                    // This style property has been made obsolete since Internet Explorer 9
+                    // '-ms-interpolation-mode': 'nearest-neighbor',
+                    marginLeft: '-5px',
                   }}
                 />
               </Button>

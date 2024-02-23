@@ -1,3 +1,4 @@
+import { BooleanLike } from 'common/react';
 import { useState } from 'react';
 
 import { useBackend } from '../../../backend';
@@ -141,18 +142,18 @@ import { VoreUserPreferences } from './VoreUserPreferences';
  *
  */
 
-export const VorePanel = (props) => {
-  const { act, data } = useBackend();
+export const VorePanel = () => {
+  const { act, data } = useBackend<{ unsaved_changes: BooleanLike }>();
 
   const [tabIndex, setTabIndex] = useState(0);
 
-  const tabs = [];
+  const tabs: React.JSX.Element[] = [];
 
   tabs[0] = <VoreBellySelectionAndCustomization />;
   tabs[1] = <VoreUserPreferences />;
 
   return (
-    <Window width={890} height={660} theme="abstract" resizable>
+    <Window width={890} height={660} theme="abstract">
       <Window.Content scrollable>
         {(data.unsaved_changes && (
           <NoticeBox danger>
