@@ -19,8 +19,8 @@ but they don't actually change anything about the load order
 #define Z_LEVEL_SURFACE_VALLEY 			10
 #define Z_LEVEL_VR_REALM                	11
 #define Z_LEVEL_FUELDEPOT				12
-#define Z_LEVEL_GATEWAY					13
-#define Z_LEVEL_JUNGLE					14
+#define Z_LEVEL_JUNGLE					13
+#define Z_LEVEL_GATEWAY					14
 
 //#define Z_LEVEL_SURFACE_SKYLANDS		//Sky islands removal due to lack of use
 //#define Z_LEVEL_AEROSTAT			//Disabled due to lack of use
@@ -334,6 +334,7 @@ but they don't actually change anything about the load order
 		Z_LEVEL_SURFACE_VALLEY
 	)
 //Z_LEVEL_SURFACE_CASINO //CHOMPedit - KSC = So there is weather on the Casino. //Move this into /datum/planet/sif and remember to add a coma for the new entry, for when you need the casino again
+
 /datum/planet/thor
 	expected_z_levels = list(
 		Z_LEVEL_JUNGLE
