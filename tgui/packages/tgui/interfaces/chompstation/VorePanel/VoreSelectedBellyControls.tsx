@@ -55,7 +55,7 @@ export const VoreSelectedBellyControls = (props) => {
           content={item_mode}
         />
       </LabeledList.Item>
-      <LabeledList.Item basis="100%" mt={1}>
+      <LabeledList.Item>
         <Button.Confirm
           fluid
           icon="exclamation-triangle"
