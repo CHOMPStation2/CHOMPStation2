@@ -712,8 +712,8 @@
 
 //ChompEDIT START - qdel refs
 /obj/item/weapon/archaeological_find/Destroy()
-	var/datum/component/artifact_master/arti_mstr = is_anomalous()
-		if(arti_mstr)
-			QDEL_NULL(arti_mstr)
+	if(src.is_anomalous())
+		var/datum/component/artifact_master/arti_mstr = GetComponent(/datum/component/artifact_master)
+		arti_mstr.RemoveComponent()
 	. = ..()
 //ChompEDIT END
