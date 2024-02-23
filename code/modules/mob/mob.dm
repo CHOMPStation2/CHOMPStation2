@@ -3,7 +3,8 @@
 	dead_mob_list -= src
 	living_mob_list -= src
 	unset_machine()
-	QDEL_NULL(hud_used) //ChompEDIT - fix hard qdels
+	if(hud_used) //ChompEDIT - fix hard qdels
+		QDEL_NULL(hud_used) //ChompEDIT - fix hard qdels
 	clear_fullscreen()
 	if(client)
 		for(var/obj/screen/movable/spell_master/spell_master in spell_masters)
@@ -17,8 +18,9 @@
 	//ChompEDIT start - fix hard qdels
 	if(focus)
 		focus = null
+	 if(plane_holder)
+		QDEL_NULL(plane_holder)
 	 //ChompEDIT end
-	QDEL_NULL(plane_holder)
 	..()
 	return QDEL_HINT_HARDDEL_NOW
 

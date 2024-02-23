@@ -38,8 +38,10 @@
 				firesoundloop.end_sound = 'sound/effects/mob_effects/on_fire/fire_extinguish4.ogg'
 
 /mob/living/Destroy()
-	QDEL_NULL(deaf_loop)
-	QDEL_NULL(firesoundloop)
+	if(deaf_loop)
+		QDEL_NULL(deaf_loop)
+	if(firesoundloop)
+		QDEL_NULL(firesoundloop)
 	// QDEL_NULL(stunnedloop)
 	. = ..()
 

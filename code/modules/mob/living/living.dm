@@ -57,8 +57,8 @@
 	if(hud_list) //prune out images in hud_list
 		QDEL_LIST_NULL(hud_list)
 	//ChompEDIT END
-
-	QDEL_NULL(selected_image) //ChompEDIT start - fix hard qdels
+	if(selected_image) //ChompEDIT - fix hard qdels
+		QDEL_NULL(selected_image) //ChompEDIT - fix hard qdels
 	//QDEL_NULL(vorePanel) //VOREStation Add //ChompEDIT - move to /mob
 	//QDEL_LIST_NULL(vore_organs) //VOREStation Add //ChompEDIT - move to /mob
 	temp_language_sources = null //VOREStation Add

@@ -54,7 +54,9 @@
 //CHOMPEdit START - fix hard qdels
 /mob/Destroy()
 	vore_selected = null
-	QDEL_NULL_LIST(vore_organs)
-	QDEL_NULL(vorePanel)
+	if(vore_organs)
+		QDEL_NULL_LIST(vore_organs)
+	if(vorePanel)
+		QDEL_NULL(vorePanel)
 	. = ..()
 //ChompEDIT End

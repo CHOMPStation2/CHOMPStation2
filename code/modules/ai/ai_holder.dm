@@ -20,7 +20,8 @@
 	return ..()
 
 /mob/living/Destroy()
-	QDEL_NULL(ai_holder)
+	if(ai_holder)
+		QDEL_NULL(ai_holder) //ChompEDIT - fix hard qdels
 	return ..()
 
 /mob/living/Login()

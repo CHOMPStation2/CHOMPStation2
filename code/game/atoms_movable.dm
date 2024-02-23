@@ -58,7 +58,7 @@
 /atom/movable/Destroy()
 	. = ..()
 	for(var/atom/movable/AM in contents)
-		qdel(AM)
+		QDEL_NULL(AM) //CHOMPEdit - fix hard qdels
 
 	if(opacity)
 		RemoveElement(/datum/element/light_blocking)
