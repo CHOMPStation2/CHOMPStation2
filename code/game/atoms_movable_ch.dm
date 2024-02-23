@@ -11,13 +11,6 @@
 	if (listening_recursive)
 		set_listening(listening_recursive)
 
-/atom/movable/Destroy()
-	if(recursive_listeners)
-		for(var/item in recursive_listeners)
-			if(item)
-				item = null
-	. = ..()
-
 /atom/movable/proc/set_listening(var/set_to)
 	if (listening_recursive && !set_to)
 		LAZYREMOVE(recursive_listeners, src)

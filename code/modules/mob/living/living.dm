@@ -42,7 +42,8 @@
 			var/turf/get_dat_turf = get_turf(src)
 			tf_mob_holder.loc = get_dat_turf
 			tf_mob_holder.forceMove(get_dat_turf)
-		QDEL_LIST_NULL(tf_mob_holder.vore_organs)
+		if(tf_mob_holder.vore_organs) //ChompEDIT - qdel refs
+			QDEL_LIST_NULL(tf_mob_holder.vore_organs) //ChompEDIT - qdel refs
 		tf_mob_holder.vore_organs = list()
 		for(var/obj/belly/B as anything in vore_organs)
 			B.loc = tf_mob_holder
@@ -80,7 +81,7 @@
 			internal_organs -= OR
 			qdel(OR)
 
-	return ..()
+	. = ..()
 
 //mob verbs are faster than object verbs. See mob/verb/examine.
 /mob/living/verb/pulled(atom/movable/AM as mob|obj in oview(1))
