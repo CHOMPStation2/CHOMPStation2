@@ -19,9 +19,6 @@ const sortTypes = {
   'By price': (a, b) => a.price - b.price,
 };
 
-<<<<<<< HEAD
-export const CasinoPrizeDispenserCh = () => {
-=======
 export const CasinoPrizeDispenser = () => {
   const [searchText, setSearchText] = useState('');
   const [sortOrder, setSortOrder] = useState('Alphabetical');
@@ -39,15 +36,10 @@ export const CasinoPrizeDispenser = () => {
     setDescending(value);
   }
 
->>>>>>> 5cf2f911f3... Tgui ui fix (#15778)
   return (
     <Window width={400} height={450}>
       <Window.Content className="Layout__content--flexColumn" scrollable>
         <>
-<<<<<<< HEAD
-          <CasinoPrizeDispenserChSearch />
-          <CasinoPrizeDispenserChItems />
-=======
           <CasinoPrizeDispenserSearch
             searchText={searchText}
             sortOrder={sortOrder}
@@ -64,21 +56,13 @@ export const CasinoPrizeDispenser = () => {
             onSortOrder={handleSortOrder}
             onDescending={handleDescending}
           />
->>>>>>> 5cf2f911f3... Tgui ui fix (#15778)
         </>
       </Window.Content>
     </Window>
   );
 };
 
-<<<<<<< HEAD
-const CasinoPrizeDispenserChSearch = (props) => {
-  const [_searchText, setSearchText] = useLocalState('search', '');
-  const [_sortOrder, setSortOrder] = useLocalState('sort', '');
-  const [descending, setDescending] = useLocalState('descending', false);
-=======
 const CasinoPrizeDispenserSearch = (props) => {
->>>>>>> 5cf2f911f3... Tgui ui fix (#15778)
   return (
     <Box mb="0.5rem">
       <Flex width="100%">
@@ -113,7 +97,7 @@ const CasinoPrizeDispenserSearch = (props) => {
   );
 };
 
-const CasinoPrizeDispenserChItems = (props) => {
+const CasinoPrizeDispenserItems = (props) => {
   const { act, data } = useBackend();
   const { points, items } = data;
   // Search thingies
@@ -159,11 +143,7 @@ const CasinoPrizeDispenserChItems = (props) => {
   );
 };
 
-<<<<<<< HEAD
-const CasinoPrizeDispenserChItemsCategory = (properties) => {
-=======
-const CasinoPrizeDispenserItemsCategory = (props) => {
->>>>>>> 5cf2f911f3... Tgui ui fix (#15778)
+const CasinoPrizeDispenserChItemsCategory = (props) => {
   const { act, data } = useBackend();
   const { title, items, ...rest } = props;
   return (
