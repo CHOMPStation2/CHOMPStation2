@@ -21,8 +21,8 @@
 	if(plane_holder)
 		QDEL_NULL(plane_holder)
 	 //ChompEDIT end
-	..()
-	return QDEL_HINT_HARDDEL_NOW
+	. = ..()
+	//return QDEL_HINT_HARDDEL_NOW
 
 /mob/proc/remove_screen_obj_references()
 	hands = null

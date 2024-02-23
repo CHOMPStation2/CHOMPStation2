@@ -21,6 +21,11 @@
 
 /mob/living/Destroy()
 	if(ai_holder)
+		ai_holder.holder = null
+		ai_holder.UnregisterSignal(src,COMSIG_MOB_STATCHANGE)
+		if(ai_holder.faction_friends && ai_holder.faction_friends.len) //This list is shared amongst the faction
+			ai_holder.faction_friends -= src
+			ai_holder.faction_friends = null
 		QDEL_NULL(ai_holder) //ChompEDIT - fix hard qdels
 	return ..()
 
