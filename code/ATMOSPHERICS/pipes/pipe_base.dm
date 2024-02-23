@@ -109,6 +109,26 @@
 			qdel(meter)
 	. = ..()
 
+//ChompEDIT - qdel refs - handle disconnect parent-datum operations of src and target here
+/obj/machinery/atmospherics/pipe/disconnect(obj/machinery/atmospherics/reference)
+	if(reference == node1)
+		if(istype(node1, /obj/machinery/atmospherics/pipe))
+			QDEL_NULL(parent)
+			var/obj/machinery/atmospherics/pipe/P = node1
+			QDEL_NULL(P.parent)
+
+	if(reference == node2)
+		if(istype(node2, /obj/machinery/atmospherics/pipe))
+			QDEL_NULL(parent)
+			var/obj/machinery/atmospherics/pipe/P = node2
+			QDEL_NULL(P.parent)
+
+	. = ..() //ChompEDIT - remove hard dels. Blanking of the src and neighbour nodes is done in /obj/machinery/atmospherics
+
+	update_icon()
+	handle_leaking()
+//ChompEDIT End
+
 /obj/machinery/atmospherics/pipe/attackby(var/obj/item/weapon/W as obj, var/mob/user as mob)
 	if (istype(src, /obj/machinery/atmospherics/pipe/tank))
 		return ..()

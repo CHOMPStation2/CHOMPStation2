@@ -157,6 +157,7 @@
 	update_icon()
 	handle_leaking()
 
+/* //ChompEDIT - qdel refs. This is moved to /obj/machinery/atmospherics/pipe
 /obj/machinery/atmospherics/pipe/simple/disconnect(obj/machinery/atmospherics/reference)
 	if(reference == node1)
 		if(istype(node1, /obj/machinery/atmospherics/pipe))
@@ -171,7 +172,8 @@
 	update_icon()
 	handle_leaking()
 
-	. = ..() //ChompEDIT - remove hard dels
+	return null
+*/ //ChompEDIT END
 
 /obj/machinery/atmospherics/pipe/simple/handle_leaking()
 	if(node1 && node2)
