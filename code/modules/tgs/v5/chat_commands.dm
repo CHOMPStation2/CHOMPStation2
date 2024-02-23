@@ -18,7 +18,7 @@
 			counts++
 			if(!(istype(C.mob,/mob/new_player) || istype(C.mob, /mob/observer)))
 				if(C.mob && isbelly(C.mob.loc))
-				bellied++
+					bellied++
 			if(C.is_afk())
 				afks++
 			else
