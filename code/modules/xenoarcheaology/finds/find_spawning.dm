@@ -717,5 +717,7 @@
 		arti_mstr.RemoveComponent()
 		if(!QDELETED(arti_mstr))
 			qdel(arti_mstr)
+	if(loc)
+		loc.contents -= src
 	. = ..()
 //ChompEDIT END
