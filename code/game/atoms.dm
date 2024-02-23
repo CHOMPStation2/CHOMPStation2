@@ -95,10 +95,10 @@
 	if(light)
 		QDEL_NULL(light)
 
-	//ChompEDIT START - fix hard qdels - Handle code/modules/entropics_vr/alternate_appearance.dm destroys
+	/* //ChompEDIT START - fix hard qdels - Handle code/modules/entropics_vr/alternate_appearance.dm destroys
 	if(alternate_appearances)
 		QDEL_NULL_LIST(alternate_appearances)
-	//ChompEDIT END
+	*/ //ChompEDIT END
 
 	return ..()
 
