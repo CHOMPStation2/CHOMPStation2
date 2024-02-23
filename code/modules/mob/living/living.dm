@@ -970,10 +970,12 @@
 
 	if(lying)
 		density = FALSE
+	/* CHOMPEdit - Allow to use stuff while laying down.
 		if(l_hand)
 			unEquip(l_hand)
 		if(r_hand)
 			unEquip(r_hand)
+	*/
 		for(var/obj/item/weapon/holder/holder in get_mob_riding_slots())
 			unEquip(holder)
 		update_water() // Submerges the mob.
