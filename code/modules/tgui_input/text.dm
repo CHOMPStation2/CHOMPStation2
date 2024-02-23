@@ -40,7 +40,8 @@
 				return input(user, message, title, default) as message|null
 			else
 				return input(user, message, title, default) as text|null
-	var/datum/tgui_input_text/text_input = new(user, message, title, default, max_length, multiline, encode, timeout, prevent_enter)
+
+	var/datum/tgui_input_text/text_input = new(user, message, title, default, max_length, multiline, encode, timeout)
 	text_input.tgui_interact(user)
 	text_input.wait()
 	if (text_input)
@@ -120,7 +121,6 @@
 	data["multiline"] = multiline
 	data["placeholder"] = default // Default is a reserved keyword
 	data["swapped_buttons"] = !user.client.prefs.tgui_swapped_buttons
-	// CHOMPedit - prevent_enter should be completely removed in the future
 	data["title"] = title
 	return data
 

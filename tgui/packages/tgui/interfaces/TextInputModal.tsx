@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { KEY } from 'common/keys';
+import { KeyboardEvent, useState } from 'react';
 
-import { KEY_ENTER, KEY_ESCAPE } from '../../common/keycodes'; // CHOMPedit
 import { useBackend } from '../backend';
 import { Box, Section, Stack, TextArea } from '../components';
 import { Window } from '../layouts';
@@ -15,7 +15,6 @@ type TextInputData = {
   placeholder: string;
   timeout: number;
   title: string;
-  // CHOMPedit Start
 };
 
 export const sanitizeMultiline = (toSanitize: string) => {
@@ -37,6 +36,7 @@ export const TextInputModal = (props) => {
     timeout,
     title,
   } = data;
+
   const [input, setInput] = useState(placeholder || '');
   const onType = (value: string) => {
     if (value === input) {
@@ -61,16 +61,17 @@ export const TextInputModal = (props) => {
       {timeout && <Loader value={timeout} />}
       <Window.Content
         onKeyDown={(event) => {
-          const keyCode = window.event ? event.which : event.keyCode;
-          if (keyCode === KEY_ENTER && (!visualMultiline || !event.shiftKey)) {
+          if (
+            event.key === KEY.Enter &&
+            (!visualMultiline || !event.shiftKey)
+          ) {
             act('submit', { entry: input });
           }
-          if (keyCode === KEY_ESCAPE) {
+          if (event.key === KEY.Escape) {
             act('cancel');
           }
         }}
       >
-        {/* CHOMPedit End */}
         <Section fill>
           <Stack fill vertical>
             <Stack.Item>
@@ -98,10 +99,10 @@ const InputArea = (props: {
   onType: (value: string) => void;
 }) => {
   const { act, data } = useBackend<TextInputData>();
-  const { max_length, multiline } = data; // CHOMPedit
+  const { max_length, multiline } = data;
   const { input, onType } = props;
 
-  const visualMultiline = multiline || input.length >= 30; // CHOMPedit
+  const visualMultiline = multiline || input.length >= 30;
 
   return (
     <TextArea
@@ -110,15 +111,14 @@ const InputArea = (props: {
       height={multiline || input.length >= 30 ? '100%' : '1.8rem'}
       maxLength={max_length}
       onEscape={() => act('cancel')}
-      onEnter={(event) => {
-        // CHOMPedit Start
+      onEnter={(event: KeyboardEvent<HTMLTextAreaElement>) => {
         if (visualMultiline && event.shiftKey) {
           return;
         }
         event.preventDefault();
         act('submit', { entry: input });
-        // CHOMPedit End
       }}
+      onChange={(_, value) => onType(value)}
       onInput={(_, value) => onType(value)}
       placeholder="Type something..."
       value={input}

@@ -240,3 +240,26 @@
   - bugfix: Bigdragon noms didn't autotransfer
   tacoguy7765093:
   - bugfix: Fixed a corrupted overmap POI map crashing.
+2024-02-21:
+  Raeschen:
+  - rscadd: Emergency closet shelter in the tcomms supplies room
+  - bugfix: No qdelling hud element and selected_image /images
+  - rscdel: Remove hallucination 'fake_attacker'
+  cadyn:
+  - bugfix: fix VV number inputs
+2024-02-22:
+  FluffMedic:
+  - bugfix: Several odd materials use the proper numbers
+  Kashargul:
+  - code_imp: editing the chomp specific UIs to be react compliant
+  - rscadd: miasma for the chem grenade that some mobs spawn on loading
+  Raeschen:
+  - rscadd: Wilderness shelter now flattened, thank you Bib bob
+  - rscdel: sky islands removed
+  - rscdel: Removed 2x Kara Z layers (Aerostat, Mines)
+2024-02-23:
+  Delams-The-SM:
+  - rscadd: Ability to dominate mob via dominate predator
+  - rscadd: Ability to dominate body without player's mind  (The same way one can
+      do via mind binder)
+  - code_imp: Mob whitelist from mind binder became a global list var/global/list/mob_takeover_whitelist

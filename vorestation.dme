@@ -4913,6 +4913,7 @@
 #include "modular_chomp\code\modules\reagents\reactions\distilling\distilling.dm"
 #include "modular_chomp\code\modules\reagents\reactions\instant\drinks.dm"
 #include "modular_chomp\code\modules\reagents\reactions\instant\instant.dm"
+#include "modular_chomp\code\modules\reagents\reagents\dispenser.dm"
 #include "modular_chomp\code\modules\reagents\reagents\food_drinks.dm"
 #include "modular_chomp\code\modules\reagents\reagents\medicalmods.dm"
 #include "modular_chomp\code\modules\reagents\reagents\medicine.dm"

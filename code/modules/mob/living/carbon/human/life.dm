@@ -1281,8 +1281,8 @@
 
 		if(hallucination)
 			if(hallucination >= 20 && !(species.flags & (NO_POISON|IS_PLANT|NO_HALLUCINATION)) )
-				if(prob(3))
-					fake_attack(src)
+				//if(prob(3)) //ChompREMOVE fake_attacker - EXTREME image qdel usage.
+					//fake_attack(src) //ChompREMOVE fake_attacker - EXTREME image qdel usage.
 				if(!handling_hal)
 					spawn handle_hallucinations() //The not boring kind!
 				if(client && prob(5))

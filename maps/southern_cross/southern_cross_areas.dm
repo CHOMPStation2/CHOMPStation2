@@ -98,6 +98,7 @@
 	name = "Mountains"
 	icon_state = "darkred"
 
+/* //Sky islands removal, lack of use
 /area/surface/outside/wilderness/skylands
 	name = "Floating Islands"
 	icon_state = "blue"
@@ -106,6 +107,7 @@
 	name = "Sky"
 	icon_state = "red"
 	luminosity = 1
+*/
 
 /area/surface/outside/path/wilderness
 
