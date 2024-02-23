@@ -4704,6 +4704,7 @@
 #include "modular_chomp\code\modules\clothing\clothing.dm"
 #include "modular_chomp\code\modules\clothing\clothing_icons.dm"
 #include "modular_chomp\code\modules\clothing\gateway\gateway.dm"
+#include "modular_chomp\code\modules\clothing\glasses\glasses.dm"
 #include "modular_chomp\code\modules\clothing\head\jobs.dm"
 #include "modular_chomp\code\modules\clothing\masks\hailer.dm"
 #include "modular_chomp\code\modules\clothing\rings\rings_ch.dm"
