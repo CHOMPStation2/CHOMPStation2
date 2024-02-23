@@ -21,7 +21,7 @@
 	buckle_require_restraints = 1
 	buckle_lying = -1
 
-	var/list/datum/pipeline/refby = null //ChompEDIT store a list of datums that ref itself
+	var/list/datum/pipeline/refby = list() //ChompEDIT store a list of datums that ref itself
 
 /obj/machinery/atmospherics/pipe/drain_power()
 	return -1
