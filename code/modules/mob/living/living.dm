@@ -50,14 +50,17 @@
 			B.owner = tf_mob_holder
 			tf_mob_holder.vore_organs |= B
 			vore_organs -= B
-
 	if(tf_mob_holder)
 		tf_mob_holder = null
 	//VOREStation Addition End
-
-	qdel(selected_image)
-	QDEL_NULL(vorePanel) //VOREStation Add
-	QDEL_LIST_NULL(vore_organs) //VOREStation Add
+	//ChompEDIT START
+	if(hud_list) //prune out images in hud_list
+		QDEL_LIST_NULL(hud_list)
+	//ChompEDIT END
+	if(selected_image) //ChompEDIT - fix hard qdels
+		QDEL_NULL(selected_image) //ChompEDIT - fix hard qdels
+	//QDEL_NULL(vorePanel) //VOREStation Add //ChompEDIT - move to /mob
+	//QDEL_LIST_NULL(vore_organs) //VOREStation Add //ChompEDIT - move to /mob
 	temp_language_sources = null //VOREStation Add
 	temp_languages = null //VOREStation Add
 

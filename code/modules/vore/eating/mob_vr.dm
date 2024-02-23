@@ -50,3 +50,13 @@
 							"They have a very fat frame with a bulging potbelly, squishy rolls of pudge, very wide hips, and plump set of jiggling thighs.",
 							"They are incredibly obese. Their massive potbelly sags over their waistline while their fat ass would probably require two chairs to sit down comfortably!",
 							"They are so morbidly obese, you wonder how they can even stand, let alone waddle around the station. They can't get any fatter without being immobilized.")
+
+//CHOMPEdit START - fix hard qdels
+/mob/Destroy()
+	vore_selected = null
+	if(vore_organs)
+		QDEL_NULL_LIST(vore_organs)
+	if(vorePanel)
+		QDEL_NULL(vorePanel)
+	. = ..()
+//ChompEDIT End
