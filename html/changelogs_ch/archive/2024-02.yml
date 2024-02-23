@@ -257,3 +257,9 @@
   - rscadd: Wilderness shelter now flattened, thank you Bib bob
   - rscdel: sky islands removed
   - rscdel: Removed 2x Kara Z layers (Aerostat, Mines)
+2024-02-23:
+  Delams-The-SM:
+  - rscadd: Ability to dominate mob via dominate predator
+  - rscadd: Ability to dominate body without player's mind  (The same way one can
+      do via mind binder)
+  - code_imp: Mob whitelist from mind binder became a global list var/global/list/mob_takeover_whitelist
