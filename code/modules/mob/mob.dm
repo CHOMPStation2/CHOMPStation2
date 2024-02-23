@@ -20,7 +20,23 @@
 		focus = null
 	if(plane_holder)
 		QDEL_NULL(plane_holder)
-	 //ChompEDIT end
+
+	//ChompEDIT block START - fix hard qdels - Handle code/_onclick/hud/ability_screen_objects.dm destroys
+	if(ability_master)
+		QDEL_NULL(ability_master)
+	//ChompEDIT block END
+
+	previewing_belly = null //ChompEDIT - fix hard qdels - Handle code/modules/vore/eating/mob_ch.dm destroys
+
+	//ChompEDIT block START - fix hard qdels - Handle code/modules/vore/eating/mob_vr.dm destroys
+	vore_selected = null
+	if(vore_organs)
+		QDEL_NULL_LIST(vore_organs)
+	if(vorePanel)
+		QDEL_NULL(vorePanel)
+	//ChompEDIT block End
+
+	//ChompEDIT end
 	. = ..()
 	//return QDEL_HINT_HARDDEL_NOW
 

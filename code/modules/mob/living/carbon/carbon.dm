@@ -28,6 +28,12 @@
 		QDEL_NULL_LIST(internal_organs) //ChompEDIT - fix hard qdels
 	if(stomach_contents) //ChompEDIT - fix hard qdels
 		QDEL_NULL_LIST(stomach_contents) //ChompEDIT - fix hard qdels
+
+	//ChompEDIT start - fix hard qdels - Handle modular_chomp/code/modules/mob/living/carbon/carbon.dm destroys
+	if(cozyloop)
+		QDEL_NULL(cozyloop)
+	//ChompEDIT End
+
 	return ..()
 
 /mob/living/carbon/rejuvenate()

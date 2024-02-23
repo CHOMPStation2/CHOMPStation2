@@ -81,6 +81,14 @@
 			internal_organs -= OR
 			qdel(OR)
 
+	//ChompEDIT start - fix hard qdels - Handle modular_chomp/code/modules/mob/living/living.dm destroys
+	if(deaf_loop)
+		QDEL_NULL(deaf_loop)
+	if(firesoundloop)
+		QDEL_NULL(firesoundloop)
+	// QDEL_NULL(stunnedloop)
+	//ChompEDIT End
+
 	. = ..()
 
 //mob verbs are faster than object verbs. See mob/verb/examine.

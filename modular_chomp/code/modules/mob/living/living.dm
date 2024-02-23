@@ -37,6 +37,7 @@
 			else
 				firesoundloop.end_sound = 'sound/effects/mob_effects/on_fire/fire_extinguish4.ogg'
 
+/* //fix hard qdels - move overrides to code/modules/mob/living/living.dm
 /mob/living/Destroy()
 	if(deaf_loop)
 		QDEL_NULL(deaf_loop)
@@ -44,6 +45,7 @@
 		QDEL_NULL(firesoundloop)
 	// QDEL_NULL(stunnedloop)
 	. = ..()
+*/
 
 /mob/living/proc/vs_animate(var/belly_to_animate)
 	return

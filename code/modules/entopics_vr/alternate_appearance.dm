@@ -146,10 +146,3 @@
 	if(!AA)
 		return
 	AA.hide(hideFrom)
-
-//ChompEDIT start - fix hard qdels
-/atom/Destroy()
-	if(alternate_appearances)
-		QDEL_NULL_LIST(alternate_appearances)
-	. = ..()
-//ChompEDIT END
