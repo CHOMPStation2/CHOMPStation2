@@ -60,7 +60,6 @@
 
 /datum/alternate_appearance/Destroy()
 	remove()
-	owner = null //ChompEDIT start - fix hard qdels
 	return ..()
 
 
