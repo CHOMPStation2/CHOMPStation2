@@ -60,6 +60,7 @@
 
 /datum/alternate_appearance/Destroy()
 	remove()
+	owner = null //ChompEDIT start - fix hard qdels
 	return ..()
 
 
@@ -146,4 +147,9 @@
 		return
 	AA.hide(hideFrom)
 
-
+//ChompEDIT start - fix hard qdels
+/atom/Destroy()
+	if(alternate_appearances)
+		QDEL_NULL_LIST(alternate_appearances)
+	. = ..()
+//ChompEDIT END

@@ -16,7 +16,7 @@ Pipelines + Other Objects -> Pipe network
 	power_channel = ENVIRON
 	var/nodealert = 0
 	var/power_rating //the maximum amount of power the machine can use to do work, affects how powerful the machine is, in Watts
-	
+
 	unacidable = TRUE
 	layer = ATMOS_LAYER
 	plane = PLATING_PLANE
@@ -48,6 +48,12 @@ Pipelines + Other Objects -> Pipe network
 	if(!pipe_color_check(pipe_color))
 		pipe_color = null
 	init_dir()
+
+//ChompEDIT START - fix hard qdels - wow pipes don't give a shit about refs
+/obj/machinery/atmospherics/Destroy()
+	disconnectall()
+	. = ..()
+//ChompEDIT End
 
 /obj/machinery/atmospherics/examine_icon()
 	return icon(icon=initial(icon),icon_state=initial(icon_state))
@@ -229,3 +235,27 @@ Pipelines + Other Objects -> Pipe network
 	// pixel_x = PIPE_PIXEL_OFFSET_X(piping_layer)
 	// pixel_y = PIPE_PIXEL_OFFSET_Y(piping_layer)
 	// layer = initial(layer) + PIPE_LAYER_OFFSET(piping_layer)
+
+
+//ChompEDIT START - fix hard qdels - wow pipes don't give a shit about refs
+// Check currently assigned nodes for referencing us. If they do, deref ourselves, force them to rebuild and then deref them
+/obj/machinery/atmospherics/proc/disconnectall()
+	if(node1)
+		var/obj/machinery/atmospherics/node1thing = node1
+		if(node1thing.node1 == src)
+			node1thing.node1 = null
+		if(node1thing.node2 == src)
+			node1thing.node2 = null
+		node1 = null
+		node1thing.atmos_init()
+		node1thing.build_network()
+	if(node2)
+		var/obj/machinery/atmospherics/node2thing = node2
+		if(node2thing.node1 == src)
+			node2thing.node1 = null
+		if(node2thing.node2 == src)
+			node2thing.node2 = null
+		node2 = null
+		node2thing.atmos_init()
+		node2thing.build_network()
+//ChompEDIT End
