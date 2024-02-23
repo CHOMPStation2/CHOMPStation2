@@ -18,7 +18,7 @@
 	//ChompEDIT start - fix hard qdels
 	if(focus)
 		focus = null
-	 if(plane_holder)
+	if(plane_holder)
 		QDEL_NULL(plane_holder)
 	 //ChompEDIT end
 	..()
