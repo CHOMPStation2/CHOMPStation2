@@ -123,7 +123,7 @@ const CasinoPrizeDispenserItems = (props) => {
 
     has_contents = true;
     return (
-      <CasinoPrizeDispenserChItemsCategory
+      <CasinoPrizeDispenserItemsCategory
         key={kv[0]}
         title={kv[0]}
         items={items_in_cat}
@@ -143,7 +143,7 @@ const CasinoPrizeDispenserItems = (props) => {
   );
 };
 
-const CasinoPrizeDispenserChItemsCategory = (props) => {
+const CasinoPrizeDispenserItemsCategory = (props) => {
   const { act, data } = useBackend();
   const { title, items, ...rest } = props;
   return (
