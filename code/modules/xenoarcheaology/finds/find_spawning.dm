@@ -718,6 +718,6 @@
 		if(!QDELETED(arti_mstr))
 			qdel(arti_mstr)
 	if(loc)
-		loc.contents -= src
+		src.moveToNullspace() //get it out of inventories
 	. = ..()
 //ChompEDIT END
