@@ -26,6 +26,9 @@
 		QDEL_NULL(ability_master)
 	//ChompEDIT block END
 
+	if(pulling) //ChompEDIT - this seems to not be done so we do it here just incase.
+		stop_pulling() //TG does this on atom/movable but our stop_pulling proc is here so whatever
+
 	previewing_belly = null //ChompEDIT - fix hard qdels - Handle code/modules/vore/eating/mob_ch.dm destroys
 
 	//ChompEDIT block START - fix hard qdels - Handle code/modules/vore/eating/mob_vr.dm destroys
