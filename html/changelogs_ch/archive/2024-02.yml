@@ -263,3 +263,7 @@
   - rscadd: Ability to dominate body without player's mind  (The same way one can
       do via mind binder)
   - code_imp: Mob whitelist from mind binder became a global list var/global/list/mob_takeover_whitelist
+2024-02-24:
+  Kashargul:
+  - bugfix: a runtime in the tgs status command
+  - rscadd: modified AR-Visor for teshari
