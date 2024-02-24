@@ -1,0 +1,4 @@
+author: "Raeschen"
+delete-after: True
+changes:
+  - bugfix: "Synths no longer infinitely get a rename prompt on MMI insertion"
