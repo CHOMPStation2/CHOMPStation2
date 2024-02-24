@@ -968,9 +968,14 @@
 			lying = incapacitated(INCAPACITATION_KNOCKDOWN)
 			canmove = !incapacitated(INCAPACITATION_DISABLED)
 
+	if(incapacitated(INCAPACITATION_KNOCKOUT) || incapacitated(INCAPACITATION_STUNNED)) // CHOMPAdd - Making sure we're in good condition to crawl
+		canmove = 0
+	else
+		canmove = 1
+
 	if(lying)
 		density = FALSE
-	/* CHOMPEdit - Allow to use stuff while laying down.
+	/* CHOMPEdit - Allow us to hold stuff while laying down.
 		if(l_hand)
 			unEquip(l_hand)
 		if(r_hand)

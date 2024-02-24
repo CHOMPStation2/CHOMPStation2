@@ -11,6 +11,9 @@
 	if(locate(/obj/item/weapon/grab) in src)
 		. += 5
 
+	if(src.lying) // CHOMPAdd - Slower when crawling
+		. += 10
+
 	// Movespeed delay based on movement mode
 	switch(m_intent)
 		if("run")
