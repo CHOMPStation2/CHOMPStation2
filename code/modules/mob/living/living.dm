@@ -970,6 +970,10 @@
 
 	if(incapacitated(INCAPACITATION_KNOCKOUT) || incapacitated(INCAPACITATION_STUNNED)) // CHOMPAdd - Making sure we're in good condition to crawl
 		canmove = 0
+		if(l_hand)
+			unEquip(l_hand)
+		if(r_hand)
+			unEquip(r_hand)
 	else
 		canmove = 1
 
@@ -980,9 +984,9 @@
 			unEquip(l_hand)
 		if(r_hand)
 			unEquip(r_hand)
-	*/
 		for(var/obj/item/weapon/holder/holder in get_mob_riding_slots())
 			unEquip(holder)
+	*/
 		update_water() // Submerges the mob.
 	else
 		density = initial(density)
