@@ -1,0 +1,4 @@
+author: "Raeschen"
+delete-after: True
+changes:
+  - code_imp: "Atmos scrubbers kill the final trace left behind after their minimum threshold for scrubbing is passed."
