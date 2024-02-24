@@ -108,7 +108,7 @@
 	result_quantity = 2
 
 /datum/recipe/hotbuttericecream
-	reagents = list("milk" = 5, "cream" = 5)
+	reagents = list("ice" = 5, "cream" = 5)
 	items = list(
 		/obj/item/weapon/reagent_containers/food/snacks/spreads/butter
 	)

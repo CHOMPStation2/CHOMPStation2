@@ -1,4 +1,6 @@
-import { useBackend, useLocalState } from '../../backend';
+import { useState } from 'react';
+
+import { useBackend } from '../../backend';
 import {
   Box,
   Button,
@@ -18,8 +20,8 @@ type Data = {
 export const TguiFeedback = (props) => {
   const { act, data } = useBackend<Data>();
   const { open_windows, selected_window } = data;
-  const [rating, setRating] = useLocalState('rating', '');
-  const [comment, setComment] = useLocalState('comment', '');
+  const [rating, setRating] = useState('');
+  const [comment, setComment] = useState('');
   return (
     <Window width={550} height={460}>
       <Flex>

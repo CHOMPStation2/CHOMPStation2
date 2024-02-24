@@ -26760,19 +26760,11 @@
 /turf/simulated/floor/plating,
 /area/construction/firstdeck/construction3)
 "rxy" = (
-/obj/structure/table/standard,
-/obj/item/weapon/stock_parts/micro_laser,
-/obj/item/weapon/stock_parts/manipulator,
-/obj/item/weapon/stock_parts/manipulator,
-/obj/item/weapon/stock_parts/manipulator,
-/obj/item/weapon/stock_parts/manipulator,
-/obj/item/weapon/stock_parts/capacitor,
-/obj/item/weapon/stock_parts/micro_laser/high,
-/obj/item/weapon/stock_parts/micro_laser/high,
-/obj/item/weapon/stock_parts/micro_laser/high,
-/obj/item/weapon/stock_parts/micro_laser/high,
 /obj/machinery/alarm{
 	pixel_y = 22
+	},
+/obj/structure/closet/emcloset{
+	anchored = 1
 	},
 /turf/simulated/floor,
 /area/tcomm/tcomstorage)
@@ -26824,6 +26816,16 @@
 /obj/item/weapon/circuitboard/teleporter,
 /obj/item/weapon/circuitboard/teleporter_hub,
 /obj/item/weapon/circuitboard/teleporter_station,
+/obj/item/weapon/stock_parts/micro_laser/high,
+/obj/item/weapon/stock_parts/micro_laser/high,
+/obj/item/weapon/stock_parts/micro_laser/high,
+/obj/item/weapon/stock_parts/micro_laser/high,
+/obj/item/weapon/stock_parts/capacitor,
+/obj/item/weapon/stock_parts/manipulator,
+/obj/item/weapon/stock_parts/manipulator,
+/obj/item/weapon/stock_parts/manipulator,
+/obj/item/weapon/stock_parts/manipulator,
+/obj/item/weapon/stock_parts/micro_laser,
 /turf/simulated/floor,
 /area/tcomm/tcomstorage)
 "rzN" = (
