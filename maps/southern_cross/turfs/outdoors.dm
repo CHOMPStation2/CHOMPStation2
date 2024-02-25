@@ -322,3 +322,19 @@
 	oxygen		= MOLES_O2STANDARD
 	nitrogen	= MOLES_N2STANDARD
 	temperature	= TEMPERATURE_THOR
+
+/turf/simulated/floor/reinforced/thor
+	oxygen		= MOLES_O2STANDARD
+	nitrogen	= MOLES_N2STANDARD
+	temperature	= TEMPERATURE_THOR
+
+/turf/simulated/floor/concrete/outdoors/thor
+	outdoors = TRUE
+	oxygen		= MOLES_O2STANDARD
+	nitrogen	= MOLES_N2STANDARD
+	temperature	= TEMPERATURE_THOR
+
+/turf/simulated/floor/tiled/asteroid_steel/outdoors/thor
+	oxygen		= MOLES_O2STANDARD
+	nitrogen	= MOLES_N2STANDARD
+	temperature	= TEMPERATURE_THOR

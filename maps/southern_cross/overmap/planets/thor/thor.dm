@@ -30,7 +30,7 @@
 [b]Notice[/b]: The Vir government welcomes you to this world."}
 
 	map_z = list(Z_LEVEL_JUNGLE)
-	initial_generic_waypoints = list("thor_nw","thor_s")
+	initial_generic_waypoints = list("thor_nw","thor_s","spacebus_jungle")
 	start_x  = 11
 	start_y  = 17
 	skybox_offset_x = 128
@@ -59,3 +59,8 @@
 	. = ..()
 
 	docking_codes = null
+
+//AREAS
+/area/surface/outside/thor/outpost
+	name = "Jungle Outpost Perimeter"
+	icon_state = "green"
