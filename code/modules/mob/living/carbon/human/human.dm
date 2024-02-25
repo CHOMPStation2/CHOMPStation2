@@ -69,7 +69,6 @@
 
 	if(vessel)
 		QDEL_NULL(vessel)
-	//ChompEDIT End
 	return ..()
 
 /mob/living/carbon/human/Stat()

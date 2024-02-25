@@ -722,4 +722,3 @@
 	if(loc)
 		src.moveToNullspace() //get it out of inventories
 	. = ..()
-//ChompEDIT END

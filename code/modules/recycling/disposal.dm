@@ -753,7 +753,6 @@
 
 /obj/structure/disposalholder/Destroy()
 	//QDEL_NULL(gas)
-	//ChompEDIT - safetycheck for stuck atom/movables
 	var/turf/qdelloc = get_turf(src)
 	if(qdelloc)
 		if(contents) //dump out our contents
@@ -762,7 +761,6 @@
 	else
 		if(contents)
 			log_and_message_admins("A disposal holder was deleted with contents in nullspace") //ideally, this should never happen
-	//ChompEDIT END
 	active = 0
 	return ..()
 
