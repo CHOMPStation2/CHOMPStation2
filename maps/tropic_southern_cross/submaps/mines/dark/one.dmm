@@ -1,0 +1,1208 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/submap/crystalcore/dark/one)
+"f" = (
+/obj/structure/table/rack,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/item/weapon/stock_parts/scanning_module/omni,
+/obj/random/material,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/submap/crystalcore/dark/one)
+"g" = (
+/obj/structure/table/rack,
+/obj/structure/window/reinforced{
+	dir = 5
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/item/weapon/stock_parts/micro_laser/omni,
+/obj/random/material,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/submap/crystalcore/dark/one)
+"h" = (
+/obj/structure/table/rack,
+/obj/structure/window/reinforced{
+	dir = 5
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/item/weapon/stock_parts/manipulator/omni,
+/obj/random/material,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/submap/crystalcore/dark/one)
+"j" = (
+/obj/structure/table/rack,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 5
+	},
+/obj/item/weapon/stock_parts/capacitor/omni,
+/obj/random/material,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/submap/crystalcore/dark/one)
+"l" = (
+/obj/structure/table/rack,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/item/weapon/stock_parts/capacitor/omni,
+/obj/random/material,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/submap/crystalcore/dark/one)
+"m" = (
+/obj/structure/table/rack,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/item/weapon/stock_parts/matter_bin/omni,
+/obj/random/material,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/submap/crystalcore/dark/one)
+"o" = (
+/obj/structure/table/rack,
+/obj/structure/window/reinforced{
+	dir = 5
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/random/material,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/submap/crystalcore/dark/one)
+"p" = (
+/turf/template_noop,
+/area/submap/crystalcore/dark/one)
+"r" = (
+/obj/structure/table/rack,
+/obj/structure/window/reinforced{
+	dir = 5
+	},
+/obj/item/weapon/stock_parts/matter_bin/omni,
+/obj/random/material,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/submap/crystalcore/dark/one)
+"s" = (
+/turf/template_noop,
+/area/template_noop)
+"t" = (
+/obj/structure/table/rack,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/item/weapon/stock_parts/scanning_module/omni,
+/obj/random/material,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/submap/crystalcore/dark/one)
+"u" = (
+/obj/structure/table/rack,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/item/weapon/stock_parts/manipulator/omni,
+/obj/random/material,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/submap/crystalcore/dark/one)
+"x" = (
+/obj/structure/table/rack,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/item/weapon/stock_parts/capacitor/omni,
+/obj/random/material,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/submap/crystalcore/dark/one)
+"y" = (
+/obj/structure/table/rack,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/item/weapon/stock_parts/matter_bin/omni,
+/obj/random/material,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/submap/crystalcore/dark/one)
+"z" = (
+/obj/structure/table/rack,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 5
+	},
+/obj/random/material,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/submap/crystalcore/dark/one)
+"C" = (
+/obj/structure/table/rack,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 5
+	},
+/obj/item/weapon/stock_parts/matter_bin/omni,
+/obj/random/material,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/submap/crystalcore/dark/one)
+"F" = (
+/obj/structure/table/rack,
+/obj/structure/window/reinforced{
+	dir = 5
+	},
+/obj/item/weapon/stock_parts/capacitor/omni,
+/obj/random/material,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/submap/crystalcore/dark/one)
+"G" = (
+/mob/living/simple_mob/humanoid/obsidianscale/foreman,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/submap/crystalcore/dark/one)
+"H" = (
+/obj/structure/table/rack,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/random/material,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/submap/crystalcore/dark/one)
+"I" = (
+/obj/structure/table/rack,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/random/material,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/submap/crystalcore/dark/one)
+"J" = (
+/obj/structure/table/rack,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 5
+	},
+/obj/item/weapon/stock_parts/scanning_module/omni,
+/obj/random/material,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/submap/crystalcore/dark/one)
+"L" = (
+/obj/structure/table/rack,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/item/weapon/stock_parts/micro_laser/omni,
+/obj/random/material,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/submap/crystalcore/dark/one)
+"M" = (
+/obj/structure/table/rack,
+/obj/structure/window/reinforced{
+	dir = 5
+	},
+/obj/random/material,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/submap/crystalcore/dark/one)
+"O" = (
+/obj/machinery/door/airlock/silver,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/submap/crystalcore/dark/one)
+"T" = (
+/obj/structure/table/rack,
+/obj/structure/window/reinforced{
+	dir = 5
+	},
+/obj/item/weapon/stock_parts/scanning_module/omni,
+/obj/random/material,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/submap/crystalcore/dark/one)
+"U" = (
+/turf/simulated/wall/iron,
+/area/submap/crystalcore/dark/one)
+
+(1,1,1) = {"
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+"}
+(2,1,1) = {"
+s
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+s
+"}
+(3,1,1) = {"
+s
+p
+p
+p
+p
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+p
+p
+p
+p
+s
+"}
+(4,1,1) = {"
+s
+p
+p
+p
+p
+U
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+U
+p
+p
+p
+p
+s
+"}
+(5,1,1) = {"
+s
+p
+p
+p
+p
+U
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+O
+p
+p
+p
+p
+s
+"}
+(6,1,1) = {"
+s
+p
+p
+p
+p
+U
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+U
+p
+p
+p
+p
+s
+"}
+(7,1,1) = {"
+s
+p
+p
+p
+p
+U
+O
+O
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+p
+p
+p
+p
+s
+"}
+(8,1,1) = {"
+s
+p
+p
+p
+p
+U
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+U
+p
+p
+p
+p
+p
+p
+p
+p
+s
+"}
+(9,1,1) = {"
+s
+p
+p
+p
+p
+U
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+U
+p
+p
+p
+p
+p
+p
+p
+p
+s
+"}
+(10,1,1) = {"
+s
+p
+p
+p
+p
+U
+a
+a
+L
+a
+a
+I
+a
+a
+h
+a
+a
+h
+a
+a
+U
+p
+p
+p
+p
+p
+p
+p
+p
+s
+"}
+(11,1,1) = {"
+s
+p
+p
+p
+p
+U
+a
+a
+H
+a
+a
+x
+a
+a
+z
+a
+a
+z
+a
+a
+U
+p
+p
+p
+p
+p
+p
+p
+p
+s
+"}
+(12,1,1) = {"
+s
+p
+p
+p
+p
+U
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+U
+p
+p
+p
+p
+p
+p
+p
+p
+s
+"}
+(13,1,1) = {"
+s
+p
+p
+p
+p
+U
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+U
+p
+p
+p
+p
+p
+p
+p
+p
+s
+"}
+(14,1,1) = {"
+s
+p
+p
+p
+p
+U
+a
+a
+y
+a
+a
+I
+a
+a
+g
+a
+a
+o
+a
+a
+U
+p
+p
+p
+p
+p
+p
+p
+p
+s
+"}
+(15,1,1) = {"
+s
+p
+p
+p
+p
+U
+a
+a
+f
+a
+a
+u
+a
+a
+T
+a
+a
+r
+a
+a
+U
+p
+p
+p
+p
+p
+p
+p
+p
+s
+"}
+(16,1,1) = {"
+s
+p
+p
+p
+p
+U
+a
+a
+u
+a
+a
+m
+G
+a
+F
+a
+a
+M
+a
+a
+U
+p
+p
+p
+p
+p
+p
+p
+p
+s
+"}
+(17,1,1) = {"
+s
+p
+p
+p
+p
+U
+a
+a
+H
+a
+a
+H
+a
+a
+z
+a
+a
+J
+a
+a
+U
+p
+p
+p
+p
+p
+p
+p
+p
+s
+"}
+(18,1,1) = {"
+s
+p
+p
+p
+p
+U
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+U
+p
+p
+p
+p
+p
+p
+p
+p
+s
+"}
+(19,1,1) = {"
+s
+p
+p
+p
+p
+U
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+U
+p
+p
+p
+p
+p
+p
+p
+p
+s
+"}
+(20,1,1) = {"
+s
+p
+p
+p
+p
+U
+a
+a
+I
+a
+a
+L
+a
+a
+o
+a
+a
+g
+a
+a
+U
+p
+p
+p
+p
+p
+p
+p
+p
+s
+"}
+(21,1,1) = {"
+s
+p
+p
+p
+p
+U
+a
+a
+l
+a
+a
+t
+a
+a
+C
+a
+a
+j
+a
+a
+U
+p
+p
+p
+p
+p
+p
+p
+p
+s
+"}
+(22,1,1) = {"
+s
+p
+p
+p
+p
+U
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+U
+p
+p
+p
+p
+p
+p
+p
+p
+s
+"}
+(23,1,1) = {"
+s
+p
+p
+p
+p
+U
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+U
+p
+p
+p
+p
+p
+p
+p
+p
+s
+"}
+(24,1,1) = {"
+s
+p
+p
+p
+p
+U
+O
+O
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+p
+p
+p
+p
+s
+"}
+(25,1,1) = {"
+s
+p
+p
+p
+p
+U
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+U
+p
+p
+p
+p
+s
+"}
+(26,1,1) = {"
+s
+p
+p
+p
+p
+U
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+O
+p
+p
+p
+p
+s
+"}
+(27,1,1) = {"
+s
+p
+p
+p
+p
+U
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+U
+p
+p
+p
+p
+s
+"}
+(28,1,1) = {"
+s
+p
+p
+p
+p
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+p
+p
+p
+p
+s
+"}
+(29,1,1) = {"
+s
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+s
+"}
+(30,1,1) = {"
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+"}

@@ -363,3 +363,56 @@
 		var/turf/T = pick(bomb_range)
 		P.launch_projectile(target, BP_TORSO, src)
 		bomb_range -= T
+
+/mob/living/simple_mob/humanoid/eclipse/head/slime
+	name = "slime fragment"
+	icon_state = "squish"
+	health = 3
+	maxHealth = 3
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 100, rad = 100)
+	armor_soak = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
+	projectiletype = null
+	attack_armor_type = "bio"
+
+	melee_damage_lower = 15
+	melee_damage_upper = 15
+
+	loot_list = null
+
+/mob/living/simple_mob/humanoid/eclipse/head/medical
+	name = "Eclipse Lead Medical Officer"
+	icon_state = "fleetmed"
+	projectiletype = /obj/item/projectile/energy/declone
+	water_resist = 0.3
+
+	loot_list = list(/obj/item/slime_extract/emerald  = 100,
+		/obj/item/weapon/gun/energy/medigun = 100
+			)
+
+/obj/item/projectile/arc/radioactive/weak
+	rad_power = 10
+
+/mob/living/simple_mob/humanoid/eclipse/head/medical/do_special_attack(atom/A)
+	. = TRUE
+	switch(a_intent)
+		if(I_DISARM)
+			electric_defense(A)
+		if(I_HURT)
+			launch_rockets(A)
+		if(I_GRAB)
+			launch_microsingularity(A)
+
+/mob/living/simple_mob/humanoid/eclipse/head/medical/proc/launch_microsingularity(atom/target)
+	var/obj/item/projectile/P = new /obj/item/projectile/arc/radioactive/weak(get_turf(src))
+	P.launch_projectile(target, BP_TORSO, src)
+
+/mob/living/simple_mob/humanoid/eclipse/head/medical/proc/electric_defense(atom/target)
+	var/obj/item/projectile/P = new /obj/item/projectile/arc/spore(get_turf(src))
+	P.launch_projectile(target, BP_TORSO, src)
+
+
+/mob/living/simple_mob/humanoid/eclipse/head/medical/proc/launch_rockets(atom/target)
+	new /mob/living/simple_mob/humanoid/eclipse/head/slime (src.loc)
+	new /mob/living/simple_mob/humanoid/eclipse/head/slime (src.loc)
+	new /mob/living/simple_mob/humanoid/eclipse/head/slime (src.loc)
+	new /mob/living/simple_mob/humanoid/eclipse/head/slime (src.loc)

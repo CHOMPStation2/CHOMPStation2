@@ -1,0 +1,402 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"b" = (
+/obj/machinery/vending/tool,
+/turf/simulated/floor/tiled/dark,
+/area/submap/crystalcore/purple/five)
+"c" = (
+/obj/machinery/door/airlock,
+/turf/simulated/floor/tiled/dark,
+/area/submap/crystalcore/purple/five)
+"f" = (
+/obj/machinery/vending/cola,
+/obj/machinery/light/flicker{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/crystalcore/purple/five)
+"h" = (
+/turf/simulated/wall,
+/area/submap/crystalcore/purple/five)
+"o" = (
+/obj/structure/table/rack,
+/obj/item/weapon/pickaxe/gold,
+/obj/machinery/light/flicker{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/crystalcore/purple/five)
+"u" = (
+/obj/structure/table/glass,
+/turf/simulated/floor/tiled/dark,
+/area/submap/crystalcore/purple/five)
+"w" = (
+/obj/structure/table/glass,
+/obj/machinery/light/flicker{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/crystalcore/purple/five)
+"x" = (
+/obj/item/weapon/bedsheet,
+/obj/structure/bed,
+/obj/item/weapon/bone/ribs,
+/obj/item/weapon/bone/skull,
+/turf/simulated/floor/tiled/dark,
+/area/submap/crystalcore/purple/five)
+"A" = (
+/obj/structure/table/rack,
+/obj/item/weapon/material/barbedwire,
+/obj/item/weapon/material/barbedwire,
+/obj/item/weapon/material/barbedwire,
+/turf/simulated/floor/tiled/dark,
+/area/submap/crystalcore/purple/five)
+"B" = (
+/obj/machinery/vending/altevian,
+/turf/simulated/floor/tiled/dark,
+/area/submap/crystalcore/purple/five)
+"D" = (
+/obj/machinery/power/port_gen/pacman,
+/turf/simulated/floor/tiled/dark,
+/area/submap/crystalcore/purple/five)
+"E" = (
+/turf/simulated/floor/tiled/dark,
+/area/submap/crystalcore/purple/five)
+"L" = (
+/obj/item/weapon/stool,
+/turf/simulated/floor/tiled/dark,
+/area/submap/crystalcore/purple/five)
+"S" = (
+/obj/machinery/light/flicker,
+/turf/simulated/floor/tiled/dark,
+/area/submap/crystalcore/purple/five)
+"Y" = (
+/obj/machinery/vending/magivend,
+/turf/simulated/floor/tiled/dark,
+/area/submap/crystalcore/purple/five)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(3,1,1) = {"
+a
+a
+a
+a
+a
+h
+h
+h
+h
+h
+h
+h
+a
+a
+a
+a
+a
+"}
+(4,1,1) = {"
+a
+a
+a
+a
+a
+h
+x
+E
+h
+E
+E
+h
+a
+a
+a
+a
+a
+"}
+(5,1,1) = {"
+a
+a
+a
+a
+a
+h
+w
+E
+c
+E
+S
+h
+a
+a
+a
+a
+a
+"}
+(6,1,1) = {"
+a
+a
+a
+a
+a
+h
+E
+E
+h
+E
+E
+h
+a
+a
+a
+a
+a
+"}
+(7,1,1) = {"
+a
+a
+a
+a
+a
+h
+h
+h
+h
+E
+E
+h
+a
+a
+a
+a
+a
+"}
+(8,1,1) = {"
+a
+a
+a
+a
+a
+h
+B
+E
+E
+E
+E
+h
+a
+a
+a
+a
+a
+"}
+(9,1,1) = {"
+a
+a
+a
+a
+a
+h
+f
+E
+L
+E
+S
+h
+a
+a
+a
+a
+a
+"}
+(10,1,1) = {"
+a
+a
+a
+a
+a
+h
+Y
+E
+u
+E
+E
+h
+a
+a
+a
+a
+a
+"}
+(11,1,1) = {"
+a
+a
+a
+a
+a
+h
+b
+E
+u
+E
+E
+h
+a
+a
+a
+a
+a
+"}
+(12,1,1) = {"
+a
+a
+a
+a
+a
+h
+A
+E
+L
+E
+E
+h
+a
+a
+a
+a
+a
+"}
+(13,1,1) = {"
+a
+a
+a
+a
+a
+h
+o
+E
+E
+E
+S
+h
+a
+a
+a
+a
+a
+"}
+(14,1,1) = {"
+a
+a
+a
+a
+a
+h
+D
+E
+E
+E
+E
+h
+a
+a
+a
+a
+a
+"}
+(15,1,1) = {"
+a
+a
+a
+a
+a
+h
+h
+h
+h
+h
+c
+h
+a
+a
+a
+a
+a
+"}
+(16,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(17,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}

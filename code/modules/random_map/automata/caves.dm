@@ -3,6 +3,7 @@
 	descriptor = "moon caves"
 	var/list/ore_turfs = list()
 	var/make_cracked_turfs = TRUE
+	var/animals = /obj/structure/mob_spawner/scanner/mining_animals //chompADD
 
 /datum/random_map/automata/cave_system/no_cracks
 	make_cracked_turfs = FALSE
@@ -61,7 +62,7 @@
 			if(map[current_cell] == FLOOR_CHAR)
 				T.make_floor()
 				if(prob(0.5)) // 1 in 200 chance //CHOMP Add
-					new /obj/structure/mob_spawner/scanner/mining_animals(T) //CHOMP Add
+					new animals(T) //CHOMP Add and Edit
 			else
 				T.make_wall()
 

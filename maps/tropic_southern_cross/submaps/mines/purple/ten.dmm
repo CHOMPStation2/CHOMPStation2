@@ -1,0 +1,124 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/submap/crystalcore/purple/ten)
+"A" = (
+/obj/effect/map_effect/portal/line/side_b{
+	portal_id = "purple_ten";
+	dir = 8
+	},
+/turf/template_noop,
+/area/submap/crystalcore/purple/ten)
+"F" = (
+/obj/effect/map_effect/portal/line/side_a{
+	dir = 4;
+	temperature = "purple_ten"
+	},
+/turf/template_noop,
+/area/submap/crystalcore/purple/ten)
+"H" = (
+/obj/effect/map_effect/portal/master/side_b{
+	dir = 8;
+	portal_id = "purple_ten"
+	},
+/turf/template_noop,
+/area/submap/crystalcore/purple/ten)
+"P" = (
+/obj/effect/map_effect/portal/master/side_a{
+	dir = 4;
+	portal_id = "purple_ten"
+	},
+/turf/template_noop,
+/area/submap/crystalcore/purple/ten)
+
+(1,1,1) = {"
+F
+F
+F
+F
+P
+"}
+(2,1,1) = {"
+a
+a
+a
+a
+a
+"}
+(3,1,1) = {"
+a
+a
+a
+a
+a
+"}
+(4,1,1) = {"
+a
+a
+a
+a
+a
+"}
+(5,1,1) = {"
+a
+a
+a
+a
+a
+"}
+(6,1,1) = {"
+a
+a
+a
+a
+a
+"}
+(7,1,1) = {"
+a
+a
+a
+a
+a
+"}
+(8,1,1) = {"
+a
+a
+a
+a
+a
+"}
+(9,1,1) = {"
+a
+a
+a
+a
+a
+"}
+(10,1,1) = {"
+a
+a
+a
+a
+a
+"}
+(11,1,1) = {"
+a
+a
+a
+a
+a
+"}
+(12,1,1) = {"
+a
+a
+a
+a
+a
+"}
+(13,1,1) = {"
+A
+A
+A
+A
+H
+"}

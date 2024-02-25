@@ -1,0 +1,855 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"c" = (
+/mob/living/simple_mob/humanoid/obsidianscale/melee,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/submap/crystalcore/red/six)
+"f" = (
+/obj/machinery/door/airlock,
+/turf/simulated/floor/tiled/kafel_full/yellow,
+/area/submap/crystalcore/red/six)
+"g" = (
+/obj/structure/closet/crate/secure/loot,
+/turf/simulated/floor/plating,
+/area/submap/crystalcore/red/six)
+"h" = (
+/mob/living/simple_mob/humanoid/obsidianscale/bouncer,
+/turf/simulated/floor/tiled/kafel_full/purple,
+/area/submap/crystalcore/red/six)
+"k" = (
+/obj/machinery/door/airlock,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/submap/crystalcore/red/six)
+"l" = (
+/turf/simulated/floor/tiled/kafel_full/red,
+/area/submap/crystalcore/red/six)
+"m" = (
+/obj/structure/table/steel_reinforced,
+/obj/random/tool/power,
+/turf/simulated/floor/tiled/kafel_full/purple,
+/area/submap/crystalcore/red/six)
+"n" = (
+/obj/machinery/power/rtg/advanced,
+/obj/structure/cable/blue{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/tiled/kafel_full/yellow,
+/area/submap/crystalcore/red/six)
+"o" = (
+/turf/template_noop,
+/area/submap/crystalcore/red/six)
+"p" = (
+/obj/machinery/recharge_station,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/submap/crystalcore/red/six)
+"s" = (
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled/kafel_full/yellow,
+/area/submap/crystalcore/red/six)
+"t" = (
+/mob/living/simple_mob/humanoid/obsidianscale/bouncer,
+/turf/simulated/floor/tiled/kafel_full/yellow,
+/area/submap/crystalcore/red/six)
+"u" = (
+/obj/machinery/power/apc/alarms_hidden{
+	pixel_y = -23
+	},
+/obj/structure/cable/blue,
+/turf/simulated/floor/tiled/kafel_full/yellow,
+/area/submap/crystalcore/red/six)
+"w" = (
+/turf/simulated/floor/outdoors/crystal_planet/redsand,
+/area/submap/crystalcore/red/six)
+"x" = (
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/kafel_full/yellow,
+/area/submap/crystalcore/red/six)
+"z" = (
+/obj/structure/table/steel_reinforced,
+/obj/random/material/precious,
+/turf/simulated/floor/tiled/kafel_full/purple,
+/area/submap/crystalcore/red/six)
+"B" = (
+/obj/structure/table/steel_reinforced,
+/obj/random/material/refined,
+/turf/simulated/floor/tiled/kafel_full/purple,
+/area/submap/crystalcore/red/six)
+"C" = (
+/turf/simulated/floor/tiled/kafel_full/yellow,
+/area/submap/crystalcore/red/six)
+"D" = (
+/obj/structure/grille,
+/obj/structure/window/phoronreinforced/full,
+/turf/simulated/floor/plating,
+/area/submap/crystalcore/red/six)
+"E" = (
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/submap/crystalcore/red/six)
+"F" = (
+/obj/structure/cable/blue{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable/blue{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/kafel_full/yellow,
+/area/submap/crystalcore/red/six)
+"J" = (
+/mob/living/simple_mob/humanoid/obsidianscale/hacker,
+/turf/simulated/floor/tiled/kafel_full/purple,
+/area/submap/crystalcore/red/six)
+"K" = (
+/turf/simulated/floor/tiled/kafel_full/purple,
+/area/submap/crystalcore/red/six)
+"L" = (
+/obj/machinery/artifact,
+/turf/simulated/floor/tiled/kafel_full/red,
+/area/submap/crystalcore/red/six)
+"M" = (
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/kafel_full/yellow,
+/area/submap/crystalcore/red/six)
+"O" = (
+/obj/structure/table/steel_reinforced,
+/turf/simulated/floor/tiled/kafel_full/purple,
+/area/submap/crystalcore/red/six)
+"P" = (
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/kafel_full/yellow,
+/area/submap/crystalcore/red/six)
+"Q" = (
+/obj/machinery/door/airlock,
+/turf/simulated/floor/tiled/kafel_full/red,
+/area/submap/crystalcore/red/six)
+"R" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/archaeological_find,
+/turf/simulated/floor/tiled/kafel_full/purple,
+/area/submap/crystalcore/red/six)
+"U" = (
+/obj/structure/table/steel_reinforced,
+/obj/random/material,
+/turf/simulated/floor/tiled/kafel_full/purple,
+/area/submap/crystalcore/red/six)
+"V" = (
+/turf/simulated/wall/r_lead,
+/area/submap/crystalcore/red/six)
+"W" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/submap/crystalcore/red/six)
+"X" = (
+/obj/machinery/door/airlock,
+/turf/simulated/floor/tiled/kafel_full/purple,
+/area/submap/crystalcore/red/six)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+a
+"}
+(3,1,1) = {"
+a
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+a
+"}
+(4,1,1) = {"
+a
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+a
+"}
+(5,1,1) = {"
+a
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+a
+"}
+(6,1,1) = {"
+a
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+w
+w
+w
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+a
+"}
+(7,1,1) = {"
+a
+o
+o
+V
+V
+V
+V
+V
+V
+o
+w
+w
+w
+w
+w
+o
+V
+V
+V
+V
+V
+V
+o
+o
+a
+"}
+(8,1,1) = {"
+a
+o
+o
+V
+p
+V
+V
+W
+V
+w
+w
+w
+w
+w
+w
+w
+V
+n
+s
+C
+C
+V
+o
+o
+a
+"}
+(9,1,1) = {"
+a
+o
+o
+V
+k
+V
+V
+k
+V
+w
+w
+w
+w
+w
+w
+w
+V
+n
+F
+P
+u
+V
+o
+o
+a
+"}
+(10,1,1) = {"
+a
+o
+o
+V
+E
+c
+E
+E
+V
+w
+w
+w
+w
+w
+w
+w
+V
+n
+M
+t
+C
+V
+o
+o
+a
+"}
+(11,1,1) = {"
+a
+o
+o
+V
+E
+E
+E
+E
+V
+w
+w
+w
+w
+w
+w
+w
+V
+n
+x
+C
+C
+V
+o
+o
+a
+"}
+(12,1,1) = {"
+a
+o
+o
+V
+k
+V
+V
+V
+V
+V
+X
+V
+V
+V
+X
+V
+V
+V
+V
+V
+f
+V
+o
+o
+a
+"}
+(13,1,1) = {"
+a
+o
+o
+V
+K
+K
+U
+O
+z
+K
+K
+R
+U
+m
+K
+K
+z
+O
+U
+K
+K
+V
+o
+o
+a
+"}
+(14,1,1) = {"
+a
+o
+o
+V
+K
+K
+K
+K
+K
+K
+K
+K
+K
+K
+K
+K
+K
+K
+K
+K
+K
+V
+o
+o
+a
+"}
+(15,1,1) = {"
+a
+o
+o
+V
+K
+K
+K
+K
+h
+K
+K
+K
+J
+K
+K
+K
+h
+K
+K
+K
+K
+V
+o
+o
+a
+"}
+(16,1,1) = {"
+a
+o
+o
+V
+K
+K
+m
+B
+R
+K
+K
+U
+z
+U
+K
+K
+R
+B
+m
+K
+K
+V
+o
+o
+a
+"}
+(17,1,1) = {"
+a
+o
+o
+V
+K
+K
+K
+K
+K
+K
+K
+K
+K
+K
+K
+K
+K
+K
+K
+K
+K
+V
+o
+o
+a
+"}
+(18,1,1) = {"
+a
+o
+o
+V
+D
+Q
+D
+V
+D
+Q
+D
+V
+V
+V
+D
+Q
+D
+V
+D
+Q
+D
+V
+o
+o
+a
+"}
+(19,1,1) = {"
+a
+o
+o
+V
+l
+l
+l
+V
+l
+l
+l
+V
+V
+V
+l
+l
+l
+V
+l
+l
+l
+V
+o
+o
+a
+"}
+(20,1,1) = {"
+a
+o
+o
+V
+l
+l
+l
+V
+l
+L
+l
+V
+g
+V
+l
+l
+l
+V
+l
+L
+l
+V
+o
+o
+a
+"}
+(21,1,1) = {"
+a
+o
+o
+V
+l
+l
+l
+V
+l
+l
+l
+V
+V
+V
+l
+l
+l
+V
+l
+l
+l
+V
+o
+o
+a
+"}
+(22,1,1) = {"
+a
+o
+o
+V
+V
+V
+V
+V
+V
+V
+V
+V
+V
+V
+V
+V
+V
+V
+V
+V
+V
+V
+o
+o
+a
+"}
+(23,1,1) = {"
+a
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+a
+"}
+(24,1,1) = {"
+a
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+a
+"}
+(25,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}

@@ -1,0 +1,1191 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/wall/rplastitanium,
+/area/submap/crystalcore/dark/lorearea_two)
+"b" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/old_tile/red,
+/area/submap/crystalcore/dark/lorearea_two)
+"c" = (
+/obj/machinery/porta_turret/poi,
+/turf/simulated/floor/tiled/old_tile/red,
+/area/submap/crystalcore/dark/lorearea_two)
+"e" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled/old_tile/red,
+/area/submap/crystalcore/dark/lorearea_two)
+"g" = (
+/obj/structure/grille,
+/obj/structure/cable/yellow{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/submap/crystalcore/dark/lorearea_two)
+"h" = (
+/obj/structure/table/rack,
+/obj/item/prop/datadisc/combat,
+/turf/simulated/floor/tiled/old_tile/red,
+/area/submap/crystalcore/dark/lorearea_two)
+"i" = (
+/obj/structure/table/rack,
+/obj/item/clothing/suit/space/void/security/riot,
+/obj/item/clothing/head/helmet/space/void/security/riot,
+/turf/simulated/floor/tiled/old_tile/red,
+/area/submap/crystalcore/dark/lorearea_two)
+"m" = (
+/obj/structure/table/reinforced,
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_tile/red,
+/area/submap/crystalcore/dark/lorearea_two)
+"n" = (
+/turf/simulated/floor/tiled/old_tile/red,
+/area/submap/crystalcore/dark/lorearea_two)
+"s" = (
+/obj/structure/grille,
+/obj/structure/cable/yellow{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
+/obj/structure/window/plastitanium,
+/turf/simulated/floor/plating,
+/area/submap/crystalcore/dark/lorearea_two)
+"u" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/old_tile/red,
+/area/submap/crystalcore/dark/lorearea_two)
+"w" = (
+/obj/structure/table/reinforced,
+/obj/machinery/door/window{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_tile/red,
+/area/submap/crystalcore/dark/lorearea_two)
+"x" = (
+/turf/template_noop,
+/area/template_noop)
+"y" = (
+/obj/structure/cable/yellow{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/machinery/power/rtg/advanced,
+/turf/simulated/floor/tiled/old_tile/red,
+/area/submap/crystalcore/dark/lorearea_two)
+"z" = (
+/obj/machinery/door/airlock,
+/turf/template_noop,
+/area/submap/crystalcore/dark/lorearea_two)
+"A" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/old_tile/red,
+/area/submap/crystalcore/dark/lorearea_two)
+"E" = (
+/obj/machinery/door/airlock/highsecurity,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/old_tile/red,
+/area/submap/crystalcore/dark/lorearea_two)
+"F" = (
+/obj/structure/grille,
+/obj/structure/cable/yellow{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/submap/crystalcore/dark/lorearea_two)
+"H" = (
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/old_tile/red,
+/area/submap/crystalcore/dark/lorearea_two)
+"I" = (
+/turf/template_noop,
+/area/submap/crystalcore/dark/lorearea_two)
+"K" = (
+/obj/structure/cable/yellow{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/machinery/power/rtg/advanced,
+/turf/simulated/floor/tiled/old_tile/red,
+/area/submap/crystalcore/dark/lorearea_two)
+"L" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/old_tile/red,
+/area/submap/crystalcore/dark/lorearea_two)
+"O" = (
+/obj/structure/table/rack,
+/obj/item/clothing/suit/space/void/security/riot/alt,
+/obj/item/clothing/head/helmet/space/void/security/riot/alt,
+/turf/simulated/floor/tiled/old_tile/red,
+/area/submap/crystalcore/dark/lorearea_two)
+"S" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/old_tile/red,
+/area/submap/crystalcore/dark/lorearea_two)
+"U" = (
+/obj/structure/grille,
+/obj/structure/cable/yellow{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/submap/crystalcore/dark/lorearea_two)
+"W" = (
+/obj/structure/table/rack,
+/obj/item/device/flashlight/color/red,
+/turf/simulated/floor/tiled/old_tile/red,
+/area/submap/crystalcore/dark/lorearea_two)
+"X" = (
+/obj/machinery/door/airlock/highsecurity,
+/turf/simulated/floor/tiled/old_tile/red,
+/area/submap/crystalcore/dark/lorearea_two)
+"Y" = (
+/obj/structure/table/reinforced,
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
+/obj/item/weapon/paper{
+	info = "Our supplies have been going missing, vanishing as we get deeper and deeper. Despite both light, and heavy searches our missing armory equipment has not appeared. At roughly 35k depth we're missing about three quarters of our armory now, although equipment near personal seems to stick around. We're debating having one dude sleep near them.";
+	name = "Research Notes"
+	},
+/turf/simulated/floor/tiled/old_tile/red,
+/area/submap/crystalcore/dark/lorearea_two)
+
+(1,1,1) = {"
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+"}
+(2,1,1) = {"
+x
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+x
+"}
+(3,1,1) = {"
+x
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+x
+"}
+(4,1,1) = {"
+x
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+x
+"}
+(5,1,1) = {"
+x
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+x
+"}
+(6,1,1) = {"
+x
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+x
+"}
+(7,1,1) = {"
+x
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+x
+"}
+(8,1,1) = {"
+x
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+x
+"}
+(9,1,1) = {"
+x
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+x
+"}
+(10,1,1) = {"
+x
+I
+I
+I
+I
+I
+I
+I
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+I
+I
+I
+I
+I
+I
+I
+x
+"}
+(11,1,1) = {"
+x
+I
+I
+I
+I
+I
+I
+I
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+I
+x
+"}
+(12,1,1) = {"
+x
+I
+I
+I
+I
+I
+I
+I
+a
+a
+n
+n
+n
+n
+c
+n
+n
+n
+n
+c
+a
+a
+K
+n
+n
+n
+n
+a
+I
+x
+"}
+(13,1,1) = {"
+x
+I
+I
+I
+I
+I
+I
+I
+a
+a
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+a
+a
+S
+n
+n
+n
+n
+a
+I
+x
+"}
+(14,1,1) = {"
+x
+I
+I
+I
+I
+I
+I
+I
+a
+a
+n
+n
+n
+n
+W
+W
+W
+O
+W
+i
+a
+a
+S
+n
+n
+n
+n
+a
+I
+x
+"}
+(15,1,1) = {"
+x
+I
+I
+I
+I
+I
+I
+I
+a
+a
+c
+n
+n
+a
+F
+F
+a
+F
+F
+F
+a
+a
+S
+a
+X
+a
+a
+a
+I
+x
+"}
+(16,1,1) = {"
+x
+I
+I
+I
+I
+I
+I
+I
+a
+a
+n
+n
+n
+X
+H
+u
+L
+u
+u
+u
+L
+E
+b
+a
+n
+n
+n
+z
+I
+x
+"}
+(17,1,1) = {"
+x
+I
+I
+I
+I
+I
+I
+I
+a
+a
+n
+n
+n
+s
+A
+A
+L
+A
+A
+A
+L
+E
+e
+a
+n
+n
+n
+z
+I
+x
+"}
+(18,1,1) = {"
+x
+I
+I
+I
+I
+I
+I
+I
+a
+a
+c
+n
+n
+a
+g
+g
+a
+U
+U
+U
+a
+a
+S
+a
+Y
+w
+m
+a
+I
+x
+"}
+(19,1,1) = {"
+x
+I
+I
+I
+I
+I
+I
+I
+a
+a
+n
+n
+n
+n
+O
+W
+W
+h
+i
+W
+a
+a
+S
+n
+n
+n
+n
+a
+I
+x
+"}
+(20,1,1) = {"
+x
+I
+I
+I
+I
+I
+I
+I
+a
+a
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+a
+a
+S
+n
+n
+n
+n
+a
+I
+x
+"}
+(21,1,1) = {"
+x
+I
+I
+I
+I
+I
+I
+I
+a
+a
+n
+n
+n
+n
+c
+n
+n
+n
+n
+c
+a
+a
+y
+n
+n
+n
+n
+a
+I
+x
+"}
+(22,1,1) = {"
+x
+I
+I
+I
+I
+I
+I
+I
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+I
+x
+"}
+(23,1,1) = {"
+x
+I
+I
+I
+I
+I
+I
+I
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+I
+I
+I
+I
+I
+I
+I
+x
+"}
+(24,1,1) = {"
+x
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+x
+"}
+(25,1,1) = {"
+x
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+x
+"}
+(26,1,1) = {"
+x
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+x
+"}
+(27,1,1) = {"
+x
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+x
+"}
+(28,1,1) = {"
+x
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+x
+"}
+(29,1,1) = {"
+x
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+x
+"}
+(30,1,1) = {"
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+"}

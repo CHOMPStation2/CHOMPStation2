@@ -1,0 +1,852 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/wall/r_lead,
+/area/submap/crystalcore/red/seven)
+"b" = (
+/obj/machinery/door/airlock,
+/turf/simulated/floor/tiled/kafel_full/yellow,
+/area/submap/crystalcore/red/seven)
+"d" = (
+/turf/simulated/floor/plating,
+/area/submap/crystalcore/red/seven)
+"g" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/kafel_full/yellow,
+/area/submap/crystalcore/red/seven)
+"h" = (
+/obj/machinery/door/airlock,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/submap/crystalcore/red/seven)
+"k" = (
+/mob/living/simple_mob/humanoid/obsidianscale/melee/silver,
+/turf/simulated/floor/tiled/kafel_full/purple,
+/area/submap/crystalcore/red/seven)
+"n" = (
+/obj/machinery/optable,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/submap/crystalcore/red/seven)
+"o" = (
+/turf/template_noop,
+/area/template_noop)
+"p" = (
+/mob/living/simple_mob/humanoid/obsidianscale/melee/green,
+/turf/simulated/floor/tiled/kafel_full/purple,
+/area/submap/crystalcore/red/seven)
+"r" = (
+/obj/structure/table/reinforced,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/submap/crystalcore/red/seven)
+"s" = (
+/obj/structure/table/rack,
+/obj/item/weapon/pickaxe/silver,
+/obj/item/weapon/pickaxe/silver,
+/turf/simulated/floor/tiled/kafel_full/purple,
+/area/submap/crystalcore/red/seven)
+"t" = (
+/mob/living/simple_mob/humanoid/obsidianscale/bouncer,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/submap/crystalcore/red/seven)
+"v" = (
+/turf/simulated/floor/outdoors/crystal_planet/redsand,
+/area/submap/crystalcore/red/seven)
+"w" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/kafel_full/yellow,
+/area/submap/crystalcore/red/seven)
+"z" = (
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/submap/crystalcore/red/seven)
+"A" = (
+/turf/simulated/floor/tiled/kafel_full/purple,
+/area/submap/crystalcore/red/seven)
+"C" = (
+/obj/structure/table/reinforced,
+/obj/random/medical/pillbottle,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/submap/crystalcore/red/seven)
+"G" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/kafel_full/yellow,
+/area/submap/crystalcore/red/seven)
+"H" = (
+/obj/machinery/power/rtg/advanced,
+/obj/structure/cable,
+/turf/simulated/floor/tiled/kafel_full/yellow,
+/area/submap/crystalcore/red/seven)
+"I" = (
+/obj/structure/table/rack,
+/obj/random/material/refined,
+/obj/random/material,
+/obj/random/material,
+/turf/simulated/floor/tiled/kafel_full/purple,
+/area/submap/crystalcore/red/seven)
+"J" = (
+/obj/structure/table/rack,
+/obj/structure/window/basic{
+	dir = 1
+	},
+/obj/structure/window/basic,
+/obj/structure/window/basic{
+	dir = 8
+	},
+/obj/structure/window/basic{
+	dir = 4
+	},
+/obj/item/weapon/gun/energy/lasershotgun,
+/obj/item/weapon/gun/energy/lasershotgun,
+/turf/simulated/floor/tiled/kafel_full/red,
+/area/submap/crystalcore/red/seven)
+"L" = (
+/obj/machinery/power/rtg/advanced,
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/tiled/kafel_full/yellow,
+/area/submap/crystalcore/red/seven)
+"M" = (
+/turf/template_noop,
+/area/submap/crystalcore/red/seven)
+"Q" = (
+/turf/simulated/floor/tiled/kafel_full/yellow,
+/area/submap/crystalcore/red/seven)
+"R" = (
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 4;
+	pixel_x = 23
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/mob/living/simple_mob/humanoid/obsidianscale/demo,
+/turf/simulated/floor/tiled/kafel_full/yellow,
+/area/submap/crystalcore/red/seven)
+"S" = (
+/obj/machinery/door/airlock,
+/turf/simulated/floor/tiled/kafel_full/purple,
+/area/submap/crystalcore/red/seven)
+"T" = (
+/obj/structure/table/reinforced,
+/obj/random/firstaid,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/submap/crystalcore/red/seven)
+"U" = (
+/obj/machinery/mining/brace,
+/turf/simulated/floor/tiled/kafel_full/purple,
+/area/submap/crystalcore/red/seven)
+"V" = (
+/obj/machinery/oxygen_pump/mobile/anesthetic,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/submap/crystalcore/red/seven)
+"W" = (
+/mob/living/simple_mob/humanoid/obsidianscale/melee/diamond,
+/turf/simulated/floor/tiled/kafel_full/purple,
+/area/submap/crystalcore/red/seven)
+"Z" = (
+/obj/machinery/mining/drill/loaded,
+/turf/simulated/floor/tiled/kafel_full/purple,
+/area/submap/crystalcore/red/seven)
+
+(1,1,1) = {"
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+"}
+(2,1,1) = {"
+o
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+o
+"}
+(3,1,1) = {"
+o
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+o
+"}
+(4,1,1) = {"
+o
+M
+M
+M
+M
+M
+M
+M
+M
+M
+a
+a
+a
+a
+a
+M
+M
+M
+M
+M
+M
+M
+M
+M
+o
+"}
+(5,1,1) = {"
+o
+M
+M
+M
+M
+M
+M
+M
+M
+a
+a
+T
+C
+C
+a
+a
+M
+M
+M
+M
+M
+M
+M
+M
+o
+"}
+(6,1,1) = {"
+o
+M
+M
+M
+M
+M
+M
+M
+a
+a
+r
+z
+z
+z
+r
+a
+a
+M
+M
+M
+M
+M
+M
+M
+o
+"}
+(7,1,1) = {"
+o
+M
+M
+M
+M
+M
+M
+a
+a
+a
+n
+z
+t
+z
+n
+a
+a
+a
+M
+M
+M
+M
+M
+M
+o
+"}
+(8,1,1) = {"
+o
+M
+M
+M
+M
+M
+a
+a
+d
+a
+V
+z
+z
+z
+V
+a
+d
+a
+a
+M
+M
+M
+M
+M
+o
+"}
+(9,1,1) = {"
+o
+M
+M
+M
+M
+a
+a
+d
+d
+a
+a
+z
+z
+z
+a
+a
+d
+d
+a
+a
+M
+M
+M
+M
+o
+"}
+(10,1,1) = {"
+o
+M
+M
+M
+a
+a
+a
+a
+a
+d
+a
+a
+h
+a
+a
+d
+a
+a
+a
+a
+a
+M
+M
+M
+o
+"}
+(11,1,1) = {"
+o
+M
+v
+a
+a
+s
+I
+I
+a
+a
+a
+A
+W
+A
+a
+a
+a
+U
+Z
+U
+a
+a
+v
+M
+o
+"}
+(12,1,1) = {"
+o
+v
+v
+a
+A
+A
+p
+A
+A
+a
+A
+A
+A
+A
+A
+a
+A
+A
+k
+A
+A
+a
+v
+v
+o
+"}
+(13,1,1) = {"
+o
+v
+v
+S
+A
+A
+A
+A
+A
+S
+A
+A
+J
+A
+A
+S
+A
+A
+A
+A
+A
+S
+v
+v
+o
+"}
+(14,1,1) = {"
+o
+v
+v
+a
+A
+A
+k
+A
+A
+a
+A
+A
+A
+A
+A
+a
+A
+A
+p
+A
+A
+a
+v
+v
+o
+"}
+(15,1,1) = {"
+o
+M
+v
+a
+a
+U
+Z
+U
+a
+a
+a
+A
+W
+A
+a
+a
+a
+I
+I
+s
+a
+a
+v
+M
+o
+"}
+(16,1,1) = {"
+o
+M
+M
+M
+a
+a
+a
+a
+a
+d
+a
+a
+b
+a
+a
+d
+a
+a
+a
+a
+a
+M
+M
+M
+o
+"}
+(17,1,1) = {"
+o
+M
+M
+M
+M
+a
+a
+d
+d
+a
+a
+Q
+Q
+Q
+a
+a
+d
+d
+a
+a
+M
+M
+M
+M
+o
+"}
+(18,1,1) = {"
+o
+M
+M
+M
+M
+M
+a
+a
+d
+a
+L
+G
+g
+G
+H
+a
+d
+a
+a
+M
+M
+M
+M
+M
+o
+"}
+(19,1,1) = {"
+o
+M
+M
+M
+M
+M
+M
+a
+a
+a
+L
+G
+w
+G
+H
+a
+a
+a
+M
+M
+M
+M
+M
+M
+o
+"}
+(20,1,1) = {"
+o
+M
+M
+M
+M
+M
+M
+M
+a
+a
+L
+G
+w
+G
+H
+a
+a
+M
+M
+M
+M
+M
+M
+M
+o
+"}
+(21,1,1) = {"
+o
+M
+M
+M
+M
+M
+M
+M
+M
+a
+a
+Q
+R
+Q
+a
+a
+M
+M
+M
+M
+M
+M
+M
+M
+o
+"}
+(22,1,1) = {"
+o
+M
+M
+M
+M
+M
+M
+M
+M
+M
+a
+a
+a
+a
+a
+M
+M
+M
+M
+M
+M
+M
+M
+M
+o
+"}
+(23,1,1) = {"
+o
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+o
+"}
+(24,1,1) = {"
+o
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+o
+"}
+(25,1,1) = {"
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+"}
