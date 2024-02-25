@@ -267,3 +267,12 @@
   Kashargul:
   - bugfix: a runtime in the tgs status command
   - rscadd: modified AR-Visor for teshari
+2024-02-25:
+  KotetsuRedwood:
+  - rscadd: Adds a "big nostrils" marking for characters with huge noses.
+  Raeschen:
+  - bugfix: Synths no longer infinitely get a rename prompt on MMI insertion
+  - code_imp: Atmos scrubbers kill the final trace left behind after their minimum
+      threshold for scrubbing is passed.
+  TheCaramelion:
+  - bugfix: Added an amount of meat to drop to metroids
