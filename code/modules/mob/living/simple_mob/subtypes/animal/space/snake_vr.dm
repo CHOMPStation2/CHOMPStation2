@@ -47,9 +47,6 @@
 	say_list_type = /datum/say_list/snake
 	ai_holder_type = /datum/ai_holder/simple_mob/passive
 
-	/datum/say_list/snake
-		emote_hear = list("hisses")
-
 	// CHOMPEdit Start - New sprites & Added vore
 	/*
 	icon_state = "python"
@@ -112,6 +109,9 @@
 	B.examine_messages = list(
 		"\the [name]'s tail is swollen fat with a lump of prey it swallowed whole.")
 // CHOMPEdit End
+
+/datum/say_list/snake
+	emote_hear = list("hisses")
 
 /*
  * Red Snake
