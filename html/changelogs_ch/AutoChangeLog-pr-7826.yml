@@ -1,0 +1,4 @@
+author: "ItsSelis"
+delete-after: True
+changes:
+  - server: "Updates DMAPI to version 5.9.0"
