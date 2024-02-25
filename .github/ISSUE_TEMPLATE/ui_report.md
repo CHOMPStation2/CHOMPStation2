@@ -2,7 +2,7 @@
 name: UI Bug report
 about: Create a report, specific to any UI related things.
 title: '[UI] '
-labels: 'Type: Bug'
+labels: ['Type: Bug', 'Type: UI']
 assignees: ''
 
 ---
