@@ -1,0 +1,5 @@
+author: "ItsSelis"
+delete-after: True
+changes:
+  - rscadd: "Added TGS event handler to notify of updates"
+  - admin: "Added TGS event handler to notify/warn for specific server events"
