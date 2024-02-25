@@ -7,6 +7,9 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/item/device/suit_cooling_unit,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/clothing/mask/breath,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/crystalcore/publicexit)
 "aj" = (
@@ -30,6 +33,9 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/crystalcore/miningstorage)
+"av" = (
+/turf/simulated/floor/carpet/blue,
+/area/surface/outpost/crystalcore/mineingdormsA)
 "aE" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -107,6 +113,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/crystalcore/publicexit)
+"cL" = (
+/obj/item/device/flashlight/lamp/green,
+/obj/structure/table/woodentable,
+/turf/simulated/floor/carpet/blue,
+/area/surface/outpost/crystalcore/mineingdormsA)
 "cR" = (
 /obj/machinery/power/smes/buildable{
 	RCon_tag = "Mining Generator";
@@ -270,6 +281,33 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/crystalcore/mineingdormsC)
+"hs" = (
+/obj/structure/table/rack,
+/obj/item/clothing/suit/bio_suit/anomaly,
+/obj/item/clothing/head/bio_hood/anomaly,
+/obj/item/clothing/mask/breath,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1;
+	health = 1e+006
+	},
+/obj/item/device/suit_cooling_unit,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/crystalcore/xenoarch)
+"ht" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock{
+	name = "Custodial Closet";
+	req_access = list(26)
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/crystalcore/janitor)
 "hw" = (
 /obj/machinery/mineral/input,
 /obj/machinery/light/small{
@@ -289,6 +327,9 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/item/device/suit_cooling_unit,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/clothing/mask/breath,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/crystalcore/publicexit)
 "hE" = (
@@ -302,6 +343,12 @@
 "hY" = (
 /turf/simulated/floor/tiled,
 /area/surface/outpost/crystalcore/publicexit)
+"hZ" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/crystalcore/xenoarch)
 "ia" = (
 /obj/machinery/vending/giftvendor,
 /turf/simulated/floor/tiled,
@@ -353,6 +400,26 @@
 "jO" = (
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/crystalcore/vending)
+"jQ" = (
+/obj/structure/table/rack,
+/obj/item/clothing/suit/space/anomaly,
+/obj/item/clothing/head/helmet/space/anomaly,
+/obj/item/clothing/mask/breath,
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	dir = 1;
+	health = 1e+006
+	},
+/obj/item/device/suit_cooling_unit,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/crystalcore/xenoarch)
+"kp" = (
+/obj/machinery/suspension_gen,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/crystalcore/xenoarch)
 "ks" = (
 /obj/structure/cable{
 	d2 = 8;
@@ -365,6 +432,14 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/crystalcore/mineingdormsC)
+"kx" = (
+/obj/machinery/light,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/crystalcore/xenoarch)
+"kB" = (
+/obj/machinery/artifact_scanpad,
+/turf/simulated/floor/reinforced,
+/area/surface/outpost/crystalcore/xenoarch)
 "kD" = (
 /obj/item/weapon/circuitboard/machine/rtg/advanced,
 /obj/item/weapon/circuitboard/machine/rtg/advanced,
@@ -401,12 +476,28 @@
 "le" = (
 /turf/simulated/floor/wood,
 /area/surface/outpost/crystalcore/mineingdormsA)
+"li" = (
+/obj/structure/bed/chair/sofa/blue{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/crystalcore/mineingdormsA)
+"lq" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/crystalcore/mineingdormsC)
 "lP" = (
 /obj/structure/closet/secure_closet/explorer,
 /obj/item/weapon/pickaxe,
 /obj/item/device/cataloguer,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/crystalcore/explorationprep)
+"lV" = (
+/obj/machinery/artifact_analyser,
+/turf/simulated/floor/reinforced,
+/area/surface/outpost/crystalcore/xenoarch)
 "mg" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -415,6 +506,11 @@
 	},
 /obj/machinery/door/airlock,
 /turf/simulated/floor/tiled,
+/area/surface/outpost/crystalcore/mineingdormsB)
+"mh" = (
+/obj/item/device/flashlight/lamp/green,
+/obj/structure/table/woodentable,
+/turf/simulated/floor/carpet/green,
 /area/surface/outpost/crystalcore/mineingdormsB)
 "mj" = (
 /obj/structure/cable{
@@ -488,17 +584,37 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/crystalcore/mineingdormsA)
+"nR" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/crystalcore/mineingdormsB)
 "nZ" = (
 /obj/structure/table/rack,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
 /obj/structure/window/reinforced,
+/obj/item/device/suit_cooling_unit,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/clothing/mask/breath,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/crystalcore/publicexit)
 "oe" = (
 /turf/simulated/mineral/purplecrystal,
 /area/surface/deepcaverns)
+"oh" = (
+/obj/item/device/flashlight/lamp/green,
+/obj/structure/table/woodentable,
+/turf/simulated/floor/carpet/oracarpet,
+/area/surface/outpost/crystalcore/mineingdormsC)
+"oQ" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/crystalcore/mineingdormsA)
 "oR" = (
 /obj/machinery/door/airlock/engineering{
 	name = "Mining Operations Power";
@@ -512,6 +628,19 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/auxiliary_storage)
+"oU" = (
+/obj/structure/table/rack,
+/obj/item/clothing/suit/space/anomaly,
+/obj/item/clothing/head/helmet/space/anomaly,
+/obj/item/clothing/mask/breath,
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced,
+/obj/item/device/suit_cooling_unit,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/crystalcore/xenoarch)
 "pj" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -600,6 +729,9 @@
 /obj/random/firstaid,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/search_and_rescue)
+"rh" = (
+/turf/simulated/floor/carpet/green,
+/area/surface/outpost/crystalcore/mineingdormsB)
 "ri" = (
 /obj/machinery/computer/shuttle_control/deep_elevator_A,
 /obj/machinery/light{
@@ -624,6 +756,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/crystalcore/explorationprep)
+"rw" = (
+/obj/structure/bed/chair/sofa/left/blue{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/crystalcore/mineingdormsA)
 "rP" = (
 /obj/machinery/mineral/equipment_vendor/survey,
 /turf/simulated/floor/tiled,
@@ -651,8 +789,18 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/table/rack,
+/obj/item/device/suit_cooling_unit,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/clothing/mask/breath,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/crystalcore/publicexit)
+"sF" = (
+/obj/structure/closet/secure_closet/xenoarchaeologist{
+	req_access = list(47)
+	},
+/obj/item/clothing/suit/storage/hooded/wintercoat/science,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/crystalcore/xenoarch)
 "sH" = (
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 9
@@ -719,6 +867,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/crystalcore/borechamber)
+"tP" = (
+/obj/structure/bed/chair/sofa/corner/green{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/crystalcore/mineingdormsB)
+"tW" = (
+/obj/structure/bed/chair/sofa/left/orange{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/crystalcore/mineingdormsC)
 "ud" = (
 /turf/simulated/floor/tiled,
 /area/surface/outpost/crystalcore/explorationprep)
@@ -746,6 +906,18 @@
 "uw" = (
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/search_and_rescue)
+"uH" = (
+/obj/structure/bed/chair/sofa/green{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/crystalcore/mineingdormsB)
+"uN" = (
+/obj/structure/bed/chair/sofa/left/green{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/crystalcore/mineingdormsB)
 "uZ" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -826,6 +998,11 @@
 /obj/structure/closet/secure_closet/pilot,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/crystalcore/explorationprep)
+"wU" = (
+/obj/structure/bed/double/padded,
+/obj/item/weapon/bedsheet/greendouble,
+/turf/simulated/floor/carpet/green,
+/area/surface/outpost/crystalcore/mineingdormsB)
 "xa" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -882,6 +1059,18 @@
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
 /area/surface/outpost/crystalcore/borechamber)
+"yn" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/crystalcore/mineingdormsB)
+"yu" = (
+/obj/structure/bed/chair/sofa/orange{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/crystalcore/mineingdormsC)
 "yC" = (
 /obj/machinery/vending/loadout,
 /turf/simulated/floor/tiled,
@@ -1004,6 +1193,9 @@
 /obj/machinery/sleep_console,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/search_and_rescue)
+"Dh" = (
+/turf/simulated/floor/carpet/oracarpet,
+/area/surface/outpost/crystalcore/mineingdormsC)
 "Di" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -1168,6 +1360,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/crystalcore/oreprocessing)
+"HA" = (
+/obj/structure/bed/chair/sofa/left/orange{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/crystalcore/mineingdormsC)
 "HF" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -1176,6 +1374,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/crystalcore/miningprep)
+"HO" = (
+/obj/structure/closet/excavation,
+/obj/item/weapon/tool/wrench,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/crystalcore/xenoarch)
 "Id" = (
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/crystalcore/mineingdormsA)
@@ -1285,10 +1488,28 @@
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
 /area/surface/outpost/crystalcore/explorationprep)
+"LR" = (
+/obj/structure/table/rack,
+/obj/item/clothing/suit/bio_suit/anomaly,
+/obj/item/clothing/head/bio_hood/anomaly,
+/obj/item/clothing/mask/breath,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/obj/item/device/suit_cooling_unit,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/crystalcore/xenoarch)
 "Mc" = (
 /obj/structure/closet/crate,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/crystalcore/miningstorage)
+"Ms" = (
+/obj/structure/bed/chair/sofa/corner/orange{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/crystalcore/mineingdormsC)
 "Mt" = (
 /obj/structure/cable{
 	d2 = 8;
@@ -1398,6 +1619,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/auxiliary_storage)
+"OX" = (
+/obj/structure/bed/chair/sofa/left/green{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/crystalcore/mineingdormsB)
 "Pb" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -1415,6 +1642,11 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/crystalcore/explorationprep)
+"Pg" = (
+/obj/structure/bed/double/padded,
+/obj/item/weapon/bedsheet/orangedouble,
+/turf/simulated/floor/carpet/oracarpet,
+/area/surface/outpost/crystalcore/mineingdormsC)
 "Pi" = (
 /obj/effect/floor_decal/industrial/loading{
 	dir = 8
@@ -1429,6 +1661,12 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/surface/outpost/crystalcore/oreprocessing)
+"Px" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/crystalcore/mineingdormsA)
 "PF" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -1457,10 +1695,22 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/crystalcore/explorationprep)
+"PQ" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/crystalcore/mineingdormsC)
 "Qa" = (
 /obj/structure/closet/crate,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/crystalcore/miningprep)
+"Qd" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/crystalcore/xenoarch)
 "Qg" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -1487,9 +1737,18 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/auxiliary_storage)
+"Qx" = (
+/turf/simulated/floor/reinforced,
+/area/surface/outpost/crystalcore/xenoarch)
 "Qy" = (
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/crystalcore/oreprocessing)
+"QE" = (
+/obj/structure/bed/chair/sofa/left/blue{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/crystalcore/mineingdormsA)
 "QL" = (
 /obj/structure/cable{
 	d2 = 4;
@@ -1539,6 +1798,9 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
+/obj/item/device/suit_cooling_unit,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/clothing/mask/breath,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/crystalcore/publicexit)
 "RE" = (
@@ -1575,6 +1837,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/auxiliary_storage)
+"SM" = (
+/obj/machinery/door/airlock/glass_research,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/crystalcore/xenoarch)
 "SQ" = (
 /turf/simulated/floor/reinforced,
 /area/shuttle/expoutpost/deepelevator_a/underground)
@@ -1692,6 +1958,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/auxiliary_storage)
+"VK" = (
+/obj/structure/bed/double/padded,
+/obj/item/weapon/bedsheet/bluedouble,
+/turf/simulated/floor/carpet/blue,
+/area/surface/outpost/crystalcore/mineingdormsA)
 "Wd" = (
 /obj/machinery/gear_painter,
 /turf/simulated/floor/tiled,
@@ -1778,6 +2049,12 @@
 /obj/structure/closet/jcloset,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/crystalcore/janitor)
+"YE" = (
+/obj/structure/bed/chair/sofa/corner/blue{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/crystalcore/mineingdormsA)
 "Zk" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -46543,10 +46820,10 @@ Ih
 uh
 xa
 Zz
-le
-le
-le
-le
+oQ
+QE
+li
+YE
 Id
 oe
 oe
@@ -46804,7 +47081,7 @@ nQ
 le
 le
 le
-le
+rw
 Id
 oe
 oe
@@ -47060,9 +47337,9 @@ Id
 le
 nQ
 le
-le
-le
-le
+av
+av
+av
 Id
 eG
 eG
@@ -47317,10 +47594,10 @@ RE
 Id
 le
 Mt
-le
-le
-le
-le
+Px
+av
+VK
+cL
 Id
 eG
 eG
@@ -47833,10 +48110,10 @@ Qg
 mg
 pj
 ZP
-dp
-dp
-dp
-dp
+yn
+OX
+uH
+tP
 ez
 eG
 eG
@@ -48094,7 +48371,7 @@ PF
 dp
 dp
 dp
-dp
+uN
 ez
 eG
 eG
@@ -48350,9 +48627,9 @@ ez
 dp
 PF
 dp
-dp
-dp
-dp
+rh
+rh
+rh
 ez
 eG
 eG
@@ -48607,10 +48884,10 @@ RE
 ez
 dp
 mu
-dp
-dp
-dp
-dp
+nR
+rh
+wU
+mh
 ez
 eG
 eG
@@ -49123,10 +49400,10 @@ Qg
 Ye
 xl
 jq
-ql
-ql
-ql
-ql
+lq
+tW
+yu
+Ms
 TR
 KP
 KP
@@ -49384,7 +49661,7 @@ gQ
 ql
 ql
 ql
-ql
+HA
 TR
 KP
 GP
@@ -49640,14 +49917,14 @@ TR
 ql
 gQ
 ql
-ql
-ql
-ql
+Dh
+Dh
+Dh
 TR
 KP
 nK
 Vp
-Vp
+ht
 cp
 Di
 cp
@@ -49897,10 +50174,10 @@ RE
 TR
 ql
 ks
-ql
-ql
-ql
-ql
+PQ
+Dh
+Pg
+oh
 TR
 KP
 gA
@@ -50168,13 +50445,13 @@ hY
 Fu
 hY
 Gq
+HO
+KX
+hZ
 KX
 KX
 KX
-KX
-KX
-KX
-KX
+hZ
 KX
 KX
 KX
@@ -50426,7 +50703,7 @@ ri
 Fu
 hY
 Gq
-KX
+HO
 KX
 KX
 KX
@@ -50684,12 +50961,12 @@ hY
 Fu
 hY
 Gq
+HO
 KX
-KX
-KX
-KX
-KX
-KX
+jQ
+oU
+kp
+kx
 kK
 kK
 kK
@@ -50949,9 +51226,9 @@ KX
 KX
 KX
 Gq
-KX
-KX
-KX
+Qx
+Qx
+Qx
 kK
 Ny
 Ny
@@ -51206,10 +51483,10 @@ KX
 KX
 KX
 KX
-KX
-KX
-KX
-KX
+SM
+Qx
+Qx
+kB
 kK
 Ny
 Ny
@@ -51465,9 +51742,9 @@ KX
 KX
 KX
 Gq
-KX
-KX
-KX
+Qx
+Qx
+lV
 kK
 Ny
 Ny
@@ -51716,12 +51993,12 @@ hY
 Fu
 hY
 Gq
+sF
 KX
-KX
-KX
-KX
-KX
-KX
+hs
+LR
+kp
+kx
 kK
 kK
 kK
@@ -51974,7 +52251,7 @@ ri
 Fu
 hY
 Gq
-KX
+sF
 KX
 KX
 KX
@@ -52232,13 +52509,13 @@ hY
 Fu
 hY
 Gq
+sF
+KX
+Qd
 KX
 KX
 KX
-KX
-KX
-KX
-KX
+Qd
 KX
 KX
 KX

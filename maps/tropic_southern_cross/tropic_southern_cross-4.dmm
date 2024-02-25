@@ -27,6 +27,15 @@
 /obj/machinery/power/tesla_coil/collector,
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/reactor_smes)
+"bj" = (
+/obj/machinery/button/remote/blast_door{
+	id = "bar_surface";
+	name = "Bar Shutters";
+	pixel_x = null;
+	pixel_y = 24
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/crystalcore/drinkmix)
 "bD" = (
 /obj/machinery/door/airlock/external,
 /turf/simulated/floor/tiled/white,
@@ -69,7 +78,9 @@
 /turf/simulated/floor/plating,
 /area/surface/outside/westernruins)
 "dQ" = (
-/obj/machinery/door/airlock,
+/obj/machinery/door/airlock{
+	req_access = list(28)
+	},
 /obj/structure/cable/pink{
 	d1 = 4;
 	d2 = 8;
@@ -160,6 +171,19 @@
 /obj/item/weapon/material/kitchen/rollingpin,
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/crystalcore/surfacekitchen)
+"gF" = (
+/obj/structure/table/marble,
+/obj/machinery/cash_register/civilian{
+	dir = 1
+	},
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "bar_surface";
+	layer = 3.1;
+	name = "Bar Shutters"
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/crystalcore/drinkmix)
 "gY" = (
 /turf/simulated/wall,
 /area/surface/outpost/crystalcore/eastbotanty)
@@ -410,6 +434,19 @@
 /obj/machinery/particle_accelerator/control_box,
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/reactor_smes)
+"ph" = (
+/obj/structure/table/marble,
+/obj/machinery/cash_register/civilian{
+	dir = 1
+	},
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "groundlevel_kitchen";
+	layer = 3.1;
+	name = "Kitchen Shutters"
+	},
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/crystalcore/surfacekitchen)
 "pl" = (
 /obj/structure/cable/white{
 	icon_state = "5-8";
@@ -521,6 +558,16 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/crystalcore/qpad)
+"sy" = (
+/obj/structure/table/marble,
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "groundlevel_kitchen";
+	layer = 3.1;
+	name = "Kitchen Shutters"
+	},
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/crystalcore/surfacekitchen)
 "sH" = (
 /turf/simulated/floor/beach/sand/warm,
 /area/surface/outside/northwestisland)
@@ -951,6 +998,12 @@
 /area/surface/outpost/crystalcore/eastbotanty)
 "HH" = (
 /obj/machinery/smartfridge/drinks/showcase,
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "bar_surface";
+	layer = 3.1;
+	name = "Bar Shutters"
+	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/crystalcore/drinkmix)
 "Ib" = (
@@ -1002,6 +1055,16 @@
 	outdoors = 1
 	},
 /area/surface/outpost/crystalcore/surfacesolar)
+"Jq" = (
+/obj/structure/table/marble,
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "bar_surface";
+	layer = 3.1;
+	name = "Bar Shutters"
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/crystalcore/drinkmix)
 "Jy" = (
 /obj/machinery/power/emitter,
 /turf/simulated/floor/plating,
@@ -1302,6 +1365,15 @@
 /obj/item/weapon/stool,
 /turf/simulated/floor/wood,
 /area/surface/outpost/crystalcore/surfacebar)
+"SZ" = (
+/obj/machinery/button/remote/blast_door{
+	id = "groundlevel_kitchen";
+	name = "Kitchen Shutters";
+	pixel_x = null;
+	pixel_y = 24
+	},
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/crystalcore/surfacekitchen)
 "Tl" = (
 /obj/structure/cable/pink{
 	d1 = 4;
@@ -1553,7 +1625,9 @@
 /area/surface/outpost/crystalcore/westbotanty)
 "XO" = (
 /obj/structure/fans/hardlight,
-/obj/machinery/door/airlock,
+/obj/machinery/door/airlock{
+	req_access = list(25)
+	},
 /obj/structure/cable/pink{
 	d1 = 1;
 	d2 = 2;
@@ -1575,6 +1649,17 @@
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/surface/outpost/crystalcore/eastbotanty)
+"YE" = (
+/obj/machinery/door/airlock{
+	req_access = list(25)
+	},
+/obj/structure/cable/pink{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/wood,
+/area/surface/outpost/crystalcore/drinkmix)
 "Zc" = (
 /obj/structure/cable/pink{
 	d1 = 1;
@@ -48670,7 +48755,7 @@ nv
 XI
 nO
 fB
-UO
+SZ
 UO
 UO
 UO
@@ -48928,10 +49013,10 @@ nv
 XI
 nO
 fB
-VJ
-VJ
-VJ
-VJ
+ph
+sy
+sy
+sy
 XF
 dQ
 sP
@@ -51508,12 +51593,12 @@ GA
 ZA
 Fk
 gY
-NM
-NM
-NM
+gF
+Jq
+Jq
 HH
 TK
-fj
+YE
 mX
 lQ
 lQ
@@ -51766,7 +51851,7 @@ GA
 ZA
 Fk
 gY
-Rt
+bj
 Rt
 Rt
 Rt
