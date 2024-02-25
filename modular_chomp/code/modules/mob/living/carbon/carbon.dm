@@ -8,9 +8,7 @@
 
 	cozyloop = new(list(src), FALSE)
 
-/* //fix hard qdels - move overrides to code/modules/mob/living/carbon/carbon.dm
 /mob/living/carbon/Destroy()
+	. = ..()
 	if(cozyloop)
 		QDEL_NULL(cozyloop)
-	. = ..()
-*/
