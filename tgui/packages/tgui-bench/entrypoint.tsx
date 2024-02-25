@@ -4,15 +4,17 @@
  * @license MIT
  */
 
-import { setupGlobalEvents } from 'tgui/events';
 import 'tgui/styles/main.scss';
+
+import { setupGlobalEvents } from 'tgui/events';
+
 import Benchmark from './lib/benchmark';
 
 const sendMessage = (obj: any) => {
   const req = new XMLHttpRequest();
   req.open('POST', `/message`, false);
   req.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
-  // req.timeout = 250;
+  req.timeout = 250;
   req.send(JSON.stringify(obj));
 };
 

@@ -1,10 +1,11 @@
 import { sortBy } from 'common/collections';
+
 import { useBackend } from '../backend';
 import { Button, Section } from '../components';
 import { Window } from '../layouts';
 
-export const FileCabinet = (props, context) => {
-  const { act, data } = useBackend(context);
+export const FileCabinet = (props) => {
+  const { act, data } = useBackend();
 
   const { contents } = data;
 
@@ -12,7 +13,7 @@ export const FileCabinet = (props, context) => {
   const sortedContents = sortBy((val) => val.name)(contents || []);
 
   return (
-    <Window width={350} height={300} resizable>
+    <Window width={350} height={300}>
       <Window.Content scrollable>
         <Section>
           {sortedContents.map((item) => (

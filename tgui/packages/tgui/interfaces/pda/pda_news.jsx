@@ -1,12 +1,12 @@
 import { decodeHtmlEntities } from 'common/string';
-import { Fragment } from 'inferno';
+
 import { useBackend } from '../../backend';
 import { Box, Button, Section } from '../../components';
 
 // Stolen wholesale from communicators. TGUITODO: Merge PDA & Communicator shared code once both are in
 /* News */
-export const pda_news = (props, context) => {
-  const { act, data } = useBackend(context);
+export const pda_news = (props) => {
+  const { act, data } = useBackend();
 
   const { feeds, target_feed } = data;
 
@@ -22,8 +22,8 @@ export const pda_news = (props, context) => {
   );
 };
 
-const NewsTargetFeed = (props, context) => {
-  const { act, data } = useBackend(context);
+const NewsTargetFeed = (props) => {
+  const { act, data } = useBackend();
 
   const { target_feed } = data;
 
@@ -41,7 +41,8 @@ const NewsTargetFeed = (props, context) => {
           icon="chevron-up"
           onClick={() => act('newsfeed', { newsfeed: null })}
         />
-      }>
+      }
+    >
       {(target_feed.messages.length &&
         target_feed.messages.map((message) => (
           <Section key={message.ref}>
@@ -62,13 +63,13 @@ const NewsTargetFeed = (props, context) => {
   );
 };
 
-const NewsFeed = (props, context) => {
-  const { act, data } = useBackend(context);
+const NewsFeed = (props) => {
+  const { act, data } = useBackend();
 
   const { feeds, latest_news } = data;
 
   return (
-    <Fragment>
+    <>
       <Section title="Recent News" level={2}>
         {(latest_news.length && (
           <Section>
@@ -113,6 +114,6 @@ const NewsFeed = (props, context) => {
           />
         ))}
       </Section>
-    </Fragment>
+    </>
   );
 };

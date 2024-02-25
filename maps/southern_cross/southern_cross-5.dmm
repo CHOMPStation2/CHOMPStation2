@@ -4565,6 +4565,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
+"iP" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/surface/outpost/wall)
 "iQ" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 4
@@ -6511,6 +6517,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/main/dorms/dorm_1)
+"mp" = (
+/obj/effect/floor_decal/techfloor/orange,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/techfloor,
+/area/surface/outpost/wall)
 "mq" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
@@ -12307,8 +12318,8 @@
 /turf/simulated/floor/plating{
 	icon_state = "asteroidplating2";
 	nitrogen = 93.7835;
-	temperature = 243.15;
-	oxygen = 20.7263
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/surface/outpost/mining_main/exterior)
 "wN" = (
@@ -12609,9 +12620,9 @@
 "xq" = (
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
+	outdoors = 1;
 	oxygen = 20.7263;
-	temperature = 243.15;
-	outdoors = 1
+	temperature = 243.15
 	},
 /area/surface/outside/path/plains)
 "xr" = (
@@ -13455,8 +13466,8 @@
 /turf/simulated/floor/plating{
 	icon_state = "asteroidplating2";
 	nitrogen = 93.7835;
-	temperature = 243.15;
-	oxygen = 20.7263
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/surface/outpost/mining_main/exterior)
 "yI" = (
@@ -13652,10 +13663,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/gen_room/smes_right)
-"ze" = (
-/obj/machinery/telecomms/relay/preset/southerncross/skylands,
-/turf/simulated/floor/tiled/techmaint,
-/area/surface/outpost/main/tcomm)
 "zf" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -14061,6 +14068,13 @@
 "zS" = (
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/main/dorms/dorm_4)
+"zU" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 6
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/techfloor,
+/area/surface/outpost/wall)
 "zV" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/window/reinforced/full,
@@ -14225,8 +14239,8 @@
 /turf/simulated/floor/plating{
 	icon_state = "asteroidplating2";
 	nitrogen = 93.7835;
-	temperature = 243.15;
-	oxygen = 20.7263
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/surface/outpost/mining_main/exterior)
 "Am" = (
@@ -15688,6 +15702,16 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_1)
+"CS" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 8
+	},
+/obj/machinery/computer/cryopod/gateway{
+	pixel_x = -32
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/techfloor,
+/area/surface/outpost/wall)
 "CT" = (
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/main/airlock/right_one)
@@ -16349,6 +16373,13 @@
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/monotile,
 /area/surface/outpost/main/airlock/left_one)
+"Eq" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 9
+	},
+/obj/effect/decal/cleanable/cobweb,
+/turf/simulated/floor/tiled/techfloor,
+/area/surface/outpost/wall)
 "Er" = (
 /obj/machinery/telecomms/relay/preset/southerncross/wild,
 /obj/machinery/light/small{
@@ -23017,6 +23048,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/corridor/right_lower)
+"QK" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/surface/outpost/wall)
 "QL" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 4
@@ -23670,6 +23707,15 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/airlock/right_one)
+"RR" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 1
+	},
+/obj/machinery/light/flicker{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/surface/outpost/wall)
 "RS" = (
 /obj/structure/table/rack/shelf,
 /obj/item/weapon/storage/backpack/parachute{
@@ -24521,6 +24567,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
+"TK" = (
+/obj/structure/simple_door/sifwood,
+/turf/simulated/floor/outdoors/grass/sif/planetuse,
+/area/surface/outpost/wall)
 "TL" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -24604,8 +24654,8 @@
 /turf/simulated/floor/plating{
 	icon_state = "asteroidplating2";
 	nitrogen = 93.7835;
-	temperature = 243.15;
-	oxygen = 20.7263
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
 /area/surface/outpost/mining_main/exterior)
 "TT" = (
@@ -25432,6 +25482,9 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
+"Vw" = (
+/turf/simulated/wall/sifwood,
+/area/surface/outpost/wall)
 "Vy" = (
 /obj/structure/cable/cyan{
 	d1 = 1;
@@ -27080,6 +27133,10 @@
 "Yw" = (
 /turf/simulated/floor/water,
 /area/surface/outside/plains/mountains)
+"Yx" = (
+/obj/machinery/cryopod/robot/door/gateway/quiet,
+/turf/simulated/floor/tiled/techfloor,
+/area/surface/outpost/wall)
 "Yy" = (
 /obj/effect/decal/remains/ribcage,
 /obj/effect/decal/cleanable/dirt,
@@ -27522,6 +27579,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/laundry)
+"Zs" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/techfloor,
+/area/surface/outpost/wall)
 "Zt" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/white/border,
@@ -67323,11 +67387,11 @@ uE
 Ey
 Ey
 Ey
-Ey
-Ey
-Ey
-Ey
-Ey
+Vw
+Vw
+Vw
+Vw
+Vw
 Ey
 Ey
 bv
@@ -67581,11 +67645,11 @@ Ey
 Ey
 Ey
 Ey
-Ey
-Ey
-Ey
-Ey
-Ey
+Vw
+Eq
+CS
+QK
+Vw
 Ey
 Ey
 bv
@@ -67839,11 +67903,11 @@ Ey
 Ey
 Ey
 Ey
-Ey
-Ey
-Ey
-Ey
-Ey
+Vw
+RR
+Yx
+mp
+Vw
 Ey
 Ey
 bv
@@ -68097,11 +68161,11 @@ Ey
 Ey
 Ey
 Ey
-Ey
-Ey
-Ey
-Ey
-Ey
+Vw
+iP
+Zs
+zU
+Vw
 Ey
 bv
 bv
@@ -68355,11 +68419,11 @@ Ey
 Ey
 Ey
 Ey
-Ey
-Ey
-Ey
-Ey
-Ey
+Vw
+Vw
+TK
+Vw
+Vw
 Ey
 Ey
 bv
@@ -68615,7 +68679,7 @@ Ey
 Ey
 Ey
 Ey
-Ey
+yT
 Ey
 Ey
 Ey
@@ -68873,8 +68937,8 @@ Ey
 Ey
 Ey
 Ey
-Ey
-Ey
+yT
+yT
 Ey
 Ey
 Ey
@@ -69131,7 +69195,7 @@ yT
 Ey
 Ey
 Ey
-Ey
+yT
 Ey
 Ey
 Ey
@@ -70468,7 +70532,7 @@ uh
 BB
 xI
 nw
-ze
+nw
 Er
 AW
 ha

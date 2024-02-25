@@ -1,9 +1,15 @@
 import { useBackend } from '../backend';
-import { Button, LabeledList, Section, AnimatedNumber, Dropdown } from '../components';
+import {
+  AnimatedNumber,
+  Button,
+  Dropdown,
+  LabeledList,
+  Section,
+} from '../components';
 import { Window } from '../layouts';
 
-export const Floorbot = (props, context) => {
-  const { act, data } = useBackend(context);
+export const Floorbot = (props) => {
+  const { act, data } = useBackend();
 
   const {
     on,
@@ -27,19 +33,22 @@ export const Floorbot = (props, context) => {
             <Button icon="power-off" selected={on} onClick={() => act('start')}>
               {on ? 'On' : 'Off'}
             </Button>
-          }>
+          }
+        >
           <LabeledList>
             <LabeledList.Item label="Tiles Left">
               <AnimatedNumber value={amount} />
             </LabeledList.Item>
             <LabeledList.Item
               label="Maintenance Panel"
-              color={open ? 'bad' : 'good'}>
+              color={open ? 'bad' : 'good'}
+            >
               {open ? 'Open' : 'Closed'}
             </LabeledList.Item>
             <LabeledList.Item
               label="Behavior Controls"
-              color={locked ? 'good' : 'bad'}>
+              color={locked ? 'good' : 'bad'}
+            >
               {locked ? 'Locked' : 'Unlocked'}
             </LabeledList.Item>
           </LabeledList>
@@ -51,7 +60,8 @@ export const Floorbot = (props, context) => {
                 <Button
                   icon={vocal ? 'toggle-on' : 'toggle-off'}
                   selected={vocal}
-                  onClick={() => act('vocal')}>
+                  onClick={() => act('vocal')}
+                >
                   {vocal ? 'On' : 'Off'}
                 </Button>
               </LabeledList.Item>
@@ -59,7 +69,8 @@ export const Floorbot = (props, context) => {
                 <Button
                   icon={improvefloors ? 'toggle-on' : 'toggle-off'}
                   selected={improvefloors}
-                  onClick={() => act('improve')}>
+                  onClick={() => act('improve')}
+                >
                   {improvefloors ? 'On' : 'Off'}
                 </Button>
               </LabeledList.Item>
@@ -67,7 +78,8 @@ export const Floorbot = (props, context) => {
                 <Button
                   icon={eattiles ? 'toggle-on' : 'toggle-off'}
                   selected={eattiles}
-                  onClick={() => act('tiles')}>
+                  onClick={() => act('tiles')}
+                >
                   {eattiles ? 'On' : 'Off'}
                 </Button>
               </LabeledList.Item>
@@ -75,7 +87,8 @@ export const Floorbot = (props, context) => {
                 <Button
                   icon={maketiles ? 'toggle-on' : 'toggle-off'}
                   selected={maketiles}
-                  onClick={() => act('make')}>
+                  onClick={() => act('make')}
+                >
                   {maketiles ? 'On' : 'Off'}
                 </Button>
               </LabeledList.Item>

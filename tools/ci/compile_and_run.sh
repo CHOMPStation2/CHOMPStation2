@@ -25,6 +25,7 @@ elif grep -q '#include[[:space:]]\"maps\\groundbase\\groundbase.dm\"' $BASENAME.
 fi
 
 # Compile a copy of the codebase, and print errors as Github Actions annotations
+tools/build/build --ci tgui tg-font # compile tgui bundle
 DreamMaker $BASENAME.dme > compile.log
 exitVal=$?
 cat compile.log

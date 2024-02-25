@@ -194,6 +194,12 @@
 	body_parts = list(BP_HEAD)
 	color_blend_mode = ICON_MULTIPLY
 
+/datum/sprite_accessory/marking/ch/bignostrils
+	name = "Big Nostrils"
+	icon_state = "bignostrils"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
 /// NEW XENOMORPH SPRITE_ACCESSORIES - Basesprites borrowed from Citadel and tidied up by Makkinindorn, should blend a bit more nicely. ///
 
 /datum/sprite_accessory/marking/ch/xenomorph // This is just here to create an easy-to-follow typepath.

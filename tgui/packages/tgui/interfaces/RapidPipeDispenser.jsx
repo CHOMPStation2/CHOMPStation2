@@ -1,7 +1,17 @@
 import { classes } from 'common/react';
 import { capitalize } from 'common/string';
-import { useBackend, useLocalState } from '../backend';
-import { Box, Button, ColorBox, Stack, LabeledList, Section, Tabs } from '../components';
+import { useState } from 'react';
+
+import { useBackend } from '../backend';
+import {
+  Box,
+  Button,
+  ColorBox,
+  LabeledList,
+  Section,
+  Stack,
+  Tabs,
+} from '../components';
 import { Window } from '../layouts';
 
 const ROOT_CATEGORIES = [
@@ -11,12 +21,12 @@ const ROOT_CATEGORIES = [
 ];
 
 export const ICON_BY_CATEGORY_NAME = {
-  'Atmospherics': 'wrench',
-  'Disposals': 'trash-alt',
+  Atmospherics: 'wrench',
+  Disposals: 'trash-alt',
   'Transit Tubes': 'bus',
-  'Pipes': 'grip-lines',
+  Pipes: 'grip-lines',
   'Disposal Pipes': 'grip-lines',
-  'Devices': 'microchip',
+  Devices: 'microchip',
   'Heat Exchange': 'thermometer-half',
   'Insulated pipes': 'snowflake',
   'Station Equipment': 'microchip',
@@ -41,8 +51,8 @@ const TOOLS = [
   },
 ];
 
-const SelectionSection = (props, context) => {
-  const { act, data } = useBackend(context);
+const SelectionSection = (props) => {
+  const { act, data } = useBackend();
   const { category: rootCategoryIndex, selected_color, mode } = data;
   return (
     <Section>
@@ -54,7 +64,8 @@ const SelectionSection = (props, context) => {
               selected={rootCategoryIndex === i}
               icon={ICON_BY_CATEGORY_NAME[categoryName]}
               color="transparent"
-              onClick={() => act('category', { category: i })}>
+              onClick={() => act('category', { category: i })}
+            >
               {categoryName}
             </Button>
           ))}
@@ -99,8 +110,8 @@ const SelectionSection = (props, context) => {
   );
 };
 
-const LayerSection = (props, context) => {
-  const { act, data } = useBackend(context);
+const LayerSection = (props) => {
+  const { act, data } = useBackend();
   const { category: rootCategoryIndex, piping_layer, pipe_layers } = data;
   const previews = data.preview_rows.flatMap((row) => row.previews);
   return (
@@ -139,7 +150,8 @@ const LayerSection = (props, context) => {
                 dir: preview.dir,
                 flipped: preview.flipped,
               })
-            }>
+            }
+          >
             <Box
               className={classes([
                 'pipes32x32',
@@ -156,13 +168,10 @@ const LayerSection = (props, context) => {
   );
 };
 
-const PipeTypeSection = (props, context) => {
-  const { act, data } = useBackend(context);
+const PipeTypeSection = (props) => {
+  const { act, data } = useBackend();
   const { categories = [] } = data;
-  const [categoryName, setCategoryName] = useLocalState(
-    context,
-    'categoryName'
-  );
+  const [categoryName, setCategoryName] = useState('categoryName');
   const shownCategory =
     categories.find((category) => category.cat_name === categoryName) ||
     categories[0];
@@ -175,7 +184,8 @@ const PipeTypeSection = (props, context) => {
             key={category.cat_name}
             icon={ICON_BY_CATEGORY_NAME[category.cat_name]}
             selected={category.cat_name === shownCategory.cat_name}
-            onClick={() => setCategoryName(category.cat_name)}>
+            onClick={() => setCategoryName(category.cat_name)}
+          >
             {category.cat_name}
           </Tabs.Tab>
         ))}
@@ -200,8 +210,8 @@ const PipeTypeSection = (props, context) => {
   );
 };
 
-export const RapidPipeDispenser = (props, context) => {
-  const { act, data } = useBackend(context);
+export const RapidPipeDispenser = (props) => {
+  const { act, data } = useBackend();
   const { category: rootCategoryIndex } = data;
   return (
     <Window width={550} height={570}>

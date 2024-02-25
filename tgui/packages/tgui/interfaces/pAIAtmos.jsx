@@ -1,5 +1,6 @@
 import { filter } from 'common/collections';
 import { decodeHtmlEntities } from 'common/string';
+
 import { useBackend } from '../backend';
 import { LabeledList, Section } from '../components';
 import { Window } from '../layouts';
@@ -17,13 +18,13 @@ const getItemColor = (value, min2, min1, max1, max2) => {
   return 'good';
 };
 
-export const pAIAtmos = (props, context) => {
-  const { act, data } = useBackend(context);
+export const pAIAtmos = (props) => {
+  const { act, data } = useBackend();
 
   const { aircontents } = data;
 
   return (
-    <Window width={450} height={600} resizable>
+    <Window width={450} height={600}>
       <Window.Content scrollable>
         <Section>
           <LabeledList>
@@ -31,7 +32,7 @@ export const pAIAtmos = (props, context) => {
               (i) =>
                 i.val !== '0' ||
                 i.entry === 'Pressure' ||
-                i.entry === 'Temperature'
+                i.entry === 'Temperature',
             )(aircontents).map((item) => (
               <LabeledList.Item
                 key={item.entry}
@@ -41,8 +42,9 @@ export const pAIAtmos = (props, context) => {
                   item.bad_low,
                   item.poor_low,
                   item.poor_high,
-                  item.bad_high
-                )}>
+                  item.bad_high,
+                )}
+              >
                 {item.val}
                 {decodeHtmlEntities(item.units)}
               </LabeledList.Item>

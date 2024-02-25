@@ -1,10 +1,9 @@
-import { Fragment } from 'inferno';
 import { useBackend } from '../backend';
-import { Button, LabeledList, Section, AnimatedNumber } from '../components';
+import { AnimatedNumber, Button, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
 
-export const PressureRegulator = (props, context) => {
-  const { act, data } = useBackend(context);
+export const PressureRegulator = (props) => {
+  const { act, data } = useBackend();
 
   const {
     on,
@@ -18,7 +17,7 @@ export const PressureRegulator = (props, context) => {
   } = data;
 
   return (
-    <Window width={470} height={370} resizable>
+    <Window width={470} height={370}>
       <Window.Content>
         <Section title="Status">
           <LabeledList>
@@ -42,12 +41,13 @@ export const PressureRegulator = (props, context) => {
               selected={on}
               onClick={() => act('toggle_valve')}
             />
-          }>
+          }
+        >
           <LabeledList>
             <LabeledList.Item
               label="Pressure Regulation"
               buttons={
-                <Fragment>
+                <>
                   <Button
                     icon="power-off"
                     content="Off"
@@ -66,13 +66,13 @@ export const PressureRegulator = (props, context) => {
                     selected={regulate_mode === 2}
                     onClick={() => act('regulate_mode', { mode: 'output' })}
                   />
-                </Fragment>
+                </>
               }
             />
             <LabeledList.Item
               label="Desired Output Pressure"
               buttons={
-                <Fragment>
+                <>
                   <Button
                     icon="compress-arrows-alt"
                     content="MIN"
@@ -88,14 +88,15 @@ export const PressureRegulator = (props, context) => {
                     content="SET"
                     onClick={() => act('set_press', { press: 'set' })}
                   />
-                </Fragment>
-              }>
+                </>
+              }
+            >
               {pressure_set / 100} kPa
             </LabeledList.Item>
             <LabeledList.Item
               label="Flow Rate Limit"
               buttons={
-                <Fragment>
+                <>
                   <Button
                     icon="compress-arrows-alt"
                     content="MIN"
@@ -111,8 +112,9 @@ export const PressureRegulator = (props, context) => {
                     content="SET"
                     onClick={() => act('set_flow_rate', { press: 'set' })}
                   />
-                </Fragment>
-              }>
+                </>
+              }
+            >
               {set_flow_rate / 10} L/s
             </LabeledList.Item>
           </LabeledList>

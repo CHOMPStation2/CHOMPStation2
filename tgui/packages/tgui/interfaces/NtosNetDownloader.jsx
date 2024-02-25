@@ -1,10 +1,20 @@
 import { round } from 'common/math';
+
 import { useBackend } from '../backend';
-import { Box, Button, Flex, Icon, LabeledList, NoticeBox, ProgressBar, Section } from '../components';
+import {
+  Box,
+  Button,
+  Flex,
+  Icon,
+  LabeledList,
+  NoticeBox,
+  ProgressBar,
+  Section,
+} from '../components';
 import { NtosWindow } from '../layouts';
 
-export const NtosNetDownloader = (props, context) => {
-  const { act, data } = useBackend(context);
+export const NtosNetDownloader = (props) => {
+  const { act, data } = useBackend();
   const {
     PC_device_theme,
     disk_size,
@@ -15,7 +25,7 @@ export const NtosNetDownloader = (props, context) => {
     hackedavailable,
   } = data;
   return (
-    <NtosWindow theme={PC_device_theme} width={480} height={735} resizable>
+    <NtosWindow theme={PC_device_theme} width={480} height={735}>
       <NtosWindow.Content scrollable>
         {!!error && (
           <NoticeBox>
@@ -53,9 +63,9 @@ export const NtosNetDownloader = (props, context) => {
   );
 };
 
-const Program = (props, context) => {
+const Program = (props) => {
   const { program } = props;
-  const { act, data } = useBackend(context);
+  const { act, data } = useBackend();
   const {
     disk_size,
     disk_used,
@@ -76,14 +86,15 @@ const Program = (props, context) => {
         <Flex.Item color="label" nowrap>
           {program.size} GQ
         </Flex.Item>
-        <Flex.Item ml={2} width="94px" textAlign="center">
+        <Flex.Item ml={2} width="110px" textAlign="center">
           {(program.filename === downloadname && (
             <ProgressBar
               color="green"
               minValue={0}
               maxValue={downloadsize}
-              value={downloadcompletion}>
-              {round((downloadcompletion / downloadsize) * 100, 1)}% (
+              value={downloadcompletion}
+            >
+              {round((downloadcompletion / downloadsize) * 100, 1)}%&nbsp;(
               {downloadspeed}GQ/s)
             </ProgressBar>
           )) ||
@@ -95,7 +106,8 @@ const Program = (props, context) => {
                   act('PRG_removequeued', {
                     filename: program.filename,
                   })
-                }>
+                }
+              >
                 Queued...
               </Button>
             )) || (

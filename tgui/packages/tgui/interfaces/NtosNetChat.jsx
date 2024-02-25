@@ -1,10 +1,9 @@
-import { Fragment } from 'inferno';
 import { useBackend } from '../backend';
 import { Box, Button, Icon, Input, Section, Table } from '../components';
 import { NtosWindow } from '../layouts';
 
-export const NtosNetChat = (props, context) => {
-  const { act, data } = useBackend(context);
+export const NtosNetChat = (props) => {
+  const { act, data } = useBackend();
   const {
     can_admin,
     adminmode,
@@ -28,7 +27,8 @@ export const NtosNetChat = (props, context) => {
                 verticalAlign="top"
                 style={{
                   width: '200px',
-                }}>
+                }}
+              >
                 <Box height="560px" overflowY="scroll">
                   <Button.Input
                     fluid
@@ -111,14 +111,15 @@ export const NtosNetChat = (props, context) => {
                 verticalAlign="top"
                 style={{
                   width: '150px',
-                }}>
+                }}
+              >
                 <Box height="465px" overflowY="scroll">
                   {clients.map((client) => (
                     <Box key={client.name}>{client.name}</Box>
                   ))}
                 </Box>
                 {in_channel && authorized && (
-                  <Fragment>
+                  <>
                     <Button.Input
                       fluid
                       content="Save log..."
@@ -134,10 +135,10 @@ export const NtosNetChat = (props, context) => {
                       content="Leave Channel"
                       onClick={() => act('PRG_leavechannel')}
                     />
-                  </Fragment>
+                  </>
                 )}
                 {!!is_operator && authed && (
-                  <Fragment>
+                  <>
                     <Button.Confirm
                       fluid
                       content="Delete Channel"
@@ -161,7 +162,7 @@ export const NtosNetChat = (props, context) => {
                         })
                       }
                     />
-                  </Fragment>
+                  </>
                 )}
               </Table.Cell>
             </Table.Row>

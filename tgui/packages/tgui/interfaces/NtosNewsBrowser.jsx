@@ -1,12 +1,17 @@
 /* eslint react/no-danger: "off" */
-import { useBackend } from '../backend';
-import { Button, LabeledList, ProgressBar, Section, NoticeBox } from '../components';
-import { NtosWindow } from '../layouts';
 import { resolveAsset } from '../assets';
-import { Fragment } from 'inferno';
+import { useBackend } from '../backend';
+import {
+  Button,
+  LabeledList,
+  NoticeBox,
+  ProgressBar,
+  Section,
+} from '../components';
+import { NtosWindow } from '../layouts';
 
-export const NtosNewsBrowser = (props, context) => {
-  const { act, data } = useBackend(context);
+export const NtosNewsBrowser = (props) => {
+  const { act, data } = useBackend();
 
   const { article, download, message } = data;
 
@@ -19,7 +24,7 @@ export const NtosNewsBrowser = (props, context) => {
   }
 
   return (
-    <NtosWindow width={575} height={750} resizable>
+    <NtosWindow width={575} height={750}>
       <NtosWindow.Content scrollable>
         {!!message && (
           <NoticeBox>
@@ -33,8 +38,8 @@ export const NtosNewsBrowser = (props, context) => {
   );
 };
 
-const SelectedArticle = (props, context) => {
-  const { act, data } = useBackend(context);
+const SelectedArticle = (props) => {
+  const { act, data } = useBackend();
 
   const { article } = data;
 
@@ -48,15 +53,16 @@ const SelectedArticle = (props, context) => {
     <Section
       title={'Viewing: ' + title}
       buttons={
-        <Fragment>
+        <>
           <Button icon="save" onClick={() => act('PRG_savearticle')}>
             Save
           </Button>
           <Button icon="times" onClick={() => act('PRG_reset')}>
             Close
           </Button>
-        </Fragment>
-      }>
+        </>
+      }
+    >
       {!!cover && <img src={resolveAsset(cover)} />}
       {/* News articles are written in premade .html files and cannot be edited by players, so it should be
        * safe enough to use dangerouslySetInnerHTML here.
@@ -66,8 +72,8 @@ const SelectedArticle = (props, context) => {
   );
 };
 
-const ViewArticles = (props, context) => {
-  const { act, data } = useBackend(context);
+const ViewArticles = (props) => {
+  const { act, data } = useBackend();
 
   const { showing_archived, all_articles } = data;
 
@@ -77,10 +83,12 @@ const ViewArticles = (props, context) => {
       buttons={
         <Button.Checkbox
           onClick={() => act('PRG_toggle_archived')}
-          checked={showing_archived}>
+          checked={showing_archived}
+        >
           Show Archived
         </Button.Checkbox>
-      }>
+      }
+    >
       <LabeledList>
         {(all_articles.length &&
           all_articles.map((article) => (
@@ -92,7 +100,8 @@ const ViewArticles = (props, context) => {
                   icon="download"
                   onClick={() => act('PRG_openarticle', { uid: article.uid })}
                 />
-              }>
+              }
+            >
               {article.size} GQ
             </LabeledList.Item>
           ))) || (
@@ -105,8 +114,8 @@ const ViewArticles = (props, context) => {
   );
 };
 
-const ArticleDownloading = (props, context) => {
-  const { act, data } = useBackend(context);
+const ArticleDownloading = (props) => {
+  const { act, data } = useBackend();
 
   const { download_progress, download_maxprogress, download_rate } =
     data.download;
@@ -119,7 +128,8 @@ const ArticleDownloading = (props, context) => {
             color="good"
             minValue={0}
             value={download_progress}
-            maxValue={download_maxprogress}>
+            maxValue={download_maxprogress}
+          >
             {download_progress} / {download_maxprogress} GQ
           </ProgressBar>
         </LabeledList.Item>

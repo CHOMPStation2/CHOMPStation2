@@ -1,9 +1,16 @@
 import { useBackend } from '../backend';
-import { Button, Box, LabeledList, ProgressBar, Section, Icon } from '../components';
+import {
+  Box,
+  Button,
+  Icon,
+  LabeledList,
+  ProgressBar,
+  Section,
+} from '../components';
 import { NtosWindow } from '../layouts';
 
-export const NtosNetTransfer = (props, context) => {
-  const { act, data } = useBackend(context);
+export const NtosNetTransfer = (props) => {
+  const { act, data } = useBackend();
 
   const { error, downloading, uploading, upload_filelist } = data;
 
@@ -20,14 +27,14 @@ export const NtosNetTransfer = (props, context) => {
   }
 
   return (
-    <NtosWindow width={575} height={700} resizable>
+    <NtosWindow width={575} height={700}>
       <NtosWindow.Content scrollable>{body}</NtosWindow.Content>
     </NtosWindow>
   );
 };
 
-const P2PError = (props, context) => {
-  const { act, data } = useBackend(context);
+const P2PError = (props) => {
+  const { act, data } = useBackend();
   const { error } = data;
   return (
     <Section
@@ -36,14 +43,15 @@ const P2PError = (props, context) => {
         <Button icon="undo" onClick={() => act('PRG_reset')}>
           Reset
         </Button>
-      }>
+      }
+    >
       Additional Information: {error}
     </Section>
   );
 };
 
-const P2PDownload = (props, context) => {
-  const { act, data } = useBackend(context);
+const P2PDownload = (props) => {
+  const { act, data } = useBackend();
   const { download_name, download_progress, download_size, download_netspeed } =
     data;
   return (
@@ -70,8 +78,8 @@ const P2PDownload = (props, context) => {
   );
 };
 
-const P2PUpload = (props, context) => {
-  const { act, data } = useBackend(context);
+const P2PUpload = (props) => {
+  const { act, data } = useBackend();
   const { upload_clients, upload_filename, upload_haspassword } = data;
   return (
     <Section title="Server enabled">
@@ -98,8 +106,8 @@ const P2PUpload = (props, context) => {
   );
 };
 
-const P2PUploadServer = (props, context) => {
-  const { act, data } = useBackend(context);
+const P2PUploadServer = (props) => {
+  const { act, data } = useBackend();
   const { upload_filelist } = data;
   return (
     <Section
@@ -108,7 +116,8 @@ const P2PUploadServer = (props, context) => {
         <Button icon="undo" onClick={() => act('PRG_reset')}>
           Cancel
         </Button>
-      }>
+      }
+    >
       <Button fluid icon="lock" onClick={() => act('PRG_setpassword')}>
         Set Password
       </Button>
@@ -118,7 +127,8 @@ const P2PUploadServer = (props, context) => {
             key={file.uid}
             fluid
             icon="upload"
-            onClick={() => act('PRG_uploadfile', { uid: file.uid })}>
+            onClick={() => act('PRG_uploadfile', { uid: file.uid })}
+          >
             {file.filename} ({file.size}GQ)
           </Button>
         ))}
@@ -127,8 +137,8 @@ const P2PUploadServer = (props, context) => {
   );
 };
 
-const P2PAvailable = (props, context) => {
-  const { act, data } = useBackend(context);
+const P2PAvailable = (props) => {
+  const { act, data } = useBackend();
   const { servers } = data;
   return (
     <Section
@@ -137,7 +147,8 @@ const P2PAvailable = (props, context) => {
         <Button icon="upload" onClick={() => act('PRG_uploadmenu')}>
           Send File
         </Button>
-      }>
+      }
+    >
       {(servers.length && (
         <LabeledList>
           {servers.map((server) => (
@@ -146,7 +157,8 @@ const P2PAvailable = (props, context) => {
               {server.filename}&nbsp; ({server.size}GQ)&nbsp;
               <Button
                 icon="download"
-                onClick={() => act('PRG_downloadfile', { uid: server.uid })}>
+                onClick={() => act('PRG_downloadfile', { uid: server.uid })}
+              >
                 Download
               </Button>
             </LabeledList.Item>

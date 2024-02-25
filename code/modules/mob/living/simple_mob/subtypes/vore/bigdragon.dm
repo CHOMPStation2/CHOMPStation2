@@ -570,6 +570,7 @@ I think I covered everything.
 /obj/belly/dragon
 	autotransferchance = 50
 	autotransferwait = 150
+	autotransfer_enabled = 1 //ChompEDIT
 	escapable = 1
 	escapechance = 100
 	escapetime = 15

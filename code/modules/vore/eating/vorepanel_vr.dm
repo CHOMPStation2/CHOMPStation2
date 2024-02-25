@@ -2,12 +2,6 @@
 // Vore management panel for players
 //
 
-#define BELLIES_MAX 40
-#define BELLIES_NAME_MIN 2
-#define BELLIES_NAME_MAX 40
-#define BELLIES_DESC_MAX 4096
-#define FLAVOR_MAX 400
-
 /* //Chomp REMOVE - Use our solution, not upstream's
 //INSERT COLORIZE-ONLY STOMACHS HERE
 var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
@@ -56,6 +50,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 	var/mob/host // Note, we do this in case we ever want to allow people to view others vore panels
 	var/unsaved_changes = FALSE
 	var/show_pictures = TRUE
+	var/icon_overflow = FALSE
 	var/max_icon_content = 21 //CHOMPedit: Contents above this disable icon mode. 21 for nice 3 rows to fill the default panel window.
 
 /datum/vore_look/New(mob/new_host)
@@ -118,6 +113,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 	data["unsaved_changes"] = unsaved_changes
 	data["show_pictures"] = show_pictures
+	data["overflow"] = icon_overflow
 
 	var/atom/hostloc = host.loc
 	//CHOMPAdd Start - Allow VorePanel to show pred belly details even while indirectly inside
@@ -152,6 +148,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"desc" = inside_desc,
 			"pred" = pred,
 			"ref" = "\ref[inside_belly]",
+			//CHOMPEdit Start
+			"liq_lvl" = inside_belly.reagents.total_volume,
+			"liq_reagent_type" = inside_belly.reagent_chosen,
+			"liuq_name" = inside_belly.reagent_name,
+			//CHOMPEdit End
 		)
 
 		var/list/inside_contents = list()
@@ -166,11 +167,13 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				"ref" = "\ref[O]",
 				"outside" = FALSE,
 			)
-			if(show_pictures) //CHOMPedit: disables icon mode
+			if(show_pictures) //CHOMPedit Start: disables icon mode
 				if(inside_belly.contents.len <= max_icon_content)
+					icon_overflow = FALSE
 					info["icon"] = cached_nom_icon(O)
 				else
-					show_pictures = !show_pictures
+					icon_overflow = TRUE
+				//CHOMPEdit End
 			if(isliving(O))
 				var/mob/living/M = O
 				info["stat"] = M.stat
@@ -425,11 +428,13 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				"ref" = "\ref[O]",
 				"outside" = TRUE,
 			)
-			if(show_pictures) //CHOMPedit: disables icon mode
+			if(show_pictures) //CHOMPedit Start: disables icon mode
 				if(selected.contents.len <= max_icon_content)
+					icon_overflow = FALSE
 					info["icon"] = cached_nom_icon(O)
 				else
-					show_pictures = !show_pictures
+					icon_overflow = TRUE
+				//CHOMPEdit End
 			if(isliving(O))
 				var/mob/living/M = O
 				info["stat"] = M.stat
@@ -499,22 +504,34 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		"show_vore_fx" = host.show_vore_fx,
 		"can_be_drop_prey" = host.can_be_drop_prey,
 		"can_be_drop_pred" = host.can_be_drop_pred,
-		"latejoin_vore" = host.latejoin_vore, //CHOMPedit
-		"latejoin_prey" = host.latejoin_prey, //CHOMPedit
+		 //CHOMPedit Start
+		"latejoin_vore" = host.latejoin_vore,
+		"latejoin_prey" = host.latejoin_prey,
+		"no_spawnpred_warning" = host.no_latejoin_vore_warning,
+		"no_spawnprey_warning" = host.no_latejoin_prey_warning,
+		"no_spawnpred_warning_time" = host.no_latejoin_vore_warning_time,
+		"no_spawnprey_warning_time" = host.no_latejoin_prey_warning_time,
+		"no_spawnpred_warning_save" = host.no_latejoin_vore_warning_persists,
+		"no_spawnprey_warning_save" = host.no_latejoin_prey_warning_persists,
+		//CHOMPedit End
 		"allow_spontaneous_tf" = host.allow_spontaneous_tf,
 		"step_mechanics_active" = host.step_mechanics_pref,
 		"pickup_mechanics_active" = host.pickup_pref,
+		"strip_mechanics_active" = host.strip_pref, //CHOMPedit
 		"noisy" = host.noisy,
 		//CHOMPedit start, liquid belly prefs
 		"liq_rec" = host.receive_reagents,
 		"liq_giv" = host.give_reagents,
+		"liq_apply" = host.apply_reagents,
 		"autotransferable" = host.autotransferable,
 		"noisy_full" = host.noisy_full, //Belching while full
+		"selective_active" = host.selective_preference, //Reveal active selective mode in prefs
 		//CHOMPedit end
 		"drop_vore" = host.drop_vore,
 		"slip_vore" = host.slip_vore,
 		"stumble_vore" = host.stumble_vore,
 		"throw_vore" = host.throw_vore,
+		"phase_vore" = host.phase_vore, //CHOMPedit
 		"food_vore" = host.food_vore,
 		"nutrition_message_visible" = host.nutrition_message_visible,
 		"nutrition_messages" = host.nutrition_messages,
@@ -1763,6 +1780,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.client.prefs_vr.can_be_drop_prey = host.can_be_drop_prey
 			unsaved_changes = TRUE
 			return TRUE
+		//CHOMPEdit Start
 		if("toggle_latejoin_vore")
 			host.latejoin_vore = !host.latejoin_vore
 			if(host.client.prefs_vr)
@@ -1775,6 +1793,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.client.prefs_vr.latejoin_prey = host.latejoin_prey
 			unsaved_changes = TRUE
 			return TRUE
+		//CHOMPEdit End
 		if("toggle_allow_spontaneous_tf")
 			host.allow_spontaneous_tf = !host.allow_spontaneous_tf
 			if(host.client.prefs_vr)
@@ -1841,6 +1860,14 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.client.prefs_vr.pickup_pref = host.pickup_pref
 			unsaved_changes = TRUE
 			return TRUE
+		//CHOMPEdit Start
+		if("toggle_strippref")
+			host.strip_pref = !host.strip_pref
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.strip_pref = host.strip_pref
+			unsaved_changes = TRUE
+			return TRUE
+		//CHOMPEdit End
 		if("toggle_healbelly")
 			host.permit_healbelly = !host.permit_healbelly
 			if(host.client.prefs_vr)
@@ -1884,6 +1911,12 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.client.prefs_vr.give_reagents = host.give_reagents
 			unsaved_changes = TRUE
 			return TRUE
+		if("toggle_liq_apply")
+			host.apply_reagents = !host.apply_reagents
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.apply_reagents = host.apply_reagents
+			unsaved_changes = TRUE
+			return TRUE
 		if("toggle_autotransferable")
 			host.autotransferable = !host.autotransferable
 			if(host.client.prefs_vr)
@@ -1898,22 +1931,50 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		//CHOMPedit end
 		if("toggle_drop_vore")
 			host.drop_vore = !host.drop_vore
+			//CHOMPEdit Start
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.drop_vore = host.drop_vore
+			//CHOMPEdit End
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_slip_vore")
 			host.slip_vore = !host.slip_vore
+			//CHOMPEdit Start
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.slip_vore = host.slip_vore
+			//CHOMPEdit End
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_stumble_vore")
 			host.stumble_vore = !host.stumble_vore
+			//CHOMPEdit Start
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.stumble_vore = host.stumble_vore
+			//CHOMPEdit End
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_throw_vore")
 			host.throw_vore = !host.throw_vore
+			//CHOMPEdit Start
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.throw_vore = host.throw_vore
+			//CHOMPEdit End
 			unsaved_changes = TRUE
 			return TRUE
+		//CHOMPEdit Start
+		if("toggle_phase_vore")
+			host.phase_vore = !host.phase_vore
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.phase_vore = host.phase_vore
+			unsaved_changes = TRUE
+			return TRUE
+		//CHOMPEdit End
 		if("toggle_food_vore")
 			host.food_vore = !host.food_vore
+			//CHOMPEdit Start
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.food_vore = host.food_vore
+			//CHOMPEdit End
 			unsaved_changes = TRUE
 			return TRUE
 		if("switch_selective_mode_pref")
@@ -1944,6 +2005,46 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				else if(multiply == "Add")
 					host.vore_sprite_multiply[belly_choice] = FALSE
 				host.update_icons_body()
+			return TRUE
+		if("toggle_no_latejoin_vore_warning")
+			host.no_latejoin_vore_warning = !host.no_latejoin_vore_warning
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.no_latejoin_vore_warning = host.no_latejoin_vore_warning
+			if(host.no_latejoin_vore_warning_persists)
+				unsaved_changes = TRUE
+			return TRUE
+		if("toggle_no_latejoin_prey_warning")
+			host.no_latejoin_prey_warning = !host.no_latejoin_prey_warning
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.no_latejoin_prey_warning = host.no_latejoin_prey_warning
+			if(host.no_latejoin_prey_warning_persists)
+				unsaved_changes = TRUE
+			return TRUE
+		if("adjust_no_latejoin_vore_warning_time")
+			host.no_latejoin_vore_warning_time = text2num(params["new_pred_time"])
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.no_latejoin_vore_warning_time = host.no_latejoin_vore_warning_time
+			if(host.no_latejoin_vore_warning_persists)
+				unsaved_changes = TRUE
+			return TRUE
+		if("adjust_no_latejoin_prey_warning_time")
+			host.no_latejoin_prey_warning_time = text2num(params["new_prey_time"])
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.no_latejoin_prey_warning_time = host.no_latejoin_prey_warning_time
+			if(host.no_latejoin_prey_warning_persists)
+				unsaved_changes = TRUE
+			return TRUE
+		if("toggle_no_latejoin_vore_warning_persists")
+			host.no_latejoin_vore_warning_persists = !host.no_latejoin_vore_warning_persists
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.no_latejoin_vore_warning_persists = host.no_latejoin_vore_warning_persists
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_no_latejoin_prey_warning_persists")
+			host.no_latejoin_prey_warning_persists = !host.no_latejoin_prey_warning_persists
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.no_latejoin_prey_warning_persists = host.no_latejoin_prey_warning_persists
+			unsaved_changes = TRUE
 			return TRUE
 		//CHOMPEdit end
 
@@ -2370,6 +2471,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 								SEND_SOUND(ourtarget, sound(get_sfx("classic_death_sounds")))
 							else
 								SEND_SOUND(ourtarget, sound(get_sfx("fancy_death_prey")))
+						ourtarget.mind?.vore_death = TRUE
 						b.handle_digestion_death(ourtarget)
 				if("Absorb")
 					if(tgui_alert(ourtarget, "\The [usr] is attempting to instantly absorb you. Is this something you are okay with happening to you?","Instant Absorb", list("No", "Yes")) != "Yes")
@@ -3037,14 +3139,14 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.shrink_grow_size = (new_grow*0.01)
 			. = TRUE
 		if("b_nutritionpercent")
-			var/new_nutrition = tgui_input_number(user, "Choose the nutrition gain percentage you will receive per tick from prey. Ranges from 0.01 to 100.", "Set Nutrition Gain Percentage.", host.vore_selected.nutrition_percent, 100, 0.01)
+			var/new_nutrition = tgui_input_number(user, "Choose the nutrition gain percentage you will receive per tick from prey. Ranges from 0.01 to 100.", "Set Nutrition Gain Percentage.", host.vore_selected.nutrition_percent, 100, 0.01, round_value=FALSE)
 			if(new_nutrition == null)
 				return FALSE
 			var/new_new_nutrition = CLAMP(new_nutrition, 0.01, 100)
 			host.vore_selected.nutrition_percent = new_new_nutrition
 			. = TRUE
 		if("b_burn_dmg")
-			var/new_damage = tgui_input_number(user, "Choose the amount of burn damage prey will take per tick. Ranges from 0 to 6.", "Set Belly Burn Damage.", host.vore_selected.digest_burn, 6, 0)
+			var/new_damage = tgui_input_number(user, "Choose the amount of burn damage prey will take per tick. Ranges from 0 to 6.", "Set Belly Burn Damage.", host.vore_selected.digest_burn, 6, 0, round_value=FALSE)
 			if(new_damage == null)
 				return FALSE
 			var/new_new_damage = CLAMP(new_damage, 0, 6)
@@ -3052,7 +3154,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.vore_selected.items_preserved.Cut() //CHOMPAdd
 			. = TRUE
 		if("b_brute_dmg")
-			var/new_damage = tgui_input_number(user, "Choose the amount of brute damage prey will take per tick. Ranges from 0 to 6", "Set Belly Brute Damage.", host.vore_selected.digest_brute, 6, 0)
+			var/new_damage = tgui_input_number(user, "Choose the amount of brute damage prey will take per tick. Ranges from 0 to 6", "Set Belly Brute Damage.", host.vore_selected.digest_brute, 6, 0, round_value=FALSE)
 			if(new_damage == null)
 				return FALSE
 			var/new_new_damage = CLAMP(new_damage, 0, 6)
@@ -3060,21 +3162,21 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.vore_selected.items_preserved.Cut() //CHOMPAdd
 			. = TRUE
 		if("b_oxy_dmg")
-			var/new_damage = tgui_input_number(user, "Choose the amount of suffocation damage prey will take per tick. Ranges from 0 to 12.", "Set Belly Suffocation Damage.", host.vore_selected.digest_oxy, 12, 0)
+			var/new_damage = tgui_input_number(user, "Choose the amount of suffocation damage prey will take per tick. Ranges from 0 to 12.", "Set Belly Suffocation Damage.", host.vore_selected.digest_oxy, 12, 0, round_value=FALSE)
 			if(new_damage == null)
 				return FALSE
 			var/new_new_damage = CLAMP(new_damage, 0, 12)
 			host.vore_selected.digest_oxy = new_new_damage
 			. = TRUE
 		if("b_tox_dmg")
-			var/new_damage = tgui_input_number(user, "Choose the amount of toxins damage prey will take per tick. Ranges from 0 to 6", "Set Belly Toxins Damage.", host.vore_selected.digest_tox, 6, 0)
+			var/new_damage = tgui_input_number(user, "Choose the amount of toxins damage prey will take per tick. Ranges from 0 to 6", "Set Belly Toxins Damage.", host.vore_selected.digest_tox, 6, 0, round_value=FALSE)
 			if(new_damage == null)
 				return FALSE
 			var/new_new_damage = CLAMP(new_damage, 0, 6)
 			host.vore_selected.digest_tox = new_new_damage
 			. = TRUE
 		if("b_clone_dmg")
-			var/new_damage = tgui_input_number(user, "Choose the amount of brute DNA damage (clone) prey will take per tick. Ranges from 0 to 6", "Set Belly Clone Damage.", host.vore_selected.digest_clone, 6, 0)
+			var/new_damage = tgui_input_number(user, "Choose the amount of brute DNA damage (clone) prey will take per tick. Ranges from 0 to 6", "Set Belly Clone Damage.", host.vore_selected.digest_clone, 6, 0, round_value=FALSE)
 			if(new_damage == null)
 				return FALSE
 			var/new_new_damage = CLAMP(new_damage, 0, 6)
@@ -3624,7 +3726,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_mush_alpha")
-			var/newalpha = tgui_input_number(usr, "Set alpha transparency between 0-255", "Mush Alpha",255,255,0,0,1)
+			var/newalpha = tgui_input_number(usr, "Set alpha transparency between 0-255", "Mush Alpha",255,255)
 			if(newalpha != null)
 				host.vore_selected.mush_alpha = newalpha
 				host.vore_selected.update_internal_overlay()
@@ -3687,7 +3789,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_custom_ingested_alpha")
-			var/newalpha = tgui_input_number(usr, "Set alpha transparency between 0-255 when not using mush overlay option.", "Custom Ingested Alpha",255,255,0,0,1)
+			var/newalpha = tgui_input_number(usr, "Set alpha transparency between 0-255 when not using mush overlay option.", "Custom Ingested Alpha",255,255)
 			if(newalpha != null)
 				host.vore_selected.custom_ingested_alpha = newalpha
 				host.vore_selected.update_internal_overlay()
@@ -3699,6 +3801,8 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			else
 				host.vore_selected.reagents.clear_reagents()
 			. = TRUE
+	if(.)
+		unsaved_changes = TRUE
 
 /datum/vore_look/proc/liq_set_msg(mob/user, params)
 	if(!host.vore_selected)
@@ -3770,4 +3874,6 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			if(new_message)
 				host.vore_selected.set_reagent_messages(new_message,"full5")
 			. = TRUE
+	if(.)
+		unsaved_changes = TRUE
 //CHOMPedit end

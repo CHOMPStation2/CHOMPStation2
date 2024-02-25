@@ -661,6 +661,31 @@ VIRGO3C_TURF_CREATE(/turf/simulated/floor/tiled/asteroid_steel/outdoors)
 
 
 
+<<<<<<< HEAD
+=======
+/turf/simulated/open/virgo3c
+	VIRGO3C_SET_ATMOS
+
+/*	Handled by parent now
+/turf/simulated/open/virgo3c/Initialize(mapload)
+	. = ..()
+	if(is_outdoors())
+		SSplanets.addTurf(src)
+*/
+
+/turf/simulated/mineral/cave/virgo3c
+	VIRGO3C_SET_ATMOS
+	outdoors = 0
+
+/turf/simulated/mineral/floor/virgo3c
+	VIRGO3C_SET_ATMOS
+	outdoors = 0
+
+/turf/simulated/mineral/floor/ignore_mapgen/virgo3c
+	VIRGO3C_SET_ATMOS
+	outdoors = 0
+
+>>>>>>> 723789a563... Small fix for planetary lighting (#15783)
 /turf/simulated/floor/outdoors/grass/virgo3c
 	VIRGO3C_SET_ATMOS
 

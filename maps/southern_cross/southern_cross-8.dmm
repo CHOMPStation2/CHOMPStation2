@@ -5598,6 +5598,12 @@
 "eDw" = (
 /turf/simulated/shuttle/wall/voidcraft/hard_corner,
 /area/shuttle/ninja)
+"eDM" = (
+/obj/machinery/gateway{
+	dir = 5
+	},
+/turf/unsimulated/floor/dark,
+/area/shadekin)
 "eDQ" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -7001,31 +7007,6 @@
 	icon_state = "steel"
 	},
 /area/centcom/main_hall)
-"gjr" = (
-/obj/machinery/door/airlock/voidcraft/vertical{
-	frequency = null;
-	id_tag = null;
-	name = "Ship External Hatch";
-	req_access = null
-	},
-/obj/machinery/door/blast/regular{
-	density = 0;
-	dir = 8;
-	icon_state = "pdoor0";
-	id = "blastninja";
-	name = "Outer Airlock";
-	opacity = 0
-	},
-/obj/effect/map_helper/airlock/door/ext_door,
-/obj/effect/map_helper/airlock/button/ext_button,
-/obj/machinery/access_button{
-	dir = 8;
-	name = "exterior access button";
-	pixel_x = -7;
-	pixel_y = -26
-	},
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/shuttle/ninja)
 "gjv" = (
 /obj/item/toy/plushie/box{
 	pixel_x = 5;
@@ -8365,6 +8346,12 @@
 	icon_state = "freezerfloor"
 	},
 /area/centcom/specops)
+"hnV" = (
+/obj/machinery/computer/cryopod/gateway{
+	pixel_y = 30
+	},
+/turf/unsimulated/floor/dark,
+/area/shadekin)
 "hnX" = (
 /obj/effect/floor_decal/corner/green{
 	dir = 9
@@ -10885,6 +10872,12 @@
 /obj/structure/largecrate/animal/cat,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/merchant)
+"jzJ" = (
+/obj/machinery/gateway{
+	dir = 9
+	},
+/turf/unsimulated/floor/dark,
+/area/shadekin)
 "jAg" = (
 /obj/item/weapon/reagent_containers/food/snacks/spellburger{
 	pixel_y = 8
@@ -11278,6 +11271,13 @@
 	name = "plating"
 	},
 /area/skipjack_station)
+"jSG" = (
+/obj/machinery/gateway{
+	density = 0;
+	dir = 10
+	},
+/turf/unsimulated/floor/dark,
+/area/shadekin)
 "jSQ" = (
 /turf/unsimulated/floor{
 	dir = 5;
@@ -12296,6 +12296,12 @@
 	icon_state = "steel"
 	},
 /area/centcom/main_hall)
+"kHv" = (
+/obj/machinery/gateway{
+	dir = 4
+	},
+/turf/unsimulated/floor/dark,
+/area/shadekin)
 "kIb" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Barracks";
@@ -14715,6 +14721,31 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
+"mYr" = (
+/obj/machinery/door/airlock/voidcraft/vertical{
+	frequency = null;
+	id_tag = null;
+	name = "Ship External Hatch";
+	req_access = null
+	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 8;
+	icon_state = "pdoor0";
+	id = "blastninja";
+	name = "Outer Airlock";
+	opacity = 0
+	},
+/obj/effect/map_helper/airlock/door/ext_door,
+/obj/effect/map_helper/airlock/button/ext_button,
+/obj/machinery/access_button{
+	dir = 8;
+	name = "exterior access button";
+	pixel_x = -7;
+	pixel_y = -26
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja)
 "mZO" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/storage/firstaid/fire{
@@ -17799,6 +17830,12 @@
 /obj/structure/table/rack/holorack,
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/holodeck/source_theatre)
+"qoK" = (
+/obj/machinery/gateway{
+	dir = 8
+	},
+/turf/unsimulated/floor/dark,
+/area/shadekin)
 "qoU" = (
 /turf/simulated/floor/carpet/blucarpet,
 /area/shadekin)
@@ -18079,6 +18116,10 @@
 	},
 /turf/unsimulated/wall,
 /area/space)
+"qDH" = (
+/obj/machinery/cryopod/robot/door/gateway/quiet,
+/turf/unsimulated/floor/dark,
+/area/shadekin)
 "qGj" = (
 /obj/effect/floor_decal/rust/color_rusted{
 	dir = 5
@@ -22130,6 +22171,13 @@
 	icon_state = "vault"
 	},
 /area/centcom/specops)
+"ury" = (
+/obj/machinery/gateway{
+	density = 0;
+	dir = 6
+	},
+/turf/unsimulated/floor/dark,
+/area/shadekin)
 "urz" = (
 /obj/machinery/appliance/cooker/oven,
 /obj/effect/floor_decal/milspec/color/silver,
@@ -22372,6 +22420,12 @@
 	icon_state = "vault"
 	},
 /area/tdome)
+"uHn" = (
+/obj/machinery/gateway{
+	dir = 1
+	},
+/turf/unsimulated/floor/dark,
+/area/shadekin)
 "uHV" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 4
@@ -23646,6 +23700,9 @@
 	icon_state = "steel"
 	},
 /area/centcom/bar)
+"vRr" = (
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/shadekin)
 "vRu" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
@@ -23778,9 +23835,6 @@
 	},
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_basketball)
-"vXr" = (
-/turf/simulated/floor/outdoors/grass/heavy,
-/area/shadekin)
 "vXY" = (
 /obj/machinery/teleport/station,
 /turf/unsimulated/floor{
@@ -25264,6 +25318,10 @@
 /obj/effect/floor_decal/milspec/color/black,
 /obj/effect/floor_decal/techfloor,
 /turf/simulated/floor/tiled/steel_dirty,
+/area/shadekin)
+"xyz" = (
+/obj/machinery/gateway,
+/turf/simulated/floor,
 /area/shadekin)
 "xyF" = (
 /obj/item/weapon/stool/padded,
@@ -31287,7 +31345,7 @@ auX
 auX
 auX
 aUC
-gjr
+mYr
 aUC
 aUC
 auX
@@ -48584,20 +48642,20 @@ rUx
 bAY
 kyg
 oTO
-vXr
-vXr
-vXr
+vRr
+vRr
+vRr
 uOk
-vXr
-vXr
-vXr
+vRr
+vRr
+vRr
 uXG
 slw
-vXr
+vRr
 slw
-vXr
+vRr
 slw
-vXr
+vRr
 oTO
 mas
 bAY
@@ -48848,14 +48906,14 @@ jmT
 uOk
 hGu
 uOk
-vXr
-vXr
+vRr
+vRr
 slw
 ehg
 rTt
 hUC
 ivs
-vXr
+vRr
 oTO
 mas
 bAY
@@ -49100,7 +49158,7 @@ uOw
 bAY
 kyg
 ivs
-vXr
+vRr
 uOk
 omo
 uOk
@@ -49108,11 +49166,11 @@ ivs
 uOk
 hGu
 slw
-vXr
+vRr
 rTt
 hUC
 hVi
-vXr
+vRr
 slw
 ivs
 mas
@@ -49360,18 +49418,18 @@ kyg
 oTO
 hGu
 uOk
-vXr
+vRr
 uOk
 ivs
 uOk
-vXr
-vXr
+vRr
+vRr
 kXp
 hUC
 rTt
 rTt
-vXr
-vXr
+vRr
+vRr
 ivs
 mas
 bAY
@@ -49616,20 +49674,20 @@ pDb
 bAY
 kyg
 oTO
-vXr
+vRr
 uOk
 hGu
 uOk
 jmT
 uOk
-vXr
-vXr
+vRr
+vRr
 hVi
 ivs
 slw
-vXr
+vRr
 slw
-vXr
+vRr
 oTO
 mas
 bAY
@@ -49874,20 +49932,20 @@ bMy
 xls
 kyg
 ivs
-vXr
-vXr
-vXr
+vRr
+vRr
+vRr
 uOk
 slw
 rdD
-vXr
+vRr
 ivs
 ivs
 slw
-vXr
+vRr
 uXG
 slw
-vXr
+vRr
 ivs
 mas
 rSl
@@ -50132,20 +50190,20 @@ sta
 bAY
 kyg
 oTO
-vXr
-vXr
-vXr
+vRr
+vRr
+vRr
 ivs
-vXr
-vXr
-vXr
-vXr
-vXr
-vXr
-vXr
-vXr
-vXr
-vXr
+vRr
+vRr
+vRr
+vRr
+vRr
+vRr
+vRr
+vRr
+vRr
+vRr
 ivs
 mas
 bAY
@@ -50390,20 +50448,20 @@ kiH
 bAY
 kyg
 oTO
-vXr
-vXr
+vRr
+vRr
 sZX
 cus
 ivs
-vXr
+vRr
 nOe
 bbP
-vXr
-vXr
-vXr
-vXr
-vXr
-vXr
+vRr
+vRr
+vRr
+vRr
+vRr
+vRr
 oTO
 gcg
 fKz
@@ -50648,20 +50706,20 @@ bMy
 xls
 kyg
 oTO
-vXr
-vXr
+vRr
+vRr
 ivs
 hEP
 kwM
 ivs
-vXr
+vRr
 uXG
-vXr
-vXr
+vRr
+vRr
 uOk
-vXr
+vRr
 edw
-vXr
+vRr
 oTO
 mas
 rSl
@@ -50906,20 +50964,20 @@ nJz
 bAY
 kyg
 oTO
-vXr
+vRr
 vVd
 hEP
 hEP
 hEP
 hEP
 ivs
-vXr
+vRr
 uOk
 jmT
 uOk
 hGu
 uOk
-vXr
+vRr
 ivs
 mas
 bAY
@@ -51164,7 +51222,7 @@ hah
 bAY
 kyg
 oTO
-vXr
+vRr
 ivs
 rmy
 nId
@@ -51175,9 +51233,9 @@ hGu
 sBo
 ivs
 uOk
-vXr
+vRr
 uOk
-vXr
+vRr
 ivs
 mas
 bAY
@@ -51422,16 +51480,16 @@ uaj
 bAY
 kyg
 ivs
-vXr
+vRr
 aOJ
 hEP
 hEP
 hEP
 ivs
-vXr
+vRr
 nOe
 uOk
-vXr
+vRr
 uOk
 ivs
 uOk
@@ -51680,20 +51738,20 @@ qXP
 bAY
 kyg
 ivs
-vXr
-vXr
+vRr
+vRr
 ivs
 hEP
 ivs
 xJn
-vXr
-vXr
+vRr
+vRr
 fuU
 hGu
 uOk
 jmT
 uOk
-vXr
+vRr
 ivs
 mas
 bAY
@@ -51938,20 +51996,20 @@ pcm
 bAY
 kyg
 oTO
-vXr
+vRr
 ehg
-vXr
+vRr
 ivs
-vXr
-vXr
-vXr
-vXr
+vRr
+vRr
+vRr
+vRr
 ehg
-vXr
+vRr
 uOk
-vXr
+vRr
 jNr
-vXr
+vRr
 oTO
 mas
 bAY
@@ -55040,10 +55098,10 @@ ydh
 ydh
 ydh
 rVH
-ydh
-ydh
-ydh
-ydh
+jzJ
+qoK
+jSG
+rVH
 ydh
 ydh
 ydh
@@ -55298,9 +55356,9 @@ ydh
 ydh
 ydh
 ydh
-ydh
-ydh
-ydh
+uHn
+qDH
+xyz
 ydh
 ydh
 ydh
@@ -55556,9 +55614,9 @@ ydh
 ydh
 ydh
 ydh
-ydh
-ydh
-ydh
+eDM
+kHv
+ury
 ydh
 ydh
 ydh
@@ -55814,8 +55872,8 @@ ydh
 ydh
 ydh
 ydh
-ydh
-ydh
+bMy
+hnV
 ydh
 ydh
 ydh
@@ -56071,7 +56129,7 @@ ydh
 ydh
 ydh
 ydh
-ydh
+rVH
 ydh
 ydh
 ydh

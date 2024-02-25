@@ -1,12 +1,11 @@
-import { Fragment } from 'inferno';
 import { useBackend } from '../backend';
 import { Box, Button, Flex, LabeledList, Section, Table } from '../components';
 import { Window } from '../layouts';
 import { OvermapFlightData, OvermapPanControls } from './common/Overmap';
 
-export const OvermapHelm = (props, context) => {
+export const OvermapHelm = (props) => {
   return (
-    <Window width={565} height={545} resizable>
+    <Window width={565} height={545}>
       <Window.Content>
         <OvermapHelmContent />
       </Window.Content>
@@ -14,9 +13,9 @@ export const OvermapHelm = (props, context) => {
   );
 };
 
-export const OvermapHelmContent = (props, context) => {
+export const OvermapHelmContent = (props) => {
   return (
-    <Fragment>
+    <>
       <Flex>
         <Flex.Item basis="40%" height="180px">
           <OvermapFlightDataWrap />
@@ -29,34 +28,36 @@ export const OvermapHelmContent = (props, context) => {
         </Flex.Item>
       </Flex>
       <OvermapNavComputer />
-    </Fragment>
+    </>
   );
 };
 
-export const OvermapFlightDataWrap = (props, context) => {
-  const { act, data } = useBackend(context);
+export const OvermapFlightDataWrap = (props) => {
+  const { act, data } = useBackend();
 
   // While, yes, this is a strange choice to use fieldset over Section
   // just look at how pretty the legend is, sticking partially through the border ;///;
   return (
     <fieldset
       style={{ height: '100%', border: '1px solid #4972a1', margin: 'none' }}
-      className="Section">
+      className="Section"
+    >
       <legend>Flight Data</legend>
       <OvermapFlightData />
     </fieldset>
   );
 };
 
-const OvermapManualControl = (props, context) => {
-  const { act, data } = useBackend(context);
+const OvermapManualControl = (props) => {
+  const { act, data } = useBackend();
 
   const { canburn, manual_control } = data;
 
   return (
     <fieldset
       style={{ height: '100%', border: '1px solid #4972a1' }}
-      className="Section">
+      className="Section"
+    >
       <legend>Manual Control</legend>
       <Flex align="center" justify="center">
         <Flex.Item>
@@ -70,7 +71,8 @@ const OvermapManualControl = (props, context) => {
         <Button
           selected={manual_control}
           onClick={() => act('manual')}
-          icon="compass">
+          icon="compass"
+        >
           {manual_control ? 'Enabled' : 'Disabled'}
         </Button>
       </Box>
@@ -78,15 +80,16 @@ const OvermapManualControl = (props, context) => {
   );
 };
 
-const OvermapAutopilot = (props, context) => {
-  const { act, data } = useBackend(context);
+const OvermapAutopilot = (props) => {
+  const { act, data } = useBackend();
   const { dest, d_x, d_y, speedlimit, autopilot, autopilot_disabled } = data;
 
   if (autopilot_disabled) {
     return (
       <fieldset
         style={{ height: '100%', border: '1px solid #4972a1' }}
-        className="Section">
+        className="Section"
+      >
         <legend>Autopilot</legend>
         <Box textAlign="center" color="bad" fontSize={1.2}>
           AUTOPILOT DISABLED
@@ -114,23 +117,25 @@ const OvermapAutopilot = (props, context) => {
   return (
     <fieldset
       style={{ height: '100%', border: '1px solid #4972a1' }}
-      className="Section">
+      className="Section"
+    >
       <legend>Autopilot</legend>
       <LabeledList>
         <LabeledList.Item label="Target">
           {(dest && (
-            <Fragment>
+            <>
               <Button onClick={() => act('setcoord', { setx: true })}>
                 {d_x}
               </Button>
               <Button onClick={() => act('setcoord', { sety: true })}>
                 {d_y}
               </Button>
-            </Fragment>
+            </>
           )) || (
             <Button
               icon="pen"
-              onClick={() => act('setcoord', { setx: true, sety: true })}>
+              onClick={() => act('setcoord', { setx: true, sety: true })}
+            >
               None
             </Button>
           )}
@@ -147,22 +152,24 @@ const OvermapAutopilot = (props, context) => {
         selected={autopilot}
         disabled={!dest}
         icon="robot"
-        onClick={() => act('apilot')}>
+        onClick={() => act('apilot')}
+      >
         {autopilot ? 'Engaged' : 'Disengaged'}
       </Button>
       <Button
         fluid
         color="good"
         icon="exclamation-triangle"
-        onClick={() => act('apilot_lock')}>
+        onClick={() => act('apilot_lock')}
+      >
         Lock Autopilot
       </Button>
     </fieldset>
   );
 };
 
-const OvermapNavComputer = (props, context) => {
-  const { act, data } = useBackend(context);
+const OvermapNavComputer = (props) => {
+  const { act, data } = useBackend();
 
   const { sector, s_x, s_y, sector_info, landed, locations } = data;
 
@@ -181,7 +188,8 @@ const OvermapNavComputer = (props, context) => {
           <Button
             fluid
             icon="save"
-            onClick={() => act('add', { add: 'current' })}>
+            onClick={() => act('add', { add: 'current' })}
+          >
             Save Current Position
           </Button>
         </Flex.Item>
@@ -189,7 +197,8 @@ const OvermapNavComputer = (props, context) => {
           <Button
             fluid
             icon="sticky-note"
-            onClick={() => act('add', { add: 'new' })}>
+            onClick={() => act('add', { add: 'new' })}
+          >
             Add New Entry
           </Button>
         </Flex.Item>
@@ -210,12 +219,14 @@ const OvermapNavComputer = (props, context) => {
               <Table.Cell collapsing>
                 <Button
                   icon="rocket"
-                  onClick={() => act('setds', { x: loc.x, y: loc.y })}>
+                  onClick={() => act('setds', { x: loc.x, y: loc.y })}
+                >
                   Plot Course
                 </Button>
                 <Button
                   icon="trash"
-                  onClick={() => act('remove', { remove: loc.reference })}>
+                  onClick={() => act('remove', { remove: loc.reference })}
+                >
                   Remove
                 </Button>
               </Table.Cell>

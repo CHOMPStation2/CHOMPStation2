@@ -35,6 +35,7 @@
 		s.start()
 		if(isliving(hit_atom))
 			blink_mob(hit_atom)
+		dephase_shadekin() //ChompEDIT - mess with shadekins
 		qdel(src)
 
 // Artifical bluespace crystal, doesn't give you much research.

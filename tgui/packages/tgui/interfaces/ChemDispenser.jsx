@@ -1,15 +1,14 @@
-import { Fragment } from 'inferno';
 import { useBackend } from '../backend';
-import { Box, Button, Flex, LabeledList, Slider, Section } from '../components';
+import { Box, Button, Flex, LabeledList, Section, Slider } from '../components';
 import { BeakerContents } from '../interfaces/common/BeakerContents';
 import { Window } from '../layouts';
 
 const dispenseAmounts = [5, 10, 20, 30, 40, 60];
 const removeAmounts = [1, 5, 10];
 
-export const ChemDispenser = (props, context) => {
+export const ChemDispenser = (props) => {
   return (
-    <Window width={390} height={655} resizable>
+    <Window width={390} height={655}>
       <Window.Content className="Layout__content--flexColumn">
         <ChemDispenserSettings />
         <ChemDispenserChemicals />
@@ -19,8 +18,8 @@ export const ChemDispenser = (props, context) => {
   );
 };
 
-const ChemDispenserSettings = (properties, context) => {
-  const { act, data } = useBackend(context);
+const ChemDispenserSettings = (properties) => {
+  const { act, data } = useBackend();
   const { amount } = data;
   return (
     <Section title="Settings" flex="content">
@@ -28,6 +27,7 @@ const ChemDispenserSettings = (properties, context) => {
         <LabeledList.Item label="Dispense" verticalAlign="middle">
           {dispenseAmounts.map((a, i) => (
             <Button
+              key={i}
               textAlign="center"
               selected={amount === a}
               content={a + 'u'}
@@ -59,8 +59,8 @@ const ChemDispenserSettings = (properties, context) => {
   );
 };
 
-const ChemDispenserChemicals = (properties, context) => {
-  const { act, data } = useBackend(context);
+const ChemDispenserChemicals = (properties) => {
+  const { act, data } = useBackend();
   const { chemicals = [] } = data;
   const flexFillers = [];
   for (let i = 0; i < (chemicals.length + 1) % 3; i++) {
@@ -69,7 +69,8 @@ const ChemDispenserChemicals = (properties, context) => {
   return (
     <Section
       title={data.glass ? 'Drink Dispenser' : 'Chemical Dispenser'}
-      flexGrow="1">
+      flexGrow="1"
+    >
       <Flex direction="row" wrap="wrap" height="100%" align="flex-start">
         {chemicals.map((c, i) => (
           <Flex.Item key={i} grow="1" m={0.2} basis="40%" height="20px">
@@ -95,8 +96,8 @@ const ChemDispenserChemicals = (properties, context) => {
   );
 };
 
-const ChemDispenserBeaker = (properties, context) => {
-  const { act, data } = useBackend(context);
+const ChemDispenserBeaker = (properties) => {
+  const { act, data } = useBackend();
   const {
     isBeakerLoaded,
     beakerCurrentVolume,
@@ -122,12 +123,13 @@ const ChemDispenserBeaker = (properties, context) => {
             onClick={() => act('ejectBeaker')}
           />
         </Box>
-      }>
+      }
+    >
       <BeakerContents
         beakerLoaded={isBeakerLoaded}
         beakerContents={beakerContents}
         buttons={(chemical) => (
-          <Fragment>
+          <>
             <Button
               content="Isolate"
               icon="compress-arrows-alt"
@@ -159,7 +161,7 @@ const ChemDispenserBeaker = (properties, context) => {
                 })
               }
             />
-          </Fragment>
+          </>
         )}
       />
     </Section>

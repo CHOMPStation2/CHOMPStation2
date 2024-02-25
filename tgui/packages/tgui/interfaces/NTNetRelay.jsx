@@ -1,10 +1,10 @@
 import { useBackend } from '../backend';
-import { Button, Box, Icon, LabeledList, Section } from '../components';
+import { Box, Button, Icon, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
 import { FullscreenNotice } from './common/FullscreenNotice';
 
-export const NTNetRelay = (props, context) => {
-  const { act, data } = useBackend(context);
+export const NTNetRelay = (props) => {
+  const { act, data } = useBackend();
 
   const { dos_crashed, enabled, dos_overload, dos_capacity } = data;
 
@@ -15,17 +15,14 @@ export const NTNetRelay = (props, context) => {
   }
 
   return (
-    <Window
-      width={dos_crashed ? 700 : 500}
-      height={dos_crashed ? 600 : 300}
-      resizable>
+    <Window width={dos_crashed ? 700 : 500} height={dos_crashed ? 600 : 300}>
       <Window.Content scrollable>{body}</Window.Content>
     </Window>
   );
 };
 
-const NTNetRelayContent = (props, context) => {
-  const { act, data } = useBackend(context);
+const NTNetRelayContent = (props) => {
+  const { act, data } = useBackend();
 
   const { dos_crashed, enabled, dos_overload, dos_capacity } = data;
 
@@ -39,7 +36,8 @@ const NTNetRelayContent = (props, context) => {
           content={'Relay ' + (enabled ? 'On' : 'Off')}
           onClick={() => act('toggle')}
         />
-      }>
+      }
+    >
       <LabeledList>
         <LabeledList.Item label="Network Buffer Status">
           {dos_overload} / {dos_capacity} GQ
@@ -56,8 +54,8 @@ const NTNetRelayContent = (props, context) => {
   );
 };
 
-const NTNetRelayCrash = (props, context) => {
-  const { act, data } = useBackend(context);
+const NTNetRelayCrash = (props) => {
+  const { act, data } = useBackend();
 
   return (
     <FullscreenNotice title="ERROR">

@@ -1,10 +1,9 @@
-import { Fragment } from 'inferno';
 import { useBackend } from '../backend';
 import { Button, LabeledList, NoticeBox, Section } from '../components';
 import { Window } from '../layouts';
 
-export const PortableTurret = (props, context) => {
-  const { act, data } = useBackend(context);
+export const PortableTurret = (props) => {
+  const { act, data } = useBackend();
   const {
     locked,
     on,
@@ -21,7 +20,7 @@ export const PortableTurret = (props, context) => {
     neutralize_down,
   } = data;
   return (
-    <Window width={500} height={400} resizable>
+    <Window width={500} height={400}>
       <Window.Content scrollable>
         <NoticeBox>
           Swipe an ID card to {locked ? 'unlock' : 'lock'} this interface.
@@ -51,7 +50,7 @@ export const PortableTurret = (props, context) => {
           </LabeledList>
         </Section>
         {!!targetting_is_configurable && (
-          <Fragment>
+          <>
             <Section title="Humanoid Targets">
               <Button.Checkbox
                 fluid
@@ -112,7 +111,7 @@ export const PortableTurret = (props, context) => {
                 onClick={() => act('authall')}
               />
             </Section>
-          </Fragment>
+          </>
         )}
       </Window.Content>
     </Window>

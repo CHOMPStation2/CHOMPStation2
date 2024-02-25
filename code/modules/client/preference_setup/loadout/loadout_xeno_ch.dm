@@ -4,6 +4,12 @@
 	whitelisted = SPECIES_TESHARI
 	sort_category = "Xenowear"
 
+/datum/gear/eyes/arglasses/tesh_visor
+	display_name = "AR visor (Teshari)"
+	path = /obj/item/clothing/glasses/omnihud/visor/tesh
+	whitelisted = SPECIES_TESHARI
+	sort_category = "Xenowear"
+
 /datum/gear/suit/hood/New()
 	..()
 	var/list/cloaks = list()

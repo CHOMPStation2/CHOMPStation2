@@ -1,15 +1,24 @@
 import { sortBy } from 'common/collections';
+
 import { useBackend } from '../backend';
-import { AnimatedNumber, Box, Button, LabeledList, NoticeBox, NumberInput, Section } from '../components';
+import {
+  AnimatedNumber,
+  Box,
+  Button,
+  LabeledList,
+  NoticeBox,
+  NumberInput,
+  Section,
+} from '../components';
 import { Window } from '../layouts';
 
-export const TelesciConsole = (props, context) => {
-  const { act, data } = useBackend(context);
+export const TelesciConsole = (props) => {
+  const { act, data } = useBackend();
 
   const { noTelepad } = data;
 
   return (
-    <Window width={400} height={450} resizable>
+    <Window width={400} height={450}>
       <Window.Content scrollable>
         {(noTelepad && <TelesciNoTelepadError />) || <TelesciConsoleContent />}
       </Window.Content>
@@ -17,7 +26,7 @@ export const TelesciConsole = (props, context) => {
   );
 };
 
-const TelesciNoTelepadError = (props, context) => {
+const TelesciNoTelepadError = (props) => {
   return (
     <Section title="Error" color="bad">
       No telepad located.
@@ -27,8 +36,8 @@ const TelesciNoTelepadError = (props, context) => {
   );
 };
 
-export const TelesciConsoleContent = (props, context) => {
-  const { act, data } = useBackend(context);
+export const TelesciConsoleContent = (props) => {
+  const { act, data } = useBackend();
 
   const {
     insertedGps,
@@ -55,7 +64,8 @@ export const TelesciConsoleContent = (props, context) => {
           onClick={() => act('ejectGPS')}
           content="Eject GPS"
         />
-      }>
+      }
+    >
       <NoticeBox info>
         {(cooldown && (
           <Box>

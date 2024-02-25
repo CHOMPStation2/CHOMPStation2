@@ -12,6 +12,7 @@
 	var/max_stage = 4
 	var/list/affected_species = list(SPECIES_HUMAN,SPECIES_UNATHI,SPECIES_SKRELL,SPECIES_TAJ)
 	var/resistance = 10 // % chance a disease will resist cure, up to 100
+	var/name // CHOMPEdit - For custom built diseases.
 
 /datum/disease2/disease/New()
 	uniqueID = rand(0,10000)
@@ -149,6 +150,7 @@
 
 /datum/disease2/disease/proc/majormutate()
 	uniqueID = rand(0,10000)
+	name = null // CHOMPEdit - Not the same one anymore.
 	var/datum/disease2/effectholder/holder = pick(effects)
 	var/list/exclude = list()
 	for(var/datum/disease2/effectholder/D in effects)
@@ -172,6 +174,7 @@
 	disease.stageprob = stageprob
 	disease.antigen   = antigen
 	disease.uniqueID = uniqueID
+	disease.name = name // CHOMPEdit - Copy our name as well.
 	disease.resistance = resistance
 	disease.affected_species = affected_species.Copy()
 	for(var/datum/disease2/effectholder/holder in effects)
@@ -215,7 +218,10 @@
 var/global/list/virusDB = list()
 
 /datum/disease2/disease/proc/name()
-	.= "stamm #[add_zero("[uniqueID]", 4)]"
+	if(name) // CHOMPEdit - Lets use our name
+		.= "[name]"
+	else // CHOMPEdit - ...unless we're an undiscovered disease.
+		.= "stamm #[add_zero("[uniqueID]", 4)]"
 	if ("[uniqueID]" in virusDB)
 		var/datum/data/record/V = virusDB["[uniqueID]"]
 		.= V.fields["name"]

@@ -1668,6 +1668,9 @@
 "bBg" = (
 /turf/simulated/wall,
 /area/crew_quarters/thirddeck/vrroom)
+"bCC" = (
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsstarboard)
 "bCO" = (
 /obj/structure/table/sifwoodentable,
 /obj/item/toy/figure/chef,
@@ -8031,9 +8034,6 @@
 /obj/effect/floor_decal/corner/blue/border,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/port)
-"gmi" = (
-/turf/simulated/floor/plating,
-/area/maintenance/thirddeck/dormsstarboard)
 "gms" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -14836,6 +14836,11 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/thirddeck/vrroom)
+"naP" = (
+/obj/structure/catwalk,
+/obj/machinery/space_heater,
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/dormsstarboard)
 "naW" = (
 /obj/structure/table/standard,
 /obj/machinery/power/apc{
@@ -16820,6 +16825,23 @@
 /obj/effect/floor_decal/corner/white/border,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftportcentral)
+"oHc" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/beige/border{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/thirddeck/aftdoorm)
 "oHo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -19089,23 +19111,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
-"qEC" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/beige/border{
-	dir = 8
-	},
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/aftdoorm)
 "qEY" = (
 /obj/effect/floor_decal/rust,
 /obj/machinery/atmospherics/pipe/manifold/hidden/cyan{
@@ -19557,16 +19562,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/seconddeck/gym)
-"rcR" = (
-/obj/structure/disposalpipe/segment,
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/brown/bordercorner{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/aftdoorm)
 "rcT" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/borderfloor,
@@ -20165,11 +20160,6 @@
 /area/maintenance/thirddeck/dormsaft{
 	name = "Third Deck Aft Maintenance"
 	})
-"rCz" = (
-/obj/structure/catwalk,
-/obj/machinery/space_heater,
-/turf/simulated/floor/plating,
-/area/maintenance/thirddeck/dormsstarboard)
 "rCL" = (
 /obj/structure/cryofeed{
 	dir = 4;
@@ -24220,6 +24210,16 @@
 "vcl" = (
 /turf/simulated/wall/r_wall,
 /area/hallway/primary/thirddeck/aftportcentral)
+"vcK" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/brown/bordercorner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/thirddeck/aftdoorm)
 "vdi" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -59910,7 +59910,7 @@ xld
 xTz
 vti
 jDJ
-qEC
+oHc
 fkN
 aHf
 sCH
@@ -60168,7 +60168,7 @@ xlk
 xUy
 ykL
 xPx
-rcR
+vcK
 wRo
 wXo
 uRE
@@ -67379,7 +67379,7 @@ ukQ
 uIt
 uOo
 tBw
-rCz
+naP
 vAp
 vTE
 vYr
@@ -67640,7 +67640,7 @@ qaU
 vhe
 aQw
 rQK
-gmi
+bCC
 qaU
 shV
 shV

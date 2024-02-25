@@ -1,5 +1,5 @@
 import { decodeHtmlEntities } from 'common/string';
-import { Fragment } from 'inferno';
+
 import { useBackend } from '../backend';
 import { Box, Button, LabeledList, Section, Tabs } from '../components';
 import { Window } from '../layouts';
@@ -14,23 +14,24 @@ const RCS_VIEWMSGS = 6; // View messages
 const RCS_MESSAUTH = 7; // Authentication before sending
 const RCS_ANNOUNCE = 8; // Send announcement
 
-const RequestConsoleSettings = (props, context) => {
-  const { act, data } = useBackend(context);
+const RequestConsoleSettings = (props) => {
+  const { act, data } = useBackend();
   const { silent } = data;
   return (
     <Section title="Settings">
       <Button
         selected={!silent}
         icon={silent ? 'volume-mute' : 'volume-up'}
-        onClick={() => act('toggleSilent')}>
+        onClick={() => act('toggleSilent')}
+      >
         Speaker {silent ? 'OFF' : 'ON'}
       </Button>
     </Section>
   );
 };
 
-const RequestConsoleSupplies = (props, context) => {
-  const { act, data } = useBackend(context);
+const RequestConsoleSupplies = (props) => {
+  const { act, data } = useBackend();
   const { department, supply_dept } = data;
   return (
     <Section title="Supplies">
@@ -39,8 +40,8 @@ const RequestConsoleSupplies = (props, context) => {
   );
 };
 
-const RequestConsoleAssistance = (props, context) => {
-  const { act, data } = useBackend(context);
+const RequestConsoleAssistance = (props) => {
+  const { act, data } = useBackend();
   const { department, assist_dept } = data;
   return (
     <Section title="Request assistance from another department">
@@ -49,8 +50,8 @@ const RequestConsoleAssistance = (props, context) => {
   );
 };
 
-const RequestConsoleRelay = (props, context) => {
-  const { act, data } = useBackend(context);
+const RequestConsoleRelay = (props) => {
+  const { act, data } = useBackend();
   const { department, info_dept } = data;
   return (
     <Section title="Report Anonymous Information">
@@ -59,8 +60,8 @@ const RequestConsoleRelay = (props, context) => {
   );
 };
 
-const RequestConsoleSendMenu = (props, context) => {
-  const { act } = useBackend(context);
+const RequestConsoleSendMenu = (props) => {
+  const { act } = useBackend();
   const { dept_list, department } = props;
   return (
     <LabeledList>
@@ -70,29 +71,31 @@ const RequestConsoleSendMenu = (props, context) => {
             <LabeledList.Item
               label={dept}
               buttons={
-                <Fragment>
+                <>
                   <Button
                     icon="envelope-open-text"
-                    onClick={() => act('write', { write: dept, priority: 1 })}>
+                    onClick={() => act('write', { write: dept, priority: 1 })}
+                  >
                     Message
                   </Button>
                   <Button
                     icon="exclamation-triangle"
-                    onClick={() => act('write', { write: dept, priority: 2 })}>
+                    onClick={() => act('write', { write: dept, priority: 2 })}
+                  >
                     High Priority
                   </Button>
-                </Fragment>
+                </>
               }
             />
           )) ||
-          null
+          null,
       )}
     </LabeledList>
   );
 };
 
-const RequestConsoleSendPass = (props, context) => {
-  const { act, data } = useBackend(context);
+const RequestConsoleSendPass = (props) => {
+  const { act, data } = useBackend();
   return (
     <Section>
       <Box fontSize={2} color="good">
@@ -101,7 +104,8 @@ const RequestConsoleSendPass = (props, context) => {
       <Box>
         <Button
           icon="arrow-right"
-          onClick={() => act('setScreen', { setScreen: RCS_MAINMENU })}>
+          onClick={() => act('setScreen', { setScreen: RCS_MAINMENU })}
+        >
           Continue
         </Button>
       </Box>
@@ -109,8 +113,8 @@ const RequestConsoleSendPass = (props, context) => {
   );
 };
 
-const RequestConsoleSendFail = (props, context) => {
-  const { act, data } = useBackend(context);
+const RequestConsoleSendFail = (props) => {
+  const { act, data } = useBackend();
   return (
     <Section>
       <Box fontSize={1.5} bold color="bad">
@@ -119,7 +123,8 @@ const RequestConsoleSendFail = (props, context) => {
       <Box>
         <Button
           icon="arrow-right"
-          onClick={() => act('setScreen', { setScreen: RCS_MAINMENU })}>
+          onClick={() => act('setScreen', { setScreen: RCS_MAINMENU })}
+        >
           Continue
         </Button>
       </Box>
@@ -127,8 +132,8 @@ const RequestConsoleSendFail = (props, context) => {
   );
 };
 
-const RequestConsoleViewMessages = (props, context) => {
-  const { act, data } = useBackend(context);
+const RequestConsoleViewMessages = (props) => {
+  const { act, data } = useBackend();
   const { message_log } = data;
   return (
     <Section title="Messages">
@@ -140,10 +145,12 @@ const RequestConsoleViewMessages = (props, context) => {
             buttons={
               <Button
                 icon="print"
-                onClick={() => act('print', { print: i + 1 })}>
+                onClick={() => act('print', { print: i + 1 })}
+              >
                 Print
               </Button>
-            }>
+            }
+          >
             {decodeHtmlEntities(msg[1])}
           </LabeledList.Item>
         ))) || <Box>No messages.</Box>}
@@ -151,8 +158,8 @@ const RequestConsoleViewMessages = (props, context) => {
   );
 };
 
-const RequestConsoleMessageAuth = (props, context) => {
-  const { act, data } = useBackend(context);
+const RequestConsoleMessageAuth = (props) => {
+  const { act, data } = useBackend();
   const { message, recipient, priority, msgStamped, msgVerified } = data;
   return (
     <Section title="Message Authentication">
@@ -169,32 +176,36 @@ const RequestConsoleMessageAuth = (props, context) => {
         </LabeledList.Item>
         <LabeledList.Item
           label="Validated By"
-          color={msgVerified ? 'good' : 'bad'}>
+          color={msgVerified ? 'good' : 'bad'}
+        >
           {decodeHtmlEntities(msgVerified) || 'No Validation'}
         </LabeledList.Item>
         <LabeledList.Item
           label="Stamped By"
-          color={msgStamped ? 'good' : 'bad'}>
+          color={msgStamped ? 'good' : 'bad'}
+        >
           {decodeHtmlEntities(msgStamped) || 'No Stamp'}
         </LabeledList.Item>
       </LabeledList>
       <Button
         mt={1}
         icon="share"
-        onClick={() => act('department', { department: recipient })}>
+        onClick={() => act('department', { department: recipient })}
+      >
         Send Message
       </Button>
       <Button
         icon="undo"
-        onClick={() => act('setScreen', { setScreen: RCS_MAINMENU })}>
+        onClick={() => act('setScreen', { setScreen: RCS_MAINMENU })}
+      >
         Back
       </Button>
     </Section>
   );
 };
 
-const RequestConsoleAnnounce = (props, context) => {
-  const { act, data } = useBackend(context);
+const RequestConsoleAnnounce = (props) => {
+  const { act, data } = useBackend();
   const {
     department,
     screen,
@@ -215,7 +226,7 @@ const RequestConsoleAnnounce = (props, context) => {
   return (
     <Section title="Send Station-Wide Announcement">
       {(announceAuth && (
-        <Fragment>
+        <>
           <Box bold color="good" mb={1}>
             ID Verified. Authentication Accepted.
           </Box>
@@ -228,13 +239,15 @@ const RequestConsoleAnnounce = (props, context) => {
               <Button
                 ml={1}
                 icon="pen"
-                onClick={() => act('writeAnnouncement')}>
+                onClick={() => act('writeAnnouncement')}
+              >
                 Edit
               </Button>
-            }>
+            }
+          >
             {message || 'No Message'}
           </Section>
-        </Fragment>
+        </>
       )) || (
         <Box bold color="bad" mb={1}>
           Swipe your ID card to authenticate yourself.
@@ -243,12 +256,14 @@ const RequestConsoleAnnounce = (props, context) => {
       <Button
         disabled={!message || !announceAuth}
         icon="share"
-        onClick={() => act('sendAnnouncement')}>
+        onClick={() => act('sendAnnouncement')}
+      >
         Announce
       </Button>
       <Button
         icon="undo"
-        onClick={() => act('setScreen', { setScreen: RCS_MAINMENU })}>
+        onClick={() => act('setScreen', { setScreen: RCS_MAINMENU })}
+      >
         Back
       </Button>
     </Section>
@@ -266,45 +281,50 @@ screenToTemplate[RCS_VIEWMSGS] = RequestConsoleViewMessages;
 screenToTemplate[RCS_MESSAUTH] = RequestConsoleMessageAuth;
 screenToTemplate[RCS_ANNOUNCE] = RequestConsoleAnnounce;
 
-export const RequestConsole = (props, context) => {
-  const { act, data } = useBackend(context);
+export const RequestConsole = (props) => {
+  const { act, data } = useBackend();
   const { screen, newmessagepriority, announcementConsole } = data;
 
   let BodyElement = screenToTemplate[screen];
 
   return (
-    <Window width={520} height={410} resizable>
+    <Window width={520} height={410}>
       <Window.Content scrollable>
         <Tabs>
           <Tabs.Tab
             selected={screen === RCS_VIEWMSGS}
             onClick={() => act('setScreen', { setScreen: RCS_VIEWMSGS })}
-            icon="envelope-open-text">
+            icon="envelope-open-text"
+          >
             Messages
           </Tabs.Tab>
           <Tabs.Tab
             selected={screen === RCS_RQASSIST}
             onClick={() => act('setScreen', { setScreen: RCS_RQASSIST })}
-            icon="share-square">
+            icon="share-square"
+          >
             Assistance
           </Tabs.Tab>
           <Tabs.Tab
             selected={screen === RCS_RQSUPPLY}
             onClick={() => act('setScreen', { setScreen: RCS_RQSUPPLY })}
-            icon="share-square">
+            icon="share-square"
+          >
             Supplies
           </Tabs.Tab>
           <Tabs.Tab
             selected={screen === RCS_SENDINFO}
             onClick={() => act('setScreen', { setScreen: RCS_SENDINFO })}
-            icon="share-square-o">
+            icon="share-square-o"
+          >
             Report
           </Tabs.Tab>
           {(announcementConsole && (
             <Tabs.Tab
               selected={screen === RCS_ANNOUNCE}
               onClick={() => act('setScreen', { setScreen: RCS_ANNOUNCE })}
-              icon="volume-up">
+              icon="volume-up"
+            >
               Announce
             </Tabs.Tab>
           )) ||

@@ -1,10 +1,19 @@
-import { useBackend, useSharedState } from '../backend';
-import { Box, Button, LabeledList, ProgressBar, Section, Tabs, Stack } from '../components';
-import { Window } from '../layouts';
-import { sortBy, filter } from 'common/collections';
+import { filter, sortBy } from 'common/collections';
 
-export const ICPrinter = (props, context) => {
-  const { act, data } = useBackend(context);
+import { useBackend, useSharedState } from '../backend';
+import {
+  Box,
+  Button,
+  LabeledList,
+  ProgressBar,
+  Section,
+  Stack,
+  Tabs,
+} from '../components';
+import { Window } from '../layouts';
+
+export const ICPrinter = (props) => {
+  const { act, data } = useBackend();
 
   const {
     metal,
@@ -57,19 +66,18 @@ const canBuild = (item, data) => {
   return true;
 };
 
-const ICPrinterCategories = (props, context) => {
-  const { act, data } = useBackend(context);
+const ICPrinterCategories = (props) => {
+  const { act, data } = useBackend();
 
   const { categories, debug } = data;
 
   const [categoryTarget, setcategoryTarget] = useSharedState(
-    context,
     'categoryTarget',
-    null
+    null,
   );
 
   const selectedCategory = filter((cat) => cat.name === categoryTarget)(
-    categories
+    categories,
   )[0];
 
   return (
@@ -81,7 +89,8 @@ const ICPrinterCategories = (props, context) => {
               <Tabs.Tab
                 selected={categoryTarget === cat.name}
                 onClick={() => setcategoryTarget(cat.name)}
-                key={cat.name}>
+                key={cat.name}
+              >
                 {cat.name}
               </Tabs.Tab>
             ))}
@@ -101,13 +110,15 @@ const ICPrinterCategories = (props, context) => {
                         <Button
                           disabled={!canBuild(item, data)}
                           icon="print"
-                          onClick={() => act('build', { build: item.path })}>
+                          onClick={() => act('build', { build: item.path })}
+                        >
                           Print
                         </Button>
-                      }>
+                      }
+                    >
                       {item.desc}
                     </LabeledList.Item>
-                  )
+                  ),
                 )}
               </LabeledList>
             </Section>

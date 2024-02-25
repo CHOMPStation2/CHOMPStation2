@@ -31,7 +31,7 @@
 [b]Notice[/b]: CONDEMNED! NO ENTRY! -Vir System Authority"}
 
 	map_z = list(Z_LEVEL_AEROSTAT) // Using the aerostat as the map as it is the only z-level in the atmosphere. Located in /maps/southern_cross/overmap/planets/kara/aerostat/
-	initial_generic_waypoints = list("northern_star_mine_dock", "northern_star_mine_echidna_dock") //northern_star.dm landmarks
+	initial_generic_waypoints = list("northern_star_mine_dock", "northern_star_mine_echidna_dock", "aerostat_west","aerostat_east","aerostat_south","aerostat_northwest","aerostat_northeast") //northern_star.dm landmarks
 	start_x  = 14
 	start_y  = 14
 	skybox_offset_x = 128
@@ -43,7 +43,6 @@
 	atmosphere_color = "#C19562"
 	icon_state = "chlorine"
 	known = 1
-	initial_generic_waypoints = list("aerostat_west","aerostat_east","aerostat_south","aerostat_northwest","aerostat_northeast")
 
 
 /obj/effect/overmap/visitable/planet/kara/get_skybox_representation()

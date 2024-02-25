@@ -6,7 +6,7 @@
 	},
 /area/shuttle/tabiranth)
 "ab" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "tabiranth_pd"
 	},
 /turf/simulated/floor/reinforced/airless{
@@ -1812,8 +1812,8 @@
 /obj/item/weapon/gun/projectile/automatic/z8,
 /obj/item/weapon/gun/projectile/automatic/z8,
 /obj/item/weapon/gun/projectile/heavysniper,
-/obj/item/weapon/storage/box/sniperammo,
-/obj/item/weapon/storage/box/sniperammo,
+/obj/item/ammo_magazine/ammo_box/b145,
+/obj/item/ammo_magazine/ammo_box/b145,
 /obj/item/ammo_magazine/m762,
 /obj/item/ammo_magazine/m762,
 /obj/item/ammo_magazine/m762,
@@ -1824,8 +1824,8 @@
 /obj/item/ammo_magazine/m762/ap,
 /obj/item/ammo_magazine/m762/ap,
 /obj/item/ammo_magazine/m762/ap,
-/obj/item/weapon/storage/box/sniperammo,
-/obj/item/weapon/storage/box/sniperammo,
+/obj/item/ammo_magazine/ammo_box/b145,
+/obj/item/ammo_magazine/ammo_box/b145,
 /obj/item/modular_computer/laptop/preset/custom_loadout/hybrid,
 /obj/item/modular_computer/laptop/preset/custom_loadout/hybrid,
 /obj/item/modular_computer/tablet/preset/custom_loadout/hybrid,

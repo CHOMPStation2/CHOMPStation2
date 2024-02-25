@@ -1,12 +1,14 @@
-import { Flex, Button, Box, LabeledList, Section } from '../components';
-import { useBackend, useLocalState } from '../backend';
-import { Window } from '../layouts';
 import { toTitleCase } from 'common/string';
+import { useState } from 'react';
 
-export const AreaScrubberControl = (props, context) => {
-  const { act, data } = useBackend(context);
+import { useBackend } from '../backend';
+import { Box, Button, Flex, LabeledList, Section } from '../components';
+import { Window } from '../layouts';
 
-  const [showArea, setShowArea] = useLocalState(context, 'showArea', false);
+export const AreaScrubberControl = (props) => {
+  const { act, data } = useBackend();
+
+  const [showArea, setShowArea] = useState(false);
 
   const { scrubbers } = data;
 
@@ -25,7 +27,7 @@ export const AreaScrubberControl = (props, context) => {
   }
 
   return (
-    <Window width={600} height={400} resizable>
+    <Window width={600} height={400}>
       <Window.Content scrollable>
         <Section>
           <Flex wrap="wrap">
@@ -80,8 +82,8 @@ export const AreaScrubberControl = (props, context) => {
   );
 };
 
-const BigScrubber = (props, context) => {
-  const { act } = useBackend(context);
+const BigScrubber = (props) => {
+  const { act } = useBackend();
 
   const { scrubber, showArea } = props;
 

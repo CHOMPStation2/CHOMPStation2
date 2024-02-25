@@ -58,7 +58,8 @@
 	reload_max = 7		// Not the best default, but it fits the pistol
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/eclipse/ranged
 
-	loot_list = list(/obj/item/slime_extract/sepia  = 0.1,
+	loot_list = list(/obj/item/slime_extract/sepia  = 1,
+		/obj/item/weapon/bone/skull = 100
 			)
 
 	special_attack_cooldown = 15 SECONDS
@@ -256,6 +257,10 @@
 	light_color = "#14ff20"
 	glow_range = 5
 	glow_intensity = 3
+
+	loot_list = list(/obj/item/slime_extract/sepia  = 1,
+		/obj/item/weapon/bone/skull/unathi = 100
+			)
 
 	projectiletype = /obj/item/projectile/energy/declone/burn
 	var/rads = 5
@@ -557,6 +562,10 @@
 	icon_living = "eclipse_guardian"
 	reload_max = 10
 
+	loot_list = list(/obj/item/slime_extract/sepia  = 1,
+		/obj/item/slime_extract/grey = 100
+			)
+
 /mob/living/simple_mob/humanoid/eclipse/solar/guardian/handle_special()
 	if(stat != DEAD)
 		heal_aura()
@@ -619,6 +628,10 @@
 
 	ranged_attack_delay = 1.5 SECONDS
 	hovering = TRUE
+
+	loot_list = list(/obj/item/slime_extract/sepia  = 1,
+		/obj/item/slime_extract/grey = 100
+			)
 
 	var/exploded = FALSE
 	var/explosion_dev_range		= 0
@@ -699,6 +712,10 @@
 	special_attack_max_range = 7
 	icon_state = "miner"
 	icon_living = "miner"
+
+	loot_list = list(/obj/item/slime_extract/sepia  = 1,
+		/obj/item/slime_extract/grey = 100
+			)
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/miner/do_special_attack(atom/A)
 	new /mob/living/simple_mob/mechanical/mining_drone/scavenger/eclipse (src.loc)

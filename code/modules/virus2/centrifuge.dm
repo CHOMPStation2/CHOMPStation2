@@ -189,7 +189,7 @@
 		if(virus.len > 0)
 			for (var/ID in virus)
 				var/datum/disease2/disease/V = virus[ID]
-				P.info += "[V.name()]<br>"
+				P.info += "stamm #[add_zero("[V.uniqueID]", 4)]<br>" // CHOMPEdit - Making sure to not show the name at first!
 		else
 			P.info += "None<br>"
 

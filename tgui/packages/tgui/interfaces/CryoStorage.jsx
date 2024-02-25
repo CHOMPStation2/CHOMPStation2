@@ -1,16 +1,18 @@
-import { useBackend, useLocalState } from '../backend';
-import { Box, Button, Section, Tabs, NoticeBox } from '../components';
+import { useState } from 'react';
+
+import { useBackend } from '../backend';
+import { Box, Button, NoticeBox, Section, Tabs } from '../components';
 import { Window } from '../layouts';
 
-export const CryoStorage = (props, context) => {
-  const { act, data } = useBackend(context);
+export const CryoStorage = (props) => {
+  const { act, data } = useBackend();
 
   const { real_name, allow_items } = data;
 
-  const [tab, setTab] = useLocalState(context, 'tab', 0);
+  const [tab, setTab] = useState(0);
 
   return (
-    <Window width={400} height={600} resizable>
+    <Window width={400} height={600}>
       <Window.Content scrollable>
         <Tabs>
           <Tabs.Tab selected={tab === 0} onClick={() => setTab(0)}>
@@ -30,8 +32,8 @@ export const CryoStorage = (props, context) => {
   );
 };
 
-export const CryoStorageCrew = (props, context) => {
-  const { act, data } = useBackend(context);
+export const CryoStorageCrew = (props) => {
+  const { act, data } = useBackend();
 
   const { crew } = data;
 
@@ -47,8 +49,8 @@ export const CryoStorageCrew = (props, context) => {
   );
 };
 
-export const CryoStorageItems = (props, context) => {
-  const { act, data } = useBackend(context);
+export const CryoStorageItems = (props) => {
+  const { act, data } = useBackend();
 
   const { items } = data;
 
@@ -59,13 +61,15 @@ export const CryoStorageItems = (props, context) => {
         <Button icon="hand-rock" onClick={() => act('allitems')}>
           Claim All
         </Button>
-      }>
+      }
+    >
       {(items.length &&
         items.map((item) => (
           <Button
             key={item.ref}
             icon="hand-rock"
-            onClick={() => act('item', { ref: item.ref })}>
+            onClick={() => act('item', { ref: item.ref })}
+          >
             {item.name}
           </Button>
         ))) || <Box color="average">No items stored.</Box>}

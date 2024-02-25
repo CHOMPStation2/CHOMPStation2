@@ -1,9 +1,9 @@
 import { useBackend } from '../backend';
-import { Box, Button, Flex, Grid, NoticeBox, Section } from '../components';
+import { Box, Button, Flex, NoticeBox, Section, Table } from '../components';
 import { Window } from '../layouts';
 
-const NukeKeypad = (props, context) => {
-  const { act, data } = useBackend(context);
+const NukeKeypad = (props) => {
+  const { act, data } = useBackend();
   const keypadKeys = [
     ['1', '4', '7', 'R'],
     ['2', '5', '8', '0'],
@@ -12,9 +12,9 @@ const NukeKeypad = (props, context) => {
   const { locked, l_setshort, code, emagged } = data;
   return (
     <Box width="185px">
-      <Grid width="1px">
+      <Table width="1px">
         {keypadKeys.map((keyColumn) => (
-          <Grid.Column key={keyColumn[0]}>
+          <Table.Cell key={keyColumn[0]}>
             {keyColumn.map((key) => (
               <Button
                 fluid
@@ -35,15 +35,15 @@ const NukeKeypad = (props, context) => {
                 onClick={() => act('type', { digit: key })}
               />
             ))}
-          </Grid.Column>
+          </Table.Cell>
         ))}
-      </Grid>
+      </Table>
     </Box>
   );
 };
 
-export const SecureSafe = (props, context) => {
-  const { act, data } = useBackend(context);
+export const SecureSafe = (props) => {
+  const { act, data } = useBackend();
   const { code, l_setshort, l_set, emagged, locked } = data;
 
   let new_code = !(!!l_set || !!l_setshort);

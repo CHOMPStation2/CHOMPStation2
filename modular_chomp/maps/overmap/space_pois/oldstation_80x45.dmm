@@ -272,6 +272,11 @@
 	dir = 1
 	},
 /obj/structure/table/standard,
+/obj/machinery/button/remote/blast_door{
+	id = "poicharliestation";
+	dir = 4;
+	name = "Prototype Design Lockdown"
+	},
 /turf/simulated/floor/tiled/old_tile/red,
 /area/submap/oldstation_tox)
 "cr" = (
@@ -331,7 +336,7 @@
 	icon_state = "0-2";
 	pixel_y = 1
 	},
-/obj/machinery/power/smes/buildable/hybrid,
+/obj/machinery/power/smes,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -347,8 +352,8 @@
 /area/submap/oldstation_charlie)
 "da" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/champagne,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/icetea,
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/oxygen,
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/water,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -423,6 +428,7 @@
 /obj/random/maintenance,
 /obj/random/maintenance,
 /obj/random/maintenance,
+/obj/item/device/flashlight,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -725,7 +731,8 @@
 /area/submap/oldstation_beta)
 "hf" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/goldschlager,
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/sodium,
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/sugar,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -747,7 +754,6 @@
 	dir = 8;
 	pixel_x = 28
 	},
-/mob/living/simple_mob/mechanical/hivebot/tank/armored/anti_laser,
 /mob/living/simple_mob/mechanical/hivebot/tank/armored/anti_melee,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -996,7 +1002,7 @@
 /area/submap/oldstation_hydro_sec)
 "kh" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/corophizine,
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/radium,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -1337,8 +1343,8 @@
 /area/submap/oldstation_alpha)
 "oe" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/beer,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/moonshine,
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/dylovene,
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/ethanol,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -1525,15 +1531,13 @@
 /area/submap/oldstation_alpha)
 "qw" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/biomass,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/mutagen,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/tricord,
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/fluorine,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
 /area/submap/oldstation_tox)
 "qx" = (
-/obj/structure/grille,
+/obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/submap/oldstation_tox)
 "qF" = (
@@ -1649,8 +1653,8 @@
 /area/submap/oldstation_beta)
 "rw" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/deadrum,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/hot_coco,
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/sacid,
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/sulfur,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -1764,9 +1768,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/bluecuracao,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/myelamine,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/sodawater,
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/phosphorus,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -1930,6 +1932,7 @@
 /obj/random/maintenance,
 /obj/random/maintenance,
 /obj/random/maintenance,
+/obj/item/device/flashlight,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -1986,7 +1989,9 @@
 /obj/structure/table/rack/shelf/steel,
 /obj/item/clothing/head/helmet/material,
 /obj/item/clothing/head/helmet/material,
-/obj/random/gun/random,
+/obj/item/weapon/gun/energy/gun/compact,
+/obj/item/weapon/gun/energy/gun/compact,
+/obj/item/weapon/gun/energy/gun/compact,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -2108,6 +2113,10 @@
 /obj/item/clothing/mask/gas,
 /obj/item/weapon/handcuffs,
 /obj/item/weapon/handcuffs,
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 4;
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -2144,7 +2153,9 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/door/blast/regular,
+/obj/machinery/door/blast/regular{
+	id = "poicharliestation"
+	},
 /turf/simulated/floor/tiled/old_tile/red,
 /area/submap/oldstation_tox)
 "wo" = (
@@ -2294,7 +2305,9 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/machinery/door/blast/regular,
+/obj/machinery/door/blast/regular{
+	id = "poicharliestation"
+	},
 /turf/simulated/floor/tiled/old_tile/red,
 /area/submap/oldstation_tox)
 "xU" = (
@@ -2829,13 +2842,12 @@
 	icon_state = "0-2";
 	pixel_y = 1
 	},
-/obj/machinery/power/smes/buildable/hybrid,
+/obj/machinery/power/smes,
 /turf/simulated/floor/plating,
 /area/submap/oldstation_power)
 "Ez" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/clonexadone,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/unathiliquor,
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/potassium,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -3011,7 +3023,6 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/mob/living/simple_mob/mechanical/hivebot/tank/armored/anti_laser,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -3087,7 +3098,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
-/mob/living/simple_mob/mechanical/hivebot/tank/armored/anti_laser,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -3158,7 +3168,6 @@
 	dir = 1;
 	in_use = 1
 	},
-/mob/living/simple_mob/mechanical/hivebot/tank/armored/anti_laser,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
@@ -3355,7 +3364,6 @@
 /area/submap/oldstation_power)
 "KZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/mob/living/simple_mob/mechanical/hivebot/tank/armored/anti_laser,
 /obj/random/junk,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
@@ -3506,7 +3514,6 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/mob/living/simple_mob/mechanical/hivebot/tank/armored/anti_laser,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
@@ -3763,7 +3770,9 @@
 /obj/machinery/door/window/brigdoor/eastleft{
 	dir = 8
 	},
-/obj/machinery/door/blast/regular,
+/obj/machinery/door/blast/regular{
+	id = "poicharliestation"
+	},
 /turf/simulated/floor/tiled/old_tile/red,
 /area/submap/oldstation_tox)
 "Po" = (
@@ -3852,6 +3861,7 @@
 /obj/random/maintenance,
 /obj/random/maintenance,
 /obj/random/maintenance,
+/obj/item/device/flashlight,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -3891,9 +3901,9 @@
 /area/submap/oldstation_bridge)
 "QB" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/acidspit,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/lemon,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/sacid,
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/ammonia,
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/carbon,
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/calcium,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -4094,12 +4104,6 @@
 /obj/random/junk,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/oldstation_alpha)
-"Tc" = (
-/mob/living/simple_mob/mechanical/hivebot/tank/armored/anti_laser,
-/turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15
-	},
-/area/submap/oldstation_tox)
 "Tg" = (
 /mob/living/simple_mob/mechanical/hivebot/swarm,
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -4127,8 +4131,9 @@
 /area/submap/oldstation_charlie)
 "Tu" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/ale,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/imidazoline,
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/chlorine,
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/copper,
+/obj/item/weapon/reagent_containers/chem_disp_cartridge/diethylamine,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -4225,15 +4230,9 @@
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/oldstation_alpha)
 "TY" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/mob/living/simple_mob/mechanical/hivebot/tank/armored/anti_laser,
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15
-	},
-/area/submap/oldstation_charlie)
+/obj/structure/closet/syndicate/resources/everything,
+/turf/simulated/floor/tiled/old_tile/blue,
+/area/submap/oldstation_tox)
 "TZ" = (
 /obj/random/trash,
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -4303,7 +4302,7 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
-/obj/structure/grille,
+/obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/submap/oldstation_power)
 "UJ" = (
@@ -4339,11 +4338,14 @@
 	},
 /area/submap/oldstation_charlie)
 "UT" = (
-/mob/living/simple_mob/mechanical/hivebot/tank/armored/anti_laser,
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 4;
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
-/area/submap/oldstation_charlie)
+/area/submap/oldstation_beta)
 "Vb" = (
 /obj/structure/reagent_dispensers/watertank/high,
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -4388,7 +4390,7 @@
 /area/submap/oldstation_hydro_sec)
 "Wa" = (
 /obj/structure/cable,
-/obj/machinery/power/smes/buildable/hybrid,
+/obj/machinery/power/smes,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
@@ -4451,7 +4453,9 @@
 /area/submap/oldstation_beta)
 "WP" = (
 /obj/machinery/door/window/brigdoor/eastleft,
-/obj/machinery/door/blast/regular,
+/obj/machinery/door/blast/regular{
+	id = "poicharliestation"
+	},
 /turf/simulated/floor/tiled/old_tile/red,
 /area/submap/oldstation_tox)
 "WY" = (
@@ -4667,10 +4671,6 @@
 /obj/structure/table/reinforced,
 /obj/machinery/light{
 	dir = 8
-	},
-/obj/item/weapon/paper{
-	info = "<b>*Singularity Generator*</b><br><br>Modern power generation typically comes in two forms, a Fusion Generator or a Fission Generator. Fusion provides the best space to power ratio, and is typically seen on military or high security ships and stations, however Fission reactors require the usage of expensive, and rare, materials in its construction.. Fission generators are massive and bulky, and require a large reserve of uranium to power, however they are extremely cheap to operate and oft need little maintenance once operational.<br><br>The Singularity aims to alter this, a functional Singularity is essentially a controlled Black Hole, a Black Hole that generates far more power than Fusion or Fission generators can ever hope to produce. ";
-	name = "Singularity Generator"
 	},
 /obj/item/weapon/paper{
 	info = "<b>*Prototype Hardsuit*</b><br><br>The B01-RIG Hardsuit is a prototype powered exoskeleton. Based off of a recovered pre-void war era united Earth government powered military exosuit, the RIG Hardsuit is a breakthrough in Hardsuit technology, and is the first post-void war era Hardsuit that can be safely used by an operator.<br><br>The B01 however suffers a myriad of constraints. It is slow and bulky to move around, it lacks any significant armor plating against direct attacks and its internal heads up display is unfinished,  resulting in the user being unable to see long distances.<br><br>The B01 is unlikely to see any form of mass production, but will serve as a base for future Hardsuit developments.";
@@ -7115,7 +7115,7 @@ eT
 ij
 ij
 ij
-ij
+UT
 dx
 dx
 gG
@@ -7781,7 +7781,7 @@ pk
 Xq
 vw
 mx
-gD
+TY
 vw
 lv
 XB
@@ -7933,7 +7933,7 @@ lv
 lv
 xg
 mp
-Tc
+lv
 pk
 LD
 BG
@@ -8016,9 +8016,9 @@ zE
 iY
 WC
 MK
-TY
+FO
 ay
-Tc
+lv
 zX
 lv
 zX
@@ -8080,7 +8080,7 @@ pk
 pk
 pk
 FO
-UT
+ol
 wo
 Lq
 Lq
@@ -8307,7 +8307,7 @@ Tw
 Xm
 sB
 Tg
-UT
+ol
 ID
 ol
 Tg
@@ -8315,7 +8315,7 @@ ol
 Tg
 Nx
 Tg
-UT
+ol
 Tg
 MK
 tq
