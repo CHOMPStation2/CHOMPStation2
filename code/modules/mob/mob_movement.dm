@@ -14,9 +14,9 @@
 	// CHOMPAdd Start - When crawling, move slow.
 	if(lying)
 		if(weakened >= 1)
-			. += 16			// Very slow when weakened.
+			. += 14			// Very slow when weakened.
 		else
-			. += 10
+			. += 8
 	// CHOMPAdd End
 
 	// Movespeed delay based on movement mode
