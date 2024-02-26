@@ -62,6 +62,7 @@
 
 	//ChompEDIT end
 	. = ..()
+	update_client_z(null)
 	//return QDEL_HINT_HARDDEL_NOW
 
 /mob/proc/remove_screen_obj_references()
