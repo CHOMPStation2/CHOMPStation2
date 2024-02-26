@@ -58,10 +58,10 @@
 	species_restricted = null
 
 /obj/item/clothing/shoes/none/Initialize()
+	..()
 	if(istype(loc, /mob))
 		var/mob/m = loc
-		m.drop_from_inventory(src)
+		m.drop_from_inventory(src, get_turf(m))
 		m.update_inv_shoes()
-		loc = null
-	. = INITIALIZE_HINT_QDEL //Fuck them shoes
-	..()
+		moveToNullspace()
+	return INITIALIZE_HINT_QDEL //Fuck them shoes

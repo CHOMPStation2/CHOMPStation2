@@ -240,7 +240,7 @@
 			after_move()
 		if(can_hit_target(original, permutated))
 			Bump(original)
-	if(!hitscanning && !forcemoved)
+	if(!hitscanning && !forcemoved && trajectory) //CHOMPEdit - runtime, add trajectory to if
 		pixel_x = trajectory.return_px() - trajectory.mpx * trajectory_multiplier * SSprojectiles.global_iterations_per_move
 		pixel_y = trajectory.return_py() - trajectory.mpy * trajectory_multiplier * SSprojectiles.global_iterations_per_move
 		animate(src, pixel_x = trajectory.return_px(), pixel_y = trajectory.return_py(), time = 1, flags = ANIMATION_END_NOW)
@@ -468,12 +468,15 @@
 			impacted_mobs.Cut()
 		impacted_mobs = null
 
-	qdel(trajectory)
+	trajectory = null //ChompEDIT ease the GC
+	beam_index = null //ChompEDIT ease the GC
+	beam_components = null //ChompEDIT ease the GC
 
 	//ChompEDIT START - qdel refs
 	if(my_case)
 		if(my_case.BB == src)
 			my_case.BB = null
+			my_case = null
 	//ChompEDIT END
 	return ..()
 
