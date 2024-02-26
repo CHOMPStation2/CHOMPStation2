@@ -28,12 +28,12 @@ var/list/dreams = list(
 /**
  * Begins the dreaming process on a sleeping carbon.
  *
- * Checks a 10% chance and whether or not the carbon this is called on is already dreaming. If
+ * Checks a 5% chance and whether or not the carbon this is called on is already dreaming. If
  * the prob() passes and there are no dream images left to display, a new dream is constructed.
  */
 
 /mob/living/carbon/proc/handle_dreams()
-	if(!HAS_TRAIT(src, TRAIT_DREAMING) && prob(10))
+	if(!HAS_TRAIT(src, TRAIT_DREAMING) && prob(5))
 		dream()
 
 /**
