@@ -836,6 +836,15 @@
 /mob/living/proc/slip(var/slipped_on,stun_duration=8)
 	return 0
 
+// CHOMPAdd - Drop both things on hands
+/mob/living/proc/drop_both_hands()
+	if(l_hand)
+		unEquip(l_hand)
+	if(r_hand)
+		unEquip(r_hand)
+	return
+// CHOMPEnd
+
 /mob/living/carbon/drop_from_inventory(var/obj/item/W, var/atom/target = null)
 	return !(W in internal_organs) && ..()
 
@@ -968,12 +977,9 @@
 			lying = incapacitated(INCAPACITATION_KNOCKDOWN)
 			canmove = !incapacitated(INCAPACITATION_DISABLED)
 
-	if(incapacitated(INCAPACITATION_KNOCKOUT) || incapacitated(INCAPACITATION_STUNNED)) // CHOMPAdd - Making sure we're in good condition to crawl
+	if(lying && (incapacitated(INCAPACITATION_KNOCKOUT) || incapacitated(INCAPACITATION_STUNNED))) // CHOMPAdd - Making sure we're in good condition to crawl
 		canmove = 0
-		if(l_hand)
-			unEquip(l_hand)
-		if(r_hand)
-			unEquip(r_hand)
+		drop_both_hands()
 	else
 		canmove = 1
 
@@ -988,8 +994,11 @@
 			unEquip(holder)
 	*/
 		update_water() // Submerges the mob.
+		stop_pulling() // CHOMPAdd - Stops pulling things
+		pass_flags = PASSTABLE
 	else
 		density = initial(density)
+		pass_flags = 0
 
 	for(var/obj/item/weapon/grab/G in grabbed_by)
 		if(G.state >= GRAB_AGGRESSIVE)
