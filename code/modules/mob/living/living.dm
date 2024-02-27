@@ -994,11 +994,20 @@
 			unEquip(holder)
 	*/
 		update_water() // Submerges the mob.
-		stop_pulling() // CHOMPAdd - Stops pulling things
-		pass_flags = PASSTABLE
+		// CHOMPAdd Start - For crawling.
+		stop_pulling()
+
+		if(pass_flags & PASSTABLE && passtable_natural)
+			passtable_natural = TRUE
+		else
+			passtable_natural = FALSE
+			pass_flags |= PASSTABLE
+
+		// CHOMPEdit End
 	else
 		density = initial(density)
-		pass_flags = 0
+		if(!passtable_natural)	// CHOMPAdd - Remove passtable if not natural
+			pass_flags = ~PASSTABLE
 
 	for(var/obj/item/weapon/grab/G in grabbed_by)
 		if(G.state >= GRAB_AGGRESSIVE)
