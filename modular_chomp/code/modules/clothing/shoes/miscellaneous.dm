@@ -29,3 +29,13 @@
 /obj/item/clothing/shoes/clown_shoes/Initialize(mapload)
 	.=..()
 	LoadComponent(/datum/component/squeak, squeak_sound, 20*step_volume_mod)
+
+/obj/item/clothing/shoes/galoshes/dry
+	desc = "A pair of purple rubber boots, designed to prevent slipping on wet surfaces while also drying them."
+	name = "absorbent galoshes"
+	icon = 'modular_chomp/icons/inventory/feet/item.dmi'
+	icon_state = "galoshes_dry"
+
+/obj/item/clothing/shoes/galoshes/dry/Initialize(mapload)
+	.=..()
+	LoadComponent(/datum/component/dry)
