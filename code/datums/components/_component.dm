@@ -310,6 +310,7 @@
 	while (current_type != /datum/component)
 		. += current_type
 		current_type = type2parent(current_type)
+
 /**
   * Internal proc to handle most all of the signaling procedure
   *
