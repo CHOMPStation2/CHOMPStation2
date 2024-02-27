@@ -310,6 +310,10 @@
 	while (current_type != /datum/component)
 		. += current_type
 		current_type = type2parent(current_type)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 578f576d90... Fix datum components (#15788)
 /**
   * Internal proc to handle most all of the signaling procedure
   *
