@@ -125,6 +125,7 @@
 #include "code\__defines\dcs\helpers.dm"
 #include "code\__defines\dcs\signals.dm"
 #include "code\__defines\dcs\signals_ch.dm"
+#include "code\__defines\traits\_traits.dm"
 #include "code\_global_vars\_regexes.dm"
 #include "code\_global_vars\bitfields.dm"
 #include "code\_global_vars\logging_ch.dm"

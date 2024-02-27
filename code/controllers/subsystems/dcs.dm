@@ -66,8 +66,8 @@ PROCESSING_SUBSYSTEM_DEF(dcs)
 				fullid += key
 			else
 				if (!istext(value) && !isnum(value))
-					if(PERFORM_ALL_TESTS(dcs_check_list_arguments) && islist(value))
-						add_to_arguments_that_are_lists(value, eletype)
+					//if(PERFORM_ALL_TESTS(dcs_check_list_arguments) && islist(value)) // Unit test stuff we dont have
+						//add_to_arguments_that_are_lists(value, eletype) // Unit test stuff we dont have
 					value = REF(value)
 
 				if (!named_arguments)
@@ -79,8 +79,8 @@ PROCESSING_SUBSYSTEM_DEF(dcs)
 		if (isnum(key))
 			fullid += key
 		else
-			if(PERFORM_ALL_TESTS(dcs_check_list_arguments) && islist(key))
-				add_to_arguments_that_are_lists(key, eletype)
+			//if(PERFORM_ALL_TESTS(dcs_check_list_arguments) && islist(key)) // Unit test stuff we dont have
+				//add_to_arguments_that_are_lists(key, eletype) // Unit test stuff we dont have
 			fullid += REF(key)
 
 	if(named_arguments)
