@@ -292,7 +292,7 @@
 	// Open the window
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, "CasinoPrizeDispenserCh", name)
+		ui = new(user, src, "CasinoPrizeDispenser", name)
 		ui.open()
 
 /obj/machinery/casino_prize_dispenser/tgui_act(action, params)

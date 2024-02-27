@@ -17,8 +17,26 @@
 /obj/structure/musician/attack_hand(mob/M)
 	if(!M.IsAdvancedToolUser())
 		return
-	
+
 	interact(M)
+
+// CHOMPAdd - Grand piano moving
+
+/obj/structure/musician/attackby(obj/item/weapon/W as obj, mob/user as mob)
+	if(W.has_tool_quality(TOOL_WRENCH))
+		playsound(src, W.usesound, 100, 1)
+		if(anchored)
+			user.visible_message("<span class='filter_notice'>[user] begins unsecuring \the [src] from the floor.</span>", "<span class='filter_notice'>You start unsecuring \the [src] from the floor.</span>")
+		else
+			user.visible_message("<span class='filter_notice'>[user] begins securing \the [src] to the floor.</span>", "<span class='filter_notice'>You start securing \the [src] to the floor.</span>")
+
+		if(do_after(user, 20 * W.toolspeed))
+			if(!src) return
+			to_chat(user, "<span class='notice'>You [anchored? "un" : ""]secured \the [src]!</span>")
+			anchored = !anchored
+		return
+
+// CHOMPEnd
 
 /obj/structure/musician/proc/should_stop_playing(mob/user)
 	if(!(anchored || can_play_unanchored))
