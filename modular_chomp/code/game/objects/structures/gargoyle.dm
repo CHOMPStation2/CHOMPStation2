@@ -143,7 +143,7 @@
 		unpetrify(deleting = TRUE)
 	else
 		visible_message("<span class='warning'>The [identifier] loses shape and crumbles into a pile of [material]!</span>")
-		qdel(gargoyle)
+		QDEL_NULL(gargoyle)
 	. = ..()
 
 /obj/structure/gargoyle/process()
@@ -211,7 +211,7 @@
 	alpha = 0
 	gargoyle.visible_message("<span class='warning'>[gargoyle]'s skin rapidly reverts, returning them to normal!</span>", "<span class='warning'>Your skin reverts, freeing your movement once more![hurtmessage]</span>")
 	gargoyle = null
-	if (!deleting)
+	if (deleting)
 		qdel(src)
 
 /obj/structure/gargoyle/return_air()
