@@ -10,5 +10,4 @@
 
 /mob/living/carbon/Destroy()
 	. = ..()
-
 	QDEL_NULL(cozyloop)

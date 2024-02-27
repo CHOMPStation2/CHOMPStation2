@@ -44,7 +44,7 @@
 	if(byond_version < RECOMMENDED_VERSION)
 		to_world_log("Your server's byond version does not meet the recommended requirements for this server. Please update BYOND")
 
-	TgsNew()
+	TgsNew(new /datum/tgs_event_handler/impl, TGS_SECURITY_TRUSTED) // CHOMPEdit - tgs event handler
 	VgsNew() // VOREStation Edit - VGS
 
 	config.post_load()

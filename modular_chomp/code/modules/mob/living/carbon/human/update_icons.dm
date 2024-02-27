@@ -104,8 +104,8 @@
 /mob/living/carbon/human/proc/GetAppearanceFromPrefs(var/flavourtext, var/oocnotes)
 	/* Jank code that effectively creates the client's mob from save, then copies its appearance to our current mob.
 	Intended to be used with shapeshifter species so we don't reset their organs in doing so.*/
-	var/mob/living/carbon/human/dummy/mannequin/Dummy = new
 	if(client.prefs)
+		var/mob/living/carbon/human/dummy/mannequin/Dummy = get_mannequin(client.ckey)
 		client.prefs.copy_to(Dummy)
 		//Important, since some sprites only work for specific species
 		/*	Probably not needed anymore since impersonate_bodytype no longer exists
@@ -125,7 +125,6 @@
 			flavor_texts = client.prefs.flavor_texts.Copy()
 		if(oocnotes)
 			ooc_notes = client.prefs.metadata
-	qdel(Dummy)
 
 /*	Alternative version of the above proc, incase it turns out cloning our dummy mob's DNA is an awful, terrible bad idea.
 Would need to fix this proc up to work as smoothly as the above proc, though.

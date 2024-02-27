@@ -276,3 +276,10 @@
       threshold for scrubbing is passed.
   TheCaramelion:
   - bugfix: Added an amount of meat to drop to metroids
+2024-02-26:
+  ItsSelis:
+  - rscadd: Added TGS event handler to notify of updates
+  - admin: Added TGS event handler to notify/warn for specific server events
+  - server: Updates DMAPI to version 5.9.0
+  TheCaramelion:
+  - qol: Grand piano can be moved around now
