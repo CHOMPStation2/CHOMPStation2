@@ -1,0 +1,9 @@
+#undef HOMETAB
+#undef PHONTAB
+#undef CONTTAB
+#undef MESSTAB
+#undef NEWSTAB
+#undef NOTETAB
+#undef WTHRTAB
+#undef MANITAB
+#undef SETTTAB

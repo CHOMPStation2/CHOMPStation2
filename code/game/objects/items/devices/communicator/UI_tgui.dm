@@ -130,172 +130,191 @@
 /obj/item/device/communicator/tgui_data(mob/user, datum/tgui/ui, datum/tgui_state/state)
 	// this is the data which will be sent to the ui
 	var/list/data = list()						//General nanoUI information
+
 	var/list/communicators = list()			    //List of communicators
 	var/list/invites = list()					//Communicators and ghosts we've invited to our communicator.
 	var/list/requests = list()					//Communicators and ghosts wanting to go in our communicator.
 	var/list/voices = list()					//Current /mob/living/voice s inside the device.
 	var/list/connected_communicators = list()	//Current communicators connected to the device.
 
-	var/list/im_contacts_ui = list()			//List of communicators that have been messaged.
-	var/list/im_list_ui = list()				//List of messages.
-
-	var/list/weather = list()
 	var/list/modules_ui = list()				//Home screen info.
 
-	//First we add other 'local' communicators.
-	for(var/obj/item/device/communicator/comm in known_devices)
-		if(comm.network_visibility && comm.exonet)
-			communicators.Add(list(list(
+	if(selected_tab == PHONTAB)
+		data["targetAddress"] = target_address
+		data["targetAddressName"] = target_address_name
+		data["selfie_mode"] = selfie_mode
+
+	if(selected_tab == CONTTAB)
+		var/list/im_contacts_ui = list()			//List of communicators that have been messaged.
+
+		//First we add other 'local' communicators.
+		for(var/obj/item/device/communicator/comm in known_devices)
+			if(comm.network_visibility && comm.exonet)
+				communicators.Add(list(list(
+					"name" = sanitize(comm.name),
+					"address" = comm.exonet.address
+				)))
+
+		//Now for ghosts who we pretend have communicators.
+		for(var/mob/observer/dead/O in known_devices)
+			if(O.client && O.client.prefs.communicator_visibility == 1 && O.exonet)
+				communicators.Add(list(list(
+					"name" = sanitize("[O.client.prefs.real_name]'s communicator"),
+					"address" = O.exonet.address,
+					"ref" = "\ref[O]"
+				)))
+
+		//Lists all the other communicators that we invited.
+		for(var/obj/item/device/communicator/comm in voice_invites)
+			if(comm.exonet)
+				invites.Add(list(list(
+					"name" = sanitize(comm.name),
+					"address" = comm.exonet.address,
+					"ref" = "\ref[comm]"
+				)))
+
+		//Ghosts we invited.
+		for(var/mob/observer/dead/O in voice_invites)
+			if(O.exonet && O.client)
+				invites.Add(list(list(
+					"name" = sanitize("[O.client.prefs.real_name]'s communicator"),
+					"address" = O.exonet.address,
+					"ref" = "\ref[O]"
+				)))
+
+		//Communicators that want to talk to us.
+		for(var/obj/item/device/communicator/comm in voice_requests)
+			if(comm.exonet)
+				requests.Add(list(list(
+					"name" = sanitize(comm.name),
+					"address" = comm.exonet.address,
+					"ref" = "\ref[comm]"
+				)))
+
+		//Ghosts that want to talk to us.
+		for(var/mob/observer/dead/O in voice_requests)
+			if(O.exonet && O.client)
+				requests.Add(list(list(
+					"name" = sanitize("[O.client.prefs.real_name]'s communicator"),
+					"address" = O.exonet.address,
+					"ref" = "\ref[O]"
+				)))
+
+		//Now for all the voice mobs inside the communicator.
+		for(var/mob/living/voice/voice in contents)
+			voices.Add(list(list(
+				"name" = sanitize("[voice.name]'s communicator"),
+				"true_name" = sanitize(voice.name),
+			)))
+
+		//Finally, all the communicators linked to this one.
+		for(var/obj/item/device/communicator/comm in communicating)
+			connected_communicators.Add(list(list(
 				"name" = sanitize(comm.name),
-				"address" = comm.exonet.address
+				"true_name" = sanitize(comm.name),
+				"ref" = "\ref[comm]",
 			)))
 
-	//Now for ghosts who we pretend have communicators.
-	for(var/mob/observer/dead/O in known_devices)
-		if(O.client && O.client.prefs.communicator_visibility == 1 && O.exonet)
-			communicators.Add(list(list(
-				"name" = sanitize("[O.client.prefs.real_name]'s communicator"),
-				"address" = O.exonet.address,
-				"ref" = "\ref[O]"
+		//Devices that have been messaged or recieved messages from.
+		for(var/obj/item/device/communicator/comm in im_contacts)
+			if(comm.exonet)
+				im_contacts_ui.Add(list(list(
+					"name" = sanitize(comm.name),
+					"address" = comm.exonet.address,
+					"ref" = "\ref[comm]"
+				)))
+
+		for(var/mob/observer/dead/ghost in im_contacts)
+			if(ghost.exonet)
+				im_contacts_ui.Add(list(list(
+					"name" = sanitize(ghost.name),
+					"address" = ghost.exonet.address,
+					"ref" = "\ref[ghost]"
+				)))
+
+		for(var/obj/item/integrated_circuit/input/EPv2/CIRC in im_contacts)
+			if(CIRC.exonet && CIRC.assembly)
+				im_contacts_ui.Add(list(list(
+					"name" = sanitize(CIRC.assembly.name),
+					"address" = CIRC.exonet.address,
+					"ref" = "\ref[CIRC]"
+				)))
+
+		data["imContacts"] = im_contacts_ui
+
+	// Messaging
+	if(selected_tab == MESSTAB)
+		var/list/im_list_ui = list()
+		for(var/I in im_list)
+			im_list_ui.Add(list(list(
+				"address" = I["address"],
+				"to_address" = I["to_address"],
+				"im" = I["im"]
 			)))
+		data["imList"] = im_list_ui
 
-	//Lists all the other communicators that we invited.
-	for(var/obj/item/device/communicator/comm in voice_invites)
-		if(comm.exonet)
-			invites.Add(list(list(
-				"name" = sanitize(comm.name),
-				"address" = comm.exonet.address,
-				"ref" = "\ref[comm]"
-			)))
+	// News
+	if(selected_tab == NEWSTAB)
+		data["feeds"] = compile_news()
+		data["latest_news"] = get_recent_news()
+		if(newsfeed_channel)
+			data["target_feed"] = data["feeds"][newsfeed_channel]
+		else
+			data["target_feed"] = null
 
-	//Ghosts we invited.
-	for(var/mob/observer/dead/O in voice_invites)
-		if(O.exonet && O.client)
-			invites.Add(list(list(
-				"name" = sanitize("[O.client.prefs.real_name]'s communicator"),
-				"address" = O.exonet.address,
-				"ref" = "\ref[O]"
-			)))
+	// Notes
+	if (selected_tab == NOTETAB)
+		data["note"] = note // Current notes
 
-	//Communicators that want to talk to us.
-	for(var/obj/item/device/communicator/comm in voice_requests)
-		if(comm.exonet)
-			requests.Add(list(list(
-				"name" = sanitize(comm.name),
-				"address" = comm.exonet.address,
-				"ref" = "\ref[comm]"
-			)))
+	// Weather
+	if(selected_tab == WTHRTAB)
+		var/list/weather = list()
 
-	//Ghosts that want to talk to us.
-	for(var/mob/observer/dead/O in voice_requests)
-		if(O.exonet && O.client)
-			requests.Add(list(list(
-				"name" = sanitize("[O.client.prefs.real_name]'s communicator"),
-				"address" = O.exonet.address,
-				"ref" = "\ref[O]"
-			)))
+		for(var/datum/planet/planet in SSplanets.planets)
+			if(planet.weather_holder && planet.weather_holder.current_weather)
+				var/list/W = list(
+					"Planet" = planet.name,
+					"Time" = planet.current_time.show_time("hh:mm"),
+					"Weather" = planet.weather_holder.current_weather.name,
+					"Temperature" = planet.weather_holder.temperature - T0C,
+					"High" = planet.weather_holder.current_weather.temp_high - T0C,
+					"Low" = planet.weather_holder.current_weather.temp_low - T0C,
+					"WindDir" = planet.weather_holder.wind_dir ? dir2text(planet.weather_holder.wind_dir) : "None",
+					"WindSpeed" = planet.weather_holder.wind_speed ? "[planet.weather_holder.wind_speed > 2 ? "Severe" : "Normal"]" : "None",
+					"Forecast" = english_list(planet.weather_holder.forecast, and_text = "&#8594;", comma_text = "&#8594;", final_comma_text = "&#8594;") // Unicode RIGHTWARDS ARROW.
+					)
+				weather.Add(list(W))
 
-	//Now for all the voice mobs inside the communicator.
-	for(var/mob/living/voice/voice in contents)
-		voices.Add(list(list(
-			"name" = sanitize("[voice.name]'s communicator"),
-			"true_name" = sanitize(voice.name),
-		)))
+		data["weather"] = weather
+		data["aircontents"] = src.analyze_air()
 
-	//Finally, all the communicators linked to this one.
-	for(var/obj/item/device/communicator/comm in communicating)
-		connected_communicators.Add(list(list(
-			"name" = sanitize(comm.name),
-			"true_name" = sanitize(comm.name),
-			"ref" = "\ref[comm]",
-		)))
-
-	//Devices that have been messaged or recieved messages from.
-	for(var/obj/item/device/communicator/comm in im_contacts)
-		if(comm.exonet)
-			im_contacts_ui.Add(list(list(
-				"name" = sanitize(comm.name),
-				"address" = comm.exonet.address,
-				"ref" = "\ref[comm]"
-			)))
-
-	for(var/mob/observer/dead/ghost in im_contacts)
-		if(ghost.exonet)
-			im_contacts_ui.Add(list(list(
-				"name" = sanitize(ghost.name),
-				"address" = ghost.exonet.address,
-				"ref" = "\ref[ghost]"
-			)))
-
-	for(var/obj/item/integrated_circuit/input/EPv2/CIRC in im_contacts)
-		if(CIRC.exonet && CIRC.assembly)
-			im_contacts_ui.Add(list(list(
-				"name" = sanitize(CIRC.assembly.name),
-				"address" = CIRC.exonet.address,
-				"ref" = "\ref[CIRC]"
-			)))
-
-
-	//Actual messages.
-	for(var/I in im_list)
-		im_list_ui.Add(list(list(
-			"address" = I["address"],
-			"to_address" = I["to_address"],
-			"im" = I["im"]
-		)))
-
-	//Weather reports.
-	for(var/datum/planet/planet in SSplanets.planets)
-		if(planet.weather_holder && planet.weather_holder.current_weather)
-			var/list/W = list(
-				"Planet" = planet.name,
-				"Time" = planet.current_time.show_time("hh:mm"),
-				"Weather" = planet.weather_holder.current_weather.name,
-				"Temperature" = planet.weather_holder.temperature - T0C,
-				"High" = planet.weather_holder.current_weather.temp_high - T0C,
-				"Low" = planet.weather_holder.current_weather.temp_low - T0C,
-				"WindDir" = planet.weather_holder.wind_dir ? dir2text(planet.weather_holder.wind_dir) : "None",
-				"WindSpeed" = planet.weather_holder.wind_speed ? "[planet.weather_holder.wind_speed > 2 ? "Severe" : "Normal"]" : "None",
-				"Forecast" = english_list(planet.weather_holder.forecast, and_text = "&#8594;", comma_text = "&#8594;", final_comma_text = "&#8594;") // Unicode RIGHTWARDS ARROW.
-				)
-			weather.Add(list(W))
-
+	// Settings
+	if (selected_tab == SETTTAB)
+		data["visible"] = network_visibility
+		data["address"] = exonet.address ? exonet.address : "Unallocated"
+		data["ring"] = ringer
+		data["selfie_mode"] = selfie_mode
 
 	//Modules for homescreen.
 	for(var/list/R in modules)
 		modules_ui.Add(list(R))
 
+	// Core Data
 	data["user"] = "\ref[user]"	// For receiving input() via topic, because input(usr,...) wasn't working on cartridges
 	data["owner"] = owner ? owner : "Unset"
 	data["occupation"] = occupation ? occupation : "Swipe ID to set."
 	data["connectionStatus"] = get_connection_to_tcomms()
-	data["visible"] = network_visibility
-	data["address"] = exonet.address ? exonet.address : "Unallocated"
-	data["targetAddress"] = target_address
-	data["targetAddressName"] = target_address_name
+	data["time"] = stationtime2text()
+	data["flashlight"] = fon
 	data["currentTab"] = selected_tab
+	data["homeScreen"] = modules_ui
+
 	data["knownDevices"] = communicators
 	data["invitesSent"] = invites
 	data["requestsReceived"] = requests
 	data["voice_mobs"] = voices
 	data["communicating"] = connected_communicators
 	data["video_comm"] = video_source ? "\ref[video_source.loc]" : null
-	data["imContacts"] = im_contacts_ui
-	data["imList"] = im_list_ui
-	data["time"] = stationtime2text()
-	data["ring"] = ringer
-	data["homeScreen"] = modules_ui
-	data["note"] = note					// current notes
-	data["weather"] = weather
-	data["aircontents"] = src.analyze_air()
-	data["flashlight"] = fon
-	data["feeds"] = compile_news()
-	data["latest_news"] = get_recent_news()
-	if(newsfeed_channel)
-		data["target_feed"] = data["feeds"][newsfeed_channel]
-	else
-		data["target_feed"] = null
-	data["selfie_mode"] = selfie_mode
 
 	return data
 
@@ -304,11 +323,15 @@
 // Description: Just like tgui_data, except it only gets called once when the user opens the UI, not every tick.
 /obj/item/device/communicator/tgui_static_data(mob/user, datum/tgui/ui, datum/tgui_state/state)
 	var/list/data = ..()
-	// Update manifest'
-	if(data_core)
-		data_core.get_manifest_list()
-	data["manifest"] = PDA_Manifest
+
+	// Manifest
+	if(selected_tab == MANITAB)
+		if(data_core)
+			data_core.get_manifest_list()
+		data["manifest"] = PDA_Manifest
+
 	data["mapRef"] = map_name
+
 	return data
 
 // Proc: tgui-act()
