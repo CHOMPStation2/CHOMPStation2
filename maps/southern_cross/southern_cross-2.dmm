@@ -57897,14 +57897,17 @@
 /area/hallway/secondary/docking_hallway2)
 "kar" = (
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/smartfridge/sheets/persistent_lossy,
 /obj/structure/fans/tiny,
-/obj/structure/window/reinforced,
+/obj/machinery/smartfridge/sheets/persistent_lossy,
 /obj/structure/window/reinforced{
-	dir = 1
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
 	},
 /turf/simulated/floor/plating,
-/area/rnd/lab)
+/area/quartermaster/office)
 "kay" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
@@ -106057,7 +106060,7 @@ bYD
 bRG
 bqo
 bqn
-bsn
+kar
 bug
 bCU
 bEJ
@@ -123324,7 +123327,7 @@ iOI
 jUw
 kSM
 aGg
-kar
+kTh
 nRd
 kTh
 aGg
