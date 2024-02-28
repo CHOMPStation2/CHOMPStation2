@@ -27,7 +27,7 @@
 
 /datum/artifact_effect/proc/get_master_holder()	// Return the effectmaster's holder, if it is set to an effectmaster. Otherwise, master is the target object.
 	if(istype(master))
-		return master.holder
+		return master.parent
 	else
 		return master
 

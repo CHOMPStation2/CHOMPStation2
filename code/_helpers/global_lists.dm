@@ -23,8 +23,6 @@ var/global/list/joblist = list()					//list of all jobstypes, minus borg and AI
 #define all_genders_define_list list(MALE,FEMALE,PLURAL,NEUTER,HERM) //VOREStaton Edit
 #define all_genders_text_list list("Male","Female","Plural","Neuter","Herm") //VOREStation Edit
 
-var/list/mannequins_
-
 // Times that players are allowed to respawn ("ckey" = world.time)
 GLOBAL_LIST_EMPTY(respawn_timers)
 
@@ -104,16 +102,6 @@ var/global/list/string_slot_flags = list(
 	"holster" = SLOT_HOLSTER
 )
 
-GLOBAL_LIST_EMPTY(mannequins)
-/proc/get_mannequin(var/ckey = "NULL")
-	var/mob/living/carbon/human/dummy/mannequin/M = GLOB.mannequins[ckey]
-	if(!istype(M))
-		GLOB.mannequins[ckey] = new /mob/living/carbon/human/dummy/mannequin(null)
-		M = GLOB.mannequins[ckey]
-	return M
-
-/proc/del_mannequin(var/ckey = "NULL")
-	GLOB.mannequins-= ckey
 
 //////////////////////////
 /////Initial Building/////
@@ -335,6 +323,7 @@ GLOBAL_LIST_EMPTY(legacy_globals)
 	//Note: these lists cannot be changed to a new list anywhere in code!
 	//If they are, these will cause the old list to stay around!
 	//Check by searching for "<GLOBAL_NAME> =" in the entire codebase
+	//GLOB.legacy_globals["GLOBAL_LIST"] = GLOBAL_LIST
 	GLOB.legacy_globals["player_list"] = player_list
 	GLOB.legacy_globals["mob_list"] = mob_list
 	GLOB.legacy_globals["human_mob_list"] = human_mob_list
@@ -350,10 +339,12 @@ GLOBAL_LIST_EMPTY(legacy_globals)
 	GLOB.legacy_globals["event_triggers"] = event_triggers
 	GLOB.legacy_globals["side_effects"] = side_effects
 	GLOB.legacy_globals["mechas_list"] = mechas_list
-	GLOB.legacy_globals["mannequins_"] = mannequins_
 	//visual nets
 	GLOB.legacy_globals["visual_nets"] = visual_nets
 	GLOB.legacy_globals["cameranet"] = cameranet
 	GLOB.legacy_globals["cultnet"] = cultnet
 	GLOB.legacy_globals["item_tf_spawnpoints"] = item_tf_spawnpoints
 	GLOB.legacy_globals["existing_solargrubs"] = existing_solargrubs
+	//Caches
+	GLOB.legacy_globals["text_tag_cache"] = text_tag_cache
+	//GLOB.legacy_globals["all_communicators"] = all_communicators //this one sorts which creates a new list ref
