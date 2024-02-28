@@ -221,7 +221,7 @@
 /obj/machinery/computer/timeclock/proc/checkCardCooldown()
 	if(!card)
 		return FALSE
-	var/time_left = 10 MINUTES - (world.time - card.last_job_switch)
+	var/time_left = 1 MINUTE - (world.time - card.last_job_switch) // CHOMPedit: 10 minute wait down to 1 minute.
 	if(time_left > 0)
 		to_chat(usr, "You need to wait another [round((time_left/10)/60, 1)] minute\s before you can switch.")
 		return FALSE
@@ -231,7 +231,8 @@
 	if(!card)
 		to_chat(usr, "<span class='notice'>No ID is inserted.</span>")
 		return FALSE
-	var/mob/living/carbon/human/H = usr
+/* CHOMPedit start.
+	var/mob/living/carbon/human/H = usr // CHOMPedit start - Allows anyone to change people's IDs.
 	if(!(istype(H)))
 		to_chat(usr, "<span class='warning'>Invalid user detected. Access denied.</span>")
 		return FALSE
@@ -241,6 +242,7 @@
 	else if(H.get_face_name() == "Unknown" || !(H.real_name == card.registered_name))
 		to_chat(usr, "<span class='warning'>Facial recognition scan failed. Access denied.</span>")
 		return FALSE
+CHOMPedit end. */
 	else
 		return TRUE
 

@@ -55176,9 +55176,7 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 9
 	},
-/obj/machinery/smartfridge/sheets{
-	density = 0
-	},
+/obj/structure/table/standard,
 /turf/simulated/floor/tiled/white,
 /area/rnd/lab)
 "iKA" = (
@@ -57897,6 +57895,16 @@
 /obj/effect/floor_decal/corner/green/bordercorner,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/docking_hallway2)
+"kar" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/smartfridge/sheets/persistent_lossy,
+/obj/structure/fans/tiny,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/rnd/lab)
 "kay" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
@@ -123316,7 +123324,7 @@ iOI
 jUw
 kSM
 aGg
-kTh
+kar
 nRd
 kTh
 aGg
