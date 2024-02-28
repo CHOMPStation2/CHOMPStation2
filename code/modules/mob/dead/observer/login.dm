@@ -10,3 +10,13 @@
 	if(cleanup_timer)
 		deltimer(cleanup_timer)
 		cleanup_timer = null
+
+	//Reassert these due to the mob being cached
+	invisibility = INVISIBILITY_OBSERVER
+	layer = BELOW_MOB_LAYER
+	plane = PLANE_GHOSTS
+	alpha = 127
+
+	sight |= SEE_TURFS | SEE_MOBS | SEE_OBJS | SEE_SELF
+	see_invisible = SEE_INVISIBLE_OBSERVER
+	see_in_dark = world.view //I mean. I don't even know if byond has occlusion culling... but...
