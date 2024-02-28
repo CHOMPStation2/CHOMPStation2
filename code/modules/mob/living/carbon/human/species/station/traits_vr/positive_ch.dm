@@ -145,7 +145,6 @@
 	if (trait_prefs?["pass_table"] || !trait_prefs)
 		H.pass_flags |= PASSTABLE
 	H.verbs |= /mob/living/proc/toggle_pass_table
-	H.passtable_natural = TRUE
 
 /datum/trait/positive/grappling_expert
 	name = "Grappling Expert"

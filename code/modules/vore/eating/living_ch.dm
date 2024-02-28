@@ -9,7 +9,8 @@
 	var/trash_catching = FALSE				//Toggle for trash throw vore.
 	var/liquidbelly_visuals = TRUE			//Toggle for liquidbelly level visuals.
 
-	var/passtable_natural = FALSE		// For table passing and crawling
+	var/passtable_reset		// For crawling
+	var/passtable_crawl_checked = FALSE
 
 	// CHOMP vore icons refactor (Now on living)
 	var/vore_icons = 0					// Bitfield for which fields we have vore icons for.
