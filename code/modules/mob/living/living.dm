@@ -1008,10 +1008,12 @@
 		// CHOMPEdit End
 	else
 		density = initial(density)
-		if(passtable_reset)	// CHOMPAdd - Removes passtable after crawling
+	// CHOMPEdit Start - Rest passtable when crawling
+		if(passtable_reset)
 			passtable_reset = TRUE
-			passtable_crawl_checked = FALSE
 			pass_flags &= ~PASSTABLE
+		passtable_crawl_checked = FALSE
+	// CHOMPEdit End
 
 	for(var/obj/item/weapon/grab/G in grabbed_by)
 		if(G.state >= GRAB_AGGRESSIVE)
