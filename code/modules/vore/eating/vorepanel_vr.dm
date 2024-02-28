@@ -60,6 +60,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 /datum/vore_look/Destroy()
 	host = null
+	SStgui.close_uis(src)
 	. = ..()
 
 /datum/vore_look/ui_assets(mob/user)

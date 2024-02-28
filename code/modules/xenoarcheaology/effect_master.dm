@@ -31,7 +31,6 @@
 			LAZYSET(I.origin_tech, rand_tech, rand(4,7))
 
 /datum/component/artifact_master
-	var/atom/holder
 	var/list/my_effects
 
 	dupe_type = /datum/component/artifact_master
@@ -42,11 +41,10 @@
 
 	var/artifact_id
 
-/datum/component/artifact_master/New()
+/datum/component/artifact_master/RegisterWithParent()
 	. = ..()
-	holder = parent
 
-	if(!holder)
+	if(!parent)
 		qdel(src)
 		return
 
@@ -64,25 +62,45 @@
 
 /datum/component/artifact_master/proc/DoRegistry()
 //Melee Hit
-	RegisterSignal(holder, COMSIG_PARENT_ATTACKBY, /datum/component/artifact_master/proc/on_attackby, override = FALSE)
+	RegisterSignal(parent, COMSIG_PARENT_ATTACKBY, /datum/component/artifact_master/proc/on_attackby, override = FALSE)
 //Explosions
-	RegisterSignal(holder, COMSIG_ATOM_EX_ACT, /datum/component/artifact_master/proc/on_exact, override = FALSE)
+	RegisterSignal(parent, COMSIG_ATOM_EX_ACT, /datum/component/artifact_master/proc/on_exact, override = FALSE)
 //Bullets
-	RegisterSignal(holder, COMSIG_ATOM_BULLET_ACT, /datum/component/artifact_master/proc/on_bullet, override = FALSE)
+	RegisterSignal(parent, COMSIG_ATOM_BULLET_ACT, /datum/component/artifact_master/proc/on_bullet, override = FALSE)
 
 //Attackhand
-	RegisterSignal(holder, COMSIG_ATOM_ATTACK_HAND, /datum/component/artifact_master/proc/on_attack_hand, override = FALSE)
+	RegisterSignal(parent, COMSIG_ATOM_ATTACK_HAND, /datum/component/artifact_master/proc/on_attack_hand, override = FALSE)
 
 //Bumped / Bumping
-	RegisterSignal(holder, COMSIG_MOVABLE_BUMP, /datum/component/artifact_master/proc/on_bump, override = FALSE)
-	RegisterSignal(holder, COMSIG_ATOM_BUMPED, /datum/component/artifact_master/proc/on_bumped, override = FALSE)
+	RegisterSignal(parent, COMSIG_MOVABLE_BUMP, /datum/component/artifact_master/proc/on_bump, override = FALSE)
+	RegisterSignal(parent, COMSIG_ATOM_BUMPED, /datum/component/artifact_master/proc/on_bumped, override = FALSE)
 
 //Moved
-	RegisterSignal(holder, COMSIG_MOVABLE_MOVED, /datum/component/artifact_master/proc/on_moved, override = FALSE)
+	RegisterSignal(parent, COMSIG_MOVABLE_MOVED, /datum/component/artifact_master/proc/on_moved, override = FALSE)
 
 //Splashed with a reagent.
-	RegisterSignal(holder, COMSIG_REAGENTS_TOUCH, /datum/component/artifact_master/proc/on_reagent, override = FALSE)
+	RegisterSignal(parent, COMSIG_REAGENTS_TOUCH, /datum/component/artifact_master/proc/on_reagent, override = FALSE)
 
+/datum/component/artifact_master/proc/DoUnregistry()
+//Melee Hit
+	UnregisterSignal(parent, COMSIG_PARENT_ATTACKBY)
+//Explosions
+	UnregisterSignal(parent, COMSIG_ATOM_EX_ACT)
+//Bullets
+	UnregisterSignal(parent, COMSIG_ATOM_BULLET_ACT)
+
+//Attackhand
+	UnregisterSignal(parent, COMSIG_ATOM_ATTACK_HAND)
+
+//Bumped / Bumping
+	UnregisterSignal(parent, COMSIG_MOVABLE_BUMP)
+	UnregisterSignal(parent, COMSIG_ATOM_BUMPED)
+
+//Moved
+	UnregisterSignal(parent, COMSIG_MOVABLE_MOVED)
+
+//Splashed with a reagent.
+	UnregisterSignal(parent, COMSIG_REAGENTS_TOUCH)
 /*
  *
  */
@@ -99,7 +117,7 @@
 	var/effect_type = input(usr, "What type do you want?", "Effect Type") as null|anything in subtypesof(/datum/artifact_effect)
 	if(effect_type)
 		var/datum/artifact_effect/my_effect = new effect_type(src)
-		if(istype(holder, my_effect.req_type))
+		if(istype(parent, my_effect.req_type))
 			my_effects += my_effect
 
 		else
@@ -114,22 +132,22 @@
 		my_effects.Remove(to_remove_effect)
 		qdel(AE)
 
-/datum/component/artifact_master/Destroy()
-	holder = null
-	for(var/datum/artifact_effect/AE in my_effects)
-		AE.master = null
-		my_effects -= AE
-		qdel(AE)
-
+/datum/component/artifact_master/UnregisterFromParent()
 	STOP_PROCESSING(SSobj,src)
+	DoUnregistry()
 
 	. = ..()
+
+/datum/component/artifact_master/Destroy()
+	QDEL_NULL_LIST(my_effects)
+	. = ..()
+
 
 /datum/component/artifact_master/proc/do_setup()
 	if(LAZYLEN(make_effects))
 		for(var/path in make_effects)
 			var/datum/artifact_effect/new_effect = new path(src)
-			if(istype(holder, new_effect.req_type))
+			if(istype(parent, new_effect.req_type))
 				my_effects += new_effect
 
 	else
@@ -142,7 +160,7 @@
 		var/chosen_path = pick(subtypesof(/datum/artifact_effect))
 		if(effect_generation_chance >= 100)	// If we're above 100 percent, just cut a flat amount and add an effect.
 			var/datum/artifact_effect/AE = new chosen_path(src)
-			if(istype(holder, AE.req_type))
+			if(istype(parent, AE.req_type))
 				my_effects += AE
 				effect_generation_chance -= 30
 			else
@@ -157,8 +175,8 @@
 
 		effect_generation_chance = round(effect_generation_chance)
 
-/datum/component/artifact_master/proc/get_holder()	// Returns the holder.
-	return holder
+/datum/component/artifact_master/proc/get_parent()	// Returns the parent.
+	return parent
 
 /datum/component/artifact_master/proc/get_primary()
 	if(LAZYLEN(my_effects))
@@ -232,7 +250,7 @@
 				warn = 1
 
 	if(warn && isliving(bumped))
-		to_chat(bumped, "<span class='filter_notice'><b>You accidentally touch \the [holder] as it hits you.</b></span>")
+		to_chat(bumped, "<span class='filter_notice'><b>You accidentally touch \the [parent] as it hits you.</b></span>")
 
 /datum/component/artifact_master/proc/on_bumped()
 	var/atom/movable/M = args[2]
@@ -253,18 +271,18 @@
 				warn = 1
 
 	if(warn && isliving(M))
-		to_chat(M, "<span class='filter_notice'><b>You accidentally touch \the [holder].</b></span>")
+		to_chat(M, "<span class='filter_notice'><b>You accidentally touch \the [parent].</b></span>")
 
 /datum/component/artifact_master/proc/on_attack_hand()
 	var/mob/living/user = args[2]
 	if(!istype(user))
 		return
 
-	if (get_dist(user, holder) > 1)
-		to_chat(user, "<span class='filter_notice'>[span_red("You can't reach [holder] from here.")]</span>")
+	if (get_dist(user, parent) > 1)
+		to_chat(user, "<span class='filter_notice'>[span_red("You can't reach [parent] from here.")]</span>")
 		return
 	if(ishuman(user) && user:gloves)
-		to_chat(user, "<span class='filter_notice'><b>You touch [holder]</b> with your gloved hands, [pick("but nothing of note happens","but nothing happens","but nothing interesting happens","but you notice nothing different","but nothing seems to have happened")].</span>")
+		to_chat(user, "<span class='filter_notice'><b>You touch [parent]</b> with your gloved hands, [pick("but nothing of note happens","but nothing happens","but nothing interesting happens","but you notice nothing different","but nothing seems to have happened")].</span>")
 		return
 
 	var/triggered = FALSE
@@ -280,10 +298,10 @@
 			my_effect.DoEffectTouch(user)
 
 	if(triggered)
-		to_chat(user, "<span class='filter_notice'><b>You touch [holder].</b></span>")
+		to_chat(user, "<span class='filter_notice'><b>You touch [parent].</b></span>")
 
 	else
-		to_chat(user, "<span class='filter_notice'><b>You touch [holder],</b> [pick("but nothing of note happens","but nothing happens","but nothing interesting happens","but you notice nothing different","but nothing seems to have happened")].</span>")
+		to_chat(user, "<span class='filter_notice'><b>You touch [parent],</b> [pick("but nothing of note happens","but nothing happens","but nothing interesting happens","but you notice nothing different","but nothing seems to have happened")].</span>")
 
 
 /datum/component/artifact_master/proc/on_attackby()
@@ -347,20 +365,20 @@
 			my_effect.UpdateMove()
 
 /datum/component/artifact_master/process()
-	if(!holder)	// Some instances can be created and rapidly lose their holder, if they are destroyed rapidly on creation. IE, during excavation.
+	if(!parent)	// Some instances can be created and rapidly lose their parent, if they are destroyed rapidly on creation. IE, during excavation.
 		STOP_PROCESSING(SSobj, src)
 		if(!QDELETED(src))
 			qdel(src)
 			return
-
-	var/turf/L = holder.loc
+	var/atom/thing = parent
+	var/turf/L = thing.loc
 	if(!istype(L) && !isliving(L)) 	// We're inside a non-mob container or on null turf, either way stop processing effects
 		return
 
-	if(istype(holder, /atom/movable))
-		var/atom/movable/HA = holder
+	if(istype(parent, /atom/movable))
+		var/atom/movable/HA = parent
 		if(HA.pulledby)
-			on_bumped(holder, HA.pulledby)
+			on_bumped(parent, HA.pulledby)
 
 	for(var/datum/artifact_effect/my_effect in my_effects)
 		if(my_effect)
@@ -374,7 +392,7 @@
 	var/trigger_co2 = 0
 	var/trigger_nitro = 0
 
-	var/turf/T = get_turf(holder)
+	var/turf/T = get_turf(parent)
 	var/datum/gas_mixture/env = T.return_air()
 	if(env)
 		if(env.temperature < 225)
