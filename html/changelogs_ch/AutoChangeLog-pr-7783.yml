@@ -1,9 +1,0 @@
-author: "cadyn"
-delete-after: True
-changes:
-  - refactor: "515 Compatability"
-  - refactor: "Nuke observer datums in favor of comsigs"
-  - refactor: "GC Update"
-  - refactor: "Mob stale references dealt with and set to GC normally"
-  - refactor: "bicon and /icon ditched in favor of icon2html"
-  - refactor: "Asset delivery redone"
