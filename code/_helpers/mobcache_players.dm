@@ -68,6 +68,9 @@ GLOBAL_LIST_EMPTY(mobcache_newplayers)
 	if(!istype(NP, /mob/new_player))
 		return
 
+	if(!ckey)
+		return
+
 	if(ckey in GLOB.mobcache_newplayers) //ckey key exists
 		if(GLOB.mobcache_newplayers[ckey] == NP) //ckey key's ref is same as new
 			return

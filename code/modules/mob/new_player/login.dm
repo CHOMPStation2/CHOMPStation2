@@ -49,6 +49,8 @@ var/obj/effect/lobby_image = new /obj/effect/lobby_image
 
 	created_for = ckey
 
+	update_newplayer_from_current(src, ckey)
+
 	new_player_panel()
 	spawn(40)
 		if(client)
