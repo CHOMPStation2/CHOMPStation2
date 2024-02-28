@@ -69,18 +69,23 @@ GLOBAL_LIST_EMPTY(mobcache_newplayers)
 		return
 
 	if(!ckey)
+		log_and_message_admins("Attempted to cache a /mob/new_player with an invalid key!")
 		return
 
 	if(ckey in GLOB.mobcache_newplayers) //ckey key exists
 		if(GLOB.mobcache_newplayers[ckey] == NP) //ckey key's ref is same as new
 			return
 		else
-			log_and_message_admins("New mob/new_player created when an old one existed!")
+			log_and_message_admins("New /mob/new_player created when an old one existed!")
 			del_newplayer(ckey)
-	else //ckey key doesn't exist
-		GLOB.mobcache_newplayers[ckey] = NP
+
+	GLOB.mobcache_newplayers[ckey] = NP
 
 /proc/del_newplayer(var/ckey = "NULL")
+	var/mob/M = GLOB.mobcache_newplayers[ckey]
+	if(M.client)
+		log_and_message_admins("Attempted to remove a /mob/new_player when it had an active client!")
+		return
 	qdel(GLOB.mobcache_newplayers[ckey])
 	GLOB.mobcache_newplayers -= ckey
 
