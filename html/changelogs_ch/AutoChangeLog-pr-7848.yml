@@ -1,0 +1,4 @@
+author: "ItsSelis"
+delete-after: True
+changes:
+  - server: "DMAPI updated to version 7.1.1 to solve a very rare infinite hang bug on world startup."
