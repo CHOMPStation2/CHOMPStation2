@@ -1,4 +1,0 @@
-author: "Raeschen"
-delete-after: True
-changes:
-  - bugfix: "Hiding no longer resets after moving."
