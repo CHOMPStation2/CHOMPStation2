@@ -1,0 +1,6 @@
+author: "Upstream"
+delete-after: True
+changes:
+  - balance: "reduces the loss rate from 35\\~45% to 20\\~25% of the smart stoage"
+  - balance: "increases the sheet maxcap from 250 to ~~400~~ 500 of the smart stoage"
+  - balance: "adds a minimum threshold of 20 to sheet culling to the smart stoage"
