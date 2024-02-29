@@ -6,6 +6,9 @@
 		my_client.screen -= lobby_image
 		my_client = null
 
+	if(panel)
+		QDEL_NULL(panel)
+
 	..()
 
 	//if(created_for)

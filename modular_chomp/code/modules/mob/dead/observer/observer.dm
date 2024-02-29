@@ -9,6 +9,13 @@
 		body_backup = null
 	return ..()
 
+/mob/observer/dismiss_actions()
+	if(body_backup)
+		body_backup.moveToNullspace() //YEET
+		qdel(body_backup)
+		body_backup = null
+	. = ..()
+
 // Persistence vars not included as we probably don't want losing limbs in the game mean losing limbs in real life. Definitely can't backfire.
 /mob/observer/dead/verb/fake_enter_vr()
 	set name = "Join virtual reality"

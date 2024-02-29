@@ -26,7 +26,8 @@ GLOBAL_LIST_EMPTY(mobcache_observer_deads)
 	if(isturf(position))
 		OD.forceMove(position)
 
-	OD.summon_actions()
+	spawn(0) //we want summon_actions to be called when there is a valid client
+		OD.summon_actions()
 	return OD
 
 /proc/dismiss_observer_dead(var/mob/observer/dead/OD)
@@ -37,8 +38,8 @@ GLOBAL_LIST_EMPTY(mobcache_observer_deads)
 	var/foundit = FALSE
 	for(var/key in GLOB.mobcache_observer_deads)
 		if(GLOB.mobcache_observer_deads[key] == OD)
-			OD.moveToNullspace() // observer is in our observer db - hide in nullspace
 			OD.dismiss_actions()
+			OD.moveToNullspace() // observer is in our observer db - hide in nullspace
 			foundit = TRUE
 			break
 
@@ -90,9 +91,16 @@ GLOBAL_LIST_EMPTY(mobcache_newplayers)
 	GLOB.mobcache_newplayers -= ckey
 
 // Actions to call when dismissing the observer (Virtual Destroy)
-/mob/observer/dead/proc/dismiss_actions()
+// This is called similar to logout
+// No /client, called JUST BEFORE the observer is sent to nullspace
+/mob/observer/proc/dismiss_actions()
 	return .
 
 // Actions to call when summoning the observer (Virtual New/Initialise)
-/mob/observer/dead/proc/summon_actions()
+// This is similar to login
+// (hopefully) called AFTER the client has logged in
+/mob/observer/proc/summon_actions()
+	if(!client)
+		log_and_message_admins("A observer was summoned but not given a client!")
+
 	return .
