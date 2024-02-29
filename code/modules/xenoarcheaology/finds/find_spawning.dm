@@ -700,6 +700,7 @@
 			T.last_find = new_item
 
 		qdel(src)
+		return
 
 	else if(talkative)
 		src.talking_atom = new(src)
