@@ -28413,7 +28413,6 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled,
 /area/hangar/lockerroomtwo)
 "sPE" = (

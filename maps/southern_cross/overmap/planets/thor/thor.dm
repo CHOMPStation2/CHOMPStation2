@@ -61,6 +61,213 @@
 	docking_codes = null
 
 //AREAS
+/area/surface/thor/med
+	name = "Jungle Outpost Medical"
+	icon_state = "medbay"
+
+/area/surface/thor/kitchen
+	name = "Jungle Outpost Kitchen"
+	icon_state = "cafeteria"
+
+/area/surface/thor/bar
+	name = "Jungle Outpost Bar"
+	icon_state = "cafeteria"
+
+/area/surface/thor/dorms
+	name = "Jungle Outpost Generic Dorms"
+	icon_state = "Sleep"
+	soundproofed = TRUE
+	limit_mob_size = FALSE
+	block_suit_sensors = TRUE
+	flags = RAD_SHIELDED
+	block_tracking = TRUE
+
+/area/surface/thor/dorms/pool1
+	name = "Jungle Outpost Pool Shack 1"
+
+/area/surface/thor/dorms/pool2
+	name = "Jungle Outpost Pool Shack 2"
+/area/surface/outside/thor/pool
+	name = "Jungle Swimming Pool"
+	icon_state = "bluenew"
+	always_unpowered = 0
+
+/area/surface/outside/thor/landingpad
+	name = "Space Bus Landing Pad"
+	icon_state = "bluenew"
+
 /area/surface/outside/thor/outpost
-	name = "Jungle Outpost Perimeter"
+	name = "Jungle Outpost Perimiter"
 	icon_state = "green"
+/area/surface/outside/thor/jungle
+	name = "Jungle"
+	icon_state = "green"
+/area/surface/outside/thor/jungle/deep
+	name = "Untamed Jungles"
+	icon_state = "green"
+
+/area/surface/outside/thor/beach
+	name = "Tropical Beach"
+	icon_state = "away"
+/area/surface/outside/thor/ocean
+	name = "Tropical Ocean"
+	icon_state = "bluenew"
+
+//TURFS (mostly existing turfs with armos changes)
+/turf/simulated/mineral/thor
+	oxygen		= THOR_MOL_O2
+	nitrogen	= THOR_MOL_N2
+	temperature	= THOR_AVG_TEMP
+/turf/simulated/floor/outdoors/thor
+	oxygen		= THOR_MOL_O2
+	nitrogen	= THOR_MOL_N2
+	temperature	= THOR_AVG_TEMP
+
+/turf/simulated/floor/outdoors/thor
+	oxygen		= THOR_MOL_O2
+	nitrogen	= THOR_MOL_N2
+	temperature	= THOR_AVG_TEMP
+
+/turf/simulated/floor/water/thor
+	oxygen		= THOR_MOL_O2
+	nitrogen	= THOR_MOL_N2
+	temperature	= THOR_AVG_TEMP
+
+/turf/simulated/shuttle/floor/alienplating/external/thor
+	oxygen		= THOR_MOL_O2
+	nitrogen	= THOR_MOL_N2
+	temperature	= THOR_AVG_TEMP
+
+/turf/simulated/shuttle/floor/voidcraft/external/thor
+	oxygen		= THOR_MOL_O2
+	nitrogen	= THOR_MOL_N2
+	temperature	= THOR_AVG_TEMP
+
+/turf/simulated/shuttle/floor/voidcraft/external/dark/thor
+	oxygen		= THOR_MOL_O2
+	nitrogen	= THOR_MOL_N2
+	temperature	= THOR_AVG_TEMP
+
+/turf/simulated/shuttle/floor/voidcraft/external/light/thor
+	oxygen		= THOR_MOL_O2
+	nitrogen	= THOR_MOL_N2
+	temperature	= THOR_AVG_TEMP
+
+/turf/simulated/floor/plating/external/thor
+	oxygen		= THOR_MOL_O2
+	nitrogen	= THOR_MOL_N2
+	temperature	= THOR_AVG_TEMP
+
+/turf/simulated/floor/tiled/external/thor
+	oxygen		= THOR_MOL_O2
+	nitrogen	= THOR_MOL_N2
+	temperature	= THOR_AVG_TEMP
+
+/turf/simulated/floor/outdoors/mud/thor/planetuse
+	oxygen		= THOR_MOL_O2
+	nitrogen	= THOR_MOL_N2
+	temperature	= THOR_AVG_TEMP
+
+/turf/simulated/floor/outdoors/rocks/thor/planetuse
+	oxygen		= THOR_MOL_O2
+	nitrogen	= THOR_MOL_N2
+	temperature	= THOR_AVG_TEMP
+
+/turf/simulated/floor/tiled/thor/planetuse
+	oxygen		= THOR_MOL_O2
+	nitrogen	= THOR_MOL_N2
+	temperature	= THOR_AVG_TEMP
+	outdoors = OUTDOORS_YES
+
+/turf/simulated/floor/tiled/steel/thor/planetuse
+	oxygen		= THOR_MOL_O2
+	nitrogen	= THOR_MOL_N2
+	temperature	= THOR_AVG_TEMP
+	outdoors = OUTDOORS_YES
+
+/turf/simulated/floor/plating/thor/planetuse
+	oxygen		= THOR_MOL_O2
+	nitrogen	= THOR_MOL_N2
+	temperature	= THOR_AVG_TEMP
+	outdoors = OUTDOORS_YES
+
+/turf/simulated/floor/outdoors/grass/thor
+	oxygen		= THOR_MOL_O2
+	nitrogen	= THOR_MOL_N2
+	temperature	= THOR_AVG_TEMP
+	var/tree_chance = 5
+
+/turf/simulated/floor/outdoors/grass/heavy/thor
+	oxygen		= THOR_MOL_O2
+	nitrogen	= THOR_MOL_N2
+	temperature	= THOR_AVG_TEMP
+	var/tree_chance = 10
+
+/turf/simulated/floor/outdoors/grass/forest/thor
+	oxygen		= THOR_MOL_O2
+	nitrogen	= THOR_MOL_N2
+	temperature	= THOR_AVG_TEMP
+	var/tree_chance = 10
+
+/turf/simulated/floor/outdoors/dirt/thor/planetuse
+	oxygen		= THOR_MOL_O2
+	nitrogen	= THOR_MOL_N2
+	temperature	= THOR_AVG_TEMP
+
+/turf/simulated/floor/reinforced/thor
+	oxygen		= THOR_MOL_O2
+	nitrogen	= THOR_MOL_N2
+	temperature	= THOR_AVG_TEMP
+
+/turf/simulated/floor/concrete/outdoors/thor
+	outdoors = TRUE
+	oxygen		= THOR_MOL_O2
+	nitrogen	= THOR_MOL_N2
+	temperature	= THOR_AVG_TEMP
+
+/turf/simulated/floor/tiled/asteroid_steel/outdoors/thor
+	oxygen		= THOR_MOL_O2
+	nitrogen	= THOR_MOL_N2
+	temperature	= THOR_AVG_TEMP
+
+/turf/simulated/floor/holofloor/beach/sand/thor
+	oxygen		= THOR_MOL_O2
+	nitrogen	= THOR_MOL_N2
+	temperature	= THOR_AVG_TEMP
+
+/turf/simulated/floor/outdoors/desert_planet/gravel/thor
+	oxygen		= THOR_MOL_O2
+	nitrogen	= THOR_MOL_N2
+	temperature	= THOR_AVG_TEMP
+
+/turf/simulated/floor/outdoors/desert_planet/sand/thor
+	oxygen		= THOR_MOL_O2
+	nitrogen	= THOR_MOL_N2
+	temperature	= THOR_AVG_TEMP
+
+/turf/simulated/mineral/floor/cave/thor
+	oxygen		= THOR_MOL_O2
+	nitrogen	= THOR_MOL_N2
+	temperature	= THOR_AVG_TEMP
+
+/turf/simulated/floor/outdoors/grass/thor/Initialize()
+	if(tree_chance && prob(tree_chance) && !check_density())
+		new /obj/structure/flora/tree/jungle(src)
+	. = ..()
+
+/turf/simulated/floor/outdoors/grass/heavy/thor/Initialize()
+	if(tree_chance && prob(tree_chance) && !check_density())
+		new /obj/structure/flora/tree/jungle(src)
+	. = ..()
+
+/turf/simulated/floor/outdoors/grass/forest/thor/Initialize()
+	if(tree_chance && prob(tree_chance) && !check_density())
+		new /obj/structure/flora/tree/jungle(src)
+
+	grass_types = list(
+		/obj/structure/flora/ausbushes/fullgrass = 40,
+		/obj/structure/flora/ausbushes/sparsegrass = 40,
+		/obj/structure/prop/desert_planet64x64/palmuria = 10,
+		/obj/structure/prop/desert_planet64x64/palmuria1 = 10
+		)
+	. = ..()
