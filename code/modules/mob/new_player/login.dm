@@ -28,7 +28,6 @@ var/obj/effect/lobby_image = new /obj/effect/lobby_image
 
 /mob/new_player/Login()
 	update_Login_details()	//handles setting lastKnownIP and computer_id for use by the ban systems as well as checking for multikeying
-	world.update_status()
 	if(join_motd)
 		join_motd = GLOB.is_valid_url.Replace(join_motd,"<span class='linkify'>$1</span>")
 		to_chat(src, "<div class=\"motd\">[join_motd]</div>")
@@ -48,16 +47,13 @@ var/obj/effect/lobby_image = new /obj/effect/lobby_image
 	if(hud_used)	qdel(hud_used)		//remove the hud objects
 	hud_used = new /datum/hud(src)
 
-	if(client.prefs && client.prefs.client_fps)
-		client.fps = client.prefs.client_fps
-	else
-		client.fps = 0 // Results in using the server FPS
-
 	loc = null
 	client.screen += lobby_image
 	my_client = client
 	sight |= SEE_TURFS
 	player_list |= src
+
+	world.update_status()
 
 	created_for = ckey
 
