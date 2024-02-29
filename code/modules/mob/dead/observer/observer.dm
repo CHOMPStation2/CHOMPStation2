@@ -196,6 +196,8 @@ Works together with spawning an observer, noted above.
 				H.exit_vr()
 				return 0
 		var/mob/observer/dead/ghost = get_observer_dead(ckey, get_turf(src), src)
+		if(!istype(ghost)) // somehow, we failed
+			return 0
 		ghost.can_reenter_corpse = can_reenter_corpse
 		ghost.timeofdeath = src.timeofdeath //BS12 EDIT
 		ghost.key = key
