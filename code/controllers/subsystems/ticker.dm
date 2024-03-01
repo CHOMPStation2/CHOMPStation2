@@ -212,7 +212,7 @@ var/global/datum/controller/subsystem/ticker/ticker
 	// Calculate if game and/or mode are finished (Complicated by the continuous_rounds config option)
 	var/game_finished = FALSE
 	var/mode_finished = FALSE
-	if (CONFIG_GET(flag/continous_rounds)) // Game keeps going after mode ends. // CHOMPEdit
+	if (CONFIG_GET(flag/continuous_rounds)) // Game keeps going after mode ends. // CHOMPEdit
 		game_finished = (emergency_shuttle.returned() || mode.station_was_nuked)
 		mode_finished = ((end_game_state >= END_GAME_MODE_FINISHED) || mode.check_finished()) // Short circuit if already finished.
 	else // Game ends when mode does

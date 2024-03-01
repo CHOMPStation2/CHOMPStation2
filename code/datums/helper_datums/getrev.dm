@@ -1,4 +1,4 @@
-GLOBAL_DATUM(revdata, /datum/getrev)
+//GLOBAL_DATUM(revdata, /datum/getrev) // CHOMPEdit
 
 /datum/getrev
 	var/branch
