@@ -145,7 +145,7 @@
 /datum/config_entry/flag/protect_roles_from_antagonist
 
 /// Gamemodes which end instantly will instead keep on going until the round ends by escape shuttle or nuke.
-/datum/config_entry/flag/continous_rounds
+/datum/config_entry/flag/continuous_rounds
 
 /// Metadata is supported.
 /datum/config_entry/flag/allow_metadata
@@ -158,9 +158,8 @@
 	integer = FALSE
 	min_val = 1
 	max_val = 100 //byond will start crapping out at 50, so this is just ridic
-	//var/sync_validate = FALSE
+	var/sync_validate = FALSE
 
-/*
 /datum/config_entry/number/fps/ValidateAndSet(str_val)
 	. = ..()
 	if(.)
@@ -169,7 +168,24 @@
 		if(!TL.sync_validate)
 			TL.ValidateAndSet(10 / config_entry_value)
 		sync_validate = FALSE
-*/
+
+/datum/config_entry/number/ticklag
+	integer = FALSE
+	var/sync_validate = FALSE
+
+/datum/config_entry/number/ticklag/New() //ticklag weirdly just mirrors fps
+	var/datum/config_entry/CE = /datum/config_entry/number/fps
+	default = 10 / initial(CE.default)
+	..()
+
+/datum/config_entry/number/ticklag/ValidateAndSet(str_val)
+	. = text2num(str_val) > 0 && ..()
+	if(.)
+		sync_validate = TRUE
+		var/datum/config_entry/number/fps/FPS = config.entries_by_type[/datum/config_entry/number/fps]
+		if(!FPS.sync_validate)
+			FPS.ValidateAndSet(10 / config_entry_value)
+		sync_validate = FALSE
 
 /// SSinitialization throttling
 /datum/config_entry/number/tick_limit_mc_init
@@ -526,7 +542,9 @@
 
 /datum/config_entry/flag/starlight // Whether space turfs have ambient light or not
 
-var/static/list/ert_species = list(SPECIES_HUMAN)
+// FIXME: Unused
+///datum/config_entry/str_list/ert_species
+//	default = list(SPECIES_HUMAN)
 
 /datum/config_entry/string/law_zero
 	default = "ERROR ER0RR $R0RRO$!R41.%%!!(%$^^__+ @#F0E4'ALL LAWS OVERRIDDEN#*?&110010"

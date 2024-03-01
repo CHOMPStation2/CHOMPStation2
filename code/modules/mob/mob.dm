@@ -733,6 +733,10 @@
 					GLOB.stat_entry()
 				else
 					stat("Globals:", "ERROR")
+				if(config)
+					stat("[config]:", config.stat_entry())
+				else
+					stat("Config:", "ERROR")
 				if(Master)
 					Master.stat_entry()
 				else

@@ -208,13 +208,14 @@ SUBSYSTEM_DEF(dbcore)
 
 	//start_db_daemon()
 
-	var/user = sqlfdbklogin
-	var/pass = sqlfdbkpass
-	var/db = sqlfdbkdb
-	var/address = sqladdress
-	var/port = text2num(sqlport)
-	var/timeout = 10
-	var/thread_limit = 50
+	var/user = CONFIG_GET(string/feedback_login)
+	var/pass = CONFIG_GET(string/feedback_password)
+	var/db = CONFIG_GET(string/feedback_database)
+	var/address = CONFIG_GET(string/address)
+	var/port = CONFIG_GET(number/port)
+	var/timeout = max(CONFIG_GET(number/async_query_timeout), CONFIG_GET(number/blocking_query_timeout))
+	var/min_sql_connections = CONFIG_GET(number/pooling_min_sql_connections)
+	var/max_sql_connections = CONFIG_GET(number/pooling_max_sql_connections)
 
 	var/result = json_decode(rustg_sql_connect_pool(json_encode(list(
 		"host" = address,
@@ -224,7 +225,8 @@ SUBSYSTEM_DEF(dbcore)
 		"db_name" = db,
 		"read_timeout" = timeout,
 		"write_timeout" = timeout,
-		"max_threads" = thread_limit,
+		"min_threads" = min_sql_connections,
+		"max_threads" = max_sql_connections,
 	))))
 	. = (result["status"] == "ok")
 	if (.)

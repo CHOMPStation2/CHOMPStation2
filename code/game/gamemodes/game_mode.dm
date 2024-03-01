@@ -273,7 +273,7 @@ var/global/list/additional_antag_types = list()
 		for(var/datum/antagonist/antag in antag_templates)
 			if(!antag.antags_are_dead())
 				return 0
-		if(CONFIG_GET(flag/continous_rounds)) // CHOMPEdit
+		if(CONFIG_GET(flag/continuous_rounds)) // CHOMPEdit
 			emergency_shuttle.auto_recall = 0
 			return 0
 		return 1

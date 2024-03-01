@@ -96,6 +96,7 @@
 	LoadMOTD()
 	LoadPolicy()
 	LoadChatFilter()
+	LoadModes()
 	/*
 	if(CONFIG_GET(flag/load_jobs_from_txt))
 		validate_job_config()
