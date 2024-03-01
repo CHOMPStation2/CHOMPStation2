@@ -49,7 +49,6 @@
 
 /obj/machinery/exonet_node/Destroy() // CHOMPAdd: Just in case.
 	QDEL_NULL(soundloop) // CHOMPAdd: Exonet noises
-	return ..()
 
 // Proc: update_icon()
 // Parameters: None

@@ -224,8 +224,7 @@
 
 /mob/living/bot/secbot/resetTarget()
 	..()
-	if(target)
-		UnregisterSignal(target, COMSIG_OBSERVER_MOVED)
+	UnregisterSignal(target, COMSIG_OBSERVER_MOVED)
 	awaiting_surrender = 0
 	attacked = FALSE
 	walk_to(src, 0)

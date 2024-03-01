@@ -13,7 +13,6 @@ var/datum/controller/transfer_controller/transfer_controller
 
 /datum/controller/transfer_controller/Destroy()
 	STOP_PROCESSING(SSprocessing, src)
-	..()
 
 /datum/controller/transfer_controller/process()
 	currenttick = currenttick + 1

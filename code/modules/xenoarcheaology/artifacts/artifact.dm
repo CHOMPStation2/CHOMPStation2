@@ -14,9 +14,9 @@
 
 
 /obj/machinery/artifact/Destroy()
-	if(artifact_master)
-		var/datum/component/artifact_master/arti_mstr = artifact_master
-		arti_mstr.ClearFromParent()
+	if(artifact_master && istype(artifact_master, /datum/component))
+		var/datum/component/arti_mstr = artifact_master
+		arti_mstr.RemoveComponent()
 		artifact_master = null
 		qdel(arti_mstr)
 	. = ..()
