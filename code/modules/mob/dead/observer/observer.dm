@@ -548,6 +548,12 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	following_mobs = null
 	return ..()
 
+/mob/mobcache_dismiss_actions()
+	for(var/mob/observer/dead/M in following_mobs)
+		M.stop_following()
+	following_mobs = null
+	return ..()
+
 /mob/observer/dead/Destroy()
 	if(ismob(following))
 		var/mob/M = following
@@ -555,6 +561,14 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	stop_following()
 	observer_mob_list -= src
 	return ..()
+
+/mob/observer/dead/mobcache_dismiss_actions()
+	if(ismob(following))
+		var/mob/M = following
+		M.following_mobs -= src
+	stop_following()
+	observer_mob_list -= src
+	. = ..()
 
 /mob/Moved(atom/old_loc, direction, forced = FALSE)
 	. = ..()

@@ -56,7 +56,10 @@
 	if(hud_list) //prune out images in hud_list
 		for(var/item in hud_list)
 			if(item)
-				item = null
+				hud_list -= item
+				var/image/I = item
+				if(istype(I))
+					I.loc = null
 	if(selected_image)
 		selected_image = null
 	//QDEL_NULL(vorePanel) //VOREStation Add commented and moved to /mob

@@ -368,7 +368,7 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 
 // summon_actions, when the observer is summoned back from nullspace by the mobcache
 // basically equivalent to a new/initialize
-/mob/observer/dead/summon_actions()
+/mob/observer/dead/mobcache_summon_actions()
 	. = ..()
 	if(exonet) //If it exists, recreate it just incase
 		QDEL_NULL(exonet)
@@ -390,7 +390,7 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 
 // dismiss_actions is when the observer is stashed away in nullspace
 // basically equivalent to a delete
-/mob/observer/dead/dismiss_actions()
+/mob/observer/dead/mobcache_dismiss_actions()
 	. = ..()
 	if(exonet)
 		exonet.remove_address()

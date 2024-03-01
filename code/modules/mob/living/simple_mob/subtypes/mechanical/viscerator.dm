@@ -51,7 +51,8 @@
 
 /mob/living/simple_mob/mechanical/viscerator/death()
 	..(null,"is smashed into pieces!")
-	qdel(src)
+	spawn(0)
+		qdel(src)
 
 // Variant that is always loyal to mercenary antagonists.
 // Used for a special grenade, to ensure they don't attack the wrong thing.

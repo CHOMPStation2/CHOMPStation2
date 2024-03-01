@@ -19,4 +19,5 @@
 		key = null//We null their key before deleting the mob, so they are properly kicked out.
 		qdel(src)
 	*/
+	dismiss_new_player(src)
 	return

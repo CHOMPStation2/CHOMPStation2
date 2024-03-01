@@ -4,7 +4,6 @@
 	living_mob_list -= src
 	player_list -= src
 	unset_machine()
-	QDEL_NULL(hud_used)
 	clear_fullscreen()
 	if(client)
 		for(var/obj/screen/movable/spell_master/spell_master in spell_masters)
@@ -17,13 +16,14 @@
 		ghostize() //CHOMPEdit
 	//ChompEDIT start - fix hard qdels
 	QDEL_NULL(plane_holder)
-
+	for(var/key in alerts) //clear out alerts
+		clear_alert(key)
 	if(pulling)
 		stop_pulling() //TG does this on atom/movable but our stop_pulling proc is here so whatever
 
 	previewing_belly = null // from code/modules/vore/eating/mob_ch.dm
 	vore_selected = null // from code/modules/vore/eating/mob_vr
-
+	focus = null // a selfref
 
 	if(mind)
 		if(mind.current == src)
@@ -1221,19 +1221,21 @@
 	return 0
 
 //Exploitable Info Update
+/obj
+	var/datum/weakref/exploit_for = null //if this obj is an exploit for somebody, this points to them
 
 /mob/proc/amend_exploitable(var/obj/item/I)
 	if(istype(I))
 		exploit_addons |= I
 		var/exploitmsg = html_decode("\n" + "Has " + I.name + ".")
 		exploit_record += exploitmsg
+		I.exploit_for = WEAKREF(usr)
 
 
 /obj/Destroy()
-	if(istype(src.loc, /mob))
-		var/mob/holder = src.loc
-		if(src in holder.exploit_addons)
-			holder.exploit_addons -= src
+	if(istype(exploit_for))
+		var/mob/exploited = exploit_for.resolve()
+		exploited.exploit_addons -= src
 	. = ..()
 
 

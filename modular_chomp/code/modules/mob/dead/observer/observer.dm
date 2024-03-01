@@ -9,7 +9,7 @@
 		body_backup = null
 	return ..()
 
-/mob/observer/dismiss_actions()
+/mob/observer/mobcache_dismiss_actions() //body backup is set by the caller of ghostize, a dismissal is just getting rid of it.
 	if(body_backup)
 		body_backup.moveToNullspace() //YEET
 		qdel(body_backup)

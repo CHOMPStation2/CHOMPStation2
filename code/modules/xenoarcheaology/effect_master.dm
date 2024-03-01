@@ -129,18 +129,30 @@
 
 	if(to_remove_effect)
 		var/datum/artifact_effect/AE = to_remove_effect
+		AE.master = null
 		my_effects.Remove(to_remove_effect)
 		qdel(AE)
 
 /datum/component/artifact_master/UnregisterFromParent()
 	STOP_PROCESSING(SSobj,src)
+	for(var/effect in my_effects)
+		var/datum/artifact_effect/AE = effect
+		if(istype(AE))
+			AE.master = null
+			my_effects -= effect
+			qdel(AE)
 	DoUnregistry()
 
 	. = ..()
 
 /datum/component/artifact_master/Destroy()
-	QDEL_NULL_LIST(my_effects)
+	STOP_PROCESSING(SSobj,src)
 	. = ..()
+	for(var/effect in my_effects)
+		var/datum/artifact_effect/AE = effect
+		if(istype(AE))
+			my_effects -= effect
+			qdel(AE)
 
 
 /datum/component/artifact_master/proc/do_setup()

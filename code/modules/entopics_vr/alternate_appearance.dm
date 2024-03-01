@@ -60,6 +60,7 @@
 
 /datum/alternate_appearance/Destroy()
 	remove()
+	owner = null
 	return ..()
 
 
@@ -84,6 +85,10 @@
 	add_alt_appearance("super_secret_disguise", I, players)
 
 */
+/atom/Destroy()
+	QDEL_NULL_LIST(alternate_appearances)
+	. = ..()
+
 /atom/proc/add_alt_appearance(key, img, list/displayTo = list())
 	if(!key || !img)
 		return
@@ -145,5 +150,3 @@
 	if(!AA)
 		return
 	AA.hide(hideFrom)
-
-
