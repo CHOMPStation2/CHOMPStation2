@@ -40,7 +40,7 @@ SERVER_TOOLS_DEFINE_AND_SET_GLOBAL(server_tools_api_compatible, FALSE)
 	var/instance = params[SERVICE_INSTANCE_PARAM]
 	if(!instance)
 		instance = "TG Station Server"	//maybe just upgraded
-	call(SERVICE_INTERFACE_DLL, SERVICE_INTERFACE_FUNCTION)(instance, command)	//trust no retval
+	LIBCALL(SERVICE_INTERFACE_DLL, SERVICE_INTERFACE_FUNCTION)(instance, command)	//trust no retval
 	return TRUE
 
 /world/proc/ChatBroadcast(message)

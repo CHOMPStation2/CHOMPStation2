@@ -17,5 +17,6 @@
 		SI.associative = associative
 
 		SI.timSort(fromIndex, toIndex)
-
-	return L
+		. = L
+		SI.L = null
+		return
