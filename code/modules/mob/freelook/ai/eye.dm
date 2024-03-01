@@ -52,7 +52,6 @@
 	if(!eyeobj) return
 	if(!new_eye)
 		new_eye = src
-	eyeobj.owner = null
 	qdel(eyeobj) // No AI, no Eye
 	eyeobj = null
 	if(client)

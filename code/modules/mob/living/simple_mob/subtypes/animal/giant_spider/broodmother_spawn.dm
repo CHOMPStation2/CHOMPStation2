@@ -169,5 +169,4 @@
 
 /mob/living/simple_mob/animal/giant_spider/broodling/death()
 	new /obj/effect/decal/cleanable/spiderling_remains(src.loc)
-	spawn(0)
-		qdel(src)
+	qdel(src)

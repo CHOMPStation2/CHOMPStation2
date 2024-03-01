@@ -1221,7 +1221,7 @@
 	return 0
 
 //Exploitable Info Update
-/obj
+/obj/
 	var/datum/weakref/exploit_for = null //if this obj is an exploit for somebody, this points to them
 
 /mob/proc/amend_exploitable(var/obj/item/I)
