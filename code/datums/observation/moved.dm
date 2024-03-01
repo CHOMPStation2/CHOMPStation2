@@ -32,6 +32,12 @@ GLOBAL_DATUM_INIT(moved_event, /decl/observ/moved, new)
 	. = ..()
 	am.RegisterSignal(src,COMSIG_OBSERVER_MOVED, /atom/movable/proc/recursive_move, override = TRUE)
 
+/atom/movable/Initialize(mapload)
+	. = ..()
+	if(istype(loc, /atom/movable)) // on initialise, if i'm inside a thing, preregister this.
+		var/atom/movable/am = loc
+		RegisterSignal(am, COMSIG_OBSERVER_MOVED, /atom/movable/proc/recursive_move, override = TRUE)
+
 /atom/movable/Exited(var/atom/movable/am, atom/old_loc)
 	. = ..()
 	am.UnregisterSignal(src,COMSIG_OBSERVER_MOVED)
