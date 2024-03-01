@@ -65,6 +65,10 @@
 	name = "Jungle Outpost Medical"
 	icon_state = "medbay"
 
+/area/surface/thor/engi
+	name = "Jungle Outpost Solars"
+	icon_state = "engineering"
+
 /area/surface/thor/kitchen
 	name = "Jungle Outpost Kitchen"
 	icon_state = "cafeteria"
@@ -90,7 +94,7 @@
 /area/surface/outside/thor/pool
 	name = "Jungle Swimming Pool"
 	icon_state = "bluenew"
-	always_unpowered = 0
+	always_unpowered = FALSE
 
 /area/surface/outside/thor/landingpad
 	name = "Space Bus Landing Pad"
@@ -113,6 +117,10 @@
 	name = "Tropical Ocean"
 	icon_state = "bluenew"
 
+/area/surface/thor/caves
+	name = "Tropical Caves"
+	icon_state = "darkred"
+	always_unpowered = TRUE
 //TURFS (mostly existing turfs with armos changes)
 /turf/simulated/mineral/thor
 	oxygen		= THOR_MOL_O2
