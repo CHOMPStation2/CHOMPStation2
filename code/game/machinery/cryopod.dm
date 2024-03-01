@@ -423,8 +423,8 @@
 
 	for(var/obj/item/W in items)
 		if(islist(W.possessed_voice)) //CHOMPAdd
-			for(var/mob/living/V in W.possessed_voice)
-				despawn_occupant(V)
+			W.forceMove(get_turf(src)) //CHOMPAdd - this crashes the MC, so now they get spat back out. 
+			continue //CHOMPAdd
 		//VOREStation Addition Start
 		if(istype(W, /obj/item/device/pda))
 			var/obj/item/device/pda/found_pda = W

@@ -8,7 +8,8 @@
 		/area/shuttle,
 		/area/crew_quarters,
 		/area/holodeck,
-		/area/engineering/engine_room)
+		/area/engineering/engine_room,
+		/area/maintenance)
 
 	var/commondisease = list(
 		"Friday Fever" = list(
@@ -42,7 +43,7 @@
 	)
 
 /datum/event/infectedroom/setup()
-	announceWhen = rand(0, 3000)
+	announceWhen = rand(0, 1500)
 	endWhen = announceWhen + 1
 	var/list/area/affected_area = get_station_areas(excluded)
 	var/chosenvirus = pick(commondisease)
@@ -52,16 +53,16 @@
 			virus.makerandom(rand(2,3))
 		else
 			virus.makedisease(commondisease[chosenvirus], rand(2,3), chosenvirus)
-		infected_tiles = rand(4, 8)
+		infected_tiles = rand(7, 10)
 	else if(severity == EVENT_LEVEL_MODERATE)
 		if(prob(50))
 			virus.makerandom(2)
 		else
 			virus.makedisease(commondisease[chosenvirus], 2, chosenvirus)
-		infected_tiles = rand(3, 6)
+		infected_tiles = rand(5, 8)
 	else
 		virus.makerandom(1)
-		infected_tiles = rand(2, 4)
+		infected_tiles = rand(3, 6)
 
 	for(var/i in 1 to 10)
 		var/area/A = pick(affected_area)
@@ -89,8 +90,8 @@
 		message_admins("Infected room event started; Virus: <a href='?src=\ref[virus];[HrefToken()];info=1'>[virus.name()]</a>")
 
 /datum/event/infectedroom/announce()
-	command_announcement.Announce("Confirmed outbreak of level 7 biohazard aboard \the [location_name()]. \
-	All personnel must contain the outbreak.", "Biohazard Alert", new_sound = 'sound/AI/outbreak7.ogg')
+	command_announcement.Announce("Confirmed outbreak of level 5 biohazard aboard \the [location_name()]. \
+	All personnel must contain the outbreak.", "Biohazard Alert", new_sound = 'sound/AI/outbreak5.ogg')
 
 /datum/event/infectedroom/start()
 	var/obj/effect/decal/cleanable/mucus/mapped/M
