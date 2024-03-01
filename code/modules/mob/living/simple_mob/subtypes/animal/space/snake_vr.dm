@@ -46,8 +46,69 @@
 
 	say_list_type = /datum/say_list/snake
 	ai_holder_type = /datum/ai_holder/simple_mob/passive
-	
-	can_be_drop_prey = FALSE //CHOMP Add
+
+	// CHOMPEdit Start - New sprites & Added vore
+	/*
+	icon_state = "python"
+	icon_living = "python"
+	icon_dead = "python_dead"
+	icon = 'icons/mob/snake_vr.dmi'
+	*/
+	icon_state = "snek"
+	icon_living = "snek"
+	icon_dead = "snek_dead"
+	icon_rest = "snek_rest"
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
+
+	vore_active = 1
+	vore_capacity = 1
+	vore_default_mode = DM_DIGEST
+	vore_icons = SA_ICON_LIVING | SA_ICON_REST
+	vore_escape_chance = 20
+	swallowTime = 50
+	vore_bump_chance = 10
+	faction_bump_vore = 1 // Allows snakes to vore people who bump into them even if they are the same "friendly" faction.
+	vore_bump_emote = "coils around and unhinges its jaws at"
+
+	can_be_drop_prey = FALSE
+
+// Adds vore belly
+/mob/living/simple_mob/animal/passive/snake/init_vore()
+	if(!voremob_loaded)
+		return
+	.=..()
+	var/obj/belly/B = vore_selected
+	B.name = "stomach"
+	B.desc = "The snake coils its tail around you, pushing you to the ground and pinning you with its weight. It flicks its tongue at you, before pouncing onto your head, engulfing the upper half of your body with ease as it unhinges its jaw. With greedy swallows, it pulls you deeper, and deeper. The tight walls undulate rhythmically as the danger noodle rumbles contentedly at this new meal. The snake sends the last of you down with a deep swallow, hissing softly and closing its eyes as it enjoys its new meal, tucked away nicely under those beautiful, green scales."
+	B.item_digest_mode = IM_DIGEST_FOOD
+	B.mode_flags = DM_FLAG_THICKBELLY
+	B.digestchance = 25
+	B.escape_stun = 5
+
+	B.emote_lists[DM_HOLD] = list(
+		"A near-constant string of soft, slick noises drift over you as waves of peristalsis slowly drag you further within the possessive serpent.",
+		"\the [name]'s stomach suddenly squishes inwards from everywhere at once, wrapping you up in a warm, doughy embrace before easing back again.",
+		"A growing sense of relaxed lethargy seeps into your muscles the longer you're massaged over amidst those hot, humid confines.",
+		"Slimy, heat-trapping muscles rhythmically ripple over and knead down into your figure, ensuring the snake's new filling was subdued.",
+		"\the [name] occasionally hisses out in satisfaction as it feels your twitching, filling weight bulge out its scales before giving you a compressing squeeze.",
+		"Hot, viscous ooze clings to and coats your body as time passes, encouraging you to submit and let the snake do all the serpentine, winding slithering.")
+	B.emote_lists[DM_DIGEST] = list(
+		"A chorus of sordid, slick sounds fill your senses as another wave of peristalsis ripples over you, tugging you a deeper into the serpent's digestive system.",
+		"\the [name]'s all-encompassing stomach closes in tight around your figure, soaking acid into your flesh.",
+		"You find it harder to breathe as time goes on, your dizziness growing as you lack the space to breathe in enough of that caustic, thinning air.",
+		"\the [name]'s ample, kneading muscle gradually squeezes the strength and fight from your body with clench after clench.",
+		"A pleased hiss emanates from the well fed serpent, clearly satisfied with the meal it's made out of you.",
+		"Your movements grow sluggish as \the [name]'s oozing stomach walls cling to your entire body, drenchning you in corrosive juices.")
+	B.struggle_messages_inside = list(
+		"You jam your limbs against the tight walls in an effort to get some leverage.",
+		"You writhe inside the tube-like gastric chamber in a bid to force yourself to freedom.",
+		"You push back at the clenched sphincter at the entrance to \the [name]'s gut.")
+	B.struggle_messages_outside = list(
+		"\the [name]'s tail jostles around as something inside of it fights to escape.",
+		"\the [name]'s tail lurches with the struggles of a live meal.")
+	B.examine_messages = list(
+		"\the [name]'s tail is swollen fat with a lump of prey it swallowed whole.")
+// CHOMPEdit End
 
 /datum/say_list/snake
 	emote_hear = list("hisses")
@@ -61,7 +122,7 @@
 	icon_state = "red"
 	icon_living = "red"
 	icon_dead = "red_dead"
-	icon = 'icons/mob/snake_vr.dmi'
+	icon = 'icons/mob/snake_vr.dmi' // CHOMP Comment: Whenever the red snake sprites, this needs to be changed. I swear someone made sprites for this.
 
 /*
  * Python
@@ -70,29 +131,6 @@
 	name = "python"
 	desc = "A big, thick snake."
 	tt_desc = "E Reptilia Pythonidae"
-
-        // CHOMPEdit Start - New sprites & Added vore
-        /*
-        icon_state = "python"
-	icon_living = "python"
-	icon_dead = "python_dead"
-	icon = 'icons/mob/snake_vr.dmi'
-	*/
-	icon_state = "snek"
-	icon_living = "snek"
-	icon_dead = "snek_dead"
-	icon_rest = "snek_rest"
-	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
-
-	vore_active = 1
-	vore_capacity = 1
-	vore_default_mode = DM_HOLD
-	vore_icons = SA_ICON_LIVING | SA_ICON_REST
-	vore_escape_chance = 25
-	swallowTime = 50
-	vore_bump_chance = 10
-	vore_bump_emote = "slithers around and tries to devour"
-	// CHOMPEdit End
 
 /*
  * NOODLE IS HERE! SQUEEEEEEEE~
@@ -106,27 +144,10 @@
 
 	makes_dirt = FALSE
 
+	vore_default_mode = DM_HOLD // CHOMPEdit because Noodle isn't a meanie! Unless you struggle. Honestly I'm happy leaving it as digestion, but since he can bump nom now, maybe don't have gurgles on by default. -Ace
+
 	var/turns_since_scan = 0
 	var/obj/movement_target
-// CHOMPEdit Start
-/mob/living/simple_mob/animal/passive/snake/init_vore()
-	if(!voremob_loaded)
-		return
-	.=..()
-	var/obj/belly/B = vore_selected
-	B.name = "stomach"
-	B.desc = "The snake coils its tail around you, pushing you to the ground and pinning you with its weight. It flicks its tongue at you, before pouncing onto your head, engulfing the upper half of your body with ease as it unhinges its jaw. With greedy swallows, it pulls you deeper, and deeper. The tight walls undulate rhythmically as the danger noodle rumbles contentedly at this new meal. The snake sends the last of you down with a deep swallow, hissing softly and closing its eyes as it enjoys its new meal, tucked away nicely under those beautiful, green scales."
-	B.digest_mode = DM_HOLD
-	B.item_digest_mode = IM_HOLD
-	B.mode_flags = DM_FLAG_THICKBELLY
-	B.digest_brute = 2
-	B.digest_burn = 2
-	B.digest_oxy = 1
-	B.digestchance = 0
-	B.absorbchance = 0
-	B.escapechance = 25
-	B.escape_stun = 5
-// CHOMPEdit End
 
 /mob/living/simple_mob/animal/passive/snake/python/noodle/Life()
 	..()
