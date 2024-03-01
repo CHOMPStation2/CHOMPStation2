@@ -700,6 +700,7 @@
 			T.last_find = new_item
 
 		qdel(src)
+		return
 
 	else if(talkative)
 		src.talking_atom = new(src)
@@ -714,7 +715,7 @@
 /obj/item/weapon/archaeological_find/Destroy()
 	if(src.is_anomalous())
 		var/datum/component/artifact_master/arti_mstr = GetComponent(/datum/component/artifact_master)
-		arti_mstr.RemoveComponent()
+		arti_mstr.ClearFromParent()
 		if(!QDELETED(arti_mstr))
 			qdel(arti_mstr)
 
