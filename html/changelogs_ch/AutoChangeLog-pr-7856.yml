@@ -1,0 +1,4 @@
+author: "Raeschen"
+delete-after: True
+changes:
+  - bugfix: "observer_move applied on init (if in a mob) as well as enter and exit"

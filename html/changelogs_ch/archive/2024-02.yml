@@ -294,3 +294,9 @@
   - refactor: Mob stale references dealt with and set to GC normally
   - refactor: bicon and /icon ditched in favor of icon2html
   - refactor: Asset delivery redone
+2024-02-29:
+  ItsSelis:
+  - server: DMAPI updated to version 7.1.1 to solve a very rare infinite hang bug
+      on world startup.
+  Raeschen:
+  - bugfix: prevents mind-bound items crashing the MC
