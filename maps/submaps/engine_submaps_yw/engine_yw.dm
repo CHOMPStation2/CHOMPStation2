@@ -153,7 +153,7 @@
 		setEngineType("Supermatter Engine", usr)
 
 	if(href_list["RANDOM"] && !building)
-		setEngineType(pick(config.engine_map), usr)
+		setEngineType(pick(CONFIG_GET(str_list/engine_map)), usr) // CHOMPEdit
 
 	if(href_list["close"])
 		usr << browse(null, "window=computer")

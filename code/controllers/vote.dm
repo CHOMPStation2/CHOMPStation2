@@ -80,7 +80,7 @@ SUBSYSTEM_DEF(vote)
 		if(votes > greatest_votes)
 			greatest_votes = votes
 
-	if(!config.vote_no_default && choices.len) // Default-vote for everyone who didn't vote
+	if(!CONFIG_GET(flag/vote_no_default) && choices.len) // Default-vote for everyone who didn't vote // CHOMPEdit
 		var/non_voters = (GLOB.clients.len - total_votes)
 		if(non_voters > 0)
 			if(mode == VOTE_RESTART)
@@ -181,7 +181,7 @@ SUBSYSTEM_DEF(vote)
 
 /datum/controller/subsystem/vote/proc/submit_vote(ckey, newVote)
 	if(mode)
-		if(config.vote_no_dead && usr.stat == DEAD && !usr.client.holder)
+		if(CONFIG_GET(flag/vote_no_dead) && usr.stat == DEAD && !usr.client.holder) // CHOMPEdit
 			return
 		if(current_votes[ckey])
 			choices[choices[current_votes[ckey]]]--
@@ -194,7 +194,7 @@ SUBSYSTEM_DEF(vote)
 /datum/controller/subsystem/vote/proc/initiate_vote(vote_type, initiator_key, automatic = FALSE, time = config.vote_period)
 	if(!mode)
 		if(started_time != null && !(check_rights(R_ADMIN) || automatic))
-			var/next_allowed_time = (started_time + config.vote_delay)
+			var/next_allowed_time = (started_time + CONFIG_GET(number/vote_delay)) // CHOMPEdit
 			if(next_allowed_time > world.time)
 				return 0
 
@@ -225,7 +225,7 @@ SUBSYSTEM_DEF(vote)
 				question = "Your PDA beeps with a message from Central. Would you like an additional hour to finish ongoing projects?" //Yawn Wider Edit //CHOMP EDIT: Changed to 'one' hour.
 				choices.Add("Initiate Crew Transfer", "Extend the Shift")  //VOREStation Edit
 			if(VOTE_ADD_ANTAGONIST)
-				if(!config.allow_extra_antags || ticker.current_state >= GAME_STATE_SETTING_UP)
+				if(!CONFIG_GET(flag/allow_extra_antags) || ticker.current_state >= GAME_STATE_SETTING_UP) // CHOMPEdit
 					return 0
 				for(var/antag_type in all_antag_types)
 					var/datum/antagonist/antag = all_antag_types[antag_type]
@@ -321,16 +321,16 @@ SUBSYSTEM_DEF(vote)
 			. += "\t(<a href='?src=\ref[src];vote=toggle_restart'>[config.allow_vote_restart ? "Allowed" : "Disallowed"]</a>)"
 		. += "</li><li>"
 
-		if(admin || config.allow_vote_mode)
+		if(admin || CONFIG_GET(flag/allow_vote_mode)) // CHOMPEdit
 			. += "<a href='?src=\ref[src];vote=gamemode'>GameMode</a>"
 		else
 			. += "<font color='grey'>GameMode (Disallowed)</font>"
 
 		if(admin)
-			. += "\t(<a href='?src=\ref[src];vote=toggle_gamemode'>[config.allow_vote_mode ? "Allowed" : "Disallowed"]</a>)"
+			. += "\t(<a href='?src=\ref[src];vote=toggle_gamemode'>[CONFIG_GET(flag/allow_vote_mode) ? "Allowed" : "Disallowed"]</a>)" // CHOMPEdit
 		. += "</li><li>"
 
-		if(!antag_add_failed && config.allow_extra_antags)
+		if(!antag_add_failed && CONFIG_GET(flag/allow_extra_antags)) // CHOMPEdit
 			. += "<a href='?src=\ref[src];vote=add_antagonist'>Add Antagonist Type</a>"
 		else
 			. += "<font color='grey'>Add Antagonist (Disallowed)</font>"
@@ -358,19 +358,19 @@ SUBSYSTEM_DEF(vote)
 				config.allow_vote_restart = !config.allow_vote_restart
 		if("toggle_gamemode")
 			if(usr.client.holder)
-				config.allow_vote_mode = !config.allow_vote_mode
+				CONFIG_SET(flag/allow_vote_mode, !CONFIG_GET(flag/allow_vote_mode)) // CHOMPEdit
 
 		if(VOTE_RESTART)
-			if(config.allow_vote_restart || usr.client.holder)
+			if(CONFIG_GET(flag/allow_vote_restart) || usr.client.holder) // CHOMPEdit
 				initiate_vote(VOTE_RESTART, usr.key)
 		if(VOTE_GAMEMODE)
-			if(config.allow_vote_mode || usr.client.holder)
+			if(CONFIG_GET(flag/allow_vote_mode) || usr.client.holder) // CHOMPEdit
 				initiate_vote(VOTE_GAMEMODE, usr.key)
 		if(VOTE_CREW_TRANSFER)
-			if(config.allow_vote_restart || usr.client.holder)
+			if(CONFIG_GET(flag/allow_vote_restart) || usr.client.holder) // CHOMPEdit
 				initiate_vote(VOTE_CREW_TRANSFER, usr.key)
 		if(VOTE_ADD_ANTAGONIST)
-			if(config.allow_extra_antags || usr.client.holder)
+			if(CONFIG_GET(flag/allow_extra_antags) || usr.client.holder) // CHOMPEdit
 				initiate_vote(VOTE_ADD_ANTAGONIST, usr.key)
 		if(VOTE_CUSTOM)
 			if(usr.client.holder)

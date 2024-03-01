@@ -1,7 +1,7 @@
 /proc/get_role_request_channel()
 	var/channel_tag
-	if(config.role_request_channel_tag)
-		channel_tag = config.role_request_channel_tag
+	if(CONFIG_GET(string/role_request_channel_tag))
+		channel_tag = CONFIG_GET(string/role_request_channel_tag)
 
 	var/datum/tgs_api/v5/api = TGS_READ_GLOBAL(tgs)
 	if(istype(api) && channel_tag)
@@ -19,8 +19,8 @@
 
 /proc/get_fax_channel()
 	var/channel_tag
-	if(config.fax_channel_tag)
-		channel_tag = config.fax_channel_tag
+	if(CONFIG_GET(string/fax_channel_tag))
+		channel_tag = CONFIG_GET(string/fax_channel_tag)
 
 	var/datum/tgs_api/v5/api = TGS_READ_GLOBAL(tgs)
 	if(istype(api) && channel_tag)
@@ -39,48 +39,48 @@
 /proc/get_discord_role_id_from_department(var/department)
 	switch(department)
 		if("Command")
-			if(config.role_request_id_command)
-				return config.role_request_id_command
+			if(CONFIG_GET(string/role_request_id_command)) // CHOMPEdit
+				return CONFIG_GET(string/role_request_id_command)
 
 		if("Security")
-			if(config.role_request_id_security)
-				return config.role_request_id_security
+			if(CONFIG_GET(string/role_request_id_security))
+				return CONFIG_GET(string/role_request_id_security)
 
 		if("Engineering")
-			if(config.role_request_id_engineering)
-				return config.role_request_id_engineering
+			if(CONFIG_GET(string/role_request_id_engineering))
+				return CONFIG_GET(string/role_request_id_engineering)
 
 		if("Medical")
-			if(config.role_request_id_medical)
-				return config.role_request_id_medical
+			if(CONFIG_GET(string/role_request_id_medical))
+				return CONFIG_GET(string/role_request_id_medical)
 
 		if("Research")
-			if(config.role_request_id_research)
-				return config.role_request_id_research
+			if(CONFIG_GET(string/role_request_id_research))
+				return CONFIG_GET(string/role_request_id_research)
 
 		if("Supply")
-			if(config.role_request_id_supply)
-				return config.role_request_id_supply
+			if(CONFIG_GET(string/role_request_id_supply))
+				return CONFIG_GET(string/role_request_id_supply)
 
 		if("Service")
-			if(config.role_request_id_service)
-				return config.role_request_id_service
+			if(CONFIG_GET(string/role_request_id_service))
+				return CONFIG_GET(string/role_request_id_service)
 
 		if("Expedition")
-			if(config.role_request_id_expedition)
-				return config.role_request_id_expedition
+			if(CONFIG_GET(string/role_request_id_expedition))
+				return CONFIG_GET(string/role_request_id_expedition)
 
 		if("Silicon")
-			if(config.role_request_id_silicon)
-				return config.role_request_id_silicon
+			if(CONFIG_GET(string/role_request_id_silicon))
+				return CONFIG_GET(string/role_request_id_silicon)
 
 	return FALSE
 
 
 /obj/machinery/photocopier/faxmachine/message_chat_admins(var/mob/sender, var/faxname, var/obj/item/sent, var/faxid, font_colour="#006100")
 	var/faxmsg
-	if(faxid && fexists("[config.fax_export_dir]/fax_[faxid].html"))
-		faxmsg = return_file_text("[config.fax_export_dir]/fax_[faxid].html")
+	if(faxid && fexists("[CONFIG_GET(string/fax_export_dir)]/fax_[faxid].html"))
+		faxmsg = return_file_text("[CONFIG_GET(string/fax_export_dir)]/fax_[faxid].html")
 
 	if(faxmsg)
 		fax_discord_message("A fax; '[faxname]' was sent.\nSender: [sender.name]\nFax name: [sent.name]\nFax ID: **[faxid]**\nFax: ```[strip_html_properly(faxmsg)]```")

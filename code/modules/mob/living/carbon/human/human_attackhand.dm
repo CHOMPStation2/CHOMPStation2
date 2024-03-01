@@ -75,7 +75,7 @@
 			if (istype(H) && attempt_to_scoop(H))
 				return 0;
 			// VOREStation Edit - End
-			if(istype(H) && health < config.health_threshold_crit)
+			if(istype(H) && health < CONFIG_GET(number/health_threshold_crit)) // CHOMPEdit
 				if(!H.check_has_mouth())
 					to_chat(H, "<span class='danger'>You don't have a mouth, you cannot perform CPR!</span>")
 					return
@@ -104,7 +104,7 @@
 				H.visible_message("<span class='danger'>\The [H] performs CPR on \the [src]!</span>")
 				to_chat(H, "<span class='warning'>Repeat at least every 7 seconds.</span>")
 
-				if(istype(H) && health > config.health_threshold_dead)
+				if(istype(H) && health > CONFIG_GET(number/health_threshold_dead)) // CHOMPEdit
 					adjustOxyLoss(-(min(getOxyLoss(), 5)))
 					updatehealth()
 					to_chat(src, "<span class='notice'>You feel a breath of fresh air enter your lungs. It feels good.</span>")

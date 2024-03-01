@@ -11,16 +11,16 @@ Reason: Replaced with "Tickets System". Main logic has been moved to: modular_ch
 // CHOMPEdit Begin
 /proc/get_ahelp_channel()
 	var/datum/tgs_api/v5/api = TGS_READ_GLOBAL(tgs)
-	if(istype(api) && config.ahelp_channel_tag)
+	if(istype(api) && CONFIG_GET(string/ahelp_channel_tag))
 		for(var/datum/tgs_chat_channel/channel in api.chat_channels)
-			if(channel.custom_tag == config.ahelp_channel_tag)
+			if(channel.custom_tag == CONFIG_GET(string/ahelp_channel_tag))
 				return list(channel)
 	return 0
 
 /proc/ahelp_discord_message(var/message)
 	if(!message)
 		return
-	if(config.discord_ahelps_disabled)
+	if(CONFIG_GET(flag/discord_ahelps_disabled))
 		return
 	var/datum/tgs_chat_channel/ahelp_channel = get_ahelp_channel()
 	if(ahelp_channel)
@@ -316,7 +316,7 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 
 /datum/ticket/proc/AddInteraction(formatted_message)
 	var/curinteraction = "[gameTimestamp()]: [formatted_message]"
-	if(config.discord_ahelps_all)	//CHOMPEdit
+	if(CONFIG_GET(flag/discord_ahelps_all))	//CHOMPEdit
 		ahelp_discord_message("ADMINHELP: TICKETID:[id] [strip_html_properly(curinteraction)]") //CHOMPEdit
 	_interactions += curinteraction
 

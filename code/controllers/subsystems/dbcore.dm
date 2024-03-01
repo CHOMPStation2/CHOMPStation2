@@ -203,7 +203,7 @@ SUBSYSTEM_DEF(dbcore)
 		failed_connection_timeout = world.time + 50
 		return FALSE
 
-	if(!config.sql_enabled)
+	if(!CONFIG_GET(flag/sql_enabled))
 		return FALSE
 
 	//start_db_daemon()
@@ -236,7 +236,7 @@ SUBSYSTEM_DEF(dbcore)
 		++failed_connections
 
 /datum/controller/subsystem/dbcore/proc/CheckSchemaVersion()
-	if(config.sql_enabled)
+	if(CONFIG_GET(flag/sql_enabled))
 		if(Connect())
 			log_world("Database connection established.")
 		else
@@ -283,14 +283,14 @@ SUBSYSTEM_DEF(dbcore)
 	connection = null
 
 /datum/controller/subsystem/dbcore/proc/IsConnected()
-	if (!config.sql_enabled)
+	if (!CONFIG_GET(flag/sql_enabled))
 		return FALSE
 	if (!connection)
 		return FALSE
 	return json_decode(rustg_sql_connected(connection))["status"] == "online"
 
 /datum/controller/subsystem/dbcore/proc/ErrorMsg()
-	if(!config.sql_enabled)
+	if(!CONFIG_GET(flag/sql_enabled))
 		return "Database disabled by configuration"
 	return last_error
 

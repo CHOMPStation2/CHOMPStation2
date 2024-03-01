@@ -105,7 +105,7 @@
 		H.dna.digitigrade = R.dna.digitigrade // ensure cloned DNA is set appropriately from record??? for some reason it doesn't get set right despite the override to datum/dna/Clone()
 
 	//Apply damage
-	H.adjustCloneLoss((H.getMaxHealth() - config.health_threshold_dead)*-0.75)
+	H.adjustCloneLoss((H.getMaxHealth() - CONFIG_GET(number/health_threshold_dead))*-0.75) // CHOMPEdit
 	H.Paralyse(4)
 	H.updatehealth()
 
@@ -197,7 +197,7 @@
 
 /obj/machinery/clonepod/transhuman/get_completion()
 	if(occupant)
-		return 100 * ((occupant.health + abs(config.health_threshold_dead)) / (occupant.maxHealth + abs(config.health_threshold_dead)))
+		return 100 * ((occupant.health + abs(CONFIG_GET(number/health_threshold_dead))) / (occupant.maxHealth + abs(CONFIG_GET(number/health_threshold_dead)))) // CHOMPEdit
 	return 0
 
 //Synthetic version
