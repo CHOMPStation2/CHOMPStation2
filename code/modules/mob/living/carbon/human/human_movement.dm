@@ -116,7 +116,7 @@
 			. *= 0.5
 		. -= chem_effects[CE_SPEEDBOOST]	// give 'em a buff on top.
 
-	. = max(HUMAN_LOWEST_SLOWDOWN, . + config.human_delay)	// Minimum return should be the same as force_max_speed
+	. = max(HUMAN_LOWEST_SLOWDOWN, . + CONFIG_GET(number/human_delay))	// Minimum return should be the same as force_max_speed // CHOMPEdit
 	. += ..()
 
 /mob/living/carbon/human/Moved()
@@ -258,7 +258,7 @@
 
 // Handle footstep sounds
 /mob/living/carbon/human/handle_footstep(var/turf/T)
-	if(!istype(T) || is_incorporeal() || !config.footstep_volume || !T.footstep_sounds || !T.footstep_sounds.len)
+	if(!istype(T) || is_incorporeal() || !CONFIG_GET(number/footstep_volume) || !T.footstep_sounds || !T.footstep_sounds.len) // CHOMPEdit
 		return	//CHOMPEdit - Condensed some return checks
 	// CHOMPedit start: Future Upgrades - Multi species support
 	var/list/footstep_sounds = T.footstep_sounds[src.get_species()]
@@ -282,7 +282,7 @@
 	if(step_count % 2 == 0)	//CHOMPAdd, since I removed the returns up above, need this to track each odd step.
 		return
 
-	var/volume = config.footstep_volume
+	var/volume = CONFIG_GET(number/footstep_volume) // CHOMPEdit
 
 	// Reduce volume while walking or barefoot
 	if(!shoes || m_intent == "walk")

@@ -11,7 +11,7 @@ SUBSYSTEM_DEF(nightshift)
 	var/high_security_mode = FALSE
 
 /datum/controller/subsystem/nightshift/Initialize()
-	if(!config.enable_night_shifts)
+	if(!CONFIG_GET(flag/enable_night_shifts)) // CHOMPEdit
 		can_fire = FALSE
 	/*
 	if(config.randomize_shift_time)

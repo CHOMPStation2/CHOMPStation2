@@ -205,7 +205,7 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 
 	var/start_timeofday = REALTIMEOFDAY
 	// Initialize subsystems.
-	current_ticklimit = config.tick_limit_mc_init
+	current_ticklimit = CONFIG_GET(number/tick_limit_mc_init) // CHOMPEdit
 	for (var/datum/controller/subsystem/SS in subsystems)
 		if (SS.flags & SS_NO_INIT)
 			continue
@@ -236,7 +236,7 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	#else
 	world.sleep_offline = 1
 	#endif
-	world.change_fps(config.fps)
+	world.change_fps(CONFIG_GET(number/fps)) // CHOMPEdit
 	var/initialized_tod = REALTIMEOFDAY
 	sleep(1)
 	initializations_finished_with_no_players_logged_in = initialized_tod < REALTIMEOFDAY - 10
@@ -724,3 +724,10 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	map_loading = FALSE
 	for(var/datum/controller/subsystem/SS as anything in subsystems)
 		SS.StopLoadingMap()
+
+// CHOMPEdit Begin
+/datum/controller/master/proc/OnConfigLoad()
+	for (var/thing in subsystems)
+		var/datum/controller/subsystem/SS = thing
+		SS.OnConfigLoad()
+// CHOMPEdit End

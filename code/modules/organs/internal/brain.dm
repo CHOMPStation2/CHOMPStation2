@@ -33,7 +33,7 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 	if(!owner || owner.stat == DEAD)
 		defib_timer = max(--defib_timer, 0)
 	else
-		defib_timer = min(++defib_timer, (config.defib_timer MINUTES) / 2)
+		defib_timer = min(++defib_timer, (CONFIG_GET(number/defib_timer) MINUTES) / 2) // CHOMPEdit
 
 /obj/item/organ/internal/brain/proc/can_assist()
 	return can_assist
@@ -80,8 +80,8 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 
 /obj/item/organ/internal/brain/New()
 	..()
-	health = config.default_brain_health
-	defib_timer = (config.defib_timer MINUTES) / 2
+	health = CONFIG_GET(number/default_brain_health) // CHOMPEdit
+	defib_timer = (CONFIG_GET(number/defib_timer) MINUTES) / 2 // CHOMPEdit
 	spawn(5)
 		if(brainmob)
 			butcherable = FALSE

@@ -582,7 +582,7 @@ var/list/admin_verbs_event_manager = list(
 		if(holder.rights & R_SERVER)		add_verb(src, admin_verbs_server) //CHOMPEdit
 		if(holder.rights & R_DEBUG)
 			add_verb(src, admin_verbs_debug) //CHOMPEdit
-			if(config.debugparanoid && !(holder.rights & R_ADMIN))
+			if(CONFIG_GET(flag/debugparanoid) && !(holder.rights & R_ADMIN)) // CHOMPEdit
 				remove_verb(src, admin_verbs_paranoid_debug) //CHOMPEdit			//Right now it's just callproc but we can easily add others later on.
 		if(holder.rights & R_POSSESS)		add_verb(src, admin_verbs_possess) //CHOMPEdit
 		if(holder.rights & R_PERMISSIONS)	add_verb(src, admin_verbs_permissions) //CHOMPEdit

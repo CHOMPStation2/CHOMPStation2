@@ -106,13 +106,13 @@
 		to_chat(player.current, "<span class='notice'>[leader_welcome_text]</span>")
 	else
 		to_chat(player.current, "<span class='notice'>[welcome_text]</span>")
-	if (config.objectives_disabled)
+	if (CONFIG_GET(flag/objectives_disabled)) // CHOMPEdit
 		to_chat(player.current, "<span class='notice'>[antag_text]</span>")
 
 	if((flags & ANTAG_HAS_NUKE) && !spawned_nuke)
 		create_nuke()
 
-	if (!config.objectives_disabled)
+	if (!CONFIG_GET(flag/objectives_disabled)) // CHOMPEdit
 		show_objectives(player)
 	return 1
 
