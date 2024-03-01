@@ -24,11 +24,8 @@
 /turf/simulated/shuttle/floor/alienplating/blue,
 /area/submap/vault)
 "j" = (
-/turf/simulated/shuttle/floor/alien{
-	temperature = 243.15;
-	oxygen = 20.7263;
-	nitrogen = 93.7835
-	},
+/obj/structure/loot_pile/surface/alien/engineering,
+/turf/simulated/shuttle/floor/alienplating/blue,
 /area/submap/vault)
 "n" = (
 /obj/structure/loot_pile/surface/alien/end,
@@ -54,8 +51,7 @@
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/vault)
 "v" = (
-/obj/structure/table/alien/blue,
-/obj/random/janusmodule,
+/obj/structure/loot_pile/surface/alien/medical,
 /turf/simulated/shuttle/floor/alienplating/blue,
 /area/submap/vault)
 "x" = (
@@ -232,19 +228,19 @@ c
 c
 c
 c
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
 c
 c
 c
@@ -273,19 +269,19 @@ c
 c
 c
 c
-a
-a
-j
-j
-a
-a
-a
-a
-a
-j
-j
-a
-a
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
 c
 c
 r
@@ -315,17 +311,17 @@ a
 r
 c
 c
-r
-a
-a
-r
+t
+x
+x
+x
 c
 c
 c
-r
-a
-a
-r
+x
+x
+x
+t
 c
 c
 c
@@ -558,7 +554,7 @@ q
 a
 z
 a
-n
+v
 c
 a
 a
@@ -638,7 +634,7 @@ a
 a
 c
 i
-n
+j
 c
 c
 c
@@ -730,7 +726,7 @@ a
 a
 a
 a
-v
+n
 a
 a
 a
@@ -755,7 +751,7 @@ d
 d
 x
 x
-r
+t
 c
 z
 z
@@ -795,8 +791,8 @@ d
 (16,1,1) = {"
 d
 x
-j
-a
+x
+x
 Y
 a
 a
@@ -829,15 +825,15 @@ a
 a
 Y
 x
-j
+x
 x
 d
 "}
 (17,1,1) = {"
 d
 x
-j
-a
+x
+x
 Y
 a
 a
@@ -870,7 +866,7 @@ a
 a
 Y
 x
-j
+x
 x
 d
 "}
@@ -878,7 +874,7 @@ d
 d
 x
 x
-r
+x
 c
 c
 c
@@ -910,7 +906,7 @@ c
 c
 c
 c
-t
+x
 x
 x
 d
@@ -970,7 +966,7 @@ a
 z
 a
 z
-v
+n
 D
 D
 p
@@ -982,7 +978,7 @@ p
 p
 D
 D
-v
+n
 z
 L
 z
@@ -1042,7 +1038,7 @@ d
 d
 x
 x
-t
+x
 c
 c
 c
@@ -1074,7 +1070,7 @@ c
 c
 c
 c
-t
+x
 x
 x
 d
@@ -1082,7 +1078,7 @@ d
 (23,1,1) = {"
 d
 x
-j
+x
 x
 Y
 a
@@ -1116,14 +1112,14 @@ a
 a
 Y
 x
-j
+x
 x
 d
 "}
 (24,1,1) = {"
 d
 x
-j
+x
 x
 Y
 a
@@ -1157,7 +1153,7 @@ a
 a
 Y
 x
-j
+x
 x
 d
 "}
@@ -1222,7 +1218,7 @@ a
 a
 a
 a
-v
+n
 a
 a
 a
@@ -1314,7 +1310,7 @@ a
 c
 c
 c
-n
+j
 i
 c
 a
@@ -1394,7 +1390,7 @@ a
 a
 a
 c
-n
+v
 a
 z
 a
@@ -1630,11 +1626,11 @@ c
 t
 x
 x
-t
+x
 c
 c
 c
-t
+x
 x
 x
 t
@@ -1669,15 +1665,15 @@ r
 c
 x
 x
-j
-j
 x
 x
 x
 x
 x
-j
-j
+x
+x
+x
+x
 x
 x
 c
