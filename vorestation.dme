@@ -4614,6 +4614,7 @@
 #include "modular_chomp\code\datums\browser\color_matrix_picker.dm"
 #include "modular_chomp\code\datums\changelog\changelog.dm"
 #include "modular_chomp\code\datums\colormate\colormate.dm"
+#include "modular_chomp\code\datums\components\dry.dm"
 #include "modular_chomp\code\datums\components\gargoyle.dm"
 #include "modular_chomp\code\datums\components\squeak.dm"
 #include "modular_chomp\code\datums\components\xenoqueen.dm"
