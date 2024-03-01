@@ -1,7 +1,0 @@
-author: "TheCaramelion"
-delete-after: True
-changes:
-  - balance: "Halved the max time Infected Room event gets announced"
-  - balance: "More mucus per trigger of Infected Room event"
-  - bugfix: "Infected Room event picking maints as valid area"
-  - bugfix: "Incorrect announcement level for Infected Room event"
