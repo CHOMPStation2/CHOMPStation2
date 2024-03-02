@@ -42,8 +42,9 @@ var/list/runechat_image_cache = list()
 	var/image/message
 	/// The location in which the message is appearing
 	var/atom/message_loc
-	/// The client who heard this message
+	/// The client and mob who heard this message
 	var/client/owned_by
+	var/mob/owned_by_mob
 	/// Contains the scheduled destruction time
 	var/scheduled_destruction
 	/// Contains the approximate amount of lines for height decay
@@ -78,13 +79,14 @@ var/list/runechat_image_cache = list()
 	if(timer_delete)
 		deltimer(timer_delete)
 		timer_delete = null
-	if(!QDELETED(owned_by))
-		UnregisterSignal(owned_by, COMSIG_PARENT_QDELETING)
-		LAZYREMOVEASSOC(owned_by.seen_messages, message_loc, src)
-		owned_by.images.Remove(message)
+	if(!QDELETED(owned_by_mob))
+		UnregisterSignal(owned_by_mob, COMSIG_MOB_LOGOUT)
+		LAZYREMOVEASSOC(owned_by?.seen_messages, message_loc, src)
+		owned_by?.images.Remove(message)
 	if(!QDELETED(message_loc))
 		UnregisterSignal(message_loc, COMSIG_PARENT_QDELETING)
 	owned_by = null
+	owned_by_mob = null
 	message_loc = null
 	message = null
 	return ..()
@@ -108,7 +110,8 @@ var/list/runechat_image_cache = list()
 
 	// Register client who owns this message
 	owned_by = owner.client
-	RegisterSignal(owned_by, COMSIG_PARENT_QDELETING, PROC_REF(qdel_self))
+	owned_by_mob = owner
+	RegisterSignal(owned_by_mob, COMSIG_MOB_LOGOUT, PROC_REF(qdel_self))
 
 	var/extra_length = owned_by.is_preference_enabled(/datum/client_preference/runechat_long_messages)
 	var/maxlen = extra_length ? CHAT_MESSAGE_EXT_LENGTH : CHAT_MESSAGE_LENGTH
