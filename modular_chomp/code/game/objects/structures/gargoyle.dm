@@ -69,7 +69,7 @@
 	original_int = obj_integrity
 	name = "[identifier] of [H.name]"
 	desc = "A very lifelike [identifier] made of [material]."
-	stored_examine = H.examine()
+	stored_examine = H.examine(H)
 	description_fluff = H.get_description_fluff()
 
 	if (H.buckled)
@@ -140,10 +140,9 @@
 	if (!gargoyle)
 		return ..()
 	if (can_revert)
-		unpetrify(deleting = TRUE)
+		unpetrify(deleting = FALSE) //don't delete if we're already deleting!
 	else
 		visible_message("<span class='warning'>The [identifier] loses shape and crumbles into a pile of [material]!</span>")
-		QDEL_NULL(gargoyle)
 	. = ..()
 
 /obj/structure/gargoyle/process()
@@ -151,7 +150,7 @@
 		qdel(src)
 	if (gargoyle.loc != src)
 		can_revert = TRUE //something's gone wrong, they escaped, lets not qdel them
-		unpetrify(FALSE)
+		unpetrify(deal_damage = FALSE, deleting = TRUE)
 
 /obj/structure/gargoyle/examine_icon()
 	var/icon/examine_icon = ..()
