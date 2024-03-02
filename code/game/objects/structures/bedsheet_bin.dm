@@ -19,6 +19,9 @@ LINEN BINS
 	drop_sound = 'sound/items/drop/clothing.ogg'
 	pickup_sound = 'sound/items/pickup/clothing.ogg'
 
+	/// Custom nouns to act as the subject of dreams
+	var/list/dream_messages = list("white")
+
 /obj/item/weapon/bedsheet/attack_self(mob/user as mob)
 	user.drop_item()
 	if(layer == initial(layer))
@@ -41,55 +44,74 @@ LINEN BINS
 
 /obj/item/weapon/bedsheet/blue
 	icon_state = "sheetblue"
+	dream_messages = list("blue")
 
 /obj/item/weapon/bedsheet/green
 	icon_state = "sheetgreen"
+	dream_messages = list("green")
 
 /obj/item/weapon/bedsheet/orange
 	icon_state = "sheetorange"
+	dream_messages = list("orange")
 
 /obj/item/weapon/bedsheet/purple
 	icon_state = "sheetpurple"
+	dream_messages = list("purple")
 
 /obj/item/weapon/bedsheet/rainbow
 	icon_state = "sheetrainbow"
+	dream_messages = list("red", "orange", "yellow", "green", "blue", "purple", "a rainbow")
 
 /obj/item/weapon/bedsheet/red
 	icon_state = "sheetred"
+	dream_messages = list("red")
 
 /obj/item/weapon/bedsheet/yellow
 	icon_state = "sheetyellow"
+	dream_messages = list("yellow")
 
 /obj/item/weapon/bedsheet/mime
 	icon_state = "sheetmime"
+	dream_messages = list("silence", "gestures", "a pale face", "a gaping mouth", "the mime")
 
 /obj/item/weapon/bedsheet/clown
 	icon_state = "sheetclown"
 	item_state = "sheetrainbow"
+	dream_messages = list("honk", "laughter", "a prank", "a joke", "a smiling face", "the clown")
 
 /obj/item/weapon/bedsheet/captain
 	icon_state = "sheetcaptain"
+	dream_messages = list("authority", "a golden ID", "sunglasses", "a green disc", "an antique gun", "the captain")
 
 /obj/item/weapon/bedsheet/rd
 	icon_state = "sheetrd"
+	dream_messages = list("authority", "a silvery ID", "a bomb", "a mech", "a facehugger", "maniacal laughter", "the research director")
 
 /obj/item/weapon/bedsheet/medical
+	name = "medical blanket"
+	desc = "It's a sterilized* blanket commonly used in the Medbay.  *Sterilization is voided if a virologist is present onboard the station."
 	icon_state = "sheetmedical"
+	dream_messages = list("healing", "life", "surgery", "a doctor")
 
 /obj/item/weapon/bedsheet/hos
 	icon_state = "sheethos"
+	dream_messages = list("authority", "a silvery ID", "handcuffs", "a baton", "a flashbang", "sunglasses", "the head of security")
 
 /obj/item/weapon/bedsheet/hop
 	icon_state = "sheethop"
+	dream_messages = list("authority", "a silvery ID", "obligation", "a computer", "an ID", "a corgi", "the head of personnel")
 
 /obj/item/weapon/bedsheet/ce
 	icon_state = "sheetce"
+	dream_messages = list("authority", "a silvery ID", "the engine", "power tools", "an APC", "a parrot", "the chief engineer")
 
 /obj/item/weapon/bedsheet/brown
 	icon_state = "sheetbrown"
+	dream_messages = list("brown")
 
 /obj/item/weapon/bedsheet/ian
 	icon_state = "sheetian"
+	dream_messages = list("a dog", "a corgi", "woof", "bark", "arf")
 
 /obj/item/weapon/bedsheet/double
 	icon_state = "doublesheet"
