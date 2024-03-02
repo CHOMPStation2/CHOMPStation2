@@ -1,0 +1,6 @@
+author: "TheCaramelion"
+delete-after: True
+changes:
+  - rscadd: "Crawling."
+  - qol: "Laying down won't make you drop items in your hands."
+  - qol: "You can now equip/unequip items while laying down."
