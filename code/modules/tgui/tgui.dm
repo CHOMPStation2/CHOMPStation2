@@ -329,7 +329,8 @@
  */
 /datum/tgui/proc/process_status()
 	var/prev_status = status
-	status = src_object?.tgui_status(user, state)
+	if(src_object)
+		status = src_object.tgui_status(user, state)
 	if(parent_ui)
 		status = min(status, parent_ui.status)
 	return prev_status != status
