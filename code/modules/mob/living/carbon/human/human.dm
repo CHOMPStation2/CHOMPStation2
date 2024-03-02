@@ -66,8 +66,7 @@
 		QDEL_NULL(nif)	//VOREStation Add
 	worn_clothing.Cut()
 
-
-	if(vessel)
+	if(!QDELETED(vessel))
 		QDEL_NULL(vessel)
 	return ..()
 

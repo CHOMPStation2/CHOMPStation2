@@ -86,8 +86,8 @@
 
 */
 /atom/Destroy()
-	QDEL_NULL_LIST(alternate_appearances)
 	. = ..()
+	remove_all_alt_appearances()
 
 /atom/proc/add_alt_appearance(key, img, list/displayTo = list())
 	if(!key || !img)
@@ -121,7 +121,11 @@
 		if(alternate_appearances[key])
 			qdel(alternate_appearances[key])
 
-
+/atom/proc/remove_all_alt_appearances()
+	for(var/key in alternate_appearances)
+		if(alternate_appearances[key])
+			qdel(alternate_appearances[key])
+			alternate_appearances.Remove(key)
 /*
 	Displays an alternate appearance from src's alternate_appearances list
 	Wrapper for: alternate_appearance/display_to()

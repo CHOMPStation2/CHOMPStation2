@@ -28,6 +28,7 @@
 	reagent_list = null
 	if(my_atom && my_atom.reagents == src)
 		my_atom.reagents = null
+	my_atom = null
 	return ..()
 
 /* Internal procs */
