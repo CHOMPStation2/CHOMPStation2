@@ -225,11 +225,7 @@ var/list/runechat_image_cache = list()
 		return
 	ending_life = TRUE
 	animate(message, alpha = 0, time = fadetime, flags = ANIMATION_PARALLEL)
-<<<<<<< HEAD
-	timer_delete = QDEL_IN_STOPPABLE(src, fadetime)
-=======
-	timer_delete = QDEL_IN(src, fadetime)
->>>>>>> 3b2e27c871... Chatmessage runtime (#15795)
+	timer_delete = QDEL_IN_STOPPABLE(src, fadetime) //ChompEDIT - we use QDEL_IN_STOPPABLE, upstream just has QDEL_IN do the same thing
 
 /**
   * Creates a message overlay at a defined location for a given speaker
