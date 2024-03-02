@@ -226,7 +226,7 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	if (!current_runlevel)
 		SetRunLevel(RUNLEVEL_LOBBY)
 
-	GLOB.revdata = new // It can load revdata now, from tgs or .git or whatever
+	// GLOB.revdata = new // It can load revdata now, from tgs or .git or whatever // CHOMPEDIT
 
 	// Sort subsystems by display setting for easy access.
 	sortTim(subsystems, GLOBAL_PROC_REF(cmp_subsystem_display))

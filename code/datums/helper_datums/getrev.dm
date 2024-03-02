@@ -68,7 +68,7 @@
 		if(CONFIG_GET(string/githuburl)) // CHOMPEdit
 			msg += "<b>Commit:</b> <a href='[CONFIG_GET(string/githuburl)]/commit/[GLOB.revdata.revision]'>[GLOB.revdata.revision]</a>" // CHOMPEdit
 		else
-			msg += "<b>Commit:</b> GLOB.revdata.revision"
+			msg += "<b>Commit:</b> [GLOB.revdata.revision]" // CHOMPEdit - Actually SHOW the revision
 	else
 		msg += "<b>Server revision:</b> Unknown"
 
