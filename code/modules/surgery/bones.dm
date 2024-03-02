@@ -32,21 +32,21 @@
 /datum/surgery_step/glue_bone/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if (affected.stage == 0)
-		user.visible_message("<span class='notice'>[user] starts applying medication to the damaged bones in [target]'s [affected.name] with \the [tool].</span>" , \
-		"<span class='notice'>You start applying medication to the damaged bones in [target]'s [affected.name] with \the [tool].</span>")
+		user.balloon_alert_visible("[user] starts applying medication to the damaged bones in [target]'s [affected.name] with \the [tool]." , \
+		"You start applying medication to the damaged bones in [target]'s [affected.name] with \the [tool].") // CHOMPEdit - Ballon alert
 	target.custom_pain("Something in your [affected.name] is causing you a lot of pain!", 50)
 	..()
 
 /datum/surgery_step/glue_bone/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<span class='notice'>[user] applies some [tool] to [target]'s bone in [affected.name]</span>", \
-		"<span class='notice'>You apply some [tool] to [target]'s bone in [affected.name] with \the [tool].</span>")
+	user.balloon_alert_visible("[user] applies some [tool] to [target]'s bone in [affected.name]", \
+		"You apply some [tool] to [target]'s bone in [affected.name] with \the [tool].") // CHOMPEdit - Ballon alert
 	affected.stage = 1
 
 /datum/surgery_step/glue_bone/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<span class='danger'>[user]'s hand slips, smearing [tool] in the incision in [target]'s [affected.name]!</span>" , \
-	"<span class='danger'>Your hand slips, smearing [tool] in the incision in [target]'s [affected.name]!</span>")
+	user.balloon_alert_visible("[user]'s hand slips, smearing [tool] in the incision in [target]'s [affected.name]!" , \
+	"Your hand slips, smearing [tool] in the incision in [target]'s [affected.name]!") // CHOMPEdit - Ballon alert
 
 ///////////////////////////////////////////////////////////////
 // Bone Setting Surgery
@@ -73,26 +73,26 @@
 
 /datum/surgery_step/set_bone/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<span class='notice'>[user] is beginning to set the bone in [target]'s [affected.name] in place with \the [tool].</span>" , \
-		"<span class='notice'>You are beginning to set the bone in [target]'s [affected.name] in place with \the [tool].</span>")
+	user.balloon_alert_visible("[user] is beginning to set the bone in [target]'s [affected.name] in place with \the [tool]." , \
+		"You are beginning to set the bone in [target]'s [affected.name] in place with \the [tool].") // CHOMPEdit - Ballon alert
 	target.custom_pain("The pain in your [affected.name] is going to make you pass out!", 50)
 	..()
 
 /datum/surgery_step/set_bone/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if (affected.status & ORGAN_BROKEN)
-		user.visible_message("<span class='notice'>[user] sets the bone in [target]'s [affected.name] in place with \the [tool].</span>", \
-			"<span class='notice'>You set the bone in [target]'s [affected.name] in place with \the [tool].</span>")
+		user.balloon_alert_visible("[user] sets the bone in [target]'s [affected.name] in place with \the [tool].", \
+			"You set the bone in [target]'s [affected.name] in place with \the [tool].") // CHOMPEdit - Ballon alert
 		affected.stage = 2
 	else
-		user.visible_message("[user] sets the bone in [target]'s [affected.name]<span class='danger'> in the WRONG place with \the [tool].</span>", \
-			"You set the bone in [target]'s [affected.name]<span class='danger'> in the WRONG place with \the [tool].</span>")
+		user.balloon_alert_visible("[user] sets the bone in [target]'s [affected.name] in the WRONG place with \the [tool].", \
+			"You set the bone in [target]'s [affected.name] in the WRONG place with \the [tool].") // CHOMPEdit - Ballon alert
 		affected.fracture()
 
 /datum/surgery_step/set_bone/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<span class='danger'>[user]'s hand slips, damaging the bone in [target]'s [affected.name] with \the [tool]!</span>" , \
-		"<span class='danger'>Your hand slips, damaging the bone in [target]'s [affected.name] with \the [tool]!</span>")
+	user.balloon_alert_visible("[user]'s hand slips, damaging the bone in [target]'s [affected.name] with \the [tool]!" , \
+		"Your hand slips, damaging the bone in [target]'s [affected.name] with \the [tool]!") // CHOMPEdit - Ballon alert
 	affected.createwound(BRUISE, 5)
 
 ///////////////////////////////////////////////////////////////
@@ -119,20 +119,20 @@
 	return affected && affected.organ_tag == BP_HEAD && (affected.robotic < ORGAN_ROBOT) && affected.open >= 2 && affected.stage == 1
 
 /datum/surgery_step/mend_skull/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	user.visible_message("<span class='notice'>[user] is beginning to piece together [target]'s skull with \the [tool].</span>"  , \
-		"<span class='notice'>You are beginning to piece together [target]'s skull with \the [tool].</span>")
+	user.balloon_alert_visible("[user] is beginning to piece together [target]'s skull with \the [tool]."  , \
+		"You are beginning to piece together [target]'s skull with \the [tool].") // CHOMPEdit - Ballon alert
 	..()
 
 /datum/surgery_step/mend_skull/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<span class='notice'>[user] sets [target]'s skull with \the [tool].</span>" , \
-		"<span class='notice'>You set [target]'s skull with \the [tool].</span>")
+	user.balloon_alert_visible("[user] sets [target]'s skull with \the [tool]." , \
+		"You set [target]'s skull with \the [tool].") // CHOMPEdit - Ballon alert
 	affected.stage = 2
 
 /datum/surgery_step/mend_skull/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<span class='danger'>[user]'s hand slips, damaging [target]'s face with \the [tool]!</span>"  , \
-		"<span class='danger'>Your hand slips, damaging [target]'s face with \the [tool]!</span>")
+	user.visible_message("[user]'s hand slips, damaging [target]'s face with \the [tool]!"  , \
+		"Your hand slips, damaging [target]'s face with \the [tool]!") // CHOMPEdit - Ballon alert
 	var/obj/item/organ/external/head/h = affected
 	h.createwound(BRUISE, 10)
 	h.disfigured = 1
@@ -165,21 +165,21 @@
 
 /datum/surgery_step/finish_bone/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<span class='notice'>[user] starts to finish mending the damaged bones in [target]'s [affected.name] with \the [tool].</span>", \
-	"<span class='notice'>You start to finish mending the damaged bones in [target]'s [affected.name] with \the [tool].</span>")
+	user.balloon_alert_visible("[user] starts to finish mending the damaged bones in [target]'s [affected.name] with \the [tool].", \
+	"You start to finish mending the damaged bones in [target]'s [affected.name] with \the [tool].") // CHOMPEdit - Ballon alert
 	..()
 
 /datum/surgery_step/finish_bone/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<span class='notice'>[user] has mended the damaged bones in [target]'s [affected.name] with \the [tool].</span>"  , \
-		"<span class='notice'>You have mended the damaged bones in [target]'s [affected.name] with \the [tool].</span>" )
+	user.balloon_alert_visible("[user] has mended the damaged bones in [target]'s [affected.name] with \the [tool]."  , \
+		"You have mended the damaged bones in [target]'s [affected.name] with \the [tool]." ) // CHOMPEdit - Ballon alert
 	affected.status &= ~ORGAN_BROKEN
 	affected.stage = 0
 
 /datum/surgery_step/finish_bone/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<span class='danger'>[user]'s hand slips, smearing [tool] in the incision in [target]'s [affected.name]!</span>" , \
-	"<span class='danger'>Your hand slips, smearing [tool] in the incision in [target]'s [affected.name]!</span>")
+	user.balloon_alert_visible("[user]'s hand slips, smearing [tool] in the incision in [target]'s [affected.name]!" , \
+	"Your hand slips, smearing [tool] in the incision in [target]'s [affected.name]!") // CHOMPEdit - Ballon alert
 
 ///////////////////////////////////////////////////////////////
 // Bone Clamp Surgery
@@ -208,19 +208,19 @@
 /datum/surgery_step/clamp_bone/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if (affected.stage == 0)
-		user.visible_message("<span class='notice'>[user] starts repairing the damaged bones in [target]'s [affected.name] with \the [tool].</span>" , \
-		"<span class='notice'>You starts repairing the damaged bones in [target]'s [affected.name] with \the [tool].</span>")
+		user.balloon_alert_visible("[user] starts repairing the damaged bones in [target]'s [affected.name] with \the [tool]." , \
+		"You starts repairing the damaged bones in [target]'s [affected.name] with \the [tool].") // CHOMPEdit - Ballon alert
 	target.custom_pain("Something in your [affected.name] is causing you a lot of pain!", 50)
 	..()
 
 /datum/surgery_step/clamp_bone/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<span class='notice'>[user] sets the bone in [target]'s [affected.name] with \the [tool].</span>", \
-		"<span class='notice'>You sets [target]'s bone in [affected.name] with \the [tool].</span>")
+	user.balloon_alert_visible("[user] sets the bone in [target]'s [affected.name] with \the [tool].", \
+		"You sets [target]'s bone in [affected.name] with \the [tool].") // CHOMPEdit - Ballon alert
 	affected.status &= ~ORGAN_BROKEN
 
 /datum/surgery_step/clamp_bone/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<span class='danger'>[user]'s hand slips, damaging the bone in [target]'s [affected.name] with \the [tool]!</span>" , \
-		"<span class='danger'>Your hand slips, damaging the bone in [target]'s [affected.name] with \the [tool]!</span>")
+	user.balloon_alert_visible("[user]'s hand slips, damaging the bone in [target]'s [affected.name] with \the [tool]!" , \
+		"Your hand slips, damaging the bone in [target]'s [affected.name] with \the [tool]!") // CHOMPEdit - Ballon alert
 	affected.createwound(BRUISE, 5)

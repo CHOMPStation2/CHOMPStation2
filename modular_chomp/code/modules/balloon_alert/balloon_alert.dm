@@ -15,7 +15,7 @@
 /atom/proc/balloon_alert_visible(message, self_message, range = world.view, list/exclude_mobs = null)
 	SHOULD_NOT_SLEEP(TRUE)
 
-	var/list/hearers = get_mobs_in_view(distance, src)
+	var/list/hearers = get_mobs_in_view(range, src)
 	hearers -= exclude_mobs
 
 	for(var/mob/M in hearers)

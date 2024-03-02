@@ -404,9 +404,9 @@
 
 	setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if(tasted == src) //CHOMPEdit Start
-		visible_message("<span class='vwarning'>[src] licks themself!</span>","<span class='notice'>You lick yourself. You taste rather like [tasted.get_taste_message()].</span>","<b>Slurp!</b>")
+		balloon_alert_visible("[src] licks themself!","You lick yourself. You taste rather like [tasted.get_taste_message()].")
 	else
-		visible_message("<span class='vwarning'>[src] licks [tasted]!</span>","<span class='notice'>You lick [tasted]. They taste rather like [tasted.get_taste_message()].</span>","<b>Slurp!</b>") //CHOMPEdit End
+		balloon_alert_visible("[src] licks [tasted]!","You lick [tasted]. They taste rather like [tasted.get_taste_message()].") //CHOMPEdit End
 
 
 /mob/living/proc/get_taste_message(allow_generic = 1)

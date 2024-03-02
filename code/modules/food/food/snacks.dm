@@ -80,7 +80,7 @@
 					food_inserted_micros -= F
 
 	if(!reagents.total_volume)
-		M.visible_message("<span class='notice'>[M] finishes eating \the [src].</span>","<span class='notice'>You finish eating \the [src].</span>")
+		M.balloon_alert_visible("<span class='notice'>[M] finishes eating \the [src].</span>","<span class='notice'>You finish eating \the [src].</span>") // CHOMPEdit - Balloon alert
 
 		usr.drop_from_inventory(src) // Drop food from inventory so it doesn't end up staying on the hud after qdel, and so inhands go away
 
@@ -98,17 +98,20 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/attack(mob/living/M as mob, mob/living/user as mob, def_zone) //CHOMPEdit
 	if(reagents && !reagents.total_volume)
-		to_chat(user, "<span class='danger'>None of [src] left!</span>")
+		// to_chat(user, "<span class='danger'>None of [src] left!</span>")
+		balloon_alert(user, "None of [src] left!") // CHOMPEdit - Changed to balloon alert
 		user.drop_from_inventory(src)
 		qdel(src)
 		return 0
 
 	if(package)
-		to_chat(M, "<span class='warning'>How do you expect to eat this with the package still on?</span>")
+		// to_chat(M, "<span class='warning'>How do you expect to eat this with the package still on?</span>")
+		balloon_alert(user, "The package is in the way.") // CHOMPEdit - Changed to balloon alert
 		return FALSE
 
 	if(canned)
-		to_chat(M, "<span class='warning'>How do you expect to eat this without opening it?</span>")
+		// to_chat(M, "<span class='warning'>How do you expect to eat this without opening it?</span>")
+		balloon_alert(user, "The can is closed.") // CHOMPEdit - Changed to balloon alert
 		return FALSE
 
 	if(istype(M, /mob/living/carbon))
@@ -121,7 +124,8 @@
 			if(istype(M,/mob/living/carbon/human))
 				var/mob/living/carbon/human/H = M
 				if(!H.check_has_mouth())
-					to_chat(user, "Where do you intend to put \the [src]? You don't have a mouth!")
+					// to_chat(user, "Where do you intend to put \the [src]? You don't have a mouth!")
+					balloon_alert(user, "You don't have a mouth!") // CHOMPEdit - Changed to balloon alert
 					return
 				var/obj/item/blocked = null
 				if(survivalfood)
@@ -129,10 +133,12 @@
 				else
 					blocked = H.check_mouth_coverage()
 				if(blocked)
-					to_chat(user, "<span class='warning'>\The [blocked] is in the way!</span>")
+					// to_chat(user, "<span class='warning'>\The [blocked] is in the way!</span>")
+					balloon_alert(user, "\The [blocked] is in the way!") // CHOMPEdit - Changed to balloon alert
 					return
 
 			user.setClickCooldown(user.get_attack_speed(src)) //puts a limit on how fast people can eat/drink things
+			// CHOMPEdit Start - Changing a lot of the to_chat ahead
 			if (fullness <= 50)
 				to_chat(M, "<span class='danger'>You hungrily chew out a piece of [src] and gobble it!</span>")
 			if (fullness > 50 && fullness <= 150)
@@ -162,7 +168,8 @@
 			if(istype(M,/mob/living/carbon/human))
 				var/mob/living/carbon/human/H = M
 				if(!H.check_has_mouth())
-					to_chat(user, "Where do you intend to put \the [src]? \The [H] doesn't have a mouth!")
+					// to_chat(user, "Where do you intend to put \the [src]? \The [H] doesn't have a mouth!")
+					balloon_alert(user, "\The [H] doesn't have a mouth!") // CHOMPEdit
 					return
 				var/obj/item/blocked = null
 				var/unconcious = FALSE
@@ -184,21 +191,22 @@
 					return
 
 				if(blocked)
-					to_chat(user, "<span class='warning'>\The [blocked] is in the way!</span>")
+					// to_chat(user, "<span class='warning'>\The [blocked] is in the way!</span>")
+					balloon_alert(user, "\The [blocked] is in the way!") // CHOMPEdit - Changed to balloon alert
 					return
 
 				if(swallow_whole)
 					if(!(M.feeding))
-						to_chat(user, "<span class='warning'>You can't feed [H] a whole [src] as they refuse to be fed whole things!</span>")
+						balloon_alert(user, "You can't feed [H] a whole [src] as they refuse to be fed whole things!") // CHOMPEdit
 						return
 					if(!belly_target)
-						to_chat(user, "<span class='warning'>You can't feed [H] a whole [src] as they don't appear to have a belly to fit it!</span>")
+						balloon_alert(user, "You can't feed [H] a whole [src] as they don't appear to have a belly to fit it!") // CHOMPEdit
 						return
 
 				if(swallow_whole)
-					user.visible_message("<span class='danger'>[user] attempts to make [M] consume [src] whole into their [belly_target].</span>")
+					user.balloon_alert_visible("[user] attempts to make [M] consume [src] whole into their [belly_target].") // CHOMPEdit
 				else
-					user.visible_message("<span class='danger'>[user] attempts to feed [M] [src].</span>")
+					user.balloon_alert_visible("[user] attempts to feed [M] [src].") // CHOMPEdit
 
 				var/feed_duration = 3 SECONDS
 				if(swallow_whole)
@@ -211,13 +219,13 @@
 
 				if(swallow_whole)
 					add_attack_logs(user,M,"Whole-fed with [src.name] containing [reagentlist(src)] into [belly_target]", admin_notify = FALSE)
-					user.visible_message("<span class='danger'>[user] successfully forces [src] into [M]'s [belly_target].</span>")
+					user.balloon_alert_visible("[user] successfully forces [src] into [M]'s [belly_target].") // CHOMPEdit
 				else
 					add_attack_logs(user,M,"Fed with [src.name] containing [reagentlist(src)]", admin_notify = FALSE)
-					user.visible_message("<span class='danger'>[user] feeds [M] [src].</span>")
+					user.balloon_alert_visible("[user] feeds [M] [src].") // CHOMPEdit
 
 			else
-				to_chat(user, "This creature does not seem to have a mouth!")
+				balloon_alert(user, "This creature does not seem to have a mouth!") // CHOMPEdit
 				return
 
 		if(swallow_whole)
@@ -246,12 +254,12 @@
 		if(swallow_whole)
 			belly_target = tgui_input_list(user, "Choose Belly", "Belly Choice", M.feedable_bellies())
 			if(!(M.feeding))
-				to_chat(user, "<span class='warning'>You can't feed [M] a whole [src] as they refuse to be fed whole things!</span>")
+				balloon_alert(user, "You can't feed [M] a whole [src] as they refuse to be fed whole things!") // CHOMPEdit
 				return
 			if(!belly_target)
-				to_chat(user, "<span class='warning'>You can't feed [M] a whole [src] as they don't appear to have a belly to fit it!</span>")
+				balloon_alert(user, "You can't feed [M] a whole [src] as they don't appear to have a belly to fit it!") // CHOMPEdit
 				return
-			user.visible_message("<span class='danger'>[user] attempts to make [M] consume [src] whole into their [belly_target].</span>")
+			user.balloon_alert_visible("[user] attempts to make [M] consume [src] whole into their [belly_target].") // CHOMPEdit
 			var/feed_duration = 3 SECONDS
 			user.setClickCooldown(user.get_attack_speed(src))
 			if(!do_mob(user, M, feed_duration))
@@ -259,7 +267,7 @@
 			if(!belly_target)
 				return
 			add_attack_logs(user,M,"Whole-fed with [src.name] containing [reagentlist(src)] into [belly_target]", admin_notify = FALSE)
-			user.visible_message("<span class='danger'>[user] successfully forces [src] into [M]'s [belly_target].</span>")
+			user.balloon_alert_visible("[user] successfully forces [src] into [M]'s [belly_target].") // CHOMPEdit
 			user.drop_item()
 			forceMove(belly_target)
 			return 1 //CHOMPAdd End
@@ -299,7 +307,7 @@
 			return
 
 		if(package || canned)
-			to_chat(user, "<span class='warning'>You cannot stuff anything into \the [src] without opening it first.</span>")
+			balloon_alert(user, "You cannot stuff anything into \the [src] without opening it first.") // CHOMPEdit
 			return
 
 		var/obj/item/weapon/holder/H = W
@@ -316,7 +324,7 @@
 
 		food_inserted_micros += M
 
-		to_chat(user, "<span class='warning'>You stuff [M] into \the [src].</span>")
+		balloon_alert(user, "Stuffed [M] into \the [src].") // CHOMPEdit
 		to_chat(M, "<span class='warning'>[user] stuffs you into \the [src].</span>")
 		return
 
@@ -330,10 +338,10 @@
 				return
 
 			if(tgui_alert(user,"You can't slice \the [src] here. Would you like to hide \the [W] inside it instead?","No Cutting Surface!",list("Yes","No")) == "No")
-				to_chat(user, "<span class='warning'>You cannot slice \the [src] here! You need a table or at least a tray to do it.</span>")
+				balloon_alert(user, "You cannot slice \the [src] here! You need a table or at least a tray to do it.") // CHOMPEdit
 				return
 			else
-				to_chat(user, "<span class='warning'>You slip \the [W] inside \the [src].</span>")
+				balloon_alert(user, "Slipped \the [W] inside \the [src].") // CHOMPEdit
 				user.drop_from_inventory(W, src)
 				add_fingerprint(user)
 				contents += W
@@ -341,16 +349,16 @@
 
 		if (has_edge(W))
 			if (!can_slice_here)
-				to_chat(user, "<span class='warning'>You cannot slice \the [src] here! You need a table or at least a tray to do it.</span>")
+				balloon_alert(user, "You cannot slice \the [src] here! You need a table or at least a tray to do it.") // CHOMPEdit
 				return
 
 			var/slices_lost = 0
 			if (W.w_class > 3)
-				user.visible_message("<span class='notice'>\The [user] crudely slices \the [src] with [W]!</span>", "<span class='notice'>You crudely slice \the [src] with your [W]!</span>")
+				user.balloon_alert_visible("\The [user] crudely slices \the [src] with [W]!", "You crudely slice \the [src] with your [W]!") // CHOMPEdit
 				slices_lost = rand(1,min(1,round(slices_num/2)))
 			else
-				user.visible_message("<b>\The [user]</b> slices \the [src]!", "<span class='notice'>You slice \the [src]!</span>")
-
+				user.balloon_alert_visible("\The [user] slices \the [src]!", "You slice \the [src]!") // CHOMPEdit
+	// CHOMPEdit End - A long list of to_chat to balloon_alert
 			var/reagents_per_slice = reagents.total_volume/slices_num
 			for(var/i=1 to (slices_num-slices_lost))
 				var/obj/slice = new slice_path (src.loc)
@@ -396,7 +404,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/proc/unpackage(mob/user)
 	package = FALSE
-	to_chat(user, "<span class='notice'>You unwrap [src].</span>")
+	balloon_alert(user, "You unwrap [src].") // CHOMPEdit
 	playsound(user,opening_sound, 15, 1)
 	if(package_trash)
 		var/obj/item/T = new package_trash
@@ -408,7 +416,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/proc/uncan(mob/user)
 	canned = FALSE
-	to_chat(user, "<span class='notice'>You unseal \the [src] with a crack of metal.</span>")
+	balloon_alert(user, "You unseal \the [src] with a crack of metal.") // CHOMPEdit
 	playsound(loc,opening_sound, rand(10,50), 1)
 	if(canned_open_state)
 		icon_state = canned_open_state
@@ -419,7 +427,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/attack_generic(var/mob/living/user)
 	if(!isanimal(user) && !isalien(user))
 		return
-	user.visible_message("<b>[user]</b> nibbles away at \the [src].","You nibble away at \the [src].")
+	user.balloon_alert_visible("[user] nibbles away at \the [src].","You nibble away at \the [src].") // CHOMPEdit
 	bitecount++
 	if(reagents)
 		reagents.trans_to_mob(user, bitesize, CHEM_INGEST)

@@ -7,7 +7,7 @@
 			playsound(src,'sound/items/eatfood.ogg', rand(10,50), 1)
 			user.drop_item()
 			forceMove(H.vore_selected)
-			to_chat(H, "<span class='notice'>You can taste the flavor of garbage. Wait what?</span>")
+			balloon_alert(H, "You can taste the flavor of garbage. Wait what?") // CHOMPEdit - Balloon alerts
 			return
 
 	if(isrobot(M))
@@ -16,7 +16,7 @@
 			playsound(src,'sound/items/eatfood.ogg', rand(10,50), 1)
 			user.drop_item()
 			forceMove(R.vore_selected)
-			R.visible_message("<span class='warning'>[user] feeds [R] with [src]!</span>")
+			R.balloon_alert_visible("[user] feeds [R] with [src]!", "You feed [R] \the [src]!") // CHOMPEdit - Balloon alerts
 			return
 	..()
 
