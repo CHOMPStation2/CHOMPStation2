@@ -1,0 +1,8 @@
+author: "Raeschen"
+delete-after: True
+changes:
+  - bugfix: "Upgrades Timsort"
+  - bugfix: "Upgrades machinery SS a little in structure"
+  - bugfix: "Expands find_references functionality with a few extra debug modes"
+  - bugfix: "A typo in atmos pipes"
+  - bugfix: "Some CALLs to LIBCALL"
