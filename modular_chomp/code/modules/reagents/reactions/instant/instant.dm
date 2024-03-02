@@ -125,3 +125,11 @@
 	result = "phoenixbreath"
 	required_reagents = list("vermicetol" = 1, "liquidlife" = 1, "neoliquidfire" = 1, "souldew" = 1, "phoron" = 1, "dermaline" = 1)
 	result_amount = 6
+
+/decl/chemical_reaction/instant/dryagent
+	name = "Dry Agent"
+	id = "dryagent"
+	result = "dryagent"
+	required_reagents = list("ethanol" = 2, "sodium" = 2, "phoron" = 0.1)
+	catalysts = list("phoron" = 5)
+	result_amount = 4

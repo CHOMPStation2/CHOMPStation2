@@ -1,0 +1,30 @@
+2024-03-01:
+  TheCaramelion:
+  - balance: Halved the max time Infected Room event gets announced
+  - balance: More mucus per trigger of Infected Room event
+  - bugfix: Infected Room event picking maints as valid area
+  - bugfix: Incorrect announcement level for Infected Room event
+  Upstream:
+  - balance: reduces the loss rate from 35\~45% to 20\~25% of the smart stoage
+  - balance: increases the sheet maxcap from 250 to ~~400~~ 500 of the smart stoage
+  - balance: adds a minimum threshold of 20 to sheet culling to the smart stoage
+2024-03-02:
+  ItsSelis:
+  - qol: Updates DCS backend code.
+  Raeschen:
+  - bugfix: observer_move applied on init (if in a mob) as well as enter and exit
+  SpadesNeil:
+  - refactor: Improves dev sanity by moving values where they should belong.
+  - balance: Reverts excessively high digestion damage values. Will use fallback values,
+      which right now are 0.5 brute 0.5 burn per gurgle tick.
+  - balance: Allows digestion chance on struggle.
+  - balance: Tiny nerf to escape chance because I feel like it.
+  - balance: Allows snakes to bump nom mobs in the same faction.
+  - balance: Snakes digest by default now, except for Noodle, who will hold instead.
+  - balance: Snake bellies now digest food items.
+  - rscadd: Added idle belly emotes.
+  - rscadd: Added struggle emotes.
+  - bugfix: Various tweaks and fixes to remove redundant code.
+  TheCaramelion:
+  - rscadd: Dry Agent reagent
+  - rscadd: Dry galoshes
