@@ -4723,6 +4723,7 @@
 #include "modular_chomp\code\game\turfs\turfpacks\unsim_turfs\unsim_turfs_tiles.dm"
 #include "modular_chomp\code\game\turfs\turfpacks\unsim_turfs\unsim_turfs_walls.dm"
 #include "modular_chomp\code\modules\admin\functions\modify_traits.dm"
+#include "modular_chomp\code\modules\admin\verbs\debug.dm"
 #include "modular_chomp\code\modules\admin\verbs\randomverbs.dm"
 #include "modular_chomp\code\modules\admin\verbs\tgui_verbs.dm"
 #include "modular_chomp\code\modules\artifice\deadringer.dm"
