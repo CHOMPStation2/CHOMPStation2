@@ -555,7 +555,7 @@
 		return SURGERY_FAILURE
 
 	if(!(affected.model != "Skrellian Exoskeleton"))
-		user.balloon_alert(user, "<span class='dangerou'>You're fairly certain a nymph can't pilot a normal robot.") // CHOMPEdit - balloon alert
+		user.balloon_alert(user, "You're fairly certain a nymph can't pilot a normal robot.") // CHOMPEdit - balloon alert
 		return SURGERY_FAILURE
 
 	if(!target.should_have_organ("brain"))

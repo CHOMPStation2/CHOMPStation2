@@ -57,8 +57,8 @@
 
 /datum/surgery_step/limb/attach/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/E = tool
-	user.balloon_alert_visible("<span class='notice'>[user] has attached [target]'s [E.name] to the [E.amputation_point].",	\
-	"<span class='notice'>You have attached [target]'s [E.name] to the [E.amputation_point].") // CHOMPEdit - Ballon alert
+	user.balloon_alert_visible("[user] has attached [target]'s [E.name] to the [E.amputation_point].",	\
+	"You have attached [target]'s [E.name] to the [E.amputation_point].") // CHOMPEdit - Ballon alert
 	user.drop_from_inventory(E)
 	E.replaced(target)
 
@@ -105,8 +105,8 @@
 
 /datum/surgery_step/limb/connect/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/E = target.get_organ(target_zone)
-	user.balloon_alert_visible("<span class='notice'>[user] has connected tendons and muscles in [target]'s [E.amputation_point] with [tool].",	\
-	"<span class='notice'>You have connected tendons and muscles in [target]'s [E.amputation_point] with [tool].") // CHOMPEdit - Ballon alert
+	user.balloon_alert_visible("[user] has connected tendons and muscles in [target]'s [E.amputation_point] with [tool].",	\
+	"You have connected tendons and muscles in [target]'s [E.amputation_point] with [tool].") // CHOMPEdit - Ballon alert
 	E.status &= ~ORGAN_CUT_AWAY
 	target.update_icons_body()
 	target.updatehealth()
@@ -143,8 +143,8 @@
 
 /datum/surgery_step/limb/mechanize/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/robot_parts/L = tool
-	user.balloon_alert_visible("<span class='notice'>[user] has attached \the [tool] to [target].",	\
-	"<span class='notice'>You have attached \the [tool] to [target].") // CHOMPEdit - Ballon alert
+	user.balloon_alert_visible("[user] has attached \the [tool] to [target].",	\
+	"You have attached \the [tool] to [target].") // CHOMPEdit - Ballon alert
 
 	if(L.part)
 		for(var/part_name in L.part)

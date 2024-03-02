@@ -356,11 +356,11 @@
 		return 0
 
 	if((affected.robotic >= ORGAN_ROBOT) && !(O.robotic >= ORGAN_ROBOT))
-		user.balloon_alert(user, "<span class='danger'>You cannot install a naked organ into a robotic body.") // CHOMPEdit - Ballon alert
+		user.balloon_alert(user, "You cannot install a naked organ into a robotic body.") // CHOMPEdit - Ballon alert
 		return SURGERY_FAILURE
 
 	if(!target.species)
-		user.balloon_alert(user, "<span class='danger'>You have no idea what species this person is. Report this on the bug tracker.") // CHOMPEdit - Ballon alert
+		user.balloon_alert(user, "You have no idea what species this person is. Report this on the bug tracker.") // CHOMPEdit - Ballon alert
 		return SURGERY_FAILURE
 
 	//var/o_is = (O.gender == PLURAL) ? "are" : "is"

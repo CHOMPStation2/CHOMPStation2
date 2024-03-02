@@ -165,7 +165,7 @@
 	user.balloon_alert_visible("[user] puts \the [tool] inside [target]'s [get_cavity(affected)] cavity.", \
 	"You put \the [tool] inside [target]'s [get_cavity(affected)] cavity." ) // CHOMPEdit - balloon alert // CHOMPEdit - balloon alert
 	if (tool.w_class > get_max_wclass(affected)/2 && prob(50) && (affected.robotic < ORGAN_ROBOT))
-		user.balloon_alert(user, " You tear some blood vessels trying to fit such a big object in this cavity.")
+		user.balloon_alert(user, "You tear some blood vessels trying to fit such a big object in this cavity.")
 		var/datum/wound/internal_bleeding/I = new (10)
 		affected.wounds += I
 		affected.owner.custom_pain("You feel something rip in your [affected.name]!", 1)
@@ -216,7 +216,7 @@
 			"You take \the [tool] out of the incision on [target]'s [affected.name]." ) // CHOMPEdit - balloon alert // CHOMPEdit - balloon alert
 			return
 		if(!do_mob(user, target, 1)) //They moved away
-			user.balloon_alert(user, "<span class='warning'>You must remain close to and keep focused on your patient to conduct surgery.")
+			user.balloon_alert(user, "You must remain close to and keep focused on your patient to conduct surgery.")
 			user.balloon_alert_visible("[user] fails to remove anything from [target]'s [affected.name] with \the [tool]!", \
 			"You fail to remove the [obj] from [target]'s [affected.name]s with \the [tool]!" )
 			return
