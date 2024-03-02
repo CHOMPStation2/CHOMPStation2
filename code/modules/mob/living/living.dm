@@ -831,6 +831,15 @@
 /mob/living/proc/slip(var/slipped_on,stun_duration=8)
 	return 0
 
+// CHOMPAdd - Drop both things on hands
+/mob/living/proc/drop_both_hands()
+	if(l_hand)
+		unEquip(l_hand)
+	if(r_hand)
+		unEquip(r_hand)
+	return
+// CHOMPEnd
+
 /mob/living/carbon/drop_from_inventory(var/obj/item/W, var/atom/target = null)
 	return !(W in internal_organs) && ..()
 
@@ -963,17 +972,43 @@
 			lying = incapacitated(INCAPACITATION_KNOCKDOWN)
 			canmove = !incapacitated(INCAPACITATION_DISABLED)
 
+	if(lying && (incapacitated(INCAPACITATION_KNOCKOUT) || incapacitated(INCAPACITATION_STUNNED))) // CHOMPAdd - Making sure we're in good condition to crawl
+		canmove = 0
+		drop_both_hands()
+	else
+		canmove = 1
+
 	if(lying)
 		density = FALSE
+	/* CHOMPEdit - Allow us to hold stuff while laying down.
 		if(l_hand)
 			unEquip(l_hand)
 		if(r_hand)
 			unEquip(r_hand)
 		for(var/obj/item/weapon/holder/holder in get_mob_riding_slots())
 			unEquip(holder)
+	*/
 		update_water() // Submerges the mob.
+		// CHOMPAdd Start - For crawling.
+		stop_pulling()
+
+		if(!passtable_crawl_checked)
+			passtable_crawl_checked = TRUE
+			if(pass_flags & PASSTABLE)
+				passtable_reset = FALSE
+			else
+				passtable_reset = TRUE
+				pass_flags |= PASSTABLE
+
+		// CHOMPEdit End
 	else
 		density = initial(density)
+	// CHOMPEdit Start - Rest passtable when crawling
+		if(passtable_reset)
+			passtable_reset = TRUE
+			pass_flags &= ~PASSTABLE
+		passtable_crawl_checked = FALSE
+	// CHOMPEdit End
 
 	for(var/obj/item/weapon/grab/G in grabbed_by)
 		if(G.state >= GRAB_AGGRESSIVE)
