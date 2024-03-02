@@ -51,13 +51,14 @@ SUBSYSTEM_DEF(garbage)
 	#ifdef REFERENCE_TRACKING
 	var/list/reference_find_on_fail = list()
 	var/find_reference_on_fail_global_toggle = FALSE
-<<<<<<< HEAD
-	#ifdef REFERENCE_TRACKING_DEBUG
+	
+	// CHOMPEdit start - unique to us
+	#ifdef REFERENCE_TRACKING_DEBUG 
 	//Should we save found refs. Used for unit testing
 	var/should_save_refs = FALSE
 	#endif
-=======
->>>>>>> a3e33e4370... Various fixes upport from chomp (#15794)
+	//ChompEDIT END
+	
 	#endif
 
 
