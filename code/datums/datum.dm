@@ -22,7 +22,7 @@
 	var/list/open_tguis // CHOMPEdit: FIXME: open_uis
 
 	/// Active timers with this datum as the target
-	var/list/active_timers
+	var/list/_active_timers // CHOMPEdit
 
 	/**
 	  * Components attached to this datum
@@ -78,13 +78,13 @@
 	tag = null
 	weak_reference = null //ensure prompt GCing of weakref.
 
-	if(active_timers)
-		var/list/timers = active_timers
-		active_timers = null
-		for(var/datum/timedevent/timer as anything in timers)
-			if (timer.spent)
-				continue
-			qdel(timer)
+	//clear timers
+	var/list/timers = _active_timers // CHOMPEdit
+	_active_timers = null // CHOMPEdit
+	for(var/datum/timedevent/timer as anything in timers)
+		if (timer.spent)
+			continue
+		qdel(timer)
 
 	#ifdef REFERENCE_TRACKING
 	#ifdef REFERENCE_TRACKING_DEBUG
