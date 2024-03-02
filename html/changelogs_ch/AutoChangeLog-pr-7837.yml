@@ -1,0 +1,4 @@
+author: "ItsSelis"
+delete-after: True
+changes:
+  - qol: "Improved some of the dreaming code including it's strings."
