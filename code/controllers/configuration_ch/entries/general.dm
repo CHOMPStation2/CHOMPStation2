@@ -657,8 +657,11 @@
 
 /datum/config_entry/flag/disable_webhook_embeds
 
+/// Default is config/jukebox.json
+/// The default is set in the config example.
+/// If it gets set here it will be added twice into the configuration variable!
 /datum/config_entry/str_list/jukebox_track_files
-	default = list("config/jukebox.json")
+	default = null
 
 /datum/config_entry/number/suggested_byond_version
 	default = null

@@ -229,6 +229,7 @@ var/list/admin_verbs_server = list(
 	)
 
 var/list/admin_verbs_debug = list(
+	/client/proc/reload_configuration, // CHOMPEdit
 	/client/proc/getruntimelog,                     //allows us to access runtime logs to somebody,
 	/client/proc/cmd_admin_list_open_jobs,
 	/client/proc/Debug2,
