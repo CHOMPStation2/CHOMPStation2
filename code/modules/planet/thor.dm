@@ -96,7 +96,7 @@ var/datum/planet/thor/planet_thor = null
 
 //todo, remove snow and other weathers, this is copypastad from v4
 /datum/weather_holder/thor
-	temperature = T0C
+	temperature = 313
 	allowed_weather_types = list(
 		WEATHER_CLEAR			= new /datum/weather/thor/clear(),
 		WEATHER_OVERCAST		= new /datum/weather/thor/overcast(),

@@ -1219,6 +1219,9 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/survivalpod/superpose/LoneHome)
+"nC" = (
+/turf/simulated/floor,
+/area/survivalpod/superpose/LoneHome)
 "ES" = (
 /obj/structure/simple_door/wood,
 /obj/structure/sign/graffiti/pisoff,
@@ -1532,7 +1535,7 @@ cn
 ad
 cE
 cN
-ag
+nC
 cR
 cY
 aQ

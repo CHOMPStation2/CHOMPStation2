@@ -30,7 +30,7 @@
 [b]Notice[/b]: The Vir government welcomes you to this world."}
 
 	map_z = list(Z_LEVEL_JUNGLE)
-	initial_generic_waypoints = list("thor_nw","thor_s","spacebus_jungle")
+	initial_generic_waypoints = list("thor_nw","thor_e","spacebus_jungle")
 	start_x  = 11
 	start_y  = 17
 	skybox_offset_x = 128
@@ -121,7 +121,21 @@
 	name = "Tropical Caves"
 	icon_state = "darkred"
 	always_unpowered = TRUE
+
+/area/surface/thor/abandonedhouse
+	name = "Jungle Abandoned House"
+	icon_state = "away1"
+
+/area/surface/thor/commstower
+	name = "Jungle Comms Tower"
+	icon_state = "away1"
 //TURFS (mostly existing turfs with armos changes)
+
+/turf/unsimulated/wall/planetary/normal/thor
+	oxygen		= THOR_MOL_O2
+	nitrogen	= THOR_MOL_N2
+	temperature	= THOR_AVG_TEMP
+
 /turf/simulated/mineral/thor
 	oxygen		= THOR_MOL_O2
 	nitrogen	= THOR_MOL_N2
