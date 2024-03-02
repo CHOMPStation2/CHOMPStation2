@@ -379,7 +379,7 @@
 	},
 /obj/item/weapon/book/tome/imbued,
 /obj/item/weapon/book/manual/bar_guide,
-/obj/item/weapon/book/manual/engineering_construction,
+/obj/item/weapon/book/manual/wiki/engineering_construction,
 /obj/item/weapon/book/manual/synthetic_life,
 /turf/simulated/shuttle/floor,
 /area/submap/intactemptyship)
@@ -433,7 +433,7 @@
 /obj/item/weapon/book/codex/lore/robutt,
 /obj/item/weapon/book/manual/anomaly_spectroscopy,
 /obj/item/weapon/book/manual/barman_recipes,
-/obj/item/weapon/book/manual/engineering_guide,
+/obj/item/weapon/book/manual/wiki/engineering_guide,
 /obj/item/weapon/book/manual/rotary_electric_generator,
 /turf/simulated/shuttle/floor,
 /area/submap/intactemptyship)

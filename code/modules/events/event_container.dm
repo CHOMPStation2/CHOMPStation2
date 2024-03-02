@@ -91,10 +91,22 @@ var/global/list/severity_to_string = list(EVENT_LEVEL_MUNDANE = "Mundane", EVENT
 	return weight
 
 /datum/event_container/proc/set_event_delay()
+	// CHOMPEdit Start
+	var/list/event_delays
+
+	switch(severity)
+		if(EVENT_LEVEL_MUNDANE)
+			event_delays = CONFIG_GET(keyed_list/event_first_run_mundane)
+		if(EVENT_LEVEL_MODERATE)
+			event_delays = CONFIG_GET(keyed_list/event_first_run_moderate)
+		if(EVENT_LEVEL_MAJOR)
+			event_delays = CONFIG_GET(keyed_list/event_first_run_major)
+
 	// If the next event time has not yet been set and we have a custom first time start
-	if(next_event_time == 0 && CONFIG_GET(keyed_list/event_first_run)[severity]) // CHOMPEdit
-		var/lower = CONFIG_GET(keyed_list/event_first_run)[severity]["lower"] // CHOMPEdit
-		var/upper = CONFIG_GET(keyed_list/event_first_run)[severity]["upper"] // CHOMPEdit
+	if(next_event_time == 0 && event_delays)
+		var/lower = (event_delays["lower"] MINUTES)
+		var/upper = (event_delays["upper"] MINUTES)
+		// CHOMPEdit End
 		var/event_delay = rand(lower, upper)
 		next_event_time = world.time + event_delay
 	// Otherwise, follow the standard setup process

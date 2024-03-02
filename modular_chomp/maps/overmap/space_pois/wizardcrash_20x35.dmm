@@ -194,7 +194,7 @@
 "aN" = (
 /obj/structure/bookcase,
 /obj/item/weapon/book/manual/barman_recipes,
-/obj/item/weapon/book/manual/engineering_hacking,
+/obj/item/weapon/book/manual/wiki/engineering_hacking,
 /turf/simulated/floor/wood,
 /area/submap/wizardcrash)
 "aO" = (

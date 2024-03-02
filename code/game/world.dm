@@ -45,11 +45,13 @@
 		to_world_log("Your server's byond version does not meet the recommended requirements for this server. Please update BYOND")
 
 	TgsNew(new /datum/tgs_event_handler/impl, TGS_SECURITY_TRUSTED) // CHOMPEdit - tgs event handler
-	VgsNew() // VOREStation Edit - VGS
+	// VgsNew() // VOREStation Edit - VGS // CHOMPEdit - Has to be initialized after config was loaded
 
 	config.Load(params[OVERRIDE_CONFIG_DIRECTORY_PARAMETER]) // CHOMPEdit
 
 	ConfigLoaded() // CHOMPEdit
+	makeDatumRefLists() // CHOMPEdit
+	VgsNew() // CHOMPEdit
 
 	var/servername = CONFIG_GET(string/servername) // CHOMPEdit
 	if(config && servername != null && CONFIG_GET(flag/server_suffix) && world.port > 0) // CHOMPEdit

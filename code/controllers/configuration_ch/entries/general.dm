@@ -495,10 +495,18 @@
 
 /// If the first delay has a custom start time
 /// No custom time, no custom time, between 80 to 100 minutes respectively.
-/datum/config_entry/keyed_list/event_first_run
+/datum/config_entry/keyed_list/event_first_run_mundane
 	key_mode = KEY_MODE_TEXT
 	value_mode = VALUE_MODE_NUM
-	default = list(EVENT_LEVEL_MUNDANE = null, 	EVENT_LEVEL_MODERATE = null,	EVENT_LEVEL_MAJOR = list("lower" = 48000, "upper" = 60000))
+
+/datum/config_entry/keyed_list/event_first_run_moderate
+	key_mode = KEY_MODE_TEXT
+	value_mode = VALUE_MODE_NUM
+
+/datum/config_entry/keyed_list/event_first_run_major
+	key_mode = KEY_MODE_TEXT
+	value_mode = VALUE_MODE_NUM
+	default = list("lower" = 80, "upper" = 100)
 
 /// The lowest delay until next event
 /// 10, 30, 50 minutes respectively
@@ -661,7 +669,6 @@
 /// The default is set in the config example.
 /// If it gets set here it will be added twice into the configuration variable!
 /datum/config_entry/str_list/jukebox_track_files
-	default = null
 
 /datum/config_entry/number/suggested_byond_version
 	default = null
