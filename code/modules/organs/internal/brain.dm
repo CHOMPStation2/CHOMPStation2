@@ -78,8 +78,8 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 		tmp_owner.internal_organs_by_name[organ_tag] = new replace_path(tmp_owner, 1)
 		tmp_owner = null
 
-/obj/item/organ/internal/brain/New()
-	..()
+/obj/item/organ/internal/brain/Initialize() // CHOMPEdit
+	. = ..() // CHOMPEdit
 	health = CONFIG_GET(number/default_brain_health) // CHOMPEdit
 	defib_timer = (CONFIG_GET(number/defib_timer) MINUTES) / 2 // CHOMPEdit
 	spawn(5)
