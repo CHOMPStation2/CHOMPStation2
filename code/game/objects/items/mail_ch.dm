@@ -116,6 +116,7 @@
 		return FALSE
 
 	opening = TRUE
+	balloon_alert(user, "Unwrapping...")
 	if(!do_after(user, 1.5 SECONDS, target = user))
 		opening = FALSE
 		return FALSE

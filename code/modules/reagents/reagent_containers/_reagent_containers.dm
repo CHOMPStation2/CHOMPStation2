@@ -22,7 +22,7 @@
 	if(!possible_transfer_amounts)
 		src.verbs -= /obj/item/weapon/reagent_containers/verb/set_APTFT
 	create_reagents(volume)
-	
+
 	if(starts_with)
 		var/total_so_far = 0
 		for(var/string in starts_with)
@@ -74,7 +74,8 @@
 
 	var/contained = reagentlist()
 	add_attack_logs(user,target,"Splashed with [src.name] containing [contained]")
-	user.visible_message("<span class='danger'>[target] has been splashed with something by [user]!</span>", "<span class = 'notice'>You splash the solution onto [target].</span>")
+	// user.visible_message("<span class='danger'>[target] has been splashed with something by [user]!</span>", "<span class = 'notice'>You splash the solution onto [target].</span>")
+	balloon_alert_visible("[target] has been splashed with something by [user]!", "Splashed the solution onto [target]") // CHOMPEdit - Bubble alerts
 	reagents.splash(target, reagents.total_volume)
 	return 1
 
@@ -101,20 +102,20 @@
 	if(ishuman(target))
 		var/mob/living/carbon/human/H = target
 		if(!H.check_has_mouth())
-			to_chat(user, "Where do you intend to put \the [src]? [user == target ? "You don't" : "\The [H] doesn't"] have a mouth!")
+			balloon_alert(user, "Where do you intend to put \the [src]? [user == target ? "You don't" : "\The [H] doesn't"] have a mouth!") // CHOMPEdit - Changed to ballon_alert
 			return FALSE
 		var/obj/item/blocked = H.check_mouth_coverage()
 		if(blocked)
-			to_chat(user, "<span class='warning'>\The [blocked] is in the way!</span>")
+			ballon_alert(user, "\The [blocked] is in the way!") // CHOMPEdit - Changed to ballon_alert
 			return FALSE
 
 	user.setClickCooldown(user.get_attack_speed(src)) //puts a limit on how fast people can eat/drink things
-	if(user == target)	
+	if(user == target)
 		self_feed_message(user)
 		reagents.trans_to_mob(user, issmall(user) ? CEILING(amount_per_transfer_from_this/2, 1) : amount_per_transfer_from_this, CHEM_INGEST)
 		feed_sound(user)
 		return TRUE
-		
+
 	else
 		other_feed_message_start(user, target)
 		if(!do_mob(user, target))
@@ -140,5 +141,6 @@
 		return 1
 
 	var/trans = reagents.trans_to(target, amount_per_transfer_from_this)
-	to_chat(user, "<span class='notice'>You transfer [trans] units of the solution to [target].</span>")
+	// to_chat(user, "<span class='notice'>You transfer [trans] units of the solution to [target].</span>")
+	balloon_alert(user, "Transfered [trans] units to [target]") // CHOMPEdit - Balloon alerts! They're the future, I tell you.
 	return 1
