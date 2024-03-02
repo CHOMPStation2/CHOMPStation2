@@ -327,11 +327,11 @@ EXPECTED_ROUND_LENGTH 360
 
 ## The lower delay between events in minutes.
 ## Affect mundane, moderate, and major events respectively
-EVENT_DELAY_LOWER 30;45;60
+EVENT_DELAY_LOWER 30 45 60
 
 ## The upper delay between events in minutes.
 ## Affect mundane, moderate, and major events respectively
-EVENT_DELAY_UPPER 45;60;120
+EVENT_DELAY_UPPER 45 60 120
 
 ## The delay until the first time an event of the given severity runs in minutes.
 ## Unset setting use the EVENT_DELAY_LOWER and EVENT_DELAY_UPPER values instead.
