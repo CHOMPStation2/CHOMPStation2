@@ -1478,8 +1478,6 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "spiketail-1"
-<<<<<<< HEAD
-=======
 
 /datum/sprite_accessory/tail/longtail/kaiju_tail_a_long
 	name = "Kaiju tail A, dual color"
@@ -1497,4 +1495,3 @@
 	extra_overlay2 = "kaiju_long_a_spikes_glow"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
->>>>>>> 829bcd484a... Merge pull request #15785 from MonoHauki/hauki-branch
