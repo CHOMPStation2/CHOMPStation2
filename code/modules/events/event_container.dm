@@ -113,7 +113,7 @@ var/global/list/severity_to_string = list(EVENT_LEVEL_MUNDANE = "Mundane", EVENT
 				playercount_modifier = 0.8
 		playercount_modifier = playercount_modifier * delay_modifier
 
-		var/event_delay = rand(CONFIG_GET(keyed_list/event_delay_lower)[severity], CONFIG_GET(keyed_list/event_delay_upper)[severity]) * playercount_modifier // CHOMPEdit
+		var/event_delay = rand(CONFIG_GET(number_list/event_delay_lower)[severity] MINUTES, CONFIG_GET(number_list/event_delay_upper)[severity] MINUTES) * playercount_modifier // CHOMPEdit
 		next_event_time = world.time + event_delay
 
 	log_debug("Next event of severity [severity_to_string[severity]] in [(next_event_time - world.time)/600] minutes.")

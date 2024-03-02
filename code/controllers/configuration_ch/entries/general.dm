@@ -495,17 +495,13 @@
 
 /// The lowest delay until next event
 /// 10, 30, 50 minutes respectively
-/datum/config_entry/keyed_list/event_delay_lower
-	key_mode = KEY_MODE_TEXT
-	value_mode = VALUE_MODE_NUM
-	default = list(EVENT_LEVEL_MUNDANE = 6000,	EVENT_LEVEL_MODERATE = 18000,	EVENT_LEVEL_MAJOR = 30000)
+/datum/config_entry/number_list/event_delay_lower
+	default = list(10, 30, 50)
 
 /// The upper delay until next event
 /// 15, 45, 70 minutes respectively
-/datum/config_entry/keyed_list/event_delay_upper
-	key_mode = KEY_MODE_TEXT
-	value_mode = VALUE_MODE_NUM
-	default = list(EVENT_LEVEL_MUNDANE = 9000,	EVENT_LEVEL_MODERATE = 27000,	EVENT_LEVEL_MAJOR = 42000)
+/datum/config_entry/number_list/event_delay_upper
+	default = list(15, 45, 70)
 
 /datum/config_entry/flag/aliens_allowed
 	default = TRUE
