@@ -193,9 +193,12 @@
 			if(prob(loot_list[path]))
 				new path(get_turf(src))
 
-	update_icon_timer = addtimer(CALLBACK(src, PROC_REF(update_icon)), 3, TIMER_STOPPABLE)
+	update_icon_timer = addtimer(CALLBACK(src, PROC_REF(callback_update_icon)), 3, TIMER_STOPPABLE)
 
 	return ..(gibbed,deathmessage)
+
+/mob/living/simple_mob/proc/callback_update_icon()
+	update_icon()
 
 /mob/living/simple_mob/Destroy()
 	deltimer(update_icon_timer)
