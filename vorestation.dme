@@ -1451,6 +1451,7 @@
 #include "code\game\objects\items\weapons\weaponry.dm"
 #include "code\game\objects\items\weapons\weldbackpack.dm"
 #include "code\game\objects\items\weapons\weldbackpack_ch.dm"
+#include "code\game\objects\items\weapons\wiki_manuals_ch.dm"
 #include "code\game\objects\items\weapons\circuitboards\broken.dm"
 #include "code\game\objects\items\weapons\circuitboards\circuitboard.dm"
 #include "code\game\objects\items\weapons\circuitboards\circuitboards_vr.dm"

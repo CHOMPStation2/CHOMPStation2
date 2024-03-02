@@ -25,7 +25,7 @@ var/global/datum/global_init/init = new ()
 */ //VOREStation Removal End
 	decls_repository = new()
 	//load_configuration() // CHOMP Edit
-	makeDatumRefLists()
+	//makeDatumRefLists() // CHOMP Edit
 
 	initialize_integrated_circuits_list()
 

@@ -335,9 +335,14 @@ EVENT_DELAY_UPPER 45 60 120
 
 ## The delay until the first time an event of the given severity runs in minutes.
 ## Unset setting use the EVENT_DELAY_LOWER and EVENT_DELAY_UPPER values instead.
-EVENT_CUSTOM_START_MINOR 30;30
-EVENT_CUSTOM_START_MODERATE 30;30
-EVENT_CUSTOM_START_MAJOR 100;100
+EVENT_FIRST_RUN_MUNDANE lower 30
+EVENT_FIRST_RUN_MUNDANE upper 30
+
+EVENT_FIRST_RUN_MODERATE lower 30
+EVENT_FIRST_RUN_MODERATE upper 30
+
+EVENT_FIRST_RUN_MAJOR lower 100
+EVENT_FIRST_RUN_MAJOR upper 100
 
 ## Uncomment to make proccall require R_ADMIN instead of R_DEBUG
 ## designed for environments where you have testers but don't want them

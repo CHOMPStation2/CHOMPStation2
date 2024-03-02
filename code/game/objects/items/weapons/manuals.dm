@@ -5,7 +5,7 @@
 	due_date = 0 // Game time in 1/10th seconds
 	unique = 1   // 0 - Normal book, 1 - Should not be treated as normal book, unable to be copied, unable to be modified
 
-
+/* CHOMPEdit Start
 /obj/item/weapon/book/manual/engineering_construction
 	name = "Station Repairs and Construction"
 	icon_state ="bookEngineering"
@@ -27,6 +27,7 @@
 		</html>
 
 		"}
+*/ // CHOMPEdit End
 
 /obj/item/weapon/book/manual/engineering_particle_accelerator
 	name = "Particle Accelerator User's Guide"
@@ -319,6 +320,7 @@
 				</body>
 			</html>"}			// CHOMPedit END : Updating the R-UST manual
 
+/* CHOMPEdit Start
 /obj/item/weapon/book/manual/engineering_hacking
 	name = "Hacking"
 	icon_state ="bookHacking"
@@ -340,7 +342,7 @@
 		</html>
 
 		"}
-
+*/ // CHOMPEdit End
 
 /obj/item/weapon/book/manual/engineering_singularity_safety
 	name = "Singularity Safety in Special Circumstances"
@@ -675,6 +677,7 @@
 			</html>
 			"}
 
+/* CHOMPEdit Start
 /obj/item/weapon/book/manual/robotics_manual
 	name = "Guide to Robotics"
 	icon_state ="evabook"
@@ -692,6 +695,7 @@
 		</body>
 		</html>
 		"}
+*/ // CHOMPEdit End
 
 /obj/item/weapon/book/manual/robotics_cyborgs
 	name = "Cyborgs for Dummies"
@@ -899,6 +903,7 @@
 		"}
 
 
+/* CHOMPEdit Start
 /obj/item/weapon/book/manual/security_space_law
 	name = "Corporate Regulations"
 	desc = "A set of corporate guidelines for keeping law and order on privately-owned space stations."
@@ -993,7 +998,7 @@
 		</html>
 
 		"}
-
+*/ // CHOMPEdit End
 
 /obj/item/weapon/book/manual/chef_recipes
 	name = "Chef Recipes"

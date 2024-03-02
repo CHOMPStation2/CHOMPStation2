@@ -60,7 +60,7 @@
 						/obj/item/toy/nanotrasenballoon,
 						/obj/item/toy/syndicateballoon,
 						/obj/item/weapon/aiModule/syndicate,
-						/obj/item/weapon/book/manual/engineering_hacking,
+						/obj/item/weapon/book/manual/wiki/engineering_hacking, // CHOMPEdit
 						/obj/item/weapon/card/emag,
 						/obj/item/weapon/card/emag_broken,
 						/obj/item/weapon/card/id/syndicate,
