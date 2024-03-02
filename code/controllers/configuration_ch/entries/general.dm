@@ -153,6 +153,13 @@
 /// adminPMs to non-admins show in a pop-up 'reply' window when set to 1.
 /datum/config_entry/flag/popup_admin_pm
 
+/datum/config_entry/flag/allow_holidays
+
+/datum/config_entry/flag/allow_holidays/ValidateAndSet()
+	. = ..()
+	if(.)
+		Holiday = config_entry_value
+
 /datum/config_entry/number/fps
 	default = 20
 	integer = FALSE
