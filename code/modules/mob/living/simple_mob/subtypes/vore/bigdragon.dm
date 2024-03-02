@@ -787,7 +787,7 @@ I think I covered everything.
 
 /mob/living/simple_mob/vore/bigdragon/proc/chargeend(var/atom/A, var/explicit = 0, var/gentle = 0)
 	//make sure our target still exists and is on a turf
-	if(QDELETED(A) || !isturf(A.loc))
+	if(QDELETED(A) || !isturf(get_turf(A)))
 		set_AI_busy(FALSE)
 		return
 	status_flags |= LEAPING
@@ -829,7 +829,7 @@ I think I covered everything.
 
 /mob/living/simple_mob/vore/bigdragon/proc/firebreathend(var/atom/A)
 	//make sure our target still exists and is on a turf
-	if(QDELETED(A) || !isturf(A.loc))
+	if(QDELETED(A) || !isturf(get_turf(A)))
 		set_AI_busy(FALSE)
 		return
 	var/obj/item/projectile/P = new /obj/item/projectile/bullet/dragon(get_turf(src))
