@@ -1,5 +1,0 @@
-author: "Raeschen"
-delete-after: True
-changes:
-  - bugfix: "nif runtime"
-  - bugfix: "tgui runtimes (status and mob logout)"

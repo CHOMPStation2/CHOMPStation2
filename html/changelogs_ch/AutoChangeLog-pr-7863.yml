@@ -1,5 +1,0 @@
-author: "Raeschen"
-delete-after: True
-changes:
-  - bugfix: "Gargoyle del runtime"
-  - bugfix: "chatmessage runtime"
