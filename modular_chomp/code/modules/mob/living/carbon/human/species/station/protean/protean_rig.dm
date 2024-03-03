@@ -56,6 +56,15 @@
 			to_chat(P, "<span class='notice'>You should have spawned with a backpack to assimilate into your RIG. Try clicking it with a backpack.</span>")
 	..(newloc)
 
+/obj/item/weapon/rig/protean/Destroy()
+	if(myprotean)
+		var/mob/living/carbon/human/P = myprotean
+		var/datum/species/protean/S = P?.species
+		S?.OurRig = null
+		myprotean = null
+	. = ..()
+
+
 /obj/item/weapon/rig/proc/AssimilateBag(var/mob/living/carbon/human/P, var/spawned, var/obj/item/weapon/storage/backpack/B)
 	if(istype(B,/obj/item/weapon/storage/backpack))
 		if(spawned)
