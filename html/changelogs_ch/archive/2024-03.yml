@@ -28,3 +28,28 @@
   TheCaramelion:
   - rscadd: Dry Agent reagent
   - rscadd: Dry galoshes
+2024-03-03:
+  FluffMedic:
+  - bugfix: fix active edges in a few POIS
+  ItsSelis:
+  - qol: Improved some of the dreaming code including it's strings.
+  - qol: Timer subsystem update.
+  Raeschen:
+  - bugfix: Fixes being able to permanently heat up the wilderness/the valley
+  - bugfix: Gargoyle del runtime
+  - bugfix: chatmessage runtime
+  - bugfix: nif runtime
+  - bugfix: tgui runtimes (status and mob logout)
+  - bugfix: globals referencing order mistake in SSmachines
+  - bugfix: Upgrades Timsort
+  - bugfix: Upgrades machinery SS a little in structure
+  - bugfix: Expands find_references functionality with a few extra debug modes
+  - bugfix: A typo in atmos pipes
+  - bugfix: Some CALLs to LIBCALL
+  - bugfix: fixed landmine sprites
+  TheCaramelion:
+  - rscadd: Crawling.
+  - qol: Laying down won't make you drop items in your hands.
+  - qol: You can now equip/unequip items while laying down.
+  Upstream:
+  - rscadd: Added Cascade mode for resonators.

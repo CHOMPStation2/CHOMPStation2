@@ -260,10 +260,12 @@
 /mob/living/carbon/human/handle_footstep(var/turf/T)
 	if(!istype(T) || is_incorporeal() || !config.footstep_volume || !T.footstep_sounds || !T.footstep_sounds.len)
 		return	//CHOMPEdit - Condensed some return checks
-	// Future Upgrades - Multi species support
-	var/list/footstep_sounds = T.footstep_sounds["human"]
-	if(!footstep_sounds)
-		return
+	// CHOMPedit start: Future Upgrades - Multi species support
+	var/list/footstep_sounds = T.footstep_sounds[src.get_species()]
+	if(!LAZYLEN(footstep_sounds))
+		footstep_sounds = T.footstep_sounds["human"] // Probably doesn't have species sounds, use the default // TODO: replace this with a define, unfortunately SPECIES_HUMAN is "Human" instead of "human"
+		if(!footstep_sounds)
+			return // CHOMPedit end
 	var/S = pick(footstep_sounds)
 	GLOB.step_taken_shift_roundstat++
 	if(!S) return

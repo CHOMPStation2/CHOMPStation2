@@ -1,4 +1,0 @@
-author: "Upstream"
-delete-after: True
-changes:
-  - rscadd: "Added Cascade mode for resonators."

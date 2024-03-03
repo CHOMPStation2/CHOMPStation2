@@ -1,4 +1,0 @@
-author: "Raeschen"
-delete-after: True
-changes:
-  - bugfix: "globals referencing order mistake in SSmachines"
