@@ -1224,19 +1224,21 @@
 	return 0
 
 //Exploitable Info Update
+/obj
+	var/datum/weakref/exploit_for = null //if this obj is an exploit for somebody, this points to them
 
 /mob/proc/amend_exploitable(var/obj/item/I)
 	if(istype(I))
 		exploit_addons |= I
 		var/exploitmsg = html_decode("\n" + "Has " + I.name + ".")
 		exploit_record += exploitmsg
+		I.exploit_for = WEAKREF(usr)
 
 
 /obj/Destroy()
-	if(istype(src.loc, /mob))
-		var/mob/holder = src.loc
-		if(src in holder.exploit_addons)
-			holder.exploit_addons -= src
+	if(exploit_for)
+		var/mob/exploited = exploit_for.resolve()
+		exploited?.exploit_addons -= src
 	. = ..()
 
 
