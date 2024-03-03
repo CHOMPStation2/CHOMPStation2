@@ -596,6 +596,8 @@
 // Called whenever an atom leaves this belly
 /obj/belly/Exited(atom/movable/thing, atom/OldLoc)
 	. = ..()
+	if(QDELETED(owner))
+		return
 	thing.exit_belly(src) // CHOMPEdit - atom movable proc, does nothing by default. Overridden in children for special behavior.
 	if(isbelly(thing.loc)) //CHOMPEdit Start
 		var/obj/belly/NB = thing.loc

@@ -89,7 +89,7 @@
  * return bool - TRUE if a new pooled window is opened, FALSE in all other situations including if a new pooled window didn't open because one already exists.
  */
 /datum/tgui/proc/open()
-	if(!user.client)
+	if(!user?.client)
 		return FALSE
 	if(window)
 		return FALSE
@@ -214,7 +214,7 @@
  * optional force bool Send an update even if UI is not interactive.
  */
 /datum/tgui/proc/send_full_update(custom_data, force)
-	if(!user.client || !initialized || closing)
+	if(!user?.client || !initialized || closing)
 		return
 	//if(!COOLDOWN_FINISHED(src, refresh_cooldown))
 		//refreshing = TRUE
@@ -237,7 +237,7 @@
  * optional force bool Send an update even if UI is not interactive.
  */
 /datum/tgui/proc/send_update(custom_data, force)
-	if(!user.client || !initialized || closing)
+	if(!user?.client || !initialized || closing)
 		return
 	var/should_update_data = force || status >= STATUS_UPDATE
 	window.send_message("update", get_payload(
@@ -329,7 +329,8 @@
  */
 /datum/tgui/proc/process_status()
 	var/prev_status = status
-	status = src_object.tgui_status(user, state)
+	if(src_object)
+		status = src_object.tgui_status(user, state)
 	if(parent_ui)
 		status = min(status, parent_ui.status)
 	return prev_status != status

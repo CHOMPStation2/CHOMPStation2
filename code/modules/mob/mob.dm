@@ -23,7 +23,7 @@
 
 	previewing_belly = null // from code/modules/vore/eating/mob_ch.dm
 	vore_selected = null // from code/modules/vore/eating/mob_vr
-	focus = null // a selfref
+	focus = null
 
 	if(mind)
 		if(mind.current == src)
@@ -564,6 +564,9 @@
 
 	if (AM.anchored)
 		to_chat(src, "<span class='warning'>It won't budge!</span>")
+		return
+
+	if(lying) // CHOMPAdd - No pulling while we crawl.
 		return
 
 	var/mob/M = AM
@@ -1221,21 +1224,22 @@
 	return 0
 
 //Exploitable Info Update
-/obj/
-	var/datum/weakref/exploit_for = null //if this obj is an exploit for somebody, this points to them
+/obj
+	var/datum/weakref/exploit_for //if this obj is an exploit for somebody, this points to them
 
 /mob/proc/amend_exploitable(var/obj/item/I)
 	if(istype(I))
 		exploit_addons |= I
 		var/exploitmsg = html_decode("\n" + "Has " + I.name + ".")
 		exploit_record += exploitmsg
-		I.exploit_for = WEAKREF(usr)
+		I.exploit_for = WEAKREF(src)
 
 
 /obj/Destroy()
-	if(istype(exploit_for))
+	if(exploit_for)
 		var/mob/exploited = exploit_for.resolve()
-		exploited.exploit_addons -= src
+		exploited?.exploit_addons -= src
+		exploit_for = null
 	. = ..()
 
 

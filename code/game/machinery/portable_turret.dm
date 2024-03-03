@@ -735,7 +735,7 @@
 		return TURRET_NOT_TARGET
 
 	if(check_synth || check_all)	//If it's set to attack all non-silicons or everything, target them!
-		if(L.lying)
+		if(L.lying && (L.incapacitated(INCAPACITATION_KNOCKOUT) || L.incapacitated(INCAPACITATION_STUNNED))) // CHOMPEdit - Crawling targets are dangerous, if they are able.
 			return check_down ? TURRET_SECONDARY_TARGET : TURRET_NOT_TARGET
 		return TURRET_PRIORITY_TARGET
 
@@ -752,7 +752,7 @@
 		if(assess_perp(L) < 4)
 			return TURRET_NOT_TARGET	//if threat level < 4, keep going
 
-	if(L.lying)		//if the perp is lying down, it's still a target but a less-important target
+	if(L.lying && (L.incapacitated(INCAPACITATION_KNOCKOUT) || L.incapacitated(INCAPACITATION_STUNNED)))		//if the perp is lying down, it's still a target but a less-important target - CHOMPEdit - Crawling targets are dangerous, if they are able.
 		return check_down ? TURRET_SECONDARY_TARGET : TURRET_NOT_TARGET
 
 	return TURRET_PRIORITY_TARGET	//if the perp has passed all previous tests, congrats, it is now a "shoot-me!" nominee
