@@ -23,7 +23,7 @@
 
 	previewing_belly = null // from code/modules/vore/eating/mob_ch.dm
 	vore_selected = null // from code/modules/vore/eating/mob_vr
-
+	focus = null
 
 	if(mind)
 		if(mind.current == src)
@@ -1224,19 +1224,22 @@
 	return 0
 
 //Exploitable Info Update
+/obj
+	var/datum/weakref/exploit_for //if this obj is an exploit for somebody, this points to them
 
 /mob/proc/amend_exploitable(var/obj/item/I)
 	if(istype(I))
 		exploit_addons |= I
 		var/exploitmsg = html_decode("\n" + "Has " + I.name + ".")
 		exploit_record += exploitmsg
+		I.exploit_for = WEAKREF(src)
 
 
 /obj/Destroy()
-	if(istype(src.loc, /mob))
-		var/mob/holder = src.loc
-		if(src in holder.exploit_addons)
-			holder.exploit_addons -= src
+	if(exploit_for)
+		var/mob/exploited = exploit_for.resolve()
+		exploited?.exploit_addons -= src
+		exploit_for = null
 	. = ..()
 
 

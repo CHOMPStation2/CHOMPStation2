@@ -439,7 +439,7 @@
 /datum/reagent/acid/touch_obj(var/obj/O, var/amount) //CHOMPEdit Start
 	if(istype(O, /obj/item) && O.loc)
 		if(isbelly(O.loc) || isbelly(O.loc.loc))
-			var/obj/belly/B = O.loc
+			var/obj/belly/B = (isbelly(O.loc) ? O.loc : O.loc.loc)
 			if(B.item_digest_mode == IM_HOLD)
 				return
 			var/obj/item/I = O
