@@ -23,7 +23,7 @@
 
 	previewing_belly = null // from code/modules/vore/eating/mob_ch.dm
 	vore_selected = null // from code/modules/vore/eating/mob_vr
-
+	focus = null
 
 	if(mind)
 		if(mind.current == src)
