@@ -41,7 +41,7 @@ SUBSYSTEM_DEF(dbcore)
 	//var/db_daemon_started = FALSE
 
 /datum/controller/subsystem/dbcore/Initialize()
-	return ..()
+	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/dbcore/stat_entry(msg)
 	msg = "P:[length(all_queries)]|Active:[length(queries_active)]|Standby:[length(queries_standby)]"

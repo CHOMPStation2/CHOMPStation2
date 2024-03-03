@@ -4,19 +4,21 @@ SUBSYSTEM_DEF(persistence)
 	flags = SS_NO_FIRE
 	var/list/tracking_values = list()
 	var/list/persistence_datums = list()
-	
+
 	/// Places our subsystem can spawn paintings (helps with art spawning differently across maps)
 	var/list/obj/structure/sign/painting/painting_frames = list()
 	var/list/all_paintings = list()
 	var/list/unpicked_paintings = list()
 
+// CHOMPEdit Start
 /datum/controller/subsystem/persistence/Initialize()
-	. = ..()
 	for(var/datum/persistent/P as anything in subtypesof(/datum/persistent))
 		if(initial(P.name))
 			P = new P
 			persistence_datums[P.type] = P
 			P.Initialize()
+	return SS_INIT_SUCCESS
+// CHOMPEdit End
 
 /datum/controller/subsystem/persistence/Shutdown()
 	for(var/thing in persistence_datums)
