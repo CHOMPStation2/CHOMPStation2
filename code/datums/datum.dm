@@ -108,6 +108,16 @@
 	_clear_signal_refs()
 	//END: ECS SHIT
 
+	tag = null
+	SStgui.close_uis(src)
+
+	#ifdef REFERENCE_TRACKING
+	if(find_references_on_destroy)
+		return QDEL_HINT_FINDREFERENCE
+	if(SSgarbage.find_reference_on_fail_global_toggle)
+		return QDEL_HINT_IFFAIL_FINDREFERENCE
+	#endif
+
 	return QDEL_HINT_QUEUE
 
 ///Only override this if you know what you're doing. You do not know what you're doing
@@ -127,19 +137,6 @@
 
 	for(var/target in _signal_procs)
 		UnregisterSignal(target, _signal_procs[target])
-	//END: ECS SHIT
-
-	tag = null
-	SStgui.close_uis(src)
-
-	#ifdef REFERENCE_TRACKING
-	if(find_references_on_destroy)
-		return QDEL_HINT_FINDREFERENCE
-	if(SSgarbage.find_reference_on_fail_global_toggle)
-		return QDEL_HINT_IFFAIL_FINDREFERENCE
-	#endif
-
-	return QDEL_HINT_QUEUE
 
 /**
  * Callback called by a timer to end an associative-list-indexed cooldown.
