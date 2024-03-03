@@ -79,11 +79,9 @@ var/list/runechat_image_cache = list()
 		deltimer(timer_delete)
 		timer_delete = null
 	if(!QDELETED(owned_by))
-		UnregisterSignal(owned_by, COMSIG_PARENT_QDELETING)
-		LAZYREMOVEASSOC(owned_by.seen_messages, message_loc, src)
+		if(owned_by.seen_messages)
+			LAZYREMOVEASSOC(owned_by.seen_messages, message_loc, src)
 		owned_by.images.Remove(message)
-	if(!QDELETED(message_loc))
-		UnregisterSignal(message_loc, COMSIG_PARENT_QDELETING)
 	owned_by = null
 	message_loc = null
 	message = null
