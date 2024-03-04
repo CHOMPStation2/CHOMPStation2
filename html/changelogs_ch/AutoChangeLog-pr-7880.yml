@@ -1,6 +1,0 @@
-author: "Raeschen"
-delete-after: True
-changes:
-  - bugfix: "tickets clientlogout null"
-  - bugfix: "rig parts severe hard del"
-  - bugfix: "protean rig hard dels"

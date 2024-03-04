@@ -1,5 +1,0 @@
-author: "Darlantanis"
-delete-after: True
-changes:
-  - rscadd: "Turfs now support different species footstep sounds"
-  - rscadd: "Adds new default step sounds for tesharii"

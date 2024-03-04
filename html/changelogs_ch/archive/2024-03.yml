@@ -53,3 +53,24 @@
   - qol: You can now equip/unequip items while laying down.
   Upstream:
   - rscadd: Added Cascade mode for resonators.
+2024-03-04:
+  Darlantanis:
+  - rscadd: Turfs now support different species footstep sounds
+  - rscadd: Adds new default step sounds for tesharii
+  Raeschen:
+  - bugfix: tickets clientlogout null
+  - bugfix: rig parts severe hard del
+  - bugfix: protean rig hard dels
+  - bugfix: fixed a few more tgui runtimes
+  - bugfix: fixed bigdragon runtime
+  - bugfix: fixed runechat runtime
+  - bugfix: explotable info runtime on obj (usually implants)
+  - bugfix: belly reagent massive runtime
+  - bugfix: cryopod runtime on mobs without mind datums
+  - bugfix: TTS runtime
+  - bugfix: couple of TGUI runtimes (send_full_update, pen
+  - bugfix: obj/belly runtime on cryo
+  - refactor: tweaked client Del -> Destroy behavior
+  Upstream:
+  - bugfix: Fixed a few number inputs to allow floats on the sensor-, helm- and engine
+      console.

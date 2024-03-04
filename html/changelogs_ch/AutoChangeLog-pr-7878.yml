@@ -1,4 +1,0 @@
-author: "Upstream"
-delete-after: True
-changes:
-  - bugfix: "Fixed a few number inputs to allow floats on the sensor-, helm- and engine console."
