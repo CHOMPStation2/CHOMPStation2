@@ -143,7 +143,7 @@
 		return 0
 	var/zone = user.zone_sel.selecting
 	if(zone in M.op_stage.in_progress) //Can't operate on someone repeatedly.
-		balloon_alert(user, "You can't operate on this area while surgery is already in progress.") // CHOMPEdit
+		to_chat(user, "<span class='warning'>You can't operate on this area while surgery is already in progress.</span>")
 		return 1
 	var/obj/surface = M.get_surgery_surface(user)
 	if(!surface || !surface.surgery_odds) 	// If the surface has a chance of 0% surgery odds (ground), don't even bother trying to do surgery.
@@ -210,7 +210,7 @@
 		var/calc_duration = rand(selected_surgery.min_duration, selected_surgery.max_duration)
 		if(!do_mob(user, M, calc_duration * toolspeed, zone, exclusive = TRUE))
 			success = FALSE
-			balloon_alert(user, "Remain close to and keep focused on your patient to conduct surgery.") // CHOMPEdit
+			to_chat(user, "<span class='warning'>You must remain close to and keep focused on your patient to conduct surgery.</span>")
 
 	if(success)
 		selected_surgery.end_step(user, M, zone, src)

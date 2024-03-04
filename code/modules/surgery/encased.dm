@@ -42,8 +42,8 @@
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
-	user.balloon_alert_visible("[user] begins to cut through [target]'s [affected.encased] with \the [tool].", \
-	"Cutting through [target]'s [affected.encased] with \the [tool].") // CHOMPEdit - Ballon alert
+	user.visible_message("<span class='filter_notice'>[user] begins to cut through [target]'s [affected.encased] with \the [tool].</span>", \
+	"<span class='filter_notice'>You begin to cut through [target]'s [affected.encased] with \the [tool].</span>")
 	target.custom_pain("Something hurts horribly in your [affected.name]!", 60)
 	..()
 
@@ -52,8 +52,8 @@
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
-	user.balloon_alert_visible("[user] has cut [target]'s [affected.encased] open with \the [tool].", \
-	"Cuttng [target]'s [affected.encased] open with \the [tool].") // CHOMPEdit - Ballon alert
+	user.visible_message("<span class='notice'>[user] has cut [target]'s [affected.encased] open with \the [tool].</span>", \
+	"<span class='notice'>You have cut [target]'s [affected.encased] open with \the [tool].</span>")
 	affected.open = 2.5
 
 /datum/surgery_step/open_encased/saw/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
@@ -61,8 +61,8 @@
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
-	user.balloon_alert_visible("[user]'s hand slips, cracking [target]'s [affected.encased] with \the [tool]!" , \
-	"Your hand slips, cracking [target]'s [affected.encased] with \the [tool]!") // CHOMPEdit - Ballon alert
+	user.visible_message("<span class='danger'>[user]'s hand slips, cracking [target]'s [affected.encased] with \the [tool]!</span>" , \
+	"<span class='danger'>Your hand slips, cracking [target]'s [affected.encased] with \the [tool]!</span>" )
 
 	affected.createwound(CUT, 20)
 	affected.fracture()
@@ -93,9 +93,9 @@
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
-	var/msg = "[user] starts to force open the [affected.encased] in [target]'s [affected.name] with \the [tool]." // CHOMPEdit - Ballon alert
-	var/self_msg = "<span class='filter_notice'>Forcing open the [affected.encased] in [target]'s [affected.name] with \the [tool].</span>"
-	user.balloon_alert_visible(msg, self_msg) // CHOMPEdit - Ballon alert
+	var/msg = "<span class='filter_notice'>[user] starts to force open the [affected.encased] in [target]'s [affected.name] with \the [tool].</span>"
+	var/self_msg = "<span class='filter_notice'>You start to force open the [affected.encased] in [target]'s [affected.name] with \the [tool].</span>"
+	user.visible_message(msg, self_msg)
 	target.custom_pain("Something hurts horribly in your [affected.name]!", 40)
 	..()
 
@@ -103,9 +103,9 @@
 	if (!hasorgans(target))
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	var/msg = "[user] forces open [target]'s [affected.encased] with \the [tool]." // CHOMPEdit - Ballon alert
-	var/self_msg = "<span class='notice'>[target]'s [affected.encased] forced open with \the [tool].</span>"
-	user.balloon_alert_visible(msg, self_msg) // CHOMPEdit - Ballon alert
+	var/msg = "<span class='notice'>[user] forces open [target]'s [affected.encased] with \the [tool].</span>"
+	var/self_msg = "<span class='notice'>You force open [target]'s [affected.encased] with \the [tool].</span>"
+	user.visible_message(msg, self_msg)
 
 	affected.open = 3
 
@@ -114,9 +114,9 @@
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
-	var/msg = "[user]'s hand slips, cracking [target]'s [affected.encased]!" // CHOMPEdit - Ballon alert
+	var/msg = "<span class='danger'>[user]'s hand slips, cracking [target]'s [affected.encased]!</span>"
 	var/self_msg = "<span class='danger'>Your hand slips, cracking [target]'s  [affected.encased]!</span>"
-	user.balloon_alert_visible(msg, self_msg) // CHOMPEdit - Ballon alert
+	user.visible_message(msg, self_msg)
 
 	affected.createwound(BRUISE, 20)
 	affected.fracture()
@@ -147,9 +147,9 @@
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
-	var/msg = "[user] starts bending [target]'s [affected.encased] back into place with \the [tool]." // CHOMPEdit - Ballon alert
-	var/self_msg = "<span class='filter_notice'>Bending [target]'s [affected.encased] back into place with \the [tool].</span>"
-	user.balloon_alert_visible(msg, self_msg) // CHOMPEdit - Ballon alert
+	var/msg = "<span class='filter_notice'>[user] starts bending [target]'s [affected.encased] back into place with \the [tool].</span>"
+	var/self_msg = "<span class='filter_notice'>You start bending [target]'s [affected.encased] back into place with \the [tool].</span>"
+	user.visible_message(msg, self_msg)
 	target.custom_pain("Something hurts horribly in your [affected.name]!", 100)
 	..()
 
@@ -158,9 +158,9 @@
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
-	var/msg = "[user] bends [target]'s [affected.encased] back into place with \the [tool]." // CHOMPEdit - Ballon alert
-	var/self_msg = "<span class='notice'>[target]'s [affected.encased] bend back into place with \the [tool].</span>"
-	user.balloon_alert_visible(msg, self_msg) // CHOMPEdit - Ballon alert
+	var/msg = "<span class='notice'>[user] bends [target]'s [affected.encased] back into place with \the [tool].</span>"
+	var/self_msg = "<span class='notice'>You bend [target]'s [affected.encased] back into place with \the [tool].</span>"
+	user.visible_message(msg, self_msg)
 
 	affected.open = 2.5
 
@@ -169,9 +169,9 @@
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
-	var/msg = "[user]'s hand slips, bending [target]'s [affected.encased] the wrong way!" // CHOMPEdit - Ballon alert
+	var/msg = "<span class='danger'>[user]'s hand slips, bending [target]'s [affected.encased] the wrong way!</span>"
 	var/self_msg = "<span class='danger'>Your hand slips, bending [target]'s [affected.encased] the wrong way!</span>"
-	user.balloon_alert_visible(msg, self_msg) // CHOMPEdit - Ballon alert
+	user.visible_message(msg, self_msg)
 
 	affected.createwound(BRUISE, 20)
 	affected.fracture()
@@ -206,9 +206,9 @@
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
-	var/msg = "[user] starts applying \the [tool] to [target]'s [affected.encased]." // CHOMPEdit - Ballon alert
-	var/self_msg = "<span class='filter_notice'>Applying \the [tool] to [target]'s [affected.encased].</span>"
-	user.balloon_alert_visible(msg, self_msg) // CHOMPEdit - Ballon alert
+	var/msg = "<span class='filter_notice'>[user] starts applying \the [tool] to [target]'s [affected.encased].</span>"
+	var/self_msg = "<span class='filter_notice'>You start applying \the [tool] to [target]'s [affected.encased].</span>"
+	user.visible_message(msg, self_msg)
 	target.custom_pain("Something hurts horribly in your [affected.name]!", 100)
 	..()
 
@@ -217,9 +217,9 @@
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
-	var/msg = "[user] applied \the [tool] to [target]'s [affected.encased]." // CHOMPEdit - Ballon alert
-	var/self_msg = "<span class='notice'>Applied \the [tool] to [target]'s [affected.encased].</span>"
-	user.balloon_alert_visible(msg, self_msg) // CHOMPEdit - Ballon alert
+	var/msg = "<span class='notice'>[user] applied \the [tool] to [target]'s [affected.encased].</span>"
+	var/self_msg = "<span class='notice'>You applied \the [tool] to [target]'s [affected.encased].</span>"
+	user.visible_message(msg, self_msg)
 
 	affected.open = 2
 
@@ -249,8 +249,8 @@
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
-	user.balloon_alert_visible("[user] begins to open [target]'s [affected.encased] with \the [tool].", \
-	"Opening [target]'s [affected.encased] with \the [tool].") // CHOMPEdit - Ballon alert
+	user.visible_message("<span class='filter_notice'>[user] begins to open [target]'s [affected.encased] with \the [tool].</span>", \
+	"<span class='filter_notice'>You begin to open [target]'s [affected.encased] with \the [tool].</span>")
 	target.custom_pain("Something hurts horribly in your [affected.name]!", 60)
 	..()
 
@@ -259,8 +259,8 @@
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
-	user.balloon_alert_visible("[user] has cut [target]'s [affected.encased] wide open with \the [tool].", \
-	"[target]'s [affected.encased] cut wide open with \the [tool].") // CHOMPEdit - Ballon alert
+	user.visible_message("<span class='notice'>[user] has cut [target]'s [affected.encased] wide open with \the [tool].</span>", \
+	"<span class='notice'>You have cut [target]'s [affected.encased] wide open with \the [tool].</span>")
 	affected.open = 3
 
 /datum/surgery_step/open_encased/advancedsaw_open/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
@@ -268,8 +268,8 @@
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
-	user.balloon_alert_visible("[user]'s hand slips, searing [target]'s [affected.encased] with \the [tool]!" , \
-	"Your hand slips, searing [target]'s [affected.encased] with \the [tool]!" ) // CHOMPEdit - Ballon alert
+	user.visible_message("<span class='danger'>[user]'s hand slips, searing [target]'s [affected.encased] with \the [tool]!</span>" , \
+	"<span class='danger'>Your hand slips, searing [target]'s [affected.encased] with \the [tool]!</span>" )
 
 	affected.createwound(CUT, 20)
 	affected.createwound(BURN, 15)
@@ -299,9 +299,9 @@
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
-	var/msg = "[user] starts sealing \the [target]'s [affected.encased] with \the [tool]." // CHOMPEdit - Ballon alert
-	var/self_msg = "<span class='filter_notice'>Sealing \the [target]'s [affected.encased] with \the [tool].</span>"
-	user.balloon_alert_visible(msg, self_msg)
+	var/msg = "<span class='filter_notice'>[user] starts sealing \the [target]'s [affected.encased] with \the [tool].</span>"
+	var/self_msg = "<span class='filter_notice'>You start sealing \the [target]'s [affected.encased] with \the [tool].</span>"
+	user.visible_message(msg, self_msg)
 	target.custom_pain("Something hurts horribly in your [affected.name]!", 100)
 	..()
 
@@ -310,8 +310,8 @@
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
-	var/msg = "[user] sealed \the [target]'s [affected.encased] with \the [tool]." // CHOMPEdit - Ballon alert
-	var/self_msg = "<span class='notice'>Sealed \the [target]'s [affected.encased] with \the [tool].</span>"
-	user.balloon_alert_visible(msg, self_msg) // CHOMPEdit - Ballon alert
+	var/msg = "<span class='notice'>[user] sealed \the [target]'s [affected.encased] with \the [tool].</span>"
+	var/self_msg = "<span class='notice'>You sealed \the [target]'s [affected.encased] with \the [tool].</span>"
+	user.visible_message(msg, self_msg)
 
 	affected.open = 2

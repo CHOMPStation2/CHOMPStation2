@@ -50,20 +50,20 @@
 
 /datum/surgery_step/robotics/unscrew_hatch/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.balloon_alert_visible("[user] starts to unscrew the maintenance hatch on [target]'s [affected.name] with \the [tool].", \
-	"You start to unscrew the maintenance hatch on [target]'s [affected.name] with \the [tool].") // CHOMPEdit - balloon alert
+	user.visible_message("<span class='filter_notice'>[user] starts to unscrew the maintenance hatch on [target]'s [affected.name] with \the [tool].</span>", \
+	"<span class='filter_notice'>You start to unscrew the maintenance hatch on [target]'s [affected.name] with \the [tool].</span>")
 	..()
 
 /datum/surgery_step/robotics/unscrew_hatch/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.balloon_alert_visible("[user] has opened the maintenance hatch on [target]'s [affected.name] with \the [tool].", \
-	"You have opened the maintenance hatch on [target]'s [affected.name] with \the [tool].",) // CHOMPEdit - balloon alert
+	user.visible_message("<span class='notice'>[user] has opened the maintenance hatch on [target]'s [affected.name] with \the [tool].</span>", \
+	"<span class='notice'>You have opened the maintenance hatch on [target]'s [affected.name] with \the [tool].</span>",)
 	affected.open = 1
 
 /datum/surgery_step/robotics/unscrew_hatch/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.balloon_alert_visible("[user]'s [tool.name] slips, failing to unscrew [target]'s [affected.name].", \
-	"Your [tool] slips, failing to unscrew [target]'s [affected.name].") // CHOMPEdit - balloon alert
+	user.visible_message("<span class='warning'>[user]'s [tool.name] slips, failing to unscrew [target]'s [affected.name].</span>", \
+	"<span class='warning'>Your [tool] slips, failing to unscrew [target]'s [affected.name].</span>")
 
 ///////////////////////////////////////////////////////////////
 // Open Hatch Surgery
@@ -88,20 +88,20 @@
 
 /datum/surgery_step/robotics/open_hatch/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.balloon_alert_visible("[user] starts to pry open the maintenance hatch on [target]'s [affected.name] with \the [tool].",
-	"You start to pry open the maintenance hatch on [target]'s [affected.name] with \the [tool].") // CHOMPEdit - balloon alert
+	user.visible_message("<span class='filter_notice'>[user] starts to pry open the maintenance hatch on [target]'s [affected.name] with \the [tool].</span>",
+	"<span class='filter_notice'>You start to pry open the maintenance hatch on [target]'s [affected.name] with \the [tool].</span>")
 	..()
 
 /datum/surgery_step/robotics/open_hatch/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.balloon_alert_visible("[user] opens the maintenance hatch on [target]'s [affected.name] with \the [tool].", \
-	 "You open the maintenance hatch on [target]'s [affected.name] with \the [tool].") // CHOMPEdit - balloon alert
+	user.visible_message("<span class='notice'>[user] opens the maintenance hatch on [target]'s [affected.name] with \the [tool].</span>", \
+	 "<span class='notice'>You open the maintenance hatch on [target]'s [affected.name] with \the [tool].</span>")
 	affected.open = 3
 
 /datum/surgery_step/robotics/open_hatch/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.balloon_alert_visible("[user]'s [tool.name] slips, failing to open the hatch on [target]'s [affected.name].",
-	"Your [tool] slips, failing to open the hatch on [target]'s [affected.name].") // CHOMPEdit - balloon alert
+	user.visible_message("<span class='warning'>[user]'s [tool.name] slips, failing to open the hatch on [target]'s [affected.name].</span>",
+	"<span class='warning'>Your [tool] slips, failing to open the hatch on [target]'s [affected.name].</span>")
 
 ///////////////////////////////////////////////////////////////
 // Close Hatch Surgery
@@ -126,21 +126,21 @@
 
 /datum/surgery_step/robotics/close_hatch/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.balloon_alert_visible("[user] begins to close and secure the hatch on [target]'s [affected.name] with \the [tool]." , \
-	"You begin to close and secure the hatch on [target]'s [affected.name] with \the [tool].") // CHOMPEdit - balloon alert
+	user.visible_message("<span class='filter_notice'>[user] begins to close and secure the hatch on [target]'s [affected.name] with \the [tool].</span>" , \
+	"<span class='filter_notice'>You begin to close and secure the hatch on [target]'s [affected.name] with \the [tool].</span>")
 	..()
 
 /datum/surgery_step/robotics/close_hatch/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.balloon_alert_visible("[user] closes and secures the hatch on [target]'s [affected.name] with \the [tool].", \
-	"You close and secure the hatch on [target]'s [affected.name] with \the [tool].") // CHOMPEdit - balloon alert
+	user.visible_message("<span class='notice'>[user] closes and secures the hatch on [target]'s [affected.name] with \the [tool].</span>", \
+	"<span class='notice'>You close and secure the hatch on [target]'s [affected.name] with \the [tool].</span>")
 	affected.open = 0
 	affected.germ_level = 0
 
 /datum/surgery_step/robotics/close_hatch/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.balloon_alert_visible("[user]'s [tool.name] slips, failing to close the hatch on [target]'s [affected.name].",
-	"Your [tool.name] slips, failing to close the hatch on [target]'s [affected.name].") // CHOMPEdit - balloon alert
+	user.visible_message("<span class='warning'>[user]'s [tool.name] slips, failing to close the hatch on [target]'s [affected.name].</span>",
+	"<span class='warning'>Your [tool.name] slips, failing to close the hatch on [target]'s [affected.name].</span>")
 
 ///////////////////////////////////////////////////////////////
 // Brute Repair Surgery
@@ -162,7 +162,7 @@
         if(istype(tool, /obj/item/weapon/weldingtool))
             var/obj/item/weapon/weldingtool/welder = tool
             if(affected.brute_dam == 0)
-                user.balloon_alert(user, "There is no damage to the internal structure here!") // CHOMPEdit - balloon alert
+                to_chat(user, "<span class='notice'>There is no damage to the internal structure here!</span>")
                 return SURGERY_FAILURE
             else
                 if(!welder.isOn() || !welder.remove_fuel(1,user))
@@ -171,21 +171,21 @@
 
 /datum/surgery_step/robotics/repair_brute/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.balloon_alert_visible("[user] begins to patch damage to [target]'s [affected.name]'s support structure with \the [tool]." , \
-	"You begin to patch damage to [target]'s [affected.name]'s support structure with \the [tool].") // CHOMPEdit - balloon alert
+	user.visible_message("<span class='filter_notice'>[user] begins to patch damage to [target]'s [affected.name]'s support structure with \the [tool].</span>" , \
+	"<span class='filter_notice'>You begin to patch damage to [target]'s [affected.name]'s support structure with \the [tool].</span>")
 	..()
 
 /datum/surgery_step/robotics/repair_brute/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.balloon_alert_visible("[user] finishes patching damage to [target]'s [affected.name] with \the [tool].", \
-	"You finish patching damage to [target]'s [affected.name] with \the [tool].") // CHOMPEdit - balloon alert
+	user.visible_message("<span class='notice'>[user] finishes patching damage to [target]'s [affected.name] with \the [tool].</span>", \
+	"<span class='notice'>You finish patching damage to [target]'s [affected.name] with \the [tool].</span>")
 	affected.heal_damage(rand(30,50),0,1,1)
 	affected.disfigured = 0
 
 /datum/surgery_step/robotics/repair_brute/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.balloon_alert_visible("[user]'s [tool.name] slips, damaging the internal structure of [target]'s [affected.name].",
-	"Your [tool.name] slips, damaging the internal structure of [target]'s [affected.name].") // CHOMPEdit - balloon alert
+	user.visible_message("<span class='warning'>[user]'s [tool.name] slips, damaging the internal structure of [target]'s [affected.name].</span>",
+	"<span class='warning'>Your [tool.name] slips, damaging the internal structure of [target]'s [affected.name].</span>")
 	target.apply_damage(rand(5,10), BURN, affected)
 
 ///////////////////////////////////////////////////////////////
@@ -207,11 +207,11 @@
 		if(istype(tool, /obj/item/stack/cable_coil))
 			var/obj/item/stack/cable_coil/C = tool
 			if(affected.burn_dam == 0)
-				user.balloon_alert(user, "There are no burnt wires here!") // CHOMPEdit - balloon alert
+				to_chat(user, "<span class='notice'>There are no burnt wires here!</span>")
 				return SURGERY_FAILURE
 			else
 				if(!C.can_use(5))
-					user.balloon_alert(user, "You need at least five cable pieces to repair this part.") // CHOMPEdit - balloon alert //usage amount made more consistent with regular cable repair
+					to_chat(user, "<span class='danger'>You need at least five cable pieces to repair this part.</span>") //usage amount made more consistent with regular cable repair
 					return SURGERY_FAILURE
 				else
 					C.use(5)
@@ -220,21 +220,21 @@
 
 /datum/surgery_step/robotics/repair_burn/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.balloon_alert_visible("[user] begins to splice new cabling into [target]'s [affected.name]." , \
-	"You begin to splice new cabling into [target]'s [affected.name].") // CHOMPEdit - balloon alert
+	user.visible_message("<span class='filter_notice'>[user] begins to splice new cabling into [target]'s [affected.name].</span>" , \
+	"<span class='filter_notice'>You begin to splice new cabling into [target]'s [affected.name].</span>")
 	..()
 
 /datum/surgery_step/robotics/repair_burn/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.balloon_alert_visible("[user] finishes splicing cable into [target]'s [affected.name].", \
-	"You finishes splicing new cable into [target]'s [affected.name].") // CHOMPEdit - balloon alert
+	user.visible_message("<span class='notice'>[user] finishes splicing cable into [target]'s [affected.name].</span>", \
+	"<span class='notice'>You finishes splicing new cable into [target]'s [affected.name].</span>")
 	affected.heal_damage(0,rand(30,50),1,1)
 	affected.disfigured = 0
 
 /datum/surgery_step/robotics/repair_burn/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.balloon_alert_visible("[user] causes a short circuit in [target]'s [affected.name]!",
-	"You cause a short circuit in [target]'s [affected.name]!") // CHOMPEdit - balloon alert
+	user.visible_message("<span class='warning'>[user] causes a short circuit in [target]'s [affected.name]!</span>",
+	"<span class='warning'>You cause a short circuit in [target]'s [affected.name]!</span>")
 	target.apply_damage(rand(5,10), BURN, affected)
 
 ///////////////////////////////////////////////////////////////
@@ -273,8 +273,8 @@
 	for(var/obj/item/organ/I in affected.internal_organs)
 		if(I && I.damage > 0)
 			if(I.robotic >= ORGAN_ROBOT)
-				user.balloon_alert_visible("[user] starts mending the damage to [target]'s [I.name]'s mechanisms.", \
-				"You start mending the damage to [target]'s [I.name]'s mechanisms." )
+				user.visible_message("<span class='filter_notice'>[user] starts mending the damage to [target]'s [I.name]'s mechanisms.</span>", \
+				"<span class='filter_notice'>You start mending the damage to [target]'s [I.name]'s mechanisms.</span>" )
 
 	target.custom_pain("The pain in your [affected.name] is living hell!",1)
 	..()
@@ -287,8 +287,8 @@
 	for(var/obj/item/organ/I in affected.internal_organs)
 		if(I && I.damage > 0)
 			if(I.robotic >= ORGAN_ROBOT)
-				user.balloon_alert_visible("[user] repairs [target]'s [I.name] with [tool].", \
-				"You repair [target]'s [I.name] with [tool]." )
+				user.visible_message("<span class='notice'>[user] repairs [target]'s [I.name] with [tool].</span>", \
+				"<span class='notice'>You repair [target]'s [I.name] with [tool].</span>" )
 				I.damage = 0
 				if(I.organ_tag == O_EYES)
 					target.sdisabilities &= ~BLIND
@@ -298,8 +298,8 @@
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
-	user.balloon_alert_visible("[user]'s hand slips, gumming up the mechanisms inside of [target]'s [affected.name] with \the [tool]!", \
-	"Your hand slips, gumming up the mechanisms inside of [target]'s [affected.name] with \the [tool]!") // CHOMPEdit - balloon alert
+	user.visible_message("<span class='warning'>[user]'s hand slips, gumming up the mechanisms inside of [target]'s [affected.name] with \the [tool]!</span>", \
+	"<span class='warning'>Your hand slips, gumming up the mechanisms inside of [target]'s [affected.name] with \the [tool]!</span>")
 
 	target.adjustToxLoss(5)
 	affected.createwound(CUT, 5)
@@ -349,17 +349,17 @@
 	var/organ_to_remove = tgui_input_list(user, "Which organ do you want to prepare for removal?", "Organ Choice", attached_organs)
 
 	if(!organ_to_remove) //They chose cancel!
-		user.balloon_alert(user, "You decide against preparing any organs for removal.") // CHOMPEdit - balloon alert
+		to_chat(user, "<span class='notice'>You decide against preparing any organs for removal.</span>")
 		return
 	target.op_stage.current_organ = organ_to_remove
 
-	user.balloon_alert_visible("[user] starts to decouple [target]'s [target.op_stage.current_organ] with \the [tool].", \
-	"Decoupling [target]'s [target.op_stage.current_organ] with \the [tool]." )
+	user.visible_message("<span class='filter_notice'>[user] starts to decouple [target]'s [target.op_stage.current_organ] with \the [tool].</span>", \
+	"<span class='filter_notice'>You start to decouple [target]'s [target.op_stage.current_organ] with \the [tool].</span>" )
 	..()
 
 /datum/surgery_step/robotics/detatch_organ_robotic/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	user.balloon_alert_visible("[user] has decoupled [target]'s [target.op_stage.current_organ] with \the [tool]." , \
-	"Decoupled [target]'s [target.op_stage.current_organ] with \the [tool].") // CHOMPEdit - balloon alert
+	user.visible_message("<span class='notice'>[user] has decoupled [target]'s [target.op_stage.current_organ] with \the [tool].</span>" , \
+	"<span class='notice'>You have decoupled [target]'s [target.op_stage.current_organ] with \the [tool].</span>")
 
 	var/obj/item/organ/internal/I = target.internal_organs_by_name[target.op_stage.current_organ]
 	if(I && istype(I))
@@ -367,8 +367,8 @@
 	target.op_stage.current_organ = null
 
 /datum/surgery_step/robotics/detatch_organ_robotic/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	user.balloon_alert_visible("[user]'s hand slips, disconnecting \the [tool].", \
-	"Your hand slips, disconnecting \the [tool].") // CHOMPEdit - balloon alert
+	user.visible_message("<span class='warning'>[user]'s hand slips, disconnecting \the [tool].</span>", \
+	"<span class='warning'>Your hand slips, disconnecting \the [tool].</span>")
 
 ///////////////////////////////////////////////////////////////
 // Robot Organ Attaching Surgery
@@ -409,19 +409,19 @@
 
 	var/organ_to_replace = tgui_input_list(user, "Which organ do you want to reattach?", "Organ Choice", attachable_organs)
 	if(!organ_to_replace) //They chose cancel!
-		user.balloon_alert(user, "You decide against reattaching any organs.") // CHOMPEdit - balloon alert
+		to_chat(user, "<span class='notice'>You decide against reattaching any organs.</span>")
 		return
 
 
 	target.op_stage.current_organ = organ_to_replace
 
-	user.balloon_alert_visible("[user] begins reattaching [target]'s [target.op_stage.current_organ] with \the [tool].", \
-	"Reattaching [target]'s [target.op_stage.current_organ] with \the [tool].") // CHOMPEdit - balloon alert
+	user.visible_message("<span class='filter_notice'>[user] begins reattaching [target]'s [target.op_stage.current_organ] with \the [tool].</span>", \
+	"<span class='filter_notice'>You start reattaching [target]'s [target.op_stage.current_organ] with \the [tool].</span>")
 	..()
 
 /datum/surgery_step/robotics/attach_organ_robotic/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	user.balloon_alert_visible("[user] has reattached [target]'s [target.op_stage.current_organ] with \the [tool]." , \
-	"Reattached [target]'s [target.op_stage.current_organ] with \the [tool].") // CHOMPEdit - balloon alert
+	user.visible_message("<span class='notice'>[user] has reattached [target]'s [target.op_stage.current_organ] with \the [tool].</span>" , \
+	"<span class='notice'>You have reattached [target]'s [target.op_stage.current_organ] with \the [tool].</span>")
 
 	var/obj/item/organ/I = target.internal_organs_by_name[target.op_stage.current_organ]
 	if(I && istype(I))
@@ -429,8 +429,8 @@
 	target.op_stage.current_organ = null
 
 /datum/surgery_step/robotics/attach_organ_robotic/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	user.balloon_alert_visible("[user]'s hand slips, disconnecting \the [tool].", \
-	"Your hand slips, disconnecting \the [tool].") // CHOMPEdit - balloon alert
+	user.visible_message("<span class='warning'>[user]'s hand slips, disconnecting \the [tool].</span>", \
+	"<span class='warning'>Your hand slips, disconnecting \the [tool].</span>")
 
 ///////////////////////////////////////////////////////////////
 // MMI Insertion Surgery
@@ -459,34 +459,34 @@
 
 	/* VOREStation Edit - Don't worry about it. We can put these in regardless, because resleeving might make it useful after.
 	if(!M.brainmob || !M.brainmob.client || !M.brainmob.ckey || M.brainmob.stat >= DEAD)
-		balloon_alert(user, "That brain is not usable.") // CHOMPEdit - balloon alert
+		to_chat(user, "<span class='danger'>That brain is not usable.</span>")
 		return SURGERY_FAILURE
 	*/
 
 	if(!(affected.robotic >= ORGAN_ROBOT))
-		user.balloon_alert(user, "You cannot install a computer brain into a meat skull.") // CHOMPEdit - balloon alert
+		to_chat(user, "<span class='danger'>You cannot install a computer brain into a meat skull.</span>")
 		return SURGERY_FAILURE
 
 	if(!target.should_have_organ("brain"))
-		user.balloon_alert(user, "You're pretty sure [target.species.name_plural] don't normally have a brain.") // CHOMPEdit - balloon alert
+		to_chat(user, "<span class='danger'>You're pretty sure [target.species.name_plural] don't normally have a brain.</span>")
 		return SURGERY_FAILURE
 
 	if(!isnull(target.internal_organs["brain"]))
-		user.balloon_alert(user, "Your subject already has a brain.") // CHOMPEdit - balloon alert
+		to_chat(user, "<span class='danger'>Your subject already has a brain.</span>")
 		return SURGERY_FAILURE
 
 	return 1
 
 /datum/surgery_step/robotics/install_mmi/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.balloon_alert_visible("[user] starts installing \the [tool] into [target]'s [affected.name].", \
-	"Installing \the [tool] into [target]'s [affected.name].") // CHOMPEdit - balloon alert
+	user.visible_message("<span class='filter_notice'>[user] starts installing \the [tool] into [target]'s [affected.name].</span>", \
+	"<span class='filter_notice'>You start installing \the [tool] into [target]'s [affected.name].</span>")
 	..()
 
 /datum/surgery_step/robotics/install_mmi/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.balloon_alert_visible("[user] has installed \the [tool] into [target]'s [affected.name].", \
-	"Installed \the [tool] into [target]'s [affected.name].") // CHOMPEdit - balloon alert
+	user.visible_message("<span class='notice'>[user] has installed \the [tool] into [target]'s [affected.name].</span>", \
+	"<span class='notice'>You have installed \the [tool] into [target]'s [affected.name].</span>")
 
 	var/obj/item/device/mmi/M = tool
 	var/obj/item/organ/internal/mmi_holder/holder = new(target, 1)
@@ -517,8 +517,8 @@
 		target.real_name = target.name
 
 /datum/surgery_step/robotics/install_mmi/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	user.balloon_alert_visible("[user]'s hand slips.", \
-	"Your hand slips.") // CHOMPEdit - balloon alert
+	user.visible_message("<span class='warning'>[user]'s hand slips.</span>", \
+	"<span class='warning'>Your hand slips.</span>")
 
 /*
  * Install a Diona Nymph into a Nymph Mech
@@ -547,37 +547,37 @@
 		return 0
 
 	if(!N.held_mob.client || N.held_mob.stat >= DEAD)
-		user.balloon_alert(user, "That nymph is not viable.") // CHOMPEdit - balloon alert
+		to_chat(user, "<span class='danger'>That nymph is not viable.</span>")
 		return SURGERY_FAILURE
 
 	if(!(affected.robotic >= ORGAN_ROBOT))
-		user.balloon_alert(user, "You cannot install a nymph into a meat puppet.") // CHOMPEdit - balloon alert
+		to_chat(user, "<span class='danger'>You cannot install a nymph into a meat puppet.</span>")
 		return SURGERY_FAILURE
 
 	if(!(affected.model != "Skrellian Exoskeleton"))
-		user.balloon_alert(user, "You're fairly certain a nymph can't pilot a normal robot.") // CHOMPEdit - balloon alert
+		to_chat(user, "<span class='dangerou'>You're fairly certain a nymph can't pilot a normal robot.</span>")
 		return SURGERY_FAILURE
 
 	if(!target.should_have_organ("brain"))
-		user.balloon_alert(user, "You're pretty sure [target.species.name_plural] don't normally have a brain.") // CHOMPEdit - balloon alert
+		to_chat(user, "<span class='danger'>You're pretty sure [target.species.name_plural] don't normally have a brain.</span>")
 		return SURGERY_FAILURE
 
 	if(!isnull(target.internal_organs["brain"]))
-		user.balloon_alert(user, "Your subject already has a cephalon.") // CHOMPEdit - balloon alert
+		to_chat(user, "<span class='danger'>Your subject already has a cephalon.</span>")
 		return SURGERY_FAILURE
 
 	return 1
 
 /datum/surgery_step/robotics/install_nymph/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.balloon_alert_visible("[user] starts setting \the [tool] into [target]'s [affected.name].", \
-	"Setting \the [tool] into [target]'s [affected.name].") // CHOMPEdit - balloon alert
+	user.visible_message("<span class='filter_notice'>[user] starts setting \the [tool] into [target]'s [affected.name].</span>", \
+	"<span class='filter_notice'>You start setting \the [tool] into [target]'s [affected.name].</span>")
 	..()
 
 /datum/surgery_step/robotics/install_nymph/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.balloon_alert_visible("[user] has installed \the [tool] into [target]'s [affected.name].", \
-	"Installed \the [tool] into [target]'s [affected.name].") // CHOMPEdit - balloon alert
+	user.visible_message("<span class='notice'>[user] has installed \the [tool] into [target]'s [affected.name].</span>", \
+	"<span class='notice'>You have installed \the [tool] into [target]'s [affected.name].</span>")
 
 	var/obj/item/weapon/holder/diona/N = tool
 	var/obj/item/organ/internal/brain/cephalon/cephalon = new(target, 1)
@@ -611,5 +611,5 @@
 		target.real_name = target.name
 
 /datum/surgery_step/robotics/install_nymph/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	user.balloon_alert_visible("[user]'s hand slips.", \
-	"Your hand slips.") // CHOMPEdit - balloon alert
+	user.visible_message("<span class='warning'>[user]'s hand slips.</span>", \
+	"<span class='warning'>Your hand slips.</span>")
