@@ -200,12 +200,12 @@
 	if(!organ_to_remove) //They decided to cancel. Let's slowly pull the tool back...
 		user.balloon_alert(user, "You decide against ripping out any organs.")
 		user.balloon_alert_visible("[user] starts pulling their [tool] out from [target]'s [affected.name] with \the [tool].", \
-		"You start pulling your \the [tool] out of [target]'s [affected.name].") // CHOMPEdit - Ballon alert
+		"Pulling your \the [tool] out of [target]'s [affected.name].") // CHOMPEdit - Ballon alert
 		target.custom_pain("Someone's moving something around in your [affected.name]!", 100)
 	else if(organ_to_remove)
 		target.op_stage.current_organ = organ_to_remove
 		user.balloon_alert_visible("[user] starts ripping [target]'s [target.op_stage.current_organ] out with \the [tool].", \
-		"You start ripping [target]'s [target.op_stage.current_organ] out with \the [tool].") // CHOMPEdit - Ballon alert
+		"Ripping [target]'s [target.op_stage.current_organ] out with \the [tool].") // CHOMPEdit - Ballon alert
 		target.custom_pain("Someone's ripping out your [target.op_stage.current_organ]!", 100)
 	..()
 
@@ -213,11 +213,11 @@
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if(!target.op_stage.current_organ)
 		user.balloon_alert_visible("[user] has pulled their \the [tool] from [target]'s [affected.name].", \
-		"You have pulled your [tool] out from [target]'s [affected].")
+		"Pulled your [tool] out from [target]'s [affected].")
 
 	if(target.op_stage.current_organ)
 		user.balloon_alert_visible("[user] has ripped [target]'s [target.op_stage.current_organ] out with \the [tool].", \
-		"You have ripped [target]'s [target.op_stage.current_organ] out with \the [tool].")
+		"Ripped [target]'s [target.op_stage.current_organ] out with \the [tool].") // CHOMPEdit - Ballon alert
 		var/obj/item/organ/O = target.internal_organs_by_name[target.op_stage.current_organ]
 		if(O && istype(O))
 			O.removed(user)

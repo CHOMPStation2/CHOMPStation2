@@ -53,12 +53,12 @@
 /datum/surgery_step/limb/attach/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/E = tool
 	user.balloon_alert_visible("[user] starts attaching [E.name] to [target]'s [E.amputation_point].", \
-	"You start attaching [E.name] to [target]'s [E.amputation_point].") // CHOMPEdit - Ballon alert
+	"Attaching [E.name] to [target]'s [E.amputation_point].") // CHOMPEdit - Ballon alert
 
 /datum/surgery_step/limb/attach/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/E = tool
 	user.balloon_alert_visible("[user] has attached [target]'s [E.name] to the [E.amputation_point].",	\
-	"You have attached [target]'s [E.name] to the [E.amputation_point].") // CHOMPEdit - Ballon alert
+	"Attached [target]'s [E.name] to the [E.amputation_point].") // CHOMPEdit - Ballon alert
 	user.drop_from_inventory(E)
 	E.replaced(target)
 
@@ -101,12 +101,12 @@
 /datum/surgery_step/limb/connect/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/E = target.get_organ(target_zone)
 	user.balloon_alert_visible("[user] starts connecting tendons and muscles in [target]'s [E.amputation_point] with [tool].", \
-	"You start connecting tendons and muscle in [target]'s [E.amputation_point].") // CHOMPEdit - Ballon alert
+	"Connecting tendons and muscle in [target]'s [E.amputation_point].") // CHOMPEdit - Ballon alert
 
 /datum/surgery_step/limb/connect/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/E = target.get_organ(target_zone)
 	user.balloon_alert_visible("[user] has connected tendons and muscles in [target]'s [E.amputation_point] with [tool].",	\
-	"You have connected tendons and muscles in [target]'s [E.amputation_point] with [tool].") // CHOMPEdit - Ballon alert
+	"Connected tendons and muscles in [target]'s [E.amputation_point] with [tool].") // CHOMPEdit - Ballon alert
 	E.status &= ~ORGAN_CUT_AWAY
 	target.update_icons_body()
 	target.updatehealth()
@@ -115,7 +115,7 @@
 /datum/surgery_step/limb/connect/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/E = tool
 	user.balloon_alert_visible(" [user]'s hand slips, damaging [target]'s [E.amputation_point]!", \
-	" Your hand slips, damaging [target]'s [E.amputation_point]!")
+	"Your hand slips, damaging [target]'s [E.amputation_point]!")
 	target.apply_damage(10, BRUTE, null, sharp = TRUE)
 
 ///////////////////////////////////////////////////////////////
@@ -139,12 +139,12 @@
 
 /datum/surgery_step/limb/mechanize/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.balloon_alert_visible("[user] starts attaching \the [tool] to [target].", \
-	"You start attaching \the [tool] to [target].") // CHOMPEdit - Ballon alert
+	"Attaching \the [tool] to [target].") // CHOMPEdit - Ballon alert
 
 /datum/surgery_step/limb/mechanize/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/robot_parts/L = tool
 	user.balloon_alert_visible("[user] has attached \the [tool] to [target].",	\
-	"You have attached \the [tool] to [target].") // CHOMPEdit - Ballon alert
+	"Attached \the [tool] to [target].") // CHOMPEdit - Ballon alert
 
 	if(L.part)
 		for(var/part_name in L.part)
@@ -167,5 +167,5 @@
 
 /datum/surgery_step/limb/mechanize/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.balloon_alert_visible(" [user]'s hand slips, damaging [target]'s flesh!", \
-	" Your hand slips, damaging [target]'s flesh!")
+	"Your hand slips, damaging [target]'s flesh!")
 	target.apply_damage(10, BRUTE, null, sharp = TRUE)

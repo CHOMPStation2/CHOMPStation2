@@ -32,15 +32,15 @@
 /datum/surgery_step/glue_bone/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if (affected.stage == 0)
-		user.balloon_alert_visible("[user] starts applying medication to the damaged bones in [target]'s [affected.name] with \the [tool]." , \
-		"You start applying medication to the damaged bones in [target]'s [affected.name] with \the [tool].") // CHOMPEdit - Ballon alert
+		user.balloon_alert_visible("[user] starts applying medication to the damaged bones in [target]'s [affected.name]." , \
+		"Applying medication to the damaged bones in [target]'s [affected.name].") // CHOMPEdit - Ballon alert
 	target.custom_pain("Something in your [affected.name] is causing you a lot of pain!", 50)
 	..()
 
 /datum/surgery_step/glue_bone/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.balloon_alert_visible("[user] applies some [tool] to [target]'s bone in [affected.name]", \
-		"You apply some [tool] to [target]'s bone in [affected.name] with \the [tool].") // CHOMPEdit - Ballon alert
+		"Applying [tool] to [target]'s bone in [affected.name] with \the [tool].") // CHOMPEdit - Ballon alert
 	affected.stage = 1
 
 /datum/surgery_step/glue_bone/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
@@ -73,8 +73,8 @@
 
 /datum/surgery_step/set_bone/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.balloon_alert_visible("[user] is beginning to set the bone in [target]'s [affected.name] in place with \the [tool]." , \
-		"You are beginning to set the bone in [target]'s [affected.name] in place with \the [tool].") // CHOMPEdit - Ballon alert
+	user.balloon_alert_visible("[user] is setting the bone in [target]'s [affected.name] in place with \the [tool]." , \
+		"Setting the bone in [target]'s [affected.name] in place with \the [tool].") // CHOMPEdit - Ballon alert
 	target.custom_pain("The pain in your [affected.name] is going to make you pass out!", 50)
 	..()
 
@@ -82,11 +82,11 @@
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if (affected.status & ORGAN_BROKEN)
 		user.balloon_alert_visible("[user] sets the bone in [target]'s [affected.name] in place with \the [tool].", \
-			"You set the bone in [target]'s [affected.name] in place with \the [tool].") // CHOMPEdit - Ballon alert
+			"Bone in [target]'s [affected.name] set in place with \the [tool].") // CHOMPEdit - Ballon alert
 		affected.stage = 2
 	else
 		user.balloon_alert_visible("[user] sets the bone in [target]'s [affected.name] in the WRONG place with \the [tool].", \
-			"You set the bone in [target]'s [affected.name] in the WRONG place with \the [tool].") // CHOMPEdit - Ballon alert
+			"Bone in [target]'s [affected.name] set in the WRONG place with \the [tool].") // CHOMPEdit - Ballon alert
 		affected.fracture()
 
 /datum/surgery_step/set_bone/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
@@ -120,13 +120,13 @@
 
 /datum/surgery_step/mend_skull/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.balloon_alert_visible("[user] is beginning to piece together [target]'s skull with \the [tool]."  , \
-		"You are beginning to piece together [target]'s skull with \the [tool].") // CHOMPEdit - Ballon alert
+		"Piecing together [target]'s skull with \the [tool].") // CHOMPEdit - Ballon alert
 	..()
 
 /datum/surgery_step/mend_skull/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.balloon_alert_visible("[user] sets [target]'s skull with \the [tool]." , \
-		"You set [target]'s skull with \the [tool].") // CHOMPEdit - Ballon alert
+		"[target]'s skull set with \the [tool].") // CHOMPEdit - Ballon alert
 	affected.stage = 2
 
 /datum/surgery_step/mend_skull/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
@@ -166,13 +166,13 @@
 /datum/surgery_step/finish_bone/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.balloon_alert_visible("[user] starts to finish mending the damaged bones in [target]'s [affected.name] with \the [tool].", \
-	"You start to finish mending the damaged bones in [target]'s [affected.name] with \the [tool].") // CHOMPEdit - Ballon alert
+	"Finishing mending the damaged bones in [target]'s [affected.name] with \the [tool].") // CHOMPEdit - Ballon alert
 	..()
 
 /datum/surgery_step/finish_bone/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.balloon_alert_visible("[user] has mended the damaged bones in [target]'s [affected.name] with \the [tool]."  , \
-		"You have mended the damaged bones in [target]'s [affected.name] with \the [tool]." ) // CHOMPEdit - Ballon alert
+		"Mended the damaged bones in [target]'s [affected.name] with \the [tool]." ) // CHOMPEdit - Ballon alert
 	affected.status &= ~ORGAN_BROKEN
 	affected.stage = 0
 
@@ -209,14 +209,14 @@
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if (affected.stage == 0)
 		user.balloon_alert_visible("[user] starts repairing the damaged bones in [target]'s [affected.name] with \the [tool]." , \
-		"You starts repairing the damaged bones in [target]'s [affected.name] with \the [tool].") // CHOMPEdit - Ballon alert
+		"Repairing the damaged bones in [target]'s [affected.name] with \the [tool].") // CHOMPEdit - Ballon alert
 	target.custom_pain("Something in your [affected.name] is causing you a lot of pain!", 50)
 	..()
 
 /datum/surgery_step/clamp_bone/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.balloon_alert_visible("[user] sets the bone in [target]'s [affected.name] with \the [tool].", \
-		"You sets [target]'s bone in [affected.name] with \the [tool].") // CHOMPEdit - Ballon alert
+		"[target]'s bone set in [affected.name] with \the [tool].") // CHOMPEdit - Ballon alert
 	affected.status &= ~ORGAN_BROKEN
 
 /datum/surgery_step/clamp_bone/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)

@@ -12,7 +12,7 @@
 
 	INVOKE_ASYNC(src, PROC_REF(balloon_alert_perform), viewer, text)
 
-/atom/proc/balloon_alert_visible(message, self_message, range = world.view, list/exclude_mobs = null)
+/atom/proc/balloon_alert_visible(message, self_message, blind_message, range = world.view, list/exclude_mobs = null)
 	SHOULD_NOT_SLEEP(TRUE)
 
 	var/list/hearers = get_mobs_in_view(range, src)

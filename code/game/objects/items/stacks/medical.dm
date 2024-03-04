@@ -26,7 +26,7 @@
 
 	var/available = get_amount()
 	if(!available)
-		balloon_alert(user, "There's not enough [uses_charge ? "charge" : "items"] left to use that!") // CHOMPEdit - Balloon Alerts
+		balloon_alert(user, "Not enough [uses_charge ? "charge" : "items"] left to use that!") // CHOMPEdit - Balloon Alerts
 		return 1
 
 	if (istype(M, /mob/living/carbon/human))
@@ -60,7 +60,7 @@
 	else
 
 		M.heal_organ_damage((src.heal_brute/2), (src.heal_burn/2))
-		user.visible_message( \
+		user.balloon_alert_visible( \
 			"[M] has been applied with [src] by [user].", \
 			"You apply \the [src] to [M]." \
 		)
@@ -99,16 +99,16 @@
 		var/obj/item/organ/external/affecting = H.get_organ(user.zone_sel.selecting)
 
 		if(affecting.open)
-			balloon_alert(user, "The [affecting.name] is cut open, you'll need more than a bandage!") // CHOMPEdit - Balloon Alerts
+			balloon_alert(user, "The [affecting.name] is cut open!") // CHOMPEdit - Balloon Alerts
 			return
 
 		if(affecting.is_bandaged())
-			balloon_alert(user, "The wounds on [M]'s [affecting.name] have already been bandaged.") // CHOMPEdit - Balloon Alerts
+			balloon_alert(user, "[M]'s [affecting.name] is already bandaged.") // CHOMPEdit - Balloon Alerts
 			return 1
 		else
 			var/available = get_amount()
-			user.visible_message("\The [user] starts bandaging [M]'s [affecting.name].", \
-					             "You start bandaging [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
+			user.balloon_alert_visible("\The [user] starts bandaging [M]'s [affecting.name].", \
+					             "Bandaging [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 			var/used = 0
 			for (var/datum/wound/W in affecting.wounds)
 				if(W.internal)
@@ -118,11 +118,11 @@
 				if(used == amount)
 					break
 				if(!do_mob(user, M, W.damage/3, exclusive = TRUE))
-					balloon_alert(user, "You must stand still to bandage wounds.") // CHOMPEdit - Balloon Alerts
+					balloon_alert(user, "Stand still to bandage wounds.") // CHOMPEdit - Balloon Alerts
 					break
 
 				if(affecting.is_bandaged()) // We do a second check after the delay, in case it was bandaged after the first check.
-					balloon_alert(user, "The wounds on [M]'s [affecting.name] have already been bandaged.") // CHOMPEdit - Balloon Alerts
+					balloon_alert(user, "[M]'s [affecting.name] is already bandaged.") // CHOMPEdit - Balloon Alerts
 					return 1
 
 				if(used >= available)
@@ -130,10 +130,10 @@
 					break
 
 				if (W.current_stage <= W.max_bleeding_stage)
-					user.visible_message("\The [user] bandages \a [W.desc] on [M]'s [affecting.name].", \
+					user.balloon_alert_visible("\The [user] bandages \a [W.desc] on [M]'s [affecting.name].", \
 					                              "You bandage \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 				else
-					user.visible_message("\The [user] places a bandage over \a [W.desc] on [M]'s [affecting.name].", \
+					user.balloon_alert_visible("\The [user] places a bandage over \a [W.desc] on [M]'s [affecting.name].", \
 					                              "You place a bandage over \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 				W.bandage()
 				playsound(src, pick(apply_sounds), 25)
@@ -168,16 +168,16 @@
 		var/obj/item/organ/external/affecting = H.get_organ(user.zone_sel.selecting)
 
 		if(affecting.open)
-			balloon_alert(user, "The [affecting.name] is cut open, you'll need more than a bandage!") // CHOMPEdit - Balloon Alerts
+			balloon_alert(user, "The [affecting.name] is cut open!") // CHOMPEdit - Balloon Alerts
 			return
 
 		if(affecting.is_bandaged())
-			balloon_alert(user, "The wounds on [M]'s [affecting.name] have already been bandaged.") // CHOMPEdit - Balloon Alerts
+			balloon_alert(user, "[M]'s [affecting.name] is already bandaged.") // CHOMPEdit - Balloon Alerts
 			return 1
 		else
 			var/available = get_amount()
-			user.visible_message("\The [user] starts treating [M]'s [affecting.name].", \
-					             "You start treating [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
+			user.balloon_alert_visible("\The [user] starts treating [M]'s [affecting.name].", \
+					             "Treating [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 			var/used = 0
 			for (var/datum/wound/W in affecting.wounds)
 				if (W.internal)
@@ -187,11 +187,11 @@
 				if(used == amount)
 					break
 				if(!do_mob(user, M, W.damage/5, exclusive = TRUE))
-					balloon_alert(user, "You must stand still to bandage wounds.") // CHOMPEdit - Balloon Alerts
+					balloon_alert(user, "Stand still to bandage wounds.") // CHOMPEdit - Balloon Alerts
 					break
 
 				if(affecting.is_bandaged()) // We do a second check after the delay, in case it was bandaged after the first check.
-					balloon_alert(user, "The wounds on [M]'s [affecting.name] have already been bandaged.") // CHOMPEdit - Balloon Alerts
+					balloon_alert(user, "[M]'s [affecting.name] is already bandaged.") // CHOMPEdit - Balloon Alerts
 					return 1
 
 				if(used >= available)
@@ -199,15 +199,15 @@
 					break
 
 				if (W.current_stage <= W.max_bleeding_stage)
-					user.visible_message("\The [user] bandages \a [W.desc] on [M]'s [affecting.name].", \
-					                              "You bandage \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
+					user.balloon_alert_visible("\The [user] bandages \a [W.desc] on [M]'s [affecting.name].", \
+					                              "Bandaged \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 					//H.add_side_effect("Itch")
 				else if (W.damage_type == BRUISE)
-					user.visible_message("\The [user] places a bruise patch over \a [W.desc] on [M]'s [affecting.name].", \
-					                              "You place a bruise patch over \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
+					user.balloon_alert_visible("\The [user] places a bruise patch over \a [W.desc] on [M]'s [affecting.name].", \
+					                              "Placed bruise patch over \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 				else
-					user.visible_message("\The [user] places a bandaid over \a [W.desc] on [M]'s [affecting.name].", \
-					                              "You place a bandaid over \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
+					user.balloon_alert_visible("\The [user] places a bandaid over \a [W.desc] on [M]'s [affecting.name].", \
+					                              "Placed bandaid over \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 				W.bandage()
 				// W.disinfect() // VOREStation - Tech1 should not disinfect
 				playsound(src, pick(apply_sounds), 25)
@@ -242,7 +242,7 @@
 		var/obj/item/organ/external/affecting = H.get_organ(user.zone_sel.selecting)
 
 		if(affecting.open)
-			balloon_alert(user, "The [affecting.name] is cut open, you'll need more than a bandage!") // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
+			balloon_alert(user, "The [affecting.name] is cut open!") // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
 			return
 
 		if(affecting.is_salved())
@@ -250,15 +250,15 @@
 			return 1
 		else
 			user.balloon_alert_visible("\The [user] starts salving wounds on [M]'s [affecting.name].", \
-					             "You start salving the wounds on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
+					             "Salving the wounds on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
 			if(!do_mob(user, M, 10, exclusive = TRUE))
-				balloon_alert(user, "You must stand still to salve wounds.") // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
+				balloon_alert(user, "Stand still to salve wounds.") // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
 				return 1
 			if(affecting.is_salved()) // We do a second check after the delay, in case it was bandaged after the first check.
-				balloon_alert(user, "The wounds on [M]'s [affecting.name] have already been salved.") // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
+				balloon_alert(user, "[M]'s [affecting.name] have already been salved.") // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
 				return 1
 			user.balloon_alert_visible("[user] salved wounds on [M]'s [affecting.name].", \
-			                         "You salved wounds on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
+			                         "Salved wounds on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
 			use(1)
 			affecting.salve()
 			playsound(src, pick(apply_sounds), 25)
@@ -287,16 +287,16 @@
 		var/obj/item/organ/external/affecting = H.get_organ(user.zone_sel.selecting)
 
 		if(affecting.open)
-			balloon_alert(user, "The [affecting.name] is cut open, you'll need more than a bandage!") // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
+			balloon_alert(user, "The [affecting.name] is cut open!") // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
 			return
 
 		if(affecting.is_bandaged() && affecting.is_disinfected())
-			balloon_alert(user, "The wounds on [M]'s [affecting.name] have already been treated.") // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
+			balloon_alert(user, "[M]'s [affecting.name] have already been treated.") // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
 			return 1
 		else
 			var/available = get_amount()
 			user.balloon_alert_visible("\The [user] starts treating [M]'s [affecting.name].", \
-					             "You start treating [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
+					             "Treating [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
 			var/used = 0
 			for (var/datum/wound/W in affecting.wounds)
 				if (W.internal)
@@ -306,10 +306,10 @@
 				//if(used == amount) //VOREStation Edit
 				//	break //VOREStation Edit
 				if(!do_mob(user, M, W.damage/5, exclusive = TRUE))
-					balloon_alert(user, "You must stand still to bandage wounds.") // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
+					balloon_alert(user, "Stand still to bandage wounds.") // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
 					break
 				if(affecting.is_bandaged() && affecting.is_disinfected()) // We do a second check after the delay, in case it was bandaged after the first check.
-					balloon_alert(user, "The wounds on [M]'s [affecting.name] have already been bandaged.") // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
+					balloon_alert(user, "[M]'s [affecting.name] is already bandaged.") // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
 					return 1
 
 				if(used >= available)
@@ -317,14 +317,14 @@
 					break
 
 				if (W.current_stage <= W.max_bleeding_stage)
-					user.visible_message("\The [user] cleans \a [W.desc] on [M]'s [affecting.name] and seals the edges with bioglue.", \
-					                     "You clean and seal \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
+					user.balloon_alert_visible("\The [user] cleans \a [W.desc] on [M]'s [affecting.name] and seals the edges with bioglue.", \
+					                     "Cleaning and sealing \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 				else if (W.damage_type == BRUISE)
-					user.visible_message("\The [user] places a medical patch over \a [W.desc] on [M]'s [affecting.name].", \
-					                              "You place a medical patch over \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
+					user.balloon_alert_visible("\The [user] places a medical patch over \a [W.desc] on [M]'s [affecting.name].", \
+					                              "Placed medical patch over \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 				else
-					user.visible_message("\The [user] smears some bioglue over \a [W.desc] on [M]'s [affecting.name].", \
-					                              "You smear some bioglue over \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
+					user.balloon_alert_visible("\The [user] smears some bioglue over \a [W.desc] on [M]'s [affecting.name].", \
+					                              "Smeared bioglue over \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 				W.bandage()
 				W.disinfect()
 				W.heal_damage(heal_brute)
@@ -357,22 +357,22 @@
 		var/obj/item/organ/external/affecting = H.get_organ(user.zone_sel.selecting)
 
 		if(affecting.open)
-			balloon_alert(user, "The [affecting.name] is cut open, you'll need more than a bandage!") // CHOMPEdit - Balloon Alerts
+			balloon_alert(user, "The [affecting.name] is cut open!") // CHOMPEdit - Balloon Alerts
 
 		if(affecting.is_salved())
-			balloon_alert(user, "The wounds on [M]'s [affecting.name] have already been salved.") // CHOMPEdit - Balloon Alerts
+			balloon_alert(user, "[M]'s [affecting.name] has already been salved.") // CHOMPEdit - Balloon Alerts
 			return 1
 		else
-			user.visible_message("\The [user] starts salving wounds on [M]'s [affecting.name].", \
-					             "You start salving the wounds on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
+			user.balloon_alert_visible("\The [user] starts salving wounds on [M]'s [affecting.name].", \
+					             "Salving the wounds on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 			if(!do_mob(user, M, 10, exclusive = TRUE))
-				balloon_alert(user, "You must stand still to salve wounds.") // CHOMPEdit - Balloon Alerts
+				balloon_alert(user, "Stand still to salve wounds.") // CHOMPEdit - Balloon Alerts
 				return 1
 			if(affecting.is_salved()) // We do a second check after the delay, in case it was bandaged after the first check.
-				balloon_alert(user, "The wounds on [M]'s [affecting.name] have already been salved.") // CHOMPEdit - Balloon Alerts
+				balloon_alert(user, "[M]'s [affecting.name] have already been salved.") // CHOMPEdit - Balloon Alerts
 				return 1
-			user.visible_message( 	"[user] covers wounds on [M]'s [affecting.name] with regenerative membrane.", \
-									"You cover wounds on [M]'s [affecting.name] with regenerative membrane." ) // CHOMPEdit - Balloon Alerts
+			user.balloon_alert_visible("[user] covers wounds on [M]'s [affecting.name] with regenerative membrane.", \
+									"Covered wounds on [M]'s [affecting.name] with regenerative membrane." ) // CHOMPEdit - Balloon Alerts
 			affecting.heal_damage(0,heal_burn)
 			use(1)
 			affecting.salve()
@@ -406,19 +406,19 @@
 			balloon_alert(user, "[M]'s [limb] is already splinted!") // CHOMPEdit - Balloon Alerts
 			return
 		if (M != user)
-			user.visible_message("[user] starts to apply \the [src] to [M]'s [limb].", "You start to apply \the [src] to [M]'s [limb].", "You hear something being wrapped.") // CHOMPEdit - Balloon Alerts
+			user.balloon_alert_visible("[user] starts to apply \the [src] to [M]'s [limb].", "Applying \the [src] to [M]'s [limb].", "You hear something being wrapped.") // CHOMPEdit - Balloon Alerts
 		else
 			if(( !user.hand && (affecting.organ_tag in list(BP_R_ARM, BP_R_HAND)) || \
 				user.hand && (affecting.organ_tag in list(BP_L_ARM, BP_L_HAND)) ))
 				balloon_alert(user, "You can't apply a splint to the arm you're using!") // CHOMPEdit - Balloon Alerts
 				return
-			user.visible_message("[user] starts to apply \the [src] to their [limb].", "You start to apply \the [src] to your [limb].", "You hear something being wrapped.") // CHOMPEdit - Balloon Alerts
+			user.balloon_alert_visible("[user] starts to apply \the [src] to their [limb].", "Applying \the [src] to your [limb].", "You hear something being wrapped.") // CHOMPEdit - Balloon Alerts
 		if(do_after(user, 50, M, exclusive = TASK_USER_EXCLUSIVE))
 			if(affecting.splinted)
 				balloon_alert(user, "[M]'s [limb] is already splinted!") // CHOMPEdit - Balloon Alerts
 				return
 			if(M == user && prob(75))
-				user.visible_message("\The [user] fumbles [src].", "You fumble [src].", "You hear something being wrapped.") // CHOMPEdit - Balloon Alerts
+				user.balloon_alert_visible("\The [user] fumbles [src].", "Fumbling [src].", "You hear something being wrapped.") // CHOMPEdit - Balloon Alerts
 				return
 			if(ishuman(user))
 				var/obj/item/stack/medical/splint/S = split(1)
@@ -426,9 +426,9 @@
 					if(affecting.apply_splint(S))
 						S.forceMove(affecting)
 						if (M != user)
-							user.visible_message("\The [user] finishes applying [src] to [M]'s [limb].", "You finish applying \the [src] to [M]'s [limb].", "You hear something being wrapped.") // CHOMPEdit - Balloon Alerts
+							user.balloon_alert_visible("\The [user] finishes applying [src] to [M]'s [limb].", "Finished applying \the [src] to [M]'s [limb].", "You hear something being wrapped.") // CHOMPEdit - Balloon Alerts
 						else
-							user.visible_message("\The [user] successfully applies [src] to their [limb].", "You successfully apply \the [src] to your [limb].", "You hear something being wrapped.") // CHOMPEdit - Balloon Alerts
+							user.balloon_alert_visible("\The [user] successfully applies [src] to their [limb].", "Successfully applied \the [src] to your [limb].", "You hear something being wrapped.") // CHOMPEdit - Balloon Alerts
 						return
 					S.dropInto(src.loc) //didn't get applied, so just drop it
 			if(isrobot(user))
@@ -436,10 +436,10 @@
 				if(B)
 					if(affecting.apply_splint(B))
 						B.forceMove(affecting)
-						user.visible_message("\The [user] finishes applying [src] to [M]'s [limb].", "You finish applying \the [src] to [M]'s [limb].", "You hear something being wrapped.") // CHOMPEdit - Balloon Alerts
+						user.balloon_alert_visible("\The [user] finishes applying [src] to [M]'s [limb].", "Finish applying \the [src] to [M]'s [limb].", "You hear something being wrapped.") // CHOMPEdit - Balloon Alerts
 						B.use(1)
 						return
-			user.visible_message("\The [user] fails to apply [src].", "You fail to apply [src].", "You hear something being wrapped.") // CHOMPEdit - Balloon Alerts
+			user.balloon_alert_visible("\The [user] fails to apply [src].", "Failed to apply [src].", "You hear something being wrapped.") // CHOMPEdit - Balloon Alerts
 		return
 
 

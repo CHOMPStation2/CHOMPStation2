@@ -354,12 +354,12 @@
 	target.op_stage.current_organ = organ_to_remove
 
 	user.balloon_alert_visible("[user] starts to decouple [target]'s [target.op_stage.current_organ] with \the [tool].", \
-	"You start to decouple [target]'s [target.op_stage.current_organ] with \the [tool]." )
+	"Decoupling [target]'s [target.op_stage.current_organ] with \the [tool]." )
 	..()
 
 /datum/surgery_step/robotics/detatch_organ_robotic/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.balloon_alert_visible("[user] has decoupled [target]'s [target.op_stage.current_organ] with \the [tool]." , \
-	"You have decoupled [target]'s [target.op_stage.current_organ] with \the [tool].") // CHOMPEdit - balloon alert
+	"Decoupled [target]'s [target.op_stage.current_organ] with \the [tool].") // CHOMPEdit - balloon alert
 
 	var/obj/item/organ/internal/I = target.internal_organs_by_name[target.op_stage.current_organ]
 	if(I && istype(I))
@@ -416,12 +416,12 @@
 	target.op_stage.current_organ = organ_to_replace
 
 	user.balloon_alert_visible("[user] begins reattaching [target]'s [target.op_stage.current_organ] with \the [tool].", \
-	"You start reattaching [target]'s [target.op_stage.current_organ] with \the [tool].") // CHOMPEdit - balloon alert
+	"Reattaching [target]'s [target.op_stage.current_organ] with \the [tool].") // CHOMPEdit - balloon alert
 	..()
 
 /datum/surgery_step/robotics/attach_organ_robotic/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.balloon_alert_visible("[user] has reattached [target]'s [target.op_stage.current_organ] with \the [tool]." , \
-	"You have reattached [target]'s [target.op_stage.current_organ] with \the [tool].") // CHOMPEdit - balloon alert
+	"Reattached [target]'s [target.op_stage.current_organ] with \the [tool].") // CHOMPEdit - balloon alert
 
 	var/obj/item/organ/I = target.internal_organs_by_name[target.op_stage.current_organ]
 	if(I && istype(I))
@@ -480,13 +480,13 @@
 /datum/surgery_step/robotics/install_mmi/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.balloon_alert_visible("[user] starts installing \the [tool] into [target]'s [affected.name].", \
-	"You start installing \the [tool] into [target]'s [affected.name].") // CHOMPEdit - balloon alert
+	"Installing \the [tool] into [target]'s [affected.name].") // CHOMPEdit - balloon alert
 	..()
 
 /datum/surgery_step/robotics/install_mmi/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.balloon_alert_visible("[user] has installed \the [tool] into [target]'s [affected.name].", \
-	"You have installed \the [tool] into [target]'s [affected.name].") // CHOMPEdit - balloon alert
+	"Installed \the [tool] into [target]'s [affected.name].") // CHOMPEdit - balloon alert
 
 	var/obj/item/device/mmi/M = tool
 	var/obj/item/organ/internal/mmi_holder/holder = new(target, 1)
@@ -571,13 +571,13 @@
 /datum/surgery_step/robotics/install_nymph/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.balloon_alert_visible("[user] starts setting \the [tool] into [target]'s [affected.name].", \
-	"You start setting \the [tool] into [target]'s [affected.name].") // CHOMPEdit - balloon alert
+	"Setting \the [tool] into [target]'s [affected.name].") // CHOMPEdit - balloon alert
 	..()
 
 /datum/surgery_step/robotics/install_nymph/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.balloon_alert_visible("[user] has installed \the [tool] into [target]'s [affected.name].", \
-	"You have installed \the [tool] into [target]'s [affected.name].") // CHOMPEdit - balloon alert
+	"Installed \the [tool] into [target]'s [affected.name].") // CHOMPEdit - balloon alert
 
 	var/obj/item/weapon/holder/diona/N = tool
 	var/obj/item/organ/internal/brain/cephalon/cephalon = new(target, 1)

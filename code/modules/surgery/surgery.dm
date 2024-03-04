@@ -210,7 +210,7 @@
 		var/calc_duration = rand(selected_surgery.min_duration, selected_surgery.max_duration)
 		if(!do_mob(user, M, calc_duration * toolspeed, zone, exclusive = TRUE))
 			success = FALSE
-			balloon_alert(user, "You must remain close to and keep focused on your patient to conduct surgery.") // CHOMPEdit
+			balloon_alert(user, "Remain close to and keep focused on your patient to conduct surgery.") // CHOMPEdit
 
 	if(success)
 		selected_surgery.end_step(user, M, zone, src)

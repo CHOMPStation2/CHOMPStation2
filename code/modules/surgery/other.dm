@@ -92,14 +92,14 @@
 /datum/surgery_step/fix_dead_tissue/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.balloon_alert_visible("[user] starts cutting away necrotic tissue in [target]'s [affected.name] with \the [tool]." , \
-	"You start cutting away necrotic tissue in [target]'s [affected.name] with \the [tool].") // CHOMPEdit - balloon alert
+	"Cutting away necrotic tissue in [target]'s [affected.name] with \the [tool].") // CHOMPEdit - balloon alert
 	target.custom_pain("The pain in [affected.name] is unbearable!", 100)
 	..()
 
 /datum/surgery_step/fix_dead_tissue/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.balloon_alert_visible("[user] has cut away necrotic tissue in [target]'s [affected.name] with \the [tool].", \
-		"You have cut away necrotic tissue in [target]'s [affected.name] with \the [tool].") // CHOMPEdit - balloon alert
+		"Cut away necrotic tissue in [target]'s [affected.name] with \the [tool].") // CHOMPEdit - balloon alert
 	affected.open = 3
 
 /datum/surgery_step/fix_dead_tissue/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
@@ -150,7 +150,7 @@
 /datum/surgery_step/treat_necrosis/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.balloon_alert_visible("[user] starts applying medication to the affected tissue in [target]'s [affected.name] with \the [tool]." , \
-	"You start applying medication to the affected tissue in [target]'s [affected.name] with \the [tool].") // CHOMPEdit - balloon alert
+	"Applying medication to the affected tissue in [target]'s [affected.name] with \the [tool].") // CHOMPEdit - balloon alert
 	target.custom_pain("Something in your [affected.name] is causing you a lot of pain!", 50)
 	..()
 
@@ -168,7 +168,7 @@
 		affected.owner.update_icons_body()
 
 		user.balloon_alert_visible("[user] applies [trans] units of the solution to affected tissue in [target]'s [affected.name].", \
-			"You apply [trans] units of the solution to affected tissue in [target]'s [affected.name] with \the [tool].") // CHOMPEdit - balloon alert
+			"Applied [trans] units of the solution to affected tissue in [target]'s [affected.name] with \the [tool].") // CHOMPEdit - balloon alert
 
 /datum/surgery_step/treat_necrosis/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
@@ -220,7 +220,7 @@
 		if(!istype(rig))
 			return
 	user.balloon_alert_visible("[user] starts cutting through the support systems of \the [rig] on [target] with \the [tool]." , \
-	"You start cutting through the support systems of \the [rig] on [target] with \the [tool].") // CHOMPEdit - balloon alert
+	"Cutting through the support systems of \the [rig] on [target] with \the [tool].") // CHOMPEdit - balloon alert
 	..()
 
 /datum/surgery_step/hardsuit/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
@@ -231,7 +231,7 @@
 			return
 	rig.cut_suit()
 	user.balloon_alert_visible("[user] has cut through the support systems of \the [rig] on [target] with \the [tool].", \
-		"You have cut through the support systems of \the [rig] on [target] with \the [tool].") // CHOMPEdit - balloon alert
+		"Cut through the support systems of \the [rig] on [target] with \the [tool].") // CHOMPEdit - balloon alert
 
 /datum/surgery_step/hardsuit/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.balloon_alert_visible("[user]'s [tool] can't quite seem to get through the metal...", \
@@ -273,12 +273,12 @@
 
 /datum/surgery_step/dehusk/structinitial/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.balloon_alert_visible("[user] begins to create a fleshy but rigid looking mesh over gaps in [target]'s flesh with \the [tool].", \
-	"You begin to create a fleshy but rigid looking mesh over gaps in [target]'s flesh with \the [tool].") // CHOMPEdit - balloon alert
+	"Creating a fleshy but rigid looking mesh over gaps in [target]'s flesh with \the [tool].") // CHOMPEdit - balloon alert
 	..()
 
 /datum/surgery_step/dehusk/structinitial/end_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.balloon_alert_visible("[user] creates a fleshy but rigid looking mesh over gaps in [target]'s flesh with \the [tool].", \
-	"You create a fleshy but rigid looking mesh over gaps in [target]'s flesh with \the [tool].") // CHOMPEdit - balloon alert
+	"Created a fleshy but rigid looking mesh over gaps in [target]'s flesh with \the [tool].") // CHOMPEdit - balloon alert
 	target.op_stage.dehusk = 1
 	..()
 
@@ -305,12 +305,12 @@
 
 /datum/surgery_step/dehusk/relocateflesh/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.balloon_alert_visible("[user] begins to relocate some of [target]'s flesh with \the [tool], using it to fill in gaps.", \
-	"You begin to relocate some of [target]'s flesh with \the [tool], using it to fill in gaps.") // CHOMPEdit - balloon alert
+	"Relocating some of [target]'s flesh with \the [tool], using it to fill in gaps.") // CHOMPEdit - balloon alert
 	..()
 
 /datum/surgery_step/dehusk/relocateflesh/end_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.balloon_alert_visible("[user] relocates some of [target]'s flesh with \the [tool], using it to fill in gaps.", \
-	"You relocate some of [target]'s flesh with \the [tool], using it to fill in gaps.") // CHOMPEdit - balloon alert
+	"Relocated some of [target]'s flesh with \the [tool], using it to fill in gaps.") // CHOMPEdit - balloon alert
 	target.op_stage.dehusk = 2
 	..()
 
@@ -337,15 +337,15 @@
 /datum/surgery_step/dehusk/structfinish/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(istype(tool,/obj/item/weapon/surgical/bioregen))
 		user.balloon_alert_visible("[user] begins to recreate blood vessels and fill in the gaps in [target]'s flesh with \the [tool].", \
-	"You begin to recreate blood vessels and fill in the gaps in [target]'s flesh with \the [tool].") // CHOMPEdit - balloon alert
+	"Recreating blood vessels and fill in the gaps in [target]'s flesh with \the [tool].") // CHOMPEdit - balloon alert
 	else if(istype(tool,/obj/item/weapon/surgical/FixOVein))
 		user.balloon_alert_visible("[user] attempts to recreate blood vessels and fill in the gaps in [target]'s flesh with \the [tool].", \
-	"You attempt to recreate blood vessels and fill in the gaps in [target]'s flesh with \the [tool].") // CHOMPEdit - balloon alert
+	"Recreated blood vessels and fill in the gaps in [target]'s flesh with \the [tool].") // CHOMPEdit - balloon alert
 	..()
 
 /datum/surgery_step/dehusk/structfinish/end_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.balloon_alert_visible("[user] finishes recreating the missing biological structures and filling in gaps in [target]'s flesh with \the [tool].", \
-	"You finish recreating the missing biological structures and filling in gaps in [target]'s flesh with \the [tool].") // CHOMPEdit - balloon alert
+	"Recreated the missing biological structures and filling in gaps in [target]'s flesh with \the [tool].") // CHOMPEdit - balloon alert
 	target.op_stage.dehusk = 0
 	target.mutations.Remove(HUSK)
 	target.status_flags &= ~DISFIGURED
@@ -359,7 +359,7 @@
 	"Your hand slips, causing \the [tool] to scrape [target]'s body.") // CHOMPEdit - balloon alert
 	else if(istype(tool,/obj/item/weapon/surgical/FixOVein))
 		user.balloon_alert_visible("[user] fails to finish the structure over the gaps in [target]'s flesh, doing more damage than good.", \
-	"You fail to finish the structure over the gaps in [target]'s flesh, doing more damage than good.") // CHOMPEdit - balloon alert
+	"Failed to finish the structure over the gaps in [target]'s flesh, doing more damage than good.") // CHOMPEdit - balloon alert
 	affected.createwound(CUT, 15)
 	affected.createwound(BRUISE, 10)
 	..()
@@ -376,7 +376,7 @@
 
 /datum/surgery_step/internal/detoxify/begin_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.balloon_alert_visible("[user] begins to pull toxins from, and restore oxygen to [target]'s musculature and organs with \the [tool].", \
-	"You begin to pull toxins from, and restore oxygen to [target]'s musculature and organs with \the [tool].") // CHOMPEdit - balloon alert
+	"Pulling toxins from, and restoring oxygen to [target]'s musculature and organs with \the [tool].") // CHOMPEdit - balloon alert
 	..()
 
 /datum/surgery_step/internal/detoxify/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)

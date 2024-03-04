@@ -39,12 +39,12 @@
 
 /datum/surgery_step/generic/cut_face/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.balloon_alert_visible("[user] starts to cut open [target]'s face and neck with \the [tool].", \
-	"You start to cut open [target]'s face and neck with \the [tool].") // CHOMPEdit - Ballon alert
+	"Cutting open [target]'s face and neck with \the [tool].") // CHOMPEdit - Ballon alert
 	..()
 
 /datum/surgery_step/generic/cut_face/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.balloon_alert_visible("[user] has cut open [target]'s face and neck with \the [tool]." , \
-	"You have cut open[target]'s face and neck with \the [tool].",) // CHOMPEdit - Ballon alert
+	"[target]'s face and neck cut open with \the [tool].",) // CHOMPEdit - Ballon alert
 	target.op_stage.face = 1
 
 /datum/surgery_step/generic/cut_face/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
@@ -74,12 +74,12 @@
 
 /datum/surgery_step/face/mend_vocal/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.balloon_alert_visible("[user] starts mending [target]'s vocal cords with \the [tool].", \
-	"You start mending [target]'s vocal cords with \the [tool].") // CHOMPEdit - Ballon alert
+	"Mending [target]'s vocal cords with \the [tool].") // CHOMPEdit - Ballon alert
 	..()
 
 /datum/surgery_step/face/mend_vocal/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.balloon_alert_visible("[user] mends [target]'s vocal cords with \the [tool].", \
-	"You mend [target]'s vocal cords with \the [tool].") // CHOMPEdit - Ballon alert
+	"[target]'s vocal cords mend with \the [tool].") // CHOMPEdit - Ballon alert
 	target.op_stage.face = 2
 
 /datum/surgery_step/face/mend_vocal/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
@@ -108,12 +108,12 @@
 
 /datum/surgery_step/face/fix_face/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.balloon_alert_visible("[user] starts pulling the skin on [target]'s face back in place with \the [tool].", \
-	"You start pulling the skin on [target]'s face back in place with \the [tool].") // CHOMPEdit - Ballon alert
+	"Pulling the skin on [target]'s face back in place with \the [tool].") // CHOMPEdit - Ballon alert
 	..()
 
 /datum/surgery_step/face/fix_face/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.balloon_alert_visible("[user] pulls the skin on [target]'s face back in place with \the [tool].",	\
-	"You pull the skin on [target]'s face back in place with \the [tool].") // CHOMPEdit - Ballon alert
+	"Pulled the skin on [target]'s face back in place with \the [tool].") // CHOMPEdit - Ballon alert
 	target.op_stage.face = 3
 
 /datum/surgery_step/face/fix_face/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
@@ -143,13 +143,13 @@
 
 /datum/surgery_step/face/cauterize/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.balloon_alert_visible("[user] is beginning to cauterize the incision on [target]'s face and neck with \the [tool]." , \
-	"You are beginning to cauterize the incision on [target]'s face and neck with \the [tool].") // CHOMPEdit - Ballon alert
+	"Cauterizing the incision on [target]'s face and neck with \the [tool].") // CHOMPEdit - Ballon alert
 	..()
 
 /datum/surgery_step/face/cauterize/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.balloon_alert_visible("[user] cauterizes the incision on [target]'s face and neck with \the [tool].", \
-	"You cauterize the incision on [target]'s face and neck with \the [tool].") // CHOMPEdit - Ballon alert
+	"Cauterized the incision on [target]'s face and neck with \the [tool].") // CHOMPEdit - Ballon alert
 	affected.open = 0
 	affected.status &= ~ORGAN_BLEEDING
 	if (target.op_stage.face == 3)

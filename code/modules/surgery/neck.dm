@@ -159,12 +159,12 @@
 
 /datum/surgery_step/brainstem/mend_cord/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.balloon_alert_visible("[user] starts to fuse [target]'s spinal cord with \the [tool].", \
-	"You start to fuse [target]'s spinal cord with \the [tool].") // CHOMPEdit - Ballon alert
+	"Fusing [target]'s spinal cord with \the [tool].") // CHOMPEdit - Ballon alert
 	..()
 
 /datum/surgery_step/brainstem/mend_cord/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.balloon_alert_visible("[user] has fused [target]'s spinal cord with \the [tool]." , \
-	"You have fused [target]'s spinal cord with \the [tool].",) // CHOMPEdit - Ballon alert
+	"Fused [target]'s spinal cord with \the [tool].",) // CHOMPEdit - Ballon alert
 	target.op_stage.brainstem = 4
 	target.AdjustParalysis(5)
 	target.add_modifier(/datum/modifier/franken_sickness, 20 MINUTES)
@@ -199,12 +199,12 @@
 
 /datum/surgery_step/brainstem/mend_vertebrae/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.balloon_alert_visible("[user] starts to mend [target]'s opened vertebrae with \the [tool].", \
-	"You start to mend [target]'s opened vertebrae with \the [tool].") // CHOMPEdit - Ballon alert
+	"Mending [target]'s opened vertebrae with \the [tool].") // CHOMPEdit - Ballon alert
 	..()
 
 /datum/surgery_step/brainstem/mend_vertebrae/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.balloon_alert_visible("[user] has mended [target]'s vertebrae with \the [tool]." , \
-	" You have mended [target]'s vertebrae with \the [tool].",) // CHOMPEdit - Ballon alert
+	"Mended [target]'s vertebrae with \the [tool].",) // CHOMPEdit - Ballon alert
 	target.can_defib = 1
 	target.op_stage.brainstem = 5
 
@@ -239,12 +239,12 @@
 
 /datum/surgery_step/brainstem/realign_tissue/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.balloon_alert_visible("[user] starts to realign the tissues in [target]'s skull with \the [tool].", \
-	"You start to realign the tissues in [target]'s skull with \the [tool].") // CHOMPEdit - Ballon alert
+	"Realigning the tissues in [target]'s skull with \the [tool].") // CHOMPEdit - Ballon alert
 	..()
 
 /datum/surgery_step/brainstem/realign_tissue/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.balloon_alert_visible("[user] has realigned the tissues in [target]'s skull back into place with \the [tool]." , \
-	" You have realigned the tissues in [target]'s skull back into place with \the [tool].",) // CHOMPEdit - Ballon alert
+	"Realigned the tissues in [target]'s skull back into place with \the [tool].",) // CHOMPEdit - Ballon alert
 	target.AdjustParalysis(5) //I n v a s i v e
 	target.op_stage.brainstem = 0 //The cycle begins anew.
 

@@ -59,7 +59,7 @@
 		if(I && (I.damage > 0 || I.status == ORGAN_DEAD))
 			if(!(I.robotic >= ORGAN_ROBOT))
 				user.balloon_alert_visible("[user] starts treating damage to [target]'s [I.name] with [tool_name].", \
-				"You start treating damage to [target]'s [I.name] with [tool_name]." ) // CHOMPEdit - Ballon alert
+				"Treating damage to [target]'s [I.name] with [tool_name]." ) // CHOMPEdit - Ballon alert
 
 	target.custom_pain("The pain in your [affected.name] is living hell!", 100)
 	..()
@@ -79,9 +79,9 @@
 		if(I && (I.damage > 0 || I.status == ORGAN_DEAD))
 			if(!(I.robotic >= ORGAN_ROBOT))
 				user.balloon_alert_visible("[user] treats damage to [target]'s [I.name] with [tool_name].", \
-				"You treat damage to [target]'s [I.name] with [tool_name]." ) // CHOMPEdit - Ballon alert
+				"Treated damage to [target]'s [I.name] with [tool_name]." ) // CHOMPEdit - Ballon alert
 				if(I.organ_tag == O_BRAIN && I.status == ORGAN_DEAD && target.can_defib == 0) //Let people know they still got more work to get the brain back into working order.
-					user.balloon_alert(user, "You fix their [I] but the neurological structure is still heavily damaged and in need of repair.") // CHOMPEdit - Ballon alert
+					user.balloon_alert(user, "Fixed their [I], but the neurological structure is still heavily damaged and in need of repair.") // CHOMPEdit - Ballon alert
 				I.damage = 0
 				I.status = 0
 				if(I.organ_tag == O_EYES)
@@ -149,7 +149,7 @@
 		if(I && I.damage > 0)
 			if(I.robotic >= ORGAN_ROBOT)
 				user.balloon_alert_visible("[user] starts mending the damage to [target]'s [I.name]'s mechanisms.", \
-				"You start mending the damage to [target]'s [I.name]'s mechanisms." ) // CHOMPEdit - Ballon alert
+				"Mending the damage to [target]'s [I.name]'s mechanisms." ) // CHOMPEdit - Ballon alert
 
 	target.custom_pain("The pain in your [affected.name] is living hell!",1)
 	..()
@@ -163,7 +163,7 @@
 		if(I && I.damage > 0)
 			if(I.robotic >= ORGAN_ROBOT)
 				user.balloon_alert_visible("[user] repairs [target]'s [I.name] with [tool].", \
-				"You repair [target]'s [I.name] with [tool]." ) // CHOMPEdit - Ballon alert
+				"Repaired [target]'s [I.name] with [tool]." ) // CHOMPEdit - Ballon alert
 				I.damage = 0
 				if(I.organ_tag == O_EYES)
 					target.sdisabilities &= ~BLIND
@@ -234,13 +234,13 @@
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
 	user.balloon_alert_visible("[user] starts to separate [target]'s [target.op_stage.current_organ] with \the [tool].", \
-	"You start to separate [target]'s [target.op_stage.current_organ] with \the [tool]." ) // CHOMPEdit - Ballon alert
+	"Separating [target]'s [target.op_stage.current_organ] with \the [tool]." ) // CHOMPEdit - Ballon alert
 	target.custom_pain("The pain in your [affected.name] is living hell!", 100)
 	..()
 
 /datum/surgery_step/internal/detatch_organ/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.balloon_alert_visible("[user] has separated [target]'s [target.op_stage.current_organ] with \the [tool]." , \
-	"You have separated [target]'s [target.op_stage.current_organ] with \the [tool].") // CHOMPEdit - Ballon alert
+	"Separated [target]'s [target.op_stage.current_organ] with \the [tool].") // CHOMPEdit - Ballon alert
 
 	var/obj/item/organ/I = target.internal_organs_by_name[target.op_stage.current_organ]
 	if(I && istype(I))
@@ -299,12 +299,12 @@
 	if(!organ_to_remove) //They chose cancel!
 		user.balloon_alert(user, "You decide against preparing any organs for removal.") // CHOMPEdit - Ballon alert
 		user.balloon_alert_visible("[user] starts pulling \the [tool] from [target]'s [affected].", \
-		"You start pulling \the [tool] from [target]'s [affected].") // CHOMPEdit - Ballon alert
+		"Pulling \the [tool] from [target]'s [affected].") // CHOMPEdit - Ballon alert
 
 	target.op_stage.current_organ = organ_to_remove
 
 	user.balloon_alert_visible("[user] starts removing [target]'s [target.op_stage.current_organ] with \the [tool].", \
-	"You start removing [target]'s [target.op_stage.current_organ] with \the [tool].") // CHOMPEdit - Ballon alert
+	"Removing [target]'s [target.op_stage.current_organ] with \the [tool].") // CHOMPEdit - Ballon alert
 	target.custom_pain("Someone's ripping out your [target.op_stage.current_organ]!", 100)
 	..()
 
@@ -312,12 +312,12 @@
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if(!target.op_stage.current_organ) //They chose to remove their tool instead.
 		user.balloon_alert_visible("[user] has removed \the [tool] from [target]'s [affected].", \
-		"You have removed \the [tool] from [target]'s [affected].") // CHOMPEdit - Ballon alert
+		"Removed \the [tool] from [target]'s [affected].") // CHOMPEdit - Ballon alert
 
 	// Extract the organ!
 	if(target.op_stage.current_organ)
 		user.balloon_alert_visible("[user] has removed [target]'s [target.op_stage.current_organ] with \the [tool].", \
-		"You have removed [target]'s [target.op_stage.current_organ] with \the [tool].") // CHOMPEdit - Ballon alert
+		"Removed [target]'s [target.op_stage.current_organ] with \the [tool].") // CHOMPEdit - Ballon alert
 		var/obj/item/organ/O = target.internal_organs_by_name[target.op_stage.current_organ]
 		if(O && istype(O))
 			O.removed(user)
@@ -356,7 +356,7 @@
 		return 0
 
 	if((affected.robotic >= ORGAN_ROBOT) && !(O.robotic >= ORGAN_ROBOT))
-		user.balloon_alert(user, "You cannot install a naked organ into a robotic body.") // CHOMPEdit - Ballon alert
+		user.balloon_alert(user, "Cannot install a naked organ into a robotic body.") // CHOMPEdit - Ballon alert
 		return SURGERY_FAILURE
 
 	if(!target.species)
@@ -390,14 +390,14 @@
 /datum/surgery_step/internal/replace_organ/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.balloon_alert_visible("[user] starts transplanting \the [tool] into [target]'s [affected.name].", \
-	"You start transplanting \the [tool] into [target]'s [affected.name].") // CHOMPEdit - Ballon alert
+	"Started transplanting \the [tool] into [target]'s [affected.name].") // CHOMPEdit - Ballon alert
 	target.custom_pain("Someone's rooting around in your [affected.name]!", 100)
 	..()
 
 /datum/surgery_step/internal/replace_organ/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.balloon_alert_visible("[user] has transplanted \the [tool] into [target]'s [affected.name].", \
-	"You have transplanted \the [tool] into [target]'s [affected.name].") // CHOMPEdit - Ballon alert
+	"Transplanted \the [tool] into [target]'s [affected.name].") // CHOMPEdit - Ballon alert
 	var/obj/item/organ/O = tool
 	if(istype(O))
 		user.remove_from_mob(O)
@@ -448,13 +448,13 @@
 
 /datum/surgery_step/internal/attach_organ/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.balloon_alert_visible("[user] begins reattaching [target]'s [target.op_stage.current_organ] with \the [tool].", \
-	"You start reattaching [target]'s [target.op_stage.current_organ] with \the [tool].") // CHOMPEdit - Ballon alert
+	"Reattaching [target]'s [target.op_stage.current_organ] with \the [tool].") // CHOMPEdit - Ballon alert
 	target.custom_pain("Someone's digging needles into your [target.op_stage.current_organ]!", 100)
 	..()
 
 /datum/surgery_step/internal/attach_organ/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.balloon_alert_visible("[user] has reattached [target]'s [target.op_stage.current_organ] with \the [tool]." , \
-	"You have reattached [target]'s [target.op_stage.current_organ] with \the [tool].") // CHOMPEdit - Ballon alert
+	"Reattached [target]'s [target.op_stage.current_organ] with \the [tool].") // CHOMPEdit - Ballon alert
 
 	var/obj/item/organ/I = target.internal_organs_by_name[target.op_stage.current_organ]
 	if(I && istype(I))

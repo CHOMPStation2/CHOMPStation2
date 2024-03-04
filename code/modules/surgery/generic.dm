@@ -48,14 +48,14 @@
 /datum/surgery_step/generic/cut_open/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.balloon_alert_visible("[user] starts the incision on [target]'s [affected.name] with \the [tool].", \
-	"You start the incision on [target]'s [affected.name] with \the [tool].") // CHOMPEdit - Ballon alert
+	"Starting incision on [target]'s [affected.name] with \the [tool].") // CHOMPEdit - Ballon alert
 	target.custom_pain("You feel a horrible pain as if from a sharp knife in your [affected.name]!", 40)
 	..()
 
 /datum/surgery_step/generic/cut_open/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.balloon_alert_visible("[user] has made an incision on [target]'s [affected.name] with \the [tool].", \
-	"You have made an incision on [target]'s [affected.name] with \the [tool].",) // CHOMPEdit - Ballon alert
+	"Made an incision on [target]'s [affected.name] with \the [tool].",) // CHOMPEdit - Ballon alert
 	affected.open = 1
 
 	if(istype(target) && target.should_have_organ(O_HEART))
@@ -95,7 +95,7 @@
 /datum/surgery_step/generic/cut_with_laser/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.balloon_alert_visible("[user] starts the bloodless incision on [target]'s [affected.name] with \the [tool].", \
-	"You start the bloodless incision on [target]'s [affected.name] with \the [tool].") // CHOMPEdit - Ballon alert
+	"Starting bloodless incision on [target]'s [affected.name] with \the [tool].") // CHOMPEdit - Ballon alert
 	target.custom_pain("You feel a horrible, searing pain in your [affected.name]!", 50)
 	..()
 
@@ -114,10 +114,10 @@
 	if(clamp_chance)
 		affected.organ_clamp()
 		user.balloon_alert_visible("[user] has made a bloodless incision on [target]'s [affected.name] with \the [tool].", \
-		"You have made a bloodless incision on [target]'s [affected.name] with \the [tool].",) // CHOMPEdit - Ballon alert
+		"Made a bloodless incision on [target]'s [affected.name] with \the [tool].",) // CHOMPEdit - Ballon alert
 	else
 		user.balloon_alert_visible("[user] has made an incision on [target]'s [affected.name] with \the [tool], but blood is still escaping from the wound.", \
-		"You have made an incision on [target]'s [affected.name] with \the [tool], but blood is still coming from the wound..",) // CHOMPEdit - Ballon alert
+		"Made an incision on [target]'s [affected.name] with \the [tool], but blood is still coming from the wound..",) // CHOMPEdit - Ballon alert
 		//Could be cleaner ...
 
 	spread_germs_to_organ(affected, user)
@@ -153,14 +153,14 @@
 /datum/surgery_step/generic/incision_manager/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.balloon_alert_visible("[user] starts to construct a prepared incision on and within [target]'s [affected.name] with \the [tool].", \
-	"You start to construct a prepared incision on and within [target]'s [affected.name] with \the [tool].") // CHOMPEdit - Ballon alert
+	"Constructing a prepared incision on and within [target]'s [affected.name] with \the [tool].") // CHOMPEdit - Ballon alert
 	target.custom_pain("You feel a horrible, searing pain in your [affected.name] as it is pushed apart!", 50)
 	..()
 
 /datum/surgery_step/generic/incision_manager/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.balloon_alert_visible("[user] has constructed a prepared incision on and within [target]'s [affected.name] with \the [tool].", \
-	"You have constructed a prepared incision on and within [target]'s [affected.name] with \the [tool].",) // CHOMPEdit - Ballon alert
+	"Constructed a prepared incision on and within [target]'s [affected.name] with \the [tool].",) // CHOMPEdit - Ballon alert
 	affected.open = 1
 
 	if(istype(target) && target.should_have_organ(O_HEART))
@@ -200,14 +200,14 @@
 /datum/surgery_step/generic/clamp_bleeders/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.balloon_alert_visible("[user] starts clamping bleeders in [target]'s [affected.name] with \the [tool].", \
-	"You start clamping bleeders in [target]'s [affected.name] with \the [tool].") // CHOMPEdit - Ballon alert
+	"Clamping bleeders in [target]'s [affected.name] with \the [tool].") // CHOMPEdit - Ballon alert
 	target.custom_pain("The pain in your [affected.name] is maddening!", 40)
 	..()
 
 /datum/surgery_step/generic/clamp_bleeders/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.balloon_alert_visible("[user] clamps bleeders in [target]'s [affected.name] with \the [tool].",	\
-	"You clamp bleeders in [target]'s [affected.name] with \the [tool].") // CHOMPEdit - Ballon alert
+	"Clamped bleeders in [target]'s [affected.name] with \the [tool].") // CHOMPEdit - Ballon alert
 	affected.organ_clamp()
 	spread_germs_to_organ(affected, user)
 
@@ -241,13 +241,13 @@
 /datum/surgery_step/generic/retract_skin/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	var/msg = "[user] starts to pry open the incision on [target]'s [affected.name] with \the [tool]."
-	var/self_msg = "You start to pry open the incision on [target]'s [affected.name] with \the [tool]."
+	var/self_msg = "Prying open the incision on [target]'s [affected.name] with \the [tool]."
 	if (target_zone == BP_TORSO)
 		msg = "[user] starts to separate the ribcage and rearrange the organs in [target]'s torso with \the [tool]."
-		self_msg = "You start to separate the ribcage and rearrange the organs in [target]'s torso with \the [tool]."
+		self_msg = "Separating the ribcage and rearrange the organs in [target]'s torso with \the [tool]."
 	if (target_zone == BP_GROIN)
 		msg = "[user] starts to pry open the incision and rearrange the organs in [target]'s lower abdomen with \the [tool]."
-		self_msg = "You start to pry open the incision and rearrange the organs in [target]'s lower abdomen with \the [tool]."
+		self_msg = "Prying open the incision and rearrange the organs in [target]'s lower abdomen with \the [tool]."
 	user.balloon_alert_visible("[msg]", "[self_msg]") // CHOMPEdit - Ballon alert
 	target.custom_pain("It feels like the skin on your [affected.name] is on fire!", 40)
 	..()
@@ -255,13 +255,13 @@
 /datum/surgery_step/generic/retract_skin/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	var/msg = "[user] keeps the incision open on [target]'s [affected.name] with \the [tool]." // CHOMPEdit - Ballon alert
-	var/self_msg = "You keep the incision open on [target]'s [affected.name] with \the [tool]."
+	var/self_msg = "Incision kept open on [target]'s [affected.name] with \the [tool]."
 	if (target_zone == BP_TORSO)
 		msg = "[user] keeps the ribcage open on [target]'s torso with \the [tool]."
-		self_msg = "You keep the ribcage open on [target]'s torso with \the [tool]."
+		self_msg = "Ribcage kept open on [target]'s torso with \the [tool]."
 	if (target_zone == BP_GROIN)
 		msg = "[user] keeps the incision open on [target]'s lower abdomen with \the [tool]." // CHOMPEdit - Ballon alert
-		self_msg = "You keep the incision open on [target]'s lower abdomen with \the [tool]."
+		self_msg = "Incision kept open on [target]'s lower abdomen with \the [tool]."
 	user.balloon_alert_visible(msg, self_msg)
 	affected.open = 2
 
@@ -302,14 +302,14 @@
 /datum/surgery_step/generic/cauterize/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.balloon_alert_visible("[user] is beginning to cauterize the incision on [target]'s [affected.name] with \the [tool]." , \
-	"You are beginning to cauterize the incision on [target]'s [affected.name] with \the [tool].") // CHOMPEdit - Ballon alert
+	"Cauterizing the incision on [target]'s [affected.name] with \the [tool].") // CHOMPEdit - Ballon alert
 	target.custom_pain("Your [affected.name] is being burned!", 40)
 	..()
 
 /datum/surgery_step/generic/cauterize/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.balloon_alert_visible("[user] cauterizes the incision on [target]'s [affected.name] with \the [tool].", \
-	"You cauterize the incision on [target]'s [affected.name] with \the [tool].") // CHOMPEdit - Ballon alert
+	"Cauterized the incision on [target]'s [affected.name] with \the [tool].") // CHOMPEdit - Ballon alert
 	affected.open = 0
 	affected.germ_level = 0
 	affected.status &= ~ORGAN_BLEEDING
@@ -348,14 +348,14 @@
 /datum/surgery_step/generic/amputate/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.balloon_alert_visible("[user] is beginning to amputate [target]'s [affected.name] with \the [tool]." , \
-	"You are beginning to cut through [target]'s [affected.amputation_point] with \the [tool].") // CHOMPEdit - Ballon alert
+	"Cutting through [target]'s [affected.amputation_point] with \the [tool].") // CHOMPEdit - Ballon alert
 	target.custom_pain("Your [affected.amputation_point] is being ripped apart!", 100)
 	..()
 
 /datum/surgery_step/generic/amputate/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.balloon_alert_visible("[user] amputates [target]'s [affected.name] at the [affected.amputation_point] with \the [tool].", \
-	"You amputate [target]'s [affected.name] with \the [tool].") // CHOMPEdit - Ballon alert
+	"Amputated [target]'s [affected.name] with \the [tool].") // CHOMPEdit - Ballon alert
 	affected.droplimb(1,DROPLIMB_EDGE)
 
 /datum/surgery_step/generic/amputate/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
