@@ -642,11 +642,6 @@
 			src.destinationTag = T.sortTag
 		// CHOMPEdit End
 
-/obj/structure/disposalholder/Destroy()
-	active = FALSE
-	gas = null
-	return ..()
-
 // start the movement process
 // argument is the disposal unit the holder started in
 /obj/structure/disposalholder/proc/start(var/obj/machinery/disposal/D)
