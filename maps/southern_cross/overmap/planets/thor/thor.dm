@@ -33,6 +33,7 @@
 	initial_generic_waypoints = list("thor_nw","thor_e","spacebus_jungle")
 	start_x  = 11
 	start_y  = 17
+	known = TRUE
 	skybox_offset_x = 128
 	skybox_offset_y = 128
 	surface_color = "#176422"
@@ -68,6 +69,10 @@
 /area/surface/thor/engi
 	name = "Jungle Outpost Solars"
 	icon_state = "engineering"
+
+/area/surface/thor/janitor
+	name = "Jungle Outpost Custodions"
+	icon_state = "janitor"
 
 /area/surface/thor/kitchen
 	name = "Jungle Outpost Kitchen"
