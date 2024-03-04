@@ -245,9 +245,9 @@
 		return FALSE
 CHOMPedit end. */
 	else
-		return TRUE
 		message_admins("[key_name_admin(usr)] has modified '[card.registered_name]' 's ID with a timeclock terminal. [ADMIN_JMP(location)]") // CHOMPedit: Logging
 		log_game("[key_name_admin(usr)] has modified '[card.registered_name]' 's ID with a timeclock terminal.") // CHOMPedit: Logging
+		return TRUE
 
 /obj/item/weapon/card/id
 	var/last_job_switch
