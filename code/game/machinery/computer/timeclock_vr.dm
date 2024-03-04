@@ -228,11 +228,12 @@
 	return TRUE
 
 /obj/machinery/computer/timeclock/proc/checkFace()
+	var/turf/location = get_turf(src) // CHOMPedit: Needed for admin logs.
 	if(!card)
 		to_chat(usr, "<span class='notice'>No ID is inserted.</span>")
 		return FALSE
-/* CHOMPedit start.
-	var/mob/living/carbon/human/H = usr // CHOMPedit start - Allows anyone to change people's IDs.
+/* CHOMPedit start. Allows anyone to change people's IDs.
+	var/mob/living/carbon/human/H = usr
 	if(!(istype(H)))
 		to_chat(usr, "<span class='warning'>Invalid user detected. Access denied.</span>")
 		return FALSE
@@ -245,6 +246,8 @@
 CHOMPedit end. */
 	else
 		return TRUE
+		message_admins("[key_name_admin(usr)] has modified '[card.registered_name]' 's ID with a timeclock terminal. [ADMIN_JMP(location)]") // CHOMPedit: Logging
+		log_game("[key_name_admin(usr)] has modified '[card.registered_name]' 's ID with a timeclock terminal.") // CHOMPedit: Logging
 
 /obj/item/weapon/card/id
 	var/last_job_switch
