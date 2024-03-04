@@ -1,0 +1,4 @@
+author: "ItsSelis"
+delete-after: True
+changes:
+  - rscdel: "Disables some non-essential sounds that would have played on april 1st."
