@@ -74,3 +74,6 @@
   Upstream:
   - bugfix: Fixed a few number inputs to allow floats on the sensor-, helm- and engine
       console.
+2024-03-05:
+  ItsSelis:
+  - rscdel: Disables some non-essential sounds that would have played on april 1st.
