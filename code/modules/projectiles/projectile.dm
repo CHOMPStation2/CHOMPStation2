@@ -470,7 +470,7 @@
 		impacted_mobs = null
 
 	qdel(trajectory)
-
+	cleanup_beam_segments()
 
 	if(my_case)
 		if(my_case.BB == src)
