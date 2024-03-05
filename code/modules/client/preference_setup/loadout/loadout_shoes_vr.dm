@@ -63,7 +63,7 @@
 		var/mob/m = loc
 		m.drop_from_inventory(src, get_turf(m))
 	if(contents.len) // spill out contents (e.g. microholders)
-		for(var/atom/thing in contents)
+		for(var/atom/movable/thing in contents)
 			thing.loc = get_turf(src)
 	moveToNullspace() // go to nullspace
 	spawn(1)
