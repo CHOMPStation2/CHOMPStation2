@@ -872,6 +872,10 @@
 	if(!istype(H))
 		return
 
+	if(!isturf(T)) // try very hard to ensure we have a valid turf target
+		var/turf/GT = get_turf(T)
+		T = (GT ? GT : get_turf(src))
+
 	// Empty the holder if it is expelled into a dense turf.
 	// Leaving it intact and sitting in a wall is stupid.
 	if(T.density)
