@@ -328,6 +328,7 @@ GLOBAL_LIST_EMPTY(mannequins)
 //Hexidecimal numbers
 var/global/list/hexNums = list("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F")
 
+/*
 // Many global vars aren't GLOB type. This puts them there to be more easily inspected.
 GLOBAL_LIST_EMPTY(legacy_globals)
 
@@ -357,3 +358,4 @@ GLOBAL_LIST_EMPTY(legacy_globals)
 	GLOB.legacy_globals["cultnet"] = cultnet
 	GLOB.legacy_globals["item_tf_spawnpoints"] = item_tf_spawnpoints
 	GLOB.legacy_globals["existing_solargrubs"] = existing_solargrubs
+	*/

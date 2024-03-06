@@ -103,6 +103,11 @@
 	if(always_on)
 		create_shields()
 	RegisterSignal(src, COMSIG_OBSERVER_MOVED, PROC_REF(moved_event))
+
+	if(istype(loc, /atom/movable)) // on initialise, if i'm inside a thing, preregister this.
+		var/atom/movable/am = loc
+		RegisterSignal(am, COMSIG_OBSERVER_MOVED, /atom/movable/proc/recursive_move, override = TRUE)
+
 	return ..()
 
 /obj/item/shield_projector/Destroy()

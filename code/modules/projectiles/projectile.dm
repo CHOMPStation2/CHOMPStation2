@@ -469,15 +469,13 @@
 			impacted_mobs.Cut()
 		impacted_mobs = null
 
-	trajectory = null
-	beam_index = null
-	beam_components = null
-
+	qdel(trajectory)
+	cleanup_beam_segments()
 
 	if(my_case)
 		if(my_case.BB == src)
 			my_case.BB = null
-			my_case = null
+		my_case = null
 
 	return ..()
 
@@ -743,6 +741,12 @@
 
 
 /obj/item/projectile/proc/launch_projectile(atom/target, target_zone, mob/user, params, angle_override, forced_spread = 0)
+
+	if(!get_turf(user) && !get_turf(src)) // if both the user of the projectile AND the projectile itself are in nullspace, don't fire, just remove ourselves
+		spawn(1)
+			qdel(src)
+		return //fire returns nothing, so neither do we need to
+
 	original = target
 	def_zone = check_zone(target_zone)
 	firer = user
