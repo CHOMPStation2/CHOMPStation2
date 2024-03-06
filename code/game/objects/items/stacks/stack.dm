@@ -253,6 +253,7 @@
 	if(!uses_charge)
 		amount -= used
 		if (amount <= 0)
+			amount = 0 // stop amount going negative ideally
 			qdel(src) //should be safe to qdel immediately since if someone is still using this stack it will persist for a little while longer
 		update_icon()
 		return 1

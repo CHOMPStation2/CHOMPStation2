@@ -642,7 +642,6 @@
 			src.destinationTag = T.sortTag
 		// CHOMPEdit End
 
-
 // start the movement process
 // argument is the disposal unit the holder started in
 /obj/structure/disposalholder/proc/start(var/obj/machinery/disposal/D)
@@ -872,6 +871,10 @@
 /obj/structure/disposalpipe/proc/expel(var/obj/structure/disposalholder/H, var/turf/T, var/direction)
 	if(!istype(H))
 		return
+
+	if(!isturf(T)) // try very hard to ensure we have a valid turf target
+		var/turf/GT = get_turf(T)
+		T = (GT ? GT : get_turf(src))
 
 	// Empty the holder if it is expelled into a dense turf.
 	// Leaving it intact and sitting in a wall is stupid.

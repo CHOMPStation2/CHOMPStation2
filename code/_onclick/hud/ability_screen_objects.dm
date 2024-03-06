@@ -185,9 +185,9 @@
 
 
 /mob/Destroy()
-	..()
 	if(ability_master)
 		QDEL_NULL(ability_master)
+	. = ..()
 
 
 ///////////ACTUAL ABILITIES////////////

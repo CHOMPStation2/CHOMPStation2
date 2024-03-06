@@ -1166,7 +1166,7 @@
 // but can easily make the message vary based on how many people are inside, etc.
 // Returns a string which shoul be appended to the Examine output.
 /obj/belly/proc/get_examine_msg()
-	if(!(contents.len) || !(examine_messages.len))
+	if(!(contents.len) || !(examine_messages?.len))
 		return ""
 
 	var/formatted_message
