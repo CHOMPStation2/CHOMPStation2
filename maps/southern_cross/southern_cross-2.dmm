@@ -55176,9 +55176,7 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 9
 	},
-/obj/machinery/smartfridge/sheets{
-	density = 0
-	},
+/obj/structure/table/standard,
 /turf/simulated/floor/tiled/white,
 /area/rnd/lab)
 "iKA" = (
@@ -57897,6 +57895,22 @@
 /obj/effect/floor_decal/corner/green/bordercorner,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/docking_hallway2)
+"kar" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/fans/tiny,
+/obj/machinery/smartfridge/sheets/persistent_lossy{
+	name = "\improper Persistent Industrial Sheet Storage";
+	desc = "An industrial sized storage unit for materials. Following company policy with B-Shift, this particular storage unit will retain a percentage of its material in-between crew transfers."
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/office)
 "kay" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
@@ -58406,6 +58420,19 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
+"kod" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/smartfridge/sheets{
+	name = "\improper Non-Persistent Industrial Sheet Storage";
+	desc = "An industrial sized storage unit for materials. B-Shift's agreement to retain materials doesn't extend to this storage device, so you should probably only stock this with sheets you need."
+	},
+/obj/structure/fans/tiny,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/rnd/lab)
 "kot" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -106049,7 +106076,7 @@ bYD
 bRG
 bqo
 bqn
-bsn
+kar
 bug
 bCU
 bEJ
@@ -123316,7 +123343,7 @@ iOI
 jUw
 kSM
 aGg
-kTh
+kod
 nRd
 kTh
 aGg
