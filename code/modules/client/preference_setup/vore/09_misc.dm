@@ -5,11 +5,8 @@
 /datum/category_item/player_setup_item/vore/misc/load_character(var/savefile/S)
 	S["show_in_directory"]		>> pref.show_in_directory
 	S["directory_tag"]			>> pref.directory_tag
-<<<<<<< HEAD
 	S["directory_gendertag"]	>> pref.directory_gendertag // CHOMPStation Edit: Character Directory Update
 	S["directory_sexualitytag"]	>> pref.directory_sexualitytag // CHOMPStation Edit: Character Directory Update
-=======
->>>>>>> c5153c5695... Merge pull request #15809 from Kashargul/SyndiPreEmag
 	S["directory_erptag"]		>> pref.directory_erptag
 	S["directory_ad"]			>> pref.directory_ad
 	S["sensorpref"]				>> pref.sensorpref
@@ -20,11 +17,8 @@
 /datum/category_item/player_setup_item/vore/misc/save_character(var/savefile/S)
 	S["show_in_directory"]		<< pref.show_in_directory
 	S["directory_tag"]			<< pref.directory_tag
-<<<<<<< HEAD
 	S["directory_gendertag"]	<< pref.directory_gendertag // CHOMPStation Edit: Character Directory Update
 	S["directory_sexualitytag"]	<< pref.directory_sexualitytag // CHOMPStation Edit: Character Directory Update
-=======
->>>>>>> c5153c5695... Merge pull request #15809 from Kashargul/SyndiPreEmag
 	S["directory_erptag"]		<< pref.directory_erptag
 	S["directory_ad"]			<< pref.directory_ad
 	S["sensorpref"]				<< pref.sensorpref
@@ -41,11 +35,8 @@
 /datum/category_item/player_setup_item/vore/misc/sanitize_character()
 	pref.show_in_directory		= sanitize_integer(pref.show_in_directory, 0, 1, initial(pref.show_in_directory))
 	pref.directory_tag			= sanitize_inlist(pref.directory_tag, GLOB.char_directory_tags, initial(pref.directory_tag))
-<<<<<<< HEAD
 	pref.directory_gendertag	= sanitize_inlist(pref.directory_gendertag, GLOB.char_directory_gendertags, initial(pref.directory_gendertag)) // CHOMPStation Edit: Character Directory Update
 	pref.directory_sexualitytag	= sanitize_inlist(pref.directory_sexualitytag, GLOB.char_directory_sexualitytags, initial(pref.directory_sexualitytag)) // CHOMPStation Edit: Character Directory Update
-=======
->>>>>>> c5153c5695... Merge pull request #15809 from Kashargul/SyndiPreEmag
 	pref.directory_erptag		= sanitize_inlist(pref.directory_erptag, GLOB.char_directory_erptags, initial(pref.directory_erptag))
 	pref.sensorpref				= sanitize_integer(pref.sensorpref, 1, sensorpreflist.len, initial(pref.sensorpref))
 	pref.capture_crystal		= sanitize_integer(pref.capture_crystal, 0, 1, initial(pref.capture_crystal))
