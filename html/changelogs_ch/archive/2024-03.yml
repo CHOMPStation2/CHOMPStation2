@@ -77,3 +77,8 @@
 2024-03-05:
   ItsSelis:
   - rscdel: Disables some non-essential sounds that would have played on april 1st.
+2024-03-07:
+  Raeschen:
+  - bugfix: various reversions and touchups
+  Verkister:
+  - bugfix: Fixed voremobs not eating pounced mobs.

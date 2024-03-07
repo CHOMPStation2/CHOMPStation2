@@ -1,4 +1,0 @@
-author: "Verkister"
-delete-after: True
-changes:
-  - bugfix: "Fixed voremobs not eating pounced mobs."
