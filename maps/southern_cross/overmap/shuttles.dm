@@ -138,19 +138,18 @@
 	req_one_access = list(access_pilot)
 
 //POI Junker
-/* its a surprise tool that will help us later!
 /datum/shuttle/autodock/overmap/junker
 	name = "Junker"
 	warmup_time = 4
-	current_location = "poi_711"
+	current_location = "junkspawn"
 	docking_controller_tag = "junker"
-	shuttle_area = /area/shuttle/spacebus
+	shuttle_area = /area/shuttle/junker
 	fuel_consumption = 1
 	move_direction = NORTH
 
 /obj/effect/overmap/visitable/ship/landable/junker
 	name = "Junker"
-	desc = "What the fuck."
+	desc = "Small class ship, non-NT property."
 	vessel_mass = 500
 	vessel_size = SHIP_SIZE_SMALL
 	shuttle = "Junker"
@@ -158,4 +157,3 @@
 /obj/machinery/computer/shuttle_control/explore/junker
 	name = "short jump console"
 	shuttle_tag = "Junker"
-*/
