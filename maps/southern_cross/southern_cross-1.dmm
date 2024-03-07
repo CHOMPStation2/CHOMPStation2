@@ -15653,6 +15653,12 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor,
 /area/hallway/primary/firstdeck/auxdockaft)
+"eAS" = (
+/obj/structure/panic_button{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/spacebus)
 "eBp" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -74586,7 +74592,7 @@ nHZ
 aiz
 rJG
 nHZ
-aGB
+eAS
 alr
 aGB
 aZc

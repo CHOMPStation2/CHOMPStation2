@@ -95,6 +95,9 @@
 
 /area/surface/thor/dorms/pool2
 	name = "Jungle Outpost Pool Shack 2"
+
+/area/surface/thor/dorms/pool3
+	name = "Jungle Outpost Pool Shack 3"
 /area/surface/outside/thor/pool
 	name = "Jungle Swimming Pool"
 	icon_state = "bluenew"
