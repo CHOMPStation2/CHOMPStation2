@@ -2286,6 +2286,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				if(accepted != "Yes")
 					to_chat(user,"<span class='warning'>[T] refused to be reformed!</span>")
 					return TRUE
+				if(!isbelly(T.loc))
+					to_chat(user,"<span class='warning'>[T] is no longer inside to be reformed!</span>")
+					to_chat(T,"<span class='warning'>You can't be reformed outside of a belly!</span>")
+					return TRUE
 
 				if(isliving(T.body_backup))
 					var/mob/living/body_backup = T.body_backup
