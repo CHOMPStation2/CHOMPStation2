@@ -6,6 +6,13 @@
 	grass_chance = 2
 	},
 /area/surface/outside/thor/beach)
+"ap" = (
+/obj/structure/shuttle/engine/heater,
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 8
+	},
+/turf/simulated/wall/iron,
+/area/shuttle/junker)
 "au" = (
 /obj/structure/flora/ausbushes/palebush,
 /turf/simulated/floor/outdoors/grass/forest/thor{
@@ -140,6 +147,12 @@
 	grass_chance = 2
 	},
 /area/surface/outside/thor/landingpad)
+"bC" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 6
+	},
+/turf/simulated/wall/iron,
+/area/shuttle/junker)
 "bE" = (
 /obj/structure/flora/ausbushes/leafybush,
 /turf/simulated/floor/outdoors/grass/forest/thor,
@@ -150,6 +163,26 @@
 	},
 /turf/simulated/floor/concrete/outdoors/thor,
 /area/surface/outside/thor/landingpad)
+"bG" = (
+/obj/effect/catwalk_plated/dark,
+/obj/machinery/shipsensors/weak,
+/turf/simulated/floor/plating,
+/area/shuttle/junker)
+"bK" = (
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/rust,
+/obj/effect/shuttle_landmark{
+	base_area = /area/surface/outside/thor/jungle/deep;
+	base_turf = /turf/simulated/floor/outdoors/grass/heavy/thor;
+	landmark_tag = "junkspawn";
+	name = "???"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/junker)
 "bV" = (
 /obj/structure/flora/tree/jungle_small,
 /turf/simulated/floor/outdoors/grass/forest/thor,
@@ -194,7 +227,8 @@
 /area/surface/thor/abandonedhouse)
 "cq" = (
 /turf/simulated/mineral/floor/cave/thor{
-	icon_state = "sand-icey"
+	icon_state = "sand-icey";
+	color = "#B32981"
 	},
 /area/surface/thor/caves)
 "cx" = (
@@ -329,12 +363,7 @@
 	},
 /area/surface/outside/thor/jungle)
 "ec" = (
-/turf/simulated/floor/holofloor/beach/sand{
-	outdoors = 1;
-	oxygen = 34.1451;
-	nitrogen = 63.4124;
-	temperature = 313
-	},
+/turf/simulated/floor/beach/sand/desert/outdoors/thor,
 /area/surface/outside/thor/ocean)
 "eh" = (
 /obj/structure/flora/ausbushes/leafybush,
@@ -352,12 +381,6 @@
 	oxygen = 34.1451
 	},
 /area/surface/outside/thor/outpost)
-"em" = (
-/obj/effect/floor_decal/rust,
-/obj/machinery/light/floortube,
-/obj/structure/fuel_port,
-/turf/simulated/floor/plating,
-/area/shuttle/junker)
 "er" = (
 /obj/structure/cliff/automatic{
 	dir = 9
@@ -365,8 +388,11 @@
 /turf/simulated/floor/outdoors/desert_planet/gravel/thor,
 /area/surface/outside/thor/beach)
 "es" = (
-/turf/simulated/wall/r_wall,
-/area/surface/thor/caves)
+/obj/machinery/computer/ship/engines{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/junker)
 "eB" = (
 /obj/structure/table/woodentable,
 /obj/structure/prop/machine/random_radio,
@@ -439,25 +465,6 @@
 "fo" = (
 /turf/simulated/floor/outdoors/grass/forest/thor,
 /area/surface/outside/thor/jungle)
-"fp" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/shuttle/junker)
 "fq" = (
 /obj/structure/flora/tree/jungle,
 /turf/simulated/floor/outdoors/grass/forest/thor,
@@ -507,12 +514,7 @@
 /area/surface/outside/thor/jungle/deep)
 "ge" = (
 /obj/structure/cliff/automatic/corner,
-/turf/simulated/floor/holofloor/beach/sand{
-	outdoors = 1;
-	oxygen = 34.1451;
-	nitrogen = 63.4124;
-	temperature = 313
-	},
+/turf/simulated/floor/beach/sand/desert/outdoors/thor,
 /area/surface/outside/thor/beach)
 "gg" = (
 /turf/simulated/floor/plating,
@@ -564,6 +566,14 @@
 /obj/structure/flora/ausbushes/pointybush,
 /turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/surface/outside/thor/jungle/deep)
+"gN" = (
+/obj/structure/flora/tree/jungle_small,
+/turf/simulated/floor/water/ocean{
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
+	},
+/area/surface/outside/thor/jungle/deep)
 "gP" = (
 /obj/structure/table/marble,
 /obj/machinery/chemical_dispenser/bar_coffee/full{
@@ -579,12 +589,7 @@
 /area/surface/outside/thor/ocean)
 "gS" = (
 /obj/structure/cliff/automatic,
-/turf/simulated/floor/holofloor/beach/sand{
-	outdoors = 1;
-	oxygen = 34.1451;
-	nitrogen = 63.4124;
-	temperature = 313
-	},
+/turf/simulated/floor/beach/sand/desert/outdoors/thor,
 /area/surface/outside/thor/beach)
 "gX" = (
 /obj/structure/simple_door/wood,
@@ -646,12 +651,6 @@
 "hz" = (
 /turf/simulated/floor/concrete/outdoors/thor,
 /area/surface/outside/thor/landingpad)
-"hC" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 6
-	},
-/turf/simulated/wall/iron,
-/area/shuttle/junker)
 "hD" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -726,6 +725,12 @@
 	grass_chance = 2
 	},
 /area/surface/outside/thor/beach)
+"io" = (
+/obj/machinery/computer/ship/helm{
+	req_one_access = null
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/junker)
 "iq" = (
 /turf/simulated/floor/water/deep/ocean{
 	temperature = 313;
@@ -868,6 +873,10 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
 /area/surface/thor/bar)
+"jE" = (
+/obj/machinery/computer/ship/sensors,
+/turf/simulated/floor/plating,
+/area/shuttle/junker)
 "jF" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /turf/simulated/floor/outdoors/grass/forest/thor{
@@ -986,12 +995,7 @@
 	},
 /area/surface/outside/thor/ocean)
 "kS" = (
-/turf/simulated/floor/holofloor/beach/sand{
-	outdoors = 1;
-	oxygen = 34.1451;
-	nitrogen = 63.4124;
-	temperature = 313
-	},
+/turf/simulated/floor/beach/sand/desert/outdoors/thor,
 /area/surface/outside/thor/jungle)
 "kT" = (
 /obj/structure/simple_door/wood,
@@ -1122,10 +1126,6 @@
 "mA" = (
 /turf/simulated/wall/wood,
 /area/surface/thor/med)
-"mD" = (
-/obj/machinery/computer/ship/engines,
-/turf/simulated/floor/plating,
-/area/shuttle/junker)
 "mF" = (
 /obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey{
 	pixel_y = 8;
@@ -1193,7 +1193,8 @@
 "nb" = (
 /mob/living/simple_mob/animal/space/bats,
 /turf/simulated/mineral/floor/cave/thor{
-	icon_state = "sand-icey"
+	icon_state = "sand-icey";
+	color = "#B32981"
 	},
 /area/surface/thor/caves)
 "nc" = (
@@ -1311,11 +1312,11 @@
 /turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/surface/outside/thor/jungle/deep)
 "nY" = (
-/obj/structure/outcrop/phoron,
 /turf/simulated/floor/outdoors/ice/dark_smooth{
 	nitrogen = 63.4124;
 	oxygen = 34.1451;
-	temperature = 313
+	temperature = 313;
+	outdoors = 0
 	},
 /area/surface/thor/caves)
 "ob" = (
@@ -1381,17 +1382,6 @@
 /obj/machinery/power/solar_control,
 /turf/simulated/floor/plating,
 /area/surface/thor/engi)
-"oF" = (
-/obj/structure/cable/blue{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/rust,
-/obj/effect/decal/remains,
-/obj/effect/overmap/visitable/ship/landable/junker,
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/shuttle/junker)
 "oH" = (
 /obj/structure/mirror{
 	dir = 4;
@@ -1465,9 +1455,22 @@
 "pc" = (
 /obj/random/outcrop,
 /turf/simulated/mineral/floor/cave/thor{
-	icon_state = "sand-icey"
+	icon_state = "sand-icey";
+	color = "#B32981"
 	},
 /area/surface/thor/caves)
+"pd" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/random/pottedplant,
+/obj/structure/railing,
+/turf/simulated/floor/wood{
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
+	},
+/area/surface/outside/thor/outpost)
 "ph" = (
 /obj/structure/prop/desert_planet64x64/palmuria1,
 /turf/simulated/floor/outdoors/grass/forest/thor{
@@ -1606,7 +1609,7 @@
 /turf/simulated/floor/wood/alt,
 /area/surface/thor/kitchen)
 "qj" = (
-/obj/machinery/door/blast/gate,
+/obj/structure/outcrop/phoron,
 /turf/simulated/mineral/floor/cave/thor,
 /area/surface/thor/caves)
 "ql" = (
@@ -1634,7 +1637,9 @@
 	},
 /area/surface/outside/thor/pool)
 "qz" = (
-/turf/simulated/mineral/crystal,
+/turf/simulated/mineral/crystal{
+	color = "#9E0862"
+	},
 /area/surface/thor/caves)
 "qI" = (
 /obj/structure/prop/desert_planet64x64/palmuria,
@@ -1683,6 +1688,12 @@
 	},
 /turf/simulated/floor/reinforced/thor,
 /area/surface/outside/thor/landingpad)
+"qV" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 4
+	},
+/turf/simulated/wall/iron,
+/area/shuttle/junker)
 "qW" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -1694,6 +1705,19 @@
 "rf" = (
 /turf/simulated/wall/wood,
 /area/surface/thor/kitchen)
+"ri" = (
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	dir = 1;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced,
+/obj/structure/grille,
+/turf/simulated/floor/plating,
+/area/shuttle/junker)
 "rk" = (
 /mob/living/simple_mob/vore/aggressive/frog,
 /turf/simulated/floor/water/ocean{
@@ -1721,12 +1745,7 @@
 /turf/simulated/floor/wood/alt,
 /area/surface/thor/kitchen)
 "ru" = (
-/turf/simulated/floor/holofloor/beach/sand{
-	outdoors = 1;
-	oxygen = 34.1451;
-	nitrogen = 63.4124;
-	temperature = 313
-	},
+/turf/simulated/floor/beach/sand/desert/outdoors/thor,
 /area/surface/outside/thor/beach)
 "ry" = (
 /obj/random/pottedplant,
@@ -1735,6 +1754,9 @@
 "rz" = (
 /turf/simulated/floor/outdoors/desert_planet/gravel/thor,
 /area/surface/outside/thor/outpost)
+"rC" = (
+/turf/simulated/wall/iron,
+/area/shuttle/junker)
 "rD" = (
 /obj/structure/flora/underwater/plant4,
 /turf/simulated/floor/water/ocean{
@@ -1797,9 +1819,12 @@
 /turf/simulated/floor/tiled/white,
 /area/surface/thor/kitchen)
 "so" = (
-/obj/structure/prop/rock/crystal,
+/obj/structure/prop/rock/crystal{
+	color = "#E995CA"
+	},
 /turf/simulated/mineral/floor/cave/thor{
-	icon_state = "sand-icey"
+	icon_state = "sand-icey";
+	color = "#B32981"
 	},
 /area/surface/thor/caves)
 "sB" = (
@@ -1911,12 +1936,6 @@
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
 /area/surface/outside/thor/pool)
-"tz" = (
-/obj/machinery/atmospherics/unary/engine{
-	dir = 1
-	},
-/turf/simulated/shuttle/plating/airless/carry,
-/area/shuttle/junker)
 "tA" = (
 /mob/living/simple_mob/vore/aggressive/panther{
 	dir = 4
@@ -1948,12 +1967,7 @@
 /area/surface/thor/kitchen)
 "uf" = (
 /obj/structure/flora/tree/desert_planet/spalmtree,
-/turf/simulated/floor/holofloor/beach/sand{
-	outdoors = 1;
-	oxygen = 34.1451;
-	nitrogen = 63.4124;
-	temperature = 313
-	},
+/turf/simulated/floor/beach/sand/desert/outdoors/thor,
 /area/surface/outside/thor/beach)
 "uj" = (
 /obj/structure/cable{
@@ -1974,11 +1988,7 @@
 	outdoors = 0
 	},
 /area/surface/thor/commstower)
-"uA" = (
-/obj/structure/closet/crate/bin,
-/turf/simulated/floor/wood/alt,
-/area/surface/thor/kitchen)
-"uN" = (
+"ux" = (
 /obj/structure/window/reinforced{
 	dir = 1;
 	health = 1e+006
@@ -1993,6 +2003,15 @@
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/shuttle/junker)
+"uy" = (
+/obj/effect/decal/cleanable/blood,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/turf/simulated/floor/outdoors/grass/heavy/thor,
+/area/surface/outside/thor/jungle/deep)
+"uA" = (
+/obj/structure/closet/crate/bin,
+/turf/simulated/floor/wood/alt,
+/area/surface/thor/kitchen)
 "uP" = (
 /turf/simulated/wall/concrete,
 /area/surface/outside/thor/pool)
@@ -2003,33 +2022,13 @@
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/surface/thor/med)
-"uW" = (
-/obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
-	},
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/turf/simulated/floor/plating,
-/area/shuttle/junker)
-"uX" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 4
-	},
-/turf/simulated/wall/iron,
-/area/shuttle/junker)
 "uY" = (
 /obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
 /area/surface/outside/thor/pool)
 "uZ" = (
 /obj/item/weapon/oar,
-/turf/simulated/floor/holofloor/beach/sand{
-	outdoors = 1;
-	oxygen = 34.1451;
-	nitrogen = 63.4124;
-	temperature = 313
-	},
+/turf/simulated/floor/beach/sand/desert/outdoors/thor,
 /area/surface/outside/thor/beach)
 "ve" = (
 /turf/simulated/floor/wood/broken{
@@ -2038,13 +2037,6 @@
 	temperature = 313
 	},
 /area/surface/outside/thor/jungle/deep)
-"vl" = (
-/obj/structure/shuttle/engine/heater,
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 10
-	},
-/turf/simulated/wall/iron,
-/area/shuttle/junker)
 "vn" = (
 /turf/simulated/floor/tiled/yellow{
 	icon_state = "hydrofloor"
@@ -2169,6 +2161,7 @@
 	icon_state = "railing0"
 	},
 /obj/structure/railing,
+/obj/random/pottedplant,
 /turf/simulated/floor/wood{
 	temperature = 313;
 	nitrogen = 63.4124;
@@ -2178,6 +2171,14 @@
 "wP" = (
 /turf/simulated/mineral/alt,
 /area/surface/outside/thor/jungle)
+"wR" = (
+/obj/machinery/computer/shuttle_control/explore/junker{
+	dir = 1
+	},
+/obj/structure/cable/blue,
+/obj/machinery/power/terminal,
+/turf/simulated/floor/plating,
+/area/shuttle/junker)
 "wX" = (
 /obj/machinery/light/small{
 	dir = 4;
@@ -2204,6 +2205,7 @@
 /obj/structure/railing{
 	dir = 1
 	},
+/obj/random/pottedplant,
 /turf/simulated/floor/wood{
 	temperature = 313;
 	nitrogen = 63.4124;
@@ -2291,6 +2293,10 @@
 /obj/effect/decal/remains,
 /turf/simulated/mineral/floor/cave/thor,
 /area/surface/thor/caves)
+"yC" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/outdoors/grass/heavy/thor,
+/area/surface/outside/thor/jungle/deep)
 "yF" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating/thor/planetuse{
@@ -2406,11 +2412,6 @@
 /obj/structure/closet/secure_closet/freezer/meat,
 /turf/simulated/floor/tiled/white,
 /area/surface/thor/kitchen)
-"zV" = (
-/obj/effect/catwalk_plated/dark,
-/obj/machinery/shipsensors/weak,
-/turf/simulated/floor/plating,
-/area/shuttle/junker)
 "zW" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/cash_register{
@@ -2521,6 +2522,20 @@
 /obj/machinery/space_heater,
 /turf/simulated/floor/concrete,
 /area/surface/thor/abandonedhouse)
+"Bw" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 4
+	},
+/obj/machinery/power/smes/batteryrack,
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/item/weapon/cell/high,
+/obj/item/weapon/cell/high,
+/obj/item/weapon/cell/high,
+/turf/simulated/floor/plating,
+/area/shuttle/junker)
 "Bz" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -2586,6 +2601,10 @@
 	grass_chance = 2
 	},
 /area/surface/outside/thor/jungle)
+"BV" = (
+/obj/machinery/computer/ship/engines,
+/turf/simulated/floor/plating,
+/area/shuttle/junker)
 "BY" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 6
@@ -2695,6 +2714,18 @@
 /obj/structure/flora/ausbushes/leafybush,
 /turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/surface/outside/thor/jungle/deep)
+"Dg" = (
+/obj/machinery/atmospherics/binary/pump{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/shuttle/junker)
 "Dh" = (
 /obj/structure/bed/chair/sofa/beige{
 	dir = 1
@@ -2758,14 +2789,6 @@
 	temperature = 313
 	},
 /area/surface/thor/abandonedhouse)
-"DF" = (
-/obj/structure/flora/tree/jungle_small,
-/turf/simulated/floor/water/ocean{
-	temperature = 313;
-	nitrogen = 63.4124;
-	oxygen = 34.1451
-	},
-/area/surface/outside/thor/jungle/deep)
 "DG" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -2855,14 +2878,6 @@
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
 /area/surface/outside/thor/pool)
-"Ef" = (
-/obj/machinery/computer/shuttle_control/explore/junker{
-	dir = 1
-	},
-/obj/structure/cable/blue,
-/obj/machinery/power/terminal,
-/turf/simulated/floor/plating,
-/area/shuttle/junker)
 "Ei" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/woodentable,
@@ -2904,6 +2919,12 @@
 /mob/living/simple_mob/vore/pitcher_plant,
 /turf/simulated/floor/outdoors/mud/thor/planetuse,
 /area/surface/outside/thor/jungle)
+"EE" = (
+/obj/machinery/atmospherics/unary/engine{
+	dir = 1
+	},
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/junker)
 "EH" = (
 /obj/structure/table/bench/wooden,
 /turf/simulated/floor/outdoors/grass/heavy/thor{
@@ -2914,7 +2935,8 @@
 "EJ" = (
 /obj/structure/outcrop/phoron,
 /turf/simulated/mineral/floor/cave/thor{
-	icon_state = "sand-icey"
+	icon_state = "sand-icey";
+	color = "#B32981"
 	},
 /area/surface/thor/caves)
 "EM" = (
@@ -3015,11 +3037,21 @@
 	},
 /area/surface/outside/thor/ocean)
 "Gl" = (
-/obj/structure/showcase/sign{
-	name = "UNDER CONSTRUCTION"
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8
 	},
-/turf/simulated/mineral/floor/cave/thor,
-/area/surface/thor/caves)
+/obj/machinery/power/apc/high{
+	pixel_y = 0;
+	dir = 4;
+	pixel_x = 24
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/machinery/portable_atmospherics/canister/phoron,
+/turf/simulated/floor/plating,
+/area/shuttle/junker)
 "GB" = (
 /obj/structure/cliff/automatic/corner{
 	dir = 10
@@ -3045,6 +3077,15 @@
 	},
 /turf/simulated/floor/outdoors/desert_planet/gravel/thor,
 /area/surface/outside/thor/beach)
+"Ha" = (
+/obj/structure/window/reinforced{
+	dir = 1;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced,
+/obj/structure/grille,
+/turf/simulated/floor/plating,
+/area/shuttle/junker)
 "He" = (
 /obj/structure/railing{
 	dir = 8;
@@ -3109,6 +3150,15 @@
 /obj/item/weapon/reagent_containers/food/snacks/pastatomato,
 /turf/simulated/floor/wood,
 /area/surface/thor/dorms/pool2)
+"HI" = (
+/obj/structure/cable/blue{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/shuttle/junker)
 "HQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/woodentable,
@@ -3143,18 +3193,6 @@
 	dir = 9
 	},
 /area/surface/outside/thor/ocean)
-"Ih" = (
-/obj/machinery/atmospherics/binary/pump{
-	dir = 8
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating,
-/area/shuttle/junker)
 "Il" = (
 /obj/structure/flora/ausbushes/genericbush,
 /turf/simulated/floor/outdoors/grass/heavy/thor{
@@ -3189,18 +3227,6 @@
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/surface/thor/med)
-"ID" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
-	},
-/obj/structure/window/reinforced,
-/obj/structure/grille,
-/turf/simulated/floor/plating,
-/area/shuttle/junker)
 "II" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/outdoors/grass/heavy/thor{
@@ -3208,6 +3234,13 @@
 	tree_chance = 0
 	},
 /area/surface/outside/thor/jungle/deep)
+"IJ" = (
+/obj/structure/shuttle/engine/heater,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 10
+	},
+/turf/simulated/wall/iron,
+/area/shuttle/junker)
 "IL" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -3385,22 +3418,6 @@
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
 /area/surface/outside/thor/outpost)
-"JW" = (
-/obj/structure/cable/blue{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/rust,
-/obj/effect/shuttle_landmark{
-	base_area = /area/surface/outside/thor/jungle/deep;
-	base_turf = /turf/simulated/floor/outdoors/grass/heavy/thor;
-	landmark_tag = "junkspawn";
-	name = "???";
-	docking_controller = "junker"
-	},
-/turf/simulated/floor/plating,
-/area/shuttle/junker)
 "Kh" = (
 /turf/simulated/floor/outdoors/grass/forest/thor,
 /area/surface/outside/thor/jungle/deep)
@@ -3466,24 +3483,6 @@
 	outdoors = 1
 	},
 /area/surface/outside/thor/jungle)
-"Lb" = (
-/obj/structure/cable/blue{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/door/airlock/hatch{
-	id_tag = "junker_outer";
-	req_one_access = null
-	},
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
-	id_tag = "junker";
-	pixel_y = -26;
-	tag_exterior_door = "junker_outer"
-	},
-/turf/simulated/floor/plating,
-/area/shuttle/junker)
 "Lg" = (
 /obj/structure/closet/crate,
 /obj/item/weapon/circuitboard/airalarm,
@@ -3560,22 +3559,22 @@
 /obj/structure/closet/secure_closet/freezer/fridge,
 /turf/simulated/floor/wood,
 /area/surface/thor/abandonedhouse)
-"MB" = (
-/turf/unsimulated/mineral,
+"Mz" = (
+/obj/structure/prop/rock/crystal{
+	color = "#E995CA"
+	},
+/obj/effect/map_effect/perma_light{
+	light_color = "#E995CA"
+	},
+/turf/simulated/mineral/floor/cave/thor{
+	icon_state = "sand-icey";
+	color = "#B32981"
+	},
 /area/surface/thor/caves)
-"MH" = (
-/obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
-	},
-/obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
-	},
-/obj/structure/window/reinforced,
-/obj/structure/grille,
-/turf/simulated/floor/plating,
-/area/shuttle/junker)
+"MB" = (
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/turf/simulated/floor/outdoors/grass/heavy/thor,
+/area/surface/outside/thor/jungle/deep)
 "MJ" = (
 /mob/living/simple_mob/vore/fennec,
 /turf/simulated/floor/outdoors/grass/heavy/thor,
@@ -3655,6 +3654,12 @@
 	oxygen = 34.1451
 	},
 /area/surface/outside/thor/ocean)
+"NC" = (
+/obj/effect/floor_decal/rust,
+/obj/machinery/light/floortube,
+/obj/structure/fuel_port,
+/turf/simulated/floor/plating,
+/area/shuttle/junker)
 "NE" = (
 /obj/structure/closet/gmcloset{
 	name = "formal wardrobe"
@@ -3670,12 +3675,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/thor/engi)
-"NR" = (
-/obj/machinery/computer/ship/engines{
-	dir = 1
-	},
-/turf/simulated/floor/plating,
-/area/shuttle/junker)
 "NS" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/remains,
@@ -4033,6 +4032,7 @@
 /obj/structure/railing{
 	dir = 1
 	},
+/obj/random/pottedplant,
 /turf/simulated/floor/wood{
 	temperature = 313;
 	nitrogen = 63.4124;
@@ -4065,6 +4065,20 @@
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/surface/thor/med)
+"QW" = (
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/rust,
+/obj/effect/decal/remains,
+/obj/effect/overmap/visitable/ship/landable/junker,
+/obj/structure/bed/chair/bay/chair{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/shuttle/junker)
 "QZ" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -4173,12 +4187,6 @@
 /obj/structure/boulder,
 /turf/simulated/mineral/floor/cave/thor,
 /area/surface/thor/caves)
-"Se" = (
-/obj/machinery/computer/ship/helm{
-	req_one_access = null
-	},
-/turf/simulated/floor/plating,
-/area/shuttle/junker)
 "Sk" = (
 /obj/structure/railing{
 	dir = 1
@@ -4193,12 +4201,7 @@
 /obj/structure/cliff/automatic{
 	dir = 4
 	},
-/turf/simulated/floor/holofloor/beach/sand{
-	outdoors = 1;
-	oxygen = 34.1451;
-	nitrogen = 63.4124;
-	temperature = 313
-	},
+/turf/simulated/floor/beach/sand/desert/outdoors/thor,
 /area/surface/outside/thor/beach)
 "Sr" = (
 /obj/structure/simple_door/sandstone,
@@ -4208,12 +4211,7 @@
 /obj/structure/cliff/automatic/corner{
 	dir = 9
 	},
-/turf/simulated/floor/holofloor/beach/sand{
-	outdoors = 1;
-	oxygen = 34.1451;
-	nitrogen = 63.4124;
-	temperature = 313
-	},
+/turf/simulated/floor/beach/sand/desert/outdoors/thor,
 /area/surface/outside/thor/beach)
 "Sz" = (
 /obj/effect/decal/cleanable/dirt,
@@ -4225,22 +4223,6 @@
 	outdoors = 0
 	},
 /area/surface/outside/thor/pool)
-"SK" = (
-/obj/machinery/atmospherics/portables_connector{
-	dir = 8
-	},
-/obj/machinery/power/apc/high{
-	pixel_y = 0;
-	dir = 4;
-	pixel_x = 24
-	},
-/obj/structure/cable/green{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/machinery/portable_atmospherics/canister/phoron,
-/turf/simulated/floor/plating,
-/area/shuttle/junker)
 "SN" = (
 /obj/item/weapon/stool/padded,
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
@@ -4295,9 +4277,6 @@
 	outdoors = 1
 	},
 /area/surface/outside/thor/jungle)
-"TE" = (
-/turf/simulated/wall/iron,
-/area/shuttle/junker)
 "TJ" = (
 /turf/simulated/wall,
 /area/surface/thor/commstower)
@@ -4322,6 +4301,15 @@
 	grass_chance = 2
 	},
 /area/surface/outside/thor/outpost)
+"TY" = (
+/obj/structure/window/reinforced{
+	dir = 1;
+	health = 1e+006
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
+/area/shuttle/junker)
 "Ud" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/rack,
@@ -4358,6 +4346,24 @@
 	grass_chance = 2
 	},
 /area/surface/outside/thor/outpost)
+"Ur" = (
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/hatch{
+	id_tag = "junker_outer";
+	req_one_access = null
+	},
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1380;
+	id_tag = "junker";
+	pixel_y = -25
+	},
+/obj/effect/map_helper/airlock/door/simple,
+/turf/simulated/floor/plating,
+/area/shuttle/junker)
 "Uu" = (
 /obj/structure/flora/tree/desert_planet/spalmtree4,
 /turf/simulated/floor/outdoors/grass/forest/thor{
@@ -4437,10 +4443,17 @@
 /turf/simulated/floor/outdoors/desert_planet/sand/thor,
 /area/surface/outside/thor/jungle)
 "VC" = (
+/obj/structure/prop/rock/crystal{
+	color = "#E995CA"
+	},
+/obj/effect/map_effect/perma_light{
+	light_color = "#E995CA"
+	},
 /turf/simulated/floor/outdoors/ice/dark_smooth{
 	nitrogen = 63.4124;
 	oxygen = 34.1451;
-	temperature = 313
+	temperature = 313;
+	outdoors = 0
 	},
 /area/surface/thor/caves)
 "VG" = (
@@ -4538,6 +4551,25 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/thor/engi)
+"WE" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/junker)
 "WF" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small/poi{
@@ -4601,19 +4633,6 @@
 /obj/structure/fans/tiny,
 /turf/simulated/mineral/floor/cave/thor,
 /area/surface/thor/caves)
-"Xf" = (
-/obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
-	},
-/obj/structure/window/reinforced,
-/obj/structure/grille,
-/turf/simulated/floor/plating,
-/area/shuttle/junker)
-"Xj" = (
-/obj/machinery/computer/ship/sensors,
-/turf/simulated/floor/plating,
-/area/shuttle/junker)
 "Xm" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -4693,6 +4712,18 @@
 	temperature = 313
 	},
 /area/surface/outside/thor/pool)
+"Yq" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced,
+/obj/structure/grille,
+/turf/simulated/floor/plating,
+/area/shuttle/junker)
 "Yv" = (
 /turf/simulated/floor/plating/external/thor{
 	icon_state = "dmg4"
@@ -4768,21 +4799,6 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/surface/thor/kitchen)
-"Zb" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 4
-	},
-/obj/machinery/power/smes/batteryrack,
-/obj/structure/cable/green{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/item/weapon/cell/high,
-/obj/item/weapon/cell/high,
-/obj/item/weapon/cell/high,
-/obj/item/weapon/cell/high,
-/turf/simulated/floor/plating,
-/area/shuttle/junker)
 "Zd" = (
 /obj/structure/flora/ausbushes/reedbush,
 /turf/simulated/floor/water/ocean{
@@ -4809,15 +4825,6 @@
 	outdoors = 0
 	},
 /area/surface/outside/thor/pool)
-"Zu" = (
-/obj/structure/cable/blue{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating,
-/area/shuttle/junker)
 "Zw" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -4859,13 +4866,6 @@
 	grass_chance = 2
 	},
 /area/surface/outside/thor/landingpad)
-"ZO" = (
-/obj/structure/shuttle/engine/heater,
-/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
-	dir = 8
-	},
-/turf/simulated/wall/iron,
-/area/shuttle/junker)
 "ZQ" = (
 /turf/simulated/wall/wood,
 /area/surface/thor/engi)
@@ -8059,13 +8059,13 @@ fY
 fY
 fY
 fY
-MH
-TE
-TE
-TE
-hC
-ZO
-tz
+ri
+rC
+rC
+rC
+bC
+ap
+EE
 fY
 fY
 fo
@@ -8317,12 +8317,12 @@ fY
 fY
 fY
 fY
-uN
-mD
-Zu
-Ef
-Zb
-uX
+ux
+BV
+HI
+wR
+Bw
+qV
 fY
 fY
 fY
@@ -8575,12 +8575,12 @@ fY
 fY
 it
 fY
-uW
-Se
-oF
-em
-Ih
-fp
+TY
+io
+QW
+NC
+Dg
+WE
 fY
 fY
 fY
@@ -8833,13 +8833,13 @@ fY
 fY
 fY
 Dn
-Xf
-Xj
-JW
-NR
-SK
-uX
-zV
+Ha
+jE
+bK
+es
+Gl
+qV
+bG
 fY
 fY
 fo
@@ -9091,13 +9091,13 @@ fY
 fY
 fY
 fY
-ID
-TE
-Lb
-TE
-TE
-vl
-tz
+Yq
+rC
+Ur
+rC
+rC
+IJ
+EE
 fY
 Dn
 fo
@@ -9348,12 +9348,12 @@ fY
 fY
 fY
 fY
-fY
-fY
-fY
-fY
-fY
-Dn
+JJ
+JJ
+JJ
+JJ
+JJ
+JJ
 lc
 fY
 fY
@@ -9869,7 +9869,7 @@ fY
 fY
 fY
 lc
-DF
+gN
 lc
 fY
 it
@@ -10866,8 +10866,8 @@ Rg
 KR
 fY
 fY
-fY
-fY
+yC
+MB
 fY
 fY
 fY
@@ -11124,8 +11124,8 @@ Rg
 fY
 fY
 fY
-fY
-fY
+yC
+uy
 fY
 fY
 fY
@@ -11382,7 +11382,7 @@ fY
 fY
 fY
 fY
-fY
+rY
 fY
 fY
 fY
@@ -24680,7 +24680,7 @@ PA
 PA
 PA
 PA
-PA
+rz
 rz
 rz
 gS
@@ -25969,7 +25969,7 @@ PA
 PA
 PA
 PA
-PA
+rz
 rz
 Jt
 ru
@@ -27000,7 +27000,7 @@ PA
 PA
 PA
 PA
-PA
+rz
 rz
 Jt
 ru
@@ -33949,7 +33949,7 @@ Ho
 Ho
 Lq
 Ho
-Ho
+pd
 PA
 PA
 PA
@@ -65561,10 +65561,10 @@ qz
 qz
 qz
 qz
-VC
-VC
-VC
-VC
+nY
+nY
+nY
+nY
 qz
 qz
 qz
@@ -65815,19 +65815,19 @@ wy
 cq
 cq
 cq
+EJ
 cq
 cq
-cq
+nY
+nY
+nY
 VC
-VC
-VC
-VC
-VC
-VC
-VC
-VC
-VC
-cq
+nY
+nY
+nY
+nY
+nY
+so
 cq
 qz
 qz
@@ -66081,13 +66081,13 @@ cq
 cq
 cq
 nb
-wy
-VC
-VC
-VC
-VC
+EJ
+nY
+nY
+nY
+nY
 cq
-cq
+EJ
 qz
 qz
 qz
@@ -66339,7 +66339,7 @@ cq
 cq
 cq
 cq
-wy
+cq
 cq
 cq
 cq
@@ -66605,7 +66605,7 @@ cq
 cq
 cq
 cq
-cq
+Mz
 qz
 CR
 CR
@@ -66860,7 +66860,7 @@ cq
 cq
 cq
 cq
-cq
+EJ
 cq
 cq
 cq
@@ -67369,17 +67369,17 @@ cq
 EJ
 cq
 cq
-cq
+Mz
 qz
 qz
-cq
+so
 cq
 EJ
 cq
 cq
+EJ
 cq
-cq
-cq
+EJ
 cq
 cq
 cq
@@ -67641,7 +67641,7 @@ cq
 cq
 cq
 wy
-wy
+qj
 CR
 CR
 CR
@@ -67884,13 +67884,13 @@ cq
 cq
 cq
 cq
+EJ
 cq
-cq
 qz
 qz
 qz
-VC
-VC
+nY
+nY
 cq
 cq
 cq
@@ -68144,10 +68144,10 @@ EJ
 cq
 cq
 cq
+nY
+nY
 VC
-VC
-VC
-VC
+nY
 cq
 EJ
 cq
@@ -68393,7 +68393,7 @@ wy
 wy
 wy
 cq
-cq
+EJ
 cq
 cq
 cq
@@ -68402,10 +68402,10 @@ cq
 cq
 so
 nY
-VC
-VC
-VC
-VC
+nY
+nY
+nY
+nY
 EJ
 cq
 cq
@@ -68650,7 +68650,7 @@ CR
 CR
 CR
 CR
-wy
+qj
 cq
 cq
 cq
@@ -68658,16 +68658,16 @@ cq
 cq
 cq
 cq
+EJ
 cq
-cq
-VC
+nY
 nb
 cq
 cq
 cq
 cq
 cq
-cq
+EJ
 cq
 cq
 cq
@@ -68921,15 +68921,15 @@ cq
 cq
 EJ
 cq
+EJ
+cq
+EJ
 cq
 cq
 cq
 cq
 cq
-cq
-cq
-cq
-cq
+EJ
 cq
 wy
 wy
@@ -69175,7 +69175,7 @@ qz
 qz
 qz
 qz
-cq
+Mz
 cq
 cq
 cq
@@ -69660,12 +69660,12 @@ CR
 CR
 CR
 CR
-es
-qj
-qj
-qj
-es
-wy
+CR
+CR
+CR
+CR
+CR
+CR
 wy
 wy
 wy
@@ -69918,11 +69918,11 @@ CR
 CR
 CR
 CR
-es
-RX
-Gl
-RX
-es
+CR
+CR
+CR
+CR
+CR
 CR
 CR
 CR
@@ -69962,7 +69962,7 @@ qz
 qz
 cq
 cq
-cq
+EJ
 cq
 wy
 cq
@@ -70176,11 +70176,11 @@ CR
 CR
 CR
 CR
-es
-MB
-wy
-wy
-es
+CR
+CR
+CR
+CR
+CR
 CR
 CR
 CR
@@ -70434,11 +70434,11 @@ CR
 CR
 CR
 CR
-es
-MB
-MB
-MB
-es
+CR
+CR
+CR
+CR
+CR
 CR
 CR
 CR
@@ -70692,11 +70692,11 @@ CR
 CR
 CR
 CR
-es
-MB
-MB
-MB
-es
+CR
+CR
+CR
+CR
+CR
 CR
 CR
 CR

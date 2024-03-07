@@ -42,7 +42,6 @@
 	ice_color = "#f5ffff"
 	atmosphere_color = "#54c0ce"
 	icon_state = "lush"
-	known = 1
 
 
 /obj/effect/overmap/visitable/planet/thor/get_skybox_representation()
@@ -257,7 +256,7 @@
 	nitrogen	= THOR_MOL_N2
 	temperature	= THOR_AVG_TEMP
 
-/turf/simulated/floor/holofloor/beach/sand/thor
+/turf/simulated/floor/beach/sand/desert/outdoors/thor
 	oxygen		= THOR_MOL_O2
 	nitrogen	= THOR_MOL_N2
 	temperature	= THOR_AVG_TEMP

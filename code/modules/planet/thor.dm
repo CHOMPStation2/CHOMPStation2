@@ -129,7 +129,8 @@ var/datum/planet/thor/planet_thor = null
 /datum/weather/thor/clear
 	name = "clear"
 	transition_chances = list(
-		WEATHER_CLEAR = 60,
+		WEATHER_RAIN = 60,
+		WEATHER_CLEAR = 10,
 		WEATHER_OVERCAST = 20)
 	transition_messages = list(
 		"The sky clears up.",
@@ -148,7 +149,7 @@ var/datum/planet/thor/planet_thor = null
 	transition_chances = list(
 		WEATHER_CLEAR = 5,
 		WEATHER_OVERCAST = 50,
-		WEATHER_RAIN = 25
+		WEATHER_RAIN = 40
 		)
 	observed_message = "It is overcast, all you can see are clouds."
 	transition_messages = list(
