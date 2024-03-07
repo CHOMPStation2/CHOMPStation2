@@ -353,7 +353,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	else
 		//BEGIN CACHED ICON GENERATION.
 		var/obj/item/organ/external/chest = get_organ(BP_TORSO)
-		base_icon = chest.get_icon(skeleton, !wholeicontransparent)
+		base_icon = chest?.get_icon(skeleton, !wholeicontransparent)
 
 		var/apply_extra_transparency_leg = organs_by_name[BP_L_LEG] && organs_by_name[BP_R_LEG]
 		var/apply_extra_transparency_foot = organs_by_name[BP_L_FOOT] && organs_by_name[BP_R_FOOT]
