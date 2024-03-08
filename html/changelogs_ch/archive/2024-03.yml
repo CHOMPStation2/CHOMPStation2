@@ -82,3 +82,9 @@
   - bugfix: various reversions and touchups
   Verkister:
   - bugfix: Fixed voremobs not eating pounced mobs.
+2024-03-08:
+  Kashargul:
+  - bugfix: fixed an exploit to reform outside of a belly
+  - bugfix: ooc panel style button showing for others than oneself
+  cadyn:
+  - balance: nerf the shit out of cyanide
