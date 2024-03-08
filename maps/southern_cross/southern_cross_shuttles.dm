@@ -1,3 +1,11 @@
+// default shuttle roof type - blanket define our shuttle area ceiling type, we have multi-Zs and the default is none.
+/area/shuttle //blanket define our shuttle area ceiling type, we have multi-Zs and the default is none.
+	ceiling_type = /turf/simulated/floor/reinforced/airless
+
+/datum/shuttle //blanket define our shuttle area ceiling type, we have multi-Zs and the default is none.
+	ceiling_type = /turf/simulated/floor/reinforced/airless
+
+
 // Cargo shuttle.
 /datum/shuttle/autodock/ferry/supply/cargo
 	name = "Supply"
@@ -371,5 +379,3 @@ ESCAPE_POD(8)
 
 
 // Heist shuttle
-
-
