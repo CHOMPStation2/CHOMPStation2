@@ -448,6 +448,7 @@
 
 /obj/item/integrated_circuit/output/holographic_projector/Initialize()
 	. = ..()
+	AddComponent(/datum/component/recursive_move)
 	RegisterSignal(src, COMSIG_OBSERVER_MOVED, PROC_REF(on_moved))
 
 /obj/item/integrated_circuit/output/holographic_projector/Destroy()

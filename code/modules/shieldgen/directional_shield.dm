@@ -100,14 +100,14 @@
 
 /obj/item/shield_projector/Initialize()
 	START_PROCESSING(SSobj, src)
-	if(always_on)
-		create_shields()
+	AddComponent(/datum/component/recursive_move)
 	RegisterSignal(src, COMSIG_OBSERVER_MOVED, PROC_REF(moved_event))
-
-	if(istype(loc, /atom/movable)) // on initialise, if i'm inside a thing, preregister this.
-		var/atom/movable/am = loc
-		RegisterSignal(am, COMSIG_OBSERVER_MOVED, /atom/movable/proc/recursive_move, override = TRUE)
-
+	//ChompEDIT START - shields on init
+	if(always_on)
+		spawn(0)
+			if(!QDELETED(src))
+				create_shields()
+	//ChompEDIT END
 	return ..()
 
 /obj/item/shield_projector/Destroy()
