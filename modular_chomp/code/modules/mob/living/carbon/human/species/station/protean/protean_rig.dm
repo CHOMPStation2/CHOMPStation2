@@ -70,6 +70,8 @@
 		if(spawned)
 			B = P.back
 			P.unEquip(P.back)
+		if(QDELETED(B)) // for mannequins or such
+			return
 		B.forceMove(src)
 		rig_storage = B
 		P.drop_item(B)

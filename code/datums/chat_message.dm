@@ -240,6 +240,9 @@ var/list/runechat_image_cache = list()
 	if(!client)
 		return
 
+	// Source Deleting
+	if(QDELETED(speaker))
+		return
 	// Doesn't want to hear
 	if(ismob(speaker) && !client.is_preference_enabled(/datum/client_preference/runechat_mob))
 		return
@@ -346,7 +349,7 @@ var/list/runechat_image_cache = list()
 		hearing_mobs = hear["mobs"]
 
 	for(var/mob/M as anything in hearing_mobs)
-		if(!M.client)
+		if(!M?.client)
 			continue
 		M.create_chat_message(src, message, italics, classes, audible)
 
