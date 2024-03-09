@@ -402,7 +402,7 @@
 
 	projectile_dispersion = 100
 	projectile_accuracy = -100
-	base_attack_cooldown = 0
+	base_attack_cooldown = 0.01 // Division by zero error if 0
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/ravanger //Tanky boi. Very deadly melee
 	name = "Lunar Eclipse Ravanger"
