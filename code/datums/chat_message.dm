@@ -73,6 +73,12 @@ var/list/runechat_image_cache = list()
 	generate_image(text, target, owner, extra_classes, lifespan)
 
 /datum/chatmessage/Destroy()
+<<<<<<< HEAD
+=======
+	if(timer_delete)
+		deltimer(timer_delete)
+		timer_delete = null
+>>>>>>> 484ffed97a... Up-port: Various runtimes (#15802)
 	if(istype(owned_by, /client)) // hopefully the PARENT_QDELETING on client should beat this if it's a disconnect
 		UnregisterSignal(owned_by, COMSIG_PARENT_QDELETING)
 		if(owned_by.seen_messages)

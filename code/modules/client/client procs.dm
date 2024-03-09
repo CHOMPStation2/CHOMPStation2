@@ -277,7 +277,14 @@
 		gc_destroyed = world.time
 		if (!QDELING(src))
 			stack_trace("Client does not purport to be QDELING, this is going to cause bugs in other places!")
+<<<<<<< HEAD
 		GLOB.tickets.ClientLogout(src) // CHOMPedit - Tickets System
+=======
+
+		GLOB.ahelp_tickets.ClientLogout(src)
+		GLOB.mhelp_tickets.ClientLogout(src)
+
+>>>>>>> 484ffed97a... Up-port: Various runtimes (#15802)
 		// Yes this is the same as what's found in qdel(). Yes it does need to be here
 		// Get off my back
 		SEND_SIGNAL(src, COMSIG_PARENT_QDELETING, TRUE)

@@ -1232,6 +1232,18 @@
 		var/exploitmsg = html_decode("\n" + "Has " + I.name + ".")
 		exploit_record += exploitmsg
 		I.exploit_for = WEAKREF(src)
+<<<<<<< HEAD
+=======
+
+
+/obj/Destroy()
+	if(exploit_for)
+		var/mob/exploited = exploit_for.resolve()
+		exploited?.exploit_addons -= src
+		exploit_for = null
+	. = ..()
+
+>>>>>>> 484ffed97a... Up-port: Various runtimes (#15802)
 
 
 /obj/Destroy()
