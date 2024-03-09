@@ -147,6 +147,8 @@
 				target = tray
 				times_idle = 0 //VOREStation Add - Idle shutoff time
 				return
+		if(tank && !tank.reagents) //ChompEDIT - possible runtime
+			tank.reagents = new/datum/reagents(5000) //ChompEDIT - runtime
 		if(!target && refills_water && tank && tank.reagents.total_volume < tank.reagents.maximum_volume)
 			for(var/obj/structure/sink/source in view(7, src))
 				target = source
