@@ -7,7 +7,7 @@ export RUST_G_VERSION=3.1.0
 
 # byond version
 export BYOND_MAJOR=515
-export BYOND_MINOR=1630
+export BYOND_MINOR=1633
 export MACRO_COUNT=4
 
 # node version
