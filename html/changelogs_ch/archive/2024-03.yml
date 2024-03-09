@@ -88,3 +88,10 @@
   - bugfix: ooc panel style button showing for others than oneself
   cadyn:
   - balance: nerf the shit out of cyanide
+2024-03-09:
+  Raeschen:
+  - bugfix: fixed shuttles not having roofs
+  - bugfix: runtimes
+  - bugfix: fixed ascending through floors
+  cadyn:
+  - code_imp: recursive listening now is a component
