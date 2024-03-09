@@ -15,6 +15,11 @@
 		SI.L = L
 		SI.cmp = cmp
 		SI.associative = associative
+<<<<<<< HEAD
+=======
+
+		SI.timSort(fromIndex, toIndex)
+>>>>>>> cc05d51b69... Garbage collection, asset delivery, icon2html revolution, and general fixes (515) (#15739)
 
 		SI.timSort(fromIndex, toIndex)
 	return L

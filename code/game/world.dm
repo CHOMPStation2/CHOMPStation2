@@ -1,3 +1,14 @@
+/proc/prof_init()
+	var/lib
+
+	switch(world.system_type)
+		if(MS_WINDOWS) lib = "prof.dll"
+		if(UNIX) lib = "libprof.so"
+		else CRASH("unsupported platform")
+
+	var/init = LIBCALL(lib, "init")()
+	if("0" != init) CRASH("[lib] init error: [init]")
+
 #define RECOMMENDED_VERSION 513
 // CHOMPedit Start - Tracy
 /proc/prof_init()
@@ -13,7 +24,13 @@
 // CHOMPedit End
 
 /world/New()
+<<<<<<< HEAD
 	//prof_init() // CHOMPedit - Uncomment to enable Tracy. Requires https://github.com/mafemergency/byond-tracy/
+=======
+	#ifdef TRACY
+	prof_init()
+	#endif
+>>>>>>> cc05d51b69... Garbage collection, asset delivery, icon2html revolution, and general fixes (515) (#15739)
 	world_startup_time = world.timeofday
 	rollover_safety_date = world.realtime - world.timeofday // 00:00 today (ish, since floating point error with world.realtime) of today
 	to_world_log("Map Loading Complete")

@@ -22,7 +22,10 @@
 	QDEL_NULL(touching)
 	// We don't qdel(bloodstr) because it's the same as qdel(reagents)
 	bloodstr = null
+<<<<<<< HEAD
 	QDEL_NULL_LIST(internal_organs)
+=======
+>>>>>>> cc05d51b69... Garbage collection, asset delivery, icon2html revolution, and general fixes (515) (#15739)
 	QDEL_NULL_LIST(stomach_contents)
 	return ..()
 

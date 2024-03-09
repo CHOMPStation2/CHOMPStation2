@@ -16,7 +16,11 @@
 /obj/machinery/artifact/Destroy()
 	if(artifact_master)
 		var/datum/component/artifact_master/arti_mstr = artifact_master
+<<<<<<< HEAD
 		arti_mstr.ClearFromParent()
+=======
+		arti_mstr.RemoveComponent()
+>>>>>>> cc05d51b69... Garbage collection, asset delivery, icon2html revolution, and general fixes (515) (#15739)
 		artifact_master = null
 		if(!QDELETED(arti_mstr))
 			qdel(arti_mstr)

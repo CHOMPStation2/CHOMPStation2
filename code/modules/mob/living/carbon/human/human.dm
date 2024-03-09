@@ -58,7 +58,14 @@
 
 /mob/living/carbon/human/Destroy()
 	human_mob_list -= src
+<<<<<<< HEAD
 	QDEL_NULL_LIST(organs)
+=======
+	/* //Chomp REMOVE - this is done on mob/living/Destroy
+	for(var/organ in organs)
+		qdel(organ)
+	*/
+>>>>>>> cc05d51b69... Garbage collection, asset delivery, icon2html revolution, and general fixes (515) (#15739)
 	if(nif)
 		QDEL_NULL(nif)	//VOREStation Add
 	worn_clothing.Cut()

@@ -185,9 +185,15 @@
 
 
 /mob/Destroy()
+<<<<<<< HEAD
 	if(ability_master)
 		QDEL_NULL(ability_master)
 	. = ..()
+=======
+	..()
+	if(ability_master)
+		QDEL_NULL(ability_master)
+>>>>>>> cc05d51b69... Garbage collection, asset delivery, icon2html revolution, and general fixes (515) (#15739)
 
 
 ///////////ACTUAL ABILITIES////////////

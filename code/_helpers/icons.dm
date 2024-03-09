@@ -534,6 +534,10 @@ GLOBAL_LIST_EMPTY(cached_examine_icons)
 			CRASH("get_dummy_savefile failed to create a dummy savefile: '[error]'")
 		return get_dummy_savefile(from_failure = TRUE)
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cc05d51b69... Garbage collection, asset delivery, icon2html revolution, and general fixes (515) (#15739)
 /// Generate a filename for this asset
 /// The same asset will always lead to the same asset name
 /// (Generated names do not include file extention.)

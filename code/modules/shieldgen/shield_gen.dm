@@ -257,7 +257,10 @@
 
 		for(var/mob/M in view(5,src))
 			to_chat(M, "[icon2html(src, M.client)] You hear heavy droning fade out.")
+<<<<<<< HEAD
 		shield_hum.stop()
+=======
+>>>>>>> cc05d51b69... Garbage collection, asset delivery, icon2html revolution, and general fixes (515) (#15739)
 
 /obj/machinery/shield_gen/update_icon()
 	if(stat & BROKEN)

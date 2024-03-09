@@ -53,8 +53,17 @@
 	if(tf_mob_holder)
 		tf_mob_holder = null
 	//VOREStation Addition End
+<<<<<<< HEAD
 	QDEL_NULL_LIST(hud_list)
 	QDEL_NULL(selected_image)
+=======
+	if(hud_list) //prune out images in hud_list
+		for(var/item in hud_list)
+			if(item)
+				item = null
+	if(selected_image)
+		selected_image = null
+>>>>>>> cc05d51b69... Garbage collection, asset delivery, icon2html revolution, and general fixes (515) (#15739)
 	//QDEL_NULL(vorePanel) //VOREStation Add commented and moved to /mob
 	//QDEL_LIST_NULL(vore_organs) //VOREStation Add commented and moved to /mob
 	temp_language_sources = null //VOREStation Add

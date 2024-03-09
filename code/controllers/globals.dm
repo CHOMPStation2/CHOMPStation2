@@ -63,4 +63,8 @@ GLOBAL_REAL(GLOB, /datum/controller/global_vars)
 		if(end_tick - start_tick)
 			warning("Global [replacetext("[I]", "InitGlobal", "")] slept during initialization!")
 
+<<<<<<< HEAD
 	//populate_legacy_globals()
+=======
+	populate_legacy_globals()
+>>>>>>> cc05d51b69... Garbage collection, asset delivery, icon2html revolution, and general fixes (515) (#15739)

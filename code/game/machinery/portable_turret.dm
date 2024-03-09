@@ -831,14 +831,23 @@
 	if(target)
 		if(target in check_trajectory(target, src))	//Finally, check if we can actually hit the target
 			last_target = target
+<<<<<<< HEAD
 			spawn()
 				popUp()				//pop the turret up if it's not already up.
+=======
+			popUp()				//pop the turret up if it's not already up.
+>>>>>>> cc05d51b69... Garbage collection, asset delivery, icon2html revolution, and general fixes (515) (#15739)
 			set_dir(get_dir(src, target))	//even if you can't shoot, follow the target
 			playsound(src, 'sound/machines/turrets/turret_rotate.ogg', 100, 1) // Play rotating sound
 			spawn()
 				shootAt(target)
+<<<<<<< HEAD
 			return 1
 	return
+=======
+			return TRUE
+	return FALSE
+>>>>>>> cc05d51b69... Garbage collection, asset delivery, icon2html revolution, and general fixes (515) (#15739)
 
 /obj/machinery/porta_turret/proc/shootAt(var/mob/living/target)
 	//any emagged turrets will shoot extremely fast! This not only is deadly, but drains a lot power!

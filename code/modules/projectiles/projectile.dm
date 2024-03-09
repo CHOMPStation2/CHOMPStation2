@@ -469,13 +469,24 @@
 			impacted_mobs.Cut()
 		impacted_mobs = null
 
+<<<<<<< HEAD
 	qdel(trajectory)
 	cleanup_beam_segments()
+=======
+	trajectory = null
+	beam_index = null
+	beam_components = null
+
+>>>>>>> cc05d51b69... Garbage collection, asset delivery, icon2html revolution, and general fixes (515) (#15739)
 
 	if(my_case)
 		if(my_case.BB == src)
 			my_case.BB = null
+<<<<<<< HEAD
 		my_case = null
+=======
+			my_case = null
+>>>>>>> cc05d51b69... Garbage collection, asset delivery, icon2html revolution, and general fixes (515) (#15739)
 
 	return ..()
 
