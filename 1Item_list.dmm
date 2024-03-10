@@ -54925,7 +54925,7 @@
 	},
 /area/survivalpod)
 "qbM" = (
-/obj/machinery/door/airlock/angled_bay/centcomm,
+/obj/machinery/door/airlock/angled_bay/centcom,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},

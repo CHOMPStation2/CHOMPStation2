@@ -78,7 +78,7 @@
 		fail(test["msg"])
 	return 1
 
-/datum/unit_test/zas_area_test/supply_centcomm
+/datum/unit_test/zas_area_test/supply_centcom // CHOMPEdit - Typo Fix
 	name = "ZAS: Supply Shuttle"
 	area_path = /area/shuttle/supply //yw edit: path changed
 

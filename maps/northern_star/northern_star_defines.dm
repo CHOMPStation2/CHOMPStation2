@@ -118,7 +118,7 @@
 
 //Unit test stuff.
 
-/datum/unit_test/zas_area_test/supply_centcomm
+/datum/unit_test/zas_area_test/supply_centcom // CHOMPEdit - Typo Fix
 	name = "ZAS: Supply Shuttle (CentCom)"
 	area_path = /area/supply/dock
 

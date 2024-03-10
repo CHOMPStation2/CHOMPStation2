@@ -902,7 +902,7 @@ var/induromol_code = rand(1, 50)
 			metabolism = 1
 			to_chat(M, "<span class='notice'>You begin to feel transcendental.</span>")
 
-		if(M.z > 5 || M.z == 2 || M.z < 1) //no centcomm teleport, also not dealing with other unknown sectors
+		if(M.z > 5 || M.z == 2 || M.z < 1) //no centcom teleport, also not dealing with other unknown sectors // CHOMPEdit - Typo Fix
 			to_chat(M, "<span class='warning'>You feel the bluespace leave your body on this sector, nothing happens.</span>")
 			src = null
 			return
@@ -1091,7 +1091,7 @@ not yet finished to a satisfactory degree, or I just don't like it enough to kee
 	power = 12
 	meltdose = 5
 
-	reaction_turf(var/turf/T, var/volume) //can't melt space, centcomm walls, or shuttles
+	reaction_turf(var/turf/T, var/volume) //can't melt space, centcom walls, or shuttles // CHOMPEdit - Typo Fix
 											//maybe make work off explosion resistance?
 		if(!istype(T, /turf/space) && !istype(T, /turf/unsimulated/wall) && !istype(T.loc, /area/shuttle) \
 						 && !istype(T.loc, /area/supply/station)) //TODO: Deal with bluespace tiles
