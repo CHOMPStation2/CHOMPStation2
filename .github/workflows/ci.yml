@@ -1,12 +1,14 @@
-name: CI
+name: CI Suite
 on:
+  push:
+    branches:
+      - master
   pull_request:
     branches:
       - master
-
-env:
-  BASENAME: "vorestation"
-
+  merge_group:
+    branches:
+      - master
 jobs:
   run_linters:
     if: ( !contains(github.event.head_commit.message, '[ci skip]') )
@@ -58,13 +60,29 @@ jobs:
           pip3 install setuptools
           bash tools/ci/install_build_deps.sh
           bash tools/ci/install_spaceman_dmm.sh dreamchecker
+          bash tools/ci/install_ripgrep.sh
           tools/bootstrap/python -c ''
-      - name: Run Tests
-        run: |
-          tools/ci/validate_files.sh
+      - name: Give Linters A Go
+        id: linter-setup
+        run: ':'
+      - name: Run Grep Checks
+        if: steps.linter-setup.conclusion == 'success' && !cancelled()
+        run: bash tools/ci/check_grep.sh
       - name: Run DreamChecker
         shell: bash
         run: ~/dreamchecker 2>&1 | bash tools/ci/annotate_dm.sh
+      - name: Check Cutter
+        if: steps.linter-setup.conclusion == 'success' && !cancelled()
+        run: tools/bootstrap/python -m tools.icon_cutter.check
+      - name: Check File Directories
+        if: steps.linter-setup.conclusion == 'success' && !cancelled()
+        run: bash tools/ci/check_filedirs.sh tgstation.dme
+      - name: Check Changelogs
+        if: steps.linter-setup.conclusion == 'success' && !cancelled()
+        run: bash tools/ci/check_changelogs.sh
+      - name: Check Miscellaneous Files
+        if: steps.linter-setup.conclusion == 'success' && !cancelled()
+        run: bash tools/ci/check_misc.sh
       - name: Run TGUI Checks
         run: tools/build/build --ci lint tgui-test
 
