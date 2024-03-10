@@ -23,6 +23,7 @@ fi
 #    $1/tgui/packages/tgfont/dist
 
 mkdir -p \
+		$1/config/names \
     $1/maps \
     $1/icons/effects \
 		$1/icons/mob/vore \
@@ -42,6 +43,7 @@ fi
 
 cp vorestation.dmb vorestation.rsc $1/
 cp -r config/example/* $1/config/
+cp -r config/names/* $1/config/names/
 cp -r maps/* $1/maps/
 cp -r icons/effects/* $1/icons/effects/
 #cp -r icons/mob/clothing/* $1/icons/mob/clothing/
