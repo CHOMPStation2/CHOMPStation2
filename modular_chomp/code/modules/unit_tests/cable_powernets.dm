@@ -2,6 +2,14 @@
 /datum/unit_test/cable_powernets
 
 /datum/unit_test/cable_powernets/Run()
+	var/list/exempt_areas += using_map.unit_test_exempt_areas.Copy()
+	var/list/zs_to_test = using_map.unit_test_z_levels || list(1) //Either you set it, or you just get z1
+	var/list/the_station_areas
+
+	for(var/area/A in world)
+		if((A.z in zs_to_test) && !(A.type in exempt_areas))
+			the_station_areas += A
+
 	for(var/datum/powernet/powernets as anything in SSmachines.powernets)
 
 		//nodes (machines, which includes APCs and SMES)
@@ -11,7 +19,7 @@
 			var/obj/structure/cable/found_cable = powernets.cables[1]
 			//Check if they're a station area
 			var/area/cable_area = get_area(found_cable)
-			if(!(cable_area.type in GLOB.the_station_areas) || !cable_area.requires_power)
+			if(!(cable_area.type in the_station_areas) || !cable_area.requires_power)
 				continue
 			TEST_FAIL("[powernets] found with no nodes connected ([found_cable.x], [found_cable.y], [found_cable.z])).")
 
@@ -22,7 +30,7 @@
 			var/obj/machinery/power/found_machine = powernets.nodes[1]
 			//Check if they're a station area
 			var/area/machine_area = get_area(found_machine)
-			if(!(machine_area.type in GLOB.the_station_areas) || !machine_area.requires_power)
+			if(!(machine_area.type in the_station_areas) || !machine_area.requires_power)
 				continue
 			TEST_FAIL("[powernets] found with no cables connected ([found_machine.x], [found_machine.y], [found_machine.z]).")
 
@@ -30,6 +38,6 @@
 			var/obj/structure/cable/random_cable = powernets.cables[1]
 			//Check if they're a station area
 			var/area/cable_area = get_area(random_cable)
-			if(!(cable_area.type in GLOB.the_station_areas) || !cable_area.requires_power)
+			if(!(cable_area.type in the_station_areas) || !cable_area.requires_power)
 				continue
 			TEST_FAIL("[powernets] found with no power roundstart, connected to a cable at ([random_cable.x], [random_cable.y], [random_cable.z]).")
