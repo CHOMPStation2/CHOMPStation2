@@ -6,7 +6,7 @@
 
 /* For logging round startup. */
 /proc/start_log(log)
-	WRITE_LOG(log, "START: Starting up [log_path].")
+	WRITE_LOG(log, "START: Starting up [log].")
 	return log
 
 /* Close open log handles. This should be called as late as possible, and no logging should hapen after. */
