@@ -550,7 +550,7 @@
 /obj/structure/closet/verb/hidden_vore()
 	set src in oview(1)
 	set category = "Object"
-	set name = "Vore Occupants"
+	set name = "Devour Occupants" //ChompEDIT vore as a verb is cronge
 
 	if(!istype(usr, /mob/living)) //no ghosts
 		return
