@@ -8,13 +8,18 @@
 		if(toIndex <= 0)
 			toIndex += L.len + 1
 
-		var/datum/sort_instance/SI = GLOB.sortInstance
-		if(!SI)
-			SI = new
+		sortInstance.L = L
+		sortInstance.cmp = cmp
+		sortInstance.associative = associative
 
+<<<<<<< HEAD
 		SI.L = L
 		SI.cmp = cmp
 		SI.associative = associative
 
 		SI.timSort(fromIndex, toIndex)
+=======
+		sortInstance.timSort(fromIndex, toIndex)
+
+>>>>>>> f6d0f62622... Revert "Garbage collection, asset delivery, icon2html revolution, and general…" (#15815)
 	return L

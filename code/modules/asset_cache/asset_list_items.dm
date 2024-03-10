@@ -260,26 +260,41 @@
 /datum/asset/spritesheet/pipes
 	name = "pipes"
 
-/datum/asset/spritesheet/pipes/create_spritesheets()
+/datum/asset/spritesheet/pipes/register()
 	for(var/each in list('icons/obj/pipe-item.dmi', 'icons/obj/pipes/disposal.dmi'))
 		InsertAll("", each, global.alldirs)
+	..()
 
 //VOREStation Add
 /datum/asset/spritesheet/vore
 	name = "vore"
 
+<<<<<<< HEAD
 /datum/asset/spritesheet/vore/create_spritesheets()
 	var/icon/downscaled = icon('modular_chomp/icons/mob/screen_full_vore_ch.dmi') //CHOMPedit: preserving save data
+=======
+/datum/asset/spritesheet/vore/register()
+	var/icon/downscaled = icon('icons/mob/screen_full_vore.dmi')
+>>>>>>> f6d0f62622... Revert "Garbage collection, asset delivery, icon2html revolution, and general…" (#15815)
 	downscaled.Scale(240, 240)
 	InsertAll("", downscaled)
+	..()
 
 /datum/asset/spritesheet/vore_fixed //This should be getting loaded in the TGUI vore panel but the game refuses to do so, for some reason. It only loads the vore spritesheet. //CHOMPedit
 	name = "fixedvore" //CHOMPedit
 
+<<<<<<< HEAD
 /datum/asset/spritesheet/vore_fixed/create_spritesheets() //CHOMPedi start: preserving save data
 	var/icon/downscaledVF = icon('icons/mob/screen_full_vore.dmi')
 	downscaledVF.Scale(240, 240)
 	InsertAll("", downscaledVF) //CHOMpedit end
+=======
+/datum/asset/spritesheet/vore_colorized/register()
+	var/icon/downscaledVC = icon('icons/mob/screen_full_colorized_vore.dmi')
+	downscaledVC.Scale(240, 240)
+	InsertAll("", downscaledVC)
+	..()
+>>>>>>> f6d0f62622... Revert "Garbage collection, asset delivery, icon2html revolution, and general…" (#15815)
 
 //VOREStation Add End
 
@@ -345,7 +360,7 @@
 /datum/asset/spritesheet/vending
 	name = "vending"
 
-/datum/asset/spritesheet/vending/create_spritesheets()
+/datum/asset/spritesheet/vending/register()
 	populate_vending_products()
 	for(var/atom/item as anything in GLOB.vending_products)
 		if(!ispath(item, /atom))
@@ -383,6 +398,7 @@
 		var/imgid = replacetext(replacetext("[item]", "/obj/item/", ""), "/", "-")
 
 		Insert(imgid, I)
+	return ..()
 
 // this is cursed but necessary or else vending product icons can be missing
 // basically, if there's any vending machines that aren't already mapped in, our register() will not know
@@ -443,10 +459,10 @@
 		assets["patch[i].png"] = icon('icons/obj/chemical.dmi', "patch[i]") // CHOMPedit
 
 	for(var/asset_name in assets)
-		SSassets.transport.register_asset(asset_name, assets[asset_name])
+		register_asset(asset_name, assets[asset_name])
 
 /datum/asset/chem_master/send(client)
-	SSassets.transport.send_assets(client, assets, verify)
+	send_asset_list(client, assets, verify)
 
 //Cloning pod sprites for UIs
 /datum/asset/cloning
@@ -458,10 +474,10 @@
 	assets["pod_cloning.gif"] = icon('icons/obj/cloning.dmi', "pod_cloning")
 	assets["pod_mess.gif"] = icon('icons/obj/cloning.dmi', "pod_mess")
 	for(var/asset_name in assets)
-		SSassets.transport.register_asset(asset_name, assets[asset_name])
+		register_asset(asset_name, assets[asset_name])
 
 /datum/asset/cloning/send(client)
-	SSassets.transport.send_assets(client, assets, verify)
+	send_asset_list(client, assets, verify)
 
 // VOREStation Add
 /datum/asset/cloning/resleeving
@@ -472,14 +488,15 @@
 	assets["synthprinter.gif"] = icon('icons/obj/machines/synthpod.dmi', "pod_0")
 	assets["synthprinter_working.gif"] = icon('icons/obj/machines/synthpod.dmi', "pod_1")
 	for(var/asset_name in assets)
-		SSassets.transport.register_asset(asset_name, assets[asset_name])
+		register_asset(asset_name, assets[asset_name])
 // VOREStation Add End
 
 /datum/asset/spritesheet/sheetmaterials
 	name = "sheetmaterials"
 
-/datum/asset/spritesheet/sheetmaterials/create_spritesheets()
+/datum/asset/spritesheet/sheetmaterials/register()
 	InsertAll("", 'icons/obj/stacks.dmi')
+	..()
 
 // Nanomaps
 /datum/asset/simple/nanomaps

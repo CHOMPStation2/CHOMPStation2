@@ -12,6 +12,7 @@
 
 	var/being_used = 0
 
+<<<<<<< HEAD
 
 /obj/machinery/artifact/Destroy()
 	if(artifact_master)
@@ -22,6 +23,8 @@
 			qdel(arti_mstr)
 	. = ..()
 
+=======
+>>>>>>> f6d0f62622... Revert "Garbage collection, asset delivery, icon2html revolution, and general…" (#15815)
 /obj/machinery/artifact/New()
 	..()
 

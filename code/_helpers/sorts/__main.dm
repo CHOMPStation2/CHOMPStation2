@@ -8,14 +8,20 @@
 	//When we get into galloping mode, we stay there until both runs win less often than MIN_GALLOP consecutive times.
 #define MIN_GALLOP 7
 
+<<<<<<< HEAD
 //This is a global instance to allow much of this code to be reused. The interfaces are kept separately
 GLOBAL_DATUM_INIT(sortInstance, /datum/sort_instance, new())
 /datum/sort_instance
+=======
+	//This is a global instance to allow much of this code to be reused. The interfaces are kept separately
+var/datum/sortInstance/sortInstance = new()
+/datum/sortInstance
+>>>>>>> f6d0f62622... Revert "Garbage collection, asset delivery, icon2html revolution, and general…" (#15815)
 	//The array being sorted.
 	var/list/L
 
 	//The comparator proc-reference
-	var/cmp = GLOBAL_PROC_REF(cmp_numeric_asc)
+	var/cmp = /proc/cmp_numeric_asc
 
 	//whether we are sorting list keys (0: L[i]) or associated values (1: L[L[i]])
 	var/associative = 0
@@ -31,7 +37,7 @@ GLOBAL_DATUM_INIT(sortInstance, /datum/sort_instance, new())
 	var/list/runLens = list()
 
 
-/datum/sort_instance/proc/timSort(start, end)
+/datum/sortInstance/proc/timSort(start, end)
 	runBases.Cut()
 	runLens.Cut()
 
@@ -92,11 +98,19 @@ GLOBAL_DATUM_INIT(sortInstance, /datum/sort_instance, new())
 	this method can take advantage of it: the method assumes that the
 	elements in range [lo,start) are already sorted
 
+<<<<<<< HEAD
 	lo the index of the first element in the range to be sorted
 	hi the index after the last element in the range to be sorted
 	start the index of the first element in the range that is not already known to be sorted
 	*/
 /datum/sort_instance/proc/binarySort(lo, hi, start)
+=======
+lo		the index of the first element in the range to be sorted
+hi		the index after the last element in the range to be sorted
+start	the index of the first element in the range that is	not already known to be sorted
+*/
+/datum/sortInstance/proc/binarySort(lo, hi, start)
+>>>>>>> f6d0f62622... Revert "Garbage collection, asset delivery, icon2html revolution, and general…" (#15815)
 	//ASSERT(lo <= start && start <= hi)
 	if(start <= lo)
 		start = lo + 1
@@ -130,11 +144,19 @@ GLOBAL_DATUM_INIT(sortInstance, /datum/sort_instance, new())
 	or the longest descending sequence with:
 		a[lo] >  a[lo + 1] >  a[lo + 2] >  ...
 
+<<<<<<< HEAD
 	For its intended use in a stable mergesort, the strictness of the
 	definition of "descending" is needed so that the call can safely
 	reverse a descending sequence without violating stability.
 	*/
 /datum/sort_instance/proc/countRunAndMakeAscending(lo, hi)
+=======
+For its intended use in a stable mergesort, the strictness of the
+definition of "descending" is needed so that the call can safely
+reverse a descending sequence without violating stability.
+*/
+/datum/sortInstance/proc/countRunAndMakeAscending(lo, hi)
+>>>>>>> f6d0f62622... Revert "Garbage collection, asset delivery, icon2html revolution, and general…" (#15815)
 	//ASSERT(lo < hi)
 
 	var/runHi = lo + 1
@@ -163,9 +185,15 @@ GLOBAL_DATUM_INIT(sortInstance, /datum/sort_instance, new())
 
 	return runHi - lo
 
+<<<<<<< HEAD
 	//Returns the minimum acceptable run length for an array of the specified length.
 	//Natural runs shorter than this will be extended with binarySort
 /datum/sort_instance/proc/minRunLength(n)
+=======
+//Returns the minimum acceptable run length for an array of the specified length.
+//Natural runs shorter than this will be extended with binarySort
+/datum/sortInstance/proc/minRunLength(n)
+>>>>>>> f6d0f62622... Revert "Garbage collection, asset delivery, icon2html revolution, and general…" (#15815)
 	//ASSERT(n >= 0)
 	var/r = 0 //becomes 1 if any bits are shifted off
 	while(n >= MIN_MERGE)
@@ -173,12 +201,21 @@ GLOBAL_DATUM_INIT(sortInstance, /datum/sort_instance, new())
 		n >>= 1
 	return n + r
 
+<<<<<<< HEAD
 	//Examines the stack of runs waiting to be merged and merges adjacent runs until the stack invariants are reestablished:
 	// runLen[i-3] > runLen[i-2] + runLen[i-1]
 	// runLen[i-2] > runLen[i-1]
 	//This method is called each time a new run is pushed onto the stack.
 	//So the invariants are guaranteed to hold for i<stackSize upon entry to the method
 /datum/sort_instance/proc/mergeCollapse()
+=======
+//Examines the stack of runs waiting to be merged and merges adjacent runs until the stack invariants are reestablished:
+//	runLen[i-3] > runLen[i-2] + runLen[i-1]
+//	runLen[i-2] > runLen[i-1]
+//This method is called each time a new run is pushed onto the stack.
+//So the invariants are guaranteed to hold for i<stackSize upon entry to the method
+/datum/sortInstance/proc/mergeCollapse()
+>>>>>>> f6d0f62622... Revert "Garbage collection, asset delivery, icon2html revolution, and general…" (#15815)
 	while(runBases.len >= 2)
 		var/n = runBases.len - 1
 		if(n > 1 && runLens[n-1] <= runLens[n] + runLens[n+1])
@@ -191,9 +228,15 @@ GLOBAL_DATUM_INIT(sortInstance, /datum/sort_instance, new())
 			break //Invariant is established
 
 
+<<<<<<< HEAD
 	//Merges all runs on the stack until only one remains.
 	//Called only once, to finalise the sort
 /datum/sort_instance/proc/mergeForceCollapse()
+=======
+//Merges all runs on the stack until only one remains.
+//Called only once, to finalise the sort
+/datum/sortInstance/proc/mergeForceCollapse()
+>>>>>>> f6d0f62622... Revert "Garbage collection, asset delivery, icon2html revolution, and general…" (#15815)
 	while(runBases.len >= 2)
 		var/n = runBases.len - 1
 		if(n > 1 && runLens[n-1] < runLens[n+1])
@@ -201,10 +244,17 @@ GLOBAL_DATUM_INIT(sortInstance, /datum/sort_instance, new())
 		mergeAt(n)
 
 
+<<<<<<< HEAD
 	//Merges the two consecutive runs at stack indices i and i+1
 	//Run i must be the penultimate or antepenultimate run on the stack
 	//In other words, i must be equal to stackSize-2 or stackSize-3
 /datum/sort_instance/proc/mergeAt(i)
+=======
+//Merges the two consecutive runs at stack indices i and i+1
+//Run i must be the penultimate or antepenultimate run on the stack
+//In other words, i must be equal to stackSize-2 or stackSize-3
+/datum/sortInstance/proc/mergeAt(i)
+>>>>>>> f6d0f62622... Revert "Garbage collection, asset delivery, icon2html revolution, and general…" (#15815)
 	//ASSERT(runBases.len >= 2)
 	//ASSERT(i >= 1)
 	//ASSERT(i == runBases.len - 1 || i == runBases.len - 2)
@@ -255,9 +305,15 @@ GLOBAL_DATUM_INIT(sortInstance, /datum/sort_instance, new())
 		len the length of the sorted range, must be greater than 0
 		hint the offset from base at which to begin the search, such that 0 <= hint < len; i.e. base <= hint < base+hint
 
+<<<<<<< HEAD
 		Returns the index at which to insert element 'key'
 	*/
 /datum/sort_instance/proc/gallopLeft(key, base, len, hint)
+=======
+	Returns the index at which to insert element 'key'
+*/
+/datum/sortInstance/proc/gallopLeft(key, base, len, hint)
+>>>>>>> f6d0f62622... Revert "Garbage collection, asset delivery, icon2html revolution, and general…" (#15815)
 	//ASSERT(len > 0 && hint >= 0 && hint < len)
 
 	var/list/L = src.L
@@ -304,6 +360,7 @@ GLOBAL_DATUM_INIT(sortInstance, /datum/sort_instance, new())
 	//ASSERT(lastOffset == offset)
 	return offset
 
+<<<<<<< HEAD
 	/**
 	 * Like gallopLeft, except that if the range contains an element equal to
 	 * key, gallopRight returns the index after the rightmost equal element.
@@ -318,6 +375,22 @@ GLOBAL_DATUM_INIT(sortInstance, /datum/sort_instance, new())
 	 * @return the int k,  0 <= k <= n such that `a[b + k - 1] <= key < a[b + k]`
 	 */
 /datum/sort_instance/proc/gallopRight(key, base, len, hint)
+=======
+/**
+ * Like gallopLeft, except that if the range contains an element equal to
+ * key, gallopRight returns the index after the rightmost equal element.
+ *
+ * @param key the key whose insertion point to search for
+ * @param a the array in which to search
+ * @param base the index of the first element in the range
+ * @param len the length of the range; must be > 0
+ * @param hint the index at which to begin the search, 0 <= hint < n.
+ *	 The closer hint is to the result, the faster this method will run.
+ * @param c the comparator used to order the range, and to search
+ * @return the int k,  0 <= k <= n such that a[b + k - 1] <= key < a[b + k]
+ */
+/datum/sortInstance/proc/gallopRight(key, base, len, hint)
+>>>>>>> f6d0f62622... Revert "Garbage collection, asset delivery, icon2html revolution, and general…" (#15815)
 	//ASSERT(len > 0 && hint >= 0 && hint < len)
 
 	var/list/L = src.L
@@ -364,9 +437,15 @@ GLOBAL_DATUM_INIT(sortInstance, /datum/sort_instance, new())
 	return offset
 
 
+<<<<<<< HEAD
 	//Merges two adjacent runs in-place in a stable fashion.
 	//For performance this method should only be called when len1 <= len2!
 /datum/sort_instance/proc/mergeLo(base1, len1, base2, len2)
+=======
+//Merges two adjacent runs in-place in a stable fashion.
+//For performance this method should only be called when len1 <= len2!
+/datum/sortInstance/proc/mergeLo(base1, len1, base2, len2)
+>>>>>>> f6d0f62622... Revert "Garbage collection, asset delivery, icon2html revolution, and general…" (#15815)
 	//ASSERT(len1 > 0 && len2 > 0 && base1 + len1 == base2)
 
 	var/list/L = src.L
@@ -469,7 +548,7 @@ GLOBAL_DATUM_INIT(sortInstance, /datum/sort_instance, new())
 		//ASSERT(len1 > 1)
 
 
-/datum/sort_instance/proc/mergeHi(base1, len1, base2, len2)
+/datum/sortInstance/proc/mergeHi(base1, len1, base2, len2)
 	//ASSERT(len1 > 0 && len2 > 0 && base1 + len1 == base2)
 
 	var/list/L = src.L
@@ -570,7 +649,7 @@ GLOBAL_DATUM_INIT(sortInstance, /datum/sort_instance, new())
 		//ASSERT(len2 > 0)
 
 
-/datum/sort_instance/proc/mergeSort(start, end)
+/datum/sortInstance/proc/mergeSort(start, end)
 	var/remaining = end - start
 
 	//If array is small, do an insertion sort
@@ -614,8 +693,12 @@ GLOBAL_DATUM_INIT(sortInstance, /datum/sort_instance, new())
 
 	return L
 
+<<<<<<< HEAD
 /datum/sort_instance/proc/mergeAt2(i)
 	var/list/L = src.L
+=======
+/datum/sortInstance/proc/mergeAt2(i)
+>>>>>>> f6d0f62622... Revert "Garbage collection, asset delivery, icon2html revolution, and general…" (#15815)
 	var/cursor1 = runBases[i]
 	var/cursor2 = runBases[i+1]
 

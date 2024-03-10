@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # This file has all the information on what versions of libraries are thrown into the code
+<<<<<<< HEAD
 
 #rust_g git tag
 export RUST_G_VERSION=3.1.0
@@ -8,6 +9,17 @@ export RUST_G_VERSION=3.1.0
 # byond version
 export BYOND_MAJOR=515
 export BYOND_MINOR=1633
+=======
+# For dreamchecker
+export SPACEMAN_DMM_VERSION=suite-1.7
+# For NanoUI + TGUI
+export NODE_VERSION=16
+# Byond Major
+export BYOND_MAJOR=514
+# Byond Minor
+export BYOND_MINOR=1589
+# Macro Count
+>>>>>>> f6d0f62622... Revert "Garbage collection, asset delivery, icon2html revolution, and general…" (#15815)
 export MACRO_COUNT=4
 
 # node version

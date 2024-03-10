@@ -183,6 +183,7 @@
 	if(!ability_master)	//VOREStation Edit: S H A D E K I N
 		ability_master = new /obj/screen/movable/ability_master(src)
 
+<<<<<<< HEAD
 
 /mob/Destroy()
 	if(ability_master)
@@ -190,6 +191,8 @@
 	. = ..()
 
 
+=======
+>>>>>>> f6d0f62622... Revert "Garbage collection, asset delivery, icon2html revolution, and general…" (#15815)
 ///////////ACTUAL ABILITIES////////////
 //This is what you click to do things//
 ///////////////////////////////////////

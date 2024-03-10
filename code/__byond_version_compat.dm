@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+#if DM_VERSION >= 515
+#error PLEASE MAKE SURE THAT 515 IS PROPERLY TESTED AND WORKS. ESPECIALLY THE SAVE-FILES HAVE TO WORK.
+#error Additionally: Make sure that the GitHub Workflow was updated to BYOND 515 as well.
+#endif
+>>>>>>> f6d0f62622... Revert "Garbage collection, asset delivery, icon2html revolution, and general…" (#15815)
 
 // These defines are from __513_compatibility.dm -- Please Sort
 #define CLAMP(CLVALUE, CLMIN, CLMAX) clamp(CLVALUE, CLMIN, CLMAX)

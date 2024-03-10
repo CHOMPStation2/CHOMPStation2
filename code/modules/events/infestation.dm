@@ -136,7 +136,7 @@
 // Spawn a single vermin at given location.
 /datum/event/infestation/proc/spawn_one_vermin(var/loc)
 	var/mob/living/simple_mob/animal/M = new spawn_types(loc)
-	RegisterSignal(M, COMSIG_OBSERVER_DESTROYED, PROC_REF(on_vermin_destruction))
+	GLOB.destroyed_event.register(M, src, PROC_REF(on_vermin_destruction))
 	spawned_vermin.Add(M)
 	return M
 
@@ -150,8 +150,13 @@
 // If vermin is kill, remove it from the list.
 /datum/event/infestation/proc/on_vermin_destruction(var/mob/M)
 	spawned_vermin -= M
+<<<<<<< HEAD
 	UnregisterSignal(M, COMSIG_OBSERVER_DESTROYED)
 */
+=======
+	GLOB.destroyed_event.unregister(M, src, PROC_REF(on_vermin_destruction))
+
+>>>>>>> f6d0f62622... Revert "Garbage collection, asset delivery, icon2html revolution, and general…" (#15815)
 
 
 /datum/event/infestation/announce()

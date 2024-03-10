@@ -18,12 +18,19 @@
 		germ_level++
 
 /mob/living/carbon/Destroy()
-	QDEL_NULL(ingested)
-	QDEL_NULL(touching)
+	qdel(ingested)
+	qdel(touching)
 	// We don't qdel(bloodstr) because it's the same as qdel(reagents)
+<<<<<<< HEAD
 	bloodstr = null
 	QDEL_NULL_LIST(internal_organs)
 	QDEL_NULL_LIST(stomach_contents)
+=======
+	for(var/guts in internal_organs)
+		qdel(guts)
+	for(var/food in stomach_contents)
+		qdel(food)
+>>>>>>> f6d0f62622... Revert "Garbage collection, asset delivery, icon2html revolution, and general…" (#15815)
 	return ..()
 
 /mob/living/carbon/rejuvenate()

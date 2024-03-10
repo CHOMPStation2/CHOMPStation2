@@ -1,4 +1,5 @@
 #define RECOMMENDED_VERSION 513
+<<<<<<< HEAD
 // CHOMPedit Start - Tracy
 /proc/prof_init()
 	var/lib
@@ -14,6 +15,9 @@
 
 /world/New()
 	//prof_init() // CHOMPedit - Uncomment to enable Tracy. Requires https://github.com/mafemergency/byond-tracy/
+=======
+/world/New()
+>>>>>>> f6d0f62622... Revert "Garbage collection, asset delivery, icon2html revolution, and general…" (#15815)
 	world_startup_time = world.timeofday
 	rollover_safety_date = world.realtime - world.timeofday // 00:00 today (ish, since floating point error with world.realtime) of today
 	to_world_log("Map Loading Complete")

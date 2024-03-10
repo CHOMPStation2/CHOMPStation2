@@ -50,13 +50,21 @@
 			B.owner = tf_mob_holder
 			tf_mob_holder.vore_organs |= B
 			vore_organs -= B
+
 	if(tf_mob_holder)
 		tf_mob_holder = null
 	//VOREStation Addition End
+<<<<<<< HEAD
 	QDEL_NULL_LIST(hud_list)
 	QDEL_NULL(selected_image)
 	//QDEL_NULL(vorePanel) //VOREStation Add commented and moved to /mob
 	//QDEL_LIST_NULL(vore_organs) //VOREStation Add commented and moved to /mob
+=======
+
+	qdel(selected_image)
+	QDEL_NULL(vorePanel) //VOREStation Add
+	QDEL_LIST_NULL(vore_organs) //VOREStation Add
+>>>>>>> f6d0f62622... Revert "Garbage collection, asset delivery, icon2html revolution, and general…" (#15815)
 	temp_language_sources = null //VOREStation Add
 	temp_languages = null //VOREStation Add
 
@@ -1355,7 +1363,7 @@
 /datum/component/character_setup/proc/character_setup_click(source, location, control, params, user)
 	var/mob/owner = user
 	if(owner.client?.prefs)
-		INVOKE_ASYNC(owner.client.prefs, TYPE_PROC_REF(/datum/preferences, ShowChoices), owner)
+		INVOKE_ASYNC(owner.client.prefs, /datum/preferences/proc/ShowChoices, owner)
 
 /**
  * Screen object for vore panel

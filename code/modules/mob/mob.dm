@@ -2,8 +2,11 @@
 	mob_list -= src
 	dead_mob_list -= src
 	living_mob_list -= src
-	player_list -= src
 	unset_machine()
+<<<<<<< HEAD
+=======
+	qdel(hud_used)
+>>>>>>> f6d0f62622... Revert "Garbage collection, asset delivery, icon2html revolution, and general…" (#15815)
 	clear_fullscreen()
 	if(client)
 		for(var/obj/screen/movable/spell_master/spell_master in spell_masters)
@@ -12,6 +15,7 @@
 		client.screen = list()
 	if(mind && mind.current == src)
 		spellremove(src)
+<<<<<<< HEAD
 	if(!istype(src,/mob/observer)) //CHOMPEdit
 		ghostize() //CHOMPEdit
 	//ChompEDIT start - fix hard qdels
@@ -33,6 +37,12 @@
 	. = ..()
 	update_client_z(null)
 	//return QDEL_HINT_HARDDEL_NOW
+=======
+	ghostize()
+	QDEL_NULL(plane_holder)
+	..()
+	return QDEL_HINT_HARDDEL_NOW
+>>>>>>> f6d0f62622... Revert "Garbage collection, asset delivery, icon2html revolution, and general…" (#15815)
 
 /mob/proc/remove_screen_obj_references()
 	hands = null
@@ -60,8 +70,7 @@
 	set_focus(src) // VOREStation Add - Key Handling
 	hook_vr("mob_new",list(src)) //VOREStation Code
 	update_transform() // Some mobs may start bigger or smaller than normal.
-	. = ..()
-	//return QDEL_HINT_HARDDEL_NOW Just keep track of mob references. They delete SO much faster now.
+	return ..()
 
 /mob/proc/show_message(msg, type, alt, alt_type)//Message, type of message (1 or 2), alternative message, alt message type (1 or 2)
 	var/time = say_timestamp()

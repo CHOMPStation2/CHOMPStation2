@@ -710,6 +710,7 @@
 
 	if(become_anomalous)
 		become_anomalous()
+<<<<<<< HEAD
 
 
 /obj/item/weapon/archaeological_find/Destroy()
@@ -720,3 +721,5 @@
 			qdel(arti_mstr)
 
 	. = ..()
+=======
+>>>>>>> f6d0f62622... Revert "Garbage collection, asset delivery, icon2html revolution, and general…" (#15815)

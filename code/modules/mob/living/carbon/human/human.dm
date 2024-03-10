@@ -58,14 +58,16 @@
 
 /mob/living/carbon/human/Destroy()
 	human_mob_list -= src
+<<<<<<< HEAD
 	QDEL_NULL_LIST(organs)
 	if(nif)
 		QDEL_NULL(nif)	//VOREStation Add
+=======
+	for(var/organ in organs)
+		qdel(organ)
+	QDEL_NULL(nif)	//VOREStation Add
+>>>>>>> f6d0f62622... Revert "Garbage collection, asset delivery, icon2html revolution, and general…" (#15815)
 	worn_clothing.Cut()
-
-
-	if(vessel)
-		QDEL_NULL(vessel)
 	return ..()
 
 /mob/living/carbon/human/Stat()
