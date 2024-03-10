@@ -23,7 +23,6 @@ fi
 #    $1/tgui/packages/tgfont/dist
 
 mkdir -p \
-		$1/config \
     $1/maps \
     $1/icons/effects \
 		$1/icons/mob/vore \
