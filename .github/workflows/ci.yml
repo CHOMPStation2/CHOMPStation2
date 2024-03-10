@@ -18,6 +18,10 @@ jobs:
       group: run_linters-${{ github.head_ref || github.run_id }}
       cancel-in-progress: true
     steps:
+      - uses: actions/checkout@v4
+      - name: Ensure +x on CI directory
+        run: |
+          chmod -R +x ./tools/ci
       - name: Restore SpacemanDMM cache
         uses: actions/cache@v4
         with:
@@ -61,6 +65,7 @@ jobs:
       - name: Install Tools
         run: |
           pip3 install setuptools
+          bash tools/ci/install_node.sh
           bash tools/ci/install_spaceman_dmm.sh dreamchecker
           tools/bootstrap/python -c ''
       - name: Give Linters A Go
