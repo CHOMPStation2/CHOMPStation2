@@ -400,7 +400,7 @@ var/list/organ_cache = list()
 	if(istype(owner))
 		var/datum/reagent/blood/organ_blood = locate(/datum/reagent/blood) in reagents.reagent_list
 		if(!organ_blood || !organ_blood.data["blood_DNA"])
-			owner.vessel.trans_to(src, 5, 1, 1)
+			owner.vessel?.trans_to(src, 5, 1, 1)
 
 		if(owner && vital)
 			if(user)
