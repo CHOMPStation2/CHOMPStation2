@@ -8876,14 +8876,9 @@
 /turf/simulated/floor/tiled/airless,
 /area/rnd/test_area)
 "azM" = (
-/obj/structure/closet/crate/radiation,
-/obj/item/clothing/glasses/meson,
-/obj/item/clothing/glasses/meson,
+/obj/structure/closet/crate/solar,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light,
-/obj/item/stack/material/lead{
-	amount = 30
-	},
 /turf/simulated/floor,
 /area/engineering/storage)
 "azN" = (
@@ -46472,8 +46467,13 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/entry/D3)
 "eiI" = (
-/obj/structure/closet/crate/solar,
+/obj/structure/closet/crate/radiation,
+/obj/item/clothing/glasses/meson,
+/obj/item/clothing/glasses/meson,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/stack/material/lead{
+	amount = 30
+	},
 /turf/simulated/floor,
 /area/engineering/storage)
 "ejk" = (
@@ -62088,6 +62088,7 @@
 /obj/item/weapon/tool/crowbar,
 /obj/item/weapon/tool/crowbar/red,
 /obj/item/weapon/storage/box/lights/mixed,
+/obj/item/device/lightreplacer,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/workshop)
 "muM" = (
