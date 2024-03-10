@@ -527,7 +527,7 @@
 		blob.update_icon(1)
 
 		//Flip them to the protean panel
-		addtimer(CALLBACK(src, .proc/nano_set_panel, C), 4)
+		addtimer(CALLBACK(src, PROC_REF(nano_set_panel), C), 4)
 
 		//Return our blob in case someone wants it
 		return blob
@@ -628,7 +628,7 @@
 		qdel(blob)
 
 		//Flip them to the protean panel
-		addtimer(CALLBACK(src, .proc/nano_set_panel, C), 4)
+		addtimer(CALLBACK(src, PROC_REF(nano_set_panel), C), 4)
 
 		//Return ourselves in case someone wants it
 		return src

@@ -1212,7 +1212,7 @@
 	name = "Social Casino Games"
 	data = "While the Golden Space Goose constantly moves and visits new places, it also arranges activities if it lands somewhere on the surface of planets.\
 	Some crew might be down on their luck or prefering obtaining chips in a manner that doesn't take from others or gamble their current funds.\
-	As explained in the history of the casino, crew have socially strengthening and teambuilding activities to gain chips by the generous and benevolent funding from NanoTransen.\
+	As explained in the history of the casino, crew have socially strengthening and teambuilding activities to gain chips by the generous and benevolent funding from NanoTrasen.\
 	So far the casino always offer to endorse Cards Against The Galaxy and toy Mech battles with crews participating and winning gaining chips risk free and having a laugh with fellow crew!"
 
 	children = list(
@@ -1235,7 +1235,7 @@
 
 /datum/lore/codex/category/casinomanual_prizes
 	name = "Prizes"
-	data = "Hey folks, welcome to the prize section! First off I wanna tell you some great news! Nanotransen has gone along with a nice deal that allows crew to occasionally keep their hard earned rewards on station for a limited time,<br>\
+	data = "Hey folks, welcome to the prize section! First off I wanna tell you some great news! Nanotrasen has gone along with a nice deal that allows crew to occasionally keep their hard earned rewards on station for a limited time,<br>\
 	 now you can enjoy your new fancy toolbelt or bluespace beaker for more than just the shift where the casino comes around!<br>\
      (Be aware, there can be limitations on how many rewards you get to keep after the shift, it might be unfair if some shows up and wins one thing, while they watch as command staff crew with high background income as well as hyperactive miners walks home with 20 prizes they get to enjoy while having almost done no gambling at all.))<br><br>\
 	Lets get to the prizes and exchange rate before we get started on the stuff specifically for the booth operators, so heres the current prizes one can win and their costs! Be aware there might be new prizes or absent ones from time to time!<br>\

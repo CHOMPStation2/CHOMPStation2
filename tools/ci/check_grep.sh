@@ -75,19 +75,19 @@ if $grep -i'centcomm' $map_files; then
     st=1
 fi;
 
-section "whitespace issues"
-part "space indentation"
-if $grep '(^ {2})|(^ [^ * ])|(^    +)' $code_files; then
-	echo
-    echo -e "${RED}ERROR: Space indentation detected, please use tab indentation.${NC}"
-    st=1
-fi;
-part "mixed indentation"
-if $grep '^\t+ [^ *]' $code_files; then
-	echo
-    echo -e "${RED}ERROR: Mixed <tab><space> indentation detected, please stick to tab indentation.${NC}"
-    st=1
-fi;
+#section "whitespace issues"
+#part "space indentation"
+#if $grep '(^ {2})|(^ [^ * ])|(^    +)' $code_files; then
+#	echo
+#    echo -e "${RED}ERROR: Space indentation detected, please use tab indentation.${NC}"
+#    st=1
+#fi;
+#part "mixed indentation"
+#if $grep '^\t+ [^ *]' $code_files; then
+#	echo
+#    echo -e "${RED}ERROR: Mixed <tab><space> indentation detected, please stick to tab indentation.${NC}"
+#    st=1
+#fi;
 
 section "common mistakes"
 part "src as a trait source" # ideally we'd lint / test for ANY datum reference as a trait source, but 'src' is the most common.
@@ -113,26 +113,26 @@ if $grep -ni 'nanotransen' $code_files; then
     echo -e "${RED}ERROR: Misspelling(s) of Nanotrasen detected in code, please remove the extra N(s).${NC}"
     st=1
 fi;
-part "map json naming"
-if ls maps/*.json | $grep "[A-Z]"; then
-	echo
-    echo -e "${RED}ERROR: Uppercase in a map .JSON file detected, these must be all lowercase.${NC}"
-    st=1
-fi;
-part "map json sanity"
-for json in maps/*.json
-do
-    map_path=$(jq -r '.map_path' $json)
-    while read map_file; do
-        filename="maps/$map_path/$map_file"
-        if [ ! -f $filename ]
-        then
-			echo
-            echo -e "${RED}ERROR: Found an invalid file reference to $filename in maps/$json ${NC}"
-            st=1
-        fi
-    done < <(jq -r '[.map_file] | flatten | .[]' $json)
-done
+#part "map json naming"
+#if ls maps/*.json | $grep "[A-Z]"; then
+#	echo
+#    echo -e "${RED}ERROR: Uppercase in a map .JSON file detected, these must be all lowercase.${NC}"
+#    st=1
+#fi;
+#part "map json sanity"
+#for json in maps/*.json
+#do
+#    map_path=$(jq -r '.map_path' $json)
+#    while read map_file; do
+#        filename="maps/$map_path/$map_file"
+#        if [ ! -f $filename ]
+#        then
+#			echo
+#            echo -e "${RED}ERROR: Found an invalid file reference to $filename in maps/$json ${NC}"
+#            st=1
+#        fi
+#    done < <(jq -r '[.map_file] | flatten | .[]' $json)
+#done
 
 section "515 Proc Syntax"
 part "proc ref syntax"

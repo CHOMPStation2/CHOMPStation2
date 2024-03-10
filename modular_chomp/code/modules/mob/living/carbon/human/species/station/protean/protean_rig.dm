@@ -50,7 +50,7 @@
 		var/datum/species/protean/S = P.species
 		S.OurRig = src
 		if(P.back)
-			addtimer(CALLBACK(src, .proc/AssimilateBag, P, 1, P.back), 3)
+			addtimer(CALLBACK(src, PROC_REF(AssimilateBag), P, 1, P.back), 3)
 			myprotean = P
 		else
 			to_chat(P, "<span class='notice'>You should have spawned with a backpack to assimilate into your RIG. Try clicking it with a backpack.</span>")
@@ -273,7 +273,7 @@
 								playsound(src, 'sound/machines/defib_success.ogg', 50, 0)
 								new /obj/effect/gibspawner/robot(src.loc)
 								src.atom_say("Contact received! Reassembly nanites calibrated. Estimated time to resucitation: 1 minute 30 seconds")
-								addtimer(CALLBACK(src, .proc/make_alive, myprotean?:humanform), 900)
+								addtimer(CALLBACK(src, PROC_REF(make_alive), myprotean?:humanform), 900)
 				return
 	if(istype(W,/obj/item/weapon/rig))
 		if(!assimilated_rig)
@@ -425,7 +425,7 @@
 /obj/item/weapon/cell/protean/New()
 	charge = maxcharge
 	update_icon()
-	addtimer(CALLBACK(src, .proc/search_for_protean), 60)
+	addtimer(CALLBACK(src, PROC_REF(search_for_protean)), 60)
 
 /obj/item/weapon/cell/protean/proc/search_for_protean()
 	if(istype(src.loc, /obj/item/weapon/rig/protean))

@@ -264,7 +264,7 @@
 	shelter_id = "BroadcastingPod"
 	mappath = "modular_chomp/maps/submaps/shelters/BroadcastingPod-11x9.dmm"
 	name = "Broadcasting Pod"
-	description = "A small NanoTransen news pod, everything you need to start live news in the most inhospitable places!"
+	description = "A small NanoTrasen news pod, everything you need to start live news in the most inhospitable places!"
 
 /datum/map_template/shelter/superpose/DemonPoolV2
 	shelter_id = "DemonPoolV2"
