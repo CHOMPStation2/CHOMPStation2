@@ -24,7 +24,7 @@
 	var/aicurrmsg
 
 	var/message_cooldown
-	var/centcomm_message_cooldown
+	var/centcom_message_cooldown // CHOMPEdit - Typo Fix
 	var/tmp_alertlevel = 0
 
 	var/stat_msg1
@@ -144,7 +144,7 @@
 
 	// data["lastCallLoc"]     = SSshuttle.emergencyLastCallLoc ? format_text(SSshuttle.emergencyLastCallLoc.name) : null
 	data["msg_cooldown"] = message_cooldown ? (round((message_cooldown - world.time) / 10)) : 0
-	data["cc_cooldown"] = centcomm_message_cooldown ? (round((centcomm_message_cooldown - world.time) / 10)) : 0
+	data["cc_cooldown"] = centcom_message_cooldown ? (round((centcom_message_cooldown - world.time) / 10)) : 0 // CHOMPEdit - Typo Fix
 
 	data["esc_callable"] = emergency_shuttle.location() && !emergency_shuttle.online() ? TRUE : FALSE
 	data["esc_recallable"] = emergency_shuttle.location() && emergency_shuttle.online() ? TRUE : FALSE
@@ -335,10 +335,10 @@
 			stat_msg2 = reject_bad_text(sanitize(tgui_input_text(usr, "Line 2", "Enter Message Text", stat_msg2, 40), 40), 40)
 			setMenuState(usr, COMM_SCREEN_STAT)
 
-		// OMG CENTCOMM LETTERHEAD
+		// OMG CENTCOM LETTERHEAD // CHOMPEdit - Typo Fix
 		if("MessageCentCom")
 			if(is_authenticated(usr) == COMM_AUTHENTICATION_MAX)
-				if(centcomm_message_cooldown > world.time)
+				if(centcom_message_cooldown > world.time) // CHOMPEdit - Typo Fix
 					to_chat(usr, "<span class='warning'>Arrays recycling. Please stand by.</span>")
 					return
 				var/input = sanitize(tgui_input_text(usr, "Please choose a message to transmit to [using_map.boss_short] via quantum entanglement. \
@@ -353,13 +353,13 @@
 				CentCom_announce(input, usr)
 				to_chat(usr, span_blue("Message transmitted."))
 				log_game("[key_name(usr)] has made an IA [using_map.boss_short] announcement: [input]")
-				centcomm_message_cooldown = world.time + 300 // 30 seconds
+				centcom_message_cooldown = world.time + 300 // 30 seconds // CHOMPEdit - Typo Fix
 			setMenuState(usr, COMM_SCREEN_MAIN)
 
 		// OMG SYNDICATE ...LETTERHEAD
 		if("MessageSyndicate")
 			if((is_authenticated(usr) == COMM_AUTHENTICATION_MAX) && (emagged))
-				if(centcomm_message_cooldown > world.time)
+				if(centcom_message_cooldown > world.time) // CHOMPEdit - Typo Fix
 					to_chat(usr, "Arrays recycling.  Please stand by.")
 					return
 				var/input = sanitize(tgui_input_text(usr, "Please choose a message to transmit to \[ABNORMAL ROUTING CORDINATES\] via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination. Transmission does not guarantee a response. There is a 30 second delay before you may send another message, be clear, full and concise.", "To abort, send an empty message.", ""))
@@ -371,7 +371,7 @@
 				Syndicate_announce(input, usr)
 				to_chat(usr, span_blue("Message transmitted."))
 				log_game("[key_name(usr)] has made an illegal announcement: [input]")
-				centcomm_message_cooldown = world.time + 300 // 30 seconds
+				centcom_message_cooldown = world.time + 300 // 30 seconds // CHOMPEdit - Typo Fix
 
 		if("RestoreBackup")
 			to_chat(usr, "Backup routing data restored!")

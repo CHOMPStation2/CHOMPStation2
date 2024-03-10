@@ -55,7 +55,7 @@
 	name = "\improper Spec Ops intercom"
 	frequency = ERT_FREQ
 	subspace_transmission = 1
-	centComm = 1
+	centCom = 1 // CHOMPEdit - Typo Fix
 
 /obj/item/device/radio/intercom/department
 	canhear_range = 5

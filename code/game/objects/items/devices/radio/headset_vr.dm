@@ -3,7 +3,7 @@
 	desc = "The headset of the boss's boss."
 	icon_state = "cent_headset"
 	item_state = "headset"
-	centComm = 1
+	centCom = 1 // CHOMPEdit - Typo Fix
 	ks2type = /obj/item/device/encryptionkey/ert
 
 /obj/item/device/radio/headset/centcom/alt
@@ -14,7 +14,7 @@
 	name = "\improper NT radio headset"
 	desc = "The headset of a Nanotrasen corporate employee."
 	icon_state = "nt_headset"
-	centComm = 1
+	centCom = 1 // CHOMPEdit - Typo Fix
 	ks2type = /obj/item/device/encryptionkey/ert
 
 /obj/item/device/radio/headset/nanotrasen/alt

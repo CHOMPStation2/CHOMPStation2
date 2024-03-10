@@ -135,7 +135,7 @@
 
 /obj/item/clothing/suit/storage/fluff/david_2
 	name = "David's armor"
-	desc = "Straight outta CentComm."
+	desc = "Straight outta CentCom." // CHOMPEdit - Typo Fix
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_state = "davidarmor"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'

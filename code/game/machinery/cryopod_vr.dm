@@ -8,7 +8,7 @@
 /obj/machinery/cryopod/robot
 	spawnpoint_type = /datum/spawnpoint/cyborg
 
-// Used at centcomm for the elevator
+// Used at centcom for the elevator // CHOMPEdit - Typo Fix
 /obj/machinery/cryopod/robot/door/dorms
 	spawnpoint_type = /datum/spawnpoint/tram
 

@@ -49,7 +49,7 @@ var/global/list/default_medbay_channels = list(
 	var/subspace_switchable = FALSE
 	var/adhoc_fallback = FALSE //Falls back to 'radio' mode if subspace not available
 	var/syndie = 0//Holder to see if it's a syndicate encrypted radio
-	var/centComm = 0//Holder to see if it's a CentCom encrypted radio
+	var/centCom = 0//Holder to see if it's a CentCom encrypted radio // CHOMPEdit - Typo Fix
 	slot_flags = SLOT_BELT
 	throw_speed = 2
 	throw_range = 9
@@ -579,7 +579,7 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 		if(!(src.syndie))//Checks to see if it's allowed on that frequency, based on the encryption keys
 			return -1
 	if(freq in CENT_FREQS)
-		if(!(src.centComm))//Checks to see if it's allowed on that frequency, based on the encryption keys
+		if(!(src.centCom))//Checks to see if it's allowed on that frequency, based on the encryption keys // CHOMPEdit - Typo Fix
 			return -1
 	if (!on)
 		return -1

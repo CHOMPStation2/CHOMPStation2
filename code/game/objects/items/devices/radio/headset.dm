@@ -301,7 +301,7 @@
 	name = "emergency response team radio headset"
 	desc = "The headset of the boss's boss."
 	icon_state = "com_headset"
-	centComm = 1
+	centCom = 1 // CHOMPEdit - Typo Fix
 //	freerange = 1
 	ks2type = /obj/item/device/encryptionkey/ert
 

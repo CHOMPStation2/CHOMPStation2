@@ -1,6 +1,6 @@
 /obj/item/mail
 	name = "mail"
-	desc = "An officially postmarked, tamper-evident parcel regulated by CentComm and made of high-quality materials."
+	desc = "An officially postmarked, tamper-evident parcel regulated by CentCom and made of high-quality materials."
 	icon = 'modular_chomp/icons/obj/bureaucracy.dmi'
 	icon_state = "mail_small"
 	item_flags = NOBLUDGEON
@@ -165,7 +165,7 @@
 // Mail Crate
 /obj/structure/closet/crate/mail
 	name = "mail crate"
-	desc = "An official mail crate from CentComm"
+	desc = "An official mail crate from CentCom"
 	points_per_crate = 0
 	closet_appearance = /decl/closet_appearance/crate/nanotrasen
 
@@ -242,7 +242,7 @@
 
 	var/list/junk_names = list(
 		/obj/item/weapon/paper/pamphlet/gateway = "[initial(name)] for BRAVE adventurers",
-		/obj/item/weapon/paper/pamphlet/violent_video_games = "[initial(name)] for the truth about the arcade CentComm doesn't want to hear",
+		/obj/item/weapon/paper/pamphlet/violent_video_games = "[initial(name)] for the truth about the arcade CentCom doesn't want to hear",
 		/obj/item/weapon/paper/pamphlet/radstorm = "[initial(name)] for the threats in space",
 		/obj/item/weapon/paper/fluff/junkmail_redpill = "[initial(name)] for those feeling tired working at Nanotrasen",
 		/obj/effect/decal/cleanable/ash = "[initial(name)] with INCREDIBLY IMPORTANT ARTIFACT- DELIVER TO SCIENCE DIVISION. HANDLE WITH CARE.",
@@ -279,7 +279,7 @@
 		prob(5);"Hello, my name is Immigration officer Mimi Sashimi from the American-Felinid Homeworld consulate. It appears your current documents are either inaccurate if not entirely fraudulent. This action in it's current state is a federal offense as listed in the United Earth Commission charter section NY-4. Please pay a fine of 300,000 Space credits or $3000 United States Dollars or face deportation",
 		prob(5);"Hi %name%, We are unable to validate your billing information for the next billing cycle of your subscription to HONK Weekly therefore we'll suspend your membership if we do not receive a response from you within 48 hours. Obviously we'd love to have you back, simply mail %address% to update your details and continue to enjoy all the best pranks & gags without interruption.",
 		prob(5);"Loyal customer, DonkCo Customer Service. We appreciate your brand loyalty support. As such, it is our responsibility and pleasure to inform you of the status of your package. Your package for one \"Moth-Fuzz Parka\" has been delayed. Due to local political tensions, an animal rights group has seized and eaten your package. We appreciate the patience, DonkCo",
-		prob(5);"MESSAGE FROM CENTCOMM HIGH COMMAND: DO NOT ACCEPT THE FRIEND REQUEST OF TICKLEBALLS THE CLOWN. HE IS NOT FUNNY AND ON TOP OF THAT HE WILL HACK YOUR NTNET ACCOUNT AND MAKE YOU UNFUNNY TOO. YOU WILL LOSE ALL YOUR SPACECREDITS!!!!! SPREAD THE WORD. ANYONE WHO BECOMES FRIENDS WITH TINKLEBALLS THE CLOWN IS GOING TO LOSE ALL OF THEIR SPACECREDITS AND LOOK LIKE A HUGE IDIOT.",
+		prob(5);"MESSAGE FROM CENTCOM HIGH COMMAND: DO NOT ACCEPT THE FRIEND REQUEST OF TICKLEBALLS THE CLOWN. HE IS NOT FUNNY AND ON TOP OF THAT HE WILL HACK YOUR NTNET ACCOUNT AND MAKE YOU UNFUNNY TOO. YOU WILL LOSE ALL YOUR SPACECREDITS!!!!! SPREAD THE WORD. ANYONE WHO BECOMES FRIENDS WITH TINKLEBALLS THE CLOWN IS GOING TO LOSE ALL OF THEIR SPACECREDITS AND LOOK LIKE A HUGE IDIOT.",
 		prob(5);"i WAS A NORMAL BOY AND I CAME HOME FROM SCHOOL AND I WANTED TO PLAY SOME ORION TRAIL WHICH IS A VERY FUN GAME BUT WHEN WENT TO ARCADE MACHINE SOMETHING WAS WEIRD TEH LOGO HASD BLOD IN IT AND I BECAME VERY SCARE AND I CHECK OPTIONS AND TEHRES ONLY 1 \"GO BACK\" I CKLICK IT AND I SEE CHAT  SI EMPTY THERE'S ONLY ONE CHARACTER CALLED \"CLOSE TEH GAME  \" AND I GO TO ANOTHER MACHINE AND PLAY THERE BUT WHEN I PLAY GAME IS FULL OF BLOOD AND DEAD BODIES FROM SPACEMAN LOOK CLOSER AND SEE CLOWN AND CLOWN COMES CLOSER AND LOOKS AT ME AND SAYS \"DON'T SAY I DIKDNT' WWARN YOU\" AND CLOWN CLOSEUP APPEARS WITH BLOOD-RED HYPERREALISTIC EYES AND HE TELLS ME \"YOU WILL BE THE NEXT ONE\" AND ARCADE MACHINE POWER SHUT OFF AND THAT NITE CLOWN APPEAR AT MY WINDOW AND KILL ME AT 3 AM AND NOW IM DEAD AND YOU WILL BE TRHNE NEXT OEN UNLESS YOU PASTE THIS STORY TO 10 NTNET FRIENDS",
 		)
 

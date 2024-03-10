@@ -44,7 +44,7 @@ SUBSYSTEM_DEF(supply)
 /datum/controller/subsystem/supply/stat_entry()
 	..("Points: [points]")
 
-//To stop things being sent to CentCom which should not be sent to centcomm. Recursively checks for these types.
+//To stop things being sent to CentCom which should not be sent to centcom. Recursively checks for these types. // CHOMPEdit - Typo Fix
 /datum/controller/subsystem/supply/proc/forbidden_atoms_check(atom/A)
 	if(isliving(A))
 		return 1
