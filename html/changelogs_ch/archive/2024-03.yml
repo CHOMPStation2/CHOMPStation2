@@ -95,3 +95,7 @@
   - bugfix: fixed ascending through floors
   cadyn:
   - code_imp: recursive listening now is a component
+2024-03-10:
+  ItsSelis:
+  - rscadd: VSCode will now show a warning prompt if trying to push a commit to the
+      master branch.
