@@ -26237,7 +26237,7 @@
 	},
 /area/survivalpod)
 "hJi" = (
-/obj/item/clothing/suit/armor/centcomm,
+/obj/item/clothing/suit/armor/centcom,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -65086,7 +65086,7 @@
 	},
 /area/survivalpod)
 "tdF" = (
-/obj/item/weapon/stamp/centcomm,
+/obj/item/weapon/stamp/centcom,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},

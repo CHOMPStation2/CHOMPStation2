@@ -201,7 +201,7 @@
 	freq_listening = list(SEC_FREQ)
 	autolinkers = list("security")
 
-/obj/machinery/telecomms/server/presets/centcomm
+/obj/machinery/telecomms/server/presets/centcom // CHOMPEdit - Typo Fix
 	id = "CentCom Server"
 	freq_listening = list(ERT_FREQ, DTH_FREQ, SYND_FREQ)
 	produces_heat = 0

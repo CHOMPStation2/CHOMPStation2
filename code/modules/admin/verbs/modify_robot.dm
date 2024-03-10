@@ -192,7 +192,7 @@
 					if(!selected_radio_channel || selected_radio_channel == "Cancel")
 						break
 					if(selected_radio_channel == "Special Ops")
-						target.radio.centComm = 1
+						target.radio.centCom = 1 // CHOMPEdit - Typo Fix
 					if(selected_radio_channel == "Raider")
 						qdel(target.radio.keyslot)
 						target.radio.keyslot = new /obj/item/device/encryptionkey/raider(target)
@@ -212,7 +212,7 @@
 					if(!selected_radio_channel || selected_radio_channel == "Cancel")
 						break
 					if(selected_radio_channel == "Special Ops")
-						target.radio.centComm = 0
+						target.radio.centCom = 0 // CHOMPEdit - Typo Fix
 					target.module.channels -= selected_radio_channel
 					if((selected_radio_channel == "Mercenary" || selected_radio_channel == "Raider") && !(target.module.channels["Raider"] || target.module.channels["Mercenary"]))
 						qdel(target.radio.keyslot)

@@ -80,7 +80,7 @@
 						/obj/item/weapon/reagent_containers/glass/beaker/neurotoxin,
 						/obj/item/weapon/rig/combat,
 						/obj/item/weapon/shield/energy,
-						/obj/item/weapon/stamp/centcomm,
+						/obj/item/weapon/stamp/centcom, // CHOMPEdit - Typo Fix
 						/obj/item/weapon/stamp/solgov,
 						/obj/item/weapon/storage/fancy/cigar/havana,
 						/obj/item/xenos_claw,

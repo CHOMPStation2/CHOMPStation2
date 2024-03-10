@@ -639,7 +639,7 @@
 			return
 		var/image/stampoverlay = image('icons/obj/bureaucracy.dmi')
 		var/x, y
-		if(istype(P, /obj/item/weapon/stamp/captain) || istype(P, /obj/item/weapon/stamp/centcomm))
+		if(istype(P, /obj/item/weapon/stamp/captain) || istype(P, /obj/item/weapon/stamp/centcom)) // CHOMPEdit - Typo Fix
 			x = rand(-2, 0)
 			y = rand(-1, 2)
 		else

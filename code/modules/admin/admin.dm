@@ -1553,7 +1553,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 
 		if(!P.stamped)
 			P.stamped = new
-		P.stamped += /obj/item/weapon/stamp/centcomm
+		P.stamped += /obj/item/weapon/stamp/centcom // CHOMPEdit - Typo Fix
 		P.add_overlay(stampoverlay)
 
 	var/obj/item/rcvdcopy

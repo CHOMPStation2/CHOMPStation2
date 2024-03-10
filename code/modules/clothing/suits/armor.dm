@@ -457,7 +457,7 @@
 
 //All of the armor below is mostly unused
 
-/obj/item/clothing/suit/armor/centcomm
+/obj/item/clothing/suit/armor/centcom // CHOMPEdit - Typo Fix
 	name = "CentCom armor"
 	desc = "A suit that protects against some damage."
 	icon_state = "centcom"

@@ -61,7 +61,7 @@
 	name = "internal affairs rubber stamp"
 	icon_state = "stamp-intaff"
 
-/obj/item/weapon/stamp/centcomm
+/obj/item/weapon/stamp/centcom // CHOMPEdit - Typo Fix
 	name = "\improper CentCom rubber stamp"
 	icon_state = "stamp-cent"
 

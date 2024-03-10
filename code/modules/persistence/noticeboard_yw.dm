@@ -13,7 +13,7 @@
 	P.stamped = list(/obj/item/weapon/stamp/cmo)
 	P.overlays = list("paper_stamped_cmo")
 	src.contents += P
-	
+
 	P = new()
 	P.name = "Staff Notice: Breakroom \& Storage"
 	P.info = "<br>Enjoy the view from the new breakroom. You've also got a storage room full of leftover supplies from the shift before yours."
@@ -56,7 +56,7 @@
 	var/obj/item/weapon/paper/P = new()
 	P.name = "Staff Notice: Blueshield Special Reserve"
 	P.info = "<br>This secure storage unit is intended to be used for special equipment specifically for the use of Blueshield Agents in the event of a Code Red threat to Heads of Staff. Heads of Staff found 'commandeering' this equipment can expect to be severely reprimanded.<br><br>(Underneath, there is a messy handwritten addition.)<br><i>Sorry, we haven't had time or spare funds to issue anything yet. You know how frontier budgets are! Sit tight, champ. -Z.V.</i>"
-	P.stamped = list(/obj/item/weapon/stamp/centcomm)
+	P.stamped = list(/obj/item/weapon/stamp/centcom) // CHOMPEdit - Typo Fix
 	P.overlays = list("paper_stamped_cent")
 	src.contents += P
 
@@ -83,7 +83,7 @@
 	var/obj/item/weapon/paper/P = new()
 	P.name = "Memo: Prototype ship"
 	P.info = "<br> With the lost of our last Research installation and the damage sustained to the old exploration shuttle,We've decided to finally approve the construction of the Prototype Star-Runner class Exploration Vessel. Keep in mind it's a prototype, so try not to scratch it's paint. We don't have a second."
-	P.stamped = list(/obj/item/weapon/stamp/centcomm)
+	P.stamped = list(/obj/item/weapon/stamp/centcom) // CHOMPEdit - Typo Fix
 	P.overlays = list("paper_stamped_cent")
 	src.contents += P
 

@@ -17908,7 +17908,7 @@
 /turf/simulated/shuttle/plating,
 /area/shuttle/skipjack)
 "qrl" = (
-/obj/machinery/telecomms/server/presets/centcomm,
+/obj/machinery/telecomms/server/presets/centcom,
 /turf/unsimulated/floor{
 	dir = 5;
 	icon_state = "vault"
@@ -23849,7 +23849,7 @@
 /area/holodeck/source_wildlife)
 "vYr" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/stamp/centcomm,
+/obj/item/weapon/stamp/centcom,
 /obj/item/weapon/pen,
 /obj/item/weapon/paper_bin{
 	pixel_x = 1;
@@ -24739,7 +24739,7 @@
 "wPA" = (
 /obj/structure/table/reinforced,
 /obj/item/device/aicard,
-/obj/item/weapon/stamp/centcomm,
+/obj/item/weapon/stamp/centcom,
 /turf/unsimulated/floor{
 	dir = 5;
 	icon_state = "vault"

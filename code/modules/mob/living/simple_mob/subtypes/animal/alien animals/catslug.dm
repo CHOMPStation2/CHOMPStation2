@@ -896,7 +896,7 @@
 	. = ..()
 	mob_radio = new /obj/item/device/radio/headset/mob_headset(src)
 	mob_radio.frequency = ERT_FREQ
-	mob_radio.centComm = 1
+	mob_radio.centCom = 1 // CHOMPEdit - Typo Fix
 	mob_radio.ks2type = /obj/item/device/encryptionkey/ert
 	mob_radio.keyslot2 = new /obj/item/device/encryptionkey/ert(mob_radio)
 	mob_radio.recalculateChannels(1)
