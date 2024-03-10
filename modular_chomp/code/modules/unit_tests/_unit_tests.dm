@@ -85,12 +85,13 @@
 #define TRAIT_SOURCE_UNIT_TESTS "unit_tests"
 
 // BEGIN_INCLUDE
-// // // // //
-// END_INCLUDE
-#ifdef REFERENCE_TRACKING_DEBUG //Don't try and parse this file if ref tracking isn't turned on. IE: don't parse ref tracking please mr linter
 #include "dcs_check_list_arguments.dm"
 #include "dcs_get_id_from_elements.dm"
+#include "focus_only_tests.dm"
 #include "unit_test.dm"
+// END_INCLUDE
+#ifdef REFERENCE_TRACKING_DEBUG //Don't try and parse this file if ref tracking isn't turned on. IE: don't parse ref tracking please mr linter
+//#include "find_reference_sanity.dm"
 #endif
 
 #undef TEST_ASSERT

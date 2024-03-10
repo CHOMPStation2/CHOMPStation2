@@ -275,6 +275,14 @@
 /proc/log_unit_test(text)
 	to_world_log("## UNIT_TEST: [text]")
 
+// CHOMPEdit Start
+#if defined(UNIT_TESTS) || defined(SPACEMAN_DMM)
+/proc/log_test(text)
+	WRITE_LOG(test_log, text)
+	SEND_TEXT(world.log, text)
+#endif
+// CHOMPEdit End
+
 #ifdef REFERENCE_TRACKING_LOG
 #define log_reftracker(msg) log_world("## REF SEARCH [msg]")
 #else

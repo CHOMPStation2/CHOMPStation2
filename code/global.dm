@@ -18,6 +18,7 @@ var/log_path			= "data/logs/" //See world.dm for the full calculated path
 var/diary				= null
 var/error_log			= null
 var/debug_log			= null
+var/test_log			= null // CHOMPEdit
 var/href_logfile		= null
 //CHOMPStation Removal Start TFF 24/12/19 - Blep. Remove extra stuff. Where do these even come in?
 /*
