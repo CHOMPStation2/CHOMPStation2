@@ -28,7 +28,7 @@ export const VoreBellySelectionAndCustomization = (props) => {
             <Divider />
             {our_bellies.map((belly) => (
               <Tabs.Tab
-                key={belly.name}
+                key={belly}
                 selected={belly.selected}
                 textColor={digestModeToColor[belly.digest_mode]}
                 onClick={() => act('bellypick', { bellypick: belly.ref })}
