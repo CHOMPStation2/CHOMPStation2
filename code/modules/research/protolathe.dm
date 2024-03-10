@@ -187,8 +187,7 @@
 	return
 
 /obj/machinery/r_n_d/protolathe/proc/removeFromQueue(var/index)
-	if(queue[index])
-		queue.Cut(index, index + 1)
+	queue.Cut(index, index + 1)
 	return
 
 /obj/machinery/r_n_d/protolathe/proc/canBuild(var/datum/design/D)

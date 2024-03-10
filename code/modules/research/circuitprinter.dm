@@ -171,8 +171,7 @@ using metal and glass, it uses glass and reagents (usually sulphuric acid).
 	return
 
 /obj/machinery/r_n_d/circuit_imprinter/proc/removeFromQueue(var/index)
-	if(queue[index]) //ChompEDIT - runtime
-		queue.Cut(index, index + 1)
+	queue.Cut(index, index + 1)
 	return
 
 /obj/machinery/r_n_d/circuit_imprinter/proc/canBuild(var/datum/design/D)
