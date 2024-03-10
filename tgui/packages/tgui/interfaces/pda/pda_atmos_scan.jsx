@@ -1,5 +1,6 @@
 import { filter } from 'common/collections';
 import { decodeHtmlEntities } from 'common/string';
+
 import { useBackend } from '../../backend';
 import { Box, LabeledList } from '../../components';
 
@@ -16,8 +17,8 @@ const getItemColor = (value, min2, min1, max1, max2) => {
   return 'good';
 };
 
-export const pda_atmos_scan = (props, context) => {
-  const { act, data } = useBackend(context);
+export const pda_atmos_scan = (props) => {
+  const { act, data } = useBackend();
 
   const { aircontents } = data;
 
@@ -26,7 +27,9 @@ export const pda_atmos_scan = (props, context) => {
       <LabeledList>
         {filter(
           (i) =>
-            i.val !== '0' || i.entry === 'Pressure' || i.entry === 'Temperature'
+            i.val !== '0' ||
+            i.entry === 'Pressure' ||
+            i.entry === 'Temperature',
         )(aircontents).map((item) => (
           <LabeledList.Item
             key={item.entry}
@@ -36,8 +39,9 @@ export const pda_atmos_scan = (props, context) => {
               item.bad_low,
               item.poor_low,
               item.poor_high,
-              item.bad_high
-            )}>
+              item.bad_high,
+            )}
+          >
             {item.val}
             {decodeHtmlEntities(item.units)}
           </LabeledList.Item>

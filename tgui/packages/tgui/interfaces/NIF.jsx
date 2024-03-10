@@ -1,6 +1,19 @@
-import { Fragment } from 'inferno';
-import { useBackend, useLocalState } from '../backend';
-import { Box, Button, LabeledList, ProgressBar, Modal, Section, Dropdown, AnimatedNumber, NoticeBox, Table } from '../components';
+import { useState } from 'react';
+
+import { useBackend } from '../backend';
+import {
+  AnimatedNumber,
+  Box,
+  Button,
+  Dropdown,
+  Flex,
+  LabeledList,
+  Modal,
+  NoticeBox,
+  ProgressBar,
+  Section,
+  Table,
+} from '../components';
 import { Window } from '../layouts';
 
 const NIF_WORKING = 0;
@@ -9,35 +22,16 @@ const NIF_TEMPFAIL = 2;
 const NIF_INSTALLING = 3;
 const NIF_PREINSTALL = 4;
 
-const validThemes = [
-  'abductor',
-  'cardtable',
-  'hackerman',
-  'malfunction',
-  'ntos',
-  'paper',
-  'retro',
-  'syndicate',
-];
-
-export const NIF = (props, context) => {
-  const { act, config, data } = useBackend(context);
+export const NIF = (props) => {
+  const { act, config, data } = useBackend();
 
   const { theme, last_notification } = data;
 
-  const [settingsOpen, setSettingsOpen] = useLocalState(
-    context,
-    'settingsOpen',
-    false
-  );
-  const [viewingModule, setViewing] = useLocalState(
-    context,
-    'viewingModule',
-    null
-  );
+  const [settingsOpen, setSettingsOpen] = useState(false);
+  const [viewingModule, setViewing] = useState(null);
 
   return (
-    <Window theme={theme} width={500} height={400} resizable>
+    <Window theme={theme} width={500} height={400}>
       <Window.Content scrollable>
         {!!last_notification && (
           <NoticeBox info>
@@ -65,7 +59,7 @@ export const NIF = (props, context) => {
               m={0}
               title={viewingModule.name}
               buttons={
-                <Fragment>
+                <>
                   <Button.Confirm
                     icon="ban"
                     color="bad"
@@ -81,18 +75,19 @@ export const NIF = (props, context) => {
                     icon="window-close"
                     onClick={() => setViewing(null)}
                   />
-                </Fragment>
-              }>
+                </>
+              }
+            >
               <Box>{viewingModule.desc}</Box>
               <Box>
-                It consumes{' '}
+                It consumes
                 <Box color="good" inline>
                   {viewingModule.p_drain}
-                </Box>{' '}
-                energy units while installed, and{' '}
+                </Box>
+                energy units while installed, and
                 <Box color="average" inline>
                   {viewingModule.a_drain}
-                </Box>{' '}
+                </Box>
                 additionally while active.
               </Box>
               <Box color={viewingModule.illegal ? 'bad' : 'good'}>
@@ -100,7 +95,7 @@ export const NIF = (props, context) => {
                 package.
               </Box>
               <Box>
-                The MSRP of the package is{' '}
+                The MSRP of the package is
                 <Box color="good" inline>
                   {viewingModule.cost}₮.
                 </Box>
@@ -125,7 +120,8 @@ export const NIF = (props, context) => {
               selected={settingsOpen}
               onClick={() => setSettingsOpen(!settingsOpen)}
             />
-          }>
+          }
+        >
           {(settingsOpen && <NIFSettings />) || (
             <NIFMain setViewing={setViewing} />
           )}
@@ -143,16 +139,12 @@ const getNifCondition = (nif_stat, nif_percent) => {
       } else {
         return 'Operating Normally';
       }
-      break;
     case NIF_POWFAIL:
       return 'Insufficient Energy!';
-      break;
     case NIF_TEMPFAIL:
       return 'System Failure!';
-      break;
     case NIF_INSTALLING:
       return 'Adapting To User';
-      break;
   }
   return 'Unknown';
 };
@@ -175,17 +167,10 @@ const getNutritionText = (nutrition, isSynthetic) => {
   return 'Power failure imminent.';
 };
 
-const NIFMain = (props, context) => {
-  const { act, config, data } = useBackend(context);
+const NIFMain = (props) => {
+  const { act, config, data } = useBackend();
 
-  const {
-    nif_percent,
-    nif_stat,
-    last_notification,
-    nutrition,
-    isSynthetic,
-    modules,
-  } = data;
+  const { nif_percent, nif_stat, nutrition, isSynthetic, modules } = data;
 
   const { setViewing } = props;
 
@@ -201,7 +186,8 @@ const NIFMain = (props, context) => {
               good: [50, Infinity],
               average: [25, 50],
               bad: [-Infinity, 0],
-            }}>
+            }}
+          >
             {getNifCondition(nif_stat, nif_percent)} (
             <AnimatedNumber value={nif_percent} />
             %)
@@ -216,7 +202,8 @@ const NIFMain = (props, context) => {
               good: [250, Infinity],
               average: [150, 250],
               bad: [0, 150],
-            }}>
+            }}
+          >
             {getNutritionText(nutrition, isSynthetic)}
           </ProgressBar>
         </LabeledList.Item>
@@ -228,7 +215,7 @@ const NIFMain = (props, context) => {
               label={module.name}
               key={module.ref}
               buttons={
-                <Fragment>
+                <>
                   <Button.Confirm
                     icon="trash"
                     color="bad"
@@ -244,8 +231,9 @@ const NIFMain = (props, context) => {
                     tooltip="View Information"
                     tooltipPosition="left"
                   />
-                </Fragment>
-              }>
+                </>
+              }
+            >
               {(module.activates && (
                 <Button
                   fluid
@@ -262,21 +250,38 @@ const NIFMain = (props, context) => {
   );
 };
 
-const NIFSettings = (props, context) => {
-  const { act, data } = useBackend(context);
+const NIFSettings = (props) => {
+  const { act, data } = useBackend();
 
-  const { theme } = data;
+  const { valid_themes, theme } = data;
 
   return (
     <LabeledList>
       <LabeledList.Item label="NIF Theme" verticalAlign="top">
-        <Dropdown
-          width="100%"
-          placeholder="Default"
-          selected={theme}
-          options={validThemes}
-          onSelected={(val) => act('setTheme', { theme: val })}
-        />
+        <Flex>
+          <Flex.Item grow={1}>
+            <Dropdown
+              grow={1}
+              selected={theme || 'default'}
+              options={valid_themes}
+              onSelected={(val) => act('setTheme', { theme: val })}
+            />
+          </Flex.Item>
+          {theme ? (
+            <Flex.Item>
+              <Button
+                width="22px"
+                icon="undo"
+                color="red"
+                onClick={() => {
+                  act('setTheme', { theme: null });
+                }}
+              />
+            </Flex.Item>
+          ) : (
+            ''
+          )}
+        </Flex>
       </LabeledList.Item>
     </LabeledList>
   );

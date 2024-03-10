@@ -7,7 +7,7 @@
 	var/w_class // Size of the object.
 	var/unacidable = FALSE //universal "unacidabliness" var, here so you can use it in any obj.
 	animate_movement = 2
-	var/throwforce = 0 //CHOMPEDIT: FUCK whoever thought it was a good idea to give everything 1 throw damage by default. No More.
+	var/throwforce = 1
 	var/catchable = 1	// can it be caught on throws/flying?
 	var/sharp = FALSE		// whether this object cuts
 	var/edge = FALSE		// whether this object is more likely to dismember
@@ -39,6 +39,17 @@
 			m.visible_message("<span class = 'notice'>\The [m] tumbles out of \the [src]!</span>")
 	//VOREStation Add End
 
+	//CHOMPAdd Start possessed item cleanup
+	if(istype(src, /obj/item))
+		var/obj/item/I = src
+		if(I.possessed_voice && I.possessed_voice.len)
+			for(var/mob/living/voice/V in I.possessed_voice)
+				if(!V.tf_mob_holder)
+					V.ghostize(0)
+					V.stat = DEAD //CHOMPAdd - Helps with autosleeving
+					V.Destroy()
+	//CHOMPAdd End
+
 	return ..()
 
 /obj/Topic(href, href_list, var/datum/tgui_state/state = GLOB.tgui_default_state)
@@ -57,7 +68,7 @@
 /obj/CanUseTopic(var/mob/user, var/datum/tgui_state/state = GLOB.tgui_default_state)
 	if(user.CanUseObjTopic(src))
 		return ..()
-	to_chat(user, "<span class='danger'>\icon[src][bicon(src)]Access Denied!</span>")
+	to_chat(user, "<span class='danger'>[icon2html(src, user.client)]Access Denied!</span>")
 	return STATUS_CLOSE
 
 /mob/living/silicon/CanUseObjTopic(var/obj/O)

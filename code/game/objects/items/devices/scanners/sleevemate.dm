@@ -18,8 +18,11 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 	var/datum/mind/stored_mind
 
 	var/ooc_notes = null //For holding prefs
+	var/ooc_notes_favs = null
 	var/ooc_notes_likes = null
+	var/ooc_notes_maybes = null
 	var/ooc_notes_dislikes = null
+	var/ooc_notes_style = FALSE
 
 	// Resleeving database this machine interacts with. Blank for default database
 	// Needs a matching /datum/transcore_db with key defined in code
@@ -36,6 +39,11 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 	ooc_notes = null
 	ooc_notes_likes = null
 	ooc_notes_dislikes = null
+	//CHOMPEdit Start
+	ooc_notes_favs = null
+	ooc_notes_maybes = null
+	ooc_notes_style = FALSE
+	//CHOMPEdit End
 	update_icon()
 
 /obj/item/device/sleevemate/proc/get_mind(mob/living/M)
@@ -43,6 +51,11 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 	ooc_notes = M.ooc_notes
 	ooc_notes_likes = M.ooc_notes_likes
 	ooc_notes_dislikes = M.ooc_notes_dislikes
+	//CHOMPEdit Start
+	ooc_notes_favs = M.ooc_notes_favs
+	ooc_notes_maybes = M.ooc_notes_maybes
+	ooc_notes_style = M.ooc_notes_style
+	//CHOMPEdit End
 	stored_mind = M.mind
 	M.ghostize()
 	stored_mind.current = null
@@ -54,6 +67,11 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 	M.ooc_notes = ooc_notes
 	M.ooc_notes_likes = ooc_notes_likes
 	M.ooc_notes_dislikes = ooc_notes_dislikes
+	//CHOMPEdit Start
+	M.ooc_notes_favs = ooc_notes_favs
+	M.ooc_notes_maybes = ooc_notes_maybes
+	M.ooc_notes_style = ooc_notes_style
+	//CHOMPEdit End
 	clear_mind()
 
 
@@ -311,6 +329,11 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 		icon_state = initial(icon_state)
 
 /obj/item/device/sleevemate/emag_act(var/remaining_charges, var/mob/user)
+	//CHOMPEdit Start
+	var/list/choices = list("Body Snatcher","Mind Binder")
+	var/choice = tgui_input_list(user, "How would you like to modify the [src]?", "", choices)
+	if(!choice || !(choice in choices)) return
+	//CHOMPEdit End
 	to_chat(user,"<span class='danger'>You hack [src]!</span>")
 	var/datum/effect/effect/system/spark_spread/spark_system = new /datum/effect/effect/system/spark_spread()
 	spark_system.set_up(5, 0, src.loc)
@@ -320,6 +343,11 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 		var/mob/living/L = src.loc
 		L.unEquip(src)
 	src.forceMove(get_turf(src))
-	new /obj/item/device/bodysnatcher(src.loc)
+	//CHOMPEdit Start
+	if(choice == "Body Snatcher")
+		new /obj/item/device/bodysnatcher(src.loc)
+	if(choice == "Mind Binder")
+		new /obj/item/device/mindbinder(src.loc)
+	//CHOMPEdit End
 	qdel(src)
 	return 1

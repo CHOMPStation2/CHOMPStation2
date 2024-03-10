@@ -310,6 +310,7 @@
 					prob(1);/obj/item/device/radio_jammer,
 					prob(1);/obj/item/device/sleevemate,
 					prob(1);/obj/item/device/bodysnatcher,
+					prob(1);/obj/item/device/mindbinder,	//CHOMPAdd
 					prob(1);/obj/item/weapon/beartrap,
 					prob(1);/obj/item/weapon/cell/hyper/empty,
 					prob(1);/obj/item/weapon/disk/nifsoft/compliance,

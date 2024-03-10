@@ -51,6 +51,7 @@ var/list/runechat_image_cache = list()
 	/// If we are currently processing animation and cleanup at EOL
 	var/ending_life
 
+
 /**
   * Constructs a chat message overlay
   *
@@ -72,12 +73,11 @@ var/list/runechat_image_cache = list()
 	generate_image(text, target, owner, extra_classes, lifespan)
 
 /datum/chatmessage/Destroy()
-	if(owned_by)
+	if(istype(owned_by, /client)) // hopefully the PARENT_QDELETING on client should beat this if it's a disconnect
 		UnregisterSignal(owned_by, COMSIG_PARENT_QDELETING)
-		LAZYREMOVEASSOC(owned_by.seen_messages, message_loc, src)
+		if(owned_by.seen_messages)
+			LAZYREMOVEASSOC(owned_by.seen_messages, message_loc, src)
 		owned_by.images.Remove(message)
-	if(message_loc)
-		UnregisterSignal(message_loc, COMSIG_PARENT_QDELETING)
 	owned_by = null
 	message_loc = null
 	message = null
@@ -102,7 +102,7 @@ var/list/runechat_image_cache = list()
 
 	// Register client who owns this message
 	owned_by = owner.client
-	RegisterSignal(owned_by, COMSIG_PARENT_QDELETING, PROC_REF(qdel_self))
+	RegisterSignal(owned_by, COMSIG_PARENT_QDELETING, PROC_REF(unregister_qdel_self)) // this should only call owned_by if the client is destroyed
 
 	var/extra_length = owned_by.is_preference_enabled(/datum/client_preference/runechat_long_messages)
 	var/maxlen = extra_length ? CHAT_MESSAGE_EXT_LENGTH : CHAT_MESSAGE_LENGTH
@@ -142,14 +142,14 @@ var/list/runechat_image_cache = list()
 
 	// Append prefixes
 	if(extra_classes.Find("virtual-speaker"))
-		LAZYADD(prefixes, "\icon[runechat_image_cache["radio"]]")
+		LAZYADD(prefixes, "[icon2html(runechat_image_cache["radio"],owner.client)]")
 	if(extra_classes.Find("emote"))
 		// Icon on both ends?
 		//var/image/I = runechat_image_cache["emote"]
-		//text = "\icon[I][text]\icon[I]"
+		//text = "icon2html(I)[text]icon2html(I)"
 
 		// Icon on one end?
-		//LAZYADD(prefixes, "\icon[runechat_image_cache["emote"]]")
+		//LAZYADD(prefixes, "icon2html(runechat_image_cache["emote")]")
 
 		// Asterisks instead?
 		text = "*&nbsp;[text]&nbsp;*"
@@ -211,6 +211,10 @@ var/list/runechat_image_cache = list()
 	spawn(lifespan - CHAT_MESSAGE_EOL_FADE)
 		end_of_life()
 
+/datum/chatmessage/proc/unregister_qdel_self()  // this should only call owned_by if the client is destroyed
+	UnregisterSignal(owned_by, COMSIG_PARENT_QDELETING)
+	owned_by = null
+	qdel_self()
 /**
   * Applies final animations to overlay CHAT_MESSAGE_EOL_FADE deciseconds prior to message deletion
   */
@@ -220,7 +224,8 @@ var/list/runechat_image_cache = list()
 	ending_life = TRUE
 	animate(message, alpha = 0, time = fadetime, flags = ANIMATION_PARALLEL)
 	spawn(fadetime)
-		qdel(src)
+		if(!QDELETED(src))
+			qdel(src)
 
 /**
   * Creates a message overlay at a defined location for a given speaker
@@ -235,6 +240,9 @@ var/list/runechat_image_cache = list()
 	if(!client)
 		return
 
+	// Source Deleting
+	if(QDELETED(speaker))
+		return
 	// Doesn't want to hear
 	if(ismob(speaker) && !client.is_preference_enabled(/datum/client_preference/runechat_mob))
 		return
@@ -327,6 +335,11 @@ var/list/runechat_image_cache = list()
 		if(5)
 			return rgb(c,m,x)
 
+#undef CM_COLOR_SAT_MIN
+#undef CM_COLOR_SAT_MAX
+#undef CM_COLOR_LUM_MIN
+#undef CM_COLOR_LUM_MAX
+
 /atom/proc/runechat_message(message, range = world.view, italics, list/classes = list(), audible = TRUE, list/specific_viewers)
 	var/hearing_mobs
 	if(islist(specific_viewers))
@@ -336,7 +349,7 @@ var/list/runechat_image_cache = list()
 		hearing_mobs = hear["mobs"]
 
 	for(var/mob/M as anything in hearing_mobs)
-		if(!M.client)
+		if(!M?.client)
 			continue
 		M.create_chat_message(src, message, italics, classes, audible)
 
@@ -369,3 +382,22 @@ var/list/runechat_image_cache = list()
 	if(istype(loc, /obj/item/weapon/holder))
 		return loc
 	return ..()
+
+#undef CHAT_MESSAGE_SPAWN_TIME
+#undef CHAT_MESSAGE_LIFESPAN
+#undef CHAT_MESSAGE_EOL_FADE
+#undef CHAT_MESSAGE_EXP_DECAY
+#undef CHAT_MESSAGE_HEIGHT_DECAY
+#undef CHAT_MESSAGE_APPROX_LHEIGHT
+
+#undef CHAT_MESSAGE_WIDTH
+#undef CHAT_MESSAGE_EXT_WIDTH
+#undef CHAT_MESSAGE_LENGTH
+#undef CHAT_MESSAGE_EXT_LENGTH
+
+#undef CHAT_MESSAGE_MOB
+#undef CHAT_MESSAGE_OBJ
+#undef WXH_TO_HEIGHT
+
+#undef CHAT_RUNE_EMOTE
+#undef CHAT_RUNE_RADIO

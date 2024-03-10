@@ -1,6 +1,7 @@
 import { BooleanLike } from 'common/react';
+
 import { useBackend } from '../backend';
-import { Button, LabeledList, Section, Box, ProgressBar } from '../components';
+import { Box, Button, LabeledList, ProgressBar, Section } from '../components';
 import { Window } from '../layouts';
 
 type Data = {
@@ -11,8 +12,8 @@ type Data = {
   flushing: BooleanLike;
 };
 
-export const DisposalBin = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const DisposalBin = (props) => {
+  const { act, data } = useBackend<Data>();
   const { mode, pressure, isAI, panel_open, flushing } = data;
   let stateColor;
   let stateText;

@@ -455,11 +455,11 @@ var/list/mob/living/forced_ambiance_list = new
 			return
 
 		if(H.m_intent == "run")
-			H.AdjustStunned(6)
-			H.AdjustWeakened(6)
+			H.AdjustStunned(1) // CHOMPedit: No longer a supermassive long stun.
+//			H.AdjustWeakened(6) // CHOMPedit: No longer weakens.
 		else
-			H.AdjustStunned(3)
-			H.AdjustWeakened(3)
+			H.AdjustStunned(1) // CHOMPedit: No longer a supermassive long stun.
+//			H.AdjustWeakened(3) // CHOMPedit: No longer weakens.
 		to_chat(mob, "<span class='notice'>The sudden appearance of gravity makes you fall to the floor!</span>")
 		playsound(mob, "bodyfall", 50, 1)
 

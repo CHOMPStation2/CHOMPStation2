@@ -19,14 +19,20 @@
 /turf/simulated/floor/plating,
 /area/submap/spacebar)
 "al" = (
-/turf/simulated/shuttle/wall,
-/turf/space,
+/obj/machinery/power/apc/hyper{
+	dir = 8;
+	pixel_y = 0;
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/spacebar)
 "am" = (
 /turf/simulated/wall,
 /area/submap/spacebar)
 "an" = (
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/thull,
 /area/submap/spacebar)
 "ao" = (
 /obj/structure/bed/chair/bay/comfy/blue{
@@ -143,14 +149,16 @@
 	name = "Bar Storage"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "wood"
+	temperature = 295.15
 	},
 /area/submap/spacebar)
 "aP" = (
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/spacebar)
 "aR" = (
 /obj/structure/window/reinforced/full,
@@ -163,11 +171,17 @@
 	icon_state = "chair";
 	tag = "icon-chair (EAST)"
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/spacebar)
 "aV" = (
-/obj/structure/table/woodentable,
-/turf/simulated/floor/tiled/asteroid_steel,
+/obj/machinery/floor_light{
+	anchored = 1
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/spacebar)
 "aW" = (
 /obj/structure/bed/chair{
@@ -175,49 +189,69 @@
 	icon_state = "chair";
 	tag = "icon-chair (WEST)"
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/spacebar)
 "aX" = (
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/spacebar)
 "aY" = (
 /obj/structure/bed/chair,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/spacebar)
 "aZ" = (
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/spacebar)
 "ba" = (
 /obj/machinery/vending/cola,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/spacebar)
 "bb" = (
 /obj/machinery/vending/cigarette,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/spacebar)
 "bc" = (
 /obj/machinery/vending/coffee,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/spacebar)
 "bd" = (
 /obj/machinery/vending/snack,
 /obj/machinery/light,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/spacebar)
 "be" = (
 /obj/structure/bed/chair{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/spacebar)
 "bf" = (
 /obj/machinery/door/airlock{
 	name = "Unisex Bathroom"
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/spacebar)
 "bg" = (
 /obj/structure/urinal{
@@ -242,7 +276,9 @@
 	dir = 4
 	},
 /obj/structure/table/woodentable,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/spacebar)
 "bj" = (
 /obj/machinery/light/small{
@@ -321,7 +357,9 @@
 /obj/item/weapon/stool/padded{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/spacebar)
 "cb" = (
 /obj/random/junk,
@@ -346,7 +384,9 @@
 "go" = (
 /obj/random/trash,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/spacebar)
 "gT" = (
 /obj/machinery/door/airlock/external{
@@ -412,11 +452,15 @@
 "jM" = (
 /obj/structure/table/woodentable,
 /obj/structure/table/woodentable,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/spacebar)
 "jQ" = (
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/spacebar)
 "kx" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -453,6 +497,30 @@
 /obj/random/junk,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/submap/spacebar)
+"pb" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/weapon/reagent_containers/food/drinks/cans/beercan{
+	pixel_x = 10;
+	pixel_y = 11
+	},
+/obj/item/weapon/handcuffs{
+	pixel_y = 6;
+	pixel_x = -8
+	},
+/obj/item/weapon/gun/projectile/shotgun/pump{
+	pixel_y = -17;
+	pixel_x = -17
+	},
+/obj/item/weapon/material/butterfly/switchblade{
+	pixel_y = 3;
+	pixel_x = 5
+	},
+/obj/item/weapon/storage/fancy/cigarettes/killthroat{
+	pixel_y = 0;
+	pixel_x = -6
+	},
+/turf/simulated/floor/wood/broken,
+/area/submap/spacebar)
 "pD" = (
 /obj/effect/floor_decal/rust,
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
@@ -462,7 +530,14 @@
 	tag_exterior_door = "spacebar_exterior";
 	tag_interior_door = "spacebar_interior"
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
+/area/submap/spacebar)
+"qh" = (
+/obj/structure/bed/chair/wood,
+/obj/item/clothing/mask/demon,
+/turf/simulated/floor/wood,
 /area/submap/spacebar)
 "qn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -491,13 +566,28 @@
 /turf/simulated/floor/wood,
 /area/submap/spacebar)
 "tj" = (
-/obj/structure/bed/chair{
-	dir = 8;
-	icon_state = "chair";
-	tag = "icon-chair (WEST)"
+/obj/effect/floor_decal/rust,
+/obj/machinery/floor_light{
+	anchored = 1
 	},
-/obj/random/trash,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
+/area/submap/spacebar)
+"uK" = (
+/obj/item/device/defib_kit/loaded{
+	pixel_y = -6
+	},
+/obj/item/stack/medical/advanced/bruise_pack{
+	amount = 2;
+	max_amount = 2;
+	heal_brute = 50;
+	toolspeed = 0.1;
+	name = "SUPER trauma kit";
+	desc = "An highly advanced trauma kit for severe injuries such as blowing your own head off. These are really heavy";
+	slowdown = 3
+	},
+/turf/simulated/floor/wood,
 /area/submap/spacebar)
 "wa" = (
 /obj/structure/fans/hardlight,
@@ -511,16 +601,27 @@
 /turf/simulated/floor/plating,
 /area/submap/spacebar)
 "xa" = (
-/obj/random/junk,
-/turf/simulated/floor/tiled/asteroid_steel,
+/obj/structure/curtain,
+/obj/effect/decal/remains,
+/turf/simulated/floor/wood,
 /area/submap/spacebar)
 "xi" = (
 /obj/random/trash,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/spacebar)
 "xN" = (
 /obj/item/weapon/stool/padded,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
+/area/submap/spacebar)
+"yA" = (
+/obj/structure/bed/chair/wood{
+	dir = 1
+	},
+/turf/simulated/floor/wood/broken,
 /area/submap/spacebar)
 "yJ" = (
 /obj/machinery/button{
@@ -568,6 +669,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/submap/spacebar)
+"FN" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/random/mug,
+/turf/simulated/floor/wood,
+/area/submap/spacebar)
 "GS" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -579,7 +685,9 @@
 /obj/item/weapon/stool/padded{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/spacebar)
 "IF" = (
 /obj/effect/floor_decal/rust,
@@ -590,11 +698,53 @@
 /obj/structure/grille,
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/submap/spacebar)
+"Kk" = (
+/obj/machinery/light/spot{
+	dir = 1
+	},
+/obj/item/weapon/storage/secure/briefcase/money,
+/turf/simulated/floor/wood,
+/area/submap/spacebar)
 "LH" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
+/area/submap/spacebar)
+"LR" = (
+/obj/item/device/defib_kit/loaded{
+	pixel_y = 9
+	},
+/obj/machinery/light/spot{
+	dir = 1
+	},
+/obj/structure/table/wooden_reinforced,
+/obj/item/ammo_magazine/ammo_box/b12g/blank{
+	pixel_y = -5;
+	pixel_x = -10
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_y = -2;
+	pixel_x = 8
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/blank{
+	pixel_y = -5;
+	pixel_x = -10
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_y = -2;
+	pixel_x = 8
+	},
+/obj/item/stack/medical/advanced/bruise_pack{
+	amount = 2;
+	max_amount = 2;
+	heal_brute = 50;
+	toolspeed = 0.1;
+	name = "SUPER trauma kit";
+	desc = "An highly advanced trauma kit for severe injuries such as blowing your own head off. These are really heavy";
+	slowdown = 3
+	},
+/turf/simulated/floor/wood,
 /area/submap/spacebar)
 "Mr" = (
 /obj/effect/floor_decal/rust,
@@ -626,6 +776,11 @@
 	dir = 1
 	},
 /turf/simulated/wall/r_wall,
+/area/submap/spacebar)
+"Py" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/device/radio/subspace,
+/turf/simulated/floor/wood,
 /area/submap/spacebar)
 "PC" = (
 /obj/effect/decal/cleanable/greenglow,
@@ -683,10 +838,38 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/submap/spacebar)
+"SR" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/weapon/reagent_containers/food/drinks/cans/beercan{
+	pixel_x = -8
+	},
+/obj/item/weapon/reagent_containers/food/drinks/cans/beercan{
+	pixel_x = -8
+	},
+/obj/item/weapon/storage/fancy/cigarettes/killthroat{
+	pixel_y = 0;
+	pixel_x = 8
+	},
+/obj/item/weapon/flame/lighter{
+	pixel_x = 11;
+	pixel_y = -8
+	},
+/obj/item/ammo_casing/a12g/pellet{
+	pixel_x = 2;
+	pixel_y = 24
+	},
+/obj/item/ammo_casing/a12g/blank{
+	pixel_y = 12;
+	pixel_x = 4
+	},
+/turf/simulated/floor/wood,
+/area/submap/spacebar)
 "UI" = (
 /obj/random/junk,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/spacebar)
 "UR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -1211,7 +1394,7 @@ Bv
 aJ
 aJ
 ag
-al
+an
 an
 an
 bs
@@ -1295,7 +1478,7 @@ aJ
 ag
 ag
 ag
-al
+an
 an
 an
 bs
@@ -1377,13 +1560,13 @@ Bv
 Bv
 aJ
 ag
-ag
-ag
-ag
-ag
-ag
-ag
-ag
+ai
+am
+am
+am
+am
+am
+am
 ag
 GS
 ag
@@ -1391,7 +1574,7 @@ ag
 ag
 ag
 ag
-al
+an
 an
 an
 bs
@@ -1419,13 +1602,13 @@ ag
 ag
 aJ
 ag
-ag
-ag
-ai
-ai
-ai
-ag
-ag
+am
+am
+LR
+Py
+FN
+uK
+am
 ag
 am
 bn
@@ -1461,13 +1644,13 @@ ag
 ag
 aJ
 ag
-ag
-ai
-ai
-ai
-ai
-ai
-cb
+am
+xa
+qh
+pb
+SR
+yA
+am
 ag
 aJ
 hV
@@ -1475,7 +1658,7 @@ aJ
 ag
 ag
 ag
-al
+an
 an
 an
 bs
@@ -1503,13 +1686,13 @@ ag
 ag
 aJ
 ag
-ai
-ai
-ai
-ai
-ai
-ai
-ag
+am
+am
+Kk
+aD
+aD
+aD
+am
 ag
 aR
 ln
@@ -1546,11 +1729,11 @@ ag
 aJ
 ag
 ai
-ai
 am
 am
 am
 am
+ay
 am
 am
 am
@@ -1601,7 +1784,7 @@ aX
 aY
 jM
 be
-aZ
+al
 aZ
 aJ
 IJ
@@ -1759,7 +1942,7 @@ ag
 ag
 am
 am
-ay
+aM
 aE
 AD
 aZ
@@ -1805,10 +1988,10 @@ aD
 aF
 am
 aZ
-jQ
-xa
-aZ
-jQ
+tj
+aV
+aV
+tj
 bb
 am
 Mr
@@ -1847,10 +2030,10 @@ aD
 aG
 am
 aP
-aZ
-aU
-aZ
-jQ
+aV
+aV
+aV
+tj
 bc
 am
 IF
@@ -1889,10 +2072,10 @@ nN
 aH
 am
 aZ
-jQ
+tj
 aV
-xa
-jQ
+aV
+tj
 bd
 am
 IF
@@ -1931,10 +2114,10 @@ aD
 rP
 aM
 aZ
-jQ
 tj
-aZ
-jQ
+aV
+aV
+tj
 aZ
 am
 bm
@@ -1973,10 +2156,10 @@ az
 aI
 am
 jQ
-jQ
-aZ
-aZ
-aZ
+tj
+aV
+aV
+aV
 xi
 bf
 bm

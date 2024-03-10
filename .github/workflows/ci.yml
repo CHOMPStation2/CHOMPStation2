@@ -24,7 +24,9 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/SpacemanDMM
-          key: ${{ runner.os }}-spacemandmm
+          key: ${{ runner.os }}-spacemandmm-${{ hashFiles('_dependencies.sh') }}
+          restore-keys: |
+            ${{ runner.os }}-spacemandmm-
       - name: Restore Yarn cache
         uses: actions/cache@v4
         with:
@@ -46,10 +48,17 @@ jobs:
           key: ${{ runner.os }}-bootstrap-${{ hashFiles('tools/requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-bootstrap-
+      - name: Restore Cutter cache
+        uses: actions/cache@v4
+        with:
+          path: tools/icon_cutter/cache
+          key: ${{ runner.os }}-cutter-${{ hashFiles('_dependencies.sh') }}
       - name: Install Tools
         run: |
+          pip3 install setuptools
           bash tools/ci/install_build_deps.sh
           bash tools/ci/install_spaceman_dmm.sh dreamchecker
+          tools/bootstrap/python -c ''
       - name: Run Tests
         run: |
           tools/ci/validate_files.sh
@@ -63,7 +72,7 @@ jobs:
     if: ( !contains(github.event.head_commit.message, '[ci skip]') )
     name: Integration Tests
     # needs: ['run_linters', 'dreamchecker']
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
       - name: Ensure +x on CI directory
@@ -78,6 +87,7 @@ jobs:
         run: |
           sudo dpkg --add-architecture i386
           sudo apt update || true
+          sudo apt install gcc-multilib
           sudo apt install zlib1g-dev:i386 libssl-dev:i386
           ldd librust_g.so
       - name: Unit Tests

@@ -1,7 +1,14 @@
 import { toTitleCase } from 'common/string';
-import { Fragment } from 'inferno';
+
 import { useBackend } from '../backend';
-import { Box, Button, Flex, LabeledList, ProgressBar, Section } from '../components';
+import {
+  Box,
+  Button,
+  Flex,
+  LabeledList,
+  ProgressBar,
+  Section,
+} from '../components';
 import { Window } from '../layouts';
 
 /* Helpers */
@@ -33,8 +40,8 @@ const getDockingStatus = (docking_status, docking_override) => {
 };
 
 /* Templates */
-const ShuttleControlSharedShuttleStatus = (props, context) => {
-  const { act, data } = useBackend(context);
+const ShuttleControlSharedShuttleStatus = (props) => {
+  const { act, data } = useBackend();
   const { engineName = 'Bluespace Drive' } = props;
   const {
     shuttle_status,
@@ -64,7 +71,7 @@ const ShuttleControlSharedShuttleStatus = (props, context) => {
             )) || <Box color="bad">ERROR</Box>}
         </LabeledList.Item>
         {(has_docking && (
-          <Fragment>
+          <>
             <LabeledList.Item label="Docking Status">
               {getDockingStatus(docking_status, docking_override)}
             </LabeledList.Item>
@@ -73,7 +80,7 @@ const ShuttleControlSharedShuttleStatus = (props, context) => {
                 {docking_codes || 'Not Set'}
               </Button>
             </LabeledList.Item>
-          </Fragment>
+          </>
         )) ||
           null}
       </LabeledList>
@@ -81,8 +88,8 @@ const ShuttleControlSharedShuttleStatus = (props, context) => {
   );
 };
 
-const ShuttleControlSharedShuttleControls = (props, context) => {
-  const { act, data } = useBackend(context);
+const ShuttleControlSharedShuttleControls = (props) => {
+  const { act, data } = useBackend();
 
   const { can_launch, can_cancel, can_force } = data;
 
@@ -94,7 +101,8 @@ const ShuttleControlSharedShuttleControls = (props, context) => {
             onClick={() => act('move')}
             disabled={!can_launch}
             icon="rocket"
-            fluid>
+            fluid
+          >
             Launch Shuttle
           </Button>
         </Flex.Item>
@@ -103,7 +111,8 @@ const ShuttleControlSharedShuttleControls = (props, context) => {
             onClick={() => act('cancel')}
             disabled={!can_cancel}
             icon="ban"
-            fluid>
+            fluid
+          >
             Cancel Launch
           </Button>
         </Flex.Item>
@@ -113,7 +122,8 @@ const ShuttleControlSharedShuttleControls = (props, context) => {
             color="bad"
             disabled={!can_force}
             icon="exclamation-triangle"
-            fluid>
+            fluid
+          >
             Force Launch
           </Button>
         </Flex.Item>
@@ -122,21 +132,21 @@ const ShuttleControlSharedShuttleControls = (props, context) => {
   );
 };
 
-const ShuttleControlConsoleDefault = (props, context) => {
-  const { act, data } = useBackend(context);
+const ShuttleControlConsoleDefault = (props) => {
+  const { act, data } = useBackend();
   return (
-    <Fragment>
+    <>
       <ShuttleControlSharedShuttleStatus />
       <ShuttleControlSharedShuttleControls />
-    </Fragment>
+    </>
   );
 };
 
-const ShuttleControlConsoleMulti = (props, context) => {
-  const { act, data } = useBackend(context);
+const ShuttleControlConsoleMulti = (props) => {
+  const { act, data } = useBackend();
   const { can_cloak, can_pick, legit, cloaked, destination_name } = data;
   return (
-    <Fragment>
+    <>
       <ShuttleControlSharedShuttleStatus />
       <Section title="Multishuttle Controls">
         <LabeledList>
@@ -145,7 +155,8 @@ const ShuttleControlConsoleMulti = (props, context) => {
               <Button
                 selected={cloaked}
                 icon={cloaked ? 'eye' : 'eye-o'}
-                onClick={() => act('toggle_cloaked')}>
+                onClick={() => act('toggle_cloaked')}
+              >
                 {cloaked ? 'Enabled' : 'Disabled'}
               </Button>
             </LabeledList.Item>
@@ -155,23 +166,24 @@ const ShuttleControlConsoleMulti = (props, context) => {
             <Button
               icon="taxi"
               disabled={!can_pick}
-              onClick={() => act('pick')}>
+              onClick={() => act('pick')}
+            >
               {destination_name}
             </Button>
           </LabeledList.Item>
         </LabeledList>
       </Section>
       <ShuttleControlSharedShuttleControls />
-    </Fragment>
+    </>
   );
 };
 
-const ShuttleControlConsoleExploration = (props, context) => {
-  const { act, data } = useBackend(context);
+const ShuttleControlConsoleExploration = (props) => {
+  const { act, data } = useBackend();
   const { can_pick, destination_name, fuel_usage, fuel_span, remaining_fuel } =
     data;
   return (
-    <Fragment>
+    <>
       <ShuttleControlSharedShuttleStatus engineName="Engines" />
       <Section title="Jump Controls">
         <LabeledList>
@@ -179,31 +191,32 @@ const ShuttleControlConsoleExploration = (props, context) => {
             <Button
               icon="taxi"
               disabled={!can_pick}
-              onClick={() => act('pick')}>
+              onClick={() => act('pick')}
+            >
               {destination_name}
             </Button>
           </LabeledList.Item>
           {(fuel_usage && (
-            <Fragment>
+            <>
               <LabeledList.Item label="Est. Delta-V Budget" color={fuel_span}>
                 {remaining_fuel} m/s
               </LabeledList.Item>
               <LabeledList.Item label="Avg. Delta-V Per Maneuver">
                 {fuel_usage} m/s
               </LabeledList.Item>
-            </Fragment>
+            </>
           )) ||
             null}
         </LabeledList>
       </Section>
       <ShuttleControlSharedShuttleControls />
-    </Fragment>
+    </>
   );
 };
 
 /* Ugh. Just ugh. */
-const ShuttleControlConsoleWeb = (props, context) => {
-  const { act, data } = useBackend(context);
+const ShuttleControlConsoleWeb = (props) => {
+  const { act, data } = useBackend();
 
   const {
     autopilot,
@@ -226,7 +239,7 @@ const ShuttleControlConsoleWeb = (props, context) => {
   } = data;
 
   return (
-    <Fragment>
+    <>
       {(autopilot && (
         <Section title="AI PILOT (CLASS D) ACTIVE">
           <Box inline italic>
@@ -247,7 +260,8 @@ const ShuttleControlConsoleWeb = (props, context) => {
             </Button>
           )) ||
           null
-        }>
+        }
+      >
         <LabeledList>
           <LabeledList.Item label="Engines">
             {(shuttle_state === 'idle' && (
@@ -263,7 +277,7 @@ const ShuttleControlConsoleWeb = (props, context) => {
               )) || <Box color="bad">ERROR</Box>}
           </LabeledList.Item>
           {(!is_moving && (
-            <Fragment>
+            <>
               <LabeledList.Item label="Current Location">
                 {toTitleCase(shuttle_location)}
               </LabeledList.Item>
@@ -271,14 +285,15 @@ const ShuttleControlConsoleWeb = (props, context) => {
                 <LabeledList.Item
                   label="Docking Status"
                   buttons={
-                    <Fragment>
+                    <>
                       <Button
                         selected={docking_status === 'docked'}
                         disabled={
                           docking_status !== 'undocked' &&
                           docking_status !== 'docked'
                         }
-                        onClick={() => act('dock_command')}>
+                        onClick={() => act('dock_command')}
+                      >
                         Dock
                       </Button>
                       <Button
@@ -287,11 +302,13 @@ const ShuttleControlConsoleWeb = (props, context) => {
                           docking_status !== 'docked' &&
                           docking_status !== 'undocked'
                         }
-                        onClick={() => act('undock_command')}>
+                        onClick={() => act('undock_command')}
+                      >
                         Undock
                       </Button>
-                    </Fragment>
-                  }>
+                    </>
+                  }
+                >
                   <Box bold inline>
                     {getDockingStatus(docking_status, docking_override)}
                   </Box>
@@ -303,7 +320,8 @@ const ShuttleControlConsoleWeb = (props, context) => {
                   <Button
                     selected={cloaked}
                     icon={cloaked ? 'eye' : 'eye-o'}
-                    onClick={() => act('toggle_cloaked')}>
+                    onClick={() => act('toggle_cloaked')}
+                  >
                     {cloaked ? 'Enabled' : 'Disabled'}
                   </Button>
                 </LabeledList.Item>
@@ -314,13 +332,14 @@ const ShuttleControlConsoleWeb = (props, context) => {
                   <Button
                     selected={autopilot}
                     icon={autopilot ? 'eye' : 'eye-o'}
-                    onClick={() => act('toggle_autopilot')}>
+                    onClick={() => act('toggle_autopilot')}
+                  >
                     {autopilot ? 'Enabled' : 'Disabled'}
                   </Button>
                 </LabeledList.Item>
               )) ||
                 null}
-            </Fragment>
+            </>
           )) ||
             null}
         </LabeledList>
@@ -332,9 +351,8 @@ const ShuttleControlConsoleWeb = (props, context) => {
                   <LabeledList.Item label={route.name} key={route.name}>
                     <Button
                       icon="rocket"
-                      onClick={() =>
-                        act('traverse', { traverse: route.index })
-                      }>
+                      onClick={() => act('traverse', { traverse: route.index })}
+                    >
                       {route.travel_time}
                     </Button>
                   </LabeledList.Item>
@@ -356,7 +374,8 @@ const ShuttleControlConsoleWeb = (props, context) => {
                 color="good"
                 minValue={0}
                 maxValue={100}
-                value={travel_progress}>
+                value={travel_progress}
+              >
                 {time_left}s
               </ProgressBar>
             </LabeledList.Item>
@@ -400,11 +419,11 @@ const ShuttleControlConsoleWeb = (props, context) => {
       {(Object.keys(sensors).length && (
         <Section title="Sensors">
           <LabeledList>
-            {Object.keys(sensors).map((key) => {
+            {Object.keys(sensors).map((key, index) => {
               let sensor = sensors[key];
               if (sensor.reading === -1) {
                 return (
-                  <LabeledList.Item label={key} color="bad">
+                  <LabeledList.Item key={index} label={key} color="bad">
                     Unable to get sensor air reading.
                   </LabeledList.Item>
                 );
@@ -444,27 +463,27 @@ const ShuttleControlConsoleWeb = (props, context) => {
         </Section>
       )) ||
         null}
-    </Fragment>
+    </>
   );
 };
 
 // This may look tempting to convert to require() or some kind of dynamic call
 // Don't do it. XSS abound.
 const SubtemplateList = {
-  'ShuttleControlConsoleDefault': <ShuttleControlConsoleDefault />,
-  'ShuttleControlConsoleMulti': <ShuttleControlConsoleMulti />,
-  'ShuttleControlConsoleExploration': <ShuttleControlConsoleExploration />,
-  'ShuttleControlConsoleWeb': <ShuttleControlConsoleWeb />,
+  ShuttleControlConsoleDefault: <ShuttleControlConsoleDefault />,
+  ShuttleControlConsoleMulti: <ShuttleControlConsoleMulti />,
+  ShuttleControlConsoleExploration: <ShuttleControlConsoleExploration />,
+  ShuttleControlConsoleWeb: <ShuttleControlConsoleWeb />,
 };
 
-export const ShuttleControl = (props, context) => {
-  const { act, data } = useBackend(context);
+export const ShuttleControl = (props) => {
+  const { act, data } = useBackend();
   const { subtemplate } = data;
   return (
     <Window
       width={470}
       height={subtemplate === 'ShuttleControlConsoleWeb' ? 560 : 370}
-      resizable>
+    >
       <Window.Content>{SubtemplateList[subtemplate]}</Window.Content>
     </Window>
   );

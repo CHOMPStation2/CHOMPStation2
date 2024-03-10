@@ -8,8 +8,8 @@
 
 	blood_level = 99 //Ripper sugery gets you super bloody.
 
-	min_duration = 60
-	max_duration = 80
+	min_duration = 40 //CHOMPedit
+	max_duration = 40 //CHOMPedit
 	excludes_steps = list(/datum/surgery_step/generic/cut_open) //These things can already do the first step!
 
 /datum/surgery_step/generic/ripper/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/weapon/surgical/scalpel/ripper/tool)
@@ -169,8 +169,8 @@
 
 	blood_level = 3
 
-	min_duration = 60
-	max_duration = 80
+	min_duration = 40 //CHOMPedit
+	max_duration = 40 //CHOMPedit
 	excludes_steps = list(/datum/surgery_step/generic/cut_open)
 
 /datum/surgery_step/generic/ripper/rip_organ/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)

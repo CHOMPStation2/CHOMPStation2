@@ -2,12 +2,12 @@ import { useBackend } from '../backend';
 import { Button, Section } from '../components';
 import { Window } from '../layouts';
 
-export const AtmosAlertConsole = (props, context) => {
-  const { act, data } = useBackend(context);
+export const AtmosAlertConsole = (props) => {
+  const { act, data } = useBackend();
   const priorityAlerts = data.priority_alarms || [];
   const minorAlerts = data.minor_alarms || [];
   return (
-    <Window width={350} height={300} resizable>
+    <Window width={350} height={300}>
       <Window.Content scrollable>
         <Section title="Alarms">
           <ul>

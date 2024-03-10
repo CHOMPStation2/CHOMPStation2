@@ -1,10 +1,10 @@
 import { useBackend } from '../backend';
-import { Button, LabeledList, Slider, Section } from '../components';
+import { Button, LabeledList, Section, Slider } from '../components';
 import { Window } from '../layouts';
 import { PortableBasicInfo } from './common/PortableAtmos';
 
-export const PortablePump = (props, context) => {
-  const { act, data } = useBackend(context);
+export const PortablePump = (props) => {
+  const { act, data } = useBackend();
   const {
     direction,
     target_pressure,
@@ -13,7 +13,7 @@ export const PortablePump = (props, context) => {
     max_pressure,
   } = data;
   return (
-    <Window width={330} height={375} resizable>
+    <Window width={330} height={375}>
       <Window.Content scrollable>
         <PortableBasicInfo />
         <Section
@@ -25,7 +25,8 @@ export const PortablePump = (props, context) => {
               selected={direction}
               onClick={() => act('direction')}
             />
-          }>
+          }
+        >
           <LabeledList>
             <LabeledList.Item label="Output">
               <Slider

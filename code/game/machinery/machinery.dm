@@ -130,7 +130,7 @@ Class Procs:
 
 /obj/machinery/Initialize(var/mapload)
 	. = ..()
-	global.machines += src
+	SSmachines.all_machines += src
 	if(ispath(circuit))
 		circuit = new circuit(src)
 	if(!speed_process)
@@ -145,7 +145,7 @@ Class Procs:
 		STOP_MACHINE_PROCESSING(src)
 	else
 		STOP_PROCESSING(SSfastprocess, src)
-	global.machines -= src
+	SSmachines.all_machines -= src
 	if(component_parts)
 		for(var/atom/A in component_parts)
 			if(A.loc == src) // If the components are inside the machine, delete them.
@@ -284,7 +284,7 @@ Class Procs:
 
 /obj/machinery/proc/state(var/msg)
 	for(var/mob/O in hearers(src, null))
-		O.show_message("\icon[src][bicon(src)] <span class = 'notice'>[msg]</span>", 2)
+		O.show_message("[icon2html(src,O.client)] <span class = 'notice'>[msg]</span>", 2)
 
 /obj/machinery/proc/ping(text=null)
 	if(!text)

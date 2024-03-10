@@ -214,6 +214,11 @@ var/list/ai_verbs_default = list(
 			ooc_notes = meta_info
 			ooc_notes_likes = client.prefs.metadata_likes
 			ooc_notes_dislikes = client.prefs.metadata_dislikes
+			//CHOMPEdit Start
+			ooc_notes_favs = client.prefs.metadata_favs
+			ooc_notes_maybes = client.prefs.metadata_maybes
+			ooc_notes_style = client.prefs.matadata_ooc_style
+			//CHOMPEdit End
 
 	if (malf && !(mind in malf.current_antagonists))
 		show_laws()
@@ -475,7 +480,7 @@ var/list/ai_verbs_default = list(
 		if(target && (!istype(target, /mob/living/carbon/human) || html_decode(href_list["trackname"]) == target:get_face_name()))
 			ai_actual_track(target)
 		else
-			to_chat(src, "<span class='filter_warning'><font color='red'>System error. Cannot locate [html_decode(href_list["trackname"])].</font></span>")
+			to_chat(src, "<span class='filter_warning'>[span_red("System error. Cannot locate [html_decode(href_list["trackname"])].")]</span>")
 		return
 
 	if(href_list["trackbot"])

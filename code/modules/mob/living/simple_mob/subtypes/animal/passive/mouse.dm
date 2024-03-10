@@ -50,6 +50,18 @@
 	pain_emote_1p = list("squeak", "squik") // CHOMP Addition: Pain/etc sounds
 	pain_emote_1p = list("squeaks", "squiks") // CHOMP Addition: Pain/etc sounds
 
+//CHOMPEdit Start
+/mob/living/simple_mob/animal/passive/mouse/Initialize()
+	. = ..()
+	ghostjoin = 1
+	ghostjoin_icon()
+	active_ghost_pods |= src
+
+/mob/living/simple_mob/animal/passive/mouse/Destroy()
+	active_ghost_pods -= src
+	return ..()
+//CHOMPEdit End
+
 /mob/living/simple_mob/animal/passive/mouse/New()
 	..()
 
@@ -87,7 +99,7 @@
 	if( ishuman(AM) )
 		if(!stat)
 			var/mob/M = AM
-			M.visible_message("<font color='blue'>\icon[src][bicon(src)] Squeek!</font>")
+			M.visible_message(span_blue("[icon2html(src,viewers(src))] Squeek!"))
 			playsound(src, 'sound/effects/mouse_squeak.ogg', 35, 1)
 	..()
 

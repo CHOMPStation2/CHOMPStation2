@@ -77,7 +77,7 @@ DEBUG
 			return
 
 		//Job permabans
-		var/DBQuery/query = SSdbcore.NewQuery("SELECT ckey, job FROM erro_ban WHERE bantype = 'JOB_PERMABAN' AND isnull(unbanned)") //CHOMPEdit TGSQL
+		var/datum/db_query/query = SSdbcore.NewQuery("SELECT ckey, job FROM erro_ban WHERE bantype = 'JOB_PERMABAN' AND isnull(unbanned)") //CHOMPEdit TGSQL
 		query.Execute()
 
 		while(query.NextRow())
@@ -87,7 +87,7 @@ DEBUG
 			jobban_keylist.Add("[ckey] - [job]")
 		qdel(query) //CHOMPEdit TGSQL
 		//Job tempbans
-		var/DBQuery/query1 = SSdbcore.NewQuery("SELECT ckey, job FROM erro_ban WHERE bantype = 'JOB_TEMPBAN' AND isnull(unbanned) AND expiration_time > Now()") //CHOMPEdit TGSQL
+		var/datum/db_query/query1 = SSdbcore.NewQuery("SELECT ckey, job FROM erro_ban WHERE bantype = 'JOB_TEMPBAN' AND isnull(unbanned) AND expiration_time > Now()") //CHOMPEdit TGSQL
 		query1.Execute()
 
 		while(query1.NextRow())

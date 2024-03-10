@@ -1,11 +1,12 @@
-import { toFixed, round } from 'common/math';
+import { round, toFixed } from 'common/math';
+
 import { useBackend } from '../backend';
 import { Box, Button, LabeledList, NumberInput, Section } from '../components';
 import { RADIO_CHANNELS } from '../constants';
 import { Window } from '../layouts';
 
-export const Radio = (props, context) => {
-  const { act, data } = useBackend(context);
+export const Radio = (props) => {
+  const { act, data } = useBackend();
   const {
     rawfreq,
     minFrequency,
@@ -22,7 +23,7 @@ export const Radio = (props, context) => {
   } = data;
 
   const tunedChannel = RADIO_CHANNELS.find(
-    (channel) => channel.freq === Number(rawfreq)
+    (channel) => channel.freq === Number(rawfreq),
   );
 
   // Calculate window height
@@ -40,7 +41,8 @@ export const Radio = (props, context) => {
       width={310}
       height={height}
       resizable
-      theme={useSyndMode ? 'syndicate' : ''}>
+      theme={useSyndMode ? 'syndicate' : ''}
+    >
       <Window.Content>
         <Section>
           <LabeledList>
@@ -116,48 +118,49 @@ export const Radio = (props, context) => {
             {!chan_list
               ? null
               : chan_list.map((channel) => {
-                const channeldata = RADIO_CHANNELS.find(
-                  (c) => c.freq === Number(channel.freq)
-                );
-                let color = 'default';
-                if (channeldata) {
-                  color = channeldata.color;
-                }
-                return (
-                  <LabeledList.Item
-                    key={channel.chan}
-                    label={channel.display_name}
-                    labelColor={color}
-                    textAlign="right">
-                    {channel.secure_channel && subspace ? (
-                      <Button
-                        icon={
-                          !channel.sec_channel_listen
-                            ? 'check-square-o'
-                            : 'square-o'
-                        }
-                        selected={!channel.sec_channel_listen}
-                        content={!channel.sec_channel_listen ? 'On' : 'Off'}
-                        onClick={() =>
-                          act('channel', {
-                            channel: channel.chan,
-                          })
-                        }
-                      />
-                    ) : (
-                      <Button
-                        content="Switch"
-                        selected={channel.chan === rawfreq}
-                        onClick={() =>
-                          act('specFreq', {
-                            channel: channel.chan,
-                          })
-                        }
-                      />
-                    )}
-                  </LabeledList.Item>
-                );
-              })}
+                  const channeldata = RADIO_CHANNELS.find(
+                    (c) => c.freq === Number(channel.freq),
+                  );
+                  let color = 'default';
+                  if (channeldata) {
+                    color = channeldata.color;
+                  }
+                  return (
+                    <LabeledList.Item
+                      key={channel.chan}
+                      label={channel.display_name}
+                      labelColor={color}
+                      textAlign="right"
+                    >
+                      {channel.secure_channel && subspace ? (
+                        <Button
+                          icon={
+                            !channel.sec_channel_listen
+                              ? 'check-square-o'
+                              : 'square-o'
+                          }
+                          selected={!channel.sec_channel_listen}
+                          content={!channel.sec_channel_listen ? 'On' : 'Off'}
+                          onClick={() =>
+                            act('channel', {
+                              channel: channel.chan,
+                            })
+                          }
+                        />
+                      ) : (
+                        <Button
+                          content="Switch"
+                          selected={channel.chan === rawfreq}
+                          onClick={() =>
+                            act('specFreq', {
+                              channel: channel.chan,
+                            })
+                          }
+                        />
+                      )}
+                    </LabeledList.Item>
+                  );
+                })}
           </LabeledList>
         </Section>
       </Window.Content>

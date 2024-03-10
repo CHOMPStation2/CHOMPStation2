@@ -1,7 +1,7 @@
 //Putting all the wolfbrigade stuff here because stupidop armor
 /obj/item/clothing/suit/armor/wolfbrigade
 	name = "Protect Gear chestpiece"
-	desc = "Die Wölfe sind geschützt"
+	desc = "Die WÃ¶lfe sind geschÃ¼tzt"
 	icon = 'icons/obj/clothing/wolfbrigade.dmi'
 	icon_override = 'icons/obj/clothing/wolfbrigade.dmi'
 	icon_state = "wbsuit"
@@ -12,7 +12,7 @@
 
 /obj/item/clothing/suit/storage/armor/wolfbrigade2
 	name = "Protect Gear chestpiece mod"
-	desc = "Die Wölfe können mehr tragen"
+	desc = "Die WÃ¶lfe kÃ¶nnen mehr tragen"
 	icon = 'icons/obj/clothing/wolfbrigade.dmi'
 	icon_override = 'icons/obj/clothing/wolfbrigade.dmi'
 	icon_state = "wbsuit2"
@@ -24,7 +24,7 @@
 
 /obj/item/clothing/mask/gas/wolfbrigade
 	name = "Protect Gear mask"
-	desc = "Die Wölfe können atmen"
+	desc = "Die WÃ¶lfe kÃ¶nnen atmen"
 	icon = 'icons/obj/clothing/wolfbrigade.dmi'
 	icon_override = 'icons/obj/clothing/wolfbrigade.dmi'
 	icon_state = "wbmask-mob"
@@ -35,7 +35,7 @@
 
 /obj/item/clothing/head/helmet/wolfbrigade
 	name = "Protect Gear helmet"
-	desc = "Die Wölfe haben Köpfe aus Eisen"
+	desc = "Die WÃ¶lfe haben KÃ¶pfe aus Eisen"
 	icon = 'icons/obj/clothing/wolfbrigade.dmi'
 	icon_override = 'icons/obj/clothing/wolfbrigade.dmi'
 	icon_state = "wbhelmet"
@@ -44,7 +44,7 @@
 
 /obj/item/clothing/shoes/combat/wolfbrigade
 	name = "Protect Gear boots"
-	desc = "Die Wölfe können nicht ausrutschen"
+	desc = "Die WÃ¶lfe kÃ¶nnen nicht ausrutschen"
 	icon = 'icons/obj/clothing/wolfbrigade.dmi'
 	icon_override = 'icons/obj/clothing/wolfbrigade.dmi'
 	icon_state = "wbboots-mob"
@@ -60,8 +60,8 @@
 
 /obj/item/clothing/gloves/arm_guard/combat/wolfbrigade
 	name = "Protect Gear armguards"
-	desc = "DDie Wölfe haben scharfe krallen" // 2 edgy
+	desc = "Die WÃ¶lfe haben scharfe krallen" // 2 edgy
 
 /obj/item/clothing/under/acj/wolfbrigade //Because never OP enough when you want to adminbuse
 	name = "Kerberos uniform"
-	desc = "Fürchte die Wölfe"
+	desc = "FÃ¼rchte die WÃ¶lfe"

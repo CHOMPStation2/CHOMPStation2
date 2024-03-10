@@ -7226,9 +7226,6 @@
 	},
 /turf/simulated/floor/cult,
 /area/vr/powered/cult)
-"ixP" = (
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/vr/powered/dungeon)
 "ixS" = (
 /obj/structure/bed/chair/comfy/brown{
 	dir = 8
@@ -32176,7 +32173,7 @@ hAl
 kLz
 wsS
 efe
-ixP
+dnC
 dnC
 vPw
 fCE

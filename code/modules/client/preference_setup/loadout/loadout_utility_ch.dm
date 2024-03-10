@@ -109,13 +109,13 @@
 	cost = 3
 
 /datum/gear/utility/saxophone
-	display_name = "Recorder"
+	display_name = "Saxophone"
 	description = "Another lovely intrument to serenade the crew"
 	path = /obj/item/instrument/saxophone
 	cost = 3
 
 /datum/gear/utility/trombone
-	display_name = "Recorder"
+	display_name = "Trombone"
 	description = "A trombone"
 	path = /obj/item/instrument/trombone
 	cost = 3

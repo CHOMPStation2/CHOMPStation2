@@ -1,6 +1,6 @@
 
 /obj/mecha/combat/gorilla
-	desc = "<b><font color='red'>BLITZKRIEEEEEEEG!</font></b>"
+	desc = span_red("<b><BLITZKRIEEEEEEEG!</b>")
 	name = "Sd.Kfz. 269 Mechakampfwagen Gorilla Ausf. A"
 	icon = 'icons/mecha/AxisMech.dmi'
 	icon_state = "pzrmech"

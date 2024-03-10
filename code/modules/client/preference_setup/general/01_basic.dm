@@ -25,6 +25,11 @@
 	S["OOC_Notes"]				>> pref.metadata
 	S["OOC_Notes_Likes"]		>> pref.metadata_likes
 	S["OOC_Notes_Disikes"]		>> pref.metadata_dislikes
+	//CHOMPEdit Start
+	S["OOC_Notes_Maybes"]		>> pref.metadata_maybes
+	S["OOC_Notes_Favs"]			>> pref.metadata_favs
+	S["OOC_Notes_System"]		>> pref.matadata_ooc_style
+	//CHOMPEdit End
 
 /datum/category_item/player_setup_item/general/basic/save_character(var/savefile/S)
 	S["real_name"]				<< pref.real_name
@@ -41,6 +46,11 @@
 	S["OOC_Notes"]				<< pref.metadata
 	S["OOC_Notes_Likes"]		<< pref.metadata_likes
 	S["OOC_Notes_Disikes"]		<< pref.metadata_dislikes
+	//CHOMPEdit Start
+	S["OOC_Notes_Favs"]			<< pref.metadata_favs
+	S["OOC_Notes_Maybes"]		<< pref.metadata_maybes
+	S["OOC_Notes_System"]		<< pref.matadata_ooc_style
+	//CHOMPEdit End
 
 /datum/category_item/player_setup_item/general/basic/sanitize_character()
 	pref.age                = sanitize_integer(pref.age, get_min_age(), get_max_age(), initial(pref.age))
@@ -94,7 +104,10 @@
 	. += "<b>Age:</b> <a href='?src=\ref[src];age=1'>[pref.age]</a> <b>Birthday:</b> <a href='?src=\ref[src];bday_month=1'>[pref.bday_month]</a><b>/</b><a href='?src=\ref[src];bday_day=1'>[pref.bday_day]</a> - <b>Announce?:</b> <a href='?src=\ref[src];bday_announce=1'>[pref.bday_announce ? "Yes" : "Disabled"]</a><br>" //ChompEDIT - DISABLE the announcement
 	. += "<b>Spawn Point</b>: <a href='?src=\ref[src];spawnpoint=1'>[pref.spawnpoint]</a><br>"
 	if(config.allow_Metadata)
-		. += "<b>OOC Notes: <a href='?src=\ref[src];edit_ooc_notes=1'>Edit</a><a href='?src=\ref[src];edit_ooc_note_likes=1'>Likes</a><a href='?src=\ref[src];edit_ooc_note_dislikes=1'>Dislikes</a></b><br>"
+		//CHOMPEdit Start
+		. += "<b>OOC Notes: <a href='?src=\ref[src];edit_ooc_notes=1'>Edit</a><a href='?src=\ref[src];edit_ooc_note_favs=1'>Favs</a><a href='?src=\ref[src];edit_ooc_note_likes=1'>Likes</a><a href='?src=\ref[src];edit_ooc_note_maybes=1'>Maybes</a><a href='?src=\ref[src];edit_ooc_note_dislikes=1'>Dislikes</a></b><br>"
+		. += "Detailed field or short list system? <a href='?src=\ref[src];edit_ooc_note_style=1'>[pref.matadata_ooc_style ? "Lists" : "Fields"]</a><br><br>"
+		//CHOMPEdit End
 	. = jointext(.,null)
 
 /datum/category_item/player_setup_item/general/basic/OnTopic(var/href,var/list/href_list, var/mob/user)
@@ -231,6 +244,23 @@
 			if(new_metadata == "!clear")
 				new_metadata = ""
 			pref.metadata_dislikes = new_metadata
+	//CHOMPEdit Start
+	else if(href_list["edit_ooc_note_favs"])
+		var/new_metadata = strip_html_simple(tgui_input_text(usr, "Enter any information you'd like others to see relating to your FAVOURITE roleplay preferences. This will not be saved permanently unless you click save in the Character Setup panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(pref.metadata_favs), multiline = TRUE,  prevent_enter = TRUE))
+		if(new_metadata && CanUseTopic(user))
+			if(new_metadata == "!clear")
+				new_metadata = ""
+			pref.metadata_favs = new_metadata
+	else if(href_list["edit_ooc_note_maybes"])
+		var/new_metadata = strip_html_simple(tgui_input_text(usr, "Enter any information you'd like others to see relating to your MAYBE roleplay preferences. This will not be saved permanently unless you click save in the Character Setup panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(pref.metadata_maybes), multiline = TRUE,  prevent_enter = TRUE))
+		if(new_metadata && CanUseTopic(user))
+			if(new_metadata == "!clear")
+				new_metadata = ""
+			pref.metadata_maybes = new_metadata
+	else if(href_list["edit_ooc_note_style"])
+		pref.matadata_ooc_style = !pref.matadata_ooc_style
+		return TOPIC_REFRESH
+	//CHOMPEdit End
 	return ..()
 
 /datum/category_item/player_setup_item/general/basic/proc/get_genders()

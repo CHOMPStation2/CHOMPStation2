@@ -276,7 +276,7 @@
 					if(target.buckled)
 						target.buckled.unbuckle_mob(target, force = TRUE)
 					target.forceMove(vore_selected)
-					to_chat(target,"<span class='warning'>\The [src] quickly engulfs you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
+					to_chat(target,"<span class='vwarning'>\The [src] quickly engulfs you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
 
 /mob/living/simple_mob/protean_blob/attack_target(var/atom/A)
 	if(refactory && istype(A,/obj/item/stack/material))
@@ -383,6 +383,11 @@ var/global/list/disallowed_protean_accessories = list(
 	blob.ooc_notes = ooc_notes
 	blob.ooc_notes_likes = ooc_notes_likes
 	blob.ooc_notes_dislikes = ooc_notes_dislikes
+	//CHOMPEdit Start
+	blob.ooc_notes_favs = ooc_notes_favs
+	blob.ooc_notes_maybes = ooc_notes_maybes
+	blob.ooc_notes_style = ooc_notes_style
+	//CHOMPEdit End
 	temporary_form = blob
 
 	//Mail them to nullspace
@@ -467,6 +472,11 @@ var/global/list/disallowed_protean_accessories = list(
 	ooc_notes = blob.ooc_notes // Lets give the protean any updated notes from blob form.
 	ooc_notes_likes = blob.ooc_notes_likes
 	ooc_notes_dislikes = blob.ooc_notes_dislikes
+	//CHOMPEdit Start
+	ooc_notes_favs = blob.ooc_notes_favs
+	ooc_notes_maybes = blob.ooc_notes_maybes
+	ooc_notes_style = blob.ooc_notes_style
+	//CHOMPEdit End
 	temporary_form = null
 
 	//Transfer vore organs

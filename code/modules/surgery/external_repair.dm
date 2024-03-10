@@ -48,7 +48,7 @@
 	can_infect = 0 //The only exception here. Sweeping a scanner probably won't transfer many germs.
 
 	min_duration = 20
-	max_duration = 40
+	max_duration = 20 //CHOMPedit
 
 /datum/surgery_step/repairflesh/scan_injury/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(..())
@@ -98,8 +98,8 @@
 
 	priority = 3
 
-	min_duration = 90
-	max_duration = 120
+	min_duration = 40 //CHOMPedit
+	max_duration = 40 //CHOMPedit
 
 /datum/surgery_step/repairflesh/repair_burns/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(..())
@@ -163,8 +163,8 @@
 
 	priority = 3
 
-	min_duration = 90
-	max_duration = 120
+	min_duration = 40 //CHOMPedit
+	max_duration = 40 //CHOMPedit
 
 /datum/surgery_step/repairflesh/repair_brute/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(..())

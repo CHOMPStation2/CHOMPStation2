@@ -5598,6 +5598,12 @@
 "eDw" = (
 /turf/simulated/shuttle/wall/voidcraft/hard_corner,
 /area/shuttle/ninja)
+"eDM" = (
+/obj/machinery/gateway{
+	dir = 5
+	},
+/turf/unsimulated/floor/dark,
+/area/shadekin)
 "eDQ" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -7001,25 +7007,6 @@
 	icon_state = "steel"
 	},
 /area/centcom/main_hall)
-"gjr" = (
-/obj/machinery/door/airlock/voidcraft/vertical{
-	frequency = null;
-	id_tag = null;
-	name = "Ship External Hatch";
-	req_access = null
-	},
-/obj/machinery/door/blast/regular{
-	density = 0;
-	dir = 8;
-	icon_state = "pdoor0";
-	id = "blastninja";
-	name = "Outer Airlock";
-	opacity = 0
-	},
-/obj/effect/map_helper/airlock/door/ext_door,
-/obj/effect/map_helper/airlock/button/ext_button,
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/shuttle/ninja)
 "gjv" = (
 /obj/item/toy/plushie/box{
 	pixel_x = 5;
@@ -8299,21 +8286,6 @@
 /obj/effect/floor_decal/spline/fancy,
 /turf/simulated/floor/grass2,
 /area/shadekin)
-"hlP" = (
-/obj/machinery/access_button{
-	dir = 8;
-	name = "exterior access button";
-	pixel_x = 25;
-	pixel_y = 6
-	},
-/obj/machinery/door/airlock{
-	icon = 'icons/obj/doors/Dooruranium.dmi'
-	},
-/turf/unsimulated/floor{
-	icon_state = "plating";
-	name = "plating"
-	},
-/area/ninja_dojo/dojo)
 "hmc" = (
 /obj/structure/bed/chair,
 /turf/simulated/shuttle/floor{
@@ -8374,6 +8346,12 @@
 	icon_state = "freezerfloor"
 	},
 /area/centcom/specops)
+"hnV" = (
+/obj/machinery/computer/cryopod/gateway{
+	pixel_y = 30
+	},
+/turf/unsimulated/floor/dark,
+/area/shadekin)
 "hnX" = (
 /obj/effect/floor_decal/corner/green{
 	dir = 9
@@ -10894,6 +10872,12 @@
 /obj/structure/largecrate/animal/cat,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/merchant)
+"jzJ" = (
+/obj/machinery/gateway{
+	dir = 9
+	},
+/turf/unsimulated/floor/dark,
+/area/shadekin)
 "jAg" = (
 /obj/item/weapon/reagent_containers/food/snacks/spellburger{
 	pixel_y = 8
@@ -11287,6 +11271,13 @@
 	name = "plating"
 	},
 /area/skipjack_station)
+"jSG" = (
+/obj/machinery/gateway{
+	density = 0;
+	dir = 10
+	},
+/turf/unsimulated/floor/dark,
+/area/shadekin)
 "jSQ" = (
 /turf/unsimulated/floor{
 	dir = 5;
@@ -12305,6 +12296,12 @@
 	icon_state = "steel"
 	},
 /area/centcom/main_hall)
+"kHv" = (
+/obj/machinery/gateway{
+	dir = 4
+	},
+/turf/unsimulated/floor/dark,
+/area/shadekin)
 "kIb" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Barracks";
@@ -14724,6 +14721,31 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
+"mYr" = (
+/obj/machinery/door/airlock/voidcraft/vertical{
+	frequency = null;
+	id_tag = null;
+	name = "Ship External Hatch";
+	req_access = null
+	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 8;
+	icon_state = "pdoor0";
+	id = "blastninja";
+	name = "Outer Airlock";
+	opacity = 0
+	},
+/obj/effect/map_helper/airlock/door/ext_door,
+/obj/effect/map_helper/airlock/button/ext_button,
+/obj/machinery/access_button{
+	dir = 8;
+	name = "exterior access button";
+	pixel_x = -7;
+	pixel_y = -26
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja)
 "mZO" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/storage/firstaid/fire{
@@ -17808,6 +17830,12 @@
 /obj/structure/table/rack/holorack,
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/holodeck/source_theatre)
+"qoK" = (
+/obj/machinery/gateway{
+	dir = 8
+	},
+/turf/unsimulated/floor/dark,
+/area/shadekin)
 "qoU" = (
 /turf/simulated/floor/carpet/blucarpet,
 /area/shadekin)
@@ -18088,6 +18116,10 @@
 	},
 /turf/unsimulated/wall,
 /area/space)
+"qDH" = (
+/obj/machinery/cryopod/robot/door/gateway/quiet,
+/turf/unsimulated/floor/dark,
+/area/shadekin)
 "qGj" = (
 /obj/effect/floor_decal/rust/color_rusted{
 	dir = 5
@@ -22139,6 +22171,13 @@
 	icon_state = "vault"
 	},
 /area/centcom/specops)
+"ury" = (
+/obj/machinery/gateway{
+	density = 0;
+	dir = 6
+	},
+/turf/unsimulated/floor/dark,
+/area/shadekin)
 "urz" = (
 /obj/machinery/appliance/cooker/oven,
 /obj/effect/floor_decal/milspec/color/silver,
@@ -22381,6 +22420,12 @@
 	icon_state = "vault"
 	},
 /area/tdome)
+"uHn" = (
+/obj/machinery/gateway{
+	dir = 1
+	},
+/turf/unsimulated/floor/dark,
+/area/shadekin)
 "uHV" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 4
@@ -23790,9 +23835,6 @@
 	},
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_basketball)
-"vXr" = (
-/turf/simulated/floor/outdoors/grass/heavy,
-/area/shadekin)
 "vXY" = (
 /obj/machinery/teleport/station,
 /turf/unsimulated/floor{
@@ -25276,6 +25318,10 @@
 /obj/effect/floor_decal/milspec/color/black,
 /obj/effect/floor_decal/techfloor,
 /turf/simulated/floor/tiled/steel_dirty,
+/area/shadekin)
+"xyz" = (
+/obj/machinery/gateway,
+/turf/simulated/floor,
 /area/shadekin)
 "xyF" = (
 /obj/item/weapon/stool/padded,
@@ -31042,7 +31088,7 @@ auX
 aaa
 aaa
 gbB
-hlP
+gbB
 aaa
 auX
 auX
@@ -31299,7 +31345,7 @@ auX
 auX
 auX
 aUC
-gjr
+mYr
 aUC
 aUC
 auX
@@ -51952,7 +51998,7 @@ kyg
 oTO
 vRr
 ehg
-vXr
+vRr
 ivs
 vRr
 vRr
@@ -55052,10 +55098,10 @@ ydh
 ydh
 ydh
 rVH
-ydh
-ydh
-ydh
-ydh
+jzJ
+qoK
+jSG
+rVH
 ydh
 ydh
 ydh
@@ -55310,9 +55356,9 @@ ydh
 ydh
 ydh
 ydh
-ydh
-ydh
-ydh
+uHn
+qDH
+xyz
 ydh
 ydh
 ydh
@@ -55568,9 +55614,9 @@ ydh
 ydh
 ydh
 ydh
-ydh
-ydh
-ydh
+eDM
+kHv
+ury
 ydh
 ydh
 ydh
@@ -55826,8 +55872,8 @@ ydh
 ydh
 ydh
 ydh
-ydh
-ydh
+bMy
+hnV
 ydh
 ydh
 ydh
@@ -56083,7 +56129,7 @@ ydh
 ydh
 ydh
 ydh
-ydh
+rVH
 ydh
 ydh
 ydh

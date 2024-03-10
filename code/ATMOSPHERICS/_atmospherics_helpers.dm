@@ -117,6 +117,11 @@
 	var/list/specific_power_gas = list()	//the power required to remove one mole of pure gas, for each gas type
 	for (var/g in filtering)
 		if (source.gas[g] < MINIMUM_MOLES_TO_FILTER)
+			//ChompEDIT Start - scrub the remainding trace
+			if (source.gas[g] > 0.0)
+				sink.adjust_gas(g, source.gas[g], update=0)
+				source.gas -= g
+			//ChompEDIT End
 			continue
 
 		var/specific_power = calculate_specific_power_gas(g, source, sink)/ATMOS_FILTER_EFFICIENCY
@@ -439,7 +444,7 @@
 		var/sink_heat_capacity = sink.heat_capacity()
 		var/transfer_heat_capacity = source.heat_capacity()*estimate_moles/source_total_moles
 		air_temperature = (sink.temperature*sink_heat_capacity  + source.temperature*transfer_heat_capacity) / (sink_heat_capacity + transfer_heat_capacity)
-	
+
 	//get the number of moles that would have to be transfered to bring sink to the target pressure
 	return pressure_delta*output_volume/(air_temperature * R_IDEAL_GAS_EQUATION)
 

@@ -9,6 +9,9 @@
 	var/trash_catching = FALSE				//Toggle for trash throw vore.
 	var/liquidbelly_visuals = TRUE			//Toggle for liquidbelly level visuals.
 
+	var/passtable_reset		// For crawling
+	var/passtable_crawl_checked = FALSE
+
 	// CHOMP vore icons refactor (Now on living)
 	var/vore_icons = 0					// Bitfield for which fields we have vore icons for.
 	var/vore_eyes = FALSE				// For mobs with fullness specific eye overlays.
@@ -70,7 +73,7 @@
 		var/total_volume = B.reagents.total_volume
 		vore_organs_reagents += total_volume
 
-		if(B.vorefootsteps_sounds == TRUE && highest_vol < total_volume)
+		if(B.show_liquids && B.vorefootsteps_sounds && highest_vol < total_volume)
 			highest_vol = total_volume
 
 	if(highest_vol < 20)	//For now the volume will be off if less than 20 units of reagent are in vorebellies
@@ -234,7 +237,7 @@
 				choices += rc
 			var/obj/item/weapon/reagent_containers/T = input(user,"Choose what to transfer to","Select Target") as null|anything in choices
 			if(!T)
-			 return FALSE
+				return FALSE
 			if(!Adjacent(T) || !Adjacent(TG))
 				return //No long distance transfer
 

@@ -1,11 +1,12 @@
 import { round } from 'common/math';
+
 import { useBackend } from '../backend';
 import { Button, LabeledList, NumberInput, Section } from '../components';
-import { Window } from '../layouts';
 import { formatTime } from '../format';
+import { Window } from '../layouts';
 
-export const AssemblyProx = (props, context) => {
-  const { act, data } = useBackend(context);
+export const AssemblyProx = (props) => {
+  const { act, data } = useBackend();
   const { timing, time, range, maxRange, scanning } = data;
   return (
     <Window>
@@ -18,10 +19,12 @@ export const AssemblyProx = (props, context) => {
                 <Button
                   icon="stopwatch"
                   selected={timing}
-                  onClick={() => act('timing')}>
+                  onClick={() => act('timing')}
+                >
                   {timing ? 'Counting Down' : 'Disabled'}
                 </Button>
-              }>
+              }
+            >
               <NumberInput
                 animated
                 fluid
@@ -49,7 +52,8 @@ export const AssemblyProx = (props, context) => {
                 mr={1}
                 icon={scanning ? 'lock' : 'lock-open'}
                 selected={scanning}
-                onClick={() => act('scanning')}>
+                onClick={() => act('scanning')}
+              >
                 {scanning ? 'ARMED' : 'Unarmed'}
               </Button>
               Movement sensor is active when armed!

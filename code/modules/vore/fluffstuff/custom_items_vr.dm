@@ -673,6 +673,7 @@
 	item_state = "temphypo"
 	icon_state = "temphypo"
 
+/* //ChompREMOVE - disabled CKEY locked items
 //WickedTempest: Chakat Tempest
 /obj/item/weapon/storage/backpack/saddlebag/tempest
 	name = "Tempest's Saddlebags"
@@ -734,6 +735,7 @@
 			M.update_inv_back()
 		set_light(2, 1, newlight)
 		ambulance_last_switch = world.time
+*/ //ChompREMOVE End
 
 /datum/looping_sound/ambulance
 	mid_sounds = list('sound/items/amulanceweeoo.ogg'=1)
@@ -1529,7 +1531,7 @@ End CHOMP Removal*/
 	if(stored_item && opened && !searching)
 		searching = TRUE
 		if(do_after(user, 10))
-			to_chat(user, "You find \icon[stored_item] [stored_item] in [src]!")
+			to_chat(user, "You find [icon2html(stored_item, user.client)] [stored_item] in [src]!")
 			stored_item.forceMove(get_turf(src))
 			stored_item = null
 			searching = FALSE

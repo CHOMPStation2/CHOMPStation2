@@ -1,12 +1,22 @@
 import { sortBy } from 'common/collections';
 import { capitalize, decodeHtmlEntities } from 'common/string';
-import { Fragment } from 'inferno';
-import { useBackend, useLocalState } from '../backend';
-import { Box, Button, ByondUi, Flex, LabeledList, Section, Tabs, ColorBox } from '../components';
+import { useState } from 'react';
+
+import { useBackend } from '../backend';
+import {
+  Box,
+  Button,
+  ByondUi,
+  ColorBox,
+  Flex,
+  LabeledList,
+  Section,
+  Tabs,
+} from '../components';
 import { Window } from '../layouts';
 
-export const AppearanceChanger = (props, context) => {
-  const { act, config, data } = useBackend(context);
+export const AppearanceChanger = (props) => {
+  const { act, config, data } = useBackend();
 
   const {
     name,
@@ -53,11 +63,7 @@ export const AppearanceChanger = (props, context) => {
     firstAccesibleTab = 5;
   }
 
-  const [tabIndex, setTabIndex] = useLocalState(
-    context,
-    'tabIndex',
-    firstAccesibleTab
-  );
+  const [tabIndex, setTabIndex] = useState(firstAccesibleTab);
 
   return (
     <Window width={700} height={650} title={decodeHtmlEntities(title)}>
@@ -69,44 +75,52 @@ export const AppearanceChanger = (props, context) => {
                 <LabeledList.Item label="Name">{name}</LabeledList.Item>
                 <LabeledList.Item
                   label="Species"
-                  color={!change_race ? 'grey' : null}>
+                  color={!change_race ? 'grey' : null}
+                >
                   {specimen}
                 </LabeledList.Item>
                 <LabeledList.Item
                   label="Biological Sex"
-                  color={!change_gender ? 'grey' : null}>
+                  color={!change_gender ? 'grey' : null}
+                >
                   {gender ? capitalize(gender) : 'Not Set'}
                 </LabeledList.Item>
                 <LabeledList.Item
                   label="Gender Identity"
-                  color={!change_color ? 'grey' : null}>
+                  color={!change_color ? 'grey' : null}
+                >
                   {gender_id ? capitalize(gender_id) : 'Not Set'}
                 </LabeledList.Item>
                 <LabeledList.Item
                   label="Hair Style"
-                  color={!change_hair ? 'grey' : null}>
+                  color={!change_hair ? 'grey' : null}
+                >
                   {hair_style ? capitalize(hair_style) : 'Not Set'}
                 </LabeledList.Item>
                 <LabeledList.Item
                   label="Facial Hair Style"
-                  color={!change_facial_hair ? 'grey' : null}>
+                  color={!change_facial_hair ? 'grey' : null}
+                >
                   {facial_hair_style
                     ? capitalize(facial_hair_style)
                     : 'Not Set'}
                 </LabeledList.Item>
                 <LabeledList.Item
                   label="Ear Style"
-                  color={!change_hair ? 'grey' : null}>
+                  color={!change_hair ? 'grey' : null}
+                >
                   {ear_style ? capitalize(ear_style) : 'Not Set'}
                 </LabeledList.Item>
                 <LabeledList.Item
                   label="Tail Style"
-                  color={!change_hair ? 'grey' : null}>
+                  color={!change_hair ? 'grey' : null}
+                >
                   {tail_style ? capitalize(tail_style) : 'Not Set'}
                 </LabeledList.Item>
                 <LabeledList.Item
                   label="Wing Style"
-                  color={!change_hair ? 'grey' : null}>
+                  color={!change_hair ? 'grey' : null}
+                >
                   {wing_style ? capitalize(wing_style) : 'Not Set'}
                 </LabeledList.Item>
               </LabeledList>
@@ -142,33 +156,38 @@ export const AppearanceChanger = (props, context) => {
             </Tabs.Tab>
           ) : null}
           {change_hair ? (
-            <Fragment>
+            <>
               <Tabs.Tab
                 selected={tabIndex === 3}
-                onClick={() => setTabIndex(3)}>
+                onClick={() => setTabIndex(3)}
+              >
                 Hair
               </Tabs.Tab>
               <Tabs.Tab
                 selected={tabIndex === 5}
-                onClick={() => setTabIndex(5)}>
+                onClick={() => setTabIndex(5)}
+              >
                 Ear
               </Tabs.Tab>
               <Tabs.Tab
                 selected={tabIndex === 6}
-                onClick={() => setTabIndex(6)}>
+                onClick={() => setTabIndex(6)}
+              >
                 Tail
               </Tabs.Tab>
               <Tabs.Tab
                 selected={tabIndex === 7}
-                onClick={() => setTabIndex(7)}>
+                onClick={() => setTabIndex(7)}
+              >
                 Wing
               </Tabs.Tab>
               <Tabs.Tab
                 selected={tabIndex === 8}
-                onClick={() => setTabIndex(8)}>
+                onClick={() => setTabIndex(8)}
+              >
                 Markings
               </Tabs.Tab>
-            </Fragment>
+            </>
           ) : null}
           {change_facial_hair ? (
             <Tabs.Tab selected={tabIndex === 4} onClick={() => setTabIndex(4)}>
@@ -194,8 +213,8 @@ export const AppearanceChanger = (props, context) => {
   );
 };
 
-const AppearanceChangerSpecies = (props, context) => {
-  const { act, data } = useBackend(context);
+const AppearanceChangerSpecies = (props) => {
+  const { act, data } = useBackend();
   const { species, specimen } = data;
 
   const sortedSpecies = sortBy((val) => val.specimen)(species || []);
@@ -214,8 +233,8 @@ const AppearanceChangerSpecies = (props, context) => {
   );
 };
 
-const AppearanceChangerGender = (props, context) => {
-  const { act, data } = useBackend(context);
+const AppearanceChangerGender = (props) => {
+  const { act, data } = useBackend();
 
   const { gender, gender_id, genders, id_genders } = data;
 
@@ -228,7 +247,7 @@ const AppearanceChangerGender = (props, context) => {
               key={g.gender_key}
               selected={g.gender_key === gender}
               content={g.gender_name}
-              onClick={() => act('gender', { 'gender': g.gender_key })}
+              onClick={() => act('gender', { gender: g.gender_key })}
             />
           ))}
         </LabeledList.Item>
@@ -238,7 +257,7 @@ const AppearanceChangerGender = (props, context) => {
               key={g.gender_key}
               selected={g.gender_key === gender_id}
               content={g.gender_name}
-              onClick={() => act('gender_id', { 'gender_id': g.gender_key })}
+              onClick={() => act('gender_id', { gender_id: g.gender_key })}
             />
           ))}
         </LabeledList.Item>
@@ -247,8 +266,8 @@ const AppearanceChangerGender = (props, context) => {
   );
 };
 
-const AppearanceChangerColors = (props, context) => {
-  const { act, data } = useBackend(context);
+const AppearanceChangerColors = (props) => {
+  const { act, data } = useBackend();
 
   const {
     change_eye_color,
@@ -291,7 +310,7 @@ const AppearanceChangerColors = (props, context) => {
         </Box>
       ) : null}
       {change_hair_color ? (
-        <Fragment>
+        <>
           <Box>
             <ColorBox color={hair_color} mr={1} />
             <Button
@@ -341,7 +360,7 @@ const AppearanceChangerColors = (props, context) => {
               onClick={() => act('wing2_color')}
             />
           </Box>
-        </Fragment>
+        </>
       ) : null}
       {change_facial_hair_color ? (
         <Box>
@@ -356,8 +375,8 @@ const AppearanceChangerColors = (props, context) => {
   );
 };
 
-const AppearanceChangerHair = (props, context) => {
-  const { act, data } = useBackend(context);
+const AppearanceChangerHair = (props) => {
+  const { act, data } = useBackend();
 
   const { hair_style, hair_styles } = data;
 
@@ -375,8 +394,8 @@ const AppearanceChangerHair = (props, context) => {
   );
 };
 
-const AppearanceChangerFacialHair = (props, context) => {
-  const { act, data } = useBackend(context);
+const AppearanceChangerFacialHair = (props) => {
+  const { act, data } = useBackend();
 
   const { facial_hair_style, facial_hair_styles } = data;
 
@@ -396,8 +415,8 @@ const AppearanceChangerFacialHair = (props, context) => {
   );
 };
 
-const AppearanceChangerEars = (props, context) => {
-  const { act, data } = useBackend(context);
+const AppearanceChangerEars = (props) => {
+  const { act, data } = useBackend();
 
   const { ear_style, ear_styles } = data;
 
@@ -420,8 +439,8 @@ const AppearanceChangerEars = (props, context) => {
   );
 };
 
-const AppearanceChangerTails = (props, context) => {
-  const { act, data } = useBackend(context);
+const AppearanceChangerTails = (props) => {
+  const { act, data } = useBackend();
 
   const { tail_style, tail_styles } = data;
 
@@ -444,8 +463,8 @@ const AppearanceChangerTails = (props, context) => {
   );
 };
 
-const AppearanceChangerWings = (props, context) => {
-  const { act, data } = useBackend(context);
+const AppearanceChangerWings = (props) => {
+  const { act, data } = useBackend();
 
   const { wing_style, wing_styles } = data;
 
@@ -468,8 +487,8 @@ const AppearanceChangerWings = (props, context) => {
   );
 };
 
-const AppearanceChangerMarkings = (props, context) => {
-  const { act, data } = useBackend(context);
+const AppearanceChangerMarkings = (props) => {
+  const { act, data } = useBackend();
 
   const { markings } = data;
 

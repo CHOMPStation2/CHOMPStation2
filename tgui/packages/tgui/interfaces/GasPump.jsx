@@ -1,15 +1,22 @@
 import { useBackend } from '../backend';
-import { Button, LabeledList, ProgressBar, Section, LabeledControls, AnimatedNumber } from '../components';
+import {
+  AnimatedNumber,
+  Button,
+  LabeledControls,
+  LabeledList,
+  ProgressBar,
+  Section,
+} from '../components';
 import { Window } from '../layouts';
 
-export const GasPump = (props, context) => {
-  const { act, data } = useBackend(context);
+export const GasPump = (props) => {
+  const { act, data } = useBackend();
 
   const { on, pressure_set, last_flow_rate, last_power_draw, max_power_draw } =
     data;
 
   return (
-    <Window width={470} height={290} resizable>
+    <Window width={470} height={290}>
       <Window.Content>
         <Section title="Status">
           <LabeledList>
@@ -23,7 +30,8 @@ export const GasPump = (props, context) => {
                 maxValue={max_power_draw}
                 color={
                   last_power_draw < max_power_draw - 5 ? 'good' : 'average'
-                }>
+                }
+              >
                 {last_power_draw + ' W'}
               </ProgressBar>
             </LabeledList.Item>
@@ -38,7 +46,8 @@ export const GasPump = (props, context) => {
               selected={on}
               onClick={() => act('power')}
             />
-          }>
+          }
+        >
           <LabeledControls>
             <LabeledControls.Item>
               <Button

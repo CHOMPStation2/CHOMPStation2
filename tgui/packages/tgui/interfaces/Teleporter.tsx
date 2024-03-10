@@ -1,4 +1,5 @@
 import { BooleanLike } from 'common/react';
+
 import { useBackend } from '../backend';
 import { Button, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
@@ -11,8 +12,8 @@ type Data = {
   teleporter_on: BooleanLike;
 };
 
-export const Teleporter = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const Teleporter = (props) => {
+  const { act, data } = useBackend<Data>();
 
   const {
     locked_name,
@@ -23,7 +24,7 @@ export const Teleporter = (props, context) => {
   } = data;
 
   return (
-    <Window width={300} height={200} resizable>
+    <Window width={300} height={200}>
       <Window.Content>
         <Section>
           <LabeledList>

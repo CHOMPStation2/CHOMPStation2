@@ -306,6 +306,18 @@ var/list/gamemode_cache = list()
 
 	var/static/invoke_youtubedl = null
 
+	var/static/asset_transport
+
+	var/static/cache_assets = FALSE
+
+	var/static/save_spritesheets = FALSE
+
+	var/static/asset_simple_preload = FALSE
+
+	var/static/asset_cdn_webroot
+
+	var/static/asset_cdn_url
+
 /datum/configuration/New()
 	var/list/L = subtypesof(/datum/game_mode)
 	for (var/T in L)
@@ -987,6 +999,24 @@ var/list/gamemode_cache = list()
 				if("invoke_youtubedl")
 					config.invoke_youtubedl = value
 
+				if("asset_transport")
+					config.asset_transport = value
+
+				if("cache_assets")
+					config.cache_assets = TRUE
+
+				if("save_spritesheets")
+					config.save_spritesheets = TRUE
+
+				if("asset_simple_preload")
+					config.asset_simple_preload = TRUE
+
+				if("asset_cdn_webroot")
+					config.asset_cdn_webroot = value
+
+				if("asset_cdn_url")
+					config.asset_cdn_url = value
+
 				else
 					log_misc("Unknown setting in configuration: '[name]'")
 
@@ -1165,6 +1195,8 @@ var/list/gamemode_cache = list()
 	return runnable_modes
 
 /datum/configuration/proc/post_load()
+	SSdbcore.InitializeRound() // CHOMPEdit
+
 	//apply a default value to config.python_path, if needed
 	if (!config.python_path)
 		if(world.system_type == UNIX)

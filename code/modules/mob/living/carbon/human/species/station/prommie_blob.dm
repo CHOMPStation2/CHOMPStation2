@@ -83,8 +83,7 @@
 	if(stored_blob)
 		stored_blob.drop_l_hand()
 		stored_blob.drop_r_hand()
-		stored_blob = null
-		qdel(stored_blob)
+		QDEL_NULL(stored_blob)
 	return ..()
 
 /mob/living/simple_mob/slime/promethean/Stat()
@@ -412,6 +411,11 @@
 	blob.ooc_notes = ooc_notes
 	blob.ooc_notes_likes = ooc_notes_likes
 	blob.ooc_notes_dislikes = ooc_notes_dislikes
+	//CHOMPEdit Start
+	blob.ooc_notes_favs = ooc_notes_favs
+	blob.ooc_notes_maybes = ooc_notes_maybes
+	blob.ooc_notes_style = ooc_notes_style
+	//CHOMPEdit End
 	blob.transforming = FALSE
 	blob.name = name
 	blob.real_name = real_name //CHOMPEdit
@@ -501,6 +505,11 @@
 	ooc_notes = blob.ooc_notes // Updating notes incase they change them in blob form.
 	ooc_notes_likes = blob.ooc_notes_likes
 	ooc_notes_dislikes = blob.ooc_notes_dislikes
+	//CHOMPEdit Start
+	ooc_notes_favs = blob.ooc_notes_favs
+	ooc_notes_maybes = blob.ooc_notes_maybes
+	ooc_notes_style = blob.ooc_notes_style
+	//CHOMPEdit End
 	transforming = FALSE
 	blob.name = "Promethean Blob"
 	var/obj/item/hat = blob.hat

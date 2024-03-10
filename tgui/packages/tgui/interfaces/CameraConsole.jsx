@@ -2,7 +2,9 @@ import { filter, sortBy } from 'common/collections';
 import { flow } from 'common/fp';
 import { classes } from 'common/react';
 import { createSearch } from 'common/string';
-import { useBackend, useLocalState } from '../backend';
+import { useState } from 'react';
+
+import { useBackend } from '../backend';
 import { Button, ByondUi, Dropdown, Flex, Input, Section } from '../components';
 import { Window } from '../layouts';
 
@@ -15,7 +17,7 @@ export const prevNextCamera = (cameras, activeCamera) => {
     return [];
   }
   const index = cameras.findIndex(
-    (camera) => camera.name === activeCamera.name
+    (camera) => camera.name === activeCamera.name,
   );
   return [cameras[index - 1]?.name, cameras[index + 1]?.name];
 };
@@ -40,13 +42,13 @@ export const selectCameras = (cameras, searchText = '', networkFilter = '') => {
   ])(cameras);
 };
 
-export const CameraConsole = (props, context) => {
-  const { act, data } = useBackend(context);
+export const CameraConsole = (props) => {
+  const { act, data } = useBackend();
   const { mapRef, activeCamera } = data;
   const cameras = selectCameras(data.cameras);
   const [prevCameraName, nextCameraName] = prevNextCamera(
     cameras,
-    activeCamera
+    activeCamera,
   );
   return (
     <Window width={870} height={708}>
@@ -98,14 +100,10 @@ export const CameraConsole = (props, context) => {
   );
 };
 
-export const CameraConsoleContent = (props, context) => {
-  const { act, data } = useBackend(context);
-  const [searchText, setSearchText] = useLocalState(context, 'searchText', '');
-  const [networkFilter, setNetworkFilter] = useLocalState(
-    context,
-    'networkFilter',
-    ''
-  );
+export const CameraConsoleContent = (props) => {
+  const { act, data } = useBackend();
+  const [searchText, setSearchText] = useState('');
+  const [networkFilter, setNetworkFilter] = useState('');
   const { activeCamera, allNetworks } = data;
   allNetworks.sort();
   const cameras = selectCameras(data.cameras, searchText, networkFilter);
@@ -121,13 +119,31 @@ export const CameraConsoleContent = (props, context) => {
         />
       </Flex.Item>
       <Flex.Item>
-        <Dropdown
-          mb={1}
-          width="177px"
-          displayText={networkFilter || 'No Filter'}
-          options={allNetworks}
-          onSelected={(value) => setNetworkFilter(value)}
-        />
+        <Flex>
+          <Flex.Item>
+            <Dropdown
+              mb={1}
+              width={networkFilter ? '155px' : '177px'}
+              displayText={networkFilter || 'No Filter'}
+              options={allNetworks}
+              onSelected={(value) => setNetworkFilter(value)}
+            />
+          </Flex.Item>
+          {networkFilter ? (
+            <Flex.Item>
+              <Button
+                width="22px"
+                icon="undo"
+                color="red"
+                onClick={() => {
+                  setNetworkFilter('');
+                }}
+              />
+            </Flex.Item>
+          ) : (
+            ''
+          )}
+        </Flex>
       </Flex.Item>
       <Flex.Item height="100%">
         <Section fill scrollable>
@@ -150,7 +166,8 @@ export const CameraConsoleContent = (props, context) => {
                 act('switch_camera', {
                   name: camera.name,
                 })
-              }>
+              }
+            >
               {camera.name}
             </div>
           ))}

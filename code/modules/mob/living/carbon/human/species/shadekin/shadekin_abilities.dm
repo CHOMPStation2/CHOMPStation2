@@ -41,6 +41,7 @@
 	verbpath = /mob/living/carbon/human/proc/phase_shift
 	ability_icon_state = "tech_passwall"
 
+/* //ChompEDIT - Moved to modular_chomp
 /mob/living/carbon/human/proc/phase_shift()
 	set name = "Phase Shift (100)"
 	set desc = "Shift yourself out of alignment with realspace to travel quickly to different areas."
@@ -178,13 +179,18 @@
 		remove_modifiers_of_type(/datum/modifier/shadekin_phase) //CHOMPEdit - Shadekin probably shouldn't be hit while phasing
 
 		//Potential phase-in vore
-		if(can_be_drop_pred) //Toggleable in vore panel
+		if(can_be_drop_pred || can_be_drop_prey) //Toggleable in vore panel
 			var/list/potentials = living_mobs(0)
 			if(potentials.len)
 				var/mob/living/target = pick(potentials)
-				if(istype(target) && target.devourable && target.can_be_drop_prey && vore_selected)
+				if(can_be_drop_pred && istype(target) && target.devourable && target.can_be_drop_prey && target.phase_vore && vore_selected && phase_vore)
 					target.forceMove(vore_selected)
-					to_chat(target,"<span class='warning'>\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
+					to_chat(target, "<span class='vwarning'>\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
+					to_chat(src, "<span class='vwarning'>You phase around [target], [vore_selected.vore_verb]ing them into your [vore_selected.name]!</span>")
+				else if(can_be_drop_prey && istype(target) && devourable && target.can_be_drop_pred && target.phase_vore && target.vore_selected && phase_vore)
+					forceMove(target.vore_selected)
+					to_chat(target, "<span class='vwarning'>\The [src] phases into you, [target.vore_selected.vore_verb]ing them into your [target.vore_selected.name]!</span>")
+					to_chat(src, "<span class='vwarning'>You phase into [target], having them [target.vore_selected.vore_verb] you into their [target.vore_selected.name]!</span>")
 
 		ability_flags &= ~AB_PHASE_SHIFTING
 
@@ -199,12 +205,12 @@
 		//CHOMPEdit end
 
 		//CHOMPEdit start - Add gentle phasing
-		if(SK.phase_gentle) // gentle case: No light destruction. Flicker in 4 tile radius for 3s. Weaken for 3sec after
+		if(SK.phase_gentle) // gentle case: No light destruction. Flicker in 4 tile radius once.
 			for(var/obj/machinery/light/L in machines)
 				if(L.z != z || get_dist(src,L) > 4)
 					continue
-				L.flicker(3)
-			src.Stun(3)
+				L.flicker(1)
+			src.Stun(1)
 		else
 			//CHOMPEdit end
 			for(var/obj/machinery/light/L in machines)
@@ -259,26 +265,7 @@
 		force_max_speed = TRUE
 		ability_flags &= ~AB_PHASE_SHIFTING
 	SK.doing_phase = FALSE //CHOMPEdit - Prevent bugs when spamming phase button
-
-//CHOMPEdit start - gentle phasing for carbonkin
-//toggle proc for toggling gentle/normal phasing
-/mob/living/carbon/human/proc/phase_strength_toggle()
-	set name = "Toggle Phase Strength"
-	set desc = "Toggle strength of phase. Gentle but slower, or faster but destructive to lights."
-	set category = "Shadekin"
-
-	var/datum/species/shadekin/SK = species
-	if(!istype(SK))
-		to_chat(src, "<span class='warning'>Only a shadekin can use that!</span>")
-		return FALSE
-
-	if(SK.phase_gentle)
-		to_chat(src, "<span class='notice'>Phasing toggled to Normal. You may damage lights.</span>")
-		SK.phase_gentle = 0
-	else
-		to_chat(src, "<span class='notice'>Phasing toggled to Gentle. You won't damage lights, but concentrating on that incurs a short stun.</span>")
-		SK.phase_gentle = 1
-//CHOMPEdit End
+*/ //ChompEDIT END - moved to modular_chomp
 
 //CHOMPEdit Start - Toggle to Nutrition conversion
 /mob/living/carbon/human/proc/nutrition_conversion_toggle()
@@ -683,7 +670,7 @@
 		to_chat(owner, "<span class='warning'>A dark maw you deployed has triggered!</span>")
 	spawn(10)
 		var/will_vore = 1
-		if(!owner || !(target in owner) || !L.devourable || !L.can_be_drop_prey || !owner.can_be_drop_pred)
+		if(!owner || !(target in owner) || !L.devourable || !L.can_be_drop_prey || !owner.can_be_drop_pred || !L.phase_vore)
 			will_vore = 0
 		if(!src || src.gc_destroyed)
 			//We got deleted probably, do nothing more

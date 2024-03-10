@@ -35,21 +35,21 @@
 	if(!choice)
 		return
 
-	src.visible_message("<font color='red'><b>[src] moves their head next to [T]'s neck, seemingly looking for something!</b></font>")
+	src.visible_message(span_red("<b>[src] moves their head next to [T]'s neck, seemingly looking for something!</b>"))
 
 	if(do_after(src, 300, T)) //Thrirty seconds.
 		if(choice == "Aphrodisiac")
 			src.show_message("<span class='warning'>You sink your fangs into [T] and inject your aphrodisiac!</span>")
-			src.visible_message("<font color='red'>[src] sinks their fangs into [T]!</font>")
+			src.visible_message(span_red("[src] sinks their fangs into [T]!"))
 			T.bloodstr.add_reagent("succubi_aphrodisiac",100)
 			return 0
 		else if(choice == "Numbing")
 			src.show_message("<span class='warning'>You sink your fangs into [T] and inject your poison!</span>")
-			src.visible_message("<font color='red'>[src] sinks their fangs into [T]!</font>")
+			src.visible_message(span_red("[src] sinks their fangs into [T]!"))
 			T.bloodstr.add_reagent("numbing_enzyme",20) //Poisons should work when more units are injected
 		else if(choice == "Paralyzing")
 			src.show_message("<span class='warning'>You sink your fangs into [T] and inject your poison!</span>")
-			src.visible_message("<font color='red'>[src] sinks their fangs into [T]!</font>")
+			src.visible_message(span_red("[src] sinks their fangs into [T]!"))
 			T.bloodstr.add_reagent("succubi_paralize",20) //Poisons should work when more units are injected
 		else
 			return //Should never happen
@@ -143,7 +143,7 @@ var/eggs = 0
 			src.show_message("<span class='warning'>Your Belly is full of Eggs you cant have more!!</span>")
 			return 0
 		else if(choice == "lay your Eggs" && eggs > 0)
-			src.visible_message("<font color='white'><b>[src] freezes and vissibly tries to squat down</b></font>")
+			src.visible_message(span_white("<b>[src] freezes and vissibly tries to squat down</b>"))
 
 			while(eggs > 0)
 				src.show_message("<span class='warning'>You lay a egg!</span>")
@@ -192,6 +192,6 @@ var/eggs = 0
 
 	to_chat(src, "<span class='notice'>You jab your stinger into [T].</span>")
 	to_chat(T, "<span class='danger'>You feel a stabbing pain as you are stung!</span>")
-	src.visible_message("<font color='red'>[src] sinks their stinger into [T]!</font>")
+	src.visible_message(span_red("[src] sinks their stinger into [T]!"))
 	T.bloodstr.add_reagent("condensedcapsaicin_v",3)
 	last_special = world.time + 50 // Many little jabs instead of one big one

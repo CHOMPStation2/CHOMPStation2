@@ -938,29 +938,29 @@
 /area/tether_away/beach/jungle)
 "dK" = (
 /obj/effect/spider/stickyweb/dark,
-/obj/item/clothing/under/hephaestus,
+/obj/item/clothing/under/corp/hephaestus,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/tether_away/beach/jungle)
 "dL" = (
-/obj/item/clothing/under/hephaestus,
+/obj/item/clothing/under/corp/hephaestus,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/tether_away/beach/jungle)
 "dM" = (
-/obj/item/clothing/under/hephaestus,
+/obj/item/clothing/under/corp/hephaestus,
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/tether_away/beach/jungle)
 "dN" = (
 /obj/effect/decal/remains,
-/obj/item/clothing/under/hephaestus,
+/obj/item/clothing/under/corp/hephaestus,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/tether_away/beach/outpost)
 "dO" = (
 /obj/item/weapon/gun/energy/soapenergy/gauss,
-/obj/item/clothing/under/hephaestus,
+/obj/item/clothing/under/corp/hephaestus,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/tether_away/beach/outpost)
 "dP" = (
-/obj/item/clothing/under/hephaestus,
+/obj/item/clothing/under/corp/hephaestus,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/tether_away/beach/outpost)
 "dQ" = (

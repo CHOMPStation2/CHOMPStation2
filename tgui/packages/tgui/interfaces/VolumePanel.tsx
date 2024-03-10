@@ -1,13 +1,13 @@
 import { useBackend } from '../backend';
-import { Button, LabeledList, Slider, Section } from '../components';
+import { Button, LabeledList, Section, Slider } from '../components';
 import { Window } from '../layouts';
 
 type Data = {
   volume_channels: { key; val: number }[];
 };
 
-export const VolumePanel = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const VolumePanel = (props) => {
+  const { act, data } = useBackend<Data>();
 
   const { volume_channels } = data;
 

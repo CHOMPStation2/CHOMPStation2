@@ -1,20 +1,31 @@
 import { createSearch, decodeHtmlEntities } from 'common/string';
-import { Fragment } from 'inferno';
-import { useBackend, useLocalState } from '../backend';
-import { Box, Button, Flex, Input, Section, Table, Tabs, NoticeBox, LabeledList } from '../components';
+import { useState } from 'react';
+
+import { useBackend } from '../backend';
+import {
+  Box,
+  Button,
+  Flex,
+  Input,
+  LabeledList,
+  NoticeBox,
+  Section,
+  Table,
+  Tabs,
+} from '../components';
 import { formatMoney } from '../format';
 import { Window } from '../layouts';
 
 const MAX_SEARCH_RESULTS = 25;
 
-export const Uplink = (props, context) => {
-  const { data } = useBackend(context);
+export const Uplink = (props) => {
+  const { data } = useBackend();
 
-  const [screen, setScreen] = useLocalState(context, 'screen', 0);
+  const [screen, setScreen] = useState(0);
 
   const { telecrystals } = data;
   return (
-    <Window width={620} height={580} theme="syndicate" resizable>
+    <Window width={620} height={580} theme="syndicate">
       <Window.Content scrollable>
         <UplinkHeader screen={screen} setScreen={setScreen} />
         {(screen === 0 && (
@@ -28,8 +39,8 @@ export const Uplink = (props, context) => {
   );
 };
 
-const UplinkHeader = (props, context) => {
-  const { act, data } = useBackend(context);
+const UplinkHeader = (props) => {
+  const { act, data } = useBackend();
 
   const { screen, setScreen } = props;
 
@@ -41,7 +52,8 @@ const UplinkHeader = (props, context) => {
         style={{
           'border-bottom': 'none',
           'margin-bottom': '0',
-        }}>
+        }}
+      >
         <Tabs.Tab selected={screen === 0} onClick={() => setScreen(0)}>
           Request Items
         </Tabs.Tab>
@@ -61,8 +73,8 @@ const UplinkHeader = (props, context) => {
   );
 };
 
-const ExploitableInformation = (props, context) => {
-  const { act, data } = useBackend(context);
+const ExploitableInformation = (props) => {
+  const { act, data } = useBackend();
 
   const { exploit, locked_records } = data;
 
@@ -77,7 +89,8 @@ const ExploitableInformation = (props, context) => {
             onClick={() => act('view_exploits', { id: 0 })}
           />
         )
-      }>
+      }
+    >
       {(exploit && (
         <Box>
           <LabeledList>
@@ -132,16 +145,12 @@ const ExploitableInformation = (props, context) => {
   );
 };
 
-export const GenericUplink = (props, context) => {
+export const GenericUplink = (props) => {
   const { currencyAmount = 0, currencySymbol = '₮' } = props;
-  const { act, data } = useBackend(context);
+  const { act, data } = useBackend();
   const { compactMode, lockable, categories = [] } = data;
-  const [searchText, setSearchText] = useLocalState(context, 'searchText', '');
-  const [selectedCategory, setSelectedCategory] = useLocalState(
-    context,
-    'category',
-    categories[0]?.name
-  );
+  const [searchText, setSearchText] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState(categories[0]?.name);
   const testSearch = createSearch(searchText, (item) => {
     return item.name + item.desc;
   });
@@ -164,7 +173,7 @@ export const GenericUplink = (props, context) => {
         </Box>
       }
       buttons={
-        <Fragment>
+        <>
           Search
           <Input
             autoFocus
@@ -180,8 +189,9 @@ export const GenericUplink = (props, context) => {
           {!!lockable && (
             <Button icon="lock" content="Lock" onClick={() => act('lock')} />
           )}
-        </Fragment>
-      }>
+        </>
+      }
+    >
       <Flex>
         {searchText.length === 0 && (
           <Flex.Item>
@@ -190,7 +200,8 @@ export const GenericUplink = (props, context) => {
                 <Tabs.Tab
                   key={category.name}
                   selected={category.name === selectedCategory}
-                  onClick={() => setSelectedCategory(category.name)}>
+                  onClick={() => setSelectedCategory(category.name)}
+                >
                   {category.name} ({category.items?.length || 0})
                 </Tabs.Tab>
               ))}
@@ -217,14 +228,10 @@ export const GenericUplink = (props, context) => {
   );
 };
 
-const ItemList = (props, context) => {
+const ItemList = (props) => {
   const { compactMode, currencyAmount, currencySymbol } = props;
-  const { act } = useBackend(context);
-  const [hoveredItem, setHoveredItem] = useLocalState(
-    context,
-    'hoveredItem',
-    {}
-  );
+  const { act } = useBackend();
+  const [hoveredItem, setHoveredItem] = useState({});
   const hoveredCost = (hoveredItem && hoveredItem.cost) || 0;
   // Append extra hover data to items
   const items = props.items.map((item) => {
@@ -281,7 +288,8 @@ const ItemList = (props, context) => {
             })
           }
         />
-      }>
+      }
+    >
       {decodeHtmlEntities(item.desc)}
     </Section>
   ));

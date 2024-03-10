@@ -68,11 +68,11 @@
 			to_chat(user, "Controls are now [src.locked ? "locked." : "unlocked."]")
 			updateDialog()
 		else
-			to_chat(user, "<font color='red'>Access denied.</font>")
+			to_chat(user, span_red("Access denied."))
 	else if(W.has_tool_quality(TOOL_WRENCH))
 		src.anchored = !src.anchored
 		playsound(src, W.usesound, 75, 1)
-		src.visible_message("<font color='blue'>\icon[src][bicon(src)] [src] has been [anchored?"bolted to the floor":"unbolted from the floor"] by [user].</font>")
+		src.visible_message(span_blue("[icon2html(src,viewers(src))] [src] has been [anchored?"bolted to the floor":"unbolted from the floor"] by [user]."))
 
 		if(active)
 			toggle()
@@ -207,7 +207,7 @@
 	switch(action)
 		if("toggle")
 			if (!active && !anchored)
-				to_chat(usr, "<font color='red'>The [src] needs to be firmly secured to the floor first.</font>")
+				to_chat(usr, span_red("The [src] needs to be firmly secured to the floor first."))
 				return
 			toggle()
 			. = TRUE
@@ -245,7 +245,7 @@
 		covered_turfs = null
 
 		for(var/mob/M in view(5,src))
-			to_chat(M, "\icon[src][bicon(src)] You hear heavy droning start up.")
+			to_chat(M, "[icon2html(src, M.client)] You hear heavy droning start up.")
 		for(var/obj/effect/energy_field/E in field) // Update the icons here to ensure all the shields have been made already.
 			E.update_icon()
 		shield_hum.start()
@@ -256,7 +256,7 @@
 			qdel(D)
 
 		for(var/mob/M in view(5,src))
-			to_chat(M, "\icon[src][bicon(src)] You hear heavy droning fade out.")
+			to_chat(M, "[icon2html(src, M.client)] You hear heavy droning fade out.")
 		shield_hum.stop()
 
 /obj/machinery/shield_gen/update_icon()

@@ -61,10 +61,17 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 		var/name = null
 		var/species = null
 		var/ooc_notes = null
+		//CHOMPEdit Start
+		var/ooc_notes_favs = null
+		var/ooc_notes_likes = null
+		var/ooc_notes_maybes = null
+		var/ooc_notes_dislikes = null
+		var/ooc_notes_style = null
+		var/gendertag = null
+		var/sexualitytag = null
+		var/eventtag = vantag_choices_list[VANTAG_NONE]
+		//CHOMPEdit End
 		var/flavor_text = null
-		var/gendertag = null // CHOMPStation Edit: Character Directory Update
-		var/sexualitytag = null // CHOMPStation Edit: Character Directory Update
-		var/eventtag = vantag_choices_list[VANTAG_NONE] //CHOMPEdit
 		var/tag
 		var/erptag
 		var/character_ad
@@ -72,44 +79,75 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			tag = C.mob.mind.directory_tag || "Unset"
 			erptag = C.mob.mind.directory_erptag || "Unset"
 			character_ad = C.mob.mind.directory_ad
+			//CHOMPEdit Start
 			gendertag = C.mob.mind.directory_gendertag || "Unset"
 			sexualitytag = C.mob.mind.directory_sexualitytag || "Unset"
 			eventtag = vantag_choices_list[C.mob.mind.vantag_preference]
+			//CHOMPEdit End
 		else
 			tag = C.prefs.directory_tag || "Unset"
 			erptag = C.prefs.directory_erptag || "Unset"
 			character_ad = C.prefs.directory_ad
+			//CHOMPEdit Start
 			gendertag = C.prefs.directory_gendertag || "Unset"
 			sexualitytag = C.prefs.directory_sexualitytag || "Unset"
 			eventtag = vantag_choices_list[C.prefs.vantag_preference]
+			//CHOMPEdit End
 
-		//CHOMPEdit Start
 		if(ishuman(C.mob))
 			var/mob/living/carbon/human/H = C.mob
-			var/strangername = H.real_name
+			var/strangername = H.real_name //CHOMPEdit
 			if(data_core && data_core.general)
 				if(!find_general_record("name", H.real_name))
-					if(!find_record("name", H.real_name, data_core.hidden_general))
-						strangername = "unknown"
+					if(!find_record("name", H.real_name, data_core.hidden_general)) //CHOMPEdit
+						strangername = "unknown" //CHOMPEdit
 			name = strangername
 			species = "[H.custom_species ? H.custom_species : H.species.name]"
 			ooc_notes = H.ooc_notes
-			if(H.ooc_notes_likes)
-				ooc_notes += "\n\nLIKES\n\n[H.ooc_notes_likes]"
-			if(H.ooc_notes_dislikes)
-				ooc_notes += "\n\nDISLIKES\n\n[H.ooc_notes_dislikes]"
-			if(LAZYLEN(H.flavor_texts)) //ChompEDIT
-				flavor_text = H.flavor_texts["general"] //ChompEDIT
+			//CHOMPEdit Start
+			if(H.ooc_notes_style && (H.ooc_notes_favs || H.ooc_notes_likes || H.ooc_notes_maybes || H.ooc_notes_dislikes))
+				ooc_notes = H.ooc_notes + "\n\n"
+				ooc_notes_favs = H.ooc_notes_favs
+				ooc_notes_likes = H.ooc_notes_likes
+				ooc_notes_maybes = H.ooc_notes_maybes
+				ooc_notes_dislikes = H.ooc_notes_dislikes
+				ooc_notes_style = H.ooc_notes_style
+			else
+				if(H.ooc_notes_favs)
+					ooc_notes += "\n\nFAVOURITES\n\n[H.ooc_notes_favs]"
+				if(H.ooc_notes_likes)
+					ooc_notes += "\n\nLIKES\n\n[H.ooc_notes_likes]"
+				if(H.ooc_notes_maybes)
+					ooc_notes += "\n\nMAYBES\n\n[H.ooc_notes_maybes]"
+				if(H.ooc_notes_dislikes)
+					ooc_notes += "\n\nDISLIKES\n\n[H.ooc_notes_dislikes]"
+			if(LAZYLEN(H.flavor_texts))
+				flavor_text = H.flavor_texts["general"]
+			//CHOMPEdit End
 
 		if(isAI(C.mob))
 			var/mob/living/silicon/ai/A = C.mob
 			name = A.name
 			species = "Artificial Intelligence"
 			ooc_notes = A.ooc_notes
-			if(A.ooc_notes_likes)
-				ooc_notes += "\n\nLIKES\n\n[A.ooc_notes_likes]"
-			if(A.ooc_notes_dislikes)
-				ooc_notes += "\n\nDISLIKES\n\n[A.ooc_notes_dislikes]"
+			//CHOMPEdit Start
+			if(A.ooc_notes_style && (A.ooc_notes_favs || A.ooc_notes_likes || A.ooc_notes_maybes || A.ooc_notes_dislikes))
+				ooc_notes = A.ooc_notes + "\n\n"
+				ooc_notes_favs = A.ooc_notes_favs
+				ooc_notes_likes = A.ooc_notes_likes
+				ooc_notes_maybes = A.ooc_notes_maybes
+				ooc_notes_dislikes = A.ooc_notes_dislikes
+				ooc_notes_style = A.ooc_notes_style
+			else
+				if(A.ooc_notes_favs)
+					ooc_notes += "\n\nFAVOURITES\n\n[A.ooc_notes_favs]"
+				if(A.ooc_notes_likes)
+					ooc_notes += "\n\nLIKES\n\n[A.ooc_notes_likes]"
+				if(A.ooc_notes_maybes)
+					ooc_notes += "\n\nMAYBES\n\n[A.ooc_notes_maybes]"
+				if(A.ooc_notes_dislikes)
+					ooc_notes += "\n\nDISLIKES\n\n[A.ooc_notes_dislikes]"
+			//CHOMPEdit End
 
 			flavor_text = null // No flavor text for AIs :c
 
@@ -120,18 +158,49 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			name = R.name
 			species = "[R.modtype] [R.braintype]"
 			ooc_notes = R.ooc_notes
-			if(R.ooc_notes_likes)
-				ooc_notes += "\n\nLIKES\n\n[R.ooc_notes_likes]"
-			if(R.ooc_notes_dislikes)
-				ooc_notes += "\n\nDISLIKES\n\n[R.ooc_notes_dislikes]"
+			//CHOMPEdit Start
+			if(R.ooc_notes_style && (R.ooc_notes_favs || R.ooc_notes_likes || R.ooc_notes_maybes || R.ooc_notes_dislikes))
+				ooc_notes = R.ooc_notes + "\n\n"
+				ooc_notes_favs = R.ooc_notes_favs
+				ooc_notes_likes = R.ooc_notes_likes
+				ooc_notes_maybes = R.ooc_notes_maybes
+				ooc_notes_dislikes = R.ooc_notes_dislikes
+				ooc_notes_style = R.ooc_notes_style
+			else
+				if(R.ooc_notes_favs)
+					ooc_notes += "\n\nFAVOURITES\n\n[R.ooc_notes_favs]"
+				if(R.ooc_notes_likes)
+					ooc_notes += "\n\nLIKES\n\n[R.ooc_notes_likes]"
+				if(R.ooc_notes_maybes)
+					ooc_notes += "\n\nMAYBES\n\n[R.ooc_notes_maybes]"
+				if(R.ooc_notes_dislikes)
+					ooc_notes += "\n\nDISLIKES\n\n[R.ooc_notes_dislikes]"
+			//CHOMPEdit End
 
 			flavor_text = R.flavor_text
 
+		//CHOMPEdit Start
 		if(istype(C.mob, /mob/living/silicon/pai))
 			var/mob/living/silicon/pai/P = C.mob
 			name = P.name
 			species = "pAI"
 			ooc_notes = P.ooc_notes
+			if(P.ooc_notes_style && (P.ooc_notes_favs || P.ooc_notes_likes || P.ooc_notes_maybes || P.ooc_notes_dislikes))
+				ooc_notes = P.ooc_notes + "\n\n"
+				ooc_notes_favs = P.ooc_notes_favs
+				ooc_notes_likes = P.ooc_notes_likes
+				ooc_notes_maybes = P.ooc_notes_maybes
+				ooc_notes_dislikes = P.ooc_notes_dislikes
+				ooc_notes_style = P.ooc_notes_style
+			else
+				if(P.ooc_notes_favs)
+					ooc_notes += "\n\nFAVOURITES\n\n[P.ooc_notes_favs]"
+				if(P.ooc_notes_likes)
+					ooc_notes += "\n\nLIKES\n\n[P.ooc_notes_likes]"
+				if(P.ooc_notes_maybes)
+					ooc_notes += "\n\nMAYBES\n\n[P.ooc_notes_maybes]"
+				if(P.ooc_notes_dislikes)
+					ooc_notes += "\n\nDISLIKES\n\n[P.ooc_notes_dislikes]"
 			flavor_text = P.flavor_text
 
 		if(istype(C.mob, /mob/living/simple_mob))
@@ -139,8 +208,24 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			name = S.name
 			species = S.character_directory_species()
 			ooc_notes = S.ooc_notes
+			if(S.ooc_notes_style && (S.ooc_notes_favs || S.ooc_notes_likes || S.ooc_notes_maybes || S.ooc_notes_dislikes))
+				ooc_notes = S.ooc_notes + "\n\n"
+				ooc_notes_favs = S.ooc_notes_favs
+				ooc_notes_likes = S.ooc_notes_likes
+				ooc_notes_maybes = S.ooc_notes_maybes
+				ooc_notes_dislikes = S.ooc_notes_dislikes
+				ooc_notes_style = S.ooc_notes_style
+			else
+				if(S.ooc_notes_favs)
+					ooc_notes += "\n\nFAVOURITES\n\n[S.ooc_notes_favs]"
+				if(S.ooc_notes_likes)
+					ooc_notes += "\n\nLIKES\n\n[S.ooc_notes_likes]"
+				if(S.ooc_notes_maybes)
+					ooc_notes += "\n\nMAYBES\n\n[S.ooc_notes_maybes]"
+				if(S.ooc_notes_dislikes)
+					ooc_notes += "\n\nDISLIKES\n\n[S.ooc_notes_dislikes]"
 			flavor_text = S.desc
-			//CHOMPEdit End
+		//CHOMPEdit End
 
 		// It's okay if we fail to find OOC notes and flavor text
 		// But if we can't find the name, they must be using a non-compatible mob type currently.
@@ -150,12 +235,19 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 		directory_mobs.Add(list(list(
 			"name" = name,
 			"species" = species,
+			//CHOMPEdit Start
+			"ooc_notes_favs" = ooc_notes_favs,
+			"ooc_notes_likes" = ooc_notes_likes,
+			"ooc_notes_maybes" = ooc_notes_maybes,
+			"ooc_notes_dislikes" = ooc_notes_dislikes,
+			"ooc_notes_style" = ooc_notes_style,
+			"gendertag" = gendertag,
+			"sexualitytag" = sexualitytag,
+			"eventtag" = eventtag,
+			//CHOMPEdit End
 			"ooc_notes" = ooc_notes,
 			"tag" = tag,
-			"gendertag" = gendertag, // CHOMPStation Edit: Character Directory Update
-			"sexualitytag" = sexualitytag, // CHOMPStation Edit: Character Directory Update
 			"erptag" = erptag,
-			"eventtag" = eventtag, //CHOMPEdit
 			"character_ad" = character_ad,
 			"flavor_text" = flavor_text,
 		)))
@@ -196,8 +288,7 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			if(!new_tag)
 				return
 			return set_for_mind_or_prefs(user, action, new_tag, can_set_prefs, can_set_mind)
-		// CHOMPStation Edit End: Directory Update
-		if("setErpTag")
+		if ("setErpTag")
 			var/list/new_erptag = tgui_input_list(usr, "Pick a new ERP tag for the character directory", "Character ERP Tag", GLOB.char_directory_erptags)
 			if(!new_erptag)
 				return
@@ -268,6 +359,7 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			if (can_set_mind)
 				user.mind.directory_ad = new_value
 			return TRUE
+		//CHOMPEdit Start
 		if ("setEventTag")
 			if (can_set_prefs)
 				user.client.prefs.vantag_preference = new_value
@@ -283,3 +375,4 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 				user.client.prefs.directory_sexualitytag = new_value
 			if (can_set_mind)
 				user.mind.directory_sexualitytag = new_value
+		//CHOMPEdit End

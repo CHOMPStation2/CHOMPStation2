@@ -14,11 +14,16 @@
  */
 
 // Run all strings to be used in an SQL query through this proc first to properly escape out injection attempts.
-/proc/sanitizeSQL(var/t as text) 
+/proc/sanitizeSQL(var/t as text)
 	//var/sqltext = dbcon.Quote(t); //CHOMPEdit Begin
 	//return copytext(sqltext, 2, length(sqltext));//Quote() adds quotes around input, we already do that
 	return t
 	//CHOMPEdit End
+
+// CHOMPEdit - Adds format_table_name
+/proc/format_table_name(table as text)
+	//return CONFIG_GET(string/feedback_tableprefix) + table
+	return table // We don't implement tableprefix
 
 /*
  * Text sanitization
@@ -350,10 +355,10 @@
 		return tagdesc
 	if(!text_tag_cache[tagname])
 		var/icon/tag = icon(text_tag_icons, tagname)
-		text_tag_cache[tagname] = bicon(tag, TRUE, "text_tag")
+		text_tag_cache[tagname] = tag
 	if(!C.tgui_panel.is_ready() || C.tgui_panel.oldchat)
 		return "<IMG src='\ref[text_tag_icons]' class='text_tag' iconstate='[tagname]'" + (tagdesc ? " alt='[tagdesc]'" : "") + ">"
-	return text_tag_cache[tagname]
+	return icon2html(text_tag_cache[tagname], C, extra_classes = "text_tag")
 
 /proc/create_text_tag_old(var/tagname, var/tagdesc = tagname, var/client/C = null)
 	if(!(C && C.is_preference_enabled(/datum/client_preference/chat_tags)))

@@ -11,7 +11,7 @@
 	siemens_coefficient= 1
 	slowdown = 0
 	offline_slowdown = 0
-	seal_delay = 1
+	seal_delay = 0
 	var/mob/living/myprotean
 	initial_modules = list(/obj/item/rig_module/protean/syphon, /obj/item/rig_module/protean/armor, /obj/item/rig_module/protean/healing)
 
@@ -56,11 +56,22 @@
 			to_chat(P, "<span class='notice'>You should have spawned with a backpack to assimilate into your RIG. Try clicking it with a backpack.</span>")
 	..(newloc)
 
+/obj/item/weapon/rig/protean/Destroy()
+	if(myprotean)
+		var/mob/living/carbon/human/P = myprotean
+		var/datum/species/protean/S = P?.species
+		S?.OurRig = null
+		myprotean = null
+	. = ..()
+
+
 /obj/item/weapon/rig/proc/AssimilateBag(var/mob/living/carbon/human/P, var/spawned, var/obj/item/weapon/storage/backpack/B)
 	if(istype(B,/obj/item/weapon/storage/backpack))
 		if(spawned)
 			B = P.back
 			P.unEquip(P.back)
+		if(QDELETED(B)) // for mannequins or such
+			return
 		B.forceMove(src)
 		rig_storage = B
 		P.drop_item(B)
