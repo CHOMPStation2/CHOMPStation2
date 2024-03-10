@@ -1,0 +1,5 @@
+author: "Raeschen"
+delete-after: True
+changes:
+  - bugfix: "Organ/limb removal on explosion runtime"
+  - bugfix: "infinite EMP mine recursion"
