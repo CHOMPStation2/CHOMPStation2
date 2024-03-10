@@ -99,9 +99,11 @@
 
 	spawn(1)
 		master_controller.setup()
-#if UNIT_TEST
-		initialize_unit_tests()
-#endif
+// CHOMPEdit Start
+//#if UNIT_TEST
+//		initialize_unit_tests()
+		RunUnattendedFunctions()
+//#endif // CHOMPEdit End
 
 	spawn(3000)		//so we aren't adding to the round-start lag
 		if(config.ToRban)
@@ -110,6 +112,27 @@
 #undef RECOMMENDED_VERSION
 
 	return
+
+// CHOMPEdit Start
+/// Runs after the call to Master.Initialize, but before the delay kicks in. Used to turn the world execution into some single function then exit
+/world/proc/RunUnattendedFunctions()
+	#ifdef UNIT_TESTS
+	HandleTestRun()
+	#endif
+
+/world/proc/HandleTestRun()
+	//trigger things to run the whole process
+	//Master.sleep_offline_after_initializations = FALSE
+	SSticker.start_immediately = TRUE
+	//CONFIG_SET(number/round_end_countdown, 0)
+	var/datum/callback/cb
+#ifdef UNIT_TESTS
+	cb = CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(RunUnitTests))
+#else
+	//cb = VARSET_CALLBACK(SSticker, force_ending, ADMIN_FORCE_END_ROUND)
+#endif
+	SSticker.OnRoundstart(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(_addtimer), cb, 10 SECONDS))
+// CHOMPEdit End
 
 var/world_topic_spam_protect_ip = "0.0.0.0"
 var/world_topic_spam_protect_time = world.timeofday

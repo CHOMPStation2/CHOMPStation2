@@ -41,6 +41,8 @@ SUBSYSTEM_DEF(ticker)
 	//Now we have a general cinematic centrally held within the gameticker....far more efficient!
 	var/obj/screen/cinematic = null
 
+	var/list/round_start_events // CHOMPEdit
+
 // This global variable exists for legacy support so we don't have to rename every 'ticker' to 'SSticker' yet.
 var/global/datum/controller/subsystem/ticker/ticker
 /datum/controller/subsystem/ticker/PreInit()
@@ -196,6 +198,13 @@ var/global/datum/controller/subsystem/ticker/ticker
 	if(config.sql_enabled)
 		statistic_cycle() // Polls population totals regularly and stores them in an SQL DB -- TLE
 
+	// CHOMPEdit Start
+	for(var/I in round_start_events)
+		var/datum/callback/cb = I
+		cb.InvokeAsync()
+	LAZYCLEARLIST(round_start_events)
+	// CHOMPEdit End
+
 	return 1
 
 
@@ -270,6 +279,14 @@ var/global/datum/controller/subsystem/ticker/ticker
 			log_error("Ticker arrived at round end in an unexpected endgame state '[end_game_state]'.")
 			end_game_state = END_GAME_READY_TO_END
 
+// CHOMPEdit Start
+//These callbacks will fire after roundstart key transfer
+/datum/controller/subsystem/ticker/proc/OnRoundstart(datum/callback/cb)
+	if(!HasRoundStarted())
+		LAZYADD(round_start_events, cb)
+	else
+		cb.InvokeAsync()
+// CHOMPEdit End
 
 // ----------------------------------------------------------------------
 // These two below are not used! But they could be
