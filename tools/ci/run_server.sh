@@ -21,7 +21,7 @@ DreamDaemon vorestation.dmb -close -trusted -invisible -verbose -params "log-dir
 
 cd ..
 
-mkdir -p data/screenshots_new
-cp -r ci_test/data/screenshots_new data/screenshots_new
+#mkdir -p data/screenshots_new
+#cp -r ci_test/data/screenshots_new data/screenshots_new
 
 cat ci_test/data/logs/ci/clean_run.lk
