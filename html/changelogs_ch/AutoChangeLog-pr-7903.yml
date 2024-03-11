@@ -1,6 +1,0 @@
-author: "Missile597"
-delete-after: True
-changes:
-  - rscadd: "Added a light replacer in the engineering tools area so you don't have to run all the way to the carrier to fix lights easier anymore"
-  - qol: "Swapped the solar crate and radiation crate around in engineering storage so the lead is easier to get to. Cause let's be honest, the solar crate is less often used and a pain to move out of the way every round"
-  - qol: "Swapped the CO2 and Phoron canister start locations around in the carrier R-UST, to make the locations closer to where they're supposed to be and so _certain_ engineers don't go blowing up the R-UST with phoron in the hot loop"

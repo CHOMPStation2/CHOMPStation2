@@ -1,4 +1,0 @@
-author: "ItsSelis"
-delete-after: True
-changes:
-  - code_imp: "A warning will now be shown that the byond version is outdated if trying to compile the 515 code with 514."
