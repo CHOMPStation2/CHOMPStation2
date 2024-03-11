@@ -53,15 +53,8 @@
 	if(tf_mob_holder)
 		tf_mob_holder = null
 	//VOREStation Addition End
-	if(hud_list) //prune out images in hud_list
-		for(var/item in hud_list)
-			if(item)
-				var/image/I = item
-				if(istype(I))
-					I.loc = null
-				hud_list -= item
-	if(selected_image)
-		selected_image = null
+	QDEL_NULL_LIST(hud_list)
+	QDEL_NULL(selected_image)
 	//QDEL_NULL(vorePanel) //VOREStation Add commented and moved to /mob
 	//QDEL_LIST_NULL(vore_organs) //VOREStation Add commented and moved to /mob
 	temp_language_sources = null //VOREStation Add

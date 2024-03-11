@@ -1,3 +1,3 @@
-/datum/job/secretary
-	alt_titles = list(
-			"Bridge Officer" = /decl/hierarchy/outfit/job/bridge_officer)
+/datum/alt_title/bridge_officer
+	title = "Bridge Officer"
+	title_outfit = /decl/hierarchy/outfit/job/bridge_officer

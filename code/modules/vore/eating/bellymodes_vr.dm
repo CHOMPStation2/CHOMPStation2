@@ -137,7 +137,7 @@
 				 //these are all external sound triggers now, so it's ok.
 
 	if(emote_active)
-		var/list/EL = emote_lists[digest_mode]
+		var/list/EL = emote_lists?[digest_mode]
 		if((LAZYLEN(EL) || LAZYLEN(emote_lists[DM_HOLD_ABSORBED]) || (digest_mode == DM_DIGEST && LAZYLEN(emote_lists[DM_HOLD])) || (digest_mode == DM_SELECT && (LAZYLEN(emote_lists[DM_HOLD])||LAZYLEN(emote_lists[DM_DIGEST])||LAZYLEN(emote_lists[DM_ABSORB])) )) && next_emote <= world.time)
 			var/living_count = 0
 			var/absorbed_count = 0

@@ -9,13 +9,14 @@
 		for(var/obj/screen/movable/spell_master/spell_master in spell_masters)
 			qdel(spell_master)
 		remove_screen_obj_references()
-		client.screen.Cut()
+		client.screen = list()
 	if(mind && mind.current == src)
 		spellremove(src)
 	if(!istype(src,/mob/observer)) //CHOMPEdit
 		ghostize() //CHOMPEdit
 	//ChompEDIT start - fix hard qdels
 	QDEL_NULL(plane_holder)
+	QDEL_NULL(hud_used)
 	for(var/key in alerts) //clear out alerts
 		clear_alert(key)
 	if(pulling)

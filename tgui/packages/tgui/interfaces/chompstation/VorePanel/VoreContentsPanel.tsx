@@ -25,7 +25,7 @@ export const VoreContentsPanel = (props) => {
       {(show_pictures && (
         <Flex wrap="wrap" justify="center" align="center">
           {contents.map((thing) => (
-            <Flex.Item key={thing.name} basis="33%">
+            <Flex.Item key={thing} basis="33%">
               <Button
                 width="64px"
                 color={thing.absorbed ? 'purple' : stats[thing.stat]}
@@ -62,7 +62,7 @@ export const VoreContentsPanel = (props) => {
       )) || (
         <LabeledList>
           {contents.map((thing) => (
-            <LabeledList.Item key={thing.ref} label={thing.name}>
+            <LabeledList.Item key={thing} label={thing.name}>
               <Button
                 fluid
                 mt={-1}

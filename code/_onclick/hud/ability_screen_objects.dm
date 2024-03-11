@@ -194,9 +194,9 @@
 		QDEL_NULL(ability_master)
 
 /mob/mobcache_dismiss_actions()
-	..()
 	if(ability_master)
 		QDEL_NULL(ability_master)
+	. = ..()
 
 ///////////ACTUAL ABILITIES////////////
 //This is what you click to do things//

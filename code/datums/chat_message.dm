@@ -51,8 +51,6 @@ var/list/runechat_image_cache = list()
 	/// If we are currently processing animation and cleanup at EOL
 	var/ending_life
 
-	/// deletion timer
-	var/timer_delete
 
 /**
   * Constructs a chat message overlay
@@ -75,9 +73,6 @@ var/list/runechat_image_cache = list()
 	generate_image(text, target, owner, extra_classes, lifespan)
 
 /datum/chatmessage/Destroy()
-	if(timer_delete)
-		deltimer(timer_delete)
-		timer_delete = null
 	if(istype(owned_by, /client)) // hopefully the PARENT_QDELETING on client should beat this if it's a disconnect
 		UnregisterSignal(owned_by, COMSIG_PARENT_QDELETING)
 		if(owned_by.seen_messages)
@@ -228,7 +223,9 @@ var/list/runechat_image_cache = list()
 		return
 	ending_life = TRUE
 	animate(message, alpha = 0, time = fadetime, flags = ANIMATION_PARALLEL)
-	timer_delete = QDEL_IN_STOPPABLE(src, fadetime) //ChompEDIT - we use QDEL_IN_STOPPABLE, upstream just has QDEL_IN do the same thing
+	spawn(fadetime)
+		if(!QDELETED(src))
+			qdel(src)
 
 /**
   * Creates a message overlay at a defined location for a given speaker
@@ -243,6 +240,9 @@ var/list/runechat_image_cache = list()
 	if(!client)
 		return
 
+	// Source Deleting
+	if(QDELETED(speaker))
+		return
 	// Doesn't want to hear
 	if(ismob(speaker) && !client.is_preference_enabled(/datum/client_preference/runechat_mob))
 		return
@@ -349,7 +349,7 @@ var/list/runechat_image_cache = list()
 		hearing_mobs = hear["mobs"]
 
 	for(var/mob/M as anything in hearing_mobs)
-		if(!M.client)
+		if(!M?.client)
 			continue
 		M.create_chat_message(src, message, italics, classes, audible)
 

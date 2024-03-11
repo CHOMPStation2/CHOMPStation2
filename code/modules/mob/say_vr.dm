@@ -351,8 +351,8 @@
 		for (var/mob/G in player_list)
 			if (istype(G, /mob/new_player))
 				continue
-			else if(isobserver(G) &&  G.is_preference_enabled(/datum/client_preference/ghost_ears && \
-			G.is_preference_enabled(/datum/client_preference/ghost_see_whisubtle)))
+			else if(isobserver(G) &&  G.is_preference_enabled(/datum/client_preference/ghost_ears) && \
+			G.is_preference_enabled(/datum/client_preference/ghost_see_whisubtle))
 				if(is_preference_enabled(/datum/client_preference/whisubtle_vis) || G.client.holder)
 					to_chat(G, "<span class='psay'>\The [M] thinks, \"[message]\"</span>")
 		log_say(message,M)
