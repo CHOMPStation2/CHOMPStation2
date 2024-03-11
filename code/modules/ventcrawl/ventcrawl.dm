@@ -71,6 +71,8 @@ var/list/ventcrawl_machinery = list(
 		var/mob/living/simple_mob/S = src
 		if(carried_item == S.myid)	//VOREStation Edit
 			return 1	//VOREStation Edit
+		if(carried_item == S.augmented) //CHOMP Edit Slimes carry these for some reason
+			return 1 //CHOMP Edit Slimes carry these for some reason
 	//Try to find it in our allowed list (istype includes subtypes)
 	var/listed = FALSE
 	for(var/test_type in can_enter_vent_with)
