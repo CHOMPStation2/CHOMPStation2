@@ -17,6 +17,8 @@
 	//ChompEDIT start - fix hard qdels
 	QDEL_NULL(plane_holder)
 	QDEL_NULL(hud_used)
+	for(var/key in alerts) //clear out alerts
+		clear_alert(key)
 	if(pulling)
 		stop_pulling() //TG does this on atom/movable but our stop_pulling proc is here so whatever
 
@@ -445,10 +447,10 @@
 
 	announce_ghost_joinleave(client, 0)
 
-	var/mob/new_player/M = new /mob/new_player()
+	var/mob/new_player/M = get_newplayer(ckey)
 	if(!client)
 		log_game("[usr.key] AM failed due to disconnect.")
-		qdel(M)
+		//qdel(M)
 		return
 
 	M.has_respawned = TRUE //When we returned to main menu, send respawn message
