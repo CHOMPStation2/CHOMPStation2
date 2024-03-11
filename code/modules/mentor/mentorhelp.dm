@@ -435,7 +435,7 @@ GLOBAL_DATUM_INIT(mhelp_tickets, /datum/mentor_help_tickets, new)
 	var/list/mentors = GLOB.mentors
 	if(!mentors.len && !activeAdmins.len)
 		var/choice = tgui_alert(usr, "There are no active admins or mentors online. Would you like to make an ahelp instead, so that staff is notified of your issue? \
-		Alternatively, you may go to the discord yourself and repeat your question in #cadet-academy. Please note, if choosing the later, do not include current-round information.",
+		Alternatively, you may go to the discord yourself and repeat your question in #ss13-tutoring. Please note, if choosing the later, do not include current-round information.",
 		"Send to discord?", list("Admin-help!", "Still mentorhelp!", "Cancel"))
 		if(choice == "Admin-help!")
 			usr.client.adminhelp(msg)
