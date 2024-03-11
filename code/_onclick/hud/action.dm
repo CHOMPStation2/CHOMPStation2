@@ -31,6 +31,7 @@
 	if(owner)
 		Remove(owner)
 	target = null
+	QDEL_NULL(button)
 	return ..()
 
 /datum/action/proc/Grant(mob/living/T)
