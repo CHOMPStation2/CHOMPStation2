@@ -534,7 +534,7 @@
 			AM.forceMove(src)
 			if(istype(AM, /obj/item/weapon/holder/micro) || istype(AM, /mob/living))
 				log_and_message_admins("[AM] was thrown into \the [src]")
-				visible_message("\The [AM] lands in \the [src] and triggers the flush system!")
+				visible_message("\The [AM] lands in \the [src]!")
 				//flush() //Away they go! //Uncomment this for proper autoflush. Compromising with autopull to avoid possible disposal dunking abuse
 				//flush = 1 //1984. No autoflush, no autopull. Leaving this here incase someone wants to revisit this in the future when the mood on this changes
 			else

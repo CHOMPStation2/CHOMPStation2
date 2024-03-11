@@ -22,7 +22,7 @@
 
 /obj/machinery/disposal/stumble_into(mob/living/M)
 	playsound(src, 'sound/effects/clang.ogg', 25, 1, -1)
-	visible_message("<span class='warning'>[M] [pick("tripped", "stumbled")] into \the [src] and triggers the flush system!</span>")
+	visible_message("<span class='warning'>[M] [pick("tripped", "stumbled")] into \the [src]!</span>")
 	log_and_message_admins("stumbled into \the [src]", M)
 	if(M.client)
 		M.client.perspective = EYE_PERSPECTIVE
@@ -30,7 +30,6 @@
 	M.apply_damage(5, BRUTE)
 	M.Weaken(2)
 	M.forceMove(src)
-	flush() //CHOMPEdt: Hehe autoflush
 	M.stop_flying()
 	update()
 
