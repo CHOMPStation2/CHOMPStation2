@@ -4949,7 +4949,6 @@
 #include "modular_chomp\code\modules\virus2\disease2.dm"
 #include "modular_chomp\code\modules\virus2\effect.dm"
 #include "modular_chomp\code\modules\vore\eating\exportpanel_ch.dm"
-#include "modular_chomp\code\modules\vore\eating\spawn_belly_stuff.dm"
 #include "modular_chomp\code\modules\vore\resizing\resize.dm"
 #include "modular_chomp\code\modules\weapons\melee.dm"
 #include "modular_chomp\code\modules\xenobio\machinery\monkey_processor.dm"

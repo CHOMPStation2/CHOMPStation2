@@ -87,6 +87,7 @@
 	if(!voremob_loaded)
 		return
 	.=..()
+	var/obj/belly/B = new /obj/belly(src)
 	B.affects_vore_sprites = TRUE
 	B.belly_sprite_to_affect = "stomach"
 	B.name = "stomach"
@@ -118,7 +119,7 @@
 
 	B = new /obj/belly(src)
 
-	var/obj/belly/B = vore_selected
+	vore_selected = B
 	B.name = "maw"
 	B.desc = "Slrrrrrp... You get snatched up by the Exotic Leopardmander's large tongue, resulting in you getting dragged into the humid, dank interior of the large drake's cavernous mouth!"
 	//Not going to change the default sounds. Personally I think the non-fancy sounds work good as enterance nom sounds and the fancy ones are better for transfer sounds. -Reo
@@ -185,6 +186,7 @@
 	if(!voremob_loaded)
 		return
 	//.=..() //Dont need this, it just spawns the parent's guts
+	var/obj/belly/B = new /obj/belly(src)
 	B.name = "stomach"
 	B.desc = "The exotic leopardmander tosses its head back with you firmly clasped in its jaws, and in a few swift moments it finishes swallowing you down into its hot, brightly glowing gut. Your weight makes absolutely no impact on its form, the doughy walls giving way beneath you, with their unnatural softness. The thick, humid air is tinged with an oddly pleasant smell, and the surrounding flesh wastes no time in clenching and massaging down over its newfound fodder, smothering you in thick hot gutflesh~ You can only really sort of see outside that thick-walled gut."
 	B.vore_sound = "Tauric Swallow"
@@ -216,7 +218,7 @@
 	B.transferlocation = "maw"
 
 	B = new /obj/belly(src)
-	var/obj/belly/B = vore_selected
+	vore_selected = B
 
 	B.name = "maw"
 	B.desc = "Slrrrrrp... You get snatched up by the Exotic Leopardmander's large tongue, resulting in you getting dragged into the humid, dank interior of the large drake's cavernous mouth!"

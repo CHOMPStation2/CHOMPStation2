@@ -92,7 +92,7 @@
 	verbs |= /mob/living/proc/eat_trash
 	verbs |= /mob/living/proc/toggle_trash_catching
 	verbs |= /mob/living/proc/restrict_trasheater
-	var/obj/belly/B = new /obj/belly/(src)
+	var/obj/belly/B = new /obj/belly(src)
 	B.affects_vore_sprites = TRUE
 	B.belly_sprite_to_affect = "stomach"
 	B.name = "Churno-Vac"
@@ -259,7 +259,7 @@
 					foundstuff = 1
 					AM.forceMove(src)
 				if(foundstuff)
-					src.visible_message("<span class='warning'>[src] plunges their head into \the [D], greedily sucking up everything inside!")
+					src.visible_message("<span class='warning'>[src] plunges their head into \the [D], greedily sucking up everything inside!</span>")
 				else //Oh, Nothing was inside...
 					to_chat(src, "You poke your head into \the [D], but there doesnt seem to be anything of interest...")
 				return
