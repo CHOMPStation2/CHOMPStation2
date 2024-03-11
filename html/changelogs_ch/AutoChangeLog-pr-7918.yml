@@ -1,0 +1,8 @@
+author: "Aroliacue"
+delete-after: True
+changes:
+  - rscadd: "Added Viper Combat Armor, a low-tier fluff armor based on Viper Armor from XCOM 2."
+  - rscadd: "Added new 'Breasts' markings. Same shape as the standard human ones we already have, but with minor thickness on the side sprites too. Comes in three variants - Standard, Smooth and Reptile."
+  - rscadd: "The Naga Alt 3-colour striped taur tail now has a vore sprite."
+  - bugfix: "Repathed Naga Alt 3-colour tailsprites, ensuring they'll work with all Naga suits."
+  - image: "Added Viper Combat Armor and Breasts sprites."
