@@ -180,8 +180,7 @@
 			//Make a new mannequin quickly, and allow the observer to take the appearance
 			var/mob/living/carbon/human/dummy/mannequin = get_mannequin(client.ckey)
 			client.prefs.dress_preview_mob(mannequin)
-			var/mob/observer/dead/observer = new(mannequin)
-			observer.moveToNullspace() //Let's not stay in our doomed mannequin
+			var/mob/observer/dead/observer = get_observer_dead(ckey, null, mannequin)
 			//qdel(mannequin)
 
 			spawning = 1
@@ -207,7 +206,7 @@
 				observer.verbs -= /mob/observer/dead/verb/toggle_antagHUD        // Poor guys, don't know what they are missing!
 			observer.key = key
 			observer.set_respawn_timer(time_till_respawn()) // Will keep their existing time if any, or return 0 and pass 0 into set_respawn_timer which will use the defaults
-			qdel(src)
+			//qdel(src)
 
 			return 1
 
@@ -511,7 +510,7 @@
 				cryst.bound_mob.capture_caught = TRUE
 				cryst.persist_storable = FALSE
 			cryst.update_icon()
-			qdel(src)
+			//qdel(src)
 			return
 	//CHOMPEdit end
 
@@ -542,7 +541,7 @@
 		ticker.mode.latespawn(character)
 
 		qdel(C) //Deletes empty core (really?)
-		qdel(src) //Deletes new_player
+		//qdel(src) //Deletes new_player
 		return
 
 	// Equip our custom items only AFTER deploying to spawn points eh?
@@ -611,7 +610,7 @@
 		if(gut)
 			character.forceMove(gut)
 
-	qdel(src) // Delete new_player mob
+	//qdel(src) // Delete new_player mob
 
 /mob/new_player/proc/AnnounceCyborg(var/mob/living/character, var/rank, var/join_message, var/channel, var/zlevel)
 	if (ticker.current_state == GAME_STATE_PLAYING)

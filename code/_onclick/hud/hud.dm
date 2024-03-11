@@ -161,6 +161,7 @@ var/list/global_huds = list(
 
 /datum/hud
 	var/mob/mymob
+	var/client/instantiated_client
 
 	var/hud_shown = 1			//Used for the HUD toggle (F12)
 	var/inventory_shown = 1		//the inventory
@@ -204,7 +205,9 @@ var/list/global_huds = list(
 	..()
 
 /datum/hud/Destroy()
+	uninstantiate()
 	. = ..()
+	miniobjs = null
 	QDEL_NULL_LIST(minihuds)
 	grab_intent = null
 	hurt_intent = null
@@ -326,9 +329,38 @@ var/list/global_huds = list(
 	mymob.update_action_buttons()
 	reorganize_alerts()
 
+/datum/hud/proc/uninstantiate()
+	if(!instantiated_client)
+		return
+
+	instantiated_client.screen -= miniobjs
+	instantiated_client.screen -= grab_intent
+	instantiated_client.screen -= hurt_intent
+	instantiated_client.screen -= disarm_intent
+	instantiated_client.screen -= help_intent
+	instantiated_client.screen -= lingchemdisplay
+	instantiated_client.screen -= wiz_instability_display
+	instantiated_client.screen -= wiz_energy_display
+	instantiated_client.screen -= blobpwrdisplay
+	instantiated_client.screen -= blobhealthdisplay
+	instantiated_client.screen -= r_hand_hud_object
+	instantiated_client.screen -= l_hand_hud_object
+	instantiated_client.screen -= action_intent
+	instantiated_client.screen -= move_intent
+	instantiated_client.screen -= adding
+	instantiated_client.screen -= other
+	instantiated_client.screen -= other_important
+	instantiated_client.screen -= hotkeybuttons
+	instantiated_client.screen -= ammo_hud_list
+	instantiated_client = null
+	return
+
 /mob/proc/create_mob_hud(datum/hud/HUD, apply_to_client = TRUE)
 	if(!client)
 		return 0
+	if(HUD.instantiated_client && HUD.instantiated_client != client) //theoretically this should never happen
+		HUD.uninstantiate()
+	HUD.instantiated_client = client
 
 	HUD.ui_style = ui_style2icon(client?.prefs?.UI_style)
 	HUD.ui_color = client?.prefs?.UI_style_color

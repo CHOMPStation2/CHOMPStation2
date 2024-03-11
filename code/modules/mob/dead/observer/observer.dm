@@ -195,7 +195,9 @@ Works together with spawning an observer, noted above.
 			if(H.vr_holder && !can_reenter_corpse)
 				H.exit_vr()
 				return 0
-		var/mob/observer/dead/ghost = new(src)	//Transfer safety to observer spawning proc.
+		var/mob/observer/dead/ghost = get_observer_dead(ckey, get_turf(src), src)
+		if(!istype(ghost)) // somehow, we failed
+			return 0
 		ghost.can_reenter_corpse = can_reenter_corpse
 		ghost.timeofdeath = src.timeofdeath //BS12 EDIT
 		ghost.key = key
@@ -546,6 +548,12 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	following_mobs = null
 	return ..()
 
+/mob/mobcache_dismiss_actions()
+	for(var/mob/observer/dead/M in following_mobs)
+		M.stop_following()
+	following_mobs = null
+	return ..()
+
 /mob/observer/dead/Destroy()
 	if(ismob(following))
 		var/mob/M = following
@@ -553,6 +561,14 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	stop_following()
 	observer_mob_list -= src
 	return ..()
+
+/mob/observer/dead/mobcache_dismiss_actions()
+	if(ismob(following))
+		var/mob/M = following
+		M.following_mobs -= src
+	stop_following()
+	observer_mob_list -= src
+	. = ..()
 
 /mob/Moved(atom/old_loc, direction, forced = FALSE)
 	. = ..()
@@ -1047,3 +1063,37 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set name = "Respawn"
 	set category = "Ghost"
 	src.abandon_mob()
+
+//-------- Procs related to mobcache_observer_deads
+
+// redress the existing observer
+/mob/observer/dead/proc/redress(mob/body)
+	cut_overlays()
+	appearance = body
+	if(ismob(body))
+		attack_log = body.attack_log	//preserve our attack logs by copying them to our ghost
+		gender = body.gender
+		if(body.mind && body.mind.name)
+			name = body.mind.name
+		else
+			if(body.real_name)
+				name = body.real_name
+			else
+				if(gender == MALE)
+					name = capitalize(pick(first_names_male)) + " " + capitalize(pick(last_names))
+				else
+					name = capitalize(pick(first_names_female)) + " " + capitalize(pick(last_names))
+
+		mind = body.mind	//we don't transfer the mind but we keep a reference to it.
+
+		// Fix for naked ghosts.
+		// Unclear why this isn't being grabbed by appearance.
+		if(ishuman(body))
+			var/mob/living/carbon/human/H = body
+			add_overlay(H.overlays_standing)
+		default_pixel_x = body.default_pixel_x
+		default_pixel_y = body.default_pixel_y
+
+		if(!name)							//To prevent nameless ghosts
+			name = capitalize(pick(first_names_male)) + " " + capitalize(pick(last_names))
+		real_name = name

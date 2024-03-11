@@ -158,6 +158,7 @@
 #include "code\_helpers\logging.dm"
 #include "code\_helpers\logging_vr.dm"
 #include "code\_helpers\matrices.dm"
+#include "code\_helpers\mobcache_players.dm"
 #include "code\_helpers\mobs.dm"
 #include "code\_helpers\names.dm"
 #include "code\_helpers\sanitize_values.dm"

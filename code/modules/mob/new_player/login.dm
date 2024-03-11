@@ -41,13 +41,23 @@ var/obj/effect/lobby_image = new /obj/effect/lobby_image
 		mind.active = 1
 		mind.current = src
 
+	//since we don't call ..(), we need to do some things on login that /mob does.
+	client.images = null				//remove the images such as AIs being unable to see runes
+	client.screen = list()				//remove hud items just in case
+	if(hud_used)	qdel(hud_used)		//remove the hud objects
+	hud_used = new /datum/hud(src)
+
 	loc = null
 	client.screen += lobby_image
 	my_client = client
 	sight |= SEE_TURFS
 	player_list |= src
 
+	world.update_status()
+
 	created_for = ckey
+
+	update_newplayer_from_current(src, ckey)
 
 	new_player_panel()
 	spawn(40)
