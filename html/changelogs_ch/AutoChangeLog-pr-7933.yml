@@ -1,0 +1,4 @@
+author: "Raeschen"
+delete-after: True
+changes:
+  - bugfix: "fixed errant red pixels on sergals, visible with digilegs"
