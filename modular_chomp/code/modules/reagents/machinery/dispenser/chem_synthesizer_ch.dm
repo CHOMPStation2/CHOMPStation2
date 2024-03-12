@@ -422,18 +422,18 @@
 				if("change_pill_style")
 					var/list/choices = list()
 					for(var/i = 1 to MAX_PILL_SPRITE)
-						choices += "pill[i].png"
-					tgui_modal_bento(src, id, "Please select the new style for pills:", null, arguments, pill_icon, choices)
+						choices += "chem_master32x32 pill[i]"
+					tgui_modal_bento_spritesheet(src, id, "Please select the new style for pills:", null, arguments, pill_icon, choices)
 				if("change_patch_style")
 					var/list/choices = list()
 					for(var/i = 1 to MAX_PATCH_SPRITE)
-						choices += "patch[i].png"
-					tgui_modal_bento(src, id, "Please select the new style for patches:", null, arguments, patch_icon, choices)
+						choices += "chem_master32x32 patch[i]"
+					tgui_modal_bento_spritesheet(src, id, "Please select the new style for patches:", null, arguments, patch_icon, choices)
 				if("change_bottle_style")
 					var/list/choices = list()
 					for(var/i = 1 to MAX_BOTTLE_SPRITE)
-						choices += "bottle-[i].png"
-					tgui_modal_bento(src, id, "Please select the new style for bottles:", null, arguments, bottle_icon, choices)
+						choices += "chem_master32x32 bottle-[i]"
+					tgui_modal_bento_spritesheet(src, id, "Please select the new style for bottles:", null, arguments, bottle_icon, choices)
 				else
 					return FALSE
 		if(TGUI_MODAL_ANSWER)
