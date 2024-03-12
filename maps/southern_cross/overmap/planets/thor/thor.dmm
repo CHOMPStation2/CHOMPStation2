@@ -1009,6 +1009,16 @@
 	dir = 10
 	},
 /area/surface/outside/thor/ocean)
+"kR" = (
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/item/solar_assembly,
+/turf/simulated/floor{
+	outdoors = 1
+	},
+/area/surface/outside/thor/jungle)
 "kS" = (
 /turf/simulated/floor/beach/sand/desert/outdoors/thor,
 /area/surface/outside/thor/jungle)
@@ -1490,6 +1500,10 @@
 	oxygen = 34.1451;
 	outdoors = 1
 	},
+/area/surface/thor/kitchen)
+"pe" = (
+/obj/machinery/biogenerator,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
 /area/surface/thor/kitchen)
 "ph" = (
 /obj/structure/prop/desert_planet64x64/palmuria1,
@@ -2111,10 +2125,8 @@
 /obj/item/weapon/material/minihoe,
 /obj/item/weapon/material/knife/machete/hatchet,
 /obj/structure/table/woodentable,
-/turf/simulated/floor/outdoors/grass/forest/thor{
-	tree_chance = 0;
-	grass_chance = 2
-	},
+/obj/item/weapon/reagent_containers/glass/bucket,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
 /area/surface/thor/kitchen)
 "vX" = (
 /obj/machinery/light{
@@ -3703,6 +3715,13 @@
 	icon_state = "dmg3"
 	},
 /area/surface/outside/thor/jungle)
+"Nb" = (
+/obj/structure/sink/puddle,
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	tree_chance = 0;
+	grass_chance = 2
+	},
+/area/surface/outside/thor/outpost)
 "Nk" = (
 /obj/item/weapon/material/shard,
 /obj/structure/grille/rustic,
@@ -4607,16 +4626,6 @@
 	dir = 8
 	},
 /area/surface/outside/thor/ocean)
-"VR" = (
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/item/solar_assembly,
-/turf/simulated/floor{
-	outdoors = 1
-	},
-/area/surface/outside/thor/jungle)
 "VS" = (
 /obj/structure/flora/tree/desert_planet/palmtreeb,
 /turf/simulated/floor/outdoors/grass/forest/thor,
@@ -19349,13 +19358,13 @@ fo
 oq
 oq
 oq
-VR
+kR
 oq
-VR
+kR
 oq
-VR
+kR
 oq
-VR
+kR
 oq
 oq
 oq
@@ -30983,7 +30992,7 @@ wM
 Uk
 PA
 Uk
-PA
+Nb
 Uk
 PA
 PA
@@ -31501,7 +31510,7 @@ Nm
 Qc
 hN
 vW
-iU
+pe
 iU
 rf
 qh
