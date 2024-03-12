@@ -4605,6 +4605,8 @@
 #include "maps\~map_system\maps.dm"
 #include "modular_chomp\code\coalesce_ch.dm"
 #include "modular_chomp\code\global.dm"
+#include "modular_chomp\code\__DEFINES\span.dm"
+#include "modular_chomp\code\__HELPERS\announcements.dm"
 #include "modular_chomp\code\_global_vars\tgui.dm"
 #include "modular_chomp\code\_global_vars\list\names.dm"
 #include "modular_chomp\code\_HELPERS\mobs.dm"
