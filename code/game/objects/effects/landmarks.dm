@@ -28,7 +28,7 @@
 		//	delete_me = 1
 			return
 		//VOREStation Add end
-		if("Observer-Start") // Ghosts are the only thing that use the latejoin list afaik and it complains if there's nothing in the list.
+		if("Observer-Start") // Ghosts are the only thing that use the latejoin list afaik and it complains if there's nothing in the list. 
 			latejoin += src
 			simulated = TRUE
 			return
@@ -39,11 +39,11 @@
 			return
 		//CHOMPEdit Begin
 		if("JoinLateStationGateway")
-			GLOB.latejoin_gatewaystation += loc
+			latejoin_gatewaystation += loc
 			delete_me = 1
 			return
 		if("JoinLateSifPlains")
-			GLOB.latejoin_plainspath += loc
+			latejoin_plainspath += loc
 			delete_me = 1
 			return
 		//CHOMPEdit End

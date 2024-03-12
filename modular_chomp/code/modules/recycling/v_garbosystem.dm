@@ -111,7 +111,7 @@
 			if(items_taken >= voracity)
 				break
 		if(items_taken) //Lazy coder sound design moment.
-			GLOB.Recycled_Items = GLOB.Recycled_Items + items_taken
+			Recycled_Items = Recycled_Items + items_taken
 			playsound(src, 'sound/items/poster_being_created.ogg', 50, 1)
 			playsound(src, 'sound/items/electronic_assembly_emptying.ogg', 50, 1)
 			playsound(src, 'sound/effects/metalscrape2.ogg', 50, 1)
@@ -142,4 +142,4 @@
 	if(grinder)
 		return grinder.attack_hand(user)
 
-GLOBAL_VAR_INIT(Recycled_Items, 0)
+var/Recycled_Items = 0
