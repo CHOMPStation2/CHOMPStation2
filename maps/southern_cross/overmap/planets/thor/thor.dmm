@@ -1094,26 +1094,6 @@
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/surface/thor/dorms/pool1)
-"mb" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor{
-	outdoors = 1
-	},
-/area/surface/outside/thor/jungle)
 "mj" = (
 /obj/structure/flora/underwater/plant2,
 /turf/simulated/floor/water/ocean{
@@ -1177,26 +1157,6 @@
 /obj/structure/bed/padded,
 /turf/simulated/floor/wood,
 /area/surface/thor/dorms/pool1)
-"mJ" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor{
-	outdoors = 1
-	},
-/area/surface/outside/thor/jungle)
 "mK" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/yellow,
@@ -3581,16 +3541,6 @@
 	tree_chance = 0
 	},
 /area/surface/outside/thor/beach)
-"La" = (
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/item/solar_assembly,
-/turf/simulated/floor{
-	outdoors = 1
-	},
-/area/surface/outside/thor/jungle)
 "Lg" = (
 /obj/structure/closet/crate,
 /obj/item/weapon/circuitboard/airalarm,
@@ -4380,16 +4330,6 @@
 	grass_chance = 2
 	},
 /area/surface/outside/thor/jungle)
-"Ty" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor{
-	outdoors = 1
-	},
-/area/surface/outside/thor/jungle)
 "TJ" = (
 /turf/simulated/wall,
 /area/surface/thor/commstower)
@@ -4965,11 +4905,6 @@
 "ZD" = (
 /turf/unsimulated/wall/planetary/normal/thor,
 /area/surface/outside/thor/jungle/deep)
-"ZF" = (
-/turf/simulated/floor{
-	outdoors = 1
-	},
-/area/surface/outside/thor/jungle)
 "ZG" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	frequency = 1380;
@@ -13146,8 +13081,8 @@ fo
 fo
 fo
 fo
-fo
-fo
+oq
+oq
 fo
 oq
 oq
@@ -13662,15 +13597,15 @@ fo
 oq
 oq
 oq
-oq
-DL
-oq
-oq
+fo
+fo
 oq
 oq
 oq
 oq
 oq
+oq
+fo
 oq
 oq
 oq
@@ -13921,13 +13856,13 @@ oq
 fo
 fo
 fo
-La
-oq
-La
-oq
-La
-oq
-La
+fo
+fo
+fo
+fo
+fo
+fo
+fo
 fo
 oq
 oq
@@ -14179,13 +14114,13 @@ oq
 fo
 fo
 fo
-nx
-oq
-nx
-oq
-nx
-oq
-nx
+fo
+fo
+fo
+fo
+fo
+fo
+fo
 fo
 oq
 oq
@@ -14436,15 +14371,15 @@ fo
 oq
 oq
 oq
-oq
-nx
-oq
-nx
-oq
-nx
-oq
-nx
-oq
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
 oq
 oq
 oq
@@ -14694,15 +14629,15 @@ fo
 oq
 oq
 oq
+fo
+fo
+fo
+fo
+fo
+fo
 oq
-mJ
-Ty
-mb
-ZF
-mJ
-Ty
-mb
 oq
+fo
 oq
 oq
 oq
@@ -14952,14 +14887,14 @@ fo
 oq
 oq
 oq
+fo
+fo
+fo
+fo
+fo
+fo
 oq
-nx
 oq
-nx
-oq
-nx
-oq
-nx
 oq
 oq
 oq
@@ -15211,13 +15146,13 @@ oq
 oq
 oq
 oq
-nx
 oq
-nx
 oq
-nx
 oq
-nx
+oq
+oq
+fo
+oq
 oq
 oq
 oq
@@ -15469,14 +15404,14 @@ oq
 oq
 oq
 oq
-nx
 oq
-nx
 oq
-nx
 oq
-nx
 oq
+oq
+fo
+fo
+fo
 oq
 oq
 oq
@@ -15727,14 +15662,14 @@ oq
 oq
 oq
 oq
-cl
-QZ
-DM
-tl
-EW
-QZ
-NT
 oq
+fo
+fo
+fo
+fo
+fo
+fo
+fo
 oq
 oq
 oq
@@ -15984,15 +15919,15 @@ fo
 oq
 oq
 oq
-oq
-oq
-oq
-oq
-qW
-oq
-oq
-oq
-oq
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
 oq
 oq
 oq
@@ -16242,15 +16177,15 @@ fo
 oq
 oq
 oq
-oq
-oq
-oq
-oq
-qW
-oq
-oq
-oq
-oq
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
 oq
 oq
 oq
@@ -16500,15 +16435,15 @@ fo
 oq
 oq
 oq
+fo
+fo
+fo
+fo
 oq
 oq
-oq
-oq
-qW
-oq
-oq
-oq
-oq
+fo
+fo
+fo
 oq
 oq
 oq
@@ -16758,15 +16693,15 @@ fo
 oq
 oq
 oq
+fo
+fo
+fo
+fo
 oq
 oq
-oq
-oq
-qW
-oq
-oq
-oq
-oq
+fo
+fo
+fo
 oq
 oq
 oq
@@ -17016,15 +16951,15 @@ fo
 oq
 oq
 oq
+fo
+fo
+fo
+fo
 oq
 oq
 oq
-oq
-qW
-oq
-oq
-oq
-oq
+fo
+fo
 oq
 oq
 oq
@@ -17274,12 +17209,12 @@ fo
 oq
 oq
 oq
-oq
-oq
-oq
-oq
-qW
-oq
+fo
+fo
+fo
+fo
+fo
+fo
 oq
 oq
 oq
@@ -17532,12 +17467,12 @@ fo
 oq
 oq
 oq
+fo
+fo
 oq
 oq
-oq
-oq
-qW
-oq
+fo
+fo
 oq
 oq
 oq
@@ -17794,8 +17729,8 @@ oq
 oq
 oq
 oq
-qW
-oq
+fo
+fo
 oq
 oq
 oq
@@ -18052,8 +17987,8 @@ oq
 oq
 oq
 oq
-qW
-oq
+fo
+fo
 oq
 oq
 oq
@@ -18310,8 +18245,8 @@ oq
 oq
 oq
 oq
-qW
-oq
+fo
+fo
 oq
 oq
 oq
@@ -18568,8 +18503,8 @@ oq
 oq
 oq
 oq
-qW
-oq
+fo
+fo
 oq
 oq
 oq
@@ -18826,8 +18761,8 @@ oq
 oq
 oq
 oq
-qW
-oq
+fo
+fo
 oq
 oq
 oq
@@ -19081,10 +19016,10 @@ fo
 oq
 oq
 oq
+DL
 oq
 oq
 oq
-qW
 oq
 oq
 oq
@@ -19339,13 +19274,13 @@ fo
 oq
 oq
 oq
+nx
 oq
+nx
 oq
+nx
 oq
-qW
-oq
-oq
-oq
+nx
 oq
 oq
 oq
@@ -19597,13 +19532,13 @@ fo
 oq
 oq
 oq
+nx
 oq
+nx
 oq
+nx
 oq
-qW
-oq
-oq
-oq
+nx
 oq
 oq
 oq
@@ -19855,13 +19790,13 @@ fo
 oq
 oq
 oq
+nx
 oq
+nx
 oq
+nx
 oq
-qW
-oq
-oq
-oq
+nx
 oq
 oq
 oq
@@ -20113,13 +20048,13 @@ fo
 oq
 oq
 oq
+nx
 oq
+nx
 oq
+nx
 oq
-qW
-oq
-oq
-oq
+nx
 oq
 oq
 oq
@@ -20371,13 +20306,13 @@ fo
 oq
 oq
 oq
+nx
 oq
+nx
 oq
+nx
 oq
-qW
-oq
-oq
-oq
+nx
 oq
 oq
 oq
@@ -20629,13 +20564,13 @@ fo
 oq
 oq
 oq
+nx
 oq
+nx
 oq
+nx
 oq
-qW
-oq
-oq
-oq
+nx
 oq
 oq
 oq
@@ -20887,13 +20822,13 @@ fo
 oq
 oq
 oq
+nx
 oq
+nx
 oq
+nx
 oq
-qW
-oq
-oq
-oq
+nx
 oq
 oq
 oq
@@ -21145,13 +21080,13 @@ fo
 oq
 oq
 oq
-oq
-oq
-oq
-qW
-oq
-oq
-oq
+cl
+QZ
+DM
+tl
+EW
+QZ
+NT
 oq
 oq
 oq
