@@ -5,7 +5,7 @@ GLOBAL_LIST_INIT(shell_module_blacklist, list(
 GLOBAL_LIST_EMPTY(latejoin_gatewaystation)
 GLOBAL_LIST_EMPTY(latejoin_plainspath)
 
-GLOBAL_LIST_INIT(talk_sound_map, rlist(
+var/list/talk_sound_map = rlist(
 								list(
 									"beep-boop",
 									"goon speak 1",
@@ -40,12 +40,12 @@ GLOBAL_LIST_INIT(talk_sound_map, rlist(
 									goon_speak_skelly_sound,
 									xeno_speak_sound // CHOMPedit
 									)
-								))
+								)
 
 /proc/get_talk_sound(var/voice_sound)
 	if(!voice_sound)
-		return GLOB.talk_sound_map[1]
-	return GLOB.talk_sound_map[2][voice_sound]
+		return talk_sound_map[1]
+	return talk_sound_map[2][voice_sound]
 
 /proc/rlist(var/list/keys,var/list/values) //short for reversible list generator
 	var/list/rlist = list(list(),list(),FALSE,0)
