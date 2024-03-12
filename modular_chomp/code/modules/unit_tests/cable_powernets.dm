@@ -2,9 +2,21 @@
 /datum/unit_test/cable_powernets
 
 /datum/unit_test/cable_powernets/Run()
-	var/list/exempt_areas += using_map.unit_test_exempt_areas.Copy()
+	var/list/exempt_areas = typesof(/area/space,
+					/area/syndicate_station,
+					/area/skipjack_station,
+					/area/solar,
+					/area/shuttle,
+					/area/holodeck,
+					/area/supply/station,
+					/area/mine,
+					/area/vacant/vacant_shop,
+					/area/turbolift,
+					/area/submap)
 	var/list/zs_to_test = using_map.unit_test_z_levels || list(1) //Either you set it, or you just get z1
 	var/list/the_station_areas
+
+	exempt_areas += using_map.unit_test_exempt_areas.Copy()
 
 	for(var/area/A in world)
 		if((A.z in zs_to_test) && !(A.type in exempt_areas))
