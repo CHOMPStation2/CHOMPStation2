@@ -25,7 +25,7 @@
 	title = "",
 	players,
 	play_sound = TRUE,
-	sound_override = 'sound/misc/bloop.ogg',
+	sound_override = 'modular_chomp/sound/misc/bloop.ogg',
 	sender_override = "Server Admin Announcement",
 	encode_title = TRUE,
 	encode_text = FALSE,
@@ -59,7 +59,7 @@
 		if(!play_sound)
 			return
 
-		for(var/mob/player in GLOB.player_list)
+		for(var/mob/player in player_list)
 			//if(player.client?.prefs.read_preference(/datum/preference/toggle/sound_announcements))
 			if(player.client?.is_preference_enabled(/datum/client_preference/holder/play_adminhelp_ping))
 				SEND_SOUND(player, sound(sound_override))
