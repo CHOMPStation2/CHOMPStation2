@@ -5,7 +5,7 @@
 
 /datum/spawnpoint/stationgateway/New()
 	..()
-	turfs = GLOB.latejoin_gatewaystation
+	turfs = latejoin_gatewaystation
 
 /datum/spawnpoint/vore
 	display_name = "Vorespawn - Prey"
@@ -31,4 +31,4 @@
 
 /datum/spawnpoint/plainspath/New()
 	..()
-	turfs = GLOB.latejoin_plainspath
+	turfs = latejoin_plainspath

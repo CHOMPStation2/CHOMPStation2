@@ -1,4 +1,4 @@
-GLOBAL_DATUM_INIT(gear_tweak_item_tf_spawn, /datum/gear_tweak/item_tf_spawn, new())
+var/datum/gear_tweak/item_tf_spawn/gear_tweak_item_tf_spawn = new()
 
 /datum/gear_tweak/item_tf_spawn
 
