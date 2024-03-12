@@ -528,7 +528,7 @@
 
 /obj/machinery/disposal/hitby(atom/movable/AM)
 	. = ..()
-	//CHOMPEdit: disposal dunking and autoflushes with mobs~ - Reo
+	//CHOMPEdit: fixes thrown disposal dunking with mobs~ - Reo
 	if((istype(AM, /obj/item) || istype(AM, /mob/living)) && !istype(AM, /obj/item/projectile))
 		if(prob(75))
 			AM.forceMove(src)
