@@ -1094,6 +1094,29 @@
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/surface/thor/dorms/pool1)
+"mb" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor{
+	outdoors = 1
+	},
+/area/surface/outside/thor/jungle)
 "mj" = (
 /obj/structure/flora/underwater/plant2,
 /turf/simulated/floor/water/ocean{
@@ -1157,6 +1180,21 @@
 /obj/structure/bed/padded,
 /turf/simulated/floor/wood,
 /area/surface/thor/dorms/pool1)
+"mJ" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor{
+	outdoors = 1
+	},
+/area/surface/outside/thor/jungle)
 "mK" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/yellow,
@@ -2852,8 +2890,8 @@
 "DL" = (
 /obj/machinery/power/tracker,
 /obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
+	d2 = 2;
+	icon_state = "0-2"
 	},
 /turf/simulated/floor{
 	outdoors = 1
@@ -4330,6 +4368,16 @@
 	grass_chance = 2
 	},
 /area/surface/outside/thor/jungle)
+"Ty" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor{
+	outdoors = 1
+	},
+/area/surface/outside/thor/jungle)
 "TJ" = (
 /turf/simulated/wall,
 /area/surface/thor/commstower)
@@ -4905,6 +4953,21 @@
 "ZD" = (
 /turf/unsimulated/wall/planetary/normal/thor,
 /area/surface/outside/thor/jungle/deep)
+"ZF" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor{
+	outdoors = 1
+	},
+/area/surface/outside/thor/jungle)
 "ZG" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	frequency = 1380;
@@ -19016,7 +19079,7 @@ fo
 oq
 oq
 oq
-DL
+oq
 oq
 oq
 oq
@@ -20048,13 +20111,13 @@ fo
 oq
 oq
 oq
-nx
-oq
-nx
-oq
-nx
-oq
-nx
+mJ
+Ty
+mb
+DL
+mb
+Ty
+ZF
 oq
 oq
 oq
