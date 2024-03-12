@@ -1101,6 +1101,8 @@
 	icon_state = "1-4"
 	},
 /obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable{
@@ -4605,6 +4607,16 @@
 	dir = 8
 	},
 /area/surface/outside/thor/ocean)
+"VR" = (
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/item/solar_assembly,
+/turf/simulated/floor{
+	outdoors = 1
+	},
+/area/surface/outside/thor/jungle)
 "VS" = (
 /obj/structure/flora/tree/desert_planet/palmtreeb,
 /turf/simulated/floor/outdoors/grass/forest/thor,
@@ -19337,13 +19349,13 @@ fo
 oq
 oq
 oq
-nx
+VR
 oq
-nx
+VR
 oq
-nx
+VR
 oq
-nx
+VR
 oq
 oq
 oq
