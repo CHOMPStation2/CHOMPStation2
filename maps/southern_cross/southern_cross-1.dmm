@@ -25672,7 +25672,9 @@
 	dir = 1
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass,
+/obj/machinery/door/airlock/glass{
+	req_one_access = list(67)
+	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/spacebus)
 "pSW" = (
