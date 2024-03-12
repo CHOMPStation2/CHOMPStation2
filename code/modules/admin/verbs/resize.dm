@@ -1,9 +1,17 @@
-/client/proc/resize(var/mob/living/L in mob_list)
+/client/proc/resize() // CHOMPEdit
     set name = "Resize"
     set desc = "Resizes any living mob without any restrictions on size."
     set category = "Fun"
+
+	// CHOMPEdit Start
     if(!check_rights(R_ADMIN|R_FUN|R_VAREDIT))
         return
+
+	var/mob/living/L = tgui_input_list(usr, "Resizes any living mob without any restrictions on size.", "Resize", mob_list)
+
+	if(!L)
+		return
+	// CHOMPEdit End
 
     var/size_multiplier = tgui_input_number(usr, "Input size multiplier.", "Resize", 1, round_value=FALSE)
     if(!size_multiplier)
