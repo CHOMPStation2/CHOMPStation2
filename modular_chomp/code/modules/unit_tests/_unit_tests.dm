@@ -86,9 +86,13 @@
 
 // BEGIN_INCLUDE
 #include "cable_powernets.dm"
+#include "component_test.dm"
 #include "dcs_check_list_arguments.dm"
 #include "dcs_get_id_from_elements.dm"
+//#include "find_reference_sanity.dm"
 #include "focus_only_tests.dm"
+//#include "font_awesome_icons.dm"
+//#include "subsystem_init.dm"
 #include "tgui_create_message.dm"
 #include "timer_sanity.dm"
 #include "unit_test.dm"
