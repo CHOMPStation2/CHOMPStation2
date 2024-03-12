@@ -1,0 +1,4 @@
+author: "ItsSelis"
+delete-after: True
+changes:
+  - admin: "Check Player Attack/Dialog logs, Gib, Resize and Cryo player are now using tgui_input_list's"
