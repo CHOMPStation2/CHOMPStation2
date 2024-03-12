@@ -358,7 +358,8 @@
 /turf/simulated/floor/wood{
 	temperature = 313;
 	nitrogen = 63.4124;
-	oxygen = 34.1451
+	oxygen = 34.1451;
+	outdoors = 1
 	},
 /area/surface/thor/kitchen)
 "dS" = (
@@ -402,7 +403,8 @@
 /turf/simulated/floor/wood{
 	temperature = 313;
 	nitrogen = 63.4124;
-	oxygen = 34.1451
+	oxygen = 34.1451;
+	outdoors = 1
 	},
 /area/surface/thor/kitchen)
 "er" = (
@@ -976,24 +978,8 @@
 /turf/simulated/floor/wood,
 /area/surface/thor/dorms/pool2)
 "ky" = (
-/obj/structure/table/glass,
-/obj/item/weapon/storage/firstaid{
-	pixel_x = -6;
-	pixel_y = 5
-	},
-/obj/item/weapon/storage/firstaid{
-	pixel_y = -2;
-	pixel_x = -6
-	},
-/obj/item/weapon/storage/firstaid{
-	pixel_y = 5;
-	pixel_x = 5
-	},
-/obj/item/weapon/storage/firstaid{
-	pixel_y = -2;
-	pixel_x = 5
-	},
 /obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/machinery/cryopod,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/surface/thor/med)
 "kI" = (
@@ -1402,7 +1388,8 @@
 /turf/simulated/floor/wood{
 	temperature = 313;
 	nitrogen = 63.4124;
-	oxygen = 34.1451
+	oxygen = 34.1451;
+	outdoors = 1
 	},
 /area/surface/thor/kitchen)
 "oB" = (
@@ -1425,7 +1412,8 @@
 /turf/simulated/floor/wood{
 	temperature = 313;
 	nitrogen = 63.4124;
-	oxygen = 34.1451
+	oxygen = 34.1451;
+	outdoors = 1
 	},
 /area/surface/thor/kitchen)
 "oP" = (
@@ -1499,7 +1487,8 @@
 /turf/simulated/floor/wood{
 	temperature = 313;
 	nitrogen = 63.4124;
-	oxygen = 34.1451
+	oxygen = 34.1451;
+	outdoors = 1
 	},
 /area/surface/thor/kitchen)
 "ph" = (
@@ -1596,7 +1585,8 @@
 /turf/simulated/floor/wood{
 	temperature = 313;
 	nitrogen = 63.4124;
-	oxygen = 34.1451
+	oxygen = 34.1451;
+	outdoors = 1
 	},
 /area/surface/thor/kitchen)
 "pK" = (
@@ -1774,7 +1764,8 @@
 /turf/simulated/floor/wood{
 	temperature = 313;
 	nitrogen = 63.4124;
-	oxygen = 34.1451
+	oxygen = 34.1451;
+	outdoors = 1
 	},
 /area/surface/thor/kitchen)
 "rs" = (
@@ -2213,7 +2204,8 @@
 /turf/simulated/floor/wood{
 	temperature = 313;
 	nitrogen = 63.4124;
-	oxygen = 34.1451
+	oxygen = 34.1451;
+	outdoors = 1
 	},
 /area/surface/thor/kitchen)
 "wP" = (
@@ -2257,7 +2249,8 @@
 /turf/simulated/floor/wood{
 	temperature = 313;
 	nitrogen = 63.4124;
-	oxygen = 34.1451
+	oxygen = 34.1451;
+	outdoors = 1
 	},
 /area/surface/thor/kitchen)
 "xj" = (
@@ -2425,7 +2418,8 @@
 /turf/simulated/floor/wood{
 	temperature = 313;
 	nitrogen = 63.4124;
-	oxygen = 34.1451
+	oxygen = 34.1451;
+	outdoors = 1
 	},
 /area/surface/thor/kitchen)
 "zs" = (
@@ -2861,6 +2855,10 @@
 	temperature = 313
 	},
 /area/surface/thor/abandonedhouse)
+"DC" = (
+/obj/machinery/computer/cryopod,
+/turf/simulated/wall/wood,
+/area/surface/thor/med)
 "DG" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -2892,10 +2890,15 @@
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/surface/thor/caves)
 "DL" = (
-/obj/structure/flora/skeleton,
-/obj/effect/floor_decal/corner/paleblue/diagonal,
-/turf/simulated/floor/tiled/old_tile/white,
-/area/surface/thor/med)
+/obj/machinery/power/tracker,
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor{
+	outdoors = 1
+	},
+/area/surface/outside/thor/jungle)
 "DM" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -3158,6 +3161,15 @@
 /obj/structure/grille,
 /turf/simulated/floor/plating,
 /area/shuttle/junker)
+"Hc" = (
+/obj/machinery/light/floortube,
+/turf/simulated/floor/wood{
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451;
+	outdoors = 1
+	},
+/area/surface/thor/kitchen)
 "He" = (
 /obj/structure/railing{
 	dir = 8;
@@ -3192,7 +3204,8 @@
 /turf/simulated/floor/wood{
 	temperature = 313;
 	nitrogen = 63.4124;
-	oxygen = 34.1451
+	oxygen = 34.1451;
+	outdoors = 1
 	},
 /area/surface/thor/kitchen)
 "Hs" = (
@@ -3617,7 +3630,8 @@
 /turf/simulated/floor/wood{
 	temperature = 313;
 	nitrogen = 63.4124;
-	oxygen = 34.1451
+	oxygen = 34.1451;
+	outdoors = 1
 	},
 /area/surface/thor/kitchen)
 "LR" = (
@@ -4131,7 +4145,8 @@
 /turf/simulated/floor/wood{
 	temperature = 313;
 	nitrogen = 63.4124;
-	oxygen = 34.1451
+	oxygen = 34.1451;
+	outdoors = 1
 	},
 /area/surface/thor/kitchen)
 "QQ" = (
@@ -4158,6 +4173,7 @@
 "QU" = (
 /obj/machinery/light/small,
 /obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/structure/flora/skeleton,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/surface/thor/med)
 "QW" = (
@@ -4191,35 +4207,26 @@
 /turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/surface/outside/thor/jungle/deep)
 "Ri" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
+/obj/structure/table/glass,
+/obj/item/weapon/storage/firstaid/adv{
+	pixel_y = -8;
+	pixel_x = -4
 	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/item/weapon/storage/firstaid/adv{
+	pixel_y = -8;
+	pixel_x = 6
 	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
+/obj/item/weapon/storage/firstaid/regular{
+	pixel_y = -1;
+	pixel_x = 7
 	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
+/obj/item/weapon/storage/firstaid/regular{
+	pixel_y = -1;
+	pixel_x = -5
 	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor{
-	outdoors = 1
-	},
-/area/surface/outside/thor/jungle)
+/turf/simulated/floor/tiled/old_tile/white,
+/area/surface/thor/med)
 "Rs" = (
 /obj/structure/flora/ausbushes/genericbush,
 /turf/simulated/floor/outdoors/grass/heavy/thor,
@@ -4299,7 +4306,8 @@
 /turf/simulated/floor/wood{
 	temperature = 313;
 	nitrogen = 63.4124;
-	oxygen = 34.1451
+	oxygen = 34.1451;
+	outdoors = 1
 	},
 /area/surface/thor/kitchen)
 "Sl" = (
@@ -4396,7 +4404,8 @@
 /turf/simulated/floor/wood{
 	temperature = 313;
 	nitrogen = 63.4124;
-	oxygen = 34.1451
+	oxygen = 34.1451;
+	outdoors = 1
 	},
 /area/surface/thor/kitchen)
 "TV" = (
@@ -4539,7 +4548,8 @@
 /turf/simulated/floor/wood{
 	temperature = 313;
 	nitrogen = 63.4124;
-	oxygen = 34.1451
+	oxygen = 34.1451;
+	outdoors = 1
 	},
 /area/surface/thor/kitchen)
 "Vy" = (
@@ -4568,7 +4578,8 @@
 /turf/simulated/floor/wood{
 	temperature = 313;
 	nitrogen = 63.4124;
-	oxygen = 34.1451
+	oxygen = 34.1451;
+	outdoors = 1
 	},
 /area/surface/thor/kitchen)
 "VM" = (
@@ -4789,7 +4800,8 @@
 /turf/simulated/floor/wood{
 	temperature = 313;
 	nitrogen = 63.4124;
-	oxygen = 34.1451
+	oxygen = 34.1451;
+	outdoors = 1
 	},
 /area/surface/thor/kitchen)
 "Yl" = (
@@ -4909,7 +4921,8 @@
 /turf/simulated/floor/wood{
 	temperature = 313;
 	nitrogen = 63.4124;
-	oxygen = 34.1451
+	oxygen = 34.1451;
+	outdoors = 1
 	},
 /area/surface/thor/kitchen)
 "Zd" = (
@@ -4953,16 +4966,6 @@
 /turf/unsimulated/wall/planetary/normal/thor,
 /area/surface/outside/thor/jungle/deep)
 "ZF" = (
-/obj/machinery/power/tracker,
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
 /turf/simulated/floor{
 	outdoors = 1
 	},
@@ -9212,7 +9215,7 @@ rC
 IJ
 EE
 fY
-Dn
+fY
 fo
 fo
 fo
@@ -9468,8 +9471,8 @@ JJ
 JJ
 JJ
 lc
-fY
-fY
+JJ
+JJ
 fY
 fo
 fo
@@ -9726,9 +9729,9 @@ it
 fY
 lc
 lc
+JJ
+JJ
 fY
-fY
-it
 fo
 fq
 fo
@@ -9984,8 +9987,8 @@ fY
 lc
 gN
 lc
-fY
-it
+JJ
+JJ
 fY
 fo
 fo
@@ -10240,10 +10243,10 @@ fY
 fY
 fY
 fY
-fY
-fY
-fY
-fY
+JJ
+JJ
+JJ
+JJ
 fY
 fo
 fo
@@ -13660,7 +13663,7 @@ oq
 oq
 oq
 oq
-oq
+DL
 oq
 oq
 oq
@@ -14694,9 +14697,9 @@ oq
 oq
 mJ
 Ty
-Ri
+mb
 ZF
-Ri
+mJ
 Ty
 mb
 oq
@@ -31995,7 +31998,7 @@ DG
 oy
 oy
 rq
-oy
+Hc
 oy
 oy
 oy
@@ -33027,7 +33030,7 @@ JU
 oy
 VG
 oy
-oy
+Hc
 oy
 oy
 oy
@@ -33534,8 +33537,8 @@ PA
 mA
 Qq
 Me
-DL
-ky
+Me
+Me
 Jg
 mA
 BR
@@ -33790,11 +33793,11 @@ PA
 PA
 PA
 mA
-mA
-mA
-mA
-mA
-mA
+ky
+Me
+Me
+Me
+Ri
 mA
 BR
 DG
@@ -34047,13 +34050,13 @@ PA
 PA
 PA
 PA
-PA
-PA
-PA
-PA
-PA
-PA
-PA
+mA
+DC
+mA
+mA
+mA
+mA
+mA
 BR
 DG
 QP
@@ -36375,8 +36378,8 @@ PA
 PA
 PA
 PA
-PA
 uY
+wu
 bX
 wu
 wu

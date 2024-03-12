@@ -19558,7 +19558,17 @@
 /turf/simulated/floor/plating,
 /area/hallway/primary/firstdeck/apcenter)
 "iZh" = (
-/obj/structure/closet/walllocker/emerglocker/south,
+/obj/structure/closet/crate,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/weapon/melee/umbrella/random,
+/obj/item/weapon/melee/umbrella/random,
+/obj/item/weapon/melee/umbrella/random,
+/obj/item/weapon/melee/umbrella/random,
+/obj/item/weapon/melee/umbrella/random,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/spacebus)
 "jbn" = (

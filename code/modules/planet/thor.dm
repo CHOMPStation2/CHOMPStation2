@@ -143,8 +143,8 @@ var/datum/planet/thor/planet_thor = null
 
 /datum/weather/thor/overcast
 	name = "overcast"
-	temp_high = 293.15 // 20c
-	temp_low = 	288.15 // 15c
+	temp_high = 308.15 // 35c
+	temp_low = 	298.15  // 25c
 	light_modifier = 0.8
 	transition_chances = list(
 		WEATHER_CLEAR = 5,
@@ -247,8 +247,8 @@ var/datum/planet/thor/planet_thor = null
 /datum/weather/thor/rain
 	name = "rain"
 	icon_state = "rain"
-	temp_high = 288.15 // 15c
-	temp_low = 	283.15 // 10c
+	temp_high = 308.15 // 35c
+	temp_low = 	298.15  // 25c
 	wind_high = 2
 	wind_low = 1
 	light_modifier = 0.5
