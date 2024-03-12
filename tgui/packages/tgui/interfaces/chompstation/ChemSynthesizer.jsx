@@ -400,6 +400,7 @@ const ChemSynthesizerSettings = (props) => {
                     }}
                   />
                 </div>
+                Style
               </Button>
             </LabeledList.Item>
           </LabeledList>
