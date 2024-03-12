@@ -1,9 +1,22 @@
 import { round } from 'common/math';
 import { Fragment } from 'inferno';
 import { useBackend } from '../backend';
-import { Box, Button, Flex, Icon, LabeledList, NoticeBox, ProgressBar, Section, Tabs } from '../components';
+import {
+  Box,
+  Button,
+  Flex,
+  Icon,
+  LabeledList,
+  NoticeBox,
+  ProgressBar,
+  Section,
+  Tabs,
+} from '../components';
 import { COLORS } from '../constants';
-import { ComplexModal, modalRegisterBodyOverride } from '../interfaces/common/ComplexModal';
+import {
+  ComplexModal,
+  modalRegisterBodyOverride,
+} from '../interfaces/common/ComplexModal';
 import { Window } from '../layouts';
 
 const viewRecordModalBodyOverride = (modal, context) => {
@@ -142,7 +155,8 @@ const CloningConsoleNavigation = (props, context) => {
           act('menu', {
             num: 1,
           })
-        }>
+        }
+      >
         Main
       </Tabs.Tab>
       <Tabs.Tab
@@ -152,7 +166,8 @@ const CloningConsoleNavigation = (props, context) => {
           act('menu', {
             num: 2,
           })
-        }>
+        }
+      >
         Records
       </Tabs.Tab>
     </Tabs>
@@ -209,7 +224,8 @@ const CloningConsoleMain = (props, context) => {
               onClick={() => act('eject')}
             />
           </Fragment>
-        }>
+        }
+      >
         <LabeledList>
           <LabeledList.Item label="Status">
             {loading ? (
@@ -255,7 +271,8 @@ const CloningConsoleMain = (props, context) => {
                     average: [0.25, 0.75],
                     bad: [-Infinity, 0.25],
                   }}
-                  mt="0.5rem">
+                  mt="0.5rem"
+                >
                   <Box textAlign="center">{round(pod.progress, 0) + '%'}</Box>
                 </ProgressBar>
               );
@@ -287,9 +304,10 @@ const CloningConsoleMain = (props, context) => {
                 width="64px"
                 textAlign="center"
                 display="inline-block"
-                mr="0.5rem">
+                mr="0.5rem"
+              >
                 <img
-                  src={'pod_' + pod.status + '.gif'}
+                  src={resolveAsset('pod_' + pod.status + '.gif')}
                   style={{
                     width: '100%',
                     '-ms-interpolation-mode': 'nearest-neighbor',
@@ -405,7 +423,8 @@ const CloningConsoleStatus = (props, context) => {
             }
           />
         </Fragment>
-      }>
+      }
+    >
       <LabeledList>
         <LabeledList.Item label="Scanner">
           {scanner ? (
