@@ -146,6 +146,13 @@
 	name = "VR Dungeon"
 	icon_state = "darkred"
 
+/area/vr/powered/mall
+	name = "VR Mall"
+	icon_state = "yellow"
+
+/area/vr/outdoors/powered/mall
+	name = "VR Mall Outdoors"
+	icon_state = "bluenew"
 /area/vr/powered/dungeon/indoors
 	name = "VR Sewers"
 	icon_state = "red"
