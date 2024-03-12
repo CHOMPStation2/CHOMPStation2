@@ -8,7 +8,7 @@
 		if(UNIX) lib = "libprof.so"
 		else CRASH("unsupported platform")
 
-	var/init = call(lib, "init")()
+	var/init = call_ext(lib, "init")()
 	if("0" != init) CRASH("[lib] init error: [init]")
 // CHOMPedit End
 
@@ -44,7 +44,7 @@
 	if(byond_version < RECOMMENDED_VERSION)
 		to_world_log("Your server's byond version does not meet the recommended requirements for this server. Please update BYOND")
 
-	TgsNew()
+	TgsNew(new /datum/tgs_event_handler/impl, TGS_SECURITY_TRUSTED) // CHOMPEdit - tgs event handler
 	VgsNew() // VOREStation Edit - VGS
 
 	config.post_load()
@@ -70,7 +70,7 @@
 	// CHOMPStation Addition: Spaceman DMM Debugging
 	var/debug_server = world.GetConfig("env", "AUXTOOLS_DEBUG_DLL")
 	if (debug_server)
-		call(debug_server, "auxtools_init")()
+		call_ext(debug_server, "auxtools_init")()
 		enable_debugging()
 	// CHOMPStation Add End
 
@@ -840,7 +840,7 @@ var/global/game_id = null
 /world/Del()
 	var/debug_server = world.GetConfig("env", "AUXTOOLS_DEBUG_DLL")
 	if (debug_server)
-		call(debug_server, "auxtools_shutdown")()
+		call_ext(debug_server, "auxtools_shutdown")()
 	. = ..()
 
 // CHOMPStation Add End: Spaceman DMM Debugger

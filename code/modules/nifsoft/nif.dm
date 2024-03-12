@@ -387,7 +387,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 
 	last_notification = message // TGUI Hook
 
-	to_chat(human,"<span class='filter_nif'><b>\[\icon[src.big_icon][bicon(src.big_icon)]NIF\]</b> displays, \"<span class='[alert ? "danger" : "notice"]'>[message]</span>\"</span>")
+	to_chat(human,"<span class='filter_nif'><b>\[[icon2html(src.big_icon, human.client)]NIF\]</b> displays, \"<span class='[alert ? "danger" : "notice"]'>[message]</span>\"</span>")
 	if(prob(1)) human.visible_message("<span class='notice'>\The [human] [pick(look_messages)].</span>")
 	if(alert)
 		human << bad_sound
@@ -461,7 +461,10 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 
 //Uninstall a piece of software
 /obj/item/device/nif/proc/uninstall(var/datum/nifsoft/old_soft)
-	var/datum/nifsoft/NS = nifsofts[old_soft.list_pos]
+	var/datum/nifsoft/NS
+	if(nifsofts)
+		NS = nifsofts[old_soft.list_pos]
+
 	if(!NS || NS != old_soft)
 		return FALSE //what??
 

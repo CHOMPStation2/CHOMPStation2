@@ -510,6 +510,7 @@
 				var/okay = tgui_alert(target,"New name will be '[clean_name]', ok?", "Confirmation",list("Cancel","Ok"))
 				if(okay == "Ok")
 					new_name = clean_name
+					break //ChompEDIT infinite rename bug
 
 		new_name = sanitizeName(new_name, allow_numbers = TRUE)
 		target.name = new_name

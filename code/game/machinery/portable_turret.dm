@@ -254,9 +254,6 @@
 	if(get_dist(src, L) > 7)	//if it's too far away, why bother?
 		return TURRET_NOT_TARGET
 
-	if(!(L in check_trajectory(L, src)))	//check if we have true line of sight
-		return TURRET_NOT_TARGET
-
 	if(L.lying)		//Don't need to stun-lock the players
 		return TURRET_NOT_TARGET
 
@@ -656,7 +653,7 @@
 /obj/machinery/porta_turret/proc/die()	//called when the turret dies, ie, health <= 0
 	health = 0
 	stat |= BROKEN	//enables the BROKEN bit
-	spark_system.start()	//creates some sparks because they look cool
+	spark_system?.start()	//creates some sparks because they look cool
 	update_icon()
 
 /obj/machinery/porta_turret/process()
@@ -731,9 +728,6 @@
 	if(get_dist(src, L) > 7)	//if it's too far away, why bother?
 		return TURRET_NOT_TARGET
 
-	if(!(L in check_trajectory(L, src)))	//check if we have true line of sight
-		return TURRET_NOT_TARGET
-
 	if(emagged)		// If emagged not even the dead get a rest
 		return L.stat ? TURRET_SECONDARY_TARGET : TURRET_PRIORITY_TARGET
 
@@ -741,7 +735,7 @@
 		return TURRET_NOT_TARGET
 
 	if(check_synth || check_all)	//If it's set to attack all non-silicons or everything, target them!
-		if(L.lying)
+		if(L.lying && (L.incapacitated(INCAPACITATION_KNOCKOUT) || L.incapacitated(INCAPACITATION_STUNNED))) // CHOMPEdit - Crawling targets are dangerous, if they are able.
 			return check_down ? TURRET_SECONDARY_TARGET : TURRET_NOT_TARGET
 		return TURRET_PRIORITY_TARGET
 
@@ -758,7 +752,7 @@
 		if(assess_perp(L) < 4)
 			return TURRET_NOT_TARGET	//if threat level < 4, keep going
 
-	if(L.lying)		//if the perp is lying down, it's still a target but a less-important target
+	if(L.lying && (L.incapacitated(INCAPACITATION_KNOCKOUT) || L.incapacitated(INCAPACITATION_STUNNED)))		//if the perp is lying down, it's still a target but a less-important target - CHOMPEdit - Crawling targets are dangerous, if they are able.
 		return check_down ? TURRET_SECONDARY_TARGET : TURRET_NOT_TARGET
 
 	return TURRET_PRIORITY_TARGET	//if the perp has passed all previous tests, congrats, it is now a "shoot-me!" nominee
@@ -835,14 +829,15 @@
 	if(disabled)
 		return
 	if(target)
-		last_target = target
-		spawn()
-			popUp()				//pop the turret up if it's not already up.
-		set_dir(get_dir(src, target))	//even if you can't shoot, follow the target
-		playsound(src, 'sound/machines/turrets/turret_rotate.ogg', 100, 1) // Play rotating sound
-		spawn()
-			shootAt(target)
-		return 1
+		if(target in check_trajectory(target, src))	//Finally, check if we can actually hit the target
+			last_target = target
+			spawn()
+				popUp()				//pop the turret up if it's not already up.
+			set_dir(get_dir(src, target))	//even if you can't shoot, follow the target
+			playsound(src, 'sound/machines/turrets/turret_rotate.ogg', 100, 1) // Play rotating sound
+			spawn()
+				shootAt(target)
+			return 1
 	return
 
 /obj/machinery/porta_turret/proc/shootAt(var/mob/living/target)

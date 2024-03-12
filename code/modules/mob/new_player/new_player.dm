@@ -25,6 +25,12 @@
 	verbs |= /mob/proc/insidePanel
 	initialized = TRUE // Explicitly don't use Initialize().  New players join super early and use New()
 
+
+/mob/new_player/Destroy()
+	if(panel)
+		QDEL_NULL(panel)
+	. = ..()
+
 /mob/new_player/verb/new_player_panel()
 	set src = usr
 	new_player_panel_proc()
@@ -81,7 +87,7 @@
 				output += "<p><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A><br><i>No Changes</i></p>" //ChompEDIT - fixed height
 	*/
 
-	if(client.check_for_new_server_news())
+	if(client?.check_for_new_server_news())
 		output += "<p><b><a href='byond://?src=\ref[src];shownews=1'>Show Server News</A><br>(NEW!)</b></p>" //ChompEDIT 'Game updates' --> 'Server news'
 	else
 		output += "<p><a href='byond://?src=\ref[src];shownews=1'>Show Server News</A><br><i>No Changes</i></p>" //ChompEDIT 'Game updates' --> 'Server news'
@@ -172,11 +178,11 @@
 			if(!client)	return 1
 
 			//Make a new mannequin quickly, and allow the observer to take the appearance
-			var/mob/living/carbon/human/dummy/mannequin = new()
+			var/mob/living/carbon/human/dummy/mannequin = get_mannequin(client.ckey)
 			client.prefs.dress_preview_mob(mannequin)
 			var/mob/observer/dead/observer = new(mannequin)
 			observer.moveToNullspace() //Let's not stay in our doomed mannequin
-			qdel(mannequin)
+			//qdel(mannequin)
 
 			spawning = 1
 			if(client.media)

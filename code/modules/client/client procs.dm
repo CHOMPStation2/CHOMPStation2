@@ -273,18 +273,27 @@
 	//DISCONNECT//
 	//////////////
 /client/Del()
+	if(!gc_destroyed)
+		gc_destroyed = world.time
+		if (!QDELING(src))
+			stack_trace("Client does not purport to be QDELING, this is going to cause bugs in other places!")
+		GLOB.tickets.ClientLogout(src) // CHOMPedit - Tickets System
+		// Yes this is the same as what's found in qdel(). Yes it does need to be here
+		// Get off my back
+		SEND_SIGNAL(src, COMSIG_PARENT_QDELETING, TRUE)
+		Destroy() //Clean up signals and timers.
+	return ..()
+
+/client/Destroy()
 	if(holder)
 		holder.owner = null
 		GLOB.admins -= src
 	if (mentorholder)
 		mentorholder.owner = null
 		GLOB.mentors -= src
-	GLOB.tickets.ClientLogout(src) // CHOMPedit - Tickets System
 	GLOB.directory -= ckey
 	GLOB.clients -= src
-	return ..()
 
-/client/Destroy()
 	..()
 	return QDEL_HINT_HARDDEL_NOW
 
@@ -456,7 +465,8 @@
 		src << browse('code/modules/asset_cache/validate_assets.html', "window=asset_cache_browser")
 
 		//Precache the client with all other assets slowly, so as to not block other browse() calls
-		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(getFilesSlow), src, SSassets.preload, FALSE), 5 SECONDS)
+		if (config.asset_simple_preload)
+			addtimer(CALLBACK(SSassets.transport, TYPE_PROC_REF(/datum/asset_transport, send_assets_slow), src, SSassets.transport.preload), 5 SECONDS)
 
 /mob/proc/MayRespawn()
 	return 0

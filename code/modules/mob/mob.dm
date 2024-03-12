@@ -2,8 +2,8 @@
 	mob_list -= src
 	dead_mob_list -= src
 	living_mob_list -= src
+	player_list -= src
 	unset_machine()
-	qdel(hud_used)
 	clear_fullscreen()
 	if(client)
 		for(var/obj/screen/movable/spell_master/spell_master in spell_masters)
@@ -14,9 +14,25 @@
 		spellremove(src)
 	if(!istype(src,/mob/observer)) //CHOMPEdit
 		ghostize() //CHOMPEdit
+	//ChompEDIT start - fix hard qdels
 	QDEL_NULL(plane_holder)
-	..()
-	return QDEL_HINT_HARDDEL_NOW
+	QDEL_NULL(hud_used)
+	if(pulling)
+		stop_pulling() //TG does this on atom/movable but our stop_pulling proc is here so whatever
+
+	previewing_belly = null // from code/modules/vore/eating/mob_ch.dm
+	vore_selected = null // from code/modules/vore/eating/mob_vr
+	focus = null
+
+	if(mind)
+		if(mind.current == src)
+			mind.current = null
+		if(mind.original == src)
+			mind.original = null
+
+	. = ..()
+	update_client_z(null)
+	//return QDEL_HINT_HARDDEL_NOW
 
 /mob/proc/remove_screen_obj_references()
 	hands = null
@@ -44,7 +60,8 @@
 	set_focus(src) // VOREStation Add - Key Handling
 	hook_vr("mob_new",list(src)) //VOREStation Code
 	update_transform() // Some mobs may start bigger or smaller than normal.
-	return ..()
+	. = ..()
+	//return QDEL_HINT_HARDDEL_NOW Just keep track of mob references. They delete SO much faster now.
 
 /mob/proc/show_message(msg, type, alt, alt_type)//Message, type of message (1 or 2), alternative message, alt message type (1 or 2)
 	var/time = say_timestamp()
@@ -546,6 +563,9 @@
 
 	if (AM.anchored)
 		to_chat(src, "<span class='warning'>It won't budge!</span>")
+		return
+
+	if(lying) // CHOMPAdd - No pulling while we crawl.
 		return
 
 	var/mob/M = AM
@@ -1203,12 +1223,24 @@
 	return 0
 
 //Exploitable Info Update
+/obj
+	var/datum/weakref/exploit_for //if this obj is an exploit for somebody, this points to them
 
 /mob/proc/amend_exploitable(var/obj/item/I)
 	if(istype(I))
 		exploit_addons |= I
 		var/exploitmsg = html_decode("\n" + "Has " + I.name + ".")
 		exploit_record += exploitmsg
+		I.exploit_for = WEAKREF(src)
+
+
+/obj/Destroy()
+	if(exploit_for)
+		var/mob/exploited = exploit_for.resolve()
+		exploited?.exploit_addons -= src
+		exploit_for = null
+	. = ..()
+
 
 /client/proc/check_has_body_select()
 	return mob && mob.hud_used && istype(mob.zone_sel, /obj/screen/zone_sel)

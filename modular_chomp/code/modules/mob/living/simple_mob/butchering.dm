@@ -9,6 +9,7 @@
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/deathclawmeat
 
 /mob/living/simple_mob/metroid
+	meat_amount = 6
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/metroidmeat
 
 /mob/living/simple_mob/metroid/can_butcher(var/mob/user, var/obj/item/I)	// Override for special butchering checks.

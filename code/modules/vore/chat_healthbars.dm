@@ -8,6 +8,8 @@
 	if(!override)	//Did the person push the verb? Ignore the pref
 		if(!reciever.client.is_preference_enabled(/datum/client_preference/vore_health_bars))
 			return
+	if(!istype(src.loc, /obj/belly)) // not in a belly? don't bother
+		return
 	var/ourpercent = 0
 
 	if(ishuman(src))	//humans don't die or become unconcious at 0%, it's actually like -50% or something, so, let's pretend they have 50 more health than they do

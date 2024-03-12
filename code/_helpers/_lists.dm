@@ -69,7 +69,7 @@
 			// atoms/items/objects can be pretty and whatnot
 			var/atom/A = item
 			if(output_icons && isicon(A.icon) && !ismob(A)) // mobs tend to have unusable icons
-				item_str += "\icon[A][bicon(A)]&nbsp;"
+				item_str += "[bicon(A)]&nbsp;"
 			switch(determiners)
 				if(DET_NONE) item_str += A.name
 				if(DET_DEFINITE) item_str += "\the [A]"
@@ -914,4 +914,22 @@ var/global/list/json_cache = list()
 			return item
 
 	return null
+
+///Converts a bitfield to a list of numbers (or words if a wordlist is provided)
+/proc/bitfield_to_list(bitfield = 0, list/wordlist)
+	var/list/return_list = list()
+	if(islist(wordlist))
+		var/max = min(wordlist.len, 24)
+		var/bit = 1
+		for(var/i in 1 to max)
+			if(bitfield & bit)
+				return_list += wordlist[i]
+			bit = bit << 1
+	else
+		for(var/bit_number = 0 to 23)
+			var/bit = 1 << bit_number
+			if(bitfield & bit)
+				return_list += bit
+
+	return return_list
 //CHOMPAdd end

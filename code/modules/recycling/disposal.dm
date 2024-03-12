@@ -642,7 +642,6 @@
 			src.destinationTag = T.sortTag
 		// CHOMPEdit End
 
-
 // start the movement process
 // argument is the disposal unit the holder started in
 /obj/structure/disposalholder/proc/start(var/obj/machinery/disposal/D)
@@ -752,7 +751,15 @@
 	return
 
 /obj/structure/disposalholder/Destroy()
-	qdel(gas)
+	QDEL_NULL(gas)
+	if(contents.len)
+		var/turf/qdelloc = get_turf(src)
+		if(qdelloc)
+			for(var/atom/movable/AM in contents)
+				AM.loc = qdelloc
+		else
+			log_and_message_admins("A disposal holder was deleted with contents in nullspace") //ideally, this should never happen
+
 	active = 0
 	return ..()
 
@@ -864,6 +871,10 @@
 /obj/structure/disposalpipe/proc/expel(var/obj/structure/disposalholder/H, var/turf/T, var/direction)
 	if(!istype(H))
 		return
+
+	if(!isturf(T)) // try very hard to ensure we have a valid turf target
+		var/turf/GT = get_turf(T)
+		T = (GT ? GT : get_turf(src))
 
 	// Empty the holder if it is expelled into a dense turf.
 	// Leaving it intact and sitting in a wall is stupid.
