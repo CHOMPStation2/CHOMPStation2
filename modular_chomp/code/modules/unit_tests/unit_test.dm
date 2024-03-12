@@ -67,11 +67,11 @@ GLOBAL_VAR_INIT(focused_tests, focused_tests())
 		uncreatables = build_list_of_uncreatables()
 
 	allocated = new
-	// run_loc_floor_bottom_left = get_turf(locate(/obj/effect/landmark/unit_test_bottom_left) in GLOB.landmarks_list)
-	// run_loc_floor_top_right = get_turf(locate(/obj/effect/landmark/unit_test_top_right) in GLOB.landmarks_list)
+	run_loc_floor_bottom_left = get_turf(locate(/obj/effect/landmark/unit_test_bottom_left) in GLOB.landmarks_list)
+	run_loc_floor_top_right = get_turf(locate(/obj/effect/landmark/unit_test_top_right) in GLOB.landmarks_list)
 
-	// TEST_ASSERT(isfloorturf(run_loc_floor_bottom_left), "run_loc_floor_bottom_left was not a floor ([run_loc_floor_bottom_left])")
-	// TEST_ASSERT(isfloorturf(run_loc_floor_top_right), "run_loc_floor_top_right was not a floor ([run_loc_floor_top_right])")
+	TEST_ASSERT(istype(run_loc_floor_bottom_left, /turf/simulated/floor), "run_loc_floor_bottom_left was not a floor ([run_loc_floor_bottom_left])")
+	TEST_ASSERT(istype(run_loc_floor_top_right, /turf/simulated/floor), "run_loc_floor_top_right was not a floor ([run_loc_floor_top_right])")
 
 /datum/unit_test/Destroy()
 	QDEL_LIST(allocated)
@@ -359,4 +359,4 @@ GLOBAL_VAR_INIT(focused_tests, focused_tests())
 
 /datum/map_template/unit_tests
 	name = "Unit Tests Zone"
-	mappath = "_maps/templates/unit_tests.dmm"
+	mappath = "maps/templates/unit_tests.dmm"
