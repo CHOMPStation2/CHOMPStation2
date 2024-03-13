@@ -134,3 +134,21 @@
   - bugfix: fixed errant red pixels on sergals, visible with digilegs
   theXDkidoflol:
   - image: New moth wing types
+2024-03-13:
+  Aroliacue:
+  - image: Fixed Viper Suit sprite being off-center by one pixel.
+  - image: Fixed a bunch of Snake Alt Suitsprites not being displayed properly.
+  ItsSelis:
+  - rscadd: Added stack_end_detector to the master controller
+  - rscadd: Added warning how many times a specific subsystem had slept
+  - rscadd: Linter will now show an error if the subsystem ignite proc is overridden
+  - qol: Changed seed generation
+  - admin: Check Player Attack/Dialog logs, Gib, Resize and Cryo player are now using
+      tgui_input_list's
+  - qol: A few global vars are now properly managed
+  - admin: The loaded whitelists can be now edited in-game (so that players can be
+      whitelisted before the round has to be restarted)
+  TheCaramelion:
+  - bugfix: Stunned effect allowing you to move
+  cadyn:
+  - bugfix: fix icons

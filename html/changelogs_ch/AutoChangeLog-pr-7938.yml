@@ -1,5 +1,0 @@
-author: "ItsSelis"
-delete-after: True
-changes:
-  - qol: "A few global vars are now properly managed"
-  - admin: "The loaded whitelists can be now edited in-game (so that players can be whitelisted before the round has to be restarted)"
