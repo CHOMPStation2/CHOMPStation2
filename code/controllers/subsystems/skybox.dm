@@ -3,7 +3,7 @@
 SUBSYSTEM_DEF(skybox)
 	name = "Space skybox"
 	init_order = INIT_ORDER_SKYBOX
-	flags = SS_NO_FIRE | SS_NO_INIT // CHOMPEdit
+	flags = SS_NO_FIRE
 	var/static/list/skybox_cache = list()
 
 	var/static/mutable_appearance/normal_space
@@ -89,9 +89,8 @@ SUBSYSTEM_DEF(skybox)
 
 	. = ..()
 
-// CHOMPEdit - Empty initialize?
-///datum/controller/subsystem/skybox/Initialize()
-//	. = ..()
+/datum/controller/subsystem/skybox/Initialize()
+	return SS_INIT_SUCCESS // CHOMPEdit
 
 /datum/controller/subsystem/skybox/proc/get_skybox(z)
 	if(!subsystem_initialized)
