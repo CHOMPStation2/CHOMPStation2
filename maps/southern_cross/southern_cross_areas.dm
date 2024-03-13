@@ -109,6 +109,7 @@
 	luminosity = 1
 */
 
+
 /area/surface/outside/path/wilderness
 
 // Water
