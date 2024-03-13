@@ -38,13 +38,16 @@
 	if (isnull(viewer_client))
 		return
 
+	if (isbelly(src.loc))
+		return
+
 	var/bound_width = world.icon_size
 	if (ismovable(src))
 		var/atom/movable/movable_source = src
 		bound_width = movable_source.bound_width
 
 	var/image/balloon_alert = image(loc = isturf(src) ? src : get_atom_on_turf(src), layer = ABOVE_MOB_LAYER)
-	balloon_alert.plane = BALLOON_CHAT_PLANE
+	balloon_alert.plane = PLANE_RUNECHAT
 	balloon_alert.alpha = 0
 	balloon_alert.appearance_flags = RESET_ALPHA|RESET_COLOR|RESET_TRANSFORM
 	balloon_alert.maptext = MAPTEXT("<span style='text-align: center; -dm-text-outline: 1px #0005'>[text]</span>")

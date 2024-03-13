@@ -365,11 +365,11 @@
 
 			var/slices_lost = 0
 			if (W.w_class > 3)
-				user.to_chat("\The [user] crudely slices \the [src] with [W]!", "You crudely slice \the [src] with your [W]!")
+				user.visible_message("\The [user] crudely slices \the [src] with [W]!", "You crudely slice \the [src] with your [W]!")
 				user.balloon_alert_visible("Crudely slices \the [src]", "Crudely sliced \the [src]") // CHOMPEdit
 				slices_lost = rand(1,min(1,round(slices_num/2)))
 			else
-				user.to_chat("\The [user] slices \the [src]!", "You slice \the [src]!")
+				user.visible_message("\The [user] slices \the [src]!", "You slice \the [src]!")
 				user.balloon_alert_visible("Slices \the [src]", "Sliced \the [src]!") // CHOMPEdit
 	// CHOMPEdit End - A long list of to_chat to balloon_alert
 			var/reagents_per_slice = reagents.total_volume/slices_num
@@ -442,7 +442,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/attack_generic(var/mob/living/user)
 	if(!isanimal(user) && !isalien(user))
 		return
-	user.to_chat("[user] nibbles away at \the [src].","You nibble away at \the [src].")
+	user.visible_message("[user] nibbles away at \the [src].","You nibble away at \the [src].")
 	user.balloon_alert_visible("Nibbles away at \the [src].","Nibbled away at \the [src].") // CHOMPEdit
 	bitecount++
 	if(reagents)
