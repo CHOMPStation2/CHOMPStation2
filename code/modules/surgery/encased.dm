@@ -55,7 +55,7 @@
 
 	user.visible_message("<span class='notice'>[user] has cut [target]'s [affected.encased] open with \the [tool].</span>", \
 	"<span class='notice'>You have cut [target]'s [affected.encased] open with \the [tool].</span>")
-	user.balloon_alert_visible("Cuts the [target] open.", "[affected.encased] cut open.") // CHOMPEdit
+	user.balloon_alert_visible("Cuts [target]'s [affected.encased] open.", "[affected.encased] cut open.") // CHOMPEdit
 	affected.open = 2.5
 
 /datum/surgery_step/open_encased/saw/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
@@ -99,7 +99,7 @@
 	var/msg = "<span class='filter_notice'>[user] starts to force open the [affected.encased] in [target]'s [affected.name] with \the [tool].</span>"
 	var/self_msg = "<span class='filter_notice'>You start to force open the [affected.encased] in [target]'s [affected.name] with \the [tool].</span>"
 	user.visible_message(msg, self_msg)
-	user.balloon_alert_visible("Starts to force open the [affected.encased]", "Forcing open \the [affected.encased]") // CHOMPEdit
+	user.balloon_alert_visible("Starts to force open [target]'s [affected.encased]", "Forcing open \the [affected.encased]") // CHOMPEdit
 	target.custom_pain("Something hurts horribly in your [affected.name]!", 40)
 	..()
 

@@ -80,7 +80,7 @@
 					food_inserted_micros -= F
 
 	if(!reagents.total_volume)
-		M.balloon_alert_visible("<span class='notice'>[M] finishes eating \the [src].</span>","<span class='notice'>You finish eating \the [src].</span>") // CHOMPEdit - Balloon alert
+		M.balloon_alert_visible("Finishes eating \the [src].","Finished eating \the [src].") // CHOMPEdit - Balloon alert
 
 		usr.drop_from_inventory(src) // Drop food from inventory so it doesn't end up staying on the hud after qdel, and so inhands go away
 
