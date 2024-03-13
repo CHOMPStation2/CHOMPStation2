@@ -127,8 +127,8 @@
 	economic_modifier = 6
 	minimal_player_age = 3
 	pto_type = PTO_EXPLORATION
-	access = list(access_medical, access_medical_equip, access_morgue, access_surgery, access_chemistry, access_eva, access_maint_tunnels, access_external_airlocks, access_pilot)
-	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_pilot)
+	access = list(access_medical, access_medical_equip, access_morgue, access_eva, access_maint_tunnels, access_external_airlocks) // CHOMPedit: No more pilot, surgery or chemistry access.
+	minimal_access = list(access_medical, access_medical_equip, access_morgue) // CHOMPedit: No more pilot access.
 	outfit_type = /decl/hierarchy/outfit/job/medical/sar
 	job_description = "A Field medic works as the field doctor of expedition teams."
 	alt_titles = list("Expedition Medic" = /datum/alt_title/expedition_medic, "Offsite Medic" = /datum/alt_title/offsite_medic)
