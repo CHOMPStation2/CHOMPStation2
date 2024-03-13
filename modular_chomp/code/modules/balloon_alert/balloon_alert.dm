@@ -15,10 +15,18 @@
 /atom/proc/balloon_alert_visible(message, self_message, blind_message, range = world.view, list/exclude_mobs = null)
 	SHOULD_NOT_SLEEP(TRUE)
 
+	var/runechat_enabled
+
 	var/list/hearers = get_mobs_in_view(range, src)
 	hearers -= exclude_mobs
 
 	for(var/mob/M in hearers)
+
+		runechat_enabled = M.client?.is_preference_enabled(/datum/client_preference/runechat_mob)
+
+		if(M.client && !runechat_enabled)
+			continue
+
 		if(M.is_blind())
 			continue
 

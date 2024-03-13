@@ -219,10 +219,12 @@
 
 				if(swallow_whole)
 					add_attack_logs(user,M,"Whole-fed with [src.name] containing [reagentlist(src)] into [belly_target]", admin_notify = FALSE)
-					user.balloon_alert_visible("[user] successfully forces [src] into [M]'s [belly_target].") // CHOMPEdit
+					user.visible_message("[user] successfully forces [src] into [M]'s [belly_target].")
+					user.balloon_alert_visible("Forces [src] into [M]'s [belly_target]") // CHOMPEdit
 				else
 					add_attack_logs(user,M,"Fed with [src.name] containing [reagentlist(src)]", admin_notify = FALSE)
-					user.balloon_alert_visible("[user] feeds [M] [src].") // CHOMPEdit
+					user.visible_message("[user] feeds [M] [src].")
+					user.balloon_alert_visible("Feeds [M] [src].") // CHOMPEdit
 
 			else
 				balloon_alert(user, "This creature does not seem to have a mouth!") // CHOMPEdit
@@ -254,12 +256,15 @@
 		if(swallow_whole)
 			belly_target = tgui_input_list(user, "Choose Belly", "Belly Choice", M.feedable_bellies())
 			if(!(M.feeding))
-				balloon_alert(user, "You can't feed [M] a whole [src] as they refuse to be fed whole things!") // CHOMPEdit
+				to_chat(user, "You can't feed [M] a whole [src] as they refuse to be fed whole things!")
+				balloon_alert("They refuse to be fed whole things!") // CHOMPEdit
 				return
 			if(!belly_target)
-				balloon_alert(user, "You can't feed [M] a whole [src] as they don't appear to have a belly to fit it!") // CHOMPEdit
+				to_chat(user, "You can't feed [M] a whole [src] as they don't appear to have a belly to fit it!")
+				balloon_alert("They don't have a belly to fit it!")// CHOMPEdit
 				return
-			user.balloon_alert_visible("[user] attempts to make [M] consume [src] whole into their [belly_target].") // CHOMPEdit
+			user.visible_message("[user] attempts to make [M] consume [src] whole into their [belly_target].")
+			user.balloon_alert_visible("Attempts to make [M] consume [src] whole into their [belly_target].")// CHOMPEdit
 			var/feed_duration = 3 SECONDS
 			user.setClickCooldown(user.get_attack_speed(src))
 			if(!do_mob(user, M, feed_duration))
@@ -267,7 +272,8 @@
 			if(!belly_target)
 				return
 			add_attack_logs(user,M,"Whole-fed with [src.name] containing [reagentlist(src)] into [belly_target]", admin_notify = FALSE)
-			user.balloon_alert_visible("[user] successfully forces [src] into [M]'s [belly_target].") // CHOMPEdit
+			user.visible_message("[user] successfully forces [src] into [M]'s [belly_target].") // CHOMPEdit
+			user.balloon_alert_visible("Forces [src] into [M]'s [belly_target].") // CHOMPEdit
 			user.drop_item()
 			forceMove(belly_target)
 			return 1 //CHOMPAdd End
@@ -307,7 +313,8 @@
 			return
 
 		if(package || canned)
-			balloon_alert(user, "You cannot stuff anything into \the [src] without opening it first.") // CHOMPEdit
+			to_chat(user, "You cannot stuff anything into \the [src] without opening it first.") // CHOMPEdit
+			balloon_alert(user, "Open \the [src] first!") // CHOMPEdit
 			return
 
 		var/obj/item/weapon/holder/H = W
@@ -324,7 +331,8 @@
 
 		food_inserted_micros += M
 
-		balloon_alert(user, "Stuffed [M] into \the [src].") // CHOMPEdit
+		to_chat(user, "Stuffed [M] into \the [src].")
+		balloon_alert(user, "Stuffs [M] into \the [src].") // CHOMPEdit
 		to_chat(M, "<span class='warning'>[user] stuffs you into \the [src].</span>")
 		return
 
@@ -338,9 +346,11 @@
 				return
 
 			if(tgui_alert(user,"You can't slice \the [src] here. Would you like to hide \the [W] inside it instead?","No Cutting Surface!",list("Yes","No")) == "No")
+				to_chat(user, "You cannot slice \the [src] here! You need a table or at least a tray to do it.")
 				balloon_alert(user, "You cannot slice \the [src] here! You need a table or at least a tray to do it.") // CHOMPEdit
 				return
 			else
+				to_chat(user, "Slipped \the [W] inside \the [src].")
 				balloon_alert(user, "Slipped \the [W] inside \the [src].") // CHOMPEdit
 				user.drop_from_inventory(W, src)
 				add_fingerprint(user)
@@ -349,15 +359,18 @@
 
 		if (has_edge(W))
 			if (!can_slice_here)
-				balloon_alert(user, "You cannot slice \the [src] here! You need a table or at least a tray to do it.") // CHOMPEdit
+				to_chat(user, "You cannot slice \the [src] here! You need a table or at least a tray to do it.")
+				balloon_alert(user, "You need a table or at least a tray to slice it.") // CHOMPEdit
 				return
 
 			var/slices_lost = 0
 			if (W.w_class > 3)
-				user.balloon_alert_visible("\The [user] crudely slices \the [src] with [W]!", "You crudely slice \the [src] with your [W]!") // CHOMPEdit
+				user.to_chat("\The [user] crudely slices \the [src] with [W]!", "You crudely slice \the [src] with your [W]!")
+				user.balloon_alert_visible("Crudely slices \the [src]", "Crudely sliced \the [src]") // CHOMPEdit
 				slices_lost = rand(1,min(1,round(slices_num/2)))
 			else
-				user.balloon_alert_visible("\The [user] slices \the [src]!", "You slice \the [src]!") // CHOMPEdit
+				user.to_chat("\The [user] slices \the [src]!", "You slice \the [src]!")
+				user.balloon_alert_visible("Slices \the [src]", "Sliced \the [src]!") // CHOMPEdit
 	// CHOMPEdit End - A long list of to_chat to balloon_alert
 			var/reagents_per_slice = reagents.total_volume/slices_num
 			for(var/i=1 to (slices_num-slices_lost))
@@ -404,7 +417,8 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/proc/unpackage(mob/user)
 	package = FALSE
-	balloon_alert(user, "You unwrap [src].") // CHOMPEdit
+	to_chat(user, "You unwrap [src].")
+	balloon_alert(user, "Unwrapped \the [src].") // CHOMPEdit
 	playsound(user,opening_sound, 15, 1)
 	if(package_trash)
 		var/obj/item/T = new package_trash
@@ -416,7 +430,8 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/proc/uncan(mob/user)
 	canned = FALSE
-	balloon_alert(user, "You unseal \the [src] with a crack of metal.") // CHOMPEdit
+	to_chat(user, "You unseal \the [src] with a crack of metal.")
+	balloon_alert(user, "Unsealed \the [src]") // CHOMPEdit
 	playsound(loc,opening_sound, rand(10,50), 1)
 	if(canned_open_state)
 		icon_state = canned_open_state
@@ -427,7 +442,8 @@
 /obj/item/weapon/reagent_containers/food/snacks/attack_generic(var/mob/living/user)
 	if(!isanimal(user) && !isalien(user))
 		return
-	user.balloon_alert_visible("[user] nibbles away at \the [src].","You nibble away at \the [src].") // CHOMPEdit
+	user.to_chat("[user] nibbles away at \the [src].","You nibble away at \the [src].")
+	user.balloon_alert_visible("Nibbles away at \the [src].","Nibbled away at \the [src].") // CHOMPEdit
 	bitecount++
 	if(reagents)
 		reagents.trans_to_mob(user, bitesize, CHEM_INGEST)
