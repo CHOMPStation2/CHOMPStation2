@@ -36,7 +36,7 @@
 				return
 
 			// to_chat(M, "<span class='notice'>You swallow \the [src].</span>")
-			balloon_alert(src, "Swallowed \the [src]")	// CHOMPEdit - Changed to balloon alert
+			balloon_alert(user, "Swallowed \the [src]")	// CHOMPEdit - Changed to balloon alert
 			M.drop_from_inventory(src) //icon update
 			if(reagents.total_volume)
 				reagents.trans_to_mob(M, reagents.total_volume, CHEM_INGEST)
