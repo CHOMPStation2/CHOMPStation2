@@ -1,0 +1,4 @@
+author: "Aroliacue"
+delete-after: True
+changes:
+  - balance: "Field Medics no longer have pilot, chemistry or surgery access by default."
