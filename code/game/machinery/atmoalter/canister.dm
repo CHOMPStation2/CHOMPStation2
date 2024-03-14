@@ -168,7 +168,12 @@ update_flag
 
 	if (src.health <= 10)
 		var/atom/location = src.loc
+		var/obj/machinery/atmospherics/portables_connector/port = locate() in location // CHOMPEdit - Finds if there's a port
 		location.assume_air(air_contents)
+
+		if(port && anchored) // CHOMPEdit - if it blew up, frees up the port
+			disconnect()
+			anchored = 0
 
 		src.destroyed = 1
 		playsound(src, 'sound/effects/spray.ogg', 10, 1, -3)
