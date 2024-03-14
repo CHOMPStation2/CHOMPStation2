@@ -298,6 +298,15 @@
 					direct = turn(direct, pick(90, -90))
 					n = get_step(my_mob, direct)
 
+	//CHOMP Removal moved downwards
+
+	if(istype(my_mob.pulledby, /obj/structure/bed/chair/wheelchair))
+		. = my_mob.pulledby.relaymove(my_mob, direct)
+	else if(istype(my_mob.buckled, /obj/structure/bed/chair/wheelchair))
+		. = my_mob.buckled.relaymove(my_mob,direct)
+	else
+		. = my_mob.SelfMove(n, direct, total_delay)
+
 	//CHOMPEdit Begin
 	// If we ended up moving diagonally, increase delay.
 	if((direct & (direct - 1)) && mob.loc == n)
@@ -309,15 +318,6 @@
 	else
 		mob.next_move = DS2NEARESTTICK(world.time + total_delay)
 	//CHOMPEdit End
-
-	if(istype(my_mob.pulledby, /obj/structure/bed/chair/wheelchair))
-		. = my_mob.pulledby.relaymove(my_mob, direct)
-	else if(istype(my_mob.buckled, /obj/structure/bed/chair/wheelchair))
-		. = my_mob.buckled.relaymove(my_mob,direct)
-	else
-		. = my_mob.SelfMove(n, direct, total_delay)
-
-	//CHOMP Removal moved upwards
 
 	if(!isliving(my_mob)) //CHOMPAdd
 		moving = 0
