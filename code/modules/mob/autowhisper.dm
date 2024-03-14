@@ -12,9 +12,7 @@
 			var/obj/belly/b = loc
 			if(b.mode_flags & DM_FLAG_FORCEPSAY)
 				var/mes = "but you are affected by forced psay right now, so you will automatically use psay/pme instead of any other option."
-				var/mesB = "forced psay"
-				// to_chat(src, "<span class='notice'>Autowhisper has been [autowhisper ? "enabled, [mes]" : "disabled, [mes]"].</span>") // CHOMPEdit - Balloon alerts
-				balloon_alert(src, "Autowhisper [autowhisper ? "enabled, [mesB]" : "disabled, [mesB]"]")
+				to_chat(src, "<span class='notice'>Autowhisper has been [autowhisper ? "enabled, [mes]" : "disabled, [mes]"].</span>") // CHOMPEdit - Balloon alerts
 				return
 		else
 			forced_psay = autowhisper
