@@ -1,0 +1,4 @@
+author: "Kashargul"
+delete-after: True
+changes:
+  - bugfix: "readds the updated inputs to the right click verbs again (one limitation, on self will always open the tgui selection)"
