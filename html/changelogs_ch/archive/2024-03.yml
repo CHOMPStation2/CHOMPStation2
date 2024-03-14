@@ -152,3 +152,6 @@
   - bugfix: Stunned effect allowing you to move
   cadyn:
   - bugfix: fix icons
+2024-03-14:
+  Aroliacue:
+  - balance: Field Medics no longer have pilot, chemistry or surgery access by default.
