@@ -363,11 +363,36 @@
 /mob/proc/SelfMove(turf/n, direct, movetime)
 	return Move(n, direct, movetime)
 
+
+//ChompEDIT START
+//Set your incorporeal movespeed
+/client
+	var/incorporeal_speed = 0.333333
+
+/client/verb/set_incorporeal_speed()
+	set category = "OOC"
+	set name = "Set Incorporeal Speed"
+
+	var/input = tgui_input_number(usr, "Set an incorporeal movement delay between 0 (fastest) and 3 (slowest)", "Incorporeal movement speed", 1, 3, 0)
+	if(input)
+		incorporeal_speed = input/3
+	else
+		incorporeal_speed = 0
+//ChompEDIT End
+
 ///Process_Incorpmove
 ///Called by client/Move()
 ///Allows mobs to run though walls
 /client/proc/Process_Incorpmove(direct)
 	var/turf/mobloc = get_turf(mob)
+
+	//ChompEDIT START
+	if(incorporeal_speed)
+		var/mob/my_mob = mob
+		if(!my_mob.checkMoveCooldown()) //Only bother with speed if it isn't 0
+			return
+		my_mob.setMoveCooldown(incorporeal_speed)
+	//ChompEDIT END
 
 	switch(mob.incorporeal_move)
 		if(1)
