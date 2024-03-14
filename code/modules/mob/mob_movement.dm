@@ -366,18 +366,16 @@
 
 //ChompEDIT START
 //Set your incorporeal movespeed
+//Important to note: world.time is always in deciseconds. Higher tickrates mean more subdivisions of world.time (20fps = 0.5, 40fps = 0.25)
 /client
-	var/incorporeal_speed = 0.333333
+	var/incorporeal_speed = 0.5
 
 /client/verb/set_incorporeal_speed()
 	set category = "OOC"
 	set name = "Set Incorporeal Speed"
 
-	var/input = tgui_input_number(usr, "Set an incorporeal movement delay between 0 (fastest) and 3 (slowest)", "Incorporeal movement speed", 1, 3, 0)
-	if(input)
-		incorporeal_speed = input/3
-	else
-		incorporeal_speed = 0
+	var/input = tgui_input_number(usr, "Set an incorporeal movement delay between 0 (fastest) and 5 (slowest)", "Incorporeal movement speed", (0.5/world.tick_lag), 5, 0)
+	incorporeal_speed = input * world.tick_lag
 //ChompEDIT End
 
 ///Process_Incorpmove
