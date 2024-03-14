@@ -59,6 +59,8 @@
 	return ..()
 
 /datum/looping_sound/proc/start(atom/add_thing, skip_start_sound = FALSE)
+	if(QDELETED(src)) //Chomp runtime
+		return //Chomp runtime
 	if(add_thing)
 		output_atoms |= add_thing
 	if(timerid)
@@ -84,7 +86,7 @@
 	started = FALSE
 
 /datum/looping_sound/proc/sound_loop(starttime)
-	if(!QDELETED(src) && max_loops && world.time >= starttime + mid_length * max_loops) //ChompEDIT - runtime
+	if(QDELETED(src) || (max_loops && world.time >= starttime + mid_length * max_loops)) //ChompEDIT - runtime
 		stop()
 		return
 	if(!chance || prob(chance))
