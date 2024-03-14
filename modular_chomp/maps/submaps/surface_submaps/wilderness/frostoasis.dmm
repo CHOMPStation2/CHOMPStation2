@@ -2,14 +2,22 @@
 "am" = (
 /obj/random/obstruction,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/broken,
+/turf/simulated/floor/wood/broken{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/FrostOasis)
 "bB" = (
 /obj/structure/closet/cabinet,
 /obj/item/stolenpackage,
 /obj/item/stolenpackage,
 /obj/item/weapon/storage/belt/holding,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/FrostOasis)
 "cm" = (
 /obj/effect/decal/cleanable/dirt,
@@ -51,7 +59,11 @@
 /obj/item/weapon/flame/candle/candelabra/everburn{
 	pixel_y = 7
 	},
-/turf/simulated/floor/wood/broken,
+/turf/simulated/floor/wood/broken{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/FrostOasis)
 "jN" = (
 /mob/living/simple_mob/animal/sif/glitterfly{
@@ -63,7 +75,11 @@
 "kr" = (
 /obj/item/weapon/a_gift,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/FrostOasis)
 "ll" = (
 /obj/random/obstruction,
@@ -80,7 +96,11 @@
 /obj/structure/table/standard,
 /obj/item/weapon/a_gift,
 /obj/item/weapon/a_gift,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/FrostOasis)
 "me" = (
 /obj/effect/decal/cleanable/dirt,
@@ -151,7 +171,11 @@
 "tv" = (
 /obj/item/weapon/a_gift,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/broken,
+/turf/simulated/floor/wood/broken{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/FrostOasis)
 "tT" = (
 /obj/effect/landmark/loot_spawn,
@@ -167,12 +191,20 @@
 /obj/structure/bed/double/padded,
 /obj/item/weapon/bedsheet/rddouble,
 /obj/effect/spresent,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/FrostOasis)
 "vK" = (
 /obj/item/weapon/a_gift,
 /obj/item/clothing/ears/earring/dangle/glass,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/FrostOasis)
 "xI" = (
 /turf/simulated/floor/outdoors/dirt{
@@ -208,7 +240,11 @@
 /obj/structure/table/standard,
 /obj/item/weapon/gift,
 /obj/item/weapon/gun/energy/temperature,
-/turf/simulated/floor/wood/broken,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/FrostOasis)
 "Fl" = (
 /obj/structure/curtain/open/bed,
@@ -226,7 +262,11 @@
 /obj/structure/window/reinforced/tinted/frosted{
 	dir = 4
 	},
-/turf/simulated/floor/wood/broken,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/FrostOasis)
 "It" = (
 /obj/effect/decal/cleanable/dirt,
@@ -240,7 +280,11 @@
 /obj/item/weapon/a_gift,
 /obj/random/junk,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/FrostOasis)
 "JY" = (
 /obj/random/obstruction,
@@ -314,7 +358,11 @@
 /obj/structure/table/bench/padded,
 /obj/random/junk,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/FrostOasis)
 "TD" = (
 /obj/structure/flora/tree/winter,
@@ -328,7 +376,11 @@
 /area/submap/FrostOasis)
 "Vz" = (
 /obj/random/obstruction,
-/turf/simulated/floor/wood/broken,
+/turf/simulated/floor/wood/broken{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/FrostOasis)
 "Wk" = (
 /obj/effect/floor_decal/stairs/wood_stairs,
@@ -347,7 +399,11 @@
 	faction = "diyaab"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/broken,
+/turf/simulated/floor/wood/broken{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/FrostOasis)
 "ZD" = (
 /obj/structure/flora/grass/brown,
