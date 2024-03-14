@@ -154,11 +154,6 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate
 
-/mob/living/simple_mob/animal/synx/update_icon()
-	. = ..()
-
-
-
 /mob/living/simple_mob/animal/synx/init_vore()
 	if(!voremob_loaded)
 		return
@@ -611,7 +606,14 @@
 /mob/living/simple_mob/animal/synx/update_icon()
 	update_fullness()
 	build_icons()
-
+	for(var/belly_class in vore_fullness_ex)
+		var/vs_fullness = vore_fullness_ex[belly_class]
+		if(vs_fullness > 0)
+			if(transformed)
+				//transformed bellysprites dont exist yet. Uncomment this when they do. -Reo
+				//add_overlay("[iconstate]-t_[belly_class]-[vs_fullness]")
+			else
+				add_overlay("[icon_state]_[belly_class]-[vs_fullness]")
 
 
 /mob/living/simple_mob/animal/synx/proc/build_icons(var/random)
