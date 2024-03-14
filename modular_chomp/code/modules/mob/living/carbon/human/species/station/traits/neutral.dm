@@ -16,3 +16,18 @@
 /datum/trait/neutral/hide/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	H.verbs |= /mob/living/proc/hide
+
+/datum/trait/neutral/boneless
+	name = "Boneless"
+	desc = "You have no bones! Though your limbs are also easier to gib in exchange."
+	cost = 0
+	custom_only = TRUE
+	can_take = ORGANICS
+
+/datum/trait/neutral/boneless/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	for(var/obj/item/organ/external/ex_organ in H.organs)
+		ex_organ.cannot_break = 1
+		ex_organ.dislocated = -1
+		ex_organ.spread_dam = 1
+		ex_organ.max_damage = floor(ex_organ.max_damage * 0.45)
