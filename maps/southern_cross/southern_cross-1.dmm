@@ -12620,19 +12620,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hangar/two)
-"dPg" = (
-/obj/structure/cable/blue{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/reinforced,
-/area/hangar/two)
 "dPz" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -74870,7 +74857,7 @@ bWE
 aGB
 diS
 aKE
-dPg
+vNk
 vNk
 cCf
 dWL
