@@ -294,7 +294,7 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 	name = "Promethean Revival"
 	id = "prom_revival"
 	result = null
-	required_reagents = list("phoron" = 40)
+	required_reagents = list("phoron" = 20) // CHOMPEdit Cost reduction from 40 to 20 to match other mobs cost
 	result_amount = 1
 
 /decl/chemical_reaction/instant/promethean_brain_revival/can_happen(var/datum/reagents/holder)
@@ -307,7 +307,8 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 	if(brain.reviveBody())
 		brain.visible_message("<span class='notice'>[brain] bubbles, surrounding itself with a rapidly expanding mass of slime!</span>")
 	else
-		brain.visible_message("<span class='warning'>[brain] shifts strangely, but falls still.</span>")
+		brain.visible_message("<span class='warning'>[brain] shifts strangely, solidifying the injected phoron into a crystal before becoming dormant.</span>") // CHOMPEdit Changed message
+		new /obj/item/stack/material/phoron(holder.my_atom) // CHOMPAdd Allow the phoron from the failed attempt to be used when client reconnects
 
 /obj/item/organ/internal/brain/golem
 	name = "chem"
