@@ -195,8 +195,10 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 /mob/living/proc/set_metainfo_favs(var/reopen = TRUE)
 	if(usr != src)
 		return
-	var/new_metadata = strip_html_simple(tgui_input_text(usr, "Enter any information you'd like others to see relating to your FAVOURITE roleplay preferences. This will not be saved permanently unless you click save in the OOC notes panel!", "Game Preference" , html_decode(ooc_notes_favs), multiline = TRUE,  prevent_enter = TRUE))
-	if(CanUseTopic(usr))
+	var/new_metadata = strip_html_simple(tgui_input_text(usr, "Enter any information you'd like others to see relating to your FAVOURITE roleplay preferences. This will not be saved permanently unless you click save in the OOC notes panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(ooc_notes_favs), multiline = TRUE,  prevent_enter = TRUE))
+	if(new_metadata && CanUseTopic(usr))
+		if(new_metadata == "!clear")
+			new_metadata = ""
 		ooc_notes_favs = new_metadata
 		client.prefs.metadata_favs = new_metadata
 		to_chat(usr, "<span class='filter_notice'>OOC note favs have been updated. Don't forget to save!</span>")
@@ -207,8 +209,10 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 /mob/living/proc/set_metainfo_maybes(var/reopen = TRUE)
 	if(usr != src)
 		return
-	var/new_metadata = strip_html_simple(tgui_input_text(usr, "Enter any information you'd like others to see relating to your MAYBE roleplay preferences. This will not be saved permanently unless you click save in the OOC notes panel!", "Game Preference" , html_decode(ooc_notes_maybes), multiline = TRUE,  prevent_enter = TRUE))
-	if(CanUseTopic(usr))
+	var/new_metadata = strip_html_simple(tgui_input_text(usr, "Enter any information you'd like others to see relating to your MAYBE roleplay preferences. This will not be saved permanently unless you click save in the OOC notes panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(ooc_notes_maybes), multiline = TRUE,  prevent_enter = TRUE))
+	if(new_metadata && CanUseTopic(usr))
+		if(new_metadata == "!clear")
+			new_metadata = ""
 		ooc_notes_maybes = new_metadata
 		client.prefs.metadata_maybes = new_metadata
 		to_chat(usr, "<span class='filter_notice'>OOC note maybes have been updated. Don't forget to save!</span>")
