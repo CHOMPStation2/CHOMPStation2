@@ -72,14 +72,17 @@
 	if(istype(W,/obj/item/stack/cable_coil))
 		var/obj/item/stack/cable_coil/CC = W
 		if(string_attached)
-			to_chat(user, "<span class='notice'>There already is a string attached to this coin.</span>")
+			// to_chat(user, "<span class='notice'>There already is a string attached to this coin.</span>")
+			balloon_alert(user, "There is a string already attached to \the [src]") // CHOMPEdit - Changed to balloon alert
 			return
 		if (CC.use(1))
 			add_overlay("coin_string_overlay")
 			string_attached = 1
-			to_chat(user, "<span class='notice'>You attach a string to the coin.</span>")
+			// to_chat(user, "<span class='notice'>You attach a string to the coin.</span>")
+			balloon_alert(user, "String attached to \the [src]") // CHOMPEdit - Changed to balloon alert
 		else
-			to_chat(user, "<span class='notice'>This cable coil appears to be empty.</span>")
+			// to_chat(user, "<span class='notice'>This cable coil appears to be empty.</span>")
+			balloon_alert(user, "The coil seems to be empty...") // CHOMPEdit - Changed to balloon alert
 		return
 	else if(W.has_tool_quality(TOOL_WIRECUTTER))
 		if(!string_attached)
@@ -90,7 +93,8 @@
 		CC.update_icon()
 		cut_overlays()
 		string_attached = null
-		to_chat(user, "<span class='notice'>You detach the string from the coin.</span>")
+		// to_chat(user, "<span class='notice'>You detach the string from the coin.</span>")
+		balloon_alert(user, "String detached") // CHOMPEdit - Changed to balloon alert
 	else ..()
 
 /obj/item/weapon/coin/attack_self(mob/user as mob)
@@ -102,3 +106,4 @@
 		comment = "heads"
 	user.visible_message("<span class='notice'>[user] has thrown \the [src]. It lands on [comment]! </span>", \
 						 "<span class='notice'>You throw \the [src]. It lands on [comment]! </span>")
+	balloon_alert_visible("\the [src] lands on [comment]!", "\the [src] lands on [comment]!")

@@ -7,6 +7,10 @@
 	 */
 	var/list/atom_colours
 
+	/// Lazylist of all images to update when we change z levels
+	/// You will need to manage adding/removing from this yourself, but I'll do the updating for you
+	var/list/image/update_on_z
+
 //! ## Atom Colour Priority System
 /**
  * A System that gives finer control over which atom colour to colour the atom with.
