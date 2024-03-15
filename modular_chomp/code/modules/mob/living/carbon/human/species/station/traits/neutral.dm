@@ -31,3 +31,5 @@
 		ex_organ.dislocated = -1
 		ex_organ.spread_dam = 1
 		ex_organ.max_damage = floor(ex_organ.max_damage * 0.45)
+		if(istype(ex_organ, /obj/item/organ/external/head) || istype(ex_organ, /obj/item/organ/external/chest))
+			ex_organ.encased = 0
