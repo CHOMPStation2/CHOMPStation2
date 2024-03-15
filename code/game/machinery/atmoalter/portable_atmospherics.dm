@@ -117,7 +117,7 @@
 		update_icon()
 		return
 
-	else if (W.has_tool_quality(TOOL_WRENCH))
+	else if (W.has_tool_quality(TOOL_WRENCH) && !(src.destroyed)) // CHOMPEdit - Make sure it's not broken
 		if(connected_port)
 			disconnect()
 			to_chat(user, "<span class='notice'>You disconnect \the [src] from the port.</span>")
