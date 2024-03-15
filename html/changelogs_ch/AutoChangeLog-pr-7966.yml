@@ -1,0 +1,4 @@
+author: "ReoDaProtovali"
+delete-after: True
+changes:
+  - qol: "Makes throw notifications only appear if your pref says yes"
