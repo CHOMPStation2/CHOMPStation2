@@ -1,4 +1,0 @@
-author: "Raeschen"
-delete-after: True
-changes:
-  - bugfix: "Fixes a runtime and makes chat tags (OOC, LOOC, ect) use a cache properly."

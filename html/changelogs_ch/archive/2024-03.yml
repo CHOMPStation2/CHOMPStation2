@@ -155,3 +155,16 @@
 2024-03-14:
   Aroliacue:
   - balance: Field Medics no longer have pilot, chemistry or surgery access by default.
+2024-03-15:
+  Kashargul:
+  - bugfix: readds the updated inputs to the right click verbs again (one limitation,
+      on self will always open the tgui selection)
+  Raeschen:
+  - bugfix: fixed a runtime in soundloop
+  - bugfix: Fixes a runtime and makes chat tags (OOC, LOOC, ect) use a cache properly.
+  - bugfix: Job restriction bypass at roundstart
+  - bugfix: fix a cabling mistake in hangar 2
+  TheCaramelion:
+  - balance: Modified Ion Storm requirements to be more common
+  cadyn:
+  - rscadd: Nanomap now renders non-tile objects
