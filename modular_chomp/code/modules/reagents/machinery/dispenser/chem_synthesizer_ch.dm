@@ -472,6 +472,11 @@
 		return
 	tgui_interact(user)
 
+/obj/machinery/chemical_synthesizer/ui_assets(mob/user)
+	return list(
+		get_asset_datum(/datum/asset/spritesheet/chem_master),
+	)
+
 // This proc is lets users create recipes step-by-step and exports a comma delineated list to chat. It's intended to teach how to use the machine.
 /obj/machinery/chemical_synthesizer/proc/babystep_recipe(mob/user)
 	var/rec_name = sanitizeSafe(input(user, "Name your recipe. Consider including the output volume.", "Recipe naming", null) as text, MAX_NAME_LEN)
