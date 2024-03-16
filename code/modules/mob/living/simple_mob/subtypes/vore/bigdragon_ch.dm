@@ -798,7 +798,7 @@ I think I covered everything.
 
 	do_windup_animation(A, charge_warmup)
 	//callbacks are more reliable than byond's process scheduler
-	addtimer(CALLBACK(src, PROC_REF(chargeend, A), charge_warmup)
+	addtimer(CALLBACK(src, PROC_REF(chargeend), A), charge_warmup)
 
 
 /mob/living/simple_mob/vore/bigdragon/proc/chargeend(var/atom/A, var/explicit = 0, var/gentle = 0)
