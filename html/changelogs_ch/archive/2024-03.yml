@@ -168,3 +168,16 @@
   - balance: Modified Ion Storm requirements to be more common
   cadyn:
   - rscadd: Nanomap now renders non-tile objects
+2024-03-16:
+  Raeschen:
+  - rscadd: RLOOC tagging/class
+  ReoDaProtovali:
+  - qol: Makes throw notifications only appear if your pref says yes
+  - rscadd: Added more emotes to synx
+  - rscadd: Added wawa to the wawa-ers
+  TheCaramelion:
+  - bugfix: Broken canisters staying attached to the port
+  - bugfix: Being able to attach broken canisters to ports
+  - rscadd: Balloon Alerts
+  - rscadd: Brand Intelligence machines use Ballon Alerts to speak
+  - rscadd: Balloon Alerts for surgery steps, taste and transferring reagents
