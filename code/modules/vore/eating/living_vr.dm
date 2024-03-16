@@ -407,7 +407,7 @@
 		visible_message("[src] licks themself!","You lick yourself. You taste rather like [tasted.get_taste_message()].")
 		balloon_alert_visible("Licks themself!", "Tastes like [tasted.get_taste_message()]")
 	else
-		to_chat("[src] licks [tasted]!","You lick [tasted]. They taste rather like [tasted.get_taste_message()].")
+		visible_message("[src] licks [tasted]!","You lick [tasted]. They taste rather like [tasted.get_taste_message()].")
 		balloon_alert_visible("Licks [tasted]!", "Tastes like [tasted.get_taste_message()]")
 		//CHOMPEdit End
 
