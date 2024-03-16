@@ -59,13 +59,8 @@
 	lastarea = get_area(src)
 	set_focus(src) // VOREStation Add - Key Handling
 	hook_vr("mob_new",list(src)) //VOREStation Code
-<<<<<<< HEAD
-	update_transform() // Some mobs may start bigger or smaller than normal.
 	. = ..()
 	//return QDEL_HINT_HARDDEL_NOW Just keep track of mob references. They delete SO much faster now.
-=======
-	return ..()
->>>>>>> db998502f9... add(atom/movable): Makes it possible for mappers to change scale/rotation of objs (#15835)
 
 /mob/proc/show_message(msg, type, alt, alt_type)//Message, type of message (1 or 2), alternative message, alt message type (1 or 2)
 	var/time = say_timestamp()
