@@ -728,7 +728,7 @@ var/global/datum/controller/occupations/job_master
 					to_chat(pred, "<span class='warning'>You must be within station grounds to accept.</span>")
 					return
 				if(backup)
-					addtimer(CALLBACK(src, .proc/m_backup_client, C), 5 SECONDS)
+					addtimer(CALLBACK(src, PROC_REF(m_backup_client), C), 5 SECONDS)
 				log_admin("[key_name(C)] has vore spawned into [key_name(pred)]")
 				message_admins("[key_name(C)] has vore spawned into [key_name(pred)]")
 				to_chat(C, "<span class='notice'>You have been spawned via vore. You are free to roleplay how you got there as you please, such as teleportation or having had already been there.</span>")
@@ -880,7 +880,7 @@ var/global/datum/controller/occupations/job_master
 					item_to_be = item
 					item_carrier = carrier
 					if(backup)
-						addtimer(CALLBACK(src, .proc/m_backup_client, C), 5 SECONDS)
+						addtimer(CALLBACK(src, PROC_REF(m_backup_client), C), 5 SECONDS)
 				else
 					var/confirm = alert(C, "\The [item.name] is currently not in any character's possession! Do you still want to spawn as it?", "Confirm", "No", "Yes")
 					if(confirm != "Yes")
@@ -888,7 +888,7 @@ var/global/datum/controller/occupations/job_master
 					log_and_message_admins("[key_name(C)] has item spawned into \a [item.name] that was not held by anyone")
 					item_to_be = item
 					if(backup)
-						addtimer(CALLBACK(src, .proc/m_backup_client, C), 5 SECONDS)
+						addtimer(CALLBACK(src, PROC_REF(m_backup_client), C), 5 SECONDS)
 				if(istype(item, /obj/item/capture_crystal))
 					var/obj/item/capture_crystal/cryst = item
 					if(cryst.spawn_mob_type)

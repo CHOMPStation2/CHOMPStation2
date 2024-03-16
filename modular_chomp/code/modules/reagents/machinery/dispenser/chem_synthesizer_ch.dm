@@ -604,7 +604,7 @@
 		step = 1
 
 	// The time between each step is the volume required by a step multiplied by the delay_modifier (in ticks/deciseconds).
-	addtimer(CALLBACK(src, .proc/perform_reaction, r_id, step), recipes[r_id][step + 1] * delay_modifier)
+	addtimer(CALLBACK(src, PROC_REF(perform_reaction), r_id, step), recipes[r_id][step + 1] * delay_modifier)
 
 // This proc carries out the actual steps in each reaction.
 /obj/machinery/chemical_synthesizer/proc/perform_reaction(var/r_id, var/step as num)
@@ -638,7 +638,7 @@
 	var/obj/item/weapon/reagent_containers/chem_disp_cartridge/C = cartridges[label]
 	if(quantity > C.reagents.total_volume)
 		visible_message("<span class='notice'>The [src] flashes an 'insufficient reagents' warning.</span>")
-		addtimer(CALLBACK(src, .proc/perform_reaction, r_id, step), 1 MINUTE)
+		addtimer(CALLBACK(src, PROC_REF(perform_reaction), r_id, step), 1 MINUTE)
 		return
 
 	// After all this mess of code, we reach the line where the magic happens.
@@ -662,7 +662,7 @@
 		var/delay = reagents.total_volume
 		update_icon() // Update the icon first to remove underlays, then switch to the new icon_state.
 		icon_state = "synth_finished"
-		addtimer(CALLBACK(src, .proc/bottle_product, r_id), delay)
+		addtimer(CALLBACK(src, PROC_REF(bottle_product), r_id), delay)
 
 	else
 		follow_recipe(r_id, step)
