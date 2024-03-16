@@ -119,7 +119,7 @@ rborosilicate = 12
 			"BAY" = image(icon = 'modular_chomp/icons/mob/radial.dmi', icon_state = "bay"),
 			"ERIS" = image(icon = 'modular_chomp/icons/mob/radial.dmi', icon_state = "eris")
 			)
-			var/selected_girder_type = show_radial_menu(user, src, wall_types, custom_check = CALLBACK(src, .proc/check_menu, user), require_near = TRUE, tooltips = TRUE)
+			var/selected_girder_type = show_radial_menu(user, src, wall_types, custom_check = CALLBACK(src, PROC_REF(check_menu), user), require_near = TRUE, tooltips = TRUE)
 			if(!check_menu(user))
 				return
 			switch(selected_girder_type)
@@ -167,7 +167,7 @@ rborosilicate = 12
 			"Light Switch" = image(icon = 'modular_chomp/icons/mob/radial.dmi', icon_state = "lightswitch"),
 			"Entertainment Monitor" = image(icon = 'modular_chomp/icons/mob/radial.dmi', icon_state = "entertainment")
 			)
-			var/selected_wall_frame_type = show_radial_menu(user, src, wall_frame_types, custom_check = CALLBACK(src, .proc/check_menu, user), require_near = TRUE, tooltips = TRUE)
+			var/selected_wall_frame_type = show_radial_menu(user, src, wall_frame_types, custom_check = CALLBACK(src, PROC_REF(check_menu), user), require_near = TRUE, tooltips = TRUE)
 			if(!check_menu(user))
 				return
 			switch(selected_wall_frame_type)
@@ -230,7 +230,7 @@ rborosilicate = 12
 			"HOSTILE TO ALL" = image(icon = 'modular_chomp/icons/mob/radial.dmi', icon_state = "turret1"),
 			"HOSTILE TO ENEMIES" = image(icon = 'modular_chomp/icons/mob/radial.dmi', icon_state = "turret2")
 			)
-			var/selected_turret_faction = show_radial_menu(user, src, turret_factions, custom_check = CALLBACK(src, .proc/check_menu, user), require_near = ranged?FALSE:TRUE, tooltips = TRUE)
+			var/selected_turret_faction = show_radial_menu(user, src, turret_factions, custom_check = CALLBACK(src, PROC_REF(check_menu), user), require_near = ranged?FALSE:TRUE, tooltips = TRUE)
 			if(!check_menu(user))
 				return
 			switch(selected_turret_faction)
@@ -292,13 +292,13 @@ rborosilicate = 12
 		"External" = get_airlock_image(/obj/machinery/door/airlock/glass_external),
 	)
 
-	var/airlockcat = show_radial_menu(user, src, solid_or_glass_choices, custom_check = CALLBACK(src, .proc/check_menu, user), require_near = TRUE)
+	var/airlockcat = show_radial_menu(user, src, solid_or_glass_choices, custom_check = CALLBACK(src, PROC_REF(check_menu), user), require_near = TRUE)
 	if(!check_menu(user))
 		return
 	switch(airlockcat)
 		if("Solid")
 			if(advanced_airlock_setting == 1)
-				var/airlockpaint = show_radial_menu(user, src, solid_choices, radius = 42, custom_check = CALLBACK(src, .proc/check_menu, user), require_near = TRUE)
+				var/airlockpaint = show_radial_menu(user, src, solid_choices, radius = 42, custom_check = CALLBACK(src, PROC_REF(check_menu), user), require_near = TRUE)
 				if(!check_menu(user))
 					return
 				switch(airlockpaint)
@@ -337,7 +337,7 @@ rborosilicate = 12
 
 		if("Glass")
 			if(advanced_airlock_setting == 1)
-				var/airlockpaint = show_radial_menu(user, src , glass_choices, radius = 42, custom_check = CALLBACK(src, .proc/check_menu, user), require_near = TRUE)
+				var/airlockpaint = show_radial_menu(user, src , glass_choices, radius = 42, custom_check = CALLBACK(src, PROC_REF(check_menu), user), require_near = TRUE)
 				if(!check_menu(user))
 					return
 				switch(airlockpaint)
