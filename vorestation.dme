@@ -36,11 +36,8 @@
 #include "code\__defines\appearance.dm"
 #include "code\__defines\assert.dm"
 #include "code\__defines\atmos.dm"
-<<<<<<< HEAD
-#include "code\__defines\belly_modes_ch.dm"
-=======
 #include "code\__defines\atoms_movable.dm"
->>>>>>> db998502f9... add(atom/movable): Makes it possible for mappers to change scale/rotation of objs (#15835)
+#include "code\__defines\belly_modes_ch.dm"
 #include "code\__defines\belly_modes_vr.dm"
 #include "code\__defines\callbacks.dm"
 #include "code\__defines\chat.dm"
