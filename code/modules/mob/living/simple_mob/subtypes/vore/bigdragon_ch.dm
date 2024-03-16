@@ -836,7 +836,7 @@ I think I covered everything.
 		set_AI_busy(TRUE)
 	flames = 1
 	build_icons()
-	addtimer(CALLBACK(src, PROC_REF(firebreathend, A), charge_warmup)
+	addtimer(CALLBACK(src, PROC_REF(firebreathend), A), charge_warmup)
 	playsound(src, "sound/magic/Fireball.ogg", 50, 1)
 
 /mob/living/simple_mob/vore/bigdragon/proc/firebreathend(var/atom/A)
