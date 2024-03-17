@@ -74,7 +74,7 @@
 /obj/machinery/Initialize()
 	. = ..()
 	RegisterSignal(src, COMSIG_OBSERVER_MOVED, PROC_REF(update_power_on_move))
-	AddComponent(/datum/component/recursive_move)
+	//AddComponent(/datum/component/recursive_move) //ChompEDIT - not sure if all machinery needs recursive move detection.
 	var/power = POWER_CONSUMPTION
 	REPORT_POWER_CONSUMPTION_CHANGE(0, power)
 	power_init_complete = TRUE
