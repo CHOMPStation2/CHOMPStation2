@@ -8,4 +8,8 @@
 ///color inherent to the atom (e.g. blob color)
 #define FIXED_COLOUR_PRIORITY 		4
 ///how many priority levels there are.
+<<<<<<< HEAD
 #define COLOUR_PRIORITY_AMOUNT 4
+=======
+#define COLOUR_PRIORITY_AMOUNT 4
+>>>>>>> 39d7ca0cc5... Merge pull request #15836 from Runa-Dacino/colormateportchomp

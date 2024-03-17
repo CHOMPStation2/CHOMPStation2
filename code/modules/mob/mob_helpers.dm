@@ -85,7 +85,13 @@
 /proc/is_admin(var/mob/user)
 	return check_rights(R_ADMIN|R_EVENT, 0, user) != 0
 
+<<<<<<< HEAD
 /*	CHOMPEdit - See modular_chomp/code/_HELPERS/type2type/color.dm
+=======
+/**
+ * Moved into its own file as part of port from CHOMP.
+ *
+>>>>>>> 39d7ca0cc5... Merge pull request #15836 from Runa-Dacino/colormateportchomp
 /proc/hsl2rgb(h, s, l)
 	return //TODO: Implement
 */

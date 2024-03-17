@@ -65,7 +65,11 @@
 #include "code\__defines\lighting.dm"
 #include "code\__defines\lighting_vr.dm"
 #include "code\__defines\logging.dm"
+<<<<<<< HEAD
 #include "code\__defines\lum_ch.dm"
+=======
+#include "code\__defines\lum.dm"
+>>>>>>> 39d7ca0cc5... Merge pull request #15836 from Runa-Dacino/colormateportchomp
 #include "code\__defines\machinery.dm"
 #include "code\__defines\map.dm"
 #include "code\__defines\materials.dm"
@@ -175,7 +179,11 @@
 #include "code\_helpers\unsorted_vr.dm"
 #include "code\_helpers\view.dm"
 #include "code\_helpers\visual_filters.dm"
+<<<<<<< HEAD
 #include "code\_helpers\widelists_ch.dm"
+=======
+#include "code\_helpers\icons\flatten.dm"
+>>>>>>> 39d7ca0cc5... Merge pull request #15836 from Runa-Dacino/colormateportchomp
 #include "code\_helpers\logging\ui.dm"
 #include "code\_helpers\sorts\__main.dm"
 #include "code\_helpers\sorts\comparators.dm"
@@ -362,6 +370,7 @@
 #include "code\datums\category.dm"
 #include "code\datums\chat_message.dm"
 #include "code\datums\chat_payload.dm"
+#include "code\datums\colormate.dm"
 #include "code\datums\datacore.dm"
 #include "code\datums\datum.dm"
 #include "code\datums\datumvars.dm"
@@ -426,6 +435,7 @@
 #include "code\datums\helper_datums\teleport.dm"
 #include "code\datums\helper_datums\teleport_vr.dm"
 #include "code\datums\helper_datums\topic_input.dm"
+#include "code\datums\interfaces\appearance.dm"
 #include "code\datums\locations\locations.dm"
 #include "code\datums\locations\nyx.dm"
 #include "code\datums\locations\qerrvallis.dm"
@@ -1803,6 +1813,7 @@
 #include "code\game\turfs\unsimulated\walls.dm"
 #include "code\js\byjax.dm"
 #include "code\js\menus.dm"
+#include "code\matrices\color_matrix.dm"
 #include "code\modules\admin\admin.dm"
 #include "code\modules\admin\admin_attack_log.dm"
 #include "code\modules\admin\admin_investigate.dm"

@@ -107,7 +107,11 @@ AngleToHue(hue)
     Converts an angle to a hue in the valid range.
 RotateHue(hsv, angle)
     Takes an HSV or HSVA value and rotates the hue forward through red, green, and blue by an angle from 0 to 360.
+<<<<<<< HEAD
     (Rotating red by 60° produces yellow.) The result is another HSV or HSVA color with the same saturation and value
+=======
+    (Rotating red by 60� produces yellow.) The result is another HSV or HSVA color with the same saturation and value
+>>>>>>> 39d7ca0cc5... Merge pull request #15836 from Runa-Dacino/colormateportchomp
     as the original, but a different hue.
 GrayScale(rgb)
     Takes an RGB or RGBA color and converts it to grayscale. Returns an RGB or RGBA string.
@@ -236,6 +240,13 @@ world
  */
 
 /**
+<<<<<<< HEAD
+=======
+ * Porting the icons_ch.dm file straight from chompstation as I do not want to risk breaking stuff.
+ */
+
+/**
+>>>>>>> 39d7ca0cc5... Merge pull request #15836 from Runa-Dacino/colormateportchomp
  * reads RGB or RGBA values to list
  * @return list(r, g, b) or list(r, g, b, a), values 0 to 255.
  */
