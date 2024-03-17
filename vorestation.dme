@@ -4697,6 +4697,7 @@
 #include "modular_chomp\code\matrices\color_matrix.dm"
 #include "modular_chomp\code\modules\admin\functions\modify_traits.dm"
 #include "modular_chomp\code\modules\admin\verbs\randomverbs.dm"
+#include "modular_chomp\code\modules\admin\verbs\tgui_verbs.dm"
 #include "modular_chomp\code\modules\artifice\deadringer.dm"
 #include "modular_chomp\code\modules\balloon_alert\balloon_alert.dm"
 #include "modular_chomp\code\modules\casino\casino_map_atoms.dm"
