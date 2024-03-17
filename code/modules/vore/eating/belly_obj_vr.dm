@@ -1166,7 +1166,7 @@
 // but can easily make the message vary based on how many people are inside, etc.
 // Returns a string which shoul be appended to the Examine output.
 /obj/belly/proc/get_examine_msg()
-	if(!(contents.len) || !(examine_messages?.len))
+	if(!(contents?.len) || !(examine_messages?.len)) //ChompEDIT - runtimes
 		return ""
 
 	var/formatted_message
@@ -1193,7 +1193,7 @@
 	return(span_red("<i>[formatted_message]</i>"))
 
 /obj/belly/proc/get_examine_msg_absorbed()
-	if(!(contents.len) || !(examine_messages_absorbed.len) || !display_absorbed_examine)
+	if(!(contents?.len) || !(examine_messages_absorbed?.len) || !display_absorbed_examine) //ChompEDIT - runtimes
 		return ""
 
 	var/formatted_message
