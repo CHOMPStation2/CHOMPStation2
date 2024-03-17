@@ -742,24 +742,16 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	else
 		return
 
-/client/proc/cmd_admin_gib() // CHOMPEdit
+/client/proc/cmd_admin_gib(mob/M as mob in mob_list)
 	set category = "Special Verbs"
 	set name = "Gib"
 
-	// CHOMPEdit Begin
-	if(!check_rights(R_ADMIN|R_FUN))
-		return //VOREStation Edit
-
-	var/mob/M = tgui_input_list(usr, "", "Gib", mob_list)
-
-	if(!M)
-		return
+	if(!check_rights(R_ADMIN|R_FUN))	return //VOREStation Edit
 
 	var/confirm = tgui_alert(src, "You sure?", "Confirm", list("Yes", "No"))
-	if(confirm != "Yes")
-		return
-	// CHOMPEdit End
+	if(confirm != "Yes") return
 	//Due to the delay here its easy for something to have happened to the mob
+	if(!M)	return
 
 	log_admin("[key_name(usr)] has gibbed [key_name(M)]")
 	message_admins("[key_name_admin(usr)] has gibbed [key_name_admin(M)]", 1)
@@ -1039,7 +1031,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		message_admins("Admin [key_name_admin(usr)] has disabled random events.", 1)
 	feedback_add_details("admin_verb","TRE") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
-/client/proc/despawn_player() // CHOMPEdit
+/client/proc/despawn_player(var/mob/M in living_mob_list)
 	set name = "Cryo Player"
 	set category = "Admin"
 	set desc = "Removes a player from the round as if they'd cryo'd."
@@ -1047,8 +1039,6 @@ Traitors and the like can also be revived with the previous role mostly intact.
 
 	if(!check_rights(R_ADMIN|R_EVENT))
 		return
-
-	var/mob/M = tgui_input_list(usr, "Removes a player from the round as if they'd cryo'd.", "Cryo Player", living_mob_list) // CHOMPEdit
 
 	if(!M)
 		return
