@@ -1,17 +1,9 @@
-/client/proc/cmd_admin_check_player_logs(var/mob/living/M) // CHOMPEdit
+/client/proc/cmd_admin_check_player_logs(mob/living/M as mob in mob_list)
 	set category = "Admin"
 	set name = "Check Player Attack Logs"
 	set desc = "Check a player's attack logs."
 
-	// CHOMPEdit Begin
-	if(M?.client == usr.client)
-		M = tgui_input_list(usr, "Check a player's attack logs.", "Check Player Attack Logs", mob_list)
-
-	if(!M)
-		return
-	// CHOMPEdit End
-
-	//Views specific attack logs belonging to one player.
+//Views specific attack logs belonging to one player.
 	var/dat = "<B>[M]'s Attack Log:<HR></B>"
 	dat += "<b>Viewing attack logs of [M]</b> - (Played by ([key_name(M)]).<br>"
 	if(M.mind)
@@ -45,18 +37,10 @@
 
 	feedback_add_details("admin_verb","PL") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
-/client/proc/cmd_admin_check_dialogue_logs(var/mob/living/M) // CHOMPEdit
+/client/proc/cmd_admin_check_dialogue_logs(mob/living/M as mob in mob_list)
 	set category = "Admin"
 	set name = "Check Player Dialogue Logs"
 	set desc = "Check a player's dialogue logs."
-
-	// CHOMPEdit Begin
-	if(M?.client == usr.client)
-		M = tgui_input_list(usr, "Check a player's dialogue logs.", "Check Player Dialogue Logs", mob_list)
-
-	if(!M)
-		return
-	// CHOMPEdit End
 
 //Views specific dialogue logs belonging to one player.
 	var/dat = "<B>[M]'s Dialogue Log:<HR></B>"
