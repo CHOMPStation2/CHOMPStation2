@@ -1,6 +1,0 @@
-author: "Kashargul"
-delete-after: True
-changes:
-  - bugfix: "fixes an issue where the vorebelly contents did not collapse to a list as supposed to for more than 21 ingested items"
-  - bugfix: "fixes the assets on the chemSynthesizer being not properly initialized"
-  - bugfix: "fixes ntos icon direct loading on crew monitor"

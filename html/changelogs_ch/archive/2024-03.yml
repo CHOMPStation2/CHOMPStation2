@@ -181,3 +181,16 @@
   - rscadd: Balloon Alerts
   - rscadd: Brand Intelligence machines use Ballon Alerts to speak
   - rscadd: Balloon Alerts for surgery steps, taste and transferring reagents
+2024-03-17:
+  Kashargul:
+  - bugfix: fixes an issue where the vorebelly contents did not collapse to a list
+      as supposed to for more than 21 ingested items
+  - bugfix: fixes the assets on the chemSynthesizer being not properly initialized
+  - bugfix: fixes ntos icon direct loading on crew monitor
+  - bugfix: finally should resolve all our ntos icon cases
+  Raeschen:
+  - rscadd: Allow digitigrade legs for shadekin
+  - bugfix: nuke bad .procs in callbacks
+  TheCaramelion:
+  - balance: Adds the taste back to normal chat
+  - bugfix: Fulton beacons won't be sent to CentCom
