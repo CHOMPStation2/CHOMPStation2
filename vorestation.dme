@@ -4583,6 +4583,7 @@
 #include "interface\stylesheet.dm"
 #include "interface\skin.dmf"
 #include "maps\gateway_archive_vr\blackmarketpackers.dm"
+#include "maps\groundbase\groundbase.dm"
 #include "maps\redgate\fantasy_items.dm"
 #include "maps\redgate\falls\atoll_decals.dm"
 #include "maps\redgate\falls\atoll_objs.dm"
@@ -4605,6 +4606,17 @@
 #include "maps\southern_cross\turfs\outdoors.dm"
 #include "maps\submaps\_helpers.dm"
 #include "maps\submaps\_readme.dm"
+<<<<<<< HEAD
+=======
+#include "maps\submaps\admin_use_vr\event_autonomous_drone.dm"
+#include "maps\submaps\engine_submaps\engine.dm"
+#include "maps\submaps\engine_submaps\engine_areas.dm"
+#include "maps\submaps\engine_submaps_vr\tether\_engine_submaps.dm"
+#include "maps\submaps\space_submaps\space.dm"
+#include "maps\submaps\space_submaps\debrisfield\debrisfield.dm"
+#include "maps\submaps\surface_submaps\wilderness\wilderness.dm"
+#include "maps\submaps\surface_submaps\wilderness\wilderness_areas.dm"
+>>>>>>> 102ed23326... Merge pull request #15840 from VOREStation/Map-swap-1
 #include "maps\~map_system\maps.dm"
 #include "modular_chomp\code\coalesce_ch.dm"
 #include "modular_chomp\code\global.dm"
