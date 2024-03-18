@@ -194,3 +194,10 @@
   TheCaramelion:
   - balance: Adds the taste back to normal chat
   - bugfix: Fulton beacons won't be sent to CentCom
+2024-03-18:
+  Kashargul:
+  - admin: adds an new verb that allows to use tgui inputs on some existing verbs
+  - bugfix: fixed and issue that prevents pulling objects through stairs
+  Raeschen:
+  - bugfix: fixed a couple runtimes related to bellies
+  - bugfix: chemmaster runtime

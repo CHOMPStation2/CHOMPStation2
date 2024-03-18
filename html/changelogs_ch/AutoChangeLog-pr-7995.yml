@@ -1,4 +1,0 @@
-author: "Kashargul"
-delete-after: True
-changes:
-  - admin: "adds an new verb that allows to use tgui inputs on some existing verbs"
