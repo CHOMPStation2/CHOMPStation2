@@ -3,7 +3,6 @@
 	var/list/speech_sounds = list()
 	var/speech_chance = 75 //mobs can be a bit more emotive than carbon/humans
 	var/speech_sound_enabled = TRUE
-	var/has_recoloured = FALSE
 
 	//vars for vore_icons toggle control
 	var/vore_icons_cache = null // null by default. Going from ON to OFF should store vore_icons val here, OFF to ON reset as null
@@ -136,14 +135,3 @@
 
 /mob/living/simple_mob/proc/character_directory_species()
 	return "simplemob"
-
-/mob/living/simple_mob/verb/ColorMate()
-	set name = "Recolour"
-	set category = "Abilities"
-	set desc = "Allows to recolour once."
-
-	if(!has_recoloured)
-		var/datum/ColorMate/recolour = new /datum/ColorMate(usr)
-		recolour.tgui_interact(usr)
-		return
-	to_chat(usr, "You've already recoloured yourself once. You are only allowed to recolour yourself once during a around.")

@@ -36,12 +36,6 @@
 /datum/ColorMate/tgui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, "ColorMate", name)
-		ui.open()
-
-/datum/ColorMate/ui_interact(mob/user, datum/tgui/ui)
-	ui = SStgui.try_update_ui(user, src, ui)
-	if(!ui)
 		ui = new(user, src, "ColorMate", src.name)
 		ui.set_autoupdate(FALSE) //This might be a bit intensive, better to not update it every few ticks
 		ui.open()

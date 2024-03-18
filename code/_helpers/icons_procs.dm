@@ -236,6 +236,10 @@ world
  */
 
 /**
+ * Porting the icons_ch.dm file straight from chompstation as I do not want to risk breaking stuff.
+ */
+
+/**
  * reads RGB or RGBA values to list
  * @return list(r, g, b) or list(r, g, b, a), values 0 to 255.
  */

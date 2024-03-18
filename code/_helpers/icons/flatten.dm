@@ -27,7 +27,7 @@
 	var/icon/west = get_flat_icon(N, WEST, no_anim = no_anim)
 	qdel(N)
 	//Starts with a blank icon because of byond bugs.
-	var/icon/full = icon('modular_chomp/icons/system/blank_32x32.dmi', "")
+	var/icon/full = icon('icons/system/blank_32x32.dmi', "")
 	full.Insert(north, dir = NORTH)
 	full.Insert(south, dir = SOUTH)
 	full.Insert(east, dir = EAST)
@@ -45,7 +45,7 @@
 
 /proc/_get_flat_icon(image/A, defdir, no_anim, deficon, start)
 	// start with blank image
-	var/static/icon/template = icon('modular_chomp/icons/system/blank_32x32.dmi', "")
+	var/static/icon/template = icon('icons/system/blank_32x32.dmi', "")
 
 	#define BLANK icon(template)
 

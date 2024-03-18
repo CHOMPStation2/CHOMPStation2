@@ -1,6 +1,4 @@
-import { toFixed } from 'common/math';
-
-import { useBackend } from '../../backend';
+import { useBackend } from '../backend';
 import {
   Button,
   Icon,
@@ -10,11 +8,11 @@ import {
   Slider,
   Table,
   Tabs,
-} from '../../components';
-import { Window } from '../../layouts';
+} from '../components';
+import { Window } from '../layouts';
 
-export const ColorMate = (props) => {
-  const { act, data } = useBackend();
+export const ColorMate = (props, context) => {
+  const { act, data } = useBackend(context);
   const { activemode, temp } = data;
   const item = data.item || [];
   return (
@@ -22,7 +20,7 @@ export const ColorMate = (props) => {
       <Window.Content overflow="auto">
         <Section>
           {temp ? <NoticeBox>{temp}</NoticeBox> : null}
-          {item && Object.keys(item).length ? (
+          {Object.keys(item).length ? (
             <>
               <Table>
                 <Table.Cell width="50%">
@@ -129,8 +127,8 @@ export const ColorMate = (props) => {
   );
 };
 
-export const ColorMateTint = (props) => {
-  const { act, data } = useBackend();
+export const ColorMateTint = (props, context) => {
+  const { act, data } = useBackend(context);
   return (
     <Button
       fluid
@@ -141,21 +139,20 @@ export const ColorMateTint = (props) => {
   );
 };
 
-export const ColorMateMatrix = (props) => {
-  const { act, data } = useBackend();
+export const ColorMateMatrix = (props, context) => {
+  const { act, data } = useBackend(context);
   const matrixcolors = data.matrixcolors || [];
   return (
     <Table>
       <Table.Cell>
         <Table.Row>
-          RR:
+          RR:{' '}
           <NumberInput
             width="50px"
             minValue={-10}
             maxValue={10}
             step={0.01}
             value={matrixcolors.rr}
-            format={(value) => toFixed(value, 2)}
             onChange={(e, value) =>
               act('set_matrix_color', {
                 color: 1,
@@ -165,14 +162,13 @@ export const ColorMateMatrix = (props) => {
           />
         </Table.Row>
         <Table.Row>
-          GR:
+          GR:{' '}
           <NumberInput
             width="50px"
             minValue={-10}
             maxValue={10}
             step={0.01}
             value={matrixcolors.gr}
-            format={(value) => toFixed(value, 2)}
             onChange={(e, value) =>
               act('set_matrix_color', {
                 color: 4,
@@ -182,14 +178,13 @@ export const ColorMateMatrix = (props) => {
           />
         </Table.Row>
         <Table.Row>
-          BR:
+          BR:{' '}
           <NumberInput
             width="50px"
             minValue={-10}
             maxValue={10}
             step={0.01}
             value={matrixcolors.br}
-            format={(value) => toFixed(value, 2)}
             onChange={(e, value) =>
               act('set_matrix_color', {
                 color: 7,
@@ -201,14 +196,13 @@ export const ColorMateMatrix = (props) => {
       </Table.Cell>
       <Table.Cell>
         <Table.Row>
-          RG:
+          RG:{' '}
           <NumberInput
             width="50px"
             minValue={-10}
             maxValue={10}
             step={0.01}
             value={matrixcolors.rg}
-            format={(value) => toFixed(value, 2)}
             onChange={(e, value) =>
               act('set_matrix_color', {
                 color: 2,
@@ -218,14 +212,13 @@ export const ColorMateMatrix = (props) => {
           />
         </Table.Row>
         <Table.Row>
-          GG:
+          GG:{' '}
           <NumberInput
             width="50px"
             minValue={-10}
             maxValue={10}
             step={0.01}
             value={matrixcolors.gg}
-            format={(value) => toFixed(value, 2)}
             onChange={(e, value) =>
               act('set_matrix_color', {
                 color: 5,
@@ -235,14 +228,13 @@ export const ColorMateMatrix = (props) => {
           />
         </Table.Row>
         <Table.Row>
-          BG:
+          BG:{' '}
           <NumberInput
             width="50px"
             minValue={-10}
             maxValue={10}
             step={0.01}
             value={matrixcolors.bg}
-            format={(value) => toFixed(value, 2)}
             onChange={(e, value) =>
               act('set_matrix_color', {
                 color: 8,
@@ -254,14 +246,13 @@ export const ColorMateMatrix = (props) => {
       </Table.Cell>
       <Table.Cell>
         <Table.Row>
-          RB:
+          RB:{' '}
           <NumberInput
             width="50px"
             minValue={-10}
             maxValue={10}
             step={0.01}
             value={matrixcolors.rb}
-            format={(value) => toFixed(value, 2)}
             onChange={(e, value) =>
               act('set_matrix_color', {
                 color: 3,
@@ -271,14 +262,13 @@ export const ColorMateMatrix = (props) => {
           />
         </Table.Row>
         <Table.Row>
-          GB:
+          GB:{' '}
           <NumberInput
             width="50px"
             minValue={-10}
             maxValue={10}
             step={0.01}
             value={matrixcolors.gb}
-            format={(value) => toFixed(value, 2)}
             onChange={(e, value) =>
               act('set_matrix_color', {
                 color: 6,
@@ -288,14 +278,13 @@ export const ColorMateMatrix = (props) => {
           />
         </Table.Row>
         <Table.Row>
-          BB:
+          BB:{' '}
           <NumberInput
             width="50px"
             minValue={-10}
             maxValue={10}
             step={0.01}
             value={matrixcolors.bb}
-            format={(value) => toFixed(value, 2)}
             onChange={(e, value) =>
               act('set_matrix_color', {
                 color: 9,
@@ -307,14 +296,13 @@ export const ColorMateMatrix = (props) => {
       </Table.Cell>
       <Table.Cell>
         <Table.Row>
-          CR:
+          CR:{' '}
           <NumberInput
             width="50px"
             minValue={-10}
             maxValue={10}
             step={0.01}
             value={matrixcolors.cr}
-            format={(value) => toFixed(value, 2)}
             onChange={(e, value) =>
               act('set_matrix_color', {
                 color: 10,
@@ -324,14 +312,13 @@ export const ColorMateMatrix = (props) => {
           />
         </Table.Row>
         <Table.Row>
-          CG:
+          CG:{' '}
           <NumberInput
             width="50px"
             minValue={-10}
             maxValue={10}
             step={0.01}
             value={matrixcolors.cg}
-            format={(value) => toFixed(value, 2)}
             onChange={(e, value) =>
               act('set_matrix_color', {
                 color: 11,
@@ -341,14 +328,13 @@ export const ColorMateMatrix = (props) => {
           />
         </Table.Row>
         <Table.Row>
-          CB:
+          CB:{' '}
           <NumberInput
             width="50px"
             minValue={-10}
             maxValue={10}
             step={0.01}
             value={matrixcolors.cb}
-            format={(value) => toFixed(value, 2)}
             onChange={(e, value) =>
               act('set_matrix_color', {
                 color: 12,
@@ -369,8 +355,8 @@ export const ColorMateMatrix = (props) => {
   );
 };
 
-export const ColorMateHSV = (props) => {
-  const { act, data } = useBackend();
+export const ColorMateHSV = (props, context) => {
+  const { act, data } = useBackend(context);
   const { buildhue, buildsat, buildval } = data;
   return (
     <Table>
@@ -398,7 +384,6 @@ export const ColorMateHSV = (props) => {
             maxValue={10}
             step={0.01}
             value={buildsat}
-            format={(value) => toFixed(value, 2)}
             onDrag={(e, value) =>
               act('set_sat', {
                 buildsat: value,
@@ -415,7 +400,6 @@ export const ColorMateHSV = (props) => {
             maxValue={10}
             step={0.01}
             value={buildval}
-            format={(value) => toFixed(value, 2)}
             onDrag={(e, value) =>
               act('set_val', {
                 buildval: value,
