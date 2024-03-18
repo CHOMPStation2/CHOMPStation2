@@ -65,11 +65,7 @@
 #include "code\__defines\lighting.dm"
 #include "code\__defines\lighting_vr.dm"
 #include "code\__defines\logging.dm"
-<<<<<<< HEAD
-#include "code\__defines\lum_ch.dm"
-=======
 #include "code\__defines\lum.dm"
->>>>>>> 39d7ca0cc5... Merge pull request #15836 from Runa-Dacino/colormateportchomp
 #include "code\__defines\machinery.dm"
 #include "code\__defines\map.dm"
 #include "code\__defines\materials.dm"
@@ -179,11 +175,8 @@
 #include "code\_helpers\unsorted_vr.dm"
 #include "code\_helpers\view.dm"
 #include "code\_helpers\visual_filters.dm"
-<<<<<<< HEAD
 #include "code\_helpers\widelists_ch.dm"
-=======
 #include "code\_helpers\icons\flatten.dm"
->>>>>>> 39d7ca0cc5... Merge pull request #15836 from Runa-Dacino/colormateportchomp
 #include "code\_helpers\logging\ui.dm"
 #include "code\_helpers\sorts\__main.dm"
 #include "code\_helpers\sorts\comparators.dm"
