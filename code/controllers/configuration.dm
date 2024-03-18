@@ -306,7 +306,10 @@ var/list/gamemode_cache = list()
 
 	var/static/invoke_youtubedl = null
 
-<<<<<<< HEAD
+	//Enables/Disables the appropriate mob type from obtaining the verb on spawn. Still allows admins to manually give it to them.
+	var/static/allow_robot_recolor = FALSE
+	var/static/allow_simple_mob_recolor = FALSE
+
 	var/static/asset_transport
 
 	var/static/cache_assets = FALSE
@@ -318,11 +321,6 @@ var/list/gamemode_cache = list()
 	var/static/asset_cdn_webroot
 
 	var/static/asset_cdn_url
-=======
-	//Enables/Disables the appropriate mob type from obtaining the verb on spawn. Still allows admins to manually give it to them.
-	var/static/allow_robot_recolor = FALSE
-	var/static/allow_simple_mob_recolor = FALSE
->>>>>>> 39d7ca0cc5... Merge pull request #15836 from Runa-Dacino/colormateportchomp
 
 /datum/configuration/New()
 	var/list/L = subtypesof(/datum/game_mode)
