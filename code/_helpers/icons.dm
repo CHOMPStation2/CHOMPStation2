@@ -80,11 +80,7 @@
 	Blend(M, ICON_ADD)
 
 /proc/BlendRGB(rgb1, rgb2, amount)
-<<<<<<< HEAD
-	var/list/RGB1 = ReadRGB(rgb1)	//CHOMPEdit - Better rgb blend
-=======
 	var/list/RGB1 = ReadRGB(rgb1)
->>>>>>> 39d7ca0cc5... Merge pull request #15836 from Runa-Dacino/colormateportchomp
 	var/list/RGB2 = ReadRGB(rgb2)
 
 	// add missing alpha if needed
