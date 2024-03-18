@@ -104,7 +104,7 @@
 	. = ..()
 	update_power_on_move(src, old_loc, loc)
 
-	//ChompEDIT START -- only add this if we init on a non-turf (and non-null)
+	//ChompEDIT START -- only add this if we move into a non-turf (not null) and we've never been given recursive move handling
 	if(!recursive_set && loc && !isturf(loc))
 		recursive_set = TRUE
 		AddComponent(/datum/component/recursive_move)
