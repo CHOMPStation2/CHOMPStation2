@@ -40,19 +40,11 @@
 /datum/gear_tweak/color/tweak_item(var/obj/item/I, var/metadata)
 	if(valid_colors && !(metadata in valid_colors))
 		return
-<<<<<<< HEAD
-	//CHOMPEdit start
-=======
->>>>>>> 39d7ca0cc5... Merge pull request #15836 from Runa-Dacino/colormateportchomp
 	if(!metadata || (metadata == "#ffffff"))
 		return
 	if(istype(I))
 		I.add_atom_colour(metadata, FIXED_COLOUR_PRIORITY)
 	else
-<<<<<<< HEAD
-		I.color = metadata		// fuck off underwear
-	//CHOMPEdit end
-=======
 		I.color = metadata
 
 GLOBAL_DATUM_INIT(gear_tweak_free_matrix_recolor, /datum/gear_tweak/matrix_recolor, new)
@@ -90,7 +82,6 @@ GLOBAL_DATUM_INIT(gear_tweak_free_matrix_recolor, /datum/gear_tweak/matrix_recol
 		I.add_atom_colour(metadata, FIXED_COLOUR_PRIORITY)
 	else
 		I.color = metadata
->>>>>>> 39d7ca0cc5... Merge pull request #15836 from Runa-Dacino/colormateportchomp
 
 /*
 * Path adjustment
