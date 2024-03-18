@@ -73,9 +73,9 @@
 // Do not do power stuff in New/Initialize until after ..()
 /obj/machinery/Initialize()
 	. = ..()
-	RegisterSignal(src, COMSIG_OBSERVER_MOVED, PROC_REF(update_power_on_move))
 	if(loc && !isturf(loc)) //ChompEDIT -- only add this if we init on a non-turf (and non-null)
 		AddComponent(/datum/component/recursive_move) //ChompEDIT
+		RegisterSignal(src, COMSIG_OBSERVER_MOVED, PROC_REF(update_power_on_move)) //ChompEDIT - we only need this for recursive moving
 	var/power = POWER_CONSUMPTION
 	REPORT_POWER_CONSUMPTION_CHANGE(0, power)
 	power_init_complete = TRUE
@@ -97,6 +97,7 @@
 	update_power_on_move(src, old_loc, loc)
 	if(loc && !isturf(loc)) //ChompEDIT -- only add this if we move to a non-turf
 		AddComponent(/datum/component/recursive_move) //ChompEDIT
+		RegisterSignal(src, COMSIG_OBSERVER_MOVED, PROC_REF(update_power_on_move), override = TRUE) // ChompEDIT
 	/* No
 	if(ismovable(old_loc)) // Unregister recursive movement.
 		UnregisterSignal(old_loc, COMSIG_OBSERVER_MOVED)
