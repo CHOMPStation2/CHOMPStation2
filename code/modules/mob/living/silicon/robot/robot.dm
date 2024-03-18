@@ -1335,7 +1335,7 @@
 	src.verbs -= robot_verbs_default
 	src.verbs -= silicon_subsystems
 	if(config.allow_robot_recolor)
-		src.verbs |= /mob/living/silicon/robot/proc/ColorMate
+		src.verbs -= /mob/living/silicon/robot/proc/ColorMate //ChompEDIT - probable copypaste error
 
 // Uses power from cyborg's cell. Returns 1 on success or 0 on failure.
 // Properly converts using CELLRATE now! Amount is in Joules.
