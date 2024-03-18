@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-/* CHOMPStation edit - File overidden. See modular_chomp/code/game/machinery/colormate.dm
-
-// I'm honestly pretty sure that short of stuffing five million things into this
-// there's absolutely no way it could ever have any performance impact
-// Given that all it does is set the color var
-// But just in case it's cursed in some arcane horrible way
-// I'm going to leave this limit here
-#define MAX_PROCESSING 10 // Arbitrary performance insurance
-
-=======
->>>>>>> 39d7ca0cc5... Merge pull request #15836 from Runa-Dacino/colormateportchomp
 /obj/machinery/gear_painter
 	name = "Color Mate"
 	desc = "A machine to give your apparel a fresh new color!"
@@ -132,9 +120,6 @@
 		user.put_in_hands(inserted)
 	inserted = null
 	update_icon()
-<<<<<<< HEAD
-/*
-=======
 	SStgui.update_uis(src)
 
 /obj/machinery/gear_painter/tgui_interact(mob/user, datum/tgui/ui)
@@ -309,4 +294,3 @@
 			temp = "Matrix is too dark. (passed [passed] out of [minimum_matrix_tests] required tests. Minimum lightness: [minimum_matrix_lightness])."
 			return FALSE
 		return TRUE
->>>>>>> 39d7ca0cc5... Merge pull request #15836 from Runa-Dacino/colormateportchomp
