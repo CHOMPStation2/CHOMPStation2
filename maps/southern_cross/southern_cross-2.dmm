@@ -22254,8 +22254,7 @@
 /area/security/warden)
 "bql" = (
 /obj/machinery/computer/supplycomp{
-	dir = 4;
-	icon_rotation = 90
+	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
