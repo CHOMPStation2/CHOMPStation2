@@ -1,4 +1,0 @@
-author: "Kashargul"
-delete-after: True
-changes:
-  - bugfix: "fixes an issue where closing the prompt clears the ooc note section (favs / maybes)"

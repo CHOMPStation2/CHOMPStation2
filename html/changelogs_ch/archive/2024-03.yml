@@ -201,3 +201,9 @@
   Raeschen:
   - bugfix: fixed a couple runtimes related to bellies
   - bugfix: chemmaster runtime
+2024-03-19:
+  Kashargul:
+  - bugfix: fixes an issue where closing the prompt clears the ooc note section (favs
+      / maybes)
+  Raeschen:
+  - bugfix: fixed upsidedown cargo console
