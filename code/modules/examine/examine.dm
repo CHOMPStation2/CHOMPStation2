@@ -121,6 +121,7 @@
 	if(client)
 		var/is_antag = ((mind && mind.special_role) || isobserver(src)) //ghosts don't have minds
 		client.update_description_holders(A, is_antag)
+		SSstatpanels.set_examine_tab(client) //CHOMPEdit
 
 /mob/verb/mob_examine()
 	set name = "Mob Examine"

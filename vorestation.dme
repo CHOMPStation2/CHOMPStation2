@@ -593,6 +593,7 @@
 #include "code\defines\procs\radio.dm"
 #include "code\defines\procs\statistics.dm"
 #include "code\game\atoms.dm"
+#include "code\game\atoms_ch.dm"
 #include "code\game\atoms_movable.dm"
 #include "code\game\atoms_movable_ch.dm"
 #include "code\game\atoms_movable_vr.dm"

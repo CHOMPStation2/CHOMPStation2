@@ -101,7 +101,7 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 	usr << browse(dat.Join(), "window=ahelp_list[state];size=600x480")
 
 //Tickets statpanel
-/datum/tickets/proc/stat_entry()
+/datum/tickets/proc/stat_entry(client/target)
 	SHOULD_CALL_PARENT(TRUE)
 	SHOULD_NOT_SLEEP(TRUE)
 	var/list/L = list()
@@ -117,7 +117,7 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 				if(1)
 					type = "MEN"
 
-			if(usr.client.holder || T.level > 0)
+			if((target && target.holder) || T.level > 0)
 				L[++L.len] = list("\[[type]\] #[T.id]. [T.initiator_key_name]:", T.statclick.update())
 		else
 			++num_disconnected
