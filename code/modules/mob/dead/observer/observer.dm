@@ -249,13 +249,15 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 /mob/observer/dead/can_use_hands()	return 0
 /mob/observer/dead/is_active()		return 0
 
-/mob/observer/dead/Stat()
-	..()
-	if(statpanel("Status"))
-		if(emergency_shuttle)
-			var/eta_status = emergency_shuttle.get_status_panel_eta()
-			if(eta_status)
-				stat(null, eta_status)
+//ChompEDIT START
+/mob/observer/dead/get_status_tab_items()
+	. = ..()
+	if(emergency_shuttle)
+		var/eta_status = emergency_shuttle.get_status_panel_eta()
+		if(eta_status)
+			. += ""
+			. += "[eta_status]"
+//ChompEDIT END
 
 /mob/observer/dead/verb/reenter_corpse()
 	set category = "Ghost"
