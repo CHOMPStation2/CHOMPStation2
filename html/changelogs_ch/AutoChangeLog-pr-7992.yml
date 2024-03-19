@@ -1,0 +1,4 @@
+author: "Raeschen"
+delete-after: True
+changes:
+  - refactor: "Remove obj/machinery recursivemove placement + signal registration as a default, instead an optional"
