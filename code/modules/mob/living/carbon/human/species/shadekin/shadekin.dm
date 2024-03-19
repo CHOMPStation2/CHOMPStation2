@@ -77,7 +77,6 @@
 	breath_type = null
 	poison_type = null
 	water_breather = TRUE	//They don't quite breathe
-	does_not_breathe = TRUE // CHOMPEdit - No breathe 2
 
 	vision_flags = SEE_SELF|SEE_MOBS
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_SKIN_COLOR | HAS_EYE_COLOR | HAS_UNDERWEAR
@@ -165,6 +164,7 @@
 	H.adjustBruteLoss(-(H.getBruteLoss() * 0.75))
 	H.adjustToxLoss(-(H.getToxLoss() * 0.75))
 	H.adjustCloneLoss(-(H.getCloneLoss() * 0.75))
+	H.germ_level = 0 // CHOMPAdd - Take away the germs, or we'll die AGAIN
 	H.vessel.add_reagent("blood",blood_volume-H.vessel.total_volume)
 	for(var/obj/item/organ/external/bp in H.organs)
 		bp.bandage()
