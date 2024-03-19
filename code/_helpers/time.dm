@@ -62,7 +62,7 @@ var/next_station_date_change = 1 DAY
 /proc/gameTimestamp(format = "hh:mm:ss", wtime=null)
 	if(!wtime)
 		wtime = world.time
-	return time2text(wtime - GLOB.timezoneOffset, format)
+	return time2text(((24 HOURS) + (wtime - GLOB.timezoneOffset)), format)
 
 /* Returns 1 if it is the selected month and day */
 /proc/isDay(var/month, var/day)
@@ -116,7 +116,7 @@ GLOBAL_VAR_INIT(round_start_time, 0)
 			warning("Time rollover error: world.timeofday decreased from previous check, but the day or last rollover is less than 12 hours old. System clock?")
 	rollovercheck_last_timeofday = world.timeofday
 	return midnight_rollovers
-  
+
 //Increases delay as the server gets more overloaded,
 //as sleeps aren't cheap and sleeping only to wake up and sleep again is wasteful
 #define DELTA_CALC max(((max(TICK_USAGE, world.cpu) / 100) * max(Master.sleep_delta-1,1)), 1)
