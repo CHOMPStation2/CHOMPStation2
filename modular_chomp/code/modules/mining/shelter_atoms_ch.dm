@@ -1,5 +1,6 @@
 // Unique areas were requested for each superpose map for future use. The plain superpose area is for future varedits to all superpose submaps.
 /area/survivalpod/superpose
+	requires_power = TRUE
 
 /area/survivalpod/superpose/CrashedInfestedShip
 
