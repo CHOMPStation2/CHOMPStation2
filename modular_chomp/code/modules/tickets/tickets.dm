@@ -106,7 +106,7 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 	SHOULD_NOT_SLEEP(TRUE)
 	var/list/L = list()
 	var/num_disconnected = 0
-	L[++L.len] = list("== Tickets ==")
+	L[++L.len] = list("== Admin Tickets ==", "", null, null)
 	L[++L.len] = list("Active Tickets:", "[astatclick.update("[active_tickets.len]")]", null, REF(astatclick))
 	for(var/datum/ticket/T as anything in active_tickets)
 		if(T.initiator)
@@ -118,7 +118,7 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 					type = "MEN"
 
 			if((target && target.holder) || T.level > 0)
-				L[++L.len] = list("\[[type]\] #[T.id]. [T.initiator_key_name]:", T.statclick.update())
+				L[++L.len] = list("\[[type]\] #[AH.id]. [AH.initiator_key_name]:", "[AH.statclick.update()]", REF(AH))
 		else
 			++num_disconnected
 	if(num_disconnected)
