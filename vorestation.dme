@@ -407,6 +407,7 @@
 #include "code\datums\autolathe\tools_vr.dm"
 #include "code\datums\components\_component.dm"
 #include "code\datums\components\connect_containers_ch.dm"
+#include "code\datums\components\connect_mob_behalf.dm"
 #include "code\datums\components\connect_range_ch.dm"
 #include "code\datums\components\material_container.dm"
 #include "code\datums\components\overlay_lighting.dm"

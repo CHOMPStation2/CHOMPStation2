@@ -102,9 +102,12 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 
 //Tickets statpanel
 /datum/tickets/proc/stat_entry()
+	SHOULD_CALL_PARENT(TRUE)
+	SHOULD_NOT_SLEEP(TRUE)
+	var/list/L = list()
 	var/num_disconnected = 0
-	stat("== Tickets ==")
-	stat("Active Tickets:", astatclick.update("[active_tickets.len]"))
+	L[++L.len] = list("== Tickets ==")
+	L[++L.len] = list("Active Tickets:", "[astatclick.update("[active_tickets.len]")]", null, REF(astatclick))
 	for(var/datum/ticket/T as anything in active_tickets)
 		if(T.initiator)
 			var/type = "N/A"
@@ -115,13 +118,13 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 					type = "MEN"
 
 			if(usr.client.holder || T.level > 0)
-				stat("\[[type]\] #[T.id]. [T.initiator_key_name]:", T.statclick.update())
+				L[++L.len] = list("\[[type]\] #[T.id]. [T.initiator_key_name]:", T.statclick.update())
 		else
 			++num_disconnected
 	if(num_disconnected)
-		stat("Disconnected:", astatclick.update("[num_disconnected]"))
-	stat("Closed Tickets:", cstatclick.update("[closed_tickets.len]"))
-	stat("Resolved Tickets:", rstatclick.update("[resolved_tickets.len]"))
+		L[++L.len] = list("Disconnected:", "[astatclick.update("[num_disconnected]")]", null, REF(astatclick))
+	L[++L.len] = list("Closed Tickets:", "[cstatclick.update("[closed_tickets.len]")]", null, REF(cstatclick))
+	L[++L.len] = list("Resolved Tickets:", "[rstatclick.update("[resolved_tickets.len]")]", null, REF(rstatclick))
 
 //Reassociate still open ticket if one exists
 /datum/tickets/proc/ClientLogin(client/C)

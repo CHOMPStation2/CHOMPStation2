@@ -148,8 +148,8 @@ SUBSYSTEM_DEF(statpanels)
 	target.stat_panel.send_message("update_examine", examine_update)
 
 /datum/controller/subsystem/statpanels/proc/set_tickets_tab(client/target)
-	var/list/ahelp_tickets = GLOB.ahelp_tickets.stat_entry()
-	ahelp_tickets += GLOB.mhelp_tickets.stat_entry()
+	var/list/ahelp_tickets = GLOB.tickets.stat_entry()
+	//ahelp_tickets += GLOB.mhelp_tickets.stat_entry()
 	target.stat_panel.send_message("update_tickets", ahelp_tickets)
 
 /datum/controller/subsystem/statpanels/proc/set_SDQL2_tab(client/target)
