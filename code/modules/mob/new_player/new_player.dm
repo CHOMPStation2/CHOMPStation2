@@ -123,7 +123,7 @@
 	panel.set_content(output)
 	panel.open()
 	return
-
+//CHOMPEdit Begin
 /mob/new_player/get_status_tab_items()
 	. = ..()
 	. += ""
@@ -155,6 +155,7 @@
 				. += "[player.key] [player.ready ? "(Playing as: [refJob ? refJob.title : "Unknown"])" : null]"
 			totalPlayers++
 			if(player.ready)totalPlayersReady++
+//CHOMPEdit End
 
 /mob/new_player/Topic(href, href_list[])
 	if(!client)	return 0
@@ -205,7 +206,7 @@
 			observer.real_name = client.prefs.real_name
 			observer.name = observer.real_name
 			if(!client.holder && !config.antag_hud_allowed)           // For new ghosts we remove the verb from even showing up if it's not allowed.
-				remove_verb(observer, /mob/observer/dead/verb/toggle_antagHUD)        // Poor guys, don't know what they are missing!
+				remove_verb(observer, /mob/observer/dead/verb/toggle_antagHUD) //CHOMPEdit        // Poor guys, don't know what they are missing!
 			observer.key = key
 			observer.set_respawn_timer(time_till_respawn()) // Will keep their existing time if any, or return 0 and pass 0 into set_respawn_timer which will use the defaults
 			observer.client.init_verbs()

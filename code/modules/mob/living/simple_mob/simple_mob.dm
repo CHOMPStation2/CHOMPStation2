@@ -291,11 +291,12 @@
 
 	. += ..()
 
-
+//CHOMPEdit Begin
 /mob/living/simple_mob/get_status_tab_items()
 	. = ..()
 	. += ""
 	. += "Health: [round((health / getMaxHealth()) * 100)]%"
+//CHOMPEdit End
 
 /mob/living/simple_mob/lay_down()
 	..()

@@ -454,7 +454,7 @@ GLOBAL_DATUM_INIT(mhelp_tickets, /datum/mentor_help_tickets, new)
 
 
 	//remove out adminhelp verb temporarily to prevent spamming of admins.
-	remove_verb(src, /client/verb/mentorhelp)
+	remove_verb(src, /client/verb/mentorhelp) //CHOMPEdit
 	spawn(600)
 		add_verb(src, /client/verb/mentorhelp)	// 1 minute cool-down for mentorhelps
 

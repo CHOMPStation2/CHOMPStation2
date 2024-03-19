@@ -194,9 +194,10 @@
 	if(eyeobj)
 		return eyeobj
 	return src
-
+//CHOMPEdit Begin
 /client/verb/fix_stat_panel()
 	set name = "Fix Stat Panel"
 	set hidden = TRUE
 
 	init_verbs()
+//CHOMPEdit End

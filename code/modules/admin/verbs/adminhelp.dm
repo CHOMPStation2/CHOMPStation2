@@ -652,7 +652,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 		return
 
 	//remove out adminhelp verb temporarily to prevent spamming of admins.
-	remove_verb(src, /client/verb/adminhelp)
+	remove_verb(src, /client/verb/adminhelp) //CHOMPEdit
 	spawn(1200)
 		add_verb(src, /client/verb/adminhelp)	// 2 minute cool-down for adminhelps
 

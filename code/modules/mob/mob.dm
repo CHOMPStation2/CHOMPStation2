@@ -695,7 +695,7 @@
 	for(var/mob/M in viewers())
 		M.see(message)
 
-/*
+/* CHOMP Removal
 /mob/Stat()
 	..()
 	. = (is_client_active(10 MINUTES))

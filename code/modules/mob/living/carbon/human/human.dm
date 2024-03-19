@@ -68,6 +68,7 @@
 		QDEL_NULL(vessel)
 	return ..()
 
+//CHOMPEdit Begin
 /mob/living/carbon/human/Stat()
 	. = ..()
 	. += "Intent: [a_intent]"
@@ -109,6 +110,7 @@
 				. += "[mind.changeling.readapts]/[mind.changeling.max_readapts]"
 	if(species)
 		species.Stat(src)
+//CHOMPEdit End
 
 /mob/living/carbon/human/ex_act(severity)
 	if(!blinded)

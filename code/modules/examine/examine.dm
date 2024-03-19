@@ -59,7 +59,7 @@
 	description_holders["icon"] = "[icon2html(A.examine_icon(),src)]"
 	description_holders["desc"] = A.desc
 
-/*
+/* CHOMP Removal
 /mob/Stat()
 	. = ..()
 	if(client && statpanel("Examine"))

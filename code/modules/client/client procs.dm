@@ -116,8 +116,8 @@
 		return
 	//VOREStation Add End
 
-	if(href_list["reload_statbrowser"])
-		stat_panel.reinitialize()
+	if(href_list["reload_statbrowser"]) //CHOMPEdit
+		stat_panel.reinitialize() //CHOMPEdit
 
 	//Logs all hrefs
 	if(config && config.log_hrefs && href_logfile)

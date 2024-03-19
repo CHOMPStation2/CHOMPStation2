@@ -24,7 +24,7 @@
 	set name = "Adminverbs - Show"
 	set category = "Admin"
 
-	remove_verb(src, /client/proc/show_verbs)
+	remove_verb(src, /client/proc/show_verbs) //CHOMPEdit
 	add_admin_verbs()
 
 	to_chat(src, "<span class='filter_adminlog interface'>All of your adminverbs are now visible.</span>")
@@ -32,7 +32,7 @@
 
 
 /client/proc/admin_ghost()
-	set category = "Admin.Game"
+	set category = "Admin.Game" //CHOMPEdit
 	set name = "Aghost"
 	if(!holder)	return
 
@@ -76,7 +76,7 @@
 			ghost = body.ghostize(1)
 			ghost.admin_ghosted = 1
 			log_and_message_admins("[key_name(src)] admin-ghosted.") // CHOMPEdit - Add logging.
-		init_verbs()
+		init_verbs() //CHOMPEdit
 		if(body)
 			body.teleop = ghost
 			if(!body.key)
