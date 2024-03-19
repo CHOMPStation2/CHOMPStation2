@@ -60,7 +60,7 @@
 	LAZYADD(HUD.other_important, screen_icon)
 	user.client?.screen += screen_icon
 
-	user.verbs |= /mob/living/carbon/human/proc/nif_menu
+	add_verb(user, /mob/living/carbon/human/proc/nif_menu) //ChompEDIT
 
 /datum/component/nif_menu/proc/nif_menu_click(source, location, control, params, user)
 	var/mob/living/carbon/human/H = user
