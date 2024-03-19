@@ -78,7 +78,7 @@
 	if(current)					//remove ourself from our old body's mind variable
 		if(changeling)
 			current.remove_changeling_powers()
-			current.verbs -= /datum/changeling/proc/EvolutionMenu
+			remove_verb(current,/datum/changeling/proc/EvolutionMenu)  //CHOMPEdit
 		current.mind = null
 
 	if(new_character.mind)		//remove any mind currently in our new body's mind variable
@@ -509,7 +509,7 @@
 	if(!mind.name)	mind.name = real_name
 	mind.current = src
 	if(player_is_antag(mind))
-		src.client.verbs += /client/proc/aooc
+		add_verb(src.client,/client/proc/aooc) //CHOMPEdit
 
 //HUMAN
 /mob/living/carbon/human/mind_initialize()

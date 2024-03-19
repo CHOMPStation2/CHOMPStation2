@@ -180,7 +180,7 @@
 		comp.transformed = FALSE
 	else
 		if (was_rayed)
-			gargoyle.verbs -= /mob/living/carbon/human/proc/gargoyle_transformation
+			remove_verb(gargoyle,/mob/living/carbon/human/proc/gargoyle_transformation)  //CHOMPEdit
 	if (gargoyle.loc == src)
 		gargoyle.forceMove(loc)
 		gargoyle.transform = transform

@@ -331,10 +331,10 @@
 
 			controlling = 1
 
-			host.verbs += /mob/living/carbon/proc/release_control
-			host.verbs += /mob/living/carbon/proc/punish_host
+			add_verb(host,/mob/living/carbon/proc/release_control)  //CHOMPEdit
+			add_verb(host,/mob/living/carbon/proc/punish_host)  //CHOMPEdit
 			if(antag)
-				host.verbs += /mob/living/carbon/proc/spawn_larvae
+				add_verb(host,/mob/living/carbon/proc/spawn_larvae)  //CHOMPEdit
 
 			return
 

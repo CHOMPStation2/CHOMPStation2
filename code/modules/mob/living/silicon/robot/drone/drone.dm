@@ -399,7 +399,7 @@ var/list/mob_hat_cache = list()
 	src.verbs |= silicon_subsystems
 
 /mob/living/silicon/robot/drone/remove_robot_verbs()
-	src.verbs -= silicon_subsystems
+	remove_verb(src,silicon_subsystems)  //CHOMPEdit
 
 /mob/living/silicon/robot/drone/construction/welcome_drone()
 	to_chat(src, "<b>You are a construction drone, an autonomous engineering and fabrication system.</b>.")

@@ -840,7 +840,7 @@
 		return
 
 	if(!(mMorph in mutations))
-		src.verbs -= /mob/living/carbon/human/proc/morph
+		remove_verb(src,/mob/living/carbon/human/proc/morph)  //CHOMPEdit
 		return
 
 	var/new_facial = input(usr, "Please select facial hair color.", "Character Generation",rgb(r_facial,g_facial,b_facial)) as color
@@ -915,7 +915,7 @@
 		return
 
 	if(!(mRemotetalk in src.mutations))
-		src.verbs -= /mob/living/carbon/human/proc/remotesay
+		remove_verb(src,/mob/living/carbon/human/proc/remotesay)  //CHOMPEdit
 		return
 	var/list/creatures = list()
 	for(var/mob/living/carbon/h in mob_list)
@@ -946,7 +946,7 @@
 	if(!(mRemote in src.mutations))
 		remoteview_target = null
 		reset_view(0)
-		src.verbs -= /mob/living/carbon/human/proc/remoteobserve
+		remove_verb(src,/mob/living/carbon/human/proc/remoteobserve)  //CHOMPEdit
 		return
 
 	if(client.eye != client.mob)

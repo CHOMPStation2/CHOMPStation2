@@ -52,8 +52,8 @@
 /datum/nifsoft/soulcatcher/uninstall()
 	QDEL_LIST_NULL(brainmobs)
 	if((. = ..()) && nif?.human) //Sometimes NIFs are deleted outside of a human
-		nif.human.verbs -= /mob/proc/nsay
-		nif.human.verbs -= /mob/proc/nme
+		remove_verb(nif.human,/mob/proc/nsay)  //CHOMPEdit
+		remove_verb(nif.human,/mob/proc/nme)  //CHOMPEdit
 
 /datum/nifsoft/soulcatcher/proc/save_settings()
 	if(!nif)

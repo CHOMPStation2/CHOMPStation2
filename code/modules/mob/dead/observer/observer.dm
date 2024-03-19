@@ -208,7 +208,7 @@ Works together with spawning an observer, noted above.
 		if(ghost.client)
 			ghost.client.time_died_as_mouse = ghost.timeofdeath
 		if(ghost.client && !ghost.client.holder && !config.antag_hud_allowed)		// For new ghosts we remove the verb from even showing up if it's not allowed.
-			ghost.verbs -= /mob/observer/dead/verb/toggle_antagHUD	// Poor guys, don't know what they are missing!
+			remove_verb(ghost,/mob/observer/dead/verb/toggle_antagHUD	) // Poor guys, don't know what they are missing! //CHOMPEdit
 		return ghost
 
 /*

@@ -288,7 +288,7 @@
 		H.ability_master = new /obj/screen/movable/ability_master/shadekin(H)
 	for(var/datum/power/shadekin/P in shadekin_ability_datums)
 		if(!(P.verbpath in H.verbs))
-			H.verbs += P.verbpath
+			add_verb(H,P.verbpath)  //CHOMPEdit
 			H.ability_master.add_shadekin_ability(
 					object_given = H,
 					verb_given = P.verbpath,
@@ -296,9 +296,9 @@
 					ability_icon_given = P.ability_icon_state,
 					arguments = list()
 					)
-	H.verbs += /mob/living/carbon/human/proc/phase_strength_toggle //CHOMPEdit - Add gentle phasing
-	H.verbs += /mob/living/carbon/human/proc/nutrition_conversion_toggle //CHOMPEdit - Add nutrition conversion toggle
-	H.verbs += /mob/living/carbon/human/proc/clear_dark_maws //CHOMPEdit - Add Dark maw clearing
+	add_verb(H,/mob/living/carbon/human/proc/phase_strength_toggle ) //CHOMPEdit - Add gentle phasing //CHOMPEdit
+	add_verb(H,/mob/living/carbon/human/proc/nutrition_conversion_toggle ) //CHOMPEdit - Add nutrition conversion toggle //CHOMPEdit
+	add_verb(H,/mob/living/carbon/human/proc/clear_dark_maws ) //CHOMPEdit - Add Dark maw clearing //CHOMPEdit
 
 /datum/species/shadekin/proc/handle_shade(var/mob/living/carbon/human/H)
 	//CHOMPEdit begin - No energy during dark respite

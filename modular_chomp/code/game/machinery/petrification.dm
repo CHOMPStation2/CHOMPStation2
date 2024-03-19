@@ -129,9 +129,9 @@
 		statue.verbs |= /mob/living/carbon/human/proc/gargoyle_transformation
 		comp?.cooldown = 0
 	else
-		statue.verbs -= /mob/living/carbon/human/proc/gargoyle_transformation
-		statue.verbs -= /mob/living/carbon/human/proc/gargoyle_pause
-		statue.verbs -= /mob/living/carbon/human/proc/gargoyle_checkenergy
+		remove_verb(statue,/mob/living/carbon/human/proc/gargoyle_transformation)  //CHOMPEdit
+		remove_verb(statue,/mob/living/carbon/human/proc/gargoyle_pause)  //CHOMPEdit
+		remove_verb(statue,/mob/living/carbon/human/proc/gargoyle_checkenergy)  //CHOMPEdit
 		comp?.cooldown = INFINITY
 
 	if (!petrifier)

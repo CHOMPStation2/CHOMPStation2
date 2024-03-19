@@ -153,7 +153,7 @@
 	///////////////////
 
 	// Handle Pred
-	pred_body.verbs -= /mob/proc/release_predator
+	remove_verb(pred_body,/mob/proc/release_predator)  //CHOMPEdit
 
 	//Now actually put the people in the mobs
 	prey_goes_here.ckey = src.prey_ckey

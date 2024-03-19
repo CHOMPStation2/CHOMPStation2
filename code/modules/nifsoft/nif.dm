@@ -169,7 +169,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	stat = NIF_PREINSTALL
 	vis_update()
 	if(H)
-		H.verbs -= /mob/living/carbon/human/proc/set_nif_examine
+		remove_verb(H,/mob/living/carbon/human/proc/set_nif_examine)  //CHOMPEdit
 		H.nif = null
 	qdel_null(menu)
 	human = null

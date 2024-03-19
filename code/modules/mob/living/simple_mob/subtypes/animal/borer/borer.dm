@@ -124,9 +124,9 @@
 	controlling = FALSE
 
 	host.remove_language("Cortical Link")
-	host.verbs -= /mob/living/carbon/proc/release_control
-	host.verbs -= /mob/living/carbon/proc/punish_host
-	host.verbs -= /mob/living/carbon/proc/spawn_larvae
+	remove_verb(host,/mob/living/carbon/proc/release_control)  //CHOMPEdit
+	remove_verb(host,/mob/living/carbon/proc/punish_host)  //CHOMPEdit
+	remove_verb(host,/mob/living/carbon/proc/spawn_larvae)  //CHOMPEdit
 
 	if(host_brain)
 		// these are here so bans and multikey warnings are not triggered on the wrong people when ckey is changed.

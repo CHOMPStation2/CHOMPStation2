@@ -122,7 +122,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 /mob/living/silicon/robot/proc/revert_shell()
 	if(!shell)
 		return
-	src.verbs -= /mob/living/silicon/robot/proc/transfer_shell_act //CHOMPEDIT: remove sideloader
+	remove_verb(src,/mob/living/silicon/robot/proc/transfer_shell_act ) //CHOMPEDIT: remove sideloader //CHOMPEdit
 	undeploy()
 	shell = FALSE
 	GLOB.available_ai_shells -= src

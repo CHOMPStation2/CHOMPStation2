@@ -61,7 +61,7 @@ What Borgs are available is sadly handled in the above file in the proc
 	src.modules += new /obj/item/device/dogborg/sleeper/compactor/brewer(src)
 	src.modules += new /obj/item/weapon/reagent_containers/glass/beaker(src)//For holding the ALCOHOL
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src)
-	R.verbs += /mob/living/silicon/robot/proc/reskin_booze
+	add_verb(R,/mob/living/silicon/robot/proc/reskin_booze)  //CHOMPEdit
 
 	var/obj/item/weapon/rsf/M = new /obj/item/weapon/rsf(src)
 	M.stored_matter = 30

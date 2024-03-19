@@ -102,8 +102,8 @@ var/list/ai_verbs_default = list(
 	src.verbs |= silicon_subsystems
 
 /mob/living/silicon/ai/proc/remove_ai_verbs()
-	src.verbs -= ai_verbs_default
-	src.verbs -= silicon_subsystems
+	remove_verb(src,ai_verbs_default)  //CHOMPEdit
+	remove_verb(src,silicon_subsystems)  //CHOMPEdit
 
 /mob/living/silicon/ai/New(loc, var/datum/ai_laws/L, var/obj/item/device/mmi/B, var/safety = 0)
 	announcement = new()

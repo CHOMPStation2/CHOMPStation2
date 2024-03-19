@@ -1210,7 +1210,7 @@
 	if(R)
 		R.UnlinkSelf()
 		to_chat(R, "<span class='filter_notice'>Buffers flushed and reset. Camera system shutdown. All systems operational.</span>")
-		src.verbs -= /mob/living/silicon/robot/proc/ResetSecurityCodes
+		remove_verb(src,/mob/living/silicon/robot/proc/ResetSecurityCodes)  //CHOMPEdit
 
 /mob/living/silicon/robot/proc/SetLockdown(var/state = 1)
 	// They stay locked down if their wire is cut.
@@ -1332,10 +1332,10 @@
 		src.verbs |= /mob/living/silicon/robot/proc/ColorMate
 
 /mob/living/silicon/robot/proc/remove_robot_verbs()
-	src.verbs -= robot_verbs_default
-	src.verbs -= silicon_subsystems
+	remove_verb(src,robot_verbs_default)  //CHOMPEdit
+	remove_verb(src,silicon_subsystems)  //CHOMPEdit
 	if(config.allow_robot_recolor)
-		src.verbs -= /mob/living/silicon/robot/proc/ColorMate //ChompEDIT - probable copypaste error
+		remove_verb(src,/mob/living/silicon/robot/proc/ColorMate ) //ChompEDIT - probable copypaste error //CHOMPEdit
 
 // Uses power from cyborg's cell. Returns 1 on success or 0 on failure.
 // Properly converts using CELLRATE now! Amount is in Joules.

@@ -432,8 +432,8 @@
 		new_hat.forceMove(src)
 
 	blob.update_icon()
-	blob.verbs -= /mob/living/proc/ventcrawl // Absolutely not.
-	blob.verbs -= /mob/living/simple_mob/proc/set_name // We already have a name.
+	remove_verb(blob,/mob/living/proc/ventcrawl ) // Absolutely not. //CHOMPEdit
+	remove_verb(blob,/mob/living/simple_mob/proc/set_name ) // We already have a name. //CHOMPEdit
 	temporary_form = blob
 
 //ChompAdd begins  Handles the ID and Radio, giving the blobform each of them.

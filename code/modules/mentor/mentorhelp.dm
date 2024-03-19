@@ -444,9 +444,9 @@ GLOBAL_DATUM_INIT(mhelp_tickets, /datum/mentor_help_tickets, new)
 		"Send to discord?", list("Admin-help!", "Still mentorhelp!", "Cancel"))
 		if(choice == "Admin-help!")
 			usr.client.adminhelp(msg)
-			src.verbs -= /client/verb/mentorhelp
+			remove_verb(src,/client/verb/mentorhelp)  //CHOMPEdit
 			spawn(1200)
-				src.verbs += /client/verb/mentorhelp // 2 minute cd to prevent abusing this to spam admins.
+				add_verb(src,/client/verb/mentorhelp ) // 2 minute cd to prevent abusing this to spam admins. //CHOMPEdit
 			return
 		else if(choice == "Cancel")
 			return
