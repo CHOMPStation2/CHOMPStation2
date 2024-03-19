@@ -654,7 +654,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	//remove out adminhelp verb temporarily to prevent spamming of admins.
 	remove_verb(src, /client/verb/adminhelp) //CHOMPEdit
 	spawn(1200)
-		add_verb(src, /client/verb/adminhelp)	// 2 minute cool-down for adminhelps
+		add_verb(src, /client/verb/adminhelp) //CHOMPEdit	// 2 minute cool-down for adminhelps
 
 	feedback_add_details("admin_verb","Adminhelp") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	if(current_ticket)

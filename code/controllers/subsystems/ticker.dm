@@ -41,7 +41,7 @@ SUBSYSTEM_DEF(ticker)
 	//Now we have a general cinematic centrally held within the gameticker....far more efficient!
 	var/obj/screen/cinematic = null
 
-	var/round_start_time = 0
+	var/round_start_time = 0 //CHOMPEdit
 
 // This global variable exists for legacy support so we don't have to rename every 'ticker' to 'SSticker' yet.
 var/global/datum/controller/subsystem/ticker/ticker

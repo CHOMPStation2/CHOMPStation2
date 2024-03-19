@@ -48,14 +48,14 @@
 	)
 /mob/living/simple_mob/slime/promethean/Initialize(mapload, null)
 	//verbs -= /mob/living/proc/ventcrawl
-	add_verb(src, /mob/living/simple_mob/slime/promethean/proc/prommie_blobform)
-	add_verb(src, /mob/living/proc/set_size)
-	add_verb(src, /mob/living/proc/hide)
-	add_verb(src, /mob/living/simple_mob/proc/animal_nom)
-	add_verb(src, /mob/living/proc/shred_limb)
-	add_verb(src, /mob/living/simple_mob/slime/promethean/proc/toggle_expand)
-	add_verb(src, /mob/living/simple_mob/slime/promethean/proc/prommie_select_colour)
-	add_verb(src, /mob/living/simple_mob/slime/promethean/proc/toggle_shine)
+	add_verb(src, /mob/living/simple_mob/slime/promethean/proc/prommie_blobform) //CHOMPEdit
+	add_verb(src, /mob/living/proc/set_size) //CHOMPEdit
+	add_verb(src, /mob/living/proc/hide) //CHOMPEdit
+	add_verb(src, /mob/living/simple_mob/proc/animal_nom) //CHOMPEdit
+	add_verb(src, /mob/living/proc/shred_limb) //CHOMPEdit
+	add_verb(src, /mob/living/simple_mob/slime/promethean/proc/toggle_expand) //CHOMPEdit
+	add_verb(src, /mob/living/simple_mob/slime/promethean/proc/prommie_select_colour) //CHOMPEdit
+	add_verb(src, /mob/living/simple_mob/slime/promethean/proc/toggle_shine) //CHOMPEdit
 	update_mood()
 	if(rad_glow)
 		rad_glow = CLAMP(rad_glow,0,250)

@@ -515,14 +515,14 @@ var/list/admin_verbs_event_manager = list(
 
 /client/proc/add_admin_verbs()
 	if(holder)
-		add_verb(src, admin_verbs_default)
-		if(holder.rights & R_BUILDMODE)		add_verb(src, /client/proc/togglebuildmodeself)
-		if(holder.rights & R_ADMIN)			add_verb(src, admin_verbs_admin)
-		if(holder.rights & R_BAN)			add_verb(src, admin_verbs_ban)
-		if(holder.rights & R_FUN)			add_verb(src, admin_verbs_fun)
-		if(holder.rights & R_SERVER)		add_verb(src, admin_verbs_server)
+		add_verb(src, admin_verbs_default) //CHOMPEdit
+		if(holder.rights & R_BUILDMODE)		add_verb(src, /client/proc/togglebuildmodeself) //CHOMPEdit
+		if(holder.rights & R_ADMIN)			add_verb(src, admin_verbs_admin) //CHOMPEdit
+		if(holder.rights & R_BAN)			add_verb(src, admin_verbs_ban) //CHOMPEdit
+		if(holder.rights & R_FUN)			add_verb(src, admin_verbs_fun) //CHOMPEdit
+		if(holder.rights & R_SERVER)		add_verb(src, admin_verbs_server) //CHOMPEdit
 		if(holder.rights & R_DEBUG)
-			add_verb(src, admin_verbs_debug)
+			add_verb(src, admin_verbs_debug) //CHOMPEdit
 			if(config.debugparanoid && !(holder.rights & R_ADMIN))
 				remove_verb(src, admin_verbs_paranoid_debug) //CHOMPEdit			//Right now it's just callproc but we can easily add others later on.
 		if(holder.rights & R_POSSESS)		add_verb(src, admin_verbs_possess) //CHOMPEdit

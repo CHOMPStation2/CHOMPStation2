@@ -93,8 +93,8 @@
 	if(active)
 		new_character.key = key		//now transfer the key to link the client to our new body
 
-	if(new_character.client)
-		new_character.client.init_verbs() // re-initialize character specific verbs
+	if(new_character.client) //CHOMPEdit
+		new_character.client.init_verbs() // re-initialize character specific verbs //CHOMPEdit
 
 /datum/mind/proc/store_memory(new_text)
 	memory += "[new_text]<BR>"

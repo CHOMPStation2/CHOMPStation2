@@ -20,7 +20,7 @@
 
 /datum/dna/gene/basic/remoteview/activate(var/mob/M, var/connected, var/flags)
 	..(M,connected,flags)
-	add_verb(M, /mob/living/carbon/human/proc/remoteobserve)
+	add_verb(M, /mob/living/carbon/human/proc/remoteobserve) //CHOMPEdit
 
 /datum/dna/gene/basic/regenerate
 	name="Regenerate"
@@ -48,7 +48,7 @@
 
 /datum/dna/gene/basic/remotetalk/activate(var/mob/M, var/connected, var/flags)
 	..(M,connected,flags)
-	add_verb(M, /mob/living/carbon/human/proc/remotesay)
+	add_verb(M, /mob/living/carbon/human/proc/remotesay) //CHOMPEdit
 
 /datum/dna/gene/basic/morph
 	name="Morph"
@@ -60,7 +60,7 @@
 
 /datum/dna/gene/basic/morph/activate(var/mob/M)
 	..(M)
-	add_verb(M, /mob/living/carbon/human/proc/morph)
+	add_verb(M, /mob/living/carbon/human/proc/morph) //CHOMPEdit
 
 /datum/dna/gene/basic/cold_resist
 	name="Cold Resistance"

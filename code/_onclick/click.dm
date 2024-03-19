@@ -286,8 +286,10 @@
 /atom/proc/AltClick(var/mob/user)
 	var/turf/T = get_turf(src)
 	if(T && user.TurfAdjacent(T))
-		user.set_listed_turf(T)
+		user.set_listed_turf(T) //CHOMPEdit
 	return 1
+
+//CHOMP Removal
 
 /mob/proc/TurfAdjacent(var/turf/T)
 	return T.AdjacentQuick(src)

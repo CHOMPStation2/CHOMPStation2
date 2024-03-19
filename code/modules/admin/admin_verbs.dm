@@ -14,7 +14,7 @@
 	set category = "Admin"
 
 	remove_admin_verbs()
-	add_verb(src, /client/proc/show_verbs)
+	add_verb(src, /client/proc/show_verbs) //CHOMPEdit
 
 	to_chat(src, "<span class='filter_system interface'>Almost all of your adminverbs have been hidden.</span>")
 	feedback_add_details("admin_verb","TAVVH") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
