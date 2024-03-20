@@ -12,6 +12,8 @@ generic_filth = TRUE means when the decal is saved, it will be switched out for 
 	var/generic_filth = FALSE
 	var/age = 0
 	var/list/random_icon_states = list()
+	var/list/datum/disease2/disease/virus2 = list() // CHOMPEdit - Viruses for all decals!
+	var/sampled = FALSE // CHOMPEdit - For stuff with viruses, only one sample
 
 /obj/effect/decal/cleanable/Initialize(var/mapload, var/_age)
 	if(!isnull(_age))

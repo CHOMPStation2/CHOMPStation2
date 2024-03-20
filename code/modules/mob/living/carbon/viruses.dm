@@ -9,6 +9,7 @@
 
 	if(life_tick % 3) //don't spam checks over all objects in view every tick.
 		for(var/obj/effect/decal/cleanable/O in view(1,src))
+		/* CHOMPEdit Start - Less repeating code, more viruses
 			if(istype(O,/obj/effect/decal/cleanable/blood))
 				var/obj/effect/decal/cleanable/blood/B = O
 				if(B.virus2.len)
@@ -29,7 +30,11 @@
 					for (var/ID in Vom.virus2)
 					//	var/datum/disease2/disease/V = Vom.virus2[ID]
 						infect_virus2(src,ID) // CHOMPEdit: Fixes virus not spreading
-
+		*/
+			if(O.virus2.len)
+				for(var/ID in O.virus2)
+					infect_virus2(src,ID)
+		// CHOMPEdit End
 	if(virus2.len)
 		for (var/ID in virus2)
 			var/datum/disease2/disease/V = virus2[ID]
