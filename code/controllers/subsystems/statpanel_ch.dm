@@ -13,6 +13,8 @@ SUBSYSTEM_DEF(statpanels)
 
 	///how many subsystem fires between most tab updates
 	var/default_wait = 10
+	///how many subsystem fires between updates of misc tabs
+	var/misc_wait = 7
 	///how many subsystem fires between updates of the status tab
 	var/status_wait = 6
 	///how many subsystem fires between updates of the MC tab
@@ -97,26 +99,9 @@ SUBSYSTEM_DEF(statpanels)
 			if(update_actions && num_fires % default_wait == 0)
 				set_action_tabs(target, target_mob)
 
-			target_mob.update_misc_tabs()
-			for(var/tab in target_mob.misc_tabs)
-				if(target_mob.misc_tabs[tab].len == 0 && (tab in target.misc_tabs))
-					target.misc_tabs -= tab
-					target.stat_panel.send_message("remove_misc",tab)
-
-				if(target_mob.misc_tabs[tab].len > 0)
-					if(!(tab in target.misc_tabs))
-						target.misc_tabs += tab
-						target.stat_panel.send_message("create_misc",tab)
-					target.stat_panel.send_message("update_misc",list(
-						TN = tab, \
-						TC = target_mob.misc_tabs[tab], \
-					))
-
-			for(var/tab in target.misc_tabs)
-				if(!(tab in target_mob.misc_tabs))
-					target.misc_tabs -= tab
-					target.stat_panel.send_message("remove_misc",tab)
-
+			//Update every fire if tab is open, otherwise update every 7 fires
+			if((target.stat_tab in target.misc_tabs) || (num_fires % misc_wait == 0))
+				update_misc_tabs(target,target_mob)
 			// Handle the examined turf of the stat panel
 
 			if(target_mob?.listed_turf && num_fires % default_wait == 0)
@@ -129,6 +114,27 @@ SUBSYSTEM_DEF(statpanels)
 
 		if(MC_TICK_CHECK)
 			return
+
+/datum/controller/subsystem/statpanels/proc/update_misc_tabs(var/client/target,var/mob/target_mob)
+	target_mob.update_misc_tabs()
+	for(var/tab in target_mob.misc_tabs)
+		if(target_mob.misc_tabs[tab].len == 0 && (tab in target.misc_tabs))
+			target.misc_tabs -= tab
+			target.stat_panel.send_message("remove_misc",tab)
+
+		if(target_mob.misc_tabs[tab].len > 0)
+			if(!(tab in target.misc_tabs))
+				target.misc_tabs += tab
+				target.stat_panel.send_message("create_misc",tab)
+			target.stat_panel.send_message("update_misc",list(
+				TN = tab, \
+				TC = target_mob.misc_tabs[tab], \
+			))
+
+	for(var/tab in target.misc_tabs)
+		if(!(tab in target_mob.misc_tabs))
+			target.misc_tabs -= tab
+			target.stat_panel.send_message("remove_misc",tab)
 
 /datum/controller/subsystem/statpanels/proc/set_status_tab(client/target)
 	if(!global_data)//statbrowser hasnt fired yet and we were called from immediate_send_stat_data()
@@ -377,7 +383,9 @@ SUBSYSTEM_DEF(statpanels)
 
 		var/generated_string
 		if(ismob(thing) || length(thing.overlays) > 2)
-			generated_string = costly_icon2html(thing, parent, sourceonly=TRUE)
+			var/force_south = TRUE
+			if(isturf(thing)) force_south = FALSE
+			generated_string = costly_icon2html(thing, parent, sourceonly=TRUE, force_south = force_south)
 		else
 			generated_string = icon2html(thing, parent, sourceonly=TRUE)
 
