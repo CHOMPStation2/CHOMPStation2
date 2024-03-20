@@ -209,7 +209,6 @@
 	cell_type = /obj/item/weapon/cell/hyper;
 	dir = 8;
 	name = "Unknown APC";
-	operating = 0;
 	pixel_x = -24
 	},
 /obj/structure/cable{
@@ -852,7 +851,7 @@ Wc
 fl
 IV
 bk
-mo
+ce
 xU
 xU
 xU

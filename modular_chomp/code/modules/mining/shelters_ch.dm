@@ -10,7 +10,7 @@
 
 /datum/map_template/shelter/superpose/CrashedInfestedShip
 	shelter_id = "CrashedInfestedShip"
-	mappath = "modular_chomp/maps/submaps/shelters/CrashedInfestedShip-60x29.dmm"
+	mappath = "modular_chomp/maps/submaps/shelters/CrashedInfestedShip-56x25.dmm"
 	name = "Crashed infested ship."
 	description = "A large alien ship that is heavily damaged, there is signs of xeno infestation."
 
@@ -94,7 +94,7 @@
 
 /datum/map_template/shelter/superpose/MercShip
 	shelter_id = "MercShip"
-	mappath = "modular_chomp/maps/submaps/shelters/MercShip-60x29.dmm"
+	mappath = "modular_chomp/maps/submaps/shelters/MercShip-57x25.dmm"
 	name = "Mercenary ship."
 	description = "A old mercenery ship filled with various trading goods."
 

@@ -607,6 +607,7 @@
 /area/survivalpod/superpose/ExplorerHome)
 "Dg" = (
 /obj/machinery/power/smes/batteryrack/mapped,
+/obj/structure/cable/green,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/ExplorerHome)
 "GN" = (
