@@ -278,12 +278,17 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/SurvivalDIY_9x9)
 "I" = (
-/obj/structure/closet/secure_closet/engineering_electrical,
+/obj/structure/closet/secure_closet/engineering_electrical{
+	locked = 0
+	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/SurvivalDIY_9x9)
 "M" = (
 /obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalDIY_9x9)
+"N" = (
+/turf/simulated/wall,
 /area/survivalpod/superpose/SurvivalDIY_9x9)
 "Q" = (
 /obj/structure/reagent_dispensers/watertank,
@@ -297,6 +302,15 @@
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/SurvivalDIY_9x9)
+"X" = (
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 8;
+	pixel_y = 0;
+	pixel_x = -24;
+	req_access = null
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalDIY_9x9)
 
 (1,1,1) = {"
 h
@@ -306,7 +320,7 @@ h
 h
 h
 h
-h
+N
 h
 "}
 (2,1,1) = {"
@@ -317,7 +331,7 @@ F
 u
 u
 u
-u
+X
 h
 "}
 (3,1,1) = {"

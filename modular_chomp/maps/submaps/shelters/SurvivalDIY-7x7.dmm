@@ -125,12 +125,27 @@
 /obj/item/areaeditor/blueprints/engineers,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/SurvivalDIY_7x7)
+"e" = (
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 8;
+	pixel_y = 0;
+	pixel_x = -24;
+	req_access = null
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalDIY_7x7)
 "g" = (
 /obj/structure/inflatable/door,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/SurvivalDIY_7x7)
 "h" = (
 /obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalDIY_7x7)
+"k" = (
+/obj/structure/closet/secure_closet/engineering_electrical{
+	locked = 0
+	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/SurvivalDIY_7x7)
 "q" = (
@@ -283,13 +298,16 @@
 /obj/item/device/mapping_unit,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/SurvivalDIY_7x7)
+"X" = (
+/turf/simulated/wall,
+/area/survivalpod/superpose/SurvivalDIY_7x7)
 
 (1,1,1) = {"
 A
 A
 A
 A
-A
+X
 A
 A
 "}
@@ -298,7 +316,7 @@ A
 T
 G
 d
-G
+e
 a
 A
 "}
@@ -313,7 +331,7 @@ A
 "}
 (4,1,1) = {"
 A
-G
+k
 G
 w
 C
