@@ -580,35 +580,39 @@ function draw_tickets() {
 function draw_misc(tab) {
 	statcontentdiv.textContent = "";
 	var table = document.createElement("table");
+	table.className = "elemcontainer";
 	let data = misc.get(tab);
 	if (!data) {
 		return;
 	}
 	for (var i = 0; i < data.length; i++) {
+		var tr = document.createElement("tr");
 		var part = data[i];
-		var container = document.createElement("div")
-		container.className = "elemcontainer"
+
+		var td1 = document.createElement("td");
+		if(part[0]) {
+			td1.className = "elem";
+			td1.textContent = part[0];
+		}
+
+		var td2 = null;
 		if (part[1] && storedimages[part[1]] == null && part[2]) {
+			td2 = document.createElement("td");
 			var img = document.createElement("img");
 			img.src = part[2];
 			img.id = part[1];
 			storedimages[part[1]] = part[2];
 			img.onerror = iconError;
-			container.appendChild(img);
+			td2.appendChild(img);
 		} else if(part[1]) {
+			td2 = document.createElement("td");
 			var img = document.createElement("img");
 			img.onerror = iconError;
 			img.src = storedimages[part[1]];
 			img.id = part[1];
-			container.appendChild(img);
+			td2.appendChild(img);
 		}
-
-		if(part[0]) {
-			var text = document.createElement("div");
-			text.className = "elem";
-			text.textContent = part[0];
-			container.appendChild(text);
-		}
+		var td3 = null;
 		var b = document.createElement("div");
 		var clickcatcher = "";
 		if (part[4]) {
@@ -643,11 +647,28 @@ function draw_misc(tab) {
 			}(part);
 		}
 		if(part[3]) {
+			td3 = document.createElement("td");
 			b.textContent = part[3];
-			container.appendChild(b);
+			td3.appendChild(b);
 		}
-		table.appendChild(container);
-		table.appendChild(document.createElement("br"));
+		if(!td2 && !td3) {
+			td1.className = "elem_span3"
+			td1.colSpan += 2;
+		}
+		else if (!td2) {
+			td1.className = "elem_span2"
+			td1.colSpan += 1;
+		} else if (!td3) {
+			td2.colSpan += 1;
+		}
+		tr.appendChild(td1);
+		if(td2) {
+			tr.appendChild(td2);
+		}
+		if(td3) {
+			tr.appendChild(td3);
+		}
+		table.appendChild(tr);
 	}
 	document.getElementById("statcontent").appendChild(table);
 }
