@@ -5,7 +5,7 @@
 	This means that this file can be unchecked, along with the other examine files, and can be removed entirely with no effort.
 */
 
-#define EXAMINE_PANEL_PADDING "               "
+// #define EXAMINE_PANEL_PADDING "               " //CHOMPRemove
 
 /atom/
 	var/description_info = null //Helpful blue text.
@@ -34,7 +34,7 @@
 
 // Quickly adds the boilerplate code to add an image and padding for the image.
 /proc/desc_panel_image(var/icon_state)
-	return "[icon2html(description_icons[icon_state],usr)][EXAMINE_PANEL_PADDING]" //CHOMPEdit
+	return "[icon2html(description_icons[icon_state],usr)]&emsp;&emsp;" //CHOMPEdit
 
 /mob/living/get_description_fluff()
 	if(flavor_text) //Get flavor text for the green text.
