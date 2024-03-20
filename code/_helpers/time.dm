@@ -52,17 +52,19 @@ var/next_station_date_change = 1 DAY
 	var/time_portion = time2text(world.timeofday, "hh:mm:ss")
 	return "[date_portion]T[time_portion]"
 
+/* //ChompREMOVE
 /proc/get_timezone_offset()
 	var/midnight_gmt_here = text2num(time2text(0,"hh")) * 36000
 	if(midnight_gmt_here > 12 HOURS)
 		return 24 HOURS - midnight_gmt_here
 	else
 		return midnight_gmt_here
+*/ //ChompREMOVE END
 
 /proc/gameTimestamp(format = "hh:mm:ss", wtime=null)
 	if(!wtime)
 		wtime = world.time
-	return time2text(((24 HOURS) + (wtime - GLOB.timezoneOffset)), format)
+	return time2text((wtime + 24 HOURS) - GLOB.timezoneOffset, format)
 
 /* Returns 1 if it is the selected month and day */
 /proc/isDay(var/month, var/day)
