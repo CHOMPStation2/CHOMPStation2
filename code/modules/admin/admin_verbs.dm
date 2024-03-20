@@ -2,7 +2,7 @@
 	set name = "Adminverbs - Hide Most"
 	set category = "Admin"
 
-	remove_verb(src, list(/client/proc/hide_most_verbs) + admin_verbs_hideable) //CHOMPEdit TGPanel
+	remove_verb(src, list(list(/client/proc/hide_most_verbs),admin_verbs_hideable)) //CHOMPEdit TGPanel
 	add_verb(src,/client/proc/show_verbs) //CHOMPEdit TGPanel
 
 	to_chat(src, "<span class='filter_system interface'>Most of your adminverbs have been hidden.</span>")
