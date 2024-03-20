@@ -269,7 +269,7 @@
 		job_master.EquipRank(avatar,"Visitor", 1, FALSE)
 		add_verb(avatar,/mob/living/carbon/human/proc/exit_vr)  //CHOMPEdit
 		add_verb(avatar,/mob/living/carbon/human/proc/vr_transform_into_mob)  //CHOMPEdit
-		avatar.verbs |= /mob/living/proc/set_size // Introducing NeosVR
+		add_verb(avatar,/mob/living/proc/set_size) //CHOMPEdit TGPanel // Introducing NeosVR
 		avatar.virtual_reality_mob = TRUE
 
 		// Prompt for username after they've enterred the body.

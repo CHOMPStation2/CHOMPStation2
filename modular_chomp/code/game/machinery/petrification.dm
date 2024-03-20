@@ -126,7 +126,7 @@
 	G.was_rayed = TRUE
 
 	if (can_unpetrify)
-		statue.verbs |= /mob/living/carbon/human/proc/gargoyle_transformation
+		add_verb(statue,/mob/living/carbon/human/proc/gargoyle_transformation) //CHOMPEdit TGPanel
 		comp?.cooldown = 0
 	else
 		remove_verb(statue,/mob/living/carbon/human/proc/gargoyle_transformation)  //CHOMPEdit

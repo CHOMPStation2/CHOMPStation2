@@ -22,7 +22,7 @@
 
 /mob/new_player/New()
 	mob_list += src
-	verbs |= /mob/proc/insidePanel
+	add_verb(src,/mob/proc/insidePanel) //CHOMPEdit TGPanel
 	initialized = TRUE // Explicitly don't use Initialize().  New players join super early and use New()
 
 

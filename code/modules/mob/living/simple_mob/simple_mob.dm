@@ -179,7 +179,7 @@
 	var/has_recoloured = FALSE
 
 /mob/living/simple_mob/Initialize()
-	verbs -= /mob/verb/observe
+	remove_verb(src,/mob/verb/observe) //CHOMPEdit TGPanel
 	health = maxHealth
 
 	if(ID_provided) //VOREStation Edit
@@ -195,15 +195,15 @@
 		add_eyes()
 
 	if(vore_active)	//CHOMPSTATION edit: Moved here so the verb is useable before initialising vorgans.
-		verbs |= /mob/living/simple_mob/proc/animal_nom
-		verbs |= /mob/living/proc/shred_limb
-	verbs |= /mob/living/simple_mob/proc/nutrition_heal //CHOMPSTATION edit
+		add_verb(src,/mob/living/simple_mob/proc/animal_nom) //CHOMPEdit TGPanel
+		add_verb(src,/mob/living/proc/shred_limb) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/proc/nutrition_heal) //CHOMPEdit TGPanel //CHOMPSTATION edit
 
 	if(organ_names)
 		organ_names = GET_DECL(organ_names)
 
 	if(config.allow_simple_mob_recolor)
-		verbs |= /mob/living/simple_mob/proc/ColorMate
+		add_verb(src,/mob/living/simple_mob/proc/ColorMate) //CHOMPEdit TGPanel
 
 
 	return ..()

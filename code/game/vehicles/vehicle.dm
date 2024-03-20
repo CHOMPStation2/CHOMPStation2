@@ -69,10 +69,10 @@
 
 
 /obj/vehicle/proc/removeVerb(verb_path)
-	verbs -= verb_path
+	remove_verb(src,verb_path) //CHOMPEdit TGPanel
 
 /obj/vehicle/proc/addVerb(verb_path)
-	verbs += verb_path
+	add_verb(src,verb_path) //CHOMPEdit TGPanel
 
 /obj/vehicle/proc/add_cell(var/obj/item/weapon/cell/C=null)
 	if(C)

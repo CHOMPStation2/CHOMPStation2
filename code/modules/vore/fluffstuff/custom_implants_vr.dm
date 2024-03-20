@@ -112,7 +112,7 @@
 /obj/item/weapon/implant/reagent_generator/roiz/post_implant(mob/living/carbon/source)
 	START_PROCESSING(SSobj, src)
 	to_chat(source, "<span class='notice'>You implant [source] with \the [src].</span>")
-	source.verbs |= assigned_proc
+	add_verb(source,assigned_proc) //CHOMPEdit TGPanel
 	return 1
 
 /obj/item/weapon/implanter/reagent_generator/roiz
@@ -181,7 +181,7 @@
 /obj/item/weapon/implant/reagent_generator/jasmine/post_implant(mob/living/carbon/source)
 	START_PROCESSING(SSobj, src)
 	to_chat(source, "<span class='notice'>You implant [source] with \the [src].</span>")
-	source.verbs |= assigned_proc
+	add_verb(source,assigned_proc) //CHOMPEdit TGPanel
 	return 1
 
 /obj/item/weapon/implanter/reagent_generator/jasmine
@@ -250,7 +250,7 @@
 /obj/item/weapon/implant/reagent_generator/yonra/post_implant(mob/living/carbon/source)
 	START_PROCESSING(SSobj, src)
 	to_chat(source, "<span class='notice'>You implant [source] with \the [src].</span>")
-	source.verbs |= assigned_proc
+	add_verb(source,assigned_proc) //CHOMPEdit TGPanel
 	return 1
 
 /obj/item/weapon/implanter/reagent_generator/yonra
@@ -335,7 +335,7 @@
 /obj/item/weapon/implant/reagent_generator/rischi/post_implant(mob/living/carbon/source)
 	START_PROCESSING(SSobj, src)
 	to_chat(source, "<span class='notice'>You implant [source] with \the [src].</span>")
-	source.verbs |= assigned_proc
+	add_verb(source,assigned_proc) //CHOMPEdit TGPanel
 	return 1
 
 /obj/item/weapon/implanter/reagent_generator/rischi
@@ -486,7 +486,7 @@
 /obj/item/weapon/implant/reagent_generator/evian/post_implant(mob/living/carbon/source)
 	START_PROCESSING(SSobj, src)
 	to_chat(source, "<span class='notice'>You implant [source] with \the [src].</span>")
-	source.verbs |= assigned_proc
+	add_verb(source,assigned_proc) //CHOMPEdit TGPanel
 	return 1
 
 /obj/item/weapon/implanter/reagent_generator/evian

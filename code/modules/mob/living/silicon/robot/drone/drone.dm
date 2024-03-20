@@ -104,8 +104,8 @@ var/list/mob_hat_cache = list()
 
 /mob/living/silicon/robot/drone/New()
 	..()
-	verbs += /mob/living/proc/ventcrawl
-	verbs += /mob/living/proc/hide
+	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
 	remove_language("Robot Talk")
 	add_language("Robot Talk", 0)
 	add_language("Drone Talk", 1)
@@ -123,7 +123,7 @@ var/list/mob_hat_cache = list()
 		var/datum/robot_component/C = components[V]
 		C.max_damage = 10
 
-	verbs -= /mob/living/silicon/robot/verb/namepick
+	remove_verb(src,/mob/living/silicon/robot/verb/namepick) //CHOMPEdit TGPanel
 
 	if(can_pick_shell)
 		var/random = pick(shell_types)
@@ -396,7 +396,7 @@ var/list/mob_hat_cache = list()
 	to_chat(src, "Use <b>say ;Hello</b> to talk to other drones and <b>say Hello</b> to speak silently to your nearby fellows.")
 
 /mob/living/silicon/robot/drone/add_robot_verbs()
-	src.verbs |= silicon_subsystems
+	add_verb(src,silicon_subsystems) //CHOMPEdit TGPanel
 
 /mob/living/silicon/robot/drone/remove_robot_verbs()
 	remove_verb(src,silicon_subsystems)  //CHOMPEdit

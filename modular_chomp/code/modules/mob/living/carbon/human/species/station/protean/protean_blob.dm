@@ -74,19 +74,19 @@
 		humanform = H
 		updatehealth()
 		refactory = locate() in humanform.internal_organs
-		verbs |= /mob/living/proc/usehardsuit
-		verbs |= /mob/living/simple_mob/protean_blob/proc/nano_partswap
-		verbs |= /mob/living/simple_mob/protean_blob/proc/nano_regenerate
-		verbs |= /mob/living/simple_mob/protean_blob/proc/nano_metalnom
-		verbs |= /mob/living/simple_mob/protean_blob/proc/nano_blobform
-		verbs |= /mob/living/simple_mob/protean_blob/proc/nano_rig_transform
-		verbs |= /mob/living/simple_mob/protean_blob/proc/appearance_switch
-		verbs |= /mob/living/simple_mob/protean_blob/proc/nano_latch
-		verbs -= /mob/living/simple_mob/proc/nutrition_heal
+		add_verb(src,/mob/living/proc/usehardsuit) //CHOMPEdit TGPanel
+		add_verb(src,/mob/living/simple_mob/protean_blob/proc/nano_partswap) //CHOMPEdit TGPanel
+		add_verb(src,/mob/living/simple_mob/protean_blob/proc/nano_regenerate) //CHOMPEdit TGPanel
+		add_verb(src,/mob/living/simple_mob/protean_blob/proc/nano_metalnom) //CHOMPEdit TGPanel
+		add_verb(src,/mob/living/simple_mob/protean_blob/proc/nano_blobform) //CHOMPEdit TGPanel
+		add_verb(src,/mob/living/simple_mob/protean_blob/proc/nano_rig_transform) //CHOMPEdit TGPanel
+		add_verb(src,/mob/living/simple_mob/protean_blob/proc/appearance_switch) //CHOMPEdit TGPanel
+		add_verb(src,/mob/living/simple_mob/protean_blob/proc/nano_latch) //CHOMPEdit TGPanel
+		remove_verb(src,/mob/living/simple_mob/proc/nutrition_heal) //CHOMPEdit TGPanel
 	else
 		update_icon()
-	verbs |= /mob/living/simple_mob/proc/animal_mount
-	verbs |= /mob/living/proc/toggle_rider_reins
+	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
 
 //Hidden verbs for macro hotkeying
 /mob/living/simple_mob/protean_blob/proc/nano_partswap()

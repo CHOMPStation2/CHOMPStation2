@@ -1389,7 +1389,7 @@
 	var/mob/living/owner = parent
 	if(owner.client)
 		create_mob_button(parent)
-	owner.verbs |= /mob/proc/insidePanel
+	add_verb(owner,/mob/proc/insidePanel) //CHOMPEdit TGPanel
 	if(!owner.vorePanel) //CHOMPEdit
 		owner.vorePanel = new(owner)
 

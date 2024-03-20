@@ -221,7 +221,7 @@
 
 	dislocated = 1
 	if(istype(owner))
-		owner.verbs |= /mob/living/carbon/human/proc/relocate
+		add_verb(owner,/mob/living/carbon/human/proc/relocate) //CHOMPEdit TGPanel
 
 /obj/item/organ/external/proc/relocate()
 	if(dislocated == -1)

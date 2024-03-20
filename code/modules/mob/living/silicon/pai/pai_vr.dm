@@ -74,10 +74,10 @@
 /mob/living/silicon/pai/Initialize()
 	. = ..()
 
-	verbs |= /mob/proc/dominate_predator
-	verbs |= /mob/living/proc/dominate_prey
-	verbs |= /mob/living/proc/set_size
-	verbs |= /mob/living/proc/shred_limb
+	add_verb(src,/mob/proc/dominate_predator) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/dominate_prey) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/set_size) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/shred_limb) //CHOMPEdit TGPanel
 
 /mob/living/silicon/pai/Login()
 	. = ..()

@@ -1326,10 +1326,10 @@
 	toggle_sensor_mode()
 
 /mob/living/silicon/robot/proc/add_robot_verbs()
-	src.verbs |= robot_verbs_default
-	src.verbs |= silicon_subsystems
+	add_verb(src,robot_verbs_default) //CHOMPEdit TGPanel
+	add_verb(src,silicon_subsystems) //CHOMPEdit TGPanel
 	if(config.allow_robot_recolor)
-		src.verbs |= /mob/living/silicon/robot/proc/ColorMate
+		add_verb(src,/mob/living/silicon/robot/proc/ColorMate) //CHOMPEdit TGPanel
 
 /mob/living/silicon/robot/proc/remove_robot_verbs()
 	remove_verb(src,robot_verbs_default)  //CHOMPEdit

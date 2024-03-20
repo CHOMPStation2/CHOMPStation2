@@ -35,8 +35,8 @@
 	to_chat(H, "You feel your being twine with that of \the [src] as it merges with your biomass.")
 	to_chat(src, "You feel your being twine with that of \the [H] as you merge with its biomass.")
 	loc = H
-	verbs += /mob/living/carbon/alien/diona/proc/split
-	verbs -= /mob/living/carbon/alien/diona/proc/merge
+	add_verb(src,/mob/living/carbon/alien/diona/proc/split) //CHOMPEdit TGPanel
+	remove_verb(src,/mob/living/carbon/alien/diona/proc/merge) //CHOMPEdit TGPanel
 	return 1
 
 /mob/living/carbon/alien/diona/proc/split()

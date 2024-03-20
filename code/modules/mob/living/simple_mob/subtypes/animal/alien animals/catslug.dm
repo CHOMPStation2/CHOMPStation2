@@ -137,9 +137,9 @@
 
 /mob/living/simple_mob/vore/alienanimals/catslug/Initialize()
 	. = ..()
-	verbs += /mob/living/proc/ventcrawl
-	verbs += /mob/living/proc/hide
-	verbs += /mob/living/simple_mob/vore/alienanimals/catslug/proc/catslug_color
+	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/vore/alienanimals/catslug/proc/catslug_color) //CHOMPEdit TGPanel
 
 /mob/living/simple_mob/vore/alienanimals/catslug/Destroy()
 	if(hat)
@@ -358,9 +358,9 @@
 
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/Initialize()
 	. = ..()
-	verbs += /mob/living/proc/ventcrawl
-	verbs += /mob/living/proc/hide
-	verbs -= /mob/living/simple_mob/vore/alienanimals/catslug/proc/catslug_color	//Most of these have custom sprites with colour already, so we'll not let them have this.
+	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
+	remove_verb(src,/mob/living/simple_mob/vore/alienanimals/catslug/proc/catslug_color) //CHOMPEdit TGPanel //Most of these have custom sprites with colour already, so we'll not let them have this.
 
 
 /datum/category_item/catalogue/fauna/catslug/custom/spaceslug
@@ -1081,7 +1081,7 @@
 
 /mob/living/simple_mob/vore/alienanimals/catslug/suslug/Initialize()
 	. = ..()
-	verbs += /mob/living/simple_mob/vore/alienanimals/catslug/suslug/proc/assussinate
+	add_verb(src,/mob/living/simple_mob/vore/alienanimals/catslug/suslug/proc/assussinate) //CHOMPEdit TGPanel
 	update_icon()
 
 /mob/living/simple_mob/vore/alienanimals/catslug/suslug/update_icon()

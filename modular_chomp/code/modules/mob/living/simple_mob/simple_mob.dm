@@ -123,8 +123,8 @@
 
 /mob/living/simple_mob/New(var/newloc)
 	..()
-	verbs |= /mob/living/simple_mob/proc/use_headset
-	verbs |= /mob/living/simple_mob/proc/use_pda
+	add_verb(src,/mob/living/simple_mob/proc/use_headset) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/proc/use_pda) //CHOMPEdit TGPanel
 
 /mob/living/simple_mob/update_icon()
 	. = ..()

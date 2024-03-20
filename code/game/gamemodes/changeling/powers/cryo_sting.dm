@@ -27,5 +27,5 @@
 	remove_verb(src,/mob/proc/changeling_cryo_sting)  //CHOMPEdit
 	spawn(3 MINUTES)
 		to_chat(src, "<span class='notice'>Our cryogenic string is ready to be used once more.</span>")
-		src.verbs |= /mob/proc/changeling_cryo_sting
+		add_verb(src,/mob/proc/changeling_cryo_sting) //CHOMPEdit TGPanel
 	return 1

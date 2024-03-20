@@ -15,4 +15,4 @@
 
 /datum/trait/neutral/hide/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.verbs |= /mob/living/proc/hide
+	add_verb(H,/mob/living/proc/hide) //CHOMPEdit TGPanel

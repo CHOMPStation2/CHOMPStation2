@@ -442,10 +442,10 @@
 ////////////////////////
 
 /obj/mecha/proc/removeVerb(verb_path)
-	verbs -= verb_path
+	remove_verb(src,verb_path) //CHOMPEdit TGPanel
 
 /obj/mecha/proc/addVerb(verb_path)
-	verbs += verb_path
+	add_verb(src,verb_path) //CHOMPEdit TGPanel
 
 /obj/mecha/proc/add_airtank()
 	internal_tank = new /obj/machinery/portable_atmospherics/canister/air(src)

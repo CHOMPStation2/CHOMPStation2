@@ -134,7 +134,7 @@
 
 	update_icon()
 
-	verbs |= /mob/proc/adjust_hive_range
+	add_verb(src,/mob/proc/adjust_hive_range) //CHOMPEdit TGPanel
 
 	return ..()
 

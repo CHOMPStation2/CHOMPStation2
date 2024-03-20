@@ -98,8 +98,8 @@ var/list/ai_verbs_default = list(
 	can_be_antagged = TRUE
 
 /mob/living/silicon/ai/proc/add_ai_verbs()
-	src.verbs |= ai_verbs_default
-	src.verbs |= silicon_subsystems
+	add_verb(src,ai_verbs_default) //CHOMPEdit TGPanel
+	add_verb(src,silicon_subsystems) //CHOMPEdit TGPanel
 
 /mob/living/silicon/ai/proc/remove_ai_verbs()
 	remove_verb(src,ai_verbs_default)  //CHOMPEdit

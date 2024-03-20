@@ -46,8 +46,8 @@
 	if((. = ..()))
 		//nif.set_flag(NIF_O_SCOTHERS,NIF_FLAGS_OTHER)	//Only required on install if the flag is in the default setting_flags list defined few lines above.
 		if(nif?.human)
-			nif.human.verbs |= /mob/proc/nsay
-			nif.human.verbs |= /mob/proc/nme
+			add_verb(nif.human,/mob/proc/nsay) //CHOMPEdit TGPanel
+			add_verb(nif.human,/mob/proc/nme) //CHOMPEdit TGPanel
 
 /datum/nifsoft/soulcatcher/uninstall()
 	QDEL_LIST_NULL(brainmobs)

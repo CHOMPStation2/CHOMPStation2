@@ -3,7 +3,7 @@
 	set category = "Admin"
 
 	verbs.Remove(/client/proc/hide_most_verbs, admin_verbs_hideable)
-	verbs += /client/proc/show_verbs
+	add_verb(src,/client/proc/show_verbs) //CHOMPEdit TGPanel
 
 	to_chat(src, "<span class='filter_system interface'>Most of your adminverbs have been hidden.</span>")
 	feedback_add_details("admin_verb","HMV") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -391,7 +391,7 @@
 		log_admin("[src] re-admined themself.")
 		message_admins("[src] re-admined themself.", 1)
 		to_chat(src, "<span class='filter_system interface'>You now have the keys to control the planet, or at least a small space station</span>")
-		verbs -= /client/proc/readmin_self
+		remove_verb(src,/client/proc/readmin_self) //CHOMPEdit TGPanel
 
 /client/proc/deadmin_self()
 	set name = "De-admin self"
@@ -403,7 +403,7 @@
 			message_admins("[src] deadmined themself.", 1)
 			deadmin()
 			to_chat(src, "<span class='filter_system interface'>You are now a normal player.</span>")
-			verbs |= /client/proc/readmin_self
+			add_verb(src,/client/proc/readmin_self) //CHOMPEdit TGPanel
 	feedback_add_details("admin_verb","DAS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/toggle_log_hrefs()
