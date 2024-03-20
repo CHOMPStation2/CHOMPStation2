@@ -514,8 +514,8 @@
 	// if you have a jetpack, show the internal tank pressure
 	var/obj/item/weapon/tank/jetpack/current_jetpack = installed_jetpack()
 	if (current_jetpack)
-		. += "Internal Atmosphere Info", current_jetpack.name
-		. += "Tank Pressure", current_jetpack.air_contents.return_pressure()
+		. += "Internal Atmosphere Info: [current_jetpack.name]"
+		. += "Tank Pressure: [current_jetpack.air_contents.return_pressure()]"
 
 
 // this function returns the robots jetpack, if one is installed

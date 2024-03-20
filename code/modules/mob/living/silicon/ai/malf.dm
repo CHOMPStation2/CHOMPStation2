@@ -129,7 +129,7 @@
 			. += "Current research focus: [src.research.focus ? src.research.focus.name : "None"]"
 			if(src.research.focus)
 				. += "Research completed: [round(src.research.focus.invested, 0.1)]/[round(src.research.focus.price)]"
-			if(system_override == 1
+			if(system_override == 1)
 				. += "SYSTEM OVERRIDE INITIATED"
 			else if(system_override == 2)
 				. += "SYSTEM OVERRIDE COMPLETED"
