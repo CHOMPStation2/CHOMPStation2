@@ -118,7 +118,7 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 					type = "MEN"
 
 			if((target && target.holder) || T.level > 0)
-				L[++L.len] = list("\[[type]\] #[T.id]. [T.initiator_key_name]:", T.name, REF(T.statclick))
+				L[++L.len] = list("\[[type]\] #[T.id]. [T.initiator_key_name]:", T.name, null, REF(T.statclick))
 		else
 			++num_disconnected
 	if(num_disconnected)
