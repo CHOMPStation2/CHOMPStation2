@@ -244,6 +244,10 @@ li a:hover:not(.active) {
 	text-decoration: underline;
 }
 
+.linkelem:hover {
+	text-decoration: underline;
+}
+
 img {
 	-ms-interpolation-mode: nearest-neighbor;
 	image-rendering: pixelated;
