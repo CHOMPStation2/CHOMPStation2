@@ -122,6 +122,7 @@
 	},
 /obj/item/weapon/rcd_ammo,
 /obj/item/weapon/rcd_ammo,
+/obj/item/areaeditor/blueprints/engineers,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/SurvivalDIY_7x7)
 "g" = (

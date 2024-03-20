@@ -77,6 +77,7 @@
 	},
 /obj/item/weapon/rcd_ammo,
 /obj/item/weapon/rcd_ammo,
+/obj/item/areaeditor/blueprints/engineers,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/SurvivalDIY_9x9)
 "h" = (
