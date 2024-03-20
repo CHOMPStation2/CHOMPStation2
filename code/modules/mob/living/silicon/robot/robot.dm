@@ -269,11 +269,13 @@
 	if (!rbPDA)
 		rbPDA = new/obj/item/device/pda/ai(src)
 	rbPDA.set_name_and_job(name,"[modtype] [braintype]")
+	add_verb(src, /obj/item/device/pda/ai/verb/cmd_pda_open_ui) //ChompEDIT - TGPanel
 
 /mob/living/silicon/robot/proc/setup_communicator()
 	if (!communicator)
 		communicator = new/obj/item/device/communicator/integrated(src)
 	communicator.register_device(name, "[modtype] [braintype]")
+	add_verb(src, /obj/item/device/communicator/integrated/verb/activate) //ChompEDIT - TGPanel
 
 //If there's an MMI in the robot, have it ejected when the mob goes away. --NEO
 //Improved /N
