@@ -221,6 +221,8 @@ li a:hover:not(.active) {
 }
 
 .elemcontainer {
+	border-collapse: separate;
+	border-spacing: 0 5px;
 	display: flex;
 }
 
