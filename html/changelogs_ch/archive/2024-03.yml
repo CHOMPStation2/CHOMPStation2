@@ -207,3 +207,10 @@
       / maybes)
   Raeschen:
   - bugfix: fixed upsidedown cargo console
+2024-03-20:
+  Raeschen:
+  - refactor: Remove obj/machinery recursivemove placement + signal registration as
+      a default, instead an optional
+  cadyn:
+  - rscadd: movement smoothing
+  - config: 40fps time
