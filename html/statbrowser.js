@@ -1026,7 +1026,7 @@ Byond.subscribeTo('update_examine', function (S) {
 	if (current_tab == "Examine") {
 		draw_examine();
 	}
-	tab_change("Examine");
+	//tab_change("Examine"); //This is handled by DM code and a pref setting already
 })
 
 Byond.subscribeTo('update_sdql2', function (S) {
