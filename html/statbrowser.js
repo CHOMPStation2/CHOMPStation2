@@ -72,6 +72,9 @@ function createStatusTab(name) {
 	if (name == "Status" || name == "MC") {
 		B.style.order = name == "Status" ? 1 : 2;
 	}
+	if (name == "Tickets") {
+		B.style.order = 3;
+	}
 	//END ORDERING
 	menu.appendChild(B);
 	SendTabToByond(name);

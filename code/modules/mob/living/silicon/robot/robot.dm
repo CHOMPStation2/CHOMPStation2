@@ -417,7 +417,7 @@
 
 /mob/living/silicon/robot/verb/namepick()
 	set name = "Pick Name"
-	set category = "Robot Commands"
+	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
 
 	if(custom_name)
 		to_chat(usr, "You can't pick another custom name. Go ask for a name change.")
@@ -435,7 +435,7 @@
 
 /mob/living/silicon/robot/verb/extra_customization()
 	set name = "Customize Appearance"
-	set category = "Robot Commands"
+	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
 	set desc = "Customize your appearance (assuming your chosen sprite allows)."
 
 	if(!sprite_datum || !sprite_datum.has_extra_customization)
@@ -456,7 +456,7 @@
 	return dat
 
 /mob/living/silicon/robot/verb/toggle_lights()
-	set category = "Robot Commands"
+	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
 	set name = "Toggle Lights"
 
 	lights_on = !lights_on
@@ -465,7 +465,7 @@
 	update_icon()
 
 /mob/living/silicon/robot/verb/self_diagnosis_verb()
-	set category = "Robot Commands"
+	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
 	set name = "Self Diagnosis"
 
 	if(!is_component_functioning("diagnosis unit"))
@@ -479,7 +479,7 @@
 
 
 /mob/living/silicon/robot/verb/toggle_component()
-	set category = "Robot Commands"
+	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
 	set name = "Toggle Component"
 	set desc = "Toggle a component, conserving power."
 
@@ -503,7 +503,7 @@
 		to_chat(src, span_red("You enable [C.name]."))
 
 /mob/living/silicon/robot/verb/spark_plug() //So you can still sparkle on demand without violence.
-	set category = "Robot Commands"
+	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
 	set name = "Emit Sparks"
 	to_chat(src, "<span class='filter_notice'>You harmlessly spark.</span>")
 	spark_system.start()
@@ -550,8 +550,8 @@
 /mob/living/silicon/robot/get_status_tab_items()
 	. = ..()
 	. += ""
-	show_cell_power()
-	show_jetpack_pressure()
+	. += show_cell_power()
+	. += show_jetpack_pressure()
 	. += "Lights: [lights_on ? "ON" : "OFF"]"
 	if(module)
 		for(var/datum/matter_synth/ms in module.synths)
@@ -843,7 +843,7 @@
 
 /mob/living/silicon/robot/proc/ColorMate()
 	set name = "Recolour Module"
-	set category = "Robot Commands"
+	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
 	set desc = "Allows to recolour once."
 
 	if(!has_recoloured)
@@ -1204,7 +1204,7 @@
 
 
 /mob/living/silicon/robot/proc/ResetSecurityCodes()
-	set category = "Robot Commands"
+	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
 	set name = "Reset Identity Codes"
 	set desc = "Scrambles your security and identification codes and resets your current buffers. Unlocks you and permenantly severs you from your AI and the robotics console and will deactivate your camera system."
 
@@ -1322,7 +1322,7 @@
 
 /mob/living/silicon/robot/proc/sensor_mode() //Medical/Security HUD controller for borgs
 	set name = "Toggle Sensor Augmentation" //VOREStation Add
-	set category = "Robot Commands"
+	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
 	set desc = "Augment visual feed with internal sensor overlays."
 	sensor_type = !sensor_type //VOREStation Add
 	to_chat(usr, "You [sensor_type ? "enable" : "disable"] your sensors.") //VOREStation Add

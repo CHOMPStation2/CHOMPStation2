@@ -38,7 +38,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 
 //CHOMPADDITION: Ai shell sideloading
 /mob/living/silicon/robot/proc/transfer_shell_act()
-	set category = "Robot Commands"
+	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
 	set name = "Transfer to Shell"
 	transfer_shell()
 
@@ -194,7 +194,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 /mob/living/silicon/robot/proc/undeploy_act()
 	set name = "Release Control"
 	set desc = "Release control of a remote drone."
-	set category = "Robot Commands"
+	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
 
 	undeploy("Remote session terminated.")
 
