@@ -92,7 +92,7 @@
 	else if(. && istype(belt,/obj/item/weapon/rig))
 		var/obj/item/weapon/rig/R = belt
 		RigPanel(R)
-|
+
 /mob/proc/RigPanel(var/obj/item/weapon/rig/R)
 	if(R && !R.canremove && R.installed_modules.len)
 		var/list/L = list()
