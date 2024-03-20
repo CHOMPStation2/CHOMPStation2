@@ -300,7 +300,16 @@ CHOMP Station removal end*/
 
 	L[++L.len] = list("- -- --- Abilities (Shift+LMB Examines) --- -- -", null, null, null, null)
 	for(var/obj/effect/protean_ability/A as anything in abilities)
-		L[++L.len] = list("[A.ability_name]", null, null, A.name, REF(A))
+		var/client/C = H.client
+		var/img
+		if(C && istype(C)) //sanity checks
+			if(A.ability_name in C.misc_cache)
+				img = C.misc_cache[A.ability_name]
+			else
+				img = icon2html(A,C,sourceonly=TRUE)
+				C.misc_cache[A.ability_name] = img
+
+		L[++L.len] = list("[A.ability_name]", A.ability_name, img, A.name, REF(A))
 	H.misc_tabs["Protean"] = L
 
 // Various modifiers

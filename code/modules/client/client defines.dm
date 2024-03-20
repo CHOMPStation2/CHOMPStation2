@@ -130,6 +130,8 @@
 	var/list/recent_examines
 	///Our object window datum. It stores info about and handles behavior for the object tab
 	var/datum/object_window_info/obj_window
+
+	var/list/misc_cache = list()
 	//CHOMPEdit End
 
 	//Hide top bars
