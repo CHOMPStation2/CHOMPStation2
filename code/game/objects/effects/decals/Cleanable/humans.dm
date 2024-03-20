@@ -19,7 +19,7 @@ var/global/list/image/splatter_cache=list()
 	blood_DNA = list()
 	var/basecolor="#A10808" // Color when wet.
 	var/synthblood = 0
-	// var/list/datum/disease2/disease/virus2 = list() CHOMPEdit - Moved to decal/cleanable
+	var/list/datum/disease2/disease/virus2 = list()
 	var/amount = 5
 	generic_filth = TRUE
 	persistent = FALSE
@@ -235,8 +235,9 @@ var/global/list/image/splatter_cache=list()
 	icon_state = "mucus"
 	random_icon_states = list("mucus")
 
-	// var/list/datum/disease2/disease/virus2 = list() CHOMPEdit - Moved to decal/cleanable
+	var/list/datum/disease2/disease/virus2 = list()
 	var/dry = 0 // Keeps the lag down
+	var/sampled = FALSE
 
 /obj/effect/decal/cleanable/mucus/Initialize()
 	. = ..()

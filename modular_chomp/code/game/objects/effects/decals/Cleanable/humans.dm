@@ -1,5 +1,12 @@
-/obj/effect/decal/cleanable/attackby(obj/item/I, mob/user)
-	if(virus2.len)  // Touch dirty, get virus. Stupid.
+// Touch dirty, get virus. Stupid.
+/obj/effect/decal/cleanable/vomit/attackby(obj/item/I, mob/user)
+	if(virus2.len)
+		for(var/datum/disease2/disease/D in virus2)
+			infect_virus2(user,D)
+	..()
+
+/obj/effect/decal/cleanable/mucus/attackby(obj/item/I, mob/user)
+	if(virus2.len)
 		for(var/datum/disease2/disease/D in virus2)
 			infect_virus2(user,D)
 
@@ -12,7 +19,27 @@
 			sampled = TRUE
 	..()
 
-/obj/effect/decal/cleanable/Crossed(mob/living/carbon/human/perp)
+/obj/effect/decal/cleanable/vomit/attackby(obj/item/I, mob/user)
+	if(virus2.len)
+		for(var/datum/disease2/disease/D in virus2)
+			infect_virus2(user,D)
+	..()
+
+// "Yeah, let me step on this mucus" Bad. Get virus.
+
+/obj/effect/decal/cleanable/blood/Crossed(mob/living/carbon/human/perp)
+	if(virus2.len)
+		for(var/datum/disease2/disease/D in virus2)
+			infect_virus2(perp, 2)
+	..()
+
+/obj/effect/decal/cleanable/mucus/Crossed(mob/living/carbon/human/perp)
+	if(virus2.len)
+		for(var/datum/disease2/disease/D in virus2)
+			infect_virus2(perp, 2)
+	..()
+
+/obj/effect/decal/cleanable/vomit/Crossed(mob/living/carbon/human/perp)
 	if(virus2.len)
 		for(var/datum/disease2/disease/D in virus2)
 			infect_virus2(perp, 2)
