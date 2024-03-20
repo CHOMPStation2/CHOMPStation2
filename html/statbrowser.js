@@ -25,6 +25,7 @@ var verb_tabs = [];
 var verbs = [["", ""]]; // list with a list inside
 var examine = [];
 var tickets = [];
+var misc = new Map();
 var sdql2 = [];
 var permanent_tabs = []; // tabs that won't be cleared by wipes
 var turfcontents = [];
@@ -260,6 +261,8 @@ function tab_change(tab) {
 		draw_debug();
 	} else if (tab == "Tickets") {
 		draw_tickets();
+	} else if (misc.has(tab)) {
+		draw_misc(tab);
 	} else if (tab == "Examine") {
 		draw_examine();
 	} else if (tab == "SDQL2") {
@@ -567,6 +570,80 @@ function draw_tickets() {
 		tr.appendChild(td1);
 		tr.appendChild(td2);
 		table.appendChild(tr);
+	}
+	document.getElementById("statcontent").appendChild(table);
+}
+
+function draw_misc(tab) {
+	statcontentdiv.textContent = "";
+	var table = document.createElement("table");
+	let data = misc.get(tab);
+	if (!data) {
+		return;
+	}
+	for (var i = 0; i < data.length; i++) {
+		var part = data[i];
+		var container = document.createElement("div")
+		container.className = "elemcontainer"
+		if (part[1] && storedimages[part[1]] == null && part[2]) {
+			var img = document.createElement("img");
+			img.src = part[2];
+			img.id = part[1];
+			storedimages[part[1]] = part[2];
+			img.onerror = iconError;
+			table.appendChild(img);
+		} else if(part[1]) {
+			var img = document.createElement("img");
+			img.onerror = iconError;
+			img.src = storedimages[part[1]];
+			img.id = part[1];
+			table.appendChild(img);
+		}
+
+		if(part[0]) {
+			var text = document.createElement("div");
+			text.className = "elem";
+			text.textContent = part[0];
+			table.appendChild(text);
+		}
+		var b = document.createElement("div");
+		var clickcatcher = "";
+		if (part[4]) {
+			b.className = "link";
+			b.onmousedown = function (part) {
+				// The outer function is used to close over a fresh "part" variable,
+				// rather than every onmousedown getting the "part" of the last entry.
+				return function (e) {
+					e.preventDefault();
+					clickcatcher = "?src=" + part[4];
+					switch (e.button) {
+						case 1:
+							clickcatcher += ";statpanel_item_click=middle"
+							break;
+						case 2:
+							clickcatcher += ";statpanel_item_click=right"
+							break;
+						default:
+							clickcatcher += ";statpanel_item_click=left"
+					}
+					if (e.shiftKey) {
+						clickcatcher += ";statpanel_item_shiftclick=1";
+					}
+					if (e.ctrlKey) {
+						clickcatcher += ";statpanel_item_ctrlclick=1";
+					}
+					if (e.altKey) {
+						clickcatcher += ";statpanel_item_altclick=1";
+					}
+					window.location.href = clickcatcher;
+				}
+			}(part);
+		}
+		if(part[3]) {
+			b.textContent = part[3];
+			table.appendChild(b);
+		}
+		table.appendChild(document.createElement("br"));
 	}
 	document.getElementById("statcontent").appendChild(table);
 }
@@ -885,6 +962,14 @@ Byond.subscribeTo('create_listedturf', function (TN) {
 	tab_change(turfname);
 });
 
+Byond.subscribeTo('create_misc', function (TN) {
+	addPermanentTab(TN);
+});
+
+Byond.subscribeTo('remove_misc', function (TN) {
+	removePermanentTab(TN);
+});
+
 Byond.subscribeTo('remove_admin_tabs', function () {
 	href_token = null;
 	remove_mc();
@@ -896,6 +981,15 @@ Byond.subscribeTo('update_listedturf', function (TC) {
 	turfcontents = TC;
 	if (current_tab == turfname) {
 		draw_listedturf();
+	}
+});
+
+Byond.subscribeTo('update_misc', function (payload) {
+	let TN = payload.TN
+	let TC = payload.TC
+	misc.set(TN,TC);
+	if (current_tab == TN) {
+		draw_misc(TN);
 	}
 });
 

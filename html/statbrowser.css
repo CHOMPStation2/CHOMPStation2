@@ -208,6 +208,14 @@ li a:hover:not(.active) {
 	margin: 2px 2px;
 }
 
+.elemcontainer {
+	display: flex;
+}
+
+.elem {
+	padding: 7px 14px;
+}
+
 .dark .link {
 	color: #abc6ec;
 }

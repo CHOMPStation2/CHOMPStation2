@@ -97,6 +97,26 @@ SUBSYSTEM_DEF(statpanels)
 			if(update_actions && num_fires % default_wait == 0)
 				set_action_tabs(target, target_mob)
 
+			target_mob.update_misc_tabs()
+			for(var/tab in target_mob.misc_tabs)
+				if(target_mob.misc_tabs[tab].len == 0 && (tab in target.misc_tabs))
+					target.misc_tabs -= tab
+					target.stat_panel.send_message("remove_misc",tab)
+
+				if(target_mob.misc_tabs[tab].len > 0)
+					if(!(tab in target.misc_tabs))
+						target.misc_tabs += tab
+						target.stat_panel.send_message("create_misc",tab)
+					target.stat_panel.send_message("update_misc",list(
+						TN = tab, \
+						TC = target_mob.misc_tabs[tab], \
+					))
+
+			for(var/tab in target.misc_tabs)
+				if(!(tab in target_mob.misc_tabs))
+					target.misc_tabs -= tab
+					target.stat_panel.send_message("remove_misc",tab)
+
 			// Handle the examined turf of the stat panel
 
 			if(target_mob?.listed_turf && num_fires % default_wait == 0)

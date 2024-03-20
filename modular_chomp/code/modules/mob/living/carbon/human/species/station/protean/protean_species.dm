@@ -285,22 +285,23 @@ CHOMP Station removal end*/
 /datum/species/protean/get_additional_examine_text(var/mob/living/carbon/human/H)
 	return ..() //Hmm, what could be done here?
 
-/datum/species/protean/Stat(var/mob/living/carbon/human/H)
+/datum/species/protean/update_misc_tabs(var/mob/living/carbon/human/H)
 	..()
-	if(statpanel("Protean"))
-		var/obj/item/organ/internal/nano/refactory/refactory = H.nano_get_refactory()
-		if(refactory && !(refactory.status & ORGAN_DEAD))
-			stat(null, "- -- --- Refactory Metal Storage --- -- -")
-			var/max = refactory.max_storage
-			for(var/material in refactory.materials)
-				var/amount = refactory.get_stored_material(material)
-				stat("[capitalize(material)]", "[amount]/[max]")
-		else
-			stat(null, "- -- --- REFACTORY ERROR! --- -- -")
+	var/list/L = list()
+	var/obj/item/organ/internal/nano/refactory/refactory = H.nano_get_refactory()
+	if(refactory && !(refactory.status & ORGAN_DEAD))
+		L[++L.len] = list("- -- --- Refactory Metal Storage --- -- -", null, null, null, null)
+		var/max = refactory.max_storage
+		for(var/material in refactory.materials)
+			var/amount = refactory.get_stored_material(material)
+			L[++L.len] = list("[capitalize(material)]: [amount]/[max]", null, null, null, null)
+	else
+		L[++L.len] = list("- -- --- REFACTORY ERROR! --- -- -", null, null, null, null)
 
-		stat(null, "- -- --- Abilities (Shift+LMB Examines) --- -- -")
-		for(var/obj/effect/protean_ability/A as anything in abilities)
-			stat("[A.ability_name]",A.atom_button_text())
+	L[++L.len] = list("- -- --- Abilities (Shift+LMB Examines) --- -- -", null, null, null, null)
+	for(var/obj/effect/protean_ability/A as anything in abilities)
+		L[++L.len] = list("[A.ability_name]", null, null, A.name, REF(A))
+	H.misc_tabs["Protean"] = L
 
 // Various modifiers
 /datum/modifier/protean
