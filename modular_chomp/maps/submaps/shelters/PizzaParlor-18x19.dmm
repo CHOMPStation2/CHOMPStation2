@@ -1171,6 +1171,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/closet/crate/solar,
 /turf/simulated/floor/outdoors/sidewalk/slab{
 	movement_cost = 0;
 	temperature = 293.15

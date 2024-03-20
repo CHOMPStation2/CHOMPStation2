@@ -408,6 +408,10 @@
 /obj/vehicle/train/engine,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/SurvivalDIY_11x11)
+"U" = (
+/obj/structure/closet/crate/solar,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalDIY_11x11)
 "X" = (
 /obj/machinery/vending/tool{
 	emagged = 1;
@@ -468,7 +472,7 @@ q
 O
 a
 a
-a
+U
 a
 e
 "}

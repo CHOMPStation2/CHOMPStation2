@@ -1,106 +1,1302 @@
-"aw" = (/turf/simulated/wall/cult,/area/survivalpod/superpose/CultShip)
-"aP" = (/obj/structure/table/fancyblack,/obj/item/weapon/book/tome/imbued,/obj/item/weapon/digestion_remains/skull/unathi,/obj/item/device/soulstone,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CultShip)
-"be" = (/obj/structure/cult/pylon,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/CultShip)
-"bq" = (/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CultShip)
-"bW" = (/obj/effect/floor_decal/techfloor{dir = 1},/turf/simulated/floor/cult,/area/survivalpod/superpose/CultShip)
-"cH" = (/obj/effect/floor_decal/techfloor{dir = 6},/turf/simulated/floor/cult,/area/survivalpod/superpose/CultShip)
-"dJ" = (/obj/structure/grille/cult,/obj/structure/window/phoronreinforced/full,/obj/structure/window/reinforced/survival_pod{dir = 8},/obj/structure/window/reinforced/survival_pod{dir = 4},/turf/simulated/floor/tiled/steel_dirty{color = "grey"},/area/survivalpod/superpose/CultShip)
-"eP" = (/obj/structure/shuttle/engine/heater{dir = 4; icon_state = "heater"},/turf/simulated/wall/cult,/area/survivalpod/superpose/CultShip)
-"fd" = (/obj/structure/bed/double/padded,/obj/item/weapon/bedsheet/hosdouble,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CultShip)
-"fw" = (/obj/machinery/light/floortube/flicker{dir = 8; pixel_x = -3},/turf/simulated/floor/cult,/area/survivalpod/superpose/CultShip)
-"fZ" = (/obj/item/clothing/shoes/cult,/obj/item/clothing/suit/cultrobes/alt,/obj/item/clothing/head/helmet/space/cult,/obj/structure/table/fancyblack,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/CultShip)
-"gU" = (/obj/item/stack/material/plastic{amount = 50},/obj/item/stack/material/plastic{amount = 50},/obj/item/stack/material/plastic{amount = 50},/obj/item/stack/material/plastic{amount = 50},/obj/item/stack/material/steel{amount = 50},/obj/item/stack/material/steel{amount = 50},/obj/item/stack/material/steel{amount = 50},/obj/item/stack/material/steel{amount = 50},/obj/item/stack/material/glass{amount = 50},/obj/item/stack/material/glass{amount = 50},/obj/item/stack/material/glass{amount = 50},/obj/item/stack/material/glass{amount = 50},/obj/item/stack/rods{amount = 50},/obj/item/stack/rods{amount = 50},/obj/item/stack/rods{amount = 50},/obj/item/stack/rods{amount = 50},/obj/item/stack/cable_coil{pixel_x = 3; pixel_y = 3},/obj/item/stack/cable_coil{pixel_x = 3; pixel_y = 3},/obj/item/stack/cable_coil/green,/obj/item/stack/cable_coil/blue,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/obj/structure/table/rack/shelf/steel,/turf/simulated/floor/cult,/area/survivalpod/superpose/CultShip)
-"he" = (/obj/structure/cult/pylon,/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/CultShip)
-"jq" = (/obj/effect/floor_decal/techfloor,/obj/machinery/light/floortube/flicker{pixel_y = 13},/turf/simulated/floor/cult,/area/survivalpod/superpose/CultShip)
-"js" = (/obj/effect/floor_decal/techfloor/corner{dir = 4},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/CultShip)
-"jv" = (/obj/structure/cult/talisman,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/CultShip)
-"jO" = (/obj/effect/catwalk_plated/white,/turf/simulated/floor/tiled/steel_dirty{color = "grey"},/area/survivalpod/superpose/CultShip)
-"kf" = (/obj/structure/grille/cult,/obj/structure/window/phoronreinforced/full,/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/structure/window/reinforced/survival_pod,/turf/simulated/floor/tiled/steel_dirty{color = "grey"},/area/survivalpod/superpose/CultShip)
-"kT" = (/obj/structure/bed/chair/bay/comfy/purple{dir = 8},/obj/effect/floor_decal/techfloor{dir = 9},/turf/simulated/floor/cult,/area/survivalpod/superpose/CultShip)
-"mT" = (/obj/structure/toilet/prison{name = "toilet"; pixel_y = 10},/obj/structure/window/reinforced/survival_pod{dir = 4; opacity = 1},/obj/structure/curtain/open/shower/security,/turf/simulated/floor/cult,/area/survivalpod/superpose/CultShip)
-"nj" = (/obj/machinery/light/floortube/flicker{dir = 8; pixel_x = 5},/turf/simulated/shuttle/plating,/area/survivalpod/superpose/CultShip)
-"nq" = (/obj/item/weapon/melee/cultblade,/obj/structure/table/fancyblack,/obj/item/device/soulstone,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/CultShip)
-"oY" = (/obj/structure/cult/talisman,/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/CultShip)
-"py" = (/obj/machinery/door/airlock/phoron,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CultShip)
-"pJ" = (/obj/machinery/atmospherics/unary/vent_pump/high_volume{dir = 1},/turf/simulated/shuttle/plating,/area/survivalpod/superpose/CultShip)
-"rC" = (/obj/structure/constructshell/cult,/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/CultShip)
-"us" = (/obj/machinery/atmospherics/pipe/tank/phoron/full{dir = 4},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CultShip)
-"vf" = (/turf/simulated/wall/phoron,/area/survivalpod/superpose/CultShip)
-"vl" = (/obj/machinery/light/floortube/flicker{pixel_y = 5},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CultShip)
-"vG" = (/obj/machinery/atmospherics/unary/vent_pump/high_volume,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/CultShip)
-"vX" = (/obj/structure/curtain/open/shower/security,/obj/machinery/shower{pixel_y = 20},/turf/simulated/floor/cult,/area/survivalpod/superpose/CultShip)
-"wl" = (/obj/effect/floor_decal/techfloor/corner,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/CultShip)
-"xg" = (/obj/effect/floor_decal/techfloor,/obj/structure/cult/forge,/turf/simulated/floor/cult,/area/survivalpod/superpose/CultShip)
-"xh" = (/obj/item/clothing/shoes/cult,/obj/item/clothing/suit/cultrobes/alt,/obj/item/clothing/head/helmet/space/cult,/obj/structure/table/fancyblack,/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/CultShip)
-"xq" = (/obj/effect/catwalk_plated/dark,/obj/machinery/pointdefense,/turf/simulated/floor/cult,/area/survivalpod/superpose/CultShip)
-"yi" = (/obj/structure/closet/walllocker_double/north,/obj/item/device/gps,/obj/item/sticky_pad/random,/obj/item/device/starcaster_news,/obj/item/weapon/pen/blue,/obj/item/device/pda,/obj/item/weapon/card/id/external,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,/obj/item/weapon/reagent_containers/food/snacks/sosjerky,/obj/item/weapon/reagent_containers/food/snacks/sosjerky,/obj/item/clothing/accessory/permit/gun,/obj/item/device/camera,/obj/item/device/binoculars,/obj/item/device/threadneedle,/obj/random/soap,/obj/item/weapon/towel/random,/obj/item/bodybag/cryobag,/obj/item/device/flashlight/flare,/obj/item/device/flashlight/flare,/obj/item/device/flashlight/color/yellow,/obj/item/device/radio,/obj/item/device/radio,/obj/item/weapon/flame/lighter/random,/obj/item/weapon/cell/device/hyper,/obj/item/weapon/cell/device/hyper,/obj/item/weapon/extinguisher/mini,/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,/obj/item/weapon/reagent_containers/pill/spaceacillin,/obj/item/weapon/reagent_containers/pill/spaceacillin,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/device/suit_cooling_unit/emergency,/obj/item/stack/nanopaste,/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,/obj/item/weapon/storage/backpack/messenger,/obj/item/clothing/accessory/storage/black_drop_pouches,/obj/item/clothing/accessory/poncho/thermal,/obj/item/weapon/storage/box/survival/comp,/obj/item/weapon/storage/toolbox/brass,/obj/item/weapon/storage/box/khcrystal,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/CultShip)
-"ym" = (/obj/structure/grille/cult,/obj/structure/window/phoronreinforced/full,/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/structure/window/reinforced/survival_pod{dir = 8},/obj/structure/window/reinforced/survival_pod{dir = 4},/turf/simulated/floor/tiled/steel_dirty{color = "grey"},/area/survivalpod/superpose/CultShip)
-"yq" = (/obj/structure/grille/cult,/obj/structure/window/phoronreinforced/full,/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/structure/window/reinforced/survival_pod,/obj/structure/window/reinforced/survival_pod{dir = 8},/turf/simulated/floor/tiled/steel_dirty{color = "grey"},/area/survivalpod/superpose/CultShip)
-"yE" = (/obj/structure/table/marble{color = "#B03A2E"},/obj/random/soap{pixel_y = 5},/obj/random/soap,/obj/item/weapon/towel/random{pixel_y = 4},/obj/item/weapon/towel/random{pixel_y = 4},/obj/item/weapon/towel/random{pixel_y = 8},/obj/item/weapon/towel/random{pixel_y = 8},/turf/simulated/floor/cult,/area/survivalpod/superpose/CultShip)
-"Ai" = (/obj/effect/floor_decal/techfloor{dir = 1},/obj/machinery/light/floortube/flicker{pixel_y = -3},/turf/simulated/floor/cult,/area/survivalpod/superpose/CultShip)
-"Bw" = (/obj/structure/bed/chair/wood/wings{dir = 4},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CultShip)
-"BV" = (/obj/item/weapon/storage/backpack/cultpack,/obj/structure/table/fancyblack,/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/CultShip)
-"CY" = (/obj/machinery/porta_turret/alien/destroyed,/obj/effect/catwalk_plated/white,/turf/simulated/floor/cult,/area/survivalpod/superpose/CultShip)
-"De" = (/obj/effect/floor_decal/techfloor{dir = 4},/turf/simulated/floor/cult,/area/survivalpod/superpose/CultShip)
-"Dz" = (/obj/structure/bed/chair/wood/wings{dir = 8},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/CultShip)
-"EA" = (/obj/structure/cult/tome,/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/CultShip)
-"Ff" = (/obj/effect/catwalk_plated/white,/obj/machinery/pointdefense,/turf/simulated/floor/cult,/area/survivalpod/superpose/CultShip)
-"Fw" = (/obj/structure/grille/cult,/obj/structure/window/phoronreinforced/full,/obj/structure/window/reinforced/survival_pod,/obj/structure/window/reinforced/survival_pod{dir = 4},/obj/structure/window/reinforced/survival_pod{dir = 8},/turf/simulated/floor/tiled/steel_dirty{color = "grey"},/area/survivalpod/superpose/CultShip)
-"HF" = (/obj/effect/floor_decal/techfloor,/turf/simulated/floor/cult,/area/survivalpod/superpose/CultShip)
-"II" = (/obj/effect/floor_decal/techfloor{dir = 5},/turf/simulated/floor/cult,/area/survivalpod/superpose/CultShip)
-"IX" = (/obj/structure/grille/cult,/obj/structure/window/phoronreinforced/full,/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/structure/window/reinforced/survival_pod{dir = 4},/obj/structure/window/reinforced/survival_pod{dir = 8},/turf/simulated/floor/tiled/steel_dirty{color = "grey"},/area/survivalpod/superpose/CultShip)
-"Kj" = (/obj/structure/closet/cabinet,/obj/random/curseditem,/obj/random/curseditem,/obj/item/weapon/melee/cursedblade,/obj/item/weapon/melee/cultblade,/obj/item/weapon/beartrap/hunting,/obj/item/weapon/beartrap/hunting,/obj/item/stack/material/phoron{amount = 25},/obj/item/stack/material/phoron{amount = 25},/obj/item/device/soulstone,/obj/item/device/soulstone,/obj/item/weapon/storage/belt/soulstone/full,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CultShip)
-"Kq" = (/obj/structure/undies_wardrobe,/turf/simulated/floor/cult,/area/survivalpod/superpose/CultShip)
-"Kt" = (/obj/machinery/power/port_gen/pacman,/obj/item/stack/material/phoron{amount = 25},/obj/structure/cable/green{d2 = 8; icon_state = "0-8"},/turf/simulated/floor/cult,/area/survivalpod/superpose/CultShip)
-"KV" = (/obj/machinery/atmospherics/unary/engine/biggest{dir = 8},/turf/simulated/floor/tiled/steel_dirty{color = "grey"},/area/survivalpod/superpose/CultShip)
-"Ln" = (/turf/simulated/floor/cult,/area/survivalpod/superpose/CultShip)
-"LR" = (/obj/effect/floor_decal/techfloor{dir = 4},/obj/machinery/light/floortube/flicker{dir = 8; pixel_x = -3},/turf/simulated/floor/tiled/techfloor/grid,/area/survivalpod/superpose/CultShip)
-"Md" = (/obj/machinery/porta_turret/alien/destroyed,/obj/effect/catwalk_plated/dark,/turf/simulated/floor/cult,/area/survivalpod/superpose/CultShip)
-"Mg" = (/obj/effect/floor_decal/techfloor{dir = 4},/turf/simulated/floor/tiled/techfloor/grid,/area/survivalpod/superpose/CultShip)
-"Mh" = (/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/CultShip)
-"Mo" = (/obj/effect/floor_decal/techfloor,/obj/effect/floor_decal/techfloor{dir = 4},/turf/simulated/floor/tiled/techfloor/grid,/area/survivalpod/superpose/CultShip)
-"MH" = (/obj/structure/bed/chair/wood/wings{dir = 4},/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/CultShip)
-"Nl" = (/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/CultShip)
-"NH" = (/obj/machinery/power/smes/buildable{icon = 'icons/obj/alien_smes.dmi'; icon_state = "unit"; input_level = 950000; name = "Alien Royal Capacitor"; output_level = 950000},/obj/effect/floor_decal/techfloor{dir = 5},/turf/simulated/floor/cult,/area/survivalpod/superpose/CultShip)
-"NJ" = (/obj/item/weapon/material/knife/ritual,/obj/structure/table/fancyblack,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/CultShip)
-"NQ" = (/obj/effect/catwalk_plated/dark,/turf/simulated/floor/tiled/steel_dirty{color = "grey"},/area/survivalpod/superpose/CultShip)
-"Oh" = (/obj/structure/salvageable/console_os{dir = 4},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/CultShip)
-"Op" = (/obj/structure/constructshell/cult,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/CultShip)
-"ON" = (/obj/structure/salvageable/computer,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/CultShip)
-"OU" = (/obj/structure/sink{dir = 4; pixel_x = 11},/obj/structure/mirror{dir = 8; pixel_x = 25},/turf/simulated/floor/cult,/area/survivalpod/superpose/CultShip)
-"Pi" = (/obj/machinery/atmospherics/pipe/tank/phoron/full{dir = 4},/turf/simulated/floor/redgrid/animated,/area/survivalpod/superpose/CultShip)
-"PR" = (/turf/simulated/floor/redgrid/animated,/area/survivalpod/superpose/CultShip)
-"Qh" = (/obj/structure/grille/cult,/obj/structure/window/phoronreinforced/full,/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/structure/window/reinforced/survival_pod,/obj/structure/window/reinforced/survival_pod{dir = 4},/turf/simulated/floor/tiled/steel_dirty{color = "grey"},/area/survivalpod/superpose/CultShip)
-"UE" = (/obj/structure/bed/chair/bay/comfy/purple{dir = 8},/obj/effect/floor_decal/techfloor{dir = 10},/turf/simulated/floor/cult,/area/survivalpod/superpose/CultShip)
-"UG" = (/turf/template_noop,/area/template_noop)
-"VA" = (/obj/effect/floor_decal/emblem/black,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CultShip)
-"VL" = (/obj/effect/floor_decal/techfloor/corner,/turf/simulated/floor/cult,/area/survivalpod/superpose/CultShip)
-"Wd" = (/obj/machinery/door/airlock/phoron,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/CultShip)
-"Wm" = (/obj/effect/floor_decal/techfloor{dir = 6},/obj/machinery/power/smes/buildable{icon = 'icons/obj/alien_smes.dmi'; icon_state = "unit"; input_level = 950000; name = "Alien Royal Capacitor"; output_level = 950000},/turf/simulated/floor/cult,/area/survivalpod/superpose/CultShip)
-"WT" = (/obj/structure/table/fancyblack,/obj/item/weapon/flame/candle/candelabra/everburn{pixel_y = 8},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/CultShip)
-"Xw" = (/obj/structure/grille/cult,/obj/structure/window/phoronreinforced/full,/obj/structure/window/reinforced/survival_pod,/obj/structure/window/reinforced/survival_pod{dir = 8},/obj/structure/window/reinforced/survival_pod{dir = 4},/turf/simulated/floor/tiled/steel_dirty{color = "grey"},/area/survivalpod/superpose/CultShip)
-"Yl" = (/obj/effect/floor_decal/techfloor/corner{dir = 4},/turf/simulated/floor/cult,/area/survivalpod/superpose/CultShip)
-"Yu" = (/obj/machinery/door/airlock/phoron,/obj/structure/fans/hardlight/colorable/abductor,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/CultShip)
-"YN" = (/obj/effect/floor_decal/techfloor{dir = 4},/obj/machinery/power/apc/alarms_hidden{dir = 1; pixel_y = 20},/obj/structure/cable/green{d2 = 4; icon_state = "0-4"},/turf/simulated/floor/tiled/techfloor/grid,/area/survivalpod/superpose/CultShip)
-"YO" = (/obj/structure/cult/talisman,/obj/item/device/soulstone,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/CultShip)
-"ZJ" = (/turf/simulated/floor/tiled/steel_dirty{color = "grey"},/area/survivalpod/superpose/CultShip)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aw" = (
+/turf/simulated/wall/cult,
+/area/survivalpod/superpose/CultShip)
+"aP" = (
+/obj/structure/table/fancyblack,
+/obj/item/weapon/book/tome/imbued,
+/obj/item/weapon/digestion_remains/skull/unathi,
+/obj/item/device/soulstone,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/CultShip)
+"be" = (
+/obj/structure/cult/pylon,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/CultShip)
+"bq" = (
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/CultShip)
+"bW" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1
+	},
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/CultShip)
+"cH" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 6
+	},
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/CultShip)
+"dJ" = (
+/obj/structure/grille/cult,
+/obj/structure/window/phoronreinforced/full,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	color = "grey"
+	},
+/area/survivalpod/superpose/CultShip)
+"eP" = (
+/obj/structure/shuttle/engine/heater{
+	dir = 4;
+	icon_state = "heater"
+	},
+/turf/simulated/wall/cult,
+/area/survivalpod/superpose/CultShip)
+"fd" = (
+/obj/structure/bed/double/padded,
+/obj/item/weapon/bedsheet/hosdouble,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/CultShip)
+"fw" = (
+/obj/machinery/light/floortube/flicker{
+	dir = 8;
+	pixel_x = -3
+	},
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/CultShip)
+"fZ" = (
+/obj/item/clothing/shoes/cult,
+/obj/item/clothing/suit/cultrobes/alt,
+/obj/item/clothing/head/helmet/space/cult,
+/obj/structure/table/fancyblack,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/CultShip)
+"gU" = (
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/cable_coil/green,
+/obj/item/stack/cable_coil/blue,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/structure/table/rack/shelf/steel,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/CultShip)
+"he" = (
+/obj/structure/cult/pylon,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/CultShip)
+"iH" = (
+/obj/machinery/door/airlock/phoron,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/CultShip)
+"jq" = (
+/obj/effect/floor_decal/techfloor,
+/obj/machinery/light/floortube/flicker{
+	pixel_y = 13
+	},
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/CultShip)
+"js" = (
+/obj/effect/floor_decal/techfloor/corner{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/CultShip)
+"jv" = (
+/obj/structure/cult/talisman,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/CultShip)
+"jO" = (
+/obj/effect/catwalk_plated/white,
+/turf/simulated/floor/tiled/steel_dirty{
+	color = "grey"
+	},
+/area/survivalpod/superpose/CultShip)
+"kf" = (
+/obj/structure/grille/cult,
+/obj/structure/window/phoronreinforced/full,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod,
+/turf/simulated/floor/tiled/steel_dirty{
+	color = "grey"
+	},
+/area/survivalpod/superpose/CultShip)
+"kT" = (
+/obj/structure/bed/chair/bay/comfy/purple{
+	dir = 8
+	},
+/obj/effect/floor_decal/techfloor{
+	dir = 9
+	},
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/CultShip)
+"mT" = (
+/obj/structure/toilet/prison{
+	name = "toilet";
+	pixel_y = 10
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4;
+	opacity = 1
+	},
+/obj/structure/curtain/open/shower/security,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/CultShip)
+"nj" = (
+/obj/machinery/light/floortube/flicker{
+	dir = 8;
+	pixel_x = 5
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/CultShip)
+"nq" = (
+/obj/item/weapon/melee/cultblade,
+/obj/structure/table/fancyblack,
+/obj/item/device/soulstone,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/CultShip)
+"oY" = (
+/obj/structure/cult/talisman,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/CultShip)
+"py" = (
+/obj/machinery/door/airlock/phoron,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/CultShip)
+"pJ" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/CultShip)
+"rC" = (
+/obj/structure/constructshell/cult,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/CultShip)
+"us" = (
+/obj/machinery/atmospherics/pipe/tank/phoron/full{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/CultShip)
+"vf" = (
+/turf/simulated/wall/phoron,
+/area/survivalpod/superpose/CultShip)
+"vl" = (
+/obj/machinery/light/floortube/flicker{
+	pixel_y = 5
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/CultShip)
+"vG" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/CultShip)
+"vX" = (
+/obj/structure/curtain/open/shower/security,
+/obj/machinery/shower{
+	pixel_y = 20
+	},
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/CultShip)
+"wl" = (
+/obj/effect/floor_decal/techfloor/corner,
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/CultShip)
+"xg" = (
+/obj/effect/floor_decal/techfloor,
+/obj/structure/cult/forge,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/CultShip)
+"xh" = (
+/obj/item/clothing/shoes/cult,
+/obj/item/clothing/suit/cultrobes/alt,
+/obj/item/clothing/head/helmet/space/cult,
+/obj/structure/table/fancyblack,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/CultShip)
+"xq" = (
+/obj/effect/catwalk_plated/dark,
+/obj/machinery/pointdefense,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/CultShip)
+"yi" = (
+/obj/structure/closet/walllocker_double/north,
+/obj/item/device/gps,
+/obj/item/sticky_pad/random,
+/obj/item/device/starcaster_news,
+/obj/item/weapon/pen/blue,
+/obj/item/device/pda,
+/obj/item/weapon/card/id/external,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
+/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
+/obj/item/clothing/accessory/permit/gun,
+/obj/item/device/camera,
+/obj/item/device/binoculars,
+/obj/item/device/threadneedle,
+/obj/random/soap,
+/obj/item/weapon/towel/random,
+/obj/item/bodybag/cryobag,
+/obj/item/device/flashlight/flare,
+/obj/item/device/flashlight/flare,
+/obj/item/device/flashlight/color/yellow,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/weapon/flame/lighter/random,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/extinguisher/mini,
+/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/weapon/reagent_containers/pill/spaceacillin,
+/obj/item/weapon/reagent_containers/pill/spaceacillin,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/stack/nanopaste,
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/weapon/storage/backpack/messenger,
+/obj/item/clothing/accessory/storage/black_drop_pouches,
+/obj/item/clothing/accessory/poncho/thermal,
+/obj/item/weapon/storage/box/survival/comp,
+/obj/item/weapon/storage/toolbox/brass,
+/obj/item/weapon/storage/box/khcrystal,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/CultShip)
+"ym" = (
+/obj/structure/grille/cult,
+/obj/structure/window/phoronreinforced/full,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	color = "grey"
+	},
+/area/survivalpod/superpose/CultShip)
+"yq" = (
+/obj/structure/grille/cult,
+/obj/structure/window/phoronreinforced/full,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	color = "grey"
+	},
+/area/survivalpod/superpose/CultShip)
+"yE" = (
+/obj/structure/table/marble{
+	color = "#B03A2E"
+	},
+/obj/random/soap{
+	pixel_y = 5
+	},
+/obj/random/soap,
+/obj/item/weapon/towel/random{
+	pixel_y = 4
+	},
+/obj/item/weapon/towel/random{
+	pixel_y = 4
+	},
+/obj/item/weapon/towel/random{
+	pixel_y = 8
+	},
+/obj/item/weapon/towel/random{
+	pixel_y = 8
+	},
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/CultShip)
+"Ai" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/machinery/light/floortube/flicker{
+	pixel_y = -3
+	},
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/CultShip)
+"Bw" = (
+/obj/structure/bed/chair/wood/wings{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/CultShip)
+"BU" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/survivalpod/superpose/CultShip)
+"BV" = (
+/obj/item/weapon/storage/backpack/cultpack,
+/obj/structure/table/fancyblack,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/CultShip)
+"CY" = (
+/obj/machinery/porta_turret/alien/destroyed,
+/obj/effect/catwalk_plated/white,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/CultShip)
+"De" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/CultShip)
+"Dz" = (
+/obj/structure/bed/chair/wood/wings{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/CultShip)
+"EA" = (
+/obj/structure/cult/tome,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/CultShip)
+"Ff" = (
+/obj/effect/catwalk_plated/white,
+/obj/machinery/pointdefense,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/CultShip)
+"Fw" = (
+/obj/structure/grille/cult,
+/obj/structure/window/phoronreinforced/full,
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	color = "grey"
+	},
+/area/survivalpod/superpose/CultShip)
+"HF" = (
+/obj/effect/floor_decal/techfloor,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/CultShip)
+"II" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 5
+	},
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/CultShip)
+"IX" = (
+/obj/structure/grille/cult,
+/obj/structure/window/phoronreinforced/full,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	color = "grey"
+	},
+/area/survivalpod/superpose/CultShip)
+"Kj" = (
+/obj/structure/closet/cabinet,
+/obj/random/curseditem,
+/obj/random/curseditem,
+/obj/item/weapon/melee/cursedblade,
+/obj/item/weapon/melee/cultblade,
+/obj/item/weapon/beartrap/hunting,
+/obj/item/weapon/beartrap/hunting,
+/obj/item/stack/material/phoron{
+	amount = 25
+	},
+/obj/item/stack/material/phoron{
+	amount = 25
+	},
+/obj/item/device/soulstone,
+/obj/item/device/soulstone,
+/obj/item/weapon/storage/belt/soulstone/full,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/CultShip)
+"Kq" = (
+/obj/structure/undies_wardrobe,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/CultShip)
+"Kt" = (
+/obj/machinery/power/port_gen/pacman,
+/obj/item/stack/material/phoron{
+	amount = 25
+	},
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/CultShip)
+"KV" = (
+/obj/machinery/atmospherics/unary/engine/biggest{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	color = "grey"
+	},
+/area/survivalpod/superpose/CultShip)
+"Ln" = (
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/CultShip)
+"LR" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/machinery/light/floortube/flicker{
+	dir = 8;
+	pixel_x = -3
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/survivalpod/superpose/CultShip)
+"Md" = (
+/obj/machinery/porta_turret/alien/destroyed,
+/obj/effect/catwalk_plated/dark,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/CultShip)
+"Mg" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/survivalpod/superpose/CultShip)
+"Mh" = (
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/CultShip)
+"Mo" = (
+/obj/effect/floor_decal/techfloor,
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/survivalpod/superpose/CultShip)
+"MH" = (
+/obj/structure/bed/chair/wood/wings{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/CultShip)
+"Nl" = (
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/CultShip)
+"NH" = (
+/obj/machinery/power/smes/buildable{
+	icon = 'icons/obj/alien_smes.dmi';
+	icon_state = "unit";
+	input_level = 950000;
+	name = "Alien Royal Capacitor";
+	output_level = 950000
+	},
+/obj/effect/floor_decal/techfloor{
+	dir = 5
+	},
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/CultShip)
+"NJ" = (
+/obj/item/weapon/material/knife/ritual,
+/obj/structure/table/fancyblack,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/CultShip)
+"NQ" = (
+/obj/effect/catwalk_plated/dark,
+/turf/simulated/floor/tiled/steel_dirty{
+	color = "grey"
+	},
+/area/survivalpod/superpose/CultShip)
+"Oh" = (
+/obj/structure/salvageable/console_os{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/CultShip)
+"Op" = (
+/obj/structure/constructshell/cult,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/CultShip)
+"OE" = (
+/obj/structure/grille/cult,
+/obj/structure/window/phoronreinforced/full,
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	color = "grey"
+	},
+/area/survivalpod/superpose/CultShip)
+"ON" = (
+/obj/structure/salvageable/computer,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/CultShip)
+"OU" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/obj/structure/mirror{
+	dir = 8;
+	pixel_x = 25
+	},
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/CultShip)
+"Pi" = (
+/obj/machinery/atmospherics/pipe/tank/phoron/full{
+	dir = 4
+	},
+/turf/simulated/floor/redgrid/animated,
+/area/survivalpod/superpose/CultShip)
+"PR" = (
+/obj/structure/closet/crate/solar,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/redgrid/animated,
+/area/survivalpod/superpose/CultShip)
+"Qh" = (
+/obj/structure/grille/cult,
+/obj/structure/window/phoronreinforced/full,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	color = "grey"
+	},
+/area/survivalpod/superpose/CultShip)
+"UE" = (
+/obj/structure/bed/chair/bay/comfy/purple{
+	dir = 8
+	},
+/obj/effect/floor_decal/techfloor{
+	dir = 10
+	},
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/CultShip)
+"UG" = (
+/turf/template_noop,
+/area/template_noop)
+"VA" = (
+/obj/effect/floor_decal/emblem/black,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/CultShip)
+"VL" = (
+/obj/effect/floor_decal/techfloor/corner,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/CultShip)
+"Wd" = (
+/obj/machinery/door/airlock/phoron,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/CultShip)
+"Wm" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 6
+	},
+/obj/machinery/power/smes/buildable{
+	icon = 'icons/obj/alien_smes.dmi';
+	icon_state = "unit";
+	input_level = 950000;
+	name = "Alien Royal Capacitor";
+	output_level = 950000
+	},
+/obj/structure/cable/green,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/CultShip)
+"WT" = (
+/obj/structure/table/fancyblack,
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	pixel_y = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/CultShip)
+"Xw" = (
+/obj/structure/grille/cult,
+/obj/structure/window/phoronreinforced/full,
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	color = "grey"
+	},
+/area/survivalpod/superpose/CultShip)
+"Yl" = (
+/obj/effect/floor_decal/techfloor/corner{
+	dir = 4
+	},
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/CultShip)
+"Yu" = (
+/obj/machinery/door/airlock/phoron,
+/obj/structure/fans/hardlight/colorable/abductor,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/CultShip)
+"YN" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 1;
+	pixel_y = 20
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/survivalpod/superpose/CultShip)
+"YO" = (
+/obj/structure/cult/talisman,
+/obj/item/device/soulstone,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/CultShip)
+"ZJ" = (
+/turf/simulated/floor/tiled/steel_dirty{
+	color = "grey"
+	},
+/area/survivalpod/superpose/CultShip)
 
 (1,1,1) = {"
-UGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUG
-UGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGCYawawawUGUGUG
-UGUGUGUGUGUGUGUGUGUGUGUGUGUGvfawyqkfQhawawawePZJZJUGUGUG
-UGUGUGUGUGUGUGUGUGxqawyqkfQhawbeNlMhNlawYNKtIXZJZJUGUGUG
-UGUGUGUGUGvfawYuawawawxhfZxhyiNlMhNlwlpyMgPRFwKVZJUGUGUG
-UGMdawyqQhawpJnjawMhNlMhNlVLHFHFjqHFWmawLRgUawNQjONQUGUG
-UGawawjvheawvGnjawNlOpNlOpDeawawyqQhawawMgPiawawawjOUGUG
-UGymOhUEHFawawYuawHFHFHFHFcHawKjbqbqfdawMoxgvfePZJZJUGUG
-UGdJONvlbqWdbqvlbqVAvlbqvlbqpybqbqbqWTawvlusvfePZJZJUGUG
-UGXwOhkTbWawbWbWbWbWbWbWbWIIawBwaPbqfdawawawvfePKVZJUGUG
-UGawawoYbeawNlMhNlMhrCMhrCDeawawyqQhawawmTvXawawawNQUGUG
-UGCYawyqQhawMHEAYODzMhNlMhYlbWbWAibWNHawfwOUawjONQjOUGUG
-UGUGUGUGUGvfawawawawawnqBVNJNlMhNlMhjspyLnLnIXZJZJUGUGUG
-UGUGUGUGUGUGUGUGUGFfawyqkfQhawheMhNlMhawKqyEFwZJZJUGUGUG
-UGUGUGUGUGUGUGUGUGUGUGUGUGUGvfawyqkfQhawawawePKVZJUGUGUG
-UGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGMdawawawUGUGUG
-UGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+"}
+(2,1,1) = {"
+UG
+UG
+UG
+UG
+UG
+Md
+aw
+ym
+dJ
+Xw
+aw
+CY
+UG
+UG
+UG
+UG
+UG
+"}
+(3,1,1) = {"
+UG
+UG
+UG
+UG
+UG
+aw
+aw
+Oh
+ON
+Oh
+aw
+aw
+UG
+UG
+UG
+UG
+UG
+"}
+(4,1,1) = {"
+UG
+UG
+UG
+UG
+UG
+yq
+jv
+UE
+vl
+kT
+oY
+yq
+UG
+UG
+UG
+UG
+UG
+"}
+(5,1,1) = {"
+UG
+UG
+UG
+UG
+UG
+Qh
+he
+HF
+bq
+bW
+be
+Qh
+UG
+UG
+UG
+UG
+UG
+"}
+(6,1,1) = {"
+UG
+UG
+UG
+UG
+vf
+aw
+aw
+aw
+Wd
+aw
+aw
+aw
+vf
+UG
+UG
+UG
+UG
+"}
+(7,1,1) = {"
+UG
+UG
+UG
+UG
+aw
+pJ
+vG
+aw
+bq
+bW
+Nl
+MH
+aw
+UG
+UG
+UG
+UG
+"}
+(8,1,1) = {"
+UG
+UG
+UG
+UG
+Yu
+nj
+nj
+Yu
+vl
+bW
+Mh
+EA
+aw
+UG
+UG
+UG
+UG
+"}
+(9,1,1) = {"
+UG
+UG
+UG
+UG
+aw
+aw
+aw
+aw
+bq
+bW
+Nl
+YO
+aw
+UG
+UG
+UG
+UG
+"}
+(10,1,1) = {"
+UG
+UG
+UG
+xq
+aw
+Mh
+Nl
+HF
+VA
+bW
+Mh
+Dz
+aw
+Ff
+UG
+UG
+UG
+"}
+(11,1,1) = {"
+UG
+UG
+UG
+aw
+aw
+Nl
+Op
+HF
+vl
+bW
+rC
+Mh
+aw
+aw
+UG
+UG
+UG
+"}
+(12,1,1) = {"
+UG
+UG
+UG
+yq
+xh
+Mh
+Nl
+HF
+bq
+bW
+Mh
+Nl
+nq
+yq
+UG
+UG
+UG
+"}
+(13,1,1) = {"
+UG
+UG
+UG
+kf
+fZ
+Nl
+Op
+HF
+vl
+bW
+rC
+Mh
+BV
+kf
+UG
+UG
+UG
+"}
+(14,1,1) = {"
+UG
+UG
+UG
+Qh
+xh
+VL
+De
+cH
+bq
+II
+De
+Yl
+NJ
+Qh
+UG
+UG
+UG
+"}
+(15,1,1) = {"
+UG
+UG
+vf
+aw
+yi
+HF
+aw
+aw
+py
+aw
+aw
+bW
+Nl
+aw
+vf
+UG
+UG
+"}
+(16,1,1) = {"
+UG
+UG
+aw
+be
+Nl
+HF
+aw
+Kj
+bq
+Bw
+aw
+bW
+Mh
+he
+aw
+UG
+UG
+"}
+(17,1,1) = {"
+UG
+UG
+yq
+Nl
+Mh
+jq
+yq
+bq
+bq
+aP
+yq
+Ai
+Nl
+Mh
+yq
+UG
+UG
+"}
+(18,1,1) = {"
+UG
+UG
+kf
+Mh
+Nl
+HF
+Qh
+bq
+bq
+bq
+Qh
+bW
+Mh
+Nl
+kf
+UG
+UG
+"}
+(19,1,1) = {"
+UG
+UG
+Qh
+Nl
+wl
+Wm
+aw
+fd
+WT
+fd
+aw
+NH
+js
+Mh
+Qh
+UG
+UG
+"}
+(20,1,1) = {"
+UG
+UG
+aw
+aw
+iH
+OE
+aw
+aw
+aw
+aw
+aw
+aw
+py
+aw
+aw
+UG
+UG
+"}
+(21,1,1) = {"
+UG
+UG
+aw
+YN
+BU
+LR
+Mg
+Mo
+vl
+aw
+mT
+fw
+Ln
+Kq
+aw
+UG
+UG
+"}
+(22,1,1) = {"
+UG
+CY
+aw
+Kt
+PR
+gU
+Pi
+xg
+us
+aw
+vX
+OU
+Ln
+yE
+aw
+Md
+UG
+"}
+(23,1,1) = {"
+UG
+aw
+eP
+IX
+Fw
+aw
+aw
+vf
+vf
+vf
+aw
+aw
+IX
+Fw
+eP
+aw
+UG
+"}
+(24,1,1) = {"
+UG
+aw
+ZJ
+ZJ
+KV
+NQ
+aw
+eP
+eP
+eP
+aw
+jO
+ZJ
+ZJ
+KV
+aw
+UG
+"}
+(25,1,1) = {"
+UG
+aw
+ZJ
+ZJ
+ZJ
+jO
+aw
+ZJ
+ZJ
+KV
+aw
+NQ
+ZJ
+ZJ
+ZJ
+aw
+UG
+"}
+(26,1,1) = {"
+UG
+UG
+UG
+UG
+UG
+NQ
+jO
+ZJ
+ZJ
+ZJ
+NQ
+jO
+UG
+UG
+UG
+UG
+UG
+"}
+(27,1,1) = {"
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+"}
+(28,1,1) = {"
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
 "}
