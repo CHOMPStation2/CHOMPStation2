@@ -242,6 +242,8 @@
 		to_chat(src, span_blue("You're pinned to a wall by [my_mob.pinned[1]]!"))
 		return 0
 
+	var/old_delay = mob.next_move //CHOMPEdit momentum
+
 	if(istype(my_mob.buckled, /obj/vehicle) || ismob(my_mob.buckled))
 		//manually set move_delay for vehicles so we don't inherit any mob movement penalties
 		//specific vehicle move delays are set in code\modules\vehicles\vehicle.dm
@@ -296,8 +298,7 @@
 					direct = turn(direct, pick(90, -90))
 					n = get_step(my_mob, direct)
 
-	total_delay = DS2NEARESTTICK(total_delay) //Rounded to the next tick in equivalent ds
-	my_mob.setMoveCooldown(total_delay)
+	//CHOMP Removal moved downwards
 
 	if(istype(my_mob.pulledby, /obj/structure/bed/chair/wheelchair))
 		. = my_mob.pulledby.relaymove(my_mob, direct)
@@ -306,9 +307,17 @@
 	else
 		. = my_mob.SelfMove(n, direct, total_delay)
 
+	//CHOMPEdit Begin
 	// If we ended up moving diagonally, increase delay.
 	if((direct & (direct - 1)) && mob.loc == n)
-		my_mob.setMoveCooldown(total_delay * SQRT_2) //CHOMPEDIT
+		total_delay *= SQRT_2 //CHOMPEDIT
+
+	//total_delay = DS2NEARESTTICK(total_delay) //Rounded to the next tick in equivalent ds
+	if(mob.last_move_time > (world.time - total_delay * 1.25))
+		mob.next_move = DS2NEARESTTICK(old_delay + total_delay)
+	else
+		mob.next_move = DS2NEARESTTICK(world.time + total_delay)
+	//CHOMPEdit End
 
 	if(!isliving(my_mob)) //CHOMPAdd
 		moving = 0
@@ -349,15 +358,39 @@
 
 	// We're not in the middle of a move anymore
 	moving = 0
+	mob.last_move_time = world.time //CHOMPEdit
 
 /mob/proc/SelfMove(turf/n, direct, movetime)
 	return Move(n, direct, movetime)
+
+
+//ChompEDIT START
+//Set your incorporeal movespeed
+//Important to note: world.time is always in deciseconds. Higher tickrates mean more subdivisions of world.time (20fps = 0.5, 40fps = 0.25)
+/client
+	var/incorporeal_speed = 0.5
+
+/client/verb/set_incorporeal_speed()
+	set category = "OOC"
+	set name = "Set Incorporeal Speed"
+
+	var/input = tgui_input_number(usr, "Set an incorporeal movement delay between 0 (fastest) and 5 (slowest)", "Incorporeal movement speed", (0.5/world.tick_lag), 5, 0)
+	incorporeal_speed = input * world.tick_lag
+//ChompEDIT End
 
 ///Process_Incorpmove
 ///Called by client/Move()
 ///Allows mobs to run though walls
 /client/proc/Process_Incorpmove(direct)
 	var/turf/mobloc = get_turf(mob)
+
+	//ChompEDIT START
+	if(incorporeal_speed)
+		var/mob/my_mob = mob
+		if(!my_mob.checkMoveCooldown()) //Only bother with speed if it isn't 0
+			return
+		my_mob.setMoveCooldown(incorporeal_speed)
+	//ChompEDIT END
 
 	switch(mob.incorporeal_move)
 		if(1)

@@ -747,6 +747,7 @@ var/list/gamemode_cache = list()
 					var/ticklag = text2num(value)
 					if(ticklag > 0)
 						fps = 10 / ticklag
+						world.fps = fps //CHOMPEdit
 
 				if("tick_limit_mc_init")
 					tick_limit_mc_init = text2num(value)
