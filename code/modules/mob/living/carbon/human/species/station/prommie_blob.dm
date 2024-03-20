@@ -86,10 +86,12 @@
 		QDEL_NULL(stored_blob)
 	return ..()
 
-/mob/living/simple_mob/slime/promethean/Stat()
-	..()
+//ChompEDIT START - TGPanel
+/mob/living/simple_mob/slime/promethean/get_status_tab_items()
+	. = ..()
 	if(humanform)
 		humanform.species.Stat(humanform)
+//ChompEDIT END
 
 /mob/living/simple_mob/slime/promethean/handle_special() // Should disable default slime healing, we'll use nutrition based heals instead.
 //ChompAdd Begins.  They already heal from their carbon form while even in slime form, but this is for a small bonus healing for being unformed.

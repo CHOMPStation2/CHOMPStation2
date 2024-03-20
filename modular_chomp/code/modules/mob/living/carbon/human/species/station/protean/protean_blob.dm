@@ -186,10 +186,12 @@
 	fulllist |= global._human_default_emotes //they're living nanites, they can make whatever sounds they want
 	return fulllist
 
-/mob/living/simple_mob/protean_blob/Stat()
-	..()
+//ChompEDIT START - TGPanel
+/mob/living/simple_mob/protean_blob/get_status_tab_items()
+	. = ..()
 	if(humanform)
-		humanform.species.Stat(humanform)
+		humanform.species.update_misc_tabs(humanform)
+//ChompEDIT END
 
 /mob/living/simple_mob/protean_blob/updatehealth()
 	if(humanform.nano_dead_check(src))

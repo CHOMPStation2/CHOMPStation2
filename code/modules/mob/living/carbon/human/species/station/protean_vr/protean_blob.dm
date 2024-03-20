@@ -99,10 +99,12 @@
 /mob/living/simple_mob/protean_blob/isSynthetic()
 	return TRUE // yup
 
-/mob/living/simple_mob/protean_blob/Stat()
-	..()
+//ChompEDIT START - TGPanel
+/mob/living/simple_mob/protean_blob/get_status_tab_items()
+	. = ..()
 	if(humanform)
-		humanform.species.Stat(humanform)
+		humanform.species.update_misc_tabs(humanform)
+//ChompEDIT END
 
 /mob/living/simple_mob/protean_blob/update_icon()
 	if(humanform)
