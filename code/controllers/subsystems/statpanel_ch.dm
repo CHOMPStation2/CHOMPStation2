@@ -31,7 +31,7 @@ SUBSYSTEM_DEF(statpanels)
 			//"Next Map: -- Not Available --",
 			"Round ID: [GLOB.round_id ? GLOB.round_id : "NULL"]",
 			"Server Time: [time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")]",
-			"Round Time: [roundduration2text()]",
+			"Round Time: [ROUND_TIME()]",
 			"Station Time: [stationtime2text()]",
 			"Time Dilation: [round(SStime_track.time_dilation_current,1)]% AVG:([round(SStime_track.time_dilation_avg_fast,1)]%, [round(SStime_track.time_dilation_avg,1)]%, [round(SStime_track.time_dilation_avg_slow,1)]%)"
 		)
