@@ -85,11 +85,11 @@
 	if(species)
 		species.update_misc_tabs(src)
 
-	if(. && istype(back,/obj/item/weapon/rig))
+	if(istype(back,/obj/item/weapon/rig))
 		var/obj/item/weapon/rig/R = back
 		RigPanel(R)
 
-	else if(. && istype(belt,/obj/item/weapon/rig))
+	else if(istype(belt,/obj/item/weapon/rig))
 		var/obj/item/weapon/rig/R = belt
 		RigPanel(R)
 
@@ -107,8 +107,8 @@
 		misc_tabs["Hardsuit Modules"] = L
 
 /mob/living/update_misc_tabs()
-	. = ..()
-	if(. && get_rig_stats)
+	..()
+	if(get_rig_stats)
 		var/obj/item/weapon/rig/rig = get_rig()
 		if(rig)
 			RigPanel(rig)

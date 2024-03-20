@@ -591,25 +591,25 @@ function draw_misc(tab) {
 			img.id = part[1];
 			storedimages[part[1]] = part[2];
 			img.onerror = iconError;
-			table.appendChild(img);
+			container.appendChild(img);
 		} else if(part[1]) {
 			var img = document.createElement("img");
 			img.onerror = iconError;
 			img.src = storedimages[part[1]];
 			img.id = part[1];
-			table.appendChild(img);
+			container.appendChild(img);
 		}
 
 		if(part[0]) {
 			var text = document.createElement("div");
 			text.className = "elem";
 			text.textContent = part[0];
-			table.appendChild(text);
+			container.appendChild(text);
 		}
 		var b = document.createElement("div");
 		var clickcatcher = "";
 		if (part[4]) {
-			b.className = "link";
+			b.className = "linkelem";
 			b.onmousedown = function (part) {
 				// The outer function is used to close over a fresh "part" variable,
 				// rather than every onmousedown getting the "part" of the last entry.
@@ -641,8 +641,9 @@ function draw_misc(tab) {
 		}
 		if(part[3]) {
 			b.textContent = part[3];
-			table.appendChild(b);
+			container.appendChild(b);
 		}
+		table.appendChild(container);
 		table.appendChild(document.createElement("br"));
 	}
 	document.getElementById("statcontent").appendChild(table);

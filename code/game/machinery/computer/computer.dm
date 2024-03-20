@@ -44,12 +44,12 @@
 				return
 			if (prob(50))
 				for(var/x in verbs)
-					remove_verb(src,x) //CHOMPEdit TGPanel
+					src.verbs -= x
 				set_broken()
 		if(3.0)
 			if (prob(25))
 				for(var/x in verbs)
-					remove_verb(src,x) //CHOMPEdit TGPanel
+					src.verbs -= x
 				set_broken()
 		else
 	return
