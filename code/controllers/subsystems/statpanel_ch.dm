@@ -160,7 +160,7 @@ SUBSYSTEM_DEF(statpanels)
 		for(var/line in description_holders["interactions"])
 			examine_update += "<font color='#084B8A'><b>[line]</b></font><br />"
 	if(description_holders["fluff"])
-		examine_update += "<font color='#298A08'><b>[description_holders["fluff"]]</b></font><br />" //Yellow, fluff-related text.
+		examine_update += "<font color='#298A08'><b>[replacetext(description_holders["fluff"], "\n", "<BR>")]</b></font><br />" //Green, fluff-related text.
 	if(description_holders["antag"])
 		examine_update += "<font color='#8A0808'><b>[description_holders["antag"]]</b></font><br />" //Red, malicious antag-related text
 
