@@ -1,0 +1,6 @@
+author: "TheCaramelion"
+delete-after: True
+changes:
+  - bugfix: "Phased shadekins being able to be attacked"
+  - bugfix: "Bump should ignore phased shadekins now"
+  - bugfix: "Smoke won't make creatures without lungs cough"
