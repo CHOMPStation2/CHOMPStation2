@@ -176,7 +176,7 @@ GLOBAL_VAR_INIT(astar_visualization_persist, 3 SECONDS)
 	start.color = ASTAR_VISUAL_COLOR_OPEN
 	#endif
 
-	while(length(open.queue))
+	while(length(open.array))
 		// get best node
 		var/datum/astar_node/top = open.dequeue()
 		current = top.pos
@@ -231,7 +231,7 @@ GLOBAL_VAR_INIT(astar_visualization_persist, 3 SECONDS)
 		turfs_got_colored[top.pos] = TRUE
 		#endif
 
-		if(length(open.queue) > ASTAR_SANE_NODE_LIMIT)
+		if(length(open.array) > ASTAR_SANE_NODE_LIMIT)
 			#ifdef ASTAR_DEBUGGING
 			astar_wipe_colors_after(turfs_got_colored, GLOB.astar_visualization_persist)
 			#endif

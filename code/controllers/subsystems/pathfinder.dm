@@ -19,7 +19,7 @@ SUBSYSTEM_DEF(pathfinder)
 	/// pathfinding cycle - this is usable because of the mutex
 	/// this is used in place of a closed list in algorithms like JPS
 	/// to maximize performance.
-	var/pathfinding_cycle = 0
+	var/tmp/pathfinding_cycle = 0
 
 /**
  * be aware that this emits a set of disjunct nodes
@@ -40,14 +40,14 @@ SUBSYSTEM_DEF(pathfinder)
 
 /datum/controller/subsystem/pathfinder/proc/default_ai_pathfinding(datum/ai_holder/holder, turf/goal, min_dist = 1, max_path = 128)
 	var/datum/pathfinding/astar/instance = new(holder.holder, get_turf(holder.holder), goal, min_dist, max_path * 2)
-	var/obj/item/card/id/potential_id = holder.holder.GetIdCard()
+	var/obj/item/weapon/card/id/potential_id = holder.holder.GetIdCard()
 	if(!isnull(potential_id))
 		instance.ss13_with_access = potential_id.access?.Copy()
 	return run_pathfinding(instance)
 
-/datum/controller/subsystem/pathfinder/proc/default_circuit_pathfinding(obj/item/electronic_assembly/assembly, turf/goal, min_dist = 1, max_path = 128)
+/datum/controller/subsystem/pathfinder/proc/default_circuit_pathfinding(obj/item/electronic_assembly/assembly, turf/goal, min_dist = 1, max_path = 128, var/list/access)
 	var/datum/pathfinding/jps/instance = new(assembly, get_turf(assembly), goal, min_dist, max_path)
-	instance.ss13_with_access = assembly.access_card?.access?.Copy()
+	instance.ss13_with_access = access.Copy()
 	return jps_output_turfs(run_pathfinding(instance))
 
 /datum/controller/subsystem/pathfinder/proc/default_bot_pathfinding(mob/living/bot/bot, turf/goal, min_dist = 1, max_path = 128)
@@ -104,8 +104,8 @@ SUBSYSTEM_DEF(pathfinder)
 	return tg_instance.search()
 
 /proc/pathfinding_run_all(turf/start = get_turf(usr), turf/goal)
-	var/pass_silicons_astar = SSpathfinder.get_path_astar(goal = goal, start = start, target_distance = 1, max_path_length = 128)
-	var/pass_silicons_jps = SSpathfinder.get_path_jps(goal = goal, start = start, target_distance = 1, max_path_length = 128)
+	var/pass_silicons_astar = SSpathfinder.get_path_astar(goal = goal, start = start, target_distance = 1, max_path_length = 256)
+	var/pass_silicons_jps = SSpathfinder.get_path_jps(goal = goal, start = start, target_distance = 1, max_path_length = 256)
 	// old astar has been cut because it's such horrible code it's not worth benchmarking against the other 3.
 	// var/pass_old_astar = graph_astar(
 	// 	start,
@@ -117,7 +117,7 @@ SUBSYSTEM_DEF(pathfinder)
 	// 	1,
 	// )
 	var/atom/movable/delegate_for_tg = new(start)
-	var/datum/tg_jps_pathfind/tg_instance = new(delegate_for_tg, goal, null, 128, 1, FALSE, null)
+	var/datum/tg_jps_pathfind/tg_instance = new(delegate_for_tg, goal, null, 256, 1, FALSE, null)
 	var/pass_tg_jps = tg_instance.search()
 	pass_silicons_astar = !!length(pass_silicons_astar)
 	pass_silicons_jps = !!length(pass_silicons_jps)

@@ -143,6 +143,34 @@ GLOBAL_DATUM_INIT(generic_pathfinding_actor, /atom/movable/pathfinding_predicate
 /proc/default_pathfinding_heuristic(turf/current, turf/goal)
 	return max(abs(current.x - goal.x), abs(current.y - goal.y))
 
+/proc/jps_pathfinding_adjacency(turf/A, turf/B, atom/movable/actor, datum/pathfinding/search)
+	// we really need to optimize this furthur
+	// this currently catches abstract stuff like lighting objects
+	// not great for performance.
+
+	if(B.density)
+		return FALSE
+	if((B.turf_path_danger & search.turf_path_danger_ignore) != B.turf_path_danger)
+		return FALSE
+
+	var/dir = get_dir(A, B)
+
+	if(dir & (dir - 1))
+		var/td1 = dir & (NORTH|SOUTH)
+		var/td2 = dir & (EAST|WEST)
+		var/turf/scan = get_step(A, td1)
+		if(!isnull(scan) && jps_pathfinding_adjacency(A, scan, actor, search) && jps_pathfinding_adjacency(scan, B, actor, search))
+			return TRUE
+		scan = get_step(A, td2)
+		if(!isnull(scan) && jps_pathfinding_adjacency(A, scan, actor, search) && jps_pathfinding_adjacency(scan, B, actor, search))
+			return TRUE
+		return FALSE
+
+	for(var/atom/movable/AM as anything in B)
+		if(!AM.can_pathfinding_pass(actor, search))
+			return FALSE
+	return TRUE
+
 /**
  * This is a pretty hot proc used during pathfinding to see if something
  * should be able to pass through this movable in a certain direction.
@@ -160,3 +188,12 @@ GLOBAL_DATUM_INIT(generic_pathfinding_actor, /atom/movable/pathfinding_predicate
  */
 /atom/movable/proc/can_pathfinding_exit(atom/movable/actor, dir, datum/pathfinding/search)
 	return !(atom_flags & ATOM_BORDER) || !density || (pass_flags_self & actor.pass_flags)
+
+/**
+ * basically, non directional pathfinding enter/exit checks
+ *
+ * this is used for JPS because it does not at all play nicely with situations where one direction
+ * is blocked and another isn't.
+ */
+/atom/movable/proc/can_pathfinding_pass(atom/movable/actor, datum/pathfinding/search)
+	return !density || (pass_flags_self & actor.pass_flags)
