@@ -109,8 +109,8 @@ SUBSYSTEM_DEF(statpanels)
 					target.stat_panel.send_message("remove_listedturf")
 					target_mob.listed_turf = null
 
-				else if(target.stat_tab == target_mob?.listed_turf.name || !(target_mob?.listed_turf.name in target.panel_tabs))
-					set_turf_examine_tab(target, target_mob)
+				//else if(target.stat_tab == target_mob?.listed_turf.name || !(target_mob?.listed_turf.name in target.panel_tabs))
+					//set_turf_examine_tab(target, target_mob)
 
 		if(MC_TICK_CHECK)
 			return
