@@ -5,7 +5,7 @@
 
 SUBSYSTEM_DEF(pathfinder)
 	name = "Pathfinder"
-	subsystem_flags = SS_NO_INIT | SS_NO_FIRE
+	flags = SS_NO_INIT | SS_NO_FIRE
 
 	/// pathfinding mutex - most algorithms depend on this
 	/// multi "threading" in byond just adds overhead
@@ -45,7 +45,7 @@ SUBSYSTEM_DEF(pathfinder)
 		instance.ss13_with_access = potential_id.access?.Copy()
 	return run_pathfinding(instance)
 
-/datum/controller/subsystem/pathfinder/proc/default_circuit_pathfinding(obj/item/electronic_assembly/assembly, turf/goal, min_dist = 1, max_path = 128, var/list/access)
+/datum/controller/subsystem/pathfinder/proc/default_circuit_pathfinding(obj/item/device/electronic_assembly/assembly, turf/goal, min_dist = 1, max_path = 128, var/list/access)
 	var/datum/pathfinding/jps/instance = new(assembly, get_turf(assembly), goal, min_dist, max_path)
 	instance.ss13_with_access = access.Copy()
 	return jps_output_turfs(run_pathfinding(instance))

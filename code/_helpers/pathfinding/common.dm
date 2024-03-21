@@ -8,8 +8,8 @@ GLOBAL_DATUM_INIT(generic_pathfinding_actor, /atom/movable/pathfinding_predicate
 
 /atom/movable/pathfinding_predicate
 	invisibility = INVISIBILITY_ABSTRACT
-	pass_flags = ATOM_PASS_CLICK
-	pass_flags_self = NONE
+	//pass_flags = ATOM_PASS_CLICK
+	//pass_flags_self = NONE
 
 /**
  * datum used for pathfinding
@@ -178,7 +178,7 @@ GLOBAL_DATUM_INIT(generic_pathfinding_actor, /atom/movable/pathfinding_predicate
  * dir is where they're coming from
  */
 /atom/movable/proc/can_pathfinding_enter(atom/movable/actor, dir, datum/pathfinding/search)
-	return !density || (pass_flags_self & actor.pass_flags)
+	return !density /*|| (pass_flags_self & actor.pass_flags)*/
 
 /**
  * This is a pretty hot proc used during pathfinding to see if something
@@ -187,7 +187,7 @@ GLOBAL_DATUM_INIT(generic_pathfinding_actor, /atom/movable/pathfinding_predicate
  * dir is where they're going to
  */
 /atom/movable/proc/can_pathfinding_exit(atom/movable/actor, dir, datum/pathfinding/search)
-	return !(atom_flags & ATOM_BORDER) || !density || (pass_flags_self & actor.pass_flags)
+	return !(flags & ON_BORDER) || !density /*|| (pass_flags_self & actor.pass_flags)*/
 
 /**
  * basically, non directional pathfinding enter/exit checks
@@ -196,4 +196,4 @@ GLOBAL_DATUM_INIT(generic_pathfinding_actor, /atom/movable/pathfinding_predicate
  * is blocked and another isn't.
  */
 /atom/movable/proc/can_pathfinding_pass(atom/movable/actor, datum/pathfinding/search)
-	return !density || (pass_flags_self & actor.pass_flags)
+	return !density /*|| (pass_flags_self & actor.pass_flags)*/

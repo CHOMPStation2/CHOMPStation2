@@ -142,8 +142,10 @@ Quick adjacency (to turf):
 
 	Since I don't want to complicate the click code rework by messing with unrelated systems it won't be changed here.
 */
-
-
+///True if the dir is north or south, false therwise
+#define NSCOMPONENT(d)   (d&(NORTH|SOUTH))
+///True if the dir is east/west, false otherwise
+#define EWCOMPONENT(d)   (d&(EAST|WEST))
 /**
  * Turf adjacency
  *
@@ -189,3 +191,5 @@ Quick adjacency (to turf):
 		ClickCross(turn(d1, 180), TRUE, target, mover))
 		return TRUE
 	return FALSE
+#undef NSCOMPONENT
+#undef EWCOMPONENT

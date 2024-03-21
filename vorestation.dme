@@ -179,6 +179,7 @@
 #include "code\_helpers\view.dm"
 #include "code\_helpers\visual_filters.dm"
 #include "code\_helpers\widelists_ch.dm"
+#include "code\_helpers\graphs\astar.dm"
 #include "code\_helpers\icons\flatten.dm"
 #include "code\_helpers\logging\ui.dm"
 #include "code\_helpers\pathfinding\astar.dm"

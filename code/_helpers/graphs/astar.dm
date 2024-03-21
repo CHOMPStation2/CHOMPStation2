@@ -114,7 +114,7 @@
 				var/datum/graph_astar_node/target = path_node_by_position[datum]
 				if(target.best_estimated_cost)
 					if(best_estimated_cost + call(datum, dist)(end) < target.best_estimated_cost)
-						open.remove_item(target)
+						open.remove_entry(target)
 					else
 						continue
 
@@ -122,7 +122,7 @@
 			path_node_by_position[datum] = next_node
 			open.enqueue(next_node)
 
-			if(max_nodes && length(open.queue) > max_nodes)
-				open.remove(length(open.queue))
+			if(max_nodes && length(open.array) > max_nodes)
+				open.remove_index(length(open.array))
 
 	return path

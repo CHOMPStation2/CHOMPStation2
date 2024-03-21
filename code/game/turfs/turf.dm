@@ -59,8 +59,8 @@
 		directional_opacity = ALL_CARDINALS
 
 	//Pathfinding related
-	if(movement_cost && pathweight == 1) // This updates pathweight automatically.
-		pathweight = movement_cost
+	if(movement_cost && path_weight == 1) // This updates pathweight automatically.
+		path_weight = movement_cost
 
 	var/turf/Ab = GetAbove(src)
 	if(Ab)

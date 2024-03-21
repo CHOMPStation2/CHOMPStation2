@@ -38,7 +38,8 @@
 		if(L.mob_size <= MOB_TINY)
 			return TRUE
 		return FALSE
-	return isnull(actor.pulling)? TRUE : can_pathfinding_enter(actor.pulling, dir, search)
+	return TRUE
+	//return isnull(actor.pulling)? TRUE : can_pathfinding_enter(actor.pulling, dir, search)
 
 /obj/structure/plasticflaps/CanPass(atom/A, turf/T)
 	if(istype(A) && A.checkpass(PASSGLASS))
