@@ -17,9 +17,5 @@
     "strictNullChecks": true,
     "target": "ES5"
   },
-  "include": ["./*.d.ts", "./packages"],
-  // CHOMPEdit - Until removed
-  "exclude": [
-    "./packages/tgui_ch/**"
-  ]
+  "include": ["./*.d.ts", "./packages"]
 }

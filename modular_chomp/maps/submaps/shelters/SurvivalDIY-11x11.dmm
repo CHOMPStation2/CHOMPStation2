@@ -238,6 +238,7 @@
 	},
 /obj/item/weapon/rcd_ammo/large,
 /obj/item/weapon/rcd_ammo/large,
+/obj/item/areaeditor/blueprints/engineers,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/SurvivalDIY_11x11)
 "w" = (
@@ -353,6 +354,9 @@
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/SurvivalDIY_11x11)
+"C" = (
+/turf/simulated/wall,
+/area/survivalpod/superpose/SurvivalDIY_11x11)
 "F" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/plating,
@@ -368,7 +372,9 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/SurvivalDIY_11x11)
 "O" = (
-/obj/structure/closet/secure_closet/engineering_electrical,
+/obj/structure/closet/secure_closet/engineering_electrical{
+	locked = 0
+	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/SurvivalDIY_11x11)
 "P" = (
@@ -408,6 +414,19 @@
 /obj/vehicle/train/engine,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/SurvivalDIY_11x11)
+"T" = (
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 8;
+	pixel_y = 0;
+	pixel_x = -24;
+	req_access = null
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalDIY_11x11)
+"U" = (
+/obj/structure/closet/crate/solar,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalDIY_11x11)
 "X" = (
 /obj/machinery/vending/tool{
 	emagged = 1;
@@ -443,7 +462,7 @@ X
 a
 a
 w
-a
+C
 e
 "}
 (3,1,1) = {"
@@ -456,7 +475,7 @@ b
 a
 a
 v
-a
+T
 e
 "}
 (4,1,1) = {"
@@ -468,7 +487,7 @@ q
 O
 a
 a
-a
+U
 a
 e
 "}
