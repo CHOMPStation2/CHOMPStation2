@@ -17124,11 +17124,6 @@
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/escape_pod4/station)
 "hGl" = (
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -17146,6 +17141,11 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled,
 /area/ai_monitored/storage/eva/aux)
