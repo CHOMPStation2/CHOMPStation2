@@ -432,10 +432,10 @@ function remove_sdql2() {
 }
 
 function iconError(e) {
-	if(current_tab != turfname) {
-		return;
-	}
 	setTimeout(function () {
+		if(current_tab != turfname) {
+			return;
+		}
 		var node = e.target;
 		var current_attempts = Number(node.getAttribute("data-attempts")) || 0;
 		if (current_attempts > imageRetryLimit) {
