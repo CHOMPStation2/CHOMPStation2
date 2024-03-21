@@ -13,7 +13,7 @@
 /area/survivalpod/superpose/MechFabShip)
 "aq" = (
 /obj/machinery/sleeper/survival_pod,
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "at" = (
 /obj/structure/closet/walllocker_double/medical/west,
@@ -22,7 +22,7 @@
 /obj/item/weapon/storage/firstaid/toxin,
 /obj/item/weapon/storage/firstaid/o2,
 /obj/item/roller,
-/turf/simulated/shuttle/floor/darkred,
+/turf/simulated/floor/tiled/red,
 /area/survivalpod/superpose/MechFabShip)
 "aF" = (
 /obj/structure/salvageable/console_os,
@@ -51,12 +51,9 @@
 /area/survivalpod/superpose/MechFabShip)
 "bk" = (
 /obj/item/device/gps/computer,
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "bI" = (
-/obj/machinery/atmospherics/binary/circulator{
-	anchored = 1
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MechFabShip)
@@ -87,7 +84,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/MechFabShip)
 "dh" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -118,7 +115,7 @@
 /obj/structure/cryofeed{
 	dir = 4
 	},
-/turf/simulated/floor/greengrid/nitrogen,
+/turf/simulated/floor/tiled/red,
 /area/survivalpod/superpose/MechFabShip)
 "eP" = (
 /obj/machinery/atmospherics/portables_connector,
@@ -161,7 +158,7 @@
 /obj/item/device/kit/paint/durand/seraph,
 /obj/structure/table/rack/shelf/steel,
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/shuttle/floor/voidcraft/light,
+/turf/simulated/floor/tiled/milspec,
 /area/survivalpod/superpose/MechFabShip)
 "hu" = (
 /obj/machinery/cryopod/robot{
@@ -184,13 +181,13 @@
 	dir = 4
 	},
 /obj/structure/closet/walllocker/emerglocker/east,
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/MechFabShip)
 "hH" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 8
 	},
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/MechFabShip)
 "hI" = (
 /obj/machinery/door/airlock/glass_centcom{
@@ -204,6 +201,7 @@
 /obj/effect/floor_decal/techfloor/orange/corner{
 	dir = 1
 	},
+/obj/structure/closet/crate/solar,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "it" = (
@@ -228,7 +226,7 @@
 	specialfunctions = 4
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/shuttle/floor/voidcraft/light,
+/turf/simulated/floor/tiled/milspec,
 /area/survivalpod/superpose/MechFabShip)
 "iC" = (
 /turf/template_noop,
@@ -318,7 +316,7 @@
 /obj/machinery/light/poi{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/MechFabShip)
 "iI" = (
 /obj/structure/sign/warning/vacuum,
@@ -336,7 +334,7 @@
 /obj/machinery/light/poi{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/MechFabShip)
 "iU" = (
 /obj/structure/salvageable/computer_os,
@@ -367,9 +365,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MechFabShip)
 "jE" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
@@ -382,7 +377,7 @@
 	dir = 8
 	},
 /obj/structure/cryofeed,
-/turf/simulated/floor/greengrid/nitrogen,
+/turf/simulated/floor/tiled/red,
 /area/survivalpod/superpose/MechFabShip)
 "kz" = (
 /obj/structure/salvageable/console_broken_os,
@@ -410,7 +405,7 @@
 	id = "kalipsoshutters";
 	name = "Kalipso Blast Shielding"
 	},
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "kJ" = (
 /obj/structure/closet/walllocker_double/kitchen/east{
@@ -437,7 +432,7 @@
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/turf/simulated/shuttle/floor/darkred,
+/turf/simulated/floor/tiled/red,
 /area/survivalpod/superpose/MechFabShip)
 "lC" = (
 /obj/machinery/atmospherics/portables_connector,
@@ -456,15 +451,24 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MechFabShip)
 "lZ" = (
-/obj/machinery/space_heater,
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/power/rtg/advanced,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "mf" = (
 /obj/structure/bed/chair/bay/comfy/captain{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/darkred,
+/turf/simulated/floor/tiled/red,
 /area/survivalpod/superpose/MechFabShip)
 "mG" = (
 /obj/structure/sign/kiddieplaque{
@@ -475,7 +479,7 @@
 /area/template_noop)
 "ny" = (
 /obj/effect/floor_decal/industrial/loading,
-/turf/simulated/shuttle/floor/voidcraft/light,
+/turf/simulated/floor/tiled/milspec,
 /area/survivalpod/superpose/MechFabShip)
 "nJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -489,7 +493,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
-/turf/simulated/shuttle/floor/yellow,
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/MechFabShip)
 "oS" = (
 /obj/structure/table/steel_reinforced,
@@ -502,7 +506,20 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/techmaint,
+/obj/machinery/power/apc/hyper{
+	coverlocked = 0;
+	dir = 4;
+	environ = 1;
+	equipment = 1;
+	lighting = 1;
+	locked = 0;
+	pixel_x = 23
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/MechFabShip)
 "ph" = (
 /turf/simulated/wall/skipjack,
@@ -533,20 +550,17 @@
 	id = "kalipsoshutters";
 	name = "Kalipso Blast Shielding"
 	},
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "qf" = (
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 6
 	},
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "qk" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
-	},
-/obj/machinery/atmospherics/portables_connector{
-	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -554,6 +568,20 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 5
+	},
+/obj/structure/sign/atmos/air{
+	pixel_x = -32
+	},
+/obj/machinery/power/port_gen/pacman{
+	anchored = 1
+	},
+/obj/item/stack/material/phoron{
+	amount = 25
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
@@ -563,9 +591,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MechFabShip)
 "qU" = (
-/obj/machinery/atmospherics/portables_connector{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/portable_atmospherics/canister/phoron,
@@ -577,7 +602,7 @@
 "qX" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/cell_charger,
-/turf/simulated/shuttle/floor/yellow,
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/MechFabShip)
 "qY" = (
 /obj/machinery/vending/robotics{
@@ -603,7 +628,7 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "rZ" = (
-/turf/simulated/shuttle/floor/voidcraft,
+/turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MechFabShip)
 "sd" = (
 /obj/machinery/access_button{
@@ -630,18 +655,18 @@
 /obj/machinery/light/poi{
 	dir = 4
 	},
-/turf/simulated/shuttle/floor/darkred,
+/turf/simulated/floor/tiled/red,
 /area/survivalpod/superpose/MechFabShip)
 "te" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "tk" = (
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/MechFabShip)
 "tC" = (
 /obj/machinery/mech_recharger,
-/turf/simulated/shuttle/floor/voidcraft/light,
+/turf/simulated/floor/tiled/milspec,
 /area/survivalpod/superpose/MechFabShip)
 "uU" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
@@ -667,37 +692,29 @@
 	dir = 8
 	},
 /obj/machinery/r_n_d/server/robotics,
-/turf/simulated/floor/bluegrid{
-	name = "Server Base";
-	nitrogen = 500;
-	oxygen = 0;
-	temperature = 80
-	},
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/MechFabShip)
 "vt" = (
-/obj/machinery/power/generator{
-	anchored = 1;
-	dir = 8
+/obj/effect/floor_decal/techfloor,
+/obj/structure/cable/green{
+	icon_state = "1-4"
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "vC" = (
 /obj/machinery/power/terminal{
 	dir = 8
 	},
-/obj/structure/cable/green,
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "vO" = (
 /obj/effect/floor_decal/techfloor,
-/turf/simulated/shuttle/floor/voidcraft,
+/turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MechFabShip)
 "ws" = (
 /obj/machinery/airlock_sensor{
@@ -717,11 +734,16 @@
 "yh" = (
 /obj/structure/bed/pod,
 /obj/item/weapon/bedsheet/captain,
-/turf/simulated/shuttle/floor/voidcraft,
+/turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MechFabShip)
 "yH" = (
 /obj/effect/floor_decal/techfloor/corner,
-/turf/simulated/shuttle/plating,
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "yN" = (
 /obj/structure/bed/chair/bay/shuttle{
@@ -731,7 +753,7 @@
 	dir = 8
 	},
 /obj/structure/closet/walllocker/emerglocker/west,
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "yS" = (
 /obj/machinery/atmospherics/unary/engine/biggest{
@@ -742,7 +764,7 @@
 "zd" = (
 /obj/structure/bed/pod,
 /obj/item/weapon/bedsheet/ce,
-/turf/simulated/shuttle/floor/voidcraft,
+/turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MechFabShip)
 "zj" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
@@ -772,7 +794,7 @@
 /obj/machinery/microwave{
 	pixel_y = 6
 	},
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "zU" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
@@ -789,7 +811,7 @@
 	pixel_x = 4;
 	pixel_y = -30
 	},
-/turf/simulated/shuttle/floor/yellow,
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/MechFabShip)
 "Bf" = (
 /obj/machinery/meter,
@@ -797,6 +819,11 @@
 /obj/structure/closet/walllocker_double/hydrant/east,
 /obj/structure/closet/walllocker/emerglocker/south,
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/machinery/power/rtg/advanced,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "Bk" = (
@@ -840,12 +867,12 @@
 /obj/item/trash/rkibble{
 	pixel_x = 8
 	},
-/turf/simulated/shuttle/floor/voidcraft,
+/turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MechFabShip)
 "BY" = (
 /obj/effect/catwalk_plated/dark,
 /obj/machinery/shipsensors,
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "Cu" = (
 /obj/machinery/door/airlock/multi_tile/metal/mait{
@@ -905,7 +932,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MechFabShip)
 "DF" = (
-/turf/simulated/shuttle/floor/yellow,
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/MechFabShip)
 "DS" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
@@ -944,7 +971,7 @@
 	id = "kalipsoshutters";
 	name = "Kalipso Blast Shielding"
 	},
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "Gl" = (
 /obj/machinery/access_button{
@@ -962,7 +989,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/survivalpod/superpose/MechFabShip)
 "Gr" = (
-/obj/machinery/power/smes/buildable/hybrid,
 /obj/structure/cable/green{
 	d2 = 4;
 	icon_state = "0-4"
@@ -972,24 +998,30 @@
 /obj/structure/sign/electricshock{
 	pixel_x = -32
 	},
+/obj/machinery/power/smes/buildable/point_of_interest,
+/obj/structure/cable/green,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "GQ" = (
-/obj/machinery/atmospherics/pipe/tank/air{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light/small/emergency{
 	dir = 8
 	},
-/obj/structure/sign/atmos/air{
-	pixel_x = -32
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "GS" = (
 /obj/machinery/door/airlock/glass_centcom{
 	name = "Starboard Wing Atmos"
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/survivalpod/superpose/MechFabShip)
@@ -998,7 +1030,7 @@
 	dir = 4
 	},
 /obj/structure/closet/walllocker/medical/west,
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "HC" = (
 /obj/machinery/mecha_part_fabricator,
@@ -1006,11 +1038,11 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/MechFabShip)
 "HE" = (
 /obj/item/weapon/stool/padded,
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/MechFabShip)
 "HS" = (
 /obj/machinery/door/airlock/glass_centcom{
@@ -1024,19 +1056,16 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/MechFabShip)
 "IS" = (
 /obj/structure/closet/emcloset,
 /obj/machinery/light/poi{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/voidcraft,
+/turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MechFabShip)
 "Jv" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	dir = 4
-	},
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
 	},
@@ -1069,18 +1098,20 @@
 	pixel_x = 4;
 	pixel_y = -30
 	},
-/turf/simulated/shuttle/floor/white,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/MechFabShip)
 "KC" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 9
-	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/MechFabShip)
 "KR" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
@@ -1106,7 +1137,7 @@
 /area/survivalpod/superpose/MechFabShip)
 "LN" = (
 /obj/structure/window/reinforced/survival_pod,
-/turf/simulated/shuttle/floor/darkred,
+/turf/simulated/floor/tiled/red,
 /area/survivalpod/superpose/MechFabShip)
 "Ms" = (
 /obj/machinery/smartfridge/survival_pod,
@@ -1204,7 +1235,7 @@
 /obj/machinery/light/poi{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/voidcraft,
+/turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MechFabShip)
 "Mv" = (
 /obj/machinery/door/blast/regular{
@@ -1241,12 +1272,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
-/turf/simulated/floor/bluegrid{
-	name = "Server Base";
-	nitrogen = 500;
-	oxygen = 0;
-	temperature = 80
-	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/survivalpod/superpose/MechFabShip)
 "ND" = (
 /obj/structure/sign/deck1,
@@ -1254,18 +1280,18 @@
 /area/survivalpod/superpose/MechFabShip)
 "Oo" = (
 /obj/item/weapon/stool/padded,
-/turf/simulated/shuttle/floor/yellow,
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/MechFabShip)
 "Ov" = (
 /obj/machinery/optable{
 	name = "Robotics Operating Table"
 	},
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/MechFabShip)
 "OO" = (
 /obj/structure/bed/pod,
 /obj/item/weapon/bedsheet/hos,
-/turf/simulated/shuttle/floor/voidcraft,
+/turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MechFabShip)
 "Py" = (
 /obj/machinery/smartfridge/survival_pod{
@@ -1397,7 +1423,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/MechFabShip)
 "PH" = (
 /obj/structure/window/reinforced/survival_pod{
@@ -1407,20 +1433,7 @@
 /obj/structure/sign/department/rnd{
 	pixel_y = 32
 	},
-/turf/simulated/floor/bluegrid{
-	name = "Server Base";
-	nitrogen = 500;
-	oxygen = 0;
-	temperature = 80
-	},
-/area/survivalpod/superpose/MechFabShip)
-"PP" = (
-/obj/machinery/atmospherics/binary/circulator{
-	anchored = 1;
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/survivalpod/superpose/MechFabShip)
 "Qs" = (
 /obj/machinery/door/airlock/glass_centcom{
@@ -1436,7 +1449,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/MechFabShip)
 "QJ" = (
 /obj/machinery/disperser/middle{
@@ -1485,7 +1498,7 @@
 /obj/item/trash/rkibble{
 	pixel_x = 8
 	},
-/turf/simulated/shuttle/floor/voidcraft,
+/turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MechFabShip)
 "RE" = (
 /obj/machinery/recharge_station,
@@ -1496,7 +1509,7 @@
 /area/survivalpod/superpose/MechFabShip)
 "SE" = (
 /obj/item/weapon/stool/padded,
-/turf/simulated/shuttle/floor/voidcraft,
+/turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MechFabShip)
 "SW" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -1508,9 +1521,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MechFabShip)
 "Ta" = (
-/obj/machinery/atmospherics/portables_connector{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
@@ -1522,7 +1532,7 @@
 "Th" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/mecha_part_fabricator/pros,
-/turf/simulated/floor/tiled/techmaint,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/MechFabShip)
 "TI" = (
 /obj/structure/bed/chair/bay/shuttle{
@@ -1532,30 +1542,40 @@
 	dir = 4
 	},
 /obj/structure/closet/walllocker/emerglocker/east,
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "Ud" = (
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 10
 	},
-/turf/simulated/shuttle/plating,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "Uj" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
 	},
+/obj/structure/closet/crate/solar,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "UI" = (
 /obj/effect/floor_decal/industrial/loading{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/voidcraft/light,
+/turf/simulated/floor/tiled/milspec,
 /area/survivalpod/superpose/MechFabShip)
 "UL" = (
-/turf/simulated/shuttle/plating,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "Vf" = (
 /obj/structure/closet/walllocker/emerglocker{
@@ -1576,7 +1596,7 @@
 	pixel_x = -28;
 	specialfunctions = 4
 	},
-/turf/simulated/shuttle/floor/darkred,
+/turf/simulated/floor/tiled/red,
 /area/survivalpod/superpose/MechFabShip)
 "Vj" = (
 /obj/machinery/r_n_d/protolathe,
@@ -1584,19 +1604,19 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/MechFabShip)
 "VZ" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/foodcart,
-/turf/simulated/shuttle/floor/voidcraft/light,
+/turf/simulated/floor/tiled/milspec,
 /area/survivalpod/superpose/MechFabShip)
 "Wl" = (
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 8
 	},
 /obj/structure/closet/walllocker/medical/east,
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "WE" = (
 /obj/structure/sign/ironhammer,
@@ -1616,7 +1636,7 @@
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 8
 	},
-/turf/simulated/shuttle/floor/voidcraft,
+/turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MechFabShip)
 "WY" = (
 /obj/structure/window/plastitanium/full,
@@ -1633,17 +1653,9 @@
 	id = "kalipsoshutters";
 	name = "Kalipso Blast Shielding"
 	},
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "Xe" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
@@ -1662,7 +1674,7 @@
 /obj/structure/sign/department/commander{
 	pixel_y = -32
 	},
-/turf/simulated/floor/greengrid/nitrogen,
+/turf/simulated/floor/tiled/red,
 /area/survivalpod/superpose/MechFabShip)
 "Xx" = (
 /obj/structure/window/plastitanium/full,
@@ -1684,7 +1696,7 @@
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
 	},
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "Yb" = (
 /obj/machinery/door/airlock/glass_centcom{
@@ -1697,22 +1709,29 @@
 	dir = 8
 	},
 /obj/structure/closet/walllocker/emerglocker/west,
-/turf/simulated/shuttle/floor/yellow,
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/MechFabShip)
 "Yl" = (
 /obj/structure/fans,
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "Yo" = (
-/obj/machinery/power/port_gen/pacman{
-	anchored = 1
-	},
 /obj/structure/cable/green{
 	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/power/rtg/advanced,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "Yt" = (
@@ -1724,7 +1743,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
-/turf/simulated/shuttle/floor/yellow,
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/MechFabShip)
 "YP" = (
 /obj/machinery/disperser/front{
@@ -1733,17 +1752,17 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "Zg" = (
-/turf/simulated/shuttle/floor/voidcraft/light,
+/turf/simulated/floor/tiled/milspec,
 /area/survivalpod/superpose/MechFabShip)
 "Zm" = (
 /obj/effect/floor_decal/techfloor,
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "Zs" = (
 /obj/structure/bed/chair/bay/comfy/black{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/voidcraft/light,
+/turf/simulated/floor/tiled/milspec,
 /area/survivalpod/superpose/MechFabShip)
 "Zt" = (
 /obj/structure/shuttle/engine/heater,
@@ -1758,7 +1777,7 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "ZE" = (
-/turf/simulated/shuttle/floor/darkred,
+/turf/simulated/floor/tiled/red,
 /area/survivalpod/superpose/MechFabShip)
 "ZH" = (
 /obj/machinery/recharge_station,
@@ -1784,7 +1803,7 @@
 	id = "kalipsoshutters";
 	name = "Kalipso Blast Shielding"
 	},
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 
 (1,1,1) = {"
@@ -1936,7 +1955,7 @@ ph
 sd
 ph
 Jv
-vt
+bI
 dh
 Zt
 dz
@@ -1962,7 +1981,7 @@ rZ
 rZ
 vO
 uU
-PP
+bI
 Uj
 Zt
 dz
@@ -2062,8 +2081,8 @@ DF
 DF
 DF
 hI
-UL
-UL
+dz
+dz
 Zm
 UI
 Cu
@@ -2089,7 +2108,7 @@ DF
 Yt
 ph
 RE
-UL
+dz
 Zm
 UI
 Mv
@@ -2115,7 +2134,7 @@ YM
 Dj
 ph
 hu
-UL
+dz
 Zm
 VZ
 ND
@@ -2141,7 +2160,7 @@ SE
 gv
 ph
 bL
-UL
+dz
 Zm
 iw
 ph
@@ -2167,7 +2186,7 @@ hH
 aG
 ph
 hu
-UL
+dz
 Zm
 gH
 ND
@@ -2193,7 +2212,7 @@ tk
 rr
 ph
 ZH
-UL
+dz
 Zm
 ny
 Cu
@@ -2216,11 +2235,11 @@ py
 HE
 tk
 tk
-tk
+KC
 hI
 UL
 UL
-Zm
+vt
 ny
 Mv
 CY
@@ -2326,7 +2345,7 @@ aq
 zN
 Zm
 Xe
-KC
+dz
 vC
 Zt
 dz

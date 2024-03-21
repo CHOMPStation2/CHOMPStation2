@@ -1,257 +1,3075 @@
-"ae" = (/obj/structure/window/reinforced/survival_pod{dir = 8},/obj/structure/window/reinforced/survival_pod,/obj/machinery/shower{pixel_y = 20},/obj/structure/curtain/open/shower,/obj/random/soap,/turf/simulated/floor/tiled/freezer,/area/survivalpod/superpose/ScienceShip)
-"ap" = (/obj/structure/sign/science{pixel_y = -32},/turf/template_noop,/area/template_noop)
-"bc" = (/obj/structure/sign/science{pixel_y = 32},/turf/template_noop,/area/template_noop)
-"be" = (/obj/machinery/atmospherics/pipe/simple/hidden/yellow{dir = 8},/obj/structure/shuttle/engine/heater{dir = 4},/turf/simulated/shuttle/wall,/area/survivalpod/superpose/ScienceShip)
-"bm" = (/turf/template_noop,/area/survivalpod/superpose/ScienceShip)
-"bP" = (/obj/structure/grille/rustic{health = 25; name = "reinforced grille"},/obj/structure/shuttle/window,/obj/structure/curtain/black{icon_state = "open"; layer = 2; name = "privacy curtain"; opacity = 0},/obj/machinery/door/firedoor/border_only,/obj/machinery/door/blast/regular/open{id = "estrella_blast"; name = "window blast shield"},/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"ch" = (/obj/machinery/door/airlock/maintenance/common,/obj/item/tape/engineering,/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/obj/machinery/door/firedoor/glass,/turf/simulated/floor/tiled/steel_grid,/area/survivalpod/superpose/ScienceShip)
-"cm" = (/obj/machinery/atmospherics/unary/engine/bigger{dir = 4; pixel_x = -3},/turf/template_noop,/area/survivalpod/superpose/ScienceShip)
-"cu" = (/obj/item/weapon/towel/random,/obj/item/weapon/towel/random,/turf/simulated/floor/wood,/area/survivalpod/superpose/ScienceShip)
-"cw" = (/obj/structure/closet/walllocker/emerglocker{dir = 1; pixel_y = -32},/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/ScienceShip)
-"da" = (/obj/machinery/atmospherics/pipe/simple/visible,/obj/machinery/access_button{command = "cycle_interior"; frequency = 1380; master_tag = "estrella"; name = "interior access button"; pixel_y = 26},/obj/machinery/door/firedoor/border_only,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"df" = (/obj/structure/closet/walllocker_double/medical/west,/obj/item/weapon/storage/firstaid,/obj/item/weapon/storage/firstaid/fire,/obj/item/weapon/storage/firstaid/toxin,/obj/item/weapon/storage/firstaid/o2,/obj/item/roller,/obj/item/device/defib_kit/loaded,/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/ScienceShip)
-"dh" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 5},/obj/structure/table/bench/standard,/obj/machinery/light{dir = 8},/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/ScienceShip)
-"dp" = (/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{dir = 8},/turf/simulated/floor/tiled/techfloor/grid,/area/survivalpod/superpose/ScienceShip)
-"dB" = (/obj/structure/closet/secure_closet/engineering_electrical{req_access = null},/obj/machinery/light{dir = 1},/obj/item/weapon/storage/belt/utility,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"dS" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/turf/simulated/floor/bluegrid{name = "Server Base"; nitrogen = 500; oxygen = 0; temperature = 80},/area/survivalpod/superpose/ScienceShip)
-"eu" = (/turf/simulated/floor/carpet,/area/survivalpod/superpose/ScienceShip)
-"ez" = (/turf/simulated/shuttle/floor/purple,/area/survivalpod/superpose/ScienceShip)
-"fe" = (/obj/structure/shuttle/engine/router,/turf/simulated/shuttle/wall,/area/survivalpod/superpose/ScienceShip)
-"fg" = (/obj/screen/alert/highpressure,/turf/simulated/shuttle/wall,/area/survivalpod/superpose/ScienceShip)
-"fs" = (/obj/machinery/door/airlock/maintenance/common,/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/obj/machinery/door/firedoor/glass,/turf/simulated/floor/tiled/steel_grid,/area/survivalpod/superpose/ScienceShip)
-"fD" = (/obj/machinery/door/window/survival_pod{dir = 8},/turf/simulated/floor/wood,/area/survivalpod/superpose/ScienceShip)
-"ge" = (/obj/machinery/atmospherics/pipe/tank/phoron{dir = 4},/obj/effect/floor_decal/industrial/outline/red,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"gf" = (/obj/structure/table/rack/shelf/steel,/obj/fiftyspawner/glass,/obj/fiftyspawner/glass,/obj/fiftyspawner/steel,/obj/fiftyspawner/steel,/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{dir = 8},/turf/simulated/floor/tiled/techfloor/grid,/area/survivalpod/superpose/ScienceShip)
-"hb" = (/obj/machinery/r_n_d/protolathe,/obj/screen/alert/highpressure,/turf/simulated/shuttle/floor/purple,/area/survivalpod/superpose/ScienceShip)
-"hB" = (/obj/effect/floor_decal/industrial/warning{dir = 10},/obj/machinery/atmospherics/unary/vent_pump/high_volume{dir = 1; frequency = 1380; id_tag = "estrella_pump"},/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"hQ" = (/obj/machinery/firealarm{dir = 1; pixel_y = -24},/obj/structure/bed/chair/wood{dir = 8},/turf/simulated/floor/wood,/area/survivalpod/superpose/ScienceShip)
-"hR" = (/obj/structure/extinguisher_cabinet{pixel_y = -30},/obj/effect/floor_decal/industrial/warning/corner{dir = 8},/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/ScienceShip)
-"iv" = (/obj/structure/bed/chair/office/dark{dir = 1},/turf/simulated/shuttle/floor/purple,/area/survivalpod/superpose/ScienceShip)
-"iQ" = (/obj/structure/table/wooden_reinforced,/obj/structure/flora/pottedplant/smallcactus{pixel_y = 13},/turf/simulated/floor/wood,/area/survivalpod/superpose/ScienceShip)
-"je" = (/obj/machinery/atmospherics/unary/vent_pump{dir = 1; icon_state = "map_vent_out"; use_power = 1},/obj/structure/cryofeed,/turf/simulated/floor/bluegrid{name = "Server Base"; nitrogen = 500; oxygen = 0; temperature = 80},/area/survivalpod/superpose/ScienceShip)
-"ju" = (/obj/structure/closet/walllocker/emerglocker{pixel_y = 32},/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/ScienceShip)
-"kl" = (/obj/machinery/atmospherics/pipe/simple/hidden/yellow,/turf/simulated/shuttle/wall,/area/survivalpod/superpose/ScienceShip)
-"kw" = (/obj/structure/table,/obj/machinery/light{layer = 3},/obj/item/weapon/gun/projectile/revolver/toy/crossbow,/turf/simulated/floor/wood,/area/survivalpod/superpose/ScienceShip)
-"kV" = (/obj/structure/table/rack/shelf/steel,/obj/fiftyspawner/rods,/obj/fiftyspawner/rods,/obj/item/stack/material/plasteel{amount = 30},/obj/item/stack/material/plasteel{amount = 30},/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{dir = 8},/turf/simulated/floor/tiled/techfloor/grid,/area/survivalpod/superpose/ScienceShip)
-"ll" = (/obj/machinery/atmospherics/unary/vent_pump/high_volume{frequency = 1380; id_tag = "estrella_pump"},/obj/machinery/embedded_controller/radio/airlock/docking_port{frequency = 1380; id_tag = "estrella"; pixel_y = 26; tag_airpump = "estrella_pump"; tag_chamber_sensor = "estrella_sensor"; tag_exterior_door = "estrella_outer"; tag_interior_door = "estrella_inner"},/obj/effect/floor_decal/industrial/warning{dir = 5},/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"lu" = (/obj/machinery/r_n_d/circuit_imprinter,/obj/item/weapon/reagent_containers/glass/beaker{pixel_x = 9; pixel_y = 8},/obj/machinery/light,/turf/simulated/shuttle/floor/purple,/area/survivalpod/superpose/ScienceShip)
-"lB" = (/obj/machinery/alarm/alarms_hidden{dir = 8; pixel_x = 22},/obj/structure/sink{dir = 4; pixel_x = 11},/obj/machinery/atmospherics/pipe/simple/hidden{dir = 9},/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/ScienceShip)
-"lH" = (/obj/machinery/door/airlock/maintenance/command{req_one_access = null},/obj/machinery/door/firedoor/glass,/obj/machinery/atmospherics/pipe/simple/hidden,/turf/simulated/floor/tiled/steel_grid,/area/survivalpod/superpose/ScienceShip)
-"lK" = (/obj/item/weapon/gun/projectile/colt,/obj/item/weapon/gun/projectile/garand,/obj/item/ammo_magazine/m45,/obj/item/ammo_magazine/m45,/obj/structure/closet/secure_closet/guncabinet{req_one_access = null},/obj/item/ammo_magazine/ammo_box/b12g/beanbag,/obj/item/ammo_magazine/ammo_box/b12g/beanbag,/obj/item/ammo_magazine/ammo_box/b12g/flechette,/obj/item/ammo_magazine/ammo_box/b12g/flechette,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"lM" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 9},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"lW" = (/obj/structure/shuttle/window,/obj/machinery/door/firedoor/glass,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"mg" = (/obj/structure/shuttle/window,/obj/structure/curtain/black{icon_state = "open"; layer = 2; name = "privacy curtain"; opacity = 0},/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"nb" = (/obj/structure/bed/chair/office/dark{dir = 8},/turf/simulated/shuttle/floor/purple,/area/survivalpod/superpose/ScienceShip)
-"nq" = (/obj/structure/fuel_port{pixel_x = -32},/obj/machinery/atmospherics/pipe/simple/hidden/yellow,/obj/machinery/light{dir = 8},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"nM" = (/obj/structure/closet/walllocker_double/kitchen/north{dir = 8; name = "Ration Cabinet"; pixel_x = -32; pixel_y = 0},/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/device/radio{pixel_x = -5; pixel_y = 5},/obj/item/device/radio{pixel_x = 5; pixel_y = 5},/obj/machinery/atmospherics/pipe/simple/hidden/yellow,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"nQ" = (/obj/machinery/atmospherics/unary/vent_pump/on,/turf/simulated/floor/wood,/area/survivalpod/superpose/ScienceShip)
-"nV" = (/obj/machinery/alarm/alarms_hidden{dir = 8; pixel_x = 22},/obj/machinery/atmospherics/unary/vent_pump/on,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"os" = (/obj/machinery/atmospherics/pipe/manifold/hidden{dir = 8},/obj/structure/extinguisher_cabinet{pixel_x = -27},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/ScienceShip)
-"oJ" = (/obj/structure/window/reinforced/survival_pod{dir = 8},/obj/structure/bed/chair/wood{dir = 4},/turf/simulated/floor/wood,/area/survivalpod/superpose/ScienceShip)
-"oS" = (/obj/structure/table/rack/shelf/steel,/obj/item/weapon/storage/toolbox/electrical,/obj/item/weapon/storage/toolbox/mechanical{pixel_y = 5},/obj/machinery/atmospherics/pipe/simple/hidden/yellow{dir = 6},/turf/simulated/floor/tiled/techfloor/grid,/area/survivalpod/superpose/ScienceShip)
-"oX" = (/turf/simulated/shuttle/wall,/area/survivalpod/superpose/ScienceShip)
-"pk" = (/obj/machinery/atmospherics/binary/pump,/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"pm" = (/obj/machinery/atmospherics/unary/cryo_cell,/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/ScienceShip)
-"pG" = (/obj/machinery/atmospherics/pipe/manifold/hidden{dir = 4},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"pL" = (/obj/machinery/light{dir = 8},/obj/item/device/radio/intercom{desc = "Talk... listen through this."; name = "Station Intercom (Brig Radio)"; pixel_y = -21; wires = 7},/obj/structure/salvageable/console_os{dir = 4},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/ScienceShip)
-"qb" = (/obj/machinery/door/window/northright{name = "Server Room"; req_access = null},/obj/machinery/door/window/southleft{name = "Server Room"; req_access = null},/obj/effect/floor_decal/industrial/warning/full,/obj/machinery/door/firedoor/glass,/turf/simulated/floor/tiled/techfloor/grid,/area/survivalpod/superpose/ScienceShip)
-"qe" = (/obj/structure/table/rack/shelf/steel,/obj/item/stack/material/phoron{amount = 25},/obj/item/stack/material/phoron{amount = 25},/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{dir = 8},/turf/simulated/floor/tiled/techfloor/grid,/area/survivalpod/superpose/ScienceShip)
-"qh" = (/obj/structure/sign/science{pixel_x = 32},/turf/template_noop,/area/template_noop)
-"ql" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 9},/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/ScienceShip)
-"ri" = (/obj/machinery/portable_atmospherics/canister/phoron,/obj/machinery/atmospherics/portables_connector{dir = 4},/obj/effect/floor_decal/industrial/outline/red,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"rs" = (/obj/machinery/atmospherics/pipe/manifold/hidden,/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/ScienceShip)
-"rP" = (/obj/machinery/light{dir = 8},/obj/machinery/atmospherics/pipe/simple/hidden,/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/ScienceShip)
-"se" = (/obj/machinery/atmospherics/pipe/simple/hidden,/obj/structure/shuttle/window,/obj/machinery/door/firedoor/glass,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"sv" = (/obj/machinery/light{dir = 1},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"sz" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/obj/machinery/door/airlock/maintenance/engi{req_one_access = null},/obj/machinery/door/firedoor/glass,/turf/simulated/floor/tiled/steel_grid,/area/survivalpod/superpose/ScienceShip)
-"sH" = (/turf/simulated/shuttle/wall/no_join{base_state = "orange"; icon = 'icons/turf/shuttle_orange.dmi'; icon_state = "orange"},/area/survivalpod/superpose/ScienceShip)
-"sI" = (/obj/structure/salvageable/console_os{dir = 1},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/ScienceShip)
-"sJ" = (/obj/machinery/atmospherics/pipe/simple/hidden/yellow{dir = 8},/obj/machinery/atmospherics/pipe/simple/hidden,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"sK" = (/obj/machinery/door/airlock/maintenance/engi{req_one_access = null},/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/obj/machinery/door/firedoor/glass,/turf/simulated/floor/tiled/steel_grid,/area/survivalpod/superpose/ScienceShip)
-"sT" = (/obj/machinery/door/airlock/maintenance/rnd{req_one_access = null},/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/obj/machinery/door/firedoor/glass,/turf/simulated/floor/tiled/steel_grid,/area/survivalpod/superpose/ScienceShip)
-"sY" = (/obj/structure/table/rack/shelf/steel,/obj/item/clothing/suit/bio_suit/anomaly,/obj/item/clothing/mask/breath,/obj/item/clothing/head/bio_hood/anomaly,/obj/item/clothing/gloves/sterile/latex,/obj/item/weapon/storage/excavation,/obj/item/stack/flag/yellow,/obj/item/device/measuring_tape,/obj/item/weapon/pickaxe/drill,/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{dir = 8},/obj/item/weapon/material/knife/machete/hatchet,/turf/simulated/floor/tiled/techfloor/grid,/area/survivalpod/superpose/ScienceShip)
-"tb" = (/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{dir = 8},/obj/machinery/space_heater,/turf/simulated/floor/tiled/techfloor/grid,/area/survivalpod/superpose/ScienceShip)
-"te" = (/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"tg" = (/obj/machinery/light/small,/obj/structure/prop/fake_ai{name = "C0n71nu17y"},/turf/simulated/floor/bluegrid{name = "Server Base"; nitrogen = 500; oxygen = 0; temperature = 80},/area/survivalpod/superpose/ScienceShip)
-"tu" = (/obj/machinery/atmospherics/pipe/manifold/hidden/yellow,/obj/structure/table/rack/shelf/steel,/obj/item/stack/material/glass/phoronrglass{amount = 20},/obj/item/stack/material/glass/phoronrglass{amount = 20},/obj/fiftyspawner/rods,/obj/fiftyspawner/rods,/turf/simulated/floor/tiled/techfloor/grid,/area/survivalpod/superpose/ScienceShip)
-"tN" = (/obj/machinery/atmospherics/pipe/manifold/hidden{dir = 8},/turf/simulated/floor/bluegrid{name = "Server Base"; nitrogen = 500; oxygen = 0; temperature = 80},/area/survivalpod/superpose/ScienceShip)
-"tR" = (/obj/machinery/door/firedoor/glass,/obj/structure/table/reinforced,/obj/machinery/door/window/northright{dir = 4; name = "Medical booth"},/obj/structure/curtain/black{icon_state = "open"; layer = 2; name = "privacy curtain"; opacity = 0},/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/ScienceShip)
-"um" = (/obj/structure/closet/cabinet{pixel_y = 20},/obj/item/toy/plushie/kitten,/obj/item/toy/plushie/grey_cat,/obj/item/toy/plushie/orange_cat,/obj/item/toy/plushie/borgplushie/scrubpuppy,/obj/item/toy/plushie/black_fox,/obj/item/toy/plushie,/obj/item/toy/plushie/corgi,/obj/item/toy/plushie/crimson_fox,/obj/item/clothing/shoes/sandal,/obj/item/clothing/shoes/sandal,/obj/machinery/computer/security/telescreen/entertainment{icon_state = "frame"; pixel_x = -32},/obj/item/weapon/towel/random,/obj/item/weapon/towel/random,/turf/simulated/floor/carpet/turcarpet,/area/survivalpod/superpose/ScienceShip)
-"uu" = (/obj/machinery/door/airlock/multi_tile/metal/mait,/obj/machinery/atmospherics/pipe/simple/hidden/yellow,/obj/machinery/door/firedoor/glass,/turf/simulated/floor/tiled/steel_grid,/area/survivalpod/superpose/ScienceShip)
-"uX" = (/obj/machinery/atmospherics/pipe/simple/hidden/yellow{dir = 10},/obj/structure/closet/walllocker/emerglocker{pixel_x = -25; pixel_y = 32},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"vl" = (/obj/structure/closet/cabinet{pixel_y = 20},/obj/item/weapon/ore/diamond,/obj/item/weapon/ore/gold,/obj/item/weapon/ore/osmium,/obj/item/weapon/ore/silver,/obj/item/weapon/ore/uranium,/obj/item/weapon/bluespace_crystal,/obj/item/clothing/head/sombrero,/obj/item/clothing/head/sombrero,/obj/item/clothing/suit/poncho,/obj/item/clothing/accessory/poncho/thermal/red,/obj/item/clothing/accessory/poncho/thermal/security,/obj/item/clothing/accessory/poncho/thermal/green,/obj/item/clothing/shoes/footwraps,/obj/item/clothing/shoes/footwraps,/obj/item/clothing/shoes/footwraps,/obj/item/clothing/shoes/footwraps,/obj/item/toy/bosunwhistle/fluff/strix,/obj/item/weapon/blobcore_chunk,/obj/item/weapon/towel/random,/obj/item/weapon/towel/random,/turf/simulated/floor/wood,/area/survivalpod/superpose/ScienceShip)
-"wp" = (/obj/machinery/atmospherics/pipe/simple/hidden,/obj/machinery/door/firedoor/glass,/turf/simulated/floor/tiled/steel_grid,/area/survivalpod/superpose/ScienceShip)
-"xk" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 8},/turf/simulated/floor/wood,/area/survivalpod/superpose/ScienceShip)
-"xw" = (/obj/machinery/atmospherics/pipe/simple/hidden,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"xy" = (/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/ScienceShip)
-"xF" = (/obj/effect/floor_decal/industrial/outline/blue,/obj/structure/closet/jcloset,/obj/item/weapon/mop,/obj/structure/mopbucket,/obj/item/weapon/reagent_containers/glass/bucket,/obj/item/weapon/reagent_containers/spray/cleaner,/obj/item/weapon/reagent_containers/spray/cleaner,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"yb" = (/obj/machinery/vending/wallmed1{name = "NanoMed Wall"; pixel_x = 25},/obj/structure/table/reinforced,/obj/item/weapon/storage/quickdraw/syringe_case,/obj/item/weapon/storage/quickdraw/syringe_case,/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/ScienceShip)
-"yn" = (/obj/machinery/power/terminal{dir = 8},/obj/structure/cable{d2 = 2; icon_state = "0-2"},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"yt" = (/obj/machinery/smartfridge/survival_pod{name = "food storage"},/obj/item/weapon/reagent_containers/food/snacks/burrito_spicy,/obj/item/weapon/reagent_containers/food/snacks/burrito_spicy,/obj/item/weapon/reagent_containers/food/snacks/burrito_spicy,/obj/item/weapon/reagent_containers/food/snacks/burrito_vegan,/obj/item/weapon/reagent_containers/food/snacks/burrito_vegan,/obj/item/weapon/reagent_containers/food/snacks/burrito_vegan,/obj/item/weapon/reagent_containers/food/snacks/burrito_mystery,/obj/item/weapon/reagent_containers/food/snacks/burrito_mystery,/obj/item/weapon/reagent_containers/food/snacks/burrito_mystery,/obj/item/weapon/reagent_containers/food/snacks/burrito_hell,/obj/item/weapon/reagent_containers/food/snacks/burrito_hell,/obj/item/weapon/reagent_containers/food/snacks/burrito_hell,/obj/item/weapon/reagent_containers/food/snacks/burrito_hell,/obj/item/weapon/reagent_containers/food/snacks/burrito_cheese,/obj/item/weapon/reagent_containers/food/snacks/burrito_cheese,/obj/item/weapon/reagent_containers/food/snacks/burrito_cheese,/obj/item/weapon/reagent_containers/food/snacks/burrito,/obj/item/weapon/reagent_containers/food/snacks/burrito,/obj/item/weapon/reagent_containers/food/snacks/burrito,/obj/item/weapon/reagent_containers/food/snacks/slice/bigbeanburrito,/obj/item/weapon/reagent_containers/food/snacks/slice/bigbeanburrito,/obj/item/weapon/reagent_containers/food/snacks/slice/bigbeanburrito,/obj/item/weapon/reagent_containers/food/snacks/slice/bigbeanburrito/filled,/obj/item/weapon/reagent_containers/food/snacks/slice/bigbeanburrito/filled,/obj/item/weapon/reagent_containers/food/snacks/slice/bigbeanburrito/filled,/obj/item/weapon/reagent_containers/food/snacks/sliceable/supremoburrito,/obj/item/weapon/reagent_containers/food/snacks/enchiladas,/obj/item/weapon/reagent_containers/food/snacks/enchiladas,/obj/item/weapon/reagent_containers/food/snacks/enchiladas,/obj/item/weapon/reagent_containers/food/snacks/cheesenachos,/obj/item/weapon/reagent_containers/food/snacks/cheesenachos,/obj/item/weapon/reagent_containers/food/snacks/cheesenachos,/obj/item/weapon/reagent_containers/food/snacks/chipplate/nachos,/obj/item/weapon/reagent_containers/food/snacks/chipplate/nachos,/obj/item/weapon/reagent_containers/food/snacks/chipplate/nachos,/obj/item/weapon/reagent_containers/food/snacks/cubannachos,/obj/item/weapon/reagent_containers/food/snacks/cubannachos,/obj/item/weapon/reagent_containers/food/snacks/cubannachos,/obj/item/weapon/reagent_containers/food/snacks/cubannachos,/obj/item/weapon/reagent_containers/food/snacks/nachos,/obj/item/weapon/reagent_containers/food/snacks/nachos,/obj/item/weapon/reagent_containers/food/snacks/nachos,/obj/item/weapon/reagent_containers/food/snacks/nachos,/obj/item/weapon/reagent_containers/food/snacks/pandenata,/obj/item/weapon/reagent_containers/food/snacks/pandenata,/obj/item/weapon/reagent_containers/food/snacks/pandenata,/obj/item/weapon/reagent_containers/food/snacks/tocino,/obj/item/weapon/reagent_containers/food/snacks/tocino,/obj/item/weapon/reagent_containers/food/snacks/tocino,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"yy" = (/obj/machinery/recharger/wallcharger{pixel_x = 4; pixel_y = 26},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"yB" = (/obj/machinery/alarm/alarms_hidden{dir = 8; pixel_x = 22},/turf/simulated/floor/wood,/area/survivalpod/superpose/ScienceShip)
-"yJ" = (/obj/machinery/atmospherics/pipe/simple/hidden/yellow,/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/firealarm{dir = 8; pixel_x = -24},/obj/machinery/mech_recharger,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"zp" = (/obj/machinery/atmospherics/unary/vent_pump/on,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"zV" = (/obj/structure/table/rack/shelf/steel,/obj/item/stack/material/uranium,/obj/item/stack/material/phoron{amount = 5; pixel_x = -1; pixel_y = -3},/obj/item/stack/material/silver{amount = 5; pixel_x = 2; pixel_y = 4},/obj/item/stack/material/copper{amount = 25},/turf/simulated/shuttle/floor/purple,/area/survivalpod/superpose/ScienceShip)
-"Az" = (/obj/machinery/door/airlock/maintenance/medical{req_one_access = null},/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/obj/machinery/door/firedoor/glass,/turf/simulated/floor/tiled/steel_grid,/area/survivalpod/superpose/ScienceShip)
-"AN" = (/obj/structure/bed/chair/wood,/turf/simulated/floor/wood,/area/survivalpod/superpose/ScienceShip)
-"AO" = (/obj/structure/closet/walllocker/emerglocker{pixel_x = -25; pixel_y = 32},/turf/simulated/shuttle/floor/purple,/area/survivalpod/superpose/ScienceShip)
-"AP" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 6},/turf/simulated/shuttle/wall/hard_corner,/area/survivalpod/superpose/ScienceShip)
-"AQ" = (/obj/structure/bed/double/padded,/obj/structure/closet/walllocker/emerglocker{pixel_y = 32},/obj/item/weapon/bedsheet/rainbowdouble,/turf/simulated/floor/carpet/turcarpet,/area/survivalpod/superpose/ScienceShip)
-"Bn" = (/obj/structure/grille/rustic{health = 25; name = "reinforced grille"},/obj/structure/shuttle/window,/obj/machinery/door/firedoor/border_only,/obj/machinery/door/blast/regular/open{dir = 4; id = "estrella_blast"; name = "window blast shield"},/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"Bz" = (/obj/structure/toilet{dir = 8; pixel_x = 9},/obj/machinery/door/window/survival_pod{dir = 1},/turf/simulated/floor/tiled/freezer,/area/survivalpod/superpose/ScienceShip)
-"BR" = (/obj/structure/salvageable/computer,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/ScienceShip)
-"BS" = (/obj/effect/catwalk_plated/white,/obj/machinery/light/small{dir = 1},/turf/template_noop,/area/template_noop)
-"Cm" = (/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/effect/floor_decal/industrial/warning{dir = 4},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"Cn" = (/obj/machinery/atmospherics/pipe/manifold/hidden{dir = 4},/obj/machinery/firealarm{dir = 4; pixel_x = 24},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/ScienceShip)
-"Cq" = (/obj/machinery/portable_atmospherics/canister/air,/obj/machinery/atmospherics/portables_connector{dir = 4},/obj/effect/floor_decal/industrial/outline/blue,/obj/machinery/firealarm{dir = 8; pixel_x = -24},/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"Cz" = (/obj/screen/alert/highpressure,/obj/machinery/r_n_d/destructive_analyzer,/turf/simulated/shuttle/floor/purple,/area/survivalpod/superpose/ScienceShip)
-"CW" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 10},/turf/simulated/floor/bluegrid{name = "Server Base"; nitrogen = 500; oxygen = 0; temperature = 80},/area/survivalpod/superpose/ScienceShip)
-"CX" = (/obj/machinery/atmospherics/portables_connector{dir = 8},/obj/machinery/portable_atmospherics/canister/air/airlock,/obj/machinery/light/small{dir = 1},/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"Dp" = (/obj/screen/alert/highpressure,/turf/simulated/shuttle/wall/hard_corner,/area/survivalpod/superpose/ScienceShip)
-"Ds" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 4},/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/ScienceShip)
-"DK" = (/obj/structure/closet/crate,/obj/item/stack/material/cardboard{amount = 50},/obj/item/stack/material/cardboard{amount = 50},/obj/item/stack/material/cardboard{amount = 50},/obj/item/stack/material/cardboard{amount = 50},/obj/fiftyspawner/blucarpet,/obj/fiftyspawner/oracarpet,/obj/fiftyspawner/purcarpet,/obj/fiftyspawner/sblucarpet,/obj/fiftyspawner/tealcarpet,/obj/fiftyspawner/turcarpet,/obj/item/stack/material/wood{amount = 50; color = "#824B28"},/obj/item/stack/material/wood{amount = 50; color = "#824B28"},/obj/item/stack/material/wood/hard{amount = 50},/obj/item/stack/material/wood/hard{amount = 50},/obj/item/stack/material/wood/sif{amount = 50},/obj/item/stack/material/wood/sif{amount = 50},/obj/item/stack/material/marble{amount = 50},/obj/item/stack/material/marble{amount = 50},/obj/item/stack/material/marble{amount = 50},/obj/item/stack/material/cloth{amount = 50},/obj/item/stack/material/cloth{amount = 50},/obj/item/stack/material/algae{amount = 50},/obj/item/stack/material/sandstone,/obj/item/stack/material/sandstone,/obj/item/stack/material/sandstone,/obj/item/stack/material/lead{amount = 30},/obj/item/stack/material/plasteel{amount = 30; pixel_y = 5},/obj/item/stack/material/resin{amount = 50},/obj/item/stack/material/smolebricks{amount = 50},/obj/item/stack/material/smolebricks{amount = 50},/obj/machinery/light{layer = 3},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"DM" = (/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{dir = 1},/obj/structure/reagent_dispensers/fueltank/high,/turf/simulated/floor/tiled/techfloor/grid,/area/survivalpod/superpose/ScienceShip)
-"DV" = (/obj/machinery/alarm/alarms_hidden{dir = 8; pixel_x = 22},/obj/structure/bed/chair/office/dark,/turf/simulated/shuttle/floor/purple,/area/survivalpod/superpose/ScienceShip)
-"DW" = (/obj/effect/catwalk_plated/dark,/obj/machinery/shipsensors{dir = 8},/obj/structure/sign/science{pixel_x = 32},/turf/template_noop,/area/survivalpod/superpose/ScienceShip)
-"Eg" = (/obj/machinery/atmospherics/pipe/manifold/hidden{dir = 8},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/ScienceShip)
-"Eq" = (/turf/template_noop,/area/template_noop)
-"Ew" = (/obj/machinery/sleeper{dir = 4},/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/ScienceShip)
-"EH" = (/obj/machinery/recharger/wallcharger{pixel_x = 4; pixel_y = -34},/obj/machinery/space_heater,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"EN" = (/obj/structure/cable/green{d1 = 1; d2 = 8; icon_state = "1-8"},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"ER" = (/obj/structure/bed/chair/bay/comfy/red{dir = 8},/obj/structure/closet/walllocker/emerglocker{pixel_x = -25; pixel_y = 32},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/ScienceShip)
-"Fb" = (/obj/structure/table/reinforced,/obj/item/weapon/reagent_containers/glass/beaker/large,/obj/item/weapon/reagent_containers/dropper,/obj/item/weapon/reagent_containers/glass/beaker,/obj/item/weapon/reagent_containers/glass/beaker,/obj/machinery/reagentgrinder,/obj/machinery/firealarm{dir = 4; pixel_x = 24},/obj/item/weapon/reagent_containers/spray/cleaner{desc = "Someone has crossed out the 'Space' from Space Cleaner and written in Chemistry. Scrawled on the back is, 'Okay, whoever filled this with polytrinic acid, it was only funny the first time. It was hard enough replacing the CMO's first cat!'"; name = "Chemistry Cleaner"},/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/ScienceShip)
-"Fe" = (/obj/structure/table/wooden_reinforced,/obj/item/weapon/coin/diamond,/obj/machinery/light{layer = 3},/turf/simulated/floor/wood,/area/survivalpod/superpose/ScienceShip)
-"Ft" = (/obj/machinery/access_button{command = "cycle_exterior"; frequency = 1380; master_tag = "estrella"; name = "exterior access button"; pixel_y = 26},/obj/machinery/door/firedoor/border_only,/obj/machinery/door/blast/regular/open{dir = 4; id = "estrella_blast"; layer = 2; name = "window blast shield"; open_layer = 2},/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"FR" = (/obj/machinery/door/airlock/hatch{icon_state = "door_locked"; id_tag = "estrella_side_hatch"; locked = 1; req_access = null; req_one_access = null},/obj/machinery/button/remote/airlock{dir = 8; id = "estrella_side_hatch"; name = "Side Hatch Control"; pixel_x = -27; specialfunctions = 4},/obj/machinery/door/firedoor/border_only,/obj/machinery/door/blast/regular/open{id = "estrella_blast"; layer = 2; name = "window blast shield"; open_layer = 2},/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"FV" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/structure/closet/crate/engineering,/obj/fiftyspawner/steel,/obj/fiftyspawner/glass,/obj/item/weapon/tank/phoron,/obj/item/weapon/tank/phoron,/obj/item/weapon/storage/toolbox/mechanical,/obj/item/weapon/storage/toolbox/electrical,/obj/item/device/multitool,/obj/item/device/geiger,/obj/item/clothing/glasses/goggles,/obj/item/clothing/glasses/goggles,/obj/item/device/t_scanner,/obj/item/clothing/glasses/welding,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"Gi" = (/obj/effect/catwalk_plated/white,/turf/template_noop,/area/survivalpod/superpose/ScienceShip)
-"Gl" = (/obj/effect/floor_decal/industrial/warning{dir = 9},/obj/machinery/atmospherics/unary/vent_pump/high_volume{frequency = 1380; id_tag = "estrella_pump"},/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"GM" = (/obj/structure/table/bench/wooden,/obj/machinery/light{dir = 4},/obj/machinery/alarm/alarms_hidden{dir = 8; pixel_x = 22},/obj/item/device/flash,/turf/simulated/floor/wood,/area/survivalpod/superpose/ScienceShip)
-"GP" = (/obj/machinery/atmospherics/pipe/simple/hidden,/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/ScienceShip)
-"GU" = (/obj/machinery/sleep_console{dir = 4},/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/ScienceShip)
-"HX" = (/obj/machinery/chem_master{pixel_x = -7},/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/ScienceShip)
-"Ij" = (/obj/machinery/power/smes/buildable/hybrid,/obj/machinery/atmospherics/pipe/simple/hidden/yellow,/obj/structure/cable/green,/obj/machinery/light{dir = 8},/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"In" = (/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{dir = 8},/obj/structure/extinguisher_cabinet{pixel_x = -27},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"Io" = (/obj/machinery/atmospherics/unary/freezer{icon_state = "freezer"},/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/ScienceShip)
-"Ip" = (/obj/structure/bed/chair/office/dark{dir = 8},/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/ScienceShip)
-"Iz" = (/obj/structure/table/reinforced,/obj/item/weapon/folder/blue,/obj/item/weapon/paper_bin,/obj/item/weapon/pen/blue{pixel_x = -5; pixel_y = -1},/obj/item/weapon/pen/red,/obj/item/weapon/pen{pixel_x = 4; pixel_y = 4},/turf/simulated/shuttle/floor/purple,/area/survivalpod/superpose/ScienceShip)
-"IB" = (/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/machinery/shower{dir = 1},/obj/structure/curtain/open/shower,/obj/random/soap,/turf/simulated/floor/tiled/freezer,/area/survivalpod/superpose/ScienceShip)
-"IE" = (/obj/structure/closet/walllocker/emerglocker{dir = 1; pixel_x = -24; pixel_y = -32},/obj/machinery/atmospherics/pipe/simple/hidden{dir = 9},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"II" = (/obj/machinery/power/port_gen/pacman,/obj/machinery/atmospherics/pipe/simple/hidden/yellow,/obj/structure/cable{d2 = 4; icon_state = "0-4"},/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"IM" = (/obj/machinery/portable_atmospherics/canister/phoron,/obj/machinery/atmospherics/portables_connector{dir = 4},/obj/effect/floor_decal/industrial/outline/red,/obj/machinery/firealarm{dir = 8; pixel_x = -24},/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"IQ" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/ScienceShip)
-"Jd" = (/obj/machinery/atmospherics/pipe/manifold/visible{dir = 4},/obj/effect/floor_decal/industrial/warning{dir = 4},/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"Jm" = (/obj/machinery/door/airlock/multi_tile/metal/mait{dir = 1; frequency = 1380; icon_state = "door_locked"; id_tag = "estrella_outer"; locked = 1; name = "External Access"},/obj/machinery/door/firedoor/border_only,/obj/machinery/door/blast/regular/open{dir = 4; id = "estrella_blast"; layer = 2; name = "window blast shield"; open_layer = 2},/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"JG" = (/obj/structure/reagent_dispensers/acid{density = 0; pixel_x = -30},/turf/simulated/shuttle/floor/purple,/area/survivalpod/superpose/ScienceShip)
-"JJ" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/obj/structure/closet/walllocker/emerglocker{dir = 1; pixel_y = -32},/obj/machinery/alarm/alarms_hidden{pixel_y = 22},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/ScienceShip)
-"Kh" = (/turf/simulated/floor/wood,/area/survivalpod/superpose/ScienceShip)
-"Kq" = (/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/machinery/shower{dir = 1},/obj/structure/curtain/open/shower,/obj/random/soap,/turf/simulated/floor/plating,/area/survivalpod/superpose/ScienceShip)
-"Kx" = (/obj/screen/alert/highpressure,/turf/template_noop,/area/template_noop)
-"KD" = (/obj/machinery/atmospherics/unary/vent_pump{dir = 1; external_pressure_bound = 0; external_pressure_bound_default = 0; icon_state = "map_vent_in"; initialize_directions = 1; internal_pressure_bound = 4000; internal_pressure_bound_default = 4000; pressure_checks = 2; pressure_checks_default = 2; pump_direction = 0; use_power = 1},/obj/structure/cryofeed{dir = 4},/turf/simulated/floor/bluegrid{name = "Server Base"; nitrogen = 500; oxygen = 0; temperature = 80},/area/survivalpod/superpose/ScienceShip)
-"Lj" = (/obj/structure/closet/walllocker_double/kitchen/north{dir = 8; name = "Ration Cabinet"; pixel_x = -32; pixel_y = 0},/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/device/radio{pixel_x = -5; pixel_y = 5},/obj/item/device/radio{pixel_x = 5; pixel_y = 5},/obj/machinery/atmospherics/pipe/simple/hidden/yellow,/obj/structure/cable/green{d1 = 2; d2 = 4; icon_state = "2-4"},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"Lx" = (/obj/structure/extinguisher_cabinet{pixel_x = 28},/obj/machinery/light{dir = 4},/obj/machinery/atmospherics/pipe/manifold/hidden{dir = 4},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/ScienceShip)
-"LC" = (/obj/machinery/door/firedoor/glass,/obj/structure/shuttle/window,/obj/structure/curtain/black{icon_state = "open"; layer = 2; name = "privacy curtain"; opacity = 0},/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"LP" = (/obj/machinery/atmospherics/pipe/simple/hidden/yellow{dir = 5},/obj/structure/closet/secure_closet/guncabinet{req_one_access = null},/obj/item/clothing/head/helmet/combat/USDF,/obj/item/clothing/head/helmet/combat/USDF,/obj/item/clothing/suit/armor/combat/USDF,/obj/item/clothing/suit/armor/combat/USDF,/obj/item/device/flash,/obj/item/device/flash,/turf/simulated/floor/tiled/techfloor/grid,/area/survivalpod/superpose/ScienceShip)
-"Mc" = (/obj/machinery/atmospherics/pipe/simple/hidden,/obj/structure/fireaxecabinet{pixel_x = 32},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/ScienceShip)
-"Mg" = (/obj/machinery/atmospherics/pipe/manifold4w/visible,/obj/machinery/meter,/obj/effect/floor_decal/industrial/warning{dir = 8},/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"MR" = (/obj/machinery/shuttle_sensor,/turf/simulated/shuttle/wall/hard_corner,/area/survivalpod/superpose/ScienceShip)
-"Ng" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/obj/machinery/alarm/alarms_hidden{pixel_y = 22},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/ScienceShip)
-"Nm" = (/obj/machinery/atmospherics/pipe/simple/hidden/yellow,/obj/machinery/light{dir = 8},/obj/effect/floor_decal/industrial/outline/yellow,/obj/structure/cable/green{d2 = 4; icon_state = "0-4"},/obj/machinery/power/shield_generator/charged{field_radius = 8; initial_shield_modes = 2153; target_radius = 8},/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"NV" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 4},/turf/simulated/shuttle/floor/purple,/area/survivalpod/superpose/ScienceShip)
-"Oh" = (/obj/effect/catwalk_plated/white,/obj/machinery/light/small{dir = 8},/turf/template_noop,/area/survivalpod/superpose/ScienceShip)
-"Oi" = (/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"Ou" = (/obj/machinery/atmospherics/pipe/manifold/hidden{dir = 1},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"OG" = (/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/ScienceShip)
-"Pk" = (/obj/structure/closet/walllocker/emerglocker{pixel_y = 32},/turf/simulated/floor/plating,/area/survivalpod/superpose/ScienceShip)
-"Pv" = (/obj/machinery/atmospherics/unary/freezer{icon_state = "freezer_1"; power_setting = 20; set_temperature = 73; use_power = 1},/obj/item/device/radio/intercom{dir = 1; name = "Station Intercom (General)"; pixel_y = 21},/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/ScienceShip)
-"Pz" = (/obj/structure/cable/green{d1 = 2; d2 = 8; icon_state = "2-8"},/obj/effect/floor_decal/industrial/warning/corner,/obj/machinery/gear_dispenser/suit/ert{req_one_access = null},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"PB" = (/turf/simulated/floor/wood/broken,/area/survivalpod/superpose/ScienceShip)
-"PS" = (/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"Qp" = (/obj/item/device/radio/intercom{dir = 4; name = "Station Intercom (General)"; pixel_x = 21},/obj/structure/table/reinforced,/obj/item/weapon/stock_parts/console_screen,/obj/item/weapon/stock_parts/console_screen,/obj/item/stack/cable_coil,/obj/item/stack/cable_coil,/turf/simulated/shuttle/floor/purple,/area/survivalpod/superpose/ScienceShip)
-"QA" = (/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{dir = 8},/obj/machinery/suspension_gen,/turf/simulated/floor/tiled/techfloor/grid,/area/survivalpod/superpose/ScienceShip)
-"QC" = (/obj/structure/table/wooden_reinforced,/obj/item/weapon/paper_bin,/obj/item/weapon/pen/fountain,/obj/item/weapon/pen/chameleon,/obj/item/device/gps/advanced/science,/obj/machinery/button/remote/blast_door{id = "estrella_blast"; name = "remote blast shielding control"; pixel_x = -1; pixel_y = -26},/turf/simulated/floor/wood,/area/survivalpod/superpose/ScienceShip)
-"QH" = (/obj/machinery/atmospherics/pipe/simple/hidden/yellow,/obj/item/device/radio/intercom{dir = 8; name = "Station Intercom (General)"; pixel_x = -21},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"QR" = (/obj/machinery/meter,/obj/structure/closet/walllocker/emerglocker{pixel_x = -25; pixel_y = 32},/obj/machinery/alarm/alarms_hidden{dir = 4; pixel_x = -22},/obj/machinery/atmospherics/pipe/manifold/hidden{dir = 8},/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/ScienceShip)
-"QT" = (/obj/structure/bed/chair/office/dark{dir = 4},/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/ScienceShip)
-"Ro" = (/obj/structure/extinguisher_cabinet{pixel_y = 30},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"Rp" = (/obj/machinery/alarm/alarms_hidden{dir = 8; pixel_x = 22},/turf/simulated/floor/wood/broken,/area/survivalpod/superpose/ScienceShip)
-"RI" = (/obj/machinery/atmospherics/pipe/simple/hidden/yellow,/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/recharge_station,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"RU" = (/obj/structure/closet/cabinet{pixel_y = 20},/obj/machinery/computer/security/telescreen/entertainment{icon_state = "frame"; pixel_x = -32},/obj/item/weapon/handcuffs/legcuffs/fuzzy,/obj/item/weapon/handcuffs/fuzzy,/obj/item/clothing/mask/muzzle/ballgag,/obj/item/clothing/suit/iasexy,/obj/item/clothing/under/sexybunny_white/sexybunny_black,/obj/item/clothing/under/dress/maid/sexy,/obj/item/clothing/head/collectable/rabbitears,/turf/simulated/floor/wood/broken,/area/survivalpod/superpose/ScienceShip)
-"RV" = (/obj/structure/table/steel_reinforced,/obj/machinery/power/apc/alarms_hidden{dir = 4; pixel_x = 24},/obj/structure/cable/green,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance/research,/obj/random/maintenance/research,/obj/random/maintenance/research,/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"St" = (/obj/effect/floor_decal/industrial/warning,/obj/machinery/atmospherics/pipe/simple/hidden{dir = 5},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/ScienceShip)
-"SC" = (/obj/machinery/atmospherics/valve,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"SE" = (/obj/structure/closet/emcloset,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"SU" = (/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{dir = 8},/obj/structure/reagent_dispensers/watertank/high,/turf/simulated/floor/tiled/techfloor/grid,/area/survivalpod/superpose/ScienceShip)
-"Te" = (/obj/structure/bed/chair/office/dark{dir = 4},/turf/simulated/shuttle/floor/purple,/area/survivalpod/superpose/ScienceShip)
-"Tp" = (/obj/structure/bed/double/padded,/obj/structure/curtain/bed,/obj/item/weapon/bedsheet/hosdouble,/obj/machinery/computer/security/telescreen/entertainment{icon_state = "frame"; pixel_y = 32},/turf/simulated/floor/wood,/area/survivalpod/superpose/ScienceShip)
-"Tr" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/obj/machinery/door/airlock/maintenance/rnd{req_one_access = null},/obj/machinery/door/firedoor/glass,/turf/simulated/floor/tiled/steel_grid,/area/survivalpod/superpose/ScienceShip)
-"TB" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 4},/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/ScienceShip)
-"TF" = (/obj/screen/alert/highpressure,/obj/machinery/computer/rdconsole/core{dir = 4},/turf/simulated/shuttle/floor/purple,/area/survivalpod/superpose/ScienceShip)
-"Ug" = (/obj/machinery/atmospherics/pipe/simple/hidden,/obj/structure/extinguisher_cabinet{pixel_x = -27},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/ScienceShip)
-"Ul" = (/turf/simulated/shuttle/wall/hard_corner,/area/survivalpod/superpose/ScienceShip)
-"Ur" = (/obj/machinery/atmospherics/pipe/tank/air{dir = 4},/obj/effect/floor_decal/industrial/outline/blue,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"Uz" = (/obj/structure/salvageable/server,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/ScienceShip)
-"UG" = (/obj/structure/table/reinforced,/obj/item/device/gps/advanced/science,/obj/item/weapon/reagent_containers/spray/cleaner{desc = "Someone has crossed out the 'Space' from Space Cleaner and written in Chemistry. Scrawled on the back is, 'Okay, whoever filled this with polytrinic acid, it was only funny the first time. It was hard enough replacing the CMO's first cat!'"; name = "Chemistry Cleaner"},/turf/simulated/shuttle/floor/purple,/area/survivalpod/superpose/ScienceShip)
-"UN" = (/obj/structure/table/reinforced,/obj/fiftyspawner/steel,/obj/fiftyspawner/glass,/obj/machinery/light{dir = 1},/turf/simulated/shuttle/floor/purple,/area/survivalpod/superpose/ScienceShip)
-"UP" = (/obj/machinery/firealarm{dir = 4; pixel_x = 24},/obj/structure/table/reinforced,/obj/item/weapon/disk/design_disk,/obj/item/weapon/disk/design_disk,/obj/item/weapon/disk/tech_disk,/obj/item/weapon/disk/tech_disk,/turf/simulated/shuttle/floor/purple,/area/survivalpod/superpose/ScienceShip)
-"UZ" = (/obj/machinery/atmospherics/unary/vent_pump/high_volume{dir = 1; frequency = 1380; id_tag = "estrella_pump"},/obj/effect/floor_decal/industrial/warning{dir = 6},/obj/machinery/airlock_sensor{frequency = 1380; id_tag = "estrella_sensor"; pixel_y = -28},/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"VB" = (/obj/item/device/radio/intercom{dir = 4; name = "Station Intercom (General)"; pixel_x = 21},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"VE" = (/obj/machinery/atmospherics/portables_connector,/obj/machinery/portable_atmospherics/canister/nitrogen,/obj/machinery/light/small{dir = 1},/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/ScienceShip)
-"VH" = (/obj/machinery/firealarm{dir = 4; pixel_x = 24},/obj/machinery/computer/crew,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/ScienceShip)
-"VJ" = (/obj/structure/table/steel_reinforced,/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/obj/effect/floor_decal/industrial/warning/corner{dir = 4},/obj/random/maintenance/research,/obj/random/maintenance/research,/obj/random/maintenance/research,/obj/machinery/alarm/alarms_hidden{dir = 8; pixel_x = 22},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"VS" = (/obj/machinery/light{dir = 8},/obj/machinery/atmospherics/binary/passive_gate{dir = 1; regulate_mode = 0; unlocked = 1},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"VT" = (/obj/machinery/door/airlock/multi_tile/metal/mait{dir = 1; frequency = 1380; icon_state = "door_locked"; id_tag = "estrella_inner"; locked = 1; name = "Internal Access"},/obj/machinery/atmospherics/pipe/simple/visible{dir = 5},/obj/machinery/door/firedoor/border_only,/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"VY" = (/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/machinery/atmospherics/unary/vent_pump/on{dir = 1},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"Wc" = (/obj/structure/table/reinforced,/obj/machinery/chemical_dispenser/full{pixel_y = 5},/obj/item/device/radio/intercom{desc = "Talk... listen through this."; name = "Station Intercom (Brig Radio)"; pixel_y = -21; wires = 7},/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/ScienceShip)
-"Wj" = (/obj/structure/grille/rustic{health = 25; name = "reinforced grille"},/obj/structure/shuttle/window,/obj/machinery/door/firedoor/border_only,/obj/machinery/door/blast/regular/open{id = "estrella_blast"; name = "window blast shield"},/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"Wu" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 8},/turf/simulated/floor/plating,/area/survivalpod/superpose/ScienceShip)
-"WL" = (/obj/effect/floor_decal/industrial/warning{dir = 4},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"Xh" = (/obj/structure/toilet{pixel_y = 12},/obj/structure/window/reinforced/survival_pod{dir = 4},/obj/machinery/door/window/survival_pod{dir = 2; req_one_access = null},/turf/simulated/floor/tiled/freezer,/area/survivalpod/superpose/ScienceShip)
-"Xz" = (/obj/machinery/door/airlock/hatch{icon_state = "door_locked"; id_tag = "estrella_back_hatch"; locked = 1; req_one_access = null},/obj/machinery/button/remote/airlock{desiredstate = 1; id = "estrella_back_hatch"; name = "Rear Hatch Control"; pixel_y = 27; req_access = null; specialfunctions = 4},/obj/machinery/door/firedoor/border_only,/obj/machinery/door/blast/regular/open{dir = 4; id = "estrella_blast"; layer = 2; name = "window blast shield"; open_layer = 2},/turf/simulated/shuttle/plating,/area/survivalpod/superpose/ScienceShip)
-"XQ" = (/obj/structure/closet/cabinet{pixel_y = 20},/obj/item/weapon/implanter/sizecontrol,/obj/item/weapon/ore/uranium,/obj/item/weapon/ore/uranium,/obj/item/weapon/ore/phoron,/obj/item/weapon/ore/phoron,/obj/item/weapon/ore/osmium,/obj/item/weapon/ore/osmium,/obj/item/weapon/ore/gold,/obj/item/weapon/ore/diamond,/obj/item/weapon/ore/marble,/obj/item/weapon/ore/osmium,/obj/item/weapon/ore/rutile,/obj/item/toy/bosunwhistle/fluff/strix,/obj/item/toy/character/wizard,/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/mindbreaker/unidentified,/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/mindbreaker/unidentified,/obj/item/weapon/fluff/squeezetoy,/obj/item/weapon/fluff/zekewatch,/obj/item/weapon/fluff/fidgetspinner/red,/obj/item/weapon/storage/pill_bottle/dice_nerd,/turf/simulated/floor/wood,/area/survivalpod/superpose/ScienceShip)
-"Yi" = (/obj/structure/closet/secure_closet/engineering_welding{req_access = null},/obj/item/weapon/storage/belt/utility,/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"YH" = (/obj/machinery/atmospherics/pipe/simple/hidden/yellow{dir = 5},/obj/structure/extinguisher_cabinet{pixel_x = -27},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"YN" = (/obj/machinery/atmospherics/portables_connector,/obj/machinery/portable_atmospherics/canister/oxygen,/turf/simulated/shuttle/floor/white,/area/survivalpod/superpose/ScienceShip)
-"YX" = (/obj/machinery/autolathe{hacked = 1},/turf/simulated/shuttle/floor/purple,/area/survivalpod/superpose/ScienceShip)
-"Za" = (/obj/structure/table/reinforced,/obj/item/weapon/stock_parts/scanning_module/adv{pixel_x = 5; pixel_y = 6},/obj/item/weapon/stock_parts/scanning_module/adv{pixel_x = 5; pixel_y = 6},/obj/item/weapon/stock_parts/micro_laser/high,/obj/item/weapon/stock_parts/micro_laser/high,/obj/item/weapon/stock_parts/matter_bin/adv,/obj/item/weapon/stock_parts/matter_bin/adv,/obj/item/weapon/stock_parts/manipulator/hyper,/obj/item/weapon/stock_parts/manipulator/hyper,/obj/item/weapon/stock_parts/capacitor/adv,/obj/item/weapon/stock_parts/capacitor/adv,/turf/simulated/shuttle/floor/purple,/area/survivalpod/superpose/ScienceShip)
-"Zc" = (/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{dir = 4},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
-"Zd" = (/turf/simulated/floor/plating,/area/survivalpod/superpose/ScienceShip)
-"Zg" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/obj/machinery/alarm/alarms_hidden{dir = 1; pixel_y = -22},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/ScienceShip)
-"ZJ" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 1},/obj/machinery/alarm/alarms_hidden{dir = 8; pixel_x = 22},/turf/simulated/floor/tiled/techfloor,/area/survivalpod/superpose/ScienceShip)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ae" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/machinery/shower{
+	pixel_y = 20
+	},
+/obj/structure/curtain/open/shower,
+/obj/random/soap,
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/ScienceShip)
+"ap" = (
+/obj/structure/sign/science{
+	pixel_y = -32
+	},
+/turf/template_noop,
+/area/template_noop)
+"bc" = (
+/obj/structure/sign/science{
+	pixel_y = 32
+	},
+/turf/template_noop,
+/area/template_noop)
+"be" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 8
+	},
+/obj/structure/shuttle/engine/heater{
+	dir = 4
+	},
+/turf/simulated/shuttle/wall,
+/area/survivalpod/superpose/ScienceShip)
+"bm" = (
+/turf/template_noop,
+/area/survivalpod/superpose/ScienceShip)
+"bP" = (
+/obj/structure/grille/rustic{
+	health = 25;
+	name = "reinforced grille"
+	},
+/obj/structure/shuttle/window,
+/obj/structure/curtain/black{
+	icon_state = "open";
+	layer = 2;
+	name = "privacy curtain";
+	opacity = 0
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/blast/regular/open{
+	id = "estrella_blast";
+	name = "window blast shield"
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"ch" = (
+/obj/machinery/door/airlock/maintenance/common,
+/obj/item/tape/engineering,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/steel_grid,
+/area/survivalpod/superpose/ScienceShip)
+"cm" = (
+/obj/machinery/atmospherics/unary/engine/bigger{
+	dir = 4;
+	pixel_x = -3
+	},
+/turf/template_noop,
+/area/survivalpod/superpose/ScienceShip)
+"cu" = (
+/obj/item/weapon/towel/random,
+/obj/item/weapon/towel/random,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/ScienceShip)
+"cw" = (
+/obj/structure/closet/walllocker/emerglocker{
+	dir = 1;
+	pixel_y = -32
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/ScienceShip)
+"da" = (
+/obj/machinery/atmospherics/pipe/simple/visible,
+/obj/machinery/access_button{
+	command = "cycle_interior";
+	frequency = 1380;
+	master_tag = "estrella";
+	name = "interior access button";
+	pixel_y = 26
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"df" = (
+/obj/structure/closet/walllocker_double/medical/west,
+/obj/item/weapon/storage/firstaid,
+/obj/item/weapon/storage/firstaid/fire,
+/obj/item/weapon/storage/firstaid/toxin,
+/obj/item/weapon/storage/firstaid/o2,
+/obj/item/roller,
+/obj/item/device/defib_kit/loaded,
+/turf/simulated/shuttle/floor/white,
+/area/survivalpod/superpose/ScienceShip)
+"dh" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/obj/structure/table/bench/standard,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/white,
+/area/survivalpod/superpose/ScienceShip)
+"dp" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/survivalpod/superpose/ScienceShip)
+"dB" = (
+/obj/structure/closet/secure_closet/engineering_electrical{
+	req_access = null
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/weapon/storage/belt/utility,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"dS" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/floor/bluegrid{
+	name = "Server Base";
+	nitrogen = 500;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/survivalpod/superpose/ScienceShip)
+"eu" = (
+/turf/simulated/floor/carpet,
+/area/survivalpod/superpose/ScienceShip)
+"ez" = (
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/ScienceShip)
+"fe" = (
+/obj/structure/shuttle/engine/router,
+/turf/simulated/shuttle/wall,
+/area/survivalpod/superpose/ScienceShip)
+"fg" = (
+/obj/screen/alert/highpressure,
+/turf/simulated/shuttle/wall,
+/area/survivalpod/superpose/ScienceShip)
+"fs" = (
+/obj/machinery/door/airlock/maintenance/common,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/steel_grid,
+/area/survivalpod/superpose/ScienceShip)
+"fD" = (
+/obj/machinery/door/window/survival_pod{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/ScienceShip)
+"ge" = (
+/obj/machinery/atmospherics/pipe/tank/phoron{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/outline/red,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"gf" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/survivalpod/superpose/ScienceShip)
+"hb" = (
+/obj/machinery/r_n_d/protolathe,
+/obj/screen/alert/highpressure,
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/ScienceShip)
+"hB" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1;
+	frequency = 1380;
+	id_tag = "estrella_pump"
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"hQ" = (
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -24
+	},
+/obj/structure/bed/chair/wood{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/ScienceShip)
+"hR" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -30
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/ScienceShip)
+"iv" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/ScienceShip)
+"iQ" = (
+/obj/structure/table/wooden_reinforced,
+/obj/structure/flora/pottedplant/smallcactus{
+	pixel_y = 13
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/ScienceShip)
+"je" = (
+/obj/machinery/atmospherics/unary/vent_pump{
+	dir = 1;
+	icon_state = "map_vent_out";
+	use_power = 1
+	},
+/obj/structure/cryofeed,
+/turf/simulated/floor/bluegrid{
+	name = "Server Base";
+	nitrogen = 500;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/survivalpod/superpose/ScienceShip)
+"ju" = (
+/obj/structure/closet/walllocker/emerglocker{
+	pixel_y = 32
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/ScienceShip)
+"kl" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/turf/simulated/shuttle/wall,
+/area/survivalpod/superpose/ScienceShip)
+"kw" = (
+/obj/structure/table,
+/obj/machinery/light{
+	layer = 3
+	},
+/obj/item/weapon/gun/projectile/revolver/toy/crossbow,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/ScienceShip)
+"kV" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/fiftyspawner/rods,
+/obj/fiftyspawner/rods,
+/obj/item/stack/material/plasteel{
+	amount = 30
+	},
+/obj/item/stack/material/plasteel{
+	amount = 30
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/survivalpod/superpose/ScienceShip)
+"ll" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1380;
+	id_tag = "estrella_pump"
+	},
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	frequency = 1380;
+	id_tag = "estrella";
+	pixel_y = 26;
+	tag_airpump = "estrella_pump";
+	tag_chamber_sensor = "estrella_sensor";
+	tag_exterior_door = "estrella_outer";
+	tag_interior_door = "estrella_inner"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"lu" = (
+/obj/machinery/r_n_d/circuit_imprinter,
+/obj/item/weapon/reagent_containers/glass/beaker{
+	pixel_x = 9;
+	pixel_y = 8
+	},
+/obj/machinery/light,
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/ScienceShip)
+"lB" = (
+/obj/machinery/alarm/alarms_hidden{
+	dir = 8;
+	pixel_x = 22
+	},
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/turf/simulated/shuttle/floor/white,
+/area/survivalpod/superpose/ScienceShip)
+"lH" = (
+/obj/machinery/door/airlock/maintenance/command{
+	req_one_access = null
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/tiled/steel_grid,
+/area/survivalpod/superpose/ScienceShip)
+"lK" = (
+/obj/item/weapon/gun/projectile/colt,
+/obj/item/weapon/gun/projectile/garand,
+/obj/item/ammo_magazine/m45,
+/obj/item/ammo_magazine/m45,
+/obj/structure/closet/secure_closet/guncabinet{
+	req_one_access = null
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/beanbag,
+/obj/item/ammo_magazine/ammo_box/b12g/beanbag,
+/obj/item/ammo_magazine/ammo_box/b12g/flechette,
+/obj/item/ammo_magazine/ammo_box/b12g/flechette,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"lM" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"lW" = (
+/obj/structure/shuttle/window,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"mg" = (
+/obj/structure/shuttle/window,
+/obj/structure/curtain/black{
+	icon_state = "open";
+	layer = 2;
+	name = "privacy curtain";
+	opacity = 0
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"nb" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/ScienceShip)
+"nq" = (
+/obj/structure/fuel_port{
+	pixel_x = -32
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"nM" = (
+/obj/structure/closet/walllocker_double/kitchen/north{
+	dir = 8;
+	name = "Ration Cabinet";
+	pixel_x = -32;
+	pixel_y = 0
+	},
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/device/radio{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/device/radio{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"nQ" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/ScienceShip)
+"nV" = (
+/obj/machinery/alarm/alarms_hidden{
+	dir = 8;
+	pixel_x = 22
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"os" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 8
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -27
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/ScienceShip)
+"oJ" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/bed/chair/wood{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/ScienceShip)
+"oS" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/weapon/storage/toolbox/electrical,
+/obj/item/weapon/storage/toolbox/mechanical{
+	pixel_y = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/survivalpod/superpose/ScienceShip)
+"oX" = (
+/turf/simulated/shuttle/wall,
+/area/survivalpod/superpose/ScienceShip)
+"pk" = (
+/obj/machinery/atmospherics/binary/pump,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"pm" = (
+/obj/machinery/atmospherics/unary/cryo_cell,
+/turf/simulated/shuttle/floor/white,
+/area/survivalpod/superpose/ScienceShip)
+"pG" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"pL" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/item/device/radio/intercom{
+	desc = "Talk... listen through this.";
+	name = "Station Intercom (Brig Radio)";
+	pixel_y = -21;
+	wires = 7
+	},
+/obj/structure/salvageable/console_os{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/ScienceShip)
+"qb" = (
+/obj/machinery/door/window/northright{
+	name = "Server Room";
+	req_access = null
+	},
+/obj/machinery/door/window/southleft{
+	name = "Server Room";
+	req_access = null
+	},
+/obj/effect/floor_decal/industrial/warning/full,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/survivalpod/superpose/ScienceShip)
+"qe" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/stack/material/phoron{
+	amount = 25
+	},
+/obj/item/stack/material/phoron{
+	amount = 25
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/survivalpod/superpose/ScienceShip)
+"qh" = (
+/obj/structure/sign/science{
+	pixel_x = 32
+	},
+/turf/template_noop,
+/area/template_noop)
+"ql" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/survivalpod/superpose/ScienceShip)
+"ri" = (
+/obj/machinery/portable_atmospherics/canister/phoron,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/outline/red,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"rs" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden,
+/turf/simulated/shuttle/floor/white,
+/area/survivalpod/superpose/ScienceShip)
+"rP" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/ScienceShip)
+"se" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/shuttle/window,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"sv" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"sz" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/engi{
+	req_one_access = null
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/steel_grid,
+/area/survivalpod/superpose/ScienceShip)
+"sH" = (
+/turf/simulated/shuttle/wall/no_join{
+	base_state = "orange";
+	icon = 'icons/turf/shuttle_orange.dmi';
+	icon_state = "orange"
+	},
+/area/survivalpod/superpose/ScienceShip)
+"sI" = (
+/obj/structure/salvageable/console_os{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/ScienceShip)
+"sJ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"sK" = (
+/obj/machinery/door/airlock/maintenance/engi{
+	req_one_access = null
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/steel_grid,
+/area/survivalpod/superpose/ScienceShip)
+"sT" = (
+/obj/machinery/door/airlock/maintenance/rnd{
+	req_one_access = null
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/steel_grid,
+/area/survivalpod/superpose/ScienceShip)
+"sY" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/clothing/suit/bio_suit/anomaly,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/head/bio_hood/anomaly,
+/obj/item/clothing/gloves/sterile/latex,
+/obj/item/weapon/storage/excavation,
+/obj/item/stack/flag/yellow,
+/obj/item/device/measuring_tape,
+/obj/item/weapon/pickaxe/drill,
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 8
+	},
+/obj/item/weapon/material/knife/machete/hatchet,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/survivalpod/superpose/ScienceShip)
+"tb" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 8
+	},
+/obj/machinery/space_heater,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/survivalpod/superpose/ScienceShip)
+"te" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"tg" = (
+/obj/machinery/light/small,
+/obj/structure/prop/fake_ai{
+	name = "C0n71nu17y"
+	},
+/turf/simulated/floor/bluegrid{
+	name = "Server Base";
+	nitrogen = 500;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/survivalpod/superpose/ScienceShip)
+"tu" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
+/obj/structure/table/rack/shelf/steel,
+/obj/item/stack/material/glass/phoronrglass{
+	amount = 20
+	},
+/obj/item/stack/material/glass/phoronrglass{
+	amount = 20
+	},
+/obj/fiftyspawner/rods,
+/obj/fiftyspawner/rods,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/survivalpod/superpose/ScienceShip)
+"tN" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 8
+	},
+/turf/simulated/floor/bluegrid{
+	name = "Server Base";
+	nitrogen = 500;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/survivalpod/superpose/ScienceShip)
+"tR" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/table/reinforced,
+/obj/machinery/door/window/northright{
+	dir = 4;
+	name = "Medical booth"
+	},
+/obj/structure/curtain/black{
+	icon_state = "open";
+	layer = 2;
+	name = "privacy curtain";
+	opacity = 0
+	},
+/turf/simulated/shuttle/floor/white,
+/area/survivalpod/superpose/ScienceShip)
+"um" = (
+/obj/structure/closet/cabinet{
+	pixel_y = 20
+	},
+/obj/item/toy/plushie/kitten,
+/obj/item/toy/plushie/grey_cat,
+/obj/item/toy/plushie/orange_cat,
+/obj/item/toy/plushie/borgplushie/scrubpuppy,
+/obj/item/toy/plushie/black_fox,
+/obj/item/toy/plushie,
+/obj/item/toy/plushie/corgi,
+/obj/item/toy/plushie/crimson_fox,
+/obj/item/clothing/shoes/sandal,
+/obj/item/clothing/shoes/sandal,
+/obj/machinery/computer/security/telescreen/entertainment{
+	icon_state = "frame";
+	pixel_x = -32
+	},
+/obj/item/weapon/towel/random,
+/obj/item/weapon/towel/random,
+/turf/simulated/floor/carpet/turcarpet,
+/area/survivalpod/superpose/ScienceShip)
+"uu" = (
+/obj/machinery/door/airlock/multi_tile/metal/mait,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/steel_grid,
+/area/survivalpod/superpose/ScienceShip)
+"uX" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 10
+	},
+/obj/structure/closet/walllocker/emerglocker{
+	pixel_x = -25;
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"vl" = (
+/obj/structure/closet/cabinet{
+	pixel_y = 20
+	},
+/obj/item/weapon/ore/diamond,
+/obj/item/weapon/ore/gold,
+/obj/item/weapon/ore/osmium,
+/obj/item/weapon/ore/silver,
+/obj/item/weapon/ore/uranium,
+/obj/item/weapon/bluespace_crystal,
+/obj/item/clothing/head/sombrero,
+/obj/item/clothing/head/sombrero,
+/obj/item/clothing/suit/poncho,
+/obj/item/clothing/accessory/poncho/thermal/red,
+/obj/item/clothing/accessory/poncho/thermal/security,
+/obj/item/clothing/accessory/poncho/thermal/green,
+/obj/item/clothing/shoes/footwraps,
+/obj/item/clothing/shoes/footwraps,
+/obj/item/clothing/shoes/footwraps,
+/obj/item/clothing/shoes/footwraps,
+/obj/item/toy/bosunwhistle/fluff/strix,
+/obj/item/weapon/blobcore_chunk,
+/obj/item/weapon/towel/random,
+/obj/item/weapon/towel/random,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/ScienceShip)
+"wp" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/steel_grid,
+/area/survivalpod/superpose/ScienceShip)
+"xk" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/ScienceShip)
+"xw" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"xy" = (
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/ScienceShip)
+"xF" = (
+/obj/effect/floor_decal/industrial/outline/blue,
+/obj/structure/closet/jcloset,
+/obj/item/weapon/mop,
+/obj/structure/mopbucket,
+/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/weapon/reagent_containers/spray/cleaner,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"yb" = (
+/obj/machinery/vending/wallmed1{
+	name = "NanoMed Wall";
+	pixel_x = 25
+	},
+/obj/structure/table/reinforced,
+/obj/item/weapon/storage/quickdraw/syringe_case,
+/obj/item/weapon/storage/quickdraw/syringe_case,
+/turf/simulated/shuttle/floor/white,
+/area/survivalpod/superpose/ScienceShip)
+"yn" = (
+/obj/machinery/power/terminal{
+	dir = 8
+	},
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"yt" = (
+/obj/machinery/smartfridge/survival_pod{
+	name = "food storage"
+	},
+/obj/item/weapon/reagent_containers/food/snacks/burrito_spicy,
+/obj/item/weapon/reagent_containers/food/snacks/burrito_spicy,
+/obj/item/weapon/reagent_containers/food/snacks/burrito_spicy,
+/obj/item/weapon/reagent_containers/food/snacks/burrito_vegan,
+/obj/item/weapon/reagent_containers/food/snacks/burrito_vegan,
+/obj/item/weapon/reagent_containers/food/snacks/burrito_vegan,
+/obj/item/weapon/reagent_containers/food/snacks/burrito_mystery,
+/obj/item/weapon/reagent_containers/food/snacks/burrito_mystery,
+/obj/item/weapon/reagent_containers/food/snacks/burrito_mystery,
+/obj/item/weapon/reagent_containers/food/snacks/burrito_hell,
+/obj/item/weapon/reagent_containers/food/snacks/burrito_hell,
+/obj/item/weapon/reagent_containers/food/snacks/burrito_hell,
+/obj/item/weapon/reagent_containers/food/snacks/burrito_hell,
+/obj/item/weapon/reagent_containers/food/snacks/burrito_cheese,
+/obj/item/weapon/reagent_containers/food/snacks/burrito_cheese,
+/obj/item/weapon/reagent_containers/food/snacks/burrito_cheese,
+/obj/item/weapon/reagent_containers/food/snacks/burrito,
+/obj/item/weapon/reagent_containers/food/snacks/burrito,
+/obj/item/weapon/reagent_containers/food/snacks/burrito,
+/obj/item/weapon/reagent_containers/food/snacks/slice/bigbeanburrito,
+/obj/item/weapon/reagent_containers/food/snacks/slice/bigbeanburrito,
+/obj/item/weapon/reagent_containers/food/snacks/slice/bigbeanburrito,
+/obj/item/weapon/reagent_containers/food/snacks/slice/bigbeanburrito/filled,
+/obj/item/weapon/reagent_containers/food/snacks/slice/bigbeanburrito/filled,
+/obj/item/weapon/reagent_containers/food/snacks/slice/bigbeanburrito/filled,
+/obj/item/weapon/reagent_containers/food/snacks/sliceable/supremoburrito,
+/obj/item/weapon/reagent_containers/food/snacks/enchiladas,
+/obj/item/weapon/reagent_containers/food/snacks/enchiladas,
+/obj/item/weapon/reagent_containers/food/snacks/enchiladas,
+/obj/item/weapon/reagent_containers/food/snacks/cheesenachos,
+/obj/item/weapon/reagent_containers/food/snacks/cheesenachos,
+/obj/item/weapon/reagent_containers/food/snacks/cheesenachos,
+/obj/item/weapon/reagent_containers/food/snacks/chipplate/nachos,
+/obj/item/weapon/reagent_containers/food/snacks/chipplate/nachos,
+/obj/item/weapon/reagent_containers/food/snacks/chipplate/nachos,
+/obj/item/weapon/reagent_containers/food/snacks/cubannachos,
+/obj/item/weapon/reagent_containers/food/snacks/cubannachos,
+/obj/item/weapon/reagent_containers/food/snacks/cubannachos,
+/obj/item/weapon/reagent_containers/food/snacks/cubannachos,
+/obj/item/weapon/reagent_containers/food/snacks/nachos,
+/obj/item/weapon/reagent_containers/food/snacks/nachos,
+/obj/item/weapon/reagent_containers/food/snacks/nachos,
+/obj/item/weapon/reagent_containers/food/snacks/nachos,
+/obj/item/weapon/reagent_containers/food/snacks/pandenata,
+/obj/item/weapon/reagent_containers/food/snacks/pandenata,
+/obj/item/weapon/reagent_containers/food/snacks/pandenata,
+/obj/item/weapon/reagent_containers/food/snacks/tocino,
+/obj/item/weapon/reagent_containers/food/snacks/tocino,
+/obj/item/weapon/reagent_containers/food/snacks/tocino,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"yy" = (
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 4;
+	pixel_y = 26
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"yB" = (
+/obj/machinery/alarm/alarms_hidden{
+	dir = 8;
+	pixel_x = 22
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/ScienceShip)
+"yJ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/obj/machinery/mech_recharger,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"zp" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"zV" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/stack/material/uranium,
+/obj/item/stack/material/phoron{
+	amount = 5;
+	pixel_x = -1;
+	pixel_y = -3
+	},
+/obj/item/stack/material/silver{
+	amount = 5;
+	pixel_x = 2;
+	pixel_y = 4
+	},
+/obj/item/stack/material/copper{
+	amount = 25
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/ScienceShip)
+"Az" = (
+/obj/machinery/door/airlock/maintenance/medical{
+	req_one_access = null
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/steel_grid,
+/area/survivalpod/superpose/ScienceShip)
+"AN" = (
+/obj/structure/bed/chair/wood,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/ScienceShip)
+"AO" = (
+/obj/structure/closet/walllocker/emerglocker{
+	pixel_x = -25;
+	pixel_y = 32
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/ScienceShip)
+"AP" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 6
+	},
+/turf/simulated/shuttle/wall/hard_corner,
+/area/survivalpod/superpose/ScienceShip)
+"AQ" = (
+/obj/structure/bed/double/padded,
+/obj/structure/closet/walllocker/emerglocker{
+	pixel_y = 32
+	},
+/obj/item/weapon/bedsheet/rainbowdouble,
+/turf/simulated/floor/carpet/turcarpet,
+/area/survivalpod/superpose/ScienceShip)
+"Bn" = (
+/obj/structure/grille/rustic{
+	health = 25;
+	name = "reinforced grille"
+	},
+/obj/structure/shuttle/window,
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/blast/regular/open{
+	dir = 4;
+	id = "estrella_blast";
+	name = "window blast shield"
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"Bz" = (
+/obj/structure/toilet{
+	dir = 8;
+	pixel_x = 9
+	},
+/obj/machinery/door/window/survival_pod{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/ScienceShip)
+"BR" = (
+/obj/structure/salvageable/computer,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/ScienceShip)
+"BS" = (
+/obj/effect/catwalk_plated/white,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/template_noop,
+/area/template_noop)
+"Cm" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"Cn" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 4
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 24
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/ScienceShip)
+"Cq" = (
+/obj/machinery/portable_atmospherics/canister/air,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/outline/blue,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"Cz" = (
+/obj/screen/alert/highpressure,
+/obj/machinery/r_n_d/destructive_analyzer,
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/ScienceShip)
+"CW" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 10
+	},
+/turf/simulated/floor/bluegrid{
+	name = "Server Base";
+	nitrogen = 500;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/survivalpod/superpose/ScienceShip)
+"CX" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8
+	},
+/obj/machinery/portable_atmospherics/canister/air/airlock,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"Dp" = (
+/obj/screen/alert/highpressure,
+/turf/simulated/shuttle/wall/hard_corner,
+/area/survivalpod/superpose/ScienceShip)
+"Ds" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/white,
+/area/survivalpod/superpose/ScienceShip)
+"DK" = (
+/obj/structure/closet/crate,
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/fiftyspawner/blucarpet,
+/obj/fiftyspawner/oracarpet,
+/obj/fiftyspawner/purcarpet,
+/obj/fiftyspawner/sblucarpet,
+/obj/fiftyspawner/tealcarpet,
+/obj/fiftyspawner/turcarpet,
+/obj/item/stack/material/wood{
+	amount = 50;
+	color = "#824B28"
+	},
+/obj/item/stack/material/wood{
+	amount = 50;
+	color = "#824B28"
+	},
+/obj/item/stack/material/wood/hard{
+	amount = 50
+	},
+/obj/item/stack/material/wood/hard{
+	amount = 50
+	},
+/obj/item/stack/material/wood/sif{
+	amount = 50
+	},
+/obj/item/stack/material/wood/sif{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/cloth{
+	amount = 50
+	},
+/obj/item/stack/material/cloth{
+	amount = 50
+	},
+/obj/item/stack/material/algae{
+	amount = 50
+	},
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/lead{
+	amount = 30
+	},
+/obj/item/stack/material/plasteel{
+	amount = 30;
+	pixel_y = 5
+	},
+/obj/item/stack/material/resin{
+	amount = 50
+	},
+/obj/item/stack/material/smolebricks{
+	amount = 50
+	},
+/obj/item/stack/material/smolebricks{
+	amount = 50
+	},
+/obj/machinery/light{
+	layer = 3
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"DM" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 1
+	},
+/obj/structure/reagent_dispensers/fueltank/high,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/survivalpod/superpose/ScienceShip)
+"DV" = (
+/obj/machinery/alarm/alarms_hidden{
+	dir = 8;
+	pixel_x = 22
+	},
+/obj/structure/bed/chair/office/dark,
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/ScienceShip)
+"DW" = (
+/obj/effect/catwalk_plated/dark,
+/obj/machinery/shipsensors{
+	dir = 8
+	},
+/obj/structure/sign/science{
+	pixel_x = 32
+	},
+/turf/template_noop,
+/area/survivalpod/superpose/ScienceShip)
+"Eg" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/ScienceShip)
+"Eq" = (
+/turf/template_noop,
+/area/template_noop)
+"Ew" = (
+/obj/machinery/sleeper{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/white,
+/area/survivalpod/superpose/ScienceShip)
+"EH" = (
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 4;
+	pixel_y = -34
+	},
+/obj/machinery/space_heater,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"EN" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"ER" = (
+/obj/structure/bed/chair/bay/comfy/red{
+	dir = 8
+	},
+/obj/structure/closet/walllocker/emerglocker{
+	pixel_x = -25;
+	pixel_y = 32
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/ScienceShip)
+"Fb" = (
+/obj/structure/table/reinforced,
+/obj/item/weapon/reagent_containers/glass/beaker/large,
+/obj/item/weapon/reagent_containers/dropper,
+/obj/item/weapon/reagent_containers/glass/beaker,
+/obj/item/weapon/reagent_containers/glass/beaker,
+/obj/machinery/reagentgrinder,
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 24
+	},
+/obj/item/weapon/reagent_containers/spray/cleaner{
+	desc = "Someone has crossed out the 'Space' from Space Cleaner and written in Chemistry. Scrawled on the back is, 'Okay, whoever filled this with polytrinic acid, it was only funny the first time. It was hard enough replacing the CMO's first cat!'";
+	name = "Chemistry Cleaner"
+	},
+/turf/simulated/shuttle/floor/white,
+/area/survivalpod/superpose/ScienceShip)
+"Fe" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/weapon/coin/diamond,
+/obj/machinery/light{
+	layer = 3
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/ScienceShip)
+"Ft" = (
+/obj/machinery/access_button{
+	command = "cycle_exterior";
+	frequency = 1380;
+	master_tag = "estrella";
+	name = "exterior access button";
+	pixel_y = 26
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/blast/regular/open{
+	dir = 4;
+	id = "estrella_blast";
+	layer = 2;
+	name = "window blast shield";
+	open_layer = 2
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"FR" = (
+/obj/machinery/door/airlock/hatch{
+	icon_state = "door_locked";
+	id_tag = "estrella_side_hatch";
+	locked = 1;
+	req_access = null;
+	req_one_access = null
+	},
+/obj/machinery/button/remote/airlock{
+	dir = 8;
+	id = "estrella_side_hatch";
+	name = "Side Hatch Control";
+	pixel_x = -27;
+	specialfunctions = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/blast/regular/open{
+	id = "estrella_blast";
+	layer = 2;
+	name = "window blast shield";
+	open_layer = 2
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"FV" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/closet/crate/engineering,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/glass,
+/obj/item/weapon/tank/phoron,
+/obj/item/weapon/tank/phoron,
+/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/weapon/storage/toolbox/electrical,
+/obj/item/device/multitool,
+/obj/item/device/geiger,
+/obj/item/clothing/glasses/goggles,
+/obj/item/clothing/glasses/goggles,
+/obj/item/device/t_scanner,
+/obj/item/clothing/glasses/welding,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"Gi" = (
+/obj/effect/catwalk_plated/white,
+/turf/template_noop,
+/area/survivalpod/superpose/ScienceShip)
+"Gl" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1380;
+	id_tag = "estrella_pump"
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"GM" = (
+/obj/structure/table/bench/wooden,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/alarm/alarms_hidden{
+	dir = 8;
+	pixel_x = 22
+	},
+/obj/item/device/flash,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/ScienceShip)
+"GP" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/ScienceShip)
+"GU" = (
+/obj/machinery/sleep_console{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/white,
+/area/survivalpod/superpose/ScienceShip)
+"HX" = (
+/obj/machinery/chem_master{
+	pixel_x = -7
+	},
+/turf/simulated/shuttle/floor/white,
+/area/survivalpod/superpose/ScienceShip)
+"Ij" = (
+/obj/machinery/power/smes/buildable/point_of_interest,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/structure/cable/green,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"In" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 8
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -27
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"Io" = (
+/obj/machinery/atmospherics/unary/freezer{
+	icon_state = "freezer"
+	},
+/turf/simulated/shuttle/floor/white,
+/area/survivalpod/superpose/ScienceShip)
+"Ip" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/white,
+/area/survivalpod/superpose/ScienceShip)
+"Iz" = (
+/obj/structure/table/reinforced,
+/obj/item/weapon/folder/blue,
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen/blue{
+	pixel_x = -5;
+	pixel_y = -1
+	},
+/obj/item/weapon/pen/red,
+/obj/item/weapon/pen{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/ScienceShip)
+"IB" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/machinery/shower{
+	dir = 1
+	},
+/obj/structure/curtain/open/shower,
+/obj/random/soap,
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/ScienceShip)
+"IE" = (
+/obj/structure/closet/walllocker/emerglocker{
+	dir = 1;
+	pixel_x = -24;
+	pixel_y = -32
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"II" = (
+/obj/machinery/power/port_gen/pacman/mrs,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/fiftyspawner/tritium,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"IM" = (
+/obj/machinery/portable_atmospherics/canister/phoron,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"IQ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/ScienceShip)
+"Jd" = (
+/obj/machinery/atmospherics/pipe/manifold/visible{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"Jm" = (
+/obj/machinery/door/airlock/multi_tile/metal/mait{
+	dir = 1;
+	frequency = 1380;
+	icon_state = "door_locked";
+	id_tag = "estrella_outer";
+	locked = 1;
+	name = "External Access"
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/blast/regular/open{
+	dir = 4;
+	id = "estrella_blast";
+	layer = 2;
+	name = "window blast shield";
+	open_layer = 2
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"JG" = (
+/obj/structure/reagent_dispensers/acid{
+	density = 0;
+	pixel_x = -30
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/ScienceShip)
+"JJ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/structure/closet/walllocker/emerglocker{
+	dir = 1;
+	pixel_y = -32
+	},
+/obj/machinery/alarm/alarms_hidden{
+	pixel_y = 22
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/ScienceShip)
+"Kh" = (
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/ScienceShip)
+"Kq" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/machinery/shower{
+	dir = 1
+	},
+/obj/structure/curtain/open/shower,
+/obj/random/soap,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/ScienceShip)
+"Kx" = (
+/obj/screen/alert/highpressure,
+/turf/template_noop,
+/area/template_noop)
+"KD" = (
+/obj/machinery/atmospherics/unary/vent_pump{
+	dir = 1;
+	external_pressure_bound = 0;
+	external_pressure_bound_default = 0;
+	icon_state = "map_vent_in";
+	initialize_directions = 1;
+	internal_pressure_bound = 4000;
+	internal_pressure_bound_default = 4000;
+	pressure_checks = 2;
+	pressure_checks_default = 2;
+	pump_direction = 0;
+	use_power = 1
+	},
+/obj/structure/cryofeed{
+	dir = 4
+	},
+/turf/simulated/floor/bluegrid{
+	name = "Server Base";
+	nitrogen = 500;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/survivalpod/superpose/ScienceShip)
+"Lj" = (
+/obj/structure/closet/walllocker_double/kitchen/north{
+	dir = 8;
+	name = "Ration Cabinet";
+	pixel_x = -32;
+	pixel_y = 0
+	},
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/device/radio{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/device/radio{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"Lx" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 28
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/ScienceShip)
+"LC" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/shuttle/window,
+/obj/structure/curtain/black{
+	icon_state = "open";
+	layer = 2;
+	name = "privacy curtain";
+	opacity = 0
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"LP" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 5
+	},
+/obj/structure/closet/secure_closet/guncabinet{
+	req_one_access = null
+	},
+/obj/item/clothing/head/helmet/combat/USDF,
+/obj/item/clothing/head/helmet/combat/USDF,
+/obj/item/clothing/suit/armor/combat/USDF,
+/obj/item/clothing/suit/armor/combat/USDF,
+/obj/item/device/flash,
+/obj/item/device/flash,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/survivalpod/superpose/ScienceShip)
+"Mc" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/fireaxecabinet{
+	pixel_x = 32
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/ScienceShip)
+"Mg" = (
+/obj/machinery/atmospherics/pipe/manifold4w/visible,
+/obj/machinery/meter,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"MR" = (
+/obj/machinery/shuttle_sensor,
+/turf/simulated/shuttle/wall/hard_corner,
+/area/survivalpod/superpose/ScienceShip)
+"Ng" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/alarm/alarms_hidden{
+	pixel_y = 22
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/ScienceShip)
+"Nm" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/machinery/power/shield_generator/charged{
+	field_radius = 8;
+	initial_shield_modes = 2153;
+	target_radius = 8
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"NV" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/ScienceShip)
+"Oh" = (
+/obj/effect/catwalk_plated/white,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/template_noop,
+/area/survivalpod/superpose/ScienceShip)
+"Oi" = (
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"Ou" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"OG" = (
+/turf/simulated/shuttle/floor/white,
+/area/survivalpod/superpose/ScienceShip)
+"Pk" = (
+/obj/structure/closet/walllocker/emerglocker{
+	pixel_y = 32
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/ScienceShip)
+"Pv" = (
+/obj/machinery/atmospherics/unary/freezer{
+	icon_state = "freezer_1";
+	power_setting = 20;
+	set_temperature = 73;
+	use_power = 1
+	},
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/survivalpod/superpose/ScienceShip)
+"Pz" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/effect/floor_decal/industrial/warning/corner,
+/obj/machinery/gear_dispenser/suit/ert{
+	req_one_access = null
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"PB" = (
+/turf/simulated/floor/wood/broken,
+/area/survivalpod/superpose/ScienceShip)
+"PS" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"Qp" = (
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
+/obj/structure/table/reinforced,
+/obj/item/weapon/stock_parts/console_screen,
+/obj/item/weapon/stock_parts/console_screen,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/ScienceShip)
+"QA" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 8
+	},
+/obj/machinery/suspension_gen,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/survivalpod/superpose/ScienceShip)
+"QC" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen/fountain,
+/obj/item/weapon/pen/chameleon,
+/obj/item/device/gps/advanced/science,
+/obj/machinery/button/remote/blast_door{
+	id = "estrella_blast";
+	name = "remote blast shielding control";
+	pixel_x = -1;
+	pixel_y = -26
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/ScienceShip)
+"QH" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"QR" = (
+/obj/machinery/meter,
+/obj/structure/closet/walllocker/emerglocker{
+	pixel_x = -25;
+	pixel_y = 32
+	},
+/obj/machinery/alarm/alarms_hidden{
+	dir = 4;
+	pixel_x = -22
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/survivalpod/superpose/ScienceShip)
+"QT" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/white,
+/area/survivalpod/superpose/ScienceShip)
+"Ro" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"Rp" = (
+/obj/machinery/alarm/alarms_hidden{
+	dir = 8;
+	pixel_x = 22
+	},
+/turf/simulated/floor/wood/broken,
+/area/survivalpod/superpose/ScienceShip)
+"RI" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/recharge_station,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"RU" = (
+/obj/structure/closet/cabinet{
+	pixel_y = 20
+	},
+/obj/machinery/computer/security/telescreen/entertainment{
+	icon_state = "frame";
+	pixel_x = -32
+	},
+/obj/item/weapon/handcuffs/legcuffs/fuzzy,
+/obj/item/weapon/handcuffs/fuzzy,
+/obj/item/clothing/mask/muzzle/ballgag,
+/obj/item/clothing/suit/iasexy,
+/obj/item/clothing/under/sexybunny_white/sexybunny_black,
+/obj/item/clothing/under/dress/maid/sexy,
+/obj/item/clothing/head/collectable/rabbitears,
+/turf/simulated/floor/wood/broken,
+/area/survivalpod/superpose/ScienceShip)
+"RV" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 4;
+	pixel_x = 24
+	},
+/obj/structure/cable/green,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"St" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/ScienceShip)
+"SC" = (
+/obj/machinery/atmospherics/valve,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"SE" = (
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"SU" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 8
+	},
+/obj/structure/reagent_dispensers/watertank/high,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/survivalpod/superpose/ScienceShip)
+"Te" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/ScienceShip)
+"Tp" = (
+/obj/structure/bed/double/padded,
+/obj/structure/curtain/bed,
+/obj/item/weapon/bedsheet/hosdouble,
+/obj/machinery/computer/security/telescreen/entertainment{
+	icon_state = "frame";
+	pixel_y = 32
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/ScienceShip)
+"Tr" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/rnd{
+	req_one_access = null
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/steel_grid,
+/area/survivalpod/superpose/ScienceShip)
+"TB" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/survivalpod/superpose/ScienceShip)
+"TF" = (
+/obj/screen/alert/highpressure,
+/obj/machinery/computer/rdconsole/core{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/ScienceShip)
+"Ug" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -27
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/ScienceShip)
+"Ul" = (
+/turf/simulated/shuttle/wall/hard_corner,
+/area/survivalpod/superpose/ScienceShip)
+"Ur" = (
+/obj/machinery/atmospherics/pipe/tank/air{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/outline/blue,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"Uz" = (
+/obj/structure/salvageable/server,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/ScienceShip)
+"UG" = (
+/obj/structure/table/reinforced,
+/obj/item/device/gps/advanced/science,
+/obj/item/weapon/reagent_containers/spray/cleaner{
+	desc = "Someone has crossed out the 'Space' from Space Cleaner and written in Chemistry. Scrawled on the back is, 'Okay, whoever filled this with polytrinic acid, it was only funny the first time. It was hard enough replacing the CMO's first cat!'";
+	name = "Chemistry Cleaner"
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/ScienceShip)
+"UN" = (
+/obj/structure/table/reinforced,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/glass,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/ScienceShip)
+"UP" = (
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 24
+	},
+/obj/structure/table/reinforced,
+/obj/item/weapon/disk/design_disk,
+/obj/item/weapon/disk/design_disk,
+/obj/item/weapon/disk/tech_disk,
+/obj/item/weapon/disk/tech_disk,
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/ScienceShip)
+"UZ" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1;
+	frequency = 1380;
+	id_tag = "estrella_pump"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/obj/machinery/airlock_sensor{
+	frequency = 1380;
+	id_tag = "estrella_sensor";
+	pixel_y = -28
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"VB" = (
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"VE" = (
+/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/portable_atmospherics/canister/nitrogen,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/survivalpod/superpose/ScienceShip)
+"VH" = (
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 24
+	},
+/obj/machinery/computer/crew,
+/turf/simulated/floor/tiled/techmaint,
+/area/survivalpod/superpose/ScienceShip)
+"VJ" = (
+/obj/structure/table/steel_reinforced,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/machinery/alarm/alarms_hidden{
+	dir = 8;
+	pixel_x = 22
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"VS" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/atmospherics/binary/passive_gate{
+	dir = 1;
+	regulate_mode = 0;
+	unlocked = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"VT" = (
+/obj/machinery/door/airlock/multi_tile/metal/mait{
+	dir = 1;
+	frequency = 1380;
+	icon_state = "door_locked";
+	id_tag = "estrella_inner";
+	locked = 1;
+	name = "Internal Access"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 5
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"VY" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"Wc" = (
+/obj/structure/table/reinforced,
+/obj/machinery/chemical_dispenser/full{
+	pixel_y = 5
+	},
+/obj/item/device/radio/intercom{
+	desc = "Talk... listen through this.";
+	name = "Station Intercom (Brig Radio)";
+	pixel_y = -21;
+	wires = 7
+	},
+/turf/simulated/shuttle/floor/white,
+/area/survivalpod/superpose/ScienceShip)
+"Wj" = (
+/obj/structure/grille/rustic{
+	health = 25;
+	name = "reinforced grille"
+	},
+/obj/structure/shuttle/window,
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/blast/regular/open{
+	id = "estrella_blast";
+	name = "window blast shield"
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"Wu" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/ScienceShip)
+"WL" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"Xh" = (
+/obj/structure/toilet{
+	pixel_y = 12
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/machinery/door/window/survival_pod{
+	dir = 2;
+	req_one_access = null
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/ScienceShip)
+"Xz" = (
+/obj/machinery/door/airlock/hatch{
+	icon_state = "door_locked";
+	id_tag = "estrella_back_hatch";
+	locked = 1;
+	req_one_access = null
+	},
+/obj/machinery/button/remote/airlock{
+	desiredstate = 1;
+	id = "estrella_back_hatch";
+	name = "Rear Hatch Control";
+	pixel_y = 27;
+	req_access = null;
+	specialfunctions = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/blast/regular/open{
+	dir = 4;
+	id = "estrella_blast";
+	layer = 2;
+	name = "window blast shield";
+	open_layer = 2
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
+"XQ" = (
+/obj/structure/closet/cabinet{
+	pixel_y = 20
+	},
+/obj/item/weapon/implanter/sizecontrol,
+/obj/item/weapon/ore/uranium,
+/obj/item/weapon/ore/uranium,
+/obj/item/weapon/ore/phoron,
+/obj/item/weapon/ore/phoron,
+/obj/item/weapon/ore/osmium,
+/obj/item/weapon/ore/osmium,
+/obj/item/weapon/ore/gold,
+/obj/item/weapon/ore/diamond,
+/obj/item/weapon/ore/marble,
+/obj/item/weapon/ore/osmium,
+/obj/item/weapon/ore/rutile,
+/obj/item/toy/bosunwhistle/fluff/strix,
+/obj/item/toy/character/wizard,
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/mindbreaker/unidentified,
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/mindbreaker/unidentified,
+/obj/item/weapon/fluff/squeezetoy,
+/obj/item/weapon/fluff/zekewatch,
+/obj/item/weapon/fluff/fidgetspinner/red,
+/obj/item/weapon/storage/pill_bottle/dice_nerd,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/ScienceShip)
+"Yi" = (
+/obj/structure/closet/secure_closet/engineering_welding{
+	req_access = null
+	},
+/obj/item/weapon/storage/belt/utility,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"YH" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 5
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -27
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"YN" = (
+/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/turf/simulated/shuttle/floor/white,
+/area/survivalpod/superpose/ScienceShip)
+"YX" = (
+/obj/machinery/autolathe{
+	hacked = 1
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/ScienceShip)
+"Za" = (
+/obj/structure/table/reinforced,
+/obj/item/weapon/stock_parts/scanning_module/adv{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/obj/item/weapon/stock_parts/scanning_module/adv{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/obj/item/weapon/stock_parts/micro_laser/high,
+/obj/item/weapon/stock_parts/micro_laser/high,
+/obj/item/weapon/stock_parts/matter_bin/adv,
+/obj/item/weapon/stock_parts/matter_bin/adv,
+/obj/item/weapon/stock_parts/manipulator/hyper,
+/obj/item/weapon/stock_parts/manipulator/hyper,
+/obj/item/weapon/stock_parts/capacitor/adv,
+/obj/item/weapon/stock_parts/capacitor/adv,
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/ScienceShip)
+"Zc" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
+"Zd" = (
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/ScienceShip)
+"Zg" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/alarm/alarms_hidden{
+	dir = 1;
+	pixel_y = -22
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/ScienceShip)
+"ZJ" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/machinery/alarm/alarms_hidden{
+	dir = 8;
+	pixel_x = 22
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
 
 (1,1,1) = {"
-EqEqEqEqEqEqEqEqEqEqEqEqEqEqEqEqEqEqEqEqEqEqEqEqEq
-EqEqEqEqEqEqEqEqEqEqEqEqEqEqEqEqEqapoXoXoXoXEqEqEq
-EqEqEqEqEqEqEqEqEqEqEqEqEqEqEqoXoXsHUloXoXEqEqEqEq
-EqEqEqEqEqEqEqEqEqapEqEqEqEqoXUldBYioSbebmbmEqEqEq
-EqEqEqEqEqoXWjWjoXsHoXoXbPoXoXriuXOitbbecmbmEqEqEq
-EqEqEqEqoXUlBRUzaeXhXQvlKhTpoXIMZcVBklfeoXEqEqEqEq
-EqEqEqEqBnpLERxyfDeueueueuGMoXgeZcOigfbebmbmEqEqEq
-EqEqEqEqoXUlsIsIoJQChQnQKhiQoXgeZcOikVbecmbmEqEqEq
-EqEqEqEqEqoXoXoXoXoXUllHmgoXoXUlnqnVklfeoXEqEqEqEq
-EqEqEqEqEqDWsHYNpmIooXEgIQjuNgsKpkpGqebebmbmEqEqEq
-EqEqEqEqEqoXUldhrslBoXrPoXoXoXUlInsJtubecmbmEqEqEq
-EqEqEqEqEqBnWcIpOGQTtRGPoXumAQoXuuwpUloXoXEqEqEqEq
-EqEqoXoXWjoXUlHXOGybUlosfsxkyBoXQHxwytoXoXoXEqEqEq
-EqKxBnUNYXzVoXdfOGDsAzCnoXANKhoXLjVYPzAPCXUlUlEqEq
-EqfgDpivezDVoXGUEwFbUlGPLCFeKhoXIjynCmdaGlllFtGiEq
-EqBnhbAOezIzUloXoXoXoXMcoXIBBzoXIIPSCmVTMgJdJmGiEq
-EqBnCznbezNVsTIQJJIQIQLxoXoXoXoXyJOiVJUlhBUZMROhEq
-EqBnTFezezQpUloXoXoXoXGPoXRUPkoXRIOiRVUloXoXUlGiEq
-EqfgDpJGTeUPoXPvVEVHUlEgchWuRpoXNmteENsvRoWLXzGiEq
-EqKxBnluUGZaoXQRqlTBTrCnoXPBcuoXnMzpOiOiSEUloXEqEq
-EqKxfgoXWjoXUlseqblWUlUgLCkwZdoXQHxwFVSEUloXEqEqEq
-EqEqKxKxEqoXoXtNdSCWoXGPoXKqBzoXuuwpUloXoXEqEqEqEq
-EqEqEqEqEqoXUljetgKDoXrPoXoXoXUlYHsJDMbebmbmEqEqEq
-EqEqEqEqEqEqoXoXoXoXoXSthRcwZgszOupGSUbecmbmEqEqEq
-EqEqEqEqEqEqEqEqoXoXUlFRUloXoXUlVSZJklfeoXEqEqEqEq
-EqEqEqEqEqEqEqEqEqEqBSGiUlUlxFyySCOisYbebmbmEqEqEq
-EqEqEqEqEqEqEqEqEqEqEqEqqhsHCqOulMOiQAbecmbmEqEqEq
-EqEqEqEqEqEqEqEqEqEqEqEqEqoXUrIEOiOiklfeoXEqEqEqEq
-EqEqEqEqEqEqEqEqEqEqEqEqEqoXUlEHOiOidpbebmbmEqEqEq
-EqEqEqEqEqEqEqEqEqEqEqEqEqEqoXUlDKlKLPbecmbmEqEqEq
-EqEqEqEqEqEqEqEqEqEqEqEqEqEqEqoXoXsHUloXoXEqEqEqEq
-EqEqEqEqEqEqEqEqEqEqEqEqEqEqEqEqEqbcoXoXoXoXEqEqEq
-EqEqEqEqEqEqEqEqEqEqEqEqEqEqEqEqEqEqEqEqEqEqEqEqEq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}
+(2,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Kx
+fg
+Bn
+Bn
+Bn
+fg
+Kx
+Kx
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}
+(3,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+oX
+Bn
+Dp
+hb
+Cz
+TF
+Dp
+Bn
+fg
+Kx
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}
+(4,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+oX
+UN
+iv
+AO
+nb
+ez
+JG
+lu
+oX
+Kx
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}
+(5,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+Eq
+oX
+Bn
+oX
+Eq
+Eq
+Eq
+Eq
+Wj
+YX
+ez
+ez
+ez
+ez
+Te
+UG
+Wj
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}
+(6,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+oX
+Ul
+pL
+Ul
+oX
+DW
+oX
+Bn
+oX
+zV
+DV
+Iz
+NV
+Qp
+UP
+Za
+oX
+oX
+oX
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}
+(7,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+Wj
+BR
+ER
+sI
+oX
+sH
+Ul
+Wc
+Ul
+oX
+oX
+Ul
+sT
+Ul
+oX
+oX
+Ul
+oX
+Ul
+oX
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}
+(8,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+Wj
+Uz
+xy
+sI
+oX
+YN
+dh
+Ip
+HX
+df
+GU
+oX
+IQ
+oX
+Pv
+QR
+se
+tN
+je
+oX
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}
+(9,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+oX
+ae
+fD
+oJ
+oX
+pm
+rs
+OG
+OG
+OG
+Ew
+oX
+JJ
+oX
+VE
+ql
+qb
+dS
+tg
+oX
+oX
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}
+(10,1,1) = {"
+Eq
+Eq
+Eq
+ap
+sH
+Xh
+eu
+QC
+oX
+Io
+lB
+QT
+yb
+Ds
+Fb
+oX
+IQ
+oX
+VH
+TB
+lW
+CW
+KD
+oX
+oX
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}
+(11,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+oX
+XQ
+eu
+hQ
+Ul
+oX
+oX
+tR
+Ul
+Az
+Ul
+oX
+IQ
+oX
+Ul
+Tr
+Ul
+oX
+oX
+oX
+Ul
+BS
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}
+(12,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+oX
+vl
+eu
+nQ
+lH
+Eg
+rP
+GP
+os
+Cn
+GP
+Mc
+Lx
+GP
+Eg
+Cn
+Ug
+GP
+rP
+St
+FR
+Gi
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}
+(13,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+bP
+Kh
+eu
+Kh
+mg
+IQ
+oX
+oX
+fs
+oX
+LC
+oX
+oX
+oX
+ch
+oX
+LC
+oX
+oX
+hR
+Ul
+Ul
+qh
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}
+(14,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+oX
+Tp
+GM
+iQ
+oX
+ju
+oX
+um
+xk
+AN
+Fe
+IB
+oX
+RU
+Wu
+PB
+kw
+Kq
+oX
+cw
+oX
+Ul
+sH
+oX
+oX
+Eq
+Eq
+Eq
+Eq
+"}
+(15,1,1) = {"
+Eq
+Eq
+Eq
+oX
+oX
+oX
+oX
+oX
+oX
+Ng
+oX
+AQ
+yB
+Kh
+Kh
+Bz
+oX
+Pk
+Rp
+cu
+Zd
+Bz
+oX
+Zg
+oX
+xF
+Cq
+Ur
+Ul
+oX
+Eq
+Eq
+Eq
+"}
+(16,1,1) = {"
+Eq
+Eq
+oX
+Ul
+ri
+IM
+ge
+ge
+Ul
+sK
+Ul
+oX
+oX
+oX
+oX
+oX
+oX
+oX
+oX
+oX
+oX
+oX
+Ul
+sz
+Ul
+yy
+Ou
+IE
+EH
+Ul
+oX
+Eq
+Eq
+"}
+(17,1,1) = {"
+Eq
+Eq
+oX
+dB
+uX
+Zc
+Zc
+Zc
+nq
+pk
+In
+uu
+QH
+Lj
+Ij
+II
+yJ
+RI
+Nm
+nM
+QH
+uu
+YH
+Ou
+VS
+SC
+lM
+Oi
+Oi
+DK
+oX
+Eq
+Eq
+"}
+(18,1,1) = {"
+Eq
+ap
+sH
+Yi
+Oi
+VB
+Oi
+Oi
+nV
+pG
+sJ
+wp
+xw
+VY
+yn
+PS
+Oi
+Oi
+te
+zp
+xw
+wp
+sJ
+pG
+ZJ
+Oi
+Oi
+Oi
+Oi
+lK
+sH
+bc
+Eq
+"}
+(19,1,1) = {"
+Eq
+oX
+Ul
+oS
+tb
+kl
+gf
+kV
+kl
+qe
+tu
+Ul
+yt
+Pz
+Cm
+Cm
+VJ
+RV
+EN
+Oi
+FV
+Ul
+DM
+SU
+kl
+sY
+QA
+kl
+dp
+LP
+Ul
+oX
+Eq
+"}
+(20,1,1) = {"
+Eq
+oX
+oX
+be
+be
+fe
+be
+be
+fe
+be
+be
+oX
+oX
+AP
+da
+VT
+Ul
+Ul
+sv
+Oi
+SE
+oX
+be
+be
+fe
+be
+be
+fe
+be
+be
+oX
+oX
+Eq
+"}
+(21,1,1) = {"
+Eq
+oX
+oX
+bm
+cm
+oX
+bm
+cm
+oX
+bm
+cm
+oX
+oX
+CX
+Gl
+Mg
+hB
+oX
+Ro
+SE
+Ul
+oX
+bm
+cm
+oX
+bm
+cm
+oX
+bm
+cm
+oX
+oX
+Eq
+"}
+(22,1,1) = {"
+Eq
+oX
+Eq
+bm
+bm
+Eq
+bm
+bm
+Eq
+bm
+bm
+Eq
+oX
+Ul
+ll
+Jd
+UZ
+oX
+WL
+Ul
+oX
+Eq
+bm
+bm
+Eq
+bm
+bm
+Eq
+bm
+bm
+Eq
+oX
+Eq
+"}
+(23,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Ul
+Ft
+Jm
+MR
+Ul
+Xz
+oX
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}
+(24,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Gi
+Gi
+Oh
+Gi
+Gi
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}
+(25,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
 "}
