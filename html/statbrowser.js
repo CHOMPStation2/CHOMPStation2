@@ -141,7 +141,7 @@ function remove_verb(v) {
 	for (var i = verbs.length - 1; i >= 0; i--) {
 		var part_to_remove = verbs[i];
 		if (part_to_remove[1] == verb_to_remove[1]) {
-			verbs.splice(i, 1)
+			verbs.splice(i, 1);
 		}
 	}
 }
@@ -437,14 +437,14 @@ function iconError(e) {
 	}
 	setTimeout(function () {
 		var node = e.target;
-		var current_attempts = Number(node.getAttribute("data-attempts")) || 0
+		var current_attempts = Number(node.getAttribute("data-attempts")) || 0;
 		if (current_attempts > imageRetryLimit) {
 			return;
 		}
 		var src = node.src;
 		node.src = null;
 		node.src = src + '#' + current_attempts;
-		node.setAttribute("data-attempts", current_attempts + 1)
+		node.setAttribute("data-attempts", current_attempts + 1);
 		draw_listedturf();
 	}, imageRetryDelay);
 }
@@ -479,13 +479,13 @@ function draw_listedturf() {
 				clickcatcher = "?src=" + part[1];
 				switch (e.button) {
 					case 1:
-						clickcatcher += ";statpanel_item_click=middle"
+						clickcatcher += ";statpanel_item_click=middle";
 						break;
 					case 2:
-						clickcatcher += ";statpanel_item_click=right"
+						clickcatcher += ";statpanel_item_click=right";
 						break;
 					default:
-						clickcatcher += ";statpanel_item_click=left"
+						clickcatcher += ";statpanel_item_click=left";
 				}
 				if (e.shiftKey) {
 					clickcatcher += ";statpanel_item_shiftclick=1";
@@ -625,13 +625,13 @@ function draw_misc(tab) {
 					clickcatcher = "?src=" + part[4];
 					switch (e.button) {
 						case 1:
-							clickcatcher += ";statpanel_item_click=middle"
+							clickcatcher += ";statpanel_item_click=middle";
 							break;
 						case 2:
-							clickcatcher += ";statpanel_item_click=right"
+							clickcatcher += ";statpanel_item_click=right";
 							break;
 						default:
-							clickcatcher += ";statpanel_item_click=left"
+							clickcatcher += ";statpanel_item_click=left";
 					}
 					if (e.shiftKey) {
 						clickcatcher += ";statpanel_item_shiftclick=1";
@@ -652,11 +652,11 @@ function draw_misc(tab) {
 			td3.appendChild(b);
 		}
 		if(!td2 && !td3) {
-			td1.className = "elem_span3"
+			td1.className = "elem_span3";
 			td1.colSpan += 2;
 		}
 		else if (!td2) {
-			td1.className = "elem_span2"
+			td1.className = "elem_span2";
 			td1.colSpan += 1;
 		} else if (!td3) {
 			td2.colSpan += 1;
