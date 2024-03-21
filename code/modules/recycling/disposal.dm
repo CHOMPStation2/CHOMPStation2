@@ -148,7 +148,6 @@
 			H.held_mob.forceMove(src)
 		else
 			I.forceMove(src)
-			explosion()
 
 	to_chat(user, "You place \the [I] into the [src].")
 	for(var/mob/M in viewers(src))
