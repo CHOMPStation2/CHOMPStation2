@@ -1,7 +1,0 @@
-author: "TheCaramelion"
-delete-after: True
-changes:
-  - rscadd: "Use a vial on mucus to take virus samples"
-  - balance: "Stepping or interacting with mucus/blood/vomit might infect you, if it has viruses"
-  - qol: "Autoinjectors can now be picked up with the chemistry bag"
-  - bugfix: "Runtime when Infected Room event triggered"
