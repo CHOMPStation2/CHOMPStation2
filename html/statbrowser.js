@@ -445,6 +445,7 @@ function iconError(e) {
 		node.src = null;
 		node.src = src + '#' + current_attempts;
 		node.setAttribute("data-attempts", current_attempts + 1);
+		draw_listedturf();
 	}, imageRetryDelay);
 }
 
