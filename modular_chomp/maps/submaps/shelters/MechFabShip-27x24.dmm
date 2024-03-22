@@ -1507,6 +1507,17 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MechFabShip)
+"Sh" = (
+/obj/machinery/door/airlock/glass_centcom{
+	name = "RnD and Fabrication"
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/survivalpod/superpose/MechFabShip)
 "SE" = (
 /obj/item/weapon/stool/padded,
 /turf/simulated/floor/tiled/techfloor,
@@ -2236,7 +2247,7 @@ HE
 tk
 tk
 KC
-hI
+Sh
 UL
 UL
 vt
