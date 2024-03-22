@@ -200,15 +200,10 @@
 		for(var/mob/M as anything in vis_mobs)
 			if(isnewplayer(M))
 				continue
-<<<<<<< HEAD
-			if(isobserver(M) && (!(is_preference_enabled(/datum/client_preference/whisubtle_vis) || (isbelly(M.loc) && src == M.loc:owner)) || \
-			!is_preference_enabled(/datum/client_preference/whisubtle_vis) && !M.client?.holder)) //CHOMPEdit - Added the belly check so that ghosts in bellies can still see their pred's messages.
-=======
 			if(src.client && M && !(get_z(src) == get_z(M)))
 				message = "<span class='multizsay'>[message]</span>"
-			if(isobserver(M) && (!M.is_preference_enabled(/datum/client_preference/ghost_see_whisubtle) || \
-			!is_preference_enabled(/datum/client_preference/whisubtle_vis) && !M.client?.holder))
->>>>>>> d0ccf27f34... Adds MultiZ chat filter (#15849)
+			if(isobserver(M) && (!(is_preference_enabled(/datum/client_preference/whisubtle_vis) || (isbelly(M.loc) && src == M.loc:owner)) || \
+			!is_preference_enabled(/datum/client_preference/whisubtle_vis) && !M.client?.holder)) //CHOMPEdit - Added the belly check so that ghosts in bellies can still see their pred's messages.
 				spawn(0)
 					M.show_message(undisplayed_message, 2)
 			else
