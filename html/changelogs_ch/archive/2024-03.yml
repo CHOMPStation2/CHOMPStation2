@@ -214,3 +214,18 @@
   cadyn:
   - rscadd: movement smoothing
   - config: 40fps time
+2024-03-22:
+  Kashargul:
+  - code_imp: converts some more bicons into icon2html
+  - rscdel: tgui_ch
+  TheCaramelion:
+  - rscadd: Use a vial on mucus to take virus samples
+  - balance: Stepping or interacting with mucus/blood/vomit might infect you, if it
+      has viruses
+  - qol: Autoinjectors can now be picked up with the chemistry bag
+  - bugfix: Runtime when Infected Room event triggered
+  - bugfix: Phased shadekins being able to be attacked
+  - bugfix: Bump should ignore phased shadekins now
+  - bugfix: Smoke won't make creatures without lungs cough
+  tacoguy7765093:
+  - balance: Non-CE blueprint charges buffed from 10 -> 25
