@@ -158,7 +158,7 @@ SUBSYSTEM_DEF(statpanels)
 	var/description_holders = target.description_holders
 	var/list/examine_update = list()
 
-	examine_update += "[description_holders["icon"]]    <font size='5'>[description_holders["name"]]</font>" //The name, written in big letters.
+	examine_update += "[description_holders["icon"]]&emsp;<font size='5'>[description_holders["name"]]</font>" //The name, written in big letters.
 	examine_update += "[description_holders["desc"]]" //the default examine text.
 	if(description_holders["info"])
 		examine_update += "<font color='#084B8A'><b>[description_holders["info"]]</b></font><br />" //Blue, informative text.
@@ -284,9 +284,9 @@ SUBSYSTEM_DEF(statpanels)
 	if(!target.stat_panel.is_ready())
 		return FALSE
 
-	if(target.stat_tab == "Examine")
-		set_examine_tab(target)
-		return TRUE
+	//if(target.stat_tab == "Examine")
+		//set_examine_tab(target)
+		//return TRUE
 
 	if(target.stat_tab == "Status")
 		set_status_tab(target)
