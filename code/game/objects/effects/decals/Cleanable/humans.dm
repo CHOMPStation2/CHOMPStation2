@@ -237,6 +237,7 @@ var/global/list/image/splatter_cache=list()
 
 	var/list/datum/disease2/disease/virus2 = list()
 	var/dry = 0 // Keeps the lag down
+	var/sampled = FALSE
 
 /obj/effect/decal/cleanable/mucus/Initialize()
 	. = ..()

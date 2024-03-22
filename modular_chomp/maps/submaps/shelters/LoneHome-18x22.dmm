@@ -1094,6 +1094,9 @@
 /obj/item/weapon/storage/box/lights/mixed,
 /obj/item/weapon/extinguisher,
 /obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/weapon/cell/high,
+/obj/item/weapon/cell/high,
+/obj/item/weapon/cell/high,
 /turf/simulated/floor,
 /area/survivalpod/superpose/LoneHome)
 "cG" = (
@@ -1119,6 +1122,7 @@
 /area/survivalpod/superpose/LoneHome)
 "cK" = (
 /obj/item/weapon/material/minihoe,
+/obj/structure/closet/crate/solar,
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/survivalpod/superpose/LoneHome)
 "cL" = (
@@ -1140,6 +1144,11 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/weapon/circuitboard/batteryrack,
+/obj/item/weapon/stock_parts/matter_bin,
+/obj/item/weapon/stock_parts/capacitor,
+/obj/item/weapon/stock_parts/capacitor,
+/obj/item/weapon/stock_parts/capacitor,
 /turf/simulated/floor,
 /area/survivalpod/superpose/LoneHome)
 "cP" = (
