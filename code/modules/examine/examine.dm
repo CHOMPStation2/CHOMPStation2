@@ -50,13 +50,14 @@
 /client/var/description_holders[0]
 
 /client/proc/update_description_holders(atom/A, update_antag_info=0)
+	examine_icon = null //CHOMPEdit
 	description_holders["info"] = A.get_description_info()
 	description_holders["fluff"] = A.get_description_fluff()
 	description_holders["antag"] = (update_antag_info)? A.get_description_antag() : ""
 	description_holders["interactions"] = A.get_description_interaction()
 
 	description_holders["name"] = "[A.name]"
-	description_holders["icon"] = "[icon2html(A.examine_icon(),src)]"
+	description_holders["icon"] = A //CHOMPEdit
 	description_holders["desc"] = A.desc
 
 /* CHOMP Removal

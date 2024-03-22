@@ -158,7 +158,14 @@ SUBSYSTEM_DEF(statpanels)
 	var/description_holders = target.description_holders
 	var/list/examine_update = list()
 
-	examine_update += "[description_holders["icon"]]&emsp;<font size='5'>[description_holders["name"]]</font>" //The name, written in big letters.
+	if(!target.obj_window)
+		target.obj_window = new(target)
+	if(!target.examine_icon && !target.obj_window.examine_target && target.stat_tab == "Examine")
+		target.obj_window.examine_target = description_holders["icon"]
+		target.obj_window.atoms_to_show += target.obj_window.examine_target
+		START_PROCESSING(SSobj_tab_items, target.obj_window)
+		refresh_client_obj_view(target)
+	examine_update += "[target.examine_icon]&emsp;<font size='5'>[description_holders["name"]]</font>" //The name, written in big letters.
 	examine_update += "[description_holders["desc"]]" //the default examine text.
 	if(description_holders["info"])
 		examine_update += "<font color='#084B8A'><b>[description_holders["info"]]</b></font><br />" //Blue, informative text.
@@ -224,7 +231,7 @@ SUBSYSTEM_DEF(statpanels)
 
 /datum/controller/subsystem/statpanels/proc/refresh_client_obj_view(client/refresh)
 	var/list/turf_items = return_object_images(refresh)
-	if(!length(turf_items) || !refresh.mob?.listed_turf)
+	if(!length(turf_items)/* || !refresh.mob?.listed_turf*/)
 		return
 	refresh.stat_panel.send_message("update_listedturf", turf_items)
 
@@ -239,8 +246,8 @@ SUBSYSTEM_DEF(statpanels)
 	// So it's ok to pay a performance cost for cleanliness here
 
 	// No turf? go away
-	if(!load_from.mob?.listed_turf)
-		return list()
+	/*if(!load_from.mob?.listed_turf)
+		return list()*/
 	var/datum/object_window_info/obj_window = load_from.obj_window
 	var/list/already_seen = obj_window.atoms_to_images
 	var/list/to_make = obj_window.atoms_to_imagify
@@ -253,6 +260,11 @@ SUBSYSTEM_DEF(statpanels)
 			continue
 		// We already have it. Success!
 		if(existing_image)
+			if(turf_item == obj_window.examine_target) //not actually a turf item get trolled
+				load_from.examine_icon = "<img src=\"[existing_image]\" />"
+				obj_window.examine_target = null
+				set_examine_tab(load_from)
+				continue
 			turf_items[++turf_items.len] = list("[turf_item.name]", REF(turf_item), existing_image)
 			continue
 		// Now, we're gonna queue image generation out of those refs
@@ -357,6 +369,8 @@ SUBSYSTEM_DEF(statpanels)
 	var/client/parent
 	/// Are we currently tracking a turf?
 	var/actively_tracking = FALSE
+	///For reusing this logic for examines
+	var/atom/examine_target
 
 /datum/object_window_info/New(client/parent)
 	. = ..()

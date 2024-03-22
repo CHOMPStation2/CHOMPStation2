@@ -132,6 +132,8 @@
 	var/datum/object_window_info/obj_window
 
 	var/list/misc_cache = list()
+
+	var/atom/examine_icon //Holder for examine icon, useful for statpanel
 	//CHOMPEdit End
 
 	//Hide top bars
