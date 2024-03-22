@@ -449,7 +449,6 @@ function iconError(e) {
 		node.src = null;
 		node.src = src + '#' + current_attempts;
 		node.setAttribute("data-attempts", current_attempts + 1);
-		//draw_listedturf();
 	}, imageRetryDelay);
 }
 
@@ -606,12 +605,10 @@ function draw_misc(tab) {
 			img.src = part[2];
 			img.id = part[1];
 			storedimages[part[1]] = part[2];
-			img.onerror = iconError;
 			td2.appendChild(img);
 		} else if(part[1]) {
 			td2 = document.createElement("td");
 			var img = document.createElement("img");
-			img.onerror = iconError;
 			img.src = storedimages[part[1]];
 			img.id = part[1];
 			td2.appendChild(img);
