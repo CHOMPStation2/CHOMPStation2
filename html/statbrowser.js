@@ -292,6 +292,10 @@ function draw_examine() {
 		parameter.innerHTML = examine[i];
 		div_content.appendChild(parameter);
 	}
+	var images = div_content.querySelectorAll("img");
+	for (var i = 0; i < images.length; i++) {
+		images[i].addEventListener("error", iconError);
+	}
 	document.getElementById("statcontent").appendChild(div_content);
 }
 
@@ -433,7 +437,7 @@ function remove_sdql2() {
 
 function iconError(e) {
 	setTimeout(function () {
-		if(current_tab != turfname) {
+		if(current_tab != turfname && current_tab != "Examine") {
 			return;
 		}
 		var node = e.target;
