@@ -214,7 +214,7 @@
  */
 /mob/living/proc/handle_micro_bump_helping(mob/living/tmob)
 	// CHOMPAdd - Phased
-	if(is_incorporeal || tmob.is_incorporeal())
+	if(is_incorporeal() || tmob.is_incorporeal())
 		return FALSE
 	//Riding and being moved to us or something similar
 	if(tmob in buckled_mobs)
@@ -276,7 +276,7 @@
 	if(!canmove || buckled)
 		return
 	// CHOMPAdd - Phased
-	if(is_incorporeal || tmob.is_incorporeal())
+	if(is_incorporeal() || tmob.is_incorporeal())
 		return
 
 	//Riding and being moved to us or something similar
