@@ -224,18 +224,14 @@
 				if(M)
 					if(isobserver(M))
 						message = "<span class='emote'><B>[src]</B> ([ghost_follow_link(src, M)]) [input]</span>"
-<<<<<<< HEAD
+					if(usr && usr.client && M && !(get_z(usr) == get_z(M)))
+						message = "<span class='multizsay'>[message]</span>"
 					//CHOMPEdit Start - If you are in the same tile, right next to, or being held by a person doing an emote, you should be able to see it while blind
 					if(m_type != AUDIBLE_MESSAGE && (src.Adjacent(M) || (istype(src.loc, /obj/item/weapon/holder) && src.loc.loc == M)))
 						M.show_message(message)
 					else
 						M.show_message(message, m_type)
 					//CHOMPEdit End
-=======
-					if(usr && usr.client && M && !(get_z(usr) == get_z(M)))
-						message = "<span class='multizsay'>[message]</span>"
-					M.show_message(message, m_type)
->>>>>>> d0ccf27f34... Adds MultiZ chat filter (#15849)
 					M.create_chat_message(src, "[runemessage]", FALSE, list("emote"), (m_type == AUDIBLE_MESSAGE))
 
 		for(var/obj/O as anything in o_viewers)
