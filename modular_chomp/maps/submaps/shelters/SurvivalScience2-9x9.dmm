@@ -80,7 +80,7 @@
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
 	},
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalScienceV2)
 "f" = (
 /obj/item/device/gps/computer,
@@ -93,7 +93,7 @@
 /obj/structure/window/reinforced/survival_pod{
 	dir = 10
 	},
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalScienceV2)
 "h" = (
 /obj/structure/window/reinforced/survival_pod{
@@ -112,7 +112,7 @@
 /area/survivalpod/superpose/SurvivalScienceV2)
 "i" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalScienceV2)
 "j" = (
 /obj/machinery/r_n_d/circuit_imprinter,
@@ -150,9 +150,8 @@
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalScienceV2)
 "m" = (
-/obj/machinery/computer/rdconsole/core{
-	dir = 4;
-	req_access = null
+/obj/machinery/computer/rdconsole/public{
+	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light{
@@ -176,7 +175,7 @@
 /obj/machinery/power/apc/alarms_hidden{
 	pixel_y = -20
 	},
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalScienceV2)
 "q" = (
 /obj/structure/sign/mining/survival{
@@ -196,13 +195,13 @@
 /area/survivalpod/superpose/SurvivalScienceV2)
 "t" = (
 /obj/machinery/door/window/survival_pod,
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalScienceV2)
 "u" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 4
 	},
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalScienceV2)
 "v" = (
 /obj/machinery/smartfridge/survival_pod{
@@ -363,7 +362,7 @@
 /obj/structure/window/reinforced/survival_pod{
 	dir = 8
 	},
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalScienceV2)
 "y" = (
 /obj/structure/table/reinforced,
@@ -442,7 +441,7 @@
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/SurvivalScienceV2)
 "G" = (
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalScienceV2)
 "I" = (
 /obj/structure/table/reinforced,
@@ -461,7 +460,7 @@
 	},
 /obj/machinery/portable_atmospherics/canister/nitrogen,
 /obj/machinery/light,
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalScienceV2)
 "L" = (
 /obj/structure/sign/mining/survival{
@@ -498,14 +497,14 @@
 /area/survivalpod/superpose/SurvivalScienceV2)
 "Q" = (
 /obj/machinery/door/airlock/voidcraft/survival_pod,
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalScienceV2)
 "R" = (
 /obj/structure/reagent_dispensers/acid{
 	pixel_x = 30
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/shuttle/floor/voidcraft/dark,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalScienceV2)
 "S" = (
 /obj/structure/window/reinforced/survival_pod{
@@ -528,7 +527,7 @@
 /obj/machinery/door/window/survival_pod{
 	dir = 2
 	},
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalScienceV2)
 "V" = (
 /obj/structure/fans,
@@ -542,7 +541,7 @@
 /obj/machinery/door/window/survival_pod{
 	dir = 1
 	},
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalScienceV2)
 "Y" = (
 /obj/structure/reagent_dispensers/fueltank/high,
@@ -556,7 +555,7 @@
 	layer = 3.3;
 	pixel_y = -27
 	},
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalScienceV2)
 
 (1,1,1) = {"
