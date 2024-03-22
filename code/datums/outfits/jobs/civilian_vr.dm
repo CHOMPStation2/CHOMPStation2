@@ -22,4 +22,3 @@
 
 /decl/hierarchy/outfit/job/assistant/entrepreneur
 	id_type = /obj/item/weapon/card/id/civilian/entrepreneur
-	belt = /obj/item/device/ticket_printer/train
