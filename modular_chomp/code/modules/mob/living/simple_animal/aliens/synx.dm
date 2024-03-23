@@ -89,10 +89,15 @@
 	has_hands = 1
 	pass_flags = PASSTABLE
 
+	/*
 	response_help  = "pokes the synx, shifting the fur-like bristles on its body."
 	response_disarm = "gently pushes aside the synx, dislodging a clump of bristly hair in your hand. The substance quickly melts upon contact with your sweat."
 	response_harm   = "tries to hit the synx. This tears out an area of fur which firmly melts upon contact, covering you in something sticky."
-
+	*/
+	// I dont think the person who wrote the above descriptions realized what they were used for, because they dont work at all. Leaving these commented incase someone wants to reimplement this properly someday.
+	response_help = "pokes"
+	response_disarm = "awkwardly shoves"
+	//Leaving response_harm the same as default; "hits".
 
 	melee_damage_lower = SYNX_LOWER_DAMAGE //Massive damage reduction, will be balanced with toxin injection/ //LO-  Made up for in skills. Toxin injection does not technically cause damage with these guys. Stomach acid does when they disegage their stomach from their mouths does, but that could be done differently.
 	melee_damage_upper = SYNX_UPPER_DAMAGE
@@ -124,7 +129,7 @@
 	vore_digest_chance = 45		// Chance to switch to digest mode if resisted
 	vore_absorb_chance = 0
 	vore_escape_chance = 10
-	vore_icons = 0 //no vore icons //TODO: Implement these, I have the sprites done but they're unnecessary for core function rn and I'd rather get this into a working state first -Azel
+	vore_icons = SA_ICON_LIVING //no vore icons //TODO: Implement these, I have the sprites done but they're unnecessary for core function rn and I'd rather get this into a working state first -Azel
 	swallowTime = 6 SECONDS //Enter the eel you nerd
 
 //Shouldn't be affected by lack of atmos, it's a space eel. //nah lets give him some temperature
@@ -141,10 +146,13 @@
 	max_n2 = 0 //Maybe add a max
 	// TODO: Set a max temperature of about 20-30 above room temperatures. Synx don't like the heat.
 
+/mob/living/simple_mob/animal/synx/get_available_emotes()
+	. = ..()
+	. |= _human_default_emotes //Synx are great at mimicking
+
 /mob/living/simple_mob/animal/synx/ai //AI controlled variant
 
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate
-
 
 /mob/living/simple_mob/animal/synx/init_vore()
 	if(!voremob_loaded)
@@ -598,7 +606,14 @@
 /mob/living/simple_mob/animal/synx/update_icon()
 	update_fullness()
 	build_icons()
-
+	for(var/belly_class in vore_fullness_ex)
+		var/vs_fullness = vore_fullness_ex[belly_class]
+		if(vs_fullness > 0)
+			if(transformed)
+				//transformed bellysprites dont exist yet. Uncomment this when they do. -Reo
+				//add_overlay("[iconstate]-t_[belly_class]-[vs_fullness]")
+			else
+				add_overlay("[icon_state]_[belly_class]-[vs_fullness]")
 
 
 /mob/living/simple_mob/animal/synx/proc/build_icons(var/random)

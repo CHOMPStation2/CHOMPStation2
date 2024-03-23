@@ -96,7 +96,7 @@
 			. += "It is full."
 
 	if(!opened && isobserver(user))
-		. += "It contains: [counting_english_list(contents)]"
+		. += "It contains: [counting_english_list(contents, user)]" //CHOMPEdit
 
 /obj/structure/closet/CanPass(atom/movable/mover, turf/target)
 	if(wall_mounted)

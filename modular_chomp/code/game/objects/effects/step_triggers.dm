@@ -1,5 +1,5 @@
-GLOBAL_LIST_EMPTY(mapped_autostrips)
-GLOBAL_LIST_EMPTY(mapped_autostrips_mob)
+var/static/list/mapped_autostrips = list()
+var/static/list/mapped_autostrips_mob = list()
 
 /*
 This should actually be refactored if it ever needs to be used again into just being
@@ -74,8 +74,8 @@ But for now, for what it's been used for, it works.
 
 /obj/effect/step_trigger/autostrip/proc/initMappedLink()
 	. = FALSE
-	target = GLOB.mapped_autostrips[targetid]
-	Mtarget = GLOB.mapped_autostrips_mob[targetid]
+	target = mapped_autostrips[targetid]
+	Mtarget = mapped_autostrips_mob[targetid]
 	if(target)
 		. = TRUE
 
@@ -93,11 +93,11 @@ But for now, for what it's been used for, it works.
 /obj/effect/autostriptarget/Initialize(mapload)
 	. = ..()
 	if(targetid)
-		GLOB.mapped_autostrips[targetid] = src
+		mapped_autostrips[targetid] = src
 
 /obj/effect/autostriptarget/mob
 	name = "Autostrip target to send mobs to."
 
 /obj/effect/autostriptarget/mob/Initialize(mapload)
 	if(targetid)
-		GLOB.mapped_autostrips_mob[targetid] = src
+		mapped_autostrips_mob[targetid] = src

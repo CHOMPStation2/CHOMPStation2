@@ -34,30 +34,30 @@
 /datum/event/meteor_wave/meatyores/proc/get_meatyores()
 	switch(severity)
 		if(EVENT_LEVEL_MAJOR)
-			return GLOB.meatyores_major
+			return meatyores_major
 		if(EVENT_LEVEL_MODERATE)
-			return GLOB.meatyores_moderate
+			return meatyores_moderate
 		else
-			return GLOB.meatyores_minor
+			return meatyores_minor
 
-GLOBAL_LIST_INIT(meatyores_minor, list(
+var/list/meatyores_minor = list(
 	/obj/effect/meteor/medium/meatyore     = 80,
 	/obj/effect/meteor/dust/meatyore       = 30,
 	/obj/effect/meteor/irradiated/meatyore = 30,
 	/obj/effect/meteor/big/meatyore        = 30,
 	/obj/effect/meteor/flaming/meatyore    = 10,
-))
+)
 
-GLOBAL_LIST_INIT(meatyores_moderate, list(
+var/list/meatyores_moderate = list(
 	/obj/effect/meteor/medium/meatyore     = 80,
 	/obj/effect/meteor/big/meatyore        = 30,
 	/obj/effect/meteor/dust/meatyore       = 30,
 	/obj/effect/meteor/irradiated/meatyore = 30,
 	/obj/effect/meteor/flaming/meatyore    = 10,
 	/obj/effect/meteor/emp/meatyore        = 10,
-))
+)
 
-GLOBAL_LIST_INIT(meatyores_major, list(
+var/list/meatyores_major = list(
 	/obj/effect/meteor/medium/meatyore     = 80,
 	/obj/effect/meteor/big/meatyore        = 30,
 	/obj/effect/meteor/dust/meatyore       = 30,
@@ -65,4 +65,4 @@ GLOBAL_LIST_INIT(meatyores_major, list(
 	/obj/effect/meteor/emp/meatyore        = 30,
 	/obj/effect/meteor/flaming/meatyore    = 10,
 	/obj/effect/meteor/tunguska/meatyore   = 1,
-))
+)

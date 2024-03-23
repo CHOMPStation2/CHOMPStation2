@@ -8,6 +8,14 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MechStorageFab)
+"aq" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MechStorageFab)
 "av" = (
 /obj/structure/salvageable/computer,
 /turf/simulated/floor/tiled/asteroid_steel,
@@ -23,9 +31,29 @@
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/plating/external,
 /area/survivalpod/superpose/MechStorageFab)
+"aV" = (
+/obj/structure/closet/crate/solar,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
 "ba" = (
 /obj/machinery/power/port_gen/pacman,
 /obj/structure/cable,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"bh" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"bu" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/plating/external,
 /area/survivalpod/superpose/MechStorageFab)
 "bE" = (
@@ -92,6 +120,14 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/MechStorageFab)
+"gz" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
 /area/survivalpod/superpose/MechStorageFab)
 "gG" = (
 /obj/machinery/fusion_fuel_compressor,
@@ -174,6 +210,11 @@
 /area/survivalpod/superpose/MechStorageFab)
 "ly" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/MechStorageFab)
 "lA" = (
@@ -239,6 +280,16 @@
 /area/survivalpod/superpose/MechStorageFab)
 "nZ" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/survivalpod/superpose/MechStorageFab)
 "oh" = (
@@ -335,6 +386,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/survivalpod/superpose/MechStorageFab)
 "sk" = (
@@ -365,6 +421,16 @@
 "tH" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 8
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/MechStorageFab)
@@ -413,9 +479,12 @@
 /turf/simulated/floor/plating/external,
 /area/survivalpod/superpose/MechStorageFab)
 "us" = (
-/obj/machinery/artifact_scanpad,
-/obj/effect/simple_portal/linked,
 /obj/effect/map_effect/interval/effect_emitter/sparks,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/machinery/power/rtg/advanced,
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MechStorageFab)
 "uJ" = (
@@ -437,6 +506,11 @@
 "wg" = (
 /obj/random/junk,
 /obj/random/maintenance,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/survivalpod/superpose/MechStorageFab)
 "wU" = (
@@ -454,6 +528,11 @@
 "yH" = (
 /obj/machinery/door/airlock/maintenance/engi{
 	req_one_access = null
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating/external,
 /area/survivalpod/superpose/MechStorageFab)
@@ -482,6 +561,11 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating/external,
 /area/survivalpod/superpose/MechStorageFab)
 "Au" = (
@@ -493,6 +577,15 @@
 "AD" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"Bu" = (
+/obj/random/junk,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
 /area/survivalpod/superpose/MechStorageFab)
 "BC" = (
 /obj/machinery/portable_atmospherics/canister/air,
@@ -529,6 +622,14 @@
 /obj/random/maintenance,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/survivalpod/superpose/MechStorageFab)
+"DQ" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
 "DV" = (
 /turf/simulated/floor/plating/external,
 /area/survivalpod/superpose/MechStorageFab)
@@ -552,7 +653,7 @@
 /turf/simulated/floor/plating/external,
 /area/survivalpod/superpose/MechStorageFab)
 "Go" = (
-/obj/machinery/power/smes/buildable/hybrid,
+/obj/machinery/power/smes/buildable/point_of_interest,
 /obj/structure/cable/green{
 	d2 = 8;
 	icon_state = "0-8"
@@ -599,6 +700,11 @@
 /area/survivalpod/superpose/MechStorageFab)
 "IS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating/external,
 /area/survivalpod/superpose/MechStorageFab)
 "IX" = (
@@ -706,6 +812,11 @@
 	dir = 9
 	},
 /obj/random/maintenance,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/survivalpod/superpose/MechStorageFab)
 "KN" = (
@@ -849,6 +960,11 @@
 	dir = 1
 	},
 /obj/random/junk,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/MechStorageFab)
 "MB" = (
@@ -967,7 +1083,20 @@
 /area/template_noop)
 "Pt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"Qd" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating/external,
 /area/survivalpod/superpose/MechStorageFab)
 "Qo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -1005,6 +1134,11 @@
 /obj/machinery/door/window/survival_pod{
 	dir = 8
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MechStorageFab)
 "Sz" = (
@@ -1024,6 +1158,15 @@
 /area/survivalpod/superpose/MechStorageFab)
 "TK" = (
 /turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MechStorageFab)
+"Uq" = (
+/obj/random/junk,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating/external,
 /area/survivalpod/superpose/MechStorageFab)
 "Ut" = (
 /obj/structure/closet/secure_closet/engineering_welding{
@@ -1062,7 +1205,23 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 10
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"Wv" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating/external,
 /area/survivalpod/superpose/MechStorageFab)
 "XH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -1070,6 +1229,11 @@
 	},
 /obj/machinery/door/airlock/maintenance/rnd{
 	req_one_access = null
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating/external,
 /area/survivalpod/superpose/MechStorageFab)
@@ -1107,6 +1271,14 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MechStorageFab)
+"Zf" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
 /area/survivalpod/superpose/MechStorageFab)
 "Zj" = (
 /obj/structure/window/reinforced/survival_pod{
@@ -1591,7 +1763,7 @@ qY
 pA
 DV
 DV
-DV
+aV
 Ao
 tw
 tw
@@ -1712,14 +1884,14 @@ AD
 MA
 Pt
 IS
-Ib
+Wv
 Pt
 tH
 Pt
 ly
 nZ
 yH
-DV
+Qd
 Ar
 ba
 Ao
@@ -1784,21 +1956,21 @@ tw
 tw
 Ao
 pA
-pA
-pA
-sk
-TK
+DQ
+gz
+Uq
+aq
 AD
 pA
 TK
-DV
-pw
+bu
+Bu
 pA
 AD
-pA
+Zf
 wg
-pA
-DV
+gz
+bh
 TK
 Ao
 tw

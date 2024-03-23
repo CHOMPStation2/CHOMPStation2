@@ -167,6 +167,7 @@ var/list/admin_verbs_fun = list(
 	/client/proc/smite,
 	/client/proc/admin_lightning_strike,
 	/client/proc/resize, //VOREStation Add,
+	/client/proc/tgui_admin_lists, //CHOMPStation Add
 	/client/proc/cmd_admin_droppod_deploy,
 	/client/proc/adminorbit, //VOREStation Add
 	/client/proc/add_mob_for_narration,	//VOREStation Add
@@ -223,7 +224,8 @@ var/list/admin_verbs_server = list(
 	/client/proc/recipe_dump,
 	/client/proc/panicbunker,
 	/client/proc/paranoia_logging,
-	/client/proc/ip_reputation
+	/client/proc/ip_reputation,
+	/client/proc/toggle_spawning_with_recolour
 	)
 
 var/list/admin_verbs_debug = list(

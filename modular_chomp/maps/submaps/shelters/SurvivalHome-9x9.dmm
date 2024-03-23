@@ -67,7 +67,7 @@
 /area/survivalpod/superpose/SurvivalHome)
 "l" = (
 /obj/structure/closet/walllocker_double/survival/south,
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalHome)
 "m" = (
 /turf/simulated/shuttle/wall/voidcraft/survival,
@@ -131,7 +131,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalHome)
 "y" = (
 /obj/item/device/gps,
@@ -197,10 +197,10 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalHome)
 "E" = (
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalHome)
 "I" = (
 /obj/structure/bed/chair/comfy/blue{
@@ -278,7 +278,7 @@
 /obj/machinery/newscaster{
 	pixel_y = -30
 	},
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalHome)
 "Q" = (
 /obj/item/device/gps/computer,
@@ -326,7 +326,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalHome)
 
 (1,1,1) = {"

@@ -113,7 +113,7 @@
 	if(beaker)
 		var/list/beaker_reagents_list = list()
 		data["beaker_reagents"] = beaker_reagents_list
-		for(var/datum/reagent/R in beaker.reagents.reagent_list)
+		for(var/datum/reagent/R in beaker.reagents?.reagent_list)
 			beaker_reagents_list[++beaker_reagents_list.len] = list("name" = R.name, "volume" = R.volume, "description" = R.description, "id" = R.id)
 
 		var/list/buffer_reagents_list = list()

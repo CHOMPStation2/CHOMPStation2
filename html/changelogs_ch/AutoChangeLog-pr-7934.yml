@@ -1,7 +1,0 @@
-author: "ItsSelis"
-delete-after: True
-changes:
-  - rscadd: "Added stack_end_detector to the master controller"
-  - rscadd: "Added warning how many times a specific subsystem had slept"
-  - rscadd: "Linter will now show an error if the subsystem ignite proc is overridden"
-  - qol: "Changed seed generation"

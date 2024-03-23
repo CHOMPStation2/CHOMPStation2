@@ -68,7 +68,7 @@
 /obj/item/clothing/examine(var/mob/user)
 	. = ..(user)
 	if(LAZYLEN(accessories))
-		. += "It has the following attached: [counting_english_list(accessories)]"
+		. += "It has the following attached: [counting_english_list(accessories, user)]" //CHOMPEdit
 
 /**
  *  Attach accessory A to src

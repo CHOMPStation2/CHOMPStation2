@@ -32,7 +32,7 @@
 /area/survivalpod/superpose/SurvivalCargo)
 "eZ" = (
 /obj/machinery/floodlight,
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalCargo)
 "fm" = (
 /obj/item/weapon/shovel,
@@ -73,7 +73,7 @@
 /area/survivalpod/superpose/SurvivalCargo)
 "ix" = (
 /obj/structure/ore_box,
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalCargo)
 "lW" = (
 /obj/vehicle/train/trolley{
@@ -172,7 +172,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalCargo)
 "qR" = (
 /obj/machinery/power/apc/alarms_hidden{
@@ -289,7 +289,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalCargo)
 "Ct" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -320,7 +320,7 @@
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/SurvivalCargo)
 "Eb" = (
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalCargo)
 "Er" = (
 /obj/effect/floor_decal/industrial/loading{
@@ -412,7 +412,7 @@
 "Mi" = (
 /obj/effect/floor_decal/techfloor,
 /obj/effect/floor_decal/industrial/warning,
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalCargo)
 "ND" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -518,7 +518,7 @@
 	dir = 1;
 	id = "SP-Mining"
 	},
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalCargo)
 "VS" = (
 /obj/structure/plasticflaps/mining,

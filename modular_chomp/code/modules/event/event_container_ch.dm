@@ -85,7 +85,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Grub Infestation",			/datum/event/grub_infestation,			-20,	list(ASSIGNMENT_SECURITY = 40, ASSIGNMENT_ENGINEER = 40), 1),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Infected Room",			/datum/event/infectedroom,				-30,	list(ASSIGNMENT_MEDICAL = 30, ASSIGNMENT_JANITOR = 10, ASSIGNMENT_ANY = 1), 	1, min_jobs = list(ASSIGNMENT_MEDICAL = 2)),
 		// Pure RP fun, no mechanical effects.
-		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Ion Storm",				/datum/event/ionstorm, 					0,		list(ASSIGNMENT_AI = 80, ASSIGNMENT_CYBORG = 50, ASSIGNMENT_ENGINEER = 15, ASSIGNMENT_SCIENTIST = 5), min_jobs = list(ASSIGNMENT_AI = 1)),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Ion Storm",				/datum/event/ionstorm, 					-125,	list(ASSIGNMENT_AI = 80, ASSIGNMENT_CYBORG = 50, ASSIGNMENT_ENGINEER = 15, ASSIGNMENT_SCIENTIST = 5), min_jobs = list(ASSIGNMENT_SCIENTIST = 1, ASSIGNMENT_CYBORG = 3)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Jellyfish School",			/datum/event/jellyfish_migration,		5,		list(ASSIGNMENT_ANY = 1, ASSIGNMENT_SECURITY = 5, ASSIGNMENT_MEDICAL = 3), 1),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Maintenance Predator",		/datum/event/maintenance_predator,		75,		list(ASSIGNMENT_SECURITY = 25, ASSIGNMENT_SCIENTIST = 10), 1),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Meaty Ore Shower",			/datum/event/meteor_wave/meatyores,		-50,	list(ASSIGNMENT_ENGINEER = 45), 1, min_jobs = list(ASSIGNMENT_ENGINEER = 2)),
