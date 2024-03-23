@@ -119,7 +119,7 @@ RSF
 			product = new glasstype()
 			used_energy = 50
 		if(3)
-			product = new /obj/item/weapon/reagent_containers/food/drinks/metaglass()	//YW Changes begin
+			product = new /obj/item/weapon/reagent_containers/food/drinks/metaglass/metapint()	//YW Changes begin
 			used_energy = 50
 		if(4)
 			product = new /obj/item/weapon/paper()

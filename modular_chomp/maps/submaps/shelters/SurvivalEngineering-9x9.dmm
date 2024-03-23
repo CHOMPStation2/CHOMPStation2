@@ -1,63 +1,635 @@
-"a" = (/turf/simulated/shuttle/wall/voidcraft/survival,/area/survivalpod/superpose/SurvivalEngineering)
-"b" = (/obj/structure/fans/tiny,/obj/effect/floor_decal/industrial/danger/full,/obj/machinery/door/airlock/voidcraft/survival_pod,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/SurvivalEngineering)
-"c" = (/obj/structure/table/survival_pod,/obj/item/modular_computer/laptop/preset/custom_loadout/advanced,/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalEngineering)
-"d" = (/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/machinery/vending/wallmed1/public{pixel_y = 17},/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/SurvivalEngineering)
-"e" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/power/port_gen/pacman,/obj/machinery/newscaster{layer = 3.3; pixel_y = -27},/turf/simulated/floor/plating,/area/survivalpod/superpose/SurvivalEngineering)
-"f" = (/obj/structure/fans/tiny,/obj/effect/floor_decal/industrial/danger/full,/obj/machinery/door/airlock/voidcraft/vertical,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/SurvivalEngineering)
-"g" = (/obj/structure/fans,/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalEngineering)
-"h" = (/obj/item/clothing/shoes/magboots,/obj/item/clothing/suit/space/void/atmos,/obj/item/clothing/mask/breath,/obj/item/clothing/head/helmet/space/void/atmos,/obj/structure/window/reinforced{dir = 4; health = 1e+006},/obj/structure/window/reinforced,/obj/machinery/door/window/westleft{name = "Atmospherics Suits"; req_access = list(24)},/obj/structure/table/rack/shelf/steel,/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalEngineering)
-"i" = (/obj/item/device/gps/computer,/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalEngineering)
-"j" = (/obj/machinery/smartfridge/survival_pod{icon = 'icons/obj/vending.dmi'; icon_base = "smartfridge"; icon_contents = "boxes"; icon_state = "smartfridge"; name = "Advanced storage"; pixel_y = -1},/obj/item/device/suit_cooling_unit,/obj/item/device/suit_cooling_unit,/obj/item/device/suit_cooling_unit,/obj/item/device/flashlight/maglight,/obj/item/device/flashlight/maglight,/obj/item/device/flashlight/maglight,/obj/fiftyspawner/glass,/obj/fiftyspawner/steel,/obj/fiftyspawner/plastic,/obj/item/stack/material/plasteel{amount = 30},/obj/fiftyspawner/rods,/obj/fiftyspawner/rods,/obj/item/stack/material/glass/phoronrglass{amount = 20},/obj/item/weapon/storage/toolbox/mechanical{pixel_y = 5},/obj/item/weapon/storage/toolbox/mechanical{pixel_y = 5},/obj/item/weapon/storage/toolbox/electrical,/obj/item/weapon/storage/toolbox/emergency,/obj/item/weapon/storage/toolbox/emergency,/obj/item/weapon/cell/high{charge = 100; maxcharge = 15000},/obj/item/weapon/cell/high{charge = 100; maxcharge = 15000},/obj/item/weapon/cell/high{charge = 100; maxcharge = 15000},/obj/item/device/radio/off,/obj/item/device/radio/off,/obj/item/device/radio/off,/obj/item/device/radio/off,/obj/item/device/radio/off,/obj/item/device/radio/off,/obj/item/device/radio/off,/obj/item/weapon/cell/device/hyper,/obj/item/weapon/cell/device/hyper,/obj/item/weapon/cell/device/hyper,/obj/item/clothing/glasses/meson,/obj/item/clothing/glasses/meson,/obj/item/clothing/gloves/yellow,/obj/item/clothing/gloves/yellow,/obj/item/clothing/head/welding/demon,/obj/item/clothing/head/welding/knight,/obj/item/clothing/glasses/welding,/obj/random/tech_supply,/obj/random/tech_supply,/obj/random/tech_supply,/obj/random/tech_supply,/obj/random/tech_supply,/obj/random/maintenance/engineering,/obj/random/maintenance/engineering,/obj/random/maintenance/engineering,/obj/random/maintenance/engineering,/obj/random/maintenance/engineering,/obj/item/weapon/inducer,/obj/item/weapon/storage/belt/utility/full,/obj/item/weapon/storage/belt/utility/full,/obj/item/device/multitool,/obj/item/device/multitool,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/device/megaphone,/obj/item/device/megaphone,/obj/item/weapon/extinguisher/atmo,/obj/item/weapon/extinguisher/atmo,/obj/item/device/suit_cooling_unit,/obj/item/device/suit_cooling_unit,/obj/item/weapon/storage/backpack/dufflebag/eng,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/SurvivalEngineering)
-"k" = (/obj/machinery/suit_cycler/engineering{req_access = null},/turf/simulated/floor/plating,/area/survivalpod/superpose/SurvivalEngineering)
-"m" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/structure/table/steel_reinforced,/obj/fiftyspawner/glass{pixel_y = -5},/obj/fiftyspawner/steel,/obj/fiftyspawner/steel,/obj/item/stack/material/plasteel{amount = 30; pixel_y = 5},/obj/item/stack/material/glass/phoronrglass{amount = 20; pixel_y = 5},/obj/item/stack/material/phoron{amount = 25},/turf/simulated/floor/plating,/area/survivalpod/superpose/SurvivalEngineering)
-"n" = (/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,/area/survivalpod/superpose/SurvivalEngineering)
-"o" = (/obj/structure/sign/mining,/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,/area/survivalpod/superpose/SurvivalEngineering)
-"p" = (/obj/structure/window/reinforced/survival_pod{dir = 1},/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/SurvivalEngineering)
-"q" = (/obj/machinery/portable_atmospherics/canister/oxygen,/obj/machinery/power/apc/alarms_hidden{dir = 8; pixel_x = -20},/turf/simulated/floor/plating,/area/survivalpod/superpose/SurvivalEngineering)
-"r" = (/obj/item/clothing/shoes/magboots,/obj/item/clothing/suit/space/void/atmos,/obj/item/clothing/mask/breath,/obj/item/clothing/head/helmet/space/void/atmos,/obj/structure/window/reinforced{dir = 4; health = 1e+006},/obj/structure/window/reinforced{dir = 1},/obj/machinery/door/window/westright{name = "Atmospherics Suits"; req_access = list(24)},/obj/structure/table/rack/shelf/steel,/obj/structure/sign/warning/nosmoking_2{pixel_x = 32},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalEngineering)
-"s" = (/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalEngineering)
-"t" = (/obj/machinery/autolathe,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/SurvivalEngineering)
-"u" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/shieldgen,/turf/simulated/floor/plating,/area/survivalpod/superpose/SurvivalEngineering)
-"v" = (/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/vending/engivend{pixel_x = -1},/turf/simulated/floor/plating,/area/survivalpod/superpose/SurvivalEngineering)
-"w" = (/obj/machinery/smartfridge/survival_pod,/obj/item/weapon/tape_roll,/obj/item/sticky_pad/random,/obj/item/weapon/pen/blue,/obj/item/weapon/pen/blue,/obj/item/fulton_core,/obj/item/fulton_core,/obj/item/extraction_pack,/obj/item/extraction_pack,/obj/item/modular_computer/laptop/preset/custom_loadout/standard,/obj/item/weapon/pickaxe/hand,/obj/item/device/flashlight/color/yellow,/obj/item/device/flashlight/color/orange,/obj/item/device/threadneedle,/obj/item/device/radio,/obj/item/device/radio,/obj/item/device/radio,/obj/item/weapon/extinguisher/mini,/obj/item/weapon/extinguisher/mini,/obj/item/weapon/flame/lighter/zippo,/obj/item/weapon/flame/lighter/zippo,/obj/item/device/flashlight/lantern,/obj/random/soap,/obj/random/soap,/obj/item/weapon/towel/random,/obj/item/weapon/towel/random,/obj/item/bodybag/cryobag,/obj/item/bodybag/cryobag,/obj/item/weapon/storage/pill_bottle/spaceacillin,/obj/item/weapon/storage/pill_bottle/antitox,/obj/item/device/healthanalyzer,/obj/item/weapon/storage/firstaid/regular,/obj/item/weapon/storage/firstaid/o2,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/stack/nanopaste,/obj/item/device/suit_cooling_unit/emergency,/obj/item/device/suit_cooling_unit/emergency,/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,/obj/item/weapon/storage/toolbox/brass,/obj/item/weapon/storage/box/survival/space,/obj/item/weapon/storage/box/survival/space,/obj/item/weapon/storage/box/survival/space,/obj/item/weapon/storage/pill_bottle/dice_nerd,/obj/item/weapon/storage/box/flare,/obj/item/weapon/storage/box/khcrystal,/obj/item/weapon/storage/box/khcrystal,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/stack/marker_beacon/ten,/obj/item/device/starcaster_news,/obj/item/device/mapping_unit,/obj/item/weapon/storage/box/dosimeter,/obj/item/device/gps,/obj/item/device/gps,/obj/item/weapon/cell/device/hyper,/obj/item/weapon/cell/device/hyper,/obj/item/weapon/cell/device/hyper,/obj/item/device/pda,/obj/item/device/pda,/obj/item/weapon/card/id/external,/obj/item/weapon/card/id/external,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,/obj/item/weapon/gun/energy/locked/phasegun/pistol,/obj/item/weapon/gun/energy/locked/phasegun,/obj/item/weapon/cell/device/weapon{pixel_x = -2; pixel_y = -2},/obj/item/weapon/cell/device/weapon{pixel_x = -2; pixel_y = -2},/obj/item/clothing/accessory/permit/gun,/obj/item/clothing/accessory/permit/gun,/obj/item/weapon/material/knife/machete,/obj/item/weapon/material/fishing_net,/obj/item/weapon/storage/backpack/sport,/obj/item/weapon/storage/backpack/sport,/obj/item/clothing/accessory/storage/black_drop_pouches,/obj/item/clothing/accessory/storage/black_drop_pouches,/obj/item/weapon/storage/belt,/obj/item/clothing/accessory/poncho/thermal,/obj/machinery/light{dir = 1},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalEngineering)
-"x" = (/obj/structure/window/reinforced/survival_pod{dir = 8},/obj/structure/window/reinforced/survival_pod{dir = 4},/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/structure/window/reinforced/survival_pod,/obj/structure/grille,/obj/structure/curtain/black,/turf/simulated/floor/plating,/area/survivalpod/superpose/SurvivalEngineering)
-"y" = (/obj/structure/closet/secure_closet/guncabinet/phase{pixel_y = -32},/obj/item/weapon/gun/energy/locked/phasegun/pistol,/obj/item/weapon/gun/energy/locked/phasegun/pistol,/obj/item/clothing/accessory/permit/gun/planetside,/obj/item/clothing/accessory/permit/gun/planetside,/obj/item/clothing/accessory/holster/waist,/obj/item/clothing/accessory/holster/waist,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/SurvivalEngineering)
-"z" = (/obj/structure/sign/mining/survival{dir = 4},/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,/area/survivalpod/superpose/SurvivalEngineering)
-"A" = (/obj/structure/sign/mining/survival,/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,/area/survivalpod/superpose/SurvivalEngineering)
-"B" = (/obj/structure/sign/mining/survival{dir = 8},/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,/area/survivalpod/superpose/SurvivalEngineering)
-"C" = (/obj/structure/table/steel_reinforced,/obj/machinery/cell_charger{pixel_x = 1; pixel_y = 4},/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/SurvivalEngineering)
-"D" = (/obj/machinery/light{dir = 1},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalEngineering)
-"E" = (/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/machinery/shieldgen,/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor/plating,/area/survivalpod/superpose/SurvivalEngineering)
-"F" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/structure/dispenser{phorontanks = 0},/turf/simulated/floor/plating,/area/survivalpod/superpose/SurvivalEngineering)
-"G" = (/obj/structure/reagent_dispensers/fueltank/high,/obj/structure/closet/walllocker_double/hydrant/east,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/SurvivalEngineering)
-"H" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/space_heater,/turf/simulated/floor/plating,/area/survivalpod/superpose/SurvivalEngineering)
-"I" = (/obj/structure/table/steel_reinforced,/obj/machinery/recharger{pixel_x = -3; pixel_y = 9},/obj/machinery/cell_charger{pixel_x = 1; pixel_y = -2},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalEngineering)
-"J" = (/turf/simulated/shuttle/wall/voidcraft/orange,/area/survivalpod/superpose/SurvivalEngineering)
-"K" = (/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/SurvivalEngineering)
-"L" = (/obj/effect/floor_decal/techfloor{dir = 4},/obj/effect/floor_decal/industrial/warning{dir = 4},/turf/simulated/shuttle/plating/skipjack,/area/survivalpod/superpose/SurvivalEngineering)
-"M" = (/obj/effect/floor_decal/industrial/loading{dir = 1},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalEngineering)
-"N" = (/obj/effect/floor_decal/techfloor,/obj/effect/floor_decal/industrial/warning,/turf/simulated/shuttle/plating/skipjack,/area/survivalpod/superpose/SurvivalEngineering)
-"O" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/light{dir = 8; layer = 3},/obj/machinery/power/emitter,/turf/simulated/floor/plating,/area/survivalpod/superpose/SurvivalEngineering)
-"P" = (/obj/machinery/door/window/survival_pod{dir = 1},/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/SurvivalEngineering)
-"Q" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/floodlight,/turf/simulated/floor/plating,/area/survivalpod/superpose/SurvivalEngineering)
-"R" = (/obj/structure/reagent_dispensers/watertank/high,/obj/machinery/light{dir = 4; layer = 3},/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/SurvivalEngineering)
-"S" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/power/thermoregulator,/turf/simulated/floor/plating,/area/survivalpod/superpose/SurvivalEngineering)
-"T" = (/obj/structure/sign/warning/engineering_access,/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,/area/survivalpod/superpose/SurvivalEngineering)
-"U" = (/obj/machinery/sleeper/survival_pod,/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalEngineering)
-"V" = (/obj/structure/bed/pod,/obj/item/weapon/bedsheet/ce,/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalEngineering)
-"W" = (/obj/structure/sign/mining/survival{dir = 1},/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,/area/survivalpod/superpose/SurvivalEngineering)
-"X" = (/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/vending/tool{pixel_x = -1},/turf/simulated/floor/plating,/area/survivalpod/superpose/SurvivalEngineering)
-"Y" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/portable_atmospherics/powered/scrubber,/turf/simulated/floor/plating,/area/survivalpod/superpose/SurvivalEngineering)
-"Z" = (/turf/simulated/shuttle/plating/skipjack,/area/survivalpod/superpose/SurvivalEngineering)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/shuttle/wall/voidcraft/survival,
+/area/survivalpod/superpose/SurvivalEngineering)
+"b" = (
+/obj/structure/fans/tiny,
+/obj/effect/floor_decal/industrial/danger/full,
+/obj/machinery/door/airlock/voidcraft/survival_pod,
+/turf/simulated/floor/tiled/techmaint,
+/area/survivalpod/superpose/SurvivalEngineering)
+"c" = (
+/obj/structure/table/survival_pod,
+/obj/item/modular_computer/laptop/preset/custom_loadout/advanced,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalEngineering)
+"d" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/machinery/vending/wallmed1/public{
+	pixel_y = 17
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalEngineering)
+"e" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/power/port_gen/pacman,
+/obj/machinery/newscaster{
+	layer = 3.3;
+	pixel_y = -27
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalEngineering)
+"f" = (
+/obj/structure/fans/tiny,
+/obj/effect/floor_decal/industrial/danger/full,
+/obj/machinery/door/airlock/voidcraft/vertical,
+/turf/simulated/floor/tiled/techmaint,
+/area/survivalpod/superpose/SurvivalEngineering)
+"g" = (
+/obj/structure/fans,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalEngineering)
+"h" = (
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/suit/space/void/atmos,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/head/helmet/space/void/atmos,
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/window/westleft{
+	name = "Atmospherics Suits";
+	req_access = list(24)
+	},
+/obj/structure/table/rack/shelf/steel,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalEngineering)
+"i" = (
+/obj/item/device/gps/computer,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalEngineering)
+"j" = (
+/obj/machinery/smartfridge/survival_pod{
+	icon = 'icons/obj/vending.dmi';
+	icon_base = "smartfridge";
+	icon_contents = "boxes";
+	icon_state = "smartfridge";
+	name = "Advanced storage";
+	pixel_y = -1
+	},
+/obj/item/device/suit_cooling_unit,
+/obj/item/device/suit_cooling_unit,
+/obj/item/device/suit_cooling_unit,
+/obj/item/device/flashlight/maglight,
+/obj/item/device/flashlight/maglight,
+/obj/item/device/flashlight/maglight,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/plastic,
+/obj/item/stack/material/plasteel{
+	amount = 30
+	},
+/obj/fiftyspawner/rods,
+/obj/fiftyspawner/rods,
+/obj/item/stack/material/glass/phoronrglass{
+	amount = 20
+	},
+/obj/item/weapon/storage/toolbox/mechanical{
+	pixel_y = 5
+	},
+/obj/item/weapon/storage/toolbox/mechanical{
+	pixel_y = 5
+	},
+/obj/item/weapon/storage/toolbox/electrical,
+/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/weapon/cell/high{
+	charge = 100;
+	maxcharge = 15000
+	},
+/obj/item/weapon/cell/high{
+	charge = 100;
+	maxcharge = 15000
+	},
+/obj/item/weapon/cell/high{
+	charge = 100;
+	maxcharge = 15000
+	},
+/obj/item/device/radio/off,
+/obj/item/device/radio/off,
+/obj/item/device/radio/off,
+/obj/item/device/radio/off,
+/obj/item/device/radio/off,
+/obj/item/device/radio/off,
+/obj/item/device/radio/off,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/clothing/glasses/meson,
+/obj/item/clothing/glasses/meson,
+/obj/item/clothing/gloves/yellow,
+/obj/item/clothing/gloves/yellow,
+/obj/item/clothing/head/welding/demon,
+/obj/item/clothing/head/welding/knight,
+/obj/item/clothing/glasses/welding,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+/obj/item/weapon/inducer,
+/obj/item/weapon/storage/belt/utility/full,
+/obj/item/weapon/storage/belt/utility/full,
+/obj/item/device/multitool,
+/obj/item/device/multitool,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/device/megaphone,
+/obj/item/device/megaphone,
+/obj/item/weapon/extinguisher/atmo,
+/obj/item/weapon/extinguisher/atmo,
+/obj/item/device/suit_cooling_unit,
+/obj/item/device/suit_cooling_unit,
+/obj/item/weapon/storage/backpack/dufflebag/eng,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalEngineering)
+"k" = (
+/obj/machinery/suit_cycler/engineering{
+	req_access = null
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalEngineering)
+"m" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/table/steel_reinforced,
+/obj/fiftyspawner/glass{
+	pixel_y = -5
+	},
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/item/stack/material/plasteel{
+	amount = 30;
+	pixel_y = 5
+	},
+/obj/item/stack/material/glass/phoronrglass{
+	amount = 20;
+	pixel_y = 5
+	},
+/obj/item/stack/material/phoron{
+	amount = 25
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalEngineering)
+"n" = (
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalEngineering)
+"o" = (
+/obj/structure/sign/mining,
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalEngineering)
+"p" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalEngineering)
+"q" = (
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 8;
+	pixel_x = -20
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalEngineering)
+"r" = (
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/suit/space/void/atmos,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/head/helmet/space/void/atmos,
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/window/westright{
+	name = "Atmospherics Suits";
+	req_access = list(24)
+	},
+/obj/structure/table/rack/shelf/steel,
+/obj/structure/sign/warning/nosmoking_2{
+	pixel_x = 32
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalEngineering)
+"s" = (
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalEngineering)
+"t" = (
+/obj/machinery/autolathe,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalEngineering)
+"u" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/shieldgen,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalEngineering)
+"v" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/vending/engivend{
+	pixel_x = -1
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalEngineering)
+"w" = (
+/obj/machinery/smartfridge/survival_pod,
+/obj/item/weapon/tape_roll,
+/obj/item/sticky_pad/random,
+/obj/item/weapon/pen/blue,
+/obj/item/weapon/pen/blue,
+/obj/item/fulton_core,
+/obj/item/fulton_core,
+/obj/item/extraction_pack,
+/obj/item/extraction_pack,
+/obj/item/modular_computer/laptop/preset/custom_loadout/standard,
+/obj/item/weapon/pickaxe/hand,
+/obj/item/device/flashlight/color/yellow,
+/obj/item/device/flashlight/color/orange,
+/obj/item/device/threadneedle,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/weapon/extinguisher/mini,
+/obj/item/weapon/extinguisher/mini,
+/obj/item/weapon/flame/lighter/zippo,
+/obj/item/weapon/flame/lighter/zippo,
+/obj/item/device/flashlight/lantern,
+/obj/random/soap,
+/obj/random/soap,
+/obj/item/weapon/towel/random,
+/obj/item/weapon/towel/random,
+/obj/item/bodybag/cryobag,
+/obj/item/bodybag/cryobag,
+/obj/item/weapon/storage/pill_bottle/spaceacillin,
+/obj/item/weapon/storage/pill_bottle/antitox,
+/obj/item/device/healthanalyzer,
+/obj/item/weapon/storage/firstaid/regular,
+/obj/item/weapon/storage/firstaid/o2,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/fbp_backup_cell,
+/obj/item/stack/nanopaste,
+/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/weapon/storage/toolbox/brass,
+/obj/item/weapon/storage/box/survival/space,
+/obj/item/weapon/storage/box/survival/space,
+/obj/item/weapon/storage/box/survival/space,
+/obj/item/weapon/storage/pill_bottle/dice_nerd,
+/obj/item/weapon/storage/box/flare,
+/obj/item/weapon/storage/box/khcrystal,
+/obj/item/weapon/storage/box/khcrystal,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/stack/marker_beacon/ten,
+/obj/item/device/starcaster_news,
+/obj/item/device/mapping_unit,
+/obj/item/weapon/storage/box/dosimeter,
+/obj/item/device/gps,
+/obj/item/device/gps,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/device/pda,
+/obj/item/device/pda,
+/obj/item/weapon/card/id/external,
+/obj/item/weapon/card/id/external,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
+/obj/item/weapon/gun/energy/locked/phasegun,
+/obj/item/weapon/cell/device/weapon{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/weapon/cell/device/weapon{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/clothing/accessory/permit/gun,
+/obj/item/clothing/accessory/permit/gun,
+/obj/item/weapon/material/knife/machete,
+/obj/item/weapon/material/fishing_net,
+/obj/item/weapon/storage/backpack/sport,
+/obj/item/weapon/storage/backpack/sport,
+/obj/item/clothing/accessory/storage/black_drop_pouches,
+/obj/item/clothing/accessory/storage/black_drop_pouches,
+/obj/item/weapon/storage/belt,
+/obj/item/clothing/accessory/poncho/thermal,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalEngineering)
+"x" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/grille,
+/obj/structure/curtain/black,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalEngineering)
+"y" = (
+/obj/structure/closet/secure_closet/guncabinet/phase{
+	pixel_y = -32
+	},
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
+/obj/item/clothing/accessory/permit/gun/planetside,
+/obj/item/clothing/accessory/permit/gun/planetside,
+/obj/item/clothing/accessory/holster/waist,
+/obj/item/clothing/accessory/holster/waist,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalEngineering)
+"z" = (
+/obj/structure/sign/mining/survival{
+	dir = 4
+	},
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalEngineering)
+"A" = (
+/obj/structure/sign/mining/survival,
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalEngineering)
+"B" = (
+/obj/structure/sign/mining/survival{
+	dir = 8
+	},
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalEngineering)
+"C" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/cell_charger{
+	pixel_x = 1;
+	pixel_y = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalEngineering)
+"D" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalEngineering)
+"E" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/machinery/shieldgen,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalEngineering)
+"F" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/dispenser{
+	phorontanks = 0
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalEngineering)
+"G" = (
+/obj/structure/reagent_dispensers/fueltank/high,
+/obj/structure/closet/walllocker_double/hydrant/east,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalEngineering)
+"H" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/space_heater,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalEngineering)
+"I" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/recharger{
+	pixel_x = -3;
+	pixel_y = 9
+	},
+/obj/machinery/cell_charger{
+	pixel_x = 1;
+	pixel_y = -2
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalEngineering)
+"J" = (
+/turf/simulated/shuttle/wall/voidcraft/orange,
+/area/survivalpod/superpose/SurvivalEngineering)
+"K" = (
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalEngineering)
+"L" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/SurvivalEngineering)
+"M" = (
+/obj/effect/floor_decal/industrial/loading{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalEngineering)
+"N" = (
+/obj/effect/floor_decal/techfloor,
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/SurvivalEngineering)
+"O" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/light{
+	dir = 8;
+	layer = 3
+	},
+/obj/machinery/power/emitter,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalEngineering)
+"P" = (
+/obj/machinery/door/window/survival_pod{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalEngineering)
+"Q" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/floodlight,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalEngineering)
+"R" = (
+/obj/structure/reagent_dispensers/watertank/high,
+/obj/machinery/light{
+	dir = 4;
+	layer = 3
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalEngineering)
+"S" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/power/thermoregulator,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalEngineering)
+"T" = (
+/obj/structure/sign/warning/engineering_access,
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalEngineering)
+"U" = (
+/obj/machinery/sleeper/survival_pod,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalEngineering)
+"V" = (
+/obj/structure/bed/pod,
+/obj/item/weapon/bedsheet/ce,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalEngineering)
+"W" = (
+/obj/structure/sign/mining/survival{
+	dir = 1
+	},
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalEngineering)
+"X" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/vending/tool{
+	pixel_x = -1
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalEngineering)
+"Y" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/portable_atmospherics/powered/scrubber,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalEngineering)
+"Z" = (
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/SurvivalEngineering)
 
 (1,1,1) = {"
-aJxnonWJa
-JqDFngwiJ
-BksrnUMVz
-JjshncsIx
-xEPpdvPXT
-JuYmZZZLf
-BOQQZCKRz
-JHSeNtyGJ
-aJAnbTnJa
+a
+J
+B
+J
+x
+J
+B
+J
+a
+"}
+(2,1,1) = {"
+J
+q
+k
+j
+E
+u
+O
+H
+J
+"}
+(3,1,1) = {"
+x
+D
+s
+s
+P
+Y
+Q
+S
+A
+"}
+(4,1,1) = {"
+n
+F
+r
+h
+p
+m
+Q
+e
+n
+"}
+(5,1,1) = {"
+o
+n
+n
+n
+d
+Z
+Z
+N
+b
+"}
+(6,1,1) = {"
+n
+g
+U
+c
+v
+Z
+C
+t
+T
+"}
+(7,1,1) = {"
+W
+w
+M
+s
+P
+Z
+K
+y
+n
+"}
+(8,1,1) = {"
+J
+i
+V
+I
+X
+L
+R
+G
+J
+"}
+(9,1,1) = {"
+a
+J
+z
+x
+T
+f
+z
+J
+a
 "}

@@ -305,6 +305,11 @@
 /obj/machinery/biogenerator,
 /turf/simulated/floor/tiled/hydro,
 /area/survivalpod/superpose/HydroCave)
+"jO" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate/solar,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
 "jY" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 1;
@@ -567,6 +572,16 @@
 /obj/item/weapon/storage/box/khcrystal,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/HydroCave)
+"ou" = (
+/obj/structure/table/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/wood,
+/obj/item/stack/material/phoron{
+	amount = 25
+	},
+/obj/item/weapon/storage/toolbox/electrical,
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/HydroCave)
 "oQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/airlock{
@@ -730,15 +745,13 @@
 /turf/simulated/floor/tiled/dark,
 /area/survivalpod/superpose/HydroCave)
 "sR" = (
-/obj/structure/table/steel,
-/obj/item/stack/material/phoron{
-	amount = 5
+/obj/machinery/power/terminal{
+	dir = 1
 	},
-/obj/item/stack/material/phoron{
-	amount = 5
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
 	},
-/obj/fiftyspawner/wood,
-/obj/fiftyspawner/steel,
 /turf/simulated/floor,
 /area/survivalpod/superpose/HydroCave)
 "sZ" = (
@@ -765,8 +778,8 @@
 /area/survivalpod/superpose/HydroCave)
 "up" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/power/port_gen/pacman,
-/obj/structure/cable,
+/obj/structure/cable/green,
+/obj/machinery/power/smes/buildable/offmap_spawn/empty,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/HydroCave)
 "uH" = (
@@ -1062,6 +1075,14 @@
 	pixel_y = 25
 	},
 /turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/HydroCave)
+"Et" = (
+/obj/machinery/power/port_gen/pacman,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/tiled,
 /area/survivalpod/superpose/HydroCave)
 "EB" = (
 /obj/machinery/alarm/monitor{
@@ -1795,6 +1816,10 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/HydroCave)
 "VB" = (
@@ -1812,6 +1837,14 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"VP" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
 /area/survivalpod/superpose/HydroCave)
 "Wd" = (
 /obj/structure/table/wooden_reinforced,
@@ -1967,6 +2000,15 @@
 "ZO" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
+"ZU" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
 /area/survivalpod/superpose/HydroCave)
 "ZW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -2453,7 +2495,7 @@ JY
 JY
 Gy
 cY
-cY
+ZU
 AE
 xV
 xV
@@ -2495,7 +2537,7 @@ JY
 JY
 Gy
 cY
-xV
+VP
 mE
 Gy
 Ax
@@ -2537,7 +2579,7 @@ JY
 dh
 Gy
 xV
-xV
+Et
 Kb
 Ax
 fj
@@ -2579,7 +2621,7 @@ zz
 zz
 Gy
 xV
-xV
+ou
 TP
 Ax
 Fb
@@ -2621,7 +2663,7 @@ br
 br
 Gy
 xV
-cY
+jO
 TP
 Ax
 Wd

@@ -42,7 +42,7 @@
 		else  return "[jointext(input, comma_text, 1, -1)][final_comma_text][and_text][input[input.len]]"
 
 //Returns a newline-separated list that counts equal-ish items, outputting count and item names, optionally with icons and specific determiners
-/proc/counting_english_list(var/list/input, output_icons = TRUE, determiners = DET_NONE, nothing_text = "nothing", line_prefix = "\t", first_item_prefix = "\n", last_item_suffix = "\n", and_text = "\n", comma_text = "\n", final_comma_text = ",")
+/proc/counting_english_list(var/list/input, var/mob/user, output_icons = TRUE, determiners = DET_NONE, nothing_text = "nothing", line_prefix = "\t", first_item_prefix = "\n", last_item_suffix = "\n", and_text = "\n", comma_text = "\n", final_comma_text = ",") //CHOMPEdit
 	var/list/counts = list() // counted input items
 	var/list/items = list() // actual objects for later reference (for icons and formatting)
 
@@ -69,7 +69,7 @@
 			// atoms/items/objects can be pretty and whatnot
 			var/atom/A = item
 			if(output_icons && isicon(A.icon) && !ismob(A)) // mobs tend to have unusable icons
-				item_str += "[bicon(A)]&nbsp;"
+				item_str += "[icon2html(A,user)]&nbsp;" //CHOMPEdit
 			switch(determiners)
 				if(DET_NONE) item_str += A.name
 				if(DET_DEFINITE) item_str += "\the [A]"

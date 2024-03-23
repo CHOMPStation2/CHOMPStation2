@@ -871,7 +871,11 @@ Turf and target are seperate in case you want to teleport some distance from a t
 		"parent_type",
 		"verbs",
 		"ckey",
-		"key"
+		"key",
+		"_active_timers", // ChompEDIT - blacklist timers
+		"_datum_components", // ChompEDIT - blacklist DCS
+		"_listen_lookup",  // ChompEDIT - blacklist signal listeners
+		"_signal_procs" // ChompEDIT - blacklist signal procs
 	)
 	if(perfectcopy)
 		if((O) && (original))

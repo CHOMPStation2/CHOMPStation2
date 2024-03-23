@@ -968,7 +968,7 @@
 			lying = incapacitated(INCAPACITATION_KNOCKDOWN)
 			canmove = !incapacitated(INCAPACITATION_DISABLED)
 
-	if(lying && (incapacitated(INCAPACITATION_KNOCKOUT) || incapacitated(INCAPACITATION_STUNNED))) // CHOMPAdd - Making sure we're in good condition to crawl
+	if(incapacitated(INCAPACITATION_KNOCKOUT) || incapacitated(INCAPACITATION_STUNNED)) // CHOMPAdd - Making sure we're in good condition to crawl
 		canmove = 0
 		drop_both_hands()
 	else
@@ -1368,5 +1368,5 @@
 
 /mob/living/set_dir(var/new_dir)
 	. = ..()
-	if(size_multiplier != 1 || icon_scale_x != 1 && center_offset > 0)
+	if(size_multiplier != 1 || icon_scale_x != DEFAULT_ICON_SCALE_X && center_offset > 0)
 		update_transform(TRUE)

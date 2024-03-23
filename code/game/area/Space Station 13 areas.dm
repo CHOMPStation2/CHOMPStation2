@@ -2669,3 +2669,13 @@ var/list/the_station_areas = list (
 	name = "\improper Baby_mammoth"
 	icon_state = "shuttlered"
 	requires_power = 1
+
+/area/shuttle/spacebus
+	name = "\improper Space Bus"
+	icon_state = "shuttlered"
+	requires_power = 1
+
+/area/shuttle/junker
+	name = "\improper Junker"
+	icon_state = "shuttlered"
+	requires_power = 1

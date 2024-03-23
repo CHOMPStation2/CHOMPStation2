@@ -15,6 +15,7 @@
 	vessel_mass = 3000
 	vessel_size = SHIP_SIZE_SMALL
 	shuttle = "Stargazer"
+	known = TRUE
 
 /obj/machinery/computer/shuttle_control/explore/stargazer
 	name = "short jump console"
@@ -37,6 +38,7 @@
 	vessel_mass = 6000
 	vessel_size = SHIP_SIZE_SMALL
 	shuttle = "Baby_mammoth"
+	known = TRUE
 
 /obj/machinery/computer/shuttle_control/explore/baby_mammoth
 	name = "short jump console"
@@ -59,6 +61,7 @@
 	vessel_mass = 3500
 	vessel_size = SHIP_SIZE_SMALL
 	shuttle = "Ursula"
+	known = TRUE
 
 /obj/machinery/computer/shuttle_control/explore/ursula
 	name = "short jump console"
@@ -81,6 +84,7 @@
 	vessel_mass = 1500
 	vessel_size = SHIP_SIZE_SMALL
 	shuttle = "Needle"
+	known = TRUE
 
 /obj/machinery/computer/shuttle_control/explore/needle
 	name = "short jump console"
@@ -103,8 +107,53 @@
 	vessel_mass = 5500
 	vessel_size = SHIP_SIZE_SMALL
 	shuttle = "Echidna"
+	known = TRUE
 
 /obj/machinery/computer/shuttle_control/explore/echidna
 	name = "short jump console"
 	shuttle_tag = "Echidna"
 	req_one_access = list(access_pilot)
+
+//Spacebus
+/datum/shuttle/autodock/overmap/spacebus
+	name = "Space Bus"
+	warmup_time = 4
+	current_location = "hangar_2"
+	docking_controller_tag = "spacebus"
+	shuttle_area = /area/shuttle/spacebus
+	fuel_consumption = 1
+	move_direction = NORTH
+
+/obj/effect/overmap/visitable/ship/landable/spacebus
+	name = "Space Bus"
+	desc = "Southern Cross' civilian transport vessel"
+	vessel_mass = 2000
+	vessel_size = SHIP_SIZE_SMALL
+	shuttle = "Space Bus"
+	known = TRUE
+
+/obj/machinery/computer/shuttle_control/explore/spacebus
+	name = "short jump console"
+	shuttle_tag = "Space Bus"
+	req_one_access = list(access_pilot)
+
+//POI Junker
+/datum/shuttle/autodock/overmap/junker
+	name = "Junker"
+	warmup_time = 4
+	current_location = "junkspawn"
+	docking_controller_tag = "junker"
+	shuttle_area = /area/shuttle/junker
+	fuel_consumption = 1
+	move_direction = NORTH
+
+/obj/effect/overmap/visitable/ship/landable/junker
+	name = "Junker"
+	desc = "Small class ship, non-NT property."
+	vessel_mass = 500
+	vessel_size = SHIP_SIZE_SMALL
+	shuttle = "Junker"
+
+/obj/machinery/computer/shuttle_control/explore/junker
+	name = "short jump console"
+	shuttle_tag = "Junker"

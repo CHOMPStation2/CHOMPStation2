@@ -1,3 +1,4 @@
+import { classes } from '../../.././common/react';
 import { useBackend } from '../../backend';
 import { Box, Button, Flex, LabeledList, Section } from '../../components';
 import { Window } from '../../layouts';
@@ -315,11 +316,22 @@ const ChemSynthesizerSettings = (props) => {
                     width: '16px',
                     height: '16px',
                     verticalAlign: 'middle',
-                    background: 'url(bottle-' + data.bottle_icon + '.png)',
                     backgroundSize: '200%',
                     backgroundPosition: 'left -10px bottom -6px',
                   }}
-                />
+                >
+                  <Box
+                    className={classes([
+                      'chem_master32x32',
+                      'bottle-' + data.bottle_icon,
+                    ])}
+                    style={{
+                      bottom: '10px',
+                      right: '10px',
+                      position: 'relative',
+                    }}
+                  />
+                </div>
                 Style
               </Button>
             </LabeledList.Item>
@@ -338,11 +350,22 @@ const ChemSynthesizerSettings = (props) => {
                     width: '16px',
                     height: '16px',
                     verticalAlign: 'middle',
-                    background: 'url(pill' + data.pill_icon + '.png)',
                     backgroundSize: '200%',
                     backgroundPosition: 'left -10px bottom -6px',
                   }}
-                />
+                >
+                  <Box
+                    className={classes([
+                      'chem_master32x32',
+                      'pill' + data.pill_icon,
+                    ])}
+                    style={{
+                      bottom: '10px',
+                      right: '10px',
+                      position: 'relative',
+                    }}
+                  />
+                </div>
                 Style
               </Button>
             </LabeledList.Item>
@@ -361,11 +384,22 @@ const ChemSynthesizerSettings = (props) => {
                     width: '16px',
                     height: '16px',
                     verticalAlign: 'middle',
-                    background: 'url(patch' + data.patch_icon + '.png)',
                     backgroundSize: '200%',
                     backgroundPosition: 'left -10px bottom -6px',
                   }}
-                />
+                >
+                  <Box
+                    className={classes([
+                      'chem_master32x32',
+                      'patch' + data.patch_icon,
+                    ])}
+                    style={{
+                      bottom: '10px',
+                      right: '10px',
+                      position: 'relative',
+                    }}
+                  />
+                </div>
                 Style
               </Button>
             </LabeledList.Item>

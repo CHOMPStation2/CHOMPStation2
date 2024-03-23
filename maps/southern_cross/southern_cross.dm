@@ -71,6 +71,7 @@
 	#include "overmap/planets/kara/northern_star/northern_star.dm" //This is the actual map info that we're using for kara
 	#include "overmap/planets/kara/aerostat/aerostat.dm" //This is an installation for Kara.
 	*/
+	#include "overmap/planets/thor/thor.dm"
 
 	//SPACE - Anything random in space
 	#include "overmap/space/fueldepot.dm" //This is a fuel depot in space.

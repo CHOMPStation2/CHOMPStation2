@@ -1,4 +1,0 @@
-author: "ItsSelis"
-delete-after: True
-changes:
-  - rscadd: "VSCode will now show a warning prompt if trying to push a commit to the master branch."

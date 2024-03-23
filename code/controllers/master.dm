@@ -17,49 +17,73 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 /datum/controller/master
 	name = "Master"
 
-	// Are we processing (higher values increase the processing delay by n ticks)
+	/// Are we processing (higher values increase the processing delay by n ticks)
 	var/processing = TRUE
-	// How many times have we ran
+	/// How many times have we ran
 	var/iteration = 0
+	/// Stack end detector to detect stack overflows that kill the mc's main loop
+	var/datum/stack_end_detector/stack_end_detector
 
-	// world.time of last fire, for tracking lag outside of the mc
+	/// world.time of last fire, for tracking lag outside of the mc
 	var/last_run
 
-	// List of subsystems to process().
+	/// List of subsystems to process().
 	var/list/subsystems
 
 	// Vars for keeping track of tick drift.
 	var/init_timeofday
 	var/init_time
 	var/tickdrift = 0
+	/// Tickdrift as of last tick, w no averaging going on
+	var/olddrift = 0
 
+	/// How long is the MC sleeping between runs, read only (set by Loop() based off of anti-tick-contention heuristics)
 	var/sleep_delta = 1
 
-	var/make_runtime = 0
+	/// Only run ticker subsystems for the next n ticks.
+	var/skip_ticks = 0
+
+	/// makes the mc main loop runtime
+	var/make_runtime = FALSE
 
 	var/initializations_finished_with_no_players_logged_in	//I wonder what this could be?
 
-	// The type of the last subsystem to be process()'d.
+	/// The type of the last subsystem to be fire()'d.
 	var/last_type_processed
 
-	var/datum/controller/subsystem/queue_head //Start of queue linked list
-	var/datum/controller/subsystem/queue_tail //End of queue linked list (used for appending to the list)
+	var/datum/controller/subsystem/queue_head //!Start of queue linked list
+	var/datum/controller/subsystem/queue_tail //!End of queue linked list (used for appending to the list)
 	var/queue_priority_count = 0 //Running total so that we don't have to loop thru the queue each run to split up the tick
 	var/queue_priority_count_bg = 0 //Same, but for background subsystems
-	var/map_loading = FALSE	//Are we loading in a new map?
+	var/map_loading = FALSE //!Are we loading in a new map?
 
-	var/current_runlevel	//for scheduling different subsystems for different stages of the round
+	var/current_runlevel //!for scheduling different subsystems for different stages of the round
+
+	/// During initialization, will be the instanced subsytem that is currently initializing.
+	/// Outside of initialization, returns null.
+	var/current_initializing_subsystem = null
 
 	var/static/restart_clear = 0
 	var/static/restart_timeout = 0
 	var/static/restart_count = 0
 
-	//current tick limit, assigned by the queue controller before running a subsystem.
-	//used by check_tick as well so that the procs subsystems call can obey that SS's tick limits
+	var/static/random_seed
+
+	///current tick limit, assigned before running a subsystem.
+	///used by CHECK_TICK as well so that the procs subsystems call can obey that SS's tick limits
 	var/static/current_ticklimit
 
 /datum/controller/master/New()
 	// Highlander-style: there can only be one! Kill off the old and replace it with the new.
+
+	if(!random_seed)
+		#ifdef UNIT_TESTS
+		random_seed = 29051994 // How about 22475?
+		#else
+		random_seed = rand(1, 1e9)
+		#endif
+		rand_seed(random_seed)
+
 	var/list/_subsystems = list()
 	subsystems = _subsystems
 	if (Master != src)
@@ -87,6 +111,8 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	reverseRange(subsystems)
 	for(var/datum/controller/subsystem/ss in subsystems)
 		log_world("Shutting down [ss.name] subsystem...")
+		if (ss.slept_count > 0)
+			log_world("Warning: Subsystem `[ss.name]` slept [ss.slept_count] times.")
 		ss.Shutdown()
 	log_world("Shutdown complete")
 
@@ -294,8 +320,12 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	var/error_level = 0
 	var/sleep_delta = 1
 	var/list/subsystems_to_check
-	//the actual loop.
 
+	//setup the stack overflow detector
+	stack_end_detector = new()
+	var/datum/stack_canary/canary = stack_end_detector.prime_canary()
+	canary.use_variable()
+	//the actual loop.
 	while (1)
 		tickdrift = max(0, MC_AVERAGE_FAST(tickdrift, (((REALTIMEOFDAY - init_timeofday) - (world.time - init_time)) / world.tick_lag)))
 		var/starting_tick_usage = TICK_USAGE

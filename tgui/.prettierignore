@@ -18,6 +18,3 @@
 ## Build artifacts
 /public/.tmp/**/*
 /public/*.map
-
-## CHOMPEdit - Until removed
-/packages/tgui_ch

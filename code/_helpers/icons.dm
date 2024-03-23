@@ -80,7 +80,7 @@
 	Blend(M, ICON_ADD)
 
 /proc/BlendRGB(rgb1, rgb2, amount)
-	var/list/RGB1 = ReadRGB(rgb1)	//CHOMPEdit - Better rgb blend
+	var/list/RGB1 = ReadRGB(rgb1)
 	var/list/RGB2 = ReadRGB(rgb2)
 
 	// add missing alpha if needed

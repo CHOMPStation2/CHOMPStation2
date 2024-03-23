@@ -200,6 +200,8 @@
 		for(var/mob/M as anything in vis_mobs)
 			if(isnewplayer(M))
 				continue
+			if(src.client && M && !(get_z(src) == get_z(M)))
+				message = "<span class='multizsay'>[message]</span>"
 			if(isobserver(M) && (!(is_preference_enabled(/datum/client_preference/whisubtle_vis) || (isbelly(M.loc) && src == M.loc:owner)) || \
 			!is_preference_enabled(/datum/client_preference/whisubtle_vis) && !M.client?.holder)) //CHOMPEdit - Added the belly check so that ghosts in bellies can still see their pred's messages.
 				spawn(0)

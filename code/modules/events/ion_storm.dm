@@ -4,6 +4,7 @@
 	has_skybox_image = TRUE
 	announceWhen = -1 // Never (setup may override)
 	var/botEmagChance = 0 //VOREStation Edit
+	var/ionBorgs = TRUE // CHOMPStation Edit
 	var/cloud_hueshift
 	var/list/players = list()
 
@@ -53,6 +54,20 @@
 		to_chat(target, law)
 		target.add_ion_law(law)
 		target.show_laws()
+		ionBorgs = FALSE // CHOMPEdit
+
+	// CHOMPEdit Start
+	if(ionBorgs)	// Making sure an AI hasn't been given an Ion law...
+		for (var/mob/living/silicon/target in silicon_mob_list)
+			if(!(target.z in affecting_z) || prob(33))
+				continue
+			var/law = target.generate_ion_law()
+			to_chat(target, "<span class='danger'>You have detected a change in your laws information:</span>")
+			to_chat(target, law)
+			target.add_ion_law(law)
+			target.show_laws()
+	// CHOMPEdit End
+
 /* //VOREstation edit. Was fucking up all PDA messagess.
 	if(message_servers)
 		for (var/obj/machinery/message_server/MS in message_servers)

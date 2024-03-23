@@ -1136,7 +1136,7 @@
 /area/surface/outpost/research/xenoarcheology/anomaly)
 "cq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 4
+	dir = 8
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/research{
@@ -1418,7 +1418,7 @@
 	dir = 10
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 4
+	dir = 8
 	},
 /obj/structure/cable/blue{
 	d1 = 4;
@@ -1458,7 +1458,7 @@
 /area/surface/outpost/research/xenoarcheology/isolation_a)
 "cU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 4
+	dir = 8
 	},
 /turf/simulated/floor/reinforced,
 /area/surface/outpost/research/xenoarcheology/isolation_a)
@@ -2196,7 +2196,7 @@
 /area/surface/outpost/research/xenoarcheology/anomaly)
 "er" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 4
+	dir = 8
 	},
 /obj/structure/cable/blue{
 	d1 = 1;
@@ -2214,7 +2214,7 @@
 /area/surface/outpost/research/xenoarcheology/anomaly)
 "et" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 4
+	dir = 8
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/research{
@@ -2225,7 +2225,7 @@
 /area/surface/outpost/research/xenoarcheology/isolation_b)
 "eu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 4
+	dir = 8
 	},
 /turf/simulated/floor/reinforced,
 /area/surface/outpost/research/xenoarcheology/isolation_b)
@@ -2949,7 +2949,7 @@
 /area/surface/outpost/research/xenoarcheology/anomaly)
 "fQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 4
+	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -2961,7 +2961,7 @@
 /area/surface/outpost/research/xenoarcheology/anomaly)
 "fR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 4
+	dir = 8
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/research{
@@ -2972,7 +2972,7 @@
 /area/surface/outpost/research/xenoarcheology/isolation_c)
 "fS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 4
+	dir = 8
 	},
 /turf/simulated/floor/reinforced,
 /area/surface/outpost/research/xenoarcheology/isolation_c)

@@ -177,7 +177,7 @@ I think I covered everything.
 		"Normal"
 	)
 	var/eyes
-	
+
 	can_be_drop_prey = FALSE //CHOMP Add
 
 ///
@@ -336,7 +336,7 @@ I think I covered everything.
 	newdesc = sanitizeSafe(input(src,"Set your description. Max 4096 chars.", "Description set","") as text, MAX_MESSAGE_LEN)
 	if(newdesc)
 		desc = newdesc
-*/ 
+*/
 
 ///
 ///		Icon generation stuff
@@ -765,7 +765,7 @@ I think I covered everything.
 		var/atom/movable/AM = am
 		if(AM == src || AM.anchored)
 			continue
-		addtimer(CALLBACK(src, .proc/yeet, am), 1)
+		addtimer(CALLBACK(src, PROC_REF(yeet), am), 1)
 	playsound(src, "sound/weapons/punchmiss.ogg", 50, 1)
 
 //Split repulse into two parts so I can recycle this later
@@ -798,7 +798,7 @@ I think I covered everything.
 
 	do_windup_animation(A, charge_warmup)
 	//callbacks are more reliable than byond's process scheduler
-	addtimer(CALLBACK(src, .proc/chargeend, A), charge_warmup)
+	addtimer(CALLBACK(src, PROC_REF(chargeend), A), charge_warmup)
 
 
 /mob/living/simple_mob/vore/bigdragon/proc/chargeend(var/atom/A, var/explicit = 0, var/gentle = 0)
@@ -836,7 +836,7 @@ I think I covered everything.
 		set_AI_busy(TRUE)
 	flames = 1
 	build_icons()
-	addtimer(CALLBACK(src, .proc/firebreathend, A), charge_warmup)
+	addtimer(CALLBACK(src, PROC_REF(firebreathend), A), charge_warmup)
 	playsound(src, "sound/magic/Fireball.ogg", 50, 1)
 
 /mob/living/simple_mob/vore/bigdragon/proc/firebreathend(var/atom/A)

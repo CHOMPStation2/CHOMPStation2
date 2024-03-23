@@ -8876,14 +8876,9 @@
 /turf/simulated/floor/tiled/airless,
 /area/rnd/test_area)
 "azM" = (
-/obj/structure/closet/crate/radiation,
-/obj/item/clothing/glasses/meson,
-/obj/item/clothing/glasses/meson,
+/obj/structure/closet/crate/solar,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light,
-/obj/item/stack/material/lead{
-	amount = 30
-	},
 /turf/simulated/floor,
 /area/engineering/storage)
 "azN" = (
@@ -22259,8 +22254,7 @@
 /area/security/warden)
 "bql" = (
 /obj/machinery/computer/supplycomp{
-	dir = 4;
-	icon_rotation = 90
+	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
@@ -46472,8 +46466,13 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/entry/D3)
 "eiI" = (
-/obj/structure/closet/crate/solar,
+/obj/structure/closet/crate/radiation,
+/obj/item/clothing/glasses/meson,
+/obj/item/clothing/glasses/meson,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/stack/material/lead{
+	amount = 30
+	},
 /turf/simulated/floor,
 /area/engineering/storage)
 "ejk" = (
@@ -48880,10 +48879,9 @@
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
-	d1 = 2;
+	d1 = 1;
 	d2 = 4;
-	dir = 4;
-	icon_state = "2-4"
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/D3)
@@ -53843,15 +53841,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	dir = 4;
-	icon_state = "2-4"
-	},
-/obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/D3)
@@ -62088,6 +62085,7 @@
 /obj/item/weapon/tool/crowbar,
 /obj/item/weapon/tool/crowbar/red,
 /obj/item/weapon/storage/box/lights/mixed,
+/obj/item/device/lightreplacer,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/workshop)
 "muM" = (
