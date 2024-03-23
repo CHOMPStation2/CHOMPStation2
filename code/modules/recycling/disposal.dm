@@ -146,6 +146,7 @@
 			log_and_message_admins("placed [I.name] inside \the [src]", user)
 			var/obj/item/weapon/holder/H = I
 			H.held_mob.forceMove(src)
+			qdel(I)
 		else
 			I.forceMove(src)
 
