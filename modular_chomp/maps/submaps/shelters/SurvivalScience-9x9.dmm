@@ -84,7 +84,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalScience)
 "gW" = (
 /obj/machinery/r_n_d/destructive_analyzer,
@@ -97,7 +97,7 @@
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/SurvivalScience)
 "hp" = (
-/obj/machinery/computer/rdconsole/core{
+/obj/machinery/computer/rdconsole/public{
 	dir = 4
 	},
 /obj/machinery/light{
@@ -129,7 +129,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalScience)
 "nQ" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
@@ -164,7 +164,7 @@
 "sk" = (
 /obj/effect/floor_decal/techfloor,
 /obj/effect/floor_decal/industrial/warning,
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalScience)
 "uq" = (
 /obj/machinery/mecha_part_fabricator,
@@ -330,7 +330,7 @@
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalScience)
 "Cz" = (
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalScience)
 "CX" = (
 /turf/simulated/shuttle/wall/voidcraft/lightblue,
@@ -590,7 +590,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalScience)
 "TY" = (
 /obj/structure/closet/secure_closet/guncabinet/phase{
