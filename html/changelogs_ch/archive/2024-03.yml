@@ -229,3 +229,11 @@
   - bugfix: Smoke won't make creatures without lungs cough
   tacoguy7765093:
   - balance: Non-CE blueprint charges buffed from 10 -> 25
+2024-03-23:
+  Missile597:
+  - bugfix: fixed stinky invalid direction argument on a wire causing tcomms to not
+      be connected to the power grid. I love dir :)
+  ReoDaProtovali:
+  - rscadd: Teppi speak Teppi again
+  TheCaramelion:
+  - bugfix: Phased kins won't stop people from moving
