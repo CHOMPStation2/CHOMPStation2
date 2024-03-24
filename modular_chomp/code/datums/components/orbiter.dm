@@ -23,14 +23,14 @@
 	. = ..()
 	var/atom/target = parent
 	while(ismovable(target))
-		RegisterSignal(target, COMSIG_MOVABLE_MOVING, PROC_REF(move_react))
+		RegisterSignal(target, COMSIG_MOVABLE_MOVED, PROC_REF(move_react))
 		target = target.loc
 
 /datum/component/orbiter/UnregisterFromParent()
 	. = ..()
 	var/atom/target = parent
 	while(ismovable(target))
-		UnregisterSignal(target, COMSIG_MOVABLE_MOVING)
+		UnregisterSignal(target, COMSIG_MOVABLE_MOVED)
 		target = target.loc
 
 /datum/component/orbiter/Destroy()
@@ -89,7 +89,7 @@
 	if(!orbiters[orbiter])
 		return
 	SEND_SIGNAL(parent, COMSIG_ATOM_ORBIT_STOP, orbiter, refreshing)
-	UnregisterSignal(orbiter, COMSIG_MOVABLE_MOVING)
+	UnregisterSignal(orbiter, COMSIG_MOVABLE_MOVED)
 	orbiter.SpinAnimation(0, 0)
 	if(istype(orbiters[orbiter],/matrix)) //This is ugly.
 		orbiter.transform = orbiters[orbiter]
@@ -100,12 +100,16 @@
 		qdel(src)
 
 // This proc can receive signals by either the thing being directly orbited or anything holding it
-/datum/component/orbiter/proc/move_react(atom/orbited, atom/oldloc, direction, atom/newloc, actual_movetime)
+/datum/component/orbiter/proc/move_react(atom/orbited, atom/oldloc, direction)
 	set waitfor = FALSE // Transfer calls this directly and it doesnt care if the ghosts arent done moving
 
 	var/atom/movable/master = parent
 	if(master.loc == oldloc)
 		return
+
+	var/glide_size = master.glide_size
+	var/atom/movable/AM = orbited
+	if(istype(AM)) glide_size = AM.glide_size
 
 	var/turf/newturf = get_turf(master)
 	if(!newturf)
@@ -116,12 +120,12 @@
 	if(oldloc && !isturf(oldloc)) // We used to be registered to it, probably
 		var/atom/target = oldloc
 		while(ismovable(target))
-			UnregisterSignal(target, COMSIG_MOVABLE_MOVING)
+			UnregisterSignal(target, COMSIG_MOVABLE_MOVED)
 			target = target.loc
 	if(orbited?.loc && orbited.loc != newturf) // We want to know when anything holding us moves too
 		var/atom/target = orbited.loc
 		while(ismovable(target))
-			RegisterSignal(target, COMSIG_MOVABLE_MOVING, PROC_REF(move_react), TRUE)
+			RegisterSignal(target, COMSIG_MOVABLE_MOVED, PROC_REF(move_react), TRUE)
 			target = target.loc
 
 	var/atom/curloc = master.loc
@@ -129,7 +133,7 @@
 		var/atom/movable/thing = i
 		if(QDELETED(thing) || thing.loc == newturf)
 			continue
-		thing.forceMove(newturf)
+		thing.forceMove(newturf, movetime = MOVE_GLIDE_CALC(glide_size,0))
 		if(CHECK_TICK && master.loc != curloc)
 			// We moved again during the checktick, cancel current operation
 			break

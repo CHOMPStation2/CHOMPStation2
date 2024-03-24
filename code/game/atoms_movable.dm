@@ -86,28 +86,19 @@
 ////////////////////////////////////////
 /atom/movable/Move(atom/newloc, direct = 0, movetime)
 	// Didn't pass enough info
-	//CHOMPEdit Begin
-	// Store this early before we might move, it's used several places
-	var/atom/oldloc = loc
-
-	if(!direct)
-		direct = get_dir(oldloc, newloc)
-	var/actual_movetime = IS_CARDINAL(direct) ? movetime : movetime * SQRT_2
-	//CHOMPEdit End
-
 	if(!loc || !newloc)
 		return FALSE
 
-	if(SEND_SIGNAL(src, COMSIG_MOVABLE_PRE_MOVE, newloc, direct, actual_movetime) & COMPONENT_MOVABLE_BLOCK_PRE_MOVE) //CHOMPEdit
+	if(SEND_SIGNAL(src, COMSIG_MOVABLE_PRE_MOVE, newloc, direct, movetime) & COMPONENT_MOVABLE_BLOCK_PRE_MOVE)
 		return FALSE
 
-	//CHOMP Removal moved upwards
-
-	SEND_SIGNAL(src,COMSIG_MOVABLE_MOVING, oldloc, direct, newloc, actual_movetime) //CHOMPEdit
+	// Store this early before we might move, it's used several places
+	var/atom/oldloc = loc
 
 	// If we're not moving to the same spot (why? does that even happen?)
 	if(loc != newloc)
-		//CHOMPRemoval moved upwards
+		if(!direct)
+			direct = get_dir(oldloc, newloc)
 		if (IS_CARDINAL(direct)) //Cardinal move
 			// Track our failure if any in this value
 			. = TRUE
@@ -229,7 +220,7 @@
 
 	// If we moved, call Moved() on ourselves
 	if(.)
-		Moved(oldloc, direct, FALSE, movetime ? movetime : MOVE_GLIDE_CALC(glide_size, moving_diagonally) ) //CHOMPEDIT - proper diagonal movement
+		Moved(oldloc, direct, FALSE, movetime ? movetime : ( (TICKS2DS(WORLD_ICON_SIZE/glide_size)) * (moving_diagonally ? (ONE_OVER_SQRT_2) : 1) ) ) //CHOMPEDIT - proper diagonal movement
 
 	// Update timers/cooldown stuff
 	move_speed = world.time - l_move_time
