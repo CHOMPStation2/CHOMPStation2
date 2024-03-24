@@ -53,9 +53,6 @@ SUBSYSTEM_DEF(statpanels)
 		if(!target.stat_panel.is_ready())
 			continue
 
-		if(target.stat_tab == "Examine")
-			set_examine_tab(target)
-
 		if(target.stat_tab == "Status" && num_fires % status_wait == 0)
 			set_status_tab(target)
 
@@ -102,15 +99,6 @@ SUBSYSTEM_DEF(statpanels)
 			//Update every fire if tab is open, otherwise update every 7 fires
 			if((target.stat_tab in target.misc_tabs) || (num_fires % misc_wait == 0))
 				update_misc_tabs(target,target_mob)
-			// Handle the examined turf of the stat panel
-
-			if(target_mob?.listed_turf && num_fires % default_wait == 0)
-				if(!target_mob.TurfAdjacent(target_mob.listed_turf) || isnull(target_mob.listed_turf))
-					target.stat_panel.send_message("remove_listedturf")
-					target_mob.listed_turf = null
-
-				//else if(target.stat_tab == target_mob?.listed_turf.name || !(target_mob?.listed_turf.name in target.panel_tabs))
-					//set_turf_examine_tab(target, target_mob)
 
 		if(MC_TICK_CHECK)
 			return
@@ -296,9 +284,9 @@ SUBSYSTEM_DEF(statpanels)
 	if(!target.stat_panel.is_ready())
 		return FALSE
 
-	//if(target.stat_tab == "Examine")
-		//set_examine_tab(target)
-		//return TRUE
+	if(target.stat_tab == "Examine")
+		set_examine_tab(target)
+		return TRUE
 
 	if(target.stat_tab == "Status")
 		set_status_tab(target)
@@ -396,7 +384,7 @@ SUBSYSTEM_DEF(statpanels)
 		var/atom/thing = to_make[index]
 
 		var/generated_string
-		if(ismob(thing) || length(thing.overlays) > 2)
+		if(ismob(thing) || length(thing.overlays) > 0)
 			var/force_south = TRUE
 			if(isturf(thing)) force_south = FALSE
 			generated_string = costly_icon2html(thing, parent, sourceonly=TRUE, force_south = force_south)
