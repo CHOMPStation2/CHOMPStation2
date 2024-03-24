@@ -5,7 +5,7 @@
 
 /datum/trait/neutral/mobegglaying/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.verbs |= /mob/living/proc/mobegglaying
+	add_verb(H,/mob/living/proc/mobegglaying) //CHOMPEdit TGPanel
 
 /datum/trait/neutral/succubus_bite
 	name = "Succubus Bite"
@@ -14,7 +14,7 @@
 
 /datum/trait/neutral/succubus_bite/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.verbs |= /mob/living/proc/succubus_bite
+	add_verb(H,/mob/living/proc/succubus_bite) //CHOMPEdit TGPanel
 
 /datum/trait/neutral/nutritiongrow
 	name = "Growing"

@@ -71,9 +71,9 @@
 		return
 	if(LAZYLEN(vore_organs))
 		return TRUE
-	verbs |= /mob/living/proc/eat_trash
-	verbs |= /mob/living/proc/toggle_trash_catching
-	verbs |= /mob/living/proc/restrict_trasheater
+	add_verb(src,/mob/living/proc/eat_trash) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/toggle_trash_catching) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/restrict_trasheater) //CHOMPEdit TGPanel
 	var/obj/belly/B = new /obj/belly/(src)
 	B.affects_vore_sprites = TRUE
 	B.belly_sprite_to_affect = "stomach"

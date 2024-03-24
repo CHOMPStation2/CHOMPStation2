@@ -21,10 +21,11 @@ SUBSYSTEM_DEF(plants)
 	// Hydro trays and growing food normally just chill in SSobj
 	var/list/processing = list()
 	var/list/currentrun = list()
-
-/datum/controller/subsystem/plants/stat_entry()
-	..("P:[processing.len]|S:[seeds.len]")
-
+//CHOMPEdit Begin
+/datum/controller/subsystem/plants/stat_entry(msg)
+	msg = "P:[processing.len]|S:[seeds.len]"
+	return ..()
+//CHOMPEdit End
 /datum/controller/subsystem/plants/Initialize(timeofday)
 	setup()
 	return ..()
@@ -126,7 +127,7 @@ SUBSYSTEM_DEF(plants)
 
 	// Caching
 	var/list/currentrun = src.currentrun
-	
+
 	while(currentrun.len)
 		var/obj/effect/plant/P = currentrun[currentrun.len]
 		--currentrun.len

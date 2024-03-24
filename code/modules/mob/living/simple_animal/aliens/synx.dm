@@ -169,13 +169,13 @@
 /mob/living/simple_mob/animal/synx/New() //this is really cool. Should be able to ventcrawl canonicaly, contort, and make random speech.
 //some things should be here that arent tho.
 	..()
-	verbs |= /mob/living/proc/ventcrawl
-	verbs |= /mob/living/simple_mob/animal/synx/proc/distend_stomach //to do later: sprites of stomach outside the body.
-	verbs |= /mob/living/simple_mob/proc/contort
-	verbs |= /mob/living/simple_mob/animal/synx/proc/sonar_ping
-	verbs |= /mob/living/proc/shred_limb
-	verbs |= /mob/living/simple_mob/animal/synx/proc/disguise
-	verbs |= /mob/living/simple_mob/animal/synx/proc/randomspeech
+	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/animal/synx/proc/distend_stomach) //CHOMPEdit TGPanel //to do later: sprites of stomach outside the body.
+	add_verb(src,/mob/living/simple_mob/proc/contort) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/animal/synx/proc/sonar_ping) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/shred_limb) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/animal/synx/proc/disguise) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/animal/synx/proc/randomspeech) //CHOMPEdit TGPanel
 	realname = name
 	voices += "Garbled voice"
 	voices += "Unidentifiable Voice"
@@ -770,9 +770,9 @@
 	icon_state = input(usr, "What would you like to change icon_state to?", "Respriting", null)
 
 /mob/living/simple_mob/animal/synx/ai/pet/debug/New()
-	verbs |= /mob/living/simple_mob/animal/synx/ai/pet/debug/proc/rename
-	verbs |= /mob/living/simple_mob/animal/synx/ai/pet/debug/proc/resprite
-	verbs |= /mob/living/simple_mob/animal/synx/ai/pet/debug/proc/redesc
+	add_verb(src,/mob/living/simple_mob/animal/synx/ai/pet/debug/proc/rename) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/animal/synx/ai/pet/debug/proc/resprite) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/animal/synx/ai/pet/debug/proc/redesc) //CHOMPEdit TGPanel
 
 ////////////////////////////////////////
 ////////////////SYNX SPAWNER////////////

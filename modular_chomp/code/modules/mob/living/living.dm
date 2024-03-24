@@ -59,7 +59,7 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 
 /mob/living/New(var/newloc)
 	..()
-	verbs |= /mob/living/proc/click_self
+	add_verb(src,/mob/living/proc/click_self) //CHOMPEdit TGPanel
 */
 
 /mob/living/proc/handle_vorefootstep(m_intent, turf/T) // Moved from living_ch.dm
@@ -113,7 +113,7 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 		var/mob/living/new_mob
 		if(shapeshifting && src.tf_form)
 			new_mob = src.tf_form
-			new_mob.verbs |= /mob/living/proc/shapeshift_form
+			add_verb(new_mob,/mob/living/proc/shapeshift_form) //CHOMPEdit TGPanel
 			new_mob.tf_form = src
 			new_mob.forceMove(src.loc)
 			visible_message("<span class='warning'>[src] twists and contorts, shapeshifting into a different form!</span>")

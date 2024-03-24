@@ -9,7 +9,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 
 // Premade AI shell, for roundstart shells.
 /mob/living/silicon/robot/ai_shell/Initialize()
-	src.verbs |= /mob/living/silicon/robot/proc/transfer_shell_act //CHOMPEDIT: add sideloader
+	add_verb(src,/mob/living/silicon/robot/proc/transfer_shell_act) //CHOMPEdit TGPanel //CHOMPEDIT: add sideloader
 	mmi = new /obj/item/device/mmi/inert/ai_remote(src)
 	post_mmi_setup()
 	return ..()
@@ -24,7 +24,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 	return
 
 /mob/living/silicon/robot/proc/make_shell()
-	src.verbs |= /mob/living/silicon/robot/proc/transfer_shell_act //CHOMPEDIT: add sideloader
+	add_verb(src,/mob/living/silicon/robot/proc/transfer_shell_act) //CHOMPEdit TGPanel //CHOMPEDIT: add sideloader
 	shell = TRUE
 	braintype = "AI Shell"
 	SetName("[modtype] AI Shell [num2text(ident)]")
@@ -38,7 +38,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 
 //CHOMPADDITION: Ai shell sideloading
 /mob/living/silicon/robot/proc/transfer_shell_act()
-	set category = "Robot Commands"
+	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
 	set name = "Transfer to Shell"
 	transfer_shell()
 
@@ -122,7 +122,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 /mob/living/silicon/robot/proc/revert_shell()
 	if(!shell)
 		return
-	src.verbs -= /mob/living/silicon/robot/proc/transfer_shell_act //CHOMPEDIT: remove sideloader
+	remove_verb(src,/mob/living/silicon/robot/proc/transfer_shell_act ) //CHOMPEDIT: remove sideloader //CHOMPEdit
 	undeploy()
 	shell = FALSE
 	GLOB.available_ai_shells -= src
@@ -150,7 +150,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 	lawsync()
 
 	// Give button to leave.
-	verbs += /mob/living/silicon/robot/proc/undeploy_act
+	add_verb(src,/mob/living/silicon/robot/proc/undeploy_act) //CHOMPEdit TGPanel
 	to_chat(AI, span("notice", "You have connected to an AI Shell remotely, and are now in control of it.<br>\
 	To return to your core, use the <b>Release Control</b> verb."))
 
@@ -194,7 +194,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 /mob/living/silicon/robot/proc/undeploy_act()
 	set name = "Release Control"
 	set desc = "Release control of a remote drone."
-	set category = "Robot Commands"
+	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
 
 	undeploy("Remote session terminated.")
 

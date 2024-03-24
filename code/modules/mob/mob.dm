@@ -695,6 +695,7 @@
 	for(var/mob/M in viewers())
 		M.see(message)
 
+/* CHOMP Removal
 /mob/Stat()
 	..()
 	. = (is_client_active(10 MINUTES))
@@ -774,7 +775,18 @@
 						if(A.plane > plane)
 							continue
 						stat(A)
+*/
 
+/// Adds this list to the output to the stat browser
+/mob/proc/get_status_tab_items()
+	. = list()
+
+/// Gets all relevant proc holders for the browser statpenl
+/mob/proc/get_proc_holders()
+	. = list()
+	//if(mind)
+		//. += get_spells_for_statpanel(mind.spell_list)
+	//. += get_spells_for_statpanel(mob_spell_list)
 
 // facing verbs
 /mob/proc/canface()
@@ -1009,7 +1021,7 @@
 		visible_message("<span class='warning'><b>[usr] rips [selection] out of [src]'s body.</b></span>","<span class='warning'><b>[usr] rips [selection] out of your body.</b></span>")
 	valid_objects = get_visible_implants(0)
 	if(valid_objects.len == 1) //Yanking out last object - removing verb.
-		src.verbs -= /mob/proc/yank_out_object
+		remove_verb(src,/mob/proc/yank_out_object)  //CHOMPEdit
 		clear_alert("embeddedobject")
 
 	if(ishuman(src))

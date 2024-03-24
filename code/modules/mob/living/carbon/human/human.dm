@@ -68,42 +68,44 @@
 		QDEL_NULL(vessel)
 	return ..()
 
-/mob/living/carbon/human/Stat()
-	..()
-	if(statpanel("Status"))
-		stat("Intent:", "[a_intent]")
-		stat("Move Mode:", "[m_intent]")
-		if(emergency_shuttle)
-			var/eta_status = emergency_shuttle.get_status_panel_eta()
-			if(eta_status)
-				stat(null, eta_status)
+//CHOMPEdit Begin
+/mob/living/carbon/human/get_status_tab_items()
+	. = ..()
+	. += ""
+	. += "Intent: [a_intent]"
+	. += "Move Mode: [m_intent]"
+	if(emergency_shuttle)
+		var/eta_status = emergency_shuttle.get_status_panel_eta()
+		if(eta_status)
+			. += "[eta_status]"
 
-		if (internal)
-			if (!internal.air_contents)
-				qdel(internal)
-			else
-				stat("Internal Atmosphere Info", internal.name)
-				stat("Tank Pressure", internal.air_contents.return_pressure())
-				stat("Distribution Pressure", internal.distribute_pressure)
+	if (internal)
+		if (!internal.air_contents)
+			qdel(internal)
+		else
+			. += "Internal Atmosphere Info: [internal.name]"
+			. += "Tank Pressure: [internal.air_contents.return_pressure()]"
+			. += "Distribution Pressure: [internal.distribute_pressure]"
 
-		var/obj/item/organ/internal/xenos/plasmavessel/P = internal_organs_by_name[O_PLASMA] //Xenomorphs. Mech.
-		if(P)
-			stat(null, "Phoron Stored: [P.stored_plasma]/[P.max_plasma]")
+	var/obj/item/organ/internal/xenos/plasmavessel/P = internal_organs_by_name[O_PLASMA] //Xenomorphs. Mech.
+	if(P)
+		. += "Phoron Stored: [P.stored_plasma]/[P.max_plasma]"
 
 
-		if(back && istype(back,/obj/item/weapon/rig))
-			var/obj/item/weapon/rig/suit = back
-			var/cell_status = "ERROR"
-			if(suit.cell) cell_status = "[suit.cell.charge]/[suit.cell.maxcharge]"
-			stat(null, "Suit charge: [cell_status]")
+	if(back && istype(back,/obj/item/weapon/rig))
+		var/obj/item/weapon/rig/suit = back
+		var/cell_status = "ERROR"
+		if(suit.cell) cell_status = "[suit.cell.charge]/[suit.cell.maxcharge]"
+		. += "Suit charge: [cell_status]"
 
-		if(mind)
-			if(mind.changeling)
-				stat("Chemical Storage", mind.changeling.chem_charges)
-				stat("Genetic Damage Time", mind.changeling.geneticdamage)
-				stat("Re-Adaptations", "[mind.changeling.readapts]/[mind.changeling.max_readapts]")
+	if(mind)
+		if(mind.changeling)
+			. += "Chemical Storage: [mind.changeling.chem_charges]"
+			. += "Genetic Damage Time: [mind.changeling.geneticdamage]"
+			. += "Re-Adaptations: [mind.changeling.readapts]/[mind.changeling.max_readapts]"
 	if(species)
 		species.Stat(src)
+//CHOMPEdit End
 
 /mob/living/carbon/human/ex_act(severity)
 	if(!blinded)
@@ -833,7 +835,7 @@
 		return
 
 	if(!(mMorph in mutations))
-		src.verbs -= /mob/living/carbon/human/proc/morph
+		remove_verb(src,/mob/living/carbon/human/proc/morph)  //CHOMPEdit
 		return
 
 	var/new_facial = input(usr, "Please select facial hair color.", "Character Generation",rgb(r_facial,g_facial,b_facial)) as color
@@ -908,7 +910,7 @@
 		return
 
 	if(!(mRemotetalk in src.mutations))
-		src.verbs -= /mob/living/carbon/human/proc/remotesay
+		remove_verb(src,/mob/living/carbon/human/proc/remotesay)  //CHOMPEdit
 		return
 	var/list/creatures = list()
 	for(var/mob/living/carbon/h in mob_list)
@@ -939,7 +941,7 @@
 	if(!(mRemote in src.mutations))
 		remoteview_target = null
 		reset_view(0)
-		src.verbs -= /mob/living/carbon/human/proc/remoteobserve
+		remove_verb(src,/mob/living/carbon/human/proc/remoteobserve)  //CHOMPEdit
 		return
 
 	if(client.eye != client.mob)
@@ -1074,7 +1076,7 @@
 			blood_DNA[M.dna.unique_enzymes] = M.dna.b_type
 	hand_blood_color = blood_color
 	update_bloodied()
-	verbs += /mob/living/carbon/human/proc/bloody_doodle
+	add_verb(src,/mob/living/carbon/human/proc/bloody_doodle) //CHOMPEdit TGPanel
 	return 1 //we applied blood to the item
 
 /mob/living/carbon/human/proc/get_full_print()
@@ -1307,7 +1309,7 @@
 		return 0 //something is terribly wrong
 
 	if (!bloody_hands)
-		verbs -= /mob/living/carbon/human/proc/bloody_doodle
+		remove_verb(src,/mob/living/carbon/human/proc/bloody_doodle) //CHOMPEdit TGPanel
 
 	if (src.gloves)
 		to_chat(src, "<span class='warning'>Your [src.gloves] are getting in the way.</span>")
@@ -1671,7 +1673,7 @@
 /mob/living/carbon/human/examine_icon()
 	var/icon/I = get_cached_examine_icon(src)
 	if(!I)
-		I = getFlatIcon(src, defdir = SOUTH, no_anim = TRUE)
+		I = getFlatIcon(src, defdir = SOUTH, no_anim = TRUE, force_south = TRUE) //CHOMPEdit
 		set_cached_examine_icon(src, I, 50 SECONDS)
 	return I
 

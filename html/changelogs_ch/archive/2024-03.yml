@@ -207,3 +207,48 @@
       / maybes)
   Raeschen:
   - bugfix: fixed upsidedown cargo console
+2024-03-20:
+  Raeschen:
+  - refactor: Remove obj/machinery recursivemove placement + signal registration as
+      a default, instead an optional
+  cadyn:
+  - rscadd: movement smoothing
+  - config: 40fps time
+2024-03-22:
+  Kashargul:
+  - code_imp: converts some more bicons into icon2html
+  - rscdel: tgui_ch
+  TheCaramelion:
+  - rscadd: Use a vial on mucus to take virus samples
+  - balance: Stepping or interacting with mucus/blood/vomit might infect you, if it
+      has viruses
+  - qol: Autoinjectors can now be picked up with the chemistry bag
+  - bugfix: Runtime when Infected Room event triggered
+  - bugfix: Phased shadekins being able to be attacked
+  - bugfix: Bump should ignore phased shadekins now
+  - bugfix: Smoke won't make creatures without lungs cough
+  tacoguy7765093:
+  - balance: Non-CE blueprint charges buffed from 10 -> 25
+2024-03-23:
+  Missile597:
+  - bugfix: fixed stinky invalid direction argument on a wire causing tcomms to not
+      be connected to the power grid. I love dir :)
+  ReoDaProtovali:
+  - rscadd: Teppi speak Teppi again
+  TheCaramelion:
+  - bugfix: Phased kins won't stop people from moving
+2024-03-24:
+  ItsSelis:
+  - qol: Updated styling for admin ooc announcements (Special Verbs > Announce).
+  Kashargul:
+  - bugfix: fixes a wrong glass type given out on a quick selection on the RSF
+  - bugfix: adminjump
+  Raeschen:
+  - bugfix: Black tiles at CC
+  - rscdel: Revert combat refactor magazine sizes
+  - rscadd: '''turfpacks'' system for mappers'
+  ReoDaProtovali:
+  - bugfix: Fixed Micros getting stuck in disposal bins without making every other
+      object you try to put in disposal bins explode
+  TheCaramelion:
+  - bugfix: Borg pounce changed to stun

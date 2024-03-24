@@ -540,11 +540,11 @@ var/list/organ_cache = list()
 
 	if(!removed && organ_verbs && check_verb_compatability())
 		for(var/verb_path in organ_verbs)
-			owner.verbs |= verb_path
+			add_verb(owner,verb_path) //CHOMPEdit TGPanel
 	else if(organ_verbs)
 		for(var/verb_path in organ_verbs)
 			if(!(verb_path in save_verbs))
-				owner.verbs -= verb_path
+				remove_verb(owner,verb_path)  //CHOMPEdit
 	return
 
 /obj/item/organ/proc/handle_organ_proc_special()	// Called when processed.
