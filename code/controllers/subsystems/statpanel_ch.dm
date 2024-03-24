@@ -95,9 +95,8 @@ SUBSYSTEM_DEF(statpanels)
 
 			if(update_actions && num_fires % default_wait == 0)
 				set_action_tabs(target, target_mob)
-
 			//Update every fire if tab is open, otherwise update every 7 fires
-			if((target.stat_tab in target.misc_tabs) && (num_fires % misc_wait == 0))
+			if((num_fires % misc_wait == 0))
 				update_misc_tabs(target,target_mob)
 
 		if(MC_TICK_CHECK)
