@@ -621,6 +621,14 @@
 		spawn(30)
 			qdel(src)
 	else
+		var/mob/living/carbon/human/carbon_owner = owner
+		var/mob/living/simple_mob/shadekin/sm_owner = owner
+		if(istype(carbon_owner))
+			var/datum/species/shadekin/SK = carbon_owner.species
+			if(istype(SK))
+				SK.active_dark_maws += src
+		else if(istype(sm_owner))
+			sm_owner.active_dark_maws += src
 		flick("dark_maw", src)
 		START_PROCESSING(SSobj, src)
 
@@ -632,9 +640,9 @@
 		if(istype(carbon_owner))
 			var/datum/species/shadekin/SK = carbon_owner.species
 			if(istype(SK))
-				SK.active_dark_maws ^= src
+				SK.active_dark_maws -= src
 		else if(istype(sm_owner))
-			sm_owner.active_dark_maws ^= src
+			sm_owner.active_dark_maws -= src
 	return ..()
 
 /obj/effect/abstract/dark_maw/Crossed(O)
@@ -749,7 +757,7 @@
 			new /obj/effect/abstract/dark_maw(loc, src, 1)
 		else
 			new /obj/effect/abstract/dark_maw(loc, src)
-			shadekin_adjust_energy(-ability_cost)
+		shadekin_adjust_energy(-ability_cost)
 
 
 		return TRUE
