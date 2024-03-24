@@ -309,7 +309,7 @@ CHOMP Station removal end*/
 				img = icon2html(A,C,sourceonly=TRUE)
 				C.misc_cache[A.ability_name] = img
 
-		L[++L.len] = list("[A.ability_name]", A.ability_name, img, A.name, REF(A))
+		L[++L.len] = list("[A.ability_name]", A.ability_name, img, A.atom_button_text(), REF(A))
 	H.misc_tabs["Protean"] = L
 
 // Various modifiers
