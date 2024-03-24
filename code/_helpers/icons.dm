@@ -678,7 +678,7 @@ GLOBAL_LIST_EMPTY(cached_examine_icons)
 			icon_state = thing.icon_state
 			//Despite casting to atom, this code path supports mutable appearances, so let's be nice to them
 			//if(isnull(icon_state) || (isatom(thing) && thing.flags_1 & HTML_USE_INITAL_ICON_1))
-			if(isnull(icon_state) || isatom(thing))
+			if(isnull(icon_state) && isatom(thing))
 				icon_state = initial(thing.icon_state)
 				if (isnull(dir))
 					dir = initial(thing.dir)
