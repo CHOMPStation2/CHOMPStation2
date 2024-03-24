@@ -1,4 +1,0 @@
-author: "Kashargul"
-delete-after: True
-changes:
-  - bugfix: "fixes a wrong glass type given out on a quick selection on the RSF"

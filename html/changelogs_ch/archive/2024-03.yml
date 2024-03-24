@@ -237,3 +237,18 @@
   - rscadd: Teppi speak Teppi again
   TheCaramelion:
   - bugfix: Phased kins won't stop people from moving
+2024-03-24:
+  ItsSelis:
+  - qol: Updated styling for admin ooc announcements (Special Verbs > Announce).
+  Kashargul:
+  - bugfix: fixes a wrong glass type given out on a quick selection on the RSF
+  - bugfix: adminjump
+  Raeschen:
+  - bugfix: Black tiles at CC
+  - rscdel: Revert combat refactor magazine sizes
+  - rscadd: '''turfpacks'' system for mappers'
+  ReoDaProtovali:
+  - bugfix: Fixed Micros getting stuck in disposal bins without making every other
+      object you try to put in disposal bins explode
+  TheCaramelion:
+  - bugfix: Borg pounce changed to stun

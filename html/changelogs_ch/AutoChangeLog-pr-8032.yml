@@ -1,4 +1,0 @@
-author: "ReoDaProtovali"
-delete-after: True
-changes:
-  - bugfix: "Fixed Micros getting stuck in disposal bins without making every other object you try to put in disposal bins explode"
