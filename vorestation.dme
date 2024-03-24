@@ -4593,6 +4593,10 @@
 #include "interface\stylesheet.dm"
 #include "interface\skin.dmf"
 #include "maps\gateway_archive_vr\blackmarketpackers.dm"
+<<<<<<< HEAD
+=======
+#include "maps\stellar_delight\stellar_delight.dm"
+>>>>>>> a4cf107a06... Merge pull request #15871 from VOREStation/Map-Swap
 #include "maps\redgate\fantasy_items.dm"
 #include "maps\redgate\falls\atoll_decals.dm"
 #include "maps\redgate\falls\atoll_objs.dm"
