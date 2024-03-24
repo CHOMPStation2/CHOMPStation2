@@ -4285,12 +4285,8 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/corridor)
 "io" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 1
-	},
+/obj/machinery/atmospherics/pipe/simple/visible/cyan,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/auxiliary_storage)
 "ip" = (
@@ -6021,9 +6017,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 9
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 1
-	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/auxiliary_storage)
 "lp" = (
@@ -8643,9 +8637,7 @@
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/gym)
 "qf" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	dir = 1
-	},
+/obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/machinery/atmospherics/unary/heat_exchanger{
 	dir = 8
 	},
@@ -10768,9 +10760,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/surface/outpost/main/airlock/right_two)
 "tN" = (
-/obj/machinery/atmospherics/pipe/simple/visible/green{
-	dir = 1
-	},
+/obj/machinery/atmospherics/pipe/simple/visible/green,
 /obj/effect/overlay/snow/floor,
 /obj/effect/overlay/snow/floor/edges{
 	dir = 4
@@ -11055,9 +11045,7 @@
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "ul" = (
-/obj/machinery/atmospherics/pipe/simple/visible/green{
-	dir = 1
-	},
+/obj/machinery/atmospherics/pipe/simple/visible/green,
 /obj/effect/overlay/snow/floor,
 /turf/simulated/floor/plating/sif/planetuse,
 /area/surface/outside/plains/outpost)
@@ -11341,9 +11329,7 @@
 	id = "EngineReactor";
 	rad_resistance = 150
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	dir = 1
-	},
+/obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/reactor_smes)
 "uP" = (
@@ -11480,9 +11466,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 1
-	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/visible/black,
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
@@ -15799,9 +15783,7 @@
 /obj/structure/fence{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/green{
-	dir = 1
-	},
+/obj/machinery/atmospherics/pipe/simple/visible/green,
 /obj/effect/overlay/snow/floor,
 /obj/effect/overlay/snow/floor/edges{
 	dir = 4
@@ -16293,9 +16275,7 @@
 	},
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/atmospherics/pipe/simple/visible/green{
-	dir = 1
-	},
+/obj/machinery/atmospherics/pipe/simple/visible/green,
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/auxiliary_storage)
 "Ek" = (
@@ -16447,9 +16427,7 @@
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
 "ED" = (
-/obj/machinery/atmospherics/pipe/simple/visible/green{
-	dir = 1
-	},
+/obj/machinery/atmospherics/pipe/simple/visible/green,
 /obj/effect/overlay/snow/floor,
 /obj/effect/overlay/snow/floor/edges{
 	dir = 8
@@ -18068,7 +18046,7 @@
 /area/surface/outpost/main/airlock/left_one)
 "HF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/yellow{
 	d1 = 6;
@@ -21232,9 +21210,7 @@
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main/storage)
 "Nq" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	dir = 1
-	},
+/obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/structure/cable/yellow{
 	d1 = 4;
 	d2 = 8;
@@ -22330,23 +22306,10 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/black{
-	dir = 1
-	},
+/obj/machinery/atmospherics/pipe/simple/visible/black,
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/auxiliary_storage)
 "PA" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	dir = 4;
-	icon_state = "2-4"
-	},
 /obj/structure/cable/cyan{
 	d1 = 2;
 	d2 = 8;
@@ -22911,15 +22874,11 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/smes)
 "Qy" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	dir = 1
-	},
+/obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 1
-	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/auxiliary_storage)
 "Qz" = (
@@ -23791,7 +23750,7 @@
 /area/surface/outpost/main/airlock/landing_north)
 "RY" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/yellow{
 	d1 = 6;
@@ -24491,9 +24450,7 @@
 /obj/structure/fence{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/green{
-	dir = 1
-	},
+/obj/machinery/atmospherics/pipe/simple/visible/green,
 /obj/effect/overlay/snow/floor,
 /turf/simulated/floor/plating/sif/planetuse,
 /area/surface/outside/plains/outpost)
@@ -25495,9 +25452,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 9
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 1
-	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/auxiliary_storage)
 "Vz" = (

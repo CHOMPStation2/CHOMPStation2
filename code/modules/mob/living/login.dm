@@ -15,23 +15,23 @@
 	AddComponent(/datum/component/character_setup)
 
 	// Vore stuff
-	verbs |= /mob/living/proc/escapeOOC
-	verbs |= /mob/living/proc/lick
-	verbs |= /mob/living/proc/smell
-	verbs |= /mob/living/proc/switch_scaling
-	verbs |= /mob/living/proc/center_offset
-	verbs |= /mob/living/proc/mute_entry //CHOMPEdit
-	verbs |= /mob/living/proc/liquidbelly_visuals //CHOMPEdit
-	verbs |= /mob/living/proc/fix_vore_effects //CHOMPedit
+	add_verb(src,/mob/living/proc/escapeOOC) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/lick) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/smell) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/switch_scaling) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/center_offset) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/mute_entry) //CHOMPEdit TGPanel //CHOMPEdit
+	add_verb(src,/mob/living/proc/liquidbelly_visuals) //CHOMPEdit TGPanel //CHOMPEdit
+	add_verb(src,/mob/living/proc/fix_vore_effects) //CHOMPEdit TGPanel //CHOMPedit
 
 	if(!no_vore)
-		verbs |= /mob/living/proc/vorebelly_printout
+		add_verb(src,/mob/living/proc/vorebelly_printout) //CHOMPEdit TGPanel
 		if(!vorePanel)
 			AddComponent(/datum/component/vore_panel)
 
-	verbs += /mob/living/proc/vore_transfer_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
-	verbs += /mob/living/proc/vore_check_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
-	verbs += /mob/living/proc/vore_bellyrub //CHOMP If mob doesnt have bellies it probably won't be needing this anyway
+	add_verb(src,/mob/living/proc/vore_transfer_reagents) //CHOMPEdit TGPanel //CHOMP If mob doesnt have bellies it cant use this verb for anything
+	add_verb(src,/mob/living/proc/vore_check_reagents) //CHOMPEdit TGPanel //CHOMP If mob doesnt have bellies it cant use this verb for anything
+	add_verb(src,/mob/living/proc/vore_bellyrub) //CHOMPEdit TGPanel //CHOMP If mob doesnt have bellies it probably won't be needing this anyway
 
 	//VOREStation Add Start
 	if(!voice_sounds_list.len || !voice_sounds_list)

@@ -2,8 +2,9 @@
 	set category = "Admin"
 	set name = "Check Player Attack Logs"
 	set desc = "Check a player's attack logs."
-
+	show_cmd_admin_check_player_logs(M) //CHOMPEdit
 //Views specific attack logs belonging to one player.
+/client/proc/show_cmd_admin_check_player_logs(mob/living/M) //CHOMPEdit
 	var/dat = "<B>[M]'s Attack Log:<HR></B>"
 	dat += "<b>Viewing attack logs of [M]</b> - (Played by ([key_name(M)]).<br>"
 	if(M.mind)
@@ -41,7 +42,9 @@
 	set category = "Admin"
 	set name = "Check Player Dialogue Logs"
 	set desc = "Check a player's dialogue logs."
+	show_cmd_admin_check_dialogue_logs(M) //CHOMPEdit
 
+/client/proc/show_cmd_admin_check_dialogue_logs(mob/living/M) //CHOMPEdit
 //Views specific dialogue logs belonging to one player.
 	var/dat = "<B>[M]'s Dialogue Log:<HR></B>"
 	dat += "<b>Viewing say and emote logs of [M]</b> - (Played by ([key_name(M)]).<br>"

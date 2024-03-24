@@ -50,7 +50,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 	var/mob/host // Note, we do this in case we ever want to allow people to view others vore panels
 	var/unsaved_changes = FALSE
 	var/show_pictures = TRUE
-	var/icon_overflow = FALSE
+	var/icon_overflow = FALSE //CHOMPEdit
 	var/max_icon_content = 21 //CHOMPedit: Contents above this disable icon mode. 21 for nice 3 rows to fill the default panel window.
 
 /datum/vore_look/New(mob/new_host)
@@ -113,7 +113,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 	data["unsaved_changes"] = unsaved_changes
 	data["show_pictures"] = show_pictures
-	data["overflow"] = icon_overflow
+	data["icon_overflow"] = icon_overflow //CHOMPEdit
 
 	var/atom/hostloc = host.loc
 	//CHOMPAdd Start - Allow VorePanel to show pred belly details even while indirectly inside

@@ -146,7 +146,7 @@
 
 /datum/ai_holder/simple_mob/armadillo/torta/on_hear_say(mob/living/speaker, message)
 	. = ..()
-	addtimer(CALLBACK(src, .proc/grande, message), 1 SECOND)
+	addtimer(CALLBACK(src, PROC_REF(grande), message), 1 SECOND)
 
 /datum/ai_holder/simple_mob/armadillo/torta/proc/grande(var/message)
 	var/mob/living/simple_mob/animal/passive/armadillo/bol = holder

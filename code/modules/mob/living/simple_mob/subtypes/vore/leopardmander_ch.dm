@@ -71,8 +71,8 @@
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	verbs |= /mob/living/simple_mob/proc/animal_mount
-	verbs |= /mob/living/proc/toggle_rider_reins
+	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
 	movement_cooldown = 2
 	plane_holder.set_vis(VIS_CH_HEALTH_VR, 1)
 	plane_holder.set_vis(VIS_CH_ID, 1)
@@ -154,7 +154,7 @@
 
 /mob/living/simple_mob/vore/leopardmander/exotic/New()
 	..()
-	verbs |= /mob/living/simple_mob/vore/leopardmander/exotic/proc/toggle_glow
+	add_verb(src,/mob/living/simple_mob/vore/leopardmander/exotic/proc/toggle_glow) //CHOMPEdit TGPanel
 
 /mob/living/simple_mob/vore/leopardmander/exotic/init_vore()
 	if(!voremob_loaded)

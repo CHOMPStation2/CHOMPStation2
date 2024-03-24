@@ -86,7 +86,7 @@
 		return
 	else
 		log_debug("infectedroom event: [target_area] was chosen. Infecting...")
-		log_admin("Infected room event started; Virus: [english_list(virus.name())]")
+		log_admin("Infected room event started; Virus: [virus.name()]")
 		message_admins("Infected room event started; Virus: <a href='?src=\ref[virus];[HrefToken()];info=1'>[virus.name()]</a>")
 
 /datum/event/infectedroom/announce()

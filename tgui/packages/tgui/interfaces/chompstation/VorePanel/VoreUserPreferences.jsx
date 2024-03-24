@@ -57,7 +57,7 @@ export const VoreUserPreferences = (props) => {
     selective_active,
   } = data.prefs;
 
-  const { show_pictures, overflow } = data;
+  const { show_pictures, icon_overflow } = data;
 
   const preferences = {
     digestion: {
@@ -591,11 +591,11 @@ export const VoreUserPreferences = (props) => {
               (show_pictures
                 ? 'Contents shown as pictures.'
                 : 'Contents shown as lists.') +
-              (show_pictures && overflow
+              (show_pictures && icon_overflow
                 ? 'Temporarily disabled. Stomach contents above limits.'
                 : '')
             }
-            backgroundColor={show_pictures && overflow ? 'orange' : ''}
+            backgroundColor={show_pictures && icon_overflow ? 'orange' : ''}
             onClick={() => act('show_pictures')}
           >
             Contents Preference: {show_pictures ? 'Show Pictures' : 'Show List'}

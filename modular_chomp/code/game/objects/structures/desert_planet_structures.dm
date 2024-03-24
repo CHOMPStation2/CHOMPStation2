@@ -94,11 +94,13 @@
 	name = "palm"
 	desc = "Stout and bushy."
 	icon_state = "palmuria"
+	density = 0 //theyre smol
 
 /obj/structure/prop/desert_planet64x64/palmuria1
 	name = "palm"
 	desc = "Stout and bushy."
 	icon_state = "palmuria1"
+	density = 0 //theyre smol
 
 /obj/structure/prop/desert_planet160x160
 	name = "desert large boulder"

@@ -21,8 +21,11 @@ SUBSYSTEM_DEF(reflector)
 		if(CHECK_BITFIELD(D.datum_flags, DF_ISPROCESSING))
 			processing |= D
 
-/datum/controller/subsystem/reflector/stat_entry()
-	..("[stat_tag]:[processing.len]")
+//CHOMPEdit Begin
+/datum/controller/subsystem/reflector/stat_entry(msg)
+	msg = "[stat_tag]:[processing.len]"
+	return ..()
+// CHOMPEdit End
 
 /datum/controller/subsystem/reflector/fire(resumed = 0)
 	if (!resumed)

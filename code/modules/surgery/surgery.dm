@@ -211,6 +211,7 @@
 		if(!do_mob(user, M, calc_duration * toolspeed, zone, exclusive = TRUE))
 			success = FALSE
 			to_chat(user, "<span class='warning'>You must remain close to and keep focused on your patient to conduct surgery.</span>")
+			user.balloon_alert("You must remain close to and keep focused on your patent to conduct surgery") // CHOMPEdit
 
 	if(success)
 		selected_surgery.end_step(user, M, zone, src)

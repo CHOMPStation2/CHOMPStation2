@@ -35,8 +35,8 @@
 	var/tail_animation										// If set, the icon to obtain tail animation states from.
 	var/tail_hair
 
-	var/icon_scale_x = 1										// Makes the icon wider/thinner.
-	var/icon_scale_y = 1										// Makes the icon taller/shorter.
+	var/icon_scale_x = DEFAULT_ICON_SCALE_X										// Makes the icon wider/thinner.
+	var/icon_scale_y = DEFAULT_ICON_SCALE_Y										// Makes the icon taller/shorter.
 
 	var/race_key = 0										// Used for mob icon cache string.
 	var/icon/icon_template									// Used for mob icon generation for non-32x32 species.
@@ -486,13 +486,13 @@
 /datum/species/proc/remove_inherent_verbs(var/mob/living/carbon/human/H)
 	if(inherent_verbs)
 		for(var/verb_path in inherent_verbs)
-			H.verbs -= verb_path
+			remove_verb(H,verb_path)  //CHOMPEdit
 	return
 
 /datum/species/proc/add_inherent_verbs(var/mob/living/carbon/human/H)
 	if(inherent_verbs)
 		for(var/verb_path in inherent_verbs)
-			H.verbs |= verb_path
+			add_verb(H,verb_path) //CHOMPEdit TGPanel
 	return
 
 /datum/species/proc/handle_post_spawn(var/mob/living/carbon/human/H) //Handles anything not already covered by basic species assignment.

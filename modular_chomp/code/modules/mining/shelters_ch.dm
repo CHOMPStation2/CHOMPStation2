@@ -8,18 +8,21 @@
 	description = "ERROR: string 'description' cannot be null!"
 	mappath = null
 
+/* Does not spawn properly
 /datum/map_template/shelter/superpose/CrashedInfestedShip
 	shelter_id = "CrashedInfestedShip"
-	mappath = "modular_chomp/maps/submaps/shelters/CrashedInfestedShip-60x29.dmm"
+	mappath = "modular_chomp/maps/submaps/shelters/CrashedInfestedShip-56x25.dmm"
 	name = "Crashed infested ship."
 	description = "A large alien ship that is heavily damaged, there is signs of xeno infestation."
+*/
 
+/* Does not spawn properly
 /datum/map_template/shelter/superpose/CrashedQurantineShip
 	shelter_id = "CrashedQurantineShip"
 	mappath = "modular_chomp/maps/submaps/shelters/CrashedQurantineShip-25x25.dmm"
 	name = "Crashed Qurantine Ship."
 	description = "A white medical ship that is heavily damaged, there is signs of a viral outbreak."
-
+*/
 /datum/map_template/shelter/superpose/CultShip
 	shelter_id = "CultShip"
 	mappath = "modular_chomp/maps/submaps/shelters/CultShip-28x17.dmm"
@@ -68,11 +71,13 @@
 	name = "Hydroponics cave."
 	description = "A burried hydroponics facility with various living quarters needs and equipment."
 
+/* Does not spawn properly/Too OP for outsider use
 /datum/map_template/shelter/superpose/LargeAlienShip
 	shelter_id = "LargeAlienShip"
 	mappath = "modular_chomp/maps/submaps/shelters/LargeAlienShip-57x25.dmm"
 	name = "Large alien ship."
 	description = "A large alien ship filled with various alien machines and items."
+*/
 
 /datum/map_template/shelter/superpose/LoneHome
 	shelter_id = "LoneHome"
@@ -92,11 +97,13 @@
 	name = "Mech storage facility."
 	description = "An old abandoned mech fabrication facility, most of the facility seems functional."
 
+/* Does not spawn properly/too OP for outsider use
 /datum/map_template/shelter/superpose/MercShip
 	shelter_id = "MercShip"
-	mappath = "modular_chomp/maps/submaps/shelters/MercShip-60x29.dmm"
+	mappath = "modular_chomp/maps/submaps/shelters/MercShip-57x25.dmm"
 	name = "Mercenary ship."
 	description = "A old mercenery ship filled with various trading goods."
+*/
 
 /datum/map_template/shelter/superpose/MethLab
 	shelter_id = "MethLab"

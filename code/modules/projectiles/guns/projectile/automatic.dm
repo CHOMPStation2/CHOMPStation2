@@ -254,7 +254,7 @@
 /obj/item/weapon/gun/projectile/automatic/z8/update_icon(var/ignore_inhands)
 	..()
 	if(ammo_magazine)
-		icon_state = "carbine-[round(ammo_magazine.stored_ammo.len, 5)]" //CHOMPedit
+		icon_state = "carbine-[round(ammo_magazine.stored_ammo.len,2)]"
 	else
 		icon_state = "carbine"
 	if(!ignore_inhands) update_held_icon()
@@ -279,7 +279,7 @@
 	description_fluff = "The leading arms producer in the SCG, Hephaestus typically only uses its 'top level' branding for its military-grade equipment used by professional armed forces across human space."
 	icon = 'icons/obj/64x32guns_ch.dmi' //Chomp EDIT
 	icon_expected_width = 64 //Chomp EDIT
-	icon_state = "l6closed150" //chompEDIT
+	icon_state = "l6closed100"
 	item_state = "l6closed"
 	wielded_item_state = "genericLMG-wielded"
 	w_class = ITEMSIZE_HUGE //CHOMP Edit.
@@ -333,7 +333,7 @@
 		icon_state = "l6[cover_open ? "open" : "closed"]mag"
 		item_state = icon_state
 	else
-		icon_state = "l6[cover_open ? "open" : "closed"][ammo_magazine ? round(ammo_magazine.stored_ammo.len, 50) : "-empty"]" //CHOMPedit
+		icon_state = "l6[cover_open ? "open" : "closed"][ammo_magazine ? round(ammo_magazine.stored_ammo.len, 25) : "-empty"]"
 		item_state = "l6[cover_open ? "open" : "closed"][ammo_magazine ? "" : "-empty"]"
 	update_held_icon()
 

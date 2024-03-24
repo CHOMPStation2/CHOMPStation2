@@ -117,14 +117,14 @@
 	deletepicture()
 
 /obj/item/device/camera/siliconcam/robot_camera/verb/take_image()
-	set category ="Robot Commands"
+	set category ="Abilities.Silicon" //ChompEDIT - TGPanel
 	set name = "Take Image"
 	set desc = "Takes an image"
 	set src in usr
 	toggle_camera_mode()
 
 /obj/item/device/camera/siliconcam/robot_camera/verb/view_images()
-	set category ="Robot Commands"
+	set category ="Abilities.Silicon" //ChompEDIT - TGPanel
 	set name = "View Images"
 	set desc = "View images"
 	set src in usr
@@ -132,7 +132,7 @@
 	viewpictures()
 
 /obj/item/device/camera/siliconcam/robot_camera/verb/delete_images()
-	set category = "Robot Commands"
+	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
 	set name = "Delete Image"
 	set desc = "Delete a local image"
 	set src in usr

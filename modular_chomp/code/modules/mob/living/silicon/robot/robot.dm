@@ -1,7 +1,6 @@
 /mob/living/silicon/robot
 	var/sleeper_resting = FALSE //Enable resting belly sprites for dogborgs that have the sprites
 	var/datum/matter_synth/water_res = null //Enable water for lick clean
-	var/has_recoloured = FALSE
 	//Multibelly support. We do not want to apply it to any module not supporting it in it's sprites
 	var/list/vore_light_states = list() //Robot exclusive
 	vore_capacity_ex = list()
@@ -54,19 +53,7 @@
 
 /mob/living/silicon/robot/module_reset()
 	..()
-	has_recoloured = FALSE
 	// We only use the chomp system when the sprite supports it. Else we go through the fallback
 	vore_capacity_ex = list()
 	vore_fullness_ex = list()
 	vore_light_states = list()
-
-/mob/living/silicon/robot/verb/ColorMate()
-	set name = "Recolour Module"
-	set category = "Robot Commands"
-	set desc = "Allows to recolour once."
-
-	if(!has_recoloured)
-		var/datum/ColorMate/recolour = new /datum/ColorMate(usr)
-		recolour.tgui_interact(usr)
-		return
-	to_chat(usr, "You've already recoloured yourself once. Ask for a module reset for another.")

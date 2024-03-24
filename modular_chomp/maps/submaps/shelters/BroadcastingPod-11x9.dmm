@@ -4,6 +4,11 @@
 /area/survivalpod/superpose/BroadcastingPod)
 "c" = (
 /obj/machinery/light,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/BroadcastingPod)
 "e" = (
@@ -31,6 +36,14 @@
 /obj/item/weapon/folder,
 /turf/simulated/floor/atoll,
 /area/survivalpod/superpose/BroadcastingPod)
+"j" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/BroadcastingPod)
 "k" = (
 /obj/machinery/door/airlock/freezer,
 /turf/simulated/shuttle/plating/skipjack,
@@ -43,6 +56,17 @@
 /area/survivalpod/superpose/BroadcastingPod)
 "m" = (
 /obj/structure/fans,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/BroadcastingPod)
+"n" = (
+/obj/machinery/power/port_gen/pacman,
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/item/stack/material/phoron{
+	amount = 25
+	},
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/BroadcastingPod)
 "o" = (
@@ -157,6 +181,14 @@
 /obj/random/soap,
 /obj/item/weapon/material/knife/machete/hatchet,
 /obj/item/weapon/storage/box/flare,
+/obj/item/weapon/circuitboard/batteryrack,
+/obj/item/weapon/cell/high,
+/obj/item/weapon/cell/high,
+/obj/item/weapon/cell/high,
+/obj/item/weapon/stock_parts/capacitor,
+/obj/item/weapon/stock_parts/capacitor,
+/obj/item/weapon/stock_parts/capacitor,
+/obj/item/weapon/stock_parts/matter_bin,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/BroadcastingPod)
 "A" = (
@@ -198,6 +230,11 @@
 "F" = (
 /obj/structure/table/glass,
 /obj/item/device/camerabug,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/BroadcastingPod)
 "G" = (
@@ -214,6 +251,11 @@
 /obj/item/device/tape/random,
 /obj/item/device/tape/random{
 	pixel_y = -4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/BroadcastingPod)
@@ -318,6 +360,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/structure/closet/crate/solar,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/BroadcastingPod)
 "P" = (
@@ -351,6 +394,10 @@
 /obj/item/device/tvcamera{
 	pixel_y = 5;
 	pixel_x = -5
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
 	},
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/BroadcastingPod)
@@ -396,7 +443,7 @@ O
 x
 Q
 o
-o
+n
 a
 "}
 (3,1,1) = {"
@@ -407,7 +454,7 @@ l
 l
 l
 o
-o
+j
 k
 "}
 (4,1,1) = {"
@@ -429,7 +476,7 @@ v
 v
 a
 Y
-o
+j
 M
 "}
 (6,1,1) = {"
