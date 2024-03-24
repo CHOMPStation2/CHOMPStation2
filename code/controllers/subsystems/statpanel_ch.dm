@@ -14,7 +14,7 @@ SUBSYSTEM_DEF(statpanels)
 	///how many subsystem fires between most tab updates
 	var/default_wait = 10
 	///how many subsystem fires between updates of misc tabs
-	var/misc_wait = 7
+	var/misc_wait = 3
 	///how many subsystem fires between updates of the status tab
 	var/status_wait = 2
 	///how many subsystem fires between updates of the MC tab
@@ -97,7 +97,7 @@ SUBSYSTEM_DEF(statpanels)
 				set_action_tabs(target, target_mob)
 
 			//Update every fire if tab is open, otherwise update every 7 fires
-			if((target.stat_tab in target.misc_tabs) || (num_fires % misc_wait == 0))
+			if((target.stat_tab in target.misc_tabs) && (num_fires % misc_wait == 0))
 				update_misc_tabs(target,target_mob)
 
 		if(MC_TICK_CHECK)
