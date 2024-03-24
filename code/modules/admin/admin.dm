@@ -1399,7 +1399,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 	log_admin("[key_name(usr)] stuffed [frommob.ckey] into [tomob.name].")
 	feedback_add_details("admin_verb","CGD")
 	tomob.ckey = frommob.ckey
-	qdel(frommob)
+	//qdel(frommob)
 	return 1
 
 /datum/admins/proc/force_antag_latespawn()
