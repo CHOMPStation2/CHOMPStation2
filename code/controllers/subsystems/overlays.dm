@@ -31,11 +31,11 @@ SUBSYSTEM_DEF(overlays)
 /datum/controller/subsystem/overlays/Initialize(timeofday)
 	fire(FALSE, TRUE)
 	..()
-
-/datum/controller/subsystem/overlays/stat_entry()
-	..("Queued Atoms: [queue.len], Cache Size: [cache_size]")
-
-
+//CHOMPEdit Begin
+/datum/controller/subsystem/overlays/stat_entry(msg)
+	msg = "Queued Atoms: [queue.len], Cache Size: [cache_size]"
+	return ..()
+//CHOMPEdit End
 /datum/controller/subsystem/overlays/fire(resumed, no_mc_tick)
 	var/count = 1
 	for (var/atom/atom as anything in queue)

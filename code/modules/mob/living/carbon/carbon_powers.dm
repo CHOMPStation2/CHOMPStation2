@@ -12,9 +12,9 @@
 
 		B.detatch()
 
-		verbs -= /mob/living/carbon/proc/release_control
-		verbs -= /mob/living/carbon/proc/punish_host
-		verbs -= /mob/living/carbon/proc/spawn_larvae
+		remove_verb(src,/mob/living/carbon/proc/release_control) //CHOMPEdit TGPanel
+		remove_verb(src,/mob/living/carbon/proc/punish_host) //CHOMPEdit TGPanel
+		remove_verb(src,/mob/living/carbon/proc/spawn_larvae) //CHOMPEdit TGPanel
 
 	else
 		to_chat(src, "<span class='danger'>ERROR NO BORER OR BRAINMOB DETECTED IN THIS MOB, THIS IS A BUG !</span>")

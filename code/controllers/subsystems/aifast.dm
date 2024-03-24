@@ -9,10 +9,11 @@ SUBSYSTEM_DEF(aifast)
 	var/list/processing = list()
 	var/list/currentrun = list()
 
-/datum/controller/subsystem/aifast/stat_entry(msg_prefix)
-	var/list/msg = list(msg_prefix)
-	msg += "P:[processing.len]"
-	..(msg.Join())
+//CHOMPEdit Begin
+/datum/controller/subsystem/aifast/stat_entry(msg)
+	msg = "P:[processing.len]"
+	return ..()
+// CHOMPEdit End
 
 /datum/controller/subsystem/aifast/fire(resumed = 0)
 	if (!resumed)

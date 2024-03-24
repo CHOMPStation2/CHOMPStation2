@@ -63,8 +63,8 @@
 		humanform = H
 		updatehealth()
 		refactory = locate() in humanform.internal_organs
-		verbs |= /mob/living/proc/ventcrawl
-		verbs |= /mob/living/proc/hide
+		add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+		add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
 	else
 		update_icon()
 
@@ -99,10 +99,12 @@
 /mob/living/simple_mob/protean_blob/isSynthetic()
 	return TRUE // yup
 
-/mob/living/simple_mob/protean_blob/Stat()
-	..()
+//ChompEDIT START - TGPanel
+/mob/living/simple_mob/protean_blob/get_status_tab_items()
+	. = ..()
 	if(humanform)
-		humanform.species.Stat(humanform)
+		humanform.species.update_misc_tabs(humanform)
+//ChompEDIT END
 
 /mob/living/simple_mob/protean_blob/update_icon()
 	if(humanform)

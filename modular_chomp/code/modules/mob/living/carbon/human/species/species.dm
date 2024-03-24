@@ -56,3 +56,6 @@
 			vore_belly_default_variant = "T"
 		if("Unathi")
 			vore_belly_default_variant = "L"
+
+/datum/species/proc/update_misc_tabs(var/mob/living/carbon/human/H)
+	return

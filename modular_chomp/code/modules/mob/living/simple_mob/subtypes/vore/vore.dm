@@ -4,7 +4,7 @@
 
 /mob/living/simple_mob/Login()
 	. = ..()
-	verbs |= /mob/living/simple_mob/proc/pick_size
+	add_verb(src,/mob/living/simple_mob/proc/pick_size) //CHOMPEdit TGPanel
 
 /mob/living/simple_mob/proc/pick_size()
 	set name = "Pick Size"

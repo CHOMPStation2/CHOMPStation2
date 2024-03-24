@@ -237,13 +237,13 @@ I think I covered everything.
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	verbs |= /mob/living/simple_mob/proc/animal_mount
-	verbs |= /mob/living/proc/toggle_rider_reins
-	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_style
-	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/toggle_glow
-	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/sprite_toggle
-	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/flame_toggle
-	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/special_toggle
+	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/set_style) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/toggle_glow) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/sprite_toggle) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/flame_toggle) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/special_toggle) //CHOMPEdit TGPanel
 	//verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_name //Implemented upstream
 	//verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_desc //Implemented upstream
 	faction = "neutral"

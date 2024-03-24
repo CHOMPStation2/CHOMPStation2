@@ -77,7 +77,7 @@
 
 	var/turns_since_scan = 0
 	var/mob/flee_target
-	
+
 	can_be_drop_prey = FALSE //CHOMP Add
 
 /mob/living/simple_mob/clockwork/handle_special()
@@ -174,8 +174,8 @@
 /mob/living/simple_mob/animal/passive/mouse/mining/New()
 	..()
 
-	verbs += /mob/living/proc/ventcrawl
-	verbs += /mob/living/proc/hide
+	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
 	icon_state = "mouse_miner"
 	item_state = "mouse_miner"
 	icon_living = "mouse_miner"
