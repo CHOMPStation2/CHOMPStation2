@@ -384,8 +384,9 @@ SUBSYSTEM_DEF(statpanels)
 
 		var/generated_string
 		if(ismob(thing) || length(thing.overlays) > 0)
-			var/force_south = TRUE
-			if(isturf(thing)) force_south = FALSE
+			var/force_south = FALSE
+			if(isliving(thing))
+				force_south = TRUE
 			generated_string = costly_icon2html(thing, parent, sourceonly=TRUE, force_south = force_south)
 		else
 			generated_string = icon2html(thing, parent, sourceonly=TRUE)

@@ -131,8 +131,6 @@
 
 	if(!appearance || appearance.alpha <= 0)
 		return icon(flat_template)
-
-	if(force_south) defdir = SOUTH
 	if(start)
 		if(!defdir)
 			defdir = appearance.dir
@@ -146,6 +144,9 @@
 	var/curicon = appearance.icon || deficon
 	var/curstate = appearance.icon_state || defstate
 	var/curdir = (!appearance.dir || appearance.dir == SOUTH) ? defdir : appearance.dir
+
+	if(force_south)
+		curdir = SOUTH
 
 	var/render_icon = curicon
 
@@ -632,7 +633,7 @@ GLOBAL_LIST_EMPTY(cached_examine_icons)
  * * sourceonly - if TRUE, only generate the asset and send back the asset url, instead of tags that display the icon to players
  * * extra_clases - string of extra css classes to use when returning the icon string
  */
-/proc/icon2html(atom/thing, client/target, icon_state, dir = SOUTH, frame = 0, moving = FALSE, sourceonly = FALSE, extra_classes = null) //CHOMPEdit
+/proc/icon2html(atom/thing, client/target, icon_state, dir = SOUTH, frame = 1, moving = FALSE, sourceonly = FALSE, extra_classes = null) //CHOMPEdit
 	if (!thing)
 		return
 	//if(SSlag_switch.measures[DISABLE_USR_ICON2HTML] && usr && !HAS_TRAIT(usr, TRAIT_BYPASS_MEASURES))
@@ -755,5 +756,5 @@ GLOBAL_LIST_EMPTY(cached_examine_icons)
 	if (isicon(thing))
 		return icon2html(thing, target)
 
-	var/icon/I = getFlatIcon(thing, no_anim = TRUE, force_south = force_south)
+	var/icon/I = getFlatIcon(thing, force_south = force_south)
 	return icon2html(I, target, sourceonly = sourceonly)
