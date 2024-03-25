@@ -1,4 +1,0 @@
-author: "Raeschen"
-delete-after: True
-changes:
-  - rscadd: "Ghost-follow glides with the target"

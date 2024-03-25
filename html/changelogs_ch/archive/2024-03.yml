@@ -252,3 +252,12 @@
       object you try to put in disposal bins explode
   TheCaramelion:
   - bugfix: Borg pounce changed to stun
+2024-03-25:
+  Kashargul:
+  - code_imp: reduces logging
+  - bugfix: dark_maws now dispel properly and have their references cleared
+  - bugfix: dark_maw can no longer be used without costing energy
+  Raeschen:
+  - rscadd: Ghost-follow glides with the target
+  cadyn:
+  - rscadd: TGPanel (cred Selis for port)
