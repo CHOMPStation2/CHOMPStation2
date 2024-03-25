@@ -143,8 +143,12 @@
 	user.drop_item()
 	if(I)
 		if(istype(I, /obj/item/weapon/holder/micro))
-			log_and_message_admins("placed [I.name]  inside \the [src]", user)
-		I.forceMove(src)
+			log_and_message_admins("placed [I.name] inside \the [src]", user)
+			var/obj/item/weapon/holder/H = I
+			H.held_mob.forceMove(src)
+			qdel(I)
+		else
+			I.forceMove(src)
 
 	to_chat(user, "You place \the [I] into the [src].")
 	for(var/mob/M in viewers(src))

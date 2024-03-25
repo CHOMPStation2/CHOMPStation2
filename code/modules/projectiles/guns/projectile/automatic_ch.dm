@@ -46,7 +46,7 @@
 		)
 
 /obj/item/weapon/gun/projectile/automatic/p90/update_icon() // Code for visually updating the item depending on current magazine capacity.
-	icon_state = "p90smgnew-[ammo_magazine ? round(ammo_magazine.stored_ammo.len, 25) : "empty"]" //Theres sprites that wont be used because of magazine refactor
+	icon_state = "p90smgnew-[ammo_magazine ? round(ammo_magazine.stored_ammo.len, 6) : "empty"]"
 
 // C-20R
 
@@ -86,7 +86,7 @@
 		)
 
 /obj/item/weapon/gun/projectile/automatic/c20r/update_icon()
-	icon_state = "c20r-[ammo_magazine ? round(ammo_magazine.stored_ammo.len, 10) : "empty"]"
+	icon_state = "c20r-[ammo_magazine ? round(ammo_magazine.stored_ammo.len,4) : "empty"]"
 
 /obj/item/weapon/gun/projectile/automatic/c20r/rubber
 	magazine_type = /obj/item/ammo_magazine/m10mm/rubber

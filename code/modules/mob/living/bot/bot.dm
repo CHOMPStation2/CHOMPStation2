@@ -585,7 +585,7 @@
 /mob/living/bot/Login()
 	no_vore = FALSE // ROBOT VORE
 	init_vore() // ROBOT VORE
-	verbs |= /mob/proc/insidePanel
+	add_verb(src,/mob/proc/insidePanel) //CHOMPEdit TGPanel
 
 	return ..()
 
@@ -593,7 +593,7 @@
 	no_vore = TRUE // ROBOT VORE
 	release_vore_contents()
 	init_vore() // ROBOT VORE
-	verbs -= /mob/proc/insidePanel
+	remove_verb(src,/mob/proc/insidePanel) //CHOMPEdit TGPanel
 	no_vore = TRUE
 	devourable = FALSE
 	feeding = FALSE

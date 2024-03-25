@@ -460,6 +460,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/machinery/chemical_dispenser/full,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/MethLab)
 "GP" = (
@@ -846,6 +847,14 @@
 /obj/structure/table/rack/shelf/steel,
 /obj/item/weapon/extinguisher,
 /obj/item/weapon/storage/box/lights/mixed,
+/obj/item/weapon/circuitboard/batteryrack,
+/obj/item/weapon/stock_parts/capacitor,
+/obj/item/weapon/stock_parts/capacitor,
+/obj/item/weapon/stock_parts/capacitor,
+/obj/item/weapon/stock_parts/matter_bin,
+/obj/item/weapon/cell/high,
+/obj/item/weapon/cell/high,
+/obj/item/weapon/cell/high,
 /turf/simulated/floor,
 /area/survivalpod/superpose/MethLab)
 "Yz" = (

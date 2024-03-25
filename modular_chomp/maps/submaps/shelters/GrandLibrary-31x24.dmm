@@ -63,6 +63,15 @@
 /obj/item/weapon/book/manual,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
+"bs" = (
+/obj/machinery/power/apc/hyper{
+	dir = 8;
+	pixel_y = 0;
+	pixel_x = -26
+	},
+/obj/structure/cable/green,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/GrandLibrary)
 "bz" = (
 /obj/structure/bookcase,
 /obj/item/weapon/book/custom_library/nonfiction,
@@ -254,6 +263,11 @@
 /area/survivalpod/superpose/GrandLibrary)
 "nq" = (
 /obj/item/device/gps/computer,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "nv" = (
@@ -288,10 +302,8 @@
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "oD" = (
-/obj/machinery/power/apc/alarms_hidden{
-	dir = 4;
-	pixel_x = 24
-	},
+/obj/structure/table/woodentable,
+/obj/machinery/librarycomp,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "oF" = (
@@ -1117,6 +1129,11 @@
 	anchored = 1;
 	pixel_y = 32
 	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "QL" = (
@@ -1135,10 +1152,17 @@
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "RE" = (
-/obj/machinery/librarycomp,
 /obj/item/weapon/flame/candle/candelabra/everburn{
 	anchored = 1;
 	pixel_y = 32
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/machinery/power/port_gen/pacman,
+/obj/item/stack/material/phoron{
+	material = 50
 	},
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
@@ -1413,6 +1437,7 @@
 /obj/item/weapon/storage/box/flare,
 /obj/structure/closet/crate/wooden,
 /obj/item/weapon/gun/energy/locked/phasegun/pistol/unlocked,
+/obj/structure/cable/green,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "ZI" = (
@@ -1751,7 +1776,7 @@ Mx
 qd
 Qr
 ZA
-PH
+bs
 SU
 PH
 PH
@@ -1779,7 +1804,7 @@ nq
 PH
 Yu
 qd
-Sd
+oD
 PH
 NN
 jB
@@ -1806,7 +1831,7 @@ PH
 PH
 qd
 Nb
-oD
+PH
 PH
 CZ
 PH
@@ -1858,7 +1883,7 @@ cG
 DH
 PH
 dm
-PH
+Sd
 PH
 PH
 dm

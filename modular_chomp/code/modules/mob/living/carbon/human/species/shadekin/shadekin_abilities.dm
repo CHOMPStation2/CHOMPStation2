@@ -1,7 +1,7 @@
 /mob/living/carbon/human/proc/phase_shift()
 	set name = "Phase Shift (100)"
 	set desc = "Shift yourself out of alignment with realspace to travel quickly to different areas."
-	set category = "Shadekin"
+	set category = "Abilities.Shadekin" //ChompEDIT - TGPanel
 
 	var/ability_cost = 100
 
@@ -276,7 +276,7 @@
 /mob/living/carbon/human/proc/phase_strength_toggle()
 	set name = "Toggle Phase Strength"
 	set desc = "Toggle strength of phase. Gentle but slower, or faster but destructive to lights."
-	set category = "Shadekin"
+	set category = "Abilities.Shadekin" //ChompEDIT - TGPanel
 
 	var/datum/species/shadekin/SK = species
 	if(!istype(SK))
