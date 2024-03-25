@@ -21,7 +21,7 @@
 /// Blocks ruins spawning on the turf
 #define NO_RUINS					(1<<6)
 */
-
+/*
 DEFINE_BITFIELD(turf_flags, list(
 	BITFIELD(NO_JAUNT),
 	BITFIELD(UNUSED_RESERVATION_TURF),
@@ -29,7 +29,7 @@ DEFINE_BITFIELD(turf_flags, list(
 	BITFIELD(TURF_PLANET_REGISTERED),
 	BITFIELD(TURF_ZONE_REBUILD_QUEUED),
 ))
-
+*/
 //* /turf_path_danger var on /turf
 /// lava, fire, etc
 #define TURF_PATH_DANGER_BURN (1<<0)
@@ -39,7 +39,7 @@ DEFINE_BITFIELD(turf_flags, list(
 #define TURF_PATH_DANGER_ANNIHILATION (1<<2)
 /// this, is literally space.
 #define TURF_PATH_DANGER_SPACE (1<<3)
-
+/*
 DEFINE_SHARED_BITFIELD(turf_path_danger, list(
 	"turf_path_danger",
 	"turf_path_danger_ignore",
@@ -49,3 +49,4 @@ DEFINE_SHARED_BITFIELD(turf_path_danger, list(
 	BITFIELD(TURF_PATH_DANGER_ANNIHILATION),
 	BITFIELD(TURF_PATH_DANGER_SPACE),
 ))
+*/

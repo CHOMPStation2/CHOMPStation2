@@ -238,14 +238,14 @@
 			to_chat(usr, "This can only be used on instances of type /obj")
 			return
 
-		var/action_type = alert(usr, "Strict type ([O.type]) or type and all subtypes?","Type Selection", "Strict type","Type and subtypes","Cancel")
+		var/action_type = tgui_alert(usr, "Strict type ([O.type]) or type and all subtypes?","Type Selection",list("Strict type","Type and subtypes","Cancel"))
 		if(action_type == "Cancel" || !action_type)
 			return
 
-		if(alert(usr, "Are you really sure you want to delete all objects of type [O.type]?","Delete All?", "Yes","No") != "Yes")
+		if(tgui_alert(usr, "Are you really sure you want to delete all objects of type [O.type]?","Delete All?",list("Yes","No")) != "Yes")
 			return
 
-		if(alert(usr, "Second confirmation required. Delete?","REALLY?", "Yes", "No") != "Yes")
+		if(tgui_alert(usr, "Second confirmation required. Delete?","REALLY?",list("Yes","No")) != "Yes")
 			return
 
 		var/O_type = O.type

@@ -142,6 +142,7 @@ Quick adjacency (to turf):
 
 	Since I don't want to complicate the click code rework by messing with unrelated systems it won't be changed here.
 */
+//CHOMPEdit Begin
 ///True if the dir is north or south, false therwise
 #define NSCOMPONENT(d)   (d&(NORTH|SOUTH))
 ///True if the dir is east/west, false otherwise
@@ -193,3 +194,4 @@ Quick adjacency (to turf):
 	return FALSE
 #undef NSCOMPONENT
 #undef EWCOMPONENT
+//CHOMPEdit End

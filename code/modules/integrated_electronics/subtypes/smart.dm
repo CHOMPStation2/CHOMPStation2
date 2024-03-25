@@ -31,8 +31,9 @@
 
 	set_pin_data(IC_OUTPUT, 1, desired_dir)
 	push_data()
-	activate_pin(2)
+	activate_pin(2) //CHOMPEdit
 
+//CHOMPEdit Begin
 /obj/item/integrated_circuit/smart/advanced_pathfinder
 	name = "advanced pathfinder"
 	desc = "This circuit uses a complex processor for long-range pathfinding."
@@ -77,3 +78,4 @@
 		set_pin_data(IC_OUTPUT, 2, Yn)
 		push_data()
 		activate_pin(2)
+//CHOMPEdit End

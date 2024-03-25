@@ -30,6 +30,7 @@
 
 // A lot of this is based off of /TG/'s AI code.
 
+//CHOMPEdit Begin
 // Step 1, find out what we can see.
 /datum/ai_holder/proc/list_targets()
 	. = hearers(vision_range, holder) - holder // Remove ourselves to prevent suicidal decisions. ~ SRC is the ai_holder.
@@ -41,6 +42,7 @@
 		if(can_see(holder, HM, vision_range))
 			. += HM
 	. = typecache_filter_list_reverse(., ignore)
+//CHOMPEdit End
 
 // Step 2, filter down possible targets to things we actually care about.
 /datum/ai_holder/proc/find_target(var/list/possible_targets, var/has_targets_list = FALSE)

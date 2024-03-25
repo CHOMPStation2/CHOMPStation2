@@ -86,24 +86,23 @@
 /obj/machinery/door/window/CanPass(atom/movable/mover, turf/target)
 	if(istype(mover) && mover.checkpass(PASSGLASS))
 		return TRUE
-	return ..()
-
+	if(get_dir(mover, target) == reverse_dir[dir]) // From elsewhere to here, can't move against our dir
+		return !density
+	return TRUE
+//CHOMPEdit Begin
 /obj/machinery/door/window/can_pathfinding_enter(atom/movable/actor, dir, datum/pathfinding/search)
 	return (src.dir != dir) || ..() || (has_access(req_access, req_one_access, search.ss13_with_access) && !inoperable())
 
 /obj/machinery/door/window/can_pathfinding_exit(atom/movable/actor, dir, datum/pathfinding/search)
 	return (src.dir != dir)  || ..() || (has_access(req_access, req_one_access, search.ss13_with_access) && !inoperable())
+//CHOMPEdit End
+/obj/machinery/door/window/Uncross(atom/movable/mover, turf/target)
+	if(istype(mover) && mover.checkpass(PASSGLASS))
+		return TRUE
+	if(get_dir(mover, target) == dir) // From here to elsewhere, can't move in our dir
+		return !density
+	return TRUE
 
-/*
-/obj/machinery/door/window/CheckExit(atom/movable/AM, atom/newLoc)
-	if(!(get_dir(src, newLoc) & dir))
-		return TRUE
-	if(istype(AM) && AM.checkpass(PASSGLASS))
-		return TRUE
-	/*if(check_standard_flag_pass(AM))
-		return TRUE*/
-	return !density
-*/
 
 /obj/machinery/door/window/CanZASPass(turf/T, is_zone)
 	if(get_dir(T, loc) == turn(dir, 180))

@@ -42,7 +42,7 @@
 /datum/ai_holder/proc/get_path(var/turf/target,var/get_to = 1, var/max_distance = world.view*6)
 	ai_log("get_path() : Entering.",AI_LOG_DEBUG)
 	forget_path()
-	var/list/new_path = SSpathfinder.default_ai_pathfinding(src, target, get_to)
+	var/list/new_path = SSpathfinder.default_ai_pathfinding(src, target, get_to) //CHOMPEdit
 
 	if(new_path && new_path.len)
 		path = new_path
