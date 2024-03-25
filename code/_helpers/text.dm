@@ -354,12 +354,15 @@ GLOBAL_LIST_EMPTY(text_tag_cache)
 /proc/create_text_tag(var/tagname, var/tagdesc = tagname, var/client/C = null)
 	if(!(C && C.is_preference_enabled(/datum/client_preference/chat_tags)))
 		return tagdesc
+	//ChompEDIT START
+	var/datum/asset/spritesheet/chatassets = get_asset_datum(/datum/asset/spritesheet/chat)
+	chatassets.send(C)
 	if(!GLOB.text_tag_cache[tagname])
-		var/datum/asset/spritesheet/chatassets = get_asset_datum(/datum/asset/spritesheet/chat)
 		GLOB.text_tag_cache[tagname] = {"<span class='[chatassets.icon_class_name(tagname)] text_tag'></span>"}
 	if(!C.tgui_panel.is_ready() || C.tgui_panel.oldchat)
 		return "<IMG src='\ref[text_tag_icons]' class='text_tag' iconstate='[tagname]'" + (tagdesc ? " alt='[tagdesc]'" : "") + ">"
 	return GLOB.text_tag_cache[tagname]
+	//ChompEDIT END
 
 /proc/create_text_tag_old(var/tagname, var/tagdesc = tagname, var/client/C = null)
 	if(!(C && C.is_preference_enabled(/datum/client_preference/chat_tags)))
