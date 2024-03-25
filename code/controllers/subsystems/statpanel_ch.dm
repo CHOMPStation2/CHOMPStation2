@@ -99,6 +99,12 @@ SUBSYSTEM_DEF(statpanels)
 			if((num_fires % misc_wait == 0))
 				update_misc_tabs(target,target_mob)
 
+		var/datum/object_window_info/obj_window = target.obj_window
+		if(obj_window)
+			if(obj_window.flags & TURFLIST_UPDATE_QUEUED)
+				immediate_send_stat_data(target)
+			obj_window.flags = 0
+
 		if(MC_TICK_CHECK)
 			return
 
@@ -358,6 +364,7 @@ SUBSYSTEM_DEF(statpanels)
 	var/actively_tracking = FALSE
 	///For reusing this logic for examines
 	var/atom/examine_target
+	var/flags = 0
 
 /datum/object_window_info/New(client/parent)
 	. = ..()
@@ -411,10 +418,14 @@ SUBSYSTEM_DEF(statpanels)
 		COMSIG_MOB_LOGOUT = PROC_REF(on_mob_logout),
 	)
 	AddComponent(/datum/component/connect_mob_behalf, parent, connections)
+	RegisterSignal(parent.mob.listed_turf, COMSIG_ATOM_ENTERED, PROC_REF(turflist_changed))
+	RegisterSignal(parent.mob.listed_turf, COMSIG_ATOM_EXITED, PROC_REF(turflist_changed))
 	actively_tracking = TRUE
 
 /datum/object_window_info/proc/stop_turf_tracking()
 	qdel(GetComponent(/datum/component/connect_mob_behalf))
+	UnregisterSignal(parent.mob.listed_turf, COMSIG_ATOM_ENTERED)
+	UnregisterSignal(parent.mob.listed_turf, COMSIG_ATOM_EXITED)
 	actively_tracking = FALSE
 
 /datum/object_window_info/proc/on_mob_move(mob/source)
@@ -427,6 +438,14 @@ SUBSYSTEM_DEF(statpanels)
 	SIGNAL_HANDLER
 	on_mob_move(parent.mob)
 
+/datum/object_window_info/proc/turflist_changed(mob/source)
+	SIGNAL_HANDLER
+	if(!(flags & TURFLIST_UPDATED)) //Limit updates to 1 per tick
+		SSstatpanels.immediate_send_stat_data(parent)
+		flags |= TURFLIST_UPDATED
+	else if(!(flags & TURFLIST_UPDATE_QUEUED))
+		flags |= TURFLIST_UPDATE_QUEUED
+
 /// Clears any cached object window stuff
 /// We use hard refs cause we'd need a signal for this anyway. Cleaner this way
 /datum/object_window_info/proc/viewing_atom_deleted(atom/deleted)
@@ -436,14 +455,17 @@ SUBSYSTEM_DEF(statpanels)
 	atoms_to_images -= deleted
 
 /mob/proc/set_listed_turf(turf/new_turf)
-	listed_turf = new_turf
 	if(!client)
+		listed_turf = new_turf
 		return
 	if(!client.obj_window)
 		client.obj_window = new(client)
+	if(!new_turf)
+		client.obj_window.stop_turf_tracking() //Needs to go before listed_turf is set to null so signals can be removed
+	listed_turf = new_turf
+
 	if(listed_turf)
 		client.stat_panel.send_message("create_listedturf", listed_turf.name)
 		client.obj_window.start_turf_tracking()
 	else
 		client.stat_panel.send_message("remove_listedturf")
-		client.obj_window.stop_turf_tracking()
