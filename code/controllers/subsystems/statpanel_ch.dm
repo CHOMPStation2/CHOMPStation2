@@ -198,6 +198,8 @@ SUBSYSTEM_DEF(statpanels)
 	//target.stat_panel.send_message("update_spells", list(spell_tabs = target.spell_tabs, actions = actions))
 
 /datum/controller/subsystem/statpanels/proc/set_turf_examine_tab(client/target, mob/target_mob)
+	if(!target)//statbrowser hasnt fired yet and we were called from immediate_send_stat_data()
+		return
 	var/list/overrides = list()
 	for(var/image/target_image as anything in target.images)
 		if(!target_image.loc || target_image.loc.loc != target_mob.listed_turf || !target_image.override)
@@ -218,6 +220,8 @@ SUBSYSTEM_DEF(statpanels)
 
 	/// Set the atoms we're meant to display
 	var/datum/object_window_info/obj_window = target.obj_window
+	if(!obj_window)
+		return // previous one no longer exists
 	obj_window.atoms_to_show = atoms_to_display
 	START_PROCESSING(SSobj_tab_items, obj_window)
 	refresh_client_obj_view(target)
@@ -439,6 +443,8 @@ SUBSYSTEM_DEF(statpanels)
 	on_mob_move(parent.mob)
 
 /datum/object_window_info/proc/turflist_changed(mob/source)
+	if(!parent)//statbrowser hasnt fired yet and we still have a pending action
+		return
 	SIGNAL_HANDLER
 	if(!(flags & TURFLIST_UPDATED)) //Limit updates to 1 per tick
 		SSstatpanels.immediate_send_stat_data(parent)
