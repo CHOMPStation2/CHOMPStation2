@@ -32,14 +32,15 @@
 
 // Step 1, find out what we can see.
 /datum/ai_holder/proc/list_targets()
-	. = ohearers(vision_range, holder)
-	. -= dview_mob // Not the dview mob!
+	. = hearers(vision_range, holder) - holder // Remove ourselves to prevent suicidal decisions. ~ SRC is the ai_holder.
 
-	var/static/hostile_machines = typecacheof(list(/obj/machinery/porta_turret, /obj/mecha, /obj/structure/blob))
+	var/static/list/hostile_machines = typecacheof(list(/obj/machinery/porta_turret, /obj/mecha))
+	var/static/list/ignore = typecacheof(list(/mob/observer))
 
 	for(var/HM in typecache_filter_list(range(vision_range, holder), hostile_machines))
 		if(can_see(holder, HM, vision_range))
 			. += HM
+	. = typecache_filter_list_reverse(., ignore)
 
 // Step 2, filter down possible targets to things we actually care about.
 /datum/ai_holder/proc/find_target(var/list/possible_targets, var/has_targets_list = FALSE)
@@ -123,8 +124,7 @@
 	return closest_targets
 
 /datum/ai_holder/proc/can_attack(atom/movable/the_target, var/vision_required = TRUE)
-	if(!can_see_target(the_target) && vision_required)
-		return FALSE
+	//CHOMP Removal (optimizing by making most intense check last)
 	if(!belly_attack)
 		if(isbelly(holder.loc))
 			return FALSE
@@ -184,6 +184,17 @@
 
 	return TRUE
 //	return FALSE
+
+//CHOMPEdit Begin
+//It may seem a bit funny to define a proc above and then immediately override it in the same file
+//But this is basically layering the checks so that the vision check will always come last
+/datum/ai_holder/can_attack(atom/movable/the_target, var/vision_required = TRUE)
+	if(!..())
+		return FALSE
+	if(vision_required && !can_see_target(the_target))
+		return FALSE
+	return TRUE
+//CHOMPEdit End
 
 // 'Soft' loss of target. They may still exist, we still have some info about them maybe.
 /datum/ai_holder/proc/lose_target()
