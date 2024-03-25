@@ -1,0 +1,5 @@
+author: "Kashargul"
+delete-after: True
+changes:
+  - bugfix: "dark_maws now dispel properly and have their references cleared"
+  - bugfix: "dark_maw can no longer be used without costing energy"
