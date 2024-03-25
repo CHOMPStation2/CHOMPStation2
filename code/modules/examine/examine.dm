@@ -5,7 +5,7 @@
 	This means that this file can be unchecked, along with the other examine files, and can be removed entirely with no effort.
 */
 
-#define EXAMINE_PANEL_PADDING "               "
+// #define EXAMINE_PANEL_PADDING "               " //CHOMPRemove
 
 /atom/
 	var/description_info = null //Helpful blue text.
@@ -34,7 +34,7 @@
 
 // Quickly adds the boilerplate code to add an image and padding for the image.
 /proc/desc_panel_image(var/icon_state)
-	return "[bicon(description_icons[icon_state])][EXAMINE_PANEL_PADDING]"
+	return "[icon2html(description_icons[icon_state],usr)]&emsp;" //CHOMPEdit
 
 /mob/living/get_description_fluff()
 	if(flavor_text) //Get flavor text for the green text.
@@ -50,15 +50,17 @@
 /client/var/description_holders[0]
 
 /client/proc/update_description_holders(atom/A, update_antag_info=0)
+	examine_icon = null //CHOMPEdit
 	description_holders["info"] = A.get_description_info()
 	description_holders["fluff"] = A.get_description_fluff()
 	description_holders["antag"] = (update_antag_info)? A.get_description_antag() : ""
 	description_holders["interactions"] = A.get_description_interaction()
 
 	description_holders["name"] = "[A.name]"
-	description_holders["icon"] = "[icon2html(A.examine_icon(),src)]"
+	description_holders["icon"] = A //CHOMPEdit
 	description_holders["desc"] = A.desc
 
+/* CHOMP Removal
 /mob/Stat()
 	. = ..()
 	if(client && statpanel("Examine"))
@@ -93,6 +95,7 @@
 			stat(null,"<font color=[color_f]><b>[description_holders["fluff"]]</b></font>") //Yellow, fluff-related text.
 		if(description_holders["antag"])
 			stat(null,"<font color=[color_a]><b>[description_holders["antag"]]</b></font>") //Red, malicious antag-related text
+*/
 
 //override examinate verb to update description holders when things are examined
 //mob verbs are faster than object verbs. See http://www.byond.com/forum/?post=1326139&page=2#comment8198716 for why this isn't atom/verb/examine()
@@ -119,7 +122,7 @@
 	if(client)
 		var/is_antag = ((mind && mind.special_role) || isobserver(src)) //ghosts don't have minds
 		client.update_description_holders(A, is_antag)
-
+		SSstatpanels.set_examine_tab(client) //CHOMPEdit
 
 /mob/verb/mob_examine()
 	set name = "Mob Examine"

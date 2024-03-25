@@ -752,7 +752,7 @@
 
 /obj/item/weapon/fluff/dragor_dot/attack_self(mob/user as mob)
 	if(user.ckey == "pontifexminimus")
-		user.verbs |= /mob/living/carbon/human/proc/shapeshifter_select_gender
+		add_verb(user,/mob/living/carbon/human/proc/shapeshifter_select_gender) //CHOMPEdit TGPanel
 	else
 		return
 
@@ -1192,7 +1192,7 @@
 	siemens_coefficient = 0.9
 	slowdown = 0
 	offline_slowdown = 0
-	offline_vision_restriction = 0 
+	offline_vision_restriction = 0
 	siemens_coefficient = 0.9
 	chest_type = /obj/item/clothing/suit/fluff/nikki
 
@@ -1300,7 +1300,7 @@
 			to_chat(user, "<span class='warning'>The brush's teeth are far too rough to even comb your hair. Apparently, \
 			this device was not made for people like you.</span>")
 			return
-		
+
 		if (!user.hair_accessory_style)
 			var/datum/sprite_accessory/hair_accessory/verie_hair_glow/V = new(user)
 			user.hair_accessory_style = V
@@ -1310,7 +1310,7 @@
 			"<span class='notice'>You brush your hair. \The [src]'s teeth begin to vibrate and glow as they react to your nanites. \
 			The teeth stimulate the nanites in your hair strands until your hair give off a brilliant, faintly pulsing \
 			cyan glow!</span>")
-		
+
 		else
 			user.visible_message("[user] combs her hair. \The [src] brushes away her glowing cyan highlights. Neat!", \
 			"<span class='notice'>You brush your hair. \The [src]'s teeth wipe away the glowing streaks in your hair \
@@ -1320,12 +1320,12 @@
 				to_chat(user, "<span class='warning'>found a V to delete!</span>")
 				qdel(V)
 			user.update_hair()
-			
-	
+
+
 	else
 		to_chat(user, "<span class='warning'>\The [src] isn't compatible with your body as it is now.</span>")
-	
-		
+
+
 End CHOMP Removal*/
 
 // Astra - // Astra

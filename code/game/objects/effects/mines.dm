@@ -234,6 +234,7 @@
 	mineitemtype = /obj/item/weapon/mine/emp
 
 /obj/effect/mine/emp/explode(var/mob/living/M)
+	triggered = 1 //ChompEDIT recursing mines
 	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
 	s.set_up(3, 1, src)
 	s.start()

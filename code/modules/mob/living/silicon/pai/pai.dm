@@ -129,8 +129,8 @@
 	add_language(LANGUAGE_TERMINUS, 1)
 	add_language(LANGUAGE_SIGN, 1)
 
-	verbs += /mob/living/silicon/pai/proc/choose_chassis
-	verbs += /mob/living/silicon/pai/proc/choose_verbs
+	add_verb(src,/mob/living/silicon/pai/proc/choose_chassis) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/silicon/pai/proc/choose_verbs) //CHOMPEdit TGPanel
 
 	//PDA
 	pda = new(src)
@@ -160,17 +160,19 @@
 	src << sound('sound/effects/pai_login.ogg', volume = 75)	//VOREStation Add
 
 // this function shows the information about being silenced as a pAI in the Status panel
+//ChompEDIT START - TGPanel
 /mob/living/silicon/pai/proc/show_silenced()
+	. = list()
 	if(src.silence_time)
 		var/timeleft = round((silence_time - world.timeofday)/10 ,1)
-		stat(null, "Communications system reboot in -[(timeleft / 60) % 60]:[add_zero(num2text(timeleft % 60), 2)]")
+		. += "Communications system reboot in -[(timeleft / 60) % 60]:[add_zero(num2text(timeleft % 60), 2)]"
 
 
-/mob/living/silicon/pai/Stat()
-	..()
-	statpanel("Status")
-	if (src.client.statpanel == "Status")
-		show_silenced()
+/mob/living/silicon/pai/get_status_tab_items()
+	. = ..()
+	. += ""
+	. += show_silenced()
+//ChompEDIT END
 
 /mob/living/silicon/pai/check_eye(var/mob/user as mob)
 	if (!src.current)
@@ -308,8 +310,8 @@
 
 	var/turf/T = get_turf(src)
 	if(istype(T)) T.visible_message("<span class='filter_notice'><b>[src]</b> folds outwards, expanding into a mobile form.</span>")
-	verbs |= /mob/living/silicon/pai/proc/pai_nom
-	verbs |= /mob/living/proc/vertical_nom
+	add_verb(src,/mob/living/silicon/pai/proc/pai_nom) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/vertical_nom) //CHOMPEdit TGPanel
 	update_icon()
 
 /mob/living/silicon/pai/verb/fold_up()
@@ -340,7 +342,7 @@
 		icon_state = possible_chassis[choice]
 		finalized = tgui_alert(usr, "Look at your sprite. Is this what you wish to use?","Choose Chassis",list("No","Yes"))
 	chassis = possible_chassis[choice]
-	verbs |= /mob/living/proc/hide
+	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
 //VOREStation Removal End
 */
 
@@ -472,8 +474,8 @@
 	icon_state = "[chassis]"
 	if(isopenspace(card.loc))
 		fall()
-	verbs -= /mob/living/silicon/pai/proc/pai_nom
-	verbs -= /mob/living/proc/vertical_nom
+	remove_verb(src,/mob/living/silicon/pai/proc/pai_nom) //CHOMPEdit TGPanel
+	remove_verb(src,/mob/living/proc/vertical_nom) //CHOMPEdit TGPanel
 
 // No binary for pAIs.
 /mob/living/silicon/pai/binarycheck()

@@ -27,6 +27,7 @@
 	spawn_flags = SPECIES_IS_RESTRICTED
 
 /datum/species/shadekin
+	digi_allowed = TRUE
 	//spawn_flags = SPECIES_IS_RESTRICTED
 
 //datum/species/protean

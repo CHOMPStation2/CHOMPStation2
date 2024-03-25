@@ -31,6 +31,12 @@
 		pass = FALSE
 		to_chat(src,"<span class='warning'>You are not allowed to spawn in as this species.</span>")
 
+	//CHOMPEdit Begin - Check species job bans... (Only used for shadekin)
+	if(J.is_species_banned(client?.prefs?.species, client?.prefs?.organ_data["brain"]))
+		pass = FALSE
+		to_chat(src,"<span class='warning'>Your species is not permitted to take this role or job.</span>")
+	//CHOMPEdit End
+
 	//Custom species checks
 	if (client?.prefs?.species == "Custom Species")
 

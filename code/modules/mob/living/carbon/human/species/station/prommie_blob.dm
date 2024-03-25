@@ -48,14 +48,14 @@
 	)
 /mob/living/simple_mob/slime/promethean/Initialize(mapload, null)
 	//verbs -= /mob/living/proc/ventcrawl
-	verbs += /mob/living/simple_mob/slime/promethean/proc/prommie_blobform
-	verbs += /mob/living/proc/set_size
-	verbs += /mob/living/proc/hide
-	verbs += /mob/living/simple_mob/proc/animal_nom
-	verbs += /mob/living/proc/shred_limb
-	verbs += /mob/living/simple_mob/slime/promethean/proc/toggle_expand
-	verbs += /mob/living/simple_mob/slime/promethean/proc/prommie_select_colour
-	verbs += /mob/living/simple_mob/slime/promethean/proc/toggle_shine
+	add_verb(src, /mob/living/simple_mob/slime/promethean/proc/prommie_blobform) //CHOMPEdit
+	add_verb(src, /mob/living/proc/set_size) //CHOMPEdit
+	add_verb(src, /mob/living/proc/hide) //CHOMPEdit
+	add_verb(src, /mob/living/simple_mob/proc/animal_nom) //CHOMPEdit
+	add_verb(src, /mob/living/proc/shred_limb) //CHOMPEdit
+	add_verb(src, /mob/living/simple_mob/slime/promethean/proc/toggle_expand) //CHOMPEdit
+	add_verb(src, /mob/living/simple_mob/slime/promethean/proc/prommie_select_colour) //CHOMPEdit
+	add_verb(src, /mob/living/simple_mob/slime/promethean/proc/toggle_shine) //CHOMPEdit
 	update_mood()
 	if(rad_glow)
 		rad_glow = CLAMP(rad_glow,0,250)
@@ -86,10 +86,12 @@
 		QDEL_NULL(stored_blob)
 	return ..()
 
-/mob/living/simple_mob/slime/promethean/Stat()
-	..()
+//ChompEDIT START - TGPanel
+/mob/living/simple_mob/slime/promethean/get_status_tab_items()
+	. = ..()
 	if(humanform)
 		humanform.species.Stat(humanform)
+//ChompEDIT END
 
 /mob/living/simple_mob/slime/promethean/handle_special() // Should disable default slime healing, we'll use nutrition based heals instead.
 //ChompAdd Begins.  They already heal from their carbon form while even in slime form, but this is for a small bonus healing for being unformed.
@@ -432,8 +434,8 @@
 		new_hat.forceMove(src)
 
 	blob.update_icon()
-	blob.verbs -= /mob/living/proc/ventcrawl // Absolutely not.
-	blob.verbs -= /mob/living/simple_mob/proc/set_name // We already have a name.
+	remove_verb(blob,/mob/living/proc/ventcrawl ) // Absolutely not. //CHOMPEdit
+	remove_verb(blob,/mob/living/simple_mob/proc/set_name ) // We already have a name. //CHOMPEdit
 	temporary_form = blob
 
 //ChompAdd begins  Handles the ID and Radio, giving the blobform each of them.

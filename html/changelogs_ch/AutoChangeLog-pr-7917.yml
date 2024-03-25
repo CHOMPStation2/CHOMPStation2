@@ -1,4 +1,0 @@
-author: "Raeschen"
-delete-after: True
-changes:
-  - bugfix: "holodeck, shootspeed and toggle_active target runtime"

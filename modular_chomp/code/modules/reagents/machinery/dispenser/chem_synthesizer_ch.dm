@@ -422,18 +422,18 @@
 				if("change_pill_style")
 					var/list/choices = list()
 					for(var/i = 1 to MAX_PILL_SPRITE)
-						choices += "pill[i].png"
-					tgui_modal_bento(src, id, "Please select the new style for pills:", null, arguments, pill_icon, choices)
+						choices += "chem_master32x32 pill[i]"
+					tgui_modal_bento_spritesheet(src, id, "Please select the new style for pills:", null, arguments, pill_icon, choices)
 				if("change_patch_style")
 					var/list/choices = list()
 					for(var/i = 1 to MAX_PATCH_SPRITE)
-						choices += "patch[i].png"
-					tgui_modal_bento(src, id, "Please select the new style for patches:", null, arguments, patch_icon, choices)
+						choices += "chem_master32x32 patch[i]"
+					tgui_modal_bento_spritesheet(src, id, "Please select the new style for patches:", null, arguments, patch_icon, choices)
 				if("change_bottle_style")
 					var/list/choices = list()
 					for(var/i = 1 to MAX_BOTTLE_SPRITE)
-						choices += "bottle-[i].png"
-					tgui_modal_bento(src, id, "Please select the new style for bottles:", null, arguments, bottle_icon, choices)
+						choices += "chem_master32x32 bottle-[i]"
+					tgui_modal_bento_spritesheet(src, id, "Please select the new style for bottles:", null, arguments, bottle_icon, choices)
 				else
 					return FALSE
 		if(TGUI_MODAL_ANSWER)
@@ -471,6 +471,11 @@
 	if(stat & (BROKEN|NOPOWER))
 		return
 	tgui_interact(user)
+
+/obj/machinery/chemical_synthesizer/ui_assets(mob/user)
+	return list(
+		get_asset_datum(/datum/asset/spritesheet/chem_master),
+	)
 
 // This proc is lets users create recipes step-by-step and exports a comma delineated list to chat. It's intended to teach how to use the machine.
 /obj/machinery/chemical_synthesizer/proc/babystep_recipe(mob/user)
@@ -599,7 +604,7 @@
 		step = 1
 
 	// The time between each step is the volume required by a step multiplied by the delay_modifier (in ticks/deciseconds).
-	addtimer(CALLBACK(src, .proc/perform_reaction, r_id, step), recipes[r_id][step + 1] * delay_modifier)
+	addtimer(CALLBACK(src, PROC_REF(perform_reaction), r_id, step), recipes[r_id][step + 1] * delay_modifier)
 
 // This proc carries out the actual steps in each reaction.
 /obj/machinery/chemical_synthesizer/proc/perform_reaction(var/r_id, var/step as num)
@@ -633,7 +638,7 @@
 	var/obj/item/weapon/reagent_containers/chem_disp_cartridge/C = cartridges[label]
 	if(quantity > C.reagents.total_volume)
 		visible_message("<span class='notice'>The [src] flashes an 'insufficient reagents' warning.</span>")
-		addtimer(CALLBACK(src, .proc/perform_reaction, r_id, step), 1 MINUTE)
+		addtimer(CALLBACK(src, PROC_REF(perform_reaction), r_id, step), 1 MINUTE)
 		return
 
 	// After all this mess of code, we reach the line where the magic happens.
@@ -657,7 +662,7 @@
 		var/delay = reagents.total_volume
 		update_icon() // Update the icon first to remove underlays, then switch to the new icon_state.
 		icon_state = "synth_finished"
-		addtimer(CALLBACK(src, .proc/bottle_product, r_id), delay)
+		addtimer(CALLBACK(src, PROC_REF(bottle_product), r_id), delay)
 
 	else
 		follow_recipe(r_id, step)

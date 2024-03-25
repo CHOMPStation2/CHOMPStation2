@@ -45,7 +45,7 @@
 /mob/living/carbon/human/proc/phase_shift()
 	set name = "Phase Shift (100)"
 	set desc = "Shift yourself out of alignment with realspace to travel quickly to different areas."
-	set category = "Shadekin"
+	set category = "Abilities.Shadekin" //ChompEDIT - TGPanel
 
 	var/ability_cost = 100
 
@@ -271,7 +271,7 @@
 /mob/living/carbon/human/proc/nutrition_conversion_toggle()
 	set name = "Toggle Energy <-> Nutrition conversions"
 	set desc = "Toggle dark energy and nutrition being converted into each other when full"
-	set category = "Shadekin"
+	set category = "Abilities.Shadekin" //ChompEDIT - TGPanel
 
 	var/datum/species/shadekin/SK = species
 	if(!istype(SK))
@@ -308,7 +308,7 @@
 /mob/living/carbon/human/proc/regenerate_other()
 	set name = "Regenerate Other (50)"
 	set desc = "Spend energy to heal physical wounds in another creature."
-	set category = "Shadekin"
+	set category = "Abilities.Shadekin" //ChompEDIT - TGPanel
 
 	var/ability_cost = 50
 
@@ -386,7 +386,7 @@
 /mob/living/carbon/human/proc/create_shade()
 	set name = "Create Shade (25)"
 	set desc = "Create a field of darkness that follows you."
-	set category = "Shadekin"
+	set category = "Abilities.Shadekin" //ChompEDIT - TGPanel
 
 	var/ability_cost = 25
 
@@ -460,7 +460,7 @@
 /mob/living/carbon/human/proc/dark_tunneling()
 	set name = "Dark Tunneling (100) (Once)"
 	set desc = "Make a passage to the dark."
-	set category = "Shadekin"
+	set category = "Abilities.Shadekin" //ChompEDIT - TGPanel
 
 	var/template_id = "dark_portal"
 	var/datum/map_template/shelter/template
@@ -543,7 +543,7 @@
 /mob/living/carbon/human/proc/dark_respite()
 	set name = "Dark Respite (Only in Dark)"
 	set desc = "Focus yourself on healing any injuries sustained."
-	set category = "Shadekin"
+	set category = "Abilities.Shadekin" //ChompEDIT - TGPanel
 
 	var/datum/species/shadekin/SK = species
 	if(!istype(SK))
@@ -621,6 +621,14 @@
 		spawn(30)
 			qdel(src)
 	else
+		var/mob/living/carbon/human/carbon_owner = owner
+		var/mob/living/simple_mob/shadekin/sm_owner = owner
+		if(istype(carbon_owner))
+			var/datum/species/shadekin/SK = carbon_owner.species
+			if(istype(SK))
+				SK.active_dark_maws += src
+		else if(istype(sm_owner))
+			sm_owner.active_dark_maws += src
 		flick("dark_maw", src)
 		START_PROCESSING(SSobj, src)
 
@@ -632,9 +640,9 @@
 		if(istype(carbon_owner))
 			var/datum/species/shadekin/SK = carbon_owner.species
 			if(istype(SK))
-				SK.active_dark_maws ^= src
+				SK.active_dark_maws -= src
 		else if(istype(sm_owner))
-			sm_owner.active_dark_maws ^= src
+			sm_owner.active_dark_maws -= src
 	return ..()
 
 /obj/effect/abstract/dark_maw/Crossed(O)
@@ -727,7 +735,7 @@
 /mob/living/carbon/human/proc/dark_maw()
 	set name = "Dark Maw (20)"
 	set desc = "Create a trap to capture others, or steal people from phase"
-	set category = "Shadekin"
+	set category = "Abilities.Shadekin" //ChompEDIT - TGPanel
 
 	var/ability_cost = 20
 
@@ -749,7 +757,7 @@
 			new /obj/effect/abstract/dark_maw(loc, src, 1)
 		else
 			new /obj/effect/abstract/dark_maw(loc, src)
-			shadekin_adjust_energy(-ability_cost)
+		shadekin_adjust_energy(-ability_cost)
 
 
 		return TRUE
@@ -759,7 +767,7 @@
 /mob/living/carbon/human/proc/clear_dark_maws()
 	set name = "Dispel dark maws"
 	set desc = "Dispel any active dark maws in place"
-	set category = "Shadekin"
+	set category = "Abilities.Shadekin" //ChompEDIT - TGPanel
 
 	var/datum/species/shadekin/SK = species
 	if(!istype(SK))

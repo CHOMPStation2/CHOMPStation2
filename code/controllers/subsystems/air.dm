@@ -57,19 +57,19 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 	if(active_edges.len)
 		var/list/edge_log = list()
 		for(var/connection_edge/E in active_edges)
-			
+
 			var/a_temp = E.A.air.temperature
 			var/a_moles = E.A.air.total_moles
 			var/a_vol = E.A.air.volume
 			var/a_gas = ""
 			for(var/gas in E.A.air.gas)
 				a_gas += "[gas]=[E.A.air.gas[gas]]"
-			
+
 			var/b_temp
 			var/b_moles
 			var/b_vol
 			var/b_gas = ""
-			
+
 			// Two zones mixing
 			if(istype(E, /connection_edge/zone))
 				var/connection_edge/zone/Z = E
@@ -87,14 +87,14 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 				b_vol = "Unsim"
 				for(var/gas in U.air.gas)
 					b_gas += "[gas]=[U.air.gas[gas]]"
-			
+
 			edge_log += "Active Edge [E] ([E.type])"
 			edge_log += "Edge side A: T:[a_temp], Mol:[a_moles], Vol:[a_vol], Gas:[a_gas]"
 			edge_log += "Edge side B: T:[b_temp], Mol:[b_moles], Vol:[b_vol], Gas:[b_gas]"
-			
+
 			for(var/turf/T in E.connecting_turfs)
 				edge_log += "+--- Connecting Turf [T] ([T.type]) @ [T.x], [T.y], [T.z] ([T.loc])"
-				
+
 		log_debug("Active Edges on ZAS Startup\n" + edge_log.Join("\n"))
 		startup_active_edge_log = edge_log.Copy()
 
@@ -244,9 +244,9 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 		if(MC_TICK_CHECK)
 			return
 
-/datum/controller/subsystem/air/stat_entry(msg_prefix)
-	var/list/msg = list(msg_prefix)
-	msg += "S:[current_step ? part_names[current_step] : ""] "
+//CHOMPEdit Begin
+/datum/controller/subsystem/air/stat_entry(msg)
+	msg = "S:[current_step ? part_names[current_step] : ""] "
 	msg += "C:{"
 	msg += "T [round(cost_turfs, 1)] | "
 	msg += "E [round(cost_edges, 1)] | "
@@ -263,7 +263,8 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 	msg += "H [active_hotspots.len] | "
 	msg += "Z [zones_to_update.len] "
 	msg += "}"
-	..(msg.Join())
+	return ..()
+// CHOMPEdit End
 
 // ZAS might displace objects as the map loads if an air tick is processed mid-load.
 /datum/controller/subsystem/air/StartLoadingMap(var/quiet = TRUE)
