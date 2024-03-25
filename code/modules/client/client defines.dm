@@ -107,6 +107,13 @@
 	var/last_asset_job = 0
 	var/last_completed_asset_job = 0
 
+	//CHOMPAdd Start Panel Ping
+	///Last ping of the client
+	var/lastping = 0
+	///Average ping of the client
+	var/avgping = 0
+	//CHOMPAdd End
+
  	///world.time they connected
 	var/connection_time
  	///world.realtime they connected
