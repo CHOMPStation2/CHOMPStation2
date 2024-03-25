@@ -60,6 +60,7 @@
 
 /datum/alternate_appearance/Destroy()
 	remove()
+	owner = null
 	return ..()
 
 
@@ -84,6 +85,10 @@
 	add_alt_appearance("super_secret_disguise", I, players)
 
 */
+/atom/Destroy()
+	. = ..()
+	remove_all_alt_appearances()
+
 /atom/proc/add_alt_appearance(key, img, list/displayTo = list())
 	if(!key || !img)
 		return
@@ -116,7 +121,11 @@
 		if(alternate_appearances[key])
 			qdel(alternate_appearances[key])
 
-
+/atom/proc/remove_all_alt_appearances()
+	for(var/key in alternate_appearances)
+		if(alternate_appearances[key])
+			qdel(alternate_appearances[key])
+			alternate_appearances.Remove(key)
 /*
 	Displays an alternate appearance from src's alternate_appearances list
 	Wrapper for: alternate_appearance/display_to()
@@ -145,5 +154,3 @@
 	if(!AA)
 		return
 	AA.hide(hideFrom)
-
-
