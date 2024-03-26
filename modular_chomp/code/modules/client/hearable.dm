@@ -24,6 +24,8 @@
 		return
 	if(parent_atom in exclude_mobs)
 		return
+	if(!AreConnectedZLevels(source.z,parent_atom.z))
+		return
 
 	if(ismob(parent_atom))
 		var/mob/M = parent_atom
