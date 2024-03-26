@@ -524,28 +524,7 @@
 		return 0
 //CHOMPEdit Begin
 /atom/proc/visible_message(var/message, var/blind_message, var/list/exclude_mobs, var/range = world.view, var/runemessage = "<span style='font-size: 1.5em'>👁</span>")
-	var/list/see
-
-	if(isbelly(loc))
-		var/obj/belly/B = loc
-		see = B.effective_emote_hearers()
-	else
-		see = get_hearers_in_view(range, src)
-
-	if(LAZYLEN(exclude_mobs))
-		see -= exclude_mobs
-
-	for(var/atom/movable/AM as anything in see)
-		if(ismob(AM))
-			var/mob/M = AM
-			if((M.see_invisible >= invisibility) && MOB_CAN_SEE_PLANE(M, plane))
-				M.show_message(message, VISIBLE_MESSAGE, blind_message, AUDIBLE_MESSAGE)
-				if(runemessage != -1)
-					M.create_chat_message(src, "[runemessage]", FALSE, list("emote"), audible = FALSE)
-			else if(blind_message)
-				M.show_message(blind_message, AUDIBLE_MESSAGE)
-		else
-			AM.show_message(message, VISIBLE_MESSAGE, blind_message, AUDIBLE_MESSAGE)
+	SEND_GLOBAL_SIGNAL(COMSIG_VISIBLE_MESSAGE, src, message, blind_message, exclude_mobs, range, runemessage, isbelly(loc))
 //CHOMPEdit End
 // Show a message to all mobs and objects in earshot of this atom
 // Use for objects performing audible actions
