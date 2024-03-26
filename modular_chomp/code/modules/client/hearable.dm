@@ -18,14 +18,32 @@
 	UnregisterSignal(SSdcs, COMSIG_VISIBLE_MESSAGE)
 
 /datum/component/hearer/proc/on_message(var/dcs,var/atom/source, var/message, var/blind_message, var/list/exclude_mobs, var/range, var/runemessage = "<span style='font-size: 1.5em'>👁</span>", var/inbelly)
-	if(inbelly && !(parent_atom.loc == source.loc))
+	if(!AreConnectedZLevels(source.z,parent_atom.z))
 		return
-	if(get_dist(source,parent_atom) > range)
+	if(inbelly && !(parent_atom.loc == source.loc))
 		return
 	if(parent_atom in exclude_mobs)
 		return
-	if(!AreConnectedZLevels(source.z,parent_atom.z))
+	//Most expensive checks last
+	if(get_dist(source,parent_atom) > range)
 		return
+
+	if(source.z != parent_atom.z)
+		if(source.z > parent_atom.z)
+			var/turf/curturf = GetAbove(get_turf(parent_atom))
+			while(isopenspace(curturf) && curturf.z != source.z)
+				curturf = GetAbove(curturf)
+
+			if(curturf.z != source.z)
+				return
+		else
+			var/turf/curturf = GetAbove(get_turf(source))
+			while(isopenspace(curturf) && curturf.z != parent_atom.z)
+				curturf = GetAbove(curturf)
+
+			if(curturf.z != parent_atom.z)
+				return
+
 
 	if(ismob(parent_atom))
 		var/mob/M = parent_atom
