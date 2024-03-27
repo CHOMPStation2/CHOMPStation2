@@ -106,7 +106,7 @@ I think I covered everything.
 	special_attack_max_range = 10
 	special_attack_cooldown = 80
 
-	plane = ABOVE_MOB_PLANE
+	plane = MOB_PLANE //CHOMPEdit
 
 	//Dragon vars
 	var/notame

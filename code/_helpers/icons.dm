@@ -98,7 +98,8 @@
 //CHOMPEdit Begin
 // Ported from /tg/station
 // Creates a single icon from a given /atom or /image.  Only the first argument is required.
-/proc/getFlatIcon(image/appearance, defdir, deficon, defstate, defblend, start = TRUE, no_anim = FALSE, force_south = FALSE)
+// appearance_flags indicates whether appearance_flags should be respected (at the cost of about 10-20% perf)
+/proc/getFlatIcon(image/appearance, defdir, deficon, defstate, defblend, start = TRUE, no_anim = FALSE, force_south = FALSE, appearance_flags = FALSE)
 	// Loop through the underlays, then overlays, sorting them into the layers list
 	#define PROCESS_OVERLAYS_OR_UNDERLAYS(flat, process, base_layer) \
 		for (var/i in 1 to process.len) { \
@@ -130,7 +131,6 @@
 
 	if(!appearance || appearance.alpha <= 0)
 		return icon(flat_template)
-
 	if(start)
 		if(!defdir)
 			defdir = appearance.dir
@@ -144,7 +144,9 @@
 	var/curicon = appearance.icon || deficon
 	var/curstate = appearance.icon_state || defstate
 	var/curdir = (!appearance.dir || appearance.dir == SOUTH) ? defdir : appearance.dir
-	if(force_south) curdir = SOUTH
+
+	if(force_south)
+		curdir = SOUTH
 
 	var/render_icon = curicon
 
@@ -205,11 +207,21 @@
 			if(layer_image.alpha == 0)
 				continue
 
+			// variables only relevant when accounting for appearance_flags:
+			var/apply_color = TRUE
+			var/apply_alpha = TRUE
+
 			if(layer_image == copy) // 'layer_image' is an /image based on the object being flattened.
 				curblend = BLEND_OVERLAY
 				add = icon(layer_image.icon, layer_image.icon_state, base_icon_dir)
 			else // 'I' is an appearance object.
-				add = getFlatIcon(image(layer_image), curdir, curicon, curstate, curblend, FALSE, no_anim)
+				var/image/layer_as_image = image(layer_image)
+				if(appearance_flags)
+					if(layer_as_image.appearance_flags & RESET_COLOR)
+						apply_color = FALSE
+					if(layer_as_image.appearance_flags & RESET_ALPHA)
+						apply_alpha = FALSE
+				add = getFlatIcon(layer_as_image, curdir, curicon, curstate, curblend, FALSE, no_anim, force_south, appearance_flags)
 			if(!add)
 				continue
 
@@ -224,7 +236,6 @@
 				|| addX2 != flatX2 \
 				|| addY1 != flatY1 \
 				|| addY2 != flatY2 \
-
 			)
 				// Resize the flattened icon so the new icon fits
 				flat.Crop(
@@ -239,17 +250,30 @@
 				flatY1 = addY1
 				flatY2 = addY2
 
+			if(appearance_flags)
+				// apply parent's color/alpha to the added layers if the layer didn't opt
+				if(apply_color && appearance.color)
+					if(islist(appearance.color))
+						add.MapColors(arglist(appearance.color))
+					else
+						add.Blend(appearance.color, ICON_MULTIPLY)
+
+				if(apply_alpha && appearance.alpha < 255)
+					add.Blend(rgb(255, 255, 255, appearance.alpha), ICON_MULTIPLY)
+
 			// Blend the overlay into the flattened icon
 			flat.Blend(add, blendMode2iconMode(curblend), layer_image.pixel_x + 2 - flatX1, layer_image.pixel_y + 2 - flatY1)
 
-		if(appearance.color)
-			if(islist(appearance.color))
-				flat.MapColors(arglist(appearance.color))
-			else
-				flat.Blend(appearance.color, ICON_MULTIPLY)
+		if(!appearance_flags)
+			// If we didn't apply parent colors individually per layer respecting appearance_flags, then do it just the one time now
+			if(appearance.color)
+				if(islist(appearance.color))
+					flat.MapColors(arglist(appearance.color))
+				else
+					flat.Blend(appearance.color, ICON_MULTIPLY)
 
-		if(appearance.alpha < 255)
-			flat.Blend(rgb(255, 255, 255, appearance.alpha), ICON_MULTIPLY)
+			if(appearance.alpha < 255)
+				flat.Blend(rgb(255, 255, 255, appearance.alpha), ICON_MULTIPLY)
 
 		if(no_anim)
 			//Clean up repeated frames
@@ -609,7 +633,7 @@ GLOBAL_LIST_EMPTY(cached_examine_icons)
  * * sourceonly - if TRUE, only generate the asset and send back the asset url, instead of tags that display the icon to players
  * * extra_clases - string of extra css classes to use when returning the icon string
  */
-/proc/icon2html(atom/thing, client/target, icon_state, dir = SOUTH, frame = 1, moving = FALSE, sourceonly = FALSE, extra_classes = null)
+/proc/icon2html(atom/thing, client/target, icon_state, dir = SOUTH, frame = 1, moving = FALSE, sourceonly = FALSE, extra_classes = null) //CHOMPEdit
 	if (!thing)
 		return
 	//if(SSlag_switch.measures[DISABLE_USR_ICON2HTML] && usr && !HAS_TRAIT(usr, TRAIT_BYPASS_MEASURES))
@@ -654,7 +678,7 @@ GLOBAL_LIST_EMPTY(cached_examine_icons)
 			icon_state = thing.icon_state
 			//Despite casting to atom, this code path supports mutable appearances, so let's be nice to them
 			//if(isnull(icon_state) || (isatom(thing) && thing.flags_1 & HTML_USE_INITAL_ICON_1))
-			if(isnull(icon_state) || isatom(thing))
+			if(isnull(icon_state) && isatom(thing))
 				icon_state = initial(thing.icon_state)
 				if (isnull(dir))
 					dir = initial(thing.dir)

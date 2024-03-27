@@ -14,7 +14,7 @@ SUBSYSTEM_DEF(statpanels)
 	///how many subsystem fires between most tab updates
 	var/default_wait = 10
 	///how many subsystem fires between updates of misc tabs
-	var/misc_wait = 7
+	var/misc_wait = 3
 	///how many subsystem fires between updates of the status tab
 	var/status_wait = 2
 	///how many subsystem fires between updates of the MC tab
@@ -52,9 +52,6 @@ SUBSYSTEM_DEF(statpanels)
 
 		if(!target.stat_panel.is_ready())
 			continue
-
-		if(target.stat_tab == "Examine")
-			set_examine_tab(target)
 
 		if(target.stat_tab == "Status" && num_fires % status_wait == 0)
 			set_status_tab(target)
@@ -98,19 +95,15 @@ SUBSYSTEM_DEF(statpanels)
 
 			if(update_actions && num_fires % default_wait == 0)
 				set_action_tabs(target, target_mob)
-
 			//Update every fire if tab is open, otherwise update every 7 fires
-			if((target.stat_tab in target.misc_tabs) || (num_fires % misc_wait == 0))
+			if((num_fires % misc_wait == 0))
 				update_misc_tabs(target,target_mob)
-			// Handle the examined turf of the stat panel
 
-			if(target_mob?.listed_turf && num_fires % default_wait == 0)
-				if(!target_mob.TurfAdjacent(target_mob.listed_turf) || isnull(target_mob.listed_turf))
-					target.stat_panel.send_message("remove_listedturf")
-					target_mob.listed_turf = null
-
-				//else if(target.stat_tab == target_mob?.listed_turf.name || !(target_mob?.listed_turf.name in target.panel_tabs))
-					//set_turf_examine_tab(target, target_mob)
+		var/datum/object_window_info/obj_window = target.obj_window
+		if(obj_window)
+			if(obj_window.flags & TURFLIST_UPDATE_QUEUED)
+				immediate_send_stat_data(target)
+			obj_window.flags = 0
 
 		if(MC_TICK_CHECK)
 			return
@@ -168,7 +161,7 @@ SUBSYSTEM_DEF(statpanels)
 	examine_update += "[target.examine_icon]&emsp;<font size='5'>[description_holders["name"]]</font>" //The name, written in big letters.
 	examine_update += "[description_holders["desc"]]" //the default examine text.
 	if(description_holders["info"])
-		examine_update += "<font color='#084B8A'><b>[description_holders["info"]]</b></font><br />" //Blue, informative text.
+		examine_update += "<font color='#084B8A'><b>[replacetext(description_holders["info"], "\n", "<BR>")]</b></font><br />" //Blue, informative text.
 	if(description_holders["interactions"])
 		for(var/line in description_holders["interactions"])
 			examine_update += "<font color='#084B8A'><b>[line]</b></font><br />"
@@ -205,6 +198,8 @@ SUBSYSTEM_DEF(statpanels)
 	//target.stat_panel.send_message("update_spells", list(spell_tabs = target.spell_tabs, actions = actions))
 
 /datum/controller/subsystem/statpanels/proc/set_turf_examine_tab(client/target, mob/target_mob)
+	if(!target)//statbrowser hasnt fired yet and we were called from immediate_send_stat_data()
+		return
 	var/list/overrides = list()
 	for(var/image/target_image as anything in target.images)
 		if(!target_image.loc || target_image.loc.loc != target_mob.listed_turf || !target_image.override)
@@ -225,6 +220,8 @@ SUBSYSTEM_DEF(statpanels)
 
 	/// Set the atoms we're meant to display
 	var/datum/object_window_info/obj_window = target.obj_window
+	if(!obj_window)
+		return // previous one no longer exists
 	obj_window.atoms_to_show = atoms_to_display
 	START_PROCESSING(SSobj_tab_items, obj_window)
 	refresh_client_obj_view(target)
@@ -296,9 +293,9 @@ SUBSYSTEM_DEF(statpanels)
 	if(!target.stat_panel.is_ready())
 		return FALSE
 
-	//if(target.stat_tab == "Examine")
-		//set_examine_tab(target)
-		//return TRUE
+	if(target.stat_tab == "Examine")
+		set_examine_tab(target)
+		return TRUE
 
 	if(target.stat_tab == "Status")
 		set_status_tab(target)
@@ -371,6 +368,7 @@ SUBSYSTEM_DEF(statpanels)
 	var/actively_tracking = FALSE
 	///For reusing this logic for examines
 	var/atom/examine_target
+	var/flags = 0
 
 /datum/object_window_info/New(client/parent)
 	. = ..()
@@ -396,9 +394,10 @@ SUBSYSTEM_DEF(statpanels)
 		var/atom/thing = to_make[index]
 
 		var/generated_string
-		if(ismob(thing) || length(thing.overlays) > 2)
-			var/force_south = TRUE
-			if(isturf(thing)) force_south = FALSE
+		if(ismob(thing) || length(thing.overlays) > 0)
+			var/force_south = FALSE
+			if(isliving(thing))
+				force_south = TRUE
 			generated_string = costly_icon2html(thing, parent, sourceonly=TRUE, force_south = force_south)
 		else
 			generated_string = icon2html(thing, parent, sourceonly=TRUE)
@@ -423,10 +422,14 @@ SUBSYSTEM_DEF(statpanels)
 		COMSIG_MOB_LOGOUT = PROC_REF(on_mob_logout),
 	)
 	AddComponent(/datum/component/connect_mob_behalf, parent, connections)
+	RegisterSignal(parent.mob.listed_turf, COMSIG_ATOM_ENTERED, PROC_REF(turflist_changed))
+	RegisterSignal(parent.mob.listed_turf, COMSIG_ATOM_EXITED, PROC_REF(turflist_changed))
 	actively_tracking = TRUE
 
 /datum/object_window_info/proc/stop_turf_tracking()
 	qdel(GetComponent(/datum/component/connect_mob_behalf))
+	UnregisterSignal(parent.mob.listed_turf, COMSIG_ATOM_ENTERED)
+	UnregisterSignal(parent.mob.listed_turf, COMSIG_ATOM_EXITED)
 	actively_tracking = FALSE
 
 /datum/object_window_info/proc/on_mob_move(mob/source)
@@ -439,6 +442,16 @@ SUBSYSTEM_DEF(statpanels)
 	SIGNAL_HANDLER
 	on_mob_move(parent.mob)
 
+/datum/object_window_info/proc/turflist_changed(mob/source)
+	if(!parent)//statbrowser hasnt fired yet and we still have a pending action
+		return
+	SIGNAL_HANDLER
+	if(!(flags & TURFLIST_UPDATED)) //Limit updates to 1 per tick
+		SSstatpanels.immediate_send_stat_data(parent)
+		flags |= TURFLIST_UPDATED
+	else if(!(flags & TURFLIST_UPDATE_QUEUED))
+		flags |= TURFLIST_UPDATE_QUEUED
+
 /// Clears any cached object window stuff
 /// We use hard refs cause we'd need a signal for this anyway. Cleaner this way
 /datum/object_window_info/proc/viewing_atom_deleted(atom/deleted)
@@ -448,14 +461,17 @@ SUBSYSTEM_DEF(statpanels)
 	atoms_to_images -= deleted
 
 /mob/proc/set_listed_turf(turf/new_turf)
-	listed_turf = new_turf
 	if(!client)
+		listed_turf = new_turf
 		return
 	if(!client.obj_window)
 		client.obj_window = new(client)
+	if(!new_turf)
+		client.obj_window.stop_turf_tracking() //Needs to go before listed_turf is set to null so signals can be removed
+	listed_turf = new_turf
+
 	if(listed_turf)
 		client.stat_panel.send_message("create_listedturf", listed_turf.name)
 		client.obj_window.start_turf_tracking()
 	else
 		client.stat_panel.send_message("remove_listedturf")
-		client.obj_window.stop_turf_tracking()

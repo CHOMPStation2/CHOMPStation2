@@ -105,6 +105,7 @@
 #include "code\__defines\sprite_sheets_ch.dm"
 #include "code\__defines\sqlite_defines.dm"
 #include "code\__defines\stat_tracking.dm"
+#include "code\__defines\statpanel_ch.dm"
 #include "code\__defines\subsystems.dm"
 #include "code\__defines\supply.dm"
 #include "code\__defines\targeting.dm"
