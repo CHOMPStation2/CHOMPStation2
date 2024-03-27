@@ -146,10 +146,10 @@
 		slot_wear_mask_str = 'icons/inventory/face/mob_vr.dmi'
 		)
 	sprite_sheets = list(
-		SPECIES_TESHARI		= 'icons/inventory/face/mob_teshari.dmi',
-		SPECIES_VOX 		= 'icons/inventory/face/mob_vox.dmi',
-		SPECIES_TAJ 		= 'icons/inventory/face/mob_tajaran.dmi',
-		SPECIES_UNATHI 		= 'icons/inventory/face/mob_unathi.dmi',
+		SPECIES_TESHARI		= 'icons/inventory/face/mob_vr_teshari.dmi',	//Chompedit start: Some of these wernt using the virgo
+		SPECIES_VOX 		= 'icons/inventory/face/mob_vr_vox.dmi',		//files for some reason, which wasnt an issue until I had
+		SPECIES_TAJ 		= 'icons/inventory/face/mob_vr_tajaran.dmi',	//to fix gas mask sprites. Now these four lines use the
+		SPECIES_UNATHI 		= 'icons/inventory/face/mob_vr_unathi.dmi',		// virgo ones. //ChompEdit End.
 		SPECIES_SERGAL 		= 'icons/inventory/face/mob_vr_sergal.dmi',
 		SPECIES_NEVREAN 	= 'icons/inventory/face/mob_vr_nevrean.dmi',
 		SPECIES_ZORREN_HIGH	= 'icons/inventory/face/mob_vr_fox.dmi',
