@@ -26149,6 +26149,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
+"bBk" = (
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/hallway/secondary/seconddeck/research_medical)
 "bBl" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/machinery/computer/general_air_control/large_tank_control{
@@ -52610,6 +52614,10 @@
 /obj/effect/floor_decal/corner/purple/border,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
+"hxN" = (
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/hallway/secondary/seconddeck/research_medical)
 "hyf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -75044,6 +75052,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
+/obj/random/junk,
 /turf/simulated/floor/plating,
 /area/hallway/secondary/seconddeck/research_medical)
 "uxW" = (
@@ -129905,7 +129914,7 @@ vHd
 two
 vID
 uEF
-uEF
+bBk
 nCU
 two
 ikX
@@ -130162,7 +130171,7 @@ uxr
 uEF
 two
 uEF
-uEF
+hxN
 uEF
 vID
 two
@@ -130674,7 +130683,7 @@ qUo
 rRg
 oiA
 uEF
-uEF
+bBk
 vID
 two
 uEF
@@ -131189,14 +131198,14 @@ uEF
 uEF
 vID
 vID
-uEF
+hxN
 uEF
 uEF
 vID
-uEF
+bBk
 two
 vID
-uEF
+hxN
 two
 mAU
 sPy
@@ -131444,14 +131453,14 @@ cXZ
 uEF
 vID
 vID
+hxN
 uEF
-uEF
-uEF
+bBk
 uEF
 vID
 uEF
 uEF
-uEF
+hxN
 two
 vID
 uEF
@@ -131699,7 +131708,7 @@ kwy
 liq
 mnf
 cXZ
-uEF
+bBk
 two
 two
 two
@@ -131712,7 +131721,7 @@ two
 uEF
 uEF
 uEF
-uEF
+bBk
 two
 ttQ
 jjH
@@ -131963,7 +131972,7 @@ vID
 vID
 two
 uEF
-uEF
+bBk
 uEF
 vKX
 two
@@ -132216,19 +132225,19 @@ ecy
 cXZ
 cXZ
 uEF
-uEF
+hxN
 uEF
 vID
 two
 vID
 uEF
-uEF
+hxN
 vID
 two
 xwT
 two
 uEF
-uEF
+bBk
 ooT
 ooT
 aaa
@@ -132485,7 +132494,7 @@ uEF
 two
 two
 two
-uEF
+hxN
 uEF
 ooT
 ooT
@@ -132739,7 +132748,7 @@ two
 two
 two
 uEF
-uEF
+bBk
 two
 vID
 nCU
@@ -132993,11 +133002,11 @@ ooT
 pgN
 uEF
 uEF
+hxN
 uEF
+bBk
 uEF
-uEF
-uEF
-uEF
+hxN
 two
 vID
 vID
@@ -133515,7 +133524,7 @@ xzs
 uEF
 uEF
 uEF
-uEF
+hxN
 uEF
 uEF
 vID
@@ -133774,7 +133783,7 @@ two
 two
 two
 uEF
-uEF
+bBk
 uEF
 vID
 ooT
@@ -134024,7 +134033,7 @@ aaa
 ooT
 uEF
 uEF
-uEF
+hxN
 two
 two
 uEF
