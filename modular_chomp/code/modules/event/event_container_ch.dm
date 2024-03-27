@@ -35,6 +35,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Nothing",				/datum/event/nothing,						400),
 		// Bluescreens APCs, but they still work
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "APC Damage",			/datum/event/apc_damage,					20, 	list(ASSIGNMENT_ENGINEER = 20), min_jobs = list(ASSIGNMENT_ENGINEER = 1)),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Aurora Caelus",			/datum/event/aurora_caelus,					2,		list(), 1),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Brand Intelligence",	/datum/event/brand_intelligence,			20, 	list(ASSIGNMENT_JANITOR = 25),	1, min_jobs = list(ASSIGNMENT_ENGINEER = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Canister Leak",			/datum/event/canister_leak,					10, 	list(ASSIGNMENT_ENGINEER = 20)),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Economic News",			/datum/event/economic_event,				300),
@@ -44,6 +45,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Money Lotto",			/datum/event/money_lotto, 					0, 		list(ASSIGNMENT_ANY = 1), 1, 5, 15),
 		//new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Mundane News", 		/datum/event/mundane_news, 					300),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Shipping Error",		/datum/event/shipping_error	, 				30, 	list(ASSIGNMENT_ANY = 2), 0),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Space Dust",			/datum/event/dust,	 						0, 		list(ASSIGNMENT_ENGINEER = 20), 0, 0, 50),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Trivial News",			/datum/event/trivial_news, 					400),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Lore News",				/datum/event/lore_news, 					400),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Supply Demand",			/datum/event/supply_demand,					0,		list(ASSIGNMENT_ANY = 5, ASSIGNMENT_SCIENCE = 15, ASSIGNMENT_GARDENER = 10, ASSIGNMENT_ENGINEER = 10, ASSIGNMENT_MEDICAL = 15), 1, min_jobs = list(ASSIGNMENT_CARGO = 1)),
@@ -53,8 +55,6 @@
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Wallrot",				/datum/event/wallrot, 						0,		list(ASSIGNMENT_ENGINEER = 30, ASSIGNMENT_GARDENER = 50), 1),
 	)
 	add_disabled_events(list(
-//DOes not work		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Space Dust",/datum/event/dust,	 						0, 		list(ASSIGNMENT_ENGINEER = 20), 0, 0, 50),
-//no		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Aurora Caelus",		/datum/event/aurora_caelus,					2,		list(), 1), //YW EDIT
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Lost Carp",				/datum/event/carp_migration, 				0, 		list(ASSIGNMENT_SECURITY = 40), 1, min_jobs = list(ASSIGNMENT_SECURITY = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Ian Storm",				/datum/event/ianstorm,	 					1,		list(), 1),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Supply Demand",			/datum/event/supply_demand,					0,		list(ASSIGNMENT_ANY = 5, ASSIGNMENT_SCIENCE = 15, ASSIGNMENT_GARDENER = 10, ASSIGNMENT_ENGINEER = 10, ASSIGNMENT_MEDICAL = 15), 1, min_jobs = list(ASSIGNMENT_CARGO = 1)),
@@ -99,6 +99,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Rogue Drones",				/datum/event/rogue_drone, 				-30,	list(ASSIGNMENT_SECURITY = 25, ASSIGNMENT_HOS = 35, ASSIGNMENT_WARDEN = 35), min_jobs = list(ASSIGNMENT_SECURITY = 2)),
 		// Radiation, but only in space.
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Solar Storm",				/datum/event/solar_storm, 				20,		list(ASSIGNMENT_ENGINEER = 40, ASSIGNMENT_SECURITY = 20), 1),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Space Dust",				/datum/event/dust,	 					0,		list(ASSIGNMENT_ENGINEER = 20), 1, 0, 50),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Spacefish Migration",		/datum/event/spacefish_migration,		0, 		list(ASSIGNMENT_SECURITY = 40, ASSIGNMENT_MEDICAL = 5), 1, min_jobs = list(ASSIGNMENT_SECURITY = 3)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Spider Infestation",		/datum/event/spider_infestation, 		-20,	list(ASSIGNMENT_SECURITY = 30, ASSIGNMENT_HOS = 20, ASSIGNMENT_WARDEN = 20), 0, min_jobs = list(ASSIGNMENT_SECURITY = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Supply Demand",			/datum/event/supply_demand,				0,		list(ASSIGNMENT_ANY = 5, ASSIGNMENT_SCIENCE = 15, ASSIGNMENT_GARDENER = 10, ASSIGNMENT_ENGINEER = 10, ASSIGNMENT_MEDICAL = 15), 1),
@@ -109,9 +110,6 @@
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Meteor Shower",			/datum/event/meteor_wave,				30,		list(ASSIGNMENT_ENGINEER = 20), min_jobs = list(ASSIGNMENT_ENGINEER = 3)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Random Antagonist",		/datum/event/random_antag,		 		2.5,	list(ASSIGNMENT_SECURITY = 1), 1, 0, 5),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Carp School",				/datum/event/carp_migration,			-20, 	list(ASSIGNMENT_ENGINEER = 10, ASSIGNMENT_SECURITY = 30, ASSIGNMENT_HOS = 10, ASSIGNMENT_WARDEN = 5), 1, min_jobs = list(ASSIGNMENT_SECURITY = 2)),
-		//Commenting this event out, the pod is not mapped in.
-		//Spacedust doesn't work, commenting this out.
-		//new /datum/event_meta(EVENT_LEVEL_MODERATE, "Space Dust",				/datum/event/dust,	 					0,		list(ASSIGNMENT_ENGINEER = 20), 1, 0, 50),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Supply Demand",			/datum/event/supply_demand,				0,		list(ASSIGNMENT_ANY = 5, ASSIGNMENT_SCIENCE = 15, ASSIGNMENT_GARDENER = 10, ASSIGNMENT_ENGINEER = 10, ASSIGNMENT_MEDICAL = 15), 1),
 		//Check if wormhole code is good and then move to enabled.
 //		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Wormholes",				/datum/event/wormholes,	 				20,		list(ASSIGNMENT_ANY = 5)),
