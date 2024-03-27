@@ -5,8 +5,11 @@ import { Button, Flex, LabeledList } from '../../../components';
 import { stats } from './constants';
 
 export const VoreContentsPanel = (props) => {
-  const { act, data } = useBackend<{ show_pictures: BooleanLike }>();
-  const { show_pictures } = data;
+  const { act, data } = useBackend<{
+    show_pictures: BooleanLike;
+    icon_overflow: BooleanLike;
+  }>();
+  const { show_pictures, icon_overflow } = data;
   const { contents, belly, outside = false } = props;
 
   return (
@@ -22,7 +25,7 @@ export const VoreContentsPanel = (props) => {
         </Button>
       )) ||
         null}
-      {(show_pictures && (
+      {(show_pictures && !icon_overflow && (
         <Flex wrap="wrap" justify="center" align="center">
           {contents.map((thing) => (
             <Flex.Item key={thing} basis="33%">

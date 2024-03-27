@@ -137,7 +137,11 @@
 				 //these are all external sound triggers now, so it's ok.
 
 	if(emote_active)
-		var/list/EL = emote_lists?[digest_mode]
+		//ChompEDIT START runtime, emote_lists can be = ""
+		var/list/EL
+		if(islist(emote_lists))
+			EL = emote_lists[digest_mode]
+		//ChompEDIT END
 		if((LAZYLEN(EL) || LAZYLEN(emote_lists[DM_HOLD_ABSORBED]) || (digest_mode == DM_DIGEST && LAZYLEN(emote_lists[DM_HOLD])) || (digest_mode == DM_SELECT && (LAZYLEN(emote_lists[DM_HOLD])||LAZYLEN(emote_lists[DM_DIGEST])||LAZYLEN(emote_lists[DM_ABSORB])) )) && next_emote <= world.time)
 			var/living_count = 0
 			var/absorbed_count = 0

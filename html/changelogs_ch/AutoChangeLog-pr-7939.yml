@@ -1,5 +1,0 @@
-author: "Aroliacue"
-delete-after: True
-changes:
-  - image: "Fixed Viper Suit sprite being off-center by one pixel."
-  - image: "Fixed a bunch of Snake Alt Suitsprites not being displayed properly."

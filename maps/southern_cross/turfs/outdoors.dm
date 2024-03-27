@@ -10,6 +10,7 @@
 #define TEMPERATURE_SIF 243.15 // Roughly -30C / -22F
 #define TEMPERATURE_ALTSIF 225.15
 
+
 /turf/simulated/floor/outdoors/mud/sif/planetuse
 	oxygen		= MOLES_O2SIF
 	nitrogen	= MOLES_N2SIF
@@ -142,7 +143,6 @@
 	oxygen		= MOLES_O2SIF
 	nitrogen	= MOLES_N2SIF
 	temperature	= TEMPERATURE_ALTSIF
-	
 /turf/simulated/floor/tiled/asteroid_steel //CHOMP Edit now I'm adding shit here now too. Abandoned temple.
 	oxygen		= MOLES_O2SIF
 	nitrogen	= MOLES_N2SIF

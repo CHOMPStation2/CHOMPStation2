@@ -33,7 +33,7 @@ var/list/holder_mob_icon_cache = list()
 	START_PROCESSING(SSobj, src)
 
 //CHOMPEdit Start - Add status so that you can see where you are...
-/mob/living/Stat()
+/mob/living/get_status_tab_items()
 	. = ..()
 	if(. && istype(loc, /obj/item/weapon/holder))
 		var/location = ""
@@ -65,7 +65,8 @@ var/list/holder_mob_icon_cache = list()
 		else
 			location = "[H.loc]"
 		if (location != "" && statpanel("Status"))
-			stat("Location", location)
+			. += ""
+			. += "Location: [location]"
 //CHOMPEdit End
 
 /obj/item/weapon/holder/Entered(mob/held, atom/OldLoc)

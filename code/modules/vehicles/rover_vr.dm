@@ -216,7 +216,7 @@
 
 /obj/vehicle/train/rover/engine/verb/start_engine()
 	set name = "Start engine"
-	set category = "Vehicle"
+	set category = "Object.Vehicle" //ChompEDIT - TGPanel
 	set src in view(0)
 
 	if(!istype(usr, /mob/living/carbon/human))
@@ -237,7 +237,7 @@
 
 /obj/vehicle/train/rover/engine/verb/stop_engine()
 	set name = "Stop engine"
-	set category = "Vehicle"
+	set category = "Object.Vehicle" //ChompEDIT - TGPanel
 	set src in view(0)
 
 	if(!istype(usr, /mob/living/carbon/human))
@@ -253,7 +253,7 @@
 
 /obj/vehicle/train/rover/engine/verb/remove_key()
 	set name = "Remove key"
-	set category = "Vehicle"
+	set category = "Object.Vehicle" //ChompEDIT - TGPanel
 	set src in view(0)
 
 	if(!istype(usr, /mob/living/carbon/human))

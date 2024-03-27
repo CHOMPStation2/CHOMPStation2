@@ -60,6 +60,7 @@
 			if(!(I.robotic >= ORGAN_ROBOT))
 				user.visible_message("<span class='filter_notice'>[user] starts treating damage to [target]'s [I.name] with [tool_name].</span>", \
 				"<span class='filter_notice'>You start treating damage to [target]'s [I.name] with [tool_name].</span>" )
+				user.balloon_alert_visible("Starts treating damage to [target]'s [I.name]", "Treating damage on \the [I.name]") // CHOMPEdit
 
 	target.custom_pain("The pain in your [affected.name] is living hell!", 100)
 	..()
@@ -80,8 +81,10 @@
 			if(!(I.robotic >= ORGAN_ROBOT))
 				user.visible_message("<span class='notice'>[user] treats damage to [target]'s [I.name] with [tool_name].</span>", \
 				"<span class='notice'>You treat damage to [target]'s [I.name] with [tool_name].</span>" )
+				user.balloon_alert_visible("Starts treating damage to [target]'s [I.name]", "Treating damage to \the [I.name]") // CHOMPEdit
 				if(I.organ_tag == O_BRAIN && I.status == ORGAN_DEAD && target.can_defib == 0) //Let people know they still got more work to get the brain back into working order.
 					to_chat(user, "<span class='warning'>You fix their [I] but the neurological structure is still heavily damaged and in need of repair.</span>")
+					user.balloon_alert("Fixed \the [I], neurological structure still in neeed of repair.") // CHOMPEdit
 				I.damage = 0
 				I.status = 0
 				if(I.organ_tag == O_EYES)
@@ -96,6 +99,7 @@
 
 	user.visible_message("<span class='warning'>[user]'s hand slips, getting mess and tearing the inside of [target]'s [affected.name] with \the [tool]!</span>", \
 	"<span class='warning'>Your hand slips, getting mess and tearing the inside of [target]'s [affected.name] with \the [tool]!</span>")
+	user.balloon_alert_visible("Slips, gettng mess and tearing the inside of [target]'s [affected.name]", "Your hand slips, getting mess and tearng the [affected.name]'s insides") // CHOMPEdit
 	var/dam_amt = 2
 
 	if (istype(tool, /obj/item/stack/medical/advanced/bruise_pack))
@@ -150,6 +154,7 @@
 			if(I.robotic >= ORGAN_ROBOT)
 				user.visible_message("[user] starts mending the damage to [target]'s [I.name]'s mechanisms.", \
 				"You start mending the damage to [target]'s [I.name]'s mechanisms." )
+				user.balloon_alert_visible("Mends damage to [target]'s [I.name]'s mechanisms.", "Mending damage to [I.name]'s mechanisms") // CHOMPEdit
 
 	target.custom_pain("The pain in your [affected.name] is living hell!",1)
 	..()
@@ -164,6 +169,7 @@
 			if(I.robotic >= ORGAN_ROBOT)
 				user.visible_message("<span class='notice'>[user] repairs [target]'s [I.name] with [tool].</span>", \
 				"<span class='notice'>You repair [target]'s [I.name] with [tool].</span>" )
+				user.balloon_alert_visible("Repairs [target]'s [I.name]", "Repaired \the [I.name]") // CHOMPEdit
 				I.damage = 0
 				if(I.organ_tag == O_EYES)
 					target.sdisabilities &= ~BLIND
@@ -175,6 +181,7 @@
 
 	user.visible_message("<span class='warning'>[user]'s hand slips, gumming up the mechanisms inside of [target]'s [affected.name] with \the [tool]!</span>", \
 	"<span class='warning'>Your hand slips, gumming up the mechanisms inside of [target]'s [affected.name] with \the [tool]!</span>")
+	user.balloon_alert_visible("Slips, gumming up the mechanisms inside of [target]'s [affected.name]", "Your hand slips, gumming up the mechanisms inside \the [affected.name]") // CHOMPEdit
 
 	target.adjustBruteLoss(5)
 
@@ -235,12 +242,14 @@
 
 	user.visible_message("<span class='filter_notice'>[user] starts to separate [target]'s [target.op_stage.current_organ] with \the [tool].</span>", \
 	"<span class='filter_notice'>You start to separate [target]'s [target.op_stage.current_organ] with \the [tool].</span>" )
+	user.balloon_alert_visible("Starts to separate [target]'s [target.op_stage.current_organ]", "Separating \the [target.op_stage.current_organ]") // CHOMPEdit
 	target.custom_pain("The pain in your [affected.name] is living hell!", 100)
 	..()
 
 /datum/surgery_step/internal/detatch_organ/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.visible_message("<span class='notice'>[user] has separated [target]'s [target.op_stage.current_organ] with \the [tool].</span>" , \
 	"<span class='notice'>You have separated [target]'s [target.op_stage.current_organ] with \the [tool].</span>")
+	user.balloon_alert_visible("Separates [target]'s [target.op_stage.current_organ]", "Separated \the [target.op_stage.current_organ]") // CHOMPEdit
 
 	var/obj/item/organ/I = target.internal_organs_by_name[target.op_stage.current_organ]
 	if(I && istype(I))
@@ -250,6 +259,7 @@
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.visible_message("<span class='warning'>[user]'s hand slips, slicing an artery inside [target]'s [affected.name] with \the [tool]!</span>", \
 	"<span class='warning'>Your hand slips, slicing an artery inside [target]'s [affected.name] with \the [tool]!</span>")
+	user.balloon_alert_visible("Slips, slicing an artery inside [target]'s [affected.name]", "Your hand slips, slicing anrtery inside [affected.name]") // CHOMPEdit
 	affected.createwound(CUT, rand(30,50), 1)
 
 ///////////////////////////////////////////////////////////////
@@ -300,11 +310,13 @@
 		to_chat(user, "<span class='notice'>You decide against preparing any organs for removal.</span>")
 		user.visible_message("<span class='filter_notice'>[user] starts pulling \the [tool] from [target]'s [affected].</span>", \
 		"<span class='filter_notice'>You start pulling \the [tool] from [target]'s [affected].</span>")
+		user.balloon_alert_visible("Starts pulling \the [tool] from [target]'s [affected]", "Pulling \the [tool] from \the [affected]") // CHOMPEdit
 
 	target.op_stage.current_organ = organ_to_remove
 
 	user.visible_message("<span class='filter_notice'>[user] starts removing [target]'s [target.op_stage.current_organ] with \the [tool].</span>", \
 	"<span class='filter_notice'>You start removing [target]'s [target.op_stage.current_organ] with \the [tool].</span>")
+	user.balloon_alert_visible("Starts removing [target]'s [target.op_stage.current_organ]", "Removing \the [target.op_stage.current_organ]") // CHOMPEdit
 	target.custom_pain("Someone's ripping out your [target.op_stage.current_organ]!", 100)
 	..()
 
@@ -313,11 +325,13 @@
 	if(!target.op_stage.current_organ) //They chose to remove their tool instead.
 		user.visible_message("<span class='notice'>[user] has removed \the [tool] from [target]'s [affected].</span>", \
 		"<span class='notice'>You have removed \the [tool] from [target]'s [affected].</span>")
+		user.balloon_alert_visible("Removes \the [tool] from [target]'s [affected]", "Removed \the [tool] from \the [affected]") // CHOMPEdit
 
 	// Extract the organ!
 	if(target.op_stage.current_organ)
 		user.visible_message("<span class='notice'>[user] has removed [target]'s [target.op_stage.current_organ] with \the [tool].</span>", \
 		"<span class='notice'>You have removed [target]'s [target.op_stage.current_organ] with \the [tool].</span>")
+		user.balloon_alert_visible("Removes [target]'s [target.op_stage.current_organ]", "Removed \the [target.op_stage.current_organ]") // CHOMPEdit
 		var/obj/item/organ/O = target.internal_organs_by_name[target.op_stage.current_organ]
 		if(O && istype(O))
 			O.removed(user)
@@ -327,6 +341,7 @@
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.visible_message("<span class='warning'>[user]'s hand slips, damaging [target]'s [affected.name] with \the [tool]!</span>", \
 	"<span class='warning'>Your hand slips, damaging [target]'s [affected.name] with \the [tool]!</span>")
+	user.balloon_alert_visible("Slips, damaging [target]'s [affected.name]", "Your hand slips, damaging \the [affected.name]") // CHOMPEdit
 	affected.createwound(BRUISE, 20)
 
 ///////////////////////////////////////////////////////////////
@@ -357,6 +372,7 @@
 
 	if((affected.robotic >= ORGAN_ROBOT) && !(O.robotic >= ORGAN_ROBOT))
 		to_chat(user, "<span class='danger'>You cannot install a naked organ into a robotic body.</span>")
+		user.balloon_alert("You cannot install a naked organ into a robotic body.") // CHOMPEdit
 		return SURGERY_FAILURE
 
 	if(!target.species)
@@ -376,6 +392,7 @@
 		organ_missing = 1
 	else
 		to_chat(user, "<span class='warning'>\The [target] already has [o_a][O.organ_tag].</span>")
+		user.balloon_alert("There is a [o_a][O.organ_tag] already!") // CHOMPEdit
 		return SURGERY_FAILURE
 
 	if(O && affected.organ_tag == O.parent_organ)
@@ -383,6 +400,7 @@
 
 	else
 		to_chat(user, "<span class='warning'>\The [O.organ_tag] [o_do] normally go in \the [affected.name].</span>")
+		user.balloon_alert("\The [O.organ_tag] [o_do] normally go in \the [affected.name]") // CHOMPEdit
 		return SURGERY_FAILURE
 
 	return ..() && organ_missing && organ_compatible
@@ -391,6 +409,7 @@
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.visible_message("<span class='filter_notice'>[user] starts transplanting \the [tool] into [target]'s [affected.name].</span>", \
 	"<span class='filter_notice'>You start transplanting \the [tool] into [target]'s [affected.name].</span>")
+	user.balloon_alert_visible("Strats transplanting \the [tool] into [target]'s [affected.name]", "Transplanting \the [tool] into \the [affected.name]") // CHOMPEdit
 	target.custom_pain("Someone's rooting around in your [affected.name]!", 100)
 	..()
 
@@ -398,6 +417,7 @@
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.visible_message("<span class='notice'>[user] has transplanted \the [tool] into [target]'s [affected.name].</span>", \
 	"<span class='notice'>You have transplanted \the [tool] into [target]'s [affected.name].</span>")
+	user.balloon_alert_visible("Transplants \the [tool] into [target]'s [affected.name]", "Transplanted \the [tool] into [affected.name]") // CHOMPEdit
 	var/obj/item/organ/O = tool
 	if(istype(O))
 		user.remove_from_mob(O)
@@ -406,6 +426,7 @@
 /datum/surgery_step/internal/replace_organ/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.visible_message("<span class='warning'>[user]'s hand slips, damaging \the [tool]!</span>", \
 	"<span class='warning'>Your hand slips, damaging \the [tool]!</span>")
+	user.balloon_alert_visible("Slips, damaging \the [tool]", "Your hand slips, damaging \the [tool]") // CHOMPEdit
 	var/obj/item/organ/I = tool
 	if(istype(I))
 		I.take_damage(rand(3,5),0)
@@ -449,12 +470,14 @@
 /datum/surgery_step/internal/attach_organ/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.visible_message("<span class='filter_notice'>[user] begins reattaching [target]'s [target.op_stage.current_organ] with \the [tool].</span>", \
 	"<span class='filter_notice'>You start reattaching [target]'s [target.op_stage.current_organ] with \the [tool].</span>")
+	user.balloon_alert_visible("Begins reattaching [target]'s [target.op_stage.current_organ]", "Reattaching [target.op_stage.current_organ]") // CHOMPEdit
 	target.custom_pain("Someone's digging needles into your [target.op_stage.current_organ]!", 100)
 	..()
 
 /datum/surgery_step/internal/attach_organ/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.visible_message("<span class='notice'>[user] has reattached [target]'s [target.op_stage.current_organ] with \the [tool].</span>" , \
 	"<span class='notice'>You have reattached [target]'s [target.op_stage.current_organ] with \the [tool].</span>")
+	user.balloon_alert_visible("Reattached [target]'s [target.op_stage.current_organ]", "Reattached [target.op_stage.current_organ]") // CHOMPEdit
 
 	var/obj/item/organ/I = target.internal_organs_by_name[target.op_stage.current_organ]
 	if(I && istype(I))
@@ -464,4 +487,5 @@
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.visible_message("<span class='warning'>[user]'s hand slips, damaging the flesh in [target]'s [affected.name] with \the [tool]!</span>", \
 	"<span class='warning'>Your hand slips, damaging the flesh in [target]'s [affected.name] with \the [tool]!</span>")
+	user.balloon_alert_visible("Slips, damaging the flesh in [target]'s [affected.name]", "Your hand slips, damaging the flesh in [affected.name]") // CHOMPEdit
 	affected.createwound(BRUISE, 20)

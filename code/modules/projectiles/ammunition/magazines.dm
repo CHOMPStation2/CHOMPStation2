@@ -404,7 +404,7 @@
 	ammo_type = /obj/item/ammo_casing/a9mm
 	matter = list(MAT_STEEL = 1200)
 	caliber = "9mm"
-	max_ammo = 50 //CHOMPedit
+	max_ammo = 20
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/m9mmt/empty
@@ -645,7 +645,7 @@
 	matter = list(MAT_STEEL = 10000)
 	ammo_type = /obj/item/ammo_casing/a545
 	w_class = ITEMSIZE_NORMAL // This should NOT fit in your pocket!!
-	max_ammo = 150 //CHOMPedit
+	max_ammo = 50
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/m545saw/empty
@@ -722,7 +722,7 @@
 	caliber = "7.62mm"
 	matter = list(MAT_STEEL = 2000)
 	ammo_type = /obj/item/ammo_casing/a762
-	max_ammo = 25 //CHOMPedit
+	max_ammo = 10
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/m762/empty
@@ -737,7 +737,7 @@
 	name = "extended magazine (7.62mm)"
 	icon_state = "m762"
 	matter = list(MAT_STEEL = 4000)
-	max_ammo = 50 //CHOMPedit
+	max_ammo = 20
 
 /obj/item/ammo_magazine/m762/ext/empty
 	initial_ammo = 0

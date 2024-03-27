@@ -210,7 +210,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 					prey_excludes += H
 					vore_selected.release_specific_contents(H)
 					N = 1
-					//addtimer(CALLBACK(src, .proc/removeMobFromPreyExcludes, weakref(H)), 1 MINUTES) //At the time of this PR, removeMobFromPreyExcludes breaks prey_excludes by deleting the list which causes problems with the Crossed() vore override before. This can be commented back in if that gets fixed.
+					//addtimer(CALLBACK(src, PROC_REF(removeMobFromPreyExcludes), weakref(H)), 1 MINUTES) //At the time of this PR, removeMobFromPreyExcludes breaks prey_excludes by deleting the list which causes problems with the Crossed() vore override before. This can be commented back in if that gets fixed.
 					break
 				else
 					to_chat(user, "The victim slips from your grasp!")

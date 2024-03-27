@@ -65,8 +65,8 @@
 /mob/living/simple_mob/animal/passive/mouse/New()
 	..()
 
-	verbs += /mob/living/proc/ventcrawl
-	verbs += /mob/living/proc/hide
+	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
 
 	if(name == initial(name))
 		name = "[name] ([rand(1, 1000)])"
@@ -227,5 +227,5 @@
 	desc = "A small [new_mouse_colour] rodent, often seen hiding in maintenance areas and making a nuisance of itself."
 	holder_type = text2path("/obj/item/weapon/holder/mouse/[new_mouse_colour]")
 	to_chat(src, SPAN_NOTICE("You are now a [new_mouse_colour] mouse!"))
-	verbs -= /mob/living/simple_mob/animal/passive/mouse/verb/set_mouse_colour
+	remove_verb(src,/mob/living/simple_mob/animal/passive/mouse/verb/set_mouse_colour) //CHOMPEdit TGPanel
 // CHOMPAdd End

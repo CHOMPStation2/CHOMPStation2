@@ -5,6 +5,23 @@
 /obj/random/tool,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/FieldLab)
+"bk" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/FieldLab)
+"ce" = (
+/obj/machinery/door/airlock/external,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/FieldLab)
 "cq" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -24,6 +41,14 @@
 "fl" = (
 /turf/template_noop,
 /area/survivalpod/superpose/FieldLab)
+"gR" = (
+/obj/machinery/power/terminal,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/FieldLab)
 "gS" = (
 /obj/structure/table/standard,
 /obj/item/device/multitool,
@@ -41,14 +66,30 @@
 /obj/structure/reagent_dispensers/fueltank/high,
 /turf/simulated/floor,
 /area/survivalpod/superpose/FieldLab)
+"iQ" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/FieldLab)
 "ja" = (
 /obj/machinery/light{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/FieldLab)
+"kZ" = (
+/obj/structure/closet/crate/solar,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/FieldLab)
 "ll" = (
-/obj/machinery/floodlight,
+/obj/machinery/power/rtg/advanced,
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/FieldLab)
 "lI" = (
@@ -118,8 +159,24 @@
 /obj/machinery/cell_charger,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/FieldLab)
+"qy" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor,
+/area/survivalpod/superpose/FieldLab)
 "qO" = (
 /obj/machinery/light/small,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/FieldLab)
+"si" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/FieldLab)
 "sx" = (
@@ -141,6 +198,10 @@
 /area/survivalpod/superpose/FieldLab)
 "xf" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/FieldLab)
 "xJ" = (
@@ -148,7 +209,6 @@
 	cell_type = /obj/item/weapon/cell/hyper;
 	dir = 8;
 	name = "Unknown APC";
-	operating = 0;
 	pixel_x = -24
 	},
 /obj/structure/cable{
@@ -158,8 +218,11 @@
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/FieldLab)
 "xU" = (
-/obj/structure/table/standard,
-/obj/random/tool,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/FieldLab)
 "yX" = (
@@ -167,6 +230,19 @@
 /obj/random/toolbox,
 /obj/item/weapon/cell/super,
 /turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/FieldLab)
+"zf" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor,
 /area/survivalpod/superpose/FieldLab)
 "zX" = (
 /obj/machinery/portable_atmospherics/hydroponics,
@@ -191,6 +267,28 @@
 /area/survivalpod/superpose/FieldLab)
 "DW" = (
 /turf/simulated/wall/r_wall,
+/area/survivalpod/superpose/FieldLab)
+"El" = (
+/obj/machinery/door/airlock,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/FieldLab)
+"FA" = (
+/obj/machinery/power/rtg/advanced,
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor,
 /area/survivalpod/superpose/FieldLab)
 "Gk" = (
 /obj/item/device/gps,
@@ -254,6 +352,14 @@
 /area/survivalpod/superpose/FieldLab)
 "Iq" = (
 /turf/simulated/floor,
+/area/survivalpod/superpose/FieldLab)
+"IJ" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/FieldLab)
 "IO" = (
 /obj/machinery/portable_atmospherics/hydroponics,
@@ -400,6 +506,15 @@
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/FieldLab)
+"Rl" = (
+/obj/machinery/light/small,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/FieldLab)
 "RT" = (
 /obj/structure/closet/crate,
 /obj/item/stack/material/plastic{
@@ -477,13 +592,19 @@
 "Wc" = (
 /turf/template_noop,
 /area/template_noop)
-"Xa" = (
-/obj/machinery/power/terminal{
-	dir = 4
-	},
+"Wt" = (
 /obj/structure/cable{
+	d1 = 1;
 	d2 = 8;
-	icon_state = "0-8"
+	icon_state = "1-8"
+	},
+/turf/simulated/floor,
+/area/survivalpod/superpose/FieldLab)
+"Xa" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/FieldLab)
@@ -553,9 +674,9 @@ Wc
 Wc
 fl
 mm
-HQ
+kZ
 aG
-xU
+Pk
 yX
 xJ
 mm
@@ -575,10 +696,10 @@ Wc
 Wc
 fl
 IV
-HQ
-HQ
-HQ
-HQ
+IJ
+xU
+xU
+iQ
 Xa
 IV
 fl
@@ -597,10 +718,10 @@ Wc
 Wc
 fl
 mV
-HQ
+Xa
 XZ
 MD
-Pk
+gR
 xf
 mV
 fl
@@ -619,7 +740,7 @@ Wc
 Wc
 fl
 DW
-mb
+El
 DW
 DW
 DW
@@ -641,7 +762,7 @@ Wc
 Wc
 fl
 mm
-HQ
+Xa
 mm
 Vh
 Gt
@@ -663,7 +784,7 @@ Wc
 Wc
 fl
 IV
-HQ
+Xa
 mV
 Vh
 Gt
@@ -685,7 +806,7 @@ Wc
 Wc
 fl
 IV
-qO
+Rl
 DW
 DW
 DW
@@ -707,7 +828,7 @@ Wc
 Wc
 fl
 IV
-HQ
+Xa
 mo
 HQ
 cq
@@ -729,13 +850,13 @@ Wc
 Wc
 fl
 IV
-HQ
-mo
-HQ
-HQ
-HQ
-mo
-HQ
+bk
+ce
+xU
+xU
+xU
+ce
+iQ
 HQ
 mo
 lI
@@ -757,7 +878,7 @@ DW
 DW
 DW
 DW
-HQ
+Xa
 HQ
 DW
 DW
@@ -776,10 +897,10 @@ IV
 HQ
 mm
 ll
-ll
-Iq
-Iq
-HQ
+FA
+zf
+qy
+si
 HQ
 Iq
 Iq
@@ -798,8 +919,8 @@ mV
 HQ
 mV
 ll
-ll
-Iq
+FA
+Wt
 Iq
 HQ
 HQ

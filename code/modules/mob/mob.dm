@@ -17,6 +17,8 @@
 	//ChompEDIT start - fix hard qdels
 	QDEL_NULL(plane_holder)
 	QDEL_NULL(hud_used)
+	for(var/key in alerts) //clear out alerts
+		clear_alert(key)
 	if(pulling)
 		stop_pulling() //TG does this on atom/movable but our stop_pulling proc is here so whatever
 
@@ -59,7 +61,6 @@
 	lastarea = get_area(src)
 	set_focus(src) // VOREStation Add - Key Handling
 	hook_vr("mob_new",list(src)) //VOREStation Code
-	update_transform() // Some mobs may start bigger or smaller than normal.
 	. = ..()
 	//return QDEL_HINT_HARDDEL_NOW Just keep track of mob references. They delete SO much faster now.
 
@@ -696,6 +697,7 @@
 	for(var/mob/M in viewers())
 		M.see(message)
 
+/* CHOMP Removal
 /mob/Stat()
 	..()
 	. = (is_client_active(10 MINUTES))
@@ -775,7 +777,18 @@
 						if(A.plane > plane)
 							continue
 						stat(A)
+*/
 
+/// Adds this list to the output to the stat browser
+/mob/proc/get_status_tab_items()
+	. = list()
+
+/// Gets all relevant proc holders for the browser statpenl
+/mob/proc/get_proc_holders()
+	. = list()
+	//if(mind)
+		//. += get_spells_for_statpanel(mind.spell_list)
+	//. += get_spells_for_statpanel(mob_spell_list)
 
 // facing verbs
 /mob/proc/canface()
@@ -1010,7 +1023,7 @@
 		visible_message("<span class='warning'><b>[usr] rips [selection] out of [src]'s body.</b></span>","<span class='warning'><b>[usr] rips [selection] out of your body.</b></span>")
 	valid_objects = get_visible_implants(0)
 	if(valid_objects.len == 1) //Yanking out last object - removing verb.
-		src.verbs -= /mob/proc/yank_out_object
+		remove_verb(src,/mob/proc/yank_out_object)  //CHOMPEdit
 		clear_alert("embeddedobject")
 
 	if(ishuman(src))
@@ -1200,7 +1213,7 @@
 /mob/proc/throw_mode_off()
 	src.in_throw_mode = 0
 	if(client)
-		if(a_intent == I_HELP || client.prefs.throwmode_loud)
+		if(client.prefs.throwmode_loud) //CHOMPEdit: Throw notices are based on prefs, and dont ignore said prefs if you're on help intent
 			src.visible_message("<span class='notice'>[src] relaxes from their ready stance.</span>","<span class='notice'>You relax from your ready stance.</span>")
 	if(src.throw_icon) //in case we don't have the HUD and we use the hotkey
 		src.throw_icon.icon_state = "act_throw_off"
@@ -1208,7 +1221,7 @@
 /mob/proc/throw_mode_on()
 	src.in_throw_mode = 1
 	if(client)
-		if(a_intent == I_HELP || client.prefs.throwmode_loud)
+		if(client.prefs.throwmode_loud) //CHOMPEdit: Throw notices are based on prefs, and dont ignore said prefs if you're on help
 			if(src.get_active_hand())
 				src.visible_message("<span class='warning'>[src] winds up to throw [get_active_hand()]!</span>","<span class='notice'>You wind up to throw [get_active_hand()].</span>")
 			else

@@ -176,8 +176,10 @@
 	var/injury_enrages = FALSE			// Do injuries enrage (aka strengthen) our mob? If yes, we'll interpret how hurt we are differently.
 	// VOREStation Add End
 
+	var/has_recoloured = FALSE
+
 /mob/living/simple_mob/Initialize()
-	verbs -= /mob/verb/observe
+	remove_verb(src,/mob/verb/observe) //CHOMPEdit TGPanel
 	health = maxHealth
 
 	if(ID_provided) //VOREStation Edit
@@ -193,12 +195,16 @@
 		add_eyes()
 
 	if(vore_active)	//CHOMPSTATION edit: Moved here so the verb is useable before initialising vorgans.
-		verbs |= /mob/living/simple_mob/proc/animal_nom
-		verbs |= /mob/living/proc/shred_limb
-	verbs |= /mob/living/simple_mob/proc/nutrition_heal //CHOMPSTATION edit
+		add_verb(src,/mob/living/simple_mob/proc/animal_nom) //CHOMPEdit TGPanel
+		add_verb(src,/mob/living/proc/shred_limb) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/proc/nutrition_heal) //CHOMPEdit TGPanel //CHOMPSTATION edit
 
 	if(organ_names)
 		organ_names = GET_DECL(organ_names)
+
+	if(config.allow_simple_mob_recolor)
+		add_verb(src,/mob/living/simple_mob/proc/ColorMate) //CHOMPEdit TGPanel
+
 
 	return ..()
 
@@ -285,11 +291,12 @@
 
 	. += ..()
 
-
-/mob/living/simple_mob/Stat()
-	..()
-	if(statpanel("Status") && show_stat_health)
-		stat(null, "Health: [round((health / getMaxHealth()) * 100)]%")
+//CHOMPEdit Begin
+/mob/living/simple_mob/get_status_tab_items()
+	. = ..()
+	. += ""
+	. += "Health: [round((health / getMaxHealth()) * 100)]%"
+//CHOMPEdit End
 
 /mob/living/simple_mob/lay_down()
 	..()
@@ -349,3 +356,14 @@
 	. = ..() 							// Calling parent here, actually updating our mob on how hurt we are.
 
 // VOREStation Add End
+
+/mob/living/simple_mob/proc/ColorMate()
+	set name = "Recolour"
+	set category = "Abilities"
+	set desc = "Allows to recolour once."
+
+	if(!has_recoloured)
+		var/datum/ColorMate/recolour = new /datum/ColorMate(usr)
+		recolour.tgui_interact(usr)
+		return
+	to_chat(usr, "You've already recoloured yourself once. You are only allowed to recolour yourself once during a around.")

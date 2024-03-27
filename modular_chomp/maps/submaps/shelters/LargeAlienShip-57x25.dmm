@@ -1,7 +1,25 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aj" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	dir = 1
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor,
+/area/survivalpod/superpose/LargeAlienShip)
 "ao" = (
-/obj/machinery/atmospherics/binary/circulator,
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4";
+	dir = 4
+	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
 "as" = (
@@ -18,6 +36,14 @@
 	oxygen = 0;
 	temperature = 80
 	},
+/area/survivalpod/superpose/LargeAlienShip)
+"aA" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/LargeAlienShip)
 "aG" = (
 /obj/structure/grille/cult{
@@ -50,10 +76,14 @@
 /turf/simulated/shuttle/floor/alienplating,
 /area/survivalpod/superpose/LargeAlienShip)
 "bc" = (
-/obj/machinery/power/supermatter/shard,
-/turf/simulated/floor/reinforced/nitrogen{
-	nitrogen = 82.1472
+/obj/machinery/power/grounding_rod/pre_mapped,
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	dir = 1
 	},
+/turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/LargeAlienShip)
 "bi" = (
 /turf/simulated/floor,
@@ -74,6 +104,12 @@
 "bv" = (
 /obj/structure/particle_accelerator/power_box{
 	dir = 8
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -103,17 +139,9 @@
 /turf/simulated/floor/wood/sif,
 /area/survivalpod/superpose/LargeAlienShip)
 "cp" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/power/emitter/gyrotron,
+/obj/structure/cable/yellow,
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
 "cB" = (
@@ -189,12 +217,12 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/LargeAlienShip)
 "dz" = (
-/obj/machinery/atmospherics/binary/circulator{
-	anchored = 1;
-	dir = 1
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor,
+/turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/LargeAlienShip)
 "dB" = (
 /obj/effect/floor_decal/techfloor{
@@ -214,6 +242,12 @@
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -294,11 +328,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/LargeAlienShip)
 "fr" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/obj/structure/cable/cyan{
+/obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
@@ -318,17 +348,17 @@
 	},
 /area/survivalpod/superpose/LargeAlienShip)
 "fK" = (
-/obj/structure/cable/cyan{
+/obj/machinery/power/tesla_coil,
+/obj/structure/cable/yellow{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/turf/simulated/floor,
+/turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/LargeAlienShip)
 "gc" = (
 /obj/effect/floor_decal/techfloor{
@@ -340,7 +370,10 @@
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
 "gt" = (
-/obj/structure/prop/statue/phoron,
+/obj/machinery/the_singularitygen/tesla{
+	anchored = 1;
+	pixel_y = 11
+	},
 /turf/simulated/floor/reinforced/nitrogen{
 	nitrogen = 82.1472
 	},
@@ -350,10 +383,24 @@
 /turf/simulated/floor/wood/sif,
 /area/survivalpod/superpose/LargeAlienShip)
 "gA" = (
-/obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	dir = 1
+	},
+/turf/simulated/floor,
+/area/survivalpod/superpose/LargeAlienShip)
+"gS" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -404,12 +451,32 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/LargeAlienShip)
+"iP" = (
+/obj/machinery/power/tesla_coil,
+/obj/structure/cable/yellow{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/LargeAlienShip)
 "iQ" = (
 /obj/structure/particle_accelerator/particle_emitter/center{
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -539,17 +606,27 @@
 /turf/simulated/shuttle/wall/alien/blue/no_join,
 /area/survivalpod/superpose/LargeAlienShip)
 "lJ" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
+/obj/machinery/power/tesla_coil,
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	dir = 1
 	},
-/turf/simulated/floor,
+/obj/structure/cable/yellow{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/LargeAlienShip)
 "mm" = (
-/obj/machinery/power/emitter/gyrotron,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/industrial/warning,
-/obj/structure/cable/cyan,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
 "mv" = (
@@ -618,12 +695,29 @@
 /turf/simulated/shuttle/floor/alienplating,
 /area/survivalpod/superpose/LargeAlienShip)
 "mK" = (
-/obj/machinery/power/emitter/gyrotron,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/industrial/warning,
-/obj/structure/cable/cyan,
 /turf/simulated/floor,
+/area/survivalpod/superpose/LargeAlienShip)
+"mO" = (
+/obj/structure/grille/cult{
+	name = "Alien grille"
+	},
+/obj/structure/window/phoronreinforced/full,
+/obj/structure/window/phoronreinforced{
+	dir = 4
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 8
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/LargeAlienShip)
 "mQ" = (
 /obj/structure/closet/alien,
@@ -652,9 +746,6 @@
 /area/survivalpod/superpose/LargeAlienShip)
 "nt" = (
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
 /turf/simulated/floor,
@@ -696,10 +787,18 @@
 /turf/simulated/shuttle/floor/yellow,
 /area/survivalpod/superpose/LargeAlienShip)
 "nC" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/structure/cable/yellow{
+	d2 = 8;
+	icon_state = "0-8";
+	dir = 2
+	},
+/obj/machinery/power/terminal{
 	dir = 4
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/LargeAlienShip)
 "oh" = (
 /obj/structure/prop/alien/pod/open,
@@ -712,15 +811,11 @@
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
 "oi" = (
+/obj/machinery/power/rad_collector,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/power/smes/buildable{
-	icon = 'icons/obj/alien_smes.dmi';
-	icon_state = "unit";
-	input_level = 950000;
-	name = "Alien Royal Capacitor";
-	output_level = 950000
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
 	},
-/obj/structure/cable/cyan,
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
 "op" = (
@@ -746,12 +841,17 @@
 /turf/simulated/shuttle/floor/alienplating,
 /area/survivalpod/superpose/LargeAlienShip)
 "ph" = (
-/obj/machinery/power/generator{
-	anchored = 1;
-	dir = 4
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/LargeAlienShip)
 "pi" = (
 /obj/structure/grille/cult{
@@ -812,18 +912,19 @@
 /area/survivalpod/superpose/LargeAlienShip)
 "qe" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/power/smes/buildable{
-	icon = 'icons/obj/alien_smes.dmi';
-	icon_state = "unit";
-	input_level = 950000;
-	name = "Alien Royal Capacitor";
-	output_level = 950000
-	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
 "qC" = (
 /obj/structure/bed/chair/comfy/black,
 /turf/simulated/floor/wood/sif,
+/area/survivalpod/superpose/LargeAlienShip)
+"qH" = (
+/obj/machinery/power/tesla_coil,
+/obj/structure/cable/yellow{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/LargeAlienShip)
 "qQ" = (
 /turf/simulated/shuttle/floor/alien,
@@ -843,9 +944,6 @@
 /area/survivalpod/superpose/LargeAlienShip)
 "rx" = (
 /obj/effect/floor_decal/industrial/warning/corner,
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
 "rI" = (
@@ -914,15 +1012,11 @@
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
 "uQ" = (
-/obj/machinery/power/rad_collector,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/structure/cable/cyan{
-	d2 = 2;
-	icon_state = "0-2"
-	},
+/obj/machinery/power/rad_collector,
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
 "uT" = (
@@ -932,10 +1026,16 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/LargeAlienShip)
 "uU" = (
-/obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
+/obj/machinery/power/smes/buildable/point_of_interest,
+/obj/structure/cable/yellow{
+	d2 = 8;
+	icon_state = "0-8";
+	dir = 2
+	},
+/obj/structure/cable/yellow{
+	d2 = 8;
+	icon_state = "0-8";
+	dir = 2
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -951,17 +1051,18 @@
 /turf/simulated/floor/carpet,
 /area/survivalpod/superpose/LargeAlienShip)
 "vH" = (
-/obj/structure/cable/cyan{
-	d1 = 2;
+/obj/machinery/power/tesla_coil,
+/obj/structure/cable/yellow{
 	d2 = 4;
-	icon_state = "2-4"
+	icon_state = "0-4"
 	},
-/obj/structure/cable/cyan{
+/obj/structure/cable/yellow{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8"
+	icon_state = "4-8";
+	dir = 1
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/LargeAlienShip)
 "vQ" = (
 /obj/structure/bed/chair/comfy/black{
@@ -987,10 +1088,31 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 5
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4";
+	dir = 4
 	},
 /turf/simulated/floor,
+/area/survivalpod/superpose/LargeAlienShip)
+"wt" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/shuttle/floor/alienplating,
+/area/survivalpod/superpose/LargeAlienShip)
+"wy" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/structure/closet/crate/solar,
+/turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/LargeAlienShip)
 "wD" = (
 /obj/structure/grille/cult{
@@ -1089,13 +1211,18 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/LargeAlienShip)
 "xs" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
+/obj/machinery/power/smes/buildable{
+	icon = 'icons/obj/alien_smes.dmi';
+	icon_state = "unit";
+	input_level = 950000;
+	name = "Alien Royal Capacitor";
+	output_level = 950000
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/LargeAlienShip)
 "xC" = (
 /obj/structure/grille/cult{
@@ -1123,6 +1250,14 @@
 "xT" = (
 /obj/structure/table/darkglass,
 /turf/simulated/floor/wood/sif,
+/area/survivalpod/superpose/LargeAlienShip)
+"xU" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
 "ya" = (
 /obj/effect/floor_decal/techfloor,
@@ -1182,8 +1317,10 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 1
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -1196,6 +1333,18 @@
 "Aj" = (
 /obj/structure/table/bench/glass,
 /turf/simulated/floor/carpet/blue,
+/area/survivalpod/superpose/LargeAlienShip)
+"Aw" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/LargeAlienShip)
 "AB" = (
 /obj/machinery/light/poi{
@@ -1286,6 +1435,14 @@
 	temperature = 80
 	},
 /area/survivalpod/superpose/LargeAlienShip)
+"Cp" = (
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor,
+/area/survivalpod/superpose/LargeAlienShip)
 "Cy" = (
 /obj/effect/floor_decal/techfloor,
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -1315,6 +1472,11 @@
 	},
 /obj/structure/window/phoronreinforced{
 	dir = 8
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -1486,6 +1648,20 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/LargeAlienShip)
+"Fd" = (
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	dir = 1
+	},
+/turf/simulated/floor,
+/area/survivalpod/superpose/LargeAlienShip)
 "Fm" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 1
@@ -1539,17 +1715,12 @@
 /turf/simulated/shuttle/wall/alien/blue/hard_corner,
 /area/survivalpod/superpose/LargeAlienShip)
 "HW" = (
-/obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
 	},
-/obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/turf/simulated/floor,
+/turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/LargeAlienShip)
 "HX" = (
 /obj/structure/closet/alien,
@@ -1565,6 +1736,20 @@
 	dir = 1
 	},
 /turf/simulated/floor,
+/area/survivalpod/superpose/LargeAlienShip)
+"Ip" = (
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4";
+	dir = 8
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/LargeAlienShip)
 "Ir" = (
 /obj/structure/table/alien/blue,
@@ -1591,9 +1776,12 @@
 /turf/simulated/shuttle/floor/alien,
 /area/survivalpod/superpose/LargeAlienShip)
 "Jt" = (
-/obj/machinery/atmospherics/binary/pump/on{
-	dir = 8;
-	name = "Scrubber to Waste"
+/obj/machinery/power/terminal{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	d2 = 2;
+	icon_state = "0-2"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -1634,9 +1822,6 @@
 /turf/simulated/floor/carpet/blue,
 /area/survivalpod/superpose/LargeAlienShip)
 "Ko" = (
-/obj/machinery/power/emitter/gyrotron{
-	dir = 1
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -1664,9 +1849,11 @@
 /turf/simulated/shuttle/floor/alienplating,
 /area/survivalpod/superpose/LargeAlienShip)
 "KT" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 1
+/obj/machinery/power/terminal,
+/obj/structure/cable/yellow{
+	d2 = 8;
+	icon_state = "0-8";
+	dir = 2
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -1685,7 +1872,6 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
 "Md" = (
@@ -1705,6 +1891,18 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/LargeAlienShip)
+"ME" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor,
+/area/survivalpod/superpose/LargeAlienShip)
 "Nc" = (
 /obj/machinery/light/poi{
 	dir = 1
@@ -1714,9 +1912,6 @@
 "Nd" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 6
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -1755,8 +1950,10 @@
 /obj/machinery/light/poi{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/tank/phoron/full{
-	dir = 8
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -1854,12 +2051,12 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/LargeAlienShip)
 "SK" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden,
-/obj/machinery/meter,
-/turf/simulated/floor,
+/turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/LargeAlienShip)
 "SO" = (
 /obj/structure/table/darkglass,
@@ -1908,10 +2105,17 @@
 /turf/simulated/shuttle/floor/alien,
 /area/survivalpod/superpose/LargeAlienShip)
 "Um" = (
-/obj/effect/fusion_em_field,
-/turf/simulated/floor/reinforced/nitrogen{
-	nitrogen = 82.1472
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
 	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/LargeAlienShip)
 "Un" = (
 /obj/structure/closet/alien,
@@ -1935,6 +2139,8 @@
 "US" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/industrial/warning,
+/obj/machinery/power/emitter/gyrotron,
+/obj/structure/cable/yellow,
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
 "Vk" = (
@@ -1997,16 +2203,31 @@
 /obj/machinery/power/rad_collector,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/industrial/warning,
-/obj/structure/cable/cyan,
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
 "Vw" = (
 /obj/machinery/recharge_station,
 /turf/simulated/floor/tiled/freezer,
 /area/survivalpod/superpose/LargeAlienShip)
+"VD" = (
+/obj/machinery/power/tesla_coil,
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	dir = 1
+	},
+/obj/structure/cable/yellow{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/survivalpod/superpose/LargeAlienShip)
 "VF" = (
-/obj/machinery/atmospherics/pipe/tank/phoron/full{
-	dir = 8
+/obj/machinery/power/smes/buildable/point_of_interest,
+/obj/structure/cable/yellow{
+	d2 = 2;
+	icon_state = "0-2"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -2028,6 +2249,22 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/LargeAlienShip)
+"Wv" = (
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/machinery/power/apc/hyper{
+	coverlocked = 0;
+	dir = 4;
+	environ = 1;
+	equipment = 1;
+	lighting = 1;
+	locked = 0;
+	pixel_x = 23
+	},
+/turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/LargeAlienShip)
 "WJ" = (
 /obj/machinery/sleep_console{
@@ -2051,17 +2288,13 @@
 /turf/simulated/shuttle/floor/yellow,
 /area/survivalpod/superpose/LargeAlienShip)
 "Xc" = (
-/obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/structure/cable/cyan{
+/obj/structure/cable/yellow{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8"
+	icon_state = "4-8";
+	dir = 1
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/LargeAlienShip)
 "Xg" = (
 /obj/machinery/cryopod,
@@ -2144,6 +2377,12 @@
 /obj/structure/particle_accelerator/fuel_chamber{
 	dir = 8
 	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/LargeAlienShip)
 "XC" = (
@@ -2222,23 +2461,29 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/industrial/warning,
-/obj/structure/cable/cyan,
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
-"ZN" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/power/smes/buildable{
-	icon = 'icons/obj/alien_smes.dmi';
-	icon_state = "unit";
-	input_level = 950000;
-	name = "Alien Royal Capacitor";
-	output_level = 950000
+"ZD" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
 	},
-/obj/structure/cable/cyan{
+/obj/machinery/power/emitter/gyrotron{
+	dir = 1
+	},
+/obj/structure/cable/yellow{
 	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor,
+/area/survivalpod/superpose/LargeAlienShip)
+"ZN" = (
+/obj/effect/floor_decal/techfloor,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/shuttle/floor/alienplating,
 /area/survivalpod/superpose/LargeAlienShip)
 "ZQ" = (
 /obj/effect/floor_decal/techfloor{
@@ -2386,25 +2631,25 @@ CO
 CO
 GQ
 oh
-nC
+WT
 WT
 mK
 pi
 CS
-VR
-NP
-NP
-NP
-NP
-VR
-NP
-NP
-VR
+HW
+dz
+qH
+dz
+dz
+SK
+fK
+dz
+aA
 jr
 pi
 Ko
 WT
-nC
+WT
 uI
 GQ
 CO
@@ -2414,23 +2659,23 @@ CO
 GQ
 Bh
 nt
-WT
+Cp
 US
 GQ
 CS
-NP
-Vk
-NP
-NP
+Xc
+VR
 NP
 NP
 NP
-Vk
 NP
+NP
+VR
+Xc
 jr
 GQ
-hV
-WT
+ZD
+ao
 rx
 Py
 GQ
@@ -2440,12 +2685,12 @@ CO
 CO
 GQ
 qe
-xs
+hV
 gA
 Zq
 vV
 CS
-NP
+bc
 NP
 lp
 dZ
@@ -2453,12 +2698,12 @@ Lh
 pq
 lp
 NP
-NP
+bc
 jr
 vV
-uQ
-uU
-lJ
+oi
+gA
+qS
 qe
 GQ
 CO
@@ -2466,40 +2711,40 @@ CO
 (9,1,1) = {"
 CO
 GQ
-ao
-SK
-vH
+qe
+hV
+gA
 Vu
 jW
 CS
-VR
+lJ
 NP
 Yw
-bc
-Um
-bc
+PL
+PL
+PL
 Yw
 NP
-NP
+vH
 jr
 jW
-uQ
-Xc
-KT
-ao
+oi
+gA
+qS
+qe
 GQ
 CO
 "}
 (10,1,1) = {"
 CO
 GQ
-ph
-xs
-vH
+qe
+hV
+gA
 Vu
 jW
 CS
-NP
+Xc
 NP
 Gd
 PL
@@ -2507,53 +2752,53 @@ gt
 PL
 ds
 NP
-NP
+Xc
 jr
 jW
-uQ
-Xc
-lJ
-ph
+oi
+gA
+qS
+qe
 GQ
 CO
 "}
 (11,1,1) = {"
 CO
 GQ
-dz
-SK
-vH
+qe
+hV
+gA
 Vu
 jW
 CS
-NP
+VD
 NP
 AO
-bc
-Um
-bc
+PL
+PL
+PL
 AO
 NP
-VR
+iP
 jr
 jW
-uQ
-Xc
-KT
-dz
+oi
+gA
+qS
+qe
 GQ
 CO
 "}
 (12,1,1) = {"
 CO
 GQ
-ZN
-cp
-HW
+qe
+hV
+gA
 Vu
 DJ
 CS
-NP
+bc
 NP
 lp
 db
@@ -2561,13 +2806,13 @@ kG
 aG
 lp
 NP
-NP
+bc
 jr
 DJ
 uQ
-fK
-fr
-oi
+gA
+qS
+qe
 GQ
 CO
 "}
@@ -2576,23 +2821,23 @@ CO
 GQ
 Nd
 LM
-WT
-qS
+Fd
+cp
 GQ
 CS
-NP
-Vk
+Xc
+VR
 NP
 NP
 NP
 NP
 Mf
-Vk
-NP
+VR
+Xc
 jr
 GQ
-hV
-WT
+ZD
+gS
 zH
 wr
 GQ
@@ -2602,26 +2847,26 @@ CO
 CO
 GQ
 Jt
-Jt
-WT
+fr
+aj
 mm
 CY
-CS
-VR
-NP
-NP
-VR
-NP
-NP
-NP
-NP
-VR
-jr
+ZN
+Ip
+dz
+dz
+SK
+ph
+dz
+dz
+dz
+Um
+wt
 CY
-Ko
-WT
-Jt
-Jt
+ME
+fr
+ao
+gA
 GQ
 CO
 "}
@@ -2630,7 +2875,7 @@ CO
 GQ
 VF
 Pq
-WT
+xU
 qS
 GQ
 SS
@@ -2638,7 +2883,7 @@ FU
 FU
 FU
 rL
-NP
+Xc
 AS
 FU
 FU
@@ -2647,8 +2892,8 @@ SS
 GQ
 hV
 WT
-VF
-VF
+KT
+uU
 GQ
 CO
 "}
@@ -2665,7 +2910,7 @@ gW
 GQ
 jg
 fi
-PR
+mO
 nx
 jg
 GQ
@@ -2692,7 +2937,7 @@ bm
 CS
 kV
 Bf
-Bf
+Aw
 Bf
 KB
 jr
@@ -2794,7 +3039,7 @@ GQ
 WX
 cP
 cP
-Md
+wy
 DK
 bm
 CS
@@ -2827,7 +3072,7 @@ bm
 CS
 cX
 Qi
-Qi
+nC
 Qi
 iM
 jr
@@ -2853,8 +3098,8 @@ Qu
 bm
 CS
 NP
-NP
-NP
+Wv
+xs
 NP
 NP
 jr

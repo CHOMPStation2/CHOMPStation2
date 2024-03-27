@@ -1,0 +1,10 @@
+author: "Kashargul"
+delete-after: True
+changes:
+  - bugfix: "a lot of non rendered icons, especially atmos icons."
+  - bugfix: "changing force south to living only due to multiple issues"
+  - bugfix: "misc panel updating every tick"
+  - bugfix: "shadekin simple_mob button texts not respecting energy"
+  - bugfix: "wrong pathing in tgfont, thanks to @cadyn for pointing it out"
+  - bugfix: "borg chat icons"
+  - rscdel: "dangerous calls inside the statpanel"
