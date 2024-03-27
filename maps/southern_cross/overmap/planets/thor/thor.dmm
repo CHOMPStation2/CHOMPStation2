@@ -274,6 +274,14 @@
 	},
 /turf/simulated/floor/concrete/outdoors/thor,
 /area/surface/outside/thor/landingpad)
+"cQ" = (
+/turf/simulated/floor/water/beach{
+	nitrogen = 63.4124;
+	oxygen = 34.1451;
+	temperature = 313;
+	dir = 6
+	},
+/area/surface/outside/thor/jungle)
 "cS" = (
 /obj/machinery/vending/loadout/clothing,
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor{
@@ -288,13 +296,17 @@
 	dir = 4
 	},
 /area/surface/outside/thor/ocean)
+"cW" = (
+/turf/simulated/floor/water/beach/corner{
+	nitrogen = 63.4124;
+	oxygen = 34.1451;
+	temperature = 313;
+	dir = 1
+	},
+/area/surface/outside/thor/jungle)
 "db" = (
 /obj/vehicle/boat,
-/turf/simulated/floor/water/deep/ocean{
-	temperature = 313;
-	oxygen = 34.1451;
-	nitrogen = 63.4124
-	},
+/turf/simulated/floor/water/beach,
 /area/surface/outside/thor/ocean)
 "dn" = (
 /turf/simulated/floor/tiled/yellow,
@@ -715,6 +727,14 @@
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
 /area/surface/thor/kitchen)
+"ia" = (
+/turf/simulated/floor/water/beach/corner{
+	nitrogen = 63.4124;
+	oxygen = 34.1451;
+	temperature = 313;
+	dir = 4
+	},
+/area/surface/outside/thor/beach)
 "ib" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -1075,6 +1095,14 @@
 "lA" = (
 /turf/simulated/floor/outdoors/rocks/thor/planetuse,
 /area/surface/outside/thor/jungle/deep)
+"lG" = (
+/turf/simulated/floor/water/beach{
+	nitrogen = 63.4124;
+	oxygen = 34.1451;
+	temperature = 313;
+	dir = 9
+	},
+/area/surface/outside/thor/jungle)
 "lH" = (
 /obj/structure/mopbucket,
 /obj/item/weapon/mop,
@@ -1084,6 +1112,14 @@
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/surface/thor/janitor)
+"lM" = (
+/turf/simulated/floor/water/beach{
+	nitrogen = 63.4124;
+	oxygen = 34.1451;
+	temperature = 313;
+	dir = 10
+	},
+/area/surface/outside/thor/jungle)
 "lX" = (
 /obj/structure/table/woodentable,
 /obj/structure/cable{
@@ -1763,6 +1799,16 @@
 /obj/structure/grille,
 /turf/simulated/floor/plating,
 /area/shuttle/junker)
+"rj" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/water/ocean{
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
+	},
+/area/surface/outside/thor/ocean)
 "rk" = (
 /mob/living/simple_mob/vore/aggressive/frog,
 /turf/simulated/floor/water/ocean{
@@ -2090,6 +2136,14 @@
 	temperature = 313
 	},
 /area/surface/outside/thor/jungle/deep)
+"vm" = (
+/turf/simulated/floor/water/beach/corner{
+	nitrogen = 63.4124;
+	oxygen = 34.1451;
+	temperature = 313;
+	dir = 4
+	},
+/area/surface/outside/thor/jungle)
 "vn" = (
 /turf/simulated/floor/tiled/yellow{
 	icon_state = "hydrofloor"
@@ -2299,6 +2353,9 @@
 /obj/structure/salvageable/autolathe,
 /turf/simulated/floor/tiled/thor/planetuse,
 /area/surface/outside/thor/jungle)
+"xF" = (
+/turf/simulated/floor/water/beach/corner,
+/area/surface/outside/thor/jungle)
 "xK" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -2434,6 +2491,12 @@
 	outdoors = 1
 	},
 /area/surface/thor/kitchen)
+"zi" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/water/beach,
+/area/surface/outside/thor/ocean)
 "zs" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/floortube,
@@ -2767,6 +2830,14 @@
 "CR" = (
 /turf/simulated/mineral/alt,
 /area/surface/thor/caves)
+"CU" = (
+/turf/simulated/floor/water/beach{
+	nitrogen = 63.4124;
+	oxygen = 34.1451;
+	temperature = 313;
+	dir = 4
+	},
+/area/surface/outside/thor/jungle)
 "CW" = (
 /turf/simulated/floor/outdoors/grass/forest/thor{
 	tree_chance = 0;
@@ -3032,6 +3103,13 @@
 	},
 /turf/simulated/floor/outdoors/dirt/thor/planetuse,
 /area/surface/thor/abandonedhouse)
+"ER" = (
+/obj/structure/railing{
+	dir = 8;
+	icon_state = "railing0"
+	},
+/turf/simulated/floor/water/beach,
+/area/surface/outside/thor/ocean)
 "EW" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -3077,6 +3155,9 @@
 "FC" = (
 /turf/simulated/floor/reinforced/thor,
 /area/surface/outside/thor/landingpad)
+"FT" = (
+/turf/simulated/floor/water/beach,
+/area/surface/outside/thor/jungle)
 "FU" = (
 /obj/structure/mirror{
 	dir = 4;
@@ -3229,6 +3310,9 @@
 	dir = 8
 	},
 /area/surface/outside/thor/ocean)
+"Hz" = (
+/turf/simulated/floor/water/beach,
+/area/surface/outside/thor/ocean)
 "HA" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
@@ -3322,6 +3406,17 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/surface/thor/kitchen)
+"Ix" = (
+/obj/structure/railing{
+	dir = 8;
+	icon_state = "railing0"
+	},
+/turf/simulated/floor/water/ocean{
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
+	},
+/area/surface/outside/thor/ocean)
 "Iz" = (
 /obj/machinery/door/airlock/glass_medical{
 	name = "First-Aid Station";
@@ -3335,6 +3430,11 @@
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/surface/thor/med)
+"IA" = (
+/turf/simulated/floor/water/beach{
+	dir = 10
+	},
+/area/surface/outside/thor/ocean)
 "II" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/outdoors/grass/heavy/thor{
@@ -3593,6 +3693,9 @@
 	tree_chance = 0
 	},
 /area/surface/outside/thor/beach)
+"KX" = (
+/turf/simulated/floor/water/beach/corner,
+/area/surface/outside/thor/ocean)
 "Lg" = (
 /obj/structure/closet/crate,
 /obj/item/weapon/circuitboard/airalarm,
@@ -3665,6 +3768,11 @@
 /area/surface/thor/med)
 "Mn" = (
 /turf/simulated/floor/concrete/outdoors/thor,
+/area/surface/outside/thor/jungle)
+"Mq" = (
+/turf/simulated/floor/water/beach{
+	dir = 1
+	},
 /area/surface/outside/thor/jungle)
 "Mv" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
@@ -4349,6 +4457,14 @@
 /obj/item/weapon/stool/padded,
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
 /area/surface/outside/thor/pool)
+"SP" = (
+/turf/simulated/floor/water/beach/corner{
+	nitrogen = 63.4124;
+	oxygen = 34.1451;
+	temperature = 313;
+	dir = 8
+	},
+/area/surface/outside/thor/jungle)
 "SQ" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -4494,6 +4610,14 @@
 	grass_chance = 2
 	},
 /area/surface/outside/thor/outpost)
+"Uy" = (
+/turf/simulated/floor/water/beach{
+	nitrogen = 63.4124;
+	oxygen = 34.1451;
+	temperature = 313;
+	dir = 5
+	},
+/area/surface/outside/thor/jungle)
 "UD" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -4502,6 +4626,11 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/surface/thor/kitchen)
+"UI" = (
+/turf/simulated/floor/water/beach{
+	dir = 1
+	},
+/area/surface/outside/thor/ocean)
 "UN" = (
 /obj/structure/bookcase/manuals,
 /turf/simulated/floor/lino,
@@ -4779,6 +4908,14 @@
 /obj/structure/flora/ausbushes/brflowers,
 /turf/simulated/floor/outdoors/grass/forest/thor,
 /area/surface/outside/thor/jungle)
+"Xw" = (
+/turf/simulated/floor/water/beach{
+	nitrogen = 63.4124;
+	oxygen = 34.1451;
+	temperature = 313;
+	dir = 8
+	},
+/area/surface/outside/thor/jungle)
 "XH" = (
 /turf/unsimulated/wall/planetary/normal/thor,
 /area/surface/outside/thor/jungle)
@@ -5004,6 +5141,10 @@
 "ZQ" = (
 /turf/simulated/wall/wood,
 /area/surface/thor/engi)
+"ZS" = (
+/mob/living/simple_mob/vore/aggressive/giant_snake,
+/turf/simulated/floor/outdoors/grass/heavy/thor,
+/area/surface/outside/thor/jungle/deep)
 "ZU" = (
 /mob/living/simple_mob/animal/passive/bird/parrot/eclectus,
 /turf/simulated/floor/outdoors/grass/forest/thor,
@@ -13302,7 +13443,7 @@ Rg
 Rg
 Oo
 fY
-fY
+ZS
 Rs
 Rg
 fY
@@ -28965,17 +29106,17 @@ Dp
 Dp
 Dp
 Dp
-Dp
-Dp
-Dp
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
+If
+VO
+VO
+VO
+VO
+VO
+VO
+VO
+VO
+VO
+IA
 iq
 iq
 iq
@@ -29220,10 +29361,10 @@ Dp
 Dp
 Dp
 Dp
-Dp
-Dp
-Dp
-Dp
+If
+VO
+VO
+cU
 ec
 ec
 ec
@@ -29233,9 +29374,9 @@ ec
 ec
 ec
 ec
-iq
-iq
-iq
+WG
+VO
+IA
 iq
 iq
 iq
@@ -29477,8 +29618,8 @@ Dp
 Dp
 Dp
 Dp
-Dp
-Dp
+If
+cU
 ec
 ec
 ec
@@ -29493,9 +29634,9 @@ ec
 ec
 ec
 ec
-iq
-iq
-iq
+WG
+VO
+IA
 iq
 iq
 iq
@@ -29734,8 +29875,8 @@ Dp
 Dp
 Dp
 Dp
-Dp
-Dp
+If
+cU
 ec
 ec
 ec
@@ -29753,7 +29894,7 @@ ec
 ec
 ec
 ec
-iq
+Kx
 iq
 iq
 iq
@@ -29991,8 +30132,8 @@ Dp
 Dp
 Dp
 Dp
-Dp
-Dp
+If
+cU
 ec
 ec
 ec
@@ -30011,8 +30152,8 @@ ec
 ec
 ec
 ec
-iq
-iq
+WG
+IA
 iq
 iq
 iq
@@ -30248,8 +30389,8 @@ Dp
 Dp
 Dp
 Dp
-Dp
-Dp
+If
+cU
 ec
 ec
 ec
@@ -30270,7 +30411,7 @@ ec
 ec
 ec
 ec
-iq
+Kx
 iq
 iq
 iq
@@ -30505,8 +30646,8 @@ Dp
 Dp
 Dp
 Dp
-Dp
-Dp
+If
+cU
 ec
 ec
 ec
@@ -30528,8 +30669,8 @@ ec
 ec
 ec
 ec
-iq
-iq
+WG
+IA
 iq
 iq
 iq
@@ -30763,7 +30904,7 @@ Dp
 Dp
 Dp
 Dp
-Dp
+UI
 ec
 ec
 ec
@@ -30787,8 +30928,8 @@ ec
 ec
 ec
 ec
-iq
-iq
+WG
+IA
 iq
 iq
 iq
@@ -31020,8 +31161,8 @@ Dp
 Dp
 Dp
 Dp
-Dp
-Dp
+If
+cU
 ec
 ec
 ec
@@ -31046,7 +31187,7 @@ ec
 ec
 ec
 ec
-iq
+Kx
 iq
 iq
 iq
@@ -31277,8 +31418,8 @@ Dp
 Dp
 Dp
 Dp
-Dp
-Dp
+If
+cU
 ec
 ec
 ec
@@ -31304,7 +31445,7 @@ ec
 ec
 ec
 ec
-iq
+Kx
 iq
 iq
 iq
@@ -31535,7 +31676,7 @@ Dp
 Dp
 Dp
 Dp
-Dp
+UI
 ec
 ec
 ec
@@ -31562,7 +31703,7 @@ ec
 ec
 ec
 ec
-iq
+Kx
 iq
 iq
 iq
@@ -31792,8 +31933,8 @@ Dp
 Dp
 Dp
 Dp
-Dp
-Dp
+If
+cU
 ec
 ec
 ec
@@ -31820,7 +31961,7 @@ ec
 ec
 ec
 ec
-iq
+Kx
 iq
 iq
 iq
@@ -32049,8 +32190,8 @@ Dp
 Dp
 Dp
 Dp
-Dp
-Dp
+If
+cU
 ec
 ec
 ec
@@ -32078,7 +32219,7 @@ ec
 ec
 ec
 ec
-iq
+Kx
 iq
 iq
 iq
@@ -32307,7 +32448,7 @@ Dp
 Gk
 Dp
 Dp
-Dp
+UI
 ec
 ec
 ec
@@ -32336,7 +32477,7 @@ ec
 ec
 ec
 ec
-iq
+Kx
 iq
 iq
 iq
@@ -32565,7 +32706,7 @@ Dp
 Dp
 Dp
 Dp
-Dp
+UI
 ec
 ec
 ec
@@ -32594,7 +32735,7 @@ ec
 ec
 ec
 ec
-iq
+Kx
 iq
 iq
 iq
@@ -32822,8 +32963,8 @@ Dp
 Dp
 Dp
 Dp
-Dp
-Dp
+If
+cU
 ec
 ec
 ec
@@ -32852,7 +32993,7 @@ ec
 ec
 ec
 ec
-iq
+Kx
 iq
 iq
 iq
@@ -33080,7 +33221,7 @@ Dp
 Dp
 Dp
 Dp
-Dp
+UI
 ec
 ec
 ec
@@ -33110,7 +33251,7 @@ ec
 ec
 ec
 ec
-iq
+Kx
 iq
 iq
 iq
@@ -33337,8 +33478,8 @@ Dp
 Dp
 Dp
 Dp
-Dp
-Dp
+If
+cU
 ec
 ec
 ec
@@ -33367,8 +33508,8 @@ ec
 ec
 ec
 ec
-iq
-iq
+KX
+nc
 iq
 iq
 iq
@@ -33595,7 +33736,7 @@ Dp
 Dp
 Dp
 Dp
-Dp
+UI
 ec
 ec
 ec
@@ -33625,7 +33766,7 @@ ec
 ec
 ec
 ec
-iq
+Kx
 iq
 iq
 iq
@@ -33853,7 +33994,7 @@ Dp
 Dp
 Dp
 Dp
-Dp
+UI
 ec
 ec
 ec
@@ -33883,7 +34024,7 @@ ec
 ec
 ec
 ec
-iq
+Kx
 iq
 iq
 iq
@@ -34111,7 +34252,7 @@ Dp
 Dp
 Dp
 Dp
-Dp
+UI
 ec
 ec
 ec
@@ -34140,8 +34281,8 @@ ec
 ec
 ec
 ec
-iq
-iq
+KX
+nc
 iq
 iq
 iq
@@ -34369,7 +34510,7 @@ Dp
 Dp
 Dp
 Dp
-Dp
+UI
 ec
 ec
 ec
@@ -34398,7 +34539,7 @@ ec
 ec
 ec
 ec
-iq
+Kx
 iq
 iq
 iq
@@ -34627,7 +34768,7 @@ Dp
 Dp
 Dp
 Dp
-Dp
+UI
 ec
 ec
 ec
@@ -34656,7 +34797,7 @@ ec
 ec
 ec
 ec
-iq
+Kx
 iq
 iq
 iq
@@ -34885,7 +35026,7 @@ Gk
 Dp
 Dp
 Dp
-Dp
+UI
 ec
 ec
 ec
@@ -34913,8 +35054,8 @@ ec
 ec
 ec
 ec
-iq
-iq
+KX
+nc
 iq
 iq
 iq
@@ -35143,8 +35284,8 @@ Dp
 Dp
 Dp
 Dp
-Dp
-Dp
+Nl
+po
 ec
 ec
 ec
@@ -35171,7 +35312,7 @@ ec
 ec
 ec
 ec
-iq
+Kx
 iq
 iq
 iq
@@ -35402,7 +35543,7 @@ Dp
 Dp
 Dp
 Dp
-Dp
+UI
 ec
 ec
 ec
@@ -35429,7 +35570,7 @@ ec
 ec
 ec
 ec
-iq
+Kx
 iq
 iq
 iq
@@ -35660,7 +35801,7 @@ Dp
 Dp
 Dp
 Dp
-Dp
+UI
 ec
 ec
 ec
@@ -35687,7 +35828,7 @@ ec
 ec
 ec
 ec
-iq
+Kx
 iq
 iq
 iq
@@ -35918,7 +36059,7 @@ Dp
 Dp
 Dp
 Dp
-Dp
+UI
 ec
 ec
 ec
@@ -35944,8 +36085,8 @@ ec
 ec
 ec
 ec
-iq
-iq
+KX
+nc
 iq
 iq
 iq
@@ -36176,8 +36317,8 @@ Dp
 Dp
 Dp
 Dp
-Dp
-Dp
+Nl
+po
 ec
 ec
 ec
@@ -36201,8 +36342,8 @@ ec
 ec
 ec
 ec
-iq
-iq
+KX
+nc
 iq
 iq
 iq
@@ -36435,7 +36576,7 @@ Dp
 Dp
 Dp
 Dp
-Dp
+UI
 ec
 ec
 ec
@@ -36459,7 +36600,7 @@ ec
 ec
 ec
 ec
-iq
+Kx
 iq
 iq
 iq
@@ -36693,7 +36834,7 @@ Dp
 Dp
 Dp
 Dp
-Dp
+UI
 ec
 ec
 ec
@@ -36717,7 +36858,7 @@ ec
 ec
 ec
 ec
-iq
+Kx
 iq
 iq
 iq
@@ -36951,8 +37092,8 @@ Dp
 Dp
 Dp
 Dp
-Dp
-Dp
+Nl
+po
 ec
 ec
 ec
@@ -36974,8 +37115,8 @@ ec
 ec
 ec
 ec
-iq
-iq
+KX
+nc
 iq
 iq
 iq
@@ -37210,8 +37351,8 @@ Dp
 Dp
 Dp
 Dp
-Dp
-Dp
+Nl
+po
 ec
 ec
 ec
@@ -37231,8 +37372,8 @@ ec
 ec
 ec
 ec
-iq
-iq
+KX
+nc
 iq
 iq
 iq
@@ -37469,7 +37610,7 @@ Dp
 Dp
 Dp
 Dp
-Dp
+UI
 ec
 ec
 ec
@@ -37489,7 +37630,7 @@ ec
 ec
 ec
 ec
-iq
+Kx
 iq
 iq
 iq
@@ -37727,8 +37868,8 @@ Dp
 Dp
 Dp
 Dp
-Dp
-Dp
+Nl
+po
 ec
 ec
 ec
@@ -37746,8 +37887,8 @@ ec
 ec
 ec
 ec
-iq
-iq
+KX
+nc
 iq
 iq
 iq
@@ -37986,8 +38127,8 @@ Dp
 Dp
 Dp
 Dp
-Dp
-Dp
+Nl
+po
 ec
 ec
 ec
@@ -38004,7 +38145,7 @@ ec
 ec
 ec
 ec
-iq
+Kx
 iq
 iq
 iq
@@ -38245,8 +38386,8 @@ Dp
 Dp
 Dp
 Dp
-Dp
-Dp
+Nl
+po
 ec
 ec
 ec
@@ -38261,8 +38402,8 @@ ec
 ec
 ec
 ec
-iq
-iq
+KX
+nc
 iq
 iq
 iq
@@ -38504,9 +38645,9 @@ Dp
 Dp
 Dp
 Dp
-Dp
-Dp
-Dp
+Nl
+Je
+po
 ec
 ec
 ec
@@ -38517,9 +38658,9 @@ ec
 ec
 ec
 ec
-iq
-iq
-iq
+KX
+Je
+nc
 iq
 iq
 iq
@@ -38764,18 +38905,18 @@ Dp
 Dp
 Dp
 Dp
-Dp
-Dp
-Dp
-Dp
+Nl
+Je
+Je
+po
 ec
 ec
 ec
 ec
-Dp
-Dp
-iq
-iq
+KX
+Je
+Je
+nc
 iq
 iq
 iq
@@ -39025,12 +39166,12 @@ Dp
 Dp
 Dp
 Dp
-Dp
-Dp
-Dp
-Dp
-Dp
-Dp
+Nl
+Je
+Je
+Je
+Je
+nc
 iq
 iq
 iq
@@ -49910,7 +50051,7 @@ fY
 fY
 fY
 fY
-fY
+ZS
 De
 Oo
 fY
@@ -50325,11 +50466,11 @@ kS
 kS
 kS
 kS
-aZ
-aZ
-aZ
-aZ
-aZ
+xF
+CU
+CU
+CU
+SP
 kS
 kS
 kS
@@ -50580,24 +50721,24 @@ kS
 kS
 kS
 kS
+xF
+CU
+CU
+cQ
 aZ
 aZ
 aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
+Uy
+CU
+CU
+CU
+CU
+CU
+CU
+CU
+CU
+CU
+SP
 kS
 kS
 kS
@@ -50837,8 +50978,8 @@ kS
 kS
 kS
 kS
-aZ
-aZ
+xF
+cQ
 aZ
 aZ
 aZ
@@ -50855,11 +50996,11 @@ aZ
 aZ
 aZ
 aZ
-aZ
-aZ
-aZ
-aZ
-aZ
+Uy
+CU
+CU
+CU
+SP
 kS
 kS
 kS
@@ -51095,7 +51236,7 @@ kS
 kS
 kS
 kS
-aZ
+FT
 aZ
 aZ
 aZ
@@ -51117,8 +51258,8 @@ aZ
 aZ
 aZ
 aZ
-aZ
-aZ
+Uy
+SP
 kS
 kS
 kS
@@ -51349,11 +51490,11 @@ kS
 kS
 kS
 kS
-aZ
-aZ
-aZ
-aZ
-aZ
+xF
+CU
+CU
+CU
+cQ
 aZ
 aZ
 aZ
@@ -51376,8 +51517,8 @@ aZ
 aZ
 aZ
 aZ
-aZ
-aZ
+Uy
+SP
 kS
 kS
 kS
@@ -51606,8 +51747,8 @@ kS
 kS
 kS
 kS
-aZ
-aZ
+xF
+cQ
 aZ
 aZ
 aZ
@@ -51635,8 +51776,8 @@ aZ
 aZ
 aZ
 aZ
-aZ
-aZ
+Uy
+SP
 kS
 kS
 kS
@@ -51863,8 +52004,8 @@ kS
 kS
 kS
 kS
-aZ
-aZ
+xF
+cQ
 aZ
 aZ
 aZ
@@ -51894,10 +52035,10 @@ aZ
 aZ
 aZ
 aZ
-aZ
-aZ
-aZ
-aZ
+Uy
+CU
+CU
+SP
 kS
 kS
 kS
@@ -52121,7 +52262,7 @@ kS
 kS
 kS
 kS
-aZ
+FT
 aZ
 aZ
 aZ
@@ -52155,9 +52296,9 @@ aZ
 aZ
 aZ
 aZ
-aZ
-aZ
-aZ
+Uy
+CU
+SP
 kS
 kS
 kS
@@ -52379,7 +52520,7 @@ kS
 kS
 kS
 kS
-aZ
+FT
 aZ
 aZ
 aZ
@@ -52415,8 +52556,8 @@ aZ
 aZ
 aZ
 aZ
-aZ
-aZ
+Uy
+SP
 kS
 kS
 kS
@@ -52636,8 +52777,8 @@ kS
 kS
 kS
 kS
-aZ
-aZ
+xF
+cQ
 aZ
 aZ
 aZ
@@ -52674,9 +52815,9 @@ aZ
 aZ
 aZ
 aZ
-aZ
-aZ
-aZ
+Uy
+CU
+SP
 kS
 kS
 kS
@@ -52893,8 +53034,8 @@ kS
 kS
 kS
 kS
-aZ
-aZ
+xF
+cQ
 aZ
 aZ
 aZ
@@ -52934,7 +53075,7 @@ aZ
 aZ
 aZ
 aZ
-aZ
+Mq
 kS
 kS
 kS
@@ -53151,7 +53292,7 @@ kS
 kS
 kS
 kS
-aZ
+FT
 aZ
 aZ
 aZ
@@ -53192,9 +53333,9 @@ aZ
 aZ
 aZ
 aZ
-aZ
-aZ
-aZ
+Uy
+CU
+SP
 kS
 kS
 kS
@@ -53406,10 +53547,10 @@ kS
 kS
 kS
 kS
-aZ
-aZ
-aZ
-aZ
+xF
+CU
+CU
+cQ
 aZ
 aZ
 aZ
@@ -53452,7 +53593,7 @@ aZ
 aZ
 aZ
 aZ
-aZ
+Mq
 kS
 kS
 kS
@@ -53664,7 +53805,7 @@ kS
 kS
 kS
 kS
-aZ
+FT
 bj
 aZ
 aZ
@@ -53710,9 +53851,9 @@ aZ
 aZ
 aZ
 aZ
-aZ
-aZ
-aZ
+Uy
+CU
+SP
 kS
 kS
 kS
@@ -53922,7 +54063,7 @@ kS
 kS
 kS
 kS
-aZ
+FT
 aZ
 mj
 OT
@@ -53970,13 +54111,13 @@ aZ
 aZ
 aZ
 aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
+Uy
+CU
+CU
+CU
+CU
+CU
+cQ
 aZ
 Dp
 Dp
@@ -54179,8 +54320,8 @@ kS
 kS
 kS
 kS
-aZ
-aZ
+xF
+cQ
 aZ
 aZ
 gy
@@ -54437,7 +54578,7 @@ kS
 kS
 kS
 kS
-aZ
+FT
 bj
 aZ
 aZ
@@ -54694,8 +54835,8 @@ kS
 kS
 kS
 kS
-aZ
-aZ
+xF
+cQ
 aZ
 iM
 aZ
@@ -54748,10 +54889,10 @@ aZ
 aZ
 aZ
 aZ
-aZ
-aZ
-aZ
-ru
+lG
+Xw
+Xw
+ia
 ru
 WG
 kQ
@@ -54952,7 +55093,7 @@ kS
 kS
 kS
 kS
-aZ
+FT
 aZ
 aZ
 aZ
@@ -55005,8 +55146,8 @@ aZ
 aZ
 aZ
 aZ
-aZ
-aZ
+lG
+vm
 ru
 ru
 ru
@@ -55210,7 +55351,7 @@ kS
 kS
 kS
 kS
-aZ
+FT
 aZ
 aZ
 gy
@@ -55262,8 +55403,8 @@ aZ
 aZ
 aZ
 aZ
-aZ
-aZ
+lG
+vm
 kS
 ru
 ru
@@ -55468,7 +55609,7 @@ kS
 kS
 kS
 kS
-aZ
+FT
 aZ
 aZ
 aZ
@@ -55520,7 +55661,7 @@ aZ
 aZ
 aZ
 aZ
-aZ
+Mq
 kS
 kS
 ru
@@ -55726,7 +55867,7 @@ kS
 kS
 kS
 kS
-aZ
+FT
 aZ
 aZ
 aZ
@@ -55778,7 +55919,7 @@ aZ
 aZ
 aZ
 aZ
-aZ
+Mq
 kS
 kS
 ru
@@ -55983,8 +56124,8 @@ kS
 kS
 kS
 kS
-aZ
-aZ
+xF
+cQ
 aZ
 aZ
 aZ
@@ -56036,7 +56177,7 @@ aZ
 aZ
 aZ
 aZ
-aZ
+Mq
 kS
 kS
 ru
@@ -56241,7 +56382,7 @@ kS
 kS
 kS
 kS
-aZ
+FT
 aZ
 aZ
 aZ
@@ -56294,7 +56435,7 @@ aZ
 aZ
 aZ
 aZ
-aZ
+Mq
 kS
 kS
 ru
@@ -56499,7 +56640,7 @@ kS
 kS
 kS
 kS
-aZ
+FT
 aZ
 aZ
 aZ
@@ -56552,7 +56693,7 @@ aZ
 aZ
 aZ
 aZ
-aZ
+Mq
 kS
 kS
 ru
@@ -56757,7 +56898,7 @@ kS
 kS
 kS
 kS
-aZ
+FT
 aZ
 aZ
 aZ
@@ -56810,8 +56951,8 @@ aZ
 aZ
 aZ
 aZ
-aZ
-aZ
+Mq
+kS
 kS
 kS
 CR
@@ -56826,16 +56967,16 @@ Dp
 Gk
 Dp
 iq
+Dp
+iq
+iq
+iq
+Dp
 iq
 iq
 iq
 iq
-iq
-iq
-iq
-iq
-iq
-iq
+Dp
 iq
 iq
 iq
@@ -57015,7 +57156,7 @@ kS
 kS
 kS
 kS
-aZ
+FT
 aZ
 aZ
 aZ
@@ -57068,7 +57209,7 @@ aZ
 aZ
 aZ
 aZ
-aZ
+Mq
 kS
 kS
 CR
@@ -57084,16 +57225,16 @@ Dp
 Dp
 Dp
 Dp
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
 iq
 iq
 iq
@@ -57273,7 +57414,7 @@ kS
 kS
 kS
 kS
-aZ
+FT
 aZ
 aZ
 aZ
@@ -57325,8 +57466,8 @@ aZ
 aZ
 aZ
 aZ
-aZ
-aZ
+lG
+vm
 kS
 kS
 CR
@@ -57342,17 +57483,17 @@ Dp
 Dp
 Dp
 Dp
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
 iq
 iq
 iq
@@ -57531,7 +57672,7 @@ kS
 kS
 kS
 kS
-aZ
+FT
 aZ
 aZ
 aZ
@@ -57582,8 +57723,8 @@ aZ
 aZ
 aZ
 aZ
-aZ
-aZ
+lG
+vm
 kS
 kS
 CR
@@ -57600,19 +57741,19 @@ Dp
 Dp
 Dp
 Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
 iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
+Dp
 iq
 iq
 iq
@@ -57789,7 +57930,7 @@ kS
 kS
 kS
 kS
-aZ
+FT
 aZ
 aZ
 aZ
@@ -57840,7 +57981,7 @@ aZ
 aZ
 aZ
 aZ
-aZ
+Mq
 kS
 kS
 kS
@@ -57858,20 +57999,20 @@ Dp
 Dp
 Dp
 Dp
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
+If
+VO
+VO
+VO
+VO
+VO
+VO
+VO
+VO
+kQ
+Dp
+Dp
+Dp
+Dp
 iq
 iq
 iq
@@ -58047,8 +58188,8 @@ kS
 kS
 kS
 kS
-aZ
-aZ
+cW
+lM
 aZ
 aZ
 aZ
@@ -58097,8 +58238,8 @@ OT
 aZ
 aZ
 aZ
-aZ
-aZ
+lG
+vm
 kS
 kS
 kS
@@ -58116,7 +58257,7 @@ If
 VO
 Hs
 VO
-iq
+cU
 ru
 ru
 ru
@@ -58125,12 +58266,12 @@ ru
 ru
 ru
 ru
-iq
-iq
-iq
-iq
-iq
-iq
+WG
+kQ
+Dp
+Dp
+Dp
+Dp
 iq
 iq
 iq
@@ -58306,7 +58447,7 @@ kS
 kS
 kS
 kS
-aZ
+FT
 aZ
 aZ
 aZ
@@ -58355,7 +58496,7 @@ aZ
 aZ
 aZ
 aZ
-aZ
+Mq
 kS
 kS
 kS
@@ -58384,12 +58525,12 @@ ru
 ru
 ru
 ru
-iq
-iq
-iq
-iq
-iq
-iq
+Hz
+Dp
+Dp
+Dp
+Dp
+Dp
 iq
 iq
 iq
@@ -58564,7 +58705,7 @@ kS
 kS
 kS
 kS
-aZ
+FT
 aZ
 aZ
 aZ
@@ -58612,8 +58753,8 @@ mj
 aZ
 aZ
 aZ
-aZ
-aZ
+lG
+vm
 kS
 kS
 kS
@@ -58642,13 +58783,13 @@ VN
 ru
 ru
 ru
-iq
-iq
-iq
-iq
-iq
-iq
-iq
+WG
+kQ
+Dp
+Dp
+Dp
+Dp
+Dp
 iq
 iq
 iq
@@ -58822,7 +58963,7 @@ kS
 kS
 kS
 kS
-aZ
+FT
 aZ
 aZ
 WS
@@ -58870,7 +59011,7 @@ YR
 aZ
 aZ
 aZ
-aZ
+Mq
 kS
 kS
 kS
@@ -58901,13 +59042,13 @@ uf
 ru
 ru
 ru
-iq
-iq
-iq
-iq
-iq
-iq
-iq
+Hz
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
 iq
 iq
 iq
@@ -59080,7 +59221,7 @@ kS
 kS
 kS
 kS
-aZ
+FT
 aZ
 aZ
 aZ
@@ -59127,8 +59268,8 @@ aZ
 aZ
 aZ
 aZ
-aZ
-aZ
+lG
+vm
 kS
 kS
 kS
@@ -59159,11 +59300,11 @@ ru
 ru
 ru
 ru
-iq
-iq
-iq
-iq
-iq
+Hz
+Dp
+Dp
+Dp
+Dp
 iq
 iq
 iq
@@ -59338,7 +59479,7 @@ kS
 kS
 kS
 kS
-aZ
+FT
 aZ
 aZ
 aZ
@@ -59385,7 +59526,7 @@ aZ
 aZ
 aZ
 aZ
-aZ
+Mq
 kS
 kS
 kS
@@ -59417,11 +59558,11 @@ ru
 uZ
 ru
 ru
-iq
-iq
-iq
-iq
-iq
+Hz
+Dp
+Dp
+Dp
+Dp
 iq
 iq
 iq
@@ -59596,7 +59737,7 @@ kS
 kS
 kS
 kS
-aZ
+FT
 aZ
 aZ
 aZ
@@ -59642,8 +59783,8 @@ aZ
 aZ
 aZ
 aZ
-aZ
-aZ
+lG
+vm
 kS
 kS
 kS
@@ -59676,10 +59817,10 @@ ru
 ru
 ru
 db
-iq
-iq
-iq
-iq
+Dp
+Dp
+Dp
+Dp
 iq
 iq
 iq
@@ -59854,8 +59995,8 @@ kS
 kS
 kS
 kS
-aZ
-aZ
+cW
+lM
 aZ
 aZ
 aZ
@@ -59900,7 +60041,7 @@ aZ
 aZ
 aZ
 aZ
-aZ
+Mq
 kS
 kS
 kS
@@ -59933,11 +60074,11 @@ CW
 ru
 ru
 ru
-Op
-Op
-Op
-Op
-Op
+zi
+rj
+rj
+rj
+rj
 Op
 Op
 Op
@@ -60113,8 +60254,8 @@ kS
 kS
 kS
 kS
-aZ
-aZ
+cW
+lM
 aZ
 aZ
 aZ
@@ -60158,7 +60299,7 @@ aZ
 aZ
 aZ
 aZ
-aZ
+Mq
 kS
 kS
 kS
@@ -60372,7 +60513,7 @@ kS
 kS
 kS
 kS
-aZ
+FT
 aZ
 aZ
 aZ
@@ -60415,8 +60556,8 @@ aZ
 aZ
 aZ
 aZ
-aZ
-aZ
+lG
+vm
 kS
 kS
 kS
@@ -60630,8 +60771,8 @@ kS
 kS
 kS
 kS
-aZ
-aZ
+cW
+lM
 aZ
 aZ
 aZ
@@ -60672,8 +60813,8 @@ aZ
 aZ
 aZ
 aZ
-aZ
-aZ
+lG
+vm
 kS
 kS
 kS
@@ -60707,11 +60848,11 @@ ru
 ru
 ru
 ru
-He
-He
-He
-He
-He
+ER
+Ix
+Ix
+Ix
+Ix
 He
 He
 He
@@ -60889,8 +61030,8 @@ kS
 kS
 kS
 kS
-aZ
-aZ
+cW
+lM
 aZ
 aZ
 WS
@@ -60929,8 +61070,8 @@ aZ
 aZ
 aZ
 aZ
-aZ
-aZ
+lG
+vm
 kS
 kS
 kS
@@ -60965,11 +61106,11 @@ ru
 ru
 ru
 ru
-iq
-iq
-iq
-iq
-iq
+Hz
+Dp
+Dp
+Dp
+Dp
 iq
 iq
 iq
@@ -61148,8 +61289,8 @@ kS
 kS
 kS
 kS
-aZ
-aZ
+cW
+lM
 aZ
 aZ
 aZ
@@ -61185,9 +61326,9 @@ aZ
 aZ
 aZ
 aZ
-aZ
-aZ
-aZ
+lG
+Xw
+vm
 kS
 kS
 kS
@@ -61223,12 +61364,12 @@ ru
 ru
 ru
 ru
-iq
-iq
-iq
-iq
-iq
-iq
+Hz
+Dp
+Dp
+Dp
+Dp
+Dp
 iq
 iq
 iq
@@ -61407,8 +61548,8 @@ kS
 kS
 kS
 kS
-aZ
-aZ
+cW
+lM
 aZ
 aZ
 aZ
@@ -61441,9 +61582,9 @@ aZ
 aZ
 aZ
 aZ
-aZ
-aZ
-aZ
+lG
+Xw
+vm
 kS
 kS
 kS
@@ -61481,12 +61622,12 @@ ru
 ru
 ru
 ru
-iq
-iq
-iq
-iq
-iq
-iq
+Hz
+Dp
+Dp
+Dp
+Dp
+Dp
 iq
 iq
 iq
@@ -61666,9 +61807,9 @@ kS
 kS
 kS
 kS
-aZ
-aZ
-aZ
+cW
+Xw
+lM
 aZ
 aZ
 aZ
@@ -61699,7 +61840,7 @@ aZ
 aZ
 aZ
 aZ
-aZ
+Mq
 kS
 kS
 kS
@@ -61739,12 +61880,12 @@ ru
 ru
 ru
 ru
-iq
-iq
-iq
-iq
-iq
-iq
+Hz
+Dp
+Dp
+Dp
+Dp
+Dp
 iq
 iq
 iq
@@ -61926,8 +62067,8 @@ kS
 kS
 kS
 kS
-aZ
-aZ
+cW
+lM
 aZ
 aZ
 aZ
@@ -61954,10 +62095,10 @@ aZ
 OT
 aZ
 aZ
-aZ
-aZ
-aZ
-aZ
+lG
+Xw
+Xw
+vm
 kS
 kS
 kS
@@ -61996,12 +62137,12 @@ ru
 ru
 ru
 ru
-iq
-iq
-iq
-iq
-iq
-iq
+rH
+nc
+Dp
+Dp
+Dp
+Dp
 iq
 iq
 iq
@@ -62185,10 +62326,10 @@ kS
 kS
 kS
 kS
-aZ
-aZ
-aZ
-aZ
+cW
+Xw
+Xw
+lM
 aZ
 aZ
 aZ
@@ -62211,8 +62352,8 @@ aZ
 aZ
 aZ
 aZ
-aZ
-aZ
+lG
+vm
 kS
 kS
 kS
@@ -62254,12 +62395,12 @@ ru
 ru
 ru
 ru
-iq
-iq
-iq
-iq
-iq
-iq
+Kx
+Dp
+Dp
+Dp
+Dp
+Dp
 iq
 iq
 iq
@@ -62446,10 +62587,10 @@ kS
 kS
 kS
 kS
-aZ
-aZ
-aZ
-aZ
+cW
+Xw
+Xw
+lM
 aZ
 aZ
 aZ
@@ -62467,9 +62608,9 @@ aZ
 gy
 rD
 mj
-aZ
-aZ
-aZ
+lG
+Xw
+vm
 kS
 kS
 kS
@@ -62511,11 +62652,11 @@ ru
 ru
 ru
 ru
-iq
-iq
-iq
-iq
-iq
+rH
+nc
+Dp
+Dp
+Dp
 iq
 iq
 iq
@@ -62707,25 +62848,25 @@ kS
 kS
 kS
 kS
+cW
+Xw
+Xw
+lM
 aZ
 aZ
 aZ
 aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
+lG
+Xw
+Xw
+Xw
+Xw
+lM
 OT
-aZ
-aZ
-aZ
-aZ
+lG
+Xw
+Xw
+vm
 kS
 kS
 kS
@@ -62758,7 +62899,7 @@ Dp
 Dp
 Nl
 Je
-iq
+po
 ru
 ru
 ru
@@ -62768,11 +62909,11 @@ ru
 ru
 ru
 ru
-iq
-iq
-iq
-iq
-iq
+rH
+nc
+Dp
+Dp
+Dp
 iq
 iq
 iq
@@ -62968,19 +63109,19 @@ kS
 kS
 kS
 kS
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
+cW
+Xw
+Xw
+Xw
+Xw
+vm
 kS
 kS
 kS
 kS
-aZ
-aZ
-aZ
+cW
+Xw
+vm
 kS
 kS
 kS
@@ -63016,8 +63157,8 @@ Dp
 Dp
 Dp
 Dp
-iq
-iq
+Nl
+po
 ru
 ru
 ru
@@ -63025,11 +63166,11 @@ ru
 ru
 ru
 ru
-iq
-iq
-iq
-iq
-iq
+rH
+nc
+Dp
+Dp
+Dp
 iq
 iq
 iq
@@ -63274,19 +63415,19 @@ Dp
 Dp
 Dp
 Dp
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
+Dp
+Nl
+Je
+Je
+Je
+Je
+Je
+Je
+Je
+nc
+Dp
+Dp
+Dp
 iq
 iq
 iq
@@ -63532,19 +63673,19 @@ Dp
 Dp
 kK
 Dp
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
 iq
 iq
 iq
@@ -63790,17 +63931,17 @@ Dp
 Dp
 Dp
 Dp
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
 iq
 iq
 iq
@@ -64048,17 +64189,17 @@ Dp
 Dp
 Dp
 Dp
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
 iq
 iq
 iq
@@ -64307,15 +64448,15 @@ Dp
 Dp
 Dp
 iq
+Dp
+iq
+Dp
+Dp
 iq
 iq
-iq
-iq
-iq
-iq
-iq
-iq
-iq
+Dp
+Dp
+Dp
 iq
 iq
 iq
