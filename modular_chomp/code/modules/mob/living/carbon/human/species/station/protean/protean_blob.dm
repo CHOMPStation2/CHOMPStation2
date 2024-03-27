@@ -92,49 +92,49 @@
 /mob/living/simple_mob/protean_blob/proc/nano_partswap()
 	set name = "Ref - Single Limb"
 	set desc = "Allows you to replace and reshape your limbs as you see fit."
-	set category = "Abilities"
+	set category = "Abilities.Protean"
 	set hidden = 1
 	humanform.nano_partswap()
 
 /mob/living/simple_mob/protean_blob/proc/nano_regenerate()
 	set name = "Total Reassembly (wip)"
 	set desc = "Completely reassemble yourself from whatever save slot you have loaded in preferences. Assuming you meet the requirements."
-	set category = "Abilities"
+	set category = "Abilities.Protean"
 	set hidden = 1
 	humanform.nano_regenerate()
 
 /mob/living/simple_mob/protean_blob/proc/nano_blobform()
 	set name = "Toggle Blobform"
 	set desc = "Switch between amorphous and humanoid forms."
-	set category = "Abilities"
+	set category = "Abilities.Protean"
 	set hidden = 1
 	humanform.nano_blobform()
 
 /mob/living/simple_mob/protean_blob/proc/nano_metalnom()
 	set name = "Ref - Store Metals"
 	set desc = "If you're holding a stack of material, you can consume some and store it for later."
-	set category = "Abilities"
+	set category = "Abilities.Protean"
 	set hidden = 1
 	humanform.nano_metalnom()
 
 /mob/living/simple_mob/protean_blob/proc/nano_rig_transform()
 	set name = "Modify Form - Hardsuit"
 	set desc = "Allows a protean to retract its mass into its hardsuit module at will."
-	set category = "Abilities"
+	set category = "Abilities.Protean"
 	set hidden = 1
 	humanform.nano_rig_transform()
 
 /mob/living/simple_mob/protean_blob/proc/appearance_switch()
 	set name = "Switch Blob Appearance"
 	set desc = "Allows a protean blob to switch its outwards appearance."
-	set category = "Abilities"
+	set category = "Abilities.Protean"
 	set hidden = 1
 	humanform.appearance_switch()
 
 /mob/living/simple_mob/protean_blob/proc/nano_latch()
 	set name = "Latch/Unlatch host"
 	set desc = "Allows a protean to forcibly latch or unlatch from a host."
-	set category = "Abilities"
+	set category = "Abilities.Protean"
 	set hidden = 1
 	humanform.nano_latch()
 
@@ -343,7 +343,7 @@
 /mob/living/simple_mob/protean_blob/verb/prot_hide()
 	set name = "Hide Self"
 	set desc = "Disperses your mass into a thin veil, making a trap to snatch prey with, or simply hide."
-	set category = "Abilities"
+	set category = "Abilities.Protean"
 
 	if(!hiding)
 		cut_overlays()
@@ -546,7 +546,7 @@
 /mob/living/proc/usehardsuit()
 	set name = "Utilize Hardsuit Interface"
 	set desc = "Allows a protean blob to open hardsuit interface."
-	set category = "Abilities"
+	set category = "Abilities.Protean"
 
 	if(istype(loc, /obj/item/weapon/rig/protean))
 		var/obj/item/weapon/rig/protean/prig = loc

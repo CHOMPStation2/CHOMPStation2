@@ -1,7 +1,7 @@
 var/global_vantag_hud = 0
 
 /client/proc/toggle_vantag_hud_global(var/mob/target as mob)
-	set category = "Fun"
+	set category = "Fun.Event Kit"
 	set name = "Toggle Global Event HUD"
 	set desc = "Give everyone the Event HUD."
 

@@ -1,6 +1,6 @@
 /client/verb/toggle_looping_alarms()
 	set name = "Looping Alarms"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggles alarm sound loops."
 
 	var/pref_path = /datum/client_preference/looping_alarms
@@ -15,7 +15,7 @@
 
 /client/verb/toggle_sleep_music()
 	set name = "Toggle Sleeping Music"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "When enabled, you will hear cozy music played during surgery, cryo, and sleeper pod usage."
 
 	var/pref_path = /datum/client_preference/sleep_music

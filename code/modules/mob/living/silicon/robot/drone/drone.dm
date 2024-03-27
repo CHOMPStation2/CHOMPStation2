@@ -172,7 +172,7 @@ var/list/mob_hat_cache = list()
 
 /mob/living/silicon/robot/drone/verb/pick_shell()
 	set name = "Customize Appearance"
-	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
+	set category = "Abilities.Settings" //ChompEDIT - TGPanel
 
 	if(!can_pick_shell)
 		to_chat(src, "<span class='warning'>You already selected a shell or this drone type isn't customizable.</span>")

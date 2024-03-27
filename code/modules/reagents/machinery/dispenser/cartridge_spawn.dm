@@ -1,6 +1,6 @@
 /client/proc/spawn_chemdisp_cartridge(size in list("small", "medium", "large"), reagent in SSchemistry.chemical_reagents)
 	set name = "Spawn Chemical Dispenser Cartridge"
-	set category = "Admin"
+	set category = "Admin.Events" //CHOMPEdit
 
 	var/obj/item/weapon/reagent_containers/chem_disp_cartridge/C
 	switch(size)

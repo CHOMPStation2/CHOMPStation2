@@ -74,7 +74,7 @@
 /datum/volume_panel/tgui_data(mob/user)
 	if(!user.client || !user.client.prefs)
 		return list("error" = TRUE)
-	
+
 	var/list/data = ..()
 	data["volume_channels"] = user.client.prefs.volume_channels
 	return data
@@ -97,7 +97,7 @@
 
 /client/verb/volume_panel()
 	set name = "Volume Panel"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Allows you to adjust volume levels on the fly."
 
 	if(!volume_panel)

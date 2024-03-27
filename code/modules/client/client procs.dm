@@ -495,7 +495,7 @@
 
 /client/verb/character_setup()
 	set name = "Character Setup"
-	set category = "Preferences"
+	set category = "Preferences.Character" //CHOMPEdit
 	if(prefs)
 		prefs.ShowChoices(usr)
 
@@ -597,7 +597,7 @@
 
 /client/verb/toggle_fullscreen()
 	set name = "Toggle Fullscreen"
-	set category = "OOC"
+	set category = "OOC.Client Settings" //CHOMPEdit
 
 	fullscreen = !fullscreen
 
@@ -618,7 +618,7 @@
 /*
 /client/verb/toggle_status_bar()
 	set name = "Toggle Status Bar"
-	set category = "OOC"
+	set category = "OOC.Client Settings" //CHOMPEdit
 
 	show_status_bar = !show_status_bar
 

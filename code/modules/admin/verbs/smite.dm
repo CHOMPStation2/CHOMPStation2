@@ -1,7 +1,7 @@
 /client/proc/smite(var/mob/living/carbon/human/target in player_list)
 	set name = "Smite"
 	set desc = "Abuse a player with various 'special treatments' from a list."
-	set category = "Fun"
+	set category = "Fun.Do Not" //CHOMPEdit
 	if(!check_rights(R_FUN))
 		return
 
@@ -10,7 +10,7 @@
 
 	var/list/smite_types = list(SMITE_BREAKLEGS,SMITE_BLUESPACEARTILLERY,SMITE_SPONTANEOUSCOMBUSTION,SMITE_LIGHTNINGBOLT,
 								SMITE_SHADEKIN_ATTACK,SMITE_SHADEKIN_NOMF,SMITE_AD_SPAM,SMITE_REDSPACE_ABDUCT,SMITE_AUTOSAVE,SMITE_AUTOSAVE_WIDE,
-								SMITE_PIE, SMITE_SPICE) //CHOMP Add pie and spicy air 
+								SMITE_PIE, SMITE_SPICE) //CHOMP Add pie and spicy air
 
 	var/smite_choice = tgui_input_list(usr, "Select the type of SMITE for [target]","SMITE Type Choice", smite_types)
 	if(!smite_choice)

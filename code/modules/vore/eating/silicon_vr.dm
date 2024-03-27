@@ -80,7 +80,7 @@
 //I basically have to do this, you know?
 /mob/living/silicon/ai/examinate(atom/A as mob|obj|turf in view(eyeobj))
 	set name = "Examine"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 
 	A.examine(src)
 */
