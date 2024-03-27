@@ -261,3 +261,13 @@
   - rscadd: Ghost-follow glides with the target
   cadyn:
   - rscadd: TGPanel (cred Selis for port)
+2024-03-26:
+  Kashargul:
+  - bugfix: mecha turret targeting
+  Raeschen:
+  - bugfix: pulsar runtime
+  - bugfix: attempt to fix some ref sources in mob/living and mob/observer/eye
+  - bugfix: broodspiders hard del
+  cadyn:
+  - refactor: refactored orbit code to be less horrible
+  - bugfix: protean powers not showing up when blob form

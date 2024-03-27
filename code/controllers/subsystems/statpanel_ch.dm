@@ -160,7 +160,7 @@ SUBSYSTEM_DEF(statpanels)
 	examine_update += "[target.examine_icon]&emsp;<font size='5'>[description_holders["name"]]</font>" //The name, written in big letters.
 	examine_update += "[description_holders["desc"]]" //the default examine text.
 	if(description_holders["info"])
-		examine_update += "<font color='#084B8A'><b>[description_holders["info"]]</b></font><br />" //Blue, informative text.
+		examine_update += "<font color='#084B8A'><b>[replacetext(description_holders["info"], "\n", "<BR>")]</b></font><br />" //Blue, informative text.
 	if(description_holders["interactions"])
 		for(var/line in description_holders["interactions"])
 			examine_update += "<font color='#084B8A'><b>[line]</b></font><br />"

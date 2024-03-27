@@ -1,6 +1,0 @@
-author: "Raeschen"
-delete-after: True
-changes:
-  - bugfix: "pulsar runtime"
-  - bugfix: "attempt to fix some ref sources in mob/living and mob/observer/eye"
-  - bugfix: "broodspiders hard del"
