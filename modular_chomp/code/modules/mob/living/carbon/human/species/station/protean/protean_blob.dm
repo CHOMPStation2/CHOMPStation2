@@ -187,10 +187,10 @@
 	return fulllist
 
 //ChompEDIT START - TGPanel
-/mob/living/simple_mob/protean_blob/get_status_tab_items()
+/mob/living/simple_mob/protean_blob/update_misc_tabs()
 	. = ..()
 	if(humanform)
-		humanform.species.update_misc_tabs(humanform)
+		humanform.species.update_misc_tabs(src)
 //ChompEDIT END
 
 /mob/living/simple_mob/protean_blob/updatehealth()

@@ -10,7 +10,7 @@
 
 	// This is so shoes don't squeak every step
 	var/steps = 0
-	var/step_delay = 1
+	var/step_delay = 0	// Changed from 0 to 1 to make the sounds more consistent with movespeed.
 
 	// This is to stop squeak spam from inhand usage
 	var/last_use = 0

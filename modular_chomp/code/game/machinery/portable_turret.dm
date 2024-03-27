@@ -32,7 +32,10 @@
 	var/list/secondarytargets = list()	//targets that are least important
 
 	for(var/mob/M in oview(world.view, src))
-		assess_and_assign(M, targets, secondarytargets)
+		assess_and_assign_l(M, targets, secondarytargets)
+
+	for(var/obj/mecha/M in oview(world.view, src))
+		assess_and_assign_m(M, targets, secondarytargets)
 
 	if(!tryToShootAt(targets))
 		if(!tryToShootAt(secondarytargets)) // if no valid targets, go for secondary targets
