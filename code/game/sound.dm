@@ -15,9 +15,10 @@
 	var/maxdistance = (world.view + extrarange) * 2  //VOREStation Edit - 3 to 2
 	var/list/listeners = player_list.Copy()
 	if(!ignore_walls) //these sounds don't carry through walls
-		for(var/mob/listen in listeners)
+		/*for(var/mob/listen in listeners) //This is beyond fucking horrible. Please do not repeatedly call hear.
 			if(!(get_turf(listen) in hear(maxdistance,source)))
-				listeners -= listen
+				listeners -= listen*/
+		listeners = listeners & hearers(maxdistance,turf_source)
 	for(var/mob/M as anything in listeners)
 		if(!M || !M.client)
 			continue
