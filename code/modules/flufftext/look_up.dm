@@ -2,7 +2,7 @@
 
 /mob/living/verb/look_up()
 	set name = "Look Up"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 	set desc = "Look above you, and hope there's no ceiling spiders."
 
 	to_chat(usr, "You look upwards...")
@@ -62,4 +62,3 @@
 					to_chat(usr, "[P.moon_name] is not visible. It must be a new moon.")
 				else
 					to_chat(usr, "[P.moon_name] appears to currently be a [P.moon_phase].")
-

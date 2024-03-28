@@ -1,5 +1,5 @@
 /client/proc/ZoneTick()
-	set category = "Debug"
+	set category = "Debug.Misc" //CHOMPEdit
 	set name = "Process Atmos"
 	set desc = "Manually run a single tick of the air subsystem"
 
@@ -95,6 +95,6 @@
 			to_chat(mob, "both turfs can merge.")
 
 /client/proc/ZASSettings()
-	set category = "Debug"
+	set category = "Debug.Dangerous" //CHOMPEdit
 
 	vsc.SetDefault(mob)

@@ -371,7 +371,7 @@
 	var/incorporeal_speed = 0.5
 
 /client/verb/set_incorporeal_speed()
-	set category = "OOC"
+	set category = "OOC.Game Settings" //CHOMPEdit
 	set name = "Set Incorporeal Speed"
 
 	var/input = tgui_input_number(usr, "Set an incorporeal movement delay between 0 (fastest) and 5 (slowest)", "Incorporeal movement speed", (0.5/world.tick_lag), 5, 0)

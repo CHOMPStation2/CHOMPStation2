@@ -1,7 +1,7 @@
 //Toggles for preferences, normal clients
 /client/verb/toggle_ghost_ears()
 	set name = "Toggle Ghost Ears"
-	set category = "Preferences"
+	set category = "Preferences.Chat" //CHOMPEdit
 	set desc = "Toggles between seeing all mob speech and only nearby mob speech as an observer."
 
 	var/pref_path = /datum/client_preference/ghost_ears
@@ -16,7 +16,7 @@
 
 /client/verb/toggle_ghost_vision()
 	set name = "Toggle Ghost Sight"
-	set category = "Preferences"
+	set category = "Preferences.Chat" //CHOMPEdit
 	set desc = "Toggles between seeing all mob emotes and only nearby mob emotes as an observer."
 
 	var/pref_path = /datum/client_preference/ghost_sight
@@ -31,7 +31,7 @@
 
 /client/verb/toggle_ghost_radio()
 	set name = "Toggle Ghost Radio"
-	set category = "Preferences"
+	set category = "Preferences.Chat" //CHOMPEdit
 	set desc = "Toggles between seeing all radio chat and only nearby radio chatter as an observer."
 
 	var/pref_path = /datum/client_preference/ghost_radio
@@ -46,7 +46,7 @@
 
 /client/verb/toggle_deadchat()
 	set name = "Toggle Deadchat"
-	set category = "Preferences"
+	set category = "Preferences.Chat" //CHOMPEdit
 	set desc = "Toggles visibility of dead chat."
 
 	var/pref_path = /datum/client_preference/show_dsay
@@ -61,7 +61,7 @@
 
 /client/verb/toggle_ooc()
 	set name = "Toggle OOC"
-	set category = "Preferences"
+	set category = "Preferences.Chat" //CHOMPEdit
 	set desc = "Toggles visibility of global out of character chat."
 
 	var/pref_path = /datum/client_preference/show_ooc
@@ -76,7 +76,7 @@
 
 /client/verb/toggle_looc()
 	set name = "Toggle LOOC"
-	set category = "Preferences"
+	set category = "Preferences.Chat" //CHOMPEdit
 	set desc = "Toggles visibility of local out of character chat."
 
 	var/pref_path = /datum/client_preference/show_looc
@@ -91,7 +91,7 @@
 
 /client/verb/toggle_precision_placement()
 	set name = "Toggle Precision Placement"
-	set category = "Preferences"
+	set category = "Preferences.Game" //CHOMPEdit
 	set desc = "Toggles whether objects placed on table will be on cursor position or centered."
 
 	var/pref_path = /datum/client_preference/precision_placement
@@ -106,7 +106,7 @@
 
 /client/verb/toggle_typing()
 	set name = "Toggle Typing Indicator"
-	set category = "Preferences"
+	set category = "Preferences.Game" //CHOMPEdit
 	set desc = "Toggles you having the speech bubble typing indicator."
 
 	var/pref_path = /datum/client_preference/show_typing_indicator
@@ -121,7 +121,7 @@
 
 /client/verb/toggle_ahelp_sound()
 	set name = "Toggle Admin Help Sound"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggles the ability to hear a noise broadcasted when you get an admin message."
 
 	var/pref_path = /datum/client_preference/holder/play_adminhelp_ping
@@ -136,7 +136,7 @@
 
 /client/verb/toggle_lobby_music()
 	set name = "Toggle Lobby Music"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggles the ability to hear the music in the lobby."
 
 	var/pref_path = /datum/client_preference/play_lobby_music
@@ -151,7 +151,7 @@
 
 /client/verb/toggle_admin_midis()
 	set name = "Toggle Admin Music"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggles the ability to hear music played by admins."
 
 	var/pref_path = /datum/client_preference/play_admin_midis
@@ -166,7 +166,7 @@
 
 /client/verb/toggle_ambience()
 	set name = "Toggle Ambience"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggles the ability to hear local ambience."
 
 	var/pref_path = /datum/client_preference/play_ambiance
@@ -181,7 +181,7 @@
 
 /client/verb/toggle_weather_sounds()
 	set name = "Toggle Weather Sounds"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggles the ability to hear weather sounds while on a planet."
 
 	var/pref_path = /datum/client_preference/weather_sounds
@@ -196,7 +196,7 @@
 
 /client/verb/toggle_supermatter_hum()
 	set name = "Toggle SM Hum" // Avoiding using the full 'Supermatter' name to not conflict with the Setup-Supermatter adminverb.
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggles the ability to hear supermatter hums."
 
 	var/pref_path = /datum/client_preference/supermatter_hum
@@ -211,7 +211,7 @@
 
 /client/verb/toggle_jukebox()
 	set name = "Toggle Jukebox"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggles the ability to hear jukebox music."
 
 	var/pref_path = /datum/client_preference/play_jukebox
@@ -226,7 +226,7 @@
 
 /client/verb/toggle_be_special(role in be_special_flags)
 	set name = "Toggle Special Role Candidacy"
-	set category = "Preferences"
+	set category = "Preferences.Character" //CHOMPEdit
 	set desc = "Toggles which special roles you would like to be a candidate for, during events."
 
 	var/role_flag = be_special_flags[role]
@@ -241,7 +241,7 @@
 
 /client/verb/toggle_air_pump_hum()
 	set name = "Toggle Air Vent Noise"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggles the ability to hear air vent humming."
 
 	var/pref_path = /datum/client_preference/air_pump_noise
@@ -256,7 +256,7 @@
 
 /client/verb/toggle_old_door_sounds()
 	set name = "Toggle Door: Old Sounds"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggles door sounds between old and new."
 
 	var/pref_path = /datum/client_preference/old_door_sounds
@@ -271,7 +271,7 @@
 
 /client/verb/toggle_department_door_sounds()
 	set name = "Toggle Door: Department Sounds"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggles hearing of department-specific door sounds."
 
 	var/pref_path = /datum/client_preference/department_door_sounds
@@ -286,7 +286,7 @@
 
 /client/verb/toggle_pickup_sounds()
 	set name = "Toggle Item: Picked up Sounds"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggles the ability to hear sounds when items are picked up."
 
 	var/pref_path = /datum/client_preference/pickup_sounds
@@ -301,7 +301,7 @@
 
 /client/verb/toggle_drop_sounds()
 	set name = "Toggle Item: Dropped Sounds"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggles the ability to hear sounds when items are dropped or thrown."
 
 	var/pref_path = /datum/client_preference/drop_sounds
@@ -316,7 +316,7 @@
 
 /client/verb/toggle_safe_firing()
 	set name = "Toggle Gun Firing Intent Requirement"
-	set category = "Preferences"
+	set category = "Preferences.Game" //CHOMPEdit
 	set desc = "Toggles between safe and dangerous firing. Safe requires a non-help intent to fire, dangerous can be fired on help intent."
 
 	var/pref_path = /datum/client_preference/safefiring
@@ -329,7 +329,7 @@
 
 /client/verb/toggle_mob_tooltips()
 	set name = "Toggle Mob Tooltips"
-	set category = "Preferences"
+	set category = "Preferences.Game" //CHOMPEdit
 	set desc = "Toggles displaying name/species over mobs when they are moused over."
 
 	var/pref_path = /datum/client_preference/mob_tooltips
@@ -342,7 +342,7 @@
 
 /client/verb/toggle_inv_tooltips()
 	set name = "Toggle Item Tooltips"
-	set category = "Preferences"
+	set category = "Preferences.Game" //CHOMPEdit
 	set desc = "Toggles displaying name/desc over items when they are moused over (only applies in inventory)."
 
 	var/pref_path = /datum/client_preference/inv_tooltips
@@ -355,7 +355,7 @@
 
 /client/verb/toggle_hear_instruments()
 	set name = "Toggle Hear/Ignore Instruments"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggles the ability to hear instruments playing."
 
 	var/pref_path = /datum/client_preference/instrument_toggle
@@ -368,7 +368,7 @@
 
 /client/verb/toggle_vchat()
 	set name = "Toggle TGChat"
-	set category = "Preferences"
+	set category = "Preferences.Chat" //CHOMPEdit
 	set desc = "Toggles TGChat. Reloading TGChat and/or reconnecting required to affect changes."
 
 	var/pref_path = /datum/client_preference/vchat_enable
@@ -381,7 +381,7 @@
 
 /client/verb/toggle_chat_timestamps()
 	set name = "Toggle Chat Timestamps"
-	set category = "Preferences"
+	set category = "Preferences.Chat" //CHOMPEdit
 	set desc = "Toggles whether or not messages in chat will display timestamps. Enabling this will not add timestamps to messages that have already been sent."
 
 	prefs.chat_timestamp = !prefs.chat_timestamp	//There is no preference datum for tgui input lock, nor for any TGUI prefs.
@@ -391,7 +391,7 @@
 
 /client/verb/toggle_throwmode_messages()
 	set name = "Toggle Throw Mode Messages"
-	set category = "Preferences"
+	set category = "Preferences.Chat" //CHOMPEdit
 	set desc = "Toggles whether or not activating throw mode (hotkey: R) will announce you're preparing to throw your current handheld item, or catch an incoming item if your hand is empty."
 
 	prefs.throwmode_loud = !prefs.throwmode_loud	//There is no preference datum for tgui input lock, nor for any TGUI prefs.
@@ -401,7 +401,7 @@
 
 /client/verb/toggle_status_indicators()
 	set name = "Toggle Status Indicators"
-	set category = "Preferences"
+	set category = "Preferences.Game" //CHOMPEdit
 	set desc = "Toggles seeing status indicators over peoples' heads."
 
 	var/pref_path = /datum/client_preference/status_indicators
@@ -415,7 +415,7 @@
 
 /client/verb/toggle_radio_sounds()
 	set name = "Toggle Radio Sounds"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggle hearing a sound when somebody speaks over your headset."
 
 	var/pref_path = /datum/client_preference/radio_sounds
@@ -428,7 +428,7 @@
 
 /client/verb/toggle_say_sounds()
 	set name = "Toggle Voice Sounds"	//CHOMPEdit - changed name to one that doesn't interfere with say autofill
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggle hearing a sound when somebody speaks or emotes."
 
 	var/pref_path = /datum/client_preference/say_sounds
@@ -443,7 +443,7 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 
 /client/verb/toggle_emote_sounds()
 	set name = "Sound-Toggle-Me"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggle hearing a sound when somebody speaks using me ."
 
 	var/pref_path = /datum/client_preference/emote_sounds
@@ -456,7 +456,7 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 
 /client/verb/toggle_whisper_sounds()
 	set name = "Sound-Toggle-Whisper"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggle hearing a sound when somebody speaks using whisper."
 
 	var/pref_path = /datum/client_preference/whisper_sounds
@@ -469,7 +469,7 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 
 /client/verb/toggle_subtle_sounds()
 	set name = "Sound-Toggle-Subtle"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggle hearing a sound when somebody uses subtle."
 
 	var/pref_path = /datum/client_preference/subtle_sounds
@@ -483,7 +483,7 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 
 /client/verb/toggle_vore_health_bars()
 	set name = "Toggle Vore Health Bars"
-	set category = "Preferences"
+	set category = "Preferences.Vore" //CHOMPEdit
 	set desc = "Toggle the display of vore related health bars"
 
 	var/pref_path = /datum/client_preference/vore_health_bars
@@ -497,7 +497,7 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 // Not attached to a pref datum because those are strict binary toggles
 /client/verb/toggle_examine_mode()
 	set name = "Toggle Examine Mode"
-	set category = "Preferences"
+	set category = "Preferences.Game" //CHOMPEdit
 	set desc = "Toggle the additional behaviour of examining things."
 
 	prefs.examine_text_mode++
@@ -514,7 +514,7 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 
 /client/verb/toggle_multilingual_mode()
 	set name = "Toggle Multilingual Mode"
-	set category = "Preferences"
+	set category = "Preferences.Character" //CHOMPEdit
 	set desc = "Toggle the behaviour of multilingual speech parsing."
 
 	prefs.multilingual_mode++
@@ -535,7 +535,7 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 
 /client/proc/toggle_debug_logs()
 	set name = "Toggle Debug Logs"
-	set category = "Preferences"
+	set category = "Preferences.Admin" //CHOMPEdit
 	set desc = "Toggles seeing debug logs."
 
 	var/pref_path = /datum/client_preference/debug/show_debug_logs
@@ -550,7 +550,7 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 //Mods
 /client/proc/toggle_attack_logs()
 	set name = "Toggle Attack Logs"
-	set category = "Preferences"
+	set category = "Preferences.Admin" //CHOMPEdit
 	set desc = "Toggles seeing attack logs."
 
 	var/pref_path = /datum/client_preference/mod/show_attack_logs
@@ -565,7 +565,7 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 //General
 /client/proc/toggle_admin_global_looc()
 	set name = "Toggle Admin Global LOOC Visibility"
-	set category = "Preferences"
+	set category = "Preferences.Admin" //CHOMPEdit
 	set desc = "Toggles seeing LOOC messages outside your actual LOOC range."
 
 	var/pref_path = /datum/client_preference/holder/show_rlooc
@@ -579,7 +579,7 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 
 /client/proc/toggle_admin_deadchat()
 	set name = "Toggle Admin Living Deadchat"
-	set category = "Preferences"
+	set category = "Preferences.Admin" //CHOMPEdit
 	set desc = "Toggles seeing deadchat while not observing."
 
 	var/pref_path = /datum/client_preference/holder/show_staff_dsay

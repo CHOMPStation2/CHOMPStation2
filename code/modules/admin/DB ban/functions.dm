@@ -254,7 +254,7 @@
 	qdel(query_update) //CHOMPEdit TGSQL
 
 /client/proc/DB_ban_panel()
-	set category = "Admin"
+	set category = "Admin.Moderation" //CHOMPEdit
 	set name = "Banning Panel"
 	set desc = "Edit admin permissions"
 

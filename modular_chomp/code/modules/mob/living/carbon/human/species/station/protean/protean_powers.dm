@@ -6,7 +6,7 @@
 /mob/living/carbon/human/proc/nano_partswap()
 	set name = "Ref - Single Limb"
 	set desc = "Allows you to replace and reshape your limbs as you see fit."
-	set category = "Abilities"
+	set category = "Abilities.Protean"
 	set hidden = 1
 
 	var/mob/living/caller = src
@@ -92,7 +92,7 @@
 /mob/living/carbon/human/proc/nano_regenerate()
 	set name = "Total Reassembly"
 	set desc = "Fully repair yourself or reload your appearance from whatever character slot you have loaded."
-	set category = "Abilities"
+	set category = "Abilities.Protean"
 	set hidden = 1
 	var/mob/living/caller = src
 	if(temporary_form)
@@ -140,7 +140,7 @@
 /mob/living/carbon/human/proc/nano_copy_body()
 	set name = "Copy Form"
 	set desc = "If you are aggressively grabbing someone, with their consent, you can turn into a copy of them. (Without their name)."
-	set category = "Abilities"
+	set category = "Abilities.Protean"
 	set hidden = 1
 	var/mob/living/caller = src
 	if(temporary_form)
@@ -211,7 +211,7 @@
 /mob/living/carbon/human/proc/nano_metalnom()
 	set name = "Ref - Store Metals"
 	set desc = "If you're holding a stack of material, you can consume some and store it for later."
-	set category = "Abilities"
+	set category = "Abilities.Protean"
 	set hidden = 1
 
 	var/mob/living/caller = src
@@ -262,7 +262,7 @@
 /mob/living/carbon/human/proc/nano_blobform(var/forced)
 	set name = "Toggle Blobform"
 	set desc = "Switch between amorphous and humanoid forms."
-	set category = "Abilities"
+	set category = "Abilities.Protean"
 	set hidden = 1
 
 	if(nano_dead_check(src))
@@ -300,7 +300,7 @@
 /mob/living/carbon/human/proc/nano_change_fitting()
 	set name = "Change Species Fit"
 	set desc = "Tweak your shape to change what suits you fit into (and their sprites!)."
-	set category = "Abilities"
+	set category = "Abilities.Protean"
 
 	if(stat)
 		to_chat(src,"<span class='warning'>You must be awake and standing to perform this action!</span>")
@@ -317,7 +317,7 @@
 /mob/living/carbon/human/proc/nano_rig_transform(var/forced)
 	set name = "Modify Form - Hardsuit"
 	set desc = "Allows a protean to retract its mass into its hardsuit module at will."
-	set category = "Abilities"
+	set category = "Abilities.Protean"
 	set hidden = 1
 
 	var/mob/living/caller = src
@@ -374,7 +374,7 @@
 /mob/living/carbon/human/proc/appearance_switch()
 	set name = "Switch Blob Appearance"
 	set desc = "Allows a protean blob to switch its outwards appearance."
-	set category = "Abilities"
+	set category = "Abilities.Protean"
 	set hidden = 1
 	var/datum/species/protean/S = src.species
 	var/mob/living/caller = src
@@ -543,7 +543,7 @@
 /mob/living/carbon/human/proc/nano_latch()
 	set name = "Latch/Unlatch host"
 	set desc = "Allows a protean to forcibly latch or unlatch from a host."
-	set category = "Abilities"
+	set category = "Abilities.Protean"
 	set hidden = 1
 	var/mob/living/caller = src
 	var/mob/living/carbon/human/target

@@ -397,7 +397,7 @@
 
 /mob/living/carbon/verb/mob_sleep()
 	set name = "Sleep"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 
 	if(usr.sleeping)
 		to_chat(usr, span_red("You are already sleeping"))

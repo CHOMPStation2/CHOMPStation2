@@ -1,8 +1,8 @@
 /datum/admins/proc/quick_nif()
-	set category = "Fun"
+	set category = "Fun.Add Nif" //CHOMPEdit
 	set name = "Quick NIF"
 	set desc = "Spawns a NIF into someone in quick-implant mode."
-	
+
 	var/input_NIF
 
 	if(!check_rights(R_ADMIN|R_EVENT|R_DEBUG|R_MOD))	//CHOMPStation Edit TFF 24/4/19: Allow Devs to use Quick-NIF verb. 11/9/20: Also allow mods :3
@@ -48,5 +48,4 @@
 			new /obj/item/device/nif(H)
 
 	log_and_message_admins("[key_name(src)] Quick NIF'd [H.real_name] with a [input_NIF].")
-	feedback_add_details("admin_verb","QNIF") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc! 
-
+	feedback_add_details("admin_verb","QNIF") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!

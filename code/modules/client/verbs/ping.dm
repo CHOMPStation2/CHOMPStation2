@@ -8,5 +8,5 @@
 
 /client/verb/ping()
 	set name = "Ping"
-	set category = "OOC"
-	winset(src, null, "command=.display_ping+[world.time+world.tick_lag*world.tick_usage/100]") 
+	set category = "OOC.Debug" //CHOMPEdit
+	winset(src, null, "command=.display_ping+[world.time+world.tick_lag*world.tick_usage/100]")

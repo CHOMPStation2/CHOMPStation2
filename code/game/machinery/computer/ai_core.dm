@@ -256,7 +256,7 @@ GLOBAL_LIST_BOILERPLATE(all_deactivated_AI_cores, /obj/structure/AIcore/deactiva
 
 /client/proc/empty_ai_core_toggle_latejoin()
 	set name = "Toggle AI Core Latejoin"
-	set category = "Admin"
+	set category = "Admin.Silicon" //CHOMPEdit
 
 	var/list/cores = list()
 	for(var/obj/structure/AIcore/deactivated/D in GLOB.all_deactivated_AI_cores)

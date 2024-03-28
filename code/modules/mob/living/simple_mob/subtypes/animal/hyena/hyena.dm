@@ -88,7 +88,7 @@ They're also cool, and Rykka/Nyria wrote this uwu
 /mob/living/simple_mob/animal/hyena/verb/remove_hat()
 	set name = "Remove Hat"
 	set desc = "Remove the yeen's hat. You monster. ;~;"
-	set category = "Abilities"
+	set category = "Abilities.Hyena" //CHOMPEdit
 	set src in view(1)
 
 	drop_hat(usr)
@@ -111,7 +111,7 @@ They're also cool, and Rykka/Nyria wrote this uwu
 /mob/living/simple_mob/animal/hyena/verb/give_hat()
 	set name = "Give Hat"
 	set desc = "Give the yeen a hat. You wonderful bean. <3"
-	set category = "Abilities"
+	set category = "Abilities.Hyena" //CHOMPEdit
 	set src in view(1)
 
 	take_hat(usr)

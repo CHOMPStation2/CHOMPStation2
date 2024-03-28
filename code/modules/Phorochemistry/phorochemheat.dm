@@ -133,7 +133,7 @@
 /obj/machinery/bunsen_burner/verb/toggle()
 	set src in view(1)
 	set name = "Toggle bunsen burner"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 
 	heating = !heating
 	icon_state = "bunsen[heating]"

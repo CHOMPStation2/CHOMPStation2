@@ -4,7 +4,7 @@
 /mob/living/carbon/human/proc/tie_hair()
 	set name = "Tie Hair"
 	set desc = "Style your hair."
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 
 	if(incapacitated())
 		to_chat(src, "<span class='warning'>You can't mess with your hair right now!</span>")
@@ -34,7 +34,7 @@
 			to_chat(src, "<span class ='notice'>You're already using that style.</span>")
 
 /mob/living/carbon/human/proc/tackle()
-	set category = "Abilities"
+	set category = "Abilities.General" //CHOMPEdit
 	set name = "Tackle"
 	set desc = "Tackle someone down."
 
@@ -81,7 +81,7 @@
 			O.show_message("<span class='filter_warning'>[span_red("<B>[src] [failed ? "tried to tackle" : "has tackled"] down [T]!</B>")]</span>", 1)
 
 /mob/living/carbon/human/proc/commune()
-	set category = "Abilities"
+	set category = "Abilities.General" //CHOMPEdit
 	set name = "Commune with creature"
 	set desc = "Send a telepathic message to an unlucky recipient."
 
@@ -119,7 +119,7 @@
 /mob/living/carbon/human/proc/regurgitate()
 	set name = "Regurgitate"
 	set desc = "Empties the contents of your stomach"
-	set category = "Abilities"
+	set category = "Abilities.General" //CHOMPEdit
 
 	if(stomach_contents.len)
 		for(var/mob/M in src)
@@ -132,7 +132,7 @@
 /mob/living/carbon/human/proc/psychic_whisper(mob/M as mob in oview())
 	set name = "Psychic Whisper"
 	set desc = "Whisper silently to someone over a distance."
-	set category = "Abilities"
+	set category = "Abilities.General" //CHOMPEdit
 
 	var/msg = sanitize(tgui_input_text(usr, "Message:", "Psychic Whisper"))
 	if(msg)
@@ -144,7 +144,7 @@
 /mob/living/carbon/human/proc/diona_split_nymph()
 	set name = "Split"
 	set desc = "Split your humanoid form into its constituent nymphs."
-	set category = "Abilities"
+	set category = "Abilities.Diona" //CHOMPEdit
 	diona_split_into_nymphs(5)	// Separate proc to void argments being supplied when used as a verb
 
 /mob/living/carbon/human/proc/diona_split_into_nymphs(var/number_of_resulting_nymphs)
@@ -204,7 +204,7 @@
 /mob/living/carbon/human/proc/self_diagnostics()
 	set name = "Self-Diagnostics"
 	set desc = "Run an internal self-diagnostic to check for damage."
-	set category = "IC"
+	set category = "Abilities.General" //CHOMPEdit
 
 	if(stat == DEAD) return
 
@@ -247,7 +247,7 @@
 /mob/living/carbon/human/proc/sonar_ping()
 	set name = "Listen In"
 	set desc = "Allows you to listen in to movement and noises around you."
-	set category = "Abilities"
+	set category = "Abilities.General" //CHOMPEdit
 
 	if(incapacitated())
 		to_chat(src, "<span class='warning'>You need to recover before you can use this ability.</span>")
@@ -292,7 +292,7 @@
 /mob/living/carbon/human/proc/regenerate()
 	set name = "Regenerate"
 	set desc = "Allows you to regrow limbs and heal organs after a period of rest."
-	set category = "Abilities"
+	set category = "Abilities.General" //CHOMPEdit
 
 	if(nutrition < 250)
 		to_chat(src, "<span class='warning'>You lack the biomass to begin regeneration!</span>")
@@ -356,7 +356,7 @@
 /mob/living/carbon/human/proc/setmonitor_state()
 	set name = "Set monitor display"
 	set desc = "Set your monitor display"
-	set category = "IC"
+	set category = "IC.Settings" //CHOMPEdit
 	if(stat)
 		to_chat(src,"<span class='warning'>You must be awake and standing to perform this action!</span>")
 		return

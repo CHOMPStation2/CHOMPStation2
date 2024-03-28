@@ -44,7 +44,7 @@
 //admin proc
 /client/proc/cmd_mentor_ticket_panel()
 	set name = "Mentor Ticket List"
-	set category = "Admin"
+	set category = "Admin.Misc"
 
 	var/browse_to
 
@@ -111,7 +111,7 @@
 //admin proc
 /client/proc/cmd_admin_ticket_panel()
 	set name = "Show Ticket List"
-	set category = "Admin"
+	set category = "Admin.Misc"
 
 	if(!check_rights(R_ADMIN|R_MOD|R_DEBUG|R_EVENT, TRUE))
 		return

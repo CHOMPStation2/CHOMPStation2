@@ -447,7 +447,7 @@
 /mob/living/simple_mob/proc/contort()
 	set name = "contort"
 	set desc = "Allows to hide beneath tables or certain items. Toggled on or off."
-	set category = "Abilities"
+	set category = "Abilities.Synx"
 
 	if(stat == DEAD || paralysis || weakened || stunned || restrained())
 		return
@@ -468,7 +468,7 @@
 /mob/living/simple_mob/animal/synx/proc/disguise()
 	set name = "Toggle Form"
 	set desc = "Switch between amorphous and humanoid forms."
-	set category = "Abilities"
+	set category = "Abilities.Synx"
 
 	if(stat == DEAD || paralysis || weakened || stunned || restrained())
 		return
@@ -493,7 +493,7 @@
 /mob/living/simple_mob/animal/synx/proc/randomspeech()
 	set name = "speak"
 	set desc = "Take a sentence you heard and speak it."
-	set category = "Abilities"
+	set category = "Abilities.Synx"
 	if(speak && voices)
 		handle_mimic()
 	else
@@ -514,7 +514,7 @@
 /mob/living/simple_mob/animal/synx/proc/sonar_ping()
 	set name = "Listen In"
 	set desc = "Allows you to listen in to movement and noises around you."
-	set category = "Abilities"
+	set category = "Abilities.Synx"
 
 	if(incapacitated())
 		to_chat(src, "<span class='warning'>You need to recover before you can use this ability.</span>")
@@ -563,7 +563,7 @@
 /mob/living/simple_mob/animal/synx/proc/distend_stomach()
 	set name = "Distend Stomach"
 	set desc = "Allows you to throw up your stomach, giving your attacks burn damage at the cost of your stomach contents going everywhere. Yuck."
-	set category = "Abilities"
+	set category = "Abilities.Synx"
 
 	if(transformed)
 		to_chat(src,"<span class='warning'>Your limbs are in the way!</span>") //Kind of a weak excuse but since you already can't transform when your stomach is out, this avoids situations calling a sprite that doesn't exist and lightens my workload on making and implementing them
@@ -668,7 +668,7 @@
 /mob/living/simple_mob/animal/synx/proc/set_style()
 	set name = "Set Style"
 	set desc = "Customise your icons."
-	set category = "Abilities"
+	set category = "Abilities.Synx"
 
 	var/list/options = list("Body","Horns","Marks","Eyes")
 	for(var/option in options)
@@ -770,7 +770,7 @@
 /*/mob/living/simple_mob/animal/synx/proc/honk()
 	set name = "HONK"
 	set desc = "TAAA RAINBOW"
-	set category = "Abilities"
+	set category = "Abilities.Synx"
 	icon_state = "synx_pet_rainbow"
 	icon_living = "synx_pet_rainbow"
 	playsound(src.loc, 'sound/items/bikehorn.ogg', 50, 1)

@@ -43,7 +43,7 @@ var/list/mentor_verbs_default = list(
 		remove_verb(src,mentor_verbs_default) //CHOMPEdit TGPanel
 
 /client/proc/make_mentor()
-	set category = "Special Verbs"
+	set category = "Admin.Secrets" //CHOMPEdit
 	set name = "Make Mentor"
 	if(!holder)
 		to_chat(src, "<span class='pm warning'>Error: Only administrators may use this command.</span>")
@@ -73,7 +73,7 @@ var/list/mentor_verbs_default = list(
 	// CHOMPedit End
 
 /client/proc/unmake_mentor()
-	set category = "Special Verbs"
+	set category = "Admin.Secrets" //CHOMPEdit
 	set name = "Unmake Mentor"
 	if(!holder)
 		to_chat(src, "<span class='pm warning'>Error: Only administrators may use this command.</span>")
@@ -97,7 +97,7 @@ var/list/mentor_verbs_default = list(
 	// CHOMPedit End
 
 /client/proc/cmd_mentor_say(msg as text)
-	set category = "Admin"
+	set category = "Admin.Chat" //CHOMPEdit
 	set name ="Mentorsay"
 
 	//check rights
@@ -139,7 +139,7 @@ var/list/mentor_verbs_default = list(
 	mentor_commands(href, href_list, usr)
 
 /client/proc/cmd_dementor()
-	set category = "Admin"
+	set category = "Admin.Misc" //CHOMPEdit
 	set name = "De-mentor"
 
 	if(tgui_alert(usr, "Confirm self-dementor for the round? You can't re-mentor yourself without someone promoting you.","Dementor",list("Yes","No")) == "Yes")

@@ -100,7 +100,7 @@
 
 /mob/living/verb/print_healthbars()
 	set name = "Print Prey Healthbars"
-	set category = "Abilities"
+	set category = "Abilities.Vore" //CHOMPEdit
 
 	var/nuffin = TRUE
 	for(var/obj/belly/b in vore_organs)

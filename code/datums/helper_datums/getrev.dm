@@ -15,7 +15,7 @@ GLOBAL_DATUM(revdata, /datum/getrev)
 			revision = REV.origin_commit || REV.commit
 			branch = "-Using TGS-" // TGS doesn't provide branch info yet
 			date = "-Using TGS-" // Or date
-	
+
 	if(!revision) // File parse method
 		var/list/head_branch = file2list(".git/HEAD", "\n")
 		if(head_branch.len)
@@ -53,16 +53,16 @@ GLOBAL_DATUM(revdata, /datum/getrev)
 		. += "<a href=\"[config.githuburl]/pull/[tm.number]\">#[tm.number][details]</a>"
 
 /client/verb/showrevinfo()
-	set category = "OOC"
+	set category = "OOC.Game" //CHOMPEdit
 	set name = "Show Server Revision"
 	set desc = "Check the current server code revision"
 
 	if(!GLOB.revdata)
 		to_chat(src, "<span class='warning'>Please wait until server initializations are complete.</span>")
 		return
-	
+
 	var/list/msg = list()
-	
+
 	if(GLOB.revdata.revision)
 		msg += "<b>Server revision:</b> B:[GLOB.revdata.branch] D:[GLOB.revdata.date]"
 		if(config.githuburl)

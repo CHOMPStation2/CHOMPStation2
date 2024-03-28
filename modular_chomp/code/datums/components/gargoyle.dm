@@ -57,7 +57,7 @@
 //verbs or action buttons...?
 /mob/living/carbon/human/proc/gargoyle_transformation()
 	set name = "Gargoyle - Petrification"
-	set category = "Abilities"
+	set category = "Abilities.Gargoyle"
 	set desc = "Turn yourself into (or back from) being a gargoyle."
 
 	if (stat == DEAD)
@@ -78,7 +78,7 @@
 
 /mob/living/carbon/human/proc/gargoyle_pause()
 	set name = "Gargoyle - Pause"
-	set category = "Abilities"
+	set category = "Abilities.Gargoyle"
 	set desc = "Pause your energy while standing still, so you don't use up any more, though you will lose a small amount upon moving again."
 
 	if (stat)
@@ -93,7 +93,7 @@
 
 /mob/living/carbon/human/proc/gargoyle_checkenergy()
 	set name = "Gargoyle - Check Energy"
-	set category = "Abilities"
+	set category = "Abilities.Gargoyle"
 	set desc = "Check how much energy you have remaining as a gargoyle."
 
 	var/datum/component/gargoyle/comp = GetComponent(/datum/component/gargoyle)

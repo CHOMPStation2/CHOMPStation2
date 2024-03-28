@@ -81,7 +81,7 @@
  */
 /mob/living/carbon/human/proc/nif_menu()
 	set name = "NIF Menu"
-	set category = "IC"
+	set category = "IC.Nif" //CHOMPEdit
 	set desc = "Open the NIF user interface."
 
 	var/obj/item/device/nif/N = nif

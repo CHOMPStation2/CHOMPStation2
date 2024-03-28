@@ -26,7 +26,7 @@
 	meat_amount = 8
 
 	say_list_type = /datum/say_list/bear
-	
+
 	can_be_drop_prey = FALSE //CHOMP Add
 
 /datum/say_list/bear
@@ -44,6 +44,6 @@
 /mob/living/simple_mob/animal/space/bear/verb/berserk()
 	set name = "Berserk"
 	set desc = "Enrage and become vastly stronger for a period of time, however you will be weaker afterwards."
-	set category = "Abilities"
+	set category = "Abilities.Bear" //CHOMPEdit
 
 	add_modifier(/datum/modifier/berserk, 30 SECONDS)

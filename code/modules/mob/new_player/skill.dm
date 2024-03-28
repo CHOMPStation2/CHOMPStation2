@@ -207,7 +207,7 @@ var/global/list/SKILL_PRE = list("Engineer" = SKILL_ENGINEER, "Roboticist" = SKI
 	return
 
 /mob/living/carbon/human/verb/show_skills()
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 	set name = "Show Own Skills"
 
 	show_skill_window(src, src)
