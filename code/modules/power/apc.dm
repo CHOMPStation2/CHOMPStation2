@@ -918,6 +918,9 @@ GLOBAL_LIST_EMPTY(apcs)
 	// conditional.
 	var/locked_exception = FALSE
 	if(siliconaccess(usr) || action == "nightshift")
+		locked_exception = TRUE
+
+
 	if(isobserver(usr))
 		var/mob/observer/dead/D = usr
 		if(D.can_admin_interact())
