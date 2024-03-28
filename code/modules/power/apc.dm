@@ -917,12 +917,7 @@ GLOBAL_LIST_EMPTY(apcs)
 	// If can_admin_interact() wasn't only defined on observers, this could just be part of a single-line
 	// conditional.
 	var/locked_exception = FALSE
-	if(issilicon(usr) || action == "nightshift")
-		var/mob/living/silicon/robot/R = usr
-		if(istype(usr))
-			locked_exception = check_access(R.idcard)
-		else
-			locked_exception = TRUE
+	if(siliconaccess(usr) || action == "nightshift")
 	if(isobserver(usr))
 		var/mob/observer/dead/D = usr
 		if(D.can_admin_interact())
