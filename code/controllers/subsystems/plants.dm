@@ -21,14 +21,16 @@ SUBSYSTEM_DEF(plants)
 	// Hydro trays and growing food normally just chill in SSobj
 	var/list/processing = list()
 	var/list/currentrun = list()
+
 //CHOMPEdit Begin
 /datum/controller/subsystem/plants/stat_entry(msg)
 	msg = "P:[processing.len]|S:[seeds.len]"
 	return ..()
-//CHOMPEdit End
-/datum/controller/subsystem/plants/Initialize(timeofday)
+
+/datum/controller/subsystem/plants/Initialize()
 	setup()
-	return ..()
+	return SS_INIT_SUCCESS
+//CHOMPEdit End
 
 // Predefined/roundstart varieties use a string key to make it
 // easier to grab the new variety when mutating. Post-roundstart

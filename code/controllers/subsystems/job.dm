@@ -11,12 +11,12 @@ SUBSYSTEM_DEF(job)
 	var/debug_messages = FALSE
 
 
-/datum/controller/subsystem/job/Initialize(timeofday)
+/datum/controller/subsystem/job/Initialize() // CHOMPEdit
 	if(!department_datums.len)
 		setup_departments()
 	if(!occupations.len)
 		setup_occupations()
-	return ..()
+	return SS_INIT_SUCCESS // CHOMPEdit
 
 /datum/controller/subsystem/job/proc/setup_occupations(faction = "Station")
 	occupations = list()

@@ -27,15 +27,15 @@ SUBSYSTEM_DEF(overlays)
 		atom.flags &= ~OVERLAY_QUEUED
 		CHECK_TICK
 
-
-/datum/controller/subsystem/overlays/Initialize(timeofday)
-	fire(FALSE, TRUE)
-	..()
 //CHOMPEdit Begin
+/datum/controller/subsystem/overlays/Initialize()
+	fire(FALSE, TRUE)
+	return SS_INIT_SUCCESS
+
 /datum/controller/subsystem/overlays/stat_entry(msg)
 	msg = "Queued Atoms: [queue.len], Cache Size: [cache_size]"
 	return ..()
-//CHOMPEdit End
+
 /datum/controller/subsystem/overlays/fire(resumed, no_mc_tick)
 	var/count = 1
 	for (var/atom/atom as anything in queue)
