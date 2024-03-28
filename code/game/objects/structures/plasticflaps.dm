@@ -27,7 +27,20 @@
 		return
 	else
 		return
-
+//CHOMPEdit Begin
+/obj/structure/plasticflaps/can_pathfinding_enter(atom/movable/actor, dir, datum/pathfinding/search)
+	if(isliving(actor))
+		var/mob/living/L = actor
+		if(isbot(L))
+			return TRUE
+		if(L.can_ventcrawl())
+			return TRUE
+		if(L.mob_size <= MOB_TINY)
+			return TRUE
+		return FALSE
+	return TRUE
+	//return isnull(actor.pulling)? TRUE : can_pathfinding_enter(actor.pulling, dir, search)
+//CHOMPEdit End
 /obj/structure/plasticflaps/CanPass(atom/A, turf/T)
 	if(istype(A) && A.checkpass(PASSGLASS))
 		return prob(60)

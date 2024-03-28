@@ -155,10 +155,9 @@
 	if(++times_idle == 150) turn_off() //VOREStation Add - Idle shutoff time
 
 /mob/living/bot/farmbot/calcTargetPath() // We need to land NEXT to the tray, because the tray itself is impassable
-	for(var/trayDir in list(NORTH, SOUTH, EAST, WEST))
-		target_path = AStar(get_turf(loc), get_step(get_turf(target), trayDir), /turf/proc/CardinalTurfsWithAccess, /turf/proc/Distance, 0, max_target_dist, id = botcard)
-		if(target_path)
-			break
+	if(isnull(target))
+		return
+	target_path = SSpathfinder.default_bot_pathfinding(src, get_turf(target), 1, 32) //CHOMPEdit
 	if(!target_path)
 		ignore_list |= target
 		target = null

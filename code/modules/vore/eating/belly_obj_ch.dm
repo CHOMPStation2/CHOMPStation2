@@ -671,3 +671,9 @@
 			var/obj/item/I = thing
 			surrounding.Add(get_belly_surrounding(I.contents))
 	return surrounding
+
+/obj/belly/proc/effective_emote_hearers()
+	. = list(loc)
+	for(var/atom/movable/AM as anything in contents)
+		//if(AM.atom_flags & ATOM_HEAR)
+		. += AM
