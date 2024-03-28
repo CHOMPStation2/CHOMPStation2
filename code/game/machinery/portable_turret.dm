@@ -722,7 +722,7 @@
 	if(faction && L.faction == faction)
 		return TURRET_NOT_TARGET
 
-	if(!emagged && issilicon(L) && check_all == FALSE)	// Don't target silica, unless told to neutralize everything.
+	if(!emagged && issilicon(L) && check_all == FALSE && allowed(src))	// Don't target silica, unless told to neutralize everything. //CHOMPEdit no more free pass for borg...
 		return TURRET_NOT_TARGET
 
 	if(L.stat == DEAD && !emagged)		//if the perp is dead, no need to bother really
