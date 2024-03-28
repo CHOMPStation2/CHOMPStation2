@@ -60,15 +60,15 @@
 
 
 /obj/machinery/door/airlock/BorgCtrlShiftClick(var/mob/living/silicon/robot/user)
-	if(check_access(R.idcard))
+	if(check_access(user.idcard))
 		..()
 
 /obj/machinery/door/airlock/BorgShiftClick(var/mob/living/silicon/robot/user)  // Opens and closes doors! Forwards to AI code.
-	if(check_access(R.idcard))
+	if(check_access(user.idcard))
 		..()
 
 /obj/machinery/door/airlock/BorgCtrlClick(var/mob/living/silicon/robot/user) // Bolts doors. Forwards to AI code.
-	if(check_access(R.idcard))
+	if(check_access(user.idcard))
 		..()
 
 /obj/machinery/power/apc/BorgCtrlClick(var/mob/living/silicon/robot/user) // turns off/on APCs. Forwards to AI code.
@@ -80,16 +80,12 @@
 		..()
 
 /obj/machinery/door/airlock/BorgAltClick(var/mob/living/silicon/robot/user) // Eletrifies doors. Forwards to AI code.
-	if(check_access(R.idcard))
+	if(check_access(user.idcard))
 		..()
 
 /obj/machinery/turretid/BorgAltClick(var/mob/living/silicon/robot/user) //turret lethal on/off. Forwards to AI code.
 	if(allowed(user))
 		..()
-
-/mob/living/silicon/robot/lost/init()
-	. = ..()
-	access_list = list()
 
 /obj/machinery/door/airlock/user_allowed(mob/user)
 	var/mob/living/silicon/robot/R = user
