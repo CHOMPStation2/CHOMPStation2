@@ -543,7 +543,7 @@
 /obj/machinery/alarm/tgui_data(mob/user, datum/tgui/ui, datum/tgui_state/state)
 	var/list/data = list(
 		"locked" = locked,
-		"siliconUser" = siliconaccess(user),
+		"siliconUser" = siliconaccess(user), //CHOMPEdit borg access
 		"remoteUser" = !!ui.parent_ui,
 		"danger_level" = danger_level,
 		"target_temperature" = "[target_temperature - T0C]C",
@@ -593,7 +593,7 @@
 			"danger_level" = TEST_TLV_VALUES
 		)))
 
-	if(!locked || siliconaccess(user) || data["remoteUser"])
+	if(!locked || siliconaccess(user) || data["remoteUser"]) //CHOMPEdit borg access
 		var/list/list/vents = list()
 		data["vents"] = vents
 		for(var/id_tag in A.air_vent_names)
@@ -712,7 +712,7 @@
 	var/device_id = params["id_tag"]
 	switch(action)
 		if("lock")
-			if(siliconaccess(usr) && !wires.is_cut(WIRE_IDSCAN))
+			if(siliconaccess(usr) && !wires.is_cut(WIRE_IDSCAN)) //CHOMPEdit borg access
 				locked = !locked
 				. = TRUE
 		if( "power",
