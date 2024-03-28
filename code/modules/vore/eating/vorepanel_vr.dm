@@ -226,6 +226,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"is_feedable" = selected.is_feedable, //CHOMPAdd
 			"egg_type" = selected.egg_type,
 			"egg_name" = selected.egg_name, //CHOMPAdd
+			"egg_size" = selected.egg_size, //CHOMPAdd
 			"recycling" = selected.recycling, //CHOMPAdd
 			"storing_nutrition" = selected.storing_nutrition, //CHOMPAdd
 			"entrance_logs" = selected.entrance_logs, //CHOMPAdd
@@ -321,6 +322,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 		selected_list["egg_type"] = selected.egg_type
 		selected_list["egg_name"] = selected.egg_name //CHOMPAdd
+		selected_list["egg_size"] = selected.egg_size //CHOMPAdd
 		selected_list["recycling"] = selected.recycling //CHOMPAdd
 		selected_list["storing_nutrition"] = selected.storing_nutrition //CHOMPAdd
 		selected_list["item_digest_logs"] = selected.item_digest_logs //CHOMPAdd
@@ -1079,6 +1081,13 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						new_egg_name = readd_quotes(new_egg_name)
 					if(length(new_egg_name) >= BELLIES_NAME_MIN && length(new_egg_name) <= BELLIES_NAME_MAX)
 						new_belly.egg_name = new_egg_name
+
+				if(istext(belly_data["egg_size"]))
+					var/new_egg_size = belly_data["egg_size"]
+					if(new_egg_size == 0)
+						new_belly.egg_size = 0
+					else
+						new_belly.egg_size = CLAMP(new_egg_size,0.25,2)
 
 				if(isnum(belly_data["recycling"]))
 					var/new_recycling = belly_data["recycling"]
@@ -2622,6 +2631,19 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				tgui_alert_async(usr, "Entered name too long (max [BELLIES_NAME_MAX]).","Error")
 				return FALSE
 			host.vore_selected.egg_name = new_egg_name
+			. = TRUE
+		if("b_egg_size")
+			var/new_egg_size = tgui_input_number(usr,"Custom Egg Size 25% to 200% (0 for automatic item depending egg size from 25% to 100%)","New Egg Size", 0, 200)
+			if(new_egg_size == null)
+				return FALSE
+			if(new_egg_size == 0) //Disable.
+				host.vore_selected.egg_size = 0
+				to_chat(user,"<span class='notice'>Eggs will automatically calculate size depending on contents.</span>")
+			else if (!ISINRANGE(new_egg_size,25,200))
+				host.vore_selected.egg_size = 0.25 //Set it to the default.
+				to_chat(user,"<span class='notice'>Invalid size.</span>")
+			else if(new_egg_size)
+				host.vore_selected.egg_size = (new_egg_size/100)
 			. = TRUE
 		if("b_recycling")
 			host.vore_selected.recycling = !host.vore_selected.recycling

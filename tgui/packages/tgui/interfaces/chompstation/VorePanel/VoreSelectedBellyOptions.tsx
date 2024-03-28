@@ -27,6 +27,7 @@ export const VoreSelectedBellyOptions = (props) => {
     contaminate_color,
     egg_type,
     egg_name,
+    egg_size,
     recycling,
     storing_nutrition,
     entrance_logs,
@@ -231,6 +232,12 @@ export const VoreSelectedBellyOptions = (props) => {
               onClick={() => act('set_attribute', { attribute: 'b_egg_name' })}
               icon="pen"
               content={egg_name ? egg_name : 'Default'}
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Custom Egg Size">
+            <Button
+              onClick={() => act('set_attribute', { attribute: 'b_egg_size' })}
+              content={egg_size ? egg_size * 100 + '%' : 'Automatic'}
             />
           </LabeledList.Item>
           <LabeledList.Item label="Recycling">

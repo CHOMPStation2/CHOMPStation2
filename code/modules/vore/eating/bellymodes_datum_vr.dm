@@ -276,8 +276,12 @@ GLOBAL_LIST_INIT(digest_modes, list())
 				B.ownegg.w_class = I.w_class
 				B.ownegg.max_storage_space = B.ownegg.w_class
 				I.forceMove(B.ownegg)
-				B.ownegg.icon_scale_x = 0.2 * B.ownegg.w_class
-				B.ownegg.icon_scale_y = 0.2 * B.ownegg.w_class
+				if(B.egg_size)
+					B.ownegg.icon_scale_x = B.egg_size
+					B.ownegg.icon_scale_y = B.egg_size
+				else
+					B.ownegg.icon_scale_x = 0.2 * B.ownegg.w_class
+					B.ownegg.icon_scale_y = 0.2 * B.ownegg.w_class
 				B.ownegg.update_transform()
 				egg_contents -= I
 				B.ownegg = null
@@ -305,8 +309,12 @@ GLOBAL_LIST_INIT(digest_modes, list())
 		B.ownegg.calibrate_size()
 		B.ownegg.orient2hud()
 		B.ownegg.w_class = clamp(B.ownegg.w_class * 0.25, 1, 8) //A total w_class of 16 will result in a backpack sized egg.
-		B.ownegg.icon_scale_x = clamp(0.25 * B.ownegg.w_class, 0.25, scale_clamp)
-		B.ownegg.icon_scale_y = clamp(0.25 * B.ownegg.w_class, 0.25, scale_clamp)
+		if(B.egg_size)
+			B.ownegg.icon_scale_x = B.egg_size
+			B.ownegg.icon_scale_y = B.egg_size
+		else
+			B.ownegg.icon_scale_x = clamp(0.25 * B.ownegg.w_class, 0.25, scale_clamp)
+			B.ownegg.icon_scale_y = clamp(0.25 * B.ownegg.w_class, 0.25, scale_clamp)
 		B.ownegg.update_transform()
 		if(B.ownegg.w_class > 4)
 			B.ownegg.slowdown = 4 //CHOMPEdit End

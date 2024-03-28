@@ -275,6 +275,7 @@
 			belly_data["vorespawn_blacklist"] = B.vorespawn_blacklist
 			belly_data["egg_type"] = B.egg_type
 			belly_data["egg_name"] = B.egg_name
+			belly_data["egg_size"] = B.egg_size
 			belly_data["selective_preference"] = B.selective_preference
 			belly_data["recycling"] = B.recycling
 			belly_data["storing_nutrition"] = B.storing_nutrition
