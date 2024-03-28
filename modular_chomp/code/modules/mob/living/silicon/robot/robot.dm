@@ -135,3 +135,11 @@
 	if(!check_access(R.idcard))
 		return TRUE
 	return FALSE
+
+/obj/proc/siliconaccess(mob/user)
+	var/mob/living/silicon/robot/R = user
+	if(istype(R))
+		return check_access(R.idcard)
+	if(issilicon(user))
+		return TRUE
+	return FALSE
