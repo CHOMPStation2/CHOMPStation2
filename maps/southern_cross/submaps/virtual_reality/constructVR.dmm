@@ -22,6 +22,10 @@
 /obj/item/weapon/material/knife/ritual,
 /turf/simulated/floor/cult,
 /area/vr/powered/cult)
+"abC" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/beach/sand/desert,
+/area/vr/outdoors/powered/mall)
 "acf" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/weapon/storage/firstaid/adv,
@@ -707,6 +711,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/dungeon)
+"aJc" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood/alt/parquet,
+/area/vr/powered/mall/dorms)
 "aJB" = (
 /obj/structure/closet/wardrobe/grey,
 /obj/item/clothing/under/teshari/undercoat/standard/black_grey,
@@ -772,6 +782,15 @@
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/conspawn)
+"aLN" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "aMp" = (
 /obj/machinery/conveyor{
 	id = "vrsushitrain";
@@ -981,6 +1000,18 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/vr/powered/mall)
+"aWG" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 6
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "aWK" = (
 /obj/structure/closet/wardrobe/grey,
 /obj/item/clothing/under/teshari/undercoat/standard/black_grey,
@@ -1013,6 +1044,14 @@
 /obj/random/plushie,
 /turf/simulated/floor/carpet/purple,
 /area/vr/powered/mall/dorms)
+"aYc" = (
+/obj/effect/map_effect/portal/line/side_b{
+	dir = 8
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 0
+	},
+/area/vr/outdoors/powered)
 "aYm" = (
 /obj/item/weapon/weldingtool/largetank,
 /obj/item/weapon/tool/crowbar,
@@ -1265,6 +1304,11 @@
 	},
 /turf/simulated/floor/cult,
 /area/vr/powered/cult)
+"biC" = (
+/obj/structure/table/hardwoodtable,
+/obj/structure/salvageable/personal,
+/turf/simulated/floor/carpet/brown,
+/area/vr/powered/mall)
 "biV" = (
 /obj/structure/grille/rustic{
 	health = 25;
@@ -1327,6 +1371,15 @@
 /obj/structure/table/hardwoodtable,
 /turf/simulated/floor/wood/alt/panel,
 /area/vr/powered/mall)
+"bne" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "bnj" = (
 /obj/machinery/atmospherics/portables_connector,
 /obj/machinery/portable_atmospherics/canister/phoron,
@@ -1428,6 +1481,12 @@
 	outdoors = -1
 	},
 /area/vr/powered/dungeon)
+"brW" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/turf/simulated/floor/beach/sand/desert,
+/area/vr/outdoors/powered/mall)
 "bsn" = (
 /obj/structure/closet/crate,
 /obj/fiftyspawner/plasteel,
@@ -1465,7 +1524,13 @@
 /turf/simulated/floor/wood,
 /area/vr/powered/cafe)
 "bue" = (
-/turf/unsimulated/wall/dark,
+/obj/effect/map_effect/portal/master/side_a{
+	dir = 4;
+	portal_id = "vrmall"
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
 /area/vr/powered/rocks)
 "bvk" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -1496,6 +1561,10 @@
 /obj/effect/catwalk_plated/dark,
 /turf/space,
 /area/vr/space)
+"bvN" = (
+/obj/effect/floor_decal/corner/purple/diagonal,
+/turf/simulated/floor/tiled/dark,
+/area/vr/outdoors/powered)
 "bvW" = (
 /obj/structure/table/hardwoodtable,
 /turf/simulated/floor/carpet/gaycarpet,
@@ -1533,8 +1602,7 @@
 	dir = 8
 	},
 /turf/unsimulated/floor{
-	icon_state = "plating";
-	name = "plating"
+	icon_state = "dark"
 	},
 /area/vr/powered/mall/backrooms)
 "byU" = (
@@ -1613,6 +1681,12 @@
 /obj/item/roller,
 /turf/simulated/shuttle/floor/darkred,
 /area/vr/powered/space/sciship)
+"bCC" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/turf/simulated/floor/beach/sand/desert,
+/area/vr/outdoors/powered/mall)
 "bCG" = (
 /obj/machinery/light/small{
 	dir = 4;
@@ -1627,6 +1701,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /turf/simulated/shuttle/wall,
 /area/vr/powered/space/whiteship)
+"bDm" = (
+/obj/structure/sign/chemdiamond,
+/turf/unsimulated/wall/concrete/turfpack/station{
+	color = "#ebcd7c";
+	icon = 'icons/turf/wall_masks.dmi'
+	},
+/area/vr/powered/mall/backrooms)
 "bDC" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -1892,6 +1973,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/vr/powered/space/sciship)
+"bOr" = (
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "bOO" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/dirt,
@@ -2131,6 +2217,9 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/vr/powered/mall)
+"bYn" = (
+/turf/simulated/floor/beach/sand/desert,
+/area/vr/outdoors/powered/mall)
 "bZo" = (
 /obj/structure/table/fancyblack,
 /obj/item/weapon/bikehorn/tinytether{
@@ -2317,6 +2406,15 @@
 /obj/item/weapon/stool/padded,
 /turf/simulated/shuttle/floor/white,
 /area/vr/powered/space/sciship)
+"cgv" = (
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "cgB" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 4
@@ -2413,6 +2511,12 @@
 	temperature = 311
 	},
 /area/vr/outdoors/powered)
+"ckA" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/brown,
+/area/vr/powered/mall)
 "ckJ" = (
 /obj/structure/table/steel,
 /obj/item/device/radio/off,
@@ -2647,6 +2751,17 @@
 	temperature = 293.15
 	},
 /area/vr/outdoors/powered)
+"cuS" = (
+/obj/structure/railing/grey{
+	pixel_y = 0;
+	dir = 8
+	},
+/obj/structure/railing/grey,
+/obj/machinery/light/lamppost,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "cuW" = (
 /obj/machinery/sparker{
 	id = "cutiemulcher";
@@ -2749,10 +2864,11 @@
 /turf/simulated/floor/wood,
 /area/vr/powered/dungeon)
 "cBr" = (
-/obj/structure/table/woodentable,
-/obj/structure/table/woodentable,
-/turf/simulated/floor/tiled/white,
-/area/vr/powered/mall)
+/obj/effect/decal/cleanable/dirt,
+/turf/unsimulated/floor/lino/turfpack/station{
+	color = "#ffe9ab"
+	},
+/area/vr/powered/mall/backrooms)
 "cBu" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/flame/lighter{
@@ -2787,6 +2903,7 @@
 /area/vr/powered/motel)
 "cDc" = (
 /obj/effect/decal/cleanable/greenglow,
+/obj/random/humanoidremains,
 /turf/unsimulated/floor/lino/turfpack/station{
 	color = "#ffe9ab"
 	},
@@ -2957,6 +3074,15 @@
 "cLE" = (
 /turf/simulated/shuttle/floor/darkred,
 /area/vr/powered/armory)
+"cLV" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "cME" = (
 /obj/item/weapon/coin/gold,
 /obj/item/weapon/coin/diamond,
@@ -3087,6 +3213,15 @@
 /obj/item/toy/cat_toy,
 /turf/simulated/floor/tiled/white,
 /area/vr/powered/vet)
+"cUz" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/green/bordercorner{
+	dir = 8
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "cUG" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
@@ -3318,6 +3453,12 @@
 	color = "grey"
 	},
 /area/vr/powered/cult)
+"dfJ" = (
+/turf/unsimulated/floor{
+	dir = 1;
+	icon_state = "vault"
+	},
+/area/vr/powered/mall/backrooms)
 "dfY" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
@@ -3445,14 +3586,6 @@
 "dkY" = (
 /obj/structure/cliff/automatic{
 	dir = 6
-	},
-/obj/effect/step_trigger/teleporter/deathfall{
-	teleport_x = 65;
-	teleport_y = 134
-	},
-/obj/effect/step_trigger/teleporter/deathfall{
-	teleport_x = 65;
-	teleport_y = 134
 	},
 /turf/simulated/floor/weird_things/dark,
 /area/vr/powered/mall/backrooms)
@@ -3606,6 +3739,15 @@
 	temperature = 311
 	},
 /area/vr/outdoors/powered)
+"dsS" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "duE" = (
 /obj/machinery/light/floortube/flicker{
 	dir = 8;
@@ -4968,6 +5110,17 @@
 /obj/item/weapon/miscdisc,
 /turf/simulated/floor/cult,
 /area/vr/powered/cult)
+"ezi" = (
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/structure/disposaloutlet{
+	dir = 1
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "ezz" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/shuttle/window,
@@ -5543,6 +5696,18 @@
 /obj/structure/flora/tree/jungle,
 /turf/unsimulated/wall,
 /area/vr/outdoors/powered)
+"eUL" = (
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/structure/disposaloutlet,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 9
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "eUO" = (
 /obj/structure/table/darkglass,
 /obj/item/weapon/storage/firstaid/surgery,
@@ -5861,11 +6026,26 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/vr/powered/cult)
+"fjD" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/obj/item/weapon/reagent_containers/glass/bucket,
+/turf/simulated/floor/beach/sand/desert,
+/area/vr/outdoors/powered/mall)
 "fjR" = (
 /obj/structure/prop/rock/round,
 /turf/simulated/floor/outdoors/dirt{
 	temperature = 311;
 	outdoors = 0
+	},
+/area/vr/powered/rocks)
+"fjW" = (
+/obj/effect/map_effect/portal/line/side_a{
+	dir = 4
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
 	},
 /area/vr/powered/rocks)
 "fki" = (
@@ -6887,6 +7067,15 @@
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/cult)
+"gbU" = (
+/obj/structure/sign/atmos_air{
+	pixel_x = 32;
+	pixel_y = 26
+	},
+/turf/unsimulated/floor/lino/turfpack/station{
+	color = "#ffe9ab"
+	},
+/area/vr/powered/mall/backrooms)
 "gdp" = (
 /obj/machinery/door/airlock,
 /turf/simulated/floor/wood/alt/parquet/turfpack,
@@ -7051,6 +7240,15 @@
 /mob/living/simple_mob/vore/rabbit/killer,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/powered/dungeon)
+"gmY" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "gnm" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /obj/effect/floor_decal/techfloor{
@@ -7058,6 +7256,12 @@
 	},
 /turf/simulated/floor/cult,
 /area/vr/powered/cult)
+"gnH" = (
+/obj/structure/bed/chair/comfy/brown{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/vr/powered/mall)
 "gob" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/effect/floor_decal/industrial/warning{
@@ -7291,6 +7495,17 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/space/whiteship)
+"gBR" = (
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/machinery/disposal/deliveryChute{
+	dir = 2
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "gDe" = (
 /obj/structure/window/reinforced/tinted/frosted{
 	dir = 1
@@ -7645,7 +7860,12 @@
 	},
 /area/vr/outdoors/powered)
 "gXu" = (
-/turf/simulated/floor/weird_things/dark,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
 /area/vr/powered/rocks)
 "gXF" = (
 /mob/living/simple_mob/clowns/big/c_shift/chlown,
@@ -7787,6 +8007,12 @@
 /turf/simulated/floor/outdoors/sidewalk/side{
 	movement_cost = 0;
 	temperature = 293.15
+	},
+/area/vr/outdoors/powered)
+"hfI" = (
+/obj/machinery/light/lamppost,
+/turf/simulated/floor/concrete{
+	outdoors = 1
 	},
 /area/vr/outdoors/powered)
 "hgg" = (
@@ -8343,6 +8569,10 @@
 "hEp" = (
 /turf/simulated/wall/r_concrete,
 /area/vr/powered/rocks)
+"hEE" = (
+/obj/structure/prop/rock/water,
+/turf/simulated/floor/water/pool/turfpack/station,
+/area/vr/powered/mall/vw)
 "hFb" = (
 /obj/structure/closet/secure_closet/freezer/meat,
 /obj/item/weapon/reagent_containers/food/snacks/meat/chicken,
@@ -8449,6 +8679,15 @@
 	},
 /turf/simulated/shuttle/floor/white,
 /area/vr/powered/dungeon)
+"hPd" = (
+/obj/structure/railing/grey{
+	pixel_y = 0;
+	dir = 8
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "hPe" = (
 /turf/unsimulated/wall/seperator,
 /area/vr/outdoors/powered/cult)
@@ -8552,6 +8791,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/bar)
+"hUq" = (
+/obj/structure/inflatable,
+/turf/unsimulated/floor/lino/turfpack/station{
+	color = "#ffe9ab"
+	},
+/area/vr/powered/mall/backrooms)
 "hUV" = (
 /obj/effect/floor_decal/spline/fancy,
 /obj/effect/floor_decal/spline/fancy{
@@ -8609,6 +8854,16 @@
 /obj/machinery/vending/snack,
 /turf/simulated/floor/wood,
 /area/vr/powered/bar)
+"hXy" = (
+/obj/structure/railing/grey,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "hXB" = (
 /obj/structure/bed/double/padded,
 /obj/item/weapon/bedsheet/iandouble,
@@ -9339,6 +9594,12 @@
 	},
 /turf/simulated/floor/wood/alt/parquet,
 /area/vr/powered/mall)
+"ivc" = (
+/obj/structure/prop/statue/pillar,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "ivx" = (
 /obj/structure/bed/chair/sofa/bench/marble{
 	pixel_y = 0;
@@ -9788,8 +10049,7 @@
 "iVU" = (
 /obj/structure/salvageable/data_os,
 /turf/unsimulated/floor{
-	icon_state = "plating";
-	name = "plating"
+	icon_state = "dark"
 	},
 /area/vr/powered/mall/backrooms)
 "iWc" = (
@@ -9960,6 +10220,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
 /area/vr/powered/shop)
+"jcI" = (
+/obj/structure/railing/grey,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "jcO" = (
 /obj/effect/fake_sun/always_day,
 /turf/simulated/floor/outdoors/newdirt_nograss{
@@ -10394,6 +10660,17 @@
 	temperature = 311
 	},
 /area/vr/outdoors/powered)
+"jvT" = (
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/machinery/disposal/deliveryChute{
+	dir = 2
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "jwx" = (
 /obj/structure/bed/chair/wood/wings{
 	dir = 1
@@ -10589,6 +10866,15 @@
 "jFf" = (
 /turf/simulated/floor/carpet/tealcarpet,
 /area/vr/powered/mall/dorms)
+"jFD" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "jFH" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/shuttle/floor/black,
@@ -10670,6 +10956,12 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/vr/powered/mall)
+"jIZ" = (
+/obj/machinery/light/lamppost,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "jJx" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -10788,8 +11080,7 @@
 "jNH" = (
 /obj/structure/salvageable/machine_os,
 /turf/unsimulated/floor{
-	icon_state = "plating";
-	name = "plating"
+	icon_state = "dark"
 	},
 /area/vr/powered/mall/backrooms)
 "jNJ" = (
@@ -10990,6 +11281,11 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/dungeon)
+"jWv" = (
+/obj/structure/table/hardwoodtable,
+/obj/item/device/ticket_printer/train,
+/turf/simulated/floor/carpet/brown,
+/area/vr/powered/mall)
 "jXf" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 1
@@ -11226,6 +11522,12 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/steel_grid,
 /area/vr/powered/space/whiteship)
+"khC" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
+	},
+/turf/simulated/floor/beach/sand/desert,
+/area/vr/outdoors/powered/mall)
 "khJ" = (
 /obj/structure/bookcase,
 /obj/item/weapon/book/bundle/custom_library/fiction/coldmountain,
@@ -11255,6 +11557,15 @@
 /obj/effect/floor_decal/techfloor,
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/dungeon)
+"khU" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/beige/border/shifted,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "kiv" = (
 /obj/machinery/fusion_fuel_compressor,
 /turf/simulated/floor/tiled/asteroid_steel,
@@ -12140,6 +12451,15 @@
 /obj/structure/curtain,
 /turf/simulated/floor/tiled/red,
 /area/vr/powered/mall/dorms)
+"kXB" = (
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/structure/disposaloutlet,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "kXJ" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 8
@@ -12324,6 +12644,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/vr/powered/mall)
+"lfr" = (
+/obj/fruitspawner/orange,
+/turf/unsimulated/floor/lino/turfpack/station{
+	color = "#6b5c4c";
+	movement_cost = 12
+	},
+/area/vr/powered/mall/backrooms)
 "lfC" = (
 /obj/structure/table/alien/blue,
 /obj/item/weapon/autopsy_scanner,
@@ -12396,7 +12723,8 @@
 "lkk" = (
 /obj/machinery/light{
 	dir = 1;
-	overlay_color = "#FFFEB8"
+	overlay_color = "#d817ff";
+	light_color = "#d817ff"
 	},
 /turf/simulated/floor/carpet/geo,
 /area/vr/powered/mall/vw)
@@ -12585,6 +12913,12 @@
 	},
 /turf/simulated/floor/cult,
 /area/vr/powered/cult)
+"lrL" = (
+/obj/item/weapon/reagent_containers/food/snacks/old/burger,
+/turf/unsimulated/floor/lino/turfpack/station{
+	color = "#ffe9ab"
+	},
+/area/vr/powered/mall/backrooms)
 "lrR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/weapon/grenade/confetti/party_ball,
@@ -12897,6 +13231,12 @@
 	},
 /turf/simulated/floor/wood/alt/parquet/turfpack,
 /area/vr/powered/mall)
+"lzM" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/beach/sand/desert,
+/area/vr/outdoors/powered/mall)
 "lzY" = (
 /obj/effect/map_effect/portal/master/side_b{
 	dir = 1;
@@ -13192,6 +13532,11 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/powered/space/sciship)
+"lNG" = (
+/obj/structure/table/hardwoodtable,
+/obj/item/device/retail_scanner,
+/turf/simulated/floor/carpet/brown,
+/area/vr/powered/mall)
 "lNJ" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/light{
@@ -13713,6 +14058,14 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/vr/powered/vet)
+"mib" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/structure/table/marble,
+/obj/item/weapon/reagent_containers/glass/beaker,
+/turf/simulated/floor/tiled/white,
+/area/vr/powered/mall)
 "mif" = (
 /turf/simulated/floor/water/beach{
 	dir = 4;
@@ -13960,10 +14313,6 @@
 /obj/structure/cliff/automatic{
 	dir = 4
 	},
-/obj/effect/step_trigger/teleporter/deathfall{
-	teleport_x = 65;
-	teleport_y = 134
-	},
 /turf/simulated/floor/weird_things/dark,
 /area/vr/powered/mall/backrooms)
 "mtx" = (
@@ -14006,8 +14355,7 @@
 "muN" = (
 /obj/structure/salvageable/implant_container_os,
 /turf/unsimulated/floor{
-	icon_state = "plating";
-	name = "plating"
+	icon_state = "dark"
 	},
 /area/vr/powered/mall/backrooms)
 "muT" = (
@@ -14026,6 +14374,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/space/mechfactory)
+"mwf" = (
+/obj/structure/fans/tiny,
+/turf/unsimulated/floor/lino/turfpack/station{
+	color = "#ffe9ab"
+	},
+/area/vr/powered/mall/backrooms)
 "mwy" = (
 /obj/structure/table/standard,
 /obj/item/weapon/storage/laundry_basket,
@@ -14086,6 +14440,18 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/dungeon)
+"mAG" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 10
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "mBa" = (
 /obj/fiftyspawner/glass,
 /obj/fiftyspawner/glass,
@@ -14348,6 +14714,12 @@
 	outdoors = 1
 	},
 /area/vr/powered/vendor)
+"mKY" = (
+/obj/structure/flora/ausbushes/sparsegrass,
+/turf/simulated/floor/outdoors/newdirt_nograss{
+	temperature = 293.15
+	},
+/area/vr/outdoors/powered/mall)
 "mLa" = (
 /obj/effect/floor_decal/corner/lightgrey/border,
 /obj/structure/railing/grey,
@@ -14587,8 +14959,8 @@
 "mWb" = (
 /obj/machinery/light{
 	dir = 2;
-	nightshift_enabled = 1;
-	overlay_color = "#FFFEB8"
+	overlay_color = "#d817ff";
+	light_color = "#d817ff"
 	},
 /turf/simulated/floor/water/pool/turfpack/station,
 /area/vr/powered/mall/vw)
@@ -14644,6 +15016,11 @@
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/carpet,
 /area/vr/powered/mall/dorms)
+"mZw" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/storage/fancy/cigar/choiba,
+/turf/simulated/floor/wood,
+/area/vr/powered/mall)
 "mZK" = (
 /obj/structure/bed/chair/comfy/black,
 /obj/structure/railing/overhang/waterless/under,
@@ -14734,6 +15111,18 @@
 	dir = 4
 	},
 /obj/structure/table/hardwoodtable,
+/obj/item/weapon/spacecash/c200{
+	pixel_y = -7
+	},
+/obj/item/weapon/spacecash/c200{
+	pixel_y = 11
+	},
+/obj/item/weapon/spacecash/c200{
+	pixel_y = 6
+	},
+/obj/item/weapon/spacecash/c200{
+	pixel_y = 0
+	},
 /turf/simulated/floor/carpet/brown,
 /area/vr/powered/mall)
 "nbj" = (
@@ -15030,6 +15419,12 @@
 	},
 /turf/simulated/shuttle/floor/purple,
 /area/vr/powered/dungeon)
+"noI" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/turf/simulated/floor/beach/sand/desert,
+/area/vr/outdoors/powered/mall)
 "noZ" = (
 /turf/simulated/floor/outdoors/mud{
 	outdoors = -1;
@@ -15177,6 +15572,15 @@
 /mob/living/simple_mob/animal/passive/fish/trout,
 /turf/simulated/floor/water/deep{
 	temperature = 311
+	},
+/area/vr/outdoors/powered)
+"nxD" = (
+/obj/effect/map_effect/portal/master/side_b{
+	dir = 8;
+	portal_id = "vrmall"
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 0
 	},
 /area/vr/outdoors/powered)
 "nxF" = (
@@ -16110,6 +16514,17 @@
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/vr/powered/cult)
+"ogY" = (
+/obj/structure/disposaloutlet{
+	dir = 4
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "ohm" = (
 /obj/structure/prop/statue/pillar,
 /turf/simulated/floor/tiled/white,
@@ -16570,6 +16985,14 @@
 "ouN" = (
 /turf/simulated/floor/tiled/white,
 /area/vr/powered/mall)
+"ovr" = (
+/obj/effect/simple_portal/linked{
+	portal_id = 75;
+	name = "Fast Travel to Mall"
+	},
+/obj/effect/floor_decal/corner/purple/diagonal,
+/turf/simulated/floor/tiled/dark,
+/area/vr/outdoors/powered)
 "ovM" = (
 /obj/effect/floor_decal/corner/white/border{
 	dir = 1
@@ -16785,6 +17208,13 @@
 "oBV" = (
 /turf/simulated/floor/tiled/white,
 /area/vr/powered)
+"oCa" = (
+/obj/structure/sign/chemistry,
+/turf/unsimulated/wall/concrete/turfpack/station{
+	color = "#ebcd7c";
+	icon = 'icons/turf/wall_masks.dmi'
+	},
+/area/vr/powered/mall/backrooms)
 "oCQ" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/asteroid_steel,
@@ -16916,6 +17346,11 @@
 /obj/item/device/radio/headset,
 /turf/simulated/floor/tiled,
 /area/vr/powered/conspawn)
+"oHN" = (
+/obj/structure/table/woodentable,
+/obj/item/clothing/head/cakehat,
+/turf/simulated/floor/wood,
+/area/vr/powered/mall)
 "oIb" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -16999,6 +17434,14 @@
 /mob/living/simple_mob/animal/giant_spider/lurker,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/powered/dungeon)
+"oLI" = (
+/obj/effect/floor_decal/corner/green/border{
+	dir = 10
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "oLP" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -17156,6 +17599,12 @@
 	},
 /turf/simulated/floor/carpet/retro,
 /area/vr/powered/mall/dorms)
+"oWi" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 10
+	},
+/turf/simulated/floor/beach/sand/desert,
+/area/vr/outdoors/powered/mall)
 "oWr" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
@@ -18216,6 +18665,12 @@
 /obj/structure/reagent_dispensers/watertank/high,
 /turf/simulated/floor/plating,
 /area/vr/powered/space/mechfactory)
+"pPC" = (
+/obj/structure/prop/dominator/blue,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/vr/powered/mall/backrooms)
 "pQe" = (
 /obj/item/clothing/ears/earring/stud/gold,
 /obj/item/clothing/accessory/bracelet/material/gold,
@@ -18898,6 +19353,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/vr/powered/vet)
+"qrQ" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/green/bordercorner,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "qsk" = (
 /obj/item/weapon/flame/candle/everburn,
 /obj/structure/table/bench/wooden,
@@ -18907,6 +19369,14 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled,
 /area/vr/powered/dungeon)
+"qts" = (
+/obj/structure/sign/clock{
+	pixel_y = 28
+	},
+/turf/unsimulated/floor/lino/turfpack/station{
+	color = "#ffe9ab"
+	},
+/area/vr/powered/mall/backrooms)
 "qty" = (
 /turf/simulated/floor/gorefloor,
 /area/vr/outdoors/powered/cult)
@@ -19265,6 +19735,12 @@
 	icon_state = "cult-narsie"
 	},
 /area/vr/powered/cult)
+"qCN" = (
+/obj/structure/bed/chair/comfy/brown{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/vr/powered/mall)
 "qCT" = (
 /obj/structure/railing/grey{
 	dir = 1
@@ -20215,6 +20691,12 @@
 "rBs" = (
 /turf/simulated/wall/phoron,
 /area/vr/powered)
+"rBu" = (
+/obj/structure/fans,
+/turf/unsimulated/floor/lino/turfpack/station{
+	color = "#ffe9ab"
+	},
+/area/vr/powered/mall/backrooms)
 "rCh" = (
 /turf/simulated/floor/gorefloor,
 /area/vr/powered/cult)
@@ -20342,6 +20824,14 @@
 	temperature = 293.15
 	},
 /area/vr/outdoors/powered)
+"rJM" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "rKk" = (
 /obj/structure/table/rack/shelf,
 /obj/item/ammo_magazine/m45,
@@ -20578,6 +21068,10 @@
 	},
 /turf/simulated/floor/carpet/geo,
 /area/vr/powered/mall)
+"rUr" = (
+/obj/structure/prop/rock/watersharp,
+/turf/simulated/floor/water/pool/turfpack/station,
+/area/vr/powered/mall/vw)
 "rUO" = (
 /obj/machinery/light,
 /obj/random/pottedplant,
@@ -21061,6 +21555,12 @@
 	color = "#ffe9ab"
 	},
 /area/vr/powered/mall/backrooms)
+"ssN" = (
+/obj/effect/decal/remains/mummy1,
+/turf/unsimulated/floor/lino/turfpack/station{
+	color = "#ffe9ab"
+	},
+/area/vr/powered/mall/backrooms)
 "ste" = (
 /obj/effect/floor_decal/chapel{
 	dir = 4
@@ -21168,6 +21668,17 @@
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/vr/powered/space/mechfactory)
+"sva" = (
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/machinery/disposal/deliveryChute{
+	dir = 1
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "svz" = (
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_y = 32
@@ -21495,6 +22006,12 @@
 /obj/effect/floor_decal/techfloor,
 /turf/simulated/shuttle/floor/white,
 /area/vr/powered/dungeon)
+"sHe" = (
+/obj/structure/flora/ausbushes/lavendergrass,
+/turf/simulated/floor/outdoors/newdirt_nograss{
+	temperature = 293.15
+	},
+/area/vr/outdoors/powered/mall)
 "sHi" = (
 /obj/structure/table/marble,
 /obj/fruitspawner/soybean,
@@ -21906,6 +22423,16 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/shuttle/plating,
 /area/vr/powered/space/whiteship)
+"teH" = (
+/obj/structure/railing/grey{
+	pixel_y = 0;
+	dir = 8
+	},
+/obj/machinery/light/lamppost,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "tfh" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle{
@@ -21978,6 +22505,14 @@
 /obj/structure/table/woodentable,
 /turf/simulated/floor/tiled/white,
 /area/vr/powered/mall)
+"tjn" = (
+/obj/effect/floor_decal/corner/green/border{
+	dir = 6
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "tjv" = (
 /obj/structure/bed/chair/sofa/left/brown{
 	dir = 4
@@ -21996,7 +22531,8 @@
 "tjX" = (
 /obj/machinery/light{
 	dir = 1;
-	overlay_color = "#FFFEB8"
+	overlay_color = "#d817ff";
+	light_color = "#d817ff"
 	},
 /obj/structure/table/glass,
 /obj/machinery/chemical_dispenser/bar_alc/full,
@@ -22024,6 +22560,13 @@
 	temperature = 293.15
 	},
 /area/vr/outdoors/powered)
+"tlY" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 5
+	},
+/obj/item/weapon/shovel/spade,
+/turf/simulated/floor/beach/sand/desert,
+/area/vr/outdoors/powered/mall)
 "tmd" = (
 /obj/machinery/vending/magivend,
 /turf/simulated/floor/tiled,
@@ -22178,6 +22721,18 @@
 /obj/structure/shuttle/engine/router,
 /turf/simulated/shuttle/wall,
 /area/vr/powered/space/whiteship)
+"ttW" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "tui" = (
 /obj/structure/salvageable/console_broken_os,
 /obj/effect/floor_decal/techfloor{
@@ -22699,6 +23254,10 @@
 	temperature = 293.15
 	},
 /area/vr/outdoors/powered)
+"tPw" = (
+/obj/structure/prop/rock/waterflat,
+/turf/simulated/floor/water/pool/turfpack/station,
+/area/vr/powered/mall/vw)
 "tPE" = (
 /obj/structure/salvageable/data_os{
 	name = "broken money printer"
@@ -22723,6 +23282,18 @@
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
 /area/vr/powered/vet)
+"tQw" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "tQJ" = (
 /obj/structure/table/wooden_reinforced,
 /obj/structure/window/reinforced{
@@ -22751,6 +23322,15 @@
 	color = "#ffe9ab"
 	},
 /area/vr/powered/mall/backrooms)
+"tRW" = (
+/obj/structure/table/woodentable,
+/obj/machinery/light{
+	dir = 2;
+	nightshift_enabled = 1
+	},
+/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
+/turf/simulated/floor/wood,
+/area/vr/powered/mall)
 "tSw" = (
 /obj/structure/table/hardwoodtable,
 /turf/simulated/floor/carpet/oracarpet,
@@ -23566,15 +24146,11 @@
 /turf/simulated/floor/airless,
 /area/vr/space)
 "uAS" = (
-/obj/structure/cliff/automatic{
-	dir = 6
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/concrete{
+	outdoors = 1
 	},
-/obj/effect/step_trigger/teleporter/deathfall{
-	teleport_x = 65;
-	teleport_y = 134
-	},
-/turf/simulated/floor/weird_things/dark,
-/area/vr/powered/mall/backrooms)
+/area/vr/outdoors/powered/mall)
 "uBn" = (
 /obj/structure/bed/double/padded,
 /obj/structure/curtain/bed,
@@ -23722,6 +24298,9 @@
 /obj/random/toolbox,
 /turf/simulated/floor/wood,
 /area/vr/powered)
+"uHr" = (
+/turf/unsimulated/wall/seperator,
+/area/vr/powered/mall)
 "uHS" = (
 /obj/machinery/door/airlock/maintenance/medical{
 	req_one_access = null
@@ -23894,6 +24473,15 @@
 	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/vr/powered/mall/dorms)
+"uMu" = (
+/obj/structure/sign/scenery/map/left{
+	dir = 2;
+	pixel_y = 30
+	},
+/turf/unsimulated/floor/lino/turfpack/station{
+	color = "#ffe9ab"
+	},
+/area/vr/powered/mall/backrooms)
 "uMz" = (
 /turf/simulated/wall/concrete,
 /area/vr/outdoors/powered)
@@ -24068,14 +24656,11 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/space/sciship)
 "uTb" = (
-/obj/structure/cliff/automatic{
-	dir = 2
+/obj/structure/inflatable,
+/turf/unsimulated/floor/lino/turfpack/station{
+	color = "#6b5c4c";
+	movement_cost = 12
 	},
-/obj/effect/step_trigger/teleporter/deathfall{
-	teleport_x = 65;
-	teleport_y = 134
-	},
-/turf/simulated/floor/weird_things/dark,
 /area/vr/powered/mall/backrooms)
 "uUX" = (
 /turf/simulated/floor/outdoors/sidewalk/slab{
@@ -24416,6 +25001,14 @@
 	},
 /turf/simulated/shuttle/floor/white,
 /area/vr/powered/dungeon)
+"vmn" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "vmH" = (
 /obj/structure/curtain/black{
 	icon_state = "open";
@@ -24637,8 +25230,8 @@
 	light_range = 10
 	},
 /turf/unsimulated/floor{
-	icon_state = "plating";
-	name = "plating"
+	dir = 1;
+	icon_state = "vault"
 	},
 /area/vr/powered/mall/backrooms)
 "vvG" = (
@@ -24878,6 +25471,16 @@
 /obj/structure/flora/pottedplant/overgrown,
 /turf/simulated/floor/wood,
 /area/vr/powered/cafe)
+"vIP" = (
+/obj/structure/inflatable,
+/obj/effect/map_effect/perma_light/brighter{
+	light_range = 10
+	},
+/turf/unsimulated/floor/lino/turfpack/station{
+	color = "#6b5c4c";
+	movement_cost = 12
+	},
+/area/vr/powered/mall/backrooms)
 "vIR" = (
 /obj/structure/bed/chair/wood{
 	dir = 1;
@@ -25658,6 +26261,13 @@
 /obj/item/weapon/pen/blade/blue,
 /turf/simulated/floor/carpet/blue,
 /area/vr/powered/mall/dorms)
+"woV" = (
+/obj/structure/sign/explosive,
+/turf/unsimulated/wall/concrete/turfpack/station{
+	color = "#ebcd7c";
+	icon = 'icons/turf/wall_masks.dmi'
+	},
+/area/vr/powered/mall/backrooms)
 "wpn" = (
 /obj/machinery/computer/arcade,
 /obj/structure/sign/poster/nanotrasen{
@@ -25774,6 +26384,9 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/dungeon)
+"wxv" = (
+/turf/simulated/wall/concrete,
+/area/vr/outdoors/powered/mall)
 "wxF" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/item/weapon/stool{
@@ -25998,10 +26611,6 @@
 /obj/structure/cliff/automatic/corner{
 	dir = 6
 	},
-/obj/effect/step_trigger/teleporter/deathfall{
-	teleport_x = 65;
-	teleport_y = 134
-	},
 /turf/simulated/floor/weird_things/dark,
 /area/vr/powered/mall/backrooms)
 "wGy" = (
@@ -26022,6 +26631,11 @@
 	temperature = 311
 	},
 /area/vr/powered/rocks)
+"wGQ" = (
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/vr/powered/mall/backrooms)
 "wHH" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 4
@@ -26095,6 +26709,14 @@
 /obj/structure/cult/pylon,
 /turf/simulated/floor/cult,
 /area/vr/powered/cult)
+"wMf" = (
+/obj/structure/sign/scenery/map/right{
+	pixel_y = 30
+	},
+/turf/unsimulated/floor/lino/turfpack/station{
+	color = "#ffe9ab"
+	},
+/area/vr/powered/mall/backrooms)
 "wMl" = (
 /obj/structure/window/plastitanium/full,
 /obj/structure/window/reinforced/survival_pod{
@@ -26687,6 +27309,16 @@
 	},
 /turf/simulated/floor/carpet/brown,
 /area/vr/powered/mall)
+"xje" = (
+/obj/effect/simple_portal/linked{
+	portal_id = 75;
+	name = "Fast Travel to City"
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab{
+	temperature = 293.15;
+	movement_cost = 0
+	},
+/area/vr/outdoors/powered)
 "xjq" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/vending/dinnerware{
@@ -26768,6 +27400,20 @@
 	color = "grey"
 	},
 /area/vr/powered/cult)
+"xnL" = (
+/obj/machinery/disposal/deliveryChute{
+	dir = 4
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 5
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "xoa" = (
 /obj/effect/floor_decal/spline/fancy{
 	dir = 8
@@ -27405,6 +28051,14 @@
 /obj/machinery/floorlayer,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/vr/powered/space/mechfactory)
+"xQB" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 0
+	},
+/area/vr/outdoors/powered)
 "xQE" = (
 /obj/fiftyspawner/wood,
 /turf/simulated/floor/outdoors/sidewalk/slab{
@@ -27566,6 +28220,16 @@
 	temperature = 311
 	},
 /area/vr/outdoors/powered)
+"xZf" = (
+/obj/structure/railing/grey,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/vr/outdoors/powered/mall)
 "xZn" = (
 /obj/item/weapon/spacecash/ewallet{
 	worth = 69000
@@ -27756,6 +28420,13 @@
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/vr/powered/building1)
+"yhv" = (
+/obj/machinery/light{
+	dir = 2;
+	overlay_color = "#FFFEB8"
+	},
+/turf/simulated/floor/wood/alt/panel,
+/area/vr/powered/mall)
 "yis" = (
 /obj/structure/window/basic,
 /obj/structure/table/rack/wood,
@@ -28491,10 +29162,10 @@ kcZ
 kcZ
 pwc
 bue
-bue
-bue
-bue
-bue
+fjW
+fjW
+fjW
+fjW
 pwc
 pwc
 kcZ
@@ -28748,11 +29419,11 @@ kcZ
 kcZ
 kcZ
 pwc
-gXu
-gXu
-gXu
-gXu
-gXu
+fGS
+fGS
+fGS
+fGS
+fGS
 pwc
 pwc
 kcZ
@@ -29006,11 +29677,11 @@ kcZ
 kcZ
 kcZ
 pwc
-gXu
-gXu
-gXu
-gXu
-gXu
+fGS
+fGS
+fGS
+fGS
+fGS
 pwc
 pwc
 kcZ
@@ -29264,11 +29935,11 @@ kcZ
 kcZ
 kcZ
 pwc
-gXu
-gXu
-gXu
-gXu
-gXu
+fGS
+fGS
+fGS
+fGS
+fGS
 pwc
 pwc
 kcZ
@@ -29523,10 +30194,10 @@ eXx
 kcZ
 pwc
 gXu
-gXu
-gXu
-gXu
-gXu
+fGS
+fGS
+fGS
+fGS
 pwc
 pwc
 kcZ
@@ -31070,7 +31741,7 @@ pfm
 eXx
 kcZ
 pwc
-fGS
+gXu
 fGS
 fGS
 fGS
@@ -43459,9 +44130,9 @@ lTR
 lTR
 lTR
 pwc
-pwc
-pwc
-pwc
+cwz
+cwz
+cwz
 pwc
 pwc
 pwc
@@ -43716,9 +44387,9 @@ lTR
 lTR
 lTR
 lTR
-hHa
+pwc
 cwz
-cwz
+sFk
 cwz
 pwc
 pwc
@@ -43976,7 +44647,7 @@ lTR
 lTR
 lTR
 cwz
-sFk
+cwz
 cwz
 pwc
 pwc
@@ -45008,9 +45679,9 @@ lTR
 lTR
 hHa
 xeT
-nPI
 xeT
-pwc
+xeT
+hHa
 pwc
 pwc
 pwc
@@ -45266,9 +45937,9 @@ lTR
 lTR
 hHa
 xeT
+nPI
 xeT
-xeT
-pwc
+hHa
 kcZ
 pwc
 oEZ
@@ -45522,11 +46193,11 @@ lTR
 lTR
 lTR
 lTR
-pwc
-pwc
-pwc
-pwc
-pwc
+hHa
+xeT
+xeT
+xeT
+hHa
 kcZ
 pwc
 oEZ
@@ -45780,11 +46451,11 @@ lTR
 lTR
 lTR
 lTR
-pwc
-kcZ
-kcZ
-kcZ
-kcZ
+hHa
+bvN
+bvN
+bvN
+hHa
 kcZ
 pwc
 oEZ
@@ -46038,11 +46709,11 @@ lTR
 lTR
 lTR
 lTR
-pwc
-kcZ
-kcZ
-kcZ
-kcZ
+hHa
+bvN
+ovr
+bvN
+hHa
 kcZ
 pwc
 oEZ
@@ -46296,11 +46967,11 @@ lTR
 lTR
 lTR
 lTR
-pwc
-kcZ
-kcZ
-kcZ
-kcZ
+hHa
+bvN
+bvN
+bvN
+hHa
 kcZ
 pwc
 oEZ
@@ -46554,11 +47225,11 @@ lTR
 lTR
 lTR
 lTR
-pwc
-kcZ
-kcZ
-kcZ
-kcZ
+hHa
+hHa
+hHa
+hHa
+hHa
 kcZ
 pwc
 oEZ
@@ -55486,6 +56157,11 @@ kIl
 mGW
 kIl
 kIl
+dLz
+kIl
+kIl
+kIl
+dLz
 kIl
 kIl
 kIl
@@ -55518,12 +56194,7 @@ kIl
 kIl
 kIl
 kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -55762,7 +56433,7 @@ kIl
 kIl
 kIl
 kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -56061,7 +56732,7 @@ kIl
 kIl
 kIl
 kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -56261,13 +56932,13 @@ mGW
 kIl
 kIl
 kIl
+dLz
 kIl
 kIl
 kIl
 kIl
 kIl
-kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -56568,7 +57239,7 @@ kIl
 kIl
 kIl
 kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -56780,6 +57451,7 @@ kIl
 kIl
 kIl
 kIl
+dLz
 kIl
 kIl
 kIl
@@ -56805,8 +57477,7 @@ kIl
 kIl
 kIl
 kIl
-kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -57034,7 +57705,7 @@ kIl
 mGW
 kIl
 kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -57812,7 +58483,7 @@ kIl
 kIl
 kIl
 kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -58102,6 +58773,7 @@ kIl
 kIl
 kIl
 kIl
+dLz
 kIl
 kIl
 kIl
@@ -58130,15 +58802,14 @@ kIl
 kIl
 kIl
 kIl
+dLz
 kIl
 kIl
 kIl
 kIl
 kIl
 kIl
-kIl
-kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -58341,7 +59012,7 @@ kIl
 kIl
 kIl
 kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -58580,7 +59251,7 @@ kIl
 kIl
 kIl
 mGW
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -59102,6 +59773,7 @@ kIl
 kIl
 kIl
 kIl
+dLz
 kIl
 kIl
 kIl
@@ -59143,8 +59815,7 @@ kIl
 kIl
 kIl
 kIl
-kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -59412,7 +60083,7 @@ kIl
 kIl
 kIl
 kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -59613,7 +60284,7 @@ kIl
 kIl
 mGW
 kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -59942,7 +60613,7 @@ kIl
 kIl
 kIl
 kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -60647,7 +61318,7 @@ mGW
 kIl
 kIl
 kIl
-kIl
+dLz
 kIl
 kIl
 wPM
@@ -61188,7 +61859,7 @@ pmG
 pmG
 pmG
 rFW
-wPM
+uHr
 wPM
 lTR
 lTR
@@ -61422,7 +62093,7 @@ kIl
 kIl
 kIl
 kIl
-kIl
+dLz
 kIl
 wPM
 fUP
@@ -61446,7 +62117,7 @@ pmG
 pmG
 pmG
 rFW
-wPM
+uHr
 wPM
 lTR
 lTR
@@ -61704,7 +62375,7 @@ pmG
 pmG
 pmG
 rFW
-wPM
+uHr
 wPM
 tvk
 rXW
@@ -61962,7 +62633,7 @@ pmG
 pmG
 pmG
 rFW
-wPM
+uHr
 wPM
 tvk
 rXW
@@ -62220,7 +62891,7 @@ pmG
 pmG
 pmG
 rFW
-wPM
+uHr
 wPM
 tvk
 rXW
@@ -62478,7 +63149,7 @@ pmG
 pmG
 pmG
 rFW
-wPM
+uHr
 wPM
 tvk
 rXW
@@ -62710,7 +63381,7 @@ vrG
 fuy
 kIl
 kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -62725,7 +63396,7 @@ mca
 rhJ
 rhJ
 wPM
-pgH
+avD
 avD
 avD
 avD
@@ -62736,7 +63407,7 @@ pmG
 pmG
 pmG
 rFW
-wPM
+uHr
 wPM
 lTR
 lTR
@@ -62983,7 +63654,7 @@ pOG
 rhJ
 rhJ
 wPM
-pgH
+avD
 avD
 avD
 avD
@@ -62994,7 +63665,7 @@ pmG
 pmG
 pmG
 jcu
-wPM
+uHr
 wPM
 lTR
 lTR
@@ -63252,7 +63923,7 @@ pmG
 pmG
 pmG
 rFW
-wPM
+uHr
 oQm
 lTR
 lTR
@@ -63485,7 +64156,7 @@ fuy
 kIl
 kIl
 kIl
-kIl
+dLz
 kIl
 kIl
 wPM
@@ -63725,7 +64396,7 @@ kIl
 fuy
 vrG
 bOh
-tgj
+rBu
 wYr
 tgj
 tgj
@@ -64314,25 +64985,25 @@ ghU
 ghU
 ghU
 wPM
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
+teH
+hPd
+hPd
+hPd
+hPd
+hPd
+hPd
+cuS
+hfI
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+hfI
 kIl
 kIl
 jPG
@@ -64572,25 +65243,25 @@ sYd
 sYd
 hJh
 wPM
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
+bOr
+bOr
+bOr
+bOr
+bOr
+bOr
+bOr
+jcI
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
 kIl
 kIl
 jPG
@@ -64773,10 +65444,10 @@ qnD
 vrG
 fuy
 kIl
+dLz
 kIl
 kIl
-kIl
-kIl
+dLz
 kIl
 wPM
 iOD
@@ -64830,25 +65501,25 @@ sYd
 sYd
 sYd
 wPM
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
+bOr
+bOr
+bOr
+bOr
+bOr
+bOr
+bOr
+jcI
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
 kIl
 kIl
 jPG
@@ -65088,25 +65759,25 @@ xck
 wPM
 xck
 wPM
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
+gmY
+uAS
+uAS
+uAS
+dsS
+bOr
+bOr
+bOr
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
 kIl
 kIl
 jPG
@@ -65346,25 +66017,25 @@ lbg
 wPM
 lbg
 wPM
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
+rJM
+bOr
+bOr
+bOr
+jFD
+uAS
+uAS
+xZf
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
 kIl
 kIl
 jPG
@@ -65604,25 +66275,25 @@ wPM
 wPM
 wPM
 wPM
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
+rJM
+gmY
+dsS
+bOr
+gmY
+uAS
+uAS
+hXy
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
 kIl
 kIl
 jPG
@@ -65862,25 +66533,25 @@ pGp
 pGp
 pGp
 wPM
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
+rJM
+rJM
+rJM
+bOr
+vmn
+jvT
+bOr
+jcI
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
 kIl
 kIl
 jPG
@@ -66120,25 +66791,25 @@ pGp
 pGp
 qGW
 wPM
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
+rJM
+rJM
+rJM
+bOr
+jFD
+uAS
+uAS
+xZf
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
 kIl
 kIl
 jPG
@@ -66378,25 +67049,25 @@ wPM
 wPM
 wPM
 wPM
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
+jFD
+aLN
+jFD
+uAS
+uAS
+uAS
+cgv
+hXy
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
 kIl
 kIl
 jPG
@@ -66636,25 +67307,25 @@ pzs
 wPM
 pzs
 wPM
-kIl
-kIl
-kIl
-kIl
-kIl
-dsr
-dsr
-dsr
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
-kIl
+eUL
+oLI
+bOr
+bOr
+bOr
+bOr
+rJM
+jcI
+hfI
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+lTR
+hfI
 kIl
 kIl
 jPG
@@ -66894,14 +67565,14 @@ xck
 wPM
 xck
 wPM
-kIl
-kIl
-kIl
-kIl
-kIl
-dsr
-dsr
-dsr
+tQw
+cUz
+bne
+bne
+bne
+mAG
+rJM
+bOr
 epd
 epd
 epd
@@ -67152,14 +67823,14 @@ sYd
 sYd
 hJh
 wPM
-kIl
-kIl
-kIl
-kIl
-kIl
-dsr
-dsr
-dsr
+ttW
+qrQ
+cLV
+cLV
+cLV
+aWG
+ogY
+bOr
 epd
 gFH
 avf
@@ -67410,14 +68081,14 @@ xck
 wPM
 xck
 wPM
-kIl
-kIl
-kIl
-kIl
-kIl
-dsr
-dsr
-dsr
+xnL
+tjn
+bOr
+bOr
+bOr
+mbF
+sHe
+mbF
 epd
 ixQ
 cTE
@@ -67668,14 +68339,14 @@ bCG
 wPM
 bCG
 wPM
-kIl
-kIl
-kIl
-kIl
-kIl
-dsr
-dsr
-dsr
+bOr
+bOr
+bOr
+ivc
+bOr
+mbF
+mbF
+sHe
 epd
 wSm
 cTE
@@ -67926,14 +68597,14 @@ wPM
 wPM
 wPM
 wPM
-kIl
-kIl
-kIl
-kIl
-kIl
-dsr
-dsr
-dsr
+bOr
+kXB
+bOr
+sva
+bOr
+mbF
+sHe
+mbF
 gBz
 dgT
 dgT
@@ -67942,7 +68613,7 @@ dgT
 dgT
 dgT
 dgT
-dgT
+aJc
 dgT
 epd
 kIl
@@ -68184,14 +68855,14 @@ mfD
 mfD
 mfD
 wPM
-kIl
-kIl
-kIl
-kIl
-kIl
-dsr
-dsr
-dsr
+bOr
+khU
+bOr
+khU
+bOr
+mbF
+mbF
+mbF
 epd
 rQv
 qan
@@ -68442,14 +69113,14 @@ gLM
 gLM
 mfD
 wPM
-kIl
-kIl
-kIl
-kIl
-kIl
-dsr
-dsr
-dsr
+bOr
+khU
+bOr
+khU
+bOr
+mKY
+mbF
+mKY
 epd
 wEq
 pBo
@@ -68700,14 +69371,14 @@ bJJ
 gLM
 mfD
 wPM
-kIl
-kIl
-kIl
-kIl
-kIl
-dsr
-dsr
-dsr
+bOr
+khU
+bOr
+khU
+bOr
+mbF
+mbF
+mbF
 epd
 kao
 wEq
@@ -68892,7 +69563,7 @@ mVA
 gmR
 mVA
 mVA
-uTb
+dlz
 tgj
 vrG
 qnD
@@ -68958,14 +69629,14 @@ kfS
 gLM
 mfD
 wPM
-kIl
-kIl
-kIl
-kIl
-kIl
-dsr
-dsr
-dsr
+bOr
+khU
+bOr
+khU
+bOr
+mbF
+mKY
+nrp
 epd
 kao
 uYn
@@ -69150,7 +69821,7 @@ mVA
 mVA
 mVA
 mVA
-uTb
+dlz
 tgj
 vrG
 qnD
@@ -69216,14 +69887,14 @@ xZU
 gLM
 pol
 wPM
-kIl
-kIl
-kIl
-kIl
-kIl
-dsr
-dsr
-dsr
+bOr
+gBR
+bOr
+ezi
+bOr
+mbF
+mbF
+nrp
 epd
 epd
 epd
@@ -69408,7 +70079,7 @@ mVA
 mVA
 mVA
 mVA
-uTb
+dlz
 tgj
 vrG
 qnD
@@ -69474,14 +70145,14 @@ dBj
 gLM
 mfD
 wPM
-kIl
-kIl
-kIl
-kIl
-kIl
-dsr
-dsr
-dsr
+bOr
+bOr
+bOr
+bOr
+bOr
+mbF
+mbF
+nrp
 epd
 iDr
 ane
@@ -69666,7 +70337,7 @@ mVA
 mVA
 mVA
 mVA
-uTb
+dlz
 tgj
 vrG
 qnD
@@ -69706,10 +70377,10 @@ iOD
 iOD
 lru
 hpQ
+lNG
+jWv
 hpQ
-hpQ
-hpQ
-hpQ
+biC
 hpQ
 hpQ
 sIj
@@ -69732,14 +70403,14 @@ nNV
 gLM
 mfD
 wPM
-kIl
-kIl
-kIl
-kIl
-kIl
-dsr
-dsr
-dsr
+bOr
+bOr
+bOr
+bOr
+bOr
+mbF
+sHe
+mbF
 epd
 axg
 aGv
@@ -69924,7 +70595,7 @@ mVA
 mVA
 mVA
 wGl
-uAS
+dkY
 tgj
 vrG
 qnD
@@ -69966,7 +70637,7 @@ iOD
 hpQ
 iOD
 iOD
-iOD
+ckA
 iOD
 iOD
 hpQ
@@ -69990,14 +70661,14 @@ umx
 gLM
 mfD
 wPM
-kIl
-kIl
-kIl
-kIl
-kIl
-dsr
-dsr
-dsr
+bOr
+noI
+bCC
+oWi
+bOr
+mbF
+mbF
+mbF
 epd
 wKS
 aGv
@@ -70181,7 +70852,7 @@ mVA
 mVA
 mVA
 mVA
-uTb
+dlz
 tgj
 tgj
 vrG
@@ -70248,14 +70919,14 @@ lvy
 kKd
 mfD
 wPM
-kIl
-kIl
-kIl
-kIl
-kIl
-dsr
-dsr
-dsr
+bOr
+lzM
+bYn
+abC
+bOr
+mbF
+mbF
+sHe
 rom
 dgT
 dgT
@@ -70264,7 +70935,7 @@ dgT
 dgT
 dgT
 dgT
-dgT
+aJc
 dgT
 epd
 kIl
@@ -70439,7 +71110,7 @@ mgq
 mVA
 mVA
 mVA
-uTb
+dlz
 aUc
 tgj
 vrG
@@ -70506,14 +71177,14 @@ gLM
 gLM
 mfD
 wPM
-kIl
-kIl
-kIl
-kIl
-kIl
-dsr
-dsr
-dsr
+bOr
+fjD
+bYn
+abC
+bOr
+mbF
+mbF
+mbF
 epd
 saD
 xRd
@@ -70764,14 +71435,14 @@ nWE
 gLM
 mfD
 wPM
-kIl
-kIl
-kIl
-kIl
-kIl
-dsr
-dsr
-dsr
+bOr
+tlY
+brW
+khC
+bOr
+mbF
+mKY
+mKY
 epd
 jFf
 xEl
@@ -71022,14 +71693,14 @@ hfi
 gLM
 mfD
 wPM
-kIl
-kIl
-kIl
-kIl
-kIl
-dsr
-dsr
-dsr
+bOr
+bOr
+bOr
+ivc
+bOr
+mbF
+mbF
+mbF
 epd
 tEr
 jFf
@@ -71229,7 +71900,7 @@ kEv
 roq
 nqH
 xDz
-rXb
+hEE
 ucl
 nHj
 wxF
@@ -71250,8 +71921,8 @@ lfc
 wPM
 nhm
 nhm
-nhm
-nhm
+gnH
+gnH
 nhm
 nhm
 nhm
@@ -71280,14 +71951,14 @@ cZE
 gLM
 pol
 wPM
-kIl
-kIl
-kIl
-kIl
-kIl
-dsr
-dsr
-dsr
+bOr
+bOr
+bOr
+bOr
+bOr
+mbF
+sHe
+mbF
 epd
 tEr
 lnS
@@ -71504,7 +72175,7 @@ nHj
 pZp
 lfc
 lfc
-won
+mib
 wPM
 nhm
 nhm
@@ -71538,14 +72209,14 @@ nml
 fgo
 mfD
 wPM
-kIl
-kIl
-kIl
-kIl
-kIl
-dsr
-dsr
-dsr
+jIZ
+bOr
+bOr
+bOr
+jIZ
+mKY
+mbF
+mbF
 epd
 epd
 epd
@@ -71766,8 +72437,8 @@ fnC
 wPM
 qkt
 nhm
-nhm
-nhm
+qCN
+qCN
 nhm
 nhm
 nhm
@@ -71796,14 +72467,14 @@ wPM
 wPM
 wPM
 wPM
-wPM
-wPM
-wPM
-wPM
-wPM
-pGp
-pGp
-pGp
+wxv
+wxv
+wxv
+wxv
+wxv
+mbF
+mbF
+mKY
 wPM
 wPM
 wPM
@@ -72227,12 +72898,12 @@ hPe
 (173,1,1) = {"
 fuy
 vrG
-lDZ
-lDZ
-lDZ
-lDZ
-lDZ
-lDZ
+wGQ
+wGQ
+dfJ
+dfJ
+dfJ
+wGQ
 vrG
 vrG
 vrG
@@ -72317,7 +72988,7 @@ jNo
 jNo
 jNo
 jNo
-mbF
+mKY
 mbF
 mbF
 jNo
@@ -72485,12 +73156,12 @@ hPe
 (174,1,1) = {"
 fuy
 vrG
-lDZ
-lDZ
+wGQ
+wGQ
 byq
 byq
 byq
-lDZ
+wGQ
 muN
 vrG
 tgj
@@ -72549,8 +73220,8 @@ dxX
 gaj
 nhm
 iam
-iam
-iam
+mZw
+tRW
 wPM
 hrZ
 jZo
@@ -72577,10 +73248,10 @@ mbF
 mbF
 mbF
 mbF
+sHe
 mbF
 mbF
-mbF
-mbF
+sHe
 mbF
 mbF
 jNo
@@ -72744,12 +73415,12 @@ hPe
 fuy
 vrG
 iVU
-lDZ
-lDZ
-lDZ
-lDZ
-lDZ
-lDZ
+wGQ
+dfJ
+dfJ
+dfJ
+wGQ
+wGQ
 vrG
 tgj
 tgj
@@ -72776,7 +73447,7 @@ vJT
 gmP
 sIg
 tZR
-rXb
+tPw
 rXb
 ucl
 nHj
@@ -73002,12 +73673,12 @@ hPe
 fuy
 vrG
 muN
-lDZ
+wGQ
 byq
 byq
 byq
-lDZ
-lDZ
+wGQ
+wGQ
 vrG
 tgj
 tgj
@@ -73260,12 +73931,12 @@ hPe
 fuy
 vrG
 jNH
-lDZ
+wGQ
 vvE
-lDZ
-lDZ
-lDZ
-lDZ
+dfJ
+dfJ
+wGQ
+wGQ
 vrG
 tgj
 tgj
@@ -73322,7 +73993,7 @@ nhm
 nhm
 nhm
 nhm
-iam
+oHN
 iam
 xDK
 wPM
@@ -73518,12 +74189,12 @@ hPe
 fuy
 vrG
 jNH
-lDZ
+wGQ
 byq
 byq
 byq
-lDZ
-lDZ
+wGQ
+wGQ
 vrG
 tgj
 tgj
@@ -73606,7 +74277,7 @@ ocy
 mbF
 mbF
 mbF
-mbF
+sHe
 mbF
 mbF
 mbF
@@ -73776,12 +74447,12 @@ hPe
 fuy
 vrG
 jNH
-lDZ
-lDZ
-lDZ
-lDZ
-lDZ
-lDZ
+wGQ
+wGQ
+wGQ
+wGQ
+wGQ
+pPC
 vrG
 tgj
 tgj
@@ -74098,7 +74769,7 @@ nhm
 nhm
 iam
 iam
-iam
+tRW
 wPM
 ffD
 rSc
@@ -74325,7 +74996,7 @@ mso
 mso
 mso
 xDz
-rXb
+rUr
 ucl
 nHj
 bbs
@@ -74572,8 +75243,8 @@ tgj
 tgj
 tgj
 vrG
-tgj
-tgj
+hUq
+hUq
 vrG
 fuy
 ucl
@@ -74830,7 +75501,7 @@ tgj
 tgj
 tgj
 vrG
-tgj
+hUq
 vrG
 vrG
 fuy
@@ -75088,8 +75759,8 @@ tgj
 tgj
 tgj
 vrG
-tgj
-tgj
+hUq
+hUq
 vrG
 fuy
 wPM
@@ -75174,9 +75845,9 @@ mbF
 jPG
 jPG
 mGX
-lTR
-lTR
-lTR
+cwz
+cwz
+cwz
 lTR
 lTR
 mGX
@@ -75346,8 +76017,8 @@ tgj
 tgj
 tgj
 vrG
-tgj
-tgj
+hUq
+hUq
 vrG
 fuy
 wPM
@@ -75432,9 +76103,9 @@ mbF
 jPG
 ulb
 mGX
-lTR
-lTR
-lTR
+cwz
+xje
+cwz
 lTR
 lTR
 mGX
@@ -75604,8 +76275,8 @@ vrG
 vrG
 vrG
 vrG
-tgj
-tgj
+hUq
+hUq
 vrG
 fuy
 wPM
@@ -75690,9 +76361,9 @@ mbF
 jPG
 jPG
 mGX
-lTR
-lTR
-lTR
+cwz
+cwz
+cwz
 lTR
 lTR
 mGX
@@ -75858,7 +76529,7 @@ tgj
 tgj
 tgj
 vrG
-tgj
+lrL
 dBI
 tgj
 vrG
@@ -76121,7 +76792,7 @@ tgj
 tgj
 vrG
 tgj
-tgj
+mwf
 vrG
 fuy
 wPM
@@ -76378,8 +77049,8 @@ tgj
 tgj
 tgj
 vrG
-tgj
-tgj
+ssN
+ssN
 vrG
 fuy
 wPM
@@ -76636,8 +77307,8 @@ tgj
 tgj
 tgj
 vrG
-tgj
-tgj
+ssN
+ssN
 vrG
 fuy
 wPM
@@ -76650,7 +77321,7 @@ fPm
 bmZ
 bmZ
 uLw
-nml
+yhv
 nml
 nml
 nml
@@ -76894,8 +77565,8 @@ tgj
 aKH
 aUc
 vrG
-tgj
-tgj
+ssN
+ssN
 vrG
 fuy
 fuy
@@ -80326,7 +80997,7 @@ dgT
 dgT
 dgT
 dgT
-dgT
+aJc
 dgT
 epd
 kIl
@@ -80741,24 +81412,24 @@ hPe
 (206,1,1) = {"
 fuy
 vrG
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
+lfr
+uTb
+vIP
+uTb
+uTb
+uTb
+uTb
+uTb
+vIP
+uTb
+uTb
+uTb
+uTb
+uTb
+uTb
+uTb
+uTb
+uTb
 vrG
 tgj
 tgj
@@ -80999,24 +81670,24 @@ hPe
 (207,1,1) = {"
 fuy
 vrG
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
+vrG
+vrG
+vrG
+vrG
+vrG
+vrG
+vrG
+vrG
+vrG
+vrG
+vrG
+vrG
+vrG
+vrG
+vrG
+vrG
+vrG
+uTb
 vrG
 tgj
 tgj
@@ -81053,7 +81724,7 @@ kIl
 kIl
 kIl
 kIl
-kIl
+dLz
 kIl
 kIl
 wPM
@@ -81257,24 +81928,24 @@ hPe
 (208,1,1) = {"
 fuy
 vrG
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
+uTb
+uTb
+uTb
+uTb
+uTb
+uTb
+uTb
+uTb
+vIP
+uTb
+uTb
+uTb
+uTb
+uTb
+uTb
+uTb
+uTb
+uTb
 vrG
 tgj
 tgj
@@ -81515,24 +82186,24 @@ hPe
 (209,1,1) = {"
 fuy
 vrG
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
+uTb
+vrG
+vrG
+vrG
+vrG
+vrG
+vrG
+vrG
+vrG
+vrG
+vrG
+vrG
+vrG
+vrG
+vrG
+vrG
+vrG
+vrG
 vrG
 tgj
 tgj
@@ -82102,7 +82773,7 @@ ouN
 ouN
 ouN
 tiz
-cBr
+tiz
 lUd
 tiz
 tiz
@@ -82326,7 +82997,7 @@ tgj
 vrG
 fuy
 kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -82591,7 +83262,7 @@ kIl
 kIl
 kIl
 kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -82648,7 +83319,7 @@ dgT
 dgT
 dgT
 dgT
-dgT
+aJc
 dgT
 epd
 kIl
@@ -82831,7 +83502,7 @@ vrG
 tgj
 tgj
 tgj
-tgj
+cBr
 tgj
 tgj
 tgj
@@ -82854,7 +83525,7 @@ kIl
 kIl
 kIl
 kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -83089,7 +83760,7 @@ vrG
 tgj
 tgj
 tgj
-tgj
+cBr
 tgj
 aUc
 tgj
@@ -83346,8 +84017,8 @@ tgj
 vrG
 tgj
 tgj
-tgj
-tgj
+cBr
+cBr
 tgj
 tgj
 tgj
@@ -83372,7 +84043,7 @@ kIl
 kIl
 kIl
 kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -83604,8 +84275,8 @@ tgj
 vrG
 tgj
 tgj
-tgj
-tgj
+cBr
+cBr
 tgj
 tgj
 tgj
@@ -83862,12 +84533,12 @@ tgj
 vrG
 tgj
 tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
+cBr
+cBr
+cBr
+cBr
+cBr
+cBr
 tgj
 tgj
 tgj
@@ -83876,7 +84547,7 @@ fuy
 kIl
 kIl
 kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -84120,12 +84791,12 @@ tgj
 vrG
 vrG
 tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
+cBr
+cBr
+cBr
+cBr
+cBr
+cBr
 tgj
 tgj
 vrG
@@ -84376,14 +85047,14 @@ tgj
 tgj
 tgj
 vrG
+uMu
 tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
+cBr
+cBr
+cBr
+cBr
+cBr
+cBr
 tgj
 tgj
 tgj
@@ -84399,7 +85070,7 @@ kIl
 kIl
 kIl
 kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -84634,14 +85305,14 @@ tgj
 tgj
 tgj
 vrG
+wMf
 tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
+cBr
+cBr
+cBr
+cBr
+cBr
+cBr
 tgj
 tgj
 tgj
@@ -84891,15 +85562,15 @@ vrG
 vrG
 vrG
 vrG
-vrG
+woV
 tgj
 tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
+cBr
+cBr
+cBr
+cBr
+cBr
+cBr
 tgj
 tgj
 tgj
@@ -84970,7 +85641,7 @@ dgT
 dgT
 dgT
 dgT
-dgT
+aJc
 dgT
 epd
 kIl
@@ -85152,12 +85823,12 @@ tgj
 tgj
 tgj
 tgj
-tgj
-tgj
-tgj
-tgj
-tgj
-tgj
+cBr
+cBr
+cBr
+cBr
+cBr
+cBr
 tgj
 tgj
 tgj
@@ -85411,11 +86082,11 @@ vrG
 tgj
 tgj
 tgj
-tgj
-tgj
-tgj
-tgj
-tgj
+cBr
+cBr
+cBr
+cBr
+cBr
 tgj
 tgj
 tgj
@@ -85424,6 +86095,9 @@ fuy
 kIl
 kIl
 kIl
+dLz
+kIl
+dLz
 kIl
 kIl
 kIl
@@ -85433,10 +86107,7 @@ kIl
 kIl
 kIl
 kIl
-kIl
-kIl
-kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -85669,9 +86340,9 @@ vrG
 tgj
 tgj
 tgj
-tgj
-tgj
-tgj
+cBr
+cBr
+cBr
 tgj
 tgj
 tgj
@@ -85917,19 +86588,19 @@ vrG
 tgj
 vrG
 vrG
+oCa
 vrG
 vrG
 vrG
-vrG
 tgj
 tgj
 vrG
 tgj
 tgj
 tgj
-tgj
-tgj
-tgj
+cBr
+cBr
+cBr
 tgj
 tgj
 tgj
@@ -86174,7 +86845,7 @@ tgj
 vrG
 tgj
 vrG
-tgj
+qts
 tgj
 tgj
 tgj
@@ -86187,7 +86858,7 @@ tgj
 tgj
 tgj
 tgj
-aUc
+tgj
 tgj
 tgj
 tgj
@@ -86203,7 +86874,7 @@ kIl
 kIl
 kIl
 kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -86691,9 +87362,9 @@ vrG
 tgj
 vrG
 vrG
+bDm
 vrG
 vrG
-vrG
 tgj
 tgj
 tgj
@@ -86703,7 +87374,7 @@ tgj
 tgj
 tgj
 tgj
-tgj
+aUc
 tgj
 tgj
 tgj
@@ -87238,7 +87909,7 @@ kIl
 kIl
 kIl
 kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -87292,7 +87963,7 @@ dgT
 dgT
 dgT
 dgT
-dgT
+aJc
 dgT
 epd
 kIl
@@ -87488,7 +88159,7 @@ fuy
 kIl
 kIl
 kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -88007,14 +88678,14 @@ kIl
 kIl
 kIl
 kIl
+dLz
 kIl
 kIl
 kIl
 kIl
 kIl
 kIl
-kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -88527,7 +89198,7 @@ kIl
 kIl
 kIl
 kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -89035,9 +89706,9 @@ vrG
 fuy
 kIl
 kIl
+dLz
 kIl
-kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -89556,7 +90227,7 @@ kIl
 kIl
 kIl
 kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -89821,7 +90492,7 @@ kIl
 kIl
 kIl
 kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -90074,7 +90745,7 @@ kIl
 kIl
 kIl
 kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -90374,7 +91045,7 @@ kIl
 kIl
 kIl
 kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -90848,13 +91519,13 @@ vrG
 fuy
 kIl
 kIl
+dLz
 kIl
 kIl
 kIl
 kIl
 kIl
-kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -91115,7 +91786,7 @@ kIl
 kIl
 kIl
 kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -91328,7 +91999,7 @@ tgj
 tgj
 tgj
 tgj
-tgj
+gbU
 tgj
 tgj
 vrG
@@ -91367,6 +92038,7 @@ kIl
 kIl
 kIl
 kIl
+dLz
 kIl
 kIl
 kIl
@@ -91375,8 +92047,7 @@ kIl
 kIl
 kIl
 kIl
-kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -91643,7 +92314,7 @@ kIl
 kIl
 kIl
 kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -91685,13 +92356,13 @@ kIl
 kIl
 xuH
 xuH
-iXd
-lTR
-lTR
-lTR
-lTR
-lTR
-iXd
+hHa
+wST
+wST
+wST
+wST
+wST
+hHa
 xuH
 xuH
 xuH
@@ -91943,13 +92614,13 @@ kIl
 xuH
 xuH
 xuH
-iXd
-lTR
-lTR
-lTR
-lTR
-lTR
-iXd
+hHa
+xQB
+wST
+wST
+wST
+wST
+hHa
 xuH
 xuH
 xuH
@@ -92178,6 +92849,7 @@ kIl
 kIl
 kIl
 kIl
+dLz
 kIl
 kIl
 kIl
@@ -92187,8 +92859,7 @@ kIl
 kIl
 kIl
 kIl
-kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -92201,13 +92872,13 @@ xuH
 xuH
 xuH
 xuH
-iXd
-lTR
-lTR
-lTR
-lTR
-lTR
-iXd
+hHa
+wST
+wST
+wST
+wST
+wST
+hHa
 xuH
 xuH
 xuH
@@ -92397,7 +93068,7 @@ vrG
 fuy
 kIl
 kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -92459,13 +93130,13 @@ xuH
 xuH
 xuH
 xuH
-iXd
-lTR
-lTR
-lTR
-lTR
-lTR
-iXd
+hHa
+wST
+wST
+wST
+wST
+wST
+hHa
 xuH
 xuH
 xuH
@@ -92717,13 +93388,13 @@ xuH
 xuH
 xuH
 xuH
-iXd
-lTR
-lTR
-lTR
-lTR
-lTR
-iXd
+hHa
+wST
+wST
+wST
+wST
+wST
+hHa
 xuH
 xuH
 xuH
@@ -92918,7 +93589,7 @@ kIl
 kIl
 kIl
 kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -92975,13 +93646,13 @@ xuH
 xuH
 xuH
 xuH
-iXd
-lTR
-lTR
-lTR
-lTR
-lTR
-iXd
+hHa
+xQB
+wST
+wST
+wST
+wST
+hHa
 xuH
 xuH
 xuH
@@ -93188,7 +93859,7 @@ kIl
 kIl
 kIl
 kIl
-kIl
+dLz
 kIl
 kIl
 kIl
@@ -93233,13 +93904,13 @@ xuH
 xuH
 xuH
 xuH
-iXd
-lTR
-lTR
-lTR
-lTR
-lTR
-iXd
+hHa
+nxD
+aYc
+aYc
+aYc
+aYc
+hHa
 xuH
 xuH
 xuH
@@ -93491,13 +94162,13 @@ xuH
 xuH
 xuH
 xuH
-iXd
-lTR
-lTR
-lTR
-lTR
-lTR
-iXd
+hHa
+wST
+wST
+wST
+wST
+wST
+hHa
 xuH
 xuH
 xuH
