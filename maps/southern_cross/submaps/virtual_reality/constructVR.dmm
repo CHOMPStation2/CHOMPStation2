@@ -3791,7 +3791,7 @@
 /area/vr/powered/mall/dorms)
 "dxk" = (
 /obj/effect/map_effect/perma_light{
-	light_color = #5e4d26;
+	light_color = "#5e4d26";
 	light_range = 6
 	},
 /turf/simulated/floor/carpet,
@@ -10458,7 +10458,7 @@
 /area/vr/powered/cult)
 "jnm" = (
 /obj/effect/map_effect/perma_light{
-	light_color = #5e4d26;
+	light_color = "#5e4d26";
 	light_range = 6
 	},
 /turf/simulated/floor/bmarble,
@@ -12721,12 +12721,12 @@
 /turf/simulated/floor/tiled,
 /area/vr/powered/dungeon)
 "lkk" = (
-/obj/machinery/light{
-	dir = 1;
-	overlay_color = "#d817ff";
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/effect/floor_decal/industrial/hatch/blue,
+/obj/effect/map_effect/perma_light/brighter{
 	light_color = "#d817ff"
 	},
-/turf/simulated/floor/carpet/geo,
+/turf/simulated/floor/tiled/dark,
 /area/vr/powered/mall/vw)
 "lkr" = (
 /obj/structure/table/reinforced,
@@ -14957,12 +14957,10 @@
 /turf/simulated/floor/carpet/blue,
 /area/vr/powered/mall/dorms)
 "mWb" = (
-/obj/machinery/light{
-	dir = 2;
-	overlay_color = "#d817ff";
+/obj/effect/map_effect/perma_light/brighter{
 	light_color = "#d817ff"
 	},
-/turf/simulated/floor/water/pool/turfpack/station,
+/turf/simulated/floor/carpet/geo,
 /area/vr/powered/mall/vw)
 "mWj" = (
 /obj/structure/closet/secure_closet/engineering_electrical{
@@ -15025,7 +15023,7 @@
 /obj/structure/bed/chair/comfy/black,
 /obj/structure/railing/overhang/waterless/under,
 /obj/effect/map_effect/perma_light{
-	light_color = #5e4d26;
+	light_color = "#5e4d26";
 	light_range = 6
 	},
 /turf/simulated/floor/carpet,
@@ -22529,11 +22527,6 @@
 /turf/simulated/floor/tiled/yellow,
 /area/vr/powered/mall)
 "tjX" = (
-/obj/machinery/light{
-	dir = 1;
-	overlay_color = "#d817ff";
-	light_color = "#d817ff"
-	},
 /obj/structure/table/glass,
 /obj/machinery/chemical_dispenser/bar_alc/full,
 /turf/simulated/floor/carpet/geo,
@@ -72158,7 +72151,7 @@ mso
 mso
 mso
 oym
-mWb
+rXb
 ucl
 nHj
 eCY
@@ -72414,7 +72407,7 @@ huV
 huV
 huV
 nxF
-htD
+lkk
 akP
 rXb
 ucl
@@ -72674,7 +72667,7 @@ kiU
 sIg
 tZR
 htD
-mWb
+rXb
 ucl
 nHj
 rhJ
@@ -73190,7 +73183,7 @@ gmP
 sIg
 tZR
 rXb
-mWb
+rXb
 ucl
 nHj
 wpn
@@ -73443,7 +73436,7 @@ vrG
 fuy
 ucl
 vTT
-vJT
+mWb
 gmP
 sIg
 tZR
@@ -73706,7 +73699,7 @@ gmP
 sIg
 tZR
 rXb
-mWb
+rXb
 ucl
 nHj
 wpn
@@ -74216,13 +74209,13 @@ aUc
 vrG
 fuy
 ucl
-lkk
+vJT
 vJT
 vJT
 tZR
 tZR
 htD
-mWb
+rXb
 ucl
 nHj
 lmj
@@ -74478,7 +74471,7 @@ huV
 huV
 huV
 nxF
-htD
+lkk
 lgc
 rXb
 ucl
@@ -74738,7 +74731,7 @@ mso
 mso
 mso
 xDz
-mWb
+rXb
 ucl
 nHj
 bbs
