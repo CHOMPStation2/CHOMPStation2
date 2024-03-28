@@ -23,7 +23,7 @@ SUBSYSTEM_DEF(assets)
 
 
 /datum/controller/subsystem/assets/Initialize()
-	OnConfigLoad() CHOMPEdit
+	OnConfigLoad()
 
 	for(var/type in typesof(/datum/asset))
 		var/datum/asset/A = type

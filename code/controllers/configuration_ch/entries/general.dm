@@ -683,3 +683,11 @@
 
 /datum/config_entry/flag/config_errors_runtime
 	default = FALSE
+
+/// Controls whether robots may recolour their modules once/module reset by giving them the recolour module verb
+/// Admins may manually give them the verb even if disabled
+/datum/config_entry/flag/allow_robot_recolor
+
+/// Controls whether simple mobs may recolour themselves once/spawn by giving them the recolour verb
+/// Admins may manually give them the verb even if disabled
+/datum/config_entry/flag/allow_simple_mob_recolor
