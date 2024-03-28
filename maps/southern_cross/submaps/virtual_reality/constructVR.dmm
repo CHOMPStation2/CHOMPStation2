@@ -12721,12 +12721,10 @@
 /turf/simulated/floor/tiled,
 /area/vr/powered/dungeon)
 "lkk" = (
-/obj/effect/floor_decal/corner/purple/diagonal,
-/obj/effect/floor_decal/industrial/hatch/blue,
 /obj/effect/map_effect/perma_light/brighter{
 	light_color = "#d817ff"
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/geo,
 /area/vr/powered/mall/vw)
 "lkr" = (
 /obj/structure/table/reinforced,
@@ -14956,6 +14954,14 @@
 /obj/item/weapon/book/manual,
 /turf/simulated/floor/carpet/blue,
 /area/vr/powered/mall/dorms)
+"mWb" = (
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/effect/floor_decal/industrial/hatch/blue,
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#d817ff"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/vr/powered/mall/vw)
 "mWj" = (
 /obj/structure/closet/secure_closet/engineering_electrical{
 	req_access = null
@@ -16468,12 +16474,6 @@
 /obj/item/weapon/material/knife/machete/deluxe,
 /turf/simulated/floor/tiled,
 /area/vr/powered/gunshop)
-"oeo" = (
-/obj/effect/map_effect/perma_light/brighter{
-	light_color = "#d817ff"
-	},
-/turf/simulated/floor/carpet/geo,
-/area/vr/powered/mall/vw)
 "oeP" = (
 /obj/structure/prop/statue,
 /turf/simulated/floor/water/pool{
@@ -23461,6 +23461,9 @@
 /area/vr/powered/dungeon)
 "tXl" = (
 /obj/structure/prop/statue,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/simulated/floor/beach/sand/desert,
 /area/vr/powered/mall/vw)
 "tXo" = (
@@ -72401,7 +72404,7 @@ huV
 huV
 huV
 nxF
-lkk
+mWb
 akP
 rXb
 ucl
@@ -73430,7 +73433,7 @@ vrG
 fuy
 ucl
 vTT
-oeo
+lkk
 gmP
 sIg
 tZR
@@ -74465,7 +74468,7 @@ huV
 huV
 huV
 nxF
-lkk
+mWb
 lgc
 rXb
 ucl
