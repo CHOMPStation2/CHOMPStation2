@@ -1,4 +1,0 @@
-author: "cadyn"
-delete-after: True
-changes:
-  - bugfix: "asset issues that broke chat tags"
