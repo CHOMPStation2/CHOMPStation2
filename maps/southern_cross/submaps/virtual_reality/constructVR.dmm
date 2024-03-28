@@ -1306,7 +1306,7 @@
 /area/vr/powered/cult)
 "biC" = (
 /obj/structure/table/hardwoodtable,
-/obj/structure/salvageable/personal,
+/obj/item/modular_computer/laptop/preset/custom_loadout/cheap,
 /turf/simulated/floor/carpet/brown,
 /area/vr/powered/mall)
 "biV" = (
@@ -14956,12 +14956,6 @@
 /obj/item/weapon/book/manual,
 /turf/simulated/floor/carpet/blue,
 /area/vr/powered/mall/dorms)
-"mWb" = (
-/obj/effect/map_effect/perma_light/brighter{
-	light_color = "#d817ff"
-	},
-/turf/simulated/floor/carpet/geo,
-/area/vr/powered/mall/vw)
 "mWj" = (
 /obj/structure/closet/secure_closet/engineering_electrical{
 	req_access = null
@@ -16475,11 +16469,11 @@
 /turf/simulated/floor/tiled,
 /area/vr/powered/gunshop)
 "oeo" = (
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 8
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#d817ff"
 	},
-/turf/space/internal_edge,
-/area/vr/powered/mall)
+/turf/simulated/floor/carpet/geo,
+/area/vr/powered/mall/vw)
 "oeP" = (
 /obj/structure/prop/statue,
 /turf/simulated/floor/water/pool{
@@ -16728,7 +16722,7 @@
 /area/vr/powered/dungeon)
 "omd" = (
 /obj/structure/table/woodentable,
-/obj/structure/salvageable/personal,
+/obj/item/modular_computer/laptop/preset/custom_loadout/cheap,
 /turf/unsimulated/floor/lino/turfpack/station{
 	color = "#ffe9ab"
 	},
@@ -28505,7 +28499,7 @@
 /turf/simulated/floor/tiled/white,
 /area/vr/powered/mall)
 "ymi" = (
-/obj/structure/salvageable/personal,
+/obj/item/modular_computer/laptop/preset/custom_loadout/cheap,
 /obj/structure/table/woodentable,
 /turf/unsimulated/floor/lino/turfpack/station{
 	color = "#ffe9ab"
@@ -65461,7 +65455,7 @@ aIx
 aIx
 hse
 ryu
-oeo
+xGJ
 xGJ
 xGJ
 xGJ
@@ -73436,7 +73430,7 @@ vrG
 fuy
 ucl
 vTT
-mWb
+oeo
 gmP
 sIg
 tZR
