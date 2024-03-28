@@ -4640,7 +4640,6 @@
 #include "modular_chomp\code\_HELPERS\announcements.dm"
 #include "modular_chomp\code\_HELPERS\game.dm"
 #include "modular_chomp\code\_HELPERS\mobs.dm"
-#include "modular_chomp\code\_HELPERS\type2type.dm"
 #include "modular_chomp\code\_onclick\hud\alert.dm"
 #include "modular_chomp\code\ATMOSPHERICS\atmospherics.dm"
 #include "modular_chomp\code\datums\http.dm"
