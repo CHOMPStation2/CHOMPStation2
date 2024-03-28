@@ -6,6 +6,17 @@
 	vore_capacity_ex = list()
 	vore_fullness_ex = list()
 	vore_icon_bellies = list()
+	var/access_list = list()
+
+/mob/living/silicon/robot/init_id()
+	return //Fuck you
+
+/mob/living/silicon/robot/init()
+	. = ..()
+	access_list = get_all_station_access().Copy() + access_synth
+
+/mob/living/silicon/robot/GetAccess()
+	return access_list
 
 /mob/living/silicon/robot/verb/purge_nutrition()
 	set name = "Purge Nutrition"
@@ -57,3 +68,85 @@
 	vore_capacity_ex = list()
 	vore_fullness_ex = list()
 	vore_light_states = list()
+
+
+/obj/machinery/door/airlock/BorgCtrlShiftClick(var/mob/living/silicon/robot/user)
+	if(check_access_list(user.access_list))
+		..()
+
+/obj/machinery/door/airlock/BorgShiftClick(var/mob/living/silicon/robot/user)  // Opens and closes doors! Forwards to AI code.
+	if(check_access_list(user.access_list))
+		..()
+
+/obj/machinery/door/airlock/BorgCtrlClick(var/mob/living/silicon/robot/user) // Bolts doors. Forwards to AI code.
+	if(check_access_list(user.access_list))
+		..()
+
+/obj/machinery/power/apc/BorgCtrlClick(var/mob/living/silicon/robot/user) // turns off/on APCs. Forwards to AI code.
+	if(allowed(user))
+		..()
+
+/obj/machinery/turretid/BorgCtrlClick(var/mob/living/silicon/robot/user) //turret control on/off. Forwards to AI code.
+	if(allowed(user))
+		..()
+
+/obj/machinery/door/airlock/BorgAltClick(var/mob/living/silicon/robot/user) // Eletrifies doors. Forwards to AI code.
+	if(check_access_list(user.access_list))
+		..()
+
+/obj/machinery/turretid/BorgAltClick(var/mob/living/silicon/robot/user) //turret lethal on/off. Forwards to AI code.
+	if(allowed(user))
+		..()
+
+/mob/living/silicon/robot/lost/init()
+	. = ..()
+	access_list = list()
+
+/obj/machinery/door/airlock/user_allowed(mob/user)
+	var/mob/living/silicon/robot/R = user
+	if(istype(R) && !check_access_list(R.access_list))
+		return FALSE
+	. = ..()
+
+/obj/machinery/computer/atmoscontrol/attack_robot(var/mob/user)
+	if(allowed(user))
+		..()
+	else if(Adjacent(user))
+		attack_hand(user)
+
+/obj/machinery/computer/robotics/attack_robot(var/mob/user)
+	if(allowed(user))
+		..()
+	else if(Adjacent(user))
+		attack_hand(user)
+
+/obj/machinery/turretid/attack_robot(var/mob/user)
+	if(allowed(user))
+		..()
+	else if(Adjacent(user))
+		attack_hand(user)
+
+/obj/machinery/door/airlock/attack_robot(var/mob/user)
+	var/mob/living/silicon/robot/R = user
+	if(!istype(R))
+		return //why are you here
+	if(check_access_list(R.access_list))
+		..()
+	else if(Adjacent(user))
+		attack_hand(user)
+
+/obj/machinery/porta_turret/attack_robot(var/mob/user)
+	if(allowed(user))
+		..()
+	else if(Adjacent(user))
+		attack_hand(user)
+
+/obj/machinery/porta_turret/isLocked(mob/user)
+	var/mob/living/silicon/robot/R = user
+	if(!istype(R))
+		return ..()
+	if(!locked)
+		return FALSE
+	if(!check_access_list(R.access_list))
+		return TRUE
+	return FALSE
