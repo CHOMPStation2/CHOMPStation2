@@ -29,6 +29,10 @@
 	if(!A)
 		ai_log("calculate_path() : Called without an atom. Exiting.",AI_LOG_WARNING)
 		return
+	var/turf/T = get_turf(A)
+	if(!istype(T) || T.z != holder.z)
+		ai_log("calculate_path() : Called with invalid destination. Exiting.",AI_LOG_WARNING)
+		return
 
 	if(!use_astar) // If we don't use A* then this is pointless.
 		ai_log("calculate_path() : Not using A*, Exiting.", AI_LOG_DEBUG)
