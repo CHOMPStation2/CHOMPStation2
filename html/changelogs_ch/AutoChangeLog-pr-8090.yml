@@ -1,0 +1,4 @@
+author: "Kashargul"
+delete-after: True
+changes:
+  - rscadd: "adds the ability to customize the \"encase in egg\" egg size between 25 and 200% or keep it at 0 for automatic calculation from 25 to 100%"
