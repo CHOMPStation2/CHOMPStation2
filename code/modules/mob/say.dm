@@ -15,6 +15,8 @@
 /mob/verb/say_verb(message as text)
 	set name = "Say"
 	set category = "IC"
+	set instant = TRUE // CHOMPEdit
+
 	//VOREStation Addition Start
 	if(forced_psay)
 		psay(message)
@@ -22,7 +24,12 @@
 	//VOREStation Addition End
 
 	set_typing_indicator(FALSE)
-	usr.say(message)
+	// CHOMPEdit Start
+	//queue this message because verbs are scheduled to process after SendMaps in the tick and speech is pretty expensive when it happens.
+	//by queuing this for next tick the mc can compensate for its cost instead of having speech delay the start of the next tick
+	if(message)
+		QUEUE_OR_CALL_VERB_FOR(VERB_CALLBACK(src, TYPE_PROC_REF(/mob, say), message), SSspeech_controller)
+	// CHOMPEdit End
 
 /mob/verb/me_verb(message as message)
 	set name = "Me"
