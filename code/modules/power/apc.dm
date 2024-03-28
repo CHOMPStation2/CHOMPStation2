@@ -808,7 +808,7 @@ GLOBAL_LIST_EMPTY(apcs)
 		"failTime" = failure_timer * 2,
 		"gridCheck" = grid_check,
 		"coverLocked" = coverlocked,
-		"siliconUser" = issilicon(user) || (isobserver(user) && is_admin(user)), //I add observer here so admins can have more control, even if it makes 'siliconUser' seem inaccurate.
+		"siliconUser" = siliconaccess(user) || (isobserver(user) && is_admin(user)), //I add observer here so admins can have more control, even if it makes 'siliconUser' seem inaccurate.
 		"emergencyLights" = !emergency_lights,
 		"nightshiftLights" = nightshift_lights,
 		"nightshiftSetting" = nightshift_setting,
