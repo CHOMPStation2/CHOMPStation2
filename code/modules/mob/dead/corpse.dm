@@ -107,6 +107,10 @@
 			M.update_wing_showing()
 	M.real_name = generateCorpseName()
 	M.set_stat(DEAD) //Kills the new mob
+	//CHOMPAdd: Corpses drop bones when melted and are easier to eat
+	M.digest_leave_remains = TRUE
+	M.can_be_drop_prey = TRUE
+	//CHOMPAdd End
 	if(corpsesynthtype > 0)
 		if(!corpsesynthbrand)
 			corpsesynthbrand = "Unbranded"
