@@ -123,14 +123,14 @@
 		if(pref.client)
 			pref.client.fps = fps_new
 		return TOPIC_REFRESH
-		
+
 	else if(href_list["select_ambience_freq"])
 		var/ambience_new = tgui_input_number(user, "Input how often you wish to hear ambience repeated! (1-60 MINUTES, 0 for disabled)", "Global Preference", pref.ambience_freq, 60, 0)
 		if(isnull(ambience_new) || !CanUseTopic(user)) return TOPIC_NOACTION
 		if(ambience_new < 0 || ambience_new > 60) return TOPIC_NOACTION
 		pref.ambience_freq = ambience_new
 		return TOPIC_REFRESH
-		
+
 	else if(href_list["select_ambience_chance"])
 		var/ambience_chance_new = tgui_input_number(user, "Input the chance you'd like to hear ambience played to you (On area change, or by random ambience). 35 means a 35% chance to play ambience. This is a range from 0-100. 0 disables ambience playing entirely. This is also affected by Ambience Frequency.", "Global Preference", pref.ambience_freq, 100, 0)
 		if(isnull(ambience_chance_new) || !CanUseTopic(user)) return TOPIC_NOACTION
@@ -141,7 +141,7 @@
 	else if(href_list["tgui_fancy"])
 		pref.tgui_fancy = !pref.tgui_fancy
 		return TOPIC_REFRESH
-		
+
 	else if(href_list["tgui_lock"])
 		pref.tgui_lock = !pref.tgui_lock
 		return TOPIC_REFRESH
@@ -187,4 +187,4 @@
 	return ..()
 
 /datum/category_item/player_setup_item/player_global/ui/proc/can_select_ooc_color(var/mob/user)
-	return config.allow_admin_ooccolor && check_rights(R_ADMIN|R_EVENT|R_FUN, 0, user)
+	return CONFIG_GET(flag/allow_admin_ooccolor) && check_rights(R_ADMIN|R_EVENT|R_FUN, 0, user) // CHOMPEdit

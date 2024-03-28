@@ -169,7 +169,7 @@
 "fR" = (
 /obj/structure/bookcase,
 /obj/item/weapon/book/codex/casino,
-/obj/item/weapon/book/manual/engineering_guide,
+/obj/item/weapon/book/manual/wiki/engineering_guide,
 /turf/simulated/floor/carpet,
 /area/submap/CultBar)
 "gh" = (
@@ -608,7 +608,7 @@
 "Br" = (
 /obj/structure/bookcase,
 /obj/item/weapon/book/manual/nuclear,
-/obj/item/weapon/book/manual/engineering_construction,
+/obj/item/weapon/book/manual/wiki/engineering_construction,
 /turf/simulated/floor/carpet,
 /area/submap/CultBar)
 "BV" = (
@@ -994,7 +994,7 @@
 /obj/structure/bookcase,
 /obj/item/weapon/book/manual/ripley_build_and_repair,
 /obj/item/weapon/book/manual/virology,
-/obj/item/weapon/book/manual/engineering_hacking,
+/obj/item/weapon/book/manual/wiki/engineering_hacking,
 /turf/simulated/floor/carpet,
 /area/submap/CultBar)
 "SN" = (

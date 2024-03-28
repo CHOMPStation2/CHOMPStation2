@@ -4,21 +4,23 @@
 	lastKnownIP	= client.address
 	computer_id	= client.computer_id
 	log_access_in(client)
-	if(config.log_access)
+	if(CONFIG_GET(flag/log_access)) // CHOMPEdit
 		for(var/mob/M in player_list)
 			if(M == src)	continue
 			if( M.key && (M.key != key) )
 				var/matches
 				//CHOMPEDIT - IP exemptions for those who are known to live together
-				if (config.ip_whitelist[key] && config.ip_whitelist[key] == config.ip_whitelist[M.key])
-					continue
+				var/list/ip_whitelist = CONFIG_GET(str_list/ip_whitelist)
+				if (ip_whitelist[key])
+					if (ip_whitelist[key] == ip_whitelist[M.key])
+						continue
 				//CHOMPEDIT end
 				if( (M.lastKnownIP == client.address) )
 					matches += "IP ([client.address])"
 				if( (client.connection != "web") && (M.computer_id == client.computer_id) )
 					if(matches)	matches += " and "
 					matches += "ID ([client.computer_id])"
-					if(!config.disable_cid_warn_popup)
+					if(!CONFIG_GET(flag/disable_cid_warn_popup)) // CHOMPEdit
 						tgui_alert_async(usr, "You appear to have logged in with another key this round, which is not permitted. Please contact an administrator if you believe this message to be in error.")
 				if(matches)
 					if(M.client)

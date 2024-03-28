@@ -163,7 +163,7 @@
 /obj/structure/bookcase,
 /obj/item/weapon/book/codex/lore/vir,
 /obj/item/weapon/book/manual/excavation,
-/obj/item/weapon/book/manual/engineering_construction,
+/obj/item/weapon/book/manual/wiki/engineering_construction,
 /obj/item/weapon/storage/bible,
 /turf/simulated/floor/wood,
 /area/submap/DJOutpost1)

@@ -2,7 +2,7 @@
 
 	//The name of the job
 	var/title = "NOPE"
-	//Job access. The use of minimal_access or access is determined by a config setting: config.jobs_have_minimal_access
+	//Job access. The use of minimal_access or access is determined by a config setting: CONFIG_GET(flag/jobs_have_minimal_access) // CHOMPEdit
 	var/list/minimal_access = list()      // Useful for servers which prefer to only have access given to the places a job absolutely needs (Larger server population)
 	var/list/access = list()              // Useful for servers which either have fewer players, so each person needs to fill more than one role, or servers which like to give more access, so players can't hide forever in their super secure departments (I'm looking at you, chemistry!)
 	var/flag = 0 	                      // Bitflags for the job
@@ -98,7 +98,7 @@
 	. = outfit.equip_base(H, title, alt_title)
 
 /datum/job/proc/get_access()
-	if(!config || config.jobs_have_minimal_access)
+	if(!config || CONFIG_GET(flag/jobs_have_minimal_access)) // CHOMPEdit
 		return src.minimal_access.Copy()
 	else
 		return src.access.Copy()
@@ -108,7 +108,7 @@
 	return (available_in_days(C) == 0) //Available in 0 days = available right now = player is old enough to play.
 
 /datum/job/proc/available_in_days(client/C)
-	if(C && config.use_age_restriction_for_jobs && isnum(C.player_age) && isnum(minimal_player_age))
+	if(C && CONFIG_GET(flag/use_age_restriction_for_jobs) && isnum(C.player_age) && isnum(minimal_player_age)) // CHOMPEdit
 		return max(0, minimal_player_age - C.player_age)
 	return 0
 

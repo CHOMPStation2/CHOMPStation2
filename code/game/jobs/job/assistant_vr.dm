@@ -78,11 +78,11 @@
 /datum/job/intern/New()
 	..()
 	if(config)
-		total_positions = config.limit_interns
-		spawn_positions = config.limit_interns
+		total_positions = CONFIG_GET(number/limit_interns) // CHOMPEdit
+		spawn_positions = CONFIG_GET(number/limit_interns) // CHOMPEdit
 
 /datum/job/intern/get_access()
-	if(config.assistant_maint)
+	if(CONFIG_GET(flag/assistant_maint)) // CHOMPEdit
 		return list(access_maint_tunnels)
 	else
 		return list()
@@ -103,8 +103,8 @@
 /datum/job/assistant/New()
 	..()
 	if(config)
-		total_positions = config.limit_visitors
-		spawn_positions = config.limit_visitors
+		total_positions = CONFIG_GET(number/limit_visitors) // CHOMPEdit
+		spawn_positions = CONFIG_GET(number/limit_visitors) // CHOMPEdit
 
 /datum/job/assistant/get_access()
 	return list()

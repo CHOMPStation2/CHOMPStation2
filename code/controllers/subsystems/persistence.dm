@@ -4,7 +4,7 @@ SUBSYSTEM_DEF(persistence)
 	flags = SS_NO_FIRE
 	var/list/tracking_values = list()
 	var/list/persistence_datums = list()
-	
+
 	/// Places our subsystem can spawn paintings (helps with art spawning differently across maps)
 	var/list/obj/structure/sign/painting/painting_frames = list()
 	var/list/all_paintings = list()
@@ -25,7 +25,7 @@ SUBSYSTEM_DEF(persistence)
 
 /datum/controller/subsystem/persistence/proc/track_value(var/atom/value, var/track_type)
 
-	if(config.persistence_disabled) //if the config is set to persistence disabled, nothing will save or load.
+	if(CONFIG_GET(flag/persistence_disabled)) //if the config is set to persistence disabled, nothing will save or load. // CHOMPEdit
 		return
 
 	var/turf/T = get_turf(value)

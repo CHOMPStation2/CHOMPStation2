@@ -205,7 +205,7 @@
 				client.prefs.real_name = random_name(client.prefs.identifying_gender)
 			observer.real_name = client.prefs.real_name
 			observer.name = observer.real_name
-			if(!client.holder && !config.antag_hud_allowed)           // For new ghosts we remove the verb from even showing up if it's not allowed.
+			if(!client.holder && !CONFIG_GET(flag/antag_hud_allowed))           // For new ghosts we remove the verb from even showing up if it's not allowed. // CHOMPEdit
 				remove_verb(observer, /mob/observer/dead/verb/toggle_antagHUD) //CHOMPEdit        // Poor guys, don't know what they are missing!
 			observer.key = key
 			observer.set_respawn_timer(time_till_respawn()) // Will keep their existing time if any, or return 0 and pass 0 into set_respawn_timer which will use the defaults
@@ -249,7 +249,7 @@
 				return
 		*/ //Vorestation Removal End
 
-		if(!config.enter_allowed)
+		if(!CONFIG_GET(flag/enter_allowed)) // CHOMPEdit
 			to_chat(usr, "<span class='notice'>There is an administrative lock on entering the game!</span>")
 			return
 		else if(ticker && ticker.mode && ticker.mode.explosion_in_progress)
@@ -466,7 +466,7 @@
 	if(!ticker || ticker.current_state != GAME_STATE_PLAYING)
 		to_chat(usr, span_red("The round is either not ready, or has already finished..."))
 		return 0
-	if(!config.enter_allowed)
+	if(!CONFIG_GET(flag/enter_allowed)) // CHOMPEdit
 		to_chat(usr, "<span class='notice'>There is an administrative lock on entering the game!</span>")
 		return 0
 	if(!IsJobAvailable(rank))

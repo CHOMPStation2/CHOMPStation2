@@ -18,7 +18,7 @@ generic_filth = TRUE means when the decal is saved, it will be switched out for 
 		age = _age
 	if(random_icon_states && length(src.random_icon_states) > 0)
 		src.icon_state = pick(src.random_icon_states)
-	if(!mapload || !config.persistence_ignore_mapload)
+	if(!mapload || !CONFIG_GET(flag/persistence_ignore_mapload)) // CHOMPEdit
 		SSpersistence.track_value(src, /datum/persistent/filth)
 	. = ..()
 

@@ -39,7 +39,7 @@
 	if(nutrition > 1000) //CHOMPAdd
 		. += nutrition / 2000 //CHOMPAdd
 
-	. += config.robot_delay
+	. += CONFIG_GET(number/robot_delay) // CHOMPEdit
 
 	. += ..()
 

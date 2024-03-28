@@ -55,7 +55,7 @@
 	blood color
 	*/
 	if (copy_name)
-		if(config.humans_need_surnames)
+		if(CONFIG_GET(flag/humans_need_surnames)) // CHOMPEdit
 			var/firstspace = findtext(real_name, " ")
 			var/name_length = length(real_name)
 			if(!firstspace)	//we need a surname

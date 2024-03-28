@@ -156,5 +156,5 @@ GLOBAL_LIST_EMPTY(pending_discord_registrations)
 /datum/tgs_chat_command/readfax/Run(sender, params)
 	var/list/all_params = splittext(params, " ")
 	var/faxid = all_params[1]
-	var/faxmsg = return_file_text("[config.fax_export_dir]/fax_[faxid].html")
+	var/faxmsg = return_file_text("[CONFIG_GET(string/fax_export_dir)]/fax_[faxid].html") // CHOMPEdit
 	return "FAX: ```[strip_html_properly(faxmsg)]```"

@@ -336,7 +336,7 @@
 							return
 
 						//Disabled in config.
-						else if(!config.revival_cloning)
+						else if(!CONFIG_GET(flag/revival_cloning)) // CHOMPEdit
 							set_temp("Error: Unable to initiate growing cycle.", "danger")
 							tgui_modal_clear(src)
 							return
