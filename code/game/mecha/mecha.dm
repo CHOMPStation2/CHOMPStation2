@@ -1243,9 +1243,11 @@
 			pass_damage_reduc_mod = 1
 
 		pass_damage = (pass_damage_reduc_mod*pass_damage)//Apply damage reduction before usage.
-		src.take_damage(pass_damage, Proj.check_armour)	//The take_damage() proc handles armor values
+		//CHOMPEdit Start we can spark even when taking no damage. But don't check after a proc that might have deleted this
 		if(prob(25))
 			spark_system.start()
+		src.take_damage(pass_damage, Proj.check_armour)	//The take_damage() proc handles armor values
+		//CHOMPEdit End
 		if(pass_damage > internal_damage_minimum)	//Only decently painful attacks trigger a chance of mech damage.
 			src.check_for_internal_damage(list(MECHA_INT_FIRE,MECHA_INT_TEMP_CONTROL,MECHA_INT_TANK_BREACH,MECHA_INT_CONTROL_LOST,MECHA_INT_SHORT_CIRCUIT),ignore_threshold)
 
