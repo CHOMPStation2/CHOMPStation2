@@ -50,7 +50,7 @@ SUBSYSTEM_DEF(statpanels)
 		var/client/target = currentrun[length(currentrun)]
 		currentrun.len--
 
-		if(!target.stat_panel.is_ready())
+		if(!target?.stat_panel?.is_ready())
 			continue
 
 		if(target.stat_tab == "Status" && num_fires % status_wait == 0)
@@ -394,7 +394,7 @@ SUBSYSTEM_DEF(statpanels)
 		var/atom/thing = to_make[index]
 
 		var/generated_string
-		if(ismob(thing) || length(thing.overlays) > 0)
+		if(ismob(thing) && length(thing.overlays) > 0)
 			var/force_south = FALSE
 			if(isliving(thing))
 				force_south = TRUE

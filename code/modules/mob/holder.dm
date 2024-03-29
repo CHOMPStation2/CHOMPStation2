@@ -1,4 +1,4 @@
-var/list/holder_mob_icon_cache = list()
+ var/list/holder_mob_icon_cache = list()
 
 //Helper object for picking dionaea (and other creatures) up.
 /obj/item/weapon/holder
@@ -64,7 +64,7 @@ var/list/holder_mob_icon_cache = list()
 			location = "[H.loc.loc]'s [H.loc]"
 		else
 			location = "[H.loc]"
-		if (location != "" && statpanel("Status"))
+		if (location != "")
 			. += ""
 			. += "Location: [location]"
 //CHOMPEdit End
