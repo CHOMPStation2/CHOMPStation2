@@ -234,7 +234,7 @@
 	return ..()
 
 /obj/item/mecha_parts/mecha_equipment/proc/detach(atom/moveto=null)
-	if(!chassis)
+	if(!chassis || !get_turf(chassis)) //CHOMPEdit don't detach components in nullspace
 		return
 	moveto = moveto || get_turf(chassis)
 	forceMove(moveto)

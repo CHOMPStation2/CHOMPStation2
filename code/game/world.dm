@@ -57,7 +57,7 @@
 	// if(config && config.log_runtime)
 	// 	log = file("data/logs/runtime/[time2text(world.realtime,"YYYY-MM-DD-(hh-mm-ss)")]-runtime.log")
 
-	GLOB.timezoneOffset = get_timezone_offset()
+	GLOB.timezoneOffset = world.timezone * 36000
 
 	callHook("startup")
 	//Emergency Fix
