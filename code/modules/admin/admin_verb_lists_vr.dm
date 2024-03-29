@@ -131,7 +131,8 @@ var/list/admin_verbs_admin = list(
 	/client/proc/make_mentor,
 	/client/proc/unmake_mentor,
 	/client/proc/removetickets,
-	/client/proc/delbook
+	/client/proc/delbook,
+	/client/proc/toggle_spawning_with_recolour
 	)
 
 var/list/admin_verbs_ban = list(
@@ -224,8 +225,7 @@ var/list/admin_verbs_server = list(
 	/client/proc/recipe_dump,
 	/client/proc/panicbunker,
 	/client/proc/paranoia_logging,
-	/client/proc/ip_reputation,
-	/client/proc/toggle_spawning_with_recolour
+	/client/proc/ip_reputation
 	)
 
 var/list/admin_verbs_debug = list(
@@ -567,8 +567,12 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/cmd_debug_del_all,
 	/client/proc/toggle_random_events,
 	/client/proc/modify_server_news,
+<<<<<<< HEAD
 	/datum/admins/proc/quick_nif, //CHOMPStation Add,
 	/datum/admins/proc/quick_authentic_nif //CHOMPStation add
+=======
+	/client/proc/toggle_spawning_with_recolour
+>>>>>>> 459bbec6bb... tweak(recolor_toggle): Makes it available for all staff (#15866)
 
 )
 
