@@ -1,0 +1,6 @@
+author: "ItsSelis"
+delete-after: True
+changes:
+  - rscadd: "Added verb manager subsystem"
+  - rscadd: "Added speech controller subsystem"
+  - qol: "Topics to deleted things get discarded"

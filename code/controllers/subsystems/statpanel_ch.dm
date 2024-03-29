@@ -50,7 +50,7 @@ SUBSYSTEM_DEF(statpanels)
 		var/client/target = currentrun[length(currentrun)]
 		currentrun.len--
 
-		if(!target.stat_panel.is_ready())
+		if(!target?.stat_panel?.is_ready()) // Null target client, client has null stat panel, or stat panel isn't ready
 			continue
 
 		if(target.stat_tab == "Status" && num_fires % status_wait == 0)
@@ -392,6 +392,9 @@ SUBSYSTEM_DEF(statpanels)
 	var/index = 0
 	for(index in 1 to length(to_make))
 		var/atom/thing = to_make[index]
+
+		if(!thing) // A null thing snuck in somehow
+			continue
 
 		var/generated_string
 		if(ismob(thing) || length(thing.overlays) > 0)

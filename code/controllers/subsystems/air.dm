@@ -33,7 +33,8 @@ SUBSYSTEM_DEF(air)
 /datum/controller/subsystem/air/PreInit()
 	air_master = src
 
-/datum/controller/subsystem/air/Initialize(timeofday)
+/datum/controller/subsystem/air/Initialize() // CHOMPEdit
+	var/start_timeofday = REALTIMEOFDAY // CHOMPEdit
 	report_progress("Processing Geometry...")
 
 	current_cycle = 0
@@ -43,7 +44,8 @@ SUBSYSTEM_DEF(air)
 		S.update_air_properties()
 		CHECK_TICK
 
-	admin_notice({"<span class='danger'>Geometry initialized in [round(0.1*(REALTIMEOFDAY-timeofday),0.1)] seconds.</span>
+	// CHOMPEdit
+	admin_notice({"<span class='danger'>Geometry initialized in [round(0.1*(REALTIMEOFDAY-start_timeofday),0.1)](?) seconds.</span>
 <span class='info'>
 Total Simulated Turfs: [simulated_turf_count]
 Total Zones: [zones.len]
@@ -98,7 +100,7 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 		log_debug("Active Edges on ZAS Startup\n" + edge_log.Join("\n"))
 		startup_active_edge_log = edge_log.Copy()
 
-	..()
+	return SS_INIT_SUCCESS // CHOMPEdit
 
 /datum/controller/subsystem/air/fire(resumed = 0)
 	var/timer

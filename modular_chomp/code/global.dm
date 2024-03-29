@@ -1,9 +1,9 @@
 
-var/list/shell_module_blacklist = list(
+GLOBAL_LIST_INIT(shell_module_blacklist, list(
 	"Sci-borg", "Research"
-	)
-var/list/latejoin_gatewaystation = list()
-var/list/latejoin_plainspath = list()
+	))
+GLOBAL_LIST_EMPTY(latejoin_gatewaystation)
+GLOBAL_LIST_EMPTY(latejoin_plainspath)
 
 var/list/talk_sound_map = rlist(
 								list(

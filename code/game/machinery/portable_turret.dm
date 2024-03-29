@@ -675,19 +675,11 @@
 	var/list/targets = list()			//list of primary targets
 	var/list/secondarytargets = list()	//targets that are least important
 
-	var/list/seenturfs = list()
-	for(var/turf/T in oview(world.view, src))
-		seenturfs += T
+	//CHOMPEdit Begin
 
-	for(var/mob/M as anything in living_mob_list)
-		if(M.z != z || !(get_turf(M) in seenturfs)) // Skip
-			continue
-		assess_and_assign_l(M, targets, secondarytargets) //CHOMPEdit
-
-	for(var/obj/mecha/M as anything in mechas_list)
-		if(M.z != z || !(get_turf(M) in seenturfs)) // Skip
-			continue
-		assess_and_assign_m(M, targets, secondarytargets) //CHOMPEdit
+	for(var/mob/M in mobs_in_xray_view(world.view, src))
+		assess_and_assign(M, targets, secondarytargets)
+	//CHOMPEdit End
 
 	if(!tryToShootAt(targets) && !tryToShootAt(secondarytargets) && --timeout <= 0)
 		popDown() // no valid targets, close the cover
@@ -697,19 +689,12 @@
 		health = min(health+1, maxhealth) // 1HP for 20kJ
 
 //CHOMPAdd Start
-/obj/machinery/porta_turret/proc/assess_and_assign_l(var/mob/living/L, var/list/targets, var/list/secondarytargets)
+/obj/machinery/porta_turret/proc/assess_and_assign(mob/living/L, list/targets, list/secondarytargets)
 	switch(assess_living(L))
 		if(TURRET_PRIORITY_TARGET)
 			targets += L
 		if(TURRET_SECONDARY_TARGET)
 			secondarytargets += L
-
-/obj/machinery/porta_turret/proc/assess_and_assign_m(var/obj/mecha/M, var/list/targets, var/list/secondarytargets)
-	switch(assess_mecha(M))
-		if(TURRET_PRIORITY_TARGET)
-			targets += M
-		if(TURRET_SECONDARY_TARGET)
-			secondarytargets += M
 //CHOMPAdd End
 
 /obj/machinery/porta_turret/proc/assess_living(var/mob/living/L)

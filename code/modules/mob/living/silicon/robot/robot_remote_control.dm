@@ -6,6 +6,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 	var/shell = FALSE
 	var/deployed = FALSE
 	var/mob/living/silicon/ai/mainframe = null
+	var/first_transfer = TRUE
 
 // Premade AI shell, for roundstart shells.
 /mob/living/silicon/robot/ai_shell/Initialize()
@@ -115,6 +116,12 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 		if(src.client) //CHOMPADDITION: Resize shell based on our preffered size
 			target.resize(src.client.prefs.size_multiplier) //CHOMPADDITION: Resize shell based on our preffered size
 		mind.transfer_to(target)
+		if(target.first_transfer)
+			target.first_transfer = FALSE
+			target.copy_from_prefs_vr()
+			if(LAZYLEN(target.vore_organs))
+				target.vore_selected = target.vore_organs[1]
+		src.copy_vore_prefs_to_mob(target)
 		AI.teleop = target // So the AI 'hears' messages near its core.
 		target.post_deploy()
 //CHOMPADDITION END
@@ -175,6 +182,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 	if(message)
 		to_chat(src, span("notice", message))
 	mind.transfer_to(mainframe)
+	src.copy_vore_prefs_to_mob(mainframe)
 	deployed = FALSE
 	update_icon()
 	mainframe.teleop = null

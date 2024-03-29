@@ -2,7 +2,7 @@
 SUBSYSTEM_DEF(reflector)
 	name = "Reflectors"
 	priority = FIRE_PRIORITY_REFLECTOR
-	flags = SS_BACKGROUND|SS_NO_INIT
+	flags = SS_BACKGROUND | SS_NO_INIT
 	wait = 5
 
 	var/stat_tag = "R" //Used for logging
