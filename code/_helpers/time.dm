@@ -58,12 +58,14 @@ var/next_station_date_change = 1 DAY
 	var/time_portion = time2text(world.timeofday, "hh:mm:ss")
 	return "[date_portion]T[time_portion]"
 
+/* //ChompREMOVE
 /proc/get_timezone_offset()
 	var/midnight_gmt_here = text2num(time2text(0,"hh")) * 36000
 	if(midnight_gmt_here > 12 HOURS)
 		return 24 HOURS - midnight_gmt_here
 	else
 		return midnight_gmt_here
+*/ //ChompREMOVE END
 
 /proc/gameTimestamp(format = "hh:mm:ss", wtime=null)
 	if(!wtime)

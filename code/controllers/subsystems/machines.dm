@@ -30,12 +30,12 @@ SUBSYSTEM_DEF(machines)
 	var/list/powernets = list()
 	var/list/powerobjs = list()
 
-/datum/controller/subsystem/machines/Initialize(timeofday)
+/datum/controller/subsystem/machines/Initialize() // CHOMPEdit
 	makepowernets()
 	admin_notice("<span class='danger'>Initializing atmos machinery.</span>", R_DEBUG)
 	setup_atmos_machinery(all_machines)
 	fire()
-	..()
+	return SS_INIT_SUCCESS // CHOMPEdit
 
 /datum/controller/subsystem/machines/fire(resumed = 0)
 	var/timer = TICK_USAGE
