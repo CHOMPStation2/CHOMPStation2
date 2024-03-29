@@ -205,8 +205,13 @@
 
 /datum/trait/neutral/trashcan/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
+<<<<<<< HEAD
 	add_verb(H,/mob/living/proc/eat_trash) //CHOMPEdit TGPanel
 	add_verb(H,/mob/living/proc/toggle_trash_catching) //CHOMPEdit TGPanel //CHOMPEdit
+=======
+	H.verbs |= /mob/living/proc/eat_trash
+	H.verbs |= /mob/living/proc/toggle_trash_catching //Ported from chompstation
+>>>>>>> b2ba38c8b6... Ports trash throw vore from Chomp (#15877)
 
 /datum/trait/neutral/gem_eater
 	name = "Expensive Taste"

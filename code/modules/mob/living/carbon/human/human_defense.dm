@@ -423,13 +423,21 @@ emp_act
 
 	if(istype(AM,/obj/))
 		var/obj/O = AM
+<<<<<<< HEAD
 		if(stat != DEAD && istype(O,/obj/item) && trash_catching && vore_selected) //CHOMPADD Start
+=======
+		if(stat != DEAD && istype(O,/obj/item) && trash_catching && vore_selected) //Ported from chompstation
+>>>>>>> b2ba38c8b6... Ports trash throw vore from Chomp (#15877)
 			var/obj/item/I = O
 			if(adminbus_trash || is_type_in_list(I,edible_trash) && I.trash_eatable && !is_type_in_list(I,item_vore_blacklist))
 				visible_message("<span class='warning'>[I] is thrown directly into [src]'s [lowertext(vore_selected.name)]!</span>")
 				I.throwing = 0
 				I.forceMove(vore_selected)
+<<<<<<< HEAD
 				return //CHOMPADD End
+=======
+				return
+>>>>>>> b2ba38c8b6... Ports trash throw vore from Chomp (#15877)
 		if(in_throw_mode && speed <= THROWFORCE_SPEED_DIVISOR)	//empty active hand and we're in throw mode
 			if(canmove && !restrained() && !src.is_incorporeal()) // CHOMPADD - No hands for the phased ones.
 				if(isturf(O.loc))
