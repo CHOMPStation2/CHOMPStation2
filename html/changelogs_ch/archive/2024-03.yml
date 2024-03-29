@@ -291,3 +291,15 @@
   cadyn:
   - bugfix: asset issues that broke chat tags
   - code_imp: play_sound and porta_turret optimizations
+2024-03-29:
+  Kashargul:
+  - bugfix: missing target in a balloon alert
+  - bugfix: some mecha runtimes
+  - rscadd: adds the ability to customize the "encase in egg" egg size between 25
+      and 200% or keep it at 0 for automatic calculation from 25 to 100%
+  Raeschen:
+  - rscadd: Added *clap sound
+  - rscadd: Added huuuaaaa
+  tacoguy7765093:
+  - rscadd: Added VR spawnpoint for a VR mall.
+  - rscdel: Removed space POI section in VR construct
