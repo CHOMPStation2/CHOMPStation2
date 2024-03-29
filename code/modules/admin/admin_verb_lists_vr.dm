@@ -567,12 +567,9 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/cmd_debug_del_all,
 	/client/proc/toggle_random_events,
 	/client/proc/modify_server_news,
-<<<<<<< HEAD
+	/client/proc/toggle_spawning_with_recolour,
 	/datum/admins/proc/quick_nif, //CHOMPStation Add,
 	/datum/admins/proc/quick_authentic_nif //CHOMPStation add
-=======
-	/client/proc/toggle_spawning_with_recolour
->>>>>>> 459bbec6bb... tweak(recolor_toggle): Makes it available for all staff (#15866)
 
 )
 
