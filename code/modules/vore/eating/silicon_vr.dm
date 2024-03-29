@@ -41,7 +41,7 @@
 
 /mob/living/silicon/ai/verb/holo_nom()
 	set name = "Hardlight Nom"
-	set category = "AI Commands"
+	set category = "AI.Vore" //CHOMPEdit
 	set desc = "Wrap up a person in hardlight holograms."
 
 	// Wrong state
