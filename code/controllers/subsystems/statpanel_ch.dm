@@ -393,8 +393,11 @@ SUBSYSTEM_DEF(statpanels)
 	for(index in 1 to length(to_make))
 		var/atom/thing = to_make[index]
 
+		if(!thing)
+			continue
+
 		var/generated_string
-		if(ismob(thing) && length(thing.overlays) > 0)
+		if(ismob(thing) || length(thing.overlays) > 0)
 			var/force_south = FALSE
 			if(isliving(thing))
 				force_south = TRUE
