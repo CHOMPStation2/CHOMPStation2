@@ -1,0 +1,4 @@
+author: "Kashargul"
+delete-after: True
+changes:
+  - bugfix: "addition for our code to ensure AI prefs are synced between shells and bellies loaded on first deploy"
