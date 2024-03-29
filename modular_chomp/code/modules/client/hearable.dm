@@ -24,24 +24,38 @@
 		return
 	if(parent_atom in exclude_mobs)
 		return
-	//Most expensive checks last
-	if(get_dist(source,parent_atom) > range)
+
+	var/turf/source_turf = get_turf(source)
+	var/turf/parent_turf = get_turf(parent_atom)
+
+	if(!istype(source_turf) || !istype(parent_turf))
 		return
 
-	if(source.z != parent_atom.z)
-		if(source.z > parent_atom.z)
-			var/turf/curturf = GetAbove(get_turf(parent_atom))
-			while(isopenspace(curturf) && curturf.z != source.z)
+	//Most expensive checks last
+	if(get_dist(source_turf,parent_turf) > range)
+		return
+
+	if(source_turf.z != parent_turf.z)
+		if(source_turf.z > parent_turf.z)
+			var/turf/curturf = GetAbove(parent_turf)
+			while(isopenspace(curturf) && curturf.z != source_turf.z)
 				curturf = GetAbove(curturf)
 
-			if(curturf.z != source.z)
+			if(!isopenspace(curturf)) //Last also has to be open space
+				return
+
+			if(curturf.z != source_turf.z)
 				return
 		else
-			var/turf/curturf = GetAbove(get_turf(source))
-			while(isopenspace(curturf) && curturf.z != parent_atom.z)
+			var/turf/curturf = GetAbove(source_turf)
+
+			while(isopenspace(curturf) && curturf.z != parent_turf.z)
 				curturf = GetAbove(curturf)
 
-			if(curturf.z != parent_atom.z)
+			if(!isopenspace(curturf)) //Last also has to be open space
+				return
+
+			if(curturf.z != parent_turf.z)
 				return
 
 
