@@ -50,17 +50,10 @@
 					var/list/all_modules = robot.module.modules
 					all_modules += robot.module.emag
 					while(TRUE)
-<<<<<<< HEAD
-						var/add_item_select = tgui_input_list(usr, "Please select the module to add", "Modules", all_modules)//ChompEDIT
-						if(!istype(add_item_select, /obj/item/))//ChompEDIT
-							break
-						var/obj/item/add_item = add_item_select//ChompEDIT
-=======
 						var/add_item_select = tgui_input_list(usr, "Please select the module to add", "Modules", all_modules)
 						if(!istype(add_item_select, /obj/item/))
 							break
 						var/obj/item/add_item = add_item_select
->>>>>>> f466efebef... some more borg admin options (#15879)
 						robot.module.emag.Remove(add_item)
 						robot.module.modules.Remove(add_item)
 						robot.module.contents.Remove(add_item)
