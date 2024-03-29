@@ -64,7 +64,7 @@ var/next_station_date_change = 1 DAY
 /proc/gameTimestamp(format = "hh:mm:ss", wtime=null)
 	if(!wtime)
 		wtime = world.time
-	return time2text((wtime + 24 HOURS) - GLOB.timezoneOffset, format)
+	return time2text(wtime - GLOB.timezoneOffset, format)
 
 /* Returns 1 if it is the selected month and day */
 /proc/isDay(var/month, var/day)
