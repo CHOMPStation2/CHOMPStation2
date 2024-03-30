@@ -426,7 +426,7 @@ emp_act
 		if(stat != DEAD && istype(O,/obj/item) && trash_catching && vore_selected) //Ported from chompstation
 			var/obj/item/I = O
 			if(adminbus_trash || is_type_in_list(I,edible_trash) && I.trash_eatable && !is_type_in_list(I,item_vore_blacklist))
-				visible_message("<span class='warning'>[I] is thrown directly into [src]'s [lowertext(vore_selected.name)]!</span>")
+				visible_message("<span class='vwarning'>[I] is thrown directly into [src]'s [lowertext(vore_selected.name)]!</span>") //CHOMPEdit
 				I.throwing = 0
 				I.forceMove(vore_selected)
 				return
