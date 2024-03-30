@@ -1,0 +1,4 @@
+author: "ItsSelis"
+delete-after: True
+changes:
+  - admin: "The stats of Verb Manager and Speech Controller now show inside of the MC tab."
