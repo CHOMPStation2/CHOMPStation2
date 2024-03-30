@@ -463,30 +463,30 @@
 	icon_state = "teshari_soap"
 
 /datum/sprite_accessory/facial_hair/teshari/scraggly
-	icon_add = 'modular_chomp/icons/mob/human_face.dmi'
+	icon = 'modular_chomp/icons/mob/human_face.dmi'
 
 /datum/sprite_accessory/facial_hair/teshari/chomp
 	name = "Teshari Ch. Beard"
-	icon_add = 'modular_chomp/icons/mob/human_face.dmi'
+	icon = 'modular_chomp/icons/mob/human_face.dmi'
 	icon_state = "teshari_chin"
 
 /datum/sprite_accessory/facial_hair/teshari/cowlick
 	name = "Teshari Cowlick"
-	icon_add = 'modular_chomp/icons/mob/human_face.dmi'
+	icon = 'modular_chomp/icons/mob/human_face.dmi'
 	icon_state = "teshari_cowlick"
 
 /datum/sprite_accessory/facial_hair/teshari/chops
-	icon_add = 'modular_chomp/icons/mob/human_face.dmi'
+	icon = 'modular_chomp/icons/mob/human_face.dmi'
 
 //una hair override with shading
 /datum/sprite_accessory/facial_hair/una/hornadorns
-	icon_add = 'modular_chomp/icons/mob/human_face.dmi'
+	icon = 'modular_chomp/icons/mob/human_face.dmi'
 
 /datum/sprite_accessory/facial_hair/una/spinespikes
-	icon_add = 'modular_chomp/icons/mob/human_face.dmi'
+	icon = 'modular_chomp/icons/mob/human_face.dmi'
 
 /datum/sprite_accessory/facial_hair/una/dorsalfrill
-	icon_add = 'modular_chomp/icons/mob/human_face.dmi'
+	icon = 'modular_chomp/icons/mob/human_face.dmi'
 
 /datum/sprite_accessory/hair/braid
 	icon_add = 'modular_chomp/icons/mob/human_face_alt_add.dmi'
