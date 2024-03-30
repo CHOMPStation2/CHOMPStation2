@@ -661,8 +661,6 @@ VIRGO3C_TURF_CREATE(/turf/simulated/floor/tiled/asteroid_steel/outdoors)
 
 
 
-<<<<<<< HEAD
-=======
 /turf/simulated/open/virgo3c
 	VIRGO3C_SET_ATMOS
 
@@ -685,7 +683,6 @@ VIRGO3C_TURF_CREATE(/turf/simulated/floor/tiled/asteroid_steel/outdoors)
 	VIRGO3C_SET_ATMOS
 	outdoors = 0
 
->>>>>>> 723789a563... Small fix for planetary lighting (#15783)
 /turf/simulated/floor/outdoors/grass/virgo3c
 	VIRGO3C_SET_ATMOS
 

@@ -257,21 +257,13 @@
 /mob/living/hitby(atom/movable/AM as mob|obj,var/speed = THROWFORCE_SPEED_DIVISOR)//Standardization and logging -Sieve
 	if(istype(AM,/obj/))
 		var/obj/O = AM
-<<<<<<< HEAD
-		if(stat != DEAD && istype(O,/obj/item) && trash_catching && vore_selected) //CHOMPADD Start
-=======
 		if(stat != DEAD && istype(O,/obj/item) && trash_catching && vore_selected) //ported from chompstation
->>>>>>> b2ba38c8b6... Ports trash throw vore from Chomp (#15877)
 			var/obj/item/I = O
 			if(adminbus_trash || is_type_in_list(I,edible_trash) && I.trash_eatable && !is_type_in_list(I,item_vore_blacklist))
 				visible_message("<span class='warning'>[I] is thrown directly into [src]'s [lowertext(vore_selected.name)]!</span>")
 				I.throwing = 0
 				I.forceMove(vore_selected)
-<<<<<<< HEAD
-				return //CHOMPADD End
-=======
 				return
->>>>>>> b2ba38c8b6... Ports trash throw vore from Chomp (#15877)
 		var/dtype = O.damtype
 		var/throw_damage = O.throwforce*(speed/THROWFORCE_SPEED_DIVISOR)
 
