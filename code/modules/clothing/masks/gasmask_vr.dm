@@ -1,4 +1,4 @@
-/* ChompRemoval: Oops that was a featurized bug. Epic fail.
+/* ChompRemoval: Oops that's a glogged implementation (intentional). Im going to properly implement obj/clothing/mask/gas/clear instead.
 // Our clear gas masks don't hide faces, but changing the var on mask/gas would require un-chaging it on all children. This is nicer.
 /obj/item/clothing/mask/gas/New()
 	if(type == /obj/item/clothing/mask/gas)

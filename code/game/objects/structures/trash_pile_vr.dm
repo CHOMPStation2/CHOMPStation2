@@ -203,6 +203,7 @@
 					prob(3);/obj/item/clothing/gloves/botanic_leather,
 					prob(3);/obj/item/clothing/head/hardhat/red,
 					prob(3);/obj/item/clothing/mask/gas,
+					prob(3);/obj/item/clothing/mask/gas/clear, //Chompadd: Proper implementation of clear gas masks
 					prob(3);/obj/item/clothing/suit/storage/apron,
 					prob(3);/obj/item/clothing/suit/storage/toggle/bomber,
 					prob(3);/obj/item/clothing/suit/storage/toggle/brown_jacket,

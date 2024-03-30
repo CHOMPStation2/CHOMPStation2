@@ -6,7 +6,7 @@
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE
 	body_parts_covered = FACE|EYES
 	w_class = ITEMSIZE_NORMAL
-	item_state_slots = list(slot_r_hand_str = "gas_alt", slot_l_hand_str = "gas_alt", slot_wear_mask_str = "gas_old") //ChompEdit: Use the correct sprite for the normal gas mask
+	item_state_slots = list(slot_r_hand_str = "gas_alt", slot_l_hand_str = "gas_alt")
 	gas_transfer_coefficient = 0.01
 	permeability_coefficient = 0.01
 	siemens_coefficient = 0.9
@@ -32,7 +32,6 @@
 	name = "gas mask"
 	desc = "A face-covering mask with a transparent faceplate that can be connected to an air supply."
 	icon_state = "gas_clear"
-	item_state_slots = list(slot_wear_mask_str = "gas_alt") //Chompedt: Correct sprite for the mask
 	flags_inv = null
 
 /obj/item/clothing/mask/gas/half

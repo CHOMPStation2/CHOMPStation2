@@ -10,7 +10,7 @@
 			/obj/item/clothing/suit/bio_suit/cmo,
 			/obj/item/clothing/head/bio_hood/cmo,
 			/obj/item/clothing/shoes/white = 7,
-			/obj/item/clothing/mask/gas = 7,
+			/obj/item/clothing/mask/gas/clear = 7, //ChompEdit: Proper implementation of clear gas masks
 			/obj/item/weapon/tank/oxygen = 7,
 			/obj/item/weapon/storage/box/masks,
 			/obj/item/weapon/storage/box/gloves
@@ -22,7 +22,7 @@
 	contains = list(
 			/obj/item/clothing/suit/bio_suit/virology = 3,
 			/obj/item/clothing/head/bio_hood/virology = 3,
-			/obj/item/clothing/mask/gas = 3,
+			/obj/item/clothing/mask/gas/clear = 3, //ChompEdit: Proper implementation of clear gas masks
 			/obj/item/weapon/tank/oxygen = 3,
 			/obj/item/weapon/storage/box/masks,
 			/obj/item/weapon/storage/box/gloves
