@@ -303,3 +303,19 @@
   tacoguy7765093:
   - rscadd: Added VR spawnpoint for a VR mall.
   - rscdel: Removed space POI section in VR construct
+2024-03-30:
+  ItsSelis:
+  - qol: Subsystems return a status value after initializing
+  - rscadd: Added verb manager subsystem
+  - rscadd: Added speech controller subsystem
+  - qol: Topics to deleted things get discarded
+  Kashargul:
+  - bugfix: addition for our code to ensure AI prefs are synced between shells and
+      bellies loaded on first deploy
+  Raeschen:
+  - bugfix: statpanel runtimes
+  - bugfix: mob holder runtime
+2024-03-31:
+  ItsSelis:
+  - admin: The stats of Verb Manager and Speech Controller now show inside of the
+      MC tab.

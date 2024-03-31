@@ -68,6 +68,7 @@
 
 	return heard
 
+
 /proc/isStationLevel(var/level)
 	return level in using_map.station_levels
 
