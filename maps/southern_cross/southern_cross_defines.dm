@@ -13,15 +13,14 @@ but they don't actually change anything about the load order
 #define Z_LEVEL_STATION_THREE			4
 #define Z_LEVEL_SURFACE					5
 #define Z_LEVEL_SURFACE_MINE			6
-#define Z_LEVEL_MISC					7 //Carrier, actually
-#define Z_LEVEL_CENTCOM					8
-#define Z_LEVEL_TRANSIT					9
-#define Z_LEVEL_SURFACE_WILD			10
-#define Z_LEVEL_SURFACE_VALLEY 			11
-#define Z_LEVEL_VR_REALM                12
-#define Z_LEVEL_FUELDEPOT				13
-#define Z_LEVEL_JUNGLE					14
-#define Z_LEVEL_GATEWAY					15
+#define Z_LEVEL_CENTCOM					7
+#define Z_LEVEL_TRANSIT					8
+#define Z_LEVEL_SURFACE_WILD			9
+#define Z_LEVEL_SURFACE_VALLEY 			10
+#define Z_LEVEL_VR_REALM                11
+#define Z_LEVEL_FUELDEPOT				12
+#define Z_LEVEL_JUNGLE					13
+#define Z_LEVEL_GATEWAY					14
 
 //#define Z_LEVEL_SURFACE_SKYLANDS		//Sky islands removal due to lack of use
 //#define Z_LEVEL_AEROSTAT			//Disabled due to lack of use
@@ -273,12 +272,13 @@ but they don't actually change anything about the load order
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES|MAP_LEVEL_VORESPAWN
 	base_turf = /turf/simulated/floor/outdoors/rocks
 */
-/datum/map_z_level/southern_cross/misc
+// No longer being used.
+/*/datum/map_z_level/southern_cross/misc
 	z = Z_LEVEL_MISC
 	name = "Misc"
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN
 	transit_chance = 15
-
+*/
 /datum/map_z_level/southern_cross/centcom
 	z = Z_LEVEL_CENTCOM
 	name = "Centcom"

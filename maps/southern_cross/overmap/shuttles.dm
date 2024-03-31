@@ -24,7 +24,7 @@
 
 //Baby_Mammoth
 /datum/shuttle/autodock/overmap/baby_mammoth
-	name = "Baby_mammoth"
+	name = "Baby Mammoth"
 	warmup_time = 5
 	current_location = "baby_mammoth_dock"
 	docking_controller_tag = "baby_mammoth"
@@ -33,7 +33,7 @@
 	move_direction = NORTH
 
 /obj/effect/overmap/visitable/ship/landable/baby_mammoth
-	name = "Baby_mammoth"
+	name = "Baby Mammoth"
 	desc = "Southern Cross' humanoid exploration vessel."
 	vessel_mass = 6000
 	vessel_size = SHIP_SIZE_SMALL

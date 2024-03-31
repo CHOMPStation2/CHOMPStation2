@@ -72,9 +72,11 @@ var/const/NETWORK_MAINT_DECK = "Maintenance Deck" // CHOMPEdit - Maintenance dec
 	listening_level = Z_LEVEL_TRANSIT
 	autolinkers = list("tns_relay")
 
-/obj/machinery/telecomms/relay/preset/southerncross/explorer //CHOMPedit: Tcomms relay for exploration carrier
+/*
+/obj/machinery/telecomms/relay/preset/southerncross/explorer //CHOMPedit: Tcomms relay for exploration carrier. No longer in use
 	listening_level = Z_LEVEL_MISC
 	autolinkers = list("exp_relay")
+*/
 
 /obj/machinery/telecomms/relay/preset/southerncross/d0
 	id = "Station Relay 0"

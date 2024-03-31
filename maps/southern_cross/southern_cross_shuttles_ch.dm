@@ -1,4 +1,4 @@
-
+/* //// NO LONGER IN USE \\\\
 //Exploration carrier
 /obj/machinery/computer/shuttle_control/exploration
 	name = "Exploration Sling Control Console"
@@ -24,3 +24,4 @@
 	name = "Sling Carrier"
 	landmark_tag = "sling_outpost"
 	docking_controller = "exp_sling_outpost"
+*/

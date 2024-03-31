@@ -16,6 +16,7 @@
 //#include "../overmap/planets/kara/northern_star/northern_star_mine.dmm" //Disabled due to low usage
 #include "../overmap/space/fueldepot.dmm"
 #include "../overmap/planets/thor/thor.dmm" //The datum is in southern_cross_defines.dm
+#include "../overmap/space/aegis.dmm"
 #include "gateway/BaseBlep.dmm"
 #include "gateway/maddnesslab.dmm"
 #include "gateway/snowfield.dmm"
