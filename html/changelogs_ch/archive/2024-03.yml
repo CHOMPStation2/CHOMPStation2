@@ -315,3 +315,7 @@
   Raeschen:
   - bugfix: statpanel runtimes
   - bugfix: mob holder runtime
+2024-03-31:
+  ItsSelis:
+  - admin: The stats of Verb Manager and Speech Controller now show inside of the
+      MC tab.
