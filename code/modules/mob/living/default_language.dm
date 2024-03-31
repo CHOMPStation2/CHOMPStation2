@@ -14,7 +14,7 @@
 // Silicons can't neccessarily speak everything in their languages list
 /mob/living/silicon/set_default_language()
 	var/language = tgui_input_list(usr, "Select your default language", "Available languages", speech_synthesizer_langs)
-	// Silicons have no species language usually. So let's defualt them to GALCOM if they can speak it
+	// Silicons have no species language usually. So let's default them to GALCOM
 	if(!language)
 		to_chat(src, "<span class='notice'>You will now speak your standard default language, common, if you do not specify a language when speaking.</span>")
 		default_language = LANGUAGE_GALCOM
