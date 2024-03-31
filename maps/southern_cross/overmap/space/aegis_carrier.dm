@@ -21,6 +21,8 @@
 /obj/effect/overmap/visitable/ship/aegis
 	name = "NEV Aegis"
 	desc = "A carrier-sized vessel."
+	icon = 'modular_chomp/icons/obj/overmap.dmi'
+	icon_state = "aegis_g"
 	scanner_desc = @{"[i]Registration[/i]: NEV Aegis
 [i]Class[/i]: Carrier
 [i]Transponder[/i]: Transmitting (NT), NanoTrasen IFF
