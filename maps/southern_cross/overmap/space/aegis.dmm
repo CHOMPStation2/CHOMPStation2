@@ -1231,7 +1231,7 @@
 	dir = 1
 	},
 /turf/space,
-/area/space)
+/area/shuttle/aegis/reactorroom)
 "aYq" = (
 /obj/machinery/power/apc{
 	dir = 8;
@@ -3855,9 +3855,6 @@
 /area/shuttle/aegis/medbaylobby)
 "ddW" = (
 /obj/structure/shuttle/engine/heater,
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 10
-	},
 /turf/simulated/wall/bay/r_wall,
 /area/shuttle/aegis/reactorroom)
 "dei" = (
@@ -8434,8 +8431,8 @@
 /turf/simulated/floor/carpet,
 /area/shuttle/aegis/explodorm2)
 "gGg" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 5
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 8
 	},
 /turf/simulated/wall/bay/r_wall,
 /area/shuttle/aegis/reactorroom)
@@ -15757,6 +15754,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/shuttle/aegis/engstorage)
+"mlo" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 10
+	},
+/turf/space,
+/area/shuttle/aegis/reactorroom)
 "mlM" = (
 /obj/effect/floor_decal/borderfloorwhite/corner{
 	dir = 1
@@ -16545,6 +16548,12 @@
 	},
 /turf/simulated/floor,
 /area/shuttle/ursula)
+"mPv" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 5
+	},
+/turf/space,
+/area/shuttle/aegis/reactorroom)
 "mPx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
@@ -17769,7 +17778,7 @@
 /area/shuttle/aegis/gatewayeva)
 "nDU" = (
 /obj/structure/shuttle/engine/heater,
-/obj/machinery/atmospherics/pipe/manifold4w/hidden/yellow,
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
 /turf/simulated/wall/bay/r_wall,
 /area/shuttle/aegis/starfuelstorage)
 "nDZ" = (
@@ -20723,7 +20732,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/airless,
-/area/space)
+/area/shuttle/aegis/reactorroom)
 "pZA" = (
 /obj/machinery/atmospherics/pipe/simple/visible,
 /turf/simulated/shuttle/wall/voidcraft,
@@ -21100,6 +21109,9 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/shuttle/aegis/restrooms)
+"qlW" = (
+/turf/space,
+/area/shuttle/aegis/reactorroom)
 "qmL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -22816,6 +22828,12 @@
 /obj/structure/lattice,
 /turf/space,
 /area/space)
+"rtr" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 6
+	},
+/turf/space,
+/area/shuttle/aegis/reactorroom)
 "rtw" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume,
 /obj/structure/catwalk,
@@ -24668,6 +24686,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/shuttle/aegis/bar)
+"sPo" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 9
+	},
+/turf/space,
+/area/shuttle/aegis/reactorroom)
 "sPR" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 1
@@ -25935,6 +25959,12 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/medicalbay)
+"tMd" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 10
+	},
+/turf/simulated/wall/bay/r_wall,
+/area/shuttle/aegis/reactorroom)
 "tMh" = (
 /obj/machinery/atmospherics/unary/engine{
 	dir = 1
@@ -27912,7 +27942,7 @@
 	dir = 4
 	},
 /turf/space,
-/area/space)
+/area/shuttle/aegis/reactorroom)
 "vgp" = (
 /obj/structure/shuttle/engine/heater,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -64611,8 +64641,8 @@ wtu
 gzI
 wfX
 gGg
-mbg
-mnb
+mlo
+mPv
 aXP
 cwA
 cwA
@@ -64869,9 +64899,9 @@ vxU
 vEk
 vEk
 fcD
-ohy
-iOM
-cwA
+rtr
+sPo
+qlW
 cwA
 cwA
 cwA
@@ -65128,8 +65158,8 @@ kLE
 gSi
 wPD
 vfD
-cwA
-cwA
+qlW
+qlW
 cwA
 cwA
 cwA
@@ -65642,9 +65672,9 @@ ucP
 lWC
 kLE
 gSi
-wPD
+tMd
 vfD
-cwA
+qlW
 aXP
 cwA
 cwA
@@ -65901,9 +65931,9 @@ vxU
 vEk
 vEk
 ddW
-mbg
-mnb
-cwA
+mlo
+mPv
+qlW
 cwA
 cwA
 cwA
@@ -66159,9 +66189,9 @@ qzs
 vEk
 jfA
 ltw
-ohy
-iOM
-cwA
+rtr
+sPo
+qlW
 cwA
 cwA
 cwA
@@ -67725,7 +67755,7 @@ uNY
 asy
 eqf
 xsP
-ydq
+wWx
 iav
 wuT
 cwA
@@ -67983,7 +68013,7 @@ nYH
 atZ
 atZ
 atZ
-wWx
+rWv
 iav
 iav
 cwA
@@ -68501,7 +68531,7 @@ heD
 tuN
 heD
 atZ
-rWv
+bTg
 iav
 wuT
 cwA
@@ -68759,7 +68789,7 @@ oeg
 fag
 eUW
 atZ
-bTg
+rWv
 iav
 iav
 cwA
@@ -69277,7 +69307,7 @@ tuN
 tuN
 heD
 atZ
-rWv
+bTg
 iav
 wuT
 cwA
@@ -70053,7 +70083,7 @@ wkl
 wTp
 oac
 atZ
-rWv
+vgp
 iav
 wuT
 cwA
@@ -70311,7 +70341,7 @@ bJH
 hBU
 hBU
 atZ
-vgp
+ydq
 iav
 iav
 cwA

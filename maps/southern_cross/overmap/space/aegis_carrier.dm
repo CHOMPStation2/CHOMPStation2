@@ -28,7 +28,7 @@
 [i]Transponder[/i]: Transmitting (NT), NanoTrasen IFF
 [b]Notice[/b]: Large exploration/security vessel. Please observe all travel restrictions, if any, in its vicinity."}
 
-	vessel_mass = 25000
+	vessel_mass = 20000
 	vessel_size = SHIP_SIZE_LARGE
 	start_x = 10
 	start_y = 10
