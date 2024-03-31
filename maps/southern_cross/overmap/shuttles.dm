@@ -24,16 +24,16 @@
 
 //Baby_Mammoth
 /datum/shuttle/autodock/overmap/baby_mammoth
-	name = "baby_mammoth"
+	name = "Baby_mammoth"
 	warmup_time = 5
 	current_location = "baby_mammoth_dock"
-	docking_controller_tag = "baby_mammoth"
+	docking_controller_tag = "Baby_mammoth"
 	shuttle_area = /area/shuttle/baby_mammoth
 	fuel_consumption = 2
 	move_direction = NORTH
 
 /obj/effect/overmap/visitable/ship/landable/baby_mammoth
-	name = "baby_mammoth"
+	name = "Baby_mammoth"
 	desc = "Southern Cross' humanoid exploration vessel."
 	vessel_mass = 6000
 	vessel_size = SHIP_SIZE_SMALL
@@ -42,7 +42,7 @@
 
 /obj/machinery/computer/shuttle_control/explore/baby_mammoth
 	name = "short jump console"
-	shuttle_tag = "baby_mammoth"
+	shuttle_tag = "Baby_mammoth"
 	req_one_access = list(access_pilot)
 
 //Ursula

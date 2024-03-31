@@ -40,6 +40,14 @@
 		"echidna_dock"
 		)
 
+	unowned_areas = list(/area/shuttle/baby_mammoth,
+						 /area/shuttle/shuttle3/start,
+						 /area/shuttle/ursula,
+						 /area/shuttle/stargazer,
+						 /area/shuttle/needle,
+						 /area/shuttle/echidna
+						 )
+
 ///// AREAS /////
 
 ////////////////////////////////////////////////
