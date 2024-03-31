@@ -7,7 +7,7 @@
 	desc = "A large vending machine stocked with surplus uniforms, armor and pouches for exploration members."
 	vend_delay = 1
 	icon_state = "sec" // Placeholder
-	req_one_access = list(access_explorer,access_pilot,access_medical_equip)
+	req_access = list(access_explorer)
 	products = list(
 				// Clothing
 					/obj/item/clothing/under/explorer = 10,
@@ -37,19 +37,22 @@
 	desc = "A large vending machine stocked with surplus phase, laser and ballistic weaponry for exploration members."
 	vend_delay = 1
 	icon_state = "sec" // Placeholder
-	req_one_access = list(access_explorer,access_pilot,access_medical_equip)
+	req_access = list(access_explorer)
 	products = list(
 				// Phase
 					/obj/item/weapon/gun/energy/locked/phasegun/pistol = 10,
 					/obj/item/weapon/gun/energy/locked/phasegun = 10,
 					/obj/item/weapon/gun/energy/locked/phasegun/rifle = 5,
 				// Laser
+					/obj/item/weapon/gun/energy/gun = 5,
 					/obj/item/weapon/gun/energy/laser = 5,
 				// Ballistic
 					/obj/item/weapon/gun/projectile/colt = 5,
+					/obj/item/weapon/gun/projectile/automatic/p90 = 5,
 				// Ammo
 					/obj/item/weapon/cell/device/weapon = 25,
 					/obj/item/ammo_magazine/m45 = 25,
+					/obj/item/ammo_magazine/a57p90 = 25,
 				// Melee
 					/obj/item/weapon/material/knife/tacknife/survival = 10,
 					/obj/item/weapon/material/knife/machete = 10,
@@ -66,7 +69,7 @@
 	desc = "A large vending machine stocked with an assortment of miscellaneous equipment handy for explorers."
 	vend_delay = 1
 	icon_state = "sec" // Placeholder
-	req_one_access = list(access_explorer,access_pilot,access_medical_equip)
+	req_access = list(access_explorer)
 	products = list(
 				/obj/item/device/cataloguer = 10,
 				/obj/item/weapon/cell/device = 10,

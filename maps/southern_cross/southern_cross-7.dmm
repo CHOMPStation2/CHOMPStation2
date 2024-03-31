@@ -139,6 +139,8 @@
 /turf/simulated/floor,
 /area/shuttle/needle)
 "afR" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/random/trash,
 /turf/simulated/floor,
 /area/expoutpost/starlowermaint)
 "afV" = (
@@ -202,9 +204,8 @@
 	dir = 1
 	},
 /obj/effect/catwalk_plated/techfloor,
-/obj/machinery/door/airlock/multi_tile/glass{
-	dir = 1;
-	name = "Hangar - Ursula"
+/obj/machinery/door/airlock/angled_bay/double/glass{
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/expoutpost/hangarthree)
@@ -350,7 +351,7 @@
 /turf/simulated/floor,
 /area/expoutpost/reactoraccess)
 "aoV" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/starlowermaint)
 "aoY" = (
 /obj/effect/floor_decal/techfloor{
@@ -493,7 +494,7 @@
 /turf/simulated/shuttle/wall/voidcraft/blue,
 /area/shuttle/shuttle3/start)
 "atZ" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/disposals)
 "auD" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -503,6 +504,11 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/reactorroom)
+"auM" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/expoutpost/starsciencemaint)
 "ave" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -544,6 +550,7 @@
 /area/expoutpost/portqpadjunction)
 "awP" = (
 /obj/effect/decal/cleanable/cobweb2,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "axh" = (
@@ -627,6 +634,7 @@
 /area/expoutpost/miningfoyer)
 "aBZ" = (
 /obj/random/trash,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "aCC" = (
@@ -694,9 +702,8 @@
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
 	},
-/obj/machinery/door/airlock/multi_tile/glass{
-	dir = 1;
-	name = "Q-Pad Junction"
+/obj/machinery/door/airlock/angled_bay/double/glass{
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/expoutpost/portqpadjunction)
@@ -850,6 +857,8 @@
 /obj/structure/railing{
 	dir = 1
 	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "aIg" = (
@@ -871,6 +880,7 @@
 /area/expoutpost/hangartwo)
 "aIx" = (
 /obj/structure/loot_pile/maint/boxfort,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "aKk" = (
@@ -928,6 +938,9 @@
 /turf/simulated/floor/reinforced,
 /area/expoutpost/exploarmory)
 "aLn" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/trash,
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
 "aLB" = (
@@ -994,7 +1007,7 @@
 /turf/simulated/floor/reinforced,
 /area/expoutpost/staginghangar)
 "aPh" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/atmospherics)
 "aPJ" = (
 /obj/effect/floor_decal/techfloor{
@@ -1015,7 +1028,7 @@
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance/common,
+/obj/machinery/door/airlock/angled_bay/hatch/common,
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
 "aQm" = (
@@ -1047,6 +1060,7 @@
 "aRw" = (
 /obj/structure/table/rack,
 /obj/item/clothing/glasses/meson,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "aRG" = (
@@ -1109,8 +1123,8 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/firedoor/glass,
 /obj/effect/catwalk_plated/techfloor,
-/obj/machinery/door/airlock/glass{
-	name = "Bow Airlock"
+/obj/machinery/door/airlock/angled_bay/standard/glass{
+	name = "public airlock"
 	},
 /turf/simulated/floor,
 /area/expoutpost/civaccesshallway)
@@ -1221,6 +1235,7 @@
 	icon_state = "0-4"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
 "aYM" = (
@@ -1237,6 +1252,7 @@
 /area/shuttle/needle)
 "aZm" = (
 /obj/structure/closet/emcloset,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "aZH" = (
@@ -1456,6 +1472,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "bhm" = (
@@ -1470,7 +1487,7 @@
 /turf/simulated/floor/grass2,
 /area/expoutpost/slingcarrierdock)
 "bie" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/secoffice)
 "biJ" = (
 /obj/structure/table/rack/shelf,
@@ -1689,6 +1706,7 @@
 	dir = 4
 	},
 /obj/structure/loot_pile/maint/technical,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "bsc" = (
@@ -1716,7 +1734,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/secureaccess)
 "btA" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/starqpadjunction)
 "btC" = (
 /obj/machinery/power/quantumpad{
@@ -1780,7 +1798,7 @@
 /area/expoutpost/engstorage)
 "buZ" = (
 /obj/machinery/mineral/processing_unit_console,
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/miningfoyer)
 "bvO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -1827,6 +1845,7 @@
 /area/expoutpost/hangarone)
 "bxK" = (
 /obj/random/trash_pile,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starlowermaint)
 "bxL" = (
@@ -1842,7 +1861,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 8
 	},
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/portfuelstorage)
 "bAe" = (
 /obj/structure/railing/overhang/waterless/grey{
@@ -1884,7 +1903,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 9
 	},
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/portfuelstorage)
 "bAW" = (
 /obj/structure/disposalpipe/segment,
@@ -1956,6 +1975,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "bGO" = (
@@ -1965,6 +1985,15 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/starboardbowairlock)
+"bGY" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/expoutpost/staruppermaint)
 "bHp" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -1993,6 +2022,7 @@
 /obj/structure/railing{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
@@ -2252,7 +2282,7 @@
 /turf/simulated/floor/tiled,
 /area/expoutpost/secoffice)
 "bQT" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/restrooms)
 "bSp" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -2287,7 +2317,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
 	dir = 1
 	},
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/starfuelstorage)
 "bUm" = (
 /obj/effect/floor_decal/borderfloorblack,
@@ -2338,6 +2368,7 @@
 /area/expoutpost/portqpadjunction)
 "bVZ" = (
 /obj/machinery/floodlight,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "bWJ" = (
@@ -2389,6 +2420,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarthree)
+"bZA" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/trash,
+/turf/simulated/floor,
+/area/expoutpost/staruppermaint)
 "cay" = (
 /obj/machinery/portable_atmospherics/canister/phoron,
 /obj/effect/floor_decal/industrial/outline/red,
@@ -2459,8 +2496,8 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass{
-	name = "Bow Airlock"
+/obj/machinery/door/airlock/angled_bay/standard/glass{
+	name = "public airlock"
 	},
 /obj/effect/catwalk_plated/techfloor,
 /turf/simulated/floor,
@@ -2530,7 +2567,9 @@
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance/common,
+/obj/machinery/door/airlock/angled_bay/hatch/common{
+	dir = 8
+	},
 /turf/simulated/floor,
 /area/expoutpost/starlowermaint)
 "cdT" = (
@@ -2586,6 +2625,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
 "cfT" = (
@@ -2627,6 +2667,7 @@
 /obj/structure/railing{
 	dir = 1
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starsciencemaint)
 "cgS" = (
@@ -2756,7 +2797,7 @@
 /turf/simulated/floor/tiled,
 /area/expoutpost/secarmory)
 "clR" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/portbowhallway)
 "clX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -2893,7 +2934,9 @@
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance/common,
+/obj/machinery/door/airlock/angled_bay/hatch/common{
+	dir = 8
+	},
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "crf" = (
@@ -2912,6 +2955,8 @@
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/bar)
 "csU" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/random/trash,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "cte" = (
@@ -2966,6 +3011,7 @@
 /area/shuttle/ursula)
 "ctL" = (
 /obj/item/trash,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "ctO" = (
@@ -2987,7 +3033,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/reinforced,
 /area/expoutpost/exploarmory)
 "cuv" = (
 /obj/machinery/light,
@@ -3171,6 +3217,7 @@
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "cBv" = (
@@ -3202,7 +3249,7 @@
 /area/expoutpost/breakroom)
 "cCs" = (
 /obj/structure/railing/grey,
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/portbowhallway)
 "cCE" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -3287,6 +3334,7 @@
 	icon_state = "1-8"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "cHK" = (
@@ -3386,7 +3434,7 @@
 /turf/simulated/floor/tiled/yellow,
 /area/shuttle/ursula)
 "cMj" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/eva)
 "cMu" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -3544,9 +3592,8 @@
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
 	},
-/obj/machinery/door/airlock/multi_tile/glass{
-	dir = 1;
-	name = "Mining Office"
+/obj/machinery/door/airlock/angled_bay/double/glass{
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/expoutpost/miningfoyer)
@@ -3681,6 +3728,7 @@
 /obj/random/maintenance/cargo,
 /obj/random/maintenance/cargo,
 /obj/random/maintenance/cargo,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starlowermaint)
 "cYy" = (
@@ -3707,6 +3755,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starsciencemaint)
 "dab" = (
@@ -3759,7 +3808,7 @@
 /turf/simulated/floor/tiled/milspec/raised,
 /area/expoutpost/secoffice)
 "dbe" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/starsternairlock)
 "dcL" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -3785,7 +3834,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 10
 	},
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/reactorroom)
 "dei" = (
 /obj/effect/floor_decal/grass_edge{
@@ -3799,6 +3848,8 @@
 /area/expoutpost/botany)
 "dey" = (
 /obj/structure/railing,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "dfj" = (
@@ -3907,7 +3958,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/reactorcr)
 "dks" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/janitorial)
 "dln" = (
 /obj/effect/floor_decal/grass_edge{
@@ -4055,6 +4106,7 @@
 /obj/random/flashlight,
 /obj/random/mech_toy,
 /obj/item/weapon/extinguisher,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "dsM" = (
@@ -4076,6 +4128,7 @@
 /obj/structure/railing{
 	dir = 1
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "dtF" = (
@@ -4106,6 +4159,11 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/baby_mammoth)
+"dvY" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/expoutpost/starlowermaint)
 "dwh" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -30
@@ -4348,6 +4406,7 @@
 /area/expoutpost/engstorage)
 "dFq" = (
 /obj/random/trash_pile,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
 "dFz" = (
@@ -4703,6 +4762,7 @@
 	dir = 8
 	},
 /obj/random/firstaid,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
 "dTh" = (
@@ -4829,7 +4889,7 @@
 /area/expoutpost/suite1)
 "ead" = (
 /obj/structure/railing/grey,
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/slingcarrierdock)
 "eaE" = (
 /obj/structure/cable/green{
@@ -4927,9 +4987,8 @@
 	dir = 1
 	},
 /obj/effect/catwalk_plated/techfloor,
-/obj/machinery/door/airlock/multi_tile/glass{
-	dir = 2;
-	name = "Hangar - Echidna"
+/obj/machinery/door/airlock/angled_bay/double/glass{
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/expoutpost/hangarsix)
@@ -5024,7 +5083,7 @@
 /area/expoutpost/hangarfour)
 "ejb" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance/common,
+/obj/machinery/door/airlock/angled_bay/hatch/common,
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/hangarsix)
 "ejl" = (
@@ -5171,7 +5230,7 @@
 /turf/simulated/floor/tiled/eris/white/techfloor,
 /area/expoutpost/slingcarrierdock)
 "eoO" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/explodorm2)
 "epN" = (
 /obj/effect/floor_decal/techfloor{
@@ -5564,11 +5623,12 @@
 /obj/structure/railing{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starlowermaint)
 "eBB" = (
 /obj/structure/sign/warning/secure_area/armory,
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/secarmory)
 "eBT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -5621,10 +5681,21 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/kitchen)
+"eCB" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/expoutpost/portexplomaint)
 "eCD" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/trash,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "eCG" = (
@@ -5668,10 +5739,12 @@
 /area/expoutpost/gatewayeva)
 "eFB" = (
 /obj/effect/decal/cleanable/cobweb,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starlowermaint)
 "eFG" = (
 /obj/structure/railing,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "eGv" = (
@@ -5692,7 +5765,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/reinforced,
 /area/expoutpost/exploarmory)
 "eHT" = (
 /obj/machinery/light/small{
@@ -5700,6 +5773,8 @@
 	},
 /obj/structure/table/rack,
 /obj/random/maintenance/misc,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
 "eHZ" = (
@@ -5722,7 +5797,7 @@
 "eIR" = (
 /obj/structure/shuttle/engine/heater,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/yellow,
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/portfuelstorage)
 "eJi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -6058,7 +6133,9 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance/common,
+/obj/machinery/door/airlock/angled_bay/hatch/common{
+	dir = 8
+	},
 /turf/simulated/floor,
 /area/expoutpost/hangarone)
 "eSq" = (
@@ -6074,9 +6151,8 @@
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
 	},
-/obj/machinery/door/airlock/multi_tile/glass{
-	dir = 1;
-	name = "Hangar - Stargazer"
+/obj/machinery/door/airlock/angled_bay/double/glass{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/hangarfour)
@@ -6164,7 +6240,7 @@
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/medicalbay)
 "eWj" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/hangarone)
 "eWl" = (
 /turf/simulated/floor,
@@ -6268,9 +6344,8 @@
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
 	},
-/obj/machinery/door/airlock/multi_tile/glass{
-	dir = 2;
-	name = "Hangar - Mammoth"
+/obj/machinery/door/airlock/angled_bay/double/glass{
+	dir = 8
 	},
 /obj/effect/catwalk_plated/techfloor,
 /turf/simulated/floor,
@@ -6286,8 +6361,13 @@
 /turf/simulated/floor/glass,
 /area/expoutpost/cic)
 "eZl" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/explobriefroom)
+"eZp" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/expoutpost/portexplomaint)
 "fag" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
 	dir = 4
@@ -6352,7 +6432,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
 	dir = 1
 	},
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/reactorroom)
 "fcF" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
@@ -6381,7 +6461,7 @@
 /area/expoutpost/reactorroom)
 "fdI" = (
 /obj/structure/sign/directions/science/exploration,
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/portqpadjunction)
 "fdK" = (
 /obj/structure/closet,
@@ -6595,15 +6675,15 @@
 	icon_state = "2-4"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "fmv" = (
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
 	},
-/obj/machinery/door/airlock/multi_tile/glass{
-	dir = 2;
-	name = "Hangar - Mammoth"
+/obj/machinery/door/airlock/angled_bay/double/glass{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/hangartwo)
@@ -6668,7 +6748,9 @@
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance/common,
+/obj/machinery/door/airlock/angled_bay/hatch/common{
+	dir = 8
+	},
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "fpX" = (
@@ -6732,7 +6814,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/breakroom)
 "fse" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/miningfoyer)
 "fsL" = (
 /obj/structure/cable/green{
@@ -6774,8 +6856,8 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass{
-	name = "Bow Airlock"
+/obj/machinery/door/airlock/angled_bay/standard/glass{
+	name = "public airlock"
 	},
 /obj/effect/catwalk_plated/techfloor,
 /turf/simulated/floor,
@@ -6791,6 +6873,7 @@
 /area/shuttle/baby_mammoth)
 "ftT" = (
 /obj/random/trash,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "fuN" = (
@@ -6818,16 +6901,19 @@
 /obj/structure/railing{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "fvL" = (
 /obj/structure/sign/directions/science,
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/starqpadjunction)
 "fvN" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
+/obj/random/trash,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "fvV" = (
@@ -6954,13 +7040,13 @@
 /area/expoutpost/starboardbowairlock)
 "fBu" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass{
-	name = "Bow Airlock"
+/obj/machinery/door/airlock/angled_bay/standard/glass{
+	name = "public airlock"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/portbowhallway)
 "fBv" = (
-/turf/simulated/wall/r_lead,
+/turf/simulated/wall/tgmc/durawall,
 /area/expoutpost/reactoraccess)
 "fBR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -7017,6 +7103,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "fDW" = (
@@ -7041,7 +7128,7 @@
 /area/expoutpost/reactorroom)
 "fEc" = (
 /obj/structure/sign/signnew/radiation,
-/turf/simulated/wall/r_lead,
+/turf/simulated/wall/tgmc/durawall,
 /area/expoutpost/reactoraccess)
 "fEs" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -7109,10 +7196,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/firedoor/multi_tile/glass,
-/obj/machinery/door/airlock/multi_tile/glass{
-	dir = 8;
-	name = "Breakroom"
-	},
+/obj/machinery/door/airlock/angled_bay/double/glass,
 /turf/simulated/floor,
 /area/expoutpost/breakroom)
 "fHf" = (
@@ -7154,7 +7238,7 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/reinforced,
 /area/expoutpost/exploarmory)
 "fKL" = (
 /obj/effect/floor_decal/techfloor{
@@ -7182,13 +7266,14 @@
 /area/shuttle/baby_mammoth)
 "fLd" = (
 /obj/structure/sign/directions/bridge,
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/portqpadjunction)
 "fLC" = (
 /obj/machinery/light/small{
 	dir = 8
 	},
 /obj/random/trash,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "fLO" = (
@@ -7204,9 +7289,8 @@
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
 	},
-/obj/machinery/door/airlock/multi_tile/glass{
-	dir = 2;
-	name = "Hangar - Shuttle"
+/obj/machinery/door/airlock/angled_bay/double/glass{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/hangarone)
@@ -7217,6 +7301,8 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
@@ -7304,6 +7390,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "fQz" = (
@@ -7417,8 +7504,26 @@
 /turf/simulated/floor/tiled,
 /area/expoutpost/engoffice)
 "fXC" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/random/trash,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
+"fXL" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/angled_bay/standard/glass{
+	name = "public airlock"
+	},
+/obj/effect/catwalk_plated/techfloor,
+/turf/simulated/floor,
+/area/expoutpost/midsternhallway)
 "fXV" = (
 /turf/simulated/floor/tiled/milspec/raised,
 /area/expoutpost/staginghangar)
@@ -7459,12 +7564,14 @@
 /obj/structure/railing{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "gaC" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starlowermaint)
 "gaV" = (
@@ -7495,9 +7602,8 @@
 	dir = 1
 	},
 /obj/effect/catwalk_plated/techfloor,
-/obj/machinery/door/airlock/multi_tile/glass{
-	dir = 1;
-	name = "Hangar - Stargazer"
+/obj/machinery/door/airlock/angled_bay/double/glass{
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/expoutpost/hangarfour)
@@ -7611,9 +7717,8 @@
 	dir = 1
 	},
 /obj/effect/catwalk_plated/techfloor,
-/obj/machinery/door/airlock/multi_tile/glass{
-	dir = 2;
-	name = "Hangar - Shuttle"
+/obj/machinery/door/airlock/angled_bay/double/glass{
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/expoutpost/hangarone)
@@ -7877,6 +7982,7 @@
 /obj/random/maintenance/cargo,
 /obj/random/maintenance/cargo,
 /obj/item/weapon/weldingtool/hugetank,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "goB" = (
@@ -7904,7 +8010,7 @@
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/echidna)
 "gqv" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/surgical1)
 "gqU" = (
 /obj/structure/cable/green{
@@ -7954,6 +8060,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "gvp" = (
@@ -8031,6 +8138,8 @@
 	},
 /obj/structure/railing,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "gyF" = (
@@ -8060,7 +8169,7 @@
 /turf/simulated/floor,
 /area/shuttle/stargazer)
 "gzy" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/aicore)
 "gzz" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -8099,7 +8208,7 @@
 /turf/simulated/floor,
 /area/expoutpost/reactorroom)
 "gAi" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/stationqpad)
 "gAj" = (
 /obj/structure/catwalk,
@@ -8170,6 +8279,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starlowermaint)
 "gCW" = (
@@ -8183,8 +8293,8 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass{
-	name = "Stern Airlock"
+/obj/machinery/door/airlock/angled_bay/standard/glass{
+	name = "public airlock"
 	},
 /obj/effect/catwalk_plated/techfloor,
 /turf/simulated/floor,
@@ -8203,11 +8313,21 @@
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/portqpadjunction)
 "gDK" = (
-/obj/structure/railing{
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
-/area/expoutpost/starsciencemaint)
+/area/expoutpost/portuppermaint)
 "gDR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -8260,7 +8380,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 5
 	},
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/reactorroom)
 "gHs" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -8473,7 +8593,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 6
 	},
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/portfuelstorage)
 "gQk" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -8513,6 +8633,14 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/reactorroom)
+"gTb" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/expoutpost/starsciencemaint)
 "gTB" = (
 /obj/machinery/recharge_station,
 /obj/machinery/firealarm{
@@ -8594,7 +8722,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/reinforced,
 /area/expoutpost/exploarmory)
 "gXj" = (
 /obj/structure/bed/chair/office/light{
@@ -8610,7 +8738,7 @@
 /turf/simulated/floor/airless,
 /area/space)
 "gXs" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/hangarfour)
 "gXU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -8766,6 +8894,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starlowermaint)
 "heY" = (
@@ -8819,6 +8948,7 @@
 	dir = 8
 	},
 /obj/random/trash,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starlowermaint)
 "hgB" = (
@@ -8865,7 +8995,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/staginghangar)
 "hhH" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/starbowhallway)
 "hhM" = (
 /obj/structure/bookcase/manuals/medical,
@@ -9044,6 +9174,7 @@
 /obj/structure/railing{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
@@ -9311,6 +9442,7 @@
 /obj/structure/railing{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starsciencemaint)
 "hyc" = (
@@ -9564,6 +9696,7 @@
 	icon_state = "0-4"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starlowermaint)
 "hGu" = (
@@ -9766,6 +9899,7 @@
 	},
 /obj/structure/railing,
 /obj/random/trash,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "hOP" = (
@@ -9909,7 +10043,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/lowersternhallway)
 "hVa" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/hangartwo)
 "hVf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -9931,6 +10065,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "hXk" = (
@@ -9956,7 +10091,7 @@
 /turf/simulated/floor/tiled/milspec/raised,
 /area/expoutpost/staginghangar)
 "hYl" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/portsternairlock)
 "hYX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -10003,7 +10138,7 @@
 /turf/space,
 /area/expoutpost/starfuelstorage)
 "iaL" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/rndlobby)
 "ibm" = (
 /obj/structure/cable/green{
@@ -10116,6 +10251,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starlowermaint)
 "ifU" = (
@@ -10246,7 +10382,7 @@
 /area/expoutpost/secoffice)
 "ikn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/starfuelstorage)
 "ikB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -10264,8 +10400,8 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/effect/catwalk_plated/techfloor,
-/obj/machinery/door/airlock/glass{
-	name = "Bow Airlock"
+/obj/machinery/door/airlock/angled_bay/standard/glass{
+	name = "public airlock"
 	},
 /turf/simulated/floor,
 /area/expoutpost/eva)
@@ -10278,6 +10414,7 @@
 /obj/structure/table/rack,
 /obj/random/powercell,
 /obj/random/powercell,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "ilP" = (
@@ -10313,7 +10450,7 @@
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarone)
 "imA" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/rnd)
 "imC" = (
 /obj/machinery/door/window/survival_pod{
@@ -10364,6 +10501,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "ipj" = (
@@ -10543,7 +10681,7 @@
 /turf/simulated/floor/grass2,
 /area/expoutpost/botany)
 "itM" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/slingcarrierdock)
 "iup" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -10839,6 +10977,7 @@
 /area/expoutpost/lowersternhallway)
 "iJj" = (
 /obj/machinery/portable_atmospherics/powered/scrubber,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starlowermaint)
 "iJM" = (
@@ -10887,7 +11026,7 @@
 	pixel_x = -12;
 	pixel_y = -24
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/reinforced,
 /area/expoutpost/exploarmory)
 "iKy" = (
 /turf/simulated/floor/tiled/freezer,
@@ -10930,6 +11069,7 @@
 	pixel_y = 0
 	},
 /obj/item/weapon/storage/briefcase/inflatable,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "iNm" = (
@@ -10940,7 +11080,7 @@
 /turf/simulated/floor/tiled,
 /area/expoutpost/gateway)
 "iNT" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/medicalbay)
 "iOv" = (
 /turf/simulated/floor/wood,
@@ -10993,6 +11133,7 @@
 "iPI" = (
 /obj/structure/table/rack,
 /obj/random/firstaid,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starlowermaint)
 "iRk" = (
@@ -11141,7 +11282,7 @@
 /area/expoutpost/reactoraccess)
 "iVO" = (
 /obj/structure/sign/department/armory,
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/exploarmory)
 "iVX" = (
 /obj/effect/floor_decal/techfloor{
@@ -11177,6 +11318,7 @@
 /area/expoutpost/gateway)
 "iWj" = (
 /obj/effect/decal/cleanable/cobweb,
+/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
@@ -11234,6 +11376,12 @@
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/expoutpost/portsternairlock)
+"iZP" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/trash,
+/turf/simulated/floor,
+/area/expoutpost/starlowermaint)
 "jat" = (
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 6
@@ -11247,6 +11395,7 @@
 /area/expoutpost/lowersternhallway)
 "jaI" = (
 /obj/random/trash_pile,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "jbk" = (
@@ -11278,6 +11427,7 @@
 /area/expoutpost/suite1)
 "jbK" = (
 /obj/item/trash,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "jbR" = (
@@ -11385,7 +11535,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/expoutpost/restrooms)
 "jia" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/cic)
 "jib" = (
 /turf/simulated/floor/tiled/white,
@@ -11460,8 +11610,16 @@
 /area/expoutpost/engstorage)
 "jkM" = (
 /obj/random/trash,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
+"jkY" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/expoutpost/portuppermaint)
 "jkZ" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -11488,6 +11646,7 @@
 "jlw" = (
 /obj/random/plushielarge,
 /obj/effect/decal/cleanable/cobweb,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "jlz" = (
@@ -11525,7 +11684,7 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/effect/catwalk_plated/techfloor,
-/obj/machinery/door/airlock/silver{
+/obj/machinery/door/airlock/angled_bay/standard{
 	name = "Washroom"
 	},
 /turf/simulated/floor,
@@ -11692,6 +11851,7 @@
 /obj/structure/loot_pile/surface/medicine_cabinet/fresh{
 	pixel_y = 25
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "jrB" = (
@@ -11790,11 +11950,12 @@
 /area/expoutpost/uppersternhallway)
 "juV" = (
 /obj/structure/sign/signnew/danger,
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/gateway)
 "juW" = (
 /obj/structure/closet,
 /obj/item/weapon/storage/toolbox/syndicate,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "jvS" = (
@@ -11824,9 +11985,8 @@
 /turf/simulated/floor,
 /area/shuttle/stargazer)
 "jwU" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "jxP" = (
@@ -11866,9 +12026,7 @@
 /area/expoutpost/staginghangar)
 "jzB" = (
 /obj/machinery/door/firedoor/multi_tile/glass,
-/obj/machinery/door/airlock/multi_tile/glass{
-	name = "Hangar - Shuttle"
-	},
+/obj/machinery/door/airlock/angled_bay/double/glass,
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/hangarone)
 "jAP" = (
@@ -11911,6 +12069,7 @@
 	icon_state = "1-4"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "jCv" = (
@@ -11928,7 +12087,7 @@
 /turf/simulated/floor/tiled,
 /area/expoutpost/engoffice)
 "jCS" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/bar)
 "jDj" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -12043,6 +12202,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarfive)
+"jFr" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/expoutpost/staruppermaint)
 "jFJ" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -12101,6 +12266,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starsciencemaint)
@@ -12238,7 +12404,7 @@
 /area/expoutpost/techstorage)
 "jKJ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green,
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/reactorroom)
 "jLz" = (
 /obj/machinery/light{
@@ -12274,6 +12440,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
@@ -12376,10 +12543,11 @@
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "jSE" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/gatewayeva)
 "jSF" = (
 /obj/structure/table/steel,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "jSK" = (
@@ -12394,7 +12562,7 @@
 /area/expoutpost/starfuelstorage)
 "jSQ" = (
 /obj/structure/sign/signnew/radiation,
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/engstorage)
 "jTc" = (
 /obj/structure/cable/green{
@@ -12504,7 +12672,7 @@
 /turf/simulated/floor,
 /area/expoutpost/starboardbowairlock)
 "jWP" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/secarmory)
 "jWV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -12591,18 +12759,11 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/staginghangar)
 "kbK" = (
-/obj/item/weapon/gun/energy/locked/phasegun/rifle,
-/obj/item/weapon/gun/energy/locked/phasegun/rifle,
-/obj/item/weapon/gun/energy/locked/phasegun/rifle,
-/obj/item/weapon/gun/energy/locked/phasegun/rifle,
-/obj/item/weapon/gun/energy/locked/phasegun/rifle,
 /obj/effect/floor_decal/corner/green/border{
 	dir = 8
 	},
-/obj/structure/closet/secure_closet/guncabinet{
-	req_one_access = list(43,67)
-	},
-/turf/simulated/floor/tiled,
+/obj/machinery/vending/exploration_weapons,
+/turf/simulated/floor/reinforced,
 /area/expoutpost/exploarmory)
 "kcv" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -12638,10 +12799,7 @@
 /area/expoutpost/suite2)
 "kdc" = (
 /obj/machinery/door/firedoor/multi_tile/glass,
-/obj/machinery/door/airlock/multi_tile/glass{
-	dir = 8;
-	name = "Hangar - Mammoth"
-	},
+/obj/machinery/door/airlock/angled_bay/double/glass,
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/hangartwo)
 "kfa" = (
@@ -12686,14 +12844,13 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/miningfoyer)
 "kgx" = (
-/obj/structure/closet/secure_closet/explorer,
-/obj/item/device/cataloguer,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 10
 	},
 /obj/effect/floor_decal/corner/green/border{
 	dir = 10
 	},
+/obj/machinery/vending/exploration_misc,
 /turf/simulated/floor/tiled,
 /area/expoutpost/explobriefroom)
 "kgI" = (
@@ -12706,7 +12863,7 @@
 /turf/simulated/floor,
 /area/expoutpost/starboardbowairlock)
 "kgN" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/portlowermaint)
 "kic" = (
 /obj/machinery/power/apc{
@@ -12719,6 +12876,7 @@
 	icon_state = "0-4"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starsciencemaint)
 "kjH" = (
@@ -12770,6 +12928,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "klw" = (
@@ -12887,6 +13046,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "kqU" = (
@@ -12946,7 +13106,7 @@
 /turf/simulated/floor,
 /area/shuttle/baby_mammoth)
 "ktu" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/starfuelstorage)
 "ktx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -12967,7 +13127,7 @@
 /area/expoutpost/reactorroom)
 "kuk" = (
 /obj/machinery/mineral/stacking_unit_console,
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/miningfoyer)
 "kvo" = (
 /obj/effect/floor_decal/grass_edge{
@@ -13125,7 +13285,7 @@
 /turf/simulated/floor,
 /area/expoutpost/reactorroom)
 "kBn" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/washroom)
 "kBy" = (
 /obj/structure/cable/green{
@@ -13236,9 +13396,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/firedoor/multi_tile/glass,
-/obj/machinery/door/airlock/multi_tile/glass{
-	name = "Hangar Bay"
-	},
+/obj/machinery/door/airlock/angled_bay/double/glass,
 /turf/simulated/floor,
 /area/expoutpost/staginghangar)
 "kIa" = (
@@ -13270,7 +13428,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
 	dir = 1
 	},
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/portfuelstorage)
 "kJt" = (
 /obj/machinery/light{
@@ -13301,7 +13459,7 @@
 /turf/simulated/floor,
 /area/expoutpost/starsternairlock)
 "kKd" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/hangarsix)
 "kKg" = (
 /obj/structure/closet/radiation,
@@ -13436,7 +13594,7 @@
 /area/shuttle/baby_mammoth)
 "kQr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/portfuelstorage)
 "kQv" = (
 /obj/machinery/power/apc{
@@ -13483,6 +13641,7 @@
 /area/expoutpost/uppersternhallway)
 "kSB" = (
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starsciencemaint)
 "kSF" = (
@@ -13613,22 +13772,18 @@
 /turf/simulated/floor/tiled,
 /area/expoutpost/gateway)
 "kYg" = (
-/obj/item/weapon/gun/energy/locked/phasegun,
-/obj/item/weapon/gun/energy/locked/phasegun,
-/obj/item/weapon/gun/energy/locked/phasegun,
-/obj/item/weapon/gun/energy/locked/phasegun,
-/obj/item/weapon/gun/energy/locked/phasegun,
-/obj/effect/floor_decal/corner/green/border{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/obj/machinery/light{
-	dir = 8
-	},
-/obj/structure/closet/secure_closet/guncabinet{
-	req_one_access = list(43,67)
-	},
-/turf/simulated/floor/tiled,
-/area/expoutpost/exploarmory)
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/expoutpost/portexplomaint)
 "kYh" = (
 /obj/structure/railing/grey{
 	dir = 1
@@ -13674,6 +13829,7 @@
 /obj/random/junk,
 /obj/random/maintenance/cargo,
 /obj/random/maintenance/cargo,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "lbq" = (
@@ -13904,7 +14060,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/reinforced,
 /area/expoutpost/exploarmory)
 "ljI" = (
 /turf/simulated/floor,
@@ -14005,6 +14161,7 @@
 "lnk" = (
 /obj/machinery/light/small,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "lnV" = (
@@ -14039,8 +14196,8 @@
 /area/expoutpost/surgical1)
 "lpf" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass{
-	name = "Stern Airlock"
+/obj/machinery/door/airlock/angled_bay/standard/glass{
+	name = "public airlock"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/lowersternhallway)
@@ -14169,7 +14326,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/lowersternhallway)
 "lro" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/secureaccess)
 "lrz" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -14182,7 +14339,7 @@
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangartwo)
 "lrO" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/portqpadjunction)
 "lsn" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
@@ -14224,12 +14381,15 @@
 /turf/simulated/floor/tiled,
 /area/expoutpost/engstorage)
 "ltw" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/reactorroom)
 "ltL" = (
-/obj/effect/overmap/visitable/planet/kara,
-/turf/space,
-/area/space)
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/angled_bay/standard/glass{
+	name = "public airlock"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/expoutpost/midsternhallway)
 "lvx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -14274,6 +14434,7 @@
 	dir = 8
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "lwV" = (
@@ -14329,7 +14490,7 @@
 /obj/structure/sign/directions/shuttle_bay{
 	dir = 10
 	},
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/starqpadjunction)
 "lzy" = (
 /obj/structure/cable/green{
@@ -14484,7 +14645,7 @@
 /turf/simulated/floor,
 /area/expoutpost/engoffice)
 "lFs" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/suite2)
 "lFv" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -14534,7 +14695,7 @@
 /area/shuttle/stargazer)
 "lGu" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance/common,
+/obj/machinery/door/airlock/angled_bay/hatch/common,
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/hangarthree)
 "lGy" = (
@@ -14565,6 +14726,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "lHe" = (
@@ -14620,8 +14782,8 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass{
-	name = "Stern Airlock"
+/obj/machinery/door/airlock/angled_bay/standard/glass{
+	name = "public airlock"
 	},
 /obj/effect/catwalk_plated/techfloor,
 /turf/simulated/floor,
@@ -14759,6 +14921,7 @@
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starsciencemaint)
 "lNh" = (
@@ -14921,7 +15084,7 @@
 /turf/simulated/floor/reinforced,
 /area/expoutpost/aicore)
 "lSp" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/suite1)
 "lSv" = (
 /obj/effect/floor_decal/techfloor{
@@ -15203,6 +15366,14 @@
 	},
 /turf/simulated/floor/tiled/red,
 /area/shuttle/baby_mammoth)
+"maU" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/expoutpost/portexplomaint)
 "mbg" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 10
@@ -15387,6 +15558,14 @@
 /obj/structure/cable/green,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/echidna)
+"mid" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/expoutpost/starsciencemaint)
 "miL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -15591,6 +15770,7 @@
 /area/expoutpost/portfuelstorage)
 "mpv" = (
 /obj/random/contraband,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
 "mpO" = (
@@ -15812,6 +15992,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "myy" = (
@@ -15847,9 +16028,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/firedoor/multi_tile/glass,
-/obj/machinery/door/airlock/multi_tile/glass{
-	name = "Hangar Bay"
-	},
+/obj/machinery/door/airlock/angled_bay/double/glass,
 /turf/simulated/floor,
 /area/expoutpost/staginghangar)
 "mAn" = (
@@ -15901,6 +16080,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "mDz" = (
@@ -15981,6 +16161,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starlowermaint)
@@ -16178,7 +16359,9 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance/common,
+/obj/machinery/door/airlock/angled_bay/hatch/common{
+	dir = 8
+	},
 /turf/simulated/floor,
 /area/expoutpost/hangartwo)
 "mOm" = (
@@ -16471,6 +16654,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/explobriefroom)
+"mYU" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/expoutpost/portexplomaint)
 "mZg" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -16563,7 +16752,7 @@
 /turf/simulated/wall/rshull,
 /area/shuttle/echidna)
 "ncM" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/pathfinderroom)
 "ncY" = (
 /obj/machinery/power/quantumpad{
@@ -16664,6 +16853,8 @@
 	icon_state = "0-8"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/trash,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "ngg" = (
@@ -16685,11 +16876,10 @@
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/stargazer)
 "nhZ" = (
-/obj/structure/railing{
-	dir = 1
-	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
-/area/expoutpost/portlowermaint)
+/area/expoutpost/staruppermaint)
 "nir" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -16783,7 +16973,7 @@
 /area/expoutpost/disposals)
 "njQ" = (
 /obj/structure/sign/directions/medical,
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/starqpadjunction)
 "njT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -17178,8 +17368,8 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/effect/catwalk_plated/techfloor,
-/obj/machinery/door/airlock/glass{
-	name = "Bow Airlock"
+/obj/machinery/door/airlock/angled_bay/standard/glass{
+	name = "public airlock"
 	},
 /turf/simulated/floor,
 /area/expoutpost/botany)
@@ -17225,10 +17415,7 @@
 /area/shuttle/baby_mammoth)
 "nwM" = (
 /obj/machinery/door/firedoor/multi_tile/glass,
-/obj/machinery/door/airlock/multi_tile/glass{
-	dir = 8;
-	name = "Breakroom"
-	},
+/obj/machinery/door/airlock/angled_bay/double/glass,
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/breakroom)
 "nwW" = (
@@ -17266,7 +17453,7 @@
 /area/shuttle/echidna)
 "nyb" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
-/turf/simulated/wall/r_lead,
+/turf/simulated/wall/tgmc/durawall,
 /area/expoutpost/reactorroom)
 "nyj" = (
 /obj/structure/cable/green{
@@ -17329,14 +17516,13 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/starbowhallway)
 "nzB" = (
-/obj/structure/closet/secure_closet/sar,
-/obj/item/device/cataloguer/compact,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/green/border{
 	dir = 4
 	},
+/obj/machinery/vending/exploration_fieldmedic,
 /turf/simulated/floor/tiled,
 /area/expoutpost/explobriefroom)
 "nAE" = (
@@ -17463,7 +17649,7 @@
 "nDU" = (
 /obj/structure/shuttle/engine/heater,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/yellow,
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/starfuelstorage)
 "nDZ" = (
 /obj/item/clothing/mask/breath,
@@ -17569,6 +17755,7 @@
 /obj/structure/railing{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "nGM" = (
@@ -17629,8 +17816,8 @@
 	},
 /obj/effect/catwalk_plated/dark,
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/security{
-	name = "Security Desk"
+/obj/machinery/door/airlock/angled_bay/standard/color/security{
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/expoutpost/secbowcheckpoint)
@@ -17723,6 +17910,8 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/effect/decal/cleanable/dirt,
+/obj/random/trash,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "nJD" = (
@@ -17732,6 +17921,7 @@
 /obj/random/maintenance/cargo,
 /obj/random/maintenance/cargo,
 /obj/random/maintenance/cargo,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "nKT" = (
@@ -17771,7 +17961,7 @@
 /area/expoutpost/slingcarrierdock)
 "nLP" = (
 /obj/structure/shuttle/engine/heater,
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/portfuelstorage)
 "nLT" = (
 /obj/structure/table/standard,
@@ -17812,6 +18002,7 @@
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
 "nOb" = (
@@ -17831,7 +18022,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/eva)
 "nOu" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/staginghangar)
 "nQe" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
@@ -17870,7 +18061,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/baby_mammoth)
 "nTf" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/medbaylobby)
 "nTk" = (
 /obj/structure/cable/green{
@@ -17948,10 +18139,12 @@
 /area/expoutpost/telecomms)
 "nXp" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance/common,
+/obj/machinery/door/airlock/angled_bay/hatch/common,
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/hangarfour)
 "nYm" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/random/trash,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "nYH" = (
@@ -17973,6 +18166,7 @@
 	dir = 8
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starsciencemaint)
 "nYZ" = (
@@ -18233,7 +18427,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/reinforced,
 /area/expoutpost/exploarmory)
 "ofs" = (
 /obj/structure/table/rack/shelf,
@@ -18474,6 +18668,7 @@
 /obj/structure/railing{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starsciencemaint)
 "osa" = (
@@ -18538,7 +18733,7 @@
 /area/expoutpost/cic)
 "ouB" = (
 /obj/structure/sign/vacuum,
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/starsternairlock)
 "ouG" = (
 /obj/effect/floor_decal/borderfloorblack/corner,
@@ -18719,8 +18914,8 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass{
-	name = "Stern Airlock"
+/obj/machinery/door/airlock/angled_bay/standard/glass{
+	name = "public airlock"
 	},
 /obj/effect/catwalk_plated/techfloor,
 /turf/simulated/floor,
@@ -18909,6 +19104,7 @@
 "oHJ" = (
 /obj/structure/railing,
 /obj/random/trash,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "oHX" = (
@@ -19004,7 +19200,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 10
 	},
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/portfuelstorage)
 "oNO" = (
 /obj/effect/floor_decal/techfloor{
@@ -19035,7 +19231,7 @@
 /turf/simulated/floor/tiled/milspec/raised,
 /area/expoutpost/staginghangar)
 "oPi" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/telecomms)
 "oPH" = (
 /obj/machinery/shield_diffuser,
@@ -19064,7 +19260,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 5
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/reinforced,
 /area/expoutpost/exploarmory)
 "oRl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -19144,6 +19340,7 @@
 	},
 /obj/item/trash,
 /obj/structure/closet/crate,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "oVi" = (
@@ -19185,7 +19382,7 @@
 /turf/simulated/floor,
 /area/expoutpost/reactorroom)
 "oWe" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/lowersternhallway)
 "oWn" = (
 /obj/effect/floor_decal/techfloor{
@@ -19197,7 +19394,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/uppersternhallway)
 "oWr" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/starboardbowairlock)
 "oWP" = (
 /obj/machinery/light{
@@ -19297,6 +19494,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "pcO" = (
@@ -19343,6 +19541,7 @@
 	pixel_y = 0
 	},
 /obj/random/trash,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starsciencemaint)
 "pfJ" = (
@@ -19360,7 +19559,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/portbowhallway)
 "pgP" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/exploarmory)
 "phn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
@@ -19468,7 +19667,7 @@
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance/common,
+/obj/machinery/door/airlock/angled_bay/hatch/common,
 /turf/simulated/floor,
 /area/expoutpost/starsciencemaint)
 "pkS" = (
@@ -19562,6 +19761,8 @@
 /obj/structure/railing{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
+/obj/random/trash,
 /turf/simulated/floor,
 /area/expoutpost/starsciencemaint)
 "pqm" = (
@@ -19616,6 +19817,7 @@
 "ptu" = (
 /obj/structure/railing,
 /obj/random/trash,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starlowermaint)
 "pur" = (
@@ -19710,11 +19912,10 @@
 /obj/structure/railing{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "pxZ" = (
-/obj/structure/closet/secure_closet/explorer,
-/obj/item/device/cataloguer,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
 	},
@@ -19726,6 +19927,7 @@
 	name = "Station Intercom (General)";
 	pixel_x = -21
 	},
+/obj/machinery/vending/exploration_armor,
 /turf/simulated/floor/tiled,
 /area/expoutpost/explobriefroom)
 "pyi" = (
@@ -19734,10 +19936,11 @@
 /area/expoutpost/botany)
 "pyP" = (
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
 "pzz" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/starsciencemaint)
 "pzF" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -19814,6 +20017,11 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/breakroom)
+"pAs" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/random/trash,
+/turf/simulated/floor,
+/area/expoutpost/portexplomaint)
 "pBa" = (
 /obj/machinery/atmospherics/pipe/simple/visible,
 /turf/simulated/wall/rpshull,
@@ -19831,6 +20039,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "pCz" = (
@@ -19938,6 +20147,8 @@
 /obj/random/maintenance/research,
 /obj/random/medical/pillbottle,
 /obj/effect/decal/cleanable/cobweb2,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
 "pHk" = (
@@ -20260,9 +20471,7 @@
 /area/shuttle/echidna)
 "pVg" = (
 /obj/machinery/door/firedoor/multi_tile/glass,
-/obj/machinery/door/airlock/multi_tile/glass{
-	name = "Hangar Bay"
-	},
+/obj/machinery/door/airlock/angled_bay/double/glass,
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/staginghangar)
 "pVo" = (
@@ -20283,6 +20492,7 @@
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starlowermaint)
 "pVA" = (
@@ -20412,14 +20622,13 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/staginghangar)
 "qat" = (
-/obj/structure/closet/secure_closet/pilot,
-/obj/item/device/cataloguer/compact,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 6
 	},
 /obj/effect/floor_decal/corner/green/border{
 	dir = 6
 	},
+/obj/machinery/vending/exploration_pilot,
 /turf/simulated/floor/tiled,
 /area/expoutpost/explobriefroom)
 "qaD" = (
@@ -20445,6 +20654,7 @@
 /obj/structure/railing{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starlowermaint)
@@ -20657,9 +20867,8 @@
 	dir = 4
 	},
 /obj/effect/catwalk_plated/dark,
-/obj/machinery/door/airlock/multi_tile/glass{
-	dir = 2;
-	name = "Research and Development"
+/obj/machinery/door/airlock/angled_bay/double/glass{
+	dir = 8
 	},
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
@@ -20723,9 +20932,8 @@
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
 	},
-/obj/machinery/door/airlock/multi_tile/glass{
-	dir = 1;
-	name = "Hangar - Needle"
+/obj/machinery/door/airlock/angled_bay/double/glass{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/hangarfive)
@@ -20823,6 +21031,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "qpg" = (
@@ -21188,6 +21397,7 @@
 	dir = 8
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starlowermaint)
 "qAu" = (
@@ -21196,6 +21406,23 @@
 /obj/mecha/combat/fighter/pinnace/loaded,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/expoutpost/starboardbowairlock)
+"qAW" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/expoutpost/portlowermaint)
 "qBj" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
@@ -21341,6 +21568,7 @@
 /area/expoutpost/engoffice)
 "qHg" = (
 /obj/random/trash,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starsciencemaint)
 "qHq" = (
@@ -21352,6 +21580,11 @@
 	},
 /turf/simulated/floor/wood,
 /area/expoutpost/washroom)
+"qHE" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/expoutpost/portlowermaint)
 "qIh" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -21492,7 +21725,7 @@
 /area/shuttle/ursula)
 "qMu" = (
 /obj/structure/sign/directions/cargo,
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/portqpadjunction)
 "qMK" = (
 /obj/structure/closet/walllocker/emerglocker{
@@ -21516,6 +21749,7 @@
 "qMV" = (
 /obj/random/maintenance/clean,
 /obj/random/tech_supply,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
 "qNi" = (
@@ -21580,6 +21814,7 @@
 	icon_state = "1-8"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "qQa" = (
@@ -21697,10 +21932,18 @@
 /turf/simulated/floor/tiled/yellow,
 /area/shuttle/stargazer)
 "qWQ" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/staruppermaint)
 "qWT" = (
-/obj/structure/railing,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "qWZ" = (
@@ -21772,6 +22015,7 @@
 	dir = 8
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
 "rbM" = (
@@ -21788,6 +22032,7 @@
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starlowermaint)
 "rbO" = (
@@ -21815,8 +22060,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass{
-	name = "Bow Airlock"
+/obj/machinery/door/airlock/angled_bay/standard/glass{
+	name = "public airlock"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/eva)
@@ -21919,9 +22164,7 @@
 	},
 /obj/structure/catwalk,
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/engineering{
-	name = "Shield Generator"
-	},
+/obj/machinery/door/airlock/angled_bay/standard/color/engineering,
 /turf/simulated/floor,
 /area/expoutpost/staginghangar)
 "reR" = (
@@ -22088,6 +22331,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starsciencemaint)
 "rki" = (
@@ -22145,7 +22389,9 @@
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance/common,
+/obj/machinery/door/airlock/angled_bay/hatch/common{
+	dir = 8
+	},
 /turf/simulated/floor,
 /area/expoutpost/starsciencemaint)
 "rlN" = (
@@ -22212,7 +22458,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/lowersternhallway)
 "roD" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/engstorage)
 "rpl" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -22273,6 +22519,7 @@
 /area/expoutpost/atmospherics)
 "rpY" = (
 /obj/structure/reagent_dispensers/fueltank,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "rqg" = (
@@ -22299,6 +22546,7 @@
 	icon_state = "1-8"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starsciencemaint)
 "rrd" = (
@@ -22321,6 +22569,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "rrE" = (
@@ -22331,7 +22580,7 @@
 /turf/simulated/floor,
 /area/expoutpost/starfuelstorage)
 "rrG" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/breakroom)
 "rrM" = (
 /obj/machinery/alarm{
@@ -22445,6 +22694,7 @@
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
 "ruv" = (
@@ -22496,10 +22746,12 @@
 	dir = 4
 	},
 /obj/random/trash,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starsciencemaint)
 "ruQ" = (
 /obj/random/trash_pile,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starsciencemaint)
 "rvk" = (
@@ -22531,6 +22783,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/techstorage)
+"rvI" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/trash,
+/turf/simulated/floor,
+/area/expoutpost/portuppermaint)
 "rwb" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -22567,7 +22828,7 @@
 /turf/simulated/floor,
 /area/expoutpost/midsternhallway)
 "rwo" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/commanderroom)
 "rwJ" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -22601,6 +22862,14 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/uppersternhallway)
+"rxA" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/expoutpost/portlowermaint)
 "rxD" = (
 /obj/structure/bed/chair/office/light,
 /turf/simulated/floor/carpet,
@@ -22611,6 +22880,7 @@
 	},
 /obj/structure/closet/crate,
 /obj/random/instrument,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "rzc" = (
@@ -22701,6 +22971,7 @@
 /area/expoutpost/breakroom)
 "rET" = (
 /obj/random/powercell,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starsciencemaint)
 "rEX" = (
@@ -22997,6 +23268,14 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/staginghangar)
+"rOi" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/expoutpost/portuppermaint)
 "rOk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -23013,10 +23292,12 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "rOy" = (
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "rOE" = (
@@ -23258,7 +23539,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 8
 	},
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/starfuelstorage)
 "rWL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -23381,7 +23662,9 @@
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance/common,
+/obj/machinery/door/airlock/angled_bay/hatch/common{
+	dir = 8
+	},
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "rZM" = (
@@ -23452,7 +23735,7 @@
 /turf/simulated/floor,
 /area/expoutpost/portfuelstorage)
 "sey" = (
-/turf/simulated/wall/r_lead,
+/turf/simulated/wall/tgmc/durawall,
 /area/expoutpost/reactorcr)
 "sfi" = (
 /obj/item/device/radio/intercom{
@@ -23474,6 +23757,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
 "sgl" = (
@@ -23533,6 +23817,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starsciencemaint)
 "sjd" = (
@@ -23617,6 +23902,7 @@
 	icon_state = "0-8"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "smG" = (
@@ -23674,7 +23960,7 @@
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/medbaylobby)
 "spq" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/portfuelstorage)
 "sps" = (
 /obj/structure/table/wooden_reinforced,
@@ -23866,6 +24152,8 @@
 /area/expoutpost/starfuelstorage)
 "sxM" = (
 /obj/random/junk,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/trash,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "sxY" = (
@@ -23932,7 +24220,7 @@
 /area/expoutpost/reactorcr)
 "sAR" = (
 /obj/structure/sign/warning/airlock,
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/starsternairlock)
 "sAX" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -23973,9 +24261,8 @@
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/stargazer)
 "sCn" = (
-/obj/machinery/door/airlock/multi_tile/glass{
-	dir = 2;
-	name = "Research and Development"
+/obj/machinery/door/airlock/angled_bay/double/glass{
+	dir = 8
 	},
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
@@ -24086,6 +24373,7 @@
 /obj/random/maintenance/cargo,
 /obj/random/maintenance/cargo,
 /obj/random/maintenance/cargo,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starsciencemaint)
 "sKz" = (
@@ -24099,6 +24387,7 @@
 	icon_state = "0-4"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "sKO" = (
@@ -24137,6 +24426,8 @@
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "sLQ" = (
@@ -24330,7 +24621,7 @@
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/rnd)
 "sTs" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/gateway)
 "sTt" = (
 /obj/structure/cable/green{
@@ -24441,6 +24732,7 @@
 	dir = 1
 	},
 /obj/machinery/space_heater,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starsciencemaint)
 "sYD" = (
@@ -24619,6 +24911,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "tdp" = (
@@ -24687,6 +24980,7 @@
 	icon_state = "2-4"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starsciencemaint)
 "tgk" = (
@@ -24713,6 +25007,8 @@
 	dir = 8
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "tha" = (
@@ -24806,7 +25102,7 @@
 /turf/simulated/floor/tiled/milspec/raised,
 /area/expoutpost/secoffice)
 "tni" = (
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/reinforced,
 /area/expoutpost/exploarmory)
 "tnm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -24850,7 +25146,7 @@
 /obj/structure/sign/directions/engineering{
 	dir = 10
 	},
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/starqpadjunction)
 "too" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -24907,6 +25203,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starsciencemaint)
 "tqj" = (
@@ -24969,6 +25266,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "tui" = (
@@ -25009,6 +25307,7 @@
 /area/expoutpost/hangarfive)
 "twI" = (
 /obj/structure/reagent_dispensers/watertank,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "twL" = (
@@ -25158,6 +25457,8 @@
 /turf/simulated/floor/tiled/freezer,
 /area/expoutpost/washroom)
 "tAL" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/random/trash,
 /turf/simulated/floor,
 /area/expoutpost/starsciencemaint)
 "tBo" = (
@@ -25338,6 +25639,7 @@
 /area/shuttle/baby_mammoth)
 "tHC" = (
 /obj/random/trash_pile,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "tHG" = (
@@ -25409,6 +25711,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "tKI" = (
@@ -25496,7 +25799,7 @@
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/stargazer)
 "tMo" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/hangarfive)
 "tMv" = (
 /obj/structure/bookcase/manuals/engineering,
@@ -25545,9 +25848,7 @@
 /obj/effect/catwalk_plated/dark,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/machinery/door/firedoor/multi_tile/glass,
-/obj/machinery/door/airlock/multi_tile/glass{
-	name = "Hangar Bay"
-	},
+/obj/machinery/door/airlock/angled_bay/double/glass,
 /turf/simulated/floor,
 /area/expoutpost/staginghangar)
 "tNO" = (
@@ -25560,8 +25861,6 @@
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/rnd)
 "tNX" = (
-/obj/structure/closet/secure_closet/sar,
-/obj/item/device/cataloguer/compact,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
@@ -25571,6 +25870,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 4
 	},
+/obj/machinery/vending/exploration_fieldmedic,
 /turf/simulated/floor/tiled,
 /area/expoutpost/explobriefroom)
 "tOr" = (
@@ -25775,7 +26075,7 @@
 /area/expoutpost/botany)
 "tXk" = (
 /obj/structure/sign/warning/airlock,
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/portsternairlock)
 "tXN" = (
 /obj/effect/floor_decal/borderfloorblack,
@@ -25821,6 +26121,7 @@
 /area/shuttle/ursula)
 "tYC" = (
 /obj/random/trash_pile,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "tYF" = (
@@ -25865,11 +26166,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/uppersternhallway)
 "tZL" = (
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
@@ -25879,10 +26175,8 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 10
 	},
-/obj/structure/closet/secure_closet/guncabinet{
-	req_one_access = list(43,67)
-	},
-/turf/simulated/floor/tiled,
+/obj/machinery/vending/exploration_weapons,
+/turf/simulated/floor/reinforced,
 /area/expoutpost/exploarmory)
 "ual" = (
 /obj/machinery/appliance/cooker/grill,
@@ -25899,6 +26193,7 @@
 	dir = 4;
 	pixel_y = 0
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
 "ubs" = (
@@ -25972,9 +26267,8 @@
 	dir = 1
 	},
 /obj/effect/catwalk_plated/techfloor,
-/obj/machinery/door/airlock/multi_tile/glass{
-	dir = 1;
-	name = "Hangar - Needle"
+/obj/machinery/door/airlock/angled_bay/double/glass{
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/expoutpost/hangarfive)
@@ -26044,6 +26338,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "ugc" = (
@@ -26068,24 +26363,25 @@
 	dir = 8
 	},
 /obj/random/trash,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "uhl" = (
 /obj/structure/closet/emcloset,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
 "uhs" = (
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
 	},
-/obj/machinery/door/airlock/multi_tile/glass{
-	dir = 2;
-	name = "Hangar - Echidna"
+/obj/machinery/door/airlock/angled_bay/double/glass{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/hangarsix)
 "uiK" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/secbowcheckpoint)
 "ujy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -26199,7 +26495,7 @@
 /turf/simulated/floor/reinforced,
 /area/expoutpost/portsternairlock)
 "umA" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/civaccesshallway)
 "unl" = (
 /obj/effect/catwalk_plated/dark,
@@ -26258,6 +26554,7 @@
 /area/expoutpost/breakroom)
 "upQ" = (
 /obj/machinery/portable_atmospherics/powered/pump/filled,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "upT" = (
@@ -26336,6 +26633,7 @@
 	icon_state = "2-4"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "uso" = (
@@ -26464,6 +26762,7 @@
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starsciencemaint)
 "uxa" = (
@@ -26685,6 +26984,7 @@
 	icon_state = "1-4"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
 "uDx" = (
@@ -26703,7 +27003,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/needle)
 "uEZ" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/portexplomaint)
 "uFv" = (
 /obj/effect/floor_decal/techfloor{
@@ -26778,8 +27078,8 @@
 /area/expoutpost/reactorroom)
 "uJZ" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass{
-	name = "Stern Airlock"
+/obj/machinery/door/airlock/angled_bay/standard/glass{
+	name = "public airlock"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/uppersternhallway)
@@ -26819,6 +27119,7 @@
 	},
 /obj/random/trash,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "uLJ" = (
@@ -26848,6 +27149,7 @@
 "uLV" = (
 /obj/item/trash,
 /obj/structure/closet/crate,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "uNn" = (
@@ -26909,14 +27211,13 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/lowersternhallway)
 "uOu" = (
-/obj/structure/closet/secure_closet/pilot,
-/obj/item/device/cataloguer/compact,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/green/border{
 	dir = 4
 	},
+/obj/machinery/vending/exploration_pilot,
 /turf/simulated/floor/tiled,
 /area/expoutpost/explobriefroom)
 "uOM" = (
@@ -27027,6 +27328,12 @@
 /obj/item/device/suit_cooling_unit,
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/eva)
+"uRm" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/trash,
+/turf/simulated/floor,
+/area/expoutpost/portlowermaint)
 "uRt" = (
 /obj/structure/closet/secure_closet/guncabinet{
 	req_one_access = list(43,67)
@@ -27195,7 +27502,7 @@
 /area/expoutpost/starfuelstorage)
 "uWA" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance/common,
+/obj/machinery/door/airlock/angled_bay/hatch/common,
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/hangarfive)
 "uWT" = (
@@ -27222,6 +27529,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starlowermaint)
 "uXj" = (
@@ -27243,6 +27551,7 @@
 	dir = 8
 	},
 /obj/random/maintenance/medical,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
 "uYX" = (
@@ -27301,7 +27610,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 6
 	},
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/portfuelstorage)
 "vam" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -27412,6 +27721,7 @@
 	icon_state = "2-4"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "vfl" = (
@@ -27461,7 +27771,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 10
 	},
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/starfuelstorage)
 "viN" = (
 /obj/machinery/conveyor{
@@ -27481,6 +27791,15 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/shuttle3/start)
+"vjY" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/trash,
+/turf/simulated/floor,
+/area/expoutpost/portexplomaint)
 "vjZ" = (
 /obj/machinery/door/blast/regular{
 	id = "aeg_disposal_driver"
@@ -27799,9 +28118,7 @@
 "vuv" = (
 /obj/structure/catwalk,
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/engineering{
-	name = "Shield Generator"
-	},
+/obj/machinery/door/airlock/angled_bay/standard/color/engineering,
 /turf/simulated/floor,
 /area/expoutpost/staginghangar)
 "vuJ" = (
@@ -27919,7 +28236,7 @@
 /turf/simulated/floor,
 /area/expoutpost/starfuelstorage)
 "vxU" = (
-/turf/simulated/wall/r_lead,
+/turf/simulated/wall/tgmc/durawall,
 /area/expoutpost/reactorroom)
 "vyh" = (
 /obj/machinery/vending/snack{
@@ -27950,6 +28267,8 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
 "vBV" = (
@@ -27973,7 +28292,7 @@
 /turf/simulated/floor/tiled,
 /area/expoutpost/explobriefroom)
 "vCa" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/explodorm1)
 "vCw" = (
 /obj/machinery/gateway,
@@ -28029,6 +28348,7 @@
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starlowermaint)
 "vEd" = (
@@ -28455,6 +28775,7 @@
 	icon_state = "1-8"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starlowermaint)
 "vRX" = (
@@ -28556,6 +28877,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "vWj" = (
@@ -28684,6 +29006,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
 "wai" = (
@@ -28714,7 +29037,7 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/effect/catwalk_plated/techfloor,
-/obj/machinery/door/airlock/silver{
+/obj/machinery/door/airlock/angled_bay/standard{
 	name = "Washroom"
 	},
 /obj/structure/disposalpipe/segment,
@@ -28803,7 +29126,7 @@
 /turf/simulated/floor/carpet,
 /area/expoutpost/explodorm2)
 "wdS" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/kitchen)
 "wdW" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -28880,6 +29203,7 @@
 /obj/structure/table/rack,
 /obj/random/maintenance,
 /obj/random/maintenance/engineering,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "wfX" = (
@@ -28893,7 +29217,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 5
 	},
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/starfuelstorage)
 "wha" = (
 /obj/structure/cable/green{
@@ -28916,6 +29240,7 @@
 /obj/random/tech_supply,
 /obj/random/tech_supply,
 /obj/item/weapon/storage/bag/circuits/basic,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starsciencemaint)
 "whk" = (
@@ -28938,7 +29263,7 @@
 /area/expoutpost/bar)
 "wiZ" = (
 /obj/structure/sign/vacuum,
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/portsternairlock)
 "wja" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -29023,6 +29348,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "wkV" = (
@@ -29060,7 +29386,7 @@
 /turf/simulated/floor/tiled,
 /area/expoutpost/engstorage)
 "wlq" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/engoffice)
 "wlw" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
@@ -29222,39 +29548,21 @@
 /turf/simulated/floor/wood,
 /area/expoutpost/bar)
 "wte" = (
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
 /obj/effect/floor_decal/corner/green/border{
 	dir = 8
 	},
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/structure/closet/secure_closet/guncabinet{
-	req_one_access = list(43,67)
-	},
-/turf/simulated/floor/tiled,
+/obj/machinery/vending/exploration_weapons,
+/turf/simulated/floor/reinforced,
 /area/expoutpost/exploarmory)
 "wtr" = (
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
 	},
-/obj/machinery/door/airlock/multi_tile/glass{
-	dir = 1;
-	name = "Hangar - Ursula"
+/obj/machinery/door/airlock/angled_bay/double/glass{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/hangarthree)
@@ -29333,10 +29641,11 @@
 "wwm" = (
 /obj/structure/railing,
 /obj/random/trash,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "www" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/botany)
 "wwy" = (
 /obj/effect/floor_decal/stairs,
@@ -29459,11 +29768,11 @@
 /turf/simulated/floor,
 /area/expoutpost/reactorroom)
 "wDU" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/portbowairlock)
 "wEC" = (
 /obj/structure/railing/grey,
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/starbowhallway)
 "wFa" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
@@ -29521,6 +29830,14 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/reactorcr)
+"wIB" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/expoutpost/portlowermaint)
 "wJf" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 8
@@ -29610,9 +29927,8 @@
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
 	},
-/obj/machinery/door/airlock/multi_tile/glass{
-	dir = 1;
-	name = "Q-Pad Junction"
+/obj/machinery/door/airlock/angled_bay/double/glass{
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/expoutpost/starqpadjunction)
@@ -29663,7 +29979,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 8
 	},
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/reactorroom)
 "wPO" = (
 /turf/simulated/floor/tiled/techfloor,
@@ -29766,6 +30082,7 @@
 /obj/random/maintenance/cargo,
 /obj/random/maintenance/cargo,
 /obj/random/maintenance/cargo,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
 "wSC" = (
@@ -29783,10 +30100,11 @@
 /turf/simulated/floor,
 /area/expoutpost/starfuelstorage)
 "wTs" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/portuppermaint)
 "wTy" = (
 /obj/random/trash,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
 "wUy" = (
@@ -29856,7 +30174,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 6
 	},
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/starfuelstorage)
 "wWJ" = (
 /obj/structure/cable/green{
@@ -29903,7 +30221,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/reinforced,
 /area/expoutpost/exploarmory)
 "wYD" = (
 /obj/machinery/light{
@@ -29938,6 +30256,8 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
@@ -29999,12 +30319,13 @@
 /obj/structure/closet/emcloset,
 /obj/random/cash,
 /obj/random/cash,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starlowermaint)
 "xeB" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass{
-	name = "Bow Airlock"
+/obj/machinery/door/airlock/angled_bay/standard/glass{
+	name = "public airlock"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/starbowhallway)
@@ -30061,6 +30382,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starsciencemaint)
 "xgb" = (
@@ -30162,8 +30484,6 @@
 /turf/simulated/floor/carpet,
 /area/expoutpost/suite1)
 "xit" = (
-/obj/structure/closet/secure_closet/explorer,
-/obj/item/device/cataloguer,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
@@ -30173,6 +30493,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 8
 	},
+/obj/machinery/vending/exploration_armor,
 /turf/simulated/floor/tiled,
 /area/expoutpost/explobriefroom)
 "xiP" = (
@@ -30217,6 +30538,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
@@ -30284,8 +30606,8 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/effect/catwalk_plated/techfloor,
-/obj/machinery/door/airlock/glass{
-	name = "Bow Airlock"
+/obj/machinery/door/airlock/angled_bay/standard/glass{
+	name = "public airlock"
 	},
 /turf/simulated/floor,
 /area/expoutpost/civaccesshallway)
@@ -30348,6 +30670,7 @@
 /obj/structure/railing{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
 "xoX" = (
@@ -30364,6 +30687,7 @@
 /area/expoutpost/hangarfour)
 "xpr" = (
 /obj/machinery/light/small,
+/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starsciencemaint)
@@ -30419,6 +30743,8 @@
 	icon_state = "1-4"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
 "xrx" = (
@@ -30461,7 +30787,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/eva)
 "xsP" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/techstorage)
 "xsZ" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -30530,6 +30856,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "xvv" = (
@@ -30884,14 +31211,13 @@
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/starqpadjunction)
 "xJp" = (
-/obj/structure/closet/secure_closet/explorer,
-/obj/item/device/cataloguer,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/green/border{
 	dir = 8
 	},
+/obj/machinery/vending/exploration_misc,
 /turf/simulated/floor/tiled,
 /area/expoutpost/explobriefroom)
 "xJr" = (
@@ -30972,6 +31298,8 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
 "xKO" = (
@@ -31013,6 +31341,7 @@
 /area/expoutpost/commanderroom)
 "xLf" = (
 /obj/structure/railing,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starlowermaint)
 "xLr" = (
@@ -31044,8 +31373,8 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/firedoor/glass,
 /obj/effect/catwalk_plated/techfloor,
-/obj/machinery/door/airlock/glass{
-	name = "Bow Airlock"
+/obj/machinery/door/airlock/angled_bay/standard/glass{
+	name = "public airlock"
 	},
 /turf/simulated/floor,
 /area/expoutpost/starbowhallway)
@@ -31100,7 +31429,7 @@
 /obj/structure/sign/directions/eva{
 	dir = 1
 	},
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/portqpadjunction)
 "xOX" = (
 /obj/effect/floor_decal/techfloor{
@@ -31157,21 +31486,14 @@
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/kitchen)
 "xQB" = (
-/obj/item/clothing/accessory/holster/waist,
-/obj/item/clothing/accessory/holster/waist,
-/obj/item/clothing/accessory/holster/waist,
-/obj/item/clothing/accessory/holster/waist,
-/obj/item/clothing/accessory/holster/waist,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 9
 	},
 /obj/effect/floor_decal/corner/green/border{
 	dir = 9
 	},
-/obj/structure/closet/secure_closet/guncabinet{
-	req_one_access = list(43,67)
-	},
-/turf/simulated/floor/tiled,
+/obj/machinery/vending/exploration_weapons,
+/turf/simulated/floor/reinforced,
 /area/expoutpost/exploarmory)
 "xQE" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
@@ -31218,7 +31540,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 10
 	},
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/starfuelstorage)
 "xRT" = (
 /obj/effect/floor_decal/grass_edge{
@@ -31463,6 +31785,22 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/reactoraccess)
+"xZO" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/expoutpost/staruppermaint)
 "xZQ" = (
 /obj/machinery/chemical_dispenser/full{
 	pixel_y = 5
@@ -31569,11 +31907,12 @@
 /area/expoutpost/suite2)
 "ydk" = (
 /obj/random/trash,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/starlowermaint)
 "ydq" = (
 /obj/structure/shuttle/engine/heater,
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/starfuelstorage)
 "ydX" = (
 /obj/structure/catwalk,
@@ -31712,6 +32051,8 @@
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "yij" = (
@@ -31769,7 +32110,7 @@
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/shuttle3/start)
 "yjg" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/bay/r_wall,
 /area/expoutpost/hangarthree)
 "yjr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -31880,6 +32221,12 @@
 /obj/machinery/cell_charger,
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/staginghangar)
+"ykO" = (
+/obj/structure/railing,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/expoutpost/portuppermaint)
 "ylW" = (
 /obj/effect/floor_decal/grass_edge{
 	dir = 9
@@ -55528,7 +55875,7 @@ wTs
 wTs
 wTs
 jlw
-nYm
+ceN
 ftT
 uEZ
 uhl
@@ -55784,15 +56131,15 @@ wTs
 wTs
 wTs
 ctL
-rdq
+rOi
 bJy
-ceN
+jwU
 lnk
 uEZ
-aLn
+eZp
 vAE
-aLn
-aLn
+pAs
+uQg
 uYh
 dFq
 uEZ
@@ -56042,9 +56389,9 @@ wTs
 ctL
 uLV
 nYm
-xkW
+ykO
 vfc
-jQX
+qWT
 jQX
 aQj
 cfm
@@ -56052,9 +56399,9 @@ rbL
 uCY
 xoH
 xoH
-xoH
-aLn
-aLn
+maU
+uQg
+uQg
 dSt
 mpv
 uEZ
@@ -56296,13 +56643,13 @@ wTs
 wTs
 wTs
 stl
+rdq
+ceN
+ceN
+ceN
+ceN
+gDK
 jwU
-nYm
-nYm
-nYm
-nYm
-aMn
-nYm
 ftT
 uEZ
 eHT
@@ -56310,15 +56657,15 @@ xaA
 rum
 cfm
 cfm
-cfm
+kYg
 uCY
 wTy
 xoH
-xoH
-aLn
+maU
+uQg
 aYq
 sfB
-aLn
+pAs
 uEZ
 kgN
 kgN
@@ -56553,34 +56900,34 @@ wTs
 wTs
 ftT
 nYm
-nYm
-nYm
-nYm
+ceN
+ceN
+ceN
 wfK
 wfK
 jSF
-aMn
-nYm
+gDK
+jwU
 twI
 uEZ
 pHi
-uQg
-xKG
+mYU
+eCB
 jLV
-xKG
+vjY
 xKG
 rum
 cfm
 cfm
-cfm
+kYg
 cfm
 nNi
 uCY
-aLn
+uQg
 uEZ
 iWj
 hol
-cVY
+uRm
 kgN
 kgN
 kgN
@@ -56808,17 +57155,17 @@ wTs
 wTs
 wTs
 juW
-nYm
-nYm
-guF
-nYm
-bJy
-bJy
-bJy
-bJy
 ceN
-aMn
-nYm
+ceN
+guF
+ceN
+bJy
+bJy
+bJy
+bJy
+jwU
+gDK
+ceN
 pgP
 pgP
 pgP
@@ -56826,22 +57173,22 @@ pgP
 pgP
 pgP
 pgP
-aLn
+uQg
 pyP
-uQg
-uQg
+aLn
+eZp
 xKG
 vZR
-aLn
+uQg
 rum
 cfm
 aQj
 ttk
 jCk
-nhZ
+bjU
 aBZ
 kqS
-fXC
+cVY
 jaI
 kgN
 kgN
@@ -57066,12 +57413,12 @@ wwm
 xvk
 kkw
 kkw
-jQX
-jQX
+qWT
+qWT
 qpa
-jQX
+qWT
 uqU
-jQX
+qWT
 jQX
 jQX
 jQX
@@ -57081,13 +57428,13 @@ pgP
 xQB
 wte
 kbK
-kYg
+wte
 tZL
 pgP
 wTy
 pyP
+eZp
 uQg
-aLn
 aLn
 uaO
 wSp
@@ -57096,15 +57443,15 @@ dFq
 uEZ
 oHJ
 pbu
-bjU
-cVY
+rxA
+qHE
 tcY
-fXC
-fXC
-fXC
-fXC
+cVY
+cVY
+cVY
+cVY
 kqS
-fXC
+cVY
 kgN
 kgN
 kgN
@@ -57320,21 +57667,21 @@ eWj
 eWj
 eWj
 wTs
-nYm
+ceN
 lGH
-nYm
+ceN
 nYm
 rrt
 mCg
 fDS
 ftT
 smd
-nYm
+ceN
 qnt
 vTh
-nYm
-aMn
 ceN
+gDK
+jwU
 pgP
 ljx
 tni
@@ -57361,9 +57708,9 @@ fmp
 ttk
 ttk
 jCk
+qHE
+uRm
 cVY
-fXC
-fXC
 dsK
 ugT
 fXC
@@ -57591,8 +57938,8 @@ eWj
 eWj
 eWj
 ftT
-aMn
-ceN
+gDK
+jwU
 pgP
 iFh
 tni
@@ -57620,11 +57967,11 @@ bGo
 bGo
 pbu
 uLs
+wIB
 nGu
-nGu
-cVY
-cVY
-cVY
+qHE
+qHE
+qHE
 tXk
 xyF
 rGx
@@ -57848,8 +58195,8 @@ fqm
 fqm
 lFJ
 eWj
-nYm
-aMn
+ceN
+gDK
 lnk
 pgP
 gTB
@@ -58107,8 +58454,8 @@ sCA
 bUm
 eWj
 tHC
-aMn
-ceN
+gDK
+jwU
 pgP
 ljx
 tni
@@ -58136,9 +58483,9 @@ fse
 aBZ
 iNj
 hVu
-pbu
-cVY
-cVY
+qAW
+qHE
+uRm
 ryc
 lae
 hYl
@@ -58364,9 +58711,9 @@ pnh
 nQe
 bUm
 eWj
-qWT
-aMn
-aHR
+xkW
+gDK
+rvI
 pgP
 oQm
 ofo
@@ -58622,8 +58969,8 @@ oFs
 rLo
 bUm
 eWj
-qWT
-aMn
+xkW
+gDK
 aHR
 pgP
 pgP
@@ -58880,7 +59227,7 @@ oEz
 rLo
 ipO
 eWj
-nYm
+ceN
 aMn
 dtw
 eZl
@@ -59140,7 +59487,7 @@ bUm
 eWj
 rpY
 aMn
-aHR
+jkY
 eZl
 acB
 liP
@@ -59398,7 +59745,7 @@ bUm
 eWj
 nJl
 aMn
-aHR
+jkY
 eZl
 rMA
 kTP
@@ -59654,9 +60001,9 @@ oFs
 rLo
 bUm
 eWj
-ceN
+jwU
 aMn
-ceN
+jwU
 eZl
 rMA
 kTP
@@ -64731,7 +65078,7 @@ cwA
 cwA
 cwA
 cwA
-ltL
+cwA
 cwA
 cwA
 xEV
@@ -66892,7 +67239,7 @@ ckB
 stp
 ckB
 cYy
-fSU
+ltL
 nkx
 jtd
 xJG
@@ -67150,7 +67497,7 @@ iem
 esW
 iem
 iem
-gBA
+fXL
 uqJ
 ykC
 nkx
@@ -67408,7 +67755,7 @@ rqt
 uso
 nqC
 bsK
-fSU
+ltL
 nkx
 gfY
 hIK
@@ -71542,15 +71889,15 @@ oRl
 qkj
 pzz
 ruQ
-tAL
+erv
 kSB
 qHg
-erv
+auM
 pzz
 eFB
 iPI
 hgy
-afR
+afV
 xLf
 ifF
 gCu
@@ -71800,15 +72147,15 @@ oRl
 qkj
 pzz
 sXR
-tAL
+erv
 kSB
 cgv
-mQk
+gTb
 pzz
 qaU
 qaU
+dvY
 afV
-afR
 ptu
 pVo
 qzW
@@ -72058,7 +72405,7 @@ oRl
 qkj
 pzz
 rET
-tAL
+erv
 tfU
 xfY
 xfY
@@ -72070,9 +72417,9 @@ uWW
 uWW
 vRM
 heN
-afV
-afV
-afV
+dvY
+iZP
+dvY
 sAR
 dGt
 xOk
@@ -72286,12 +72633,12 @@ hVa
 qWQ
 jkM
 pBY
-csU
+vxd
 pxN
 fvC
 pxN
 gaq
-csU
+vxd
 sKz
 aRw
 iln
@@ -72315,20 +72662,20 @@ pzz
 rlq
 pzz
 pzz
-tAL
-tAL
+erv
+erv
 sim
 qHg
-erv
+auM
 pzz
-afV
+dvY
 ydk
 eBy
 eBy
 eBy
-afR
-ydk
 afV
+ydk
+dvY
 gaC
 afR
 dbe
@@ -72551,8 +72898,8 @@ rOq
 rOq
 rOq
 tJR
-vxd
-vxd
+nhZ
+nhZ
 qWQ
 qWQ
 rZG
@@ -72569,20 +72916,20 @@ jWP
 jWP
 jWP
 jWP
-tAL
+erv
 sim
 jHO
 kic
 orR
 qHg
 sim
-erv
+auM
 xpr
 pzz
 mGJ
-afV
-afV
-afV
+dvY
+dvY
+iZP
 cXW
 bxK
 aoV
@@ -72804,37 +73151,37 @@ qWQ
 qWQ
 qWQ
 csU
-vxd
-vxd
-xku
+nhZ
+jFr
+bGY
 gyq
 sLC
 eCD
-vxd
+jFr
 fNw
 hOc
-sLC
-csU
-csU
+xZO
+vxd
+vxd
 upQ
 fLC
 nJD
-csU
+vxd
 pxN
 bhh
-vxd
+nhZ
 pzz
-gDK
+mQk
 hxp
 ruO
-tAL
+erv
 uwX
 nYX
 lMZ
 xfY
 xfY
 rqW
-erv
+auM
 sJe
 pzz
 ydk
@@ -73088,11 +73435,11 @@ xfY
 xfY
 rqW
 tpw
-ppU
-ppU
+pMV
+pMV
 cZW
-erv
-erv
+auM
+auM
 pzz
 pzz
 aoV
@@ -73323,26 +73670,26 @@ xEV
 qWQ
 qWQ
 qWQ
-csU
-csU
-inZ
-csU
-xku
-xku
-xku
 vxd
+vxd
+inZ
+vxd
+xku
+xku
+xku
+nhZ
 sxM
 csU
-csU
-xku
-xku
 vxd
-csU
+xku
+xku
+nhZ
+vxd
 jkM
 pzz
-erv
-erv
-pMV
+auM
+auM
+mid
 ppU
 tAL
 peS
@@ -73585,22 +73932,22 @@ qWQ
 qWQ
 heY
 ufY
-vxd
-vxd
+nhZ
+nhZ
 aIx
-vxd
-vxd
+nhZ
+bZA
 sxM
-csU
-csU
-csU
+vxd
+vxd
+vxd
 jkM
-csU
-csU
+vxd
+vxd
 pzz
 qHg
 rkg
-erv
+auM
 pzz
 pzz
 pzz
@@ -73844,13 +74191,13 @@ qWQ
 qWQ
 qWQ
 csU
-vxd
-vxd
+nhZ
+nhZ
 jkM
+nhZ
+nhZ
+nhZ
 vxd
-vxd
-vxd
-csU
 jbK
 jbK
 bri
@@ -74105,7 +74452,7 @@ qWQ
 qWQ
 awP
 ufY
-csU
+vxd
 tYC
 oUN
 jbK
