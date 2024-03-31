@@ -2651,6 +2651,22 @@
 	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
+"bSE" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/book/manual/wiki/engineering_hacking,
+/obj/item/device/radio/intercom{
+	desc = "Talk through this. Evilly";
+	frequency = 1213;
+	name = "Subversive Intercom";
+	pixel_x = 32;
+	subspace_transmission = 1;
+	syndie = 1
+	},
+/turf/unsimulated/floor{
+	dir = 5;
+	icon_state = "vault"
+	},
+/area/wizard_station)
 "bSN" = (
 /obj/structure/table/rack,
 /obj/item/weapon/gun/projectile/automatic/sts35,
@@ -2708,22 +2724,6 @@
 	icon_state = "steel"
 	},
 /area/centcom/bar)
-"bVc" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/weapon/book/manual/wiki/engineering_hacking,
-/obj/item/device/radio/intercom{
-	desc = "Talk through this. Evilly";
-	frequency = 1213;
-	name = "Subversive Intercom";
-	pixel_x = 32;
-	subspace_transmission = 1;
-	syndie = 1
-	},
-/turf/unsimulated/floor{
-	dir = 5;
-	icon_state = "vault"
-	},
-/area/wizard_station)
 "bVj" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/unsimulated/floor{
@@ -5725,6 +5725,10 @@
 	icon_state = "steel"
 	},
 /area/centcom/bar)
+"eLy" = (
+/obj/effect/overmap/visitable/planet/kara,
+/turf/space,
+/area/space)
 "eLE" = (
 /obj/machinery/vending/event/food/ingredients,
 /turf/simulated/floor/reinforced,
@@ -26431,7 +26435,7 @@ vFi
 vFi
 vFi
 vFi
-vFi
+eLy
 "}
 (2,1,1) = {"
 vFi
@@ -69196,7 +69200,7 @@ bQG
 hrx
 hrx
 hrx
-bVc
+bSE
 rXM
 anI
 xzQ

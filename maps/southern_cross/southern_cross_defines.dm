@@ -124,7 +124,8 @@ but they don't actually change anything about the load order
 	lateload_z_levels = list(
 			list("VR World"),
 			list("Fuel Depot - Z1 Space"),
-			list("Thor Surface")
+			list("Thor Surface"),
+			list("NEV Aegis")
 			//list("Kara Aerostat - Z1 Aerostat"), //Remove Kara Z layers
 			//list("Kara - Z1 Northern Star") //Remove Kara Z layers
 			)

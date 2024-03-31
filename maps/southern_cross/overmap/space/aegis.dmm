@@ -31000,6 +31000,10 @@
 /obj/machinery/portable_atmospherics/canister/air/airlock,
 /turf/simulated/floor,
 /area/shuttle/aegis/portsternairlock)
+"xyN" = (
+/obj/effect/overmap/visitable/ship/aegis,
+/turf/space,
+/area/space)
 "xyR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -32498,7 +32502,7 @@ cwA
 cwA
 cwA
 cwA
-cwA
+xyN
 "}
 (2,1,1) = {"
 cwA
