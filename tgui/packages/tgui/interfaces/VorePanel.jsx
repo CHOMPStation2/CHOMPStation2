@@ -742,7 +742,11 @@ const VoreSelectedBellyOptions = (props) => {
     belly_mob_mult,
     belly_item_mult,
     belly_overall_mult,
+<<<<<<< HEAD
     vorespawn_blacklist,
+=======
+    drainmode,
+>>>>>>> 5f520271be... Added Post-Drain belly modes (#15876)
   } = belly;
 
   return (
@@ -896,6 +900,12 @@ const VoreSelectedBellyOptions = (props) => {
             <Button
               onClick={() => act('set_attribute', { attribute: 'b_clone_dmg' })}
               content={digest_clone}
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Drain Finishing Mode">
+            <Button
+              onClick={() => act('set_attribute', { attribute: 'b_drainmode' })}
+              content={drainmode}
             />
           </LabeledList.Item>
           <LabeledList.Item label="Shrink/Grow Size">
