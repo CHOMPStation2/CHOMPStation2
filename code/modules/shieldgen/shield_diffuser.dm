@@ -85,6 +85,8 @@
 	if(!duration)
 		return
 	alarm = round(max(alarm, duration))
+	for(var/obj/machinery/shield_gen/gen in global.machines) // CHOMPEdit - Fills the gaps made by diffusers
+		gen.fill_diffused()
 	update_icon()
 
 /obj/machinery/shield_diffuser/examine(var/mob/user)
