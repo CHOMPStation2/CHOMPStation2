@@ -1,10 +1,27 @@
 /mob/living
 	var/datum/language/default_language
 
-/mob/living/verb/set_default_language(language as null|anything in languages)
+//CHOMPEdit Start 515 and tgui list
+/mob/living/verb/set_default_language()
 	set name = "Set Default Language"
 	set category = "IC"
 
+	var/language = tgui_input_list(usr, "Select your default language", "Available languages", languages)
+
+	apply_language(language)
+
+
+// Silicons can't neccessarily speak everything in their languages list
+/mob/living/silicon/set_default_language()
+	var/language = tgui_input_list(usr, "Select your default language", "Available languages", speech_synthesizer_langs)
+	// Silicons have no species language usually. So let's default them to GALCOM
+	if(!language)
+		to_chat(src, "<span class='notice'>You will now speak your standard default language, common, if you do not specify a language when speaking.</span>")
+		default_language = LANGUAGE_GALCOM
+		return
+	apply_language(language)
+
+/mob/living/proc/apply_language(var/language)
 	if (only_species_language && language != GLOB.all_languages[src.species_language])
 		to_chat(src, "<span class='notice'>You can only speak your species language, [src.species_language].</span>")
 		return 0
@@ -22,10 +39,7 @@
 		to_chat(src, "<span class='notice'>You will now speak whatever your standard default language is if you do not specify one when speaking.</span>")
 	default_language = language
 
-// Silicons can't neccessarily speak everything in their languages list
-/mob/living/silicon/set_default_language(language as null|anything in speech_synthesizer_langs)
-	..()
-
+//CCHOMPEdit End
 /mob/living/verb/check_default_language()
 	set name = "Check Default Language"
 	set category = "IC"
