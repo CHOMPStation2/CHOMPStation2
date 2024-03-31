@@ -42,7 +42,7 @@
 
 /obj/machinery/computer/shuttle_control/explore/baby_mammoth
 	name = "short jump console"
-	shuttle_tag = "Baby_mammoth"
+	shuttle_tag = "Baby Mammoth"
 	req_one_access = list(access_pilot)
 
 //Ursula

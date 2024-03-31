@@ -2666,7 +2666,7 @@ var/list/the_station_areas = list (
 	requires_power = 1
 
 /area/shuttle/baby_mammoth
-	name = "\improper Baby_mammoth"
+	name = "\improper Baby Mammoth"
 	icon_state = "shuttlered"
 	requires_power = 1
 
