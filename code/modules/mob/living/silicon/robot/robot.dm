@@ -344,7 +344,7 @@
 			if(is_borg_whitelisted(src, module_name))
 				modules |= module_name
 	//VOREStatation Edit End: shell restrictions
-	modtype = tgui_input_list(usr, "Please, select a module!", "Robot module", modules)
+	modtype = tgui_input_list(usr, "Please, select a module!", "Robot module", list("Combat Medic", "Mechanist", "Protector"))
 
 	if(module)
 		return
