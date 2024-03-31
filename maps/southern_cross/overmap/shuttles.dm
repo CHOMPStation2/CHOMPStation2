@@ -24,7 +24,7 @@
 
 //Baby_Mammoth
 /datum/shuttle/autodock/overmap/baby_mammoth
-	name = "Baby Mammoth"
+	name = "baby_mammoth"
 	warmup_time = 5
 	current_location = "baby_mammoth_dock"
 	docking_controller_tag = "baby_mammoth"
@@ -42,7 +42,7 @@
 
 /obj/machinery/computer/shuttle_control/explore/baby_mammoth
 	name = "short jump console"
-	shuttle_tag = "Baby Mammoth"
+	shuttle_tag = "baby_mammoth"
 	req_one_access = list(access_pilot)
 
 //Ursula
