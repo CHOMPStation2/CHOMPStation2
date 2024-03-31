@@ -251,7 +251,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"belly_mob_mult" = selected.belly_mob_mult,
 			"belly_item_mult" = selected.belly_item_mult,
 			"belly_overall_mult" = selected.belly_overall_mult,
-<<<<<<< HEAD
+			"drainmode" = selected.drainmode,
 			//CHOMP add: vore sprite options and additional stuff
 			"belly_fullscreen_color" = selected.belly_fullscreen_color,
 			//"belly_fullscreen_color_secondary" = selected.belly_fullscreen_color_secondary, // Chomp REMOVE - use our solution, not upstream's
@@ -305,10 +305,6 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"private_struggle" = selected.private_struggle,
 			//"marking_to_add" = selected.marking_to_add
 			//CHOMPEdit end
-=======
-			"drainmode" = selected.drainmode,
-
->>>>>>> 5f520271be... Added Post-Drain belly modes (#15876)
 		)
 
 		var/list/addons = list()

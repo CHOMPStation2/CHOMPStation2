@@ -742,11 +742,8 @@ const VoreSelectedBellyOptions = (props) => {
     belly_mob_mult,
     belly_item_mult,
     belly_overall_mult,
-<<<<<<< HEAD
     vorespawn_blacklist,
-=======
     drainmode,
->>>>>>> 5f520271be... Added Post-Drain belly modes (#15876)
   } = belly;
 
   return (
