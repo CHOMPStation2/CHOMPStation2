@@ -33,7 +33,7 @@
 	move_direction = NORTH
 
 /obj/effect/overmap/visitable/ship/landable/baby_mammoth
-	name = "Baby Mammoth"
+	name = "baby_mammoth"
 	desc = "Southern Cross' humanoid exploration vessel."
 	vessel_mass = 6000
 	vessel_size = SHIP_SIZE_SMALL
