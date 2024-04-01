@@ -4911,6 +4911,7 @@
 #include "modular_chomp\code\modules\mob\living\simple_mob\subtypes\vore\ashy.dm"
 #include "modular_chomp\code\modules\mob\living\simple_mob\subtypes\vore\bigdragon.dm"
 #include "modular_chomp\code\modules\mob\living\simple_mob\subtypes\vore\carp.dm"
+#include "modular_chomp\code\modules\mob\living\simple_mob\subtypes\vore\corrupt_hounds.dm"
 #include "modular_chomp\code\modules\mob\living\simple_mob\subtypes\vore\demon.dm"
 #include "modular_chomp\code\modules\mob\living\simple_mob\subtypes\vore\desert_planet_mobs.dm"
 #include "modular_chomp\code\modules\mob\living\simple_mob\subtypes\vore\event.dm"

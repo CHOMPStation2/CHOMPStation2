@@ -532,14 +532,23 @@
 
 /obj/machinery/disposal/hitby(atom/movable/AM)
 	. = ..()
-	if(istype(AM, /obj/item) && !istype(AM, /obj/item/projectile))
+	//CHOMPEdit: fixes thrown disposal dunking with mobs~ - Reo
+	if((istype(AM, /obj/item) || istype(AM, /mob/living)) && !istype(AM, /obj/item/projectile))
 		if(prob(75))
-			if(istype(AM, /obj/item/weapon/holder/micro))
-				log_and_message_admins("[AM] was thrown into \the [src]")
 			AM.forceMove(src)
-			visible_message("\The [AM] lands in \the [src].")
+			if(istype(AM, /obj/item/weapon/holder/micro) || istype(AM, /mob/living))
+				log_and_message_admins("[AM] was thrown into \the [src]")
+				visible_message("\The [AM] lands in \the [src]!")
+				//flush() //Away they go! //Uncomment this for proper autoflush. Compromising with autopull to avoid possible disposal dunking abuse
+				//flush = 1 //1984. No autoflush, no autopull. Leaving this here incase someone wants to revisit this in the future when the mood on this changes
+			else
+				visible_message("\The [AM] lands in \the [src].")
+			update_icon() //Yogs did this, so it probably doesnt hurt..
 		else
 			visible_message("\The [AM] bounces off of \the [src]'s rim!")
+			return ..() //...Yogs also did this! it's probably good to stop it from flying after clonking the thing. Also prevents trying to insert the mob repeatedly due to it the throw not ending.
+	return ..()
+	//CHOMPEdit End.
 
 /obj/machinery/disposal/CanPass(atom/movable/mover, turf/target)
 	if(istype(mover, /obj/item/projectile))
@@ -737,12 +746,15 @@
 		return
 
 	var/mob/living/U = user
-
+	/* CHOMPEdit: Clong, clong baby.
 	if (U.stat || U.last_special <= world.time)
 		return
 
 	U.last_special = world.time+100
-
+	*/
+	if(U.stat)
+		return
+	//CHOMPEdit End.
 	if (src.loc)
 		for (var/mob/M in hearers(src.loc.loc))
 			to_chat(M, "<FONT size=[max(0, 5 - get_dist(src, M))]>CLONG, clong!</FONT>")
