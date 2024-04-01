@@ -969,7 +969,7 @@
 
 		else
 			to_chat(src, "<span class='notice'>You can taste the flavor of garbage. Delicious.</span>")
-		visible_message("<span class='warning'>[src] demonstrates their voracious capabilities by swallowing [I] whole!</span>")
+		visible_message("<span class='vwarning'>[src] demonstrates the voracious capabilities of their [lowertext(vore_selected.name)] by making [I] disappear!</span>") //CHOMPedit
 		return
 	to_chat(src, "<span class='notice'>This snack is too powerful to go down that easily.</span>") //CHOMPEdit
 	return
