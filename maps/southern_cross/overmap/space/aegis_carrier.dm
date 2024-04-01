@@ -20,7 +20,7 @@
 
 /obj/effect/overmap/visitable/ship/aegis
 	name = "NEV Aegis"
-	desc = "The NanoTrasen Exploration Vessel Aegis is a carrier-sized spacecraft built to survey and provide security to fringe NanoTrasen and civilian territories.\
+	desc = "The NanoTrasen Exploration Vessel Aegis is a carrier-sized spacecraft built to survey and provide security to fringe NanoTrasen and civilian territories. \
 			One of four sister ships, the Aegis is the third of its class, designed by a joint intiative of contracted SCG and Hegemony shipwrights."
 	icon = 'modular_chomp/icons/obj/overmap.dmi'
 	icon_state = "aegis_g"

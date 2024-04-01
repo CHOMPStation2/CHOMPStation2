@@ -28,6 +28,7 @@
 	wreckage = /obj/effect/decal/mecha_wreckage/gunpod
 
 	stomp_sound = 'modular_chomp/sound/mecha/fighter/engine_mid_fighter_move.ogg' // CHOMPedit soundchanges
+	stomp_sound_2 = 'modular_chomp/sound/mecha/fighter/engine_mid_fighter_move.ogg' // CHOMPedit soundchanges
 	swivel_sound = 'modular_chomp/sound/mecha/fighter/engine_mid_boost_01.ogg' // CHOMPedit soundchanges
 
 	bound_height = 64
@@ -425,30 +426,33 @@
 
 /obj/mecha/combat/fighter/pinnace
 	name = "pinnace"
-	desc = "A cramped ship's boat, capable of atmospheric and space flight. Not capable of mounting weapons. Capable of fitting one pilot and one passenger."
+	desc = "A cheap-to-produce, versatile voidcraft. Models such as the Pinnace are often used by trans-stellars to fulfill a variety of roles aboard larger vessels. \
+			The price of flexibility, however, is a notable lack of excelling in any one particular area; they're neither outstanding support or fighter craft."
 	icon = 'icons/mecha/fighters64x64.dmi'
 	icon_state = "pinnace"
 	initial_icon = "pinnace"
 
-	max_hull_equip = 1
-	max_weapon_equip = 0
-	max_utility_equip = 0
-	max_universal_equip = 0
-	max_special_equip = 1
+	max_hull_equip = 1 // CHOMPedit better fighters
+	max_weapon_equip = 1 // CHOMPedit better fighters
+	max_utility_equip = 1 // CHOMPedit better fighters
+	max_universal_equip = 1 // CHOMPedit better fighters
+	max_special_equip = 1 // CHOMPedit better fighters
 
 	catalogue_data = list(/datum/category_item/catalogue/technology/pinnace)
 	wreckage = /obj/effect/decal/mecha_wreckage/pinnace
 
-	ground_capable = TRUE
+//	ground_capable = TRUE // CHOMPedit: No longer ground-capable.
 
 /obj/mecha/combat/fighter/pinnace/loaded/Initialize() //Loaded version with guns
 	. = ..()
 	var/obj/item/mecha_parts/mecha_equipment/ME = new /obj/item/mecha_parts/mecha_equipment/tool/passenger
 	ME.attach(src)
+	ME = new /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser
+	ME.attach(src)
 
 /obj/effect/decal/mecha_wreckage/pinnace
 	name = "pinnace wreckage"
-	desc = "Remains of some unfortunate ship's boat. Completely unrepairable."
+	desc = "Remains of some unfortunate voidcraft. Completely unrepairable."
 	icon = 'icons/mecha/fighters64x64.dmi'
 	icon_state = "pinnace-broken"
 	bound_width = 64
@@ -456,10 +460,9 @@
 
 /datum/category_item/catalogue/technology/pinnace
 	name = "Voidcraft - Pinnace"
-	desc = "A very small boat, usually used as a tender at very close ranges. The lack of a bluespace \
-	drive means that it can't get too far from it's parent ship. Though the pinnace is typically unarmed, \
-	it is capable of atmospheric flight and escaping most pursuing fighters by diving into the atmosphere of \
-	nearby planets to seek cover."
+	desc = "The Pinnace is a very small, bluespace drive-lacking voidcraft with a range of limited hardpoints to mount a variety \
+			of modules. Produced late into 2541 by Ward-Takahashi GMB, they've since made a tidy profit selling the construction \
+			template to independent governments, organizations and other trans-stellars to fund research into more advanced designs."
 	value = CATALOGUER_REWARD_MEDIUM
 
 #undef NOGRAV_FIGHTER_DAMAGE
