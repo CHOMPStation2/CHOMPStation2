@@ -1,0 +1,16 @@
+2024-04-01:
+  Aroliacue:
+  - rscadd: Pilots and Field Medics now have full explorer access.
+  Kashargul:
+  - bugfix: default language selection verb and upgrades it to tgui input list
+  - bugfix: resetting robot language to galcom should now work properly with the set
+      default language verb on cancel
+  - bugfix: newscaster news icons not loading
+  cadyn:
+  - rscadd: humanoid simple mobs now (mostly) have pathfinding
+  - refactor: port citRP pathfinding for AI
+  - refactor: various optimizations for AI
+  - refactor: visible_message now uses component instead of in_view
+  tacoguy7765093:
+  - rscadd: The trash eat verb now gives a more ambiguous message instead of 'swallowing'
+      regardless of  vorgan.

@@ -1,7 +1,0 @@
-author: "cadyn"
-delete-after: True
-changes:
-  - rscadd: "humanoid simple mobs now (mostly) have pathfinding"
-  - refactor: "port citRP pathfinding for AI"
-  - refactor: "various optimizations for AI"
-  - refactor: "visible_message now uses component instead of in_view"

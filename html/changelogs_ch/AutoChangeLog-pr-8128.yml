@@ -1,4 +1,0 @@
-author: "Kashargul"
-delete-after: True
-changes:
-  - bugfix: "resetting robot language to galcom should now work properly with the set default language verb on cancel"
