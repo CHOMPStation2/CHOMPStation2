@@ -1,0 +1,4 @@
+author: "tacoguy7765093"
+delete-after: True
+changes:
+  - rscadd: "The trash eat verb now gives a more ambiguous message instead of 'swallowing' regardless of  vorgan."
