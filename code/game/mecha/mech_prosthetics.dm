@@ -49,6 +49,8 @@
 					"Vehicle",
 					"Rigsuit",
 					"Phazon",
+					"Pinnace", // CHOMPedit buildable fighters.
+					"Baron", // CHOMPedit buildable fighters.
 					//"Gopher", // VOREStation Add //CHOMPedit commented micromech stuff, because fuck this trash
 					//"Polecat", // VOREStation Add //CHOMPedit commented micromech stuff, because fuck this trash
 					//"Weasel", // VOREStation Add //CHOMPedit commented micromech stuff, because fuck this trash

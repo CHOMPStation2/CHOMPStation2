@@ -20,7 +20,8 @@
 
 /obj/effect/overmap/visitable/ship/aegis
 	name = "NEV Aegis"
-	desc = "A carrier-sized vessel."
+	desc = "The NanoTrasen Exploration Vessel Aegis is a carrier-sized spacecraft built to survey and provide security to fringe NanoTrasen and civilian territories.\
+			One of four sister ships, the Aegis is the third of its class, designed by a joint intiative of contracted SCG and Hegemony shipwrights."
 	icon = 'modular_chomp/icons/obj/overmap.dmi'
 	icon_state = "aegis_g"
 	scanner_desc = @{"[i]Registration[/i]: NEV Aegis
@@ -39,7 +40,8 @@
 		"ursula_dock",
 		"stargazer_dock",
 		"needle_dock",
-		"echidna_dock"
+		"echidna_dock",
+		"exphangar_1"
 		)
 
 	unowned_areas = list(/area/shuttle/baby_mammoth,
@@ -125,7 +127,7 @@
 	name = "\improper Starboard Q-Pad Junction"
 
 /area/shuttle/aegis/slingcarrierdock
-	name = "\improper Sling Carrier Dock"
+	name = "\improper Object Removal Ballista Bay"
 
 /area/shuttle/aegis/stationqpad
 	name ="\improper Station Q-Pad Junction"
