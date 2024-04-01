@@ -13,7 +13,7 @@ GLOBAL_LIST_EMPTY(shuttdisp_list)
 	name = "Shuttle 3"
 	warmup_time = 0
 	shuttle_area = /area/shuttle/shuttle3/start
-	current_location = "exphangar_1"
+	current_location = "hangar_3"
 	docking_controller_tag = "shuttle3_shuttle"
 	web_master_type = /datum/shuttle_web_master/shuttle3
 
@@ -22,8 +22,8 @@ GLOBAL_LIST_EMPTY(shuttdisp_list)
 	starting_destination = /datum/shuttle_destination/shuttle3/root
 
 /datum/shuttle_destination/shuttle3/root
-	name = "Exporation Hangar One"
-	my_landmark = "exphangar_1"
+	name = "Southern Cross Hangar Three"
+	my_landmark = "hangar_3"
 	preferred_interim_tag = "shuttle3_transit"
 
 	radio_announce = 0
@@ -34,10 +34,10 @@ GLOBAL_LIST_EMPTY(shuttdisp_list)
 	)
 
 /datum/shuttle_destination/shuttle3/root/get_arrival_message()
-	return "Attention, [master.my_shuttle.visible_name] has arrived to Exploration Hangar One."
+	return "Attention, [master.my_shuttle.visible_name] has arrived to Hangar Three."
 
 /datum/shuttle_destination/shuttle3/root/get_departure_message()
-	return "Attention, [master.my_shuttle.visible_name] has departed Exploration Hangar One."
+	return "Attention, [master.my_shuttle.visible_name] has departed Hangar Three."
 
 /datum/shuttle_destination/shuttle3/sif_orbit
 	name = "Sif Orbit"
@@ -46,7 +46,7 @@ GLOBAL_LIST_EMPTY(shuttdisp_list)
 
 	routes_to_make = list(
 		/datum/shuttle_destination/shuttle3/sky = 25 SECONDS,
-		/datum/shuttle_destination/shuttle3/stationhangar3 = 25 SECONDS
+		/datum/shuttle_destination/shuttle3/carrierhangar1 = 25 SECONDS
 	)
 
 /*
@@ -60,19 +60,19 @@ GLOBAL_LIST_EMPTY(shuttdisp_list)
 	)
 */
 
-/datum/shuttle_destination/shuttle3/stationhangar3
-	name = "Southern Cross Hangar Three"
-	my_landmark = "hangar_3"
+/datum/shuttle_destination/shuttle3/carrierhangar1
+	name = "NEV Aegis Hangar 1"
+	my_landmark = "aeghangar_1"
 	preferred_interim_tag = "shuttle3_transit"
 
 	radio_announce = 0
-	announcer = "Southern Cross Docking Computer"
+	announcer = "NEV Aegis Docking Computer"
 
-/datum/shuttle_destination/shuttle3/stationhangar3/get_arrival_message()
-	return "Attention, [master.my_shuttle.visible_name] has arrived to Hangar Three."
+/datum/shuttle_destination/shuttle3/carrierhangar1/get_arrival_message()
+	return "Attention, [master.my_shuttle.visible_name] has arrived to NEV Aegis Hangar One."
 
-/datum/shuttle_destination/shuttle3/stationhangar3/get_departure_message()
-	return "Attention, [master.my_shuttle.visible_name] has departed Hangar Three."
+/datum/shuttle_destination/shuttle3/carrierhangar1/get_departure_message()
+	return "Attention, [master.my_shuttle.visible_name] has departed NEV Aegis Hangar One."
 
 /datum/shuttle_destination/shuttle3/sky
 	name = "Skies of Sif"

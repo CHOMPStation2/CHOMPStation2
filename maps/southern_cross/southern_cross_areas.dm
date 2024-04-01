@@ -1909,7 +1909,7 @@ End Chompstation Edit*/
 	flags = RAD_SHIELDED
 
 /area/shuttle/shuttle3/start
-	name = "\improper Expedition Hangar One"
+	name = "\improper Southern Cross Hangar Three"
 	icon_state = "shuttlered"
 	base_turf = /turf/simulated/floor/reinforced
 
@@ -1917,8 +1917,8 @@ End Chompstation Edit*/
 	name = "south of second deck"
 	icon_state = "south"
 
-/area/shuttle/shuttle3/stationhangar3
-	name = "\improper Hangar Three"
+/area/shuttle/shuttle3/carrierhangar1
+	name = "\improper NEV Aegis Hangar One"
 	icon_state = "shuttlered"
 	base_turf = /turf/simulated/floor/reinforced
 
