@@ -287,8 +287,7 @@
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
 "bi" = (
-/obj/machinery/camera/network/carrier{
-	c_tag = "WILD - Shelter First Floor";
+/obj/machinery/camera/network/civilian{
 	dir = 8
 	},
 /turf/simulated/floor/wood/sif,
@@ -482,8 +481,7 @@
 /turf/simulated/wall/log_sif,
 /area/surface/outpost/shelter)
 "cD" = (
-/obj/machinery/camera/network/carrier{
-	c_tag = "WILD - Shelter Crew Dorms";
+/obj/machinery/camera/network/civilian{
 	dir = 4
 	},
 /obj/structure/table/sifwooden_reinforced,
@@ -748,9 +746,7 @@
 /turf/simulated/floor/water,
 /area/surface/outpost/wall/checkpoint)
 "ln" = (
-/obj/machinery/camera/network/carrier{
-	c_tag = "WILD - Shelter Second Floor Utilities"
-	},
+/obj/machinery/camera/network/civilian,
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter/utilityroom)
 "lX" = (
@@ -863,8 +859,7 @@
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter/dorms)
 "qe" = (
-/obj/machinery/camera/network/medbay{
-	c_tag = "WILD - Shelter First Aid";
+/obj/machinery/camera/network/civilian{
 	dir = 8
 	},
 /obj/effect/floor_decal/borderfloorwhite,
@@ -1025,8 +1020,7 @@
 /obj/structure/frame{
 	anchored = 1
 	},
-/obj/machinery/camera/network/carrier{
-	c_tag = "WILD - Shelter Utility Room";
+/obj/machinery/camera/network/civilian{
 	dir = 1
 	},
 /turf/simulated/floor/plating,
@@ -1123,8 +1117,7 @@
 /turf/simulated/floor/outdoors/grass/sif/planetuse,
 /area/surface/outpost/shelter/exterior)
 "xM" = (
-/obj/machinery/camera/network/carrier{
-	c_tag = "WILD - Shelter First Floor Exterior";
+/obj/machinery/camera/network/civilian{
 	dir = 1
 	},
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
@@ -1146,9 +1139,8 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/shelter/utilityroom)
 "yv" = (
-/obj/machinery/camera/network/carrier{
-	c_tag = "WILD - Shelter Utility Exterior";
-	dir = 4
+/obj/machinery/camera/network/civilian{
+	dir = 5
 	},
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outpost/shelter/exterior)
@@ -1564,8 +1556,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/shelter/dorms)
 "Px" = (
-/obj/machinery/camera/network/carrier{
-	c_tag = "WILD - Shelter Second Floor";
+/obj/machinery/camera/network/civilian{
 	dir = 8
 	},
 /obj/structure/cable{
