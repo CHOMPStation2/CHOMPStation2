@@ -333,7 +333,6 @@
 		if(restrict_modules_to.len > 0)
 			modules.Add(restrict_modules_to)
 		else
-			modules.Add(shell_module_types)
 			modules.Add(robot_module_types)
 			modules.Remove(GLOB.shell_module_blacklist) // CHOMPEdit - Managed Globals
 			//CHOMPedit Add
