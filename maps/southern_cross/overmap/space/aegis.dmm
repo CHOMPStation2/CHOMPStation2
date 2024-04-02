@@ -205,7 +205,6 @@
 /turf/simulated/floor,
 /area/shuttle/aegis/portbowairlock)
 "aiL" = (
-/obj/structure/railing/overhang/waterless/grey,
 /obj/structure/railing/grey,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -434,9 +433,6 @@
 /turf/simulated/floor/reinforced,
 /area/shuttle/aegis/telecomms)
 "aqW" = (
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 8
-	},
 /obj/structure/railing/grey{
 	dir = 8
 	},
@@ -1549,7 +1545,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled,
 /area/shuttle/aegis/eva)
 "bjU" = (
 /obj/structure/railing{
@@ -1567,7 +1563,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled,
 /area/shuttle/aegis/eva)
 "bkz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1582,9 +1578,6 @@
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/commanderroom)
 "bkS" = (
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 8
-	},
 /obj/structure/railing/grey{
 	dir = 8
 	},
@@ -1867,7 +1860,8 @@
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
 	},
-/obj/machinery/door/blast/regular{
+/obj/machinery/door/blast/angled{
+	dir = 8;
 	id = "aeg_securestorage_blastdoor"
 	},
 /turf/simulated/floor/reinforced,
@@ -1907,9 +1901,6 @@
 /turf/simulated/wall/bay/r_wall,
 /area/shuttle/aegis/portfuelstorage)
 "bAe" = (
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 4
-	},
 /obj/structure/railing/grey{
 	dir = 4
 	},
@@ -1953,10 +1944,6 @@
 /turf/simulated/floor/carpet,
 /area/shuttle/aegis/commanderroom)
 "bBM" = (
-/obj/structure/railing/overhang/waterless/grey,
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 4
-	},
 /obj/structure/railing/grey,
 /obj/structure/railing/grey{
 	dir = 4
@@ -2092,9 +2079,6 @@
 /turf/simulated/floor,
 /area/shuttle/aegis/reactoraccess)
 "bLb" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 8
-	},
 /obj/machinery/light{
 	dir = 8;
 	pixel_x = -12
@@ -3432,12 +3416,11 @@
 /turf/simulated/floor/reinforced,
 /area/shuttle/aegis/hangarfour)
 "cLB" = (
-/obj/effect/wingrille_spawn/reinforced_phoron,
-/obj/machinery/door/blast/radproof{
-	dir = 4;
+/obj/machinery/door/firedoor/glass,
+/obj/effect/low_wall_spawner/bay/reinforced/rphoron,
+/obj/machinery/door/blast/angled{
 	id = "Aeg_EngineShroud"
 	},
-/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/reinforced,
 /area/shuttle/aegis/reactorcr)
 "cLY" = (
@@ -3873,7 +3856,7 @@
 /area/shuttle/aegis/medbaylobby)
 "ddW" = (
 /obj/structure/shuttle/engine/heater,
-/turf/simulated/wall/bay/r_wall,
+/turf/simulated/wall/tgmc/durawall,
 /area/shuttle/aegis/reactorroom)
 "dei" = (
 /obj/effect/floor_decal/grass_edge{
@@ -4568,9 +4551,6 @@
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/starqpadjunction)
 "dJb" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 8
-	},
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -28
 	},
@@ -4619,7 +4599,7 @@
 	dir = 1
 	},
 /obj/machinery/door/window/southright,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/reinforced,
 /area/shuttle/aegis/eva)
 "dJw" = (
 /obj/machinery/power/quantumpad{
@@ -4779,10 +4759,13 @@
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/stargazer)
 "dMs" = (
-/obj/effect/wingrille_spawn/reinforced_phoron,
-/obj/machinery/door/blast/radproof{
+/obj/structure/low_wall/bay/reinforced/orange,
+/obj/structure/grille/bay,
+/obj/structure/window/bay/phoronreinforced,
+/obj/machinery/door/blast/angled{
+	dir = 8;
 	id = "Aeg_CoreShroud";
-	name = "Core Shroud"
+	rad_resistance = 100
 	},
 /turf/simulated/floor/reinforced,
 /area/shuttle/aegis/reactorroom)
@@ -4859,9 +4842,6 @@
 /turf/simulated/floor/tiled,
 /area/shuttle/aegis/hangartwo)
 "dQK" = (
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 8
-	},
 /obj/structure/railing/grey{
 	dir = 8
 	},
@@ -5037,9 +5017,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/aegis/telecomms)
 "dWS" = (
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 4
-	},
 /obj/structure/railing/grey{
 	dir = 4
 	},
@@ -5500,7 +5477,6 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/obj/structure/window/plastitanium,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/aegis/aicore)
 "era" = (
@@ -5629,10 +5605,6 @@
 /area/shuttle/aegis/hangarfour)
 "evn" = (
 /obj/machinery/smartfridge/drinks,
-/obj/machinery/light{
-	dir = 4;
-	pixel_x = 12
-	},
 /obj/machinery/button/remote/blast_door{
 	dir = 8;
 	id = "aeg_bar_shutter";
@@ -6142,7 +6114,6 @@
 /turf/simulated/floor/reinforced,
 /area/shuttle/aegis/engstorage)
 "eKH" = (
-/obj/machinery/light,
 /obj/item/device/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -21
@@ -6336,17 +6307,16 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/maintenance_hatch{
-	icon_state = "door_locked";
+/obj/machinery/door/airlock/angled_bay/hatch/engineering{
 	id_tag = "aeg_reactor_bolt";
-	locked = 1;
 	name = "Core Access Hatch";
-	req_one_access = list(11)
+	locked = 1;
+	req_one_access = list(11);
+	req_access = null
 	},
-/obj/machinery/door/blast/radproof{
-	dir = 4;
+/obj/machinery/door/blast/angled{
 	id = "Aeg_CoreShroud";
-	name = "Core Shroud"
+	rad_resistance = 100
 	},
 /turf/simulated/floor,
 /area/shuttle/aegis/reactorroom)
@@ -6792,7 +6762,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
 	dir = 1
 	},
-/turf/simulated/wall/bay/r_wall,
+/turf/simulated/wall/tgmc/durawall,
 /area/shuttle/aegis/reactorroom)
 "fcF" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
@@ -7249,17 +7219,9 @@
 /turf/simulated/floor/wood,
 /area/shuttle/aegis/bar)
 "fvj" = (
-/obj/structure/window/phoronreinforced{
-	dir = 4
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 1
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 8
-	},
-/obj/structure/window/phoronreinforced,
-/obj/structure/grille,
+/obj/structure/low_wall/bay/reinforced/orange,
+/obj/structure/grille/bay,
+/obj/structure/window/bay/phoronreinforced,
 /turf/simulated/floor/reinforced,
 /area/shuttle/aegis/reactorroom)
 "fvC" = (
@@ -7339,7 +7301,7 @@
 	dir = 8;
 	pixel_x = -24
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled,
 /area/shuttle/aegis/eva)
 "fyp" = (
 /obj/machinery/r_n_d/protolathe,
@@ -7719,10 +7681,11 @@
 /area/shuttle/aegis/cic)
 "fPq" = (
 /obj/machinery/door/firedoor,
-/obj/effect/low_wall_spawner/bay/reinforced/rglass,
-/obj/machinery/door/blast/regular{
+/obj/machinery/door/blast/angled{
+	dir = 4;
 	id = "aeg_bar_blastdoor"
 	},
+/obj/effect/low_wall_spawner/bay/reinforced/rglass,
 /turf/simulated/floor/reinforced,
 /area/shuttle/aegis/bar)
 "fPK" = (
@@ -8136,7 +8099,8 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/machinery/door/blast/regular{
+/obj/machinery/door/blast/angled{
+	dir = 8;
 	id = "aeg_securestorage_blastdoor"
 	},
 /turf/simulated/floor/reinforced,
@@ -8152,11 +8116,12 @@
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/needle)
 "giE" = (
-/obj/effect/wingrille_spawn/reinforced_phoron,
-/obj/machinery/door/blast/radproof{
-	id = "Aeg_EngineShroud"
-	},
 /obj/machinery/door/firedoor/glass,
+/obj/effect/low_wall_spawner/bay/reinforced/rphoron,
+/obj/machinery/door/blast/angled{
+	id = "Aeg_EngineShroud";
+	dir = 4
+	},
 /turf/simulated/floor/reinforced,
 /area/shuttle/aegis/reactorcr)
 "giX" = (
@@ -8413,12 +8378,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/aegis/lowersternhallway)
-"gsP" = (
-/obj/structure/window/plastitanium{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/milspec/raised,
-/area/shuttle/aegis/telecomms)
 "gtk" = (
 /obj/machinery/computer/ship/sensors,
 /turf/simulated/floor/tiled/milspec,
@@ -8578,15 +8537,6 @@
 	},
 /turf/simulated/wall/thull,
 /area/shuttle/ursula)
-"gAd" = (
-/obj/structure/railing/grey{
-	dir = 4
-	},
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/shuttle/aegis/staginghangar)
 "gAe" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 5
@@ -8742,7 +8692,7 @@
 	dir = 8
 	},
 /obj/structure/shuttle/engine/heater,
-/turf/simulated/wall/bay/r_wall,
+/turf/simulated/wall/tgmc/durawall,
 /area/shuttle/aegis/reactorroom)
 "gHs" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -8852,9 +8802,6 @@
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/rnd)
 "gMs" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 4
-	},
 /obj/machinery/light{
 	dir = 4;
 	pixel_x = 12
@@ -9061,10 +9008,6 @@
 /turf/simulated/floor/tiled,
 /area/shuttle/aegis/hangartwo)
 "gVf" = (
-/obj/machinery/light{
-	dir = 8;
-	pixel_x = -12
-	},
 /obj/machinery/appliance/cooker/oven,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/kitchen)
@@ -9211,7 +9154,7 @@
 "hbj" = (
 /obj/structure/dispenser/oxygen,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled,
 /area/shuttle/aegis/eva)
 "hbq" = (
 /obj/structure/railing{
@@ -9648,7 +9591,7 @@
 /obj/effect/floor_decal/corner/white/border{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled,
 /area/shuttle/aegis/eva)
 "hrh" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
@@ -9705,12 +9648,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/carpet,
 /area/shuttle/aegis/suite2)
-"hsy" = (
-/obj/effect/floor_decal/borderfloorblack/corner{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/milspec/raised,
-/area/shuttle/aegis/staginghangar)
 "hsz" = (
 /obj/structure/closet/walllocker/emerglocker/south,
 /obj/machinery/power/smes/buildable/point_of_interest{
@@ -9969,12 +9906,6 @@
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/shuttle/aegis/cic)
-"hCD" = (
-/obj/effect/floor_decal/borderfloorblack/corner{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/milspec/raised,
-/area/shuttle/aegis/staginghangar)
 "hCP" = (
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -10076,9 +10007,6 @@
 /turf/simulated/floor,
 /area/shuttle/aegis/reactorroom)
 "hFX" = (
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 8
-	},
 /obj/structure/railing/grey{
 	dir = 8
 	},
@@ -10110,12 +10038,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/shuttle/aegis/starlowermaint)
-"hGu" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/milspec/raised,
-/area/shuttle/aegis/staginghangar)
 "hGv" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -10299,12 +10221,6 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/reinforced,
 /area/shuttle/aegis/starboardbowairlock)
-"hMP" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/milspec/raised,
-/area/shuttle/aegis/staginghangar)
 "hOa" = (
 /obj/structure/table/standard,
 /obj/item/weapon/storage/firstaid/surgery,
@@ -10344,25 +10260,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/shuttle/aegis/gateway)
-"hPN" = (
-/obj/machinery/door/blast/radproof{
-	dir = 4;
-	id = "Aeg_CoreShroud";
-	name = "Core Shroud"
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 4
-	},
-/obj/structure/window/phoronreinforced,
-/obj/structure/window/phoronreinforced{
-	dir = 8
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 1
-	},
-/obj/structure/grille,
-/turf/simulated/floor/reinforced,
-/area/shuttle/aegis/reactorroom)
 "hPP" = (
 /obj/structure/cable/green{
 	d2 = 4;
@@ -10515,9 +10412,6 @@
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/kitchen)
 "hXD" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 4
-	},
 /obj/item/device/radio/intercom{
 	dir = 4;
 	name = "Station Intercom (General)";
@@ -11128,7 +11022,7 @@
 /obj/effect/floor_decal/corner/white/border{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled,
 /area/shuttle/aegis/eva)
 "isx" = (
 /obj/effect/floor_decal/techfloor/corner{
@@ -11455,10 +11349,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/aegis/staginghangar)
 "iIB" = (
-/obj/machinery/door/blast/radproof{
-	dir = 8;
+/obj/machinery/door/blast/angled{
 	id = "aeg_enginevent_stagetwo";
-	name = "Emergency Blast Door"
+	rad_resistance = 100
 	},
 /turf/simulated/floor,
 /area/shuttle/aegis/reactorroom)
@@ -12140,6 +12033,10 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 8
 	},
+/obj/machinery/light{
+	dir = 8;
+	pixel_x = -12
+	},
 /turf/simulated/floor/tiled,
 /area/shuttle/aegis/explobriefroom)
 "jlw" = (
@@ -12315,9 +12212,6 @@
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/rndlobby)
 "jqy" = (
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 8
-	},
 /obj/structure/railing/grey{
 	dir = 8
 	},
@@ -12893,7 +12787,7 @@
 /area/shuttle/aegis/techstorage)
 "jKJ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green,
-/turf/simulated/wall/bay/r_wall,
+/turf/simulated/wall/tgmc/durawall,
 /area/shuttle/aegis/reactorroom)
 "jLz" = (
 /obj/machinery/light{
@@ -12987,9 +12881,6 @@
 /turf/simulated/floor,
 /area/shuttle/aegis/portfuelstorage)
 "jOX" = (
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 4
-	},
 /obj/structure/railing/grey{
 	dir = 4
 	},
@@ -13015,7 +12906,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled,
 /area/shuttle/aegis/eva)
 "jQK" = (
 /obj/structure/reagent_dispensers/watertank/high,
@@ -13862,11 +13753,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/reinforced,
 /area/shuttle/aegis/telecomms)
-"kAr" = (
-/obj/structure/railing/overhang/waterless/grey,
-/obj/structure/railing/grey,
-/turf/simulated/floor/tiled/dark,
-/area/shuttle/aegis/staginghangar)
 "kAG" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 8
@@ -13975,22 +13861,10 @@
 	},
 /turf/simulated/floor,
 /area/shuttle/aegis/reactorroom)
-"kDy" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 10
-	},
-/turf/simulated/floor/tiled/milspec/raised,
-/area/shuttle/aegis/staginghangar)
 "kDE" = (
 /obj/structure/window/reinforced/survival_pod,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/echidna)
-"kDU" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 5
-	},
-/turf/simulated/floor/tiled/milspec/raised,
-/area/shuttle/aegis/staginghangar)
 "kEm" = (
 /obj/machinery/suit_storage_unit/standard_unit,
 /obj/effect/floor_decal/borderfloorblack{
@@ -14207,9 +14081,6 @@
 /turf/simulated/floor/tiled,
 /area/shuttle/aegis/engstorage)
 "kOZ" = (
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 8
-	},
 /obj/structure/railing/grey{
 	dir = 8
 	},
@@ -14876,9 +14747,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/aegis/staginghangar)
 "lqy" = (
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 8
-	},
 /obj/structure/railing/grey{
 	dir = 8
 	},
@@ -14988,9 +14856,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/shuttle/aegis/engstorage)
-"ltw" = (
-/turf/simulated/wall/bay/r_wall,
-/area/shuttle/aegis/reactorroom)
 "ltL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -15418,9 +15283,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/aegis/staginghangar)
 "lMk" = (
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 4
-	},
 /obj/structure/railing/grey{
 	dir = 4
 	},
@@ -15459,7 +15321,6 @@
 /obj/effect/floor_decal/carpet{
 	dir = 1
 	},
-/obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/shutters{
 	dir = 1;
 	id = "aeg_bar_shutter";
@@ -15540,9 +15401,6 @@
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/pathfinderroom)
 "lOV" = (
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 8
-	},
 /obj/structure/railing/grey{
 	dir = 8
 	},
@@ -15817,11 +15675,12 @@
 /turf/simulated/floor/carpet,
 /area/shuttle/aegis/suite2)
 "lWC" = (
-/obj/effect/wingrille_spawn/reinforced_phoron,
-/obj/machinery/door/blast/radproof{
-	dir = 4;
+/obj/structure/low_wall/bay/reinforced/orange,
+/obj/structure/grille/bay,
+/obj/structure/window/bay/phoronreinforced,
+/obj/machinery/door/blast/angled{
 	id = "Aeg_CoreShroud";
-	name = "Core Shroud"
+	rad_resistance = 100
 	},
 /turf/simulated/floor/reinforced,
 /area/shuttle/aegis/reactorroom)
@@ -15849,9 +15708,6 @@
 /turf/simulated/floor/tiled,
 /area/shuttle/aegis/secbowcheckpoint)
 "lZf" = (
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 4
-	},
 /obj/structure/railing/grey{
 	dir = 4
 	},
@@ -15894,7 +15750,6 @@
 /obj/effect/floor_decal/carpet{
 	dir = 10
 	},
-/obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/shutters{
 	dir = 8;
 	id = "aeg_bar_shutter";
@@ -16050,9 +15905,6 @@
 /turf/simulated/floor,
 /area/shuttle/baby_mammoth)
 "mef" = (
-/obj/effect/floor_decal/borderfloorblack/corner{
-	dir = 1
-	},
 /obj/machinery/alarm{
 	pixel_y = 22
 	},
@@ -16171,7 +16023,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/secarmory)
 "mkR" = (
-/obj/structure/railing/overhang/waterless/grey,
 /obj/structure/railing/grey,
 /obj/machinery/light,
 /obj/effect/floor_decal/industrial/warning{
@@ -16386,7 +16237,6 @@
 	name = "Bar";
 	req_access = list(25)
 	},
-/obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
@@ -16489,10 +16339,6 @@
 /turf/simulated/floor,
 /area/shuttle/aegis/portfuelstorage)
 "mul" = (
-/obj/machinery/light{
-	dir = 4;
-	pixel_x = 12
-	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
@@ -16524,9 +16370,6 @@
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/aegis/cic)
 "mwu" = (
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 4
-	},
 /obj/structure/railing/grey{
 	dir = 4
 	},
@@ -16692,10 +16535,6 @@
 /obj/structure/table/woodentable,
 /obj/item/weapon/paper_bin,
 /obj/item/weapon/pen/fountain,
-/obj/machinery/light{
-	dir = 8;
-	pixel_x = -12
-	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
 	},
@@ -16884,9 +16723,6 @@
 "mNd" = (
 /obj/structure/railing/grey{
 	dir = 1
-	},
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 4
 	},
 /obj/structure/railing/grey{
 	dir = 4
@@ -17121,7 +16957,7 @@
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/red/border,
 /obj/machinery/door/window/northright,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/reinforced,
 /area/shuttle/aegis/eva)
 "mWw" = (
 /obj/effect/floor_decal/grass_edge{
@@ -18004,7 +17840,7 @@
 /area/shuttle/echidna)
 "nyb" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
-/turf/simulated/wall/tgmc/durawall,
+/turf/simulated/wall/bay/r_wall/orange,
 /area/shuttle/aegis/reactorroom)
 "nyj" = (
 /obj/structure/cable/green{
@@ -18158,14 +17994,6 @@
 	},
 /obj/structure/sign/warning/secure_area{
 	pixel_x = -32
-	},
-/obj/machinery/button/remote/blast_door{
-	dir = 4;
-	id = "aeg_securestorage_blastdoor";
-	name = "Secure Storage";
-	pixel_x = -24;
-	pixel_y = 8;
-	req_one_access = list(10,30)
 	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/aegis/lowersternhallway)
@@ -18528,7 +18356,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled,
 /area/shuttle/aegis/eva)
 "nOu" = (
 /turf/simulated/wall/bay/r_wall,
@@ -18648,7 +18476,7 @@
 	dir = 1
 	},
 /obj/machinery/door/window/southleft,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/reinforced,
 /area/shuttle/aegis/eva)
 "nWY" = (
 /obj/machinery/alarm{
@@ -19136,9 +18964,6 @@
 /turf/simulated/floor/wood,
 /area/shuttle/aegis/bar)
 "ooz" = (
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 8
-	},
 /obj/structure/railing/grey{
 	dir = 8
 	},
@@ -19327,7 +19152,7 @@
 	dir = 1
 	},
 /obj/machinery/door/window/southleft,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/reinforced,
 /area/shuttle/aegis/eva)
 "oyD" = (
 /turf/simulated/floor/tiled/techfloor,
@@ -20534,10 +20359,6 @@
 /turf/simulated/floor,
 /area/shuttle/needle)
 "pDu" = (
-/obj/structure/railing/overhang/waterless/grey,
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 8
-	},
 /obj/structure/railing/grey{
 	dir = 8
 	},
@@ -21173,9 +20994,6 @@
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/aegis/engoffice)
 "qbH" = (
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 4
-	},
 /obj/structure/railing/grey{
 	dir = 4
 	},
@@ -21220,7 +21038,7 @@
 	dir = 1
 	},
 /obj/machinery/door/window/southright,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/reinforced,
 /area/shuttle/aegis/eva)
 "qci" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -21274,10 +21092,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/shuttle/aegis/janitorial)
-"qdH" = (
-/obj/structure/window/plastitanium,
-/turf/simulated/floor/tiled/milspec/raised,
-/area/shuttle/aegis/telecomms)
 "qdY" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
@@ -21378,13 +21192,16 @@
 /turf/simulated/floor,
 /area/shuttle/aegis/rndlobby)
 "qiB" = (
-/obj/effect/wingrille_spawn/reinforced_phoron,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 9
 	},
-/obj/machinery/door/blast/radproof{
+/obj/structure/low_wall/bay/reinforced/orange,
+/obj/structure/grille/bay,
+/obj/structure/window/bay/phoronreinforced,
+/obj/machinery/door/blast/angled{
+	dir = 8;
 	id = "Aeg_CoreShroud";
-	name = "Core Shroud"
+	rad_resistance = 100
 	},
 /turf/simulated/floor,
 /area/shuttle/aegis/reactorroom)
@@ -21398,9 +21215,6 @@
 /turf/simulated/floor/tiled,
 /area/shuttle/aegis/hangarfive)
 "qjb" = (
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 8
-	},
 /obj/structure/railing/grey{
 	dir = 8
 	},
@@ -21877,10 +21691,8 @@
 	dir = 1
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/blast/regular/open{
-	dir = 4;
-	id = "aeg_enginevent_stageone";
-	name = "Emergency Blast Door"
+/obj/machinery/door/blast/angled/open{
+	id = "aeg_enginevent_stageone"
 	},
 /turf/simulated/floor/reinforced,
 /area/shuttle/aegis/reactorroom)
@@ -22099,10 +21911,9 @@
 	dir = 8
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/blast/radproof{
-	dir = 8;
+/obj/machinery/door/blast/angled{
 	id = "aeg_enginevent_stagetwo";
-	name = "Emergency Blast Door"
+	rad_resistance = 100
 	},
 /turf/simulated/floor/reinforced,
 /area/shuttle/aegis/reactorroom)
@@ -22680,7 +22491,7 @@
 /obj/item/weapon/storage/briefcase/inflatable{
 	pixel_x = -3
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled,
 /area/shuttle/aegis/eva)
 "rdE" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -22759,8 +22570,8 @@
 /turf/simulated/floor/reinforced,
 /area/shuttle/aegis/slingcarrierdock)
 "rhP" = (
-/turf/simulated/floor/tiled/dark,
-/area/shuttle/aegis/eva)
+/turf/simulated/wall/bay/r_wall/orange,
+/area/shuttle/aegis/reactorroom)
 "rhS" = (
 /obj/structure/closet/crate/engineering,
 /obj/fiftyspawner/steel,
@@ -23251,12 +23062,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/rndlobby)
-"ruz" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/milspec/raised,
-/area/shuttle/aegis/staginghangar)
 "ruI" = (
 /obj/machinery/atmospherics/pipe/tank/phoron/full{
 	dir = 8
@@ -23613,11 +23418,12 @@
 /turf/simulated/floor,
 /area/shuttle/aegis/reactorroom)
 "rKa" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 8
+/obj/machinery/light{
+	dir = 4;
+	pixel_x = 12
 	},
-/turf/simulated/floor/tiled/milspec/raised,
-/area/shuttle/aegis/staginghangar)
+/turf/simulated/floor/tiled,
+/area/shuttle/aegis/explobriefroom)
 "rKb" = (
 /obj/machinery/computer/ship/navigation,
 /turf/simulated/floor/tiled/milspec,
@@ -24456,7 +24262,7 @@
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/red/border,
 /obj/machinery/door/window/northleft,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/reinforced,
 /area/shuttle/aegis/eva)
 "sph" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -24645,9 +24451,19 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/cic)
 "swn" = (
-/obj/effect/floor_decal/borderfloorblack/corner,
-/turf/simulated/floor/tiled/milspec/raised,
-/area/shuttle/aegis/staginghangar)
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/machinery/button/remote/blast_door{
+	dir = 4;
+	id = "aeg_securestorage_blastdoor";
+	name = "Secure Storage";
+	pixel_x = -24;
+	pixel_y = 8;
+	req_one_access = list(10,30)
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/aegis/lowersternhallway)
 "swx" = (
 /obj/effect/floor_decal/borderfloorblack/corner,
 /obj/effect/floor_decal/corner/green/bordercorner,
@@ -24765,9 +24581,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/techstorage)
 "sBB" = (
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 4
-	},
 /obj/structure/railing/grey{
 	dir = 4
 	},
@@ -25373,9 +25186,6 @@
 /turf/simulated/floor/tiled,
 /area/shuttle/aegis/gatewayeva)
 "taW" = (
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 4
-	},
 /obj/structure/railing/grey{
 	dir = 4
 	},
@@ -25453,7 +25263,7 @@
 	dir = 8;
 	pixel_x = -12
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled,
 /area/shuttle/aegis/eva)
 "tek" = (
 /obj/machinery/computer/atmos_alert,
@@ -25776,9 +25586,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/aegis/staginghangar)
 "tro" = (
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 8
-	},
 /obj/structure/railing/grey{
 	dir = 1
 	},
@@ -25970,7 +25777,7 @@
 	dir = 1
 	},
 /obj/machinery/door/window/southleft,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/reinforced,
 /area/shuttle/aegis/eva)
 "tAp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -26152,7 +25959,8 @@
 "tGv" = (
 /obj/machinery/door/firedoor,
 /obj/effect/low_wall_spawner/bay/reinforced/rglass,
-/obj/machinery/door/blast/regular{
+/obj/machinery/door/blast/angled{
+	dir = 4;
 	id = "aeg_botany_blastdoor"
 	},
 /turf/simulated/floor/reinforced,
@@ -26353,7 +26161,7 @@
 	dir = 10
 	},
 /obj/structure/shuttle/engine/heater,
-/turf/simulated/wall/bay/r_wall,
+/turf/simulated/wall/tgmc/durawall,
 /area/shuttle/aegis/reactorroom)
 "tMh" = (
 /obj/machinery/atmospherics/unary/engine{
@@ -26486,6 +26294,7 @@
 /area/shuttle/aegis/secoffice)
 "tRU" = (
 /obj/machinery/vending/boozeomat,
+/obj/machinery/light,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/bar)
 "tSg" = (
@@ -26588,9 +26397,6 @@
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/aegis/aicore)
 "tVj" = (
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 8
-	},
 /obj/structure/railing/grey{
 	dir = 8
 	},
@@ -26627,12 +26433,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/aegis/portbowhallway)
-"tWO" = (
-/obj/structure/window/plastitanium{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/milspec/raised,
-/area/shuttle/aegis/aicore)
 "tWQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -26754,6 +26554,10 @@
 /area/shuttle/aegis/exploarmory)
 "ual" = (
 /obj/machinery/appliance/cooker/grill,
+/obj/machinery/light{
+	dir = 8;
+	pixel_x = -12
+	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/kitchen)
 "uap" = (
@@ -26919,7 +26723,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled,
 /area/shuttle/aegis/eva)
 "ufY" = (
 /obj/machinery/light/small{
@@ -28007,7 +27811,7 @@
 /obj/item/device/suit_cooling_unit,
 /obj/item/device/suit_cooling_unit,
 /obj/item/device/suit_cooling_unit,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled,
 /area/shuttle/aegis/eva)
 "uRt" = (
 /obj/structure/closet/secure_closet/guncabinet{
@@ -28062,7 +27866,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled,
 /area/shuttle/aegis/eva)
 "uSL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -28100,7 +27904,7 @@
 	dir = 1
 	},
 /obj/machinery/door/window/southright,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/reinforced,
 /area/shuttle/aegis/eva)
 "uTM" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
@@ -29304,15 +29108,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/shuttle/aegis/portuppermaint)
-"vMj" = (
-/obj/structure/railing/grey{
-	dir = 8
-	},
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark,
-/area/shuttle/aegis/staginghangar)
 "vMl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/green{
@@ -29418,18 +29213,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/aegis/portbowhallway)
-"vPD" = (
-/obj/structure/railing/grey{
-	dir = 1
-	},
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 8
-	},
-/obj/structure/railing/grey{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark,
-/area/shuttle/aegis/staginghangar)
 "vQf" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -29452,6 +29235,10 @@
 /obj/item/weapon/reagent_containers/dropper,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
+	},
+/obj/machinery/light{
+	dir = 4;
+	pixel_x = 12
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/kitchen)
@@ -29516,7 +29303,7 @@
 /obj/item/clothing/shoes/magboots,
 /obj/item/weapon/tank/jetpack/oxygen,
 /obj/item/weapon/tank/jetpack/oxygen,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled,
 /area/shuttle/aegis/eva)
 "vTc" = (
 /obj/item/clothing/accessory/stethoscope,
@@ -30323,10 +30110,8 @@
 	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/blast/regular/open{
-	dir = 4;
-	id = "aeg_enginevent_stageone";
-	name = "Emergency Blast Door"
+/obj/machinery/door/blast/angled/open{
+	id = "aeg_enginevent_stageone"
 	},
 /turf/simulated/floor/reinforced,
 /area/shuttle/aegis/reactorroom)
@@ -30692,12 +30477,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/aegis/staginghangar)
-"wMv" = (
-/obj/structure/window/plastitanium{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/milspec/raised,
-/area/shuttle/aegis/aicore)
 "wMw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -30773,7 +30552,7 @@
 	dir = 8
 	},
 /obj/structure/shuttle/engine/heater,
-/turf/simulated/wall/bay/r_wall,
+/turf/simulated/wall/tgmc/durawall,
 /area/shuttle/aegis/reactorroom)
 "wPO" = (
 /turf/simulated/floor/tiled/techfloor,
@@ -31242,9 +31021,6 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/obj/structure/window/plastitanium{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/aegis/telecomms)
 "xil" = (
@@ -31331,9 +31107,6 @@
 /turf/simulated/floor,
 /area/shuttle/aegis/staruppermaint)
 "xkN" = (
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 4
-	},
 /obj/structure/railing/grey{
 	dir = 4
 	},
@@ -31545,6 +31318,12 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/effect/floor_decal/borderfloorblack/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/bordercorner{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/shuttle/aegis/eva)
 "xss" = (
@@ -31560,7 +31339,7 @@
 	dir = 4;
 	pixel_x = 12
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled,
 /area/shuttle/aegis/eva)
 "xsP" = (
 /turf/simulated/wall/bay/r_wall,
@@ -31738,9 +31517,6 @@
 /turf/simulated/floor/tiled,
 /area/shuttle/aegis/breakroom)
 "xxE" = (
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 4
-	},
 /obj/structure/railing/grey{
 	dir = 4
 	},
@@ -31774,7 +31550,6 @@
 /obj/effect/floor_decal/carpet{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/shutters{
 	dir = 8;
 	id = "aeg_bar_shutter";
@@ -32341,9 +32116,6 @@
 /turf/simulated/floor/tiled,
 /area/shuttle/aegis/engoffice)
 "xSb" = (
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 4
-	},
 /obj/structure/railing/grey{
 	dir = 4
 	},
@@ -32415,9 +32187,6 @@
 /turf/simulated/floor/tiled,
 /area/shuttle/aegis/eva)
 "xUr" = (
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 4
-	},
 /obj/structure/railing/grey{
 	dir = 4
 	},
@@ -32750,9 +32519,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/secarmory)
 "yhb" = (
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 4
-	},
 /obj/structure/railing/grey{
 	dir = 4
 	},
@@ -32959,9 +32725,6 @@
 /turf/simulated/floor,
 /area/shuttle/aegis/lowersternhallway)
 "ykK" = (
-/obj/structure/railing/overhang/waterless/grey{
-	dir = 8
-	},
 /obj/structure/railing/grey{
 	dir = 8
 	},
@@ -61790,7 +61553,7 @@ scj
 liP
 kkt
 sYT
-hpu
+rKa
 jWV
 sdR
 uWq
@@ -63714,7 +63477,7 @@ wIi
 aQm
 wDU
 ajK
-rhP
+dqX
 bjT
 nOj
 uQX
@@ -64233,7 +63996,7 @@ llX
 hbj
 rdA
 vRX
-rhP
+dqX
 cMj
 xsc
 eOx
@@ -64388,7 +64151,7 @@ gzI
 kAG
 vbj
 vpK
-ltw
+vxU
 aPh
 ohy
 vMd
@@ -64488,10 +64251,10 @@ pvk
 pqo
 ikH
 lOd
-rhP
-rhP
-rhP
-rhP
+dqX
+dqX
+dqX
+dqX
 cMj
 kUD
 quy
@@ -64904,10 +64667,10 @@ vEk
 vEk
 vEk
 oHs
-ltw
-ltw
-ltw
-ltw
+vxU
+vxU
+vxU
+vxU
 gZh
 dpg
 dpg
@@ -65356,14 +65119,14 @@ koU
 yfj
 kjH
 nOu
-hMP
-rKa
+fXV
+fXV
 bLb
 dJb
-kDy
+fXV
 nOu
 xSb
-gAd
+xSb
 rrQ
 koU
 koU
@@ -65416,11 +65179,11 @@ fbZ
 vEk
 oXb
 wDi
-vxU
+rhP
 dMs
 dMs
 dMs
-vxU
+rhP
 vEk
 vEk
 fcD
@@ -65618,7 +65381,7 @@ mef
 fXV
 oFQ
 hLp
-hsy
+fXV
 nOu
 lkz
 lkz
@@ -66122,7 +65885,7 @@ ooz
 qjb
 pDu
 lkz
-vPD
+tro
 ykK
 kOZ
 dQK
@@ -66130,11 +65893,11 @@ jqy
 hFX
 bkS
 nOu
-hCD
+fXV
 fXV
 oFQ
 oON
-swn
+fXV
 nOu
 lkz
 lkz
@@ -66190,7 +65953,7 @@ cyf
 rJq
 aDR
 thG
-hPN
+lWC
 tBo
 tcB
 ucP
@@ -66378,7 +66141,7 @@ koU
 koU
 koU
 koU
-kAr
+wVQ
 pdx
 kYh
 koU
@@ -66388,14 +66151,14 @@ koU
 twL
 fgV
 nOu
-kDU
+fXV
 hXD
 gMs
-hGu
-ruz
+fXV
+fXV
 nOu
 jqy
-vMj
+jqy
 rrQ
 koU
 koU
@@ -66452,7 +66215,7 @@ nyb
 qiB
 dMs
 dMs
-vxU
+rhP
 vEk
 vEk
 ddW
@@ -66968,10 +66731,10 @@ vEk
 vEk
 vEk
 cBv
-ltw
-ltw
-ltw
-ltw
+vxU
+vxU
+vxU
+vxU
 pZM
 tey
 tey
@@ -67484,7 +67247,7 @@ ihr
 tEx
 tEx
 gAe
-ltw
+vxU
 gzy
 mbg
 iKm
@@ -68271,7 +68034,7 @@ eRE
 eRE
 nkx
 tUV
-tWO
+rZM
 rZM
 nkx
 sTM
@@ -68787,7 +68550,7 @@ eRE
 eOp
 nkx
 qFg
-wMv
+rZM
 rZM
 nkx
 sTM
@@ -69818,9 +69581,9 @@ ica
 eJv
 xbV
 oPi
-qdH
+lIy
 awV
-gsP
+lIy
 oPi
 sTM
 njl
@@ -71617,7 +71380,7 @@ sVd
 vaT
 oRl
 nCG
-jAV
+swn
 jAV
 jAV
 jAV
