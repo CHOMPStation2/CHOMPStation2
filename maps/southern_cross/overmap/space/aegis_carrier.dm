@@ -41,7 +41,7 @@
 		"stargazer_dock",
 		"needle_dock",
 		"echidna_dock",
-		"exphangar_1"
+		"aeghangar_1"
 		)
 
 	unowned_areas = list(/area/shuttle/baby_mammoth,
