@@ -17,7 +17,10 @@
 	// Silicons have no species language usually. So let's default them to GALCOM
 	if(!language)
 		to_chat(src, "<span class='notice'>You will now speak your standard default language, common, if you do not specify a language when speaking.</span>")
-		default_language = LANGUAGE_GALCOM
+		for(var/datum/language/lang in speech_synthesizer_langs)
+			if(lang.name == LANGUAGE_GALCOM)
+				default_language = lang
+				break
 		return
 	apply_language(language)
 

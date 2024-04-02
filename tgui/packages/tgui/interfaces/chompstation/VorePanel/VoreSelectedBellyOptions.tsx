@@ -37,6 +37,7 @@ export const VoreSelectedBellyOptions = (props) => {
     eating_privacy_local,
     vorespawn_blacklist,
     private_struggle,
+    drainmode,
   } = belly;
 
   return (
@@ -200,6 +201,12 @@ export const VoreSelectedBellyOptions = (props) => {
             <Button
               onClick={() => act('set_attribute', { attribute: 'b_clone_dmg' })}
               content={digest_clone}
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Drain Finishing Mode">
+            <Button
+              onClick={() => act('set_attribute', { attribute: 'b_drainmode' })}
+              content={drainmode}
             />
           </LabeledList.Item>
           <LabeledList.Item label="Shrink/Grow Size">

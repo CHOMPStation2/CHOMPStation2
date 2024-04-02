@@ -11,16 +11,17 @@
 	away even the most fiesty of pests once they make it past the synthbird's beak, and staring into that beak would allow \
 	one to see far down into the drone, though the frequent curving of the SWOOPIE's neck often makes seeing down \
 	the entire length next to impossible even with a cooperative unit, let alone the passive suction that threatens to \
-	make anything that gets too close vanish into the drone's dangerous depths. SWOOPIE XLs are equipped with powerful \
-	CHURNO-VAC digestive chambers that are able to effectively melt down most anything that gets claimed by their vac-beaks, \
-	indescriminately melting anything that happens to end up in that chamber, it would be a terrible idea to allow yourself \
-	get swooped by one of these drones, unless you want to add to their biofuel reserves."
+	make anything that gets too close to the bot's beak vanish down the drone's stretchy hose throat. \
+	SWOOPIE XLs are equipped with powerful CHURNO-VAC digestive chambers that are able to effectively melt down most \
+	anything that gets claimed by their vac-beaks, indescriminately melting anything that happens to end up in that chamber, \
+	it would be a terrible idea to allow yourself get swooped by one of these drones, unless you want to add to their biofuel reserves."
 	value = CATALOGUER_REWARD_MEDIUM
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie
 	name = "SWOOPIE XL"
 	desc = "A large birdlike robot with thick assets, plump belly, and a long elastic vacuum hose of a neck. Somehow still a cleanbot, even if just for its duties."
 	description_info = "Use DISARM intent to access the integrated Vac-Pack settings.<br>Use GRAB intent while targeting the head damage zone to grab the SWOOPIE XL's neck and use it as a vaccum."
+	catalogue_data = list(/datum/category_item/catalogue/technology/drone/corrupt_hound/swoopie)
 	icon_state = "swoopie"
 	icon_living = "swoopie"
 	icon_dead = "swoopie_dead"
@@ -40,31 +41,48 @@
 	adminbus_trash = TRUE //You know what, sure whatever. It's not like anyone's gonna be taking this bird on unga trips to be their gamer backpack, which kinda was the main reason for the trash eater restrictions in the first place anyway.
 	faction = "neutral"
 	say_list_type = /datum/say_list/swoopie
-	ai_holder_type = /datum/ai_holder/simple_mob/retaliate
+	ai_holder_type = /datum/ai_holder/simple_mob/retaliate/swoopie
 	mob_bump_flag = 0
-	player_msg = "You are a SWOOPIE XL cleaning bot! Use DISARM intent to change your integrated Vac-Pack settings, or GRAB intent to swoop stuff up! Turning off the Vac-Pack will make your grab clicks function as normal grab intent clicks."
+	player_msg = "You are a SWOOPIE XL cleaning bot! Use DISARM intent on yourself to change your integrated Vac-Pack settings, or GRAB intent to swoop stuff up! Turning off the Vac-Pack will make your grab clicks function as normal grab intent clicks."
 
 	var/static/list/crew_creatures = list(	/mob/living/simple_mob/protean_blob,
 											/mob/living/simple_mob/slime/promethean)
-	var/obj/item/device/vac_attachment/Vac
+	var/static/list/pest_creatures = list(	/mob/living/simple_mob/animal/passive/mouse,
+											/mob/living/simple_mob/animal/passive/lizard,
+											/mob/living/simple_mob/animal/passive/cockroach)
+	var/obj/item/device/vac_attachment/swoopie/Vac
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/Initialize()
 	. = ..()
 	if(!voremob_loaded)
 		voremob_loaded = TRUE
 		init_vore()
-	Vac = new /obj/item/device/vac_attachment(src)
+	Vac = new /obj/item/device/vac_attachment/swoopie(src)
 	if(istype(Vac))
 		Vac.output_dest = vore_selected
 		Vac.vac_power = 3
-		Vac.item_state = null
 		Vac.vac_owner = src
-		Vac.icon = 'modular_chomp/icons/mob/vacpack_swoop.dmi'
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/IIsAlly(mob/living/L)
 	. = ..()
+	if(L?.type in pest_creatures) // If they're a pest, swoop no matter what!
+		return FALSE
 	if(!.) // Outside the faction and not in friends, are they crew
 		return L?.type in crew_creatures
+
+/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/attack_target(atom/A)
+	if(!has_AI())
+		return ..()
+	if(istype(A, /mob/living)) //Swoopie gonn swoop
+		var/mob/living/M = A //typecast
+		if(!M.devourable || !M.can_be_drop_prey)
+			return ..()
+		Vac.afterattack(M, src, 1)
+		return
+	if(istype(A, /obj/item))
+		Vac.afterattack(A, src, 1)
+		return
+	. = ..() //if not vaccable, just do what it normally does
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/init_vore()
 	if(!voremob_loaded)
@@ -74,7 +92,7 @@
 	add_verb(src,/mob/living/proc/eat_trash) //CHOMPEdit TGPanel
 	add_verb(src,/mob/living/proc/toggle_trash_catching) //CHOMPEdit TGPanel
 	add_verb(src,/mob/living/proc/restrict_trasheater) //CHOMPEdit TGPanel
-	var/obj/belly/B = new /obj/belly/(src)
+	var/obj/belly/B = new /obj/belly(src)
 	B.affects_vore_sprites = TRUE
 	B.belly_sprite_to_affect = "stomach"
 	B.name = "Churno-Vac"
@@ -82,7 +100,8 @@
 	B.digest_messages_prey = list("Under the heat and internal pressure of the greedy machine's gutworks, you can feel the tides of the hot caustic sludge claiming the last bits of space around your body, a few more squeezes of the synthetic muscles squelching and glurking as your body finally loses its form, completely blending down and merging into the tingly sludge to fuel the mean machine.")
 	B.digest_mode = DM_DIGEST
 	B.item_digest_mode = IM_DIGEST
-	B.mode_flags = DM_FLAG_TURBOMODE | DM_FLAG_THICKBELLY //Hard to be heard from inside the swoop! Also very active belly.
+	B.recycling = TRUE
+	B.mode_flags = DM_FLAG_THICKBELLY //Hard to be heard from inside the swoop!
 	B.digest_burn = 3
 	B.fancy_vore = 1
 	B.vore_sound = "Stomach Move"
@@ -216,14 +235,34 @@
 		return ..()
 	if(stat) //Cant suck if we're not able to...
 		return ..()
+	if(istype(A, /obj/item/weapon/storage)) //Dont put the nossle in bags
+		return ..()
 	if(istype(Vac) && A.Adjacent(src))
 		face_atom(A)
 		if(src.a_intent == I_DISARM && A == src) //Only if on disarm intent.
 			Vac.attack_self(src)
 			return
-		if(istype(A, /obj/machinery/disposal)) //Dont put the nossle in the trash
-			return
 		if(src.a_intent == I_GRAB && Vac.vac_power != 0) //Only on grab intent. if someone needs to use grab intent they can just turn off the vac
+			if(istype(A, /obj/machinery/disposal)) //You used that bin when the bird was right there? How inconsiderate!
+				var/obj/machinery/disposal/D
+				if(D.flushing)
+					to_chat(src, "\The [D] has already began flushing, you're too late to grab whatever was inside!")
+					return
+				var/foundstuff = 0 //Check if we actually found anything in the bin...
+				for(var/atom/movable/AM in D)
+					if(istype(AM, /mob/living))
+						var/mob/living/M = AM
+						if(!M.devourable || !M.can_be_drop_prey)
+							to_chat(M, "<span class='warning'>[src] plunges their head into \the [D], while you narrowly avoid being sucked up!</span>")
+							continue
+						to_chat(M, "<span class='warning'>[src] plunges their head into \the [D], sucking up everything inside- Including you!</span>")
+					foundstuff = 1
+					AM.forceMove(src)
+				if(foundstuff)
+					src.visible_message("<span class='warning'>[src] plunges their head into \the [D], greedily sucking up everything inside!</span>")
+				else //Oh, Nothing was inside...
+					to_chat(src, "You poke your head into \the [D], but there doesnt seem to be anything of interest...")
+				return
 			var/resolved = Vac.resolve_attackby(A, src, click_parameters = params)
 			if(!resolved && A && Vac)
 				Vac.afterattack(A, src, 1, params)
@@ -257,3 +296,108 @@
 			if(!L || L == usr)
 				return
 			L.put_in_active_hand(Vac)
+
+/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/verb/change_settings()
+	set name = "Change Settings"
+	set desc = "Change \the [src]'s settings"
+	set category = "IC"
+	set src in oview(1)
+	if(!has_AI() || !IIsAlly(usr))
+		to_chat(usr, "<span class=danger></span>")
+	if(!ai_holder == /datum/ai_holder/simple_mob/retaliate/swoopie || !ai_holder)
+		to_chat(usr, "<span class=warning>This [src] doesnt seem to have changable settings!</span>")
+		return
+	var/datum/ai_holder/simple_mob/retaliate/swoopie/ai = ai_holder
+	var/list/swooping_options = list(
+		"Swoop Pests",
+		"Swoop Trash",
+	)
+
+	var/setting_selection = tgui_input_list(usr, "Toggle Swoopie Swooping Options", "Swoopie Options", swooping_options)
+
+	switch(setting_selection)
+		if("Swoop Pests")
+			ai.swoop_pests = !ai.swoop_pests // invert the option
+			to_chat(usr, "You press a button on \the [src], [ai.swoop_pests ? "" : "de"]activating it's pest seeking routines!")
+		if("Swoop Trash")
+			ai.swoop_trash = !ai.swoop_trash // invert the option
+			to_chat(usr, "you press a button on \the [src], [ai.swoop_trash ? "" : "de"]activating it's pest seeking routines!")
+
+
+/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/Login()
+	. = ..()
+	verbs -= /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/verb/change_settings //Controlled swoopies dont need their settings changed externally
+
+//Special Swoopie vaccum so it can be handled better than a vareditted vacpack.
+/obj/item/device/vac_attachment/swoopie
+	name = "Swoopie Vac-Beak"
+	desc = "Useful for slurping mess off the floors. Even dirt and pests depending on settings. This vaccum seems to be permanantly attached to the swoopie's rumbling rubber trashbag."
+	icon = 'modular_chomp/icons/mob/vacpack_swoop.dmi'
+	item_state = null
+
+/obj/item/device/vac_attachment/swoopie/dropped(mob/user) //This should fix it sitting on the ground until the next life() tick
+	. = ..()
+	if(!vac_owner)
+		return
+	forceMove(vac_owner)
+
+//Custom Swoopie AI to make it swoop up trash when asked to
+/datum/ai_holder/simple_mob/retaliate/swoopie //TODO: make a general item-seeking AI type and use it for other stuff (Teppi seeking food automatically?)
+	hostile = TRUE			// Hostile, but it wont actually attack stuff unless it's allowed to. Maybe also in retaliation.
+	var/swoop_pests = FALSE // Do we go after living pests?
+	var/swoop_trash = FALSE	// Do we go after trash and junk?
+	var/original_power = 0  // What the swoopie's last vaccum strength was before we went to go vaccum stuff up actively.
+	cooperative = FALSE		// Swoop works independantly
+	mauling = TRUE			// Swoop doesnt care how hurt you are. If it's trying to attack you, it's just trying to eat you
+	handle_corpse = TRUE	// See above.
+
+/datum/ai_holder/simple_mob/retaliate/swoopie/list_targets() //Kinda stolen from nurse spiders. Mostly stolen.
+	. = ..()
+
+	var/static/alternative_targets = typecacheof(list(/obj/item/trash))
+
+	for(var/obj/O as anything in typecache_filter_list(range(vision_range, holder), alternative_targets))
+		if(can_see(holder, O, vision_range) && !O.anchored)
+			. += O
+
+// Select an obj if no mobs are around.
+/datum/ai_holder/simple_mob/retaliate/swoopie/pick_target(list/targets)
+	var/mobs_only = locate(/mob/living) in targets // If a mob is in the list of targets, then ignore objects.
+	if(mobs_only)
+		for(var/A in targets)
+			if(!isliving(A))
+				targets -= A
+
+	return ..(targets)
+
+/datum/ai_holder/simple_mob/retaliate/swoopie/find_target(var/list/possible_targets, var/has_targets_list = FALSE)
+	ai_log("find_target() : Entered.", AI_LOG_TRACE)
+	if(!hostile) // So retaliating mobs only attack the thing that hit it.
+		return null
+	. = list()
+	if(!has_targets_list)
+		possible_targets = list_targets()
+	for(var/possible_target in possible_targets)
+		if(can_attack(possible_target)) // Can we attack it?
+			if(isliving(possible_target) && !swoop_pests) // Are we allowed to attack living things?
+				continue
+			if(!isliving(possible_target) && !swoop_trash) // Otherwise, are we allowed to swoop trash?
+				continue
+			. += possible_target
+
+	var/new_target = pick_target(.)
+	give_target(new_target)
+	return new_target
+
+/datum/ai_holder/simple_mob/retaliate/swoopie/give_target(new_target, urgent = FALSE)
+	. = ..()
+	if(istype(holder, /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie))
+		var/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/bird = holder //Typecast
+		original_power = bird.Vac.vac_power
+		bird.Vac.vac_power = 7
+
+/datum/ai_holder/simple_mob/retaliate/swoopie/remove_target()
+	. = ..()
+	if(istype(holder, /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie))
+		var/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/bird = holder //Typecast
+		bird.Vac.vac_power = original_power

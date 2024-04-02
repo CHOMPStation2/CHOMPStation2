@@ -162,7 +162,6 @@
 	has_vore_belly_sprites = FALSE
 	rest_sprite_options = list("Default", "Sit")
 
-/* //CHOMPRemoval Start - we dont use the old sprites
 /datum/robot_sprite/dogborg/tall/janitor/newmeka
 	name = "MEKA v2"
 	sprite_icon_state = "newmeka"
@@ -170,7 +169,6 @@
 	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = FALSE
 	rest_sprite_options = list("Default", "Sit")
-*/ //CHOMPEdit End
 
 /datum/robot_sprite/dogborg/tall/janitor/mmeka
 	name = "NIKO"

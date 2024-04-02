@@ -1,0 +1,36 @@
+2024-04-01:
+  Aroliacue:
+  - rscadd: Pilots and Field Medics now have full explorer access.
+  Kashargul:
+  - bugfix: default language selection verb and upgrades it to tgui input list
+  - bugfix: resetting robot language to galcom should now work properly with the set
+      default language verb on cancel
+  - bugfix: newscaster news icons not loading
+  cadyn:
+  - rscadd: humanoid simple mobs now (mostly) have pathfinding
+  - refactor: port citRP pathfinding for AI
+  - refactor: various optimizations for AI
+  - refactor: visible_message now uses component instead of in_view
+  tacoguy7765093:
+  - rscadd: The trash eat verb now gives a more ambiguous message instead of 'swallowing'
+      regardless of  vorgan.
+2024-04-02:
+  ReoDaProtovali:
+  - rscadd: Added synth emotes to corrupt hounds and subtypes. *roboboop
+  - rscadd: Added a maw belly to leopardmanders that autotransfers to their gut. Dunno
+      what made me do that (especially since it ended up being a lot of trouble to
+      get working properly)
+  - rscadd: Added a whole new AI to swoopies based on nurse spiders looking for items
+      to wrap. Right click an AI controlled swoopie and choose the "Change Settings"
+      verb to tell the swoopie to swoop stuff!
+  - rscadd: Added wrappers dropping in vorebellies if you eat and digest the whole
+      food item.
+  - rscadd: Added bones to merc and other humanoid corpses. (leave remains pref is
+      now enabled for them!)
+  - qol: Made vac-packs not ask if you want to set the destination to borg belly if
+      you're not a borg
+  - bugfix: Fixed throwing mobs into disposal bins. For some reason it was implemented
+      but in a very shitty way that only checked for micro holders. It should work
+      properly. No autoflush :(
+  - image: added the secondary belly layer to the original set of vore bellies. Somehow
+      we missed those and virgo had them. Now we should both have them!
