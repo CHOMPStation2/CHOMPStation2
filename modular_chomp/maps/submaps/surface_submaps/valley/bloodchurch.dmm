@@ -104,7 +104,7 @@
 "mn" = (
 /obj/item/clothing/suit/wizrobe/psypurple,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/spellbook/oneuse/forcewall,
+/obj/item/weapon/holosign_creator/forcewand,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "mG" = (
@@ -207,7 +207,7 @@
 /area/submap/bloodchurch)
 "yD" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/spellbook/oneuse/forcewall,
+/obj/item/weapon/holosign_creator/forcewand,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)

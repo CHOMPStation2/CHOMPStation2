@@ -1114,7 +1114,7 @@
 "Lu" = (
 /obj/structure/table/woodentable,
 /obj/item/device/soulstone,
-/obj/item/weapon/spellbook/oneuse/smoke,
+/obj/item/weapon/holosign_creator/smokewand,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "LI" = (

@@ -139,7 +139,7 @@
 /obj/random/contraband/nofail,
 /obj/random/contraband/nofail,
 /obj/item/weapon/storage/backpack/dufflebag/syndie/med,
-/obj/item/weapon/spellbook/oneuse/charge,
+/obj/item/weapon/holosign_creator/forcewand,
 /turf/simulated/floor/wood/sif{
 	temperature = 243.15;
 	oxygen = 20.7263;
@@ -514,7 +514,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/demonranch)
 "UM" = (
-/obj/item/weapon/spellbook/oneuse/charge,
+/obj/item/weapon/holosign_creator/smokewand,
 /turf/simulated/floor/water,
 /area/submap/demonranch)
 "VJ" = (
