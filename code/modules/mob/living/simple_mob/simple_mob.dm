@@ -236,7 +236,7 @@
 		voremob_loaded = TRUE
 		init_vore()
 	if(hasthermals)
-		verbs |= /mob/living/simple_mob/proc/hunting_vision //So that maint preds can see prey through walls, to make it easier to find them.
+		add_verb(src, /mob/living/simple_mob/proc/hunting_vision) //So that maint preds can see prey through walls, to make it easier to find them. //ChompEDIT
 
 /mob/living/simple_mob/SelfMove(turf/n, direct, movetime)
 	var/turf/old_turf = get_turf(src)
@@ -364,7 +364,7 @@
 
 /mob/living/simple_mob/proc/ColorMate()
 	set name = "Recolour"
-	set category = "Abilities"
+	set category = "Abilities.Mob" //ChompEDIT
 	set desc = "Allows to recolour once."
 
 	if(!has_recoloured)
@@ -377,7 +377,7 @@
 
 /mob/living/simple_mob/proc/hunting_vision()
 	set name = "Track Prey Through Walls"
-	set category = "Abilities"
+	set category = "Abilities.Mob" //ChompEDIT
 	set desc = "Uses you natural predatory instincts to seek out prey even through walls, or your natural survival instincts to spot predators from a distance."
 
 	if(hunting_cooldown + 5 MINUTES < world.time)
@@ -392,7 +392,7 @@
 
 /mob/living/simple_mob/proc/hunting_vision_plus()
 	set name = "Thermal vision toggle"
-	set category = "Abilities"
+	set category = "Abilities.Mob" //ChompEDIT
 	set desc = "Uses you natural predatory instincts to seek out prey even through walls, or your natural survival instincts to spot predators from a distance."
 
 	if(!isthermal)
