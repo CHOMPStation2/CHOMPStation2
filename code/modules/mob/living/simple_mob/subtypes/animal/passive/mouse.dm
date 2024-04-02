@@ -40,6 +40,8 @@
 
 	say_list_type = /datum/say_list/mouse
 
+	hasthermals = FALSE
+
 	var/body_color //brown, gray, white and black, leave blank for random
 
 	//CHOMP Addition: Added these vore variables in and swapped the booleans from their defaults too.
