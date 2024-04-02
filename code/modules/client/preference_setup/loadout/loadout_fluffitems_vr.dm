@@ -1224,8 +1224,6 @@
 	character_name = list("Bradley Khatibi")
 
 //  V CKEYS
-<<<<<<< HEAD
-=======
 
 /datum/gear/fluff/valkhorns
 	path = /obj/item/clothing/ears/earring/fluff/valkhorns
@@ -1252,7 +1250,6 @@
 	ckeywhitelist = list("vitoras")
 	character_name = list("Verie")
 
->>>>>>> d3f5c215f9... Fluff item (#15878)
 /datum/gear/fluff/cameron_glasses
 	path = /obj/item/clothing/glasses/fluff/science_proper
 	display_name = "Cameron's Science Glasses"
