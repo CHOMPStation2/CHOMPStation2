@@ -2693,9 +2693,6 @@ End CHOMP Removal*/
 	icon_override = 'icons/inventory/eyes/mob_vr.dmi'
 	icon_state = "bigroundglasses"
 	slot_flags = SLOT_EYES | SLOT_EARS
-<<<<<<< HEAD
-	glasses_layer_above = TRUE */ //Chomp REMOVE END
-=======
 	glasses_layer_above = TRUE
 
 //valkaerie: Valkaerie Stoze
@@ -2707,4 +2704,4 @@ End CHOMP Removal*/
 	icon_state = "valkhorns"
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "valkhorns_onmob"
->>>>>>> d3f5c215f9... Fluff item (#15878)
+*/ //Chomp REMOVE END
