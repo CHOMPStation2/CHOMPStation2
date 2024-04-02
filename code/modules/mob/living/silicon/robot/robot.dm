@@ -332,8 +332,7 @@
 		//CHOMPedit Add
 		if(crisis || security_level == SEC_LEVEL_RED || crisis_override)
 			to_chat(src, span_red("Crisis mode active. Combat module available."))
-			modules+="Combat"
-			modules+="ERT"
+			modules |= emergency_module_types
 			//CHOMPedit end
 	else
 		modules.Add(robot_module_types)
