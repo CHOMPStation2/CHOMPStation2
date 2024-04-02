@@ -330,21 +330,17 @@
 	var/list/modules = list()
 	//VOREStatation Edit Start: shell restrictions //CHOMPstaton change to blacklist
 	if(shell)
-<<<<<<< HEAD
-		modules.Add(robot_module_types)
-		modules.Remove(GLOB.shell_module_blacklist) // CHOMPEdit - Managed Globals
-		//CHOMPedit Add
-		if(crisis || security_level == SEC_LEVEL_RED || crisis_override)
-			to_chat(src, span_red("Crisis mode active. Combat module available."))
-			modules+="Combat"
-			modules+="ERT"
-			//CHOMPedit end
-=======
 		if(restrict_modules_to.len > 0)
 			modules.Add(restrict_modules_to)
 		else
 			modules.Add(shell_module_types)
->>>>>>> e51e5281f5... robot outsider overhaul (#15894)
+			modules.Add(robot_module_types)
+			modules.Remove(GLOB.shell_module_blacklist) // CHOMPEdit - Managed Globals
+			//CHOMPedit Add
+			if(crisis || security_level == SEC_LEVEL_RED || crisis_override)
+				to_chat(src, span_red("Crisis mode active. Combat module available."))
+				modules |= emergency_module_types
+			//CHOMPedit end
 	else
 		if(restrict_modules_to.len > 0)
 			modules.Add(restrict_modules_to)
