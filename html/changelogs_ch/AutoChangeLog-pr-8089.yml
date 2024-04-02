@@ -1,0 +1,5 @@
+author: "cadyn"
+delete-after: True
+changes:
+  - rscadd: "hlscream"
+  - rscadd: "hlpain emote"
