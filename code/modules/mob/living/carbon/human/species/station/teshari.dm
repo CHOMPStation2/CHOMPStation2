@@ -169,9 +169,15 @@
 
 /datum/species/teshari/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()
+<<<<<<< HEAD
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
 
 /* //CHOMPedit: disabling for now
+=======
+	if(!(H.client?.prefs?.shoe_hater))
+		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
+/*
+>>>>>>> f209851566... No shoes: Teshari edition (#15896)
 /datum/species/teshari/handle_falling(mob/living/carbon/human/H, atom/hit_atom, damage_min, damage_max, silent, planetary)
 
 	// Tesh can glide to save themselves from some falls. Basejumping bird
