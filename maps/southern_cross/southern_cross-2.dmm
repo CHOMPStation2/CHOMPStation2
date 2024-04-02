@@ -26451,6 +26451,10 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/kitchen)
+"bCh" = (
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/hallway/secondary/seconddeck/research_medical)
 "bCi" = (
 /obj/machinery/light{
 	dir = 8
@@ -45236,6 +45240,24 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/sc/hor)
+"dyE" = (
+/obj/structure/table/rack{
+	dir = 8;
+	layer = 2.9
+	},
+/obj/random/maintenance/medical,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/random/maintenance/medical,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/machinery/alarm{
+	pixel_y = 25
+	},
+/turf/simulated/floor/plating,
+/area/hallway/secondary/seconddeck/research_medical)
 "dyK" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance{
@@ -62684,6 +62706,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
+"mXs" = (
+/obj/random/obstruction,
+/obj/machinery/alarm{
+	pixel_y = 25
+	},
+/turf/simulated/floor/plating,
+/area/hallway/secondary/seconddeck/research_medical)
 "mXK" = (
 /turf/simulated/wall,
 /area/assembly/chargebay)
@@ -66904,6 +66933,12 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
+"ptH" = (
+/obj/machinery/alarm{
+	pixel_y = 25
+	},
+/turf/simulated/floor/plating,
+/area/hallway/secondary/seconddeck/research_medical)
 "pux" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk,
@@ -69287,6 +69322,11 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
+"qKr" = (
+/obj/random/trash,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/hallway/secondary/seconddeck/research_medical)
 "qKC" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -72819,6 +72859,14 @@
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
+"sYY" = (
+/obj/random/obstruction,
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -25
+	},
+/turf/simulated/floor/plating,
+/area/hallway/secondary/seconddeck/research_medical)
 "sZg" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -77900,6 +77948,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/D3)
+"wsg" = (
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 26;
+	pixel_y = 0
+	},
+/turf/simulated/floor/plating,
+/area/hallway/secondary/seconddeck/research_medical)
 "wsB" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/medical{
@@ -79201,6 +79257,13 @@
 	},
 /turf/simulated/floor/lino,
 /area/chapel/office)
+"xiA" = (
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -25
+	},
+/turf/simulated/floor/plating,
+/area/hallway/secondary/seconddeck/research_medical)
 "xiE" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance{
@@ -130173,7 +130236,7 @@ two
 uEF
 hxN
 uEF
-vID
+sYY
 two
 iOS
 xjT
@@ -130424,7 +130487,7 @@ pIm
 qTx
 rQx
 oiA
-vID
+mXs
 uEF
 vIC
 two
@@ -130686,7 +130749,7 @@ uEF
 bBk
 vID
 two
-uEF
+bCh
 two
 two
 two
@@ -130940,7 +131003,7 @@ okZ
 okZ
 okZ
 okZ
-uEF
+bCh
 two
 two
 two
@@ -131463,7 +131526,7 @@ uEF
 hxN
 two
 vID
-uEF
+xiA
 two
 xff
 jjH
@@ -131708,7 +131771,7 @@ kwy
 liq
 mnf
 cXZ
-bBk
+qKr
 two
 two
 two
@@ -131719,7 +131782,7 @@ two
 two
 two
 uEF
-uEF
+bCh
 uEF
 bBk
 two
@@ -132224,7 +132287,7 @@ eTf
 ecy
 cXZ
 cXZ
-uEF
+ptH
 hxN
 uEF
 vID
@@ -133003,7 +133066,7 @@ pgN
 uEF
 uEF
 hxN
-uEF
+bCh
 bBk
 uEF
 hxN
@@ -133257,7 +133320,7 @@ aaa
 aaa
 aaa
 ooT
-nCU
+dyE
 uEF
 vID
 uEF
@@ -133523,7 +133586,7 @@ two
 xzs
 uEF
 uEF
-uEF
+bCh
 hxN
 uEF
 uEF
@@ -133785,7 +133848,7 @@ two
 uEF
 bBk
 uEF
-vID
+sYY
 ooT
 aaa
 aaa
@@ -134551,7 +134614,7 @@ ooT
 ooT
 ooT
 ooT
-uEF
+wsg
 tyZ
 pOh
 vPr
