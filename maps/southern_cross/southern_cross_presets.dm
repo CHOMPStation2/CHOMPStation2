@@ -3,7 +3,7 @@ var/const/NETWORK_SECOND_DECK  = "Second Deck"
 var/const/NETWORK_FIRST_DECK   = "First Deck"
 var/const/NETWORK_SUPPLY       = "Supply"
 var/const/NETWORK_MAIN_OUTPOST = "Main Outpost"
-var/const/NETWORK_CARRIER  = "Exploration Carrier" //CHOMPedit: Exploration outpost cameras
+var/const/NETWORK_CARRIER  = "NEV Aegis" //CHOMPedit: Exploration outpost cameras
 var/const/NETWORK_MAINT_DECK = "Maintenance Deck" // CHOMPEdit - Maintenance deck
 
 //
@@ -72,11 +72,9 @@ var/const/NETWORK_MAINT_DECK = "Maintenance Deck" // CHOMPEdit - Maintenance dec
 	listening_level = Z_LEVEL_TRANSIT
 	autolinkers = list("tns_relay")
 
-/*
-/obj/machinery/telecomms/relay/preset/southerncross/explorer //CHOMPedit: Tcomms relay for exploration carrier. No longer in use
-	listening_level = Z_LEVEL_MISC
-	autolinkers = list("exp_relay")
-*/
+/obj/machinery/telecomms/relay/preset/southerncross/carrier //CHOMPedit: Tcomms relay for exploration carrier.
+	listening_level = Z_LEVEL_CARRIER
+	autolinkers = list("aeg_relay")
 
 /obj/machinery/telecomms/relay/preset/southerncross/d0
 	id = "Station Relay 0"
@@ -113,7 +111,7 @@ var/const/NETWORK_MAINT_DECK = "Maintenance Deck" // CHOMPEdit - Maintenance dec
 	id = "Hub"
 	network = "tcommsat"
 	autolinkers = list("hub",
-		"d1_relay", "d2_relay", "d3_relay", "pnt_relay", "cve_relay", "wld_relay", "tns_relay", "cnt_relay", "explorer", "exp_relay", "valley_relay",
+		"d1_relay", "d2_relay", "d3_relay", "pnt_relay", "cve_relay", "wld_relay", "tns_relay", "cnt_relay", "explorer", "aeg_relay", "valley_relay",
 		//"belt_relay", // Chompstation edit - adds belt outpost to relays.	Temp Removal of Belt Relay TFF 15/2/20, Added Valley comn stuff 2/14/2023
 		//"sky_relay", // Sky islands removal due to lack of use
 		"science", "medical", "supply", "service", "common", "command", "engineering", "security", "unused",
