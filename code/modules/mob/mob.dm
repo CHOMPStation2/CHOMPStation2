@@ -64,7 +64,7 @@
 	. = ..()
 	//return QDEL_HINT_HARDDEL_NOW Just keep track of mob references. They delete SO much faster now.
 
-/mob/proc/show_message(msg, type, alt, alt_type)//Message, type of message (1 or 2), alternative message, alt message type (1 or 2)
+/mob/show_message(msg, type, alt, alt_type)//Message, type of message (1 or 2), alternative message, alt message type (1 or 2) //CHOMPEdit show_message() moved to /atom/movable
 	var/time = say_timestamp()
 
 	if(!client && !teleop)	return
@@ -707,7 +707,7 @@
 			stat(null, "Time Dilation: [round(SStime_track.time_dilation_current,1)]% AVG:([round(SStime_track.time_dilation_avg_fast,1)]%, [round(SStime_track.time_dilation_avg,1)]%, [round(SStime_track.time_dilation_avg_slow,1)]%)")
 			if(ticker && ticker.current_state != GAME_STATE_PREGAME)
 				stat("Station Time", stationtime2text())
-				var/date = "[stationdate2text()], [capitalize(world_time_season)]"
+				var/date = "[stationdate2text()], [capitalize(GLOB.world_time_season)]" // CHOMPEdit - Managed Globals
 				stat("Station Date", date)
 				stat("Round Duration", roundduration2text())
 

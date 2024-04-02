@@ -37,8 +37,8 @@
 	buckle_lying = FALSE
 	vore_icons = SA_ICON_LIVING
 	vore_bump_chance = 50
-	vore_digest_chance = 0
-	vore_escape_chance = 50
+	//vore_digest_chance = 0	// Im setting these two in the individual bellies, I dont know how they interact with multiple
+	//vore_escape_chance = 50	// bellies so im just commenting them out. -Reo
 	vore_pounce_chance = 100
 	vore_active = 1
 	vore_icons = 5
@@ -87,12 +87,14 @@
 	if(!voremob_loaded)
 		return
 	.=..()
-	var/obj/belly/B = vore_selected
+	var/obj/belly/B = new /obj/belly(src)
+	B.affects_vore_sprites = TRUE
+	B.belly_sprite_to_affect = "stomach"
 	B.name = "stomach"
 	B.desc = "The leopardmander tosses its head back with you firmly clasped in its jaws, and in a few swift moments it finishes swallowing you down into its hot, dark gut. Your weight makes absolutely no impact on its form, the doughy walls giving way beneath you with unnatural softness. The thick, humid air is tinged with an oddly pleasant smell, and the surrounding flesh wastes no time in clenching and massaging down over its newfound fodder, smothering you in thick hot gutflesh~"
 	B.vore_sound = "Tauric Swallow"
 	B.release_sound = "Pred Escape"
-	B.mode_flags = DM_FLAG_NUMBING
+	B.mode_flags = DM_FLAG_NUMBING | DM_FLAG_THICKBELLY | DM_FLAG_TURBOMODE
 	B.fancy_vore = 1
 	B.vore_verb = "slurp"
 	B.contamination_color = "grey"
@@ -114,6 +116,30 @@
 		"As the thinning air begins to make you feel dizzy, menacing bworps and grumbles fill that dark, constantly shifting organ!",
 		"The constant, rhythmic kneading and massaging starts to take its toll along with the muggy heat, making you feel weaker and weaker!",
 		"The drake happily wanders around while digesting its meal, almost like it is trying to show off the hanging gut you've given it. Not like it made much of a difference on his already borderline obese form anyway~")
+
+	B = new /obj/belly(src)
+
+	vore_selected = B
+	B.name = "maw"
+	B.desc = "Slrrrrrp... You get snatched up by the Exotic Leopardmander's large tongue, resulting in you getting dragged into the humid, dank interior of the large drake's cavernous mouth!"
+	//Not going to change the default sounds. Personally I think the non-fancy sounds work good as enterance nom sounds and the fancy ones are better for transfer sounds. -Reo
+	B.digest_mode = DM_HEAL
+	B.vore_verb = "slurp"
+	B.release_verb = "plehs"
+	B.contaminates = FALSE
+	B.belly_fullscreen_color = "#c47cb4"
+	B.belly_fullscreen_color2 = "#C2B4B4"
+	B.belly_fullscreen_color3 = "#FFCCFF"
+	B.belly_fullscreen = "VBO_maw5"
+	B.emote_time = 1 //Short emote time, since they wont spend long here!
+	B.emote_lists[DM_HOLD] = list(
+		"The drake's thick tongue presses against your form, smothering you with thick, gooey saliva as it pushes you around in it's maw.",
+		"The exotic drake lets out a deep rumble as it idly maws over you, shifting you in a warm, slimy embrace as it passively prepares to send you into a deeper embrace."
+	)
+	B.autotransferwait = 5
+	B.autotransferlocation = "stomach"
+	B.escapetime = 1 SECONDS
+	B.escapechance = 75
 
 /datum/say_list/leopardmander
 	speak = list("Prurr.", "Rrrhf.", "Rrrrrll.", "Mrrrrph.")
@@ -159,18 +185,19 @@
 /mob/living/simple_mob/vore/leopardmander/exotic/init_vore()
 	if(!voremob_loaded)
 		return
-	.=..()
-	var/obj/belly/B = vore_selected
+	//.=..() //Dont need this, it just spawns the parent's guts
+	var/obj/belly/B = new /obj/belly(src)
 	B.name = "stomach"
 	B.desc = "The exotic leopardmander tosses its head back with you firmly clasped in its jaws, and in a few swift moments it finishes swallowing you down into its hot, brightly glowing gut. Your weight makes absolutely no impact on its form, the doughy walls giving way beneath you, with their unnatural softness. The thick, humid air is tinged with an oddly pleasant smell, and the surrounding flesh wastes no time in clenching and massaging down over its newfound fodder, smothering you in thick hot gutflesh~ You can only really sort of see outside that thick-walled gut."
 	B.vore_sound = "Tauric Swallow"
 	B.release_sound = "Pred Escape"
-	B.mode_flags = DM_FLAG_NUMBING
+	B.mode_flags = DM_FLAG_NUMBING | DM_FLAG_THICKBELLY | DM_FLAG_TURBOMODE
 	B.fancy_vore = 1
 	B.vore_verb = "slurp"
 	B.contamination_color = "pink"
 	B.contamination_flavor = "Wet"
-	B.belly_fullscreen_color = "#c47cb4" 		// CHOMPedit - Belly Fullscreen
+	B.belly_fullscreen_color = "#df3dbc" 		// CHOMPedit - Belly Fullscreen
+	B.belly_fullscreen_alpha = 240				// CHOMPedit - Belly transparency on the transparent bellied drake
 	B.belly_fullscreen = "anim_belly" 			// CHOMPedit - Belly Fullscreen
 	B.emote_lists[DM_HEAL] = list(
 		"The drake's idle movement helps its stomach gently churn around you, slimily squelching against your figure.",
@@ -187,6 +214,32 @@
 		"As the thinning air begins to make you feel dizzy, menacing bworps and grumbles fill that dark, constantly shifting organ!",
 		"The constant, rhythmic kneading and massaging starts to take its toll along with the muggy heat, making you feel weaker and weaker!",
 		"The drake happily wanders around while digesting its meal, almost like it is trying to show off the hanging gut you've given it. Not like it made much of a difference on his already borderline obese form anyway~")
+	B.transferchance = 50
+	B.transferlocation = "maw"
+
+	B = new /obj/belly(src)
+	vore_selected = B
+
+	B.name = "maw"
+	B.desc = "Slrrrrrp... You get snatched up by the Exotic Leopardmander's large tongue, resulting in you getting dragged into the humid, dank interior of the large drake's cavernous mouth!"
+	//Not going to change the default sounds. Personally I think the non-fancy sounds work good as enterance nom sounds and the fancy ones are better for transfer sounds. -Reo
+	B.vore_verb = "slurp"
+	B.release_verb = "plehs"
+	B.contaminates = FALSE
+	B.belly_fullscreen_color = "#c47cb4"
+	B.belly_fullscreen_color2 = "#C2B4B4"
+	B.belly_fullscreen_color3 = "#8D60CE"
+	B.belly_fullscreen_color4 = "#B593F9"
+	B.belly_fullscreen = "VBO_maw5"
+	B.emote_time = 1 //Short emote time, since they wont spend long here!
+	B.emote_lists[DM_HOLD] = list(
+		"The drake's thick tongue presses against your form, smothering you with thick, gooey saliva as it pushes you around in it's maw.",
+		"The exotic drake lets out a deep rumble as it idly maws over you, shifting you in a warm, slimy embrace as it passively prepares to send you into a deeper embrace."
+	)
+	B.autotransferwait = 5
+	B.autotransferlocation = "stomach"
+	B.escapetime = 1 SECONDS
+	B.escapechance = 75
 
 /obj/random/mob/leopardmander/item_to_spawn() //Random map spawner
 	return pick(prob(89);/mob/living/simple_mob/vore/leopardmander,

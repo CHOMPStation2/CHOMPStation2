@@ -6,7 +6,6 @@
 	var/vore_footstep_volume_cooldown = 0	//goes up each time a step isnt heard, and will proc update of list of viable bellies to determine the most filled and loudest one to base audio on.
 	var/mute_entry = FALSE					//Toggleable vorgan entry logs.
 	var/parasitic = FALSE					//Digestion immunity and nutrition leeching variable
-	var/trash_catching = FALSE				//Toggle for trash throw vore.
 	var/liquidbelly_visuals = TRUE			//Toggle for liquidbelly level visuals.
 
 	var/passtable_reset		// For crawling
@@ -312,13 +311,6 @@
 	set desc = "Mute the chatlog messages when something enters a vore belly."
 	mute_entry = !mute_entry
 	to_chat(src, "<span class='vwarning'>Entrance logs [mute_entry ? "disabled" : "enabled"].</span>")
-
-/mob/living/proc/toggle_trash_catching()
-	set name = "Toggle Trash Catching"
-	set category = "Abilities"
-	set desc = "Toggle Trash Eater throw vore abilities."
-	trash_catching = !trash_catching
-	to_chat(src, "<span class='vwarning'>Trash catching [trash_catching ? "enabled" : "disabled"].</span>")
 
 /mob/living/proc/restrict_trasheater()
 	set name = "Restrict Trash Eater"

@@ -271,3 +271,51 @@
   cadyn:
   - refactor: refactored orbit code to be less horrible
   - bugfix: protean powers not showing up when blob form
+2024-03-28:
+  Kashargul:
+  - bugfix: a lot of non rendered icons, especially atmos icons.
+  - bugfix: changing force south to living only due to multiple issues
+  - bugfix: misc panel updating every tick
+  - bugfix: shadekin simple_mob button texts not respecting energy
+  - bugfix: wrong pathing in tgfont, thanks to @cadyn for pointing it out
+  - bugfix: borg chat icons
+  - rscdel: dangerous calls inside the statpanel
+  TheCaramelion:
+  - rscadd: Re-Enabled Aurora Caelus and Space Dust event
+  - rscadd: Two new Ion Laws
+  - rscdel: Commented out a weird ion law
+  TheGreatKitsune:
+  - rscadd: Catslug is now an option on the basic metamorph raygun
+  Virgo113:
+  - sound: New jukebox song
+  cadyn:
+  - bugfix: asset issues that broke chat tags
+  - code_imp: play_sound and porta_turret optimizations
+2024-03-29:
+  Kashargul:
+  - bugfix: missing target in a balloon alert
+  - bugfix: some mecha runtimes
+  - rscadd: adds the ability to customize the "encase in egg" egg size between 25
+      and 200% or keep it at 0 for automatic calculation from 25 to 100%
+  Raeschen:
+  - rscadd: Added *clap sound
+  - rscadd: Added huuuaaaa
+  tacoguy7765093:
+  - rscadd: Added VR spawnpoint for a VR mall.
+  - rscdel: Removed space POI section in VR construct
+2024-03-30:
+  ItsSelis:
+  - qol: Subsystems return a status value after initializing
+  - rscadd: Added verb manager subsystem
+  - rscadd: Added speech controller subsystem
+  - qol: Topics to deleted things get discarded
+  Kashargul:
+  - bugfix: addition for our code to ensure AI prefs are synced between shells and
+      bellies loaded on first deploy
+  Raeschen:
+  - bugfix: statpanel runtimes
+  - bugfix: mob holder runtime
+2024-03-31:
+  ItsSelis:
+  - admin: The stats of Verb Manager and Speech Controller now show inside of the
+      MC tab.

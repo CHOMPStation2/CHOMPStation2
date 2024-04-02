@@ -206,7 +206,7 @@
 /datum/trait/neutral/trashcan/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	add_verb(H,/mob/living/proc/eat_trash) //CHOMPEdit TGPanel
-	add_verb(H,/mob/living/proc/toggle_trash_catching) //CHOMPEdit TGPanel //CHOMPEdit
+	add_verb(H,/mob/living/proc/toggle_trash_catching) //Ported from chompstation //CHOMPEdit TGPanel
 
 /datum/trait/neutral/gem_eater
 	name = "Expensive Taste"

@@ -34,6 +34,7 @@
 		'sound/effects/mob_effects/xenochimera/regen_3.ogg',
 		'sound/effects/mob_effects/xenochimera/regen_5.ogg'
 	)
+	var/trash_catching = FALSE				//Toggle for trash throw vore from chompstation
 
 //
 // Hook for generic creation of stuff on new creatures
@@ -497,6 +498,7 @@
 		absorbed = FALSE	//Make sure we're not absorbed
 		muffled = FALSE		//Removes Muffling
 		forceMove(get_turf(src)) //Just move me up to the turf, let's not cascade through bellies, there's been a problem, let's just leave.
+		SetSleeping(0) //Wake up instantly if asleep
 		for(var/mob/living/simple_mob/SA in range(10))
 			LAZYSET(SA.prey_excludes, src, world.time)
 		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of [key_name(B.owner)] ([B.owner ? "<a href='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[B.owner.x];Y=[B.owner.y];Z=[B.owner.z]'>JMP</a>" : "null"])")
@@ -968,10 +970,17 @@
 
 		else
 			to_chat(src, "<span class='notice'>You can taste the flavor of garbage. Delicious.</span>")
-		visible_message("<span class='warning'>[src] demonstrates their voracious capabilities by swallowing [I] whole!</span>")
+		visible_message("<span class='vwarning'>[src] demonstrates the voracious capabilities of their [lowertext(vore_selected.name)] by making [I] disappear!</span>") //CHOMPedit
 		return
 	to_chat(src, "<span class='notice'>This snack is too powerful to go down that easily.</span>") //CHOMPEdit
 	return
+
+/mob/living/proc/toggle_trash_catching() //Ported from chompstation
+	set name = "Toggle Trash Catching"
+	set category = "Abilities"
+	set desc = "Toggle Trash Eater throw vore abilities."
+	trash_catching = !trash_catching
+	to_chat(src, "<span class='vwarning'>Trash catching [trash_catching ? "enabled" : "disabled"].</span>") //CHOMPEdit
 
 /mob/living/proc/eat_minerals() //Actual eating abstracted so the user isn't given a prompt due to an argument in this verb.
 	set name = "Eat Minerals"

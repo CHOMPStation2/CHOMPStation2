@@ -55,6 +55,7 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 	can_build_into_floor = TRUE
 	can_dirty = FALSE // It's open space
 	can_start_dirty = FALSE
+	turf_path_danger = TURF_PATH_DANGER_FALL //CHOMPEdit
 
 /turf/simulated/open/vacuum
 	oxygen = 0

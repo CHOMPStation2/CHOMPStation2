@@ -59,6 +59,12 @@
 			target.resize(src.client.prefs.size_multiplier) //CHOMPADDITION: Resize shell based on our preffered size
 		target.deploy_init(src)
 		mind.transfer_to(target)
+		if(target.first_transfer)
+			target.first_transfer = FALSE
+			target.copy_from_prefs_vr()
+			if(LAZYLEN(target.vore_organs))
+				target.vore_selected = target.vore_organs[1]
+		src.copy_vore_prefs_to_mob(target)
 		teleop = target // So the AI 'hears' messages near its core.
 		target.post_deploy()
 

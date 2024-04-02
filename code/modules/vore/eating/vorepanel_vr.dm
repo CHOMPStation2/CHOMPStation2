@@ -226,6 +226,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"is_feedable" = selected.is_feedable, //CHOMPAdd
 			"egg_type" = selected.egg_type,
 			"egg_name" = selected.egg_name, //CHOMPAdd
+			"egg_size" = selected.egg_size, //CHOMPAdd
 			"recycling" = selected.recycling, //CHOMPAdd
 			"storing_nutrition" = selected.storing_nutrition, //CHOMPAdd
 			"entrance_logs" = selected.entrance_logs, //CHOMPAdd
@@ -250,6 +251,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"belly_mob_mult" = selected.belly_mob_mult,
 			"belly_item_mult" = selected.belly_item_mult,
 			"belly_overall_mult" = selected.belly_overall_mult,
+			"drainmode" = selected.drainmode,
 			//CHOMP add: vore sprite options and additional stuff
 			"belly_fullscreen_color" = selected.belly_fullscreen_color,
 			//"belly_fullscreen_color_secondary" = selected.belly_fullscreen_color_secondary, // Chomp REMOVE - use our solution, not upstream's
@@ -321,6 +323,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 		selected_list["egg_type"] = selected.egg_type
 		selected_list["egg_name"] = selected.egg_name //CHOMPAdd
+		selected_list["egg_size"] = selected.egg_size //CHOMPAdd
 		selected_list["recycling"] = selected.recycling //CHOMPAdd
 		selected_list["storing_nutrition"] = selected.storing_nutrition //CHOMPAdd
 		selected_list["item_digest_logs"] = selected.item_digest_logs //CHOMPAdd
@@ -1079,6 +1082,13 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						new_egg_name = readd_quotes(new_egg_name)
 					if(length(new_egg_name) >= BELLIES_NAME_MIN && length(new_egg_name) <= BELLIES_NAME_MAX)
 						new_belly.egg_name = new_egg_name
+
+				if(istext(belly_data["egg_size"]))
+					var/new_egg_size = belly_data["egg_size"]
+					if(new_egg_size == 0)
+						new_belly.egg_size = 0
+					else
+						new_belly.egg_size = CLAMP(new_egg_size,0.25,2)
 
 				if(isnum(belly_data["recycling"]))
 					var/new_recycling = belly_data["recycling"]
@@ -2436,6 +2446,8 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			if(ourtarget.absorbable)
 				process_options += "Absorb"
 
+			process_options += "Knockout" //Can't think of any mechanical prefs that would restrict this. Even if they are already asleep, you may want to make it permanent.
+
 			if(process_options.len)
 				process_options += "Cancel"
 			else
@@ -2491,6 +2503,16 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						var/n = 0 - ourtarget.nutrition
 						ourtarget.adjust_nutrition(n)
 					b.absorb_living(ourtarget)
+				if("Knockout")
+					if(tgui_alert(ourtarget, "\The [usr] is attempting to instantly make you unconscious, you will be unable until ejected from the pred. Is this something you are okay with happening to you?","Instant Knockout", list("No", "Yes")) != "Yes")
+						to_chat(usr, "<span class= 'vwarning'>\The [ourtarget] declined your knockout attempt.</span>")
+						to_chat(ourtarget, "<span class= 'vwarning'>You declined the knockout attempt.</span>")
+						return
+					if(ourtarget.loc != b)
+						to_chat(usr, "<span class= 'vwarning'>\The [ourtarget] is no longer in \the [b].</span>")
+						return
+					ourtarget.AdjustSleeping(500000)
+					to_chat(ourtarget, "<span class= 'vwarning'>\The [usr] has put you to sleep, you will remain unconscious until ejected from the belly.</span>")
 				if("Cancel")
 					return
 		if("Health Check")
@@ -2622,6 +2644,19 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				tgui_alert_async(usr, "Entered name too long (max [BELLIES_NAME_MAX]).","Error")
 				return FALSE
 			host.vore_selected.egg_name = new_egg_name
+			. = TRUE
+		if("b_egg_size")
+			var/new_egg_size = tgui_input_number(usr,"Custom Egg Size 25% to 200% (0 for automatic item depending egg size from 25% to 100%)","New Egg Size", 0, 200)
+			if(new_egg_size == null)
+				return FALSE
+			if(new_egg_size == 0) //Disable.
+				host.vore_selected.egg_size = 0
+				to_chat(user,"<span class='notice'>Eggs will automatically calculate size depending on contents.</span>")
+			else if (!ISINRANGE(new_egg_size,25,200))
+				host.vore_selected.egg_size = 0.25 //Set it to the default.
+				to_chat(user,"<span class='notice'>Invalid size.</span>")
+			else if(new_egg_size)
+				host.vore_selected.egg_size = (new_egg_size/100)
 			. = TRUE
 		if("b_recycling")
 			host.vore_selected.recycling = !host.vore_selected.recycling
@@ -3186,6 +3221,14 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			var/new_new_damage = CLAMP(new_damage, 0, 6)
 			host.vore_selected.digest_clone = new_new_damage
 			. = TRUE
+		if("b_drainmode")
+			var/list/menu_list = host.vore_selected.drainmodes.Copy()
+			var/new_drainmode = tgui_input_list(usr, "Choose Mode (currently [host.vore_selected.digest_mode])", "Mode Choice", menu_list)
+			if(!new_drainmode)
+				return FALSE
+
+			host.vore_selected.drainmode = new_drainmode
+			host.vore_selected.updateVRPanels()
 		if("b_emoteactive")
 			host.vore_selected.emote_active = !host.vore_selected.emote_active
 			. = TRUE
