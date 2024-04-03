@@ -9,6 +9,7 @@
 	dir = EAST
 
 	areas_to_use = list(
+		/area/turbolift/port_deck_maints, // CHOMPEdit - Maintenance deck
 		/area/turbolift/port_deck_one,
 		/area/turbolift/port_deck_two
 		)

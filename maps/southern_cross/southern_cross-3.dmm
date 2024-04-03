@@ -3771,7 +3771,7 @@
 /area/crew_quarters/sleep/vistor_room_12)
 "dym" = (
 /obj/effect/landmark/map_data{
-	height = 3
+	height = 4
 	},
 /turf/space,
 /area/space)
