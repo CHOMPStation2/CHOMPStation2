@@ -442,10 +442,10 @@
 ////////////////////////
 
 /obj/mecha/proc/removeVerb(verb_path)
-	verbs -= verb_path
+	src.verbs -= verb_path
 
 /obj/mecha/proc/addVerb(verb_path)
-	verbs += verb_path
+	src.verbs += verb_path
 
 /obj/mecha/proc/add_airtank()
 	internal_tank = new /obj/machinery/portable_atmospherics/canister/air(src)
@@ -540,7 +540,7 @@
 	if(equipment?.len)
 		. += "It's equipped with:"
 		for(var/obj/item/mecha_parts/mecha_equipment/ME in equipment)
-			. += "\icon[ME][bicon(ME)] [ME]"
+			. += "[icon2html(ME,user.client)] [ME]"
 
 /obj/mecha/proc/drop_item()//Derpfix, but may be useful in future for engineering exosuits.
 	return
@@ -1243,9 +1243,11 @@
 			pass_damage_reduc_mod = 1
 
 		pass_damage = (pass_damage_reduc_mod*pass_damage)//Apply damage reduction before usage.
-		src.take_damage(pass_damage, Proj.check_armour)	//The take_damage() proc handles armor values
+		//CHOMPEdit Start we can spark even when taking no damage. But don't check after a proc that might have deleted this
 		if(prob(25))
 			spark_system.start()
+		src.take_damage(pass_damage, Proj.check_armour)	//The take_damage() proc handles armor values
+		//CHOMPEdit End
 		if(pass_damage > internal_damage_minimum)	//Only decently painful attacks trigger a chance of mech damage.
 			src.check_for_internal_damage(list(MECHA_INT_FIRE,MECHA_INT_TEMP_CONTROL,MECHA_INT_TANK_BREACH,MECHA_INT_CONTROL_LOST,MECHA_INT_SHORT_CIRCUIT),ignore_threshold)
 
@@ -2443,7 +2445,7 @@
 /obj/mecha/proc/occupant_message(message as text)
 	if(message)
 		if(src.occupant && src.occupant.client)
-			to_chat(src.occupant, "\icon[src][bicon(src)] [message]")
+			to_chat(src.occupant, "[icon2html(src, src.occupant.client)] [message]")
 	return
 
 /obj/mecha/proc/log_message(message as text,red=null)

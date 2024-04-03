@@ -146,6 +146,33 @@
 	name = "VR Dungeon"
 	icon_state = "darkred"
 
+/area/vr/powered/mall
+	name = "VR Mall"
+	icon_state = "yellow"
+
+/area/vr/powered/mall/vw
+	name = "VR Vibe"
+	icon_state = "pink"
+	ambience = list('sound/ambience/vaporwave.ogg')
+
+/area/vr/powered/mall/dorms
+	name = "VR Mall Dorms"
+	icon_state = "Sleep"
+	soundproofed = TRUE
+	limit_mob_size = FALSE
+	block_suit_sensors = TRUE
+	flags = RAD_SHIELDED
+	block_tracking = TRUE
+
+/area/vr/outdoors/powered/mall
+	name = "VR Mall Outdoors"
+	icon_state = "bluenew"
+
+/area/vr/powered/mall/backrooms
+	name = "VR ???"
+	icon_state = "darkred"
+	forced_ambience = list('sound/ambience/fluorescentlight.ogg')
+
 /area/vr/powered/dungeon/indoors
 	name = "VR Sewers"
 	icon_state = "red"

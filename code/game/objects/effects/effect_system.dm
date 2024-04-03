@@ -199,6 +199,8 @@ steam.start() -- spawns the effect
 		return 0
 	if(istype(M,/mob/living/carbon/human))
 		var/mob/living/carbon/human/H = M
+		if(!M.get_organ(O_LUNGS)) // CHOMPedit - Making sure smoke doesn't affect lungless people
+			return 0
 		if(H.head && (H.head.item_flags & AIRTIGHT))
 			return 0
 	return 1

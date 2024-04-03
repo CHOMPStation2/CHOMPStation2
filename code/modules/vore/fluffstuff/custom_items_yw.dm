@@ -624,7 +624,7 @@
 /obj/item/weapon/implant/fluff/coda/post_implant(mob/source)
 	..()
 	var/mob/living/H = source
-	H.verbs += /obj/item/weapon/implant/fluff/coda/proc/coda_implant_resize
+	add_verb(H,/obj/item/weapon/implant/fluff/coda/proc/coda_implant_resize)  //CHOMPEdit
 	implanted_in = source
 	START_PROCESSING(SSobj, src)
 

@@ -6,10 +6,11 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 	var/shell = FALSE
 	var/deployed = FALSE
 	var/mob/living/silicon/ai/mainframe = null
+	var/first_transfer = TRUE
 
 // Premade AI shell, for roundstart shells.
 /mob/living/silicon/robot/ai_shell/Initialize()
-	src.verbs |= /mob/living/silicon/robot/proc/transfer_shell_act //CHOMPEDIT: add sideloader
+	add_verb(src,/mob/living/silicon/robot/proc/transfer_shell_act) //CHOMPEdit TGPanel //CHOMPEDIT: add sideloader
 	mmi = new /obj/item/device/mmi/inert/ai_remote(src)
 	post_mmi_setup()
 	return ..()
@@ -24,7 +25,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 	return
 
 /mob/living/silicon/robot/proc/make_shell()
-	src.verbs |= /mob/living/silicon/robot/proc/transfer_shell_act //CHOMPEDIT: add sideloader
+	add_verb(src,/mob/living/silicon/robot/proc/transfer_shell_act) //CHOMPEdit TGPanel //CHOMPEDIT: add sideloader
 	shell = TRUE
 	braintype = "AI Shell"
 	SetName("[modtype] AI Shell [num2text(ident)]")
@@ -38,7 +39,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 
 //CHOMPADDITION: Ai shell sideloading
 /mob/living/silicon/robot/proc/transfer_shell_act()
-	set category = "Robot Commands"
+	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
 	set name = "Transfer to Shell"
 	transfer_shell()
 
@@ -115,6 +116,12 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 		if(src.client) //CHOMPADDITION: Resize shell based on our preffered size
 			target.resize(src.client.prefs.size_multiplier) //CHOMPADDITION: Resize shell based on our preffered size
 		mind.transfer_to(target)
+		if(target.first_transfer)
+			target.first_transfer = FALSE
+			target.copy_from_prefs_vr()
+			if(LAZYLEN(target.vore_organs))
+				target.vore_selected = target.vore_organs[1]
+		src.copy_vore_prefs_to_mob(target)
 		AI.teleop = target // So the AI 'hears' messages near its core.
 		target.post_deploy()
 //CHOMPADDITION END
@@ -122,7 +129,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 /mob/living/silicon/robot/proc/revert_shell()
 	if(!shell)
 		return
-	src.verbs -= /mob/living/silicon/robot/proc/transfer_shell_act //CHOMPEDIT: remove sideloader
+	remove_verb(src,/mob/living/silicon/robot/proc/transfer_shell_act ) //CHOMPEDIT: remove sideloader //CHOMPEdit
 	undeploy()
 	shell = FALSE
 	GLOB.available_ai_shells -= src
@@ -150,7 +157,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 	lawsync()
 
 	// Give button to leave.
-	verbs += /mob/living/silicon/robot/proc/undeploy_act
+	add_verb(src,/mob/living/silicon/robot/proc/undeploy_act) //CHOMPEdit TGPanel
 	to_chat(AI, span("notice", "You have connected to an AI Shell remotely, and are now in control of it.<br>\
 	To return to your core, use the <b>Release Control</b> verb."))
 
@@ -175,6 +182,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 	if(message)
 		to_chat(src, span("notice", message))
 	mind.transfer_to(mainframe)
+	src.copy_vore_prefs_to_mob(mainframe)
 	deployed = FALSE
 	update_icon()
 	mainframe.teleop = null
@@ -194,7 +202,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 /mob/living/silicon/robot/proc/undeploy_act()
 	set name = "Release Control"
 	set desc = "Release control of a remote drone."
-	set category = "Robot Commands"
+	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
 
 	undeploy("Remote session terminated.")
 

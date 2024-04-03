@@ -353,7 +353,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	else
 		//BEGIN CACHED ICON GENERATION.
 		var/obj/item/organ/external/chest = get_organ(BP_TORSO)
-		base_icon = chest.get_icon(skeleton, !wholeicontransparent)
+		base_icon = chest?.get_icon(skeleton, !wholeicontransparent)
 
 		var/apply_extra_transparency_leg = organs_by_name[BP_L_LEG] && organs_by_name[BP_R_LEG]
 		var/apply_extra_transparency_foot = organs_by_name[BP_L_FOOT] && organs_by_name[BP_R_FOOT]
@@ -1419,8 +1419,8 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 			working.pixel_y = tail_style.offset_y
 			if(taurtype.can_ride && !riding_datum)
 				riding_datum = new /datum/riding/taur(src)
-				verbs |= /mob/living/carbon/human/proc/taur_mount
-				verbs |= /mob/living/proc/toggle_rider_reins
+				add_verb(src,/mob/living/carbon/human/proc/taur_mount) //CHOMPEdit TGPanel
+				add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
 		else if(islongtail(tail_style))
 			working.pixel_x = tail_style.offset_x
 			working.pixel_y = tail_style.offset_y

@@ -424,7 +424,8 @@
 		"opossum" = /mob/living/simple_mob/animal/passive/opossum,
 		"horse" = /mob/living/simple_mob/vore/horse,
 		"goose" = /mob/living/simple_mob/animal/space/goose,
-		"sheep" = /mob/living/simple_mob/vore/sheep
+		"sheep" = /mob/living/simple_mob/vore/sheep,
+		"catslug" = /mob/living/simple_mob/vore/alienanimals/catslug
 		)
 
 /obj/item/weapon/gun/energy/mouseray/metamorphosis/advanced

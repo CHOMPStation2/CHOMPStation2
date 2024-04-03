@@ -28,16 +28,16 @@
 	current_antagonists |= player
 
 	if(faction_verb && player.current)
-		player.current.verbs |= faction_verb
+		add_verb(player.current,faction_verb) //CHOMPEdit TGPanel
 
 	spawn(1 SECOND) //Added a delay so that this should pop up at the bottom and not the top of the text flood the new antag gets.
 		to_chat(player.current, "<span class='notice'>Once you decide on a goal to pursue, you can optionally display it to \
 			everyone at the end of the shift with the <b>Set Ambition</b> verb, located in the IC tab.  You can change this at any time, \
 			and it otherwise has no bearing on your round.</span>")
-	player.current.verbs |= /mob/living/proc/write_ambition
+	add_verb(player.current,/mob/living/proc/write_ambition) //CHOMPEdit TGPanel
 
 	if(can_speak_aooc)
-		player.current.client.verbs += /client/proc/aooc
+		add_verb(player.current.client,/client/proc/aooc) //CHOMPEdit
 
 	// Handle only adding a mind and not bothering with gear etc.
 	if(nonstandard_role_type)
@@ -51,7 +51,7 @@
 
 /datum/antagonist/proc/remove_antagonist(var/datum/mind/player, var/show_message, var/implanted)
 	if(player.current && faction_verb)
-		player.current.verbs -= faction_verb
+		remove_verb(player.current,faction_verb)  //CHOMPEdit
 	if(player in current_antagonists)
 		to_chat(player.current, "<span class='danger'><font size = 3>You are no longer a [role_text]!</font></span>")
 		current_antagonists -= player
@@ -60,8 +60,8 @@
 		update_icons_removed(player)
 		BITSET(player.current.hud_updateflag, SPECIALROLE_HUD)
 		if(!is_special_character(player))
-			player.current.verbs -= /mob/living/proc/write_ambition
-			player.current.client.verbs -= /client/proc/aooc
+			remove_verb(player.current,/mob/living/proc/write_ambition)  //CHOMPEdit
+			remove_verb(player.current.client,/client/proc/aooc)  //CHOMPEdit
 			player.ambitions = ""
 		return 1
 	return 0

@@ -86,7 +86,7 @@
 
 /mob/living/simple_mob/vore/sect_drone/Login()
 	. = ..()
-	verbs |= /mob/living/simple_mob/vore/sect_drone/proc/set_abdomen_color
+	add_verb(src,/mob/living/simple_mob/vore/sect_drone/proc/set_abdomen_color) //CHOMPEdit TGPanel
 
 /mob/living/simple_mob/vore/sect_drone/proc/set_abdomen_color()
 	set name = "Set Glow Color"

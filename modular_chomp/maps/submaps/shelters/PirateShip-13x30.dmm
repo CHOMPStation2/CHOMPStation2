@@ -1,6 +1,11 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "ao" = (
-/turf/simulated/shuttle/wall/dark/hard_corner,
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/wood,
 /area/survivalpod/superpose/PirateShip)
 "aH" = (
 /obj/effect/floor_decal/industrial/danger/corner{
@@ -19,7 +24,7 @@
 /area/survivalpod/superpose/PirateShip)
 "bZ" = (
 /obj/structure/sign/flag/pirate,
-/turf/simulated/shuttle/wall/dark/hard_corner,
+/turf/simulated/wall/rplastihull,
 /area/survivalpod/superpose/PirateShip)
 "cc" = (
 /obj/machinery/light{
@@ -35,6 +40,10 @@
 /obj/machinery/power/apc/alarms_hidden{
 	pixel_y = -28
 	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/PirateShip)
 "dc" = (
@@ -44,18 +53,18 @@
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/PirateShip)
 "dr" = (
-/obj/machinery/door/firedoor,
-/obj/machinery/atmospherics/pipe/manifold/visible{
-	dir = 4
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
 	},
-/obj/machinery/door/airlock/glass_external/public,
 /turf/simulated/floor/tiled/dark,
 /area/survivalpod/superpose/PirateShip)
 "eb" = (
 /obj/machinery/disperser/middle{
 	dir = 4
 	},
-/turf/simulated/shuttle/wall/dark,
+/turf/simulated/wall/rplastihull,
 /area/survivalpod/superpose/PirateShip)
 "fd" = (
 /obj/structure/bed,
@@ -84,16 +93,19 @@
 /turf/template_noop,
 /area/template_noop)
 "ha" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4
+/obj/machinery/power/port_gen/pacman/super,
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
 	},
+/obj/fiftyspawner/uranium,
 /turf/simulated/floor/tiled/dark,
 /area/survivalpod/superpose/PirateShip)
 "hM" = (
 /obj/machinery/disperser/middle{
 	dir = 8
 	},
-/turf/simulated/shuttle/wall/dark,
+/turf/simulated/wall/rplastihull,
 /area/survivalpod/superpose/PirateShip)
 "iP" = (
 /obj/structure/shuttle/engine/propulsion{
@@ -111,6 +123,11 @@
 "js" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/survivalpod/superpose/PirateShip)
 "jW" = (
@@ -162,8 +179,14 @@
 /turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/PirateShip)
 "mv" = (
-/obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass_external/public,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/power/smes,
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/survivalpod/superpose/PirateShip)
 "mR" = (
@@ -233,14 +256,15 @@
 /obj/random/maintenance/engineering,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/PirateShip)
-"sh" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/turf/simulated/shuttle/wall/dark,
-/area/survivalpod/superpose/PirateShip)
 "tq" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock{
 	id_tag = "pshiproom3"
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/PirateShip)
@@ -330,11 +354,17 @@
 /obj/structure/sign/flag/pirate{
 	pixel_y = 29
 	},
-/obj/machinery/door/firedoor,
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 10
+/obj/machinery/power/terminal{
+	dir = 4
 	},
-/obj/machinery/door/airlock/glass_external/public,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/survivalpod/superpose/PirateShip)
 "Ey" = (
@@ -391,8 +421,12 @@
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/PirateShip)
 "Kc" = (
-/obj/structure/sign/flag/pirate,
-/turf/simulated/shuttle/wall/dark,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/wood,
 /area/survivalpod/superpose/PirateShip)
 "Ki" = (
 /obj/structure/closet/crate/wooden,
@@ -446,11 +480,12 @@
 /turf/simulated/shuttle/plating/skipjack,
 /area/survivalpod/superpose/PirateShip)
 "MA" = (
-/obj/machinery/portable_atmospherics/canister/air/airlock,
-/obj/machinery/atmospherics/portables_connector{
-	dir = 1
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/dark,
 /area/survivalpod/superpose/PirateShip)
 "MH" = (
 /obj/structure/table/woodentable,
@@ -475,7 +510,7 @@
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/PirateShip)
 "NN" = (
-/turf/simulated/shuttle/wall/dark,
+/turf/simulated/wall/rplastihull,
 /area/survivalpod/superpose/PirateShip)
 "PQ" = (
 /obj/structure/fans,
@@ -488,7 +523,7 @@
 /area/survivalpod/superpose/PirateShip)
 "Qd" = (
 /obj/item/device/gps/computer,
-/turf/simulated/shuttle/wall/dark,
+/turf/simulated/wall/rplastihull,
 /area/survivalpod/superpose/PirateShip)
 "Qw" = (
 /obj/machinery/light{
@@ -566,7 +601,7 @@ cf
 cf
 cf
 cf
-ao
+NN
 NN
 NN
 cf
@@ -626,18 +661,18 @@ cf
 (3,1,1) = {"
 cf
 cf
-ao
 NN
 NN
 NN
 NN
-Kc
+NN
+bZ
 NN
 NN
-ao
-mv
-mv
-ao
+NN
+NN
+NN
+NN
 hM
 NN
 kJ
@@ -701,8 +736,8 @@ Ki
 NN
 Ev
 dr
-sh
-MA
+NN
+zL
 zL
 zL
 Ap
@@ -712,7 +747,7 @@ zL
 zm
 Xl
 Kk
-ao
+NN
 kJ
 NN
 cf
@@ -726,12 +761,12 @@ NN
 KK
 To
 cB
-ao
+NN
 NN
 Ym
 NN
-ao
-Qw
+NN
+mv
 Mr
 Xy
 zL
@@ -757,13 +792,13 @@ NN
 PQ
 To
 To
-To
+ao
 tq
-To
-To
-To
+Kc
+Kc
+Kc
 js
-Mr
+MA
 Mr
 Xy
 zL
@@ -790,11 +825,11 @@ Qd
 To
 To
 kM
-ao
+NN
 NN
 iY
 NN
-ao
+NN
 Qw
 Mr
 Xy
@@ -840,7 +875,7 @@ zL
 aH
 Fg
 Kk
-ao
+NN
 kJ
 NN
 cf
@@ -882,18 +917,18 @@ cf
 (11,1,1) = {"
 cf
 cf
-ao
 NN
 NN
 NN
 NN
-Kc
+NN
+bZ
 NN
 NN
-ao
+NN
 lU
 lU
-ao
+NN
 eb
 NN
 kJ
@@ -950,7 +985,7 @@ cf
 cf
 cf
 cf
-ao
+NN
 NN
 NN
 cf

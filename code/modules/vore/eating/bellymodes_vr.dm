@@ -137,7 +137,11 @@
 				 //these are all external sound triggers now, so it's ok.
 
 	if(emote_active)
-		var/list/EL = emote_lists[digest_mode]
+		//ChompEDIT START runtime, emote_lists can be = ""
+		var/list/EL
+		if(islist(emote_lists))
+			EL = emote_lists[digest_mode]
+		//ChompEDIT END
 		if((LAZYLEN(EL) || LAZYLEN(emote_lists[DM_HOLD_ABSORBED]) || (digest_mode == DM_DIGEST && LAZYLEN(emote_lists[DM_HOLD])) || (digest_mode == DM_SELECT && (LAZYLEN(emote_lists[DM_HOLD])||LAZYLEN(emote_lists[DM_DIGEST])||LAZYLEN(emote_lists[DM_ABSORB])) )) && next_emote <= world.time)
 			var/living_count = 0
 			var/absorbed_count = 0
@@ -380,6 +384,20 @@
 		owner_adjust_nutrition((nutrition_percent / 100) * compensation * 4.5 * personal_nutrition_modifier * pred_digestion_efficiency) //CHOMPedit end
 
 /obj/belly/proc/steal_nutrition(mob/living/L)
+	if(L.nutrition <= 110)
+		if(drainmode == DR_SLEEP && istype(L,/mob/living/carbon/human)) //Slowly put prey to sleep
+			if(L.tiredness <= 105)
+				L.tiredness = (L.tiredness + 6)
+			if(L.tiredness <= 90 && L.tiredness >= 75)
+				to_chat(L, "<span class='warning'>You are about to fall unconscious!</span>")
+				to_chat(owner, "<span class='warning'>[L] is about to fall unconscious!</span>")
+		if(drainmode == DR_FAKE && istype(L,/mob/living/carbon/human)) //Slowly bring prey to the edge of sleep without crossing it
+			if(L.tiredness <= 93)
+				L.tiredness = (L.tiredness + 6)
+		if(drainmode == DR_WEIGHT && istype(L,/mob/living/carbon/human)) //Slowly drain your prey's weight and add it to your own
+			if(L.weight > 70)
+				L.weight -= (0.01 * L.weight_loss)
+				owner.weight += (0.01 * L.weight_loss) //intentionally dependant on the prey's weight loss ratio rather than the preds weight gain to keep them in pace with one another.
 	if(L.nutrition >= 100)
 		var/oldnutrition = (L.nutrition * 0.05)
 		L.nutrition = (L.nutrition * 0.95)

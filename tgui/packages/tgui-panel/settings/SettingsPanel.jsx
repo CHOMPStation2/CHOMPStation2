@@ -81,6 +81,7 @@ export const SettingsPanel = (props) => {
         {activeTab === 'export' && <ExportTab />}
         {activeTab === 'chatPage' && <ChatPageSettings />}
         {activeTab === 'textHighlight' && <TextHighlightSettings />}
+        {activeTab === 'adminSettings' && <AdminSettings />}
       </Stack.Item>
     </Stack>
   );
@@ -94,6 +95,8 @@ export const SettingsGeneral = (props) => {
     lineHeight,
     showReconnectWarning,
     prependTimestamps,
+    interleave,
+    interleaveColor,
   } = useSelector(selectSettings);
   const dispatch = useDispatch();
   const [freeFont, setFreeFont] = useState(false);
@@ -207,6 +210,37 @@ export const SettingsGeneral = (props) => {
               )
             }
           />
+        </LabeledList.Item>
+        <LabeledList.Item label="Interleave messages">
+          <Button.Checkbox
+            checked={interleave}
+            content=""
+            tooltip="Enabling this will interleave messages."
+            mr="5px"
+            onClick={() =>
+              dispatch(
+                updateSettings({
+                  interleave: !interleave,
+                }),
+              )
+            }
+          />
+          <Box inline>
+            <ColorBox mr={1} color={interleaveColor} />
+            <Input
+              width="5em"
+              monospace
+              placeholder="#ffffff"
+              value={interleaveColor}
+              onInput={(e, value) =>
+                dispatch(
+                  updateSettings({
+                    interleaveColor: value,
+                  }),
+                )
+              }
+            />
+          </Box>
         </LabeledList.Item>
         <LabeledList.Item label="Enable chat timestamps">
           <Button.Checkbox
@@ -802,5 +836,31 @@ const TextHighlightSetting = (props) => {
         ''
       )}
     </Flex.Item>
+  );
+};
+
+export const AdminSettings = (props) => {
+  const dispatch = useDispatch();
+  const { hideImportantInAdminTab } = useSelector(selectSettings);
+  return (
+    <Section>
+      <LabeledList>
+        <LabeledList.Item label="Hide Important messages in admin only tabs">
+          <Button.Checkbox
+            checked={hideImportantInAdminTab}
+            content=""
+            tooltip="Enabling this will hide all important messages in admin filter exclusive tabs."
+            mr="5px"
+            onClick={() =>
+              dispatch(
+                updateSettings({
+                  hideImportantInAdminTab: !hideImportantInAdminTab,
+                }),
+              )
+            }
+          />
+        </LabeledList.Item>
+      </LabeledList>
+    </Section>
   );
 };

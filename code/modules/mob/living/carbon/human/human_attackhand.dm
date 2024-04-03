@@ -313,6 +313,7 @@
 				apply_effect(3, WEAKEN, armor_check)
 				playsound(src, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 				if(armor_check < 60)
+					drop_both_hands()	// CHOMPEdit - We've been pushed! Drop our stuff as well
 					visible_message("<span class='danger'>[M] has pushed [src]!</span>")
 				else
 					visible_message("<span class='warning'>[M] attempted to push [src]!</span>")

@@ -50,22 +50,13 @@
 			B.owner = tf_mob_holder
 			tf_mob_holder.vore_organs |= B
 			vore_organs -= B
-
 	if(tf_mob_holder)
 		tf_mob_holder = null
 	//VOREStation Addition End
-	//ChompEDIT START
-	if(selected_image) // prune out images
-		selected_image = null
-	if(hud_list) //prune out images in hud_list
-		for(var/item in hud_list)
-			if(item)
-				item = null
-	//ChompEDIT END
-
-	qdel(selected_image)
-	QDEL_NULL(vorePanel) //VOREStation Add
-	QDEL_LIST_NULL(vore_organs) //VOREStation Add
+	QDEL_NULL_LIST(hud_list)
+	QDEL_NULL(selected_image)
+	//QDEL_NULL(vorePanel) //VOREStation Add commented and moved to /mob
+	//QDEL_LIST_NULL(vore_organs) //VOREStation Add commented and moved to /mob
 	temp_language_sources = null //VOREStation Add
 	temp_languages = null //VOREStation Add
 
@@ -132,6 +123,8 @@
 		set_stat(CONSCIOUS)
 	else
 		// CHOMPEdit Start: Pain/etc calculations, but more efficient:tm: - this should work for literally anything that applies to health. Far better than slapping emote("pain") everywhere like scream does.
+		if(health > getMaxHealth()) //Overhealth
+			health = getMaxHealth()
 		var/initialhealth = health // CHOMPEdit: Getting our health before this check
 		health = getMaxHealth() - getOxyLoss() - getToxLoss() - getFireLoss() - getBruteLoss() - getCloneLoss() - halloss
 		if(!((ishuman(src)) || (issilicon(src))) && src.can_pain_emote) // Only run this if we're non-human/non-silicon (bots and mechanical simplemobs should be allowed to make pain sounds) & can emote pain, bc humans + carbons already do this. human_damage doesn't call parent, but sanity is better here.
@@ -836,6 +829,15 @@
 /mob/living/proc/slip(var/slipped_on,stun_duration=8)
 	return 0
 
+// CHOMPAdd - Drop both things on hands
+/mob/living/proc/drop_both_hands()
+	if(l_hand)
+		unEquip(l_hand)
+	if(r_hand)
+		unEquip(r_hand)
+	return
+// CHOMPEnd
+
 /mob/living/carbon/drop_from_inventory(var/obj/item/W, var/atom/target = null)
 	return !(W in internal_organs) && ..()
 
@@ -968,17 +970,43 @@
 			lying = incapacitated(INCAPACITATION_KNOCKDOWN)
 			canmove = !incapacitated(INCAPACITATION_DISABLED)
 
+	if(incapacitated(INCAPACITATION_KNOCKOUT) || incapacitated(INCAPACITATION_STUNNED)) // CHOMPAdd - Making sure we're in good condition to crawl
+		canmove = 0
+		drop_both_hands()
+	else
+		canmove = 1
+
 	if(lying)
 		density = FALSE
+	/* CHOMPEdit - Allow us to hold stuff while laying down.
 		if(l_hand)
 			unEquip(l_hand)
 		if(r_hand)
 			unEquip(r_hand)
 		for(var/obj/item/weapon/holder/holder in get_mob_riding_slots())
 			unEquip(holder)
+	*/
 		update_water() // Submerges the mob.
+		// CHOMPAdd Start - For crawling.
+		stop_pulling()
+
+		if(!passtable_crawl_checked)
+			passtable_crawl_checked = TRUE
+			if(pass_flags & PASSTABLE)
+				passtable_reset = FALSE
+			else
+				passtable_reset = TRUE
+				pass_flags |= PASSTABLE
+
+		// CHOMPEdit End
 	else
 		density = initial(density)
+	// CHOMPEdit Start - Rest passtable when crawling
+		if(passtable_reset)
+			passtable_reset = TRUE
+			pass_flags &= ~PASSTABLE
+		passtable_crawl_checked = FALSE
+	// CHOMPEdit End
 
 	for(var/obj/item/weapon/grab/G in grabbed_by)
 		if(G.state >= GRAB_AGGRESSIVE)
@@ -1329,7 +1357,7 @@
 /datum/component/character_setup/proc/character_setup_click(source, location, control, params, user)
 	var/mob/owner = user
 	if(owner.client?.prefs)
-		INVOKE_ASYNC(owner.client.prefs, /datum/preferences/proc/ShowChoices, owner)
+		INVOKE_ASYNC(owner.client.prefs, TYPE_PROC_REF(/datum/preferences, ShowChoices), owner)
 
 /**
  * Screen object for vore panel
@@ -1342,5 +1370,5 @@
 
 /mob/living/set_dir(var/new_dir)
 	. = ..()
-	if(size_multiplier != 1 || icon_scale_x != 1 && center_offset > 0)
+	if(size_multiplier != 1 || icon_scale_x != DEFAULT_ICON_SCALE_X && center_offset > 0)
 		update_transform(TRUE)

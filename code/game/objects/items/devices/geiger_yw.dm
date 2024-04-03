@@ -56,7 +56,7 @@
 	scanning = !scanning
 	update_icon()
 	update_sound()
-	to_chat(user, "<span class='notice'>\icon[src] You switch [scanning ? "on" : "off"] \the [src].</span>")
+	to_chat(user, "<span class='notice'>[icon2html(src,user.client)] You switch [scanning ? "on" : "off"] \the [src].</span>")
 
 /obj/item/device/geiger/wall/update_icon()
 	if(!scanning)

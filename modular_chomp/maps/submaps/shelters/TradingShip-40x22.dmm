@@ -131,6 +131,13 @@
 	},
 /turf/simulated/shuttle/plating/airless/carry,
 /area/survivalpod/superpose/TradingShip)
+"dx" = (
+/obj/structure/closet/walllocker/emerglocker{
+	pixel_y = 32
+	},
+/obj/structure/closet/crate/solar,
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
 "dy" = (
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 1
@@ -170,6 +177,9 @@
 	},
 /obj/item/stack/material/glass{
 	amount = 15
+	},
+/obj/item/stack/material/phoron{
+	amount = 25
 	},
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
@@ -294,10 +304,26 @@
 /obj/machinery/optable,
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
+"jn" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
 "jA" = (
 /obj/structure/fans/hardlight,
 /obj/machinery/door/airlock/multi_tile/metal/mait,
 /turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/TradingShip)
+"jD" = (
+/obj/machinery/power/smes/batteryrack/mapped,
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
 "jH" = (
 /obj/structure/table/standard,
@@ -633,6 +659,11 @@
 	req_access = null;
 	req_one_access = null
 	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/TradingShip)
 "pr" = (
@@ -809,6 +840,14 @@
 "th" = (
 /obj/machinery/iv_drip,
 /turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"to" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/shuttle/floor/darkred,
 /area/survivalpod/superpose/TradingShip)
 "tu" = (
 /obj/structure/sink{
@@ -993,6 +1032,16 @@
 	icon_state = "plant-22"
 	},
 /turf/simulated/floor/carpet,
+/area/survivalpod/superpose/TradingShip)
+"wt" = (
+/obj/machinery/power/apc/hyper{
+	pixel_y = -24
+	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
 "wz" = (
 /obj/machinery/atmospherics/pipe/simple/visible,
@@ -1262,6 +1311,14 @@
 /obj/machinery/light,
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
+"DU" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
 "DX" = (
 /obj/structure/table/steel_reinforced,
 /obj/random/tool,
@@ -1384,6 +1441,14 @@
 /obj/structure/table/standard,
 /obj/machinery/chemical_dispenser/bar_alc/full,
 /turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"Gw" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/shuttle/floor/darkred,
 /area/survivalpod/superpose/TradingShip)
 "GN" = (
 /obj/machinery/light/small{
@@ -1619,7 +1684,7 @@
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
 "MT" = (
-/turf/simulated/shuttle/wall/dark,
+/turf/simulated/wall/rplastihull,
 /area/survivalpod/superpose/TradingShip)
 "No" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
@@ -1774,6 +1839,15 @@
 	},
 /turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/TradingShip)
+"Rb" = (
+/obj/machinery/door/airlock/multi_tile/glass,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/TradingShip)
 "Ry" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/weapon/paper_bin{
@@ -1785,17 +1859,30 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
+"RU" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/survivalpod/superpose/TradingShip)
 "Sp" = (
 /turf/simulated/shuttle/floor/black,
+/area/survivalpod/superpose/TradingShip)
+"Su" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/shuttle/floor/darkred,
 /area/survivalpod/superpose/TradingShip)
 "Sy" = (
 /obj/machinery/atmospherics/pipe/tank/air{
 	start_pressure = 740.5
 	},
 /turf/simulated/shuttle/floor/black,
-/area/survivalpod/superpose/TradingShip)
-"SE" = (
-/turf/simulated/shuttle/wall/dark/hard_corner,
 /area/survivalpod/superpose/TradingShip)
 "SI" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -1901,6 +1988,16 @@
 	},
 /obj/structure/window/reinforced/full,
 /turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/TradingShip)
+"VC" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/power/terminal{
+	dir = 8
+	},
+/obj/machinery/power/port_gen/pacman,
+/turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
 "VL" = (
 /obj/machinery/vending/engivend{
@@ -2286,7 +2383,7 @@ MT
 Mc
 MT
 MT
-SE
+MT
 Sp
 Uy
 MT
@@ -2303,7 +2400,7 @@ Mc
 Mc
 Mc
 MT
-SE
+MT
 Qp
 xF
 MT
@@ -2318,7 +2415,7 @@ Mc
 MT
 Qm
 Sp
-SE
+MT
 MT
 Mc
 Mc
@@ -2381,7 +2478,7 @@ MT
 MT
 MT
 MT
-SE
+MT
 ET
 Sp
 Sp
@@ -2409,7 +2506,7 @@ MT
 MT
 rf
 eE
-SE
+MT
 MT
 Sp
 Sp
@@ -2523,14 +2620,14 @@ MT
 MT
 MT
 MT
-SE
+MT
 Sp
 CV
 Km
 qz
 CV
 Sp
-SE
+MT
 MT
 MT
 MT
@@ -2685,9 +2782,9 @@ Mc
 "}
 (26,1,1) = {"
 Mc
-SE
 MT
-SE
+MT
+MT
 Pv
 fP
 NE
@@ -2696,15 +2793,15 @@ MT
 Sp
 CV
 CV
-Sp
+wt
 MT
 Sy
 kd
 HB
 No
-SE
 MT
-SE
+MT
+MT
 Mc
 "}
 (27,1,1) = {"
@@ -2720,11 +2817,11 @@ TK
 CV
 CV
 CV
-CV
-TK
-CV
-CV
-CV
+to
+Rb
+Su
+Su
+Gw
 dy
 wz
 AL
@@ -2748,7 +2845,7 @@ Sp
 rf
 Sp
 CV
-CV
+RU
 dy
 nh
 GN
@@ -2757,26 +2854,26 @@ Mc
 "}
 (29,1,1) = {"
 Mc
-SE
 MT
-SE
+MT
+MT
 VY
 Sp
 Sp
 AR
-SE
+MT
 hx
 rx
 FL
 WL
-SE
-HP
-Sp
-Sp
-cC
-SE
 MT
-SE
+dx
+Sp
+jn
+cC
+MT
+MT
+MT
 Mc
 "}
 (30,1,1) = {"
@@ -2787,15 +2884,15 @@ MT
 MT
 VP
 VP
-SE
+MT
 MT
 gA
 tN
 CV
 Sp
 MT
-SE
-pl
+MT
+MT
 pl
 MT
 MT
@@ -2819,8 +2916,8 @@ CV
 zN
 jH
 MT
-Sp
-Sp
+jD
+DU
 bm
 cX
 Mc
@@ -2843,7 +2940,7 @@ CV
 CV
 lW
 MT
-zh
+VC
 Sp
 bf
 JI
@@ -2855,11 +2952,11 @@ Mc
 Mc
 Mc
 MT
-SE
+MT
 Od
 Sp
 cM
-SE
+MT
 MT
 fe
 LX

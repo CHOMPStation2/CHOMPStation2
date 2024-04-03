@@ -2,8 +2,8 @@
 	set name = "Adminverbs - Hide Most"
 	set category = "Admin"
 
-	verbs.Remove(/client/proc/hide_most_verbs, admin_verbs_hideable)
-	verbs += /client/proc/show_verbs
+	remove_verb(src, list(/client/proc/hide_most_verbs,admin_verbs_hideable)) //CHOMPEdit TGPanel
+	add_verb(src,/client/proc/show_verbs) //CHOMPEdit TGPanel
 
 	to_chat(src, "<span class='filter_system interface'>Most of your adminverbs have been hidden.</span>")
 	feedback_add_details("admin_verb","HMV") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -14,7 +14,7 @@
 	set category = "Admin"
 
 	remove_admin_verbs()
-	verbs += /client/proc/show_verbs
+	add_verb(src, /client/proc/show_verbs) //CHOMPEdit
 
 	to_chat(src, "<span class='filter_system interface'>Almost all of your adminverbs have been hidden.</span>")
 	feedback_add_details("admin_verb","TAVVH") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -24,7 +24,7 @@
 	set name = "Adminverbs - Show"
 	set category = "Admin"
 
-	verbs -= /client/proc/show_verbs
+	remove_verb(src, /client/proc/show_verbs) //CHOMPEdit
 	add_admin_verbs()
 
 	to_chat(src, "<span class='filter_adminlog interface'>All of your adminverbs are now visible.</span>")
@@ -32,7 +32,7 @@
 
 
 /client/proc/admin_ghost()
-	set category = "Admin"
+	set category = "Admin.Game" //CHOMPEdit
 	set name = "Aghost"
 	if(!holder)	return
 
@@ -76,6 +76,7 @@
 			ghost = body.ghostize(1)
 			ghost.admin_ghosted = 1
 			log_and_message_admins("[key_name(src)] admin-ghosted.") // CHOMPEdit - Add logging.
+		init_verbs() //CHOMPEdit
 		if(body)
 			body.teleop = ghost
 			if(!body.key)
@@ -84,7 +85,7 @@
 
 /client/proc/invisimin()
 	set name = "Invisimin"
-	set category = "Admin"
+	set category = "Admin.Game"
 	set desc = "Toggles ghost-like invisibility (Don't abuse this)"
 	if(holder && mob)
 		if(mob.invisibility == INVISIBILITY_OBSERVER)
@@ -146,7 +147,7 @@
 
 /client/proc/game_panel()
 	set name = "Game Panel"
-	set category = "Admin"
+	set category = "Admin.Game"
 	if(holder)
 		holder.Game()
 	feedback_add_details("admin_verb","GP") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -257,7 +258,7 @@
 #undef AUTOBANTIME
 
 /client/proc/drop_bomb() // Some admin dickery that can probably be done better -- TLE
-	set category = "Special Verbs"
+	set category = "Special Verbs.Fun"
 	set name = "Drop Bomb"
 	set desc = "Cause an explosion of varying strength at your location."
 
@@ -340,7 +341,7 @@
 	log_and_message_admins("has given [key_name(L)] the modifer [new_modifier_type], with a duration of [duration ? "[duration / 600] minutes" : "forever"].")
 
 /client/proc/make_sound(var/obj/O in world) // -- TLE
-	set category = "Special Verbs"
+	set category = "Special Verbs.Events"
 	set name = "Make Sound"
 	set desc = "Display a message to everyone who can hear the target"
 	if(O)
@@ -355,13 +356,13 @@
 
 /client/proc/togglebuildmodeself()
 	set name = "Toggle Build Mode Self"
-	set category = "Special Verbs"
+	set category = "Special Verbs.Events"
 	if(src.mob)
 		togglebuildmode(src.mob)
 	feedback_add_details("admin_verb","TBMS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/object_talk(var/msg as text) // -- TLE
-	set category = "Special Verbs"
+	set category = "Special Verbs.Events"
 	set name = "oSay"
 	set desc = "Display a message to everyone who can hear the target"
 	if(mob.control_object)
@@ -390,7 +391,7 @@
 		log_admin("[src] re-admined themself.")
 		message_admins("[src] re-admined themself.", 1)
 		to_chat(src, "<span class='filter_system interface'>You now have the keys to control the planet, or at least a small space station</span>")
-		verbs -= /client/proc/readmin_self
+		remove_verb(src,/client/proc/readmin_self) //CHOMPEdit TGPanel
 
 /client/proc/deadmin_self()
 	set name = "De-admin self"
@@ -402,7 +403,7 @@
 			message_admins("[src] deadmined themself.", 1)
 			deadmin()
 			to_chat(src, "<span class='filter_system interface'>You are now a normal player.</span>")
-			verbs |= /client/proc/readmin_self
+			add_verb(src,/client/proc/readmin_self) //CHOMPEdit TGPanel
 	feedback_add_details("admin_verb","DAS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/toggle_log_hrefs()
@@ -415,7 +416,7 @@
 
 /client/proc/check_ai_laws()
 	set name = "Check AI Laws"
-	set category = "Admin"
+	set category = "Admin.Game"
 	if(holder)
 		src.holder.output_ai_laws()
 
@@ -451,7 +452,7 @@
 /client/proc/change_security_level()
 	set name = "Set security level"
 	set desc = "Sets the station security level"
-	set category = "Admin"
+	set category = "Admin.Events"
 
 	if(!check_rights(R_ADMIN|R_EVENT))	return
 	var/sec_level = tgui_input_list(usr, "It's currently code [get_security_level()].", "Select Security Level", (list("green","yellow","violet","orange","blue","red","delta")-get_security_level()))
@@ -561,3 +562,9 @@
 	feedback_add_details("admin_verb","GS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	log_admin("[key_name(usr)] gave [key_name(T)] the spell [S].")
 	message_admins(span_blue("[key_name_admin(usr)] gave [key_name(T)] the spell [S]."), 1)
+
+/client/proc/debugstatpanel()
+	set name = "Debug Stat Panel"
+	set category = "Debug"
+
+	src.stat_panel.send_message("create_debug")

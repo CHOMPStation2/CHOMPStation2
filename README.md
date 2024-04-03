@@ -52,11 +52,7 @@ This will take a while to download, but it provides an easier method for updatin
 
 First-time installation should be fairly straightforward.  First, you'll need BYOND installed.  You can get it from [here](http://www.byond.com/).
 
-This is a sourcecode-only release, so the next step is to compile the server files.  Open vorestation.dme by double-clicking it, open the Build menu, and click compile.  This'll take a little while, and if everything's done right you'll get a message like this:
-
-    saving vorestation.dmb (DEBUG mode)
-
-    vorestation.dmb - 0 errors, 0 warnings
+Run BUILD.cmd (or bin/build.cmd) to build both the DM and TGUI code required for the server to function correctly.
 
 If you see any errors or warnings, something has gone wrong - possibly a corrupt download or the files extracted wrong, or a code issue on the main repo.  Ask on IRC.
 

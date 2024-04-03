@@ -105,6 +105,10 @@
 /obj/item/ammo_magazine/m762svd,
 /turf/simulated/floor/wood/alt/tile,
 /area/survivalpod/superpose/HillOutpost)
+"w" = (
+/obj/structure/closet/crate/solar,
+/turf/simulated/floor/outdoors/rocks,
+/area/survivalpod/superpose/HillOutpost)
 "x" = (
 /obj/structure/cliff/automatic/corner{
 	dir = 10
@@ -135,6 +139,13 @@
 	dir = 8
 	},
 /turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/HillOutpost)
+"B" = (
+/obj/machinery/power/port_gen/pacman,
+/obj/item/stack/material/phoron{
+	amount = 25
+	},
+/turf/simulated/floor/outdoors/rocks,
 /area/survivalpod/superpose/HillOutpost)
 "D" = (
 /obj/structure/table/sifwooden_reinforced,
@@ -254,6 +265,14 @@
 /obj/random/soap,
 /obj/item/weapon/material/knife/machete/hatchet,
 /obj/item/weapon/storage/box/flare,
+/obj/item/weapon/cell/high,
+/obj/item/weapon/cell/high,
+/obj/item/weapon/cell/high,
+/obj/item/weapon/stock_parts/matter_bin,
+/obj/item/weapon/stock_parts/capacitor,
+/obj/item/weapon/stock_parts/capacitor,
+/obj/item/weapon/stock_parts/capacitor,
+/obj/item/weapon/circuitboard/batteryrack,
 /turf/simulated/floor/wood/alt/tile/broken,
 /area/survivalpod/superpose/HillOutpost)
 "W" = (
@@ -367,7 +386,7 @@ k
 a
 a
 a
-a
+w
 W
 c
 c
@@ -380,7 +399,7 @@ a
 a
 a
 a
-a
+B
 M
 c
 c

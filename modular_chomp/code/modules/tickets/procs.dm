@@ -21,9 +21,9 @@
 		return
 
 	//remove out adminhelp verb temporarily to prevent spamming of admins.
-	src.verbs -= /client/verb/mentorhelp
+	remove_verb(src,/client/verb/mentorhelp)  //CHOMPEdit
 	spawn(600)
-		src.verbs += /client/verb/mentorhelp	// 1 minute cool-down for mentorhelps
+		add_verb(src,/client/verb/mentorhelp	) // 1 minute cool-down for mentorhelps //CHOMPEdit
 
 	feedback_add_details("admin_verb","Mentorhelp") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	if(current_ticket)
@@ -89,9 +89,9 @@
 		return
 
 	//remove out adminhelp verb temporarily to prevent spamming of admins.
-	src.verbs -= /client/verb/adminhelp
+	remove_verb(src,/client/verb/adminhelp)  //CHOMPEdit
 	spawn(1200)
-		src.verbs += /client/verb/adminhelp	// 2 minute cool-down for adminhelps
+		add_verb(src,/client/verb/adminhelp	) // 2 minute cool-down for adminhelps //CHOMPEdit
 
 	feedback_add_details("admin_verb","Adminhelp") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	if(current_ticket)
@@ -167,7 +167,7 @@
 		return
 
 	//if they requested spice, then remove spice verb temporarily to prevent spamming
-	usr.verbs -= /client/verb/adminspice
+	remove_verb(usr,/client/verb/adminspice)  //CHOMPEdit
 	spawn(10 MINUTES)
 		if(usr)		// In case we left in the 10 minute cooldown
-			usr.verbs += /client/verb/adminspice	// 10 minute cool-down for spice request
+			add_verb(usr,/client/verb/adminspice	) // 10 minute cool-down for spice request //CHOMPEdit

@@ -234,6 +234,7 @@
 	mineitemtype = /obj/item/weapon/mine/emp
 
 /obj/effect/mine/emp/explode(var/mob/living/M)
+	triggered = 1 //ChompEDIT recursing mines
 	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
 	s.set_up(3, 1, src)
 	s.start()
@@ -287,7 +288,7 @@
 	name = "mine"
 	desc = "A small explosive mine with 'HE' and a grenade symbol on the side."
 	icon = 'icons/obj/weapons.dmi'
-	icon_state = "uglymine"
+	icon_state = "landmine"
 	var/countdown = 10
 	var/minetype = /obj/effect/mine		//This MUST be an /obj/effect/mine type, or it'll runtime.
 

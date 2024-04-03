@@ -169,6 +169,12 @@
 /obj/random/junk,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/survivalpod/superpose/OldHotel)
+"hO" = (
+/obj/item/weapon/stock_parts/capacitor,
+/obj/item/weapon/stock_parts/capacitor,
+/obj/item/weapon/stock_parts/capacitor,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/OldHotel)
 "hQ" = (
 /turf/simulated/wall/wood,
 /area/survivalpod/superpose/OldHotel)
@@ -468,6 +474,10 @@
 /obj/item/weapon/material/knife/butch,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/survivalpod/superpose/OldHotel)
+"Ag" = (
+/obj/structure/closet/crate/solar,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/OldHotel)
 "AO" = (
 /obj/structure/railing,
 /turf/simulated/floor/outdoors/dirt,
@@ -475,6 +485,7 @@
 "AU" = (
 /obj/structure/table/woodentable,
 /obj/item/device/tape,
+/obj/item/weapon/circuitboard/batteryrack,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/OldHotel)
 "Bt" = (
@@ -667,6 +678,10 @@
 "PO" = (
 /obj/machinery/space_heater,
 /turf/simulated/floor/wood/broken,
+/area/survivalpod/superpose/OldHotel)
+"Qh" = (
+/obj/item/weapon/stock_parts/matter_bin,
+/turf/simulated/floor/wood,
 /area/survivalpod/superpose/OldHotel)
 "Qv" = (
 /obj/structure/table/woodentable,
@@ -1032,7 +1047,7 @@ bW
 wK
 JT
 AU
-qg
+hO
 nD
 rK
 tz
@@ -1059,7 +1074,7 @@ ZG
 hQ
 zP
 TU
-qg
+Qh
 hQ
 hQ
 hQ
@@ -1084,7 +1099,7 @@ gA
 MU
 nD
 hQ
-qg
+Ag
 qg
 SZ
 qg

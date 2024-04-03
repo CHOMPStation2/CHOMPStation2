@@ -416,7 +416,10 @@
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/ExplorerHome)
 "aX" = (
-/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary,
+/obj/machinery/power/port_gen/pacman,
+/obj/item/stack/material/phoron{
+	amount = 25
+	},
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/ExplorerHome)
 "aY" = (
@@ -565,6 +568,48 @@
 /obj/item/clothing/accessory/poncho/thermal,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/ExplorerHome)
+"fb" = (
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/ExplorerHome)
+"qU" = (
+/obj/machinery/power/apc{
+	dir = 8;
+	pixel_x = -26
+	},
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/ExplorerHome)
+"sV" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/ExplorerHome)
+"th" = (
+/obj/item/stack/material/phoron{
+	amount = 25
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/ExplorerHome)
+"zc" = (
+/obj/structure/grille/rustic,
+/obj/structure/window/reinforced/full,
+/obj/structure/cable/green,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/ExplorerHome)
+"Dg" = (
+/obj/machinery/power/smes/batteryrack/mapped,
+/obj/structure/cable/green,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/ExplorerHome)
 "GN" = (
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/wood,
@@ -701,12 +746,12 @@ ax
 ap
 ap
 GN
-ap
-ap
-ap
-as
-ad
-ad
+qU
+sV
+sV
+zc
+Dg
+fb
 ag
 ag
 "}
@@ -835,7 +880,7 @@ ap
 ap
 ap
 ap
-ap
+th
 as
 ad
 ad
