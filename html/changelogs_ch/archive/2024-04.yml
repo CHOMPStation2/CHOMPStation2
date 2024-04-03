@@ -34,3 +34,13 @@
       properly. No autoflush :(
   - image: added the secondary belly layer to the original set of vore bellies. Somehow
       we missed those and virgo had them. Now we should both have them!
+2024-04-03:
+  Kashargul:
+  - bugfix: some hairstyles not showing
+  - bugfix: new meka borg sprite not usable
+  - code_imp: cleanup some borg code
+  TheCaramelion:
+  - bugfix: Shields diffusers will actually work when meteors happen
+  cadyn:
+  - rscadd: hlscream
+  - rscadd: hlpain emote
