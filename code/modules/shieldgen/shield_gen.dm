@@ -267,7 +267,7 @@
 		if(T in covered_turfs)
 			covered_turfs.Remove(T)
 		for(var/turf/O in covered_turfs)
-			if(locate(/obj/effect/energy_field, O))
+			if(locate(/obj/effect/energy_field, O) || locate(/obj/machinery/pointdefense, orange(2, O)))
 				continue
 			E = new(O, src)
 			field.Add(E)
