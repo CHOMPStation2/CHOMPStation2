@@ -11,8 +11,8 @@
 /area/submap/farm)
 "d" = (
 /obj/structure/railing{
-	dir = 4;
-	icon_state = "railing0"
+	icon_state = "railing0";
+	dir = 4
 	},
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/farm)
@@ -21,8 +21,8 @@
 /area/submap/farm)
 "f" = (
 /obj/structure/railing{
-	dir = 8;
-	icon_state = "railing0"
+	icon_state = "railing0";
+	dir = 8
 	},
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/farm)
@@ -145,8 +145,8 @@
 /area/submap/farm)
 "C" = (
 /obj/structure/bed/chair/wood{
-	dir = 8;
-	icon_state = "wooden_chair"
+	icon_state = "wooden_chair";
+	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/submap/farm)
@@ -221,10 +221,18 @@
 /area/submap/farm)
 "T" = (
 /obj/structure/railing{
-	dir = 1;
-	icon_state = "railing0"
+	icon_state = "railing0";
+	dir = 1
 	},
 /turf/simulated/floor/outdoors/dirt,
+/area/submap/farm)
+"U" = (
+/obj/structure/table/steel,
+/obj/item/seeds/pitcherseed,
+/obj/item/seeds/pitcherseed,
+/obj/item/seeds/pitcherseed,
+/obj/item/seeds/pitcherseed,
+/turf/simulated/floor/plating,
 /area/submap/farm)
 
 (1,1,1) = {"
@@ -932,7 +940,7 @@ M
 M
 M
 M
-S
+U
 g
 e
 e
