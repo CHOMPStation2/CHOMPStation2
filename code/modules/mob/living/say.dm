@@ -420,12 +420,12 @@ var/list/channel_to_radio_key = new
 		message = "([message_mode == "headset" ? "Common" : capitalize(message_mode)]) [message]" //Adds radio keys used if available
 	if(whispering)
 		if(do_sound && message)
-			playsound(T, pick(voice_sounds_list), 25, TRUE, extrarange = -6, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = FALSE, preference = /datum/client_preference/say_sounds)	//CHOMPEdit - Use say sound prefs
+			playsound(T, pick(voice_sounds_list), 25, TRUE, extrarange = -6, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = TRUE, preference = /datum/client_preference/say_sounds)	//CHOMPEdit - Use say sound prefs
 
 		log_whisper(message, src)
 	else
 		if(do_sound && message)
-			playsound(T, pick(voice_sounds_list), 75, TRUE, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = FALSE, preference = /datum/client_preference/say_sounds)	//CHOMPEdit - tiny fix
+			playsound(T, pick(voice_sounds_list), 75, TRUE, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = TRUE, preference = /datum/client_preference/say_sounds)	//CHOMPEdit - tiny fix
 		log_say(message, src)
 	return 1
 
