@@ -90,7 +90,7 @@
 		message_admins("Infected room event started; Virus: <a href='?src=\ref[virus];[HrefToken()];info=1'>[virus.name()]</a>")
 
 /datum/event/infectedroom/announce()
-	command_announcement.Announce("Confirmed outbreak of level 7 biohazard aboard \the [location_name()]. All personnel must contain the outbreak.", "Infectious Contaminant", new_sound = 'sound/AI/outbreak7.ogg')
+	command_announcement.Announce("Confirmed outbreak of level 7 biohazard aboard \the [location_name()]. All personnel must contain the outbreak.", "Infectious Contaminant in [target_area.name]", new_sound = 'sound/AI/outbreak7.ogg')
 	// Chomp edit: Changed "Biohazard Alert" to "Infectious Contaminant" and also changed level 5 to level 7.
 
 /datum/event/infectedroom/start()
