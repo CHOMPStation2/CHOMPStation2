@@ -140,6 +140,13 @@
 					reagents.trans_to_holder(H.ingested, (reagents.total_volume), B.nutrition_percent / 100, 0)
 				else if(isliving(B.owner))
 					B.owner.nutrition += 15 * w_class * B.nutrition_percent / 100
+				if(istype(src,/obj/item/weapon/reagent_containers/food/snacks))
+					var/obj/item/weapon/reagent_containers/food/snacks/goodmeal = src //What a typecast
+					//Drop the leftover garbage when the food melts
+					if(goodmeal.package_trash)
+						new goodmeal.package_trash(src)
+					if(goodmeal.trash)
+						new goodmeal.trash(src)
 			if(B.item_digest_logs)
 				to_chat(B.owner,"<span class='notice'>[src] was digested inside your [lowertext(B.name)].</span>")
 			qdel(src)//CHOMPEdit End

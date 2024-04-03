@@ -20,3 +20,11 @@
 		layer = HIDING_LAYER //Just above cables with their 2.44
 		plane = OBJ_PLANE
 		to_chat(src,"<span class='notice'>You are now hiding.</span>")
+
+//ChompEDIT START - re-assert our layer and plane
+/mob/living/Moved(var/atom/oldloc, direct, forced, movetime)
+	. = ..()
+	if(status_flags & HIDING)
+		layer = HIDING_LAYER
+		plane = OBJ_PLANE
+//ChompEDIT END

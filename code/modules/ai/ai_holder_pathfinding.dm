@@ -29,6 +29,12 @@
 	if(!A)
 		ai_log("calculate_path() : Called without an atom. Exiting.",AI_LOG_WARNING)
 		return
+	//CHOMPEdit Begin
+	var/turf/T = get_turf(A)
+	if(!istype(T) || T.z != holder.z)
+		ai_log("calculate_path() : Called with invalid destination. Exiting.",AI_LOG_WARNING)
+		return
+	//CHOMPEdit End
 
 	if(!use_astar) // If we don't use A* then this is pointless.
 		ai_log("calculate_path() : Not using A*, Exiting.", AI_LOG_DEBUG)
@@ -42,7 +48,7 @@
 /datum/ai_holder/proc/get_path(var/turf/target,var/get_to = 1, var/max_distance = world.view*6)
 	ai_log("get_path() : Entering.",AI_LOG_DEBUG)
 	forget_path()
-	var/list/new_path = AStar(get_turf(holder.loc), target, astar_adjacent_proc, /turf/proc/Distance, min_target_dist = get_to, max_node_depth = max_distance, id = holder.IGetID(), exclude = obstacles)
+	var/list/new_path = SSpathfinder.default_ai_pathfinding(src, target, get_to) //CHOMPEdit
 
 	if(new_path && new_path.len)
 		path = new_path

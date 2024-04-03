@@ -391,3 +391,34 @@
 	M.heal_organ_damage(4 * removed * chem_effective, 4 * removed * chem_effective)
 	M.adjustToxLoss(-2 * removed * chem_effective)
 	M.add_chemical_effect(CE_PAINKILLER, 10 * M.species.chem_strength_pain)
+
+/datum/reagent/dryagent
+	name = "Dry Agent"
+	id = "dryagent"
+	description = "A desiccant. Can be used to dry things."
+	taste_description = "dryness"
+	reagent_state = LIQUID
+	color = "#A70FFF"
+	scannable = 1
+	overdose = REAGENTS_OVERDOSE
+
+/datum/reagent/dryagent/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	var/chem_effective = 1 * M.species.chem_strength_heal
+	if(alien == IS_SLIME)
+		chem_effective = 1.25
+		M.adjustFireLoss(2 * removed * chem_effective) // Why are you giving this to Prometheans or Dionas. You're going to DRY them.
+
+/datum/reagent/dryagent/touch_obj(obj/O, amount)
+	if(istype(O, /obj/item/clothing/shoes/galoshes) && O.loc)
+		new /obj/item/clothing/shoes/dry_galoshes(O.loc)
+		qdel(O)
+		remove_self(10)
+
+/datum/reagent/dryagent/touch_turf(var/turf/T)
+	..()
+	if(volume >= 5)
+		if(istype(T, /turf/simulated/floor))
+			var/turf/simulated/floor/F = T
+			if(F.wet)
+				F.wet = 0
+	return

@@ -234,7 +234,7 @@
 	return ..()
 
 /obj/item/mecha_parts/mecha_equipment/proc/detach(atom/moveto=null)
-	if(!chassis)
+	if(!chassis || !get_turf(chassis)) //CHOMPEdit don't detach components in nullspace
 		return
 	moveto = moveto || get_turf(chassis)
 	forceMove(moveto)
@@ -280,7 +280,7 @@
 
 /obj/item/mecha_parts/mecha_equipment/proc/occupant_message(message)
 	if(chassis)
-		chassis.occupant_message("\icon[src][bicon(src)] [message]")
+		chassis.occupant_message("[icon2html(src, chassis.occupant.client)] [message]")
 	return
 
 /obj/item/mecha_parts/mecha_equipment/proc/log_message(message)

@@ -23,7 +23,8 @@
 
 //print a testing-mode debug message to world.log
 /proc/testing(msg)
-	to_world_log("## TESTING: [msg]")
+	if (config.log_debug) //CHOMPEdit
+		to_world_log("## TESTING: [msg]")
 
 /proc/log_admin(text)
 	admin_log.Add(text)

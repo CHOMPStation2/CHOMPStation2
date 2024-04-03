@@ -182,7 +182,7 @@
 	exploded = 1
 	// CHOMPEdit Start - Looping Alarms. We want to stop the alarm here.
 	if(stationcrystal) // Are we an on-station crystal?
-		addtimer(CALLBACK(src, .proc/reset_alarms), 10 SECONDS, TIMER_STOPPABLE)
+		addtimer(CALLBACK(src, PROC_REF(reset_alarms)), 10 SECONDS, TIMER_STOPPABLE)
 	// CHOMPEdit End
 
 	sleep(pull_time)

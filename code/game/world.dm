@@ -8,7 +8,7 @@
 		if(UNIX) lib = "libprof.so"
 		else CRASH("unsupported platform")
 
-	var/init = call(lib, "init")()
+	var/init = call_ext(lib, "init")()
 	if("0" != init) CRASH("[lib] init error: [init]")
 // CHOMPedit End
 
@@ -57,7 +57,7 @@
 	// if(config && config.log_runtime)
 	// 	log = file("data/logs/runtime/[time2text(world.realtime,"YYYY-MM-DD-(hh-mm-ss)")]-runtime.log")
 
-	GLOB.timezoneOffset = get_timezone_offset()
+	GLOB.timezoneOffset = world.timezone * 36000
 
 	callHook("startup")
 	//Emergency Fix
@@ -70,7 +70,7 @@
 	// CHOMPStation Addition: Spaceman DMM Debugging
 	var/debug_server = world.GetConfig("env", "AUXTOOLS_DEBUG_DLL")
 	if (debug_server)
-		call(debug_server, "auxtools_init")()
+		call_ext(debug_server, "auxtools_init")()
 		enable_debugging()
 	// CHOMPStation Add End
 
@@ -840,7 +840,7 @@ var/global/game_id = null
 /world/Del()
 	var/debug_server = world.GetConfig("env", "AUXTOOLS_DEBUG_DLL")
 	if (debug_server)
-		call(debug_server, "auxtools_shutdown")()
+		call_ext(debug_server, "auxtools_shutdown")()
 	. = ..()
 
 // CHOMPStation Add End: Spaceman DMM Debugger

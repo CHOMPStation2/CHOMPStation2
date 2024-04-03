@@ -22,4 +22,4 @@
 	visibility = 0 //VOREStation Edit
 	*/
 	cache_lifespan = 7
-	fps = 20 // If this isnt hard-defined, anything relying on this variable before world load will cry a lot
+	fps = 40 // If this isnt hard-defined, anything relying on this variable before world load will cry a lot

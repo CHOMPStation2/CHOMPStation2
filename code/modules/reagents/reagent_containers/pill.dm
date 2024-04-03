@@ -31,10 +31,12 @@
 				return
 			var/obj/item/blocked = H.check_mouth_coverage()
 			if(blocked)
-				to_chat(user, "<span class='warning'>\The [blocked] is in the way!</span>")
+				// to_chat(user, "<span class='warning'>\The [blocked] is in the way!</span>")
+				balloon_alert(user, "\The [blocked] is in the way!") // CHOMPEdit - Changed to balloon alert
 				return
 
-			to_chat(M, "<span class='notice'>You swallow \the [src].</span>")
+			// to_chat(M, "<span class='notice'>You swallow \the [src].</span>")
+			balloon_alert(user, "Swallowed \the [src]")	// CHOMPEdit - Changed to balloon alert
 			M.drop_from_inventory(src) //icon update
 			if(reagents.total_volume)
 				reagents.trans_to_mob(M, reagents.total_volume, CHEM_INGEST)
@@ -45,21 +47,25 @@
 
 		var/mob/living/carbon/human/H = M
 		if(!H.check_has_mouth())
-			to_chat(user, "Where do you intend to put \the [src]? \The [H] doesn't have a mouth!")
+			// to_chat(user, "Where do you intend to put \the [src]? \The [H] doesn't have a mouth!")
+			balloon_alert(user, "\The [H] doesn't have a mouth.") // CHOMPEdit - Changed to balloon alert
 			return
 		var/obj/item/blocked = H.check_mouth_coverage()
 		if(blocked)
-			to_chat(user, "<span class='warning'>\The [blocked] is in the way!</span>")
+			// to_chat(user, "<span class='warning'>\The [blocked] is in the way!</span>")
+			balloon_alert(user, "\The [blocked] is in the way!") // CHOMPEdit - Changed to balloon alert
 			return
 
-		user.visible_message("<span class='warning'>[user] attempts to force [M] to swallow \the [src].</span>")
+		// user.visible_message("<span class='warning'>[user] attempts to force [M] to swallow \the [src].</span>")
+		balloon_alert_visible("[user] attempts to force [M] to swallow \the [src].") // CHOMPEdit - Changed to balloon alert
 
 		user.setClickCooldown(user.get_attack_speed(src))
 		if(!do_mob(user, M))
 			return
 
 		user.drop_from_inventory(src) //icon update
-		user.visible_message("<span class='warning'>[user] forces [M] to swallow \the [src].</span>")
+		// user.visible_message("<span class='warning'>[user] forces [M] to swallow \the [src].</span>")
+		balloon_alert_visible("[user] forces [M] to swallow \the [src].") // CHOMPEdit - Changed to balloon alert
 
 		var/contained = reagentlist()
 		add_attack_logs(user,M,"Fed a pill containing [contained]")
@@ -77,16 +83,18 @@
 
 	if(target.is_open_container() && target.reagents)
 		if(!target.reagents.total_volume)
-			to_chat(user, "<span class='notice'>[target] is empty. Can't dissolve \the [src].</span>")
+			// to_chat(user, "<span class='notice'>[target] is empty. Can't dissolve \the [src].</span>")
+			balloon_alert(user, "[target] is empty.") // CHOMPEdit - Changed to balloon alert
 			return
-		to_chat(user, "<span class='notice'>You dissolve \the [src] in [target].</span>")
+		// to_chat(user, "<span class='notice'>You dissolve \the [src] in [target].</span>")
+		balloon_alert_visible("[user] puts something in \the [target]", "[target] dissolves in \the [src]", 2) // CHOMPEdit - Changed to balloon alert
 
 		add_attack_logs(user,null,"Spiked [target.name] with a pill containing [reagentlist()]")
 
 		reagents.trans_to(target, reagents.total_volume)
-		for(var/mob/O in viewers(2, user))
+		/* for(var/mob/O in viewers(2, user)) // CHOMPEdit - balloon_alert_visible handles this
 			O.show_message("<span class='warning'>[user] puts something in \the [target].</span>", 1)
-
+		*/
 		qdel(src)
 
 	return
@@ -94,7 +102,8 @@
 /obj/item/weapon/reagent_containers/pill/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if(is_sharp(W))
 		var/obj/item/weapon/reagent_containers/powder/J = new /obj/item/weapon/reagent_containers/powder(src.loc)
-		user.visible_message("<span class='warning'>[user] gently cuts up [src] with [W]!</span>")
+		// user.visible_message("<span class='warning'>[user] gently cuts up [src] with [W]!</span>")
+		balloon_alert_visible("[user] gently cuts up [src] with [W]!", "You gently cut up \the [src] with [W]") // CHOMPEdit - Changed to balloon alert
 		playsound(src.loc, 'sound/effects/chop.ogg', 50, 1)
 
 		if(reagents)
@@ -104,7 +113,8 @@
 
 	if(istype(W, /obj/item/weapon/card/id))
 		var/obj/item/weapon/reagent_containers/powder/J = new /obj/item/weapon/reagent_containers/powder(src.loc)
-		user.visible_message("<span class='warning'>[user] clumsily chops up [src] with [W]!</span>")
+		// user.visible_message("<span class='warning'>[user] clumsily cuts up [src] with [W]!</span>")
+		balloon_alert_visible("[user] clumsily cuts up [src] with [W]!", "You clumsily cut up \the [src] with [W]") // CHOMPEdit - Changed to balloon alert
 		playsound(src.loc, 'sound/effects/chop.ogg', 50, 1)
 
 		if(reagents)

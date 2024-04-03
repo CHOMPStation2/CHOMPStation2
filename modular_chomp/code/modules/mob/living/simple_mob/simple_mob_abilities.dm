@@ -152,7 +152,7 @@
 				playsound(src, "sound/weapons/punchmiss.ogg", 50, 1)
 
 				// throw_at returns FALSE if it will not call it's callback - useful to prevent state jamming
-				if(!throw_at(T, 10, pounce_speed, callback = CALLBACK(src, .proc/pouncefinish, foundpt, foundpm, T)))
+				if(!throw_at(T, 10, pounce_speed, callback = CALLBACK(src, PROC_REF(pouncefinish), foundpt, foundpm, T)))
 					if(status_flags & LEAPING)
 						status_flags &= ~LEAPING
 						flying = 0
@@ -328,7 +328,7 @@
 		var/atom/movable/AM = am
 		if(AM == src || AM.anchored)
 			continue
-		addtimer(CALLBACK(src, .proc/speen_throw, am), 1)
+		addtimer(CALLBACK(src, PROC_REF(speen_throw), am), 1)
 	playsound(src, "sound/weapons/punchmiss.ogg", 50, 1)
 
 /mob/living/simple_mob/proc/speen_throw(var/atom/movable/AM, var/gentle = 0, var/damage = 10)

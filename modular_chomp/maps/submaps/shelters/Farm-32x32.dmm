@@ -45,7 +45,8 @@
 /turf/simulated/floor/outdoors/rocks,
 /area/survivalpod/superpose/Farm)
 "eb" = (
-/obj/machinery/power/port_gen/pacman,
+/obj/structure/cable/green,
+/obj/machinery/power/smes/batteryrack/mapped,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/Farm)
 "ec" = (
@@ -65,6 +66,16 @@
 "eq" = (
 /turf/template_noop,
 /area/template_noop)
+"ff" = (
+/obj/machinery/power/terminal{
+	dir = 8
+	},
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/Farm)
 "fp" = (
 /obj/structure/bed/chair/wood{
 	dir = 8
@@ -144,6 +155,17 @@
 /obj/machinery/cell_charger,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/Farm)
+"sW" = (
+/obj/machinery/power/port_gen/pacman,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/item/stack/material/phoron{
+	amount = 25
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/Farm)
 "te" = (
 /obj/machinery/vending/hydronutrients,
 /turf/simulated/floor/plating,
@@ -175,8 +197,8 @@
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/Farm)
 "Bb" = (
-/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary,
-/turf/simulated/floor/wood,
+/obj/structure/closet/crate/solar,
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/Farm)
 "Bz" = (
 /obj/structure/reagent_dispensers/fueltank/high,
@@ -193,6 +215,90 @@
 "Eu" = (
 /obj/machinery/space_heater,
 /turf/simulated/floor/wood,
+/area/survivalpod/superpose/Farm)
+"EP" = (
+/obj/structure/closet/crate,
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/fiftyspawner/blucarpet,
+/obj/fiftyspawner/oracarpet,
+/obj/fiftyspawner/purcarpet,
+/obj/fiftyspawner/sblucarpet,
+/obj/fiftyspawner/tealcarpet,
+/obj/fiftyspawner/turcarpet,
+/obj/item/stack/material/wood{
+	amount = 50;
+	color = "#824B28"
+	},
+/obj/item/stack/material/wood{
+	amount = 50;
+	color = "#824B28"
+	},
+/obj/item/stack/material/wood/hard{
+	amount = 50
+	},
+/obj/item/stack/material/wood/hard{
+	amount = 50
+	},
+/obj/item/stack/material/wood/sif{
+	amount = 50
+	},
+/obj/item/stack/material/wood/sif{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/cloth{
+	amount = 50
+	},
+/obj/item/stack/material/cloth{
+	amount = 50
+	},
+/obj/item/stack/material/algae{
+	amount = 50
+	},
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/lead{
+	amount = 30
+	},
+/obj/item/stack/material/plasteel{
+	amount = 30;
+	pixel_y = 5
+	},
+/obj/item/stack/material/resin{
+	amount = 50
+	},
+/obj/item/stack/material/smolebricks{
+	amount = 50
+	},
+/obj/item/stack/material/smolebricks{
+	amount = 50
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/Farm)
 "Fe" = (
 /obj/structure/flora/tree/jungle,
@@ -377,6 +483,10 @@
 	dir = 1;
 	pixel_y = 20
 	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/Farm)
 "Mo" = (
@@ -402,6 +512,14 @@
 "OW" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/wood,
+/area/survivalpod/superpose/Farm)
+"Rn" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/Farm)
 "Sr" = (
 /obj/structure/fence/corner{
@@ -508,6 +626,14 @@
 /obj/structure/bonfire/permanent/sifwood,
 /obj/item/weapon/reagent_containers/cooking_container/grill,
 /turf/simulated/floor/outdoors/grass/sif,
+/area/survivalpod/superpose/Farm)
+"Yq" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/Farm)
 "Yz" = (
 /obj/structure/fence/corner{
@@ -838,7 +964,7 @@ or
 Gm
 Gm
 Gm
-Bb
+vN
 vN
 Gm
 cs
@@ -1119,7 +1245,7 @@ dJ
 dJ
 Oe
 Gm
-VN
+EP
 eb
 Iw
 Ip
@@ -1154,10 +1280,10 @@ dJ
 Oe
 Gm
 LM
-Ny
-Ny
-Ny
-Ny
+ff
+Yq
+Yq
+Rn
 Gm
 Oe
 Oe
@@ -1191,7 +1317,7 @@ Ny
 Ny
 Ny
 Ny
-qW
+sW
 Gm
 Oe
 Oe
@@ -1225,7 +1351,7 @@ Ny
 Ny
 WM
 Ny
-Ox
+qW
 Gm
 Oe
 Oe
@@ -1293,7 +1419,7 @@ Ny
 Ny
 Ny
 Ny
-Ny
+Bb
 Gm
 Oe
 Oe

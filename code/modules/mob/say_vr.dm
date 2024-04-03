@@ -200,6 +200,8 @@
 		for(var/mob/M as anything in vis_mobs)
 			if(isnewplayer(M))
 				continue
+			if(src.client && M && !(get_z(src) == get_z(M)))
+				message = "<span class='multizsay'>[message]</span>"
 			if(isobserver(M) && (!(is_preference_enabled(/datum/client_preference/whisubtle_vis) || (isbelly(M.loc) && src == M.loc:owner)) || \
 			!is_preference_enabled(/datum/client_preference/whisubtle_vis) && !M.client?.holder)) //CHOMPEdit - Added the belly check so that ghosts in bellies can still see their pred's messages.
 				spawn(0)
@@ -351,8 +353,8 @@
 		for (var/mob/G in player_list)
 			if (istype(G, /mob/new_player))
 				continue
-			else if(isobserver(G) &&  G.is_preference_enabled(/datum/client_preference/ghost_ears && \
-			G.is_preference_enabled(/datum/client_preference/ghost_see_whisubtle)))
+			else if(isobserver(G) &&  G.is_preference_enabled(/datum/client_preference/ghost_ears) && \
+			G.is_preference_enabled(/datum/client_preference/ghost_see_whisubtle))
 				if(is_preference_enabled(/datum/client_preference/whisubtle_vis) || G.client.holder)
 					to_chat(G, "<span class='psay'>\The [M] thinks, \"[message]\"</span>")
 		log_say(message,M)

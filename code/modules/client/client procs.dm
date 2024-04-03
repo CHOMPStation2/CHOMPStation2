@@ -116,6 +116,9 @@
 		return
 	//VOREStation Add End
 
+	if(href_list["reload_statbrowser"]) //CHOMPEdit
+		stat_panel.reinitialize() //CHOMPEdit
+
 	//Logs all hrefs
 	if(config && config.log_hrefs && href_logfile)
 		WRITE_LOG(href_logfile, "[src] (usr:[usr])</small> || [hsrc ? "[hsrc] " : ""][href]")
@@ -140,7 +143,23 @@
 		if("openLink")
 			src << link(href_list["link"])
 
+	// CHOMPEdit Start
+	if (hsrc)
+		var/datum/real_src = hsrc
+		if(QDELETED(real_src))
+			return
+
+	//fun fact: Topic() acts like a verb and is executed at the end of the tick like other verbs. So we have to queue it if the server is
+	//overloaded
+	if(hsrc && hsrc != holder && DEFAULT_TRY_QUEUE_VERB(VERB_CALLBACK(src, PROC_REF(_Topic), hsrc, href, href_list)))
+		return
 	..()	//redirect to hsrc.Topic()
+
+///dumb workaround because byond doesnt seem to recognize the Topic() typepath for /datum/proc/Topic() from the client Topic,
+///so we cant queue it without this
+/client/proc/_Topic(datum/hsrc, href, list/href_list)
+	return hsrc.Topic(href, href_list)
+// CHOMPEdit End
 
 //This stops files larger than UPLOAD_LIMIT being sent from client to server via input(), client.Import() etc.
 /client/AllowUpload(filename, filelength)
@@ -180,6 +199,10 @@
 	GLOB.clients += src
 	GLOB.directory[ckey] = src
 
+	// Instantiate stat panel
+	stat_panel = new(src, "statbrowser")
+	stat_panel.subscribe(src, .proc/on_stat_panel_message)
+
 	// Instantiate tgui panel
 	tgui_panel = new(src, "browseroutput")
 
@@ -210,6 +233,14 @@
 	prefs.sanitize_preferences()
 	if(prefs)
 		prefs.selecting_slots = FALSE
+
+	// Initialize stat panel
+	stat_panel.initialize(
+		inline_html = file2text('html/statbrowser.html'),
+		inline_js = file2text('html/statbrowser.js'),
+		inline_css = file2text('html/statbrowser.css'),
+	)
+	addtimer(CALLBACK(src, PROC_REF(check_panel_loaded)), 30 SECONDS)
 
 	// Initialize tgui panel
 	tgui_panel.initialize()
@@ -273,18 +304,27 @@
 	//DISCONNECT//
 	//////////////
 /client/Del()
+	if(!gc_destroyed)
+		gc_destroyed = world.time
+		if (!QDELING(src))
+			stack_trace("Client does not purport to be QDELING, this is going to cause bugs in other places!")
+		GLOB.tickets.ClientLogout(src) // CHOMPedit - Tickets System
+		// Yes this is the same as what's found in qdel(). Yes it does need to be here
+		// Get off my back
+		SEND_SIGNAL(src, COMSIG_PARENT_QDELETING, TRUE)
+		Destroy() //Clean up signals and timers.
+	return ..()
+
+/client/Destroy()
 	if(holder)
 		holder.owner = null
 		GLOB.admins -= src
 	if (mentorholder)
 		mentorholder.owner = null
 		GLOB.mentors -= src
-	GLOB.tickets.ClientLogout(src) // CHOMPedit - Tickets System
 	GLOB.directory -= ckey
 	GLOB.clients -= src
-	return ..()
 
-/client/Destroy()
 	..()
 	return QDEL_HINT_HARDDEL_NOW
 
@@ -456,7 +496,8 @@
 		src << browse('code/modules/asset_cache/validate_assets.html', "window=asset_cache_browser")
 
 		//Precache the client with all other assets slowly, so as to not block other browse() calls
-		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(getFilesSlow), src, SSassets.preload, FALSE), 5 SECONDS)
+		if (config.asset_simple_preload)
+			addtimer(CALLBACK(SSassets.transport, TYPE_PROC_REF(/datum/asset_transport, send_assets_slow), src, SSassets.transport.preload), 5 SECONDS)
 
 /mob/proc/MayRespawn()
 	return 0
@@ -602,3 +643,43 @@
 	else
 		winset(usr, "input", "is-visible=false")
 */
+
+/// compiles a full list of verbs and sends it to the browser
+/client/proc/init_verbs()
+	if(IsAdminAdvancedProcCall())
+		return
+	var/list/verblist = list()
+	panel_tabs.Cut()
+	for(var/thing in (verbs + mob?.verbs))
+		var/procpath/verb_to_init = thing
+		if(!verb_to_init)
+			continue
+		if(verb_to_init.hidden)
+			continue
+		if(!istext(verb_to_init.category))
+			continue
+		panel_tabs |= verb_to_init.category
+		verblist[++verblist.len] = list(verb_to_init.category, verb_to_init.name)
+	src.stat_panel.send_message("init_verbs", list(panel_tabs = panel_tabs, verblist = verblist))
+
+/client/proc/check_panel_loaded()
+	if(stat_panel && stat_panel.is_ready())
+		return
+	to_chat(src, "<span class='danger'>Statpanel failed to load, click <a href='?src=[REF(src)];reload_statbrowser=1'>here</a> to reload the panel. If this does not work, reconnecting will reassign a new panel.</span>")
+
+/**
+ * Handles incoming messages from the stat-panel TGUI.
+ */
+/client/proc/on_stat_panel_message(type, payload)
+	switch(type)
+		if("Update-Verbs")
+			init_verbs()
+		if("Remove-Tabs")
+			panel_tabs -= payload["tab"]
+		if("Send-Tabs")
+			panel_tabs |= payload["tab"]
+		if("Reset-Tabs")
+			panel_tabs = list()
+		if("Set-Tab")
+			stat_tab = payload["tab"]
+			SSstatpanels.immediate_send_stat_data(src)

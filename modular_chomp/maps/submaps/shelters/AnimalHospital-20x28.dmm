@@ -137,9 +137,28 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/AnimalHospital)
+"iQ" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 6
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/AnimalHospital)
 "ji" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 9
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/AnimalHospital)
@@ -198,6 +217,17 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/AnimalHospital)
+"lS" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 6
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/AnimalHospital)
 "mC" = (
 /obj/effect/floor_decal/corner/paleblue/border,
 /turf/simulated/floor/tiled,
@@ -208,6 +238,17 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/AnimalHospital)
+"mU" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 6
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/AnimalHospital)
@@ -269,6 +310,15 @@
 /obj/item/clothing/mask/surgical,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/AnimalHospital)
+"qw" = (
+/obj/effect/floor_decal/corner/paleblue/border,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/AnimalHospital)
 "qL" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
@@ -290,6 +340,14 @@
 "rI" = (
 /obj/fiftyspawner/titanium,
 /obj/item/stack/cable_coil/silver,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/item/stack/material/phoron{
+	amount = 25
+	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/AnimalHospital)
 "st" = (
@@ -306,9 +364,18 @@
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/AnimalHospital)
 "sI" = (
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/structure/reagent_dispensers/fueltank,
+/obj/item/device/flashlight/glowstick/blue,
+/obj/item/device/flashlight/glowstick/blue,
+/obj/item/device/flashlight/glowstick/blue,
+/obj/item/device/flashlight,
 /obj/machinery/light/small{
 	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/AnimalHospital)
@@ -458,6 +525,29 @@
 	},
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/AnimalHospital)
+"DG" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 9
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/AnimalHospital)
+"FF" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/machinery/power/terminal{
+	dir = 8
+	},
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/AnimalHospital)
 "GG" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
@@ -473,6 +563,12 @@
 	pixel_y = 5
 	},
 /obj/item/weapon/storage/firstaid/regular,
+/obj/item/clothing/accessory/stethoscope,
+/obj/item/clothing/suit/storage/toggle/labcoat,
+/obj/item/clothing/suit/storage/toggle/labcoat,
+/obj/item/clothing/suit/storage/toggle/labcoat,
+/obj/item/device/flashlight/pen,
+/obj/item/device/flashlight/pen,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/AnimalHospital)
 "Hl" = (
@@ -581,6 +677,20 @@
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/AnimalHospital)
+"Ls" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 6
+	},
+/obj/machinery/power/apc{
+	dir = 4;
+	pixel_x = 26
+	},
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/AnimalHospital)
 "LW" = (
 /obj/effect/floor_decal/corner/paleblue/full{
 	dir = 1
@@ -601,12 +711,13 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/AnimalHospital)
 "Mw" = (
-/obj/structure/reagent_dispensers/fueltank,
-/obj/item/device/flashlight/glowstick/blue,
-/obj/item/device/flashlight/glowstick/blue,
-/obj/item/device/flashlight/glowstick/blue,
-/obj/item/device/flashlight,
+/obj/machinery/power/rtg/advanced,
+/obj/structure/cable,
 /turf/simulated/floor/plating,
+/area/survivalpod/superpose/AnimalHospital)
+"Mx" = (
+/obj/machinery/power/port_gen/pacman,
+/turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/AnimalHospital)
 "MA" = (
 /obj/structure/table/standard,
@@ -637,17 +748,25 @@
 "Og" = (
 /turf/simulated/wall/titanium,
 /area/survivalpod/superpose/AnimalHospital)
+"OH" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 10
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/survivalpod/superpose/AnimalHospital)
 "OL" = (
-/obj/structure/table/glass,
-/obj/item/clothing/suit/storage/toggle/labcoat,
-/obj/item/clothing/suit/storage/toggle/labcoat,
-/obj/item/clothing/suit/storage/toggle/labcoat,
-/obj/item/device/flashlight/pen,
-/obj/item/device/flashlight/pen,
-/obj/item/clothing/accessory/stethoscope,
-/obj/item/clothing/accessory/stethoscope,
 /obj/machinery/light/small{
 	dir = 1
+	},
+/obj/machinery/power/smes/batteryrack/mapped,
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/AnimalHospital)
@@ -733,6 +852,14 @@
 "Vr" = (
 /turf/template_noop,
 /area/survivalpod/superpose/AnimalHospital)
+"Vt" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/AnimalHospital)
 "VV" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/outdoors/dirt,
@@ -750,6 +877,11 @@
 /obj/machinery/door/airlock/medical{
 	req_one_access = null
 	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/AnimalHospital)
 "Ww" = (
@@ -762,7 +894,23 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 8
 	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/tiled,
+/area/survivalpod/superpose/AnimalHospital)
+"XM" = (
+/obj/machinery/door/airlock/glass_medical{
+	req_one_access = null
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/AnimalHospital)
 "Yb" = (
 /obj/effect/floor_decal/corner/paleblue{
@@ -778,6 +926,17 @@
 	req_one_access = null
 	},
 /turf/simulated/floor/plating,
+/area/survivalpod/superpose/AnimalHospital)
+"Zl" = (
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
 /area/survivalpod/superpose/AnimalHospital)
 "ZZ" = (
 /turf/simulated/floor/plating,
@@ -850,7 +1009,7 @@ Vr
 KQ
 KQ
 KQ
-KQ
+Mx
 rl
 Hl
 KQ
@@ -1214,14 +1373,14 @@ Iq
 Iq
 Qq
 Ww
-mC
+qw
 Wu
 rI
 sI
 Mw
 Og
 OL
-Iq
+Vt
 Iq
 Iq
 Iq
@@ -1244,14 +1403,14 @@ Iq
 RM
 Og
 eN
-vx
+OH
 Og
 Og
 Og
 Og
 Og
-Mb
-zk
+FF
+XM
 Mb
 Og
 Mb
@@ -1275,13 +1434,13 @@ Nv
 Og
 Yb
 XF
+DG
+DG
+DG
+DG
+DG
 ji
-ji
-ji
-ji
-ji
-ji
-Cj
+Zl
 fK
 IH
 cS
@@ -1304,14 +1463,14 @@ eU
 oa
 Og
 LW
-gX
-gX
-gX
-GG
-gX
-gX
-GG
-gX
+Ls
+mU
+mU
+iQ
+mU
+mU
+iQ
+lS
 gX
 gX
 GG

@@ -828,7 +828,7 @@
 
 	playsound_local(get_turf(src), suit_inhale_sound, 100, pressure_affected = FALSE, volume_channel = VOLUME_CHANNEL_AMBIENCE)
 	if(!exhale) // Did we fail exhale? If no, play it after inhale finishes.
-		addtimer(CALLBACK(src, .proc/play_exhale, M), 5 SECONDS)
+		addtimer(CALLBACK(src, PROC_REF(play_exhale), M), 5 SECONDS)
 
 /mob/living/carbon/human/proc/play_exhale(var/mob/living/M)
 	var/suit_exhale_sound
@@ -1309,6 +1309,11 @@
 			Paralyse(10)
 			setHalLoss(species.total_health - 1)
 
+		if(tiredness) //tiredness for vore drain
+			tiredness = (tiredness - 1)
+			if(tiredness >= 100)
+				Sleeping(5)
+
 		if(paralysis || sleeping)
 			blinded = 1
 			set_stat(UNCONSCIOUS)
@@ -1498,6 +1503,21 @@
 			overlay_fullscreen("brute", /obj/screen/fullscreen/brute, severity)
 		else
 			clear_fullscreen("brute")
+
+		//tiredness for drain vore
+		if(tiredness)
+			var/severity = 0
+			switch(tiredness)
+				if(10 to 20)		severity = 1
+				if(20 to 30)		severity = 2
+				if(30 to 45)		severity = 3
+				if(45 to 60)		severity = 4
+				if(60 to 75)		severity = 5
+				if(75 to 90)		severity = 6
+				if(90 to INFINITY)	severity = 7
+			overlay_fullscreen("tired", /obj/screen/fullscreen/oxy, severity)
+		else
+			clear_fullscreen("tired")
 
 		if(healths)
 			if (chem_effects[CE_PAINKILLER] > 100)
@@ -1779,12 +1799,14 @@
 	if(isturf(loc) && rand(1,1000) == 1)
 		var/turf/T = loc
 		if(T.get_lumcount() <= LIGHTING_SOFT_THRESHOLD)
+			/* CHOMPEdit Start
 			//VOREStation Add Start
 			if(text2num(time2text(world.timeofday, "MM")) == 4)
 				if(text2num(time2text(world.timeofday, "DD")) == 1)
 					playsound_local(src,pick(scawwySownds),50, 0)
 					return
 			//VOREStation Add End
+			*/ // CHOMPedit End
 			playsound_local(src,pick(scarySounds),50, 1, -1)
 
 /mob/living/carbon/human/handle_stomach()

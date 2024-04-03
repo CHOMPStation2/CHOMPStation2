@@ -35,9 +35,8 @@
 			return TRUE
 
 /datum/tgui_module/atmos_control/ui_assets(mob/user)
-	return list(
-		get_asset_datum(/datum/asset/simple/nanomaps),
-	)
+	. = ..()
+	. += get_asset_datum(/datum/asset/simple/nanomaps)
 
 /datum/tgui_module/atmos_control/tgui_interact(mob/user, datum/tgui/ui = null)
 	ui = SStgui.try_update_ui(user, src, ui)
@@ -51,7 +50,7 @@
 	. = ..()
 
 	var/z = get_z(user)
-	var/list/map_levels = using_map.get_map_levels(z) 
+	var/list/map_levels = using_map.get_map_levels(z)
 
 	// TODO: Move these to a cache, similar to cameras
 	var/alarms[0]
@@ -73,7 +72,7 @@
 	var/list/data = list()
 
 	var/z = get_z(user)
-	var/list/map_levels = using_map.get_map_levels(z) 
+	var/list/map_levels = using_map.get_map_levels(z)
 	data["map_levels"] = map_levels
 
 	return data
@@ -106,6 +105,7 @@
 /datum/tgui_state/air_alarm_remote/Destroy()
 	atmos_control = null
 	air_alarm = null
+	return ..()
 
 /datum/tgui_module/atmos_control/ntos
 	ntos = TRUE

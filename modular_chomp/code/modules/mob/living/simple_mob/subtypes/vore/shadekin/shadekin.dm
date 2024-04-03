@@ -3,7 +3,7 @@
 
 /mob/living/simple_mob/shadekin/Login()
 	. = ..()
-	verbs |= /mob/living/simple_mob/shadekin/proc/phase_strength_toggle
+	add_verb(src,/mob/living/simple_mob/shadekin/proc/phase_strength_toggle) //CHOMPEdit TGPanel
 
 
 // Allow horizontal resting

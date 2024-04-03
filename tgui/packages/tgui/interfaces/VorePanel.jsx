@@ -743,6 +743,7 @@ const VoreSelectedBellyOptions = (props) => {
     belly_item_mult,
     belly_overall_mult,
     vorespawn_blacklist,
+    drainmode,
   } = belly;
 
   return (
@@ -896,6 +897,12 @@ const VoreSelectedBellyOptions = (props) => {
             <Button
               onClick={() => act('set_attribute', { attribute: 'b_clone_dmg' })}
               content={digest_clone}
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Drain Finishing Mode">
+            <Button
+              onClick={() => act('set_attribute', { attribute: 'b_drainmode' })}
+              content={drainmode}
             />
           </LabeledList.Item>
           <LabeledList.Item label="Shrink/Grow Size">

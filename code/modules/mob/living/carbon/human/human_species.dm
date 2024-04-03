@@ -75,7 +75,7 @@
 	return ..(new_loc, SPECIES_UNATHI)
 
 /mob/living/carbon/human/dummy/mannequin/autoequip/sergal
-	icon = 'icons/mob/human_races/r_sergal.dmi'
+	icon = 'modular_chomp/icons/mob/human_races/r_sergal.dmi' //ChompEDIT - our icons
 /mob/living/carbon/human/dummy/mannequin/autoequip/sergal/Initialize(var/new_loc)
 	h_style = "Sergal Ears"
 	return ..(new_loc, SPECIES_SERGAL)

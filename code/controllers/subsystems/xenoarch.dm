@@ -14,9 +14,9 @@ SUBSYSTEM_DEF(xenoarch)
 	var/list/artifact_spawning_turfs = list()
 	var/list/digsite_spawning_turfs = list()
 
-/datum/controller/subsystem/xenoarch/Initialize(timeofday)
+/datum/controller/subsystem/xenoarch/Initialize() // CHOMPEdit
 	SetupXenoarch()
-	..()
+	return SS_INIT_SUCCESS // CHOMPEdit
 
 /datum/controller/subsystem/xenoarch/Recover()
 	if (istype(SSxenoarch.artifact_spawning_turfs))
@@ -27,7 +27,7 @@ SUBSYSTEM_DEF(xenoarch)
 /datum/controller/subsystem/xenoarch/stat_entry(msg)
 	if (!Debug2)
 		return // Only show up in stat panel if debugging is enabled.
-	. = ..()
+	return ..() //CHOMPEdit
 
 /datum/controller/subsystem/xenoarch/proc/SetupXenoarch()
 	for(var/turf/simulated/mineral/M in world)

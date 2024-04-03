@@ -77,6 +77,108 @@
 	extra_overlay = "jet_wing_1"
 	extra_overlay2 = "jet_wing_2"
 
+/datum/sprite_accessory/wing/mothwings_clockwork
+	name = "Moth Wings (Clockwork)"
+	desc = ""
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
+	icon_state = "mothwings_clockwork"
+
+/datum/sprite_accessory/wing/mothwings_monarch
+	name = "Moth Wings (Monarch)"
+	desc = ""
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
+	icon_state = "mothwings_monarch"
+
+/datum/sprite_accessory/wing/mothwings_luna
+	name = "Moth Wings (Luna)"
+	desc = ""
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
+	icon_state = "mothwings_luna"
+
+/datum/sprite_accessory/wing/mothwings_atlas
+	name = "Moth Wings (Atlas)"
+	desc = ""
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
+	icon_state = "mothwings_atlas"
+
+/datum/sprite_accessory/wing/mothwings_plain
+	name = "Moth Wings (Plain)"
+	desc = ""
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
+	icon_state = "mothwings_plain"
+
+/datum/sprite_accessory/wing/mothwings_redish
+	name = "Moth Wings (Redish)"
+	desc = ""
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
+	icon_state = "mothwings_redish"
+
+/datum/sprite_accessory/wing/mothwings_royal
+	name = "Moth Wings (Royal)"
+	desc = ""
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
+	icon_state = "mothwings_royal"
+
+/datum/sprite_accessory/wing/mothwings_gothic
+	name = "Moth Wings (Gothic)"
+	desc = ""
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
+	icon_state = "mothwings_gothic"
+
+/datum/sprite_accessory/wing/mothwings_lovers
+	name = "Moth Wings (Lovers)"
+	desc = ""
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
+	icon_state = "mothwings_lovers"
+
+/datum/sprite_accessory/wing/mothwings_whitefly
+	name = "Moth Wings (Whitefly)"
+	desc = ""
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
+	icon_state = "mothwings_whitefly"
+
+/datum/sprite_accessory/wing/mothwings_burntoff
+	name = "Moth Wings (Burnt Off)"
+	desc = ""
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
+	icon_state = "mothwings_burntoff"
+
+/datum/sprite_accessory/wing/mothwings_firewatch
+	name = "Moth Wings (Firewatch)"
+	desc = ""
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
+	icon_state = "mothwings_firewatch"
+
+/datum/sprite_accessory/wing/mothwings_deathhhead
+	name = "Moth Wings (Deathhead)"
+	desc = ""
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
+	icon_state = "mothwings_deathhead"
+
+/datum/sprite_accessory/wing/mothwings_poison
+	name = "Moth Wings (Poison)"
+	desc = ""
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
+	icon_state = "mothwings_poison"
+
+/datum/sprite_accessory/wing/mothwings_ragged
+	name = "Moth Wings (Ragged)"
+	desc = ""
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
+	icon_state = "mothwings_ragged"
+
+/datum/sprite_accessory/wing/mothwings_moonfly
+	name = "Moth Wings (Moonfly)"
+	desc = ""
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
+	icon_state = "mothwings_moonfly"
+
+/datum/sprite_accessory/wing/mothwings_snow
+	name = "Moth Wings (Snow)"
+	desc = ""
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
+	icon_state = "mothwings_snow"
+
 
 /// XENO BACKPLATES ///
 

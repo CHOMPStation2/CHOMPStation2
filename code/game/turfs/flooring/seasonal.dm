@@ -1,23 +1,25 @@
-var/world_time_season
-var/world_time_year
-var/world_time_month
-var/world_time_day
+// CHOMPEdit Start - Managed Globals
+GLOBAL_VAR(world_time_season)
+GLOBAL_VAR(world_time_year)
+GLOBAL_VAR(world_time_month)
+GLOBAL_VAR(world_time_day)
+// CHOMPEdit End
 
 /proc/setup_season()
-	world_time_month = text2num(time2text(world.timeofday, "MM")) 	// get the current month
-	switch(world_time_month)
+	GLOB.world_time_month = text2num(time2text(world.timeofday, "MM")) 	// get the current month // CHOMPEdit - Managed Globals
+	switch(GLOB.world_time_month) // CHOMPEdit - Managed Globals
 		if(1 to 2)
-			world_time_season = "winter"
+			GLOB.world_time_season = "winter" // CHOMPEdit - Managed Globals
 		if(3 to 5)
-			world_time_season = "spring"
+			GLOB.world_time_season = "spring" // CHOMPEdit - Managed Globals
 		if(6 to 8)
-			world_time_season = "summer"
+			GLOB.world_time_season = "summer" // CHOMPEdit - Managed Globals
 		if(9 to 11)
-			world_time_season = "autumn"
+			GLOB.world_time_season = "autumn" // CHOMPEdit - Managed Globals
 		if(12)
-			world_time_season = "winter"
-	world_time_day = text2num(time2text(world.timeofday, "DD"))
-	world_time_year = text2num(time2text(world.timeofday, "YYYY"))
+			GLOB.world_time_season = "winter" // CHOMPEdit - Managed Globals
+	GLOB.world_time_day = text2num(time2text(world.timeofday, "DD")) // CHOMPEdit - Managed Globals
+	GLOB.world_time_year = text2num(time2text(world.timeofday, "YYYY")) // CHOMPEdit - Managed Globals
 
 /turf/simulated/floor/outdoors/grass/seasonal
 	name = "grass"
@@ -36,9 +38,9 @@ var/world_time_day
 	var/tree_types = list()
 	var/snow_chance = 10
 
-/turf/simulated/floor/outdoors/grass/seasonal/Initialize() //There are A LOT of chompedits here, I guess. 
+/turf/simulated/floor/outdoors/grass/seasonal/Initialize() //There are A LOT of chompedits here, I guess.
 
-	switch(world_time_season)
+	switch(GLOB.world_time_season)
 		if("spring")
 			tree_types = list(
 				/obj/structure/flora/tree/bigtree,
@@ -191,7 +193,7 @@ var/world_time_day
 
 /turf/simulated/floor/outdoors/grass/seasonal/proc/update_desc()
 
-	switch(world_time_season)
+	switch(GLOB.world_time_season) // CHOMPEdit - Managed Globals
 		if("spring")
 			desc = "Lush green grass, flourishing! Little flowers peek out from between the blades here and there!"
 		if("summer")
@@ -205,10 +207,10 @@ var/world_time_day
 /turf/simulated/floor/outdoors/grass/seasonal/update_icon(update_neighbors)
 	. = ..()
 	update_desc()
-	switch(world_time_season)
+	switch(GLOB.world_time_season) // CHOMPEdit - Managed Globals
 		if("spring")
 			if(prob(50))
-				var/cache_key = "[world_time_season]-overlay[rand(1,19)]"
+				var/cache_key = "[GLOB.world_time_season]-overlay[rand(1,19)]" // CHOMPEdit - Managed Globals
 				if(!overlays_cache[cache_key])
 					var/image/I = image(icon = src.icon, icon_state = cache_key, layer = ABOVE_TURF_LAYER) // Icon should be abstracted out
 					I.plane = TURF_PLANE
@@ -220,7 +222,7 @@ var/world_time_day
 			return
 		if("autumn")
 			if(prob(33))
-				var/cache_key = "[world_time_season]-overlay[rand(1,6)]"
+				var/cache_key = "[GLOB.world_time_season]-overlay[rand(1,6)]" // CHOMPEdit - Managed Globals
 				if(!overlays_cache[cache_key])
 					var/image/I = image(icon = src.icon, icon_state = cache_key, layer = ABOVE_TURF_LAYER) // Icon should be abstracted out
 					I.plane = TURF_PLANE
@@ -275,14 +277,14 @@ var/world_time_day
 
 /turf/simulated/floor/water/seasonal/Initialize()
 	. = ..()
-	switch(world_time_season)
+	switch(GLOB.world_time_season) // CHOMPEdit - Managed Globals
 		if("winter")
 			if(prob(99))
 				ChangeTurf(/turf/simulated/floor/outdoors/ice)
 
 /turf/simulated/floor/water/deep/seasonal/Initialize()
 	. = ..()
-	switch(world_time_season)
+	switch(GLOB.world_time_season) // CHOMPEdit - Managed Globals
 		if("winter")
 			if(prob(75))
 				ChangeTurf(/turf/simulated/floor/outdoors/ice)

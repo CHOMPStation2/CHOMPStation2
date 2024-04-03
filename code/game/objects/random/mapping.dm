@@ -113,7 +113,7 @@
 /obj/random/vendordrink/item_to_spawn() //Not including coffee as it's more specific in usage.
 	return pick (/obj/machinery/vending/cola,
 				/obj/machinery/vending/cola/soft,
-				/obj/machinery/vending/bepis,	
+				/obj/machinery/vending/bepis,
 				/obj/machinery/vending/sovietsoda,
 				/obj/machinery/vending/radren,
 				/obj/machinery/vending/nukie)
@@ -140,7 +140,7 @@
 	name = "Random Land Mine"
 	desc = "This is a random land mine."
 	icon = 'icons/obj/weapons.dmi'
-	icon_state = "uglymine"
+	icon_state = "landmine"
 	spawn_nothing_percentage = 25
 
 /obj/random/landmine/item_to_spawn()
