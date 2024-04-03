@@ -19,7 +19,6 @@
 #include "field.dmm"
 #include "hotspring.dmm"
 #include "kururak.dmm"
-#include "lonehome.dmm"
 #include "mechpit.dmm"
 #include "merchantstand.dmm"
 #include "methlab.dmm"
