@@ -646,6 +646,12 @@
 	stationcrystal = TRUE
 
 /obj/machinery/power/supermatter/proc/reset_alarms()
+	reset_sm_alarms()
+	engwarn = 0
+	critwarn = 0
+	causalitywarn = 0
+
+/proc/reset_sm_alarms()
 	for(var/obj/machinery/firealarm/candidate_alarm in global.machines)
 		var/area/our_area = get_area(candidate_alarm)
 		if(istype(our_area, /area/engineering))
@@ -657,9 +663,6 @@
 			candidate_alarm.causalitywarn = FALSE // Tell the fire alarm we're done, too. Yes this is janky, someone will come along and fix it later:tm:
 			candidate_alarm.critalarm.stop()
 			candidate_alarm.critwarn = FALSE // Tell the fire alarm we're done, too. Yes this is janky, someone will come along and fix it later:tm:
-			engwarn = 0
-			critwarn = 0
-			causalitywarn = 0
 // CHOMPEdit End
 
 #undef NITROGEN_RETARDATION_FACTOR
