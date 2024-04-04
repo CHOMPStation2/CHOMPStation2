@@ -5,8 +5,9 @@
 	lift_size_y = 4
 
 /obj/turbolift_map_holder/southern_cross/port
-	name = "Sothern Cross turbolift map placeholder - Port"
+	name = "Southern Cross turbolift map placeholder - Port"
 	dir = EAST
+	depth = 3
 
 	areas_to_use = list(
 		/area/turbolift/port_deck_maints, // CHOMPEdit - Maintenance deck

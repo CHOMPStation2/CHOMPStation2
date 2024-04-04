@@ -111,7 +111,7 @@ GLOBAL_LIST_EMPTY(gravity_generators)
 /obj/machinery/gravity_generator/main
 	icon_state = "on_8"
 	idle_power_usage = 0
-	active_power_usage = 3000
+	active_power_usage = 30000 // CHOMPEdit - Gravity consumption change
 	power_channel = ENVIRON
 	sprite_number = 8
 	use_power = USE_POWER_IDLE
