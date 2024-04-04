@@ -1220,12 +1220,12 @@
 			if(!isnull(mod.metabolism_percent))
 				nutrition_reduction *= mod.metabolism_percent
 		//CHOMPEdit Begin
-		if(nutrition > 1000 && species.grows && size_multiplier < RESIZE_HUGE)
+		if(nutrition > 1000 && species.grows) //Removing the strict check against normal max/min size to support dorms/VR oversizing
 			nutrition_reduction *= 5
-			resize(min(size_multiplier+0.004,RESIZE_HUGE), animate = FALSE)
-		if(nutrition < 50 && species.shrinks && size_multiplier > RESIZE_TINY)
+			resize(size_multiplier+0.01, animate = FALSE, uncapped = has_large_resize_bounds()) //Bringing this code in line with micro and macro shrooms
+		if(nutrition < 50 && species.shrinks)
 			nutrition_reduction *= 0.3
-			resize(max(size_multiplier-0.004,RESIZE_TINY), animate = FALSE)
+			resize(size_multiplier-0.01, animate = FALSE, uncapped = has_large_resize_bounds()) //Bringing this code in line with micro and macro shrooms
 		//CHOMPEdit End
 		adjust_nutrition(-nutrition_reduction)
 
