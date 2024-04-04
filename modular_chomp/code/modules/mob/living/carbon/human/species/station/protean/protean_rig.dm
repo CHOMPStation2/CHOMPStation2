@@ -11,7 +11,7 @@
 	siemens_coefficient= 1
 	slowdown = 0
 	offline_slowdown = 0
-	seal_delay = 1
+	seal_delay = 0
 	var/mob/living/myprotean
 	initial_modules = list(/obj/item/rig_module/protean/syphon, /obj/item/rig_module/protean/armor, /obj/item/rig_module/protean/healing)
 
@@ -50,17 +50,28 @@
 		var/datum/species/protean/S = P.species
 		S.OurRig = src
 		if(P.back)
-			addtimer(CALLBACK(src, .proc/AssimilateBag, P, 1, P.back), 3)
+			addtimer(CALLBACK(src, PROC_REF(AssimilateBag), P, 1, P.back), 3)
 			myprotean = P
 		else
 			to_chat(P, "<span class='notice'>You should have spawned with a backpack to assimilate into your RIG. Try clicking it with a backpack.</span>")
 	..(newloc)
+
+/obj/item/weapon/rig/protean/Destroy()
+	if(myprotean)
+		var/mob/living/carbon/human/P = myprotean
+		var/datum/species/protean/S = P?.species
+		S?.OurRig = null
+		myprotean = null
+	. = ..()
+
 
 /obj/item/weapon/rig/proc/AssimilateBag(var/mob/living/carbon/human/P, var/spawned, var/obj/item/weapon/storage/backpack/B)
 	if(istype(B,/obj/item/weapon/storage/backpack))
 		if(spawned)
 			B = P.back
 			P.unEquip(P.back)
+		if(QDELETED(B)) // for mannequins or such
+			return
 		B.forceMove(src)
 		rig_storage = B
 		P.drop_item(B)
@@ -162,7 +173,7 @@
 		SPECIES_TESHARI 		 = 'modular_chomp/icons/mob/species/teshari/hands_ch.dmi',
 		SPECIES_VASILISSAN		 = 'modular_chomp/icons/mob/hands_ch.dmi',
 		SPECIES_VOX				 = 'modular_chomp/icons/mob/species/vox/gloves_ch.dmi',
-		SPECIES_XENOMORPH_HYBRID = 'modular_chomp/icons/mob/hands_ch.dmi'
+		SPECIES_XENOMORPH_HYBRID = 'modular_chomp/icons/mob/species/xenomorph_hybrid/gloves_ch.dmi'
 		)
 
 	sprite_sheets_obj = list(
@@ -191,8 +202,9 @@
 	desc = "Boot-shaped clusters of nanomachines."
 	species_restricted = list(SPECIES_PROTEAN, SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJ, SPECIES_UNATHI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_PROMETHEAN, SPECIES_XENOHYBRID, SPECIES_VOX, SPECIES_TESHARI, SPECIES_VASILISSAN, SPECIES_XENOMORPH_HYBRID)
 	sprite_sheets = list(
-		SPECIES_TESHARI 		= 'modular_chomp/icons/mob/species/teshari/feet_ch.dmi',
-		SPECIES_VOX				= 'modular_chomp/icons/mob/species/vox/shoes_ch.dmi'
+		SPECIES_TESHARI 		 = 'modular_chomp/icons/mob/species/teshari/feet_ch.dmi',
+		SPECIES_VOX				 = 'modular_chomp/icons/mob/species/vox/shoes_ch.dmi',
+		SPECIES_XENOMORPH_HYBRID = 'modular_chomp/icons/mob/species/xenomorph_hybrid/shoes_ch.dmi'
 		)
 	sprite_sheets_obj = list()
 	icon = 'modular_chomp/icons/mob/feet_ch.dmi'
@@ -212,8 +224,9 @@
 		/obj/item/weapon/storage/backpack,
 		)
 	sprite_sheets = list(
-		SPECIES_TESHARI 		= 'modular_chomp/icons/mob/species/teshari/suit_ch.dmi',
-		SPECIES_VOX				= 'modular_chomp/icons/mob/species/vox/suit_ch.dmi'
+		SPECIES_TESHARI 		 = 'modular_chomp/icons/mob/species/teshari/suit_ch.dmi',
+		SPECIES_VOX				 = 'modular_chomp/icons/mob/species/vox/suit_ch.dmi',
+		SPECIES_XENOMORPH_HYBRID = 'modular_chomp/icons/mob/species/xenomorph_hybrid/suit_ch.dmi'
 		)
 
 	sprite_sheets_obj = list()
@@ -260,7 +273,7 @@
 								playsound(src, 'sound/machines/defib_success.ogg', 50, 0)
 								new /obj/effect/gibspawner/robot(src.loc)
 								src.atom_say("Contact received! Reassembly nanites calibrated. Estimated time to resucitation: 1 minute 30 seconds")
-								addtimer(CALLBACK(src, .proc/make_alive, myprotean?:humanform), 900)
+								addtimer(CALLBACK(src, PROC_REF(make_alive), myprotean?:humanform), 900)
 				return
 	if(istype(W,/obj/item/weapon/rig))
 		if(!assimilated_rig)
@@ -412,7 +425,7 @@
 /obj/item/weapon/cell/protean/New()
 	charge = maxcharge
 	update_icon()
-	addtimer(CALLBACK(src, .proc/search_for_protean), 60)
+	addtimer(CALLBACK(src, PROC_REF(search_for_protean)), 60)
 
 /obj/item/weapon/cell/protean/proc/search_for_protean()
 	if(istype(src.loc, /obj/item/weapon/rig/protean))

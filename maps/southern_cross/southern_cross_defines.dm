@@ -16,13 +16,16 @@ but they don't actually change anything about the load order
 #define Z_LEVEL_CENTCOM					7
 #define Z_LEVEL_TRANSIT					8
 #define Z_LEVEL_SURFACE_WILD			9
-#define Z_LEVEL_SURFACE_SKYLANDS		10
-#define Z_LEVEL_SURFACE_VALLEY 			11
-#define Z_LEVEL_VR_REALM                12
-#define Z_LEVEL_FUELDEPOT				13
-#define Z_LEVEL_AEROSTAT				14
-#define Z_LEVEL_NS_MINE					15
-#define Z_LEVEL_GATEWAY					16
+#define Z_LEVEL_SURFACE_VALLEY 			10
+#define Z_LEVEL_VR_REALM                	11
+#define Z_LEVEL_FUELDEPOT				12
+#define Z_LEVEL_JUNGLE					13
+#define Z_LEVEL_GATEWAY					14
+
+//#define Z_LEVEL_SURFACE_SKYLANDS		//Sky islands removal due to lack of use
+//#define Z_LEVEL_AEROSTAT			//Disabled due to lack of use
+//#define Z_LEVEL_NS_MINE				//Disabled due to lack of use
+
 
 //#define Z_LEVEL_SURFACE_CASINO			xx	//CHOMPedit - KSC = So there is weather on the casino. //Raz - When you do casino again, launch it in a test server, note what z-level it is on, and then replace xx with that z-level you noted. Revert back to xx and comment out when done.
 //#define Z_LEVEL_EMPTY_SPACE				xx //CHOMPedit: Disabling empty space as now the overmap generates empty space on demand.
@@ -105,7 +108,7 @@ but they don't actually change anything about the load order
 	unit_test_exempt_areas = list(/area/ninja_dojo, /area/shuttle/ninja)
 	unit_test_exempt_from_atmos = list(/area/tcomm/chamber)
 
-	planet_datums_to_make = list(/datum/planet/sif) //This must be added to load maps at round start otherwise they will have weather or sun.
+	planet_datums_to_make = list(/datum/planet/sif,/datum/planet/thor) //This must be added to load maps at round start otherwise they will have weather or sun.
 
 	map_levels = list(
 			Z_LEVEL_STATION_ONE,
@@ -120,15 +123,17 @@ but they don't actually change anything about the load order
 	lateload_z_levels = list(
 			list("VR World"),
 			list("Fuel Depot - Z1 Space"),
-			list("Kara Aerostat - Z1 Aerostat"),
-			list("Kara - Z1 Northern Star")
+			list("Thor Surface")
+			//list("Kara Aerostat - Z1 Aerostat"), //Remove Kara Z layers
+			//list("Kara - Z1 Northern Star") //Remove Kara Z layers
 			)
 
 	//CHOMPStation Addition End
 	lateload_gateway = list(
-		//list("Snow Field"),
-		//list("Maddness Lab"),
-		//list("Abandoned City"), remember to uncomment
+		list("Snow Field"),
+		list("Maddness Lab"),
+		list("Abandoned City"),
+		list("Distant Mining Facility")
 		list("Skyscraper")
 		) //CHOMPedit: Gateway maps. For now nothing fancy, just some already existing maps while we make our own.
 
@@ -246,11 +251,13 @@ but they don't actually change anything about the load order
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES
 	base_turf = /turf/simulated/floor/outdoors/rocks
 
+/* //Sky islands removal due to lack of use
 /datum/map_z_level/southern_cross/surface_skylands
 	z = Z_LEVEL_SURFACE_SKYLANDS
 	name = "Floating Islands"
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES
 	base_turf = /turf/simulated/open
+*/
 
 /datum/map_z_level/southern_cross/surface_valley
 	z = Z_LEVEL_SURFACE_VALLEY
@@ -280,6 +287,13 @@ but they don't actually change anything about the load order
 	z = Z_LEVEL_TRANSIT
 	name = "Transit"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_SEALED|MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT
+
+//Thor Z-Level
+/datum/map_z_level/southern_cross/thor
+	z = Z_LEVEL_JUNGLE
+	name = "Thor Surface"
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED
+	base_turf = /turf/simulated/floor/outdoors/rocks
 
 /*
  KSC 9/29/20 = No longer relevant code as we have nonencludian portals to jump between outpost,caves and wilderness
@@ -317,10 +331,15 @@ but they don't actually change anything about the load order
 		Z_LEVEL_SURFACE,
 		Z_LEVEL_SURFACE_MINE,
 		Z_LEVEL_SURFACE_WILD,
-		Z_LEVEL_SURFACE_SKYLANDS,
+		//Z_LEVEL_SURFACE_SKYLANDS, //Sky islands removal due to lack of use
 		Z_LEVEL_SURFACE_VALLEY
 	)
 //Z_LEVEL_SURFACE_CASINO //CHOMPedit - KSC = So there is weather on the Casino. //Move this into /datum/planet/sif and remember to add a coma for the new entry, for when you need the casino again
+
+/datum/planet/thor
+	expected_z_levels = list(
+		Z_LEVEL_JUNGLE
+	)
 
 /obj/effect/step_trigger/teleporter/bridge/east_to_west/Initialize()
 	teleport_x = src.x - 4

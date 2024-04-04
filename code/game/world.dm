@@ -8,7 +8,7 @@
 		if(UNIX) lib = "libprof.so"
 		else CRASH("unsupported platform")
 
-	var/init = call(lib, "init")()
+	var/init = call_ext(lib, "init")()
 	if("0" != init) CRASH("[lib] init error: [init]")
 // CHOMPedit End
 
@@ -44,7 +44,7 @@
 	if(byond_version < RECOMMENDED_VERSION)
 		to_world_log("Your server's byond version does not meet the recommended requirements for this server. Please update BYOND")
 
-	TgsNew()
+	TgsNew(new /datum/tgs_event_handler/impl, TGS_SECURITY_TRUSTED) // CHOMPEdit - tgs event handler
 	VgsNew() // VOREStation Edit - VGS
 
 	config.post_load()
@@ -57,10 +57,9 @@
 	// if(config && config.log_runtime)
 	// 	log = file("data/logs/runtime/[time2text(world.realtime,"YYYY-MM-DD-(hh-mm-ss)")]-runtime.log")
 
-	GLOB.timezoneOffset = get_timezone_offset()
+	GLOB.timezoneOffset = world.timezone * 36000
 
 	callHook("startup")
-	init_vchat()
 	//Emergency Fix
 	load_mods()
 	//end-emergency fix
@@ -71,7 +70,7 @@
 	// CHOMPStation Addition: Spaceman DMM Debugging
 	var/debug_server = world.GetConfig("env", "AUXTOOLS_DEBUG_DLL")
 	if (debug_server)
-		call(debug_server, "auxtools_init")()
+		call_ext(debug_server, "auxtools_init")()
 		enable_debugging()
 	// CHOMPStation Add End
 
@@ -387,8 +386,8 @@ var/world_topic_spam_protect_time = world.timeofday
 		if(!rank)
 			rank = "Admin"
 
-		var/message =	"<font color='red'>IRC-[rank] PM from <b><a href='?irc_msg=[input["sender"]]'>IRC-[input["sender"]]</a></b>: [input["msg"]]</font>"
-		var/amessage =  "<font color='blue'>IRC-[rank] PM from <a href='?irc_msg=[input["sender"]]'>IRC-[input["sender"]]</a> to <b>[key_name(C)]</b> : [input["msg"]]</font>"
+		var/message =	span_red("IRC-[rank] PM from <b><a href='?irc_msg=[input["sender"]]'>IRC-[input["sender"]]</a></b>: [input["msg"]]")
+		var/amessage =  span_blue("IRC-[rank] PM from <a href='?irc_msg=[input["sender"]]'>IRC-[input["sender"]]</a> to <b>[key_name(C)]</b> : [input["msg"]]")
 
 		C.received_irc_pm = world.time
 		C.irc_admin = input["sender"]
@@ -554,7 +553,7 @@ var/world_topic_spam_protect_time = world.timeofday
 			log_misc("Failed to connect to database in load_mentors().")
 			return
 
-		var/DBQuery/query = SSdbcore.NewQuery("SELECT ckey, mentor FROM erro_mentor") //CHOMPEdit TGSQL
+		var/datum/db_query/query = SSdbcore.NewQuery("SELECT ckey, mentor FROM erro_mentor") //CHOMPEdit TGSQL
 		query.Execute()
 		while(query.NextRow())
 			var/ckey = query.item[1]
@@ -574,7 +573,7 @@ var/world_topic_spam_protect_time = world.timeofday
 
 	s += "<b>[station_name()]</b>";
 	s += " ("
-	s += "<a href=\"http://\">" //Change this to wherever you want the hub to link to.
+	s += "<a href=\"https://\">" //Change this to wherever you want the hub to link to.
 //	s += "[game_version]"
 	s += "Default"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
 	s += "</a>"
@@ -633,7 +632,7 @@ var/failed_old_db_connections = 0
 		to_world_log("SQL connection disabled in config.")
 	else if(establish_db_connection())//CHOMPEdit Begin
 		to_world_log("Feedback database connection established.")
-		var/DBQuery/query_truncate = SSdbcore.NewQuery("TRUNCATE erro_dialog")
+		var/datum/db_query/query_truncate = SSdbcore.NewQuery("TRUNCATE erro_dialog")
 		var/num_tries = 0
 		while(!query_truncate.Execute() && num_tries<5)
 			num_tries++
@@ -641,7 +640,7 @@ var/failed_old_db_connections = 0
 		if(num_tries==5)
 			log_admin("ERROR TRYING TO CLEAR erro_dialog")
 		qdel(query_truncate)
-		var/DBQuery/query_truncate2 = SSdbcore.NewQuery("TRUNCATE erro_attacklog")
+		var/datum/db_query/query_truncate2 = SSdbcore.NewQuery("TRUNCATE erro_attacklog")
 		num_tries = 0
 		while(!query_truncate2.Execute() && num_tries<5)
 			num_tries++
@@ -672,7 +671,7 @@ var/failed_old_db_connections = 0
 	if ( . )
 		failed_db_connections = 0	//If this connection succeeded, reset the failed connections counter.
 		//CHOMPEdit Begin
-		var/DBQuery/query_truncate = dbcon.NewQuery("TRUNCATE erro_dialog")
+		var/datum/db_query/query_truncate = dbcon.NewQuery("TRUNCATE erro_dialog")
 		var/num_tries = 0
 		while(!query_truncate.Execute() && num_tries<5)
 			num_tries++
@@ -841,7 +840,7 @@ var/global/game_id = null
 /world/Del()
 	var/debug_server = world.GetConfig("env", "AUXTOOLS_DEBUG_DLL")
 	if (debug_server)
-		call(debug_server, "auxtools_shutdown")()
+		call_ext(debug_server, "auxtools_shutdown")()
 	. = ..()
 
 // CHOMPStation Add End: Spaceman DMM Debugger

@@ -209,7 +209,7 @@
 		else
 			to_chat(owner, "<span class='notice'>You will no longer aim rather than fire.</span>")
 			owner.client.remove_gun_icons()
-		owner.gun_setting_icon.icon_state = "gun[active]"
+		owner.gun_setting_icon?.icon_state = "gun[active]"
 
 /obj/aiming_overlay/proc/cancel_aiming(var/no_message = 0)
 	if(!aiming_with || !aiming_at)
@@ -224,4 +224,3 @@
 	aiming_at = null
 	loc = null
 	STOP_PROCESSING(SSobj, src)
-

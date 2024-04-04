@@ -66,7 +66,7 @@
 	..()
 	return
 
-/obj/structure/alien/attack_hand()
+/obj/structure/alien/attack_hand(mob/user as mob)
 	usr.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if (HULK in usr.mutations)
 		visible_message("<span class='warning'>[usr] destroys the [name]!</span>")
@@ -75,14 +75,13 @@
 
 		// Aliens can get straight through these.
 		if(istype(usr,/mob/living/carbon))
-			var/mob/living/carbon/M = usr
-			if(locate(/obj/item/organ/internal/xenos/hivenode) in M.internal_organs)
-				visible_message ("<span class='warning'>[usr] strokes the [name] and it melts away!</span>", 1)
-				health = 0
-				healthcheck()
-				return
-		visible_message("<span class='warning'>[usr] claws at the [name]!</span>")
-		health -= rand(5,10)
+			if(user.a_intent == I_HURT)
+				var/mob/living/carbon/M = usr
+				if(locate(/obj/item/organ/internal/xenos/hivenode) in M.internal_organs)
+					visible_message ("<span class='warning'>[usr] strokes the [name] and it melts away!</span>", 1)
+					health = 0
+					healthcheck()
+					return
 	healthcheck()
 	return
 

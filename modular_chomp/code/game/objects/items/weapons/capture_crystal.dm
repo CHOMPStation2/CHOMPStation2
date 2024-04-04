@@ -2,6 +2,7 @@
 	var/spawn_mob_name = "A mob"
 	var/obj/belly/in_gut = null
 
+/* No longer need the vorefx additions as these will be handled for all indirect viewers now, including those in capture crystals
 // Signals detect important procs from the host belly. Necessary to update visuals and sound loop for the player inside.
 /obj/item/capture_crystal/enter_belly(obj/belly/B)
 	if(isbelly(B)) // Sanity
@@ -128,6 +129,7 @@
 	UnregisterSignal(in_gut, COMSIG_BELLY_UPDATE_VORE_FX)
 	UnregisterSignal(in_gut, COMSIG_BELLY_UPDATE_PREY_LOOP)
 	in_gut = null
+*/
 
 /obj/item/capture_crystal/loadout
 	active = TRUE
@@ -218,9 +220,7 @@
 			playsound(src, 'sound/effects/capture-crystal-negative.ogg', 75, 1, -1)
 		else									//Shoot, it didn't work and now it's mad!!!
 			S.ai_holder.go_wake()
-			S.ai_holder.target = user
-			S.ai_holder.track_target_position()
-			S.ai_holder.set_stance(STANCE_FIGHT)
+			S.ai_holder.give_target(user, urgent = TRUE)
 			user.visible_message("\The [src] bonks into \the [S], angering it!")
 			playsound(src, 'sound/effects/capture-crystal-negative.ogg', 75, 1, -1)
 			to_chat(user, "<span class='notice'>\The [src] clicks unsatisfyingly.</span>")

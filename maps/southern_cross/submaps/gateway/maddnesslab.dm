@@ -113,6 +113,12 @@
 /area/awaymission/mol/headdorms
 	name = "Delta Lab Head Dorms"
 
+/area/awaymission/mol/themaze
+	name = "Delta Maze"
+
+/area/awaymission/mol/crumblingmaze
+	name = "Delta Breaking Maze"
+
 /obj/structure/prop/blackbox/maddnesslab
 	catalogue_data = list(/datum/category_item/catalogue/information/blackbox/maddnesslab)
 

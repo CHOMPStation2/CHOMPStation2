@@ -1,16 +1,23 @@
 /obj/effect/step_trigger/message
 	var/message	//the message to give to the mob
 	var/once = 1
+	var/list/mobs = list()	//CHOMPEdit - mobs we've sent our message to
 
 /obj/effect/step_trigger/message/Trigger(mob/M as mob)
+	//CHOMPEdit start - tweaked message trigger to be more sane
 	if(M.client)
-		to_chat(M, "<span class='info'>[message]</span>")
 		if(once)
-			qdel(src)
+			if(M in mobs)
+				return
+			else
+				mobs += M
+		to_chat(M, "[message]")
+	//CHOMPEdit end
 
 /obj/effect/step_trigger/teleport_fancy
 	var/locationx
 	var/locationy
+	var/locationz	//CHOMPEdit - Why wasn't there a z for this
 	var/uses = 1	//0 for infinite uses
 	var/entersparks = 0
 	var/exitsparks = 0
@@ -18,8 +25,10 @@
 	var/exitsmoke = 0
 
 /obj/effect/step_trigger/teleport_fancy/Trigger(mob/M as mob)
-	var/dest = locate(locationx, locationy, z)
-	M.Move(dest)
+	if(!locationz)
+		locationz = src.z	//CHOMPEdit - Safety net to not break existing teleport triggers
+	var/dest = locate(locationx, locationy, locationz)	//CHOMPEdit - added locationz
+	M.forceMove(dest)	//CHOMPEdit - Teleports should be forceMove, not Move
 
 	if(entersparks)
 		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread

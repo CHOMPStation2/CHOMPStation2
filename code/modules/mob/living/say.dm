@@ -368,7 +368,8 @@ var/list/channel_to_radio_key = new
 
 			if(M && src) //If we still exist, when the spawn processes
 				//VOREStation Add - Ghosts don't hear whispers
-				if(whispering && !(is_preference_enabled(/datum/client_preference/whisubtle_vis) || (isbelly(M.loc) && src == M.loc:owner)) && isobserver(M) && !M.client?.holder)
+				if(whispering && isobserver(M) && (!M.is_preference_enabled(/datum/client_preference/ghost_see_whisubtle) || \
+				(!(is_preference_enabled(/datum/client_preference/whisubtle_vis) || (isbelly(M.loc) && src == M.loc:owner))  && !M.client?.holder))) // CHOMPedit
 					M.show_message("<span class='game say'><span class='name'>[src.name]</span> [w_not_heard].</span>", 2)
 					return
 				//VOREStation Add End
@@ -419,12 +420,12 @@ var/list/channel_to_radio_key = new
 		message = "([message_mode == "headset" ? "Common" : capitalize(message_mode)]) [message]" //Adds radio keys used if available
 	if(whispering)
 		if(do_sound && message)
-			playsound(T, pick(voice_sounds_list), 25, TRUE, extrarange = -6, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = FALSE, preference = /datum/client_preference/say_sounds)	//CHOMPEdit - Use say sound prefs
+			playsound(T, pick(voice_sounds_list), 25, TRUE, extrarange = -6, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = TRUE, preference = /datum/client_preference/say_sounds)	//CHOMPEdit - Use say sound prefs
 
 		log_whisper(message, src)
 	else
 		if(do_sound && message)
-			playsound(T, pick(voice_sounds_list), 75, TRUE, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = FALSE, preference = /datum/client_preference/say_sounds)	//CHOMPEdit - tiny fix
+			playsound(T, pick(voice_sounds_list), 75, TRUE, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = TRUE, preference = /datum/client_preference/say_sounds)	//CHOMPEdit - tiny fix
 		log_say(message, src)
 	return 1
 

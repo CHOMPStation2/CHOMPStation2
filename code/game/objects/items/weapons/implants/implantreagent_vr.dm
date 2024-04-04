@@ -47,7 +47,7 @@
 		else
 			return
 	else
-		imp_in.verbs -= assigned_proc
+		remove_verb(imp_in,assigned_proc) //CHOMPEdit TGPanel
 		return
 
 	if(reagents)
@@ -98,4 +98,3 @@
 					src.visible_message("<span class='notice'>[src] [pick(rimplant.random_emote)].</span>") // M-mlem.
 			if(rimplant.reagents.total_volume == rimplant.reagents.maximum_volume * 0.05)
 				to_chat(src, "<span class='notice'>[pick(rimplant.empty_message)]</span>")
-

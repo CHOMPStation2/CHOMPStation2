@@ -62,10 +62,10 @@
 	/obj/effect))
 
 /mob/living/simple_mob/vore/morph/Initialize()
-	verbs += /mob/living/proc/ventcrawl
-	verbs += /mob/living/simple_mob/vore/morph/proc/take_over_prey
+	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/vore/morph/proc/take_over_prey) //CHOMPEdit TGPanel
 	if(!istype(src, /mob/living/simple_mob/vore/morph/dominated_prey))
-		verbs += /mob/living/simple_mob/vore/morph/proc/morph_color
+		add_verb(src,/mob/living/simple_mob/vore/morph/proc/morph_color) //CHOMPEdit TGPanel
 
 	return ..()
 
@@ -221,7 +221,7 @@
 						if(target.buckled)
 							target.buckled.unbuckle_mob(target, force = TRUE)
 						target.forceMove(vore_selected)
-						to_chat(target,"<span class='warning'>\The [src] quickly engulfs you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
+						to_chat(target,"<span class='vwarning'>\The [src] quickly engulfs you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
 	else
 		..()
 

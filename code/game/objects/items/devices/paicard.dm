@@ -7,6 +7,8 @@ var/global/list/radio_channels_by_freq = list(
 	num2text(ENG_FREQ) = "Engineering",
 	num2text(MED_FREQ) = "Medical",
 	num2text(MED_I_FREQ)="Medical(I)",
+	num2text(BDCM_FREQ) ="Bodycam", // CHOMPEdit
+
 	num2text(SEC_FREQ) = "Security",
 	num2text(SEC_I_FREQ)="Security(I)",
 	num2text(SCI_FREQ) = "Science",
@@ -117,6 +119,7 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/device/paicard)
 				actual_pai_name = sanitize_name(pai_name, ,1)
 				if(isnull(actual_pai_name))
 					return ..()
+			qdel(src)
 		else
 			var/obj/item/device/paicard/card = new(location)
 			var/mob/living/silicon/pai/new_pai = new(card)
@@ -128,8 +131,9 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/device/paicard)
 				actual_pai_name = sanitize_name(pai_name, ,1)
 				if(isnull(actual_pai_name))
 					return ..()
+			qdel(src)
 
-	qdel(src)
+	// qdel(src) CHOMPEdit - Clicking X twice would delete them. Very funny if you're a ghost.
 	return ..()
 
 // VOREStation Edit End
@@ -349,12 +353,12 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/device/paicard)
 			return
 		var/mob/M = usr
 		if(!istype(M, /mob/living/carbon))
-			to_chat(usr, "<font color=blue>You don't have any DNA, or your DNA is incompatible with this device.</font>")
+			to_chat(usr, span_blue("You don't have any DNA, or your DNA is incompatible with this device."))
 		else
 			var/datum/dna/dna = usr.dna
 			pai.master = M.real_name
 			pai.master_dna = dna.unique_enzymes
-			to_chat(pai, "<font color = red><h3>You have been bound to a new master.</h3></font>")
+			to_chat(pai, span_red("<h3>You have been bound to a new master.</h3>"))
 	if(href_list["request"])
 		src.looking_for_personality = 1
 		paiController.findPAI(src, usr)

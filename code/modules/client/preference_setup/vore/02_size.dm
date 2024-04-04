@@ -14,7 +14,7 @@
 	var/weight_gain = 100	// Weight gain rate.
 	var/weight_loss = 50	// Weight loss rate.
 	var/fuzzy = 0			// Preference toggle for sharp/fuzzy icon. Default sharp.
-	var/offset_override = FALSE //CHOMPEdit
+	var/offset_override = FALSE
 	var/voice_freq = 42500	//CHOMPEdit - Why was the default 0
 	var/voice_sound = "goon speak 1"	//CHOMPEdit - Changed the default voice to one less jarring
 	var/custom_speech_bubble = "default"
@@ -31,7 +31,7 @@
 	S["weight_gain"]		>> pref.weight_gain
 	S["weight_loss"]		>> pref.weight_loss
 	S["fuzzy"]				>> pref.fuzzy
-	S["offset_override"]	>> pref.offset_override //CHOMPEdit
+	S["offset_override"]	>> pref.offset_override
 	S["voice_freq"]			>> pref.voice_freq
 	S["voice_sound"]		>> pref.voice_sound
 	S["custom_speech_bubble"]		>> pref.custom_speech_bubble
@@ -43,7 +43,7 @@
 	S["weight_gain"]		<< pref.weight_gain
 	S["weight_loss"]		<< pref.weight_loss
 	S["fuzzy"]				<< pref.fuzzy
-	S["offset_override"]	<< pref.offset_override //CHOMPEdit
+	S["offset_override"]	<< pref.offset_override
 	S["voice_freq"]			<< pref.voice_freq
 	S["voice_sound"]		<< pref.voice_sound
 	S["custom_speech_bubble"]		<< pref.custom_speech_bubble
@@ -55,7 +55,7 @@
 	pref.weight_gain		= sanitize_integer(pref.weight_gain, WEIGHT_CHANGE_MIN, WEIGHT_CHANGE_MAX, initial(pref.weight_gain))
 	pref.weight_loss		= sanitize_integer(pref.weight_loss, WEIGHT_CHANGE_MIN, WEIGHT_CHANGE_MAX, initial(pref.weight_loss))
 	pref.fuzzy				= sanitize_integer(pref.fuzzy, 0, 1, initial(pref.fuzzy))
-	pref.offset_override	= sanitize_integer(pref.offset_override, 0, 1, initial(pref.offset_override)) //CHOMPEdit
+	pref.offset_override	= sanitize_integer(pref.offset_override, 0, 1, initial(pref.offset_override))
 	if(pref.voice_freq != 0)
 		pref.voice_freq			= sanitize_integer(pref.voice_freq, MIN_VOICE_FREQ, MAX_VOICE_FREQ, initial(pref.voice_freq)) //CHOMPEdit
 	if(pref.size_multiplier == null || pref.size_multiplier < RESIZE_TINY || pref.size_multiplier > RESIZE_HUGE)
@@ -71,7 +71,7 @@
 	character.weight_gain		= pref.weight_gain
 	character.weight_loss		= pref.weight_loss
 	character.fuzzy				= pref.fuzzy
-	character.offset_override	= pref.offset_override //CHOMPEdit
+	character.offset_override	= pref.offset_override
 	character.voice_freq		= pref.voice_freq
 	character.resize(pref.size_multiplier, animate = FALSE, ignore_prefs = TRUE)
 
@@ -119,7 +119,7 @@
 	. += "<br>"
 	. += "<b>Scale:</b> <a href='?src=\ref[src];size_multiplier=1'>[round(pref.size_multiplier*100)]%</a><br>"
 	. += "<b>Scaled Appearance:</b> <a [pref.fuzzy ? "" : ""] href='?src=\ref[src];toggle_fuzzy=1'><b>[pref.fuzzy ? "Fuzzy" : "Sharp"]</b></a><br>"
-	. += "<b>Scaling Center:</b> <a [pref.offset_override ? "" : ""] href='?src=\ref[src];toggle_offset_override=1'><b>[pref.offset_override ? "Odd" : "Even"]</b></a><br>" //CHOMPEdit
+	. += "<b>Scaling Center:</b> <a [pref.offset_override ? "" : ""] href='?src=\ref[src];toggle_offset_override=1'><b>[pref.offset_override ? "Odd" : "Even"]</b></a><br>"
 	. += "<br>" // CHOMPEdit: Fancy:tm:
 	. += "<b>Mob Speech/Noise Customization</b>" // CHOMPEdit: Fancy:tm:
 	. += "<br>"  // CHOMPEdit
@@ -159,7 +159,7 @@
 		pref.fuzzy = pref.fuzzy ? 0 : 1;
 		return TOPIC_REFRESH_UPDATE_PREVIEW
 
-	else if(href_list["toggle_offset_override"]) //CHOMPEdit
+	else if(href_list["toggle_offset_override"])
 		pref.offset_override = pref.offset_override ? 0 : 1;
 		return TOPIC_REFRESH_UPDATE_PREVIEW
 
@@ -168,7 +168,7 @@
 			This measurement should be set relative to a normal 5'10'' person's body and not the actual size of your character.\n\
 			If you set your weight to 500 because you're a naga or have metal implants then complain that you're a blob I\n\
 			swear to god I will find you and I will punch you for not reading these directions!\n\
-			([WEIGHT_MIN]-[WEIGHT_MAX])", "Character Preference", null, WEIGHT_MAX, WEIGHT_MIN)
+			([WEIGHT_MIN]-[WEIGHT_MAX])", "Character Preference", null, WEIGHT_MAX, WEIGHT_MIN, round_value=FALSE)
 		if(new_weight)
 			var/unit_of_measurement = tgui_alert(user, "Is that number in pounds (lb) or kilograms (kg)?", "Confirmation", list("Pounds", "Kilograms"))
 			if(unit_of_measurement == "Pounds")
@@ -182,7 +182,7 @@
 		var/weight_gain_rate = tgui_input_number(user, "Choose your character's rate of weight gain between 100% \
 			(full realism body fat gain) and 0% (no body fat gain).\n\
 			(If you want to disable weight gain, set this to 0.01 to round it to 0%.)\
-			([WEIGHT_CHANGE_MIN]-[WEIGHT_CHANGE_MAX])", "Character Preference", pref.weight_gain)
+			([WEIGHT_CHANGE_MIN]-[WEIGHT_CHANGE_MAX])", "Character Preference", pref.weight_gain, WEIGHT_CHANGE_MAX, WEIGHT_CHANGE_MIN, round_value=FALSE)
 		if(weight_gain_rate)
 			pref.weight_gain = round(text2num(weight_gain_rate),1)
 			return TOPIC_REFRESH
@@ -191,7 +191,7 @@
 		var/weight_loss_rate = tgui_input_number(user, "Choose your character's rate of weight loss between 100% \
 			(full realism body fat loss) and 0% (no body fat loss).\n\
 			(If you want to disable weight loss, set this to 0.01 round it to 0%.)\
-			([WEIGHT_CHANGE_MIN]-[WEIGHT_CHANGE_MAX])", "Character Preference", pref.weight_loss)
+			([WEIGHT_CHANGE_MIN]-[WEIGHT_CHANGE_MAX])", "Character Preference", pref.weight_loss, WEIGHT_CHANGE_MAX, WEIGHT_CHANGE_MIN, round_value=FALSE)
 		if(weight_loss_rate)
 			pref.weight_loss = round(text2num(weight_loss_rate),1)
 			return TOPIC_REFRESH
@@ -206,7 +206,7 @@
 			pref.voice_freq = 42500 //CHOMPEdit
 			return TOPIC_REFRESH
 		else if(choice == 1)
-			choice = tgui_input_number(user, "Choose your character's voice frequency, ranging from [MIN_VOICE_FREQ] to [MAX_VOICE_FREQ]", "Custom Voice Frequency", null, MAX_VOICE_FREQ, MIN_VOICE_FREQ, round_value = TRUE)
+			choice = tgui_input_number(user, "Choose your character's voice frequency, ranging from [MIN_VOICE_FREQ] to [MAX_VOICE_FREQ]", "Custom Voice Frequency", null, MAX_VOICE_FREQ, MIN_VOICE_FREQ)
 		if(choice > MAX_VOICE_FREQ)
 			choice = MAX_VOICE_FREQ
 		else if(choice < MIN_VOICE_FREQ)
@@ -229,7 +229,8 @@
 			"goon speak pug",
 			"goon speak pugg",
 			"goon speak roach",
-			"goon speak skelly")
+			"goon speak skelly",
+			"xeno speak") // CHOMPedit
 		var/choice = tgui_input_list(usr, "Which set of sounds would you like to use for your character's speech sounds?", "Voice Sounds", possible_voice_types)
 		if(!pref.voice_sound)
 			pref.voice_sound = "goon speak 1"	//CHOMPEdit - Defaults voice to a less jarring sound
@@ -277,6 +278,10 @@
 				S = sound(pick(goon_speak_roach_sound))
 			if("goon speak skelly")
 				S = sound(pick(goon_speak_skelly_sound))
+//CHOMPedit start.
+			if("xeno speak")
+				S = sound(pick(xeno_speak_sound))
+//CHOMPedit end.
 		if(S)
 			S.frequency = pick(pref.voice_freq)
 			S.volume = 50

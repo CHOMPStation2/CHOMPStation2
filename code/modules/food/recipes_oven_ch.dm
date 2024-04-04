@@ -16,8 +16,23 @@
 	)
 	result = /obj/item/weapon/reagent_containers/food/snacks/cinnamonroll
 
-/datum/recipe/spicy_boys
+/datum/recipe/spicy_boys //TODO: Possibly see if recipe can be in the candymaker?
 	appliance = OVEN
 	reagents = list("cinnamonpowder" = 5, "sugar" = 10, "cornoil" = 10)
 	result = /obj/item/weapon/reagent_containers/food/snacks/spicy_boys
 	result_quantity = 6
+
+/datum/recipe/welders_original //TODO: Possibly see if recipe can be in the candymaker?
+	appliance = OVEN
+	reagents = list("sugar" = 5)
+	items = list(
+		/obj/item/weapon/reagent_containers/food/snacks/butterscotch
+	)
+	result = /obj/item/weapon/reagent_containers/food/snacks/welders_original
+	result_quantity = 6
+
+/datum/recipe/blondies
+	appliance = OVEN
+	reagents = list("blondiemix" = 10, "egg" = 3)
+	reagent_mix = RECIPE_REAGENT_REPLACE //No egg or mix in final recipe
+	result = /obj/item/weapon/reagent_containers/food/snacks/sliceable/blondies

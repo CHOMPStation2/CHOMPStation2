@@ -387,11 +387,13 @@ GLOBAL_DATUM_INIT(sdql2_vv_statobj, /obj/effect/statclick/SDQL2_VV_all, new(null
 		delete_click = new(null, "INITIALIZING", src)
 	if(!action_click)
 		action_click = new(null, "INITIALIZNG", src)
-	stat("[id]		", delete_click.update("DELETE QUERY | STATE : [text_state()] | ALL/ELIG/FIN \
+	var/list/L = list()
+	L[++L.len] = list("[id] ", "[delete_click.update("DELETE QUERY | STATE : [text_state()] | ALL/ELIG/FIN \
 	[islist(obj_count_all)? length(obj_count_all) : (isnull(obj_count_all)? "0" : obj_count_all)]/\
 	[islist(obj_count_eligible)? length(obj_count_eligible) : (isnull(obj_count_eligible)? "0" : obj_count_eligible)]/\
-	[islist(obj_count_finished)? length(obj_count_finished) : (isnull(obj_count_finished)? "0" : obj_count_finished)] - [get_query_text()]"))
-	stat("			", action_click.update("[SDQL2_IS_RUNNING? "HALT" : "RUN"]"))
+	[islist(obj_count_finished)? length(obj_count_finished) : (isnull(obj_count_finished)? "0" : obj_count_finished)] - [get_query_text()]")]", REF(delete_click))
+	L[++L.len] = list(" ", "[action_click.update("[SDQL2_IS_RUNNING? "HALT" : "RUN"]")]", REF(action_click))
+	return L
 
 /datum/SDQL2_query/proc/delete_click()
 	admin_del(usr)
@@ -1046,7 +1048,7 @@ GLOBAL_DATUM_INIT(sdql2_vv_statobj, /obj/effect/statclick/SDQL2_VV_all, new(null
 
 		else if(char == "'")
 			if(word != "")
-				to_chat(usr, "<font color='red'>SDQL2: You have an error in your SDQL syntax, unexpected ' in query: \"<font color=gray>[query_text]</font>\" following \"<font color=gray>[word]</font>\". Please check your syntax, and try again.</font>")
+				to_chat(usr, span_red("SDQL2: You have an error in your SDQL syntax, unexpected ' in query: \"[span_gray("[query_text]")]\" following \"[span_gray("[word]")]\". Please check your syntax, and try again."))
 				return null
 
 			word = "'"
@@ -1066,7 +1068,7 @@ GLOBAL_DATUM_INIT(sdql2_vv_statobj, /obj/effect/statclick/SDQL2_VV_all, new(null
 					word += char
 
 			if(i > len)
-				to_chat(usr, "<font color='red'>SDQL2: You have an error in your SDQL syntax, unmatched ' in query: \"<font color=gray>[query_text]</font>\". Please check your syntax, and try again.</font>")
+				to_chat(usr, span_red("SDQL2: You have an error in your SDQL syntax, unmatched ' in query: \"[span_gray("[query_text]")]\". Please check your syntax, and try again."))
 				return null
 
 			query_list += "[word]'"
@@ -1074,7 +1076,7 @@ GLOBAL_DATUM_INIT(sdql2_vv_statobj, /obj/effect/statclick/SDQL2_VV_all, new(null
 
 		else if(char == "\"")
 			if(word != "")
-				to_chat(usr, "<font color='red'>SDQL2: You have an error in your SDQL syntax, unexpected \" in query: \"<font color=gray>[query_text]</font>\" following \"<font color=gray>[word]</font>\". Please check your syntax, and try again.</font>")
+				to_chat(usr, span_red("SDQL2: You have an error in your SDQL syntax, unexpected \" in query: \"[span_gray("[query_text]")]\" following \"[span_gray("[word]")]\". Please check your syntax, and try again."))
 				return null
 
 			word = "\""
@@ -1094,7 +1096,7 @@ GLOBAL_DATUM_INIT(sdql2_vv_statobj, /obj/effect/statclick/SDQL2_VV_all, new(null
 					word += char
 
 			if(i > len)
-				to_chat(usr, "<font color='red'>SDQL2: You have an error in your SDQL syntax, unmatched \" in query: \"<font color=gray>[query_text]</font>\". Please check your syntax, and try again.</font>")
+				to_chat(usr, span_red("SDQL2: You have an error in your SDQL syntax, unmatched \" in query: \"[span_gray("[query_text]")]\". Please check your syntax, and try again."))
 				return null
 
 			query_list += "[word]\""
@@ -1123,3 +1125,29 @@ GLOBAL_DATUM_INIT(sdql2_vv_statobj, /obj/effect/statclick/SDQL2_VV_all, new(null
 
 /obj/effect/statclick/SDQL2_VV_all/Click()
 	usr.client.debug_variables(GLOB.sdql2_queries)
+
+#undef SDQL_qdel_datum
+
+#undef SDQL2_STATE_ERROR
+#undef SDQL2_STATE_IDLE
+#undef SDQL2_STATE_PRESEARCH
+#undef SDQL2_STATE_SEARCHING
+#undef SDQL2_STATE_EXECUTING
+#undef SDQL2_STATE_SWITCHING
+#undef SDQL2_STATE_HALTING
+
+// 2 undefs missing here still because of SDQL_2_parser
+
+#undef SDQL2_OPTION_SELECT_OUTPUT_SKIP_NULLS
+#undef SDQL2_OPTION_BLOCKING_CALLS
+#undef SDQL2_OPTION_HIGH_PRIORITY
+#undef SDQL2_OPTION_DO_NOT_AUTOGC
+
+#undef SDQL2_OPTIONS_DEFAULT
+
+#undef SDQL2_IS_RUNNING
+#undef SDQL2_HALT_CHECK
+
+#undef SDQL2_TICK_CHECK
+
+#undef SDQL2_STAGE_SWITCH_CHECK

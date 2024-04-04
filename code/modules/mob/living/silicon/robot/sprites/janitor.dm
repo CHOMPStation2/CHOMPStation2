@@ -143,12 +143,12 @@
 	sprite_icon_state = "drake"
 
 // Tall sprites
-//CHOMPNote -- many of the lines in this is overriden in modular
+
 /datum/robot_sprite/dogborg/tall/janitor
 	module_type = "Janitor"
 	sprite_icon = 'icons/mob/robot/janitor_large.dmi'
 
-/datum/robot_sprite/dogborg/raptor/janitor/raptor //CHOMPEdit - changed typepath
+/datum/robot_sprite/dogborg/tall/janitor/raptor
 	name = "Raptor V-4"
 	sprite_icon_state = "raptor"
 	has_custom_equipment_sprites = TRUE
@@ -162,7 +162,6 @@
 	has_vore_belly_sprites = FALSE
 	rest_sprite_options = list("Default", "Sit")
 
-/* //CHOMPRemoval Start - we dont use the old sprites
 /datum/robot_sprite/dogborg/tall/janitor/newmeka
 	name = "MEKA v2"
 	sprite_icon_state = "newmeka"
@@ -170,7 +169,6 @@
 	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = FALSE
 	rest_sprite_options = list("Default", "Sit")
-*/ //CHOMPEdit End
 
 /datum/robot_sprite/dogborg/tall/janitor/mmeka
 	name = "NIKO"

@@ -37,6 +37,7 @@ vchat.db*
 *.lk
 *.int
 *.backup
+
 ### https://raw.github.com/github/gitignore/cc542de017c606138a87ee4880e5f06b3a306def/Global/Linux.gitignore
 
 *~
@@ -117,6 +118,17 @@ $RECYCLE.BIN/
 #Sublime
 *.sublime-project
 *.sublime-workspace
+*.before
+*.pyc
+*.pid
+cfg/
+
+#Ignore the data folder/symlink itself.  This is very important if you are using VGS
+/data
+
+#Ignore everything in datafolder and subdirectories
+/data/**/*
+/tmp/**/*
 
 #Visual studio stuff
 *.vscode/*
@@ -131,6 +143,10 @@ $RECYCLE.BIN/
 #KDevelop and Kate
 *.kdev4*
 *.kate-swp
+
+#extra map stuff
+/_maps/**/backup/
+/_maps/templates.dm
 
 temp.dmi
 

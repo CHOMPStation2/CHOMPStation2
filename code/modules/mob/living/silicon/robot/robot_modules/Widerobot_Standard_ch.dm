@@ -26,9 +26,7 @@
 	src.modules += new /obj/item/weapon/melee/baton/loaded(src)
 	src.modules += new /obj/item/weapon/tool/wrench/cyborg(src)
 	src.modules += new /obj/item/device/healthanalyzer(src)
-	src.emag = new /obj/item/weapon/melee/energy/sword(src)
-	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
-	src.modules += new /obj/item/device/dogborg/boop_module(src)
+	src.emag += new /obj/item/weapon/melee/energy/sword(src)
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
 	water.name = "Water reserves"
@@ -52,9 +50,9 @@
 	R.vore_capacity = 1
 	R.vore_capacity_ex = list("stomach" = 1)
 	R.wideborg = TRUE
-	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
-	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
-	R.verbs |= /mob/living/proc/toggle_rider_reins
-	R.verbs |= /mob/living/proc/shred_limb
-	R.verbs |= /mob/living/silicon/robot/proc/rest_style
+	add_verb(R,/mob/living/silicon/robot/proc/ex_reserve_refill) //CHOMPEdit TGPanel
+	add_verb(R,/mob/living/silicon/robot/proc/robot_mount) //CHOMPEdit TGPanel
+	add_verb(R,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
+	add_verb(R,/mob/living/proc/shred_limb) //CHOMPEdit TGPanel
+	add_verb(R,/mob/living/silicon/robot/proc/rest_style) //CHOMPEdit TGPanel
 	..()

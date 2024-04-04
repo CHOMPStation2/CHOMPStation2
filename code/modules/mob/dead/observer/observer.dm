@@ -208,7 +208,7 @@ Works together with spawning an observer, noted above.
 		if(ghost.client)
 			ghost.client.time_died_as_mouse = ghost.timeofdeath
 		if(ghost.client && !ghost.client.holder && !config.antag_hud_allowed)		// For new ghosts we remove the verb from even showing up if it's not allowed.
-			ghost.verbs -= /mob/observer/dead/verb/toggle_antagHUD	// Poor guys, don't know what they are missing!
+			remove_verb(ghost,/mob/observer/dead/verb/toggle_antagHUD	) // Poor guys, don't know what they are missing! //CHOMPEdit
 		return ghost
 
 /*
@@ -249,13 +249,15 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 /mob/observer/dead/can_use_hands()	return 0
 /mob/observer/dead/is_active()		return 0
 
-/mob/observer/dead/Stat()
-	..()
-	if(statpanel("Status"))
-		if(emergency_shuttle)
-			var/eta_status = emergency_shuttle.get_status_panel_eta()
-			if(eta_status)
-				stat(null, eta_status)
+//ChompEDIT START
+/mob/observer/dead/get_status_tab_items()
+	. = ..()
+	if(emergency_shuttle)
+		var/eta_status = emergency_shuttle.get_status_panel_eta()
+		if(eta_status)
+			. += ""
+			. += "[eta_status]"
+//ChompEDIT END
 
 /mob/observer/dead/verb/reenter_corpse()
 	set category = "Ghost"
@@ -325,10 +327,10 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set desc = "Toggles AntagHUD allowing you to see who is the antagonist"
 
 	if(!config.antag_hud_allowed && !client.holder)
-		to_chat(src, "<span class='filter_notice'><font color='red'>Admins have disabled this for this round.</font></span>")
+		to_chat(src, "<span class='filter_notice'>[span_red("Admins have disabled this for this round.")]</span>")
 		return
 	if(jobban_isbanned(src, "AntagHUD"))
-		to_chat(src, "<span class='filter_notice'><font color='red'><B>You have been banned from using this feature</B></font></span>")
+		to_chat(src, "<span class='filter_notice'>[span_red("<B>You have been banned from using this feature</B>")]</span>")
 		return
 	if(config.antag_hud_restricted && !has_enabled_antagHUD && !client.holder)
 		var/response = tgui_alert(src, "If you turn this on, you will not be able to take any part in the round.","Are you sure you want to turn this feature on?",list("Yes","No"))
@@ -423,7 +425,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 	ManualFollow(M || jumpable_mobs()[mobname])
 
-/mob/observer/dead/forceMove(atom/destination)
+/mob/observer/dead/forceMove(atom/destination, direction, movetime) //ChompEDIT - pass movetime through
 	if(client?.holder)
 		return ..()
 
@@ -459,9 +461,11 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	if(get_z(target) in using_map?.secret_levels)
 		to_chat(src, "<span class='warning'>Sorry, that target is in an area that ghosts aren't allowed to go.</span>")
 		return
-	if(target != src)
+	/*if(target != src) CHOMP Removal holy mother of spaghetti fucking bullshit god please no
 		if(following && following == target)
 			return
+		if(following)
+			src.stop_following()
 		following = target
 		to_chat(src, "<span class='notice'>Now following [target]</span>")
 		if(ismob(target))
@@ -481,7 +485,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 					// To stop the ghost flickering.
 					if(loc != T)
 						forceMove(T)
-					sleep(15)
+					sleep(15)*/
 
 	var/icon/I = icon(target.icon,target.icon_state,target.dir)
 
@@ -533,7 +537,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 			following_mobs -= M
 		else
 			if(M.loc != .)
-				M.forceMove(.)
+				M.forceMove(., movetime = MOVE_GLIDE_CALC(glide_size, moving_diagonally)) //ChompEDIT - pass movespeed
 
 /mob
 	var/list/following_mobs = list()
@@ -599,11 +603,11 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 /mob/observer/dead/memory()
 	set hidden = 1
-	to_chat(src, "<span class='filter_notice'><font color='red'>You are dead! You have no mind to store memory!</font></span>")
+	to_chat(src, "<span class='filter_notice'>[span_red("You are dead! You have no mind to store memory!")]</span>")
 
 /mob/observer/dead/add_memory()
 	set hidden = 1
-	to_chat(src, "<span class='filter_notice'><font color='red'>You are dead! You have no mind to store memory!</font></span>")
+	to_chat(src, "<span class='filter_notice'>[span_red("You are dead! You have no mind to store memory!")]</span>")
 
 /mob/observer/dead/Post_Incorpmove()
 	stop_following()
@@ -627,7 +631,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	if(abs(pressure - ONE_ATMOSPHERE) < 10)
 		gas_analyzing += "Pressure: [round(pressure,0.1)] kPa"
 	else
-		gas_analyzing += "<font color='red'>Pressure: [round(pressure,0.1)] kPa</font>"
+		gas_analyzing += span_red("Pressure: [round(pressure,0.1)] kPa")
 	if(total_moles)
 		for(var/g in environment.gas)
 			gas_analyzing += "[gas_data.name[g]]: [round((environment.gas[g] / total_moles) * 100)]% ([round(environment.gas[g], 0.01)] moles)"
@@ -726,7 +730,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set desc = "If the round is sufficiently spooky, write a short message in blood on the floor or a wall. Remember, no IC in OOC or OOC in IC."
 
 	if(!(config.cult_ghostwriter))
-		to_chat(src, "<span class='filter_notice'><font color='red'>That verb is not currently permitted.</font></span>")
+		to_chat(src, "<span class='filter_notice'>[span_red("That verb is not currently permitted.")]</span>")
 		return
 
 	if (!src.stat)
@@ -741,7 +745,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 			ghosts_can_write = 1
 
 	if(!ghosts_can_write && !check_rights(R_ADMIN|R_EVENT|R_FUN, 0)) //Let's allow for admins to write in blood for events and the such.
-		to_chat(src, "<span class='filter_notice'><font color='red'>The veil is not thin enough for you to do that.</font></span>")
+		to_chat(src, "<span class='filter_notice'>[span_red("The veil is not thin enough for you to do that.")]</span>")
 		return
 
 	var/list/choices = list()
@@ -791,7 +795,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		W.update_icon()
 		W.message = message
 		W.add_hiddenprint(src)
-		W.visible_message("<span class='filter_notice'><font color='red'>Invisible fingers crudely paint something in blood on [T]...</font></span>")
+		W.visible_message("<span class='filter_notice'>[span_red("Invisible fingers crudely paint something in blood on [T]...")]</span>")
 
 /mob/observer/dead/pointed(atom/A as mob|obj|turf in view())
 	if(!..())
@@ -801,9 +805,9 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 /mob/observer/dead/proc/manifest(mob/user)
 	is_manifest = TRUE
-	verbs |= /mob/observer/dead/proc/toggle_visibility
-	verbs |= /mob/observer/dead/proc/ghost_whisper
-	to_chat(src, "<span class='filter_notice'><font color='purple'>As you are now in the realm of the living, you can whisper to the living with the <b>Spectral Whisper</b> verb, inside the IC tab.</font></span>")
+	add_verb(src,/mob/observer/dead/proc/toggle_visibility) //CHOMPEdit TGPanel
+	add_verb(src,/mob/observer/dead/proc/ghost_whisper) //CHOMPEdit TGPanel
+	to_chat(src, "<span class='filter_notice'>[span_purple("As you are now in the realm of the living, you can whisper to the living with the <b>Spectral Whisper</b> verb, inside the IC tab.")]</span>")
 	if(plane != PLANE_WORLD)
 		user.visible_message( \
 			"<span class='warning'>\The [user] drags ghost, [src], to our plane of reality!</span>", \
@@ -946,7 +950,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		var/msg = sanitize(tgui_input_text(src, "Message:", "Spectral Whisper"))
 		if(msg)
 			log_say("(SPECWHISP to [key_name(M)]): [msg]", src)
-			to_chat(M, "<span class='warning'> You hear a strange, unidentifiable voice in your head... <font color='purple'>[msg]</font></span>")
+			to_chat(M, "<span class='warning'> You hear a strange, unidentifiable voice in your head... [span_purple("[msg]")]</span>")
 			to_chat(src, "<span class='warning'> You said: '[msg]' to [M].</span>")
 		else
 			return

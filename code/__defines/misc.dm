@@ -8,6 +8,7 @@
 #define INVISIBILITY_LIGHTING             20
 #define INVISIBILITY_LEVEL_ONE            35
 #define INVISIBILITY_LEVEL_TWO            45
+#define INVISIBILITY_SHADEKIN			  55
 #define INVISIBILITY_OBSERVER             60
 #define INVISIBILITY_EYE		          61
 

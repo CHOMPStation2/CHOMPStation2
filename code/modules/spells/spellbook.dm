@@ -270,7 +270,7 @@
 	else
 		user.add_spell(S)
 		to_chat(user, "<span class='notice'>you rapidly read through the arcane book. Suddenly you realize you understand [spellname]!</span>")
-		user.attack_log += text("\[[time_stamp()]\] <font color='orange'>[user.real_name] ([user.ckey]) learned the spell [spellname] ([S]).</font>")
+		user.attack_log += text("\[[time_stamp()]\] [span_orange("[user.real_name] ([user.ckey]) learned the spell [spellname] ([S]).")]")
 		onlearned(user)
 
 /obj/item/weapon/spellbook/oneuse/proc/recoil(mob/user as mob)
@@ -344,11 +344,11 @@
 
 	if(user.mind.special_verbs.len)
 		for(var/V in user.mind.special_verbs)
-			user.verbs -= V
+			remove_verb(user,V)  //CHOMPEdit
 
 	if(stored_swap.mind.special_verbs.len)
 		for(var/V in stored_swap.mind.special_verbs)
-			stored_swap.verbs -= V
+			remove_verb(stored_swap,V)  //CHOMPEdit
 
 	var/mob/observer/dead/ghost = stored_swap.ghostize(0)
 	ghost.spell_list = stored_swap.spell_list
@@ -358,7 +358,7 @@
 
 	if(stored_swap.mind.special_verbs.len)
 		for(var/V in user.mind.special_verbs)
-			user.verbs += V
+			add_verb(user,V)  //CHOMPEdit
 
 	ghost.mind.transfer_to(user)
 	user.key = ghost.key
@@ -366,7 +366,7 @@
 
 	if(user.mind.special_verbs.len)
 		for(var/V in user.mind.special_verbs)
-			user.verbs += V
+			add_verb(user,V)  //CHOMPEdit
 
 	to_chat(stored_swap, "<span class='warning'>You're suddenly somewhere else... and someone else?!</span>")
 	to_chat(user, "<span class='warning'>Suddenly you're staring at [src] again... where are you, who are you?!</span>")

@@ -15,11 +15,14 @@
 	if(faction == "Neutral")
 		neutral = TRUE
 	mobspawned = new mobtype(get_turf(GLOB.button_mob_spawner_landmark[link]))
+	if(!istype(mobspawned))
+		mobspawned = null
+		return
 	mobspawned.voremob_loaded = TRUE
 	mobspawned.init_vore()
 	if(neutral == TRUE)
 		mobspawned.faction = "neutral"
-	RegisterSignal(mobspawned, COMSIG_PARENT_QDELETING, .proc/clean_mob)
+	RegisterSignal(mobspawned, COMSIG_PARENT_QDELETING, PROC_REF(clean_mob))
 
 /obj/machinery/button/mob_spawner_button/proc/clean_mob()
 	SIGNAL_HANDLER

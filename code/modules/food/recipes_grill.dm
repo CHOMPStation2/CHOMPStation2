@@ -96,6 +96,7 @@
 
 /datum/recipe/bunbun
 	appliance = GRILL
+	reagents = list("sodiumchloride" = 1)
 	items = list(
 		/obj/item/weapon/reagent_containers/food/snacks/bun,
 		/obj/item/weapon/reagent_containers/food/snacks/bun

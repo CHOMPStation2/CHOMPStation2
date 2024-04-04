@@ -92,6 +92,7 @@
 	amount = 10
 	},
 /obj/item/weapon/circuitboard/teleporter,
+/obj/item/frame/apc,
 /turf/simulated/floor/plating/external,
 /area/submap/abandonedtele)
 "x" = (
@@ -120,6 +121,10 @@
 /area/submap/abandonedtele)
 "N" = (
 /turf/simulated/wall/r_wall,
+/area/submap/abandonedtele)
+"O" = (
+/obj/item/weapon/module/power_control,
+/turf/simulated/floor/plating/external,
 /area/submap/abandonedtele)
 "P" = (
 /obj/item/weapon/material/shard{
@@ -227,7 +232,7 @@ g
 k
 p
 u
-k
+O
 N
 N
 c

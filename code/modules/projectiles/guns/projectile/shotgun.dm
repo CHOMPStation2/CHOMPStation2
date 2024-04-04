@@ -181,6 +181,8 @@
 */ //CHOMP Remove end
 //this is largely hacky and bad :(	-Pete //less hacky and bad now :) -Ghost
 /obj/item/weapon/gun/projectile/shotgun/doublebarrel/attackby(var/obj/item/A as obj, mob/user as mob)
+	if(istype(A, /obj/item/ammo_casing/a12g) || istype(A, /obj/item/ammo_magazine)) //CHOMPEdit: Trying to make sawn offs reload able
+		..()
 	if(sawn_off)
 		to_chat(user, "<span class='warning'>The [src] is already shortened!</span>")
 		return

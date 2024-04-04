@@ -15,6 +15,7 @@
 /datum/robot_sprite/dogborg/tall/command
 	module_type = "Command"
 	sprite_icon = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi'
+	pixel_x = 0
 
 /datum/robot_sprite/dogborg/raptor/command
 	module_type = "Command"

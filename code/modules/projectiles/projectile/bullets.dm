@@ -189,7 +189,7 @@
 /obj/item/projectile/bullet/rifle
 	fire_sound = 'sound/weapons/Gunshot_generic_rifle.ogg'
 	armor_penetration = 15
-	penetrating = 1
+	//penetrating = 1 CHOMPedit: This is the only thing I see that could cause stun and unsure what can be pierced with a penetrating of 1.
 	hud_state = "rifle"
 	hud_state_empty = "rifle_empty"
 
@@ -242,7 +242,7 @@
 	SA_vulnerability = SA_ANIMAL
 	hud_state = "rifle_heavy"
 
-/obj/item/projectile/bullet/rifle/a145 // 14.5�114mm is bigger than a .50 BMG round.
+/obj/item/projectile/bullet/rifle/a145 // 14.5×114mm is bigger than a .50 BMG round.
 	fire_sound = 'sound/weapons/Gunshot_cannon.ogg' // This is literally an anti-tank rifle caliber. It better sound like a fucking cannon.
 	damage = 80
 	stun = 3

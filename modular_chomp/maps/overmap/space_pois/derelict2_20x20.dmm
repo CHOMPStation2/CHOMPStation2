@@ -1,56 +1,680 @@
-"a" = (/turf/template_noop,/area/template_noop)
-"b" = (/obj/structure/window/reinforced{dir = 4; tag = "icon-rwindow (EAST)"},/turf/template_noop,/area/submap/derelict2)
-"c" = (/obj/machinery/door/airlock/external,/turf/simulated/floor/plating,/area/submap/derelict2)
-"d" = (/obj/structure/window/reinforced{dir = 8; tag = "icon-rwindow (WEST)"},/turf/template_noop,/area/submap/derelict2)
-"e" = (/obj/structure/window/reinforced{dir = 4; tag = "icon-rwindow (EAST)"},/obj/structure/window/reinforced{dir = 8; tag = "icon-rwindow (WEST)"},/turf/simulated/floor/plating,/area/submap/derelict2)
-"f" = (/turf/simulated/wall,/area/submap/derelict2)
-"g" = (/obj/effect/wingrille_spawn/reinforced,/turf/simulated/floor/tiled/asteroid_steel,/turf/simulated/floor/plating,/area/submap/derelict2)
-"h" = (/obj/machinery/light/small{dir = 1; tag = "icon-bulb1 (NORTH)"},/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict2)
-"i" = (/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict2)
-"j" = (/obj/machinery/light/small{dir = 4; tag = "icon-bulb1 (EAST)"},/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict2)
-"k" = (/obj/structure/window/reinforced,/turf/template_noop,/area/submap/derelict2)
-"l" = (/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 1; tag = "icon-rwindow (NORTH)"},/turf/simulated/floor/plating,/area/submap/derelict2)
-"m" = (/obj/structure/table/standard,/obj/item/weapon/storage/fancy/heartbox,/obj/item/toy/bosunwhistle/fluff/strix,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict2)
-"n" = (/obj/item/trash/plate{pixel_x = 10},/obj/item/trash/plate{pixel_x = -10},/obj/structure/table/glass,/obj/item/weapon/flame/candle/everburn,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict2)
-"o" = (/obj/structure/table/standard,/obj/item/weapon/storage/fancy/cigar/cohiba,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict2)
-"p" = (/obj/structure/window/reinforced{dir = 1; tag = "icon-rwindow (NORTH)"},/turf/template_noop,/area/submap/derelict2)
-"q" = (/obj/machinery/light/small{dir = 8; tag = "icon-bulb1 (WEST)"},/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict2)
-"r" = (/obj/machinery/light/small,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict2)
-"t" = (/obj/item/clothing/head/cowboy/fancy,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict2)
-"x" = (/obj/effect/decal/remains/human,/obj/item/clothing/under/cowboy/brown,/obj/item/clothing/accessory/cowboy_vest/brown,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict2)
-"z" = (/obj/item/weapon/storage/fancy/blackcandle_box,/obj/structure/table/standard,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict2)
-"A" = (/obj/structure/bed/chair{dir = 8},/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict2)
-"D" = (/obj/item/weapon/storage/backpack/fancy,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict2)
-"E" = (/obj/item/clothing/shoes/dress/white,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict2)
-"I" = (/obj/item/weapon/coin/gold,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict2)
-"J" = (/obj/item/clothing/gloves/weddingring,/obj/item/clothing/gloves/weddingring{pixel_y = -4; pixel_x = -5},/obj/structure/table/standard,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict2)
-"L" = (/obj/item/clothing/shoes/boots/cowboy/fancy,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict2)
-"M" = (/obj/effect/decal/remains/human,/obj/item/clothing/ears/earring/stud/diamond,/obj/item/clothing/under/dress/revealingdress,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict2)
-"Q" = (/obj/item/weapon/storage/backpack/satchel/fancy,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict2)
-"T" = (/mob/living/simple_mob/animal/passive/cat/bones{desc = "A very odd behaved cat, their scratched name tag reads 'Felix'. They look very malnourished."; name = "Felix"},/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict2)
-"V" = (/obj/effect/wingrille_spawn/reinforced,/turf/simulated/floor/plating,/turf/space,/area/submap/derelict2)
-"W" = (/obj/machinery/portable_atmospherics/canister/air,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict2)
-"Z" = (/obj/structure/bed/chair,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/derelict2)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"b" = (
+/obj/structure/window/reinforced{
+	dir = 4;
+	tag = "icon-rwindow (EAST)"
+	},
+/turf/template_noop,
+/area/submap/derelict2)
+"c" = (
+/obj/machinery/door/airlock/external,
+/turf/simulated/floor/plating,
+/area/submap/derelict2)
+"d" = (
+/obj/structure/window/reinforced{
+	dir = 8;
+	tag = "icon-rwindow (WEST)"
+	},
+/turf/template_noop,
+/area/submap/derelict2)
+"e" = (
+/obj/structure/window/reinforced{
+	dir = 4;
+	tag = "icon-rwindow (EAST)"
+	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	tag = "icon-rwindow (WEST)"
+	},
+/turf/simulated/floor/plating,
+/area/submap/derelict2)
+"f" = (
+/turf/simulated/wall,
+/area/submap/derelict2)
+"g" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/turf/simulated/floor/plating,
+/area/submap/derelict2)
+"h" = (
+/obj/machinery/light/small{
+	dir = 1;
+	tag = "icon-bulb1 (NORTH)"
+	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/asteroid_steel/airless{
+	temperature = 293.15
+	},
+/area/submap/derelict2)
+"i" = (
+/turf/simulated/floor/tiled/asteroid_steel/airless{
+	temperature = 293.15
+	},
+/area/submap/derelict2)
+"j" = (
+/obj/machinery/light/small{
+	dir = 4;
+	tag = "icon-bulb1 (EAST)"
+	},
+/turf/simulated/floor/tiled/asteroid_steel/airless{
+	temperature = 293.15
+	},
+/area/submap/derelict2)
+"k" = (
+/obj/structure/window/reinforced,
+/turf/template_noop,
+/area/submap/derelict2)
+"l" = (
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1;
+	tag = "icon-rwindow (NORTH)"
+	},
+/turf/simulated/floor/plating,
+/area/submap/derelict2)
+"m" = (
+/obj/structure/table/standard,
+/obj/item/weapon/storage/fancy/heartbox,
+/obj/item/toy/bosunwhistle/fluff/strix,
+/turf/simulated/floor/tiled/asteroid_steel/airless{
+	temperature = 293.15
+	},
+/area/submap/derelict2)
+"n" = (
+/obj/item/trash/plate{
+	pixel_x = 10
+	},
+/obj/item/trash/plate{
+	pixel_x = -10
+	},
+/obj/structure/table/glass,
+/obj/item/weapon/flame/candle/everburn,
+/turf/simulated/floor/tiled/asteroid_steel/airless{
+	temperature = 293.15
+	},
+/area/submap/derelict2)
+"o" = (
+/obj/structure/table/standard,
+/obj/item/weapon/storage/fancy/cigar/cohiba,
+/turf/simulated/floor/tiled/asteroid_steel/airless{
+	temperature = 293.15
+	},
+/area/submap/derelict2)
+"p" = (
+/obj/structure/window/reinforced{
+	dir = 1;
+	tag = "icon-rwindow (NORTH)"
+	},
+/turf/template_noop,
+/area/submap/derelict2)
+"q" = (
+/obj/machinery/light/small{
+	dir = 8;
+	tag = "icon-bulb1 (WEST)"
+	},
+/turf/simulated/floor/tiled/asteroid_steel/airless{
+	temperature = 293.15
+	},
+/area/submap/derelict2)
+"r" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/tiled/asteroid_steel/airless{
+	temperature = 293.15
+	},
+/area/submap/derelict2)
+"t" = (
+/obj/item/clothing/head/cowboy/fancy,
+/turf/simulated/floor/tiled/asteroid_steel/airless{
+	temperature = 293.15
+	},
+/area/submap/derelict2)
+"x" = (
+/obj/effect/decal/remains/human,
+/obj/item/clothing/under/cowboy/brown,
+/obj/item/clothing/accessory/cowboy_vest/brown,
+/turf/simulated/floor/tiled/asteroid_steel/airless{
+	temperature = 293.15
+	},
+/area/submap/derelict2)
+"z" = (
+/obj/item/weapon/storage/fancy/blackcandle_box,
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/asteroid_steel/airless{
+	temperature = 293.15
+	},
+/area/submap/derelict2)
+"A" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/asteroid_steel/airless{
+	temperature = 293.15
+	},
+/area/submap/derelict2)
+"D" = (
+/obj/item/weapon/storage/backpack/fancy,
+/turf/simulated/floor/tiled/asteroid_steel/airless{
+	temperature = 293.15
+	},
+/area/submap/derelict2)
+"E" = (
+/obj/item/clothing/shoes/dress/white,
+/turf/simulated/floor/tiled/asteroid_steel/airless{
+	temperature = 293.15
+	},
+/area/submap/derelict2)
+"I" = (
+/obj/item/weapon/coin/gold,
+/turf/simulated/floor/tiled/asteroid_steel/airless{
+	temperature = 293.15
+	},
+/area/submap/derelict2)
+"J" = (
+/obj/item/clothing/gloves/weddingring,
+/obj/item/clothing/gloves/weddingring{
+	pixel_y = -4;
+	pixel_x = -5
+	},
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/asteroid_steel/airless{
+	temperature = 293.15
+	},
+/area/submap/derelict2)
+"L" = (
+/obj/item/clothing/shoes/boots/cowboy/fancy,
+/turf/simulated/floor/tiled/asteroid_steel/airless{
+	temperature = 293.15
+	},
+/area/submap/derelict2)
+"M" = (
+/obj/effect/decal/remains/human,
+/obj/item/clothing/ears/earring/stud/diamond,
+/obj/item/clothing/under/dress/revealingdress,
+/turf/simulated/floor/tiled/asteroid_steel/airless{
+	temperature = 293.15
+	},
+/area/submap/derelict2)
+"Q" = (
+/obj/item/weapon/storage/backpack/satchel/fancy,
+/turf/simulated/floor/tiled/asteroid_steel/airless{
+	temperature = 293.15
+	},
+/area/submap/derelict2)
+"T" = (
+/mob/living/simple_mob/animal/passive/cat/bones{
+	desc = "A very odd behaved cat, their scratched name tag reads 'Felix'. They look very malnourished.";
+	name = "Felix"
+	},
+/turf/simulated/floor/tiled/asteroid_steel/airless{
+	temperature = 293.15
+	},
+/area/submap/derelict2)
+"V" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
+/turf/space,
+/area/submap/derelict2)
+"W" = (
+/obj/machinery/portable_atmospherics/canister/air,
+/turf/simulated/floor/tiled/asteroid_steel/airless{
+	temperature = 293.15
+	},
+/area/submap/derelict2)
+"Z" = (
+/obj/structure/bed/chair,
+/turf/simulated/floor/tiled/asteroid_steel/airless{
+	temperature = 293.15
+	},
+/area/submap/derelict2)
 
 (1,1,1) = {"
-aaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaa
-aaaaaaaabcdaaaaaaaaa
-aaaaaaaabedaaaaaaaaa
-aaaaaaaabedaaaaaaaaa
-aaaaaaaabedaaaaaaaaa
-aaaaaaafgcgfaaaaaaaa
-aaaaaafhWiiJfaaaaaaa
-aaaaafzIiiiijfaaaaaa
-akkkkViiZtiTigkkkkaa
-aclllciDxnMAiclllcaa
-appppViiLiEQiVppppaa
-aaaaafqiiiiiofaaaaaa
-aaaaaafmiiWrfaaaaaaa
-aaaaaaafVcgfaaaaaaaa
-aaaaaaaabedaaaaaaaaa
-aaaaaaaabedaaaaaaaaa
-aaaaaaaabedaaaaaaaaa
-aaaaaaaabcdaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaa
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+k
+c
+p
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(3,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+k
+l
+p
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(4,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+k
+l
+p
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(5,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+k
+l
+p
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(6,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+f
+V
+c
+V
+f
+a
+a
+a
+a
+a
+a
+a
+"}
+(7,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+f
+z
+i
+i
+i
+q
+f
+a
+a
+a
+a
+a
+a
+"}
+(8,1,1) = {"
+a
+a
+a
+a
+a
+a
+f
+h
+I
+i
+D
+i
+i
+m
+f
+a
+a
+a
+a
+a
+"}
+(9,1,1) = {"
+a
+a
+b
+b
+b
+b
+g
+W
+i
+Z
+x
+L
+i
+i
+V
+b
+b
+b
+b
+a
+"}
+(10,1,1) = {"
+a
+a
+c
+e
+e
+e
+c
+i
+i
+t
+n
+i
+i
+i
+c
+e
+e
+e
+c
+a
+"}
+(11,1,1) = {"
+a
+a
+d
+d
+d
+d
+g
+i
+i
+i
+M
+E
+i
+W
+g
+d
+d
+d
+d
+a
+"}
+(12,1,1) = {"
+a
+a
+a
+a
+a
+a
+f
+J
+i
+T
+A
+Q
+i
+r
+f
+a
+a
+a
+a
+a
+"}
+(13,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+f
+j
+i
+i
+i
+o
+f
+a
+a
+a
+a
+a
+a
+"}
+(14,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+f
+g
+c
+V
+f
+a
+a
+a
+a
+a
+a
+a
+"}
+(15,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+k
+l
+p
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(16,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+k
+l
+p
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(17,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+k
+l
+p
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(18,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+k
+c
+p
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(19,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(20,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
 "}

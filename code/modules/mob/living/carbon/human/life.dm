@@ -199,7 +199,7 @@
 
 	if (disabilities & EPILEPSY)
 		if ((prob(1) && paralysis < 1))
-			to_chat(src, "<font color='red'>You have a seizure!</font>")
+			to_chat(src, span_red("You have a seizure!"))
 			for(var/mob/O in viewers(src, null))
 				if(O == src)
 					continue
@@ -276,6 +276,10 @@
 	if(getFireLoss())
 		if((COLD_RESISTANCE in mutations) || (prob(1)))
 			heal_organ_damage(0,1)
+
+	 if(stat != DEAD) //CHOMPadd: Until I find where nutrion heal code is anyway
+	 	if((mRegen in mutations))
+	 		heal_organ_damage(0.2,0.2)
 
 	// DNA2 - Gene processing.
 	// The HULK stuff that was here is now in the hulk gene.
@@ -435,7 +439,7 @@
 				if(prob(50) && prob(100 * RADIATION_SPEED_COEFFICIENT))
 					spawn vomit()
 				if(!paralysis && prob(30) && prob(100 * RADIATION_SPEED_COEFFICIENT)) //CNS is shutting down.
-					to_chat(src, "<font color='Critical'>You have a seizure!</font>")
+					to_chat(src, "<span class='critical'>You have a seizure!</span>")
 					Paralyse(10)
 					make_jittery(1000)
 					if(!lying)
@@ -495,7 +499,7 @@
 					drop_item()
 			if(accumulated_rads > 700) // (12Gy)
 				if(!paralysis && prob(1) && prob(100 * RADIATION_SPEED_COEFFICIENT)) //1 in 1000 chance per tick.
-					to_chat(src, "<font color='Critical'>You have a seizure!</font>")
+					to_chat(src, "<span class='critical'>You have a seizure!</span>")
 					Paralyse(10)
 					make_jittery(1000)
 					if(!lying)
@@ -547,6 +551,9 @@
 
 /mob/living/carbon/human/handle_breath(datum/gas_mixture/breath)
 	if(status_flags & GODMODE)
+		return
+
+	if(mNobreath in src.mutations) //CHOMPadd
 		return
 
 	if(suiciding)
@@ -821,7 +828,7 @@
 
 	playsound_local(get_turf(src), suit_inhale_sound, 100, pressure_affected = FALSE, volume_channel = VOLUME_CHANNEL_AMBIENCE)
 	if(!exhale) // Did we fail exhale? If no, play it after inhale finishes.
-		addtimer(CALLBACK(src, .proc/play_exhale, M), 5 SECONDS)
+		addtimer(CALLBACK(src, PROC_REF(play_exhale), M), 5 SECONDS)
 
 /mob/living/carbon/human/proc/play_exhale(var/mob/living/M)
 	var/suit_exhale_sound
@@ -1274,8 +1281,8 @@
 
 		if(hallucination)
 			if(hallucination >= 20 && !(species.flags & (NO_POISON|IS_PLANT|NO_HALLUCINATION)) )
-				if(prob(3))
-					fake_attack(src)
+				//if(prob(3)) //ChompREMOVE fake_attacker - EXTREME image qdel usage.
+					//fake_attack(src) //ChompREMOVE fake_attacker - EXTREME image qdel usage.
 				if(!handling_hal)
 					spawn handle_hallucinations() //The not boring kind!
 				if(client && prob(5))
@@ -1301,6 +1308,11 @@
 			src.visible_message("<B>[src]</B> slumps to the ground, too weak to continue fighting.")
 			Paralyse(10)
 			setHalLoss(species.total_health - 1)
+
+		if(tiredness) //tiredness for vore drain
+			tiredness = (tiredness - 1)
+			if(tiredness >= 100)
+				Sleeping(5)
 
 		if(paralysis || sleeping)
 			blinded = 1
@@ -1492,6 +1504,21 @@
 		else
 			clear_fullscreen("brute")
 
+		//tiredness for drain vore
+		if(tiredness)
+			var/severity = 0
+			switch(tiredness)
+				if(10 to 20)		severity = 1
+				if(20 to 30)		severity = 2
+				if(30 to 45)		severity = 3
+				if(45 to 60)		severity = 4
+				if(60 to 75)		severity = 5
+				if(75 to 90)		severity = 6
+				if(90 to INFINITY)	severity = 7
+			overlay_fullscreen("tired", /obj/screen/fullscreen/oxy, severity)
+		else
+			clear_fullscreen("tired")
+
 		if(healths)
 			if (chem_effects[CE_PAINKILLER] > 100)
 				healths.icon_state = "health_numb"
@@ -1589,7 +1616,8 @@
 		else
 			clear_alert("high")
 
-		if(!isbelly(loc) && !previewing_belly) //VOREStation Add - Belly fullscreens safety //CHOMPEdit
+		//CHOMPEdit - surrounding_belly() used instead of isbelly(loc) to not clear indirect vorefx
+		if(!surrounding_belly() && !previewing_belly) //VOREStation Add - Belly fullscreens safety //CHOMPEdit
 			clear_fullscreen("belly")
 			//clear_fullscreen("belly2") //Chomp disable, using our own implementation
 			//clear_fullscreen("belly3") //Chomp disable, using our own implementation
@@ -1771,12 +1799,14 @@
 	if(isturf(loc) && rand(1,1000) == 1)
 		var/turf/T = loc
 		if(T.get_lumcount() <= LIGHTING_SOFT_THRESHOLD)
+			/* CHOMPEdit Start
 			//VOREStation Add Start
 			if(text2num(time2text(world.timeofday, "MM")) == 4)
 				if(text2num(time2text(world.timeofday, "DD")) == 1)
 					playsound_local(src,pick(scawwySownds),50, 0)
 					return
 			//VOREStation Add End
+			*/ // CHOMPedit End
 			playsound_local(src,pick(scarySounds),50, 1, -1)
 
 /mob/living/carbon/human/handle_stomach()

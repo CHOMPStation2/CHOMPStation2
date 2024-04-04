@@ -11,6 +11,7 @@
 			return
 
 	HandleBellyReagents()	//CHOMP reagent belly stuff, here to jam it into subsystems and avoid too much cpu usage
+	update_belly_surrounding() //CHOMPAdd - Updates belly_surrounding list for indirect vore usage
 	// VERY early exit
 	if(!contents.len)
 		return
@@ -46,10 +47,11 @@
 		log_debug("Digest mode [digest_mode] didn't exist in the digest_modes list!!")
 		return FALSE
 	if(digest_mode == DM_EGG)
+		prey_loop() //CHOMPAdd - Apparently on Egg mode the sound loop never played before? Just slapping this here to fix that
 		if(DM.handle_atoms(src, contents))
 			updateVRPanels()
 		return
-	if(!length(touchable_atoms))
+	if(!length(touchable_atoms) && !belly_surrounding.len) //CHOMPEdit - Needed to not exit early for indirect vorefx
 		return
 
 /////////////////////////// Sound Selections ///////////////////////////
@@ -93,7 +95,7 @@
 				SEND_SOUND(M, prey_digest)
 		play_sound = pred_digest
 
-	if(!LAZYLEN(touchable_mobs))
+	if(!LAZYLEN(belly_surrounding)) //CHOMPEdit - Changed to belly_surrounding from touchable_mobs so indirect vore viewers get this too
 		if(to_update)
 			updateVRPanels()
 		if(play_sound)
@@ -135,7 +137,11 @@
 				 //these are all external sound triggers now, so it's ok.
 
 	if(emote_active)
-		var/list/EL = emote_lists[digest_mode]
+		//ChompEDIT START runtime, emote_lists can be = ""
+		var/list/EL
+		if(islist(emote_lists))
+			EL = emote_lists[digest_mode]
+		//ChompEDIT END
 		if((LAZYLEN(EL) || LAZYLEN(emote_lists[DM_HOLD_ABSORBED]) || (digest_mode == DM_DIGEST && LAZYLEN(emote_lists[DM_HOLD])) || (digest_mode == DM_SELECT && (LAZYLEN(emote_lists[DM_HOLD])||LAZYLEN(emote_lists[DM_DIGEST])||LAZYLEN(emote_lists[DM_ABSORB])) )) && next_emote <= world.time)
 			var/living_count = 0
 			var/absorbed_count = 0
@@ -155,7 +161,7 @@
 					formatted_message = replacetext(formatted_message, "%prey", M)
 					formatted_message = replacetext(formatted_message, "%countprey", absorbed_count)
 					if(formatted_message)
-						to_chat(M, "<span class='notice'>[formatted_message]</span>")
+						to_chat(M, "<span class='vnotice'>[formatted_message]</span>")
 				else
 					if (digest_mode == DM_SELECT)
 						var/datum/digest_mode/selective/DM_S = GLOB.digest_modes[DM_SELECT]
@@ -171,7 +177,7 @@
 					formatted_message = replacetext(formatted_message, "%countprey", living_count)
 					formatted_message = replacetext(formatted_message, "%count", contents.len)
 					if(formatted_message)
-						to_chat(M, "<span class='notice'>[formatted_message]</span>")
+						to_chat(M, "<span class='vnotice'>[formatted_message]</span>")
 
 	if(to_update)
 		updateVRPanels()
@@ -228,7 +234,7 @@
 							touchable_atoms |= I
 
 				//Stripping flag
-				if(mode_flags & DM_FLAG_STRIPPING)
+				if((mode_flags & DM_FLAG_STRIPPING) && H.strip_pref) //CHOMPEdit Stripping pref check
 					for(var/slot in slots)
 						var/obj/item/I = H.get_equipped_item(slot = slot)
 						if(I && H.unEquip(I, force = FALSE))
@@ -263,7 +269,7 @@
 	return list("to_update" = to_update, "touchable_mobs" = touchable_mobs, "digestion_noise_chance" = digestion_noise_chance)
 
 /obj/belly/proc/prey_loop()
-	for(var/mob/living/M in contents)
+	for(var/mob/living/M in belly_surrounding) //CHOMPEdit - contents changed to belly_surrounding to loop sound for indirect viewers too
 		//We don't bother executing any other code if the prey doesn't want to hear the noises.
 		if(!M.is_preference_enabled(/datum/client_preference/digestion_noises))
 			M.stop_sound_channel(CHANNEL_PREYLOOP) // sanity just in case, because byond is whack and you can't trust it
@@ -272,7 +278,7 @@
 		// We don't want the sounds to overlap, but we do want them to steadily replay.
 		// We also don't want the sounds to play if the pred hasn't marked this belly as fleshy, or doesn't
 		// have the right sounds to play.
-		if(isbelly(M.loc) && is_wet && wet_loop && (world.time > M.next_preyloop))
+		if(is_wet && wet_loop && (world.time > M.next_preyloop)) //CHOMPEdit - Removed isbelly(M.loc) as some viewers might be indirectly in the belly
 			M.stop_sound_channel(CHANNEL_PREYLOOP)
 			var/sound/preyloop = sound('sound/vore/sunesound/prey/loop.ogg')
 			M.playsound_local(get_turf(src), preyloop, 80, 0, channel = CHANNEL_PREYLOOP, frequency = noise_freq) //CHOMPEdit
@@ -301,7 +307,7 @@
 		if(!M.digestion_in_progress)
 			M.digestion_in_progress = TRUE
 			if(M.health > -36 || (ishuman(M) && M.health > -136))
-				to_chat(M, "<span class='notice'>(Your predator has enabled gradual body digestion. Stick around for a second round of churning to reach the true finisher.)</span>")
+				to_chat(M, "<span class='vnotice'>(Your predator has enabled gradual body digestion. Stick around for a second round of churning to reach the true finisher.)</span>")
 		if(M.health < M.maxHealth * -1) //Siplemobs etc
 			if(ishuman(M))
 				if(M.health < (M.maxHealth * -1) -100) //Spacemans can go much deeper. Jank but maxHealth*-2 doesn't work with flat standard -100hp death threshold.
@@ -350,8 +356,8 @@
 	digest_alert_prey = replacetext(digest_alert_prey, "%count", contents.len)
 
 	//Send messages
-	to_chat(owner, "<span class='notice'>[digest_alert_owner]</span>")
-	to_chat(M, "<span class='notice'>[digest_alert_prey]</span>")
+	to_chat(owner, "<span class='vnotice'>[digest_alert_owner]</span>")
+	to_chat(M, "<span class='vnotice'>[digest_alert_prey]</span>")
 
 	if(M.ckey)
 		GLOB.prey_digested_roundstat++
@@ -371,24 +377,38 @@
 			GenerateBellyReagents_digested()
 		else
 			R.cell.charge += (nutrition_percent / 100) * compensation * 25 * personal_nutrition_modifier*/
-	if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMP digestion producing reagents
-		owner.adjust_nutrition((nutrition_percent / 100) * compensation * 3 * personal_nutrition_modifier)
+	if(show_liquids && reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMP digestion producing reagents
+		owner_adjust_nutrition((nutrition_percent / 100) * compensation * 3 * personal_nutrition_modifier)
 		GenerateBellyReagents_digested()
 	else
-		owner.adjust_nutrition((nutrition_percent / 100) * compensation * 4.5 * personal_nutrition_modifier * pred_digestion_efficiency) //CHOMPedit end
+		owner_adjust_nutrition((nutrition_percent / 100) * compensation * 4.5 * personal_nutrition_modifier * pred_digestion_efficiency) //CHOMPedit end
 
 /obj/belly/proc/steal_nutrition(mob/living/L)
+	if(L.nutrition <= 110)
+		if(drainmode == DR_SLEEP && istype(L,/mob/living/carbon/human)) //Slowly put prey to sleep
+			if(L.tiredness <= 105)
+				L.tiredness = (L.tiredness + 6)
+			if(L.tiredness <= 90 && L.tiredness >= 75)
+				to_chat(L, "<span class='warning'>You are about to fall unconscious!</span>")
+				to_chat(owner, "<span class='warning'>[L] is about to fall unconscious!</span>")
+		if(drainmode == DR_FAKE && istype(L,/mob/living/carbon/human)) //Slowly bring prey to the edge of sleep without crossing it
+			if(L.tiredness <= 93)
+				L.tiredness = (L.tiredness + 6)
+		if(drainmode == DR_WEIGHT && istype(L,/mob/living/carbon/human)) //Slowly drain your prey's weight and add it to your own
+			if(L.weight > 70)
+				L.weight -= (0.01 * L.weight_loss)
+				owner.weight += (0.01 * L.weight_loss) //intentionally dependant on the prey's weight loss ratio rather than the preds weight gain to keep them in pace with one another.
 	if(L.nutrition >= 100)
 		var/oldnutrition = (L.nutrition * 0.05)
 		L.nutrition = (L.nutrition * 0.95)
-		if(reagent_mode_flags & DM_FLAG_REAGENTSDRAIN && reagents.total_volume < reagents.maximum_volume)   //CHOMPedit: draining reagent production //Added to this proc now since it's used for draining
-			owner.adjust_nutrition(oldnutrition * 0.75) //keeping the price static, due to how much nutrition can flunctuate
+		if(show_liquids && reagent_mode_flags & DM_FLAG_REAGENTSDRAIN && reagents.total_volume < reagents.maximum_volume)   //CHOMPedit: draining reagent production //Added to this proc now since it's used for draining
+			owner_adjust_nutrition(oldnutrition * 0.75) //keeping the price static, due to how much nutrition can flunctuate
 			GenerateBellyReagents_absorbing() //Dont need unique proc so far
 		else
-			owner.adjust_nutrition(oldnutrition) //CHOMPedit end
+			owner_adjust_nutrition(oldnutrition) //CHOMPedit end
 
 /obj/belly/proc/updateVRPanels()
-	for(var/mob/living/M in contents)
+	for(var/mob/living/M in belly_surrounding) //CHOMPEdit - Changed to belly_surrounding from contents so updates happen for indirect viewers too
 		if(M.client)
 			M.updateVRPanel()
 	if(owner.client)

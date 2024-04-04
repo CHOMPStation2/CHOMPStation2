@@ -1,4 +1,3 @@
-
 #define NITROGEN_RETARDATION_FACTOR 0.15	//Higher == N2 slows reaction more
 #define THERMAL_RELEASE_MODIFIER 10000		//Higher == more heat released during reaction
 #define PHORON_RELEASE_MODIFIER 1500		//Higher == less phoron released by reaction
@@ -49,7 +48,7 @@
 
 /obj/machinery/power/supermatter
 	name = "Supermatter"
-	desc = "A strangely translucent and iridescent crystal. <font color='red'>You get headaches just from looking at it.</font>"
+	desc = "A strangely translucent and iridescent crystal. <span class='red'>You get headaches just from looking at it.</span>"
 	icon = 'icons/obj/supermatter.dmi'
 	icon_state = "darkmatter"
 	plane = MOB_PLANE // So people can walk behind the top part
@@ -85,8 +84,8 @@
 	var/pull_radius = 14
 	// Time in ticks between delamination ('exploding') and exploding (as in the actual boom)
 	var/pull_time = 100
-	var/min_explosion_power = 8
-	var/max_explosion_power = 16
+	var/min_explosion_power = 12 // CHOMPEdit some more damage was 8
+	var/max_explosion_power = 24 // CHOMPEdit some more damage was 16
 
 	var/emergency_issued = 0
 
@@ -183,7 +182,7 @@
 	exploded = 1
 	// CHOMPEdit Start - Looping Alarms. We want to stop the alarm here.
 	if(stationcrystal) // Are we an on-station crystal?
-		addtimer(CALLBACK(src, .proc/reset_alarms), 10 SECONDS, TIMER_STOPPABLE)
+		addtimer(CALLBACK(src, PROC_REF(reset_alarms)), 10 SECONDS, TIMER_STOPPABLE)
 	// CHOMPEdit End
 
 	sleep(pull_time)
@@ -429,7 +428,7 @@
 		env.merge(removed)
 
 	for(var/mob/living/carbon/human/l in view(src, min(7, round(sqrt(power/6))))) // If they can see it without mesons on.  Bad on them.
-		if(!istype(l.glasses, /obj/item/clothing/glasses/meson)) // VOREStation Edit - Only mesons can protect you!
+		if(!istype(l.glasses, /obj/item/clothing/glasses/meson) || l.is_incorporeal()) // VOREStation Edit - Only mesons can protect you! - CHOMPEdit - OR if they're not in the same plane of existence
 			l.hallucination = max(0, min(200, l.hallucination + power * config_hallucination_power * sqrt( 1 / max(1,get_dist(l, src)) ) ) )
 
 	SSradiation.radiate(src, max(power * 1.5, 50) ) //Better close those shutters!
@@ -606,7 +605,7 @@
 
 /obj/machinery/power/supermatter/shard //Small subtype, less efficient and more sensitive, but less boom.
 	name = "Supermatter Shard"
-	desc = "A strangely translucent and iridescent crystal that looks like it used to be part of a larger structure. <font color='red'>You get headaches just from looking at it.</font>"
+	desc = "A strangely translucent and iridescent crystal that looks like it used to be part of a larger structure. <span class='red'>You get headaches just from looking at it.</span>"
 	icon_state = "darkmatter_shard"
 	base_icon_state = "darkmatter_shard"
 
@@ -647,6 +646,12 @@
 	stationcrystal = TRUE
 
 /obj/machinery/power/supermatter/proc/reset_alarms()
+	reset_sm_alarms()
+	engwarn = 0
+	critwarn = 0
+	causalitywarn = 0
+
+/proc/reset_sm_alarms()
 	for(var/obj/machinery/firealarm/candidate_alarm in global.machines)
 		var/area/our_area = get_area(candidate_alarm)
 		if(istype(our_area, /area/engineering))
@@ -658,7 +663,27 @@
 			candidate_alarm.causalitywarn = FALSE // Tell the fire alarm we're done, too. Yes this is janky, someone will come along and fix it later:tm:
 			candidate_alarm.critalarm.stop()
 			candidate_alarm.critwarn = FALSE // Tell the fire alarm we're done, too. Yes this is janky, someone will come along and fix it later:tm:
-			engwarn = 0
-			critwarn = 0
-			causalitywarn = 0
 // CHOMPEdit End
+
+#undef NITROGEN_RETARDATION_FACTOR
+#undef THERMAL_RELEASE_MODIFIER
+#undef PHORON_RELEASE_MODIFIER
+#undef OXYGEN_RELEASE_MODIFIER
+#undef REACTION_POWER_MODIFIER
+
+#undef DETONATION_RADS
+#undef DETONATION_MOB_CONCUSSION
+
+#undef DETONATION_APC_OVERLOAD_PROB
+#undef DETONATION_SHUTDOWN_APC
+#undef DETONATION_SHUTDOWN_CRITAPC
+#undef DETONATION_SHUTDOWN_SMES
+#undef DETONATION_SHUTDOWN_RNG_FACTOR
+#undef DETONATION_SOLAR_BREAK_CHANCE
+
+#undef DETONATION_EXPLODE_MIN_POWER
+#undef DETONATION_EXPLODE_MAX_POWER
+
+#undef WARNING_DELAY
+
+#undef SUPERMATTER_ACCENT_SOUND_COOLDOWN

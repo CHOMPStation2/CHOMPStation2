@@ -38,17 +38,17 @@
 	var/obj/effect/alien/weeds/node/linked_node = null
 	var/static/list/weedImageCache
 
-/obj/effect/alien/weeds/Initialize(var/mapload, var/node, var/newcolor)
+/obj/effect/alien/weeds/Initialize(var/mapload, var/node) // CHOMPedit: No coloration.
 	. = ..()
 	if(isspace(loc))
 		return INITIALIZE_HINT_QDEL
 
 	linked_node = node
-	if(newcolor)
-		color = newcolor
+//	if(newcolor)
+//		color = newcolor // CHOMPedit: No coloration.
 
 	if(icon_state == "weeds")
-		icon_state = pick("weeds", "weeds1", "weeds2")
+		icon_state = pick("weeds", "weeds1", "weeds2", "weeds3", "weeds4", "weeds5", "weeds6", "weeds7", "weeds8", "weeds9", "weeds10", "weeds11", "weeds12", "weeds13", "weeds14", "weeds15") // CHOMPedit: More icons variants.
 
 	fullUpdateWeedOverlays()
 
@@ -73,9 +73,9 @@
 	light_color = "#673972"
 
 	var/node_range = NODERANGE
-	var/set_color = "#321D37"
+//	var/set_color = "#321D37" // CHOMPedit:  Removing coloration.
 
-/obj/effect/alien/weeds/node/Initialize(var/mapload, var/node, var/newcolor)
+/obj/effect/alien/weeds/node/Initialize(var/mapload, var/node) // CHOMPedit: Removing coloration.
 	. = ..()
 
 	for(var/obj/effect/alien/weeds/existing in loc)
@@ -86,10 +86,10 @@
 
 	linked_node = src
 
-	if(newcolor)
-		set_color = newcolor
-	if(set_color)
-		color = set_color
+//	if(newcolor)
+//		set_color = newcolor
+//	if(set_color)
+//		color = set_color // CHOMPedit: Removing coloration.
 
 	START_PROCESSING(SSobj, src) // Only the node processes in a subsystem, the rest are process()'d by the node
 
@@ -151,7 +151,7 @@
 		if(T1.c_airblock(T2) == BLOCKED)
 			continue
 
-		new /obj/effect/alien/weeds(T2, linked_node, color)
+		new /obj/effect/alien/weeds(T2, linked_node) // CHOMPedit: No coloration.
 
 /obj/effect/alien/weeds/node/process()
 	set background = 1
@@ -166,7 +166,7 @@
 		if(!W.linked_node)
 			W.linked_node = src
 
-		W.color = W.linked_node.set_color
+//		W.color = W.linked_node.set_color // CHOMPedit: No coloration.
 
 		if(prob(max(10, 60 - (5 * nearby_weeds.len))))
 			W.process()
@@ -224,7 +224,26 @@
 		health -= 5
 		healthcheck()
 
-// CHOMPedit start - Smaller-ranged nodes for Xenomorph Hybrids.
+// CHOMPedit start - Smaller-ranged nodes for Xenomorph Hybrids, node/weed deletion.
+/obj/effect/alien/weeds/attack_hand(mob/user as mob)
+	usr.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+	if (HULK in usr.mutations)
+		visible_message("<span class='warning'>[usr] destroys the [name]!</span>")
+		health = 0
+	else
+
+		// Aliens can get straight through these.
+		if(istype(usr,/mob/living/carbon))
+			if(user.a_intent == I_HURT)
+				var/mob/living/carbon/M = usr
+				if(locate(/obj/item/organ/internal/xenos/hivenode) in M.internal_organs)
+					visible_message ("<span class='warning'>[usr] strokes the [name] and it melts away!</span>", 1)
+					health = 0
+					healthcheck()
+					return
+	healthcheck()
+	return
+
 /obj/effect/alien/weeds/node/weak
 	light_range = 2
 	node_range = 1

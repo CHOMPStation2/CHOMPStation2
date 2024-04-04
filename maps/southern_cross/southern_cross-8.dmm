@@ -1410,7 +1410,7 @@
 	},
 /area/centcom/bar)
 "aQp" = (
-/obj/machinery/vending/event/gadget,
+/obj/machinery/vending/loadout/gadget,
 /obj/effect/floor_decal/techfloor/orange,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -1681,9 +1681,7 @@
 /area/shuttle/merchant)
 "bbP" = (
 /mob/living/simple_mob/animal/sif/glitterfly/rare,
-/turf/simulated/floor/outdoors/grass/heavy/atoll{
-	dynamic_lighting = 1
-	},
+/turf/simulated/floor/outdoors/grass/heavy,
 /area/shadekin)
 "bcb" = (
 /obj/effect/floor_decal/milspec/color/silver,
@@ -1795,7 +1793,8 @@
 /area/centcom/bar)
 "bfZ" = (
 /obj/machinery/vending/boozeomat{
-	pixel_y = 16
+	pixel_y = 16;
+	req_log_access = null
 	},
 /obj/effect/floor_decal/milspec/color/silver,
 /turf/simulated/floor/tiled/techmaint,
@@ -2413,7 +2412,7 @@
 /turf/unsimulated/beach/sand,
 /area/beach)
 "bIF" = (
-/obj/machinery/vending/cart,
+/obj/machinery/vending/hydroseeds,
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
 	},
@@ -2673,7 +2672,7 @@
 	},
 /area/centcom/specops)
 "bST" = (
-/obj/machinery/vending/event/clothing,
+/obj/machinery/vending/loadout/clothing,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
 "bTc" = (
@@ -3959,10 +3958,6 @@
 /turf/simulated/shuttle/plating,
 /area/centcom/evac)
 "dbz" = (
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Kitchen Cold Room";
-	dir = 1
-	},
 /obj/structure/closet/chefcloset,
 /obj/item/glass_jar,
 /obj/item/device/retail_scanner/civilian,
@@ -5110,9 +5105,7 @@
 /area/shadekin)
 "edw" = (
 /obj/structure/flora/ausbushes/brflowers,
-/turf/simulated/floor/outdoors/grass/heavy/atoll{
-	dynamic_lighting = 1
-	},
+/turf/simulated/floor/outdoors/grass/heavy,
 /area/shadekin)
 "edK" = (
 /obj/effect/decal/cleanable/blood,
@@ -5193,9 +5186,7 @@
 /area/wizard_station)
 "ehg" = (
 /obj/structure/flora/ausbushes/lavendergrass,
-/turf/simulated/floor/outdoors/grass/heavy/atoll{
-	dynamic_lighting = 1
-	},
+/turf/simulated/floor/outdoors/grass/heavy,
 /area/shadekin)
 "ehy" = (
 /obj/machinery/door/window/northright{
@@ -5569,7 +5560,7 @@
 	},
 /area/ninja_dojo/dojo)
 "eAT" = (
-/obj/machinery/vending/event/costume,
+/obj/machinery/vending/loadout/costume,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
 "eBq" = (
@@ -5607,6 +5598,12 @@
 "eDw" = (
 /turf/simulated/shuttle/wall/voidcraft/hard_corner,
 /area/shuttle/ninja)
+"eDM" = (
+/obj/machinery/gateway{
+	dir = 5
+	},
+/turf/unsimulated/floor/dark,
+/area/shadekin)
 "eDQ" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -6930,6 +6927,12 @@
 	},
 /turf/simulated/floor/carpet/retro,
 /area/shadekin)
+"ggh" = (
+/obj/structure/table/darkglass,
+/obj/effect/floor_decal/milspec/cargo,
+/obj/machinery/recharger,
+/turf/simulated/floor/tiled/techmaint,
+/area/shadekin)
 "ggj" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/holofloor/desert,
@@ -7004,25 +7007,6 @@
 	icon_state = "steel"
 	},
 /area/centcom/main_hall)
-"gjr" = (
-/obj/machinery/door/airlock/voidcraft/vertical{
-	frequency = null;
-	id_tag = null;
-	name = "Ship External Hatch";
-	req_access = null
-	},
-/obj/machinery/door/blast/regular{
-	density = 0;
-	dir = 8;
-	icon_state = "pdoor0";
-	id = "blastninja";
-	name = "Outer Airlock";
-	opacity = 0
-	},
-/obj/effect/map_helper/airlock/door/ext_door,
-/obj/effect/map_helper/airlock/button/ext_button,
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/shuttle/ninja)
 "gjv" = (
 /obj/item/toy/plushie/box{
 	pixel_x = 5;
@@ -8302,21 +8286,6 @@
 /obj/effect/floor_decal/spline/fancy,
 /turf/simulated/floor/grass2,
 /area/shadekin)
-"hlP" = (
-/obj/machinery/access_button{
-	dir = 8;
-	name = "exterior access button";
-	pixel_x = 25;
-	pixel_y = 6
-	},
-/obj/machinery/door/airlock{
-	icon = 'icons/obj/doors/Dooruranium.dmi'
-	},
-/turf/unsimulated/floor{
-	icon_state = "plating";
-	name = "plating"
-	},
-/area/ninja_dojo/dojo)
 "hmc" = (
 /obj/structure/bed/chair,
 /turf/simulated/shuttle/floor{
@@ -8377,6 +8346,12 @@
 	icon_state = "freezerfloor"
 	},
 /area/centcom/specops)
+"hnV" = (
+/obj/machinery/computer/cryopod/gateway{
+	pixel_y = 30
+	},
+/turf/unsimulated/floor/dark,
+/area/shadekin)
 "hnX" = (
 /obj/effect/floor_decal/corner/green{
 	dir = 9
@@ -8748,9 +8723,7 @@
 /area/shadekin)
 "hGu" = (
 /obj/machinery/beehive,
-/turf/simulated/floor/outdoors/grass/heavy/atoll{
-	dynamic_lighting = 1
-	},
+/turf/simulated/floor/outdoors/grass/heavy,
 /area/shadekin)
 "hGO" = (
 /obj/structure/bed/chair/office/light{
@@ -10899,6 +10872,12 @@
 /obj/structure/largecrate/animal/cat,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/merchant)
+"jzJ" = (
+/obj/machinery/gateway{
+	dir = 9
+	},
+/turf/unsimulated/floor/dark,
+/area/shadekin)
 "jAg" = (
 /obj/item/weapon/reagent_containers/food/snacks/spellburger{
 	pixel_y = 8
@@ -11179,9 +11158,7 @@
 /area/centcom/command)
 "jNr" = (
 /obj/structure/flora/bboulder2,
-/turf/simulated/floor/outdoors/grass/heavy/atoll{
-	dynamic_lighting = 1
-	},
+/turf/simulated/floor/outdoors/grass/heavy,
 /area/shadekin)
 "jNs" = (
 /obj/machinery/light/floortube{
@@ -11234,7 +11211,9 @@
 	},
 /area/centcom/specops)
 "jQF" = (
-/obj/machinery/vending/boozeomat,
+/obj/machinery/vending/boozeomat{
+	req_access = null
+	},
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
 	},
@@ -11292,6 +11271,13 @@
 	name = "plating"
 	},
 /area/skipjack_station)
+"jSG" = (
+/obj/machinery/gateway{
+	density = 0;
+	dir = 10
+	},
+/turf/unsimulated/floor/dark,
+/area/shadekin)
 "jSQ" = (
 /turf/unsimulated/floor{
 	dir = 5;
@@ -12310,6 +12296,12 @@
 	icon_state = "steel"
 	},
 /area/centcom/main_hall)
+"kHv" = (
+/obj/machinery/gateway{
+	dir = 4
+	},
+/turf/unsimulated/floor/dark,
+/area/shadekin)
 "kIb" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Barracks";
@@ -12589,6 +12581,7 @@
 /obj/random/miniature,
 /obj/random/miniature,
 /obj/random/miniature,
+/obj/item/device/pda,
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
 "kSi" = (
@@ -13561,10 +13554,6 @@
 	},
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/holodeck/source_thunderdomecourt)
-"lRW" = (
-/obj/machinery/vending/entertainer,
-/turf/simulated/floor/reinforced,
-/area/shadekin)
 "lSl" = (
 /obj/effect/floor_decal/milspec/color/orange,
 /obj/effect/floor_decal/milspec/hatchmarks,
@@ -13888,7 +13877,7 @@
 	dir = 4
 	},
 /obj/structure/prop/statue/angel,
-/turf/simulated/floor/outdoors/grass/heavy/atoll,
+/turf/simulated/floor/outdoors/grass/heavy,
 /area/shadekin)
 "miM" = (
 /obj/machinery/door/airlock/glass{
@@ -14732,6 +14721,31 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
+"mYr" = (
+/obj/machinery/door/airlock/voidcraft/vertical{
+	frequency = null;
+	id_tag = null;
+	name = "Ship External Hatch";
+	req_access = null
+	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 8;
+	icon_state = "pdoor0";
+	id = "blastninja";
+	name = "Outer Airlock";
+	opacity = 0
+	},
+/obj/effect/map_helper/airlock/door/ext_door,
+/obj/effect/map_helper/airlock/button/ext_button,
+/obj/machinery/access_button{
+	dir = 8;
+	name = "exterior access button";
+	pixel_x = -7;
+	pixel_y = -26
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja)
 "mZO" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/storage/firstaid/fire{
@@ -15263,7 +15277,9 @@
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/skipjack)
 "nzI" = (
-/obj/machinery/vending/engineering,
+/obj/machinery/vending/engineering{
+	req_access = null
+	},
 /obj/effect/floor_decal/techfloor/orange,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -15544,9 +15560,7 @@
 /area/holodeck/source_emptycourt)
 "nOe" = (
 /obj/structure/flora/tree/jungle_small,
-/turf/simulated/floor/outdoors/grass/heavy/atoll{
-	dynamic_lighting = 1
-	},
+/turf/simulated/floor/outdoors/grass/heavy,
 /area/shadekin)
 "nOo" = (
 /obj/effect/floor_decal/corner/red/full{
@@ -16097,7 +16111,7 @@
 	dir = 4
 	},
 /obj/structure/prop/statue/stump_plaque,
-/turf/simulated/floor/outdoors/grass/heavy/atoll,
+/turf/simulated/floor/outdoors/grass/heavy,
 /area/shadekin)
 "oqb" = (
 /obj/structure/table/standard,
@@ -16172,7 +16186,9 @@
 	},
 /area/centcom/bar)
 "otP" = (
-/obj/machinery/vending/event/loadout_misc,
+/obj/machinery/vending/loadout/loadout_misc{
+	emagged = 1
+	},
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
 	},
@@ -16787,7 +16803,9 @@
 /turf/simulated/shuttle/wall/no_join,
 /area/shuttle/supply)
 "pkK" = (
-/obj/machinery/vending/engivend,
+/obj/machinery/vending/engivend{
+	req_access = null
+	},
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
 	},
@@ -17355,6 +17373,7 @@
 /obj/random/maintenance/cargo,
 /obj/random/maintenance/cargo,
 /obj/random/maintenance/cargo,
+/obj/item/device/pda,
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
 "pMy" = (
@@ -17811,6 +17830,12 @@
 /obj/structure/table/rack/holorack,
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/holodeck/source_theatre)
+"qoK" = (
+/obj/machinery/gateway{
+	dir = 8
+	},
+/turf/unsimulated/floor/dark,
+/area/shadekin)
 "qoU" = (
 /turf/simulated/floor/carpet/blucarpet,
 /area/shadekin)
@@ -18091,6 +18116,10 @@
 	},
 /turf/unsimulated/wall,
 /area/space)
+"qDH" = (
+/obj/machinery/cryopod/robot/door/gateway/quiet,
+/turf/unsimulated/floor/dark,
+/area/shadekin)
 "qGj" = (
 /obj/effect/floor_decal/rust/color_rusted{
 	dir = 5
@@ -18498,9 +18527,7 @@
 /area/shadekin)
 "rdD" = (
 /obj/structure/flora/bboulder1,
-/turf/simulated/floor/outdoors/grass/heavy/atoll{
-	dynamic_lighting = 1
-	},
+/turf/simulated/floor/outdoors/grass/heavy,
 /area/shadekin)
 "rdH" = (
 /obj/machinery/computer/timeclock/premade/east,
@@ -19853,9 +19880,7 @@
 /area/shuttle/skipjack)
 "slw" = (
 /obj/structure/flora/ausbushes/ywflowers,
-/turf/simulated/floor/outdoors/grass/heavy/atoll{
-	dynamic_lighting = 1
-	},
+/turf/simulated/floor/outdoors/grass/heavy,
 /area/shadekin)
 "slD" = (
 /obj/machinery/door/airlock/external{
@@ -20450,7 +20475,9 @@
 /turf/simulated/shuttle/plating,
 /area/shuttle/skipjack)
 "sPq" = (
-/obj/machinery/vending/blood,
+/obj/machinery/vending/blood{
+	req_access = null
+	},
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
 	},
@@ -20632,7 +20659,7 @@
 	},
 /area/centcom/specops)
 "sYR" = (
-/obj/machinery/vending/event/accessory,
+/obj/machinery/vending/loadout/accessory,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
 "sYX" = (
@@ -22144,6 +22171,13 @@
 	icon_state = "vault"
 	},
 /area/centcom/specops)
+"ury" = (
+/obj/machinery/gateway{
+	density = 0;
+	dir = 6
+	},
+/turf/unsimulated/floor/dark,
+/area/shadekin)
 "urz" = (
 /obj/machinery/appliance/cooker/oven,
 /obj/effect/floor_decal/milspec/color/silver,
@@ -22358,7 +22392,7 @@
 /turf/simulated/shuttle/floor/white,
 /area/centcom/main_hall)
 "uEJ" = (
-/obj/machinery/vending/event/overwear,
+/obj/machinery/vending/loadout/overwear,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
 "uFo" = (
@@ -22386,6 +22420,12 @@
 	icon_state = "vault"
 	},
 /area/tdome)
+"uHn" = (
+/obj/machinery/gateway{
+	dir = 1
+	},
+/turf/unsimulated/floor/dark,
+/area/shadekin)
 "uHV" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 4
@@ -22733,9 +22773,7 @@
 /area/holodeck/source_emptycourt)
 "uXG" = (
 /obj/structure/flora/ausbushes/ppflowers,
-/turf/simulated/floor/outdoors/grass/heavy/atoll{
-	dynamic_lighting = 1
-	},
+/turf/simulated/floor/outdoors/grass/heavy,
 /area/shadekin)
 "uXT" = (
 /obj/machinery/vending/cigarette{
@@ -23188,6 +23226,7 @@
 /obj/effect/floor_decal/milspec/cargo,
 /obj/random/tetheraid,
 /obj/random/tetheraid,
+/obj/item/device/pda,
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
 "vpZ" = (
@@ -23662,9 +23701,7 @@
 	},
 /area/centcom/bar)
 "vRr" = (
-/turf/simulated/floor/outdoors/grass/heavy/atoll{
-	dynamic_lighting = 1
-	},
+/turf/simulated/floor/outdoors/grass/heavy,
 /area/shadekin)
 "vRu" = (
 /obj/machinery/door/airlock/external{
@@ -23798,9 +23835,6 @@
 	},
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_basketball)
-"vXr" = (
-/turf/simulated/floor/outdoors/grass/heavy/atoll,
-/area/shadekin)
 "vXY" = (
 /obj/machinery/teleport/station,
 /turf/unsimulated/floor{
@@ -24891,7 +24925,7 @@
 /turf/simulated/floor/bronze,
 /area/shadekin)
 "wZw" = (
-/obj/machinery/vending/event/uniform,
+/obj/machinery/vending/loadout/uniform,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
 "wZL" = (
@@ -25285,6 +25319,10 @@
 /obj/effect/floor_decal/techfloor,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
+"xyz" = (
+/obj/machinery/gateway,
+/turf/simulated/floor,
+/area/shadekin)
 "xyF" = (
 /obj/item/weapon/stool/padded,
 /obj/effect/floor_decal/milspec/color/silver,
@@ -25546,9 +25584,7 @@
 /area/centcom/specops)
 "xJn" = (
 /obj/structure/flora/tree/jungle,
-/turf/simulated/floor/outdoors/grass/heavy/atoll{
-	dynamic_lighting = 1
-	},
+/turf/simulated/floor/outdoors/grass/heavy,
 /area/shadekin)
 "xJr" = (
 /turf/unsimulated/wall{
@@ -31052,7 +31088,7 @@ auX
 aaa
 aaa
 gbB
-hlP
+gbB
 aaa
 auX
 auX
@@ -31309,7 +31345,7 @@ auX
 auX
 auX
 aUC
-gjr
+mYr
 aUC
 aUC
 auX
@@ -51962,7 +51998,7 @@ kyg
 oTO
 vRr
 ehg
-vXr
+vRr
 ivs
 vRr
 vRr
@@ -55062,10 +55098,10 @@ ydh
 ydh
 ydh
 rVH
-ydh
-ydh
-ydh
-ydh
+jzJ
+qoK
+jSG
+rVH
 ydh
 ydh
 ydh
@@ -55320,9 +55356,9 @@ ydh
 ydh
 ydh
 ydh
-ydh
-ydh
-ydh
+uHn
+qDH
+xyz
 ydh
 ydh
 ydh
@@ -55578,9 +55614,9 @@ ydh
 ydh
 ydh
 ydh
-ydh
-ydh
-ydh
+eDM
+kHv
+ury
 ydh
 ydh
 ydh
@@ -55606,7 +55642,7 @@ ltP
 ltP
 ltP
 ltP
-huK
+ltP
 bgS
 tAp
 ltP
@@ -55836,8 +55872,8 @@ ydh
 ydh
 ydh
 ydh
-ydh
-ydh
+bMy
+hnV
 ydh
 ydh
 ydh
@@ -56093,7 +56129,7 @@ ydh
 ydh
 ydh
 ydh
-ydh
+rVH
 ydh
 ydh
 ydh
@@ -61267,7 +61303,7 @@ wKW
 bMy
 vpY
 vpY
-mNu
+ggh
 wrf
 rtJ
 luZ
@@ -62548,7 +62584,7 @@ wKW
 qpy
 wKW
 pkK
-lRW
+eAT
 sYR
 bST
 eAT

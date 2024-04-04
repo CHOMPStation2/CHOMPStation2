@@ -241,6 +241,25 @@
 	icon_state = "overalls_sleek"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS
 
+/obj/item/clothing/under/overalls/service
+	name = "workman overalls"
+	desc = "The very image of a working man. Not that you're probably doing work."
+	icon_state = "mechanic_over"
+	item_state_slots = list(slot_r_hand_str = "cargo", slot_l_hand_str = "cargo")
+	rolled_sleeves = 0
+
+/obj/item/clothing/under/overalls/frontier
+	name = "frontier overalls"
+	desc = "Simple denim overalls. A popular style among frontier colonists, when paired with a flannel."
+	icon_state = "frontier_over"
+	worn_state = "frontier_over"
+
+/obj/item/clothing/under/overalls/rustler
+	name = "rustler overalls"
+	desc = "A rugged pair of overalls for rustling cattle out on the frontier."
+	icon_state = "rustler_over"
+	worn_state = "rustler_over"
+
 /obj/item/clothing/under/pirate
 	name = "pirate outfit"
 	desc = "Yarr."
@@ -616,6 +635,20 @@
 	desc = "Just looking at this makes you want to sing."
 	icon_state = "ysing"
 
+/obj/item/clothing/under/dress/tabard
+	name = "white tabard-dress"
+	desc = "A gold-trimmed white tabard-dress with a large V-shaped boob window. For when you want to show off your hips and look classy at the same time."
+	icon_state = "white_tabard"
+	icon = 'icons/inventory/uniform/mob_ch.dmi' //CHOMPedit
+	icon_override = 'icons/inventory/uniform/mob_ch.dmi' //CHOMPedit
+
+/obj/item/clothing/under/dress/tabard/black
+	name = "black tabard-dress"
+	desc = "A gold-trimmed black tabard-dress with a large circular boob window. For when you want to show off your hips and look classy at the same time."
+	icon_state = "black_tabard"
+	icon = 'icons/inventory/uniform/mob_ch.dmi' //CHOMPedit
+	icon_override = 'icons/inventory/uniform/mob_ch.dmi' //CHOMPedit
+
 /*
  * Wedding Stuff
  */
@@ -954,6 +987,11 @@
 	desc = "Jean shorts and a black halter top. Perfect for casual Fridays!"
 	icon_state = "haltertop"
 
+/obj/item/clothing/under/tanktop
+	name = "tank top"
+	desc = "The most versatile top ever created."
+	icon_state = "tanktop"
+
 /obj/item/clothing/under/rippedpunk
 	name = "ripped punk jeans"
 	desc = "Black ripped jeans and a fishnet top. How punk."
@@ -1183,6 +1221,11 @@
 	name = "hazard cohesion suit"
 	desc = "An orange cohesion suit with yellow hazard stripes intended to assist Prometheans in maintaining their form and prevent direct skin exposure."
 	icon_state = "cohesionsuit_hazard"
+
+/obj/item/clothing/under/vampirehunter
+	name = "18th century outfit"
+	desc = "A flashy, if rather stiff set of ancient-styled slacks and tabard. The unyielding nature of the clothes often make one walk stiffly, but with divine purpose."
+	icon_state = "belmont"
 
 //Ranger uniforms
 //On-mob sprites go in icons\mob\uniform.dmi with the format "white_ranger_uniform_s" - with 'white' replaced with green, cyan, etc... of course! Note the _s - this is not optional.

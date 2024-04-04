@@ -2,12 +2,6 @@
 // Vore management panel for players
 //
 
-#define BELLIES_MAX 40
-#define BELLIES_NAME_MIN 2
-#define BELLIES_NAME_MAX 40
-#define BELLIES_DESC_MAX 4096
-#define FLAVOR_MAX 400
-
 /* //Chomp REMOVE - Use our solution, not upstream's
 //INSERT COLORIZE-ONLY STOMACHS HERE
 var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
@@ -56,6 +50,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 	var/mob/host // Note, we do this in case we ever want to allow people to view others vore panels
 	var/unsaved_changes = FALSE
 	var/show_pictures = TRUE
+	var/icon_overflow = FALSE //CHOMPEdit
 	var/max_icon_content = 21 //CHOMPedit: Contents above this disable icon mode. 21 for nice 3 rows to fill the default panel window.
 
 /datum/vore_look/New(mob/new_host)
@@ -118,8 +113,14 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 	data["unsaved_changes"] = unsaved_changes
 	data["show_pictures"] = show_pictures
+	data["icon_overflow"] = icon_overflow //CHOMPEdit
 
 	var/atom/hostloc = host.loc
+	//CHOMPAdd Start - Allow VorePanel to show pred belly details even while indirectly inside
+	if(istype(host, /mob/living))
+		var/mob/living/H = host
+		hostloc = H.surrounding_belly()
+	//CHOMPAdd End of indirect vorefx additions
 	var/list/inside = list()
 	if(isbelly(hostloc))
 		var/obj/belly/inside_belly = hostloc
@@ -147,6 +148,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"desc" = inside_desc,
 			"pred" = pred,
 			"ref" = "\ref[inside_belly]",
+			//CHOMPEdit Start
+			"liq_lvl" = inside_belly.reagents.total_volume,
+			"liq_reagent_type" = inside_belly.reagent_chosen,
+			"liuq_name" = inside_belly.reagent_name,
+			//CHOMPEdit End
 		)
 
 		var/list/inside_contents = list()
@@ -161,11 +167,13 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				"ref" = "\ref[O]",
 				"outside" = FALSE,
 			)
-			if(show_pictures) //CHOMPedit: disables icon mode
+			if(show_pictures) //CHOMPedit Start: disables icon mode
 				if(inside_belly.contents.len <= max_icon_content)
+					icon_overflow = FALSE
 					info["icon"] = cached_nom_icon(O)
 				else
-					show_pictures = !show_pictures
+					icon_overflow = TRUE
+				//CHOMPEdit End
 			if(isliving(O))
 				var/mob/living/M = O
 				info["stat"] = M.stat
@@ -218,7 +226,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"is_feedable" = selected.is_feedable, //CHOMPAdd
 			"egg_type" = selected.egg_type,
 			"egg_name" = selected.egg_name, //CHOMPAdd
+			"egg_size" = selected.egg_size, //CHOMPAdd
 			"recycling" = selected.recycling, //CHOMPAdd
+			"storing_nutrition" = selected.storing_nutrition, //CHOMPAdd
 			"entrance_logs" = selected.entrance_logs, //CHOMPAdd
 			"nutrition_percent" = selected.nutrition_percent,
 			"digest_brute" = selected.digest_brute,
@@ -241,6 +251,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"belly_mob_mult" = selected.belly_mob_mult,
 			"belly_item_mult" = selected.belly_item_mult,
 			"belly_overall_mult" = selected.belly_overall_mult,
+			"drainmode" = selected.drainmode,
 			//CHOMP add: vore sprite options and additional stuff
 			"belly_fullscreen_color" = selected.belly_fullscreen_color,
 			//"belly_fullscreen_color_secondary" = selected.belly_fullscreen_color_secondary, // Chomp REMOVE - use our solution, not upstream's
@@ -291,6 +302,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"tail_extra_overlay2" = selected.tail_extra_overlay2,
 			"noise_freq" = selected.noise_freq,
 			"item_digest_logs" = selected.item_digest_logs,
+			"private_struggle" = selected.private_struggle,
 			//"marking_to_add" = selected.marking_to_add
 			//CHOMPEdit end
 		)
@@ -311,7 +323,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 		selected_list["egg_type"] = selected.egg_type
 		selected_list["egg_name"] = selected.egg_name //CHOMPAdd
+		selected_list["egg_size"] = selected.egg_size //CHOMPAdd
 		selected_list["recycling"] = selected.recycling //CHOMPAdd
+		selected_list["storing_nutrition"] = selected.storing_nutrition //CHOMPAdd
 		selected_list["item_digest_logs"] = selected.item_digest_logs //CHOMPAdd
 		selected_list["contaminates"] = selected.contaminates
 		selected_list["contaminate_flavor"] = null
@@ -324,6 +338,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		selected_list["interacts"] = list()
 		if(selected.escapable)
 			selected_list["interacts"]["escapechance"] = selected.escapechance
+			selected_list["interacts"]["escapechance_absorbed"] = selected.escapechance_absorbed
 			selected_list["interacts"]["escapetime"] = selected.escapetime
 			selected_list["interacts"]["transferchance"] = selected.transferchance
 			selected_list["interacts"]["transferlocation"] = selected.transferlocation
@@ -416,11 +431,13 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				"ref" = "\ref[O]",
 				"outside" = TRUE,
 			)
-			if(show_pictures) //CHOMPedit: disables icon mode
+			if(show_pictures) //CHOMPedit Start: disables icon mode
 				if(selected.contents.len <= max_icon_content)
+					icon_overflow = FALSE
 					info["icon"] = cached_nom_icon(O)
 				else
-					show_pictures = !show_pictures
+					icon_overflow = TRUE
+				//CHOMPEdit End
 			if(isliving(O))
 				var/mob/living/M = O
 				info["stat"] = M.stat
@@ -490,22 +507,34 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		"show_vore_fx" = host.show_vore_fx,
 		"can_be_drop_prey" = host.can_be_drop_prey,
 		"can_be_drop_pred" = host.can_be_drop_pred,
-		"latejoin_vore" = host.latejoin_vore, //CHOMPedit
-		"latejoin_prey" = host.latejoin_prey, //CHOMPedit
+		 //CHOMPedit Start
+		"latejoin_vore" = host.latejoin_vore,
+		"latejoin_prey" = host.latejoin_prey,
+		"no_spawnpred_warning" = host.no_latejoin_vore_warning,
+		"no_spawnprey_warning" = host.no_latejoin_prey_warning,
+		"no_spawnpred_warning_time" = host.no_latejoin_vore_warning_time,
+		"no_spawnprey_warning_time" = host.no_latejoin_prey_warning_time,
+		"no_spawnpred_warning_save" = host.no_latejoin_vore_warning_persists,
+		"no_spawnprey_warning_save" = host.no_latejoin_prey_warning_persists,
+		//CHOMPedit End
 		"allow_spontaneous_tf" = host.allow_spontaneous_tf,
 		"step_mechanics_active" = host.step_mechanics_pref,
 		"pickup_mechanics_active" = host.pickup_pref,
+		"strip_mechanics_active" = host.strip_pref, //CHOMPedit
 		"noisy" = host.noisy,
 		//CHOMPedit start, liquid belly prefs
 		"liq_rec" = host.receive_reagents,
 		"liq_giv" = host.give_reagents,
+		"liq_apply" = host.apply_reagents,
 		"autotransferable" = host.autotransferable,
 		"noisy_full" = host.noisy_full, //Belching while full
+		"selective_active" = host.selective_preference, //Reveal active selective mode in prefs
 		//CHOMPedit end
 		"drop_vore" = host.drop_vore,
 		"slip_vore" = host.slip_vore,
 		"stumble_vore" = host.stumble_vore,
 		"throw_vore" = host.throw_vore,
+		"phase_vore" = host.phase_vore, //CHOMPedit
 		"food_vore" = host.food_vore,
 		"nutrition_message_visible" = host.nutrition_message_visible,
 		"nutrition_messages" = host.nutrition_messages,
@@ -750,6 +779,131 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					if(new_absorbed_struggle_messages_inside)
 						new_belly.set_messages(new_absorbed_struggle_messages_inside,"asmi")
 
+				if(islist(belly_data["escape_attempt_messages_prey"]))
+					var/new_escape_attempt_messages_prey = sanitize(jointext(belly_data["escape_attempt_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_attempt_messages_prey)
+						new_belly.set_messages(new_escape_attempt_messages_prey,"escap")
+
+				if(islist(belly_data["escape_attempt_messages_owner"]))
+					var/new_escape_attempt_messages_owner = sanitize(jointext(belly_data["escape_attempt_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_attempt_messages_owner)
+						new_belly.set_messages(new_escape_attempt_messages_owner,"escao")
+
+				if(islist(belly_data["escape_messages_prey"]))
+					var/new_escape_messages_prey = sanitize(jointext(belly_data["escape_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_messages_prey)
+						new_belly.set_messages(new_escape_messages_prey,"escp")
+
+				if(islist(belly_data["escape_messages_owner"]))
+					var/new_escape_messages_owner = sanitize(jointext(belly_data["escape_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_messages_owner)
+						new_belly.set_messages(new_escape_messages_owner,"esco")
+
+				if(islist(belly_data["escape_messages_outside"]))
+					var/new_escape_messages_outside = sanitize(jointext(belly_data["escape_messages_outside"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_messages_outside)
+						new_belly.set_messages(new_escape_messages_outside,"escout")
+
+				if(islist(belly_data["escape_item_messages_prey"]))
+					var/new_escape_item_messages_prey = sanitize(jointext(belly_data["escape_item_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_item_messages_prey)
+						new_belly.set_messages(new_escape_item_messages_prey,"escip")
+
+				if(islist(belly_data["escape_item_messages_owner"]))
+					var/new_escape_item_messages_owner = sanitize(jointext(belly_data["escape_item_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_item_messages_owner)
+						new_belly.set_messages(new_escape_item_messages_owner,"escio")
+
+				if(islist(belly_data["escape_item_messages_outside"]))
+					var/new_escape_item_messages_outside = sanitize(jointext(belly_data["escape_item_messages_outside"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_item_messages_outside)
+						new_belly.set_messages(new_escape_item_messages_outside,"esciout")
+
+				if(islist(belly_data["escape_fail_messages_prey"]))
+					var/new_escape_fail_messages_prey = sanitize(jointext(belly_data["escape_fail_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_fail_messages_prey)
+						new_belly.set_messages(new_escape_fail_messages_prey,"escfp")
+
+				if(islist(belly_data["escape_fail_messages_owner"]))
+					var/new_escape_fail_messages_owner = sanitize(jointext(belly_data["escape_fail_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_fail_messages_owner)
+						new_belly.set_messages(new_escape_fail_messages_owner,"escfo")
+
+				if(islist(belly_data["escape_attempt_absorbed_messages_prey"]))
+					var/new_escape_attempt_absorbed_messages_prey = sanitize(jointext(belly_data["escape_attempt_absorbed_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_attempt_absorbed_messages_prey)
+						new_belly.set_messages(new_escape_attempt_absorbed_messages_prey,"aescap")
+
+				if(islist(belly_data["escape_attempt_absorbed_messages_owner"]))
+					var/new_escape_attempt_absorbed_messages_owner = sanitize(jointext(belly_data["escape_attempt_absorbed_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_attempt_absorbed_messages_owner)
+						new_belly.set_messages(new_escape_attempt_absorbed_messages_owner,"aescao")
+
+				if(islist(belly_data["escape_absorbed_messages_prey"]))
+					var/new_escape_absorbed_messages_prey = sanitize(jointext(belly_data["escape_absorbed_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_absorbed_messages_prey)
+						new_belly.set_messages(new_escape_absorbed_messages_prey,"aescp")
+
+				if(islist(belly_data["escape_absorbed_messages_owner"]))
+					var/new_escape_absorbed_messages_owner = sanitize(jointext(belly_data["escape_absorbed_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_absorbed_messages_owner)
+						new_belly.set_messages(new_escape_absorbed_messages_owner,"aesco")
+
+				if(islist(belly_data["escape_absorbed_messages_outside"]))
+					var/new_escape_absorbed_messages_outside = sanitize(jointext(belly_data["escape_absorbed_messages_outside"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_absorbed_messages_outside)
+						new_belly.set_messages(new_escape_absorbed_messages_outside,"aescout")
+
+				if(islist(belly_data["escape_fail_absorbed_messages_prey"]))
+					var/new_escape_fail_absorbed_messages_prey = sanitize(jointext(belly_data["escape_fail_absorbed_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_fail_absorbed_messages_prey)
+						new_belly.set_messages(new_escape_fail_absorbed_messages_prey,"aescfp")
+
+				if(islist(belly_data["escape_fail_absorbed_messages_owner"]))
+					var/new_escape_fail_absorbed_messages_owner = sanitize(jointext(belly_data["escape_fail_absorbed_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_escape_fail_absorbed_messages_owner)
+						new_belly.set_messages(new_escape_fail_absorbed_messages_owner,"aescfo")
+
+				if(islist(belly_data["primary_transfer_messages_prey"]))
+					var/new_primary_transfer_messages_prey = sanitize(jointext(belly_data["primary_transfer_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_primary_transfer_messages_prey)
+						new_belly.set_messages(new_primary_transfer_messages_prey,"trnspp")
+
+				if(islist(belly_data["primary_transfer_messages_owner"]))
+					var/new_primary_transfer_messages_owner = sanitize(jointext(belly_data["primary_transfer_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_primary_transfer_messages_owner)
+						new_belly.set_messages(new_primary_transfer_messages_owner,"trnspo")
+
+				if(islist(belly_data["secondary_transfer_messages_prey"]))
+					var/new_secondary_transfer_messages_prey = sanitize(jointext(belly_data["secondary_transfer_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_secondary_transfer_messages_prey)
+						new_belly.set_messages(new_secondary_transfer_messages_prey,"trnssp")
+
+				if(islist(belly_data["secondary_transfer_messages_owner"]))
+					var/new_secondary_transfer_messages_owner = sanitize(jointext(belly_data["secondary_transfer_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_secondary_transfer_messages_owner)
+						new_belly.set_messages(new_secondary_transfer_messages_owner,"trnsso")
+
+				if(islist(belly_data["digest_chance_messages_prey"]))
+					var/new_digest_chance_messages_prey = sanitize(jointext(belly_data["digest_chance_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_digest_chance_messages_prey)
+						new_belly.set_messages(new_digest_chance_messages_prey,"stmodp")
+
+				if(islist(belly_data["digest_chance_messages_owner"]))
+					var/new_digest_chance_messages_owner = sanitize(jointext(belly_data["digest_chance_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_digest_chance_messages_owner)
+						new_belly.set_messages(new_digest_chance_messages_owner,"stmodo")
+
+				if(islist(belly_data["absorb_chance_messages_prey"]))
+					var/new_absorb_chance_messages_prey = sanitize(jointext(belly_data["absorb_chance_messages_prey"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_absorb_chance_messages_prey)
+						new_belly.set_messages(new_absorb_chance_messages_prey,"stmoap")
+
+				if(islist(belly_data["absorb_chance_messages_owner"]))
+					var/new_absorb_chance_messages_owner = sanitize(jointext(belly_data["absorb_chance_messages_owner"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
+					if(new_absorb_chance_messages_owner)
+						new_belly.set_messages(new_absorb_chance_messages_owner,"stmoao")
+
 				if(islist(belly_data["examine_messages"]))
 					var/new_examine_messages = sanitize(jointext(belly_data["examine_messages"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
 					if(new_examine_messages)
@@ -929,12 +1083,26 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					if(length(new_egg_name) >= BELLIES_NAME_MIN && length(new_egg_name) <= BELLIES_NAME_MAX)
 						new_belly.egg_name = new_egg_name
 
+				if(istext(belly_data["egg_size"]))
+					var/new_egg_size = belly_data["egg_size"]
+					if(new_egg_size == 0)
+						new_belly.egg_size = 0
+					else
+						new_belly.egg_size = CLAMP(new_egg_size,0.25,2)
+
 				if(isnum(belly_data["recycling"]))
 					var/new_recycling = belly_data["recycling"]
 					if(new_recycling == 0)
 						new_belly.recycling = FALSE
 					if(new_recycling == 1)
 						new_belly.recycling = TRUE
+
+				if(isnum(belly_data["storing_nutrition"]))
+					var/new_storing_nutrition = belly_data["storing_nutrition"]
+					if(new_storing_nutrition == 0)
+						new_belly.storing_nutrition = FALSE
+					if(new_storing_nutrition == 1)
+						new_belly.storing_nutrition = TRUE
 
 				if(isnum(belly_data["entrance_logs"]))
 					var/new_entrance_logs = belly_data["entrance_logs"]
@@ -956,6 +1124,18 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						new_belly.selective_preference = DM_DIGEST
 					if(new_selective_preference == "Absorb")
 						new_belly.selective_preference = DM_ABSORB
+
+				if(isnum(belly_data["private_struggle"]))
+					var/new_private_struggle = belly_data["private_struggle"]
+					if(new_private_struggle == 0)
+						new_belly.private_struggle = FALSE
+					if(new_private_struggle == 1)
+						new_belly.private_struggle = TRUE
+
+				if(istext(belly_data["eating_privacy_local"]))
+					var/new_eating_privacy_local = html_encode(belly_data["eating_privacy_local"])
+					if(new_eating_privacy_local && (new_eating_privacy_local in list("default","subtle","loud")))
+						new_belly.eating_privacy_local = new_eating_privacy_local
 
 				// Sounds
 				if(isnum(belly_data["is_wet"]))
@@ -1191,6 +1371,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				if(isnum(belly_data["escapechance"]))
 					var/new_escapechance = belly_data["escapechance"]
 					new_belly.escapechance = sanitize_integer(new_escapechance, 0, 100, initial(new_belly.escapechance))
+
+				if(isnum(belly_data["escapechance_absorbed"]))
+					var/new_escapechance_absorbed = belly_data["escapechance_absorbed"]
+					new_belly.escapechance_absorbed = sanitize_integer(new_escapechance_absorbed, 0, 100, initial(new_belly.escapechance_absorbed))
+
 
 				if(isnum(belly_data["escapetime"]))
 					var/new_escapetime = belly_data["escapetime"]
@@ -1605,6 +1790,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.client.prefs_vr.can_be_drop_prey = host.can_be_drop_prey
 			unsaved_changes = TRUE
 			return TRUE
+		//CHOMPEdit Start
 		if("toggle_latejoin_vore")
 			host.latejoin_vore = !host.latejoin_vore
 			if(host.client.prefs_vr)
@@ -1617,6 +1803,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.client.prefs_vr.latejoin_prey = host.latejoin_prey
 			unsaved_changes = TRUE
 			return TRUE
+		//CHOMPEdit End
 		if("toggle_allow_spontaneous_tf")
 			host.allow_spontaneous_tf = !host.allow_spontaneous_tf
 			if(host.client.prefs_vr)
@@ -1683,6 +1870,14 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.client.prefs_vr.pickup_pref = host.pickup_pref
 			unsaved_changes = TRUE
 			return TRUE
+		//CHOMPEdit Start
+		if("toggle_strippref")
+			host.strip_pref = !host.strip_pref
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.strip_pref = host.strip_pref
+			unsaved_changes = TRUE
+			return TRUE
+		//CHOMPEdit End
 		if("toggle_healbelly")
 			host.permit_healbelly = !host.permit_healbelly
 			if(host.client.prefs_vr)
@@ -1726,6 +1921,12 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.client.prefs_vr.give_reagents = host.give_reagents
 			unsaved_changes = TRUE
 			return TRUE
+		if("toggle_liq_apply")
+			host.apply_reagents = !host.apply_reagents
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.apply_reagents = host.apply_reagents
+			unsaved_changes = TRUE
+			return TRUE
 		if("toggle_autotransferable")
 			host.autotransferable = !host.autotransferable
 			if(host.client.prefs_vr)
@@ -1740,22 +1941,50 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		//CHOMPedit end
 		if("toggle_drop_vore")
 			host.drop_vore = !host.drop_vore
+			//CHOMPEdit Start
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.drop_vore = host.drop_vore
+			//CHOMPEdit End
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_slip_vore")
 			host.slip_vore = !host.slip_vore
+			//CHOMPEdit Start
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.slip_vore = host.slip_vore
+			//CHOMPEdit End
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_stumble_vore")
 			host.stumble_vore = !host.stumble_vore
+			//CHOMPEdit Start
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.stumble_vore = host.stumble_vore
+			//CHOMPEdit End
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_throw_vore")
 			host.throw_vore = !host.throw_vore
+			//CHOMPEdit Start
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.throw_vore = host.throw_vore
+			//CHOMPEdit End
 			unsaved_changes = TRUE
 			return TRUE
+		//CHOMPEdit Start
+		if("toggle_phase_vore")
+			host.phase_vore = !host.phase_vore
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.phase_vore = host.phase_vore
+			unsaved_changes = TRUE
+			return TRUE
+		//CHOMPEdit End
 		if("toggle_food_vore")
 			host.food_vore = !host.food_vore
+			//CHOMPEdit Start
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.food_vore = host.food_vore
+			//CHOMPEdit End
 			unsaved_changes = TRUE
 			return TRUE
 		if("switch_selective_mode_pref")
@@ -1787,6 +2016,46 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					host.vore_sprite_multiply[belly_choice] = FALSE
 				host.update_icons_body()
 			return TRUE
+		if("toggle_no_latejoin_vore_warning")
+			host.no_latejoin_vore_warning = !host.no_latejoin_vore_warning
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.no_latejoin_vore_warning = host.no_latejoin_vore_warning
+			if(host.no_latejoin_vore_warning_persists)
+				unsaved_changes = TRUE
+			return TRUE
+		if("toggle_no_latejoin_prey_warning")
+			host.no_latejoin_prey_warning = !host.no_latejoin_prey_warning
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.no_latejoin_prey_warning = host.no_latejoin_prey_warning
+			if(host.no_latejoin_prey_warning_persists)
+				unsaved_changes = TRUE
+			return TRUE
+		if("adjust_no_latejoin_vore_warning_time")
+			host.no_latejoin_vore_warning_time = text2num(params["new_pred_time"])
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.no_latejoin_vore_warning_time = host.no_latejoin_vore_warning_time
+			if(host.no_latejoin_vore_warning_persists)
+				unsaved_changes = TRUE
+			return TRUE
+		if("adjust_no_latejoin_prey_warning_time")
+			host.no_latejoin_prey_warning_time = text2num(params["new_prey_time"])
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.no_latejoin_prey_warning_time = host.no_latejoin_prey_warning_time
+			if(host.no_latejoin_prey_warning_persists)
+				unsaved_changes = TRUE
+			return TRUE
+		if("toggle_no_latejoin_vore_warning_persists")
+			host.no_latejoin_vore_warning_persists = !host.no_latejoin_vore_warning_persists
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.no_latejoin_vore_warning_persists = host.no_latejoin_vore_warning_persists
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_no_latejoin_prey_warning_persists")
+			host.no_latejoin_prey_warning_persists = !host.no_latejoin_prey_warning_persists
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.no_latejoin_prey_warning_persists = host.no_latejoin_prey_warning_persists
+			unsaved_changes = TRUE
+			return TRUE
 		//CHOMPEdit end
 
 /datum/vore_look/proc/pick_from_inside(mob/user, params)
@@ -1797,11 +2066,14 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		return TRUE // Aren't here anymore, need to update menu
 
 	var/intent = "Examine"
-	if(isliving(target))
-		intent = tgui_alert(usr, "What do you want to do to them?","Query",list("Examine","Help Out","Devour"))
+	//CHOMPEdit Start - Only allow indirect belly viewers to examine
+	if(user in OB)
+		if(isliving(target))
+			intent = tgui_alert(usr, "What do you want to do to them?","Query",list("Examine","Help Out","Devour"))
 
-	else if(istype(target, /obj/item))
-		intent = tgui_alert(usr, "What do you want to do to that?","Query",list("Examine","Use Hand"))
+		else if(istype(target, /obj/item))
+			intent = tgui_alert(usr, "What do you want to do to that?","Query",list("Examine","Use Hand"))
+	//CHOMPEdit End of indirect vorefx changes
 
 	switch(intent)
 		if("Examine") //Examine a mob inside another mob
@@ -1809,6 +2081,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			if(!results || !results.len)
 				results = list("You were unable to examine that. Tell a developer!")
 			to_chat(user, jointext(results, "<br>"))
+			if(isliving(target))
+				var/mob/living/ourtarget = target
+				ourtarget.chat_healthbar(user, TRUE)
 			return TRUE
 
 		if("Use Hand")
@@ -1829,19 +2104,19 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				to_chat(user, "<span class='warning'>You can't do that in your state!</span>")
 				return TRUE
 
-			to_chat(user,"<font color='green'>You begin to push [M] to freedom!</font>")
-			to_chat(M,"[host] begins to push you to freedom!")
-			to_chat(OB.owner,"<span class='warning'>Someone is trying to escape from inside you!</span>")
+			to_chat(user,"<span vnotice>[span_green("You begin to push [M] to freedom!")]</span>")
+			to_chat(M,"<span vnotice>[host] begins to push you to freedom!</span>")
+			to_chat(OB.owner,"<span class='vwarning'>Someone is trying to escape from inside you!</span>")
 			sleep(50)
 			if(prob(33))
 				OB.release_specific_contents(M)
-				to_chat(user,"<font color='green'>You manage to help [M] to safety!</font>")
-				to_chat(M,"<font color='green'>[host] pushes you free!</font>")
-				to_chat(OB.owner,"<span class='alert'>[M] forces free of the confines of your body!</span>")
+				to_chat(user,"<span vnotice>[span_green("You manage to help [M] to safety!")]</span>")
+				to_chat(M, "<span vnotice>[span_green("[host] pushes you free!")]</span>")
+				to_chat(OB.owner,"<span class='valert'>[M] forces free of the confines of your body!</span>")
 			else
-				to_chat(user,"<span class='alert'>[M] slips back down inside despite your efforts.</span>")
-				to_chat(M,"<span class='alert'> Even with [host]'s help, you slip back inside again.</span>")
-				to_chat(OB.owner,"<font color='green'>Your body efficiently shoves [M] back where they belong.</font>")
+				to_chat(user,"<span class='valert'>[M] slips back down inside despite your efforts.</span>")
+				to_chat(M,"<span class='valert'> Even with [host]'s help, you slip back inside again.</span>")
+				to_chat(OB.owner,"<span vnotice>[span_green("Your body efficiently shoves [M] back where they belong.")]</span>")
 			return TRUE
 
 		if("Devour") //Eat the inside mob
@@ -1854,15 +2129,15 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				return TRUE
 
 			var/obj/belly/TB = host.vore_selected
-			to_chat(user,"<span class='warning'>You begin to [lowertext(TB.vore_verb)] [M] into your [lowertext(TB.name)]!</span>")
-			to_chat(M,"<span class='warning'>[host] begins to [lowertext(TB.vore_verb)] you into their [lowertext(TB.name)]!</span>")
-			to_chat(OB.owner,"<span class='warning'>Someone inside you is eating someone else!</span>")
+			to_chat(user,"<span class='vwarning'>You begin to [lowertext(TB.vore_verb)] [M] into your [lowertext(TB.name)]!</span>")
+			to_chat(M,"<span class='vwarning'>[host] begins to [lowertext(TB.vore_verb)] you into their [lowertext(TB.name)]!</span>")
+			to_chat(OB.owner,"<span class='vwarning'>Someone inside you is eating someone else!</span>")
 
 			sleep(TB.nonhuman_prey_swallow_time) //Can't do after, in a stomach, weird things abound.
 			if((host in OB) && (M in OB)) //Make sure they're still here.
-				to_chat(user,"<span class='warning'>You manage to [lowertext(TB.vore_verb)] [M] into your [lowertext(TB.name)]!</span>")
-				to_chat(M,"<span class='warning'>[host] manages to [lowertext(TB.vore_verb)] you into their [lowertext(TB.name)]!</span>")
-				to_chat(OB.owner,"<span class='warning'>Someone inside you has eaten someone else!</span>")
+				to_chat(user,"<span class='vwarning'>You manage to [lowertext(TB.vore_verb)] [M] into your [lowertext(TB.name)]!</span>")
+				to_chat(M,"<span class='vwarning'>[host] manages to [lowertext(TB.vore_verb)] you into their [lowertext(TB.name)]!</span>")
+				to_chat(OB.owner,"<span class='vwarning'>Someone inside you has eaten someone else!</span>")
 				if(M.absorbed)
 					M.absorbed = FALSE
 					OB.handle_absorb_langs(M, OB.owner)
@@ -1896,7 +2171,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					return FALSE
 
 				for(var/atom/movable/target in host.vore_selected)
-					to_chat(target,"<span class='warning'>You're squished from [host]'s [lowertext(host.vore_selected)] to their [lowertext(choice.name)]!</span>")
+					to_chat(target,"<span class='vwarning'>You're squished from [host]'s [lowertext(host.vore_selected)] to their [lowertext(choice.name)]!</span>")
+					//CHOMPAdd - Send the transfer message to indirect targets as well. Slightly different message because why not.
+					to_chat(host.vore_selected.get_belly_surrounding(target.contents),"<span class='warning'>You're squished along with [target] from [host]'s [lowertext(host.vore_selected)] to their [lowertext(choice.name)]!</span>")
 					host.vore_selected.transfer_contents(target, choice, 1)
 				return TRUE
 		return
@@ -1924,6 +2201,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			if(!results || !results.len)
 				results = list("You were unable to examine that. Tell a developer!")
 			to_chat(user, jointext(results, "<br>"))
+			if(isliving(target))
+				var/mob/living/ourtarget = target
+				ourtarget.chat_healthbar(user, TRUE)
 			return TRUE
 
 		if("Eject")
@@ -1941,7 +2221,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			var/obj/belly/choice = tgui_input_list(usr, "Move [target] where?","Select Belly", host.vore_organs)
 			if(!choice || !(target in host.vore_selected))
 				return TRUE
-			to_chat(target,"<span class='warning'>You're squished from [host]'s [lowertext(host.vore_selected.name)] to their [lowertext(choice.name)]!</span>")
+			to_chat(target,"<span class='vwarning'>You're squished from [host]'s [lowertext(host.vore_selected.name)] to their [lowertext(choice.name)]!</span>")
+			//CHOMPAdd - Send the transfer message to indirect targets as well. Slightly different message because why not.
+			to_chat(host.vore_selected.get_belly_surrounding(target.contents),"<span class='warning'>You're squished along with [target] from [host]'s [lowertext(host.vore_selected)] to their [lowertext(choice.name)]!</span>")
 			host.vore_selected.transfer_contents(target, choice)
 
 
@@ -1970,18 +2252,18 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				return TRUE
 
 			if(belly_owner != host)
-				to_chat(user, "<span class='notice'>Transfer offer sent. Await their response.</span>")
+				to_chat(user, "<span class='vnotice'>Transfer offer sent. Await their response.</span>")
 				var/accepted = tgui_alert(belly_owner, "[host] is trying to transfer [target] from their [lowertext(host.vore_selected.name)] into your [lowertext(choice.name)]. Do you accept?", "Feeding Offer", list("Yes", "No"))
 				if(accepted != "Yes")
-					to_chat(user, "<span class='warning'>[belly_owner] refused the transfer!!</span>")
+					to_chat(user, "<span class='vwarning'>[belly_owner] refused the transfer!!</span>")
 					return TRUE
 				if(!belly_owner || !(belly_owner in range(1, host)))
 					return TRUE
-				to_chat(target,"<span class='warning'>You're squished from [host]'s [lowertext(host.vore_selected.name)] to [belly_owner]'s [lowertext(choice.name)]!</span>")
-				to_chat(belly_owner,"<span class='warning'>[target] is squished from [host]'s [lowertext(host.vore_selected.name)] to your [lowertext(choice.name)]!</span>")
+				to_chat(target,"<span class='vwarning'>You're squished from [host]'s [lowertext(host.vore_selected.name)] to [belly_owner]'s [lowertext(choice.name)]!</span>")
+				to_chat(belly_owner,"<span class='vwarning'>[target] is squished from [host]'s [lowertext(host.vore_selected.name)] to your [lowertext(choice.name)]!</span>")
 				host.vore_selected.transfer_contents(target, choice)
 			else
-				to_chat(target,"<span class='warning'>You're squished from [host]'s [lowertext(host.vore_selected.name)] to their [lowertext(choice.name)]!</span>")
+				to_chat(target,"<span class='vwarning'>You're squished from [host]'s [lowertext(host.vore_selected.name)] to their [lowertext(choice.name)]!</span>")
 				host.vore_selected.transfer_contents(target, choice)
 			return TRUE
 
@@ -2013,6 +2295,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				var/accepted = tgui_alert(T, "[host] is trying to reform your body! Would you like to get reformed inside [host]'s [lowertext(host.vore_selected.name)]?", "Reforming Attempt", list("Yes", "No"))
 				if(accepted != "Yes")
 					to_chat(user,"<span class='warning'>[T] refused to be reformed!</span>")
+					return TRUE
+				if(!isbelly(T.loc))
+					to_chat(user,"<span class='warning'>[T] is no longer inside to be reformed!</span>")
+					to_chat(T,"<span class='warning'>You can't be reformed outside of a belly!</span>")
 					return TRUE
 
 				if(isliving(T.body_backup))
@@ -2160,30 +2446,32 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			if(ourtarget.absorbable)
 				process_options += "Absorb"
 
+			process_options += "Knockout" //Can't think of any mechanical prefs that would restrict this. Even if they are already asleep, you may want to make it permanent.
+
 			if(process_options.len)
 				process_options += "Cancel"
 			else
-				to_chat(usr, "<span class= 'warning'>You cannot instantly process [ourtarget].</span>")
+				to_chat(usr, "<span class= 'vwarning'>You cannot instantly process [ourtarget].</span>")
 				return
 
 			var/ourchoice = tgui_input_list(usr, "How would you prefer to process \the [target]? This will perform the given action instantly if the prey accepts.","Instant Process", process_options)
 			if(!ourchoice)
 				return
 			if(!ourtarget.client)
-				to_chat(usr, "<span class= 'warning'>You cannot instantly process [ourtarget].</span>")
+				to_chat(usr, "<span class= 'vwarning'>You cannot instantly process [ourtarget].</span>")
 				return
 			var/obj/belly/b = ourtarget.loc
 			switch(ourchoice)
 				if("Digest")
 					if(ourtarget.absorbed)
-						to_chat(usr, "<span class= 'warning'>\The [ourtarget] is absorbed, and cannot presently be digested.</span>")
+						to_chat(usr, "<span class= 'vwarning'>\The [ourtarget] is absorbed, and cannot presently be digested.</span>")
 						return
 					if(tgui_alert(ourtarget, "\The [usr] is attempting to instantly digest you. Is this something you are okay with happening to you?","Instant Digest", list("No", "Yes")) != "Yes")
-						to_chat(usr, "<span class= 'warning'>\The [ourtarget] declined your digest attempt.</span>")
-						to_chat(ourtarget, "<span class= 'warning'>You declined the digest attempt.</span>")
+						to_chat(usr, "<span class= 'vwarning'>\The [ourtarget] declined your digest attempt.</span>")
+						to_chat(ourtarget, "<span class= 'vwarning'>You declined the digest attempt.</span>")
 						return
 					if(ourtarget.loc != b)
-						to_chat(usr, "<span class= 'warning'>\The [ourtarget] is no longer in \the [b].</span>")
+						to_chat(usr, "<span class= 'vwarning'>\The [ourtarget] is no longer in \the [b].</span>")
 						return
 					if(isliving(usr))
 						var/mob/living/l = usr
@@ -2199,14 +2487,15 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 								SEND_SOUND(ourtarget, sound(get_sfx("classic_death_sounds")))
 							else
 								SEND_SOUND(ourtarget, sound(get_sfx("fancy_death_prey")))
+						ourtarget.mind?.vore_death = TRUE
 						b.handle_digestion_death(ourtarget)
 				if("Absorb")
 					if(tgui_alert(ourtarget, "\The [usr] is attempting to instantly absorb you. Is this something you are okay with happening to you?","Instant Absorb", list("No", "Yes")) != "Yes")
-						to_chat(usr, "<span class= 'warning'>\The [ourtarget] declined your absorb attempt.</span>")
-						to_chat(ourtarget, "<span class= 'warning'>You declined the absorb attempt.</span>")
+						to_chat(usr, "<span class= 'vwarning'>\The [ourtarget] declined your absorb attempt.</span>")
+						to_chat(ourtarget, "<span class= 'vwarning'>You declined the absorb attempt.</span>")
 						return
 					if(ourtarget.loc != b)
-						to_chat(usr, "<span class= 'warning'>\The [ourtarget] is no longer in \the [b].</span>")
+						to_chat(usr, "<span class= 'vwarning'>\The [ourtarget] is no longer in \the [b].</span>")
 						return
 					if(isliving(usr))
 						var/mob/living/l = usr
@@ -2214,6 +2503,16 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						var/n = 0 - ourtarget.nutrition
 						ourtarget.adjust_nutrition(n)
 					b.absorb_living(ourtarget)
+				if("Knockout")
+					if(tgui_alert(ourtarget, "\The [usr] is attempting to instantly make you unconscious, you will be unable until ejected from the pred. Is this something you are okay with happening to you?","Instant Knockout", list("No", "Yes")) != "Yes")
+						to_chat(usr, "<span class= 'vwarning'>\The [ourtarget] declined your knockout attempt.</span>")
+						to_chat(ourtarget, "<span class= 'vwarning'>You declined the knockout attempt.</span>")
+						return
+					if(ourtarget.loc != b)
+						to_chat(usr, "<span class= 'vwarning'>\The [ourtarget] is no longer in \the [b].</span>")
+						return
+					ourtarget.AdjustSleeping(500000)
+					to_chat(ourtarget, "<span class= 'vwarning'>\The [usr] has put you to sleep, you will remain unconscious until ejected from the belly.</span>")
 				if("Cancel")
 					return
 		if("Health Check")
@@ -2221,7 +2520,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			var/target_health = round((H.health/H.getMaxHealth())*100)
 			var/condition
 			var/condition_consequences
-			to_chat(usr, "<span class= 'warning'>\The [target] is at [target_health]% health.</span>")
+			to_chat(usr, "<span class= 'vwarning'>\The [target] is at [target_health]% health.</span>")
 			if(H.blinded)
 				condition += "blinded"
 				condition_consequences += "hear emotes"
@@ -2238,7 +2537,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				condition += "sleeping"
 				condition_consequences += "hear or do anything"
 			if(condition)
-				to_chat(usr, "<span class= 'warning'>\The [target] is currently [condition], they will not be able to [condition_consequences].</span>")
+				to_chat(usr, "<span class= 'vwarning'>\The [target] is currently [condition], they will not be able to [condition_consequences].</span>")
 			return
 
 
@@ -2346,8 +2645,24 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				return FALSE
 			host.vore_selected.egg_name = new_egg_name
 			. = TRUE
+		if("b_egg_size")
+			var/new_egg_size = tgui_input_number(usr,"Custom Egg Size 25% to 200% (0 for automatic item depending egg size from 25% to 100%)","New Egg Size", 0, 200)
+			if(new_egg_size == null)
+				return FALSE
+			if(new_egg_size == 0) //Disable.
+				host.vore_selected.egg_size = 0
+				to_chat(user,"<span class='notice'>Eggs will automatically calculate size depending on contents.</span>")
+			else if (!ISINRANGE(new_egg_size,25,200))
+				host.vore_selected.egg_size = 0.25 //Set it to the default.
+				to_chat(user,"<span class='notice'>Invalid size.</span>")
+			else if(new_egg_size)
+				host.vore_selected.egg_size = (new_egg_size/100)
+			. = TRUE
 		if("b_recycling")
 			host.vore_selected.recycling = !host.vore_selected.recycling
+			. = TRUE
+		if("b_storing_nutrition")
+			host.vore_selected.storing_nutrition = !host.vore_selected.storing_nutrition
 			. = TRUE//CHOMPAdd End
 		if("b_desc")
 			var/new_desc = html_encode(tgui_input_text(usr,"Belly Description, '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name. ([BELLIES_DESC_MAX] char limit):","New Description",host.vore_selected.desc, multiline = TRUE, prevent_enter = TRUE))
@@ -2370,7 +2685,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.absorbed_desc = new_desc
 				. = TRUE
 		if("b_msgs")
-			tgui_alert(user,"Setting abusive or deceptive messages will result in a ban. Consider this your warning. Max 150 characters per message (250 for examines, 500 for idle messages), max 10 messages per topic.","Really, don't.") // Should remain tgui_alert() (blocking)
+			if(user.text_warnings)
+				if(tgui_alert(user,"Setting abusive or deceptive messages will result in a ban. Consider this your warning. Max 150 characters per message (250 for examines, 500 for idle messages), max 10 messages per topic.","Really, don't.",list("OK", "Disable Warnings")) == "Disable Warnings") // Should remain tgui_alert() (blocking)
+					user.text_warnings = FALSE
 			var/help = " Press enter twice to separate messages. '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name. '%count' will be replaced with the number of anything in your belly. '%countprey' will be replaced with the number of living prey in your belly."
 			switch(params["msgtype"])
 				if("dmp")
@@ -2422,6 +2739,131 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					var/new_message = sanitize(tgui_input_text(user,"These are sent to absorbed prey when they struggle. Write them in 2nd person ('you feel X'). Avoid using %prey in this type. %count will not work for this type, and %countprey will only count absorbed victims."+help,"Struggle Message (inside)",host.vore_selected.get_messages("asmi"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
 					if(new_message)
 						host.vore_selected.set_messages(new_message,"asmi")
+
+				if("escap")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to prey when they try to escape from within you. Write them in 2nd person ('you start to X')."+help,"Escape Attempt Message (to prey)",host.vore_selected.get_messages("escap"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"escap")
+
+				if("escao")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to you when prey tries to escape from within you. Write them in 2nd person ('X ... from your Y')."+help,"Escape Attempt Message (to you)",host.vore_selected.get_messages("escao"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"escao")
+
+				if("escp")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to prey when they escape from within you. Write them in 2nd person ('you climb out of Y)."+help,"Escape Message (to prey)",host.vore_selected.get_messages("escp"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"escp")
+
+				if("esco")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to you when prey escapes from within you. Write them in 2nd person ('X ... from your Y')."+help,"Escape Message (to you)",host.vore_selected.get_messages("esco"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"esco")
+
+				if("escout")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to those around you when prey escapes from within you. Write them in 3rd person ('X climbs out of Z's Y')."+help,"Escape Message (outside)",host.vore_selected.get_messages("escout"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"escout")
+
+				if("escip")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to prey when they manage to eject an item from within you. Write them in 2nd person ('you manage to O'). Use %item to refer to the ejected item in this type."+help,"Escape Item Message (to prey)",host.vore_selected.get_messages("escip"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"escip")
+
+				if("escio")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to you when prey manages to eject an item from within you. Write them in 2nd person ('O slips from Y'). Use %item to refer to the ejected item in this type."+help,"Escape Item Message (to you)",host.vore_selected.get_messages("escio"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"escio")
+
+				if("esciout")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to those around you when prey manages to eject an item from within you. Write them in 3rd person ('O from Y'). Use %item to refer to the ejected item in this type."+help,"Escape Item Message (outside)",host.vore_selected.get_messages("esciout"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"esciout")
+
+				if("escfp")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to prey when they fail to escape from within you. Write them in 2nd person ('you failed to Y')."+help,"Escape Fail Message (to prey)",host.vore_selected.get_messages("escfp"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"escfp")
+
+				if("escfo")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to you when prey fails to escape from within you. Write them in 2nd person ('X failed ... your Y')."+help,"Escape Fail Message (to you)",host.vore_selected.get_messages("escfo"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"escfo")
+
+				if("aescap")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to absorbed prey when they try to escape from within you. Write them in 2nd person ('you start to X')."+help,"Absorbed Escape Attempt Message (to prey)",host.vore_selected.get_messages("aescap"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"aescap")
+
+				if("aescao")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to you when absorbed prey tries to escape from within you. Write them in 2nd person ('X ... from your Y')."+help,"Absorbed Escape Attempt Message (to you)",host.vore_selected.get_messages("aescao"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"aescao")
+
+				if("aescp")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to absorbed prey when they escape from within you. Write them in 2nd person ('you escape from Y')."+help,"Absorbed Escape Message (to prey)",host.vore_selected.get_messages("aescp"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"aescp")
+
+				if("aesco")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to you when absorbed prey escapes from within you. Write them in 2nd person ('X ... from your Y')."+help,"Absorbed Escape Message (to you)",host.vore_selected.get_messages("aesco"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"aesco")
+
+				if("aescout")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to those around you when absorbed prey escapes from within you. Write them in 3rd person ('X escapes from Z's Y')."+help,"Absorbed Escape Message (outside)",host.vore_selected.get_messages("aescout"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"aescout")
+
+				if("aescfp")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to absorbed prey when they fail to escape from within you. Write them in 2nd person ('you failed to Y')."+help,"Absorbed Escape Fail Message (to prey)",host.vore_selected.get_messages("aescfp"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"aescfp")
+
+				if("aescfo")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to you when absorbed prey fails to escape from within you. Write them in 2nd person ('X failed ... your Y')."+help,"Absorbed Escape Fail Message (to you)",host.vore_selected.get_messages("aescfo"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"aescfo")
+
+				if("trnspp")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to prey when they are automatically transferred into your primary destination. Write them in 2nd person ('you slide into Y'). Use %dest to refer to the target location in this type."+help,"Primary Transfer Message (to prey)",host.vore_selected.get_messages("trnspp"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"trnspp")
+
+				if("trnspo")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to you when prey is automatically transferred into your primary destination. Write them in 2nd person ('X slid into your Y'). Use %dest to refer to the target location in this type."+help,"Primary Transfer Message (to you)",host.vore_selected.get_messages("trnspo"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"trnspo")
+
+				if("trnssp")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to prey when they are automatically transferred into your secondary destination. Write them in 2nd person ('you slide into Y'). Use %dest to refer to the target location in this type."+help,"Secondary Transfer Message (to prey)",host.vore_selected.get_messages("trnssp"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"trnssp")
+
+				if("trnsso")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to you when prey is automatically transferred into your primary destination. Write them in 2nd person ('X slid into your Y'). Use %dest to refer to the target location in this type."+help,"Secondary Transfer Message (to you)",host.vore_selected.get_messages("trnsso"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"trnsso")
+
+				if("stmodp")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to prey when they trigger the interaction digest chance. Write them in 2nd person ('you feel X')."+help,"Stomach Mode Digest Message (to prey)",host.vore_selected.get_messages("stmodp"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"stmodp")
+
+				if("stmodo")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to you when prey triggers the interaction digest chance. Write them in 2nd person ('you feel X')."+help,"Stomach Mode Digest Message (to you)",host.vore_selected.get_messages("stmodo"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"stmodo")
+
+				if("stmoap")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to prey when they trigger the interaction absorb chance. Write them in 2nd person ('you feel X')."+help,"Stomach Mode Digest Message (to prey)",host.vore_selected.get_messages("stmoap"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"stmoap")
+
+				if("stmoao")
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to you when prey triggers the interaction absorb chance. Write them in 2nd person ('you feel X')."+help,"Stomach Mode Digest Message (to you)",host.vore_selected.get_messages("stmoao"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"stmoao")
 
 				if("em")
 					var/new_message = sanitize(tgui_input_text(user,"These are sent to people who examine you when this belly has contents. Write them in 3rd person ('Their %belly is bulging')."+help,"Examine Message (when full)",host.vore_selected.get_messages("em"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
@@ -2527,6 +2969,31 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						host.vore_selected.struggle_messages_inside = initial(host.vore_selected.struggle_messages_inside)
 						host.vore_selected.absorbed_struggle_messages_outside = initial(host.vore_selected.absorbed_struggle_messages_outside)
 						host.vore_selected.absorbed_struggle_messages_inside = initial(host.vore_selected.absorbed_struggle_messages_inside)
+						host.vore_selected.escape_attempt_messages_owner = initial(host.vore_selected.escape_attempt_messages_owner)
+						host.vore_selected.escape_attempt_messages_prey = initial(host.vore_selected.escape_attempt_messages_prey)
+						host.vore_selected.escape_messages_owner = initial(host.vore_selected.escape_messages_owner)
+						host.vore_selected.escape_messages_prey = initial(host.vore_selected.escape_messages_prey)
+						host.vore_selected.escape_messages_outside = initial(host.vore_selected.escape_messages_outside)
+						host.vore_selected.escape_item_messages_owner = initial(host.vore_selected.escape_item_messages_owner)
+						host.vore_selected.escape_item_messages_prey = initial(host.vore_selected.escape_item_messages_prey)
+						host.vore_selected.escape_item_messages_outside = initial(host.vore_selected.escape_item_messages_outside)
+						host.vore_selected.escape_fail_messages_owner = initial(host.vore_selected.escape_fail_messages_owner)
+						host.vore_selected.escape_fail_messages_prey = initial(host.vore_selected.escape_fail_messages_prey)
+						host.vore_selected.escape_attempt_absorbed_messages_owner = initial(host.vore_selected.escape_attempt_absorbed_messages_owner)
+						host.vore_selected.escape_attempt_absorbed_messages_prey = initial(host.vore_selected.escape_attempt_absorbed_messages_prey)
+						host.vore_selected.escape_absorbed_messages_owner = initial(host.vore_selected.escape_absorbed_messages_owner)
+						host.vore_selected.escape_absorbed_messages_prey = initial(host.vore_selected.escape_absorbed_messages_prey)
+						host.vore_selected.escape_absorbed_messages_outside = initial(host.vore_selected.escape_absorbed_messages_outside)
+						host.vore_selected.escape_fail_absorbed_messages_owner = initial(host.vore_selected.escape_fail_absorbed_messages_owner)
+						host.vore_selected.escape_fail_absorbed_messages_prey = initial(host.vore_selected.escape_fail_absorbed_messages_prey)
+						host.vore_selected.primary_transfer_messages_owner = initial(host.vore_selected.primary_transfer_messages_owner)
+						host.vore_selected.primary_transfer_messages_prey = initial(host.vore_selected.primary_transfer_messages_prey)
+						host.vore_selected.secondary_transfer_messages_owner = initial(host.vore_selected.secondary_transfer_messages_owner)
+						host.vore_selected.secondary_transfer_messages_prey = initial(host.vore_selected.secondary_transfer_messages_prey)
+						host.vore_selected.digest_chance_messages_owner = initial(host.vore_selected.digest_chance_messages_owner)
+						host.vore_selected.digest_chance_messages_prey = initial(host.vore_selected.digest_chance_messages_prey)
+						host.vore_selected.absorb_chance_messages_owner = initial(host.vore_selected.absorb_chance_messages_owner)
+						host.vore_selected.absorb_chance_messages_prey = initial(host.vore_selected.absorb_chance_messages_prey)
 						host.vore_selected.examine_messages = initial(host.vore_selected.examine_messages)
 						host.vore_selected.examine_messages_absorbed = initial(host.vore_selected.examine_messages_absorbed)
 						host.vore_selected.emote_lists = initial(host.vore_selected.emote_lists)
@@ -2562,7 +3029,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			list("Sleeper", "Vorebelly", "Both"))
 			if(belly_choice == null)
 				return FALSE
-			host.vore_selected.silicon_belly_overlay_preference = belly_choice
+			//CHOMPEdit Start, changed to sync the setting among all sleepers for multibelly support
+			for (var/belly in host.vore_organs)
+				var/obj/belly/B = belly
+				B.silicon_belly_overlay_preference = belly_choice
+			//CHOMPEdit End
 			host.update_icon()
 			. = TRUE
 		if("b_belly_mob_mult")
@@ -2707,14 +3178,14 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.shrink_grow_size = (new_grow*0.01)
 			. = TRUE
 		if("b_nutritionpercent")
-			var/new_nutrition = tgui_input_number(user, "Choose the nutrition gain percentage you will receive per tick from prey. Ranges from 0.01 to 100.", "Set Nutrition Gain Percentage.", host.vore_selected.nutrition_percent, 100, 0.01)
+			var/new_nutrition = tgui_input_number(user, "Choose the nutrition gain percentage you will receive per tick from prey. Ranges from 0.01 to 100.", "Set Nutrition Gain Percentage.", host.vore_selected.nutrition_percent, 100, 0.01, round_value=FALSE)
 			if(new_nutrition == null)
 				return FALSE
 			var/new_new_nutrition = CLAMP(new_nutrition, 0.01, 100)
 			host.vore_selected.nutrition_percent = new_new_nutrition
 			. = TRUE
 		if("b_burn_dmg")
-			var/new_damage = tgui_input_number(user, "Choose the amount of burn damage prey will take per tick. Ranges from 0 to 6.", "Set Belly Burn Damage.", host.vore_selected.digest_burn, 6, 0)
+			var/new_damage = tgui_input_number(user, "Choose the amount of burn damage prey will take per tick. Ranges from 0 to 6.", "Set Belly Burn Damage.", host.vore_selected.digest_burn, 6, 0, round_value=FALSE)
 			if(new_damage == null)
 				return FALSE
 			var/new_new_damage = CLAMP(new_damage, 0, 6)
@@ -2722,7 +3193,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.vore_selected.items_preserved.Cut() //CHOMPAdd
 			. = TRUE
 		if("b_brute_dmg")
-			var/new_damage = tgui_input_number(user, "Choose the amount of brute damage prey will take per tick. Ranges from 0 to 6", "Set Belly Brute Damage.", host.vore_selected.digest_brute, 6, 0)
+			var/new_damage = tgui_input_number(user, "Choose the amount of brute damage prey will take per tick. Ranges from 0 to 6", "Set Belly Brute Damage.", host.vore_selected.digest_brute, 6, 0, round_value=FALSE)
 			if(new_damage == null)
 				return FALSE
 			var/new_new_damage = CLAMP(new_damage, 0, 6)
@@ -2730,26 +3201,34 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.vore_selected.items_preserved.Cut() //CHOMPAdd
 			. = TRUE
 		if("b_oxy_dmg")
-			var/new_damage = tgui_input_number(user, "Choose the amount of suffocation damage prey will take per tick. Ranges from 0 to 12.", "Set Belly Suffocation Damage.", host.vore_selected.digest_oxy, 12, 0)
+			var/new_damage = tgui_input_number(user, "Choose the amount of suffocation damage prey will take per tick. Ranges from 0 to 12.", "Set Belly Suffocation Damage.", host.vore_selected.digest_oxy, 12, 0, round_value=FALSE)
 			if(new_damage == null)
 				return FALSE
 			var/new_new_damage = CLAMP(new_damage, 0, 12)
 			host.vore_selected.digest_oxy = new_new_damage
 			. = TRUE
 		if("b_tox_dmg")
-			var/new_damage = tgui_input_number(user, "Choose the amount of toxins damage prey will take per tick. Ranges from 0 to 6", "Set Belly Toxins Damage.", host.vore_selected.digest_tox, 6, 0)
+			var/new_damage = tgui_input_number(user, "Choose the amount of toxins damage prey will take per tick. Ranges from 0 to 6", "Set Belly Toxins Damage.", host.vore_selected.digest_tox, 6, 0, round_value=FALSE)
 			if(new_damage == null)
 				return FALSE
 			var/new_new_damage = CLAMP(new_damage, 0, 6)
 			host.vore_selected.digest_tox = new_new_damage
 			. = TRUE
 		if("b_clone_dmg")
-			var/new_damage = tgui_input_number(user, "Choose the amount of brute DNA damage (clone) prey will take per tick. Ranges from 0 to 6", "Set Belly Clone Damage.", host.vore_selected.digest_clone, 6, 0)
+			var/new_damage = tgui_input_number(user, "Choose the amount of brute DNA damage (clone) prey will take per tick. Ranges from 0 to 6", "Set Belly Clone Damage.", host.vore_selected.digest_clone, 6, 0, round_value=FALSE)
 			if(new_damage == null)
 				return FALSE
 			var/new_new_damage = CLAMP(new_damage, 0, 6)
 			host.vore_selected.digest_clone = new_new_damage
 			. = TRUE
+		if("b_drainmode")
+			var/list/menu_list = host.vore_selected.drainmodes.Copy()
+			var/new_drainmode = tgui_input_list(usr, "Choose Mode (currently [host.vore_selected.digest_mode])", "Mode Choice", menu_list)
+			if(!new_drainmode)
+				return FALSE
+
+			host.vore_selected.drainmode = new_drainmode
+			host.vore_selected.updateVRPanels()
 		if("b_emoteactive")
 			host.vore_selected.emote_active = !host.vore_selected.emote_active
 			. = TRUE
@@ -2781,6 +3260,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			var/escape_chance_input = tgui_input_number(user, "Set prey escape chance on resist (as %)", "Prey Escape Chance", null, 100, 0)
 			if(!isnull(escape_chance_input)) //These have to be 'null' because both cancel and 0 are valid, separate options
 				host.vore_selected.escapechance = sanitize_integer(escape_chance_input, 0, 100, initial(host.vore_selected.escapechance))
+			. = TRUE
+		if("b_escapechance_absorbed")
+			var/escape_absorbed_chance_input = tgui_input_number(user, "Set absorbed prey escape chance on resist (as %)", "Prey Absorbed Escape Chance", null, 100, 0)
+			if(!isnull(escape_absorbed_chance_input)) //These have to be 'null' because both cancel and 0 are valid, separate options
+				host.vore_selected.escapechance_absorbed = sanitize_integer(escape_absorbed_chance_input, 0, 100, initial(host.vore_selected.escapechance_absorbed))
 			. = TRUE
 		if("b_escapetime")
 			var/escape_time_input = tgui_input_number(user, "Set number of seconds for prey to escape on resist (1-60)", "Prey Escape Time", null, 60, 1)
@@ -3022,6 +3506,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 			qdel(host.vore_selected)
 			host.vore_selected = host.vore_organs[1]
+			. = TRUE
+		if("b_private_struggle") //CHOMP Addition
+			host.vore_selected.private_struggle = !host.vore_selected.private_struggle
 			. = TRUE
 		if("b_vorespawn_blacklist") //CHOMP Addition
 			host.vore_selected.vorespawn_blacklist = !host.vore_selected.vorespawn_blacklist
@@ -3286,7 +3773,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_mush_alpha")
-			var/newalpha = tgui_input_number(usr, "Set alpha transparency between 0-255", "Mush Alpha",255,255,0,0,1)
+			var/newalpha = tgui_input_number(usr, "Set alpha transparency between 0-255", "Mush Alpha",255,255)
 			if(newalpha != null)
 				host.vore_selected.mush_alpha = newalpha
 				host.vore_selected.update_internal_overlay()
@@ -3349,7 +3836,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_custom_ingested_alpha")
-			var/newalpha = tgui_input_number(usr, "Set alpha transparency between 0-255 when not using mush overlay option.", "Custom Ingested Alpha",255,255,0,0,1)
+			var/newalpha = tgui_input_number(usr, "Set alpha transparency between 0-255 when not using mush overlay option.", "Custom Ingested Alpha",255,255)
 			if(newalpha != null)
 				host.vore_selected.custom_ingested_alpha = newalpha
 				host.vore_selected.update_internal_overlay()
@@ -3361,6 +3848,8 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			else
 				host.vore_selected.reagents.clear_reagents()
 			. = TRUE
+	if(.)
+		unsaved_changes = TRUE
 
 /datum/vore_look/proc/liq_set_msg(mob/user, params)
 	if(!host.vore_selected)
@@ -3432,4 +3921,6 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			if(new_message)
 				host.vore_selected.set_reagent_messages(new_message,"full5")
 			. = TRUE
+	if(.)
+		unsaved_changes = TRUE
 //CHOMPedit end

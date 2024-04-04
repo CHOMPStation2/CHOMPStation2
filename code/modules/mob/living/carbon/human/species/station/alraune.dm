@@ -395,7 +395,7 @@
 		var/selection = tgui_input_list(src, "Choose your character's fruit type. Choosing nothing will result in a default of apples.", "Fruit Type", acceptable_fruit_types)
 		if(selection)
 			fruit_gland.fruit_type = selection
-		verbs |= /mob/living/carbon/human/proc/alraune_fruit_pick
+		add_verb(src,/mob/living/carbon/human/proc/alraune_fruit_pick) //CHOMPEdit TGPanel
 		//verbs -= /mob/living/carbon/human/proc/alraune_fruit_select // Chomp Edit
 		fruit_gland.organ_owner = src
 		fruit_gland.emote_descriptor = list("fruit right off of [fruit_gland.organ_owner]!", "a fruit from [fruit_gland.organ_owner]!")

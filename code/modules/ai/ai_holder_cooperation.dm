@@ -1,7 +1,7 @@
 // Involves cooperating with other ai_holders.
 /datum/ai_holder
 	var/cooperative = FALSE						// If true, asks allies to help when fighting something.
-	var/call_distance = 14						// How far away calls for help will go for.
+	var/call_distance = 5	//CHOMPEdit - 14 is way too egreigous					// How far away calls for help will go for.
 	var/last_helpask_time = 0					// world.time when a mob asked for help.
 	var/list/faction_friends = list()			// List of all mobs inside the faction with ai_holders that have cooperate on, to call for help without using range().
 												// Note that this is only used for sending calls out. Receiving calls doesn't care about this list, only if the mob is in the faction.
@@ -18,8 +18,9 @@
 		build_faction_friends()
 
 /datum/ai_holder/Destroy()
-	if(faction_friends.len) //This list is shared amongst the faction
-		faction_friends -= src
+	if(faction_friends)
+		if(faction_friends.len) //This list is shared amongst the faction
+			faction_friends -= src
 	return ..()
 
 // Handles everything about that list.
@@ -114,4 +115,3 @@
 		add_attacker(their_target) // We won't wait and 'warn' them while they're stabbing our ally
 	set_follow(friend, 10 SECONDS)
 	ai_log("help_requested() : Exiting.", AI_LOG_DEBUG)
-

@@ -1,5 +1,6 @@
 // Unique areas were requested for each superpose map for future use. The plain superpose area is for future varedits to all superpose submaps.
 /area/survivalpod/superpose
+	requires_power = TRUE
 
 /area/survivalpod/superpose/CrashedInfestedShip
 
@@ -8,6 +9,7 @@
 /area/survivalpod/superpose/CultShip
 
 /area/survivalpod/superpose/DemonPool
+	requires_power = FALSE
 
 /area/survivalpod/superpose/Dinner
 
@@ -40,8 +42,10 @@
 /area/survivalpod/superpose/SmallCombatShip
 
 /area/survivalpod/superpose/SurvivalBarracks
+	requires_power = FALSE
 
 /area/survivalpod/superpose/SurvivalCargo
+	requires_power = FALSE
 
 /area/survivalpod/superpose/SurvivalDIY_11x11
 
@@ -50,30 +54,43 @@
 /area/survivalpod/superpose/SurvivalDIY_9x9
 
 /area/survivalpod/superpose/SurvivalDinner
+	requires_power = FALSE
 
 /area/survivalpod/superpose/SurvivalEngineering
+	requires_power = FALSE
 
 /area/survivalpod/superpose/SurvivalHome
+	requires_power = FALSE
 
 /area/survivalpod/superpose/SurvivalHydro
+	requires_power = FALSE
 
 /area/survivalpod/superpose/SurvivalJanitor
+	requires_power = FALSE
 
 /area/survivalpod/superpose/SurvivalLeisure
+	requires_power = FALSE
 
 /area/survivalpod/superpose/SurvivalLuxuryBar
+	requires_power = FALSE
 
 /area/survivalpod/superpose/SurvivalLuxuryHome
+	requires_power = FALSE
 
 /area/survivalpod/superpose/SurvivalMedical
+	requires_power = FALSE
 
 /area/survivalpod/superpose/SurvivalPool
+	requires_power = FALSE
 
 /area/survivalpod/superpose/SurvivalQuarters
+	requires_power = FALSE
 
 /area/survivalpod/superpose/SurvivalScience
+	requires_power = FALSE
 
 /area/survivalpod/superpose/SurvivalSecurity
+	requires_power = FALSE
 
 /area/survivalpod/superpose/TinyCombatShip
 
@@ -84,22 +101,29 @@
 /area/survivalpod/superpose/AnimalHospital
 
 /area/survivalpod/superpose/RestaurationBar
+	requires_power = FALSE
 
 /area/survivalpod/superpose/BroadcastingPod
 
 /area/survivalpod/superpose/DemonPoolV2
+	requires_power = FALSE
 
 /area/survivalpod/superpose/PirateShip
 
 /area/survivalpod/superpose/SurvivalHomeV2
+	requires_power = FALSE
 
 /area/survivalpod/superpose/SurvivalMechFab
+	requires_power = FALSE
 
 /area/survivalpod/superpose/SurvivalMethLab
+	requires_power = FALSE
 
 /area/survivalpod/superpose/SurvivalScienceV2
+	requires_power = FALSE
 
 /area/survivalpod/superpose/SurvivalSecurityV2
+	requires_power = FALSE
 
 /area/survivalpod/superpose/HillOutpost
 

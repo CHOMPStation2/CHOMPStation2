@@ -139,6 +139,12 @@
 			var/module_types = initial(U.module_flags)
 			sub_category = list()
 			if(module_types)
+				if(module_types & BORG_UTILITY)
+					sub_category += "All Cyborgs - Utility"
+				if(module_types & BORG_BASIC)
+					sub_category += "All Cyborgs - Basic"
+				if(module_types & BORG_ADVANCED)
+					sub_category += "All Cyborgs - Advanced"
 				if(module_types & BORG_MODULE_SECURITY)
 					sub_category += "Security"
 				if(module_types & BORG_MODULE_MINER)
@@ -151,9 +157,16 @@
 					sub_category += "Engineering"
 				if(module_types & BORG_MODULE_SCIENCE)
 					sub_category += "Science"
-
+				if(module_types & BORG_MODULE_SERVICE)
+					sub_category += "Service"
+				if(module_types & BORG_MODULE_CLERIC)
+					sub_category += "Cleric"
+				if(module_types & BORG_MODULE_COMBAT)
+					sub_category += "Combat"
+				if(module_types & BORG_MODULE_EXPLO)
+					sub_category += "Exploration"
 			else
-				sub_category += "All Cyborgs"
+				sub_category += "This shouldn't be here, bother a dev!"
 		// Else check if this design builds a piece of exosuit equipment.
 		else if(built_item in typesof(/obj/item/mecha_parts/mecha_equipment))
 			var/obj/item/mecha_parts/mecha_equipment/E = built_item
@@ -652,20 +665,20 @@
 	switch(emagged)
 		if(0)
 			emagged = 0.5
-			visible_message("\icon[src][bicon(src)] <b>[src]</b> beeps: \"DB error \[Code 0x00F1\]\"")
+			visible_message("[icon2html(src,viewers(src))] <b>[src]</b> beeps: \"DB error \[Code 0x00F1\]\"")
 			sleep(10)
-			visible_message("\icon[src][bicon(src)] <b>[src]</b> beeps: \"Attempting auto-repair\"")
+			visible_message("[icon2html(src,viewers(src))] <b>[src]</b> beeps: \"Attempting auto-repair\"")
 			sleep(15)
-			visible_message("\icon[src][bicon(src)] <b>[src]</b> beeps: \"User DB corrupted \[Code 0x00FA\]. Truncating data structure...\"")
+			visible_message("[icon2html(src,viewers(src))] <b>[src]</b> beeps: \"User DB corrupted \[Code 0x00FA\]. Truncating data structure...\"")
 			sleep(30)
-			visible_message("\icon[src][bicon(src)] <b>[src]</b> beeps: \"User DB truncated. Please contact your [using_map.company_name] system operator for future assistance.\"")
+			visible_message("[icon2html(src,viewers(src))] <b>[src]</b> beeps: \"User DB truncated. Please contact your [using_map.company_name] system operator for future assistance.\"")
 			req_access = null
 			emagged = 1
 			return 1
 		if(0.5)
-			visible_message("\icon[src][bicon(src)] <b>[src]</b> beeps: \"DB not responding \[Code 0x0003\]...\"")
+			visible_message("[icon2html(src,viewers(src))] <b>[src]</b> beeps: \"DB not responding \[Code 0x0003\]...\"")
 		if(1)
-			visible_message("\icon[src][bicon(src)] <b>[src]</b> beeps: \"No records in User DB\"")
+			visible_message("[icon2html(src,viewers(src))] <b>[src]</b> beeps: \"No records in User DB\"")
 
 /obj/machinery/mecha_part_fabricator/proc/eject_materials(var/material, var/amount) // 0 amount = 0 means ejecting a full stack; -1 means eject everything
 	var/recursive = amount == -1 ? TRUE : FALSE

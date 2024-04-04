@@ -23,7 +23,8 @@
 
 //print a testing-mode debug message to world.log
 /proc/testing(msg)
-	to_world_log("## TESTING: [msg]")
+	if (config.log_debug) //CHOMPEdit
+		to_world_log("## TESTING: [msg]")
 
 /proc/log_admin(text)
 	admin_log.Add(text)
@@ -46,7 +47,9 @@
 
 	for(var/client/C in GLOB.admins)
 		if(C.is_preference_enabled(/datum/client_preference/debug/show_debug_logs))
-			to_chat(C, "<span class='filter_debuglog'>DEBUG: [text]</span>")
+			to_chat(C,
+					type = MESSAGE_TYPE_DEBUG,
+					html = "<span class='filter_debuglog'>DEBUG: [text]</span>")
 
 /proc/log_game(text)
 	if (config.log_game)
@@ -77,7 +80,7 @@
 			establish_db_connection()
 			if(!SSdbcore.IsConnected())
 				return null
-		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
+		var/datum/db_query/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 			list("sender_ckey" = speaker.ckey, "sender_mob" = speaker.real_name, "message_type" = "say", "message_content" = text))
 		if(!query_insert.Execute())
 			log_debug("Error during logging: "+query_insert.ErrorMsg())
@@ -94,7 +97,7 @@
 		establish_db_connection()
 		if(!SSdbcore.IsConnected())
 			return null
-	var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
+	var/datum/db_query/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 		list("sender_ckey" = user.ckey, "sender_mob" = user.mob.real_name, "message_type" = "ooc", "message_content" = text))
 	if(!query_insert.Execute())
 		log_debug("Error during logging: "+query_insert.ErrorMsg())
@@ -110,7 +113,7 @@
 		establish_db_connection()
 		if(!SSdbcore.IsConnected())
 			return null
-	var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
+	var/datum/db_query/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 		list("sender_ckey" = user.ckey, "sender_mob" = user.mob.real_name, "message_type" = "aooc", "message_content" = text))
 	if(!query_insert.Execute())
 		log_debug("Error during logging: "+query_insert.ErrorMsg())
@@ -126,7 +129,7 @@
 		establish_db_connection()
 		if(!SSdbcore.IsConnected())
 			return null
-	var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
+	var/datum/db_query/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 		list("sender_ckey" = user.ckey, "sender_mob" = user.mob.real_name, "message_type" = "looc", "message_content" = text))
 	if(!query_insert.Execute())
 		log_debug("Error during logging: "+query_insert.ErrorMsg())
@@ -146,7 +149,7 @@
 			establish_db_connection()
 			if(!SSdbcore.IsConnected())
 				return null
-		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
+		var/datum/db_query/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 			list("sender_ckey" = speaker.ckey, "sender_mob" = speaker.real_name, "message_type" = "whisper", "message_content" = text))
 		if(!query_insert.Execute())
 			log_debug("Error during logging: "+query_insert.ErrorMsg())
@@ -165,7 +168,7 @@
 			establish_db_connection()
 			if(!SSdbcore.IsConnected())
 				return null
-		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
+		var/datum/db_query/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 			list("sender_ckey" = speaker.ckey, "sender_mob" = speaker.real_name, "message_type" = "emote", "message_content" = text))
 		if(!query_insert.Execute())
 			log_debug("Error during logging: "+query_insert.ErrorMsg())
@@ -199,7 +202,7 @@
 			establish_db_connection()
 			if(!SSdbcore.IsConnected())
 				return null
-		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
+		var/datum/db_query/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 			list("sender_ckey" = speaker.ckey, "sender_mob" = speaker.real_name, "message_type" = "deadsay", "message_content" = text))
 		if(!query_insert.Execute())
 			log_debug("Error during logging: "+query_insert.ErrorMsg())
@@ -220,7 +223,7 @@
 			establish_db_connection()
 			if(!SSdbcore.IsConnected())
 				return null
-		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
+		var/datum/db_query/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 			list("sender_ckey" = speaker.ckey, "sender_mob" = speaker.real_name, "message_type" = "deademote", "message_content" = text))
 		if(!query_insert.Execute())
 			log_debug("Error during logging: "+query_insert.ErrorMsg())
@@ -242,7 +245,7 @@
 			establish_db_connection()
 			if(!SSdbcore.IsConnected())
 				return null
-		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
+		var/datum/db_query/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 			list("sender_ckey" = speaker.ckey, "sender_mob" = speaker.real_name, "message_type" = "pda", "message_content" = text))
 		if(!query_insert.Execute())
 			log_debug("Error during logging: "+query_insert.ErrorMsg())
@@ -270,10 +273,6 @@
 	if(Debug2)
 		WRITE_LOG(diary, "TOPIC: [text]")
 
-/proc/log_href(text)
-	// Configs are checked by caller
-	WRITE_LOG(href_logfile, "HREF: [text]")
-
 /proc/log_unit_test(text)
 	to_world_log("## UNIT_TEST: [text]")
 
@@ -282,22 +281,6 @@
 #else
 #define log_reftracker(msg)
 #endif
-
-/proc/log_tgui(user_or_client, text)
-	if(!text)
-		stack_trace("Pointless log_tgui message")
-		return
-	var/entry = ""
-	if(!user_or_client)
-		entry += "no user"
-//	else if(istype(user_or_client, /mob)) //CHOMP Edit commenting out these blocks because it just seems to do nothing except spam the logs with... nothing.
-//		var/mob/user = user_or_client
-//		entry += "[user.ckey] (as [user])"
-//	else if(istype(user_or_client, /client))
-//		var/client/client = user_or_client
-//		entry += "[client.ckey]"
-	entry += ":\n[text]"
-	WRITE_LOG(diary, entry)
 
 /proc/log_asset(text)
 	WRITE_LOG(diary, "ASSET: [text]")

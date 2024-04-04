@@ -74,10 +74,10 @@
 /mob/living/silicon/pai/Initialize()
 	. = ..()
 
-	verbs |= /mob/proc/dominate_predator
-	verbs |= /mob/living/proc/dominate_prey
-	verbs |= /mob/living/proc/set_size
-	verbs |= /mob/living/proc/shred_limb
+	add_verb(src,/mob/proc/dominate_predator) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/dominate_prey) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/set_size) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/shred_limb) //CHOMPEdit TGPanel
 
 /mob/living/silicon/pai/Login()
 	. = ..()
@@ -545,7 +545,8 @@
 		if (istype(G, /mob/new_player))
 			continue
 		else if(isobserver(G) && G.is_preference_enabled(/datum/client_preference/ghost_ears))
-			if(is_preference_enabled(/datum/client_preference/whisubtle_vis) || G.client.holder)
+			if((is_preference_enabled(/datum/client_preference/whisubtle_vis) || G.client.holder) && \
+			G.is_preference_enabled(/datum/client_preference/ghost_see_whisubtle))
 				to_chat(G, "<span class='filter_say cult'>[src.name]'s screen prints, \"[message]\"</span>")
 
 /mob/living/silicon/pai/proc/touch_window(soft_name)	//This lets us touch TGUI procs and windows that may be nested behind other TGUI procs and windows

@@ -9614,7 +9614,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_upload)
 "gte" = (
-/obj/machinery/smartfridge/chemistry/virology,
+/obj/machinery/smartfridge/virology,
 /obj/effect/floor_decal/corner/lime{
 	dir = 10
 	},
@@ -25070,6 +25070,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/monitoring)
+"pti" = (
+/obj/structure/table/steel,
+/turf/simulated/floor,
+/area/maintenance/starboard)
 "ptn" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 8
@@ -39592,10 +39596,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/lower/aft)
-"ymn" = (
-/obj/structure/table/steel,
-/turf/simulated/floor,
-/area/maintenance/starboard)
 
 (1,1,1) = {"
 qDW
@@ -59562,7 +59562,7 @@ eNq
 whU
 whU
 whU
-ymn
+pti
 kpQ
 eNq
 mwy

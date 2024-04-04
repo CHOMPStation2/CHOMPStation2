@@ -11,6 +11,9 @@
 	var/spitting = 0
 	var/spit_projectile = null // what our spit projectile is. Can be anything
 
+	//no stripping of simplemobs
+	strip_pref = FALSE
+
 /mob/living/simple_mob/RangedAttack(var/atom/A)
 	if(!isnull(spit_projectile) && spitting)
 		Spit(A)
@@ -120,8 +123,8 @@
 
 /mob/living/simple_mob/New(var/newloc)
 	..()
-	verbs |= /mob/living/simple_mob/proc/use_headset
-	verbs |= /mob/living/simple_mob/proc/use_pda
+	add_verb(src,/mob/living/simple_mob/proc/use_headset) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/proc/use_pda) //CHOMPEdit TGPanel
 
 /mob/living/simple_mob/update_icon()
 	. = ..()

@@ -547,7 +547,7 @@
 
 	//Chica Head
 /obj/item/clothing/head/helmet/fluff/freddy/chica
-	desc = "<b><font color=red>LET'S EAT!</font></b>"
+	desc = span_red("<b>LET'S EAT!</b>")
 	icon_state = "chicahead"
 	item_state = "chicahead_mob"
 
@@ -586,7 +586,7 @@
 
 	//Chica Suit
 /obj/item/clothing/suit/fluff/freddy/chica
-	desc = "<b><font color=red>LET'S EAT!</font></b>"
+	desc = span_red("<b>LET'S EAT!</b>")
 	icon_state = "chicasuit"
 	item_state = "chicasuit_mob"
 
@@ -2099,14 +2099,14 @@ Departamental Swimsuits, for general use
 		translocator_unequip(translocator, user)
 		T.forceMove(src)
 		translocator = T
-		user.show_message("\icon[src][bicon(src)]*click!*")
+		user.show_message("[icon2html(src, user.client)]*click!*")
 		playsound(src, 'sound/machines/click.ogg', 30, 1)
 
 /obj/item/clothing/head/fluff/nikki/proc/translocator_unequip(var/obj/item/device/perfect_tele/T, var/mob/living/carbon/human/user)
 	if (translocator)
 		if (user)
 			user.put_in_hands(T)
-			user.show_message("\icon[src][bicon(src)]*click!*")
+			user.show_message("[icon2html(src, user.client)]*click!*")
 		else
 			translocator.forceMove(get_turf(src))
 		translocator = null
@@ -2693,4 +2693,15 @@ End CHOMP Removal*/
 	icon_override = 'icons/inventory/eyes/mob_vr.dmi'
 	icon_state = "bigroundglasses"
 	slot_flags = SLOT_EYES | SLOT_EARS
-	glasses_layer_above = TRUE */ //Chomp REMOVE END
+	glasses_layer_above = TRUE
+
+//valkaerie: Valkaerie Stoze
+
+/obj/item/clothing/ears/earring/fluff/valkhorns
+	name = "valkaerie's horns"
+	desc = "Curled horns that look that they shouldn't really be pulled off!"
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "valkhorns"
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
+	item_state = "valkhorns_onmob"
+*/ //Chomp REMOVE END

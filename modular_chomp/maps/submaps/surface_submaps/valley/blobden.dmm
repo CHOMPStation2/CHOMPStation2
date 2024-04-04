@@ -17,7 +17,9 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "aQ" = (
-/obj/structure/blob/core/random_hard,
+/obj/structure/blob/core/random_hard{
+	difficulty_floor = 2
+	},
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "bC" = (
@@ -36,10 +38,6 @@
 "dt" = (
 /obj/effect/floor_decal/corner/blue/border,
 /obj/structure/blob/normal,
-/turf/simulated/floor/tiled/white,
-/area/submap/blobden)
-"dL" = (
-/obj/structure/blob/resource,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "dS" = (
@@ -62,11 +60,6 @@
 /area/submap/blobden)
 "fb" = (
 /obj/effect/floor_decal/corner/orange/border,
-/turf/simulated/floor/tiled/white,
-/area/submap/blobden)
-"fA" = (
-/obj/effect/floor_decal/corner/green/border,
-/obj/structure/blob/factory,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "gk" = (
@@ -114,20 +107,6 @@
 /obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
-"mG" = (
-/obj/effect/floor_decal/corner/green/border{
-	dir = 1
-	},
-/obj/structure/blob/factory,
-/turf/simulated/floor/tiled/white,
-/area/submap/blobden)
-"nc" = (
-/obj/effect/floor_decal/corner/green/border{
-	dir = 8
-	},
-/obj/structure/blob/factory,
-/turf/simulated/floor/tiled/white,
-/area/submap/blobden)
 "nB" = (
 /obj/effect/floor_decal/corner/green/bordercorner{
 	dir = 1
@@ -171,13 +150,6 @@
 	dir = 1
 	},
 /obj/structure/blob/normal,
-/turf/simulated/floor/tiled/white,
-/area/submap/blobden)
-"sI" = (
-/obj/effect/floor_decal/corner/green/border{
-	dir = 4
-	},
-/obj/structure/blob/factory,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)
 "sJ" = (
@@ -706,9 +678,9 @@ ak
 ak
 qc
 ak
-mG
-dL
-fA
+zE
+pU
+qz
 ak
 qc
 ak
@@ -730,11 +702,11 @@ PM
 dS
 dS
 dS
-nc
+dS
 nB
 RM
 Uv
-nc
+dS
 dS
 dS
 dS
@@ -755,11 +727,11 @@ zE
 sP
 pU
 pU
-dL
+pU
 fb
 aQ
 xW
-dL
+pU
 pU
 pU
 sP
@@ -780,11 +752,11 @@ Iv
 gk
 gk
 gk
-sI
+gk
 FC
 cq
 pr
-sI
+gk
 gk
 gk
 gk
@@ -806,9 +778,9 @@ ak
 ak
 qc
 ak
-mG
-dL
-fA
+zE
+pU
+qz
 ak
 qc
 ak

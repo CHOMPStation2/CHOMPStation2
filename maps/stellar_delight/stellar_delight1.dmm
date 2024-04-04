@@ -219,6 +219,9 @@
 	icon_state = "0-4"
 	},
 /obj/item/weapon/storage/box/backup_kit,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/assembly/robotics)
 "aw" = (
@@ -762,7 +765,7 @@
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck1/starboardfore)
 "by" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
@@ -1029,6 +1032,8 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/table/standard,
+/obj/machinery/cell_charger,
 /turf/simulated/floor/bluegrid,
 /area/assembly/robotics)
 "bX" = (
@@ -1727,7 +1732,7 @@
 	color = "#42038a";
 	icon_state = "0-4"
 	},
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "sd_pd"
 	},
 /turf/simulated/floor/airless,
@@ -3078,7 +3083,7 @@
 	},
 /area/stellardelight/deck1/aft)
 "fP" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
@@ -3181,7 +3186,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/chapel/chapel_morgue)
 "ga" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
@@ -3195,7 +3200,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/security_equiptment_storage)
 "gc" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
@@ -3820,7 +3825,7 @@
 /turf/simulated/floor/tiled/eris/white/bluecorner,
 /area/stellardelight/deck1/resleeving)
 "hw" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
@@ -4139,7 +4144,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/stellardelight/deck1/port)
 "ib" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
@@ -6293,7 +6298,7 @@
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck1/starboardaft)
 "mC" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
@@ -7657,7 +7662,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/stellardelight/deck1/fore)
 "pz" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
@@ -8469,7 +8474,7 @@
 /turf/simulated/floor/tiled/eris/steel/cargo,
 /area/stellardelight/deck1/miningequipment)
 "ro" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
@@ -8530,6 +8535,9 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
 /turf/simulated/floor/tiled/steel_dirty,
@@ -8958,16 +8966,12 @@
 /turf/simulated/floor,
 /area/maintenance/security_port)
 "sq" = (
-/obj/structure/table/standard,
-/obj/machinery/cell_charger,
 /obj/structure/cable/green{
 	color = "#42038a";
 	icon_state = "4-8"
 	},
 /obj/machinery/light,
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
+/obj/machinery/protean_reconstitutor,
 /turf/simulated/floor/tiled/steel,
 /area/assembly/robotics)
 "sr" = (
@@ -9061,7 +9065,7 @@
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "sd_pd"
 	},
 /turf/simulated/floor/airless,
@@ -9987,7 +9991,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/stellardelight/deck1/port)
 "uH" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
@@ -12520,7 +12524,7 @@
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck1/exploration)
 "Ah" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
@@ -13455,7 +13459,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/stellardelight/deck1/starboard)
 "Ci" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
@@ -15007,7 +15011,7 @@
 /turf/simulated/floor/tiled/eris,
 /area/rnd/xenobiology/xenoflora)
 "FP" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
@@ -15509,7 +15513,7 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/stellardelight/deck1/mining)
 "Hc" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
@@ -16453,7 +16457,7 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/toilet)
 "IV" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
@@ -16813,7 +16817,7 @@
 	color = "#42038a";
 	icon_state = "0-8"
 	},
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
@@ -18189,7 +18193,7 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/crew_quarters/toilet)
 "MP" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
@@ -18585,7 +18589,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/janitor)
 "ND" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
@@ -19761,7 +19765,7 @@
 /area/medical/exam_room)
 "Qq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel,
 /area/assembly/robotics)
@@ -20944,7 +20948,7 @@
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck1/starboardaft)
 "SN" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
@@ -22601,7 +22605,7 @@
 	color = "#42038a";
 	icon_state = "0-4"
 	},
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "sd_pd"
 	},
 /turf/simulated/floor/airless,
@@ -23263,7 +23267,7 @@
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck1/starboardcent)
 "Xw" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,

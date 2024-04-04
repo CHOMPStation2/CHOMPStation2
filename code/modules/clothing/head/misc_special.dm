@@ -103,6 +103,22 @@
 		slot_r_hand_str = "engiewelding",
 		)
 
+//Replikant Welding mask
+
+/obj/item/clothing/head/welding/arar
+	name = "replikant welding helmet"
+	desc = "A protective welding mask designed for repair-technician biosynthetic crew, the visor slits are particularly difficult to see out of."
+	icon = 'icons/inventory/head/item_vr.dmi'
+	icon_override = 'icons/inventory/head/mob_vr.dmi'
+	icon_state = "ararwelding"
+	item_state_slots = list(
+		SLOT_ID_LEFT_HAND = "ararwelding",
+		SLOT_ID_RIGHT_HAND = "ararwelding",
+		)
+
+
+
+
 /*
  * Cakehat
  */
@@ -121,7 +137,7 @@
 	var/turf/location = src.loc
 	if(istype(location, /mob/))
 		var/mob/living/carbon/human/M = location
-		if(istype(M) && M.item_is_in_hands(src) || M.head == src) //CHOMPEdit
+		if(ishuman(M) && (M.item_is_in_hands(src) || M.head == src)) //CHOMPEdit
 			location = M.loc
 
 	if (istype(location, /turf))

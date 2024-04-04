@@ -199,6 +199,8 @@ steam.start() -- spawns the effect
 		return 0
 	if(istype(M,/mob/living/carbon/human))
 		var/mob/living/carbon/human/H = M
+		if(!M.get_organ(O_LUNGS)) // CHOMPedit - Making sure smoke doesn't affect lungless people
+			return 0
 		if(H.head && (H.head.item_flags & AIRTIGHT))
 			return 0
 	return 1
@@ -338,9 +340,11 @@ steam.start() -- spawns the effect
 /obj/effect/effect/smoke/elemental/mist
 	name = "misty cloud"
 	desc = "A cloud filled with water vapor."
-	color = "#CCFFFF"
+	color = "#F0FFFF"
 	alpha = 128
 	strength = 1
+	plane = MOB_PLANE
+	layer = ABOVE_MOB_LAYER
 
 /obj/effect/effect/smoke/elemental/mist/affect(mob/living/L)
 	L.water_act(strength)

@@ -25,3 +25,13 @@
 	cost = 250
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "PSG-P crate"
+
+/datum/supply_pack/security/rednetgun
+	name = "Experimental Capture Gun"
+	num_contained = 4
+	contains = list(
+			/obj/item/weapon/gun/energy/rednetgun
+			)
+	cost = 150
+	containertype = /obj/structure/closet/crate/secure/gear
+	containername = "Expirmental Capture crate"

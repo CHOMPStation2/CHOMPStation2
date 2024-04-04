@@ -542,7 +542,7 @@
 		return 2
 	//just assume we can shoot through glass and stuff. No big deal, the player can just choose to not target someone
 	//on the other side of a window if it makes a difference. Or if they run behind a window, too bad.
-	if(check_trajectory(target, user))
+	if(target in check_trajectory(target, user))
 		return 1 // Magic numbers are fun.
 
 //called if there was no projectile to shoot
@@ -721,9 +721,9 @@
 	var/mob/living/carbon/human/M = user
 
 	mouthshoot = 1
-	M.visible_message("<font color='red'>[user] sticks their gun in their mouth, ready to pull the trigger...</font>")
+	M.visible_message(span_red("[user] sticks their gun in their mouth, ready to pull the trigger..."))
 	if(!do_after(user, 40))
-		M.visible_message("<font color='blue'>[user] decided life was worth living</font>")
+		M.visible_message(span_blue("[user] decided life was worth living"))
 		mouthshoot = 0
 		return
 	var/obj/item/projectile/in_chamber = consume_next_projectile()

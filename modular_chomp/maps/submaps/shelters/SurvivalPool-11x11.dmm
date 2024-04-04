@@ -31,7 +31,7 @@
 /turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
 /area/survivalpod/superpose/SurvivalPool)
 "bG" = (
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalPool)
 "bS" = (
 /obj/structure/fans,
@@ -156,7 +156,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalPool)
 "kZ" = (
 /obj/machinery/button/windowtint{
@@ -169,7 +169,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalPool)
 "mr" = (
 /obj/structure/window/reinforced/polarized{
@@ -274,7 +274,7 @@
 /area/survivalpod/superpose/SurvivalPool)
 "yA" = (
 /obj/structure/table/reinforced,
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalPool)
 "yE" = (
 /obj/structure/window/reinforced/survival_pod{
@@ -365,7 +365,7 @@
 	icon_state = "heater_1";
 	use_power = 1
 	},
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalPool)
 "Ls" = (
 /obj/structure/table/bench/wooden,
@@ -454,7 +454,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 6
 	},
-/turf/simulated/shuttle/plating/skipjack,
+/turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalPool)
 "QB" = (
 /obj/structure/window/reinforced/polarized{

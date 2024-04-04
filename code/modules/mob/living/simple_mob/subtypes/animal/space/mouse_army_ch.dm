@@ -71,8 +71,8 @@
 /mob/living/simple_mob/animal/space/mouse_army/New()
 	..()
 
-	verbs += /mob/living/proc/ventcrawl
-	verbs += /mob/living/proc/hide
+	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
 
 	if(name == initial(name))
 		name = "[name] ([rand(1, 1000)])"
@@ -93,7 +93,7 @@
 	if( ishuman(AM) )
 		if(!stat)
 			var/mob/M = AM
-			M.visible_message("<font color='blue'>\icon[src] Squeek!</font>")
+			M.visible_message(span_blue("[icon2html(src,viewers(M))] Squeek!"))
 			playsound(src, 'sound/effects/mouse_squeak.ogg', 35, 1)
 	..()
 

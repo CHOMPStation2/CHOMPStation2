@@ -58,9 +58,14 @@
 				to_chat(src, "<span class='warning'>You stopped swimming downwards.</span>")
 				return 0
 
-		else if(!destination.CanZPass(src, direction))
+		else if(!destination.CanZPass(src, direction)) // one for the down and non-special case
 			to_chat(src, "<span class='warning'>\The [destination] blocks your way.</span>")
 			return 0
+
+	else if(!destination.CanZPass(src, direction)) // and one for up
+		to_chat(src, "<span class='warning'>\The [destination] blocks your way.</span>")
+		return 0
+
 
 	var/area/area = get_area(src)
 	if(area.has_gravity() && !can_overcome_gravity())
@@ -134,10 +139,18 @@
 	if(!Move(destination))
 		return 0
 	if(isliving(src))
+		var/list/atom/movable/pulling = list()
+		var/mob/living/L = src
+		if(L.pulling && !L.pulling.anchored)
+			pulling |= L.pulling
+		for(var/obj/item/weapon/grab/G in list(L.l_hand, L.r_hand))
+			pulling |= G.affecting
 		if(direction == UP)
 			src.audible_message("<span class='notice'>[src] moves up.</span>")
 		else if(direction == DOWN)
 			src.audible_message("<span class='notice'>[src] moves down.</span>")
+		for(var/atom/movable/P in pulling)
+			P.forceMove(destination)
 	return 1
 
 /mob/proc/can_overcome_gravity()

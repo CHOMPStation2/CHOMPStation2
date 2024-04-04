@@ -103,7 +103,7 @@
 
 		var/severity = tgui_input_number(usr, "How much damage should the bleeding internal wound cause? \
 		Bleed timer directly correlates with this. 0 cancels. Input is rounded to nearest integer.",
-		"Wound Severity", 0, min_value = 0, round_value = TRUE )
+		"Wound Severity", 0)
 		if(!severity) return
 
 		var/obj/item/organ/external/chosen_organ = tgui_input_list(usr, "Choose an external organ to inflict IB on!", "Organ Choice", H.organs)
@@ -274,6 +274,15 @@
 					return
 				log_admin("[key_name(usr)] deleted all objects of type or subtype of [O_type] ([i] objects deleted) ")
 				message_admins("<span class='notice'>[key_name(usr)] deleted all objects of type or subtype of [O_type] ([i] objects deleted) </span>")
+	else if(href_list["fakepdapropconvo"])
+		if(!check_rights(R_FUN)) return
+
+		var/obj/item/device/pda/P = locate(href_list["fakepdapropconvo"])
+		if(!istype(P))
+			to_chat(usr, span_warning("This can only be done to instances of type /pda"))
+			return
+
+		P.createPropFakeConversation_admin(usr)
 
 	else if(href_list["rotatedatum"])
 		if(!check_rights(0))	return
@@ -440,7 +449,7 @@
 		if(!verb || verb == "Cancel")
 			return
 		else
-			H.verbs += verb
+			add_verb(H,verb) //CHOMPEdit
 
 	else if(href_list["remverb"])
 		if(!check_rights(R_DEBUG))      return
@@ -457,7 +466,7 @@
 		if(!verb)
 			return
 		else
-			H.verbs -= verb
+			remove_verb(H,verb)  //CHOMPEdit
 
 	else if(href_list["addorgan"])
 		if(!check_rights(R_SPAWN))	return
@@ -536,7 +545,7 @@
 
 		var/Text = href_list["adjustDamage"]
 
-		var/amount =  tgui_input_number(usr, "Deal how much damage to mob? (Negative values here heal)","Adjust [Text]loss",0)
+		var/amount =  tgui_input_number(usr, "Deal how much damage to mob? (Negative values here heal)","Adjust [Text]loss",0, min_value=-INFINITY, round_value=FALSE)
 
 		if(!L)
 			to_chat(usr, "Mob doesn't exist anymore")

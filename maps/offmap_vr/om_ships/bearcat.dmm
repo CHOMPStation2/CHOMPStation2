@@ -328,7 +328,7 @@
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
-/obj/item/weapon/storage/box/beanbags/large,
+/obj/item/ammo_magazine/ammo_box/b12g/beanbag,
 /obj/item/weapon/gun/projectile/shotgun/pump/combat{
 	desc = "When words don't strike hard enough.";
 	name = "Solid Argument"

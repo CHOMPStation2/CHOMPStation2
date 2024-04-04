@@ -11,6 +11,14 @@
 	if(locate(/obj/item/weapon/grab) in src)
 		. += 5
 
+	// CHOMPAdd Start - When crawling, move slow.
+	if(lying)
+		if(weakened >= 1)
+			. += 14			// Very slow when weakened.
+		else
+			. += 8
+	// CHOMPAdd End
+
 	// Movespeed delay based on movement mode
 	switch(m_intent)
 		if("run")
@@ -45,7 +53,7 @@
 				var/mob/living/carbon/C = usr
 				C.toggle_throw_mode()
 			else
-				to_chat(usr, "<font color='red'>This mob type cannot throw items.</font>")
+				to_chat(usr, span_red("This mob type cannot throw items."))
 			return
 		if(NORTHWEST)
 			if(isliving(usr))
@@ -54,11 +62,11 @@
 					if(C.pulling)
 						C.stop_pulling()
 						return
-					to_chat(usr, "<font color='red'>You have nothing to drop in your hand.</font>")
+					to_chat(usr, span_red("You have nothing to drop in your hand."))
 					return
 				drop_item()
 			else
-				to_chat(usr, "<font color='red'>This mob type cannot drop items.</font>")
+				to_chat(usr, span_red("This mob type cannot drop items."))
 			return
 
 //This gets called when you press the delete button.
@@ -66,7 +74,7 @@
 	set hidden = 1
 
 	if(!usr.pulling)
-		to_chat(usr, "<font color='blue'>You are not pulling anything.</font>")
+		to_chat(usr, span_blue("You are not pulling anything."))
 		return
 	usr.stop_pulling()
 
@@ -225,14 +233,16 @@
 		for(var/mob/M in range(my_mob, 1))
 			if(M.pulling == my_mob)
 				if(!M.restrained() && M.stat == 0 && M.canmove && my_mob.Adjacent(M))
-					to_chat(src, "<font color='blue'>You're restrained! You can't move!</font>")
+					to_chat(src, span_blue("You're restrained! You can't move!"))
 					return 0
 				else
 					M.stop_pulling()
 
 	if(my_mob.pinned.len)
-		to_chat(src, "<font color='blue'>You're pinned to a wall by [my_mob.pinned[1]]!</font>")
+		to_chat(src, span_blue("You're pinned to a wall by [my_mob.pinned[1]]!"))
 		return 0
+
+	var/old_delay = mob.next_move //CHOMPEdit momentum
 
 	if(istype(my_mob.buckled, /obj/vehicle) || ismob(my_mob.buckled))
 		//manually set move_delay for vehicles so we don't inherit any mob movement penalties
@@ -288,8 +298,7 @@
 					direct = turn(direct, pick(90, -90))
 					n = get_step(my_mob, direct)
 
-	total_delay = DS2NEARESTTICK(total_delay) //Rounded to the next tick in equivalent ds
-	my_mob.setMoveCooldown(total_delay)
+	//CHOMP Removal moved downwards
 
 	if(istype(my_mob.pulledby, /obj/structure/bed/chair/wheelchair))
 		. = my_mob.pulledby.relaymove(my_mob, direct)
@@ -298,9 +307,17 @@
 	else
 		. = my_mob.SelfMove(n, direct, total_delay)
 
+	//CHOMPEdit Begin
 	// If we ended up moving diagonally, increase delay.
 	if((direct & (direct - 1)) && mob.loc == n)
-		my_mob.setMoveCooldown(total_delay * SQRT_2) //CHOMPEDIT
+		total_delay *= SQRT_2 //CHOMPEDIT
+
+	//total_delay = DS2NEARESTTICK(total_delay) //Rounded to the next tick in equivalent ds
+	if(mob.last_move_time > (world.time - total_delay * 1.25))
+		mob.next_move = DS2NEARESTTICK(old_delay + total_delay)
+	else
+		mob.next_move = DS2NEARESTTICK(world.time + total_delay)
+	//CHOMPEdit End
 
 	if(!isliving(my_mob)) //CHOMPAdd
 		moving = 0
@@ -341,15 +358,39 @@
 
 	// We're not in the middle of a move anymore
 	moving = 0
+	mob.last_move_time = world.time //CHOMPEdit
 
 /mob/proc/SelfMove(turf/n, direct, movetime)
 	return Move(n, direct, movetime)
+
+
+//ChompEDIT START
+//Set your incorporeal movespeed
+//Important to note: world.time is always in deciseconds. Higher tickrates mean more subdivisions of world.time (20fps = 0.5, 40fps = 0.25)
+/client
+	var/incorporeal_speed = 0.5
+
+/client/verb/set_incorporeal_speed()
+	set category = "OOC"
+	set name = "Set Incorporeal Speed"
+
+	var/input = tgui_input_number(usr, "Set an incorporeal movement delay between 0 (fastest) and 5 (slowest)", "Incorporeal movement speed", (0.5/world.tick_lag), 5, 0)
+	incorporeal_speed = input * world.tick_lag
+//ChompEDIT End
 
 ///Process_Incorpmove
 ///Called by client/Move()
 ///Allows mobs to run though walls
 /client/proc/Process_Incorpmove(direct)
 	var/turf/mobloc = get_turf(mob)
+
+	//ChompEDIT START
+	if(incorporeal_speed)
+		var/mob/my_mob = mob
+		if(!my_mob.checkMoveCooldown()) //Only bother with speed if it isn't 0
+			return
+		my_mob.setMoveCooldown(incorporeal_speed)
+	//ChompEDIT END
 
 	switch(mob.incorporeal_move)
 		if(1)
@@ -433,7 +474,10 @@
 
 	if(restrained()) //Check to see if we can do things
 		return 0
+	inertia_dir = 0
+	return 1
 
+/* CHOMPedit: Nuking slipping.
 	//Check to see if we slipped
 	if(prob(Process_Spaceslipping(5)) && !buckled)
 		to_chat(src, "<span class='notice'><B>You slipped!</B></span>")
@@ -441,8 +485,7 @@
 		step(src, src.inertia_dir) // Not using Move for smooth glide here because this is a 'slip' so should be sudden.
 		return 0
 	//If not then we can reset inertia and move
-	inertia_dir = 0
-	return 1
+*/// CHOMPedit end.
 
 /mob/proc/Check_Dense_Object() //checks for anything to push off in the vicinity. also handles magboots on gravity-less floors tiles
 
@@ -485,6 +528,7 @@
 /mob/proc/Check_Shoegrip()
 	return 0
 
+/* CHOMPedit: Nuking slipping.
 /mob/proc/Process_Spaceslipping(var/prob_slip = 5)
 	//Setup slipage
 	//If knocked out we might just hit it and stop.  This makes it possible to get dead bodies and such.
@@ -493,6 +537,7 @@
 
 	prob_slip = round(prob_slip)
 	return(prob_slip)
+*/// CHOMPedit end.
 
 /mob/proc/mob_has_gravity(turf/T)
 	return has_gravity(src, T)

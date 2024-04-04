@@ -56,7 +56,7 @@ var/list/slot_equipment_priority = list( \
 
 		else
 			if(!disable_warning)
-				to_chat(src, "<font color='red'>You are unable to equip that.</font>") //Only print if del_on_fail is false
+				to_chat(src, span_red("You are unable to equip that.")) //Only print if del_on_fail is false
 		return 0
 
 	equip_to_slot(W, slot, redraw_mob) //This proc should not ever fail.
@@ -114,13 +114,13 @@ var/list/slot_equipment_priority = list( \
 
 //Puts the item into your l_hand if possible and calls all necessary triggers/updates. returns 1 on success.
 /mob/proc/put_in_l_hand(var/obj/item/W)
-	if(lying || !istype(W))
+	if(/*lying || */!istype(W)) // CHOMPEdit - Don't care about lying, give me.
 		return 0
 	return 1
 
 //Puts the item into your r_hand if possible and calls all necessary triggers/updates. returns 1 on success.
 /mob/proc/put_in_r_hand(var/obj/item/W)
-	if(lying || !istype(W))
+	if(/*lying || */!istype(W)) // CHOMPEdit - Don't care about lying, give me.
 		return 0
 	return 1
 

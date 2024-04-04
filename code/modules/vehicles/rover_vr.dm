@@ -176,7 +176,7 @@
 
 /obj/vehicle/train/rover/trolley/RunOver(var/mob/living/M)
 	..()
-	attack_log += text("\[[time_stamp()]\] <font color='red'>ran over [M.name] ([M.ckey])</font>")
+	attack_log += text("\[[time_stamp()]\] [span_red("ran over [M.name] ([M.ckey])")]")
 
 /obj/vehicle/train/rover/engine/RunOver(var/mob/living/M)
 	..()
@@ -186,9 +186,9 @@
 		to_chat(D, "<span class='danger'>You ran over \the [M]!</span>")
 		visible_message("<span class='danger'>\The [src] ran over \the [M]!</span>")
 		add_attack_logs(D,M,"Ran over with [src.name]")
-		attack_log += text("\[[time_stamp()]\] <font color='red'>ran over [M.name] ([M.ckey]), driven by [D.name] ([D.ckey])</font>")
+		attack_log += text("\[[time_stamp()]\] [span_red("ran over [M.name] ([M.ckey]), driven by [D.name] ([D.ckey])")]")
 	else
-		attack_log += text("\[[time_stamp()]\] <font color='red'>ran over [M.name] ([M.ckey])</font>")
+		attack_log += text("\[[time_stamp()]\] [span_red("ran over [M.name] ([M.ckey])")]")
 
 
 //-------------------------------------------
@@ -216,7 +216,7 @@
 
 /obj/vehicle/train/rover/engine/verb/start_engine()
 	set name = "Start engine"
-	set category = "Vehicle"
+	set category = "Object.Vehicle" //ChompEDIT - TGPanel
 	set src in view(0)
 
 	if(!istype(usr, /mob/living/carbon/human))
@@ -237,7 +237,7 @@
 
 /obj/vehicle/train/rover/engine/verb/stop_engine()
 	set name = "Stop engine"
-	set category = "Vehicle"
+	set category = "Object.Vehicle" //ChompEDIT - TGPanel
 	set src in view(0)
 
 	if(!istype(usr, /mob/living/carbon/human))
@@ -253,7 +253,7 @@
 
 /obj/vehicle/train/rover/engine/verb/remove_key()
 	set name = "Remove key"
-	set category = "Vehicle"
+	set category = "Object.Vehicle" //ChompEDIT - TGPanel
 	set src in view(0)
 
 	if(!istype(usr, /mob/living/carbon/human))

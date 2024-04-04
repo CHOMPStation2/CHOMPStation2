@@ -21,13 +21,15 @@
 	. = ..()
 	var/area/A = get_area(src)
 	if(A)
-		GLOB.apc_event.register(A, src, /atom/proc/update_icon)
+		RegisterSignal(A, COMSIG_OBSERVER_APC, /atom/proc/update_icon)
 	update_icon()
 
 /obj/item/device/radio/intercom/Destroy()
 	var/area/A = get_area(src)
 	if(A)
-		GLOB.apc_event.unregister(A, src, /atom/proc/update_icon)
+		UnregisterSignal(A, COMSIG_OBSERVER_APC)
+	if(circuit)
+		QDEL_NULL(circuit)
 	return ..()
 
 /obj/item/device/radio/intercom/custom
@@ -210,10 +212,10 @@
 /obj/item/device/radio/intercom/AIAltClick(var/mob/user)
 	if(frequency == AI_FREQ)
 		set_frequency(initial(frequency))
-		to_chat(user, "<span class='notice'>\The [src]'s frequency is now set to <font color='green'><b>Default</b></font>.</span>")
+		to_chat(user, "<span class='notice'>\The [src]'s frequency is now set to [span_green("<b>Default</b>")].</span>")
 	else
 		set_frequency(AI_FREQ)
-		to_chat(user, "<span class='notice'>\The [src]'s frequency is now set to <font color='pink'><b>AI Private</b></font>.</span>")
+		to_chat(user, "<span class='notice'>\The [src]'s frequency is now set to [span_pink("<b>AI Private</b>")].</span>")
 //VOREStation Add End
 /obj/item/device/radio/intercom/locked
     var/locked_frequency

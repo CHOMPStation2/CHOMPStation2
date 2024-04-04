@@ -69,7 +69,7 @@
 			if("Immortality")
 				to_chat(user, "<B>Your wish is granted, but at a terrible cost...</B>")
 				to_chat(user, "The Wish Granter punishes you for your selfishness, claiming your soul and warping your body to match the darkness in your heart.")
-				user.verbs += /mob/living/carbon/proc/immortality
+				add_verb(user,/mob/living/carbon/proc/immortality)  //CHOMPEdit
 				user.dna.mutantrace = "shadow"
 				user.update_mutantrace()
 			if("To Kill")
@@ -121,7 +121,7 @@
 
 	if(istype(M, /mob/living/carbon/human) || istype(M, /mob/living/carbon/monkey))
 		for(var/mob/O in viewers(world.view, src.loc))
-			to_chat(O, "<font color='red'>[M] triggered the \icon[src][bicon(src)] [src]</font>")
+			to_chat(O, span_red("[M] triggered the [icon2html(src, O.client)] [src]"))
 		triggered = 1
 		call(src,triggerproc)(M)
 

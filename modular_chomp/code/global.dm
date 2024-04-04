@@ -1,9 +1,9 @@
 
-var/list/shell_module_blacklist = list(
+GLOBAL_LIST_INIT(shell_module_blacklist, list(
 	"Sci-borg", "Research"
-	)
-var/list/latejoin_gatewaystation = list()
-var/list/latejoin_plainspath = list()
+	))
+GLOBAL_LIST_EMPTY(latejoin_gatewaystation)
+GLOBAL_LIST_EMPTY(latejoin_plainspath)
 
 var/list/talk_sound_map = rlist(
 								list(
@@ -20,7 +20,8 @@ var/list/talk_sound_map = rlist(
 									"goon speak pug",
 									"goon speak pugg",
 									"goon speak roach",
-									"goon speak skelly"
+									"goon speak skelly",
+									"xeno speak" // CHOMPedit
 								),
 								list(
 									talk_sound,
@@ -36,7 +37,8 @@ var/list/talk_sound_map = rlist(
 									goon_speak_pug_sound,
 									goon_speak_pugg_sound,
 									goon_speak_roach_sound,
-									goon_speak_skelly_sound
+									goon_speak_skelly_sound,
+									xeno_speak_sound // CHOMPedit
 									)
 								)
 

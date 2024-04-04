@@ -35,8 +35,8 @@
 	var/tail_animation										// If set, the icon to obtain tail animation states from.
 	var/tail_hair
 
-	var/icon_scale_x = 1										// Makes the icon wider/thinner.
-	var/icon_scale_y = 1										// Makes the icon taller/shorter.
+	var/icon_scale_x = DEFAULT_ICON_SCALE_X										// Makes the icon wider/thinner.
+	var/icon_scale_y = DEFAULT_ICON_SCALE_Y										// Makes the icon taller/shorter.
 
 	var/race_key = 0										// Used for mob icon cache string.
 	var/icon/icon_template									// Used for mob icon generation for non-32x32 species.
@@ -165,6 +165,7 @@
 	var/water_breather = FALSE
 	var/suit_inhale_sound = 'sound/effects/mob_effects/suit_breathe_in.ogg'
 	var/suit_exhale_sound = 'sound/effects/mob_effects/suit_breathe_out.ogg'
+	var/bad_swimmer = FALSE
 
 	var/body_temperature = 310.15							// Species will try to stabilize at this temperature. (also affects temperature processing)
 
@@ -408,15 +409,17 @@
 		if((organ in H.organs) || (organ in H.internal_organs))
 			qdel(organ)
 
-	if(H.organs)									H.organs.Cut()
-	if(H.internal_organs)				 H.internal_organs.Cut()
-	if(H.organs_by_name)					H.organs_by_name.Cut()
-	if(H.internal_organs_by_name) H.internal_organs_by_name.Cut()
+	if(H.organs)					H.organs.Cut()
+	if(H.internal_organs)			H.internal_organs.Cut()
+	if(H.organs_by_name)			H.organs_by_name.Cut()
+	if(H.internal_organs_by_name) 	H.internal_organs_by_name.Cut()
+	if(H.bad_external_organs)		H.bad_external_organs.Cut()
 
 	H.organs = list()
 	H.internal_organs = list()
 	H.organs_by_name = list()
 	H.internal_organs_by_name = list()
+	H.bad_external_organs = list()
 
 	for(var/limb_type in has_limbs)
 		var/list/organ_data = has_limbs[limb_type]
@@ -435,6 +438,11 @@
 			O.organ_tag = organ_tag
 		H.internal_organs_by_name[organ_tag] = O
 
+	// set butcherable meats from species
+	for(var/obj/item/organ/O in H.organs)
+		O.set_initial_meat()
+	for(var/obj/item/organ/O in H.internal_organs)
+		O.set_initial_meat()
 
 /datum/species/proc/hug(var/mob/living/carbon/human/H, var/mob/living/target)
 
@@ -478,13 +486,13 @@
 /datum/species/proc/remove_inherent_verbs(var/mob/living/carbon/human/H)
 	if(inherent_verbs)
 		for(var/verb_path in inherent_verbs)
-			H.verbs -= verb_path
+			remove_verb(H,verb_path)  //CHOMPEdit
 	return
 
 /datum/species/proc/add_inherent_verbs(var/mob/living/carbon/human/H)
 	if(inherent_verbs)
 		for(var/verb_path in inherent_verbs)
-			H.verbs |= verb_path
+			add_verb(H,verb_path) //CHOMPEdit TGPanel
 	return
 
 /datum/species/proc/handle_post_spawn(var/mob/living/carbon/human/H) //Handles anything not already covered by basic species assignment.
@@ -542,6 +550,10 @@
 // Called when lying down on a water tile.
 /datum/species/proc/can_breathe_water()
 	return water_breather
+
+// Called when standing on a water tile.
+/datum/species/proc/is_bad_swimmer()
+	return bad_swimmer
 
 // Impliments different trails for species depending on if they're wearing shoes.
 /datum/species/proc/get_move_trail(var/mob/living/carbon/human/H)

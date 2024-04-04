@@ -58,48 +58,54 @@
 
 /mob/living/carbon/human/Destroy()
 	human_mob_list -= src
-	for(var/organ in organs)
-		qdel(organ)
-	QDEL_NULL(nif)	//VOREStation Add
+	QDEL_NULL_LIST(organs)
+	if(nif)
+		QDEL_NULL(nif)	//VOREStation Add
 	worn_clothing.Cut()
+
+
+	if(vessel)
+		QDEL_NULL(vessel)
 	return ..()
 
-/mob/living/carbon/human/Stat()
-	..()
-	if(statpanel("Status"))
-		stat("Intent:", "[a_intent]")
-		stat("Move Mode:", "[m_intent]")
-		if(emergency_shuttle)
-			var/eta_status = emergency_shuttle.get_status_panel_eta()
-			if(eta_status)
-				stat(null, eta_status)
+//CHOMPEdit Begin
+/mob/living/carbon/human/get_status_tab_items()
+	. = ..()
+	. += ""
+	. += "Intent: [a_intent]"
+	. += "Move Mode: [m_intent]"
+	if(emergency_shuttle)
+		var/eta_status = emergency_shuttle.get_status_panel_eta()
+		if(eta_status)
+			. += "[eta_status]"
 
-		if (internal)
-			if (!internal.air_contents)
-				qdel(internal)
-			else
-				stat("Internal Atmosphere Info", internal.name)
-				stat("Tank Pressure", internal.air_contents.return_pressure())
-				stat("Distribution Pressure", internal.distribute_pressure)
+	if (internal)
+		if (!internal.air_contents)
+			qdel(internal)
+		else
+			. += "Internal Atmosphere Info: [internal.name]"
+			. += "Tank Pressure: [internal.air_contents.return_pressure()]"
+			. += "Distribution Pressure: [internal.distribute_pressure]"
 
-		var/obj/item/organ/internal/xenos/plasmavessel/P = internal_organs_by_name[O_PLASMA] //Xenomorphs. Mech.
-		if(P)
-			stat(null, "Phoron Stored: [P.stored_plasma]/[P.max_plasma]")
+	var/obj/item/organ/internal/xenos/plasmavessel/P = internal_organs_by_name[O_PLASMA] //Xenomorphs. Mech.
+	if(P)
+		. += "Phoron Stored: [P.stored_plasma]/[P.max_plasma]"
 
 
-		if(back && istype(back,/obj/item/weapon/rig))
-			var/obj/item/weapon/rig/suit = back
-			var/cell_status = "ERROR"
-			if(suit.cell) cell_status = "[suit.cell.charge]/[suit.cell.maxcharge]"
-			stat(null, "Suit charge: [cell_status]")
+	if(back && istype(back,/obj/item/weapon/rig))
+		var/obj/item/weapon/rig/suit = back
+		var/cell_status = "ERROR"
+		if(suit.cell) cell_status = "[suit.cell.charge]/[suit.cell.maxcharge]"
+		. += "Suit charge: [cell_status]"
 
-		if(mind)
-			if(mind.changeling)
-				stat("Chemical Storage", mind.changeling.chem_charges)
-				stat("Genetic Damage Time", mind.changeling.geneticdamage)
-				stat("Re-Adaptations", "[mind.changeling.readapts]/[mind.changeling.max_readapts]")
+	if(mind)
+		if(mind.changeling)
+			. += "Chemical Storage: [mind.changeling.chem_charges]"
+			. += "Genetic Damage Time: [mind.changeling.geneticdamage]"
+			. += "Re-Adaptations: [mind.changeling.readapts]/[mind.changeling.max_readapts]"
 	if(species)
 		species.Stat(src)
+//CHOMPEdit End
 
 /mob/living/carbon/human/ex_act(severity)
 	if(!blinded)
@@ -374,7 +380,7 @@
 												U.handle_regular_hud_updates()
 
 			if(!modified)
-				to_chat(usr, "<span class='filter_notice'><font color='red'>Unable to locate a data core entry for this person.</font></span>")
+				to_chat(usr, "<span class='filter_notice'>[span_red("Unable to locate a data core entry for this person.")]</span>")
 
 	if (href_list["secrecord"])
 		if(hasHUD(usr,"security"))
@@ -404,7 +410,7 @@
 								read = 1
 
 			if(!read)
-				to_chat(usr, "<span class='filter_notice'><font color='red'>Unable to locate a data core entry for this person.</font></span>")
+				to_chat(usr, "<span class='filter_notice'>[span_red("Unable to locate a data core entry for this person.")]</span>")
 
 	if (href_list["secrecordComment"])
 		if(hasHUD(usr,"security"))
@@ -431,7 +437,7 @@
 								to_chat(usr, "<span class='filter_notice'><a href='?src=\ref[src];secrecordadd=`'>\[Add comment\]</a></span>")
 
 			if(!read)
-				to_chat(usr, "<span class='filter_notice'><font color='red'>Unable to locate a data core entry for this person.</font></span>")
+				to_chat(usr, "<span class='filter_notice'>[span_red("Unable to locate a data core entry for this person.")]</span>")
 
 	if (href_list["secrecordadd"])
 		if(hasHUD(usr,"security"))
@@ -493,7 +499,7 @@
 											U.handle_regular_hud_updates()
 
 			if(!modified)
-				to_chat(usr, "<span class='filter_notice'><font color='red'>Unable to locate a data core entry for this person.</font></span>")
+				to_chat(usr, "<span class='filter_notice'>[span_red("Unable to locate a data core entry for this person.")]</span>")
 
 	if (href_list["medrecord"])
 		if(hasHUD(usr,"medical"))
@@ -524,7 +530,7 @@
 								read = 1
 
 			if(!read)
-				to_chat(usr, "<span class='filter_notice'><font color='red'>Unable to locate a data core entry for this person.</font></span>")
+				to_chat(usr, "<span class='filter_notice'>[span_red("Unable to locate a data core entry for this person.")]</span>")
 
 	if (href_list["medrecordComment"])
 		if(hasHUD(usr,"medical"))
@@ -551,7 +557,7 @@
 								to_chat(usr, "<span class='filter_notice'><a href='?src=\ref[src];medrecordadd=`'>\[Add comment\]</a></span>")
 
 			if(!read)
-				to_chat(usr, "<span class='filter_notice'><font color='red'>Unable to locate a data core entry for this person.</font></span>")
+				to_chat(usr, "<span class='filter_notice'>[span_red("Unable to locate a data core entry for this person.")]</span>")
 
 	if (href_list["medrecordadd"])
 		if(hasHUD(usr,"medical"))
@@ -610,7 +616,7 @@
 								read = 1
 
 			if(!read)
-				to_chat(usr, "<span class='filter_notice'><font color='red'>Unable to locate a data core entry for this person.</font></span>")
+				to_chat(usr, "<span class='filter_notice'>[span_red("Unable to locate a data core entry for this person.")]</span>")
 
 	if (href_list["emprecordComment"])
 		if(hasHUD(usr,"best"))
@@ -637,7 +643,7 @@
 								to_chat(usr, "<span class='filter_notice'><a href='?src=\ref[src];emprecordadd=`'>\[Add comment\]</a></span>")
 
 			if(!read)
-				to_chat(usr, "<span class='filter_notice'><font color='red'>Unable to locate a data core entry for this person.</font></span>")
+				to_chat(usr, "<span class='filter_notice'>[span_red("Unable to locate a data core entry for this person.")]</span>")
 
 	if (href_list["emprecordadd"])
 		if(hasHUD(usr,"best"))
@@ -801,7 +807,7 @@
 /mob/living/carbon/human/proc/play_xylophone()
 	if(!src.xylophone)
 		var/datum/gender/T = gender_datums[get_visible_gender()]
-		visible_message("<span class='filter_notice'><font color='red'>\The [src] begins playing [T.his] ribcage like a xylophone. It's quite spooky.</font></span>","<span class='notice'>You begin to play a spooky refrain on your ribcage.</span>","<span class='filter_notice'><font color='red'>You hear a spooky xylophone melody.</font></span>")
+		visible_message("<span class='filter_notice'>[span_red("\The [src] begins playing [T.his] ribcage like a xylophone. It's quite spooky.")]</span>","<span class='notice'>You begin to play a spooky refrain on your ribcage.</span>","<span class='filter_notice'>[span_red("You hear a spooky xylophone melody.")]</span>")
 		var/song = pick('sound/effects/xylophone1.ogg','sound/effects/xylophone2.ogg','sound/effects/xylophone3.ogg')
 		playsound(src, song, 50, 1, -1)
 		xylophone = 1
@@ -829,7 +835,7 @@
 		return
 
 	if(!(mMorph in mutations))
-		src.verbs -= /mob/living/carbon/human/proc/morph
+		remove_verb(src,/mob/living/carbon/human/proc/morph)  //CHOMPEdit
 		return
 
 	var/new_facial = input(usr, "Please select facial hair color.", "Character Generation",rgb(r_facial,g_facial,b_facial)) as color
@@ -892,7 +898,7 @@
 	regenerate_icons()
 	check_dna()
 	var/datum/gender/T = gender_datums[get_visible_gender()]
-	visible_message("<span class='notice'>\The [src] morphs and changes [T.his] appearance!</span>", "<span class='notice'>You change your appearance!</span>", "<span class='filter_notice'><font color='red'>Oh, god!  What the hell was that?  It sounded like flesh getting squished and bone ground into a different shape!</font></span>")
+	visible_message("<span class='notice'>\The [src] morphs and changes [T.his] appearance!</span>", "<span class='notice'>You change your appearance!</span>", "<span class='filter_notice'>[span_red("Oh, god!  What the hell was that?  It sounded like flesh getting squished and bone ground into a different shape!")]</span>")
 
 /mob/living/carbon/human/proc/remotesay()
 	set name = "Project mind"
@@ -904,7 +910,7 @@
 		return
 
 	if(!(mRemotetalk in src.mutations))
-		src.verbs -= /mob/living/carbon/human/proc/remotesay
+		remove_verb(src,/mob/living/carbon/human/proc/remotesay)  //CHOMPEdit
 		return
 	var/list/creatures = list()
 	for(var/mob/living/carbon/h in mob_list)
@@ -915,10 +921,10 @@
 
 	var/say = sanitize(tgui_input_text(usr, "What do you wish to say?"))
 	if(mRemotetalk in target.mutations)
-		target.show_message("<span class='filter_say'><font color='blue'>You hear [src.real_name]'s voice: [say]</font></span>")
+		target.show_message("<span class='filter_say'>[span_blue("You hear [src.real_name]'s voice: [say]")]</span>")
 	else
-		target.show_message("<span class='filter_say'><font color='blue'>You hear a voice that seems to echo around the room: [say]</font></span>")
-	usr.show_message("<span class='filter_say'><font color='blue'>You project your mind into [target.real_name]: [say]</font></span>")
+		target.show_message("<span class='filter_say'>[span_blue("You hear a voice that seems to echo around the room: [say]")]</span>")
+	usr.show_message("<span class='filter_say'>[span_blue("You project your mind into [target.real_name]: [say]")]</span>")
 	log_say("(TPATH to [key_name(target)]) [say]",src)
 	for(var/mob/observer/dead/G in mob_list)
 		G.show_message("<span class='filter_say'><i>Telepathic message from <b>[src]</b> to <b>[target]</b>: [say]</i></span>")
@@ -935,7 +941,7 @@
 	if(!(mRemote in src.mutations))
 		remoteview_target = null
 		reset_view(0)
-		src.verbs -= /mob/living/carbon/human/proc/remoteobserve
+		remove_verb(src,/mob/living/carbon/human/proc/remoteobserve)  //CHOMPEdit
 		return
 
 	if(client.eye != client.mob)
@@ -1070,7 +1076,7 @@
 			blood_DNA[M.dna.unique_enzymes] = M.dna.b_type
 	hand_blood_color = blood_color
 	update_bloodied()
-	verbs += /mob/living/carbon/human/proc/bloody_doodle
+	add_verb(src,/mob/living/carbon/human/proc/bloody_doodle) //CHOMPEdit TGPanel
 	return 1 //we applied blood to the item
 
 /mob/living/carbon/human/proc/get_full_print()
@@ -1214,7 +1220,7 @@
 	if(species.default_language)
 		add_language(species.default_language)
 
-	if(species.icon_scale_x != 1 || species.icon_scale_y != 1)
+	if(species.icon_scale_x != DEFAULT_ICON_SCALE_X || species.icon_scale_y != DEFAULT_ICON_SCALE_Y)
 		update_transform()
 
 	if(example)						//VOREStation Edit begin
@@ -1254,7 +1260,7 @@
 	default_pixel_y = initial(pixel_y) + species.pixel_offset_y
 	pixel_x = default_pixel_x
 	pixel_y = default_pixel_y
-	center_offset = species.center_offset //CHOMPEdit
+	center_offset = species.center_offset
 
 	if(LAZYLEN(descriptors))
 		descriptors = null
@@ -1303,7 +1309,7 @@
 		return 0 //something is terribly wrong
 
 	if (!bloody_hands)
-		verbs -= /mob/living/carbon/human/proc/bloody_doodle
+		remove_verb(src,/mob/living/carbon/human/proc/bloody_doodle) //CHOMPEdit TGPanel
 
 	if (src.gloves)
 		to_chat(src, "<span class='warning'>Your [src.gloves] are getting in the way.</span>")
@@ -1457,9 +1463,14 @@
 		if(C.body_parts_covered & FEET)
 			footcoverage_check = TRUE
 			break
+	if(lying) // CHOMPadd - Drops stuff from hands, but no sleep.
+		playsound(src, 'sound/misc/slip.ogg', 25, 1, -1)
+		drop_both_hands()
+		return 0
 	if((species.flags & NO_SLIP && !footcoverage_check) || (shoes && (shoes.item_flags & NOSLIP))) //Footwear negates a species' natural traction.
 		return 0
 	if(..(slipped_on,stun_duration))
+		drop_both_hands() // CHOMPAdd - Drops stuff from both hands
 		return 1
 
 /mob/living/carbon/human/proc/relocate()
@@ -1662,7 +1673,7 @@
 /mob/living/carbon/human/examine_icon()
 	var/icon/I = get_cached_examine_icon(src)
 	if(!I)
-		I = getFlatIcon(src, defdir = SOUTH, no_anim = TRUE)
+		I = getFlatIcon(src, defdir = SOUTH, no_anim = TRUE, force_south = TRUE) //CHOMPEdit
 		set_cached_examine_icon(src, I, 50 SECONDS)
 	return I
 

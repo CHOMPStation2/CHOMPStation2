@@ -49,6 +49,13 @@
 	var/chat_color_darkened
 	/// The chat color var, without alpha.
 	var/chat_color_hover
+	//! Colors
+	/**
+	 * used to store the different colors on an atom
+	 *
+	 * its inherent color, the colored paint applied on it, special color effect etc...
+	 */
+	var/list/atom_colours
 
 /atom/New(loc, ...)
 	// Don't call ..() unless /datum/New() ever exists
@@ -153,7 +160,7 @@
 	ASSERT(isturf(loc))
 	var/list/turfs = trange(range, src)
 	for(var/turf/T as anything in turfs)
-		GLOB.turf_entered_event.register(T, src, callback)
+		RegisterSignal(T, COMSIG_OBSERVER_TURF_ENTERED, callback)
 
 //Unregister from prox listening in a certain range. You should do this BEFORE you move, but if you
 // really can't, then you can set the center where you moved from.
@@ -161,7 +168,7 @@
 	ASSERT(isturf(center) || isturf(loc))
 	var/list/turfs = trange(range, center ? center : src)
 	for(var/turf/T as anything in turfs)
-		GLOB.turf_entered_event.unregister(T, src, callback)
+		UnregisterSignal(T, COMSIG_OBSERVER_TURF_ENTERED)
 
 
 /atom/proc/emp_act(var/severity)
@@ -228,7 +235,7 @@
 		else
 			f_name += "oil-stained [name][infix]."
 
-	var/list/output = list("\icon[src.examine_icon()][bicon(src)] That's [f_name] [suffix]", get_examine_desc())
+	var/list/output = list("[icon2html(src,user.client)] That's [f_name] [suffix]", get_examine_desc())
 
 	if(user.client?.prefs.examine_text_mode == EXAMINE_MODE_INCLUDE_USAGE)
 		output += description_info
@@ -240,7 +247,8 @@
 
 // Don't make these call bicon or anything, these are what bicon uses. They need to return an icon.
 /atom/proc/examine_icon()
-	return icon(icon=src.icon, icon_state=src.icon_state, dir=SOUTH, frame=1, moving=0)
+	return src //CHOMPEdit 99% of the time just returning src will be sufficient. More complex examine icon things are available where they are needed
+	//return icon(icon=src.icon, icon_state=src.icon_state, dir=SOUTH, frame=1, moving=0) CHOMPEdit-- N O
 
 // called by mobs when e.g. having the atom as their machine, pulledby, loc (AKA mob being inside the atom) or buckled var set.
 // see code/modules/mob/mob_movement.dm for more.
@@ -514,37 +522,10 @@
 		return 1
 	else
 		return 0
-
-// Show a message to all mobs and objects in sight of this atom
-// Use for objects performing visible actions
-// message is output to anyone who can see, e.g. "The [src] does something!"
-// blind_message (optional) is what blind people will hear e.g. "You hear something!"
+//CHOMPEdit Begin
 /atom/proc/visible_message(var/message, var/blind_message, var/list/exclude_mobs, var/range = world.view, var/runemessage = "<span style='font-size: 1.5em'>👁</span>")
-
-	//VOREStation Edit
-	var/list/see
-	if(isbelly(loc))
-		var/obj/belly/B = loc
-		see = B.get_mobs_and_objs_in_belly()
-	else
-		see = get_mobs_and_objs_in_view_fast(get_turf(src), range, remote_ghosts = FALSE)
-	//VOREStation Edit End
-
-	var/list/seeing_mobs = see["mobs"]
-	var/list/seeing_objs = see["objs"]
-	if(LAZYLEN(exclude_mobs))
-		seeing_mobs -= exclude_mobs
-
-	for(var/obj/O as anything in seeing_objs)
-		O.show_message(message, VISIBLE_MESSAGE, blind_message, AUDIBLE_MESSAGE)
-	for(var/mob/M as anything in seeing_mobs)
-		if(M.see_invisible >= invisibility && MOB_CAN_SEE_PLANE(M, plane))
-			M.show_message(message, VISIBLE_MESSAGE, blind_message, AUDIBLE_MESSAGE)
-			if(runemessage != -1)
-				M.create_chat_message(src, "[runemessage]", FALSE, list("emote"), audible = FALSE)
-		else if(blind_message)
-			M.show_message(blind_message, AUDIBLE_MESSAGE)
-
+	SEND_GLOBAL_SIGNAL(COMSIG_VISIBLE_MESSAGE, src, message, blind_message, exclude_mobs, range, runemessage, isbelly(loc))
+//CHOMPEdit End
 // Show a message to all mobs and objects in earshot of this atom
 // Use for objects performing audible actions
 // message is the message output to anyone who can hear.
@@ -691,7 +672,7 @@
 		return
 	var/list/speech_bubble_hearers = list()
 	for(var/mob/M in get_mobs_in_view(7, src))
-		M.show_message("<span class='game say'><span class='name'>[src]</span> [atom_say_verb], \"[message]\"</span>", 2, null, 1)
+		M.show_message("<span class='npcsay'><span class='name'>[src]</span> [atom_say_verb], \"[message]\"</span>", 2, null, 1)
 		if(M.client)
 			speech_bubble_hearers += M.client
 
@@ -705,7 +686,7 @@
 
 /atom/Entered(atom/movable/AM, atom/old_loc)
 	. = ..()
-	GLOB.moved_event.raise_event(AM, old_loc, AM.loc)
+	SEND_SIGNAL(AM, COMSIG_OBSERVER_MOVED, old_loc, AM.loc)
 	SEND_SIGNAL(src, COMSIG_ATOM_ENTERED, AM, old_loc)
 	SEND_SIGNAL(AM, COMSIG_ATOM_ENTERING, src, old_loc)
 
@@ -731,3 +712,51 @@
 // Airflow and ZAS zones now uses CanZASPass() instead of this proc.
 /atom/proc/CanPass(atom/movable/mover, turf/target)
 	return !density
+
+
+//! ## Atom Colour Priority System
+/**
+ * A System that gives finer control over which atom colour to colour the atom with.
+ * The "highest priority" one is always displayed as opposed to the default of
+ * "whichever was set last is displayed"
+ */
+
+/// Adds an instance of colour_type to the atom's atom_colours list
+/atom/proc/add_atom_colour(coloration, colour_priority)
+	if(!atom_colours || !atom_colours.len)
+		atom_colours = list()
+		atom_colours.len = COLOUR_PRIORITY_AMOUNT //four priority levels currently.
+	if(!coloration)
+		return
+	if(colour_priority > atom_colours.len)
+		return
+	atom_colours[colour_priority] = coloration
+	update_atom_colour()
+
+/// Removes an instance of colour_type from the atom's atom_colours list
+/atom/proc/remove_atom_colour(colour_priority, coloration)
+	if(!atom_colours)
+		atom_colours = list()
+		atom_colours.len = COLOUR_PRIORITY_AMOUNT //four priority levels currently.
+	if(colour_priority > atom_colours.len)
+		return
+	if(coloration && atom_colours[colour_priority] != coloration)
+		return //if we don't have the expected color (for a specific priority) to remove, do nothing
+	atom_colours[colour_priority] = null
+	update_atom_colour()
+
+/// Resets the atom's color to null, and then sets it to the highest priority colour available
+/atom/proc/update_atom_colour()
+	if(!atom_colours)
+		atom_colours = list()
+		atom_colours.len = COLOUR_PRIORITY_AMOUNT //four priority levels currently.
+	color = null
+	for(var/C in atom_colours)
+		if(islist(C))
+			var/list/L = C
+			if(L.len)
+				color = L
+				return
+		else if(C)
+			color = C
+			return

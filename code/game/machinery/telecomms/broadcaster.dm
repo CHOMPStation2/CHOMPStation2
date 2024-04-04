@@ -416,6 +416,12 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 		if(data == DATA_ANTAG && istype(R, /mob/observer/dead) && R.is_preference_enabled(/datum/client_preference/ghost_radio))
 			continue
 
+		// ChompEDIT START - Ghost blacklist for certain spammy radio channels
+		var/list/ghostradio_freq_blacklist = list(ENT_FREQ, BDCM_FREQ)
+		if(istype(R, /mob/observer/dead) && R.is_preference_enabled(/datum/client_preference/ghost_radio) && (connection.frequency in ghostradio_freq_blacklist))
+			continue
+		// ChompEDIT END
+
 		// --- Check for compression ---
 		if(compression > 0)
 			heard_gibberish += R
@@ -455,7 +461,7 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 		if(data == DATA_ANTAG) // intercepted radio message
 			part_b_extra = " <i>(Intercepted)</i>"
 		var/part_a = "<span class='[frequency_span_class(display_freq)]'>"
-		var/part_b = "\icon[radio][bicon(radio)]<b>\[[freq_text]\][part_b_extra]</b> <span class='name'>" // goes in the actual output
+		var/part_b = "[icon2html(radio, heard_masked + heard_normal + heard_voice + heard_garbled + heard_gibberish)]<b>\[[freq_text]\][part_b_extra]</b> <span class='name'>" // goes in the actual output
 
 		// --- Some more pre-message formatting ---
 		var/part_c = "</span> <span class='message'>" // Tweaked for security headsets -- TLE
@@ -658,7 +664,7 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 		// Create a radio headset for the sole purpose of using its icon
 		var/obj/item/device/radio/headset/radio = new
 
-		var/part_b = "</span><b>\icon[radio][bicon(radio)]\[[freq_text]\][part_b_extra]</b> <span class='message'>" // Tweaked for security headsets -- TLE
+		var/part_b = "</span><b>[icon2html(radio, heard_normal + heard_garbled + heard_gibberish)]\[[freq_text]\][part_b_extra]</b> <span class='message'>" // Tweaked for security headsets -- TLE
 		var/part_blackbox_b = "</span><b> \[[freq_text]\]</b> <span class='message'>" // Tweaked for security headsets -- TLE
 		var/part_c = "</span></span>"
 

@@ -194,7 +194,27 @@
 	body_parts = list(BP_HEAD)
 	color_blend_mode = ICON_MULTIPLY
 
-/// NEW XENOMORPH SPRITE_ACCESSORIES - Borrowed from Citadel, should blend a bit more nicely. ///
+/datum/sprite_accessory/marking/ch/bignostrils
+	name = "Big Nostrils"
+	icon_state = "bignostrils"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/breasts
+	name = "Breasts"
+	icon_state = "breasts"
+	body_parts = list(BP_TORSO)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/breasts/smooth
+	name = "Smooth Breasts"
+	icon_state = "breasts_smooth"
+
+/datum/sprite_accessory/marking/ch/breasts/reptile
+	name = "Reptile Breasts"
+	icon_state = "breasts_reptile"
+
+/// NEW XENOMORPH SPRITE_ACCESSORIES - Basesprites borrowed from Citadel and tidied up by Makkinindorn, should blend a bit more nicely. ///
 
 /datum/sprite_accessory/marking/ch/xenomorph // This is just here to create an easy-to-follow typepath.
 	icon = 'icons/mob/human_races/markings_ch.dmi'
@@ -303,3 +323,27 @@
 	icon_state = "xeno_hollywood"
 	body_parts = list(BP_HEAD)
 	hide_body_parts = list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/xenomorph/xeno_headcrest_queen
+	name = "Xenomorph headcrest (queen)"
+	icon_state = "xeno_queen"
+	body_parts = list(BP_HEAD)
+	hide_body_parts = list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/xenomorph/xeno_headcrest_queen_striped
+	name = "Xenomorph headcrest (queen, striped)"
+	icon_state = "xeno_queen_striped"
+	body_parts = list(BP_HEAD)
+	hide_body_parts = list(BP_HEAD)
+
+// TEETH //
+
+/datum/sprite_accessory/marking/ch/xenomorph/xeno_teeth
+	name = "Xenomorph teeth (standard)"
+	icon_state = "xeno_teeth"
+	body_parts = list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/xenomorph/xeno_teeth_queen
+	name = "Xenomorph teeth (queen)"
+	icon_state = "xeno_teeth_queen"
+	body_parts = list(BP_HEAD)

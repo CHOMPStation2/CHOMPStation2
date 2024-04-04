@@ -1,7 +1,7 @@
 /mob/living/simple_mob/vore/bigdragon/Login()
 	. = ..()
-	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/export_style
-	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/import_style
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/export_style) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/import_style) //CHOMPEdit TGPanel
 
 /mob/living/simple_mob/vore/bigdragon/proc/export_style()
 	set name = "Export style string"

@@ -125,7 +125,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	//Do any species specific layering updates, such as when hiding.
 	update_icon_special()
 
-/mob/living/carbon/human/update_transform(var/instant = FALSE) //CHOMPEdit
+/mob/living/carbon/human/update_transform(var/instant = FALSE)
 	/* VOREStation Edit START
 	// First, get the correct size.
 	var/desired_scale_x = icon_scale_x
@@ -144,9 +144,9 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	var/desired_scale_y = size_multiplier * icon_scale_y
 	desired_scale_x *= species.icon_scale_x
 	desired_scale_y *= species.icon_scale_y
-	var/cent_offset = species.center_offset //CHOMPEdit
-	if(fuzzy || offset_override || dir == EAST || dir == WEST) //CHOMPEdit
-		cent_offset = 0 //CHOMPEdit
+	var/cent_offset = species.center_offset
+	if(fuzzy || offset_override || dir == EAST || dir == WEST)
+		cent_offset = 0
 	vis_height = species.icon_height
 	appearance_flags |= PIXEL_SCALE
 	if(fuzzy)
@@ -182,15 +182,15 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		layer = MOB_LAYER -0.01 // Fix for a byond bug where turf entry order no longer matters
 	else
 		M.Scale(desired_scale_x, desired_scale_y)//VOREStation Edit
-		M.Translate(cent_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1)) //CHOMPEdit
+		M.Translate(cent_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1))
 		if(tail_style?.can_loaf) // VOREStation Edit: Taur Loafing
 			update_tail_showing() // VOREStation Edit: Taur Loafing
 		layer = MOB_LAYER // Fix for a byond bug where turf entry order no longer matters
 
-	if(instant) //CHOMPEdit Start
+	if(instant)
 		transform = M
 	else
-		animate(src, transform = M, time = anim_time) //CHOMPEdit End
+		animate(src, transform = M, time = anim_time)
 	update_icon_special() //May contain transform-altering things
 
 //DAMAGE OVERLAYS
@@ -353,7 +353,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	else
 		//BEGIN CACHED ICON GENERATION.
 		var/obj/item/organ/external/chest = get_organ(BP_TORSO)
-		base_icon = chest.get_icon(skeleton, !wholeicontransparent)
+		base_icon = chest?.get_icon(skeleton, !wholeicontransparent)
 
 		var/apply_extra_transparency_leg = organs_by_name[BP_L_LEG] && organs_by_name[BP_R_LEG]
 		var/apply_extra_transparency_foot = organs_by_name[BP_L_FOOT] && organs_by_name[BP_R_FOOT]
@@ -1419,8 +1419,8 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 			working.pixel_y = tail_style.offset_y
 			if(taurtype.can_ride && !riding_datum)
 				riding_datum = new /datum/riding/taur(src)
-				verbs |= /mob/living/carbon/human/proc/taur_mount
-				verbs |= /mob/living/proc/toggle_rider_reins
+				add_verb(src,/mob/living/carbon/human/proc/taur_mount) //CHOMPEdit TGPanel
+				add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
 		else if(islongtail(tail_style))
 			working.pixel_x = tail_style.offset_x
 			working.pixel_y = tail_style.offset_y

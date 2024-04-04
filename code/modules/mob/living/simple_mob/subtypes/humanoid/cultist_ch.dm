@@ -135,7 +135,7 @@
 		visible_message(span("danger","\The [src] suddenly rises from a pool of blood \the [L]!"))
 		new /obj/effect/decal/cleanable/blood (src.loc)
 		playsound(L, 'sound/weapons/heavysmash.ogg', 75, 1)
-		L.Weaken(3)
+		L.add_modifier(/datum/modifier/entangled, 1 SECONDS) //L.Weaken(3) CHOMPedit: Trying to remove hardstuns, replacing it with slow down
 		overshoot = FALSE
 
 	if(!overshoot) // We hit the target, or something, at destination, so we're done.
@@ -509,7 +509,7 @@
 /mob/living/simple_mob/humanoid/cultist/elite/bullet_act(var/obj/item/projectile/Proj)
 	if(!Proj)	return
 	if(prob(50))
-		visible_message("<font color='red'><B>[Proj] disappears into the mirror world as it hits the shield.</B></font>")
+		visible_message(span_red("<B>[Proj] disappears into the mirror world as it hits the shield.</B>"))
 		if(Proj.firer)
 			ai_holder.react_to_attack(Proj.firer)
 		return

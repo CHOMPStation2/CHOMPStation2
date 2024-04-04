@@ -354,6 +354,7 @@
 	touch_met = 50 // It's acid!
 	var/power = 5
 	var/meltdose = 10 // How much is needed to melt
+	affects_robots = TRUE //CHOMPedit, it's acid! Still eats metal!
 
 /datum/reagent/acid/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_GREY) //ywedit
@@ -411,12 +412,12 @@
 			remove_self(volume)
 			return
 		if(B.owner)
-			if(B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.custom_max_volume)
-				B.owner.adjust_nutrition(removed * (B.nutrition_percent / 100) * power)
+			if(B.show_liquids && B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.custom_max_volume)
+				B.owner_adjust_nutrition(removed * (B.nutrition_percent / 100) * power)
 				B.digest_nutri_gain += removed * (B.nutrition_percent / 100) + 0.5
 				B.GenerateBellyReagents_digesting()
 			else
-				B.owner.adjust_nutrition(removed * (B.nutrition_percent / 100) * power) //CHOMPEdit End
+				B.owner_adjust_nutrition(removed * (B.nutrition_percent / 100) * power) //CHOMPEdit End
 
 	if(volume < meltdose) // Not enough to melt anything
 		M.take_organ_damage(0, removed * power * 0.2) //burn damage, since it causes chemical burns. Acid doesn't make bones shatter, like brute trauma would.
@@ -436,16 +437,17 @@
 			M.take_organ_damage(0, removed * power * 0.1) // Balance. The damage is instant, so it's weaker. 10 units -> 5 damage, double for pacid. 120 units beaker could deal 60, but a) it's burn, which is not as dangerous, b) it's a one-use weapon, c) missing with it will splash it over the ground and d) clothes give some protection, so not everything will hit
 
 /datum/reagent/acid/touch_obj(var/obj/O, var/amount) //CHOMPEdit Start
-	if(isbelly(O.loc) || isbelly(O.loc.loc))
-		var/obj/belly/B = O.loc
-		if(B.item_digest_mode == IM_HOLD)
+	if(istype(O, /obj/item) && O.loc)
+		if(isbelly(O.loc) || isbelly(O.loc.loc))
+			var/obj/belly/B = (isbelly(O.loc) ? O.loc : O.loc.loc)
+			if(B.item_digest_mode == IM_HOLD)
+				return
+			var/obj/item/I = O
+			var/spent_amt = I.digest_act(B, 1, amount / (meltdose / 3))
+			remove_self(spent_amt) //10u stomacid per w_class, less if stronger acid.
+			if(B.owner)
+				B.owner_adjust_nutrition((B.nutrition_percent / 100) * 5 * spent_amt)
 			return
-		var/obj/item/I = O
-		var/spent_amt = I.digest_act(I.loc, 1, amount / (meltdose / 3))
-		remove_self(spent_amt) //10u stomacid per w_class, less if stronger acid.
-		if(B.owner)
-			B.owner.adjust_nutrition((B.nutrition_percent / 100) * 5 * spent_amt)
-		return
 	..()
 	if(O.unacidable || is_type_in_list(O,item_digestion_blacklist)) //CHOMPEdit End
 		return
@@ -464,12 +466,12 @@
 			remove_self(volume)
 			return
 		if(B.owner)
-			if(B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.custom_max_volume)
-				B.owner.adjust_nutrition(volume * (B.nutrition_percent / 100) * power)
+			if(B.show_liquids && B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.custom_max_volume)
+				B.owner_adjust_nutrition(volume * (B.nutrition_percent / 100) * power)
 				B.digest_nutri_gain += volume * (B.nutrition_percent / 100) + 0.5
 				B.GenerateBellyReagents_digesting()
 			else
-				B.owner.adjust_nutrition(volume * (B.nutrition_percent / 100) * power)
+				B.owner_adjust_nutrition(volume * (B.nutrition_percent / 100) * power)
 	L.adjustFireLoss(volume * power * 0.2)
 	remove_self(volume) //CHOMPAdd End
 

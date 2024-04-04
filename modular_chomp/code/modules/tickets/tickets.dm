@@ -101,10 +101,13 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 	usr << browse(dat.Join(), "window=ahelp_list[state];size=600x480")
 
 //Tickets statpanel
-/datum/tickets/proc/stat_entry()
+/datum/tickets/proc/stat_entry(client/target)
+	SHOULD_CALL_PARENT(TRUE)
+	SHOULD_NOT_SLEEP(TRUE)
+	var/list/L = list()
 	var/num_disconnected = 0
-	stat("== Tickets ==")
-	stat("Active Tickets:", astatclick.update("[active_tickets.len]"))
+	L[++L.len] = list("== Admin Tickets ==", "", null, null)
+	L[++L.len] = list("Active Tickets:", "[astatclick.update("[active_tickets.len]")]", null, REF(astatclick))
 	for(var/datum/ticket/T as anything in active_tickets)
 		if(T.initiator)
 			var/type = "N/A"
@@ -114,14 +117,15 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 				if(1)
 					type = "MEN"
 
-			if(usr.client.holder || T.level > 0)
-				stat("\[[type]\] #[T.id]. [T.initiator_key_name]:", T.statclick.update())
+			if((target && target.holder) || T.level > 0)
+				L[++L.len] = list("\[[type]\] #[T.id]. [T.initiator_key_name]:", T.name, null, REF(T.statclick))
 		else
 			++num_disconnected
 	if(num_disconnected)
-		stat("Disconnected:", astatclick.update("[num_disconnected]"))
-	stat("Closed Tickets:", cstatclick.update("[closed_tickets.len]"))
-	stat("Resolved Tickets:", rstatclick.update("[resolved_tickets.len]"))
+		L[++L.len] = list("Disconnected:", "[astatclick.update("[num_disconnected]")]", null, REF(astatclick))
+	L[++L.len] = list("Closed Tickets:", "[cstatclick.update("[closed_tickets.len]")]", null, REF(cstatclick))
+	L[++L.len] = list("Resolved Tickets:", "[rstatclick.update("[resolved_tickets.len]")]", null, REF(rstatclick))
+	return L
 
 //Reassociate still open ticket if one exists
 /datum/tickets/proc/ClientLogin(client/C)
@@ -262,7 +266,7 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 
 	if(is_bwoink)
 		AddInteraction("<font color='blue'>[key_name_admin(usr)] PM'd [LinkedReplyName()]</font>")
-		message_admins("<font color='blue'>Ticket [TicketHref("#[id]")] created</font>")
+		message_admins(span_blue("Ticket [TicketHref("#[id]")] created"))
 	else
 		MessageNoRecipient(parsed_message)
 		send2adminchat() //VOREStation Add
@@ -424,7 +428,7 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 
 	AddInteraction("<font color='purple'>Reopened by [key_name_admin(usr)]</font>")
 	if(initiator)
-		to_chat(initiator, "<span class='filter_adminlog'><font color='purple'>Ticket [TicketHref("#[id]")] was reopened by [key_name(usr,FALSE,FALSE)].</font></span>")
+		to_chat(initiator, "<span class='filter_adminlog'>[span_purple("Ticket [TicketHref("#[id]")] was reopened by [key_name(usr,FALSE,FALSE)].")]</span>")
 	var/msg = "<span class='adminhelp'>Ticket [TicketHref("#[id]")] reopened by [key_name_admin(usr)].</span>"
 	message_admins(msg)
 	log_admin(msg)
@@ -458,7 +462,7 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 	GLOB.tickets.ListInsert(src)
 	AddInteraction("<span class='filter_adminlog'><font color='red'>Closed by [key_name_admin(usr)].</font></span>")
 	if(initiator)
-		to_chat(initiator, "<span class='filter_adminlog'><font color='red'>Ticket [TicketHref("#[id]")] was closed by [key_name(usr,FALSE,FALSE)].</font></span>")
+		to_chat(initiator, "<span class='filter_adminlog'>[span_red("Ticket [TicketHref("#[id]")] was closed by [key_name(usr,FALSE,FALSE)].")]</span>")
 	if(!silent)
 		feedback_inc("ahelp_close")
 		var/msg = "Ticket [TicketHref("#[id]")] closed by [key_name_admin(usr)]."
@@ -484,7 +488,7 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 
 	AddInteraction("<span class='filter_adminlog'><font color='green'>Resolved by [key_name_admin(usr)].</font></span>")
 	if(initiator)
-		to_chat(initiator, "<span class='filter_adminlog'><font color='green'>Ticket [TicketHref("#[id]")] was marked resolved by [key_name(usr,FALSE,FALSE)].</font></span>")
+		to_chat(initiator, "<span class='filter_adminlog'>[span_green("Ticket [TicketHref("#[id]")] was marked resolved by [key_name(usr,FALSE,FALSE)].")]</span>")
 	if(!silent)
 		feedback_inc("ticket_resolve")
 		var/msg = "Ticket [TicketHref("#[id]")] resolved by [key_name_admin(usr)]"
@@ -514,8 +518,8 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 		if(initiator.is_preference_enabled(/datum/client_preference/holder/play_adminhelp_ping))
 			initiator << 'sound/effects/adminhelp.ogg'
 
-		to_chat(initiator, "<span class='filter_pm'><font color='red' size='4'><b>- AdminHelp Rejected! -</b></font><br>\
-							<font color='red'><b>Your admin help was rejected.</b></font><br>\
+		to_chat(initiator, "<span class='filter_pm'>[span_red("<font size='4'><b>- AdminHelp Rejected! -</b></font>")]<br>\
+							[span_red("<b>Your admin help was rejected.</b>")]<br>\
 							Please try to be calm, clear, and descriptive in admin helps, do not assume the admin has seen any related events, and clearly state the names of anybody you are reporting.</span>")
 
 	feedback_inc("ahelp_reject")
@@ -538,9 +542,9 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 	if(state != AHELP_ACTIVE)
 		return
 
-	var/msg = "<span class='filter_pm'><font color='red' size='4'><b>- AdminHelp marked as IC issue! -</b></font><br>"
-	msg += "<font color='red'><b>This is something that can be solved ICly, and does not currently require staff intervention.</b></font><br>"
-	msg += "<font color='red'>Your AdminHelp may also be unanswerable due to ongoing events.</font></span>"
+	var/msg = "<span class='filter_pm'>[span_red("<font size='4'><b>- AdminHelp marked as IC issue! -</b></font>")]<br>"
+	msg += "[span_red("<b>This is something that can be solved ICly, and does not currently require staff intervention.</b>")]<br>"
+	msg += "[span_red("Your AdminHelp may also be unanswerable due to ongoing events.")]</span>"
 
 	if(initiator)
 		to_chat(initiator, msg)
@@ -566,10 +570,10 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 		return
 
 	if(handler == key_name(usr, FALSE, TRUE))
-		to_chat("<font color='red'>You are already handling this ticket.</font>")
+		to_chat(span_red("You are already handling this ticket."))
 		return
 
-	var/msg = "<font color='red'>Your AdminHelp is being handled by [key_name(usr,FALSE,FALSE)] please be patient.</font>"
+	var/msg = span_red("Your AdminHelp is being handled by [key_name(usr,FALSE,FALSE)] please be patient.")
 
 	if(initiator)
 		to_chat(initiator, msg)

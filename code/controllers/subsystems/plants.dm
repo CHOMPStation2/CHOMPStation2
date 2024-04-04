@@ -22,12 +22,15 @@ SUBSYSTEM_DEF(plants)
 	var/list/processing = list()
 	var/list/currentrun = list()
 
-/datum/controller/subsystem/plants/stat_entry()
-	..("P:[processing.len]|S:[seeds.len]")
-
-/datum/controller/subsystem/plants/Initialize(timeofday)
-	setup()
+//CHOMPEdit Begin
+/datum/controller/subsystem/plants/stat_entry(msg)
+	msg = "P:[processing.len]|S:[seeds.len]"
 	return ..()
+
+/datum/controller/subsystem/plants/Initialize()
+	setup()
+	return SS_INIT_SUCCESS
+//CHOMPEdit End
 
 // Predefined/roundstart varieties use a string key to make it
 // easier to grab the new variety when mutating. Post-roundstart
@@ -126,7 +129,7 @@ SUBSYSTEM_DEF(plants)
 
 	// Caching
 	var/list/currentrun = src.currentrun
-	
+
 	while(currentrun.len)
 		var/obj/effect/plant/P = currentrun[currentrun.len]
 		--currentrun.len

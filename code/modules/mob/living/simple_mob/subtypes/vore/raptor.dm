@@ -56,7 +56,7 @@
 	vore_pounce_chance = 50
 	vore_active = 1
 	vore_icons = SA_ICON_LIVING | SA_ICON_REST
-	vore_capacity = 2
+	vore_capacity = 1
 	swallowTime = 50
 	vore_ignores_undigestable = TRUE
 	vore_default_mode = DM_DIGEST
@@ -76,8 +76,8 @@
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	verbs |= /mob/living/simple_mob/proc/animal_mount
-	verbs |= /mob/living/proc/toggle_rider_reins
+	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
 	movement_cooldown = -1
 
 /mob/living/simple_mob/vore/raptor/init_vore()
@@ -148,3 +148,12 @@
 			add_eyes()
 	update_transform()
 
+/mob/living/simple_mob/vore/raptor/yellow
+	name = "raptor"
+	desc = "A massive yellow raptor with piercing blue eyes and a feathered tail. Long sharp claws and huge pointy teeth, I wouldn't want to upset this thing."
+	icon_dead = "raptoryellow_dead"
+	icon_living = "raptoryellow"
+	icon_state = "raptoryellow"
+	icon_rest = "raptoryellow_rest"
+	random_skin = 0
+	initial_icon = "raptoryellow"

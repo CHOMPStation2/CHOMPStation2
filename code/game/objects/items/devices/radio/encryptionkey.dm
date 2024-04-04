@@ -127,4 +127,9 @@
 	channels = list("Response Team" = 1, "Science" = 1, "Command" = 1, "Medical" = 1, "Engineering" = 1, "Security" = 1, "Supply" = 1, "Service" = 1)
 
 /obj/item/device/encryptionkey/omni		//Literally only for the admin intercoms
-	channels = list("Mercenary" = 1, "Raider" = 1, "Response Team" = 1, "Science" = 1, "Command" = 1, "Medical" = 1, "Engineering" = 1, "Security" = 1, "Supply" = 1, "Service" = 1)
+	channels = list("Mercenary" = 1, "Raider" = 1, "Response Team" = 1, "Science" = 1, "Command" = 1, "Medical" = 1, "Engineering" = 1, "Security" = 1, "Supply" = 1, "Service" = 1, "Outsider" = 1) //CHOMPedit: Added Outsider
+	syndie = 1//Signifies that it de-crypts Syndicate transmissions
+
+/obj/item/device/encryptionkey/ent
+	name = "entertainment encryption key"
+	channels = list("Entertainment" = 1)

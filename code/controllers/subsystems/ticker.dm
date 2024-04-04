@@ -41,6 +41,8 @@ SUBSYSTEM_DEF(ticker)
 	//Now we have a general cinematic centrally held within the gameticker....far more efficient!
 	var/obj/screen/cinematic = null
 
+	var/round_start_time = 0 //CHOMPEdit
+
 // This global variable exists for legacy support so we don't have to rename every 'ticker' to 'SSticker' yet.
 var/global/datum/controller/subsystem/ticker/ticker
 /datum/controller/subsystem/ticker/PreInit()
@@ -57,7 +59,7 @@ var/global/datum/controller/subsystem/ticker/ticker
 		)
 	)
 	GLOB.autospeaker = new (null, null, null, 1) //Set up Global Announcer
-	return ..()
+	return SS_INIT_SUCCESS // CHOMPEdit
 
 /datum/controller/subsystem/ticker/fire(resumed = FALSE)
 	switch(current_state)
@@ -101,6 +103,7 @@ var/global/datum/controller/subsystem/ticker/ticker
 
 // Called during GAME_STATE_SETTING_UP (RUNLEVEL_SETUP)
 /datum/controller/subsystem/ticker/proc/setup_tick(resumed = FALSE)
+	round_start_time = world.time //otherwise round_start_time would be 0 for the signals
 	if(!setup_choose_gamemode())
 		// It failed, go back to lobby state and re-send the welcome message
 		pregame_timeleft = config.pregame_time
@@ -418,6 +421,7 @@ var/global/datum/controller/subsystem/ticker/ticker
 				if(new_char.client)
 					var/obj/screen/splash/S = new(new_char.client, TRUE)
 					S.Fade(TRUE)
+					new_char.client.init_verbs()
 
 			// If they're a carbon, they can get manifested
 			if(J?.mob_type & JOB_CARBON)
@@ -462,22 +466,22 @@ var/global/datum/controller/subsystem/ticker/ticker
 				var/turf/playerTurf = get_turf(Player)
 				if(emergency_shuttle.departed && emergency_shuttle.evac)
 					if(isNotAdminLevel(playerTurf.z))
-						to_chat(Player, "<span class='filter_system'><font color='blue'><b>You survived the round, but remained on [station_name()] as [Player.real_name].</b></font></span>")
+						to_chat(Player, "<span class='filter_system'>[span_blue("<b>You survived the round, but remained on [station_name()] as [Player.real_name].</b>")]</span>")
 					else
-						to_chat(Player, "<span class='filter_system'><font color='green'><b>You managed to survive the events on [station_name()] as [Player.real_name].</b></font></span>")
+						to_chat(Player, "<span class='filter_system'>[span_green("<b>You managed to survive the events on [station_name()] as [Player.real_name].</b>")]</span>")
 				else if(isAdminLevel(playerTurf.z))
-					to_chat(Player, "<span class='filter_system'><font color='green'><b>You successfully underwent crew transfer after events on [station_name()] as [Player.real_name].</b></font></span>")
+					to_chat(Player, "<span class='filter_system'>[span_green("<b>You successfully underwent crew transfer after events on [station_name()] as [Player.real_name].</b>")]</span>")
 				else if(issilicon(Player))
-					to_chat(Player, "<span class='filter_system'><font color='green'><b>You remain operational after the events on [station_name()] as [Player.real_name].</b></font></span>")
+					to_chat(Player, "<span class='filter_system'>[span_green("<b>You remain operational after the events on [station_name()] as [Player.real_name].</b>")]</span>")
 				else
-					to_chat(Player, "<span class='filter_system'><font color='blue'><b>You missed the crew transfer after the events on [station_name()] as [Player.real_name].</b></font></span>")
+					to_chat(Player, "<span class='filter_system'>[span_blue("<b>You missed the crew transfer after the events on [station_name()] as [Player.real_name].</b>")]</span>")
 			else
 				if(istype(Player,/mob/observer/dead))
 					var/mob/observer/dead/O = Player
 					if(!O.started_as_observer)
-						to_chat(Player, "<span class='filter_system'><font color='red'><b>You did not survive the events on [station_name()]...</b></font></span>")
+						to_chat(Player, "<span class='filter_system'>[span_red("<b>You did not survive the events on [station_name()]...</b>")]</span>")
 				else
-					to_chat(Player, "<span class='filter_system'><font color='red'><b>You did not survive the events on [station_name()]...</b></font></span>")
+					to_chat(Player, "<span class='filter_system'>[span_red("<b>You did not survive the events on [station_name()]...</b>")]</span>")
 	to_world("<br>")
 
 	for (var/mob/living/silicon/ai/aiPlayer in mob_list)
@@ -540,30 +544,33 @@ var/global/datum/controller/subsystem/ticker/ticker
 	for(var/i in total_antagonists)
 		log_game("[i]s[total_antagonists[i]].")
 
+	SSdbcore.SetRoundEnd() // CHOMPEdit
+
 	return 1
 
-/datum/controller/subsystem/ticker/stat_entry()
+/datum/controller/subsystem/ticker/stat_entry(msg)
 	switch(current_state)
 		if(GAME_STATE_INIT)
 			..()
 		if(GAME_STATE_PREGAME) // RUNLEVEL_LOBBY
-			..("START [round_progressing ? "[round(pregame_timeleft)]s" : "(PAUSED)"]")
+			msg = "START [round_progressing ? "[round(pregame_timeleft)]s" : "(PAUSED)"]"
 		if(GAME_STATE_SETTING_UP) // RUNLEVEL_SETUP
-			..("SETUP")
+			msg = "SETUP"
 		if(GAME_STATE_PLAYING) // RUNLEVEL_GAME
-			..("GAME")
+			msg = "GAME"
 		if(GAME_STATE_FINISHED) // RUNLEVEL_POSTGAME
 			switch(end_game_state)
 				if(END_GAME_MODE_FINISHED)
-					..("MODE OVER, WAITING")
+					msg = "MODE OVER, WAITING"
 				if(END_GAME_READY_TO_END)
-					..("ENDGAME PROCESSING")
+					msg = "ENDGAME PROCESSING"
 				if(END_GAME_ENDING)
-					..("END IN [round(restart_timeleft/10)]s")
+					msg = "END IN [round(restart_timeleft/10)]s"
 				if(END_GAME_DELAYED)
-					..("END PAUSED")
+					msg = "END PAUSED"
 				else
-					..("ENDGAME ERROR:[end_game_state]")
+					msg = "ENDGAME ERROR:[end_game_state]"
+	return ..()
 
 /datum/controller/subsystem/ticker/Recover()
 	flags |= SS_NO_INIT // Don't initialize again
@@ -579,3 +586,5 @@ var/global/datum/controller/subsystem/ticker/ticker
 	minds = SSticker.minds
 
 	random_players = SSticker.random_players
+
+	round_start_time = SSticker.round_start_time

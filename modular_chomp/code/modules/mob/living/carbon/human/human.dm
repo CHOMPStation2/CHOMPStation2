@@ -79,3 +79,36 @@
     last_special = world.time + 2 SECONDS // Antispam.
     create_new_area(usr)
     return
+
+/mob/living/carbon/human/update_misc_tabs()
+	..()
+	if(species)
+		species.update_misc_tabs(src)
+
+	if(istype(back,/obj/item/weapon/rig))
+		var/obj/item/weapon/rig/R = back
+		RigPanel(R)
+
+	else if(istype(belt,/obj/item/weapon/rig))
+		var/obj/item/weapon/rig/R = belt
+		RigPanel(R)
+
+/mob/proc/RigPanel(var/obj/item/weapon/rig/R)
+	if(R && !R.canremove && R.installed_modules.len)
+		var/list/L = list()
+		var/cell_status = R.cell ? "[R.cell.charge]/[R.cell.maxcharge]" : "ERROR"
+		L[++L.len] = list("Suit charge: [cell_status]", null, null, null, null)
+		for(var/obj/item/rig_module/module in R.installed_modules)
+		{
+			for(var/stat_rig_module/SRM in module.stat_modules)
+				if(SRM.CanUse())
+					L[++L.len] = list(SRM.module.interface_name,null,null,SRM.name,REF(SRM))
+		}
+		misc_tabs["Hardsuit Modules"] = L
+
+/mob/living/update_misc_tabs()
+	..()
+	if(get_rig_stats)
+		var/obj/item/weapon/rig/rig = get_rig()
+		if(rig)
+			RigPanel(rig)

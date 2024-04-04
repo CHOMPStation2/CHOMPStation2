@@ -7,7 +7,6 @@
 const webpack = require('webpack');
 const path = require('path');
 const ExtractCssPlugin = require('mini-css-extract-plugin');
-const { createBabelConfig } = require('./babel.config.js');
 
 const createStats = (verbose) => ({
   assets: verbose,
@@ -24,21 +23,16 @@ const createStats = (verbose) => ({
   version: verbose,
 });
 
-// prettier-ignore
 module.exports = (env = {}, argv) => {
   const mode = argv.mode || 'production';
   const bench = env.TGUI_BENCH;
   const config = {
     mode: mode === 'production' ? 'production' : 'development',
     context: path.resolve(__dirname),
-    target: ['web', 'es3', 'browserslist:ie 8'],
+    target: ['web', 'es5', 'browserslist:ie 11'],
     entry: {
-      'tgui': [
-        './packages/tgui-polyfill',
-        // CHOMPstation Edit - TGUI Modulation
-        // './packages/tgui',
-        './packages/tgui_ch',
-      ],
+      tgui: ['./packages/tgui-polyfill', './packages/tgui'],
+      'tgui-panel': ['./packages/tgui-polyfill', './packages/tgui-panel'],
     },
     output: {
       path: argv.useTmpFolder
@@ -47,21 +41,19 @@ module.exports = (env = {}, argv) => {
       filename: '[name].bundle.js',
       chunkFilename: '[name].bundle.js',
       chunkLoadTimeout: 15000,
+      publicPath: '/',
     },
     resolve: {
-      extensions: ['.tsx', '.ts', '.js'],
+      extensions: ['.tsx', '.ts', '.js', '.jsx'],
       alias: {},
     },
     module: {
       rules: [
         {
-          test: /\.(js|cjs|ts|tsx)$/,
+          test: /\.([tj]s(x)?|cjs)$/,
           use: [
             {
-              loader: require.resolve('babel-loader'),
-              options: createBabelConfig({
-                removeConsole: !bench,
-              }),
+              loader: require.resolve('swc-loader'),
             },
           ],
         },
@@ -87,7 +79,14 @@ module.exports = (env = {}, argv) => {
         },
         {
           test: /\.(png|jpg|svg)$/,
-          type: 'asset/inline',
+          use: [
+            {
+              loader: require.resolve('url-loader'),
+              options: {
+                esModule: false,
+              },
+            },
+          ],
         },
       ],
     },
@@ -130,17 +129,11 @@ module.exports = (env = {}, argv) => {
 
   // Production build specific options
   if (mode === 'production') {
-    const TerserPlugin = require('terser-webpack-plugin');
+    const { EsbuildPlugin } = require('esbuild-loader');
     config.optimization.minimizer = [
-      new TerserPlugin({
-        extractComments: false,
-        terserOptions: {
-          ie8: true,
-          output: {
-            ascii_only: true,
-            comments: false,
-          },
-        },
+      new EsbuildPlugin({
+        target: 'ie11',
+        css: true,
       }),
     ];
   }

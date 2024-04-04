@@ -22,8 +22,14 @@
 
 /mob/new_player/New()
 	mob_list += src
-	verbs |= /mob/proc/insidePanel
+	add_verb(src,/mob/proc/insidePanel) //CHOMPEdit TGPanel
 	initialized = TRUE // Explicitly don't use Initialize().  New players join super early and use New()
+
+
+/mob/new_player/Destroy()
+	if(panel)
+		QDEL_NULL(panel)
+	. = ..()
 
 /mob/new_player/verb/new_player_panel()
 	set src = usr
@@ -32,10 +38,16 @@
 
 /mob/new_player/proc/new_player_panel_proc()
 	var/output = "<div align='center'>"
-	/* VOREStation Removal
-	output += "[using_map.get_map_info()]"
-	output +="<hr>"
-	VOREStation Removal End */
+
+	output += "<b>Map:</b> [using_map.full_name]<br>"
+	output += "<b>Station Time:</b> [stationtime2text()]<br>"
+
+	if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
+		output += "<b>Server Initializing!</b>"
+	else
+		output += "<b>Round Duration:</b> [roundduration2text()]<br>"
+	output += "<hr>"
+
 	output += "<p><a href='byond://?src=\ref[src];show_preferences=1'>Character Setup</A></p>"
 
 	if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
@@ -53,6 +65,8 @@
 
 	output += "<hr>" //ChompADD - a line divider between functional and info buttons
 
+	/*
+	//nobody uses this feature
 	if(!IsGuestKey(src.key))
 		establish_db_connection()
 
@@ -60,7 +74,7 @@
 			var/isadmin = 0
 			if(src.client && src.client.holder)
 				isadmin = 1
-			var/DBQuery/query = SSdbcore.NewQuery("SELECT id FROM erro_poll_question WHERE [(isadmin ? "" : "adminonly = false AND")] Now() BETWEEN starttime AND endtime AND id NOT IN (SELECT pollid FROM erro_poll_vote WHERE ckey = :t_ckey) AND id NOT IN (SELECT pollid FROM erro_poll_textreply WHERE ckey = :t_ckey)",list("t_ckey" = ckey)) //CHOMPEdit TGSQL
+			var/datum/db_query/query = SSdbcore.NewQuery("SELECT id FROM erro_poll_question WHERE [(isadmin ? "" : "adminonly = false AND")] Now() BETWEEN starttime AND endtime AND id NOT IN (SELECT pollid FROM erro_poll_vote WHERE ckey = :t_ckey) AND id NOT IN (SELECT pollid FROM erro_poll_textreply WHERE ckey = :t_ckey)",list("t_ckey" = ckey)) //CHOMPEdit TGSQL
 			query.Execute()
 			var/newpoll = 0
 			while(query.NextRow())
@@ -71,8 +85,9 @@
 				output += "<p><b><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A><br>(NEW!)</b></p>" //ChompEDIT - fixed height
 			else
 				output += "<p><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A><br><i>No Changes</i></p>" //ChompEDIT - fixed height
+	*/
 
-	if(client.check_for_new_server_news())
+	if(client?.check_for_new_server_news())
 		output += "<p><b><a href='byond://?src=\ref[src];shownews=1'>Show Server News</A><br>(NEW!)</b></p>" //ChompEDIT 'Game updates' --> 'Server news'
 	else
 		output += "<p><a href='byond://?src=\ref[src];shownews=1'>Show Server News</A><br><i>No Changes</i></p>" //ChompEDIT 'Game updates' --> 'Server news'
@@ -103,35 +118,44 @@
 		client.prefs.lastlorenews = GLOB.news_data.newsindex
 		SScharacter_setup.queue_preferences_save(client.prefs)
 
-	panel = new(src, "Welcome","Welcome", 210, 360, src) // VOREStation Edit //ChompEDIT, height 300 -> 360
+	panel = new(src, "Welcome","Welcome", 210, 400, src) // VOREStation Edit //ChompEDIT, height 300 -> 400
 	panel.set_window_options("can_close=0")
 	panel.set_content(output)
 	panel.open()
 	return
+//CHOMPEdit Begin
+/mob/new_player/get_status_tab_items()
+	. = ..()
+	. += ""
 
-/mob/new_player/Stat()
-	..()
+	. += "Game Mode: [SSticker.hide_mode ? "Secret" : "[config.mode_names[master_mode]]"]"
 
-	if(statpanel("Lobby") && SSticker)
-		stat("Game Mode:", SSticker.hide_mode ? "Secret" : "[config.mode_names[master_mode]]")
+	if(SSvote.mode)
+		. += "Vote: [capitalize(SSvote.mode)] Time Left: [SSvote.time_remaining] s"
 
-		if(SSvote.mode)
-			stat("Vote: [capitalize(SSvote.mode)]", "Time Left: [SSvote.time_remaining] s")
+	if(SSticker.current_state == GAME_STATE_INIT)
+		. += "Time To Start: Server Initializing"
 
-		if(SSticker.current_state == GAME_STATE_INIT)
-			stat("Time To Start:", "Server Initializing")
-
-		else if(SSticker.current_state == GAME_STATE_PREGAME)
-			stat("Time To Start:", "[round(SSticker.pregame_timeleft,1)][round_progressing ? "" : " (DELAYED)"]")
-			stat("Players: [totalPlayers]", "Players Ready: [totalPlayersReady]")
-			totalPlayers = 0
-			totalPlayersReady = 0
-			var/datum/job/refJob = null
-			for(var/mob/new_player/player in player_list)
-				refJob = player.client.prefs.get_highest_job()
-				stat("Player", (player.ready)?("(Playing as: [(refJob)?(refJob.title):("Unknown")])"):(null)) //CHOMPEDIT: Anonymizing [player.key]
-				totalPlayers++
-				if(player.ready)totalPlayersReady++
+	else if(SSticker.current_state == GAME_STATE_PREGAME)
+		. += "Time To Start: [round(SSticker.pregame_timeleft,1)][round_progressing ? "" : " (DELAYED)"]"
+		. += "Players: [totalPlayers]"
+		. += "Players Ready: [totalPlayersReady]"
+		totalPlayers = 0
+		totalPlayersReady = 0
+		var/datum/job/refJob = null
+		for(var/mob/new_player/player in player_list)
+			refJob = player.client.prefs.get_highest_job()
+			if(player.client.prefs.obfuscate_key && player.client.prefs.obfuscate_job)
+				. += "Anonymous User [player.ready ? "Ready!" : null]"
+			else if(player.client.prefs.obfuscate_key)
+				. += "Anonymous User [player.ready ? "(Playing as: [refJob ? refJob.title : "Unknown"])" : null]"
+			else if(player.client.prefs.obfuscate_job)
+				. += "[player.key] [player.ready ? "Ready!" : null]"
+			else
+				. += "[player.key] [player.ready ? "(Playing as: [refJob ? refJob.title : "Unknown"])" : null]"
+			totalPlayers++
+			if(player.ready)totalPlayersReady++
+//CHOMPEdit End
 
 /mob/new_player/Topic(href, href_list[])
 	if(!client)	return 0
@@ -152,15 +176,15 @@
 		new_player_panel_proc()
 
 	if(href_list["observe"])
-		if(tgui_alert(src,"Are you sure you wish to observe? If you do, make sure to not use any knowledge gained from observing if you decide to join later.","Player Setup",list("Yes","No")) == "Yes")
+		if(tgui_alert(src,"Are you sure you wish to observe? If you do, make sure to not use any knowledge gained from observing if you decide to join later.","Observe Round?",list("Yes","No")) == "Yes")
 			if(!client)	return 1
 
 			//Make a new mannequin quickly, and allow the observer to take the appearance
-			var/mob/living/carbon/human/dummy/mannequin = new()
+			var/mob/living/carbon/human/dummy/mannequin = get_mannequin(client.ckey)
 			client.prefs.dress_preview_mob(mannequin)
 			var/mob/observer/dead/observer = new(mannequin)
 			observer.moveToNullspace() //Let's not stay in our doomed mannequin
-			qdel(mannequin)
+			//qdel(mannequin)
 
 			spawning = 1
 			if(client.media)
@@ -182,17 +206,18 @@
 			observer.real_name = client.prefs.real_name
 			observer.name = observer.real_name
 			if(!client.holder && !config.antag_hud_allowed)           // For new ghosts we remove the verb from even showing up if it's not allowed.
-				observer.verbs -= /mob/observer/dead/verb/toggle_antagHUD        // Poor guys, don't know what they are missing!
+				remove_verb(observer, /mob/observer/dead/verb/toggle_antagHUD) //CHOMPEdit        // Poor guys, don't know what they are missing!
 			observer.key = key
 			observer.set_respawn_timer(time_till_respawn()) // Will keep their existing time if any, or return 0 and pass 0 into set_respawn_timer which will use the defaults
+			observer.client.init_verbs()
 			qdel(src)
 
-			return 1
+			return TRUE
 
 	if(href_list["late_join"])
 
 		if(!ticker || ticker.current_state != GAME_STATE_PLAYING)
-			to_chat(usr, "<font color='red'>The round is either not ready, or has already finished...</font>")
+			to_chat(usr, span_red("The round is either not ready, or has already finished..."))
 			return
 
 		var/time_till_respawn = time_till_respawn()
@@ -251,7 +276,7 @@
 		var/voted = 0
 
 		//First check if the person has not voted yet.
-		var/DBQuery/query = SSdbcore.NewQuery("SELECT * FROM erro_privacy WHERE ckey=:t_ckey", list("t_ckey" = src.ckey)) //CHOMPEdit TGSQL
+		var/datum/db_query/query = SSdbcore.NewQuery("SELECT * FROM erro_privacy WHERE ckey=:t_ckey", list("t_ckey" = src.ckey)) //CHOMPEdit TGSQL
 		query.Execute()
 		while(query.NextRow())
 			voted = 1
@@ -278,7 +303,7 @@
 		if(!voted)
 			var/list/sqlargs = list("t_ckey" = src.ckey, "t_option" = "[option]") //CHOMPEdit TGSQL
 			var/sql = "INSERT INTO erro_privacy VALUES (null, Now(), :t_ckey, :t_option)" //CHOMPEdit TGSQL
-			var/DBQuery/query_insert = SSdbcore.NewQuery(sql,sqlargs) //CHOMPEdit TGSQL
+			var/datum/db_query/query_insert = SSdbcore.NewQuery(sql,sqlargs) //CHOMPEdit TGSQL
 			query_insert.Execute()
 			to_chat(usr, "<b>Thank you for your vote!</b>")
 			qdel(query_insert)
@@ -439,7 +464,7 @@
 	if (src != usr)
 		return 0
 	if(!ticker || ticker.current_state != GAME_STATE_PLAYING)
-		to_chat(usr, "<font color='red'>The round is either not ready, or has already finished...</font>")
+		to_chat(usr, span_red("The round is either not ready, or has already finished..."))
 		return 0
 	if(!config.enter_allowed)
 		to_chat(usr, "<span class='notice'>There is an administrative lock on entering the game!</span>")
@@ -540,6 +565,10 @@
 		log_and_message_admins("has joined the round as non-crew. (<A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[T.x];Y=[T.y];Z=[T.z]'>JMP</a>)",character)
 		if(!(J.mob_type & JOB_SILICON))
 			ticker.minds += character.mind
+	else if(rank == JOB_ANOMALY)
+		log_and_message_admins("has joined the round as anomaly. (<A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[T.x];Y=[T.y];Z=[T.z]'>JMP</a>)",character)
+		if(!(J.mob_type & JOB_SILICON))
+			ticker.minds += character.mind
 	//CHOMPEdit End
 	else if(J.mob_type & JOB_SILICON)
 		AnnounceCyborg(character, rank, join_message, announce_channel, character.z)
@@ -584,6 +613,8 @@
 	else
 		if(gut)
 			character.forceMove(gut)
+
+	character.client.init_verbs() // init verbs for the late join
 
 	qdel(src) // Delete new_player mob
 
@@ -693,6 +724,7 @@
 		mind.transfer_to(new_character)					//won't transfer key since the mind is not active
 
 	new_character.name = real_name
+	client.init_verbs()
 	new_character.dna.ready_dna(new_character)
 	new_character.dna.b_type = client.prefs.b_type
 	new_character.sync_organ_dna()

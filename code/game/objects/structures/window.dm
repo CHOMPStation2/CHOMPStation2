@@ -116,7 +116,13 @@
 	take_damage(proj_damage)
 	return
 
+//CHOMPEdit Begin
+/obj/structure/window/can_pathfinding_enter(atom/movable/actor, dir, datum/pathfinding/search)
+	return ..() || (!fulltile && (src.dir) != dir)
 
+/obj/structure/window/can_pathfinding_exit(atom/movable/actor, dir, datum/pathfinding/search)
+	return ..() || (!fulltile && (src.dir != dir))
+//CHOMPEdit End
 /obj/structure/window/ex_act(severity)
 	switch(severity)
 		if(1.0)
@@ -185,22 +191,22 @@
 		user.do_attack_animation(src)
 		shatter()
 
-	else if (usr.a_intent == I_HURT)
+	else if (user.a_intent == I_HURT)
 
-		if (istype(usr,/mob/living/carbon/human))
-			var/mob/living/carbon/human/H = usr
+		if (istype(user,/mob/living/carbon/human))
+			var/mob/living/carbon/human/H = user
 			if(H.species.can_shred(H))
 				attack_generic(H,25)
 				return
 
 		playsound(src, 'sound/effects/glassknock.ogg', 80, 1)
 		user.do_attack_animation(src)
-		usr.visible_message("<span class='danger'>\The [usr] bangs against \the [src]!</span>",
+		user.visible_message("<span class='danger'>\The [user] bangs against \the [src]!</span>",
 							"<span class='danger'>You bang against \the [src]!</span>",
 							"You hear a banging sound.")
 	else
 		playsound(src, 'sound/effects/glassknock.ogg', 80, 1)
-		usr.visible_message("[usr.name] knocks on the [src.name].",
+		user.visible_message("[user.name] knocks on the [src.name].",
 							"You knock on the [src.name].",
 							"You hear a knocking sound.")
 	return

@@ -3,12 +3,12 @@
 /mob
 	var/step_mechanics_pref = TRUE		// Allow participation in macro-micro step mechanics
 	var/pickup_pref = TRUE				// Allow participation in macro-micro pickup mechanics
+	var/center_offset = 0.5				// Center offset for uneven scaling symmetry.
+	var/offset_override = FALSE			// Pref toggle for center offset.
 
 /mob/living
 	var/holder_default
 	var/pickup_active = TRUE			// Toggle whether your help intent picks up micros or pets them
-	var/center_offset = 0.5				// Center offset for uneven scaling symmetry. //CHOMPEdit
-	var/offset_override = FALSE			// Pref toggle for center offset. //CHOMPEdit
 
 // Define holder_type on types we want to be scoop-able
 /mob/living/carbon/human
@@ -32,12 +32,12 @@
 /mob/living/update_icons()
 	. = ..()
 	ASSERT(!ishuman(src))
-	var/cent_offset = center_offset //ChompEDIT
-	if(fuzzy || offset_override || dir == EAST || dir == WEST) //CHOMPEdit
-		cent_offset = 0 //CHOMPEdit
+	var/cent_offset = center_offset
+	if(fuzzy || offset_override || dir == EAST || dir == WEST)
+		cent_offset = 0
 	var/matrix/M = matrix()
 	M.Scale(size_multiplier * icon_scale_x, size_multiplier * icon_scale_y)
-	M.Translate(cent_offset * size_multiplier * icon_scale_x, (vis_height/2)*(size_multiplier-1)) //CHOMPEdit
+	M.Translate(cent_offset * size_multiplier * icon_scale_x, (vis_height/2)*(size_multiplier-1))
 	transform = M
 
 /**
@@ -158,10 +158,6 @@
 	set name = "Adjust Mass"
 	set category = "Abilities" //Seeing as prometheans have an IC reason to be changing mass.
 
-	if(!resizable)
-		to_chat(src, "<span class='warning'>You are immune to resizing!</span>")
-		return
-
 	var/nagmessage = "Adjust your mass to be a size between 25 to 200% (or 1% to 600% in dormitories). (DO NOT ABUSE)"
 	var/default = size_multiplier * 100
 	var/new_size = tgui_input_number(usr, nagmessage, "Pick a Size", default, 600, 1)
@@ -217,6 +213,9 @@
  * @return false if normal code should continue, true to prevent normal code.
  */
 /mob/living/proc/handle_micro_bump_helping(mob/living/tmob)
+	// CHOMPAdd - Phased
+	if(is_incorporeal() || tmob.is_incorporeal())
+		return FALSE
 	//Riding and being moved to us or something similar
 	if(tmob in buckled_mobs)
 		return TRUE
@@ -275,6 +274,9 @@
 		return
 	//We can't be stepping on anyone
 	if(!canmove || buckled)
+		return
+	// CHOMPAdd - Phased
+	if(is_incorporeal() || tmob.is_incorporeal())
 		return
 
 	//Riding and being moved to us or something similar

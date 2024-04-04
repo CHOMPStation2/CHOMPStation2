@@ -38,6 +38,11 @@
 		ooc_notes_window(usr)
 		set_metainfo_likes(FALSE)
 		set_metainfo_dislikes(FALSE)
+		//CHOMPEdit Start
+		set_metainfo_favs(FALSE)
+		set_metainfo_maybes(FALSE)
+		set_metainfo_ooc_style(FALSE)
+		//CHOMPEdit End
 
 /mob/living/proc/set_metainfo_panel()
 	if(usr != src)
@@ -53,8 +58,10 @@
 /mob/living/proc/set_metainfo_likes(var/reopen = TRUE)
 	if(usr != src)
 		return
-	var/new_metadata = strip_html_simple(tgui_input_text(usr, "Enter any information you'd like others to see relating to your LIKED roleplay preferences. This will not be saved permanently unless you click save in the OOC notes panel!", "Game Preference" , html_decode(ooc_notes_likes), multiline = TRUE,  prevent_enter = TRUE))
+	var/new_metadata = strip_html_simple(tgui_input_text(usr, "Enter any information you'd like others to see relating to your LIKED roleplay preferences. This will not be saved permanently unless you click save in the OOC notes panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(ooc_notes_likes), multiline = TRUE,  prevent_enter = TRUE))
 	if(new_metadata && CanUseTopic(usr))
+		if(new_metadata == "!clear")
+			new_metadata = ""
 		ooc_notes_likes = new_metadata
 		client.prefs.metadata_likes = new_metadata
 		to_chat(usr, "<span class='filter_notice'>OOC note likes have been updated. Don't forget to save!</span>")
@@ -65,8 +72,10 @@
 /mob/living/proc/set_metainfo_dislikes(var/reopen = TRUE)
 	if(usr != src)
 		return
-	var/new_metadata = strip_html_simple(tgui_input_text(usr, "Enter any information you'd like others to see relating to your DISLIKED roleplay preferences. This will not be saved permanently unless you click save in the OOC notes panel!", "Game Preference" , html_decode(ooc_notes_dislikes), multiline = TRUE,  prevent_enter = TRUE))
+	var/new_metadata = strip_html_simple(tgui_input_text(usr, "Enter any information you'd like others to see relating to your DISLIKED roleplay preferences. This will not be saved permanently unless you click save in the OOC notes panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(ooc_notes_dislikes), multiline = TRUE,  prevent_enter = TRUE))
 	if(new_metadata && CanUseTopic(usr))
+		if(new_metadata == "!clear")
+			new_metadata = ""
 		ooc_notes_dislikes = new_metadata
 		client.prefs.metadata_dislikes = new_metadata
 		to_chat(usr, "<span class='filter_notice'>OOC note dislikes have been updated. Don't forget to save!</span>")
@@ -87,11 +96,51 @@
 	if(!ooc_notes)
 		return
 	var/msg = ooc_notes
-	if(ooc_notes_likes)
-		msg += "<br><br><b>LIKES</b><br><br>[ooc_notes_likes]"
-	if(ooc_notes_dislikes)
-		msg += "<br><br><b>DISLIKES</b><br><br>[ooc_notes_dislikes]"
-	to_chat(usr, "<span class='filter_notice'>[src]'s Metainfo:<br>[msg]</span>")
+	//CHOMPEdit Start
+	if(ooc_notes_style && (ooc_notes_favs || ooc_notes_likes || ooc_notes_maybes || ooc_notes_dislikes) && usr.client.is_preference_enabled(/datum/client_preference/vchat_enable)) // Oldchat hates proper formatting
+		msg += "<br><br>"
+		msg += "<table><tr>"
+		if(ooc_notes_favs)
+			msg += "<th><b>\t[span_blue("FAVOURITES")]</b></th>"
+		if(ooc_notes_likes)
+			msg += "<th><b>\t[span_green("LIKES")]</b></th>"
+		if(ooc_notes_maybes)
+			msg += "<th><b>\t[span_yellow("MAYBES")]</b></th>"
+		if(ooc_notes_dislikes)
+			msg += "<th><b>\t[span_red("DISLIKES")]</b></th>"
+		msg += "</tr><tr>"
+		if(ooc_notes_favs)
+			msg += "<td>"
+			for(var/line in splittext(ooc_notes_favs, "\n"))
+				msg += "\t[line]\n"
+			msg += "</td>"
+		if(ooc_notes_likes)
+			msg += "<td>"
+			for(var/line in splittext(ooc_notes_likes, "\n"))
+				msg += "\t[line]\n"
+			msg += "</td>"
+		if(ooc_notes_maybes)
+			msg += "<td>"
+			for(var/line in splittext(ooc_notes_maybes, "\n"))
+				msg += "\t[line]\n"
+			msg += "</td>"
+		if(ooc_notes_dislikes)
+			msg += "<td>"
+			for(var/line in splittext(ooc_notes_dislikes, "\n"))
+				msg += "\t[line]\n"
+			msg += "</td>"
+		msg += "</tr></table>"
+	else
+		if(ooc_notes_favs)
+			msg += "<br><br><b>[span_blue("FAVOURITES")]</b><br>[ooc_notes_favs]"
+		if(ooc_notes_likes)
+			msg += "<br><br><b>[span_green("LIKES")]</b><br>[ooc_notes_likes]"
+		if(ooc_notes_maybes)
+			msg += "<br><br><b>[span_yellow("MAYBES")]</b><br>[ooc_notes_maybes]"
+		if(ooc_notes_dislikes)
+			msg += "<br><br><b>[span_red("DISLIKES")]</b><br>[ooc_notes_dislikes]"
+	to_chat(usr, "<span class='chatexport'><b>[src]'s Metainfo:</b><br>[msg]</span>")
+	//CHOMPEdit End
 
 /mob/living/verb/set_custom_link()
 	set name = "Set Custom Link"
@@ -123,7 +172,7 @@
 		voice_freq = choice
 		return
 	else if(choice == 1)
-		choice = tgui_input_number(src, "Choose your character's voice frequency, ranging from [MIN_VOICE_FREQ] to [MAX_VOICE_FREQ]", "Custom Voice Frequency", null, MAX_VOICE_FREQ, MIN_VOICE_FREQ, round_value = TRUE)
+		choice = tgui_input_number(src, "Choose your character's voice frequency, ranging from [MIN_VOICE_FREQ] to [MAX_VOICE_FREQ]", "Custom Voice Frequency", null, MAX_VOICE_FREQ, MIN_VOICE_FREQ)
 	else if(choice > MAX_VOICE_FREQ)
 		choice = MAX_VOICE_FREQ
 	else if(choice < MIN_VOICE_FREQ)
@@ -184,3 +233,7 @@
 			voice_sounds_list = goon_speak_roach_sound
 		if("goon speak skelly")
 			voice_sounds_list = goon_speak_skelly_sound
+//CHOMPedit start.
+		if("xeno speak")
+			voice_sounds_list = xeno_speak_sound
+//CHOMPedit end.

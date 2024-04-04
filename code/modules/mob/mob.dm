@@ -2,8 +2,8 @@
 	mob_list -= src
 	dead_mob_list -= src
 	living_mob_list -= src
+	player_list -= src
 	unset_machine()
-	qdel(hud_used)
 	clear_fullscreen()
 	if(client)
 		for(var/obj/screen/movable/spell_master/spell_master in spell_masters)
@@ -14,9 +14,27 @@
 		spellremove(src)
 	if(!istype(src,/mob/observer)) //CHOMPEdit
 		ghostize() //CHOMPEdit
+	//ChompEDIT start - fix hard qdels
 	QDEL_NULL(plane_holder)
-	..()
-	return QDEL_HINT_HARDDEL_NOW
+	QDEL_NULL(hud_used)
+	for(var/key in alerts) //clear out alerts
+		clear_alert(key)
+	if(pulling)
+		stop_pulling() //TG does this on atom/movable but our stop_pulling proc is here so whatever
+
+	previewing_belly = null // from code/modules/vore/eating/mob_ch.dm
+	vore_selected = null // from code/modules/vore/eating/mob_vr
+	focus = null
+
+	if(mind)
+		if(mind.current == src)
+			mind.current = null
+		if(mind.original == src)
+			mind.original = null
+
+	. = ..()
+	update_client_z(null)
+	//return QDEL_HINT_HARDDEL_NOW
 
 /mob/proc/remove_screen_obj_references()
 	hands = null
@@ -43,10 +61,10 @@
 	lastarea = get_area(src)
 	set_focus(src) // VOREStation Add - Key Handling
 	hook_vr("mob_new",list(src)) //VOREStation Code
-	update_transform() // Some mobs may start bigger or smaller than normal.
-	return ..()
+	. = ..()
+	//return QDEL_HINT_HARDDEL_NOW Just keep track of mob references. They delete SO much faster now.
 
-/mob/proc/show_message(msg, type, alt, alt_type)//Message, type of message (1 or 2), alternative message, alt message type (1 or 2)
+/mob/show_message(msg, type, alt, alt_type)//Message, type of message (1 or 2), alternative message, alt message type (1 or 2) //CHOMPEdit show_message() moved to /atom/movable
 	var/time = say_timestamp()
 
 	if(!client && !teleop)	return
@@ -71,8 +89,10 @@
 		to_chat(src, "<span class='filter_notice'><I>... You can almost hear someone talking ...</I></span>")
 	else
 		if(client && client.prefs.chat_timestamp)
-			msg = replacetext(msg, new/regex("^(<span(?: \[^>]*)?>)((?:.|\\n)*</span>)", ""), "$1[time] $2") 
-			to_chat(src,msg)
+			// TG-Chat filters latch directly to the spans, we no longer need that
+			//msg = replacetext(msg, new/regex("^(<span(?: \[^>]*)?>)((?:.|\\n)*</span>)", ""), "$1[time] $2") // Insteres timestamps after the first qualifying span
+			//msg = replacetext(msg, new/regex("^\[^<]((?:.|\\n)*)", ""), "[time] $1") // Spanless messages also get timestamped
+			to_chat(src,"[time] [msg]")
 		else if(teleop)
 			to_chat(teleop, create_text_tag("body", "BODY:", teleop.client) + "[msg]")
 		else
@@ -463,7 +483,7 @@
 	if(client.holder && (client.holder.rights & R_ADMIN|R_EVENT))
 		is_admin = 1
 	else if(stat != DEAD || istype(src, /mob/new_player))
-		to_chat(usr, "<span class='filter_notice'><font color='blue'>You must be observing to use this!</font></span>")
+		to_chat(usr, "<span class='filter_notice'>[span_blue("You must be observing to use this!")]</span>")
 		return
 
 	if(is_admin && stat == DEAD)
@@ -546,6 +566,9 @@
 		to_chat(src, "<span class='warning'>It won't budge!</span>")
 		return
 
+	if(lying) // CHOMPAdd - No pulling while we crawl.
+		return
+
 	var/mob/M = AM
 	if(ismob(AM))
 
@@ -614,7 +637,27 @@
 		playsound(src.loc, 'sound/weapons/thudswoosh.ogg', 25) //Quieter than hugging/grabbing but we still want some audio feedback
 
 		if(H.pull_damage())
-			to_chat(src, "<span class='filter_notice'><font color='red'><B>Pulling \the [H] in their current condition would probably be a bad idea.</B></font></span>")
+			to_chat(src, "<span class='filter_notice'>[span_red("<B>Pulling \the [H] in their current condition would probably be a bad idea.</B>")]</span>")
+
+	//Attempted fix for people flying away through space when cuffed and dragged.
+	if(ismob(AM))
+		var/mob/pulled = AM
+		pulled.inertia_dir = 0
+
+// We have pulled something before, so we should be able to safely continue pulling it. This proc is only for portals!
+/mob/proc/continue_pulling(var/atom/movable/AM)
+
+	if ( !AM || src==AM || !isturf(src.loc) )	//if there's no person pulling OR the person is pulling themself OR the object being pulled is inside something: abort!
+		return
+
+	if (AM.anchored)
+		return
+
+	src.pulling = AM
+	AM.pulledby = src
+
+	if(pullin)
+		pullin.icon_state = "pull1"
 
 	//Attempted fix for people flying away through space when cuffed and dragged.
 	if(ismob(AM))
@@ -654,6 +697,7 @@
 	for(var/mob/M in viewers())
 		M.see(message)
 
+/* CHOMP Removal
 /mob/Stat()
 	..()
 	. = (is_client_active(10 MINUTES))
@@ -663,7 +707,7 @@
 			stat(null, "Time Dilation: [round(SStime_track.time_dilation_current,1)]% AVG:([round(SStime_track.time_dilation_avg_fast,1)]%, [round(SStime_track.time_dilation_avg,1)]%, [round(SStime_track.time_dilation_avg_slow,1)]%)")
 			if(ticker && ticker.current_state != GAME_STATE_PREGAME)
 				stat("Station Time", stationtime2text())
-				var/date = "[stationdate2text()], [capitalize(world_time_season)]"
+				var/date = "[stationdate2text()], [capitalize(GLOB.world_time_season)]" // CHOMPEdit - Managed Globals
 				stat("Station Date", date)
 				stat("Round Duration", roundduration2text())
 
@@ -676,6 +720,7 @@
 				stat("Keys Held", keys2text(client.move_keys_held | client.mod_keys_held))
 				stat("Next Move ADD", dirs2text(client.next_move_dir_add))
 				stat("Next Move SUB", dirs2text(client.next_move_dir_sub))
+				stat("Current size:", size_multiplier * 100)
 
 			if(statpanel("MC"))
 				stat("Location:", "([x], [y], [z]) [loc]")
@@ -732,7 +777,18 @@
 						if(A.plane > plane)
 							continue
 						stat(A)
+*/
 
+/// Adds this list to the output to the stat browser
+/mob/proc/get_status_tab_items()
+	. = list()
+
+/// Gets all relevant proc holders for the browser statpenl
+/mob/proc/get_proc_holders()
+	. = list()
+	//if(mind)
+		//. += get_spells_for_statpanel(mind.spell_list)
+	//. += get_spells_for_statpanel(mob_spell_list)
 
 // facing verbs
 /mob/proc/canface()
@@ -967,7 +1023,7 @@
 		visible_message("<span class='warning'><b>[usr] rips [selection] out of [src]'s body.</b></span>","<span class='warning'><b>[usr] rips [selection] out of your body.</b></span>")
 	valid_objects = get_visible_implants(0)
 	if(valid_objects.len == 1) //Yanking out last object - removing verb.
-		src.verbs -= /mob/proc/yank_out_object
+		remove_verb(src,/mob/proc/yank_out_object)  //CHOMPEdit
 		clear_alert("embeddedobject")
 
 	if(ishuman(src))
@@ -1157,7 +1213,7 @@
 /mob/proc/throw_mode_off()
 	src.in_throw_mode = 0
 	if(client)
-		if(a_intent == I_HELP || client.prefs.throwmode_loud)
+		if(client.prefs.throwmode_loud) //CHOMPEdit: Throw notices are based on prefs, and dont ignore said prefs if you're on help intent
 			src.visible_message("<span class='notice'>[src] relaxes from their ready stance.</span>","<span class='notice'>You relax from your ready stance.</span>")
 	if(src.throw_icon) //in case we don't have the HUD and we use the hotkey
 		src.throw_icon.icon_state = "act_throw_off"
@@ -1165,7 +1221,7 @@
 /mob/proc/throw_mode_on()
 	src.in_throw_mode = 1
 	if(client)
-		if(a_intent == I_HELP || client.prefs.throwmode_loud)
+		if(client.prefs.throwmode_loud) //CHOMPEdit: Throw notices are based on prefs, and dont ignore said prefs if you're on help
 			if(src.get_active_hand())
 				src.visible_message("<span class='warning'>[src] winds up to throw [get_active_hand()]!</span>","<span class='notice'>You wind up to throw [get_active_hand()].</span>")
 			else
@@ -1180,12 +1236,24 @@
 	return 0
 
 //Exploitable Info Update
+/obj
+	var/datum/weakref/exploit_for //if this obj is an exploit for somebody, this points to them
 
 /mob/proc/amend_exploitable(var/obj/item/I)
 	if(istype(I))
 		exploit_addons |= I
 		var/exploitmsg = html_decode("\n" + "Has " + I.name + ".")
 		exploit_record += exploitmsg
+		I.exploit_for = WEAKREF(src)
+
+
+/obj/Destroy()
+	if(exploit_for)
+		var/mob/exploited = exploit_for.resolve()
+		exploited?.exploit_addons -= src
+		exploit_for = null
+	. = ..()
+
 
 /client/proc/check_has_body_select()
 	return mob && mob.hud_used && istype(mob.zone_sel, /obj/screen/zone_sel)

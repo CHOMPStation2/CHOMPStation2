@@ -78,7 +78,7 @@
 
 	for(var/mob/O in viewers(src, null))
 		if ((O.client && !( O.blinded )))
-			O.show_message("<span class='filter_warning'><font color='red'><B>[src] [failed ? "tried to tackle" : "has tackled"] down [T]!</font></B></span>", 1)
+			O.show_message("<span class='filter_warning'>[span_red("<B>[src] [failed ? "tried to tackle" : "has tackled"] down [T]!</B>")]</span>", 1)
 
 /mob/living/carbon/human/proc/commune()
 	set category = "Abilities"
@@ -108,12 +108,12 @@
 
 	log_say("(COMMUNE to [key_name(M)]) [text]",src)
 
-	to_chat(M, "<span class='filter_say'><font color='blue'>Like lead slabs crashing into the ocean, alien thoughts drop into your mind: [text]</font></span>")
+	to_chat(M, "<span class='filter_say'>[span_blue("Like lead slabs crashing into the ocean, alien thoughts drop into your mind: [text]")]</span>")
 	if(istype(M,/mob/living/carbon/human))
 		var/mob/living/carbon/human/H = M
 		if(H.species.name == src.species.name)
 			return
-		to_chat(H, "<span class='filter_notice'><font color='red'>Your nose begins to bleed...</font></span>")
+		to_chat(H, "<span class='filter_notice'>[span_red("Your nose begins to bleed...")]</span>")
 		H.drip(1)
 
 /mob/living/carbon/human/proc/regurgitate()
@@ -126,7 +126,7 @@
 			if(M in stomach_contents)
 				stomach_contents.Remove(M)
 				M.loc = loc
-		src.visible_message("<span class='filter_warning'><font color='red'><B>[src] hurls out the contents of their stomach!</B></font></span>")
+		src.visible_message("<span class='filter_warning'>[span_red("<B>[src] hurls out the contents of their stomach!</B>")]</span>")
 	return
 
 /mob/living/carbon/human/proc/psychic_whisper(mob/M as mob in oview())
@@ -137,8 +137,8 @@
 	var/msg = sanitize(tgui_input_text(usr, "Message:", "Psychic Whisper"))
 	if(msg)
 		log_say("(PWHISPER to [key_name(M)]) [msg]", src)
-		to_chat(M, "<span class='filter_say'><font color='green'>You hear a strange, alien voice in your head... <i>[msg]</i></font></span>")
-		to_chat(src, "<span class='filter_say'><font color='green'>You said: \"[msg]\" to [M]</font></span>")
+		to_chat(M, "<span class='filter_say'>[span_green("You hear a strange, alien voice in your head... <i>[msg]</i>")]</span>")
+		to_chat(src, "<span class='filter_say'>[span_green("You said: \"[msg]\" to [M]")]</span>")
 	return
 
 /mob/living/carbon/human/proc/diona_split_nymph()
@@ -191,8 +191,8 @@
 			qdel(Org)
 
 		// Purge the diona verbs.
-		verbs -= /mob/living/carbon/human/proc/diona_split_nymph
-		verbs -= /mob/living/carbon/human/proc/regenerate
+		remove_verb(src,/mob/living/carbon/human/proc/diona_split_nymph) //CHOMPEdit TGPanel
+		remove_verb(src,/mob/living/carbon/human/proc/regenerate) //CHOMPEdit TGPanel
 
 		for(var/obj/item/organ/external/E in organs) // Just fall apart.
 			E.droplimb(TRUE)
@@ -263,7 +263,7 @@
 	to_chat(src, "<span class='notice'>You take a moment to listen in to your environment...</span>")
 	for(var/mob/living/L in range(client.view, src))
 		var/turf/T = get_turf(L)
-		if(!T || L == src || L.stat == DEAD || is_below_sound_pressure(T))
+		if(!T || L == src || L.stat == DEAD || is_below_sound_pressure(T) || L.is_incorporeal()) // CHOMPAdd - No bluespace ears.
 			continue
 		heard_something = TRUE
 		var/feedback = list()

@@ -78,7 +78,7 @@
 	if(current)					//remove ourself from our old body's mind variable
 		if(changeling)
 			current.remove_changeling_powers()
-			current.verbs -= /datum/changeling/proc/EvolutionMenu
+			remove_verb(current,/datum/changeling/proc/EvolutionMenu)  //CHOMPEdit
 		current.mind = null
 
 	if(new_character.mind)		//remove any mind currently in our new body's mind variable
@@ -92,6 +92,9 @@
 
 	if(active)
 		new_character.key = key		//now transfer the key to link the client to our new body
+
+	if(new_character.client) //CHOMPEdit
+		new_character.client.init_verbs() // re-initialize character specific verbs //CHOMPEdit
 
 /datum/mind/proc/store_memory(new_text)
 	memory += "[new_text]<BR>"
@@ -133,9 +136,9 @@
 		for(var/datum/objective/O in objectives)
 			out += "<b>Objective #[num]:</b> [O.explanation_text] "
 			if(O.completed)
-				out += "(<font color='green'>complete</font>)"
+				out += "([span_green("complete")])"
 			else
-				out += "(<font color='red'>incomplete</font>)"
+				out += "([span_red("incomplete")])"
 			out += " <a href='?src=\ref[src];[HrefToken()];obj_completed=\ref[O]'>\[toggle\]</a>"
 			out += " <a href='?src=\ref[src];[HrefToken()];obj_delete=\ref[O]'>\[remove\]</a><br>"
 			num++
@@ -409,7 +412,7 @@
 
 	else if (href_list["obj_announce"])
 		var/obj_count = 1
-		to_chat(current, "<font color='blue'>Your current objectives:</font>")
+		to_chat(current, span_blue("Your current objectives:"))
 		for(var/datum/objective/objective in objectives)
 			to_chat(current, "<B>Objective #[obj_count]</B>: [objective.explanation_text]")
 			obj_count++
@@ -506,7 +509,7 @@
 	if(!mind.name)	mind.name = real_name
 	mind.current = src
 	if(player_is_antag(mind))
-		src.client.verbs += /client/proc/aooc
+		add_verb(src.client,/client/proc/aooc) //CHOMPEdit
 
 //HUMAN
 /mob/living/carbon/human/mind_initialize()

@@ -103,7 +103,7 @@
 		dat += {"<A href='?our_comp=\ref[our_comp];[HrefToken()];orderbyid=1'>(Order book by SS<sup>13</sup>BN)</A><BR><BR>
 		<table>
 		<tr><td><A href='?our_comp=\ref[our_comp];[HrefToken()];sort=author>AUTHOR</A></td><td><A href='?our_comp=\ref[our_comp];[HrefToken()];sort=title>TITLE</A></td><td><A href='?our_comp=\ref[our_comp];[HrefToken()];sort=category>CATEGORY</A></td><td></td></tr>"}
-		var/DBQuery/query = SSdbcore.NewQuery("SELECT id, author, title, category FROM library ORDER BY [our_comp.sortby]")
+		var/datum/db_query/query = SSdbcore.NewQuery("SELECT id, author, title, category FROM library ORDER BY [our_comp.sortby]")
 		query.Execute()
 
 		var/show_admin_options = check_rights(R_ADMIN, show_msg = FALSE)
@@ -121,3 +121,20 @@
 
 	usr << browse(dat, "window=library")
 	onclose(usr, "library")
+
+/client/proc/toggle_spawning_with_recolour()
+	set name = "Toggle Simple/Robot recolour verb"
+	set desc = "Makes it so new robots/simple_mobs spawn with a verb to recolour themselves for this round. You must set them separately."
+	set category = "Server"
+
+	if(!check_rights(R_ADMIN|R_EVENT|R_FUN))
+		return
+
+	var/which = tgui_alert(usr, "Which do you want to toggle?", "Choose Recolour Toggle", list("Robot", "Simple Mob"))
+	switch(which)
+		if("Robot")
+			config.allow_robot_recolor = !config.allow_robot_recolor
+			to_chat(usr, "You have [config.allow_robot_recolor ? "enabled" : "disabled"] newly spawned cyborgs to spawn with the recolour verb")
+		if("Simple Mob")
+			config.allow_simple_mob_recolor = !config.allow_simple_mob_recolor
+			to_chat(usr, "You have [config.allow_simple_mob_recolor ? "enabled" : "disabled"] newly spawned simple mobs to spawn with the recolour verb")

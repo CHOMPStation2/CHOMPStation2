@@ -69,7 +69,7 @@ var/list/admin_ranks = list()								//list of all ranks with associated rights
 		C.holder = null
 	GLOB.admins.Cut()
 	load_admin_ranks() //CHOMP Edit: moved this from "f(config.admin_legacy_system)" and put it here instead, literally just moved it 3 lines.
-	
+
 	if(config.admin_legacy_system)
 		//Clear profile access
 		for(var/A in world.GetConfig("admin"))
@@ -119,7 +119,7 @@ var/list/admin_ranks = list()								//list of all ranks with associated rights
 			load_admins()
 			return
 
-		var/DBQuery/query = SSdbcore.NewQuery("SELECT ckey, rank, level, flags FROM erro_admin") //CHOMPEdit TGSQL
+		var/datum/db_query/query = SSdbcore.NewQuery("SELECT ckey, rank, level, flags FROM erro_admin") //CHOMPEdit TGSQL
 		query.Execute()
 		while(query.NextRow())
 			var/ckey = query.item[1]

@@ -98,12 +98,12 @@ var/list/ai_verbs_default = list(
 	can_be_antagged = TRUE
 
 /mob/living/silicon/ai/proc/add_ai_verbs()
-	src.verbs |= ai_verbs_default
-	src.verbs |= silicon_subsystems
+	add_verb(src,ai_verbs_default) //CHOMPEdit TGPanel
+	add_verb(src,silicon_subsystems) //CHOMPEdit TGPanel
 
 /mob/living/silicon/ai/proc/remove_ai_verbs()
-	src.verbs -= ai_verbs_default
-	src.verbs -= silicon_subsystems
+	remove_verb(src,ai_verbs_default)  //CHOMPEdit
+	remove_verb(src,silicon_subsystems)  //CHOMPEdit
 
 /mob/living/silicon/ai/New(loc, var/datum/ai_laws/L, var/obj/item/device/mmi/B, var/safety = 0)
 	announcement = new()
@@ -214,6 +214,11 @@ var/list/ai_verbs_default = list(
 			ooc_notes = meta_info
 			ooc_notes_likes = client.prefs.metadata_likes
 			ooc_notes_dislikes = client.prefs.metadata_dislikes
+			//CHOMPEdit Start
+			ooc_notes_favs = client.prefs.metadata_favs
+			ooc_notes_maybes = client.prefs.metadata_maybes
+			ooc_notes_style = client.prefs.matadata_ooc_style
+			//CHOMPEdit End
 
 	if (malf && !(mind in malf.current_antagonists))
 		show_laws()
@@ -237,27 +242,28 @@ var/list/ai_verbs_default = list(
 
 	return ..()
 
-/mob/living/silicon/ai/Stat()
-	..()
-	if(statpanel("Status"))
-		if(!stat) // Make sure we're not unconscious/dead.
-			stat(null, text("System integrity: [(health+100)/2]%"))
-			stat(null, text("Connected synthetics: [connected_robots.len]"))
-			for(var/mob/living/silicon/robot/R in connected_robots)
-				var/robot_status = "Nominal"
-				if(R.shell)
-					robot_status = "AI SHELL"
-				else if(R.stat || !R.client)
-					robot_status = "OFFLINE"
-				else if(!R.cell || R.cell.charge <= 0)
-					robot_status = "DEPOWERED"
-				//Name, Health, Battery, Module, Area, and Status! Everything an AI wants to know about its borgies!
-				stat(null, text("[R.name] | S.Integrity: [R.health]% | Cell: [R.cell ? "[R.cell.charge]/[R.cell.maxcharge]" : "Empty"] | \
-				Module: [R.modtype] | Loc: [get_area_name(R, TRUE)] | Status: [robot_status]"))
-			stat(null, text("AI shell beacons detected: [LAZYLEN(GLOB.available_ai_shells)]")) //Count of total AI shells
-		else
-			stat(null, text("Systems nonfunctional"))
-
+//ChompEDIT START - TGpanel
+/mob/living/silicon/ai/get_status_tab_items()
+	. = ..()
+	. += ""
+	if(!stat) // Make sure we're not unconscious/dead.
+		. += "System integrity: [(health+100)/2]%"
+		. += "Connected synthetics: [connected_robots.len]"
+		for(var/mob/living/silicon/robot/R in connected_robots)
+			var/robot_status = "Nominal"
+			if(R.shell)
+				robot_status = "AI SHELL"
+			else if(R.stat || !R.client)
+				robot_status = "OFFLINE"
+			else if(!R.cell || R.cell.charge <= 0)
+				robot_status = "DEPOWERED"
+			//Name, Health, Battery, Module, Area, and Status! Everything an AI wants to know about its borgies!
+			. += "[R.name] | S.Integrity: [R.health]% | Cell: [R.cell ? "[R.cell.charge]/[R.cell.maxcharge]" : "Empty"] | \
+			Module: [R.modtype] | Loc: [get_area_name(R, TRUE)] | Status: [robot_status]"
+		. += "AI shell beacons detected: [LAZYLEN(GLOB.available_ai_shells)]" //Count of total AI shells
+	else
+		. += "Systems nonfunctional"
+//ChompEDIT END
 
 /mob/living/silicon/ai/proc/setup_icon()
 	var/file = file2text("config/custom_sprites.txt")
@@ -475,7 +481,7 @@ var/list/ai_verbs_default = list(
 		if(target && (!istype(target, /mob/living/carbon/human) || html_decode(href_list["trackname"]) == target:get_face_name()))
 			ai_actual_track(target)
 		else
-			to_chat(src, "<span class='filter_warning'><font color='red'>System error. Cannot locate [html_decode(href_list["trackname"])].</font></span>")
+			to_chat(src, "<span class='filter_warning'>[span_red("System error. Cannot locate [html_decode(href_list["trackname"])].")]</span>")
 		return
 
 	if(href_list["trackbot"])

@@ -71,8 +71,8 @@
 	in_use = FALSE
 	preserve_item = 1
 	var/uses_charges = 0 					// If the area editor has limited uses.
-	var/initial_charges = 10
-	var/charges = 10						// The amount of uses the area editor has.
+	var/initial_charges = 25 //CHOMPedit
+	var/charges = 25						// The amount of uses the area editor has. //CHOMPedit
 	var/station_master = 1					// If the areaeditor can add charges to others.
 	var/wire_schematics = 0					// If the areaeditor can see wires.
 	var/can_override = 0						// If you want the areaeditor to override the 'Don't make a new area where one already exists' logic. Only given to CE blueprints.
@@ -108,7 +108,7 @@
 			to_chat(user, span_notice("You add some more writing material to the [src] with the [blueprint]!"))
 			return
 		else if(blueprint.uses_charges && blueprint.charges) //Getting from another with limited charges.
-			var/to_add = tgui_input_number(user, "How many charges do you want to add to the [src]?", "[blueprint]", missing_charges)
+			var/to_add = tgui_input_number(user, "How many charges do you want to add to the [src]?", "[blueprint]", missing_charges, blueprint.charges)
 			if(!isnull(to_add) && blueprint.charges >= to_add)
 				to_chat(user, span_notice("You add some more writing material to the [src] with the [blueprint]!"))
 				blueprint.charges -= to_add
@@ -244,7 +244,7 @@
 	desc = "A piece of paper that allows for expansion of the station and creation of new areas. There is a \"For Official Use Only\" stamp on it. NOT to be mistaken with the station blueprints."		// CHOMPEDIT : purdev (some spelling fixes)
 	station_master = 0
 	uses_charges = 1
-	can_override = 0
+	can_override = 1 //CHOMPedit, This will allow easier building on the planets, dont think blueprint grief is too big of a problem. -Lotion
 
 
 

@@ -5,7 +5,7 @@
 
 /datum/spawnpoint/stationgateway/New()
 	..()
-	turfs = latejoin_gatewaystation
+	turfs = GLOB.latejoin_gatewaystation
 
 /datum/spawnpoint/vore
 	display_name = "Vorespawn - Prey"
@@ -27,8 +27,8 @@
 /datum/spawnpoint/plainspath
 	display_name = "Sif plains"
 	msg = "has checked in at the plains gate"
-	restrict_job = list(JOB_OUTSIDER)
+	restrict_job = list(JOB_OUTSIDER, JOB_ANOMALY)
 
 /datum/spawnpoint/plainspath/New()
 	..()
-	turfs = latejoin_plainspath
+	turfs = GLOB.latejoin_plainspath

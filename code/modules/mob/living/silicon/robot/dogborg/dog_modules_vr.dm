@@ -1,54 +1,53 @@
-/obj/item/weapon/dogborg/jaws/big
-	name = "combat jaws"
+/obj/item/weapon/melee/dogborg/jaws
 	icon = 'icons/mob/dogborg_vr.dmi'
+	hitsound = 'sound/weapons/bite.ogg'
+	throwforce = 0
+	w_class = ITEMSIZE_NORMAL
+	pry = 1
+	tool_qualities = list(TOOL_CROWBAR)
+
+/obj/item/weapon/melee/dogborg/jaws/big
+	name = "combat jaws"
 	icon_state = "jaws"
 	desc = "The jaws of the law."
-	force = 10
-	throwforce = 0
-	hitsound = 'sound/weapons/bite.ogg'
+	force = 25
+	armor_penetration = 25
+	defend_chance = 15
 	attack_verb = list("chomped", "bit", "ripped", "mauled", "enforced")
-	w_class = ITEMSIZE_NORMAL
 
-/obj/item/weapon/dogborg/jaws/small
+/obj/item/weapon/melee/dogborg/jaws/small
 	name = "puppy jaws"
-	icon = 'icons/mob/dogborg_vr.dmi'
 	icon_state = "smalljaws"
 	desc = "The jaws of a small dog."
-	force = 5
-	throwforce = 0
-	hitsound = 'sound/weapons/bite.ogg'
+	force = 10
+	defend_chance = 5
 	attack_verb = list("nibbled", "bit", "gnawed", "chomped", "nommed")
-	w_class = ITEMSIZE_NORMAL
 	var/emagged = 0
 
-/obj/item/weapon/dogborg/jaws/small/attack_self(mob/user)
+/obj/item/weapon/melee/dogborg/jaws/small/attack_self(mob/user)
 	var/mob/living/silicon/robot/R = user
 	if(R.emagged || R.emag_items)
 		emagged = !emagged
 		if(emagged)
 			name = "combat jaws"
-			icon = 'icons/mob/dogborg_vr.dmi'
 			icon_state = "jaws"
 			desc = "The jaws of the law."
-			force = 10
-			throwforce = 0
-			hitsound = 'sound/weapons/bite.ogg'
+			force = 25
+			armor_penetration = 25
+			defend_chance = 15
 			attack_verb = list("chomped", "bit", "ripped", "mauled", "enforced")
-			w_class = ITEMSIZE_NORMAL
 		else
 			name = "puppy jaws"
-			icon = 'icons/mob/dogborg_vr.dmi'
 			icon_state = "smalljaws"
 			desc = "The jaws of a small dog."
-			force = 5
-			throwforce = 0
-			hitsound = 'sound/weapons/bite.ogg'
+			force = 10
+			armor_penetration = 0
+			defend_chance = 5
 			attack_verb = list("nibbled", "bit", "gnawed", "chomped", "nommed")
-			w_class = ITEMSIZE_NORMAL
 		update_icon()
 
 // Baton chompers
-/obj/item/weapon/borg_combat_shocker
+/obj/item/weapon/melee/borg_combat_shocker
 	name = "combat shocker"
 	icon = 'icons/mob/dogborg_vr.dmi'
 	icon_state = "combatshocker"
@@ -61,7 +60,7 @@
 	var/charge_cost = 15
 	var/dogborg = FALSE
 
-/obj/item/weapon/borg_combat_shocker/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
+/obj/item/weapon/melee/borg_combat_shocker/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
 	if(isrobot(target))
 		return ..()
 
@@ -241,6 +240,8 @@
 	icon_state = "synthtongue"
 	hitsound = 'sound/effects/attackblob.ogg'
 	var/emagged = 0
+	var/datum/matter_synth/water = null //CHOMPAdd readds water
+	var/busy = 0 	//prevents abuse and runtimes
 
 /obj/item/device/robot_tongue/New()
 	..()
@@ -267,38 +268,87 @@
 		return
 
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+	if(busy)
+		to_chat(user, "<span class='warning'>You are already licking something else.</span>")
+		return
 	if(user.client && (target in user.client.screen))
 		to_chat(user, "<span class='warning'>You need to take \the [target.name] off before cleaning it!</span>")
+	//CHOMPADD Start
+	if(istype(target, /obj/structure/sink) || istype(target, /obj/structure/toilet)) //Dog vibes.
+		if (water.energy == water.max_energy && istype(target, /obj/structure/sink)) return
+		if (water.energy == water.max_energy && istype(target, /obj/structure/toilet))
+			to_chat(user, "<span class='notice'>You refrain from lapping water from the [target.name] with your reserves filled.</span>")
+			return
+		user.visible_message("<span class='filter_notice'>[user] begins to lap up water from [target.name].</span>", "<span class='notice'>You begin to lap up water from [target.name].</span>")
+		busy = 1
+		if(do_after(user, 50))
+			water.add_charge(50)
+			to_chat(src, "<span class='filter_notice'>You refill some of your water reserves.</span>")
+		busy = 0
+	else if(water.energy < 5)
+		to_chat(user, "<span class='notice'>Your mouth feels dry. You should drink up some water .</span>")
+	//CHOMPADD End
 		return
+	//CHOMPADD Start
+	else if(istype(target,/obj/effect/decal/cleanable))
+		user.visible_message("<span class='filter_notice'>[user] begins to lick off \the [target.name].</span>", "<span class='notice'>You begin to lick off \the [target.name]...</span>")
+		busy = 1
+		if(do_after(user, 50))
+			to_chat(user, "<span class='notice'>You finish licking off \the [target.name].</span>")
+			water.use_charge(5)
+			qdel(target)
+			var/mob/living/silicon/robot/R = user
+			R.cell.charge += 50
+		busy = 0
+	//CHOMPADD End
 	else if(istype(target,/obj/item))
 		if(istype(target,/obj/item/trash))
 			user.visible_message("<span class='filter_notice'>[user] nibbles away at \the [target.name].</span>", "<span class='notice'>You begin to nibble away at \the [target.name]...</span>")
+			busy = 1
 			if(do_after (user, 50))
 				user.visible_message("<span class='filter_notice'>[user] finishes eating \the [target.name].</span>", "<span class='notice'>You finish eating \the [target.name].</span>")
 				to_chat(user, "<span class='notice'>You finish off \the [target.name].</span>")
 				qdel(target)
 				var/mob/living/silicon/robot/R = user
 				R.cell.charge += 250
+				water.use_charge(5)  //CHOMPAdd
+			busy = 0 //CHOMPAdd prevents abuse
 			return
 		if(istype(target,/obj/item/weapon/reagent_containers/food))
 			user.visible_message("[user] nibbles away at \the [target.name].", "<span class='notice'>You begin to nibble away at \the [target.name]...</span>")
+			busy = 1 //CHOMPAdd prevents abuse
 			if(do_after (user, 50))
 				user.visible_message("[user] finishes eating \the [target.name].", "<span class='notice'>You finish eating \the [target.name].</span>")
 				user << "<span class='notice'>You finish off \the [target.name].</span>"
 				del(target)
 				var/mob/living/silicon/robot/R = user
 				R.cell.charge = R.cell.charge + 250
+			busy = 0 //CHOMPAdd prevents abuse
 			return
 		if(istype(target,/obj/item/weapon/cell))
 			user.visible_message("<span class='filter_notice'>[user] begins cramming \the [target.name] down its throat.</span>", "<span class='notice'>You begin cramming \the [target.name] down your throat...</span>")
+			busy = 1
 			if(do_after (user, 50))
 				user.visible_message("<span class='filter_notice'>[user] finishes gulping down \the [target.name].</span>", "<span class='notice'>You finish swallowing \the [target.name].</span>")
 				to_chat(user, "<span class='notice'>You finish off \the [target.name], and gain some charge!</span>")
 				var/mob/living/silicon/robot/R = user
 				var/obj/item/weapon/cell/C = target
 				R.cell.charge += C.charge / 3
+				water.use_charge(5) //CHOMPAdd
 				qdel(target)
+			busy = 0 //CHOMPAdd prevents abuse
 			return
+		//CHOMPAdd Start
+		user.visible_message("<span class='filter_notice'>[user] begins to lick \the [target.name] clean...</span>", "<span class='notice'>You begin to lick \the [target.name] clean...</span>")
+		busy = 1
+		if(do_after(user, 50, exclusive = TRUE))
+			to_chat(user, "<span class='notice'>You clean \the [target.name].</span>")
+			water.use_charge(5)
+			var/obj/effect/decal/cleanable/C = locate() in target
+			qdel(C)
+			target.clean_blood()
+		busy = 0
+		//CHOMPADD End
 	else if(ishuman(target))
 		if(src.emagged)
 			var/mob/living/silicon/robot/R = user
@@ -315,9 +365,25 @@
 		else
 			user.visible_message("<span class='notice'>\The [user] affectionately licks all over \the [target]'s face!</span>", "<span class='notice'>You affectionately lick all over \the [target]'s face!</span>")
 			playsound(src, 'sound/effects/attackblob.ogg', 50, 1)
+			water.use_charge(5) //CHOMPAdd
 			var/mob/living/carbon/human/H = target
 			if(H.species.lightweight == 1)
 				H.Weaken(3)
+	//CHOMPAdd Start
+	else
+		user.visible_message("<span class='filter_notice'>[user] begins to lick \the [target.name] clean...</span>", "<span class='notice'>You begin to lick \the [target.name] clean...</span>")
+		busy = 1
+		if(do_after(user, 50))
+			to_chat(user, "<span class='notice'>You clean \the [target.name].</span>")
+			var/obj/effect/decal/cleanable/C = locate() in target
+			qdel(C)
+			target.clean_blood()
+			water.use_charge(5)
+			if(istype(target, /turf/simulated))
+				var/turf/simulated/T = target
+				T.dirt = 0
+	busy = 0
+	//CHOMPADD End
 	return
 
 /obj/item/pupscrubber
@@ -353,12 +419,13 @@
 	recharge_time = 1 //Takes ten ticks to recharge a laser, so don't waste them all!
 	//cell_type = null //Same cell as a taser until edits are made.
 
-/obj/item/weapon/combat_borgblade
+/obj/item/weapon/melee/combat_borgblade
 	name = "energy blade"
 	icon = 'icons/mob/dogborg_vr.dmi'
 	icon_state = "swordtail"
 	desc = "A glowing dagger. It appears to be extremely sharp."
-	force = 20 //Takes 5 hits to 100-0
+	force = 35 //Takes 3 hits to 100-0
+	armor_penetration = 70
 	sharp = TRUE
 	edge = TRUE
 	throwforce = 0 //This shouldn't be thrown in the first place.
@@ -473,10 +540,10 @@
 	if(ishuman(T))
 		var/mob/living/carbon/human/H = T
 		if(H.species.lightweight == 1)
-			H.Weaken(3)
+			H.Stun(3) // CHOMPEdit - Crawling made this useless. Changing to stun instead.
 			return
 	var/armor_block = run_armor_check(T, "melee")
 	var/armor_soak = get_armor_soak(T, "melee")
 	T.apply_damage(20, HALLOSS,, armor_block, armor_soak)
 	if(prob(75)) //75% chance to stun for 5 seconds, really only going to be 4 bcus click cooldown+animation.
-		T.apply_effect(5, WEAKEN, armor_block)
+		T.apply_effect(5, STUN, armor_block)

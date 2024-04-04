@@ -1,0 +1,1214 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"bm" = (
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseblob)
+"bQ" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"bU" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/structure/blob/normal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"cI" = (
+/turf/simulated/mineral/light,
+/area/submap/eclipseblob)
+"ef" = (
+/turf/simulated/floor/tiled/yellow,
+/area/submap/eclipseblob)
+"ez" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/ravanger,
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseblob)
+"eG" = (
+/obj/machinery/transhuman/resleever,
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"fm" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/structure/blob/factory/turret,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"fs" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/obj/structure/blob/normal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"gb" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"gm" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/item/slime_extract/bluespace,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"gv" = (
+/obj/effect/map_helper/no_phaseshift/area,
+/obj/effect/floor_decal/corner/black/diagonal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"hH" = (
+/obj/structure/table/steel,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseblob)
+"iI" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/structure/blob/normal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"jl" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/hellhound,
+/turf/simulated/floor/tiled/yellow,
+/area/submap/eclipseblob)
+"jt" = (
+/obj/structure/table/steel,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/effect/floor_decal/corner/black/diagonal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"kN" = (
+/obj/machinery/transhuman/resleever,
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"mr" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/effect/floor_decal/industrial/warning/corner,
+/obj/structure/blob/normal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"np" = (
+/turf/simulated/mineral,
+/area/template_noop)
+"ny" = (
+/obj/machinery/computer/transhuman/resleeving,
+/obj/effect/floor_decal/corner/black/diagonal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"od" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/obj/structure/blob/normal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"om" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/structure/blob/normal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"pg" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/obj/structure/blob/normal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"po" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/item/slime_extract/light_pink,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"qX" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning/corner,
+/obj/structure/blob/normal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"sE" = (
+/obj/structure/table/steel,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/item/stack/material/void_opal,
+/turf/simulated/floor/tiled/yellow,
+/area/submap/eclipseblob)
+"tF" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
+/obj/structure/blob/normal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"tG" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/machinery/door/airlock/external/bolted,
+/obj/machinery/door/blast/regular{
+	id = "EclipseBlob"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"tY" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/blob/normal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"uV" = (
+/obj/structure/blob/core/random_hard,
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/structure/blob/core/random_hard{
+	difficulty_floor = 2
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"yt" = (
+/obj/structure/sign/warning/lethal_turrets,
+/turf/simulated/shuttle/wall/voidcraft/lightblue,
+/area/submap/eclipseblob)
+"Bi" = (
+/obj/structure/table/steel,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/item/weapon/paper{
+	info = "Our facility is experiencing strange issues. The slimes appear to be evolving, or being changed by our experimentations. It is taking more failures to get slime units, and some of the creatures are attempting to merge together. I am unsure if we should explore this path or shut it all down.";
+	name = "Status Report"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"Cy" = (
+/obj/structure/table/steel,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/turf/simulated/floor/tiled/yellow,
+/area/submap/eclipseblob)
+"Ej" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/obj/structure/blob/normal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"FC" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"Gt" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/item/slime_extract/dark_blue,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"In" = (
+/turf/simulated/shuttle/wall/voidcraft/lightblue,
+/area/submap/eclipseblob)
+"KO" = (
+/obj/structure/table/steel,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/machinery/button/remote/blast_door{
+	id = "EclipseBlob"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"Lo" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/effect/floor_decal/industrial/warning/corner,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
+/obj/structure/blob/normal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"Mx" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/effect/floor_decal/industrial/warning,
+/obj/structure/blob/normal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"Oi" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/item/slime_extract/oil,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"Ph" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/item/slime_extract/sapphire,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"PX" = (
+/obj/machinery/porta_turret_construct,
+/obj/effect/floor_decal/corner/black/diagonal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"Qo" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/obj/structure/blob/normal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"Qz" = (
+/obj/structure/fans/hardlight/colorable/abductor,
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/machinery/door/blast/regular{
+	id = "EclipseBlob"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"QH" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"Rh" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/blob/normal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"RC" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/item/slime_extract/rainbow,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"UQ" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/item/slime_extract/cerulean,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"Vs" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/obj/structure/blob/normal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"Wp" = (
+/obj/machinery/clonepod/transhuman/full,
+/obj/effect/floor_decal/corner/black/diagonal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"XK" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"Zf" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/item/slime_extract/orange,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+
+(1,1,1) = {"
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+"}
+(2,1,1) = {"
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+"}
+(3,1,1) = {"
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+"}
+(4,1,1) = {"
+np
+np
+np
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+np
+np
+np
+"}
+(5,1,1) = {"
+np
+np
+np
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+np
+np
+np
+"}
+(6,1,1) = {"
+np
+np
+np
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+np
+np
+np
+"}
+(7,1,1) = {"
+np
+np
+np
+cI
+cI
+cI
+cI
+In
+In
+In
+In
+In
+In
+In
+In
+In
+In
+In
+In
+In
+In
+In
+cI
+cI
+cI
+np
+np
+np
+"}
+(8,1,1) = {"
+np
+np
+np
+cI
+cI
+cI
+cI
+Qz
+gb
+gb
+In
+PX
+gb
+gb
+om
+om
+om
+om
+om
+om
+ny
+In
+cI
+cI
+cI
+np
+np
+np
+"}
+(9,1,1) = {"
+np
+np
+np
+cI
+cI
+cI
+cI
+Qz
+gb
+gb
+In
+gb
+gb
+gb
+om
+om
+om
+om
+om
+om
+Wp
+In
+cI
+cI
+cI
+np
+np
+np
+"}
+(10,1,1) = {"
+np
+np
+np
+cI
+cI
+cI
+cI
+yt
+gb
+gb
+In
+gb
+gb
+gb
+om
+om
+mr
+bU
+qX
+bU
+kN
+In
+cI
+cI
+cI
+np
+np
+np
+"}
+(11,1,1) = {"
+np
+np
+np
+cI
+cI
+cI
+cI
+In
+gb
+gb
+In
+gb
+gb
+gb
+In
+In
+In
+bQ
+Rh
+bQ
+In
+In
+In
+cI
+cI
+np
+np
+np
+"}
+(12,1,1) = {"
+np
+np
+np
+In
+In
+In
+In
+In
+gb
+gb
+In
+gb
+gb
+gb
+In
+pg
+iI
+iI
+Qo
+iI
+iI
+od
+In
+cI
+cI
+np
+np
+np
+"}
+(13,1,1) = {"
+np
+np
+np
+In
+Cy
+hH
+Cy
+In
+gb
+gb
+In
+gb
+gb
+jt
+In
+tY
+gb
+Oi
+fm
+Zf
+gb
+Mx
+In
+cI
+cI
+np
+np
+np
+"}
+(14,1,1) = {"
+np
+np
+np
+In
+ez
+ef
+bm
+tG
+gb
+gb
+gb
+gb
+gv
+jt
+QH
+tY
+UQ
+gb
+gb
+gb
+RC
+Mx
+In
+cI
+cI
+np
+np
+np
+"}
+(15,1,1) = {"
+np
+np
+np
+In
+ef
+bm
+ef
+In
+gb
+gb
+gb
+gb
+gb
+KO
+FC
+tY
+fm
+gb
+uV
+gb
+fm
+Mx
+In
+cI
+cI
+np
+np
+np
+"}
+(16,1,1) = {"
+np
+np
+np
+In
+bm
+jl
+bm
+tG
+gb
+gb
+gb
+gb
+gb
+Bi
+XK
+tY
+gm
+gb
+gb
+gb
+Gt
+Mx
+In
+cI
+cI
+np
+np
+np
+"}
+(17,1,1) = {"
+np
+np
+np
+In
+sE
+hH
+Cy
+In
+gb
+gb
+In
+gb
+gb
+jt
+In
+tY
+gb
+po
+fm
+Ph
+gb
+Mx
+In
+cI
+cI
+np
+np
+np
+"}
+(18,1,1) = {"
+np
+np
+np
+In
+In
+In
+In
+In
+gb
+gb
+In
+gb
+gb
+gb
+In
+tF
+bU
+bU
+Lo
+bU
+bU
+Ej
+In
+cI
+cI
+np
+np
+np
+"}
+(19,1,1) = {"
+np
+np
+np
+cI
+cI
+cI
+cI
+In
+gb
+gb
+In
+gb
+gb
+gb
+In
+In
+In
+bQ
+Rh
+bQ
+In
+In
+In
+cI
+cI
+np
+np
+np
+"}
+(20,1,1) = {"
+np
+np
+np
+cI
+cI
+cI
+cI
+yt
+gb
+gb
+In
+gb
+gb
+gb
+om
+om
+Vs
+iI
+fs
+iI
+eG
+In
+cI
+cI
+cI
+np
+np
+np
+"}
+(21,1,1) = {"
+np
+np
+np
+cI
+cI
+cI
+cI
+Qz
+gb
+gb
+In
+gb
+gb
+gb
+om
+om
+om
+om
+om
+om
+Wp
+In
+cI
+cI
+cI
+np
+np
+np
+"}
+(22,1,1) = {"
+np
+np
+np
+cI
+cI
+cI
+cI
+Qz
+gb
+gb
+In
+PX
+gb
+gb
+om
+om
+om
+om
+om
+om
+ny
+In
+cI
+cI
+cI
+np
+np
+np
+"}
+(23,1,1) = {"
+np
+np
+np
+cI
+cI
+cI
+cI
+In
+In
+In
+In
+In
+In
+In
+In
+In
+In
+In
+In
+In
+In
+In
+cI
+cI
+cI
+np
+np
+np
+"}
+(24,1,1) = {"
+np
+np
+np
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+np
+np
+np
+"}
+(25,1,1) = {"
+np
+np
+np
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+np
+np
+np
+"}
+(26,1,1) = {"
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+"}
+(27,1,1) = {"
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+"}
+(28,1,1) = {"
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+"}

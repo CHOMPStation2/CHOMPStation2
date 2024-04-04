@@ -100,7 +100,7 @@
 	if (istype(W, /obj/item/weapon/melee/shock_maul))
 		var/obj/item/weapon/melee/shock_maul/S = W
 		if(!S.wielded || !S.status)
-			to_chat(user, "<span class='warning'>\The [src] must be wielded in two hands and powered on to be used for mining!</span>")
+			to_chat(user, "<span class='warning'>\The [W] must be wielded in two hands and powered on to be used to mine this!</span>") //CHOMPEdit - fix improper name
 			return
 		to_chat(user, "<span class='notice'>You pulverize \the [src]!</span>")
 		for(var/i=0;i<(rand(mindrop,upperdrop));i++)

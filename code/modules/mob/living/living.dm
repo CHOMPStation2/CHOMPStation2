@@ -50,14 +50,13 @@
 			B.owner = tf_mob_holder
 			tf_mob_holder.vore_organs |= B
 			vore_organs -= B
-
 	if(tf_mob_holder)
 		tf_mob_holder = null
 	//VOREStation Addition End
-
-	qdel(selected_image)
-	QDEL_NULL(vorePanel) //VOREStation Add
-	QDEL_LIST_NULL(vore_organs) //VOREStation Add
+	QDEL_NULL_LIST(hud_list)
+	QDEL_NULL(selected_image)
+	//QDEL_NULL(vorePanel) //VOREStation Add commented and moved to /mob
+	//QDEL_LIST_NULL(vore_organs) //VOREStation Add commented and moved to /mob
 	temp_language_sources = null //VOREStation Add
 	temp_languages = null //VOREStation Add
 
@@ -109,14 +108,14 @@
 		confirm2 = tgui_alert(usr, "Pressing this buttom will really kill you, no going back", "Are you sure?", list("Yes", "No")) //Swapped answers to protect from accidental double clicks.
 	if (src.health < 0 && stat != DEAD && confirm1 == "Yes" && confirm2 == "Yes") // Checking both confirm1 and confirm2 for good measure. I don't trust TGUI.
 		src.death()
-		to_chat(src, "<font color='blue'>You have given up life and succumbed to death.</font>")
+		to_chat(src, span_blue("You have given up life and succumbed to death."))
 	else
 		if(stat == DEAD)
-			to_chat(src, "<font color='blue'>As much as you'd like, you can't die when already dead</font>")
+			to_chat(src, span_blue("As much as you'd like, you can't die when already dead"))
 		else if(confirm1 == "No" || confirm2 == "No")
-			to_chat(src, "<font color='blue'>You chose to live another day.</font>")
+			to_chat(src, span_blue("You chose to live another day."))
 		else
-			to_chat(src, "<font color='blue'>You are not injured enough to succumb to death!</font>")
+			to_chat(src, span_blue("You are not injured enough to succumb to death!"))
 
 /mob/living/proc/updatehealth()
 	if(status_flags & GODMODE)
@@ -124,6 +123,8 @@
 		set_stat(CONSCIOUS)
 	else
 		// CHOMPEdit Start: Pain/etc calculations, but more efficient:tm: - this should work for literally anything that applies to health. Far better than slapping emote("pain") everywhere like scream does.
+		if(health > getMaxHealth()) //Overhealth
+			health = getMaxHealth()
 		var/initialhealth = health // CHOMPEdit: Getting our health before this check
 		health = getMaxHealth() - getOxyLoss() - getToxLoss() - getFireLoss() - getBruteLoss() - getCloneLoss() - halloss
 		if(!((ishuman(src)) || (issilicon(src))) && src.can_pain_emote) // Only run this if we're non-human/non-silicon (bots and mechanical simplemobs should be allowed to make pain sounds) & can emote pain, bc humans + carbons already do this. human_damage doesn't call parent, but sanity is better here.
@@ -828,6 +829,15 @@
 /mob/living/proc/slip(var/slipped_on,stun_duration=8)
 	return 0
 
+// CHOMPAdd - Drop both things on hands
+/mob/living/proc/drop_both_hands()
+	if(l_hand)
+		unEquip(l_hand)
+	if(r_hand)
+		unEquip(r_hand)
+	return
+// CHOMPEnd
+
 /mob/living/carbon/drop_from_inventory(var/obj/item/W, var/atom/target = null)
 	return !(W in internal_organs) && ..()
 
@@ -960,17 +970,43 @@
 			lying = incapacitated(INCAPACITATION_KNOCKDOWN)
 			canmove = !incapacitated(INCAPACITATION_DISABLED)
 
+	if(incapacitated(INCAPACITATION_KNOCKOUT) || incapacitated(INCAPACITATION_STUNNED)) // CHOMPAdd - Making sure we're in good condition to crawl
+		canmove = 0
+		drop_both_hands()
+	else
+		canmove = 1
+
 	if(lying)
 		density = FALSE
+	/* CHOMPEdit - Allow us to hold stuff while laying down.
 		if(l_hand)
 			unEquip(l_hand)
 		if(r_hand)
 			unEquip(r_hand)
 		for(var/obj/item/weapon/holder/holder in get_mob_riding_slots())
 			unEquip(holder)
+	*/
 		update_water() // Submerges the mob.
+		// CHOMPAdd Start - For crawling.
+		stop_pulling()
+
+		if(!passtable_crawl_checked)
+			passtable_crawl_checked = TRUE
+			if(pass_flags & PASSTABLE)
+				passtable_reset = FALSE
+			else
+				passtable_reset = TRUE
+				pass_flags |= PASSTABLE
+
+		// CHOMPEdit End
 	else
 		density = initial(density)
+	// CHOMPEdit Start - Rest passtable when crawling
+		if(passtable_reset)
+			passtable_reset = TRUE
+			pass_flags &= ~PASSTABLE
+		passtable_crawl_checked = FALSE
+	// CHOMPEdit End
 
 	for(var/obj/item/weapon/grab/G in grabbed_by)
 		if(G.state >= GRAB_AGGRESSIVE)
@@ -1035,17 +1071,18 @@
 		if(!isnull(M.icon_scale_y_percent))
 			. *= M.icon_scale_y_percent
 
-/mob/living/update_transform(var/instant = FALSE) //CHOMPEdit
+/mob/living/update_transform(var/instant = FALSE)
 	// First, get the correct size.
 	var/desired_scale_x = size_multiplier * icon_scale_x //VOREStation edit
 	var/desired_scale_y = size_multiplier * icon_scale_y //VOREStation edit
-	var/cent_offset = center_offset //CHOMPEdit
+	var/cent_offset = center_offset
+
 	// Now for the regular stuff.
-	if(fuzzy || offset_override || dir == EAST || dir == WEST) //CHOMPEdit
-		cent_offset = 0 //CHOMPEdit
+	if(fuzzy || offset_override || dir == EAST || dir == WEST)
+		cent_offset = 0
 	var/matrix/M = matrix()
 	M.Scale(desired_scale_x, desired_scale_y)
-	M.Translate(cent_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1)) //CHOMPEdit
+	M.Translate(cent_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1))
 	src.transform = M //VOREStation edit
 	handle_status_indicators()
 
@@ -1320,7 +1357,7 @@
 /datum/component/character_setup/proc/character_setup_click(source, location, control, params, user)
 	var/mob/owner = user
 	if(owner.client?.prefs)
-		INVOKE_ASYNC(owner.client.prefs, /datum/preferences/proc/ShowChoices, owner)
+		INVOKE_ASYNC(owner.client.prefs, TYPE_PROC_REF(/datum/preferences, ShowChoices), owner)
 
 /**
  * Screen object for vore panel
@@ -1330,3 +1367,8 @@
 	icon = 'icons/mob/screen/midnight.dmi'
 	icon_state = "character"
 	screen_loc = ui_smallquad
+
+/mob/living/set_dir(var/new_dir)
+	. = ..()
+	if(size_multiplier != 1 || icon_scale_x != DEFAULT_ICON_SCALE_X && center_offset > 0)
+		update_transform(TRUE)

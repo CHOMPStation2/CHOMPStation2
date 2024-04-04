@@ -218,7 +218,7 @@
 		CASINO_PRIZE("Genemod: Regenerate", /obj/item/weapon/dnainjector/regenerate, 1, 1000, "implants"),
 		CASINO_PRIZE("Genemod: Remote view", /obj/item/weapon/dnainjector/remoteview, 1, 1000, "implants"),
 		CASINO_PRIZE("Genemod: Sprinter", /obj/item/weapon/dnainjector/runfast, 1, 1000, "implants"),
-		CASINO_PRIZE("Genemod: Telepathy", /obj/item/weapon/dnainjector/telemut, 1, 1000, "implants"),
+		CASINO_PRIZE("Genemod: Telekinesis", /obj/item/weapon/dnainjector/telemut, 1, 1000, "implants"),
 		CASINO_PRIZE("Genemod: X-ray", /obj/item/weapon/dnainjector/xraymut, 1, 1000, "implants"),
 	)
 
@@ -257,7 +257,7 @@
 /obj/machinery/casino_prize_dispenser/proc/pay_with_chips(var/obj/item/weapon/spacecasinocash/cashmoney, mob/user, var/price)
 	//"cashmoney_:[cashmoney] user:[user] currently_vending:[currently_vending]"
 	if(price > cashmoney.worth)
-		to_chat(usr, "\icon[cashmoney] <span class='warning'>That is not enough chips.</span>")
+		to_chat(usr, "[icon2html(cashmoney,usr.client)] <span class='warning'>That is not enough chips.</span>")
 		return 0
 
 	if(istype(cashmoney, /obj/item/weapon/spacecasinocash))
@@ -292,7 +292,7 @@
 	// Open the window
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, "CasinoPrizeDispenserCh", name)
+		ui = new(user, src, "CasinoPrizeDispenser", name)
 		ui.open()
 
 /obj/machinery/casino_prize_dispenser/tgui_act(action, params)

@@ -69,8 +69,8 @@
 
 /mob/living/simple_mob/vore/overmap/stardog/Login()
 	. = ..()
-	verbs -= /mob/living/simple_mob/proc/set_name
-	verbs -= /mob/living/simple_mob/proc/set_desc
+	remove_verb(src,/mob/living/simple_mob/proc/set_name) //CHOMPEdit TGPanel
+	remove_verb(src,/mob/living/simple_mob/proc/set_desc) //CHOMPEdit TGPanel
 
 /mob/living/simple_mob/vore/overmap/stardog/attack_hand(mob/living/user)
 	if(!(user.pickup_pref && user.pickup_active))
@@ -500,7 +500,8 @@
 	for(var/mob/M as anything in vis_mobs)
 		if(isnewplayer(M))
 			continue
-		if(isobserver(M) && !L.is_preference_enabled(/datum/client_preference/whisubtle_vis) && !M.client?.holder)
+		if(isobserver(M) && (!M.is_preference_enabled(/datum/client_preference/ghost_see_whisubtle) || \
+		!L.is_preference_enabled(/datum/client_preference/whisubtle_vis) && !M.client?.holder))
 			spawn(0)
 				M.show_message(undisplayed_message, 2)
 		else
@@ -1171,7 +1172,8 @@
 	for(var/mob/M as anything in vis_mobs)
 		if(isnewplayer(M))
 			continue
-		if(isobserver(M) && !L.is_preference_enabled(/datum/client_preference/whisubtle_vis) && !M.client?.holder)
+		if(isobserver(M) && (!M.is_preference_enabled(/datum/client_preference/ghost_see_whisubtle) || \
+		!L.is_preference_enabled(/datum/client_preference/whisubtle_vis) && !M.client?.holder))
 			spawn(0)
 				M.show_message(undisplayed_message, 2)
 		else

@@ -59,7 +59,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	var/scent_strength = 5 //How much can a hungry pitcher confuse nearby people?
 	var/last_lifechecks = 0 //Timing variable to limit vore/hungry proc calls
 	var/list/pitcher_plant_lure_messages = null
-	
+
 	can_be_drop_prey = FALSE //CHOMP Add
 
 
@@ -210,7 +210,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 					prey_excludes += H
 					vore_selected.release_specific_contents(H)
 					N = 1
-					//addtimer(CALLBACK(src, .proc/removeMobFromPreyExcludes, weakref(H)), 1 MINUTES) //At the time of this PR, removeMobFromPreyExcludes breaks prey_excludes by deleting the list which causes problems with the Crossed() vore override before. This can be commented back in if that gets fixed.
+					//addtimer(CALLBACK(src, PROC_REF(removeMobFromPreyExcludes), weakref(H)), 1 MINUTES) //At the time of this PR, removeMobFromPreyExcludes breaks prey_excludes by deleting the list which causes problems with the Crossed() vore override before. This can be commented back in if that gets fixed.
 					break
 				else
 					to_chat(user, "The victim slips from your grasp!")
@@ -261,11 +261,11 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 			if(isSynthetic(H) || !H.species.breath_type || H.internal) //Exclude species which don't breathe or have internals.
 				continue
 			if(src.Adjacent(H)) //If they can breathe and are next to the pitcher, confuse them.
-				to_chat(H,"<font color='red'>The sweet, overwhelming scent from \the [src] makes your senses reel!</font>")
+				to_chat(H,span_red("The sweet, overwhelming scent from \the [src] makes your senses reel!"))
 				H.Confuse(scent_strength)
 				continue
 			else
-				to_chat(H, "<font color='red'>[pick(pitcher_plant_lure_messages)]</font>")
+				to_chat(H, span_red("[pick(pitcher_plant_lure_messages)]"))
 
 		for(var/turf/simulated/TR in cardinal_turfs)
 			TR.wet_floor(1) //Same effect as water. Slip into plant, get ate.

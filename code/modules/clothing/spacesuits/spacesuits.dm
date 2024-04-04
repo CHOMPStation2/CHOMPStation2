@@ -54,11 +54,11 @@
 
 	if(camera.status == TRUE)
 		camera.set_status(FALSE)
-		to_chat(usr, "<font color='blue'>Camera deactivated.</font>")
+		to_chat(usr, span_blue("Camera deactivated."))
 	else
 		camera.set_status(TRUE)
 		camera.c_tag = usr.name
-		to_chat(usr, "<font color='blue'>User scanned as [camera.c_tag]. Camera activated.</font>")
+		to_chat(usr, span_blue("User scanned as [camera.c_tag]. Camera activated."))
 
 /obj/item/clothing/head/helmet/space/examine(mob/user)
 	. = ..()
@@ -77,7 +77,7 @@
 	item_flags = THICKMATERIAL
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
 	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank/emergency/oxygen,/obj/item/device/suit_cooling_unit,/obj/item/weapon/storage/backpack) //CHOMPedit
-	slowdown = 1.5
+	slowdown = 1 // CHOMPedit: 1.5 to 1. More sane movespeed delay. Voidsuits are still faster.
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 50)
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDETAIL|HIDETIE|HIDEHOLSTER
 	cold_protection = UPPER_TORSO | LOWER_TORSO | LEGS | FEET | ARMS | HANDS

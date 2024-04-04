@@ -12,12 +12,14 @@
 // This is for integration tests only.
 // Always add any new away missions/gateways/lateloaded maps that are not PoIs here.
 #if AWAY_MISSION_TEST
-#include "../overmap/planets/kara/aerostat/aerostat.dmm"
-#include "../overmap/planets/kara/northern_star/northern_star_mine.dmm"
+//#include "../overmap/planets/kara/aerostat/aerostat.dmm" //Disabled due to low usage
+//#include "../overmap/planets/kara/northern_star/northern_star_mine.dmm" //Disabled due to low usage
 #include "../overmap/space/fueldepot.dmm"
+#include "../overmap/planets/thor/thor.dmm" //The datum is in southern_cross_defines.dm
 #include "gateway/BaseBlep.dmm"
 #include "gateway/maddnesslab.dmm"
 #include "gateway/snowfield.dmm"
+#include "gateway/hiddeneclipse.dmm"
 #include "virtual_reality/constructVR.dmm"
 #endif
 
@@ -77,6 +79,13 @@
 	mappath = 'gateway/carpfarm.dmm'
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
 
+#include "gateway/hiddeneclipse.dm"
+/datum/map_template/sc_lateload/gateway/hiddeneclipse
+	name = "Distant Mining Facility"
+	desc = "Asteroid mining facility, lost to unknown horrors"
+	mappath = 'gateway/hiddeneclipse.dmm'
+	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
+
 //VR maps go here, tell me if theres a better way to load this
 // #include "virtual_reality/constructVR.dm" Virtual Reality areas included by default.
 /datum/map_template/sc_lateload/vr_world
@@ -88,6 +97,12 @@
 /datum/map_z_level/sc_lateload/vr_world
 	name = "Away Mission - Fuel Depot"
 	z = Z_LEVEL_VR_REALM
+
+/datum/map_template/sc_lateload/thor
+	name = "Thor Surface"
+	desc = "The jungle like surface of Sif's moon"
+	mappath = 'maps/southern_cross/overmap/planets/thor/thor.dmm'
+	associated_map_datum = /datum/planet/thor
 
 //Space submaps/sectors/POIs/whatever you wanna freaking call it, go here.
 /* Pretty sure we don't use this.
