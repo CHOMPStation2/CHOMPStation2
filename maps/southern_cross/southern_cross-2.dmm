@@ -27611,6 +27611,7 @@
 	dir = 1
 	},
 /obj/structure/railing,
+/obj/item/tape/engineering,
 /turf/simulated/open,
 /area/hallway/primary/firstdeck/aft)
 "sea" = (
@@ -32325,6 +32326,7 @@
 	pixel_y = 22
 	},
 /obj/structure/railing,
+/obj/item/tape/engineering,
 /turf/simulated/open,
 /area/hallway/primary/firstdeck/aft)
 "wTJ" = (
