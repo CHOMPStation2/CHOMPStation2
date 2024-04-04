@@ -20180,9 +20180,6 @@
 /area/maintenance/thirddeck/dormsaft{
 	name = "Third Deck Aft Maintenance"
 	})
-"qdU" = (
-/turf/simulated/floor/plating,
-/area/maintenance/solars/forestarboardsolar)
 "qdZ" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor/plating,
@@ -84831,7 +84828,7 @@ apc
 apc
 apc
 apc
-qdU
+bbV
 bdd
 cfy
 cBt
