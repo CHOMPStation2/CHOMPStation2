@@ -26149,6 +26149,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
+"bBk" = (
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/hallway/secondary/seconddeck/research_medical)
 "bBl" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/machinery/computer/general_air_control/large_tank_control{
@@ -26447,6 +26451,10 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/kitchen)
+"bCh" = (
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/hallway/secondary/seconddeck/research_medical)
 "bCi" = (
 /obj/machinery/light{
 	dir = 8
@@ -45232,6 +45240,24 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/sc/hor)
+"dyE" = (
+/obj/structure/table/rack{
+	dir = 8;
+	layer = 2.9
+	},
+/obj/random/maintenance/medical,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/random/maintenance/medical,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/machinery/alarm{
+	pixel_y = 25
+	},
+/turf/simulated/floor/plating,
+/area/hallway/secondary/seconddeck/research_medical)
 "dyK" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance{
@@ -52610,6 +52636,10 @@
 /obj/effect/floor_decal/corner/purple/border,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
+"hxN" = (
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/hallway/secondary/seconddeck/research_medical)
 "hyf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -53280,12 +53310,6 @@
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/mixing)
-"hMW" = (
-/obj/machinery/alarm{
-	pixel_y = 25
-	},
-/turf/simulated/floor/plating,
-/area/hallway/secondary/seconddeck/research_medical)
 "hNm" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/black{
 	dir = 1
@@ -59873,10 +59897,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/medical/morgue)
-"lod" = (
-/obj/random/trash,
-/turf/simulated/floor/plating,
-/area/hallway/secondary/seconddeck/research_medical)
 "lox" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -59923,21 +59943,6 @@
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor,
 /area/maintenance/bar)
-"lrG" = (
-/obj/structure/table/rack{
-	dir = 8;
-	layer = 2.9
-	},
-/obj/random/maintenance/medical,
-/obj/random/maintenance/medical,
-/obj/random/maintenance/research,
-/obj/random/maintenance/research,
-/obj/random/maintenance/research,
-/obj/random/maintenance/medical,
-/obj/random/maintenance,
-/obj/random/maintenance,
-/turf/simulated/floor/plating,
-/area/hallway/secondary/seconddeck/research_medical)
 "lsm" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -62701,6 +62706,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
+"mXs" = (
+/obj/random/obstruction,
+/obj/machinery/alarm{
+	pixel_y = 25
+	},
+/turf/simulated/floor/plating,
+/area/hallway/secondary/seconddeck/research_medical)
 "mXK" = (
 /turf/simulated/wall,
 /area/assembly/chargebay)
@@ -63681,6 +63693,21 @@
 /obj/structure/sign/nosmoking_1,
 /turf/simulated/wall,
 /area/medical/cryo)
+"nCU" = (
+/obj/structure/table/rack{
+	dir = 8;
+	layer = 2.9
+	},
+/obj/random/maintenance/medical,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/random/maintenance/medical,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/turf/simulated/floor/plating,
+/area/hallway/secondary/seconddeck/research_medical)
 "nDk" = (
 /obj/machinery/shieldwallgen,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -64665,14 +64692,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/disposal_sort)
-"odi" = (
-/obj/random/obstruction,
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -25
-	},
-/turf/simulated/floor/plating,
-/area/hallway/secondary/seconddeck/research_medical)
 "odS" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -64950,10 +64969,6 @@
 "okZ" = (
 /turf/simulated/wall,
 /area/rnd/workshop)
-"olj" = (
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/plating,
-/area/hallway/secondary/seconddeck/research_medical)
 "olr" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -65008,11 +65023,6 @@
 	},
 /turf/simulated/floor/wood/alt/parquet,
 /area/library)
-"ond" = (
-/obj/random/trash,
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/plating,
-/area/hallway/secondary/seconddeck/research_medical)
 "ooC" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green,
 /obj/structure/cable/yellow{
@@ -65098,9 +65108,10 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
 "oqz" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/effect/wingrille_spawn/reinforced,
-/turf/simulated/floor/plating,
+/turf/simulated/wall{
+	can_open = 1;
+	desc = "A huge chunk of metal used to seperate rooms. There are scratch marks along the floor."
+	},
 /area/hallway/secondary/seconddeck/research_medical)
 "oqA" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
@@ -66517,24 +66528,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
-"pgX" = (
-/obj/structure/table/rack{
-	dir = 8;
-	layer = 2.9
-	},
-/obj/random/maintenance/medical,
-/obj/random/maintenance/medical,
-/obj/random/maintenance/research,
-/obj/random/maintenance/research,
-/obj/random/maintenance/research,
-/obj/random/maintenance/medical,
-/obj/random/maintenance,
-/obj/random/maintenance,
-/obj/machinery/alarm{
-	pixel_y = 25
-	},
-/turf/simulated/floor/plating,
-/area/hallway/secondary/seconddeck/research_medical)
 "phg" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/disposalpipe/sortjunction{
@@ -66940,6 +66933,12 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
+"ptH" = (
+/obj/machinery/alarm{
+	pixel_y = 25
+	},
+/turf/simulated/floor/plating,
+/area/hallway/secondary/seconddeck/research_medical)
 "pux" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk,
@@ -67705,6 +67704,10 @@
 /obj/effect/floor_decal/corner/paleblue/bordercorner,
 /turf/simulated/floor/tiled/white,
 /area/medical/cryo)
+"pOh" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/plating,
+/area/hallway/secondary/seconddeck/research_medical)
 "pOp" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -69319,6 +69322,11 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
+"qKr" = (
+/obj/random/trash,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/hallway/secondary/seconddeck/research_medical)
 "qKC" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -69613,10 +69621,6 @@
 /obj/item/weapon/reagent_containers/food/drinks/glass2/rocks,
 /turf/simulated/floor/plating,
 /area/maintenance/cargo)
-"qYO" = (
-/obj/random/obstruction,
-/turf/simulated/floor/plating,
-/area/hallway/secondary/seconddeck/research_medical)
 "qZK" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
@@ -71038,12 +71042,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/workshop)
-"rRk" = (
-/turf/simulated/wall{
-	can_open = 1;
-	desc = "A huge chunk of metal used to seperate rooms. There are scratch marks along the floor."
-	},
-/area/hallway/secondary/seconddeck/research_medical)
 "rRH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -71998,14 +71996,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/D3)
-"syJ" = (
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 26;
-	pixel_y = 0
-	},
-/turf/simulated/floor/plating,
-/area/hallway/secondary/seconddeck/research_medical)
 "syM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor,
@@ -72869,6 +72859,14 @@
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
+"sYY" = (
+/obj/random/obstruction,
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -25
+	},
+/turf/simulated/floor/plating,
+/area/hallway/secondary/seconddeck/research_medical)
 "sZg" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -73243,13 +73241,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/hallway/secondary/seconddeck/research_medical)
-"tiZ" = (
-/obj/random/obstruction,
-/obj/machinery/alarm{
-	pixel_y = 25
-	},
-/turf/simulated/floor/plating,
-/area/hallway/secondary/seconddeck/research_medical)
 "tjD" = (
 /obj/structure/table/standard,
 /obj/structure/flora/pottedplant/small{
@@ -73595,14 +73586,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/aft)
 "two" = (
-/obj/structure/closet,
-/obj/random/firstaid,
-/obj/random/maintenance,
-/obj/random/maintenance,
-/obj/random/maintenance,
-/obj/random/maintenance,
-/obj/random/maintenance,
-/turf/simulated/floor/plating,
+/turf/simulated/wall,
 /area/hallway/secondary/seconddeck/research_medical)
 "txi" = (
 /obj/machinery/firealarm{
@@ -73655,9 +73639,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/medical/surgeryobs)
-"tyL" = (
-/turf/simulated/floor/plating,
-/area/hallway/secondary/seconddeck/research_medical)
 "tyQ" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -75327,6 +75308,9 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/docking_hallway2)
+"uEF" = (
+/turf/simulated/floor/plating,
+/area/hallway/secondary/seconddeck/research_medical)
 "uFq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -75462,10 +75446,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
-"uNi" = (
-/obj/structure/table/woodentable,
-/turf/simulated/floor/plating,
-/area/hallway/secondary/seconddeck/research_medical)
 "uNA" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -75898,13 +75878,6 @@
 	},
 /turf/simulated/wall,
 /area/crew_quarters/seconddeck/artsupplies)
-"vcY" = (
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -25
-	},
-/turf/simulated/floor/plating,
-/area/hallway/secondary/seconddeck/research_medical)
 "vda" = (
 /obj/structure/table/glass,
 /obj/machinery/computer/med_data/laptop,
@@ -76909,8 +76882,9 @@
 /obj/random/maintenance,
 /turf/simulated/floor/plating,
 /area/hallway/secondary/seconddeck/research_medical)
-"vIX" = (
-/turf/simulated/wall,
+"vID" = (
+/obj/random/obstruction,
+/turf/simulated/floor/plating,
 /area/hallway/secondary/seconddeck/research_medical)
 "vJh" = (
 /obj/random/plushielarge,
@@ -77500,6 +77474,11 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/exam_room)
+"wec" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/floor/plating,
+/area/hallway/secondary/seconddeck/research_medical)
 "wer" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -77969,6 +77948,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/D3)
+"wsg" = (
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 26;
+	pixel_y = 0
+	},
+/turf/simulated/floor/plating,
+/area/hallway/secondary/seconddeck/research_medical)
 "wsB" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/medical{
@@ -79270,6 +79257,13 @@
 	},
 /turf/simulated/floor/lino,
 /area/chapel/office)
+"xiA" = (
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -25
+	},
+/turf/simulated/floor/plating,
+/area/hallway/secondary/seconddeck/research_medical)
 "xiE" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance{
@@ -79691,6 +79685,16 @@
 /obj/structure/sign/warning/vent_port,
 /turf/simulated/wall/r_wall,
 /area/maintenance/disposal)
+"xzs" = (
+/obj/structure/closet,
+/obj/random/firstaid,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/turf/simulated/floor/plating,
+/area/hallway/secondary/seconddeck/research_medical)
 "xzT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/sign/dock/three,
@@ -80828,10 +80832,6 @@
 "yjo" = (
 /turf/space,
 /area/shuttle/escape/station)
-"ykL" = (
-/obj/random/junk,
-/turf/simulated/floor/plating,
-/area/hallway/secondary/seconddeck/research_medical)
 
 (1,1,1) = {"
 aaa
@@ -129716,12 +129716,12 @@ cuT
 ooT
 uwj
 ooT
-vIX
-vIX
-vIX
-vIX
-vIX
-vIX
+two
+two
+two
+two
+two
+two
 hnG
 hlC
 iJP
@@ -129974,12 +129974,12 @@ oiA
 thh
 uxi
 vHd
-vIX
-qYO
-tyL
-lod
-lrG
-vIX
+two
+vID
+uEF
+bBk
+nCU
+two
 ikX
 dTG
 pzi
@@ -130231,13 +130231,13 @@ rQu
 oiA
 tiT
 uxr
-tyL
-vIX
-tyL
-ykL
-tyL
-odi
-vIX
+uEF
+two
+uEF
+hxN
+uEF
+sYY
+two
 iOS
 xjT
 pkK
@@ -130487,15 +130487,15 @@ pIm
 qTx
 rQx
 oiA
-tiZ
-tyL
+mXs
+uEF
 vIC
-vIX
-tyL
-qYO
-qYO
-qYO
-vIX
+two
+uEF
+vID
+vID
+vID
+two
 jjH
 jjH
 egb
@@ -130745,15 +130745,15 @@ pIS
 qUo
 rRg
 oiA
-tyL
-lod
-qYO
-vIX
-olj
-vIX
-vIX
-vIX
-vIX
+uEF
+bBk
+vID
+two
+bCh
+two
+two
+two
+two
 aAu
 veJ
 mFN
@@ -131003,15 +131003,15 @@ okZ
 okZ
 okZ
 okZ
-olj
-vIX
-vIX
-vIX
-tyL
-vIX
-lrG
-tyL
-vIX
+bCh
+two
+two
+two
+uEF
+two
+nCU
+uEF
+two
 qoZ
 pVZ
 hYU
@@ -131255,21 +131255,21 @@ kux
 lju
 mmq
 cXZ
-tyL
-tyL
-tyL
-tyL
-qYO
-qYO
-ykL
-tyL
-tyL
-qYO
-lod
-vIX
-qYO
-ykL
-vIX
+uEF
+uEF
+uEF
+uEF
+vID
+vID
+hxN
+uEF
+uEF
+vID
+bBk
+two
+vID
+hxN
+two
 mAU
 sPy
 mAU
@@ -131513,21 +131513,21 @@ kvq
 liq
 mmE
 cXZ
-tyL
-qYO
-qYO
-ykL
-tyL
-lod
-tyL
-qYO
-tyL
-tyL
-ykL
-vIX
-qYO
-vcY
-vIX
+uEF
+vID
+vID
+hxN
+uEF
+bBk
+uEF
+vID
+uEF
+uEF
+hxN
+two
+vID
+xiA
+two
 xff
 jjH
 gyD
@@ -131771,21 +131771,21 @@ kwy
 liq
 mnf
 cXZ
-ond
-vIX
-vIX
-vIX
-vIX
-tyL
-vIX
-vIX
-vIX
-vIX
-tyL
-olj
-tyL
-lod
-vIX
+qKr
+two
+two
+two
+two
+uEF
+two
+two
+two
+two
+uEF
+bCh
+uEF
+bBk
+two
 ttQ
 jjH
 cXz
@@ -132029,20 +132029,20 @@ kzz
 ljU
 ljU
 cXZ
-tyL
-tyL
-qYO
-qYO
-vIX
-tyL
-lod
-tyL
+uEF
+uEF
+vID
+vID
+two
+uEF
+bBk
+uEF
 vKX
-vIX
-tyL
-vIX
-vIX
-tyL
+two
+uEF
+two
+two
+uEF
 ooT
 nFF
 nFF
@@ -132287,20 +132287,20 @@ eTf
 ecy
 cXZ
 cXZ
-hMW
-ykL
-tyL
-qYO
-vIX
-qYO
-tyL
-ykL
-qYO
-vIX
+ptH
+hxN
+uEF
+vID
+two
+vID
+uEF
+hxN
+vID
+two
 xwT
-vIX
-tyL
-lod
+two
+uEF
+bBk
 ooT
 ooT
 aaa
@@ -132545,20 +132545,20 @@ aaa
 aaa
 aaa
 ooT
-qYO
-tyL
-tyL
-lrG
-vIX
-qYO
-qYO
-tyL
-tyL
-vIX
-vIX
-vIX
-ykL
-tyL
+vID
+uEF
+uEF
+nCU
+two
+vID
+vID
+uEF
+uEF
+two
+two
+two
+hxN
+uEF
 ooT
 ooT
 aaa
@@ -132804,19 +132804,19 @@ aaa
 aaa
 ooT
 ooT
-vIX
-vIX
-vIX
-vIX
-vIX
-vIX
-tyL
-lod
-vIX
-qYO
-lrG
-tyL
-tyL
+two
+two
+two
+two
+two
+two
+uEF
+bBk
+two
+vID
+nCU
+uEF
+uEF
 ooT
 ooT
 aaa
@@ -133063,18 +133063,18 @@ aaa
 aaa
 ooT
 pgN
-tyL
-tyL
-ykL
-olj
-lod
-tyL
-ykL
-vIX
-qYO
-qYO
-lrG
-lrG
+uEF
+uEF
+hxN
+bCh
+bBk
+uEF
+hxN
+two
+vID
+vID
+nCU
+nCU
 ooT
 aaa
 aaa
@@ -133320,19 +133320,19 @@ aaa
 aaa
 aaa
 ooT
-pgX
-tyL
-qYO
-tyL
-vIX
-qYO
-qYO
-tyL
-vIX
-vIX
-vIX
-vIX
-vIX
+dyE
+uEF
+vID
+uEF
+two
+vID
+vID
+uEF
+two
+two
+two
+two
+two
 ooT
 aaa
 aaa
@@ -133578,19 +133578,19 @@ aaa
 aaa
 aaa
 ooT
-qYO
-qYO
-qYO
-tyL
-vIX
+vID
+vID
+vID
+uEF
 two
-tyL
-tyL
-olj
-ykL
-tyL
-tyL
-qYO
+xzs
+uEF
+uEF
+bCh
+hxN
+uEF
+uEF
+vID
 ooT
 aaa
 aaa
@@ -133837,18 +133837,18 @@ aaa
 aaa
 ooT
 pho
-qYO
-tyL
-tyL
-vIX
-vIX
-vIX
-vIX
-vIX
-tyL
-lod
-tyL
-odi
+vID
+uEF
+uEF
+two
+two
+two
+two
+two
+uEF
+bBk
+uEF
+sYY
 ooT
 aaa
 aaa
@@ -134094,19 +134094,19 @@ aaa
 aaa
 aaa
 ooT
-tyL
-tyL
-ykL
-vIX
-vIX
-tyL
-tyL
-tyL
-vIX
-vIX
-tyL
-tyL
-lrG
+uEF
+uEF
+hxN
+two
+two
+uEF
+uEF
+uEF
+two
+two
+uEF
+uEF
+nCU
 ooT
 aaa
 aaa
@@ -134353,17 +134353,17 @@ aaf
 aaf
 ooT
 ooT
-lrG
-tyL
-rRk
-tyL
-tyL
-tyL
-tyL
-tyL
-rRk
-tyL
-lrG
+nCU
+uEF
+oqz
+uEF
+uEF
+uEF
+uEF
+uEF
+oqz
+uEF
+nCU
 ooT
 ooT
 aaf
@@ -134614,11 +134614,11 @@ ooT
 ooT
 ooT
 ooT
-syJ
+wsg
 tyZ
 uNi
 vPr
-tyL
+uEF
 ooT
 ooT
 ooT
@@ -134874,7 +134874,7 @@ rby
 ooT
 ooT
 tyZ
-uNi
+pOh
 vPr
 ooT
 ooT
@@ -135131,9 +135131,9 @@ aaa
 aaa
 aaa
 ooT
-oqz
+wec
 uRk
-oqz
+wec
 ooT
 aaa
 aaa

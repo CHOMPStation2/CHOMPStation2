@@ -470,9 +470,9 @@
 	assets = list(
 		// CHOMP Edit: Restored for chomp station. Removed Tether.
 		"southern_cross_nanomap_z1.png"		= 'icons/_nanomaps/southern_cross_nanomap_z1.png',
-		"southern_cross_nanomap_z10.png"	= 'icons/_nanomaps/southern_cross_nanomap_z10.png',
 		"southern_cross_nanomap_z2.png"		= 'icons/_nanomaps/southern_cross_nanomap_z2.png',
 		"southern_cross_nanomap_z3.png"		= 'icons/_nanomaps/southern_cross_nanomap_z3.png',
+		"southern_cross_nanomap_z4.png"		= 'icons/_nanomaps/southern_cross_nanomap_z4.png',
 		"southern_cross_nanomap_z5.png"		= 'icons/_nanomaps/southern_cross_nanomap_z5.png',
 		"southern_cross_nanomap_z6.png"		= 'icons/_nanomaps/southern_cross_nanomap_z6.png',
 		"southern_cross_nanomap_z7.png"		= 'icons/_nanomaps/southern_cross_nanomap_z7.png',

@@ -5525,7 +5525,7 @@
 /turf/simulated/floor/carpet/gaycarpet,
 /area/tether_away/guttersite/unexplored)
 "na" = (
-/obj/item/clothing/mask/gas/wwii,
+/obj/item/clothing/mask/gas,
 /turf/simulated/floor/carpet/gaycarpet,
 /area/tether_away/guttersite/unexplored)
 "nb" = (

@@ -1,0 +1,12 @@
+author: "ReoDaProtovali"
+delete-after: True
+changes:
+  - rscadd: "Properly implemented clear gas masks"
+  - rscadd: "Readded the original gasmask icon"
+  - rscadd: "added both clear and not clear gasmasks to loadout for 3 points. Happy tiding!"
+  - rscadd: "replaced the normal gas masks in biohazard lockers with clear ones"
+  - rscadd: "secretly adds on-mob icons for mouth-held grenades for teshari because I was bored"
+  - rscdel: "Removed the `obj/item/clothing/mask/gas/wwii` subtype of the mask since the base subtype fills it's role."
+  - qol: "Makes greytide AI carbon mobs have a bit more variation."
+  - image: "Added all of the mob_vr_mask.dmi and associated species files to the modularity folder"
+  - code_imp: "Removed the check for base gas masks to remove their face-consealing abilities because they're no longer clear. Subtypes that are clear can now just use the /clear subtype since it's properly in now"

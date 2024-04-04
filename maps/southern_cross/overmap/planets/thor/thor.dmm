@@ -2371,14 +2371,15 @@
 /area/surface/outside/thor/pool)
 "xP" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/clothing/mask/gas/wwii,
-/obj/item/clothing/mask/gas/wwii,
-/obj/item/clothing/mask/gas/wwii,
-/obj/item/clothing/mask/gas/wwii,
 /obj/item/weapon/tank/emergency/oxygen/engi,
 /obj/item/weapon/tank/emergency/oxygen/engi,
 /obj/item/weapon/tank/emergency/oxygen/engi,
 /obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
 /area/surface/outside/thor/landingpad)
 "xT" = (

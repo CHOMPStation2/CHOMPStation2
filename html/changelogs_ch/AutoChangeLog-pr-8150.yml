@@ -1,0 +1,5 @@
+author: "Kashargul"
+delete-after: True
+changes:
+  - bugfix: "Telecomms filters can be added through the multitool menu"
+  - bugfix: "admin maps showing on mapview (overmap is no longer considered for mapview)"
