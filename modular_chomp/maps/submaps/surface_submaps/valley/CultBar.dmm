@@ -28,7 +28,7 @@
 /obj/structure/table/fancyblack,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/cargo,
-/obj/item/weapon/spellbook/oneuse/charge,
+/obj/item/weapon/gun/magic/firestaff/cultstaff,
 /obj/random/maintenance/research,
 /turf/simulated/floor/carpet,
 /area/submap/CultBar)
@@ -288,7 +288,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/item/device/soulstone,
 /obj/item/weapon/gun/magic/firestaff,
-/obj/item/weapon/spellbook/oneuse/smoke,
+/obj/item/weapon/holosign_creator/smokewand,
 /turf/simulated/floor/gorefloor2,
 /area/submap/CultBar)
 "kY" = (
