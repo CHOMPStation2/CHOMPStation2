@@ -426,7 +426,7 @@
 			for(var/mob/living/V in W.possessed_voice) //CHOMPEdit - Revert temporary patch
 				//CHOMPEdit Start - Don't try and despawn, instead just ghost and delete, same as item destruction
 				V.ghostize(0)
-				V.Destroy()
+				qdel(V)
 				//CHOMPEdit End
 		//VOREStation Addition Start
 		if(istype(W, /obj/item/device/pda))
