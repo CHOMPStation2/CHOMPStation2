@@ -1,0 +1,6 @@
+author: "Raeschen"
+delete-after: True
+changes:
+  - bugfix: "fix runtime in grass grass_type/animal_type spawning"
+  - bugfix: "fix decl emote check failiure"
+  - bugfix: "deck 3, 2.7k tiles + bad solars"
