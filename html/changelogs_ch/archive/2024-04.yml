@@ -44,3 +44,10 @@
   cadyn:
   - rscadd: hlscream
   - rscadd: hlpain emote
+2024-04-04:
+  Kashargul:
+  - bugfix: fixes pain shouts on max health changes
+  Raeschen:
+  - rscadd: Speech sounds now penetrate walls
+  TheCaramelion:
+  - bugfix: Diffusers on point defenses won't turn off when meteors happen
