@@ -54,7 +54,7 @@ SHOW_DEVS
 ##Show mods on staffwho
 SHOW_MODS
 
-##Show mentors on staffwho
+##Show event managers on staffwho
 SHOW_EVENT_MANAGERS
 
 ##Show mentors on staffwho

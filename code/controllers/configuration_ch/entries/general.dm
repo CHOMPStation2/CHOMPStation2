@@ -347,7 +347,7 @@
 /datum/config_entry/flag/allow_extra_antags
 
 /datum/config_entry/flag/guests_allowed
-	default = TRUE
+	default = FALSE
 
 /datum/config_entry/flag/debugparanoid
 
