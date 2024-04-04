@@ -58835,7 +58835,7 @@
 	},
 /area/survivalpod)
 "rlD" = (
-/obj/item/clothing/mask/gas/wwii,
+/obj/item/clothing/mask/gas,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},

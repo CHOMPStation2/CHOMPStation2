@@ -19292,7 +19292,7 @@
 /area/rnd/research/testingrange)
 "aFx" = (
 /obj/item/clothing/under/color/grey,
-/obj/item/clothing/mask/gas/wwii,
+/obj/item/clothing/mask/gas,
 /obj/item/weapon/storage/belt/utility/full,
 /turf/simulated/floor/plating,
 /area/tether/surfacebase/shuttle_pad)
