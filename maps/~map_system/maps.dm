@@ -234,7 +234,6 @@ var/list/all_maps = list()
 		return contact_levels.Copy() - admin_levels
 	//If in station levels, return station levels
 	else if (srcz in station_levels)
-		to_world("Just station, ye?")
 		return station_levels.Copy()
 	//Just give them back their zlevel
 	else
