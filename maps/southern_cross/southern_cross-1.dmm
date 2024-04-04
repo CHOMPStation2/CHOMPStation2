@@ -512,10 +512,6 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/plating,
 /area/hallway/primary/firstdeck/elevator)
-"acj" = (
-/obj/effect/overmap/visitable/sector/Southern_Cross,
-/turf/space,
-/area/space)
 "ack" = (
 /obj/structure/sign/warning/caution,
 /turf/simulated/wall/r_wall,
@@ -35762,7 +35758,7 @@ aaa
 aaa
 aaa
 aaa
-acj
+aaa
 "}
 (2,1,1) = {"
 aaa
