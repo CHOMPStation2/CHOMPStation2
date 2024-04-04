@@ -1,76 +1,1463 @@
-"bL" = (/obj/item/weapon/bone/ribs,/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/HellCave)
-"bX" = (/obj/fire,/turf/simulated/floor/gorefloor,/area/survivalpod/superpose/HellCave)
-"eh" = (/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/HellCave)
-"eD" = (/turf/simulated/floor/cult,/area/survivalpod/superpose/HellCave)
-"fH" = (/obj/structure/grille/broken/cult,/turf/simulated/floor/lava,/area/survivalpod/superpose/HellCave)
-"gW" = (/obj/effect/map_effect/interval/sound_emitter/punching,/obj/effect/map_effect/interval/effect_emitter/smoke/fire,/turf/simulated/floor/lava,/area/survivalpod/superpose/HellCave)
-"iK" = (/turf/simulated/floor/gorefloor,/area/survivalpod/superpose/HellCave)
-"jG" = (/obj/structure/closet/crate,/obj/item/stack/material/cardboard{amount = 50},/obj/item/stack/material/cardboard{amount = 50},/obj/item/stack/material/cardboard{amount = 50},/obj/item/stack/material/cardboard{amount = 50},/obj/fiftyspawner/blucarpet,/obj/fiftyspawner/oracarpet,/obj/fiftyspawner/purcarpet,/obj/fiftyspawner/sblucarpet,/obj/fiftyspawner/tealcarpet,/obj/fiftyspawner/turcarpet,/obj/item/stack/material/wood{amount = 50; color = "#824B28"},/obj/item/stack/material/wood{amount = 50; color = "#824B28"},/obj/item/stack/material/wood/hard{amount = 50},/obj/item/stack/material/wood/hard{amount = 50},/obj/item/stack/material/wood/sif{amount = 50},/obj/item/stack/material/wood/sif{amount = 50},/obj/item/stack/material/marble{amount = 50},/obj/item/stack/material/marble{amount = 50},/obj/item/stack/material/marble{amount = 50},/obj/item/stack/material/cloth{amount = 50},/obj/item/stack/material/cloth{amount = 50},/obj/item/stack/material/algae{amount = 50},/obj/item/stack/material/sandstone,/obj/item/stack/material/sandstone,/obj/item/stack/material/sandstone,/obj/item/stack/material/lead{amount = 30},/obj/item/stack/material/plasteel{amount = 30; pixel_y = 5},/obj/item/stack/material/resin{amount = 50},/obj/item/stack/material/smolebricks{amount = 50},/obj/item/stack/material/smolebricks{amount = 50},/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/HellCave)
-"kE" = (/obj/item/device/gps,/obj/item/sticky_pad/random,/obj/item/device/starcaster_news,/obj/item/weapon/pen/blue,/obj/item/device/pda,/obj/item/weapon/card/id/external,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,/obj/item/weapon/reagent_containers/food/snacks/sosjerky,/obj/item/weapon/reagent_containers/food/snacks/sosjerky,/obj/item/weapon/gun/energy/locked/phasegun/pistol,/obj/item/weapon/material/knife/tacknife/survival,/obj/item/clothing/accessory/permit/gun,/obj/item/device/camera,/obj/item/device/binoculars,/obj/item/device/threadneedle,/obj/random/soap,/obj/item/weapon/towel/random,/obj/item/bodybag/cryobag,/obj/item/device/flashlight/flare,/obj/item/device/flashlight/flare,/obj/item/device/flashlight/color/yellow,/obj/item/device/radio,/obj/item/device/radio,/obj/item/weapon/flame/lighter/random,/obj/item/weapon/cell/device/hyper,/obj/item/weapon/cell/device/hyper,/obj/item/weapon/extinguisher/mini,/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,/obj/item/weapon/reagent_containers/pill/spaceacillin,/obj/item/weapon/reagent_containers/pill/spaceacillin,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/device/suit_cooling_unit/emergency,/obj/item/stack/nanopaste,/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,/obj/item/weapon/storage/backpack/messenger,/obj/item/clothing/accessory/storage/black_drop_pouches,/obj/item/clothing/accessory/poncho/thermal,/obj/item/weapon/storage/box/survival/comp,/obj/item/weapon/storage/toolbox/brass,/obj/item/weapon/storage/box/khcrystal,/obj/structure/closet/crate,/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/HellCave)
-"lF" = (/turf/simulated/mineral/ignore_mapgen,/area/survivalpod/superpose/HellCave)
-"lQ" = (/obj/item/weapon/bone/skull/unknown,/turf/simulated/floor/lava,/area/survivalpod/superpose/HellCave)
-"nD" = (/obj/effect/gibspawner/human,/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/HellCave)
-"qo" = (/obj/structure/cult/tome,/turf/simulated/floor/cult,/area/survivalpod/superpose/HellCave)
-"vf" = (/turf/simulated/wall/cult,/area/survivalpod/superpose/HellCave)
-"vT" = (/turf/simulated/floor/lava,/area/survivalpod/superpose/HellCave)
-"xV" = (/obj/fire,/turf/simulated/floor/lava,/area/survivalpod/superpose/HellCave)
-"yJ" = (/obj/machinery/crystal/lava,/turf/simulated/floor/lava,/area/survivalpod/superpose/HellCave)
-"zh" = (/obj/structure/grille/broken/cult,/turf/simulated/floor/cult,/area/survivalpod/superpose/HellCave)
-"zJ" = (/obj/structure/grille/cult,/turf/simulated/floor/cult,/area/survivalpod/superpose/HellCave)
-"AB" = (/obj/structure/grille/cult,/turf/simulated/floor/lava,/area/survivalpod/superpose/HellCave)
-"Bk" = (/obj/structure/closet/crate,/obj/fiftyspawner/plasteel,/obj/fiftyspawner/plasteel,/obj/fiftyspawner/phoronrglass,/obj/fiftyspawner/phoronrglass,/obj/item/stack/material/lead{amount = 50},/obj/item/stack/material/lead{amount = 50},/obj/fiftyspawner/gold,/obj/fiftyspawner/phoron,/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/HellCave)
-"Cy" = (/obj/structure/girder/cult,/turf/simulated/floor/lava,/area/survivalpod/superpose/HellCave)
-"DW" = (/obj/structure/cult/pylon,/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/HellCave)
-"El" = (/obj/structure/simple_door/cult,/turf/simulated/floor/cult,/area/survivalpod/superpose/HellCave)
-"Fv" = (/obj/structure/girder/cult,/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/HellCave)
-"Fz" = (/obj/item/weapon/bone/ribs,/turf/simulated/floor/lava,/area/survivalpod/superpose/HellCave)
-"FX" = (/obj/structure/grille/cult,/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/HellCave)
-"Hm" = (/obj/structure/girder/cult,/turf/simulated/floor/cult,/area/survivalpod/superpose/HellCave)
-"Ia" = (/turf/template_noop,/area/survivalpod/superpose/HellCave)
-"Jb" = (/obj/effect/decal/remains/deer,/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/HellCave)
-"Ji" = (/obj/structure/grille/broken/cult,/obj/fire,/turf/simulated/floor/lava,/area/survivalpod/superpose/HellCave)
-"Jt" = (/obj/structure/loot_pile/surface/bones,/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/HellCave)
-"Kb" = (/turf/simulated/goreeyes,/area/survivalpod/superpose/HellCave)
-"Ko" = (/obj/structure/constructshell/cult,/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/HellCave)
-"LQ" = (/obj/structure/grille/cult,/turf/simulated/wall/cult,/area/survivalpod/superpose/HellCave)
-"Mq" = (/obj/structure/grille/broken/cult,/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/HellCave)
-"Mv" = (/turf/simulated/floor/flesh/colour{color = red},/area/survivalpod/superpose/HellCave)
-"ML" = (/obj/structure/closet/crate,/obj/item/stack/material/plastic{amount = 50},/obj/item/stack/material/plastic{amount = 50},/obj/item/stack/material/plastic{amount = 50},/obj/item/stack/material/plastic{amount = 50},/obj/item/stack/material/steel{amount = 50},/obj/item/stack/material/steel{amount = 50},/obj/item/stack/material/steel{amount = 50},/obj/item/stack/material/steel{amount = 50},/obj/item/stack/material/glass{amount = 50},/obj/item/stack/material/glass{amount = 50},/obj/item/stack/material/glass{amount = 50},/obj/item/stack/material/glass{amount = 50},/obj/item/stack/rods{amount = 50},/obj/item/stack/rods{amount = 50},/obj/item/stack/rods{amount = 50},/obj/item/stack/rods{amount = 50},/obj/item/stack/cable_coil{pixel_x = 3; pixel_y = 3},/obj/item/stack/cable_coil{pixel_x = 3; pixel_y = 3},/obj/item/stack/cable_coil/green,/obj/item/stack/cable_coil/blue,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/turf/simulated/floor/cult,/area/survivalpod/superpose/HellCave)
-"Nh" = (/turf/simulated/gore,/area/survivalpod/superpose/HellCave)
-"PU" = (/obj/fire,/turf/template_noop,/area/survivalpod/superpose/HellCave)
-"Qh" = (/obj/fire,/turf/simulated/wall/cult,/area/survivalpod/superpose/HellCave)
-"RL" = (/obj/effect/decal/remains/deer,/turf/simulated/floor/cult,/area/survivalpod/superpose/HellCave)
-"Sy" = (/obj/structure/grille/broken/cult,/obj/fire,/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/HellCave)
-"Ut" = (/obj/structure/cult/talisman,/turf/simulated/floor/cult,/area/survivalpod/superpose/HellCave)
-"UO" = (/obj/item/weapon/bone/arm,/turf/simulated/floor/lava,/area/survivalpod/superpose/HellCave)
-"Vn" = (/obj/structure/cult/forge,/turf/simulated/floor/cult,/area/survivalpod/superpose/HellCave)
-"VA" = (/obj/structure/grille/broken/cult,/turf/simulated/floor/gorefloor,/area/survivalpod/superpose/HellCave)
-"YJ" = (/obj/fire,/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/HellCave)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"bL" = (
+/obj/item/weapon/bone/ribs,
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/HellCave)
+"bX" = (
+/obj/fire,
+/turf/simulated/floor/gorefloor,
+/area/survivalpod/superpose/HellCave)
+"eh" = (
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/HellCave)
+"eD" = (
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/HellCave)
+"fH" = (
+/obj/structure/grille/broken/cult,
+/turf/simulated/floor/lava,
+/area/survivalpod/superpose/HellCave)
+"gW" = (
+/obj/effect/map_effect/interval/sound_emitter/punching,
+/obj/effect/map_effect/interval/effect_emitter/smoke/fire,
+/turf/simulated/floor/lava,
+/area/survivalpod/superpose/HellCave)
+"iK" = (
+/turf/simulated/floor/gorefloor,
+/area/survivalpod/superpose/HellCave)
+"jG" = (
+/obj/structure/closet/crate,
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/fiftyspawner/blucarpet,
+/obj/fiftyspawner/oracarpet,
+/obj/fiftyspawner/purcarpet,
+/obj/fiftyspawner/sblucarpet,
+/obj/fiftyspawner/tealcarpet,
+/obj/fiftyspawner/turcarpet,
+/obj/item/stack/material/wood{
+	amount = 50;
+	color = "#824B28"
+	},
+/obj/item/stack/material/wood{
+	amount = 50;
+	color = "#824B28"
+	},
+/obj/item/stack/material/wood/hard{
+	amount = 50
+	},
+/obj/item/stack/material/wood/hard{
+	amount = 50
+	},
+/obj/item/stack/material/wood/sif{
+	amount = 50
+	},
+/obj/item/stack/material/wood/sif{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/cloth{
+	amount = 50
+	},
+/obj/item/stack/material/cloth{
+	amount = 50
+	},
+/obj/item/stack/material/algae{
+	amount = 50
+	},
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/lead{
+	amount = 30
+	},
+/obj/item/stack/material/plasteel{
+	amount = 30;
+	pixel_y = 5
+	},
+/obj/item/stack/material/resin{
+	amount = 50
+	},
+/obj/item/stack/material/smolebricks{
+	amount = 50
+	},
+/obj/item/stack/material/smolebricks{
+	amount = 50
+	},
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/HellCave)
+"kE" = (
+/obj/item/device/gps,
+/obj/item/sticky_pad/random,
+/obj/item/device/starcaster_news,
+/obj/item/weapon/pen/blue,
+/obj/item/device/pda,
+/obj/item/weapon/card/id/external,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
+/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
+/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/clothing/accessory/permit/gun,
+/obj/item/device/camera,
+/obj/item/device/binoculars,
+/obj/item/device/threadneedle,
+/obj/random/soap,
+/obj/item/weapon/towel/random,
+/obj/item/bodybag/cryobag,
+/obj/item/device/flashlight/flare,
+/obj/item/device/flashlight/flare,
+/obj/item/device/flashlight/color/yellow,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/weapon/flame/lighter/random,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/cell/device/hyper,
+/obj/item/weapon/extinguisher/mini,
+/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/weapon/reagent_containers/pill/spaceacillin,
+/obj/item/weapon/reagent_containers/pill/spaceacillin,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/fbp_backup_cell,
+/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/stack/nanopaste,
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/weapon/storage/backpack/messenger,
+/obj/item/clothing/accessory/storage/black_drop_pouches,
+/obj/item/clothing/accessory/poncho/thermal,
+/obj/item/weapon/storage/box/survival/comp,
+/obj/item/weapon/storage/toolbox/brass,
+/obj/item/weapon/storage/box/khcrystal,
+/obj/structure/closet/crate,
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/HellCave)
+"lF" = (
+/turf/simulated/mineral/ignore_mapgen,
+/area/survivalpod/superpose/HellCave)
+"lQ" = (
+/obj/item/weapon/bone/skull/unknown,
+/turf/simulated/floor/lava,
+/area/survivalpod/superpose/HellCave)
+"nD" = (
+/obj/effect/gibspawner/human,
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/HellCave)
+"qo" = (
+/obj/structure/cult/tome,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/HellCave)
+"vf" = (
+/turf/simulated/wall/cult,
+/area/survivalpod/superpose/HellCave)
+"vT" = (
+/turf/simulated/floor/lava,
+/area/survivalpod/superpose/HellCave)
+"xV" = (
+/obj/fire,
+/turf/simulated/floor/lava,
+/area/survivalpod/superpose/HellCave)
+"yJ" = (
+/obj/machinery/crystal/lava,
+/turf/simulated/floor/lava,
+/area/survivalpod/superpose/HellCave)
+"zh" = (
+/obj/structure/grille/broken/cult,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/HellCave)
+"zJ" = (
+/obj/structure/grille/cult,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/HellCave)
+"AB" = (
+/obj/structure/grille/cult,
+/turf/simulated/floor/lava,
+/area/survivalpod/superpose/HellCave)
+"Bk" = (
+/obj/structure/closet/crate,
+/obj/fiftyspawner/plasteel,
+/obj/fiftyspawner/plasteel,
+/obj/fiftyspawner/phoronrglass,
+/obj/fiftyspawner/phoronrglass,
+/obj/item/stack/material/lead{
+	amount = 50
+	},
+/obj/item/stack/material/lead{
+	amount = 50
+	},
+/obj/fiftyspawner/gold,
+/obj/fiftyspawner/phoron,
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/HellCave)
+"Cy" = (
+/obj/structure/girder/cult,
+/turf/simulated/floor/lava,
+/area/survivalpod/superpose/HellCave)
+"DW" = (
+/obj/structure/cult/pylon,
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/HellCave)
+"El" = (
+/obj/structure/simple_door/cult,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/HellCave)
+"Fv" = (
+/obj/structure/girder/cult,
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/HellCave)
+"Fz" = (
+/obj/item/weapon/bone/ribs,
+/turf/simulated/floor/lava,
+/area/survivalpod/superpose/HellCave)
+"FX" = (
+/obj/structure/grille/cult,
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/HellCave)
+"Hm" = (
+/obj/structure/girder/cult,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/HellCave)
+"Ia" = (
+/turf/template_noop,
+/area/survivalpod/superpose/HellCave)
+"Jb" = (
+/obj/effect/decal/remains/deer,
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/HellCave)
+"Ji" = (
+/obj/structure/grille/broken/cult,
+/obj/fire,
+/turf/simulated/floor/lava,
+/area/survivalpod/superpose/HellCave)
+"Jt" = (
+/obj/structure/loot_pile/surface/bones,
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/HellCave)
+"Kb" = (
+/turf/simulated/goreeyes,
+/area/survivalpod/superpose/HellCave)
+"Ko" = (
+/obj/structure/constructshell/cult,
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/HellCave)
+"LQ" = (
+/obj/structure/grille/cult,
+/turf/simulated/wall/cult,
+/area/survivalpod/superpose/HellCave)
+"Mq" = (
+/obj/structure/grille/broken/cult,
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/HellCave)
+"Mv" = (
+/turf/simulated/floor/flesh/colour{
+	color = red
+	},
+/area/survivalpod/superpose/HellCave)
+"ML" = (
+/obj/structure/closet/crate,
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/cable_coil/green,
+/obj/item/stack/cable_coil/blue,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/HellCave)
+"Nh" = (
+/turf/simulated/gore,
+/area/survivalpod/superpose/HellCave)
+"PU" = (
+/obj/fire,
+/turf/template_noop,
+/area/survivalpod/superpose/HellCave)
+"Qh" = (
+/obj/fire,
+/turf/simulated/wall/cult,
+/area/survivalpod/superpose/HellCave)
+"RL" = (
+/obj/effect/decal/remains/deer,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/HellCave)
+"Sy" = (
+/obj/structure/grille/broken/cult,
+/obj/fire,
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/HellCave)
+"Ut" = (
+/obj/structure/cult/talisman,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/HellCave)
+"UO" = (
+/obj/item/weapon/bone/arm,
+/turf/simulated/floor/lava,
+/area/survivalpod/superpose/HellCave)
+"Vn" = (
+/obj/structure/cult/forge,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/HellCave)
+"VA" = (
+/obj/structure/grille/broken/cult,
+/turf/simulated/floor/gorefloor,
+/area/survivalpod/superpose/HellCave)
+"YJ" = (
+/obj/fire,
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/HellCave)
 
 (1,1,1) = {"
-IaehIaIaehIaehIaehehlFlFehehlFlFIaehIaIavfIalFehlFlFehIalFlFlFehehvfehlFNhlFehIa
-vflFlFvfehehvflFlFlFvTvTFXehvflFvTlFlFlFlFlFlFvfNhlFlFlFNhKbLQABJilFlFxVQhxVlFlF
-lFlFehehehehehNhNhNhxVYJehDWehYJehNhlFlFlFKbDWehYJYJYJehehiKiKbXbXABvTvTvTyJvflF
-lFvfehehvTvTehehehNhehehehehehehehehNhNhkEehehehiKiKiKiKiKiKiKiKiKVAiKMviKvTvTlF
-lFlFehvTvTvTvTYJehKbehehiKbXiKehehehnDNhehiKiKiKMvMviKiKMvMviKMvMviKMvMvMvvTxVvf
-IaehvTvTgWFzvTehehYJiKMvMvMvMviKJbehehKbiKMvMviKMvehYJehiKiKiKiKiKVAiKMviKvTQhIa
-IaehvTvTvTvTvTehehbXMvMviKiKMvMviKYJehYJiKiKiKehehehJtehehehbXbXiKABvTvTvTyJlFlF
-lFehehvTxVxVnDehMqiKMviKehehiKMviKehehehiKiKiKehnDKbNhKbFvehABJifHvTxVxVxVxVvfeh
-lFPUehehehYJehJbiKMvMviKehnDehMvMviKehehiKMvehehehYJYJYJehehKbNhKbNhNhNhlFlFlFIa
-lFvfehehehehMqehiKMviKiKehFvehiKMviKYJvTiKMviKiKiKiKiKiKiKiKiKehehBkNhNhNhlFlFeh
-IalFlFvfvfKbehiKMvMviKehehKbehiKMvehMqehehehMvMvMviKiKMvMviKMvehSyYJehvTvTvTlFlF
-IaIalFlFlFehehiKMviKehehehVAehiKMvMvehvTyJehiKiKiKiKiKehiKehMvMviKehYJYJvTvTlFlF
-lFvflFlFehehehMvMviKYJehehKbehiKiKMvehxVUOehehKovfzhElzJvfKoehMviKMvYJYJvTvTvflF
-IalFNhehehFvehMviKiKYJehJtNhYJehiKMvehYJehehKbvfvfRLeDRLvfvfehehehMviKehehvflFlF
-lFlFYJYJehiKiKMviKiKehehNhNhYJehiKMviKehehbLehHmeDeDeDeDMLvfehehiKiKehehlFlFlFIa
-lFehYJehehiKMvMviKehehehNhNhehYJiKMvMvehehYJehvfVnqoUteDeDCylQDWiKMviKIavflFehIa
-vfehehiKiKMvMviKiKehYJNhNhNhehehehMvMviKiKYJehvfvfzJvfvfzhvTvTehehMvMviKJblFlFIa
-ehehiKiKIaMvMvMviKYJYJNhNhNhehehehiKMvMviKehehMqehehehehehYJYJehehMvMviKYJehvfvf
-ehlFvfIaIaMvMvMviKYJYJNhNhNhehehJbehiKMvMvMviKehiKiKiKiKehehiKehiKMvMviKYJMqlFeh
-IalFIaMvMvMvMvMviKYJYJNhNhNhjGehehehnDehiKiKMvMvMvMvMvMvMviKiKMvMvMviKiKYJehlFeh
-IalFIaMvMvMvMvMviKehehNhNhNhNhehIaKbehehYJehiKehMvMviKiKMvMvMvMviKehehehehehlFlF
-IaehiKMvMviKiKiKiKehlFlFNhNhlFehvfehehehYJehehehvfiKiKehiKiKiKIaehYJehehehlFlFIa
-IalFehiKiKiKiKiKIavfvflFlFlFlFvfIavfehehehlFvfvflFehvfehehehMqvflFlFlFlFlFlFlFlF
-IalFlFehehehlFIaehIaIalFlFlFvfIaIaIaehlFlFlFvfvflFlFlFvfvflFvflFlFlFlFlFlFlFlFIa
-IaIaehIaIalFlFIaIaehehIaIaIaIalFlFIaIaehehehIaIaIaehehehIaIaIaehehIaIaIaIaIaehIa
+Ia
+vf
+lF
+lF
+lF
+Ia
+Ia
+lF
+lF
+lF
+Ia
+Ia
+lF
+Ia
+lF
+lF
+vf
+eh
+eh
+Ia
+Ia
+Ia
+Ia
+Ia
+Ia
+"}
+(2,1,1) = {"
+eh
+lF
+lF
+vf
+lF
+eh
+eh
+eh
+PU
+vf
+lF
+Ia
+vf
+lF
+lF
+eh
+eh
+eh
+lF
+lF
+lF
+eh
+lF
+lF
+Ia
+"}
+(3,1,1) = {"
+Ia
+lF
+eh
+eh
+eh
+vT
+vT
+eh
+eh
+eh
+lF
+lF
+lF
+Nh
+YJ
+YJ
+eh
+iK
+vf
+Ia
+Ia
+iK
+eh
+lF
+eh
+"}
+(4,1,1) = {"
+Ia
+vf
+eh
+eh
+vT
+vT
+vT
+vT
+eh
+eh
+vf
+lF
+lF
+eh
+YJ
+eh
+iK
+iK
+Ia
+Mv
+Mv
+Mv
+iK
+eh
+Ia
+"}
+(5,1,1) = {"
+eh
+eh
+eh
+vT
+vT
+gW
+vT
+xV
+eh
+eh
+vf
+lF
+eh
+eh
+eh
+eh
+iK
+Ia
+Ia
+Mv
+Mv
+Mv
+iK
+eh
+Ia
+"}
+(6,1,1) = {"
+Ia
+eh
+eh
+vT
+vT
+Fz
+vT
+xV
+YJ
+eh
+Kb
+eh
+eh
+Fv
+iK
+iK
+Mv
+Mv
+Mv
+Mv
+Mv
+iK
+iK
+eh
+lF
+"}
+(7,1,1) = {"
+eh
+vf
+eh
+eh
+vT
+vT
+vT
+nD
+eh
+Mq
+eh
+eh
+eh
+eh
+iK
+Mv
+Mv
+Mv
+Mv
+Mv
+Mv
+iK
+iK
+lF
+lF
+"}
+(8,1,1) = {"
+Ia
+lF
+Nh
+eh
+YJ
+eh
+eh
+eh
+Jb
+eh
+iK
+iK
+Mv
+Mv
+Mv
+Mv
+iK
+Mv
+Mv
+Mv
+Mv
+iK
+iK
+Ia
+Ia
+"}
+(9,1,1) = {"
+eh
+lF
+Nh
+eh
+eh
+eh
+eh
+Mq
+iK
+iK
+Mv
+Mv
+Mv
+iK
+iK
+iK
+iK
+iK
+iK
+iK
+iK
+iK
+Ia
+eh
+Ia
+"}
+(10,1,1) = {"
+eh
+lF
+Nh
+Nh
+Kb
+YJ
+bX
+iK
+Mv
+Mv
+Mv
+iK
+iK
+iK
+iK
+eh
+eh
+YJ
+YJ
+YJ
+eh
+eh
+vf
+Ia
+eh
+"}
+(11,1,1) = {"
+lF
+vT
+xV
+eh
+eh
+iK
+Mv
+Mv
+Mv
+iK
+iK
+eh
+YJ
+YJ
+eh
+eh
+YJ
+YJ
+YJ
+YJ
+eh
+lF
+vf
+Ia
+eh
+"}
+(12,1,1) = {"
+lF
+vT
+YJ
+eh
+eh
+Mv
+Mv
+iK
+iK
+iK
+eh
+eh
+eh
+eh
+eh
+eh
+Nh
+Nh
+Nh
+Nh
+Nh
+lF
+lF
+lF
+Ia
+"}
+(13,1,1) = {"
+eh
+FX
+eh
+eh
+iK
+Mv
+iK
+eh
+eh
+eh
+eh
+eh
+eh
+Jt
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+lF
+lF
+Ia
+"}
+(14,1,1) = {"
+eh
+eh
+DW
+eh
+bX
+Mv
+iK
+eh
+nD
+Fv
+Kb
+VA
+Kb
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+Nh
+lF
+lF
+Ia
+"}
+(15,1,1) = {"
+lF
+vf
+eh
+eh
+iK
+Mv
+Mv
+iK
+eh
+eh
+eh
+eh
+eh
+YJ
+YJ
+eh
+eh
+eh
+eh
+jG
+Nh
+lF
+lF
+vf
+Ia
+"}
+(16,1,1) = {"
+lF
+lF
+YJ
+eh
+eh
+iK
+Mv
+Mv
+Mv
+iK
+iK
+iK
+iK
+eh
+eh
+YJ
+eh
+eh
+eh
+eh
+eh
+eh
+vf
+Ia
+lF
+"}
+(17,1,1) = {"
+Ia
+vT
+eh
+eh
+eh
+Jb
+iK
+iK
+Mv
+Mv
+Mv
+Mv
+iK
+iK
+iK
+iK
+eh
+eh
+Jb
+eh
+Ia
+vf
+Ia
+Ia
+lF
+"}
+(18,1,1) = {"
+eh
+lF
+Nh
+eh
+eh
+eh
+YJ
+eh
+iK
+iK
+eh
+Mv
+Mv
+Mv
+Mv
+Mv
+Mv
+iK
+eh
+eh
+Kb
+eh
+vf
+Ia
+Ia
+"}
+(19,1,1) = {"
+Ia
+lF
+lF
+Nh
+nD
+eh
+eh
+eh
+eh
+YJ
+Mq
+eh
+eh
+eh
+iK
+Mv
+Mv
+Mv
+iK
+nD
+eh
+eh
+eh
+eh
+Ia
+"}
+(20,1,1) = {"
+Ia
+lF
+lF
+Nh
+Nh
+Kb
+YJ
+eh
+eh
+vT
+eh
+vT
+xV
+YJ
+eh
+eh
+iK
+Mv
+Mv
+eh
+eh
+eh
+eh
+lF
+eh
+"}
+(21,1,1) = {"
+vf
+lF
+lF
+kE
+eh
+iK
+iK
+iK
+iK
+iK
+eh
+yJ
+UO
+eh
+eh
+eh
+iK
+iK
+Mv
+iK
+YJ
+YJ
+eh
+lF
+eh
+"}
+(22,1,1) = {"
+Ia
+lF
+Kb
+eh
+iK
+Mv
+iK
+iK
+Mv
+Mv
+eh
+eh
+eh
+eh
+bL
+YJ
+YJ
+eh
+Mv
+iK
+eh
+eh
+lF
+lF
+eh
+"}
+(23,1,1) = {"
+lF
+lF
+DW
+eh
+iK
+Mv
+iK
+iK
+eh
+iK
+Mv
+iK
+eh
+Kb
+eh
+eh
+eh
+eh
+iK
+Mv
+iK
+eh
+vf
+vf
+Ia
+"}
+(24,1,1) = {"
+eh
+vf
+eh
+eh
+iK
+iK
+eh
+eh
+eh
+iK
+Mv
+iK
+Ko
+vf
+Hm
+vf
+vf
+Mq
+eh
+Mv
+eh
+eh
+vf
+vf
+Ia
+"}
+(25,1,1) = {"
+lF
+Nh
+YJ
+iK
+Mv
+Mv
+eh
+nD
+eh
+iK
+Mv
+iK
+vf
+vf
+eD
+Vn
+vf
+eh
+iK
+Mv
+Mv
+vf
+lF
+lF
+Ia
+"}
+(26,1,1) = {"
+lF
+lF
+YJ
+iK
+Mv
+eh
+eh
+Kb
+YJ
+iK
+iK
+iK
+zh
+RL
+eD
+qo
+zJ
+eh
+iK
+Mv
+Mv
+iK
+eh
+lF
+eh
+"}
+(27,1,1) = {"
+eh
+lF
+YJ
+iK
+iK
+YJ
+Jt
+Nh
+YJ
+iK
+iK
+iK
+El
+eD
+eD
+Ut
+vf
+eh
+iK
+Mv
+iK
+iK
+vf
+lF
+eh
+"}
+(28,1,1) = {"
+Ia
+lF
+eh
+iK
+iK
+eh
+eh
+Kb
+YJ
+iK
+Mv
+eh
+zJ
+RL
+eD
+eD
+vf
+eh
+iK
+Mv
+iK
+eh
+eh
+vf
+eh
+"}
+(29,1,1) = {"
+lF
+Nh
+eh
+iK
+Mv
+iK
+eh
+Fv
+eh
+iK
+Mv
+iK
+vf
+vf
+ML
+eD
+zh
+eh
+eh
+Mv
+Mv
+iK
+eh
+vf
+Ia
+"}
+(30,1,1) = {"
+lF
+Kb
+iK
+iK
+Mv
+iK
+eh
+eh
+eh
+iK
+iK
+eh
+Ko
+vf
+vf
+Cy
+vT
+YJ
+eh
+iK
+Mv
+iK
+eh
+lF
+Ia
+"}
+(31,1,1) = {"
+lF
+LQ
+iK
+iK
+iK
+iK
+bX
+AB
+Kb
+iK
+Mv
+Mv
+eh
+eh
+eh
+lQ
+vT
+YJ
+iK
+iK
+Mv
+iK
+Mq
+vf
+Ia
+"}
+(32,1,1) = {"
+eh
+AB
+bX
+iK
+Mv
+iK
+bX
+Ji
+Nh
+eh
+eh
+Mv
+Mv
+eh
+eh
+DW
+eh
+eh
+eh
+Mv
+Mv
+Ia
+vf
+lF
+eh
+"}
+(33,1,1) = {"
+eh
+Ji
+bX
+iK
+Mv
+iK
+iK
+fH
+Kb
+eh
+Sy
+iK
+iK
+eh
+iK
+iK
+eh
+eh
+iK
+Mv
+iK
+eh
+lF
+lF
+eh
+"}
+(34,1,1) = {"
+vf
+lF
+AB
+VA
+iK
+VA
+AB
+vT
+Nh
+Bk
+YJ
+eh
+Mv
+Mv
+iK
+Mv
+Mv
+Mv
+Mv
+Mv
+eh
+YJ
+lF
+lF
+Ia
+"}
+(35,1,1) = {"
+eh
+lF
+vT
+iK
+Mv
+iK
+vT
+xV
+Nh
+Nh
+eh
+YJ
+YJ
+iK
+eh
+iK
+Mv
+Mv
+Mv
+iK
+eh
+eh
+lF
+lF
+Ia
+"}
+(36,1,1) = {"
+lF
+xV
+vT
+Mv
+Mv
+Mv
+vT
+xV
+Nh
+Nh
+vT
+YJ
+YJ
+eh
+eh
+Ia
+iK
+iK
+iK
+iK
+eh
+eh
+lF
+lF
+Ia
+"}
+(37,1,1) = {"
+Nh
+Qh
+vT
+iK
+Mv
+iK
+vT
+xV
+lF
+Nh
+vT
+vT
+vT
+eh
+lF
+vf
+Jb
+YJ
+YJ
+YJ
+eh
+eh
+lF
+lF
+Ia
+"}
+(38,1,1) = {"
+lF
+xV
+yJ
+vT
+vT
+vT
+yJ
+xV
+lF
+lF
+vT
+vT
+vT
+vf
+lF
+lF
+lF
+eh
+Mq
+eh
+eh
+lF
+lF
+lF
+Ia
+"}
+(39,1,1) = {"
+eh
+lF
+vf
+vT
+xV
+Qh
+lF
+vf
+lF
+lF
+lF
+lF
+vf
+lF
+lF
+eh
+lF
+vf
+lF
+lF
+lF
+lF
+lF
+lF
+eh
+"}
+(40,1,1) = {"
+Ia
+lF
+lF
+lF
+vf
+Ia
+lF
+eh
+Ia
+eh
+lF
+lF
+lF
+lF
+Ia
+Ia
+Ia
+vf
+eh
+eh
+lF
+Ia
+lF
+Ia
+Ia
 "}
