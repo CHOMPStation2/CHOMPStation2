@@ -74,6 +74,10 @@
 	emote_message_3p_target = "wawas at TARGET."
 	emote_sound = 'modular_chomp/sound/voice/emotes/wawa.ogg'
 
+/decl/emote/audible/scientist //placeholder, do not use in anything
+	key = "hlscientist"
+	emote_message_3p = "does science."
+
 /decl/emote/audible/scientist/scream
 	key = "hlscream"
 	emote_message_1p = "You scream."

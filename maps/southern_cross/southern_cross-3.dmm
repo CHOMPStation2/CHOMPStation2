@@ -12,7 +12,7 @@
 /obj/machinery/pointdefense{
 	id_tag = "PD Main"
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced/turfpack/airless,
 /area/thirddeck/roof)
 "aad" = (
 /obj/effect/landmark/event_spawn/morphspawn,
@@ -34,11 +34,11 @@
 /turf/space,
 /area/space)
 "aah" = (
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/thirddeck/roof)
 "aai" = (
 /obj/structure/grille,
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced/turfpack/airless,
 /area/thirddeck/roof)
 "aaj" = (
 /obj/effect/floor_decal/borderfloor{
@@ -57,7 +57,7 @@
 	c_tag = "AI - Fore";
 	dir = 1
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced/turfpack/airless,
 /area/thirddeck/roof)
 "aam" = (
 /obj/structure/table/standard,
@@ -244,7 +244,7 @@
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/foreportsolar)
 "aff" = (
 /obj/structure/table/rack/shelf/steel,
@@ -504,7 +504,7 @@
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/forestarboardsolar)
 "aoF" = (
 /obj/structure/cable/yellow{
@@ -523,7 +523,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/foreportsolar)
 "apc" = (
 /turf/space,
@@ -679,14 +679,14 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/forestarboardsolar)
 "awy" = (
 /obj/machinery/camera/network/command{
 	c_tag = "AI - Port 1";
 	dir = 8
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced/turfpack/airless,
 /area/thirddeck/roof)
 "ayz" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
@@ -971,7 +971,7 @@
 	c_tag = "AI - Starboard";
 	dir = 4
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced/turfpack/airless,
 /area/thirddeck/roof)
 "aIG" = (
 /obj/structure/table/wooden_reinforced,
@@ -1066,7 +1066,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/aftportsolar)
 "aMZ" = (
 /obj/structure/closet/crate,
@@ -1094,7 +1094,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced/turfpack/airless,
 /area/thirddeck/roof)
 "aNH" = (
 /obj/structure/cable/green{
@@ -1102,7 +1102,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced/turfpack/airless,
 /area/thirddeck/roof)
 "aOF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1353,7 +1353,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/foreportsolar)
 "bdC" = (
 /obj/effect/wingrille_spawn/reinforced,
@@ -1509,7 +1509,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced/turfpack/airless,
 /area/thirddeck/roof)
 "bkP" = (
 /obj/item/stack/tile/carpet/bcarpet,
@@ -1841,7 +1841,7 @@
 /area/maintenance/thirddeck/hiddenkitchen)
 "bCU" = (
 /obj/structure/cable/yellow,
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/forestarboardsolar)
 "bDN" = (
 /obj/structure/bed/chair/comfy/brown{
@@ -1863,7 +1863,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/foreportsolar)
 "bEC" = (
 /obj/structure/cable/green{
@@ -1902,7 +1902,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/foreportsolar)
 "bFE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -1924,7 +1924,7 @@
 	id = "forestarboardsolar";
 	name = "Starboard Solar Array"
 	},
-/turf/simulated/floor/airless{
+/turf/simulated/floor/plating/turfpack/airless{
 	icon_state = "solarpanel"
 	},
 /area/solar/forestarboardsolar)
@@ -2235,7 +2235,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/thirddeck/roof)
 "bTH" = (
 /obj/machinery/door/airlock{
@@ -2373,7 +2373,7 @@
 /area/maintenance/thirddeck/dormsatmos)
 "bXW" = (
 /obj/structure/catwalk,
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/thirddeck/roof)
 "bYz" = (
 /obj/structure/lattice,
@@ -2696,7 +2696,7 @@
 	req_one_access = list(11,24)
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/forestarboardsolar)
 "cim" = (
 /obj/structure/disposalpipe/trunk{
@@ -2725,17 +2725,17 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/forestarboardsolar)
 "ckl" = (
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/forestarboardsolar)
 "cko" = (
 /obj/structure/cable/yellow{
 	d2 = 4;
 	icon_state = "0-4"
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/forestarboardsolar)
 "ckU" = (
 /obj/machinery/power/tracker,
@@ -2743,7 +2743,7 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/forestarboardsolar)
 "clf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -3162,7 +3162,7 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/forestarboardsolar)
 "cEp" = (
 /turf/simulated/open,
@@ -3324,7 +3324,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/forestarboardsolar)
 "cHp" = (
 /obj/structure/balloon/bat,
@@ -3503,7 +3503,7 @@
 	c_tag = "AI - Port 2";
 	dir = 8
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced/turfpack/airless,
 /area/thirddeck/roof)
 "cRk" = (
 /obj/structure/cable/cyan{
@@ -4042,7 +4042,7 @@
 	icon_state = "1-4"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/forestarboardsolar)
 "dqb" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
@@ -5868,7 +5868,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/maintenance/thirddeck/dormsaft{
 	name = "Third Deck Aft Maintenance"
 	})
@@ -6121,7 +6121,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/maintenance/thirddeck/foreport)
 "eGw" = (
 /obj/structure/bed/chair/office/dark{
@@ -6889,7 +6889,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/barricade,
 /obj/item/tape/engineering,
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced/turfpack/airless,
 /area/maintenance/thirddeck/dormsatmos)
 "fcD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
@@ -7019,7 +7019,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/foreportsolar)
 "fhg" = (
 /obj/structure/lattice,
@@ -7499,7 +7499,7 @@
 /area/hallway/primary/thirddeck/starboard)
 "fyI" = (
 /obj/structure/catwalk,
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/space)
 "fzn" = (
 /turf/simulated/wall/r_lead,
@@ -8514,28 +8514,11 @@
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "ggu" = (
-/obj/structure/cable/yellow{
-	d2 = 4;
-	icon_state = "0-4"
-	},
 /obj/machinery/power/solar{
-	id = "aftportsolar";
+	id = "foreportsolar";
 	name = "Port Solar Array"
 	},
-/turf/simulated/floor/airless{
-	icon_state = "solarpanel"
-	},
-/area/solar/foreportsolar)
-"ggF" = (
-/obj/structure/cable/yellow{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/machinery/power/solar{
-	id = "aftportsolar";
-	name = "Port Solar Array"
-	},
-/turf/simulated/floor/airless{
+/turf/simulated/floor/plating/turfpack/airless{
 	icon_state = "solarpanel"
 	},
 /area/solar/foreportsolar)
@@ -8566,7 +8549,7 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/border_only,
 /obj/item/tape/engineering,
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced/turfpack/airless,
 /area/maintenance/thirddeck/dormsatmos)
 "gjg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -11241,7 +11224,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/maintenance/thirddeck/dormsaft{
 	name = "Third Deck Aft Maintenance"
 	})
@@ -11765,7 +11748,7 @@
 /turf/simulated/wall,
 /area/crew_quarters/sleep/vistor_room_5)
 "jhg" = (
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced/turfpack/airless,
 /area/thirddeck/roof)
 "jhl" = (
 /obj/structure/salvageable/slotmachine1,
@@ -13774,7 +13757,7 @@
 	pixel_y = -26;
 	req_access = null
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/maintenance/thirddeck/foreport)
 "kWB" = (
 /obj/structure/displaycase,
@@ -13949,7 +13932,7 @@
 	icon_state = "1-8"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/aftportsolar)
 "lfV" = (
 /obj/item/clothing/under/swimsuit/stripper,
@@ -14270,7 +14253,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/foreportsolar)
 "lzK" = (
 /obj/structure/sign/deck/third,
@@ -14482,7 +14465,7 @@
 	id = "aftstarboardsolar";
 	name = "Starboard Solar Array"
 	},
-/turf/simulated/floor/airless{
+/turf/simulated/floor/plating/turfpack/airless{
 	icon_state = "solarpanel"
 	},
 /area/solar/aftstarboardsolar)
@@ -14511,7 +14494,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced/turfpack/airless,
 /area/thirddeck/roof)
 "lJN" = (
 /obj/structure/cable/yellow{
@@ -14525,7 +14508,7 @@
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/aftstarboardsolar)
 "lLM" = (
 /obj/machinery/alarm{
@@ -14934,7 +14917,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/aftstarboardsolar)
 "lZW" = (
 /obj/item/stack/material/marble{
@@ -15457,7 +15440,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/maintenance/thirddeck/forestarboard)
 "mpp" = (
 /obj/machinery/door/firedoor/border_only,
@@ -16021,7 +16004,7 @@
 /area/maintenance/thirddeck/aftstarboard)
 "mTv" = (
 /obj/structure/cable/yellow,
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/space)
 "mTB" = (
 /obj/machinery/door/firedoor/border_only,
@@ -16260,7 +16243,7 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/space)
 "naz" = (
 /obj/machinery/light{
@@ -16717,7 +16700,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/forestarboardsolar)
 "nuN" = (
 /obj/structure/table/reinforced,
@@ -17197,7 +17180,7 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/aftportsolar)
 "nNF" = (
 /obj/effect/floor_decal/borderfloor{
@@ -17248,7 +17231,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/aftstarboardsolar)
 "nQe" = (
 /obj/effect/floor_decal/industrial/warning/corner,
@@ -18060,7 +18043,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/aftstarboardsolar)
 "onG" = (
 /obj/structure/disposalpipe/segment,
@@ -18102,7 +18085,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/aftstarboardsolar)
 "ooS" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -18126,7 +18109,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/aftstarboardsolar)
 "opn" = (
 /obj/machinery/power/tracker,
@@ -18134,7 +18117,7 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/aftstarboardsolar)
 "opv" = (
 /obj/random/toolbox,
@@ -18178,7 +18161,7 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced/turfpack/airless,
 /area/thirddeck/roof)
 "orc" = (
 /obj/machinery/button/remote/airlock{
@@ -18218,7 +18201,7 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced/turfpack/airless,
 /area/thirddeck/roof)
 "otb" = (
 /obj/structure/cable{
@@ -18249,7 +18232,7 @@
 /obj/structure/sign/warning/high_voltage{
 	pixel_y = 32
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced/turfpack/airless,
 /area/thirddeck/roof)
 "ouV" = (
 /obj/structure/ladder,
@@ -18505,7 +18488,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/aftstarboardsolar)
 "oKA" = (
 /obj/machinery/door/firedoor/border_only,
@@ -20096,7 +20079,7 @@
 	icon_state = "1-4"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/aftstarboardsolar)
 "pXm" = (
 /obj/machinery/door/airlock/glass{
@@ -20197,9 +20180,6 @@
 /area/maintenance/thirddeck/dormsaft{
 	name = "Third Deck Aft Maintenance"
 	})
-"qdU" = (
-/turf/simulated/floor/plating,
-/area/maintenance/solars/forestarboardsolar)
 "qdZ" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor/plating,
@@ -20333,7 +20313,7 @@
 /obj/structure/sign/directions/security{
 	pixel_y = 6
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced/turfpack/airless,
 /area/thirddeck/roof)
 "qjG" = (
 /obj/machinery/computer/arcade,
@@ -20411,7 +20391,7 @@
 	id = "forestarboardsolar";
 	name = "Starboard Solar Array"
 	},
-/turf/simulated/floor/airless{
+/turf/simulated/floor/plating/turfpack/airless{
 	icon_state = "solarpanel"
 	},
 /area/solar/forestarboardsolar)
@@ -21300,7 +21280,7 @@
 /obj/structure/sign/directions/science{
 	pixel_y = 6
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced/turfpack/airless,
 /area/thirddeck/roof)
 "qWV" = (
 /obj/structure/disposalpipe/segment{
@@ -22104,7 +22084,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/space)
 "rBw" = (
 /obj/structure/loot_pile/maint/technical,
@@ -22136,7 +22116,7 @@
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/aftportsolar)
 "rDA" = (
 /obj/structure/bed/chair/sofa/corner/lime{
@@ -22646,7 +22626,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/forestarboardsolar)
 "saz" = (
 /obj/structure/railing{
@@ -23045,7 +23025,7 @@
 /area/hallway/primary/thirddeck/aftdoorm)
 "sqw" = (
 /obj/machinery/shield_diffuser,
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/thirddeck/roof)
 "sqC" = (
 /obj/item/weapon/digestion_remains/skull/teshari,
@@ -23204,7 +23184,7 @@
 	icon_state = "2-4"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/forestarboardsolar)
 "sAc" = (
 /obj/structure/catwalk,
@@ -23408,7 +23388,7 @@
 	name = "Third Deck Aft Maintenance"
 	})
 "sIO" = (
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/maintenance/thirddeck/hiddenkitchen)
 "sJq" = (
 /obj/structure/bed/chair/bar_stool,
@@ -23575,7 +23555,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/maintenance/thirddeck/dormsaft{
 	name = "Third Deck Aft Maintenance"
 	})
@@ -23822,7 +23802,7 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/maintenance/thirddeck/hiddenkitchen)
 "sXw" = (
 /obj/structure/bed/chair/comfy/brown{
@@ -25171,7 +25151,7 @@
 	icon_state = "1-8"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/foreportsolar)
 "tYI" = (
 /obj/effect/floor_decal/industrial/arrows/yellow{
@@ -27061,7 +27041,7 @@
 /obj/machinery/pointdefense{
 	id_tag = "PD Main"
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/space)
 "vti" = (
 /obj/structure/cable/green{
@@ -27178,7 +27158,7 @@
 /area/hallway/primary/thirddeck/aftdoorm)
 "vvI" = (
 /obj/machinery/shield_diffuser,
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced/turfpack/airless,
 /area/thirddeck/roof)
 "vvM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -27597,7 +27577,7 @@
 	pixel_y = -26;
 	req_access = null
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/maintenance/thirddeck/forestarboard)
 "vIQ" = (
 /obj/structure/extinguisher_cabinet{
@@ -28074,7 +28054,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/maintenance/thirddeck/dormsport{
 	name = "Third Deck Aft Port Maintenance"
 	})
@@ -28252,7 +28232,7 @@
 /obj/structure/sign/directions/command{
 	pixel_y = 3
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced/turfpack/airless,
 /area/thirddeck/roof)
 "wfu" = (
 /obj/machinery/firealarm{
@@ -28648,7 +28628,7 @@
 	id = "aftportsolar";
 	name = "Port Solar Array"
 	},
-/turf/simulated/floor/airless{
+/turf/simulated/floor/plating/turfpack/airless{
 	icon_state = "solarpanel"
 	},
 /area/solar/aftportsolar)
@@ -28738,7 +28718,7 @@
 	name = "\improper Down One Deck";
 	pixel_y = -6
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced/turfpack/airless,
 /area/thirddeck/roof)
 "wvs" = (
 /obj/random/junk,
@@ -29635,7 +29615,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/aftportsolar)
 "xbx" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
@@ -29714,7 +29694,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/maintenance/thirddeck/dormsaft{
 	name = "Third Deck Aft Maintenance"
 	})
@@ -29750,7 +29730,7 @@
 	name = "\improper Down One Deck";
 	pixel_y = -6
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced/turfpack/airless,
 /area/thirddeck/roof)
 "xes" = (
 /obj/structure/cable/yellow{
@@ -29761,7 +29741,7 @@
 	id = "aftportsolar";
 	name = "Port Solar Array"
 	},
-/turf/simulated/floor/airless{
+/turf/simulated/floor/plating/turfpack/airless{
 	icon_state = "solarpanel"
 	},
 /area/solar/aftportsolar)
@@ -29788,7 +29768,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/maintenance/thirddeck/dormsaft{
 	name = "Third Deck Aft Maintenance"
 	})
@@ -30113,7 +30093,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/maintenance/thirddeck/dormsaft{
 	name = "Third Deck Aft Maintenance"
 	})
@@ -30299,7 +30279,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/aftportsolar)
 "xyg" = (
 /obj/structure/toilet,
@@ -30997,7 +30977,7 @@
 	id = "aftstarboardsolar";
 	name = "Starboard Solar Array"
 	},
-/turf/simulated/floor/airless{
+/turf/simulated/floor/plating/turfpack/airless{
 	icon_state = "solarpanel"
 	},
 /area/solar/aftstarboardsolar)
@@ -31302,7 +31282,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/maintenance/thirddeck/dormsport{
 	name = "Third Deck Aft Port Maintenance"
 	})
@@ -31342,7 +31322,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/aftportsolar)
 "yhy" = (
 /obj/structure/grille,
@@ -31430,7 +31410,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/aftportsolar)
 "yjL" = (
 /obj/machinery/button/remote/airlock{
@@ -31465,7 +31445,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/solar/aftportsolar)
 "ykc" = (
 /obj/structure/bed/chair/bay/chair/padded/red/smallnest,
@@ -40718,19 +40698,19 @@ apc
 apc
 apc
 apc
-ggF
-ggF
-ggF
-ggF
-ggF
+ggu
+ggu
+ggu
+ggu
+ggu
 mCr
 bDU
 mCr
-ggF
-ggF
-ggF
-ggF
-ggF
+ggu
+ggu
+ggu
+ggu
+ggu
 apc
 apc
 aqj
@@ -41750,19 +41730,19 @@ apc
 apc
 apc
 apc
-ggF
-ggF
-ggF
-ggF
-ggF
+ggu
+ggu
+ggu
+ggu
+ggu
 mCr
 bDU
 mCr
-ggF
-ggF
-ggF
-ggF
-ggF
+ggu
+ggu
+ggu
+ggu
+ggu
 apc
 apc
 aqj
@@ -42782,19 +42762,19 @@ apc
 apc
 apc
 apc
-ggF
-ggF
-ggF
-ggF
-ggF
+ggu
+ggu
+ggu
+ggu
+ggu
 mCr
 bDU
 mCr
-ggF
-ggF
-ggF
-ggF
-ggF
+ggu
+ggu
+ggu
+ggu
+ggu
 apc
 apc
 aqj
@@ -43814,19 +43794,19 @@ apc
 apc
 apc
 apc
-ggF
-ggF
-ggF
-ggF
-ggF
+ggu
+ggu
+ggu
+ggu
+ggu
 mCr
 bDU
 mCr
-ggF
-ggF
-ggF
-ggF
-ggF
+ggu
+ggu
+ggu
+ggu
+ggu
 apc
 apc
 aqj
@@ -44846,19 +44826,19 @@ apc
 apc
 apc
 apc
-ggF
-ggF
-ggF
-ggF
-ggF
+ggu
+ggu
+ggu
+ggu
+ggu
 mCr
 bDU
 mCr
-ggF
-ggF
-ggF
-ggF
-ggF
+ggu
+ggu
+ggu
+ggu
+ggu
 apc
 apc
 apc
@@ -45878,19 +45858,19 @@ apc
 apc
 apc
 apc
-ggF
-ggF
-ggF
-ggF
-ggF
+ggu
+ggu
+ggu
+ggu
+ggu
 mCr
 bDU
 mCr
-ggF
-ggF
-ggF
-ggF
-ggF
+ggu
+ggu
+ggu
+ggu
+ggu
 jhg
 jhg
 jhg
@@ -46910,19 +46890,19 @@ apc
 apc
 apc
 apc
-ggF
-ggF
-ggF
-ggF
-ggF
+ggu
+ggu
+ggu
+ggu
+ggu
 mCr
 bDU
 mCr
-ggF
-ggF
-ggF
-ggF
-ggF
+ggu
+ggu
+ggu
+ggu
+ggu
 jhg
 jhg
 jhg
@@ -84848,7 +84828,7 @@ apc
 apc
 apc
 apc
-qdU
+bbV
 bdd
 cfy
 cBt
