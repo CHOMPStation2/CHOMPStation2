@@ -151,6 +151,8 @@
 	if(. == 0 && !is_dead())
 		set_light(9.5, 1, mycolour) //9.5 makes the brightness range super huge.
 		return 1
+	else if(isdead())
+		glow_override = FALSE
 
 
 /mob/living/simple_mob/vore/solarmoth //active noms
