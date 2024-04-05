@@ -27,8 +27,7 @@
 		/obj/structure/flora/mushroom = 20,
 		/obj/structure/flora/sif/subterranean = 20,
 		/obj/structure/flora/sif/tendrils = 20,
-		/obj/structure/flora/sif/frostbelle = 20,
-		/obj/random/landmine = 5
+		/obj/structure/flora/sif/frostbelle = 20
 		)
 
 /turf/simulated/floor/outdoors/grass/sif/valley/edge

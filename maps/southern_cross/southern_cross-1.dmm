@@ -19734,10 +19734,6 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/machinery/power/apc{
-	name = "south bump";
-	pixel_y = -24
-	},
 /obj/machinery/light_switch{
 	pixel_x = 11;
 	pixel_y = -24
