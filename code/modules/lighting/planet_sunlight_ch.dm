@@ -89,7 +89,7 @@
 /atom/movable/sun_vis_simple
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "white"
-	plane = PLANE_O_LIGHTING_VISUAL
+	plane = PLANE_LIGHTING
 	mouse_opacity = 0
 	alpha = 255
 	color = "#FFFFFF"
