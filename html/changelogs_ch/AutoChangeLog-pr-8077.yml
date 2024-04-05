@@ -1,0 +1,8 @@
+author: "cadyn"
+delete-after: True
+changes:
+  - refactor: "borg access is actually checked for many things that weren't checking before"
+  - balance: "no more drone pod borg full access"
+  - balance: "station borgs no longer have centcomm or syndi access"
+  - balance: "borgs can be targeted by turrets"
+  - admin: "add air_alarm access while ghosting"
