@@ -1,0 +1,4 @@
+author: "Raeschen"
+delete-after: True
+changes:
+  - bugfix: "Increase solar tracker max range to locate a controller"
