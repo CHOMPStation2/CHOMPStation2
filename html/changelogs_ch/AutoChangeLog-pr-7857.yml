@@ -1,0 +1,5 @@
+author: "ItsSelis"
+delete-after: True
+changes:
+  - refactor: "Replaced the old configuration with the configuration controller."
+  - admin: "Added \"Reload Configuration\" button to Debug tab (requires DEBUG permission), to reload config from files."
