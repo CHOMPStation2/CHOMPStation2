@@ -1,0 +1,5 @@
+author: "Fracshun"
+delete-after: True
+changes:
+  - bugfix: "Sentient food items can no longer astral project if they struggle"
+  - bugfix: "Sentient items now despawn correctly when leaving through cryo/gateway"
