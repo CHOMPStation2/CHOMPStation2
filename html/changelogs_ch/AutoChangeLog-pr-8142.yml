@@ -1,5 +1,0 @@
-author: "Drulikar"
-delete-after: True
-changes:
-  - rscdel: "Remove the corrupt lonehome map"
-  - bugfix: "UpdatePaths script will now also update maps inside the modular_chomp folder"
