@@ -1861,13 +1861,15 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/tcomm/tcomfoyer)
@@ -6038,11 +6040,6 @@
 /obj/structure/cable{
 	d2 = 8;
 	icon_state = "0-8"
-	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled,
@@ -10830,9 +10827,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/teleporter/firstdeck)
 "bOw" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
 /obj/machinery/camera/network/telecom{
 	c_tag = "TCOMMS - SMES Room";
 	dir = 1
@@ -10843,6 +10837,11 @@
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/tcomm/tcomfoyer)
@@ -17826,10 +17825,6 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/obj/machinery/power/sensor{
-	long_range = 1;
-	name_tag = "Telecommunications"
-	},
 /obj/machinery/turretid/lethal{
 	ailock = 1;
 	check_synth = 1;
@@ -17838,6 +17833,9 @@
 	name = "Telecoms lethal turret control";
 	pixel_y = 29;
 	req_access = list(61)
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/tcomm/tcomfoyer)
@@ -20910,6 +20908,10 @@
 /obj/structure/sign/warning/lethal_turrets{
 	pixel_y = 32
 	},
+/obj/machinery/power/sensor{
+	long_range = 1;
+	name_tag = "Telecommunications"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/tcomm/tcomfoyer)
 "jKb" = (
@@ -22056,9 +22058,6 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/research/firstdeck/hallway)
 "lbI" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -22074,6 +22073,14 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/warning/corner,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/tiled,
 /area/tcomm/tcomfoyer)
 "lbL" = (
@@ -28321,6 +28328,10 @@
 /obj/structure/sign/directions/security{
 	dir = 8
 	},
+/obj/structure/sign/directions/engineering/gravgen{
+	pixel_y = 10;
+	dir = 8
+	},
 /turf/simulated/wall,
 /area/maintenance/firstdeck/foreport)
 "rqP" = (
@@ -28849,6 +28860,10 @@
 "rUl" = (
 /obj/structure/sign/directions/security{
 	dir = 4
+	},
+/obj/structure/sign/directions/shuttle_bay{
+	pixel_y = 10;
+	dir = 8
 	},
 /turf/simulated/wall,
 /area/construction/firstdeck/construction4)
@@ -34746,6 +34761,9 @@
 	dir = 4;
 	pixel_y = 10
 	},
+/obj/structure/sign/directions/medical/virology{
+	pixel_y = -10
+	},
 /turf/simulated/wall,
 /area/construction/firstdeck/construction3)
 "xBR" = (
@@ -34758,11 +34776,6 @@
 	dir = 1;
 	pixel_y = -22
 	},
-/obj/structure/cable{
-	d1 = 32;
-	icon_state = "32-2";
-	dir = 1
-	},
 /obj/structure/railing{
 	dir = 1
 	},
@@ -34770,6 +34783,11 @@
 	dir = 8
 	},
 /obj/structure/lattice,
+/obj/structure/cable{
+	d1 = 32;
+	d2 = 8;
+	icon_state = "32-8"
+	},
 /turf/simulated/open,
 /area/tcomm/tcomfoyer)
 "xCg" = (
@@ -34779,6 +34797,9 @@
 	},
 /obj/structure/sign/directions/cargo{
 	dir = 4
+	},
+/obj/structure/sign/directions/medical/resleeving{
+	pixel_y = -10
 	},
 /turf/simulated/wall,
 /area/construction/firstdeck/construction3)
