@@ -19,8 +19,9 @@
 	add_overlay("ccharger1")
 
 /obj/machinery/cell_charger/update_icon()
+	cut_overlays() //ChompEDIT
 	if(!anchored)
-		cut_overlays()
+		//cut_overlays() //ChompEDIT
 		icon_state = "ccharger2"
 
 	if(charging && !(stat & (BROKEN|NOPOWER)))
@@ -29,7 +30,7 @@
 
 		if(chargelevel != newlevel)
 
-			cut_overlays()
+			//cut_overlays() //ChompEDIT
 			add_overlay("ccharger-o[newlevel]")
 
 			chargelevel = newlevel
@@ -38,7 +39,7 @@
 		add_overlay("ccharger-[charging.connector_type]-on")
 
 	else if(anchored)
-		cut_overlays()
+		//cut_overlays() //ChompEDIT
 		icon_state = "ccharger0"
 		add_overlay("ccharger1")
 
