@@ -151,7 +151,7 @@
 	if(. == 0 && !is_dead())
 		set_light(9.5, 1, mycolour) //9.5 makes the brightness range super huge.
 		return 1
-	else if(isdead())
+	else if(is_dead())
 		glow_override = FALSE
 
 
