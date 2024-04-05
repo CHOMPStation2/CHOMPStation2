@@ -3909,6 +3909,7 @@
 #include "code\modules\projectiles\ammunition.dm"
 #include "code\modules\projectiles\broken.dm"
 #include "code\modules\projectiles\dnalocking.dm"
+#include "code\modules\projectiles\gen.dm"
 #include "code\modules\projectiles\gun.dm"
 #include "code\modules\projectiles\gun_ch.dm"
 #include "code\modules\projectiles\projectile.dm"
