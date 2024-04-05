@@ -39,7 +39,7 @@
 			src << browse(F,"window=investigate[subject];size=800x300")
 
 		if("hrefs")				//persistant logs and stuff
-			if(config && config.log_hrefs)
+			if(config && CONFIG_GET(flag/log_hrefs)) // CHOMPEdit
 				if(href_logfile)
 					src << browse(href_logfile,"window=investigate[subject];size=800x300")
 				else

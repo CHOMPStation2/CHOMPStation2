@@ -5410,9 +5410,9 @@
 "apc" = (
 /obj/effect/floor_decal/corner/white/diagonal,
 /obj/structure/table/woodentable,
-/obj/item/weapon/book/manual/engineering_construction,
+/obj/item/weapon/book/manual/wiki/engineering_construction,
 /obj/item/weapon/book/manual/atmospipes,
-/obj/item/weapon/book/manual/engineering_guide{
+/obj/item/weapon/book/manual/wiki/engineering_guide{
 	pixel_x = 3;
 	pixel_y = 2
 	},
@@ -23079,7 +23079,7 @@
 "btj" = (
 /obj/structure/bookcase/manuals/medical,
 /obj/item/weapon/book/manual/stasis,
-/obj/item/weapon/book/manual/medical_diagnostics_manual{
+/obj/item/weapon/book/manual/wiki/medical_diagnostics_manual{
 	pixel_y = 7
 	},
 /obj/effect/floor_decal/corner/paleblue/diagonal{

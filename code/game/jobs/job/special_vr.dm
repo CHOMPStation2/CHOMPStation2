@@ -72,7 +72,7 @@
 	get_access()
 		var/access = get_all_accesses()
 		return access*/
-		
+
 /datum/job/emergency_responder //For staff managing/leading ERTs
 	title = "Emergency Responder"
 	departments = list("Central Command")
@@ -125,7 +125,7 @@
 	title = "Fool"
 
 /datum/job/clown/get_access()
-	if(config.assistant_maint)
+	if(CONFIG_GET(flag/assistant_maint)) // CHOMPEdit
 		return list(access_maint_tunnels, access_entertainment, access_clown, access_tomfoolery)
 	else
 		return list(access_entertainment, access_clown, access_tomfoolery)
@@ -153,7 +153,7 @@
 	title = "Poseur"
 
 /datum/job/mime/get_access()
-	if(config.assistant_maint)
+	if(CONFIG_GET(flag/assistant_maint)) // CHOMPEdit
 		return list(access_maint_tunnels, access_entertainment, access_tomfoolery, access_mime)
 	else
 		return list(access_entertainment, access_tomfoolery, access_mime)

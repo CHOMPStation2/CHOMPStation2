@@ -120,7 +120,7 @@
 		stat_panel.reinitialize() //CHOMPEdit
 
 	//Logs all hrefs
-	if(config && config.log_hrefs && href_logfile)
+	if(config && CONFIG_GET(flag/log_hrefs) && href_logfile) // CHOMPEdit
 		WRITE_LOG(href_logfile, "[src] (usr:[usr])</small> || [hsrc ? "[hsrc] " : ""][href]")
 
 	//byond bug ID:2256651
@@ -187,7 +187,7 @@
 	if(byond_version < MIN_CLIENT_VERSION)		//Out of date client.
 		return null
 
-	if(!config.guests_allowed && IsGuestKey(key))
+	if(!CONFIG_GET(flag/guests_allowed) && IsGuestKey(key)) // CHOMPEdit
 		alert(src,"This server doesn't allow guest accounts to play. Please go to https://www.byond.com/ and register for a key.","Guest") // Not tgui_alert
 		del(src)
 		return
@@ -282,10 +282,10 @@
 	if((prefs.lastchangelog != changelog_hash) && isnewplayer(src.mob)) //bolds the changelog button on the interface so we know there are updates.
 		to_chat(src, "<span class='info'>You have unread updates in the changelog.</span>")
 		winset(src, "rpane.changelog", "background-color=#eaeaea;font-style=bold")
-		if(config.aggressive_changelog)
+		if(CONFIG_GET(flag/aggressive_changelog)) // CHOMPEdit
 			src.changes()
 
-	if(config.paranoia_logging)
+	if(CONFIG_GET(flag/paranoia_logging)) // CHOMPEdit
 		var/alert = FALSE //VOREStation Edit start.
 		if(isnum(player_age) && player_age == 0)
 			log_and_message_admins("PARANOIA: [key_name(src)] has connected here for the first time.")
@@ -412,29 +412,29 @@
 
 	//Panic bunker code
 	if (isnum(player_age) && player_age == 0) //first connection
-		if (config.panic_bunker && !holder && !deadmin_holder)
+		if (CONFIG_GET(flag/panic_bunker) && !holder && !deadmin_holder) // CHOMPEdit
 			log_adminwarn("Failed Login: [key] - New account attempting to connect during panic bunker")
 			message_admins("<span class='adminnotice'>Failed Login: [key] - New account attempting to connect during panic bunker</span>")
 			disconnect_with_message("Sorry but the server is currently not accepting connections from never before seen players.")
 			return 0
 
 	// IP Reputation Check
-	if(config.ip_reputation)
-		if(config.ipr_allow_existing && player_age >= config.ipr_minimum_age)
+	if(CONFIG_GET(flag/ip_reputation)) // CHOMPEdit
+		if(CONFIG_GET(flag/ipr_allow_existing) && player_age >= CONFIG_GET(number/ipr_minimum_age)) // CHOMPEdit
 			log_admin("Skipping IP reputation check on [key] with [address] because of player age")
 		else if(update_ip_reputation()) //It is set now
-			if(ip_reputation >= config.ipr_bad_score) //It's bad
+			if(ip_reputation >= CONFIG_GET(number/ipr_bad_score)) //It's bad // CHOMPEdit
 				//Log it
-				if(config.paranoia_logging) //We don't block, but we want paranoia log messages
+				if(CONFIG_GET(flag/paranoia_logging)) //We don't block, but we want paranoia log messages // CHOMPEdit
 					log_and_message_admins("[key] at [address] has bad IP reputation: [ip_reputation]. Will be kicked if enabled in config.")
 				else //We just log it
 					log_admin("[key] at [address] has bad IP reputation: [ip_reputation]. Will be kicked if enabled in config.")
 
 				//Take action if required
-				if(config.ipr_block_bad_ips && config.ipr_allow_existing) //We allow players of an age, but you don't meet it
-					disconnect_with_message("Sorry, we only allow VPN/Proxy/Tor usage for players who have spent at least [config.ipr_minimum_age] days on the server. If you are unable to use the internet without your VPN/Proxy/Tor, please contact an admin out-of-game to let them know so we can accommodate this.")
+				if(CONFIG_GET(flag/ipr_block_bad_ips) && CONFIG_GET(flag/ipr_allow_existing)) //We allow players of an age, but you don't meet it // CHOMPEdit
+					disconnect_with_message("Sorry, we only allow VPN/Proxy/Tor usage for players who have spent at least [CONFIG_GET(number/ipr_minimum_age)] days on the server. If you are unable to use the internet without your VPN/Proxy/Tor, please contact an admin out-of-game to let them know so we can accommodate this.") // CHOMPEdit
 					return 0
-				else if(config.ipr_block_bad_ips) //We don't allow players of any particular age
+				else if(CONFIG_GET(flag/ipr_block_bad_ips)) //We don't allow players of any particular age // CHOMPEdit
 					disconnect_with_message("Sorry, we do not accept connections from users via VPN/Proxy/Tor connections. If you believe this is in error, contact an admin out-of-game.")
 					return 0
 		else
@@ -496,7 +496,7 @@
 		src << browse('code/modules/asset_cache/validate_assets.html', "window=asset_cache_browser")
 
 		//Precache the client with all other assets slowly, so as to not block other browse() calls
-		if (config.asset_simple_preload)
+		if (CONFIG_GET(flag/asset_simple_preload)) // CHOMPEdit
 			addtimer(CALLBACK(SSassets.transport, TYPE_PROC_REF(/datum/asset_transport, send_assets_slow), src, SSassets.transport.preload), 5 SECONDS)
 
 /mob/proc/MayRespawn()
@@ -537,7 +537,7 @@
 //You're welcome to replace this proc with your own that does your own cool stuff.
 //Just set the client's ip_reputation var and make sure it makes sense with your config settings (higher numbers are worse results)
 /client/proc/update_ip_reputation()
-	var/request = "https://check.getipintel.net/check.php?ip=[address]&contact=[config.ipr_email]"
+	var/request = "https://check.getipintel.net/check.php?ip=[address]&contact=[CONFIG_GET(string/ipr_email)]" // CHOMPEdit
 	var/http[] = world.Export(request)
 
 	/* Debug
@@ -553,7 +553,7 @@
 	//429 is rate limit exceeded
 	if(text2num(http["STATUS"]) == 429)
 		log_and_message_admins("getipintel.net reports HTTP status 429. IP reputation checking is now disabled. If you see this, let a developer know.")
-		config.ip_reputation = FALSE
+		CONFIG_SET(flag/ip_reputation, FALSE) // CHOMPEdit
 		return FALSE
 
 	var/content = file2text(http["CONTENT"]) //world.Export actually returns a file object in CONTENT
@@ -584,7 +584,7 @@
 
 		log_and_message_admins(ipr_error)
 		if(fatal)
-			config.ip_reputation = FALSE
+			CONFIG_SET(flag/ip_reputation, FALSE) // CHOMPEdit
 			log_and_message_admins("With this error, IP reputation checking is disabled for this shift. Let a developer know.")
 		return FALSE
 

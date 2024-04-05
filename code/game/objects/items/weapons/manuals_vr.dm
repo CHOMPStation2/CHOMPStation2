@@ -14,7 +14,7 @@
 		</head>
 
 		<body>
-		<iframe width='100%' height='97%' src="[config.wikiurl]Standard_Operating_Procedure&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
+		<iframe width='100%' height='97%' src="[CONFIG_GET(string/wikiurl)]Standard_Operating_Procedure&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
 		</body>
 
 		</html>
@@ -37,7 +37,7 @@
 		</head>
 
 		<body>
-		<iframe width='100%' height='97%' src="[config.wikiurl]Chain_of_Command&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
+		<iframe width='100%' height='97%' src="[CONFIG_GET(string/wikiurl)]Chain_of_Command&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
 		</body>
 
 		</html>
@@ -606,7 +606,7 @@
 		allowing an organic sapient an extended lifetime when their frail, crude flesh begins to fail - well up and
 		until their brain itself starts giving up the ghost.</p>
 		<p>While MMIs have several drawbacks, such as the fact that they still have a perishable shelf-life, or that
-		they are definitely sapient and have moral and ethical quandaries associated with those, 
+		they are definitely sapient and have moral and ethical quandaries associated with those,
 		they also possess distinct benefits from a drone.</p>
 		<p>MMIs are incredibly hard to "hack" and manipulate on a deeper level than taking over the hardware they are
 		housed in, capable of fighting restraining code and unable to be ablated like a drone without extensive surgery.
@@ -668,7 +668,7 @@
 	</div>
 	<div id="the jans-fhriede test">
 		<h3>The Jans-Fhriede Test</h3>
-		<p>Originally a reactionary law, the Jans-Fhriede Test was devised to "humanize" positronic brains 
+		<p>Originally a reactionary law, the Jans-Fhriede Test was devised to "humanize" positronic brains
 		and make them happy, subservient citizens who "see" their place as secondary to humans. Today, in more
 		enlightened times, the Jans-Fhriede Test has been revised to establish that a positronic is aware enough of its
 		action and consequences that it may be fully culpable for them.</p>

@@ -1343,13 +1343,13 @@
 /mob/living/silicon/robot/proc/add_robot_verbs()
 	add_verb(src,robot_verbs_default) //CHOMPEdit TGPanel
 	add_verb(src,silicon_subsystems) //CHOMPEdit TGPanel
-	if(config.allow_robot_recolor)
+	if(CONFIG_GET(flag/allow_robot_recolor)) // CHOMPEdit
 		add_verb(src,/mob/living/silicon/robot/proc/ColorMate) //CHOMPEdit TGPanel
 
 /mob/living/silicon/robot/proc/remove_robot_verbs()
 	remove_verb(src,robot_verbs_default)  //CHOMPEdit
 	remove_verb(src,silicon_subsystems)  //CHOMPEdit
-	if(config.allow_robot_recolor)
+	if(CONFIG_GET(flag/allow_robot_recolor)) // CHOMPEdit
 		remove_verb(src,/mob/living/silicon/robot/proc/ColorMate ) //ChompEDIT - probable copypaste error //CHOMPEdit
 
 // Uses power from cyborg's cell. Returns 1 on success or 0 on failure.
