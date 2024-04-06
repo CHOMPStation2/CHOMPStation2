@@ -81,6 +81,7 @@
 
 	// VOREStation edit start
 	if(nail_polish && !(force_icon && !skip_forced_icon))
+		//cache begone
 		var/icon/I = new(nail_polish.icon, nail_polish.icon_state)
 		I.Blend(nail_polish.color, ICON_MULTIPLY)
 		add_overlay(I)
