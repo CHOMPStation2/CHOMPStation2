@@ -239,5 +239,6 @@ var/global/list/magazine_overrides = list(
 /obj/item/ammo_magazine/New(loc)
 	var/replacement_type = magazine_overrides[type]
 	if(replacement_type)
+		qdel(src)
 		return new replacement_type(loc)
 	. = ..()

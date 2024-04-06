@@ -253,9 +253,10 @@
 //Medium clip
 /obj/item/ammo_magazine/clip/medium
 	name = "medium ammo clip"
-	icon_state = "gclip"
+	icon_state = "enbloc"
 	max_ammo = 10
 	caliber = "medium"
+	mag_type = MAGAZINE | SPEEDLOADER //Act as both, because the garand will use you like a magazine bb
 	multiple_sprites = 1
 	matter = list(DEFAULT_WALL_MATERIAL = 400)
 	ammo_type = /obj/item/ammo_casing/simple/medium
