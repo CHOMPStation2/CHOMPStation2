@@ -275,9 +275,10 @@ var/list/robot_hud_colours = list("#CFCFCF","#AFAFAF","#8F8F8F","#6F6F6F","#4F4F
 	// icon_cache_key is set by any get_icon() calls that are made.
 	// This looks convoluted, but it's this way to avoid icon proc calls.
 	if(!hud_damage_image)
-		var/cache_key = "dambase-[icon_cache_key]"
+		//CHOMPEdit Begin -- Cache Removal
 		var/icon/I = icon(get_icon(), null, SOUTH)
 		var/image/temp = image(I)
+		//CHOMPEdit End
 		if((robotic < ORGAN_ROBOT) && species)
 			// Calculate the required colour matrix.
 			var/r = 0.30 * species.health_hud_intensity
