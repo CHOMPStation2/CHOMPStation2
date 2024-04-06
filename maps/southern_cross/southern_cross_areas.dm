@@ -688,12 +688,13 @@ z
 	lift_floor_label = "Deck 0"
 	lift_floor_name = "Maintenance Deck"
 	lift_announce_str = "Arriving at Maintenance Deck: Engineering. Power Back Up. Gravity Generator."
+	base_turf = /turf/simulated/floor
+
 /area/turbolift/port_deck_one
 	name = "lift (first deck)"
 	lift_floor_label = "Deck 1"
 	lift_floor_name = "Hangar Deck"
 	lift_announce_str = "Arriving at Hangar Deck: Main Hangars.Cargo Delivery. Telecommunications. Auxiliary Shuttle Docks. Escape Pods."
-	base_turf = /turf/simulated/floor
 
 /area/turbolift/port_deck_two
 	name = "lift (second deck)"
@@ -2347,3 +2348,9 @@ End Chompstation Edit*/
 
 /area/maintenance/lookout
 	name = "Maintenance Deck Lookout"
+
+/area/maintenance/bar/dorm_1
+	name = "Maintenance Deck Bar Dorms 1"
+
+/area/maintenance/bar/dorm_2
+	name = "Maintenance Deck Bar Dorms 2"
