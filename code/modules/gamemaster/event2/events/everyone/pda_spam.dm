@@ -34,7 +34,7 @@
 	var/obj/item/device/pda/P = null
 	var/list/viables = list()
 
-	for(var/obj/item/device/pda/check_pda in sortAtom(PDAs))
+	for(var/obj/item/device/pda/check_pda in sortAtom(GLOB.PDAs)) // CHOMPEdit - Globals
 		if (!check_pda.owner || check_pda == src || check_pda.hidden)
 			continue
 
@@ -138,5 +138,5 @@
 
 
 /datum/event2/event/pda_spam/proc/pick_message_server()
-	if(LAZYLEN(message_servers))
-		return pick(message_servers)
+	if(LAZYLEN(GLOB.message_servers)) // CHOMPEdit - Globals
+		return pick(GLOB.message_servers) // CHOMPEdit - Globals

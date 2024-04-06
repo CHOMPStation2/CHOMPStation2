@@ -49,8 +49,8 @@
 
 	// Messaging server spam filters.
 	// This might be better served as a seperate event since it seems more like a hacker attack than a natural occurance.
-	if(message_servers)
-		for(var/obj/machinery/message_server/MS in message_servers)
+	if(GLOB.message_servers) // CHOMPEdit - Globals
+		for(var/obj/machinery/message_server/MS in GLOB.message_servers) // CHOMPEdit - Globals
 			if(MS.z in get_location_z_levels())
 				MS.spamfilter.Cut()
 				for (var/i = 1, i <= MS.spamfilter_limit, i++)

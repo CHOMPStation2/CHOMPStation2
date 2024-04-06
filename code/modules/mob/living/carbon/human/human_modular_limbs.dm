@@ -157,7 +157,7 @@
 	for(var/obj/item/organ/external/child in E.children)
 		child.status &= ~ORGAN_CUT_AWAY
 
-	var/datum/gender/G = gender_datums[gender]
+	var/datum/gender/G = GLOB.gender_datums[gender] // CHOMPEdit - Globals
 	visible_message(
 		SPAN_NOTICE("\The [src] attaches \the [E] to [G.his] body!"),
 		SPAN_NOTICE("You attach \the [E] to your body!"))
@@ -185,7 +185,7 @@
 	E.removed(src)
 	E.dropInto(loc)
 	put_in_hands(E)
-	var/datum/gender/G = gender_datums[gender]
+	var/datum/gender/G = GLOB.gender_datums[gender] // CHOMPEdit - Globals
 	visible_message(
 		SPAN_NOTICE("\The [src] detaches [G.his] [E.name]!"),
 		SPAN_NOTICE("You detach your [E.name]!"))

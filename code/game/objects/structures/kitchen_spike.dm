@@ -19,7 +19,7 @@
 		to_chat(user, "<span class = 'danger'>The spike already has something on it, finish collecting its meat first!</span>")
 	else
 		if(spike(G.affecting))
-			var/datum/gender/T = gender_datums[G.affecting.get_visible_gender()]
+			var/datum/gender/T = GLOB.gender_datums[G.affecting.get_visible_gender()] // CHOMPEdit - Globals
 			visible_message("<span class = 'danger'>[user] has forced [G.affecting] onto the spike, killing [T.him] instantly!</span>")
 			var/mob/M = G.affecting
 			M.forceMove(src)

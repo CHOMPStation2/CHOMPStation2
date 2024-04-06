@@ -64,7 +64,7 @@
 	else
 		switch(M.a_intent)
 			if(I_HELP)
-				var/datum/gender/T = gender_datums[src.get_visible_gender()]
+				var/datum/gender/T = GLOB.gender_datums[src.get_visible_gender()] // CHOMPEdit - Globals
 				M.visible_message(
 					span("notice", "\The [M] hugs [src] to make [T.him] feel better!"), \
 					span("notice", "You hug [src] to make [T.him] feel better!")

@@ -30,12 +30,12 @@
 	if(prob(50))
 		// One in two chance for the radios to turn i%t# t&_)#%, which can be more alarming than radio silence.
 		log_debug("Doing partial outage of telecomms.")
-		for(var/obj/machinery/telecomms/processor/P in telecomms_list)
+		for(var/obj/machinery/telecomms/processor/P in GLOB.telecomms_list) // CHOMPEdit - Globals
 			P.emp_act(1)
 	else
 		// Otherwise just shut everything down, madagascar style.
 		log_debug("Doing complete outage of telecomms.")
-		for(var/obj/machinery/telecomms/T in telecomms_list)
+		for(var/obj/machinery/telecomms/T in GLOB.telecomms_list) // CHOMPEdit - Globals
 			T.emp_act(1)
 
 	// Communicators go down no matter what.

@@ -345,7 +345,7 @@
 	var/obj/machinery/navbeacon/targ = locate() in get_turf(src)
 
 	if(!targ)
-		for(var/obj/machinery/navbeacon/N in navbeacons)
+		for(var/obj/machinery/navbeacon/N in GLOB.navbeacons) // CHOMPEdit - Globals
 			if(!N.codes["patrol"])
 				continue
 			if(get_dist(src, N) < minDist)
@@ -353,7 +353,7 @@
 				targ = N
 
 	if(targ && targ.codes["next_patrol"])
-		for(var/obj/machinery/navbeacon/N in navbeacons)
+		for(var/obj/machinery/navbeacon/N in GLOB.navbeacons) // CHOMPEdit - Globals
 			if(N.location == targ.codes["next_patrol"])
 				targ = N
 				break

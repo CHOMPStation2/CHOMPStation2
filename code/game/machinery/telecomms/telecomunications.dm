@@ -13,7 +13,7 @@
 	Look at radio.dm for the prequel to this code.
 */
 
-var/global/list/obj/machinery/telecomms/telecomms_list = list()
+GLOBAL_LIST_EMPTY_TYPED(telecomms_list, /obj/machinery/telecomms) // CHOMPEdit - Globals
 
 /obj/machinery/telecomms
 	icon = 'icons/obj/stationobjs_vr.dmi' //VOREStation Add
@@ -116,7 +116,7 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 
 
 /obj/machinery/telecomms/New()
-	telecomms_list += src
+	GLOB.telecomms_list += src // CHOMPEdit - Globals
 	..()
 
 	//Set the listening_level if there's none.
@@ -132,7 +132,7 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 			for(var/obj/machinery/telecomms/T in orange(20, src))
 				add_link(T)
 		else
-			for(var/obj/machinery/telecomms/T in telecomms_list)
+			for(var/obj/machinery/telecomms/T in GLOB.telecomms_list) // CHOMPEdit - Globals
 				add_link(T)
 	// CHOMPAdd: TComms humming
 	soundloop = new(list(src), FALSE)
@@ -151,8 +151,8 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 	. = ..()
 
 /obj/machinery/telecomms/Destroy()
-	telecomms_list -= src
-	for(var/obj/machinery/telecomms/comm in telecomms_list)
+	GLOB.telecomms_list -= src // CHOMPEdit - Globals
+	for(var/obj/machinery/telecomms/comm in GLOB.telecomms_list) // CHOMPEdit - Globals
 		comm.links -= src
 	links = list()
 	QDEL_NULL(soundloop) // CHOMPAdd: Tcomms noises

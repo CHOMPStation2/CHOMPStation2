@@ -67,7 +67,7 @@ var/global/list/all_objectives = list()
 /datum/objective/anti_revolution/execute/find_target()
 	..()
 	if(target && target.current)
-		var/datum/gender/T = gender_datums[target.current.get_visible_gender()]
+		var/datum/gender/T = GLOB.gender_datums[target.current.get_visible_gender()] // CHOMPEdit - Globals
 		explanation_text = "[target.current.real_name], the [target.assigned_role] has extracted confidential information above their clearance. Execute [T.him]."
 	else
 		explanation_text = "Free Objective"
@@ -77,7 +77,7 @@ var/global/list/all_objectives = list()
 /datum/objective/anti_revolution/execute/find_target_by_role(role, role_type=0)
 	..(role, role_type)
 	if(target && target.current)
-		var/datum/gender/T = gender_datums[target.current.get_visible_gender()]
+		var/datum/gender/T = GLOB.gender_datums[target.current.get_visible_gender()] // CHOMPEdit - Globals
 		explanation_text = "[target.current.real_name], the [!role_type ? target.assigned_role : target.special_role] has extracted confidential information above their clearance. Execute [T.him]."
 	else
 		explanation_text = "Free Objective"
@@ -126,7 +126,7 @@ var/global/list/all_objectives = list()
 /datum/objective/anti_revolution/demote/find_target()
 	..()
 	if(target && target.current)
-		var/datum/gender/T = gender_datums[target.current.get_visible_gender()]
+		var/datum/gender/T = GLOB.gender_datums[target.current.get_visible_gender()] // CHOMPEdit - Globals
 		explanation_text = "[target.current.real_name], the [target.assigned_role]  has been classified as harmful to [using_map.company_name]'s goals. Demote [T.him] to assistant."
 	else
 		explanation_text = "Free Objective"
@@ -135,7 +135,7 @@ var/global/list/all_objectives = list()
 /datum/objective/anti_revolution/demote/find_target_by_role(role, role_type=0)
 	..(role, role_type)
 	if(target && target.current)
-		var/datum/gender/T = gender_datums[target.current.get_visible_gender()]
+		var/datum/gender/T = GLOB.gender_datums[target.current.get_visible_gender()] // CHOMPEdit - Globals
 		explanation_text = "[target.current.real_name], the [!role_type ? target.assigned_role : target.special_role] has been classified as harmful to [using_map.company_name]'s goals. Demote [T.him] to assistant."
 	else
 		explanation_text = "Free Objective"

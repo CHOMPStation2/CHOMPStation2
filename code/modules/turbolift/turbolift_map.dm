@@ -16,11 +16,11 @@
 	var/list/areas_to_use = list()
 
 /obj/turbolift_map_holder/Destroy()
-	turbolifts -= src
+	GLOB.turbolifts -= src // CHOMPEdit - Globals
 	return ..()
 
 /obj/turbolift_map_holder/New()
-	turbolifts += src
+	GLOB.turbolifts += src // CHOMPEdit - Globals
 	..()
 
 /obj/turbolift_map_holder/Initialize()
