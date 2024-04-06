@@ -308,6 +308,6 @@
 /obj/machinery/portable_atmospherics/canister
 	var/dont_burst = FALSE
 
-/obj/machinery/portable_atmospherics/canister/phoron/cold/New()
+/obj/machinery/portable_atmospherics/canister/phoron/cold/Initialize() //ChompEDIT New --> Initialize
 	src.air_contents.temperature = 2.72
 	..()

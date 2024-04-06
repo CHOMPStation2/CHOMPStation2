@@ -9,7 +9,7 @@
 	maxcharge = 500
 	matter = list(MAT_STEEL = 700, MAT_GLASS = 40)
 
-/obj/item/weapon/cell/crap/empty/New()
+/obj/item/weapon/cell/crap/empty/Initialize() //ChompEDIT New --> Initialize
 	..()
 	charge = 0
 
@@ -39,7 +39,7 @@
 	maxcharge = 2400	//who the hell thought 6 shots was enough for a dogborg taser?
 	matter = list(MAT_STEEL = 700, MAT_GLASS = 40)
 
-/obj/item/weapon/cell/secborg/empty/New()
+/obj/item/weapon/cell/secborg/empty/Initialize() //ChompEDIT New --> Initialize
 	..()
 	charge = 0
 	update_icon()
@@ -64,7 +64,7 @@
 	maxcharge = 10000
 	matter = list(MAT_STEEL = 700, MAT_GLASS = 60)
 
-/obj/item/weapon/cell/high/empty/New()
+/obj/item/weapon/cell/high/empty/Initialize() //ChompEDIT New --> Initialize
 	..()
 	charge = 0
 	update_icon()
@@ -79,7 +79,7 @@
 	maxcharge = 20000
 	matter = list(MAT_STEEL = 700, MAT_GLASS = 70)
 
-/obj/item/weapon/cell/super/empty/New()
+/obj/item/weapon/cell/super/empty/Initialize() //ChompEDIT New --> Initialize
 	..()
 	charge = 0
 	update_icon()
@@ -94,7 +94,7 @@
 	maxcharge = 30000
 	matter = list(MAT_STEEL = 700, MAT_GLASS = 80)
 
-/obj/item/weapon/cell/hyper/empty/New()
+/obj/item/weapon/cell/hyper/empty/Initialize() //ChompEDIT New --> Initialize
 	..()
 	charge = 0
 	update_icon()
@@ -109,7 +109,7 @@
 	maxcharge = 40000
 	matter = list(MAT_STEEL = 1000, MAT_GLASS = 100)
 
-/obj/item/weapon/cell/giga/empty/New()
+/obj/item/weapon/cell/giga/empty/Initialize() //ChompEDIT New --> Initialize
 	..()
 	charge = 0
 	update_icon()
