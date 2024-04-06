@@ -549,7 +549,7 @@
 
 //Large ammo boxes
 /obj/item/ammo_magazine/ammo_box/large
-	desc = "ammo box (large)"
+	name = "ammo box (large)"
 	desc = "A box of large rounds"
 	icon_state = "sniper"
 	caliber = "large"
@@ -559,14 +559,17 @@
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/ammo_box/large/ap
+	name = "ammo box (large AP)"
 	matter = list(MAT_STEEL = 10000)
 	ammo_type = /obj/item/ammo_casing/simple/large/ap
 
 /obj/item/ammo_magazine/ammo_box/large/hp
+	name = "ammo box (large HP)"
 	matter = list(MAT_STEEL = 10000)
 	ammo_type = /obj/item/ammo_casing/simple/large/hp
 
 /obj/item/ammo_magazine/ammo_box/large/practice
+	name = "ammo box (large practice)"
 	matter = list(MAT_STEEL = 3000)
 	ammo_type = /obj/item/ammo_casing/simple/large/practice
 
