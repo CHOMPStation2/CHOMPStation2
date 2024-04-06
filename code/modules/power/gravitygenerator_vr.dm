@@ -319,7 +319,7 @@ GLOBAL_LIST_EMPTY(gravity_generators)
 	if(SSticker.IsRoundInProgress())
 		if(new_state) // If we turned on and the game is live.
 			if(gravity_in_level() == FALSE)
-				alert = TRUE
+				// alert = TRUE CHOMPEdit - No alarm! Gravity is fine :)
 				investigate_log("was brought online and is now producing gravity for this level.", "gravity")
 				message_admins("The gravity generator was brought online [ADMIN_JMP(src)]")
 		else
