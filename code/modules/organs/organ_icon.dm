@@ -1,4 +1,4 @@
-var/global/list/limb_icon_cache = list()
+//var/global/list/limb_icon_cache = list() CHOMPEdit fuck you
 
 /obj/item/organ/external/set_dir()
 	return
@@ -276,9 +276,8 @@ var/list/robot_hud_colours = list("#CFCFCF","#AFAFAF","#8F8F8F","#6F6F6F","#4F4F
 	// This looks convoluted, but it's this way to avoid icon proc calls.
 	if(!hud_damage_image)
 		var/cache_key = "dambase-[icon_cache_key]"
-		if(!icon_cache_key || !limb_icon_cache[cache_key])
-			limb_icon_cache[cache_key] = icon(get_icon(), null, SOUTH)
-		var/image/temp = image(limb_icon_cache[cache_key])
+		var/icon/I = icon(get_icon(), null, SOUTH)
+		var/image/temp = image(I)
 		if((robotic < ORGAN_ROBOT) && species)
 			// Calculate the required colour matrix.
 			var/r = 0.30 * species.health_hud_intensity
