@@ -52,7 +52,7 @@
 	if (has_AI() && friend)
 		var/friend_dist = get_dist(src,friend)
 		if (friend_dist <= 1)
-			if (friend.stat >= DEAD || friend.health <= config.health_threshold_softcrit)
+			if (friend.stat >= DEAD || friend.health <= CONFIG_GET(number/health_threshold_softcrit)) // CHOMPEdit
 				if (prob((friend.stat < DEAD)? 50 : 15))
 					var/verb = pick("meows", "mews", "mrowls")
 					audible_emote(pick("[verb] in distress.", "[verb] anxiously."))
@@ -76,4 +76,3 @@
 		qdel(src) //Back from whence you came!
 
 	. = ..(FALSE, deathmessage)
-

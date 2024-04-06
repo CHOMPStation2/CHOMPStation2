@@ -543,7 +543,7 @@
 /obj/machinery/alarm/tgui_data(mob/user, datum/tgui/ui, datum/tgui_state/state)
 	var/list/data = list(
 		"locked" = locked,
-		"siliconUser" = issilicon(user),
+		"siliconUser" = siliconaccess(user) || (isobserver(user) && is_admin(user)), //CHOMPEdit borg access + admin access
 		"remoteUser" = !!ui.parent_ui,
 		"danger_level" = danger_level,
 		"target_temperature" = "[target_temperature - T0C]C",
@@ -593,7 +593,7 @@
 			"danger_level" = TEST_TLV_VALUES
 		)))
 
-	if(!locked || issilicon(user) || data["remoteUser"])
+	if(!locked || siliconaccess(user) || data["remoteUser"] || (isobserver(user) && is_admin(user))) //CHOMPEdit borg access + admin access
 		var/list/list/vents = list()
 		data["vents"] = vents
 		for(var/id_tag in A.air_vent_names)
@@ -706,13 +706,13 @@
 	// Yes, this is kinda snowflaky; however, I would argue it would be far more snowflakey
 	// to include "custom hrefs" and all the other bullshit that nano states have just for the
 	// like, two UIs, that want remote access to other UIs.
-	if((locked && !issilicon(usr) && !istype(state, /datum/tgui_state/air_alarm_remote)) || (issilicon(usr) && aidisabled))
+	if((locked && !(siliconaccess(usr) || (isobserver(usr) && is_admin(usr))) && !istype(state, /datum/tgui_state/air_alarm_remote)) || (issilicon(usr) && aidisabled)) //CHOMPedit borg access
 		return
 
 	var/device_id = params["id_tag"]
 	switch(action)
 		if("lock")
-			if(issilicon(usr) && !wires.is_cut(WIRE_IDSCAN))
+			if((siliconaccess(usr) && !wires.is_cut(WIRE_IDSCAN)) || (isobserver(usr) && is_admin(usr))) //CHOMPEdit borg access + admin acces
 				locked = !locked
 				. = TRUE
 		if( "power",

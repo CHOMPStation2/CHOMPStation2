@@ -323,7 +323,7 @@
 /area/submap/asteroid4)
 "wi" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/clothing/mask/gas/wwii,
+/obj/item/clothing/mask/gas,
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
 "wy" = (

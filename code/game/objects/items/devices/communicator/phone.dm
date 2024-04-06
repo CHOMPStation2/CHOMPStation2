@@ -290,7 +290,7 @@
 	if(confirm == "No")
 		return
 
-	if(config.antag_hud_restricted && has_enabled_antagHUD == 1)
+	if(CONFIG_GET(flag/antag_hud_restricted) && has_enabled_antagHUD == 1) // CHOMPEdit
 		to_chat(src, "<span class='danger'>You have used the antagHUD and cannot respawn or use communicators!</span>")
 		return
 

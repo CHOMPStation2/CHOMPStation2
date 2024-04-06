@@ -44,7 +44,7 @@
 	ttone = "assist"
 	var/our_owner = null // Ref to a pAI
 
-/obj/item/device/pda/ai/pai/New(mob/living/silicon/pai/P)
+/obj/item/device/pda/ai/pai/Initialize(mob/living/silicon/pai/P) //ChompEDIT New --> Initialize
 	if(istype(P))
 		our_owner = REF(P)
 	return ..()

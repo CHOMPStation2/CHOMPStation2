@@ -1689,10 +1689,10 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
 	},
-/obj/item/clothing/mask/gas/wwii,
-/obj/item/clothing/mask/gas/wwii,
-/obj/item/clothing/mask/gas/wwii,
-/obj/item/clothing/mask/gas/wwii,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
 /turf/unsimulated/floor{
 	dir = 2;
 	icon_state = "dark"
@@ -3661,7 +3661,7 @@
 /area/shuttle/mercenary)
 "fZ" = (
 /obj/structure/closet/syndicate,
-/obj/item/clothing/mask/gas/wwii,
+/obj/item/clothing/mask/gas,
 /obj/machinery/light{
 	dir = 8;
 	icon_state = "tube1";
@@ -3678,7 +3678,7 @@
 /area/shuttle/mercenary)
 "ga" = (
 /obj/structure/closet/syndicate,
-/obj/item/clothing/mask/gas/wwii,
+/obj/item/clothing/mask/gas,
 /obj/item/clothing/head/helmet,
 /obj/item/clothing/shoes/boots/jackboots,
 /obj/item/clothing/suit/armor/vest,
@@ -3921,7 +3921,7 @@
 	syndie = 1
 	},
 /obj/structure/closet/syndicate,
-/obj/item/clothing/mask/gas/wwii,
+/obj/item/clothing/mask/gas,
 /obj/machinery/light{
 	dir = 8;
 	icon_state = "tube1";

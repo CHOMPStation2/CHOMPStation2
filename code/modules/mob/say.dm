@@ -67,7 +67,7 @@
 		return // Clientless mobs shouldn't be trying to talk in deadchat.
 
 	if(!client.holder)
-		if(!config.dsay_allowed)
+		if(!CONFIG_GET(flag/dsay_allowed)) // CHOMPEdit
 			to_chat(src, "<span class='danger'>Deadchat is globally muted.</span>")
 			return
 

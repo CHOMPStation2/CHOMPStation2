@@ -225,6 +225,9 @@
 			state = SS_PAUSING
 
 // CHOMPEdit Start
+/// Called after the config has been loaded or reloaded.
+/datum/controller/subsystem/proc/OnConfigLoad()
+
 /**
  * Used to initialize the subsystem. This is expected to be overriden by subtypes.
  */

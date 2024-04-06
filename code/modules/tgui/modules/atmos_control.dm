@@ -50,7 +50,7 @@
 	. = ..()
 
 	var/z = get_z(user)
-	var/list/map_levels = using_map.get_map_levels(z)
+	var/list/map_levels = using_map.get_visible_map_levels(z) //CHOMPEdit
 
 	// TODO: Move these to a cache, similar to cameras
 	var/alarms[0]
@@ -67,12 +67,13 @@
 			"y" = alarm.y,
 			"z" = alarm.z)
 	.["alarms"] = alarms
+	.["zoomScale"] = world.maxx + world.maxy
 
 /datum/tgui_module/atmos_control/tgui_data(mob/user)
 	var/list/data = list()
 
 	var/z = get_z(user)
-	var/list/map_levels = using_map.get_map_levels(z)
+	var/list/map_levels = using_map.get_visible_map_levels(z) //CHOMPEdit
 	data["map_levels"] = map_levels
 
 	return data

@@ -310,7 +310,7 @@
 			/obj/item/clothing/head/bio_hood/virology = 2,
 			/obj/item/clothing/suit/bio_suit/cmo,
 			/obj/item/clothing/head/bio_hood/cmo,
-			/obj/item/clothing/mask/gas = 5,
+			/obj/item/clothing/mask/gas/clear = 5, //ChompEdit: Proper implementation of clear gas masks
 			/obj/item/weapon/tank/oxygen = 5,
 			/obj/item/weapon/storage/box/masks,
 			/obj/item/weapon/storage/box/gloves

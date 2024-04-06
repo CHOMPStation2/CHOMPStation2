@@ -35,7 +35,7 @@
 	var/standard_overlays = TRUE
 	var/last_overlay_state = null // Used to optimize update_icon() calls.
 
-/obj/item/weapon/cell/New()
+/obj/item/weapon/cell/Initialize() //ChompEDIT New --> Initialize
 	..()
 	c_uid = cell_uid++
 	charge = maxcharge

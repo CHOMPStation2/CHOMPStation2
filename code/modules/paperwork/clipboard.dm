@@ -12,7 +12,7 @@
 	var/obj/item/weapon/toppaper	//The topmost piece of paper.
 	slot_flags = SLOT_BELT
 
-/obj/item/weapon/clipboard/New()
+/obj/item/weapon/clipboard/Initialize() //ChompEDIT New --> Initialize
 	update_icon()
 
 /obj/item/weapon/clipboard/MouseDrop(obj/over_object as obj) //Quick clipboard fix. -Agouri

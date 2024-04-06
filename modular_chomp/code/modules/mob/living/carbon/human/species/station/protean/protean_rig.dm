@@ -422,7 +422,7 @@
 	charge_amount = 100
 	var/mob/living/carbon/human/charger
 
-/obj/item/weapon/cell/protean/New()
+/obj/item/weapon/cell/protean/Initialize() //ChompEDIT New --> Initialize
 	charge = maxcharge
 	update_icon()
 	addtimer(CALLBACK(src, PROC_REF(search_for_protean)), 60)

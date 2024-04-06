@@ -205,7 +205,7 @@
 	if(organ_names)
 		organ_names = GET_DECL(organ_names)
 
-	if(config.allow_simple_mob_recolor)
+	if(CONFIG_GET(flag/allow_simple_mob_recolor)) //CHOMPEdit
 		add_verb(src,/mob/living/simple_mob/proc/ColorMate) //CHOMPEdit TGPanel
 
 
@@ -292,7 +292,7 @@
 		. += injury_level
 	// VOREStation Edit Stop
 
-	. += config.animal_delay
+	. += CONFIG_GET(number/animal_delay) // CHOMPEdit
 
 	. += ..()
 

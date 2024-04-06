@@ -26,7 +26,7 @@ GLOBAL_LIST_EMPTY(solars_list)
 	var/turn_angle = 0
 	var/obj/machinery/power/solar_control/control = null
 	var/glass_type = /obj/item/stack/material/glass
-	var/SOLAR_MAX_DIST = 40		//VOREStation Addition
+	var/SOLAR_MAX_DIST = 60		//VOREStation Addition //ChompEDIT - ours are >40 away
 
 /obj/machinery/power/solar/drain_power()
 	return -1
@@ -299,7 +299,7 @@ GLOBAL_LIST_EMPTY(solars_list)
 
 /obj/machinery/power/solar_control/proc/auto_start(forced = FALSE)
 	// Automatically sets the solars, if allowed.
-	if(forced || auto_start == SOLAR_AUTO_START_YES || (auto_start == SOLAR_AUTO_START_CONFIG && config.autostart_solars) )
+	if(forced || auto_start == SOLAR_AUTO_START_YES || (auto_start == SOLAR_AUTO_START_CONFIG && CONFIG_GET(flag/autostart_solars))) // CHOMPEdit
 		track = 2 // Auto tracking mode.
 		search_for_connected()
 		if(connected_tracker)

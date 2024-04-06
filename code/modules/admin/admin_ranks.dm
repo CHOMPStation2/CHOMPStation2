@@ -70,7 +70,7 @@ var/list/admin_ranks = list()								//list of all ranks with associated rights
 	GLOB.admins.Cut()
 	load_admin_ranks() //CHOMP Edit: moved this from "f(config.admin_legacy_system)" and put it here instead, literally just moved it 3 lines.
 
-	if(config.admin_legacy_system)
+	if(CONFIG_GET(flag/admin_legacy_system)) // CHOMPEdit
 		//Clear profile access
 		for(var/A in world.GetConfig("admin"))
 			world.SetConfig("APP/admin", A, null)
@@ -115,7 +115,7 @@ var/list/admin_ranks = list()								//list of all ranks with associated rights
 		if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 			error("Failed to connect to database in load_admins(). Reverting to legacy system.")
 			log_misc("Failed to connect to database in load_admins(). Reverting to legacy system.")
-			config.admin_legacy_system = 1
+			CONFIG_SET(flag/admin_legacy_system, TRUE) // CHOMPEdit
 			load_admins()
 			return
 
@@ -139,7 +139,7 @@ var/list/admin_ranks = list()								//list of all ranks with associated rights
 		if(!admin_datums)
 			error("The database query in load_admins() resulted in no admins being added to the list. Reverting to legacy system.")
 			log_misc("The database query in load_admins() resulted in no admins being added to the list. Reverting to legacy system.")
-			config.admin_legacy_system = 1
+			CONFIG_SET(flag/admin_legacy_system, TRUE) // CHOMPEdit
 			load_admins()
 			return
 

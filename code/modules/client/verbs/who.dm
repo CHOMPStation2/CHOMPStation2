@@ -113,13 +113,13 @@
 
 	msg = "<b>Current Admins ([num_admins_online]):</b>\n" + msg
 
-	if(config.show_mods)
+	if(CONFIG_GET(flag/show_mods)) // CHOMPEdit
 		msg += "\n<b> Current Moderators ([num_mods_online]):</b>\n" + modmsg	//YW EDIT
 
-	if(config.show_devs)
+	if(CONFIG_GET(flag/show_devs)) // CHOMPEdit
 		msg += "\n<b> Current Developers ([num_devs_online]):</b>\n" + devmsg
 
-	if(config.show_event_managers)
+	if(CONFIG_GET(flag/show_event_managers)) // CHOMPEdit
 		msg += "\n<b> Current Miscellaneous ([num_event_managers_online]):</b>\n" + eventMmsg
 
 	var/num_mentors_online = 0
@@ -141,7 +141,7 @@
 				mmsg += " (AFK - [round(seconds / 60)] minutes, [seconds % 60] seconds)"
 		mmsg += "\n"
 
-	if(config.show_mentors)
+	if(CONFIG_GET(flag/show_mentors)) // CHOMPEdit
 		msg += "\n<b> Current Mentors ([num_mentors_online]):</b>\n" + mmsg
 
 	msg += "\n<span class='info'>Adminhelps are also sent to Discord. If no admins are available in game try anyway and an admin on Discord may see it and respond.</span>"
