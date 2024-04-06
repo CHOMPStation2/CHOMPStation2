@@ -88,3 +88,27 @@
   - code_imp: Removed the check for base gas masks to remove their face-consealing
       abilities because they're no longer clear. Subtypes that are clear can now just
       use the /clear subtype since it's properly in now
+2024-04-06:
+  FluffMedic:
+  - bugfix: virolgy door
+  - bugfix: runtime with new valley grass
+  Fracshun:
+  - bugfix: Sentient food items can no longer astral project if they struggle
+  - bugfix: Sentient items now despawn correctly when leaving through cryo/gateway
+  ItsSelis:
+  - refactor: Replaced the old configuration with the configuration controller.
+  - admin: Added "Reload Configuration" button to Debug tab (requires DEBUG permission),
+      to reload config from files.
+  Kashargul:
+  - bugfix: solarmoth no longer flickers
+  Raeschen:
+  - bugfix: fix solarpanel maxdist aswell
+  - bugfix: Increase solar tracker max range to locate a controller
+  cadyn:
+  - refactor: borg access is actually checked for many things that weren't checking
+      before
+  - balance: no more drone pod borg full access
+  - balance: station borgs no longer have centcomm or syndi access
+  - balance: borgs can be targeted by turrets
+  - admin: add air_alarm access while ghosting
+  - server: updated nanomap renderer script.
