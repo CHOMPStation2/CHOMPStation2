@@ -143,6 +143,11 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/maintenance/abfirstaid)
+"ay" = (
+/obj/machinery/door/airlock/maintenance/common,
+/obj/item/tape/engineering,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/starboard)
 "aC" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/table/rack,
@@ -408,8 +413,7 @@
 /turf/simulated/floor/reinforced,
 /area/maintenance/abchemistry)
 "bp" = (
-/obj/random/trash,
-/obj/structure/prop/dark_node/dust,
+/obj/structure/prop/dark_node,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/starboard)
 "bq" = (
@@ -758,10 +762,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
 	},
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -24
-	},
 /turf/simulated/floor/plating,
 /area/maintenance/maintdeck/fieldhallway)
 "cP" = (
@@ -956,19 +956,12 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/abchemistry)
 "dE" = (
-/obj/effect/floor_decal/rust,
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/alarm{
+/obj/structure/catwalk,
+/obj/machinery/firealarm{
 	dir = 4;
-	pixel_x = -22
+	pixel_x = 24
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/maintdeck/fieldhallway)
 "dG" = (
 /obj/structure/railing,
@@ -1987,6 +1980,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 24
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/maintdeck/fieldhallway)
 "hR" = (
@@ -2464,7 +2461,6 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/starboard)
 "jK" = (
-/obj/random/obstruction,
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
@@ -2782,7 +2778,8 @@
 "kU" = (
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "Maint Room 1";
-	id_tag = "MaintRoom1"
+	id_tag = "MaintRoom1";
+	req_one_access = null
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -3340,6 +3337,13 @@
 	},
 /turf/simulated/floor/wood/turfpack/station,
 /area/maintenance/bar)
+"nh" = (
+/obj/machinery/alarm{
+	pixel_y = 22
+	},
+/obj/random/obstruction,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/aft)
 "nj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5
@@ -3887,6 +3891,10 @@
 "pp" = (
 /obj/structure/catwalk,
 /obj/structure/catwalk,
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 22
+	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/maintdeck/fieldhallway)
 "pq" = (
@@ -5182,6 +5190,10 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 22
+	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/maintdeck/fieldhallway)
 "uG" = (
@@ -5531,7 +5543,6 @@
 /area/maintenance/aft)
 "wh" = (
 /obj/effect/floor_decal/rust,
-/obj/random/trash,
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -5543,6 +5554,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/random/trash,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/starboard)
 "wl" = (
@@ -5851,8 +5863,7 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/absgenetics)
 "xn" = (
-/obj/effect/dark/floor,
-/turf/simulated/floor/plating/turfpack/station,
+/turf/simulated/floor/weird_things/dark,
 /area/maintenance/starboard)
 "xo" = (
 /obj/structure/flora/pottedplant/crystal,
@@ -6429,18 +6440,10 @@
 /turf/simulated/floor/tiled,
 /area/maintenance/abcargo)
 "Ae" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -22
-	},
-/turf/simulated/floor/plating,
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/barricade,
+/turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/maintdeck/fieldhallway)
 "Af" = (
 /obj/machinery/door/firedoor/border_only,
@@ -7322,20 +7325,6 @@
 /obj/structure/flora/pottedplant/unusual,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/engineering)
-"DE" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -24
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/maintdeck/fieldhallway)
 "DI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -8419,7 +8408,8 @@
 "HH" = (
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "Maint Room 2";
-	id_tag = "MaintRoom2"
+	id_tag = "MaintRoom2";
+	req_one_access = null
 	},
 /obj/structure/cable{
 	d1 = 4;
@@ -8800,8 +8790,7 @@
 /area/maintenance/maintdeck/fieldthrift)
 "Jm" = (
 /obj/structure/dark_portal/minion,
-/obj/effect/dark/floor,
-/turf/simulated/floor/plating/turfpack/station,
+/turf/simulated/floor/weird_things/dark,
 /area/maintenance/starboard)
 "Jp" = (
 /obj/effect/floor_decal/rust,
@@ -9793,9 +9782,11 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/maintdeck/fieldhallway)
 "NM" = (
-/obj/machinery/light/small,
-/turf/simulated/floor/wood/broken/turfpack/station,
-/area/maintenance/bar)
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/obj/item/tape/engineering,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/maintdeck/fieldhallway)
 "NN" = (
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating,
@@ -36250,8 +36241,8 @@ fW
 Xq
 fW
 wF
-Vl
 Vb
+Vl
 In
 gr
 WI
@@ -38570,7 +38561,7 @@ wG
 Td
 Td
 qu
-NM
+In
 gr
 gr
 gr
@@ -41431,9 +41422,9 @@ Jq
 wW
 Fd
 ua
-ua
 US
-ua
+US
+US
 ua
 iv
 wW
@@ -42944,7 +42935,7 @@ wZ
 wZ
 wZ
 Mq
-XY
+nh
 pj
 jC
 hU
@@ -51217,9 +51208,9 @@ NN
 bj
 jm
 xb
-BZ
-BZ
-BZ
+Uo
+Ae
+Uo
 BZ
 Hk
 sK
@@ -51235,9 +51226,9 @@ YG
 JG
 NN
 BZ
-BZ
+NM
+NM
 Uo
-BZ
 BZ
 Hk
 go
@@ -51476,7 +51467,7 @@ rZ
 rZ
 rZ
 cM
-Ae
+Rm
 rZ
 iY
 rZ
@@ -51495,8 +51486,8 @@ rZ
 Zl
 IA
 Rm
-DE
-dE
+Rm
+IA
 IA
 TV
 IA
@@ -51753,7 +51744,7 @@ iX
 iX
 EM
 iX
-EM
+dE
 pp
 mh
 EM
@@ -54081,7 +54072,7 @@ gL
 gL
 gL
 gL
-gL
+ay
 gL
 gL
 gL
@@ -54595,7 +54586,7 @@ Bh
 xh
 gL
 Bh
-Bh
+Lt
 xn
 Bh
 xn
@@ -54854,7 +54845,7 @@ xh
 gL
 Bh
 Bh
-bp
+JH
 Jm
 xn
 Bh
@@ -55374,7 +55365,7 @@ xn
 Bh
 Bh
 Bh
-JH
+bp
 gL
 wZ
 wZ
