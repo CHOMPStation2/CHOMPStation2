@@ -412,6 +412,10 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/maintenance/abchemistry)
+"bo" = (
+/obj/item/device/radio/subspace,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/maintdeck/field)
 "bp" = (
 /obj/structure/prop/dark_node,
 /turf/simulated/floor/plating/turfpack/station,
@@ -4036,6 +4040,7 @@
 /area/maintenance/abtheatre)
 "pS" = (
 /obj/structure/table/woodentable,
+/obj/item/device/radio/subspace,
 /turf/simulated/floor/wood/alt/parquet/broken/turfpack/station,
 /area/maintenance/lookout)
 "pT" = (
@@ -5245,6 +5250,7 @@
 /area/maintenance/aft)
 "uQ" = (
 /obj/structure/table/hardwoodtable,
+/obj/item/device/radio/subspace,
 /turf/simulated/floor/plating,
 /area/maintenance/ragecage)
 "uR" = (
@@ -5382,6 +5388,14 @@
 /area/maintenance/maintdeck/fieldhallway)
 "vx" = (
 /obj/structure/closet/lasertag/blue,
+/obj/item/device/tvcamera{
+	channel = "NLS Southern Cross Hyperball";
+	name = "hyperball camera drone"
+	},
+/obj/item/device/tvcamera{
+	channel = "NLS Southern Cross Hyperball";
+	name = "hyperball camera drone"
+	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/maintdeck/field)
 "vy" = (
@@ -5447,6 +5461,14 @@
 /area/maintenance/abfirstaid)
 "vL" = (
 /obj/structure/closet/lasertag/red,
+/obj/item/device/tvcamera{
+	channel = "NLS Southern Cross Hyperball";
+	name = "hyperball camera drone"
+	},
+/obj/item/device/tvcamera{
+	channel = "NLS Southern Cross Hyperball";
+	name = "hyperball camera drone"
+	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/maintdeck/field)
 "vM" = (
@@ -7180,6 +7202,7 @@
 /area/maintenance/aft)
 "CP" = (
 /obj/structure/table/rack/shelf,
+/obj/item/device/radio/subspace,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/maintdeck/field)
 "CR" = (
@@ -7627,6 +7650,7 @@
 "EO" = (
 /obj/structure/table/rack/shelf,
 /obj/machinery/light/small,
+/obj/item/device/radio/subspace,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/maintdeck/field)
 "EP" = (
@@ -10029,6 +10053,10 @@
 "OF" = (
 /obj/structure/table/marble,
 /obj/random/cigarettes,
+/obj/item/device/radio/subspace{
+	pixel_y = 8;
+	pixel_x = 6
+	},
 /turf/simulated/floor/lino,
 /area/maintenance/bar)
 "OG" = (
@@ -11630,6 +11658,14 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/abhydroponics)
+"Vz" = (
+/obj/item/weapon/stool/baystool/padded,
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = -3;
+	pixel_x = -32
+	},
+/turf/simulated/floor/wood/turfpack/station,
+/area/maintenance/bar)
 "VB" = (
 /obj/effect/floor_decal/industrial/arrows/yellow{
 	dir = 8
@@ -11766,6 +11802,10 @@
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/central)
+"Wb" = (
+/obj/item/device/radio/subspace,
+/turf/simulated/floor/plating,
+/area/maintenance/maintdeck/field)
 "Wc" = (
 /obj/structure/catwalk,
 /obj/structure/catwalk,
@@ -36234,7 +36274,7 @@ CU
 CU
 WI
 Vb
-Kr
+Vz
 BF
 fW
 fW
@@ -52245,7 +52285,7 @@ Rd
 kt
 Th
 Rd
-mJ
+Wb
 mJ
 kJ
 nb
@@ -56377,7 +56417,7 @@ xF
 qo
 pf
 Pc
-kt
+bo
 kt
 RJ
 kt
