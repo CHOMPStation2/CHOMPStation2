@@ -50,7 +50,11 @@
 	. = ..()
 
 	var/z = get_z(user)
+<<<<<<< HEAD
 	var/list/map_levels = using_map.get_visible_map_levels(z) //CHOMPEdit
+=======
+	var/list/map_levels = using_map.get_map_levels(z)
+>>>>>>> ce7a2da466... fix telecom filtering additions and nanomap autoscaling (#15899)
 
 	// TODO: Move these to a cache, similar to cameras
 	var/alarms[0]
@@ -73,7 +77,11 @@
 	var/list/data = list()
 
 	var/z = get_z(user)
+<<<<<<< HEAD
 	var/list/map_levels = using_map.get_visible_map_levels(z) //CHOMPEdit
+=======
+	var/list/map_levels = using_map.get_map_levels(z)
+>>>>>>> ce7a2da466... fix telecom filtering additions and nanomap autoscaling (#15899)
 	data["map_levels"] = map_levels
 
 	return data

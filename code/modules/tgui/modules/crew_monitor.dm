@@ -32,7 +32,11 @@
 
 /datum/tgui_module/crew_monitor/tgui_interact(mob/user, datum/tgui/ui = null)
 	var/z = get_z(user)
+<<<<<<< HEAD
 	var/list/map_levels = using_map.get_visible_map_levels(z, TRUE)  //CHOMPEdit
+=======
+	var/list/map_levels = using_map.get_map_levels(z, TRUE, om_range = DEFAULT_OVERMAP_RANGE)
+>>>>>>> ce7a2da466... fix telecom filtering additions and nanomap autoscaling (#15899)
 
 	if(!map_levels.len)
 		to_chat(user, "<span class='warning'>The crew monitor doesn't seem like it'll work here.</span>")
