@@ -177,8 +177,8 @@ GLOBAL_LIST_EMPTY(limb_icon_cache)
 				var/icon/I = icon(species.get_icobase(owner), "[icon_name]_[body_hair]")
 				I.Blend(rgb(h_col[1],h_col[2],h_col[3]), ICON_MULTIPLY) //VOREStation edit
 				GLOB.limb_icon_cache[cache_key] = I
-				//ChompEDIT END
 				mob_icon.Blend(GLOB.limb_icon_cache[cache_key], ICON_OVERLAY)
+				//ChompEDIT END
 
 			// VOREStation edit start
 			if(nail_polish)
@@ -211,6 +211,7 @@ GLOBAL_LIST_EMPTY(limb_icon_cache)
 			I.Blend(rgb(h_col[1],h_col[2],h_col[3]), ICON_MULTIPLY) //VOREStation edit
 			GLOB.limb_icon_cache[cache_key] = I
 			mob_icon.Blend(GLOB.limb_icon_cache[cache_key], ICON_OVERLAY)
+			//ChompEDIT END
 		// VOREStation edit ends here
 
 	if (transparent && !istype(src,/obj/item/organ/external/head) && can_apply_transparency && should_apply_transparency) //VORESTATION EDIT: transparent instead of nonsolid
@@ -280,8 +281,8 @@ var/list/robot_hud_colours = list("#CFCFCF","#AFAFAF","#8F8F8F","#6F6F6F","#4F4F
 	if(!hud_damage_image)
 		var/cache_key = "dambase-[icon_cache_key]"
 		if(!icon_cache_key || !GLOB.limb_icon_cache[cache_key]) //CHOMPNote - this isn't manipulated after the fact, so we leave it.
-			GLOB.limb_icon_cache[cache_key] = icon(get_icon(), null, SOUTH)
-		var/image/temp = image(GLOB.limb_icon_cache[cache_key])
+			GLOB.limb_icon_cache[cache_key] = icon(get_icon(), null, SOUTH) //ChompEDIT
+		var/image/temp = image(GLOB.limb_icon_cache[cache_key]) //ChompEDIT
 		if((robotic < ORGAN_ROBOT) && species)
 			// Calculate the required colour matrix.
 			var/r = 0.30 * species.health_hud_intensity
