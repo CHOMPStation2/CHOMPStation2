@@ -33,7 +33,7 @@ GLOBAL_LIST_EMPTY(job_whitelist) // CHOMPEdit - Managed Globals
 
 //ChompEDIT START - admin reload buttons
 /client/proc/reload_jobwhitelist()
-	set category = "Admin"
+	set category = "Server.Config"
 	set name = "Reload Job whitelist"
 
 	if(!check_rights(R_ADMIN|R_MOD|R_DEBUG|R_EVENT))
