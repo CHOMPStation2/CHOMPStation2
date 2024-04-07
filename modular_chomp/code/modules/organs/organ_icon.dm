@@ -79,9 +79,9 @@
 		//if(!GLOB.limb_icon_cache[cache_key]) //ChompEDIT START
 		var/icon/I = icon(species.get_icobase(owner), "[icon_name]_[body_hair]")
 		I.Blend(rgb(h_col[1],h_col[2],h_col[3]), ICON_MULTIPLY) //VOREStation edit
-		mob_icon.Blend(I, ICON_OVERLAY)
 		GLOB.limb_icon_cache[cache_key] = I
 		//ChompEDIT END
+		mob_icon.Blend(GLOB.limb_icon_cache[cache_key], ICON_OVERLAY)
 
 	// VOREStation edit start
 	if(nail_polish && !(force_icon && !skip_forced_icon))
