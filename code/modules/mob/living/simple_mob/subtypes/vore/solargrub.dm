@@ -61,11 +61,8 @@ var/global/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawstamp*
 	var/powerdraw = 100000 // previous value 150000 // CHOMPStation Addition, Rykka waz here. *pawstamp*
 	var/tracked = FALSE
 
-<<<<<<< HEAD
 	can_be_drop_prey = FALSE //CHOMP Add
-=======
 	glow_override = TRUE
->>>>>>> cd0cfd0dd7... borgs can walk, vtec overhaul, no more borg light and some glow flicker (#15901)
 
 /datum/say_list/solargrub
 	emote_see = list("squelches", "squishes")
