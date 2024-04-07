@@ -40,4 +40,5 @@ GLOBAL_LIST_EMPTY(job_whitelist) // CHOMPEdit - Managed Globals
 		return
 
 	load_jobwhitelist()
+	log_and_message_admins("reloaded the job whitelist")
 //ChompEDIT End

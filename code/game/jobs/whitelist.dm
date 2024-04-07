@@ -131,4 +131,5 @@ GLOBAL_LIST_EMPTY(alien_whitelist) // CHOMPEdit - Managed Globals
 		return
 
 	load_alienwhitelist()
+	log_and_message_admins("reloaded the alien whitelist")
 //ChompEDIT End
