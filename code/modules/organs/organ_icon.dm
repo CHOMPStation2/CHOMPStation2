@@ -1,4 +1,4 @@
-//var/global/list/limb_icon_cache = list() CHOMPEdit fuck you
+GLOBAL_LIST_EMPTY(limb_icon_cache)
 
 /obj/item/organ/external/set_dir()
 	return
@@ -172,11 +172,13 @@
 					icon_cache_key += "[M][markings[M]["color"]]"
 
 			if(body_hair && islist(h_col) && h_col.len >= 3)
-				//CHOMPEdit Begin -- Icon cache removal
+				var/cache_key = "[body_hair]-[icon_name]-[h_col[1]][h_col[2]][h_col[3]]"
+				//if(!GLOB.limb_icon_cache[cache_key]) //ChompEDIT START
 				var/icon/I = icon(species.get_icobase(owner), "[icon_name]_[body_hair]")
 				I.Blend(rgb(h_col[1],h_col[2],h_col[3]), ICON_MULTIPLY) //VOREStation edit
 				mob_icon.Blend(I, ICON_OVERLAY)
-				//CHOMPEdit End
+				GLOB.limb_icon_cache[cache_key] = I
+				//ChompEDIT END
 
 			// VOREStation edit start
 			if(nail_polish)
@@ -203,11 +205,13 @@
 				icon_cache_key += "[M][markings[M]["color"]]"
 
 		if(body_hair && islist(h_col) && h_col.len >= 3)
-			//CHOMPEdit Begin -- Icon cache removal
+			var/cache_key = "[body_hair]-[icon_name]-[h_col[1]][h_col[2]][h_col[3]]"
+			//if(!GLOB.limb_icon_cache[cache_key]) //ChompEDIT START
 			var/icon/I = icon(species.get_icobase(owner), "[icon_name]_[body_hair]")
 			I.Blend(rgb(h_col[1],h_col[2],h_col[3]), ICON_MULTIPLY) //VOREStation edit
 			mob_icon.Blend(I, ICON_OVERLAY)
-			//CHOMPEdit End
+			GLOB.limb_icon_cache[cache_key] = I
+			//ChompEDIT END
 		// VOREStation edit ends here
 
 	if (transparent && !istype(src,/obj/item/organ/external/head) && can_apply_transparency && should_apply_transparency) //VORESTATION EDIT: transparent instead of nonsolid
@@ -275,10 +279,10 @@ var/list/robot_hud_colours = list("#CFCFCF","#AFAFAF","#8F8F8F","#6F6F6F","#4F4F
 	// icon_cache_key is set by any get_icon() calls that are made.
 	// This looks convoluted, but it's this way to avoid icon proc calls.
 	if(!hud_damage_image)
-		//CHOMPEdit Begin -- Cache Removal
-		var/icon/I = icon(get_icon(), null, SOUTH)
-		var/image/temp = image(I)
-		//CHOMPEdit End
+		var/cache_key = "dambase-[icon_cache_key]"
+		if(!icon_cache_key || !GLOB.limb_icon_cache[cache_key]) //CHOMPNote - this isn't manipulated after the fact, so we leave it.
+			GLOB.limb_icon_cache[cache_key] = icon(get_icon(), null, SOUTH)
+		var/image/temp = image(GLOB.limb_icon_cache[cache_key])
 		if((robotic < ORGAN_ROBOT) && species)
 			// Calculate the required colour matrix.
 			var/r = 0.30 * species.health_hud_intensity

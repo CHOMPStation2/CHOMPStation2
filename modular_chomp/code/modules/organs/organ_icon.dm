@@ -75,13 +75,16 @@
 			mob_icon.Blend(mark_s, ICON_OVERLAY) //So when it's on your body, it has icons
 			icon_cache_key += "[M][markings[M]["color"]]"
 	if(body_hair && islist(h_col) && h_col.len >= 3)
+		var/cache_key = "[body_hair]-[icon_name]-[h_col[1]][h_col[2]][h_col[3]]"
+		//if(!GLOB.limb_icon_cache[cache_key]) //ChompEDIT START
 		var/icon/I = icon(species.get_icobase(owner), "[icon_name]_[body_hair]")
 		I.Blend(rgb(h_col[1],h_col[2],h_col[3]), ICON_MULTIPLY) //VOREStation edit
 		mob_icon.Blend(I, ICON_OVERLAY)
+		GLOB.limb_icon_cache[cache_key] = I
+		//ChompEDIT END
 
 	// VOREStation edit start
 	if(nail_polish && !(force_icon && !skip_forced_icon))
-		//cache begone
 		var/icon/I = new(nail_polish.icon, nail_polish.icon_state)
 		I.Blend(nail_polish.color, ICON_MULTIPLY)
 		add_overlay(I)
