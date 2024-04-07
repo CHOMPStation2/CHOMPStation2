@@ -19,27 +19,25 @@
 	add_overlay("ccharger1")
 
 /obj/machinery/cell_charger/update_icon()
-	cut_overlays() //ChompEDIT
 	if(!anchored)
-		//cut_overlays() //ChompEDIT
+		cut_overlays()
 		icon_state = "ccharger2"
 
 	if(charging && !(stat & (BROKEN|NOPOWER)))
 		var/newlevel = 	round(charging.percent() * 4.0 / 99)
 		//to_world("nl: [newlevel]")
 
-		if(chargelevel != newlevel)
+		//CHOMPEdit Start prevet overlay overflow
+		cut_overlays()
+		add_overlay("ccharger-o[newlevel]")
 
-			//cut_overlays() //ChompEDIT
-			add_overlay("ccharger-o[newlevel]")
-
-			chargelevel = newlevel
-
+		chargelevel = newlevel
+		//CHOMPEdit End prevet overlay overflow
 		add_overlay(image(charging.icon, charging.icon_state))
 		add_overlay("ccharger-[charging.connector_type]-on")
 
 	else if(anchored)
-		//cut_overlays() //ChompEDIT
+		cut_overlays()
 		icon_state = "ccharger0"
 		add_overlay("ccharger1")
 
@@ -127,10 +125,11 @@
 		return
 
 	if(charging && !charging.fully_charged())
+		var/newlevel = 	round(charging.percent() * 4.0 / 99) //CHOMPEdit prevent overlay overflow
 		charging.give(efficiency*CELLRATE)
 		update_use_power(USE_POWER_ACTIVE)
-
-		update_icon()
+		if(chargelevel != newlevel) //CHOMPEdit prevent overlay overflow
+			update_icon() //CHOMPEdit prevent overlay overflow
 	else
 		update_use_power(USE_POWER_IDLE)
 
