@@ -1364,6 +1364,11 @@ z
 	name = "Third Deck Aft Starboard Maintenance"
 	icon_state = "asmaint"
 
+//CHOMPedit Giving a maint bar its own APC
+/area/maintenance/thirddeck/dormsstarboard/maintbar
+	name = "Third Deck Aft Starboard Speakeasy"
+	icon_state = "asmaint"
+//CHOMPedit end
 /area/maintenance/thirddeck/dormsaft
 	name = "Third Deck Aft Starboard Maintenance"
 	icon_state = "asmaint"
