@@ -1920,6 +1920,14 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/ragecage)
+"hz" = (
+/obj/structure/table/rack/shelf,
+/obj/structure/curtain/black,
+/obj/random/maintenance,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/security,
+/turf/simulated/floor/bmarble,
+/area/maintenance/thrift)
 "hA" = (
 /turf/simulated/floor/tiled/white,
 /area/maintenance/abscience)
@@ -2770,16 +2778,21 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/ragecage)
 "kU" = (
-/obj/machinery/door/airlock/maintenance_hatch{
-	name = "Maint Room 1";
-	id_tag = "MaintRoom1";
-	req_one_access = null
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/maintenance_hatch{
+	name = "Maint Room 1";
+	id_tag = "MaintRoom1";
+	req_one_access = null
 	},
 /turf/simulated/floor/wood/turfpack/station,
 /area/maintenance/bar/dorm_1)
@@ -3598,6 +3611,15 @@
 "of" = (
 /turf/simulated/floor/tiled/white,
 /area/maintenance/bar)
+"og" = (
+/obj/structure/table/rack/shelf,
+/obj/structure/curtain/black,
+/obj/random/donkpocketbox,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/morestuff,
+/obj/random/maintenance/research,
+/turf/simulated/floor/bmarble,
+/area/maintenance/thrift)
 "oi" = (
 /obj/structure/table/marble,
 /obj/structure/table/marble,
@@ -8423,11 +8445,6 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/starboard)
 "HH" = (
-/obj/machinery/door/airlock/maintenance_hatch{
-	name = "Maint Room 2";
-	id_tag = "MaintRoom2";
-	req_one_access = null
-	},
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -8438,6 +8455,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance_hatch{
+	name = "Maint Room 2";
+	id_tag = "MaintRoom2";
+	req_one_access = null
 	},
 /turf/simulated/floor/wood/turfpack/station,
 /area/maintenance/bar/dorm_2)
@@ -9300,6 +9322,9 @@
 "Ls" = (
 /obj/structure/table/rack/shelf,
 /obj/structure/curtain/black,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/misc,
+/obj/random/maintenance/research,
 /turf/simulated/floor/bmarble,
 /area/maintenance/thrift)
 "Lt" = (
@@ -58224,8 +58249,8 @@ DR
 AR
 OG
 py
-Ls
-Ls
+hz
+og
 Ls
 Fv
 BL
