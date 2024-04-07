@@ -1,5 +1,0 @@
-author: "cadyn"
-delete-after: True
-changes:
-  - bugfix: "hopefully maybe fixes icon related crashes"
-  - refactor: "Overlay subsystem replaced with TG version"
