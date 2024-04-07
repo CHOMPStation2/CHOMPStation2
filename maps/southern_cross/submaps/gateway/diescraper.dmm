@@ -54,6 +54,11 @@
 "bP" = (
 /turf/simulated/wall/solidrock,
 /area/awaymission/diescraper/outside)
+"bU" = (
+/obj/structure/girder,
+/obj/effect/overlay/snow/floor,
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/sky)
 "ci" = (
 /turf/simulated/sky/south{
 	temperature = 295.15
@@ -69,6 +74,21 @@
 "cw" = (
 /obj/item/tape/police,
 /turf/simulated/floor/wood,
+/area/awaymission/diescraper/indoors)
+"cA" = (
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/bluegrid{
+	name = "Mainframe Base";
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
 /area/awaymission/diescraper/indoors)
 "cG" = (
 /obj/machinery/gateway{
@@ -144,6 +164,22 @@
 	temperature = 277
 	},
 /area/awaymission/diescraper/roof)
+"fQ" = (
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	health = 1e+006;
+	req_access = list(5)
+	},
+/turf/simulated/floor/bluegrid{
+	name = "Mainframe Base";
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/awaymission/diescraper/indoors)
 "fS" = (
 /obj/structure/table/standard,
 /obj/item/weapon/storage/box/cups,
@@ -294,6 +330,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors)
+"kJ" = (
+/obj/effect/overlay/snow/floor,
+/turf/simulated/floor/outdoors/ice/turfpack/station{
+	color = "grey"
+	},
+/area/awaymission/diescraper/sky)
 "kN" = (
 /obj/structure/fence/corner,
 /turf/simulated/floor/outdoors/sidewalk/slab{
@@ -354,6 +396,14 @@
 /obj/item/weapon/folder/white,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors)
+"ml" = (
+/turf/simulated/floor/bluegrid{
+	name = "Mainframe Base";
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/awaymission/diescraper/indoors)
 "mm" = (
 /obj/structure/table/standard,
 /turf/simulated/floor/lino,
@@ -401,6 +451,17 @@
 "oe" = (
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/outside)
+"of" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/bluegrid{
+	name = "Mainframe Base";
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/awaymission/diescraper/indoors)
 "op" = (
 /obj/machinery/door/airlock{
 	id = "yourefireduwu"
@@ -660,10 +721,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/diescraper/indoors)
+"vJ" = (
+/obj/structure/prop/blackbox,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/awaymission/diescraper/indoors)
 "vQ" = (
 /obj/structure/girder,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/sky)
+"vY" = (
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors)
 "wb" = (
 /obj/machinery/gateway,
 /obj/effect/map_effect/perma_light/gateway,
@@ -707,6 +776,10 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/roof)
+"wI" = (
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/sky)
 "xf" = (
 /obj/structure/salvageable/console,
 /turf/simulated/floor/reinforced{
@@ -976,6 +1049,10 @@
 	temperature = 277
 	},
 /area/awaymission/diescraper/roof)
+"GD" = (
+/obj/effect/overlay/snow/floor,
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/sky)
 "GE" = (
 /obj/effect/step_trigger/teleporter/poi{
 	teleport_x = 94;
@@ -1003,6 +1080,18 @@
 "Hh" = (
 /turf/simulated/wall/r_concrete,
 /area/awaymission/diescraper/roof)
+"Hy" = (
+/obj/structure/window/reinforced{
+	health = 1e+006;
+	req_access = list(5)
+	},
+/turf/simulated/floor/bluegrid{
+	name = "Mainframe Base";
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/awaymission/diescraper/indoors)
 "Ia" = (
 /obj/effect/step_trigger/teleporter/poi{
 	teleport_x = 94;
@@ -1184,6 +1273,15 @@
 "Mg" = (
 /turf/unsimulated/wall/seperator,
 /area/awaymission/diescraper/sky)
+"Mn" = (
+/obj/machinery/telecomms/relay/preset/ruskie,
+/turf/simulated/floor/bluegrid{
+	name = "Mainframe Base";
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/awaymission/diescraper/indoors)
 "Mo" = (
 /obj/structure/railing/grey,
 /obj/structure/railing/grey{
@@ -1318,6 +1416,17 @@
 	temperature = 277
 	},
 /area/awaymission/diescraper/roof)
+"PW" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/device/beacon_locator{
+	pixel_y = 4
+	},
+/obj/item/device/beacon_locator,
+/obj/item/device/beacon_locator{
+	pixel_y = -4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/awaymission/diescraper/indoors)
 "Qd" = (
 /turf/simulated/floor/plating{
 	icon_state = "dmg1"
@@ -1326,6 +1435,13 @@
 "Qf" = (
 /obj/machinery/photocopier,
 /turf/simulated/floor/lino,
+/area/awaymission/diescraper/indoors)
+"Qz" = (
+/obj/structure/prop/dominator{
+	pixel_y = 9
+	},
+/obj/structure/table/steel_reinforced,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/diescraper/indoors)
 "QM" = (
 /turf/simulated/wall/r_concrete,
@@ -1357,6 +1473,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/diescraper/roof)
+"Rp" = (
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006
+	},
+/turf/simulated/floor/bluegrid{
+	name = "Mainframe Base";
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/awaymission/diescraper/indoors)
 "Rx" = (
 /obj/effect/step_trigger/teleporter/poi{
 	teleport_x = 117;
@@ -1561,6 +1689,11 @@
 	temperature = 277
 	},
 /area/awaymission/diescraper/sky)
+"Ww" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/overlay/snow/floor,
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/sky)
 "Wy" = (
 /obj/effect/step_trigger/teleporter/poi{
 	teleport_x = 13;
@@ -1611,6 +1744,22 @@
 "Yb" = (
 /obj/effect/floor_decal/stairs,
 /turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors)
+"Yc" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/device/radio/beacon{
+	pixel_y = 4;
+	on = 0
+	},
+/obj/item/device/radio/beacon{
+	pixel_y = 1;
+	on = 0
+	},
+/obj/item/device/radio/beacon{
+	pixel_y = -2;
+	on = 0
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/diescraper/indoors)
 "Yn" = (
 /obj/effect/step_trigger/teleporter/poi{
@@ -33494,11 +33643,11 @@ Ss
 Ss
 Ss
 Ss
-LO
-LO
-LO
-LO
-LO
+GD
+GD
+GD
+wI
+GD
 Ss
 Ss
 Ss
@@ -33752,11 +33901,11 @@ ci
 ci
 ci
 Ss
-LO
-LO
-LO
-LO
-LO
+GD
+wI
+GD
+wI
+GD
 Ss
 ci
 ci
@@ -34010,11 +34159,11 @@ ci
 ci
 ci
 Ss
-LO
-LO
-LO
-LO
-LO
+GD
+wI
+wI
+wI
+GD
 Ss
 ci
 ci
@@ -34268,11 +34417,11 @@ Ss
 Ss
 Ss
 Ss
-LO
-LO
-LO
-LO
-LO
+GD
+GD
+GD
+GD
+GD
 Ss
 Ss
 Ss
@@ -34780,8 +34929,8 @@ ci
 ci
 Ss
 iE
-Iw
-Iw
+vY
+vY
 Iw
 Iw
 Iw
@@ -35038,9 +35187,9 @@ ci
 ci
 Ss
 iE
-Iw
-Iw
-Iw
+vY
+vY
+vY
 Iw
 Iw
 Iw
@@ -35296,7 +35445,7 @@ ci
 ci
 Ss
 iE
-Iw
+vY
 Iw
 Iw
 Iw
@@ -36604,7 +36753,7 @@ LO
 LO
 LO
 LO
-LO
+wI
 Ss
 Ss
 Ss
@@ -36862,7 +37011,7 @@ LO
 LO
 LO
 eO
-LO
+wI
 Ss
 Ss
 Ss
@@ -37119,7 +37268,7 @@ Iw
 LO
 LO
 LO
-LO
+wI
 LO
 Ss
 Ss
@@ -37635,7 +37784,7 @@ iE
 Ss
 Ss
 Ss
-LO
+wI
 Ss
 Ss
 Ss
@@ -37893,7 +38042,7 @@ iE
 Ss
 Ss
 Ss
-LO
+wI
 Ss
 Ss
 Ss
@@ -38151,8 +38300,8 @@ iE
 Ss
 Ss
 LO
-LO
-vQ
+Ww
+bU
 Ss
 Ss
 Ss
@@ -38408,9 +38557,9 @@ Iw
 iE
 Ss
 Ss
-vQ
-LO
-LO
+bU
+GD
+GD
 Ss
 Ss
 Ss
@@ -39441,8 +39590,8 @@ LO
 LO
 LO
 LO
-LO
-LO
+kJ
+kJ
 Ss
 Ss
 Ss
@@ -39699,7 +39848,7 @@ LO
 Ss
 Ss
 LO
-LO
+GD
 LO
 Ss
 Ss
@@ -39952,7 +40101,7 @@ Ss
 LO
 LO
 LO
-LO
+GD
 LO
 Ss
 Ss
@@ -40209,9 +40358,9 @@ Ss
 Ss
 Ss
 Ss
-LO
-LO
-LO
+GD
+GD
+GD
 Ss
 Ss
 Ss
@@ -50209,7 +50358,7 @@ jR
 Wg
 Wg
 VE
-pO
+Qz
 sF
 pl
 ac
@@ -50467,7 +50616,7 @@ jR
 Wg
 Wg
 VE
-pO
+PW
 sF
 pl
 ac
@@ -50725,7 +50874,7 @@ iE
 nj
 nj
 VE
-pO
+Yc
 sF
 pl
 ac
@@ -51757,7 +51906,7 @@ jR
 Wg
 Wg
 VE
-pO
+vJ
 sF
 pl
 ac
@@ -52274,9 +52423,9 @@ iE
 iE
 VE
 pO
-sF
-pl
-ac
+cA
+Rp
+fQ
 pO
 ws
 Iw
@@ -52532,9 +52681,9 @@ Zp
 hq
 VE
 pO
-sF
-pl
-ac
+of
+ml
+Hy
 pO
 ws
 Iw
@@ -52790,9 +52939,9 @@ Iw
 RO
 Iw
 pO
-sF
-pl
-ac
+of
+Mn
+Hy
 pO
 VE
 Iw
