@@ -261,7 +261,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance/cargo,
+/obj/machinery/door/airlock/maintenance/cargo{
+	name = "Cargo";
+	req_one_access = null
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/abcargo)
 "aU" = (
@@ -592,8 +595,10 @@
 /turf/simulated/floor/smole,
 /area/maintenance/smoleroom)
 "ci" = (
-/obj/machinery/door/airlock/maintenance/rnd,
-/obj/item/tape/police,
+/obj/machinery/door/airlock/maintenance/rnd{
+	name = "Genetics";
+	req_one_access = null
+	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -606,6 +611,7 @@
 /obj/effect/floor_decal/industrial/arrows/yellow{
 	dir = 1
 	},
+/obj/item/tape/police,
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/absgenetics)
 "cj" = (
@@ -1565,7 +1571,10 @@
 /obj/effect/floor_decal/industrial/arrows/yellow{
 	dir = 1
 	},
-/obj/machinery/door/airlock/maintenance/medical,
+/obj/machinery/door/airlock/maintenance/medical{
+	name = "Chemistry";
+	req_one_access = null
+	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -7209,6 +7218,11 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/port)
+"CK" = (
+/obj/effect/floor_decal/rust,
+/obj/item/tape/medical,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/abchemistry)
 "CN" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/item/tape/engineering,
@@ -9139,7 +9153,10 @@
 /turf/simulated/floor/tiled/white,
 /area/maintenance/abmedical)
 "Kx" = (
-/obj/machinery/door/airlock/maintenance/rnd,
+/obj/machinery/door/airlock/maintenance/rnd{
+	name = "Research and Development";
+	req_one_access = null
+	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -9199,7 +9216,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance/medical,
+/obj/machinery/door/airlock/maintenance/medical{
+	name = "Medical";
+	req_one_access = null
+	},
 /obj/item/tape/medical,
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/abmedical)
@@ -10831,8 +10851,10 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/engineering)
 "Sd" = (
-/obj/machinery/door/airlock/maintenance/medical,
-/obj/item/tape/medical,
+/obj/machinery/door/airlock/maintenance/medical{
+	name = "Medical Storage";
+	req_one_access = null
+	},
 /turf/simulated/floor/tiled/white,
 /area/maintenance/abchemistry)
 "Se" = (
@@ -12008,7 +12030,7 @@
 /obj/machinery/door/firedoor/multi_tile,
 /obj/machinery/door/airlock/multi_tile/metal/mait{
 	dir = 8;
-	name = "Maintenance Access"
+	name = "Cargo Warehouse"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/abcargo)
@@ -12035,7 +12057,6 @@
 /obj/effect/floor_decal/industrial/arrows/yellow{
 	dir = 1
 	},
-/obj/machinery/door/airlock/maintenance/medical,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -12043,6 +12064,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/airlock/maintenance/medical{
+	name = "Medical Storage";
+	req_one_access = null
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/abfirstaid)
 "WW" = (
@@ -39934,7 +39959,7 @@ xf
 xz
 xf
 Sd
-sr
+CK
 Xm
 SF
 Ir
