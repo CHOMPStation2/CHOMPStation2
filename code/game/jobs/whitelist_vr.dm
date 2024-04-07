@@ -30,3 +30,15 @@ GLOBAL_LIST_EMPTY(job_whitelist) // CHOMPEdit - Managed Globals
 				return 1
 			if(findtext(s,"[M.ckey] - All"))
 				return 1
+
+//ChompEDIT START - admin reload buttons
+/client/proc/reload_jobwhitelist()
+	set category = "Server.Config"
+	set name = "Reload Job whitelist"
+
+	if(!check_rights(R_ADMIN|R_MOD|R_DEBUG|R_EVENT))
+		return
+
+	load_jobwhitelist()
+	log_and_message_admins("reloaded the job whitelist")
+//ChompEDIT End

@@ -132,7 +132,9 @@ var/list/admin_verbs_admin = list(
 	/client/proc/unmake_mentor,
 	/client/proc/removetickets,
 	/client/proc/delbook,
-	/client/proc/toggle_spawning_with_recolour
+	/client/proc/toggle_spawning_with_recolour,
+	/client/proc/reload_jobwhitelist, //ChompADD
+	/client/proc/reload_alienwhitelist //ChompADD
 	)
 
 var/list/admin_verbs_ban = list(
@@ -286,7 +288,9 @@ var/list/admin_verbs_debug = list(
 	/datum/admins/proc/view_feedback,
 	/client/proc/stop_sounds,
 	/datum/admins/proc/quick_nif, //CHOMPStation Add,
-	/datum/admins/proc/quick_authentic_nif //CHOMPStation add
+	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
+	/client/proc/reload_jobwhitelist, //ChompADD
+	/client/proc/reload_alienwhitelist //ChompADD
 	)
 
 var/list/admin_verbs_paranoid_debug = list(
@@ -423,7 +427,9 @@ var/list/admin_verbs_mod = list(
 	/datum/admins/proc/view_persistent_data,
 	/datum/admins/proc/view_txt_log,	//shows the server log (diary) for today,
 	/datum/admins/proc/view_atk_log,		//shows the server combat-log, doesn't do anything presently,
-	/datum/admins/proc/quick_nif //CHOMPStation Add,
+	/datum/admins/proc/quick_nif, //CHOMPStation Add,
+	/client/proc/reload_jobwhitelist, //ChompADD
+	/client/proc/reload_alienwhitelist //ChompADD
 )
 
 var/list/admin_verbs_event_manager = list(
@@ -570,7 +576,9 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/modify_server_news,
 	/client/proc/toggle_spawning_with_recolour,
 	/datum/admins/proc/quick_nif, //CHOMPStation Add,
-	/datum/admins/proc/quick_authentic_nif //CHOMPStation add
+	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
+	/client/proc/reload_jobwhitelist, //ChompADD
+	/client/proc/reload_alienwhitelist //ChompADD
 
 )
 

@@ -4,6 +4,7 @@ var/const/NETWORK_FIRST_DECK   = "First Deck"
 var/const/NETWORK_SUPPLY       = "Supply"
 var/const/NETWORK_MAIN_OUTPOST = "Main Outpost"
 var/const/NETWORK_CARRIER  = "Exploration Carrier" //CHOMPedit: Exploration outpost cameras
+var/const/NETWORK_MAINT_DECK = "Maintenance Deck" // CHOMPEdit - Maintenance deck
 
 //
 // Cameras
@@ -27,6 +28,9 @@ var/const/NETWORK_CARRIER  = "Exploration Carrier" //CHOMPedit: Exploration outp
 
 /obj/machinery/camera/network/carrier //CHOMPedit: Exploration carrier cameras
 	network = list(NETWORK_CARRIER)
+
+/obj/machinery/camera/network/maint_deck // CHOMPEdit - Maintenance deck
+	network = list(NETWORK_MAINT_DECK)
 
 // ### Preset machines  ###
 
@@ -71,6 +75,11 @@ var/const/NETWORK_CARRIER  = "Exploration Carrier" //CHOMPedit: Exploration outp
 /obj/machinery/telecomms/relay/preset/southerncross/explorer //CHOMPedit: Tcomms relay for exploration carrier
 	listening_level = Z_LEVEL_MISC
 	autolinkers = list("exp_relay")
+
+/obj/machinery/telecomms/relay/preset/southerncross/d0
+	id = "Station Relay 0"
+	listening_level = Z_LEVEL_STATION_MAINTS
+	autolinkers = list("d0_relay")
 
 /* //Sky islands removal due to lack of use
 /obj/machinery/telecomms/relay/preset/southerncross/skylands
