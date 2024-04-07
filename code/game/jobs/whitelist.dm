@@ -121,3 +121,15 @@ GLOBAL_LIST_EMPTY(alien_whitelist) // CHOMPEdit - Managed Globals
 	return FALSE
 
 #undef WHITELISTFILE
+
+//ChompEDIT - admin reload buttons
+/client/proc/reload_alienwhitelist()
+	set category = "Server.Config"
+	set name = "Reload Alien whitelist"
+
+	if(!check_rights(R_ADMIN|R_MOD|R_DEBUG|R_EVENT))
+		return
+
+	load_alienwhitelist()
+	log_and_message_admins("reloaded the alien whitelist")
+//ChompEDIT End
