@@ -4044,7 +4044,7 @@
 /area/maintenance/thrift)
 "pQ" = (
 /obj/effect/floor_decal/rust,
-/obj/machinery/portable_atmospherics/canister/air/airlock,
+/obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/starboard)
 "pR" = (
@@ -4734,7 +4734,7 @@
 /area/maintenance/abmedical)
 "sA" = (
 /obj/structure/catwalk,
-/obj/machinery/portable_atmospherics/canister/air/airlock,
+/obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/port)
 "sC" = (
@@ -8478,7 +8478,7 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/engineering)
 "HN" = (
-/obj/machinery/portable_atmospherics/canister/air/airlock,
+/obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/wood/turfpack/station,
 /area/maintenance/bar)
 "HO" = (
@@ -8622,7 +8622,7 @@
 /turf/simulated/floor/tiled,
 /area/maintenance/thrift)
 "Ip" = (
-/obj/machinery/portable_atmospherics/canister/air/airlock,
+/obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/plating,
 /area/maintenance/ragecage)
 "Iq" = (
@@ -8853,7 +8853,7 @@
 	},
 /obj/random/trash,
 /obj/effect/decal/cleanable/cobweb2,
-/obj/machinery/portable_atmospherics/canister/air/airlock,
+/obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/tiled/white,
 /area/maintenance/bar)
 "Jw" = (
@@ -9565,7 +9565,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/lowlobby)
 "MI" = (
-/obj/random/mouseremains,
+/obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/engineering/gravgen)
 "MJ" = (
@@ -10059,7 +10059,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/maintdeck/fieldhallway)
 "OE" = (
-/obj/machinery/portable_atmospherics/canister/air/airlock,
+/obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/aft)
 "OF" = (
@@ -10404,7 +10404,7 @@
 /turf/simulated/floor/wood/turfpack/station,
 /area/maintenance/bar/dorm_1)
 "PV" = (
-/obj/machinery/portable_atmospherics/canister/air/airlock,
+/obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/plating,
 /area/maintenance/aft)
 "PX" = (
@@ -11386,11 +11386,11 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/port)
 "Uv" = (
-/obj/machinery/portable_atmospherics/canister/air/airlock,
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/portable_atmospherics/canister/air/airlock,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/port)
 "Ux" = (
@@ -11827,7 +11827,7 @@
 /turf/simulated/wall/r_wall/turfpack/station,
 /area/maintenance/abcargo)
 "Wh" = (
-/obj/machinery/portable_atmospherics/canister/air/airlock,
+/obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/central)
 "Wj" = (
@@ -12900,7 +12900,7 @@
 /turf/unsimulated/floor/carpet/gaycarpet,
 /area/maintenance/bar)
 "ZK" = (
-/obj/machinery/portable_atmospherics/canister/air/airlock,
+/obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/starboard)
 "ZL" = (
