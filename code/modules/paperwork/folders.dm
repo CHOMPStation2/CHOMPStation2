@@ -41,7 +41,7 @@
 	desc = "A white folder with RD markings."
 	icon_state = "folder_rd"
 
-/obj/item/weapon/folder/white_rd/Initialize() //ChompEDIT New --> Initialize
+/obj/item/weapon/folder/white_rd/New()
 	//add some memos
 	var/obj/item/weapon/paper/P = new()
 	P.name = "Memo RE: proper analysis procedure"

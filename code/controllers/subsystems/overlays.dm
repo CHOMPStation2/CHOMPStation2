@@ -1,5 +1,3 @@
-//CHOMPEDIT -- this file is no longer ticked. See overlays_ch.dm for the new overlays subsystem.
-
 SUBSYSTEM_DEF(overlays)
 	name = "Overlay"
 	flags = SS_TICKER

@@ -11,7 +11,7 @@
 
 	var/obj/item/weapon/paper/internalPaper
 
-/obj/item/weapon/paperplane/Initialize(loc, obj/item/weapon/paper/newPaper) //ChompEDIT New --> Initialize
+/obj/item/weapon/paperplane/New(loc, obj/item/weapon/paper/newPaper)
 	. = ..()
 	pixel_y = rand(-8, 8)
 	pixel_x = rand(-9, 9)

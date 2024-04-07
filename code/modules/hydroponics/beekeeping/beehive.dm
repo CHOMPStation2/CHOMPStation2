@@ -281,7 +281,7 @@ var/global/list/datum/stack_recipe/wax_recipes = list( \
 	icon_state = "beepack"
 	var/full = 1
 
-/obj/item/bee_pack/Initialize() //ChompEDIT New --> Initialize
+/obj/item/bee_pack/New()
 	..()
 	add_overlay("beepack-full")
 
