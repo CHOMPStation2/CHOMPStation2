@@ -108,8 +108,14 @@
 		to_chat(usr, "It'd be unwise to plug another vtec module in!")
 		return 0
 
+<<<<<<< HEAD
 	add_verb(R,/mob/living/silicon/robot/proc/toggle_vtec) //CHOMPEdit
 	R.speed = -1
+=======
+	R.verbs += /mob/living/silicon/robot/proc/toggle_vtec
+	R.vtec_active = TRUE
+	R.hud_used.toggle_vtec_control()
+>>>>>>> cd0cfd0dd7... borgs can walk, vtec overhaul, no more borg light and some glow flicker (#15901)
 	return 1
 
 /obj/item/borg/upgrade/basic/sizeshift
