@@ -100,7 +100,9 @@
 		)
 
 /obj/effect/overmap/visitable/sector/Southern_Cross/get_space_zlevels() //These are the primary levels that our space station resides in. This also indicates what levels astronauts can drift into.
-	return list(Z_LEVEL_STATION_ONE,
+	return list(
+			Z_LEVEL_STATION_MAINTS,
+			Z_LEVEL_STATION_ONE,
 			Z_LEVEL_STATION_TWO,
 			Z_LEVEL_STATION_THREE,
 			Z_LEVEL_MISC)

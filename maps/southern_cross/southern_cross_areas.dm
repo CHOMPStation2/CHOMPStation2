@@ -682,12 +682,19 @@ z
 	base_turf = /turf/simulated/open
 
 // Elevator areas.
+// CHOMPEdit - Maintenance Deck
+/area/turbolift/port_deck_maints
+	name = "lift (maints deck)"
+	lift_floor_label = "Deck 0"
+	lift_floor_name = "Maintenance Deck"
+	lift_announce_str = "Arriving at Maintenance Deck: Engineering. Power Back Up. Gravity Generator."
+	base_turf = /turf/simulated/floor
+
 /area/turbolift/port_deck_one
 	name = "lift (first deck)"
 	lift_floor_label = "Deck 1"
 	lift_floor_name = "Hangar Deck"
 	lift_announce_str = "Arriving at Hangar Deck: Main Hangars.Cargo Delivery. Telecommunications. Auxiliary Shuttle Docks. Escape Pods."
-	base_turf = /turf/simulated/floor
 
 /area/turbolift/port_deck_two
 	name = "lift (second deck)"
@@ -2258,3 +2265,92 @@ End Chompstation Edit*/
 	name = "Belter M2.0 Transit"
 	icon_state = "shuttle2"
 */
+// CHOMPAdd Start - Maintenance Deck Areas
+/area/maintenance/abcargo
+	name = "Abandoned Cargo"
+	icon_state = "maint_cargo"
+
+/area/maintenance/abmedical
+	name = "Abandoned Medical"
+	icon_state = "maint_medbay"
+
+/area/maintenance/abfirstaid
+	name = "Abandoned First Aid Station"
+	icon_state = "maint_medbay"
+
+/area/maintenance/abchemistry
+	name = "Abandoned Chemistry"
+	icon_state = "maint_medbay"
+
+/area/maintenance/abscience
+	name = "Abandoned Science"
+	icon_state = "asmaint"
+
+/area/maintenance/absgenetics
+	name = "Abandoned Genetics"
+	icon_state = "asmaint"
+
+/area/maintenance/thrift
+	name = "Abandoned Thrift Store"
+	icon_state = "mid_civilian_hallway"
+
+/area/maintenance/abtheatre
+	name = "Abandoned Theatre"
+	icon_state = "Theatre"
+	sound_env = LARGE_SOFTFLOOR
+
+/area/maintenance/ragecage
+	name = "Rage Cage"
+	icon_state = "nuke_storage"
+
+/area/engineering/lowlobby
+	name = "Engineering Deck 0 Lobby"
+	icon_state = "maint_pumpstation"
+
+/area/engineering/backuppowerlobby
+	name = "Engineering Backup Power Lobby"
+	icon_state = "engineering"
+
+/area/engineering/backuppower
+	name = "Engineering Backup Power"
+	icon_state = "engineering"
+
+/area/maintenance/substation/gravgen
+	name = "Gravity Generator Substation"
+	icon_state = "engineering"
+
+/area/engineering/gravgen
+	name = "Gravity Generator"
+	icon_state = "engineering"
+
+/area/maintenance/engineering/gravgen
+	name = "Gravity Generator Maintenance"
+
+/area/maintenance/maintdeck/field
+	name = "Maintenance Deck Field"
+
+/area/maintenance/maintdeck/fieldhallway
+	name = "Maintenance Deck Field Hallway"
+/area/maintenance/maintdeck/fieldthrift
+	name = "Maintenance Deck Thrift Store Hallway"
+
+/area/maintenance/abhydroponicssupp
+	name = "Abandoned Botany Supplies"
+
+/area/maintenance/abhydroponics
+	name = "Abandoned Botany"
+
+/area/maintenance/smoleroom
+	name = "Smole Room"
+
+/area/maintenance/janitoral
+	name = "Maintenance Deck Janitoral"
+
+/area/maintenance/lookout
+	name = "Maintenance Deck Lookout"
+
+/area/maintenance/bar/dorm_1
+	name = "Maintenance Deck Bar Dorms 1"
+
+/area/maintenance/bar/dorm_2
+	name = "Maintenance Deck Bar Dorms 2"

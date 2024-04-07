@@ -70806,10 +70806,6 @@
 /obj/random/maintenance/research,
 /turf/simulated/floor,
 /area/maintenance/research_medical)
-"rMm" = (
-/obj/machinery/door/firedoor/glass,
-/turf/unsimulated/mask,
-/area/hallway/primary/seconddeck/port)
 "rMJ" = (
 /obj/machinery/atmospherics/tvalve/digital{
 	dir = 8;
@@ -71380,6 +71376,10 @@
 /obj/structure/sign/directions/security{
 	dir = 4;
 	pixel_y = 10
+	},
+/obj/structure/sign/directions/engineering/gravgen{
+	pixel_y = -10;
+	dir = 8
 	},
 /turf/simulated/wall,
 /area/maintenance/apmaint)
@@ -100820,7 +100820,7 @@ bGl
 bGl
 bGl
 bGl
-rMm
+bGl
 bxq
 bfY
 aEK
