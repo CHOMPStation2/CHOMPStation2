@@ -116,3 +116,10 @@
   cadyn:
   - bugfix: hopefully maybe fixes icon related crashes
   - refactor: Overlay subsystem replaced with TG version
+2024-04-08:
+  FluffMedic:
+  - rscadd: Added camera and airlock controller to viro
+  ItsSelis:
+  - rscdel: Removed some of the unused hooks.
+  Raeschen:
+  - admin: Reload job/alien whitelist buttons in admin tab
