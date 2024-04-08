@@ -1,4 +1,0 @@
-author: "Raeschen"
-delete-after: True
-changes:
-  - admin: "Reload job/alien whitelist buttons in admin tab"
