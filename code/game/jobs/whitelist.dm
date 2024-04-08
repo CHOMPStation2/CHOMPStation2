@@ -3,7 +3,7 @@
 GLOBAL_LIST_EMPTY(whitelist) // CHOMPEdit - Managed Globals
 
 /hook/startup/proc/loadWhitelist()
-	if(config.usewhitelist)
+	if(CONFIG_GET(flag/usewhitelist)) // CHOMPEdit
 		load_whitelist()
 	return 1
 
@@ -12,7 +12,7 @@ GLOBAL_LIST_EMPTY(whitelist) // CHOMPEdit - Managed Globals
 	if(!GLOB.whitelist.len)	GLOB.whitelist = null // CHOMPEdit - Managed Globals
 
 /proc/check_whitelist(mob/M /*, var/rank*/)
-	if(!config.usewhitelist) //CHOMPedit: I guess this is an override for the blanket whitelist system.
+	if(!CONFIG_GET(flag/usewhitelist)) //CHOMPedit: I guess this is an override for the blanket whitelist system.
 		return 1 //CHOMPedit
 	if(!GLOB.whitelist) // CHOMPEdit - Managed Globals
 		return 0
@@ -21,7 +21,7 @@ GLOBAL_LIST_EMPTY(whitelist) // CHOMPEdit - Managed Globals
 GLOBAL_LIST_EMPTY(alien_whitelist) // CHOMPEdit - Managed Globals
 
 /hook/startup/proc/loadAlienWhitelist()
-	if(config.usealienwhitelist)
+	if(CONFIG_GET(flag/usealienwhitelist)) // CHOMPEdit
 		load_alienwhitelist()
 	return 1
 
@@ -113,7 +113,7 @@ GLOBAL_LIST_EMPTY(alien_whitelist) // CHOMPEdit - Managed Globals
 				return 1
 
 /proc/whitelist_overrides(mob/M)
-	if(!config.usealienwhitelist)
+	if(!CONFIG_GET(flag/usealienwhitelist)) // CHOMPEdit
 		return TRUE
 	if(check_rights(R_ADMIN|R_EVENT, 0, M))
 		return TRUE
@@ -121,3 +121,15 @@ GLOBAL_LIST_EMPTY(alien_whitelist) // CHOMPEdit - Managed Globals
 	return FALSE
 
 #undef WHITELISTFILE
+
+//ChompEDIT - admin reload buttons
+/client/proc/reload_alienwhitelist()
+	set category = "Server.Config"
+	set name = "Reload Alien whitelist"
+
+	if(!check_rights(R_ADMIN|R_MOD|R_DEBUG|R_EVENT))
+		return
+
+	load_alienwhitelist()
+	log_and_message_admins("reloaded the alien whitelist")
+//ChompEDIT End

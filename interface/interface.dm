@@ -3,15 +3,15 @@
 	set name = "wiki"
 	set desc = "Type what you want to know about.  This will open the wiki on your web browser."
 	set category = "OOC"
-	if(config.wikiurl)
+	if(CONFIG_GET(string/wikiurl)) // CHOMPEdit
 		if(query)
-			if(config.wikisearchurl)
-				var/output = replacetext(config.wikisearchurl, "%s", url_encode(query))
+			if(CONFIG_GET(string/wikisearchurl)) // CHOMPEdit
+				var/output = replacetext(CONFIG_GET(string/wikisearchurl), "%s", url_encode(query)) // CHOMPEdit
 				src << link(output)
 			else
 				to_chat(src, "<span class='warning'> The wiki search URL is not set in the server configuration.</span>")
 		else
-			src << link(config.wikiurl)
+			src << link(CONFIG_GET(string/wikiurl)) // CHOMPEdit
 	else
 		to_chat(src, "<span class='warning'>The wiki URL is not set in the server configuration.</span>")
 		return
@@ -20,10 +20,10 @@
 	set name = "forum"
 	set desc = "Visit the forum."
 	set hidden = 1
-	if( config.forumurl )
+	if(CONFIG_GET(string/forumurl)) // CHOMPEdit
 		if(tgui_alert(usr, "This will open the forum in your browser. Are you sure?","Visit Website",list("Yes","No"))=="No")
 			return
-		src << link(config.forumurl)
+		src << link(CONFIG_GET(string/forumurl)) // CHOMPEdit
 	else
 		to_chat(src, "<span class='warning'>The forum URL is not set in the server configuration.</span>")
 		return
@@ -33,10 +33,10 @@
 	set desc = "Show Server Rules."
 	set hidden = 1
 
-	if(config.rulesurl)
+	if(CONFIG_GET(string/rulesurl)) // CHOMPEdit
 		if(tgui_alert(usr, "This will open the rules in your browser. Are you sure?","Visit Website",list("Yes","No"))=="No")
 			return
-		src << link(config.rulesurl)
+		src << link(CONFIG_GET(string/rulesurl)) // CHOMPEdit
 	else
 		to_chat(src, "<span class='danger'>The rules URL is not set in the server configuration.</span>")
 	return
@@ -46,10 +46,10 @@
 	set desc = "See the map."
 	set hidden = 1
 
-	if(config.mapurl)
+	if(CONFIG_GET(string/mapurl)) // CHOMPEdit
 		if(tgui_alert(usr, "This will open the map in your browser. Are you sure?","Visit Website",list("Yes","No"))=="No")
 			return
-		src << link(config.mapurl)
+		src << link(CONFIG_GET(string/mapurl)) // CHOMPEdit
 	else
 		to_chat(src, "<span class='danger'>The map URL is not set in the server configuration.</span>")
 	return
@@ -59,10 +59,10 @@
 	set desc = "Visit the GitHub"
 	set hidden = 1
 
-	if(config.githuburl)
+	if(CONFIG_GET(string/githuburl)) // CHOMPEdit
 		if(tgui_alert(usr, "This will open the GitHub in your browser. Are you sure?","Visit Website",list("Yes","No"))=="No")
 			return
-		src << link(config.githuburl)
+		src << link(CONFIG_GET(string/githuburl)) // CHOMPEdit
 	else
 		to_chat(src, "<span class='danger'>The GitHub URL is not set in the server configuration.</span>")
 	return
@@ -72,10 +72,10 @@
 	set desc = "Visit the discord"
 	set hidden = 1
 
-	if(config.discordurl)
+	if(CONFIG_GET(string/discordurl)) // CHOMPEdit
 		if(tgui_alert(usr, "This will open the Discord in your browser. Are you sure?","Visit Website",list("Yes","No"))=="No")
 			return
-		src << link(config.discordurl)
+		src << link(CONFIG_GET(string/discordurl)) // CHOMPEdit
 	else
 		to_chat(src, "<span class='danger'>The Discord URL is not set in the server configuration.</span>")
 	return
@@ -85,10 +85,10 @@
 	set desc = "Visit the patreon"
 	set hidden = 1
 
-	if(config.patreonurl)
+	if(CONFIG_GET(string/patreonurl)) // CHOMPEdit
 		if(tgui_alert(usr, "This will open the Patreon in your browser. Are you sure?","Visit Website",list("Yes","No"))=="No")
 			return
-		src << link(config.patreonurl)
+		src << link(CONFIG_GET(string/patreonurl)) // CHOMPEdit
 	else
 		to_chat(src, "<span class='danger'>The Patreon URL is not set in the server configuration.</span>")
 	return

@@ -71,11 +71,13 @@ var/list/grass_types = list(
 /turf/simulated/floor/outdoors/grass/Initialize()
 	if(grass_chance && prob(grass_chance) && !check_density())
 		var/grass_type = pickweight(grass_types)
-		new grass_type(src)
+		if(grass_type) //ChompEDIT - runtime
+			new grass_type(src)
 
 	if(animal_chance && prob(animal_chance) && !check_density())
 		var/animal_type = pickweight(animal_types)
-		new animal_type(src)
+		if(animal_type) //ChompEDIT - runtime
+			new animal_type(src)
 
 	. = ..()
 

@@ -109,7 +109,8 @@
 		return 0
 
 	add_verb(R,/mob/living/silicon/robot/proc/toggle_vtec) //CHOMPEdit
-	R.speed = -1
+	R.vtec_active = TRUE
+	R.hud_used.toggle_vtec_control()
 	return 1
 
 /obj/item/borg/upgrade/basic/sizeshift

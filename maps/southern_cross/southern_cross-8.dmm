@@ -2710,7 +2710,7 @@
 /area/centcom/bar)
 "bVc" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/book/manual/engineering_hacking,
+/obj/item/weapon/book/manual/wiki/engineering_hacking,
 /obj/item/device/radio/intercom{
 	desc = "Talk through this. Evilly";
 	frequency = 1213;

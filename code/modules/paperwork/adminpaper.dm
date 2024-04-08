@@ -16,7 +16,7 @@
 	var/footer = null
 	var/footerOn = FALSE
 
-/obj/item/weapon/paper/admin/New()
+/obj/item/weapon/paper/admin/Initialize() //ChompEDIT New --> Initialize
 	..()
 	generateInteractions()
 

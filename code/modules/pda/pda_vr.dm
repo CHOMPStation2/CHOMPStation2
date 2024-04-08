@@ -1,7 +1,7 @@
 /obj/item/device/pda
 	var/delete_id = FALSE			//Guaranteed deletion of ID upon deletion of PDA
 
-/obj/item/device/pda/multicaster/exploration/New()
+/obj/item/device/pda/multicaster/exploration/Initialize() //ChompEDIT New --> Initialize
 	..()
 	owner = "Exploration Department" //CHOMP keep explo
 	name = "Exploration Department (Relay)" //CHOMP keep explo

@@ -34,7 +34,7 @@
 		return module.attack_self(user)
 	..()
 
-/obj/item/device/paicard/flipper/New()
+/obj/item/device/paicard/flipper/Initialize() //ChompEDIT New --> Initialize
 	..()
 	desc 		= "The [name] is a versatile security device designed to protect and empower users in a variety of contexts. With features such as wireless hacking, radio analysis, signal jamming, and physical lock picking, the [name] is the ultimate tool for security professionals, hobbyists, and anyone seeking to better understand and defend against modern threats. Whether you're investigating a security breach, testing your own defenses, or simply curious about the workings of wireless technology, the [name] has you covered."
 	MultiTool 	= new /obj/item/device/multitool(src)

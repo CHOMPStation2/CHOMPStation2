@@ -1,6 +1,0 @@
-author: "FluffMedic"
-delete-after: True
-changes:
-  - rscadd: "New turf to the valley"
-  - rscadd: "Two wands and one staff"
-  - balance: "Alters several POIs to have the new staff/wands instead of spellbooks"

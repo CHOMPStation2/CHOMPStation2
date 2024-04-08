@@ -283,7 +283,7 @@
 	var/eyes_over_markings = FALSE //VOREStation edit
 
 /obj/item/organ/external/head/Initialize()
-	if(config.allow_headgibs)
+	if(CONFIG_GET(flag/allow_headgibs)) // CHOMPEdit
 		cannot_gib = FALSE
 	return ..()
 
@@ -391,7 +391,7 @@
 			continue
 		var/datum/sprite_accessory/marking/mark_style = markings[M]["datum"]
 		var/icon/mark_s = new/icon("icon" = mark_style.icon, "icon_state" = "[mark_style.icon_state]-[organ_tag]")
-		mark_s.Blend(markings[M]["color"], mark_style.color_blend_mode) 
+		mark_s.Blend(markings[M]["color"], mark_style.color_blend_mode)
 		add_overlay(mark_s) //So when it's not on your body, it has icons
 		mob_icon.Blend(mark_s, ICON_OVERLAY) //So when it's on your body, it has icons
 		icon_cache_key += "[M][markings[M]["color"]]"
