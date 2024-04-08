@@ -29,11 +29,73 @@
 	icon_state = "green"
 	base_turf = /turf/simulated/floor/plating
 
+/area/awaymission/diescraper/indoors/floor1
+	icon_state = "green"
+	base_turf = /turf/simulated/floor/plating
+	name = "Away Mission - Skyscraper Ground Floor"
+	base_turf = /turf/simulated/floor/outdoors/rocks
+
+/area/awaymission/diescraper/indoors/floor2
+	icon_state = "green"
+	base_turf = /turf/simulated/floor/plating
+	name = "Away Mission - Skyscraper Floor 52"
+
+/area/awaymission/diescraper/indoors/floor3
+	icon_state = "green"
+	base_turf = /turf/simulated/floor/plating
+	name = "Away Mission - Skyscraper Floor 53"
+
+/area/awaymission/diescraper/indoors/floor4
+	icon_state = "green"
+	base_turf = /turf/simulated/floor/plating
+	name = "Away Mission - Skyscraper Floor 54"
+
+/area/awaymission/diescraper/indoors/floor5
+	icon_state = "green"
+	base_turf = /turf/simulated/floor/plating
+	name = "Away Mission - Skyscraper Floor 55"
+
+/area/awaymission/diescraper/indoors/floor6
+	icon_state = "green"
+	base_turf = /turf/simulated/floor/plating
+	name = "Away Mission - Skyscraper Floor 56"
+
+/area/awaymission/diescraper/indoors/floor7
+	icon_state = "green"
+	base_turf = /turf/simulated/floor/plating
+	name = "Away Mission - Skyscraper Floor 57"
+
+/area/awaymission/diescraper/indoors/floor8
+	icon_state = "green"
+	base_turf = /turf/simulated/floor/plating
+	name = "Away Mission - Skyscraper Floor 58"
+
+/area/awaymission/diescraper/indoors/floor9
+	icon_state = "green"
+	base_turf = /turf/simulated/floor/plating
+	name = "Away Mission - Skyscraper Floor 59"
+
+/area/awaymission/diescraper/indoors/floor10
+	icon_state = "green"
+	base_turf = /turf/simulated/floor/plating
+	name = "Away Mission - Skyscraper Floor 60"
+
+/area/awaymission/diescraper/indoors/floor11
+	icon_state = "green"
+	base_turf = /turf/simulated/floor/plating
+	name = "Away Mission - Skyscraper Roof Maintinence"
+
+/area/awaymission/diescraper/indoors/floor112
+	icon_state = "green"
+	base_turf = /turf/simulated/floor/plating
+	name = "Away Mission - Skyscraper Second Tower Roofing"
+
 /area/awaymission/diescraper/roof
 	icon_state = "green"
 	base_turf = /turf/simulated/floor/plating
 	outdoors = OUTDOORS_YES
 	name = "Away Mission - City Roof"
+	forced_ambience = list('sound/effects/weather/wind/wind_loop1.ogg')
 
 
 /area/awaymission/diescraper/sky
