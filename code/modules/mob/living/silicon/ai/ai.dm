@@ -173,7 +173,7 @@ var/list/ai_verbs_default = list(
 
 	if(!safety)//Only used by AIize() to successfully spawn an AI.
 		if (!B)//If there is no player/brain inside.
-			empty_playable_ai_cores += new/obj/structure/AIcore/deactivated(loc)//New empty terminal.
+			GLOB.empty_playable_ai_cores += new/obj/structure/AIcore/deactivated(loc) //New empty terminal. // CHOMPEdit - Globals
 			qdel(src)//Delete AI.
 			return
 		else
@@ -554,7 +554,7 @@ var/list/ai_verbs_default = list(
 	for (var/obj/machinery/camera/C in cameranet.cameras)
 		if(!C.can_use())
 			continue
-		var/list/tempnetwork = difflist(C.network,restricted_camera_networks,1)
+		var/list/tempnetwork = difflist(C.network, GLOB.restricted_camera_networks, 1) // CHOMPEdit - Globals
 		for(var/i in tempnetwork)
 			cameralist[i] = i
 
@@ -1016,17 +1016,17 @@ var/list/ai_verbs_default = list(
 	. = ..()
 	mob_list -= src
 	living_mob_list -= src
-	dead_mob_list -= src
+	GLOB.dead_mob_list -= src // CHOMPEdit - Globals
 	ai_list -= src
-	silicon_mob_list -= src
+	GLOB.silicon_mob_list -= src // CHOMPEdit - Globals
 	QDEL_NULL(eyeobj)
 
 /mob/living/silicon/ai/announcer/Life()
 	mob_list -= src
 	living_mob_list -= src
-	dead_mob_list -= src
+	GLOB.dead_mob_list -= src // CHOMPEdit - Globals
 	ai_list -= src
-	silicon_mob_list -= src
+	GLOB.silicon_mob_list -= src // CHOMPEdit - Globals
 	QDEL_NULL(eyeobj)
 
 #undef AI_CHECK_WIRELESS

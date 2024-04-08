@@ -23,7 +23,7 @@
 	var/message_start = "[name], <span class='name'>[speaker.name]</span>"
 	var/message_body = "<span class='message'>[speaker.say_quote(message)], \"[message]\"</span>"
 
-	for (var/mob/M in dead_mob_list)
+	for (var/mob/M in GLOB.dead_mob_list) // CHOMPEdit - Globals
 		if(!istype(M,/mob/new_player) && !istype(M,/mob/living/carbon/brain)) //No meta-evesdropping
 			var/message_to_send = span_binary("[message_start] ([ghost_follow_link(speaker, M)]) [message_body]")
 			if(M.check_mentioned(message) && M.is_preference_enabled(/datum/client_preference/check_mention))

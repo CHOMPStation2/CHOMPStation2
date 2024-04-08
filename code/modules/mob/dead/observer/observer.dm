@@ -138,7 +138,7 @@
 	real_name = name
 	animate(src, pixel_y = 2, time = 10, loop = -1)
 	animate(pixel_y = default_pixel_y, time = 10, loop = -1)
-	observer_mob_list += src
+	GLOB.observer_mob_list += src // CHOMPEdit - Globals
 	..()
 
 /mob/observer/dead/Topic(href, href_list)
@@ -553,7 +553,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		var/mob/M = following
 		M.following_mobs -= src
 	stop_following()
-	observer_mob_list -= src
+	GLOB.observer_mob_list -= src // CHOMPEdit - Globals
 	//ChompEDIT START - deal with weird behavior on qdelled ghosts
 	if(client) //qdelling a ghost with a client = make a new ghost i guess
 		ghostize()

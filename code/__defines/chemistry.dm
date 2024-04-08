@@ -48,10 +48,12 @@
 #define ANTIBIO_SUPER	3
 
 // Chemistry lists.
-var/list/tachycardics  = list("coffee", "inaprovaline", "hyperzine", "nitroglycerin", "thirteenloko", "nicotine") // Increase heart rate.
-var/list/bradycardics  = list("neurotoxin", "cryoxadone", "clonexadone", "bliss", "stoxin", "ambrosia_extract")   // Decrease heart rate.
-var/list/heartstopper  = list("potassium_chlorophoride", "zombiepowder") // This stops the heart.
-var/list/cheartstopper = list("potassium_chloride")                       // This stops the heart when overdose is met. -- c = conditional
+// CHOMPEdit Start - Globals
+GLOBAL_LIST_INIT(tachycardics, list("coffee", "inaprovaline", "hyperzine", "nitroglycerin", "thirteenloko", "nicotine")) // Increase heart rate.
+GLOBAL_LIST_INIT(bradycardics, list("neurotoxin", "cryoxadone", "clonexadone", "bliss", "stoxin", "ambrosia_extract")) // Decrease heart rate.
+GLOBAL_LIST_INIT(heartstopper, list("potassium_chlorophoride", "zombiepowder")) // This stops the heart.
+GLOBAL_LIST_INIT(cheartstopper, list("potassium_chloride")) // This stops the heart when overdose is met. -- c = conditional
+// CHOMPEdit End
 
 #define MAX_PILL_SPRITE 24 //max icon state of the pill sprites
 #define MAX_BOTTLE_SPRITE 4 //max icon state of the pill sprites

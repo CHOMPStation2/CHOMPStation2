@@ -171,7 +171,7 @@
 					var/open_for_latejoin = tgui_alert(user, "Would you like this core to be open for latejoining AIs?", "Latejoin", list("Yes", "No")) == "Yes"
 					var/obj/structure/AIcore/deactivated/D = new(loc)
 					if(open_for_latejoin)
-						empty_playable_ai_cores += D
+						GLOB.empty_playable_ai_cores += D // CHOMPEdit - Globals
 				else
 					var/mob/living/silicon/ai/A = new /mob/living/silicon/ai ( loc, laws, brain )
 					if(A) //if there's no brain, the mob is deleted and a structure/AIcore is created
@@ -191,8 +191,8 @@ GLOBAL_LIST_BOILERPLATE(all_deactivated_AI_cores, /obj/structure/AIcore/deactiva
 	state = 20//So it doesn't interact based on the above. Not really necessary.
 
 /obj/structure/AIcore/deactivated/Destroy()
-	if(src in empty_playable_ai_cores)
-		empty_playable_ai_cores -= src
+	if(src in GLOB.empty_playable_ai_cores) // CHOMPEdit - Globals
+		GLOB.empty_playable_ai_cores -= src // CHOMPEdit - Globals
 	return ..()
 
 /obj/structure/AIcore/deactivated/proc/load_ai(var/mob/living/silicon/ai/transfer, var/obj/item/device/aicard/card, var/mob/user)
@@ -268,9 +268,9 @@ GLOBAL_LIST_BOILERPLATE(all_deactivated_AI_cores, /obj/structure/AIcore/deactiva
 	var/obj/structure/AIcore/deactivated/D = cores[id]
 	if(!D) return
 
-	if(D in empty_playable_ai_cores)
-		empty_playable_ai_cores -= D
+	if(D in GLOB.empty_playable_ai_cores) // CHOMPEdit - Globals
+		GLOB.empty_playable_ai_cores -= D // CHOMPEdit - Globals
 		to_chat(src, "\The [id] is now [span_red("not available")] for latejoining AIs.")
 	else
-		empty_playable_ai_cores += D
+		GLOB.empty_playable_ai_cores += D // CHOMPEdit - Globals
 		to_chat(src, "\The [id] is now [span_green("available")] for latejoining AIs.")

@@ -22,7 +22,8 @@
 	S["communicator_visibility"]	<< pref.communicator_visibility
 	S["ttone"]	<< pref.ringtone  // CHOMPEdit - We use ttone in the pref so that it doesnt get reset
 
-var/global/list/valid_ringtones = list(
+// CHOMPEdit - Globals
+GLOBAL_LIST_INIT(valid_ringtones, list(
 		"beep",
 		"boom",
 		"slip",
@@ -48,7 +49,7 @@ var/global/list/valid_ringtones = list(
 		"roark",
 		"chitter",
 		"squish"
-		)
+		))
 
 // Moved from /datum/preferences/proc/copy_to()
 /datum/category_item/player_setup_item/general/equipment/copy_to_mob(var/mob/living/carbon/human/character)
@@ -179,7 +180,7 @@ var/global/list/valid_ringtones = list(
 			pref.communicator_visibility = !pref.communicator_visibility
 			return TOPIC_REFRESH
 	else if(href_list["set_ringtone"])
-		var/choice = tgui_input_list(user, "Please select a ringtone. All of these choices come with an associated preset sound. Alternately, select \"Other\" to specify manually.", "Character Preference", valid_ringtones + "Other", pref.ringtone)
+		var/choice = tgui_input_list(user, "Please select a ringtone. All of these choices come with an associated preset sound. Alternately, select \"Other\" to specify manually.", "Character Preference", GLOB.valid_ringtones + "Other", pref.ringtone)
 		if(!choice || !CanUseTopic(user))
 			return TOPIC_NOACTION
 		if(choice == "Other")

@@ -2330,8 +2330,8 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 										should_proceed_with_revive = FALSE
 										break
 						if(should_proceed_with_revive)
-							dead_mob_list.Remove(H)
-							if((H in living_mob_list) || (H in dead_mob_list))
+							GLOB.dead_mob_list.Remove(H) // CHOMPEdit - Globals
+							if((H in living_mob_list) || (H in GLOB.dead_mob_list)) // CHOMPEdit - Globals
 								WARNING("Mob [H] was defibbed but already in the living or dead list still!")
 							living_mob_list += H
 
@@ -2420,8 +2420,8 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 										should_proceed_with_revive = FALSE
 										break
 						if(should_proceed_with_revive)
-							dead_mob_list.Remove(H)
-							if((H in living_mob_list) || (H in dead_mob_list))
+							GLOB.dead_mob_list.Remove(H) // CHOMPEdit - Globals
+							if((H in living_mob_list) || (H in GLOB.dead_mob_list)) // CHOMPEdit - Globals
 								WARNING("Mob [H] was defibbed but already in the living or dead list still!")
 							living_mob_list += H
 

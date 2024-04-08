@@ -238,7 +238,7 @@
 	removeVerb(/obj/mecha/verb/disconnect_from_port)
 	log_message("[src.name] created.")
 	loc.Entered(src)
-	mechas_list += src //global mech list
+	GLOB.mechas_list += src //global mech list // CHOMPEdit - Globals
 	return
 
 /obj/mecha/Exit(atom/movable/O)
@@ -324,7 +324,7 @@
 
 	STOP_PROCESSING(SSobj, src)
 
-	mechas_list -= src //global mech list
+	GLOB.mechas_list -= src //global mech list // CHOMPEdit - Globals
 	. = ..()
 
 // The main process loop to replace the ancient global iterators.

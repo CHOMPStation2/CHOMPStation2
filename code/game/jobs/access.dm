@@ -237,7 +237,7 @@
 		return C.registered_name
 
 /proc/get_all_job_icons() //For all existing HUD icons
-	return joblist + alt_titles_with_icons + list("Prisoner")
+	return GLOB.joblist + alt_titles_with_icons + list("Prisoner") // CHOMPEdit - Globals
 
 /obj/proc/GetJobName() //Used in secHUD icon generation
 	var/obj/item/weapon/card/id/I = GetID()

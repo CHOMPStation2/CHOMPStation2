@@ -46,7 +46,7 @@
 		S.eye_blurry += (ionbug - 1)
 
 	// Ionize silicon mobs
-	for (var/mob/living/silicon/ai/target in silicon_mob_list)
+	for (var/mob/living/silicon/ai/target in GLOB.silicon_mob_list) // CHOMPEdit - Globals
 		if(!(target.z in affecting_z))
 			continue
 		var/law = target.generate_ion_law()
@@ -58,7 +58,7 @@
 
 	// CHOMPEdit Start
 	if(ionBorgs)	// Making sure an AI hasn't been given an Ion law...
-		for (var/mob/living/silicon/target in silicon_mob_list)
+		for (var/mob/living/silicon/target in GLOB.silicon_mob_list) // CHOMPEdit - Globals
 			if(!(target.z in affecting_z) || prob(33))
 				continue
 			var/law = target.generate_ion_law()

@@ -439,7 +439,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 
 	//Well you're not reloading their job or they never had one.
 	if(!charjob)
-		var/pickjob = tgui_input_list(src,"Pick a job to assign them (or none).","Job Select", joblist + "-No Job-", "-No Job-")
+		var/pickjob = tgui_input_list(src,"Pick a job to assign them (or none).","Job Select", GLOB.joblist + "-No Job-", "-No Job-") // CHOMPEdit - Globals
 		if(!pickjob)
 			return
 		if(pickjob != "-No Job-")
@@ -1076,7 +1076,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	else if(issilicon(M))
 		if(isAI(M))
 			var/mob/living/silicon/ai/ai = M
-			empty_playable_ai_cores += new /obj/structure/AIcore/deactivated(ai.loc)
+			GLOB.empty_playable_ai_cores += new /obj/structure/AIcore/deactivated(ai.loc) // CHOMPEdit - Globals
 			global_announcer.autosay("[ai] has been moved to intelligence storage.", "Artificial Intelligence Oversight")
 			ai.clear_client()
 			return

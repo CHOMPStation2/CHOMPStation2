@@ -40,7 +40,7 @@
 
 	nutrition = rand(200,400)
 
-	human_mob_list |= src
+	GLOB.human_mob_list |= src // CHOMPEdit - Globals
 
 	. = ..()
 
@@ -57,7 +57,7 @@
 	AddComponent(/datum/component/personal_crafting)
 
 /mob/living/carbon/human/Destroy()
-	human_mob_list -= src
+	GLOB.human_mob_list -= src // CHOMPEdit - Globals
 	QDEL_NULL_LIST(organs)
 	if(nif)
 		QDEL_NULL(nif)	//VOREStation Add

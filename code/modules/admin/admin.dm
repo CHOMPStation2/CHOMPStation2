@@ -1070,11 +1070,11 @@ var/datum/announcement/minor/admin_min_announcer = new
 
 	if(!check_rights(R_SPAWN))	return
 
-	var/owner = tgui_input_list(usr, "Select a ckey.", "Spawn Custom Item", custom_items)
-	if(!owner|| !custom_items[owner])
+	var/owner = tgui_input_list(usr, "Select a ckey.", "Spawn Custom Item", GLOB.custom_items) // CHOMPEdit - Globals
+	if(!owner|| !GLOB.custom_items[owner]) // CHOMPEdit - Globals
 		return
 
-	var/list/possible_items = custom_items[owner]
+	var/list/possible_items = GLOB.custom_items[owner] // CHOMPEdit - Globals
 	var/datum/custom_item/item_to_spawn = tgui_input_list(usr, "Select an item to spawn.", "Spawn Custom Item", possible_items)
 	if(!item_to_spawn)
 		return
@@ -1089,17 +1089,17 @@ var/datum/announcement/minor/admin_min_announcer = new
 
 	if(!check_rights(R_SPAWN))	return
 
-	if(!custom_items)
+	if(!GLOB.custom_items) // CHOMPEdit - Globals
 		to_chat(usr, "Custom item list is null.")
 		return
 
-	if(!custom_items.len)
+	if(!GLOB.custom_items.len) // CHOMPEdit - Globals
 		to_chat(usr, "Custom item list not populated.")
 		return
 
-	for(var/assoc_key in custom_items)
+	for(var/assoc_key in GLOB.custom_items) // CHOMPEdit - Globals
 		to_chat(usr, "[assoc_key] has:")
-		var/list/current_items = custom_items[assoc_key]
+		var/list/current_items = GLOB.custom_items[assoc_key] // CHOMPEdit - Globals
 		for(var/datum/custom_item/item in current_items)
 			to_chat(usr, "- name: [item.name] icon: [item.item_icon] path: [item.item_path] desc: [item.item_desc]")
 
@@ -1296,7 +1296,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 		to_chat(usr, "Error: you are not an admin!")
 		return
 
-	var/mob/living/carbon/human/M = tgui_input_list(usr, "Select mob.", "Select mob.", human_mob_list)
+	var/mob/living/carbon/human/M = tgui_input_list(usr, "Select mob.", "Select mob.", GLOB.human_mob_list) // CHOMPEdit - Globals
 	if(!M) return
 
 	show_skill_window(usr, M)

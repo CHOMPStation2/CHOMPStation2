@@ -411,7 +411,7 @@ var/datum/planet/sif/planet_sif = null
 
 /datum/weather/sif/hail/process_effects()
 	..()
-	for(var/mob/living/carbon/H as anything in human_mob_list)
+	for(var/mob/living/carbon/H as anything in GLOB.human_mob_list) // CHOMPEdit - Globals
 		if(H?.z in holder.our_planet.expected_z_levels) // CHOMPedit Add a check that L has to be valid and not null
 			var/turf/T = get_turf(H)
 			if(!T.is_outdoors())

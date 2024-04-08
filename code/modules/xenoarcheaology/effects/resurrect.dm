@@ -47,7 +47,7 @@
 			SM.adjustFireLoss(-40)
 			SM.health = SM.getMaxHealth() / 3
 			SM.stat = CONSCIOUS
-			dead_mob_list -= SM
+			GLOB.dead_mob_list -= SM // CHOMPEdit - Globals
 			living_mob_list += SM
 			SM.update_icon()
 			SM.revive()
@@ -69,7 +69,7 @@
 			sleep(10 SECONDS)
 			if(H.client)
 				L.stat = CONSCIOUS
-				dead_mob_list -= H
+				GLOB.dead_mob_list -= H // CHOMPEdit - Globals
 				living_mob_list += H
 				H.timeofdeath = null
 
