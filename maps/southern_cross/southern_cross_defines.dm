@@ -21,6 +21,7 @@ but they don't actually change anything about the load order
 #define Z_LEVEL_FUELDEPOT				12
 #define Z_LEVEL_JUNGLE					13
 #define Z_LEVEL_GATEWAY					14
+#define Z_LEVEL_CARRIER					15
 
 //#define Z_LEVEL_SURFACE_SKYLANDS		//Sky islands removal due to lack of use
 //#define Z_LEVEL_AEROSTAT			//Disabled due to lack of use
