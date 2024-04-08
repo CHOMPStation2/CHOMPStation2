@@ -563,6 +563,7 @@ class ChatRenderer {
             </Element>,
             childNode,
           );
+          /* eslint-enable react/no-danger */
         }
 
         // Highlight text
