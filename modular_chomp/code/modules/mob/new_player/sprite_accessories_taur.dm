@@ -289,3 +289,40 @@
 	suit_sprites = 'icons/mob/taursuits_naga_alt_ch.dmi'
 	vore_tail_sprite_variant = "Naga3Piece"
 	fullness_icons = 1
+
+/// SPOTTED TAURS ///
+
+/datum/sprite_accessory/tail/taur/lizard/spottedlizard
+	name = "Spotted Lizard (Taur)"
+	icon = 'icons/mob/vore/taurs_ch.dmi'
+	icon_state = "spottedlizard_s"
+	extra_overlay = "spottedlizard_markings"
+	extra_overlay2 = "spottedlizard_markings2"
+
+/datum/sprite_accessory/tail/taur/lizard/fatspottedlizard
+	name = "Fat Spotted Lizard (Taur)"
+	icon = 'icons/mob/vore/taurs_ch.dmi'
+	icon_state = "fatspottedlizard_s"
+	extra_overlay = "fatspottedlizard_markings"
+	extra_overlay2 = "fatspottedlizard_markings2"
+
+/datum/sprite_accessory/tail/taur/drake/spotteddrake
+	name = "Spotted Drake (Taur)"
+	icon = 'icons/mob/vore/taurs_ch.dmi'
+	icon_state = "spotteddrake_s"
+	extra_overlay = "spotteddrake_markings"
+	extra_overlay2 = "spotteddrake_markings2"
+
+/datum/sprite_accessory/tail/taur/drake/fatspotteddrake
+	name = "Fat Spotted Drake (Taur)"
+	icon = 'icons/mob/vore/taurs_ch.dmi'
+	icon_state = "fatspotteddrake_s"
+	extra_overlay = "fatspotteddrake_markings"
+	extra_overlay2 = "fatspotteddrake_markings2"
+
+/datum/sprite_accessory/tail/taur/drake/extendedspotteddrake
+	name = "Extended Fat Spotted Drake (Taur)"
+	icon = 'icons/mob/vore/taurs_ch.dmi'
+	icon_state = "spottedextended_fatdrake"
+	extra_overlay = "spottedextended_fatdrake_markings"
+	extra_overlay2 = "spottedextended_fatdrake_markings2"
