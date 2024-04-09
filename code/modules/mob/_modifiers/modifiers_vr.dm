@@ -55,7 +55,7 @@
 
 	stacks = MODIFIER_STACK_FORBID
 
-	slowdown = -1.5							//A bit faster when actually submerged fully in water, as you're not waddling through it.
+	slowdown = -1.0							//A bit faster when actually submerged fully in water, as you're not waddling through it. //ChompEDIT - nerf this a lil
 	siemens_coefficient = 1.5 				//You are, however, underwater. Getting shocked will hurt.
 
 	outgoing_melee_damage_percent = 0.75 	//You are swinging a sword under water...Good luck.
