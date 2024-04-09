@@ -123,3 +123,13 @@
   - rscdel: Removed some of the unused hooks.
   Raeschen:
   - admin: Reload job/alien whitelist buttons in admin tab
+2024-04-09:
+  Kashargul:
+  - bugfix: an issue with charging icons no longer working
+  Raeschen:
+  - rscadd: Check for client/key and remove on qdel of a ghost
+  tacoguy7765093:
+  - rscdel: Removed items being dropped when in a purple stun, Less butter fingers
+      when doing EVA!
+  - balance: '''Weaken'' status now allows you to use items. You still got a second
+      chance!'
