@@ -3595,7 +3595,7 @@
 "nU" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/border_only,
-/turf/simulated/wall/r_wall/turfpack/station,
+/turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/abscience)
 "nX" = (
 /obj/item/weapon/material/shard{
@@ -4721,6 +4721,9 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /turf/simulated/floor/plating/turfpack/station,
@@ -8428,7 +8431,7 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/structure/barricade,
 /obj/machinery/door/firedoor/border_only,
-/turf/simulated/wall/r_wall/turfpack/station,
+/turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/abscience)
 "Hz" = (
 /obj/structure/cable{
