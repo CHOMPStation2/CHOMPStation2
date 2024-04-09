@@ -143,9 +143,16 @@
 /turf/simulated/floor/tiled/white,
 /area/maintenance/abfirstaid)
 "ay" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/arrows/yellow{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/arrows/yellow{
+	dir = 4
+	},
 /obj/machinery/door/airlock/maintenance/common,
-/obj/item/tape/engineering,
-/turf/simulated/floor/plating/turfpack/station,
+/obj/item/tape/atmos,
+/turf/simulated/floor/tiled/techmaint,
 /area/maintenance/starboard)
 "aC" = (
 /obj/effect/floor_decal/rust,
@@ -1056,6 +1063,18 @@
 /obj/effect/decal/cleanable/filth,
 /turf/simulated/floor/tiled/hydro,
 /area/maintenance/abhydroponicssupp)
+"dX" = (
+/obj/machinery/door/airlock/external{
+	frequency = 1379;
+	icon_state = "door_locked";
+	id_tag = "d0_outer";
+	locked = 1;
+	name = "External Airlock Access";
+	req_access = list(13)
+	},
+/obj/effect/map_helper/airlock/door/ext_door,
+/turf/simulated/floor/plating,
+/area/maintenance/port)
 "dY" = (
 /obj/structure/curtain/bed,
 /turf/simulated/floor/plating/turfpack/station,
@@ -1179,6 +1198,8 @@
 	name = "External Airlock Access";
 	req_access = list(13)
 	},
+/obj/effect/map_helper/airlock/door/ext_door,
+/obj/effect/map_helper/airlock/button/ext_button,
 /turf/simulated/floor/plating,
 /area/maintenance/port)
 "ez" = (
@@ -1486,6 +1507,10 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/aft)
+"fL" = (
+/obj/machinery/portable_atmospherics/powered/pump/filled,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/engineering)
 "fM" = (
 /obj/structure/catwalk,
 /obj/structure/cable{
@@ -2076,6 +2101,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/starboard)
 "ic" = (
@@ -2094,6 +2120,7 @@
 	name = "Internal Airlock Access";
 	req_access = list(13)
 	},
+/obj/effect/map_helper/airlock/door/int_door,
 /turf/simulated/floor/plating,
 /area/maintenance/port)
 "if" = (
@@ -2414,6 +2441,9 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /turf/simulated/floor/plating/turfpack/station,
@@ -3775,20 +3805,9 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/starboard)
 "oH" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/wood/broken/turfpack/station,
-/area/maintenance/bar)
+/obj/machinery/portable_atmospherics/powered/pump/filled,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/starboard)
 "oJ" = (
 /obj/structure/sign/directions/recreation{
 	dir = 5
@@ -4015,9 +4034,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
 "pE" = (
-/mob/living/simple_mob/vore/aggressive/rat/labrat{
-	faction = "mouse"
-	},
+/mob/living/simple_mob/vore/aggressive/rat/labrat/genetics,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/absgenetics)
 "pH" = (
@@ -4284,6 +4301,8 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/port)
 "qJ" = (
@@ -5287,6 +5306,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
 	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/port)
 "uS" = (
@@ -5791,20 +5811,18 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/aft)
 "wV" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/machinery/door/airlock/glass_external{
+	frequency = 1379;
+	icon_state = "door_locked";
+	id_tag = "d0_inner";
+	locked = 1;
+	name = "Internal Airlock Access";
+	req_access = list(13)
 	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/wood/turfpack/station,
-/area/maintenance/bar)
+/obj/effect/map_helper/airlock/door/int_door,
+/obj/effect/map_helper/airlock/button/int_button,
+/turf/simulated/floor/plating,
+/area/maintenance/port)
 "wW" = (
 /obj/structure/mob_spawner/mouse_nest/mousehole,
 /turf/simulated/floor/plating,
@@ -6622,6 +6640,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/port)
 "AE" = (
@@ -7219,10 +7238,9 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/port)
 "CK" = (
-/obj/effect/floor_decal/rust,
-/obj/item/tape/medical,
+/obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/abchemistry)
+/area/maintenance/aft)
 "CN" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/item/tape/engineering,
@@ -7415,16 +7433,6 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/engineering)
 "DN" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
@@ -8407,7 +8415,6 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/port)
 "Hw" = (
-/obj/structure/closet/crate/mimic/cointoss,
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
 	},
@@ -8893,9 +8900,6 @@
 /area/maintenance/engineering/gravgen)
 "JC" = (
 /obj/effect/floor_decal/rust,
-/obj/machinery/light/small{
-	dir = 8
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
@@ -10053,6 +10057,11 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/backuppower)
+"Ox" = (
+/obj/structure/catwalk,
+/obj/machinery/portable_atmospherics/powered/pump/filled,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/port)
 "Oy" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -10855,6 +10864,7 @@
 	name = "Medical Storage";
 	req_one_access = null
 	},
+/obj/item/tape/medical,
 /turf/simulated/floor/tiled/white,
 /area/maintenance/abchemistry)
 "Se" = (
@@ -11812,6 +11822,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/port)
 "VY" = (
@@ -12480,14 +12491,11 @@
 	frequency = 1379;
 	master_tag = "d3_port_dorms_airlock";
 	name = "exterior access button";
-	pixel_x = 25;
-	pixel_y = -26;
-	req_access = null
+	pixel_y = 0;
+	req_access = null;
+	dir = 8;
+	pixel_x = 25
 	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/obj/machinery/shield_diffuser,
 /turf/simulated/floor/plating/turfpack/airless,
 /area/space)
 "YB" = (
@@ -33504,7 +33512,7 @@ sV
 sV
 sV
 ua
-sA
+Ox
 Do
 ua
 iP
@@ -36101,8 +36109,8 @@ iP
 iP
 iP
 nS
+nS
 YA
-iP
 TJ
 wZ
 wZ
@@ -36358,7 +36366,7 @@ Cm
 PN
 We
 We
-ex
+dX
 ex
 ua
 ua
@@ -37132,7 +37140,7 @@ Ac
 qh
 ca
 dm
-ie
+wV
 ie
 jU
 ua
@@ -39161,7 +39169,7 @@ Td
 Td
 Td
 EK
-wV
+uy
 AV
 zK
 WF
@@ -39939,7 +39947,7 @@ uy
 WG
 Hc
 WG
-oH
+WG
 fe
 uy
 WG
@@ -39959,7 +39967,7 @@ xf
 xz
 xf
 Sd
-CK
+sr
 Xm
 SF
 Ir
@@ -42255,7 +42263,7 @@ pj
 jC
 qf
 Et
-OE
+CK
 Mq
 Mq
 wZ
@@ -46124,7 +46132,7 @@ jC
 Ng
 cX
 jC
-OE
+CK
 fb
 xS
 xS
@@ -46395,7 +46403,7 @@ CE
 CE
 gG
 Sb
-Ky
+fL
 dd
 jd
 lc
@@ -50044,7 +50052,7 @@ pj
 qf
 jC
 xL
-OE
+CK
 OE
 pj
 pj
@@ -52821,8 +52829,8 @@ wZ
 wZ
 wZ
 wZ
-wZ
-wZ
+XU
+xC
 wZ
 wZ
 wZ
@@ -53080,7 +53088,7 @@ wZ
 wZ
 wZ
 wZ
-wZ
+eY
 wZ
 wZ
 wZ
@@ -53336,9 +53344,9 @@ wZ
 wZ
 wZ
 wZ
-wZ
-wZ
-wZ
+il
+il
+eY
 wZ
 wZ
 wZ
@@ -53594,9 +53602,9 @@ wZ
 wZ
 wZ
 wZ
-wZ
-XU
-xC
+il
+lR
+Yk
 wZ
 wZ
 wZ
@@ -53852,9 +53860,9 @@ wZ
 wZ
 wZ
 wZ
-wZ
-wZ
-eY
+il
+il
+Yk
 wZ
 wZ
 wZ
@@ -54110,9 +54118,9 @@ wZ
 wZ
 wZ
 wZ
-il
-il
-eY
+wZ
+wZ
+Yk
 wZ
 wZ
 wZ
@@ -54368,8 +54376,8 @@ wZ
 wZ
 wZ
 wZ
-il
-lR
+wZ
+wZ
 Yk
 Yk
 Yk
@@ -54626,8 +54634,8 @@ wZ
 wZ
 wZ
 wZ
-Yk
-Yk
+wZ
+wZ
 Yk
 wZ
 wZ
@@ -54886,7 +54894,7 @@ wZ
 wZ
 wZ
 wZ
-Yk
+wZ
 wZ
 wZ
 wZ
@@ -57504,7 +57512,7 @@ Fv
 Fv
 Fv
 Fv
-ZK
+oH
 xh
 gL
 Yk
@@ -59011,7 +59019,7 @@ wZ
 wZ
 wZ
 wZ
-wZ
+Yk
 eY
 eY
 wZ
@@ -59269,8 +59277,8 @@ wZ
 wZ
 wZ
 wZ
-wZ
-wZ
+Yk
+lR
 eY
 eY
 eY
@@ -59527,9 +59535,9 @@ wZ
 wZ
 wZ
 wZ
-wZ
-wZ
-wZ
+Yk
+Yk
+Yk
 wZ
 wZ
 wZ
