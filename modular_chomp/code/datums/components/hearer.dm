@@ -26,10 +26,10 @@
 	var/turf/source_turf = get_turf(source)
 	var/turf/parent_turf = get_turf(parent_atom)
 
-	if(!AreConnectedZLevels(source_turf.z,parent_turf.z))
+	if(!istype(source_turf) || !istype(parent_turf))
 		return
 
-	if(!istype(source_turf) || !istype(parent_turf))
+	if(!AreConnectedZLevels(source_turf.z,parent_turf.z))
 		return
 
 	//Most expensive checks last
