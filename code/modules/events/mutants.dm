@@ -55,7 +55,7 @@
 			spawn_area_type = /area/hangar/three
 			locstring = "the hangar deck"
 		if(LOC_FIELD) // CHOMPEdit - Another one for the list...
-			spawn_area_type = /area/maintenance/maintdeck/field
+			spawn_area_type = /area/maintenance/field
 			locstring = "the maintenance deck"
 
 	for(var/areapath in typesof(spawn_area_type))

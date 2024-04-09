@@ -2331,12 +2331,9 @@ End Chompstation Edit*/
 /area/maintenance/engineering/gravgen
 	name = "Gravity Generator Maintenance"
 
-/area/maintenance/maintdeck/field
-	name = "Maintenance Deck Field"
-
-/area/maintenance/maintdeck/fieldhallway
+/area/maintenance/fieldhallway
 	name = "Maintenance Deck Field Hallway"
-/area/maintenance/maintdeck/fieldthrift
+/area/maintenance/fieldthrift
 	name = "Maintenance Deck Thrift Store Hallway"
 
 /area/maintenance/abhydroponicssupp
