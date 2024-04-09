@@ -22,7 +22,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engoffice)
 "abn" = (
 /obj/machinery/atmospherics/binary/pump/high_power{
@@ -52,7 +52,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "acD" = (
 /obj/machinery/seed_extractor,
@@ -109,16 +109,23 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/rnd)
+"aeD" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 4;
+	pixel_x = -12
+	},
+/turf/simulated/floor/wood,
+/area/shuttle/aegis/bar)
 "aeJ" = (
 /obj/machinery/suit_storage_unit/standard_unit,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 10
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 10
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "aeX" = (
 /obj/structure/table/steel_reinforced,
@@ -183,11 +190,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/techstorage)
-"ahC" = (
-/obj/structure/lattice,
-/obj/machinery/shield_diffuser,
-/turf/space,
-/area/space)
 "ahD" = (
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_x = -25;
@@ -267,7 +269,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/secoffice)
 "ajU" = (
 /obj/structure/bed/double/padded,
@@ -296,7 +298,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/janitorial)
 "akw" = (
 /obj/effect/floor_decal/techfloor/corner{
@@ -429,8 +431,7 @@
 	dir = 4;
 	pixel_x = 12
 	},
-/obj/structure/catwalk,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/bluegrid,
 /area/shuttle/aegis/telecomms)
 "aqW" = (
 /obj/structure/railing/grey{
@@ -470,7 +471,7 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "arV" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -502,6 +503,26 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/surgical1)
+"atb" = (
+/obj/effect/floor_decal/techfloor/corner{
+	dir = 5
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 8;
+	pixel_x = 12
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/aegis/uppersternhallway)
+"atu" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 4;
+	pixel_x = -12
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/aegis/slingcarrierdock)
 "atz" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 8
@@ -566,11 +587,15 @@
 /area/shuttle/aegis/staruppermaint)
 "awV" = (
 /obj/machinery/telecomms/relay/preset/southerncross/carrier,
-/turf/simulated/floor/tiled/milspec/raised,
+/turf/simulated/floor/bluegrid,
 /area/shuttle/aegis/telecomms)
 "axh" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 9
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 8;
+	pixel_x = 12
 	},
 /turf/simulated/floor,
 /area/shuttle/aegis/reactorroom)
@@ -616,6 +641,9 @@
 "aAt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 5
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 10
 	},
 /turf/simulated/floor,
 /area/shuttle/aegis/portfuelstorage)
@@ -692,7 +720,7 @@
 /obj/machinery/light,
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/orange/border,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "aDE" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
@@ -731,7 +759,7 @@
 	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "aFw" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
@@ -865,7 +893,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engoffice)
 "aHR" = (
 /obj/structure/railing{
@@ -1116,7 +1144,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "aVF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -1350,10 +1378,7 @@
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/breakroom)
 "bcD" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -1480,6 +1505,10 @@
 /obj/machinery/alarm{
 	pixel_y = 22
 	},
+/obj/machinery/camera/network/carrier{
+	dir = 4;
+	pixel_x = -12
+	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/aegis/staginghangar)
 "bhh" = (
@@ -1500,8 +1529,7 @@
 	pixel_x = 12
 	},
 /obj/effect/floor_decal/borderfloorblack/corner,
-/obj/effect/floor_decal/corner/white/bordercorner,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/breakroom)
 "bhq" = (
 /obj/effect/low_wall_spawner/bay/reinforced/rglass,
@@ -1535,7 +1563,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 10
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "bjP" = (
 /obj/structure/sign/nanotrasen,
@@ -1545,7 +1573,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "bjU" = (
 /obj/structure/railing{
@@ -1559,11 +1587,8 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "bkz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1661,13 +1686,16 @@
 /obj/machinery/gateway{
 	dir = 1
 	},
+/obj/machinery/camera/network/carrier{
+	pixel_y = 20
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/aegis/gateway)
 "bos" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gateway)
 "boM" = (
 /obj/structure/table/steel_reinforced,
@@ -1773,9 +1801,6 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/aegis/eva)
 "btY" = (
@@ -1817,12 +1842,23 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "buZ" = (
 /obj/machinery/mineral/processing_unit_console,
 /turf/simulated/wall/bay/r_wall,
 /area/shuttle/aegis/miningfoyer)
+"bvp" = (
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4;
+	name = "Refuelling Port"
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 10
+	},
+/turf/simulated/floor/reinforced,
+/area/shuttle/aegis/portfuelstorage)
 "bvx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -1875,7 +1911,7 @@
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/orange/border,
 /obj/item/device/geiger/wall/south,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "bwS" = (
 /turf/simulated/floor/tiled,
@@ -1893,6 +1929,13 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/carpet,
 /area/shuttle/aegis/suite2)
+"byw" = (
+/obj/effect/floor_decal/techfloor,
+/obj/structure/sign/signnew/radiation{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/aegis/lowersternhallway)
 "byF" = (
 /obj/structure/shuttle/engine/heater,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -1943,6 +1986,16 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/carpet,
 /area/shuttle/aegis/commanderroom)
+"bAX" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 8;
+	pixel_x = 12
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/aegis/uppersternhallway)
 "bBM" = (
 /obj/structure/railing/grey,
 /obj/structure/railing/grey{
@@ -2083,7 +2136,10 @@
 	dir = 8;
 	pixel_x = -12
 	},
-/turf/simulated/floor/tiled/milspec/raised,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/aegis/staginghangar)
 "bLf" = (
 /obj/item/device/radio/intercom{
@@ -2279,7 +2335,7 @@
 /obj/machinery/alarm{
 	pixel_y = 22
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/secoffice)
 "bQT" = (
 /turf/simulated/wall/bay/r_wall,
@@ -2292,7 +2348,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "bTd" = (
 /obj/machinery/door/airlock/glass_centcom{
@@ -2371,7 +2427,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "bXD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -2451,6 +2507,16 @@
 	},
 /turf/simulated/floor/wood,
 /area/shuttle/aegis/bar)
+"cbs" = (
+/obj/effect/floor_decal/techfloor/corner{
+	dir = 10
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 4;
+	pixel_x = -12
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/aegis/staginghangar)
 "cbv" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/autolathe,
@@ -2598,7 +2664,7 @@
 /turf/simulated/floor,
 /area/shuttle/aegis/portuppermaint)
 "ceR" = (
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gateway)
 "cfm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -2613,6 +2679,18 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/shuttle/aegis/portexplomaint)
+"cfw" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 1
+	},
+/obj/machinery/camera/network/carrier{
+	pixel_y = 20
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/aegis/techstorage)
 "cfT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -2716,6 +2794,9 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/machinery/camera/network/carrier{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/secarmory)
 "cjb" = (
@@ -2725,7 +2806,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 10
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "cjD" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -2829,6 +2910,12 @@
 /obj/machinery/portable_atmospherics/canister/phoron,
 /turf/simulated/floor/reinforced,
 /area/shuttle/aegis/starfuelstorage)
+"cmU" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/aegis/aicore)
 "cnH" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 8
@@ -2846,7 +2933,7 @@
 "coa" = (
 /obj/machinery/floodlight,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "cof" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -2867,7 +2954,7 @@
 	dir = 4;
 	pixel_x = -35
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/janitorial)
 "coY" = (
 /obj/structure/closet/walllocker/emerglocker{
@@ -2915,6 +3002,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/aegis/slingcarrierdock)
+"cpk" = (
+/obj/structure/catwalk,
+/obj/structure/sign/signnew/electrical{
+	pixel_y = 32
+	},
+/turf/simulated/floor/reinforced,
+/area/shuttle/aegis/staginghangar)
 "cpA" = (
 /obj/machinery/atmospherics/pipe/simple/visible/universal{
 	dir = 8;
@@ -2948,6 +3042,10 @@
 	},
 /turf/simulated/floor,
 /area/shuttle/aegis/lowersternhallway)
+"crc" = (
+/obj/structure/AIcore,
+/turf/simulated/floor/greengrid,
+/area/shuttle/aegis/aicore)
 "crf" = (
 /obj/effect/floor_decal/industrial/outline,
 /turf/simulated/floor/tiled/dark,
@@ -3042,6 +3140,10 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 4
 	},
+/obj/machinery/camera/network/carrier{
+	dir = 8;
+	pixel_x = 12
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/exploarmory)
 "ctT" = (
@@ -3105,7 +3207,7 @@
 	dir = 4
 	},
 /obj/machinery/light,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gateway)
 "cwA" = (
 /turf/space,
@@ -3272,7 +3374,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/breakroom)
 "cCs" = (
 /obj/machinery/door/firedoor,
@@ -3326,7 +3428,7 @@
 	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engoffice)
 "cGw" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -3415,6 +3517,15 @@
 "cJN" = (
 /turf/simulated/floor/reinforced,
 /area/shuttle/aegis/hangarfour)
+"cKE" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/machinery/camera/network/carrier{
+	pixel_y = 20
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/aegis/lowersternhallway)
 "cLB" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/low_wall_spawner/bay/reinforced/rphoron,
@@ -3494,6 +3605,9 @@
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/structure/catwalk,
+/obj/machinery/camera/network/carrier{
+	dir = 1
+	},
 /turf/simulated/floor,
 /area/shuttle/aegis/portsternairlock)
 "cNz" = (
@@ -3553,8 +3667,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/aegis/starbowhallway)
 "cQE" = (
-/obj/structure/catwalk,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/bluegrid,
 /area/shuttle/aegis/telecomms)
 "cRL" = (
 /obj/structure/cable/green{
@@ -3582,7 +3695,6 @@
 /area/shuttle/aegis/starqpadjunction)
 "cSp" = (
 /obj/effect/floor_decal/borderfloorblack,
-/obj/effect/floor_decal/corner/white/border,
 /obj/machinery/disposal/wall{
 	dir = 1;
 	pixel_y = -35
@@ -3590,7 +3702,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/breakroom)
 "cSw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -3867,6 +3979,10 @@
 	pixel_y = 20
 	},
 /obj/structure/flora/ausbushes/lavendergrass,
+/obj/machinery/camera/network/carrier{
+	dir = 4;
+	pixel_x = -12
+	},
 /turf/simulated/floor/grass2,
 /area/shuttle/aegis/botany)
 "dey" = (
@@ -3980,6 +4096,10 @@
 	dir = 9
 	},
 /obj/item/device/geiger/wall/north,
+/obj/machinery/camera/network/carrier{
+	dir = 4;
+	pixel_x = -12
+	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/aegis/reactorcr)
 "dks" = (
@@ -4065,7 +4185,7 @@
 "dpc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engoffice)
 "dpg" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging,
@@ -4104,7 +4224,7 @@
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/medicalbay)
 "dqX" = (
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "drS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -4208,7 +4328,7 @@
 	pixel_x = 12;
 	pixel_y = 24
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engoffice)
 "dxc" = (
 /obj/effect/low_wall_spawner/bay/reinforced/rglass,
@@ -4234,7 +4354,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "dya" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -4281,7 +4401,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gateway)
 "dyX" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/black{
@@ -4324,7 +4444,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "dzS" = (
 /obj/machinery/power/apc{
@@ -4417,7 +4537,7 @@
 "dEY" = (
 /obj/effect/floor_decal/borderfloorblack/corner,
 /obj/effect/floor_decal/corner/orange/bordercorner,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "dFq" = (
 /obj/random/trash_pile,
@@ -4431,10 +4551,7 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/breakroom)
 "dGj" = (
 /obj/machinery/door/window/survival_pod{
@@ -4481,7 +4598,7 @@
 /obj/effect/floor_decal/corner/orange/bordercorner{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engoffice)
 "dHk" = (
 /obj/effect/floor_decal/techfloor{
@@ -4489,6 +4606,16 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/aegis/lowersternhallway)
+"dHr" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 8;
+	pixel_x = 12
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/aegis/starbowhallway)
 "dHx" = (
 /obj/effect/floor_decal/techfloor,
 /obj/structure/handrail{
@@ -4554,7 +4681,10 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -28
 	},
-/turf/simulated/floor/tiled/milspec/raised,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/aegis/staginghangar)
 "dJj" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -4623,6 +4753,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/aegis/midsternhallway)
+"dKB" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/aegis/staginghangar)
 "dKQ" = (
 /obj/structure/table/rack/shelf,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -4793,7 +4929,7 @@
 	dir = 1;
 	pixel_y = 20
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gateway)
 "dOA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -4817,7 +4953,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engoffice)
 "dQy" = (
 /turf/simulated/floor/tiled,
@@ -4913,7 +5049,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gateway)
 "dVi" = (
 /obj/structure/handrail{
@@ -5014,6 +5150,12 @@
 /turf/simulated/floor/tiled,
 /area/shuttle/aegis/hangarfour)
 "dWr" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/aegis/telecomms)
 "dWS" = (
@@ -5035,7 +5177,7 @@
 /obj/effect/floor_decal/corner/green/bordercorner{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "dZT" = (
 /obj/structure/undies_wardrobe,
@@ -5051,6 +5193,12 @@
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/aegis/aicore)
@@ -5094,7 +5242,7 @@
 /obj/item/weapon/tank/jetpack/carbondioxide,
 /obj/item/clothing/suit/space/void/exploration,
 /obj/item/clothing/head/helmet/space/void/exploration,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "ecU" = (
 /obj/machinery/washing_machine,
@@ -5217,6 +5365,15 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/aegis/slingcarrierdock)
+"ehp" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/machinery/camera/network/carrier{
+	pixel_y = 20
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/aegis/midsternhallway)
 "eiY" = (
 /obj/machinery/power/apc{
 	dir = 8;
@@ -5240,6 +5397,16 @@
 /obj/machinery/door/airlock/angled_bay/hatch/common,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/aegis/hangarfour)
+"eji" = (
+/obj/effect/floor_decal/techfloor/corner{
+	dir = 9
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 4;
+	pixel_x = -12
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/aegis/uppersternhallway)
 "ejl" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
@@ -5277,7 +5444,7 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "ejG" = (
 /turf/simulated/floor/tiled/dark,
@@ -5477,7 +5644,8 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/tiled/milspec/raised,
+/obj/effect/floor_decal/industrial/warning/cee,
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/aegis/aicore)
 "era" = (
 /obj/machinery/portable_atmospherics/canister/phoron,
@@ -5566,7 +5734,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "etS" = (
 /obj/effect/floor_decal/borderfloorwhite{
@@ -5837,10 +6005,7 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/breakroom)
 "eCl" = (
 /obj/effect/catwalk_plated/dark,
@@ -5911,7 +6076,7 @@
 /obj/effect/floor_decal/corner/green/bordercorner{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "eFB" = (
 /obj/effect/decal/cleanable/cobweb,
@@ -5968,7 +6133,7 @@
 	pixel_x = -22
 	},
 /obj/machinery/light,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "eIP" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -6300,6 +6465,15 @@
 	},
 /turf/simulated/floor/carpet,
 /area/shuttle/aegis/suite2)
+"eNR" = (
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/obj/machinery/camera/network/carrier{
+	pixel_y = 20
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/aegis/staginghangar)
 "eOj" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /obj/structure/cable/yellow{
@@ -6326,8 +6500,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/structure/catwalk,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/greengrid,
 /area/shuttle/aegis/aicore)
 "eOx" = (
 /turf/simulated/floor/tiled/techfloor,
@@ -6370,6 +6543,22 @@
 	},
 /turf/simulated/wall/rpshull,
 /area/shuttle/baby_mammoth)
+"ePT" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 4
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 8;
+	pixel_x = 12
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/aegis/hangarthree)
 "eQM" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
@@ -6400,7 +6589,7 @@
 "eQR" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/orange/border,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "eRh" = (
 /obj/structure/cable/green{
@@ -6430,8 +6619,10 @@
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/washroom)
 "eRE" = (
-/obj/structure/catwalk,
-/turf/simulated/floor/reinforced,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/aicore)
 "eRI" = (
 /obj/effect/catwalk_plated/techfloor,
@@ -6478,7 +6669,7 @@
 /obj/item/device/multitool{
 	pixel_x = -5
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gateway)
 "eTt" = (
 /obj/structure/cable/green{
@@ -6506,6 +6697,9 @@
 "eUW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 9
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 10
 	},
 /turf/simulated/floor,
 /area/shuttle/aegis/starfuelstorage)
@@ -6623,7 +6817,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 5
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "eXM" = (
 /obj/structure/cable/green{
@@ -6636,6 +6830,9 @@
 "eYq" = (
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/purple/border,
+/obj/machinery/camera/network/carrier{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/stationqpad)
 "eYr" = (
@@ -6648,7 +6845,7 @@
 /obj/machinery/alarm{
 	pixel_y = 22
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "eYA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -6772,7 +6969,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "fdt" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green,
@@ -6808,6 +7005,13 @@
 /obj/machinery/washing_machine,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/commanderroom)
+"fgb" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/camera/network/carrier{
+	pixel_y = 20
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/aegis/telecomms)
 "fgm" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/borderfloorwhite{
@@ -6854,7 +7058,7 @@
 	dir = 1
 	},
 /obj/structure/closet/secure_closet/security,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/secoffice)
 "fhT" = (
 /obj/machinery/door/firedoor/multi_tile/glass{
@@ -6953,7 +7157,11 @@
 	dir = 8;
 	pixel_x = -12
 	},
-/turf/simulated/floor/tiled/milspec/raised,
+/obj/machinery/telecomms/hub{
+	idle_power_usage = 0;
+	produces_heat = 0
+	},
+/turf/simulated/floor/bluegrid,
 /area/shuttle/aegis/telecomms)
 "flj" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -7112,6 +7320,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/shuttle/aegis/hangarone)
+"fra" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 1
+	},
+/obj/machinery/camera/network/carrier{
+	pixel_y = 20
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/aegis/secoffice)
 "frm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -7146,8 +7366,7 @@
 	},
 /obj/structure/cable/green,
 /obj/effect/floor_decal/borderfloorblack/corner,
-/obj/effect/floor_decal/corner/white/bordercorner,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/breakroom)
 "fse" = (
 /turf/simulated/wall/bay/r_wall,
@@ -7180,7 +7399,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "ftz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -7258,7 +7477,7 @@
 "fwE" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/cell_charger,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "fwG" = (
 /obj/machinery/autolathe,
@@ -7286,7 +7505,7 @@
 /obj/structure/janitorialcart,
 /obj/machinery/light/small,
 /obj/effect/floor_decal/industrial/outline,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/janitorial)
 "fyn" = (
 /obj/structure/table/steel_reinforced,
@@ -7294,14 +7513,11 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 8
-	},
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = -24
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "fyp" = (
 /obj/machinery/r_n_d/protolathe,
@@ -7369,6 +7585,16 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/aegis/starboardbowairlock)
+"fBi" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 8;
+	pixel_x = 12
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/aegis/portbowhallway)
 "fBu" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/angled_bay/standard/glass{
@@ -7404,6 +7630,9 @@
 "fCs" = (
 /obj/machinery/atmospherics/portables_connector,
 /obj/effect/floor_decal/industrial/outline,
+/obj/machinery/camera/network/carrier{
+	pixel_y = 20
+	},
 /turf/simulated/floor,
 /area/shuttle/aegis/reactorroom)
 "fCu" = (
@@ -7441,6 +7670,12 @@
 	d1 = 2;
 	d2 = 4;
 	icon_state = "2-4"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/aegis/aicore)
@@ -7483,8 +7718,18 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
+"fEv" = (
+/obj/machinery/light,
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/corner/green/border,
+/obj/machinery/camera/network/carrier{
+	dir = 8;
+	pixel_x = 12
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/aegis/hangarfive)
 "fEH" = (
 /obj/structure/window/plastitanium/full,
 /obj/structure/window/reinforced/survival_pod{
@@ -7821,7 +8066,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engoffice)
 "fXC" = (
 /obj/effect/decal/cleanable/dirt,
@@ -7829,7 +8074,10 @@
 /turf/simulated/floor,
 /area/shuttle/aegis/portlowermaint)
 "fXV" = (
-/turf/simulated/floor/tiled/milspec/raised,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/aegis/staginghangar)
 "fZw" = (
 /obj/machinery/door/firedoor,
@@ -7956,7 +8204,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 6
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "gee" = (
 /obj/effect/floor_decal/borderfloorblack/corner,
@@ -7982,7 +8230,7 @@
 	pixel_x = -12;
 	pixel_y = -24
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/secoffice)
 "geU" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -8322,10 +8570,7 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/breakroom)
 "gou" = (
 /obj/structure/closet/crate,
@@ -8399,7 +8644,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "guF" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -8450,6 +8695,18 @@
 "gvL" = (
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/secarmory)
+"gvS" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/brown/border{
+	dir = 5
+	},
+/obj/machinery/camera/network/carrier{
+	pixel_y = 20
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/aegis/hangarsix)
 "gxw" = (
 /obj/structure/fuel_port{
 	pixel_x = -32
@@ -8476,7 +8733,7 @@
 /obj/structure/bed/chair/bay/comfy/black{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/secoffice)
 "gyq" = (
 /obj/structure/railing{
@@ -8488,6 +8745,23 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/shuttle/aegis/staruppermaint)
+"gyD" = (
+/obj/machinery/light{
+	dir = 1;
+	pixel_y = 20
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/brown/border{
+	dir = 1
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 4;
+	pixel_x = -12
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/aegis/hangarsix)
 "gyF" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -8571,6 +8845,15 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/aegis/staginghangar)
+"gAy" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/aegis/explobriefroom)
 "gAM" = (
 /obj/structure/filingcabinet/medical{
 	desc = "A large cabinet with hard copy medical records.";
@@ -8630,6 +8913,9 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
+/obj/machinery/camera/network/carrier{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/portqpadjunction)
 "gDK" = (
@@ -8663,7 +8949,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 5
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "gFl" = (
 /obj/structure/closet,
@@ -8734,7 +9020,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "gKJ" = (
 /obj/structure/cable/blue{
@@ -8793,8 +9079,18 @@
 "gLE" = (
 /obj/machinery/power/port_gen/pacman,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
+"gLL" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 4;
+	pixel_x = -12
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/aegis/portbowhallway)
 "gLU" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -8806,7 +9102,10 @@
 	dir = 4;
 	pixel_x = 12
 	},
-/turf/simulated/floor/tiled/milspec/raised,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/aegis/staginghangar)
 "gMK" = (
 /obj/item/weapon/circuitboard/machine/power_turbine{
@@ -8908,7 +9207,7 @@
 "gOD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "gPg" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
@@ -8955,7 +9254,7 @@
 "gQK" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/recharger,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "gRt" = (
 /obj/structure/closet/secure_closet/freezer/meat{
@@ -8970,6 +9269,10 @@
 /obj/item/weapon/storage/fancy/egg_box,
 /obj/item/weapon/storage/fancy/egg_box,
 /obj/item/weapon/storage/fancy/egg_box,
+/obj/machinery/camera/network/carrier{
+	dir = 8;
+	pixel_x = 12
+	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/kitchen)
 "gSi" = (
@@ -9007,6 +9310,18 @@
 "gUm" = (
 /turf/simulated/floor/tiled,
 /area/shuttle/aegis/hangartwo)
+"gUZ" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 5
+	},
+/obj/machinery/camera/network/carrier{
+	pixel_y = 20
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/aegis/hangarfour)
 "gVf" = (
 /obj/machinery/appliance/cooker/oven,
 /turf/simulated/floor/tiled/white,
@@ -9097,10 +9412,7 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "gZh" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
@@ -9154,7 +9466,7 @@
 "hbj" = (
 /obj/structure/dispenser/oxygen,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "hbq" = (
 /obj/structure/railing{
@@ -9268,6 +9580,9 @@
 	dir = 1
 	},
 /obj/structure/flora/ausbushes/sparsegrass,
+/obj/machinery/camera/network/carrier{
+	dir = 1
+	},
 /turf/simulated/floor/grass2,
 /area/shuttle/aegis/slingcarrierdock)
 "hga" = (
@@ -9299,6 +9614,15 @@
 	},
 /turf/simulated/floor,
 /area/shuttle/aegis/reactorroom)
+"hgD" = (
+/obj/effect/floor_decal/techfloor/corner{
+	dir = 6
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/aegis/lowersternhallway)
 "hgL" = (
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/firedoor/glass,
@@ -9339,7 +9663,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "hhN" = (
 /obj/structure/cable/green{
@@ -9404,13 +9728,12 @@
 /turf/simulated/floor/tiled,
 /area/shuttle/aegis/hangarfour)
 "hjQ" = (
-/obj/structure/catwalk,
 /obj/item/device/radio/intercom{
 	dir = 8;
 	name = "Station Intercom (General)";
 	pixel_x = -21
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/bluegrid,
 /area/shuttle/aegis/telecomms)
 "hkb" = (
 /obj/effect/floor_decal/techfloor/corner{
@@ -9425,7 +9748,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "hlp" = (
 /obj/structure/window/reinforced/survival_pod,
@@ -9493,8 +9816,11 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/structure/catwalk,
-/turf/simulated/floor/reinforced,
+/obj/machinery/camera/network/carrier{
+	dir = 8;
+	pixel_x = 12
+	},
+/turf/simulated/floor/bluegrid,
 /area/shuttle/aegis/telecomms)
 "hol" = (
 /obj/machinery/light/small{
@@ -9549,7 +9875,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/cic)
 "hpu" = (
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "hpv" = (
 /obj/machinery/vending/security,
@@ -9574,6 +9900,9 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/machinery/camera/network/carrier{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/starqpadjunction)
 "hqT" = (
@@ -9588,10 +9917,7 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "hrh" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
@@ -9688,7 +10014,7 @@
 "huf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "huF" = (
 /obj/structure/cable/green{
@@ -9716,6 +10042,12 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/washroom)
+"hvQ" = (
+/obj/machinery/camera/network/carrier{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/shuttle/aegis/rndlobby)
 "hwf" = (
 /obj/structure/curtain/open/shower,
 /obj/machinery/shower{
@@ -9801,7 +10133,7 @@
 	pixel_x = -12;
 	pixel_y = -24
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gateway)
 "hAu" = (
 /obj/machinery/light{
@@ -9860,7 +10192,7 @@
 	dir = 8;
 	pixel_x = -12
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/breakroom)
 "hBU" = (
 /obj/effect/floor_decal/industrial/outline/red,
@@ -9886,6 +10218,10 @@
 /area/shuttle/ursula)
 "hCf" = (
 /obj/machinery/computer/ship/sensors,
+/obj/machinery/camera/network/carrier{
+	dir = 8;
+	pixel_x = 12
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/aegis/slingcarrierdock)
 "hCj" = (
@@ -9934,7 +10270,7 @@
 /obj/effect/floor_decal/corner/green/bordercorner{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "hEI" = (
 /obj/machinery/computer/rdconsole/robotics{
@@ -10064,7 +10400,7 @@
 /obj/effect/floor_decal/corner/orange/bordercorner{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engoffice)
 "hGE" = (
 /obj/structure/bed/chair/wood{
@@ -10103,7 +10439,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/secoffice)
 "hIw" = (
 /obj/machinery/atmospherics/pipe/tank/nitrogen{
@@ -10221,6 +10557,19 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/reinforced,
 /area/shuttle/aegis/starboardbowairlock)
+"hNA" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 4
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 8;
+	pixel_x = 12
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/aegis/techstorage)
 "hOa" = (
 /obj/structure/table/standard,
 /obj/item/weapon/storage/firstaid/surgery,
@@ -10258,7 +10607,7 @@
 	dir = 1;
 	pixel_y = -26
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gateway)
 "hPP" = (
 /obj/structure/cable/green{
@@ -10287,7 +10636,7 @@
 	dir = 1;
 	pixel_y = 21
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/secoffice)
 "hRb" = (
 /obj/effect/floor_decal/techfloor{
@@ -10306,20 +10655,20 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engoffice)
 "hRR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engoffice)
 "hSo" = (
 /obj/structure/mopbucket,
 /obj/item/weapon/mop,
 /obj/item/weapon/reagent_containers/glass/bucket,
 /obj/effect/floor_decal/industrial/outline,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/janitorial)
 "hTs" = (
 /obj/item/device/radio/intercom{
@@ -10330,10 +10679,7 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/breakroom)
 "hTG" = (
 /obj/structure/cable/yellow{
@@ -10361,6 +10707,10 @@
 "hUo" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 6
+	},
+/obj/machinery/light{
+	dir = 4;
+	pixel_x = 12
 	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/aegis/lowersternhallway)
@@ -10417,7 +10767,10 @@
 	name = "Station Intercom (General)";
 	pixel_x = 21
 	},
-/turf/simulated/floor/tiled/milspec/raised,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/aegis/staginghangar)
 "hYl" = (
 /turf/simulated/wall/bay/r_wall,
@@ -10467,6 +10820,13 @@
 "iav" = (
 /turf/space,
 /area/shuttle/aegis/starfuelstorage)
+"iaw" = (
+/obj/effect/floor_decal/techfloor,
+/obj/machinery/camera/network/carrier{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/aegis/lowersternhallway)
 "iaL" = (
 /turf/simulated/wall/bay/r_wall,
 /area/shuttle/aegis/rndlobby)
@@ -10677,7 +11037,7 @@
 	pixel_x = 4;
 	pixel_y = 5
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "igW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -10720,7 +11080,7 @@
 /obj/effect/floor_decal/corner/orange/bordercorner{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "ijz" = (
 /obj/machinery/light{
@@ -10761,7 +11121,7 @@
 	dir = 1;
 	pixel_y = -26
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/secoffice)
 "ikn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
@@ -10848,6 +11208,12 @@
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/rnd)
 "inm" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/aegis/aicore)
 "inz" = (
@@ -10864,6 +11230,9 @@
 	},
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 1
+	},
+/obj/machinery/camera/network/carrier{
+	pixel_y = 20
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/rnd)
@@ -11019,10 +11388,7 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "isx" = (
 /obj/effect/floor_decal/techfloor/corner{
@@ -11088,10 +11454,6 @@
 	dir = 4
 	},
 /obj/item/device/geiger/wall/east,
-/obj/machinery/light{
-	dir = 4;
-	pixel_x = 12
-	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/aegis/lowersternhallway)
 "ivr" = (
@@ -11157,7 +11519,7 @@
 "ixG" = (
 /obj/structure/table/rack/shelf,
 /obj/machinery/light,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gateway)
 "ixK" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
@@ -11183,7 +11545,7 @@
 	dir = 8;
 	pixel_x = -12
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "iBg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -11213,10 +11575,7 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/breakroom)
 "iCO" = (
 /obj/structure/table/wooden_reinforced,
@@ -11240,7 +11599,7 @@
 "iDa" = (
 /obj/machinery/floodlight,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gateway)
 "iDc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -11503,7 +11862,7 @@
 	pixel_y = 5
 	},
 /obj/item/clothing/gloves/yellow,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "iNj" = (
 /obj/machinery/light/small{
@@ -11520,7 +11879,7 @@
 /area/shuttle/aegis/rnd)
 "iNO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gateway)
 "iNT" = (
 /turf/simulated/wall/bay/r_wall,
@@ -11622,8 +11981,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/structure/catwalk,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/bluegrid,
 /area/shuttle/aegis/telecomms)
 "iSp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -11661,10 +12019,7 @@
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "iTu" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -11871,8 +12226,7 @@
 "jbR" = (
 /obj/machinery/power/terminal,
 /obj/structure/cable/green,
-/obj/structure/catwalk,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/bluegrid,
 /area/shuttle/aegis/telecomms)
 "jcu" = (
 /obj/machinery/light/small{
@@ -11926,7 +12280,7 @@
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/red/border,
 /obj/machinery/light,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/secoffice)
 "jfQ" = (
 /obj/effect/floor_decal/techfloor{
@@ -11936,7 +12290,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/aegis/midsternhallway)
 "jfX" = (
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/secoffice)
 "jhQ" = (
 /obj/machinery/light{
@@ -11972,7 +12326,7 @@
 /obj/machinery/door/airlock/security{
 	name = "Aegis Security Office"
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/secoffice)
 "jjP" = (
 /obj/structure/cable/green{
@@ -12037,7 +12391,7 @@
 	dir = 8;
 	pixel_x = -12
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "jlw" = (
 /obj/random/plushielarge,
@@ -12232,7 +12586,7 @@
 /obj/structure/disposalpipe/junction{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/breakroom)
 "jrn" = (
 /obj/structure/loot_pile/surface/medicine_cabinet/fresh{
@@ -12267,7 +12621,7 @@
 	dir = 1;
 	pixel_y = 20
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "jsl" = (
 /obj/machinery/atmospherics/portables_connector{
@@ -12357,7 +12711,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 10
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "jvX" = (
 /turf/simulated/floor/carpet,
@@ -12400,7 +12754,7 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gateway)
 "jyK" = (
 /obj/effect/mist,
@@ -12482,7 +12836,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 10
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engoffice)
 "jCS" = (
 /turf/simulated/wall/bay/r_wall,
@@ -12499,7 +12853,7 @@
 	name = "Station Intercom (General)";
 	pixel_y = 21
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "jDv" = (
 /obj/structure/cable/green{
@@ -12532,7 +12886,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/breakroom)
 "jEx" = (
 /obj/structure/cable/green{
@@ -12797,10 +13151,7 @@
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/breakroom)
 "jLA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -12902,11 +13253,8 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "jQK" = (
 /obj/structure/reagent_dispensers/watertank/high,
@@ -13077,7 +13425,7 @@
 /area/shuttle/aegis/slingcarrierdock)
 "jXV" = (
 /obj/structure/closet/excavation,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gateway)
 "jYi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -13101,7 +13449,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engoffice)
 "jZo" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -13122,7 +13470,7 @@
 /obj/effect/floor_decal/corner/green/bordercorner{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "kbb" = (
 /obj/structure/disposalpipe/segment{
@@ -13164,7 +13512,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "kcZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -13194,6 +13542,15 @@
 /obj/machinery/door/airlock/angled_bay/double/glass,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/aegis/hangartwo)
+"kdn" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/obj/machinery/camera/network/carrier{
+	pixel_y = 20
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/aegis/staginghangar)
 "kfa" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -13262,7 +13619,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "kgy" = (
 /obj/machinery/disperser/front{
@@ -13334,7 +13691,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "kkw" = (
 /obj/structure/catwalk,
@@ -13507,7 +13864,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engoffice)
 "kpt" = (
 /obj/effect/floor_decal/techfloor{
@@ -13612,6 +13969,10 @@
 /obj/machinery/mineral/stacking_unit_console,
 /turf/simulated/wall/bay/r_wall,
 /area/shuttle/aegis/miningfoyer)
+"kut" = (
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/aegis/staginghangar)
 "kvo" = (
 /obj/machinery/door/firedoor,
 /obj/effect/low_wall_spawner/bay/reinforced/rglass,
@@ -13750,8 +14111,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/obj/structure/catwalk,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/bluegrid,
 /area/shuttle/aegis/telecomms)
 "kAG" = (
 /obj/machinery/atmospherics/binary/pump{
@@ -13769,7 +14129,10 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/milspec/raised,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/aegis/staginghangar)
 "kBZ" = (
 /obj/structure/railing{
@@ -13870,11 +14233,8 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 9
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 9
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "kFc" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/red,
@@ -14047,6 +14407,10 @@
 /obj/machinery/disperser/back{
 	dir = 1
 	},
+/obj/machinery/camera/network/carrier{
+	dir = 4;
+	pixel_x = -12
+	},
 /turf/simulated/floor/tiled/milspec/raised/turfpack/airless,
 /area/shuttle/aegis/slingcarrierdock)
 "kMR" = (
@@ -14057,6 +14421,10 @@
 	pixel_y = -24
 	},
 /obj/structure/cable/green,
+/obj/machinery/camera/network/carrier{
+	dir = 8;
+	pixel_x = 12
+	},
 /turf/simulated/floor,
 /area/shuttle/aegis/disposals)
 "kNx" = (
@@ -14078,7 +14446,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "kOZ" = (
 /obj/structure/railing/grey{
@@ -14128,7 +14496,10 @@
 	pixel_x = 12;
 	pixel_y = 24
 	},
-/turf/simulated/floor/tiled/milspec/raised,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/aegis/telecomms)
 "kQx" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -14145,8 +14516,10 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/obj/structure/catwalk,
-/turf/simulated/floor/reinforced,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/aicore)
 "kSe" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -14178,7 +14551,7 @@
 	},
 /obj/effect/floor_decal/borderfloorblack/corner,
 /obj/effect/floor_decal/corner/orange/bordercorner,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engoffice)
 "kTe" = (
 /obj/machinery/computer/ship/sensors{
@@ -14208,7 +14581,7 @@
 	pixel_x = -5
 	},
 /obj/structure/table/rack/shelf,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gateway)
 "kTN" = (
 /obj/structure/closet/crate,
@@ -14216,7 +14589,7 @@
 	dir = 1;
 	pixel_y = 20
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gateway)
 "kTP" = (
 /obj/structure/bed/chair/office/light,
@@ -14283,7 +14656,7 @@
 /area/shuttle/aegis/hangarfive)
 "kYd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gateway)
 "kYg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -14300,6 +14673,16 @@
 "kYh" = (
 /obj/structure/railing/grey{
 	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/aegis/staginghangar)
+"kYO" = (
+/obj/effect/floor_decal/techfloor/corner{
+	dir = 6
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 8;
+	pixel_x = 12
 	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/aegis/staginghangar)
@@ -14460,7 +14843,7 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "leU" = (
 /obj/machinery/door/airlock{
@@ -14556,13 +14939,23 @@
 /obj/effect/floor_decal/corner/green/bordercorner,
 /turf/simulated/floor/tiled,
 /area/shuttle/aegis/hangarone)
+"lhH" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 4;
+	pixel_x = -12
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/aegis/civaccesshallway)
 "liP" = (
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "ljx" = (
 /obj/machinery/recharger/wallcharger{
@@ -14854,7 +15247,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "ltL" = (
 /obj/effect/decal/cleanable/dirt,
@@ -14950,6 +15343,9 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/surgical1)
+"lzO" = (
+/turf/simulated/floor/greengrid,
+/area/shuttle/aegis/aicore)
 "lAk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -15078,7 +15474,7 @@
 /area/shuttle/aegis/explobriefroom)
 "lEO" = (
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "lFp" = (
 /obj/machinery/door/window{
@@ -15229,7 +15625,10 @@
 /turf/simulated/floor,
 /area/shuttle/aegis/uppersternhallway)
 "lIy" = (
-/turf/simulated/floor/tiled/milspec/raised,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/aegis/telecomms)
 "lIR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -15253,7 +15652,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gateway)
 "lKV" = (
 /obj/machinery/power/quantumpad{
@@ -15421,7 +15820,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "lPp" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
@@ -15437,7 +15836,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 6
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "lPO" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
@@ -15501,13 +15900,15 @@
 	dir = 8;
 	pixel_x = 24
 	},
-/obj/structure/catwalk,
 /obj/item/device/radio/intercom{
 	dir = 1;
 	name = "Station Intercom (General)";
 	pixel_y = 21
 	},
-/turf/simulated/floor/reinforced,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/aicore)
 "lSp" = (
 /turf/simulated/wall/bay/r_wall,
@@ -15526,10 +15927,7 @@
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/breakroom)
 "lST" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/blue{
@@ -15602,13 +16000,12 @@
 	pixel_x = 12;
 	pixel_y = 24
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "lUp" = (
 /obj/effect/floor_decal/borderfloorblack,
-/obj/effect/floor_decal/corner/white/border,
 /obj/machinery/light,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "lUw" = (
 /obj/structure/cable/green{
@@ -15619,6 +16016,10 @@
 	dir = 1;
 	name = "north bump";
 	pixel_y = 24
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 8;
+	pixel_x = 12
 	},
 /turf/simulated/floor,
 /area/shuttle/aegis/reactoraccess)
@@ -15705,6 +16106,10 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 4
 	},
+/obj/machinery/camera/network/carrier{
+	dir = 8;
+	pixel_x = 12
+	},
 /turf/simulated/floor/tiled,
 /area/shuttle/aegis/secbowcheckpoint)
 "lZf" = (
@@ -15730,7 +16135,6 @@
 	input_attempt = 1;
 	name = "AI Core SMES"
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/cable/blue{
 	d2 = 2;
 	icon_state = "0-2"
@@ -15739,8 +16143,7 @@
 	dir = 4;
 	pixel_x = 12
 	},
-/obj/structure/catwalk,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/greengrid,
 /area/shuttle/aegis/aicore)
 "lZE" = (
 /obj/structure/table/marble,
@@ -15908,18 +16311,22 @@
 /obj/machinery/alarm{
 	pixel_y = 22
 	},
-/turf/simulated/floor/tiled/milspec/raised,
+/obj/effect/floor_decal/industrial/warning/corner,
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/aegis/staginghangar)
 "mfd" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/cell_charger,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "mfj" = (
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/purple/border,
 /obj/structure/table/reinforced,
 /obj/machinery/recharger,
+/obj/machinery/camera/network/carrier{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/rnd)
 "mfp" = (
@@ -16049,7 +16456,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "mlo" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
@@ -16143,7 +16550,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engoffice)
 "mop" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -16336,6 +16743,10 @@
 /area/shuttle/aegis/hangarone)
 "mtG" = (
 /obj/machinery/atmospherics/binary/pump/high_power,
+/obj/machinery/camera/network/carrier{
+	dir = 4;
+	pixel_x = -12
+	},
 /turf/simulated/floor,
 /area/shuttle/aegis/portfuelstorage)
 "mul" = (
@@ -16390,6 +16801,22 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/aegis/civaccesshallway)
+"mxr" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 8
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 4;
+	pixel_x = -12
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/aegis/hangarfour)
 "mxF" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
@@ -16416,7 +16843,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "mzd" = (
 /obj/effect/floor_decal/borderfloorblack,
@@ -16541,16 +16968,13 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "mGA" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "mGI" = (
 /obj/effect/floor_decal/techfloor{
@@ -16712,6 +17136,16 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/secarmory)
+"mMU" = (
+/obj/machinery/light,
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/corner/brown/border,
+/obj/machinery/camera/network/carrier{
+	dir = 4;
+	pixel_x = -12
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/aegis/hangarsix)
 "mMZ" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -16840,11 +17274,8 @@
 /area/shuttle/aegis/starsciencemaint)
 "mQB" = (
 /obj/machinery/suit_storage_unit/standard_unit,
-/obj/effect/floor_decal/corner/white/border{
-	dir = 8
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "mRH" = (
 /obj/machinery/computer/ship/helm,
@@ -16964,6 +17395,9 @@
 	dir = 4
 	},
 /obj/structure/flora/ausbushes/fullgrass,
+/obj/machinery/camera/network/carrier{
+	dir = 1
+	},
 /turf/simulated/floor/grass2,
 /area/shuttle/aegis/botany)
 "mWz" = (
@@ -17030,7 +17464,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "mZg" = (
 /obj/structure/cable/green{
@@ -17046,7 +17480,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engoffice)
 "mZx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -17084,6 +17518,15 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/medicalbay)
+"nbc" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/structure/sign/signnew/flammables{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/aegis/lowersternhallway)
 "nbQ" = (
 /obj/structure/bed/chair/bay/comfy/black{
 	dir = 1
@@ -17106,7 +17549,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "ncr" = (
 /obj/structure/closet/secure_closet/security,
@@ -17142,6 +17585,16 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/milspec/raised,
+/area/shuttle/aegis/lowersternhallway)
+"nda" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 8;
+	pixel_x = 12
+	},
+/turf/simulated/floor/tiled/dark,
 /area/shuttle/aegis/lowersternhallway)
 "ndC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -17215,7 +17668,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engoffice)
 "neW" = (
 /obj/machinery/power/apc{
@@ -17315,7 +17768,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 9
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "niW" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
@@ -17551,8 +18004,8 @@
 	dir = 8;
 	pixel_x = -12
 	},
-/obj/structure/catwalk,
-/turf/simulated/floor/reinforced,
+/obj/machinery/porta_turret/ai_defense,
+/turf/simulated/floor/greengrid,
 /area/shuttle/aegis/aicore)
 "npc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -17561,7 +18014,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/breakroom)
 "npd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -17604,6 +18057,10 @@
 "nsn" = (
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 10
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 4;
+	pixel_x = -12
 	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/aegis/secureaccess)
@@ -17685,7 +18142,7 @@
 	},
 /obj/item/weapon/storage/box/handcuffs,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/secoffice)
 "ntM" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
@@ -17701,7 +18158,7 @@
 	pixel_y = -28;
 	req_access = list(3)
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "ntZ" = (
 /obj/machinery/light{
@@ -17875,7 +18332,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "nyK" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
@@ -17888,7 +18345,7 @@
 	dir = 4;
 	pixel_x = 12
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "nyN" = (
 /obj/machinery/mineral/stacking_machine,
@@ -17999,6 +18456,10 @@
 /area/shuttle/aegis/lowersternhallway)
 "nDB" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/camera/network/carrier{
+	dir = 8;
+	pixel_x = 12
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/aegis/portbowairlock)
 "nDD" = (
@@ -18012,7 +18473,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "nDU" = (
 /obj/structure/shuttle/engine/heater,
@@ -18066,6 +18527,9 @@
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 10
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/medbaylobby)
@@ -18185,7 +18649,7 @@
 	dir = 1;
 	pixel_y = 20
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "nIp" = (
 /obj/machinery/recharge_station,
@@ -18202,7 +18666,11 @@
 	pixel_y = 24
 	},
 /obj/structure/closet/l3closet/janitor,
-/turf/simulated/floor/tiled,
+/obj/machinery/camera/network/carrier{
+	dir = 4;
+	pixel_x = -12
+	},
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/janitorial)
 "nIw" = (
 /obj/effect/floor_decal/techfloor{
@@ -18244,7 +18712,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/breakroom)
 "nJl" = (
 /obj/machinery/light/small{
@@ -18356,7 +18824,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "nOu" = (
 /turf/simulated/wall/bay/r_wall,
@@ -18483,7 +18951,10 @@
 	dir = 1;
 	pixel_y = -22
 	},
-/turf/simulated/floor/tiled/milspec/raised,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/aegis/telecomms)
 "nXp" = (
 /obj/machinery/door/firedoor/glass,
@@ -18532,7 +19003,7 @@
 /obj/effect/floor_decal/corner/orange/bordercorner{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "nZD" = (
 /obj/structure/railing{
@@ -18554,7 +19025,7 @@
 	dir = 8;
 	pixel_x = 24
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/janitorial)
 "oac" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -18756,13 +19227,12 @@
 /area/shuttle/aegis/starfuelstorage)
 "oet" = (
 /obj/machinery/shield_gen/external,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/milspec/raised,
+/turf/simulated/floor/bluegrid,
 /area/shuttle/aegis/staginghangar)
 "oeA" = (
 /obj/effect/floor_decal/borderfloorblack/corner,
@@ -18810,7 +19280,7 @@
 	name = "Station Intercom (General)";
 	pixel_y = 21
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "ofu" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -18822,6 +19292,13 @@
 	},
 /turf/space,
 /area/space)
+"oiq" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/obj/structure/table/steel_reinforced,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/aegis/staginghangar)
 "oiz" = (
 /obj/structure/bed/chair/bay/comfy/green{
 	dir = 1
@@ -18890,10 +19367,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/aegis/slingcarrierdock)
-"ojI" = (
-/obj/machinery/light,
-/turf/simulated/floor/tiled/milspec/raised,
-/area/shuttle/aegis/aicore)
 "ojK" = (
 /obj/structure/ore_box,
 /turf/simulated/floor/tiled/techfloor,
@@ -18992,14 +19465,11 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
 /obj/structure/cable/green{
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "opS" = (
 /obj/machinery/atmospherics/binary/pump{
@@ -19011,10 +19481,11 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
+/obj/machinery/camera/network/carrier{
+	dir = 8;
+	pixel_x = 12
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "orR" = (
 /obj/structure/railing{
@@ -19047,10 +19518,7 @@
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/breakroom)
 "otU" = (
 /obj/structure/disposalpipe/trunk{
@@ -19076,7 +19544,11 @@
 /obj/effect/floor_decal/corner/green/bordercorner{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/obj/machinery/light{
+	dir = 8;
+	pixel_x = -12
+	},
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "ouu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -19103,11 +19575,29 @@
 	},
 /turf/simulated/wall/rpshull,
 /area/shuttle/baby_mammoth)
+"ovx" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 9
+	},
+/obj/machinery/camera/network/carrier{
+	pixel_y = 20
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/aegis/hangarthree)
 "ovS" = (
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/aegis/telecomms)
@@ -19120,7 +19610,7 @@
 /turf/simulated/floor/reinforced,
 /area/shuttle/shuttle3/carrierhangar1)
 "owV" = (
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "oxi" = (
 /obj/structure/window/reinforced{
@@ -19391,12 +19881,11 @@
 /area/shuttle/aegis/hangarthree)
 "oFQ" = (
 /obj/machinery/shield_capacitor,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/cable/green{
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/tiled/milspec/raised,
+/turf/simulated/floor/bluegrid,
 /area/shuttle/aegis/staginghangar)
 "oFW" = (
 /obj/machinery/atmospherics/pipe/tank/phoron/full{
@@ -19484,7 +19973,7 @@
 "oKC" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/green/border,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "oLo" = (
 /obj/structure/table/steel,
@@ -19494,7 +19983,7 @@
 /obj/item/weapon/grenade/chem_grenade/cleaner,
 /obj/item/weapon/reagent_containers/spray/cleaner,
 /obj/item/weapon/reagent_containers/spray/cleaner,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/janitorial)
 "oLH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -19628,8 +20117,7 @@
 /area/shuttle/aegis/slingcarrierdock)
 "oSr" = (
 /obj/effect/floor_decal/borderfloorblack/corner,
-/obj/effect/floor_decal/corner/white/bordercorner,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "oSO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -19642,7 +20130,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/secoffice)
 "oUm" = (
 /obj/structure/cable/green{
@@ -20079,6 +20567,15 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/aegis/lowersternhallway)
+"poI" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/aegis/telecomms)
 "ppU" = (
 /obj/structure/railing{
 	dir = 8
@@ -20125,7 +20622,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "ptu" = (
 /obj/structure/railing,
@@ -20133,6 +20630,23 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/shuttle/aegis/starlowermaint)
+"ptX" = (
+/obj/machinery/light{
+	dir = 1;
+	pixel_y = 20
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 8;
+	pixel_x = 12
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/aegis/hangarfive)
 "pur" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/weapon/storage/box/nifsofts_pilot{
@@ -20157,7 +20671,7 @@
 	dir = 8;
 	pixel_x = -12
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "pvk" = (
 /obj/structure/catwalk,
@@ -20190,7 +20704,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "pwY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -20240,7 +20754,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "pyi" = (
 /obj/machinery/portable_atmospherics/hydroponics,
@@ -20309,10 +20823,11 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
+/obj/machinery/camera/network/carrier{
+	dir = 8;
+	pixel_x = 12
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/breakroom)
 "pAM" = (
 /obj/effect/decal/cleanable/dirt,
@@ -20379,14 +20894,11 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
 /obj/machinery/light{
 	dir = 4;
 	pixel_x = 12
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "pED" = (
 /obj/machinery/vending/wallmed1{
@@ -20398,7 +20910,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "pEF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -20735,8 +21247,18 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/secoffice)
+"pTm" = (
+/obj/effect/floor_decal/techfloor/corner{
+	dir = 5
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 8;
+	pixel_x = 12
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/aegis/staginghangar)
 "pTp" = (
 /obj/structure/catwalk,
 /obj/machinery/light/small,
@@ -21075,13 +21597,13 @@
 	dir = 1;
 	pixel_y = -35
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "qdh" = (
 /obj/structure/closet/jcloset,
 /obj/item/weapon/soap/nanotrasen,
 /obj/effect/floor_decal/industrial/outline,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/janitorial)
 "qdn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -21090,7 +21612,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/janitorial)
 "qdY" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -21127,6 +21649,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/aegis/starbowhallway)
+"qhe" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -28
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/aegis/telecomms)
 "qhi" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 1
@@ -21140,7 +21669,7 @@
 	pixel_y = 28;
 	req_one_access = list(1,5,43,67)
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "qhJ" = (
 /obj/item/weapon/paper_bin,
@@ -21165,7 +21694,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engoffice)
 "qig" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -21281,7 +21810,7 @@
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gateway)
 "qnt" = (
 /obj/machinery/light/small{
@@ -21655,10 +22184,7 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/breakroom)
 "qxi" = (
 /obj/machinery/shield_diffuser,
@@ -21766,6 +22292,10 @@
 /obj/machinery/mech_recharger,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/mecha/combat/fighter/pinnace/loaded,
+/obj/machinery/camera/network/carrier{
+	dir = 4;
+	pixel_x = -12
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/aegis/starboardbowairlock)
 "qBj" = (
@@ -21883,7 +22413,11 @@
 	dir = 8;
 	pixel_x = 24
 	},
-/turf/simulated/floor/tiled/milspec/raised,
+/obj/machinery/light{
+	dir = 1;
+	pixel_y = 20
+	},
+/turf/simulated/floor/greengrid,
 /area/shuttle/aegis/aicore)
 "qFz" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -21957,10 +22491,7 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "qIR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -21993,7 +22524,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "qKg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -22011,10 +22542,7 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/breakroom)
 "qLe" = (
 /obj/structure/closet/secure_closet/miner{
@@ -22037,7 +22565,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "qLq" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -22188,6 +22716,19 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/rnd)
+"qQA" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 4;
+	pixel_x = 12
+	},
+/obj/machinery/camera/network/carrier{
+	pixel_y = 20
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/aegis/portbowhallway)
 "qQU" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 4
@@ -22240,7 +22781,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engoffice)
 "qSs" = (
 /obj/effect/floor_decal/techfloor/orange{
@@ -22344,7 +22885,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 5
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "rbI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -22402,7 +22943,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gateway)
 "rcn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -22491,7 +23032,7 @@
 /obj/item/weapon/storage/briefcase/inflatable{
 	pixel_x = -3
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "rdE" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -22539,6 +23080,9 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/machinery/camera/network/carrier{
+	pixel_y = 20
+	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/aegis/lowersternhallway)
 "rgq" = (
@@ -22612,7 +23156,7 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engoffice)
 "riD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -22699,6 +23243,16 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/aegis/lowersternhallway)
+"rkz" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 4;
+	pixel_x = -12
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/aegis/starbowhallway)
 "rkB" = (
 /obj/structure/closet/crate/radiation,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -22708,7 +23262,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 6
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "rlq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -22749,6 +23303,10 @@
 /area/shuttle/aegis/hangarone)
 "rnt" = (
 /obj/machinery/atmospherics/binary/pump/high_power,
+/obj/machinery/camera/network/carrier{
+	dir = 8;
+	pixel_x = 12
+	},
 /turf/simulated/floor,
 /area/shuttle/aegis/starfuelstorage)
 "rnG" = (
@@ -23094,7 +23652,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "rvu" = (
 /obj/effect/floor_decal/borderfloorblack,
@@ -23134,7 +23692,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "rwi" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
@@ -23208,7 +23766,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "rzk" = (
 /obj/structure/catwalk,
@@ -23287,6 +23845,16 @@
 "rEw" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/aegis/breakroom)
+"rEG" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 4;
+	pixel_x = -12
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/aegis/uppersternhallway)
 "rET" = (
 /obj/random/powercell,
 /obj/effect/decal/cleanable/dirt,
@@ -23365,7 +23933,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engoffice)
 "rIT" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -23422,7 +23990,7 @@
 	dir = 4;
 	pixel_x = 12
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "rKb" = (
 /obj/machinery/computer/ship/navigation,
@@ -23491,6 +24059,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/warning/dust,
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/reinforced/airless,
 /area/shuttle/aegis/slingcarrierdock)
 "rLw" = (
@@ -23549,7 +24118,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "rNe" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -23591,7 +24160,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "rOq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -23632,14 +24201,11 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = 24
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "rPc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -23688,7 +24254,7 @@
 /obj/item/device/gps/security,
 /obj/item/device/gps/security,
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/secoffice)
 "rPN" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
@@ -23701,7 +24267,7 @@
 	dir = 1;
 	pixel_y = 20
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "rQr" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -23737,6 +24303,12 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/shuttle/aegis/disposals)
+"rRa" = (
+/obj/machinery/camera/network/carrier{
+	pixel_y = 20
+	},
+/turf/simulated/floor/greengrid,
+/area/shuttle/aegis/aicore)
 "rRc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -23946,6 +24518,7 @@
 /obj/machinery/pointdefense{
 	id_tag = "aeg_pd_control"
 	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/airless,
 /area/shuttle/aegis/slingcarrierdock)
 "rZi" = (
@@ -23981,7 +24554,15 @@
 /turf/simulated/floor,
 /area/shuttle/aegis/staruppermaint)
 "rZM" = (
-/turf/simulated/floor/tiled/milspec/raised,
+/obj/item/device/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/obj/item/device/radio/intercom/custom{
+	dir = 8;
+	pixel_x = -21
+	},
+/turf/simulated/floor/greengrid,
 /area/shuttle/aegis/aicore)
 "san" = (
 /obj/effect/floor_decal/techfloor{
@@ -24032,7 +24613,7 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "scQ" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -24094,7 +24675,7 @@
 	dir = 8;
 	pixel_x = 22
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "sgz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -24198,13 +24779,11 @@
 	input_attempt = 1;
 	name = "Telecomms SMES"
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/cable/blue{
 	d2 = 8;
 	icon_state = "0-8"
 	},
-/obj/structure/catwalk,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/bluegrid,
 /area/shuttle/aegis/telecomms)
 "skS" = (
 /obj/structure/catwalk,
@@ -24244,7 +24823,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "soJ" = (
 /obj/structure/window/reinforced,
@@ -24383,7 +24962,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/breakroom)
 "stN" = (
 /obj/structure/window/plastitanium/full,
@@ -24611,7 +25190,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/aegis/rndlobby)
 "sCt" = (
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engoffice)
 "sCA" = (
 /obj/structure/cable/green{
@@ -24689,6 +25268,12 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/echidna)
+"sIn" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/aegis/staginghangar)
 "sIv" = (
 /obj/structure/bed/chair/sofa/corner/brown{
 	dir = 4
@@ -24739,7 +25324,7 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "sLC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -24871,6 +25456,10 @@
 	},
 /turf/space,
 /area/shuttle/aegis/reactorroom)
+"sPQ" = (
+/obj/effect/floor_decal/industrial/warning/corner,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/aegis/staginghangar)
 "sPR" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 1
@@ -24944,6 +25533,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/shuttle/aegis/hangartwo)
+"sRg" = (
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "aeg_disposal_conveyor"
+	},
+/obj/machinery/camera/network/carrier{
+	pixel_y = 20
+	},
+/turf/simulated/floor/reinforced,
+/area/shuttle/aegis/disposals)
 "sST" = (
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/purple/border,
@@ -24962,7 +25561,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "sTt" = (
 /obj/structure/cable/green{
@@ -25098,7 +25697,7 @@
 	dir = 4;
 	pixel_x = 24
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "sZy" = (
 /obj/machinery/atmospherics/binary/pump/on{
@@ -25183,7 +25782,7 @@
 	dir = 5
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "taW" = (
 /obj/structure/railing/grey{
@@ -25214,6 +25813,9 @@
 	},
 /obj/effect/floor_decal/corner/paleblue/bordercorner{
 	dir = 4
+	},
+/obj/machinery/camera/network/carrier{
+	pixel_y = 20
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/medicalbay)
@@ -25256,14 +25858,11 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 8
-	},
 /obj/machinery/light{
 	dir = 8;
 	pixel_x = -12
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "tek" = (
 /obj/machinery/computer/atmos_alert,
@@ -25332,7 +25931,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "tgu" = (
 /obj/structure/cable/green{
@@ -25426,7 +26025,7 @@
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/green/border,
 /obj/machinery/light,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "tjX" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -25451,6 +26050,20 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/aegis/secoffice)
+"tmq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 4;
+	pixel_x = -12
+	},
+/turf/simulated/floor/tiled/white,
+/area/shuttle/aegis/washroom)
 "tni" = (
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/exploarmory)
@@ -25528,6 +26141,19 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/stargazer)
+"toF" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 4;
+	pixel_x = -12
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/aegis/lowersternhallway)
 "tpm" = (
 /obj/structure/cable/blue{
 	d1 = 1;
@@ -25572,6 +26198,10 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 8;
+	pixel_x = 12
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/aegis/civaccesshallway)
@@ -25627,8 +26257,7 @@
 	dir = 8;
 	pixel_x = 24
 	},
-/obj/structure/catwalk,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/bluegrid,
 /area/shuttle/aegis/telecomms)
 "tux" = (
 /obj/structure/flora/ausbushes/lavendergrass,
@@ -25701,7 +26330,7 @@
 /obj/structure/disposalpipe/junction{
 	dir = 2
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/breakroom)
 "tyw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -25948,7 +26577,7 @@
 	pixel_y = 5
 	},
 /obj/item/clothing/glasses/welding,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "tGt" = (
 /obj/effect/floor_decal/techfloor/corner{
@@ -26080,6 +26709,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/shuttle/aegis/staruppermaint)
+"tKC" = (
+/obj/effect/floor_decal/techfloor/corner{
+	dir = 9
+	},
+/obj/machinery/camera/network/carrier{
+	pixel_y = 20
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/aegis/midsternhallway)
 "tKK" = (
 /obj/machinery/door/airlock/external{
 	icon_state = "door_locked";
@@ -26184,7 +26822,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 9
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "tML" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -26259,7 +26897,7 @@
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/orange/border,
 /obj/machinery/light,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "tPJ" = (
 /obj/effect/floor_decal/techfloor,
@@ -26290,7 +26928,7 @@
 "tRS" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/red/border,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/secoffice)
 "tRU" = (
 /obj/machinery/vending/boozeomat,
@@ -26394,7 +27032,11 @@
 	pixel_x = -24;
 	pixel_y = 12
 	},
-/turf/simulated/floor/tiled/milspec/raised,
+/obj/machinery/light{
+	dir = 1;
+	pixel_y = 20
+	},
+/turf/simulated/floor/greengrid,
 /area/shuttle/aegis/aicore)
 "tVj" = (
 /obj/structure/railing/grey{
@@ -26501,7 +27143,7 @@
 "tYF" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/recharger,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "tZi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -26589,7 +27231,7 @@
 	pixel_y = 28;
 	req_one_access = list(43,67,5)
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "ubS" = (
 /obj/structure/table/rack/shelf,
@@ -26604,7 +27246,7 @@
 /obj/item/weapon/tank/jetpack/carbondioxide,
 /obj/item/clothing/suit/space/void/pilot,
 /obj/item/clothing/head/helmet/space/void/pilot,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "ucn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -26633,7 +27275,7 @@
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 5
 	},
-/obj/structure/sign/signnew/danger{
+/obj/structure/sign/signnew/explosives{
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/dark,
@@ -26702,7 +27344,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/milspec/raised,
+/turf/simulated/floor/bluegrid,
 /area/shuttle/aegis/staginghangar)
 "ueT" = (
 /obj/structure/disposalpipe/segment{
@@ -26719,11 +27361,12 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled,
+/obj/machinery/camera/network/carrier{
+	dir = 8;
+	pixel_x = 12
+	},
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "ufY" = (
 /obj/machinery/light/small{
@@ -26846,6 +27489,16 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/rnd)
+"ukU" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 4;
+	pixel_x = -12
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/aegis/midsternhallway)
 "ulL" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
@@ -26930,7 +27583,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engoffice)
 "uoI" = (
 /obj/structure/catwalk,
@@ -26946,10 +27599,7 @@
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/breakroom)
 "upQ" = (
 /obj/machinery/portable_atmospherics/powered/pump/filled,
@@ -27064,7 +27714,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/breakroom)
 "usC" = (
 /obj/structure/sign/poster/nanotrasen{
@@ -27264,6 +27914,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/shuttle/aegis/hangarthree)
+"uxK" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/aegis/staginghangar)
 "uyH" = (
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_x = 24;
@@ -27281,7 +27937,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "uzs" = (
 /obj/effect/floor_decal/techfloor{
@@ -27582,7 +28238,7 @@
 /obj/structure/sign/signnew/secure{
 	pixel_x = 32
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "uKT" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -27758,7 +28414,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "uPU" = (
 /obj/structure/window/reinforced{
@@ -27776,6 +28432,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/shuttle/aegis/portexplomaint)
+"uQk" = (
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8;
+	name = "Refuelling Port"
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 10
+	},
+/turf/simulated/floor/reinforced,
+/area/shuttle/aegis/starfuelstorage)
 "uQs" = (
 /obj/machinery/atmospherics/unary/engine/bigger{
 	dir = 1
@@ -27811,7 +28478,7 @@
 /obj/item/device/suit_cooling_unit,
 /obj/item/device/suit_cooling_unit,
 /obj/item/device/suit_cooling_unit,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "uRt" = (
 /obj/structure/closet/secure_closet/guncabinet{
@@ -27832,7 +28499,7 @@
 /obj/item/weapon/cell/device/weapon,
 /obj/item/weapon/cell/device/weapon,
 /obj/item/weapon/cell/device/weapon,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gateway)
 "uRJ" = (
 /obj/machinery/power/apc{
@@ -27862,11 +28529,8 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "uSL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -27935,6 +28599,9 @@
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/structure/catwalk,
+/obj/machinery/camera/network/carrier{
+	dir = 1
+	},
 /turf/simulated/floor,
 /area/shuttle/aegis/starsternairlock)
 "uVx" = (
@@ -28172,7 +28839,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "veB" = (
 /turf/simulated/floor/tiled/techfloor,
@@ -28219,8 +28886,7 @@
 	dir = 8;
 	pixel_x = -12
 	},
-/obj/structure/catwalk,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/bluegrid,
 /area/shuttle/aegis/telecomms)
 "vfq" = (
 /obj/structure/window/plastitanium/full,
@@ -28352,7 +29018,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "vnd" = (
 /obj/machinery/optable,
@@ -28587,10 +29253,7 @@
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "vsz" = (
 /obj/structure/cable/green{
@@ -28674,7 +29337,7 @@
 	dir = 4
 	},
 /obj/machinery/photocopier/faxmachine,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engoffice)
 "vvJ" = (
 /obj/structure/table/glass,
@@ -28718,7 +29381,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "vwg" = (
 /obj/machinery/mineral/input,
@@ -28794,7 +29457,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "vyZ" = (
 /obj/structure/table/standard,
@@ -28824,7 +29487,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "vCw" = (
 /obj/machinery/gateway,
@@ -28919,7 +29582,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "vFc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -28968,6 +29631,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/shuttle/aegis/hangartwo)
+"vHI" = (
+/obj/machinery/shield_diffuser,
+/turf/simulated/floor/reinforced/airless,
+/area/shuttle/aegis/slingcarrierdock)
 "vIv" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -28996,7 +29663,7 @@
 	layer = 3.3;
 	pixel_y = 26
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "vJo" = (
 /turf/simulated/floor/tiled,
@@ -29062,6 +29729,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/shuttle/aegis/hangarone)
+"vKu" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 8;
+	pixel_x = 12
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/aegis/slingcarrierdock)
 "vLt" = (
 /obj/machinery/atmospherics/unary/engine/bigger{
 	dir = 1
@@ -29178,10 +29855,7 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/breakroom)
 "vOo" = (
 /obj/effect/floor_decal/borderfloorwhite/corner,
@@ -29213,6 +29887,16 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/aegis/portbowhallway)
+"vQb" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/aegis/explobriefroom)
 "vQf" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -29303,7 +29987,7 @@
 /obj/item/clothing/shoes/magboots,
 /obj/item/weapon/tank/jetpack/oxygen,
 /obj/item/weapon/tank/jetpack/oxygen,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "vTc" = (
 /obj/item/clothing/accessory/stethoscope,
@@ -29347,7 +30031,7 @@
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "vUf" = (
 /obj/machinery/light,
@@ -29610,7 +30294,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gateway)
 "wdf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -29674,7 +30358,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gatewayeva)
 "wer" = (
 /obj/structure/cable/green{
@@ -29682,8 +30366,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/structure/catwalk,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/greengrid,
 /area/shuttle/aegis/aicore)
 "wey" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
@@ -29916,7 +30599,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "wlq" = (
 /turf/simulated/wall/bay/r_wall,
@@ -29932,7 +30615,7 @@
 	dir = 4;
 	pixel_x = -22
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engoffice)
 "wlz" = (
 /obj/effect/floor_decal/grass_edge{
@@ -30233,7 +30916,7 @@
 /obj/machinery/alarm{
 	pixel_y = 22
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "wzz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -30252,7 +30935,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/aegis/slingcarrierdock)
 "wzH" = (
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/breakroom)
 "wAf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -30422,11 +31105,21 @@
 	dir = 1;
 	pixel_y = 20
 	},
-/obj/structure/sign/signnew/radiation{
-	pixel_y = 32
-	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/aegis/reactorcr)
+"wIB" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 4;
+	pixel_x = -12
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/aegis/gatewayeva)
 "wJJ" = (
 /obj/machinery/bodyscanner,
 /obj/effect/floor_decal/industrial/outline/blue,
@@ -30440,7 +31133,7 @@
 /obj/effect/floor_decal/corner/orange/bordercorner{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "wKB" = (
 /obj/machinery/light{
@@ -30464,7 +31157,7 @@
 	name = "Station Intercom (General)";
 	pixel_x = 21
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/janitorial)
 "wMp" = (
 /obj/effect/floor_decal/techfloor/corner{
@@ -30481,7 +31174,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "wMF" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
@@ -30531,7 +31224,7 @@
 /obj/item/weapon/storage/briefcase/inflatable,
 /obj/item/weapon/storage/briefcase/inflatable,
 /obj/item/weapon/storage/briefcase/inflatable,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "wOA" = (
 /obj/effect/floor_decal/borderfloorblack,
@@ -30681,7 +31374,7 @@
 /turf/simulated/floor,
 /area/shuttle/aegis/portexplomaint)
 "wUy" = (
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/janitorial)
 "wVi" = (
 /obj/structure/table/standard,
@@ -30701,6 +31394,15 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/rnd)
+"wVM" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/structure/sign/signnew/flammables{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/aegis/lowersternhallway)
 "wVN" = (
 /obj/vehicle/train/engine{
 	dir = 2
@@ -30758,7 +31460,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engoffice)
 "wXk" = (
 /turf/space,
@@ -30800,7 +31502,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/exploarmory)
 "wZI" = (
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "xab" = (
 /turf/simulated/floor/tiled/dark,
@@ -30831,6 +31533,28 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/pathfinderroom)
+"xbc" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 9
+	},
+/obj/machinery/camera/network/carrier{
+	pixel_y = 20
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/aegis/hangarfive)
+"xbj" = (
+/obj/effect/floor_decal/techfloor/corner{
+	dir = 10
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 4;
+	pixel_x = -12
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/aegis/lowersternhallway)
 "xbm" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
@@ -30981,10 +31705,19 @@
 	},
 /turf/simulated/floor/tiled,
 /area/shuttle/aegis/hangarfour)
+"xhm" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/aegis/staginghangar)
 "xhn" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
 	icon_state = "pipe-c"
+	},
+/obj/machinery/camera/network/carrier{
+	pixel_y = 20
 	},
 /turf/simulated/floor/reinforced,
 /area/shuttle/aegis/slingcarrierdock)
@@ -31021,7 +31754,10 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/tiled/milspec/raised,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/aegis/telecomms)
 "xil" = (
 /obj/machinery/power/apc{
@@ -31049,7 +31785,11 @@
 	},
 /obj/effect/floor_decal/industrial/outline/blue,
 /obj/structure/dispenser/oxygen,
-/turf/simulated/floor/tiled,
+/obj/machinery/camera/network/carrier{
+	dir = 4;
+	pixel_x = -12
+	},
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "xiP" = (
 /obj/structure/cable/green{
@@ -31178,7 +31918,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "xno" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -31201,10 +31941,7 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/breakroom)
 "xnF" = (
 /obj/structure/table/rack/shelf,
@@ -31213,7 +31950,7 @@
 	pixel_y = 11
 	},
 /obj/item/device/lightreplacer,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "xoH" = (
 /obj/structure/railing{
@@ -31253,7 +31990,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engoffice)
 "xpM" = (
 /obj/effect/floor_decal/techfloor/corner{
@@ -31321,17 +32058,11 @@
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "xss" = (
 /obj/machinery/suit_cycler/engineering,
 /obj/effect/floor_decal/borderfloorblack{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/white/border{
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -31339,7 +32070,7 @@
 	dir = 4;
 	pixel_x = 12
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/eva)
 "xsP" = (
 /turf/simulated/wall/bay/r_wall,
@@ -31349,7 +32080,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/gateway)
 "xtc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -31387,7 +32118,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/secoffice)
 "xuz" = (
 /obj/machinery/atmospherics/unary/engine/bigger{
@@ -31423,7 +32154,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "xvx" = (
 /obj/structure/table/wooden_reinforced,
@@ -31511,10 +32242,7 @@
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/breakroom)
 "xxE" = (
 /obj/structure/railing/grey{
@@ -31522,6 +32250,16 @@
 	},
 /obj/structure/table/steel_reinforced,
 /obj/machinery/cell_charger,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/aegis/staginghangar)
+"xxM" = (
+/obj/effect/floor_decal/techfloor/corner{
+	dir = 9
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 4;
+	pixel_x = -12
+	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/aegis/staginghangar)
 "xyF" = (
@@ -31625,7 +32363,7 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/orange/border,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "xCv" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -31717,7 +32455,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "xFR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
@@ -31799,7 +32537,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "xJr" = (
 /obj/effect/floor_decal/techfloor,
@@ -31823,7 +32561,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engstorage)
 "xJU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -31840,6 +32578,10 @@
 	},
 /obj/effect/floor_decal/corner/pink/border{
 	dir = 8
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 4;
+	pixel_x = -12
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/aegis/surgical1)
@@ -31939,7 +32681,7 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "xMu" = (
 /obj/structure/window/plastitanium/full,
@@ -32034,7 +32776,7 @@
 	dir = 1;
 	pixel_y = 18
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/janitorial)
 "xQa" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -32074,6 +32816,10 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/aegis/telecomms)
 "xRr" = (
@@ -32093,6 +32839,18 @@
 	},
 /turf/simulated/floor/carpet,
 /area/shuttle/aegis/suite1)
+"xRP" = (
+/obj/machinery/turretid/stun{
+	pixel_y = -24;
+	check_synth = 1;
+	name = "Aegis AI turret control panel"
+	},
+/obj/item/device/radio/intercom/private{
+	dir = 4;
+	pixel_x = 21
+	},
+/turf/simulated/floor/greengrid,
+/area/shuttle/aegis/aicore)
 "xRS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 10
@@ -32113,7 +32871,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/engoffice)
 "xSb" = (
 /obj/structure/railing/grey{
@@ -32219,6 +32977,25 @@
 	},
 /turf/simulated/floor/carpet,
 /area/shuttle/aegis/suite1)
+"xUN" = (
+/obj/machinery/atmospherics/pipe/simple/visible/green{
+	dir = 6
+	},
+/obj/machinery/camera/network/carrier{
+	dir = 4;
+	pixel_x = -12
+	},
+/turf/simulated/floor,
+/area/shuttle/aegis/reactorroom)
+"xUO" = (
+/obj/effect/floor_decal/techfloor/corner{
+	dir = 9
+	},
+/obj/machinery/camera/network/carrier{
+	pixel_y = 20
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/aegis/lowersternhallway)
 "xVb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -32277,7 +33054,11 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/obj/machinery/camera/network/carrier{
+	dir = 4;
+	pixel_x = -12
+	},
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/aegis/explobriefroom)
 "xWP" = (
 /obj/machinery/atmospherics/pipe/tank/oxygen{
@@ -32529,6 +33310,14 @@
 /obj/item/clothing/glasses/welding,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/aegis/staginghangar)
+"yhk" = (
+/obj/structure/flora/ausbushes/fullgrass,
+/obj/machinery/camera/network/carrier{
+	dir = 4;
+	pixel_x = -12
+	},
+/turf/simulated/floor/grass2,
+/area/shuttle/aegis/botany)
 "yhy" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 4
@@ -55089,7 +55878,7 @@ cwA
 cwA
 cwA
 cwA
-ahC
+xEV
 cwA
 cwA
 cwA
@@ -55861,7 +56650,7 @@ cwA
 cwA
 cwA
 cwA
-cwA
+evv
 xEV
 xEV
 xEV
@@ -56145,7 +56934,7 @@ cwA
 cwA
 cwA
 cwA
-ahC
+xEV
 cwA
 cwA
 cwA
@@ -56664,7 +57453,7 @@ xEV
 xEV
 cwA
 cwA
-cwA
+xEV
 cwA
 cwA
 cwA
@@ -56922,7 +57711,7 @@ xEV
 xEV
 cwA
 cwA
-cwA
+evv
 cwA
 cwA
 cwA
@@ -57137,7 +57926,7 @@ cwA
 cwA
 cwA
 cwA
-ahC
+xEV
 cwA
 cwA
 cwA
@@ -57650,7 +58439,7 @@ cwA
 cwA
 cwA
 cwA
-cwA
+xEV
 cwA
 cwA
 xEV
@@ -57908,7 +58697,7 @@ cwA
 cwA
 cwA
 cwA
-cwA
+evv
 cwA
 xEV
 xEV
@@ -58498,12 +59287,12 @@ cwA
 cwA
 cwA
 cwA
+xEV
 cwA
 cwA
 cwA
 cwA
-cwA
-ahC
+xEV
 cwA
 cwA
 cwA
@@ -58650,11 +59439,11 @@ cwA
 cwA
 cwA
 cwA
-cwA
-cwA
-ahC
-cwA
-cwA
+evv
+xEV
+xEV
+xEV
+evv
 cwA
 cwA
 cwA
@@ -58756,7 +59545,7 @@ xEV
 xEV
 cwA
 cwA
-cwA
+evv
 cwA
 cwA
 cwA
@@ -59527,7 +60316,7 @@ kpt
 eSq
 jAV
 jAV
-jAV
+nbc
 roD
 roD
 roD
@@ -59936,7 +60725,7 @@ xEV
 tMo
 tMo
 tMo
-kQx
+xbc
 kyy
 kyy
 gJx
@@ -59967,7 +60756,7 @@ wuo
 wuo
 yjg
 yjg
-cem
+ovx
 uxF
 dQy
 tXN
@@ -60049,7 +60838,7 @@ dnw
 eWl
 jKi
 ybG
-ybG
+bvp
 roD
 roD
 roD
@@ -60521,7 +61310,7 @@ hpu
 hpu
 mYK
 hpu
-vCa
+vQb
 jWV
 jWV
 jWV
@@ -60936,11 +61725,11 @@ cwA
 cwA
 cwA
 cwA
-cwA
-cwA
-ahC
-cwA
-cwA
+evv
+xEV
+xEV
+xEV
+evv
 cwA
 cwA
 cwA
@@ -61041,7 +61830,7 @@ psU
 xJE
 bOy
 bOy
-mmN
+gAy
 eoO
 eMB
 enL
@@ -61426,11 +62215,11 @@ cwA
 cwA
 cwA
 cwA
-cwA
-cwA
-ahC
-cwA
-cwA
+evv
+xEV
+xEV
+xEV
+evv
 cwA
 cwA
 cwA
@@ -61797,7 +62586,7 @@ pZA
 rLo
 qrg
 eWj
-cYy
+tKC
 tAp
 hkb
 eZl
@@ -62344,7 +63133,7 @@ viN
 eoO
 oNO
 jtd
-xpM
+hgD
 aPh
 tay
 cpA
@@ -62690,7 +63479,7 @@ cwA
 cwA
 cwA
 cwA
-ahC
+xEV
 cwA
 cwA
 cwA
@@ -62852,7 +63641,7 @@ lpf
 vaT
 vaT
 lfA
-xJG
+xbj
 edo
 fOo
 jAV
@@ -63068,7 +63857,7 @@ bYa
 uCz
 tXN
 yjg
-dBU
+rEG
 tZF
 tZF
 kFp
@@ -63082,7 +63871,7 @@ atz
 nGV
 rAJ
 mgE
-dfj
+eji
 tZF
 iSp
 gaV
@@ -63102,7 +63891,7 @@ cXU
 cCr
 xxw
 rrG
-hDj
+xUO
 fBR
 hIK
 waj
@@ -63206,7 +63995,7 @@ cwA
 cwA
 cwA
 cwA
-ahC
+xEV
 cwA
 xEV
 nQm
@@ -63511,14 +64300,14 @@ bVv
 bVv
 bVv
 bVv
-bVv
+gLL
 bVv
 bVv
 bVv
 bVv
 fmM
 bVv
-bVv
+gLL
 bVv
 bVv
 bVv
@@ -63755,7 +64544,7 @@ aAP
 obN
 sFB
 sFB
-sFB
+tmq
 sFB
 sFB
 sFB
@@ -63804,7 +64593,7 @@ mnz
 mMZ
 cuv
 tMo
-xBG
+ptX
 fbe
 fbe
 iKE
@@ -63821,7 +64610,7 @@ ocH
 vlP
 jjP
 qrJ
-vlk
+fEv
 yjg
 pNY
 dQy
@@ -63833,7 +64622,7 @@ gnO
 yfE
 gnO
 gnO
-yfE
+ePT
 gnO
 obS
 ezJ
@@ -63890,7 +64679,7 @@ fEc
 fDW
 uWt
 vJp
-uap
+xUN
 ybK
 eVg
 vxU
@@ -63978,7 +64767,7 @@ cwA
 cwA
 cwA
 cwA
-cwA
+xEV
 cwA
 xEV
 xEV
@@ -64020,7 +64809,7 @@ mCa
 bui
 dzS
 kBn
-lmB
+qQA
 weH
 dmw
 dmw
@@ -64041,21 +64830,21 @@ lmB
 dmw
 dmw
 qDv
-dmw
+fBi
 weH
 lmB
 bAD
 fBu
 msz
 oCy
+vKu
 oCy
 oCy
 oCy
 oCy
 oCy
 oCy
-oCy
-oCy
+vKu
 mBu
 mYG
 gyI
@@ -64173,7 +64962,7 @@ voN
 voN
 vMd
 cwA
-cwA
+xEV
 cwA
 cwA
 cwA
@@ -64236,7 +65025,7 @@ cwA
 cwA
 cwA
 cwA
-cwA
+evv
 cwA
 xEV
 wDU
@@ -64337,7 +65126,7 @@ fXg
 aGE
 koU
 vTm
-blv
+cbs
 uzs
 dTh
 koU
@@ -64349,7 +65138,7 @@ blv
 cnH
 irs
 dVi
-dTh
+xxM
 pVg
 blv
 gAm
@@ -64431,8 +65220,8 @@ dpg
 dpg
 iOM
 cwA
-cwA
-cwA
+evv
+xEV
 cwA
 cwA
 cwA
@@ -64689,7 +65478,7 @@ cwA
 cwA
 cwA
 cwA
-cwA
+xEV
 cwA
 cwA
 cwA
@@ -65075,7 +65864,7 @@ xEV
 xEV
 cwA
 cwA
-aSy
+vHI
 aSy
 itM
 dln
@@ -65119,8 +65908,8 @@ koU
 yfj
 kjH
 nOu
-fXV
-fXV
+eGv
+sPQ
 bLb
 dJb
 fXV
@@ -65378,12 +66167,12 @@ xkN
 bAe
 nOu
 mef
-fXV
+xhm
 oFQ
 hLp
-fXV
+sIn
 nOu
-lkz
+cpk
 lkz
 rNI
 koU
@@ -65409,7 +66198,7 @@ qXk
 gqv
 jHs
 gqv
-iGn
+ehp
 tAp
 juR
 jia
@@ -65635,7 +66424,7 @@ lkz
 lkz
 lkz
 vuv
-fXV
+kut
 oFQ
 oet
 ueM
@@ -65893,13 +66682,13 @@ jqy
 hFX
 bkS
 nOu
-fXV
-fXV
+kdn
+oiq
 oFQ
 oON
-fXV
+sIn
 nOu
-lkz
+cpk
 lkz
 rNI
 koU
@@ -66107,7 +66896,7 @@ xEV
 xEV
 cwA
 cwA
-aSy
+vHI
 aSy
 ead
 yfH
@@ -66151,13 +66940,13 @@ koU
 twL
 fgV
 nOu
-fXV
+eGv
 hXD
 gMs
-fXV
-fXV
+uxK
+dKB
 nOu
-jqy
+eNR
 jqy
 rrQ
 koU
@@ -66200,7 +66989,7 @@ jia
 jia
 akw
 jtd
-qkj
+byw
 sey
 wIt
 tHf
@@ -66753,7 +67542,7 @@ cwA
 cwA
 cwA
 cwA
-cwA
+xEV
 cwA
 cwA
 cwA
@@ -66816,7 +67605,7 @@ cwA
 cwA
 cwA
 cwA
-cwA
+evv
 cwA
 xEV
 lsv
@@ -66840,7 +67629,7 @@ oiA
 frm
 iqQ
 kJA
-kSF
+yhk
 www
 www
 www
@@ -66900,7 +67689,7 @@ gyI
 gyI
 msz
 nOu
-uQT
+pTm
 koU
 koU
 rOJ
@@ -66917,7 +67706,7 @@ xIx
 wMp
 koU
 vTm
-xqa
+kYO
 xLz
 uQT
 koU
@@ -66929,7 +67718,7 @@ xqa
 mFX
 msO
 wFq
-uQT
+pTm
 eGv
 xqa
 rVg
@@ -67011,8 +67800,8 @@ dpg
 dpg
 mnb
 cwA
-cwA
-cwA
+evv
+xEV
 cwA
 cwA
 cwA
@@ -67074,7 +67863,7 @@ cwA
 cwA
 cwA
 cwA
-cwA
+xEV
 cwA
 xEV
 xEV
@@ -67106,7 +67895,7 @@ wCK
 mWw
 umA
 uZC
-uZC
+lhH
 ntZ
 uZC
 uZC
@@ -67121,7 +67910,7 @@ wiB
 eyy
 cbp
 aZH
-lrf
+aeD
 lrf
 lrf
 wiB
@@ -67137,21 +67926,21 @@ nzu
 cQy
 cQy
 lSv
-cQy
+rkz
 pHV
 nzu
 rsG
 xeB
 isx
 ooK
+atu
 ooK
 ooK
 ooK
 ooK
 ooK
 ooK
-ooK
-ooK
+atu
 tGt
 mYG
 gyI
@@ -67269,7 +68058,7 @@ voN
 voN
 iKm
 cwA
-cwA
+xEV
 cwA
 cwA
 cwA
@@ -67416,7 +68205,7 @@ gyI
 crf
 cuv
 kKd
-oWP
+gyD
 eTu
 eTu
 gWs
@@ -67433,7 +68222,7 @@ aFH
 ivN
 uot
 woc
-rrd
+mMU
 gXs
 sQK
 vJo
@@ -67445,7 +68234,7 @@ dvg
 api
 dvg
 dvg
-api
+mxr
 dvg
 sFf
 eiY
@@ -67646,7 +68435,7 @@ hhH
 fKL
 cEh
 fKL
-fKL
+dHr
 fKL
 fKL
 fKL
@@ -67740,7 +68529,7 @@ ckB
 mGI
 ckB
 dKh
-ckB
+ukU
 ckB
 stp
 ckB
@@ -67771,7 +68560,7 @@ rBb
 jKB
 mTR
 gzy
-eRE
+cmU
 noT
 eRE
 nkx
@@ -67850,7 +68639,7 @@ cwA
 cwA
 cwA
 cwA
-ahC
+xEV
 cwA
 xEV
 nQm
@@ -68013,7 +68802,7 @@ cMM
 dTM
 eqj
 fOo
-eSq
+toF
 jAV
 cMM
 jAV
@@ -68022,20 +68811,20 @@ jAV
 dTM
 dHk
 gzy
-xwm
+cfw
 vni
 kCh
 gld
 gMK
 apr
 gzy
-eRE
-eRE
-eRE
+rRa
+lzO
+lzO
 nkx
 tUV
 rZM
-rZM
+nkx
 nkx
 sTM
 bmu
@@ -68228,7 +69017,7 @@ tMh
 bpY
 kLn
 gXs
-dBU
+bAX
 tZF
 tZF
 eqh
@@ -68242,7 +69031,7 @@ peF
 rzu
 qQU
 hMk
-pWz
+atb
 tZF
 juS
 glw
@@ -68292,8 +69081,8 @@ inm
 fDo
 gKJ
 eqN
-rZM
-ojI
+crc
+nkx
 nkx
 rQS
 hCT
@@ -68366,7 +69155,7 @@ cwA
 cwA
 cwA
 cwA
-ahC
+xEV
 cwA
 cwA
 cwA
@@ -68546,14 +69335,14 @@ iKa
 ivr
 gzy
 wer
-eRE
+lzO
 eOp
 nkx
 qFg
-rZM
-rZM
+xRP
 nkx
-sTM
+nkx
+sRg
 njl
 dmk
 atZ
@@ -68763,7 +69552,7 @@ bHp
 dQz
 qct
 hVa
-cYy
+tKC
 tAp
 emn
 bie
@@ -68774,7 +69563,7 @@ bie
 kaM
 rwb
 eFo
-uzg
+wIB
 uzg
 cjb
 jSE
@@ -69294,7 +70083,7 @@ owV
 owV
 tjn
 jSE
-qKs
+cKE
 oRl
 qkj
 iaL
@@ -69323,7 +70112,7 @@ rBb
 rBb
 mTR
 oPi
-lIy
+qhe
 fkW
 lIy
 oPi
@@ -69560,7 +70349,7 @@ mlM
 mLu
 mLu
 mLu
-mLu
+hvQ
 mLu
 mLu
 xVb
@@ -69581,7 +70370,7 @@ ica
 eJv
 xbV
 oPi
-lIy
+fgb
 awV
 lIy
 oPi
@@ -69682,11 +70471,11 @@ cwA
 cwA
 cwA
 cwA
-cwA
-cwA
-ahC
-cwA
-cwA
+evv
+xEV
+xEV
+xEV
+evv
 cwA
 cwA
 cwA
@@ -69833,7 +70622,7 @@ eRh
 ivr
 ulL
 xGP
-xGP
+hNA
 xGP
 xGP
 xGP
@@ -70084,7 +70873,7 @@ dDf
 imA
 xOX
 jtd
-qkj
+iaw
 gzy
 gzy
 yij
@@ -70224,11 +71013,11 @@ cwA
 cwA
 cwA
 cwA
-cwA
-cwA
-ahC
-cwA
-cwA
+evv
+xEV
+xEV
+xEV
+evv
 cwA
 cwA
 cwA
@@ -70612,8 +71401,8 @@ jDv
 bMo
 aVI
 ovS
-dWr
-dWr
+poI
+poI
 dWr
 iSg
 oPi
@@ -70831,7 +71620,7 @@ iGn
 tAp
 emn
 bie
-pSN
+fra
 jfX
 tRS
 bie
@@ -71288,7 +72077,7 @@ xEV
 kKd
 kKd
 kKd
-whk
+gvS
 uBN
 uBN
 wNt
@@ -71319,7 +72108,7 @@ mTD
 mTD
 gXs
 gXs
-cDl
+gUZ
 vLQ
 vJo
 kLn
@@ -71401,7 +72190,7 @@ hPP
 iHb
 sME
 sxH
-sxH
+uQk
 atZ
 atZ
 atZ
@@ -71895,14 +72684,14 @@ lpf
 xpM
 iVX
 bIu
-iVX
+nda
 iVX
 iVX
 bIu
 iVX
 iVX
 npf
-iVX
+nda
 iVX
 aoY
 sxY
@@ -71910,8 +72699,8 @@ bIu
 iVX
 kFq
 iVX
-iVX
-iVX
+nda
+wVM
 atZ
 atZ
 atZ
@@ -72375,7 +73164,7 @@ xQK
 vHq
 sgO
 hVa
-iGn
+ehp
 tAp
 pIa
 jWP
@@ -72582,11 +73371,11 @@ cwA
 cwA
 cwA
 cwA
-cwA
-cwA
-ahC
-cwA
-cwA
+evv
+xEV
+xEV
+xEV
+evv
 cwA
 cwA
 cwA
@@ -72688,7 +73477,7 @@ xEV
 xEV
 cwA
 cwA
-cwA
+evv
 cwA
 cwA
 cwA
@@ -72946,12 +73735,12 @@ cwA
 cwA
 cwA
 cwA
+xEV
 cwA
 cwA
 cwA
 cwA
-cwA
-ahC
+xEV
 cwA
 cwA
 cwA
@@ -73388,7 +74177,7 @@ cwA
 cwA
 cwA
 cwA
-cwA
+evv
 cwA
 xEV
 xEV
@@ -73646,7 +74435,7 @@ cwA
 cwA
 cwA
 cwA
-cwA
+xEV
 cwA
 evv
 cwA
@@ -73906,7 +74695,7 @@ cwA
 cwA
 cwA
 cwA
-ahC
+xEV
 cwA
 cwA
 xEV
@@ -74466,7 +75255,7 @@ xEV
 xEV
 cwA
 cwA
-cwA
+evv
 cwA
 cwA
 cwA
@@ -74724,7 +75513,7 @@ xEV
 xEV
 cwA
 cwA
-cwA
+xEV
 cwA
 cwA
 cwA
@@ -75237,7 +76026,7 @@ cwA
 cwA
 cwA
 cwA
-ahC
+xEV
 cwA
 cwA
 cwA
@@ -75469,7 +76258,7 @@ cwA
 cwA
 cwA
 cwA
-cwA
+evv
 xEV
 xEV
 xEV
@@ -76245,7 +77034,7 @@ cwA
 cwA
 cwA
 cwA
-ahC
+xEV
 cwA
 cwA
 cwA
