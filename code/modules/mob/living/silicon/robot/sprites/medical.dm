@@ -74,7 +74,7 @@
 	has_custom_open_sprites = TRUE
 
 /datum/robot_sprite/medical/worm
-	name = "W02M - Surgical" //CHOMPEdit
+	name = "W02M - Crisis" //CHOMPEdit
 	sprite_icon_state = "worm-crisis" //CHOMPEdit
 	has_custom_open_sprites = TRUE
 	sprite_icon = 'modular_chomp/icons/mob/wormborg.dmi' //CHOMPEdit
