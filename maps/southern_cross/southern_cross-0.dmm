@@ -5202,12 +5202,6 @@
 /obj/structure/smolebuilding/warehouses,
 /turf/simulated/floor/smole,
 /area/maintenance/smoleroom)
-"ut" = (
-/obj/structure/lattice,
-/obj/structure/grille,
-/obj/structure/lattice,
-/turf/space,
-/area/space)
 "uy" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -49472,7 +49466,7 @@ wZ
 wZ
 wZ
 wZ
-ut
+jx
 wZ
 wZ
 HE
