@@ -1,0 +1,5 @@
+author: "Kashargul"
+delete-after: True
+changes:
+  - bugfix: "Crisis W0RM borg being shown as surgical"
+  - bugfix: "removes the double definition of the service W0RM borg"
