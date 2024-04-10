@@ -331,7 +331,11 @@
 		// PERSON BEING HIT: CAN BE DROP PRED, ALLOWS THROW VORE.
 		// PERSON BEING THROWN: DEVOURABLE, ALLOWS THROW VORE, CAN BE DROP PREY.
 		if((can_be_drop_pred && throw_vore) && (thrown_mob.devourable && thrown_mob.throw_vore && thrown_mob.can_be_drop_prey)) //Prey thrown into pred.
+<<<<<<< HEAD
 			if(!thrown_mob.allowmobvore && isanimal(src)) //Does the person being thrown not allow mob vore and is the person being hit (us) a simple_mob?
+=======
+			if(!vore_selected)
+>>>>>>> 4c90f3953d... fix some runtimes and an overlay overflow (#15915)
 				return
 			vore_selected.nom_mob(thrown_mob) //Eat them!!!
 			visible_message("<span class='vwarning'>[thrown_mob] is thrown right into [src]'s [lowertext(vore_selected.name)]!</span>")
@@ -343,8 +347,13 @@
 
 		// PERSON BEING HIT: CAN BE DROP PREY, ALLOWS THROW VORE, AND IS DEVOURABLE.
 		// PERSON BEING THROWN: CAN BE DROP PRED, ALLOWS THROW VORE.
+<<<<<<< HEAD
 		else if((can_be_drop_prey && throw_vore && devourable) && (thrown_mob.can_be_drop_pred && thrown_mob.throw_vore)) //Pred thrown into prey.
 			if(!allowmobvore && isanimal(thrown_mob)) //Does the person being hit not allow mob vore and the perrson being thrown a simple_mob?
+=======
+		else if((can_be_drop_prey && throw_vore && devourable) && (thrown_mob.can_be_drop_pred && thrown_mob.throw_vore) && thrown_mob.vore_selected) //Pred thrown into prey.
+			if(!thrown_mob.vore_selected)
+>>>>>>> 4c90f3953d... fix some runtimes and an overlay overflow (#15915)
 				return
 			visible_message("<span class='vwarning'>[src] suddenly slips inside of [thrown_mob]'s [lowertext(thrown_mob.vore_selected.name)] as [thrown_mob] flies into them!</span>")
 			thrown_mob.vore_selected.nom_mob(src) //Eat them!!!
