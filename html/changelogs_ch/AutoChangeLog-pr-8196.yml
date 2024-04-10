@@ -1,4 +1,0 @@
-author: "Fracshun"
-delete-after: True
-changes:
-  - bugfix: "Mice rays drop on the floor properly when shooting yourself"

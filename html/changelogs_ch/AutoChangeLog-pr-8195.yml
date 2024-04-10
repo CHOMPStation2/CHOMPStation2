@@ -1,5 +1,0 @@
-author: "Raeschen"
-delete-after: True
-changes:
-  - balance: "Reduce dive speed increase"
-  - balance: "Aquatic now works the same on deep and shallow water (No speed penalty)"

@@ -133,3 +133,11 @@
       when doing EVA!
   - balance: '''Weaken'' status now allows you to use items. You still got a second
       chance!'
+2024-04-10:
+  Fracshun:
+  - bugfix: Mice rays drop on the floor properly when shooting yourself
+  Raeschen:
+  - bugfix: Alongside say/whisper, emote/narrate voice-sounds now penetrate walls.
+  - bugfix: Mobkin selection bug in VR
+  - balance: Reduce dive speed increase
+  - balance: Aquatic now works the same on deep and shallow water (No speed penalty)
