@@ -141,3 +141,13 @@
   - bugfix: Mobkin selection bug in VR
   - balance: Reduce dive speed increase
   - balance: Aquatic now works the same on deep and shallow water (No speed penalty)
+2024-04-11:
+  Kashargul:
+  - bugfix: Crisis W0RM borg being shown as surgical
+  - bugfix: removes the double definition of the service W0RM borg
+  cadyn:
+  - bugfix: visible_messages pass to atoms in contents of other atoms correctly
+  - bugfix: visible_messages check visibility now
+  - code_imp: moved hearable.dm to components folder and renamed it to hearer.dm to
+      avoid conniptions
+  - refactor: fuck the stupid limb icon cache get out of here
