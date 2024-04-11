@@ -2833,6 +2833,7 @@
 	id_tag = "MaintRoom1";
 	req_one_access = null
 	},
+/obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/wood/turfpack/station,
 /area/maintenance/bar/dorm_1)
 "kV" = (
@@ -8479,6 +8480,7 @@
 	id_tag = "MaintRoom2";
 	req_one_access = null
 	},
+/obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/wood/turfpack/station,
 /area/maintenance/bar/dorm_2)
 "HI" = (
