@@ -469,7 +469,7 @@
 			impacted_mobs.Cut()
 		impacted_mobs = null
 
-	qdel(trajectory)
+	QDEL_NULL(trajectory) //CHOMPEdit
 	cleanup_beam_segments()
 
 	if(my_case)
