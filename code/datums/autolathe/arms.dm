@@ -1,3 +1,5 @@
+//CHOMPEdit this file is unticked, see arms_ch.dm
+
 /datum/category_item/autolathe/arms/syringegun_ammo
 	name = "syringe gun cartridge"
 	path =/obj/item/weapon/syringe_cartridge
@@ -53,7 +55,6 @@
 */
 
 /////// .45
-/* CHOMP Removal (goodbye my friend)
 /datum/category_item/autolathe/arms/pistol_45
 	name = "pistol magazine (.45)"
 	path =/obj/item/ammo_magazine/m45
@@ -211,7 +212,7 @@
 	path =/obj/item/ammo_magazine/s762
 	hidden = 1
 */
-CHOMP Removal End */
+
 /////// Shotgun
 
 /datum/category_item/autolathe/arms/shotgun_clip_beanbag
@@ -330,7 +331,7 @@ CHOMP Removal End */
 /*
  * High Caliber
  */
-/* CHOMP Removal
+
 /datum/category_item/autolathe/arms/rifle_145
 	name = "14.5mm round (sabot)"
 	path = /obj/item/ammo_casing/a145/highvel
@@ -441,7 +442,7 @@ CHOMP Removal End */
 /datum/category_item/autolathe/arms/rifle_clip_762_practice
 	name = "ammo clip (7.62mm practice)"
 	path =/obj/item/ammo_magazine/clip/c762/practice
-CHOMP Removal End*/
+
 /datum/category_item/autolathe/arms/knuckledusters
 	name = "knuckle dusters"
 	path =/obj/item/clothing/gloves/knuckledusters

@@ -1,4 +1,5 @@
-/* CHOMP Removal
+//CHOMPEdit this file is unticked.
+
 /datum/category_item/autolathe/arms/speedloader_357_flash
 	name = "speedloader (.357 flash)"
 	path =/obj/item/ammo_magazine/s357/flash
@@ -38,7 +39,6 @@
 	name = "SMG magazine (9mm)"
 	path = /obj/item/ammo_magazine/m9mml
 	hidden = 1
-CHOMP Removal End */
 /* De-coded?
 /datum/category_item/autolathe/arms/classic_smg_9mmr
 	name = "SMG magazine (9mm rubber)"
