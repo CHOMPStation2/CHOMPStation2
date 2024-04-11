@@ -1,3 +1,49 @@
+//Replace old magazine with new
+/obj/item/ammo_magazine/New(loc)
+	var/replacement_type = magazine_overrides[type]
+	if(replacement_type)
+		qdel(src)
+		return new replacement_type(loc)
+	. = ..()
+
+
+//Override attackby to allow magazine to magazine transfer
+/obj/item/ammo_magazine/attackby(obj/item/weapon/W as obj, mob/user as mob)
+	if(istype(W, /obj/item/ammo_casing))
+		var/obj/item/ammo_casing/C = W
+		if(C.caliber != caliber)
+			to_chat(user, "<span class='warning'>[C] does not fit into [src].</span>")
+			return
+		if(stored_ammo.len >= max_ammo)
+			to_chat(user, "<span class='warning'>[src] is full!</span>")
+			return
+		user.remove_from_mob(C)
+		C.forceMove(src)
+		stored_ammo.Add(C)
+		update_icon()
+	if(istype(W, /obj/item/ammo_magazine))
+		var/obj/item/ammo_magazine/L = W
+		if(L.caliber != caliber)
+			to_chat(user, "<span class='warning'>The ammo in [L] does not fit into [src].</span>")
+			return
+		if(!L.stored_ammo.len)
+			to_chat(user, "<span class='warning'>There's no more ammo [L]!</span>")
+			return
+		if(stored_ammo.len >= max_ammo)
+			to_chat(user, "<span class='warning'>[src] is full!</span>")
+			return
+		while(L.stored_ammo.len && stored_ammo.len < max_ammo)
+			var/obj/item/ammo_casing/AC = L.stored_ammo[1] //select the next casing.
+			L.stored_ammo -= AC //Remove this casing from loaded list of the clip.
+			AC.forceMove(src)
+			stored_ammo.Insert(1, AC) //add it to the head of our magazine's list
+		L.update_icon()
+	else
+		return //Don't play sound if nothing actually happens xD
+	playsound(src, 'sound/weapons/flipblade.ogg', 50, 1)
+	update_icon()
+
+//big boy list
 var/global/list/magazine_overrides = list(
 	/obj/item/ammo_magazine/m9mmt = /obj/item/ammo_magazine/smg,
 	/obj/item/ammo_magazine/m9mm/compact = /obj/item/ammo_magazine/pistol,
@@ -235,10 +281,3 @@ var/global/list/magazine_overrides = list(
 	/obj/item/ammo_magazine/mtg/empty = /obj/item/ammo_magazine/medium/empty,
 	/obj/item/ammo_magazine/m95/empty = /obj/item/ammo_magazine/medium/empty,
 )
-
-/obj/item/ammo_magazine/New(loc)
-	var/replacement_type = magazine_overrides[type]
-	if(replacement_type)
-		qdel(src)
-		return new replacement_type(loc)
-	. = ..()

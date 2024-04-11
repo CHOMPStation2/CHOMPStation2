@@ -4643,7 +4643,6 @@
 #include "modular_chomp\code\_onclick\hud\alert.dm"
 #include "modular_chomp\code\ATMOSPHERICS\atmospherics.dm"
 #include "modular_chomp\code\datums\http.dm"
-#include "modular_chomp\code\datums\autolathe\arms.dm"
 #include "modular_chomp\code\datums\autolathe\engineering_ch.dm"
 #include "modular_chomp\code\datums\autolathe\general_ch.dm"
 #include "modular_chomp\code\datums\changelog\changelog.dm"
