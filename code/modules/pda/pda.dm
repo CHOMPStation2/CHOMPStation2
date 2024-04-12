@@ -130,7 +130,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 		close(usr)
 	return 0
 
-/obj/item/device/pda/Initialize(var/mob/living/carbon/human/H) //ChompEDIT New --> Initialize
+/obj/item/device/pda/New(var/mob/living/carbon/human/H)
 	..()
 	PDAs += src
 	PDAs = sortAtom(PDAs)
@@ -181,8 +181,14 @@ var/global/list/obj/item/device/pda/PDAs = list()
 		else
 			icon = 'icons/obj/pda_old.dmi'
 			log_debug("Invalid switch for PDA, defaulting to old PDA icons. [pdachoice] chosen.")
-	add_overlay("pda-pen")
+	//add_overlay("pda-pen") //ChompEDIT no icon ops on New
 	start_program(find_program(/datum/data/pda/app/main_menu))
+
+//ChompEDIT START - move icon ops to initialize
+/obj/item/device/pda/Initialize()
+	. = ..()
+	add_overlay("pda-pen")
+//ChompEDIT END
 
 /obj/item/device/pda/proc/can_use(mob/user)
 	return (tgui_status(user, GLOB.tgui_inventory_state) == STATUS_INTERACTIVE)
