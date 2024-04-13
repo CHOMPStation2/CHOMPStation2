@@ -160,3 +160,7 @@
   - bugfix: fixed a couple runtimes that messed with integration tests
   - bugfix: fixed sounds not reaching mobs inside of things
   - code_imp: more harddel fixes
+2024-04-13:
+  Kashargul:
+  - bugfix: unathi hairs
+  - rscadd: more unathi and screll hairs
