@@ -220,7 +220,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/wood/broken/turfpack/station,
-/area/maintenance/bar/dorm_1)
+/area/maintenance/bar/dorms/dorm_1)
 "aO" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/reagent_dispensers/foam,
@@ -291,7 +291,7 @@
 	on = 0
 	},
 /turf/simulated/floor/wood/turfpack/station,
-/area/maintenance/bar/dorm_1)
+/area/maintenance/bar/dorms/dorm_1)
 "aV" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -464,7 +464,7 @@
 /area/maintenance/abscience)
 "bs" = (
 /turf/simulated/floor/wood/turfpack/station,
-/area/maintenance/bar/dorm_2)
+/area/maintenance/bar/dorms/dorm_2)
 "bt" = (
 /obj/effect/floor_decal/rust,
 /obj/machinery/alarm{
@@ -953,7 +953,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/wood/turfpack/station,
-/area/maintenance/bar/dorm_1)
+/area/maintenance/bar/dorms/dorm_1)
 "dx" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 1
@@ -967,7 +967,7 @@
 /area/maintenance/central)
 "dB" = (
 /turf/simulated/floor/wood/broken/turfpack/station,
-/area/maintenance/bar/dorm_2)
+/area/maintenance/bar/dorms/dorm_2)
 "dD" = (
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/abchemistry)
@@ -993,7 +993,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/wood/turfpack/station,
-/area/maintenance/bar/dorm_2)
+/area/maintenance/bar/dorms/dorm_2)
 "dJ" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 6
@@ -1020,7 +1020,7 @@
 "dP" = (
 /obj/structure/bed/chair/bay/chair/padded/red/bignest,
 /turf/simulated/floor/wood/turfpack/station,
-/area/maintenance/bar/dorm_1)
+/area/maintenance/bar/dorms/dorm_1)
 "dR" = (
 /obj/structure/catwalk,
 /obj/structure/cable{
@@ -1188,7 +1188,7 @@
 /obj/structure/table/standard,
 /obj/random/maintenance/foodstuff,
 /turf/simulated/floor/wood/turfpack/station,
-/area/maintenance/bar/dorm_1)
+/area/maintenance/bar/dorms/dorm_1)
 "ex" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1379;
@@ -1719,7 +1719,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/wood/broken/turfpack/station,
-/area/maintenance/bar/dorm_2)
+/area/maintenance/bar/dorms/dorm_2)
 "gB" = (
 /obj/random/trash,
 /turf/simulated/floor/plating/turfpack/station,
@@ -1875,7 +1875,7 @@
 /area/maintenance/thrift)
 "he" = (
 /turf/simulated/wall/r_wall/turfpack/station,
-/area/maintenance/bar/dorm_1)
+/area/maintenance/bar/dorms/dorm_1)
 "hg" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/plating/turfpack/station,
@@ -1933,7 +1933,7 @@
 "ht" = (
 /obj/structure/bed/pillowpilefront/orange,
 /turf/simulated/floor/wood/broken/turfpack/station,
-/area/maintenance/bar/dorm_2)
+/area/maintenance/bar/dorms/dorm_2)
 "hx" = (
 /obj/random/mouseremains,
 /turf/simulated/floor/plating/turfpack/station,
@@ -2701,7 +2701,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/wood/turfpack/station,
-/area/maintenance/bar/dorm_2)
+/area/maintenance/bar/dorms/dorm_2)
 "kq" = (
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/smoleroom)
@@ -2835,7 +2835,7 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/wood/turfpack/station,
-/area/maintenance/bar/dorm_1)
+/area/maintenance/bar/dorms/dorm_1)
 "kV" = (
 /obj/structure/table/rack/shelf,
 /obj/item/clothing/head/fishing,
@@ -3003,7 +3003,7 @@
 /area/maintenance/field)
 "lL" = (
 /turf/simulated/wall/r_wall/turfpack/station,
-/area/maintenance/bar/dorm_2)
+/area/maintenance/bar/dorms/dorm_2)
 "lM" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /turf/simulated/floor/grass,
@@ -3453,7 +3453,7 @@
 	pixel_y = 26
 	},
 /turf/simulated/floor/wood/turfpack/station,
-/area/maintenance/bar/dorm_1)
+/area/maintenance/bar/dorms/dorm_1)
 "nq" = (
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 5
@@ -3735,7 +3735,7 @@
 	on = 0
 	},
 /turf/simulated/floor/wood/turfpack/station,
-/area/maintenance/bar/dorm_2)
+/area/maintenance/bar/dorms/dorm_2)
 "oq" = (
 /obj/structure/table/rack/shelf,
 /obj/random/material,
@@ -3795,7 +3795,7 @@
 	specialfunctions = 4
 	},
 /turf/simulated/floor/wood/turfpack/station,
-/area/maintenance/bar/dorm_2)
+/area/maintenance/bar/dorms/dorm_2)
 "oE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -4313,7 +4313,7 @@
 "qK" = (
 /obj/structure/table/woodentable,
 /turf/simulated/floor/wood/turfpack/station,
-/area/maintenance/bar/dorm_2)
+/area/maintenance/bar/dorms/dorm_2)
 "qL" = (
 /obj/structure/catwalk,
 /obj/structure/cable{
@@ -4433,7 +4433,7 @@
 "rh" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/wood/turfpack/station,
-/area/maintenance/bar/dorm_2)
+/area/maintenance/bar/dorms/dorm_2)
 "ri" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 8
@@ -4466,7 +4466,7 @@
 "rn" = (
 /obj/structure/table/woodentable,
 /turf/simulated/floor/wood/turfpack/station,
-/area/maintenance/bar/dorm_1)
+/area/maintenance/bar/dorms/dorm_1)
 "ro" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/landmark/event_spawn/morphspawn,
@@ -6024,7 +6024,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/wood/turfpack/station,
-/area/maintenance/bar/dorm_1)
+/area/maintenance/bar/dorms/dorm_1)
 "xL" = (
 /obj/structure/mob_spawner/mouse_nest/mousehole,
 /turf/simulated/floor/plating/turfpack/station,
@@ -6572,7 +6572,7 @@
 	},
 /obj/structure/bed/pillowpilefront/teal,
 /turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/bar/dorm_1)
+/area/maintenance/bar/dorms/dorm_1)
 "An" = (
 /obj/random/mouseremains,
 /turf/simulated/floor/plating/turfpack/station,
@@ -7080,7 +7080,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/wood/broken/turfpack/station,
-/area/maintenance/bar/dorm_1)
+/area/maintenance/bar/dorms/dorm_1)
 "Co" = (
 /obj/structure/cable/yellow{
 	d2 = 8;
@@ -7092,7 +7092,7 @@
 "Cq" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/wood/turfpack/station,
-/area/maintenance/bar/dorm_1)
+/area/maintenance/bar/dorms/dorm_1)
 "Cr" = (
 /obj/random/junk,
 /obj/structure/cable{
@@ -8093,7 +8093,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/wood/turfpack/station,
-/area/maintenance/bar/dorm_2)
+/area/maintenance/bar/dorms/dorm_2)
 "Gn" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -8451,7 +8451,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/bar/dorm_2)
+/area/maintenance/bar/dorms/dorm_2)
 "HE" = (
 /turf/simulated/wall/r_wall/turfpack/station,
 /area/maintenance/ragecage)
@@ -8482,7 +8482,7 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/wood/turfpack/station,
-/area/maintenance/bar/dorm_2)
+/area/maintenance/bar/dorms/dorm_2)
 "HI" = (
 /obj/structure/sign/directions/engineering{
 	dir = 9;
@@ -9259,7 +9259,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/wood/turfpack/station,
-/area/maintenance/bar/dorm_2)
+/area/maintenance/bar/dorms/dorm_2)
 "KS" = (
 /obj/structure/closet/crate/secure/large,
 /obj/effect/floor_decal/rust,
@@ -9448,7 +9448,7 @@
 /area/maintenance/central)
 "LY" = (
 /turf/simulated/floor/wood/turfpack/station,
-/area/maintenance/bar/dorm_1)
+/area/maintenance/bar/dorms/dorm_1)
 "Mf" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/yellow,
@@ -9576,7 +9576,7 @@
 	pixel_y = 26
 	},
 /turf/simulated/floor/wood/turfpack/station,
-/area/maintenance/bar/dorm_2)
+/area/maintenance/bar/dorms/dorm_2)
 "MH" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -9805,7 +9805,7 @@
 	pixel_y = 22
 	},
 /turf/simulated/floor/wood/turfpack/station,
-/area/maintenance/bar/dorm_1)
+/area/maintenance/bar/dorms/dorm_1)
 "NG" = (
 /obj/structure/sign/levels/engineering/gravgen{
 	pixel_y = 5
@@ -10430,7 +10430,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/wood/turfpack/station,
-/area/maintenance/bar/dorm_1)
+/area/maintenance/bar/dorms/dorm_1)
 "PV" = (
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/plating,
@@ -10550,7 +10550,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/wood/broken/turfpack/station,
-/area/maintenance/bar/dorm_1)
+/area/maintenance/bar/dorms/dorm_1)
 "QE" = (
 /obj/effect/floor_decal/rust,
 /obj/machinery/light/small{
@@ -10577,7 +10577,7 @@
 	pixel_y = 22
 	},
 /turf/simulated/floor/wood/turfpack/station,
-/area/maintenance/bar/dorm_2)
+/area/maintenance/bar/dorms/dorm_2)
 "QM" = (
 /turf/simulated/floor/tiled/hydro,
 /area/maintenance/abhydroponics)
@@ -11292,7 +11292,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/wood/turfpack/station,
-/area/maintenance/bar/dorm_1)
+/area/maintenance/bar/dorms/dorm_1)
 "TR" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/purple/border,
@@ -12866,7 +12866,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/wood/turfpack/station,
-/area/maintenance/bar/dorm_2)
+/area/maintenance/bar/dorms/dorm_2)
 "ZF" = (
 /obj/item/bodybag/cryobag,
 /obj/item/bodybag/cryobag{
@@ -40207,7 +40207,7 @@ he
 he
 kU
 he
-lL
+he
 lL
 lL
 HH
@@ -40465,7 +40465,7 @@ Am
 LY
 TQ
 QC
-lL
+he
 dI
 dB
 gy
@@ -40723,7 +40723,7 @@ aU
 aN
 PU
 ev
-lL
+he
 op
 ZE
 Gm
@@ -40981,7 +40981,7 @@ np
 Cq
 Cn
 dw
-lL
+he
 MF
 rh
 HC
@@ -41239,7 +41239,7 @@ NF
 xK
 dP
 rn
-lL
+he
 QJ
 dB
 bs
@@ -41497,7 +41497,7 @@ he
 he
 he
 he
-lL
+he
 lL
 qK
 KR
