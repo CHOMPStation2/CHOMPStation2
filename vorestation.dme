@@ -4622,6 +4622,10 @@
 #include "interface\stylesheet.dm"
 #include "interface\skin.dmf"
 #include "maps\gateway_archive_vr\blackmarketpackers.dm"
+<<<<<<< HEAD
+=======
+#include "maps\tether\tether.dm"
+>>>>>>> df956d4c3b... Merge pull request #15922 from VOREStation/Map-Swap
 #include "maps\redgate\fantasy_items.dm"
 #include "maps\redgate\falls\atoll_decals.dm"
 #include "maps\redgate\falls\atoll_objs.dm"
