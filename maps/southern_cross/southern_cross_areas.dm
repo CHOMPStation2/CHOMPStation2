@@ -1010,6 +1010,10 @@ z
 	name = "Atmospherics Substation"
 	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
 
+/area/maintenance/substation/maintenance //CHOMPEdit new substation
+	name = "Maintenance Substation"
+	ambience = AMBIENCE_SUBSTATION
+
 /area/maintenance/emergencyeva
 	name = "\improper Emergency EVA Maintenance"
 	icon_state = "maint_eva"
