@@ -1200,6 +1200,16 @@
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/effect/map_helper/airlock/button/ext_button,
+/obj/machinery/access_button{
+	command = "cycle_exterior";
+	frequency = 1379;
+	master_tag = "d3_port_dorms_airlock";
+	name = "exterior access button";
+	pixel_y = -28;
+	req_access = null;
+	dir = 8;
+	pixel_x = -8
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/port)
 "ez" = (
@@ -5819,6 +5829,15 @@
 	},
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/effect/map_helper/airlock/button/int_button,
+/obj/machinery/access_button{
+	command = "cycle_interior";
+	frequency = 1379;
+	master_tag = "d3_port_dorms_airlock";
+	name = "interior access button";
+	pixel_x = 26;
+	pixel_y = 23;
+	req_access = null
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/port)
 "wW" = (
@@ -10341,19 +10360,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/port)
-"PK" = (
-/obj/effect/floor_decal/rust,
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "d3_port_dorms_airlock";
-	name = "interior access button";
-	pixel_x = -25;
-	pixel_y = 26;
-	req_access = null
-	},
-/turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/port)
 "PM" = (
 /obj/structure/catwalk,
 /obj/machinery/light/small{
@@ -12484,19 +12490,6 @@
 "Yz" = (
 /turf/simulated/floor/lino,
 /area/maintenance/abtheatre)
-"YA" = (
-/obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "d3_port_dorms_airlock";
-	name = "exterior access button";
-	pixel_y = 0;
-	req_access = null;
-	dir = 8;
-	pixel_x = 25
-	},
-/turf/simulated/floor/plating/turfpack/airless,
-/area/space)
 "YB" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 9
@@ -36109,7 +36102,7 @@ iP
 iP
 nS
 nS
-YA
+iP
 TJ
 wZ
 wZ
@@ -37655,7 +37648,7 @@ SI
 zu
 qn
 gv
-PK
+Do
 aD
 Uv
 ua
