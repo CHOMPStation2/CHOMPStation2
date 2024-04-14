@@ -291,11 +291,7 @@
 	reinforcing = 0
 
 /obj/structure/girder/proc/dismantle()
-<<<<<<< HEAD
-	girder_material.place_dismantled_product(get_turf(src), 2) // CHOMPEdit
-=======
 	girder_material.place_dismantled_product(get_turf(src), 2) //VOREstation Edit: Conservation of mass
->>>>>>> d39d966206... Fixes inconsistant material refunds and removes material cost from door repair (#15511)
 	qdel(src)
 
 /obj/structure/girder/attack_hand(mob/user as mob)
