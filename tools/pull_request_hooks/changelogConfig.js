@@ -40,7 +40,7 @@ export const CHANGELOG_ENTRIES = [
 	],
 
     [
-        ["maptweak"],
+        ["remap", "maptweak"],
         {
             placeholders: ["tweaked something in a map"],
         },
