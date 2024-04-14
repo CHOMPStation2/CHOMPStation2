@@ -12,6 +12,10 @@
 		set_listening(listening_recursive)
 
 /atom/movable/Destroy()
+	if(em_block)
+		cut_overlay(em_block)
+		UnregisterSignal(em_block, COMSIG_PARENT_QDELETING)
+		QDEL_NULL(em_block)
 	. = ..()
 	set_listening(NON_LISTENING_ATOM)
 
