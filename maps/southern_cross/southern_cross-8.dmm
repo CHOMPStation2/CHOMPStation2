@@ -1817,6 +1817,13 @@
 	icon_state = "floor_red"
 	},
 /area/centcom/evac)
+"bgP" = (
+/obj/effect/floor_decal/milspec/cargo,
+/obj/machinery/gear_painter{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shadekin)
 "bgS" = (
 /obj/effect/floor_decal/milspec/color/black,
 /obj/effect/floor_decal/techfloor{
@@ -60013,7 +60020,7 @@ osz
 bMy
 aOW
 xDc
-mNu
+bgP
 wrf
 rtJ
 rtJ
