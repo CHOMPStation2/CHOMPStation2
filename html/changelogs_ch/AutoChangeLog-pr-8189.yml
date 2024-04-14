@@ -1,9 +1,0 @@
-author: "Upstream"
-delete-after: True
-changes:
-  - bugfix: ".swcrc now ignored by prettier"
-  - bugfix: "Fixed potential tgui dev server issue with windows"
-  - qol: "Updated tgui dependencies"
-  - qol: "Bumped yarn version to 4.1.1"
-  - qol: "Bumped typescript to version 5.91.0"
-  - qol: "Bumped Node version in dependencies file to (major) 20"
