@@ -376,23 +376,22 @@
 /area/survivalpod/superpose/TradingShip)
 "kU" = (
 /obj/machinery/access_button{
-	master_tag = null;
+	master_tag = "trade2_control";
 	pixel_x = 27;
 	pixel_y = -7;
 	req_one_access = null;
-	frequency = 1331
+	frequency = 1331;
+	command = "cycle_exterior"
 	},
 /obj/machinery/door/airlock/external{
-	frequency = null;
+	frequency = 1331;
 	icon_state = "door_locked";
-	id_tag = null;
+	id_tag = "trade2_outer";
 	locked = 1;
 	name = "Ship Hatch";
 	req_access = null
 	},
 /obj/structure/fans/hardlight,
-/obj/effect/map_helper/airlock/door/ext_door,
-/obj/effect/map_helper/airlock/button/ext_button,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/TradingShip)
 "kV" = (
@@ -581,16 +580,15 @@
 /area/survivalpod/superpose/TradingShip)
 "nh" = (
 /obj/machinery/door/airlock/external{
-	frequency = null;
+	frequency = 1331;
 	icon_state = "door_locked";
-	id_tag = null;
+	id_tag = "trade2_inner";
 	locked = 1;
 	name = "Ship Hatch";
 	req_access = null
 	},
 /obj/machinery/atmospherics/pipe/simple/visible,
 /obj/structure/fans/hardlight,
-/obj/effect/map_helper/airlock/door/int_door,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/TradingShip)
 "nC" = (
@@ -1046,24 +1044,23 @@
 "wz" = (
 /obj/machinery/atmospherics/pipe/simple/visible,
 /obj/machinery/door/airlock/external{
-	frequency = null;
+	frequency = 1331;
 	icon_state = "door_locked";
-	id_tag = null;
+	id_tag = "trade2_inner";
 	locked = 1;
 	name = "Ship Hatch";
 	req_access = null
 	},
 /obj/machinery/access_button{
 	dir = 1;
-	master_tag = null;
+	master_tag = "trade2_control";
 	pixel_x = -27;
 	pixel_y = 7;
 	req_one_access = null;
-	frequency = 1331
+	frequency = 1331;
+	command = "cycle_interior"
 	},
 /obj/structure/fans/hardlight,
-/obj/effect/map_helper/airlock/door/int_door,
-/obj/effect/map_helper/airlock/button/int_button,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/TradingShip)
 "wT" = (
@@ -1250,16 +1247,15 @@
 	id_tag = "trade2_control";
 	pixel_x = -25;
 	req_access = list(160);
-	tag_airpump = null;
-	tag_chamber_sensor = null;
-	tag_exterior_door = null;
-	tag_interior_door = null
+	tag_airpump = "trade2_pump";
+	tag_chamber_sensor = "trade2_sensor";
+	tag_exterior_door = "trade2_outer";
+	tag_interior_door = "trade2_inner"
 	},
-/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
 	frequency = 1331;
-	id_tag = "d1fore_port2_pump"
+	id_tag = "trade2_pump"
 	},
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
@@ -1422,15 +1418,14 @@
 /area/survivalpod/superpose/TradingShip)
 "FW" = (
 /obj/machinery/door/airlock/external{
-	frequency = null;
+	frequency = 1331;
 	icon_state = "door_locked";
-	id_tag = null;
+	id_tag = "trade2_outer";
 	locked = 1;
 	name = "Ship Hatch";
 	req_access = null
 	},
 /obj/structure/fans/hardlight,
-/obj/effect/map_helper/airlock/door/ext_door,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/TradingShip)
 "Gb" = (
@@ -1456,15 +1451,14 @@
 	},
 /obj/machinery/airlock_sensor{
 	dir = 8;
-	id_tag = null;
-	pixel_x = 27
+	id_tag = "trade2_sensor";
+	pixel_x = 27;
+	frequency = 1331
 	},
-/obj/effect/map_helper/airlock/atmos/chamber_pump,
-/obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
 	frequency = 1331;
-	id_tag = "d1fore_port2_pump"
+	id_tag = "trade2_pump"
 	},
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)

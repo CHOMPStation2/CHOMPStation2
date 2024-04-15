@@ -2327,10 +2327,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai)
-"bVZ" = (
-/obj/structure/lattice,
-/turf/space,
-/area/solar/forestarboardsolar)
 "bWJ" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
@@ -3004,13 +3000,10 @@
 	name = "Third Deck Aft Maintenance"
 	})
 "cyo" = (
-/obj/structure/disposalpipe/sortjunction/flipped{
-	dir = 1;
-	name = "Dorms";
-	sortType = "CMO Office"
-	},
-/turf/simulated/wall/r_wall,
-/area/hallway/primary/thirddeck/central)
+/obj/structure/lattice,
+/obj/machinery/shield_diffuser,
+/turf/space,
+/area/solar/forestarboardsolar)
 "cyx" = (
 /obj/structure/table/darkglass,
 /obj/item/weapon/storage/toolbox/electrical,
@@ -4540,6 +4533,10 @@
 /area/maintenance/thirddeck/dormsaft{
 	name = "Third Deck Aft Maintenance"
 	})
+"dKW" = (
+/obj/structure/lattice,
+/turf/space,
+/area/solar/aftportsolar)
 "dMf" = (
 /obj/structure/bed/chair/office/light{
 	dir = 8
@@ -7481,8 +7478,8 @@
 	name = "Port Solar Array"
 	},
 /obj/structure/cable/yellow{
-	d2 = 8;
-	icon_state = "0-8"
+	d2 = 4;
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating/turfpack/airless{
 	icon_state = "solarpanel"
@@ -7797,19 +7794,6 @@
 /area/maintenance/thirddeck/dormsport{
 	name = "Third Deck Aft Port Maintenance"
 	})
-"fHM" = (
-/obj/machinery/power/solar{
-	id = "foreportsolar";
-	name = "Port Solar Array"
-	},
-/obj/structure/cable/yellow{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/plating/turfpack/airless{
-	icon_state = "solarpanel"
-	},
-/area/solar/foreportsolar)
 "fIy" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -8496,7 +8480,7 @@
 /obj/structure/disposalpipe/sortjunction/flipped{
 	dir = 1;
 	name = "Dorms";
-	sortType = "CMO Office"
+	sortType = "Dorms"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
@@ -9293,14 +9277,6 @@
 "gOc" = (
 /turf/simulated/wall,
 /area/crew_quarters/heads/sc/restroom)
-"gOG" = (
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating/turfpack/airless,
-/area/solar/forestarboardsolar)
 "gPm" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -9346,10 +9322,6 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/sc/chief/quarters)
-"gQE" = (
-/obj/structure/lattice,
-/turf/space,
-/area/solar/aftportsolar)
 "gRp" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -12415,6 +12387,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
+"jHu" = (
+/obj/structure/lattice,
+/turf/space,
+/area/solar/foreportsolar)
 "jHD" = (
 /obj/structure/bed/chair/oldsofa/left{
 	dir = 1
@@ -12770,7 +12746,7 @@
 /obj/structure/disposalpipe/sortjunction/flipped{
 	dir = 1;
 	name = "Bridge Conference room";
-	sortType = "CMO Office"
+	sortType = "Bridge Conference room"
 	},
 /turf/simulated/floor/tiled,
 /area/bridge)
@@ -14800,6 +14776,10 @@
 "lPs" = (
 /turf/simulated/floor/tiled,
 /area/maintenance/thirddeck/dormsstarboard/maintbar)
+"lPv" = (
+/obj/structure/lattice,
+/turf/space,
+/area/solar/aftstarboardsolar)
 "lPC" = (
 /obj/structure/particle_accelerator/end_cap{
 	anchored = 1;
@@ -15395,10 +15375,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
-"mka" = (
-/obj/structure/lattice,
-/turf/space,
-/area/solar/foreportsolar)
 "mkb" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -17051,6 +17027,10 @@
 /obj/machinery/light,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/sd)
+"nzi" = (
+/obj/structure/lattice,
+/turf/space,
+/area/solar/forestarboardsolar)
 "nzK" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/storage/box/donut,
@@ -23951,6 +23931,14 @@
 /obj/machinery/fitness/heavy/lifter,
 /turf/simulated/floor/boxing/gym,
 /area/crew_quarters/seconddeck/gym)
+"sTx" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating/turfpack/airless,
+/area/solar/forestarboardsolar)
 "sUf" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/border_only,
@@ -29833,10 +29821,6 @@
 /area/maintenance/thirddeck/dormsport{
 	name = "Third Deck Aft Port Maintenance"
 	})
-"xaf" = (
-/obj/structure/lattice,
-/turf/space,
-/area/solar/aftstarboardsolar)
 "xam" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -31382,10 +31366,18 @@
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/sleep/vistor_room_7)
 "xYl" = (
-/obj/structure/lattice,
-/obj/machinery/shield_diffuser,
-/turf/space,
-/area/solar/forestarboardsolar)
+/obj/machinery/power/solar{
+	id = "foreportsolar";
+	name = "Port Solar Array"
+	},
+/obj/structure/cable/yellow{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating/turfpack/airless{
+	icon_state = "solarpanel"
+	},
+/area/solar/foreportsolar)
 "xZl" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -39450,9 +39442,9 @@ bjg
 bjg
 bjg
 bjg
-gQE
+dKW
 xbg
-gQE
+dKW
 bjg
 bjg
 bjg
@@ -40219,7 +40211,7 @@ apc
 aqj
 apc
 apc
-gQE
+dKW
 ghY
 ghY
 ghY
@@ -40231,7 +40223,7 @@ ghY
 ghY
 ghY
 ghY
-gQE
+dKW
 apc
 apc
 aqj
@@ -40443,19 +40435,19 @@ apc
 apc
 apc
 apc
-fHM
-fHM
-fHM
-fHM
-fHM
-mka
+fyI
+fyI
+fyI
+fyI
+fyI
+jHu
 flb
-mka
-fHM
-fHM
-fHM
-fHM
-fHM
+jHu
+fyI
+fyI
+fyI
+fyI
+fyI
 apc
 apc
 aqj
@@ -40959,19 +40951,19 @@ apc
 apc
 apc
 apc
-fyI
-fyI
-fyI
-fyI
-fyI
+xYl
+xYl
+xYl
+xYl
+xYl
 fFF
 flb
 fFF
-fyI
-fyI
-fyI
-fyI
-fyI
+xYl
+xYl
+xYl
+xYl
+xYl
 apc
 apc
 aqj
@@ -41217,7 +41209,7 @@ apc
 apc
 apc
 apc
-mka
+jHu
 fFF
 fFF
 fFF
@@ -41229,7 +41221,7 @@ fFF
 fFF
 fFF
 fFF
-mka
+jHu
 aqj
 aqj
 aqj
@@ -41251,7 +41243,7 @@ apc
 aqj
 apc
 apc
-gQE
+dKW
 ghY
 ghY
 ghY
@@ -41263,7 +41255,7 @@ ghY
 ghY
 ghY
 ghY
-gQE
+dKW
 apc
 apc
 aqj
@@ -41475,19 +41467,19 @@ apc
 apc
 apc
 apc
-fHM
-fHM
-fHM
-fHM
-fHM
+fyI
+fyI
+fyI
+fyI
+fyI
 fFF
 flb
 fFF
-fHM
-fHM
-fHM
-fHM
-fHM
+fyI
+fyI
+fyI
+fyI
+fyI
 apc
 apc
 aqj
@@ -41991,19 +41983,19 @@ apc
 apc
 apc
 apc
-fyI
-fyI
-fyI
-fyI
-fyI
+xYl
+xYl
+xYl
+xYl
+xYl
 fFF
 flb
 fFF
-fyI
-fyI
-fyI
-fyI
-fyI
+xYl
+xYl
+xYl
+xYl
+xYl
 apc
 apc
 aqj
@@ -42249,7 +42241,7 @@ apc
 apc
 apc
 apc
-mka
+jHu
 fFF
 fFF
 fFF
@@ -42261,7 +42253,7 @@ fFF
 fFF
 fFF
 fFF
-mka
+jHu
 aqj
 aqj
 aqj
@@ -42283,7 +42275,7 @@ apc
 aqj
 apc
 apc
-gQE
+dKW
 ghY
 ghY
 ghY
@@ -42295,7 +42287,7 @@ ghY
 ghY
 ghY
 ghY
-gQE
+dKW
 apc
 apc
 aqj
@@ -42507,19 +42499,19 @@ apc
 apc
 apc
 apc
-fHM
-fHM
-fHM
-fHM
-fHM
+fyI
+fyI
+fyI
+fyI
+fyI
 fFF
 flb
 fFF
-fHM
-fHM
-fHM
-fHM
-fHM
+fyI
+fyI
+fyI
+fyI
+fyI
 apc
 apc
 aqj
@@ -43023,19 +43015,19 @@ apc
 apc
 apc
 apc
-fyI
-fyI
-fyI
-fyI
-fyI
+xYl
+xYl
+xYl
+xYl
+xYl
 fFF
 flb
 fFF
-fyI
-fyI
-fyI
-fyI
-fyI
+xYl
+xYl
+xYl
+xYl
+xYl
 apc
 apc
 aqj
@@ -43281,7 +43273,7 @@ apc
 apc
 apc
 apc
-mka
+jHu
 fFF
 fFF
 fFF
@@ -43293,7 +43285,7 @@ fFF
 fFF
 fFF
 fFF
-mka
+jHu
 apc
 apc
 apc
@@ -43315,7 +43307,7 @@ apc
 aqj
 apc
 apc
-gQE
+dKW
 ghY
 ghY
 ghY
@@ -43327,7 +43319,7 @@ ghY
 ghY
 ghY
 ghY
-gQE
+dKW
 apc
 apc
 aqj
@@ -43539,19 +43531,19 @@ apc
 apc
 apc
 apc
-fHM
-fHM
-fHM
-fHM
-fHM
+fyI
+fyI
+fyI
+fyI
+fyI
 fFF
 flb
 fFF
-fHM
-fHM
-fHM
-fHM
-fHM
+fyI
+fyI
+fyI
+fyI
+fyI
 apc
 apc
 apc
@@ -44055,19 +44047,19 @@ apc
 apc
 apc
 apc
-fyI
-fyI
-fyI
-fyI
-fyI
+xYl
+xYl
+xYl
+xYl
+xYl
 fFF
 flb
 fFF
-fyI
-fyI
-fyI
-fyI
-fyI
+xYl
+xYl
+xYl
+xYl
+xYl
 apc
 apc
 aqj
@@ -44313,7 +44305,7 @@ apc
 apc
 apc
 apc
-mka
+jHu
 fFF
 fFF
 fFF
@@ -44325,7 +44317,7 @@ fFF
 fFF
 fFF
 fFF
-mka
+jHu
 apc
 apc
 aqj
@@ -44347,7 +44339,7 @@ apc
 aqj
 apc
 apc
-gQE
+dKW
 ghY
 ghY
 ghY
@@ -44359,7 +44351,7 @@ ghY
 ghY
 ghY
 ghY
-gQE
+dKW
 apc
 apc
 aqj
@@ -44571,19 +44563,19 @@ apc
 apc
 apc
 apc
-fHM
-fHM
-fHM
-fHM
-fHM
+fyI
+fyI
+fyI
+fyI
+fyI
 fFF
 flb
 fFF
-fHM
-fHM
-fHM
-fHM
-fHM
+fyI
+fyI
+fyI
+fyI
+fyI
 aqj
 aqj
 aqj
@@ -45087,19 +45079,19 @@ apc
 apc
 apc
 apc
-fyI
-fyI
-fyI
-fyI
-fyI
+xYl
+xYl
+xYl
+xYl
+xYl
 fFF
 flb
 fFF
-fyI
-fyI
-fyI
-fyI
-fyI
+xYl
+xYl
+xYl
+xYl
+xYl
 apc
 apc
 apc
@@ -45345,7 +45337,7 @@ apc
 apc
 apc
 apc
-mka
+jHu
 fFF
 fFF
 fFF
@@ -45357,7 +45349,7 @@ fFF
 fFF
 fFF
 fFF
-mka
+jHu
 apc
 apc
 apc
@@ -45379,7 +45371,7 @@ apc
 aqj
 apc
 apc
-gQE
+dKW
 ghY
 ghY
 ghY
@@ -45391,7 +45383,7 @@ ghY
 ghY
 ghY
 ghY
-gQE
+dKW
 apc
 apc
 aqj
@@ -45603,19 +45595,19 @@ apc
 apc
 apc
 apc
-fHM
-fHM
-fHM
-fHM
-fHM
+fyI
+fyI
+fyI
+fyI
+fyI
 fFF
 flb
 fFF
-fHM
-fHM
-fHM
-fHM
-fHM
+fyI
+fyI
+fyI
+fyI
+fyI
 apc
 apc
 apc
@@ -46119,19 +46111,19 @@ apc
 apc
 apc
 apc
-fyI
-fyI
-fyI
-fyI
-fyI
+xYl
+xYl
+xYl
+xYl
+xYl
 fFF
 flb
 fFF
-fyI
-fyI
-fyI
-fyI
-fyI
+xYl
+xYl
+xYl
+xYl
+xYl
 dgt
 dgt
 dgt
@@ -46158,9 +46150,9 @@ fHn
 fHn
 fHn
 fHn
-gQE
+dKW
 xbg
-gQE
+dKW
 fHn
 fHn
 fHn
@@ -46377,7 +46369,7 @@ apc
 apc
 apc
 apc
-mka
+jHu
 fFF
 fFF
 fFF
@@ -46389,7 +46381,7 @@ fFF
 fFF
 fFF
 fFF
-mka
+jHu
 dgt
 dgt
 dgt
@@ -46635,19 +46627,19 @@ apc
 apc
 apc
 apc
-fHM
-fHM
-fHM
-fHM
-fHM
+fyI
+fyI
+fyI
+fyI
+fyI
 fFF
 flb
 fFF
-fHM
-fHM
-fHM
-fHM
-fHM
+fyI
+fyI
+fyI
+fyI
+fyI
 dgt
 dgt
 dgt
@@ -47151,19 +47143,19 @@ apc
 apc
 apc
 apc
-fyI
-fyI
-fyI
-fyI
-fyI
-mka
+xYl
+xYl
+xYl
+xYl
+xYl
+jHu
 flb
-mka
-fyI
-fyI
-fyI
-fyI
-fyI
+jHu
+xYl
+xYl
+xYl
+xYl
+xYl
 dgt
 dgt
 dgt
@@ -64210,7 +64202,7 @@ iiZ
 iKs
 rhR
 fbp
-cyo
+fbp
 fbp
 kTs
 lsW
@@ -85890,9 +85882,9 @@ gGw
 gGw
 gGw
 gGw
-xaf
+lPv
 gHR
-xaf
+lPv
 gGw
 gGw
 gGw
@@ -86659,7 +86651,7 @@ epg
 epg
 apc
 apc
-xaf
+lPv
 eTW
 eTW
 eTW
@@ -86671,7 +86663,7 @@ eTW
 eTW
 eTW
 eTW
-xaf
+lPv
 apc
 apc
 aqj
@@ -86888,9 +86880,9 @@ cDq
 cDq
 cDq
 cDq
-bVZ
+nzi
 tfe
-bVZ
+nzi
 cDq
 cDq
 cDq
@@ -87404,9 +87396,9 @@ ggF
 ggF
 ggF
 ggF
-xYl
+cyo
 tfe
-xYl
+cyo
 ggF
 ggF
 ggF
@@ -87657,19 +87649,19 @@ apc
 apc
 apc
 apc
-bVZ
-xYl
-xYl
-xYl
-xYl
-xYl
+nzi
+cyo
+cyo
+cyo
+cyo
+cyo
 tfe
-xYl
-xYl
-xYl
-xYl
-xYl
-bVZ
+cyo
+cyo
+cyo
+cyo
+cyo
+nzi
 apc
 apc
 apc
@@ -87691,7 +87683,7 @@ apc
 aqj
 apc
 apc
-xaf
+lPv
 eTW
 eTW
 eTW
@@ -87703,7 +87695,7 @@ eTW
 eTW
 eTW
 eTW
-xaf
+lPv
 apc
 apc
 aqj
@@ -87920,9 +87912,9 @@ cDq
 cDq
 cDq
 cDq
-xYl
+cyo
 tfe
-xYl
+cyo
 cDq
 cDq
 cDq
@@ -88436,9 +88428,9 @@ ggF
 ggF
 ggF
 ggF
-xYl
+cyo
 tfe
-xYl
+cyo
 ggF
 ggF
 ggF
@@ -88689,19 +88681,19 @@ aqj
 apc
 apc
 apc
-bVZ
-xYl
-xYl
-xYl
-xYl
-xYl
+nzi
+cyo
+cyo
+cyo
+cyo
+cyo
 tfe
-xYl
-xYl
-xYl
-xYl
-xYl
-bVZ
+cyo
+cyo
+cyo
+cyo
+cyo
+nzi
 apc
 apc
 aqj
@@ -88723,7 +88715,7 @@ apc
 aqj
 apc
 apc
-xaf
+lPv
 eTW
 eTW
 eTW
@@ -88735,7 +88727,7 @@ eTW
 eTW
 eTW
 eTW
-xaf
+lPv
 apc
 apc
 aqj
@@ -88952,9 +88944,9 @@ cDq
 cDq
 cDq
 cDq
-xYl
+cyo
 tfe
-xYl
+cyo
 cDq
 cDq
 cDq
@@ -89468,9 +89460,9 @@ ggF
 ggF
 ggF
 ggF
-xYl
+cyo
 tfe
-xYl
+cyo
 ggF
 ggF
 ggF
@@ -89721,19 +89713,19 @@ apc
 apc
 apc
 apc
-bVZ
-xYl
-xYl
-xYl
-xYl
-xYl
+nzi
+cyo
+cyo
+cyo
+cyo
+cyo
 tfe
-xYl
-xYl
-xYl
-xYl
-xYl
-bVZ
+cyo
+cyo
+cyo
+cyo
+cyo
+nzi
 apc
 apc
 aqj
@@ -89755,7 +89747,7 @@ apc
 aqj
 apc
 apc
-xaf
+lPv
 eTW
 eTW
 eTW
@@ -89767,7 +89759,7 @@ eTW
 eTW
 eTW
 eTW
-xaf
+lPv
 apc
 apc
 aqj
@@ -89984,9 +89976,9 @@ cDq
 cDq
 cDq
 cDq
-xYl
+cyo
 tfe
-xYl
+cyo
 cDq
 cDq
 cDq
@@ -90500,9 +90492,9 @@ ggF
 ggF
 ggF
 ggF
-xYl
+cyo
 tfe
-xYl
+cyo
 ggF
 ggF
 ggF
@@ -90753,19 +90745,19 @@ aqj
 apc
 apc
 apc
-bVZ
-xYl
-xYl
-xYl
-xYl
-xYl
+nzi
+cyo
+cyo
+cyo
+cyo
+cyo
 tfe
-xYl
-xYl
-xYl
-xYl
-xYl
-bVZ
+cyo
+cyo
+cyo
+cyo
+cyo
+nzi
 apc
 apc
 aqj
@@ -90787,7 +90779,7 @@ apc
 aqj
 apc
 apc
-xaf
+lPv
 eTW
 eTW
 eTW
@@ -90799,7 +90791,7 @@ eTW
 eTW
 eTW
 eTW
-xaf
+lPv
 apc
 apc
 aqj
@@ -91016,9 +91008,9 @@ cDq
 cDq
 cDq
 cDq
-xYl
+cyo
 tfe
-xYl
+cyo
 cDq
 cDq
 cDq
@@ -91532,9 +91524,9 @@ ggF
 ggF
 ggF
 ggF
-xYl
+cyo
 tfe
-xYl
+cyo
 ggF
 ggF
 ggF
@@ -91785,19 +91777,19 @@ apc
 apc
 aqj
 apc
-bVZ
-xYl
-xYl
-xYl
-xYl
-xYl
+nzi
+cyo
+cyo
+cyo
+cyo
+cyo
 tfe
-xYl
-xYl
-xYl
-xYl
-xYl
-bVZ
+cyo
+cyo
+cyo
+cyo
+cyo
+nzi
 apc
 apc
 aqj
@@ -91819,7 +91811,7 @@ apc
 aqj
 apc
 apc
-xaf
+lPv
 eTW
 eTW
 eTW
@@ -91831,7 +91823,7 @@ eTW
 eTW
 eTW
 eTW
-xaf
+lPv
 apc
 apc
 aqj
@@ -92048,9 +92040,9 @@ cDq
 cDq
 cDq
 cDq
-xYl
+cyo
 tfe
-xYl
+cyo
 cDq
 cDq
 cDq
@@ -92564,9 +92556,9 @@ ggF
 ggF
 ggF
 ggF
-xYl
+cyo
 tfe
-xYl
+cyo
 ggF
 ggF
 ggF
@@ -92598,9 +92590,9 @@ fhg
 fhg
 fhg
 fhg
-xaf
+lPv
 gHR
-xaf
+lPv
 fhg
 fhg
 fhg
@@ -92817,19 +92809,19 @@ xeL
 vtf
 xeL
 aqj
-bVZ
-xYl
-xYl
-xYl
-xYl
-xYl
+nzi
+cyo
+cyo
+cyo
+cyo
+cyo
 tfe
-xYl
-xYl
-xYl
-xYl
-xYl
-bVZ
+cyo
+cyo
+cyo
+cyo
+cyo
+nzi
 apc
 apc
 apc
@@ -93080,9 +93072,9 @@ cDq
 cDq
 cDq
 cDq
-xYl
+cyo
 tfe
-xYl
+cyo
 cDq
 cDq
 cDq
@@ -93596,9 +93588,9 @@ ggF
 ggF
 ggF
 ggF
-bVZ
+nzi
 tfe
-bVZ
+nzi
 ggF
 ggF
 ggF
@@ -94113,7 +94105,7 @@ apc
 apc
 aqj
 apc
-gOG
+sTx
 apc
 apc
 apc

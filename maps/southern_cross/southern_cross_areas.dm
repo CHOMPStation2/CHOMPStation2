@@ -1010,7 +1010,7 @@ z
 	name = "Atmospherics Substation"
 	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
 
-/area/maintenance/substation/maintenance //CHOMPEdit new substation
+/area/maintenance/substation/maintenance
 	name = "Maintenance Substation"
 	ambience = AMBIENCE_SUBSTATION
 
