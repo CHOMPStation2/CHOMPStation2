@@ -28,7 +28,7 @@
 //#define REFERENCE_TRACKING
 #ifdef REFERENCE_TRACKING
 
-//#define FIND_REF_NO_CHECK_TICK
+//#define FIND_REF_NO_CHECK_TICK //CHOMPEdit new ref tracking
 ///Should we be logging our findings or not
 #define REFERENCE_TRACKING_LOG
 
