@@ -45709,21 +45709,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/foyer)
-"dOv" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "medbayquar";
-	name = "Medbay Emergency Lockdown Shutters";
-	opacity = 0
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/hallway/primary/seconddeck/starboard)
 "dOF" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled,
@@ -46111,12 +46096,9 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/ascenter)
 "eag" = (
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
-	},
-/turf/simulated/wall,
-/area/maintenance/research_medical)
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/dark,
+/area/hallway/primary/seconddeck/starboard)
 "eaB" = (
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled/dark,
@@ -49002,13 +48984,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/mixing)
-"fAQ" = (
-/obj/structure/catwalk,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/research_medical)
 "fBa" = (
 /obj/machinery/smartfridge/produce,
 /turf/simulated/wall,
@@ -49408,10 +49383,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled,
 /area/engineering/hallway/engineer_hallway)
-"fKc" = (
-/obj/structure/disposalpipe/down,
-/turf/simulated/floor/plating,
-/area/maintenance/research_medical)
 "fKl" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/wingrille_spawn/reinforced,
@@ -52492,13 +52463,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
-"htb" = (
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/research_medical)
 "hti" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -67304,7 +67268,6 @@
 /obj/machinery/atmospherics/pipe/zpipe/down/scrubbers{
 	dir = 8
 	},
-/obj/structure/catwalk,
 /turf/simulated/open,
 /area/maintenance/research_medical)
 "pDF" = (
@@ -70715,13 +70678,6 @@
 /obj/effect/floor_decal/corner/pink/border,
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_a)
-"rIU" = (
-/obj/structure/disposalpipe/junction{
-	dir = 4;
-	icon_state = "pipe-j2"
-	},
-/turf/simulated/wall,
-/area/maintenance/research_medical)
 "rIW" = (
 /obj/structure/cable{
 	d2 = 2;
@@ -74140,6 +74096,9 @@
 /turf/space,
 /area/shuttle/arrival/station)
 "tUA" = (
+/obj/structure/loot_pile/surface/medicine_cabinet{
+	pixel_y = 25
+	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -74586,6 +74545,10 @@
 	location = "MED";
 	next_patrol = "CH10"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/seconddeck/starboard)
 "uht" = (
@@ -74677,6 +74640,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
 	},
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/seconddeck/starboard)
 "uhW" = (
@@ -74690,6 +74656,9 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/starboard)
@@ -74716,6 +74685,9 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/hallway/primary/seconddeck/starboard)
 "ukI" = (
@@ -74743,6 +74715,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/starboard)
@@ -74856,6 +74831,10 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central5{
 	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/starboard)
@@ -75354,13 +75333,22 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
 "uHn" = (
-/obj/structure/catwalk,
-/obj/random/junk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
-/area/maintenance/research_medical)
+/turf/simulated/floor/tiled/monotile,
+/area/hallway/primary/seconddeck/starboard)
 "uHP" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -76370,6 +76358,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/seconddeck/starboard)
 "vvY" = (
@@ -76523,6 +76512,7 @@
 /obj/effect/floor_decal/corner/paleblue/bordercorner2{
 	dir = 9
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/starboard)
 "vzz" = (
@@ -76567,6 +76557,7 @@
 /obj/effect/floor_decal/corner/green/border,
 /obj/effect/floor_decal/borderfloor/corner2,
 /obj/effect/floor_decal/corner/green/bordercorner2,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/starboard)
 "vAx" = (
@@ -79097,7 +79088,8 @@
 	icon_state = "1-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/starboard)
@@ -79115,10 +79107,6 @@
 /obj/effect/floor_decal/corner/paleblue/bordercorner{
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
-	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/starboard)
 "xeV" = (
@@ -79130,7 +79118,7 @@
 	pixel_y = 0
 	},
 /obj/structure/disposalpipe/trunk{
-	dir = 4
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/seconddeck/starboard)
@@ -79270,11 +79258,11 @@
 	req_access = null;
 	req_one_access = null
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/research_medical)
 "xiX" = (
 /obj/random/junk,
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/research_medical)
 "xjv" = (
@@ -80446,9 +80434,6 @@
 	name = "Medbay Emergency Lockdown Shutters";
 	opacity = 0
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/seconddeck/starboard)
 "xUn" = (
@@ -80535,14 +80520,12 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/disposal_sort)
 "xZu" = (
-/obj/random/trash,
-/obj/structure/loot_pile/surface/medicine_cabinet{
-	pixel_y = 25
-	},
-/obj/structure/disposalpipe/segment{
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/disposalpipe/down{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/obj/structure/lattice,
+/turf/simulated/open,
 /area/maintenance/research_medical)
 "xZK" = (
 /obj/effect/floor_decal/borderfloor{
@@ -80669,7 +80652,8 @@
 /obj/machinery/light/small,
 /obj/structure/catwalk,
 /obj/structure/disposalpipe/segment{
-	dir = 4
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/research_medical)
@@ -80677,9 +80661,6 @@
 /obj/structure/catwalk,
 /obj/structure/loot_pile/surface/medicine_cabinet/fresh{
 	pixel_y = 25
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/research_medical)
@@ -80699,9 +80680,6 @@
 "yeN" = (
 /obj/structure/catwalk,
 /obj/random/trash,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /turf/simulated/floor/plating,
 /area/maintenance/research_medical)
 "yfl" = (
@@ -124812,11 +124790,11 @@ mYU
 rCT
 aWi
 tce
-ufl
+uHn
 vxe
 wqq
 xeT
-dOv
+xPX
 wDy
 eMV
 nrg
@@ -125072,7 +125050,7 @@ skB
 skB
 uhV
 vyA
-aWf
+eag
 xeV
 xTX
 bwB
@@ -125331,8 +125309,8 @@ tdm
 uhW
 tdm
 wqL
-eag
-rIU
+xhM
+xhM
 eCW
 ufJ
 wKQ
@@ -126104,7 +126082,7 @@ spx
 tfi
 uoP
 vAw
-aWf
+eag
 xiE
 ydn
 eCW
@@ -126364,7 +126342,7 @@ upp
 vAS
 sqd
 pzW
-fAQ
+qHW
 eCW
 seX
 pjG
@@ -126622,7 +126600,7 @@ sql
 sql
 sql
 pzW
-fAQ
+qHW
 eCW
 mCf
 gjl
@@ -126880,7 +126858,7 @@ sql
 sql
 sql
 pzW
-uHn
+qJk
 rYl
 ubP
 ubP
@@ -127138,7 +127116,7 @@ sql
 sql
 sql
 pzW
-fAQ
+qHW
 rYl
 gWj
 hXE
@@ -127396,7 +127374,7 @@ sql
 sql
 sql
 pzW
-fAQ
+qHW
 rYl
 lvy
 vyg
@@ -127654,7 +127632,7 @@ sql
 sql
 sql
 pzW
-fAQ
+qHW
 rYl
 pWZ
 hzO
@@ -128426,9 +128404,9 @@ srU
 srU
 uqP
 vBP
-fKc
+rJB
 xiX
-htb
+rJB
 jpX
 tHW
 tAA
