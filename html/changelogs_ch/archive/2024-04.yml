@@ -174,3 +174,6 @@
   - qol: Bumped yarn version to 4.1.1
   - qol: Bumped typescript to version 5.91.0
   - qol: Bumped Node version in dependencies file to (major) 20
+2024-04-15:
+  Kashargul:
+  - bugfix: autochangelog not working for maptweaks
