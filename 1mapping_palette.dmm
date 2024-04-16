@@ -1806,6 +1806,14 @@
 	},
 /turf/simulated/shuttle/floor/white,
 /area/space)
+"bjc" = (
+/obj/structure/cable/pink{
+	d1 = 2;
+	d2 = 5;
+	icon_state = "2-5"
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "bjr" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -1957,6 +1965,13 @@
 	icon_state = "windoor"
 	},
 /turf/simulated/floor/carpet/bcarpet,
+/area/space)
+"bnP" = (
+/obj/structure/cable/pink{
+	d2 = 6;
+	icon_state = "0-6"
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "boe" = (
 /obj/effect/simple_portal/coords,
@@ -2318,6 +2333,14 @@
 	pixel_y = -31
 	},
 /turf/simulated/floor/wood/sif,
+/area/space)
+"bDm" = (
+/obj/structure/cable/pink{
+	d1 = 6;
+	d2 = 9;
+	icon_state = "6-9"
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "bDS" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -3060,6 +3083,14 @@
 /obj/structure/bedsheetbin,
 /turf/simulated/floor/tiled/techfloor,
 /area/space)
+"bZJ" = (
+/obj/structure/cable/pink{
+	d1 = 8;
+	d2 = 10;
+	icon_state = "8-10"
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "bZT" = (
 /obj/machinery/vending/hydronutrients{
 	dir = 1
@@ -3242,6 +3273,14 @@
 "cgJ" = (
 /obj/structure/disposalpipe/down{
 	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"chD" = (
+/obj/structure/cable/pink{
+	d1 = 6;
+	d2 = 10;
+	icon_state = "6-10"
 	},
 /turf/simulated/floor/plating,
 /area/space)
@@ -7122,6 +7161,14 @@
 /obj/screen/alert/highpressure,
 /turf/simulated/shuttle/wall/hard_corner,
 /area/space)
+"eKU" = (
+/obj/structure/cable/pink{
+	d1 = 2;
+	d2 = 10;
+	icon_state = "2-10"
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "eKV" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 30
@@ -7254,6 +7301,14 @@
 	dir = 4
 	},
 /turf/simulated/floor/carpet/blue,
+/area/space)
+"eOQ" = (
+/obj/structure/cable/pink{
+	d1 = 9;
+	d2 = 10;
+	icon_state = "9-10"
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "eOT" = (
 /obj/machinery/flasher{
@@ -11014,6 +11069,14 @@
 	},
 /turf/simulated/shuttle/floor/purple,
 /area/space)
+"hqg" = (
+/obj/structure/cable/pink{
+	d1 = 4;
+	d2 = 9;
+	icon_state = "4-9"
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "hqi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 8
@@ -11429,6 +11492,13 @@
 	},
 /obj/structure/bed/chair/bay/shuttle,
 /turf/simulated/shuttle/floor/black,
+/area/space)
+"hDB" = (
+/obj/structure/cable/pink{
+	d2 = 5;
+	icon_state = "0-5"
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "hDU" = (
 /obj/item/clothing/suit/straight_jacket,
@@ -12439,6 +12509,14 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/space)
+"imh" = (
+/obj/structure/cable/pink{
+	icon_state = "1-4";
+	d1 = 1;
+	d2 = 4
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "imH" = (
 /obj/item/weapon/banner/blue,
 /turf/simulated/floor/outdoors/dirt,
@@ -13045,6 +13123,14 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/white,
+/area/space)
+"iDc" = (
+/obj/structure/cable/pink{
+	d1 = 32;
+	d2 = 6;
+	icon_state = "32-6"
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "iDD" = (
 /obj/item/device/tape,
@@ -14104,6 +14190,14 @@
 	icon_state = "20"
 	},
 /turf/template_noop,
+/area/space)
+"jkR" = (
+/obj/structure/cable/pink{
+	d1 = 1;
+	d2 = 9;
+	icon_state = "1-9"
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "jlz" = (
 /obj/machinery/atmospherics/portables_connector,
@@ -15448,6 +15542,13 @@
 /obj/structure/reagent_dispensers/watertank/high,
 /turf/simulated/floor/plating/external,
 /area/space)
+"kfi" = (
+/obj/structure/cable/pink{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "kfo" = (
 /obj/machinery/cryopod{
 	dir = 2
@@ -15786,6 +15887,14 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/space)
+"kow" = (
+/obj/structure/cable/pink{
+	d1 = 2;
+	d2 = 9;
+	icon_state = "2-9"
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "kox" = (
 /obj/machinery/vending/tool{
 	emagged = 1;
@@ -15920,6 +16029,14 @@
 "kts" = (
 /obj/mecha/combat/phazon/scree,
 /turf/template_noop,
+/area/space)
+"ktt" = (
+/obj/structure/cable/pink{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "kty" = (
 /obj/machinery/atmospherics/valve,
@@ -17233,6 +17350,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/space)
+"llc" = (
+/obj/structure/cable/pink{
+	d2 = 9;
+	icon_state = "0-9"
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "llr" = (
 /obj/random/junk,
 /turf/simulated/floor/carpet/sblucarpet,
@@ -17431,6 +17555,14 @@
 	dir = 6
 	},
 /turf/simulated/shuttle/floor/alienplating,
+/area/space)
+"ltR" = (
+/obj/structure/cable/pink{
+	d1 = 5;
+	d2 = 6;
+	icon_state = "5-6"
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "lua" = (
 /obj/machinery/atmospherics/binary/passive_gate{
@@ -17657,6 +17789,14 @@
 /obj/item/weapon/material/shard,
 /turf/simulated/floor/outdoors/dirt,
 /area/space)
+"lCQ" = (
+/obj/structure/cable/pink{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "lCR" = (
 /obj/machinery/feeder,
 /turf/simulated/floor/tiled/asteroid_steel,
@@ -17753,6 +17893,14 @@
 /obj/effect/alien/weeds/node,
 /obj/effect/alien/weeds,
 /turf/simulated/floor,
+/area/space)
+"lGi" = (
+/obj/structure/cable/pink{
+	d1 = 32;
+	d2 = 4;
+	icon_state = "32-4"
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "lGj" = (
 /obj/structure/bed/chair,
@@ -17926,6 +18074,14 @@
 "lMZ" = (
 /obj/structure/girder,
 /turf/simulated/floor,
+/area/space)
+"lNc" = (
+/obj/structure/cable/pink{
+	d1 = 4;
+	d2 = 10;
+	icon_state = "4-10"
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "lOd" = (
 /obj/effect/floor_decal/techfloor{
@@ -19891,6 +20047,14 @@
 	},
 /turf/template_noop,
 /area/space)
+"mNU" = (
+/obj/structure/cable/pink{
+	d1 = 1;
+	d2 = 5;
+	icon_state = "1-5"
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "mOw" = (
 /obj/effect/map_effect/portal/line/side_b{
 	dir = 8
@@ -21105,6 +21269,13 @@
 /obj/effect/floor_decal/techfloor,
 /turf/simulated/shuttle/floor/alienplating,
 /area/space)
+"nGH" = (
+/obj/structure/cable/pink{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "nGI" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -21402,6 +21573,14 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/space)
+"nQg" = (
+/obj/structure/cable/pink{
+	d1 = 2;
+	d2 = 6;
+	icon_state = "2-6"
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "nQr" = (
 /obj/structure/window/reinforced{
 	dir = 8;
@@ -21488,6 +21667,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/space)
+"nWS" = (
+/obj/structure/cable/pink,
+/turf/simulated/floor/plating,
+/area/space)
 "nWV" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/green,
 /turf/simulated/floor/plating,
@@ -21500,6 +21683,14 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/alienplating,
+/area/space)
+"nXz" = (
+/obj/structure/cable/pink{
+	d1 = 4;
+	d2 = 6;
+	icon_state = "4-6"
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "nXM" = (
 /obj/structure/cable/green{
@@ -24237,6 +24428,13 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/space)
+"pHo" = (
+/obj/structure/cable/pink{
+	d1 = 32;
+	icon_state = "32-1"
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "pHZ" = (
 /obj/structure/particle_accelerator/particle_emitter/center{
 	dir = 8
@@ -26895,6 +27093,14 @@
 	},
 /turf/simulated/floor,
 /area/space)
+"rqO" = (
+/obj/structure/cable/pink{
+	d1 = 5;
+	d2 = 8;
+	icon_state = "5-8"
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "rqZ" = (
 /obj/machinery/power/emitter/gyrotron,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -28541,6 +28747,14 @@
 	},
 /turf/simulated/floor/plating,
 /area/space)
+"sso" = (
+/obj/structure/cable/pink{
+	d1 = 32;
+	d2 = 10;
+	icon_state = "32-10"
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "ssp" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/paper_bin,
@@ -28785,6 +28999,14 @@
 /obj/effect/meteor/irradiated,
 /turf/template_noop,
 /area/space)
+"szA" = (
+/obj/structure/cable/pink{
+	d1 = 16;
+	d2 = 0;
+	icon_state = "16-0"
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "szS" = (
 /obj/machinery/shower,
 /turf/simulated/floor/outdoors/dirt,
@@ -28970,6 +29192,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/carpet/bcarpet,
 /area/space)
+"sHG" = (
+/obj/structure/cable/pink{
+	d1 = 5;
+	d2 = 10;
+	icon_state = "5-10"
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "sHK" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -29137,6 +29367,13 @@
 "sOy" = (
 /obj/structure/bed/chair/comfy/blue,
 /turf/simulated/shuttle/floor/voidcraft/dark,
+/area/space)
+"sOZ" = (
+/obj/structure/cable/pink{
+	d2 = 10;
+	icon_state = "0-10"
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "sPn" = (
 /obj/effect/decal/cleanable/dirt,
@@ -29460,6 +29697,14 @@
 "sWv" = (
 /turf/simulated/floor/water/beach,
 /area/space)
+"sWW" = (
+/obj/structure/cable/pink{
+	d1 = 6;
+	d2 = 8;
+	icon_state = "6-8"
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "sXy" = (
 /mob/living/simple_mob/animal/space/alien/sentinel/praetorian,
 /obj/effect/alien/weeds,
@@ -29586,6 +29831,13 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
+/area/space)
+"tam" = (
+/obj/structure/cable/pink{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "tav" = (
 /obj/structure/closet/alien,
@@ -30206,6 +30458,14 @@
 "twL" = (
 /obj/structure/prop/alien/pod/hybrid,
 /turf/simulated/floor/tiled/techfloor,
+/area/space)
+"twN" = (
+/obj/structure/cable/pink{
+	d1 = 1;
+	d2 = 10;
+	icon_state = "1-10"
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "twS" = (
 /obj/structure/disposalpipe/junction{
@@ -30850,6 +31110,14 @@
 /obj/item/weapon/paper/alien,
 /turf/simulated/shuttle/floor/alien,
 /area/space)
+"tPJ" = (
+/obj/structure/cable/pink{
+	d1 = 4;
+	d2 = 5;
+	icon_state = "4-5"
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "tQT" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -30999,6 +31267,14 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/plating/airless/carry,
+/area/space)
+"tTv" = (
+/obj/structure/cable/pink{
+	d1 = 32;
+	d2 = 8;
+	icon_state = "32-8"
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "tTw" = (
 /obj/effect/alien/weeds,
@@ -31795,6 +32071,14 @@
 /obj/item/weapon/spacecash/c1000,
 /turf/template_noop,
 /area/space)
+"uvD" = (
+/obj/structure/cable/pink{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "uvT" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/flasher{
@@ -31864,6 +32148,14 @@
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
+/area/space)
+"uyr" = (
+/obj/structure/cable/pink{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "uyJ" = (
 /obj/effect/floor_decal/techfloor{
@@ -32874,6 +33166,14 @@
 /obj/item/weapon/module/card_reader,
 /obj/item/weapon/module/id_auth,
 /obj/item/weapon/storage/firstaid/regular,
+/turf/simulated/floor/plating,
+/area/space)
+"vfy" = (
+/obj/structure/cable/pink{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating,
 /area/space)
 "vfH" = (
@@ -35014,6 +35314,14 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/reinforced,
 /area/space)
+"wFa" = (
+/obj/structure/cable/pink{
+	d1 = 32;
+	d2 = 2;
+	icon_state = "32-2"
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "wFf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -35426,6 +35734,14 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
+/area/space)
+"wRo" = (
+/obj/structure/cable/pink{
+	d1 = 1;
+	d2 = 6;
+	icon_state = "1-6"
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "wRv" = (
 /obj/machinery/chemical_dispenser/bar_soft/full{
@@ -36012,6 +36328,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /turf/simulated/wall/rshull,
 /area/space)
+"xpZ" = (
+/obj/structure/cable/pink{
+	d1 = 32;
+	d2 = 5;
+	icon_state = "32-5"
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "xqf" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 1
@@ -36103,6 +36427,14 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
+/area/space)
+"xsd" = (
+/obj/structure/cable/pink{
+	d1 = 5;
+	d2 = 9;
+	icon_state = "5-9"
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "xst" = (
 /obj/structure/closet/alien,
@@ -37004,6 +37336,14 @@
 "xRs" = (
 /obj/structure/table/bench/glass,
 /turf/simulated/floor/carpet/gaycarpet,
+/area/space)
+"xRC" = (
+/obj/structure/cable/pink{
+	d1 = 32;
+	d2 = 9;
+	icon_state = "32-9"
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "xRE" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -38358,50 +38698,50 @@ nwG
 "}
 (4,1,1) = {"
 nwG
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
-ucE
+nWS
+kfi
+tam
+nGH
+vfy
+uvD
+imh
+lCQ
+ktt
+uyr
+hDB
+bnP
+sOZ
+llc
+sHG
+bDm
+xsd
+ltR
+chD
+eOQ
+mNU
+wRo
+twN
+tPJ
+jkR
+hqg
+lNc
+nXz
+nQg
+bjc
+kow
+eKU
+bZJ
+sWW
+rqO
+pHo
+xpZ
+lGi
+iDc
+wFa
+sso
+tTv
+xRC
+szA
 ucE
 rnW
 ucE
