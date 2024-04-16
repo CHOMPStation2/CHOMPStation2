@@ -53043,6 +53043,11 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
+/obj/structure/cable/pink{
+	d1 = 4;
+	d2 = 10;
+	icon_state = "4-10"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/research)
 "hgv" = (
@@ -54875,9 +54880,9 @@
 	dir = 8
 	},
 /obj/structure/cable/pink{
-	d1 = 4;
+	d1 = 5;
 	d2 = 10;
-	icon_state = "4-10"
+	icon_state = "5-10"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/research)
@@ -54886,11 +54891,6 @@
 	dir = 4
 	},
 /obj/structure/loot_pile/maint/technical,
-/obj/structure/cable/pink{
-	d1 = 5;
-	d2 = 8;
-	icon_state = "5-8"
-	},
 /turf/simulated/floor/plating,
 /area/maintenance/research)
 "ibC" = (
@@ -82686,8 +82686,8 @@
 	},
 /obj/structure/cable/pink{
 	d1 = 1;
-	d2 = 10;
-	icon_state = "1-10"
+	d2 = 8;
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/research)
