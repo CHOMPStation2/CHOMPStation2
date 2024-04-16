@@ -27,7 +27,7 @@
 	remove_verb(new_voice,/mob/living/voice/verb/hang_up ) //Also you can't hang up. You are the item! //CHOMPEdit
 	src.item_tf_spawnpoint_used() //CHOMPEdit - Item TF spawnpoints
 	//CHOMPEdit Start - Let the inhabitor know what happened to them
-	if(!istype(src, /obj/item/device/communicator))
+	if(!istype(src, /obj/item/device/communicator) && is_item_tf)
 		new_voice.item_tf = is_item_tf 					// allows items to use /me
 		new_voice.emote_type = 1
 	if(istype(src, /obj/item/device/mindbinder))
