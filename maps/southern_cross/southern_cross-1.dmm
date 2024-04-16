@@ -17093,6 +17093,16 @@
 	},
 /turf/simulated/wall,
 /area/quartermaster/delivery)
+"flh" = (
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/structure/disposaloutlet{
+	dir = 4
+	},
+/obj/machinery/shield_diffuser,
+/turf/simulated/floor/airless,
+/area/space)
 "flE" = (
 /obj/effect/shuttle_landmark{
 	base_area = /area/space;
@@ -17795,6 +17805,12 @@
 	},
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/large_escape_pod2/station)
+"fPM" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/airless,
+/area/space)
 "fQn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 8
@@ -87373,7 +87389,7 @@ mvN
 lpo
 xdz
 itV
-aaa
+fPM
 aaa
 vYi
 aaa
@@ -87631,7 +87647,7 @@ jPJ
 sEo
 jPJ
 itV
-aaa
+fPM
 aaa
 vYi
 aaa
@@ -87889,7 +87905,7 @@ jPJ
 jPJ
 jPJ
 itV
-aaa
+fPM
 aaa
 vYi
 aaa
@@ -88147,7 +88163,7 @@ okX
 okX
 okX
 itV
-aaf
+fPM
 aaf
 vYi
 aaa
@@ -88405,7 +88421,7 @@ jPJ
 jPJ
 jPJ
 itV
-aaa
+fPM
 aaa
 vYi
 aaa
@@ -88663,7 +88679,7 @@ jPJ
 jPJ
 jPJ
 itV
-aaa
+fPM
 aaa
 aVS
 aaa
@@ -88921,7 +88937,7 @@ mvN
 lsb
 ust
 itV
-aaa
+fPM
 aaa
 xrX
 aaa
@@ -89179,7 +89195,7 @@ itV
 itV
 itV
 itV
-aaf
+fPM
 aaf
 aaa
 aaa
@@ -89436,8 +89452,8 @@ xSS
 fjS
 itV
 jVV
-aaa
-aaa
+jVV
+flh
 aaa
 aaa
 aaa
