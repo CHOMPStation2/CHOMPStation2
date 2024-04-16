@@ -13041,16 +13041,20 @@
 /turf/simulated/floor/tiled,
 /area/expoutpost/stationshuttle)
 "dwh" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 6
+	},
+/turf/simulated/floor/airless,
+/area/rnd/xenobiology/xenoflora)
+"dwn" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	external_pressure_bound = 140;
 	external_pressure_bound_default = 140;
 	icon_state = "map_vent_out";
-	use_power = 1
+	use_power = 1;
+	dir = 8
 	},
 /obj/machinery/shield_diffuser,
-/turf/simulated/floor/airless,
-/area/rnd/xenobiology/xenoflora)
-"dwn" = (
 /turf/simulated/floor/airless,
 /area/rnd/xenobiology/xenoflora)
 "dwT" = (
