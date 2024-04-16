@@ -300,13 +300,14 @@ This device records all warnings given and teleport events for admin review in c
 	var/televored = FALSE
 	if(isbelly(real_dest))
 		var/obj/belly/B = real_dest
-		if(!(target.can_be_drop_prey) && B.owner != user)
-			to_chat(target,"<span class='vwarning'>\The [src] narrowly avoids teleporting you right into \a [lowertext(real_dest.name)]!</span>")
-			real_dest = dT //Nevermind!
-		else
+		// CHOMPEdit Start - Making pref checks work properly
+		if(target.devourable && target.can_be_drop_prey && B.owner != user)
 			televored = TRUE
 			to_chat(target,"<span class='vwarning'>\The [src] teleports you right into \a [lowertext(real_dest.name)]!</span>")
-
+		else
+			to_chat(target,"<span class='vwarning'>\The [src] narrowly avoids teleporting you right into \a [lowertext(real_dest.name)]!</span>")
+			real_dest = dT //Nevermind!
+		// CHOMPEdit End
 	//Phase-out effect
 	phase_out(target,get_turf(target))
 
