@@ -55,8 +55,15 @@
 			"x" = list("ks", "kss", "ksss")
 		),
 	autohiss_exempt = list(LANGUAGE_UNATHI))
+<<<<<<< HEAD
 	custom_only = FALSE //CHOMPedit: Normal folks of species can't take their autohiss for some reason. Also ascents.
 	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_vassilian, /datum/trait/neutral/autohiss_zaddat) // CHOMPEdit: exclude vassillian hiss
+=======
+
+	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_zaddat)
+	custom_only = FALSE
+	banned_species = list(SPECIES_TAJARAN, SPECIES_UNATHI, SPECIES_ZADDAT)
+>>>>>>> 248e8e45f3... Allows other species to autohiss (#15927)
 
 /datum/trait/neutral/autohiss_tajaran
 	name = "Autohiss (Tajaran)"
@@ -67,8 +74,14 @@
 			"r" = list("rr", "rrr", "rrrr")
 		),
 	autohiss_exempt = list(LANGUAGE_SIIK,LANGUAGE_AKHANI,LANGUAGE_ALAI))
+<<<<<<< HEAD
 	excludes = list(/datum/trait/neutral/autohiss_unathi, /datum/trait/neutral/autohiss_zaddat, /datum/trait/neutral/autohiss_vassilian) // CHOMPEdit: exclude vassillian hiss
 	custom_only = FALSE //CHOMPedit: Normal folks of species can't take their autohiss for some reason. Also ascents.
+=======
+	excludes = list(/datum/trait/neutral/autohiss_unathi, /datum/trait/neutral/autohiss_zaddat)
+	custom_only = FALSE
+	banned_species = list(SPECIES_TAJARAN, SPECIES_UNATHI, SPECIES_ZADDAT)
+>>>>>>> 248e8e45f3... Allows other species to autohiss (#15927)
 
 /datum/trait/neutral/autohiss_zaddat
 	name = "Autohiss (Zaddat)"
@@ -87,7 +100,12 @@
 		),
 	autohiss_exempt = list(LANGUAGE_ZADDAT,LANGUAGE_VESPINAE))
 	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_unathi)
+<<<<<<< HEAD
 	custom_only = FALSE //CHOMPedit: Normal folks of species can't take their autohiss for some reason. Also ascents.
+=======
+	custom_only = FALSE
+	banned_species = list(SPECIES_TAJARAN, SPECIES_UNATHI, SPECIES_ZADDAT)
+>>>>>>> 248e8e45f3... Allows other species to autohiss (#15927)
 
 /datum/trait/neutral/bloodsucker
 	name = "Bloodsucker, Obligate"
