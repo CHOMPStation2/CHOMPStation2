@@ -274,13 +274,13 @@ Less important
 	mappath = "modular_chomp/maps/overmap/space_pois/turretedoutpost_23x19.dmm"
 	scanner_desc = "Mervenary owned outpost, armor piercing turrets and arms detected."
 	block_size = 23
-
+/* Temp removal, actually explodes the fucking server
 /datum/map_template/dynamic_overmap/ussp_84x90
 	name = "Unknown Station"
 	mappath = "modular_chomp/maps/overmap/space_pois/ussp_84x90.dmm"
 	scanner_desc = "Destroyed station, cause unknown."
 	block_size = 90
-
+*/
 /datum/map_template/dynamic_overmap/ussptele_21x12
 	name = "Abandoned Teleporter Relay"
 	mappath = "modular_chomp/maps/overmap/space_pois/ussptele_21x12.dmm"
