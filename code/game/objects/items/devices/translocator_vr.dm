@@ -301,7 +301,7 @@ This device records all warnings given and teleport events for admin review in c
 	if(isbelly(real_dest))
 		var/obj/belly/B = real_dest
 		// CHOMPEdit Start - Making pref checks work properly
-		if(target.devourable && target.can_be_drop_prey && B.owner != user)
+		if(target.devourable && target.can_be_drop_prey && B.owner != target)
 			televored = TRUE
 			to_chat(target,"<span class='vwarning'>\The [src] teleports you right into \a [lowertext(real_dest.name)]!</span>")
 		else
