@@ -41,8 +41,8 @@ var/obj/effect/lobby_image = new /obj/effect/lobby_image
 		mind.active = 1
 		mind.current = src
 
-	loc = null
-	client.screen += lobby_image
+	//loc = null CHOMPEdit Removal
+	//client.screen += lobby_image CHOMPEdit Removal
 	my_client = client
 	sight |= SEE_TURFS
 	player_list |= src
