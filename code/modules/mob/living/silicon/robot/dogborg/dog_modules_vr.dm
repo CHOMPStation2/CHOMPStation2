@@ -548,3 +548,4 @@
 	T.apply_damage(20, HALLOSS,, armor_block, armor_soak)
 	if(prob(75)) //75% chance to stun for 5 seconds, really only going to be 4 bcus click cooldown+animation.
 		T.apply_effect(5, STUN, armor_block)
+		T.drop_both_hands() //CHOMPEdit Stuns no longer drop items

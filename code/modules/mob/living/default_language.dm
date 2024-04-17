@@ -8,7 +8,7 @@
 
 	var/language = tgui_input_list(usr, "Select your default language", "Available languages", languages)
 
-	apply_language(language)
+	apply_default_language(language)
 
 
 // Silicons can't neccessarily speak everything in their languages list
@@ -22,9 +22,9 @@
 				default_language = lang
 				break
 		return
-	apply_language(language)
+	apply_default_language(language)
 
-/mob/living/proc/apply_language(var/language)
+/mob/living/proc/apply_default_language(var/language)
 	if (only_species_language && language != GLOB.all_languages[src.species_language])
 		to_chat(src, "<span class='notice'>You can only speak your species language, [src.species_language].</span>")
 		return 0
