@@ -255,7 +255,7 @@ var/list/mob_hat_cache = list()
 				request_player()
 			return
 
-		else
+		/*else //CHOMPEdit - Comment out drone shutting down since it seems to be a round remove with no recourse
 			user.visible_message("<span class='danger'>\The [user] swipes [TU.his] ID card through \the [src], attempting to shut it down.</span>", "<span class='danger'>You swipe your ID card through \the [src], attempting to shut it down.</span>")
 
 			if(emagged)
@@ -264,7 +264,7 @@ var/list/mob_hat_cache = list()
 			if(allowed(usr))
 				shut_down()
 			else
-				to_chat(user, "<span class='danger'>Access denied.</span>")
+				to_chat(user, "<span class='danger'>Access denied.</span>")*/
 
 		return
 
