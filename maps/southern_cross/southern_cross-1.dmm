@@ -15667,7 +15667,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_monitored/storage/eva/aux)
 "eqM" = (
-/obj/item/weapon/storage/box/monkeycubes,
 /obj/structure/table/glass,
 /obj/structure/reagent_dispensers/virusfood{
 	pixel_x = 30
@@ -15683,6 +15682,7 @@
 	c_tag = "MED - Virology Starboard";
 	dir = 8
 	},
+/obj/item/weapon/storage/box/monkeycubes,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "erI" = (
@@ -16883,6 +16883,8 @@
 	dir = 8;
 	pixel_x = -21
 	},
+/obj/item/device/antibody_scanner,
+/obj/item/device/antibody_scanner,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "fHQ" = (
@@ -18616,6 +18618,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/apcenter)
+"hsy" = (
+/obj/machinery/shield_diffuser,
+/turf/simulated/floor/airless,
+/area/space)
 "hsI" = (
 /obj/machinery/telecomms/server/presets/engineering,
 /turf/simulated/floor/tiled/dark{
@@ -20183,6 +20189,15 @@
 /obj/item/weapon/melee/umbrella/random,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/spacebus)
+"iZz" = (
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/structure/disposaloutlet{
+	dir = 4
+	},
+/turf/simulated/floor/airless,
+/area/space)
 "jbn" = (
 /obj/structure/closet/crate,
 /obj/item/weapon/tank/emergency/oxygen/engi,
@@ -85203,7 +85218,7 @@ mvN
 lpo
 xdz
 itV
-aaa
+iZz
 aaa
 vYi
 aaa
@@ -85461,7 +85476,7 @@ jPJ
 sEo
 jPJ
 itV
-aaa
+hsy
 aaa
 vYi
 aaa
