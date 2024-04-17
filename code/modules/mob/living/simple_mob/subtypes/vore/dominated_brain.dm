@@ -225,7 +225,7 @@
 		return
 
 	//CHOMPAdd Start Mind transfer pref
-	if(!pref.allow_mind_transfer)
+	if(!prey.allow_mind_transfer)
 		to_chat(prey, "<span class='warning'>[pred] is unable to be dominated.</span>")
 		return
 	//CHOMPAdd End
@@ -410,7 +410,7 @@
 		to_chat(src, "<span class='warning'>You must have a tighter grip to dominate this creature.</span>")
 		return
 	if(!M.allow_mind_transfer) //check if the dominated mob pref is enabled
-		to_chat(prey, "<span class='warning'>[M] is unable to be dominated.</span>")
+		to_chat(src, "<span class='warning'>[M] is unable to be dominated.</span>")
 		return
 	//CHOMPEdit End
 	if(tgui_alert(src, "You selected [M] to attempt to dominate. Are you sure?", "Dominate Prey",list("No","Yes")) != "Yes")
