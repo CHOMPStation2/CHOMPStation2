@@ -67,6 +67,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/pickup_pref = TRUE
 
 	//CHOMP stuff
+	var/allow_mind_transfer = FALSE
 	var/phase_vore = TRUE
 	var/noisy_full = FALSE
 	var/receive_reagents = FALSE
@@ -216,6 +217,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 
 
 	//CHOMP stuff Start
+	allow_mind_transfer = json_from_file["allow_mind_transfer"]
 	phase_vore = json_from_file["phase_vore"]
 	latejoin_vore = json_from_file["latejoin_vore"]
 	latejoin_prey = json_from_file["latejoin_prey"]
@@ -322,6 +324,8 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			weight_messages.Add("")
 
 	//CHOMP stuff Start
+	if(isnull(allow_mind_transfer))
+		allow_mind_transfer = FALSE
 	if(isnull(phase_vore))
 		phase_vore = TRUE
 	if(isnull(latejoin_vore))
@@ -397,6 +401,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"slip_vore"				= slip_vore,
 			"stumble_vore"			= stumble_vore,
 			"throw_vore" 			= throw_vore,
+			"allow_mind_transfer"	= allow_mind_transfer, //CHOMPedit
 			"phase_vore" 			= phase_vore, //CHOMPedit
 			"food_vore" 			= food_vore,
 			"nutrition_message_visible"	= nutrition_message_visible,

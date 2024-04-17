@@ -42,8 +42,9 @@
 	say_list_type = /datum/say_list/panther
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
 
-	can_be_drop_prey = FALSE //CHOMP Add
-	// CHOMPAdd: :c
+	// CHOMPAdd Start :c
+	can_be_drop_prey = FALSE
+	allow_mind_transfer = TRUE
 	species_sounds = "Feline"
 	pain_emote_1p = list("yowl", "growl")
 	pain_emote_3p = list("yowls", "growls")

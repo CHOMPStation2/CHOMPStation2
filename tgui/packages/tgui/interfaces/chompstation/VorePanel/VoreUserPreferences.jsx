@@ -40,6 +40,7 @@ export const VoreUserPreferences = (props) => {
     digest_leave_remains,
     pickup_mechanics_active,
     allow_spontaneous_tf,
+    allow_mind_transfer,
     eating_privacy_global,
     strip_mechanics_active,
     autotransferable,
@@ -411,6 +412,21 @@ export const VoreUserPreferences = (props) => {
         disabled: 'Spontaneous TF Disabled',
       },
     },
+    mind_transfer: {
+      action: 'toggle_allow_mind_transfer',
+      test: allow_mind_transfer,
+      tooltip: {
+        main:
+          'This toggle is for mind transfer interactions' +
+          ' as a victim, such as mind-binder or dominate pred/prey.',
+        enable: 'Click here to allow your mind being taken or swapped.',
+        disable: 'Click here to disallow having your mind taken or swapped.',
+      },
+      content: {
+        enabled: 'Mind Transfer Enabled',
+        disabled: 'Mind Transfer Disabled',
+      },
+    },
     examine_nutrition: {
       action: 'toggle_nutrition_ex',
       test: nutrition_message_visible,
@@ -663,9 +679,15 @@ export const VoreUserPreferences = (props) => {
               tooltipPosition="right"
             />
           </Flex.Item>
-          <Flex.Item basis="33%">
+          <Flex.Item basis="33%" grow={1}>
             <VoreUserPreferenceItem
               spec={preferences.spontaneous_tf}
+              tooltipPosition="top"
+            />
+          </Flex.Item>
+          <Flex.Item basis="33%">
+            <VoreUserPreferenceItem
+              spec={preferences.mind_transfer}
               tooltipPosition="top"
             />
           </Flex.Item>

@@ -43,7 +43,7 @@
 		A = H.held_mob
 	if(istype(A, /mob/living))
 		var/mob/living/M = A
-		if(!is_type_in_list(A, mob_takeover_whitelist))
+		if(!M.allow_mind_transfer)
 			to_chat(usr,"<span class='danger'>The target's mind is too complex to be affected!</span>")
 			return
 		if(usr == M)

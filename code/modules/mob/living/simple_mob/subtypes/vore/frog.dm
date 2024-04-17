@@ -43,8 +43,9 @@
 	special_attack_min_range = 1
 	special_attack_max_range = 5
 	special_attack_cooldown = 100
-	
+
 	can_be_drop_prey = FALSE //CHOMP Add
+	allow_mind_transfer = TRUE //CHOMPAdd
 
 // Pepe is love, not hate.
 /mob/living/simple_mob/vore/aggressive/frog/New()
