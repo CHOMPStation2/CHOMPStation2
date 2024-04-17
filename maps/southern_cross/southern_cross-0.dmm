@@ -1395,7 +1395,7 @@
 	},
 /obj/random/obstruction,
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/port)
+/area/maintenance/zeroport)
 "eY" = (
 /obj/structure/lattice,
 /obj/structure/grille,
@@ -6118,7 +6118,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/random/flashlight,
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/port)
+/area/maintenance/zeroport)
 "xI" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -6542,7 +6542,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/port)
+/area/maintenance/zeroport)
 "zL" = (
 /turf/simulated/wall/turfpack/station,
 /area/maintenance/ragecage)
@@ -6601,7 +6601,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/port)
+/area/maintenance/zeroport)
 "Ab" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /turf/simulated/floor/tiled/hydro,
@@ -7331,7 +7331,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/port)
+/area/maintenance/zeroport)
 "CK" = (
 /obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating/turfpack/station,
@@ -8140,7 +8140,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/port)
+/area/maintenance/zeroport)
 "FY" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -9733,7 +9733,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/port)
+/area/maintenance/zeroport)
 "MA" = (
 /obj/effect/floor_decal/techfloor,
 /obj/structure/cable/pink{
@@ -11045,7 +11045,7 @@
 	},
 /obj/random/trash,
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/port)
+/area/maintenance/zeroport)
 "RZ" = (
 /obj/machinery/power/smes/batteryrack,
 /obj/structure/cable{
@@ -11695,11 +11695,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/substation/gravgen)
-"US" = (
-/obj/effect/wingrille_spawn/reinforced,
-/obj/machinery/door/firedoor/border_only,
-/turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/port)
 "UU" = (
 /obj/structure/table/reinforced,
 /obj/effect/floor_decal/borderfloor{
@@ -12213,7 +12208,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/port)
+/area/maintenance/zeroport)
 "WG" = (
 /obj/structure/cable/pink{
 	d1 = 1;
@@ -42256,7 +42251,7 @@ vE
 UD
 le
 Do
-US
+ox
 wZ
 wZ
 wZ
@@ -42514,7 +42509,7 @@ vE
 UD
 jc
 le
-US
+ox
 wZ
 wZ
 wZ
