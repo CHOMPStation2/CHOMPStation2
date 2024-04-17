@@ -19,7 +19,7 @@
 	action_button_name = "Toggle Goggles"
 
 	toggleable = 1
-	enables_planes = list(INVISIBILITY_SHADEKIN)
+	see_invisible = INVISIBILITY_SHADEKIN
 
 /obj/item/clothing/glasses/meson/darksight
 	name = "optical meson scanner"
@@ -30,4 +30,5 @@
 	origin_tech = list(TECH_MAGNET = 2, TECH_ENGINEERING = 2)
 	toggleable = 1
 	vision_flags = SEE_TURFS
-	enables_planes = list(VIS_FULLBRIGHT, VIS_MESONS, INVISIBILITY_SHADEKIN)
+	enables_planes = list(VIS_FULLBRIGHT, VIS_MESONS)
+	see_invisible = INVISIBILITY_SHADEKIN
