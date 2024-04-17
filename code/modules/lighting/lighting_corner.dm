@@ -257,4 +257,38 @@
 		master_SW_sim.shandler.sunlight_update()
 	if(istype(master_NW_sim) && master_NW_sim.shandler)
 		master_NW_sim.shandler.sunlight_update()
+
+/datum/lighting_corner/proc/all_onlysun()
+	var/datum/lighting_object/lighting_object = master_NE?.lighting_object
+	if (lighting_object && !(lighting_object.sunlight_only == sunlight))
+		return FALSE
+
+	lighting_object = master_SE?.lighting_object
+	if (lighting_object && !(lighting_object.sunlight_only == sunlight))
+		return FALSE
+
+	lighting_object = master_SW?.lighting_object
+	if (lighting_object && !(lighting_object.sunlight_only == sunlight))
+		return FALSE
+
+	lighting_object = master_NW?.lighting_object
+	if (lighting_object && !(lighting_object.sunlight_only == sunlight))
+		return FALSE
+
+	return TRUE
+
+/datum/lighting_corner/proc/wake_sleepers()
+	var/turf/simulated/master_NE_sim = master_NE
+	var/turf/simulated/master_SE_sim = master_SE
+	var/turf/simulated/master_SW_sim = master_SW
+	var/turf/simulated/master_NW_sim = master_NW
+	if(istype(master_NE_sim) && master_NE_sim.shandler && master_NE_sim.shandler.sleeping)
+		master_NE_sim.shandler.sunlight_update()
+	if(istype(master_SE_sim) && master_SE_sim.shandler && master_SE_sim.shandler.sleeping)
+		master_SE_sim.shandler.sunlight_update()
+	if(istype(master_SW_sim) && master_SW_sim.shandler && master_SW_sim.shandler.sleeping)
+		master_SW_sim.shandler.sunlight_update()
+	if(istype(master_NW_sim) && master_NW_sim.shandler && master_NW_sim.shandler.sleeping)
+		master_NW_sim.shandler.sunlight_update()
+
 //CHOMPEdit End

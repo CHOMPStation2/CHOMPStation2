@@ -34,6 +34,7 @@
 	var/sunlight = FALSE
 	var/inherited = FALSE
 	var/datum/planet_sunlight_handler/pshandler
+	var/sleeping = FALSE
 
 /datum/sunlight_handler/New(var/parent)
 	. = ..()
@@ -80,6 +81,7 @@
 		sunlight_update()
 
 /datum/sunlight_handler/proc/sunlight_check()
+	set_sleeping(FALSE) //We set sleeping to false just incase. If the conditions are correct, we'll end up going back to sleeping soon enough anyways.
 	var/cur_sunlight = sunlight
 	if(holder.is_outdoors())
 		sunlight = SUNLIGHT_OVERHEAD
@@ -135,6 +137,7 @@
 	var/list/removed_corners = list()
 	var/sunlightonly_corners = 0
 	var/sunlightonly_shade_corners = 0
+	var/sleepable_corners = 0
 	for(var/datum/lighting_corner/corner in corners)
 		switch(corner.sunlight)
 			if(SUNLIGHT_NONE)
@@ -164,6 +167,8 @@
 					corner.lum_r = 0
 					corner.lum_g = 0
 					corner.lum_b = 0
+					continue
+				sleepable_corners += corner.all_onlysun()
 			if(SUNLIGHT_ONLY_SHADE)
 				sunlightonly_shade_corners++
 				if(!(sunlight == TRUE) && (corner in only_sun))
@@ -176,6 +181,8 @@
 					corner.lum_r = 0
 					corner.lum_g = 0
 					corner.lum_b = 0
+					continue
+				sleepable_corners += corner.all_onlysun()
 
 	if(!sun)
 		if(SSplanets && SSplanets.z_to_planet.len >= holder.z && SSplanets.z_to_planet[holder.z])
@@ -216,6 +223,11 @@
 
 	for(var/datum/lighting_corner/corner in only_sun)
 		corner.update_sun(pshandler)
+
+	if(sleepable_corners == 4)
+		set_sleeping(TRUE)
+	else
+		set_sleeping(FALSE)
 
 	if(!affected.len && !new_corners.len && !removed_corners.len)
 		return //Nothing to do, avoid wasting time.
@@ -260,6 +272,9 @@
 		only_sun_object.set_sunonly(FALSE, pshandler)
 		only_sun_object = null
 
+	set_sleeping(FALSE)
+	wake_sleepers()
+
 	if(!(sender in only_sun))
 		return
 
@@ -268,3 +283,17 @@
 	sender.update_lumcount(effect_str_r,effect_str_g,effect_str_b,from_sholder=TRUE)
 	only_sun -= sender
 	affected += sender
+
+/datum/sunlight_handler/proc/set_sleeping(var/val)
+	if(sleeping == val)
+		return
+	sleeping = val
+	if(val)
+		SSlighting.sunlight_queue -= src
+	else
+		SSlighting.sunlight_queue |= src //Just in case somehow gets set to false twice use |=
+
+/datum/sunlight_handler/proc/wake_sleepers(var/val)
+	var/list/corners = list(holder.lighting_corner_NE,holder.lighting_corner_NW,holder.lighting_corner_SE,holder.lighting_corner_SW)
+	for(var/datum/lighting_corner/corner in corners)
+		corner.wake_sleepers()
