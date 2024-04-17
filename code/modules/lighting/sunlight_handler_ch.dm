@@ -1,7 +1,10 @@
 /turf/simulated
 	var/datum/sunlight_handler/shandler
+	var/shandler_noinit = FALSE
 
-/turf/simulated/New()
+/turf/simulated/New(loc, is_turfchange)
+	if(is_turfchange)
+		shandler_noinit = TRUE
 	. = ..()
 
 /turf/simulated/Initialize(mapload)
@@ -15,8 +18,9 @@
 			var/turf/T = GetAbove(src)
 			if(T && !istype(T,/turf/simulated/open))
 				make_indoors()
-		shandler = new(src)
-		shandler.manualInit()
+		if(!shandler_noinit)
+			shandler = new(src)
+			shandler.manualInit()
 
 /datum/sunlight_handler
 	var/datum/sun_holder/sun

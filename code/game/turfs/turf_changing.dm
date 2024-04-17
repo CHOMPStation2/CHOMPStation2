@@ -75,11 +75,14 @@
 	var/turf/new_turf  //CHOMPEdit
 	if(ispath(N, /turf/simulated/floor))
 		//CHOMPEdit Begin
-		var/turf/simulated/W = new N( locate(src.x, src.y, src.z) )
+		var/turf/simulated/W = new N( locate(src.x, src.y, src.z), FALSE )
 		W.lighting_corners_initialised = old_lighting_corners_initialized
 		if(old_shandler)
 			W.shandler = old_shandler
 			old_shandler.holder = W
+		else if((SSplanets && SSplanets.z_to_planet.len >= z && SSplanets.z_to_planet[z]) && has_dynamic_lighting())
+			W.shandler = new(src)
+			W.shandler.manualInit()
 		//CHOMPEdit End
 		if(old_fire)
 			fire = old_fire
@@ -104,12 +107,15 @@
 
 	else
 		//CHOMPEdit Begin
-		var/turf/W = new N( locate(src.x, src.y, src.z) )
+		var/turf/W = new N( locate(src.x, src.y, src.z), FALSE )
 		W.lighting_corners_initialised = old_lighting_corners_initialized
 		var/turf/simulated/W_sim = W
 		if(istype(W_sim) && old_shandler)
 			W_sim.shandler = old_shandler
 			old_shandler.holder = W
+		else if(istype(W_sim) && (SSplanets && SSplanets.z_to_planet.len >= z && SSplanets.z_to_planet[z]) && has_dynamic_lighting())
+			W_sim.shandler = new(src)
+			W_sim.shandler.manualInit()
 		//CHOMPEdit End
 		if(old_fire)
 			old_fire.RemoveFire()
