@@ -177,3 +177,7 @@
 2024-04-15:
   Kashargul:
   - bugfix: autochangelog not working for maptweaks
+2024-04-17:
+  TheCaramelion:
+  - bugfix: Translocators will make sure everything is cool before sending you into
+      a stomach

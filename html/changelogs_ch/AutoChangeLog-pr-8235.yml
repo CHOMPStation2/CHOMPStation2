@@ -1,4 +1,0 @@
-author: "TheCaramelion"
-delete-after: True
-changes:
-  - bugfix: "Translocators will make sure everything is cool before sending you into a stomach"
