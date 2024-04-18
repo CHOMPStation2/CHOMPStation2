@@ -541,9 +541,11 @@
 		var/mob/living/carbon/human/H = T
 		if(H.species.lightweight == 1)
 			H.Stun(3) // CHOMPEdit - Crawling made this useless. Changing to stun instead.
+			H.drop_both_hands() //Stuns no longer drop items, so were forcing it >:3
 			return
 	var/armor_block = run_armor_check(T, "melee")
 	var/armor_soak = get_armor_soak(T, "melee")
 	T.apply_damage(20, HALLOSS,, armor_block, armor_soak)
 	if(prob(75)) //75% chance to stun for 5 seconds, really only going to be 4 bcus click cooldown+animation.
 		T.apply_effect(5, STUN, armor_block)
+		T.drop_both_hands() //CHOMPEdit Stuns no longer drop items

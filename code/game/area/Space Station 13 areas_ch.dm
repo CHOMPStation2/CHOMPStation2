@@ -160,3 +160,6 @@
 	name = "\improper Cargo - Disposals Sorting"
 	icon_state = "quart"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
+
+/area/maintenance/field
+	name = "Maintenance Deck Field"

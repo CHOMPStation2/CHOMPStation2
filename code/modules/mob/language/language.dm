@@ -298,13 +298,13 @@
 	if(href_list["default_lang"])
 		if(href_list["default_lang"] == "reset")
 			if (species_language)
-				set_default_language(GLOB.all_languages[species_language])
+				apply_default_language(GLOB.all_languages[species_language]) //CHOMPEdit
 			else
-				set_default_language(GLOB.all_languages[LANGUAGE_GIBBERISH])
+				apply_default_language(GLOB.all_languages[LANGUAGE_GIBBERISH]) //CHOMPEdit
 		else
 			var/datum/language/L = locate(href_list["default_lang"])
 			if(L && (L in languages))
-				set_default_language(L)
+				apply_default_language(L) //CHOMPEdit
 		check_languages()
 		return 1
 	else if(href_list["set_lang_key"])

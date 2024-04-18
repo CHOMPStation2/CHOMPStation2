@@ -92,6 +92,7 @@
 	if(target != firer)	//If you shot yourself, you probably want to be TFed so don't bother with prefs.
 		if(!M.allow_spontaneous_tf && !tf_admin_pref_override)
 			return
+	M.drop_both_hands()	//CHOMPAdd - Drop items in hand before transformation
 	if(M.tf_mob_holder)
 		new /obj/effect/effect/teleport_greyscale(M.loc) //CHOMPEdit Start
 		var/mob/living/ourmob = M.tf_mob_holder

@@ -12,14 +12,6 @@
 	has_vore_belly_resting_sprites = TRUE
 	has_eye_light_sprites = TRUE
 
-/datum/robot_sprite/service/worm
-	name = "W02M"
-	sprite_icon_state = "worm-service"
-	has_custom_open_sprites = TRUE
-	sprite_icon = 'modular_chomp/icons/mob/wormborg.dmi'
-	has_vore_belly_sprites = TRUE
-	has_dead_sprite = TRUE
-
 /datum/robot_sprite/dogborg/tall/service/mekaserve_alt
 	sprite_icon = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi'
 	name = "MEKA Alt"

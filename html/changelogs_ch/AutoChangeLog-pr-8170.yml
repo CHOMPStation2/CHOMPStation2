@@ -1,4 +1,0 @@
-author: "FluffMedic"
-delete-after: True
-changes:
-  - rscadd: "Added camera and airlock controller to viro"

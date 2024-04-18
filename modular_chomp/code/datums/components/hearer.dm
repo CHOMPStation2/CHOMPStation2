@@ -18,8 +18,6 @@
 	UnregisterSignal(SSdcs, COMSIG_VISIBLE_MESSAGE)
 
 /datum/component/hearer/proc/on_message(var/dcs,var/atom/source, var/message, var/blind_message, var/list/exclude_mobs, var/range, var/runemessage = "<span style='font-size: 1.5em'>👁</span>", var/inbelly)
-	if(!AreConnectedZLevels(source.z,parent_atom.z))
-		return
 	if(inbelly && !(parent_atom.loc == source.loc))
 		return
 	if(parent_atom in exclude_mobs)
@@ -29,6 +27,9 @@
 	var/turf/parent_turf = get_turf(parent_atom)
 
 	if(!istype(source_turf) || !istype(parent_turf))
+		return
+
+	if(!AreConnectedZLevels(source_turf.z,parent_turf.z))
 		return
 
 	//Most expensive checks last
@@ -57,7 +58,14 @@
 
 			if(curturf.z != parent_turf.z)
 				return
-
+	else
+		//mmm vision flags
+		var/flags_any = SEE_THRU
+		flags_any |= (isturf(source) * SEE_TURFS) | (ismob(source) * SEE_MOBS) | (isobj(source) * SEE_OBJS) //speedy boys don't branch
+		var/mob/M = parent_atom
+		if(!istype(M) || !(flags_any & M.sight)) //If we're a mob and we have the correct vision flags we will see the source through walls anyways
+			if(!can_see(source, parent_atom, length = range * 2)) //Length is 2 * range because diagonals are funny with can_see
+				return //no can see, fuck off
 
 	if(ismob(parent_atom))
 		var/mob/M = parent_atom

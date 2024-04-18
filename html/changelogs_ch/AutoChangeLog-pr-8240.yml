@@ -1,0 +1,7 @@
+author: "Kashargul"
+delete-after: True
+changes:
+  - bugfix: "borg pounces properly disarm on successful hits again"
+  - bugfix: "vore mobs stun at min(weakened, 2) seconds to prevent instant interruptions of vore attempts"
+  - bugfix: "multiple verb usages for speech setting instead of proc calls"
+  - bugfix: "mind_bound items can use /me now"
