@@ -226,7 +226,7 @@
 
 	//CHOMPAdd Start Mind transfer pref
 	if(!pred.allow_mind_transfer)
-		to_chat(pred, "<span class='warning'>[pred] is unable to be dominated.</span>")
+		to_chat(prey, "<span class='warning'>[pred] is unable to be dominated.</span>")
 		return
 	//CHOMPAdd End
 
