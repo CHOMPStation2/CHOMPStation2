@@ -75,7 +75,7 @@
 	var/turf/new_turf  //CHOMPEdit
 	if(ispath(N, /turf/simulated/floor))
 		//CHOMPEdit Begin
-		var/turf/simulated/W = new N( locate(src.x, src.y, src.z), FALSE )
+		var/turf/simulated/W = new N( locate(src.x, src.y, src.z), is_turfchange=TRUE )
 		W.lighting_corners_initialised = old_lighting_corners_initialized
 		if(old_shandler)
 			W.shandler = old_shandler
@@ -107,7 +107,7 @@
 
 	else
 		//CHOMPEdit Begin
-		var/turf/W = new N( locate(src.x, src.y, src.z), FALSE )
+		var/turf/W = new N( locate(src.x, src.y, src.z), is_turfchange=TRUE )
 		W.lighting_corners_initialised = old_lighting_corners_initialized
 		var/turf/simulated/W_sim = W
 		if(istype(W_sim) && old_shandler)

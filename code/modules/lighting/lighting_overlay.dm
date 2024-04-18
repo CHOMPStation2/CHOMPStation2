@@ -130,6 +130,8 @@
 	affected_turf.set_luminosity(1)
 
 /datum/lighting_object/proc/set_sunonly(var/onlysun,var/datum/planet_sunlight_handler/pshandler)
+	if(QDELETED(affected_turf)) //this should never happen but god demanded I be sad
+		return
 	switch(sunlight_only)
 		if(SUNLIGHT_ONLY)
 			affected_turf.vis_contents -= pshandler.vis_overhead

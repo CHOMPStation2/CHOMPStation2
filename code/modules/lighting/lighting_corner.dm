@@ -92,7 +92,14 @@
 	if (!(delta_r || delta_g || delta_b)) // 0 is falsey ok
 		return
 
-	if((sunlight == SUNLIGHT_ONLY || sunlight == SUNLIGHT_ONLY_SHADE) && LAZYLEN(affecting)) change_sun() //CHOMPEdit
+	//CHOMPEdit Begin
+	if((sunlight == SUNLIGHT_ONLY || sunlight == SUNLIGHT_ONLY_SHADE) && LAZYLEN(affecting))
+		change_sun()
+		if(sunlight == SUNLIGHT_ONLY || sunlight == SUNLIGHT_ONLY_SHADE)
+			//Okay fuck. If we're here some doodoo kaka bullshit happened (probably thanks to in-round map loading) and now the sunlight handler that owned us previously is fucking gone (real cool dude) so like try to get a new one ig
+			//Is this optimal? No. Is there a better way? Maybe. God knows I tried, but whatever fucking black magic is going on behind the scenes seems to defy all attempts at logic. So, if this works, it stays.
+			sunlight = SUNLIGHT_POSSIBLE
+	//CHOMPEdit End
 	lum_r += delta_r
 	lum_g += delta_g
 	lum_b += delta_b
