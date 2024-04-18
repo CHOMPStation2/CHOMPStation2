@@ -91,6 +91,11 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 		M = new_M
 
 	if(ishuman(M))
+		//CHOMPAdd Start
+		if(!M.allow_mind_transfer)
+			to_chat(usr,"<span class='danger'>The target's mind is too complex to be affected!</span>")
+			return
+		//CHOMPAdd End
 		scan_mob(M, user)
 	else
 		to_chat(user,"<span class='warning'>Not a compatible subject to work with!</span>")
