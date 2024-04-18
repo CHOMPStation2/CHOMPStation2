@@ -607,3 +607,10 @@
 	icon_state = "extra_eyes"
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch_gloss
+	name = "Full body gloss (additive)"
+	icon = 'icons/mob/human_races/markings_vr.dmi'
+	color_blend_mode = ICON_ADD
+	icon_state = "gloss"
+	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_GROIN,BP_TORSO,BP_HEAD)
