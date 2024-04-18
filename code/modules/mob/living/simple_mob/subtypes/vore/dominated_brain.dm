@@ -225,8 +225,8 @@
 		return
 
 	//CHOMPAdd Start Mind transfer pref
-	if(!prey.allow_mind_transfer)
-		to_chat(prey, "<span class='warning'>[pred] is unable to be dominated.</span>")
+	if(!pred.allow_mind_transfer)
+		to_chat(pred, "<span class='warning'>[pred] is unable to be dominated.</span>")
 		return
 	//CHOMPAdd End
 
@@ -384,7 +384,7 @@
 	var/list/possible_mobs = list()
 	for(var/obj/belly/B in src.vore_organs)
 		for(var/mob/living/L in B)
-			if(isliving(L) && L.ckey)
+			if(isliving(L) && L.ckey && L.allow_mind_transfer)
 				possible_mobs |= L
 			else
 				continue
@@ -392,7 +392,7 @@
 	var/obj/item/weapon/grab/G = src.get_active_hand()
 	if(istype(G))
 		var/mob/living/L = G.affecting
-		if(istype(L))
+		if(istype(L) && L.allow_mind_transfer)
 			if(G.state != GRAB_NECK)
 				possible_mobs |= "~~[L.name]~~ (reinforce grab first)"
 			else
