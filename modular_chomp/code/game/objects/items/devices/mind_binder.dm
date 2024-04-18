@@ -125,7 +125,7 @@
 			log_and_message_admins("attempted to bind themselves to \an [item] with a Mind Binder.")
 			usr.visible_message("<span class='warning'>[usr] presses [src] against [item]. The device beginning to let out a series of beeps!</span>","<span class='notice'>You begin to bind yourself into [item]!</span>")
 			if(do_after(usr,30 SECONDS,item))
-				item.inhabit_item(usr, null, null)
+				item.inhabit_item(usr, null, null, TRUE)
 				self_bind = !self_bind
 				update_icon()
 				to_chat(usr,"<span class='notice'>Your mind as been bound to [item].</span>")
@@ -136,7 +136,7 @@
 	if(do_after(usr,5 SECONDS,item))
 		if(possessed_voice.len == 1)
 			var/mob/living/voice/V = possessed_voice[1]
-			item.inhabit_item(V, null, V.tf_mob_holder)
+			item.inhabit_item(V, null, V.tf_mob_holder, TRUE)
 			V.Destroy()
 			possessed_voice = list()
 			to_chat(usr,"<span class='notice'>Mind bound to [item].</span>")

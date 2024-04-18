@@ -23,6 +23,12 @@
 /mob/new_player/New()
 	mob_list += src
 	add_verb(src,/mob/proc/insidePanel) //CHOMPEdit TGPanel
+	//CHOMPEdit Begin
+	if(length(GLOB.newplayer_start))
+		forceMove(pick(GLOB.newplayer_start))
+	else
+		forceMove(locate(1,1,1))
+	//CHOMPEdit End
 	initialized = TRUE // Explicitly don't use Initialize().  New players join super early and use New()
 
 

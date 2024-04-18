@@ -3,7 +3,7 @@
 	var/list/warned_of_possession //Checks to see who has been informed this item is possessed.
 
 
-/obj/item/proc/inhabit_item(var/mob/candidate, var/candidate_name, var/mob/living/candidate_original_form)
+/obj/item/proc/inhabit_item(var/mob/candidate, var/candidate_name, var/mob/living/candidate_original_form, var/is_item_tf = FALSE) //CHOMPEdit
 	//This makes it so that any object in the game can have something put in it like the cursed sword!
 	//This means the proc can also be manually called by admin commands.
 	//Handle moving the person into the object.
@@ -27,6 +27,9 @@
 	remove_verb(new_voice,/mob/living/voice/verb/hang_up ) //Also you can't hang up. You are the item! //CHOMPEdit
 	src.item_tf_spawnpoint_used() //CHOMPEdit - Item TF spawnpoints
 	//CHOMPEdit Start - Let the inhabitor know what happened to them
+	if(!istype(src, /obj/item/device/communicator) && is_item_tf)
+		new_voice.item_tf = is_item_tf 					// allows items to use /me
+		new_voice.emote_type = 1
 	if(istype(src, /obj/item/device/mindbinder))
 		to_chat(new_voice,"<span class='notice'>Your mind has been stored in [src]!</span>")
 	else

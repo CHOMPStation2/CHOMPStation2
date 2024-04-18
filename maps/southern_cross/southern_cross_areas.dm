@@ -2331,12 +2331,9 @@ End Chompstation Edit*/
 /area/maintenance/engineering/gravgen
 	name = "Gravity Generator Maintenance"
 
-/area/maintenance/maintdeck/field
-	name = "Maintenance Deck Field"
-
-/area/maintenance/maintdeck/fieldhallway
+/area/maintenance/fieldhallway
 	name = "Maintenance Deck Field Hallway"
-/area/maintenance/maintdeck/fieldthrift
+/area/maintenance/fieldthrift
 	name = "Maintenance Deck Thrift Store Hallway"
 
 /area/maintenance/abhydroponicssupp
@@ -2354,8 +2351,17 @@ End Chompstation Edit*/
 /area/maintenance/lookout
 	name = "Maintenance Deck Lookout"
 
-/area/maintenance/bar/dorm_1
+/area/maintenance/bar/dorms
+	name = "Maintenance Bar Dorms"
+	icon_state = "Sleep"
+	soundproofed = TRUE
+	limit_mob_size = FALSE
+	block_suit_sensors = TRUE
+	flags = RAD_SHIELDED
+	block_tracking = TRUE
+
+/area/maintenance/bar/dorms/dorm_1
 	name = "Maintenance Deck Bar Dorms 1"
 
-/area/maintenance/bar/dorm_2
+/area/maintenance/bar/dorms/dorm_2
 	name = "Maintenance Deck Bar Dorms 2"

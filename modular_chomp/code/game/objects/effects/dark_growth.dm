@@ -115,6 +115,11 @@
 		dark_tile.unlinked()
 	return ..()
 
+/obj/effect/dark/Destroy()
+	. = ..()
+	if(linked_node)
+		linked_node.children_effects -= src
+
 /obj/effect/dark/process()
 	set background = 1
 	var/turf/U = get_turf(src)

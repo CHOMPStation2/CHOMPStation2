@@ -1,0 +1,6 @@
+author: "CHOMPStation2"
+delete-after: True
+changes:
+  - rscadd: "Teshari Face Mask from chompstation"
+  - rscadd: "Facial protection to the mask, since it cant be removed"
+  - bugfix: "Fixed an old `to_chat` and also added framework for adding more face states to the mask"

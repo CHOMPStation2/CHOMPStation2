@@ -1,6 +1,0 @@
-author: "cadyn"
-delete-after: True
-changes:
-  - bugfix: "visible_messages pass to atoms in contents of other atoms correctly"
-  - bugfix: "visible_messages check visibility now"
-  - code_imp: "moved hearable.dm to components folder and renamed it to hearer.dm to avoid conniptions"

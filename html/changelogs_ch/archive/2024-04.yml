@@ -141,3 +141,43 @@
   - bugfix: Mobkin selection bug in VR
   - balance: Reduce dive speed increase
   - balance: Aquatic now works the same on deep and shallow water (No speed penalty)
+2024-04-11:
+  Kashargul:
+  - bugfix: Crisis W0RM borg being shown as surgical
+  - bugfix: removes the double definition of the service W0RM borg
+  cadyn:
+  - bugfix: visible_messages pass to atoms in contents of other atoms correctly
+  - bugfix: visible_messages check visibility now
+  - code_imp: moved hearable.dm to components folder and renamed it to hearer.dm to
+      avoid conniptions
+  - refactor: fuck the stupid limb icon cache get out of here
+2024-04-12:
+  Raeschen:
+  - bugfix: fixed taj veils being low on layer being hidden by eyes
+  - bugfix: fixed a couple bad config multipliers
+  - bugfix: fixed PDA choice not working due to New --> Initialise change
+  cadyn:
+  - bugfix: fixed a couple runtimes that messed with integration tests
+  - bugfix: fixed sounds not reaching mobs inside of things
+  - code_imp: more harddel fixes
+2024-04-13:
+  Kashargul:
+  - bugfix: unathi hairs
+  - rscadd: more unathi and screll hairs
+2024-04-14:
+  Kashargul:
+  - bugfix: broken unicode characters again...
+  Upstream:
+  - bugfix: .swcrc now ignored by prettier
+  - bugfix: Fixed potential tgui dev server issue with windows
+  - qol: Updated tgui dependencies
+  - qol: Bumped yarn version to 4.1.1
+  - qol: Bumped typescript to version 5.91.0
+  - qol: Bumped Node version in dependencies file to (major) 20
+2024-04-15:
+  Kashargul:
+  - bugfix: autochangelog not working for maptweaks
+2024-04-17:
+  TheCaramelion:
+  - bugfix: Translocators will make sure everything is cool before sending you into
+      a stomach
