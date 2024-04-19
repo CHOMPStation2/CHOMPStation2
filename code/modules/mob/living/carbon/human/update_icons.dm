@@ -2,11 +2,13 @@
 	Global associative list for caching humanoid icons.
 	Index format m or f, followed by a string of 0 and 1 to represent bodyparts followed by husk fat hulk skeleton 1 or 0.
 */
-var/global/list/human_icon_cache = list() //key is incredibly complex, see update_icons_body()
-var/global/list/tail_icon_cache = list() //key is [species.race_key][r_skin][g_skin][b_skin]
-var/global/list/wing_icon_cache = list() // See tail.
-var/global/list/light_overlay_cache = list() //see make_worn_icon() on helmets
-var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
+//ChompEDIT START - change to managed GLOB
+GLOBAL_LIST_EMPTY(human_icon_cache) //key is incredibly complex, see update_icons_body()
+GLOBAL_LIST_EMPTY(tail_icon_cache) //key is [species.race_key][r_skin][g_skin][b_skin]
+GLOBAL_LIST_EMPTY(wing_icon_cache) // See tail.
+GLOBAL_LIST_EMPTY(light_overlay_cache) //see make_worn_icon() on helmets
+GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
+//ChompEDIT END
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // # Human Icon Updating System
@@ -226,13 +228,13 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		if(O.damage_state == "00") continue
 		var/icon/DI
 		var/cache_index = "[O.damage_state]/[O.icon_name]/[species.get_blood_colour(src)]/[species.get_bodytype(src)]"
-		if(damage_icon_parts[cache_index] == null)
+		if(GLOB.damage_icon_parts[cache_index] == null) //ChompEDIT Managed GLOB
 			DI = icon(species.get_damage_overlays(src), O.damage_state)			// the damage icon for whole human
 			DI.Blend(icon(species.get_damage_mask(src), O.icon_name), ICON_MULTIPLY)	// mask with this organ's pixels
 			DI.Blend(species.get_blood_colour(src), ICON_MULTIPLY)
-			damage_icon_parts[cache_index] = DI
+			GLOB.damage_icon_parts[cache_index] = DI //ChompEDIT Managed GLOB
 		else
-			DI = damage_icon_parts[cache_index]
+			DI = GLOB.damage_icon_parts[cache_index] //ChompEDIT Managed GLOB
 
 		standing_image.add_overlay(DI)
 
@@ -348,12 +350,13 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 
 	icon_key = "[icon_key][husk ? 1 : 0][fat ? 1 : 0][hulk ? 1 : 0][skeleton ? 1 : 0]"
 	var/icon/base_icon
-	if(human_icon_cache[icon_key])
-		base_icon = human_icon_cache[icon_key]
+
+	if(GLOB.human_icon_cache[icon_key])
+		base_icon = GLOB.human_icon_cache[icon_key]
 	else
 		//BEGIN CACHED ICON GENERATION.
 		var/obj/item/organ/external/chest = get_organ(BP_TORSO)
-		base_icon = chest?.get_icon(skeleton, !wholeicontransparent)
+		base_icon = new(chest?.get_icon(skeleton, !wholeicontransparent)) //ChompEDIT NEW icon, not referencing original
 
 		var/apply_extra_transparency_leg = organs_by_name[BP_L_LEG] && organs_by_name[BP_R_LEG]
 		var/apply_extra_transparency_foot = organs_by_name[BP_L_FOOT] && organs_by_name[BP_R_FOOT]
@@ -430,9 +433,9 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 			husk_over.Blend(mask, ICON_ADD)
 			base_icon.Blend(husk_over, ICON_OVERLAY)
 
-		human_icon_cache[icon_key] = base_icon
+		GLOB.human_icon_cache[icon_key] = base_icon
 
-	//END CACHED ICON GENERATION.
+	//END CACHED ICON GENERATION. //ChompEDIT END
 	stand_icon.Blend(base_icon,ICON_OVERLAY)
 
 	var/image/body = image(stand_icon)
@@ -1118,7 +1121,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 //TODO: Is this the appropriate place for this, and not on species...?
 /mob/living/carbon/human/proc/get_tail_icon()
 	var/icon_key = "[species.get_race_key(src)][r_skin][g_skin][b_skin][r_hair][g_hair][b_hair]"
-	var/icon/tail_icon = tail_icon_cache[icon_key]
+	var/icon/tail_icon = GLOB.tail_icon_cache[icon_key] //ChompEDIT Managed GLOB
 	if(!tail_icon)
 		//generate a new one
 		var/species_tail_anim = species.get_tail_animation(src)
@@ -1132,7 +1135,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 			var/icon/hair_icon = icon('icons/effects/species.dmi', "[species.get_tail(src)]_[use_species_tail]")
 			hair_icon.Blend(rgb(r_hair, g_hair, b_hair), species.color_mult ? ICON_MULTIPLY : ICON_ADD)				//Check for species color_mult
 			tail_icon.Blend(hair_icon, ICON_OVERLAY)
-		tail_icon_cache[icon_key] = tail_icon
+		GLOB.tail_icon_cache[icon_key] = tail_icon //ChompEDIT Managed GLOB
 
 	return tail_icon
 
