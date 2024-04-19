@@ -3,9 +3,13 @@ SUBSYSTEM_DEF(lighting)
 	wait = 2
 	init_order = INIT_ORDER_LIGHTING
 	flags = SS_TICKER
+	var/sun_mult = 1.0
 	var/static/list/sources_queue = list() // List of lighting sources queued for update.
 	var/static/list/corners_queue = list() // List of lighting corners queued for update.
 	var/static/list/objects_queue = list() // List of lighting objects queued for update.
+	var/static/list/sunlight_queue = list() //CHOMPEdit // List of turfs that are affected by sunlight
+	var/static/list/sunlight_queue_active = list() //CHOMPEdit // List of turfs that need to have their sunlight updated
+	var/list/planet_shandlers = list() //CHOMPEdit //Precomputed lighting values for tiles only affected by the sun
 
 /datum/controller/subsystem/lighting/stat_entry(msg)
 	msg = "L:[length(sources_queue)]|C:[length(corners_queue)]|O:[length(objects_queue)]"
@@ -22,12 +26,18 @@ SUBSYSTEM_DEF(lighting)
 		subsystem_initialized = TRUE
 		create_all_lighting_objects()
 
+	//CHOMPEdit Begin
+	for(var/datum/planet/planet in SSplanets.planets)
+		if(!planet_shandlers[planet])
+			planet_shandlers[planet] = new /datum/planet_sunlight_handler(planet)
+	//CHOMPEdit End
+
 	fire(FALSE, TRUE)
 
 	return SS_INIT_SUCCESS // CHOMPEdit
 
 /datum/controller/subsystem/lighting/fire(resumed, init_tick_checks)
-	MC_SPLIT_TICK_INIT(3)
+	MC_SPLIT_TICK_INIT(4)
 	if(!init_tick_checks)
 		MC_SPLIT_TICK
 
@@ -110,7 +120,46 @@ SUBSYSTEM_DEF(lighting)
 			break
 	if (i)
 		queue.Cut(1, i + 1)
+//CHOMPEdit Begin
+		i = 0
 
+
+	if(!init_tick_checks)
+		MC_SPLIT_TICK
+
+	// UPDATE SUNLIGHT QUEUE
+	queue = sunlight_queue_active
+	while(i < length(queue)) //we don't use for loop here because i cannot be changed during an iteration
+		i += 1
+
+		var/datum/sunlight_handler/shandler = queue[i]
+		if (QDELETED(shandler))
+			continue
+		shandler.sunlight_update()
+
+		// We unroll TICK_CHECK here so we can clear out the queue to ensure any removals/additions when sleeping don't fuck us
+		if(init_tick_checks)
+			if(!TICK_CHECK)
+				continue
+			queue.Cut(1, i + 1)
+			i = 0
+			stoplag()
+		else if (MC_TICK_CHECK)
+			break
+	if (i)
+		queue.Cut(1, i + 1)
+
+/datum/controller/subsystem/lighting/proc/update_sunlight()
+	for(var/datum/planet/planet in planet_shandlers)
+		var/datum/planet_sunlight_handler/pshandler = planet_shandlers[planet]
+		pshandler.update_sun()
+	sunlight_queue_active = sunlight_queue.Copy()
+
+/datum/controller/subsystem/lighting/proc/get_pshandler(var/datum/planet/planet)
+	if(!planet_shandlers[planet])
+		planet_shandlers[planet] = new /datum/planet_sunlight_handler(planet)
+	return planet_shandlers[planet]
+//CHOMPEdit End
 
 /datum/controller/subsystem/lighting/Recover()
 	subsystem_initialized = SSlighting.subsystem_initialized
