@@ -32,3 +32,4 @@
 	vore_bump_emote = "knocks over and attempts to engulf"
 
 	can_be_drop_prey = FALSE
+	allow_mind_transfer = FALSE

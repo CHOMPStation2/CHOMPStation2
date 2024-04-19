@@ -246,6 +246,7 @@
 	P.weight_messages = src.weight_messages
 
 	//CHOMP stuff Start
+	P.allow_mind_transfer = src.allow_mind_transfer
 	P.phase_vore = src.phase_vore
 	P.noisy_full = src.noisy_full
 	P.latejoin_vore = src.latejoin_vore
@@ -315,6 +316,7 @@
 	weight_messages = P.weight_messages
 
 	//CHOMP stuff
+	allow_mind_transfer = P.allow_mind_transfer
 	phase_vore = P.phase_vore
 	noisy_full = P.noisy_full
 	latejoin_vore = P.latejoin_vore
@@ -1208,6 +1210,7 @@
 	dispvoreprefs += "<b>Can be picked up:</b> [pickup_pref ? "<font color='green'>Allowed</font>" : "<font color='red'>Disallowed</font>"]<br>"
 	dispvoreprefs += "<b>Can be resized:</b> [resizable ? "<font color='green'>Allowed</font>" : "<font color='red'>Disallowed</font>"]<br>"
 	dispvoreprefs += "<b>Spontaneous transformation:</b> [allow_spontaneous_tf ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
+	dispvoreprefs += "<b>Mind transfer:</b> [allow_mind_transfer ? "<font color='green'>Allowed</font>" : "<font color='red'>Disallowed</font>"]<br>"
 	dispvoreprefs += "<b>Feedable:</b> [feeding ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
 	dispvoreprefs += "<b>Receiving liquids:</b> [receive_reagents ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
 	dispvoreprefs += "<b>Giving liquids:</b> [give_reagents ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"

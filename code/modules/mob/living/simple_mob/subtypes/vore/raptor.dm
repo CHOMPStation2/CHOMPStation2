@@ -48,6 +48,8 @@
 		"raptorwhite"
 	)
 
+	allow_mind_transfer = TRUE //CHOMPAdd
+
 /mob/living/simple_mob/vore/raptor
 
 	vore_bump_chance = 25

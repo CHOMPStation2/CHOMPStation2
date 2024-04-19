@@ -26,7 +26,7 @@
 	var/prey_ooc_notes
 	var/prey_ooc_likes
 	var/prey_ooc_dislikes
-	var/was_mob=0 //CHOMPAdd - tracks if the dominated being was a mob
+	var/was_mob = FALSE //CHOMPAdd - tracks if the dominated being was a mob
 
 /mob/living/dominated_brain/New(loc, var/mob/living/pred, preyname, var/mob/living/prey)
 	. = ..()
@@ -199,7 +199,7 @@
 	set category = "Abilities"
 	set name = "Dominate Predator"
 	set desc = "Connect to and dominate the brain of your predator."
-	var/is_mob=0 ////CHOMPAdd - tracks if character is a non player mob
+	var/is_mob = FALSE //CHOMPAdd - tracks if character is a non player mob
 
 	var/mob/living/pred
 	var/mob/living/prey = src
@@ -223,6 +223,12 @@
 	if(prey.stat == DEAD)
 		to_chat(prey, "<span class='warning'>You cannot do that in your current state.</span>")
 		return
+
+	//CHOMPAdd Start Mind transfer pref
+	if(!pred.allow_mind_transfer)
+		to_chat(prey, "<span class='warning'>[pred] is unable to be dominated.</span>")
+		return
+	//CHOMPAdd End
 
 	if(isrobot(pred) && jobban_isbanned(prey, "Cyborg"))
 		to_chat(prey, "<span class='warning'>Forces beyond your comprehension forbid you from taking control of [pred].</span>")
@@ -253,13 +259,10 @@
 	else if(!pred.client && ("original_player" in pred.vars)) //check if the body belonged to a player and give proper log about it while preparing it
 		log_and_message_admins("[key_name_admin(prey)] is taking control over [pred] while they are out of their body.")
 		pred.ckey="DOMPLY[rand(100000,999999)]"
-		is_mob=1
-	else if(!is_type_in_list(pred, mob_takeover_whitelist)) //check if the dominated mob is not on the whitelist
-		to_chat(prey, "<span class='warning'>[pred] is unable to be dominated.</span>")
-		return
+		is_mob = TRUE
 	else //at this point we end up with a mob
-		pred.ckey="DOMMOB[rand(100000,999999)]" //this is cursed, but it does work and is cleaned up after
-		is_mob=1
+		pred.ckey = "DOMMOB[rand(100000,999999)]" //this is cursed, but it does work and is cleaned up after
+		is_mob = TRUE
 //CHOMPEdit end
 
 	to_chat(pred, "<span class='warning'>You can feel the will of another overwriting your own, control of your body being sapped away from you...</span>")
@@ -328,7 +331,7 @@
 
 //CHOMPEdit start - extra variable for mobs that assist cleanup
 	if(is_mob == 1)
-		pred_brain.was_mob=1
+		pred_brain.was_mob = TRUE
 //CHOMPEdit End
 
 /mob/proc/release_predator()
@@ -342,9 +345,9 @@
 			if(db.ckey == db.pred_ckey)
 				to_chat(src, "<span class='notice'>You ease off of your control, releasing \the [db].</span>")
 				to_chat(db, "<span class='notice'>You feel the alien presence fade, and restore control of your body to you of their own will...</span>")
-				if(db.was_mob==1) //CHOMPEdit start - clean up if the dominated body was a playerless mob
-					db.pred_ckey=null
-					db.ckey=null
+				if(db.was_mob) //CHOMPEdit start - clean up if the dominated body was a playerless mob
+					db.pred_ckey = null
+					db.ckey = null
 					db.restore_control()
 				else
 					db.restore_control()
@@ -381,7 +384,7 @@
 	var/list/possible_mobs = list()
 	for(var/obj/belly/B in src.vore_organs)
 		for(var/mob/living/L in B)
-			if(isliving(L) && L.ckey)
+			if(isliving(L) && L.ckey && L.allow_mind_transfer)
 				possible_mobs |= L
 			else
 				continue
@@ -389,7 +392,7 @@
 	var/obj/item/weapon/grab/G = src.get_active_hand()
 	if(istype(G))
 		var/mob/living/L = G.affecting
-		if(istype(L))
+		if(istype(L) && L.allow_mind_transfer)
 			if(G.state != GRAB_NECK)
 				possible_mobs |= "~~[L.name]~~ (reinforce grab first)"
 			else
@@ -405,6 +408,9 @@
 	//CHOMPEdit Start - Let dominate prey work on grabbed people
 	if(!istype(M))
 		to_chat(src, "<span class='warning'>You must have a tighter grip to dominate this creature.</span>")
+		return
+	if(!M.allow_mind_transfer) //check if the dominated mob pref is enabled
+		to_chat(src, "<span class='warning'>[M] is unable to be dominated.</span>")
 		return
 	//CHOMPEdit End
 	if(tgui_alert(src, "You selected [M] to attempt to dominate. Are you sure?", "Dominate Prey",list("No","Yes")) != "Yes")
