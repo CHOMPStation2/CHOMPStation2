@@ -46,7 +46,7 @@
 	name = "Hard Feet"	// Free protection 4 ur pawbs
 	desc = "Makes your nice clawed, scaled, hooved, armored, or otherwise just awfully calloused feet immune to glass shards."
 	cost = 0 //CHOMP Edit
-	var_changes = list("flags" = NO_MINOR_CUT) //Checked the flag is only used by shard stepping.
+	var_changes = list("feet_mod" = NO_MINOR_CUT) //Checked the flag is only used by shard stepping.
 
 /datum/trait/neutral/big_mouth
 	name = "Fast Eater, Minor"
