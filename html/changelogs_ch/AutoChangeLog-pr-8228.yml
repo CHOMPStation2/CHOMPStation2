@@ -1,5 +1,0 @@
-author: "cadyn"
-delete-after: True
-changes:
-  - bugfix: "Splash screen inconsistency"
-  - maptweak: "add splash screen to centcomm Z-level"

@@ -1,6 +1,0 @@
-author: "Kashargul"
-delete-after: True
-changes:
-  - bugfix: "scrolling not working on tgui windows"
-  - bugfix: "too many chat messages pushed to archive on login mid round after leaving"
-  - bugfix: "a rare crash condition on the BodyRecords UI if there were no records available"

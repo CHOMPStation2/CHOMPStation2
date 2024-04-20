@@ -1,5 +1,0 @@
-author: "Kashargul"
-delete-after: True
-changes:
-  - rscadd: "mind transfer preference"
-  - code_imp: "remove mind transfer whitelist, move to individual subtype allowance bool"

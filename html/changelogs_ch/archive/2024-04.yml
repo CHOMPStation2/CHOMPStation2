@@ -181,3 +181,39 @@
   TheCaramelion:
   - bugfix: Translocators will make sure everything is cool before sending you into
       a stomach
+2024-04-20:
+  CHOMPStation2:
+  - rscadd: Teshari Face Mask from chompstation
+  - rscadd: Facial protection to the mask, since it cant be removed
+  - bugfix: Fixed an old `to_chat` and also added framework for adding more face states
+      to the mask
+  Kashargul:
+  - bugfix: scrolling not working on tgui windows
+  - bugfix: too many chat messages pushed to archive on login mid round after leaving
+  - bugfix: a rare crash condition on the BodyRecords UI if there were no records
+      available
+  - bugfix: borg pounces properly disarm on successful hits again
+  - bugfix: vore mobs stun at min(weakened, 2) seconds to prevent instant interruptions
+      of vore attempts
+  - bugfix: multiple verb usages for speech setting instead of proc calls
+  - bugfix: mind_bound items can use /me now
+  - bugfix: trait selection oof hardfeet along with no scan and no defib
+  - rscadd: mind transfer preference
+  - code_imp: remove mind transfer whitelist, move to individual subtype allowance
+      bool
+  Raeschen:
+  - bugfix: Icon edit access violation crash fit attempt
+  TheCaramelion:
+  - bugfix: Translocator not sending people into belly
+  TheGreatKitsune:
+  - bugfix: removes a round removal method for drones
+  - bugfix: reverts an earlier change that prevented kin from being smelled during
+      phase
+  cadyn:
+  - bugfix: temporarily disable server exploding submap
+  - rscadd: Add new marking Full Body Gloss (additive)
+  - bugfix: fix even more harddels woooo
+  - refactor: Steal TG's find_references()
+  - bugfix: Splash screen inconsistency
+  - maptweak: add splash screen to centcomm Z-level
+  - rscadd: new planetary lighting system
