@@ -382,7 +382,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 		for(var/obj/item/organ/external/part in organs)
 			if(isnull(part) || part.is_stump() || part == chest || part.is_hidden_by_sprite_accessory()) //VOREStation Edit allowing tails to prevent bodyparts rendering, granting more spriter freedom for taur/digitigrade stuff.
 				continue
-			var/icon/temp = part.get_icon(skeleton, !wholeicontransparent)
+			var/icon/temp = new(part.get_icon(skeleton, !wholeicontransparent)) //ChompEDIT NEW icon, not referencing original
 
 			if((part.organ_tag in list(BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT)) && Cutter)
 				temp.Blend(Cutter, ICON_AND, x = icon_x_offset, y = icon_y_offset)
