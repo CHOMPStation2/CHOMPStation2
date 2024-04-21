@@ -255,17 +255,17 @@
 	var/list/datum/lighting_corner/new_corners = (corners - effect_str)
 	LAZYINITLIST(effect_str)
 	if (needs_update == LIGHTING_VIS_UPDATE)
-		for (var/datum/lighting_corner/corner as anything in new_corners)
+		for (var/datum/lighting_corner/corner in new_corners) //CHOMPEdit
 			//CHOMPEdit Begin
 			APPLY_CORNER_NEW(corner)
 			//CHOMPEdit End
 	else
-		for (var/datum/lighting_corner/corner as anything in new_corners)
+		for (var/datum/lighting_corner/corner in new_corners) //CHOMPEdit
 			//CHOMPEdit Begin
 			APPLY_CORNER_NEW(corner)
 			//CHOMPEdit End
 
-		for (var/datum/lighting_corner/corner as anything in corners - new_corners) // Existing corners
+		for (var/datum/lighting_corner/corner in corners - new_corners) // Existing corners //CHOMPEdit
 		//CHOMPEdit Begin
 			. = LUM_FALLOFF(corner, pixel_turf);
 			. *= light_power;
