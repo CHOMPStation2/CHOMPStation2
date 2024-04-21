@@ -2457,6 +2457,7 @@
 /obj/structure/table/woodentable,
 /obj/item/weapon/handcuffs/legcuffs/fuzzy,
 /obj/item/device/camera,
+/obj/item/toy/balloon,
 /turf/simulated/floor/carpet/purple,
 /area/vr/powered/mall/dorms/secondlife2)
 "caK" = (
@@ -9683,6 +9684,14 @@
 /obj/item/weapon/bedsheet/iandouble,
 /turf/simulated/floor/carpet/blucarpet,
 /area/vr/powered)
+"hXP" = (
+/obj/structure/table/darkglass,
+/obj/structure/window/basic{
+	dir = 8
+	},
+/obj/item/weapon/gun/energy/sizegun,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/vr/powered/mall/secondlife)
 "hXV" = (
 /obj/machinery/light{
 	dir = 8
@@ -16884,6 +16893,11 @@
 	},
 /turf/simulated/floor/wood/alt/parquet,
 /area/vr/powered/mall)
+"nGa" = (
+/obj/structure/table/darkglass,
+/obj/item/weapon/gun/energy/sizegun,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/vr/powered/mall/secondlife)
 "nGe" = (
 /obj/machinery/light/floortube{
 	dir = 8
@@ -25652,6 +25666,7 @@
 	},
 /obj/structure/table/woodentable,
 /obj/item/weapon/handcuffs/fuzzy,
+/obj/item/weapon/gun/energy/sizegun,
 /turf/simulated/floor/carpet/purcarpet,
 /area/vr/powered/mall/dorms/secondlife3)
 "uqB" = (
@@ -86319,7 +86334,7 @@ vrG
 fuy
 iyQ
 uzw
-uzw
+hXP
 pTD
 lut
 lut
@@ -87354,7 +87369,7 @@ hIK
 eCg
 eCg
 eoO
-lut
+nGa
 qvq
 qbH
 jWY
@@ -89160,7 +89175,7 @@ rgm
 sOV
 xma
 lut
-lut
+nGa
 soT
 qbH
 qbH
