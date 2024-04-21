@@ -63,7 +63,7 @@
 /turf/simulated/floor/outdoors/grass/sif/cave
 	tree_chance = 0
 
-	Outdoors = OUTDOORS_AREA
+	outdoors = OUTDOORS_AREA
 
 	color = "#556778"
 
