@@ -399,14 +399,6 @@
 	color = "#ffe9ab"
 	},
 /area/vr/powered/mall/backrooms)
-"att" = (
-/obj/structure/fence/hedge/corner{
-	dir = 1
-	},
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
-/area/vr/outdoors/powered)
 "auQ" = (
 /obj/effect/floor_decal/milspec/color/silver,
 /obj/structure/simple_door/wood,
@@ -442,13 +434,9 @@
 /turf/simulated/floor/wood,
 /area/vr/powered/conspawn)
 "awD" = (
-/obj/structure/fence/hedge{
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
-/area/vr/outdoors/powered)
+/obj/random/trash,
+/turf/simulated/floor/tiled/old_tile,
+/area/vr/powered/mall/secondlife)
 "awL" = (
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_mob/vore/aggressive/lizardman,
@@ -745,6 +733,12 @@
 	temperature = 311
 	},
 /area/vr/outdoors/powered)
+"aHH" = (
+/obj/structure/flora/ausbushes,
+/turf/simulated/floor/outdoors/grass{
+	temperature = 293.15
+	},
+/area/vr/outdoors/powered)
 "aHI" = (
 /obj/effect/floor_decal/corner/blue/diagonal{
 	dir = 4
@@ -847,6 +841,23 @@
 	temperature = 311
 	},
 /area/vr/powered)
+"aLl" = (
+/obj/machinery/button/remote/airlock{
+	id = "QTstorage3";
+	name = "Bolt Control";
+	pixel_x = -10;
+	specialfunctions = 4;
+	dir = 4;
+	pixel_y = 30
+	},
+/obj/structure/toilet{
+	dir = 8
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/vr/powered/mall/secondlife)
 "aLr" = (
 /obj/effect/floor_decal/corner/purple/border{
 	color = "#f700ff";
@@ -934,6 +945,14 @@
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/cult)
+"aPd" = (
+/obj/structure/fence/hedge/corner{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass{
+	temperature = 293.15
+	},
+/area/vr/outdoors/powered)
 "aPz" = (
 /obj/machinery/disperser/back{
 	dir = 1
@@ -1438,6 +1457,23 @@
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/cafe)
+"bky" = (
+/obj/machinery/button/remote/airlock{
+	id = "QTstorage4";
+	name = "Bolt Control";
+	pixel_x = -10;
+	specialfunctions = 4;
+	dir = 4;
+	pixel_y = 30
+	},
+/obj/structure/toilet{
+	dir = 8
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/vr/powered/mall/secondlife)
 "bkS" = (
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 5
@@ -1810,6 +1846,13 @@
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/vr/powered/armory)
+"bDN" = (
+/obj/machinery/light{
+	dir = 2;
+	nightshift_enabled = 1
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/vr/powered/mall/secondlife)
 "bDQ" = (
 /obj/effect/floor_decal/arrow{
 	dir = 4
@@ -2541,13 +2584,6 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/vr/powered/space/whiteship)
-"cdY" = (
-/obj/machinery/light{
-	dir = 2;
-	nightshift_enabled = 1
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/vr/powered/mall/secondlife)
 "cem" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/outdoors/grass/heavy{
@@ -4015,6 +4051,23 @@
 	temperature = 311
 	},
 /area/vr/powered)
+"drt" = (
+/obj/machinery/button/remote/airlock{
+	id = "QTstorage5";
+	name = "Bolt Control";
+	pixel_x = -10;
+	specialfunctions = 4;
+	dir = 4;
+	pixel_y = 30
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/toilet{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/vr/powered/mall/secondlife)
 "dry" = (
 /turf/unsimulated/wall/seperator,
 /area/vr/space)
@@ -4468,23 +4521,6 @@
 	},
 /turf/simulated/floor/lava,
 /area/vr/outdoors/powered/lava)
-"dMS" = (
-/obj/machinery/button/remote/airlock{
-	id = "QTstorage3";
-	name = "Bolt Control";
-	pixel_x = -10;
-	specialfunctions = 4;
-	dir = 4;
-	pixel_y = 30
-	},
-/obj/structure/toilet{
-	dir = 8
-	},
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/vr/powered/mall/secondlife)
 "dNs" = (
 /obj/structure/window/reinforced/survival_pod{
 	opacity = 1
@@ -4558,6 +4594,10 @@
 	temperature = 311
 	},
 /area/vr/outdoors/powered)
+"dOc" = (
+/obj/effect/decal/cleanable/filth,
+/turf/simulated/floor/tiled/old_tile,
+/area/vr/powered/mall/secondlife)
 "dOg" = (
 /obj/effect/floor_decal/techfloor,
 /obj/machinery/light/floortube/flicker{
@@ -5519,6 +5559,10 @@
 	pixel_y = 2;
 	pixel_x = 6
 	},
+/obj/item/trash/cigbutt{
+	pixel_y = 2;
+	pixel_x = -9
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/mall/secondlife)
 "evY" = (
@@ -5802,13 +5846,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/cafe)
-"eGb" = (
-/obj/machinery/door/airlock/freezer{
-	name = "Restroom Stall";
-	id_tag = "QTstorage3"
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/vr/powered/mall/secondlife)
 "eGo" = (
 /obj/machinery/light{
 	dir = 8
@@ -5836,6 +5873,13 @@
 	},
 /turf/unsimulated/floor/tiled/techfloor,
 /area/vr/powered/mall)
+"eGQ" = (
+/obj/machinery/door/airlock/freezer{
+	name = "Restroom Stall";
+	id_tag = "QTstorage4"
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/vr/powered/mall/secondlife)
 "eHc" = (
 /obj/structure/table/marble,
 /obj/item/weapon/reagent_containers/food/drinks/cup{
@@ -6278,13 +6322,6 @@
 	temperature = 311
 	},
 /area/vr/outdoors/powered)
-"eZL" = (
-/obj/machinery/door/airlock/freezer{
-	name = "Restroom Stall";
-	id_tag = "QTstorage1"
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/vr/powered/mall/secondlife)
 "fan" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/road,
@@ -6770,6 +6807,9 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/mall/secondlife)
+"frM" = (
+/turf/simulated/floor/tiled/old_tile,
+/area/vr/powered/mall/secondlife)
 "frW" = (
 /obj/machinery/light{
 	dir = 4
@@ -7207,13 +7247,6 @@
 	},
 /turf/simulated/shuttle/plating,
 /area/vr/powered/space/whiteship)
-"fIH" = (
-/obj/machinery/door/airlock/freezer{
-	name = "Restroom Stall";
-	id_tag = "QTstorage4"
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/vr/powered/mall/secondlife)
 "fIM" = (
 /obj/structure/sign/painting/away_areas,
 /turf/simulated/wall/r_wall,
@@ -7817,6 +7850,14 @@
 "gjB" = (
 /turf/simulated/wall/r_wall,
 /area/vr/powered/bluebase)
+"gjP" = (
+/obj/structure/fence/hedge/corner{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass{
+	temperature = 293.15
+	},
+/area/vr/outdoors/powered)
 "glK" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
@@ -8085,6 +8126,13 @@
 	},
 /turf/simulated/floor/redgrid/animated,
 /area/vr/powered/cult)
+"gBw" = (
+/obj/machinery/door/airlock/freezer{
+	name = "Restroom Stall";
+	id_tag = "QTstorage1"
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/vr/powered/mall/secondlife)
 "gBz" = (
 /obj/machinery/door/airlock/sandstone{
 	id_tag = "VRmall5"
@@ -8207,6 +8255,12 @@
 /obj/item/weapon/storage/fancy/egg_box,
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/mall/dorms/dorms1)
+"gGa" = (
+/obj/structure/toilet{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/vr/powered/mall/secondlife)
 "gGj" = (
 /obj/structure/fence/door/opened{
 	dir = 4
@@ -8439,6 +8493,14 @@
 /obj/machinery/washing_machine,
 /turf/simulated/floor/concrete,
 /area/vr/powered/mall)
+"gRn" = (
+/obj/structure/fence/hedge{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass{
+	temperature = 293.15
+	},
+/area/vr/outdoors/powered)
 "gRT" = (
 /obj/machinery/light{
 	layer = 3
@@ -8876,6 +8938,14 @@
 "hoq" = (
 /turf/simulated/shuttle/floor/white,
 /area/vr/powered/space/whiteship)
+"hot" = (
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#4165ba";
+	light_power = 1;
+	light_range = 6
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/vr/powered/mall/secondlife)
 "hou" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 5
@@ -9623,23 +9693,6 @@
 /obj/effect/map_effect/perma_light/brighter,
 /turf/simulated/floor/wood,
 /area/vr/powered/conspawn)
-"hYZ" = (
-/obj/machinery/button/remote/airlock{
-	id = "QTstorage2";
-	name = "Bolt Control";
-	pixel_x = -10;
-	specialfunctions = 4;
-	dir = 4;
-	pixel_y = 30
-	},
-/obj/structure/toilet{
-	dir = 8
-	},
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/vr/powered/mall/secondlife)
 "hZc" = (
 /obj/structure/bed/pod,
 /obj/item/weapon/bedsheet/hos,
@@ -10629,14 +10682,6 @@
 /obj/item/weapon/storage/box/buns,
 /turf/simulated/floor/tiled/yellow,
 /area/vr/powered/mall)
-"iGz" = (
-/obj/effect/map_effect/perma_light/brighter{
-	light_color = "#4165ba";
-	light_power = 1;
-	light_range = 6
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/vr/powered/mall/secondlife)
 "iGA" = (
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 4
@@ -11289,6 +11334,12 @@
 /obj/item/weapon/storage/fancy/cigar/havana,
 /turf/simulated/floor/tiled,
 /area/vr/powered/constore)
+"jmD" = (
+/obj/structure/flora/ausbushes/stalkybush,
+/turf/simulated/floor/outdoors/grass{
+	temperature = 293.15
+	},
+/area/vr/outdoors/powered)
 "jmG" = (
 /obj/structure/table/marble,
 /obj/item/weapon/storage/box/donkpockets/teriyaki,
@@ -11368,6 +11419,23 @@
 /obj/item/weapon/pen/fountain,
 /turf/simulated/floor/wood,
 /area/vr/powered)
+"joY" = (
+/obj/machinery/button/remote/airlock{
+	id = "QTstorage1";
+	name = "Bolt Control";
+	pixel_x = -10;
+	specialfunctions = 4;
+	dir = 4;
+	pixel_y = 30
+	},
+/obj/structure/toilet{
+	dir = 8
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/vr/powered/mall/secondlife)
 "jpu" = (
 /obj/machinery/sleep_console{
 	dir = 4
@@ -11571,12 +11639,6 @@
 	},
 /turf/simulated/shuttle/floor/purple,
 /area/vr/powered/space/whiteship)
-"jyG" = (
-/obj/structure/toilet{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/vr/powered/mall/secondlife)
 "jzh" = (
 /obj/structure/bed/chair/wood{
 	dir = 2;
@@ -12147,6 +12209,14 @@
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered)
+"jVb" = (
+/obj/machinery/door/airlock/multi_tile/metal{
+	dir = 2;
+	id_tag = "QTstorage5";
+	name = "Large Restroom Stall"
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/vr/powered/mall/secondlife)
 "jVS" = (
 /obj/effect/floor_decal/milspec/color/silver,
 /obj/structure/simple_door/wood,
@@ -12994,6 +13064,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/cult)
+"kJo" = (
+/obj/structure/sign/double/barsign,
+/turf/simulated/wall/sandstone{
+	color = "purple"
+	},
+/area/vr/powered/mall/secondlife)
 "kJp" = (
 /obj/structure/window/reinforced/polarized{
 	dir = 4;
@@ -13764,23 +13840,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/powered/space/sciship)
-"lpl" = (
-/obj/machinery/button/remote/airlock{
-	id = "QTstorage1";
-	name = "Bolt Control";
-	pixel_x = -10;
-	specialfunctions = 4;
-	dir = 4;
-	pixel_y = 30
-	},
-/obj/structure/toilet{
-	dir = 8
-	},
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/vr/powered/mall/secondlife)
 "lpA" = (
 /obj/structure/window/plastitanium/full,
 /obj/structure/window/reinforced/survival_pod{
@@ -13819,11 +13878,6 @@
 "lqA" = (
 /obj/machinery/appliance/cooker/oven,
 /turf/simulated/floor/wood/alt,
-/area/vr/powered/mall)
-"lqN" = (
-/turf/simulated/wall/sandstone{
-	color = "purple"
-	},
 /area/vr/powered/mall)
 "lqP" = (
 /obj/structure/sink/kitchen{
@@ -14006,6 +14060,23 @@
 /obj/structure/table/darkglass,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/vr/powered/mall/secondlife)
+"luQ" = (
+/obj/machinery/button/remote/airlock{
+	id = "QTstorage2";
+	name = "Bolt Control";
+	pixel_x = -10;
+	specialfunctions = 4;
+	dir = 4;
+	pixel_y = 30
+	},
+/obj/structure/toilet{
+	dir = 8
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/vr/powered/mall/secondlife)
 "lvj" = (
 /obj/structure/table/rack/wood,
 /obj/item/clothing/under/color/grey{
@@ -14150,14 +14221,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/conspawn)
-"lxP" = (
-/obj/structure/fence/hedge/end{
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
-/area/vr/outdoors/powered)
 "lyi" = (
 /obj/effect/floor_decal/corner/paleblue/full{
 	dir = 4
@@ -14213,11 +14276,6 @@
 	color = "#ffe9ab"
 	},
 /area/vr/powered/mall/backrooms)
-"lAg" = (
-/obj/item/weapon/reagent_containers/syringe,
-/obj/effect/decal/remains,
-/turf/simulated/floor/tiled/old_tile,
-/area/vr/powered/mall/secondlife)
 "lAy" = (
 /obj/structure/table/reinforced,
 /obj/machinery/cell_charger,
@@ -14824,6 +14882,14 @@
 	},
 /turf/simulated/shuttle/floor/white,
 /area/vr/powered/dungeon)
+"lXB" = (
+/obj/structure/table/standard,
+/obj/random/soap_common,
+/obj/random/soap_common,
+/obj/random/soap_common,
+/obj/random/soap_common,
+/turf/simulated/floor/tiled/old_tile,
+/area/vr/powered/mall/secondlife)
 "lYd" = (
 /turf/simulated/mineral/sif,
 /area/vr/outdoors/powered)
@@ -14974,20 +15040,6 @@
 /obj/item/weapon/storage/box/donkpockets/teriyaki,
 /turf/simulated/floor/wmarble,
 /area/vr/powered/mall)
-"meE" = (
-/obj/machinery/button/remote/airlock{
-	id = "QTstorage5";
-	name = "Bolt Control";
-	pixel_x = -10;
-	specialfunctions = 4;
-	dir = 4;
-	pixel_y = 30
-	},
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/vr/powered/mall/secondlife)
 "meP" = (
 /turf/simulated/floor/tiled{
 	outdoors = 1
@@ -15323,6 +15375,11 @@
 "mso" = (
 /turf/simulated/floor/beach/sand/desert,
 /area/vr/powered/mall/vw)
+"msp" = (
+/obj/item/weapon/reagent_containers/syringe,
+/obj/effect/decal/remains,
+/turf/simulated/floor/tiled/old_tile,
+/area/vr/powered/mall/secondlife)
 "mss" = (
 /obj/structure/railing,
 /obj/effect/step_trigger/teleporter/bridge/north_to_south,
@@ -16265,12 +16322,6 @@
 	},
 /turf/simulated/shuttle/plating,
 /area/vr/powered/dungeon)
-"ngQ" = (
-/obj/structure/flora/ausbushes/stalkybush,
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
-/area/vr/outdoors/powered)
 "nhm" = (
 /turf/simulated/floor/wood,
 /area/vr/powered/mall)
@@ -16358,13 +16409,6 @@
 /obj/item/clothing/head/shiny_hood,
 /turf/simulated/floor/carpet/bcarpet,
 /area/vr/powered/mall/dorms/secondlife5)
-"nlr" = (
-/obj/machinery/door/airlock/freezer{
-	name = "Restroom Stall";
-	id_tag = "QTstorage2"
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/vr/powered/mall/secondlife)
 "nls" = (
 /obj/structure/curtain/black{
 	icon_state = "open";
@@ -16374,10 +16418,6 @@
 	},
 /turf/simulated/floor/wood/sif,
 /area/vr/powered/space/mechfactory)
-"nlG" = (
-/obj/effect/decal/cleanable/filth,
-/turf/simulated/floor/tiled/old_tile,
-/area/vr/powered/mall/secondlife)
 "nlM" = (
 /obj/structure/window/reinforced/tinted/frosted{
 	dir = 1
@@ -16520,14 +16560,6 @@
 /obj/structure/railing,
 /turf/simulated/floor/concrete{
 	outdoors = 1
-	},
-/area/vr/outdoors/powered)
-"nqf" = (
-/obj/structure/fence/hedge/end{
-	dir = 8
-	},
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
 	},
 /area/vr/outdoors/powered)
 "nqH" = (
@@ -17974,14 +18006,6 @@
 	temperature = 311
 	},
 /area/vr/outdoors/powered)
-"ooV" = (
-/obj/machinery/door/airlock/multi_tile/metal{
-	dir = 2;
-	id_tag = "QTstorage5";
-	name = "Large Restroom Stall"
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/vr/powered/mall/secondlife)
 "oph" = (
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 4
@@ -19002,17 +19026,6 @@
 	outdoors = 1
 	},
 /area/vr/powered/vendor)
-"pcg" = (
-/obj/structure/mirror{
-	pixel_x = -28
-	},
-/obj/structure/sink{
-	dir = 8;
-	pixel_x = -12;
-	pixel_y = 2
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/vr/powered/mall/secondlife)
 "pcp" = (
 /obj/structure/cult/pylon,
 /turf/simulated/floor/tiled/steel_dirty,
@@ -19059,6 +19072,12 @@
 	},
 /turf/simulated/floor/cult,
 /area/vr/powered/cult)
+"peZ" = (
+/obj/structure/flora/ausbushes,
+/turf/simulated/floor/outdoors/newdirt_nograss{
+	temperature = 293.15
+	},
+/area/vr/outdoors/powered)
 "pfa" = (
 /obj/machinery/vending/wallmed1{
 	name = "NanoMed Wall";
@@ -19264,6 +19283,14 @@
 "pmG" = (
 /turf/simulated/floor/carpet,
 /area/vr/powered/mall)
+"pmQ" = (
+/obj/structure/fence/hedge/end{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass{
+	temperature = 293.15
+	},
+/area/vr/outdoors/powered)
 "pnq" = (
 /obj/machinery/sleeper{
 	dir = 4
@@ -19388,14 +19415,6 @@
 	temperature = 293.15
 	},
 /area/vr/outdoors/powered/mall)
-"pqY" = (
-/obj/structure/fence/hedge{
-	dir = 2
-	},
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
-/area/vr/outdoors/powered)
 "prl" = (
 /obj/structure/table/rack/shelf,
 /obj/item/weapon/reagent_containers/chem_disp_cartridge/coffee,
@@ -20088,9 +20107,6 @@
 	},
 /turf/simulated/shuttle/floor/purple,
 /area/vr/powered/space/whiteship)
-"pVm" = (
-/turf/simulated/floor/tiled/old_tile,
-/area/vr/powered/mall/secondlife)
 "pVA" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/device/bodysnatcher,
@@ -20642,12 +20658,6 @@
 	},
 /turf/simulated/floor/wood/alt/panel,
 /area/vr/powered/mall)
-"qnj" = (
-/obj/structure/sign/double/barsign,
-/turf/simulated/wall/sandstone{
-	color = "purple"
-	},
-/area/vr/powered/mall/secondlife)
 "qnD" = (
 /turf/unsimulated/fake_space,
 /area/vr/powered/mall/backrooms)
@@ -21438,14 +21448,6 @@
 	temperature = 311
 	},
 /area/vr/powered)
-"qTr" = (
-/obj/structure/fence/hedge/corner{
-	dir = 8
-	},
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
-/area/vr/outdoors/powered)
 "qTw" = (
 /obj/effect/catwalk_plated/white,
 /obj/machinery/light/small{
@@ -22153,6 +22155,13 @@
 	color = "#ffe9ab"
 	},
 /area/vr/powered/mall/backrooms)
+"rCf" = (
+/obj/machinery/door/airlock/freezer{
+	name = "Restroom Stall";
+	id_tag = "QTstorage3"
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/vr/powered/mall/secondlife)
 "rCh" = (
 /turf/simulated/floor/gorefloor,
 /area/vr/powered/cult)
@@ -22382,6 +22391,11 @@
 /obj/effect/zone_divider,
 /turf/unsimulated/wall,
 /area/vr/powered/cult)
+"rMS" = (
+/turf/simulated/wall/sandstone{
+	color = "purple"
+	},
+/area/vr/powered/mall)
 "rOk" = (
 /obj/structure/window/plastitanium/full,
 /obj/structure/window/reinforced/survival_pod{
@@ -23021,6 +23035,14 @@
 	temperature = 311
 	},
 /area/vr/powered/rocks)
+"spL" = (
+/obj/structure/fence/hedge/end{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass{
+	temperature = 293.15
+	},
+/area/vr/outdoors/powered)
 "squ" = (
 /turf/simulated/floor/wood/alt/panel/broken{
 	temperature = 311
@@ -23940,14 +23962,6 @@
 /obj/item/weapon/storage/belt/utility,
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/space/whiteship)
-"taN" = (
-/obj/structure/table/standard,
-/obj/random/soap_common,
-/obj/random/soap_common,
-/obj/random/soap_common,
-/obj/random/soap_common,
-/turf/simulated/floor/tiled/old_tile,
-/area/vr/powered/mall/secondlife)
 "tbj" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 1
@@ -24249,12 +24263,6 @@
 	},
 /turf/simulated/floor/wood/alt/parquet,
 /area/vr/powered/mall)
-"tqn" = (
-/obj/effect/landmark/virtual_reality{
-	name = "'Strip' Mall"
-	},
-/turf/simulated/floor/flock,
-/area/vr/powered/mall/secondlife)
 "tqo" = (
 /obj/machinery/vending/cola,
 /obj/structure/window/reinforced{
@@ -24320,6 +24328,12 @@
 /obj/structure/shuttle/engine/router,
 /turf/simulated/shuttle/wall,
 /area/vr/powered/space/whiteship)
+"ttD" = (
+/obj/effect/landmark/virtual_reality{
+	name = "'Strip' Mall"
+	},
+/turf/simulated/floor/flock,
+/area/vr/powered/mall/secondlife)
 "tui" = (
 /obj/structure/salvageable/console_broken_os,
 /obj/effect/floor_decal/techfloor{
@@ -24834,10 +24848,6 @@
 	temperature = 311
 	},
 /area/vr/outdoors/powered)
-"tOM" = (
-/obj/random/trash,
-/turf/simulated/floor/tiled/old_tile,
-/area/vr/powered/mall/secondlife)
 "tOX" = (
 /obj/structure/table/glass,
 /obj/item/weapon/storage/fancy/candle_box,
@@ -25461,12 +25471,6 @@
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/tiled,
 /area/vr/powered/dungeon)
-"uiQ" = (
-/obj/structure/flora/ausbushes,
-/turf/simulated/floor/outdoors/newdirt_nograss{
-	temperature = 293.15
-	},
-/area/vr/outdoors/powered)
 "ujg" = (
 /obj/structure/table/alien/blue,
 /obj/machinery/chemical_dispenser/ert/specialops{
@@ -26938,23 +26942,6 @@
 "vrb" = (
 /turf/simulated/floor/tiled/steel_dirty,
 /area/vr/powered/cult)
-"vrf" = (
-/obj/machinery/button/remote/airlock{
-	id = "QTstorage4";
-	name = "Bolt Control";
-	pixel_x = -10;
-	specialfunctions = 4;
-	dir = 4;
-	pixel_y = 30
-	},
-/obj/structure/toilet{
-	dir = 8
-	},
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/vr/powered/mall/secondlife)
 "vrG" = (
 /turf/unsimulated/wall/concrete/turfpack/station{
 	color = "#ebcd7c";
@@ -28260,6 +28247,13 @@
 "wxv" = (
 /turf/simulated/wall/concrete,
 /area/vr/outdoors/powered/mall)
+"wxC" = (
+/obj/machinery/door/airlock/freezer{
+	name = "Restroom Stall";
+	id_tag = "QTstorage2"
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/vr/powered/mall/secondlife)
 "wxF" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/item/weapon/stool{
@@ -28863,6 +28857,17 @@
 /obj/item/weapon/pen/blade/blue,
 /turf/simulated/floor/carpet/oracarpet,
 /area/vr/powered/mall/dorms/dorms3)
+"wTQ" = (
+/obj/structure/mirror{
+	pixel_x = -28
+	},
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/vr/powered/mall/secondlife)
 "wTU" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -29607,8 +29612,10 @@
 	},
 /turf/simulated/floor/cult,
 /area/vr/powered/cult)
-"xzS" = (
-/obj/structure/flora/ausbushes,
+"xAg" = (
+/obj/structure/fence/hedge{
+	dir = 2
+	},
 /turf/simulated/floor/outdoors/grass{
 	temperature = 293.15
 	},
@@ -82196,14 +82203,14 @@ gfv
 gfv
 wPM
 fyS
-lqN
-lqN
-lqN
-lqN
-lqN
-lqN
-lqN
-lqN
+rMS
+rMS
+rMS
+rMS
+rMS
+rMS
+rMS
+rMS
 mfD
 mfD
 mfD
@@ -82454,14 +82461,14 @@ wPM
 wPM
 wPM
 mfD
-lqN
+rMS
 cZD
 nkR
 uJo
 veM
 eIH
 aZi
-lqN
+rMS
 mfD
 mfD
 wPM
@@ -82712,14 +82719,14 @@ mfD
 mfD
 mfD
 mfD
-lqN
+rMS
 kss
 kss
 fKI
 vjd
 qpq
 aZi
-lqN
+rMS
 mfD
 mfD
 kkM
@@ -82970,14 +82977,14 @@ mfD
 mfD
 mfD
 mfD
-lqN
+rMS
 tOh
 bQG
 oRL
 jaw
 gVQ
 diP
-lqN
+rMS
 ihz
 mfD
 wPM
@@ -83222,20 +83229,20 @@ wPM
 wPM
 wPM
 wPM
-lqN
-lqN
-lqN
-lqN
-lqN
-lqN
-lqN
+rMS
+rMS
+rMS
+rMS
+rMS
+rMS
+rMS
 eRK
 eRK
 kss
 saj
 ugR
 kss
-lqN
+rMS
 mfD
 mfD
 wPM
@@ -83493,7 +83500,7 @@ aZi
 oJW
 kss
 aZi
-lqN
+rMS
 mfD
 mfD
 wPM
@@ -83751,7 +83758,7 @@ iWh
 aZi
 aZi
 aZi
-lqN
+rMS
 mfD
 ihz
 wPM
@@ -84009,7 +84016,7 @@ eWW
 aZi
 yiL
 hvR
-lqN
+rMS
 mfD
 xJF
 wPM
@@ -84267,7 +84274,7 @@ rSM
 aZi
 aZi
 diP
-lqN
+rMS
 mfD
 mfD
 wPM
@@ -84525,7 +84532,7 @@ eRK
 ivr
 eRK
 eRK
-lqN
+rMS
 mfD
 mfD
 wPM
@@ -88395,7 +88402,7 @@ qbH
 qbH
 qbH
 qbH
-qnj
+kJo
 ouN
 ouN
 ouN
@@ -89425,7 +89432,7 @@ sbp
 gEm
 sbp
 sbp
-tqn
+ttD
 sbp
 tGg
 kRJ
@@ -90954,23 +90961,23 @@ tgj
 vrG
 vrG
 fuy
-lxP
+pmQ
 kIl
 kIl
 kIl
 iyQ
-pVm
-pVm
-tOM
-taN
-pcg
-pcg
-pcg
-pcg
-tOM
-pVm
+frM
+frM
+awD
+lXB
+wTQ
+wTQ
+wTQ
+wTQ
+awD
+frM
 iyQ
-lxP
+pmQ
 kIl
 kIl
 kIl
@@ -91212,23 +91219,23 @@ tgj
 tgj
 vrG
 fuy
-awD
+gRn
 kIl
 kIl
 kIl
 iyQ
-tOM
-pVm
-iGz
-pVm
-nlG
-pVm
-tOM
-iGz
-lAg
-cdY
-iyQ
 awD
+frM
+hot
+frM
+dOc
+frM
+awD
+hot
+msp
+bDN
+iyQ
+gRn
 kIl
 kIl
 kIl
@@ -91470,25 +91477,25 @@ tgj
 tgj
 vrG
 fuy
+gRn
+kIl
+kIl
+kIl
+iyQ
+dOc
+frM
+frM
+frM
+frM
 awD
-kIl
-kIl
-kIl
+frM
 iyQ
-nlG
-pVm
-pVm
-pVm
-pVm
-tOM
-pVm
+frM
+jVb
 iyQ
-pVm
-ooV
-iyQ
-awD
-xzS
-ngQ
+gRn
+aHH
+jmD
 kIl
 jLr
 ebN
@@ -91728,23 +91735,23 @@ tgj
 tgj
 vrG
 fuy
-awD
+gRn
 kIl
 dLz
 kIl
 iyQ
-eZL
+gBw
 iyQ
-nlr
+wxC
 iyQ
-eGb
+rCf
 iyQ
-fIH
+eGQ
 iyQ
-pVm
-pVm
+frM
+frM
 iyQ
-awD
+gRn
 kIl
 kIl
 jPG
@@ -91986,26 +91993,26 @@ tgj
 tgj
 vrG
 fuy
-awD
+gRn
 kIl
 kIl
 kIl
 iyQ
-lpl
+joY
 iyQ
-hYZ
+luQ
 iyQ
-dMS
+aLl
 iyQ
-vrf
+bky
 iyQ
-meE
-jyG
+drt
+gGa
 iyQ
-awD
+gRn
 kIl
 kIl
-uiQ
+peZ
 jLr
 ebN
 geo
@@ -92244,7 +92251,7 @@ tgj
 tgj
 vrG
 fuy
-awD
+gRn
 kIl
 kIl
 kIl
@@ -92260,9 +92267,9 @@ iyQ
 iyQ
 iyQ
 iyQ
-awD
+gRn
 kIl
-ngQ
+jmD
 jPG
 cuJ
 ebN
@@ -92502,7 +92509,7 @@ tgj
 tgj
 vrG
 fuy
-awD
+gRn
 kIl
 kIl
 kIl
@@ -92518,7 +92525,7 @@ kIl
 kIl
 dLz
 kIl
-awD
+gRn
 kIl
 kIl
 kIl
@@ -92760,14 +92767,14 @@ tgj
 tgj
 vrG
 fuy
-att
-pqY
-pqY
-pqY
-pqY
-pqY
-pqY
-qTr
+gjP
+xAg
+xAg
+xAg
+xAg
+xAg
+xAg
+aPd
 kIl
 dLz
 kIl
@@ -92776,7 +92783,7 @@ kIl
 kIl
 kIl
 kIl
-nqf
+spL
 kIl
 kIl
 kIl
@@ -93025,7 +93032,7 @@ fuy
 fuy
 fuy
 fuy
-awD
+gRn
 kIl
 kIl
 kIl
@@ -93283,7 +93290,7 @@ vrG
 vrG
 vrG
 fuy
-awD
+gRn
 kIl
 kIl
 kIl
@@ -93541,7 +93548,7 @@ tgj
 tgj
 vrG
 fuy
-awD
+gRn
 kIl
 dLz
 kIl
@@ -93799,8 +93806,8 @@ tgj
 tgj
 vrG
 fuy
-att
-qTr
+gjP
+aPd
 kIl
 kIl
 kIl
@@ -94058,7 +94065,7 @@ tgj
 vrG
 fuy
 fuy
-awD
+gRn
 kIl
 kIl
 kIl
@@ -94316,7 +94323,7 @@ vrG
 vrG
 vrG
 fuy
-awD
+gRn
 kIl
 kIl
 kIl
@@ -94574,7 +94581,7 @@ tgj
 vrG
 vrG
 fuy
-awD
+gRn
 kIl
 kIl
 kIl
@@ -94832,7 +94839,7 @@ tgj
 vrG
 vrG
 fuy
-awD
+gRn
 kIl
 kIl
 kIl
@@ -95090,7 +95097,7 @@ tgj
 vrG
 vrG
 fuy
-awD
+gRn
 kIl
 dLz
 kIl
@@ -95348,7 +95355,7 @@ tgj
 vrG
 vrG
 fuy
-awD
+gRn
 kIl
 kIl
 kIl
@@ -95606,7 +95613,7 @@ tgj
 vrG
 vrG
 fuy
-awD
+gRn
 kIl
 kIl
 kIl
@@ -95864,7 +95871,7 @@ tgj
 vrG
 vrG
 fuy
-nqf
+spL
 kIl
 kIl
 kIl
