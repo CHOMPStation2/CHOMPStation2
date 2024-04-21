@@ -489,11 +489,16 @@
 	owner?.vore_organs?.Remove(src)
 	owner = null
 	for(var/mob/observer/G in src)
+<<<<<<< HEAD
 		G.forceMove(get_turf(src)) //CHOMPEdit End
+=======
+		G.forceMove(get_turf(src)) //ported from CHOMPStation PR#7132
+>>>>>>> e59031cb33... Ghosts stay in bellies (#15918)
 	return ..()
 
 // Called whenever an atom enters this belly
 /obj/belly/Entered(atom/movable/thing, atom/OldLoc)
+<<<<<<< HEAD
 	. = ..()  //CHOMPEdit Start
 	if(!owner)
 		thing.forceMove(get_turf(src))
@@ -508,13 +513,23 @@
 	thing.belly_cycles = 0 //reset cycle count
 	if(istype(thing, /mob/observer)) //Silence, spook.
 		if(desc)
+=======
+
+	if(istype(thing, /mob/observer)) //Ports CHOMPStation PR#3072
+		if(desc) //Ports CHOMPStation PR#4772
+>>>>>>> e59031cb33... Ghosts stay in bellies (#15918)
 			//Allow ghosts see where they are if they're still getting squished along inside.
 			var/formatted_desc
 			formatted_desc = replacetext(desc, "%belly", lowertext(name)) //replace with this belly's name
 			formatted_desc = replacetext(formatted_desc, "%pred", owner) //replace with this belly's owner
 			formatted_desc = replacetext(formatted_desc, "%prey", thing) //replace with whatever mob entered into this belly
+<<<<<<< HEAD
 			to_chat(thing, "<span class='vnotice'><B>[formatted_desc]</B></span>")
 		return
+=======
+			to_chat(thing, "<span class='notice'><B>[formatted_desc]</B></span>")
+
+>>>>>>> e59031cb33... Ghosts stay in bellies (#15918)
 	if(OldLoc in contents)
 		return //Someone dropping something (or being stripdigested)
 	if(istype(OldLoc, /mob/observer) || istype(OldLoc, /obj/item/device/mmi)) // Prevent reforming causing a lot of log spam/sounds
@@ -522,11 +537,15 @@
 	//CHOMPEdit end
 
 	//Generic entered message
+<<<<<<< HEAD
 	if(!owner.mute_entry && entrance_logs) //CHOMPEdit
+=======
+	if(!istype(thing, /mob/observer))	//Don't have ghosts announce they're reentering the belly on death
+>>>>>>> e59031cb33... Ghosts stay in bellies (#15918)
 		to_chat(owner,"<span class='vnotice'>[thing] slides into your [lowertext(name)].</span>")
 
 	//Sound w/ antispam flag setting
-	if(vore_sound && !recent_sound)
+	if(vore_sound && !recent_sound && !istype(thing, /mob/observer))
 		var/soundfile
 		if(!fancy_vore)
 			soundfile = classic_vore_sounds[vore_sound]
@@ -1129,9 +1148,13 @@
 			//privacy_volume = 25
 
 	//Print notifications/sound if necessary
+<<<<<<< HEAD
 	if(istype(M, /mob/observer)) //CHOMPEdit
 		silent = TRUE
 	if(!silent)
+=======
+	if(!silent && !isobserver(M))
+>>>>>>> e59031cb33... Ghosts stay in bellies (#15918)
 		owner.visible_message("<span class='vnotice'>[span_green("<b>[owner] [release_verb] [M] from their [lowertext(name)]!</b>")]</span>",range = privacy_range)
 		var/soundfile
 		if(!fancy_vore)
@@ -1191,6 +1214,15 @@
 	for(var/mob/living/L in contents)
 		living_count++
 
+	var/count_total = contents.len
+	for(var/mob/observer/C in contents)
+		count_total-- //Exclude any ghosts from %count
+
+	var/list/vore_contents = list()
+	for(var/G in contents)
+		if(!isobserver(G))
+			vore_contents += G //Exclude any ghosts from %prey
+
 	for(var/mob/living/P in contents)
 		if(!P.absorbed) //This is required first, in case there's a person absorbed and not absorbed in a stomach.
 			total_bulge += P.size_multiplier
@@ -1200,9 +1232,9 @@
 
 	formatted_message = replacetext(raw_message, "%belly", lowertext(name))
 	formatted_message = replacetext(formatted_message, "%pred", owner)
-	formatted_message = replacetext(formatted_message, "%prey", english_list(contents))
+	formatted_message = replacetext(formatted_message, "%prey", english_list(vore_contents))
 	formatted_message = replacetext(formatted_message, "%countprey", living_count)
-	formatted_message = replacetext(formatted_message, "%count", contents.len)
+	formatted_message = replacetext(formatted_message, "%count", count_total)
 
 	return(span_red("<i>[formatted_message]</i>"))
 
@@ -1543,6 +1575,7 @@
 	//Incase they have the loop going, let's double check to stop it.
 	M.stop_sound_channel(CHANNEL_PREYLOOP)
 	// Delete the digested mob
+<<<<<<< HEAD
 	//CHOMPEdit start - Changed qdel to a forceMove to allow reforming, and... handled robots special.
 	if(isrobot(M))
 		var/mob/living/silicon/robot/R = M
@@ -1581,6 +1614,12 @@
 	if(isanimal(owner))
 		owner.update_icon()
 	//CHOMPEdit End
+=======
+	var/mob/observer/G = M.ghostize() //Ports CHOMPStation PR#3074 Make sure they're out, so we can copy attack logs and such.
+	if(G)
+		G.forceMove(src)
+	qdel(M)
+>>>>>>> e59031cb33... Ghosts stay in bellies (#15918)
 
 // Handle a mob being absorbed
 /obj/belly/proc/absorb_living(mob/living/M)
@@ -2234,7 +2273,7 @@
 		return
 	content.belly_cycles = 0 //CHOMPEdit
 	content.forceMove(target)
-	if(ismob(content))
+	if(ismob(content) && !isobserver(content))
 		var/mob/ourmob = content
 		ourmob.reset_view(owner)
 	if(isitem(content))
