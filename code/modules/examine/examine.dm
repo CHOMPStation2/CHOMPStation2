@@ -34,7 +34,11 @@
 
 // Quickly adds the boilerplate code to add an image and padding for the image.
 /proc/desc_panel_image(var/icon_state)
+<<<<<<< HEAD
 	return "[icon2html(description_icons[icon_state],usr)]&emsp;" //CHOMPEdit
+=======
+	return "[bicon(description_icons[icon_state])][EXAMINE_PANEL_PADDING]"
+>>>>>>> c7b6c3e42b... Revert "Revert "Garbage collection, asset delivery, icon2html revolution, and…" (#15816)
 
 /mob/living/get_description_fluff()
 	if(flavor_text) //Get flavor text for the green text.
@@ -57,7 +61,11 @@
 	description_holders["interactions"] = A.get_description_interaction()
 
 	description_holders["name"] = "[A.name]"
+<<<<<<< HEAD
 	description_holders["icon"] = A //CHOMPEdit
+=======
+	description_holders["icon"] = "[icon2html(A.examine_icon(),src)]"
+>>>>>>> c7b6c3e42b... Revert "Revert "Garbage collection, asset delivery, icon2html revolution, and…" (#15816)
 	description_holders["desc"] = A.desc
 
 /* CHOMP Removal

@@ -151,7 +151,11 @@
 /datum/event/infestation/proc/on_vermin_destruction(var/mob/M)
 	spawned_vermin -= M
 	UnregisterSignal(M, COMSIG_OBSERVER_DESTROYED)
+<<<<<<< HEAD
 */
+=======
+
+>>>>>>> c7b6c3e42b... Revert "Revert "Garbage collection, asset delivery, icon2html revolution, and…" (#15816)
 
 
 /datum/event/infestation/announce()

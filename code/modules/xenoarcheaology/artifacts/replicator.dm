@@ -98,7 +98,11 @@
 			"foreground" = colors[color],
 		)))
 
+<<<<<<< HEAD
 	fail_message = "<span class='notice'>[icon2html(src,viewers(src))] a [pick("loud","soft","sinister","eery","triumphant","depressing","cheerful","angry")] \
+=======
+	fail_message = "<span class='notice'>[bicon(src)] a [pick("loud","soft","sinister","eery","triumphant","depressing","cheerful","angry")] \
+>>>>>>> c7b6c3e42b... Revert "Revert "Garbage collection, asset delivery, icon2html revolution, and…" (#15816)
 		[pick("horn","beep","bing","bleep","blat","honk","hrumph","ding")] sounds and a \
 		[pick("yellow","purple","green","blue","red","orange","white")] \
 		[pick("light","dial","meter","window","protrusion","knob","antenna","swirly thing")] \

@@ -185,9 +185,15 @@
 
 
 /mob/Destroy()
+<<<<<<< HEAD
 	if(ability_master)
 		QDEL_NULL(ability_master)
 	. = ..()
+=======
+	..()
+	if(ability_master)
+		QDEL_NULL(ability_master)
+>>>>>>> c7b6c3e42b... Revert "Revert "Garbage collection, asset delivery, icon2html revolution, and…" (#15816)
 
 
 ///////////ACTUAL ABILITIES////////////

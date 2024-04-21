@@ -715,7 +715,11 @@
 /obj/item/weapon/archaeological_find/Destroy()
 	if(src.is_anomalous())
 		var/datum/component/artifact_master/arti_mstr = GetComponent(/datum/component/artifact_master)
+<<<<<<< HEAD
 		arti_mstr.ClearFromParent()
+=======
+		arti_mstr.RemoveComponent()
+>>>>>>> c7b6c3e42b... Revert "Revert "Garbage collection, asset delivery, icon2html revolution, and…" (#15816)
 		if(!QDELETED(arti_mstr))
 			qdel(arti_mstr)
 

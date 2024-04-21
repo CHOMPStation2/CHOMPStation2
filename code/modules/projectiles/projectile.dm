@@ -469,13 +469,24 @@
 			impacted_mobs.Cut()
 		impacted_mobs = null
 
+<<<<<<< HEAD
 	QDEL_NULL(trajectory) //CHOMPEdit
 	cleanup_beam_segments()
+=======
+	trajectory = null
+	beam_index = null
+	beam_components = null
+
+>>>>>>> c7b6c3e42b... Revert "Revert "Garbage collection, asset delivery, icon2html revolution, and…" (#15816)
 
 	if(my_case)
 		if(my_case.BB == src)
 			my_case.BB = null
+<<<<<<< HEAD
 		my_case = null
+=======
+			my_case = null
+>>>>>>> c7b6c3e42b... Revert "Revert "Garbage collection, asset delivery, icon2html revolution, and…" (#15816)
 
 	return ..()
 

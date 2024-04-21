@@ -306,9 +306,6 @@ var/list/gamemode_cache = list()
 
 	var/static/invoke_youtubedl = null
 
-	//Enables/Disables the appropriate mob type from obtaining the verb on spawn. Still allows admins to manually give it to them.
-	var/static/allow_robot_recolor = FALSE
-	var/static/allow_simple_mob_recolor = FALSE
 
 	var/static/asset_transport
 
@@ -321,6 +318,25 @@ var/list/gamemode_cache = list()
 	var/static/asset_cdn_webroot
 
 	var/static/asset_cdn_url
+
+	//Enables/Disables the appropriate mob type from obtaining the verb on spawn. Still allows admins to manually give it to them.
+	var/static/allow_robot_recolor = FALSE
+	var/static/allow_simple_mob_recolor = FALSE
+
+<<<<<<< HEAD
+	var/static/asset_transport
+
+	var/static/cache_assets = FALSE
+
+	var/static/save_spritesheets = FALSE
+
+	var/static/asset_simple_preload = FALSE
+
+	var/static/asset_cdn_webroot
+
+	var/static/asset_cdn_url
+=======
+>>>>>>> c7b6c3e42b... Revert "Revert "Garbage collection, asset delivery, icon2html revolution, and…" (#15816)
 
 /datum/configuration/New()
 	var/list/L = subtypesof(/datum/game_mode)
@@ -1022,6 +1038,7 @@ var/list/gamemode_cache = list()
 				if("asset_cdn_url")
 					config.asset_cdn_url = value
 
+<<<<<<< HEAD
 //ChompEDIT - these belong here
 				if("allow_robot_recolor")
 					config.allow_robot_recolor = 1
@@ -1029,6 +1046,8 @@ var/list/gamemode_cache = list()
 					config.allow_simple_mob_recolor = 1
 //ChompEDIT End
 
+=======
+>>>>>>> c7b6c3e42b... Revert "Revert "Garbage collection, asset delivery, icon2html revolution, and…" (#15816)
 				else
 					log_misc("Unknown setting in configuration: '[name]'")
 

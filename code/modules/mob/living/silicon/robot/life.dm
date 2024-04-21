@@ -239,7 +239,11 @@
 					src.healths.icon_state = "health3"
 				else if(health >= 0)
 					src.healths.icon_state = "health4"
+<<<<<<< HEAD
 				else if(health >= CONFIG_GET(number.health_threshold_dead)) // CHOMPEdit
+=======
+				else if(health >= config.health_threshold_dead)
+>>>>>>> c7b6c3e42b... Revert "Revert "Garbage collection, asset delivery, icon2html revolution, and…" (#15816)
 					src.healths.icon_state = "health5"
 				else
 					src.healths.icon_state = "health6"

@@ -75,7 +75,11 @@
 			// atoms/items/objects can be pretty and whatnot
 			var/atom/A = item
 			if(output_icons && isicon(A.icon) && !ismob(A)) // mobs tend to have unusable icons
+<<<<<<< HEAD
 				item_str += "[icon2html(A,user)]&nbsp;" //CHOMPEdit
+=======
+				item_str += "[bicon(A)]&nbsp;"
+>>>>>>> c7b6c3e42b... Revert "Revert "Garbage collection, asset delivery, icon2html revolution, and…" (#15816)
 			switch(determiners)
 				if(DET_NONE) item_str += A.name
 				if(DET_DEFINITE) item_str += "\the [A]"

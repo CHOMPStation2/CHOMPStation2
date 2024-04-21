@@ -12,14 +12,22 @@
 
 /// Called when the transport is loaded by the config controller, not called on the default transport unless it gets loaded by a config change.
 /datum/asset_transport/proc/Load()
+<<<<<<< HEAD
 	if (CONFIG_GET(flag/asset_simple_preload)) // CHOMPEdit
+=======
+	if (config.asset_simple_preload)
+>>>>>>> c7b6c3e42b... Revert "Revert "Garbage collection, asset delivery, icon2html revolution, and…" (#15816)
 		for(var/client/C in GLOB.clients)
 			addtimer(CALLBACK(src, PROC_REF(send_assets_slow), C, preload), 1 SECONDS)
 
 /// Initialize - Called when SSassets initializes.
 /datum/asset_transport/proc/Initialize(list/assets)
 	preload = assets.Copy()
+<<<<<<< HEAD
 	if (!CONFIG_GET(flag/asset_simple_preload)) // CHOMPEdit
+=======
+	if (!config.asset_simple_preload)
+>>>>>>> c7b6c3e42b... Revert "Revert "Garbage collection, asset delivery, icon2html revolution, and…" (#15816)
 		return
 	for(var/client/C in GLOB.clients)
 		addtimer(CALLBACK(src, PROC_REF(send_assets_slow), C, preload), 1 SECONDS)

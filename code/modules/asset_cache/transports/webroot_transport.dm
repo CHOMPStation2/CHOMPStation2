@@ -25,7 +25,11 @@
 
 /// Saves the asset to the webroot taking into account namespaces and hashes.
 /datum/asset_transport/webroot/proc/save_asset_to_webroot(datum/asset_cache_item/ACI)
+<<<<<<< HEAD
 	var/webroot = CONFIG_GET(string/asset_cdn_webroot) // CHOMPEdit
+=======
+	var/webroot = config.asset_cdn_webroot
+>>>>>>> c7b6c3e42b... Revert "Revert "Garbage collection, asset delivery, icon2html revolution, and…" (#15816)
 	var/newpath = "[webroot][get_asset_suffex(ACI)]"
 	if (fexists(newpath))
 		return
@@ -39,7 +43,11 @@
 /datum/asset_transport/webroot/get_asset_url(asset_name, datum/asset_cache_item/asset_cache_item)
 	if (!istype(asset_cache_item))
 		asset_cache_item = SSassets.cache[asset_name]
+<<<<<<< HEAD
 	var/url = CONFIG_GET(string/asset_cdn_url) //config loading will handle making sure this ends in a /      // CHOMPEdit
+=======
+	var/url = config.asset_cdn_url //config loading will handle making sure this ends in a /
+>>>>>>> c7b6c3e42b... Revert "Revert "Garbage collection, asset delivery, icon2html revolution, and…" (#15816)
 	return "[url][get_asset_suffex(asset_cache_item)]"
 
 /datum/asset_transport/webroot/proc/get_asset_suffex(datum/asset_cache_item/asset_cache_item)
@@ -76,11 +84,19 @@
 	return FALSE
 
 /datum/asset_transport/webroot/validate_config(log = TRUE)
+<<<<<<< HEAD
 	if (!CONFIG_GET(string/asset_cdn_url)) // CHOMPEdit
 		if (log)
 			log_asset("ERROR: [type]: Invalid Config: ASSET_CDN_URL")
 		return FALSE
 	if (!CONFIG_GET(string/asset_cdn_webroot)) // CHOMPEdit
+=======
+	if (!config.asset_cdn_url)
+		if (log)
+			log_asset("ERROR: [type]: Invalid Config: ASSET_CDN_URL")
+		return FALSE
+	if (!config.asset_cdn_webroot)
+>>>>>>> c7b6c3e42b... Revert "Revert "Garbage collection, asset delivery, icon2html revolution, and…" (#15816)
 		if (log)
 			log_asset("ERROR: [type]: Invalid Config: ASSET_CDN_WEBROOT")
 		return FALSE

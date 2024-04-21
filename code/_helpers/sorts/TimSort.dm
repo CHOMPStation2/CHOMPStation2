@@ -15,6 +15,11 @@
 		SI.L = L
 		SI.cmp = cmp
 		SI.associative = associative
+<<<<<<< HEAD
+=======
+
+		SI.timSort(fromIndex, toIndex)
+>>>>>>> c7b6c3e42b... Revert "Revert "Garbage collection, asset delivery, icon2html revolution, and…" (#15816)
 
 		SI.timSort(fromIndex, toIndex)
 	return L

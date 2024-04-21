@@ -225,8 +225,12 @@
 
 /mob/living/bot/secbot/resetTarget()
 	..()
+<<<<<<< HEAD
 	if(target)
 		UnregisterSignal(target, COMSIG_OBSERVER_MOVED)
+=======
+	UnregisterSignal(target, COMSIG_OBSERVER_MOVED)
+>>>>>>> c7b6c3e42b... Revert "Revert "Garbage collection, asset delivery, icon2html revolution, and…" (#15816)
 	awaiting_surrender = 0
 	attacked = FALSE
 	walk_to(src, 0)

@@ -269,17 +269,28 @@
 	name = "vore"
 
 /datum/asset/spritesheet/vore/create_spritesheets()
+<<<<<<< HEAD
 	var/icon/downscaled = icon('modular_chomp/icons/mob/screen_full_vore_ch.dmi') //CHOMPedit: preserving save data
+=======
+	var/icon/downscaled = icon('icons/mob/screen_full_vore.dmi')
+>>>>>>> c7b6c3e42b... Revert "Revert "Garbage collection, asset delivery, icon2html revolution, and…" (#15816)
 	downscaled.Scale(240, 240)
 	InsertAll("", downscaled)
 
 /datum/asset/spritesheet/vore_fixed //This should be getting loaded in the TGUI vore panel but the game refuses to do so, for some reason. It only loads the vore spritesheet. //CHOMPedit
 	name = "fixedvore" //CHOMPedit
 
+<<<<<<< HEAD
 /datum/asset/spritesheet/vore_fixed/create_spritesheets() //CHOMPedi start: preserving save data
 	var/icon/downscaledVF = icon('icons/mob/screen_full_vore.dmi')
 	downscaledVF.Scale(240, 240)
 	InsertAll("", downscaledVF) //CHOMpedit end
+=======
+/datum/asset/spritesheet/vore_colorized/create_spritesheets()
+	var/icon/downscaledVC = icon('icons/mob/screen_full_colorized_vore.dmi')
+	downscaledVC.Scale(240, 240)
+	InsertAll("", downscaledVC)
+>>>>>>> c7b6c3e42b... Revert "Revert "Garbage collection, asset delivery, icon2html revolution, and…" (#15816)
 
 //VOREStation Add End
 
@@ -438,6 +449,7 @@
 	for(var/i = 1 to 4)
 		Insert("bottle-[i]", 'icons/obj/chemical.dmi', "bottle-[i]")
 
+<<<<<<< HEAD
 	for(var/i = 1 to 4) // CHOMPedit
 		Insert("patch[i].png", 'icons/obj/chemical.dmi', "patch[i]") // CHOMPedit
 
@@ -456,6 +468,40 @@
 		"synthprinter.gif" = 'icons/UI_Icons/synthprinter.gif',
 		"synthprinter_working.gif" = 'icons/UI_Icons/synthprinter_working.gif',
 	)
+=======
+	for(var/asset_name in assets)
+		SSassets.transport.register_asset(asset_name, assets[asset_name])
+
+/datum/asset/chem_master/send(client)
+	SSassets.transport.send_assets(client, assets, verify)
+
+//Cloning pod sprites for UIs
+/datum/asset/cloning
+	var/assets = list()
+	var/verify = FALSE
+
+/datum/asset/cloning/register()
+	assets["pod_idle.gif"] = icon('icons/obj/cloning.dmi', "pod_idle")
+	assets["pod_cloning.gif"] = icon('icons/obj/cloning.dmi', "pod_cloning")
+	assets["pod_mess.gif"] = icon('icons/obj/cloning.dmi', "pod_mess")
+	for(var/asset_name in assets)
+		SSassets.transport.register_asset(asset_name, assets[asset_name])
+
+/datum/asset/cloning/send(client)
+	SSassets.transport.send_assets(client, assets, verify)
+
+// VOREStation Add
+/datum/asset/cloning/resleeving
+/datum/asset/cloning/resleeving/register()
+	// This intentionally does not call the parent. Duplicate assets are not allowed.
+	assets["sleeve_empty.gif"] = icon('icons/obj/machines/implantchair.dmi', "implantchair")
+	assets["sleeve_occupied.gif"] = icon('icons/obj/machines/implantchair.dmi', "implantchair_on")
+	assets["synthprinter.gif"] = icon('icons/obj/machines/synthpod.dmi', "pod_0")
+	assets["synthprinter_working.gif"] = icon('icons/obj/machines/synthpod.dmi', "pod_1")
+	for(var/asset_name in assets)
+		SSassets.transport.register_asset(asset_name, assets[asset_name])
+// VOREStation Add End
+>>>>>>> c7b6c3e42b... Revert "Revert "Garbage collection, asset delivery, icon2html revolution, and…" (#15816)
 
 /datum/asset/spritesheet/sheetmaterials
 	name = "sheetmaterials"

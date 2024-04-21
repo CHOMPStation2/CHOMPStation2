@@ -209,7 +209,10 @@ LINEN BINS
 		icon_state = "linenbin-half"
 	else
 		icon_state = "linenbin-full"
+<<<<<<< HEAD
 
+=======
+>>>>>>> c7b6c3e42b... Revert "Revert "Garbage collection, asset delivery, icon2html revolution, and…" (#15816)
 
 /obj/structure/bedsheetbin/attackby(obj/item/I as obj, mob/user as mob)
 	if(istype(I, /obj/item/weapon/bedsheet))

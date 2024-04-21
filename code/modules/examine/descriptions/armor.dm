@@ -24,9 +24,13 @@
 	switch(slowdown)
 		if(-INFINITY to -0.1)
 			return "It looks like it might actually make you faster!"
+<<<<<<< HEAD
 		if(null)
 			return "It doesn't look like it'll impede your mobility."
 		if(0)
+=======
+		if(0,null)
+>>>>>>> c7b6c3e42b... Revert "Revert "Garbage collection, asset delivery, icon2html revolution, and…" (#15816)
 			return "It doesn't look like it'll impede your mobility."
 		if(0.5)
 			return "It might slow you down a little bit."

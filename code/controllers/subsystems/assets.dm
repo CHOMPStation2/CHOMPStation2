@@ -6,9 +6,15 @@ SUBSYSTEM_DEF(assets)
 	var/list/preload = list()
 	var/datum/asset_transport/transport = new()
 
+<<<<<<< HEAD
 /datum/controller/subsystem/assets/OnConfigLoad() // CHOMPEdit
 	var/newtransporttype = /datum/asset_transport
 	switch (CONFIG_GET(string/asset_transport)) // CHOMPEdit
+=======
+/datum/controller/subsystem/assets/proc/OnConfigLoad()
+	var/newtransporttype = /datum/asset_transport
+	switch (config.asset_transport)
+>>>>>>> c7b6c3e42b... Revert "Revert "Garbage collection, asset delivery, icon2html revolution, and…" (#15816)
 		if ("webroot")
 			newtransporttype = /datum/asset_transport/webroot
 

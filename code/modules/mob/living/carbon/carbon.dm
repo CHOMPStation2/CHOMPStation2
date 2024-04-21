@@ -22,7 +22,10 @@
 	QDEL_NULL(touching)
 	// We don't qdel(bloodstr) because it's the same as qdel(reagents)
 	bloodstr = null
+<<<<<<< HEAD
 	QDEL_NULL_LIST(internal_organs)
+=======
+>>>>>>> c7b6c3e42b... Revert "Revert "Garbage collection, asset delivery, icon2html revolution, and…" (#15816)
 	QDEL_NULL_LIST(stomach_contents)
 	return ..()
 

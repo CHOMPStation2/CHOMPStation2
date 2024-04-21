@@ -58,10 +58,47 @@
 
 /mob/living/carbon/human/Destroy()
 	human_mob_list -= src
+<<<<<<< HEAD
 	QDEL_NULL_LIST(organs)
 	if(nif)
 		QDEL_NULL(nif)	//VOREStation Add
 	worn_clothing.Cut()
+=======
+	/* //Chomp REMOVE - this is done on mob/living/Destroy
+	for(var/organ in organs)
+		qdel(organ)
+	*/
+	if(nif)
+		QDEL_NULL(nif)	//VOREStation Add
+	worn_clothing.Cut()
+
+
+	if(vessel)
+		QDEL_NULL(vessel)
+	return ..()
+
+/mob/living/carbon/human/Stat()
+	..()
+	if(statpanel("Status"))
+		stat("Intent:", "[a_intent]")
+		stat("Move Mode:", "[m_intent]")
+		if(emergency_shuttle)
+			var/eta_status = emergency_shuttle.get_status_panel_eta()
+			if(eta_status)
+				stat(null, eta_status)
+
+		if (internal)
+			if (!internal.air_contents)
+				qdel(internal)
+			else
+				stat("Internal Atmosphere Info", internal.name)
+				stat("Tank Pressure", internal.air_contents.return_pressure())
+				stat("Distribution Pressure", internal.distribute_pressure)
+
+		var/obj/item/organ/internal/xenos/plasmavessel/P = internal_organs_by_name[O_PLASMA] //Xenomorphs. Mech.
+		if(P)
+			stat(null, "Phoron Stored: [P.stored_plasma]/[P.max_plasma]")
+>>>>>>> c7b6c3e42b... Revert "Revert "Garbage collection, asset delivery, icon2html revolution, and…" (#15816)
 
 
 	if(vessel)
