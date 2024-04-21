@@ -99,6 +99,24 @@
 	color = "#ffe9ab"
 	},
 /area/vr/powered/mall/backrooms)
+"afZ" = (
+/obj/effect/floor_decal/milspec/color/silver,
+/obj/structure/sink{
+	dir = 1
+	},
+/obj/structure/mirror{
+	dir = 1;
+	pixel_y = -28
+	},
+/turf/simulated/floor/tiled/white,
+/area/vr/powered/mall/dorms/dorms3)
+"agH" = (
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = 24
+	},
+/turf/simulated/floor/carpet/sblucarpet,
+/area/vr/powered/mall/dorms/secondlife)
 "ahA" = (
 /turf/simulated/shuttle/floor/white,
 /area/vr/powered/space/sciship)
@@ -170,11 +188,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/space/whiteship)
-"akn" = (
-/obj/structure/table/darkglass,
-/obj/item/weapon/storage/box/fluff/swimsuit/strippergreen,
-/turf/simulated/floor/tiled/techfloor,
-/area/vr/powered/mall/secondlife)
 "akC" = (
 /turf/simulated/wall/phoron,
 /area/vr/powered/cult)
@@ -386,6 +399,11 @@
 	color = "#ffe9ab"
 	},
 /area/vr/powered/mall/backrooms)
+"auQ" = (
+/obj/effect/floor_decal/milspec/color/silver,
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/tiled/white,
+/area/vr/powered/mall/dorms/dorms5)
 "avf" = (
 /obj/effect/floor_decal/corner/black/diagonal,
 /obj/structure/table/marble,
@@ -476,9 +494,8 @@
 /turf/simulated/floor/tiled,
 /area/vr/powered/vendor)
 "azq" = (
-/obj/item/weapon/digestion_remains/variant2,
-/turf/simulated/floor/carpet/gaycarpet,
-/area/vr/powered/mall/dorms/secondlife4)
+/turf/simulated/floor/wood/alt/parquet,
+/area/vr/powered/mall/dorms/dorms1)
 "azz" = (
 /obj/machinery/vending/dinnerware{
 	dir = 4;
@@ -744,12 +761,26 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/dungeon)
+"aIN" = (
+/obj/effect/floor_decal/milspec/color/silver,
+/obj/structure/toilet{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	brightness_color = "#DA0205";
+	brightness_power = 1;
+	brightness_range = 5;
+	dir = 8;
+	nightshift_enabled = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/vr/powered/mall/dorms/dorms6)
 "aJc" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
 /turf/simulated/floor/wood/alt/parquet,
-/area/vr/powered/mall/dorms/dorms1)
+/area/vr/powered/mall/dorms/dorms3)
 "aJB" = (
 /obj/structure/closet/wardrobe/grey,
 /obj/item/clothing/under/teshari/undercoat/standard/black_grey,
@@ -804,6 +835,10 @@
 	},
 /area/vr/powered)
 "aLr" = (
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 6
+	},
 /obj/effect/map_effect/perma_light/brighter{
 	light_color = "#e060e0";
 	light_power = 1;
@@ -912,11 +947,6 @@
 "aQJ" = (
 /turf/simulated/wall/cult,
 /area/vr/outdoors/powered/cult)
-"aQR" = (
-/obj/structure/table/hardwoodtable,
-/obj/item/device/flashlight/lamp/green,
-/turf/simulated/floor/carpet/oracarpet,
-/area/vr/powered/mall/dorms/dorms3)
 "aRb" = (
 /obj/structure/flora/smallbould,
 /turf/simulated/floor/outdoors/grass/heavy{
@@ -1136,6 +1166,12 @@
 /obj/item/weapon/reagent_containers/food/snacks/monkeysdelight,
 /turf/simulated/floor/cult,
 /area/vr/powered/cult)
+"aZu" = (
+/obj/effect/landmark/virtual_reality{
+	name = "'Strip' Mall"
+	},
+/turf/simulated/floor/flock,
+/area/vr/powered/mall/secondlife)
 "aZv" = (
 /turf/unsimulated/wall,
 /area/vr/powered/material)
@@ -1404,14 +1440,6 @@
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/vr/powered/mall)
-"blQ" = (
-/obj/structure/table/darkglass,
-/obj/structure/window/basic{
-	dir = 4
-	},
-/obj/item/weapon/material/twohanded/riding_crop,
-/turf/simulated/floor/tiled/milspec/raised,
-/area/vr/powered/mall/secondlife)
 "bmi" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/clothing/under/pants/camo,
@@ -1423,6 +1451,11 @@
 /obj/item/weapon/bedsheet/hosdouble,
 /turf/simulated/floor/carpet/retro,
 /area/vr/powered/mall/dorms/dorms5)
+"bmI" = (
+/obj/effect/floor_decal/milspec/color/silver,
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/tiled/white,
+/area/vr/powered/mall/dorms/dorms6)
 "bmZ" = (
 /obj/structure/table/hardwoodtable,
 /turf/simulated/floor/wood/alt/panel,
@@ -1583,12 +1616,6 @@
 	},
 /turf/simulated/floor/outdoors/road,
 /area/vr/powered/rocks)
-"buP" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/simulated/floor/wood/alt/parquet,
-/area/vr/powered/mall/dorms/dorms4)
 "bvk" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/foodcart,
@@ -1694,15 +1721,6 @@
 "bAl" = (
 /turf/simulated/floor/carpet,
 /area/vr/powered/art)
-"bAC" = (
-/obj/structure/table/hardwoodtable,
-/obj/machinery/light/small{
-	dir = 4;
-	nightshift_enabled = 1;
-	pixel_y = 0
-	},
-/turf/simulated/floor/carpet/oracarpet,
-/area/vr/powered/mall/dorms/dorms1)
 "bAM" = (
 /obj/structure/bonfire/permanent,
 /obj/effect/decal/cleanable/dirt,
@@ -1892,6 +1910,14 @@
 	icon_state = "cult-narsie"
 	},
 /area/vr/powered/cult)
+"bIw" = (
+/obj/item/weapon/digestion_remains/skull/teshari,
+/obj/effect/decal/cleanable/fruit_smudge,
+/obj/item/clothing/mask/muzzle/ballgag{
+	pixel_y = -7
+	},
+/turf/simulated/floor/carpet/gaycarpet,
+/area/vr/powered/mall/dorms/secondlife4)
 "bII" = (
 /obj/structure/table/marble,
 /obj/item/weapon/storage/firstaid/bonemed{
@@ -1928,6 +1954,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/vr/powered/vet)
+"bKW" = (
+/obj/structure/sign/poster/custom{
+	pixel_y = 0;
+	dir = 2
+	},
+/turf/simulated/floor/carpet/sblucarpet,
+/area/vr/powered/mall/dorms/secondlife)
 "bLz" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/techfloor{
@@ -2062,10 +2095,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/vr/powered/dungeon)
-"bPm" = (
-/obj/effect/floor_decal/milspec/color/silver,
-/turf/simulated/floor/tiled/white,
-/area/vr/powered/mall/dorms/dorms3)
 "bPy" = (
 /obj/structure/sign/science{
 	pixel_y = 32
@@ -2219,6 +2248,12 @@
 	},
 /turf/simulated/floor/wood/alt/parquet/turfpack,
 /area/vr/powered/mall)
+"bSk" = (
+/obj/structure/bed/chair/sofa/left/beige{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/vr/powered/mall/dorms/dorms3)
 "bSP" = (
 /obj/structure/sink{
 	dir = 8;
@@ -2300,20 +2335,15 @@
 	temperature = 311
 	},
 /area/vr/outdoors/powered)
-"bWc" = (
-/obj/structure/table/darkglass,
-/obj/effect/floor_decal/corner/purple/border{
-	color = "#f700ff";
-	dir = 5
-	},
-/obj/machinery/chemical_dispenser/bar_coffee/full,
-/turf/unsimulated/shuttle/floor/purple,
-/area/vr/powered/mall/secondlife)
 "bWI" = (
 /obj/item/weapon/gun/projectile/shotgun/doublebarrel,
 /obj/structure/table/woodentable,
 /turf/simulated/floor/wood,
 /area/vr/powered/mall)
+"bWV" = (
+/obj/item/weapon/handcuffs/legcuffs/fuzzy,
+/turf/simulated/floor/tiled/techfloor,
+/area/vr/powered/mall/secondlife)
 "bXg" = (
 /turf/simulated/wall/sandstonediamond,
 /area/vr/powered)
@@ -2574,9 +2604,6 @@
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/tiled,
 /area/vr/powered/gunshop)
-"ciy" = (
-/turf/simulated/floor/wood/alt/parquet,
-/area/vr/powered/mall/dorms/dorms4)
 "ciT" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 10
@@ -2687,12 +2714,12 @@
 	color = "grey"
 	},
 /area/vr/powered/cult)
-"clK" = (
-/obj/effect/floor_decal/corner/purple/border{
-	color = "#f700ff";
-	dir = 6
+"clV" = (
+/obj/item/toy/plushie/mouse{
+	pixel_y = 2;
+	pixel_x = 6
 	},
-/turf/unsimulated/shuttle/floor/purple,
+/turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/mall/secondlife)
 "cmf" = (
 /obj/structure/salvageable/data_os{
@@ -3027,16 +3054,11 @@
 /turf/simulated/floor/wood,
 /area/vr/powered/bar)
 "cBz" = (
-/obj/machinery/button/remote/airlock{
-	id = "VRmallSL3";
-	name = "Bolt Control";
-	pixel_x = 6;
-	specialfunctions = 4;
-	dir = 4;
-	pixel_y = 30
+/obj/machinery/light/small{
+	dir = 4
 	},
-/turf/simulated/floor/carpet/purcarpet,
-/area/vr/powered/mall/dorms/secondlife3)
+/turf/simulated/floor/wood/alt/parquet,
+/area/vr/powered/mall/dorms/dorms2)
 "cCO" = (
 /turf/simulated/floor/wood,
 /area/vr/powered/cafe)
@@ -3186,6 +3208,10 @@
 	},
 /turf/simulated/floor/cult,
 /area/vr/powered/cult)
+"cIs" = (
+/obj/effect/floor_decal/milspec/color/silver,
+/turf/simulated/floor/tiled/white,
+/area/vr/powered/mall/dorms/dorms3)
 "cIG" = (
 /obj/machinery/light{
 	dir = 4;
@@ -3243,13 +3269,6 @@
 "cLE" = (
 /turf/simulated/shuttle/floor/darkred,
 /area/vr/powered/armory)
-"cMb" = (
-/obj/item/toy/plushie/black_fox{
-	pixel_y = 0;
-	name = "latex black fox"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/vr/powered/mall/secondlife)
 "cME" = (
 /obj/item/weapon/coin/gold,
 /obj/item/weapon/coin/diamond,
@@ -3292,14 +3311,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/vr/powered/space/sciship)
-"cNx" = (
-/obj/effect/floor_decal/corner/purple/border{
-	color = "#f700ff";
-	dir = 4
-	},
-/obj/item/clothing/under/swimsuit/purple,
-/turf/simulated/floor/tiled/techfloor,
-/area/vr/powered/mall/secondlife)
 "cOM" = (
 /obj/machinery/button/remote/blast_door{
 	id = "vrsewers1";
@@ -3310,6 +3321,14 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
 /area/vr/powered/dungeon)
+"cPN" = (
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#e060e0";
+	light_power = 1;
+	light_range = 6
+	},
+/turf/unsimulated/shuttle/floor/purple,
+/area/vr/powered/mall/secondlife)
 "cPW" = (
 /obj/structure/table/standard,
 /obj/random/cigarettes,
@@ -3335,6 +3354,11 @@
 /obj/machinery/light/poi,
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/dungeon)
+"cRj" = (
+/obj/structure/table/darkglass,
+/obj/item/weapon/storage/box/fluff/swimsuit/strippergreen,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/vr/powered/mall/secondlife)
 "cRo" = (
 /obj/structure/window/plastitanium/full,
 /obj/structure/window/reinforced/survival_pod,
@@ -3487,14 +3511,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/bar)
-"cZd" = (
-/obj/effect/map_effect/perma_light/brighter{
-	light_color = "#e060e0";
-	light_power = 1;
-	light_range = 6
-	},
-/turf/simulated/floor/carpet/gaycarpet,
-/area/vr/powered/mall/secondlife)
 "cZo" = (
 /obj/machinery/autolathe{
 	hacked = 1;
@@ -3711,7 +3727,9 @@
 /turf/simulated/floor/cult,
 /area/vr/powered/cult)
 "dhl" = (
-/turf/unsimulated/shuttle/floor/purple,
+/obj/structure/table/darkglass,
+/obj/item/clothing/under/swimsuit/stripper/mankini,
+/turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/mall/secondlife)
 "dhv" = (
 /obj/structure/table/wooden_reinforced,
@@ -3834,6 +3852,13 @@
 	},
 /turf/simulated/floor/weird_things/dark,
 /area/vr/powered/mall/backrooms)
+"dlj" = (
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = 24
+	},
+/turf/simulated/floor/carpet/purple,
+/area/vr/powered/mall/dorms/secondlife2)
 "dlu" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -3905,6 +3930,10 @@
 	},
 /turf/unsimulated/floor/tiled/techfloor,
 /area/vr/powered/mall)
+"dnZ" = (
+/obj/item/weapon/tape_roll,
+/turf/simulated/floor/tiled/techfloor,
+/area/vr/powered/mall/secondlife)
 "dop" = (
 /obj/structure/window/phoronreinforced{
 	dir = 1
@@ -4096,13 +4125,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/mall)
-"dyK" = (
-/obj/effect/floor_decal/corner/purple/border{
-	color = "#f700ff";
-	dir = 4
-	},
-/turf/unsimulated/shuttle/floor/purple,
-/area/vr/powered/mall/secondlife)
 "dyO" = (
 /obj/machinery/computer/operating{
 	dir = 4
@@ -4124,17 +4146,13 @@
 	},
 /turf/simulated/shuttle/floor/white,
 /area/vr/powered/space/whiteship)
-"dzE" = (
-/obj/item/weapon/tape_roll,
-/turf/simulated/floor/tiled/techfloor,
-/area/vr/powered/mall/secondlife)
 "dzQ" = (
 /obj/structure/sign/poster/custom{
 	pixel_y = 0;
 	dir = 2
 	},
-/turf/simulated/floor/carpet/purcarpet,
-/area/vr/powered/mall/dorms/secondlife3)
+/turf/simulated/floor/carpet/purple,
+/area/vr/powered/mall/dorms/secondlife2)
 "dzT" = (
 /obj/machinery/door/airlock/gold{
 	id_tag = "VRmallSL1"
@@ -4236,6 +4254,10 @@
 	specialfunctions = 4;
 	dir = 4;
 	pixel_y = 30
+	},
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/yellow,
 /area/vr/powered/mall/dorms/dorms4)
@@ -4348,11 +4370,6 @@
 "dHI" = (
 /turf/simulated/floor/carpet/sblucarpet,
 /area/vr/powered/cult)
-"dJF" = (
-/obj/effect/floor_decal/milspec/color/silver,
-/obj/structure/simple_door/wood,
-/turf/simulated/floor/tiled/white,
-/area/vr/powered/mall/dorms/dorms1)
 "dKF" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 9
@@ -4390,6 +4407,15 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/vr/powered/mall)
+"dLk" = (
+/obj/machinery/vending/deluxe_boozeomat,
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 1;
+	pixel_y = 0
+	},
+/turf/unsimulated/shuttle/floor/purple,
+/area/vr/powered/mall/secondlife)
 "dLo" = (
 /obj/structure/closet/l3closet/virology,
 /turf/simulated/floor/tiled/white,
@@ -4813,6 +4839,14 @@
 /obj/item/weapon/reagent_containers/food/snacks/reishicup,
 /turf/simulated/floor/cult,
 /area/vr/powered/cult)
+"dVN" = (
+/obj/structure/curtain/open/shower,
+/obj/machinery/shower{
+	dir = 8;
+	pixel_x = -5
+	},
+/turf/simulated/floor/tiled/white,
+/area/vr/powered/mall/dorms/dorms4)
 "dWc" = (
 /turf/simulated/floor/wood/alt/parquet,
 /area/vr/powered/mall)
@@ -5283,10 +5317,13 @@
 	},
 /area/vr/powered/rocks)
 "enN" = (
-/obj/structure/table/darkglass,
-/obj/item/clothing/mask/muzzle/ballgag,
-/turf/simulated/floor/tiled/techfloor,
-/area/vr/powered/mall/secondlife)
+/obj/structure/curtain/open/shower,
+/obj/machinery/shower{
+	dir = 8;
+	pixel_x = -5
+	},
+/turf/simulated/floor/tiled/white,
+/area/vr/powered/mall/dorms/dorms2)
 "eoA" = (
 /obj/machinery/light{
 	dir = 8
@@ -5306,17 +5343,16 @@
 /turf/simulated/shuttle/plating,
 /area/vr/powered/space/sciship)
 "eoO" = (
-/obj/structure/table/darkglass,
-/obj/effect/map_effect/perma_light/brighter{
-	light_color = "#e060e0";
-	light_power = 1;
-	light_range = 6
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 2;
+	pixel_y = 0
 	},
-/turf/simulated/floor/tiled/techfloor,
+/turf/unsimulated/shuttle/floor/purple,
 /area/vr/powered/mall/secondlife)
 "epd" = (
 /turf/simulated/wall/wood,
-/area/vr/powered/mall/dorms/dorms1)
+/area/vr/powered/mall/dorms/dorms6)
 "epk" = (
 /obj/structure/table/marble{
 	pixel_y = 0
@@ -5442,12 +5478,28 @@
 	temperature = 311
 	},
 /area/vr/outdoors/powered)
+"evB" = (
+/obj/structure/table/darkglass,
+/obj/structure/stripper_pole{
+	icon_scale_x = 0.5;
+	icon_scale_y = 0.5
+	},
+/obj/item/toy/plushie/mouse{
+	pixel_y = 2;
+	pixel_x = 6
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/vr/powered/mall/secondlife)
 "evY" = (
 /obj/structure/railing,
 /turf/simulated/floor/outdoors/rocks{
 	temperature = 293.15
 	},
 /area/vr/outdoors/powered/lava)
+"ews" = (
+/obj/item/toy/balloon,
+/turf/simulated/floor/tiled/techfloor,
+/area/vr/powered/mall/secondlife)
 "ewx" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/grille,
@@ -5542,11 +5594,6 @@
 /turf/simulated/floor/wood,
 /area/vr/powered)
 "eCg" = (
-/obj/effect/floor_decal/corner/purple/border{
-	color = "#f700ff";
-	dir = 2;
-	pixel_y = 0
-	},
 /turf/unsimulated/shuttle/floor/purple,
 /area/vr/powered/mall/secondlife)
 "eCs" = (
@@ -5783,10 +5830,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/cafe)
-"eHr" = (
-/obj/item/toy/balloon,
-/turf/simulated/floor/tiled/techfloor,
-/area/vr/powered/mall/secondlife)
 "eHR" = (
 /obj/machinery/light{
 	layer = 3
@@ -5883,13 +5926,8 @@
 /turf/simulated/floor/carpet/geo,
 /area/vr/powered/mall)
 "eKD" = (
-/obj/structure/curtain/open/shower,
-/obj/machinery/shower{
-	dir = 8;
-	pixel_x = -5
-	},
-/turf/simulated/floor/tiled/white,
-/area/vr/powered/mall/dorms/dorms5)
+/turf/simulated/wall/wood,
+/area/vr/powered/mall/dorms/dorms4)
 "eKF" = (
 /obj/structure/bed/chair/sofa/brown{
 	dir = 8
@@ -6046,6 +6084,17 @@
 	temperature = 311
 	},
 /area/vr/powered/rocks)
+"eRp" = (
+/obj/machinery/button/remote/airlock{
+	id = "VRmallSL3";
+	name = "Bolt Control";
+	pixel_x = 6;
+	specialfunctions = 4;
+	dir = 4;
+	pixel_y = 30
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/vr/powered/mall/dorms/secondlife3)
 "eRK" = (
 /turf/simulated/wall/sandstone{
 	color = "purple"
@@ -6148,6 +6197,14 @@
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/vr/powered/mall)
+"eWW" = (
+/obj/effect/decal/cleanable/greenglow,
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = 24
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/vr/powered/mall/dorms/secondlife5)
 "eXx" = (
 /turf/simulated/wall/r_wall,
 /area/vr/powered/bar)
@@ -6185,6 +6242,20 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/road,
 /area/vr/outdoors/powered)
+"fas" = (
+/obj/effect/floor_decal/milspec/color/silver,
+/obj/structure/toilet{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	brightness_color = "#DA0205";
+	brightness_power = 1;
+	brightness_range = 5;
+	dir = 8;
+	nightshift_enabled = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/vr/powered/mall/dorms/dorms2)
 "faC" = (
 /obj/item/clothing/shoes/cult,
 /obj/item/clothing/suit/cultrobes/alt,
@@ -6532,6 +6603,13 @@
 /obj/structure/bed/pillowpile,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/vr/powered/mall/secondlife)
+"fnx" = (
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 4
+	},
+/turf/unsimulated/shuttle/floor/purple,
+/area/vr/powered/mall/secondlife)
 "fnC" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -6637,6 +6715,14 @@
 	},
 /turf/space,
 /area/vr/space)
+"frI" = (
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#e060e0";
+	light_power = 1;
+	light_range = 6
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/vr/powered/mall/secondlife)
 "frW" = (
 /obj/machinery/light{
 	dir = 4
@@ -6665,17 +6751,6 @@
 /obj/item/weapon/reagent_containers/food/condiment/soysauce,
 /turf/simulated/floor/wmarble,
 /area/vr/powered/mall)
-"fsK" = (
-/obj/effect/floor_decal/milspec/color/silver,
-/obj/structure/sink{
-	dir = 1
-	},
-/obj/structure/mirror{
-	dir = 1;
-	pixel_y = -28
-	},
-/turf/simulated/floor/tiled/white,
-/area/vr/powered/mall/dorms/dorms3)
 "fsL" = (
 /obj/structure/table/marble,
 /obj/item/weapon/reagent_containers/food/condiment/enzyme,
@@ -6706,11 +6781,6 @@
 /obj/structure/window/phoronreinforced,
 /turf/simulated/floor/redgrid/animated,
 /area/vr/powered/cult)
-"ftN" = (
-/obj/structure/table/darkglass,
-/obj/item/clothing/under/swimsuit/stripper/stripper_pink,
-/turf/simulated/floor/tiled/techfloor,
-/area/vr/powered/mall/secondlife)
 "ftQ" = (
 /obj/structure/railing,
 /obj/effect/step_trigger/teleporter/bridge/north_to_south,
@@ -6828,6 +6898,10 @@
 "fwD" = (
 /turf/simulated/floor/tiled,
 /area/vr/powered/vendor)
+"fwJ" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/floor/tiled/techfloor,
+/area/vr/powered/mall/secondlife)
 "fwX" = (
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 4
@@ -6850,6 +6924,11 @@
 	color = "#ffe9ab"
 	},
 /area/vr/powered/mall/backrooms)
+"fxe" = (
+/obj/structure/table/darkglass,
+/obj/item/clothing/mask/muzzle/ballgag,
+/turf/simulated/floor/tiled/techfloor,
+/area/vr/powered/mall/secondlife)
 "fyf" = (
 /obj/structure/prop/rock/small/alt,
 /turf/simulated/floor/outdoors/dirt{
@@ -6998,6 +7077,10 @@
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered)
+"fFp" = (
+/obj/item/device/camera,
+/turf/simulated/floor/tiled/techfloor,
+/area/vr/powered/mall/secondlife)
 "fGt" = (
 /obj/machinery/gateway/brass{
 	dir = 10
@@ -7134,22 +7217,6 @@
 	},
 /turf/simulated/floor/tiled/old_cargo,
 /area/vr/powered/mall/dorms/dorms6)
-"fMq" = (
-/obj/structure/table/darkglass,
-/obj/item/device/mindbinder{
-	pixel_y = 4;
-	pixel_x = -2
-	},
-/obj/item/device/mindbinder{
-	pixel_y = -4;
-	pixel_x = -3
-	},
-/obj/item/device/mindbinder{
-	pixel_y = 2;
-	pixel_x = 5
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/vr/powered/mall/secondlife)
 "fMF" = (
 /obj/structure/table/marble,
 /obj/structure/window/reinforced{
@@ -7212,20 +7279,6 @@
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/vr/powered/mall)
-"fMP" = (
-/obj/effect/floor_decal/milspec/color/silver,
-/obj/structure/toilet{
-	dir = 4
-	},
-/obj/machinery/light/small{
-	brightness_color = "#DA0205";
-	brightness_power = 1;
-	brightness_range = 5;
-	dir = 8;
-	nightshift_enabled = 1
-	},
-/turf/simulated/floor/tiled/white,
-/area/vr/powered/mall/dorms/dorms5)
 "fMQ" = (
 /obj/structure/table/marble{
 	color = "grey"
@@ -7261,6 +7314,15 @@
 	},
 /turf/simulated/floor/wood/alt/panel,
 /area/vr/powered/mall)
+"fQf" = (
+/obj/structure/table/darkglass,
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 9
+	},
+/obj/machinery/chemical_dispenser/bar_coffee/full,
+/turf/unsimulated/shuttle/floor/purple,
+/area/vr/powered/mall/secondlife)
 "fQh" = (
 /obj/machinery/vending/loadout/costume{
 	prices = list(/obj/item/clothing/suit/storage/hooded/costume/carp=0,/obj/item/clothing/suit/storage/hooded/costume/carp=0,/obj/item/clothing/suit/chickensuit=0,/obj/item/clothing/head/chicken=0,/obj/item/clothing/head/helmet/gladiator=0,/obj/item/clothing/under/gladiator=0,/obj/item/clothing/suit/storage/toggle/labcoat/mad=0,/obj/item/clothing/under/suit_jacket/green=0,/obj/item/clothing/glasses/gglasses=0,/obj/item/clothing/head/flatcap=0,/obj/item/clothing/shoes/boots/jackboots=0,/obj/item/clothing/under/schoolgirl=0,/obj/item/clothing/head/kitty=0,/obj/item/clothing/glasses/sunglasses/blindfold=0,/obj/item/clothing/head/beret=0,/obj/item/clothing/under/skirt=0,/obj/item/clothing/under/suit_jacket=0,/obj/item/clothing/head/that=0,/obj/item/clothing/accessory/wcoat=0,/obj/item/clothing/under/scratch=0,/obj/item/clothing/shoes/white=0,/obj/item/clothing/gloves/white=0,/obj/item/clothing/under/kilt=0,/obj/item/clothing/glasses/monocle=0,/obj/item/clothing/under/sl_suit=0,/obj/item/clothing/mask/fakemoustache=0,/obj/item/weapon/cane=0,/obj/item/clothing/head/bowler=0,/obj/item/clothing/head/plaguedoctorhat=0,/obj/item/clothing/suit/bio_suit/plaguedoctorsuit=0,/obj/item/clothing/mask/gas/plaguedoctor/fluff=0,/obj/item/clothing/under/owl=0,/obj/item/clothing/mask/gas/owl_mask=0,/obj/item/clothing/under/waiter=0,/obj/item/clothing/suit/storage/apron=0,/obj/item/clothing/under/pirate=0,/obj/item/clothing/head/pirate=0,/obj/item/clothing/suit/pirate=0,/obj/item/clothing/glasses/eyepatch=0,/obj/item/clothing/head/ushanka=0,/obj/item/clothing/under/soviet=0,/obj/item/clothing/suit/imperium_monk=0,/obj/item/clothing/suit/holidaypriest=0,/obj/item/clothing/head/witchwig=0,/obj/item/clothing/under/sundress=0,/obj/item/weapon/staff/broom=0,/obj/item/clothing/suit/wizrobe/fake=0,/obj/item/clothing/head/wizard/fake=0,/obj/item/weapon/staff=0,/obj/item/clothing/mask/gas/sexyclown=0,/obj/item/clothing/under/sexyclown=0,/obj/item/clothing/mask/gas/sexymime=0,/obj/item/clothing/under/sexymime=0,/obj/item/clothing/suit/storage/hooded/knight_costume=0,/obj/item/clothing/suit/storage/hooded/knight_costume/galahad=0,/obj/item/clothing/suit/storage/hooded/knight_costume/lancelot=0,/obj/item/clothing/suit/storage/hooded/knight_costume/robin=0,/obj/item/clothing/suit/armor/combat/crusader_costume=0,/obj/item/clothing/suit/armor/combat/crusader_costume/bedevere=0,/obj/item/clothing/head/helmet/combat/crusader_costume=0,/obj/item/clothing/head/helmet/combat/bedevere_costume=0,/obj/item/clothing/gloves/combat/knight_costume=0,/obj/item/clothing/gloves/combat/knight_costume/brown=0,/obj/item/clothing/shoes/knight_costume=0,/obj/item/clothing/shoes/knight_costume/black=0,/obj/item/clothing/suit/storage/hooded/foodcostume/hotdog=0,/obj/item/clothing/suit/storage/hooded/foodcostume/turnip=0)
@@ -7559,6 +7621,14 @@
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/cult)
+"gbm" = (
+/obj/structure/curtain/open/shower,
+/obj/machinery/shower{
+	dir = 8;
+	pixel_x = -5
+	},
+/turf/simulated/floor/tiled/white,
+/area/vr/powered/mall/dorms/dorms6)
 "gbU" = (
 /obj/structure/sign/atmos_air{
 	pixel_x = 32;
@@ -7809,12 +7879,6 @@
 	outdoors = 0
 	},
 /area/vr/powered/dungeon)
-"gqU" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/simulated/floor/wood/alt/parquet,
-/area/vr/powered/mall/dorms/dorms3)
 "grL" = (
 /obj/effect/floor_decal/chapel{
 	dir = 1
@@ -7840,6 +7904,17 @@
 /obj/effect/catwalk_plated/white,
 /turf/simulated/floor/wmarble,
 /area/vr/powered/cult)
+"gtl" = (
+/obj/effect/floor_decal/milspec/color/silver,
+/obj/structure/sink{
+	dir = 1
+	},
+/obj/structure/mirror{
+	dir = 1;
+	pixel_y = -28
+	},
+/turf/simulated/floor/tiled/white,
+/area/vr/powered/mall/dorms/dorms4)
 "gui" = (
 /turf/simulated/floor/outdoors/rocks{
 	temperature = 293.15
@@ -7856,6 +7931,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/vr/powered/mall)
+"guZ" = (
+/obj/effect/floor_decal/milspec/color/silver,
+/turf/simulated/floor/tiled/white,
+/area/vr/powered/mall/dorms/dorms6)
 "gvF" = (
 /turf/simulated/floor/tiled,
 /area/vr/powered/nuke)
@@ -8020,6 +8099,14 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/vr/powered/armory)
+"gEm" = (
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#e060e0";
+	light_power = 1;
+	light_range = 6
+	},
+/turf/simulated/floor/flock,
+/area/vr/powered/mall/secondlife)
 "gEJ" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -8183,15 +8270,16 @@
 /obj/structure/bed/chair/comfy/purp,
 /turf/simulated/floor/bronze,
 /area/vr/powered/cult)
+"gNy" = (
+/obj/item/weapon/material/twohanded/riding_crop,
+/obj/effect/decal/cleanable/blood/oil/streak,
+/turf/simulated/floor/tiled/techfloor,
+/area/vr/powered/mall/secondlife)
 "gNI" = (
 /obj/structure/bed/padded,
 /obj/item/weapon/bedsheet/orange,
 /turf/simulated/floor/carpet/blue,
 /area/vr/powered/motel)
-"gNP" = (
-/obj/item/weapon/handcuffs/legcuffs/fuzzy,
-/turf/simulated/floor/tiled/techfloor,
-/area/vr/powered/mall/secondlife)
 "gNU" = (
 /obj/structure/cliff/automatic/corner,
 /turf/simulated/floor/lava,
@@ -8393,6 +8481,10 @@
 /mob/living/simple_mob/clowns/big/c_shift/chlown,
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/vr/powered/dungeon)
+"gXY" = (
+/obj/item/clothing/accessory/shiny/gloves/poly,
+/turf/simulated/floor/tiled/techfloor,
+/area/vr/powered/mall/secondlife)
 "gYA" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /turf/simulated/floor/outdoors/grass{
@@ -8420,10 +8512,6 @@
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/vr/powered/space/sciship)
-"hcr" = (
-/obj/effect/decal/cleanable/blood/oil,
-/turf/simulated/floor/tiled/techfloor,
-/area/vr/powered/mall/secondlife)
 "hds" = (
 /obj/structure/window/basic{
 	dir = 1
@@ -8685,12 +8773,6 @@
 /obj/machinery/power/port_gen/pacman,
 /turf/simulated/floor,
 /area/vr/powered)
-"hlR" = (
-/obj/structure/bookcase,
-/obj/item/weapon/book/manual,
-/obj/item/weapon/book/manual,
-/turf/simulated/floor/carpet/oracarpet,
-/area/vr/powered/mall/dorms/dorms3)
 "hmv" = (
 /obj/machinery/conveyor{
 	id = "vrsushitrain";
@@ -8960,6 +9042,13 @@
 	},
 /turf/simulated/shuttle/plating,
 /area/vr/powered/space/whiteship)
+"hvR" = (
+/obj/structure/sign/poster/custom{
+	pixel_y = 0;
+	dir = 2
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/vr/powered/mall/dorms/secondlife5)
 "hwS" = (
 /obj/machinery/light/small{
 	dir = 1;
@@ -9026,9 +9115,6 @@
 /obj/item/weapon/book/bundle/custom_library/nonfiction/skrelliancastesystem,
 /turf/simulated/floor/carpet/retro,
 /area/vr/powered/mall/dorms/dorms5)
-"hAO" = (
-/turf/simulated/floor/wood/alt/parquet,
-/area/vr/powered/mall/dorms/dorms1)
 "hAQ" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/random/meat,
@@ -9222,11 +9308,6 @@
 	},
 /turf/simulated/floor/tiled/old_tile,
 /area/vr/powered/mall)
-"hKD" = (
-/obj/structure/table/darkglass,
-/obj/item/weapon/storage/box/fluff/swimsuit/strippergreen,
-/turf/simulated/floor/tiled/milspec/raised,
-/area/vr/powered/mall/secondlife)
 "hKT" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/carpet/brown,
@@ -9259,16 +9340,13 @@
 /turf/simulated/shuttle/floor/white,
 /area/vr/powered/dungeon)
 "hOI" = (
-/obj/effect/floor_decal/milspec/color/silver,
-/obj/structure/sink{
-	dir = 1
+/obj/effect/decal/cleanable/fruit_smudge,
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = 24
 	},
-/obj/structure/mirror{
-	dir = 1;
-	pixel_y = -28
-	},
-/turf/simulated/floor/tiled/white,
-/area/vr/powered/mall/dorms/dorms2)
+/turf/simulated/floor/carpet/purcarpet,
+/area/vr/powered/mall/dorms/secondlife3)
 "hPd" = (
 /obj/structure/railing/grey{
 	pixel_y = 0;
@@ -9285,6 +9363,17 @@
 /obj/effect/floor_decal/techfloor,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/vr/powered/cult)
+"hPO" = (
+/obj/machinery/button/remote/airlock{
+	id = "VRmallSL1";
+	name = "Bolt Control";
+	pixel_x = 6;
+	specialfunctions = 4;
+	dir = 4;
+	pixel_y = 30
+	},
+/turf/simulated/floor/carpet/sblucarpet,
+/area/vr/powered/mall/dorms/secondlife)
 "hPU" = (
 /obj/random/cash/huge,
 /obj/random/cash/huge,
@@ -9415,6 +9504,15 @@
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered)
+"hVq" = (
+/obj/structure/bed/chair/sofa/right/beige{
+	dir = 4
+	},
+/obj/machinery/light/floortube{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/vr/powered/mall/dorms/dorms1)
 "hVB" = (
 /obj/structure/table/marble,
 /obj/machinery/microwave{
@@ -9595,12 +9693,16 @@
 /turf/simulated/floor/tiled,
 /area/vr/powered/constore)
 "iag" = (
-/obj/structure/sign/poster/custom{
-	pixel_y = 0;
-	dir = 2
+/obj/machinery/button/remote/airlock{
+	id = "VRmallSL2";
+	name = "Bolt Control";
+	pixel_x = 6;
+	specialfunctions = 4;
+	dir = 4;
+	pixel_y = 30
 	},
-/turf/simulated/floor/carpet/gaycarpet,
-/area/vr/powered/mall/dorms/secondlife4)
+/turf/simulated/floor/carpet/purple,
+/area/vr/powered/mall/dorms/secondlife2)
 "iam" = (
 /obj/structure/table/woodentable,
 /turf/simulated/floor/wood,
@@ -9689,18 +9791,7 @@
 /obj/structure/table/hardwoodtable,
 /obj/item/device/flashlight/lamp/green,
 /turf/simulated/floor/carpet/oracarpet,
-/area/vr/powered/mall/dorms/dorms1)
-"ifg" = (
-/obj/machinery/button/remote/airlock{
-	id = "VRmallSL4";
-	name = "Bolt Control";
-	pixel_x = 6;
-	specialfunctions = 4;
-	dir = 4;
-	pixel_y = 30
-	},
-/turf/simulated/floor/carpet/gaycarpet,
-/area/vr/powered/mall/dorms/secondlife4)
+/area/vr/powered/mall/dorms/dorms3)
 "ifF" = (
 /obj/machinery/smartfridge/survival_pod{
 	icon = 'icons/obj/vending.dmi';
@@ -10009,6 +10100,13 @@
 	},
 /turf/simulated/floor/carpet/brown,
 /area/vr/powered/mall)
+"ioj" = (
+/obj/structure/sign/poster/custom{
+	pixel_y = 0;
+	dir = 2
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/vr/powered/mall/dorms/secondlife3)
 "ion" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/weapon/melee/energy/sword,
@@ -10057,6 +10155,11 @@
 "irA" = (
 /turf/simulated/floor/tiled/neutral,
 /area/vr/powered)
+"isD" = (
+/obj/structure/table/darkglass,
+/obj/item/weapon/storage/box/fluff/swimsuit/strippergreen,
+/turf/simulated/floor/tiled/techfloor,
+/area/vr/powered/mall/secondlife)
 "isZ" = (
 /obj/structure/closet/walllocker_double/kitchen/north{
 	dir = 8;
@@ -10216,13 +10319,10 @@
 	},
 /area/vr/outdoors/powered/mall)
 "ivl" = (
-/obj/structure/curtain/open/shower,
-/obj/machinery/shower{
-	dir = 8;
-	pixel_x = -5
+/turf/simulated/wall/sandstone{
+	color = "purple"
 	},
-/turf/simulated/floor/tiled/white,
-/area/vr/powered/mall/dorms/dorms6)
+/area/vr/powered/mall/dorms/secondlife4)
 "ivr" = (
 /obj/machinery/door/airlock/gold{
 	id_tag = "VRmallSL5"
@@ -10327,6 +10427,11 @@
 /obj/item/weapon/reagent_containers/food/snacks/syndicake,
 /turf/simulated/floor/airless,
 /area/vr/space)
+"iyQ" = (
+/turf/simulated/wall/sandstone{
+	color = "purple"
+	},
+/area/vr/powered/mall/secondlife)
 "iyU" = (
 /obj/structure/cliff/automatic{
 	dir = 5
@@ -10441,11 +10546,6 @@
 	},
 /turf/simulated/floor/carpet/brown,
 /area/vr/powered/mall)
-"iGo" = (
-/obj/effect/floor_decal/milspec/color/silver,
-/obj/structure/simple_door/wood,
-/turf/simulated/floor/tiled/white,
-/area/vr/powered/mall/dorms/dorms3)
 "iGx" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/red/diagonal,
@@ -10530,11 +10630,6 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/vr/powered/space/whiteship)
-"iKF" = (
-/obj/structure/curtain/black,
-/obj/machinery/door/airlock/angled_bay/double/glass,
-/turf/simulated/floor/flock,
-/area/vr/powered/mall/secondlife)
 "iLp" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 10
@@ -10573,18 +10668,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/space/whiteship)
-"iMW" = (
-/obj/effect/decal/cleanable/fruit_smudge,
-/obj/machinery/button/remote/airlock{
-	id = "VRmallSL5";
-	name = "Bolt Control";
-	pixel_x = 6;
-	specialfunctions = 4;
-	dir = 4;
-	pixel_y = 30
-	},
-/turf/simulated/floor/carpet/bcarpet,
-/area/vr/powered/mall/dorms/secondlife5)
 "iNt" = (
 /obj/structure/window/basic,
 /turf/simulated/floor/wood/alt/parquet/turfpack,
@@ -10627,10 +10710,6 @@
 /obj/structure/loot_pile/mecha/odysseus/murdysseus,
 /turf/simulated/floor/tiled/techmaint,
 /area/vr/powered/space/mechfactory)
-"iPE" = (
-/obj/item/weapon/stool/padded,
-/turf/simulated/floor/carpet/oracarpet,
-/area/vr/powered/mall/dorms/dorms1)
 "iQe" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/simulated/floor/outdoors/grass/heavy{
@@ -10638,23 +10717,6 @@
 	temperature = 311
 	},
 /area/vr/outdoors/powered)
-"iQY" = (
-/obj/structure/table/darkglass,
-/obj/effect/floor_decal/corner/purple/border{
-	color = "#f700ff";
-	dir = 1;
-	pixel_y = 0
-	},
-/obj/item/weapon/storage/box/glasses/rocks{
-	pixel_y = -2;
-	pixel_x = -10
-	},
-/obj/item/weapon/storage/box/glasses/square{
-	pixel_y = -2;
-	pixel_x = 12
-	},
-/turf/unsimulated/shuttle/floor/purple,
-/area/vr/powered/mall/secondlife)
 "iRw" = (
 /obj/structure/bed/chair/office/dark{
 	pixel_y = 0;
@@ -10727,14 +10789,7 @@
 "iWc" = (
 /obj/item/weapon/stool/padded,
 /turf/simulated/floor/carpet/oracarpet,
-/area/vr/powered/mall/dorms/dorms3)
-"iWd" = (
-/obj/effect/floor_decal/corner/purple/border{
-	color = "#f700ff";
-	dir = 8
-	},
-/turf/unsimulated/shuttle/floor/purple,
-/area/vr/powered/mall/secondlife)
+/area/vr/powered/mall/dorms/dorms1)
 "iWh" = (
 /obj/item/toy/plushie/possum,
 /turf/simulated/floor/carpet/bcarpet,
@@ -10762,8 +10817,9 @@
 	},
 /area/vr/outdoors/powered)
 "iXf" = (
-/turf/simulated/wall/wood,
-/area/vr/powered/mall/dorms/dorms5)
+/obj/item/clothing/mask/muzzle/ballgag,
+/turf/simulated/floor/tiled/techfloor,
+/area/vr/powered/mall/secondlife)
 "iXg" = (
 /obj/structure/table/hardwoodtable,
 /obj/item/device/communicator,
@@ -10947,12 +11003,6 @@
 	},
 /turf/simulated/floor/wood/alt/parquet/turfpack,
 /area/vr/powered/mall)
-"jdy" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/simulated/floor/wood/alt/parquet,
-/area/vr/powered/mall/dorms/dorms5)
 "jdU" = (
 /obj/structure/undies_wardrobe,
 /turf/simulated/floor/carpet/blue,
@@ -11154,14 +11204,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/vr/powered/dungeon)
-"jkX" = (
-/obj/structure/curtain/open/shower,
-/obj/machinery/shower{
-	dir = 8;
-	pixel_x = -5
-	},
-/turf/simulated/floor/tiled/white,
-/area/vr/powered/mall/dorms/dorms3)
 "jle" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/weapon/storage/fancy/cigar/havana,
@@ -11254,8 +11296,11 @@
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/vr/powered/space/mechfactory)
 "jpy" = (
-/obj/item/device/camera,
-/turf/simulated/floor/tiled/techfloor,
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 8
+	},
+/turf/unsimulated/shuttle/floor/purple,
 /area/vr/powered/mall/secondlife)
 "jpL" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -11619,18 +11664,6 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/shuttle/floor/black,
 /area/vr/powered/armory)
-"jGm" = (
-/obj/effect/floor_decal/corner/purple/border{
-	color = "#f700ff";
-	dir = 6
-	},
-/obj/effect/map_effect/perma_light/brighter{
-	light_color = "#e060e0";
-	light_power = 1;
-	light_range = 6
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/vr/powered/mall/secondlife)
 "jGt" = (
 /obj/item/weapon/flamethrower/full,
 /turf/simulated/floor/tiled,
@@ -11788,11 +11821,6 @@
 	temperature = 293.15
 	},
 /area/vr/outdoors/powered)
-"jLw" = (
-/turf/simulated/wall/sandstone{
-	color = "purple"
-	},
-/area/vr/powered/mall/secondlife)
 "jMc" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
 	dir = 8
@@ -12038,7 +12066,7 @@
 /obj/effect/floor_decal/milspec/color/silver,
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/tiled/white,
-/area/vr/powered/mall/dorms/dorms4)
+/area/vr/powered/mall/dorms/dorms1)
 "jWs" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 6
@@ -12138,7 +12166,7 @@
 /obj/item/weapon/book/manual,
 /obj/item/weapon/book/manual,
 /turf/simulated/floor/carpet/oracarpet,
-/area/vr/powered/mall/dorms/dorms1)
+/area/vr/powered/mall/dorms/dorms3)
 "kaK" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/tiled,
@@ -12201,13 +12229,13 @@
 /turf/simulated/wall/solidrock,
 /area/vr/powered/rocks)
 "kdB" = (
-/obj/machinery/vending/deluxe_boozeomat,
-/obj/effect/floor_decal/corner/purple/border{
-	color = "#f700ff";
-	dir = 1;
-	pixel_y = 0
+/obj/structure/table/darkglass,
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#e060e0";
+	light_power = 1;
+	light_range = 6
 	},
-/turf/unsimulated/shuttle/floor/purple,
+/turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/mall/secondlife)
 "kdJ" = (
 /mob/living/simple_mob/animal/passive/pillbug,
@@ -12265,20 +12293,6 @@
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/vr/powered/mall)
-"kgh" = (
-/obj/effect/floor_decal/milspec/color/silver,
-/obj/structure/toilet{
-	dir = 4
-	},
-/obj/machinery/light/small{
-	brightness_color = "#DA0205";
-	brightness_power = 1;
-	brightness_range = 5;
-	dir = 8;
-	nightshift_enabled = 1
-	},
-/turf/simulated/floor/tiled/white,
-/area/vr/powered/mall/dorms/dorms1)
 "kgu" = (
 /obj/structure/table/marble,
 /obj/item/weapon/reagent_containers/food/snacks/kitsuneudon{
@@ -12480,6 +12494,10 @@
 /obj/item/weapon/stool/padded,
 /turf/simulated/shuttle/floor/yellow,
 /area/vr/powered/space/sciship)
+"kmE" = (
+/obj/item/clothing/under/shiny/catsuit/poly,
+/turf/simulated/floor/tiled/techfloor,
+/area/vr/powered/mall/secondlife)
 "kmG" = (
 /turf/simulated/floor/water/beach/corner{
 	dir = 1;
@@ -12591,18 +12609,6 @@
 	},
 /turf/simulated/floor/redgrid/off,
 /area/vr/powered/cult)
-"kug" = (
-/obj/effect/floor_decal/corner/purple/border{
-	color = "#f700ff";
-	dir = 4
-	},
-/obj/effect/map_effect/perma_light/brighter{
-	light_color = "#e060e0";
-	light_power = 1;
-	light_range = 6
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/vr/powered/mall/secondlife)
 "kuk" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/folder/blue,
@@ -12638,20 +12644,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/conspawn)
-"kuV" = (
-/obj/effect/floor_decal/milspec/color/silver,
-/obj/structure/toilet{
-	dir = 4
-	},
-/obj/machinery/light/small{
-	brightness_color = "#DA0205";
-	brightness_power = 1;
-	brightness_range = 5;
-	dir = 8;
-	nightshift_enabled = 1
-	},
-/turf/simulated/floor/tiled/white,
-/area/vr/powered/mall/dorms/dorms6)
 "kvd" = (
 /obj/structure/closet/secure_closet/freezer/kitchen{
 	locked = 0
@@ -12692,10 +12684,6 @@
 /obj/item/clothing/suit/storage/apron/white,
 /turf/simulated/floor/plating,
 /area/vr/powered/cafe)
-"kwJ" = (
-/obj/structure/table/bench/wooden,
-/turf/simulated/floor/carpet/oracarpet,
-/area/vr/powered/mall/dorms/dorms1)
 "kxk" = (
 /turf/simulated/floor/carpet/sblucarpet,
 /area/vr/powered)
@@ -12795,14 +12783,18 @@
 	temperature = 293.15
 	},
 /area/vr/powered/dungeon)
-"kDl" = (
-/obj/effect/floor_decal/milspec/color/silver,
-/turf/simulated/floor/tiled/white,
-/area/vr/powered/mall/dorms/dorms6)
 "kDr" = (
 /obj/machinery/vending/loadout/uniform,
 /turf/simulated/floor/wood,
 /area/vr/powered)
+"kDD" = (
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 4
+	},
+/obj/item/clothing/accessory/shiny/gloves/poly,
+/turf/simulated/floor/tiled/techfloor,
+/area/vr/powered/mall/secondlife)
 "kEv" = (
 /obj/item/weapon/storage/box/ambrosiadeus,
 /obj/fruitspawner/ambrosia,
@@ -13264,17 +13256,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/shop)
-"kVe" = (
-/obj/machinery/button/remote/airlock{
-	id = "VRmallSL2";
-	name = "Bolt Control";
-	pixel_x = 6;
-	specialfunctions = 4;
-	dir = 4;
-	pixel_y = 30
-	},
-/turf/simulated/floor/carpet/purple,
-/area/vr/powered/mall/dorms/secondlife2)
 "kVX" = (
 /obj/machinery/door/window/northright{
 	name = "Server Room";
@@ -13413,15 +13394,6 @@
 	},
 /turf/simulated/floor/tiled/old_tile,
 /area/vr/powered/mall)
-"lbr" = (
-/obj/structure/bed/chair/sofa/right/beige{
-	dir = 4
-	},
-/obj/machinery/light/floortube{
-	dir = 4
-	},
-/turf/simulated/floor/carpet/oracarpet,
-/area/vr/powered/mall/dorms/dorms1)
 "lbK" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/random/meat,
@@ -13546,14 +13518,6 @@
 	dir = 10
 	},
 /area/vr/powered/mall/vw)
-"lgp" = (
-/obj/structure/curtain/open/shower,
-/obj/machinery/shower{
-	dir = 8;
-	pixel_x = -5
-	},
-/turf/simulated/floor/tiled/white,
-/area/vr/powered/mall/dorms/dorms2)
 "lhj" = (
 /obj/effect/floor_decal/techfloor,
 /turf/simulated/floor/tiled/techfloor,
@@ -13568,6 +13532,12 @@
 	},
 /turf/simulated/floor/carpet/brown,
 /area/vr/powered/mall)
+"lhq" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood/alt/parquet,
+/area/vr/powered/mall/dorms/dorms1)
 "lhR" = (
 /obj/structure/table/darkglass,
 /turf/simulated/floor/tiled/techfloor,
@@ -13610,6 +13580,10 @@
 /obj/item/device/flashlight/lamp,
 /turf/simulated/floor/tiled,
 /area/vr/powered/vet)
+"lky" = (
+/obj/item/weapon/digestion_remains/variant3,
+/turf/simulated/floor/carpet/gaycarpet,
+/area/vr/powered/mall/dorms/secondlife4)
 "lkR" = (
 /turf/simulated/floor/wood/broken,
 /area/vr/powered)
@@ -14178,6 +14152,14 @@
 	color = "grey"
 	},
 /area/vr/powered/cult)
+"lCG" = (
+/obj/item/weapon/digestion_remains/variant2,
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = 24
+	},
+/turf/simulated/floor/carpet/gaycarpet,
+/area/vr/powered/mall/dorms/secondlife4)
 "lCT" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/plating,
@@ -14399,6 +14381,12 @@
 	},
 /turf/simulated/shuttle/floor/white,
 /area/vr/powered/space/sciship)
+"lMp" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood/alt/parquet,
+/area/vr/powered/mall/dorms/dorms4)
 "lMZ" = (
 /obj/structure/table/bench/wooden,
 /obj/item/weapon/pen/blade/blue,
@@ -14897,8 +14885,8 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/vr/powered/space/sciship)
 "mfJ" = (
-/turf/simulated/wall/wood,
-/area/vr/powered/mall/dorms/dorms4)
+/turf/simulated/floor/carpet/oracarpet,
+/area/vr/powered/mall/dorms/dorms3)
 "mgc" = (
 /obj/structure/table/hardwoodtable,
 /turf/simulated/floor/wood,
@@ -14907,13 +14895,6 @@
 /obj/structure/cliff/automatic/corner,
 /turf/simulated/floor/weird_things/dark,
 /area/vr/powered/mall/backrooms)
-"mgZ" = (
-/obj/structure/sign/poster/custom{
-	pixel_y = 0;
-	dir = 2
-	},
-/turf/simulated/floor/carpet/bcarpet,
-/area/vr/powered/mall/dorms/secondlife5)
 "mha" = (
 /obj/structure/table/marble,
 /obj/structure/window/reinforced,
@@ -15308,21 +15289,20 @@
 "mwO" = (
 /turf/simulated/floor/plating,
 /area/vr/powered/cafe)
+"mwU" = (
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 4
+	},
+/obj/item/clothing/under/swimsuit/purple,
+/turf/simulated/floor/tiled/techfloor,
+/area/vr/powered/mall/secondlife)
 "mxh" = (
 /obj/effect/decal/remains,
 /turf/simulated/floor/outdoors/rocks{
 	temperature = 293.15
 	},
 /area/vr/outdoors/powered/lava)
-"mxm" = (
-/obj/structure/table/darkglass,
-/obj/effect/floor_decal/corner/purple/border{
-	color = "#f700ff";
-	dir = 9
-	},
-/obj/machinery/chemical_dispenser/bar_coffee/full,
-/turf/unsimulated/shuttle/floor/purple,
-/area/vr/powered/mall/secondlife)
 "mxG" = (
 /obj/structure/table/alien/blue,
 /obj/item/weapon/surgical/circular_saw/alien,
@@ -15348,6 +15328,17 @@
 /obj/structure/table/rack,
 /turf/simulated/floor/bmarble,
 /area/vr/powered/mall)
+"myP" = (
+/obj/effect/floor_decal/milspec/color/silver,
+/obj/structure/sink{
+	dir = 1
+	},
+/obj/structure/mirror{
+	dir = 1;
+	pixel_y = -28
+	},
+/turf/simulated/floor/tiled/white,
+/area/vr/powered/mall/dorms/dorms2)
 "mzg" = (
 /obj/machinery/autolathe{
 	hacked = 1;
@@ -15611,10 +15602,14 @@
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered)
-"mJl" = (
-/obj/item/clothing/mask/muzzle/ballgag,
-/turf/simulated/floor/tiled/techfloor,
-/area/vr/powered/mall/secondlife)
+"mJa" = (
+/obj/structure/curtain/open/shower,
+/obj/machinery/shower{
+	dir = 8;
+	pixel_x = -5
+	},
+/turf/simulated/floor/tiled/white,
+/area/vr/powered/mall/dorms/dorms5)
 "mJE" = (
 /obj/structure/table/gamblingtable,
 /obj/item/weapon/deck/cards,
@@ -15652,6 +15647,11 @@
 	},
 /turf/simulated/floor/redgrid/animated,
 /area/vr/powered/cult)
+"mLz" = (
+/obj/structure/table/darkglass,
+/obj/item/clothing/under/swimsuit/stripper/stripper_green,
+/turf/simulated/floor/tiled/techfloor,
+/area/vr/powered/mall/secondlife)
 "mLB" = (
 /obj/structure/bed/chair/sofa/right/brown{
 	dir = 8
@@ -15740,7 +15740,7 @@
 	pixel_x = -5
 	},
 /turf/simulated/floor/tiled/white,
-/area/vr/powered/mall/dorms/dorms4)
+/area/vr/powered/mall/dorms/dorms3)
 "mOS" = (
 /obj/structure/bed/chair/backed_red{
 	dir = 4
@@ -15847,7 +15847,7 @@
 	pixel_y = -28
 	},
 /turf/simulated/floor/tiled/white,
-/area/vr/powered/mall/dorms/dorms4)
+/area/vr/powered/mall/dorms/dorms6)
 "mUR" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
@@ -16365,14 +16365,6 @@
 "npj" = (
 /turf/simulated/floor/tiled/techmaint,
 /area/vr/powered/cult)
-"npm" = (
-/obj/effect/map_effect/perma_light/brighter{
-	light_color = "#e060e0";
-	light_power = 1;
-	light_range = 6
-	},
-/turf/simulated/floor/flock,
-/area/vr/powered/mall/secondlife)
 "npD" = (
 /obj/structure/railing,
 /turf/simulated/floor/concrete{
@@ -16504,6 +16496,13 @@
 /obj/random/obstruction,
 /turf/simulated/floor/plating,
 /area/vr/powered/dungeon)
+"nuQ" = (
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 6
+	},
+/turf/unsimulated/shuttle/floor/purple,
+/area/vr/powered/mall/secondlife)
 "nuY" = (
 /obj/item/weapon/weldingtool/largetank,
 /turf/simulated/floor/tiled,
@@ -16924,9 +16923,8 @@
 	},
 /area/vr/outdoors/powered)
 "nJM" = (
-/obj/structure/curtain/black,
-/turf/simulated/floor/flock,
-/area/vr/powered/mall/secondlife)
+/turf/simulated/wall/wood,
+/area/vr/powered/mall/dorms/dorms1)
 "nJZ" = (
 /obj/item/weapon/material/twohanded/baseballbat/gold,
 /obj/item/stack/material/gold,
@@ -16977,10 +16975,8 @@
 /turf/simulated/shuttle/floor/voidcraft,
 /area/vr/powered/dungeon)
 "nKT" = (
-/obj/item/weapon/material/twohanded/riding_crop,
-/obj/effect/decal/cleanable/blood/oil/streak,
-/turf/simulated/floor/tiled/techfloor,
-/area/vr/powered/mall/secondlife)
+/turf/simulated/floor/wood/alt/parquet,
+/area/vr/powered/mall/dorms/dorms6)
 "nLa" = (
 /obj/structure/bed/pillowpile/orange,
 /obj/effect/floor_decal/corner/purple/border{
@@ -17081,14 +17077,6 @@
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/vr/powered/mall)
-"nOm" = (
-/obj/effect/map_effect/perma_light/brighter{
-	light_color = "#e060e0";
-	light_power = 1;
-	light_range = 6
-	},
-/turf/unsimulated/shuttle/floor/purple,
-/area/vr/powered/mall/secondlife)
 "nOq" = (
 /turf/simulated/floor/airless,
 /area/vr/space)
@@ -17099,6 +17087,10 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/mall/secondlife)
+"nOQ" = (
+/obj/effect/floor_decal/milspec/color/silver,
+/turf/simulated/floor/tiled/white,
+/area/vr/powered/mall/dorms/dorms5)
 "nOW" = (
 /obj/structure/salvageable/server_os,
 /turf/unsimulated/floor/lino/turfpack/station{
@@ -17354,10 +17346,6 @@
 	},
 /turf/simulated/floor/carpet/gaycarpet,
 /area/vr/powered/mall/dorms/dorms6)
-"nYu" = (
-/obj/item/weapon/digestion_remains/variant3,
-/turf/simulated/floor/carpet/gaycarpet,
-/area/vr/powered/mall/dorms/secondlife4)
 "nYH" = (
 /obj/structure/salvageable/console_os,
 /turf/simulated/shuttle/floor/voidcraft,
@@ -17914,6 +17902,20 @@
 	color = "grey"
 	},
 /area/vr/powered/cult)
+"orV" = (
+/obj/effect/floor_decal/milspec/color/silver,
+/obj/structure/toilet{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	brightness_color = "#DA0205";
+	brightness_power = 1;
+	brightness_range = 5;
+	dir = 8;
+	nightshift_enabled = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/vr/powered/mall/dorms/dorms4)
 "orW" = (
 /turf/simulated/floor/carpet/geo,
 /area/vr/powered/mall)
@@ -18033,6 +18035,14 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/vr/powered/mall)
+"ovU" = (
+/obj/structure/table/hardwoodtable,
+/obj/item/device/flashlight/lamp/green,
+/turf/simulated/floor/carpet/oracarpet,
+/area/vr/powered/mall/dorms/dorms1)
+"ovW" = (
+/turf/simulated/floor/wood/alt/parquet,
+/area/vr/powered/mall/dorms/dorms2)
 "owa" = (
 /obj/structure/grille/rustic{
 	health = 25;
@@ -18169,6 +18179,18 @@
 	},
 /turf/simulated/floor/wood/alt/parquet,
 /area/vr/powered/mall/dorms/dorms3)
+"oBf" = (
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 4
+	},
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#e060e0";
+	light_power = 1;
+	light_range = 6
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/vr/powered/mall/secondlife)
 "oBi" = (
 /obj/structure/table/darkglass,
 /obj/item/device/flashlight/lamp,
@@ -18246,10 +18268,8 @@
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/vr/powered/space/mechfactory)
 "oDb" = (
-/turf/simulated/wall/sandstone{
-	color = "purple"
-	},
-/area/vr/powered/mall/dorms/secondlife4)
+/turf/simulated/wall/wood,
+/area/vr/powered/mall/dorms/dorms3)
 "oDd" = (
 /obj/machinery/light{
 	dir = 4
@@ -18392,8 +18412,8 @@
 /turf/simulated/shuttle/floor/black,
 /area/vr/powered/armory)
 "oIG" = (
-/turf/simulated/wall/wood,
-/area/vr/powered/mall/dorms/dorms2)
+/turf/simulated/floor/wood/alt/parquet,
+/area/vr/powered/mall/dorms/dorms4)
 "oJb" = (
 /obj/machinery/light{
 	dir = 1
@@ -18502,12 +18522,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/space/whiteship)
-"oMt" = (
-/obj/structure/bed/chair/sofa/left/beige{
-	dir = 4
-	},
-/turf/simulated/floor/carpet/oracarpet,
-/area/vr/powered/mall/dorms/dorms1)
 "oMQ" = (
 /obj/structure/table/steel_reinforced,
 /obj/effect/floor_decal/corner/grey/diagonal{
@@ -18545,6 +18559,20 @@
 /obj/item/stack/material/diamond,
 /turf/simulated/floor/flock,
 /area/vr/powered/rocks)
+"oOY" = (
+/obj/effect/floor_decal/milspec/color/silver,
+/obj/structure/toilet{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	brightness_color = "#DA0205";
+	brightness_power = 1;
+	brightness_range = 5;
+	dir = 8;
+	nightshift_enabled = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/vr/powered/mall/dorms/dorms1)
 "oPe" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4
@@ -18632,13 +18660,6 @@
 /obj/item/weapon/towel/random,
 /turf/simulated/floor/carpet/bcarpet,
 /area/vr/powered)
-"oVv" = (
-/obj/structure/sign/poster/custom{
-	pixel_y = 0;
-	dir = 2
-	},
-/turf/simulated/floor/carpet/sblucarpet,
-/area/vr/powered/mall/dorms/secondlife)
 "oVM" = (
 /obj/structure/railing/grey,
 /turf/simulated/floor/water/pool{
@@ -18682,6 +18703,20 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/vr/powered/mall)
+"oYF" = (
+/obj/effect/floor_decal/milspec/color/silver,
+/obj/structure/toilet{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	brightness_color = "#DA0205";
+	brightness_power = 1;
+	brightness_range = 5;
+	dir = 8;
+	nightshift_enabled = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/vr/powered/mall/dorms/dorms5)
 "oYU" = (
 /obj/structure/table/rack/shelf/wood,
 /obj/random/plushie,
@@ -18960,13 +18995,6 @@
 	movement_cost = 0
 	},
 /area/vr/outdoors/powered)
-"pjI" = (
-/obj/effect/floor_decal/corner/purple/border{
-	color = "#f700ff";
-	dir = 10
-	},
-/turf/unsimulated/shuttle/floor/purple,
-/area/vr/powered/mall/secondlife)
 "pkd" = (
 /obj/machinery/conveyor{
 	id = "vrsushitrain";
@@ -19022,17 +19050,6 @@
 /obj/item/weapon/scepter,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/vr/powered/cult)
-"plZ" = (
-/obj/effect/floor_decal/milspec/color/silver,
-/obj/structure/sink{
-	dir = 1
-	},
-/obj/structure/mirror{
-	dir = 1;
-	pixel_y = -28
-	},
-/turf/simulated/floor/tiled/white,
-/area/vr/powered/mall/dorms/dorms6)
 "pma" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -19163,6 +19180,12 @@
 	},
 /turf/simulated/floor/wood/alt/parquet/turfpack,
 /area/vr/powered/mall)
+"ppu" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood/alt/parquet,
+/area/vr/powered/mall/dorms/dorms5)
 "ppH" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/portable_atmospherics/powered/pump/huge,
@@ -19372,7 +19395,7 @@
 "pBo" = (
 /obj/structure/table/bench/wooden,
 /turf/simulated/floor/carpet/oracarpet,
-/area/vr/powered/mall/dorms/dorms3)
+/area/vr/powered/mall/dorms/dorms1)
 "pBr" = (
 /obj/structure/table/marble,
 /obj/item/weapon/material/knife/butch,
@@ -19514,11 +19537,8 @@
 	},
 /area/vr/powered/rocks)
 "pGH" = (
-/obj/machinery/computer/security/telescreen/entertainment{
-	pixel_x = 31
-	},
-/turf/simulated/floor/carpet/oracarpet,
-/area/vr/powered/mall/dorms/dorms3)
+/turf/simulated/wall/wood,
+/area/vr/powered/mall/dorms/dorms2)
 "pGO" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -19632,6 +19652,13 @@
 	color = "grey"
 	},
 /area/vr/powered/cult)
+"pKS" = (
+/obj/item/toy/plushie/black_fox{
+	pixel_y = 0;
+	name = "latex black fox"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/vr/powered/mall/secondlife)
 "pKU" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/toy/figure/assistant,
@@ -19742,14 +19769,6 @@
 	},
 /turf/simulated/floor/carpet/gaycarpet,
 /area/vr/powered/mall/dorms/dorms6)
-"pOd" = (
-/obj/structure/curtain/open/shower,
-/obj/machinery/shower{
-	dir = 8;
-	pixel_x = -5
-	},
-/turf/simulated/floor/tiled/white,
-/area/vr/powered/mall/dorms/dorms1)
 "pOg" = (
 /obj/structure/flora/rocks1,
 /turf/simulated/floor/outdoors/grass/heavy{
@@ -19787,10 +19806,6 @@
 /obj/item/clothing/accessory/bracelet/material/gold,
 /turf/simulated/floor/flock,
 /area/vr/powered/rocks)
-"pQx" = (
-/obj/effect/floor_decal/milspec/color/silver,
-/turf/simulated/floor/tiled/white,
-/area/vr/powered/mall/dorms/dorms1)
 "pRx" = (
 /obj/structure/toilet{
 	dir = 8;
@@ -19804,7 +19819,7 @@
 "pRJ" = (
 /obj/effect/floor_decal/milspec/color/silver,
 /turf/simulated/floor/tiled/white,
-/area/vr/powered/mall/dorms/dorms2)
+/area/vr/powered/mall/dorms/dorms1)
 "pRN" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -19952,6 +19967,15 @@
 	outdoors = 1
 	},
 /area/vr/outdoors/powered)
+"pZh" = (
+/obj/structure/table/darkglass,
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 5
+	},
+/obj/machinery/chemical_dispenser/bar_coffee/full,
+/turf/unsimulated/shuttle/floor/purple,
+/area/vr/powered/mall/secondlife)
 "pZp" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -19982,7 +20006,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/carpet/oracarpet,
-/area/vr/powered/mall/dorms/dorms3)
+/area/vr/powered/mall/dorms/dorms1)
 "qaJ" = (
 /obj/machinery/chemical_dispenser/ert/specialops{
 	pixel_y = 7
@@ -20024,8 +20048,11 @@
 /turf/simulated/floor/wood/alt/panel,
 /area/vr/powered/mall)
 "qba" = (
-/turf/simulated/wall/wood,
-/area/vr/powered/mall/dorms/dorms6)
+/obj/structure/bookcase,
+/obj/item/weapon/book/manual,
+/obj/item/weapon/book/manual,
+/turf/simulated/floor/carpet/oracarpet,
+/area/vr/powered/mall/dorms/dorms1)
 "qbf" = (
 /obj/structure/cult/pylon,
 /turf/simulated/floor/cult{
@@ -20173,11 +20200,6 @@
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood/alt/parquet/turfpack,
 /area/vr/powered/mall)
-"qfO" = (
-/obj/effect/floor_decal/milspec/color/silver,
-/obj/structure/simple_door/wood,
-/turf/simulated/floor/tiled/white,
-/area/vr/powered/mall/dorms/dorms2)
 "qfX" = (
 /obj/structure/table/marble,
 /obj/structure/sink/countertop{
@@ -20188,6 +20210,11 @@
 /obj/effect/floor_decal/corner/black/diagonal,
 /turf/simulated/floor/tiled/red,
 /area/vr/powered/mall/dorms/dorms5)
+"qfZ" = (
+/obj/effect/floor_decal/milspec/color/silver,
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/tiled/white,
+/area/vr/powered/mall/dorms/dorms4)
 "qgk" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
@@ -20294,7 +20321,7 @@
 	pixel_y = 0
 	},
 /turf/simulated/floor/carpet/oracarpet,
-/area/vr/powered/mall/dorms/dorms3)
+/area/vr/powered/mall/dorms/dorms1)
 "qiO" = (
 /obj/structure/cliff/automatic,
 /turf/simulated/floor/lava,
@@ -20456,10 +20483,6 @@
 	color = "grey"
 	},
 /area/vr/powered/cult)
-"qot" = (
-/obj/item/clothing/under/shiny/catsuit/poly,
-/turf/simulated/floor/tiled/techfloor,
-/area/vr/powered/mall/secondlife)
 "qou" = (
 /obj/structure/bed/chair/sofa/right/black,
 /turf/simulated/floor/tiled/white,
@@ -20536,11 +20559,6 @@
 "qty" = (
 /turf/simulated/floor/gorefloor,
 /area/vr/outdoors/powered/cult)
-"qtH" = (
-/obj/effect/floor_decal/milspec/color/silver,
-/obj/structure/simple_door/wood,
-/turf/simulated/floor/tiled/white,
-/area/vr/powered/mall/dorms/dorms5)
 "qtU" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 9
@@ -21020,6 +21038,10 @@
 	dir = 4;
 	pixel_y = 30
 	},
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = 24
+	},
 /turf/simulated/floor/tiled/white,
 /area/vr/powered/mall/dorms/dorms3)
 "qIM" = (
@@ -21144,6 +21166,10 @@
 /obj/vehicle/train/engine/quadbike/random,
 /turf/simulated/floor/cult,
 /area/vr/powered/cult)
+"qPP" = (
+/obj/effect/floor_decal/milspec/color/silver,
+/turf/simulated/floor/tiled/white,
+/area/vr/powered/mall/dorms/dorms4)
 "qPR" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/weapon/material/kitchen/utensil/fork,
@@ -21441,6 +21467,14 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/powered/dungeon)
+"rgm" = (
+/obj/structure/table/darkglass,
+/obj/structure/window/basic{
+	dir = 4
+	},
+/obj/item/weapon/material/twohanded/riding_crop,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/vr/powered/mall/secondlife)
 "rgX" = (
 /obj/machinery/crystal/lava,
 /turf/simulated/floor/lava,
@@ -21805,17 +21839,6 @@
 /obj/structure/fans/tiny,
 /turf/simulated/shuttle/floor/black,
 /area/vr/powered/dungeon)
-"rvV" = (
-/obj/machinery/button/remote/airlock{
-	id = "VRmallSL1";
-	name = "Bolt Control";
-	pixel_x = 6;
-	specialfunctions = 4;
-	dir = 4;
-	pixel_y = 30
-	},
-/turf/simulated/floor/carpet/sblucarpet,
-/area/vr/powered/mall/dorms/secondlife)
 "rvW" = (
 /obj/machinery/telecomms/relay/preset{
 	name = "VR Telelink"
@@ -21883,6 +21906,13 @@
 /obj/structure/filingcabinet/chestdrawer,
 /turf/simulated/floor/tiled/white,
 /area/vr/powered/dungeon)
+"rzN" = (
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 10
+	},
+/turf/unsimulated/shuttle/floor/purple,
+/area/vr/powered/mall/secondlife)
 "rzY" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/wood/alt/parquet/turfpack,
@@ -21933,12 +21963,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/vr/powered/vet)
-"rCs" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/simulated/floor/wood/alt/parquet,
-/area/vr/powered/mall/dorms/dorms6)
 "rCt" = (
 /obj/structure/bed/double/padded,
 /obj/item/weapon/bedsheet/mimedouble,
@@ -22035,16 +22059,8 @@
 /turf/simulated/floor/tiled,
 /area/vr/powered/vendor)
 "rHw" = (
-/obj/effect/floor_decal/milspec/color/silver,
-/obj/structure/sink{
-	dir = 1
-	},
-/obj/structure/mirror{
-	dir = 1;
-	pixel_y = -28
-	},
-/turf/simulated/floor/tiled/white,
-/area/vr/powered/mall/dorms/dorms5)
+/turf/simulated/floor/wood/alt/parquet,
+/area/vr/powered/mall/dorms/dorms3)
 "rHO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -22272,6 +22288,18 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/vr/powered/redbase)
+"rSM" = (
+/obj/effect/decal/cleanable/fruit_smudge,
+/obj/machinery/button/remote/airlock{
+	id = "VRmallSL5";
+	name = "Bolt Control";
+	pixel_x = 6;
+	specialfunctions = 4;
+	dir = 4;
+	pixel_y = 30
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/vr/powered/mall/dorms/secondlife5)
 "rTm" = (
 /obj/structure/table/hardwoodtable,
 /turf/simulated/floor/wood/alt/tile,
@@ -22567,6 +22595,11 @@
 /obj/item/weapon/storage/pouch/holding,
 /turf/simulated/floor/cult,
 /area/vr/powered/cult)
+"seC" = (
+/obj/structure/table/darkglass,
+/obj/item/clothing/under/swimsuit/stripper/stripper_pink,
+/turf/simulated/floor/tiled/techfloor,
+/area/vr/powered/mall/secondlife)
 "seJ" = (
 /obj/structure/railing/grey{
 	pixel_y = 0;
@@ -22682,6 +22715,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/vr/powered/vendor)
+"skm" = (
+/obj/effect/floor_decal/milspec/color/silver,
+/turf/simulated/floor/tiled/white,
+/area/vr/powered/mall/dorms/dorms2)
 "skq" = (
 /obj/effect/floor_decal/industrial/outline/blue,
 /obj/structure/closet/jcloset,
@@ -22692,11 +22729,6 @@
 /obj/item/weapon/reagent_containers/spray/cleaner,
 /turf/simulated/shuttle/plating,
 /area/vr/powered/space/whiteship)
-"slv" = (
-/obj/effect/floor_decal/milspec/color/silver,
-/obj/structure/simple_door/wood,
-/turf/simulated/floor/tiled/white,
-/area/vr/powered/mall/dorms/dorms6)
 "slC" = (
 /obj/machinery/robotic_fabricator,
 /turf/simulated/floor/tiled/asteroid_steel,
@@ -22933,6 +22965,17 @@
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/vr/powered/space/mechfactory)
+"suB" = (
+/obj/machinery/button/remote/airlock{
+	id = "VRmallSL4";
+	name = "Bolt Control";
+	pixel_x = 6;
+	specialfunctions = 4;
+	dir = 4;
+	pixel_y = 30
+	},
+/turf/simulated/floor/carpet/gaycarpet,
+/area/vr/powered/mall/dorms/secondlife4)
 "svz" = (
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_y = 32
@@ -23003,18 +23046,6 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/vr/powered/building2)
-"swx" = (
-/obj/structure/table/darkglass,
-/obj/structure/stripper_pole{
-	icon_scale_x = 0.5;
-	icon_scale_y = 0.5
-	},
-/obj/item/toy/plushie/mouse{
-	pixel_y = 2;
-	pixel_x = 6
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/vr/powered/mall/secondlife)
 "swz" = (
 /obj/structure/bed/chair/comfy/brown{
 	dir = 4
@@ -23164,6 +23195,10 @@
 	dir = 4;
 	pixel_y = 30
 	},
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = 24
+	},
 /turf/simulated/floor/tiled/red,
 /area/vr/powered/mall/dorms/dorms5)
 "sCe" = (
@@ -23243,6 +23278,15 @@
 /obj/structure/fans/hardlight,
 /turf/simulated/floor/airless,
 /area/vr/powered/space/mechfactory)
+"sEP" = (
+/obj/structure/table/hardwoodtable,
+/obj/machinery/light/small{
+	dir = 4;
+	nightshift_enabled = 1;
+	pixel_y = 0
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/vr/powered/mall/dorms/dorms3)
 "sFk" = (
 /obj/effect/simple_portal/linked{
 	portal_id = 70;
@@ -23370,6 +23414,22 @@
 	temperature = 311
 	},
 /area/vr/powered/rocks)
+"sJv" = (
+/obj/structure/table/darkglass,
+/obj/item/device/mindbinder{
+	pixel_y = 4;
+	pixel_x = -2
+	},
+/obj/item/device/mindbinder{
+	pixel_y = -4;
+	pixel_x = -3
+	},
+/obj/item/device/mindbinder{
+	pixel_y = 2;
+	pixel_x = 5
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/vr/powered/mall/secondlife)
 "sJy" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/reagent_containers/food/snacks/dip/guac,
@@ -23432,6 +23492,12 @@
 	},
 /turf/simulated/floor/cult,
 /area/vr/powered/cult)
+"sNs" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood/alt/parquet,
+/area/vr/powered/mall/dorms/dorms6)
 "sNE" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/stock_parts/scanning_module/adv{
@@ -23622,8 +23688,8 @@
 /turf/simulated/floor/wood/alt/tile,
 /area/vr/powered/mall)
 "sWf" = (
-/turf/simulated/floor/wood/alt/parquet,
-/area/vr/powered/mall/dorms/dorms2)
+/turf/simulated/wall/wood,
+/area/vr/powered/mall/dorms/dorms5)
 "sWx" = (
 /turf/simulated/shuttle/floor/darkred,
 /area/vr/powered/space/sciship)
@@ -23920,6 +23986,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/vr/powered/vet)
+"tnK" = (
+/obj/structure/sign/poster/custom{
+	pixel_y = 0;
+	dir = 2
+	},
+/turf/simulated/floor/carpet/gaycarpet,
+/area/vr/powered/mall/dorms/secondlife4)
 "tol" = (
 /obj/machinery/light{
 	dir = 1
@@ -24167,6 +24240,10 @@
 	color = "#ffe9ab"
 	},
 /area/vr/powered/mall/backrooms)
+"tzg" = (
+/obj/structure/table/bench/wooden,
+/turf/simulated/floor/carpet/oracarpet,
+/area/vr/powered/mall/dorms/dorms3)
 "tzq" = (
 /mob/living/simple_mob/animal/giant_spider,
 /turf/simulated/floor/plating,
@@ -24279,20 +24356,6 @@
 	},
 /turf/simulated/floor/cult,
 /area/vr/powered/cult)
-"tDU" = (
-/obj/effect/floor_decal/milspec/color/silver,
-/obj/structure/toilet{
-	dir = 4
-	},
-/obj/machinery/light/small{
-	brightness_color = "#DA0205";
-	brightness_power = 1;
-	brightness_range = 5;
-	dir = 8;
-	nightshift_enabled = 1
-	},
-/turf/simulated/floor/tiled/white,
-/area/vr/powered/mall/dorms/dorms4)
 "tEr" = (
 /obj/structure/bookcase,
 /obj/item/weapon/book/manual,
@@ -24366,20 +24429,8 @@
 /turf/simulated/floor/plating,
 /area/vr/powered/space/sciship)
 "tGg" = (
-/obj/structure/table/darkglass,
-/obj/item/device/bodysnatcher{
-	pixel_y = 4;
-	pixel_x = 3
-	},
-/obj/item/device/bodysnatcher{
-	pixel_y = -2;
-	pixel_x = -2
-	},
-/obj/item/device/bodysnatcher{
-	pixel_y = -4;
-	pixel_x = 6
-	},
-/turf/simulated/floor/tiled/techfloor,
+/obj/structure/curtain/black,
+/turf/simulated/floor/flock,
 /area/vr/powered/mall/secondlife)
 "tGi" = (
 /obj/machinery/light{
@@ -24521,6 +24572,11 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/vr/powered/cult)
+"tMF" = (
+/obj/effect/floor_decal/milspec/color/silver,
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/tiled/white,
+/area/vr/powered/mall/dorms/dorms3)
 "tMG" = (
 /obj/effect/floor_decal/spline/fancy{
 	dir = 4
@@ -24847,6 +24903,11 @@
 	temperature = 311
 	},
 /area/vr/outdoors/powered)
+"tYL" = (
+/obj/effect/floor_decal/milspec/color/silver,
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/tiled/white,
+/area/vr/powered/mall/dorms/dorms2)
 "tYP" = (
 /obj/structure/prop/dominator/blue,
 /turf/unsimulated/floor/lino/turfpack/station{
@@ -25391,9 +25452,6 @@
 	temperature = 311
 	},
 /area/vr/powered/rocks)
-"usA" = (
-/turf/simulated/floor/carpet/oracarpet,
-/area/vr/powered/mall/dorms/dorms3)
 "usM" = (
 /obj/structure/simple_door/flock,
 /turf/simulated/floor/flock,
@@ -25655,6 +25713,10 @@
 	dir = 4;
 	pixel_y = 30
 	},
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = 24
+	},
 /turf/simulated/floor/tiled/old_cargo,
 /area/vr/powered/mall/dorms/dorms6)
 "uFe" = (
@@ -25856,11 +25918,6 @@
 	color = "grey"
 	},
 /area/vr/powered/cult)
-"uKc" = (
-/obj/structure/table/darkglass,
-/obj/item/clothing/under/swimsuit/stripper/stripper_green,
-/turf/simulated/floor/tiled/techfloor,
-/area/vr/powered/mall/secondlife)
 "uKg" = (
 /turf/simulated/shuttle/wall/hard_corner,
 /area/vr/powered/space/whiteship)
@@ -26150,12 +26207,16 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/mall/secondlife)
 "uVX" = (
-/obj/structure/sign/poster/custom{
-	pixel_y = 0;
-	dir = 2
+/obj/effect/floor_decal/milspec/color/silver,
+/obj/structure/sink{
+	dir = 1
 	},
-/turf/simulated/floor/carpet/purple,
-/area/vr/powered/mall/dorms/secondlife2)
+/obj/structure/mirror{
+	dir = 1;
+	pixel_y = -28
+	},
+/turf/simulated/floor/tiled/white,
+/area/vr/powered/mall/dorms/dorms1)
 "uWc" = (
 /obj/effect/catwalk_plated/dark,
 /obj/structure/sign/department/cargo_dock{
@@ -26218,9 +26279,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/vr/powered/vet)
-"uYM" = (
-/turf/simulated/floor/wood/alt/parquet,
-/area/vr/powered/mall/dorms/dorms6)
 "uZT" = (
 /obj/machinery/button/windowtint{
 	id = "vrmalltint1";
@@ -26265,8 +26323,16 @@
 /turf/simulated/floor/plating,
 /area/vr/outdoors/powered)
 "vdb" = (
-/turf/simulated/floor/wood/alt/parquet,
-/area/vr/powered/mall/dorms/dorms3)
+/obj/effect/floor_decal/milspec/color/silver,
+/obj/structure/sink{
+	dir = 1
+	},
+/obj/structure/mirror{
+	dir = 1;
+	pixel_y = -28
+	},
+/turf/simulated/floor/tiled/white,
+/area/vr/powered/mall/dorms/dorms5)
 "vdd" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/outdoors/grass{
@@ -26435,11 +26501,6 @@
 "vjp" = (
 /turf/simulated/floor/tiled,
 /area/vr/powered/vet)
-"vjy" = (
-/obj/structure/table/bench/wooden,
-/obj/item/weapon/pen/blade/blue,
-/turf/simulated/floor/carpet/oracarpet,
-/area/vr/powered/mall/dorms/dorms3)
 "vjB" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/reagent_containers/food/snacks/pancakes{
@@ -26940,20 +27001,6 @@
 /obj/structure/bed/pillowpile/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/mall/secondlife)
-"vGe" = (
-/obj/effect/floor_decal/milspec/color/silver,
-/obj/structure/toilet{
-	dir = 4
-	},
-/obj/machinery/light/small{
-	brightness_color = "#DA0205";
-	brightness_power = 1;
-	brightness_range = 5;
-	dir = 8;
-	nightshift_enabled = 1
-	},
-/turf/simulated/floor/tiled/white,
-/area/vr/powered/mall/dorms/dorms2)
 "vGh" = (
 /obj/machinery/vending/wardrobe/hydrobe{
 	req_access = null
@@ -27240,14 +27287,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/dungeon)
-"vSE" = (
-/obj/effect/floor_decal/corner/purple/border{
-	color = "#f700ff";
-	dir = 4
-	},
-/obj/item/clothing/accessory/shiny/gloves/poly,
-/turf/simulated/floor/tiled/techfloor,
-/area/vr/powered/mall/secondlife)
 "vSJ" = (
 /obj/structure/table/marble,
 /obj/machinery/microwave{
@@ -27340,11 +27379,6 @@
 /obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
 /turf/simulated/floor/wood,
 /area/vr/powered)
-"vVj" = (
-/obj/structure/table/darkglass,
-/obj/item/clothing/under/swimsuit/stripper/mankini,
-/turf/simulated/floor/tiled/techfloor,
-/area/vr/powered/mall/secondlife)
 "vVx" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/random/maintenance/clean,
@@ -27507,12 +27541,6 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/vr/powered/space/whiteship)
-"wbh" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/simulated/floor/wood/alt/parquet,
-/area/vr/powered/mall/dorms/dorms2)
 "wbm" = (
 /obj/structure/table/marble{
 	color = "grey"
@@ -27978,10 +28006,6 @@
 /obj/mecha/combat/phazon/old,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/vr/powered/space/sciship)
-"wxd" = (
-/obj/item/clothing/accessory/shiny/gloves/poly,
-/turf/simulated/floor/tiled/techfloor,
-/area/vr/powered/mall/secondlife)
 "wxu" = (
 /obj/structure/bed/chair/comfy/black,
 /obj/effect/floor_decal/techfloor{
@@ -28181,6 +28205,10 @@
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/vr/powered/space/mechfactory)
+"wEW" = (
+/obj/structure/table/hardwoodtable,
+/turf/simulated/floor/carpet/oracarpet,
+/area/vr/powered/mall/dorms/dorms3)
 "wFa" = (
 /mob/living/simple_mob/animal/giant_spider,
 /turf/simulated/floor/tiled,
@@ -28218,17 +28246,6 @@
 	},
 /turf/simulated/floor/weird_things/dark,
 /area/vr/powered/mall/backrooms)
-"wGx" = (
-/obj/effect/floor_decal/milspec/color/silver,
-/obj/structure/sink{
-	dir = 1
-	},
-/obj/structure/mirror{
-	dir = 1;
-	pixel_y = -28
-	},
-/turf/simulated/floor/tiled/white,
-/area/vr/powered/mall/dorms/dorms1)
 "wGy" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/item/weapon/stool{
@@ -28307,6 +28324,10 @@
 	specialfunctions = 4;
 	dir = 4;
 	pixel_y = 30
+	},
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/old_cargo/purple,
 /area/vr/powered/mall/dorms/dorms2)
@@ -28449,10 +28470,6 @@
 	outdoors = 0
 	},
 /area/vr/powered/rocks)
-"wOq" = (
-/obj/effect/floor_decal/milspec/color/silver,
-/turf/simulated/floor/tiled/white,
-/area/vr/powered/mall/dorms/dorms5)
 "wPa" = (
 /turf/simulated/wall/wood,
 /area/vr/powered/rocks)
@@ -28521,6 +28538,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/vr/powered/space/mechfactory)
+"wRz" = (
+/obj/structure/curtain/black,
+/obj/machinery/door/airlock/angled_bay/double/glass,
+/turf/simulated/floor/flock,
+/area/vr/powered/mall/secondlife)
 "wRG" = (
 /obj/structure/railing,
 /turf/simulated/floor/beach/sand/desert{
@@ -28542,6 +28564,10 @@
 	specialfunctions = 4;
 	dir = 4;
 	pixel_y = 30
+	},
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/mall/dorms/dorms1)
@@ -28588,6 +28614,11 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/shuttle/plating,
 /area/vr/powered/space/whiteship)
+"wTJ" = (
+/obj/structure/table/bench/wooden,
+/obj/item/weapon/pen/blade/blue,
+/turf/simulated/floor/carpet/oracarpet,
+/area/vr/powered/mall/dorms/dorms3)
 "wTU" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -28595,6 +28626,14 @@
 /obj/effect/decal/cleanable/fruit_smudge,
 /turf/simulated/floor/carpet/purcarpet,
 /area/vr/powered/mall/dorms/secondlife3)
+"wTY" = (
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#e060e0";
+	light_power = 1;
+	light_range = 6
+	},
+/turf/simulated/floor/carpet/gaycarpet,
+/area/vr/powered/mall/secondlife)
 "wUr" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -28602,7 +28641,10 @@
 /turf/unsimulated/floor/tiled/techfloor,
 /area/vr/powered/mall)
 "wUw" = (
-/turf/simulated/wall/wood,
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = 31
+	},
+/turf/simulated/floor/carpet/oracarpet,
 /area/vr/powered/mall/dorms/dorms3)
 "wUx" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
@@ -28723,7 +28765,7 @@
 /turf/simulated/floor/tiled/red,
 /area/vr/powered/mall/dorms/dorms5)
 "wWt" = (
-/obj/structure/table/hardwoodtable,
+/obj/item/weapon/stool/padded,
 /turf/simulated/floor/carpet/oracarpet,
 /area/vr/powered/mall/dorms/dorms3)
 "wWC" = (
@@ -28799,14 +28841,6 @@
 	outdoors = 1
 	},
 /area/vr/outdoors/powered)
-"xbG" = (
-/obj/item/weapon/digestion_remains/skull/teshari,
-/obj/effect/decal/cleanable/fruit_smudge,
-/obj/item/clothing/mask/muzzle/ballgag{
-	pixel_y = -7
-	},
-/turf/simulated/floor/carpet/gaycarpet,
-/area/vr/powered/mall/dorms/secondlife4)
 "xbS" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
@@ -29300,10 +29334,6 @@
 /obj/item/weapon/gun/projectile/automatic/serdy/awp,
 /turf/simulated/floor/reinforced,
 /area/vr/powered/redbase)
-"xxG" = (
-/obj/effect/floor_decal/milspec/color/silver,
-/turf/simulated/floor/tiled/white,
-/area/vr/powered/mall/dorms/dorms4)
 "xys" = (
 /turf/simulated/mineral/alt{
 	temperature = 293.15
@@ -29519,6 +29549,14 @@
 	},
 /turf/simulated/floor/carpet/brown,
 /area/vr/powered/mall)
+"xGX" = (
+/obj/structure/curtain/open/shower,
+/obj/machinery/shower{
+	dir = 8;
+	pixel_x = -5
+	},
+/turf/simulated/floor/tiled/white,
+/area/vr/powered/mall/dorms/dorms1)
 "xHm" = (
 /obj/machinery/conveyor{
 	id = "vrsushitrain";
@@ -29614,6 +29652,22 @@
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/bar)
+"xKI" = (
+/obj/structure/table/darkglass,
+/obj/item/device/bodysnatcher{
+	pixel_y = 4;
+	pixel_x = 3
+	},
+/obj/item/device/bodysnatcher{
+	pixel_y = -2;
+	pixel_x = -2
+	},
+/obj/item/device/bodysnatcher{
+	pixel_y = -4;
+	pixel_x = 6
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/vr/powered/mall/secondlife)
 "xLm" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/item/weapon/stool{
@@ -29955,6 +30009,23 @@
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/mall)
+"ydc" = (
+/obj/structure/table/darkglass,
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 1;
+	pixel_y = 0
+	},
+/obj/item/weapon/storage/box/glasses/rocks{
+	pixel_y = -2;
+	pixel_x = -10
+	},
+/obj/item/weapon/storage/box/glasses/square{
+	pixel_y = -2;
+	pixel_x = 12
+	},
+/turf/unsimulated/shuttle/floor/purple,
+/area/vr/powered/mall/secondlife)
 "ydM" = (
 /obj/structure/salvageable/data_os,
 /turf/unsimulated/floor/lino/turfpack/station{
@@ -69273,17 +69344,17 @@ jNo
 mbF
 mbF
 mbF
-epd
-epd
-epd
-epd
-epd
-epd
-epd
-epd
-epd
-epd
-epd
+nJM
+nJM
+nJM
+nJM
+nJM
+nJM
+nJM
+nJM
+nJM
+nJM
+nJM
 oVM
 kIl
 jPG
@@ -69531,17 +69602,17 @@ jNo
 mbF
 mbF
 mbF
-epd
+nJM
 gFH
 avf
 wkd
 rGJ
 rbF
 pYB
-epd
-pQx
-kgh
-epd
+nJM
+pRJ
+oOY
+nJM
 oVM
 hSI
 jPG
@@ -69789,17 +69860,17 @@ jNo
 mbF
 sHe
 mbF
-epd
+nJM
 ixQ
 cTE
 cTE
 cTE
 cTE
 cTE
-epd
-pOd
-wGx
-epd
+nJM
+xGX
+uVX
+nJM
 oVM
 kIl
 jPG
@@ -70047,17 +70118,17 @@ jNo
 mbF
 mbF
 sHe
-epd
+nJM
 wSm
 cTE
 cTE
 cTE
 cTE
 qAG
-epd
-epd
-dJF
-epd
+nJM
+nJM
+jVS
+nJM
 tGE
 kIl
 jPG
@@ -70306,16 +70377,16 @@ mbF
 sHe
 mbF
 gBz
-hAO
-hAO
-hAO
-hAO
-hAO
-hAO
-hAO
-aJc
-hAO
-epd
+azq
+azq
+azq
+azq
+azq
+azq
+azq
+lhq
+azq
+nJM
 oVM
 kIl
 jPG
@@ -70563,17 +70634,17 @@ jNo
 mbF
 mbF
 mbF
-epd
+nJM
 rQv
-oMt
-lbr
+qan
+hVq
 wEq
 wEq
-epd
-epd
-epd
+nJM
+nJM
+nJM
 mYs
-epd
+nJM
 oVM
 dsG
 jPG
@@ -70821,13 +70892,13 @@ jNo
 mKY
 mbF
 mKY
-epd
+nJM
 wEq
-kwJ
+pBo
 qLF
-iPE
-ifd
-epd
+iWc
+ovU
+nJM
 qxv
 iVO
 aHs
@@ -71079,13 +71150,13 @@ jNo
 mbF
 mbF
 mbF
-epd
-kao
+nJM
+qba
 wEq
 wEq
-iPE
+iWc
 tSw
-epd
+nJM
 aJP
 aHs
 aHs
@@ -71337,17 +71408,17 @@ jNo
 mbF
 mKY
 nrp
-epd
-kao
+nJM
+qba
 uYn
 uYn
-iPE
-bAC
-epd
+iWc
+qiH
+nJM
 khJ
 uqE
 cWw
-epd
+nJM
 oVM
 kIl
 jPG
@@ -71595,17 +71666,17 @@ jNo
 mbF
 mbF
 nrp
-epd
-epd
-epd
-epd
-epd
-epd
-epd
-epd
-epd
-epd
-epd
+nJM
+nJM
+nJM
+nJM
+nJM
+nJM
+nJM
+nJM
+nJM
+nJM
+nJM
 oVM
 kIl
 jPG
@@ -71853,17 +71924,17 @@ jNo
 mbF
 mbF
 nrp
-oIG
+pGH
 iDr
 ane
 joA
 qRP
 dFF
 jSK
-oIG
-pRJ
-vGe
-oIG
+pGH
+skm
+fas
+pGH
 oVM
 kIl
 jPG
@@ -72111,17 +72182,17 @@ jNo
 mbF
 sHe
 mbF
-oIG
+pGH
 axg
 aGv
 aGv
 aGv
 aGv
 aGv
-oIG
-lgp
-hOI
-oIG
+pGH
+enN
+myP
+pGH
 oVM
 kIl
 jPG
@@ -72369,17 +72440,17 @@ jNo
 mbF
 mbF
 mbF
-oIG
+pGH
 wKS
 aGv
 aGv
 aGv
 aGv
 nxY
-oIG
-oIG
-qfO
-oIG
+pGH
+pGH
+tYL
+pGH
 tGE
 kIl
 jPG
@@ -72628,16 +72699,16 @@ mbF
 mbF
 sHe
 rom
-sWf
-sWf
-sWf
-sWf
-sWf
-sWf
-sWf
-wbh
-sWf
-oIG
+ovW
+ovW
+ovW
+ovW
+ovW
+ovW
+ovW
+cBz
+ovW
+pGH
 oVM
 dsG
 jPG
@@ -72885,17 +72956,17 @@ jNo
 mbF
 mbF
 mbF
-oIG
+pGH
 saD
 xRd
 lHF
 jFf
 jFf
-oIG
-oIG
-oIG
+pGH
+pGH
+pGH
 onX
-oIG
+pGH
 oVM
 kIl
 jPG
@@ -73143,13 +73214,13 @@ jNo
 mbF
 mKY
 mKY
-oIG
+pGH
 jFf
 xEl
 jIp
 kOw
 nrY
-oIG
+pGH
 oxT
 bTn
 hsD
@@ -73401,13 +73472,13 @@ jNo
 mbF
 mbF
 mbF
-oIG
+pGH
 tEr
 jFf
 jFf
 kOw
 uFH
-oIG
+pGH
 uMe
 hsD
 hsD
@@ -73659,17 +73730,17 @@ jNo
 mbF
 sHe
 mbF
-oIG
+pGH
 tEr
 lnS
 lnS
 kOw
 uRx
-oIG
+pGH
 pxI
 dFd
 eif
-oIG
+pGH
 oVM
 fGS
 jPG
@@ -73917,17 +73988,17 @@ eUL
 mKY
 mbF
 mbF
-oIG
-oIG
-oIG
-oIG
-oIG
-oIG
-oIG
-oIG
-oIG
-oIG
-oIG
+pGH
+pGH
+pGH
+pGH
+pGH
+pGH
+pGH
+pGH
+pGH
+pGH
+pGH
 oVM
 kIl
 jPG
@@ -81657,17 +81728,17 @@ wPM
 ycu
 nhm
 ajQ
-wUw
-wUw
-wUw
-wUw
-wUw
-wUw
-wUw
-wUw
-wUw
-wUw
-wUw
+oDb
+oDb
+oDb
+oDb
+oDb
+oDb
+oDb
+oDb
+oDb
+oDb
+oDb
 oVM
 kIl
 jPG
@@ -81915,17 +81986,17 @@ wPM
 ycu
 nhm
 ajQ
-wUw
+oDb
 uSd
 moh
 lRA
 hBZ
 jQx
 mhy
-wUw
-bPm
+oDb
+cIs
 iHV
-wUw
+oDb
 oVM
 kIl
 jPG
@@ -82173,17 +82244,17 @@ wPM
 ycu
 nhm
 ajQ
-wUw
+oDb
 ghV
 ePC
 ePC
 ePC
 ePC
 ePC
-wUw
-jkX
-fsK
-wUw
+oDb
+mOR
+afZ
+oDb
 oVM
 kIl
 jPG
@@ -82431,17 +82502,17 @@ wPM
 ftm
 nhm
 ajQ
-wUw
+oDb
 qIn
 ePC
 ePC
 ePC
 ePC
 mkU
-wUw
-wUw
-iGo
-wUw
+oDb
+oDb
+tMF
+oDb
 oVM
 vdd
 jPG
@@ -82690,16 +82761,16 @@ ycu
 nhm
 ajQ
 oAC
-vdb
-vdb
-vdb
-vdb
-vdb
-vdb
-vdb
-gqU
-vdb
-wUw
+rHw
+rHw
+rHw
+rHw
+rHw
+rHw
+rHw
+aJc
+rHw
+oDb
 oVM
 kIl
 jPG
@@ -82947,17 +83018,17 @@ wPM
 ycu
 nhm
 ajQ
-wUw
+oDb
 fwZ
-qan
+bSk
 vwl
-usA
-usA
-wUw
-wUw
-wUw
+mfJ
+mfJ
+oDb
+oDb
+oDb
 sJh
-wUw
+oDb
 oVM
 crG
 jPG
@@ -83164,7 +83235,7 @@ qjX
 vTk
 syO
 vpG
-oDb
+ivl
 aZi
 oJW
 kss
@@ -83205,13 +83276,13 @@ wPM
 ycu
 nhm
 ajQ
-wUw
-usA
-pBo
-vjy
-iWc
-aQR
-wUw
+oDb
+mfJ
+tzg
+wTJ
+wWt
+ifd
+oDb
 bos
 uZT
 cqn
@@ -83413,16 +83484,16 @@ yfs
 ipC
 hzU
 rVY
-uVX
+dzQ
 dTX
 dES
 dES
-dzQ
+ioj
 qjX
 vpG
-nYu
-iag
-oDb
+lky
+tnK
+ivl
 iWh
 aZi
 aZi
@@ -83463,13 +83534,13 @@ wPM
 ycu
 nhm
 ajQ
-wUw
-hlR
-usA
-usA
-iWc
+oDb
+kao
+mfJ
+mfJ
 wWt
-wUw
+wEW
+oDb
 hwS
 cqn
 cqn
@@ -83665,26 +83736,26 @@ tgj
 vrG
 fuy
 awD
+agH
 yfs
-yfs
-oVv
+bKW
 ipC
-hzU
+dlj
 hzU
 hzU
 dTX
-dES
+hOI
 dES
 dES
 qjX
-azq
-xbG
+lCG
+bIw
 vpG
-oDb
-oJW
+ivl
+eWW
 aZi
 yiL
-mgZ
+hvR
 wPM
 mfD
 xJF
@@ -83721,17 +83792,17 @@ wPM
 ycu
 nhm
 ajQ
+oDb
+kao
 wUw
-hlR
-pGH
-pGH
-iWc
-qiH
 wUw
+wWt
+sEP
+oDb
 gIm
 neC
 sNQ
-wUw
+oDb
 tGE
 kIl
 jPG
@@ -83923,23 +83994,23 @@ tgj
 vrG
 fuy
 awD
-rvV
+hPO
 xUp
 jxs
 ipC
-kVe
+iag
 aUe
 uSA
 dTX
-cBz
+eRp
 wTU
 pIO
 qjX
-ifg
+suB
 ayz
 jPB
-oDb
-iMW
+ivl
+rSM
 aZi
 aZi
 diP
@@ -83979,17 +84050,17 @@ wPM
 ycu
 nhm
 ajQ
-wUw
-wUw
-wUw
-wUw
-wUw
-wUw
-wUw
-wUw
-wUw
-wUw
-wUw
+oDb
+oDb
+oDb
+oDb
+oDb
+oDb
+oDb
+oDb
+oDb
+oDb
+oDb
 oVM
 kIl
 jPG
@@ -84194,9 +84265,9 @@ qjX
 qjX
 qjX
 pNv
-oDb
-oDb
-oDb
+ivl
+ivl
+ivl
 eRK
 ivr
 eRK
@@ -84237,17 +84308,17 @@ wPM
 ycu
 nhm
 ajQ
-mfJ
+eKD
 hAQ
 hlj
 ffM
 ifX
 cHE
 qjp
-mfJ
-xxG
-tDU
-mfJ
+eKD
+qPP
+orV
+eKD
 oVM
 kIl
 jPG
@@ -84446,7 +84517,7 @@ qbH
 qbH
 qbH
 qbH
-dzE
+dnZ
 qbH
 qbH
 qbH
@@ -84495,17 +84566,17 @@ wPM
 ycu
 nhm
 ajQ
-mfJ
+eKD
 uXy
 hGy
 hGy
 hGy
 hGy
 hGy
-mfJ
-mOR
-mUk
-mfJ
+eKD
+dVN
+gtl
+eKD
 oVM
 kIl
 jPG
@@ -84713,7 +84784,7 @@ qbH
 qbH
 qbH
 qbH
-dzE
+dnZ
 qbH
 qbH
 qbH
@@ -84753,17 +84824,17 @@ wPM
 ftm
 nhm
 ajQ
-mfJ
+eKD
 dCS
 hGy
 hGy
 hGy
 hGy
 ocj
-mfJ
-mfJ
-jVS
-mfJ
+eKD
+eKD
+qfZ
+eKD
 oVM
 crG
 jPG
@@ -84964,10 +85035,10 @@ gVF
 qbH
 qbH
 yhp
-cNx
+mwU
 qfi
 uVx
-eHr
+ews
 qbH
 qbH
 qbH
@@ -85012,16 +85083,16 @@ ycu
 nhm
 ajQ
 wrr
-ciy
-ciy
-ciy
-ciy
-ciy
-ciy
-ciy
-buP
-ciy
-mfJ
+oIG
+oIG
+oIG
+oIG
+oIG
+oIG
+oIG
+lMp
+oIG
+eKD
 oVM
 kIl
 jPG
@@ -85214,21 +85285,21 @@ vrG
 fuy
 xuX
 qbH
-cZd
+wTY
 duU
 mky
 hGH
 gVF
 qbH
 yhp
-jGm
+aLr
 lhR
-akn
+isD
 cdC
 jdX
-vSE
+kDD
 fcO
-kug
+oBf
 qfi
 xfq
 qfi
@@ -85269,17 +85340,17 @@ wPM
 ycu
 nhm
 ajQ
-mfJ
+eKD
 wNS
 kGV
 fim
 dwH
 dwH
-mfJ
-mfJ
-mfJ
+eKD
+eKD
+eKD
 hKT
-mfJ
+eKD
 oVM
 kIl
 jPG
@@ -85477,10 +85548,10 @@ gHF
 aAH
 gVF
 gVF
-jpy
+fFp
 jWY
 lhR
-enN
+fxe
 lhR
 lhR
 lhR
@@ -85527,13 +85598,13 @@ wPM
 ycu
 nhm
 ajQ
-mfJ
+eKD
 dwH
 jxe
 woJ
 ulc
 uqx
-mfJ
+eKD
 wDy
 stq
 hFX
@@ -85738,13 +85809,13 @@ gVF
 qbH
 jWY
 lhR
-eoO
+kdB
 nzO
 lhR
 lhR
 lhR
 nzO
-eoO
+kdB
 lhR
 lhR
 lhR
@@ -85785,13 +85856,13 @@ wPM
 ycu
 nhm
 ajQ
-mfJ
+eKD
 mVR
 dwH
 dwH
 ulc
 pDH
-mfJ
+eKD
 uJK
 hFX
 hFX
@@ -85996,14 +86067,14 @@ soT
 qbH
 jWY
 lhR
-vVj
+dhl
 lhR
-uKc
-lhR
-lhR
+mLz
 lhR
 lhR
-enN
+lhR
+lhR
+fxe
 lhR
 lhR
 lhR
@@ -86043,17 +86114,17 @@ wPM
 ycu
 nhm
 ajQ
-mfJ
+eKD
 mVR
 kHq
 kHq
 ulc
 aon
-mfJ
+eKD
 jGS
 wAv
 fDg
-mfJ
+eKD
 oVM
 kIl
 jPG
@@ -86245,10 +86316,10 @@ tgj
 vrG
 fuy
 xuX
-mxm
-iWd
-iWd
-pjI
+fQf
+jpy
+jpy
+rzN
 lut
 syD
 qbH
@@ -86301,17 +86372,17 @@ wPM
 ycu
 nhm
 ajQ
-mfJ
-mfJ
-mfJ
-mfJ
-mfJ
-mfJ
-mfJ
-mfJ
-mfJ
-mfJ
-mfJ
+eKD
+eKD
+eKD
+eKD
+eKD
+eKD
+eKD
+eKD
+eKD
+eKD
+eKD
 oVM
 kIl
 jPG
@@ -86504,26 +86575,26 @@ vrG
 fuy
 xuX
 xTU
-dhl
-nOm
 eCg
+cPN
+eoO
 lut
 qvq
 qbH
-swx
+evB
 fSy
 dax
 dax
 dZc
 qbH
-eHr
+ews
 qbH
 qbH
 qbH
 qbH
 qbH
 qbH
-jLw
+iyQ
 ouN
 vgN
 ouN
@@ -86559,17 +86630,17 @@ wPM
 ycu
 nhm
 ajQ
-iXf
+sWf
 esR
 tFD
 vRU
 wWm
 kWn
 qfX
-iXf
-wOq
-fMP
-iXf
+sWf
+nOQ
+oYF
+sWf
 oVM
 kIl
 jPG
@@ -86762,9 +86833,9 @@ vrG
 fuy
 xuX
 lFd
-dhl
-dhl
 eCg
+eCg
+eoO
 rdj
 iMc
 qbH
@@ -86781,7 +86852,7 @@ qfi
 qfi
 jfo
 qfi
-jLw
+iyQ
 ouN
 tiz
 ouN
@@ -86817,17 +86888,17 @@ wPM
 ycu
 nhm
 ajQ
-iXf
+sWf
 dEk
 wNb
 wNb
 wNb
 wNb
 wNb
-iXf
-eKD
-rHw
-iXf
+sWf
+mJa
+vdb
+sWf
 oVM
 vdd
 jPG
@@ -87020,9 +87091,9 @@ vrG
 fuy
 xuX
 hIK
-dhl
-dhl
 eCg
+eCg
+eoO
 lut
 qvq
 qbH
@@ -87032,14 +87103,14 @@ lhR
 lhR
 lhR
 lhR
-ftN
+seC
 lhR
 lhR
 lhR
 lhR
 lhR
 lhR
-jLw
+iyQ
 ouN
 tiz
 ouN
@@ -87075,17 +87146,17 @@ wPM
 ftm
 nhm
 ajQ
-iXf
+sWf
 sBU
 wNb
 wNb
 wNb
 wNb
 kWY
-iXf
-iXf
-qtH
-iXf
+sWf
+sWf
+auQ
+sWf
 oVM
 kIl
 jPG
@@ -87277,27 +87348,27 @@ tgj
 vrG
 fuy
 xuX
-kdB
-dhl
-dhl
+dLk
 eCg
-hKD
+eCg
+eoO
+cRj
 qdD
-wxd
+gXY
 jWY
 lhR
-eoO
+kdB
 nzO
 lhR
 lhR
 lhR
 nzO
-eoO
+kdB
 lhR
 lhR
 lhR
 lhR
-jLw
+iyQ
 ouN
 noa
 ouN
@@ -87341,9 +87412,9 @@ dgT
 dgT
 dgT
 dgT
-jdy
+ppu
 dgT
-iXf
+sWf
 oVM
 kIl
 jPG
@@ -87536,9 +87607,9 @@ vrG
 fuy
 xuX
 jRV
-dhl
-dhl
 eCg
+eCg
+eoO
 lut
 qvq
 qbH
@@ -87555,7 +87626,7 @@ lhR
 lhR
 lhR
 lhR
-jLw
+iyQ
 ouN
 jzh
 tiz
@@ -87591,17 +87662,17 @@ wPM
 ycu
 nhm
 ajQ
-iXf
+sWf
 stn
 pmF
 oHb
 rWO
 rWO
-iXf
-iXf
-iXf
+sWf
+sWf
+sWf
 iNx
-iXf
+sWf
 tGE
 kIl
 jPG
@@ -87793,10 +87864,10 @@ tgj
 vrG
 fuy
 xuX
-iQY
-dhl
-dhl
+ydc
 eCg
+eCg
+eoO
 rdj
 nzw
 dqU
@@ -87813,7 +87884,7 @@ nOE
 rse
 nOE
 nOE
-jLw
+iyQ
 ouN
 jzh
 tiz
@@ -87849,13 +87920,13 @@ wPM
 ycu
 nhm
 ajQ
-iXf
+sWf
 rWO
 bwN
 lMZ
 daE
 aDw
-iXf
+sWf
 oYU
 ehz
 dED
@@ -88052,9 +88123,9 @@ vrG
 fuy
 xuX
 xTU
-dhl
-dhl
 eCg
+eCg
+eoO
 lut
 qvq
 qbH
@@ -88063,15 +88134,15 @@ qbH
 nOE
 nOE
 aLS
-eHr
+ews
 qbH
-qot
-qbH
-qbH
+kmE
 qbH
 qbH
 qbH
-jLw
+qbH
+qbH
+iyQ
 ouN
 ouN
 ouN
@@ -88107,13 +88178,13 @@ wPM
 ycu
 nhm
 ajQ
-iXf
+sWf
 hTp
 rWO
 rWO
 daE
 cfX
-iXf
+sWf
 oVX
 dED
 dED
@@ -88310,9 +88381,9 @@ vrG
 fuy
 xuX
 lFd
-dhl
-nOm
 eCg
+cPN
+eoO
 lut
 fnu
 qbH
@@ -88329,7 +88400,7 @@ qbH
 qbH
 sbp
 sbp
-jLw
+iyQ
 ouN
 ouN
 ouN
@@ -88365,17 +88436,17 @@ wPM
 ycu
 nhm
 ajQ
-iXf
+sWf
 hTp
 dxe
 dxe
 daE
 ckk
-iXf
+sWf
 hAt
 erY
 bmm
-iXf
+sWf
 oVM
 kIl
 jPG
@@ -88567,27 +88638,27 @@ tgj
 vrG
 fuy
 xuX
-bWc
-dyK
-dyK
-clK
+pZh
+fnx
+fnx
+nuQ
 lut
 qvq
 qbH
 qbH
-mJl
+iXf
 qbH
 qbH
 sbp
 qbH
-mJl
+iXf
 qbH
 qbH
 qbH
 qbH
 sbp
 sbp
-jLw
+iyQ
 kRJ
 ouN
 ohm
@@ -88623,17 +88694,17 @@ wPM
 ycu
 nhm
 ajQ
-iXf
-iXf
-iXf
-iXf
-iXf
-iXf
-iXf
-iXf
-iXf
-iXf
-iXf
+sWf
+sWf
+sWf
+sWf
+sWf
+sWf
+sWf
+sWf
+sWf
+sWf
+sWf
 oVM
 kIl
 jPG
@@ -88825,7 +88896,7 @@ tgj
 vrG
 fuy
 xuX
-blQ
+rgm
 sOV
 xma
 lut
@@ -88845,7 +88916,7 @@ sbp
 sbp
 sbp
 sbp
-iKF
+wRz
 kRJ
 kRJ
 ouN
@@ -88881,17 +88952,17 @@ wPM
 ycu
 nhm
 ajQ
-qba
+epd
 wAV
 xeP
 fMj
 oqE
 qQH
 jsx
-qba
-kDl
-kuV
-qba
+epd
+guZ
+aIN
+epd
 oVM
 kIl
 jPG
@@ -89089,21 +89160,21 @@ qbH
 qbH
 qbH
 qbH
-fMq
-cMb
+sJv
+pKS
 qbH
-aLr
+frI
 sbp
 sbp
 sbp
 sbp
 sbp
-npm
+gEm
 sbp
 sbp
+aZu
 sbp
-sbp
-nJM
+tGg
 kRJ
 kRJ
 ouN
@@ -89139,17 +89210,17 @@ wPM
 ycu
 nhm
 ajQ
-qba
+epd
 oFn
 wSj
 wSj
 wSj
 wSj
 wSj
-qba
-ivl
-plZ
-qba
+epd
+gbm
+mUk
+epd
 tGE
 vdd
 jPG
@@ -89347,7 +89418,7 @@ qbH
 dqU
 dqU
 qbH
-tGg
+xKI
 qbH
 qbH
 qbH
@@ -89361,7 +89432,7 @@ qbH
 qbH
 sbp
 sbp
-jLw
+iyQ
 kRJ
 ouN
 ohm
@@ -89397,17 +89468,17 @@ wPM
 ftm
 nhm
 ajQ
-qba
+epd
 uEQ
 wSj
 wSj
 wSj
 wSj
 etN
-qba
-qba
-slv
-qba
+epd
+epd
+bmI
+epd
 oVM
 kIl
 jPG
@@ -89600,7 +89671,7 @@ vrG
 fuy
 xuX
 soT
-aLr
+frI
 dqU
 poO
 snb
@@ -89614,12 +89685,12 @@ qbH
 qbH
 qbH
 qbH
-nKT
+gNy
 qbH
 qbH
 sbp
 sbp
-jLw
+iyQ
 ouN
 ouN
 ouN
@@ -89656,16 +89727,16 @@ ycu
 nhm
 ajQ
 kKz
-uYM
-uYM
-uYM
-uYM
-uYM
-uYM
-uYM
-rCs
-uYM
-qba
+nKT
+nKT
+nKT
+nKT
+nKT
+nKT
+nKT
+sNs
+nKT
+epd
 oVM
 kIl
 jPG
@@ -89869,15 +89940,15 @@ tZz
 tZz
 tZz
 rFt
-gNP
+bWV
 qbH
-hcr
+fwJ
 qbH
 qbH
 qbH
-aLr
+frI
 qbH
-jLw
+iyQ
 ouN
 ouN
 ouN
@@ -89913,17 +89984,17 @@ wPM
 ycu
 nhm
 ajQ
-qba
+epd
 nYd
 axn
 pNW
 nKG
 nKG
-qba
-qba
-qba
+epd
+epd
+epd
 rcW
-qba
+epd
 tGE
 kIl
 jPG
@@ -90115,7 +90186,7 @@ tgj
 vrG
 fuy
 xuX
-qbH
+clV
 qbH
 qbH
 qbH
@@ -90135,7 +90206,7 @@ qbH
 qbH
 qbH
 qbH
-jLw
+iyQ
 ouN
 ouN
 ouN
@@ -90171,13 +90242,13 @@ wPM
 ycu
 nhm
 ajQ
-qba
+epd
 nKG
 qEy
 erz
 uyc
 uhu
-qba
+epd
 aXy
 uPj
 uFT
@@ -90429,13 +90500,13 @@ wPM
 ycu
 nhm
 ajQ
-qba
+epd
 rDL
 nKG
 nKG
 uyc
 bvW
-qba
+epd
 hAV
 uFT
 uFT
@@ -90687,17 +90758,17 @@ wPM
 ycu
 nhm
 ajQ
-qba
+epd
 rDL
 dHv
 dHv
 uyc
 rCB
-qba
+epd
 anx
 utS
 cQx
-qba
+epd
 sKj
 kIl
 jPG
@@ -90945,17 +91016,17 @@ wPM
 ycu
 nhm
 ajQ
-qba
-qba
-qba
-qba
-qba
-qba
-qba
-qba
-qba
-qba
-qba
+epd
+epd
+epd
+epd
+epd
+epd
+epd
+epd
+epd
+epd
+epd
 tPv
 tPv
 tPv
