@@ -1,0 +1,4 @@
+author: "FluffMedic"
+delete-after: True
+changes:
+  - maptweak: "valley grass sprites are shifted to other sif turf sprites."
