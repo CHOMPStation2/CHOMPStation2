@@ -336,6 +336,8 @@
 						to_chat(user, "<span class='notice'>You need more welding fuel to complete this task.</span>")
 						return
 			if(do_after(user, 20 * S.toolspeed))
+				if(opened) //ChompEDIT - cancel weld if opened mid-progress to prevent welder-traps
+					return //ChompEDIT
 				playsound(src, S.usesound, 50)
 				sealed = !sealed
 				update_icon()
