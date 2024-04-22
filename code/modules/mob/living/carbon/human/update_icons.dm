@@ -382,7 +382,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 		for(var/obj/item/organ/external/part in organs)
 			if(isnull(part) || part.is_stump() || part == chest || part.is_hidden_by_sprite_accessory()) //VOREStation Edit allowing tails to prevent bodyparts rendering, granting more spriter freedom for taur/digitigrade stuff.
 				continue
-			var/icon/temp = part.get_icon(skeleton, !wholeicontransparent)
+			var/icon/temp = new(part.get_icon(skeleton, !wholeicontransparent)) //ChompEDIT NEW icon, not referencing original
 
 			if((part.organ_tag in list(BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT)) && Cutter)
 				temp.Blend(Cutter, ICON_AND, x = icon_x_offset, y = icon_y_offset)
@@ -398,10 +398,14 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 				if(!(part.icon_position & RIGHT))
 					temp2.Insert(new/icon(temp,dir=WEST),dir=WEST)
 				base_icon.Blend(temp2, ICON_OVERLAY)
+				/* //ChompEDIT START - icon crashes
 				temp2.Insert(temp2,"blank",dir=NORTH) //faaaaairly certain this is more efficient than reloading temp2, doing this so we don't blend the icons twice (it matters more in transparent limbs)
 				temp2.Insert(temp2,"blank",dir=SOUTH)
 				temp2.Insert(temp2,"blank",dir=EAST)
 				temp2.Insert(temp2,"blank",dir=WEST)
+				*/
+				temp2 = new(species.icon_template ? species.icon_template : 'icons/mob/human.dmi', icon_state = "blank")
+				//ChompEDIT END
 				if(part.icon_position & LEFT)
 					temp2.Insert(new/icon(temp,dir=EAST),dir=EAST)
 				if(part.icon_position & RIGHT)
