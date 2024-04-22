@@ -421,11 +421,11 @@
 /datum/alt_title/spirit_healer
 	title = "Spirit Healer"
 	title_blurb = "A Spirit Healer offers alternative forms of medicine. Rituals, magic rocks, seances... It totally works. What's that about placebo?"
-<<<<<<< HEAD
+	title_outfit = /decl/hierarchy/outfit/job/assistant/entrepreneur/spirit_healer
 
+// ChompADD
 /datum/alt_title/fitnessinstructor
 	title = "Fitness Instructor"
 	title_blurb = "A Fitness Instructor dedicates themselves to improving the health of the crew through physical activity, and boy, do they need the help."
-=======
-	title_outfit = /decl/hierarchy/outfit/job/assistant/entrepreneur/spirit_healer
->>>>>>> 711f99944e... Entrepreneur Expansion (Part 1) (#15933)
+
+// ChompADD END
