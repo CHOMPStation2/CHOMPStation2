@@ -523,10 +523,8 @@
 
 	//Generic entered message
 	if(!owner.mute_entry && entrance_logs) //CHOMPEdit
-		to_chat(owner,"<span class='vnotice'>[thing] slides into your [lowertext(name)].</span>") //ChompEDIT
-
-	if(!istype(thing, /mob/observer))	//Don't have ghosts announce they're reentering the belly on death
-		to_chat(owner,"<span class='vnotice'>[thing] slides into your [lowertext(name)].</span>")
+		if(!istype(thing, /mob/observer))	//Don't have ghosts announce they're reentering the belly on death
+			to_chat(owner,"<span class='vnotice'>[thing] slides into your [lowertext(name)].</span>")
 
 	//Sound w/ antispam flag setting
 	if(vore_sound && !recent_sound && !istype(thing, /mob/observer))
