@@ -7,7 +7,7 @@
 
 	grass_chance = 3
 
-	initial_flooring = null
+	initial_flooring = /decl/flooring/grass/sif
 
 	animal_types = list(
 		/mob/living/simple_mob/animal/sif/diyaab = 24,
@@ -39,7 +39,7 @@
 
 	grass_chance = 3
 
-	initial_flooring = null
+	initial_flooring = /decl/flooring/dirt
 
 	animal_types = list(
 		/mob/living/simple_mob/animal/sif/diyaab = 12,
@@ -59,13 +59,11 @@
 		/obj/structure/flora/sif/frostbelle = 20
 		)
 
-/*
-/decl/flooring/grass/sif/valley
-	color = "#1A2B3C"
-*/
 
 /turf/simulated/floor/outdoors/grass/sif/cave
 	tree_chance = 0
+
+	outdoors = OUTDOORS_AREA
 
 	color = "#556778"
 
@@ -73,7 +71,7 @@
 
 	grass_chance = 15
 
-	initial_flooring = null
+	initial_flooring = /decl/flooring/dirt
 
 	animal_types = list(
 		/mob/living/simple_mob/animal/giant_spider/tunneler = 12,
@@ -98,6 +96,13 @@
 		)
 
 /*
-/decl/flooring/grass/sif/cave
-	color = "#556778"
+/decl/flooring/grass/sif/valleycave
+	icon = ""
+	icon_state = "bordercolorcee"
+
+
+/decl/flooring/grass/sif/valleyedge
+
+
+/decl/flooring/grass/sif/valley
 */
