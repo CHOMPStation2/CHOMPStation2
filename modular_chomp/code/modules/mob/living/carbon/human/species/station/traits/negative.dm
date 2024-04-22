@@ -54,7 +54,7 @@
 	desc = "For whatever strange genetic reason, defibs cannot restart your heart."
 	cost = 0
 	custom_only = FALSE
-	var_changes = list("defib_mod" = NO_DEFIB)
+	var_changes = list("flags" = NO_DEFIB)
 	can_take = ORGANICS //Mostly because I think synth code bypasses the no defib thing. Or maybe that is just vox
 	excludes = list(/datum/trait/negative/noresleeve) //No, just, no
 
@@ -63,7 +63,7 @@
 	desc = "Your genetics have been ruined, to the point where resleeving can no longer bring you back, including the autoresleever."
 	cost = -1
 	custom_only = TRUE
-	var_changes = list("scan_mod" = NO_SCAN)
+	var_changes = list("flags" = NO_SCAN)
 	excludes = list(/datum/trait/negative/nodefib) //No, just, no
 
 
