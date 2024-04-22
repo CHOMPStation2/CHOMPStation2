@@ -728,9 +728,6 @@
 	description = "Orange Carpet Fibers, ready for reinforcement."
 	reagent_state = LIQUID
 	color = "#f16e16"
-<<<<<<< HEAD
-	taste_description = "extremely overengineered carpet" 
-=======
 	taste_description = "extremely overengineered carpet"
 
 /datum/reagent/essential_oil
@@ -740,4 +737,3 @@
 	taste_description = "a mixture of thick, sweet, salty, salty and spicy flavours that all blend together to not be very nice at all"
 	reagent_state = LIQUID
 	color = "#e8e2b0"
->>>>>>> 711f99944e... Entrepreneur Expansion (Part 1) (#15933)
