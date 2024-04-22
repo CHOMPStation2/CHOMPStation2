@@ -69,13 +69,9 @@
 	name = "Brute Weakness"
 	desc = "Increases damage from brute damage sources by 20%"
 	cost = -2
-<<<<<<< HEAD
-	var_changes = list("brute_mod" = 1.2)
-=======
 	custom_only = FALSE
-	var_changes = list("brute_mod" = 1.25)
+	var_changes = list("brute_mod" = 1.2) //ChompEDIT 25% --> 20%
 	banned_species = list(SPECIES_TESHARI, SPECIES_SHADEKIN_CREW) //These are already this weak.
->>>>>>> 07b8d026c2... Opens more positive and negative traits to non-custom species. (#15928)
 
 /datum/trait/negative/brute_weak_plus
 	name = "Brute Weakness, Major"
