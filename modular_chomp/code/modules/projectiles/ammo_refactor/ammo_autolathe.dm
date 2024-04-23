@@ -54,27 +54,27 @@
 	hidden = 1
 
 /datum/category_item/autolathe/arms/ammo_box_medium_large
-	name = "ammo box (medium)"
+	name = "large ammo box (medium)"
 	path = /obj/item/ammo_magazine/ammo_box/medium/large
 	hidden = 1
 
 /datum/category_item/autolathe/arms/ammo_box_medium_large_ap
-	name = "ammo box (medium AP)"
+	name = "large ammo box (medium AP)"
 	path = /obj/item/ammo_magazine/ammo_box/medium/large/ap
 	hidden = 1
 
 /datum/category_item/autolathe/arms/ammo_box_medium_large_hp
-	name = "ammo box (medium HP)"
+	name = "large ammo box (medium HP)"
 	path = /obj/item/ammo_magazine/ammo_box/medium/large/hp
 	hidden = 1
 
 /datum/category_item/autolathe/arms/ammo_box_medium_large_practice
-	name = "ammo box (medium practice)"
+	name = "large ammo box (medium practice)"
 	path = /obj/item/ammo_magazine/ammo_box/medium/large/practice
 	hidden = 1
 
 /datum/category_item/autolathe/arms/ammo_box_medium_large_hunter
-	name = "ammo box (medium hunter)"
+	name = "large ammo box (medium hunter)"
 	path = /obj/item/ammo_magazine/ammo_box/medium/large/hunter
 	hidden = 1
 
@@ -334,7 +334,7 @@
 	hidden = 1
 
 /datum/category_item/autolathe/arms/medium_empty
-	name = "medium magazine"
+	name = "medium magazine (empty)"
 	path = /obj/item/ammo_magazine/medium/empty
 	hidden = 1
 
@@ -359,7 +359,7 @@
 	hidden = 1
 
 /datum/category_item/autolathe/arms/medium_hunter
-	name = "medium ammo magazine (HP)"
+	name = "medium ammo magazine (hunter)"
 	path = /obj/item/ammo_magazine/medium/hunter
 	hidden = 1
 

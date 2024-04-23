@@ -533,8 +533,8 @@ Medium Weapons
 /obj/item/weapon/gun/projectile/automatic/z8
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
-	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
-	magazine_type = /obj/item/ammo_magazine/medium
+	allowed_magazines = list(/obj/item/ammo_magazine/medium_small)
+	magazine_type = /obj/item/ammo_magazine/medium_small
 
 /obj/item/weapon/gun/projectile/automatic/z8/empty
 	caliber = "medium"
@@ -668,6 +668,11 @@ Medium Weapons
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
+/obj/item/weapon/gun/projectile/automatic/serdy/keltec/survival
+	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is OD green. Additionally, it can only accept low capacity magazines."
+	allowed_magazines = list(/obj/item/ammo_magazine/medium_small)
+	magazine_type = /obj/item/ammo_magazine/medium_small
+
 /obj/item/weapon/gun/projectile/automatic/serdy/sks
 	caliber = "medium"
 	ammo_type = /obj/item/ammo_casing/simple/medium
@@ -777,19 +782,19 @@ Medium Weapons
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium_small)
-	magazine_type = /obj/item/ammo_magazine/medium
+	magazine_type = /obj/item/ammo_magazine/medium_small
 
 /obj/item/weapon/gun/projectile/automatic/serdy/m41ab
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
-	allowed_magazines = list(/obj/item/ammo_magazine/clip/medium)
-	magazine_type = /obj/item/ammo_magazine/clip/medium
+	allowed_magazines = list(/obj/item/ammo_magazine/medium)
+	magazine_type = /obj/item/ammo_magazine/medium
 
 /obj/item/weapon/gun/projectile/automatic/serdy/m41a
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
-	allowed_magazines = list(/obj/item/ammo_magazine/clip/medium)
-	magazine_type = /obj/item/ammo_magazine/clip/medium
+	allowed_magazines = list(/obj/item/ammo_magazine/medium)
+	magazine_type = /obj/item/ammo_magazine/medium
 
 
 /*

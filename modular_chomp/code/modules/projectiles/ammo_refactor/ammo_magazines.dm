@@ -469,7 +469,7 @@
 /obj/item/ammo_magazine/ammo_box/medium/practice
 	name = "ammo box (medium practice)"
 	desc = "A box of medium practice rounds"
-	icon_state = "hrifle-practice"
+	icon_state = "hrifle_p"
 	caliber = "medium"
 	ammo_type = /obj/item/ammo_casing/simple/medium/practice
 	matter = list(MAT_STEEL = 2700)
