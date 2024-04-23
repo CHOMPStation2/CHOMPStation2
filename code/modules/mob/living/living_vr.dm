@@ -44,7 +44,7 @@
 		set_metainfo_ooc_style(FALSE)
 		//CHOMPEdit End
 
-/mob/living/proc/set_metainfo_panel()
+/mob/living/verb/set_metainfo_panel() //ChompEDIT proc -> verb
 	if(usr != src)
 		return
 	var/new_metadata = strip_html_simple(tgui_input_text(usr, "Enter any information you'd like others to see, such as Roleplay-preferences. This will not be saved permanently unless you click save in the OOC notes panel!", "Game Preference" , html_decode(ooc_notes), multiline = TRUE,  prevent_enter = TRUE))
@@ -55,7 +55,7 @@
 		log_admin("[key_name(usr)] updated their OOC notes mid-round.")
 		ooc_notes_window(usr)
 
-/mob/living/proc/set_metainfo_likes(var/reopen = TRUE)
+/mob/living/verb/set_metainfo_likes(var/reopen = TRUE) //ChompEDIT proc -> verb
 	if(usr != src)
 		return
 	var/new_metadata = strip_html_simple(tgui_input_text(usr, "Enter any information you'd like others to see relating to your LIKED roleplay preferences. This will not be saved permanently unless you click save in the OOC notes panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(ooc_notes_likes), multiline = TRUE,  prevent_enter = TRUE))
@@ -69,7 +69,7 @@
 		if(reopen)
 			ooc_notes_window(usr)
 
-/mob/living/proc/set_metainfo_dislikes(var/reopen = TRUE)
+/mob/living/verb/set_metainfo_dislikes(var/reopen = TRUE) //ChompEDIT proc -> verb
 	if(usr != src)
 		return
 	var/new_metadata = strip_html_simple(tgui_input_text(usr, "Enter any information you'd like others to see relating to your DISLIKED roleplay preferences. This will not be saved permanently unless you click save in the OOC notes panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(ooc_notes_dislikes), multiline = TRUE,  prevent_enter = TRUE))
@@ -83,7 +83,7 @@
 		if(reopen)
 			ooc_notes_window(usr)
 
-/mob/living/proc/save_ooc_panel()
+/mob/living/verb/save_ooc_panel() //ChompEDIT proc -> verb
 	if(usr != src)
 		return
 	if(client.prefs.real_name != real_name)
@@ -92,7 +92,7 @@
 	if(client.prefs.save_character())
 		to_chat(usr, "<span class='filter_notice'>Character preferences saved.</span>")
 
-/mob/living/proc/print_ooc_notes_to_chat()
+/mob/living/verb/print_ooc_notes_to_chat() //ChompEDIT proc -> verb
 	if(!ooc_notes)
 		return
 	var/msg = ooc_notes

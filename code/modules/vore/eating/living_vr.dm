@@ -157,7 +157,7 @@
 	else if(istype(I,/obj/item/device/radio/beacon))
 		var/confirm = tgui_alert(user, "[src == user ? "Eat the beacon?" : "Feed the beacon to [src]?"]", "Confirmation", list("Yes!", "Cancel"))
 		if(confirm == "Yes!")
-			var/obj/belly/B = tgui_input_list(usr, "Which belly?", "Select A Belly", vore_organs)
+			var/obj/belly/B = tgui_input_list(user, "Which belly?", "Select A Belly", vore_organs) //ChompEDIT - user, not usr
 			if(!istype(B))
 				return TRUE
 			visible_message("<span class='warning'>[user] is trying to stuff a beacon into [src]'s [lowertext(B.name)]!</span>",
@@ -598,17 +598,17 @@
 /mob/living/proc/eat_held_mob(mob/living/user, mob/living/prey, mob/living/pred)
 	var/belly
 	if(user != pred)
-		belly = tgui_input_list(usr, "Choose Belly", "Belly Choice", pred.feedable_bellies())	//CHOMPEdit
+		belly = tgui_input_list(user, "Choose Belly", "Belly Choice", pred.feedable_bellies())	//CHOMPEdit remove usr
 	else
 		belly = pred.vore_selected
 	return perform_the_nom(user, prey, pred, belly)
 
 /mob/living/proc/feed_self_to_grabbed(mob/living/user, mob/living/pred)
-	var/belly = tgui_input_list(usr, "Choose Belly", "Belly Choice", pred.feedable_bellies())	//CHOMPEdit
+	var/belly = tgui_input_list(user, "Choose Belly", "Belly Choice", pred.feedable_bellies())	//CHOMPEdit - remove usr
 	return perform_the_nom(user, user, pred, belly)
 
 /mob/living/proc/feed_grabbed_to_other(mob/living/user, mob/living/prey, mob/living/pred)
-	var/belly = tgui_input_list(usr, "Choose Belly", "Belly Choice", pred.feedable_bellies())	//CHOMPEdit
+	var/belly = tgui_input_list(user, "Choose Belly", "Belly Choice", pred.feedable_bellies())	//CHOMPEdit - remove usr
 	return perform_the_nom(user, prey, pred, belly)
 
 //
@@ -1242,7 +1242,7 @@
 	icon = 'icons/mob/screen_full_colorized_vore_overlays.dmi'
 */ //Chomp DISABLE End
 
-/mob/living/proc/vorebelly_printout() //Spew the vorepanel belly messages into chat window for copypasting.
+/mob/living/verb/vorebelly_printout() //Spew the vorepanel belly messages into chat window for copypasting. //ChompEDIT proc -> verb
 	set name = "X-Print Vorebelly Settings"
 	set category = "Preferences"
 	set desc = "Print out your vorebelly messages into chat for copypasting."

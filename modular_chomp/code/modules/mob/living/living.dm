@@ -192,7 +192,7 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 	if(size_multiplier != 1 || icon_scale_x != 1 && center_offset > 0)
 		update_transform(TRUE)
 
-/mob/living/proc/set_metainfo_favs(var/reopen = TRUE)
+/mob/living/verb/set_metainfo_favs(var/reopen = TRUE) //ChompEDIT proc -> verb
 	if(usr != src)
 		return
 	var/new_metadata = strip_html_simple(tgui_input_text(usr, "Enter any information you'd like others to see relating to your FAVOURITE roleplay preferences. This will not be saved permanently unless you click save in the OOC notes panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(ooc_notes_favs), multiline = TRUE,  prevent_enter = TRUE))
@@ -206,7 +206,7 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 		if(reopen)
 			ooc_notes_window(usr)
 
-/mob/living/proc/set_metainfo_maybes(var/reopen = TRUE)
+/mob/living/verb/set_metainfo_maybes(var/reopen = TRUE) //ChompEDIT proc -> verb
 	if(usr != src)
 		return
 	var/new_metadata = strip_html_simple(tgui_input_text(usr, "Enter any information you'd like others to see relating to your MAYBE roleplay preferences. This will not be saved permanently unless you click save in the OOC notes panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(ooc_notes_maybes), multiline = TRUE,  prevent_enter = TRUE))
@@ -220,7 +220,7 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 		if(reopen)
 			ooc_notes_window(usr)
 
-/mob/living/proc/set_metainfo_ooc_style(var/reopen = TRUE)
+/mob/living/verb/set_metainfo_ooc_style(var/reopen = TRUE) //ChompEDIT proc -> verb
 	if(usr != src)
 		return
 	ooc_notes_style = !ooc_notes_style
