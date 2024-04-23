@@ -45,3 +45,4 @@
 	id_slot = null
 	r_pocket = null
 	l_pocket = null
+	flags = OUTFIT_HAS_BACKPACK
