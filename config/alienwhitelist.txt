@@ -2,6 +2,13 @@ some~user - Species
 
 admiraldragon - Vox
 aetherelemental - Daemon
+<<<<<<< HEAD
+=======
+afflatuskeeper - Xenochimera
+alphaprime1 - Protean
+amarewolf - Xenochimera
+amshaegaar - Vox
+>>>>>>> ceb03e6186... Merge pull request #15942 from PastelPrinceDan/whitelist
 arandomalien - Xenochimera
 arminazenith - Protean
 arokha - Protean
