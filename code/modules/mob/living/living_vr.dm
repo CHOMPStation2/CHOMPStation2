@@ -85,7 +85,7 @@
 			ooc_notes_window(user)
 
 /mob/living/proc/save_ooc_panel(var/mob/user)
-	if(usr != src)
+	if(user != src)
 		return
 	if(client.prefs.real_name != real_name)
 		to_chat(user, "<span class='danger'>Your selected character slot name is not the same as your character's name. Aborting save. Please select [real_name]'s character slot in character setup before saving.</span>")
