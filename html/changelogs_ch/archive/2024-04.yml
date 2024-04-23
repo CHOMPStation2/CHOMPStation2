@@ -220,3 +220,23 @@
 2024-04-22:
   Kashargul:
   - bugfix: sleevemate not longer usable with pref disabled
+2024-04-23:
+  FluffMedic:
+  - maptweak: valley grass sprites are shifted to other sif turf sprites.
+  Raeschen:
+  - bugfix: Lockers check for opened when finishing the weld to prevent insta-traps
+  - bugfix: Another cached icon edit removal
+  TheCaramelion:
+  - qol: Shadekin Phase In/Out animation now adjusts to the shadekin's size
+  - bugfix: Thrown objects not passing though phased kins
+  Verkister:
+  - bugfix: Fixed empty hand interactions not working on non-rideable humanmobs with
+      forced buckling.
+  cadyn:
+  - bugfix: lighting runtimes
+  tacoguy7765093:
+  - rscdel: Removed VR respawn time
+  - bugfix: VR no longer will spawn duplicate PDAs flooding the PDA servers with fake
+      people.
+  - maptweak: VR new bar room added.
+  - bugfix: Adjustments to item staining with 'bloody' hands.

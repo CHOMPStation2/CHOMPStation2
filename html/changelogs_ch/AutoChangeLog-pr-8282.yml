@@ -1,6 +1,0 @@
-author: "tacoguy7765093"
-delete-after: True
-changes:
-  - rscdel: "Removed VR respawn time"
-  - bugfix: "VR no longer will spawn duplicate PDAs flooding the PDA servers with fake people."
-  - maptweak: "VR new bar room added."

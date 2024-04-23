@@ -1,4 +1,0 @@
-author: "Raeschen"
-delete-after: True
-changes:
-  - bugfix: "Lockers check for opened when finishing the weld to prevent insta-traps"
