@@ -20,19 +20,28 @@
 	var/cache_b_shade = 0.0
 	var/maxlum = 0.0
 	var/maxlumshade = 0.0
-	var/datum/sun_holder/sun
+	var/datum/simple_sun/sun
 	var/atom/movable/sun_vis_simple/vis_overhead
 	var/atom/movable/sun_vis_simple/vis_shade
+	var/list/shandlers = list()
 
-/datum/planet_sunlight_handler/New(var/datum/planet/planet)
+/datum/planet_sunlight_handler/New(var/planet)
 	. = ..()
-	sun = planet.sun_holder
+	var/datum/planet/P = planet
+	var/datum/simple_sun/S = planet
+	if(istype(P))
+		sun = new /datum/simple_sun/planetary(P)
+
+	if(istype(S))
+		sun = S
+
 	vis_overhead = new(null)
 	vis_shade = new(null)
 
 /datum/planet_sunlight_handler/proc/update_sun()
-	var/brightness = sun.our_brightness * SSlighting.sun_mult
-	var/list/color = hex2rgb(sun.our_color)
+	sun.update()
+	var/brightness = sun.brightness * SSlighting.sun_mult
+	var/list/color = hex2rgb(sun.color)
 	red = brightness * (color[1] / 255.0)
 	green = brightness * (color[2] / 255.0)
 	blue = brightness * (color[3] / 255.0)
@@ -86,6 +95,8 @@
 	cache_b_shade  = round(blueshade * ., LIGHTING_ROUND_VALUE)
 	#endif
 
+
+//Visuals we use to remove need to update overlays for tiles that have nothing but sunlight
 /atom/movable/sun_vis_simple
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "white"
@@ -93,3 +104,25 @@
 	mouse_opacity = 0
 	alpha = 255
 	color = "#FFFFFF"
+
+//A simplified datum for controlling the sun color/brightness
+//This allows for the sunlight system to be used outside of only planets
+/datum/simple_sun
+	var/brightness = 1.0
+	var/color = "#FFFFFF"
+
+//Called from planet_sunlight_handler.update_sun()
+//Should update brightness and color values
+/datum/simple_sun/proc/update()
+	return //Do nothing. This is meant to be overridden.
+
+/datum/simple_sun/planetary
+	var/datum/sun_holder/sun
+
+/datum/simple_sun/planetary/New(var/datum/planet/planet)
+	sun = planet.sun_holder
+
+/datum/simple_sun/planetary/update()
+	. = ..()
+	brightness = sun.our_brightness
+	color = sun.our_color
