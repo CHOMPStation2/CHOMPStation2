@@ -3632,6 +3632,16 @@
 /obj/item/weapon/stool/padded,
 /turf/simulated/floor/carpet/green,
 /area/vr/powered/mall/dorms/dorms5)
+"dcp" = (
+/obj/structure/toilet{
+	dir = 8
+	},
+/obj/structure/sign/atmos{
+	pixel_y = 0;
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/vr/powered/mall/secondlife)
 "dcB" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/door/airlock/medical{
@@ -8608,6 +8618,11 @@
 	temperature = 293.15
 	},
 /area/vr/outdoors/powered)
+"hbA" = (
+/obj/structure/table/darkglass,
+/obj/item/glass_jar,
+/turf/simulated/floor/tiled/techfloor,
+/area/vr/powered/mall/secondlife)
 "hcc" = (
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_x = -25;
@@ -9658,6 +9673,20 @@
 /obj/item/weapon/storage/toolbox/syndicate/powertools,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/vr/powered/space/mechfactory)
+"hWx" = (
+/obj/structure/table/darkglass,
+/obj/item/weapon/reagent_containers/pill/zoom,
+/obj/item/weapon/reagent_containers/pill/zoom{
+	pixel_y = 7;
+	pixel_x = -1
+	},
+/obj/item/weapon/reagent_containers/pill/zoom{
+	pixel_y = 4;
+	pixel_x = 4
+	},
+/obj/item/weapon/glass_extra/straw,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/vr/powered/mall/secondlife)
 "hWB" = (
 /obj/structure/table/marble{
 	pixel_y = 0
@@ -9881,6 +9910,11 @@
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/mall)
+"icJ" = (
+/obj/structure/table/darkglass,
+/obj/item/weapon/card/id,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/vr/powered/mall/secondlife)
 "idM" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 8
@@ -11703,6 +11737,12 @@
 /obj/effect/map_effect/interval/effect_emitter/sparks,
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/space/mechfactory)
+"jBy" = (
+/obj/structure/table/darkglass,
+/obj/structure/stripper_pole,
+/obj/item/weapon/spacecash/c1,
+/turf/simulated/floor/tiled/techfloor,
+/area/vr/powered/mall/secondlife)
 "jBJ" = (
 /obj/machinery/door/airlock/multi_tile/metal/mait,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
@@ -20758,6 +20798,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/vr/powered/vet)
+"qrC" = (
+/obj/item/weapon/spacecash/c1,
+/turf/simulated/floor/tiled/techfloor,
+/area/vr/powered/mall/secondlife)
 "qsk" = (
 /obj/item/weapon/flame/candle/everburn,
 /obj/structure/table/bench/wooden,
@@ -21477,6 +21521,11 @@
 /obj/random/trash,
 /turf/simulated/floor/outdoors/road,
 /area/vr/outdoors/powered)
+"qTU" = (
+/obj/structure/table/darkglass,
+/obj/item/weapon/spacecash/c1,
+/turf/simulated/floor/tiled/techfloor,
+/area/vr/powered/mall/secondlife)
 "qUP" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 6
@@ -21692,6 +21741,8 @@
 	dir = 4
 	},
 /obj/item/weapon/material/twohanded/riding_crop,
+/obj/item/weapon/storage/secure/briefcase/money,
+/obj/item/weapon/storage/secure/briefcase/money,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/vr/powered/mall/secondlife)
 "rgX" = (
@@ -25441,6 +25492,12 @@
 	},
 /turf/space,
 /area/vr/space)
+"ugO" = (
+/obj/structure/table/darkglass,
+/obj/item/glass_jar,
+/obj/item/weapon/spacecash/c1,
+/turf/simulated/floor/tiled/techfloor,
+/area/vr/powered/mall/secondlife)
 "ugR" = (
 /obj/item/toy/plushie/teshari/w_yw{
 	pixel_y = 5
@@ -85825,18 +85882,18 @@ gVF
 gVF
 fFp
 jWY
-lhR
+qTU
 fxe
+hbA
 lhR
+ugO
 lhR
+hbA
+qTU
 lhR
-lhR
-lhR
-lhR
-lhR
-lhR
-lhR
-lhR
+hbA
+qTU
+qTU
 iyQ
 mfD
 mfD
@@ -86087,12 +86144,12 @@ lhR
 kdB
 nzO
 lhR
-lhR
-lhR
+nzO
+qTU
 nzO
 kdB
 lhR
-lhR
+nzO
 lhR
 lhR
 iyQ
@@ -86343,16 +86400,16 @@ qbH
 jWY
 lhR
 dhl
-lhR
+hbA
 mLz
+hbA
 lhR
-lhR
-lhR
+hbA
 lhR
 fxe
+hbA
 lhR
-lhR
-lhR
+qTU
 iyQ
 ihR
 ihR
@@ -86601,7 +86658,7 @@ qbH
 gPA
 thL
 lhR
-lhR
+qTU
 wgL
 dTK
 nOE
@@ -87116,7 +87173,7 @@ iMc
 qbH
 yhp
 fur
-lhR
+qTU
 lhR
 cdC
 qfi
@@ -87371,18 +87428,18 @@ eCg
 eoO
 nGa
 qvq
-qbH
+qrC
 jWY
 lhR
 lhR
+hbA
 lhR
-lhR
-lhR
+hbA
 seC
+hbA
 lhR
 lhR
-lhR
-lhR
+hbA
 lhR
 lhR
 iyQ
@@ -87631,18 +87688,18 @@ cRj
 qdD
 gXY
 jWY
-lhR
+qTU
 kdB
 nzO
-lhR
-lhR
-lhR
+qTU
 nzO
+lhR
+jBy
 kdB
 lhR
+nzO
 lhR
-lhR
-lhR
+qTU
 iyQ
 ouN
 noa
@@ -87891,16 +87948,16 @@ qbH
 jWY
 lhR
 lhR
+hbA
+lhR
+hbA
+lhR
+hbA
 lhR
 lhR
+ugO
 lhR
-lhR
-lhR
-lhR
-lhR
-lhR
-lhR
-lhR
+qTU
 iyQ
 ouN
 jzh
@@ -88148,7 +88205,7 @@ nzw
 dqU
 gPA
 thL
-lhR
+qTU
 lhR
 wgL
 nrU
@@ -88405,7 +88462,7 @@ lut
 qvq
 qbH
 qbH
-qbH
+qrC
 nOE
 nOE
 aLS
@@ -88659,7 +88716,7 @@ lFd
 eCg
 cPN
 eoO
-lut
+icJ
 fnu
 qbH
 qbH
@@ -88917,7 +88974,7 @@ pZh
 fnx
 fnx
 nuQ
-lut
+hWx
 qvq
 qbH
 qbH
@@ -90475,7 +90532,7 @@ kBb
 qbH
 qbH
 qbH
-qbH
+dcp
 qbH
 qbH
 qbH
