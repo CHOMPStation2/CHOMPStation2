@@ -1154,27 +1154,27 @@
 		src.Examine_OOC()
 	if(href_list["edit_ooc_notes"])
 		if(usr == src)
-			set_metainfo_panel()
+			set_metainfo_panel(usr) //ChompEDIT - usr arg
 	if(href_list["edit_ooc_note_likes"])
 		if(usr == src)
-			set_metainfo_likes()
+			set_metainfo_likes(usr) //ChompEDIT - usr arg
 	if(href_list["edit_ooc_note_dislikes"])
 		if(usr == src)
-			set_metainfo_dislikes()
+			set_metainfo_dislikes(usr) //ChompEDIT - usr arg
 	if(href_list["save_ooc_panel"])
 		if(usr == src)
-			save_ooc_panel()
+			save_ooc_panel(usr) //ChompEDIT - usr arg
 	if(href_list["print_ooc_notes_to_chat"])
-		print_ooc_notes_to_chat()
+		print_ooc_notes_to_chat(usr) //ChompEDIT - usr arg
 	//CHOMPEdit Start
 	if(href_list["edit_ooc_note_favs"])
 		if(usr == src)
-			set_metainfo_favs()
+			set_metainfo_favs(usr) //ChompEDIT - usr arg
 	if(href_list["edit_ooc_note_maybes"])
 		if(usr == src)
-			set_metainfo_maybes()
+			set_metainfo_maybes(usr) //ChompEDIT - usr arg
 	if(href_list["set_metainfo_ooc_style"])
-		set_metainfo_ooc_style()
+		set_metainfo_ooc_style(usr) //ChompEDIT - usr arg
 	//CHOMPEdit End
 	return ..()
 
