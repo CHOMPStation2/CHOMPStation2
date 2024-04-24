@@ -14547,7 +14547,7 @@
 /obj/structure/disposalpipe/tagger/partial{
 	dir = 1;
 	name = "Sorting Office";
-	sort_tag = "Sorting Office"
+	sort_tag = "Disposal Sorting"
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/warehouse)
@@ -16447,14 +16447,17 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/power/sensor{
 	name = "Powernet Sensor - Engine Power";
 	name_tag = "Engine Power"
+	},
+/obj/structure/cable/cyan{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/cable/cyan{
+	d2 = 8;
+	icon_state = "0-8"
 	},
 /turf/simulated/floor,
 /area/engineering/engine_room)
@@ -18120,7 +18123,7 @@
 /obj/structure/disposalpipe/tagger/partial{
 	dir = 1;
 	name = "Sorting Office";
-	sort_tag = "Sorting Office"
+	sort_tag = "Disposal Sorting"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/apmaint)
@@ -73084,7 +73087,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/hallway/primary/seconddeck/starboard)
 "tfv" = (
-/obj/structure/ladder,
+/obj/structure/ladder/updown,
 /turf/simulated/floor/plating,
 /area/maintenance/research_medical)
 "tfw" = (

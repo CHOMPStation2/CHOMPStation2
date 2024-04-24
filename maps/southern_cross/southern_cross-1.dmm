@@ -9944,6 +9944,19 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/forestarboard)
 "beQ" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/obj/machinery/button/remote/blast_door{
+	desc = "A remote control-switch for shutters.";
+	id = "virologyquar";
+	name = "Virology Emergency Lockdown Control";
+	pixel_x = -25;
+	pixel_y = 3;
+	req_access = list(5)
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "bfF" = (
@@ -11480,18 +11493,26 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/fore)
 "ctY" = (
-/obj/structure/sink{
-	dir = 8;
-	pixel_x = -12;
-	pixel_y = 2
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
-/obj/effect/floor_decal/borderfloorwhite/corner{
-	dir = 1
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
-/obj/effect/floor_decal/corner/blue/bordercorner{
-	dir = 1
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/white,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "virologyquar";
+	name = "Virology Emergency Lockdown Shutters";
+	opacity = 0
+	},
+/turf/simulated/floor/tiled/dark,
 /area/medical/virology)
 "cuc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -11937,7 +11958,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftport)
 "cPr" = (
-/obj/structure/disposalpipe/segment,
+/obj/structure/table/standard,
+/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/machinery/computer/med_data/laptop,
 /obj/effect/floor_decal/borderfloorwhite/corner{
 	dir = 1
 	},
@@ -12584,16 +12607,20 @@
 /turf/simulated/floor/tiled,
 /area/expoutpost/stationshuttle)
 "dwh" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 6
+	},
+/turf/simulated/floor/airless,
+/area/rnd/xenobiology/xenoflora)
+"dwn" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	external_pressure_bound = 140;
 	external_pressure_bound_default = 140;
 	icon_state = "map_vent_out";
-	use_power = 1
+	use_power = 1;
+	dir = 8
 	},
 /obj/machinery/shield_diffuser,
-/turf/simulated/floor/airless,
-/area/rnd/xenobiology/xenoflora)
-"dwn" = (
 /turf/simulated/floor/airless,
 /area/rnd/xenobiology/xenoflora)
 "dwT" = (
@@ -15667,7 +15694,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_monitored/storage/eva/aux)
 "eqM" = (
-/obj/item/weapon/storage/box/monkeycubes,
 /obj/structure/table/glass,
 /obj/structure/reagent_dispensers/virusfood{
 	pixel_x = 30
@@ -15683,6 +15709,7 @@
 	c_tag = "MED - Virology Starboard";
 	dir = 8
 	},
+/obj/item/weapon/storage/box/monkeycubes,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "erI" = (
@@ -16862,29 +16889,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology)
-"fHt" = (
-/obj/structure/table/standard,
-/obj/item/weapon/storage/lockbox/vials,
-/obj/item/weapon/reagent_containers/syringe/antiviral,
-/obj/item/weapon/reagent_containers/syringe/antiviral,
-/obj/item/weapon/reagent_containers/syringe/antiviral,
-/obj/item/weapon/reagent_containers/syringe/antiviral,
-/obj/item/weapon/storage/fancy/vials,
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 9
-	},
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 9
-	},
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/item/device/radio/intercom/department/medbay{
-	dir = 8;
-	pixel_x = -21
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/virology)
 "fHQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 8
@@ -18616,6 +18620,16 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/apcenter)
+"hsy" = (
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/structure/disposaloutlet{
+	dir = 4
+	},
+/obj/machinery/shield_diffuser,
+/turf/simulated/floor/airless,
+/area/space)
 "hsI" = (
 /obj/machinery/telecomms/server/presets/engineering,
 /turf/simulated/floor/tiled/dark{
@@ -18664,25 +18678,12 @@
 /turf/simulated/wall/r_wall,
 /area/tcomm/computer)
 "hwu" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 9
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/virology)
+/turf/simulated/floor/airless,
+/area/space)
 "hxU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -20183,6 +20184,17 @@
 /obj/item/weapon/melee/umbrella/random,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/spacebus)
+"iZz" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "virologyquar";
+	name = "Virology Emergency Lockdown Shutters";
+	opacity = 0
+	},
+/turf/simulated/floor/tiled/dark,
+/area/medical/virology)
 "jbn" = (
 /obj/structure/closet/crate,
 /obj/item/weapon/tank/emergency/oxygen/engi,
@@ -20762,6 +20774,13 @@
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
 /obj/machinery/light,
+/obj/machinery/embedded_controller/radio/airlock/access_controller{
+	id_tag = "virology_airlock_control";
+	name = "Virology Access Console";
+	pixel_x = -26;
+	tag_exterior_door = "virology_airlock_exterior";
+	tag_interior_door = "virology_airlock_interior"
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "jDV" = (
@@ -21727,19 +21746,8 @@
 /turf/simulated/floor/tiled/monotile,
 /area/hangar/three)
 "kEe" = (
-/obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/spray/cleaner,
-/obj/machinery/computer/med_data/laptop,
-/obj/effect/floor_decal/borderfloorwhite,
-/obj/effect/floor_decal/corner/blue/border,
-/obj/machinery/embedded_controller/radio/airlock/access_controller{
-	id_tag = "virology_airlock_control";
-	name = "Virology Access Console";
-	pixel_x = -26;
-	tag_exterior_door = "virology_airlock_exterior";
-	tag_interior_door = "virology_airlock_interior"
-	},
-/turf/simulated/floor/tiled/white,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/wall/r_wall,
 /area/medical/virology)
 "kEx" = (
 /obj/structure/cable{
@@ -24605,12 +24613,21 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/vaultcheckpoint)
 "nAO" = (
+/obj/structure/table/standard,
+/obj/item/weapon/storage/lockbox/vials,
+/obj/item/weapon/reagent_containers/syringe/antiviral,
+/obj/item/weapon/reagent_containers/syringe/antiviral,
+/obj/item/weapon/reagent_containers/syringe/antiviral,
+/obj/item/weapon/reagent_containers/syringe/antiviral,
+/obj/item/weapon/storage/fancy/vials,
 /obj/effect/floor_decal/borderfloorwhite/corner{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/paleblue/bordercorner{
 	dir = 1
 	},
+/obj/item/device/antibody_scanner,
+/obj/item/device/antibody_scanner,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "nCB" = (
@@ -25385,10 +25402,14 @@
 /obj/item/weapon/hand_labeler,
 /obj/item/weapon/folder/white,
 /obj/effect/floor_decal/borderfloorwhite{
-	dir = 1
+	dir = 9
 	},
-/obj/effect/floor_decal/corner/blue/border{
-	dir = 1
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 9
+	},
+/obj/item/device/radio/intercom/department/medbay{
+	dir = 8;
+	pixel_x = -21
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
@@ -25503,7 +25524,8 @@
 /area/maintenance/firstdeck/centralport)
 "ozZ" = (
 /obj/structure/disposalpipe/segment{
-	dir = 4
+	dir = 2;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/wall/r_wall,
 /area/medical/virology)
@@ -81332,9 +81354,9 @@ kcv
 rYm
 bJP
 bJP
-bJP
-ppt
-bJP
+iZz
+ctY
+iZz
 tDq
 hvg
 hvg
@@ -81590,9 +81612,9 @@ fVu
 bjM
 bJP
 bJP
-dRk
-ybM
-iEb
+bJP
+ppt
+bJP
 tDq
 kJV
 uPj
@@ -81848,9 +81870,9 @@ fVu
 lrd
 bJP
 bJP
-yks
-tMg
-xgz
+dRk
+ybM
+iEb
 tDq
 rvW
 taP
@@ -82106,9 +82128,9 @@ bnA
 dLu
 bJP
 bJP
-bJP
-guZ
-bJP
+yks
+tMg
+xgz
 tDq
 exY
 thk
@@ -82363,10 +82385,10 @@ upc
 wDG
 mGR
 bJP
-fHt
-ctY
-hwu
-kEe
+bJP
+bJP
+guZ
+bJP
 tDq
 ipN
 npi
@@ -84946,9 +84968,9 @@ itV
 itV
 itV
 ozZ
-bJP
-bJP
-aaa
+kEe
+kEe
+hwu
 aaa
 aaa
 aaa
@@ -85206,7 +85228,7 @@ itV
 aaa
 aaa
 vYi
-aaa
+hsy
 aaa
 aaa
 aaa
@@ -87265,7 +87287,7 @@ bNe
 xSS
 fjS
 itV
-jVV
+aaa
 aaa
 aaa
 aaa
@@ -87523,7 +87545,7 @@ bNe
 qfl
 wmi
 lse
-jVV
+aaa
 aaa
 aaa
 aaa

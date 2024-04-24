@@ -10455,6 +10455,14 @@
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
+/obj/machinery/power/sensor{
+	name = "Powernet Sensor - Outpost Reactor Power";
+	name_tag = "Outpost Reactor Power"
+	},
+/obj/structure/cable/cyan{
+	d2 = 8;
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/storage)
 "tr" = (
@@ -10666,12 +10674,17 @@
 /area/surface/outpost/main/corridor)
 "tF" = (
 /obj/structure/catwalk,
+/obj/machinery/light/small,
 /obj/structure/cable/cyan{
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/obj/machinery/light/small,
+/obj/structure/cable/cyan{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/storage)
 "tG" = (
@@ -11670,11 +11683,6 @@
 	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/industrial/warning,
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -21439,7 +21447,8 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/junction{
-	dir = 1
+	dir = 2;
+	icon_state = "pipe-j2"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
@@ -25138,14 +25147,6 @@
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
 /area/surface/outside/plains/normal)
 "UQ" = (
-/obj/machinery/power/sensor{
-	name = "Powernet Sensor - Outpost Reactor Power";
-	name_tag = "Outpost Reactor Power"
-	},
-/obj/structure/cable/yellow{
-	d2 = 8;
-	icon_state = "0-8"
-	},
 /obj/structure/catwalk,
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8

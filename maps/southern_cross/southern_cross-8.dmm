@@ -2910,9 +2910,11 @@
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_thunderdomecourt)
 "cdV" = (
-/obj/machinery/vending/emergencyfood/filled,
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 5
+	},
+/obj/machinery/gear_painter{
+	dir = 1
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -18203,10 +18205,10 @@
 /turf/space,
 /area/space)
 "qNB" = (
-/obj/machinery/vending/emergencyfood,
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 4
 	},
+/obj/machinery/vending/emergencyfood/filled,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
 "qOj" = (
