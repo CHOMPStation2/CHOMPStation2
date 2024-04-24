@@ -240,3 +240,12 @@
       people.
   - maptweak: VR new bar room added.
   - bugfix: Adjustments to item staining with 'bloody' hands.
+2024-04-24:
+  TheCaramelion:
+  - rscadd: Instrument case holster, only for instruments
+  cadyn:
+  - rscadd: VR now uses the new sunlight system
+  - bugfix: various optimizations and fixes for sunlight
+  tacoguy7765093:
+  - qol: Adjusted VR avatar loadouts
+  - maptweak: The VR stripmall has more decor.
