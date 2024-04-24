@@ -16,7 +16,7 @@
 		WEATHER_RAIN = 5
 		)
 
-/datum/weather/sif/fallout/temp
+/datum/weather/sif/fallout/temp //fixys firework stars
 	name = "short-term fallout"
 	timer_low_bound = 1
 	timer_high_bound = 3
@@ -28,7 +28,7 @@
 		WEATHER_OVERCAST = 5
 		)
 
-/datum/weather/sif/confetti
+/datum/weather/sif/confetti //fixys firework stars
 	name = "confetti"
 	icon_state = "confetti"
 
