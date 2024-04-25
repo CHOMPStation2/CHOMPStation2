@@ -102,12 +102,12 @@
 	var/list/cameras = list()
 
 /mob/living/silicon/ai/proc/trackable_mobs()
-	if(usr.stat == 2)
+	if(src.stat == 2) //ChompEDIT usr --> src
 		return list()
 
 	var/datum/trackable/TB = new()
 	for(var/mob/living/M in mob_list)
-		if(M == usr)
+		if(M == src) //ChompEDIT usr --> src
 			continue
 		if(M.tracking_status() != TRACKING_POSSIBLE)
 			continue
@@ -153,7 +153,7 @@
 
 /mob/living/silicon/ai/proc/ai_actual_track(mob/living/target as mob)
 	if(!istype(target))	return FALSE
-	var/mob/living/silicon/ai/U = usr
+	var/mob/living/silicon/ai/U = src //ChompEDIT usr --> src
 
 	if(target == U.cameraFollow)
 		return TRUE

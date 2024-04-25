@@ -191,7 +191,7 @@
 
 	operating = 1
 	while(selected_camera && Adjacent(user))
-		selected_camera = tgui_input_list(usr, "Select camera to view.", "Camera Choice", cameras)
+		selected_camera = tgui_input_list(user, "Select camera to view.", "Camera Choice", cameras) //ChompEDIT usr --> src
 	selected_camera = null
 	operating = 0
 
