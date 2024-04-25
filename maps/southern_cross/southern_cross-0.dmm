@@ -771,10 +771,9 @@
 /area/maintenance/zeroaft)
 "cL" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
+	d1 = 1;
 	d2 = 4;
-	icon_state = "2-4";
-	dir = 4
+	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow,
 /obj/effect/wingrille_spawn/reinforced,
@@ -3135,6 +3134,20 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/maintenance/abchemistry)
+"mv" = (
+/obj/structure/bed/chair/wood,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/ragecage)
 "mw" = (
 /obj/random/cash{
 	pixel_x = -5;
@@ -6070,10 +6083,9 @@
 	icon_state = "0-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
+	d1 = 1;
 	d2 = 4;
-	icon_state = "2-4";
-	dir = 4
+	icon_state = "1-4"
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating/turfpack/station,
@@ -6362,6 +6374,14 @@
 "zn" = (
 /turf/simulated/wall/r_wall/turfpack/station,
 /area/maintenance/janitoral)
+"zo" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/ragecage)
 "zp" = (
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/abscience)
@@ -11124,11 +11144,6 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/ragecage)
@@ -48123,8 +48138,8 @@ wZ
 wZ
 Yh
 Is
-bV
-Is
+mv
+zo
 tj
 Is
 kS
