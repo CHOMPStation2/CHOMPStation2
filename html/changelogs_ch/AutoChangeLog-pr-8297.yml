@@ -1,0 +1,4 @@
+author: "FluffMedic"
+delete-after: True
+changes:
+  - rscadd: "Added ore grubs and lizardmen to the random mining mob spawn pool"
