@@ -86,6 +86,7 @@
 		sunlight_update()
 
 /datum/sunlight_handler/proc/sunlight_check()
+	holder.generate_missing_corners() //Somehow corners are self destructing under specific circumstances. Likely race conditions. This is slightly unoptimal but may be necessary.
 	set_sleeping(FALSE) //We set sleeping to false just incase. If the conditions are correct, we'll end up going back to sleeping soon enough anyways.
 	var/cur_sunlight = sunlight
 	if(holder.is_outdoors())
