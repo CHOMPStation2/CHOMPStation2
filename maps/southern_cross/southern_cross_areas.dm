@@ -1010,6 +1010,10 @@ z
 	name = "Atmospherics Substation"
 	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
 
+/area/maintenance/substation/maintenance
+	name = "Maintenance Substation"
+	ambience = AMBIENCE_SUBSTATION
+
 /area/maintenance/emergencyeva
 	name = "\improper Emergency EVA Maintenance"
 	icon_state = "maint_eva"
@@ -2365,3 +2369,31 @@ End Chompstation Edit*/
 
 /area/maintenance/bar/dorms/dorm_2
 	name = "Maintenance Deck Bar Dorms 2"
+
+/area/maintenance/zerocent
+	name = "Maintenance Deck Central"
+	icon_state = "maintcentral"
+
+/area/maintenance/zeroport
+	name = "Maintenance Deck Port"
+	icon_state = "pmaint"
+
+/area/maintenance/zeroaft
+	name = "Maintenance Deck Aft"
+	icon_state = "amaint"
+
+/area/maintenance/zerostarboard
+	name = "Maintenance Deck Starboard"
+	icon_state = "smaint"
+
+/area/maintenance/zerofore
+	name = "Maintenance Deck Fore"
+	icon_state = "fmaint"
+
+/area/maintenance/gravlobby
+	name = "Gravity Generator Lobby"
+	icon_state = "engineering"
+
+/area/maintenance/zerobar
+	name = "Abandoned Bar"
+	icon_state = "maint_bar"
