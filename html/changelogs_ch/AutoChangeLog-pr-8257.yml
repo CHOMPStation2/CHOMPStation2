@@ -1,0 +1,6 @@
+author: "FluffMedic"
+delete-after: True
+changes:
+  - bugfix: "Security law of maints 3 overriding the lockdown system I keep forgetting exists."
+  - bugfix: "solars devouring shield useage by adding platting"
+  - bugfix: "fixed the disposals and the lack of antibody scanners"

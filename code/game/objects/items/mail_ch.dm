@@ -92,9 +92,9 @@
 		if(O.currTag)
 			if(src.sortTag != O.currTag)
 				balloon_alert(user, "You have labeled the destination as [O.currTag].")
-				if(!src.sortTag)
-					src.sortTag = O.currTag
+				src.sortTag = O.currTag
 				playsound(src, 'sound/machines/twobeep.ogg', 50, 1)
+				W.description_info = " It is labeled for [O.currTag]"
 			else
 				balloon_alert(user, "The mail is already labeled for [O.currTag].")
 		else

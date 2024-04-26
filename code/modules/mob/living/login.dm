@@ -25,7 +25,7 @@
 	add_verb(src,/mob/living/proc/fix_vore_effects) //CHOMPEdit TGPanel //CHOMPedit
 
 	if(!no_vore)
-		add_verb(src,/mob/living/proc/vorebelly_printout) //CHOMPEdit TGPanel
+		add_verb(src,/mob/living/verb/vorebelly_printout) //CHOMPEdit TGPanel
 		if(!vorePanel)
 			AddComponent(/datum/component/vore_panel)
 

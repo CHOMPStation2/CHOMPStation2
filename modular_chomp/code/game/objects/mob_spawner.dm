@@ -14,6 +14,8 @@
 		/obj/structure/closet/crate/mimic/dangerous = 2,
 		/mob/living/simple_mob/animal/space/bats = 70,
 		/mob/living/simple_mob/vore/jelly = 25,
+		/mob/living/simple_mob/vore/oregrub = 25,
+		/mob/living/simple_mob/vore/aggressive/lizardman = 25,
 		/mob/living/simple_mob/animal/space/bear = 1,
 		/mob/living/simple_mob/vore/aggressive/deathclaw = 1,
 		/mob/living/simple_mob/animal/space/goose = 60,
