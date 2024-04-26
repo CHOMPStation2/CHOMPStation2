@@ -22502,10 +22502,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/fpcenter)
-"lEA" = (
-/obj/structure/sign/warning/caution,
-/turf/simulated/wall/r_wall,
-/area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
 "lEZ" = (
 /obj/structure/table/bench/standard,
 /obj/effect/floor_decal/borderfloor{
@@ -26886,9 +26882,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/aft)
-"pUA" = (
-/turf/simulated/floor/airless,
-/area/hallway/secondary/escape/firstdeck/ep_aftport)
 "pUZ" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/effect/floor_decal/steeldecal/steel_decals5{
@@ -30383,9 +30376,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/starboard)
-"tsx" = (
-/turf/simulated/floor/airless,
-/area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
 "tsz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -34398,7 +34388,7 @@
 "xbp" = (
 /obj/structure/sign/warning/caution,
 /turf/simulated/wall/r_wall,
-/area/hallway/secondary/escape/firstdeck/ep_aftport)
+/area/space)
 "xbG" = (
 /obj/structure/sign/directions/medical{
 	dir = 8
@@ -64862,13 +64852,13 @@ ilU
 vBl
 pAh
 dWo
-pUA
-pUA
-pUA
+jVV
+jVV
+jVV
 xbp
-pUA
-pUA
-pUA
+jVV
+jVV
+jVV
 fCy
 rmj
 aSg
@@ -73118,13 +73108,13 @@ dXE
 eDP
 aLu
 nhA
-tsx
-tsx
-tsx
-lEA
-tsx
-tsx
-tsx
+jVV
+jVV
+jVV
+xbp
+jVV
+jVV
+jVV
 fCy
 rmj
 sxW
