@@ -1,5 +1,0 @@
-author: "TheCaramelion"
-delete-after: True
-changes:
-  - qol: "Tagged mail will show it's location."
-  - bugfix: "Fixed tagger not changing the tag of an already tagged envelope"

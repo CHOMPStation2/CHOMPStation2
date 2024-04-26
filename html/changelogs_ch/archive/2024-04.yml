@@ -249,3 +249,27 @@
   tacoguy7765093:
   - qol: Adjusted VR avatar loadouts
   - maptweak: The VR stripmall has more decor.
+2024-04-26:
+  FluffMedic:
+  - bugfix: Security law of maints 3 overriding the lockdown system I keep forgetting
+      exists.
+  - bugfix: solars devouring shield useage by adding platting
+  - bugfix: fixed the disposals and the lack of antibody scanners
+  - rscadd: Added ore grubs and lizardmen to the random mining mob spawn pool
+  Missile597:
+  - rscadd: Added a reaction to change liquid fire to neo liquid fire (liquid fire,
+      sulfur and a small amount of phoron + catalyst)
+  - balance: Changed the reagents in cherry bomb to liquid fire instead of neo liquid
+      fire
+  Raeschen:
+  - bugfix: fixed many bad uses of the usr variable
+  TheCaramelion:
+  - qol: Tagged mail will show it's location.
+  - bugfix: Fixed tagger not changing the tag of an already tagged envelope
+  - bugfix: Meatyores shower will have the proper text when ending
+  cadyn:
+  - bugfix: more GC bullshit
+  tacoguy7765093:
+  - bugfix: Fixed a bug involving making custom areas in VR which can delete you if
+      made.
+  - bugfix: Fixed certain firework stars from being able to change Sif's weather

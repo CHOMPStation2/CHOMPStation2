@@ -1,5 +1,0 @@
-author: "Missile597"
-delete-after: True
-changes:
-  - rscadd: "Added a reaction to change liquid fire to neo liquid fire (liquid fire, sulfur and a small amount of phoron + catalyst)"
-  - balance: "Changed the reagents in cherry bomb to liquid fire instead of neo liquid fire"
