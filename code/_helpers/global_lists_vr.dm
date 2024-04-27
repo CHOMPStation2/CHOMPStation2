@@ -1020,7 +1020,7 @@ var/global/list/selectable_speech_bubbles = list(
 // If you want someone to
 var/global/list/BUILDABLE_AREA_TYPES = list(
 	/area/space,
-	/area/mine,
+	/area/mine
 //	/area/surface/outside, 	//SC //CHOMP Comment - Actually these are causing compilation error.
 //	/area/surface/cave,		//SC
 //	/area/tether/surfacebase/outside,	//CHOMP Edit Downstreams, uncomment these if you are using these maps
@@ -1035,7 +1035,7 @@ var/global/list/BUILDABLE_AREA_TYPES = list(
 
 var/static/list/blacklisted_areas = typecacheof(list(
 	/area/space,
-	/area/mine,
+	/area/mine
 //	/area/surface/outside,	//SC //CHOMP Comment - Actually these are causing compilation error.
 //	/area/surface/cave,		//SC
 	//TETHER STUFF BELOW THIS	//CHOMP Edit Downstreams, uncomment these if you are using these maps

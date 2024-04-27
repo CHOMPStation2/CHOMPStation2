@@ -515,10 +515,6 @@
 /obj/item/weapon/material/knife/tacknife/combatknife/fluff/katarina,
 /turf/simulated/floor/tiled,
 /area/vr/powered/gunshop)
-"azP" = (
-/obj/structure/flora/ausbushes/fullgrass,
-/turf/unsimulated/wall,
-/area/vr/outdoors/powered)
 "aAp" = (
 /obj/structure/table/marble,
 /obj/item/device/mass_spectrometer/adv,
@@ -2255,12 +2251,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/vr/powered/space/sciship)
-"bRN" = (
-/obj/structure/flora/tree/jungle_small,
-/obj/structure/flora/ausbushes/fullgrass,
-/obj/structure/flora/ausbushes/fullgrass,
-/turf/unsimulated/wall,
-/area/vr/outdoors/powered)
 "bRT" = (
 /obj/structure/window/basic{
 	dir = 1
@@ -3868,11 +3858,6 @@
 	},
 /turf/simulated/floor/wood/alt/parquet/turfpack,
 /area/vr/powered/mall)
-"djC" = (
-/obj/structure/flora/tree/jungle,
-/obj/structure/flora/ausbushes/fullgrass,
-/turf/unsimulated/wall,
-/area/vr/outdoors/powered)
 "djI" = (
 /obj/effect/decal/cleanable/blood/gibs{
 	color = "red";
@@ -6243,10 +6228,6 @@
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/plating,
 /area/vr/powered/dungeon)
-"eUp" = (
-/obj/structure/flora/tree/jungle,
-/turf/unsimulated/wall,
-/area/vr/outdoors/powered)
 "eUL" = (
 /obj/machinery/light/lamppost,
 /turf/simulated/floor/outdoors/grass{
@@ -10656,11 +10637,6 @@
 /obj/item/device/perfect_tele,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/vr/powered/building2)
-"iDi" = (
-/obj/structure/flora/ausbushes/fullgrass,
-/obj/structure/flora/ausbushes/fullgrass,
-/turf/unsimulated/wall,
-/area/vr/outdoors/powered)
 "iDr" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/random/meat,
@@ -11651,10 +11627,6 @@
 	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/vr/powered)
-"jwN" = (
-/obj/structure/flora/ausbushes/sunnybush,
-/turf/unsimulated/wall,
-/area/vr/outdoors/powered)
 "jxe" = (
 /obj/structure/table/bench/wooden,
 /turf/simulated/floor/carpet/blue,
@@ -13406,11 +13378,6 @@
 	},
 /turf/simulated/shuttle/plating,
 /area/vr/powered/space/sciship)
-"kRF" = (
-/obj/structure/flora/ausbushes/fullgrass,
-/obj/structure/flora/ausbushes/sunnybush,
-/turf/unsimulated/wall,
-/area/vr/outdoors/powered)
 "kRJ" = (
 /turf/simulated/floor/flock,
 /area/vr/powered/mall)
@@ -18895,10 +18862,6 @@
 /obj/structure/reagent_dispensers/beerkeg,
 /turf/simulated/floor/wood,
 /area/vr/powered/mall)
-"oTd" = (
-/obj/structure/flora/tree/jungle_small,
-/turf/unsimulated/wall,
-/area/vr/outdoors/powered)
 "oUq" = (
 /obj/structure/table/glass,
 /obj/item/weapon/soap/deluxe,
@@ -29624,11 +29587,6 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/vr/powered/mall)
-"xvW" = (
-/obj/structure/flora/tree/jungle_small,
-/obj/structure/flora/ausbushes/fullgrass,
-/turf/unsimulated/wall,
-/area/vr/outdoors/powered)
 "xvX" = (
 /obj/structure/closet,
 /turf/simulated/floor/carpet/oracarpet,
@@ -31018,67 +30976,67 @@ kcZ
 kcZ
 hHa
 hHa
-eUp
 hHa
 hHa
 hHa
-azP
-hHa
-azP
 hHa
 hHa
 hHa
-azP
-eUp
-azP
-oTd
-azP
-azP
 hHa
 hHa
 hHa
-eUp
 hHa
 hHa
 hHa
-oTd
-hHa
-azP
-hHa
-azP
-azP
-oTd
 hHa
 hHa
 hHa
-xvW
-iDi
 hHa
 hHa
 hHa
-oTd
 hHa
 hHa
 hHa
-eUp
-azP
-hHa
-bRN
 hHa
 hHa
 hHa
-azP
 hHa
-eUp
-azP
-bRN
 hHa
-oTd
 hHa
-azP
-eUp
-azP
-azP
+hHa
+hHa
+hHa
+hHa
+hHa
+hHa
+hHa
+hHa
+hHa
+hHa
+hHa
+hHa
+hHa
+hHa
+hHa
+hHa
+hHa
+hHa
+hHa
+hHa
+hHa
+hHa
+hHa
+hHa
+hHa
+hHa
+hHa
+hHa
+hHa
+hHa
+hHa
+hHa
+hHa
+hHa
 jPG
 jcO
 jPG
@@ -31336,7 +31294,7 @@ eJA
 cem
 vKr
 cem
-oTd
+hHa
 jPG
 jPG
 jPG
@@ -31594,7 +31552,7 @@ uQq
 vKr
 uQq
 cem
-eUp
+hHa
 jPG
 jPG
 jPG
@@ -32110,7 +32068,7 @@ vKr
 vKr
 vKr
 vKr
-jwN
+hHa
 hHa
 aZv
 aZv
@@ -32626,7 +32584,7 @@ vKr
 tWV
 uQq
 vKr
-oTd
+hHa
 aZv
 aZv
 hiz
@@ -32884,7 +32842,7 @@ vKr
 vKr
 vKr
 vKr
-jwN
+hHa
 aZv
 aZv
 vvh
@@ -33400,7 +33358,7 @@ vKr
 vKr
 vKr
 vKr
-oTd
+hHa
 aZv
 aZv
 rLE
@@ -33658,7 +33616,7 @@ vKr
 vKr
 uQq
 cem
-azP
+hHa
 aZv
 aZv
 rLE
@@ -33916,7 +33874,7 @@ vKr
 vKr
 uQq
 cem
-kRF
+hHa
 aZv
 aZv
 rLE
@@ -34690,7 +34648,7 @@ vKr
 vKr
 uQq
 vKr
-oTd
+hHa
 aZv
 aZv
 rLE
@@ -34948,7 +34906,7 @@ vKr
 vKr
 uQq
 vKr
-eUp
+hHa
 aZv
 aZv
 rLE
@@ -35464,7 +35422,7 @@ tWV
 vKr
 uQq
 lai
-iDi
+hHa
 aZv
 aZv
 rLE
@@ -35722,7 +35680,7 @@ vKr
 vKr
 vKr
 vKr
-oTd
+hHa
 aZv
 aZv
 rLE
@@ -36238,7 +36196,7 @@ vKr
 vKr
 uQq
 jZl
-kRF
+hHa
 aZv
 aZv
 rLE
@@ -36496,7 +36454,7 @@ vKr
 vKr
 uQq
 cem
-jwN
+hHa
 aZv
 aZv
 rLE
@@ -36754,7 +36712,7 @@ vKr
 vKr
 vKr
 cem
-oTd
+hHa
 aZv
 aZv
 rLE
@@ -37270,7 +37228,7 @@ vKr
 vKr
 uQq
 vKr
-eUp
+hHa
 aZv
 aZv
 rLE
@@ -37528,7 +37486,7 @@ aRb
 vKr
 uQq
 vKr
-oTd
+hHa
 aZv
 aZv
 rLE
@@ -37786,7 +37744,7 @@ vKr
 tWV
 vKr
 cem
-azP
+hHa
 aZv
 aZv
 rLE
@@ -38044,7 +38002,7 @@ dvk
 tWV
 vKr
 bTy
-azP
+hHa
 aZv
 aZv
 rLE
@@ -38560,7 +38518,7 @@ gMF
 vKr
 vKr
 vKr
-oTd
+hHa
 jPG
 hHa
 hHa
@@ -39076,7 +39034,7 @@ gMF
 vKr
 uQq
 qOu
-jwN
+hHa
 jPG
 jPG
 hHa
@@ -39592,7 +39550,7 @@ gMF
 vKr
 vKr
 vKr
-eUp
+hHa
 jPG
 jPG
 hHa
@@ -40108,7 +40066,7 @@ gMF
 vKr
 vKr
 lai
-azP
+hHa
 jPG
 jPG
 hHa
@@ -40624,7 +40582,7 @@ gMF
 vKr
 uQq
 jZl
-azP
+hHa
 jPG
 jPG
 hHa
@@ -41140,7 +41098,7 @@ gMF
 tWV
 qGD
 cem
-xvW
+hHa
 jPG
 jPG
 hHa
@@ -41398,7 +41356,7 @@ gMF
 vKr
 vKr
 vKr
-iDi
+hHa
 jPG
 jPG
 hHa
@@ -41656,7 +41614,7 @@ gMF
 vKr
 uQq
 lai
-azP
+hHa
 jPG
 jPG
 hHa
@@ -42172,7 +42130,7 @@ gMF
 vKr
 vKr
 cem
-djC
+hHa
 jPG
 jPG
 hHa
@@ -42688,7 +42646,7 @@ vKr
 vKr
 vKr
 qOu
-azP
+hHa
 jPG
 jPG
 hHa
@@ -42946,7 +42904,7 @@ vKr
 vKr
 uQq
 cem
-oTd
+hHa
 jPG
 jPG
 hHa
@@ -43204,7 +43162,7 @@ vKr
 vKr
 uQq
 vKr
-azP
+hHa
 jPG
 jPG
 hHa
@@ -43462,7 +43420,7 @@ tWV
 vKr
 uQq
 vKr
-eUp
+hHa
 jPG
 jPG
 hHa
@@ -43978,7 +43936,7 @@ vKr
 vKr
 vKr
 vKr
-xvW
+hHa
 jPG
 jPG
 hHa
@@ -44236,7 +44194,7 @@ tWV
 vKr
 vKr
 vKr
-azP
+hHa
 jPG
 jPG
 hHa
