@@ -334,3 +334,6 @@
       exit.
   cadyn:
   - bugfix: lighting bullshit
+2024-04-28:
+  tacoguy7765093:
+  - bugfix: Attempting to fix a rare subsystem crash
