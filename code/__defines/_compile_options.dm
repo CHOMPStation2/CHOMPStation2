@@ -41,4 +41,11 @@
 #define FIND_REF_NO_CHECK_TICK
 #endif //ifdef GC_FAILURE_HARD_LOOKUP
 
+//CHOMPEdit begin
+#ifdef FIND_REF_NO_CHECK_TICK
+/world
+	loop_checks = FALSE
+#endif
+//CHOMPEdit end
+
 #endif //ifdef REFERENCE_TRACKING
