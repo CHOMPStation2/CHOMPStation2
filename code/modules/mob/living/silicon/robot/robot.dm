@@ -1643,8 +1643,10 @@
 		return has_upgrade_module(/obj/item/borg/sight/meson)
 	if(given_type == /obj/item/borg/upgrade/no_prod/vision_material)
 		return has_upgrade_module(/obj/item/borg/sight/material)
+	/* //ChompEDIT START - disable for now
 	if(given_type == /obj/item/borg/upgrade/no_prod/vision_anomalous)
 		return has_upgrade_module(/obj/item/borg/sight/anomalous)
+	*/ //ChompEDIT END
 	return null
 
 /mob/living/silicon/robot/proc/has_upgrade(var/given_type)
