@@ -32,8 +32,15 @@
 	var/effect_str_r = 0
 	var/effect_str_g = 0
 	var/effect_str_b = 0
-	var/list/datum/lighting_corner/affected = list()
-	var/list/datum/lighting_corner/only_sun = list()
+	//agony but necessary for memory optimization
+	var/datum/lighting_corner/affected_NE
+	var/datum/lighting_corner/affected_NW
+	var/datum/lighting_corner/affected_SW
+	var/datum/lighting_corner/affected_SE
+	var/datum/lighting_corner/only_sun_NE
+	var/datum/lighting_corner/only_sun_NW
+	var/datum/lighting_corner/only_sun_SW
+	var/datum/lighting_corner/only_sun_SE
 	var/sunlight = FALSE
 	var/inherited = FALSE
 	var/datum/planet_sunlight_handler/pshandler
@@ -72,6 +79,77 @@
 	//Update surrounding turfs: Allows for corner to be claimed by other sunlight handler
 	//Update 2: Accounts for changes made by surrounding turfs
 
+/datum/sunlight_handler/proc/get_affected_list()
+	var/list/affected = list()
+	if(affected_NE) affected += affected_NE
+	if(affected_NW) affected += affected_NW
+	if(affected_SW) affected += affected_SW
+	if(affected_SE) affected += affected_SE
+	return affected
+
+/datum/sunlight_handler/proc/add_to_affected(var/datum/lighting_corner/corner)
+	if(holder.lighting_corner_NE == corner)
+		affected_NE = corner
+		return
+	if(holder.lighting_corner_NW == corner)
+		affected_NW = corner
+		return
+	if(holder.lighting_corner_SW == corner)
+		affected_SW = corner
+		return
+	if(holder.lighting_corner_SE == corner)
+		affected_SE = corner
+		return
+
+/datum/sunlight_handler/proc/remove_from_affected(var/datum/lighting_corner/corner)
+	if(affected_NE == corner)
+		affected_NE = null
+		return
+	if(affected_NW == corner)
+		affected_NW = null
+		return
+	if(affected_SW == corner)
+		affected_SW = null
+		return
+	if(affected_SE == corner)
+		affected_SE = null
+		return
+
+/datum/sunlight_handler/proc/get_only_sun_list()
+	var/list/only_sun = list()
+	if(only_sun_NE) only_sun += only_sun_NE
+	if(only_sun_NW) only_sun += only_sun_NW
+	if(only_sun_SW) only_sun += only_sun_SW
+	if(only_sun_SE) only_sun += only_sun_SE
+	return only_sun
+
+/datum/sunlight_handler/proc/add_to_only_sun(var/datum/lighting_corner/corner)
+	if(holder.lighting_corner_NE == corner)
+		only_sun_NE = corner
+		return
+	if(holder.lighting_corner_NW == corner)
+		only_sun_NW = corner
+		return
+	if(holder.lighting_corner_SW == corner)
+		only_sun_SW = corner
+		return
+	if(holder.lighting_corner_SE == corner)
+		only_sun_SE = corner
+		return
+
+/datum/sunlight_handler/proc/remove_from_only_sun(var/datum/lighting_corner/corner)
+	if(only_sun_NE == corner)
+		only_sun_NE = null
+		return
+	if(only_sun_NW == corner)
+		only_sun_NW = null
+		return
+	if(only_sun_SW == corner)
+		only_sun_SW = null
+		return
+	if(only_sun_SE == corner)
+		only_sun_SE = null
+		return
 
 /datum/sunlight_handler/proc/turf_update(var/old_density, var/turf/new_turf, var/above)
 	if(above)
@@ -141,6 +219,8 @@
 	var/list/corners = list(holder.lighting_corner_NE,holder.lighting_corner_NW,holder.lighting_corner_SE,holder.lighting_corner_SW)
 	var/list/new_corners = list()
 	var/list/removed_corners = list()
+	var/list/affected = get_affected_list()
+	var/list/only_sun = get_only_sun_list()
 	var/sunlightonly_corners = 0
 	var/sunlightonly_shade_corners = 0
 	var/sleepable_corners = 0
@@ -158,13 +238,13 @@
 					new_corners += corner
 			if(SUNLIGHT_CURRENT)
 				if(!sunlight && (corner in affected))
-					affected -= corner
+					remove_from_affected(corner)
 					removed_corners += corner
 					corner.sunlight = SUNLIGHT_POSSIBLE
 			if(SUNLIGHT_ONLY)
 				sunlightonly_corners++
 				if(!(sunlight == SUNLIGHT_OVERHEAD) && (corner in only_sun))
-					only_sun -= corner
+					remove_from_only_sun(corner)
 					sunlightonly_corners--
 					if(sunlight)
 						new_corners += corner
@@ -178,7 +258,7 @@
 			if(SUNLIGHT_ONLY_SHADE)
 				sunlightonly_shade_corners++
 				if(!(sunlight == TRUE) && (corner in only_sun))
-					only_sun -= corner
+					remove_from_only_sun(corner)
 					sunlightonly_shade_corners--
 					if(sunlight)
 						new_corners += corner
@@ -203,14 +283,14 @@
 	if(sunlight)
 		for(var/datum/lighting_corner/corner in affected)
 			if(!LAZYLEN(corner.affecting))
-				affected -= corner
+				remove_from_affected(corner)
 				removed_corners += corner
-				only_sun += corner
+				add_to_only_sun(corner)
 				corner.sunlight = sunonly_val
 		for(var/datum/lighting_corner/corner in new_corners)
 			if(!LAZYLEN(corner.affecting))
 				new_corners -= corner
-				only_sun += corner
+				add_to_only_sun(corner)
 				corner.sunlight = sunonly_val
 
 	if((sunlightonly_corners == 4 || sunlightonly_shade_corners == 4) && !only_sun_object)
@@ -263,7 +343,7 @@
 
 	for(var/datum/lighting_corner/corner in new_corners)
 		corner.update_lumcount(red,green,blue,from_sholder=TRUE)
-		affected += corner
+		add_to_affected(corner)
 
 	for(var/datum/lighting_corner/corner in removed_corners)
 		corner.update_lumcount(-effect_str_r,-effect_str_g,-effect_str_b,from_sholder=TRUE)
@@ -286,20 +366,21 @@
 	set_sleeping(FALSE)
 	wake_sleepers()
 
-	if(!(sender in only_sun))
+	if(!(sender in get_only_sun_list()))
 		return
 
 	sender.sunlight = SUNLIGHT_CURRENT
 
 	sender.update_lumcount(effect_str_r,effect_str_g,effect_str_b,from_sholder=TRUE)
-	only_sun -= sender
-	affected += sender
+	remove_from_only_sun(sender)
+	add_to_affected(sender)
 
 /datum/sunlight_handler/proc/set_sleeping(var/val)
 	if(sleeping == val)
 		return
 	sleeping = val
 	if(val)
+		//Also delete the corners to save on memory
 		SSlighting.sunlight_queue -= src
 	else
 		SSlighting.sunlight_queue |= src //Just in case somehow gets set to false twice use |=
