@@ -86,7 +86,7 @@
 /datum/trait/negative/onelife
 	name = "One Life"
 	desc = "For whatever reason, once you dead, that is final."
-	cost = -4
+	cost = -2
 	custom_only = TRUE
 	var_changes = list("flags" = NO_SCAN, NO_DEFIB)
 	excludes = list(/datum/trait/negative/nodefib, /datum/trait/negative/noresleeve)
