@@ -540,10 +540,12 @@
 	id = "borg_hound_vision_material"
 	build_path = /obj/item/borg/upgrade/no_prod/vision_material
 
+/* //ChompEDIT START - disable for now
 /datum/design/item/prosfab/robot_upgrade/no_prod/vision_anomalous
 	name = "Anomalous vision"
 	id = "borg_hound_vision_anomalous"
 	build_path = /obj/item/borg/upgrade/no_prod/vision_anomalous
+*/ //ChompEDIT END
 
 // Synthmorph Bags.
 
