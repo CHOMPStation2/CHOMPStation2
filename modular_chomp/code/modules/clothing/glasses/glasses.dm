@@ -21,6 +21,7 @@
 	toggleable = 1
 	see_invisible = INVISIBILITY_SHADEKIN
 
+/* //No hybridizing shadekinsight. Having it as an adminspawn is ok, but it should be specific
 /obj/item/clothing/glasses/meson/darksight
 	name = "optical meson scanner"
 	desc = "Used for seeing walls, floors, and stuff through anything."
@@ -32,3 +33,4 @@
 	vision_flags = SEE_TURFS
 	enables_planes = list(VIS_FULLBRIGHT, VIS_MESONS)
 	see_invisible = INVISIBILITY_SHADEKIN
+*/
