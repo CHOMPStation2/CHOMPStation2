@@ -543,6 +543,7 @@
 	R.module.modules += new/obj/item/borg/sight/material(R.module)
 	return 1
 
+/* //ChompEDIT START - disabling for now
 /obj/item/borg/upgrade/no_prod/vision_anomalous
 	name = "Robot anomalous vision module"
 	desc = "Vision alterantion software to add anomalous sight capabilities."
@@ -560,3 +561,4 @@
 
 	R.module.modules += new/obj/item/borg/sight/anomalous(R.module)
 	return 1
+*/ //ChompEDIT END
