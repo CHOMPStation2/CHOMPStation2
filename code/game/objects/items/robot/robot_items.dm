@@ -59,11 +59,13 @@
 	icon_state = "material"
 	icon = 'icons/inventory/eyes/item.dmi'
 
+/* //ChompEDIT START - disable for now
 /obj/item/borg/sight/anomalous
 	name = "\proper anomaly vision"
 	sight_mode = BORGANOMALOUS
 	icon_state = "denight"
 	icon = 'icons/inventory/eyes/item.dmi'
+*/ //ChompEDIT END
 
 /obj/item/borg/sight/hud
 	name = "hud"
