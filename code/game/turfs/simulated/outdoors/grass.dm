@@ -8,20 +8,20 @@ var/list/grass_types = list(
 	edge_blending_priority = 4
 	initial_flooring = /decl/flooring/grass/outdoors // VOREStation Edit
 	can_dig = TRUE
-	turf_layers = list(
+	/*turf_layers = list( CHOMP Removal Begin
 		/turf/simulated/floor/outdoors/rocks,
 		/turf/simulated/floor/outdoors/dirt
-		)
+		) CHOMP Removal End */
 	var/grass_chance = 12
 
 	var/animal_chance = 1
 
 	// Weighted spawn list.
-	var/list/animal_types = list(
+	var/static/list/animal_types = list( //CHOMPEdit convert to static list
 		/mob/living/simple_mob/animal/passive/tindalos = 1
 		)
 
-	var/list/grass_types = list(
+	var/static/list/grass_types = list( //CHOMPEdit convert to static list
 		/obj/structure/flora/ausbushes/sparsegrass,
 		/obj/structure/flora/ausbushes/fullgrass
 		)

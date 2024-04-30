@@ -1823,6 +1823,7 @@
 #include "code\game\turfs\simulated\outdoors\grass.dm"
 #include "code\game\turfs\simulated\outdoors\ironsand_vr.dm"
 #include "code\game\turfs\simulated\outdoors\outdoors.dm"
+#include "code\game\turfs\simulated\outdoors\outdoors_ch.dm"
 #include "code\game\turfs\simulated\outdoors\outdoors_vr.dm"
 #include "code\game\turfs\simulated\outdoors\sky.dm"
 #include "code\game\turfs\simulated\outdoors\snow.dm"
