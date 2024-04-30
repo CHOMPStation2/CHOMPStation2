@@ -337,3 +337,19 @@
 2024-04-28:
   tacoguy7765093:
   - bugfix: Attempting to fix a rare subsystem crash
+2024-04-30:
+  FluffMedic:
+  - rscadd: 'Added admin spawn set of goggles that''s sole purpose is seeing kin (Rae:
+      commented out the meson/kin hybrid though)'
+  - balance: Makes it so the large kinetic weapons don't need wielding since that
+      code is appears broken and I doubt the two very rare items will become broken
+      if they get the kinetic blast effect.
+  - rscadd: Added a one life trait. Combination of no resleeve and no defib.
+  Verkister:
+  - bugfix: Belly-linked vac-pack dirt nutrition gain now scales with target vorgan's
+      gain setting.
+  cadyn:
+  - refactor: memory optimizations for lighting system
+  - bugfix: gc agony
+  tacoguy7765093:
+  - code_imp: '''hud_enabled'' variable for guns actually works now!'

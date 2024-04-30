@@ -1,5 +1,0 @@
-author: "FluffMedic"
-delete-after: True
-changes:
-  - rscadd: "Added admin spawn set of goggles that's sole purpose is seeing kin (Rae: commented out the meson/kin hybrid though)"
-  - balance: "Makes it so the large kinetic weapons don't need wielding since that code is appears broken and I doubt the two very rare items will become broken if they get the kinetic blast effect."
