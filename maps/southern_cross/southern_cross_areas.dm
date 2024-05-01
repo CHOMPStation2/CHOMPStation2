@@ -1178,6 +1178,7 @@ z
 /area/hallway/secondary/seconddeck/research_medical
 	name = "Research Medical Hallway"
 	icon_state = "hallS"
+        flags = RAD_SHIELDED //chompEDIT: This place is maints now.
 
 /area/medical/foyer
 	name = "\improper Medbay Foyer"
