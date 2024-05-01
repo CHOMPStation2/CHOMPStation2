@@ -12,8 +12,8 @@
 
 	var/list/connections
 	var/list/other_connections
-	var/static/list/blend_objects = newlist() // Objects which to blend with //CHOMPEdit convert to static list
-	var/static/list/noblend_objects = newlist() //Objects to avoid blending with (such as children of listed blend objects. //CHOMPEdit convert to static list
+	var/list/blend_objects = null // Objects which to blend with //CHOMPEdit default null
+	var/list/noblend_objects = null //Objects to avoid blending with (such as children of listed blend objects. //CHOMPEdit default null
 
 /obj/structure/Initialize()
 	. = ..()

@@ -989,10 +989,7 @@
 		) CHOMP Removal */
 	grass_chance = 40
 
-	grass_types = list(
-		/obj/structure/flora/ausbushes/sparsegrass,
-		/obj/structure/flora/ausbushes/fullgrass
-		)
+	grass = "heavy"
 
 //=========Eris Plating==========\\
 // This is the light grey tiles with random geometric shapes extruded

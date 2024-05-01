@@ -293,10 +293,5 @@
 	if(tree_chance && prob(tree_chance) && !check_density())
 		new /obj/structure/flora/tree/jungle(src)
 
-	grass_types = list(
-		/obj/structure/flora/ausbushes/fullgrass = 40,
-		/obj/structure/flora/ausbushes/sparsegrass = 40,
-		/obj/structure/prop/desert_planet64x64/palmuria = 10,
-		/obj/structure/prop/desert_planet64x64/palmuria1 = 10
-		)
+	grass = "thor"
 	. = ..()
