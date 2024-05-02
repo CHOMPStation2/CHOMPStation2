@@ -1176,9 +1176,9 @@ z
 	icon_state = "docking_hallway"
 
 /area/hallway/secondary/seconddeck/research_medical
-	name = "Research Medical Hallway"
+	name = "Research Medical Maintenance"
 	icon_state = "hallS"
-        flags = RAD_SHIELDED //chompEDIT: This place is maints now.
+	flags = RAD_SHIELDED //CHOMPedit: Adding rad proofing to new maints
 
 /area/medical/foyer
 	name = "\improper Medbay Foyer"
