@@ -8,11 +8,7 @@
 	var/equip_body = FALSE				//If true, this will spawn the person with equipment
 	var/default_job = USELESS_JOB		//The job that will be assigned if equip_body is true and the ghost doesn't have a job
 	var/ghost_spawns = FALSE			//If true, allows ghosts who haven't been spawned yet to spawn
-<<<<<<< HEAD
-	var/vore_respawn = 5 MINUTES		//The time to wait if you died from vore // CHOMPEdit: Faster respawn for vorni so ghosts don't go bug medical.
-=======
 	var/vore_respawn = 5 MINUTES		//The time to wait if you died from vore
->>>>>>> b8bc271f20... Reduces vore death timer on autoresleever (#15948)
 	var/respawn = 30 MINUTES			//The time to wait if you didn't die from vore
 	var/spawn_slots = -1				//How many people can be spawned from this? If -1 it's unlimited
 	var/spawntype						//The kind of mob that will be spawned, if set.
