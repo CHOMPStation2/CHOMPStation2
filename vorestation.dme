@@ -2323,7 +2323,11 @@
 #include "code\modules\clothing\suits\aliens\vox.dm"
 #include "code\modules\clothing\under\altevian_vr.dm"
 #include "code\modules\clothing\under\color.dm"
+<<<<<<< HEAD
 #include "code\modules\clothing\under\extrauniforms_yw.dm"
+=======
+#include "code\modules\clothing\under\eva_bodysuits.dm"
+>>>>>>> 097788529e... Void Undersuit Tweaks (#15958)
 #include "code\modules\clothing\under\imperial_vr.dm"
 #include "code\modules\clothing\under\miscellaneous.dm"
 #include "code\modules\clothing\under\miscellaneous_ch.dm"
