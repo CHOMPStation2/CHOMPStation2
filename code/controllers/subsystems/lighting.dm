@@ -3,6 +3,7 @@ SUBSYSTEM_DEF(lighting)
 	wait = 2
 	init_order = INIT_ORDER_LIGHTING
 	flags = SS_TICKER
+	runlevels = RUNLEVELS_DEFAULT | RUNLEVEL_LOBBY //CHOMPEdit Do some work during lobby waiting period. May as well.
 	var/sun_mult = 1.0
 	var/static/list/sources_queue = list() // List of lighting sources queued for update.
 	var/static/list/corners_queue = list() // List of lighting corners queued for update.
@@ -34,6 +35,7 @@ SUBSYSTEM_DEF(lighting)
 	//CHOMPEdit End
 
 	fire(FALSE, TRUE)
+	sunlight_queue_active += sunlight_queue + sunlight_queue //CHOMPEdit Run through shandler's twice during lobby wait to get some initial computation out of the way. After these two, the sunlight system will run MUCH faster.
 
 	return SS_INIT_SUCCESS // CHOMPEdit
 
