@@ -161,9 +161,6 @@ Talon pin
 
 /datum/gear/accessory/antediluvian/loin
 	display_name = "antediluvian loincloth"
-<<<<<<< HEAD
-	path = /obj/item/clothing/accessory/antediluvian/loincloth
-=======
 	path = /obj/item/clothing/accessory/antediluvian/loincloth
 
 //Replikant accessories
@@ -227,4 +224,3 @@ Talon pin
 	"Service - Echelons" = /obj/item/clothing/accessory/solgov/department/service/army
 	)
 	gear_tweaks += new/datum/gear_tweak/path(insignia)
->>>>>>> 333489f653... uniform insignia (#15957)
