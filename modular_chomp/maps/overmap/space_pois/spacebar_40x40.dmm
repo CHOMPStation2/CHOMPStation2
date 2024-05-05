@@ -62,6 +62,10 @@
 "at" = (
 /obj/structure/table/standard,
 /obj/item/toy/figure/bartender,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_y = -2;
+	pixel_x = 8
+	},
 /turf/simulated/floor/wood,
 /area/submap/spacebar)
 "au" = (
@@ -397,6 +401,7 @@
 	name = "External Airlock Access";
 	req_access = null
 	},
+/obj/structure/fans/tiny,
 /turf/simulated/floor/plating,
 /area/submap/spacebar)
 "hV" = (
@@ -509,7 +514,8 @@
 	},
 /obj/item/weapon/gun/projectile/shotgun/pump{
 	pixel_y = -17;
-	pixel_x = -17
+	pixel_x = -17;
+	hud_enabled = 0
 	},
 /obj/item/weapon/material/butterfly/switchblade{
 	pixel_y = 3;
@@ -575,17 +581,17 @@
 	},
 /area/submap/spacebar)
 "uK" = (
-/obj/item/device/defib_kit/loaded{
-	pixel_y = -6
-	},
+/obj/item/device/defib_kit/compact/loaded,
 /obj/item/stack/medical/advanced/bruise_pack{
 	amount = 2;
 	max_amount = 2;
-	heal_brute = 50;
+	heal_brute = 150;
 	toolspeed = 0.1;
 	name = "SUPER trauma kit";
 	desc = "An highly advanced trauma kit for severe injuries such as blowing your own head off. These are really heavy";
-	slowdown = 3
+	slowdown = 3;
+	color = "purple";
+	w_class = 5
 	},
 /turf/simulated/floor/wood,
 /area/submap/spacebar)
@@ -712,9 +718,7 @@
 /turf/simulated/floor/plating,
 /area/submap/spacebar)
 "LR" = (
-/obj/item/device/defib_kit/loaded{
-	pixel_y = 9
-	},
+/obj/item/device/defib_kit/compact/loaded,
 /obj/machinery/light/spot{
 	dir = 1
 	},
@@ -738,11 +742,13 @@
 /obj/item/stack/medical/advanced/bruise_pack{
 	amount = 2;
 	max_amount = 2;
-	heal_brute = 50;
+	heal_brute = 150;
 	toolspeed = 0.1;
 	name = "SUPER trauma kit";
 	desc = "An highly advanced trauma kit for severe injuries such as blowing your own head off. These are really heavy";
-	slowdown = 3
+	slowdown = 3;
+	color = "purple";
+	w_class = 5
 	},
 /turf/simulated/floor/wood,
 /area/submap/spacebar)
@@ -761,13 +767,12 @@
 	frequency = 1380;
 	id_tag = "spacebar_pump"
 	},
-/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
+/obj/machinery/embedded_controller/radio/airlock/access_controller{
+	pixel_y = 23;
+	dir = 2;
 	id_tag = "spacebar_airlock";
-	pixel_y = 25;
-	tag_airpump = "spacebar_pump";
-	tag_chamber_sensor = "spacebar_sensor";
-	tag_exterior_door = "spacebar_outer";
-	tag_interior_door = "spacebar_inner"
+	tag_interior_door = "spacebar_inner";
+	tag_exterior_door = "spacebar_outer"
 	},
 /turf/simulated/floor/plating,
 /area/submap/spacebar)
@@ -912,10 +917,6 @@
 	dir = 1;
 	frequency = 1380;
 	id_tag = "spacebar_pump"
-	},
-/obj/machinery/airlock_sensor{
-	id_tag = "spacebar_sensor";
-	pixel_y = 25
 	},
 /turf/simulated/floor/plating,
 /area/submap/spacebar)

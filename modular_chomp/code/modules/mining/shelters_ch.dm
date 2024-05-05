@@ -81,7 +81,7 @@
 
 /datum/map_template/shelter/superpose/LoneHome
 	shelter_id = "LoneHome"
-	mappath = "modular_chomp/maps/submaps/shelters/LoneHome-20x25.dmm"
+	mappath = "modular_chomp/maps/submaps/shelters/LoneHome-18x22.dmm"
 	name = "Lonely home."
 	description = "An old very worn down wooden house, with enough materials and tools to refurnish and repair it."
 
