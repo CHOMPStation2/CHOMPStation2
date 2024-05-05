@@ -1980,11 +1980,6 @@ const VoreUserPreferences = (props) => {
         disabled: 'Food Vore Disabled',
       },
     },
-<<<<<<< HEAD
-    spawnbelly: {
-      action: 'toggle_latejoin_vore',
-      test: latejoin_vore,
-=======
     toggle_digest_pain: {
       action: 'toggle_digest_pain',
       test: digest_pain,
@@ -2003,7 +1998,6 @@ const VoreUserPreferences = (props) => {
     inbelly_spawning: {
       action: 'toggle_allow_inbelly_spawning',
       test: allow_inbelly_spawning,
->>>>>>> ca9b452316... Digestion Pain Pref (#15944)
       tooltip: {
         main: 'Toggle late join vore spawnpoint.',
         enable: 'Click here to turn on vorish spawnpoint.',
@@ -2289,29 +2283,15 @@ const VoreUserPreferences = (props) => {
           <VoreUserPreferenceItem spec={preferences.toggle_food_vore} />
         </Flex.Item>
         <Flex.Item basis="32%" grow={1}>
-<<<<<<< HEAD
-          <VoreUserPreferenceItem spec={preferences.spawnbelly} />
-        </Flex.Item>
-        <Flex.Item basis="32%" grow={1}>
-          <VoreUserPreferenceItem spec={preferences.spawnprey} />
-=======
           <VoreUserPreferenceItem spec={preferences.toggle_digest_pain} />
         </Flex.Item>
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.inbelly_spawning} />
->>>>>>> ca9b452316... Digestion Pain Pref (#15944)
         </Flex.Item>
         <Flex.Item basis="32%">
           <VoreUserPreferenceItem spec={preferences.noisy} />
         </Flex.Item>
-<<<<<<< HEAD
-        <Flex.Item basis="32%">
-          <VoreUserPreferenceItem spec={preferences.noisy_full} />
-        </Flex.Item>
-        <Flex.Item basis="32%">
-=======
         <Flex.Item basis="32%" grow={1}>
->>>>>>> ca9b452316... Digestion Pain Pref (#15944)
           <VoreUserPreferenceItem spec={preferences.resize} />
         </Flex.Item>
         <Flex.Item basis="32%">
