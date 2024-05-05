@@ -1834,7 +1834,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/badrecipe/Initialize()
 	. = ..()
-	reagents.add_reagent("toxin", 1)
+	reagents.add_reagent("poop", 1) //Chompedit: Former cutie
 	reagents.add_reagent("carbon", 3)
 
 /obj/item/weapon/reagent_containers/food/snacks/meatsteak
