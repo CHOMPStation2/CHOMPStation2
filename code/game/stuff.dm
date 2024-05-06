@@ -49,7 +49,7 @@
 				else mem_count[thing.type] = 16
 
 /proc/list_memory_size(list/L,list/list_of_lists,list/recursed_from)
-	if(L in recursed_from || recursed_from.len > 64 || (LAZYLEN(recursed_from) && L in list_of_lists)) return 0
+	if(L in recursed_from || recursed_from.len > 64 || (LAZYLEN(recursed_from) && (L in list_of_lists))) return 0
 	if(LAZYLEN(recursed_from))
 		list_of_lists[++list_of_lists.len] = L
 	var/total = 24
