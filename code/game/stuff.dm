@@ -1,4 +1,4 @@
-#define LOOP_STEP_SIZE 5000
+#define LOOP_STEP_SIZE 50000
 /world
 	loop_checks = 0
 
@@ -47,6 +47,11 @@
 			world.log << "list of lists at [list_of_lists.len] after pruning"
 		mem_and_lists(thing,list_of_lists,list_count,exclude_vars,mem_count)
 		i++
+	var/accounted_for = 0
+	for(var/type in mem_count) //Quickly prune anything below 10kb total usage to make sorting the list much faster
+		accounted_for += mem_count[type]
+		if(mem_count[type] < 10000) mem_count -= type
+	world.log << "[display_bytes(accounted_for)] of memory accounted for"
 	sortTim(mem_count, /proc/cmp_numeric_asc, TRUE)
 	for(var/type in mem_count)
 		var/mem_per_instance = mem_count[type] / types_count[type]
@@ -66,11 +71,11 @@
 	for(var/variable in thing.vars)
 		if(variable == "vars") continue
 		if(islist(thing.vars[variable]))
-			if(thing.vars[variable] in list_of_lists)
+			if(refcount(thing.vars[variable]) > 1 && !(variable in exclude_vars) && thing.vars[variable] in list_of_lists)
 				list_of_lists[thing.vars[variable]]++
 				continue
 			if(thing.vars[variable] != initial(thing.vars[variable]))
-				list_of_lists[thing.vars[variable]] = 1
+				if(!(variable in exclude_vars) && refcount(thing.vars[variable]) > 1) list_of_lists[thing.vars[variable]] = 1
 				var/mem_size = list_memory_size(thing.vars[variable],list_of_lists)
 				if(thing.type in mem_count) mem_count[thing.type] += mem_size
 				else mem_count[thing.type] = mem_size
@@ -122,13 +127,14 @@
 	if(p_type) add_types(p_type, L)
 
 /datum/controller/master/SetRunLevel(new_runlevel)
-	if(new_runlevel == RUNLEVEL_LOBBY)
-		get_stuff()
+	if(new_runlevel == RUNLEVEL_GAME)
+		spawn(300)
+			get_stuff()
 	. = ..(new_runlevel)
 
 /proc/display_bytes(num_bytes)
-	if(num_bytes > 10000)
-		return "[num_bytes/1000] kb"
 	if(num_bytes > 10000000)
 		return "[num_bytes/1000000] mb"
+	if(num_bytes > 10000)
+		return "[num_bytes/1000] kb"
 	return "[num_bytes] b"
