@@ -1,0 +1,5 @@
+author: "Upstream"
+delete-after: True
+changes:
+  - admin: "added 3 more admin spawn rubber duckies (grey, green and pink)."
+  - admin: "added a variable to rubber duckies called \"honk text\" that allows it to put an audible message in chat when honked."
