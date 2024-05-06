@@ -1,13 +1,17 @@
-#define LOOP_STEP_SIZE 10000
+#define LOOP_STEP_SIZE 5000
 /world
 	loop_checks = 0
 
 /proc/get_stuff()
 	var/list/types_count = list()
 	for(var/datum/thing in world)
-		add_types(thing, types_count)
+		if(thing.type in types_count) types_count[thing.type]++
+		else types_count[thing.type] = 1
+		//add_types(thing, types_count)
 	for(var/datum/thing)
-		add_types(thing, types_count)
+		if(thing.type in types_count) types_count[thing.type]++
+		else types_count[thing.type] = 1
+		//add_types(thing, types_count)
 	sortTim(types_count, /proc/cmp_numeric_asc, TRUE)
 	var/output = ""
 	for(var/type in types_count)
@@ -20,26 +24,33 @@
 	var/list/exclude_vars = list("overlays","underlays","vis_contents","vis_locs","contents","vars","verbs")
 	world.log << "Counting memory for atoms"
 	var/i = 0
+	rustg_time_reset("fops")
 	for(var/datum/thing in world)
 		if(i%LOOP_STEP_SIZE==0)
-			world.log << "[i] atoms processed"
+			var/ms = rustg_time_milliseconds("fops")
+			rustg_time_reset("fops")
+			world.log << "[i] atoms processed in [ms]ms"
+			world.log << "list of lists at [list_of_lists.len] before pruning"
 			prune_list(list_of_lists)
-			world.log << "list of lists at [list_of_lists.len]"
+			world.log << "list of lists at [list_of_lists.len] after pruning"
 		mem_and_lists(thing,list_of_lists,list_count,exclude_vars,mem_count)
 		i++
 	i = 0
 	world.log << "Counting memory for datums"
 	for(var/datum/thing)
 		if(i%LOOP_STEP_SIZE==0)
-			world.log << "[i] atoms processed"
+			var/ms = rustg_time_milliseconds("fops")
+			rustg_time_reset("fops")
+			world.log << "[i] datums processed in [ms]ms"
+			world.log << "list of lists at [list_of_lists.len] before pruning"
 			prune_list(list_of_lists)
-			world.log << "list of lists at [list_of_lists.len]"
+			world.log << "list of lists at [list_of_lists.len] after pruning"
 		mem_and_lists(thing,list_of_lists,list_count,exclude_vars,mem_count)
 		i++
 	sortTim(mem_count, /proc/cmp_numeric_asc, TRUE)
 	for(var/type in mem_count)
 		var/mem_per_instance = mem_count[type] / types_count[type]
-		output += "[type] - [mem_count[type]] bytes total - [mem_per_instance] bytes per instance"
+		output += "[type] - [display_bytes(mem_count[type])] total - [display_bytes(mem_per_instance)] per instance"
 		if(type in list_count)
 			var/lists_per_instance = list_count[type] / types_count[type]
 			output += " - [list_count[type]] lists total - [lists_per_instance] per instance"
@@ -47,8 +58,9 @@
 	rustg_file_write(output, "data/lists.txt")
 
 /proc/prune_list(var/list/list_of_lists)
+	if(!list_of_lists.len) return
 	for(var/list/L in list_of_lists)
-		if(list_of_lists[L] == 1) list_of_lists -= L
+		if(list_of_lists[L] == 1) list_of_lists.Remove(list(L))
 
 /proc/mem_and_lists(var/datum/thing,var/list/list_of_lists,var/list/list_count,var/list/exclude_vars,var/list/mem_count)
 	for(var/variable in thing.vars)
@@ -113,3 +125,10 @@
 	if(new_runlevel == RUNLEVEL_LOBBY)
 		get_stuff()
 	. = ..(new_runlevel)
+
+/proc/display_bytes(num_bytes)
+	if(num_bytes > 10000)
+		return "[num_bytes/1000] kb"
+	if(num_bytes > 10000000)
+		return "[num_bytes/1000000] mb"
+	return "[num_bytes] b"
