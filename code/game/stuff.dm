@@ -11,7 +11,7 @@
 	var/output = ""
 	for(var/type in types_count)
 		output += "[type] - [types_count[type]]\n"
-	rustg_file_write(output, "stuff.txt")
+	rustg_file_write(output, "data/stuff.txt")
 	output = ""
 	var/list/mem_count = list()
 	var/list/list_of_lists = list()
@@ -29,7 +29,7 @@
 			var/lists_per_instance = list_count[type] / types_count[type]
 			output += " - [list_count[type]] lists total - [lists_per_instance] per instance"
 		output += "\n"
-	rustg_file_write(output, "lists.txt")
+	rustg_file_write(output, "data/lists.txt")
 
 /proc/mem_and_lists(var/datum/thing,var/list/list_of_lists,var/list/list_count,var/list/exclude_vars,var/list/mem_count)
 	for(var/variable in thing.vars)
