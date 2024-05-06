@@ -1,0 +1,4 @@
+author: "Upstream"
+delete-after: True
+changes:
+  - admin: "Added new buildmode (DROP). Left click to drop objects safely, rightclick to drop destructively. Not compatible with turfs."
