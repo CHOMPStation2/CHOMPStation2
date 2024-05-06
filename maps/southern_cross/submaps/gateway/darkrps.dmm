@@ -4489,6 +4489,11 @@
 /mob/living/simple_mob/humanoid/merc/ranged/garand,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse2)
+"fBo" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/weapon/storage/firstaid/combat,
+/turf/simulated/floor/tiled,
+/area/awaymission/darkrp/centerwarehouse)
 "fDb" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -5994,7 +5999,7 @@
 /obj/random/trash,
 /obj/structure/table/rack/shelf/steel,
 /obj/item/weapon/storage/firstaid/combat,
-/obj/item/weapon/storage/firstaid/adv,
+/obj/item/weapon/storage/firstaid/bonemed,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/centerwarehouse)
 "hyk" = (
@@ -11252,16 +11257,6 @@
 /obj/random/trash,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/brokehouse)
-"nTm" = (
-/obj/random/trash,
-/obj/machinery/button/remote/noemag{
-	req_one_access = list(887);
-	desc = "A heavy and old button that appears to be access locked by a special ID found elsewhere.";
-	id = "ultrasecret2";
-	name = "Slab Button II"
-	},
-/turf/simulated/mineral/floor/ignore_mapgen/cave,
-/area/awaymission/darkrp/tunnels/suburbs)
 "nTD" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/concrete{
@@ -14891,10 +14886,7 @@
 /area/awaymission/darkrp/downtowncenter)
 "rWs" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/card/id{
-	access = list(886);
-	name = "slab ID I"
-	},
+/obj/item/weapon/card/id/slabI,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/sewers)
 "rWQ" = (
@@ -19573,10 +19565,7 @@
 /area/awaymission/darkrp/plazashop)
 "xFc" = (
 /obj/effect/decal/remains,
-/obj/item/weapon/card/id{
-	access = list(887);
-	name = "slab ID II"
-	},
+/obj/item/weapon/card/id/slabII,
 /obj/effect/floor_decal/milspec/box,
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 2
@@ -41451,7 +41440,7 @@ kwI
 kwI
 kwI
 qMD
-eWp
+fBo
 mcd
 bwI
 mcd
@@ -45986,7 +45975,7 @@ vpp
 vpp
 tFu
 tkP
-nTm
+veo
 xSx
 moz
 moz
