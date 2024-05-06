@@ -1,4 +1,4 @@
-#define LOOP_STEP_SIZE 50000
+#define LOOP_STEP_SIZE 25000
 /world
 	loop_checks = 0
 
@@ -71,7 +71,7 @@
 	for(var/variable in thing.vars)
 		if(variable == "vars") continue
 		if(islist(thing.vars[variable]))
-			if(refcount(thing.vars[variable]) > 1 && !(variable in exclude_vars) && thing.vars[variable] in list_of_lists)
+			if(!(variable in exclude_vars) && refcount(thing.vars[variable]) > 1 && thing.vars[variable] in list_of_lists)
 				list_of_lists[thing.vars[variable]]++
 				continue
 			if(thing.vars[variable] != initial(thing.vars[variable]))
@@ -90,7 +90,7 @@
 
 /proc/list_memory_size(list/L,list/list_of_lists,list/recursed_from)
 	if(L in recursed_from || LAZYLEN(recursed_from) > 64 || (LAZYLEN(recursed_from) && (L in list_of_lists))) return 0
-	if(LAZYLEN(recursed_from))
+	if(LAZYLEN(recursed_from) && refcount(L) > 4)
 		if(L in list_of_lists) list_of_lists[L]++
 		else list_of_lists[L] = 1
 	var/total = 24
@@ -104,9 +104,9 @@
 		if(recursed_from) recursed_from[++recursed_from.len] = L
 		else recursed_from = list(L)
 		if(associative && islist(L[item]))
-			total += list_memory_size(L[item],list_of_lists,recursed_from)
+			total += list_memory_size(L[item],list_of_lists,recursed_from.Copy())
 		if(islist(item))
-			total += list_memory_size(item,list_of_lists,recursed_from)
+			total += list_memory_size(item,list_of_lists,recursed_from.Copy())
 
 
 
