@@ -1,3 +1,4 @@
+#define LOOP_STEP_SIZE 10000
 /world
 	loop_checks = 0
 
@@ -17,10 +18,18 @@
 	var/list/list_of_lists = list()
 	var/list/list_count = list()
 	var/list/exclude_vars = list("overlays","underlays","vis_contents","vis_locs","contents","vars","verbs")
+	world.log << "Counting memory for atoms"
+	var/i = 0
 	for(var/datum/thing in world)
+		if(i%LOOP_STEP_SIZE==0) world.log << "[i] atoms processed"
 		mem_and_lists(thing,list_of_lists,list_count,exclude_vars,mem_count)
+		i++
+	i = 0
+	world.log << "Counting memory for datums"
 	for(var/datum/thing)
+		if(i%LOOP_STEP_SIZE==0) world.log << "[i] atoms processed"
 		mem_and_lists(thing,list_of_lists,list_count,exclude_vars,mem_count)
+		i++
 	sortTim(mem_count, /proc/cmp_numeric_asc, TRUE)
 	for(var/type in mem_count)
 		var/mem_per_instance = mem_count[type] / types_count[type]
@@ -33,6 +42,7 @@
 
 /proc/mem_and_lists(var/datum/thing,var/list/list_of_lists,var/list/list_count,var/list/exclude_vars,var/list/mem_count)
 	for(var/variable in thing.vars)
+		if(variable == "vars") continue
 		if(islist(thing.vars[variable]))
 			if(!(thing.vars[variable] in list_of_lists) && thing.vars[variable] != initial(thing.vars[variable]))
 				list_of_lists[++list_of_lists.len] = thing.vars[variable]
@@ -49,7 +59,7 @@
 				else mem_count[thing.type] = 16
 
 /proc/list_memory_size(list/L,list/list_of_lists,list/recursed_from)
-	if(L in recursed_from || recursed_from.len > 64 || (LAZYLEN(recursed_from) && (L in list_of_lists))) return 0
+	if(L in recursed_from || LAZYLEN(recursed_from) > 64 || (LAZYLEN(recursed_from) && (L in list_of_lists))) return 0
 	if(LAZYLEN(recursed_from))
 		list_of_lists[++list_of_lists.len] = L
 	var/total = 24
