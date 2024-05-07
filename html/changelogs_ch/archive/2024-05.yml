@@ -20,3 +20,13 @@
       to drop destructively. Not compatible with turfs.
   Verkister:
   - bugfix: Fixed empty hand interactions not working on borgs with forced buckling.
+2024-05-07:
+  tacoguy7765093:
+  - bugfix: Superpose LoneHome not spawning
+  - maptweak: Mechfab ship access, plasteel given, 1 of 2 emags removed.
+  - maptweak: Mechfab ship cryopod now teleports you out of the round
+  - maptweak: Cultist ship power works now
+  - maptweak: Space Bar space POI airlock maptweaked
+  - maptweak: maptweaked the USSP that crashes the server
+  - bugfix: Downtown gateway slab IDs not opening doors
+  - maptweak: Thor Junker Shuttle extra engine console removed
