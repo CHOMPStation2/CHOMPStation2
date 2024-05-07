@@ -1,4 +1,0 @@
-author: "tacoguy7765093"
-delete-after: True
-changes:
-  - code_imp: "'hud_enabled' variable for guns actually works now!"

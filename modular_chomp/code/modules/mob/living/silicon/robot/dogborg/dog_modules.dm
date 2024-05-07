@@ -95,17 +95,16 @@
 /obj/item/device/self_repair_system/proc/self_repair(mob/living/silicon/robot/R, datum/robot_component/C, var/tick_delay, var/heal_per_tick)
 	if(!C || !R.cell)
 		return
-	if(R.cell.charge < 500) //We don't want to drain ourselves too far down during exploration
-		to_chat(R, "<span class='warning'>Not enough power to initialize the repair system.</span>")
-		return
 	if(C.brute_damage == 0 && C.electronics_damage == 0)
 		to_chat(R, "<span class='notice'>Repair of [target_component] completed.</span>")
 		return
+	if(!R.use_direct_power(50,  500)) //We don't want to drain ourselves too far down during exploration
+		to_chat(R, "<span class='warning'>Not enough power to initialize the repair system.</span>")
+		return
 	if(do_after(R, tick_delay))
-		if(!C || !R.cell)
+		if(!C)
 			return
 		C.brute_damage -= min(C.brute_damage, heal_per_tick)
 		C.electronics_damage -= min(C.electronics_damage, heal_per_tick)
 		R.updatehealth()
-		R.cell.use(50)
 		src.self_repair(R, C, tick_delay, heal_per_tick)

@@ -82,7 +82,8 @@
 	opacity = TRUE
 	edge_blending_priority = 7
 	initial_flooring = /decl/flooring/desert_planet/stonewall
-	turf_layers = list(/turf/simulated/floor/outdoors/rocks)
+	//turf_layers = list(/turf/simulated/floor/outdoors/rocks)
+	demote_to = /turf/simulated/floor/outdoors/rocks
 	var/last_act = 0
 
 // Stolen from mineral turf code.

@@ -1,4 +1,0 @@
-author: "Verkister"
-delete-after: True
-changes:
-  - bugfix: "Belly-linked vac-pack dirt nutrition gain now scales with target vorgan's gain setting."

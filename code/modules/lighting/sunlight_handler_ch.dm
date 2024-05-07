@@ -58,10 +58,7 @@
 	for(var/datum/lighting_corner/corner in corners)
 		if(corner.sunlight == SUNLIGHT_NONE)
 			corner.sunlight = SUNLIGHT_POSSIBLE
-	if(SSlighting.get_pshandler_z(holder.z))
-		pshandler = SSlighting.get_pshandler_z(holder.z)
-		pshandler.shandlers += src
-		sun = pshandler.sun
+	try_get_sun()
 	sunlight_check()
 
 /datum/sunlight_handler/proc/holder_change()
@@ -171,7 +168,7 @@
 		sunlight = SUNLIGHT_OVERHEAD
 	if(holder.density)
 		sunlight = FALSE
-	if(holder.check_for_sun() && !holder.is_outdoors() && !holder.density)
+	if(try_get_sun() && !holder.is_outdoors() && !holder.density)
 		var/outside_near = FALSE
 		outer_loop:
 			for(var/dir in cardinal)
@@ -270,13 +267,7 @@
 					continue
 				sleepable_corners += corner.all_onlysun()
 
-	if(!sun)
-		if(SSlighting.get_pshandler_z(holder.z))
-			pshandler = SSlighting.get_pshandler_z(holder.z)
-			pshandler.shandlers += src
-			sun = pshandler.sun
-		else
-			return
+	if(!try_get_sun()) return
 
 	var/sunonly_val = (sunlight == SUNLIGHT_OVERHEAD) ? SUNLIGHT_ONLY : SUNLIGHT_ONLY_SHADE
 
@@ -380,12 +371,23 @@
 		return
 	sleeping = val
 	if(val)
-		//Also delete the corners to save on memory
+		pshandler.shandlers -= src
 		SSlighting.sunlight_queue -= src
 	else
+		pshandler.shandlers |= src
 		SSlighting.sunlight_queue |= src //Just in case somehow gets set to false twice use |=
 
 /datum/sunlight_handler/proc/wake_sleepers(var/val)
 	var/list/corners = list(holder.lighting_corner_NE,holder.lighting_corner_NW,holder.lighting_corner_SE,holder.lighting_corner_SW)
 	for(var/datum/lighting_corner/corner in corners)
 		corner.wake_sleepers()
+
+/datum/sunlight_handler/proc/try_get_sun()
+	if(sun) return TRUE
+	if(!sleeping && SSlighting.get_pshandler_z(holder.z))
+		pshandler = SSlighting.get_pshandler_z(holder.z)
+		pshandler.shandlers += src
+		sun = pshandler.sun
+		return TRUE
+	else
+		return FALSE
