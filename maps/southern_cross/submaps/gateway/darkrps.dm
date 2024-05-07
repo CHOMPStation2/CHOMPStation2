@@ -335,3 +335,8 @@
 	power_light = 0
 
 //Map exclssive powers
+
+/obj/item/weapon/card/id/slabI
+	access = list(886)
+/obj/item/weapon/card/id/slabII
+	access = list(887)

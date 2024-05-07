@@ -1,4 +1,0 @@
-author: "Upstream"
-delete-after: True
-changes:
-  - rscadd: "Adds drop vore to mob falling objects"

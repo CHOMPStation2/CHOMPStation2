@@ -2278,9 +2278,6 @@
 /turf/simulated/mineral/alt,
 /area/surface/outside/thor/jungle)
 "wR" = (
-/obj/machinery/computer/shuttle_control/explore/junker{
-	dir = 1
-	},
 /obj/structure/cable/blue,
 /obj/machinery/power/terminal,
 /turf/simulated/floor/plating,
@@ -2744,7 +2741,9 @@
 	},
 /area/surface/outside/thor/jungle)
 "BV" = (
-/obj/machinery/computer/ship/engines,
+/obj/machinery/computer/shuttle_control/explore/junker{
+	dir = 2
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/junker)
 "BY" = (
