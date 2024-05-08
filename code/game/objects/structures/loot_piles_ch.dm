@@ -110,14 +110,6 @@
 
 /obj/structure/loot_pile/maint/technical
 	density = FALSE
-	anchored = FALSE
 
 /obj/structure/loot_pile/maint/boxfort
 	density = FALSE
-	anchored = FALSE
-
-/obj/structure/loot_pile/maint/trash
-	anchored = TRUE
-
-/obj/structure/loot_pile/maint/junk
-	anchored = TRUE
