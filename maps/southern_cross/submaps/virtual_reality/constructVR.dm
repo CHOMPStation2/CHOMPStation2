@@ -158,7 +158,7 @@
 /area/vr/powered/mall/secondlife
 	name = "VR Thirdlife Bar"
 	icon_state = "pink"
-	ambience = list(AMBIENCE_GENERIC,'sound/ambience/ghostly/ghostly1.ogg')
+	ambience = list(AMBIENCE_GENERIC)
 
 /area/vr/powered/mall/dorms
 	name = "VR Mall Dorms"
