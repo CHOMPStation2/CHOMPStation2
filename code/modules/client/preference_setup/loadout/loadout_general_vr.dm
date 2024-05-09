@@ -100,13 +100,9 @@
 /datum/gear/egy_game
 	display_name = "EGY playing cards"
 	description = "A deck of cards for playing EGY! Be the first to lose all cards!"
-<<<<<<< HEAD
-	path = /obj/item/weapon/deck/egy
-=======
 	path = /obj/item/weapon/deck/egy
 
 /datum/gear/fluff_permit
 	display_name = "Customizable Permit"
 	description = "A customizable permit you can use for... just about anything! Be sure to customize the name and description. It is meant to represent generic driver's or pilot's licenses, and similar fluff items. It includes an irremovable disclaimer and may be freely confiscated or revoked at the discretion of Security and/or Command if you attempt to abuse it!"
 	path = /obj/item/weapon/card_fluff
->>>>>>> e3e8246492... fluff licenses (#15967)
