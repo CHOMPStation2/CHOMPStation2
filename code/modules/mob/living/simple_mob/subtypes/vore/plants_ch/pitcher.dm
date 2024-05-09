@@ -39,6 +39,8 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	min_n2 = 0
 	max_n2 = 0
 	minbodytemp = 0
+	meat_type = /obj/item/weapon/reagent_containers/food/snacks/pitcher_fruit // Allows pitcher plants to be chopped up. Probably.
+	meat_amount = 1 // And allows you to replant them should you so please.
 
 	melee_damage_upper = 0 //This shouldn't attack people but if it does (admemes) no damage can be dealt.
 	melee_damage_lower = 0
@@ -203,7 +205,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 		var/mob/living/carbon/human/H
 		var/N = 0
 		for(H in vore_selected.contents) //Only works for carbons, RIP mice. Should pick the first human the code finds.
-			user.visible_message("[user] tries to fish somebody out of \the [src].", "You try to snag somebody trapped in \the [src]...")
+			user.visible_message("[user] uses a loop of wire to try fishing someone out of \the [src].", "You use a loop of wire to try snagging someone trapped in \the [src]...")
 			if(do_after(user, rand(3 SECONDS, 7 SECONDS))) //You can just spam click to stack attempts if you feel like abusing it.
 				if(prob(15))
 					user.visible_message("[user] tugs a sticky [H] free from \the [src].", "You heft [H] free from \the [src].")
@@ -219,7 +221,10 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 		if(!N)
 			to_chat(user, "The pitcher is empty.")
 	if(istype(O, /obj/item/weapon/newspaper))
-		return //Can't newspaper people to freedom.
+		user.visible_message("[user] baps \the [src]. It doesn't seem to do anything.", "You whap \the [src] with a rolled up newspaper.")
+		if(N)
+			to_chat(user, "Weird. That usually works. You'll have to fish out its victim with some loops of wire or something.")
+		return // Can't newspaper people to freedom.
 	..()
 
 /mob/living/simple_mob/vore/pitcher_plant/proc/vore_checks()
