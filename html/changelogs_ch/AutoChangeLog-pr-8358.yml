@@ -1,0 +1,4 @@
+author: "Upstream"
+delete-after: True
+changes:
+  - rscadd: "Adds inhand sprites for rubber duckies"
