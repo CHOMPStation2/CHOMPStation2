@@ -491,8 +491,13 @@
 		/obj/item/taperoll,
 		/obj/item/weapon/reagent_containers/spray,
 		/obj/item/weapon/soap,
+<<<<<<< HEAD
 		/obj/item/weapon/holosign_creator, //CHOMPAdd
 		/obj/item/device/lightreplacer //VOREStation edit
+=======
+		/obj/item/device/lightreplacer,
+		/obj/item/clothing/glasses/hud/janitor
+>>>>>>> bf490b78ac... Adds Contaminant Detector HUD (#15970)
 		)
 
 /obj/item/weapon/storage/belt/archaeology

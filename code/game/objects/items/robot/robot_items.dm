@@ -59,7 +59,16 @@
 	icon_state = "material"
 	icon = 'icons/inventory/eyes/item.dmi'
 
+<<<<<<< HEAD
 /* //ChompEDIT START - disable for now
+=======
+/obj/item/borg/sight/janitor
+	name = "\proper contaminant detector vision"
+	sight_mode = BORGJAN
+	icon_state = "janhud"
+	icon = 'icons/inventory/eyes/item.dmi'
+
+>>>>>>> bf490b78ac... Adds Contaminant Detector HUD (#15970)
 /obj/item/borg/sight/anomalous
 	name = "\proper anomaly vision"
 	sight_mode = BORGANOMALOUS

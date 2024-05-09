@@ -57,7 +57,11 @@
 			/obj/item/weapon/reagent_containers/spray/cleaner,
 			/obj/item/weapon/reagent_containers/glass/rag,
 			/obj/item/weapon/grenade/chem_grenade/cleaner = 3,
+<<<<<<< HEAD
 			/obj/item/device/vac_attachment, //CHOMPAdd
+=======
+			/obj/item/clothing/glasses/hud/janitor,
+>>>>>>> bf490b78ac... Adds Contaminant Detector HUD (#15970)
 			/obj/structure/mopbucket
 			)
 	cost = 10
