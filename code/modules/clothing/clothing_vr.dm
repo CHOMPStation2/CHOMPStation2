@@ -134,7 +134,7 @@
 //Mask
 /obj/item/clothing/mask
 	name = "mask"
-	icon = 'icons/inventory/face/item_vr.dmi' // This is intentional because of our custom species.
+	icon = 'modular_chomp/icons/inventory/face/item.dmi' // This is intentional because of our custom species. //Chompedit: this file also goes to modular_chomp
 	item_icons = list(
 		slot_l_hand_str = 'icons/mob/items/lefthand_masks.dmi',
 		slot_r_hand_str = 'icons/mob/items/righthand_masks.dmi',
@@ -142,23 +142,26 @@
 	body_parts_covered = HEAD
 	slot_flags = SLOT_MASK
 	body_parts_covered = FACE|EYES
+	//Chompedit Start: Moving over to the modularity folder because virgo changed the name of upstream icons in their modular files. Epic.
 	item_icons = list(
-		slot_wear_mask_str = 'icons/inventory/face/mob_vr.dmi'
+		slot_wear_mask_str = 'modular_chomp/icons/inventory/face/mob.dmi'
 		)
 	sprite_sheets = list(
-		SPECIES_TESHARI		= 'icons/inventory/face/mob_teshari.dmi',
-		SPECIES_VOX 		= 'icons/inventory/face/mob_vox.dmi',
-		SPECIES_TAJ 		= 'icons/inventory/face/mob_tajaran.dmi',
-		SPECIES_UNATHI 		= 'icons/inventory/face/mob_unathi.dmi',
-		SPECIES_SERGAL 		= 'icons/inventory/face/mob_vr_sergal.dmi',
-		SPECIES_NEVREAN 	= 'icons/inventory/face/mob_vr_nevrean.dmi',
-		SPECIES_ZORREN_HIGH	= 'icons/inventory/face/mob_vr_fox.dmi',
-		SPECIES_ZORREN_FLAT = 'icons/inventory/face/mob_vr_fennec.dmi',
-		SPECIES_AKULA 		= 'icons/inventory/face/mob_vr_akula.dmi',
-		SPECIES_VULPKANIN 	= 'icons/inventory/face/mob_vr_vulpkanin.dmi',
-		SPECIES_XENOCHIMERA	= 'icons/inventory/face/mob_vr_tajaran.dmi',
-		SPECIES_WEREBEAST	= 'icons/inventory/face/mob_vr_werebeast.dmi'
+		SPECIES_TESHARI		= 'modular_chomp/icons/inventory/face/mob_teshari.dmi',
+		SPECIES_VOX 		= 'modular_chomp/icons/inventory/face/mob_vox.dmi',
+		SPECIES_TAJ 		= 'modular_chomp/icons/inventory/face/mob_tajaran.dmi',
+		SPECIES_UNATHI 		= 'modular_chomp/icons/inventory/face/mob_unathi.dmi',
+		SPECIES_SERGAL 		= 'modular_chomp/icons/inventory/face/mob_sergal.dmi',
+		SPECIES_NEVREAN 	= 'modular_chomp/icons/inventory/face/mob_nevrean.dmi',
+		SPECIES_ZORREN_HIGH	= 'modular_chomp/icons/inventory/face/mob_fox.dmi',
+		SPECIES_ZORREN_FLAT = 'modular_chomp/icons/inventory/face/mob_fennec.dmi',
+		SPECIES_AKULA 		= 'modular_chomp/icons/inventory/face/mob_akula.dmi',
+		SPECIES_VULPKANIN 	= 'modular_chomp/icons/inventory/face/mob_vulpkanin.dmi',
+		SPECIES_XENOCHIMERA	= 'modular_chomp/icons/inventory/face/mob_tajaran.dmi',
+		SPECIES_WEREBEAST	= 'modular_chomp/icons/inventory/face/mob_werebeast.dmi'
 		)
+	//Chompedit End.
+
 //"Spider" 		= 'icons/inventory/mask/mob_spider.dmi' Add this later when they have custom mask sprites and everything.
 
 //Switch to taur sprites if a taur equips

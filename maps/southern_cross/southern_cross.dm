@@ -41,6 +41,7 @@
 	// CHOMPStation Edits End - Un-disable these includes if vorestation.dme ever removes them from their #includes.
 
 	#if !AWAY_MISSION_TEST //Don't include these for just testing away missions if the flag is set to true in /code/_away_mission_tests.dm
+		#include "southern_cross-0.dmm" // Deck 0
 		#include "southern_cross-1.dmm" //Deck 1 z1
 		#include "southern_cross-2.dmm" //Deck 2 z2
 		#include "southern_cross-3.dmm" //Deck 3 z3

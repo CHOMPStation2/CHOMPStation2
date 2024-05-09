@@ -132,7 +132,9 @@ var/list/admin_verbs_admin = list(
 	/client/proc/unmake_mentor,
 	/client/proc/removetickets,
 	/client/proc/delbook,
-	/client/proc/toggle_spawning_with_recolour
+	/client/proc/toggle_spawning_with_recolour,
+	/client/proc/reload_jobwhitelist, //ChompADD
+	/client/proc/reload_alienwhitelist //ChompADD
 	)
 
 var/list/admin_verbs_ban = list(
@@ -229,6 +231,7 @@ var/list/admin_verbs_server = list(
 	)
 
 var/list/admin_verbs_debug = list(
+	/client/proc/reload_configuration, // CHOMPEdit
 	/client/proc/getruntimelog,                     //allows us to access runtime logs to somebody,
 	/client/proc/cmd_admin_list_open_jobs,
 	/client/proc/Debug2,
@@ -285,7 +288,9 @@ var/list/admin_verbs_debug = list(
 	/datum/admins/proc/view_feedback,
 	/client/proc/stop_sounds,
 	/datum/admins/proc/quick_nif, //CHOMPStation Add,
-	/datum/admins/proc/quick_authentic_nif //CHOMPStation add
+	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
+	/client/proc/reload_jobwhitelist, //ChompADD
+	/client/proc/reload_alienwhitelist //ChompADD
 	)
 
 var/list/admin_verbs_paranoid_debug = list(
@@ -422,7 +427,9 @@ var/list/admin_verbs_mod = list(
 	/datum/admins/proc/view_persistent_data,
 	/datum/admins/proc/view_txt_log,	//shows the server log (diary) for today,
 	/datum/admins/proc/view_atk_log,		//shows the server combat-log, doesn't do anything presently,
-	/datum/admins/proc/quick_nif //CHOMPStation Add,
+	/datum/admins/proc/quick_nif, //CHOMPStation Add,
+	/client/proc/reload_jobwhitelist, //ChompADD
+	/client/proc/reload_alienwhitelist //ChompADD
 )
 
 var/list/admin_verbs_event_manager = list(
@@ -569,7 +576,9 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/modify_server_news,
 	/client/proc/toggle_spawning_with_recolour,
 	/datum/admins/proc/quick_nif, //CHOMPStation Add,
-	/datum/admins/proc/quick_authentic_nif //CHOMPStation add
+	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
+	/client/proc/reload_jobwhitelist, //ChompADD
+	/client/proc/reload_alienwhitelist //ChompADD
 
 )
 
@@ -583,7 +592,7 @@ var/list/admin_verbs_event_manager = list(
 		if(holder.rights & R_SERVER)		add_verb(src, admin_verbs_server) //CHOMPEdit
 		if(holder.rights & R_DEBUG)
 			add_verb(src, admin_verbs_debug) //CHOMPEdit
-			if(config.debugparanoid && !(holder.rights & R_ADMIN))
+			if(CONFIG_GET(flag/debugparanoid) && !(holder.rights & R_ADMIN)) // CHOMPEdit
 				remove_verb(src, admin_verbs_paranoid_debug) //CHOMPEdit			//Right now it's just callproc but we can easily add others later on.
 		if(holder.rights & R_POSSESS)		add_verb(src, admin_verbs_possess) //CHOMPEdit
 		if(holder.rights & R_PERMISSIONS)	add_verb(src, admin_verbs_permissions) //CHOMPEdit

@@ -272,6 +272,19 @@
 				var/mob/living/L = usr
 				L.resist()
 
+		if("control_vtec")
+			if(isrobot(usr))
+				var/mob/living/silicon/robot/R = usr
+				if(R.speed == 0 && R.vtec_active)
+					R.speed = -0.5
+					R.hud_used.control_vtec.icon_state = "speed_1"
+				else if(R.speed == -0.5 && R.vtec_active)
+					R.speed = -1
+					R.hud_used.control_vtec.icon_state = "speed_2"
+				else
+					R.speed = 0
+					R.hud_used.control_vtec.icon_state = "speed_0"
+
 		if("mov_intent")
 			if(isliving(usr))
 				if(iscarbon(usr))
@@ -953,6 +966,9 @@
 	var/static/list/ammo_screen_loc_list = list(ui_ammo_hud1, ui_ammo_hud2, ui_ammo_hud3 ,ui_ammo_hud4)
 
 /obj/screen/ammo/proc/add_hud(var/mob/living/user, var/obj/item/weapon/gun/G)
+
+	if(G.hud_enabled == FALSE)
+		return
 
 	if(!user?.client)
 		return

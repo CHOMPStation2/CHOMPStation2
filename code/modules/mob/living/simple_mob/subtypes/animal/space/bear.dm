@@ -26,8 +26,9 @@
 	meat_amount = 8
 
 	say_list_type = /datum/say_list/bear
-	
+
 	can_be_drop_prey = FALSE //CHOMP Add
+	allow_mind_transfer = TRUE //CHOMPAdd
 
 /datum/say_list/bear
 	speak = list("RAWR!","Rawr!","GRR!","Growl!")

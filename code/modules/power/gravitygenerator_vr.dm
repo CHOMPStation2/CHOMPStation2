@@ -111,7 +111,7 @@ GLOBAL_LIST_EMPTY(gravity_generators)
 /obj/machinery/gravity_generator/main
 	icon_state = "on_8"
 	idle_power_usage = 0
-	active_power_usage = 3000
+	active_power_usage = 30000 // CHOMPEdit - Gravity consumption change
 	power_channel = ENVIRON
 	sprite_number = 8
 	use_power = USE_POWER_IDLE
@@ -319,7 +319,7 @@ GLOBAL_LIST_EMPTY(gravity_generators)
 	if(SSticker.IsRoundInProgress())
 		if(new_state) // If we turned on and the game is live.
 			if(gravity_in_level() == FALSE)
-				alert = TRUE
+				// alert = TRUE CHOMPEdit - No alarm! Gravity is fine :)
 				investigate_log("was brought online and is now producing gravity for this level.", "gravity")
 				message_admins("The gravity generator was brought online [ADMIN_JMP(src)]")
 		else
@@ -436,8 +436,8 @@ GLOBAL_LIST_EMPTY(gravity_generators)
 			areas += A
 
 // Misc
-/*
-/obj/item/paper/guides/jobs/engi/gravity_gen
+// CHOMPEdit - Taking out the comments on this. It will be needed.
+/obj/item/weapon/paper/guide/gravity/
 	name = "paper- 'Generate your own gravity!'"
 	info = {"<h1>Gravity Generator Instructions For Dummies</h1>
 	<p>Surprisingly, gravity isn't that hard to make! All you have to do is inject deadly radioactive minerals into a ball of
@@ -451,7 +451,7 @@ GLOBAL_LIST_EMPTY(gravity_generators)
 	<li>Mend the damaged framework with a welding tool.</li>
 	<li>Add additional plasteel plating.</li>
 	<li>Secure the additional plating with a wrench.</li></ol>"}
-*/
+
 #undef POWER_IDLE
 #undef POWER_UP
 #undef POWER_DOWN

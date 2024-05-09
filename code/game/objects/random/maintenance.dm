@@ -39,6 +39,7 @@ something, make sure it's not in one of the other lists.*/
 				prob(2);/obj/item/weapon/cell/super,
 				prob(5);/obj/random/cigarettes,
 				prob(3);/obj/item/clothing/mask/gas,
+				prob(3);/obj/item/clothing/mask/gas/clear, //ChompAdd: Proper implementation of clear gasmasks
 				prob(2);/obj/item/clothing/mask/gas/half,
 				prob(4);/obj/item/clothing/mask/breath,
 				prob(2);/obj/item/weapon/reagent_containers/glass/rag,

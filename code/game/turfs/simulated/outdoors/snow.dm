@@ -4,10 +4,10 @@
 	edge_blending_priority = 6
 	movement_cost = 2
 	initial_flooring = /decl/flooring/snow
-	turf_layers = list(
+	/*turf_layers = list( CHOMP Removal Begin
 		/turf/simulated/floor/outdoors/rocks,
 		/turf/simulated/floor/outdoors/dirt
-		)
+		) CHOMP Removal End*/
 	var/list/crossed_dirs = list()
 
 

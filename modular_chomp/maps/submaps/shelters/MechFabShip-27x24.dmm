@@ -59,12 +59,15 @@
 /area/survivalpod/superpose/MechFabShip)
 "bL" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/cryopod/robot/door/gateway,
+/obj/machinery/cryopod/robot/door/gateway/quiet,
 /obj/effect/floor_decal/techfloor{
 	dir = 1
 	},
 /obj/machinery/light/poi{
 	dir = 1
+	},
+/obj/machinery/computer/cryopod/gateway{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MechFabShip)
@@ -137,7 +140,8 @@
 /area/survivalpod/superpose/MechFabShip)
 "gv" = (
 /obj/machinery/computer/transhuman/resleeving{
-	dir = 1
+	dir = 1;
+	req_access = null
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light/poi,
@@ -301,7 +305,6 @@
 /obj/item/clothing/glasses/welding,
 /obj/item/clothing/glasses/welding,
 /obj/item/device/bodysnatcher,
-/obj/item/weapon/card/emag,
 /obj/item/weapon/card/emag,
 /obj/item/weapon/cell/super,
 /obj/item/weapon/cell/super,
@@ -487,14 +490,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
-"oz" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/part_replacer/adv/discount_bluespace,
-/obj/effect/floor_decal/techfloor{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/yellow,
-/area/survivalpod/superpose/MechFabShip)
 "oS" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/device/defib_kit/jumper_kit/loaded,
@@ -525,12 +520,43 @@
 /turf/simulated/wall/skipjack,
 /area/survivalpod/superpose/MechFabShip)
 "py" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/reagent_dispensers/acid{
 	pixel_y = 30
 	},
-/obj/machinery/computer/mecha,
-/turf/simulated/floor/tiled/techmaint,
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/disk/limb/dsi_teshari{
+	pixel_y = -7;
+	pixel_x = -6
+	},
+/obj/item/weapon/disk/limb/dsi_vulpkanin{
+	pixel_y = -3;
+	pixel_x = -6
+	},
+/obj/item/weapon/disk/tech_disk{
+	pixel_y = -6;
+	pixel_x = 5
+	},
+/obj/item/weapon/disk/tech_disk{
+	pixel_y = 2;
+	pixel_x = 5
+	},
+/obj/item/weapon/disk/tech_disk{
+	pixel_y = -2;
+	pixel_x = 5
+	},
+/obj/item/weapon/disk/tech_disk{
+	pixel_y = -6;
+	pixel_x = 5
+	},
+/obj/item/weapon/disk/design_disk{
+	pixel_y = 2;
+	pixel_x = -6
+	},
+/obj/item/weapon/disk/design_disk{
+	pixel_y = -2;
+	pixel_x = -6
+	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/MechFabShip)
 "pR" = (
 /obj/structure/window/plastitanium/full,
@@ -600,8 +626,13 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "qX" = (
-/obj/structure/table/steel_reinforced,
-/obj/machinery/cell_charger,
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/machinery/mecha_part_fabricator{
+	req_access = null
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/MechFabShip)
 "qY" = (
@@ -685,14 +716,12 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "vb" = (
-/obj/structure/window/reinforced/survival_pod{
-	opacity = 1
-	},
-/obj/structure/window/reinforced/survival_pod{
+/obj/structure/table/steel_reinforced,
+/obj/machinery/cell_charger,
+/obj/effect/floor_decal/techfloor{
 	dir = 8
 	},
-/obj/machinery/r_n_d/server/robotics,
-/turf/simulated/floor/tiled/yellow,
+/turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MechFabShip)
 "vt" = (
 /obj/effect/floor_decal/techfloor,
@@ -1033,7 +1062,9 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "HC" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/mecha_part_fabricator{
+	req_access = null
+	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/techfloor{
 	dir = 8
@@ -1261,18 +1292,12 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "Nr" = (
-/obj/structure/window/reinforced/survival_pod{
-	opacity = 1
-	},
-/obj/machinery/r_n_d/server/core,
-/obj/structure/window/reinforced/survival_pod{
-	dir = 4;
-	opacity = 1
-	},
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/storage/part_replacer/adv/discount_bluespace,
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MechFabShip)
 "ND" = (
 /obj/structure/sign/deck1,
@@ -1301,9 +1326,6 @@
 	icon_state = "fridge_sci";
 	name = "Advanced storage";
 	pixel_y = 0
-	},
-/obj/item/stack/material/durasteel{
-	material = 50
 	},
 /obj/item/stack/material/durasteel{
 	material = 50
@@ -1423,17 +1445,10 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
+/obj/item/stack/material/plasteel{
+	amount = 50
+	},
 /turf/simulated/floor/tiled/milspec/sterile,
-/area/survivalpod/superpose/MechFabShip)
-"PH" = (
-/obj/structure/window/reinforced/survival_pod{
-	opacity = 1
-	},
-/obj/structure/prop/blackbox/salamander_wreck,
-/obj/structure/sign/department/rnd{
-	pixel_y = 32
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
 /area/survivalpod/superpose/MechFabShip)
 "Qs" = (
 /obj/machinery/door/airlock/glass_centcom{
@@ -1441,15 +1456,6 @@
 	name = "Bridge"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/survivalpod/superpose/MechFabShip)
-"QE" = (
-/obj/machinery/r_n_d/circuit_imprinter,
-/obj/item/weapon/reagent_containers/glass/beaker/sulphuric,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/effect/floor_decal/techfloor{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/MechFabShip)
 "QJ" = (
 /obj/machinery/disperser/middle{
@@ -1540,11 +1546,6 @@
 /obj/effect/floor_decal/techfloor/orange/corner,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
-"Th" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/mecha_part_fabricator/pros,
-/turf/simulated/floor/tiled/milspec/sterile,
-/area/survivalpod/superpose/MechFabShip)
 "TI" = (
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 8
@@ -1610,7 +1611,6 @@
 /turf/simulated/floor/tiled/red,
 /area/survivalpod/superpose/MechFabShip)
 "Vj" = (
-/obj/machinery/r_n_d/protolathe,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/techfloor{
 	dir = 8
@@ -2038,7 +2038,7 @@ Yj
 Ic
 iD
 Vj
-QE
+Vj
 ph
 ph
 ph
@@ -2087,7 +2087,7 @@ Qs
 ph
 ph
 vb
-qX
+DF
 DF
 DF
 DF
@@ -2112,8 +2112,8 @@ Vf
 ZE
 at
 ph
-PH
 qK
+DF
 Oo
 DF
 Yt
@@ -2139,8 +2139,8 @@ LN
 kr
 ph
 Nr
-oz
 YM
+qX
 YM
 Dj
 ph
@@ -2218,7 +2218,7 @@ kJ
 ph
 SW
 tk
-Th
+tk
 tk
 rr
 ph

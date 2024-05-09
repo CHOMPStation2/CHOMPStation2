@@ -1,6 +1,6 @@
 /mob/living/silicon/robot/Life()
 	set invisibility = 0
-	set background = 1
+	//set background = 1 CHOMPEdit
 
 	if (src.transforming)
 		return
@@ -83,7 +83,7 @@
 	//if(src.resting) // VOREStation edit. Our borgos would rather not.
 	//	Weaken(5)
 
-	if(health < config.health_threshold_dead && src.stat != 2) //die only once
+	if(health < CONFIG_GET(number/health_threshold_dead) && src.stat != 2) //die only once // CHOMPEdit
 		death()
 
 	if (src.stat != 2) //Alive.
@@ -190,6 +190,12 @@
 		src.see_in_dark = 8
 		src.see_invisible = SEE_INVISIBLE_LEVEL_TWO
 		fullbright = TRUE
+	/* //ChompEDIT START - remove this for now
+	else if (src.sight_mode & BORGANOMALOUS)
+		src.see_in_dark = 8
+		src.see_invisible = INVISIBILITY_SHADEKIN
+		fullbright = TRUE
+	*/ //ChompEDIT END
 	else if (!seedarkness)
 		src.sight &= ~SEE_MOBS
 		src.sight &= ~SEE_TURFS
@@ -239,7 +245,7 @@
 					src.healths.icon_state = "health3"
 				else if(health >= 0)
 					src.healths.icon_state = "health4"
-				else if(health >= config.health_threshold_dead)
+				else if(health >= CONFIG_GET(number.health_threshold_dead)) // CHOMPEdit
 					src.healths.icon_state = "health5"
 				else
 					src.healths.icon_state = "health6"
@@ -371,8 +377,8 @@
 		IgniteMob()
 
 /mob/living/silicon/robot/handle_light()
-	. = ..()
-	if(. == FALSE) // If no other light sources are on.
-		if(lights_on)
-			set_light(integrated_light_power, 1, "#FFFFFF")
-			return TRUE
+	if(lights_on)
+		set_light(integrated_light_power, 1, "#FFFFFF")
+		return TRUE
+	else
+		. = ..()

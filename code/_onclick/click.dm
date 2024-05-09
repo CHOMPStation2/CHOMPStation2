@@ -68,7 +68,7 @@
 		CtrlClickOn(A)
 		return 1
 
-	if(stat || paralysis || stunned || weakened)
+	if(stat || paralysis || stunned) //CHOMPedit, removed weakened to allow item use while crawling
 		return
 
 	face_atom(A) // change direction to face what you clicked on
@@ -158,7 +158,7 @@
 	next_click = max(world.time + timeout, next_click)
 
 /mob/proc/checkClickCooldown()
-	if(next_click > world.time && !config.no_click_cooldown)
+	if(next_click > world.time && !CONFIG_GET(flag/no_click_cooldown)) // CHOMPEdit
 		return FALSE
 	return TRUE
 

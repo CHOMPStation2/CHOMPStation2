@@ -103,7 +103,7 @@ export const TicketsPanel = (props) => {
 
   let filtered_tickets = getFilteredTickets(tickets, stateFilter, levelFilter);
   return (
-    <Window width={900} height={600}>
+    <Window width={1000} height={600}>
       <Window.Content>
         <Flex>
           <Flex.Item shrink>
@@ -130,7 +130,13 @@ export const TicketsPanel = (props) => {
                 }
               />
             </Section>
-            <Section title="Tickets" scrollable>
+            <Section
+              title="Tickets"
+              scrollable
+              fill
+              height="450px"
+              width="300px"
+            >
               <Tabs vertical>
                 <Tabs.Tab onClick={() => act('new_ticket')}>
                   New Ticket
@@ -148,11 +154,11 @@ export const TicketsPanel = (props) => {
                         <Button
                           content={Level[ticket.level]}
                           color={LevelColor[ticket.level]}
-                        />{' '}
+                        />
                         {ticket.name}
                       </Box>
                       <Box fontSize={0.9} textColor={StateColor[ticket.state]}>
-                        State: {State[ticket.state]} | Assignee:{' '}
+                        State: {State[ticket.state]} | Assignee:
                         {ticket.handler}
                       </Box>
                     </Box>
@@ -171,13 +177,13 @@ export const TicketsPanel = (props) => {
                       icon="arrow-up"
                       content="Undock"
                       onClick={() => act('undock_ticket')}
-                    />{' '}
+                    />
                     <Button
                       icon="pen"
                       content="Rename Ticket"
                       onClick={() => act('retitle_ticket')}
-                    />{' '}
-                    <Button content="Legacy UI" onClick={() => act('legacy')} />{' '}
+                    />
+                    <Button content="Legacy UI" onClick={() => act('legacy')} />
                     <Button
                       content={Level[selected_ticket.level]}
                       color={LevelColor[selected_ticket.level]}
@@ -187,7 +193,7 @@ export const TicketsPanel = (props) => {
               >
                 <LabeledList>
                   <LabeledList.Item label="Ticket ID">
-                    #{selected_ticket.id}:{' '}
+                    #{selected_ticket.id}:
                     <div
                       dangerouslySetInnerHTML={{ __html: selected_ticket.name }}
                     />
@@ -204,14 +210,14 @@ export const TicketsPanel = (props) => {
                   {State[selected_ticket.state] === State.open ? (
                     <LabeledList.Item label="Opened At">
                       {selected_ticket.opened_at_date} (
-                      {Math.round((selected_ticket.opened_at / 600) * 10) / 10}{' '}
+                      {Math.round((selected_ticket.opened_at / 600) * 10) / 10}
                       minutes ago.)
                     </LabeledList.Item>
                   ) : (
                     <LabeledList.Item label="Closed At">
                       {selected_ticket.closed_at_date} (
-                      {Math.round((selected_ticket.closed_at / 600) * 10) / 10}{' '}
-                      minutes ago.){' '}
+                      {Math.round((selected_ticket.closed_at / 600) * 10) / 10}
+                      minutes ago.)
                       <Button
                         content="Reopen"
                         onClick={() => act('reopen_ticket')}
@@ -286,13 +292,13 @@ export const TicketsPanel = (props) => {
                       icon="arrow-up"
                       content="Undock"
                       onClick={() => act('undock_ticket')}
-                    />{' '}
+                    />
                     <Button
                       disabled
                       icon="pen"
                       content="Rename Ticket"
                       onClick={() => act('retitle_ticket')}
-                    />{' '}
+                    />
                     <Button content="Legacy UI" onClick={() => act('legacy')} />
                   </Box>
                 }

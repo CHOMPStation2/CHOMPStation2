@@ -178,7 +178,7 @@ I think I covered everything.
 	)
 	var/eyes
 
-	can_be_drop_prey = FALSE //CHOMP Add
+	can_be_drop_prey = FALSE
 
 ///
 ///		Subtypes
@@ -201,6 +201,7 @@ I think I covered everything.
 	maxHealth = 200
 	melee_damage_lower = 20
 	melee_damage_upper = 15
+	allow_mind_transfer = TRUE
 
 ///
 ///		Misc define stuff
@@ -237,13 +238,13 @@ I think I covered everything.
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/set_style) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/toggle_glow) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/sprite_toggle) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/flame_toggle) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/special_toggle) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/proc/animal_mount)
+	add_verb(src,/mob/living/proc/toggle_rider_reins)
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/set_style)
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/toggle_glow)
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/sprite_toggle)
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/flame_toggle)
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/special_toggle)
 	//verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_name //Implemented upstream
 	//verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_desc //Implemented upstream
 	faction = "neutral"

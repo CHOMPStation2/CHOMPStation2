@@ -57,7 +57,7 @@
 			M.gib()
 
 
-/obj/machinery/gibber/New()
+/obj/machinery/gibber/Initialize() //ChompEDIT New --> Initialize
 	..()
 	add_overlay("grjam")
 
@@ -252,5 +252,3 @@
 			thing.throw_at(get_edge_target_turf(src,gib_throw_dir),rand(0,3),emagged ? 100 : 50) // Being pelted with bits of meat and bone would hurt.
 
 		update_icon()
-
-

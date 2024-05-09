@@ -3500,7 +3500,7 @@
 /area/submap/oldstation_power)
 "LS" = (
 /obj/structure/table/standard,
-/obj/item/weapon/book/manual/security_space_law,
+/obj/item/weapon/book/manual/wiki/security_space_law,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},

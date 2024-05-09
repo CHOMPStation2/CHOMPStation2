@@ -89,6 +89,7 @@
 				)
 
 	can_be_drop_prey = FALSE //CHOMP Add
+	glow_override = TRUE
 
 /mob/living/simple_mob/vore/oregrub/lava
 	name = "mature lavagrub"
@@ -145,6 +146,8 @@
 	if(. == 0 && !is_dead())
 		set_light(2.5, 1, COLOR_ORANGE)
 		return 1
+	else if(is_dead())
+		glow_override = FALSE
 
 /mob/living/simple_mob/vore/oregrub/lava/death()
 	set_light(0)
@@ -174,7 +177,7 @@
 	B.fancy_vore = 1							// CHOMPedit - Fancy Vore Sounds
 	B.belly_fullscreen_color = "#1b4ba3" 		// CHOMPedit - Belly Fullscreen
 	B.belly_fullscreen = "anim_belly" 			// CHOMPedit - Belly Fullscreen
-	
+
 	// CHOMPEdit: Yes, these are copied + modified from the solargrub list. These are better placeholders than ~nothing~, and will give us more voremobs to work with.
 	B.emote_lists[DM_HOLD] = list(
 		"The air trapped within the grub is hot, humid, and tinged with soot, but otherwise mercifully harmless to you aside from being heavy on the lungs.",
@@ -191,7 +194,7 @@
 		"The grub's inner muscles are in a constant state of clenching all over you, adding an additional layer of processing to its stomach's slow, steady churning, helping break you down faster!",
 		"The grub chitters in irritation at your continued solidity, followed by a string of crushingly tight stomach clenches that grind its caustic stomach ooze into your body!",
 		"The deceptively severe heat trapped within the grub works in tandem with its inner muscles and your tingling, prickling stomach juice bath to weaken you!")
-		
+
 /mob/living/simple_mob/vore/oregrub/lava/init_vore() // Should inherit everything from parent, and then change our belly fullscreen color.
 	if(!voremob_loaded)
 		return

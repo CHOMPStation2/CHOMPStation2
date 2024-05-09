@@ -350,9 +350,9 @@
 	// Special cases, can never respawn
 	if(ticker?.mode?.deny_respawn)
 		time = -1
-	else if(!config.abandon_allowed)
+	else if(!CONFIG_GET(flag/abandon_allowed)) // CHOMPEdit
 		time = -1
-	else if(!config.respawn)
+	else if(!CONFIG_GET(flag/respawn)) // CHOMPEdit
 		time = -1
 
 	// Special case for observing before game start
@@ -361,7 +361,7 @@
 
 	// Wasn't given a time, use the config time
 	else if(!time)
-		time = config.respawn_time
+		time = CONFIG_GET(number/respawn_time) // CHOMPEdit
 
 	var/keytouse = ckey
 	// Try harder to find a key to use
@@ -373,7 +373,7 @@
 	GLOB.respawn_timers[keytouse] = world.time + time
 
 /mob/observer/dead/set_respawn_timer()
-	if(config.antag_hud_restricted && has_enabled_antagHUD)
+	if(CONFIG_GET(flag/antag_hud_restricted) && has_enabled_antagHUD) // CHOMPEdit
 		..(-1)
 	else
 		return // Don't set it, no need
@@ -733,6 +733,10 @@
 					GLOB.stat_entry()
 				else
 					stat("Globals:", "ERROR")
+				if(config)
+					stat("[config]:", config.stat_entry())
+				else
+					stat("Config:", "ERROR")
 				if(Master)
 					Master.stat_entry()
 				else
@@ -1215,7 +1219,7 @@
 	if(client)
 		if(client.prefs.throwmode_loud) //CHOMPEdit: Throw notices are based on prefs, and dont ignore said prefs if you're on help intent
 			src.visible_message("<span class='notice'>[src] relaxes from their ready stance.</span>","<span class='notice'>You relax from your ready stance.</span>")
-	if(src.throw_icon) //in case we don't have the HUD and we use the hotkey
+	if(src.throw_icon && !issilicon(src)) //in case we don't have the HUD and we use the hotkey. Silicon use this for something else. Do not overwrite their HUD icon
 		src.throw_icon.icon_state = "act_throw_off"
 
 /mob/proc/throw_mode_on()
@@ -1226,7 +1230,7 @@
 				src.visible_message("<span class='warning'>[src] winds up to throw [get_active_hand()]!</span>","<span class='notice'>You wind up to throw [get_active_hand()].</span>")
 			else
 				src.visible_message("<span class='warning'>[src] looks ready to catch anything thrown at them!</span>","<span class='notice'>You get ready to catch anything thrown at you.</span>")
-	if(src.throw_icon)
+	if(src.throw_icon && !issilicon(src)) // Silicon use this for something else. Do not overwrite their HUD icon
 		src.throw_icon.icon_state = "act_throw_on"
 
 /mob/proc/isSynthetic()

@@ -10,7 +10,7 @@
 	icon_state = "sheater0"
 	name = "space heater"
 	desc = "Made by Space Amish using traditional space techniques, this heater is guaranteed not to set the station on fire."
-	
+
 	light_system = STATIC_LIGHT	//CHOMPEdit, runtime cleanup
 	light_range = 3
 	light_power = 1
@@ -24,7 +24,7 @@
 	clicksound = "switch"
 	interact_offline = TRUE
 
-/obj/machinery/space_heater/New()
+/obj/machinery/space_heater/Initialize() //ChompEDIT New --> Initialize
 	..()
 	if(cell_type)
 		cell = new cell_type(src)

@@ -99,7 +99,7 @@
 		visible_message("<span class='notice'>[M] starts riding [name]!</span>")
 
 /mob/living/carbon/human/attack_hand(mob/user as mob)
-	if(LAZYLEN(buckled_mobs))
+	if(LAZYLEN(buckled_mobs) && riding_datum) //CHOMPEdit
 		//We're getting off!
 		if(user in buckled_mobs)
 			riding_datum.force_dismount(user)

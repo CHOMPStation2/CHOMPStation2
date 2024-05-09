@@ -20,6 +20,12 @@
 		LAZYADD(notices, note)
 		if(LAZYLEN(notices) >= max_notices)
 			break
+	//ChompEDIT START - notices in contents
+	for(var/obj/item/weapon/paper/note in contents)
+		LAZYADD(notices, note)
+		if(LAZYLEN(notices) >= max_notices)
+			break
+	//ChompEDIT END
 
 	update_icon()
 
@@ -173,7 +179,7 @@
 	notices = 5
 	icon_state = "nboard05"
 
-/obj/structure/noticeboard/anomaly/New()
+/obj/structure/noticeboard/anomaly/Initialize() //ChompEDIT New --> Initialize
 	var/obj/item/weapon/paper/P = new()
 	P.name = "Memo RE: proper analysis procedure"
 	P.info = "<br>We keep test dummies in pens here for a reason, so standard procedure should be to activate newfound alien artifacts and place the two in close proximity. Promising items I might even approve monkey testing on."
@@ -208,3 +214,4 @@
 	P.stamped = list(/obj/item/weapon/stamp/rd)
 	P.add_overlay("paper_stamped_rd")
 	contents += P
+	. = ..() //ChompEDIT New --> Initialize

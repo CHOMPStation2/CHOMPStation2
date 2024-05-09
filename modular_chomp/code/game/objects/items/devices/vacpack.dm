@@ -176,7 +176,8 @@
 					continue
 				if(istype(F,/obj/effect/decal/cleanable))
 					if(isbelly(output_dest))
-						user.adjust_nutrition(1)
+						var/obj/belly/B = output_dest
+						B.owner_adjust_nutrition(1)
 					qdel(F)
 					continue
 				if(istype(output_dest,/obj/item/weapon/storage/bag/trash))
@@ -201,7 +202,8 @@
 			if(istype(target, /turf/simulated))
 				var/turf/simulated/T = target
 				if(isbelly(output_dest) && T.dirt > 50)
-					user.adjust_nutrition((T.dirt - 50) / 10) //Max tile dirt is 101. so about 5 nutrition from a disgusting floor, I think that's okay.
+					var/obj/belly/B = output_dest
+					B.owner_adjust_nutrition((T.dirt - 50) / 10) //Max tile dirt is 101. so about 5 nutrition from a disgusting floor, I think that's okay.
 				T.dirt = 0
 				T.clean_blood()
 		return

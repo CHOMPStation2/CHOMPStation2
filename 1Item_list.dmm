@@ -19904,7 +19904,7 @@
 	},
 /area/survivalpod)
 "fRV" = (
-/obj/machinery/smartfridge/chemistry/virology,
+/obj/machinery/smartfridge/virology,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -58835,7 +58835,7 @@
 	},
 /area/survivalpod)
 "rlD" = (
-/obj/item/clothing/mask/gas/wwii,
+/obj/item/clothing/mask/gas,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},

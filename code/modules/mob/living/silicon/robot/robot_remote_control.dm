@@ -47,7 +47,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 /mob/living/silicon/robot/proc/transfer_shell(var/mob/living/silicon/robot/target)
 	var/mob/living/silicon/ai/AI = mainframe
 	//relay AI
-	if(!config.allow_ai_shells)
+	if(!CONFIG_GET(flag/allow_ai_shells)) // CHOMPEdit
 		to_chat(src, span("warning", "AI Shells are not allowed on this server. You shouldn't have this verb because of it, so consider making a bug report."))
 		return
 
@@ -207,7 +207,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 	undeploy("Remote session terminated.")
 
 /mob/living/silicon/robot/attack_ai(mob/user)
-	if(shell && config.allow_ai_shells && (!connected_ai || connected_ai == user))
+	if(shell && CONFIG_GET(flag/allow_ai_shells) && (!connected_ai || connected_ai == user)) // CHOMPEdit
 		var/mob/living/silicon/ai/AI = user
 		if(istype(AI))		// Just in case we're clicked by a borg
 			AI.deploy_to_shell(src)
@@ -224,6 +224,6 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 	delete_me = TRUE
 
 /obj/effect/landmark/free_ai_shell/Initialize()
-	if(config.allow_ai_shells && config.give_free_ai_shell)
+	if(CONFIG_GET(flag/allow_ai_shells) && CONFIG_GET(flag/give_free_ai_shell)) // CHOMPEdit
 		new /mob/living/silicon/robot/ai_shell(get_turf(src))
 	return ..()

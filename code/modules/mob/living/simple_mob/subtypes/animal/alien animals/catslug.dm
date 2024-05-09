@@ -58,6 +58,8 @@
 	var/obj/item/clothing/head/hat = null // Scughat.
 	var/can_wear_hat = TRUE				  // Some have inbuilt hats
 
+	allow_mind_transfer = TRUE //CHOMPAdd
+
 	//var/picked_color = FALSE //CHOMPEdit - now on simplemob.
 
 	can_enter_vent_with = list(

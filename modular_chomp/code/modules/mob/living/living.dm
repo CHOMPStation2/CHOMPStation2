@@ -192,38 +192,40 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 	if(size_multiplier != 1 || icon_scale_x != 1 && center_offset > 0)
 		update_transform(TRUE)
 
-/mob/living/proc/set_metainfo_favs(var/reopen = TRUE)
-	if(usr != src)
+//ChompEDIT START - Removal of usr
+/mob/living/proc/set_metainfo_favs(var/mob/user, var/reopen = TRUE)
+	if(user != src)
 		return
-	var/new_metadata = strip_html_simple(tgui_input_text(usr, "Enter any information you'd like others to see relating to your FAVOURITE roleplay preferences. This will not be saved permanently unless you click save in the OOC notes panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(ooc_notes_favs), multiline = TRUE,  prevent_enter = TRUE))
-	if(new_metadata && CanUseTopic(usr))
+	var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see relating to your FAVOURITE roleplay preferences. This will not be saved permanently unless you click save in the OOC notes panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(ooc_notes_favs), multiline = TRUE,  prevent_enter = TRUE))
+	if(new_metadata && CanUseTopic(user))
 		if(new_metadata == "!clear")
 			new_metadata = ""
 		ooc_notes_favs = new_metadata
 		client.prefs.metadata_favs = new_metadata
-		to_chat(usr, "<span class='filter_notice'>OOC note favs have been updated. Don't forget to save!</span>")
-		log_admin("[key_name(usr)] updated their OOC note favs mid-round.")
+		to_chat(user, "<span class='filter_notice'>OOC note favs have been updated. Don't forget to save!</span>")
+		log_admin("[key_name(user)] updated their OOC note favs mid-round.")
 		if(reopen)
-			ooc_notes_window(usr)
+			ooc_notes_window(user)
 
-/mob/living/proc/set_metainfo_maybes(var/reopen = TRUE)
-	if(usr != src)
+/mob/living/proc/set_metainfo_maybes(var/mob/user, var/reopen = TRUE)
+	if(user != src)
 		return
-	var/new_metadata = strip_html_simple(tgui_input_text(usr, "Enter any information you'd like others to see relating to your MAYBE roleplay preferences. This will not be saved permanently unless you click save in the OOC notes panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(ooc_notes_maybes), multiline = TRUE,  prevent_enter = TRUE))
-	if(new_metadata && CanUseTopic(usr))
+	var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see relating to your MAYBE roleplay preferences. This will not be saved permanently unless you click save in the OOC notes panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(ooc_notes_maybes), multiline = TRUE,  prevent_enter = TRUE))
+	if(new_metadata && CanUseTopic(user))
 		if(new_metadata == "!clear")
 			new_metadata = ""
 		ooc_notes_maybes = new_metadata
 		client.prefs.metadata_maybes = new_metadata
-		to_chat(usr, "<span class='filter_notice'>OOC note maybes have been updated. Don't forget to save!</span>")
-		log_admin("[key_name(usr)] updated their OOC note maybes mid-round.")
+		to_chat(user, "<span class='filter_notice'>OOC note maybes have been updated. Don't forget to save!</span>")
+		log_admin("[key_name(user)] updated their OOC note maybes mid-round.")
 		if(reopen)
-			ooc_notes_window(usr)
+			ooc_notes_window(user)
 
-/mob/living/proc/set_metainfo_ooc_style(var/reopen = TRUE)
-	if(usr != src)
+/mob/living/proc/set_metainfo_ooc_style(var/mob/user, var/reopen = TRUE)
+	if(user != src)
 		return
 	ooc_notes_style = !ooc_notes_style
 	client.prefs.matadata_ooc_style = !client.prefs.matadata_ooc_style
 	if(reopen)
-		ooc_notes_window(usr)
+		ooc_notes_window(user)
+//ChompEDIT END - Removal of usr

@@ -82,6 +82,8 @@ They're also cool, and Rykka/Nyria wrote this uwu
 
 	say_list_type = /datum/say_list/hyena
 
+	allow_mind_transfer = TRUE //CHOMPAdd
+
 	var/obj/item/clothing/head/hat = null // The hat the yeen is wearing when initialized, var will update with the chosen hat.
 
 // Silly stuff. HATS! Give your yeen a hat today <3

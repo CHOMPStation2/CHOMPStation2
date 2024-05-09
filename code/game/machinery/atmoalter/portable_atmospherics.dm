@@ -14,13 +14,13 @@
 	var/maximum_pressure = 90 * ONE_ATMOSPHERE
 
 /obj/machinery/portable_atmospherics/New()
-	..()
+	//..() CHOMP Removal, moved to bottom
 	//VOREStation Edit - Fix runtime
 	if(air_contents)
 		air_contents.volume = volume
 		air_contents.temperature = T20C
 	//VOREStation Edit End
-
+	..() //CHOMPEdit. Please for the love of god, do not put ..() at the top of New(), like ever
 	return 1
 
 /obj/machinery/portable_atmospherics/Initialize()

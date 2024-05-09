@@ -274,7 +274,7 @@ Less important
 	mappath = "modular_chomp/maps/overmap/space_pois/turretedoutpost_23x19.dmm"
 	scanner_desc = "Mervenary owned outpost, armor piercing turrets and arms detected."
 	block_size = 23
-
+// Temp removal, actually explodes the fucking server //EDIT2 I thought I fixed this shit when a space turf was sharing the same coordinates as another turf, turns out there was a single titanium wall sharing the same coordinate with another and this took me an actual hour to find, I fucking hate touching old maps files with mapping errors that somehow didnt crash the server until spaghetti //EDIT 3, omfg another one, I just nuked every tile and manually rebuilt them, that was another hour, im done this is done, I hate byond
 /datum/map_template/dynamic_overmap/ussp_84x90
 	name = "Unknown Station"
 	mappath = "modular_chomp/maps/overmap/space_pois/ussp_84x90.dmm"

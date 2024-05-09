@@ -1,7 +1,3 @@
-/datum/configuration/load()
-	. = ..()
-	SSassets.OnConfigLoad()
-
 SUBSYSTEM_DEF(assets)
 	name = "Assets"
 	init_order = INIT_ORDER_ASSETS
@@ -10,9 +6,9 @@ SUBSYSTEM_DEF(assets)
 	var/list/preload = list()
 	var/datum/asset_transport/transport = new()
 
-/datum/controller/subsystem/assets/proc/OnConfigLoad()
+/datum/controller/subsystem/assets/OnConfigLoad() // CHOMPEdit
 	var/newtransporttype = /datum/asset_transport
-	switch (config.asset_transport)
+	switch (CONFIG_GET(string/asset_transport)) // CHOMPEdit
 		if ("webroot")
 			newtransporttype = /datum/asset_transport/webroot
 
@@ -27,7 +23,7 @@ SUBSYSTEM_DEF(assets)
 
 
 /datum/controller/subsystem/assets/Initialize()
-
+	OnConfigLoad()
 
 	for(var/type in typesof(/datum/asset))
 		var/datum/asset/A = type

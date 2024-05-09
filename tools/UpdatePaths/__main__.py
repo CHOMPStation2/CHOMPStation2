@@ -29,7 +29,7 @@ Old paths properties:
     property = @ANY - will apply the rule when the property is mapedited, regardless of its value.
 """
 
-default_map_directory = "../../maps"
+default_map_directory = "../../"
 replacement_re = re.compile(r'\s*(?P<path>[^{]*)\s*(\{(?P<props>.*)\})?')
 
 #urgent todo: replace with actual parser, this is slow as janitor in crit

@@ -23,7 +23,7 @@ var/list/turf_edge_cache = list()
 	can_build_into_floor = TRUE
 
 	// When a turf gets demoted or promoted, this list gets adjusted.  The top-most layer is the layer on the bottom of the list, due to how pop() works.
-	var/list/turf_layers = list(/turf/simulated/floor/outdoors/rocks)
+	//var/list/turf_layers = list(/turf/simulated/floor/outdoors/rocks) CHOMPEdit kill. See outdoors_ch.dm for replacement.
 	var/can_dig = FALSE
 	var/loot_count
 
@@ -130,6 +130,7 @@ var/list/turf_edge_cache = list()
 	outdoors = OUTDOORS_NO
 
 // This proc adds a 'layer' on top of the turf.
+/* CHOMP Removal start
 /turf/simulated/floor/outdoors/proc/promote(var/new_turf_type)
 	var/list/new_turf_layer_list = turf_layers.Copy()
 	var/list/coords = list(x, y, z)
@@ -152,7 +153,7 @@ var/list/turf_edge_cache = list()
 	var/turf/simulated/floor/outdoors/T = locate(coords[1], coords[2], coords[3])
 	if(istype(T))
 		T.turf_layers = new_turf_layer_list.Copy()
-
+CHOMP Removal End */
 // Called by weather processes, and maybe technomancers in the future.
 /turf/simulated/floor/proc/chill()
 	return

@@ -1216,8 +1216,8 @@ var/list/gamemode_cache = list()
 	SSdbcore.InitializeRound() // CHOMPEdit
 
 	//apply a default value to config.python_path, if needed
-	if (!config.python_path)
+	if (!CONFIG_GET(string/python_path)) // CHOMPEdit
 		if(world.system_type == UNIX)
-			config.python_path = "/usr/bin/env python2"
+			CONFIG_SET(string/python_path, "/usr/bin/env python2") // CHOMPEdit
 		else //probably windows, if not this should work anyway
-			config.python_path = "python"
+			CONFIG_SET(string/python_path, "python") // CHOMPEdit

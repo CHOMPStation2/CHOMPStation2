@@ -28,7 +28,7 @@
 			switch(damage)
 				if(-INFINITY to 0)
 					//TODO: fix husking
-					if( ((getMaxHealth() - total_burn) < config.health_threshold_dead * huskmodifier) && stat == DEAD)
+					if( ((getMaxHealth() - total_burn) < CONFIG_GET(number/health_threshold_dead) * huskmodifier) && stat == DEAD) // CHOMPEdit
 						ChangeToHusk()
 					return
 				if(1 to 25)
@@ -43,7 +43,7 @@
 	// CHOMPEdit End: Pain
 
 	//TODO: fix husking
-	if( ((getMaxHealth() - total_burn) < config.health_threshold_dead * huskmodifier) && stat == DEAD)
+	if( ((getMaxHealth() - total_burn) < CONFIG_GET(number/health_threshold_dead) * huskmodifier) && stat == DEAD) // CHOMPEdit
 		ChangeToHusk()
 	return
 

@@ -142,6 +142,7 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 		/obj/item/weapon/cell,
 		/obj/item/weapon/cell/device,
 		/obj/item/clothing/mask/gas,
+		/obj/item/clothing/mask/gas/clear, //Chompadd: Proper Implementation of clear gasmasks
 		/obj/item/clothing/mask/gas/half,
 		/obj/item/clothing/mask/breath,
 		/obj/item/weapon/reagent_containers/glass/rag,

@@ -36,30 +36,30 @@ var/datum/planet/sif/planet_sif = null
 
 	switch(sun_position)
 		if(0 to 0.40) // Night
-			low_brightness = 0.2
-			low_color = "#000066"
+			low_brightness = 0.15 //CHOMPedit
+			low_color = "#19195c" //CHOMPedit
 
-			high_brightness = 0.5
+			high_brightness = 0.3
 			high_color = "#66004D"
 			min = 0
 
 		if(0.40 to 0.50) // Twilight
-			low_brightness = 0.6
+			low_brightness = 0.3
 			low_color = "#66004D"
 
-			high_brightness = 0.8
+			high_brightness = 0.65
 			high_color = "#CC3300"
 			min = 0.40
 
-		if(0.50 to 0.70) // Sunrise/set
-			low_brightness = 0.8
+		if(0.50 to 0.60) // Sunrise/set
+			low_brightness = 0.65
 			low_color = "#CC3300"
 
 			high_brightness = 0.9
 			high_color = "#FF9933"
 			min = 0.50
 
-		if(0.70 to 1.00) // Noon
+		if(0.60 to 1.00) // Noon
 			low_brightness = 0.9
 			low_color = "#DDDDDD"
 
@@ -122,7 +122,9 @@ var/datum/planet/sif/planet_sif = null
 		WEATHER_BLOOD_MOON	= new /datum/weather/sif/blood_moon(),
 		WEATHER_EMBERFALL	= new /datum/weather/sif/emberfall(),
 		WEATHER_ASH_STORM	= new /datum/weather/sif/ash_storm(),
-		WEATHER_FALLOUT		= new /datum/weather/sif/fallout()
+		WEATHER_FALLOUT		= new /datum/weather/sif/fallout(),
+		WEATHER_FALLOUT_TEMP	= new /datum/weather/sif/fallout/temp(), //CHOMPedit
+		WEATHER_CONFETTI		= new /datum/weather/sif/confetti() //CHOMPedit
 		)
 	roundstart_weather_chances = list(
 		WEATHER_CLEAR		= 30,
@@ -553,6 +555,7 @@ var/datum/planet/sif/planet_sif = null
 	transition_messages = list(
 		"Radioactive soot and ash start to float down around you, contaminating whatever they touch."
 	)
+	imminent_transition_message = "Sky and clouds are growing sickly green... Radiation storm is approaching, get to cover!"
 	outdoor_sounds_type = /datum/looping_sound/weather/wind
 	indoor_sounds_type = /datum/looping_sound/weather/wind/indoors
 

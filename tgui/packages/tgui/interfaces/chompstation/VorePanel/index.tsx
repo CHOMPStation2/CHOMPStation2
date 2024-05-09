@@ -153,7 +153,7 @@ export const VorePanel = () => {
   tabs[1] = <VoreUserPreferences />;
 
   return (
-    <Window width={890} height={660} theme="abstract">
+    <Window width={990} height={660} theme="abstract">
       <Window.Content scrollable>
         {(data.unsaved_changes && (
           <NoticeBox danger>

@@ -1,0 +1,32 @@
+2024-05-02:
+  cadyn:
+  - refactor: murder the lists
+2024-05-03:
+  cadyn:
+  - server: default for rad resistance is back to being divide
+2024-05-05:
+  cadyn:
+  - refactor: shandlers do two initial runs during RUNLEVEL_LOBBY
+  - bugfix: sunlight in VR
+2024-05-06:
+  TheCaramelion:
+  - bugfix: Fixed circuitry detecting phased entities
+  Upstream:
+  - admin: added 3 more admin spawn rubber duckies (grey, green and pink).
+  - admin: added a variable to rubber duckies called "honk text" that allows it to
+      put an audible message in chat when honked.
+  - rscadd: Adds drop vore to mob falling objects
+  - admin: Added new buildmode (DROP). Left click to drop objects safely, rightclick
+      to drop destructively. Not compatible with turfs.
+  Verkister:
+  - bugfix: Fixed empty hand interactions not working on borgs with forced buckling.
+2024-05-07:
+  tacoguy7765093:
+  - bugfix: Superpose LoneHome not spawning
+  - maptweak: Mechfab ship access, plasteel given, 1 of 2 emags removed.
+  - maptweak: Mechfab ship cryopod now teleports you out of the round
+  - maptweak: Cultist ship power works now
+  - maptweak: Space Bar space POI airlock maptweaked
+  - maptweak: maptweaked the USSP that crashes the server
+  - bugfix: Downtown gateway slab IDs not opening doors
+  - maptweak: Thor Junker Shuttle extra engine console removed

@@ -682,12 +682,19 @@ z
 	base_turf = /turf/simulated/open
 
 // Elevator areas.
+// CHOMPEdit - Maintenance Deck
+/area/turbolift/port_deck_maints
+	name = "lift (maints deck)"
+	lift_floor_label = "Deck 0"
+	lift_floor_name = "Maintenance Deck"
+	lift_announce_str = "Arriving at Maintenance Deck: Engineering. Power Back Up. Gravity Generator."
+	base_turf = /turf/simulated/floor
+
 /area/turbolift/port_deck_one
 	name = "lift (first deck)"
 	lift_floor_label = "Deck 1"
 	lift_floor_name = "Hangar Deck"
 	lift_announce_str = "Arriving at Hangar Deck: Main Hangars.Cargo Delivery. Telecommunications. Auxiliary Shuttle Docks. Escape Pods."
-	base_turf = /turf/simulated/floor
 
 /area/turbolift/port_deck_two
 	name = "lift (second deck)"
@@ -1002,6 +1009,10 @@ z
 /area/maintenance/substation/atmospherics
 	name = "Atmospherics Substation"
 	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
+
+/area/maintenance/substation/maintenance
+	name = "Maintenance Substation"
+	ambience = AMBIENCE_SUBSTATION
 
 /area/maintenance/emergencyeva
 	name = "\improper Emergency EVA Maintenance"
@@ -1357,6 +1368,11 @@ z
 	name = "Third Deck Aft Starboard Maintenance"
 	icon_state = "asmaint"
 
+//CHOMPedit Giving a maint bar its own APC
+/area/maintenance/thirddeck/dormsstarboard/maintbar
+	name = "Third Deck Aft Starboard Speakeasy"
+	icon_state = "asmaint"
+//CHOMPedit end
 /area/maintenance/thirddeck/dormsaft
 	name = "Third Deck Aft Starboard Maintenance"
 	icon_state = "asmaint"
@@ -2258,3 +2274,126 @@ End Chompstation Edit*/
 	name = "Belter M2.0 Transit"
 	icon_state = "shuttle2"
 */
+// CHOMPAdd Start - Maintenance Deck Areas
+/area/maintenance/abcargo
+	name = "Abandoned Cargo"
+	icon_state = "maint_cargo"
+
+/area/maintenance/abmedical
+	name = "Abandoned Medical"
+	icon_state = "maint_medbay"
+
+/area/maintenance/abfirstaid
+	name = "Abandoned First Aid Station"
+	icon_state = "maint_medbay"
+
+/area/maintenance/abchemistry
+	name = "Abandoned Chemistry"
+	icon_state = "maint_medbay"
+
+/area/maintenance/abscience
+	name = "Abandoned Science"
+	icon_state = "asmaint"
+
+/area/maintenance/absgenetics
+	name = "Abandoned Genetics"
+	icon_state = "asmaint"
+
+/area/maintenance/thrift
+	name = "Abandoned Thrift Store"
+	icon_state = "mid_civilian_hallway"
+
+/area/maintenance/abtheatre
+	name = "Abandoned Theatre"
+	icon_state = "Theatre"
+	sound_env = LARGE_SOFTFLOOR
+
+/area/maintenance/ragecage
+	name = "Rage Cage"
+	icon_state = "nuke_storage"
+
+/area/engineering/lowlobby
+	name = "Engineering Deck 0 Lobby"
+	icon_state = "maint_pumpstation"
+
+/area/engineering/backuppowerlobby
+	name = "Engineering Backup Power Lobby"
+	icon_state = "engineering"
+
+/area/engineering/backuppower
+	name = "Engineering Backup Power"
+	icon_state = "engineering"
+
+/area/maintenance/substation/gravgen
+	name = "Gravity Generator Substation"
+	icon_state = "engineering"
+
+/area/engineering/gravgen
+	name = "Gravity Generator"
+	icon_state = "engineering"
+
+/area/maintenance/engineering/gravgen
+	name = "Gravity Generator Maintenance"
+
+/area/maintenance/fieldhallway
+	name = "Maintenance Deck Field Hallway"
+/area/maintenance/fieldthrift
+	name = "Maintenance Deck Thrift Store Hallway"
+
+/area/maintenance/abhydroponicssupp
+	name = "Abandoned Botany Supplies"
+
+/area/maintenance/abhydroponics
+	name = "Abandoned Botany"
+
+/area/maintenance/smoleroom
+	name = "Smole Room"
+
+/area/maintenance/janitoral
+	name = "Maintenance Deck Janitoral"
+
+/area/maintenance/lookout
+	name = "Maintenance Deck Lookout"
+
+/area/maintenance/bar/dorms
+	name = "Maintenance Bar Dorms"
+	icon_state = "Sleep"
+	soundproofed = TRUE
+	limit_mob_size = FALSE
+	block_suit_sensors = TRUE
+	flags = RAD_SHIELDED
+	block_tracking = TRUE
+
+/area/maintenance/bar/dorms/dorm_1
+	name = "Maintenance Deck Bar Dorms 1"
+
+/area/maintenance/bar/dorms/dorm_2
+	name = "Maintenance Deck Bar Dorms 2"
+
+/area/maintenance/zerocent
+	name = "Maintenance Deck Central"
+	icon_state = "maintcentral"
+
+/area/maintenance/zeroport
+	name = "Maintenance Deck Port"
+	icon_state = "pmaint"
+
+/area/maintenance/zeroaft
+	name = "Maintenance Deck Aft"
+	icon_state = "amaint"
+
+/area/maintenance/zerostarboard
+	name = "Maintenance Deck Starboard"
+	icon_state = "smaint"
+
+/area/maintenance/zerofore
+	name = "Maintenance Deck Fore"
+	icon_state = "fmaint"
+
+/area/maintenance/gravlobby
+	name = "Gravity Generator Lobby"
+	icon_state = "engineering"
+
+/area/maintenance/zerobar
+	name = "Abandoned Bar"
+	icon_state = "maint_bar"
