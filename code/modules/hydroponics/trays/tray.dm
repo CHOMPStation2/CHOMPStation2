@@ -396,7 +396,7 @@
 	if(seed)
 		previous_plant = seed.display_name
 		seed = null
-	seed = SSplants.seeds[pick(list("reishi","nettle","amanita","mushrooms","plumphelmet","towercap","harebells","weeds"))]
+	seed = SSplants.seeds[pick(list("reishi","nettle","amanita","mushrooms","plumphelmet","towercap","harebells","weeds","pitcher plant","microm","megam"))] // CHOMP edit: Pitcher plant go brrrrrr. Oh and micro/macro shrooms are cool too I guess!
 	if(!seed) return //Weed does not exist, someone fucked up.
 
 	dead = 0
