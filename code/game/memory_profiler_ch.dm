@@ -7,7 +7,10 @@
 /proc/cmp_numeric_desc(a,b)
 	return b - a
 
-/proc/get_stuff()
+/proc/profile_memory()
+	if(usr?.client)
+		if(tgui_alert(usr,"Running this will likely cause minor lag for around 20 minutes and the server will freeze for a bit at the end", "Profile memory", list("Yes", "No")) != "Yes")
+			return
 	var/list/types_count = list()
 	var/list/mem_count = list()
 	var/list/by_variable = list()
@@ -62,6 +65,7 @@
 		if(mem_count[type] < 10000) mem_count -= type
 	world.log << "[display_bytes(accounted_for)] of memory accounted for"
 	world.log << "Sorting and exporting data"
+	to_world("<span class='alert'>Memory profiler is exporting data. Expect server to freeze for 10-30 seconds.</span>")
 	sortTim(types_count, /proc/cmp_numeric_desc, TRUE)
 	var/output = ""
 	for(var/type in types_count)
@@ -114,7 +118,7 @@
 	for(var/variable in thing.vars)
 		if(variable == "vars") continue
 		if(islist(thing.vars[variable]))
-			if(!(variable in exclude_vars) && refcount(thing.vars[variable]) > 1 && thing.vars[variable] in list_of_lists)
+			if(!(variable in exclude_vars) && refcount(thing.vars[variable]) > 1 && (thing.vars[variable] in list_of_lists))
 				if(thing.vars[variable] != initial(thing.vars[variable]))
 					mem_count[thing.type] += 16
 					by_variable[variable] += 16

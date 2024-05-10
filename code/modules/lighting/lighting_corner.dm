@@ -60,6 +60,8 @@
 	if (new_master_turf)
 		save_master(new_master_turf, ((new_master_turf.x > x) ? EAST : WEST) | ((new_master_turf.y > y) ? NORTH : SOUTH)) // Get the dir based on coordinates.
 
+	if(((SSplanets && SSplanets.z_to_planet.len >= new_turf.z && SSplanets.z_to_planet[new_turf.z]) || SSlighting.get_pshandler_z(new_turf.z)) && new_turf.has_dynamic_lighting()) sunlight = SUNLIGHT_POSSIBLE //CHOMPEdit
+
 /datum/lighting_corner/proc/save_master(turf/master, dir)
 	switch (dir)
 		if (NORTHEAST)
