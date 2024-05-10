@@ -14547,7 +14547,7 @@
 /obj/structure/disposalpipe/tagger/partial{
 	dir = 1;
 	name = "Sorting Office";
-	sort_tag = "Sorting Office"
+	sort_tag = "Disposal Sorting"
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/warehouse)
@@ -16447,14 +16447,17 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/power/sensor{
 	name = "Powernet Sensor - Engine Power";
 	name_tag = "Engine Power"
+	},
+/obj/structure/cable/cyan{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/cable/cyan{
+	d2 = 8;
+	icon_state = "0-8"
 	},
 /turf/simulated/floor,
 /area/engineering/engine_room)
@@ -18120,7 +18123,7 @@
 /obj/structure/disposalpipe/tagger/partial{
 	dir = 1;
 	name = "Sorting Office";
-	sort_tag = "Sorting Office"
+	sort_tag = "Disposal Sorting"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/apmaint)
@@ -72827,6 +72830,9 @@
 /area/hallway/primary/seconddeck/starboard)
 "sXG" = (
 /obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/glass{
+	name = "Central Access"
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/primary/seconddeck/starboard)
 "sXK" = (
@@ -72901,6 +72907,9 @@
 	},
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 1
+	},
+/obj/machinery/alarm{
+	pixel_y = 23
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/starboard)
@@ -73084,7 +73093,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/hallway/primary/seconddeck/starboard)
 "tfv" = (
-/obj/structure/ladder,
+/obj/structure/ladder/updown,
 /turf/simulated/floor/plating,
 /area/maintenance/research_medical)
 "tfw" = (
@@ -74537,7 +74546,8 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/floor/plating,
 /area/hallway/primary/seconddeck/starboard)
 "ugI" = (
 /obj/effect/floor_decal/corner/brown/diagonal,
@@ -76296,6 +76306,9 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/door/airlock/glass{
+	name = "Central Access"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/primary/seconddeck/starboard)

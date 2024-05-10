@@ -466,7 +466,7 @@
 
 	was_bloodied = TRUE
 	if(!blood_color)
-		blood_color = "#A10808"
+		blood_color = SYNTH_BLOOD_COLOUR
 	if(istype(M))
 		if (!istype(M.dna, /datum/dna))
 			M.dna = new /datum/dna(null)

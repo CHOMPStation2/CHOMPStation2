@@ -96,6 +96,7 @@ var/global/list/runlevel_flags = list(RUNLEVEL_LOBBY, RUNLEVEL_SETUP, RUNLEVEL_G
 // Subsystem init_order, from highest priority to lowest priority
 // Subsystems shutdown in the reverse of the order they initialize in
 // The numbers just define the ordering, they are meaningless otherwise.
+#define INIT_ORDER_TITLE			99	//CHOMPEdit
 #define INIT_ORDER_WEBHOOKS			50
 #define INIT_ORDER_DBCORE			41	//CHOMPEdit
 #define INIT_ORDER_SQLITE			40

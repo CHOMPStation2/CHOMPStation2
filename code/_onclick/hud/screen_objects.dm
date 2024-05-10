@@ -967,6 +967,9 @@
 
 /obj/screen/ammo/proc/add_hud(var/mob/living/user, var/obj/item/weapon/gun/G)
 
+	if(G.hud_enabled == FALSE)
+		return
+
 	if(!user?.client)
 		return
 

@@ -157,7 +157,7 @@
 	else if(istype(I,/obj/item/device/radio/beacon))
 		var/confirm = tgui_alert(user, "[src == user ? "Eat the beacon?" : "Feed the beacon to [src]?"]", "Confirmation", list("Yes!", "Cancel"))
 		if(confirm == "Yes!")
-			var/obj/belly/B = tgui_input_list(usr, "Which belly?", "Select A Belly", vore_organs)
+			var/obj/belly/B = tgui_input_list(user, "Which belly?", "Select A Belly", vore_organs) //ChompEDIT - user, not usr
 			if(!istype(B))
 				return TRUE
 			visible_message("<span class='warning'>[user] is trying to stuff a beacon into [src]'s [lowertext(B.name)]!</span>",
@@ -246,6 +246,7 @@
 	P.weight_messages = src.weight_messages
 
 	//CHOMP stuff Start
+	P.allow_mind_transfer = src.allow_mind_transfer
 	P.phase_vore = src.phase_vore
 	P.noisy_full = src.noisy_full
 	P.latejoin_vore = src.latejoin_vore
@@ -315,6 +316,7 @@
 	weight_messages = P.weight_messages
 
 	//CHOMP stuff
+	allow_mind_transfer = P.allow_mind_transfer
 	phase_vore = P.phase_vore
 	noisy_full = P.noisy_full
 	latejoin_vore = P.latejoin_vore
@@ -437,7 +439,7 @@
 
 
 //This is just the above proc but switched about.
-/mob/living/proc/smell(mob/living/smelled in living_mobs_in_view(1, TRUE)) //CHOMPEdit
+/mob/living/proc/smell(mob/living/smelled in living_mobs(1, TRUE)) //CHOMPEdit
 	set name = "Smell"
 	set category = "IC"
 	set desc = "Smell someone nearby!"
@@ -596,17 +598,17 @@
 /mob/living/proc/eat_held_mob(mob/living/user, mob/living/prey, mob/living/pred)
 	var/belly
 	if(user != pred)
-		belly = tgui_input_list(usr, "Choose Belly", "Belly Choice", pred.feedable_bellies())	//CHOMPEdit
+		belly = tgui_input_list(user, "Choose Belly", "Belly Choice", pred.feedable_bellies())	//CHOMPEdit remove usr
 	else
 		belly = pred.vore_selected
 	return perform_the_nom(user, prey, pred, belly)
 
 /mob/living/proc/feed_self_to_grabbed(mob/living/user, mob/living/pred)
-	var/belly = tgui_input_list(usr, "Choose Belly", "Belly Choice", pred.feedable_bellies())	//CHOMPEdit
+	var/belly = tgui_input_list(user, "Choose Belly", "Belly Choice", pred.feedable_bellies())	//CHOMPEdit - remove usr
 	return perform_the_nom(user, user, pred, belly)
 
 /mob/living/proc/feed_grabbed_to_other(mob/living/user, mob/living/prey, mob/living/pred)
-	var/belly = tgui_input_list(usr, "Choose Belly", "Belly Choice", pred.feedable_bellies())	//CHOMPEdit
+	var/belly = tgui_input_list(user, "Choose Belly", "Belly Choice", pred.feedable_bellies())	//CHOMPEdit - remove usr
 	return perform_the_nom(user, prey, pred, belly)
 
 //
@@ -683,6 +685,8 @@
 	prey.ai_holder?.react_to_attack(user)
 
 	//Timer and progress bar
+	if(!user.client && prey.weakened > 0) // CHOMPEdit stop crwaling instantly break swallow attempt for mobvore
+		prey.Stun(min(prey.weakened, 2)) // CHOMPEdit stop crwaling instantly break swallow attempt for mobvore
 	if(!do_after(user, swallow_time, prey, exclusive = TASK_USER_EXCLUSIVE))
 		return FALSE // Prey escpaed (or user disabled) before timer expired.
 
@@ -1074,6 +1078,8 @@
 			I	= stack
 			nom	= refined_taste[O.default_type]
 			M	= name_to_material[O.default_type]
+	else if(istype(I, /obj/item/weapon/entrepreneur/crystal))
+		nom = list("nutrition" = 100,  "remark" = "The crytal was particularly brittle and not difficult to break apart, but the inside was incredibly flavoursome. Though devoid of any actual healing power, it seems to be very nutritious!", "WTF" = FALSE)
 
 	if(nom) //Ravenous 1-4, snackage confirmed. Clear for chowdown, over.
 		playsound(src, 'sound/items/eatfood.ogg', rand(10,50), 1)
@@ -1148,27 +1154,27 @@
 		src.Examine_OOC()
 	if(href_list["edit_ooc_notes"])
 		if(usr == src)
-			set_metainfo_panel()
+			set_metainfo_panel(usr) //ChompEDIT - usr arg
 	if(href_list["edit_ooc_note_likes"])
 		if(usr == src)
-			set_metainfo_likes()
+			set_metainfo_likes(usr) //ChompEDIT - usr arg
 	if(href_list["edit_ooc_note_dislikes"])
 		if(usr == src)
-			set_metainfo_dislikes()
+			set_metainfo_dislikes(usr) //ChompEDIT - usr arg
 	if(href_list["save_ooc_panel"])
 		if(usr == src)
-			save_ooc_panel()
+			save_ooc_panel(usr) //ChompEDIT - usr arg
 	if(href_list["print_ooc_notes_to_chat"])
-		print_ooc_notes_to_chat()
+		print_ooc_notes_to_chat(usr) //ChompEDIT - usr arg
 	//CHOMPEdit Start
 	if(href_list["edit_ooc_note_favs"])
 		if(usr == src)
-			set_metainfo_favs()
+			set_metainfo_favs(usr) //ChompEDIT - usr arg
 	if(href_list["edit_ooc_note_maybes"])
 		if(usr == src)
-			set_metainfo_maybes()
+			set_metainfo_maybes(usr) //ChompEDIT - usr arg
 	if(href_list["set_metainfo_ooc_style"])
-		set_metainfo_ooc_style()
+		set_metainfo_ooc_style(usr) //ChompEDIT - usr arg
 	//CHOMPEdit End
 	return ..()
 
@@ -1206,6 +1212,7 @@
 	dispvoreprefs += "<b>Can be picked up:</b> [pickup_pref ? "<font color='green'>Allowed</font>" : "<font color='red'>Disallowed</font>"]<br>"
 	dispvoreprefs += "<b>Can be resized:</b> [resizable ? "<font color='green'>Allowed</font>" : "<font color='red'>Disallowed</font>"]<br>"
 	dispvoreprefs += "<b>Spontaneous transformation:</b> [allow_spontaneous_tf ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
+	dispvoreprefs += "<b>Mind transfer:</b> [allow_mind_transfer ? "<font color='green'>Allowed</font>" : "<font color='red'>Disallowed</font>"]<br>"
 	dispvoreprefs += "<b>Feedable:</b> [feeding ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
 	dispvoreprefs += "<b>Receiving liquids:</b> [receive_reagents ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
 	dispvoreprefs += "<b>Giving liquids:</b> [give_reagents ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
@@ -1235,7 +1242,7 @@
 	icon = 'icons/mob/screen_full_colorized_vore_overlays.dmi'
 */ //Chomp DISABLE End
 
-/mob/living/proc/vorebelly_printout() //Spew the vorepanel belly messages into chat window for copypasting.
+/mob/living/verb/vorebelly_printout() //Spew the vorepanel belly messages into chat window for copypasting. //ChompEDIT proc -> verb
 	set name = "X-Print Vorebelly Settings"
 	set category = "Preferences"
 	set desc = "Print out your vorebelly messages into chat for copypasting."

@@ -115,8 +115,13 @@
 		dark_tile.unlinked()
 	return ..()
 
+/obj/effect/dark/Destroy()
+	. = ..()
+	if(linked_node)
+		linked_node.children_effects -= src
+
 /obj/effect/dark/process()
-	set background = 1
+	//set background = 1
 	var/turf/U = get_turf(src)
 
 	if(isspace(U))
@@ -146,7 +151,7 @@
 
 
 /obj/structure/prop/dark_node/process()
-	set background = 1
+	//set background = 1
 
 	if(!(locate(/obj/effect/dark) in get_turf(src)))
 		var/new_dark_tile = new /obj/effect/dark/floor(get_turf(src), src)

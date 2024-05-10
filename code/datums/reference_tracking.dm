@@ -1,3 +1,4 @@
+//CHOMPEdit -- This file is unticked, see reference_tracking_ch.dm
 #ifdef REFERENCE_TRACKING
 
 /datum/proc/find_references(skip_alert = TRUE)

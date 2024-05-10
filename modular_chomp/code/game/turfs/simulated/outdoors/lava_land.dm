@@ -19,7 +19,8 @@
 	opacity = TRUE
 	edge_blending_priority = 7
 	initial_flooring = /decl/flooring/lavaland/ashrock
-	turf_layers = list(/turf/simulated/floor/outdoors/lavaland/ash)
+	//turf_layers = list(/turf/simulated/floor/outdoors/lavaland/ash)
+	demote_to = /turf/simulated/floor/outdoors/lavaland/ash
 	var/last_act = 0
 
 // Stolen from mineral turf code.
@@ -58,7 +59,8 @@
 	icon_state = "basalt0"
 	edge_blending_priority = 3
 	initial_flooring = /decl/flooring/basalt
-	turf_layers = list(/turf/simulated/floor/outdoors/lavaland/ash)
+	//turf_layers = list(/turf/simulated/floor/outdoors/lavaland/ash)
+	demote_to = /turf/simulated/floor/outdoors/lavaland/ash
 
 /turf/simulated/floor/outdoors/lavaland/basalt/get_edge_icon_state()
 	return "basalt0"

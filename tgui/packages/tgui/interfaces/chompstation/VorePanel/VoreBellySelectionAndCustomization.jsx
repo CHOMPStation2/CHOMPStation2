@@ -11,7 +11,13 @@ export const VoreBellySelectionAndCustomization = (props) => {
   return (
     <Flex>
       <Flex.Item shrink>
-        <Section title="My Bellies" scrollable>
+        <Section
+          title="My Bellies"
+          scrollable
+          fill
+          height="500px"
+          width="200px"
+        >
           <Tabs vertical>
             <Tabs.Tab onClick={() => act('newbelly')}>
               New
