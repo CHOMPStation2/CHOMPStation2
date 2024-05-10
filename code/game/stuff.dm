@@ -177,13 +177,13 @@
 	var/p_type = thing::parent_type
 	L[type] += val
 	if(p_type) add_types_val(p_type, L, val)
-
+/*
 /datum/controller/master/SetRunLevel(new_runlevel)
 	if(new_runlevel == RUNLEVEL_GAME)
 		spawn(300)
 			get_stuff()
 	. = ..(new_runlevel)
-
+*/
 /proc/display_bytes(num_bytes)
 	if(num_bytes > 10000000)
 		return "[num_bytes/1000000] mb"
