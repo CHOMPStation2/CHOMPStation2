@@ -52,7 +52,8 @@
 	icon_state = "eggbox"
 	icon_type = "egg"
 	name = "egg box"
-	center_of_mass = list("x" = 16,"y" = 7)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 7 //CHOMPEdit
 	storage_slots = 12
 	can_hold = list(
 		/obj/item/weapon/reagent_containers/food/snacks/egg,

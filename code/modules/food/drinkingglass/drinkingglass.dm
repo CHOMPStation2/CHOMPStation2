@@ -19,7 +19,8 @@
 
 	var/rim_pos
 
-	center_of_mass = list("x"=16, "y"=10)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 10 //CHOMPEdit
 
 	amount_per_transfer_from_this = 5
 	possible_transfer_amounts = list(5,10,15,30)

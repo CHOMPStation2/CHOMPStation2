@@ -101,17 +101,17 @@
 			user.drop_from_inventory(C)
 			qdel(C)
 			return
-		var/padding_type  	
+		var/padding_type
 		//CHOMPEDIT START: making carpets different and not just the boring basic red no matter carpet type, consider merging material variables at stack level in future - Jack
 		if(istype(W,/obj/item/stack/tile/carpet))
 			var/obj/item/stack/tile/carpet/M = W
 			if(M.material && (M.material.flags & MATERIAL_PADDING))
-				padding_type = "[M.material.name]"					
-		//CHOMPEDIT END	
+				padding_type = "[M.material.name]"
+		//CHOMPEDIT END
 		else if(istype(W,/obj/item/stack/material))
 			var/obj/item/stack/material/M = W
 			if(M.material && (M.material.flags & MATERIAL_PADDING))
-				padding_type = "[M.material.name]"		
+				padding_type = "[M.material.name]"
 		if(!padding_type)
 			to_chat(user, "You cannot pad \the [src] with that.")
 			return
@@ -242,7 +242,8 @@
 	desc = "A collapsed roller bed that can be carried around."
 	icon = 'icons/obj/rollerbed.dmi'
 	icon_state = "folded_rollerbed"
-	center_of_mass = list("x" = 17,"y" = 7)
+	center_of_mass_x = 17 //CHOMPEdit
+	center_of_mass_y= 7 //CHOMPEdit
 	slot_flags = SLOT_BACK
 	w_class = ITEMSIZE_LARGE
 	var/rollertype = /obj/item/roller

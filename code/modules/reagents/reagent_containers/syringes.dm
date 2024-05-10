@@ -12,7 +12,8 @@
 	icon = 'icons/obj/syringe.dmi'
 	item_state = "syringe_0"
 	icon_state = "0"
-	center_of_mass = list("x" = 16,"y" = 14)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 14 //CHOMPEdit
 	matter = list(MAT_GLASS = 150)
 	amount_per_transfer_from_this = 5
 	possible_transfer_amounts = null

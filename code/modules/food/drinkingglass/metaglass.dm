@@ -5,7 +5,8 @@
 	amount_per_transfer_from_this = 5
 	volume = 30
 	unacidable = TRUE //glass
-	center_of_mass = list("x"=16, "y"=10)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 10 //CHOMPEdit
 	matter = list(MAT_GLASS = 500)
 	icon = 'icons/obj/drinks.dmi'
 
@@ -40,9 +41,11 @@
 			desc = "You can't really tell what this is."
 
 		if(R.glass_center_of_mass)
-			center_of_mass = R.glass_center_of_mass
+			center_of_mass_x = R.glass_center_of_mass["x"] //CHOMPEdit
+			center_of_mass_y = R.glass_center_of_mass["x"] //CHOMPEdit
 		else
-			center_of_mass = list("x"=16, "y"=10)
+			center_of_mass_x = 16 //CHOMPEdit
+			center_of_mass_y= 10 //CHOMPEdit
 
 		if(R.price_tag)
 			price_tag = R.price_tag
@@ -53,12 +56,14 @@
 			icon_state = "pglass_empty"
 			name = "metamorphic pint glass"
 			desc = "This glass changes shape and form depending on the drink inside... fancy!"
-			center_of_mass = list("x"=16, "y"=10)
+			center_of_mass_x = 16 //CHOMPEdit
+			center_of_mass_y= 10 //CHOMPEdit
 		else
 			icon_state = "glass_empty"
 			name = "metamorphic glass"
 			desc = "This glass changes shape and form depending on the drink inside... fancy!"
-			center_of_mass = list("x"=16, "y"=10)
+			center_of_mass_x = 16 //CHOMPEdit
+			center_of_mass_y= 10 //CHOMPEdit
 			return
 
 /*

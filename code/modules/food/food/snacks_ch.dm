@@ -215,7 +215,8 @@
 	slices_num = 6
 	nutriment_amt = 12
 	nutriment_desc = list("a warm, buttery sweetness that reminds you of home" = 5)
-	center_of_mass = list("x"=16, "y"=9)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 9 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/snacks/slicable/buttspie/Initialize()
 	..()
@@ -297,7 +298,8 @@
 	filling_color = "#E39C29"
 	nutriment_amt = 8
 	nutriment_desc = list("vanilla" = 8)
-	center_of_mass = list("x"=15, "y"=9)
+	center_of_mass_x = 15 //CHOMPEdit
+	center_of_mass_y= 9 //CHOMPEdit
 	bitesize = 2
 
 /obj/item/weapon/reagent_containers/food/snacks/sliceable/blondies/Initialize()
@@ -313,7 +315,8 @@
 	filling_color = "#F5B951"
 	bitesize = 2
 	nutriment_desc = list("vanilla" = 1)
-	center_of_mass = list("x"=16, "y"=12)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 12 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/snacks/blondiesslice/filled
 	nutriment_amt = 1
