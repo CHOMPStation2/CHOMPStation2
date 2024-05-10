@@ -52,7 +52,7 @@
 		to_chat(user, "<span class='notice'>You [anchored? "un" : ""]secured \the [src]!</span>")
 
 /client/proc/generic_structure()
-	set category = "EventKit"
+	set category = "Fun.Event Kit" //CHOMPEdit
 	set name = "Spawn Generic Structure"
 	set desc = "Spawn a customisable structure with a range of different options."
 
