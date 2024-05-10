@@ -786,7 +786,7 @@
 				/obj/item/toy/plushie/red_dragon
 				/obj/item/toy/plushie/green_dragon
 				/obj/item/toy/plushie/purple_dragon
-				/CHOMPStation Add End
+				//CHOMPStation Add End
 
 /obj/random/plushielarge
 	name = "random large plushie"
