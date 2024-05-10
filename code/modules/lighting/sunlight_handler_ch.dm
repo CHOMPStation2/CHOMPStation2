@@ -16,7 +16,7 @@
 		return INITIALIZE_HINT_LATELOAD
 
 /turf/simulated/LateInitialize()
-	if(((SSplanets && SSplanets.z_to_planet.len >= z && SSplanets.z_to_planet[z]) || SSlighting.get_pshandler_z(z)) && has_dynamic_lighting()) //Only for planet turfs or fakesuns that specify they want to use this system
+	if((SSplanets && SSplanets.z_to_planet.len >= z && SSplanets.z_to_planet[z]) && has_dynamic_lighting()) //ONLY FOR PLANET TILES IGNORE FAKESUN TILES
 		if(is_outdoors())
 			var/turf/T = GetAbove(src)
 			if(T && !istype(T,/turf/simulated/open))
@@ -26,7 +26,7 @@
 			shandler.manualInit()
 
 /datum/sunlight_handler
-	var/datum/simple_sun/sun
+	var/datum/sun_holder/sun
 	var/turf/simulated/holder
 	var/datum/lighting_object/only_sun_object
 	var/effect_str_r = 0
@@ -51,15 +51,13 @@
 	for(var/datum/lighting_corner/corner in corners)
 		if(corner.sunlight == SUNLIGHT_NONE)
 			corner.sunlight = SUNLIGHT_POSSIBLE
-	if(SSlighting.get_pshandler_z(holder.z))
-		pshandler = SSlighting.get_pshandler_z(holder.z)
-		pshandler.shandlers += src
-		sun = pshandler.sun
+	if(SSplanets && SSplanets.z_to_planet.len >= holder.z && SSplanets.z_to_planet[holder.z])
+		var/datum/planet/planet = SSplanets.z_to_planet[holder.z]
+		pshandler = SSlighting.get_pshandler(planet)
+		sun = planet.sun_holder
 	sunlight_check()
 
 /datum/sunlight_handler/proc/holder_change()
-	holder.generate_missing_corners() //Somehow corners are self destructing under specific circumstances. Likely race conditions. This is slightly unoptimal but may be necessary.
-	sunlight_check() //Also not optimal but made necessary by race conditions
 	sunlight_update()
 	for(var/dir in (cardinal + cornerdirs))
 		var/turf/simulated/T = get_step(holder, dir)
@@ -190,10 +188,10 @@
 				sleepable_corners += corner.all_onlysun()
 
 	if(!sun)
-		if(SSlighting.get_pshandler_z(holder.z))
-			pshandler = SSlighting.get_pshandler_z(holder.z)
-			pshandler.shandlers += src
-			sun = pshandler.sun
+		if(SSplanets && SSplanets.z_to_planet.len >= holder.z && SSplanets.z_to_planet[holder.z])
+			var/datum/planet/planet = SSplanets.z_to_planet[holder.z]
+			sun = planet.sun_holder
+			pshandler = SSlighting.get_pshandler(planet)
 		else
 			return
 
@@ -224,11 +222,6 @@
 		only_sun_object = null
 
 	if(only_sun_object)
-		//Edge cases but needed to make sure that the correct overlay is used in the case that all corners switch from shade to overhead or vice versa between updates
-		if(only_sun_object.sunlight_only == SUNLIGHT_ONLY_SHADE && sunlight == SUNLIGHT_OVERHEAD)
-			only_sun_object.set_sunonly(SUNLIGHT_ONLY, pshandler)
-		else if(only_sun_object.sunlight_only == SUNLIGHT_ONLY && sunlight == SUNLIGHT_CURRENT)
-			only_sun_object.set_sunonly(SUNLIGHT_ONLY_SHADE, pshandler)
 		only_sun_object.update_sun()
 
 	for(var/datum/lighting_corner/corner in only_sun)
@@ -248,8 +241,8 @@
 			sunlight_mult = 0.6
 		if(SUNLIGHT_OVERHEAD)
 			sunlight_mult = 1.0
-	var/brightness = sun.brightness * sunlight_mult * SSlighting.sun_mult
-	var/list/color = hex2rgb(sun.color)
+	var/brightness = sun.our_brightness * sunlight_mult * SSlighting.sun_mult
+	var/list/color = hex2rgb(sun.our_color)
 	var/red = brightness * (color[1] / 255.0)
 	var/green = brightness * (color[2] / 255.0)
 	var/blue = brightness * (color[3] / 255.0)

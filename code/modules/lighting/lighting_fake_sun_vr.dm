@@ -11,7 +11,6 @@ var/static/list/fake_sunlight_zs = list()
 	var/family = null	//Allows multipe maps that are THEORETICALLY connected to use the same settings when not in a connected Z stack
 	var/shared_settings	//Automatically set if using the family var
 	var/static/world_suns = list()	//List of all the fake_suns in the world, used for checking for family members
-	var/list/choice //CHOMPEdit
 
 	var/do_sun = TRUE
 	var/do_weather = FALSE
@@ -101,7 +100,7 @@ var/static/list/fake_sunlight_zs = list()
 
 /obj/effect/fake_sun/LateInitialize()
 	. = ..()
-	//CHOMPEdit Removal
+	var/list/choice
 	if(family)	//Allows one to make multiple fake_suns to use the same settings
 		for(var/obj/effect/fake_sun/l in world_suns)	//check all the suns that exist
 			if(l.family == family && l.shared_settings)	//do you have settings we need?
