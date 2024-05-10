@@ -100,7 +100,7 @@
 		to_chat(user, "<span class='notice'>You [anchored? "un" : ""]secured \the [src]!</span>")
 
 /client/proc/generic_structure()
-	set category = "EventKit"
+	set category = "Fun.Event Kit" //CHOMPEdit
 	set name = "Spawn Generic Structure"
 	set desc = "Spawn a customisable structure with a range of different options."
 
@@ -336,4 +336,3 @@
 	else
 		result = tgui_input_list(usr, "Select an atom type", "Spawn Atom", matches, strict_modern = TRUE)
 	return result
-
