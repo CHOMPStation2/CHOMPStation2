@@ -30,13 +30,13 @@
 	icon_state = "reddragon"
 	pokephrase = "RAWR!"
 
-/obj/item/toy/plushie/red_dragon
+/obj/item/toy/plushie/green_dragon
 	name = "green dragon plushie"
 	icon = 'icons/obj/toy_ch.dmi'
 	icon_state = "greendragon"
 	pokephrase = "GRR!"
 
-/obj/item/toy/plushie/red_dragon
+/obj/item/toy/plushie/purple_dragon
 	name = "red dragon plushie"
 	icon = 'icons/obj/toy_ch.dmi'
 	icon_state = "purpledragon"
