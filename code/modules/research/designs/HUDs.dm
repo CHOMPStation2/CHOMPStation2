@@ -49,10 +49,6 @@
 	name = "graviton visor"
 	id = "graviton_goggles"
 	req_tech = list(TECH_MAGNET = 5, TECH_ENGINEERING = 3, TECH_BLUESPACE = 3, TECH_PHORON = 3) //CHOMP Edit
-	materials = list(MAT_PLASTEEL = 2000, MAT_GLASS = 3000, MAT_PHORON = 1500) //CHOMP Edit	
+	materials = list(MAT_PLASTEEL = 2000, MAT_GLASS = 3000, MAT_PHORON = 1500) //CHOMP Edit
 	build_path = /obj/item/clothing/glasses/graviton
-<<<<<<< HEAD
-	sort_string = "EAAAE"
-=======
 	sort_string = "EAAAF"
->>>>>>> bf490b78ac... Adds Contaminant Detector HUD (#15970)

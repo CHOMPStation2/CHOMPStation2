@@ -552,11 +552,8 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/weapon/mop(src)
 	src.modules += new /obj/item/pupscrubber(src)
 	src.modules += new /obj/item/device/lightreplacer(src)
-<<<<<<< HEAD
 	src.modules += new /obj/item/device/vac_attachment(src) //CHOMPAdd
-=======
 	src.modules += new /obj/item/borg/sight/janitor(src)
->>>>>>> bf490b78ac... Adds Contaminant Detector HUD (#15970)
 	var/obj/item/weapon/reagent_containers/spray/LS = new /obj/item/weapon/reagent_containers/spray(src)
 	src.emag += LS
 	LS.reagents.add_reagent("lube", 250)

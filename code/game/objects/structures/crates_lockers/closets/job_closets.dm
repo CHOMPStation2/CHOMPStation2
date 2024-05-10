@@ -80,14 +80,10 @@
 		/obj/item/device/lightreplacer,
 		/obj/item/weapon/storage/bag/trash,
 		/obj/item/weapon/storage/belt/janitor,
-<<<<<<< HEAD
 		/obj/item/device/vac_attachment, //CHOMPAdd
 		/obj/item/weapon/holosign_creator, //CHOMPAdd
-		/obj/item/clothing/shoes/galoshes
-=======
 		/obj/item/clothing/shoes/galoshes,
 		/obj/item/clothing/glasses/hud/janitor
->>>>>>> bf490b78ac... Adds Contaminant Detector HUD (#15970)
 		)
 
 /*
