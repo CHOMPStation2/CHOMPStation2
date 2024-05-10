@@ -30,3 +30,7 @@
   - maptweak: maptweaked the USSP that crashes the server
   - bugfix: Downtown gateway slab IDs not opening doors
   - maptweak: Thor Junker Shuttle extra engine console removed
+2024-05-10:
+  Upstream:
+  - rscadd: Adds inhand sprites for rubber duckies
+  - rscadd: Added customizable fluff licenses
