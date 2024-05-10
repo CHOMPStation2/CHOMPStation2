@@ -197,13 +197,9 @@ var/list/admin_verbs_spawn = list(
 	/client/proc/map_template_load,
 	/client/proc/map_template_upload,
 	/client/proc/map_template_load_on_new_z,
-<<<<<<< HEAD
-	/client/proc/eventkit_open_mob_spawner //VOREStation Add
-=======
 	/client/proc/eventkit_open_mob_spawner,
 	/client/proc/generic_structure, //VOREStation Add
 	/client/proc/generic_item //VOREStation Add
->>>>>>> f13c34f8e2... Generic Machines Part 2 - Items and Effects (#15969)
 	)
 
 var/list/admin_verbs_server = list(
