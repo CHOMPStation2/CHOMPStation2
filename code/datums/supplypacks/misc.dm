@@ -99,6 +99,7 @@
 			/obj/item/toy/plushie/green_dragon
 			/obj/item/toy/plushie/purple_dragon
 			//CHOMPStation Add End
+			)
 	name = "Plushies Crate"
 	cost = 15
 	containertype = /obj/structure/closet/crate/allico
