@@ -295,15 +295,11 @@
 			items_preserved |= I
 		if(IM_DIGEST_FOOD)
 			if(istype(I,/obj/item/weapon/reagent_containers/food) || istype(I, /obj/item/organ))
-<<<<<<< HEAD
-				did_an_item = digest_item(I, touchable_amount) //CHOMPEdit
-=======
 				var/obj/item/organ/R = I
 				if(istype(R) && R.robotic >= ORGAN_ROBOT)
 					items_preserved |= I
 				else
-					did_an_item = digest_item(I)
->>>>>>> 5831c168c7... Belly Mode Addon: Spare Prosthetics  (#15973)
+					did_an_item = digest_item(I, touchable_amount) //CHOMPEdit
 			else
 				items_preserved |= I
 		if(IM_DIGEST,IM_DIGEST_PARALLEL)
