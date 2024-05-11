@@ -37,7 +37,7 @@
 	pokephrase = "GRR!"
 
 /obj/item/toy/plushie/purple_dragon
-	name = "red dragon plushie"
+	name = "purple dragon plushie"
 	icon = 'icons/obj/toy_ch.dmi'
 	icon_state = "purpledragon"
 	pokephrase = "GRAH!"
