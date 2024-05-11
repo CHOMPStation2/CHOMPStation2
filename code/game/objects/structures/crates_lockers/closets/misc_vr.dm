@@ -215,14 +215,10 @@
 		/obj/item/weapon/cell/device,
 		/obj/item/device/radio,
 		/obj/item/device/gps/explorer,
-<<<<<<< HEAD
-		/obj/item/device/cataloguer/compact) //CHOMP edit
-	//	/obj/item/weapon/gun/energy/gun/protector/pilotgun/locked) //CHOMP Removed
-=======
-		/obj/item/weapon/gun/energy/gun/protector/pilotgun/locked,
+		/obj/item/device/cataloguer/compact, //CHOMP edit
+	//	/obj/item/weapon/gun/energy/gun/protector/pilotgun/locked, //CHOMP Removed
 		/obj/item/clothing/gloves/watch/survival
 		)
->>>>>>> 815a47e333... Watch Yourself (#15972)
 
 /obj/structure/closet/secure_closet/pilot/Initialize()
 	if(prob(50))
