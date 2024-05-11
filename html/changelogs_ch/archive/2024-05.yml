@@ -34,3 +34,6 @@
   Upstream:
   - rscadd: Adds inhand sprites for rubber duckies
   - rscadd: Added customizable fluff licenses
+2024-05-11:
+  FluffMedic:
+  - qol: trash piles can be walked over
