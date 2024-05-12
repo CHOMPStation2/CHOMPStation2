@@ -1,0 +1,6 @@
+author: "tacoguy7765093"
+delete-after: True
+changes:
+  - bugfix: "Known OM planets show up in helm now."
+  - maptweak: "Stargazer modified for easier fuel canister swapping."
+  - sound: "Planet arrival sound now plays for planets too."
