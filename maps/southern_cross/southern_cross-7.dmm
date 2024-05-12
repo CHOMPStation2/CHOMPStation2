@@ -2565,8 +2565,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 6
 	},
-/obj/structure/sign/poster/nanotrasen{
-	dir = 8
+/obj/machinery/recharger/wallcharger{
+	pixel_x = -27;
+	pixel_y = -4
 	},
 /turf/simulated/floor/tiled/yellow,
 /area/shuttle/stargazer)
@@ -19486,10 +19487,31 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/secureaccess)
 "plo" = (
+/obj/structure/closet/crate/engineering,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/glass,
+/obj/item/weapon/tank/phoron,
+/obj/item/weapon/tank/phoron,
+/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/weapon/storage/toolbox/electrical,
+/obj/item/device/multitool,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/device/geiger,
+/obj/item/clothing/glasses/goggles,
+/obj/item/clothing/glasses/goggles,
+/obj/item/device/t_scanner,
+/obj/item/clothing/glasses/welding,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 9
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning,
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_y = 32
 	},
-/turf/simulated/floor/tiled/yellow,
+/turf/simulated/floor/tiled/red,
 /area/shuttle/stargazer)
 "pmr" = (
 /obj/effect/overmap/visitable/ship/landable/baby_mammoth,
@@ -20942,13 +20964,19 @@
 /turf/simulated/floor/tiled/red,
 /area/shuttle/needle)
 "qtv" = (
-/obj/structure/closet/walllocker_double/hydrant/north,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/recharger/wallcharger{
 	pixel_x = -27;
 	pixel_y = -4
 	},
-/turf/simulated/floor/tiled/yellow,
-/area/shuttle/stargazer)
+/turf/simulated/floor/tiled/steel,
+/area/expoutpost/hangarfour)
 "qtA" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
 	frequency = 1380;
@@ -21998,28 +22026,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/eva)
 "rhS" = (
-/obj/structure/closet/crate/engineering,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/glass,
-/obj/item/weapon/tank/phoron,
-/obj/item/weapon/tank/phoron,
-/obj/item/weapon/storage/toolbox/mechanical,
-/obj/item/weapon/storage/toolbox/electrical,
-/obj/item/device/multitool,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/device/geiger,
-/obj/item/clothing/glasses/goggles,
-/obj/item/clothing/glasses/goggles,
-/obj/item/device/t_scanner,
-/obj/item/clothing/glasses/welding,
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 9
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/warning,
-/turf/simulated/floor/tiled/red,
+/obj/structure/closet/walllocker_double/hydrant/west,
+/turf/simulated/floor/tiled/yellow,
 /area/shuttle/stargazer)
 "rij" = (
 /obj/structure/cable/green{
@@ -66851,7 +66859,7 @@ quK
 jEQ
 jEQ
 xoX
-iOC
+qtv
 iOC
 iOC
 jEQ
@@ -67624,8 +67632,8 @@ stN
 fVa
 fVa
 fVa
-qtv
 vQn
+rhS
 cev
 era
 imb
@@ -67883,7 +67891,7 @@ tou
 rQB
 fVa
 plo
-rhS
+uzI
 qVL
 njd
 lMJ
@@ -68140,8 +68148,8 @@ iBn
 dMm
 iKh
 fEH
-uzI
 aMe
+uzI
 ntb
 fvV
 jwP
