@@ -336,7 +336,6 @@
 /obj/structure/bed/chair{
 	dir = 1
 	},
-/obj/machinery/light,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod2/station)
 "aaY" = (
@@ -375,13 +374,9 @@
 /area/shuttle/large_escape_pod2/station)
 "abi" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
-	icon_state = "door_locked";
-	id_tag = "large_escape_pod_2_hatch";
-	locked = 1;
-	name = "Large Escape Pod Hatch 2";
-	req_access = list(13)
+	name = "Large Escape Pod Hatch 2"
 	},
+/obj/effect/map_helper/airlock/door/simple,
 /turf/simulated/shuttle/floor,
 /area/shuttle/large_escape_pod2/station)
 "abm" = (
@@ -447,13 +442,10 @@
 /turf/simulated/floor/plating,
 /area/hallway/primary/firstdeck/auxdockfore)
 "abF" = (
-/obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
-	icon_state = "door_locked";
-	id_tag = "large_escape_pod_2_berth_hatch";
-	locked = 1;
+/obj/machinery/door/airlock/glass_external/public{
 	name = "Large Escape Pod 2";
-	req_access = list(13)
+	pixel_y = -1;
+	id_tag = "large_escape_pod_2_berth"
 	},
 /turf/simulated/floor/plating,
 /area/hallway/secondary/escape/firstdeck/ep_port)
@@ -3720,13 +3712,9 @@
 /area/hallway/primary/firstdeck/starboard)
 "aqv" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
-	icon_state = "door_locked";
-	id_tag = "escape_pod_1_hatch";
-	locked = 1;
-	name = "Escape Pod 1 Hatch";
-	req_access = list(13)
+	name = "Escape Pod 1 Hatch"
 	},
+/obj/effect/map_helper/airlock/door/simple,
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape_pod1/station)
 "aqA" = (
@@ -3735,13 +3723,9 @@
 /area/shuttle/escape_pod1/station)
 "aqD" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
-	icon_state = "door_locked";
-	id_tag = "escape_pod_2_hatch";
-	locked = 1;
-	name = "Escape Pod 2 Hatch";
-	req_access = list(13)
+	name = "Escape Pod 2 Hatch"
 	},
+/obj/effect/map_helper/airlock/door/simple,
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape_pod2/station)
 "aqG" = (
@@ -9324,13 +9308,9 @@
 /area/quartermaster/storage)
 "aVt" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
-	icon_state = "door_locked";
-	id_tag = "escape_pod_3_hatch";
-	locked = 1;
-	name = "Escape Pod Hatch 3";
-	req_access = list(13)
+	name = "Escape Pod Hatch 3"
 	},
+/obj/effect/map_helper/airlock/door/simple,
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape_pod3/station)
 "aVu" = (
@@ -9695,13 +9675,9 @@
 /area/medical/virology)
 "aYb" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
-	icon_state = "door_locked";
-	id_tag = "large_escape_pod_1_hatch";
-	locked = 1;
-	name = "Large Escape Pod Hatch 1";
-	req_access = list(13)
+	name = "Large Escape Pod Hatch 1"
 	},
+/obj/effect/map_helper/airlock/door/simple,
 /turf/simulated/shuttle/floor,
 /area/shuttle/large_escape_pod1/station)
 "aZc" = (
@@ -10299,11 +10275,9 @@
 "bwS" = (
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1380;
-	icon_state = "door_locked";
 	id_tag = "escape_pod_5_berth_hatch";
-	locked = 1;
 	name = "Escape Pod 5";
-	req_access = list(13)
+	req_one_access = null
 	},
 /turf/simulated/floor,
 /area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
@@ -11148,13 +11122,9 @@
 /area/expoutpost/stationshuttle)
 "cdQ" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
-	icon_state = "door_locked";
-	id_tag = "escape_pod_5_hatch";
-	locked = 1;
-	name = "Escape Pod Hatch 5";
-	req_access = list(13)
+	name = "Escape Pod Hatch 5"
 	},
+/obj/effect/map_helper/airlock/door/simple,
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape_pod5/station)
 "cfa" = (
@@ -12376,13 +12346,10 @@
 /turf/simulated/floor/tiled/monotile,
 /area/hangar/three)
 "dnH" = (
-/obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
-	icon_state = "door_locked";
-	id_tag = "large_escape_pod_1_berth_hatch";
-	locked = 1;
+/obj/machinery/door/airlock/glass_external/public{
 	name = "Large Escape Pod 1";
-	req_access = list(13)
+	pixel_y = 0;
+	id_tag = "large_escape_pod_1_berth"
 	},
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor,
@@ -15880,13 +15847,9 @@
 /area/rnd/research/firstdeck/hallway)
 "eGF" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
-	icon_state = "door_locked";
-	id_tag = "escape_pod_4_hatch";
-	locked = 1;
-	name = "Escape Pod Hatch 4";
-	req_access = list(13)
+	name = "Escape Pod Hatch 4"
 	},
+/obj/effect/map_helper/airlock/door/simple,
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape_pod4/station)
 "eHo" = (
@@ -16500,11 +16463,9 @@
 "frS" = (
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1380;
-	icon_state = "door_locked";
 	id_tag = "escape_pod_3_berth_hatch";
-	locked = 1;
 	name = "Escape Pod 3";
-	req_access = list(13)
+	req_one_access = null
 	},
 /turf/simulated/floor,
 /area/hallway/secondary/escape/firstdeck/ep_aftport)
@@ -16724,11 +16685,9 @@
 "fCD" = (
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1380;
-	icon_state = "door_locked";
 	id_tag = "escape_pod_4_berth_hatch";
-	locked = 1;
 	name = "Escape Pod 4";
-	req_access = list(13)
+	req_one_access = null
 	},
 /turf/simulated/floor,
 /area/hallway/secondary/escape/firstdeck/ep_aftport)
@@ -18505,11 +18464,9 @@
 "hqi" = (
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1380;
-	icon_state = "door_locked";
 	id_tag = "escape_pod_1_berth_hatch";
-	locked = 1;
 	name = "Escape Pod 1";
-	req_access = list(13)
+	req_one_access = null
 	},
 /turf/simulated/floor/plating,
 /area/hallway/primary/firstdeck/fore)
@@ -25710,11 +25667,9 @@
 "oOM" = (
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1380;
-	icon_state = "door_locked";
 	id_tag = "escape_pod_2_berth_hatch";
-	locked = 1;
 	name = "Escape Pod 2";
-	req_access = list(13)
+	req_one_access = null
 	},
 /turf/simulated/floor/plating,
 /area/hallway/primary/firstdeck/fore)
@@ -25821,13 +25776,9 @@
 /area/ai_monitored/storage/eva/aux)
 "oVU" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
-	icon_state = "door_locked";
-	id_tag = "escape_pod_6_hatch";
-	locked = 1;
-	name = "Escape Pod Hatch 6";
-	req_access = list(13)
+	name = "Escape Pod Hatch 6"
 	},
+/obj/effect/map_helper/airlock/door/simple,
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape_pod6/station)
 "oWj" = (
@@ -33959,11 +33910,9 @@
 "wFd" = (
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1380;
-	icon_state = "door_locked";
 	id_tag = "escape_pod_6_berth_hatch";
-	locked = 1;
 	name = "Escape Pod 6";
-	req_access = list(13)
+	req_one_access = null
 	},
 /turf/simulated/floor,
 /area/hallway/secondary/escape/firstdeck/ep_aftstarboard)

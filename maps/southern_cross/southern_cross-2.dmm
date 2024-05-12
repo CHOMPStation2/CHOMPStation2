@@ -50367,7 +50367,8 @@
 /area/medical/morgue)
 "gju" = (
 /obj/machinery/door/airlock/glass{
-	name = "Cryogenic Storage"
+	name = "Cryogenic Storage";
+	id_tag = "cryostorage_shuttle_berth"
 	},
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/tiled/techfloor,
