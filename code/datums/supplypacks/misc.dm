@@ -92,8 +92,14 @@
 			/obj/item/toy/plushie/teshari/_yw,
 			/obj/item/toy/plushie/teshari/w_yw,
 			/obj/item/toy/plushie/teshari/b_yw,
-			/obj/item/toy/plushie/teshari/y_yw)
+			/obj/item/toy/plushie/teshari/y_yw,
 			//YawnWider Add End
+			//CHOMPStation Add Start
+			/obj/item/toy/plushie/red_dragon,
+			/obj/item/toy/plushie/green_dragon,
+			/obj/item/toy/plushie/purple_dragon
+			//CHOMPStation Add End
+			)
 	name = "Plushies Crate"
 	cost = 15
 	containertype = /obj/structure/closet/crate/allico
