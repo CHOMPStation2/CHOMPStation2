@@ -524,6 +524,9 @@
 		chest.icon = R.chest.icon
 		chest.icon_state = R.chest.icon_state
 	suit_state = R.suit_state
+	name = R.name
+	icon = R.icon
+	icon_state = R.icon_state
 	user.drop_item(R)
 	contents += R
 	assimilated_rig = R
@@ -556,6 +559,9 @@
 		chest.sprite_sheets_obj = tempRig.chest.sprite_sheets.Copy()
 		slowdown = initial(slowdown)
 		suit_state = icon_state
+		name = "nanosuit control cluster"
+		icon = 'icons/obj/rig_modules_ch.dmi' // Reset the icon back to its original
+		icon_state = "nanomachine_rig"
 		offline_slowdown = initial(offline_slowdown)
 		usr.put_in_hands(assimilated_rig)
 		assimilated_rig = null
