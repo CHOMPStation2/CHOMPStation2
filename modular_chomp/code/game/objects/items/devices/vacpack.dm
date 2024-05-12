@@ -6,6 +6,7 @@
 	icon_override = 'modular_chomp/icons/mob/vacpack.dmi'
 	icon_state = "sucker_drop"
 	item_state = "sucker"
+	slot_flags = SLOT_BELT | SLOT_BACK
 	var/vac_power = 0
 	var/output_dest = null
 	var/list/vac_settings = list(
