@@ -30,6 +30,7 @@ export const VoreUserPreferences = (props) => {
     throw_vore,
     phase_vore,
     food_vore,
+    digest_pain,
     latejoin_vore,
     latejoin_prey,
     noisy,
@@ -260,6 +261,21 @@ export const VoreUserPreferences = (props) => {
       content: {
         enabled: 'Food Vore Enabled',
         disabled: 'Food Vore Disabled',
+      },
+    },
+    toggle_digest_pain: {
+      action: 'toggle_digest_pain',
+      test: digest_pain,
+      tooltip: {
+        main:
+          'Allows for pain messages to show when being digested. ' +
+          ' Can be toggled off to disable pain messages.',
+        enable: 'Click here to allow for digestion pain.',
+        disable: 'Click here to disable digestion pain.',
+      },
+      content: {
+        enabled: 'Digestion Pain Enabled',
+        disabled: 'Digestion Pain Disabled',
       },
     },
     spawnbelly: {
@@ -764,6 +780,12 @@ export const VoreUserPreferences = (props) => {
               <VoreUserPreferenceItem
                 spec={preferences.remains}
                 tooltipPosition="left"
+              />
+            </Flex.Item>
+            <Flex.Item basis="33%">
+              <VoreUserPreferenceItem
+                spec={preferences.toggle_digest_pain}
+                tooltipPosition="right"
               />
             </Flex.Item>
           </Flex>
