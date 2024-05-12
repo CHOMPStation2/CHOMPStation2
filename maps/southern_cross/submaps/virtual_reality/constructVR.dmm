@@ -3144,6 +3144,9 @@
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/yellow,
 /area/vr/powered/mall)
+"cFa" = (
+/turf/simulated/floor/tiled/old_tile,
+/area/vr/powered/mall/backrooms)
 "cFc" = (
 /obj/machinery/light/floortube{
 	overlay_color = "#e060e0";
@@ -4471,7 +4474,9 @@
 /turf/simulated/floor/wood/alt,
 /area/vr/powered/mall)
 "dLk" = (
-/obj/machinery/vending/deluxe_boozeomat,
+/obj/machinery/vending/deluxe_boozeomat{
+	req_access = null
+	},
 /obj/effect/floor_decal/corner/purple/border{
 	color = "#f700ff";
 	dir = 1;
@@ -6087,6 +6092,12 @@
 "eOj" = (
 /turf/simulated/shuttle/floor/purple,
 /area/vr/powered/dungeon)
+"ePh" = (
+/obj/structure/table/darkglass,
+/obj/item/weapon/gun/energy/sizegun,
+/obj/machinery/recharger,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/vr/powered/mall/secondlife)
 "ePj" = (
 /obj/structure/table/standard,
 /obj/item/weapon/storage/firstaid/bonemed{
@@ -6279,6 +6290,11 @@
 	pixel_x = 11;
 	pixel_y = 24
 	},
+/obj/structure/table/rack/steel,
+/obj/random/soap_common,
+/obj/random/soap_common,
+/obj/item/weapon/towel/random,
+/obj/item/weapon/gun/energy/sizegun,
 /turf/simulated/floor/carpet/bcarpet,
 /area/vr/powered/mall/dorms/secondlife5)
 "eXx" = (
@@ -9164,12 +9180,16 @@
 /turf/simulated/shuttle/plating,
 /area/vr/powered/space/whiteship)
 "hvR" = (
-/obj/structure/sign/poster/custom{
-	pixel_y = 0;
-	dir = 2
+/obj/structure/toilet{
+	dir = 4
 	},
-/turf/simulated/floor/carpet/bcarpet,
+/turf/simulated/floor/tiled/old_tile,
 /area/vr/powered/mall/dorms/secondlife5)
+"hvZ" = (
+/obj/structure/table/darkglass,
+/obj/machinery/recharger,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/vr/powered/mall/secondlife)
 "hwS" = (
 /obj/machinery/light/small{
 	dir = 1;
@@ -9531,6 +9551,12 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/vr/powered/cult)
+"hQY" = (
+/obj/machinery/door/airlock/gold{
+	id_tag = "VRmallSL5"
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/vr/powered/mall)
 "hRJ" = (
 /turf/simulated/floor/cult{
 	icon_state = "cult-narsie"
@@ -10766,6 +10792,13 @@
 /obj/item/weapon/storage/firstaid/combat,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/vr/powered/cult)
+"iJE" = (
+/obj/structure/sign/poster/custom{
+	pixel_y = 0;
+	dir = 4
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/vr/powered/mall/dorms/secondlife5)
 "iKf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/fireaxecabinet{
@@ -10899,6 +10932,12 @@
 /obj/machinery/door/airlock/multi_tile/metal,
 /turf/simulated/floor/bmarble,
 /area/vr/powered/mall)
+"iUk" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/vr/powered/mall/backrooms)
 "iUv" = (
 /obj/structure/flora/lily2,
 /turf/simulated/floor/water/deep{
@@ -12183,7 +12222,9 @@
 /turf/simulated/floor/bmarble,
 /area/vr/powered/mall)
 "jRV" = (
-/obj/machinery/vending/deluxe_dinner,
+/obj/machinery/vending/deluxe_dinner{
+	req_access = null
+	},
 /obj/effect/floor_decal/corner/purple/border{
 	color = "#f700ff";
 	dir = 1;
@@ -13004,6 +13045,14 @@
 /obj/structure/filingcabinet/chestdrawer,
 /turf/simulated/floor/tiled,
 /area/vr/powered/vet)
+"kHp" = (
+/obj/structure/table/rack/steel,
+/obj/random/soap_common,
+/obj/random/soap_common,
+/obj/item/weapon/towel/random,
+/obj/item/weapon/gun/energy/sizegun,
+/turf/simulated/floor/tiled/old_tile,
+/area/vr/powered/mall/backrooms)
 "kHq" = (
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_x = 31
@@ -13512,6 +13561,14 @@
 	outdoors = 0
 	},
 /area/vr/powered/dungeon)
+"kZd" = (
+/obj/structure/table/rack/steel,
+/obj/random/soap_common,
+/obj/random/soap_common,
+/obj/item/weapon/towel/random,
+/obj/item/weapon/gun/energy/sizegun,
+/turf/simulated/floor/tiled/old_tile,
+/area/vr/powered/mall)
 "kZv" = (
 /obj/machinery/door/airlock/maintenance/command{
 	req_one_access = null
@@ -13798,9 +13855,8 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/structure/sign/poster/custom{
-	icon_state = "susposter";
-	pixel_y = 32
+/obj/structure/sign/poster/nanotrasen{
+	dir = 1
 	},
 /turf/simulated/floor/carpet/retro,
 /area/vr/powered/mall)
@@ -14139,6 +14195,12 @@
 /obj/item/weapon/reagent_containers/glass/bottle/adminordrazine,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/vr/powered/cult)
+"lvQ" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/vr/powered/mall/backrooms)
 "lvR" = (
 /obj/machinery/light,
 /turf/simulated/floor/bmarble,
@@ -14482,6 +14544,12 @@
 "lIn" = (
 /turf/simulated/mineral/ignore_oregen,
 /area/vr/powered/rocks)
+"lIq" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/vr/powered/mall)
 "lIt" = (
 /obj/structure/table/hardwoodtable,
 /obj/item/modular_computer/laptop/preset/custom_loadout/cheap,
@@ -14617,6 +14685,12 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/yellow,
+/area/vr/powered/mall)
+"lOn" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_tile,
 /area/vr/powered/mall)
 "lOr" = (
 /obj/structure/table/woodentable,
@@ -14971,6 +15045,12 @@
 	temperature = 311
 	},
 /area/vr/outdoors/powered)
+"mbN" = (
+/obj/machinery/door/airlock/gold{
+	id_tag = "VRmallSL1"
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/vr/powered/mall/dorms/secondlife)
 "mca" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/table/wooden_reinforced,
@@ -15940,6 +16020,18 @@
 	},
 /turf/simulated/floor/plating,
 /area/vr/powered/material)
+"mOH" = (
+/obj/machinery/light{
+	dir = 2;
+	nightshift_enabled = 1;
+	brightness_color = "#e060e0";
+	light_color = "#e060e0";
+	overlay_color = "#e060e0";
+	brightness_color_ns = "#9C439C";
+	name = "tinted light fixture"
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/vr/powered/mall/dorms/secondlife5)
 "mOR" = (
 /obj/structure/curtain/open/shower,
 /obj/machinery/shower{
@@ -19209,6 +19301,11 @@
 	movement_cost = 0
 	},
 /area/vr/outdoors/powered)
+"pjF" = (
+/turf/simulated/wall/sandstone{
+	color = "purple"
+	},
+/area/vr/powered/mall/backrooms)
 "pkd" = (
 /obj/machinery/conveyor{
 	id = "vrsushitrain";
@@ -82232,7 +82329,7 @@ tzK
 gfv
 gfv
 wPM
-fyS
+rMS
 rMS
 rMS
 rMS
@@ -82490,7 +82587,7 @@ wPM
 wPM
 wPM
 wPM
-mfD
+rMS
 rMS
 cZD
 nkR
@@ -82742,13 +82839,13 @@ pGp
 pGp
 pGp
 wPM
-mfD
-mfD
-mfD
-mfD
-mfD
-mfD
-mfD
+kZd
+lOn
+lIq
+rMS
+kZd
+lOn
+lIq
 rMS
 kss
 kss
@@ -82999,14 +83096,14 @@ oKz
 oLn
 ldo
 pGp
-fyS
-mfD
-mfD
-uIR
-mfD
-mfD
-mfD
-mfD
+wPM
+sYd
+sYd
+sYd
+rMS
+sYd
+sYd
+sYd
 rMS
 tOh
 bQG
@@ -83247,10 +83344,10 @@ vrG
 vrG
 vrG
 vrG
-vrG
-vrG
-vrG
 fuy
+pjF
+pjF
+pjF
 wPM
 wPM
 wPM
@@ -83258,11 +83355,11 @@ wPM
 wPM
 wPM
 wPM
-wPM
+hQY
 rMS
 rMS
 rMS
-rMS
+hQY
 rMS
 rMS
 rMS
@@ -83504,11 +83601,11 @@ tgj
 tgj
 tgj
 tgj
-tgj
-tgj
-tgj
 vrG
 fuy
+pjF
+lvQ
+cFa
 ipC
 kIc
 yfs
@@ -83529,7 +83626,7 @@ ivl
 aZi
 oJW
 kss
-aZi
+iJE
 rMS
 mfD
 mfD
@@ -83762,12 +83859,12 @@ tgj
 tgj
 tgj
 tgj
-tgj
-tgj
-tgj
 vrG
 fuy
-ipC
+pjF
+iUk
+cFa
+mbN
 cXe
 cXe
 yfs
@@ -83786,8 +83883,8 @@ tnK
 ivl
 iWh
 aZi
-aZi
-aZi
+eRK
+eRK
 rMS
 mfD
 ihz
@@ -84020,11 +84117,11 @@ tgj
 tgj
 tgj
 tgj
-tgj
-tgj
-tgj
 vrG
 fuy
+pjF
+kHp
+cFa
 ipC
 agH
 yfs
@@ -84043,8 +84140,8 @@ bIw
 vpG
 ivl
 eWW
-aZi
 yiL
+eRK
 hvR
 rMS
 mfD
@@ -84278,11 +84375,11 @@ tgj
 tgj
 tgj
 tgj
-tgj
-tgj
-tgj
 vrG
 fuy
+pjF
+pjF
+pjF
 ipC
 hPO
 xUp
@@ -84302,8 +84399,8 @@ jPB
 ivl
 rSM
 aZi
-aZi
-diP
+ivr
+mOH
 rMS
 mfD
 mfD
@@ -84536,10 +84633,10 @@ tgj
 tgj
 tgj
 tgj
-tgj
-tgj
-tgj
 vrG
+fuy
+fuy
+fuy
 fuy
 ipC
 dzT
@@ -84794,8 +84891,8 @@ tgj
 tgj
 tgj
 tgj
-tgj
-tgj
+vrG
+vrG
 vrG
 vrG
 fuy
@@ -86352,7 +86449,7 @@ uzw
 hXP
 pTD
 lut
-lut
+hvZ
 soT
 qbH
 jWY
@@ -89190,7 +89287,7 @@ rgm
 sOV
 xma
 lut
-nGa
+ePh
 soT
 qbH
 qbH
