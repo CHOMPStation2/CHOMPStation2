@@ -438,11 +438,8 @@
 	for(var/i = 1 to 4)
 		Insert("bottle-[i]", 'icons/obj/chemical.dmi', "bottle-[i]")
 
-<<<<<<< HEAD
 	for(var/i = 1 to 4) // CHOMPedit
 		Insert("patch[i].png", 'icons/obj/chemical.dmi', "patch[i]") // CHOMPedit
-=======
->>>>>>> aa0fb0b2f3... icon fixes (#15827)
 
 //Cloning pod sprites for UIs
 /datum/asset/simple/cloning
